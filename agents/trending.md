@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p757) — 🟢 **THE `★` COLUMN CAME BACK: `p756` DECLARED A LIVE CHANNEL DEAD AND WROTE `unmeasured` ACROSS THREE SHELVES. 🔴 AND THE WEEK'S HIGHEST-STARRED RESEARCH AGENT CARRIES A LICENCE THAT REACHES INTO THE INTEGRATOR'S OWN CLIENT CONTRACT.**
+
+**Register: research administration and research integrity** · `9` agent rows · `48` addresses probed · **`31` licence payloads byte-read** · `4` index values materially corrected · `2` reproducible defects found in `p756`'s instrument (`T521`, `T522`) · `T521`–`T532` declared.
+
+### 🔴 The signal of the week is that a channel was buried, not that a repository appeared
+
+`p756` wrote: *"`api.github.com` returns `403` in this session… `★` reads `unmeasured` on every row and that is a measurement."* **Half right.** The `/repos/` path is gated; `search/repositories` is **`200`**. 🟢 **Re-run against `p756`'s own rows, `10 / 12` resolved** — `advisingapp` `339★`, `korean-elementary-learning-map` `117★`, `rsmtool` `71★`, `apply-for-teacher-training` `38★`, `pedal` `33★`, and so on.
+
+🔴 **And the same channel is NOT an existence oracle.** It produces false absences two ways, both found this week on `p756`'s own filed rows: **forks are excluded** unless `fork:true` is passed (`CDLUC3/dmptool`, `68★`, invisible without it) and a **renamed address returns `422`** while the raw channel serves it `200` because it follows the rename. 🔵 **Existence on `raw.githubusercontent.com`; popularity on `search/repositories`; never one for the other.**
+
+### 🔴 The licence story of the week: behavioural-use licences have reached the research-tooling layer
+
+| Repo | ★ | Index | Byte-read payload | The obligation |
+|---|---|---|---|---|
+| [`SakanaAI/AI-Scientist-v2`](https://github.com/SakanaAI/AI-Scientist-v2) | `7,495` (+`14,979` on v1) | 🔴 `NOASSERTION` | 🔴 **`The AI Scientist Source Code License v1.0`** (Dec 2025, RAIL-derived) · `4,256 B` · `9c82e554a54d` | 🔴 Clause `3.3`: the use restrictions **must be reproduced as an enforceable provision in the integrator's own client agreement**. Clause `3.2(e)`: generated manuscripts must prominently disclaim machine generation |
+| [`ORCID/ORCID-Source`](https://github.com/ORCID/ORCID-Source) | `628` | 🔴 `NOASSERTION` | 🔴 **bespoke `ORCID MIT-Style License`** · `1,669 B` · `3eaeaa9ffbef` | MIT permissions **minus** branding and look-and-feel of `orcid.org` *even where those elements ship in the code*, plus a trademark restriction |
+| [`asreview/asreview`](https://github.com/asreview/asreview) | `1,070` | 🟢 `Apache-2.0` | 🟢 `Apache-2.0` · `11,417 B` · `e7321ae59e86` | ⚠️ **Title-block trap**: the payload's first line reads `All rights reserved.`; the Apache body starts on line `3` |
+| [`datalad/datalad`](https://github.com/datalad/datalad) | `676` | 🔴 `NOASSERTION` | 🟢 **`MIT`** at depth 1 · `2,104 B` · `f742d6fae771` | ⚠️ Composite `COPYING`: MIT for DataLad's own code, a separate `# 3rd Party Code` section for the rest |
+
+### 🟢 New agent rows — all `9` byte-read, `6` MIT / `2` Apache-2.0 / `1` bespoke
+
+| Agent | Repo | Licence | ★ | Region | Signal |
+|---|---|---|---|---|---|
+| **DSW AI Document Plugin** | [`ds-wizard/ai-document-plugin`](https://github.com/ds-wizard/ai-document-plugin) | 🟢 MIT (`1,059 B`, `1d7d181a3f30`) | `0` | 🟢 **EMEA** (Czechia) | 🟢 **The most on-register agent of the week and nobody has starred it.** Generates the data-management-plan document with an LLM *inside* the tool a research office already runs. Placed from its own README: **ELIXIR CZ `LM2023055`** + **EOSC CZ** `CZ.02.01.01/00/23_014/0008787`. Pushed `2026-11-10` |
+| **RD-Agent** | [`microsoft/RD-Agent`](https://github.com/microsoft/RD-Agent) | 🟢 MIT (`1,141 B`, `c2cfccb812fe`) | `15,322` | **North America** | The permissive alternative to Sakana in the same capability band. ⚠️ R&D automation — **no DMP, ethics or award primitive** |
+| **ASReview** | [`asreview/asreview`](https://github.com/asreview/asreview) | 🟢 Apache-2.0 (`11,417 B`, `e7321ae59e86`) | `1,070` | 🟢 **EMEA** (Utrecht) | Active-learning screening; the week's cleanest title-block trap (`T526`) |
+| 🔴 **The AI Scientist v2** | [`SakanaAI/AI-Scientist-v2`](https://github.com/SakanaAI/AI-Scientist-v2) | 🔴 bespoke (`4,256 B`, `9c82e554a54d`) | `7,495` | 🟢 **APAC** (Japan) | 🔴 **Commercial use granted; Legal time required.** ⚠️ Cold since `2025-12-19` |
+| **AI Research Skills** | [`orchestra-research/AI-research-SKILLs`](https://github.com/orchestra-research/AI-research-SKILLs) | 🟢 MIT (`1,095 B`, `80b5899a9ab1`) | `14,424` | ⚠️ unplaced | Skills content, **not a runtime** — transfers only to a client already on a skill-loading harness |
+| **GPT Researcher** | [`assafelovic/gpt-researcher`](https://github.com/assafelovic/gpt-researcher) | 🟢 Apache-2.0 (`11,357 B`, `c71d239df917`) | `30,622` | ⚠️ unplaced | 🔵 **Ledger promotion, not a discovery.** ⚠️ No ORCID / ROR / DOI awareness — generic research |
+| **AIPOCH Open-Science** | [`aipoch/open-science`](https://github.com/aipoch/open-science) | 🟢 Apache-2.0 (`11,336 B`, `b038148f912b`) | `5,511` | ⚠️ unplaced | The only agent here whose stated output unit is a **traceable artifact**. **Pushed the day of this pass** |
+| **AI Agent Reviewer** | [`madhubioinformatics/AI-Agent-Reviewer`](https://github.com/madhubioinformatics/AI-Agent-Reviewer) | 🟢 MIT (`1,078 B`, `496be088015d`) | 🔴 `0` | **North America** (UCI MIND) | 🔴 **The only purpose-built manuscript-and-grant review agent in existence, at zero stars.** Encodes the **NIH study-section rubric** — the rubric is the asset; the browser app with a pasted API key is not |
+| **IRB-in-Hurry** | [`htlin222/irb-in-hurry`](https://github.com/htlin222/irb-in-hurry) | 🟢 MIT (`1,070 B`, `f000e7f76003`) | `40` | 🟢 **APAC** (Taiwan, KFSYSCC) | 🔵 Ledger promotion. `43 / 43` official IRB forms from plain text. 🔴 **Paperwork, not review workflow** |
+
+### 🔴 The declared nil of the week, and it is the commercial one
+
+**The ethics-review *workflow* does not exist as open source.** A full leg over IRB / ethics-review / protocol-management / research-compliance returned: one MIT **form generator** (above), one animal-care app with no stated licence, one HL7 sIRB proof-of-concept that **`404`s on the raw channel**, and the `AGPL-3.0` `kuali/kc` IRB module **last pushed `2018-05-16`**. 🔵 **Every research university runs an IRB on paper, email or a proprietary system. That is a build, not an integration** (`T528`).
+
+### 🔵 Method note carried forward
+
+`P210` was run **before** any row was drafted: a `grep` of this base's own append-only ledger showed `3` of the `9` rows above were already discovered and never promoted. 🟢 **`p756`'s lesson held a second week: the backlog is cheaper than a search leg** — and this week it also caught `rdmorganiser/rdmo`, whose held licence cell **reproduced byte-for-byte** on an independent read (`11,358 B`, `cfc7749b96f6`) and was therefore verified rather than re-added (`T530`).
+
+---
+
 ## 🆕 2026-11-11 (p756) — 🟢 **SEVEN AGENTS, ZERO SEARCHES: EVERY ROW THIS PASS CAME OUT OF THIS BASE'S OWN UNREAD LEDGER. 🔴 AND `unstated` TURNED OUT TO BE HIDING A `45`-ROW TIER GLOBANT MAY NOT BUILD ON — INCLUDING KHAN ACADEMY'S OWN TUTORING-ACCURACY EVAL SET.**
 
 **`ACTION p755-A` executed in full · all `968` remaining `unstated` ledger rows swept · `565` licence payloads byte-read (`58.4%` yield, against `T505`'s projected `~460`) · class closed `968` → `0` · `98` ledger-shelf desynchronisations crosschecked, `8` real shelf defects found · `3` corrections against this pass's own instruments · `7` agent rows, `7` foundations, `5` verticals filed · `T509`–`T520`.**

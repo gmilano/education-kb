@@ -4,6 +4,72 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `P284`–`P286` — added at p757 (2026-11-11)
+
+🟢 **Three recipes for the research-administration and research-integrity register, and every component in them was byte-read for its grant this pass** (`T521`–`T532`). Each names its addresses, its licence and its region, and each states the thing it **cannot** do.
+
+🔴 **Four constraints apply to all three.**
+1. 🔴 **There is no open record system.** [`kuali/kc`](https://github.com/kuali/kc) is `AGPL-3.0` and has not been pushed since **`2018-05-16`**. Every recipe below **integrates around** an incumbent proprietary or in-house system; none replaces it (`T532`).
+2. 🔴 **Do not put [`SakanaAI/AI-Scientist-v2`](https://github.com/SakanaAI/AI-Scientist-v2) into a client deployment without Legal.** Its clause `3.3` requires its use restrictions to be reproduced as an **enforceable provision in Globant's own client agreement** (`T524`). Where a permissive substitute exists, these recipes use [`microsoft/RD-Agent`](https://github.com/microsoft/RD-Agent) (`MIT`).
+3. 🔴 **A UI that reuses ORCID's branding or look-and-feel is outside ORCID's grant**, even though the elements ship in the code (`repos/foundations.md`).
+4. ⚠️ **DSW's `engine-backend` is archived (`2026-09-01`)** while the rest of the estate is live. `ACTION p757-B` must be closed before `P285` is costed (`T527`).
+
+### 🟢 `P284` — Machine-actionable DMP compliance: the plan as an object, checked against what the award actually produced
+
+**Buyer:** a US research university's office of research / library, post-`2025-12-31` OSTP public access and on NIH's `2026` DMS Plan format. **Region: North America.** **6–9 weeks.**
+
+| Layer | Component | Grant (byte-read `2026-11-11`) |
+|---|---|---|
+| Plan of record | [`CDLUC3/dmptool`](https://github.com/CDLUC3/dmptool) | 🟢 `MIT` · `1,186 B` · `91a3b5bff2fd` |
+| Plan as API object | [`CDLUC3/dmptool-apollo-server`](https://github.com/CDLUC3/dmptool-apollo-server) | 🟢 `MIT` · pushed `2026-11-10` |
+| Organisation identity | [`ror-community/ror-api`](https://github.com/ror-community/ror-api) | 🟢 `MIT` · `1,079 B` · `3b427452506f` |
+| Output → grant linking | [`openaire/iis`](https://github.com/openaire/iis) | 🟢 `Apache-2.0` · `11,358 B` · `cfc7749b96f6` |
+| Output provenance | [`ResearchObject/ro-crate-py`](https://github.com/ResearchObject/ro-crate-py) | 🟢 `Apache-2.0` · `11,358 B` · `cfc7749b96f6` |
+| Dataset versioning | [`datalad/datalad`](https://github.com/datalad/datalad) | 🟢 `MIT` at depth 1 · `2,104 B` · `f742d6fae771` · ⚠️ composite |
+| Agent runtime | [`microsoft/RD-Agent`](https://github.com/microsoft/RD-Agent) | 🟢 `MIT` · `1,141 B` · `c2cfccb812fe` |
+
+**Wiring.** `dmptool` holds the plan; the Apollo server exposes it as a **DMSP object with an identifier** rather than a PDF. An agent built on `RD-Agent`'s loop takes one award, resolves its institution via `ror-api` and its outputs via `openaire/iis`, then answers one question per plan commitment: *the plan said these data would be deposited here by this date — were they?* Each answer is emitted as an **RO-Crate** via `ro-crate-py`, with `datalad` pinning the dataset version the check ran against.
+
+🟢 **The deliverable is the gap report**, per award, with provenance: the artefact the post-deadline compliance question actually asks for. 🔴 **What it cannot do:** it cannot *make* a researcher deposit data, and it cannot see outputs that were never registered with a DOI — the coverage ceiling is whatever `openaire/iis` indexes, which must be measured on the client's own corpus in week 1 before any accuracy target is agreed.
+
+### 🟢 `P285` — Horizon Europe DMP generation inside the tool the research office already runs
+
+**Buyer:** an EU or UK research-performing organisation with Horizon Europe awards (DMP due month `6`, maintained for the project's life). **Region: EMEA.** **5–8 weeks.**
+
+| Layer | Component | Grant (byte-read `2026-11-11`) |
+|---|---|---|
+| DMP platform | [`ds-wizard/engine-frontend`](https://github.com/ds-wizard/engine-frontend) + [`engine-tools`](https://github.com/ds-wizard/engine-tools) + [`engine-gateway`](https://github.com/ds-wizard/engine-gateway) | 🟢 `Apache-2.0` · frontend `11,340 B` · `6df7cbf69dc0` |
+| Deployment | [`ds-wizard/dsw-deployment-example`](https://github.com/ds-wizard/dsw-deployment-example) | 🟢 `MIT` · `1,080 B` · `5317f2767018` |
+| Funder shape | [`ds-wizard/horizon-europe-dmp-template`](https://github.com/ds-wizard/horizon-europe-dmp-template) | 🟢 `Apache-2.0` · `11,357 B` · `c71d239df917` |
+| AI generation | [`ds-wizard/ai-document-plugin`](https://github.com/ds-wizard/ai-document-plugin) | 🟢 `MIT` · `1,059 B` · `1d7d181a3f30` |
+| Cross-check | [`DMPRoadmap/roadmap`](https://github.com/DMPRoadmap/roadmap) | 🟢 `MIT` · `1,186 B` · `91a3b5bff2fd` |
+
+**Wiring.** Self-host DSW from the MIT deployment example; load `horizon-europe-dmp-template` so the output is **the funder's own shape** rather than a generic plan; install `ai-document-plugin` so the narrative sections are drafted from the questionnaire answers **inside DSW**, leaving the data steward reviewing a draft instead of writing one. The plugin is the whole reason this is an AI engagement and not a deployment: the knowledge model already encodes *what* must be answered; the LLM supplies *prose that an officer will sign*.
+
+🟢 **Why this sells in EMEA specifically:** every component is EU- or UK-stewarded open source — the plugin's own README credits **ELIXIR CZ (MŠMT `LM2023055`)** and **EOSC CZ** project `CZ.02.01.01/00/23_014/0008787` — so "sovereign by construction" is provable here, which is the Council's stated `2026` direction. 🔴 **What it cannot do:** the **EOSC deposit duty is conditional on call conditions**, not blanket; do not scope a deposit obligation from the generic mandate. ⚠️ **Blocked on `ACTION p757-B`** (archived backend) before a server cost is quoted.
+
+### 🟢 `P286` — Research-integrity screening with its own evaluation dossier, built on the one open label set
+
+**Buyer:** a university research-integrity office, a regional index, or a publisher that cannot buy the proprietary screening tools. **Region: LATAM lead (SciELO estate), portable to Global.** **8–12 weeks.**
+
+| Layer | Component | Grant (byte-read `2026-11-11`) |
+|---|---|---|
+| Submission validity oracle | [`scieloorg/packtools`](https://github.com/scieloorg/packtools) | 🟢 `BSD-2-Clause` · `1,289 B` · `03aa7e926b57` |
+| Corpus metadata | [`scieloorg/articles_meta`](https://github.com/scieloorg/articles_meta) | 🟢 `BSD-2-Clause` · `1,319 B` · `d0ca1bb82451` |
+| Editorial back office | [`scieloorg/scielo-manager`](https://github.com/scieloorg/scielo-manager) | 🟢 `BSD-2-Clause` · `1,328 B` · `c0182a8ef5bb` |
+| Screening at corpus scale | [`asreview/asreview`](https://github.com/asreview/asreview) | 🟢 `Apache-2.0` · `11,417 B` · `e7321ae59e86` · 🔴 title-block trap (`T526`) |
+| Bias label taxonomy | [`ijmarshall/robotreviewer`](https://github.com/ijmarshall/robotreviewer) | 🔴 `GPL-3.0` · `35,146 B` · `c53a65c2fd56` · **dormant `2022`** — 🔴 **use the labels, do NOT link the code** |
+| Provenance of each verdict | [`ResearchObject/ro-crate-py`](https://github.com/ResearchObject/ro-crate-py) | 🟢 `Apache-2.0` · `11,358 B` · `cfc7749b96f6` |
+| Person / org identity | [`ORCID/ORCID-Source`](https://github.com/ORCID/ORCID-Source) + [`ror-community/ror-api`](https://github.com/ror-community/ror-api) | 🔴 bespoke *ORCID MIT-Style* · `1,669 B` · `3eaeaa9ffbef` — and 🟢 `MIT` |
+
+**Wiring.** `packtools` gives a **binary, testable gate** — is this submission well-formed JATS — which is the ground truth almost no other education register offers. `articles_meta` supplies the corpus. `ASReview`'s active-learning loop is repurposed from systematic-review screening to **integrity triage**: the integrity officer labels, the model reorders the queue, and the queue is the product. `RobotReviewer`'s **Cochrane risk-of-bias taxonomy is reused as the label schema** — 🔴 **as a taxonomy only; its `GPL-3.0` code is not linked, imported or distributed.** Each verdict ships as an RO-Crate: input, model version, labeller, timestamp.
+
+🔴 **The non-negotiable second deliverable, and it is what makes this defensible.** A `2026` Frontiers editorial argues institutions should **not deploy AI screening without documented bias, security and data-governance assessments**, and a `2026` policy review found that AI-policy studies **describe policy design, not effectiveness**, with similar growth in detected AI-assisted writing at journals **with and without** AI policies. 🔵 **So the engagement ships a screening pipeline *and* its evaluation dossier** — per-class precision and recall on the client's own corpus, a measured false-positive rate on an author population, and the governance assessment. **A pipeline without that dossier is unsellable to a research-integrity office and should not be proposed.**
+
+🔴 **What it cannot do:** it cannot adjudicate misconduct, and it must not be presented as detecting AI authorship. **It triages for human review** — which is exactly how the proprietary incumbents describe their own behaviour (Elsevier's *Check Integrity* flags for human review rather than rejecting automatically).
+
+---
+
 ## 🆕 `P280`–`P283` — added at p756 (2026-11-11)
 
 🟢 **Four recipes, and every component in them was recovered from this base's own unread ledger this pass** (`ACTION p755-A`, `T509`). Each is named with its address, its byte-read grant and its region.

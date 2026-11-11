@@ -6,6 +6,8 @@ updated: 2026-11-11
 
 # Education AI — Market Intelligence
 
+**Pass p757 · researched 2026-11-11.** All four mandated regional legs ran; **three returned dated obligations and EMEA returned a sourced-adoption nil for the SEVENTH consecutive pass, written down rather than filled from a vendor blog.** 🟢 **Each region's newest block is `#### 🆕 p757` under the single [`## Opportunities by region`](#opportunities-by-region) heading — all five values, each written *below* the heading it describes (`p756`'s `ACTION p756-C` repair honoured).** 🔴 **The register is the *research-administration and research-integrity layer*, and its demand side is the only one this base has found that is **already past its deadline in North America**: the OSTP public-access requirement bit on `2025-12-31`, so the compliance question in `2026` is evidence, not preparation (`T523`).** 🔴 **Market correction against this pass's own first reading, in the refusing direction: there is no "2026 OSTP deadline". The `2022` memo set `2025-12-31`; what changes in `2026` is the NIH **plan format** (`NOT-OD-26-046`, required for due dates on or after `2026-05-25`). A pass that sold a client a looming federal deadline would have been selling a date that had already passed.** 🟢 **LATAM is the strongest *supply* region for this register — SciELO's four-repository estate is `BSD-2-Clause` and byte-read (`T529`) — and the weakest on governance, which is the same gap `p756` priced from the adoption side.** 🔴 **One procurement landmine named: the `22,474★` AI-research agent every client will ask about carries a licence that obliges Globant to write use restrictions into its own downstream contract (`T524`).**
+
 **Pass p756 · researched 2026-11-11.** All four mandated regional legs ran; **three returned instruments and EMEA returned a sourced-adoption nil for the sixth consecutive pass, written down rather than filled from a vendor blog (`T519`).** 🟢 **Each region's newest block is `#### 🆕 p756` under the single [`## Opportunities by region`](#opportunities-by-region) heading — all five values, no region-only section.** 🔧 **Structural repair to this section, and it was a real data defect: `p755`'s five region blocks were each written *above* their `###` heading, so every one rendered under the **previous** region** — p755's EMEA block (citing `european-commission-empl`) sat at the end of **North America**, its APAC block under **EMEA**, and so on. 🟢 **All five relocated to the region they describe, content preserved byte-for-byte (file length delta `0`), order now `p756` → `p755` → `p754` under every heading.** `gate-region-headings` counts headings and subsections and cannot see this, so it passed green for a pass (`ACTION p756-C`). 🟢 **LATAM is the best-measured region this pass and the figures are adoption percentages this base has repeatedly nilled** — UNESCO IESALC across `200` institutions in `19` countries: **`87%` using AI, `74%` in teaching, `26%` with a strategy, `55%` with no AI budget, `4%` public-university dedicated funding.** 🔵 **The sell is the gap, not the growth rate: adoption already happened without governance or budget.** 🔴 **Market: one procurement landmine now named — Khan Academy's tutoring-accuracy evaluation dataset is non-commercial-evaluation-only and cannot validate a Globant deliverable (`T510`).**
 
 **Pass p755 · researched 2026-11-11.** All four mandated regional legs ran and **all four returned facts**; the register itself returned the thinnest supply this base has enumerated (`T491`). 🟢 **Each region's newest block is `#### 🆕 p755` under the single [`## Opportunities by region`](#opportunities-by-region) heading — all five values, no region-only section.** 🔴 **Market: do not quote a single "adult education" number — `~1,000×` spread measured (`T500`); price against "continuing education", where two independent bases agree at `1.01×`.**
@@ -255,6 +257,25 @@ credentials-and-skills axis rather than the tutoring axis.
 
 
 ### North America
+
+#### 🆕 `p757` (`2026-11-11`) — 🔴 the federal deadline this register runs on **already passed**, which turns the sell from readiness into **evidence**; 🟢 and the plan itself became a machine-readable object
+
+🔴 **Correction first, because it is the opposite of what a pipeline wants to find.** This pass's leg initially read as "a 2026 federal public-access deadline". It is not: the **2022 OSTP memo set `2025-12-31`** as the date for free, immediate public access to federally funded research publications *and supporting data*, with **no embargo**. 🔵 **That date is behind us.** The consequence is commercially better, not worse: **in `2026` a US research institution is not preparing for a rule, it is being asked to evidence compliance with one.**
+
+🟢 **What actually changes in 2026 is the artefact's format, and that is a build.** NIH's **Data Management and Sharing Policy** has been in force for new awards since **`2023-01-25`** and is unchanged. What changed is the **plan**: `NOT-OD-26-046` updated the DMS Plan elements, and the **2026 Pilot DMS Plan format is required for due dates on or after `2026-05-25`**. ⚠️ **A single secondary source** also cites `NOT-OD-26-100` (dated `2026-07-29`) finalising the rollout with reporting changes from `2026-10-01`; **one source only, not primary-verified — do not put it in a client deck** (`ACTION p757-C`).
+
+| Datum (read `2026-11-11`) | Figure / date | Why it is the engagement |
+|---|---|---|
+| OSTP public-access requirement | 🔴 **in force since `2025-12-31`** | The compliance posture is retrospective. The deliverable is an audit trail over outputs already published |
+| NIH DMS Policy | in force `2023-01-25`, **unchanged** | Stable requirement — safe to build against |
+| NIH 2026 Pilot DMS Plan format | 🟢 **required for due dates ≥ `2026-05-25`** (`NOT-OD-26-046`) | A **format migration with a date**: every plan template, every helper tool and every institutional boilerplate has to move |
+| `NOT-OD-26-100` reporting changes | ⚠️ claimed `2026-10-01` | **Single secondary source.** Flag, do not assert |
+
+🟢 **The supply side here is unusually complete, and this base held none of it.** [`CDLUC3/dmptool`](https://github.com/CDLUC3/dmptool) (`MIT`, `68★`) is the US national DMP service; [`CDLUC3/dmptool-apollo-server`](https://github.com/CDLUC3/dmptool-apollo-server) (`MIT`, pushed `2026-11-10`) and `CDLUC3/dmsp_*_prototype` are the **machine-actionable DMP** (DMSP) work — a plan as an **API object with an identifier**, not a PDF. 🔵 **That is the single most sellable idea in this register:** once the plan is an object, an agent can check an award's outputs against its own plan, which is exactly what the post-deadline evidence question asks.
+
+🟢 **The identity and record layer is also North American and also permissive:** [`vivo-project/VIVO`](https://github.com/vivo-project/VIVO) (`BSD-3-Clause`, `239★`, Lyrasis) as the open CRIS, and [`ror-community/ror-api`](https://github.com/ror-community/ror-api) (`MIT`, holder *Crossref*) for organisation identifiers. 🔴 **One exception, and it is the identifier everyone needs:** [`ORCID/ORCID-Source`](https://github.com/ORCID/ORCID-Source) is **not MIT** — it is a bespoke *"ORCID MIT-Style License"* that excludes the branding and look-and-feel of `orcid.org` **even where those elements are in the code supplied**, and restricts use of the ORCID marks ([`repos/foundations.md`](../repos/foundations.md)). A client-facing UI that reuses ORCID's visual design is outside the grant.
+
+🔴 **The hole in the North American supply, and the buyer is already paying someone for it.** The **system of record** is [`kuali/kc`](https://github.com/kuali/kc) — a US higher-education consortium's grants/IRB/COI suite — and it is `AGPL-3.0` with **no push since `2018-05-16`**. 🔵 **Consequence for an NA engagement: propose integration and augmentation around an incumbent record system, never a platform replacement.** The one purpose-built grant-review agent in existence, [`madhubioinformatics/AI-Agent-Reviewer`](https://github.com/madhubioinformatics/AI-Agent-Reviewer) (`MIT`, built at UCI MIND), encodes the **NIH study-section rubric** and has **`0` stars** — the rubric is the asset, the hackathon app around it is not.
 
 #### 🆕 `p756` (`2026-11-11`) — 🟢 the state legislature is the buyer, and the artefact every public college now needs is a **scoring-fairness report** nobody is producing
 
@@ -1270,6 +1291,18 @@ this is the third consecutive pass to return already-filed facts. Supply remains
 `p724`'s `9` new repositories are North American.**
 
 ### EMEA
+
+#### 🆕 `p757` (`2026-11-11`) — 🟢 the register's **maintained** platform, its AI plugin and its funder template are all EMEA and all permissive; 🔴 and the adoption percentage nils for a **seventh** consecutive pass
+
+🔴 **The nil first, because it is a standing commitment of this page and not an oversight.** The mandated EMEA leg ran in full and returned **no sourced AI-adoption percentage for European education** — the **seventh** consecutive pass. What it returned instead was regulation, a Council position and a Commission package. The one quantitative figure on offer, **Eurostat's `20%` of EU *enterprises* using AI technologies in `2025`**, is **not an education figure and is not recorded as one**. 🔵 **Seven passes is no longer bad luck: the European instrument publishes obligations, not adoption rates, and a leg aimed at percentages will keep returning statutes.** The fix is to stop asking Europe for adoption and start asking it for deadlines (`ACTION p757-D`).
+
+🟢 **And on deadlines this register pays better than any other this base holds, because the obligation is a document.** Horizon Europe beneficiaries **must establish and regularly update a Data Management Plan**, due by **month `6`** and maintained for the project's life; research data management is a **mandatory** Open Science practice wherever a project generates or reuses digital research data. ⚠️ **The EOSC deposit duty is conditional, not blanket** — *"when required by the call conditions, use a repository federated in EOSC"* — and a secondary source's claim that *"several 2026 calls require EOSC-conformant deposit"* **names no calls and is not verified here**. 🔵 Scope against the specific call text, never against the generic mandate.
+
+🟢 **The supply is the best-matched in this register and it is European public infrastructure.** The **Data Stewardship Wizard** estate ([`ds-wizard/engine-frontend`](https://github.com/ds-wizard/engine-frontend), `Apache-2.0`) is maintained and pushed within days of this pass; [`ds-wizard/horizon-europe-dmp-template`](https://github.com/ds-wizard/horizon-europe-dmp-template) (`Apache-2.0`) is **the EU funder's own DMP shape as a machine-readable template**; and [`ds-wizard/ai-document-plugin`](https://github.com/ds-wizard/ai-document-plugin) (`MIT`, pushed `2026-11-10`) generates the plan document with an LLM **inside the tool the research office already runs**. 🟢 **Placement is from the artifact, not inferred:** the plugin's own README credits **ELIXIR CZ (MŠMT grant `LM2023055`)** and the **EOSC CZ** National Repository Platform project `CZ.02.01.01/00/23_014/0008787`. 🔴 **One scoping warning that must be in the first estimate:** DSW's `engine-backend` is **archived (`2026-09-01`)** while the rest of the estate is live — establish the server story before costing (`T527`).
+
+🟢 **The compliance read-path is European too.** [`openaire/iis`](https://github.com/openaire/iis) (`Apache-2.0`) mines full texts to link publications to datasets, software **and funder grant IDs** — the mapping from an output back to the project that paid for it, which is what an EU audit actually asks for. [`DMPRoadmap/roadmap`](https://github.com/DMPRoadmap/roadmap) (`MIT`, `119★`) is UK-stewarded (DCC) and its holder line names **Edinburgh and Glasgow alongside the Regents of the University of California** — a genuinely cross-regional asset. [`asreview/asreview`](https://github.com/asreview/asreview) (`Apache-2.0`, Utrecht) is the region's systematic-review screening engine.
+
+🔵 **The sovereignty tailwind, recorded as context and not as a contract.** A **Council of the EU** document of **late October `2026`** frames digital sovereignty and strategic autonomy as essential, naming the reduction of dependencies on **AI tools developed outside Europe, including in education and training**. The Commission has also presented an **Education and Skills Package**. 🔵 **For this register that argument lands unusually well: the entire maintained stack above is EU- or UK-stewarded open source**, so "sovereign by construction" is a provable claim here rather than a slogan. ⚠️ Regulatory dates for education AI are unchanged from `p756` and are not restated: Annex III high-risk at **`2027-12-02`**, Article 50 transparency since **`2026-08-02`**, emotion-recognition prohibition since **`2025-02-02`**.
 
 #### 🆕 `p756` (`2026-11-11`) — 🟢 two state assets land permissive, including **public-domain curriculum metadata for all sixteen Bundesländer**; 🔴 and the adoption percentage nils for a **sixth** consecutive pass
 
@@ -2478,6 +2511,25 @@ selling urgency against a date the amendment moved**, and that mismatch is the o
 
 ### APAC
 
+#### 🆕 `p757` (`2026-11-11`) — 🟢 the region supplied the register's **highest-starred** agent and its **only** ethics-paperwork tool; 🔴 and the first of those carries the licence Globant must pass down a contract
+
+🟢 **APAC filed `2` of this pass's `9` agent rows and they are the two extremes of the shelf.** [`SakanaAI/AI-Scientist-v2`](https://github.com/SakanaAI/AI-Scientist-v2) (Japan) is the register's star attraction at **`7,495★`**, with **`14,979★`** on its byte-identical predecessor. [`htlin222/irb-in-hurry`](https://github.com/htlin222/irb-in-hurry) (Taiwan, `MIT`, `40★`) is the **only artefact on earth this pass found that automates research-ethics paperwork** — `43 / 43` of one cancer centre's official IRB forms from plain text.
+
+🔴 **Read the Sakana licence before the engagement, not after (`T524`).** It is indexed `NOASSERTION`; the payload is a **bespoke** grant titled *The AI Scientist Source Code License v1.0* (December 2025), derived from the **Responsible AI Source Code License v1.1**, byte-read at `4,256 B`, sha256₁₂ `9c82e554a54d`. **It is not OSI-approved and it is not non-commercial** — commercial use *is* granted. What it carries instead:
+
+| Clause | Obligation | Why it reaches Globant |
+|---|---|---|
+| `3.2(e)` — the *"AI Scientist"* clause | Manuscripts, research papers or technical reports it generates must **prominently disclaim** machine generation (abstract, Disclosure or Methods) | The deliverable's **content** is constrained, not just its attribution |
+| `3.2(a)`–`3.2(d)` | No surveillance / protected-class inference, no undisclosed synthetic media, no unsupervised diagnosis, no criminality prediction | Standard RAIL-family behavioural restrictions |
+| 🔴 `3.3` | Those restrictions **MUST be included as an enforceable provision in any legal agreement** governing Your use or distribution | 🔴 **A contract-drafting obligation on the integrator.** The restrictions must appear in **Globant's own client agreement** |
+| `4` | Breach of `3.2` lets the Licensor **terminate and require destruction of all copies** | A live termination risk carried into a client deployment |
+
+🔵 **The commercial read:** this is the agent every research client will have seen, and it is usable — but it is the **only** row in this pass that changes what Legal has to draft. Price the clause, or pick [`microsoft/RD-Agent`](https://github.com/microsoft/RD-Agent) (`MIT`, `15,322★`), which is permissive and does the same class of work without the flow-down. ⚠️ Sakana's last push is **`2025-12-19`** — roughly eleven months cold.
+
+🟢 **The provenance standard is half-APAC and that is a credible regional claim.** [`ResearchObject/ro-crate`](https://github.com/ResearchObject/ro-crate)'s copyright is held jointly by the **University of Technology Sydney** and the University of Manchester — the packaging standard for "what an agent produced and how" is co-owned in this region.
+
+🔴 **The gap, measured and regional.** There is **no open-source research-administration platform anywhere in APAC** that this pass could find: no grants system, no ethics-review workflow, no CRIS. The entire regional supply for the register is one bespoke-licensed research agent and one MIT form generator. 🔵 **Against that, the region's AI governance is the most dated in the world** — Korea's **AI Basic Act in force `2026-01-22`**, **Vietnam's AI law in force `2026-03-01`** with **transition periods of 12 months, or 18 months in health care, education and finance**, China regulating through targeted measures including content labelling, while **Australia and Japan rely on existing law plus voluntary guidance** and **Singapore on frameworks such as AI Verify**. ⚠️ Those are regional AI statutes, **not research-administration rules**, and are recorded as the governance context a research-integrity deliverable is sold into — not as a mandate for it.
+
 #### 🆕 `p756` (`2026-11-11`) — 🟢 compulsory AI curriculum lands in **2026–27** in both giants, and national curriculum structure for Korea and China is now held permissively
 
 🟢 **The mandate is now dated in both of the region's largest systems.** China's **Ministry of Education** formalised **"Artificial Intelligence and Technology"** as a school subject for the **2026–27** year — read by at least one analysis as industrial policy rather than curriculum reform. **India** brings AI and computational thinking into all schools **from Grade 3** starting **2026–27**, tied to **NEP 2020**. 🔵 Both join the mandatory-AI-literacy group with the UAE. **Vietnam** classes education as a high-risk sector and names **automated assessment** and behavioural monitoring (`p745`'s `Decision No. 33/2026/QD-TTg`, search-channel only). Binding regimes: **South Korea, China and Vietnam**; Japan, Singapore, Hong Kong, Australia and India rely mainly on existing law and guidance, and India's amended IT Rules on **labelling synthetic content** took effect **`2026-02-20`**.
@@ -3585,6 +3637,33 @@ minority everywhere in APAC, but it is *rising* in Japan, Australia and South Ko
 capability; sell into Japan, Australia and Korea on safeguards as well.
 
 ### LATAM
+
+#### 🆕 `p757` (`2026-11-11`) — 🟢 the region's research infrastructure is **already open and permissive** — SciELO's estate is `BSD-2-Clause`, byte-read — and that inverts the usual LATAM story on this page
+
+🟢 **The supply finding, and it is the strongest this base has recorded for LATAM on any register.** This page has repeatedly recorded LATAM repository nils. For research administration the opposite is true: **the region's scholarly publishing infrastructure is open source, permissive and maintained**, and `756` passes carried **`0`** rows of it on any curated shelf.
+
+| Repo | Grant (byte-read `2026-11-11`) | ★ | Currency | What it is |
+|---|---|---|---|---|
+| [`scieloorg/packtools`](https://github.com/scieloorg/packtools) | 🟢 **`BSD-2-Clause`** — `1,289 B`, `03aa7e926b57` | `10` | 🟢 pushed **`2026-11-09`** | JATS XML validation and packaging — the gate an article must pass to be published |
+| [`scieloorg/articles_meta`](https://github.com/scieloorg/articles_meta) | 🟢 **`BSD-2-Clause`** — `1,319 B`, `d0ca1bb82451` | `7` | pushed `2026-10-07` | The metadata API over the SciELO corpus |
+| [`scieloorg/scielo-manager`](https://github.com/scieloorg/scielo-manager) | 🟢 **`BSD-2-Clause`** — `1,328 B`, `c0182a8ef5bb` | `16` | pushed `2026-03-03` | Journal and collection management back office |
+| 🔴 [`scieloorg/opac`](https://github.com/scieloorg/opac) | 🟢 **`BSD-2-Clause`** — `1,294 B`, `edc3be5186be` | `10` | 🔴 **archived `2026-01-26`** | The public catalogue — recorded as archived, not listed as a platform |
+
+🟢 **All four read as 2-clause from the payload, not assumed:** the `"Neither the name"` clause appears **`0` times** in all four files. 🔵 **Why `packtools` is the row that matters:** it gives an AI submission-preparation agent a **testable oracle** — well-formed or not — which almost no other education register offers at all.
+
+🔴 **The governance gap is the sell, and the newest numbers sharpen the one `p756` priced.** `p756` recorded UNESCO IESALC at `87%` institutional AI use against `26%` with a strategy. This pass adds two independent readings and they agree on the shape:
+
+| Datum (read `2026-11-11`) | Figure | Source class |
+|---|---|---|
+| Higher-education engagement with AI | **`92%` of students, `79%` of faculty** | Digital Education Council LATAM survey `2026` |
+| School-level use | **~`9` in `10`** 15-year-olds across the **`13`** countries assessed have used AI chatbots for schoolwork | PISA `2025` — 🔵 a series this base held **`1`** mention of |
+| Brazil, school administrators | **`53%`** use AI — **`22%`** report their school has guidelines | secondary |
+| Regulatory volume | **`716`** AI-related instruments, rules and proposals across **`23`** countries and territories | Universidad de los Andes study, `2026` |
+| Faculty concern | **`70%`** worry about bias and accuracy of AI-generated content | survey |
+
+🔵 **The read that sells, and it is the same inversion as `p756`'s with a research-integrity edge:** adoption is near-universal, guidance is at `22%` in the largest system, **and `70%` of faculty already name accuracy and bias as the problem.** For this register that is a *research-integrity* brief, not a tooling brief: the institution needs defensible provenance over AI-assisted work, and [`ResearchObject/ro-crate`](https://github.com/ResearchObject/ro-crate) plus the SciELO validation chain is a provable way to produce it.
+
+⚠️ **The honest limit of this block.** The region's **research-administration** layer — grants, ethics review, CRIS — returned **nothing open source**, exactly as in APAC. The open LATAM estate is **publishing and indexing**, not administration. 🔵 Named regional bodies for the governance side (recorded as context, already partly held): **UNESCO's Observatory on AI in Education for LAC**, launched `2026-04-14` with CAF, CENIA, Cetic.br, ECLAC, Ceibal, ProFuturo and Tecnológico de Monterrey; **ECLAC/CENIA's ILIA `2026`**, whose largest measured regional gaps are compute capacity, enterprise AI adoption and national-strategy implementation.
 
 #### 🆕 `p756` (`2026-11-11`) — 🟢 the region's adoption numbers finally arrive **and** the repository nil breaks: Brazil's national curriculum is now agent-addressable under MIT
 
@@ -4764,6 +4843,26 @@ no code dependency) the right opening move here and makes a code-first pitch the
 first step rather than a formality.
 
 ### Global
+
+#### 🆕 `p757` (`2026-11-11`) — 🟢 the whole research-integrity screening market is **proprietary**, and that is the clearest open-source opening this base has measured
+
+🟢 **The global finding is a market structure, and it is global because the publishers are.** Research integrity is now an operational function with named instruments at scale — and **every one of them is closed**:
+
+| Instrument | Owner | Status | Scale claim |
+|---|---|---|---|
+| **Check Integrity** | Elsevier | 🔴 proprietary | reported expanded to **~`2,000` journals** (March `2026` press release) |
+| **Geppetto** (AI-generated text), **SnappShot** (images) | Springer Nature | 🔴 proprietary | publisher toolkit |
+| **RobotReviewer** | academic (`ijmarshall`) | 🟢 open — but **`GPL-3.0`** and **dormant since `2022-07-18`** | `180★` |
+
+🔵 **That table is the opportunity in one line: the function is being bought, the tools are closed, and the only open artefact is copyleft and four years cold.** ⚠️ A secondary analysis explicitly cautions that **claims of universal AI screening across major publishers are not independently substantiated** — so sell the capability gap, not a market-size figure.
+
+🔴 **Scale of the problem, with source confidence attached.** More than **`400,000`** papers published in the last 20 years are suspected to have originated from **paper mills** (review literature). ⚠️ A blog attributing to Retraction Watch an audit finding **~`1` in `277`** PubMed-indexed papers from early `2026` citing a **nonexistent** paper is **not confirmed against its primary source and must not be quoted**. 🟢 **The policy side is firmer:** major publishers prohibit listing AI as an author, require disclosure of tool use and hold human authors responsible; **ICMJE issued updated recommendations in January `2026` with a dedicated section on AI in publishing** — a series this base held **`0`** mentions of.
+
+🔴 **The finding a research-integrity proposal must survive, and it is a published negative.** A `2026` review of AI-in-publishing policies found those studies **describe policy design, not policy effectiveness**, and that **similar growth in detected AI-assisted writing appears at journals both with and without AI policies.** 🔵 **Read plainly: writing the policy does not change the behaviour, which is precisely why the billable artefact is detection-and-provenance infrastructure rather than another policy document.** A Frontiers editorial pushes the other way and belongs in the same brief: institutions should **not deploy AI screening without documented bias, security and data-governance assessments** — so the deliverable is a screening pipeline **plus** its own evaluation dossier.
+
+🟢 **The permissive global substrate that makes this buildable, all byte-read this pass.** [`ResearchObject/ro-crate`](https://github.com/ResearchObject/ro-crate) + [`ro-crate-py`](https://github.com/ResearchObject/ro-crate-py) (`Apache-2.0`) for provenance packaging; [`datalad/datalad`](https://github.com/datalad/datalad) (`MIT`, corrected this pass from `NOASSERTION`) for versioned data; [`ror-community/ror-api`](https://github.com/ror-community/ror-api) (`MIT`) for organisation identity; [`openaire/iis`](https://github.com/openaire/iis) (`Apache-2.0`) for output-to-grant linking; [`asreview/asreview`](https://github.com/asreview/asreview) (`Apache-2.0`) for screening at corpus scale.
+
+🔴 **And the global licence warning that applies to every region (`T524`).** The register's most-starred agent, [`SakanaAI/AI-Scientist-v2`](https://github.com/SakanaAI/AI-Scientist-v2) (`7,495★`, plus `14,979★` on the byte-identical v1), is indexed `NOASSERTION` and is governed by a bespoke RAIL-derived licence whose **clause `3.3` requires its use restrictions to be reproduced as an enforceable provision in Globant's own downstream agreement**, and whose **clause `3.2(e)` constrains the content of any manuscript it generates.** 🔵 **It is usable and it is commercial — it is simply the one component in this register whose cost includes Legal's time.**
 
 #### 🆕 `p756` (`2026-11-11`) — 🟢 the cheapest supply in this market is the inventory you already own: `968` rows swept returned `565` grants and `141` unpublished permissive education repositories
 

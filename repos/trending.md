@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p757) — 🟢 **THE RESEARCH-ADMINISTRATION SUBSTRATE IS PERMISSIVE ALL THE WAY DOWN AND `756` PASSES HELD `0` OF IT. 🔴 THE SYSTEM OF RECORD IS `AGPL-3.0` AND HAS NOT SHIPPED SINCE `2018`.**
+
+**`10` foundations rows · `8` platform rows · `31` licence payloads byte-read `2026-11-11` · `4` index values materially corrected · `4` payload-identity collisions measured · `T521`–`T532` declared.**
+
+### 🔴 The register, and the measurement that shows why it was missed
+
+| Term | Mentions across all `8` live shelves, before this pass |
+|---|---|
+| `dspace` / `jupyterhub` / `invenio` / `nbgrader` | `171` / `243` / `97` / `90` — 🟢 **well held** |
+| `research administration` | 🔴 **`1`** |
+| `systematic review` | 🔴 **`1`** |
+| `DMPRoadmap` / `dmptool` / `ds-wizard` | 🔴 **`0` / `0` / `0`** |
+| `ro-crate` / `ethics review` / `grant writing` / `peer review agent` | 🔴 **`0` / `0` / `0` / `0`** |
+
+🔵 **The shape of the gap is the finding: this base held the layer where research *outputs land* and missed the layer that *plans, approves, funds and audits* them.** Same buyer — a university — different budget line, and a compliance driver that is already past its deadline in North America.
+
+### 🟢 Foundations filed this week
+
+| Repo | Grant (byte-read `2026-11-11`) | ★ | Region | Note |
+|---|---|---|---|---|
+| [`DMPRoadmap/roadmap`](https://github.com/DMPRoadmap/roadmap) | 🟢 MIT · `1,186 B` · `91a3b5bff2fd` | `119` | 🔵 **Global** | One holder line, two regions: **Edinburgh, Glasgow & the Regents of the University of California** |
+| [`CDLUC3/dmptool`](https://github.com/CDLUC3/dmptool) | 🟢 MIT · `1,186 B` · **`91a3b5bff2fd`** (byte-identical) | `68` | **North America** | 🔴 **`T522`'s specimen**: a **fork**, invisible to `search/repositories` without `fork:true` |
+| [`ResearchObject/ro-crate`](https://github.com/ResearchObject/ro-crate) | 🟢 Apache-2.0 · `11,357 B` · `c71d239df917` | `167` | 🔵 **Global** (UTS Sydney + Manchester) | The provenance standard under every *"an agent did this research"* claim |
+| [`ResearchObject/ro-crate-py`](https://github.com/ResearchObject/ro-crate-py) | 🟢 Apache-2.0 · `11,358 B` · `cfc7749b96f6` | `92` | 🔵 **Global** | 🔵 `1 B` from the spec repo — **one leading blank line**, `p378`'s presentation fold |
+| [`vivo-project/VIVO`](https://github.com/vivo-project/VIVO) | 🟢 BSD-3-Clause · `1,502 B` · `116f840021d4` | `239` | **North America** (Lyrasis) | 🟢 **The open CRIS** — the research-information system of record |
+| [`vivo-project/Vitro`](https://github.com/vivo-project/Vitro) | 🟢 BSD-3-Clause · `1,512 B` · `8fcf1d46c2f7` | `118` | **North America** | The ontology framework VIVO is built on |
+| 🔴 [`ORCID/ORCID-Source`](https://github.com/ORCID/ORCID-Source) | 🔴 bespoke *ORCID MIT-Style* · `1,669 B` · `3eaeaa9ffbef` | `628` | **North America** | 🔴 **Corrected from `NOASSERTION`.** Branding / look-and-feel carve-out + trademark restriction |
+| [`ror-community/ror-api`](https://github.com/ror-community/ror-api) | 🟢 MIT · `1,079 B` · `3b427452506f` | `66` | **North America** (holder: Crossref) | Organisation identifiers — the affiliation side of ORCID |
+| 🟢 [`datalad/datalad`](https://github.com/datalad/datalad) | 🟢 MIT at depth 1 · `2,104 B` · `f742d6fae771` | `676` | ⚠️ unplaced | 🟢 **Corrected from `NOASSERTION`.** ⚠️ Composite `COPYING` with a separate 3rd-party section |
+| [`openaire/iis`](https://github.com/openaire/iis) | 🟢 Apache-2.0 · `11,358 B` · `cfc7749b96f6` | `27` | 🟢 **EMEA** | Links outputs to **funder grant IDs** — the EU audit artefact |
+
+### 🔴 Platforms filed this week — and the verdict that governs them
+
+| Platform | Repo | Grant | ★ / currency |
+|---|---|---|---|
+| 🔴 **Kuali Research** (Coeus) | [`kuali/kc`](https://github.com/kuali/kc) | 🔴 `AGPL-3.0` · `33,755 B` · `55618c37d2ae` | `33` · 🔴 **last push `2018-05-16`** |
+| 🟢 **Data Stewardship Wizard** | [`engine-frontend`](https://github.com/ds-wizard/engine-frontend) · [`engine-tools`](https://github.com/ds-wizard/engine-tools) · [`dsw-deployment-example`](https://github.com/ds-wizard/dsw-deployment-example) | 🟢 Apache-2.0 `11,340 B` `6df7cbf69dc0` · 🟢 MIT `1,080 B` `5317f2767018` | `8` / `14` · 🟢 pushed within 6 days |
+| 🔴 **DSW `engine-backend`** | [`ds-wizard/engine-backend`](https://github.com/ds-wizard/engine-backend) | 🟢 Apache-2.0 · `11,345 B` · `8c0e91e80fb6` | `9` · 🔴 **`archived`, `2026-09-01`** |
+| 🟢 **Horizon Europe DMP template** | [`ds-wizard/horizon-europe-dmp-template`](https://github.com/ds-wizard/horizon-europe-dmp-template) | 🟢 Apache-2.0 · `11,357 B` · `c71d239df917` | `3` · pushed `2026-11-09` |
+| 🟢 **SciELO `packtools`** | [`scieloorg/packtools`](https://github.com/scieloorg/packtools) | 🟢 BSD-2-Clause · `1,289 B` · `03aa7e926b57` | `10` · 🟢 pushed `2026-11-09` |
+| 🟢 **SciELO `articles_meta`** | [`scieloorg/articles_meta`](https://github.com/scieloorg/articles_meta) | 🟢 BSD-2-Clause · `1,319 B` · `d0ca1bb82451` | `7` · pushed `2026-10-07` |
+| 🟢 **SciELO `scielo-manager`** | [`scieloorg/scielo-manager`](https://github.com/scieloorg/scielo-manager) | 🟢 BSD-2-Clause · `1,328 B` · `c0182a8ef5bb` | `16` · pushed `2026-03-03` |
+| 🔴 **SciELO `opac`** | [`scieloorg/opac`](https://github.com/scieloorg/opac) | 🟢 BSD-2-Clause · `1,294 B` · `edc3be5186be` | `10` · 🔴 **`archived`, `2026-01-26`** |
+| ⚠️ **RobotReviewer** | [`ijmarshall/robotreviewer`](https://github.com/ijmarshall/robotreviewer) | 🔴 `GPL-3.0` · `35,146 B` · `c53a65c2fd56` | `180` · 🔴 **last push `2022-07-18`** |
+
+🔴 **The verdict, and it reproduces `p748` on an unrelated register (`T532`): `AGPL-3.0` at the record layer, `MIT` / `Apache-2.0` / `BSD` at every layer Globant would write code in.** The honest proposal is augmentation around an incumbent record system — never a platform replacement.
+
+### 🟢 LATAM is a supply region here, and the grant was counted rather than assumed
+
+All four SciELO payloads read as **`BSD-2-Clause`**: the `"Neither the name"` clause appears **`0` times** in all four files, which is the discriminator against BSD-3-Clause. 🔵 **The region's open estate is publishing and indexing, not administration** — recorded that way so the placement is not over-sold (`T529`).
+
+### 🔵 The Apache-2.0 length band now has five members on this base
+
+`11,336 B` (`aipoch/open-science`) · `11,340 B` (`ds-wizard/engine-frontend`) · `11,345 B` (`ds-wizard/engine-backend`) · `11,357 B` (`c71d239df917`: `ro-crate`, `runcrate`, `gpt-researcher`, `horizon-europe-dmp-template`, `OpenScholar`) · `11,358 B` (`cfc7749b96f6`: `ro-crate-py`, `openaire/iis`, and the **held** `rdmorganiser/rdmo` cell, which reproduced exactly). 🔵 **A byte length is not a licence identity, and this cohort is the clearest evidence of it yet** (`T525`, `T530`).
+
+---
+
 ## 🆕 2026-11-11 (p756) — 🟢 **`968` REQUESTS AGAINST THIS BASE'S OWN BACKLOG RETURNED MORE USABLE SUPPLY THAN ANY SEARCH LEG: `565` GRANTS BYTE-READ, `412` PERMISSIVE, `141` EDUCATION-NAMED AND NEVER PUBLISHED HERE.**
 
 **`7` foundations rows · `5` verticals · `565` licence payloads byte-read `2026-11-11` · `968` `unstated` ledger rows swept and the class CLOSED `968` → `0` · `8` real shelf defects found (`T513`) · `3` corrections against this pass's own instruments (`T514`) · `14` non-addresses found in the ledger's own harvest (`T515`).**

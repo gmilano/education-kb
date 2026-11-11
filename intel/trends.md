@@ -4,6 +4,110 @@ region: Global
 updated: 2026-11-11
 ---
 
+# 🆕 Trends new at `p757` (researched 2026-11-11) — `T521`–`T532`
+
+**THE PASS'S MOST VALUABLE OUTPUT IS AN INSTRUMENT CORRECTION, NOT A ROW.** `p756` declared `api.github.com` dead (`403`) and wrote `unmeasured` into the `★` cell of **every row it filed across three shelves**. The `/repos/` path is gated in this session; **the `search/repositories` path is not**, and it returns stars, index SPDX, `pushed_at` and `archived` for the same address. 🟢 **`10 / 12` of `p756`'s own `unmeasured` rows were resolved on it this pass.** The register is the **research-administration and research-integrity layer** of higher education.
+
+### 🔴 `T521` — `p756` buried a live channel and lost a whole column; the `/repos/` gate is not an API outage
+
+`p756` recorded: *"`api.github.com` returns `403` in this session… this pass declines to copy a star count off a search-result snippet."* **The decline was right; the diagnosis was wrong.** Two paths on the same host behave differently, re-controlled `2 / 2` this pass:
+
+| Channel | Result | Verdict |
+|---|---|---|
+| `api.github.com/repos/{owner}/{repo}` | 🔴 `{"message":"GitHub access to this repository is not enabled for this session…"}` | **gated** — `p756`'s observation, reproduced |
+| `api.github.com/search/repositories?q=repo:{owner}/{name}` (unauthenticated) | 🟢 `200` | **alive** |
+| `gh api -X GET search/repositories -f q=repo:{owner}/{name}` | 🟢 `200`, full metadata | **alive** |
+
+**Proof on `p756`'s own rows, not on rows chosen to succeed.** `10 / 12` resolved: `rsmtool` `71★`, `pedal` `33★`, `digital-credentials-public-validator` `17★`, `korean-elementary-learning-map` `117★`, `cn-primary-math-knowledge-graph` `9★`, `apply-for-teacher-training` `38★`, `advisingapp` `339★`, `bncc-mcp` `14★`, `lti-ai-grader` `0★`, `llmgrader` `2★`. 🔵 **This reproduces `p736`'s `T310` and `p752`'s `T455` a third time: the search channel is this base's working metadata oracle, and `repo:` IS a valid qualifier on it.** `ACTION p757-E`: no pass may write `unmeasured` on a popularity cell without first running the search path.
+
+### 🔴 `T522` — the search channel is a METADATA oracle and NOT an existence oracle, and it fails in two distinct ways that both read as absence
+
+Found while `T521` was being proved, and it is the more dangerous of the two findings because the failure mode is a **false absence**:
+
+| Class | Specimen | search channel | raw channel | Cause |
+|---|---|---|---|---|
+| **fork excluded by default** | `CDLUC3/dmptool` | 🔴 no item | 🟢 `200` | search omits forks; `fork:true` returns it: **`68★`, `MIT`, pushed `2026-11-04`** |
+| **renamed / transferred address** | `IMSGlobal/openbadges-validator-core`, `openwallet-foundation-labs/learner-credential-wallet`, `CDLUC3/dmsp_backend_prototype` | 🔴 `422 Validation Failed` — *"resources do not exist or you do not have permission to view them"* | 🟢 `200` | the raw channel **follows the rename**; the search channel does not. Canonical of the first: `1EdTech/openbadges-validator-core` (`61★`, `Apache-2.0`, probed alive) |
+
+🔴 **A `422` on this channel does not mean the repository is gone.** Two of the three specimens are **`p756`'s own filed rows**. 🔵 **The rule: existence is settled on `raw.githubusercontent.com`, popularity on `search/repositories`, and neither substitutes for the other.** `ACTION p757-A`.
+
+### 🔴 `T523` — the register was at a measured near-nil across `756` passes, and the adjacent layer was held well
+
+Measured over all eight live shelves before any row was drafted. **Held well:** `dspace` `171`, `jupyterhub` `243`, `invenio` `97`, `nbgrader` `90`, `otter-grader` `68`, `orcid` `65` (as a word), `thesis` `199`. **Near-nil:** `research administration` **`1`**, `systematic review` **`1`**, `DMPRoadmap` **`0`**, `dmptool` **`0`**, `ds-wizard` **`0`**, `ro-crate` **`0`**, `ethics review` **`0`**, `grant writing` **`0`**, `peer review agent` **`0`**, `protocols.io` **`0`**. 🔵 **The shape of the gap is informative: this base held the *repository* layer (where outputs land) and missed the *administration* layer (how they are planned, approved, funded and audited).** Same buyer, different budget line.
+
+### 🔴 `T524` — the register's most-starred agent carries a licence that reaches into Globant's own client contract
+
+[`SakanaAI/AI-Scientist-v2`](https://github.com/SakanaAI/AI-Scientist-v2) — `7,495★`, plus `14,979★` on `AI-Scientist`, **byte-identical payloads** (`4,256 B`, sha256₁₂ `9c82e554a54d`). Indexed **`NOASSERTION`**; the payload is titled **`The AI Scientist Source Code License`, Version 1.0, December 2025**, and states it is based on the **Responsible AI Source Code License v1.1**.
+
+- 🟢 **It is not non-commercial.** Clause `2` grants a worldwide, royalty-free copyright licence to reproduce, modify and distribute.
+- 🔴 **Clause `3.2(e)` — the "AI Scientist" clause:** manuscripts, research papers or technical reports it generates must *prominently* disclaim machine generation (abstract, Disclosure or Methods).
+- 🔴 **Clause `3.3`:** the clause-`3.2` restrictions **"MUST be included as an enforceable provision by You in any type of legal agreement governing the use and/or distribution"** of the work or derivatives.
+- 🔴 **Clause `4`:** breach gives the Licensor the right to terminate and require destruction of all copies.
+
+🔵 **Why this is a trend and not a footnote: behavioural-use licences have arrived in the research-tooling layer, and they are the first licence class this base has found whose compliance step is a contract amendment rather than a `NOTICE` file.** The permissive alternative in the same capability band is [`microsoft/RD-Agent`](https://github.com/microsoft/RD-Agent) (`MIT`, `15,322★`).
+
+### 🔵 `T525` — four payload-identity collisions in one cohort, and the Apache-2.0 length band now has five members on this base
+
+Measured over `31` byte-read payloads this pass:
+
+| sha256₁₂ | Bytes | Members |
+|---|---|---|
+| `91a3b5bff2fd` | `1,186` | `DMPRoadmap/roadmap`, `CDLUC3/dmptool` — 🔵 **a national service shipping the upstream consortium's notice verbatim** |
+| `c71d239df917` | `11,357` | `ResearchObject/ro-crate`, `ResearchObject/runcrate`, `assafelovic/gpt-researcher`, `ds-wizard/horizon-europe-dmp-template`, `AkariAsai/OpenScholar` |
+| `cfc7749b96f6` | `11,358` | `ResearchObject/ro-crate-py`, `openaire/iis`, and this base's **held** `rdmorganiser/rdmo` cell |
+| `9c82e554a54d` | `4,256` | `SakanaAI/AI-Scientist`, `SakanaAI/AI-Scientist-v2` |
+
+🔵 **The `11,357` / `11,358` pair differ by exactly one leading blank line** — `p378`'s presentation-fold class, re-controlled on a live pair via `diff`. 🔵 **New Apache-2.0 lengths recorded this pass:** `11,336 B` (`aipoch/open-science`), `11,340 B` (`ds-wizard/engine-frontend`), `11,345 B` (`ds-wizard/engine-backend`), `11,417 B` (`asreview/asreview`). **A byte length is not a licence identity** and this cohort is the cleanest evidence of it yet: five distinct lengths, one family.
+
+### 🔴 `T526` — the title-block classifier's `1 / 37` failure, found in the wild
+
+`p747` recorded classifying `36 / 37` payloads from the title block. [`asreview/asreview`](https://github.com/asreview/asreview) is the specimen that defeats it: the first non-blank line of its `LICENSE` is
+
+> `Copyright 2019 The ASReview Authors.  All rights reserved.`
+
+— and the `Apache License / Version 2.0` body begins on line `3`. 🔴 **A title-block read returns "all rights reserved" on an Apache-2.0 repository**, which is a refusal in the wrong direction and would have cost Globant a usable `1,070★` component. 🟢 **The index got this one right (`Apache-2.0`), so the cross-check caught it.** `ACTION p757-F`: the classifier must scan past a leading copyright block before classifying.
+
+### 🔴 `T527` — an `archived` flag is a procurement fact, and it was invisible for an entire pass
+
+[`ds-wizard/engine-backend`](https://github.com/ds-wizard/engine-backend) is `Apache-2.0`, byte-read, real — and **`archived = true`, last push `2026-09-01`**. 🟢 **It is not an abandoned project:** `7` sibling repositories in `org:ds-wizard` were pushed within six days of this pass, including the MIT `ai-document-plugin` pushed `2026-11-10`. 🔵 **This base will not assert where the backend went** — no primary source was reachable for a merge or rewrite. **What is recorded is the measurement.** 🔴 **The generalisation is the trend: `archived` and `pushed_at` are only visible on the channel `p756` declared dead, so `T521` is not a cosmetic recovery — it restores this base's ability to tell a maintained platform from a monument.** `ACTION p757-B`.
+
+### 🔴 `T528` — the ethics-review workflow does not exist as open source, and the leg that establishes this ran in full
+
+Searched: IRB / ethics-review / protocol-management / research-compliance workflow, with licence filters. **Total open-source supply found:** one `MIT` **form generator** ([`htlin222/irb-in-hurry`](https://github.com/htlin222/irb-in-hurry), `40★`, `43 / 43` of one institution's forms); one **animal-care** committee app with no stated licence (out of register); one **HL7 sIRB proof-of-concept whose address `404`s on the raw channel** (`kirubel22/sIRB_Site_New`). The dormant `AGPL-3.0` [`kuali/kc`](https://github.com/kuali/kc) contains an IRB module and has not shipped since **`2018`**.
+
+🔵 **Against that nil, the adjacent layers are well supplied:** data-management planning has four maintained platforms, provenance has a standard with a Python implementation, organisation and person identity have three registries. 🔴 **Every research-intensive university runs an IRB; every one runs it on paper, email or a proprietary system; and the open supply fills in forms.** The workflow — submit, triage, assign, deliberate, determine, amend, audit — **is a build, not an integration**, and it is the clearest unserved capability this register contains.
+
+### 🟢 `T529` — LATAM is a supply region for this register, and the grant was read rather than assumed
+
+SciELO's four probed repositories are **all `BSD-2-Clause`**, byte-read `2026-11-11`: `packtools` (`1,289 B`, `03aa7e926b57`, pushed `2026-11-09`), `articles_meta` (`1,319 B`, `d0ca1bb82451`), `scielo-manager` (`1,328 B`, `c0182a8ef5bb`), `opac` (`1,294 B`, `edc3be5186be`, 🔴 **archived**). 🟢 **Read as 2-clause from the payload: the `"Neither the name"` clause appears `0` times in all four files**, which is the discriminator against BSD-3-Clause and was counted, not inferred. 🔵 **The region's open estate is publishing and indexing, not administration** — stated so the placement is not over-sold.
+
+### 🟢 `T530` — a held licence cell reproduced byte-for-byte on an independent read
+
+[`rdmorganiser/rdmo`](https://github.com/rdmorganiser/rdmo) carries the shelf cell `Apache-2.0 · LICENSE · 11,358 B · sha256₁₂ cfc7749b96f6`. Re-read today, independently: **`Apache-2.0`, `11,358 B`, sha256₁₂ `cfc7749b96f6`** — exact. 🔵 **`gate-cell-reproduction` now has a green specimen on this register.** The row was **verified and not re-added** (`P210`). 🔵 **This is the only evidence class that makes the licence column on these shelves worth anything to a client:** a cell that an independent read reproduces.
+
+### ⚠️ `T531` — a `p756` flagship row is two years dormant, and the claim was never made so nothing is retracted
+
+`p756` filed [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) as the headline recovery of its pass. Measured this pass: **`71★`, `Apache-2.0`, last push `2024-12-27`** — nearly two years cold. 🟢 **The licence claim stands and the repository is real.** 🔵 **The currency claim was never made because `p756` could not see `pushed_at`** — which is `T521`'s cost, stated concretely. **Read it as a reference implementation of ETS's scoring-model methodology, not as a maintained dependency.**
+
+### 🔴 `T532` — `p748`'s `AGPL`-engine / permissive-agent shape reproduces on a second, unrelated register, and it is now portable
+
+`p748` measured `9 / 9` financial-aid eligibility engines at `AGPL-3.0` with an MIT agent layer directly above. Research administration, measured independently this pass, has the identical shape: the **system of record** ([`kuali/kc`](https://github.com/kuali/kc)) is **`AGPL-3.0`**, while **every component Globant would actually write code in is `MIT`, `Apache-2.0` or `BSD`** — planning (`DMPRoadmap`, DSW), provenance (`ro-crate`), identity (`ROR`, VIVO), screening (`ASReview`), publishing (SciELO).
+
+🔵 **Two registers, no shared authors, same stratification.** The hypothesis worth carrying: **the closer a component sits to the institutional record of a regulated decision, the more likely it is network-copyleft** — because those systems were built by public-sector and consortium funders who chose `AGPL` deliberately. 🔴 **Operationally: the licence conversation belongs in the first meeting of any record-system engagement, and the honest proposal is augmentation around the record rather than replacement of it.**
+
+---
+
+## 🆕 Actions declared at `p757`
+
+- 🔴 **`ACTION p757-A`** — Move `p756`'s `IMSGlobal/openbadges-validator-core` row to its canonical post-rename address `1EdTech/openbadges-validator-core` (probed alive, `61★`, `Apache-2.0`), and resolve the canonical address of `openwallet-foundation-labs/learner-credential-wallet` (raw `200`, search `422`). **Do not treat either `422` as a dead address** (`T522`).
+- 🔴 **`ACTION p757-B`** — Establish, from a primary source, where DSW's archived `engine-backend` went before any DSW-based proposal is costed (`T527`).
+- ⚠️ **`ACTION p757-C`** — Primary-verify NIH `NOT-OD-26-100` (claimed `2026-07-29`, reporting changes from `2026-10-01`). **Single secondary source; must not enter a client deck until verified.**
+- 🔴 **`ACTION p757-D`** — Stop asking the EMEA leg for adoption percentages. **Seven consecutive nils** is a property of the instrument, not of the region: the European channel publishes obligations. Re-aim the leg at dated duties and national ministry sources.
+- 🔴 **`ACTION p757-E`** — No pass may write `unmeasured` into a popularity cell without first running `gh api -X GET search/repositories -f q=repo:{owner}/{name}`. Backfill `p756`'s three shelves (`T521`).
+- 🔴 **`ACTION p757-F`** — The licence classifier must scan past a leading copyright block before reading the title line; `asreview/asreview` is the regression fixture (`T526`).
+
+---
+
 # 🆕 Trends new at `p756` (researched 2026-11-11) — `T509`–`T520`
 
 **`ACTION p755-A` EXECUTED IN FULL, AND THE `unstated` CLASS IS NOW CLOSED.** All **`968`** remaining `unstated` rows of `evidence/address-ledger.tsv` were swept over the one channel that works in this session, **`565`** readable grants were recovered, every verdict was written back `CRLF`-preserving, and the class went **`968` → `0`**. 🔴 **The finding is not the recovery rate. It is that `unstated` was concealing a `45`-row tier this base may not build on at all.** 🔴 **Three corrections are recorded against this pass's own first readings (`T514`), and `8` real defects against the shelves (`T513`).** 🔵 `ACTION p755-B`'s refusal re-measured and still in force; `ACTION p755-C` not executed and carried forward with its reason.
