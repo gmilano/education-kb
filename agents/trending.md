@@ -4,6 +4,100 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p759) — 🔴 **THIS BASE PUBLISHED A "MEASURED SUPPLY NIL" ON THIS REGISTER TWICE, AND BOTH TIMES IT WAS MEASURING ITS OWN VOCABULARY. 🟢 `6` NOVEL PERMISSIVE REASONING ADDRESSES, AND THE EMEA BLOCKER THAT PARKED THE REGISTER FOR ELEVEN PASSES DOES NOT APPLY TO ANY OF THEM.**
+
+**Register: student wellbeing, crisis triage and child-protection case management** · `10` agent rows · `31` addresses probed · **`27` licence payloads byte-read** · `3` addresses confirmed live with **no grant at all** · `1` literature name resolved to a **non-address** (a true `404`) · `21` shelved addresses confirmed on the fetch channel and the student-tier rows on the raw channel · `2` grants found invisible to GitHub's index · `1` literature name resolved to a different address · `4` regional legs run · `T547`–`T565` declared.
+
+### 🔴 The signal of the week is a falsification of this base's own conclusion
+
+`p750` priced this register's North America demand side in unusual detail — PPRA written parental consent, the Student Privacy Policy Office's enforcement letter to the Illinois State Board of Education (🔴 **response deadline `2026-11-13`, two days from today**), the Markey/Warren investigation into GoGuardian, Gaggle, Bark and Securly, the Lawrence Public Schools constitutional suit — and then wrote: *"Measured supply nil for this register's named demand. `student retention agent llm` returns `0` repositories and `school safety llm agent` returns `2`; the entire open early-warning tier is `7 / 7` at `0★`."* `p748` had already parked the register at `748-E` on the same kind of reading.
+
+🟢 **Both measurements reproduce exactly, and both were measuring the wrong vocabulary.** The people who do this work are **counsellors, child-protection caseworkers and helpline operators**, and their software is indexed under their words:
+
+| Probe | Reasoning addresses | Permissive | Novel to this base |
+|---|---|---|---|
+| `open source safeguarding school student risk early warning system github` | `9` | `3` | `0` |
+| `open source student mental health wellbeing screening github MIT Apache` | `10` | `5` (all single-author demos) | `0` |
+| `open source suicide risk detection NLP model github Apache MIT crisis counseling` | `9` | `4` | 🟢 **`3`** |
+| `EmoLLM MindChat SoulChat open source mental health LLM github license` | `6` | `4` | 🟢 **`4`** |
+| `Primero Aselo open source child protection case management child helpline github license` | `3` platforms | `0` | 🟢 the **gate**, not the name |
+
+🔵 **Rule adopted as `ACTION p759-A`:** *before declaring a register supply-nil, probe the vocabulary of the profession that performs the work, not the vocabulary of the sector that buys it.* The sector names the buyer; the profession names the repository. Second confirmation of `p693`'s shape on a different axis.
+
+### 🟢 What is new this week, and the count is the finding
+
+**`6` addresses at `0` mentions across `758` prior passes**, all byte-read `2026-11-11`:
+
+| Address | Grant (byte-read) | ★ | Region | Why it matters |
+|---|---|---|---|---|
+| [`SmartFlowAI/EmoLLM`](https://github.com/SmartFlowAI/EmoLLM) | 🟢 `MIT` — `1,067 B`, `bdcdafceaf1d` | `1,800` | 🟢 APAC | Largest permissive mental-health conversational stack in open source. |
+| [`SteveKGYang/MentalLLaMA`](https://github.com/SteveKGYang/MentalLLaMA) | 🟢 `MIT` — `1,062 B`, `390db9cbe79d`, holder **NaCTeM** | `326` | 🟢 **EMEA** | 🟢 The one EMEA-anchored permissive row, placed on its holder line. **Interpretable** — emits a rationale. |
+| [`scutcyr/SoulChat2.0`](https://github.com/scutcyr/SoulChat2.0) | 🟢 `Apache-2.0` — `11,356 B`, `43070e2d4e53` | `260` | 🟢 APAC | SCUT; patent grant makes it the safer conversational option. |
+| [`EmoCareAI/ChatPsychiatrist`](https://github.com/EmoCareAI/ChatPsychiatrist) | 🟢 `Apache-2.0` — `11,356 B`, `43070e2d4e53` | `164` | 🔵 Global | Instruct-tuned counselling model; publishes from `master`. |
+| [`fuzzylabs/MindGPT`](https://github.com/fuzzylabs/MindGPT) | 🟢 `Apache-2.0` — `11,356 B`, `43070e2d4e53` | `44` | 🔵 Global | RAG rather than tuning — 🟢 the most transferable architecture for LATAM. Publishes from `develop`. |
+| [`qiuhuachuan/PsyGUARD`](https://github.com/qiuhuachuan/PsyGUARD) | 🟢 `MIT` — `1,067 B`, `a5a302c00970` | `24` | 🟢 APAC | 🟢 **`24★` and the most important row:** the only permissive address doing risk assessment on *counselling text*. |
+
+🔵 **`PsyGUARD` at `24★` is the week's lesson about star counts on this base.** It is an EMNLP 2024 Oral release with code, models and the `PsySUICIDE` dataset, and it is the only permissive thing found that does the actual job. The `1,800★` row is a better *model*; this is the better *component*.
+
+### 🟢 `748-E` is discharged, and the mechanism is a reading it never checked
+
+`748-E` parked this register with: *"under the EU AI Act, emotion recognition in educational institutions is a **prohibited** practice, not a high-risk one — so an emotion-inferring wellbeing product is unsellable in EMEA."*
+
+🟢 **The prohibition is real, in force since `2025-02-02`, and narrower than the register.** The Commission's (non-binding) Guidelines read **Article 5(1)(f)** as bound to inference from **biometric** data per **Article 3(39)** — though the text of 5(1)(f) does not repeat the qualifier. The circulating worked examples are concrete: inferring a student's **interest or attention** is prohibited; emotion recognition **during admission tests** is prohibited; **eye tracking in online exams is permitted only if it infers no emotions**.
+
+🟢 **Every one of the six novel addresses above is a text classifier or a text-generating model. None takes a biometric input.** The blocker never applied to this supply (`T548`). 🔴 **But the medical-or-safety exception is a trap and must never be pitched:** it does not cover monitoring wellbeing, motivation or learning satisfaction (`T549`).
+
+⚠️ **`search-sourced, not primary-verified`** — see the channel table below.
+
+### 🔴 The two grants GitHub cannot see, and they fail by two different mechanisms
+
+| Address | Index says | Byte-read says | Mechanism |
+|---|---|---|---|
+| [`primeroIMS/primero`](https://github.com/primeroIMS/primero) | 🔴 **nothing** | 🔴 **`AGPL-3.0`** — `35,474 B`, `209c8853db16` | A `5`-line project preamble and `Copyright (c) 2014 UNICEF. All rights reserved.` sit **ahead of** the canonical text. The detector reads the opening and gives up (`T552`). |
+| [`NVIDIA/NeMo-Guardrails`](https://github.com/NVIDIA/NeMo-Guardrails) | 🔴 **nothing** | 🟢 **`Apache-2.0`** — `653 B`, `e08f3ab8c83a` | The text is **replaced by an identifier**: `SPDX-License-Identifier: Apache-2.0` plus the boilerplate notice (`T560`). |
+
+🔵 **Both are invisible to the index and trivial for a byte-read**, which is the clearest justification this base has produced for the byte-read discipline itself. 🔴 **An index-silent `AGPL-3.0` is the most expensive wrong answer available on a procurement checklist**, because "no licence found" reads as low risk and means the opposite.
+
+### 🔴 Three refusals, filed with their evidence
+
+- 🔴 [`midas-research/STATENet_Time_Aware_Suicide_Assessment`](https://github.com/midas-research/STATENet_Time_Aware_Suicide_Assessment) — `52★`, EMNLP 2020, **no licence file at `HEAD`**, index silent. **Published is not licensed.** Cite as literature; never build on it (`T559`).
+- 🔴 [`KuznetsovKarazin/oulad-early-warning`](https://github.com/KuznetsovKarazin/oulad-early-warning) — `MIT` in form only: holder line reads **`Copyright (c) 2025 [Your Name]`**. 🔴 **A new failure class on these shelves, and worse than a missing licence, because the index reports `MIT` and a checklist passes it.** `ACTION p759-C`: read the holder line, reject placeholders (`T558`).
+- 🔴 [`protectai/llm-guard`](https://github.com/protectai/llm-guard) — `3,200★`, `MIT`, exactly the right shape for this register, **and the repository is archived and read-only**. On a pipeline children talk to, unmaintained input scanning is a security posture (`T557`).
+
+### 🔴 The mandated trends leg returned the same bad date as last week
+
+The `AI education industry trends 2026` leg again surfaced *"an April 2026 deadline for large public institutions to meet updated ADA accessibility guidelines for all web content, including vendor apps."* 🔴 **That deadline does not exist.** This file holds the **DOJ Interim Final Rule of `2026-04-20`** moving ADA Title II compliance to **`2027-04-26`** (entities serving ≥`50,000`) and **`2028-04-26`** (smaller entities and special districts); WCAG 2.1 Level AA unchanged.
+
+🟢 **`ACTION p758-A` was adopted one pass ago for exactly this and it fired on its first opportunity.** 🔵 **The finding is the reproduction rate**: two consecutive passes, same leg, same superseded figure, different secondary sources. 🔴 **This is the steady state of the trade press on this obligation, not a one-off.** Promoted to a standing pre-write check on every dated regulatory claim: `ACTION p759-B` (`T551`).
+
+### 🔴 The channel map, measured — and the mandated `curl -sI` check is structurally unavailable
+
+| Channel | Result | Consequence |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 `200` on `25 / 25` | The byte-read works for any public repository. |
+| `github.com` HTML via `curl` | 🔴 a `378 B` **JSON gate** naming `add_repo` | Not a `403`, not a `404`, and **not a page**. |
+| `api.github.com` | 🔴 `403` | No ★, no default branch, no archive flag. |
+| fetch channel on `github.com/<owner>/<repo>` | 🟢 reachable | 🟢 The **only** source for ★, branch, archive status and index-licence. `21 / 21` confirmed. |
+| `eur-lex` · `artificialintelligenceact.eu` · `digital-strategy.ec.europa.eu` · `unesco.org` · `federalregister.gov` | 🔴 `5 / 5` refused at the tunnel (`CONNECT … 403`); `artificialintelligenceact.eu` also `ENOTFOUND` on the fetch channel | 🔴 **Every regulatory cell this pass is `search-sourced, not primary-verified`.** `ACTION p758-B` carried on a sixth data point. |
+
+🟢 **The oracle discriminates in both directions, proved by accident this pass.** `techmatters/aselo` missed on licence *and* README — which looks like a live repository with no grant — and the fetch channel returned a **true `404`**: there is no such repository. `STATENet`, `DishmiDahara/student-mental-health-system` and `sont3r/student-early-warning` all returned `README.md` at `200` and **are** live addresses with no grant. 🔵 **Three separable states, all met in one pass:** true `404` · `378 B` session-scope gate · `200` README with no `LICENSE`. 🔴 **This pass briefly wrote the first up as the third and caught it in post-write verification.**
+
+🔴 **A pass that ran the mandated `curl -sI` naively would read the gate's `378 B` body as a dead address and delete live rows.** 🔵 **`p749` established that a `403` is not a `404`; this refines it to: a `200` is not a page** (`T561`, `ACTION p759-D`).
+
+### 🔴 LATAM supply nil on this register, declared with the query that produced it
+
+🔴 **There is no Spanish- or Portuguese-language open-source counselling or wellbeing model.** Probed `open source modelo salud mental español portugués counseling LLM github licencia`; every reasoning address returned was English or Chinese. The only address with Iberian-language presence is [`ifmeorg/ifme`](https://github.com/ifmeorg/ifme) (`1,600★`) and its Spanish/Portuguese artefacts are **`README-ES.md` and `README-PT.md`** — translated documentation, not a localised product — under `AGPL-3.0`.
+
+🔵 **Written down because an unrecorded nil looks exactly like coverage.** 🟢 **And it prices the region honestly:** LATAM on this register is a data-and-fine-tuning programme over a permissive base model, not an integration — a larger, better-defined engagement than the APAC equivalent, not a smaller one (`T562`).
+
+### 🔵 Standing registers named and deliberately not built this pass (`ACTION p758-D`)
+
+- 🟡 **Sign-language interpretation for lecture media** — carried from `p758`, unchanged: measured thin and copyleft-dominated (`hearai/sign-language-review` `23★`; `folhascadentes/mamao-app` `16★` `GPL-3.0`; `Heitorccf/librasign` `6★` `GPL-3.0`). Still a market gap to write up, not a build shelf.
+- 🟢 **Student wellbeing** — 🟢 **BUILT THIS PASS. `748-E` discharged after eleven passes.**
+- 🔵 **NEW candidate, measured and not built: the duty-of-care *evidence* layer for monitoring vendors.** `p750` documented four simultaneous legal attacks on GoGuardian/Gaggle/Bark/Securly, including a reported two-thirds false-positive rate on `1,200` alerts. Measured supply this pass: **`0`** permissive addresses that *audit* a monitoring vendor's alert quality. 🔵 **The buyer is a district's counsel, not its CIO** — a distinct register from `P294`, which audits a system Globant built rather than one the client bought.
+
+---
+
 ## 🆕 2026-11-11 (p758) — 🔴 **THE MANDATED TRENDS LEG HANDED THIS BASE A FEDERAL DEADLINE THAT DOES NOT EXIST, AND THIS FILE ALREADY HELD THE CORRECTION. 🟢 THE CAPTIONING REGISTER'S SUBSTRATE IS PERMISSIVE AND THE AGENT LAYER OVER IT MEASURES `0★`.**
 
 **Register: lecture-media captioning, transcription QC and accessible-media delivery** · `12` agent rows · `27` addresses probed · **`25` licence payloads byte-read** · `1` index value materially corrected in the *refusing* direction · `3` literature names resolved to non-addresses · `4` regional legs run · `T533`–`T546` declared.

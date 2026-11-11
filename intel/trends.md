@@ -4,6 +4,216 @@ region: Global
 updated: 2026-11-11
 ---
 
+# 🆕 Trends new at `p759` (researched 2026-11-11) — `T547`–`T565`
+
+**THE PASS'S GOVERNING FINDING IS A FALSIFICATION OF THIS BASE'S OWN PUBLISHED CONCLUSION.** For eleven passes this base held that the student-wellbeing and safeguarding register had **no open supply** — `p750` measured it and wrote *"measured supply nil for this region's named demand"* (`T429`), and `p748` parked the register as a candidate it would not build (`748-E`). 🔴 **Both were artefacts of the words used to search, not of the supply.** Probed in the *profession's* vocabulary rather than the sector's, the register yields **`8` permissively-licensed reasoning addresses, `6` of them at `0` mentions on this base before today**, plus `3` production platforms. The register is **buildable**, and `748-E`'s EMEA blocker dissolves on a reading of the prohibition that `748-E` never checked.
+
+### 🔴 `T547` — the "measured supply nil" on this register was a vocabulary artefact, and this base published it twice
+
+`p750` priced the North America demand side of this register in detail — PPRA written parental consent, the ISBE enforcement letter, the Gaggle/GoGuardian litigation front — and then concluded the supply side was empty, on these measurements: `student retention agent llm` → **`0`** repositories, `school safety llm agent` → **`2`**, and *"the entire open early-warning tier is `7 / 7` at `0★`"*. `p748` independently parked the register at `748-E` on a similar reading: `school counseling software` → **`0`**, `student mental health agent llm` → **`1`**, `wellbeing chatbot education` → **`4`**.
+
+🟢 **Both measurements reproduce.** This pass ran the education-sector vocabulary and got the same thing: every address returned by `open source safeguarding school student risk early warning system github` is a single-author project on synthetic data, and the search channel's own summary of them was *"none is a mature, production-ready safeguarding platform… none of the results address child protection or safeguarding."*
+
+🔴 **The nil was in the query.** The people who do this work are not called "student wellbeing engineers" — they are **counsellors, child-protection caseworkers and helpline operators**, and their software is indexed under their words. Probed as *psychological counselling*, *crisis/suicide risk assessment* and *child-protection case management*, the same register returns:
+
+| Vocabulary probed | Reasoning addresses found | Permissive | Novel to this base |
+|---|---|---|---|
+| education-sector (`student wellbeing`, `early warning`, `school safety`) | `9` | `3` usable | `0` |
+| clinical / helpline (`psychological counselling`, `suicide risk assessment`, `child protection case management`) | `10` | `6` | `6` |
+
+🔵 **The generalisation, and it is this pass's rule.** *Before declaring a register supply-nil, probe the vocabulary of the profession that performs the work, not the vocabulary of the sector that buys it.* The sector names the **buyer**; the profession names the **repository**. `p693` found the same shape from the other direction — *"the channel two passes called empty produced `9` novel rows once the probe asked for a product"* — and this is its second confirmation on a different axis. `ACTION p759-A`.
+
+### 🟢 `T548` — `748-E`'s blocker dissolves, and the mechanism is a reading of Article 5(1)(f) that `748-E` never checked
+
+`748-E` parked this register with a sharp and correct-sounding reason: *"under the EU AI Act, emotion recognition in educational institutions is a **prohibited** practice, not a high-risk one — so an emotion-inferring wellbeing product is unsellable in EMEA rather than merely regulated."* 🟢 **The prohibition is real and the parking was wrong**, because the prohibition is narrower than the register.
+
+🟢 **The European Commission's (non-binding) Guidelines read Article 5(1)(f) as limited to inference from *biometric* data**, consistent with the definition at **Article 3(39)** — even though the text of 5(1)(f) does not itself repeat the biometric qualifier. The worked examples that circulate with that reading are unusually concrete: inferring a student's **interest or attention** is prohibited; emotion recognition **during admission tests** is prohibited; **eye tracking in online exams is permitted only if it infers no emotions**.
+
+🔵 **So the line that decides whether this register is sellable in EMEA is an *input* line, not a use-case line:**
+
+| Architecture | Article 5(1)(f) |
+|---|---|
+| 🔴 Camera, microphone or physiological signal used to infer attention, engagement, mood or stress | **Prohibited.** No conformity assessment rescues it; it is not a high-risk system, it is a banned one. |
+| 🟢 Classification of **text a person chose to write** — a disclosure, a help-request, a counselling transcript | **Outside the prohibition** on the Commission's biometric reading. Falls to be assessed under the high-risk regime and the GDPR, both of which are satisfiable. |
+
+🟢 **Every one of the `8` permissive reasoning addresses this pass shelved is a text classifier or a text-generating conversational model.** None of them takes a biometric input. The register's permissive supply is, by construction, on the lawful side of the line — which is why `748-E`'s blocker never applied to it.
+
+⚠️ **Two limits on this trend, stated rather than buried.** The Guidelines are **non-binding**, and the biometric qualifier is an *interpretation* of a text that omits it; and this pass could not reach a primary source to verify any of it (`T561`). Treat `T548` as the architecture to build toward and the question to put to the client's counsel in writing — not as settled law.
+
+### 🔴 `T549` — do not pitch the medical-or-safety exception; wellbeing monitoring is exactly what it excludes
+
+Article 5(1)(f) carries an exception for *medical or safety reasons*, and it is the first thing a client will reach for. 🔴 **It does not cover this register.** The reading returned this pass is explicit that the exception is narrow and that **monitoring wellbeing, motivation or learning satisfaction does not count as medical**. A deployer invoking it is additionally held to **necessity and proportionality**, and the inferences remain **personal data under the GDPR** even where the exception applies.
+
+🔵 **Commercially this is good news, not bad.** The exception is the route a competitor will try to sell, and it is the route that fails an audit. The defensible architecture is the one that **never needs the exception** — `T548`'s text-only input line — and that is a design decision a studio can deliver and evidence.
+
+### 🔴 `T550` — the timing is inverted against the way clients budget, and both halves moved in `2026`
+
+| Instrument | Status in `2026` |
+|---|---|
+| **Article 5** prohibitions (incl. emotion inference in education) | 🔴 **In force since `2025-02-02`.** Already binding. Not a future obligation. |
+| **Annex III** high-risk obligations for education AI | 🟢 **Postponed to `2027-12-02`** by the `2026` AI Omnibus (political agreement `2026-05-07`; amendments in force `2026-07-27`). Stand-alone systems `2027-12-02`; AI embedded in regulated products `2028-08-02`. |
+
+🔴 **So in education AI the *ban* is live and the *compliance regime* is not.** A client who has budgeted an "EU AI Act readiness" programme for `2027` is budgeting for the wrong half: nothing they do in `2027` cures a prohibited architecture shipped in `2026`. 🔵 **Lead with Article 5, not Annex III** — it is the only part of the Act that can make this register's product illegal rather than merely expensive.
+
+### 🔴 `T551` — the mandated trends leg reproduced `p758`'s superseded deadline, and `ACTION p758-A` caught it on its first opportunity
+
+`p758` closed by adopting `ACTION p758-A`: *where this base already holds a dated instrument, its own record beats a fresh search result, and the conflict gets published.* 🔴 **One pass later the same leg returned the same bad date**: *"an April 2026 deadline for large public institutions to meet updated ADA accessibility guidelines for all web content, including vendor apps."*
+
+🟢 **The rule worked exactly as written.** The base holds the **DOJ Interim Final Rule of `2026-04-20`** moving ADA Title II web-accessibility compliance to **`2027-04-26`** (public entities serving ≥`50,000`) and **`2028-04-26`** (smaller entities and special districts), WCAG 2.1 Level AA unchanged.
+
+🔵 **The finding is the reproduction rate, not the date.** Two consecutive passes, same leg, same superseded figure, from different secondary sources. 🔴 **This is not a one-off defect in one article — it is the steady state of the trade press on this obligation**, and any pass that trusts the leg will publish it. `ACTION p758-A` is promoted from a rule to a **standing pre-write check** on every dated regulatory claim: `ACTION p759-B`.
+
+### 🔴 `T552` — Primero's licence index is silent, and the byte-read is the only channel that resolves it
+
+[`primeroIMS/primero`](https://github.com/primeroIMS/primero) is the UNICEF child-protection case-management platform and this base has carried the name for `127` mentions. 🔴 **GitHub names no licence for it.** The sidebar shows a link to a `LICENSE` file and the README says *"please carefully read our LICENSE"*, but the index displays **no licence type at all** — so every automated licence check this base or a client runs against it returns nothing.
+
+🟢 **The byte-read is decisive.** `LICENSE` at `HEAD` is **`35,474 B`**, sha256₁₂ **`209c8853db16`**, and its structure is:
+
+```
+Primero™ is an application designed to help child protection workers … [5-line project preamble]
+Copyright (c) 2014 UNICEF. All rights reserved.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 …
+------------------------------------------------------------------------
+ GNU AFFERO GENERAL PUBLIC LICENSE   Version 3, 19 November 2007   [full text]
+```
+
+🔴 **It is `AGPL-3.0`, and the index cannot see it because the file does not *begin* with the canonical text.** A project preamble and an `All rights reserved.` line ahead of the grant are enough to blind the detector. 🔵 **This is the inverse of every "index agrees" cell on these shelves**: the index is not wrong here, it is *absent*, and absence reads on a procurement checklist as "no licence found" — which is the most expensive possible wrong answer about an AGPL system.
+
+### 🔴 `T553` — Primero is open code with a **gated configuration**, and the gate is in the licence file
+
+🔴 **The repository does not contain the thing that makes Primero a child-protection system.** The same `LICENSE` preamble states that **the `CPIMS+` and `GBVIMS+` configurations (JSON bundles)** are obtained by writing to `childprotectioninnovation@gmail.com`. `CPIMS` and `GBVIMS` stand at **`3` mentions each** on these shelves — the base held the platform and not the gate.
+
+🔵 **Name the pattern: open core by configuration.** The code is AGPL-3.0 and genuinely free; the domain model — forms, workflows, case taxonomies, the inter-agency data standards that make it CPIMS+ — is distributed under a request process with a human on the other end. 🔴 **An engagement that assumes `git clone` yields a deployable child-protection system is mis-scoped at the proposal stage.** Budget the configuration request as a dated dependency with no SLA, and start it before the statement of work is signed.
+
+### 🔴 `T554` — the production tier of this register is copyleft all the way down, and that is now a three-register pattern
+
+| Platform | Byte-read grant `2026-11-11` | ★ |
+|---|---|---|
+| [`primeroIMS/primero`](https://github.com/primeroIMS/primero) | 🔴 `AGPL-3.0` + UNICEF preamble — `35,474 B`, `209c8853db16` | `79` |
+| [`techmatters/flex-plugins`](https://github.com/techmatters/flex-plugins) (**Aselo**) | 🔴 `AGPL-3.0` — `34,529 B`, `168adbc0ea70` | `12` |
+| [`ifmeorg/ifme`](https://github.com/ifmeorg/ifme) | 🔴 `AGPL-3.0` — `34,519 B`, `d8de517917a5` | `1,600` |
+
+🔴 **Three for three.** And it is the third consecutive register on this base with the same shape: `p753` (sign-language) found its supply *"small and mostly copyleft"*; `p758` (captioning) found *"the two best tools for the accessibility layer are `AGPL-3.0`"*; `p759` finds the entire production tier `AGPL-3.0`.
+
+🔵 **The generalisation is about who writes this software, not about licences.** Accessibility, sign-language and child-protection tools are built by **public universities, UN agencies and mission-driven non-profits**, and those authors choose AGPL deliberately — to stop a vendor closing a public good. 🟢 **So the pattern is predictable rather than unlucky**, and the correct response is architectural and is the same every time: the copyleft platform stays the **client's** self-hosted system of record, and Globant's work is a **separate process across an API** (`P292`). 🔴 What is never correct is embedding it in a hosted multi-tenant deliverable.
+
+### 🟢 `T555` — APAC is this pass's **supply** region, and that reverses this base's standing expectation
+
+🔴 This base's long-running complaint is a LATAM supply nil (`649-R10`, `p693`) and an EMEA adoption nil (seven passes to `p757`). 🟢 **On this register the supply is overwhelmingly APAC, and it is permissive.**
+
+| Address | Grant (byte-read) | ★ | Origin |
+|---|---|---|---|
+| [`SmartFlowAI/EmoLLM`](https://github.com/SmartFlowAI/EmoLLM) | 🟢 `MIT` — `1,067 B`, `bdcdafceaf1d` | `1,800` | 🟢 APAC — China |
+| [`X-D-Lab/MindChat`](https://github.com/X-D-Lab/MindChat) | 🔴 `GPL-3.0` — `35,148 B`, `8b1ba204bb69` | `721` | 🟢 APAC — ECUST, China |
+| [`qiuhuachuan/smile`](https://github.com/qiuhuachuan/smile) | 🟢 `CC0-1.0` — `7,047 B`, `6d489af62926` | `538` | 🟢 APAC — China |
+| [`scutcyr/SoulChat2.0`](https://github.com/scutcyr/SoulChat2.0) | 🟢 `Apache-2.0` — `11,356 B`, `43070e2d4e53` | `260` | 🟢 APAC — SCUT, Guangdong |
+| [`qiuhuachuan/PsyGUARD`](https://github.com/qiuhuachuan/PsyGUARD) | 🟢 `MIT` — `1,067 B`, `a5a302c00970` | `24` | 🟢 APAC — China |
+
+🔵 **Why China specifically, and why it matters commercially.** Chinese universities have published an unusually complete psychological-counselling NLP stack — model, corpus, risk classifier and evaluation — under permissive grants, because the research incentive there is publication rather than productisation. 🟢 **Globant can build on all of it.** 🔴 **The constraint is language, not licence** (`T562`), and it is the single largest piece of work in any non-APAC engagement on this register.
+
+### 🟢 `T556` — the one EMEA-anchored permissive row, and the holder line is what places it
+
+[`SteveKGYang/MentalLLaMA`](https://github.com/SteveKGYang/MentalLLaMA) — 🟢 **`MIT`**, `1,062 B`, sha256₁₂ `390db9cbe79d`, **`326★`**, default branch `main`, index agrees. *"The first open-source instruction-following large language model for interpretable mental health analysis."*
+
+🟢 **It is placed in EMEA on its byte-read holder line — `Copyright (c) 2023 NaCTeM`** — the **National Centre for Text Mining, University of Manchester**. The README's author affiliations span Manchester, Helsinki, AIST, Wuhan and Jiangxi Normal; the *grant* names only NaCTeM, so the grant decides the placement. 🔵 **This is the placement mechanism `ACTION p758-C` was adopted for**, working on a row nothing else could place: the repository owner is a personal account and the topic metadata says nothing about Europe.
+
+🟢 **The word that makes it sellable is `interpretable`.** On a register where the deliverable is evidence for a safeguarding lead and an auditor, a model that emits a *rationale* with its classification is worth more than a more accurate model that does not (`P291`, `P294`).
+
+### 🔴 `T557` — the security scanner this register most needs is ARCHIVED
+
+[`protectai/llm-guard`](https://github.com/protectai/llm-guard) — `MIT`, `1,093 B`, sha256₁₂ `1ff4e6c23a28`, **`3,200★`**, *"The Security Toolkit for LLM Interactions"*. 🔴 **The repository has been archived and is read-only.**
+
+🔴 **This is the exact component a disclosure-triage pipeline wants** — input/output scanning for prompt injection, PII and toxicity in front of a model that children talk to — and it is the one at `3,200★` that a client will find first and propose. 🟢 **The live permissive substitutes, both byte-read this pass:** [`NVIDIA/NeMo-Guardrails`](https://github.com/NVIDIA/NeMo-Guardrails) (`Apache-2.0`, **`7,500★`**) for programmable dialogue rails and topic refusal, and [`guardrails-ai/guardrails`](https://github.com/guardrails-ai/guardrails) (`Apache-2.0`, `11,356 B`, `43070e2d4e53`, **`7,600★`**) for output validation. 🔵 **Pattern reconfirmed:** `p758` found the best forced-aligner archived; the globant-kb technology shelves hold `Continue` archived. **Archive status is not visible in a licence or a star count and must be read per address, every pass.**
+
+### 🔴 `T558` — the student-tier supply is unusable, and the byte-read says why rather than the star count
+
+🔴 This base's habit is to dismiss this tier on `0★`. 🟢 **The licence payloads are the stronger argument, and three of five fail outright:**
+
+| Address | Byte-read result |
+|---|---|
+| [`KuznetsovKarazin/oulad-early-warning`](https://github.com/KuznetsovKarazin/oulad-early-warning) | 🔴 `MIT`, `1,067 B`, `68e55bfadc62` — holder line reads **`Copyright (c) 2025 [Your Name]`**. An **unfilled template**: there is no identified licensor, so there is no one to have granted anything. |
+| [`DishmiDahara/student-mental-health-system`](https://github.com/DishmiDahara/student-mental-health-system) | 🔴 **No licence file at `HEAD`** — all rights reserved, whatever the README says. |
+| [`sont3r/student-early-warning`](https://github.com/sont3r/student-early-warning) | 🔴 **No licence file at `HEAD`** — all rights reserved. |
+| [`rudra496/mindwell`](https://github.com/rudra496/mindwell) | 🟡 `MIT`, `1,077 B`, `726e6918400e`, holder *MindWell Contributors* — grant is clean; the code is a single-author demo and the bundled PHQ-9 screener carries its **own** instrument terms. |
+| [`adamaarbouba/WIJDAN`](https://github.com/adamaarbouba/WIJDAN) | 🟡 `MIT`, `1,069 B`, `e71f6c4c2696`, holder *Adam Aarbouba* — grant is clean; the model is trained on a public dataset with separate terms. |
+
+🔵 **`[Your Name]` is a new failure class on these shelves and it is worse than a missing licence**, because the index reports it as `MIT` and a checklist passes it. 🟢 **Added to the standard chain: after reading the grant, read the *holder line* and reject placeholders** (`ACTION p759-C`).
+
+### 🔴 `T559` — `midas-research/STATENet`: `52★`, EMNLP 2020, and no licence at all
+
+[`midas-research/STATENet_Time_Aware_Suicide_Assessment`](https://github.com/midas-research/STATENet_Time_Aware_Suicide_Assessment) — **`52★`**, default branch `master`, *"Code release for 'A Time-Aware Transformer Based Model for Suicide Ideation Detection on Social Media', EMNLP 2020."* 🔴 **No licence file at `HEAD`; GitHub shows no licence.** Index and byte-read agree, and they agree on **all rights reserved**.
+
+🔵 **Published ≠ licensed, and on this register the distinction is acute.** A peer-reviewed model for suicide-ideation detection is precisely what a client will ask to reuse, and a paper in EMNLP grants nothing. 🔴 **Not shelvable. Cite it as literature; do not put it in a build.**
+
+### 🔵 `T560` — two measurement findings about grants themselves, and one of them explains `T552`
+
+🔵 **(a) Copyleft payloads are not byte-identifiable.** Measured this pass: **three distinct `AGPL-3.0` payloads** (`34,519` / `34,529` / `35,474 B`) and **two distinct `GPL-3.0` payloads** (`35,146 B` `c53a65c2fd56` and `35,148 B` `8b1ba204bb69`, differing only on `http://fsf.org` vs `https://fsf.org`). 🟢 By contrast `Apache-2.0` hit **`11,356 B` / `43070e2d4e53` on `5` of `5` canonical deliveries**. **So byte-equality identifies Apache-2.0 and cannot identify GPL/AGPL** — extends `649-R4`'s Apache work to the copyleft family, in the opposite direction.
+
+🔴 **(b) `Apache-2.0` has a short-form delivery mechanism, and it blinds the index.** [`NVIDIA/NeMo-Guardrails`](https://github.com/NVIDIA/NeMo-Guardrails) ships `LICENSE.md` at **`653 B`**, sha256₁₂ `e08f3ab8c83a` — an `SPDX-License-Identifier: Apache-2.0` line plus the boilerplate notice, **not** the canonical `11,356 B` text. 🔴 **GitHub's sidebar names no licence for it either**, exactly as for Primero (`T552`). 🟢 **Second index-silent cell this pass, from a second mechanism** — a preamble ahead of the text, and a text replaced by an identifier. 🔵 **Both are invisible to the index and both are trivial for a byte-read**, which is the clearest justification this base has produced for the byte-read discipline itself.
+
+### 🔴 `T561` — `ACTION p758-B` carried on a sixth data point, and the channel map is now measured rather than assumed
+
+🔴 **Primary-source verification remains impossible in this environment.** `5 / 5` primary hosts refused at the tunnel (`curl: (56) CONNECT tunnel failed, response 403`): `eur-lex.europa.eu`, `artificialintelligenceact.eu`, `digital-strategy.ec.europa.eu`, `unesco.org`, `federalregister.gov`. 🔴 **And the fallback failed too** — `artificialintelligenceact.eu` does not resolve for the fetch channel either (`ENOTFOUND`, outside the session's allowed domains). **Every regulatory cell written this pass, `T548`–`T550` included, is `search-sourced, not primary-verified`.**
+
+🟢 **The GitHub channel map, measured:**
+
+| Channel | Result | Consequence |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **`200`** on `25 / 25` probes | The byte-read discipline works for any public repository. |
+| `github.com` HTML (via `curl`) | 🔴 **`378 B` JSON gate** | Not a `403` and not a `404`: a *session-scope* gate whose body names `add_repo`. |
+| `api.github.com` | 🔴 **`403`** | No stars, no default branch, no archive flag. |
+| fetch channel on `github.com/<owner>/<repo>` | 🟢 **reachable** | 🟢 The **only** source this pass had for ★, default branch, archive status and index-licence. |
+
+🟢 **And the oracle discriminates in both directions, which this pass proved by accident.** `techmatters/aselo` — the Aselo address every secondary source implies — returned a licence miss *and* a README miss on the raw channel, which looks exactly like "a live repository with no grant." 🔴 **The fetch channel returned a true `404`: there is no such repository.** Three other misses this pass (`STATENet`, `DishmiDahara/student-mental-health-system`, `sont3r/student-early-warning`) returned `README.md` at `200` on the same raw channel and are therefore **live addresses with no grant** — a completely different finding, and the one that belongs on a refusal row.
+
+🔵 **So the three states are now separable and all three were met in a single pass:** a **true `404`** (no repository), a **`378 B` session-scope gate** (repository exists, not attached to this session), and a **`200` README with no `LICENSE`** (repository exists, nothing granted). 🔴 **A pass that cannot tell the first from the third will publish a non-address as an ungranted one** — which this pass did for one address and caught in post-write verification.
+
+🔴 **So the mandated `curl -sI` URL check is structurally unavailable for every repository outside this session's scope**, and a pass that ran it naively would read the gate's `378 B` body as a dead address and delete live rows. 🔵 **This refines `p749`'s "a `403` is not a `404`" into something sharper: a `200` is not a page.** Existence is confirmed on the fetch channel; `21 / 21` shelved addresses were confirmed there this pass. `ACTION p759-D`.
+
+### 🔴 `T562` — LATAM supply nil on this register, declared with the query that produced it
+
+🔴 **There is no Spanish- or Portuguese-language open-source counselling or wellbeing model.** Probed: `open source modelo salud mental español portugués counseling LLM github licencia`. Every reasoning address returned was English or Chinese. The only address with any Iberian-language presence is [`ifmeorg/ifme`](https://github.com/ifmeorg/ifme) (**`1,600★`**), and 🔴 **its Spanish and Portuguese artefacts are `README-ES.md` and `README-PT.md` — translated documentation, not a localised product — and the grant is `AGPL-3.0`.**
+
+🔵 **Written down because an unrecorded nil looks exactly like coverage.** 🟢 **And it prices the LATAM engagement precisely:** the model layer must be *built*, not adopted, and `T564`'s corpus does not transfer. A Brazilian or Mexican deployment of this register is a **data-and-fine-tuning** programme with a permissive base model, not an integration — which is a larger and better-defined piece of work than the APAC equivalent, not a smaller one.
+
+### 🔴 `T563` — `Gap 263` reconfirmed on a sixth estate: `8 / 21` addresses do not publish from `main`
+
+| Default branch | Count | Addresses |
+|---|---|---|
+| `main` | `13` | EmoLLM, MindChat, MentalLLaMA, SoulChat2.0, PsyGUARD, psydraw, smile, presidio, guardrails, llm-guard, lm-evaluation-harness, primero, ifme |
+| 🔴 `master` | `6` | hapi-fhir, commcare-hq, dhis2-core, ChatPsychiatrist, flex-plugins, STATENet |
+| 🔴 `develop` | `2` | NeMo-Guardrails, MindGPT |
+
+🔴 **`38%` non-`main`, and the `develop` cases are the dangerous ones** — a `HEAD`-relative byte-read resolves correctly, but any tooling that hard-codes `main` silently reads nothing, and `develop` additionally means the licence at `HEAD` is the *unreleased* one. 🟢 Every byte-read on these shelves is taken at ref `HEAD` for this reason.
+
+### 🟢 `T564` — a permissive counselling corpus exists, and it is the direct counter-example to `p758`'s `T538`
+
+[`qiuhuachuan/smile`](https://github.com/qiuhuachuan/smile) — 🟢 **`CC0-1.0`**, byte-read `7,047 B`, sha256₁₂ `6d489af62926`, **`538★`**, `main`, index agrees. Releases **SmileChat**, ~**`55,000`** multi-turn mental-health support dialogues (expanded from single-turn Q&A; the conversion script yields `310,087` training samples). EMNLP 2024.
+
+🟢 **`CC0-1.0` is a public-domain dedication: Globant may fine-tune on it *and* ship the result**, with no attribution obligation and no downstream restriction. 🔴 **Contrast `p758`'s `T538`** — the reference Brazilian-Portuguese ASR corpus indexed `NOASSERTION` with a `CC BY-NC-ND 4.0` payload, which could be neither fine-tuned on nor shipped. 🔵 **Same question, opposite answer, and only a byte-read tells them apart.** ⚠️ **The corpus is Chinese**, which is `T562`'s constraint restated on the data side.
+
+
+### 🟢 `T565` — **`make hooks` RAN, after `649-R8`/`739`/`742` recorded it unrunnable for pass after pass — and the pass is gate-NEUTRAL, measured against pristine `HEAD`**
+
+🟢 **The suite executed end to end this pass: `48 / 71` gates green, `23` red, `make` exit `2`.** `649-R8` carried *"`make hooks` unavailable"* as a standing gap with three data points; `p739` and `p742` both recorded *"NO GATE RAN — THE SUITE IS STILL UNRUNNABLE IN THIS SESSION."* 🟢 **It is runnable here, and that is the first thing this pass can hand the next one.**
+
+🟢 **And the attribution was measured rather than assumed.** The suite was run twice: once over this pass's nine modified files, and once over a stashed, pristine `HEAD`.
+
+| Run | Green | Red gates |
+|---|---|---|
+| pristine `HEAD` | `48 / 71` | `recount`, `gate-derived-counts`, `gate-enumeration`, `gate-tables`, `gate-dates`, `gate-identity`, `gate-evidence-store`, `gate-shelf-consistency`, `gate-prose-claims`, `gate-register-currency`, `gate-fold-identity`, `gate-alias-canonical`, `gate-author-key`, `gate-census-currency`, `gate-grant-path`, `gate-census-union`, `gate-ledger`, `gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`, `gate-case-collision`, `gate-promotion-ledger`, `gate-cell-reproduction` |
+| with `p759`'s nine files | `48 / 71` | 🟢 **identical set, byte for byte** |
+
+🟢 **So the `23` reds are a pre-existing backlog, not this pass's debt**, and every red this pass inspected resolves to a line it did not write: `gate-tables` → `compose/patterns.md:1364` and `README.md:227`; `gate-dates` → `intel/market.md:8569` and `intel/open-gaps.md:9115`; `gate-identity` → `repos/foundations.md:89`, which is 🔴 **the `learner-credential-wallet` alias pair `ACTION p758-E` was opened to repair and which is therefore still open.**
+
+🟢 **The one number that moved is the filing ratchet: `1,681` → `1,700` filed table rows** (baseline `183`), so the pass added `19` filed rows and the ratchet stayed green.
+
+🔵 **Two things follow, and the second is the more useful.** 🟢 **(a)** `649-R8` can be closed as a *gap* and reopened as a **backlog with a denominator** — `23` named gates, which is a work queue rather than a complaint. 🔴 **(b)** A suite that has been red for `~100` passes grades nothing: it cannot tell this pass's defects from `p436`'s `308`-row promotion backlog, which is exactly why this pass had to establish gate-neutrality by stashing. **Remedy (`ACTION p759-F`): a pass that cannot turn the suite green must at minimum publish the before/after red sets, so "red" stops being a constant and starts being a difference.**
+
+---
+
 # 🆕 Trends new at `p758` (researched 2026-11-11) — `T533`–`T546`
 
 **THE PASS'S MOST VALUABLE OUTPUT IS A DEFECT IN THE MANDATED RESEARCH, NOT A ROW.** The `AI {industry} industry trends {year}` leg returned a **dated compliance deadline that this base's own append-only log already refutes**. A pass that had trusted its own search results would have written a superseded federal deadline onto a sell shelf — and a client would have been sold urgency against a date the regulator moved seven months ago. The register is the **lecture-media captioning and accessible-media layer**.

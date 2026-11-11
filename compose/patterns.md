@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `P291`–`P294` — added at p759 (2026-11-11)
+
+🟢 **Four recipes for the student-wellbeing, crisis-triage and child-protection register — the register `p748` parked at `748-E` as unbuildable and `p750` priced from the demand side while calling its supply nil.** Every component named below was byte-read for its grant this pass (`T547`–`T565`). Each recipe names its addresses, its licences and its regions, and each states what it **cannot** do.
+
+🔴 **Five constraints apply to all four.**
+1. 🔴 **No biometric input. Ever.** The EU AI Act prohibition on inferring emotions in educational institutions has applied since **`2025-02-02`** and is read by the Commission as bound to inference from **biometric** data. Every recipe below takes **only text a person chose to write**. A camera, a microphone or a physiological sensor moves the system from *high-risk* to *prohibited*, and no conformity assessment cures that (`T548`).
+2. 🔴 **Never pitch the medical-or-safety exception.** It explicitly does not cover monitoring wellbeing, motivation or learning satisfaction. The defensible design is the one that never needs it (`T549`).
+3. 🔴 **Parental consent is work package one in North America, not an appendix.** `p750` recorded the PPRA written-consent precondition and the federal position that holding screening results apart from the education record itself infringes FERPA rights. Build the records architecture first.
+4. 🔴 **No `AGPL-3.0` or `GPL-3.0` component appears inside any deliverable.** Primero, Aselo and ifme are `AGPL-3.0`; MindChat, PsyDraw and `OpenFn/lightning` are `GPL-3.0`. Where one of them is the right tool, it is the **client's** self-hosted system and the boundary is an API (`T554`).
+5. 🔴 **No recipe decides anything about a child.** Each produces a **prioritised, evidenced, de-identified referral to a named human** within a stated SLA. A system that closes a safeguarding case is out of scope at any price.
+
+---
+
+### 🟢 `P291` — Text-only disclosure triage that is lawful in EMEA
+
+**The core recipe, and the one `748-E` believed was impossible.**
+
+| Stage | Component | Grant | Why this one |
+|---|---|---|---|
+| 1. Intake | The client's existing channels — a web form, a disclosure mailbox, a helpline chat transcript | — | 🔴 **Text only.** No camera, no voice, no attention signal (`T548`). |
+| 2. De-identify | [`microsoft/presidio`](https://github.com/microsoft/presidio) | 🟢 `MIT` (`1,083 B`, `ffe37ea6fa0b`) | Runs **before** any model call. A disclosure names a child, usually a family member, often an alleged perpetrator; the model never needs any of it to classify risk. |
+| 3. Classify risk | [`qiuhuachuan/PsyGUARD`](https://github.com/qiuhuachuan/PsyGUARD) | 🟢 `MIT` (`1,067 B`, `a5a302c00970`) | 🟢 **The only permissive address found that performs risk assessment on *counselling text*** rather than sentiment on social-media posts. `24★`, EMNLP 2024 Oral, ships the `PsySUICIDE` dataset. |
+| 4. Explain | [`SteveKGYang/MentalLLaMA`](https://github.com/SteveKGYang/MentalLLaMA) | 🟢 `MIT` (`1,062 B`, `390db9cbe79d`) · 🟢 **EMEA** (NaCTeM, Manchester) | 🟢 **Emits a rationale with its classification.** The safeguarding lead's decision needs a *reason*, and so does the auditor. |
+| 5. Rail | [`NVIDIA/NeMo-Guardrails`](https://github.com/NVIDIA/NeMo-Guardrails) | 🟢 `Apache-2.0` (`653 B` SPDX form, `e08f3ab8c83a`) | 🟢 **A hard rail the system cannot be talked out of**: never diagnose, never advise, never counsel, always escalate. This is how `T549` becomes code. 🔴 Pin to `develop`, not `main` (`T563`). |
+| 6. Validate output | [`guardrails-ai/guardrails`](https://github.com/guardrails-ai/guardrails) | 🟢 `Apache-2.0` (`11,356 B`, `43070e2d4e53`) | Forces a typed verdict + rationale + confidence, never prose. |
+| 7. Refer | [`hapifhir/hapi-fhir`](https://github.com/hapifhir/hapi-fhir) | 🟢 `Apache-2.0` (`11,356 B`, `43070e2d4e53`) | 🟢 **Emits a conformant referral to the clinical or statutory service.** Without this a human retypes the output, which is where duty of care is actually lost. 🔴 `master`. |
+| 8. Record | [`primeroIMS/primero`](https://github.com/primeroIMS/primero) *(client-hosted)* **or** [`dimagi/commcare-hq`](https://github.com/dimagi/commcare-hq) | 🔴 `AGPL-3.0` / 🟢 `BSD-3-Clause` | Existing estate → Primero across its API (`P292`). Greenfield → CommCare, embeddable. |
+
+🔴 **What `P291` cannot do.** It does not diagnose, does not produce a wellbeing score, does not rank students, does not act without a human, and does not replace a designated safeguarding lead. 🔴 **It also does not work out of the box in any language**: steps 3 and 4 are Chinese- and English-language models respectively, and step 3 must be validated on the client's own text before any deployment.
+
+**Shape:** `8`–`10` weeks to a pilot on one disclosure channel with one named safeguarding lead. 🟢 **The billable centre of gravity is steps 2, 5 and 7** — de-identification, rails and conformant referral — not the classifier.
+
+---
+
+### 🟢 `P292` — Child-protection case management without inheriting AGPL obligations
+
+**The architecture recipe. Use it whenever the client already runs Primero or Aselo.**
+
+1. 🔴 **The client self-hosts the copyleft platform.** [`primeroIMS/primero`](https://github.com/primeroIMS/primero) (`AGPL-3.0`, `35,474 B`, `209c8853db16`) or [`techmatters/flex-plugins`](https://github.com/techmatters/flex-plugins) (Aselo, `AGPL-3.0`, `34,529 B`, `168adbc0ea70`) stays **theirs**, on their infrastructure, under their obligations.
+2. 🟢 **Globant's agent runs as a separate process and speaks to it over its API.** No linking, no vendoring, no derivative work — therefore no distribution obligation reaching the Globant deliverable.
+3. 🔴 **Start the configuration request at proposal time.** `CPIMS+`/`GBVIMS+` JSON bundles are not in the repository; they come from `childprotectioninnovation@gmail.com`. 🔴 **A plan that assumes `git clone` yields a deployable child-protection system is mis-scoped before it starts** (`T553`).
+4. 🔴 **Tell the client their index says "no licence".** GitHub names no licence for Primero because the `LICENSE` file opens with a UNICEF preamble ahead of the AGPL text. Their own procurement scan will have cleared it as unlicensed (`T552`).
+5. 🟢 **Greenfield alternative:** [`dimagi/commcare-hq`](https://github.com/dimagi/commcare-hq) (`BSD-3-Clause`, `1,553 B`, `6731c019ff56`) for cases + [`dhis2/dhis2-core`](https://github.com/dhis2/dhis2-core) (`BSD-3-Clause`, `1,516 B`, `4c08bb6cabc1`, 🟢 EMEA) for the aggregate reporting an inspection asks for. Both embeddable.
+
+🔴 **What `P292` cannot do.** It cannot make Primero's code reusable inside a hosted multi-tenant product — that is the one thing the licence forbids and the recipe exists to avoid. It also does not shorten the configuration request, which has no SLA.
+
+**Shape:** `4`–`6` weeks for the integration boundary and the records architecture; the configuration dependency is the schedule risk and must be surfaced in the proposal.
+
+---
+
+### 🟢 `P293` — APAC-first wellbeing assistant on a permissive Chinese model stack
+
+**The only region where this register's model layer can be *adopted* rather than built** (`T555`).
+
+| Stage | Component | Grant |
+|---|---|---|
+| Conversational layer | [`SmartFlowAI/EmoLLM`](https://github.com/SmartFlowAI/EmoLLM) (`1,800★`) **or** [`scutcyr/SoulChat2.0`](https://github.com/scutcyr/SoulChat2.0) (`260★`) | 🟢 `MIT` (`1,067 B`, `bdcdafceaf1d`) / 🟢 `Apache-2.0` (`11,356 B`, `43070e2d4e53`) |
+| Crisis classifier **in front of it** | [`qiuhuachuan/PsyGUARD`](https://github.com/qiuhuachuan/PsyGUARD) | 🟢 `MIT` (`1,067 B`, `a5a302c00970`) |
+| Fine-tuning corpus | [`qiuhuachuan/smile`](https://github.com/qiuhuachuan/smile) — SmileChat, ~`55,000` dialogues | 🟢 **`CC0-1.0`** (`7,047 B`, `6d489af62926`) — public-domain dedication: tune on it **and** ship the result |
+| Rails + validation + measurement | `NeMo-Guardrails` + `guardrails` + `lm-evaluation-harness` | 🟢 `Apache-2.0` / `Apache-2.0` / `MIT` |
+
+🟢 **Prefer `SoulChat2.0` for a commercial deliverable** — `Apache-2.0` carries an express patent grant where `MIT` does not. 🟢 **Prefer `EmoLLM` for breadth** — it ships the fuller pipeline across seven base-model families.
+
+🔴 **What `P293` cannot do.** 🔴 **It cannot be lifted to LATAM or EMEA.** Every model and the corpus are Chinese-language, and there is no Spanish- or Portuguese-language open-source counselling model to substitute (`T562`). 🔴 **And the `MIT`/`Apache-2.0` cells cover the repositories, not the weights** — each fine-tune inherits its base model's terms (InternLM, Qwen, Baichuan, DeepSeek, Mixtral, Llama, GLM), which must be read per model, per engagement. 🔴 A regulated APAC deployment also faces Korea's AI Basic Act (in force `2026-01-22`) and Vietnam's AI law (effective `2026-03-01`, education in its high-risk list).
+
+**Shape:** `6`–`8` weeks in APAC. 🔴 **In LATAM the same scope is a data-and-fine-tuning programme, not an integration** — larger and better-defined, and it should be priced that way.
+
+---
+
+### 🟢 `P294` — The "prove you are not inferring emotions" audit harness
+
+**The deliverable `T549` and `T561` jointly create, and the one a competitor selling the medical exception cannot produce.**
+
+1. 🟢 **Assert the input boundary mechanically.** A test suite that fails the build if any code path reaches a camera, microphone, eye-tracker or physiological sensor. 🔵 **The claim "we take no biometric input" is worth nothing as prose and a great deal as a passing test** (`T548`).
+2. 🟢 **Prove the rails hold under adversarial prompting.** [`guardrails-ai/guardrails`](https://github.com/guardrails-ai/guardrails) (`Apache-2.0`) + [`NVIDIA/NeMo-Guardrails`](https://github.com/NVIDIA/NeMo-Guardrails) (`Apache-2.0`) against a red-team set that *tries* to make the system infer mood, diagnose, or counsel. Every refusal is evidence.
+3. 🟢 **Score it reproducibly.** [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) (`MIT`, `1,066 B`, `2d0ca57ff677`) over a fixed task set, re-runnable by the client's own auditor on the deployed system.
+4. 🟢 **Prove the de-identification boundary.** [`microsoft/presidio`](https://github.com/microsoft/presidio) (`MIT`) with a recall report over the client's own disclosure corpus — which is also the FERPA records-architecture evidence `p750` showed a US regulator actively demanding.
+5. 🔴 **Ship the regulatory register with its provenance marked.** Every regulatory cell behind this register is `search-sourced, not primary-verified` in this environment (`T561`). 🟢 **State that in the deliverable and route the dated claims to the client's counsel for written confirmation.** 🔴 **And re-check every date against the base's own log before it reaches a slide** — two consecutive passes had the same superseded ADA deadline handed to them by the research channel (`T551`, `ACTION p759-B`).
+
+🔴 **What `P294` cannot do.** It is not a conformity assessment, it is not legal advice, and it does not establish that the system is lawful — it establishes **what the system does**, which is the factual half an assessment needs and the half nobody currently ships.
+
+**Shape:** `3`–`4` weeks, and 🟢 **it sells on its own** — to an institution that has already bought someone else's wellbeing product and cannot answer the Article 5 question about it.
+
+---
+
 ## 🆕 `P287`–`P290` — added at p758 (2026-11-11)
 
 🟢 **Four recipes for the lecture-media captioning and accessible-media register, and every component in them was byte-read for its grant this pass** (`T533`–`T546`). Each names its addresses, its licence and its region, and each states the thing it **cannot** do.

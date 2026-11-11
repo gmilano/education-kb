@@ -4,6 +4,83 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p759) — 🟢 **THE SAFETY-AND-RECORDS SUBSTRATE FOR DISCLOSURE TRIAGE IS MIT / APACHE-2.0 / BSD-3 / CC0 ALL THE WAY DOWN. 🔴 THE PRODUCTION TIER IS `AGPL-3.0` ON ALL THREE PLATFORMS, AND THE UNICEF SYSTEM OF RECORD SHIPS OPEN CODE WITH A GATED CONFIGURATION.**
+
+**`9` foundation rows · `5` platform rows · `31` addresses probed · `27` licence payloads byte-read `2026-11-11` · `3` addresses live with no grant at all · `1` literature name resolved to a true `404` · `2` grants invisible to GitHub's index · `4 / 9` foundations on a non-`main` default branch · `8 / 21` addresses overall non-`main` · `1` literature name resolved to a different address · `T547`–`T565` declared.**
+
+### 🔴 The register, and the measurement that shows how it stayed unbuilt for eleven passes
+
+`p748` parked this register at `748-E`; `p750` priced its demand and called its supply nil. Nine and eleven passes later, the component layer measured like this on these shelves:
+
+| Term | Mentions before `p759` |
+|---|---|
+| `primero` | `127` |
+| `attendance` | `144` |
+| `dropout` | `94` |
+| `wellbeing` | `64` |
+| `aselo` | `8` |
+| `CPIMS` / `GBVIMS` | `3` / `3` |
+| `mental health` | `15` |
+| `counseling` | `5` |
+| `self-harm` | `5` |
+| `hapi-fhir` | 🔴 **`0`** |
+| `EmoLLM` · `PsyGUARD` · `MentalLLaMA` · `SoulChat` · `MindChat` · `STATENet` | 🔴 **`0` each** |
+| `PHQ-9` / `GAD-7` | 🔴 **`0` / `0`** |
+
+🔵 **The shape is unmistakable: the base held the *platform* and the *demand* and nothing in between.** It carried Primero for `127` mentions and its configuration gate for `3`; it discussed wellbeing `64` times and held zero models; it has never once mentioned a screening instrument or a clinical interchange format. 🔴 **A register can be named, priced, and left with no component layer for eleven passes** — `748-A`'s mechanism, fourth confirmation.
+
+### 🟢 The foundation shelf: `9` rows, every grant byte-read
+
+| Repo | Grant (byte-read `2026-11-11`) | ★ | Branch | Role |
+|---|---|---|---|---|
+| [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) | 🟢 `MIT` — `1,066 B`, `2d0ca57ff677` | `14,400` | `main` | Measurement — the billable artefact (`P294`) |
+| [`microsoft/presidio`](https://github.com/microsoft/presidio) | 🟢 `MIT` — `1,083 B`, `ffe37ea6fa0b` | `11,800` | `main` | De-identification before any model call |
+| [`guardrails-ai/guardrails`](https://github.com/guardrails-ai/guardrails) | 🟢 `Apache-2.0` — `11,356 B`, `43070e2d4e53` | `7,600` | `main` | Output validation |
+| [`NVIDIA/NeMo-Guardrails`](https://github.com/NVIDIA/NeMo-Guardrails) | 🟢 `Apache-2.0` — 🔴 **`653 B` SPDX form**, `e08f3ab8c83a` · 🔴 index silent | `7,500` | 🔴 `develop` | Dialogue rails: never diagnose, always escalate |
+| [`hapifhir/hapi-fhir`](https://github.com/hapifhir/hapi-fhir) | 🟢 `Apache-2.0` — `11,356 B`, `43070e2d4e53` | `2,400` | 🔴 `master` | 🟢 **NEW at `0` mentions** — conformant referral output |
+| [`qiuhuachuan/smile`](https://github.com/qiuhuachuan/smile) | 🟢 **`CC0-1.0`** — `7,047 B`, `6d489af62926` | `538` | `main` | SmileChat corpus, ~`55k` dialogues — tune **and** ship |
+| [`dimagi/commcare-hq`](https://github.com/dimagi/commcare-hq) | 🟢 `BSD-3-Clause` — `1,553 B`, `6731c019ff56` | `525` | 🔴 `master` | Permissive case management (greenfield) |
+| [`dhis2/dhis2-core`](https://github.com/dhis2/dhis2-core) | 🟢 `BSD-3-Clause` — `1,516 B`, `4c08bb6cabc1` · holder *University of Oslo* | `361` | 🔴 `master` | 🟢 **EMEA** — aggregate reporting without case exposure |
+| 🔴 [`protectai/llm-guard`](https://github.com/protectai/llm-guard) | 🟢 `MIT` — `1,093 B`, `1ff4e6c23a28` | `3,200` | `main` | 🔴 **ARCHIVED / read-only — do not build on it** (`T557`) |
+
+### 🔴 The platform tier is `AGPL-3.0` three times out of three
+
+| Platform | Address | Grant (byte-read) | ★ |
+|---|---|---|---|
+| Primero (CPIMS+/GBVIMS+) | [`primeroIMS/primero`](https://github.com/primeroIMS/primero) | 🔴 `AGPL-3.0` + UNICEF preamble — `35,474 B`, `209c8853db16` · 🔴 **index silent** | `79` |
+| Aselo | [`techmatters/flex-plugins`](https://github.com/techmatters/flex-plugins) | 🔴 `AGPL-3.0` — `34,529 B`, `168adbc0ea70` | `12` |
+| if me | [`ifmeorg/ifme`](https://github.com/ifmeorg/ifme) | 🔴 `AGPL-3.0` — `34,519 B`, `d8de517917a5` | `1,600` |
+
+🟢 **One literature-name repair, and the correction runs against this pass's own first reading.** `techmatters/aselo` — the address every source implies — 🔴 **does not exist at all**: the licence probe missed, the README probe missed, and the existence oracle returns a **true `404`**. It was briefly written up as *"no licence file at `HEAD`"*, which would have published a live-but-ungranted address that is in fact no address. The code and the grant are at **`techmatters/flex-plugins`** (*"the Aselo frontend… built as a Twilio Flex Plugin"*), `12,487` commits, `master`. **Aselo stood at `8` mentions on this base and none of them was an address that carries a licence.**
+
+🔴 **And the gate, which is the finding the licence does not tell you.** Primero's own `LICENSE` preamble states that the **`CPIMS+` and `GBVIMS+` configurations (JSON bundles)** must be requested from `childprotectioninnovation@gmail.com`. 🔵 **Open core by configuration**: the code is genuinely free and the domain model — forms, workflows, inter-agency case taxonomies — is not in the repository (`T553`).
+
+### 🔵 Two measurement findings about grant payloads themselves
+
+🔵 **(a) Copyleft payloads are not byte-identifiable.** Measured: **`3` distinct `AGPL-3.0` payloads** (`34,519` / `34,529` / `35,474 B`) and **`2` distinct `GPL-3.0` payloads** (`35,146 B` `c53a65c2fd56` and `35,148 B` `8b1ba204bb69`, differing only on `http://fsf.org` vs `https://fsf.org`). 🟢 `Apache-2.0` hit **`11,356 B` / `43070e2d4e53` on `5 / 5`** canonical deliveries. **Byte-equality identifies Apache-2.0; it cannot identify GPL/AGPL.** Extends `649-R4` to the copyleft family in the opposite direction.
+
+🔴 **(b) `Apache-2.0` has a short-form delivery, and it blinds the index.** `NeMo-Guardrails` ships `LICENSE.md` at `653 B` — an SPDX identifier plus the boilerplate notice, not the canonical text — and GitHub names no licence for it as a result. 🔴 **Second index-silent cell this pass, from a second mechanism** (the first being Primero's preamble). 🔵 **Both are trivial for a byte-read and invisible to the index** (`T560`).
+
+### 🔴 The student tier, byte-read — and the byte-read is the stronger argument
+
+This base usually dismisses this tier on `0★`. 🟢 **The grants are more decisive: `3 / 5` fail outright.**
+
+| Address | Byte-read |
+|---|---|
+| [`KuznetsovKarazin/oulad-early-warning`](https://github.com/KuznetsovKarazin/oulad-early-warning) | 🔴 `MIT`, `1,067 B`, `68e55bfadc62` — holder line **`Copyright (c) 2025 [Your Name]`**. No identified licensor. Index says `MIT`. |
+| [`DishmiDahara/student-mental-health-system`](https://github.com/DishmiDahara/student-mental-health-system) | 🔴 **No licence file at `HEAD`** |
+| [`sont3r/student-early-warning`](https://github.com/sont3r/student-early-warning) | 🔴 **No licence file at `HEAD`** |
+| [`rudra496/mindwell`](https://github.com/rudra496/mindwell) | 🟡 `MIT`, `1,077 B`, `726e6918400e` — clean grant; bundled PHQ-9 screener carries its own instrument terms |
+| [`adamaarbouba/WIJDAN`](https://github.com/adamaarbouba/WIJDAN) | 🟡 `MIT`, `1,069 B`, `e71f6c4c2696` — clean grant; training dataset has separate terms |
+
+🔵 **`[Your Name]` is a new failure class and it is worse than a missing licence**, because an automated check passes it (`ACTION p759-C`, `T558`).
+
+### 🔴 `Gap 263` reconfirmed on a sixth estate
+
+`main` `13` · 🔴 `master` `6` (hapi-fhir, commcare-hq, dhis2-core, ChatPsychiatrist, flex-plugins, STATENet) · 🔴 `develop` `2` (NeMo-Guardrails, MindGPT) — **`8 / 21` = `38%` non-`main`**. 🔴 **The `develop` cases are the dangerous ones**: the grant at `HEAD` is the *unreleased* one. Every byte-read on these shelves is taken at ref `HEAD` for precisely this reason (`T563`).
+
+---
+
 ## 🆕 2026-11-11 (p758) — 🟢 **THE CAPTIONING SUBSTRATE IS MIT / APACHE-2.0 / BSD-2-CLAUSE ALL THE WAY DOWN, AND `757` PASSES HELD THE RECOGNISER WITHOUT A SINGLE INSTRUMENT TO MEASURE IT. 🔴 THE TWO TOOLS A EUROPEAN CLIENT ALREADY INSTALLED ARE `AGPL-3.0`.**
 
 **`8` foundation rows · `6` platform rows · `25` licence payloads byte-read `2026-11-11` · `1` index value materially corrected (refusing direction) · `11 / 25` on a non-`main` default branch · `3` literature names resolved to non-addresses · `T533`–`T546` declared.**

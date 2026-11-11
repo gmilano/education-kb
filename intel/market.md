@@ -6,6 +6,8 @@ updated: 2026-11-11
 
 # Education AI — Market Intelligence
 
+**Pass p759 · researched 2026-11-11.** All four mandated regional legs ran. 🔴 **The pass's governing finding is a falsification of this page's own published conclusion: `p750` wrote *"measured supply nil for this register's named demand"* and `p748` parked the register at `748-E`, and both were artefacts of searching in the sector's vocabulary rather than the profession's. The demand analysis stands; the supply conclusion is withdrawn — `8` permissively-licensed reasoning addresses, `6` novel to this base, plus `3` production platforms (`T547`).** 🟢 **Each region's newest block is `#### 🆕 p759` under the single [`## Opportunities by region`](#opportunities-by-region) heading — all five values, each written *below* the heading it describes (`p756`'s `ACTION p756-C` repair honoured and verified).** 🟢 **`748-E`'s EMEA blocker dissolves: the EU AI Act's Article 5(1)(f) prohibition on inferring emotions in education is read by the Commission as bound to inference from **biometric** data, so a system that classifies text a student chose to write falls outside it — and every permissive component on these shelves is a text classifier (`T548`).** 🔴 **But the timing is inverted against the way clients budget: Article 5 has applied since `2025-02-02` while the Annex III high-risk regime was pushed to `2027-12-02` by the `2026` Omnibus. The ban is live and the compliance regime is not (`T550`).** 🔴 **Never pitch the medical-or-safety exception — it does not cover monitoring wellbeing, motivation or learning satisfaction (`T549`).** 🟢 **APAC is this register's supply region, which inverts this page's standing expectation; LATAM is the best-measured demand and a declared supply nil (`T555`, `T562`).** 🔴 **The `AI education industry trends 2026` leg returned the same superseded April-2026 ADA deadline as `p758`; `ACTION p758-A` caught it on its first opportunity (`T551`).** 🔴 **Every regulatory cell this pass is `search-sourced, not primary-verified`: `5 / 5` primary hosts refuse at the tunnel and the fallback channel does not resolve `artificialintelligenceact.eu` either — `ACTION p758-B` carried on a sixth data point (`T561`).** 🔴 **One procurement landmine named and byte-read: the UNICEF child-protection system of record is `AGPL-3.0` that GitHub's index reports as no licence at all, and its `CPIMS+`/`GBVIMS+` configuration is not in the repository (`T552`, `T553`).**
+
 **Pass p758 · researched 2026-11-11.** All four mandated regional legs ran. 🟢 **`ACTION p757-D` DISCHARGED AND THE RE-AIM WORKED ON THE FIRST ATTEMPT: the EMEA leg, pointed at *dated duties* instead of adoption percentages, returned `6` dated instruments after **seven consecutive passes of nils**.** 🔴 **The pass's governing finding is a defect in the research channel itself: the `AI education industry trends 2026` leg returned a *superseded* federal deadline — "an April 2026 deadline for large public institutions to meet updated ADA accessibility guidelines" — which this base's own log corrected seven months ago. DOJ's Interim Final Rule of `2026-04-20` moved those dates to `2027-04-26` and `2028-04-26` (`T533`).** 🔵 **The commercial consequence is the opposite of a setback: the obligation did not move, only the date, so the offer that survives is remediation *capacity* rather than a deadline sprint — and the backlog is the same size either way.** 🔴 **Every regulatory cell written this pass is `search-sourced, not primary-verified`, and that is now measured rather than assumed: `8 / 8` primary-source hosts are unreachable in this environment against `2 / 2` GitHub channels reachable, so `ACTION p757-C` is carried, not discharged (`T540`, `ACTION p758-B`).** 🟢 **LATAM is again the best-measured region and gains two readings this base did not hold — Cetic.br's `53%` / `22%` administrator split and Universidad de los Andes' inventory of `716` regulatory instruments across `23` countries and territories.** 🔴 **One procurement landmine named and byte-read: the reference Brazilian-Portuguese ASR corpus is `CC BY-NC-ND 4.0`, so it can be neither fine-tuned on nor shipped (`T538`).**
 
 **Pass p757 · researched 2026-11-11.** All four mandated regional legs ran; **three returned dated obligations and EMEA returned a sourced-adoption nil for the SEVENTH consecutive pass, written down rather than filled from a vendor blog.** 🟢 **Each region's newest block is `#### 🆕 p757` under the single [`## Opportunities by region`](#opportunities-by-region) heading — all five values, each written *below* the heading it describes (`p756`'s `ACTION p756-C` repair honoured).** 🔴 **The register is the *research-administration and research-integrity layer*, and its demand side is the only one this base has found that is **already past its deadline in North America**: the OSTP public-access requirement bit on `2025-12-31`, so the compliance question in `2026` is evidence, not preparation (`T523`).** 🔴 **Market correction against this pass's own first reading, in the refusing direction: there is no "2026 OSTP deadline". The `2022` memo set `2025-12-31`; what changes in `2026` is the NIH **plan format** (`NOT-OD-26-046`, required for due dates on or after `2026-05-25`). A pass that sold a client a looming federal deadline would have been selling a date that had already passed.** 🟢 **LATAM is the strongest *supply* region for this register — SciELO's four-repository estate is `BSD-2-Clause` and byte-read (`T529`) — and the weakest on governance, which is the same gap `p756` priced from the adoption side.** 🔴 **One procurement landmine named: the `22,474★` AI-research agent every client will ask about carries a licence that obliges Globant to write use restrictions into its own downstream contract (`T524`).**
@@ -259,6 +261,28 @@ credentials-and-skills axis rather than the tutoring axis.
 
 
 ### North America
+
+#### 🆕 `p759` (`2026-11-11`) — 🟢 the supply nil this page published for this register was a vocabulary artefact, and the enforcement letter `p750` dated comes due **in two days**
+
+🔴 **Read `p750`'s block below before this one, then read this correction.** `p750` priced this register's North America demand side in detail and concluded: *"Measured supply nil for this register's named demand… the entire open early-warning tier is `7 / 7` at `0★`."* 🟢 **The demand analysis stands in full. The supply conclusion is withdrawn.** Probed in the clinical and helpline vocabulary rather than the education vocabulary, the register yields `8` permissively-licensed reasoning addresses, `6` novel to this base, plus `3` production platforms (`T547`). 🟢 **The commercial consequence is a different proposal**: not "there is nothing to start from, so this is a build", but "the components exist and are permissive, and what you are buying is the consent architecture, the rails and the evidence."
+
+🔴 **The dated instrument `p750` recorded comes due on `2026-11-13` — two days from this pass.** The US Department of Education's Student Privacy Policy Office demanded that the **Illinois State Board of Education** revise its guidance on conducting mental-health screenings without parental consent and on holding results apart from the education record; **ISBE's response deadline is `2026-11-13`**. 🟢 **Whatever ISBE answers becomes the first concrete federal-vs-state test of the records architecture on this register**, and it should be checked on the next pass over this file rather than assumed (`ACTION p759-E`).
+
+**This pass's mandated North America leg, dated instruments only:**
+
+| Instrument | Date | What it does |
+|---|---|---|
+| Federal Department of Education grant-priority rule | **finalised `2026-04-13`** | Gives grant priority to projects advancing AI understanding or ethical AI use in education — 🟢 a funding channel pointed at exactly `P294`'s evidence deliverable. |
+| North Carolina **Session Law 2026-41** | model policy **`2026-12-31`**; local policies **`2027-06-30`**; teacher training **`2028-06-30`** | Carried from prior passes; still the clearest dated cascade in the region. |
+| Maryland package | in force | Requires state guidance, local AI policies, AI coordinators, and **certification of compliant tools** — 🟢 certification is a purchasable artefact. |
+| Virginia | in force | School boards must adopt policies following state guidance. |
+| New York City guidance | **`2026-03`** | Preliminary guidance on a **traffic-light** framework. |
+
+**Adoption, and the governance gap is the sell:** a Gallup figure puts **US teacher AI use at `60%`**; **more than `35` states** had official departmental AI guidance as of **June 2026**; **`134`** AI-in-education bills were introduced across **`31`** states this session; and 🔴 **`55%` of high-school principals report their schools have not blocked or restricted AI tools on the network.** 🔵 **Adoption is not the opportunity — the absence of policy underneath it is.**
+
+🔴 **The leg also returned a superseded federal accessibility deadline for the second consecutive pass** (*"April 2026… ADA accessibility guidelines"*). It does not exist: DOJ's Interim Final Rule of `2026-04-20` moved those dates to `2027-04-26` and `2028-04-26`. 🔴 **Do not let it reach a slide** (`T551`, `ACTION p759-B`).
+
+⚠️ **Every cell above is `search-sourced, not primary-verified`** — `federalregister.gov` is among the `5 / 5` primary hosts unreachable in this environment (`T561`).
 
 #### 🆕 `p758` — the deadline moved, the obligation did not, and the state layer is where the new duties are
 
@@ -1307,6 +1331,35 @@ this is the third consecutive pass to return already-filed facts. Supply remains
 `p724`'s `9` new repositories are North American.**
 
 ### EMEA
+
+#### 🆕 `p759` (`2026-11-11`) — 🔴 the one jurisdiction where this register's architecture can be **illegal** rather than expensive, and the timing is inverted against the way clients budget
+
+🔴 **EMEA is the region that decides the product design on this register, and the instrument is not the one clients are preparing for.**
+
+| Instrument | Status in `2026` | Why it governs |
+|---|---|---|
+| **EU AI Act Article 5(1)(f)** — inferring emotions in education | 🔴 **IN FORCE SINCE `2025-02-02`** | A **prohibition**, not a risk tier. No conformity assessment cures it. |
+| **Annex III** high-risk obligations for education AI | 🟢 **Postponed to `2027-12-02`** by the `2026` AI Omnibus (political agreement `2026-05-07`; amendments in force `2026-07-27`); embedded-in-product `2028-08-02` | The regime everyone is budgeting for — and the one that cannot save a prohibited design. |
+
+🔴 **So the ban is live and the compliance regime is not.** A client with an "EU AI Act readiness" programme scheduled for `2027` is funding the wrong half: nothing done in `2027` cures a prohibited architecture shipped in `2026` (`T550`).
+
+🟢 **And the prohibition is narrower than it looks, which is what makes the register sellable here.** The Commission's non-binding Guidelines read Article 5(1)(f) as bound to inference from **biometric** data (per Article 3(39)), though the text of 5(1)(f) does not repeat the qualifier. Worked examples in circulation: inferring a student's **interest or attention** is prohibited; emotion recognition **during admission tests** is prohibited; **eye tracking in online exams is permitted only if it infers no emotions**. 🟢 **Classifying text a student chose to write falls outside the prohibition** — which is the architecture of every permissive component on this register's shelves (`T548`).
+
+🔴 **Do not pitch the medical-or-safety exception.** It does not cover monitoring wellbeing, motivation or learning satisfaction; a deployer invoking it is held to necessity and proportionality; and the inferences remain personal data under the GDPR regardless (`T549`).
+
+**The rest of this pass's EMEA leg, dated:**
+
+- **Council of the EU, `ST-8262-2026` of `2026-04-24`** — stresses that AI tools must **support, not replace or isolate** teachers, with professional judgement kept central. 🟢 Near-novel on this base (`3` mentions) and it is the sentence to quote back in a public-sector bid.
+- **European Commission Education and Skills Package** — addresses AI and digital technologies in schools alongside teacher shortages. 🟢 Near-novel here (`4` mentions).
+- **UK Department for Education** — **generative AI product safety standards for education, `2026-01`**. 🟢 A published standard is a purchasable conformance artefact.
+- **Ofqual** — **`2026-03`** resources on AI and **coursework integrity**.
+- **Gulf:** Dubai's **KHDA** has issued explicit guidance to private schools on responsible AI use.
+
+🟢 **Supply, and EMEA is not a nil this pass:** [`SteveKGYang/MentalLLaMA`](https://github.com/SteveKGYang/MentalLLaMA) (`MIT`, `326★`) places here on its byte-read holder line — `Copyright (c) 2023 NaCTeM`, the National Centre for Text Mining at the **University of Manchester** — and [`dhis2/dhis2-core`](https://github.com/dhis2/dhis2-core) (`BSD-3-Clause`, `361★`) on **University of Oslo** (`T556`). 🔴 **But the two platforms a European institution would find by itself — Primero and ifme — are both `AGPL-3.0`** (`T554`).
+
+🔴 **Adoption figures remain the weak arm.** A UNESCO-attributed claim that **`68` countries now regulate AI in education** (up from `14` in 2021) conflicts with other readings that very few countries had binding national AI-in-education regulation in `2026`. ⚠️ **Do not quote the `68`.** A separate UNESCO-based reading puts **`70%` of institutions in Europe and North America** as having or developing AI guidance.
+
+⚠️ **Every regulatory cell above is `search-sourced, not primary-verified`**: `eur-lex.europa.eu`, `artificialintelligenceact.eu` and `digital-strategy.ec.europa.eu` are all unreachable in this environment, the last two on two different channels (`T561`). 🔴 **On this register that limitation is material rather than cosmetic** — `T548` is the difference between a lawful and a prohibited product, and it rests on an interpretation this pass could not read at source. **Route it to the client's counsel in writing.**
 
 #### 🆕 `p758` — 🟢 `ACTION p757-D` DISCHARGED: the re-aimed leg returned six dated duties after seven passes of nils
 
@@ -2553,6 +2606,39 @@ selling urgency against a date the amendment moved**, and that mismatch is the o
 
 ### APAC
 
+#### 🆕 `p759` (`2026-11-11`) — 🟢 **APAC is this register's SUPPLY region, which inverts this page's standing expectation**, and its regulatory surface now names education in two jurisdictions
+
+🟢 **This page's habit is to treat APAC as a demand story and LATAM as a supply nil. On this register APAC is where the permissive components actually are.**
+
+| Address | Grant (byte-read `2026-11-11`) | ★ | Origin |
+|---|---|---|---|
+| [`SmartFlowAI/EmoLLM`](https://github.com/SmartFlowAI/EmoLLM) | 🟢 `MIT` — `1,067 B`, `bdcdafceaf1d` | `1,800` | China |
+| [`X-D-Lab/MindChat`](https://github.com/X-D-Lab/MindChat) | 🔴 `GPL-3.0` — `35,148 B`, `8b1ba204bb69` | `721` | ECUST, China |
+| [`qiuhuachuan/smile`](https://github.com/qiuhuachuan/smile) | 🟢 **`CC0-1.0`** — `7,047 B`, `6d489af62926` | `538` | China |
+| [`scutcyr/SoulChat2.0`](https://github.com/scutcyr/SoulChat2.0) | 🟢 `Apache-2.0` — `11,356 B`, `43070e2d4e53` | `260` | SCUT, Guangdong |
+| [`qiuhuachuan/PsyGUARD`](https://github.com/qiuhuachuan/PsyGUARD) | 🟢 `MIT` — `1,067 B`, `a5a302c00970` | `24` | China |
+
+🔵 **Why, and it is a structural reason rather than a coincidence.** Chinese universities have published an unusually complete psychological-counselling NLP stack — base model, dialogue corpus, crisis classifier and evaluation — under permissive grants, because the research incentive there is publication rather than productisation. 🟢 **Globant can build on all of it (`P293`), and the constraint is language, not licence.**
+
+**This pass's mandated APAC leg, dated instruments:**
+
+| Jurisdiction | Instrument | Date / status |
+|---|---|---|
+| **South Korea** | **AI Basic Act** | 🔴 **In force `2026-01-22`.** Enforcement decrees still being finalised; a grace period through `2026` focused on guidance rather than penalties. |
+| **Vietnam** | AI law | 🔴 **Effective `2026-03-01`**, and its high-risk list **covers education** (automated assessment and behavioural systems). ⚠️ Sources describe the scope inconsistently. |
+| **Australia** | **TEQSA** | 🔴 Requires **all higher-education providers** to submit **institutional action plans** addressing generative-AI risks — 🟢 a per-institution deliverable, which is an unusually clean procurement shape. |
+| **Australia** | 2024 guardrails proposal | No AI-specific law yet; the proposal named mandatory high-risk guardrails including **education**. |
+| **China** | Registration + content labelling | The most prescriptive framework in the region: mandatory registration, strict labelling. |
+| **Japan** | Principles-based | Cooperation and existing law rather than penalties. |
+| **Singapore** | **AI Verify** | Voluntary testing toolkit — 🟢 a published conformance instrument a vendor can produce evidence against. |
+| **India** | Sectoral | AI content labelling handled within existing sector-specific frameworks. |
+
+🔴 **And the EU reaches APAC vendors directly.** **Article 2(1)(c)** covers providers and deployers in a third country where the system's **output is used in the Union** — so an APAC ed-tech selling proctoring, admissions or wellbeing tools into EU schools inherits `T548`'s prohibition and `T550`'s timing. 🔵 **For an APAC client building on the stack above, Article 5(1)(f) is an export-market design constraint, not a foreign curiosity.**
+
+🟢 **The combined regional play:** build on the permissive APAC model layer, satisfy Korea/Vietnam/TEQSA with the per-institution evidence artefact (`P294`), and keep the input boundary text-only so the same product can be sold into the EU without redesign.
+
+⚠️ **All regulatory cells `search-sourced, not primary-verified`** (`T561`). ⚠️ The leg returned **nothing** on APAC AI-in-education adoption *rates* or on named regional ed-tech vendors — 🔴 **a demand-side nil for this region, written down rather than left silent.**
+
 #### 🆕 `p758` — education named as a high-risk sector in a second jurisdiction, and a regulator that now demands a plan per institution
 
 🔴 **Three dated instruments, and two of them are specific to education.**
@@ -3703,6 +3789,32 @@ minority everywhere in APAC, but it is *rising* in Japan, Australia and South Ko
 capability; sell into Japan, Australia and Korea on safeguards as well.
 
 ### LATAM
+
+#### 🆕 `p759` (`2026-11-11`) — 🔴 the best-measured demand in any region and a **declared supply nil** for this register: the model layer must be built, not adopted
+
+🔴 **LATAM is a supply nil on this register, and this pass names the query that produced it.** Probed `open source modelo salud mental español portugués counseling LLM github licencia`. 🔴 **There is no Spanish- or Portuguese-language open-source counselling or wellbeing model.** Every reasoning address returned was English or Chinese. The only address with any Iberian-language presence is [`ifmeorg/ifme`](https://github.com/ifmeorg/ifme) (`1,600★`), and 🔴 **its Spanish and Portuguese artefacts are `README-ES.md` and `README-PT.md` — translated documentation, not a localised product — under `AGPL-3.0`** (`T562`).
+
+🟢 **Written down because an unrecorded nil looks exactly like coverage.** 🟢 **And it prices the region honestly rather than pessimistically:** LATAM on this register is a **data-and-fine-tuning programme** over a permissive base model — not an integration. That is a **larger** and better-defined engagement than the APAC equivalent, not a smaller one. 🔵 **The transferable architecture is [`fuzzylabs/MindGPT`](https://github.com/fuzzylabs/MindGPT)'s** (`Apache-2.0`, `44★`): RAG over a curated corpus rather than a tuned model, so the language problem becomes a **content** problem the client can solve with their own vetted Spanish or Portuguese material (`P293`). 🔴 **`qiuhuachuan/smile`'s `CC0-1.0` corpus does not transfer** — it is Chinese (`T564`).
+
+**This pass's mandated LATAM leg, and the demand side is the strongest-measured of the four regions:**
+
+| Reading | Figure | Source |
+|---|---|---|
+| Teachers already using AI tools in **Chile and Brazil** | 🟢 **more than `50%`** | UNESCO, via the new Observatory |
+| Regional institutions with **formal guidelines** | 🔴 **fewer than `10%`** | UNESCO |
+| Higher-ed institutions using AI in ≥`1` area (≈`200` institutions, `19` countries) | `87%` | UNESCO IESALC |
+| …with any **formal strategy** | `26%` | UNESCO IESALC |
+| …with **no specific AI budget** | `55%` | UNESCO IESALC |
+| Students / faculty actively engaging with AI | `92%` / `79%` | Digital Education Council LATAM survey `2026` |
+| AI-related regulatory instruments and proposals, `23` countries and territories | `716` | Universidad de los Andes, `2026` |
+
+🟢 **The `>50%` teacher-use / `<10%` institutional-guideline pair is new to this base and it is the cleanest single sell on this page.** Adoption has already happened; governance has not; and on *this* register the missing governance is not a policy document but a **records-and-consent architecture** — the same deliverable `p750` priced for North America, against a buyer with no incumbent to displace.
+
+🟢 **New institutional players for the market map:** **UNESCO's Observatory on AI in Education for Latin America and the Caribbean** (launched **April 2026**, to help governments shape policy); **UNESCO IESALC** with UNU-IAS support; the **Digital Education Council** working with **Tecnológico de Monterrey** and its Institute for the Future of Education; **Ceibal** (Uruguay) and **Cetic.br** (Brazil) as the standing data sources; WEF and OECD on harmonisation.
+
+🔵 **The entry point is the Observatory, not a ministry.** It exists specifically to help governments write guidance, into a region where `<10%` of institutions have any — which makes it the shortest path from a reference engagement to a national one.
+
+⚠️ `unesco.org` is among the `5 / 5` primary hosts unreachable in this environment; all cells above are `search-sourced, not primary-verified` (`T561`).
 
 #### 🆕 `p758` — two readings this base did not hold, and the governance gap now has a number on both the school and the statute side
 
@@ -4939,6 +5051,22 @@ no code dependency) the right opening move here and makes a code-first pitch the
 first step rather than a formality.
 
 ### Global
+
+#### 🆕 `p759` (`2026-11-11`) — the direction of travel is governance and purpose-built tooling, and one mandated leg is now a known hazard rather than a thin channel
+
+**This pass's `AI education industry trends 2026` leg, net of its defect:**
+
+- 🟢 **From experimentation to governance.** 1EdTech frames `2026` as the year AI in education shifts from experimentation to **governance** — explicit policies, data boundaries, oversight. HolonIQ expects **selective** acceleration, with institutions favouring tools that can show instructional value.
+- 🟢 **From general-purpose to purpose-built.** The movement away from generic assistants toward education-specific platforms is named as the defining trend, with the **OECD's 2026 Digital Education Outlook** reportedly recommending the same. 🔵 **On this register that is decisive**: a general-purpose chatbot cannot be made to satisfy `T548`'s input boundary or `T549`'s refusal rails, and a purpose-built pipeline can.
+- 🟢 **AI as embedded infrastructure**, spanning admissions, advising and administration, with agentic AI moving into everyday workflows.
+- 🟢 **Skills and credentials:** a skills-driven ecosystem driven by employer expectations, with verified digital credentials as the endpoint.
+- 🟢 **Assessment integrity:** AI-aware rubrics that state when AI use is permitted, required or prohibited, and how it must be disclosed.
+
+🔴 **And the leg's defect, for the second consecutive pass.** It again returned *"an April 2026 deadline for large public institutions to meet updated ADA accessibility guidelines for all web content, including vendor apps."* 🔴 **That deadline does not exist** — DOJ's Interim Final Rule of `2026-04-20` moved ADA Title II web-accessibility compliance to **`2027-04-26`** (entities serving ≥`50,000`) and **`2028-04-26`** (smaller entities and special districts), WCAG 2.1 Level AA unchanged. 🟢 **`ACTION p758-A`, adopted one pass ago for exactly this, fired on its first opportunity.** 🔵 **The finding is the reproduction rate, not the date: two passes, same leg, same superseded figure, different secondary sources — this is the steady state of the trade press on this obligation** (`T551`, `ACTION p759-B`).
+
+**Market size — unchanged and still not quotable as a point estimate.** This pass returned **~`$10.6B`** for `2026` from one source and **~`$12.3B`** for `2026` from another (attributed to HolonIQ) — a **~`16%`** spread on the same year, consistent with the `~8%`–`5×` range this page has measured since `p657`. 🔵 **Quote the range and the direction, never a single figure**; and on this register prefer the structural ratios (`<10%` of LATAM institutions with guidelines against `>50%` teacher use) over any TAM.
+
+⚠️ **Most sources on this leg are marketing-oriented secondary blogs**, and `5 / 5` primary hosts are unreachable in this environment (`T561`).
 
 #### 🆕 `p758` — the market numbers still disagree, and the direction of travel is from pilots to infrastructure
 
