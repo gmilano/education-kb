@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p776` — **The SEND / special-educational-needs assessment and placement register (`ACTION p775-I`). 🔴 `make hooks` tried FIRST and DENIED a SEVENTH consecutive session, so all four instruments were written from scratch again. 🟢 `p775-I`'s premise HOLDS and is the first register premise in three to survive intact: SEND placement *is* squarely inside Annex III point 3(c). 🔴 And the register's governing result completes a three-pass law — of `7` candidates probed, `1` carries a clean permissive grant, and `0` implement the statutory object.**
+
+**`4` defects in this pass's own instruments caught by control before any verdict was published · canonical corpus `36` → `38` texts, which moved `2` repositories from UNRESOLVABLE to exactly canonical · `3,714` claim-carrying repositories adjudicated by the named gate `gate-claims`, `0` real defects · `20,764` link instances folded to `5,610` addresses · `api.github.com`, `github.com` HTML and `codeload` all `403`, so no star count appears anywhere in this section.**
+
+### 🟢 The premise test: Annex III point 3(c) *is* doing real work here — and it cuts in an unexpected place
+
+🔵 **`p775` named SEND for this pass on the ground that, unlike exclusion, it sits inside the EU AI Act's Annex III point 3 — *"assessing the appropriate level of education"*.** 🟢 **Confirmed.** Commentary on the Act places SEN classifiers that assign students to suitable programmes inside 3(c), citing recitals `226`–`229`, and the Commission's stated rationale is the long-term effect of a misclassification rather than who signs the decision.
+
+🟢 **The obligations bite on `2 December 2027`**, which independently confirms `p772`'s resolution of the date contradiction this base carried for several passes — the Digital Omnibus moved the standalone Annex III duties off `2 August 2026`. 🔵 Pages still asserting the August date are stale.
+
+🔴 **But the boundary is sharper than "education is high-risk", and it falls in the worst possible place for a studio.** Formative systems — adaptive learning platforms, intelligent tutoring systems, learning-analytics dashboards — are **not** high-risk on this basis. The *placement and level determination* is. **So the regulated component is precisely the one component the open supply does not publish**, and the unregulated components are the ones it publishes abundantly. A studio cannot fork its way to the obligation.
+
+### 🔴 The SEND supply, probed repo-by-repo and graded on the bytes
+
+🔵 Every row was found by search, probed on the ref channel for existence and default branch, then probed on the raw channel against **`44`** case-aware grant filenames, and every grant found was graded word-level against **`38`** canonical texts with a deontic guard (`ACTION p774-C`, standing).
+
+| Component | Address | Branch · `HEAD` | Grant (probed and graded this pass) | Region | Verdict |
+|---|---|---|---|---|---|
+| **iep-system** | [`dg13788/iep-system`](https://github.com/dg13788/iep-system) | `main` · `e0741f174ae0` | 🟢 **MIT** · `body:canonical` · `1,066 B` · `9062c6eb0c81` | APAC | 🟢 **The only clean permissive grant on this shelf.** React 19 / TypeScript / PHP 8 / MySQL 8 over the IEP lifecycle — templates, goal tracking, Excel and PDF import/export. 🔴 Its own README calls it a *skeleton version*, and its documentation is Chinese-language. |
+| **MyIEP** | [`ChelseaSchool/MyIEP`](https://github.com/ChelseaSchool/MyIEP) | 🔴 **`LastWorking`** · `87c5df4ab619` | 🔴 **GPL-2.0-or-later** · `18,351 B` · `1cfece9336f0` | North America | 🔴 Copyleft. **And it is not an independent project — see below.** Its default branch is neither `main` nor `master`, the class `p773-B` measured at `103` of `183`. |
+| **IEP-IPP** | [`ghoulmann/IEP-IPP`](https://github.com/ghoulmann/IEP-IPP) | `master` · `96b5cf92a2f5` | 🔴 **GPL-2.0-or-later** · `COPYING` `18,351 B` · `1cfece9336f0` | North America | 🔴 Copyleft, and **nineteen years stale** — the SourceForge original's last release was 2007. 🔵 Its root `LICENSE` is a `1,188 B` header *notice*, not a grant; it says so (*"The full text of the GPL is in the COPYING file"*). |
+| **sped-hub** | [`ellieoconnor/sped-hub`](https://github.com/ellieoconnor/sped-hub) | `main` · `aa3319be7273` | 🔴 **NO-GRANT-AT-ROOT** after `44` names | North America | 🔵 React/TypeScript front end *not started*, FastAPI backend planned. Pre-alpha, and unusable regardless. |
+| **easy-iep** | [`avivkatz1/easy-iep`](https://github.com/avivkatz1/easy-iep) | `main` · `ec0d4f039b0a` | 🔴 **NO-GRANT-AT-ROOT** after `44` names | North America | 🔵 AI-assisted documentation and meeting prep, designed around FERPA and Illinois SOPPA — **the only candidate that names a privacy statute.** 🔴 No grant. |
+| **iep-tracker** | [`nathangrove/iep-tracker`](https://github.com/nathangrove/iep-tracker) | `main` · `8d56256b6661` | 🔴 **NO-GRANT-AT-ROOT** after `44` names | North America | 🔵 Goal tracking that keeps all data in the organisation's own Google Drive — a genuinely privacy-shaped design. 🔴 No grant. |
+| **special-education-iep-standa…** | [`ncreighton/69e7755d-special-education-iep-standa`](https://github.com/ncreighton/69e7755d-special-education-iep-standa) | `main` · `cc0077633c38` | 🔴 **NO-GRANT-AT-ROOT** after `44` names | Global | 🔴 **Not software.** A Notion SOP template library marketed as a tool. Listed only so the next pass does not re-find it. |
+
+🟢 **The fork is proved on the hash, not on a claim.** `ghoulmann/IEP-IPP`'s `COPYING` and `ChelseaSchool/MyIEP`'s `LICENSE.txt` are **byte-identical** — `18,351 B`, `sha256₁₂ 1cfece9336f0`. **So the two apparently separate GPL rows on this shelf are one payload and one project**, and the established open-source IEP supply is a single nineteen-year-old codebase plus its fork.
+
+🟢 **New verdict class, earned by this cluster: `ALTERED-VINTAGE`.** That payload grades `GPL-2.0-or-later` at `r=0.982` but trips the deontic guard. Hand-read, every delta is **era boilerplate**: the pre-2005 FSF address (`59 Temple Place, Suite 330` · `02111-1307` for `51 Franklin Street` · `02110-1301`), `Library` where the modern text says `Lesser`, and the trimmed closing advisory paragraph. 🔴 **The operative grant is intact.** The same signature appears across this base's whole GPL-2.0 cluster — `postgis/postgis` (`18,092 B`), `learnosity/learnosity-qti` (`18,264 B`), `elgg/elgg` (`17,173 B`) — so it is a **class, not a set of alterations**, and calling it `ALTERED` alarms a legal reviewer for nothing.
+
+### 🔴 The governing result: three registers in, the open supply publishes the RECORD and never the DECISION ABOUT THE RECORD
+
+🔵 **Measured, not asserted.** The four live candidates' READMEs total ≈`41 KB`. Searched for the statutory vocabulary:
+
+| Term | Occurrences across all four READMEs |
+|---|---|
+| `decision` | **1** |
+| `eligib*`, `placement`, `appeal`, `tribunal`, `due process`, `hearing`, `consent`, `determination`, `refus*`, `dispute` | 🔴 **`0` each** |
+
+🔴 **So the open supply implements the *plan document* and the *goal tracker*. It does not implement the eligibility determination, the placement decision, the parental-consent record, the refusal with reasons, or the appeal to a binding tribunal** — which is the whole of what IDEA Part B, the Children and Families Act 2014, Portaria MEC nº 421/2026 and Decreto 170 actually require.
+
+🟢 **And that completes a law this base can now state with three independent registers behind it:**
+
+| Pass | Register | The adjacent artefact | The duty layer — decision, reasons, appeal |
+|---|---|---|---|
+| `p774` | School admissions | 🟢 **MIT ×6** — student-proposing deferred acceptance, `4` languages | 🔴 **`0`** |
+| `p775` | Exclusion / suspension | 🔵 `8` behaviour / early-warning repositories found | 🔴 **`0` — and `0` of `8` carried any grant at all** |
+| `p776` | SEND assessment / placement | 🟢 `1` of `7` permissive (the plan document) | 🔴 **`0`** |
+
+🔴 **`T782` — the open-source education supply publishes the record and never the decision about the record.** Three registers, three different statutory objects, three different regions of origin, same result. 🔴 **And Annex III point 3(c) makes exactly the unpublished half high-risk from `2 December 2027`** — the single most commercially consequential sentence this register produced.
+
+### 🟢 `p775-G` answered: SEND needs a new COLUMN, not a third decision type
+
+🔵 `ACTION p775-G` predicted SEND would *"collapse onto an existing"* decision type and asked whether it tests the schema hardest. 🟢 **It collapses onto `binding` as predicted — and it exposes a dimension neither admissions nor exclusion has.**
+
+🟢 **`interim_effect`.** Under IDEA, while a due-process hearing is pending the child **stays in the current placement** — *stay-put* (`34 CFR §§300.507`–`300.513`), with an expedited hearing available where the parent challenges the placement or an interim alternative setting. 🔴 **Neither the admissions appeal nor the exclusion review has a status-quo freeze.** `appeal_route` v3 therefore gains `interim_effect {freeze | none | expedited}` — the same shape as `p775`'s discovery that exclusion needed `reviewer_power`: **a register adds a column, not a value.**
+
 ## 🆕 `p775` — **The school exclusion and suspension register (`ACTION p774-I`). 🔴 `make hooks` tried FIRST and DENIED a SIXTH consecutive session, so all four instruments were re-implemented from scratch rather than executed. 🔴 The register's governing result is the hardest negative this base has recorded: of `8` behaviour / discipline / early-warning repositories found and probed this pass, `8` publish NO GRANT AT ALL — not a restrictive licence, no licence. And the pass's largest correction is to p774 itself: the non-free population is `13`, not `5`.**
 
 **`6` defects in this pass's own instruments caught by control before any verdict was published · `9` canonical licence texts added (`27` → `36`) · `1,592` published claims available for re-grade · `5,583` displayed addresses parsed and `30` never-probed ones closed · `84` bare-owner citations probed on a plausible-repo channel · `api.github.com`, `github.com` HTML and `codeload` all `403`, so no star count or refs count appears anywhere in this section.**

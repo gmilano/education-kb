@@ -4,6 +4,30 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p776` — **The SEND layer on top of the real platforms: what each one already carries, and the one thing none of them carry.**
+
+🔵 The question this register puts to the vertical shelf is narrow: **of the platforms a studio would actually customise, which already model the SEND record — the assessment, the plan, the decision, the appeal?** Probed and graded this pass.
+
+| Platform | Address | Grant (graded this pass) | Region | Carries the SEND object? |
+|---|---|---|---|---|
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **GPL-3.0-or-later** · `35,147 B` · `8ceb4b9ee5ad` | Global | 🟡 **Partly.** Accessibility, competency frameworks and learning plans exist; **the statutory decision and appeal do not.** A learning plan is not an EHC plan. |
+| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** (carried) | Global | 🔴 **No.** Course delivery at scale; no per-pupil statutory record. 🔵 `openedx/edx-ora2` graded **AGPL-3.0-or-later** `35,135 B` `106a1b4b8b71` this pass. |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** · `body:canonical` · `1,097 B` · `3c056b34a476` | Global | 🔴 **No** — but 🟢 **the best base for the APAC/LATAM deployment reality**: offline-first, low-spec hardware, which is the actual constraint where implementation is uneven. |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** · `11,120 B` · `0688f62d04f1` | North America | 🔴 No. Higher-education focus; the SEND duty is a schools duty. |
+| **BigBlueButton** | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🟢 **LGPL-3.0-permissions-only** · `body:canonical` · `7,652 B` · `e3a994d82e64` | Global | 🟡 **Indirectly, and it matters.** The SEND provision itself is often remote or peripatetic delivery; this is the permissively-licensed way to deliver and record it. |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0-permissions-only** · `r=0.9674` · `8,241 B` | APAC | 🟡 Admissions and student records on the Odoo stack — the closest thing to an SIS to hang a SEND module on. 🔴 Grant file incomplete as shipped. |
+| **ERPNext (Education)** | [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 **GPL-3.0-or-later** · `35,149 B` · `3972dc9744f6` | Global | 🟡 A real SIS with enrolment and assessment. 🔴 No statutory SEND object. |
+| **Primero** | [`primeroims/primero`](https://github.com/primeroims/primero) | 🔴 **AGPL-3.0-or-later** · `35,475 B` · `27affec55ad7` | Global | 🟢 **The closest match on this shelf, and it is not an education product.** UNICEF-backed child-protection case management: referral, consent, confidentiality, case workflow and a decision trail. 🟢 **If a studio wants a SEND case model that already exists, this is it** — with the AGPL obligation understood. |
+| **H5P** | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🔴 **GPL-3.0-or-later** · `35,146 B` · `c53a65c2fd56` | EMEA | 🔴 No. 🟢 But accessible, adaptable content types are the *provision* a plan prescribes. |
+| **OpenSALT** | [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | 🟢 **MIT** · `body:canonical` · `1,080 B` · `38e322d5ab06` | North America | 🟢 **The standards registry a decision must cite.** A placement determination that cannot name the framework it assessed against is not defensible. |
+| **Hacklympics** | [`aesophor/hacklympics`](https://github.com/aesophor/hacklympics) | 🟢 **MPL-2.0** · `body:canonical` · `16,725 B` · `1f256ecad192` | APAC | 🔵 Filed for the grant only — graded clean this pass where the shelves carried two different claims. |
+
+### 🔴 The gap, stated as a measurement rather than an impression
+
+🔴 **Of `11` real platforms a studio would customise, `0` model the statutory SEND object.** The nearest match is a **child-protection** system, not an education one, and it is AGPL. 🟢 **`T782` holds on the vertical shelf exactly as it holds on the agent shelf: the platforms carry the record and never the decision about the record.**
+
+🟢 **The practical consequence is a build/buy line a studio can quote.** Delivery, content, accessibility, competency frameworks and the plan document are all available permissively or near-permissively and should never be rebuilt. 🔴 **The eligibility determination, the refusal with reasons, the time-limited appeal and the interim-effect freeze must be built** — and from `2 December 2027` they are the high-risk component under Annex III point 3(c), with logging, human oversight, accuracy, robustness and post-market monitoring attached.
+
 ## 🆕 `p775` — **The platform layer an exclusion deliverable sits on, graded by grant rather than by feature list. 🔴 Of the `5` real school platforms that carry a discipline or suspension module, `0` are permissive: `4` are copyleft and `1` ships a truncated grant. The `1`-in-`10` permissive ratio `p771` measured, which `p774` broke for the admissions *mechanism*, holds again here — and for exclusions it is `0`-in-`5`.**
 
 ### 🔴 Platforms with a real discipline / suspension module — every one probed on the ref channel this pass

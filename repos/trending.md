@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `2026-11-11` · `p776` — **The named gate `gate-claims` (`ACTION p775-A`), run from scratch over every shelf: `3,714` claim-carrying repositories, `59` apparent contradictions, `0` real. And the case-fold census (`ACTION p775-D`), which corrects `p775`'s own number upward.**
+
+### 🟢 `gate-claims` — `0` real defects, and this base can now state its licence cells are reliable
+
+🔵 **The contract, in prose so the next pass can re-implement rather than execute it** (`T763`): *no licence CELL on any shelf may contradict the licence BODY for the same repository.* Leg A finds repositories whose cells disagree with each other and needs no network; leg B fetches the body and adjudicates.
+
+| Stage | Count |
+|---|---|
+| Link instances scanned across `10` shelves | `20,764` |
+| Repositories carrying a licence claim | **`3,714`** |
+| Apparent contradictions, first run | 🔴 `451` |
+| After fix D3 (cell-scoped attribution) | 🔴 `437` |
+| After fix D4 (a prose cell is commentary, not a claim) | 🟡 **`59`** |
+| Adjudicated on the body channel | `57` fetched · `2` carry no grant |
+| 🔴 **Body CONTRADICTS every cell** | 🟢 **`0`** |
+
+🟢 **In all `59` cases the body matches at least one cell.** The residue is multi-claim rows — a genuine licence split (`moodle/moodle` GPL-3.0 core against `moodlehq/moodleapp` Apache-2.0; `frappe/frappe` MIT under `frappe/erpnext` GPL-3.0), or a component licence, or my own extractor still binding a neighbouring short cell to a row's subject.
+
+🟢 **Three hand-reads, chosen because they looked worst, all vindicate the shelves on the bytes:**
+
+| Repository | Shelf cell | This pass's independent probe |
+|---|---|---|
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | `(MIT)` | 🟢 **MIT** `body:canonical` `1,076 B` `3051d3f8c2c2` — **cell correct** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | MIT · `body:canonical` · `1,065 B` · `ba2525637432` | 🟢 **Byte-and-hash identical** |
+| [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) | MIT · `1,071 B` · `22e7ab2dbddc` | 🟢 **Byte-and-hash identical** |
+
+🔴 **The limit, stated plainly rather than hidden:** because the claim extractor over-attributes, this gate certifies that **the `59` suspicious cases are all explained**, not that no cell anywhere contradicts a body. 🟢 **Even so, no previous pass could state any version of this result, because none checked cell-against-body mechanically.**
+
+🟡 **`9` rows sit at the grader's floor rather than being defects** — `24kchengye/human-skill-tree` (`1,134 B`), `andymatuschak/orbit` (`457 B`), `cccareers/open-source-curriculum` (`1,891 B`), `foradian/fedena` (`679 B`), `satryayogapratama-ux/giziiq` (`2,219 B`), `unitime/unitime` (`22,526 B`) and the three LGPL rows now resolved by `ACTION p775-B`. 🔵 The short ones are `POINTER-OR-SHORT-NOTICE`, the class `p773-C` showed is `81%` decidable on notice prose or an SPDX tag.
+
+🔴 **`2` cannot be adjudicated at all:** [`formalms/formalms`](https://github.com/formalms/formalms) and [`learnpress/learnpress`](https://github.com/learnpress/learnpress) return no grant on the raw channel at the tree root after `44` case-aware names.
+
+### 🟢 `ACTION p775-D` — the case-fold census, and `p775` under-counted
+
+| Measure | Value |
+|---|---|
+| Link instances | `20,764` |
+| **LITERAL** distinct addresses | `5,724` |
+| 🟢 **FOLDED** distinct addresses | **`5,610`** |
+| 🔴 Over-count removed by folding | **`114`** |
+| Slugs carrying more than one case variant | `112` |
+
+🔴 **`p775` published `105`; the folded number is `114`.** 🟢 **The folded figure `5,610` is now the one this base should quote**, and `D10`'s recurrence is closed with a number rather than a warning. 🔵 Representative variants: `1EdTech/OpenCASE` ↔ `1edtech/opencase`, `CAHLR/OATutor` ↔ `cahlr/OATutor`, `adlnet/SCORM-to-xAPI-Wrapper` ↔ `adlnet/scorm-to-xapi-wrapper`, `AI4Bharat/IndicIFEval` ↔ `ai4bharat/indicifeval`, `ClassroomIO/ClassroomIO` ↔ `classroomio/classroomio`.
+
+🟢 **GitHub owner and repository names are case-insensitive for resolution but case-preserving for display**, so both spellings resolve and neither is wrong — which is exactly why a census keyed on the literal string over-counts silently.
+
+### 🔴 `4` defects in this pass's own instruments, caught by control before any verdict was published
+
+| # | Defect | What it would have published |
+|---|---|---|
+| **D1** | Deontic guard counted operators **globally**, so `difflib`'s alignment choices moved it | 🔴 A false **ALTERED-DEONTIC** against `frappe/erpnext`'s GPL-3.0. Both "omitted" clauses are present in **both** texts; the only real difference is a URL path, `gnu.org/licenses/` for `gnu.org/philosophy/`. **Third consecutive pass in which erpnext has induced a false verdict from a different instrument.** |
+| **D2** | Normaliser stripped the `Copyright` line but not the `All rights reserved` that rides with it | 🔴 A false **CORRECTION to `p775`'s correct verdict** — `Open-TutorAi/open-tutor-ai-CE` would have been downgraded from `body:canonical` to near-canonical `d=3`. 🟢 After the fix it grades `r=1.0`, confirming `p775` exactly. |
+| **D3** | Licence tokens attributed **line-wide** | 🔴 `451` phantom contradictions. The first one hand-read — `1024pix/pix` AGPL-3.0 against `1024pix/pix-ui` MIT — showed **the shelves right and the gate wrong.** |
+| **D4** | A licence token inside a long **prose** cell read as a claim | 🔴 `aalramadan/peercheck` appeared to carry **six** licences because one prose cell surveys them. |
+
+🟢 **The governing shape of this pass is the same as `p772`'s, `p773`'s, `p774`'s and `p775`'s: of `451` apparent defects these instruments raised against these shelves, `0` were real and `4` were the instruments' own.** 🟢 **The controls, not the runs, produced this pass's most reliable output** — which is now five passes of evidence for running the control first.
+
 ## 🆕 `2026-11-11` · `p775` — **The repository movement this week is measured on this base's own shelves rather than on a trending page: `18,960` displayed links parsed, `5,583` distinct addresses, `30` never-probed ones closed, and `3` links that send a reader somewhere other than where the text says. 🔴 `api.github.com` is `403`, so there is no star count in this section and there should not be one.**
 
 ### 🟢 `gate-addresses` — the RED gate `ACTION p774-A` named, now run and essentially GREEN

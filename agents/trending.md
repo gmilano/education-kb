@@ -4,6 +4,47 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `2026-11-11` · `p776` — **What is new on the agent shelf this week, probed rather than reported. 🔴 Every star count in the sources below is unverifiable in this session: `api.github.com`, `github.com` HTML and `codeload` are all `403`. Where a figure appears it is attributed to its source and marked second-hand.**
+
+### 🟢 Live this week, probed on the ref channel and graded on the raw channel
+
+| Agent | Address | Branch · `HEAD` | Grant (graded this pass) | Region | Note |
+|---|---|---|---|---|---|
+| **DeepTutor** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main` · `60fb3bdfddb3` | 🟢 **Apache-2.0** · `body:near-canonical` · `11,408 B` · `cd2f54e1e506` | APAC | 🟢 **Grant confirmed on the bytes.** Lifelong personalised tutoring, multi-agent + RAG. 🔴 Trend digests report `~48k`–`52k★` with daily gains of `1,900`–`2,400` in late October — **second-hand, conflicting between snapshots, and unverifiable here.** |
+| **OpenMAIC** | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `main` · `8c29069daf43` | 🟢 **MIT** · `body:canonical` · `1,065 B` · `ba2525637432` | APAC | 🟢 Tsinghua MAIC's AI-teacher/AI-peer classroom generated from a topic or document. 🔵 **Reproduces this base's existing row exactly**, including `ba2525637432`. `~42k★` reported, second-hand. |
+| **ai-engineering-hub** | [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | `main` · `042aeb506738` | 🟢 **MIT** · `body:canonical` · `1,066 B` · `93123909818c` | Global | 🔵 A curriculum, not an agent — `93`+ projects graded by difficulty. Filed as a *teaching corpus*, which is what it is. |
+| **Lumen** | [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | `main` · `87365e882156` | 🟢 **MIT** · `body:canonical` · `1,076 B` · `3051d3f8c2c2` | Global | Learner-owned private course from a one-sentence goal, with a course-scoped RAG tutor. 🟢 **Grant re-confirmed this pass against a shelf that `gate-claims` flagged** — the cell was right. |
+| **OpenTutor** | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | `main` · `cfe41f874290` | 🟢 **MIT** · `body:canonical` · `1,068 B` · `5352b4967982` | APAC | Self-hosted local-first adaptive workspace — uploads to notes, quizzes and flashcards. 🟢 Clean permissive grant. |
+
+🔵 **All five are formative tools, and that now has a regulatory meaning.** Under Annex III point 3(c) adaptive learning platforms, intelligent tutoring systems and learning dashboards are **not** high-risk. 🔴 **So the whole of this week's agent supply sits outside the obligation, while the component the SEND register needed sits inside it and is unpublished** (`T782`).
+
+### 🔴 The SEND search, recorded with its negative result
+
+| Leg | Query shape | Outcome |
+|---|---|---|
+| Global — agents | `open source IEP individualized education program management github` | 🟡 **`7` candidates, `1` clean permissive grant.** Full table on [`agents/top.md`](../agents/top.md). |
+| Global — trending | `github trending education AI agents 2026 MIT Apache` | 🟡 `5` live repositories, **`0` relevant to SEND.** All formative. |
+| North America | `IDEA IEP due process hearing placement decision 2026` | 🟢 **Statute and procedure found** (`34 CFR §§300.507`–`300.513`, stay-put, `60`-day state complaint). 🔴 **`0` repositories implement it.** |
+| EMEA | `EHC needs assessment First-tier Tribunal 2026 reform` | 🟢 Law and the 2026 White Paper found. 🔴 **`0` repositories.** 🔴 Reform timeline contested across sources (`~2029`/`~2030`) — recorded as a spread. |
+| APAC | `special education placement Japan Korea India RPwD 2026` | 🟡 **India found** (RPwD ss. 16–17, family choice, State Commissioner route). 🔴 **Japan and South Korea: NOTHING AUTHORITATIVE on placement or appeal.** |
+| LATAM | `Brasil Chile educação especial PEI laudo matrícula recurso 2026` | 🟢 **The register's best regional find** — Portaria MEC nº 421/2026 and Resolução CEE/MG nº 507/2026; Chile's Decreto 170 and the September 2026 ordinario. 🔴 **Appeal route NOT FOUND for either country.** |
+
+🔴 **Declared gap, measured rather than left silent: `0` repositories in ANY region implement the SEND determination or its appeal.** Searched in English, Portuguese and Spanish. 🔴 **Japan and South Korea returned no authoritative placement procedure at all** — an informed gap, not coverage.
+
+### 🟢 `ACTION p775-E` disposed: `1` of `3` real, and the coordinates were already dead
+
+🔵 `p775` named three G1 link defects *by line number* and said they should be edited rather than re-measured.
+
+| `p775`'s claim | Disposition at `p776` |
+|---|---|
+| `agents/trending.md:24401` — `AMAN6921/SikhshaBox` → absent | 🟢 **REAL, and FIXED IN PLACE.** The defect is at **`24440`**, not `24401`. The link *text* was a truncated slug that does not resolve; the URL target was always correct. 🟢 Full name probed: `main` · `fbdd4da3307e`, `LICENSE` `1,069 B` · `3e7f788130f0` — **reproducing `p775`'s published bytes exactly.** Display form changed to the ellipsis convention already used correctly elsewhere on this shelf. |
+| `repos/trending.md:58052` — `@superbuilders/oneroster` → absent, target absent too | 🔴 **FALSIFIED ON BOTH CLAUSES.** It is an **npm** coordinate, correctly linked to `npmjs.com`. The registry API confirms **`10` versions, `license: NONE`** — exactly what the cell said. The `403` was the HTML wall (`T779`). |
+| `agents/trending.md:49209` — file path as link text | 🔴 **FALSE POSITIVE.** `[`repos/foundations.md`](../repos/foundations.md)` is a correct relative cross-reference, the class has **`438`+ instances**, and **all `8` sibling targets exist on disk.** |
+
+🔴 **And all three coordinates pointed at unrelated content by the time they were read** — `p775`'s own commit appended `77,365` lines to this shelf. 🟢 **`p767-E` measured this law and `p775` published three more line numbers anyway: a line coordinate into an append-only shelf has a useful life of about one pass.** 🟢 **Doctrine: locate a defect by SUBJECT, never by coordinate.**
+
+🔴 **A fourth defect `p775` did not name:** [`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts), carried on these shelves as **0BSD, `711 B`**, now returns `401` — **ABSENT-OR-PRIVATE**. The shelf cell is stale through no fault of its own, and this is the honest form of the finding.
+
 ## 🆕 `2026-11-11` · `p775` — **Exclusions and suspensions. 🔴 What is new this week is not an agent: it is that the agent supply for this register is `0`, and `0` of the `8` adjacent repositories carry a grant. 🟢 The real movement is a licence genre — five education projects have now each invented a source-available licence and named it after themselves.**
 
 ### 🔴 The week's register signal: `0` agents, `0` grants
@@ -24437,7 +24478,7 @@ work.** 🔵 The README defect is a second, independent fault that was hiding be
 |---|---|---|---|---|
 | [nothinx/naskah-id](https://github.com/nothinx/naskah-id) | **84** | 🟢 MIT · 1 162 B @ `e18d574c6b93` | APAC · Indonesia | **Six days old, 16 forks.** Academic-writing agent gated on **EYD V orthography and the KBBI dictionary** — pedagogy as a national language standard, which is a shape no English-channel row here has. |
 | [mannnrachman/cbt-man](https://github.com/mannnrachman/cbt-man) | 11 | 🟢 MIT · 1 069 B @ `ce816cf5700b` | APAC · Indonesia | Computer-based testing on TanStack/React/Prisma/SQLite. **The only CBT repository found this pass carrying a grant at all.** |
-| [AMAN6921/SikhshaBox](https://github.com/AMAN6921/SikhshaBox-Lightweight-OS-Virtualization-For-Affordable-Education-Labs) | 13 | 🟢 MIT · 1 069 B @ `fbdd4da3307e` | APAC · India | Per-student isolated lab VMs + automated code feedback. *Affordable* is in the repository name — a constraint, not a tagline. |
+| [`AMAN6921/SikhshaBox…Education-Labs`](https://github.com/AMAN6921/SikhshaBox-Lightweight-OS-Virtualization-For-Affordable-Education-Labs) | 13 | 🟢 MIT · 1 069 B @ `fbdd4da3307e` | APAC · India | Per-student isolated lab VMs + automated code feedback. *Affordable* is in the repository name — a constraint, not a tagline. |
 | [BleeGleeWee/Voice-Based-Native-Language-Service-Agent-](https://github.com/BleeGleeWee/Voice-Based-Native-Language-Service-Agent-) | 6 | 🟢 MIT · 1 074 B @ `e66303daed36` | APAC · India | 🟢 **First Hindi-channel row on this base.** LangGraph + Groq Llama-3 + EdgeTTS, **CPU-only, no GPU** — found by the query `p475` called a true zero. |
 
 🔴 **Refused, and both out-rank three rows that were accepted:**

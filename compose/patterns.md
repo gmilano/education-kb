@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p776` — **`5` patterns from the SEND register. Every repository named below was probed on the ref channel and its grant graded on the raw channel THIS pass; no pattern names a component this pass did not verify.**
+
+🔵 **Id convention:** `P{pass}-{n}` (`P776-1`…). The bare `P\d+` namespace is CLOSED — `p770-H` measured `171` colliding ids across two shelves and renumbering them would rewrite append-only history.
+
+### 🟢 `P776-1` — The SEND placement-decision service (the component nobody publishes)
+
+🔴 **Why it exists:** `0` of `7` probed SEND repositories implement the eligibility determination, the refusal with reasons, the appeal, or the interim freeze (`T782`). 🔴 **And Annex III point 3(c) makes exactly this component high-risk from `2 December 2027`.** So it cannot be forked; it must be built, and built to the obligation.
+
+**Wiring:**
+1. **Plan document — do not rebuild.** [`dg13788/iep-system`](https://github.com/dg13788/iep-system) (**MIT** `body:canonical` `1,066 B` `9062c6eb0c81`) for the IEP/PEI lifecycle, templates, goal tracking and PDF/Excel export. 🔴 Treat it as a skeleton — its own README says so, and its docs are Chinese-language.
+2. **Case model — adopt, don't invent.** [`primeroims/primero`](https://github.com/primeroims/primero) (**AGPL-3.0-or-later** `35,475 B` `27affec55ad7`) already models referral, consent, confidentiality and a decision trail. 🔴 **AGPL: network use triggers the source obligation — decide this before the first commit, not after.**
+3. **Standards the decision cites.** [`opensalt/opensalt`](https://github.com/opensalt/opensalt) (**MIT** `1,080 B` `38e322d5ab06`). A determination that cannot name its competency framework is not defensible on appeal.
+4. **The decision layer — new code.** `determination{eligible, reasons[], evidence_refs[], decided_by, decided_at}` → `placement{setting, named_institution?, provision[]}` → `appeal{route, deadline, interim_effect}`.
+5. **`appeal_route` v3** per `P776-4` below.
+6. **Annex III obligations as code, not policy:** immutable decision log, a named human who can override with a recorded reason, accuracy and robustness evidence per decision class, post-market monitoring on overturn rates.
+
+🟢 **The overturn rate is the product metric.** It is the only signal that tells a client whether the determination layer is accurate, and it is what a regulator will ask for.
+
+**Estimate:** `10`–`12` weeks to a defensible single-region pilot. 🔴 Not less — the appeal and interim-effect semantics are where every region differs.
+
+### 🟢 `P776-2` — Brazil-first inclusive enrolment, compliant with Portaria MEC nº 421/2026
+
+🔴 **Why it is a separate pattern and not a localisation of `P776-1`:** Brazil **forbids** the diagnostic gate that North America and EMEA are built around. A ported product is a compliance defect.
+
+**Wiring:**
+1. **Enrolment with no gate.** Accept and complete enrolment, schooling and AEE **without** a diagnosis, `laudo` or health-professional report — art. 7 §4. 🔴 **The system must be incapable of requiring one**, not merely configured not to.
+2. **Estudo de Caso as the initial artefact**, with the biopsychosocial assessment available but subsidiary.
+3. **`PEI` + `PAEE` generation and annual revision** — Resolução CEE/MG nº 507/2026 sets at least yearly, and training thresholds of `360 h` (AEE teacher) and `180 h` (support professional) that a staffing module should track.
+4. **SIS base:** [`frappe/erpnext`](https://github.com/frappe/erpnext) Education (**GPL-3.0-or-later** `35,149 B` `3972dc9744f6`) or [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) — 🔴 build on [`frappe/frappe`](https://github.com/frappe/frappe) (**MIT** `1,118 B` `bc6001a54ffc`) instead where the copyleft boundary matters.
+5. **Delivery for the connectivity reality:** [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (**MIT** `1,097 B` `3c056b34a476`).
+6. **Reneei registration** as a first-class integration, not an afterthought.
+
+🔴 **Chile needs the inverse build** — a Decreto 170 diagnostic-evaluation workflow that keeps the educational evaluation distinct from the clinical one (September 2026 Mineduc ordinario) and reports the `subvención` basis to the Superintendencia. 🟢 **Two products, one `region: LATAM` value** (`T783`).
+
+**Estimate:** `6`–`8` weeks for Brazil; the Chile variant is a different data model, not a flag.
+
+### 🟢 `P776-3` — A retention engine with PER-FIELD clocks
+
+🔴 **Why:** Japan holds **`20` years** for the enrolment/status entries of the 指導要録 and **`5` years** for the rest of the same record set. 🔴 **One value per jurisdiction is therefore wrong** (`T784`), and this base specified the union that way at `p775`.
+
+**Wiring:** `retention(field, jurisdiction) -> {duration(n, unit) | purpose_test | none | unmeasured}`, seeded with what is actually measured:
+
+| Jurisdiction | Value |
+|---|---|
+| Japan | 🟢 `duration(20, yr)` status fields · `duration(5, yr)` remainder |
+| South Korea | 🟡 `duration(50, yr)` general *(single secondary source)* · 🟢 `duration(4, yr)` bullying-discipline *(2024 revision)* |
+| Singapore | 🟢 `purpose_test` — PDPA prescribes no period |
+| Brazil | 🟢 `duration(permanent)` for the Livro de Registro de Matrícula |
+| India | 🟡 `duration(permanent)` master register · the `01 year` series is a different object |
+| United States | 🟢 `none` federally (FERPA sets none) · `duration(4..99, yr)` by state |
+| England | 🟢 `none` nationally |
+| Australia | 🟢 `none` nationally · VIC `duration(1, yr)` after leaving · NSW/ACT/WA age `25` or leave`+7` |
+
+🟢 **The engine's value is the refusal:** it must decline to answer where the value is `unmeasured` rather than defaulting, because the measured spread runs from `1 year` to PERMANENT — over `100×`.
+
+### 🟢 `P776-4` — `appeal_route` v3, with `interim_effect`
+
+🔵 v1 (`p774`) held admissions. v2 (`p775`) added `reviewer_power` for exclusion. 🟢 **v3 adds `interim_effect`, which SEND exposed and neither predecessor has.**
+
+```
+appeal_route {
+  decision_type   : admission | exclusion | send_placement
+  forum           : independent_panel | governing_board | tribunal | hearing_officer | commissioner
+  reviewer_power  : binding | quash_and_remit | advisory
+  interim_effect  : freeze | expedited | none      # NEW at p776
+  deadline        : duration
+  publishes_reason: bool
+}
+```
+
+| Instance | forum | reviewer_power | interim_effect |
+|---|---|---|---|
+| England admissions | `independent_panel` | `binding` | `none` |
+| England exclusion | `governing_board` → `independent_panel` | `quash_and_remit` *(+ parallel binding tribunal)* | `none` |
+| England SEND | `tribunal` | `binding` | 🟡 unmeasured |
+| US IDEA SEND | `hearing_officer` | `binding` | 🟢 **`freeze`** *(stay-put)* + `expedited` for placement challenges |
+| India RPwD | `commissioner` | 🟡 unmeasured | 🟡 unmeasured |
+
+🔴 **`freeze` is not a UI detail.** It means the system must keep serving the *previous* placement as the operative one while an appeal is live — so the record has two simultaneously valid states and a naive "current placement" column is a defect.
+
+### 🟢 `P776-5` — The licence-closure gate a studio can run before it quotes
+
+🔴 **Why:** this pass alone found a grant file that promises the GPL and omits it, a notice-not-a-grant that understates a repo by `17,163 B`, a `6`-byte deontic inversion that passes every ratio budget, and `4` of `7` SEND candidates with no grant at all.
+
+**Wiring — all four steps are reproducible from prose, by design (`T763`):**
+1. **Existence + default branch + `HEAD`** off the ref channel, `github.com/{o}/{r}/info/refs?service=git-upload-pack`. 🔴 **`401` means ABSENT-OR-PRIVATE and nothing stronger** (`T779`).
+2. **Grant discovery** over **`44` case-aware filenames** at the tree root; 🟢 **grade the LARGEST payload, not the first** (`T781`).
+3. **Grade** the normalised operative body against **`38`** canonical texts — including the **`LGPL-3.0` permissions-only form (`7,427 B`)**, without which three real platforms are unresolvable. 🔴 `difflib` with `autojunk=False`, scored both directions.
+4. **Deontic guard** on polarity and modal operators, counted only inside differing regions. 🟢 Control it by inserting `never` into the AGPL first: if the harness does not flag a `6`-byte inversion scoring `r=0.9999`, it is not ready to publish a verdict.
+
+🟢 **Run step 4's control before step 1 on real data.** This pass caught `4` of its own defects that way, and two of them would have published false claims against correct prior work.
+
 ## 🆕 `p775` — **Concrete recipes from the exclusion and suspension register. Every component named below was probed on the ref channel this pass and its grant graded on the bytes against `36` canonical texts with a deontic guard. 🔴 `P775-1` is the one to read: the register's central object has to be BUILT, because `0` of `8` candidate repositories carry any grant at all.**
 
 ### `P775-1` — The statutory exclusion decision-and-review record (the register's core deliverable)

@@ -4,6 +4,58 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p776` — **Trends from the SEND register, and three doctrine corrections this base had already half-paid for. 🔴 `make hooks` DENIED a seventh consecutive session, `0` for `7`.**
+
+### 🔴 `T779` — `401` is not absence, and `403` is not absence either
+
+🔵 **The ref channel cannot distinguish a repository that never existed from one that is private.** Measured directly: `openemis/openemis` and a deliberately fabricated address both return **HTTP `401`**, identically. 🟢 **So `ABSENT-OR-PRIVATE` is the only honest verdict this base may publish from that channel**, and no pass may upgrade it to "absent" without a second channel.
+
+🔴 **`p775` published "absent" twice on exactly this mistake, and the second instance is worse.** `ACTION p775-E` named `@superbuilders/oneroster` as *"absent, and its URL target absent too"*. 🟢 **Both clauses are false.** The npm **registry API** confirms the package is real — `@superbuilders/oneroster`, **`10` versions, `license: NONE`** — which is precisely what the shelf cell already said (*"REFUSED — exists, grants nothing"*). The `403` came from `npmjs.com`'s HTML page, the same anti-bot wall `github.com` serves.
+
+🔴 **And this base had already written the rule down before breaking it.** `intel/trends.md` records that `curl -sI https://github.com/X` returns `403` either way, and `ACTION p773-F` was substituted onto a ref-channel corroboration for that reason. **`p775` then re-committed the identical error against a new host.** 🟢 **A named defect class does not transfer to a new host by itself — the host list is part of the rule.**
+
+### 🟢 `T780` — the body resolves the FAMILY; only the notice or the tag resolves the SPDX ID
+
+🔵 Measured on this base's own corpus: `AGPL-3.0-only` and `AGPL-3.0-or-later` grade **`r=1.0` against each other** after normalisation, and so do the `GPL-3.0` pair. 🔴 **The `-only` / `-or-later` distinction is not in the licence body at all.**
+
+🟢 **So a body-only grader has a resolution floor at the family, and must not claim an SPDX id.** 🔵 This is the exact converse of `T754`, which found that an SPDX *tag* resolves the family where the body cannot (`classguard`). **Put together: the body gives the family, the tag or the per-file notice gives the id, and neither alone is sufficient.** `ghoulmann/IEP-IPP` is this pass's clean illustration — its root `LICENSE` is a header notice carrying *"either version 2 of the License, or (at your option) any later version"*, which is the only place the `-or-later` lives; `COPYING` holds the body and cannot say it.
+
+### 🟢 `T781` — grade the LARGEST payload, never the first one found
+
+🔴 **`grants[0]` is an artefact of the prober's own filename ordering.** `ghoulmann/IEP-IPP` carries both `LICENSE` (`1,188 B`) and `COPYING` (`18,351 B`). Graded on `LICENSE`, it returns **`UNRESOLVED` at `r=0.1561`**; graded on `COPYING`, **`GPL-2.0-or-later`**. 🟢 **A root `LICENSE` that is a header notice pointing elsewhere understates the repository**, and the fix is one line: prefer the largest payload, then reconcile against the notice.
+
+### 🟢 `T782` — the supply publishes the record, never the decision about the record
+
+🔵 Stated in full on `agents/top.md` with the three-register table behind it. 🔴 **Three consecutive registers — admissions, exclusion, SEND — three statutory objects, and `0` implementations of the decision, the reasons, or the appeal in every one**, while the adjacent artefact (the allocation mechanism, the behaviour log, the plan document) is published. 🔴 **Annex III point 3(c) regulates the unpublished half from `2 December 2027`.**
+
+### 🟢 `T785` — the deontic contract is now PROVEN on this base's corpus, not merely argued
+
+🔵 `ACTION p774-C` argued that identity turns on whether an edit touches a deontic operator, using the hypothetical of inserting `never` into the AGPL. 🟢 **This pass ran it.** The word `never` was inserted into the canonical AGPL-3.0 — **`6` bytes** — and the poisoned text scores **`r=0.9999`**, which passes every size and ratio budget this base has ever proposed, including the `0.9995` canonical threshold. 🔴 **It is caught only by the deontic guard.** The contract is no longer a prediction.
+
+🔴 **But the guard as first written over-fires, and the control caught it.** A *global* deontic count is moved by `difflib`'s own alignment choices. `frappe/erpnext` scored `ALTERED-DEONTIC` on `provided` `12`-vs-`13` — and hand-reading showed **both "omitted" clauses are present in BOTH texts** (the opcodes were alignment artefacts) and the only real difference is a URL path, `gnu.org/licenses/` for `gnu.org/philosophy/`. 🟢 **Fixed: polarity and modal operators only, counted only inside the regions `difflib` actually reports as different.** The `never` test still fires; erpnext goes clean at `body:near-canonical`.
+
+🔴 **`frappe/erpnext` has now induced a false verdict on this base in three consecutive passes, from three different instruments** — `p773`'s non-case-aware filename list (false `NO-GRANT-AT-ROOT`, its grant is in lowercase `license.txt`), the `p774`–`p775` census era, and this pass's deontic guard. 🟢 **It should be a permanent control fixture.**
+
+### 🟢 `T786` — `ALTERED-VINTAGE`: a licence canonical for an earlier era is not an altered licence
+
+🔵 The GPL-2.0 cluster systematically trips any strict comparison, and the deltas are era boilerplate rather than alteration: the FSF's 2005 address change (`59 Temple Place` → `51 Franklin Street`, `02111-1307` → `02110-1301`), `Library` for `Lesser`, and the trimmed closing advisory paragraph. 🔵 **Measured across `postgis/postgis` (`18,092 B`), `learnosity/learnosity-qti` (`18,264 B`), `elgg/elgg` (`17,173 B`) and the `ChelseaSchool/MyIEP`–`ghoulmann/IEP-IPP` payload (`18,351 B`).** 🟢 **The FSF address is a reliable era fingerprint and should pre-classify, not alarm.**
+
+### 🟢 `T787` — `ACTION p775-B` was right, and it paid off on three repositories rather than one
+
+🔵 `p775-B` reasoned that SPDX ships `LGPL-3.0` as a `42,098 B` document — the additional-permissions page **plus** the complete GPL — so a repository publishing only the permissions page can never grade near-canonical. 🟢 **Confirmed and measured.** The permissions page alone is **`7,427 B`**, `17.6%` of the full document.
+
+| Repository | Against `36` texts | Against `38` texts |
+|---|---|---|
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 `UNRESOLVED` `r=0.3022` | 🟢 **`LGPL-3.0-permissions-only` · `body:canonical` · `r=1.0`** |
+| [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) | 🔴 `UNRESOLVED` `r=0.3022` | 🟢 **`LGPL-3.0-permissions-only` · `body:canonical` · `r=1.0`** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 `UNRESOLVED` `r=0.2992` | 🟡 `LGPL-3.0-permissions-only` · `r=0.9674` · `wd=83` |
+
+🔴 **And `openeducat_erp`'s remaining `83`-word delta is a real finding, not noise.** Its `8,241 B` file states *"the text of the GPL is included at the bottom as well"* — **and does not include it.** 🔴 Since LGPL-3.0 is *defined* as additional permissions over GPL-3.0, a copy without the GPL text is incomplete by construction and a legal review cannot close on it. **The file's own sentence is the evidence.**
+
+### 🔴 Primary legal text — still zero reads, sixth consecutive pass, now with a fourth named host
+
+🔴 **Cause remains environmental, not a lapse.** `eur-lex.europa.eu` does not resolve under this session's network policy, re-measured this pass, so Annex III point 3(c) rests on secondary commentary and the Official Journal text of Regulation (EU) 2024/1689 is **still unread**. 🔴 **`cbse.gov.in` joins `eur-lex.europa.eu`, `explore-education-statistics.service.gov.uk` and `asl.acara.edu.au`** on the unreachable list, which is why `ACTION p775-H`'s India leg could not be closed byte-exact. 🟢 **Escalated unchanged as BLOCKED-ON-ENVIRONMENT: this cannot be discharged by trying harder.**
+
 ## 🆕 `p775` — **Current trends, from the exclusion and suspension register (`ACTION p774-I`). 🔴 `make hooks` tried first: DENIED, SIXTH consecutive session. 🟢 Nine trends, `T775`–`T783`. The governing one is `T775`: a licence axis this base has reported on hundreds of rows is not decidable from the evidence it was decided on.**
 
 ## `T775` — 🔴 The `-only` / `-or-later` axis is UNDECIDABLE from a licence body, for every GNU pair

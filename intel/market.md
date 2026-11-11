@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p776` — **The SEND assessment and placement market, placed by region (`ACTION p775-I`). 🔴 The register's regional result is that LATAM is one `region:` field holding two OPPOSITE legal rules — Brazil forbade the diagnostic gate in May 2026, and Chile still requires it.**
+
+### 🔵 What the duty actually is, per region
+
+| Region | The statutory object | Who decides | Appeal route | Binds? | Interim effect |
+|---|---|---|---|---|---|
+| **North America** | IDEA Part B evaluation → eligibility determination → IEP → placement | The IEP team / LEA | Impartial **due-process hearing** (`34 CFR §§300.507`–`300.513`); state complaint decided in **`60` calendar days**; mediation | 🟢 **Yes** — the hearing officer may order different services and a different placement, binding on the district | 🟢 **`freeze`** — *stay-put*: the child remains in the current placement while the hearing runs. Expedited hearing where placement or an interim alternative setting is challenged |
+| **EMEA** | England: EHC **needs assessment** → EHC plan → named placement. Children and Families Act 2014, **still in force** | The local authority | **First-tier Tribunal (SEND)**, directly | 🟢 **Yes** | 🟡 Not measured this pass |
+| **APAC** | India: RPwD Act **ss. 16–17** inclusive-education duties | The institution and the government / local authority | Escalation to the **State Commissioner for Persons with Disabilities** 🔴 *(secondary source, unverified against the Act)* | 🟡 Unmeasured | 🟡 Unmeasured |
+| **LATAM** | 🔴 **Two opposite rules — see below** | Brazil: the school's **Estudo de Caso**. Chile: an interdisciplinary **evaluación diagnóstica integral** | 🔴 **NOT FOUND for either** | 🔴 Unmeasured | 🔴 Unmeasured |
+
+🔵 **India's structure is genuinely unlike the other three and worth naming.** A child with benchmark disability aged `6`–`18` may take free education in a neighbourhood school **or a special school of their choice**. 🟢 **The choice sits with the family, not with an allocating authority** — so there is no refusal to appeal in the shape the other three regions have, and an "allocation engine" is the wrong product for India. 🔵 The Supreme Court's order of `28 July 2026` on whether special educators need TET certification is **interlocutory**, not a final ruling.
+
+### 🔴 The LATAM inversion — the register's sharpest regional finding
+
+🟢 **Brazil, from `15 May 2026`, forbids the thing the other regions require.** **Portaria MEC nº 421, de 15 de maio de 2026** regulates the Política Nacional de Educação Especial Inclusiva and creates the Rede Nacional (Reneei). 🔴 **Art. 7 §4 prohibits making enrolment, schooling or specialised educational support (AEE) conditional on a diagnosis, a `laudo`, or any report from a health professional.** The **Estudo de Caso** becomes the initial document and the biopsychosocial assessment is demoted to a subsidiary role. `PEI` and `PAEE` remain mandatory pedagogical documents. **Minas Gerais** mirrors it in **Resolução CEE/MG nº 507/2026** — no `laudo` gate, `PEI`/`PAEE` revised at least annually, `360 h` of training for the AEE teacher and `180 h` for the support professional.
+
+🔴 **Chile is the opposite, and it was reaffirmed four months later.** **Decreto Supremo nº 170 (2009)** gates entry to the Programa de Integración Escolar on diagnosed categories established by an interdisciplinary diagnostic evaluation, and the `subvención` is founded on the diagnosis reported to the Superintendencia de Educación. A Mineduc *ordinario* of **September 2026** on autism-spectrum assessment holds that the **clinical evaluation does not replace** the educational evaluation the decree requires — tightening the educational assessment rather than removing the gate.
+
+🔴 **So `region: LATAM` is one bucket and two contradictory duties.** 🟢 **`T783` — a region is not a jurisdiction.** The five-value vocabulary is correct for filtering and is *not* a unit of legal generalisation: nothing true of Brazil's enrolment rule may be carried to Chile, and this base must stop treating a LATAM finding as a LATAM rule.
+
+🔴 **Source conflict recorded, not averaged** (`p771` doctrine): the parent decree behind Portaria 421 is cited as **nº 12.686/2025** by some sources and **nº 12.773/2025** by others. Both are recorded; neither is preferred; the Diário Oficial is the arbiter and did not resolve under this session's proxy.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The regulated component is the unbuilt one, and here it is already litigated.** IDEA gives a binding hearing and *stay-put*, so a placement-decision service must model a frozen status quo, an expedited track, and a `60`-day state-complaint clock. 🔴 **No open-source repository implements any of it** (`0` of `7` this pass). 🟢 Build the determination-and-appeal service; compose [`dg13788/iep-system`](https://github.com/dg13788/iep-system) (MIT) for the plan document rather than writing one. 🔵 `avivkatz1/easy-iep` is the only candidate that names FERPA and Illinois SOPPA — **unusable (no grant)**, but its privacy shape is the right reference.
+
+### EMEA
+
+🟢 **The engagement window is defined by a reform that has not happened yet.** The Children and Families Act 2014 still governs; the 2026 Schools White Paper proposes raising the EHCP threshold, halving EHCP numbers, and **removing the Tribunal's power to name a specific school**. 🔴 **Timelines are contested across sources — legislation from ~`2029`, EHCP provision changes not before ~`2030`** — recorded as a spread, not averaged. 🟢 **The commercial read: the *naming* power is the part under threat, so a product that hard-codes "the Tribunal names the school" is building on the one clause most likely to move.** Model the named placement as a configurable outcome.
+
+🔴 **And the EU clock is the real deadline: Annex III point 3(c), `2 December 2027`.** Any system assigning a pupil to a programme or level is high-risk — logging, human oversight, accuracy and robustness, post-market monitoring. 🟢 Formative tooling is explicitly outside, which is where most open supply sits.
+
+### APAC
+
+🟢 **The opportunity is structurally different and should not be sold as an allocation engine.** India's duty is a *facilitation* duty (RPwD ss. 16–17) over a family's choice of neighbourhood or special school, so the product is enrolment support, accessibility and trained-staff matching — not a classifier. 🔴 **Implementation is uneven across states** (trained special educators, accessible infrastructure, assistive devices), which is the actual bottleneck and the actual addressable work.
+
+🔴 **Declared gap, measured rather than left silent: Japan and South Korea placement-assessment and appeal procedure — NOTHING AUTHORITATIVE FOUND.** Searched this pass; one India-focused paper mentions both only in passing. 🔵 The CRPD Committee's concluding observations on the Republic of Korea criticise a medical, impairment-based special-education model and urge redirecting budget to the regular system — **a direction of travel, not a procedure.** 🟢 The next step is MEXT and the Korean Ministry of Education directly, which this session's network policy does not reach.
+
+### LATAM
+
+🟢 **Brazil is the single most buildable SEND engagement on this base, precisely because the rule is new, dated and prescriptive.** A Portaria 421/2026-compliant enrolment and AEE flow must: accept enrolment with **no** diagnostic gate, make the **Estudo de Caso** the initial artefact, generate and annually revise `PEI`/`PAEE`, and register with Reneei. 🔴 **A product that requires a `laudo` to enrol is now unlawful as a gate in Brazil** — and that is exactly how the North American and EMEA products are shaped, so a port is a compliance defect, not a localisation task.
+
+🔴 **Chile needs the opposite product** — a Decreto 170 diagnostic-evaluation workflow that keeps the educational evaluation distinct from the clinical one, per the September 2026 ordinario, with the `subvención` reporting path to the Superintendencia. 🟢 **Two products, one `region:` value.**
+
+🟢 **Two real, licensed LATAM public-sector repositories are now citable** (`ACTION p775-F`, partial): [`datosgobar/portal-andino`](https://github.com/datosgobar/portal-andino) (`master` · `3126ff94f72b`, **MIT** `body:canonical` `1,109 B` `79d4edfa11f8`) and [`datosgobar/georef-ar-api`](https://github.com/datosgobar/georef-ar-api) (`master` · `3e4655be0920`, **MIT** `body:canonical` `1,109 B` `ee8033dc560b`). 🔴 [`CeibalUy/Ceibal`](https://github.com/CeibalUy/Ceibal) resolves (`main` · `b104e714d7da`) but carries **NO GRANT after `44` names** — the owner is corroborated and the repository is real and unusable.
+
+### Global
+
+🔴 **The retention clock, closed further and broken as a type** (`ACTION p775-H`). 🟢 **Japan: `20` years** for the enrolment/graduation/status entries of the 指導要録 and **`5` years** for the rest of the same record set — Regulations for Enforcement of the School Education Act, the `20`-year rule set by a 1992 ministerial ordinance. 🟡 **South Korea: `50` years** general, from a **single secondary news source and unverified against statute**; separately and better-sourced, bullying-related disciplinary records went to a mandatory **`4` years** in a 2024 revision, doubled from the 2023 two-year minimum.
+
+🔴 **And Japan breaks the union type `p775` specified.** `retention_clock {duration | purpose_test | none | unmeasured}` assumed one value per jurisdiction. **Japan holds `20` years and `5` years inside a single record, split by FIELD.** 🟢 **`T784` — retention is a per-field property, not a per-jurisdiction one.** The union stands; its cardinality was wrong.
+
+🟡 **India reconciled in shape, not closed byte-exact.** `p775`'s conflict — a permanent Admission & Withdrawal Register against CBSE's own `01 year` for "Admission Cases" — resolves as `p775` guessed: **two different objects.** CBSE's weeding-out rule is the right primary source and its short periods attach to disciplinary/vigilance series, not to the master register, which third-party sources describe as permanent from the institution's founding date. 🔴 **`cbse.gov.in` does not resolve under this session's network policy**, so the table cell was not read and this is NOT closed.
+
 ## 🆕 `p775` — **The school exclusion and suspension register (`ACTION p774-I`). 🟢 Its stated premise HOLDS: exclusion is the one remaining high-stakes school decision that is NOT named in EU AI Act Annex III point 3 — and the asymmetry is sharper than p774 predicted. 🔴 `ACTION p774-G` is now CLOSED with a negative: all three named US bills failed.**
 
 ### 🔴 The regulatory asymmetry this register exists to test — confirmed, and it is stark
