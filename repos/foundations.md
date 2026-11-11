@@ -4,6 +4,41 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p775` — **Foundations for the exclusion and suspension register (`ACTION p774-I`). 🟢 `7` permissive foundational rows, every grant graded on the bytes this pass against a canonical set grown from `27` to `36` texts. 🔴 And two platforms this base has carried for passes are corrected: `sakaiproject/sakai` is NOT altered, and `openeducat/openeducat_erp` ships a TRUNCATED LGPL-3.0 that is 19% of the canonical document.**
+
+🔵 **The register needs four layers: the pupil record the decision attaches to, the decision itself, the review, and the retention clock.** The decision and the review are published by nobody (see `agents/top.md`). What follows is what genuinely exists for the layers either side of them.
+
+### 🟢 Permissive foundations — graded, deontic-guarded, usable
+
+| Repo | Address | Branch · `HEAD` | Grant (graded this pass) | Region | Role in an exclusion deliverable |
+|---|---|---|---|---|---|
+| **kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔴 **`develop`** · `2d29598fc66f` | 🟢 **MIT** · `body:canonical` · `1,097 B` | Global | The offline-first learner record. The layer an exclusion decision must *write back to* when a pupil moves to alternative provision. |
+| **open-tutor-ai-CE** | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `main` · `196c547291da` | 🟢 **BSD-3-Clause** · `body:canonical` · `1,531 B` | Global | Continuity of teaching during a suspension — the statutory duty in England from day 6. |
+| **canvas-mcp** | [`mdweaver/canvas-mcp`](https://github.com/mdweaver/canvas-mcp) | `main` · `5b59af6e3081` | 🟢 **MIT** · `body:canonical` · `1,065 B` | North America | The read seam into a live gradebook/LMS, so evidence for a hearing is cited rather than retyped. |
+| **OpenMAIC** | [`thu-maic/OpenMAIC`](https://github.com/thu-maic/OpenMAIC) | `main` · `8c29069daf43` | 🟢 **MIT** · `body:canonical` · `1,065 B` | APAC | Multi-agent classroom scaffolding; the APAC-origin permissive option. |
+| **relate** | [`inducer/relate`](https://github.com/inducer/relate) | `main` · `e201e11b860c` | 🟢 **MIT** · `body:near-canonical` · `d=49` · deontic clean | Global | Assessment/record keeping with a real permissions model. |
+| **Awesome-Attendance-Management** | [`ishandutta2007/Awesome-Attendance-Management`](https://github.com/ishandutta2007/Awesome-Attendance-Management) | `main` · `c7f8de1c318b` | 🟢 **MIT** · `body:canonical` · `1,068 B` | Global | Index of the attendance layer — exclusion's upstream signal. |
+| **LearningLocker** | [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | `master` · `5fec948a823e` | 🟡 **GPL-3.0 group** · `body:near-canonical` · `d=41` · deontic clean | EMEA | 🟡 **Copyleft, not permissive.** An xAPI learning record store — the evidentiary trail an appeal panel needs. Self-host, do not derive-and-ship. |
+
+### 🔴 Corrections to platforms this base already carries
+
+| Row | p774 recorded | 🆕 `p775` measures | Why it changed |
+|---|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔴 ECL-2.0 · `OPERATIVE-TEXT-ALTERED` · `delta=98` | 🟢 **ECL-2.0 · `body:near-canonical` · `d=5` · deontic CLEAN** · `11,120 B` @ `af576e8b4d32` | 🟢 **The ALTERED verdict does NOT survive the deontic guard `ACTION p774-C` asked for.** Sakai's ECL-2.0 is canonical for practical purposes — material, because Sakai is the largest education platform on these shelves and "altered grant" is a sentence that stops a legal review. |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 LGPL-3.0 "as held" | 🔴 **TRUNCATED LGPL-3.0 — `1,313` of `6,871` canonical words (19%)**, `8,241 B` @ `19.0` · `46a5d7d40082` | 🔴 **p774 carried a CLAIM, not a measurement.** The file's own prose says *"the text of the GPL is included at the bottom as well"* — **and it is not.** LGPL-3.0 is by construction a set of additional permissions on top of GPL-3.0, so a copy without the GPL text is incomplete **by its own terms** (`T776`). |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔴 Apache-2.0 ALTERED `delta=350` deontic=warranty | 🔴 **REPRODUCED** — Apache-2.0 ALTERED, `sim 0.9637`, `d=97`, **deontic=`not`,`warranty`** @ `60fb3bdfddb3` | 🟢 Independently reproduced by a from-scratch instrument for the third consecutive pass, and the guard now names a **negation** moving as well as a warranty term. |
+| [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | 🟡 EUPL-1.2 on the notice rung, `296 B` | 🟢 **CONFIRMED, and the axis is now decided: EUPL-1.2 *or later*** @ `8c5839b29f31` | 🟢 The notice reads *"Version 1.2 or — as soon as they will be approved by the European Commission — subsequent versions"*. **This is the real-world proof of `T775`: the or-later axis lives in the notice, never in the body.** |
+
+### 🟢 `9` canonical licence texts added this pass (`ACTION p774-B` — discharged, with a measured payoff and a measured limit)
+
+🔵 `ingest/canonical/` grows **`27` → `36`**. Added, all fetched from the SPDX licence-list text set on the raw channel and byte-checked: `BUSL-1.1` (`3,424 B`), `BSL-1.0` (`1,338 B`), `ECL-1.0` (`2,425 B`), `EUPL-1.0` (`13,005 B`), `OSL-3.0` (`10,319 B`), `AFL-3.0` (`10,334 B`), `CECILL-2.1` (`21,778 B`), `CC-BY-NC-4.0` (`17,649 B`), `CC-BY-NC-SA-4.0` (`19,018 B`).
+
+🟢 **Payoff, measured:** `openstax/osbooks-college-physics-bundle` resolves to **CC-BY-NC-SA-4.0** at `0.9893` and `sdv-dev/SDV` to **BUSL-1.1** at `0.8688`. Neither was resolvable before this pass.
+
+🔴 **Limit, measured, and it is the more useful half:** on `ACTION p774-B`'s **named test set** — the `8` `NOT-IN-CANONICAL-SET` rows — the widened set resolved **`2` of `8`** (both `rrule` forks, to altered BSD-3-Clause) and left `6`. Widening the canonical set is **not** the instrument for that bucket, because a bespoke restrictive licence is by construction far from every open-source text. **`NOT-IN-CANONICAL-SET` is where non-free licences hide; low similarity is a positive signal, not a null result** (`T780`).
+
+🔴 **And `BSL-1.1` is not an SPDX identifier at all.** SPDX has `BSL-1.0` — the **Boost** licence, permissive — and `BUSL-1.1`, the Business Source licence, which is **not open source**. Both texts are now held specifically so the collision is mechanically detectable: a one-character slip between them inverts the commercial verdict (`T781`).
+
 ## 🆕 `p774` — **Foundations for the admissions and appeals register (`ACTION p773-I`). 🟢 `6` permissive foundational rows — the first register in nine where the FOUNDATION of the mechanism is MIT rather than absent. Every grant below was re-read from the measured default branch and graded against `27` canonical texts this pass.**
 
 🔵 **Why these six and not the usual LMS list:** an admissions deliverable is not a content system. Its core is a **two-sided allocation under a legally fixed priority order**, so its foundations are market-design libraries, and the LMS/SIS is merely where the application arrives. The usual Moodle/Open edX pair is the wrong layer for this register and is listed below only as intake.

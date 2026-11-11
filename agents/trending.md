@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `2026-11-11` · `p775` — **Exclusions and suspensions. 🔴 What is new this week is not an agent: it is that the agent supply for this register is `0`, and `0` of the `8` adjacent repositories carry a grant. 🟢 The real movement is a licence genre — five education projects have now each invented a source-available licence and named it after themselves.**
+
+### 🔴 The week's register signal: `0` agents, `0` grants
+
+🔵 Searched for exclusion/suspension/discipline agents in English, Spanish and Portuguese; every candidate returned was probed before being shelved or refused. **No agent exists that drafts, checks or records a school exclusion decision.** The eight adjacent repositories probed — behaviour capture, MTSS tiering and dropout early warning — are listed with their `HEAD`s in `agents/top.md`, and **all eight returned `NO-GRANT-AT-ROOT` after `34` case-aware filenames.**
+
+🔴 **This is a harder negative than `p774`'s admissions result.** There, the mechanism was published six times over under MIT and only the record-and-appeal layer was missing. Here the mechanism is missing **and** the adjacent tooling is unlicensed.
+
+### 🟢 Newly verified permissive agents this week — graded on the bytes, not on a badge
+
+| Agent | Address | Branch · `HEAD` | Grant | Region |
+|---|---|---|---|---|
+| **open-tutor-ai-CE** | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `main` · `196c547291da` | 🟢 **BSD-3-Clause** · `body:canonical` · `1,531 B` | Global |
+| **OpenMAIC** | [`thu-maic/OpenMAIC`](https://github.com/thu-maic/OpenMAIC) | `main` · `8c29069daf43` | 🟢 **MIT** · `body:canonical` · `1,065 B` | APAC |
+| **canvas-mcp** | [`mdweaver/canvas-mcp`](https://github.com/mdweaver/canvas-mcp) | `main` · `5b59af6e3081` | 🟢 **MIT** · `body:canonical` · `1,065 B` | North America |
+| **kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔴 `develop` · `2d29598fc66f` | 🟢 **MIT** · `body:canonical` · `1,097 B` | Global |
+| **relate** | [`inducer/relate`](https://github.com/inducer/relate) | `main` · `e201e11b860c` | 🟢 **MIT** · `body:near-canonical` `d=49`, deontic clean | Global |
+
+### 🔴 The week's actual trend: the self-named source-available licence (`T783`)
+
+🔵 Five on these shelves now, three of them invented in 2026 by unrelated projects:
+
+| Licence, as the project names it | Repository | Region | Honest about it? |
+|---|---|---|---|
+| **"ClassroomPath Source-Available License 1.0"** | [`balejosg/ClassroomPath`](https://github.com/balejosg/ClassroomPath) | EMEA | 🟢 Yes — says *"source-available, not open source"* |
+| **"Nakafa Source Available License 2.0"** | [`nakafaai/aksara`](https://github.com/nakafaai/aksara) | APAC | 🟢 Yes — says *not open source* |
+| **"OpenGaokao Source-Available License 1.0"** | [`heronerar/OpenGaokao`](https://github.com/heronerar/OpenGaokao) | APAC | 🟡 Names AGPL in-file, confusingly |
+| **"PageLM Community License"** | [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | Global | 🔴 No — and a shelf table here lists it as **MIT** |
+| **"PySilicon Research License"** | [`sdrangan/llmgrader`](https://github.com/sdrangan/llmgrader) | North America | 🔴 **No — it opens with MIT's exact words and grades `0.7719` against MIT** |
+
+🔴 **Correction to this file, carried rather than quietly fixed:** a licence-family table in an earlier section of `agents/trending.md` lists `CaviraOSS/PageLM` and `canyongbs/advisingapp` under **"MIT / MIT-X"**. Both are non-free on their own bytes — PageLM non-commercial, advisingapp **Elastic License 2.0**. 🔵 The earlier rows stay where they are, as this file is append-only; **this section is the correction of record** (`T778`).
+
+### 🟡 Refused this week, with the evidence, so the next pass does not re-buy them
+
+- 🔴 [`Whiffe/SCB-dataset`](https://github.com/Whiffe/SCB-dataset) — classroom-behaviour **computer vision**, no grant. Declined on substance as well as licence (`T779`).
+- 🔴 [`Kenier91/MTSS-Predictive-Analytics-Teacher-Intervention-Tool`](https://github.com/Kenier91/MTSS-Predictive-Analytics-Teacher-Intervention-Tool), [`will-emmerson/django-sis`](https://github.com/will-emmerson/django-sis), [`gt-codes/behayve`](https://github.com/gt-codes/behayve) — no grant after `34` names. 🟡 **`django-sis` is the one to revisit if it ever publishes a licence: its discipline model (infraction, action, reporting teacher) is the closest match to the statutory shape found anywhere.**
+- 🔴 The four dropout early-warning repos — all no grant, and all trained on a **Portuguese higher-education** cohort (UCI, `4,424` students), so they do not transfer to K-12 exclusion risk even if licensed.
+- 🟡 [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) — **grant is clean canonical MIT** (`1,072 B` @ `09fdd6722f1e`). `p676` refused it for **dormancy, not licence**; re-check activity before shelving as live.
+
 ## 🆕 `2026-11-11` · `p774` — **Admissions and appeals. 🟢 The week's real signal is not a new agent but a licence fact: `4` repositories on these shelves are ECL-2.0, the education sector's own Apache-2.0 variant with a narrowed patent grant, and this base could not grade any of them until this pass.**
 
 🔵 **Append-only. Everything below this section is the record of what was believed when.**

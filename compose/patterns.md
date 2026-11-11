@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p775` — **Concrete recipes from the exclusion and suspension register. Every component named below was probed on the ref channel this pass and its grant graded on the bytes against `36` canonical texts with a deontic guard. 🔴 `P775-1` is the one to read: the register's central object has to be BUILT, because `0` of `8` candidate repositories carry any grant at all.**
+
+### `P775-1` — The statutory exclusion decision-and-review record (the register's core deliverable)
+
+🔴 **Why this is a build, not an integration:** `8` of `8` behaviour/discipline/early-warning repositories found this pass publish **no grant** — `django-sis`, `behayve`, `SCB-dataset`, `dropout_ews`, `student-dropout-early-warning`, `Student-dropout-prediction`, `StayOnTrack`, `MTSS-Predictive-Analytics-Teacher-Intervention-Tool`. There is nothing to fork.
+
+**Wire it up:**
+
+1. **Record store — [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker)** (`master` · `5fec948a823e` · **GPL-3.0 group**, `body:near-canonical`, `d=41`, deontic clean). An xAPI learning-record store is already shaped for *timestamped actor-verb-object statements*, which is exactly what due process is: who was told what, when, and what they said back. 🔴 **Copyleft — self-host for the client; do not derive and ship closed.**
+2. **Decision state machine — build.** Model the four statutory states explicitly: `decided` → `governing_board_review` → `independent_review` → `final`. 🔴 **Do not model it as an approval chain**, because of `P775-2`.
+3. **Evidence seam — [`mdweaver/canvas-mcp`](https://github.com/mdweaver/canvas-mcp)** (`main` · `5b59af6e3081` · **MIT**, `body:canonical`). Pull attendance and gradebook evidence by reference so the hearing record **cites** live records rather than embedding a retyped copy. For non-Canvas estates substitute [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) (ECL-2.0, altered — read the patent clause first).
+4. **Continuity of education — [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)** (`main` · `196c547291da` · **BSD-3-Clause**, `body:canonical`, the cleanest permissive grant on these shelves) plus [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (branch **`develop`** · `2d29598fc66f` · **MIT**, `body:canonical`) for the offline/alternative-provision endpoint. In England, teaching must continue from day 6 of a suspension; this is the part of the deliverable that is actually a product.
+5. **LLM role — drafting and completeness checking ONLY.** The agent drafts the reasons letter and checks that each statutory element is present and ordered. 🔴 **It must not score, rank or recommend the exclusion itself** — see `T779`.
+
+### `P775-2` — `appeal_route` v2: the registry that holds admissions AND exclusions in one table
+
+🔴 **`ACTION p774-G` assumed exclusion would reuse `p774`'s `appeal_route` registry directly. It does not, and the reason is a single column.** For admissions, the appeal panel's decision **binds** the admission authority. For an England exclusion, the Independent Review Panel **cannot reinstate the pupil** — it can only quash and direct reconsideration, and there is no appeal from it.
+
+**The table therefore needs a `reviewer_power` column with at least four values, every one of them observed this pass:**
+
+| Value | Observed at | Evidence |
+|---|---|---|
+| `binding` | Admissions appeal panels (England) | `p774` |
+| `quash_and_remit` | **England exclusions — the IRP** | s.51A Education Act 2002 + 2012 Regulations |
+| `parallel_tribunal_binding` | **England exclusions — First-tier Tribunal (SEND)**, Equality Act 2010, `6`-month window, **can order reinstatement** | runs *alongside* the IRP, not after it |
+| `internal_only` | NSW school policy (Discipline Committee → Education Director as final level) | 🔴 school document, not state law |
+| `none_specified` | **Chile** — schools set their own codes; **no statutory cap on suspension length** | 🔴 a `max_days` field with no value |
+
+🟢 **Deliverable: one registry, keyed `(jurisdiction, decision_type)`, with columns `reviewer`, `reviewer_power`, `window`, `clock_basis`, `parallel_route`.** 🔴 **`clock_basis` is required and not optional**: England's `15` is **school days**, the SEND route's is `6` calendar months, and mixing them silently mis-states every deadline.
+
+### `P775-3` — The retention engine that can express "no clock at all"
+
+🔴 **`ACTION p774-H` asked for a fifth retention data point and got something better: proof that the column type is wrong.** Singapore's PDPA prescribes **no period** and instead requires retention to cease when the collection purpose is served.
+
+**Build `retention_rule` as a tagged union, not a duration:**
+
+- `duration` — e.g. India's permanent Admission & Withdrawal Register (🟡 contested against CBSE's own `01 year` rule for "Admission Cases" files — **two different objects, probably, and the base must not assume it**).
+- `purpose_test` — **Singapore (PDPA)**: evaluate a predicate, emit a *justification*, never a date.
+- `none` — **US federal: FERPA sets no period**; state schedules vary.
+- `unmeasured` — **Japan, South Korea** (🔴 named gaps, not blanks).
+
+🟢 **Wire the predicate evaluator to the record store in `P775-1` and every deletion emits an auditable reason.** That artefact — a defensible deletion log — is the thing a DPO will actually pay for, and it is reusable across every PDPA-shaped regime in APAC.
+
+### `P775-4` — A licence gate a studio can run on day one of any engagement
+
+🔵 **Assembled from this pass's six instrument defects so the next team does not repeat them.** Instruments are published in `compose/code/p775/` (`grade.py`, `probe.sh`, `gate_addresses.py`) and must be **re-implemented, not executed** — code execution inside this repository has been denied for six consecutive sessions.
+
+1. **Fold case before counting.** `105` of this base's `5,583` addresses are case-duplicates (`T777`).
+2. **Compare WORDS with `autojunk=False`.** 🔴 difflib's default character-level ratio is **asymmetric**: canonical BUSL-1.1 against `sdv-dev/SDV` scores `0.0817` one way and `0.8494` the other — a 10× spread from argument order alone, and it silently reports "no canonical text is close" for an 87% match.
+3. **Guard the deontic operators.** A `6`-character edit that moves a negation, a modal or a scope word is an alteration at any document size. This is what upgraded `sakaiproject/sakai` from `p774`'s ALTERED to `body:near-canonical` (`d=5`, clean) and what flags `sdrangan/llmgrader` despite its MIT shape.
+4. **Never infer `-only` vs `-or-later` from a body.** Read the notice (`T775`).
+5. **Treat low similarity as a RISK signal, not a null result** (`T780`).
+6. **Screen for the self-named licence genre** — `"<Project> Source-Available License"`, `"<Project> Community License"` (`T783`).
+
+### `P775-5` — The LATAM `diário`/`expediente` integration, using the asset this base already holds
+
+🟢 **Start from [`portabilis/i-diario`](https://github.com/portabilis/i-diario)** — a live Brazilian `diário de classe` system, **AGPL in Portuguese**, `1.6` branch. 🔴 **AGPL is network copyleft: self-host for the client, and the Portuguese payload is why an English-only licence matcher scores it `0.0140` and wrongly shelves it as bespoke** (`T782`).
+
+**Wire it up:** `i-diario` as the system of record → `P775-3`'s retention engine for the Chilean re-enrolment guarantee (a pupil expelled from one school **must** be admitted by another, so the record has to be *portable*, not just retained) → `P775-2`'s registry with Chile's `none_specified` / uncapped-suspension flag surfaced in the UI rather than defaulted.
+
+🔴 **Declared gap, stated rather than papered over: Brazil and Mexico exclusion procedure is UNREAD.** ECA plus state/municipal rules (Brazil) and SEP plus state regulations (Mexico) did not return authoritative text this pass. Any Brazilian or Mexican engagement must begin by obtaining those, and this recipe is specified against **Chile** only.
+
 ## 🆕 `p774` — **Concrete recipes from the admissions and appeals register. Every component named below was probed on the ref channel and its grant body-diffed or notice-resolved THIS pass; nothing is cited that was not measured. 🟢 For the first time in nine registers the mechanism layer is MIT and the build is the layer above it.**
 
 ### `P774-1` — The contestable admissions decision (the register's primary deliverable)

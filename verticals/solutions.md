@@ -4,6 +4,32 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p775` — **The platform layer an exclusion deliverable sits on, graded by grant rather than by feature list. 🔴 Of the `5` real school platforms that carry a discipline or suspension module, `0` are permissive: `4` are copyleft and `1` ships a truncated grant. The `1`-in-`10` permissive ratio `p771` measured, which `p774` broke for the admissions *mechanism*, holds again here — and for exclusions it is `0`-in-`5`.**
+
+### 🔴 Platforms with a real discipline / suspension module — every one probed on the ref channel this pass
+
+| Platform | Address | Default branch · `HEAD` | Grant (graded on the bytes) | Region | Discipline capability · what it costs a studio |
+|---|---|---|---|---|---|
+| **RosarioSIS** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **`mobile`** · `e4cd20a48bf1` | 🟡 **GPL-2.0 group** · `OPERATIVE-TEXT-ALTERED` · `sim 0.9187` · `d=2370` · deontic=`may`,`merchantability`,`no`,`not` · `15,214 B` | Global | 🟢 **The most complete discipline area found: referrals and discipline logs, plus attendance and truancy alerts.** 🔴 Copyleft **and** body-altered with four operators moved — legal review required. 🔴 **Default branch is `mobile`**, reconfirming `p774`. |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` · `af576e8b4d32` | 🟡 **ECL-2.0** · `body:near-canonical` · `d=5` · **deontic CLEAN** · `11,120 B` | Global | 🟢 **ECL-2.0 is the education sector's own licence — Apache-2.0 with the patent grant narrowed to education communities.** 🟢 **Upgraded from p774's ALTERED verdict.** Course-level, not a school SIS: no exclusion object. |
+| **Gibbon** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 **`v31.0.00`** · `329ca2f07b49` | 🟡 **GPL-3.0 group** · `OPERATIVE-TEXT-ALTERED` · `d=58` · deontic=`not` · `35,121 B` | Global | School management including behaviour records. 🔴 Default branch is a **version tag**, not a branch name. 🔴 The `-only`/`-or-later` axis is **undecidable from the body** (`T775`). |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **`19.0`** · `46a5d7d40082` | 🔴 **TRUNCATED LGPL-3.0 — `1,313` of `6,871` words** · `8,241 B` | Global | 🟢 **The only platform whose module list names suspension management outright** — misbehaviour categories, action tracking, suspension. 🔴 **Its grant is incomplete by its own terms** (`T776`). Odoo-based, so the Odoo licence sits underneath too. |
+| **openSIS-Classic** | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `master` · `8348cd069aa2` | 🔴 **NO-GRANT-AT-ROOT** after `34` names | Global | 🔴 **Unchanged from `p773`–`p774`: the grant is not at the repository root under any of 34 case-aware names.** Describes itself as "commercial grade"; a studio cannot rely on it without a written grant. |
+
+### 🟢 The adjacent platform layer — permissive or cleanly copyleft, and what each is actually for
+
+| Platform | Address | Branch · `HEAD` | Grant (graded this pass) | Region | Use |
+|---|---|---|---|---|---|
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔴 `develop` · `2d29598fc66f` | 🟢 **MIT** · `body:canonical` | Global | 🟢 **The permissive one.** Offline-first; the alternative-provision endpoint for an excluded pupil. |
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **`main`** · `afbcc55fa1bd` | 🟡 **GPL-3.0 group** · ALTERED · `d=132` (budget) · `COPYING.txt` · `35,147 B` | Global | The default LMS worldwide. 🔴 **Two probe traps in one row: the default branch is now `main`, and the grant is at `COPYING.txt`, not `LICENSE`.** |
+| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` · `d3a86602dcf7` | 🟡 **AGPL-3.0 group** · ALTERED · `d=468` · deontic=`limited`,`not` · `35,136 B` | Global | 🔴 **AGPL — network copyleft.** Hosting a modified Open edX for a client triggers source obligations to *their users*. |
+| **OpenOLAT** | [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | `master` · `02279a401012` | 🟡 **Apache-2.0** · ALTERED · `d=280` · deontic=`except`,`may`,`required`,`unless` · `10,982 B` | **EMEA** | Swiss/German-speaking HE LMS. 🔴 Four operators moved from canonical Apache — read before relying on the patent grant. |
+| **OpenLRW** | [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | `master` · `a243920ab120` | 🟡 **ECL-2.0** · ALTERED · `d=1073` · deontic=`except`,`may`,`not`,`required` | Global | Learning-record warehouse. A second ECL-2.0 row, which is why holding that text mattered. |
+| **UnlockEdv2** | [`UnlockedLabs/UnlockEdv2`](https://github.com/UnlockedLabs/UnlockEdv2) | `main` · `cc27025f32e9` | 🟡 **Apache-2.0** · ALTERED · `d=750` · `9,177 B` | North America | 🟢 **Education inside correctional facilities — the nearest real analogue to an excluded-learner pathway.** 🔵 `UnlockedLabs/unlocked-core` is the **same repository** under its former name (identical `HEAD`), not a second project. |
+| **ataru** | [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | `master` · `8c5839b29f31` | 🟡 **EUPL-1.2 or later** (notice rung, `296 B`) | **EMEA** (Finland) | 🟢 A national-scale education application system published by a state agency. 🔴 Copyleft: a reference architecture, not a base to ship closed. |
+
+🔵 **The honest summary for a client conversation: for school exclusions there is no platform to customise.** The record layers exist and are mostly copyleft; the decision-and-review layer does not exist at all. A studio engagement here *builds* the statutory object and integrates it with one of the records platforms above — it does not configure an existing one.
+
 ## 🆕 `p774` — **The vertical layer for school admissions. 🟢 The `1`-in-`10` permissive ratio finally breaks — but only for the MECHANISM: `6` of `6` deferred-acceptance implementations are MIT, while `0` of the platforms that hold the admissions RECORD are permissive, for a fifth consecutive register.**
 
 🔵 **The rule this register refines rather than repeats:** "there is no permissive SIS or school ERP" still holds, and for admissions it stops being the blocker. The allocator is the part with legal exposure under Annex III, and it can be MIT and separate.

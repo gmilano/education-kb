@@ -4,6 +4,56 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `2026-11-11` · `p775` — **The repository movement this week is measured on this base's own shelves rather than on a trending page: `18,960` displayed links parsed, `5,583` distinct addresses, `30` never-probed ones closed, and `3` links that send a reader somewhere other than where the text says. 🔴 `api.github.com` is `403`, so there is no star count in this section and there should not be one.**
+
+### 🟢 `gate-addresses` — the RED gate `ACTION p774-A` named, now run and essentially GREEN
+
+🔵 Re-implemented from scratch (the `p774` instruments could not be executed). Contract carried in prose so the next pass can rebuild it: **G1** every displayed address's link text must equal its URL's `owner/repo` path · **G2** every displayed address must have been probed · **G3** bare-owner links are a citation form, not an address.
+
+| Measure | Value |
+|---|---|
+| Displayed link instances parsed | **`18,960`** |
+| Distinct `owner/repo` addresses | **`5,583`** (**`5,478`** case-folded — `T777`) |
+| **G2 — appear in the evidence ledger** | 🟢 **`5,448` of `5,478` = `99.5%`** |
+| **G2 — never probed, now closed** | 🟢 **`30` probed this pass: `29` resolve, `1` absent** |
+| **G1 — real link-text disagreements** | 🔴 **`3`** (of `17` flagged; `13` are case-only and resolve fine, `1` is a rename) |
+| **G3 — bare-owner citations** | `84` (`p774` reported `91`) |
+
+🟢 **The gate comes back green with named exceptions, which is a better outcome than `p774` expected.** The one absent never-probed address is [`luzannevdw/safeguarding-prototype`](https://github.com/luzannevdw/safeguarding-prototype) — **ABSENT-OR-PRIVATE**. 🔵 And a suspicion worth retiring: the never-probed list is full of trailing-hyphen names (`conciencia-`, `ai-tutor-`, `epepep-`) that looked like extraction artefacts. **They were probed: they are real repository names that end in a hyphen.**
+
+### 🔴 The `3` real G1 defects — a reader who copies the displayed text gets nothing
+
+| Where | Link text says | URL goes to | Probed verdict |
+|---|---|---|---|
+| `agents/trending.md:24401` | `AMAN6921/SikhshaBox` | [`AMAN6921/SikhshaBox-Lightweight-OS-Virtualization-For-Affordable-Education-Labs`](https://github.com/AMAN6921/SikhshaBox-Lightweight-OS-Virtualization-For-Affordable-Education-Labs) | 🔴 **The text-named address is ABSENT.** The URL's full name is the real one, and it resolves: `main` · `fbdd4da3307e`. |
+| `repos/trending.md:58052` | `@superbuilders/oneroster` | `trilogy-group/oneroster-ts` | 🔴 **BOTH are ABSENT-OR-PRIVATE.** The row is dead at both ends. |
+| `agents/trending.md:49209` | `db/pedagogical_contract_schema.go` | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟡 A **file path** used as the link text for a repository address. The repository resolves (`main` · `ebe1d8eaf7cb`); the citation is mis-shaped, not dead. |
+
+🟢 **And one apparent defect that is not one:** `UnlockedLabs/unlocked-core` and [`UnlockedLabs/UnlockEdv2`](https://github.com/UnlockedLabs/UnlockEdv2) both return `HEAD` **`cc27025f32e9`** — the identical sha. **It is one repository under its old and new names, not two projects.**
+
+### 🟡 `ACTION p774-F` — third pass on the bare-owner citation. RETIRE THE FORM, and here is the migration
+
+🔵 `p774` pre-authorised this: *"If a third pass cannot close it, retire the owner-only citation FORM rather than the check."* The ref channel **cannot** confirm that an owner exists — only that a repository does — and HTTP is `403` for all of them, so the only instrument is to probe a plausible repository under each.
+
+| Outcome of probing `<owner>/.github`, `<owner>/<owner>`, `/docs`, `/website` across `84` owners | Count |
+|---|---|
+| 🟢 **CORROBORATED** (a plausible repo resolves — `.github` in almost every case) | **`39`** |
+| 🔴 **UNCORROBORATED** | **`45`** |
+| 🟢 — of those, **already have a specific repo displayed elsewhere on these shelves** | **`29`** → convert the citation, the form is simply redundant |
+| 🔴 — of those, **no specific repo displayed anywhere under that owner** | **`16`** → a real coverage gap |
+
+🔴 **The `16` that cannot be closed are almost all LATAM public-sector bodies:** `dataprev` · `datosgobar` · `govbr` · `serpro` · `softwarepublico` · `gobiernodigital` · `mxabierto` · `educacionmx` · `CeibalUY` · `ceibal-tatu` · `OpenCENIA` · `tecnologico-de-monterrey-oficial`, plus `AusDTO` · `digitalnz` · `ekstep` (APAC) and `IFRS`. 🔵 **This base cites LATAM governments as owners precisely because it never found a specific repository under them — the citation form was hiding a regional evidence gap, which is the strongest possible argument for retiring it.**
+
+### 🟢 Platform repositories re-probed this week — three probe traps worth carrying forward
+
+| Repository | Trap |
+|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **Two in one row:** default branch is now **`main`**, and the grant is at **`COPYING.txt`** — not `LICENSE`. `afbcc55fa1bd`, GPL-3.0 group, `35,147 B`. |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔴 Default branch is **`develop`**. `2d29598fc66f`, MIT canonical. |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) · [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) · [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 Default branches **`mobile`**, **`19.0`** and **`v31.0.00`** — all reconfirmed from `p774` on the ref channel this pass. |
+
+🟢 **Cross-pass control: all `7` of `p774`'s recorded `HEAD`s that `p775` re-probed reproduced exactly** (`rosariosis` `e4cd20a48bf1` · `openeducat_erp` `46a5d7d40082` · `GibbonEdu/core` `329ca2f07b49` · `ataru` `8c5839b29f31` · `sakai` `af576e8b4d32` · `DeepTutor` `60fb3bdfddb3` · `openSIS-Classic` `8348cd069aa2`). 🟢 **And `p774`'s byte figures reconcile exactly once read as characters rather than bytes** — `i-diario` `34,049` chars = `35,326` bytes, `rrule` `3,491` = `3,493`. An apparent same-day licence change was this unit difference, and it is retired rather than reported.
+
 ## 🆕 `2026-11-11` · `p774` — **Admissions mechanism repos, all MIT, all verified `body:canonical` this pass — plus the first full non-free sweep this base has ever run over its own published licence claims.**
 
 🔵 **Append-only. History below.**

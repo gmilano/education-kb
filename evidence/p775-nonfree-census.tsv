@@ -1,0 +1,13 @@
+tixuz/openemis-mcp	BSL-1.1 (pointer+parameter block, 647 B)	APAC	non-production evaluation and internal testing only; converts to MIT 2029-01-01	already-shelved
+sdv-dev/SDV	BUSL-1.1 (full text + parameters)	Global	Additional Use Grant excludes any "Synthetic Data Service"	NEW-THIS-PASS
+IAGA-TEAM/IAGA-Sentinel	BUSL-1.1	Global	Business Source; Apache named in-file as the change licence	NEW-THIS-PASS
+balejosg/ClassroomPath	ClassroomPath Source-Available License 1.0	EMEA	self-declares "source-available, not open source"; no deploy/host/redistribute right	already-shelved
+nakafaai/aksara	Nakafa Source Available License 2.0	APAC	self-declares not open source	NEW-THIS-PASS
+heronerar/OpenGaokao	OpenGaokao Source-Available License 1.0	APAC	bespoke source-available; AGPL named in-file	NEW-THIS-PASS
+canyongbs/advisingapp	Elastic License 2.0	North America	no managed-service use; student advising/CRM for education	NEW-THIS-PASS
+leemonade/leemons	Fair Code licence (non-commercial clause)	EMEA	fair-code is not an OSI category; shelf prose had said "Sustainable Use License"	already-shelved-name-discrepant
+satryayogapratama-ux/giziiq	MIT + Commons Clause	APAC	Commons Clause removes the right to sell	NEW-THIS-PASS
+sdrangan/llmgrader	PySilicon Research License	North America	MIT-SHAPED text, non-commercial only; graded MIT-altered at sim 0.7719	NEW-THIS-PASS
+openstax/osbooks-college-physics-bundle	CC-BY-NC-SA-4.0	North America	NonCommercial content licence; resolved only because p775 added the text	NEW-THIS-PASS
+meta-llama/PurpleLlama	Llama 3.2 Community License + Acceptable Use Policy	North America	use restrictions + AUP; not an OSI licence	NEW-THIS-PASS
+CaviraOSS/PageLM	PageLM Community License (non-commercial)	Global	NON-COMMERCIAL; shelf licence-family table lists it under "MIT / MIT-X"	NEW-THIS-PASS-CONTRADICTS-SHELF

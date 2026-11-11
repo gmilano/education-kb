@@ -4,6 +4,60 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p775` — **Current trends, from the exclusion and suspension register (`ACTION p774-I`). 🔴 `make hooks` tried first: DENIED, SIXTH consecutive session. 🟢 Nine trends, `T775`–`T783`. The governing one is `T775`: a licence axis this base has reported on hundreds of rows is not decidable from the evidence it was decided on.**
+
+## `T775` — 🔴 The `-only` / `-or-later` axis is UNDECIDABLE from a licence body, for every GNU pair
+
+🔵 **Caught by this pass's instrument control before any verdict was published.** The four GNU pairs this base holds — `GPL-2.0`, `GPL-3.0`, `LGPL-3.0`, `AGPL-3.0` — have **byte-identical operative bodies** after normalisation. `AGPL-3.0-only` against `AGPL-3.0-or-later` scores **`1.000`**. The distinction does not live in the `LICENSE` payload at all; it lives in the project's **notice** (*"either version 3 of the License, or (at your option) any later version"*).
+
+🔴 **Consequence: any verdict that names `-only` or `-or-later` on the strength of a body match is unsound.** This base's habit of writing **"GPL-3.0 group"** turns out to have been correct for a reason it had not stated. 🟢 **Real-world confirmation arrived in the same pass:** [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru)'s `296 B` notice resolves the axis explicitly — *"Version 1.2 or — as soon as they will be approved by the European Commission — subsequent versions"* — **because it is a notice, not a body.** It also generalises `p774`'s `T773` (frappe/education's 19-byte `License: GNU GPL V3`) from an anecdote to a rule: that grant is undecidable not because it is short, but because the axis is never in the body.
+
+## `T776` — 🔴 A published grant can be INCOMPLETE BY ITS OWN TERMS, and one of this base's named platforms is
+
+🔵 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp)'s `LICENSE` (`8,241 B`, branch `19.0`, `46a5d7d40082`) states: *"Since the LGPL is a set of additional permissions on top of the GPL, the text of the GPL is included at the bottom as well."* 🔴 **It is not.** The file carries **`1,313` of the canonical document's `6,871` words — 19%** — and ends mid-LGPL.
+
+🔴 **This matters beyond one repository, in two ways.** First, LGPL-3.0 is *defined* as additional permissions over GPL-3.0, so a copy without the GPL text is incomplete by construction — a legal review cannot close on it. Second, **SPDX ships `LGPL-3.0` as a `42,098 B` document** (permissions **plus** the complete GPL text), so any repository that publishes only the additional-permissions page will always grade far from canonical. 🟢 **The fix is a second canonical form, not a bigger budget** — see `ACTION p775-B`.
+
+## `T777` — 🔴 Case variance inflates this base's own address census by `105`
+
+🔵 `gate-addresses` parsed **`18,960`** displayed link instances across the eight shelves: **`5,583`** distinct literal `owner/repo` addresses, but only **`5,478`** distinct once case-folded. **`103` clusters / `208` literal rows differ only by letter case** — `HKUDS/DeepTutor` against `hkuds/deeptutor`, `1EdTech/OpenCASE` against `1edtech/opencase`, and 101 more.
+
+🟢 **GitHub resolves owner and repository names case-insensitively, so none of these links is broken.** 🔴 **The damage is to counting, not to navigation: every census keyed on the literal string over-counts this base's repository population by `105`.** That is `p772`'s `D10` defect — an unreliable cross-check key — recurring on a third axis, exactly as `ACTION p774-D` warned. 🟢 **Fold case before counting, always.**
+
+## `T778` — 🔴 The shelves' own licence-family table contains rows the bytes contradict
+
+🔵 A licence-family table on `agents/trending.md` lists **`CaviraOSS/PageLM` and `canyongbs/advisingapp` under "MIT / MIT-X"**. Read on the raw channel this pass: PageLM ships a **"PageLM Community License"** (`8,563 B`, **non-commercial**) and advisingapp ships **Elastic License 2.0** (`3,860 B`, no managed-service use). 🔴 **Neither is MIT, and neither is open source.** Separately, `leemonade/leemons` is described in shelf prose as a **"Sustainable Use License"** while its payload says **"Fair Code License"** nine times.
+
+🔴 **The general lesson is the one `ACTION p774-D` stated and this pass confirms twice over: a licence CELL is a claim, a licence BODY is evidence, and this base has repeatedly published the claim.** The `13`-row non-free census in `agents/top.md` was rebuilt from prose and then verified byte-by-byte for exactly this reason.
+
+## `T779` — 🔴 The exclusion register's only "AI-ready" supply is classroom behaviour COMPUTER VISION, and it is the one row to decline
+
+🔵 Of `8` behaviour/discipline repositories found, the one with a real dataset behind it is [`Whiffe/SCB-dataset`](https://github.com/Whiffe/SCB-dataset) — Student Classroom Behaviour, a **vision** corpus for detecting pupil behaviour from video.
+
+🔴 **A studio should decline it even though it is the most technically mature option, and the reason is now precise rather than ethical hand-waving.** Continuous visual behaviour monitoring of children sits outside Annex III point 3 (`p775`'s market section) — so it carries the *reputational* exposure of a high-risk system **without** the compliance scaffolding that would make it defensible, and it has **no grant** in any case. 🟢 **The defensible deliverable is the decision record, not the detector.**
+
+## `T780` — 🟢 `NOT-IN-CANONICAL-SET` is where non-free licences hide: low similarity is a POSITIVE signal
+
+🔵 `ACTION p774-B` named `8` `NOT-IN-CANONICAL-SET` rows as the test set for a widened canonical library. Widening it from `27` to `36` texts resolved **`2` of `8`**.
+
+🟢 **But reading those payloads as text rather than as a distance resolved them decisively**, and the pattern is general: a bespoke restrictive licence is, **by construction**, maximally far from every canonical open-source text. `ClassroomPath` (`0.2085`), `aksara` (`0.0771`), `OpenGaokao` (`0.0332`), `leemons` (`0.0860`) are all *low-similarity because they are non-free*. 🔴 **This base had been treating the bucket as "needs a human read someday". It is in fact the highest-yield bucket for commercial risk**, and `7` of the `13` non-free rows were confirmed out of it this pass.
+
+## `T781` — 🔴 `BSL-1.1` is not an SPDX identifier, and the nearest one is its commercial opposite
+
+🔵 This base writes **`BSL-1.1`**. SPDX has **`BSL-1.0`** — the **Boost Software License**, permissive, `1,338 B` — and **`BUSL-1.1`** — the **Business Source License**, **not open source**, `3,424 B`. 🔴 **A one-character slip between them inverts the commercial verdict on a repository.** Both texts are now held in `ingest/canonical/` specifically so the collision is mechanically detectable.
+
+## `T782` — 🟢 Three distinct causes were being counted as one verdict, and one of them is a language
+
+🔵 `NOT-IN-CANONICAL-SET` conflates: **(a)** genuinely bespoke restrictive text, **(b)** a **canonical licence in another language**, **(c)** aggregate or multi-licence files.
+
+🔵 Cause **(b)** is the LATAM-relevant one and it is live on these shelves: [`portabilis/i-diario`](https://github.com/portabilis/i-diario) grades **`0.0140`** against all `36` English canonical texts while carrying **`Licença` ×72, `versão` ×32 and four references to the Free Software Foundation** — it is the **GNU AGPL in Portuguese**. Cause **(c)** is live too: `learningequality/ka-lite` is a multi-part file whose NonCommercial terms govern bundled *content*, not the software. 🔴 **Reporting one verdict for three causes is what let a non-free census be published as complete.**
+
+## `T783` — 🔴 Bespoke per-project "Source-Available" licences are now a GENRE in education software
+
+🔵 Three unrelated 2026 education repositories have each **invented their own licence and named it after themselves**: **"ClassroomPath Source-Available License 1.0"** (EMEA), **"Nakafa Source Available License 2.0"** (APAC), **"OpenGaokao Source-Available License 1.0"** (APAC). Add **"PageLM Community License"** and **"PySilicon Research License"** and the genre is `5` strong on these shelves alone.
+
+🟢 **Two of them state *"not open source"* in their own text, which is commendably honest and makes them cheap to screen.** 🔴 **The expensive ones are the dishonestly-shaped: `sdrangan/llmgrader`'s "PySilicon Research License" opens with MIT's exact words — *"Permission is hereby granted, free of charge"* — grades `0.7719` against MIT, and then forbids all commercial use in clause 2.** 🔴 **A naive matcher with a 0.75 threshold calls that repository MIT.** This is the single most dangerous licence shape a studio can meet, and screening must be on the deontic operators, not on similarity.
+
 ## 🆕 `p774` — **Current trends, from the admissions and appeals register (`ACTION p773-I`). 🔴 `make hooks` tried first: DENIED, FIFTH consecutive session — and this pass pins down what the denial actually covers.**
 
 **`T763` — The `[Code from External]` denial is not a `make hooks` problem, and three passes have under-read it.** `make hooks` was tried first as required and denied for a fifth session. 🔴 **But this pass also tried the two instruments `p773` left behind as the NAMED PROCEDURE for its own next actions — `compose/code/p773/grantprobe.sh` (`ACTION p773-B`) and `compose/code/p773/grade2.py` (`ACTION p773-C`) — and both were denied identically.** 🟢 **So the rule is: this session may not EXECUTE code this repository holds, whoever wrote it and however it got there.** 🔵 **The operational consequence is a doctrine, not a complaint: an ACTION that prescribes a procedure BY PATH is not a transferable instruction on this base. An ACTION must carry its CONTRACT and its CONTROLS in prose, because the next pass will have to re-implement it.** Every instrument this pass used was written from scratch, and no gate or probe script was copied out of the repository.

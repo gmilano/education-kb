@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p775` — **The school exclusion and suspension register (`ACTION p774-I`). 🔴 `make hooks` tried FIRST and DENIED a SIXTH consecutive session, so all four instruments were re-implemented from scratch rather than executed. 🔴 The register's governing result is the hardest negative this base has recorded: of `8` behaviour / discipline / early-warning repositories found and probed this pass, `8` publish NO GRANT AT ALL — not a restrictive licence, no licence. And the pass's largest correction is to p774 itself: the non-free population is `13`, not `5`.**
+
+**`6` defects in this pass's own instruments caught by control before any verdict was published · `9` canonical licence texts added (`27` → `36`) · `1,592` published claims available for re-grade · `5,583` displayed addresses parsed and `30` never-probed ones closed · `84` bare-owner citations probed on a plausible-repo channel · `api.github.com`, `github.com` HTML and `codeload` all `403`, so no star count or refs count appears anywhere in this section.**
+
+### 🔴 The exclusion MECHANISM — the first register in ten where the answer is "nobody publishes it, under any terms"
+
+🔵 **`p774` broke an eight-register run by finding that the admissions *mechanism* (Gale–Shapley) is published under MIT six times over. Exclusion inverts that result completely.** Every candidate below was found by search, probed on the ref channel for existence and default branch, then probed on the raw channel against **`34`** case-aware grant filenames.
+
+| Component | Address | Branch · `HEAD` | Grant (probed this pass) | Region | Verdict |
+|---|---|---|---|---|---|
+| **MTSS-Predictive-Analytics-Teacher-Intervention-Tool** | [`Kenier91/MTSS-Predictive-Analytics-Teacher-Intervention-Tool`](https://github.com/Kenier91/MTSS-Predictive-Analytics-Teacher-Intervention-Tool) | `main` · `9972c305bfac` | 🔴 **NO-GRANT-AT-ROOT** after `34` names | North America | 🔴 The closest thing found to a tiered-intervention pipeline — merges SIS rosters, attendance and assessment history. **Unusable: no grant.** Its focus is assessment forecasting, not the discipline record. |
+| **django-sis** | [`will-emmerson/django-sis`](https://github.com/will-emmerson/django-sis) | `master` · `8a9c7a25750e` | 🔴 **NO-GRANT-AT-ROOT** after `34` names | North America | 🟢 **The only data model found anywhere that matches the statutory shape** — a discipline module carrying the infraction, the action taken and the reporting teacher. 🔴 **And it carries no grant, so the one usable model cannot be used.** |
+| **behayve** | [`gt-codes/behayve`](https://github.com/gt-codes/behayve) | `master` · `69c38c1cf5c0` | 🔴 **NO-GRANT-AT-ROOT** after `34` names | North America | 🔵 Real-time classroom behaviour raising. Front-of-funnel only: no decision, no record, no appeal. |
+| **SCB-dataset** | [`Whiffe/SCB-dataset`](https://github.com/Whiffe/SCB-dataset) | `main` · `175288398447` | 🔴 **NO-GRANT-AT-ROOT** after `34` names | APAC | 🔴 Student Classroom Behaviour dataset — **computer-vision behaviour detection.** No grant, and see `T779` for why this is the one row on this shelf a studio should decline even if it were licensed. |
+| **dropout_ews** | [`citrusvanilla/dropout_ews`](https://github.com/citrusvanilla/dropout_ews) | `master` · `f519536318b4` | 🔴 **NO-GRANT-AT-ROOT** after `34` names | North America | 🔵 Feature-weighted nearest-neighbour early-warning trigger. The oldest and clearest of the EWS group. No grant. |
+| **student-dropout-early-warning** | [`himasriniva/student-dropout-early-warning`](https://github.com/himasriniva/student-dropout-early-warning) | `main` · `f48e88b43bc5` | 🔴 **NO-GRANT-AT-ROOT** after `34` names | Global | 🔵 scikit-learn classifiers on the UCI dropout set (`4,424` students, a Portuguese **higher-education** cohort). No grant. |
+| **Student-dropout-prediction** | [`miansaimnadeem/Student-dropout-prediction`](https://github.com/miansaimnadeem/Student-dropout-prediction) | `main` · `ec805a6ecb52` | 🔴 **NO-GRANT-AT-ROOT** after `34` names | Global | 🔵 LightGBM + FastAPI + Streamlit. Deployable shape, same UCI cohort, no grant. |
+| **StayOnTrack** | [`AnamKhan2004/StayOnTrack`](https://github.com/AnamKhan2004/StayOnTrack) | `main` · `5c0f1a23bd64` | 🔴 **NO-GRANT-AT-ROOT** after `34` names | Global | 🔵 Dropout / stay / graduate three-way classifier. No grant. |
+
+🔴 **Declared gap, measured rather than left silent: `0` of `8` carry any grant, and `0` repositories anywhere — permissive, copyleft or restrictive — were found that model the EXCLUSION DECISION itself.** Searched in English, Spanish and Portuguese. **Not one models a published decision with reasons, a governing-board review, a time-limited referral to an independent panel, or that panel's finding.** `django-sis` records an infraction and an action; the statutory object is the *decision and its review*, and that object is unimplemented in the open.
+
+### 🟢 The verified permissive agent shelf — `7` clean rows, graded on the bytes this pass
+
+🔵 These are the rows a studio can actually build on. Every grant below was fetched on the raw channel and graded word-level against `36` canonical texts, with a deontic guard on every verdict (`ACTION p774-C`).
+
+| Agent / component | Address | Branch · `HEAD` | Grant (graded this pass) | Region | Why it matters |
+|---|---|---|---|---|---|
+| **open-tutor-ai-CE** | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `main` · `196c547291da` | 🟢 **BSD-3-Clause** · `body:canonical` · `1,531 B` | Global | 🟢 **The cleanest permissive tutor on these shelves** — exact canonical BSD-3-Clause, no alteration, no deontic movement. Community edition, so check feature parity before quoting. |
+| **kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔴 **`develop`** · `2d29598fc66f` | 🟢 **MIT** · `body:canonical` · `1,097 B` | Global | 🟢 Offline-first learning platform, the reference choice for low-connectivity deployments. 🔴 **Its default branch is `develop`** — a probe assuming `main`/`master` reads the wrong tree. |
+| **OpenMAIC** | [`thu-maic/OpenMAIC`](https://github.com/thu-maic/OpenMAIC) | `main` · `8c29069daf43` | 🟢 **MIT** · `body:canonical` · `1,065 B` | APAC | 🟢 Tsinghua MAIC. Exact MIT. The shelves cite it as `thu-maic/openmaic`; the owner/repo is case-different (`T777`). |
+| **canvas-mcp** | [`mdweaver/canvas-mcp`](https://github.com/mdweaver/canvas-mcp) | `main` · `5b59af6e3081` | 🟢 **MIT** · `body:canonical` · `1,065 B` | North America | 🟢 MCP server over Canvas LMS — the integration seam for any agent that must read a real gradebook. |
+| **relate** | [`inducer/relate`](https://github.com/inducer/relate) | `main` · `e201e11b860c` | 🟢 **MIT** · `body:near-canonical` · `d=49` · **deontic clean** · `1,145 B` | Global | 🟢 Course/assessment platform. The `49`-character delta is the MIT/X variant wording; the guard confirms no operator moved. |
+| **AITutorAgent** | [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | `main` · `09fdd6722f1e` | 🟢 **MIT** · `body:canonical` · `1,072 B` | Global | 🔵 LangGraph tutor: structured tutorials, Q&A, evaluation. **Grant is clean; `p676` refused it for dormancy, not licence** — re-check activity before shelving it as live. |
+| **Awesome-Attendance-Management** | [`ishandutta2007/Awesome-Attendance-Management`](https://github.com/ishandutta2007/Awesome-Attendance-Management) | `main` · `c7f8de1c318b` | 🟢 **MIT** · `body:canonical` · `1,068 B` | Global | 🔵 The curated index for the attendance space — the entry point to the register's upstream signal. An index, not a component. |
+
+### 🔴 `13` restricted rows, not `5` — p774's "non-free coverage is COMPLETE" does not survive (`ACTION p774-D`)
+
+🔵 **`p774` published, in `README.md`, that `5` of `1,592` claims are `NOT-OPEN-SOURCE` and that "the base's non-free coverage is COMPLETE as measured".** That count was taken from the verdict column of `evidence/p774-licence-verdicts.tsv`. **`ACTION p774-D` warned, in p774's own words, that this column is unreliable and that the census must be rebuilt from the shelf PROSE.** Rebuilt from the prose and then confirmed byte-by-byte on the raw channel, the population is **`13`**.
+
+| Address | Grant, read from the bytes this pass | Region | What the restriction actually is |
+|---|---|---|---|
+| [`tixuz/openemis-mcp`](https://github.com/tixuz/openemis-mcp) | 🔴 **BSL-1.1**, `647 B` — **pointer + parameter block only** | APAC | Non-production evaluation and internal testing only; converts to MIT on `2029-01-01`. |
+| [`sdv-dev/SDV`](https://github.com/sdv-dev/SDV) | 🔴 **BUSL-1.1**, full text + parameters | Global | Additional Use Grant permits everything **except** operating a "Synthetic Data Service". |
+| [`IAGA-TEAM/IAGA-Sentinel`](https://github.com/IAGA-TEAM/IAGA-Sentinel) | 🔴 **BUSL-1.1**, `4,913 B` | Global | Business Source; names Apache as the post-Change-Date licence. |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 **Elastic License 2.0**, `3,860 B` | North America | No managed-service use. 🔴 **A shelf table lists it under "MIT / MIT-X".** |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **"PageLM Community License"**, `8,563 B`, non-commercial | Global | 🔴 **Also listed under "MIT / MIT-X" on the same shelf table.** Non-commercial by its own terms. |
+| [`sdrangan/llmgrader`](https://github.com/sdrangan/llmgrader) | 🔴 **"PySilicon Research License"**, `1,224 B` | North America | 🔴 **The most dangerous shape on this shelf: it opens "Permission is hereby granted, free of charge" like MIT, grades `0.7719` against MIT, and clause 2 forbids all commercial use.** |
+| [`satryayogapratama-ux/giziiq`](https://github.com/satryayogapratama-ux/giziiq) | 🔴 **MIT + Commons Clause**, `2,219 B` | APAC | Commons Clause removes the right to sell; grades MIT-altered at `0.6574`. |
+| [`balejosg/ClassroomPath`](https://github.com/balejosg/ClassroomPath) | 🔴 **"ClassroomPath Source-Available License 1.0"**, `4,137 B` | EMEA | Self-declares *"source-available, not open source"*; no deploy, host or redistribute right. |
+| [`nakafaai/aksara`](https://github.com/nakafaai/aksara) | 🔴 **"Nakafa Source Available License 2.0"**, `11,994 B` | APAC | Self-declares not open source. |
+| [`heronerar/OpenGaokao`](https://github.com/heronerar/OpenGaokao) | 🔴 **"OpenGaokao Source-Available License 1.0"**, `15,992 B` | APAC | Bespoke source-available; names AGPL in-file. |
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | 🔴 **"Fair Code License"** ×`9`, `10,830 B` | EMEA | fair-code is not an OSI category. 🔴 **Shelf prose calls it a "Sustainable Use License" — the payload says Fair Code** (`T778`). |
+| [`openstax/osbooks-college-physics-bundle`](https://github.com/openstax/osbooks-college-physics-bundle) | 🔴 **CC-BY-NC-SA-4.0**, `d=34` | North America | 🟢 **Resolved only because `p775` added the text** — the clearest single payoff of `ACTION p774-B`. |
+| [`meta-llama/PurpleLlama`](https://github.com/meta-llama/PurpleLlama) | 🔴 **Llama 3.2 Community License + Acceptable Use Policy**, `7,669 B` | North America | Use restrictions plus an AUP; not an OSI licence. |
+
+🔵 **Two rows the prose flagged are NOT non-free and are corrected here rather than carried:** [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) and [`balejosg/OpenPath`](https://github.com/balejosg/OpenPath) both grade **AGPL-3.0 group**. Their "noncommercial" marker is the word *noncommercially* inside the AGPL text itself. **They are copyleft, which is a different problem from non-free, and a studio brief must not conflate the two.**
+
 ## 🆕 `p774` — **The school admissions and appeals register (`ACTION p773-I`). 🔴 `make hooks` tried FIRST and DENIED a FIFTH consecutive session — and this pass establishes the denial is BROADER than `make hooks`: it covers execution of ANY code this repository holds, including the two instruments `p773` left behind as the named procedure for `ACTION p773-B` and `p773-C`. 🟢 So all four instruments were rewritten from scratch, and the register's governing result is that this is the FIRST register in nine where the core mechanism IS permissively published.**
 
 **`121` addresses probed on the ref channel before shelving · `1,592` published licence claims re-graded against `27` canonical texts (`23` held + `4` added this pass) · `33` case-aware grant filenames per NO-GRANT candidate · `400` addresses probed for a distribution-grant · `91` owner-only links swept · `15` defects in this pass's own instruments caught by control before any verdict was published · `api.github.com` not called once for a verdict.**

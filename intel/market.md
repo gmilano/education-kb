@@ -4,6 +4,89 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p775` — **The school exclusion and suspension register (`ACTION p774-I`). 🟢 Its stated premise HOLDS: exclusion is the one remaining high-stakes school decision that is NOT named in EU AI Act Annex III point 3 — and the asymmetry is sharper than p774 predicted. 🔴 `ACTION p774-G` is now CLOSED with a negative: all three named US bills failed.**
+
+### 🔴 The regulatory asymmetry this register exists to test — confirmed, and it is stark
+
+🔵 **Annex III point 3 of Regulation (EU) 2024/1689 has exactly four use cases**, and a Commission draft guidance document (paragraph 209) enumerates them as four: **3(a)** admission or assignment to institutions · **3(b)** evaluating learning outcomes · **3(c)** assessing the appropriate level of education · **3(d)** monitoring and detecting prohibited behaviour **during tests**.
+
+🔴 **So the EU AI Act reaches an algorithm that watches a child for cheating in an exam, and does not reach an algorithm that contributes to permanently removing that child from school.** Point 3(d) stops at the test-room door. Permanent exclusion — the single most consequential decision a school makes about an individual pupil, and the one that carries a statutory right to an independent panel in England — is named nowhere in point 3.
+
+🟡 **Stated honestly, with the limit on the claim:** this does **not** mean an exclusion-support system is unregulated. It may still be high-risk by another route, and because such systems profile learners they would in most cases lose the Article 6(3) exemption. 🔴 **What is confirmed is narrower and still useful: it is not high-risk *by virtue of being an education system*, so the Annex III point 3 compliance path a studio would reach for does not cover it.** `p775` did not obtain the Official Journal text — `eur-lex.europa.eu` does not resolve under this environment's proxy for a fourth consecutive pass — so the enumeration above rests on the Commission draft guidance and two independent secondary readings.
+
+🔵 **Timing, corroborated twice this pass:** Annex III high-risk obligations apply from **2 December 2027**, following the political agreement on the Digital Omnibus simplification package on **7 May 2026** — a slip from the original 2 August 2026 date. One source still prints the old date; the 2027 date is the one two independent searches agree on.
+
+### 🟢 `ACTION p774-G` — CLOSED. All three named bills failed, and the registry framing survives
+
+| Bill | Subject | Disposition, measured this pass |
+|---|---|---|
+| **New Mexico HB 245** | Denial of enrollment to school | 🔴 **DIED.** The legislature's own bill page records status *Died*; introduced `2026-01-29`. |
+| **New Hampshire SB 101** | Parents sending children to public schools outside their resident district | 🔴 **DIED ON TABLE**, session ended `2026-08-19`. 🔴 **And the record is contested at the source:** one tracker carries a "Became Law" label while its own status line says *Died on Table*; LegiScan records the House adopting an amendment `182–172` on `2026-04-23` and then voting to lay the bill on the table. **Treated as dead; the "Became Law" label is wrong.** |
+| **South Carolina 3199** | — | 🟡 **UNVERIFIABLE.** No record returned under that number. The only South Carolina items found were unrelated (charter authoriser requirements, the budget bill). **Recorded as not confirmed to exist, not as failed.** |
+
+🟢 **Consequence for the deliverable:** none of the three changes the appeal surface, so `p774`'s `appeal_route` registry does not need new columns. 🔴 **But the registry is still `44`+ states short on the admissions axis, and exclusion adds a second axis to the same table rather than a second table** — see `compose/patterns.md` `P775-1`.
+
+### 🔴 The statutory shape of an exclusion, measured in four regions — and it does NOT generalise from admissions
+
+🔵 **This is the register's most useful finding for a studio, and it refutes a reasonable assumption.** `p774` built an `appeal_route` registry for admissions, where the appeal panel's decision **binds** the admission authority. Exclusion looks like the same object and is not.
+
+| Region | Instrument | The decision | The review | 🔴 Does the reviewer bind? |
+|---|---|---|---|---|
+| **EMEA** (England) | **s.51A Education Act 2002** + **School Discipline (Pupil Exclusions and Reviews) (England) Regulations 2012** + DfE statutory guidance | Head teacher excludes; reasons given to parents | Governing board review first; then an **Independent Review Panel** on request **within 15 school days** | 🔴 **NO — and this is the finding.** The IRP is a **review, not an appeal**: it can quash the decision and direct reconsideration, but **cannot reinstate the pupil**. There is **no appeal from the IRP** — only judicial review. 🟢 A **parallel** route exists: a disability-discrimination claim to the **First-tier Tribunal (SEND)** under the Equality Act 2010, within **6 months**, and that tribunal *can* order reinstatement. |
+| **North America** (US) | **Goss v. Lopez (1975)**, 14th Amendment due process, + state codes | Suspension/expulsion by the district | Federal floor for ≤`10` days: **notice of charges, an explanation of the evidence, and an opportunity to respond** — and the hearing may **follow** removal where the pupil is a continuing danger | 🟡 **Varies by state.** Longer suspensions and expulsions get more formal process, but the content comes from state statute and district policy, not the Constitution (e.g. Florida Stat. **§1006.08** requires parent notice of due-process rights). 🔴 **No federal rule on disciplinary-record retention or expungement.** |
+| **LATAM** (Chile) | Chilean school-inclusion law | Two distinct sanctions: **immediate expulsion**, or **non-renewal at the end of the school year** | Schools set their own disciplinary codes | 🔴 **Weak, and the gap is structural: the law does NOT cap how long a fixed suspension may last.** 🟢 **But it guarantees the right to re-enrol, and obliges schools to admit pupils expelled from other schools** — so exclusion does not eject a child from the system, which is a materially different policy design from England's. |
+| **APAC** | 🔴 **MEASURED GAP** | — | — | 🔴 **Nothing authoritative found.** The only artefact returned was a **single NSW school's own policy** (revised `2026-02-09`: appeal to a Discipline Committee, with the Education Director or nominee as the final level) — an internal school document, not state law. **India, Singapore and Japan returned nothing on exclusion review at all.** Written down as a gap rather than left as silence. |
+
+### 🟡 `ACTION p774-H` — the retention clock gains APAC, partially: `2` of `4` measured, `2` named gaps
+
+| Jurisdiction | Admissions/pupil-record retention | Confidence |
+|---|---|---|
+| **India** (CBSE) | 🔴 **CONTESTED AT THE SOURCE.** A third-party guide states the **Student General Admission and Withdrawal Register, transfer-certificate counterfoils and Board result gazettes are preserved PERMANENTLY**. CBSE's **own** weeding-out rules state **"Admission Cases" files are kept `01 year`** after dispatch of the year's pass certificates. 🔵 These are probably different objects — the permanent *register* versus the disposable *case file* — but the base should not assume that; the official page is the more authoritative text. | 🟡 Reported, reconciliation required |
+| **Singapore** | 🟢 **A DIFFERENT REGIME SHAPE, not a different number: the PDPA prescribes NO period.** It requires an organisation to **cease retention once the data no longer serves the purpose it was collected for**, and imposes no duty to publish a retention period. 🔴 **So a `retention_clock` column cannot hold a value for Singapore — it needs a purpose test instead.** | 🟢 Measured |
+| **Japan** | 🔴 **UNMEASURED.** Nothing returned on statutory school-record retention. | 🔴 Gap |
+| **South Korea** | 🔴 **UNMEASURED.** Results covered only how school records are *used* in university admissions, not how long they must be kept. | 🔴 Gap |
+
+🔴 **The design consequence is the real result: `T772`'s `retention_clock` registry cannot be a single column of durations.** Singapore proves at least one major jurisdiction expresses the duty as a purpose test with no clock at all, so the column must be `{duration | purpose-test | none}` with the rule text attached.
+
+## Opportunities by region
+
+🔵 Each subsection below names what a studio can sell **this quarter**, the asset it starts from, and the measured obstacle. Market figures are given with their source and their disagreement, not averaged into a single invented number.
+
+🔴 **Global figures, with their conflict stated:** one April 2026 Research-and-Markets figure puts AI-in-education at **$10.6B in 2026 → $42.48B by 2030**. Other published baselines differ materially — **$9.58B growing at >30%/yr**, and a long-range **$136.79B by 2035**. 🔵 A Microsoft 2025 finding that **86% of education organisations use generative AI** is the most-cited adoption number and is the one most worth quoting, because it is about adoption rather than market size.
+
+### North America
+
+- 🟢 **The sellable thing: the exclusion/suspension due-process record.** `Goss v. Lopez` sets a floor every district must meet and **no open-source implementation of it exists** (`0` of `8` candidates carry a grant at all). The deliverable is a hearing record that captures notice, the explanation of evidence given, the pupil's response, and the timestamp order — because the federal floor is about *sequence*, and sequence is exactly what a system can evidence.
+- 🔵 **Market and adoption:** North America is reported at ~**38%** of the global market, with a US CAGR of ~**29.2%** through 2031; institution-wide AI implementation reported at **66%**, and one estimate claims **90% of college students** use AI as their primary research and brainstorming partner by early 2026.
+- 🔴 **The obstacle is fragmentation, and it is now measurable.** At least **15 states** have introduced or passed AI-in-education legislation and one tracker counted nearly **100 state bills** in a single year — while all three bills `p774` named (NM HB 245, NH SB 101, SC 3199) failed or cannot be found. **Federal action is executive, not legislative**: executive orders across 2025–early 2026, a K-12 AI instruction task force, NTIA scrutiny of edtech adoption, and **$169M** in FIPSE awards including responsible-AI use. 🟢 **Sell a per-state configuration table, not a product.**
+- 🔵 **Incumbents and the churn signal:** Chegg, Pearson, Cengage, Instructure, Coursera, Udemy; Panorama Education has published guiding principles with four states. 🔴 **Chegg cut 45% of staff as AI reduced homework-help traffic** — the clearest evidence in any region that AI is destroying edtech revenue as well as creating it.
+- 🔴 **Restricted-licence density is highest here:** `5` of the `13` non-free rows are North American (`advisingapp` Elastic-2.0, `llmgrader`, `PurpleLlama`, `osbooks-college-physics-bundle`, plus the US-hosted BUSL rows).
+
+### EMEA
+
+- 🟢 **The sellable thing, and it has a deadline: Annex III point 3 conformity work before 2 December 2027.** Admissions (3(a)) and assessment (3(b)) *are* high-risk; exclusion is not. A studio that can tell a ministry or a multi-academy trust **which of its systems fall inside point 3 and which do not** is selling scoping work that nobody can do from a feature list.
+- 🟢 **The strongest reference architecture in any region is EMEA and it is published:** [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) — a **national** education application system from the Finnish National Agency for Education, **EUPL-1.2 or later**. 🔴 Copyleft, so it is a design to learn from, not a tree to ship closed; and its sister system `koski` sits on a *different* EUPL version inside the same agency (`p774`'s `T774`).
+- 🔵 **England is the one jurisdiction where the exclusion deliverable is fully specified by law** — s.51A, the 2012 Regulations, the `15`-school-day IRP window, and **July 2026 guidance** that raises the emphasis on accessibility and procedural fairness without changing the legal test. 🟢 **A 2026 High Court decision held that a fair re-hearing on appeal can cure defects at the original decision stage** — which makes the audit trail of the *review* commercially load-bearing, not just the decision.
+- 🔵 **Adoption:** **67%** of teachers reported using AI tools; AI-enabled devices forecast at **15%** of institutional PC shipments in 2026, approaching half by 2030. An Epson survey across UK, France, Italy, Germany, Spain and Poland found **76%** of students expect to use AI in learning while **80%** of teachers worry it is arriving faster than schools can manage. 🟢 **That 80/76 split is the single best slide for an EMEA governance pitch.**
+- 🔵 **Policy and convening bodies:** Commission draft guidelines on high-risk classification (consultation closed `2026-06-23`), EU education ministers' conclusions on teachers in the era of AI (`2026-05-11`), Eurydice *Digital education at school in Europe 2026*, OECD *Digital Education Outlook 2026*, and the Digital Education Council EMEA summit (41 leaders, 30 institutions, 14 countries, Paris). 🔵 **The UAE Ministry of Education's 25 generative-AI prohibitions for schools (February 2026) belongs here, in EMEA** — one source filed it under APAC, and the region field must not inherit that error.
+
+### APAC
+
+- 🔴 **The honest headline: APAC is where this base's evidence is thinnest, and the gap is in the statutory layer, not the market.** Exclusion review law for India, Singapore and Japan returned **nothing**; admissions-record retention for Japan and Korea returned **nothing**. The only exclusion artefact found region-wide was one NSW school's internal policy. **Recorded explicitly, because silence here would look identical to coverage.**
+- 🟢 **The sellable thing: the purpose-test retention engine.** Singapore's PDPA sets **no retention period** and instead requires retention to cease when the collection purpose is served. That is harder to implement than a clock and almost nobody ships it. 🟢 **It is also reusable across every PDPA-style regime in the region.**
+- 🟢 **Permissive supply is genuinely good here** — [`thu-maic/OpenMAIC`](https://github.com/thu-maic/OpenMAIC) is exact canonical MIT, and Kolibri's offline-first design targets precisely the **limited connectivity** that an April 2026 report named as the barrier behind patchy regional uptake (virtual-tutor adoption **30%** across the sample).
+- 🔴 **But APAC also carries the heaviest bespoke-licence load: `4` of the `13` non-free rows are APAC** — `openemis-mcp` (BSL-1.1), `aksara` and `OpenGaokao` (each a self-named source-available licence), `giziiq` (MIT + Commons Clause). 🟢 **Due-diligence-before-build is a billable first phase in this region, and the evidence for charging for it is in the table above.**
+- 🔵 **Convening and demand signals:** Ipsos *Education Monitor 2026* found **lower** support for banning AI in schools across the Asian markets examined — a permissive public mood; the World Bank's Global EdTech Policy Academy on AI (**Seoul, 31 Aug – 4 Sep 2026**); Acer's Edu Summit APAC 2026; Cambridge English's APAC summit (Kuala Lumpur, April 2026); EdTech Hub's SE Asia briefs (March 2026). One report counts **>3,000 players** in APAC edtech — a fragmented field where an integrator has an advantage.
+
+### LATAM
+
+- 🟢 **The sellable thing: AI governance policy-as-code for universities, and the demand number is unambiguous.** A Digital Education Council 2026 survey found **92% of students and 79% of faculty** actively using AI while **only 30% of universities have published a policy**. 🟢 **That 92/30 gap is the clearest single commercial opening in any region in this register.**
+- 🟢 **Chile is the one LATAM jurisdiction whose exclusion law is specified enough to build against**, and its design is *better* than England's in one respect worth telling a client: the right to re-enrol is guaranteed and schools must admit pupils expelled elsewhere. 🔴 **The gap is the uncapped suspension duration** — a `max_days` field with no statutory value, which is exactly the kind of thing a configuration table should flag rather than silently default.
+- 🔴 **Brazil and Mexico: MEASURED GAP.** Searched in Portuguese and Spanish for suspension/expulsion procedure and the right of defence; nothing authoritative returned. **ECA, state and municipal rules for Brazil, and SEP/state regulations for Mexico, remain unread.**
+- 🔵 **Players to partner with, not compete against:** UNESCO IESALC (its September 2026 report found adoption *"neither uniform nor evenly distributed"*), UNESCO with Chile's **CENIA** — including **Latam-GPT**, an open LLM built for Latin America and the Caribbean — **EdTech Hub with Fundación Ceibal**, Tecnológico de Monterrey's Institute for the Future of Education, ECLAC's **eLAC** agenda, and the IDB (which names regulation and financing as open questions).
+- 🔴 **A structural finding from this pass's own bookkeeping, not from the market:** of the `16` bare-owner citations this base cannot convert to a specific repository, **almost all are LATAM public-sector organisations** — `dataprev`, `datosgobar`, `govbr`, `serpro`, `softwarepublico`, `gobiernodigital`, `mxabierto`, `educacionmx`, `CeibalUY`, `ceibal-tatu`, `OpenCENIA`, `tecnologico-de-monterrey-oficial`. 🔴 **This base cites LATAM government bodies as owners precisely because it never found a specific repository under them.** That is a real coverage deficit in the region, and naming it is more useful than another citation.
+- 🟢 **One LATAM asset is already verified and underused:** [`portabilis/i-diario`](https://github.com/portabilis/i-diario) — a live Brazilian `diário de classe` system whose grant is the **GNU AGPL in Portuguese**. It grades `0.0140` against every English canonical text, which is a **language artefact, not a bespoke licence** (`T782`).
+
 ## 🆕 `p774` — **The school admissions and appeals register (`ACTION p773-I`). 🟢 Its stated premise HOLDS and is sharper than stated: admissions is squarely inside EU AI Act Annex III, and it is the first register where the ALGORITHM ITSELF is the regulated artefact rather than the record about it. 🔴 `make hooks` tried first and DENIED a fifth consecutive session.**
 
 **Register: school admissions and appeals** — the application, the published decision, the time-limited appeal right, and the retention clock on the whole file. `ACTION p773-I` named it for four stated reasons: statutory, per-pupil, a published decision, and a time-limited appeal right. 🟢 **All four hold.** 🔵 **And the reason it names — "squarely inside EU AI Act Annex III" — is confirmed from the instrument's own wording: Annex III point 3 lists *admission or assignment to educational institutions* as a NAMED high-risk use, alongside evaluating learning outcomes, assessing the appropriate level of education, and monitoring prohibited behaviour during tests.**
@@ -33,7 +116,7 @@ updated: 2026-11-11
 
 🔴 **So the spread is `1 year` to `permanent` — a factor of more than `100`, with `2` of `4` regions having NO statutory school-level period at all.** 🟢 **For a product this is the single configuration axis that cannot be defaulted:** a deletion job that is correct in Victoria destroys a record Brazil requires to be kept forever.
 
-## Opportunities by region
+## Opportunities by region — `p774` (historical section; the live one is at the top of this file)
 
 ### North America
 
