@@ -1,8 +1,42 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-10
+updated: 2026-11-11
 ---
+
+## 🆕 2026-11-11 (p755) — 🟢 **THE ADULT / NON-FORMAL SUBSTRATE: `7` ROWS AND NOT ONE IS ADULT-EDUCATION SOFTWARE. 🔴 THE `0%` RULE — FOUR OF THE FIVE BEST-STARRED ON-TOPIC REPOS HAVE NO GRANT AND THE FIFTH IS `CC BY-SA`. 🔵 FIRST HARDWARE LICENCE THIS BASE HAS BYTE-READ, AND IT CAME OUT OF THE BASE'S OWN UNREAD LEDGER.**
+
+**`7` foundations rows · `19` licence payloads byte-read `2026-11-11` · `1` index value materially corrected (refusing direction) · `26` compliant grant-absences · `40` of this base's own `unstated` ledger rows swept, `19` resolved · `1` correction against this pass's own first reading (`T506`).**
+
+### 🔴 The denominators — totals from the HTML search channel (`T501`), not samples
+
+`GED OR HiSET OR "high school equivalency"` → 🔴 **`9`, all `0★`** · `"adult basic education"` → 🔴 **`3`, all `0★`** · `"non-formal education" OR "nonformal education"` → **`19`, best `5★`** · `"prison education" OR "correctional education"` → **`19`, best `19★`** · `"adult literacy"` → **`55`, best `4★`**.
+
+### 🟢 Trending / newly held
+
+| Repo | Licence (byte-read) | ★ | Region | Signal |
+|---|---|---|---|---|
+| [`open-learning-exchange/planet`](https://github.com/open-learning-exchange/planet) | 🟡 AGPL-3.0 (`34,520 B`, `76a97c878c9c`) | `70★` | Global | 🟢 Highest-starred community-learning platform in the register, **and it already ships a model gateway** (OpenAI, Perplexity, Deepseek, Gemini). 🔵 **`3` bytes short of canonical: the pre-switch `http://` FSF text (`T503`).** 🔴 Network copyleft — client-hosted only. |
+| [`BloomBooks/BloomDesktop`](https://github.com/BloomBooks/BloomDesktop) | 🟢 MIT (`1,072 B`, `858e015fbf93`) | `43★` | Global | 🟢 **The only permissive first-language levelled-text factory in existence**, SIL Global, copyright live through `2026`. 🔴 README says *children's* books — filed on that record, repurposed deliberately (`P277`). |
+| [`UstadMobile/UstadMobile`](https://github.com/UstadMobile/UstadMobile) | 🔴 **AGPL-3.0 + mandatory UI term** (`1,002 B`, `4d6f05b99e6b`) — **index says plain AGPL-3.0; CORRECTED** | `34★` | **EMEA / APAC** | 🟢 Offline-first Kotlin Multiplatform LMS, device-to-device sync, **`97%+` bandwidth reduction for a class of `30`**. 🔴 Badge term binds the login screen (`T493`). |
+| [`UnlockedLabs/unlocked-core`](https://github.com/UnlockedLabs/unlocked-core) | 🟢 Apache-2.0 (`9,177 B`, `65976209c00e`) | `30★` | **North America** | 🟢 Only permissive carceral SIS; good-time credits. 🔵 **New Apache-2.0 length** for this base vs held `9,235 B` / `11,356 B`. |
+| [`operepo/ope`](https://github.com/operepo/ope) | 🟢 MIT (`1,070 B`, `b97fd346059e`) | `19★` | **North America** | 🟢 The air-gap substrate, MIT, `646` commits. |
+| [`Wakoma/nimble`](https://github.com/Wakoma/nimble) | 🔴 **CERN-OHL-S v2 (strongly reciprocal)** (`13,419 B`, `d6475a84171f`) — **ledger said `unstated`; CORRECTED** | — | Global | 🟢 **First hardware licence this base has byte-read.** Portable offline community network — the physical layer under non-formal provision. 🔴 **Reciprocity reaches the enclosure, PCB and docs, not just code.** |
+| [`chimple/alxp`](https://github.com/chimple/alxp) | 🟢 Apache-2.0 (`11,356 B`, `43070e2d4e53`) | `1★` | Global | 🔵 Adult Literacy XPRIZE archive — permissive provenance, unmaintained. |
+
+### 🔴 Recovered from this base's own ledger — `19 / 40` sampled `unstated` rows resolved (`T505`)
+
+[`agent0ai/agent-zero`](https://github.com/agent0ai/agent-zero) **MIT** (`1,150 B`, `23844ed5fb99`) — 🟢 a general agent framework **cited `0` times on any shelf** · [`pyodide/pyodide`](https://github.com/pyodide/pyodide) **MPL-2.0** (`16,725 B`, `1f256ecad192`) · [`judge0/judge0`](https://github.com/judge0/judge0) **GPL-3.0** (`34,526 B`, `e55f461dc7f4`) · [`adlnet/xapi-lab`](https://github.com/adlnet/xapi-lab) **MIT** (`1,082 B`, `7625cb30bac8`) · [`digitalcredentials/sign-and-verify`](https://github.com/digitalcredentials/sign-and-verify) **MIT** (`1,075 B`, `09e4c03a44a7`) · [`instructure/qtimigrationtool`](https://github.com/instructure/qtimigrationtool) **custom University of Cambridge notice** (`1,392 B`, `26f8e53396b6` — 🔴 title block insufficient, full read required) · [`microsoft/mcp-for-beginners`](https://github.com/microsoft/mcp-for-beginners) **MIT** (`1,141 B`, `c2cfccb812fe`) · [`NatLibFi/Annif-tutorial`](https://github.com/NatLibFi/Annif-tutorial) **CC BY 4.0** (`18,650 B`, `7e7170e3cebf`) · plus `19otherrsh-dot/Opencred`, `s010s/prehistoric-animal-museum` **AGPL-3.0** (`34,523 B`, `0d96a4ff68ad` — matching `p745`'s second variant), `androz2091/node-ecole-directe` **Apache-2.0** (`11,357 B`, `c71d239df917`), `Faixiang/moodle-mcp`, `Zenglian990/AI_Tutor_Release`, `madhvantyagi/Gnos`, `RozhakDev/EduPintarIPAS`, `SuyashMore/AI-Proctored-Examination-System`, `idurar/idurar-erp-crm`, `suren-kk/armenian-national-library-mcp`.
+🔴 **`21 / 40` had no grant at any of ten probed addresses** — including [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model), **the European Commission's own learning-model repository.** Full verdicts: `evidence/unstated-sweep.2026-11-11-p755.tsv`.
+
+### 🔴 CORRECTION against this pass's own first reading — `T506`
+
+**First reading: "the base has been citing repositories whose grants it never read." That is wrong.** `4 / 19` resolved rows **are** cited on the shelves and the shelves are **right**: `compose/patterns.md` already records `idurar/idurar-erp-crm` as **AGPL-3.0, `34,230 B`, `7800536d5087`** — 🟢 **byte-identical to this pass's independent read** — and `repos/foundations.md` already flags Judge0's GPL-3.0 with the correct mitigation. 🔴 **Two distinct defects, different numbers, different fixes: lost supply (`15 / 19`, never shelved) and desynchronisation (`4 / 19`, ledger behind the shelves).** The second is worse, because the ledger is what a pass consults to decide what is new.
+
+### 🔵 Byte-length instrument, two rules settled this pass
+
+🟢 **GPL-family length dates the copy (`T503`).** `planet`'s `34,520 B` vs canonical `34,523 B` differ by **exactly three `http://` → `https://` substitutions** (FSF header, and `gnu.org/licenses` twice) — pre-switch vs revised FSF text. AGPL-3.0 set now `32,386` / `34,230` / `34,520` / `34,523` (two sha at `34,523`); GPL-3.0 now `34,526` and `35,147`.
+🔴 **MIT length identifies nothing (`T504`).** **Twelve distinct MIT lengths** byte-read in one pass (`1,065`…`1,150`) with **collisions at different sha** (`1,068 B`: `826748d1b325` / `695941afdd1f`; `1,070 B`: `b97fd346059e` / `a15250c31c44`) and **two title forms** (`MIT License`, `The MIT License (MIT)`). **Classify from the title block, identify by sha₁₂, report length as provenance only.**
 
 ## 🆕 2026-11-10 (p754) — 🟢 **THE ECEC SUBSTRATE: THE ONLY ECEC-NATIVE ERP ON EARTH IS A FINNISH MUNICIPAL ONE AT `59★`, INDEXED `NOASSERTION` AND ACTUALLY `LGPL-2.1-or-later`. 🟢 THE PERMISSIVE WINNER IS NOT ECEC SOFTWARE AT ALL — IT IS A `BSD-3-Clause` FRONT-LINE-WORKER PLATFORM ALREADY RUNNING INDIA'S ANGANWADI NETWORK. 🔴 `child development milestone stars:>20` → `0`.**
 

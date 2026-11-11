@@ -1,0 +1,7 @@
+address	stars	branches_probed	names_probed	verdict	register_relevance
+sketch-city/hou-literacy	4	main,master	LICENSE,LICENSE.md,LICENSE.txt,LICENCE,COPYING	no-grant	best-starred adult-literacy repo on GitHub
+corbecker/MALA	2	main,master	LICENSE,LICENSE.md,LICENSE.txt,LICENCE,COPYING	no-grant	Android adult literacy OCR+TTS+ASR; most on-register artefact found
+BuildForSDGCohort2/Team-195-Soma-Frontend	0	main,master	LICENSE,LICENSE.md,LICENSE.txt,LICENCE,COPYING	no-grant	teaches adults reading/writing/maths
+qwertyuiop9898123/KouninPass	0	main,master	LICENSE,LICENSE.md,LICENSE.txt,LICENCE,COPYING	no-grant	only APAC candidate; JP kosotsu-nintei equivalency prep + autograding
+digitalgreenorg/FarmStack	-	main,master,develop	LICENSE,LICENSE.md,LICENSE.txt,LICENCE,COPYING,NOTICE	no-grant	adjacent adult extension learning; README is 11 bytes
+UnlockedLabs/unlocked-hiset-ai	-	ls-remote,raw	README.md,LICENSE,LICENSE.md,LICENSE.txt	UNREADABLE-no-verdict	the register's only AI tutor; private or non-existent, channels cannot distinguish

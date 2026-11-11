@@ -12,7 +12,7 @@ address	first_seen_pass	last_verdict	filed_on	last_measured	mentions	distinct_pa
 122-syf-wcy/PhysicsOS	p117	Apache-2.0	-	2026-10-25	5	3
 12britz/awesome-free-models	p378	CC0-1.0	-	2026-10-22	1	1
 17zuoye/pyirt	p38	MIT	intel/market.md,intel/trends.md,repos/foundations.md	2026-11-05	1	1
-19otherrsh-dot/Opencred	p64	unstated	-	2026-10-09	3	2
+19otherrsh-dot/Opencred	p64	AGPL-3.0	-	2026-11-11	3	2
 1alexandrer/moodle-mcp	p14	MIT	-	2026-10-29	3	3
 1EdTech/basiclti-util-java	p678	Apache-2.0+NOTICE	repos/foundations.md	2026-11-06	1	1
 1EdTech/caliper-java	p25	unstated	-	2026-10-21	4	4
@@ -46,13 +46,13 @@ address	first_seen_pass	last_verdict	filed_on	last_measured	mentions	distinct_pa
 67tallchris/iep-builder	p432	MIT	-	2026-10-25	2	1
 6a6179/myschoolapp-mcp	p73	MIT	-	2026-10-03	1	1
 7-an/ai-study-path-triage	p501	MIT	-	2026-10-28	1	1
-781991937/TOFAN-AI-2026	p7	unstated	-	2026-10-06	2	1
+781991937/TOFAN-AI-2026	p7	no-grant	-	2026-11-11	2	1
 845421145-lang/agents-radar	p665	MIT	-	2026-11-05	1	1
 8bitprodigy/kolibri_engine	p379	unstated	-	2026-10-22	1	1
 8enSmith/mcp-open-library	p681	MIT	repos/foundations.md	2026-11-06	1	1
 9mtm/WCAG-Checker	p91	MIT	-	2026-10-10	1	1
 a-ariff/canvas-instant-mcp	p14	unstated	-	2026-10-06	1	1
-a-bobadilla/Asistente-Pedagogico-IA	p32	unstated	-	2026-10-07	1	1
+a-bobadilla/Asistente-Pedagogico-IA	p32	no-grant	-	2026-11-11	1	1
 A-R007/Multi-Agent-Study-Assistant	p3	no-grant	-	2026-11-05	12	7
 a/b	p410	unstated	-	2026-10-29	2	2
 a2br/moodle-mcp	p104	unstated	-	2026-10-10	3	3
@@ -62,7 +62,7 @@ Aaradhya-Dev-Tamrakar/google-classroom-mcp	p74	MIT	-	2026-10-20	2	2
 AarambhDevHub/exam-cheating-detection	p9	MIT	agents/top.md:p661-correction	2026-11-05	2	1
 AaronGrace978/EduHelp	p288	AGPL-3.0	-	2026-10-18	1	1
 Aaryan-Kapoor/d2l-cli	p387	unstated	-	2026-10-22	2	1
-aaryansamanta/ai-ethos	p117	unstated	-	2026-10-28	8	7
+aaryansamanta/ai-ethos	p117	no-grant	-	2026-11-11	8	7
 AbdelStark/eu-ai-act-toolkit	p5	MIT	-	2026-10-25	3	2
 abdomoaz58-tech/OpenLearn-AI	p79	AGPL-3.0	-	2026-10-04	1	1
 abdullaitcenter-hue/comet-trail-archives	p158	unstated	-	2026-10-28	4	3
@@ -82,7 +82,7 @@ acestein13/campusintel-mcp	p142	MIT	-	2026-10-12	1	1
 acheamponge/wassce-benchmark	p473	AGPL-3.0|MIT	-	2026-10-29	2	2
 aclascollege/aegis-graph	p310	CC-BY	-	2026-10-19	1	1
 aclascollege/polymath	p351	CC-BY-SA|CC-BY	-	2026-10-21	1	1
-activitypods/activitybadges	p88	unstated	-	2026-10-09	1	1
+activitypods/activitybadges	p88	no-grant	-	2026-11-11	1	1
 Acture/scriptmark	p186	GPL-3.0|no-grant	-	2026-10-14	1	1
 adamjenkins/moodle-local_nomoreai	p219	GPL-3.0	-	2026-10-16	2	2
 adap/flower	p16	Apache-2.0	-	2026-10-01	1	1
@@ -102,10 +102,10 @@ adlnet/CATAPULT	p61	Apache-2.0	-	2026-10-28	4	3
 adlnet/lrs-conformance-test-suite	p12	unstated	-	2026-10-28	7	5
 adlnet/MasterObjectModel	p134	Apache-2.0	-	2026-10-11	2	1
 adlnet/SCORM-2004-4ed-Test-Suite	p91	unstated	-	2026-10-10	1	1
-adlnet/SCORM-to-TLA-Roadmap	p91	unstated	-	2026-10-17	3	3
+adlnet/SCORM-to-TLA-Roadmap	p91	no-grant	-	2026-11-11	3	3
 adlnet/SCORM-to-xAPI-Wrapper	p89	Apache-2.0	-	2026-10-21	9	8
 adlnet/tla	p256	unstated	-	2026-10-17	2	2
-adlnet/xapi-lab	p259	unstated	-	2026-10-17	1	1
+adlnet/xapi-lab	p259	MIT	-	2026-11-11	1	1
 adlnet/xapi-ontology	p256	Apache-2.0	-	2026-10-17	1	1
 adlnet/xapi-profiles	p12	Apache-2.0	-	2026-10-18	2	2
 adlnet/xAPI-SCORM-Profile	p89	unstated	-	2026-10-17	4	4
@@ -124,7 +124,7 @@ AFLucas-UOM/AI-Early-Detection-System-for-Dyslexia-ADHD	p122	MIT	-	2026-10-05	2	
 afri-bit/revibe	p79	MIT	-	2026-10-20	3	2
 agencyenterprise/qti-3-player	p18	MIT	-	2026-10-18	3	2
 agenda-tech-brasil/agenda-tech-brasil	p194	unstated	-	2026-10-14	1	1
-agent0ai/agent-zero	p117	unstated	-	2026-10-21	4	3
+agent0ai/agent-zero	p117	MIT	-	2026-11-11	4	3
 Agenta-AI/awesome-ai-agent-platforms	p378	CC0-1.0	-	2026-10-22	1	1
 agentanywhere/shuddhi	p2	Apache-2.0	-	2026-10-05	2	2
 AgenticAiLabs/Ai-Engineering-Roadmap	p35	MIT	-	2026-10-07	2	1
@@ -267,7 +267,7 @@ anchore/syft	p531	Apache-2.0	compose/patterns.md	2026-11-05	4	1
 Andiii208/seu-handbook-skill	p463	MIT	-	2026-10-27	2	2
 andres-tovar-purdue/ai-grader	p400	unstated	-	2026-10-23	2	1
 android/skills	p258	unstated	-	2026-10-17	1	1
-androz2091/node-ecole-directe	p453	unstated	-	2026-10-26	2	1
+androz2091/node-ecole-directe	p453	Apache-2.0	-	2026-11-11	2	1
 andymatuschak/orbit	p213	AGPL-3.0|Apache-2.0	-	2026-10-15	1	1
 ANFAIA/SkillNet	p197	unstated	-	2026-10-27	3	3
 Angel-builds/edubot-africa	p285	unstated	-	2026-10-18	1	1
@@ -816,7 +816,7 @@ digitalcredentials/mit-badge-image-generation	p306	MIT	-	2026-10-19	1	1
 digitalcredentials/mit-slm	p306	MIT	-	2026-10-19	1	1
 digitalcredentials/mit-web-wallet-poc	p306	MIT	-	2026-10-19	1	1
 digitalcredentials/sandbox-registry	p306	MIT	-	2026-10-19	1	1
-digitalcredentials/sign-and-verify	p62	unstated	-	2026-10-21	3	2
+digitalcredentials/sign-and-verify	p62	MIT	-	2026-11-11	3	2
 digitalcredentials/vc	p62	unstated	-	2026-10-21	3	2
 digitalcredentials/vc-test-fixtures	p306	MIT	-	2026-10-19	1	1
 digitalcredentials/veri-good	p306	MIT	-	2026-10-19	1	1
@@ -1029,7 +1029,7 @@ ETI-PATAGONIA-AR/uPLC	p247	MIT	-	2026-10-16	1	1
 eugeborzone/Auto_Grade_Guarani	p133	no-grant	-	2026-10-12	2	2
 eugeniughelbur/doceo	p438	unstated	-	2026-10-26	2	2
 european-commission-empl/european-digital-credentials	p103	unstated	-	2026-10-17	6	3
-european-commission-empl/European-Learning-Model	p12	unstated	-	2026-10-21	4	4
+european-commission-empl/European-Learning-Model	p12	no-grant	-	2026-11-11	4	4
 evidentlyai/evidently	p20	Apache-2.0	-	2026-11-01	1	1
 evoluteur/braille-tools	p579	MIT	-	2026-11-05	1	1
 examplary/qti	p28	MIT	-	2026-10-20	5	4
@@ -1049,7 +1049,7 @@ fabianastudillo/cafe-con-prompts	p468	unstated	-	2026-10-27	1	1
 fabrica-de-inovacao/expeditto	p133	AGPL-3.0	-	2026-10-11	1	1
 facebookresearch/seamless_communication	p6	CC-BY	-	2026-10-07	8	4
 fairlearn/fairlearn	p20	unstated	-	2026-10-20	4	3
-Faixiang/moodle-mcp	p528	unstated	-	2026-11-05	4	1
+Faixiang/moodle-mcp	p528	MIT	-	2026-11-11	4	1
 faizan45640/google-classroom-mcp-server	p14	unstated	-	2026-10-25	5	4
 fakelag28/vsuet-timetable-api-mcp	p132	MIT	-	2026-10-11	1	1
 falkenslab/moodle-driver	p336	MIT	-	2026-10-20	1	1
@@ -1386,7 +1386,7 @@ idempiere/idempiere	p51	GPL-2.0	-	2026-10-14	3	2
 idiap/coqui-ai-tts	p6	unstated	-	2026-10-07	3	2
 idoforgod/Vibe-learning-AgenticWorkflow	p3	unstated	-	2026-11-05	6	2
 idoqo/waec	p247	MIT	-	2026-10-16	1	1
-idurar/idurar-erp-crm	p409	unstated	-	2026-10-23	1	1
+idurar/idurar-erp-crm	p409	AGPL-3.0	-	2026-11-11	1	1
 iep-ui/iep-ui	p452	unstated	-	2026-10-26	1	1
 ifrn-oficial/cliente_suap_django	p444	unstated	-	2026-10-25	1	1
 ifrn-oficial/cliente_suap_javascript	p444	unstated	-	2026-10-25	1	1
@@ -1439,7 +1439,7 @@ instructure/common-cartridge-viewer	p736	MIT	repos/foundations.md	2026-11-10	1	1
 instructure/ims-lti	p134	MIT	-	2026-10-25	4	2
 instructure/instructure-ui	p736	MIT	repos/foundations.md	2026-11-10	1	1
 instructure/qti	p30	MIT	-	2026-10-18	3	3
-instructure/qtimigrationtool	p367	unstated	-	2026-10-21	1	1
+instructure/qtimigrationtool	p367	custom-notice-full-read-required	-	2026-11-11	1	1
 int64ago/vistep	p736	MIT	agents/top.md	2026-11-10	1	1
 intellectif/learning-kit	p391	MIT	-	2026-10-22	2	1
 interop-alliance/verifier-core	p453	MIT	-	2026-10-26	1	1
@@ -1562,10 +1562,10 @@ jscott5811/IEP-and-Section-504-Plans-Skill	p496	unstated	-	2026-10-28	2	1
 jsrodr/canvas-mcp	p89	MIT	-	2026-10-04	1	1
 jtylek/EpesiCRM	p115	MIT	-	2026-10-21	4	3
 juandacor/opencode-menthor	p452	unstated	-	2026-10-26	1	1
-juanfelipemalaver00-arch/Predictive-model-for-primary-school-dropout-in-Colombia	p134	unstated	-	2026-10-11	1	1
+juanfelipemalaver00-arch/Predictive-model-for-primary-school-dropout-in-Colombia	p134	no-grant	-	2026-11-11	1	1
 JuanI19T/Sistema_Asistencia	p243	Apache-2.0|CC-BY	-	2026-10-16	1	1
 jude-miller-dev/Milky-institute-online	p11	unstated	-	2026-10-14	2	2
-judge0/judge0	p354	unstated	-	2026-10-21	2	2
+judge0/judge0	p354	GPL-3.0	-	2026-11-11	2	2
 JudgePeach/math-question-bank	p123	AGPL-3.0	-	2026-10-28	3	3
 JuezUN/INGInious	p86	AGPL-3.0	-	2026-10-09	2	1
 juliancasaburi/siu-guarani-promedio-extension	p133	MIT	-	2026-10-25	2	2
@@ -1693,7 +1693,7 @@ Krishita17/record-bridge	p241	MIT	-	2026-10-16	1	1
 KristiyanVachev/Leaf-Question-Generation	p213	MIT	-	2026-11-01	1	1
 KristiyanVachev/Question-Generation	p85	GPL-3.0	-	2026-11-01	2	1
 kristofb/ltijs	p370	Apache-2.0	-	2026-10-21	1	1
-kristopherkyle/TAALED	p367	unstated	-	2026-10-21	1	1
+kristopherkyle/TAALED	p367	no-grant	-	2026-11-11	1	1
 krzysztofbury/librus-mcp	p132	MIT	-	2026-10-26	7	6
 krzysztofbury/librus-python-api	p242	MIT	-	2026-10-25	2	2
 ksaklfszf921/skolverket-mcp	p69	MIT	-	2026-10-03	2	1
@@ -1880,7 +1880,7 @@ macewan-cs/lti	p26	MIT	-	2026-10-23	4	3
 macielti/sigaa-cli	p445	GPL-3.0	-	2026-10-25	2	1
 mackt/pi-language-tutor	p531	MIT	-	2026-11-05	2	1
 macsnoeren/genai-open-assessment	p34	GPL-3.0	-	2026-10-07	1	1
-madhvantyagi/Gnos	p11	unstated	-	2026-10-02	2	2
+madhvantyagi/Gnos	p11	MIT	-	2026-11-11	2	2
 MadsDoodle/Career-Navigator	p303	MIT	-	2026-10-18	1	1
 MadsLorentzen/ai-job-search	p47	MIT	-	2026-10-18	3	3
 Magnussmari/TamingTechnology	p245	MIT	-	2026-10-16	1	1
@@ -1998,7 +1998,7 @@ microsoft/AI-System	p258	CC-BY	-	2026-10-17	1	1
 microsoft/autogen	p2	unstated	-	2026-10-29	16	12
 microsoft/generative-ai-for-beginners	p367	MIT	repos/foundations.md	2026-11-06	5	4
 microsoft/LLM-Rubric	p59	MIT	agents/top.md,repos/foundations.md	2026-11-05	1	1
-microsoft/mcp-for-beginners	p355	unstated	-	2026-10-21	1	1
+microsoft/mcp-for-beginners	p355	MIT	-	2026-11-11	1	1
 microsoft/ML-For-Beginners	p155	CC-BY|MIT	-	2026-10-14	5	5
 microsoft/moodle-ai-assistant	p197	MIT	-	2026-10-21	5	3
 microsoft/moodle-local_copilot	p407	GPL-3.0	-	2026-10-23	2	1
@@ -2042,7 +2042,7 @@ mlcommons/croissant	p20	Apache-2.0|MIT	-	2026-10-07	2	2
 mlflow/mlflow	p20	Apache-2.0	-	2026-10-06	1	1
 mlx-cassio/awesome-eu-ai-act	p119	unstated	-	2026-10-11	1	1
 mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK	p134	unstated	-	2026-10-17	4	2
-moarshy/mcp-tutor	p10	unstated	-	2026-10-22	3	3
+moarshy/mcp-tutor	p10	no-grant	-	2026-11-11	3	3
 Moha-abshir/SMS	p358	MIT	-	2026-10-21	1	1
 mohaneesh-03/mcp-tutor	p139	MIT	-	2026-10-12	2	2
 mohi-devhub/antivibe	p192	MIT	-	2026-10-27	2	2
@@ -2119,7 +2119,7 @@ nataliasm23/icones-bandeiras-br-uf	p453	CC0-1.0|MIT	-	2026-10-26	1	1
 natayadev/dataengineering-roadmap	p201	unstated	-	2026-10-14	1	1
 Nathansbud/ReportCardGenerator	p244	BSD	-	2026-10-16	1	1
 natiworldclass/adaptive-tutor	p34	unstated	-	2026-10-07	1	1
-NatLibFi/Annif-tutorial	p204	unstated	-	2026-10-14	1	1
+NatLibFi/Annif-tutorial	p204	CC-BY-4.0	-	2026-11-11	1	1
 natolambert/colloquium	p416	MIT	-	2026-10-23	1	1
 naufaldi/teacher-exam	p360	MIT	-	2026-10-28	6	5
 NaumanNaeem/BEA_2025	p102	unstated	-	2026-10-10	2	1
@@ -2260,7 +2260,7 @@ OPEN-ENT-NG/presences	p360	unstated	-	2026-10-21	1	1
 open-ent/entcore	p360	AGPL-3.0	-	2026-10-21	1	1
 open-ent/exercizer	p360	unstated	-	2026-10-21	1	1
 open-ent/openbadges	p376	unstated	-	2026-10-22	2	1
-open-learning-exchange/planet	p535	AGPL-3.0 (title block, master)	-	2026-11-05	1	1
+open-learning-exchange/planet	p535	AGPL-3.0	repos/foundations.md,verticals/solutions.md,compose/patterns.md	2026-11-11	1	1
 open-source-accessibility/monarch-message	p457	MIT	-	2026-10-26	1	1
 Open-Source-eUdeC/UdeCursos-bot	unpassed	unstated	-	2026-11-05	1	0
 open-spaced-repetition/awesome-fsrs	p127	CC0-1.0	-	2026-10-11	1	1
@@ -2514,7 +2514,7 @@ princechhimpachhimpasaab-lang/omega-epsilon-problem-forge	p464	no-grant	-	2026-1
 Principled-Evolution/gopal	p121	unstated	-	2026-10-14	2	2
 Priyamakeshwari/TeachGPT	p100	MIT	-	2026-10-18	4	3
 processing/p5.js	p198	LGPL	-	2026-10-16	5	4
-Professional-X/StudyCoach	p209	unstated	-	2026-10-22	2	2
+Professional-X/StudyCoach	p209	no-grant	-	2026-11-11	2	2
 professor-john-fulton/repo-grading-assistant	p86	MIT	-	2026-10-09	1	1
 programadores-obreros/Agente-editor-inet	p90	GPL-3.0	-	2026-10-09	1	1
 project-sunbird/knowledge-platform	p103	MIT	-	2026-10-17	4	2
@@ -2544,7 +2544,7 @@ purysho/EduBoard	p242	AGPL-3.0	-	2026-10-16	1	1
 py-why/dowhy	p535	MIT (title block)	-	2026-11-05	1	1
 py-why/EconML	p535	MIT (title block; page labels none)	-	2026-11-05	1	1
 pykt-team/pykt-toolkit	p4	MIT	compose/patterns.md,repos/foundations.md	2026-11-05	15	8
-pyodide/pyodide	p280	unstated	-	2026-10-18	2	1
+pyodide/pyodide	p280	MPL-2.0	-	2026-11-11	2	1
 PyThaiNLP/pythainlp	p7	Apache-2.0	-	2026-10-06	2	1
 python-adaptive/adaptive	p367	unstated	-	2026-10-21	2	1
 python-webuntis/python-webuntis	p15	BSD	-	2026-10-06	1	1
@@ -2581,11 +2581,11 @@ rage/secret-project-331	p187	Apache-2.0	-	2026-10-14	1	1
 raghavendrashivam474/GradeFlow	p244	MIT	-	2026-10-16	1	1
 raif-s-naffah/xapi-rs	p81	GPL-3.0	-	2026-10-04	1	1
 rajeevsathish/project-sunbird.github.io	p408	AGPL-3.0	-	2026-10-23	2	1
-rajshah6/arXivisual	p196	unstated	-	2026-10-14	1	1
+rajshah6/arXivisual	p196	no-grant	-	2026-11-11	1	1
 RakeshBabuGajula/Exam_Intellect	p9	MIT	-	2026-10-11	3	2
 ramomar/siase-schedule-scraper	unpassed	unstated	-	2026-11-05	1	0
 ramsrigouthamg/Questgen.ai	p85	MIT	-	2026-11-01	5	3
-randi-c-dubs/K12-AI-ed	p245	unstated	-	2026-10-16	1	1
+randi-c-dubs/K12-AI-ed	p245	no-grant	-	2026-11-11	1	1
 RandMelville/claude-war-room	p499	MIT	-	2026-10-28	2	2
 RandMelville/slm-writing-feedback-tutor-ptbr	p474	unstated	-	2026-10-27	1	1
 rasbt/LLMs-from-scratch	p2	Apache-2.0|no-grant	-	2026-11-05	12	7
@@ -2610,7 +2610,7 @@ Redomic/intellicode-backend	p11	MIT	-	2026-10-06	1	1
 regexPattern/fiuba-reviews-backend	p443	GPL-3.0	-	2026-10-25	2	1
 reneverland/CBIT-AiExam-plus	p356	unstated	-	2026-10-21	2	2
 repeat-space/anki-apkg-export	p667	MIT	repos/foundations.md	2026-11-05	1	1
-repos/CaviraOSS	p416	unstated	-	2026-10-23	2	1
+repos/CaviraOSS	p416	no-grant	-	2026-11-11	2	1
 repos/dodona-edu	p177	unstated	-	2026-10-13	1	1
 repos/gmilano	p435	unstated	-	2026-10-25	2	1
 repos/HKUDS	p37	unstated	-	2026-10-28	7	6
@@ -2637,7 +2637,7 @@ Robyn-Collie/QuizWeaver	p245	MIT	-	2026-10-27	2	2
 rodrigmatrix/sigaa_ufc_android	p443	Apache-2.0	-	2026-10-25	2	1
 RohanMuppa/brightspace-mcp-server	p14	MIT	agents/top.md	2026-11-05	25	14
 RohanMuppa/purdue-mcp	p73	MIT	-	2026-10-03	1	1
-rohit-dev45/programming-tutor-agent	p331	unstated	-	2026-10-20	1	1
+rohit-dev45/programming-tutor-agent	p331	no-grant	-	2026-11-11	1	1
 rohitg00/ai-engineering-from-scratch	p2	MIT	-	2026-11-01	21	17
 rohitg00/k8sgames	p245	Apache-2.0	-	2026-10-16	1	1
 rolfis/qti-convert	p84	Apache-2.0	-	2026-11-01	3	3
@@ -2653,7 +2653,7 @@ RoseCityRobotics/ai-developer-resources	p381	no-grant	-	2026-10-22	1	1
 rosewang2008/edu-convokit	p101	unstated	-	2026-10-04	1	1
 rosshd/openlearn	p664	AGPL-3.0	-	2026-11-05	1	1
 roVeloupe/essay-grader	p464	no-grant	-	2026-10-26	1	1
-RozhakDev/EduPintarIPAS	unpassed	unstated	-	2026-11-05	1	0
+RozhakDev/EduPintarIPAS	unpassed	MIT	-	2026-11-11	1	0
 rpatrik96/hallmark	p310	MIT	-	2026-10-19	2	1
 rphilipzhang/AI-PhD-S26	p517	MIT	-	2026-10-29	1	1
 rstudio/ggcheck	p85	MIT	-	2026-10-11	3	2
@@ -2677,7 +2677,7 @@ ruvnet/ruflo	p258	unstated	-	2026-10-17	1	1
 rwrife/rubric-desk	p432	MIT	-	2026-10-25	2	1
 ryannli/immersive-reading	p463	unstated	-	2026-10-26	2	2
 Ryfter/canvas-toolchain	p388	MIT	-	2026-10-22	2	1
-s010s/prehistoric-animal-museum	p477	unstated	-	2026-10-28	2	2
+s010s/prehistoric-animal-museum	p477	AGPL-3.0	-	2026-11-11	2	2
 S4-NetQuest/react-scorm-provider	p89	MIT	-	2026-10-18	2	2
 SaadRahman01/claude-moodle-dev	p130	MIT	-	2026-10-15	2	2
 SaadRahman01/moodle-mcp	p37	MIT	-	2026-10-29	5	4
@@ -2716,7 +2716,7 @@ sas-fossdev/saspes	p239	AGPL-3.0|no-grant	-	2026-10-16	1	1
 satvik314/educhain	p42	MIT	agents/top.md	2026-11-06	22	14
 savinoo/ai-grading-system	p417	MIT	-	2026-10-24	4	2
 savvides/idstack	p89	MIT	-	2026-10-14	3	2
-sayeeg-11/SahiiiDSA	p470	unstated	-	2026-10-27	1	1
+sayeeg-11/SahiiiDSA	p470	no-grant	-	2026-11-11	1	1
 saylordotorg/moodle-local_ai_course_assistant	p104	GPL-3.0	-	2026-10-15	6	5
 saytooyum/AI-Based-Timetable-Generation-System	p132	MIT	-	2026-10-13	3	2
 SayvaBR/assistente-ped	p359	unstated	-	2026-10-21	1	1
@@ -2771,7 +2771,7 @@ shaheeranser/exam-proctor	p359	unstated	-	2026-10-21	1	1
 Shahzar07/Lesson-Planner-Ai	p420	MIT|no-grant	-	2026-10-24	1	1
 ShaishavMaisuria/research-paper-lifecycle-skills	p692	Apache-2.0	repos/foundations.md	2026-11-07	1	1
 shakir-abdo/ch32v003-journey	p465	MIT	-	2026-10-26	1	1
-shakyanaitik0-bot/Agentic_AI_Tutor	p36	unstated	-	2026-10-07	2	1
+shakyanaitik0-bot/Agentic_AI_Tutor	p36	no-grant	-	2026-11-11	2	1
 SHALINISAURAV/AI-Study-Assistant	p156	unstated	-	2026-10-12	1	1
 shareAI-lab/learn-claude-code	p2	MIT	-	2026-09-30	1	1
 sharziki/purdue-mcp	p73	unstated	-	2026-10-21	3	2
@@ -2825,7 +2825,7 @@ sitor-ai/frametell	p254	AGPL-3.0	-	2026-11-04	21	14
 SIU-Toba/docker-guarani	p133	unstated	-	2026-10-12	2	2
 sjgant80-hub/fall-euaiact	p437	MIT	-	2026-10-25	2	1
 SJRiz/pytogether	p123	MIT	-	2026-10-29	4	4
-skfriese/simple-scorm-api	p89	unstated	-	2026-10-09	1	1
+skfriese/simple-scorm-api	p89	no-grant	-	2026-11-11	1	1
 skhdemo/uoft-quercus-mcp	p132	MIT	-	2026-10-20	3	3
 skillcoco/skillcoco	p156	MIT	-	2026-10-29	3	3
 Skolverket/dnp-access-management	p17	unstated	-	2026-10-06	1	1
@@ -2863,7 +2863,7 @@ sonyccd/qti-playground	p84	MIT	-	2026-10-18	2	2
 soumics/adaptive-ai-tutor	p34	MIT	-	2026-10-07	1	1
 soumics/llm-rag-assistant	p34	MIT	-	2026-10-07	1	1
 sourcegrade/jagr	p309	AGPL-3.0	-	2026-10-19	2	1
-spal740/GradeScribe	p34	unstated	-	2026-10-07	1	1
+spal740/GradeScribe	p34	no-grant	-	2026-11-11	1	1
 spatialaudio/data-driven-audio-signal-processing-lecture	p204	CC-BY|MIT	-	2026-10-14	1	1
 spatialaudio/digital-signal-processing-lecture	p203	CC-BY	-	2026-10-14	1	1
 spatialaudio/signals-and-systems-lecture	p203	CC-BY	-	2026-10-14	1	1
@@ -2917,10 +2917,10 @@ superbuilders/timeback-dev-python	p40	unstated	-	2026-10-22	4	2
 supermemo/SuperMemoAssistant	p667	MIT	repos/foundations.md	2026-11-05	1	1
 Supermikeka/ai-mcu-simulab	p175	unstated	-	2026-10-13	1	1
 SuperPiTT/moodle-rag	p388	MIT	-	2026-10-22	2	1
-suren-kk/armenian-national-library-mcp	p42	unstated	-	2026-10-02	1	1
+suren-kk/armenian-national-library-mcp	p42	MIT	-	2026-11-11	1	1
 surlabs/aichatformoodle	p370	unstated	-	2026-10-21	1	1
 suryast/indonesia-gov-apis	p487	MIT	-	2026-10-27	1	1
-SuyashMore/AI-Proctored-Examination-System	p33	unstated	-	2026-10-07	3	1
+SuyashMore/AI-Proctored-Examination-System	p33	MIT	-	2026-11-11	3	1
 SverigesSandareamatorer/SSA-Akademin	p204	CC-BY	-	2026-10-14	1	1
 svws-nrw/Schild-NRW-3-Zeugnisse-Sek-I	p234	MIT	-	2026-10-16	1	1
 svws-nrw/SVWS-BK-Abschlussberechnungen	p234	BSD	-	2026-10-16	1	1
@@ -3195,7 +3195,7 @@ vincenzo-afk/Proctored-MCQ-Exam-Platform	p9	MIT	agents/top.md:p661-correction	20
 Vinger-lee/leap-framework	p79	MIT	-	2026-10-09	2	1
 viquta/Agent_Newton	p240	MIT	-	2026-10-16	2	1
 virgiliojr94/book-to-skill	p12	unstated	-	2026-10-29	16	12
-virginiandujar/educa-ia	p32	unstated	-	2026-10-07	1	1
+virginiandujar/educa-ia	p32	no-grant	-	2026-11-11	1	1
 virtualarkansas/jupyterlite-zestables	p134	unstated	-	2026-10-11	1	1
 virtualryder/edu-ai-agents	p121	MIT	agents/top.md	2026-11-05	1	1
 virtUOS/abstimmbar	unpassed	Apache-2.0	-	2026-11-05	2	0
@@ -3214,7 +3214,7 @@ w3c-ccg/edu_occ_verifiable_credentials	p376	unstated	-	2026-10-22	1	1
 w3c/vc-data-model	p306	no-grant	-	2026-10-19	1	1
 WakeelDev/EduGenius	p122	Apache-2.0	-	2026-10-05	2	1
 Wakoma/Lokal	p499	MIT	-	2026-10-28	1	1
-Wakoma/nimble	p499	unstated	-	2026-10-28	2	2
+Wakoma/nimble	p499	CERN-OHL-S-2.0	-	2026-11-11	2	2
 walkinglabs/hands-on-modern-rl	p736	CC-BY-NC-SA-4.0-REFUSED	-	2026-11-10	1	1
 walkinglabs/learn-harness-engineering	p203	MIT	-	2026-10-14	1	1
 walkinglabs/modern-llm-notebook	p468	unstated	-	2026-10-27	3	2
@@ -3266,7 +3266,7 @@ xapi-labs/xapi-cli	p32	MIT	-	2026-10-02	2	1
 xapijs/cmi5	p61	MIT	-	2026-10-08	2	1
 xapijs/xapi	p61	MIT	-	2026-10-08	2	1
 xch1986/AI-Tutor	p517	MIT	-	2026-10-29	1	1
-XCINDYZ/AFRIA	p119	unstated	-	2026-10-05	1	1
+XCINDYZ/AFRIA	p119	no-grant	-	2026-11-11	1	1
 xerj-org/xerj	p258	unstated	-	2026-10-26	2	2
 xevrion/breakscale	p477	MIT	-	2026-10-28	2	2
 xgabrielcv/auto-matricula-sigaa-unb	p106	unstated	-	2026-10-13	4	4
@@ -3317,7 +3317,7 @@ yh2072/edgameclaw	p3	AGPL-3.0	-	2026-10-29	9	9
 yjo2lee/knowsim	p256	no-grant	-	2026-10-17	1	1
 YL1N/EduGuardBench	p5	unstated	-	2026-09-30	1	1
 yoannchb-pro/MoodleGPT	p202	unstated	-	2026-10-14	1	1
-Yogndrr/MERN-School-Management-System	p736	unstated	-	2026-11-10	1	1
+Yogndrr/MERN-School-Management-System	p736	no-grant	-	2026-11-11	1	1
 yokowasis/autograder	p388	unstated	-	2026-10-26	3	3
 yomidevs/yomitan	p312	GPL-3.0	-	2026-10-19	1	1
 yonatanlop/detectoria	p15	unstated	-	2026-10-01	1	1
@@ -3357,7 +3357,7 @@ ZeKaiNie/universal-examprep-skill	p3	MIT	agents/top.md	2026-11-05	25	19
 ZelinZhou-THU/lecture-notes-creator	p579	Apache-2.0	-	2026-11-05	1	1
 ZelinZhou-THU/stem-tutor-agent	p80	AGPL-3.0	-	2026-10-12	4	2
 Zemmeng/claude-study-system	p185	unstated	-	2026-10-14	2	1
-Zenglian990/AI_Tutor_Release	p3	unstated	-	2026-10-29	23	21
+Zenglian990/AI_Tutor_Release	p3	MIT	-	2026-11-11	23	21
 zensation-ai/zenbrain	p336	Apache-2.0	-	2026-10-20	1	1
 ZeydSaeed/SIS	p36	unstated	-	2026-10-07	2	1
 zhamanov-seabus/nau-ai-advisor	p121	unstated	-	2026-10-14	2	2
@@ -3747,3 +3747,22 @@ wongcyrus/Google-AI-Classroom	p745	discovered-not-read (p745 assessment harvest)
 wzsisshadiao-crypto/dq-questionbank-core	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
 yf-team/yf-boot	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
 zxzin/runpro	p745	discovered-not-read (p745 assessment harvest)	-	2026-11-10	1	1
+
+UnlockedLabs/unlocked-core	p755	Apache-2.0	agents/top.md,repos/foundations.md,verticals/solutions.md,compose/patterns.md	2026-11-11	1	1
+UnlockedLabs/UnlockEdv2	p755	Apache-2.0 (redirect alias of unlocked-core)	agents/top.md	2026-11-11	1	1
+UnlockedLabs/unlocked-hiset-ai	p755	UNREADABLE-no-verdict	agents/top.md	2026-11-11	1	1
+operepo/ope	p755	MIT	agents/top.md,repos/foundations.md,verticals/solutions.md,compose/patterns.md	2026-11-11	1	1
+open-prison-education/ope-server	p755	discovered-not-read	verticals/solutions.md	2026-11-11	1	1
+BloomBooks/BloomDesktop	p755	MIT	repos/foundations.md,verticals/solutions.md,compose/patterns.md	2026-11-11	1	1
+UstadMobile/UstadMobile	p755	AGPL-3.0+UI-attribution-term	repos/foundations.md,verticals/solutions.md,compose/patterns.md	2026-11-11	1	1
+chimple/alxp	p755	Apache-2.0	agents/top.md,repos/foundations.md	2026-11-11	1	1
+JSTOR-Labs/pep	p755	MIT	-	2026-11-11	1	1
+andrewsgardner/WebLearn	p755	MIT	-	2026-11-11	1	1
+nam-301/culturabinaria	p755	CC-BY-SA-4.0	verticals/solutions.md,compose/patterns.md	2026-11-11	1	1
+sketch-city/hou-literacy	p755	no-grant	agents/top.md,verticals/solutions.md	2026-11-11	1	1
+corbecker/MALA	p755	no-grant	agents/top.md,verticals/solutions.md	2026-11-11	1	1
+BuildForSDGCohort2/Team-195-Soma-Frontend	p755	no-grant	agents/top.md,verticals/solutions.md	2026-11-11	1	1
+qwertyuiop9898123/KouninPass	p755	no-grant	agents/top.md,verticals/solutions.md	2026-11-11	1	1
+digitalgreenorg/FarmStack	p755	no-grant	agents/top.md	2026-11-11	1	1
+chimple/chimple-app	p755	does-not-exist	-	2026-11-11	1	1
+Ameelio/ameelio-tv	p755	does-not-exist	-	2026-11-11	1	1

@@ -1,0 +1,28 @@
+term	method	hits_all_8_shelves	reading
+adult basic education	grep -oiF	0	sector name in US/Canada
+second chance	grep -oiF	0	funding category and political frame
+GED	grep -ow	0	US equivalency credential
+GED	grep -oiF	1886	COLLIDING TOKEN - all substrings of aged/managed/engaged/merged (T507)
+HiSET	grep -ow	0	alternate US equivalency credential
+ABE	grep -ow	0	adult basic education programme type
+ESOL	grep -ow	0	adult language programme type
+equivalency	grep -ow	0	the credential class
+nonformal	grep -oiF	0	sector outside ministries of schooling
+non-formal	grep -oiF	1	same, hyphenated
+informal learning	grep -oiF	0	-
+basic skills	grep -oiF	0	-
+night school	grep -oiF	0	-
+incarcerat	grep -oiF	0	carceral layer
+prison	grep -oiF	2	effectively nil
+correctional	grep -oiF	1	effectively nil
+youth and adult	grep -oiF	0	UN/LATAM term of art (EPJA)
+adult literacy	grep -oiF	4	0 on agents/top, repos/foundations, verticals/solutions
+adult education	grep -oiF	1	-
+adult learner	grep -oiF	4	-
+dropout	grep -oiF	75	THE ASYMMETRY - prevention held, re-entry absent
+vocational	grep -oiF	83	adult employment learning IS held
+upskilling	grep -oiF	25	same
+reskilling	grep -oiF	14	same
+TVET	grep -oiF	12	same
+lifelong learning	grep -oiF	6	-
+CM/Rec	grep -oiF	0	Council of Europe recommendation series - entirely absent (T497)

@@ -1,8 +1,41 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-10
+updated: 2026-11-11
 ---
+
+## 🆕 2026-11-11 (p755) — 🔴 **THE ADULT / NON-FORMAL / SECOND-CHANCE AGENT LAYER (`15`+, OUTSIDE SCHOOLING): `GED OR HiSET OR "high school equivalency"` RETURNS **`9`** REPOSITORIES AND **EVERY ONE HAS `0★`**. 🔴 THE REGISTER'S ONE REAL AI TUTOR IS NAMED IN A PUBLIC README AND IS NOT PUBLICLY READABLE.**
+
+**`3` agent rows added — and `3` is all that exists, so the nil is the finding · `33` terms × `8` shelves mention-counted · `5` query denominators measured · `19` licence payloads byte-read · `1` index value materially corrected (🔴 **refusing** direction) · `26` `T302` compliant grant-absences · `1` rename event filed · `ACTION p754-B` executed.**
+
+### 🔴 The register, and `754` passes of silence — measured with `grep -ow`, not `grep -F`
+
+`adult basic education` `0` · `second chance` `0` · `GED` `0` · `HiSET` `0` · `ABE` `0` · `ESOL` `0` · `equivalency` `0` · `nonformal` `0` · `informal learning` `0` · `basic skills` `0` · `night school` `0` · `incarcerat*` `0` · `youth and adult` `0` · `adult literacy` **`4`** (and `0` on the three data shelves) — **against `dropout` `75`, `vocational` `83`, `upskilling` `25`.**
+🔵 **The asymmetry is the explanation:** this base holds dropout **prevention** and adult **employment** learning, and holds adult **re-entry** at zero. The `15`+ learner who already left school appears in no institution's system, so no vendor, topic or market report ever surfaced them.
+🔴 **Instrument warning, third reproduction (`T507`):** `grep -oiF GED` returns **`1,886`** hits — every one a substring of `aged`, `managed`, `engaged`, `merged`. `grep -ow GED` returns **`0`**. **Any term of four characters or fewer must be word-bounded or the test reports the opposite of the truth.**
+
+### 🔴 The denominators — totals from the HTML search channel, not samples
+
+`GED OR HiSET OR "high school equivalency"` → 🔴 **`9`, best `0★`** · `"adult basic education"` → 🔴 **`3`, all `0★`** · `"non-formal education" OR "nonformal education"` → **`19`, best `5★`** · `"prison education" OR "correctional education"` → **`19`, best `19★`** · `"adult literacy"` → **`55`, best `4★`**.
+🔵 **Thinnest register this base has enumerated** — against `p754`'s four ECEC repositories above `20★` and `p745`'s `10★` best grading agent.
+🔴 **Channel note (`T501`):** `gh api search/repositories` returns `{"total_count":0}` for every public query while reporting a healthy quota — **authenticated, live, and scoped to this session's own repositories.** A pass that trusted it would publish `0` as a denominator and be wrong every time. `curl` against `github.com` is `403`; `api.github.com/repos/…` is session-gated (**`T388`, fourth consecutive pass**).
+
+### 🟢 New this week — what actually exists
+
+| Agent | Repo | Licence (byte-read) | ★ | Region | Signal |
+|---|---|---|---|---|---|
+| **UnlockEd v2 / unlocked-core** | [`UnlockedLabs/unlocked-core`](https://github.com/UnlockedLabs/unlocked-core) | 🟢 Apache-2.0 (`9,177 B`, `65976209c00e`) | `30★` | **North America** | 🟢 **The only permissive carceral SIS on earth**, organised around **good-time credits** — the metric this sector buys on. 🔴 **Will not `compose` up:** its README delegates tutoring to `unlocked-hiset-ai`, unreadable on both channels (`T494`). 🔵 Renamed from `UnlockEdv2`; old address is a live redirect (`T495`). |
+| **OPE — Open Prison Education** | [`operepo/ope`](https://github.com/operepo/ope) | 🟢 MIT (`1,070 B`, `b97fd346059e`) | `19★` | **North America** | 🟢 **Highest-starred on-topic result in the whole `19`-repository carceral denominator, and MIT.** Offline Docker services + offline laptop sync; `646` commits. README opens on the real constraint: *"a struggle to install and manage online services in an offline world."* |
+| **Adult Literacy XPRIZE archive** | [`chimple/alxp`](https://github.com/chimple/alxp) | 🟢 Apache-2.0 (`11,356 B`, `43070e2d4e53`) | `1★` | Global | 🔵 The register's **only permissive provenance artefact** from a funded, outcome-measured adult-literacy intervention. 🔴 `1★` — the most credible experiment in the field left its code in a repository nobody starred. |
+
+### 🔴 `T302` honest negatives — the register's licence signature, and it is `0 / 5`
+
+[`sketch-city/hou-literacy`](https://github.com/sketch-city/hou-literacy) `4★` **no grant** (the best-starred `"adult literacy"` repo on GitHub) · [`corbecker/MALA`](https://github.com/corbecker/MALA) `2★` **no grant** (Android adult literacy with OCR + TTS + ASR — 🔴 **functionally the most on-register artefact found anywhere, and unusable**) · [`BuildForSDGCohort2/Team-195-Soma-Frontend`](https://github.com/BuildForSDGCohort2/Team-195-Soma-Frontend) `0★` **no grant** · [`qwertyuiop9898123/KouninPass`](https://github.com/qwertyuiop9898123/KouninPass) `0★` **no grant** (🔴 the only APAC candidate — **the APAC nil holds, tested not assumed**) · [`nam-301/culturabinaria`](https://github.com/nam-301/culturabinaria) `5★` **CC BY-SA 4.0** (`20,131 B`, `7abe19ec9bb7`) — a **content** licence, not a software grant.
+🔴 **`4 / 5` ungranted and the fifth not a code licence: `0 / 5` buildable.** All ten addresses probed per repository (`main`+`master` × `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`).
+
+### 🔴 The index correction of the pass, and it binds the product surface
+
+[`UstadMobile/UstadMobile`](https://github.com/UstadMobile/UstadMobile) `34★` — index says **`AGPL-3.0 license`**, flat. The payload (`1,002 B`, `4d6f05b99e6b`) is **not the canonical AGPL text**: it grants AGPL-3.0 *"with the following additional terms"*, requiring *"Powered by Ustad Mobile"* credits on the login screen, about screen and navigation drawer, **"preserved and visible to the user without any additional scrolling or interaction."** 🔴 **A white-label client is told "AGPL-3.0" by the index and finds a contractual logo on their login screen at UAT.** Decide it in week one (`T493`).
 
 ## 🆕 2026-11-10 (p754) — 🔴 **THE EARLY-CHILDHOOD (ECEC, `0`–`8`) AGENT LAYER: THE WHOLE WORLD'S OPEN ECEC ESTATE ABOVE `20★` IS **FOUR** REPOSITORIES, AND `child development milestone stars:>20` RETURNS **`0`**. 🟢 THE ONE REAL AGENT IN THE REGISTER IS AUSTRALIAN, MIT AND *SAFETY-AWARE* BY DESIGN. 🔴 THE CODE IS OPEN AND THE SCREENING INSTRUMENT IS NOT.**
 

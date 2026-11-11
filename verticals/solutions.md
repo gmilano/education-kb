@@ -1,10 +1,46 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-10
+updated: 2026-11-11
 ---
 
 # Vertical Platforms — Education
+
+## 🆕 `p755` — 🟢 **THE ADULT / NON-FORMAL PLATFORM SHELF: `4` DEPLOYABLE SYSTEMS, AND NOT ONE OF THEM IS ADULT-EDUCATION SOFTWARE. 🔴 THE SECTOR'S REAL PLATFORM IS A STATE PROGRAMME WITH `40.3` MILLION LEARNERS AND NO AI IN IT.**
+
+### 🔴 Say this in the first meeting
+
+🔴 **There is no adult-education platform category to choose from.** Measured: `"adult basic education"` → **`3` repositories, all `0★`**; `GED OR HiSET OR "high school equivalency"` → **`9` repositories, all `0★`** (`T491`). The commercial side of this sector (Aztec, Essential Education, Burlington English, Edovo and Orijin in corrections) is **entirely proprietary with no open core** — 🟢 **and as with ECEC at `p754`, that is the integration opportunity, not a blocker.**
+
+🟢 **The platform that actually runs this sector at scale is a government programme, and this base can name its stack.** India's **ULLAS / New India Literacy Programme** reaches **~`4.03` crore (`40.3` million) registered learners aged `15`+** on an outlay of **₹`1,037.90` crore through FY `2026-27`**, delivered over **TV, radio and phone apps** in **`22` Indian languages** via **DIKSHA**, with the **FLNAT** assessment twice yearly. 🔴 **No AI component exists in it.** 🟢 **DIKSHA runs on Sunbird, which this base already holds as permissive and cites `533` times** — so the integration target is already on these shelves (`T498`, `P276`). 🔴 **The outlay ends FY `2026-27` and no successor was found: that is the procurement window.**
+
+### 🟢 Adoptable — real install bases, AI can be layered on, **read the grant first**
+
+| Platform | Repo | Grant (byte-read `2026-11-11`) | Install base / scale | Stack | What you would actually build on it |
+|---|---|---|---|---|---|
+| **Planet Learning** (Open Learning Exchange) | [`open-learning-exchange/planet`](https://github.com/open-learning-exchange/planet) | 🟡 **AGPL-3.0** — `34,520 B`, sha256₁₂ `76a97c878c9c` (pre-switch FSF vintage, `T503`) | `70★`, `43` forks; locales include Somali, Nepali, Swahili, Arabic | Angular + CouchDB | 🟢 **The only community-learning platform in this register that already ships a model gateway** — its README documents chat against OpenAI, Perplexity, Deepseek and Gemini, so you are extending an AI surface rather than building one. 🔴 **AGPL network copyleft: deploy it as the client's system, never as Globant-hosted SaaS.** 🔵 CouchDB replication is the right primitive for intermittent connectivity. |
+| **Ustad Mobile** | [`UstadMobile/UstadMobile`](https://github.com/UstadMobile/UstadMobile) | 🔴 **AGPL-3.0 + mandatory UI attribution term** — `1,002 B`, sha256₁₂ `4d6f05b99e6b`. **Index says plain AGPL-3.0; CORRECTED (`T493`)** | `34★`; Dari, Pashto, Tajik translations | Kotlin Multiplatform | 🟢 **Offline-first LMS with peer marking, attendance and device-to-device sync, claiming `97%+` bandwidth reduction for a class of `30`.** 🔴 **The licence requires a visible *"Powered by Ustad Mobile"* credit on the login screen, about screen and navigation drawer, with no scrolling** — a white-label engagement must either accept the badge or not use this platform. Decide that in week one, not at UAT. |
+| **UnlockEd v2** | [`UnlockedLabs/unlocked-core`](https://github.com/UnlockedLabs/unlocked-core) | 🟢 **Apache-2.0** — `9,177 B`, sha256₁₂ `65976209c00e` | `30★`, `22` forks; self-described **WIP**, no published release | Docker Compose; WSL / macOS / Linux | 🟢 **The only permissive carceral SIS in existence, and it is organised around the metric this sector buys on: good-time credits.** 🔴 **Will not `compose` up as published** — the tutor is a sibling repo that is not publicly readable (`T494`). 🔵 **That makes it a platform engagement with a defined, fundable gap**, which is a better starting position than a finished product you cannot change. |
+| **OPE — Open Prison Education** | [`operepo/ope`](https://github.com/operepo/ope) | 🟢 **MIT** — `1,070 B`, sha256₁₂ `b97fd346059e` | `19★`, `646` commits; sibling `open-prison-education/ope-server` | Docker, offline service bundles | 🟢 **The air-gap delivery layer, permissively licensed.** Offline Docker services plus offline laptop syncing — the only open project that has solved *"install and manage online services in an offline world"* for a correctional facility. 🔵 **Pair with a self-hosted model:** in a facility with no inbound network a hosted-API tutor is not a compliance question, it is simply impossible. |
+
+### 🟡 Adjacent, and the right answer more often than the rows above
+
+| Platform | Grant (byte-read `2026-11-11`) | Why it belongs here |
+|---|---|---|
+| **Bloom** — [`BloomBooks/BloomDesktop`](https://github.com/BloomBooks/BloomDesktop) | 🟢 **MIT** — `1,072 B`, sha256₁₂ `858e015fbf93`, `Copyright (c) 2011-2026 SIL Global` | 🟢 **A levelled-text factory under MIT, maintained by an institutional publisher.** 🔴 Its README says *children's* books and never claims literacy or adult use — filed on that record. 🔵 But graded text in a learner's own first language, at volume, is precisely what every adult literacy programme lacks and no adult platform produces (`P277`). |
+| **Sunbird / DIKSHA** | 🟢 **MIT** (held, `533` citations) | 🟢 **The stack under the world's largest adult-literacy programme (`T498`).** Already on these shelves for schooling; **the adult use is new and is where the ULLAS successor procurement will land.** |
+| **Kolibri** (Learning Equality) | 🟢 **MIT** (held, `569` citations) | 🟢 Offline content distribution, already held. 🔵 **The content layer for both carceral (`P275`) and community delivery** — the one piece `operepo/ope` deliberately does not provide. |
+| **CommCare HQ** — [`dimagi/commcare-hq`](https://github.com/dimagi/commcare-hq) | 🟢 **BSD-3-Clause** (held from `p754`, `525★`) | 🟢 **Front-line-worker case management, and in this register the front-line worker is the literacy volunteer.** ULLAS is **volunteer-delivered with door-to-door learner survey** — that is a case-management problem before it is a tutoring problem. |
+| **nimble** — [`Wakoma/nimble`](https://github.com/Wakoma/nimble) | 🔴 **CERN-OHL-S v2 (strongly reciprocal)** — `13,419 B`, sha256₁₂ `d6475a84171f` | 🟢 **The physical layer: a portable offline community network for provision with no building and no connectivity.** 🔴 **Strong reciprocity reaches the hardware design, enclosure and documentation** — not just code. Read it before anything is manufactured. |
+
+### 🔴 Not adoptable, and worth naming so nobody re-finds them
+
+| Candidate | Why not |
+|---|---|
+| [`sketch-city/hou-literacy`](https://github.com/sketch-city/hou-literacy) (`4★`), [`corbecker/MALA`](https://github.com/corbecker/MALA) (`2★`), [`BuildForSDGCohort2/Team-195-Soma-Frontend`](https://github.com/BuildForSDGCohort2/Team-195-Soma-Frontend) (`0★`), [`qwertyuiop9898123/KouninPass`](https://github.com/qwertyuiop9898123/KouninPass) (`0★`) | 🔴 **No grant at any of ten probed addresses each** (`main`+`master` × `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`). These are the four best-starred on-topic adult-literacy and equivalency projects on GitHub, and **none of them can legally be used** (`T492`). |
+| [`nam-301/culturabinaria`](https://github.com/nam-301/culturabinaria) (`5★`) | 🟡 **CC BY-SA 4.0** — `20,131 B`, sha256₁₂ `7abe19ec9bb7`. **The best-starred `"non-formal education"` repository, and its grant is a *content* licence with share-alike** — usable as teaching material, not as software, and derivatives inherit the SA term. |
+| Aztec, Essential Education, Burlington English (ABE/ESOL); Edovo, Orijin / APDS (corrections) | 🔴 **Entirely proprietary, no open core.** 🟢 **Integration opportunity:** the corrections vendors own the tablets in the facilities, and `T496`'s statutory Pell funding flows through the programmes that run on them. |
+| LearnHouse (`AGPL-3.0`, `34,523 B`, sha256₁₂ `8486a10c4393`), ClassroomIO (`AGPL-3.0`, same payload — 🔴 **ledger said `unstated`; CORRECTED**) | 🔵 **Already held, re-verified this pass, and not adult-education platforms.** Recorded here only because ClassroomIO's grant had been carried as `unstated` for `21` passes while being one `curl` away and **byte-identical to a payload this base already held** (`T505`). |
 
 ## 🆕 `p754` — 🟢 **THE ECEC PLATFORM SHELF: `4` DEPLOYABLE SYSTEMS, AND THE ONLY TRUE ECEC-NATIVE ERP ON EARTH IS A FINNISH MUNICIPAL ONE AT `59★`. 🟢 THE ONE PERMISSIVE SYSTEM IS NOT ECEC SOFTWARE AT ALL — IT IS FRONT-LINE-WORKER CASE MANAGEMENT, AND THAT IS THE ARCHITECTURE. 🔴 THERE IS NO "ODOO OF CHILDCARE".**
 

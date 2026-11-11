@@ -1,8 +1,88 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-10
+updated: 2026-11-11
 ---
+
+## 🆕 `P275`–`P279` — added at p755 (2026-11-11)
+
+🟢 **These five recipes serve the adult, non-formal and second-chance register (`15`+, outside formal schooling).** Every component is named with its address, its byte-read grant and its region.
+
+🔴 **Four constraints apply to all five and none is negotiable.**
+
+1. 🔴 **There is no adult-education platform to build on.** `T491`: `GED OR HiSET OR "high school equivalency"` → **`9` repositories, every one at `0★`**; `"adult basic education"` → **`3`, all `0★`**. **So every recipe founds on an *adjacent* permissive substrate** — a carceral SIS ([`UnlockedLabs/unlocked-core`](https://github.com/UnlockedLabs/unlocked-core), Apache-2.0), offline service delivery ([`operepo/ope`](https://github.com/operepo/ope), MIT), a community LMS ([`open-learning-exchange/planet`](https://github.com/open-learning-exchange/planet), AGPL-3.0), a book factory ([`BloomBooks/BloomDesktop`](https://github.com/BloomBooks/BloomDesktop), MIT), or a state stack already held (Sunbird, MIT).
+2. 🔴 **The learner has no institutional record, and often no device.** This register's learner left school, is not enrolled, and in the US federal programme's own delivery choice has *"no laptop or internet access"* (`T496`). **Assume SMS/IVR or offline-first as the primary channel and a browser as the exception** — the reverse of every other register on this base.
+3. 🔴 **The content is the cost, not the model.** Four of the five best-starred on-topic repositories carry **no grant at all** and the fifth is **CC BY-SA** (`T492`): nothing in this register hands you an item bank, a levelled corpus or a validated assessment. **Budget item authoring and first-language content as named work packages.**
+4. 🔴 **The outcome metric is not a learning gain.** It is a **good-time credit**, a **recidivism rate** (`43%` lower at three years, ED), an **FLNAT pass**, or a **literacy-rate declaration** by a state. Instrument the recipe against the metric the buyer is funded on, not against engagement.
+
+### 🟢 `P275` — Carceral tutoring on the only permissive carceral platform (North America; 10–12 weeks)
+
+🔴 **This is `ACTION p755-C` as a costed recipe, and the specification was written by someone else.** [`UnlockedLabs/unlocked-core`](https://github.com/UnlockedLabs/unlocked-core) (`30★`, **Apache-2.0**, `9,177 B`, sha256₁₂ `65976209c00e`) is an Apache-2.0 education portal and SIS for incarcerated learners organised around **good-time credits**, and its own README delegates tutoring to a sibling repo, `unlocked-hiset-ai`, which **is not publicly readable on either channel** (`T494`). **The hole is declared, permissively surrounded, and nobody has filled it.**
+
+**Wire it:**
+- **System of record** — `unlocked-core` (Apache-2.0). Learners, programmes, progress events, good-time-credit accrual. **Do not fork the credit logic**: it is the auditable artefact a Department of Corrections signs off on.
+- **Air-gap delivery** — [`operepo/ope`](https://github.com/operepo/ope) (**MIT**, `1,070 B`, sha256₁₂ `b97fd346059e`). Offline Docker service bundles plus offline laptop sync. 🔴 **A facility has no inbound network: this is not a preference, it is the deployment.**
+- **Content** — **Kolibri** (MIT, held). Offline content channels for HiSET/GED-aligned material.
+- **Model** — 🔴 **self-hosted, mandatory.** No hosted API is reachable from inside the facility and no DOC will approve learner text leaving it. Size the model to the laptop fleet, not to the benchmark.
+- **Evidence trail** — every tutoring interaction writes a progress event into `unlocked-core` so it is **creditable**, not merely logged. 🟢 **This is the whole commercial point:** an hour of tutoring that cannot be evidenced earns no credit and is worth nothing to the buyer.
+
+**Funding and sizing, from the record (`T496`):** Pell eligibility for incarcerated students reinstated by statute **`1 July 2023`**; **Second Chance Pell experiment winding down** with **Workforce Pell** extending to short-term training (🔴 **implementation for prison programmes explicitly unclear — do not promise it**); Vera counts **`40,919` unique students**; ED reports participants **`43%` less likely to return to prison within three years**.
+🔴 **Do not price this against an "adult education" market number** — `T500` measured a `~1,000×` spread on that phrase. Price it per-facility, per-learner, against the credit.
+**`10`–`12` weeks** to a running pilot in one facility: `3` weeks standing up `unlocked-core` + `ope` offline bundles, `3` weeks on the self-hosted tutor and its credit-writing contract, `2` weeks content alignment, `2`–`4` weeks security review and DOC sign-off (🔴 **the long pole, always**).
+
+### 🟢 `P276` — An AI layer for a `40`-million-learner state literacy programme, on a stack already held (APAC; 12–14 weeks)
+
+🟢 **The largest opportunity in this register, and the integration target is already on these shelves.** India's **ULLAS / New India Literacy Programme**: **~`4.03` crore (`40.3` million) registered learners aged `15`+**, outlay **₹`1,037.90` crore through FY `2026-27`**, delivered over **TV, radio and phone apps** in **`22` Indian languages** via **DIKSHA**, assessed by the **FLNAT** twice yearly on reading, writing, numeracy and digital and financial literacy. 🔴 **There is no AI in it, and the outlay ends FY `2026-27` with no successor found (`T498`) — that is the procurement window.**
+
+**Wire it:**
+- **Substrate** — **Sunbird** (MIT, held, `533` citations), which DIKSHA runs on. 🟢 **Build as Sunbird extensions, not as a parallel app**: the learner, volunteer and survey records already exist there.
+- **Channel** — 🔴 **SMS/IVR first.** The programme's own materials specify TV, radio and phone; the US federal equivalent reached learners *"without a laptop or internet access"* (`T496`). A chat UI is the exception case, not the design.
+- **Volunteer copilot** — [`dimagi/commcare-hq`](https://github.com/dimagi/commcare-hq) (**BSD-3-Clause**, held, `525★`). 🟢 ULLAS is **volunteer-delivered with a door-to-door learner survey**: the first AI win is supporting the volunteer's caseload, not the learner's reading.
+- **Item generation** — FLNAT-aligned item generation across `22` languages, 🔴 **with human validation as a funded work package** (constraint 3). The assessment is a government instrument; generated items need sign-off, not confidence scores.
+- **First-language corpus** — `BloomDesktop` (MIT) as the levelled-text factory for languages the commercial corpus does not cover (`P277`).
+
+**`12`–`14` weeks** to a state-level pilot: `3` weeks Sunbird extension scaffolding, `3` weeks SMS/IVR channel and fallback, `4` weeks item generation plus validation loop in two languages, `2`–`4` weeks volunteer-copilot integration and field test. 🔴 **Price against "continuing education" (`$77.2B`–`$78B`, `2026`, two bases agreeing at `1.01×`), never against "adult education"** (`T500`).
+
+### 🟢 `P277` — A first-language levelled-text factory, because no adult programme has one (EMEA and APAC; 8–10 weeks)
+
+🔴 **The gap this closes is the one constraint 3 names.** Nothing in this register ships an item bank or a graded corpus, and an adult non-reader cannot learn from text written for a child or in a second language. **The only permissive tool on earth that industrialises first-language book production is MIT-licensed and maintained by an institutional publisher:** [`BloomBooks/BloomDesktop`](https://github.com/BloomBooks/BloomDesktop) (`43★`, **MIT**, `1,072 B`, sha256₁₂ `858e015fbf93`, `Copyright (c) 2011-2026 SIL Global`). 🔴 **Honest scoping: its README says *children's* books and never claims adult literacy** — you are repurposing a mechanism, and the adult-appropriate content design is yours to fund.
+
+**Wire it:**
+- **Authoring and output** — `BloomDesktop` (MIT). Its book formats, shell-book translation model and print/offline outputs are the pipeline; keep them.
+- **Generation** — an LLM producing **levelled** text against a controlled vocabulary per language, with **adult subject matter** (work, health, money, rights, documents) rather than children's narrative. 🔴 **Readability levelling must be validated per language**, not inherited from English metrics.
+- **Reciprocity check** — 🟢 MIT on the tool means the output is yours; 🔴 **but any corpus you source under CC BY-SA (e.g. [`nam-301/culturabinaria`](https://github.com/nam-301/culturabinaria), `20,131 B`, sha256₁₂ `7abe19ec9bb7`) carries share-alike into your derivative.** Segregate SA-sourced content from client-owned content at ingest, not at delivery.
+- **Delivery** — `UstadMobile` (🔴 **AGPL-3.0 + mandatory UI credit, `T493`**) or Kolibri (MIT) for offline distribution. **Choose Kolibri if the client white-labels.**
+
+**`8`–`10` weeks** for two languages: `2` weeks Bloom pipeline and format work, `3` weeks generation plus levelling validation per language, `2` weeks adult content design with a subject-matter partner, `1`–`3` weeks offline packaging and field read-aloud testing.
+
+### 🟢 `P278` — Count the cohort before you personalise it: an EPJA learner-record and statistics layer (LATAM; 8–10 weeks)
+
+🔴 **CLADE's February `2026` study of Honduras, Haiti, Guatemala and Peru states the problem exactly: *"a la falta de información estadística se suma la escasa visibilidad de la EPJA"*** — EPJA is statistically invisible before it is under-funded (`T499`). 🔴 **And the regional AI-in-education wave went past it entirely:** ILIA `2026` records AI content in school curricula rising from **`2` countries (`2024`) to `11` (`2026`)**, 🔴 **school curricula only, EPJA in none of them.** 🔵 **So the first LATAM deliverable is not a tutor. You cannot personalise a cohort nobody counts.**
+
+**Wire it:**
+- **Learner records** — [`dimagi/commcare-hq`](https://github.com/dimagi/commcare-hq) (**BSD-3-Clause**, held) for field registration by educators and community workers, **or** [`open-learning-exchange/planet`](https://github.com/open-learning-exchange/planet) (🔴 **AGPL-3.0**, `34,520 B`, sha256₁₂ `76a97c878c9c`) where a full community-learning platform is wanted. 🔴 **If Planet: deploy it as the ministry's own system — network copyleft makes a Globant-hosted instance the wrong shape.**
+- **Learning outside enrolment** — [`adlnet/xapi-lab`](https://github.com/adlnet/xapi-lab) (**MIT**, `1,082 B`, sha256₁₂ `7625cb30bac8`) and the xAPI model. 🟢 **xAPI is the only standard that records learning with no course and no enrolment**, which is the definition of non-formal provision.
+- **Credentialing** — [`digitalcredentials/sign-and-verify`](https://github.com/digitalcredentials/sign-and-verify) (**MIT**, `1,075 B`, sha256₁₂ `09e4c03a44a7`). 🟢 **The learner proves what they learned with no institution to vouch for them** — the register's hardest trust problem, solved permissively.
+- **Agent layer, last** — cohort statistics, dropout-risk and coverage reporting for the ministry **before** any learner-facing tutor. The reporting is what unlocks the next budget.
+- **Educator capability** — **UIL-UNESCO's free courses for literacy and EPJA educators** (digital competences; media and information literacy for adult educators) as the training track. 🔵 Named institution for a Mexican engagement: **INEA** — no AI programme found there.
+
+🔴 **Declared gap, carried into the recipe:** **no LATAM repository row exists for this register** (`T499`) and **no EPJA-specific AI instrument** was found in Spanish or Portuguese. 🔵 **Design to the rights framing CLADE uses** — privacy, data security and *"no puede reducirse al manejo técnico de dispositivos"* — because that is the language the regional civil-society gatekeepers will review the work in.
+**`8`–`10` weeks:** `3` weeks learner-record deployment and field registration design, `2` weeks xAPI event model for non-formal activity, `2` weeks credential signing and verification, `1`–`3` weeks ministry reporting layer.
+
+### 🔵 `P279` — The licence-closure sweep, as a reusable instrument (Global; 1–2 weeks)
+
+🟢 **This pass built a tool before it built a finding, and the tool is the transferable asset.** `T505`: of a `40`-row random sample of this base's `1,008` `unstated` ledger rows, **`19` returned a readable grant** for the cost of one request each — **`47.5%` yield**, implying **~`460` recoverable grants** across the remaining `968`. Any client with a dependency inventory and no licence column has the same problem at the same yield.
+
+**Wire it:**
+- **Channel** — `raw.githubusercontent.com`. 🔴 **Not `api.github.com/repos/…`** (session-gated here, `T388`) and 🔴 **not `gh api search/*`**, which returns `total_count: 0` while reporting a healthy quota (`T501`) — **a channel that answers zero confidently is worse than one that errors.**
+- **Probe** — `main` and `master` × `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`: ten addresses, first `200` wins. Script preserved at `ingest/p755-unstated-sweep.sh`.
+- **Classify** — from the **title block** (`P171`). 🔴 **Fall through to a full read when the title block is not a licence title**: `UstadMobile`'s payload opens with a product name and hides a binding UI term seven lines down (`T493`), and `instructure/qtimigrationtool` opens on a University of Cambridge copyright line with no licence name at all.
+- **Identify by sha₁₂, date by length.** 🔴 **Never identify by length:** this pass byte-read **twelve distinct MIT lengths** with **collisions at different sha** (`T504`). 🟢 **Length is provenance:** AGPL-3.0 at `34,520 B` is the pre-switch FSF text and `34,523 B` is the revised one — exactly three `http`→`https` substitutions apart (`T503`).
+- **Reconcile against the shelves *first*.** 🔴 `T506`: `4 / 19` resolved rows were **already published with byte-identical reads** (`idurar/idurar-erp-crm`, AGPL-3.0, `34,230 B`, sha256₁₂ `7800536d5087`). A blind sweep re-derives known answers and reports them as discoveries.
+- 🔴 **Preserve the inventory file's line endings, and say which parser counted it (`T508`).** The ledger this pass swept is **mixed `CRLF`/`LF`**: `wc -l` sees `3,748` rows, a correct `\r\n` split sees `3,381`, and `368` rows — including all `315` `discovered-not-read` entries — are invisible to the second. A normalising write turned a `40`-row update into a `3,381`-line diff on the first attempt. **Verify by address-set difference (`comm -23`), never by line count.**
+- **Measure terms with `grep -ow`.** 🔴 `T507`: `grep -oiF GED` returns `1,886` hits (all `aged`/`managed`/`engaged`/`merged`); `grep -ow GED` returns `0`. **Any token of four characters or fewer must be word-bounded** or the audit reports the opposite of the truth with total confidence.
+
+**`1`–`2` weeks** for an inventory of a few thousand dependencies: `2` days probe and sweep, `3` days classification with full-read fallbacks on the non-canonical payloads, `2` days reconciliation against existing records, `2` days reporting the two defect classes separately — **unread backlog and desynchronisation are different findings with different owners** (`T506`).
 
 ## 🆕 `P270`–`P274` — added at p754 (2026-11-10)
 

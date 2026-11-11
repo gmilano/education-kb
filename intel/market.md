@@ -1,10 +1,12 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-10
+updated: 2026-11-11
 ---
 
 # Education AI — Market Intelligence
+
+**Pass p755 · researched 2026-11-11.** All four mandated regional legs ran and **all four returned facts**; the register itself returned the thinnest supply this base has enumerated (`T491`). 🟢 **Each region's newest block is `#### 🆕 p755` under the single [`## Opportunities by region`](#opportunities-by-region) heading — all five values, no region-only section.** 🔴 **Market: do not quote a single "adult education" number — `~1,000×` spread measured (`T500`); price against "continuing education", where two independent bases agree at `1.01×`.**
 
 **Pass p754 · researched 2026-11-10.** All four mandated regional legs ran; **three returned facts and LATAM returned a supply nil that is written down rather than left silent (`T488`).** 🟢 **Each region's newest block is `#### 🆕 p754` under [`## Opportunities by region`](#opportunities-by-region), and all five are written this pass — no region left at silence.** The register is the **early-childhood education and care (ECEC) layer, ages `0`–`8`**. 🟢 **The headline is an inversion that sells the register: ECEC *delivery* is a `$337.4B` market (`2026`) growing `9.3%` to `$482.07B` by `2030`, while its *software* layer is sized at roughly `$0.29B` — about `1,160 : 1`, against a double-digit share in schooling and higher education. The sector is under-digitised, and its entire open-source estate above `20★` is four repositories (`T480`, `T479`).** 🔴 **The second headline is a correction to this base's own first reading, in the refusing direction: do NOT tell a client that EU AI Act Annex III names ECEC. The Annex text says *"educational and vocational training institutions at all levels"*; the ECEC reading comes from **draft** Commission guidance, and the primary text was unreachable this pass (`T482`, `ACTION p754-A`).** 🔴 **The third is a sizing trap: "daycare management software" (`$11.09B`, `2026`) and "childcare management software" (`$264.69M`, `2026`) differ `~42×` in the same year — a definition artefact, not a disagreement about growth (`T481`). Quote the under-digitisation ratio, not the TAM.**
 
@@ -248,6 +250,19 @@ credentials-and-skills axis rather than the tutoring axis.
 > [`../agents/trending.md`](../agents/trending.md). Neither gate was red because of this pass, and both were
 > red before it.
 
+
+
+#### 🆕 `p755` (`2026-11-11`) — 🟢 a mandated, appropriated demand side pointed at a **nine-repository, zero-star** supply side
+
+🟢 **The demand side of this register is live, federally mandated and already has a budget line.** The **US Department of Labor's AI Literacy Framework** (February `2026`) is published as a national resource for employers, workers, education and training providers and workforce development agencies; **`TEN 07-25`** carries it to *every* state workforce board, American Job Center, community college and tribal college with content areas every programme must cover; and DOL **encourages states to spend existing WIOA funding on AI education and training** — 🟢 **so the money does not need a new appropriation, which is the single most important sentence in a first meeting.** DOL's own delivery vehicle, **"Make America AI-Ready"** (March `2026`), is a one-week course **delivered by text message**, about `10` minutes a day, explicitly usable *"without a laptop or internet access"*. NSF's **AI-Ready America** runs alongside. **North America's Building Trades Unions and Microsoft** have expanded a partnership for no-cost AI-literacy courses with industry-recognised credentials for skilled trades.
+
+🔴 **And the problem underneath it is bigger than the AI framing.** On the reported estimate, **~`130` million US adults read below a sixth-grade level**, and researchers describe learners deferring to AI output without evaluating it as *"cognitive surrender"* — i.e. **AI is currently masking the literacy gap rather than closing it.** 🟢 Adult literacy education is argued to be the **prerequisite infrastructure** for AI literacy, not a parallel track.
+
+🟢 **The carceral leg is funded by statute, not by pilot.** Pell eligibility for incarcerated students was reinstated by the FAFSA Simplification Act **from `1 July 2023`**. 🔴 **The Second Chance Pell *experiment* is being wound down** — the Department of Education removed its SCP material in anticipation of the experiment's end — with **Workforce Pell** extending eligibility to short-term job training, and 🔴 **implementation for prison programmes explicitly unclear, so it must not be promised in a proposal.** Scale and outcome from the record: Vera counts **`40,919` unique students** through the initiative (earlier phase ~`17,000` enrolled, `4,500`+ credentials since `2015`); ED states participants in high-quality correctional education were **`43%` less likely to return to prison within three years**.
+
+🔴 **Against all of that, the supply side is nine repositories.** `GED OR HiSET OR "high school equivalency"` → **`9` repositories and every one has `0★`**; `"adult basic education"` → **`3`, all `0★`**; `"prison education" OR "correctional education"` → **`19`, best `19★`** (`T491`). `0` of the four best-starred on-topic projects carries any grant (`T492`). **One permissive carceral platform exists on earth** — [`UnlockedLabs/unlocked-core`](https://github.com/UnlockedLabs/unlocked-core), Apache-2.0, `30★` — **and it publicly declares the tutor-shaped hole it will not build without** (`T494`).
+
+🔵 **Usable read for a North American engagement:** a federal mandate with no new appropriation needed, an SMS channel chosen *because* the learner has no laptop, a `43`-point recidivism outcome, a statutory Pell line — and a field so thin that the best-starred artefact in it has nineteen stars. 🔴 **Supply gap stated plainly:** `0` of the `19` payloads byte-read this pass belongs to a US adult-education *product*; the US commercial category (Aztec, Essential Education, Burlington English; Edovo and Orijin in corrections) is **entirely closed-source**, which is the integration surface rather than a blocker. 🔴 **Every instrument claim above is search-channel-sourced only — `www.dol.gov` is `NXDOMAIN` in this session (`T502`).**
 
 ### North America
 
@@ -1243,6 +1258,19 @@ district or system with a *legislative deadline* and no policy, and the delivera
 package (`P143`'s shape, re-aimed at US state deadlines). 🔴 **Later passes should not spend a leg here** —
 this is the third consecutive pass to return already-filed facts. Supply remains the NA weakness: **`0` of
 `p724`'s `9` new repositories are North American.**
+
+#### 🆕 `p755` (`2026-11-11`) — 🟢 the first AI-literacy instrument on earth that names **adults**, and this base held `0` mentions of it
+
+🟢 **`grep -oiF 'CM/Rec'` across this entire repository returns `0`.** The **Council of Europe Committee of Ministers adopted Recommendation `CM/Rec(2026)12` on Artificial Intelligence Literacy** — approved by the Steering Committee for Education (**CDEDU**) in March `2026` — and on the record it is addressed *"to everyone, from pupils and students to teachers, parents, workers and citizens of all ages"*, with particular weight on dignity, autonomy, equity and non-discrimination, calling on member States to build AI literacy into **national frameworks and lifelong learning**. Alongside it, a **Council of the EU** document (**`ST-14902-2026`**, Brussels, **`29 October 2026`**) treats lifelong learning *including adult learning* as essential and urges member States to write AI-literacy frameworks **for citizens at other stages of life**, building on the OECD/EU framework for primary and secondary education.
+
+🔵 **Why this is a commercial fact and not a citation.** Every AI-literacy instrument this base already holds is addressed to schools, teachers and pupils, so every compliance architecture it has designed assumes an **enrolled learner with a school record**. **`CM/Rec(2026)12` is the first that reaches the adult with no institution attached** — a different identity, consent and evidence problem, and the one this register's learner actually presents. 🟢 **The Council of Europe reaches beyond the EU**, so a CoE-anchored architecture covers the wider European estate an AI-Act-only design does not.
+
+🔴 **No new claim is made about EU AI Act Article `4`.** Its softening by the **Digital Omnibus (Regulation (EU) `2026/1744`)** from *"ensuring a level of AI literacy"* to *"taking measures"* is **already held on this base** and is not re-reported as a discovery. 🟢 **The two instruments compose cleanly:** Article `4` obliges the deployer to act, `CM/Rec(2026)12` tells a ministry what the content should be, and `ST-14902-2026` extends the frame past compulsory schooling.
+
+🟢 **EMEA also holds the register's offline engineering**, and the placement comes from the repositories' own records: [`UstadMobile/UstadMobile`](https://github.com/UstadMobile/UstadMobile) (`34★`, 🔴 **AGPL-3.0 *plus* a mandatory UI-attribution term — the index says plain AGPL-3.0, `T493`**) ships Dari, Pashto and Tajik translations and claims **`97%+` bandwidth reduction for a class of `30`**; [`open-learning-exchange/planet`](https://github.com/open-learning-exchange/planet) (`70★`, AGPL-3.0) carries Somali, Nepali, Swahili and Arabic locales and **already has a model gateway**; [`BloomBooks/BloomDesktop`](https://github.com/BloomBooks/BloomDesktop) (`43★`, **MIT**, SIL Global) is the only permissive first-language text factory in existence.
+
+🔴 **Informed gaps, stated.** `european-commission-empl/European-Learning-Model` — **the Commission's own learning-model repository — carries no grant at any of ten probed addresses.** No EMEA adult-education *platform* row exists: the offline engines above are placed EMEA on translation sets and locale lists only, and **none of their READMEs names a country**, so none is placed more precisely than that (`T378`). 🔴 **`CM/Rec(2026)12` and `ST-14902-2026` are search-channel-sourced only — `www.coe.int` and `data.consilium.europa.eu` are both `NXDOMAIN` here (`T502`), and `ACTION p755-B` carries the byte-read forward.**
+
 ### EMEA
 
 #### 🆕 `p754` (`2026-11-10`) — 🟢 the register's only production platform is here and it is municipal; 🔴 and the legal claim everyone will reach for is weaker than it looks
@@ -2427,6 +2455,17 @@ asserts no date of its own — but it now records the article-level citation a r
 settle in a single lookup, and later passes in this environment should stop spending a leg on it.** Filed as
 `T246`. The commercial point is unchanged: **guides still selling an August 2026 education deadline are
 selling urgency against a date the amendment moved**, and that mismatch is the opening.
+
+#### 🆕 `p755` (`2026-11-11`) — 🟢 the world's largest adult-literacy programme: `40.3` million learners, **zero AI**, on a stack this base already holds as permissive
+
+🟢 **This is the largest single opportunity in the register, and for once the APAC leg breaks a nil from the policy side rather than the repository side.** India's **ULLAS / New India Literacy Programme**, on the record: a centrally sponsored scheme with an outlay of **₹`1,037.90` crore for FY `2022-23` to FY `2026-27`**, targeting **all non-literates aged `15` years and above**; **~`4.03` crore (`40.3` million) registered learners**; **ten States/UTs declared fully literate between `2024` and `2026`**, with **Uttarakhand the sixth in July `2026`**. Delivery is explicitly multi-channel and low-bandwidth — the scheme's own materials state that *"all material and resources shall be provided digitally through TV, radio, and phone-based apps and portals"*, while volunteer training stays face-to-face — via the **DIKSHA + ULLAS app in `22` Indian languages**. The app also handles **learner and volunteer registration during door-to-door surveys** and programme monitoring. Assessment is the **FLNAT**, run **twice every year**, covering reading, writing, numeracy **and digital and financial literacy**.
+
+🔴 **No AI component was found anywhere in the scheme's own materials.** 🟢 **And DIKSHA runs on Sunbird, which this base already holds as MIT and cites `533` times** — so the integration target is on these shelves, the data model exists, and the volunteer and survey records are already there (`P276`). 🔴 **The clock is explicit and short: the outlay ends FY `2026-27` and no successor programme was found.** 🔵 **Read that as the procurement window rather than as a risk** — a successor scheme is precisely where an AI layer gets specified, and specifying it is the engagement.
+
+🟢 **The regional policy frame is converging on lifelong learning from outside the region too.** The **OECD's `Skills in the AI age`** paper (`2026`) recommends expanding lifelong learning by promoting continuous upskilling and reskilling and broadening access to AI learning beyond specialists; the **ILO** (May `2026`) urges governments to elevate lifelong learning to a central pillar of economic and social policy, warning that without inclusive learning systems the transformations **risk widening inequalities**. 🔵 Both are leverage for a ministry conversation; neither is an APAC instrument.
+
+🔴 **Declared gaps, stated explicitly rather than left silent.** **No APAC adult-education repository row this pass, and the candidate was tested rather than assumed:** [`qwertyuiop9898123/KouninPass`](https://github.com/qwertyuiop9898123/KouninPass) (`0★`) is Japanese *kōsotsu-nintei* high-school-equivalency prep **with past exam PDFs and automated grading** — functionally on-register and the only APAC candidate found — and it carries **no grant at any of ten probed addresses**, so it is published **unplaced-as-licensed** and the APAC repository nil holds (`T492`). 🔴 **No APAC AI-in-adult-education regulation found**: the first regional search returned nothing on India, China or Japan policy at all, and the ULLAS material contains no AI provision. 🔴 **The ULLAS figures above are search-channel-sourced only** — government hosts are unreachable in this session (`T502`) — **and two sources disagree on the fully-literate state count, so the `10` States/UTs figure is reported with its provenance and not as a settled number.**
+
 ### APAC
 
 #### 🆕 `p754` (`2026-11-10`) — 🟢 the only region where the **state** ships early-childhood AI at scale, and the permissive substrate is already deployed there
@@ -3514,6 +3553,17 @@ Education Monitor 2026 support for *banning* AI in schools is **`23%` Indonesia 
 `28%` Singapore · `29%` Japan and Malaysia · `31%` South Korea** — i.e. **opposition to AI in schools is a
 minority everywhere in APAC, but it is *rising* in Japan, Australia and South Korea.** Sell into APAC on
 capability; sell into Japan, Australia and Korea on safeguards as well.
+
+#### 🆕 `p755` (`2026-11-11`) — 🔴 an informed gap with a measured shape: the AI-in-education wave reached **school** curricula in eleven countries and **excluded adults in all of them**
+
+🟢 **Both halves of the policy exist and they do not touch, and that is the finding.** The **Índice Latinoamericano de Inteligencia Artificial (ILIA) `2026`** records that for the first time more than half the countries analysed include AI content in their curricula — **`2` countries in `2024` → `11` in `2026`** — and 🔴 **this is explicitly *school* curricula, not EPJA (*educación de personas jóvenes y adultas*).** On the other side, **CLADE's February `2026` study of literacy policy in Honduras, Haiti, Guatemala and Peru** finds that **`"a la falta de información estadística se suma la escasa visibilidad de la EPJA"`** — 🔴 **EPJA is statistically invisible before it is under-funded.** CLADE's seminar on digital challenges in EPJA concluded that digital literacy **`"no puede reducirse al manejo técnico de dispositivos o aplicaciones"`**, naming privacy, data security and countering hate speech as part of the competency. **UIL-UNESCO** publishes free courses for literacy and EPJA educators — digital competences, and media and information literacy for adult educators. **UNESCO** and Universidad Alberto Hurtado convened *«Alfabetización crítica en la era de la IA»* in Santiago on **`26 October 2026`**.
+
+🟡 **Named adult programmes exist and all of them are small and non-state.** Argentina: a free online AI training aimed at over-`50`s. Colombia: UPB's in-person *Sabios y digitales*, strengthening digital competences and everyday AI use among older adults. 🔵 **Both are *older-adult digital inclusion*, not adult basic education** — adjacent, and worth distinguishing in a proposal, because the funder and the pedagogy are different.
+
+🔵 **The usable opportunity is the invisibility itself, and it inverts the obvious pitch.** CLADE's finding means the first LATAM deliverable is **a learner-record and statistics layer, not a tutor** (`P278`): you cannot personalise a cohort nobody counts, and the reporting is what unlocks the next budget cycle. Named institution for a Mexican engagement: **INEA** — 🔴 no AI programme found there.
+
+🔴 **Declared gaps, written down because silence looks like coverage.** **No LATAM repository row this pass.** The register's one Spanish-language candidate, [`nam-301/culturabinaria`](https://github.com/nam-301/culturabinaria) (`5★`, **CC BY-SA 4.0**, `20,131 B`, sha256₁₂ `7abe19ec9bb7`) — the best-starred `"non-formal education"` repository on GitHub — **places itself in no country on its own record**, so it is published **unplaced** rather than guessed (`T378`), and its grant is a **content** licence with share-alike, not a software grant. 🔴 **No EPJA-specific AI instrument found in Spanish or Portuguese.** The one `2026` bill on digital literacy and AI training in education registered by Uniandes' *Sistemas de Algoritmos Públicos* **does not name its country in the available record and is therefore not placed either.** 🔴 **No LATAM adult-literacy market sizing exists in any source found.**
+
 ### LATAM
 
 #### 🆕 `p754` (`2026-11-10`) — 🔴 an informed gap, written down: the policy mandate is real and ahead of its supply, and there is no domestic open stack at all
@@ -4670,6 +4720,28 @@ the thinnest open-source supply** — which is exactly the configuration that ma
 no code dependency) the right opening move here and makes a code-first pitch the wrong one. 🔵 It also means
 **LATAM engagements will compose APAC-authored components**, so licence and provenance review is a billable
 first step rather than a formality.
+
+#### 🆕 `p755` (`2026-11-11`) — 🔴 the worst market-sizing spread this base has ever measured: `~1,000×`, in the same year, for the same named market
+
+🔴 **Do not quote a single "adult education" number to a client. Ever.** Six independent `2026`-vintage bases, all for a market called *"adult education"*:
+
+| Base | Value | Trajectory |
+|---|---|---|
+| Report Prime | 🔴 **`$397M`** (`2025`) | `15%` CAGR → `~$456M` (`2026`) |
+| Vantage Market Research | **`$38.6B`** (`2025`) | `~9.1%` → `$92.4B` (`2035`) |
+| Business Research Insights | **`$58.2B`** (`2026`) | `5.2%` → `$93.1B` (`2035`); **North America `42–46%` share** |
+| Verified Market Reports | **`$200B`** (`2024`) | `4.5%` → `2033` |
+| Market Research Intellect | **`$317.6B`** (`2025`) | `5.5%` → `$542.4B` (`2035`) |
+| Verified Market Research | 🔴 **`$398B`** (`2024`) | `7.12%` (`2026`–`2032`) |
+
+🔴 **`$397M` and `$398B` for the same named market: a `~1,000×` spread**, against `4.8×` for this base's broad AI-in-education series and `1.9×` for `p745`'s proctoring series. CAGRs run `4.5%`–`15%`. **The phrase has no shared referent across houses and is unusable as a number.**
+
+🟢 **There is one definition that converges, and it is the one to price against.** Two independent bases for *"continuing education"*: **Custom Market Insights `$77.2B`** (`2026`) at `10.6%` to `2035`, and **Verified Market Reports `$78B`** (`2026`) at `9.3%` to `2032` — 🟢 **a `1.01×` spread, the tightest agreement this base holds on any education series.** 🔵 **Usable rule: price the engagement against "continuing education", state the definition on the slide, and treat "adult education" as a word rather than a figure** (`T500`).
+
+🟡 **One adjacent base, recorded with its own trap.** Agentic AI in education and learning technologies: **`$2.1B`** (`2026`) → **`$3B`** (`2034`) at **`4.5%`** — internally consistent, and **an order of magnitude below the `45%` CAGR a different house gives the broader AI-in-education series over `2025`–`2030`.** 🔵 Same definitional failure one layer up: **"agentic AI in education" and "AI in education" are being sized as if they were nested, and the growth rates say they are not.**
+
+🔴 **Informed gaps, and they are the commercially relevant ones.** **No adult-literacy market sizing and no correctional-education market sizing exists in any source found this pass** — not a thin number, no number. For `P275` price per-facility and per-learner against the **good-time credit and the `43%` three-year recidivism reduction** (ED); for `P276` price against the **₹`1,037.90` crore ULLAS outlay and its FY `2026-27` expiry**; for `P278` price against a ministry reporting deliverable, because **CLADE measured that the cohort is not counted** (`T499`). 🟢 **In this register the funded programme is a better denominator than the market report, and this pass has three of them with figures attached.**
+
 ### Global
 
 #### 🆕 `p754` (`2026-11-10`) — 🟢 the under-digitisation ratio is the number to quote; 🔴 the TAM is a `42×` definition artefact

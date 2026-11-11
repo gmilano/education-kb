@@ -1,10 +1,12 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-10
+updated: 2026-11-11
 ---
 
 # Education AI Agents — Curated Top Set
+
+**Pass p755 · verified 2026-11-11.** 🔴 **`3` agent rows added — `2` permissive and `1` archive — and `3` is the entire agent-shaped surface of the register, which is the finding and not a shortfall.** `19` licence payloads byte-read, **`1` index value materially corrected in the *refusing* direction** (`T493`), `26` compliant grant-absences, `1` rename event filed, and `40` of this base's own `unstated` ledger rows swept with `19` resolving (`T505`). `ACTION p754-B` executed in full.
 
 **Pass p754 · verified 2026-11-10.** 🟢 **`6` agent rows added — `4` MIT, `1` Apache-2.0 and `1` MIT-with-a-carve-out, all byte-read.** `18` addresses probed, **`15` licence payloads byte-read**, **`3` index values materially corrected — `3 / 3` from `NOASSERTION` toward a knowable grant**, `5` compliant grant-absences recorded as `T302` honest negatives, `6` query denominators plus `20` shelf-mention counts measured, `T478`–`T489` declared. 🔴 **The register is the *early-childhood education and care layer* — ECEC, ages `0`–`8`: the centre, the childminder, the developmental screen, the parent and the pre-primary year — and `753` passes held almost none of it: `childcare` `0` mentions, `daycare` `0`, `nursery` `0`, `developmental screening` `0`, `ASQ` `0`, `ECERS` `0`, `parent engagement` `0`, `anganwadi` `0`, `foundational learning` `0`, against `preschool` `3` and `early childhood` `7` (`T478`).** 🔴 **The finding of the pass is a supply vacuum with no parallel on this base: the *entire* open-source ECEC estate above `20★` on GitHub is **four repositories**, and `child development milestone stars:>20` returns **`0`** (`T479`). `p753` found a `2,600 : 1` oversupply of recognition code; this register is the inverse — a `$337.4B` delivery market whose software layer is sized at `~$0.29B` and whose open estate is four repositories (`T480`).** 🔴 **Read the licence cell before the description on the `tumbuh-kembang` row and on every screening row: the *code* is MIT but the *instrument* is not open — ASQ-3, Denver II and M-CHAT-R/F are proprietary, and the honest projects substitute public-domain CDC milestones rather than reproduce them (`T485`).** 🔵 **EMEA correction in the refusing direction: this base should not tell a client that Annex III names ECEC. The Annex text says *"educational and vocational training institutions at all levels"*; the ECEC reading comes from **draft** Commission guidance, and the primary text was unreachable this pass (`T482`, `ACTION p754-A`).**
 
@@ -73,6 +75,36 @@ can tell a stale cell from a fresh one.
 > the search channel for metadata and the raw channel for bytes — never `repos/`. See `T289`.
 
 ## Education-specific agents
+
+## 🆕 `p755` — 🔴 **THE ADULT / NON-FORMAL / SECOND-CHANCE LAYER (`15`+, OUTSIDE SCHOOLING): `3` AGENT-SHAPED ARTEFACTS EXIST AND `3` IS ALL THERE IS. `GED` `0`, `ABE` `0`, `ESOL` `0`, `HiSET` `0`, `second chance` `0` ACROSS ALL `8` SHELVES. 🔴 THE ONE REAL AI TUTOR IN THE REGISTER IS NAMED IN A PUBLIC README AND IS NOT PUBLICLY READABLE.**
+
+**`ACTION p754-B` executed.** `33` terms × `8` shelves mention-counted, `5` query denominators measured, `19` licence payloads byte-read, `26` compliant grant-absences recorded, `1` index value materially corrected (**refusing** direction), `1` rename event filed. 🔴 **`3` rows added — and the nil is the finding, not the shortfall:** `GED OR HiSET OR "high school equivalency"` returns **`9` repositories and every one has `0★`** (`T491`).
+
+🔴 **Read this before the table.** There is no adult-literacy-native agent estate to curate. Of the five best-starred **on-topic** repositories on GitHub, **four carry no grant at all and the fifth is CC BY-SA 4.0** — `0 / 5` buildable (`T492`). The three rows below are the register's entire agent-shaped surface, and two of them are a platform and an archive rather than an agent. 🟢 **The commercial consequence is in `ACTION p755-C`:** an Apache-2.0 platform has published the specification for the missing agent.
+
+### The `p755` rows
+
+| Agent | Repo | Licence (byte-read `2026-11-11`) | ★ | Region | What it is, and the warning |
+|---|---|---|---|---|---|
+| **UnlockEd v2 / unlocked-core** | [`UnlockedLabs/unlocked-core`](https://github.com/UnlockedLabs/unlocked-core) | 🟢 **Apache-2.0** — `9,177 B`, sha256₁₂ `65976209c00e`, read at `UnlockEdv2/main/LICENSE.md`. 🔵 Markdown-formatted Apache text; **`9,177 B` is a new Apache-2.0 length for this base** against the held `9,235 B` and `11,356 B` | `30★` | **North America** (US) | 🟢 **The register's one serious permissive platform, and it is the orchestration an agent would plug into.** Education portal and SIS *"for capturing meaningful progress of incarcerated learners"*, built around **good-time credits** — i.e. the evidence trail that converts learning into sentence reduction, which is the only ROI metric this sector buys on. Tested on WSL, macOS and Linux; `release-please` versioning; **no release published and the project calls itself WIP**. 🔴 **The warning is `T494`:** its own README delegates tutoring to a sibling repo, `unlocked-hiset-ai`, which **neither `git ls-remote` nor `raw.githubusercontent.com` can read** — so the public, permissive orchestration **will not `compose` up without a component you do not have.** 🔵 Renamed from `UnlockEdv2`; the old address is a live redirect (`T495`) — file the new name, keep the old as an alias. |
+| **OPE — Open Prison Education** | [`operepo/ope`](https://github.com/operepo/ope) | 🟢 **MIT** — `1,070 B`, sha256₁₂ `b97fd346059e`, `Copyright (c) 2016 Ray Pulsipher` | `19★` | **North America** (US) | 🟢 **The highest-starred on-topic result in the entire `"prison education" OR "correctional education"` denominator (`19` repositories), and it is MIT.** Offline Docker service delivery plus offline laptop syncing for inmate education — its README opens on the actual constraint: *"It is a struggle to install and manage online services in an offline world."* `646` commits on `master`. 🔵 **Not an agent and does not pretend to be** — it is the **air-gap substrate** an agent needs in a facility with no inbound network, which is why it is filed here rather than only on `repos/foundations.md`. 🔴 Pair with a self-hosted model; a hosted-API tutor is unusable in this setting by definition. |
+| **Adult Literacy XPRIZE archive** | [`chimple/alxp`](https://github.com/chimple/alxp) | 🟢 **Apache-2.0** — `11,356 B`, sha256₁₂ `43070e2d4e53` | `1★` | Global | 🔵 **Filed for what it is: the public archive of the Adult Literacy XPRIZE, permissively licensed.** Not a maintained product and not an agent. 🟢 **Its value is as the register's only permissive *provenance* artefact** — the one place where a prize-funded, outcome-measured adult-literacy intervention left its code behind under a grant Globant can read, adapt and cite. 🔴 **`1★`, and that is the honest signal:** the register's single most credible funded experiment ended in a repository nobody starred. |
+
+### 🔴 `T302` honest negatives this pass — `26` compliant grant-absences
+
+**On-topic, and this is the licence signature of the register (`T492`).** Probed `main` and `master` × `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING` — ten addresses each, all `404`:
+
+| Address | ★ | Why it mattered |
+|---|---|---|
+| [`sketch-city/hou-literacy`](https://github.com/sketch-city/hou-literacy) | `4★` | 🔴 **The single best-starred `"adult literacy"` repository on GitHub, and it has no grant.** Houston Center for Literacy mapping. |
+| [`corbecker/MALA`](https://github.com/corbecker/MALA) | `2★` | 🔴 **Functionally the most on-register artefact found anywhere** — an Android adult-literacy app with OCR, text-to-speech and speech recognition, i.e. exactly the modality a non-reader needs — **and it is unlicensed, so it cannot be used.** |
+| [`BuildForSDGCohort2/Team-195-Soma-Frontend`](https://github.com/BuildForSDGCohort2/Team-195-Soma-Frontend) | `0★` | Teaches adults basic reading, writing and maths. Build-for-SDG cohort output; no grant. |
+| [`qwertyuiop9898123/KouninPass`](https://github.com/qwertyuiop9898123/KouninPass) | `0★` | 🔴 **The register's only APAC repository candidate** — Japanese *kōsotsu-nintei* high-school-equivalency prep with past exam PDFs and automated grading — **and it has no grant, so the APAC repository nil holds.** Published unplaced-as-licensed rather than guessed. |
+| [`digitalgreenorg/FarmStack`](https://github.com/digitalgreenorg/FarmStack) | — | Adjacent non-formal adult extension learning. No grant, and `README.md` is **`11` bytes**: a stub, not a project. |
+| [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | — | 🔴 From the `unstated` sweep: the **European Commission's own** learning-model repository carries no grant at any of the ten probed addresses. |
+| `20` further addresses from the `T505` sweep | — | Enumerated with verdicts in `evidence/unstated-sweep.2026-11-11-p755.tsv`. |
+
+🔴 **And one absence this base will not call an absence.** `UnlockedLabs/unlocked-hiset-ai` is referenced by a public README and is unreadable on both channels: `git ls-remote` prompts for credentials, `raw.githubusercontent.com` returns `404`. **Neither channel distinguishes private from non-existent, so no verdict is recorded** (`T494`) — it is filed as *unreadable*, which is what was actually measured.
 
 ## 🆕 `p754` — 🔴 **THE EARLY-CHILDHOOD (ECEC, `0`–`8`) LAYER: `753` PASSES HELD IT AT NEAR-NIL — `childcare` `0`, `daycare` `0`, `developmental screening` `0`, `ASQ` `0`, `anganwadi` `0`. 🔴 THE WHOLE WORLD'S OPEN ECEC ESTATE ABOVE `20★` IS FOUR REPOSITORIES. 🔴 THE CODE IS OPEN AND THE SCREENING INSTRUMENT IS NOT. 🟢 THE ONE REAL AGENT IN THE REGISTER IS AUSTRALIAN AND MIT; THE ONE REAL PLATFORM IS FINNISH AND MUNICIPAL.**
 
