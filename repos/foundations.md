@@ -6,6 +6,50 @@ updated: 2026-11-11
 
 # Foundational Repositories — Education
 
+## 🆕 `p766` — **The register has almost no tooling but the *substrate* is permissive and complete, and this pass found the one primitive eight previous patterns said did not exist: a statutory interval is an **RFC 5545 recurrence rule**, and the two libraries that implement it are BSD-3 and Apache-2.0. `3` licence-index errors corrected by byte-read, one of them a licence reachable only from a README.**
+
+**`12` permissive and weak-copyleft foundation rows, each naming the branch its grant was read from.** Register: **playground-equipment inspection** (`ACTION p765-E`). Every grant below was byte-read on `2026-11-11` from the `default_branch` returned by `search/repositories`; no branch was guessed and no family was taken from GitHub's licence index.
+
+### 🟢 `ACTION p765-F` is dischargeable, and here is the part that was missing
+
+`P326`–`P332` each said the same thing: *nothing in open source models a statutory duty as `{duty, instrument, interval, competent person, evidence type}`*. That was true of the **platforms** and it was never true of the **primitive**. A statutory interval — *routine, operational, annual main* — is a recurrence rule, and recurrence rules have had a stable standard since 1998 (RFC 5545 / RFC 2445) and two mature permissive implementations. The engine is now committed as data at [`evidence/statutory-intervals.2026-11-11-p766.tsv`](../evidence/statutory-intervals.2026-11-11-p766.tsv), with an `interval_rrule` column that drops straight into either library (`T661`, `P334`).
+
+| Repository | ★ | Grant, byte-read `2026-11-11` | Branch | Why it is on this register |
+|---|---|---|---|---|
+| [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | `3,752` | **BSD-3-Clause** · `LICENCE` · `3,493 B` · `6c12f89b62fc` | `master` | 🟢 **The interval engine.** RFC 5545 recurrence in JS. 🔴 **Two corrections on one row:** the grant is at **`LICENCE`**, the British stem, and GitHub's index reports `NOASSERTION`. 🔴 **Stale — last pushed `2024-06-27`** (`T662`) |
+| [`dateutil/dateutil`](https://github.com/dateutil/dateutil) | `2,646` | **Dual Apache-2.0 *and* BSD-3-Clause** · `LICENSE` · `2,889 B` · `ba00f51a0d92` | `master` | 🟢 The same primitive in Python, and the maintained one. 🔵 **Composite grant, correctly flagged:** one BSD-3 body plus an Apache-2.0 grant by reference — take the Apache patent grant if you need it |
+| [`getodk/collect`](https://github.com/getodk/collect) | `804` | **Apache-2.0** · `LICENSE.md` · `10,494 B` · `d1ee81266b96` | `master` | 🟢 **The evidence artefact, offline.** Android form client built for field data capture with no connectivity — the binding constraint on a playground site. 🔴 **Index says `NOASSERTION`; the payload is Apache-2.0** |
+| [`getodk/central`](https://github.com/getodk/central) | `232` | **Apache-2.0** · `LICENSE.md` · `10,494 B` · `d1ee81266b96` | `master` | 🟢 The server half: form management, submission storage, OData out. 🔵 **Byte-identical grant to `getodk/collect`** — same sha, recorded as a copy rather than counted twice |
+| [`surveyjs/survey-library`](https://github.com/surveyjs/survey-library) | `4,930` | **MIT** · `LICENSE` · `1,102 B` · `ef2cef07ff83` | `master` | 🟢 The inspection form itself, as JSON schema — the tiered EN 1176-7 checklist is expressible without writing a form engine |
+| [`frappe/frappe`](https://github.com/frappe/frappe) | `11,086` | **MIT** · `LICENSE` · `1,118 B` · `bc6001a54ffc` | `develop` | 🟢 **The asset register, and the only permissive one.** Doctype modelling for equipment, sites and competent-person records. 🔴 **Use the framework, not ERPNext** — see the refusal below |
+| [`temporalio/temporal`](https://github.com/temporalio/temporal) | `24,332` | **MIT** · `LICENSE` · `1,152 B` · `6aab9afd99ce` | `main` | 🟢 **Durable timers measured in years.** A statutory interval must survive process restarts, staff turnover and a re-plan; a cron does not. Carried forward from `p765` and re-read on this branch |
+| [`legalize-dev/legalize-pt`](https://github.com/legalize-dev/legalize-pt) | `38` | **MIT** · `LICENSE` · `1,002 B` · `309f2212fb92` | `main` | 🟢 **A national statute corpus under MIT, and it cites `EN 1176-7`** (in a 1998 decree). 🔴 **Index says `NOASSERTION`.** The first permissively-licensed primary-law corpus this base has placed on a safety register (`T653`) |
+| [`data-privacy-stack/presidio`](https://github.com/data-privacy-stack/presidio) | `11,834` | **MIT** · `LICENSE` · `1,084 B` · `f3e86ee59a49` | `main` | 🟢 PII redaction on inspection photographs and voice notes — a playground inspection records children's environments. **Successor address**, see below |
+| [`daisy/MathCAT`](https://github.com/daisy/MathCAT) | `131` | **MIT** · `LICENSE` · `1,065 B` · `f8f65c73234f` | `main` | 🟢 Accessible maths rendering, now under the DAISY Consortium. **Successor address**, see below |
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | `61` | **Apache-2.0** · `LICENSE` · `13,185 B` · `ba1f153bdba3` | `develop` | 🔵 **The competent-person credential, if you want it verifiable.** An RPII certification is exactly an Open Badge. **Successor address**, see below (`P336`) |
+| [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails) | `7,474` | **Apache-2.0** · `LICENSE.md` · `654 B` · `7c137905972e` — `SPDX-License-Identifier` plus the grant by reference | `develop` | 🟢 Refusal rails on an agent that must not invent a statutory interval. 🔴 **Index says `NOASSERTION`; the payload carries an explicit SPDX identifier.** **Successor address**, see below |
+
+### 🔴 Refused for this register, with the reason byte-read
+
+| Repository | ★ | Grant, byte-read | Branch | Refusal |
+|---|---|---|---|---|
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | `41,187` | **GPL-3.0** · **lowercase `license.txt`** · `35,148 B` · `8b1ba204bb69` | `develop` | 🔴 Strong copyleft. 🔴 **And a path lesson in the opposite direction from `p765`'s:** `LICENSE.txt` is a `404` at this address while `license.txt` returns `35 KB`. `p765` learned raw is case-sensitive on the *extension*; this is the same rule biting on the **stem, lowercase** (`T663`) |
+| [`kobotoolbox/kpi`](https://github.com/kobotoolbox/kpi) | `190` | **AGPL-3.0** · `LICENSE` · `34,488 B` · `7ac1d3861781` | `main` | 🔴 The network-use trigger reaches a hosted inspection service. Use ODK instead — same job, Apache-2.0 |
+| [`formio/formio`](https://github.com/formio/formio) | `2,329` | **OSL-3.0** · `LICENSE.txt` · `10,345 B` · `54261799127e` | `main` | 🔴 **Open Software License 3.0 — not a common grant and not a permissive one.** It carries an external-deployment trigger comparable to AGPL's. Flagged because `OSL-3.0` reads like a permissive name and is not |
+| [`metabase/metabase`](https://github.com/metabase/metabase) | `50,277` | 🔴 **Composite: AGPL-3.0 *and* the Metabase Commercial License, split by directory** · `LICENSE.txt` · `855 B` · `da3c9b0046ee` | `master` | 🔴 **The payload states the split in its own words:** everything outside the top-level `enterprise/` directory is AGPL; **inside `enterprise/` it is commercial.** A detector that reports one family per repository gets this row wrong, and this pass's did (`T664`, defect `D2`) |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `351` | **GPL-2.0** · **`docs/License.txt`** · `17,284 B` · `9bd1685b5dad` (byte-order mark present) | `master` | 🔴 Copyleft. 🟢 **And the clearest `ACTION p765-A` payout of the pass:** `0` payloads across `16` root licence paths and `8` manifests, then the README's `## License` section named the file — **at a non-root path no root-only matrix can ever reach.** The README says only *"GNU General Public License"*; **the payload says Version 2** (`T665`) |
+
+### Address corrections carried into this shelf (`ACTION p765-D`)
+
+Four rows above sit at **new addresses**, and the old ones are not dead — they were never canonical. Full ledger with redirect proofs at [`evidence/noncanonical-successors.2026-11-11-p766.tsv`](../evidence/noncanonical-successors.2026-11-11-p766.tsv).
+
+| Old address on this base | Successor | Basis |
+|---|---|---|
+| `microsoft/presidio` | [`data-privacy-stack/presidio`](https://github.com/data-privacy-stack/presidio) | transferred out of Microsoft; `LICENSE` byte-identical at both addresses |
+| `NSoiffer/MathCAT` | [`daisy/MathCAT`](https://github.com/daisy/MathCAT) | transferred to the DAISY Consortium; `README.md` byte-identical |
+| `IMSGlobal/openbadges-validator-core` | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | org renamed IMS Global → 1EdTech; `LICENSE` byte-identical |
+| `NVIDIA/NeMo-Guardrails` | [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails) | transferred **and** renamed; `LICENSE.md` byte-identical |
+
 ## 🆕 `p765` — **The substrate for a school statutory-compliance system is permissive almost all the way down — `25` MIT payloads and `11` Apache-2.0 payloads byte-read — and the three components that are *not* usable are the three that encode the law: the specification is NoDerivatives, the standards body took its code private, and the one artefact that knows schools exist is NonCommercial.**
 
 **`27` permissive and weak-copyleft foundation rows, each naming the branch its grant was read from.** Register: **school-estate safety and statutory compliance** — fire doors, asbestos, legionella, electrical fixed-wire testing, playground-equipment inspection (`ACTION p764-A`). The register's technical content is three layers: **field capture** (an inspection happens away from a desk), **the asset model** (the thing inspected has to be identifiable), and **the interval engine** (a statutory duty is a date, not a state).

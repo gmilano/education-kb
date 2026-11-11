@@ -4,6 +4,46 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p766) — **`422` does not mean dead. It means the address is not canonical, and `8` of the `10` addresses `ACTION p765-D` told this pass to retire are *alive and busy* at a new name — including one pushed the same day this pass ran. The `229`-address retirement is cancelled and replaced by a redirect-resolution rule.**
+
+**`13` non-canonical addresses resolved · `7` redirects **proven by byte-identical payloads** at both addresses · `1` false proof caught in this pass's own first attempt and corrected · `2` addresses confirmed genuinely withdrawn · `1` structural absence · `20` supply queries + `4` code-search queries on the register.**
+
+### 🔴 The correction, and why it has cost this base hundreds of passes
+
+`p765` established the asymmetry: **`raw.githubusercontent.com` follows a rename redirect silently and returns `200`; the search channel does not follow it and returns `422`.** `p765` read that as *"`229` addresses are gone, retire them"*. **That reading is wrong, and the error is in the direction that destroys data.**
+
+The `422` body says so in its own words: *"The listed users and repositories cannot be searched either because the resources do not exist **or you do not have permission to view them**."* It is a **non-canonicality** signal, not a death certificate. Differential proof, run this pass: `microsoft/vscode`, `torvalds/linux` and `moodle/moodle` all resolve; `microsoft/presidio` — **same owner as vscode** — does not. Per-repository, not per-owner, and not a scope restriction.
+
+🟢 **Retiring those rows would have deleted `49` citations of a repository that was pushed to on `2026-11-11`, the day of this pass.**
+
+### The resolved set — every redirect proven by identical bytes at both addresses
+
+| Old address | Citations | Successor | ★ | Branch | Grant, byte-read | Proof |
+|---|---|---|---|---|---|---|
+| `openedx/edx-platform` | `49` | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `8,231` | `master` | AGPL-3.0 · `35,136 B` · `e12d78569742` | `README.rst` byte-identical |
+| `microsoft/presidio` | `10` | [`data-privacy-stack/presidio`](https://github.com/data-privacy-stack/presidio) | `11,834` | `main` | MIT · `1,084 B` · `f3e86ee59a49` | `LICENSE` byte-identical |
+| `UCL-INGI/INGInious` | `9` | [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | `243` | `main` | AGPL-3.0 · `34,764 B` · `6d1ebe4ddf66` | `LICENSE` byte-identical |
+| `NVIDIA/NeMo-Guardrails` | `8` | [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails) | `7,474` | `develop` | Apache-2.0 · `654 B` · `7c137905972e` | `LICENSE.md` byte-identical |
+| `NSoiffer/MathCAT` | `7` | [`daisy/MathCAT`](https://github.com/daisy/MathCAT) | `131` | `main` | MIT · `1,065 B` · `f8f65c73234f` | `README.md` byte-identical |
+| `IMSGlobal/openbadges-validator-core` | `7` | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | `61` | `develop` | Apache-2.0 · `13,185 B` · `ba1f153bdba3` | `LICENSE` byte-identical |
+| `snipe/snipe-it` | — | [`grokability/snipe-it`](https://github.com/grokability/snipe-it) | `15,168` | `master` | AGPL-3.0 · `34,519 B` · `91b65277959e` | `LICENSE` byte-identical |
+| `jakubroztocil/rrule` | — | [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | `3,752` | `master` | BSD-3-Clause · `3,493 B` · `6c12f89b62fc` at `LICENCE` | owner renamed |
+| `openeducat/openeducat` | — | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `910` | `19.0` | LGPL · `8,241 B` · `528f84036800` | same org |
+| `OpenSIS-Classic/OpenSIS-Classic` | — | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `351` | `master` | GPL-2.0 · `17,284 B` · `9bd1685b5dad` at `docs/License.txt` | org resolved by name |
+
+### 🔴 Genuinely absent — marked, not replaced
+
+| Address | Citations | Finding |
+|---|---|---|
+| `1EdTech/caliper-js` | `11` | **WITHDRAWN, and now proven so rather than assumed.** `1EdTech/caliper-spec`, `1EdTech/caliper-js-example` and `1EdTech/caliper-ontology` all resolve; `caliper-js` alone does not. The org is alive and this one repository was removed. **Marked, not replaced**, exactly as `ACTION p765-D` instructed |
+| `digitalcredentials/learner-credential-wallet` | `25` | **UNRESOLVED, and stated as unresolved.** The org is alive (`92` repositories, including `learner-credential-wallet-site`). [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) (`91★`, MIT, `fork=false`) is the highest-starred candidate but **cannot be proven the successor**, so it is not written in as one |
+| `CMDBuild/openMAINT` | — | **STRUCTURAL ABSENCE.** The FM/asset platform this register belongs in is not on GitHub; only container wrappers last touched in `2016`–`2017` |
+
+### 🔵 The defect this pass caught in its own instrument
+
+The first redirect proof this pass ran compared `README.md` at both addresses and reported **"identical — redirect confirmed"** for `openedx/edx-platform` *and* `microsoft/presidio` **with the same `sha256₁₂`, `d5558cd419c8`, for two unrelated projects.** That value is the hash of raw's own **`404: Not Found` body**: both fetches had missed (edx-platform's readme is `README.rst`), and two misses compare equal. The proof was re-run against real payload paths with the `404` sentinel excluded on both sides. **`d5558cd419c8` is now a recorded instrument constant on this base** (`T667`, defect `D1`).
+
+
 ## 🆕 2026-11-11 (p765) — **A base-wide address census: `5,571` repository addresses swept, `5,194` live, `377` not. `229` are gone from the search channel and `148` are merely unindexed — and the most-cited dead address on this base is `openedx/edx-platform`, at `49` citations, whose live successor this base already carries `147` times. `raw.githubusercontent.com` scores all of them green, because raw follows a rename and search does not.**
 
 **`563` batched liveness calls + `377` individual re-probes + `78` supply queries on `search/repositories` · `61` licence payloads byte-read · `32` licence-family paths per address including capitalisation of stem **and** extension · `5` `COPYING.LESSER` paths on any GPL title · every family confirmed by operative clause text, never by byte count.**

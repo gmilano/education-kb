@@ -4,6 +4,30 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p766) — **The register's agent layer is `90` days old, `0★` almost throughout, and its single best-described artefact is proprietary. New this window: an EMEA EN 1176 assistant with no vendor in its data path, an APAC statutory mine-safety platform with CAPA workflows, and two offline MIT checklist clients — and the one "public" playground-safety platform forbids use.**
+
+**Register: playground-equipment inspection** (`ACTION p765-E`). `20` supply queries on `search/repositories` · `4` on `search/code` · `20` addresses byte-read · every `default_branch` derived, none guessed.
+
+### What is actually new in this window
+
+| Pushed | Artefact | Grant, byte-read | Region | Why it is new work and not a restatement |
+|---|---|---|---|---|
+| `2026-09-08` | [`cananzeyneppmit-droid/urban-park-green-space-chat`](https://github.com/cananzeyneppmit-droid/urban-park-green-space-chat) (`1★`) | **Apache-2.0** · `9,197 B` · `a7d00bfd5452` | EMEA (Türkiye) | **The only repository on GitHub naming EN 1176 in its description.** TypeScript + Ollama, so **no vendor in the data path** — the property `p765`'s `T639` said was almost unobtainable on a compliance register |
+| `2026-09-04` | [`ivengexnce/Sih`](https://github.com/ivengexnce/Sih) (`0★`) | 🔴 **no grant** | APAC (India) | DGMS-compliant mine safety: **CAPA workflows against a named statutory inspectorate**, offline field inspections, YOLO defect detection. Structurally the closest thing to this register anywhere, and unusable |
+| `2026-10-01` | [`FolderITDev/mobile-field-inspections`](https://github.com/FolderITDev/mobile-field-inspections) (`0★`) | **MIT** · `1,066 B` · `512fe609bbe1` | Global | Offline-first inspection client: resumable drafts, findings with photos. One of only two permissive offline clients on the register |
+| `2026-09-04` | [`brendanmcr/fieldcheck`](https://github.com/brendanmcr/fieldcheck) (`0★`) | **MIT** · `1,067 B` · `3a1b61037cc6` | Global | The other one. React Native, trades and property work |
+| `2026-08-27` | [`shaunakmirajgaonkar/public-playground-safety-inspector`](https://github.com/shaunakmirajgaonkar/public-playground-safety-inspector) (`0★`) | 🔴 **PROPRIETARY** · `254 B` · `8fe0460edf31` | Global | **The find of the window, inverted.** Named "public", described as a local-first playground-safety analytics platform, and its `LICENSE` reserves all rights. GitHub shows `NOASSERTION` |
+| `2026-09-18` | [`MuhammadMohsin442/playsafe-inspector`](https://github.com/MuhammadMohsin442/playsafe-inspector) (`0★`) | 🔴 **no grant** | APAC (Pakistan) | QR-tagged equipment, risk assessment, voice notes, PDF evidence. The most complete feature list on the register |
+| `2026-10-26` | [`archiep867-sys/VisionGuard-AI`](https://github.com/archiep867-sys/VisionGuard-AI) (`0★`) | 🔴 **no grant** | Global | Agentic video safety inspection that **records an incident candidate for human review** rather than deciding — the one design idea here worth porting (`P337`) |
+| `2026-03-16` | [`SamuraiBuddha/building-code-mcp`](https://github.com/SamuraiBuddha/building-code-mcp) (`0★`) | **MIT** · `1,089 B` · `3a8f258e33c1` | North America | MCP over ICC / NFPA / local jurisdictions. The jurisdiction-routing shape this register needs |
+
+### 🔵 The trend this window actually shows
+
+**The register's agent layer is younger than the register.** Seven of the eight rows above were pushed in the last `90` days, and **every single one is at `0★` or `1★`**. There is no incumbent to displace and no community to join — which is the inverse of `p765`'s EHS shelf, where the top artefact had `77★`. A studio entering here is not competing; it is **first**, and it will have to write the EN 1176-7 cadence itself because nobody has (`T651`, `T660`).
+
+🔴 **Declared gap, this window:** no new work found in **LATAM** on this register on either channel, and none in **North America** beyond the one MCP building-code server. The LATAM instrument exists (ABNT NBR 16071-7) and the supply against it is nil — stated here so the silence is not read as coverage.
+
+
 ## 🆕 2026-11-11 (p765) — **The new work on school-estate safety is `90` days old, permissive, and regional: a Colombian public asbestos geoviewer, a Brazilian escape-route calculator, a German CAFM created six weeks ago, a Korean statutory-review app and a Chinese guideline cross-checker. And the mandated trending leg, asked about compliance agents, returned a different register entirely.**
 
 **Register: school-estate safety and statutory compliance** (`ACTION p764-A`). `15` agent READMEs fetched and token-counted at `125,076` bytes · `78` supply queries on `search/repositories` · `created:>2026-08-11` run against the topic-qualified denominators of `T629`.

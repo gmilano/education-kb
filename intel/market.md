@@ -279,6 +279,19 @@ credentials-and-skills axis rather than the tutoring axis.
 
 ### North America
 
+#### 🆕 p766 — 🔴 the one region where this register's "international instrument" advantage **breaks**: the US instrument deliberately sets **no inspection interval**
+
+**Register: playground-equipment inspection** (`ACTION p765-E`). `p765` nominated this register precisely because EN 1176/1177 is an *international* family, so a deliverable would not need rebuilding per jurisdiction. **In North America that reasoning fails, and the failure is the commercial finding.**
+
+The **CPSC *Public Playground Safety Handbook* (Publication 325)** is the US reference, and in its own wording inspection frequency *depends on the type and age of equipment, the amount of use, and the local climate*. **It sets no fixed interval.** **ASTM F1487** is a *performance specification* — dimensions, entrapment, protrusions, guardrails, use zones, labelling — not an inspection cadence. (A `F1487-25` revision is vendor-reported and **unconfirmed against ASTM**; recorded as unconfirmed.)
+
+🟢 **Why that is an opportunity rather than a dead end.** Where EMEA hands you the interval, North America hands you a **duty to justify the interval you chose**. That is a defensible-reasoning deliverable — equipment type, age, usage volume and climate as inputs, with a written, dated rationale as output — and it is worth more than a calendar, because it is the artefact a district needs when something goes wrong. **No open-source tool produces it:** `CPSC` is `0` on this entire base and `ASTM F1487` is `0` (`T657`, `P338`).
+
+**The permissive supply here is one MCP server:** [`SamuraiBuddha/building-code-mcp`](https://github.com/SamuraiBuddha/building-code-mcp) (`0★`, **MIT**, `1,089 B` · `3a8f258e33c1`, `main`) — ICC/NFPA/local-jurisdiction routing, which is the right shape for a per-district interval policy. [`phredogee/ITAI-1378-Final-SiteGuard-AI`](https://github.com/phredogee/ITAI-1378-Final-SiteGuard-AI) is grant-less.
+
+**Market context, measured this pass:** North America is the largest regional AI-in-education market at a reported **`38%`** of global share, with institution-wide implementation reported at **`66%`**; **at least `15` states** have introduced or passed legislation specifically addressing AI in education (Virginia's S.B. 394 directs the state education agency to issue guidance including teacher training), the US Department of Education's FIPSE awards total **`$169M`** including responsible-AI use, and NTIA has opened an edtech review stating *"the pace and scale of edtech adoption … haven't been matched by serious scrutiny."* 🔴 **Vendor-sourced and mutually inconsistent** — student-use figures of `66%→92%` and adoption of `86%` come from marketing material and are recorded as a range, not a number.
+
+
 #### 🆕 p765 — the statutory instrument is state-level, the deliverable is a **filed return**, and the regulation corpus is public domain
 
 **Register: school-estate safety and statutory compliance.** The buyer is the district's risk, safety or facilities office, and what it owes is not a dashboard — it is a signed statutory filing with a named signatory and a deadline.
@@ -1476,6 +1489,19 @@ this is the third consecutive pass to return already-filed facts. Supply remains
 `p724`'s `9` new repositories are North American.**
 
 ### EMEA
+
+#### 🆕 p766 — 🟢 the region that *hands you the interval*: a three-tier cadence, a named competent person, and a statute corpus under **MIT**
+
+**Register: playground-equipment inspection** (`ACTION p765-E`). EMEA is where this register is strongest, and it is the reason `p765` chose it: **EN 1176** is a multi-part European family with **EN 1176-7** covering installation, inspection and maintenance, and **EN 1177** covering impact-attenuating surfacing. The cadence is tiered — **routine visual → operational → annual main** — the annual main inspection is performed by a certified inspector (**RPII** in UK practice), and the regime therefore specifies all five fields of the duty schema: duty, instrument, interval, competent person, evidence artefact. Collected as data at [`evidence/statutory-intervals.2026-11-11-p766.tsv`](../evidence/statutory-intervals.2026-11-11-p766.tsv). 🔵 **Honest limit: the EN 1176-7 text itself was not read this pass** — it is a paywalled CEN deliverable — so the tier *names* are sourced and the exact periods for the routine and operational tiers are recorded as operator-set, with vendor-reported ranges marked as such.
+
+🟢 **The find of the pass sits in this region: [`legalize-dev/legalize-pt`](https://github.com/legalize-dev/legalize-pt)** (`38★`, **MIT**, `1,002 B` · `309f2212fb92`, `main`) — a Portuguese primary-law corpus that **cites `EN 1176-7`** in a 1998 decree, under a permissive grant. GitHub's index reports `NOASSERTION`. This base has never before placed a permissively-licensed national statute corpus on a safety register (`T653`).
+
+**The register's whole permissive agent supply is also EMEA:** [`cananzeyneppmit-droid/urban-park-green-space-chat`](https://github.com/cananzeyneppmit-droid/urban-park-green-space-chat) (`1★`, **Apache-2.0**, `9,197 B` · `a7d00bfd5452`, `main`, Türkiye) — EN 1176 plus green-space metrics on TypeScript + Ollama, **no vendor in the data path**.
+
+**Further register-bearing corpora, measured on `search/code`** (`"DIN EN 1176"` `120` files, `"EN 1176-7"` `80`, `"BS EN 1176"` `27`): [`offenesdresden/dresden-ratsinfo`](https://github.com/offenesdresden/dresden-ratsinfo) (`13★`, `master`, **no grant**) — German municipal council records citing DIN EN 1176-7; [`jordimariezcu/mobiliariurba`](https://github.com/jordimariezcu/mobiliariurba) (`0★`, `master`, **no grant**) — a Catalan EN 1176-7 annual-inspection guide; [`chobbledotcom/play-safe-play-inspection`](https://github.com/chobbledotcom/play-safe-play-inspection) (`0★`, `main`, **no grant**) — UK RPII annual and indoor-play inspection pages. **All three are content, not software, and only the Portuguese one is licensed.**
+
+**Regulatory context:** under the **EU AI Act**, education is high-risk where a system determines access or admission or evaluates learning outcomes. 🔴 **The application date is genuinely unresolved in the sources read this pass** — `2 December 2027`, `August 2026` and `2 December 2026` all appear, against a Council/Parliament provisional agreement of **`7 May 2026`** amending the Act. **No deck may state a single date on this basis.** National market-surveillance authorities are reported to gain AI-literacy enforcement powers from **August 2026**. An Erasmus+ adult-education study across six countries found **>`90%`** AI use in Spain and **`100%`** in Belgium **alongside an absence of institutional guidelines**; the European University Association's January 2026 report urges caution and prefers European LLMs.
+
 
 #### 🆕 p765 — the most precisely specified school-estate compliance regime this base has measured, a central return going digital in **autumn 2026**, and a national asbestos register that was **refused**
 
@@ -2875,6 +2901,19 @@ selling urgency against a date the amendment moved**, and that mismatch is the o
 
 ### APAC
 
+#### 🆕 p766 — 🔵 the instrument is a **mirror** of EMEA's, and the region holds the closest structural match to this register anywhere — behind no grant at all
+
+**Register: playground-equipment inspection** (`ACTION p765-E`). APAC inherits the EMEA advantage by reference: the **AS 4685** series is reported to mirror the EN 1176 structure, with **AS/NZS 4422** as the surfacing counterpart to EN 1177. 🔵 So a deliverable built to EN 1176-7's tiering ports to Australia and New Zealand at low cost — **the one place this register's "build once" claim holds across regions.** 🔴 Honest limit: the AS 4685 text was not read this pass, and `AS 4685` is `0` across this entire base.
+
+🔴 **The region holds the best structural match on the register and it cannot be used.** [`ivengexnce/Sih`](https://github.com/ivengexnce/Sih) (`0★`, `main`, India) is a **DGMS-compliant mine-safety platform** — CAPA workflows against a *named statutory inspectorate*, offline field inspections, YOLO defect detection. DGMS (Directorate General of Mines Safety) is exactly the kind of jurisdiction-specific inspectorate a school-estate regime runs on, and this is the only artefact on the base that models corrective-and-preventive action against one. **It carries no grant across `16` licence paths and `8` manifests** (`T659`).
+
+[`MuhammadMohsin442/playsafe-inspector`](https://github.com/MuhammadMohsin442/playsafe-inspector) (`0★`, `main`, Pakistan) has the register's most complete feature list — QR-tagged equipment, risk assessment, voice notes, PDF evidence — and is **also grant-less**. [`sidhartha-patra/multimodal-vision-inspection-agent`](https://github.com/sidhartha-patra/multimodal-vision-inspection-agent) (`0★`, **MIT**, `1,073 B` · `acd62ddf5648`, India) is permissive but carries no register vocabulary.
+
+🟢 **The permissive platform tier is APAC's too:** [`frappe/frappe`](https://github.com/frappe/frappe) (`11,086★`, **MIT**, `develop`, India) is the only permissive platform-tier option for the asset register — though **[`frappe/erpnext`](https://github.com/frappe/erpnext) is GPL-3.0** and its Asset Maintenance doctype, the closest shipped model to a statutory cadence, is therefore refused. [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) (`910★`, **LGPL**, `19.0`) is weak-copyleft and linkable if kept replaceable.
+
+**Market context:** APAC is reported the **fastest-growing** region for AI in education at a **`20.9%` CAGR (2024–2029)**. Governance is explicitly *not* regional — Ipsos finds Asia Pacific is not approaching education AI through one lens, and EdTech Hub's ASEAN work notes each ministry integrates AI into its own sector. The Philippines' DepEd reportedly launched **AGAP.AI** in January 2026 as a nationwide responsible-AI programme in basic education; Clarivate compares AI policy across **seven** APAC jurisdictions. **Fewer than half** of educators surveyed report strong confidence in existing institutional or government AI policy. 🔴 The SEA teacher-use figure of **~`86%`** is secondary-sourced to EdTech Hub (March 2026) and was not confirmed against EdTech Hub directly.
+
+
 #### 🆕 p765 — the mandate region **and** a genuine supply region, with a dated audit obligation in two Indian jurisdictions
 
 **Register: school-estate safety and statutory compliance.** APAC is the only region this pass found that both mandates school safety audits on a schedule **and** publishes on-register code.
@@ -4194,6 +4233,19 @@ minority everywhere in APAC, but it is *rising* in Japan, Australia and South Ko
 capability; sell into Japan, Australia and Korea on safeguards as well.
 
 ### LATAM
+
+#### 🆕 p766 — 🟢 the LATAM instrument **exists and is specific** — ABNT NBR 16071 **Part 7** — and a municipal regulator has already published that the national standard is defective
+
+**Register: playground-equipment inspection** (`ACTION p765-E`). This pass expected to declare a LATAM gap and **found an instrument instead**, which is the opposite of this register's pattern elsewhere.
+
+**ABNT NBR 16071** is a multi-part Brazilian standard — Part 1 terminology, Part 2 safety requirements, Part 3 impact-absorbing surfaces, Part 5 play-area design, Part 8 inclusive playgrounds — and **Part 7 (`NBR 16071-7`, 2012 edition) is specifically *inspection, maintenance and use***. That is the direct counterpart to EN 1176-7. 🔵 **Honest limits, both recorded:** 2021 editions are cited for some parts, so **Part 7's current edition is unconfirmed**; and the press claim that Part 1 is *mandatory* for residential condominiums is journalism, not legal text, and is not relied on here.
+
+🔴 **And the sharper finding: a regulator has published that the standard does not work.** São Paulo's **Resolução CPA/SMPED 033/2025** establishes complementary municipal requirements **because** NBR 16071 Part 8 (inclusive playgrounds) *"possui diversas inconsistências o que dificulta sua aplicação"* — it has several inconsistencies that impede its application. **A municipality documenting that the national standard is unusable, and legislating around it, is a procurement event**: it creates a per-municipality compliance surface that nothing in open source addresses (`T668`, `P339`).
+
+🔴 **Supply against this instrument is nil, measured and stated.** `NBR 16071` is **`0`** across this entire base. `search/repositories` returns **no repository** naming NBR 16071, and **no new work in LATAM on this register was found on either the repository or the code channel this pass.** The register's only permissive agent is EMEA, its only permissive platform is APAC, and LATAM has **neither** — while holding one of the four clearest statutory instruments. **This is the widest instrument-to-supply gap this register shows in any region.**
+
+**Market context:** adoption is high and governance is not. The UNESCO/CEPAL **Observatorio de IA en Educación** for Latin America and the Caribbean reports **`92%`** of higher-education students using AI tools regularly (Google's August 2026 figures: **`92%`** of university students, **`79%`** of teachers — a commercial source). A regional survey covering **`200` higher-education institutions across `19` countries** (August–October 2025) supplies the institutional-governance baseline. Against that, the region *"carece de un marco regulatorio unificado"* on AI in higher education, and ProFuturo/OEI find basic-education adoption *"desigual y limitada"* relative to other regions. The IDB published an October 2026 report, linked to PISA 2025, on whether Latin American schools are ready for their students' AI use, and runs the regional **"IA Presente"** call.
+
 
 #### 🆕 p765 — **two real artefacts on this exact register**, Chile's is the only legible national instrument, and the building-level census does not exist in any of the three largest systems
 
@@ -5602,6 +5654,24 @@ no code dependency) the right opening move here and makes a code-first pitch the
 first step rather than a formality.
 
 ### Global
+
+#### 🆕 p766 — the register placed in one table, and the measurement that makes it a market rather than a gap
+
+**Register: playground-equipment inspection** (`ACTION p765-E`). Four regions, four instruments, one supply.
+
+| Region | Instrument | Sets an interval? | Open-source supply measured this pass |
+|---|---|---|---|
+| **EMEA** | EN 1176 / **EN 1176-7** (inspection & maintenance) / EN 1177 (surfacing) | 🟢 **Yes — three tiers**, competent person named | `1` Apache-2.0 agent (`1★`), `1` MIT statute corpus (`38★`), `3` unlicensed corpora |
+| **APAC** | **AS 4685** series (mirrors EN 1176) / AS/NZS 4422 | 🟢 Yes, by mirroring | `1` MIT generic vision agent; the best structural match (`ivengexnce/Sih`) is **grant-less** |
+| **North America** | **CPSC Handbook Pub. 325** / ASTM F1487 (performance spec) | 🔴 **No — explicitly usage-, age- and climate-dependent** | `1` MIT building-code MCP server (`0★`) |
+| **LATAM** | **ABNT NBR 16071-7** (inspection, maintenance, use) + São Paulo Res. CPA/SMPED 033/2025 | 🟢 Yes, per Part 7 | 🔴 **Nil. No repository names NBR 16071** |
+
+🟢 **The verdict: this is an addressable market, not a supply failure** — the third consecutive register where this base reaches that reading. The instruments are public, dated, multi-jurisdictional and in four cases legally binding on a buyer who already owns the assets. What is missing is not data and not demand: it is **one object nobody has built** — a duty record of the form `{duty, instrument, interval, competent person, evidence artefact}`. `P326`–`P332` each said so in prose. **This pass built it as data** ([`evidence/statutory-intervals.2026-11-11-p766.tsv`](../evidence/statutory-intervals.2026-11-11-p766.tsv)) and found that its hardest field was never hard: a statutory interval is an **RFC 5545 recurrence rule**, implemented permissively since 1998 (`T661`).
+
+🔴 **The register's own vocabulary was at `0` on all eleven shelves before this pass**, across `12` tokens: `EN1176` `0`, `ASTM F1487` `0`, `AS 4685` `0`, `NBR 16071` `0`, `CPSC` `0`, `impact attenuation` `0`, `RPII` `0`, and all three EN 1176-7 tier names — `routine visual inspection`, `operational inspection`, `annual main inspection` — **`0` each.** The `46` pre-existing `playground` hits are `p764`/`p765` directive text plus the software-sandbox homograph (`qti-playground`, `ml-playgrounds`), not register content.
+
+**Global market context, as a range rather than a number.** AI in education is reported at **`$10.6B` (2026) → `$42.48B` (2030) at a `41.5%` CAGR** by one house and at **`$10–23B` for 2026–2027** by another; broader edtech is put at **`$238.4B`** for 2026. 🔴 **These are vendor and market-research figures and they do not reconcile**; this page records the spread and declines to pick. The firmer structural readings: generative-AI use among education organisations is reported at **`86%`**, the highest of any industry measured; UK undergraduate use for assessed work went **`53%` (2024) → `94%` (2026)**; and **only `45%` of the most-used tools have published research meeting an ESSA evidence tier** — the evidence gap that makes a *dated, defensible compliance artefact* easier to sell than a learning-outcome claim.
+
 
 #### 🆕 p765 — the cross-region law of this register: **the code is permissive, the law is not, and which half you can obtain is decided by jurisdiction**
 

@@ -1,0 +1,23 @@
+# ACTION p765-D / p765-B discharge. Every row re-measured 2026-11-11.
+# FINDING THAT CHANGES THE READING: a 422 on search/repositories does NOT mean the project is dead.
+# It means THE ADDRESS IS NOT CANONICAL - renamed, or transferred, or both. raw.githubusercontent.com
+# follows the rename redirect silently and returns 200, which is why this base scored these green for
+# hundreds of passes. 8 of 10 addresses named by ACTION p765-D resolve to a LIVE successor.
+# METHOD: 422 on repo:<addr> -> resolve by name search -> PROVE the redirect by fetching one real
+# payload path at both addresses and comparing bytes. Identical bytes = same object = redirect proven.
+# The 404 sentinel (sha256_12 d5558cd419c8, raw's "404: Not Found" body) is excluded on both sides;
+# comparing two 404 bodies produced a false "identical" in this pass's first attempt and was corrected.
+old_address	citations_on_base	search_channel	successor	stars	default_branch	grant_byte_read	redirect_proof	verdict
+openedx/edx-platform	49	422 non-canonical	openedx/openedx-platform	8231	master	AGPL-3.0 35,136B e12d78569742	README.rst byte-identical	RENAMED IN ORG - alive, pushed 2026-11-11
+digitalcredentials/learner-credential-wallet	25	422 non-canonical	UNRESOLVED	-	-	-	-	org alive (92 repos, -site sibling present); ryjones/learner-credential-wallet (91*, MIT, fork=false) NOT PROVABLY the successor. STATED UNRESOLVED, not replaced
+1EdTech/caliper-js	11	422 non-canonical	NONE - WITHDRAWN	-	-	-	-	caliper-spec, caliper-js-example, caliper-ontology all resolve; caliper-js alone does not. MARKED, NOT REPLACED, per p765-D
+microsoft/presidio	10	422 non-canonical	data-privacy-stack/presidio	11834	main	MIT 1,084B f3e86ee59a49	LICENSE byte-identical	TRANSFERRED OUT OF MICROSOFT - alive, pushed 2026-11-10
+UCL-INGI/INGInious	9	422 non-canonical	INGInious/INGInious	243	main	AGPL-3.0 34,764B 6d1ebe4ddf66	LICENSE byte-identical	TRANSFERRED to own org - alive, pushed 2026-11-10. Index says NOASSERTION; payload says AGPL-3.0
+NVIDIA/NeMo-Guardrails	8	422 non-canonical	NVIDIA-NeMo/Guardrails	7474	develop	Apache-2.0 654B 7c137905972e (SPDX + by reference)	LICENSE.md byte-identical	TRANSFERRED AND RENAMED - alive. Index says NOASSERTION; payload carries SPDX-License-Identifier: Apache-2.0
+NSoiffer/MathCAT	7	422 non-canonical	daisy/MathCAT	131	main	MIT 1,065B f8f65c73234f	README.md byte-identical	TRANSFERRED to DAISY Consortium - alive
+IMSGlobal/openbadges-validator-core	7	422 non-canonical	1EdTech/openbadges-validator-core	61	develop	Apache-2.0 13,185B ba1f153bdba3	LICENSE byte-identical	ORG RENAMED IMSGlobal -> 1EdTech - alive
+snipe/snipe-it	-	422 non-canonical	grokability/snipe-it	15168	master	AGPL-3.0 34,519B 91b65277959e	LICENSE byte-identical	TRANSFERRED to Grokability - alive, 15,168 stars
+jakubroztocil/rrule	-	422 non-canonical	jkbrzt/rrule	3752	master	BSD-3-Clause 3,493B 6c12f89b62fc at LICENCE	same owner renamed	OWNER RENAMED - alive but STALE, pushed 2024-06-27
+CMDBuild/openMAINT	-	422 non-canonical	NONE ON GITHUB	-	-	-	-	STRUCTURAL ABSENCE. openMAINT is the FM/asset platform this register would sit in; only third-party docker wrappers exist on GitHub (rsilva4-zz/docker-openmaint 36*, 2017)
+openeducat/openeducat	-	422 non-canonical	openeducat/openeducat_erp	910	19.0	LGPL 8,241B 528f84036800	same org	RENAMED - alive, pushed 2026-11-02. Byte-read CONFIRMS the vendor's LGPL claim
+OpenSIS-Classic/OpenSIS-Classic	-	422 non-canonical	OS4ED/openSIS-Classic	351	master	GPL-2.0 17,284B 9bd1685b5dad at docs/License.txt	-	RESOLVED to the real org. Grant reachable ONLY via README (ACTION p765-A)

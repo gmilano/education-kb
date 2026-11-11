@@ -4,6 +4,70 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `P334`–`P339` — added at p766 (2026-11-11)
+
+**Register: playground-equipment inspection** (`ACTION p765-E`). Every component named below was byte-read for its grant on `2026-11-11` from the `default_branch` returned by `search/repositories`.
+
+🟢 **These six patterns differ from `P326`–`P333` in one way that matters: the duty model they all needed now exists as committed data**, at [`evidence/statutory-intervals.2026-11-11-p766.tsv`](../evidence/statutory-intervals.2026-11-11-p766.tsv), with an `interval_rrule` column consumable directly by `jkbrzt/rrule` or `dateutil` (`T661`). The hand-waving `ACTION p765-F` named is discharged; what follows assembles around it.
+
+🔴 **Four licence constraints govern everything below. Three are invisible on the repository page.**
+
+1. **`jkbrzt/rrule` is BSD-3-Clause, at `LICENCE`** (`3,493 B` · `6c12f89b62fc`) — British spelling, and GitHub's index says `NOASSERTION`. Attribution and the no-endorsement clause apply. 🔴 **Last pushed `2024-06-27`** — if you need a maintained interval engine, use `dateutil` (`T662`).
+2. **`metabase/metabase` is AGPL *outside* `enterprise/` and commercial *inside* it** (`855 B` · `da3c9b0046ee`). Scope is a **path predicate**. Do not vendor any `enterprise/` path into a deliverable (`T664`).
+3. **`frappe/frappe` is MIT; `frappe/erpnext` is GPL-3.0** (`license.txt`, lowercase · `35,148 B`). The Asset Maintenance doctype you want is in **ERPNext**, behind the copyleft. Build it on the framework instead (`T663`).
+4. **`shaunakmirajgaonkar/public-playground-safety-inspector` is proprietary, all rights reserved** (`254 B` · `8fe0460edf31`), despite `NOASSERTION` on the page and "public" in the name. **Do not read it, fork it or borrow from it** (`T654`).
+
+### `P334` — The duty engine: a statutory interval as a first-class object (`6–8 weeks`)
+
+**The gap:** every candidate on this register models a **work order** — a task with an assignee and a due date. A statutory duty is a work order **plus** a legal instrument, **plus** an authority requirement, **plus** an evidence artefact that outlives the task.
+
+**Wiring.** Model five doctypes on [`frappe/frappe`](https://github.com/frappe/frappe) (MIT, `develop`): `Asset` (play equipment, sited, dated, with install date and surfacing type), `Instrument` (EN 1176-7, NBR 16071-7, CPSC Pub. 325 — seeded from the TSV), `Duty` (asset × instrument × `interval_rrule`), `Competency` (who may discharge which tier) and `Evidence` (the artefact a discharge produces). Expand each `Duty` into dated occurrences with [`dateutil`](https://github.com/dateutil/dateutil) (Apache-2.0/BSD-3, `master`) server-side — `rrulestr(duty.interval_rrule).between(...)`. Drive the long-lived clock with [`temporalio/temporal`](https://github.com/temporalio/temporal) (MIT, `main`): one durable workflow per `Duty`, timers measured in months and years, surviving restarts and re-plans in a way `cron` does not.
+
+**The acceptance test that makes it a duty engine and not a task list:** `Duty.discharge()` must **refuse** when the actor holds no `Competency` for that tier. An annual main inspection recorded by an uncertified actor is not a discharged duty, and a system that accepts it manufactures evidence that fails on audit (`T660`).
+
+### `P335` — Offline capture with CAPA close-out, ported from a mine (`4–6 weeks`)
+
+**Why:** a playground has no reliable connectivity and the inspector is walking (`T656`). And the one artefact on this base that models statutory follow-through properly — [`ivengexnce/Sih`](https://github.com/ivengexnce/Sih), DGMS mine safety — **carries no grant**, so the *design* ports and the code cannot (`T659`).
+
+**Wiring.** [`getodk/collect`](https://github.com/getodk/collect) (Apache-2.0, `master`) on the inspector's Android device, submitting to [`getodk/central`](https://github.com/getodk/central) (Apache-2.0, `master`, byte-identical grant); draw submissions out over OData into the `P334` `Evidence` doctype. Author the three EN 1176-7 tier forms — routine visual, operational, annual main — as [`surveyjs/survey-library`](https://github.com/surveyjs/survey-library) (MIT, `master`) JSON for the web half, keeping one schema for both clients. Redact faces and voice notes on ingest with [`data-privacy-stack/presidio`](https://github.com/data-privacy-stack/presidio) (MIT, `main`) — **a playground inspection photographs children's environments, and the successor address matters here** (`ACTION p765-D`).
+
+**Port from `Sih`, do not copy:** a finding opens a **corrective** action and a **preventive** action, each with an owner and a dated close-out, and the parent duty stays **open until both close**. That is the difference between an inspection record and a discharged obligation.
+
+### `P336` — The competent-person credential as a verifiable badge (`3–4 weeks`)
+
+**The insight:** an RPII certification, or a state inspector qualification, **is already an Open Badge** — an assertion by an issuer about a person, with a scope and an expiry.
+
+**Wiring.** Issue and verify `Competency` records against [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) (Apache-2.0, `develop`) — **note the successor address; `IMSGlobal/...` is non-canonical**. Store the assertion on the `Competency` doctype from `P334` and make `Duty.discharge()`'s authority check a **validator call plus an expiry check**, not a boolean column. Expiry is the whole point: competencies lapse, and a lapsed competency must reopen every duty tier that depended on it.
+
+🔵 **Scope honestly.** `digitalcredentials/learner-credential-wallet` is the obvious holder-side wallet and **this pass could not resolve its canonical address** — the org is alive, the repository is not, and the `91★` candidate is not provably the successor. **Do not promise a wallet leg on this pattern** until that address is resolved (`ACTION p766-C`).
+
+### `P337` — The agent that proposes and never decides (`4–5 weeks`)
+
+**Why:** a statutory verdict is a legal act. The one good idea among the register's grant-less artefacts is [`archiep867-sys/VisionGuard-AI`](https://github.com/archiep867-sys/VisionGuard-AI)'s: it **records an incident candidate for human review** rather than issuing a finding.
+
+**Wiring.** Take the retrieval and jurisdiction-routing shape from [`SamuraiBuddha/building-code-mcp`](https://github.com/SamuraiBuddha/building-code-mcp) (MIT, `main`) and point it at the `Instrument` table from `P334`, serving one MCP tool per instrument family. Ground the EN 1176 leg on [`cananzeyneppmit-droid/urban-park-green-space-chat`](https://github.com/cananzeyneppmit-droid/urban-park-green-space-chat) (Apache-2.0, `main`) — **the only permissive EN 1176-aware code in existence** and a working local-Ollama reference with no vendor in the data path. Redistribute statutory text only from a corpus you are licensed to redistribute: [`legalize-dev/legalize-pt`](https://github.com/legalize-dev/legalize-pt) (**MIT**, `main`) for Portugal; EN 1176-7 itself is a paywalled CEN deliverable and **may not be vendored** (`T653`).
+
+**Hard constraint.** Wrap the agent in [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails) (Apache-2.0, `develop`) with one non-negotiable rail: **the agent may not state an interval that is not in the `Instrument` table, and may not state a pass/fail verdict at all.** It proposes a candidate finding with a citation; a competent person disposes. Vision assistance can come from [`sidhartha-patra/multimodal-vision-inspection-agent`](https://github.com/sidhartha-patra/multimodal-vision-inspection-agent) (MIT, `main`) as a scaffold — it has no register vocabulary, so expect to supply all of it.
+
+### `P338` — North America: sell the **justification**, not the calendar (`5–7 weeks`)
+
+🔴 **This pattern exists because `P334` does not sell in the United States.** The CPSC handbook sets **no interval** — frequency *depends on the type and age of equipment, the amount of use, and the local climate* — and ASTM F1487 is a performance specification (`T657`). There is no cadence to encode.
+
+**So invert the deliverable.** Build an **interval-justification engine**: inputs are equipment type, install date, usage volume and local climate; output is a **dated, written rationale** for the chosen frequency, versioned, with the handbook's own criteria cited against each input. The `Duty` record still carries an `interval_rrule`, but its authority is now the **district's documented reasoning** rather than a standard's number.
+
+**Wiring.** `P334`'s doctypes on `frappe/frappe` (MIT) for the record; the jurisdiction routing of `SamuraiBuddha/building-code-mcp` (MIT) over ICC/NFPA/local codes for the code-reference leg; `P337`'s guardrailed agent to *draft* the rationale and never to approve it. Climate input from a public weather series, usage volume from whatever the district already counts.
+
+**The artefact that closes the sale** is not a dashboard — it is a **PDF with a date, a named author, cited criteria and a version history**, producible for any asset on demand. That is what a district needs when something goes wrong, and `CPSC` and `ASTM F1487` are each `0` across this base.
+
+### `P339` — LATAM: the per-municipality overlay on a defective national standard (`6–8 weeks`)
+
+🟢 **The demand signal here is stronger than any adoption statistic:** São Paulo's **Resolução CPA/SMPED 033/2025** issues complementary requirements **because** ABNT NBR 16071 Part 8 *"possui diversas inconsistências o que dificulta sua aplicação"* (`T668`). A regulator has stated on the record that the national instrument cannot be applied — and `NBR 16071` returns **`0`** repositories and is `0` across this entire base.
+
+**Wiring.** Model **two** instrument layers in `P334`'s `Instrument` doctype: the national (`NBR 16071-7`, inspection/maintenance/use) and the **municipal overlay**, with precedence resolved per asset by its municipality. This is the only pattern on this register that needs instrument **composition** rather than instrument selection, and `São Paulo` is the worked example. `frappe/frappe` (MIT) for the record, `dateutil` (Apache-2.0/BSD-3) for the cadence, ODK (Apache-2.0) for capture in the field, Portuguese-language forms via `surveyjs` (MIT).
+
+🔴 **Two limits to state to any client before costing this.** NBR 16071 **Part 7's current edition is unconfirmed** — 2021 editions are cited for some parts and the inspection part this pass can source is the 2012 edition; confirm with ABNT before contracting. And the press claim that Part 1 is *mandatory* for residential condominiums is journalism, **not legal text** — do not repeat it in a deck. 🔵 **Confirming the edition is the cheapest high-value act available on this register**, because LATAM holds a clear instrument, a documented municipal failure, and literally nil open-source supply.
+
+
 ## 🆕 `P326`–`P333` — added at p765 (2026-11-11)
 
 **Register: school-estate safety and statutory compliance** — fire doors, asbestos, legionella, electrical fixed-wire testing, playground-equipment inspection (`ACTION p764-A`).

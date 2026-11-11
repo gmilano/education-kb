@@ -4,6 +4,99 @@ region: Global
 updated: 2026-11-11
 ---
 
+# 🆕 Trends new at `p766` (researched 2026-11-11) — `T651`–`T668`
+
+**The register is playground-equipment inspection** — `ACTION p765-E` named it and this pass built it, for the reason `p765` gave: it is the one sub-register of school-estate safety with an **international** rather than a national instrument. That reason held in EMEA and APAC, **failed in North America for an instructive reason**, and LATAM turned out to hold an instrument this pass expected to have to declare missing.
+
+**`20` supply queries on `search/repositories` · `4` on `search/code` · `20` addresses byte-read for a grant · `16` licence paths per address crossing stem *and* extension capitalisation · `8` manifests on failure · `13` non-canonical addresses resolved with `7` redirects proven by byte-identical payloads · `2` defects in this pass's own instruments caught and corrected before any verdict was written.**
+
+## `T651` — the register, and the measurement that says it was empty
+
+Before this pass, across all eleven shelves, counted with `grep -oiF`:
+
+| Token | Count | Token | Count |
+|---|---|---|---|
+| `EN1176` | **`0`** | `CPSC` | **`0`** |
+| `ASTM F1487` | **`0`** | `RPII` | **`0`** |
+| `AS 4685` | **`0`** | `impact attenuation` | **`0`** |
+| `NBR 16071` | **`0`** | `routine visual inspection` | **`0`** |
+| `operational inspection` | **`0`** | `annual main inspection` | **`0`** |
+
+`EN 1176` counted `2` — **both inside `p765`'s own directive naming this register**. `playground` counted `46`, and those are `p764`/`p765` directive text plus the software-sandbox homograph (`qti-playground`, `ml-playgrounds`), **not register content**.
+
+## `T652` — the entire permissive supply for this register is one repository, and it is `1★`
+
+`EN1176` returns **`0`** repositories on `search/repositories`. `EN 1176 playground` returns **exactly one**: [`cananzeyneppmit-droid/urban-park-green-space-chat`](https://github.com/cananzeyneppmit-droid/urban-park-green-space-chat), `1★`, **Apache-2.0** (`LICENSE.txt`, `9,197 B`, `a7d00bfd5452`), TypeScript + Ollama. It is `2,160 B` short of canonical Apache-2.0 (`11,357 B`) — and the shortfall is **entirely the non-operative `APPENDIX`**: all nine operative sections (Definitions, Grant of Copyright, Grant of Patent, Redistribution, Submission of Contributions, Trademarks, Disclaimer of Warranty, Limitation of Liability, Accepting Warranty) are present and verified individually. **A short Apache payload is not a defective grant; it is usually a stripped appendix. Length alone is not a verdict.**
+
+## `T653` — a national statute corpus under MIT, and it cites the register's instrument
+
+[`legalize-dev/legalize-pt`](https://github.com/legalize-dev/legalize-pt) (`38★`, `main`) is a Portuguese primary-law corpus whose grant byte-reads **MIT** (`LICENSE`, `1,002 B`, `309f2212fb92`) — while **GitHub's index reports `NOASSERTION`**. It contains a 1998 decree citing `EN 1176-7`. **This base has not previously placed a permissively-licensed primary-law corpus on a safety register.** It matters because every pattern on this register needs statutory text it is allowed to redistribute, and paywalled CEN deliverables cannot supply that.
+
+## `T654` — 🔴 the one repository that looks like the product forbids use, and the platform shows the same value it shows for permissive repositories
+
+[`shaunakmirajgaonkar/public-playground-safety-inspector`](https://github.com/shaunakmirajgaonkar/public-playground-safety-inspector) is described as a *"privacy-conscious, local-first playground safety inspection and review-prioritization analytics platform"* — the single best product description on the register. Its `LICENSE` (`254 B`, `8fe0460edf31`) reads, in full force: *"All Rights Reserved. This software and its source code are proprietary and confidential. No part of this software may be copied, modified, distributed, or used without the prior written permission of the author."*
+
+**GitHub indexes it as `NOASSERTION`** — the identical index value carried this pass by `getodk/collect` (Apache-2.0), `legalize-dev/legalize-pt` (MIT), `jkbrzt/rrule` (BSD-3), `odoo/odoo` (LGPL) and `INGInious/INGInious` (AGPL-3.0). **`NOASSERTION` is not a weak signal, it is an absent one**: it spans "permissive but unclassified" and "all rights reserved" with nothing distinguishing them. Only the payload separates them.
+
+## `T655` — a manifest licence field is a default, not a decision
+
+[`aweleayomide91/Decentralized-Playground-Safety-Inspection`](https://github.com/aweleayomide91/Decentralized-Playground-Safety-Inspection) declares `ISC` in `package.json` (`668 B`, `6fb9b0c4eacf`) and has **no `LICENSE` file at any of `16` paths**. `ISC` is the value `npm init` writes when the author answers nothing. This base accepts manifest-declared grants — `p765` did so for `dtjohnson83/osha-mcp` — and this row marks the limit: **a manifest grant corroborated by no licence file, on a repository with no description and no commits since 2025-03, is recorded as weak rather than as a licence.**
+
+## `T656` — offline-first is the binding constraint, and it is the one thing the supply gets right
+
+A playground is outdoors, often without usable connectivity, and the inspector is walking. Both permissive general-purpose clients found — [`FolderITDev/mobile-field-inspections`](https://github.com/FolderITDev/mobile-field-inspections) (MIT) and [`brendanmcr/fieldcheck`](https://github.com/brendanmcr/fieldcheck) (MIT) — lead with **offline, resumable drafts**, as do the two grant-less ones (`playsafe-inspector`, `mattock`). The platform tier agrees: [`getodk/collect`](https://github.com/getodk/collect) (Apache-2.0) exists for exactly this. **The register's supply failure is not in data capture. It is one layer up, in the duty model.**
+
+## `T657` — 🔴 the US instrument sets **no interval**, and that inverts the deliverable
+
+The **CPSC *Public Playground Safety Handbook* (Pub. 325)** states that inspection frequency *depends on the type and age of equipment, the amount of use, and the local climate*. **ASTM F1487** is a performance specification, not a cadence. So in North America there is no interval to encode — **there is a duty to justify the interval you chose.**
+
+That is a different and more valuable artefact than a calendar: a dated, written rationale taking equipment type, age, usage volume and local climate as inputs. 🔴 **Nothing open-source produces it**, and `CPSC` and `ASTM F1487` are both `0` on this base. It also means **`p765-E`'s premise is regionally false**: the "build once against an international standard" advantage holds EMEA→APAC and breaks at the Atlantic (`P338`).
+
+## `T658` — the most complete feature list on the register carries no grant
+
+[`MuhammadMohsin442/playsafe-inspector`](https://github.com/MuhammadMohsin442/playsafe-inspector) (Pakistan) describes QR-scanned equipment identification, risk assessment, voice notes, issue tracking, PDF reports and analytics — a closer match to a working inspection product than anything else measured. `0` payloads across `16` licence paths and `8` manifests; the README carries no licence statement. **Unusable.** Three of the four best-described artefacts on this register are either proprietary or grant-less, which is the register's defining commercial fact.
+
+## `T659` — the closest structural match to a statutory regime on this base models a *mine*, not a school
+
+[`ivengexnce/Sih`](https://github.com/ivengexnce/Sih) is a **DGMS-compliant** mine-safety platform: CAPA workflows, offline field inspections, YOLO defect detection. DGMS is India's named statutory mines inspectorate, and **CAPA against a named inspectorate is structurally the exact object this register needs** — a finding, a corrective action, a preventive action and a dated close-out, all attributable. It is the only artefact on this base that models it. **It carries no grant.** The idea ports; the code cannot (`P335`).
+
+## `T660` — nobody models the competent person, which is half the regime
+
+Every statutory inspection regime on this register names *who may perform the inspection* — a competent person for the operational tier, a certified inspector (RPII in UK practice) for the annual main. `competent person inspection` returns **one** repository on `search/repositories`, a needlework-shop curriculum. Across the whole register, **every candidate models an inspection *event*; none models inspection *authority*.** An inspection by an unqualified person is not a discharged duty, so a system that records the event without the attribute produces evidence that fails on audit.
+
+## `T661` — 🟢 the primitive eight patterns said did not exist has existed since 1998
+
+`P326`–`P332` each concluded that nothing in open source models `{duty, instrument, interval, competent person, evidence type}`. That was true of the **platforms** and never true of the **primitive**: a tiered statutory interval is a **recurrence rule**, standardised as RFC 5545 (and RFC 2445 before it), with two mature permissive implementations — [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) (**BSD-3**) and [`dateutil/dateutil`](https://github.com/dateutil/dateutil) (**dual Apache-2.0/BSD-3**). The missing object was never the interval. It was the **binding of an interval to an instrument, an authority and an evidence artefact** — four fields of plain data around one solved primitive. Built this pass at [`evidence/statutory-intervals.2026-11-11-p766.tsv`](../evidence/statutory-intervals.2026-11-11-p766.tsv), discharging `ACTION p765-F`.
+
+## `T662` — a British-spelled `LICENCE`, and a detector that cannot see the word it looks for
+
+`jkbrzt/rrule`'s grant is at **`LICENCE`** — not `LICENSE`, not `LICENSE.md`. `p765` taught this base that raw is case-sensitive on stem and extension; **this adds spelling to the axes.** Worse, this pass's own family detector returned `UNCLASSIFIED` on the payload, because it matches the token `BSD` and **the BSD licence text does not contain the string "BSD"** — it opens *"Redistribution and use in source and binary forms…"*. Clause 3 (*"Neither the name … endorse or promote"*) is present, so it is **BSD-3-Clause**. A licence-family detector must match **operative clause text, never the family's own name** (defect `D3`, and `ACTION p765-C` corroborated from a second direction).
+
+## `T663` — the same case-sensitivity rule, biting from the opposite side
+
+[`frappe/erpnext`](https://github.com/frappe/erpnext)'s GPL-3.0 payload (`35,148 B`, `8b1ba204bb69`) is at **lowercase `license.txt`**, and **`LICENSE.txt` is a `404` at the same address**. `p765`'s `T630` found an uppercase *extension* hiding a grant (`LICENSE.TXT`); this is the mirror image, a fully lowercase stem-and-extension. **The path matrix must cross both cases of both halves** — and on this register that one omission sent a `41,187★` repository to a manifest fallback when the real 35 KB payload was one path away.
+
+## `T664` — a licence can be split by **directory**, and a one-family-per-repository detector gets it wrong
+
+[`metabase/metabase`](https://github.com/metabase/metabase)'s `LICENSE.txt` (`855 B`, `da3c9b0046ee`) states the split in its own words: source outside the top-level `enterprise/` directory is **AGPL-3.0**; inside `enterprise/` it is the **Metabase Commercial License**, with binaries tracking the same division. This pass's detector reported "AGPL-3.0" and would have shipped that. **Licence scope can be a path predicate, not a repository property** — `p765`'s `T646` found a composite grant split by *artefact* (code vs. knowledge base); this is the same class split by *tree* (defect `D2`).
+
+## `T665` — 🟢 `ACTION p765-A` paid out on a path no root matrix can reach
+
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) returned **nothing** across `16` root licence paths and `8` manifests. Its README's `## License` section then named the file: `docs/License.txt` — a **non-root path**. Byte-read: `17,284 B`, `9bd1685b5dad`, with a byte-order mark, and **GPL version 2**, where the README says only *"GNU General Public License"* with no version. Three lessons in one row: the README-first rule works; **a root-only path matrix has a structural blind spot no amount of widening fixes**; and **prose names a family, only the payload names the version.**
+
+## `T666` — the platform this register belongs in is not on the platform
+
+**openMAINT** — open-source facility, estate and asset maintenance with scheduled-maintenance modelling — is the natural home for a statutory inspection regime. `repo:CMDBuild/openMAINT` is non-canonical, and a name search returns only third-party container wrappers last pushed in **2016** and **2017**. It is distributed from its own site. **This base therefore publishes no licence verdict for openMAINT**, because it cannot byte-read a grant it cannot address. A structural absence, recorded as one rather than filled with a guess.
+
+## `T667` — 🔴 two `404` bodies compare equal, and this pass's first redirect proof was that comparison
+
+The instrument built to prove redirects fetched `README.md` at the old and new addresses and compared hashes. It reported **"identical — redirect confirmed"** for `openedx/edx-platform` *and* `microsoft/presidio`, both with `sha256₁₂` **`d5558cd419c8`** — the same hash for two unrelated projects. That is the hash of raw's own **`404: Not Found`** body (edx-platform's readme is `README.rst`). **Both fetches had missed, and two misses are byte-identical.** Re-run against real payload paths with the sentinel excluded on both sides, `7 / 7` redirects proved genuinely. **Any byte-comparison instrument must exclude the miss sentinel on both sides before comparing**, and `d5558cd419c8` is now a recorded constant on this base (defect `D1`).
+
+## `T668` — a municipality has published that the national standard is unusable, and legislated around it
+
+São Paulo's **Resolução CPA/SMPED 033/2025** establishes complementary municipal requirements for inclusive playgrounds **because** ABNT NBR 16071 Part 8 *"possui diversas inconsistências o que dificulta sua aplicação"*. This is a stronger demand signal than an adoption statistic: **a regulator stating on the record that the national instrument cannot be applied, and issuing its own.** It creates a per-municipality compliance surface on top of a national standard whose own current edition is unconfirmed — and `NBR 16071` returns **`0`** repositories and is `0` across this entire base. LATAM holds one of this register's four clearest instruments and **the widest instrument-to-supply gap of any region** (`P339`).
+
+
 # 🆕 Trends new at `p765` (researched 2026-11-11) — `T627`–`T650`
 
 **The register is school-estate safety and statutory compliance** — fire doors, asbestos, legionella, electrical fixed-wire testing and playground-equipment inspection. `ACTION p764-A` named it and this pass built it. It is a different buyer from `p764`'s condition register (risk and compliance, not capital planning) and a different cadence (dated statutory intervals, not bond cycles).

@@ -1,0 +1,17 @@
+# ACTION p765-F discharge — the interval engine as data, not prose.
+# Schema is the one P326-P332 kept describing and never built:
+#   {duty, instrument, jurisdiction, region, interval, competent_person, evidence_artefact}
+# Every instrument below is named in a source read on 2026-11-11 and cited in intel/market.md p766.
+# interval_rrule is RFC 5545, directly consumable by jkbrzt/rrule (BSD-3) or dateutil (Apache-2.0/BSD-3).
+# CONFIDENCE: instrument=named in a source this pass read; interval=see interval_basis column.
+duty	instrument	jurisdiction	region	interval	interval_rrule	competent_person	evidence_artefact	interval_basis
+playground routine visual inspection	EN 1176-7	CEN member states	EMEA	routine (daily-weekly, operator-set by usage)	FREQ=WEEKLY	operator-trained staff	visual check log	tiered cadence named in EN 1176-7; exact period operator-set, NOT fixed by the standard
+playground operational inspection	EN 1176-7	CEN member states	EMEA	1-3 months	FREQ=MONTHLY;INTERVAL=3	competent person	operational inspection report	tiered cadence named in EN 1176-7; vendor sources say 1-3mo, standard text NOT read this pass
+playground annual main inspection	EN 1176-7	CEN member states	EMEA	12 months	FREQ=YEARLY	certified inspector (RPII in UK practice)	annual main inspection certificate	tiered cadence named in EN 1176-7; 12mo is the consistent reading across sources, standard text NOT read
+playground surfacing impact attenuation	EN 1177	CEN member states	EMEA	on installation + on annual main	FREQ=YEARLY	certified inspector	HIC / critical fall height record	EN 1177 is the surfacing instrument; cadence inherited from EN 1176-7
+playground equipment performance conformity	ASTM F1487	United States	North America	n/a (performance spec, not an inspection interval)	-	designer / purchaser / inspector	conformity statement	ASTM F1487 is a performance specification; a 2025 revision (F1487-25) is vendor-reported and UNCONFIRMED against ASTM
+playground safety inspection	CPSC Public Playground Safety Handbook (Pub. 325)	United States	North America	NO FIXED INTERVAL — set by equipment type and age, amount of use, local climate	-	not specified by the handbook	inspection record	READ FROM THE HANDBOOK'S OWN WORDING. This is the single most important row here: the US instrument deliberately sets no interval
+playground equipment safety	AS 4685 series	Australia / New Zealand	APAC	mirrors EN 1176 tiering	FREQ=YEARLY	competent person	inspection report	AS 4685 is reported to mirror the EN 1176 structure; AS 4685 text NOT read this pass
+playground surfacing	AS/NZS 4422	Australia / New Zealand	APAC	on installation + periodic	FREQ=YEARLY	competent person	impact attenuation record	named as the AS/NZS surfacing counterpart to EN 1177
+playground inspection, maintenance and use	ABNT NBR 16071-7	Brazil	LATAM	periodic per Part 7	FREQ=YEARLY	competent person	laudo de inspecao	Part 7 (2012 ed.) IS the inspection/maintenance/use part. 2021 editions cited for some parts; Part 7's CURRENT EDITION UNCONFIRMED
+inclusive playground complementary requirements	Resolucao CPA/SMPED 033/2025	Sao Paulo (municipal), Brazil	LATAM	per resolution	-	municipal review	municipal conformity record	municipal resolution adds complementary requirements BECAUSE NBR 16071 Part 8 "possui diversas inconsistencias"
