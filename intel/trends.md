@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p772` — **Thirteen trends from the sweep pass — `T740`–`T752`. The governing one is `T746`: a gate this base has carried RED for twelve passes is not implementable as specified, and proving that is worth more than carrying it a thirteenth time.**
+
+## `T746` — 🔴 `gate-dates`'s contract is UNIMPLEMENTABLE on a bare date, and the mechanism is this base's own heading style
+
+`ACTION p771-A` named `gate-dates` as the one RED gate to rebuild from scratch, *"because it is mechanically checkable without any repository code"*. It was rebuilt, with **`13` of its own controls, all passing**, implementing the documented contract — *the KB may not ASSERT a date it has already refuted* — across the four documented dispositions `ASSERTED` / `ATTRIBUTED` / `QUOTED` / `CORRECTED`.
+
+🔴 **Run over the `11` live shelves it returned `2,897` violations. That number is an artefact, and its cause is specific:** this base's standard pass heading is
+
+> `## Pass 406 — reads and commit both 2026-10-23 — ... REFUTES ...`
+
+so **every pass date sits within `120` characters of a refutation verb that refers to a gap premise, not to the date.** The twelve worst offenders are all pass dates: `2026-10-23` (`139` occurrences flagged), `2026-10-22` (`103`), `2026-10-25` (`95`), `2026-10-21` (`93`), `2026-10-11` (`93`).
+
+🟢 **The structural result: a DATE IS NOT A CLAIM.** `january 2026` refuted about the DfE school count says nothing about `january 2026` in a release note. The checkable unit is a **(subject, date) pair** the base has itself recorded as contradicted.
+
+🟢 **Re-specified and implemented that way, the gate works and is cheap.** Two contested claims were declared, from this base's own *Primary verification* row:
+
+| Claim | `CORRECTED` | `ATTRIBUTED` | `QUOTED` | 🔴 `ASSERTED` |
+|---|---|---|---|---|
+| `C1` EU AI Act Annex III education date, **as a contested pair** | `94` | `62` | `290` | 🔴 **`128`** |
+| `C1` re-specified after `T752` settled it — **the superseded `August 2026` only** | `70` | `41` | `144` | 🔴 **`75`** |
+| `C2` England's s.100 medical-conditions guidance | `0` | `1` | `0` | 🟢 **`0`** |
+
+🟢 **And the right fix was not to attribute `128` sites but to SETTLE the date, which `T752` does — after which the claim register releases the correct value and checks only the superseded one.** 🔴 **That leaves `75` sites asserting `August 2026` bare: `26` on `intel/market.md`, `25` on `agents/trending.md`, `11` on `README.md`, `6` on `intel/trends.md`, `4` on `intel/open-gaps.md`, `3` on `repos/trending.md`** (`ACTION p772-B`). 🔵 **This is the gate earning its place: it converted an unsettled contradiction into a settled fact plus a bounded, addressable list.** 🔵 **`C2` returned `0` only after a defect was removed from the gate: the subject pattern `statutory guidance` also matched England's *allergy* guidance, which was actually published `2026-07-06` and is not contested. `4` false defects on curated shelves, caught by reading the sites** (`D8`).
+
+🟢 **Recommendation to the next pass: `gate-dates` should be re-specified in the repository as a subject-bound claim register, and `compose/code/p772-sweep/gate_claims.py` is a working implementation.** 🔴 **Its bare-date sibling is kept in the same directory deliberately, as the proof that the original form cannot work.**
+
+## `T740` — 🟢 a third resolution state: `EXISTS-BUT-EMPTY`
+
+`7` of `5,646` addresses authenticate on the ref channel and advertise **`0` refs** — the repository exists and has no commits. 🔴 **This state is invisible to every other channel: it is not a `404`, its owner exists, and an index entry or star count can be published for it.** 🟢 **Only an advertised-ref count distinguishes it, and `p770-B`'s two-valued instrument could not.** `6` of the `7` are LMS/SIS MCP servers.
+
+## `T741` — 🔴 1EdTech's Caliper reference clients are withdrawn; the specification is not
+
+`caliper-java`, `caliper-js`, `caliper-php`, `caliper-python` and `qti-central` are all ABSENT-OR-PRIVATE, under **both** the `1EdTech` and the legacy `imsglobal`/`IMSGlobal` namespaces. 🟢 **Control: `24` addresses in those organisations resolve and `5` do not** — the orgs are reachable. 🟢 `caliper-spec` and `caliper-ontology` resolve. 🔴 **A learning-analytics engagement can implement to the specification and cannot start from a reference client.**
+
+## `T742` — 🔴 one grant cell in `1,592` was wrong, and it recorded a third-party component's licence as the project's
+
+[`AccessKit/accesskit`](https://github.com/AccessKit/accesskit), published as `BSD-3-Clause`, is **`Apache-2.0 OR MIT` at the licensee's option** with a BSD-licensed Chromium-derived component. 🟢 **The `BSD-3-Clause` was not invented — it is `LICENSE.chromium`'s grant.**
+
+## `T743` — 🔵 the root `LICENSE` file is not the code grant
+
+[`microsoft/autogen`](https://github.com/microsoft/autogen)'s root `LICENSE` is **CC-BY-4.0** (`18,650 B`), a documentation licence; its code grant is **MIT** in `LICENSE-CODE` (`1,141 B`). `AccessKit` has **no root `LICENSE` at all**. 🟢 **This base already published AutoGen correctly as `MIT (code)` with the nuance explained** — the trend is recorded because a root-only instrument would have retired it on a documentation licence.
+
+## `T744` — 🟢 the default branch is a `101`-valued field
+
+`330` of `5,532` resolving addresses (`6.0%`) default to something other than `main` or `master`, across `99` distinct names: `develop` (`123`), `dev` (`54`), `development` (`13`), `release` (`8`), `gh-pages` (`6`), `staging` (`5`), then a long tail including `MOODLE_501_STABLE`, `GROUPER_7_BRANCH`, `eol-release/lilac`, `maven/fixes/10.0`, `produção`, and `2` whose default is an agent-generated branch name.
+
+## `T745` — 🔵 the displayed-address defect `p770-B` was written for is rare
+
+`1` real display defect in `5,646` addresses: `AMAN6921/SikhshaBox` is shown as the address while only the full repository name resolves. 🟢 **Measured base-wide, the class `p770` found on `12` rows at once is not widespread** — and a negative result on a `5,646`-address population is a result.
+
+## `T747` — 🔴 `35` grant cells are backed by a stub, and `5` are one government's sign-language stack
+
+A payload under a quarter of the length of the licence it names: `metabase/metabase` `855 B` against AGPL-3.0's `34,020 B`; `openfoodfacts-python` **`16 B`**; `eplusr` `64 B`. 🔵 **`5` are Brazil's federal `spbgovbr-vlibras` repositories at `7,650`–`7,651 B` — the LGPL-3.0 addendum without the GPL-3.0 text it incorporates.** 🟢 **Defensible for the repository, fatal for any length- or hash-based grant rule — which is why `p769-B`'s length rule kept failing on copyleft.**
+
+## `T748` — 🔴 `42` addresses claim a licence with no grant file at the root
+
+`10` filenames probed at the measured default branch, all missing. 🔵 **`AccessKit` was in this set and its grant does exist under two of the probed names** — so `NO-GRANT-PAYLOAD` means *"not at the root under a known name"*, never *"unlicensed"*.
+
+## `T749` — 🟢 pointer-plus-payload is an Odoo-ecosystem convention, not an accident
+
+[`odoo/odoo`](https://github.com/odoo/odoo)'s `LICENSE` opens *"For copyright information, please see the COPYRIGHT file"* then carries LGPLv3 — the same form `p770-D` found on `OpenEduCat/openeducat_erp`, which is a set of Odoo modules. 🔵 **Both instances on this shelf are Odoo-lineage.**
+
+## `T750` — 🟢 the Moodle MCP space has `78` entries and `3` installable plugins
+
+`67` resolve, `5` are `EXISTS-BUT-EMPTY`, `6` are absent. 🔴 **Only `5` follow Moodle's `moodle-{type}_{name}` plugin convention and `2` of those do not serve code**, leaving `EduardoKrausME/moodle-local_mcp`, `eledia/moodle-webservice_eledia_mcp` and `onbirdev/moodle-webservice_mcp`. 🔴 **`35` are a bare `moodle-mcp` under `35` owners; `12` carry a university prefix.** 🔵 **The Moodle MCP server is the "hello world" of education AI agents — dozens of independent reimplementations, no canonical one.**
+
+## `T751` — 🔴 primary verification is UNAVAILABLE in this session, not merely unattempted
+
+`p771` recorded that *"no primary legal text was read this pass"* without a cause. This pass addressed the authorities directly and found one: **`explore-education-statistics.service.gov.uk` (DfE), `asl.acara.edu.au` (ACARA) and `eur-lex.europa.eu` do not resolve under this session's network policy.** 🟢 **So every date, threshold and estate count on these shelves is search-sourced BY CONSTRAINT, and labelling it so is accurate rather than apologetic.** 🔴 **It also means `ACTION p771-G` cannot be discharged by trying harder** — it needs the network policy widened, which is outside this base (`ACTION p772-F`).
+
+## `T752` — 🟢 the EU AI Act Annex III education date is SETTLED at `2 December 2027`
+
+**Defined in full on `intel/market.md`, where the regional consequence sits.** In short: Regulation (EU) 2026/1744 (the Digital Omnibus, in force `27 July 2026`) moved the Annex III high-risk obligations — education among them — from `2 August 2026` to **`2 December 2027`**; Annex I moved to `2 August 2028`; the prohibited practices, Article 50 and the GPAI obligations were **not** postponed. 🟢 **The two dates `p771` recorded as contradictory were both correct, on either side of the Omnibus.** 🔴 **Nine agreeing secondary commentaries; the Official Journal text was not read** (`T751`).
+
 # 🆕 Trends new at `p771` (researched 2026-11-11) — `T724`–`T739`
 
 **Register: school medical conditions and medication administration** (`ACTION p770-I`). 🔴 **`make hooks` tried first as `ACTION p770-A` requires, and DENIED again — `[Code from External]`, second consecutive session.**

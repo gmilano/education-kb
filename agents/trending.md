@@ -4,6 +4,70 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p772` — `2026-11-11` — **What is new this week is not a repository, it is a measurement: every agent address this base displays was probed, and the week's real movement is that `6` of the `7` "exists but has no commits" repositories in the whole population are Moodle MCP servers.**
+
+🔴 **First, as `ACTION p771-A` requires: `make hooks` was TRIED as the first command of this pass and DENIED again — `[Code from External]`. Third consecutive session, so it is settled, not incidental.**
+
+🟢 **This is the non-register sweep pass `ACTION p771-I` explicitly scheduled.** No new register was opened. `ACTION p771-B` projected the sweep would take **`96` register passes**; run as a pass of its own it took **`530` seconds**.
+
+### 🟢 `T740` — a third resolution state this base has never recorded: `EXISTS-BUT-EMPTY`
+
+`p770-B`'s instrument was two-valued — an address either resolves or is ABSENT-OR-PRIVATE. The sweep found a third state. **`7` addresses authenticate cleanly on the ref channel and advertise `0` refs**: the repository exists, and it has no commits in it.
+
+| Address | State |
+|---|---|
+| [`enovation/moodle-local_mcp_helper`](https://github.com/enovation/moodle-local_mcp_helper) | `EXISTS-BUT-EMPTY` — `0` refs advertised |
+| [`DeepLearningHarness-Team/Moodle-MCP`](https://github.com/DeepLearningHarness-Team/Moodle-MCP) | `EXISTS-BUT-EMPTY` |
+| [`Hiroya-319/moodle-mcp-server`](https://github.com/Hiroya-319/moodle-mcp-server) | `EXISTS-BUT-EMPTY` |
+| [`Marcus2012/MCP_Moodle`](https://github.com/Marcus2012/MCP_Moodle) | `EXISTS-BUT-EMPTY` |
+| [`OGjoyce/mcp-moodle`](https://github.com/OGjoyce/mcp-moodle) | `EXISTS-BUT-EMPTY` |
+| [`cdweaver1992/edfi-mcp-server`](https://github.com/cdweaver1992/edfi-mcp-server) | `EXISTS-BUT-EMPTY` |
+| [`openfresno/edgenuity-aeries-grade-passback`](https://github.com/openfresno/edgenuity-aeries-grade-passback) | `EXISTS-BUT-EMPTY` |
+
+🔴 **`6` of the `7` are LMS/SIS MCP servers, and `5` of those `6` are Moodle.** 🟢 **The reading for a studio is specific and useful: the announced Moodle-MCP ecosystem is substantially a set of claimed names.** An empty repository is invisible to every channel this base previously used — it is not a `404`, its owner exists, and a star count or an index entry can be published for it. **Only an advertised-ref count distinguishes it.**
+
+### 🔴 `T741` — 1EdTech's Caliper reference clients are withdrawn while the specification stays published
+
+Learning analytics is the one place an education studio must integrate rather than build, so this matters more than its size suggests.
+
+| Address | Ref channel |
+|---|---|
+| [`1EdTech/caliper-java`](https://github.com/1EdTech/caliper-java) | 🔴 ABSENT-OR-PRIVATE |
+| [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) | 🔴 ABSENT-OR-PRIVATE |
+| [`1edtech/caliper-php`](https://github.com/1edtech/caliper-php) | 🔴 ABSENT-OR-PRIVATE |
+| [`imsglobal/caliper-python`](https://github.com/imsglobal/caliper-python) | 🔴 ABSENT-OR-PRIVATE |
+| [`1EdTech/qti-central`](https://github.com/1EdTech/qti-central) | 🔴 ABSENT-OR-PRIVATE |
+| [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) | 🟢 RESOLVES |
+| [`1EdTech/caliper-ontology`](https://github.com/1EdTech/caliper-ontology) | 🟢 RESOLVES |
+
+🟢 **The control is what makes this a finding rather than a tunnel artefact: `24` addresses in those two organisations RESOLVE and `5` do not.** The organisations are reachable; these specific repositories are not — and `IMSGlobal/caliper-java`, `IMSGlobal/caliper-js`, `IMSGlobal/caliper-php` and `1EdTech/caliper-python` were each probed as rename candidates and **all four are also absent**.
+
+🔴 **So the Caliper Analytics specification is retrievable and not one of its reference client implementations is.** A studio can implement to the spec; it cannot start from a permissive reference client.
+
+### 🟢 `T742` — one agent row carried a wrong grant, and it is the row whose licence is genuinely three-part
+
+[`AccessKit/accesskit`](https://github.com/AccessKit/accesskit) was published here as **BSD-3-Clause**. Byte-read at the measured default branch:
+
+- 🔴 **there is no root `LICENSE` file at all** (`404`);
+- 🟢 `LICENSE-MIT` is `1,023 B`, `LICENSE-APACHE` is `9,723 B`;
+- 🟢 the README states: *"AccessKit is licensed under the Apache License, Version 2.0 or the MIT license, at your option."*
+- 🔵 and: *"Significant portions of AccessKit are derived from Chromium and are covered by its BSD-style license"* (`LICENSE.chromium`).
+
+🔴 **Corrected to `Apache-2.0 OR MIT` (dual, licensee's option), with a BSD-licensed Chromium-derived component.** 🟢 **And the diagnosis is the useful part: `BSD-3-Clause` was not invented — it is the grant of a *third-party component*, recorded as the grant of the project.** A single-value licence cell cannot express this row, and `T743` turns that into a rule.
+
+### 🔵 `T743` — the root `LICENSE` file is not the code grant, and two of this base's most-cited agents prove it
+
+| Repository | Root `LICENSE` is | The code grant is |
+|---|---|---|
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | **CC-BY-4.0** (`18,650 B`) — a documentation licence | **MIT**, in `LICENSE-CODE` (`1,141 B`, *Copyright (c) Microsoft Corporation*) |
+| [`AccessKit/accesskit`](https://github.com/AccessKit/accesskit) | **absent** (`404`) | **Apache-2.0 OR MIT**, in `LICENSE-APACHE` / `LICENSE-MIT` |
+
+🟢 **This base already had AutoGen right** — `agents/top.md` publishes **`MIT (code)`** and explains the `CC-BY-4.0` nuance in the lines beneath it. 🔵 **It is recorded here because this pass's own grader flagged it as a misdeclaration and was wrong**: an instrument that reads only the root `LICENSE` returns `CC-BY-4.0` for AutoGen, which would retire one of the most useful multi-agent frameworks in this base on a documentation licence.
+
+### 🟢 What was NOT found, stated so the silence is not read as coverage
+
+- 🔴 **No new agent was added to `agents/top.md` this pass.** A sweep pass adds verification, not supply. The `22` permissive rows `p771` verified stand, now with a body-diff verdict attached.
+- 🔴 **`0` new grant-carrying Japanese, Spanish, Portuguese or Brazilian education agents** — not searched this pass, which is a different statement from "none exist". `p771` searched and found none.
 
 ## 🆕 `p771` — `2026-11-11` — **What is new this week on the school medical-conditions and medication register: the trending signal for the register itself is `0` for the seventh consecutive register, and the week's real movement is a licence-integrity result on a repository this base has cited for seventeen passes.**
 

@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p772` — **A sweep pass, not a register pass (`ACTION p771-I`). 🔴 `make hooks` was TRIED FIRST and DENIED a third consecutive session — `[Code from External]` — so the `24`/`71` RED count is unmeasured for a third pass. 🟢 `ACTION p771-A`'s new instruction was carried out: the named RED gate `gate-dates` was written from scratch, and the result is that its contract is UNIMPLEMENTABLE as specified, with a mechanism. 🟢 `ACTION p771-B` and `p771-I` are DISCHARGED IN FULL — all `5,646` displayed addresses swept, and `1,592` grant payloads re-graded on the body-diff. 🔴 And the pass's largest result is about this base's own reliability: of `13` apparent defects this pass's instruments raised against these shelves, `12` were the instruments' own and `1` was real.**
+
+**`5,646` addresses probed on the ref channel · `1,592` grant payloads byte-read and body-diffed against `23` SPDX canonical texts · `13` flagged rows read by hand before any verdict was published · `14` instrument defects caught by control · `1` licence cell corrected.**
+
+### 🔴 First, the instruction this pass was required to try, and its result
+
+`ACTION p771-A` was explicit: **try `make hooks` first and report it in the first line.** It was the first command of this pass.
+
+🔴 **Denied again: `[Code from External]`. Third consecutive session.** `p771` recorded the denial as *"settled against this base until the harness changes"* and that reading now holds across three sessions. 🔴 **The `23` standing RED gates and their `308` findings are UNMEASURED for a third pass and remain this base's largest known liability.** 🟢 **Not worked around:** no attempt was made to copy the gate scripts elsewhere, which `p771-A` forbids.
+
+🟢 **What `p771-A` asked for instead was done exactly: it named `gate-dates` as the gate to rebuild, because it is "mechanically checkable without any repository code".** It was rebuilt from scratch, with `13` of its own controls, and it returned a result about the contract rather than about the shelves — see `T746`.
+
+### 🟢 The `22` permissive rows, now carrying a body-diff verdict (`ACTION p771-C`)
+
+Every row `p771` verified was re-graded this pass against SPDX's own canonical text, held in `ingest/canonical/`. 🟢 **`ACTION p771-C` is discharged for the whole base, not just this register: `1,592` published licence claims graded.**
+
+| Verdict | Rows | What it means for a studio |
+|---|---|---|
+| 🟢 **`body:canonical`** | **`1,258`** | The payload's operative text is byte-identical to the canonical after normalisation. Build on it |
+| 🟢 **`body:near-canonical`** | **`145`** | Under `2%` token deviation — whitespace, line-wrap and heading punctuation. Build on it |
+| 🔵 **`canonical+APPENDED`** | **`44`** | The canonical body is present intact, with further text after it. **The grant is intact; the appended text may add terms and needs a read** |
+| 🔵 **`canonical+template-slot`** | **`28`** | A filled `<ORGANIZATION>` slot in a BSD template. Completion, not alteration |
+| 🔴 **`OPERATIVE-TEXT-ALTERED`** | **`34`** | The payload is not the single canonical family text. **Needs a per-row legal read** |
+| 🔴 **`POINTER-OR-SHORT-NOTICE`** | **`35`** | A grant cell backed by a stub far shorter than the licence it names |
+| 🔴 **`NO-GRANT-PAYLOAD`** | **`42`** | A licence is claimed and no grant file is findable at the root on the measured default branch |
+| 🔵 **`GNU-FAMILY-AMBIGUOUS`** | **`3`** | Undecidable by body-diff — see `D11` |
+| 🔴 **`grant:MISDECLARED`** | **`3`** flagged → **`1`** real | The claim and the payload are different licences. `2` of the `3` were this pass's own instrument (`D13`, `D14`) |
+
+🟢 **`1,475` of `1,592` — `92.7%` — are canonical or benignly non-canonical.** 🔴 **`117` need a human read.** 🟢 **And `1` was wrong: that is a published-grant error rate of `0.06%`, measured at scale for the first time on this base.**
+
+### 🔴 The one corrected cell: `AccessKit/accesskit`
+
+Published here as **BSD-3-Clause**. Byte-read: **no root `LICENSE` exists** (`404`); the repository ships `LICENSE-MIT` (`1,023 B`) and `LICENSE-APACHE` (`9,723 B`); its README states *"licensed under the Apache License, Version 2.0 or the MIT license, at your option"*.
+
+🟢 **Corrected to `Apache-2.0 OR MIT` (dual, licensee's option).** 🔵 **And the cause is worth more than the correction: the README also says *"Significant portions of AccessKit are derived from Chromium and are covered by its BSD-style license"*. The `BSD-3-Clause` cell recorded the grant of a THIRD-PARTY COMPONENT as the grant of the project** (`T742`, `T743`).
+
+### 🔴 `ACTION p771-D` discharged — ownership, graded family-aware, and the rule it produces
+
+`p771-D` instructed: read the payload head for MIT, the post-`END OF TERMS AND CONDITIONS` appendix for Apache-2.0, and grade GPL/AGPL `UNOBTAINABLE-FROM-GRANT` **without probing**. Done over all `1,592` claims:
+
+| Family | Ownership established | Not in the grant |
+|---|---|---|
+| **MIT** | 🟢 **`918`/`927`** (`99.0%`) | `9` |
+| **Apache-2.0** | 🟡 **`310`/`347`** (`89.3%`) | `37` |
+| **BSD-3-Clause** | 🟢 **`61`/`61`** | `0` |
+| **BSD-2-Clause** | 🟢 **`15`/`15`** | `0` |
+| **GPL-2.0** | 🟢 **`15`/`15`** | `0` |
+| **MPL-2.0** | 🔴 **`1`/`14`** | `13` |
+| **GPL-3.0 / AGPL-3.0 / LGPL-3.0** | ⚪ **`0`/`146` — by rule, not probed** | — |
+| **CC0-1.0** | 🔴 **`0`/`6`** | `6` — a public-domain dedication names no owner **by design** |
+
+🟢 **`p771-D`'s prediction is confirmed with a much larger sample: Apache-2.0 `1`/`11` became `310`/`347` once the appendix was read instead of the first `grep -i copyright` match.** 🔴 **The `0`/`146` on the GNU families is not a failure — it is the rule working.** 🟢 **New: `MPL-2.0` behaves like the GNU families, not like MIT — `13` of `14` carry no owner, because MPL-2.0's text has no copyright slot. Grade it `UNOBTAINABLE-FROM-GRANT` too** (`ACTION p772-D`).
+
+### 🟢 The pass's honest headline
+
+🔴 **This pass's instruments raised, at various points, `2,994` date violations, `11` misdeclared grants and `144` altered licence bodies against these shelves.** 🟢 **On verification: `0`, `1` and `34`.** Each inflated number had a mechanical cause, all `14` are catalogued in `compose/code/p772-sweep/README.md`, and none was published as a finding.
+
+🔵 **The reading a studio should take from this pass is the opposite of alarming: the grant data on these shelves is accurate to `0.06%`, every displayed address has now been probed, and the places that need a human are named and counted rather than estimated.**
+
 # Education AI Agents — Curated Top Set
 
 

@@ -4,6 +4,61 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p772` — **The foundations shelf re-graded on the body-diff, not re-stocked (`ACTION p771-C`). `23` SPDX canonical licence texts are now held in `ingest/canonical/`, which is the standing instrument `p771-C` asked for.**
+
+### 🟢 `ingest/canonical/` — the held canonical set, and why SPDX rather than a shelved payload
+
+`ACTION p771-C` required: *"hold a canonical payload per family in `ingest/`."* `p771` had used a repository payload graded canonical by inspection. This pass holds **SPDX's own `license-list-data`** instead — the authority that defines the identifiers these shelves publish.
+
+| Family | Canonical bytes | `sha256₁₂` |
+|---|---|---|
+| `Apache-2.0` | `10,280` | `074e6e32c86a` |
+| `MIT` | `1,078` | `b05785f9f18e` |
+| `BSD-3-Clause` | `1,460` | `5a93d5831e12` |
+| `BSD-2-Clause` | `1,267` | `f32fb3b417a1` |
+| `GPL-3.0` | `34,674` | `fb981668c18a` |
+| `AGPL-3.0` | `34,020` | `d8a6cc31abc1` |
+| `LGPL-3.0` | `42,098` | `996af0513df2` |
+| `MPL-2.0` | `16,727` | `66a3107d5ad6` |
+| `ISC` | `737` | `521c6f0ed8e6` |
+| `Unlicense` | `1,211` | `0bdebfeda07d` |
+| `Zlib` | `838` | `bfb1112d49db` |
+| plus `GPL-2.0`, `LGPL-2.1`, `CC-BY-4.0`, `CC-BY-SA-4.0`, `CC0-1.0`, `EPL-2.0`, `Apache-1.1`, `BSD-4-Clause` and four `-or-later` variants | — | — |
+
+🔵 **Note the canonical `Apache-2.0` is `10,280 B`, not the `11,357 B` this base has called canonical for many passes.** Both are correct and they are different things: `11,357 B` is the **shipped `LICENSE` file** (terms **plus** the "how to apply" appendix); `10,280 B` is SPDX's **licence text**. 🟢 **The body-diff compares operative text only — everything up to `END OF TERMS AND CONDITIONS` — so the two reconcile, and `p771`'s `11,357 B` census remains valid as a file-length fingerprint.**
+
+### 🔴 `T747` — `35` grant cells are backed by a stub, and the pattern is regional
+
+`POINTER-OR-SHORT-NOTICE`: the payload is under a quarter of the length of the licence it names.
+
+| Address | Claims | Payload |
+|---|---|---|
+| [`metabase/metabase`](https://github.com/metabase/metabase) | `AGPL-3.0` | **`855 B`** against a `34,020 B` licence |
+| [`smart-on-fhir/client-js`](https://github.com/smart-on-fhir/client-js) | `Apache-2.0` | **`571 B`** — `p771`'s `T733` `byref:EXTERNAL-URL`, re-confirmed independently |
+| [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails) | `Apache-2.0` | **`654 B`** |
+| [`openfoodfacts/openfoodfacts-python`](https://github.com/openfoodfacts/openfoodfacts-python) | `MIT` | **`16 B`** |
+| [`hongyuanjia/eplusr`](https://github.com/hongyuanjia/eplusr) | `MIT` | **`64 B`** |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | `LGPL-3.0` | `8,241 B` — `p770-D`'s dangling-pointer row, unchanged |
+| [`spbgovbr-vlibras/vlibras-portal`](https://github.com/spbgovbr-vlibras/vlibras-portal) | `LGPL-3.0` | `7,651 B` |
+| [`spbgovbr-vlibras/vlibras-translator-api`](https://github.com/spbgovbr-vlibras/vlibras-translator-api) | `LGPL-3.0` | `7,650 B` |
+| [`spbgovbr-vlibras/vlibras-web-browsers`](https://github.com/spbgovbr-vlibras/vlibras-web-browsers) | `LGPL-3.0` | `7,651 B` |
+| [`spbgovbr-vlibras/vlibras-player-webjs`](https://github.com/spbgovbr-vlibras/vlibras-player-webjs) | `LGPL-3.0` | `7,651 B` |
+| [`BIM2SIM/bim2sim`](https://github.com/BIM2SIM/bim2sim) | `LGPL-3.0` | `7,632 B` |
+
+🔵 **`5` of the `35` are Brazil's federal VLibras sign-language stack (`spbgovbr-vlibras`), all at `7,650`–`7,651 B`** — the LGPL-3.0 *addendum only*, without the GPL-3.0 text it incorporates by reference. 🟢 **That is not a defect in the repository: LGPL-3.0 is defined as GPL-3.0 plus additional permissions, and shipping only the addendum is a common and arguably correct reading.** 🔴 **It is a defect in any instrument that grades a grant by length or by hash** — and this base ran a length rule for several passes (`p769-B`, falsified at `p770`). **`T747` is why that rule kept failing on copyleft.**
+
+🟢 **For a LATAM accessibility engagement this is directly useful: VLibras is federal Brazilian government open source, consistently licensed, and the stub payload is a reading of LGPL rather than a missing grant.**
+
+### 🔴 `T748` — `42` addresses publish a licence claim with no grant file at the root
+
+A licence family is asserted on the shelf, and **`10` grant filenames** (`LICENSE`, `LICENSE.txt`, `LICENSE.md`, `COPYING`, `LICENCE`, `LICENSE.rst`, `license`, `COPYING.txt`, `LICENSE-MIT`, `LICENSE-APACHE`) all miss at the measured default branch.
+
+🔵 **`AccessKit/accesskit` was in this set before it was graded, and it is the instructive case: the grant exists, under two filenames the probe list does cover, and the *root* `LICENSE` does not exist.** 🔴 **So `NO-GRANT-PAYLOAD` must be read as "not at the root under a known name", never as "unlicensed"** — the `T691`/`NHTung` class of error in reverse (`ACTION p772-C`).
+
+### 🟢 Foundations supply, stated plainly
+
+🔴 **No repository was added to this shelf this pass, and none was removed.** A sweep pass verifies; it does not stock. The `12` foundation rows `p771` verified stand, each now carrying a body-diff verdict in `evidence/p772-licence-verdicts.tsv`.
+
 # Foundational Repositories — Education
 
 

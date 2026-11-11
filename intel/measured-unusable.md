@@ -3,7 +3,129 @@ industry: education
 region: Global
 updated: 2026-11-11
 ---
+## 🆕 `p772` — `2026-11-11` — **the base-wide address sweep: `79` displayed addresses that do not resolve and `7` that resolve to an EMPTY repository, from a probed population of `5,646`**
 
+🔵 **These are a different KIND of entry from every row above.** The rows above resolved and are refused for what their grant says. **These are refused for not being retrievable at all** — measured with `git ls-remote --symref`, then re-probed **serially** as a control after the parallel sweep and confirmed `79`/`79`.
+
+🟢 **Why they are recorded here rather than edited out of the shelves that cite them:** `agents/trending.md` and `repos/trending.md` are append-only history and `p769-C` established that rewriting a historical entry destroys the record it exists to keep. **`34` are marked at every site that cites them — those are evidence and were left untouched.** The `45` cited bare at one or more sites are why this section exists.
+
+### 🔴 `772-EMPTY` — `EXISTS-BUT-EMPTY`: the address authenticates and advertises `0` refs
+
+🔵 **A state this base had never recorded (`T740`), and invisible to every other channel: it is not a `404`, its owner exists, and a star count or index entry can be published for it.** `6` of the `7` are LMS/SIS MCP servers and `5` of those are Moodle.
+
+| id | Address | Measured |
+|---|---|---|
+| `772-E1` | [cdweaver1992/edfi-mcp-server](https://github.com/cdweaver1992/edfi-mcp-server) | 🔴 resolves on the ref channel, **`0` refs advertised** |
+| `772-E2` | [DeepLearningHarness-Team/Moodle-MCP](https://github.com/DeepLearningHarness-Team/Moodle-MCP) | 🔴 resolves on the ref channel, **`0` refs advertised** |
+| `772-E3` | [enovation/moodle-local_mcp_helper](https://github.com/enovation/moodle-local_mcp_helper) | 🔴 resolves on the ref channel, **`0` refs advertised** |
+| `772-E4` | [Hiroya-319/moodle-mcp-server](https://github.com/Hiroya-319/moodle-mcp-server) | 🔴 resolves on the ref channel, **`0` refs advertised** |
+| `772-E5` | [Marcus2012/MCP_Moodle](https://github.com/Marcus2012/MCP_Moodle) | 🔴 resolves on the ref channel, **`0` refs advertised** |
+| `772-E6` | [OGjoyce/mcp-moodle](https://github.com/OGjoyce/mcp-moodle) | 🔴 resolves on the ref channel, **`0` refs advertised** |
+| `772-E7` | [openfresno/edgenuity-aeries-grade-passback](https://github.com/openfresno/edgenuity-aeries-grade-passback) | 🔴 resolves on the ref channel, **`0` refs advertised** |
+
+### 🔴 `772-X` — `ABSENT-OR-PRIVATE`, cited bare at one or more sites — `45` addresses
+
+🔴 **These are the real defects the sweep found: a reader is pointed at an address that does not resolve and nothing on that line says so.** 🔵 **Published as code spans, never as links** — the discipline `771-D` used for `CDCgov/IZGateway`.
+
+| id | Address | A site that cites it bare |
+|---|---|---|
+| `772-X1` | `1EdTech/caliper-js` | `intel/open-gaps.md:32610` |
+| `772-X2` | `1EdTech/qti-central` | `intel/trends.md:4430` |
+| `772-X3` | `Ahmed-html/unlimited-ai-platform` | `agents/trending.md:77217` |
+| `772-X4` | `AI-Matrix-Engine/aidream` | `agents/trending.md:32256` |
+| `772-X5` | `ale-alejandro/beadkit` | `README.md:9447` |
+| `772-X6` | `alnyx-dev/PGEK-moodle-mcp` | `repos/trending.md:12352` |
+| `772-X7` | `apereo/opencast` | `agents/trending.md:44044` |
+| `772-X8` | `aule-org/AImauta` | `repos/trending.md:38344` |
+| `772-X9` | `Batlez/CloakBox` | `README.md:12632` |
+| `772-X10` | `belentani7/aprende-brasil` | `agents/trending.md:54118` |
+| `772-X11` | `belentani7/lingua-aberta` | `repos/trending.md:10101` |
+| `772-X12` | `Cleison-Morais/koba` | `agents/trending.md:43745` |
+| `772-X13` | `dcostenco/prism-aac` | `agents/trending.md:9233` |
+| `772-X14` | `e9x/blackboard-mcp` | `README.md:9715` |
+| `772-X15` | `eastarctica/canvas-mcp` | `agents/trending.md:25883` |
+| `772-X16` | `EastArctica/canvas-mcp` | `agents/trending.md:57197` |
+| `772-X17` | `fairyofmiracle/edu_course_agent` | `agents/trending.md:17129` |
+| `772-X18` | `fh-yarbouh/oak-curriculum-ontology` | `repos/trending.md:59456` |
+| `772-X19` | `gegok12/gegok12` | `agents/trending.md:4163` |
+| `772-X20` | `Gio0938/CocoMath` | `repos/trending.md:8039` |
+| `772-X21` | `huaxx-lab/LeetLens` | `agents/trending.md:48102` |
+| `772-X22` | `ibm-skills-network/mark` | `agents/trending.md:33623` |
+| `772-X23` | `ilodezis/mti-lms-mcp` | `agents/trending.md:49416` |
+| `772-X24` | `InCruiter-NewProducts/proctoring-sdk` | `agents/trending.md:32084` |
+| `772-X25` | `jagmarques/awesome-eu-ai-act` | `agents/trending.md:28329` |
+| `772-X26` | `jonajinga/open-phonics` | `intel/open-gaps.md:974` |
+| `772-X27` | `joojdev/academic-tracker-mcp` | `agents/trending.md:49697` |
+| `772-X28` | `loqganesh-hue/aulalibre` | `agents/trending.md:77220` |
+| `772-X29` | `marsley01/Edyfra` | `agents/trending.md:77214` |
+| `772-X30` | `Mckaroff/GraphLMS` | `agents/trending.md:32254` |
+| `772-X31` | `motiolabs-space/open-academic` | `repos/trending.md:27095` |
+| `772-X32` | `NiccoloSalvini/mcp-moodle-staff` | `agents/trending.md:70507` |
+| `772-X33` | `NiccoloSalvini/mcp-moodle-teacher` | `agents/trending.md:71015` |
+| `772-X34` | `parkseokjune/unist-blackboard-mcp` | `README.md:9716` |
+| `772-X35` | `PlexPt/awesome-chatgpt-prompts-zh` | `repos/trending.md:7265` |
+| `772-X36` | `Priyamakeshwari/TeachGPT` | `agents/trending.md:17721` |
+| `772-X37` | `qilaidev/virtual-chem-lab` | `README.md:1812` |
+| `772-X38` | `santillana-ai/tutor-sdk` | `agents/trending.md:32258` |
+| `772-X39` | `superbuilders/timeback-dev-python` | `agents/trending.md:31824` |
+| `772-X40` | `TaiMaBenJi/knowledge-commons` | `repos/trending.md:33859` |
+| `772-X41` | `thanh01pmt/curriculum-kit` | `repos/trending.md:24318` |
+| `772-X42` | `thanh01pmt/interactive-quiz-kit` | `README.md:9445` |
+| `772-X43` | `trilogy-group/oneroster-ts` | `agents/trending.md:49560` |
+| `772-X44` | `tura-learn/Dhee` | `README.md:12181` |
+| `772-X45` | `yokowasis/autograder` | `agents/trending.md:32257` |
+
+### 🔵 `772-K` — `ABSENT-OR-PRIVATE` and already marked at every citing site — `34` addresses
+
+🟢 **Confirmed absent, already honestly described wherever they are cited, and deliberately NOT edited** (`p769-C`):
+
+| id | Address |
+|---|---|
+| `772-K1` | `1EdTech/caliper-java` |
+| `772-K2` | `1edtech/caliper-php` |
+| `772-K3` | `atlas-training-company/atlas` |
+| `772-K4` | `concentricsky/badgr-server` |
+| `772-K5` | `dev-cucei-itrans/siiau-api-client` |
+| `772-K6` | `Dondo0936/vietnamese-ai-for-beginner` |
+| `772-K7` | `Eduware-Inc/eduware-oneroster` |
+| `772-K8` | `Epesi-Team/epesi` |
+| `772-K9` | `Gego-K12/gegok12-documentation` |
+| `772-K10` | `gregmontalvo/badgie` |
+| `772-K11` | `hablala/hablala` |
+| `772-K12` | `HanChein/ElimuAI` |
+| `772-K13` | `IAJBS/ia.educativajbs.steam` |
+| `772-K14` | `iep-ui/iep-ui` |
+| `772-K15` | `imsglobal/caliper-python` |
+| `772-K16` | `invincible-summer/Next-Tutor-Agent` |
+| `772-K17` | `JaipuriaAILabs/Moodle-MCP` |
+| `772-K18` | `jakerains/scormplayer` |
+| `772-K19` | `jmolpea/moodle-block_openaiagent` |
+| `772-K20` | `Jnf290/KI-Assistent_Lehrkraefte` |
+| `772-K21` | `juandacor/opencode-menthor` |
+| `772-K22` | `jude-miller-dev/Milky-institute-online` |
+| `772-K23` | `kerntau/class-log-system` |
+| `772-K24` | `mabdulre9/electrical-engineering` |
+| `772-K25` | `nclamvn/teacherAI` |
+| `772-K26` | `NmaaAlhawary/MCP-Moodle` |
+| `772-K27` | `plastic-labs/bloom` |
+| `772-K28` | `projectremedy-ai/remedy-canvas-lti` |
+| `772-K29` | `sanity-labs/ai-literacy-framework` |
+| `772-K30` | `smithjohn78390/tongjiang-lab` |
+| `772-K31` | `UOC/java-lti-1.3-provider` |
+| `772-K32` | `Vargontoc/educational-framework` |
+| `772-K33` | `whiteRabbit1313/awesome-digital-public-infrastructure` |
+| `772-K34` | `xmike04/canvas-student-mcp` |
+
+### 🟢 Two repairs the sweep produced, graded differently on purpose
+
+| Displayed | Current home | Grade |
+|---|---|---|
+| `apereo/opencast` | [opencast/opencast](https://github.com/opencast/opencast) · `26fbc9363f07` | 🔵 **RECOMMENDED REPLACEMENT** — the project left the Apereo namespace. The old address is gone, so a shared-`HEAD` proof is impossible and is not claimed |
+| `plastic-labs/bloom` | [plastic-labs/honcho](https://github.com/plastic-labs/honcho) · `fae27192ac15` | 🔵 **SUCCESSOR, NOT A RENAME** — the organisation's surviving project, a different product |
+
+🔴 **And one class that is NOT unusable, recorded so it is never counted as one: `28` `github.com/topics/<tag>` links.** Those are GitHub **topic pages** — valid, working URLs that are not git repositories, so the ref channel cannot adjudicate them and correctly fails on them (`D5`). **They are not broken links.**
+
+🟢 **Full evidence: `evidence/p772-address-sweep.tsv` (`5,646` rows), `evidence/p772-absent-addresses.txt` (`79`), `evidence/p772-licence-verdicts.tsv` (`1,592`).**
 
 ## 🆕 `p771` — `771-A`…`771-J` — measured on the school medical-conditions and medication register and recorded as unusable, with the reason and the evidence
 

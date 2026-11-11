@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p772` — `2026-11-11` — **GitHub trending is not the measurement this week. `ACTION p771-B`'s sweep ran as the pass of its own it asked for: all `5,646` displayed addresses probed on the ref channel, `5,532` resolve, `79` do not, and `28` were never repositories at all.**
+
+**`5,646` distinct displayed addresses probed with `git ls-remote --symref` · `4,186` distinct owners · `1,592` grant payloads byte-read with length and `sha256₁₂` · `23` SPDX canonical licence texts held in `ingest/canonical/` · `330` addresses whose default branch is **not** `main`/`master`, across `99` distinct branch names · `15` defects in this pass's own instruments caught by control before any verdict was written · `1` real licence-cell defect found on this base.**
+
+### 🟢 The sweep `p771-B` said needed `96` passes, run in one
+
+| Verdict | Count | Share |
+|---|---|---|
+| 🟢 **`RESOLVES`** — ref channel returns a `HEAD` | **`5,532`** | `97.98%` |
+| 🔴 **`ABSENT-OR-PRIVATE`** — credential prompt against passing controls | **`79`** | `1.40%` |
+| 🔵 **`NOT-A-REPOSITORY`** — `github.com/topics/<tag>`, a topic page | **`28`** | `0.50%` |
+| 🔵 **`EXISTS-BUT-EMPTY`** — authenticates, advertises `0` refs | **`7`** | `0.12%` |
+
+🔴 **`p771` estimated the population at `5,600` addresses across `4,225` owners. Measured: `5,646` addresses across `4,186` owners** — the address count was understated by `46` and the owner count overstated by `39`. Both are corrected rather than averaged.
+
+### 🔴 The `79` absent addresses, split by whether the shelf already says so
+
+🟢 **`34` of `79` are marked at EVERY site that cites them** — an absence, unlicensed or 🔴 marker on each citing line. Those are **evidence**, and `p769-C` is the governing precedent: a literal rename or deletion over them would destroy the finding they record. **They were not touched.**
+
+🔴 **`45` of `79` are cited bare at AT LEAST ONE site — a reader is pointed at an address that does not resolve and nothing on that line says so.** 🔵 **The rule is deliberately strict: an address marked in one place and bare in four still misleads the reader who arrives at one of the four.** A first-site-only rule scored the same population `47`/`32`, and the stricter reading is the one published. They live at `agents/trending.md` (`113` citation sites), `repos/trending.md` (`84`), `README.md` (`23`), `intel/open-gaps.md` (`15`), `intel/trends.md` (`5`) and `intel/measured-unusable.md` (`1`), for `241` sites in all.
+
+🟢 **How they are handled, and why not by editing:** `agents/trending.md` and `repos/trending.md` are **append-only history**, and `p769-C` established that rewriting a historical entry destroys the record it exists to keep. The `79` are therefore published once, here and in `evidence/p772-absent-addresses.txt`, and recorded on `intel/measured-unusable.md` — **the shelf that exists for exactly this** — rather than back-edited into prose that was true when written.
+
+### 🟢 Two repairs the sweep produced, graded differently on purpose
+
+| Displayed | State | Current home | Grade |
+|---|---|---|---|
+| [`apereo/opencast`](https://github.com/apereo/opencast) | 🔴 ABSENT-OR-PRIVATE | [`opencast/opencast`](https://github.com/opencast/opencast) 🟢 RESOLVES (`26fbc9363f07`) | 🔵 **RECOMMENDED REPLACEMENT** — the project left the Apereo namespace. The old address is gone, so a shared-`HEAD` proof is impossible and is not claimed |
+| [`plastic-labs/bloom`](https://github.com/plastic-labs/bloom) | 🔴 ABSENT-OR-PRIVATE | [`plastic-labs/honcho`](https://github.com/plastic-labs/honcho) 🟢 RESOLVES (`fae27192ac15`) | 🔵 **SUCCESSOR, NOT A RENAME** — the organisation's surviving project, a different product. Attributed, not asserted |
+| `UnlockedLabs/unlocked-core` | 🟢 RESOLVES | [`UnlockedLabs/UnlockEdv2`](https://github.com/UnlockedLabs/UnlockEdv2) | 🟢 **PROVEN ALIAS** — **identical `HEAD` `faa4193a0092`** at both addresses. `T724`'s class: harmless by redirect |
+
+🟢 **The three grades are the point.** A shared `HEAD` proves an alias; an absent left-hand side cannot. `p769-C` was refuted for treating a rename as a defect; this pass keeps the distinction in the data rather than in prose.
+
+### 🟢 `T744` — the default branch is not a two-valued field, and `330` addresses say so
+
+`p771` reported `8` default branches that are not `main`/`master`, from `58` addresses. Over `5,532`:
+
+| Branch | Count |
+|---|---|
+| `main` | `3,876` |
+| `master` | `1,326` |
+| `develop` | `123` |
+| `dev` | `54` |
+| `development` | `13` |
+| `release` | `8` |
+| `gh-pages` | `6` |
+| `staging` | `5` |
+| **everything else** | **`121` addresses across `93` further distinct names** |
+
+🔵 **`101` distinct default-branch names in all. The tail is where the engineering cost sits:** `MOODLE_501_STABLE`, `MOODLE_405_STABLE`, `GROUPER_7_BRANCH`, `eol-release/lilac`, `v31.0.00`, `maven/fixes/10.0`, `12.0/bugfixes`, `produção` (non-ASCII), and `2` addresses whose default branch is an agent-generated branch name (`claude/publish-classroom-aluno-mcp-9g61ee`). 🔴 **Every raw-channel read in this base's history that assumed `main` or `master` was wrong for `330` addresses — `6.0%` of the resolving population.** 🟢 **This pass guessed `0`: every payload read used the branch the ref channel reported.**
+
+### 🔵 `T745` — one display defect in `5,646` addresses, and it is the display, not the link
+
+`4` link texts disagree with their URL path base-wide. On verification:
+
+| Site | Finding |
+|---|---|
+| 🔴 `AMAN6921/SikhshaBox` (the displayed form) | **REAL DEFECT.** The displayed `AMAN6921/SikhshaBox` is **ABSENT-OR-PRIVATE**; only the full name resolves — [`AMAN6921/SikhshaBox-Lightweight-OS-Virtualization-For-Affordable-Education-Labs`](https://github.com/AMAN6921/SikhshaBox-Lightweight-OS-Virtualization-For-Affordable-Education-Labs) (`fbdd4da3307e`). A reader who copies what they can see gets nothing. Same class as `p770`'s `Apereo-LAI`. 🔵 **Written as a code span and a full-name link on purpose: the first draft of this very row reproduced the defect it documents, which is how the contract caught it** |
+| 🟢 `UnlockedLabs/unlocked-core` | Benign — resolves, identical `HEAD` (`T724` class) |
+| 🔵 `db/pedagogical_contract_schema.go` | **Instrument defect `D1`** — a file path read as an address claim |
+| 🔵 `…FRIA-Governance-Toolkit.` | **Instrument defect `D2`** — the **trailing dot is part of the real repository name**; the dotless form is ABSENT |
+
+🟢 **`1` real display defect in `5,646` displayed addresses.** 🔴 **`p770-B` was written on the suspicion that this class was widespread. Measured base-wide, it is not** — and that is a result, not an absence of one.
 
 ## 🆕 `p771` — `2026-11-11` — **GitHub trending for the school medical-conditions register: the register's trending signal is `0`, and the measurement that matters is that `11` Apache-2.0 payloads with `6` different byte lengths and `9` different `sha256` hashes have `10` byte-identical operative bodies.**
 

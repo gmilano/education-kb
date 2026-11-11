@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p772` — `P772-1`–`P772-5` — **five recipes from the sweep, each naming specific verified repositories. This was a sweep pass, so these are built on the `1,475` addresses whose grant is graded canonical or benign, not on new supply.**
+
+🔴 **Known limit, stated first:** `make hooks` was denied a third consecutive session (`[Code from External]`), so the repository's `71` gates are unmeasured. The two instruments this pass wrote from scratch — `gate_claims.py` (`13` controls) and the sweep (`15` catalogued defects, all caught by control) — are **additive, not parity.**
+
+### `P772-1` — the grant-integrity gate, as a CI job a client can actually adopt
+
+🟢 **The problem it solves is now measured rather than assumed: `117` of `1,592` published licence claims need a human read, and `1` was simply wrong.**
+
+**Wire-up, all permissive:**
+1. **Canonical corpus** — [`spdx/license-list-data`](https://github.com/spdx/license-list-data) (CC0-1.0), `text/<SPDX-ID>.txt`. Hold it in-tree; this base holds `23` families in `ingest/canonical/`.
+2. **Resolution** — `git ls-remote --symref <url> HEAD`. Three-valued: a `HEAD` means live, a credential prompt means `ABSENT-OR-PRIVATE`, and **an empty reply with exit `0` means `EXISTS-BUT-EMPTY`** (`T740`). Do not collapse the third into "other".
+3. **Payload read** — `raw.githubusercontent.com/<slug>/<branch>/<name>` at **the branch the ref channel reported**, never a guessed `main` (`T744`: `330` addresses would be wrong). Probe `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `COPYING`, `LICENCE`, `LICENSE.rst`, `license`, `COPYING.txt`, `LICENSE-MIT`, `LICENSE-APACHE`.
+4. **Normalise before comparing** — typographic quotes, markdown autolinks `<<url>>`, setext rules, `*_#>` emphasis, case-fold, strip `.,:;` — or a Markdown-rendered grant reports `113` false deltas (`p771`'s `D1`).
+5. **Diff the OPERATIVE text** — for Apache-2.0 truncate at `END OF TERMS AND CONDITIONS`; the appendix is instructions, and `p771` found a real alteration hiding in it.
+6. **Grade ownership family-aware** (`p771-D`): MIT/BSD/ISC from the payload head, Apache-2.0 from the post-`END OF TERMS` appendix, **GPL/AGPL/LGPL/MPL-2.0 → `UNOBTAINABLE-FROM-GRANT`, unprobed.**
+7. **Reject four verdicts as undecidable rather than failing them**: the GNU family pair (`D11`), a filled BSD organisation slot (`D12`), a licence outside the held canonical set (`D14`), and a multi-file grant such as `LICENSE-CODE` (`T743`).
+
+🔵 **Reference implementation: `compose/code/p772-sweep/{fetch_one.sh,grade.py,refine.py}`.** `5,646` addresses and `1,592` payloads in under `10` minutes.
+
+### `P772-2` — the "is this dependency still there" sweep, as an onboarding artefact
+
+🟢 **Concrete value: run against this base it found `79` dead addresses, `7` empty repositories and `2` repairs in `530` seconds.** On a client's dependency manifest it is the same instrument.
+
+**Wire-up:** `compose/code/p772-sweep/extract_addresses.py` over the docs tree → `probe_one.sh` under `xargs -P 12` → classify. Three rules learned the hard way:
+- 🔴 **`github.com/topics/<tag>` is a topic page, not a repository** (`D5`) — `28` of them read as dead repositories.
+- 🔴 **A trailing dot can be part of a real repository name** (`D2`) — `…FRIA-Governance-Toolkit.` resolves and the dotless form does not.
+- 🔴 **Append from parallel workers to separate files, not one** (`D4`) — `12`-way appends tore a line.
+- 🟢 **Grade a rename by shared `HEAD`, not by name similarity.** `UnlockedLabs/unlocked-core` and `UnlockEdv2` share `HEAD faa4193a0092` → proven alias. `apereo/opencast` is gone, so `opencast/opencast` is a **recommended replacement**, not a proven rename.
+
+### `P772-3` — the Moodle agent interface, as an installable plugin rather than a 36th standalone script
+
+🟢 **The gap is measured: `78` claimed Moodle MCP addresses, `3` that install into the LMS** (`T750`).
+
+**Wire-up:**
+- **Plugin skeleton** — follow the `moodle-{type}_{name}` convention, which is what makes it installable: study [`EduardoKrausME/moodle-local_mcp`](https://github.com/EduardoKrausME/moodle-local_mcp), [`eledia/moodle-webservice_eledia_mcp`](https://github.com/eledia/moodle-webservice_eledia_mcp) and [`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) — the three that resolve.
+- **Platform** — [`moodle/moodle`](https://github.com/moodle/moodle) (GPL-3.0; default branch **`main`**, measured). 🔵 **And a branch convention a plugin author must get right: Moodle PLUGIN repositories pin their default branch to the Moodle version they target** — measured in the sweep as [`ilios/moodle-enrol-ilios`](https://github.com/ilios/moodle-enrol-ilios) → `MOODLE_501_STABLE`, [`Utdanningsdirektoratet/moodle-mod_adobeconnect_maintained`](https://github.com/Utdanningsdirektoratet/moodle-mod_adobeconnect_maintained) → `MOODLE_405_STABLE`, [`catalyst/moodle-tool_objectfs`](https://github.com/catalyst/moodle-tool_objectfs) → `MOODLE_404_STABLE`, [`moodlehq/moodle-tool_dataprivacy`](https://github.com/moodlehq/moodle-tool_dataprivacy) → `MOODLE_34_STABLE` (`T744`).
+- **Agent runtime** — [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) (MIT) or [`pydantic/pydantic-ai`](https://github.com/pydantic/pydantic-ai) (MIT) for typed tool output.
+- **Authorisation** — [`openfga/openfga`](https://github.com/openfga/openfga) (Apache-2.0). *"May this teaching assistant read this learner's record?"* is not expressible in Moodle's role model alone.
+- **De-identification before any prompt leaves the estate** — [`microsoft/presidio`](https://github.com/microsoft/presidio) (MIT).
+
+🔴 **Why GPL-3.0 matters here and not elsewhere: a Moodle plugin is a derivative work of Moodle.** The plugin ships GPL-3.0; the agent service it calls over the web-services API need not. **That boundary is the design.**
+
+### `P772-4` — the learning-analytics path now that Caliper's reference clients are gone
+
+🔴 **`T741`: the specification resolves, the four reference clients do not.**
+
+**Wire-up:**
+- **Specification and vocabulary** — [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) and [`1EdTech/caliper-ontology`](https://github.com/1EdTech/caliper-ontology), both resolving.
+- 🔴 **Write the emitter.** There is no permissive reference client to fork; budget it as build, not integrate.
+- **Transport and store** — [`openfga/openfga`](https://github.com/openfga/openfga) for who may read a cohort, [`qdrant/qdrant`](https://github.com/qdrant/qdrant) (Apache-2.0) where the analytics are semantic.
+- 🔵 **Alternative worth pricing against it:** xAPI via the Apereo stack, whose addresses `p770` corrected to the organisation that resolves (`Apereo-Learning-Analytics-Initiative/*`).
+
+### `P772-5` — the EU AI Act education conformity pack, dated from `T752`
+
+🟢 **Now buildable against a settled date: Annex III education obligations apply `2 December 2027`; the prohibited practices and Article 50 are live today.**
+
+**Wire-up:**
+1. **Classify first.** Chapter III Sections 1–3 is what moved to `2 December 2027`. 🔴 **The emotion-recognition prohibition is already in force — if the product infers a learner's emotional state in an educational setting, the deadline is not 2027.**
+2. **Evidence store** — [`medplum/medplum`](https://github.com/medplum/medplum) (Apache-2.0) where the record is per-learner and needs an audit log by construction, or [`temporalio/temporal`](https://github.com/temporalio/temporal) (MIT) where the obligation is a durable, replayable process.
+3. **Human oversight record** — [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) (MIT): one node per review step, with the interrupt as the evidence that a human was in the loop.
+4. **Data governance** — [`microsoft/presidio`](https://github.com/microsoft/presidio) (MIT) for minimisation, [`synthetichealth/synthea`](https://github.com/synthetichealth/synthea) (Apache-2.0) where a demonstration must not use real pupils (`p771`'s highest-value row).
+5. 🔴 **The duty layer itself is still not open source — the eighth consecutive register to say so.** No permissive repository models "this deployer completed a FRIA for this educational use". **Build it, and keep it outside the client's GPL-3.0 plugin boundary so it can be reused.**
 
 ## 🆕 `p771` — `P771-1`–`P771-5` — **school medical conditions and medication administration: five recipes over the `22` permissive artefacts verified this pass, plus the duty layer that must be written because — for the seventh consecutive register — nobody open-sources it.**
 

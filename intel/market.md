@@ -4,6 +4,93 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p772` — **🟢 `ACTION p771-F` discharged for three of four regions: the addressable estate is now counted in North America, APAC and LATAM as well as England. 🔴 `ACTION p771-G` is NOT discharged for a second pass, and this pass found the structural reason — primary verification is unavailable in this session, not merely unattempted. 🟢 And the EU AI Act contradiction `p771` left open is RESOLVED, which clears `128` date assertions on these shelves.**
+
+### 🟢 `ACTION p771-F` — the addressable estate, counted per region
+
+`p771-F`: *"Four counts make a global proposal; one makes an English one."* Three were obtained.
+
+| Region | Schools | Districts / systems | Source and caveat |
+|---|---|---|---|
+| **EMEA (England)** | 🟢 **`24,499`** open schools at January 2026 (`+20` YoY) | academies **`48.2%`** of schools, **`60.4%`** of pupils | DfE, *Schools, pupils and their characteristics 2025/26* — held from `p771`. 🔴 Competing compilations give `24,820` and `24,453`; the `367`-school spread is recorded, not averaged |
+| **North America (US)** | 🟡 **`99,073`–`99,088`** operating public schools (2024-25), incl. **`8,049`** charter | 🟡 **`17,648`–`19,217`** districts / LEAs | 🔴 **Third-party compilations citing NCES, not NCES directly.** The `2025-26` CCD **Preliminary Directory** was released `2026-07-14` with a `2025-10-01` snapshot, and **its national totals were not obtainable this pass.** The LEA spread (`1,569`) is a definitional difference: "school districts" vs "LEAs and other education agencies" |
+| **APAC (Australia)** | 🟡 **`9,653`** (ABS, 2024) vs **`9,755`** (third-party citing ACARA MySchool 2023) | 8 jurisdictions, 13 registration authorities | 🔴 **ACARA's own Australian Schools List was last updated `15 May 2026`** and **could not be read** — `asl.acara.edu.au` does not resolve in this session. Per-state (ABS 2024): VIC `2,292`, QLD `1,798`, WA `1,125`, SA `714`, TAS `261`, NT `193` |
+| **LATAM (Brazil)** | 🟢 **≈`178,000`** schools, **`46,018,380`** basic-education enrolments | 27 state systems + municipal networks | INEP *Censo Escolar 2025*, published February 2026. 🔴 **Censo Escolar 2026 collection closed `31 July 2026` and no national total has been published**, so the current figure is a year old |
+
+🔴 **NSW and ACT are absent from the ABS per-state breakdown.** The listed six sum to `6,383` against a national `9,653`, leaving `3,270` for NSW plus ACT. 🔵 **A third-party compilation gives NSW `3,196`, which would imply roughly `74` for the ACT.** 🔴 **That subtraction is published as a DERIVATION, not as a count** — two sources, two reference years, and the ACT residue is too small to carry the combined error.
+
+### 🔴 `ACTION p771-G` is NOT discharged, and the reason is structural rather than an omission
+
+`p771-G`: *"isolate the DfE's own pupil-referral-unit count."* 🔴 **NOT OBTAINED, for a second consecutive pass.** The only PRU figure this base holds remains **`333`**, from an **undated** third-party compilation.
+
+🔴 **And this pass establishes WHY, which `p771` could not.** The DfE release was addressed directly at `explore-education-statistics.service.gov.uk` and **the host does not resolve in this session's network policy.** 🔵 **`asl.acara.edu.au` failed identically.** 🟢 **So `p771`'s standing note that *"no primary legal text was read this pass"* is upgraded from a procedural lapse to a measured environmental constraint: primary verification against a statistical authority's own site is UNAVAILABLE here, and no amount of diligence inside this session changes it** (`T751`, `ACTION p772-F`).
+
+🔵 **The DfE itself warns that PRUs are grouped with AP academies and free schools as *state-funded alternative provision* and that it is "not advised to sum across the totals in each section"** — so even with the release in hand, a single PRU number may not exist in the form `p771-G` assumes.
+
+### 🟢 `T752` — the EU AI Act contradiction is RESOLVED, and both dates were right
+
+`p771` recorded this as unsettled: *"the EU AI Act's Annex III education date, where sources directly contradict (August 2026 vs 2 December 2027)."*
+
+🟢 **Resolved: `2 December 2027`.** **Regulation (EU) 2026/1744** — the Digital Omnibus — moved the Annex III high-risk obligations, which include education, from **`2 August 2026`** to **`2 December 2027`**. It entered into force **`27 July 2026`**. The postponement covers Chapter III Sections 1–3 of Reg. (EU) 2024/1689 (classification, high-risk requirements, provider and deployer obligations).
+
+| Also moved | From | To |
+|---|---|---|
+| Annex I — AI embedded in regulated products | `2 August 2027` | **`2 August 2028`** |
+
+🔴 **NOT postponed, and therefore live now:** the prohibited practices, Article 50 transparency obligations, and the obligations on providers of general-purpose AI models. 🔵 **The emotion-recognition prohibition is already in force, and it is the one that bites in a classroom.**
+
+🟢 **Why the sources appeared to contradict: they did not. They were written on either side of the Omnibus.** `August 2026` was correct until `27 July 2026` and is superseded; `2 December 2027` is correct now. 🔴 **Attribution, stated plainly: this rests on nine independent secondary commentaries that agree. The Official Journal text was NOT read — `eur-lex.europa.eu` was not reachable** (same constraint as `T751`).
+
+🟢 **This clears the `128` date assertions the subject-bound `gate-dates` flagged while the pair was contested: `2 December 2027` is settled and may be asserted freely.** 🔴 **What remains is bounded and named: `75` sites still assert the superseded `August 2026` bare — `26` of them on this file, `25` on `agents/trending.md`, `11` on `README.md`, `6` on `intel/trends.md`, `4` on `intel/open-gaps.md`, `3` on `repos/trending.md`** (`ACTION p772-B`).
+
+## Opportunities by region
+
+### North America
+
+🟢 **The buyer is the district, and the duty is now a written AI policy with a deadline.** A CoSN survey reports **`79%` of districts have AI guidelines in place, up from `57%` in 2025**. Guidance counts differ by source and date — **`31` states as of January 2026** against **`37` states plus Puerto Rico in June 2026** — and the spread is recorded rather than averaged.
+
+🔴 **The binding layer is thin but real and it is where the work is:** **Ohio** required every school district, community school and STEM school to adopt an AI use policy by a **`1 July`** deadline; **Idaho** legislated that districts and charter schools write local AI policies and that the state set AI literacy standards. **Illinois** issued statewide guidance in June 2026 under a 2025 public act; **California** published a model district AI policy in August 2026. The PIE Network counted nearly **`100` state bills** this session touching student AI use.
+
+🟢 **The opportunity: `17,648`–`19,217` LEAs each needing a local policy, a staff-training record and an approved-tool register, against voluntary state guidance that does not supply any of the three.** 🔵 **One study found districts in states with official guidance are not reliably further ahead than those without** — which is the clearest possible statement that guidance is not implementation.
+
+🔴 **Gap declared: `45` of `50` states remain unmeasured for their actual statutory text** (`p771-H`, carried as `ACTION p772-H`). NYC issued preliminary guidance in March 2026 and **delayed its final guidance in June 2026**; Boston's proposal of May 2026 awaited a committee vote.
+
+### EMEA
+
+🟢 **The instrument is settled and dated: Annex III education obligations apply from `2 December 2027`** (`T752`), with the prohibited practices and the emotion-recognition ban **already in force**. That combination is the engagement: two years to build conformity evidence, and one prohibition that applies to classroom products today.
+
+🟢 **The institutional map filled in this year.** The Council of Europe's expert committee on AI and education (**EDU-IA**) first met in **January 2026**; the EU Council adopted conclusions on **teachers in the age of AI in May 2026**; the European Digital Education Hub's **AI Squad of `45` experts** published a framework arguing that principled AI integration requires restructuring the relationship between public education systems and private EdTech providers. A **Eurydice** report of **`22 September 2026`** finds access to advanced AI at school level still uneven.
+
+🔵 **A JRC study maps the Digital Markets Act, Cybersecurity Act and Cyber Resilience Act onto EdTech vendors and notes smaller providers — the bulk of the EU EdTech industry — are exempted from certain requirements.** 🟢 **That asymmetry is an opportunity: a compliance layer a small vendor is exempt from building is one a studio can supply to the institution instead.**
+
+🔴 **Research across six countries finds European teachers adopted AI enthusiastically, largely on their own and without a clear framework** — so the demand is for structured professional development, not awareness.
+
+### APAC
+
+🟢 **Two national curriculum mandates land in the same academic year, which makes 2026–27 the region's procurement window.** **China's** Ministry of Education formalised the school subject **"Artificial Intelligence and Technology"** for **2026–27**. **India** is rolling out **AI and Computational Thinking from Grade 3 upwards** from **2026–27**, aligned to NEP 2020.
+
+🟢 **Singapore is the measured leader on uptake: `66%` of students report using AI chatbots at least weekly to help them learn, against `46%` across the OECD and `41%` in B-S-J-Z (China)** — and it committed to offering AI training for teachers at all levels by 2026.
+
+🔴 **Japan is moving the other way: public support for banning AI in schools rose from `21%` to `29%`, and only `14%` of its universities report virtual tutors.** 🔵 **A single region cannot be sold one story — the same product needs a literacy framing in Delhi and a safeguards framing in Tokyo.**
+
+🔴 **Gaps declared.** National K-12 usage figures for China and India are **not public**, and a 2026 global survey says so explicitly. The `20.9%` APAC CAGR in circulation is **a market-research vendor's figure and is not endorsed**. 🔴 **`5` of `8` Australian jurisdictions (NSW, WA, Tasmania, ACT, NT) remain unmeasured for their medication and duty-of-care rules** (`p771-H`, carried).
+
+### LATAM
+
+🟢 **The region's defining measurement is a governance gap, quantified on both sides.** The IDB's PISA 2025 analysis finds student AI adoption outruns schools' capacity to guide it: principals reporting preparedness are **Brazil `36%`, Mexico `39%`, Chile `39%`**. Against that, **over `50%` of teachers in Chile and Brazil already use AI tools while under `10%` of institutions have formal AI guidelines** — attributed to the UNESCO observatory launch coverage and **not independently verified**.
+
+🟢 **Regulation is a three-speed picture.** **Chile** is furthest ahead — a National AI Policy since 2021 and a bill in discussion. **Brazil** and **Colombia** have national strategies **without education-sector regulation**. **Mexico** has no clear rules on AI use in education and most teachers receive no specific training.
+
+🟢 **New institutional anchor: UNESCO and CEPAL launched an Observatory on AI in Education for Latin America and the Caribbean**, framed at the 2026 Foro de Desarrollo Sostenible in Santiago, with **Tecnológico de Monterrey** formalising a collaboration with UNESCO's Santiago office in **March 2026**.
+
+🟢 **In higher education the demand is already there: `92%` of students and `79%` of faculty actively engaging with AI** (Digital Education Council, *AI in Higher Education LATAM 2026*) — 🔵 **higher education, not schools; the figure is often quoted as if it covered both.**
+
+🟢 **The supply-side asset this pass verified: Brazil's federal VLibras sign-language stack (`spbgovbr-vlibras`) — `5` repositories, all resolving, all consistently LGPL-3.0** (`T747`). **Government-owned, permissive enough to build on, and directly relevant to an accessibility mandate.**
+
+### Global
+
+🔴 **The AI-in-education market figure spans `$2.21B`–`$11.40B` for the same year — a `5.2×` spread** (`T738`, carried from `p771`). 🟢 **`p770-G`'s rule stands and is reinforced by this pass: size the ESTATE, not the market.** The estate is now counted in four regions — **`24,499`** English schools, **`99,073`–`99,088`** US public schools across **`17,648`–`19,217`** LEAs, **`9,653`–`9,755`** Australian schools, **≈`178,000`** Brazilian schools — and those are institutions with budgets, not a vendor's addressable total.
+
 # Education AI — Market Intelligence
 
 
@@ -126,7 +213,7 @@ updated: 2026-11-11
 
 🟢 **The predictor that survives both data points: the US legislates federally where the duty rides on interstate commerce (a vehicle crosses state lines) and leaves it to states where the duty rides on a building (which does not).** A fleet duty is federal; a building duty is municipal. **For a studio this is operational, not academic: a North American fleet deliverable has one rule set, and a North American estate deliverable has as many rule sets as the client has jurisdictions** (`T713`).
 
-## Opportunities by region
+## Opportunities by region — p769
 
 ### North America
 

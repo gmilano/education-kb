@@ -4,6 +4,51 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p772` — **The platform shelf, re-verified rather than re-stocked. 🟢 `p770-D`'s pointer-plus-payload form is now confirmed on a SECOND major platform, and it is the largest one on this shelf.**
+
+### 🟢 `T749` — Odoo carries the same pointer-plus-payload grant form as OpenEduCat, and this base graded it correctly
+
+`p770-D` found [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp)'s `LICENSE` opening *"For copyright information, please see the COPYRIGHT file"* — with no `COPYRIGHT` file anywhere in the tree. The form is not unique to it.
+
+[`odoo/odoo`](https://github.com/odoo/odoo)'s `LICENSE` (`43,529 B`, `sha256₁₂ abc09dad5f84`, default branch **`20.0`**) opens:
+
+> *"For copyright information, please see the COPYRIGHT file. Odoo is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3), as included…"*
+
+🔵 **Two of the three ERP/SIS platforms on this shelf use a pointer plus payload, and both are Odoo-lineage** — OpenEduCat is a set of Odoo modules. 🟢 **The form is therefore an Odoo-ecosystem convention, not an accident, and an instrument meeting a `COPYRIGHT`-pointing `LICENSE` in an education ERP should expect it.**
+
+🟢 **And the shelf was already right.** This pass's body-diff flagged `odoo/odoo` as `GPL-3.0` against the shelf's `LGPL-3.0`. **The shelf is correct and the instrument was wrong**: LGPL-3.0 incorporates the GPL-3.0 text by reference, so a body-diff cannot separate the pair (`D11`). 🔵 **`3` rows base-wide are undecidable for this reason and are now published as `GNU-FAMILY-AMBIGUOUS` rather than as a misdeclaration.**
+
+### 🟢 `T750` — the Moodle MCP space has `78` entries and `3` installable plugins
+
+The platform question for an LMS engagement is no longer *"can Moodle be extended"* but *"is there an agent interface"*. Every Moodle-MCP address this base displays was probed:
+
+| State | Count |
+|---|---|
+| 🟢 `RESOLVES` | **`67`** |
+| 🔴 `EXISTS-BUT-EMPTY` (`0` refs advertised) | **`5`** |
+| 🔴 `ABSENT-OR-PRIVATE` | **`6`** |
+| **total** | **`78`** |
+
+🔴 **`67` live repositories is not an ecosystem, and the discriminator that shows why is Moodle's own plugin naming convention.** A real Moodle plugin is named `moodle-{type}_{name}` and installs into the LMS; a `moodle-mcp` repository is almost always a standalone script against the web-services API. **Only `5` of the `78` follow the plugin convention, and `2` of those `5` do not serve code:**
+
+| Plugin-convention address | State |
+|---|---|
+| [`EduardoKrausME/moodle-local_mcp`](https://github.com/EduardoKrausME/moodle-local_mcp) | 🟢 RESOLVES |
+| [`eledia/moodle-webservice_eledia_mcp`](https://github.com/eledia/moodle-webservice_eledia_mcp) | 🟢 RESOLVES |
+| [`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) | 🟢 RESOLVES |
+| [`enovation/moodle-local_mcp_helper`](https://github.com/enovation/moodle-local_mcp_helper) | 🔴 **`EXISTS-BUT-EMPTY`** |
+| `jmolpea/moodle-block_openaiagent` | 🔴 **ABSENT-OR-PRIVATE** |
+
+🔴 **`35` of the `78` are a bare `moodle-mcp` / `mcp-moodle` / `MoodleMCP` under `35` different owners**, and **`12`** carry an institution prefix (`waseda`, `monash`, `unnc`, `mirea`, `zewailcity`, `iiit`, `UoB`, `unisinos`, `NITech`) — campus-local coursework, not products.
+
+🔵 **`enovation` is a Moodle Partner, and its MCP helper is an empty repository.** 🟢 **Two of the three installable plugins come from the partner channel (`eledia`, `onbirdev`) and one from an independent Brazilian developer.**
+
+🟢 **The conclusion is a build decision, not a warning: there are `78` claimed Moodle agent interfaces, `3` of them install into the LMS, and none has become canonical. `P772-3` specifies the gap.** 🔵 **The platform layer underneath is unaffected — Moodle, Open edX, Canvas, Kolibri, BigBlueButton, H5P, Sakai and OpenEduCat all resolve and all carry a graded grant.**
+
+### 🟢 Platform rows, unchanged and re-verified
+
+No platform was added or removed this pass. Every platform address on this shelf was included in the `5,646`-address sweep and its grant payload in the `1,592`-claim regrade; the per-row verdicts are in `evidence/p772-licence-verdicts.tsv`.
+
 # Vertical Platforms — Education
 
 
