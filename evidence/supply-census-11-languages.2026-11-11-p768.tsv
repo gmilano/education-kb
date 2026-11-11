@@ -1,0 +1,54 @@
+# p768 — school transport fleet compliance supply census, 2026-11-11.
+# 50 queries across 11 languages on search/repositories. ACTION p767-A executed.
+# NOTE: GitHub does not fold diacritics -- tacografo and tacografo-with-accent are DIFFERENT buckets (T689).
+lang	query	total_count
+en	tachograph	149
+en	digital tachograph analysis	1
+en	driver hours compliance	37
+en	hours of service ELD	89
+en	electronic logging device	89
+en	fleet compliance management	151
+en	vehicle inspection management	125
+en	roadworthiness	34
+en	operator licence compliance	4
+en	school bus fleet management	8
+en	driver qualification file	3
+en	DVSA earned recognition	1
+en	FMCSA compliance	51
+en	preventive maintenance inspection fleet	2
+en	walkaround check defect reporting	0
+de	Fahrtenschreiber	6
+de	Lenkzeiten	4
+de	Hauptuntersuchung	0
+de	Fuhrparkverwaltung	28
+fr	chronotachygraphe	3
+fr	temps de conduite	13
+fr	gestion de flotte	310
+es	tacografo	57
+es	tacógrafo	28
+es	inspeccion tecnica vehiculos	3
+es	gestion de flota	482
+pt	inspecao veicular	21
+pt	gestao de frota	812
+ja	運行記録	15
+ja	デジタコ	2
+ja	車検	100
+ja	運転日報	11
+ko	운행기록	5
+ko	자동차검사	0
+zh	车队管理	142
+zh	车辆年检	26
+zh	行车记录仪	104
+nl	tachograaf	1
+it	cronotachigrafo	0
+pl	tachograf	10
+tgt	tachograph DDD parser	2
+tgt	EU 561/2006 driving time	1
+tgt	AETR driving time	0
+tgt	車検証 QR	4
+tgt	shaken vehicle inspection japan	0
+tgt	driver card C1B	0
+tgt	smart tachograph gen2	0
+tgt	eld hours of service open source	0
+tgt	school transport compliance	3
+tgt	vehicle maintenance records fleet MIT	0

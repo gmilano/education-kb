@@ -291,6 +291,24 @@ credentials-and-skills axis rather than the tutoring axis.
 
 ### North America
 
+#### 🆕 `p768` — 🟢 the region that **does** set a cadence, which settles `T679` — and the deliverable flips from justification back to schedule
+
+🟢 **The structural finding this page has carried twice is now bounded.** `T657` (CPSC playgrounds) and `T679` (ANSI A300 / ISA TRAQ trees) both recorded that the US instrument **deliberately sets no inspection interval**, and `p767` generalised it toward *"North America refuses to set a cadence"*. **On school transport fleet compliance the US sets one, federally and without qualification:**
+
+| Instrument | What it sets | Why it matters to the deliverable |
+|---|---|---|
+| **49 CFR 396.17** | 🟢 a **12-month periodic inspection** against the Appendix A item list | The cadence is a constant, so the product is a **schedule and an evidence trail**, not an authored justification |
+| **49 CFR 396.19** | 🟢 the inspector's **training and experience standards** | 🟢 **The first instrument on this page that defines the competent person in regulation** — so the qualification becomes a validated data field (`P347`) |
+| Record retention | annual inspection report **`14` months**; DVIRs **`3` months** | Two more recurrence rules, both dated |
+| State layer | 🔴 **semi-annual, quarterly and monthly** school-bus requirements are each reported | 🔴 **Unenumerated this pass.** Build the cadence as a per-jurisdiction lookup, never a constant |
+
+🟢 **So `T679` is a property of condition-driven estate safety, not of the United States** (`T688`). Where the asset is a vehicle and the failure mode is mechanical, the US sets a number like every other region.
+
+🔴 **The region's open-source supply is the weakest part of the opportunity.** `FMCSA compliance` returns `51` repositories and `driver qualification file` returns `3`; `electronic logging device` and `hours of service ELD` return `89` each, and ranked by stars the usable ones are nil — the register's `209★` flagship is **PolyForm Noncommercial** (`768-A`). 🔴 **And North America is the one region that sets a cadence without publishing a machine-readable proof**: the DVIR and the annual inspection report are paper or vendor-proprietary, where the EU specifies `.DDD`, Japan a QR-coded certificate and Brazil a public calibration registry (`T699`).
+
+**AI-in-education market context for the region, from this pass's mandated legs:** North America is reported as the **largest** agentic-AI-in-education market (Mordor), against a 2026 regional policy picture of **`134` AI-in-education bills across `31` states**; **Ohio** became the first state to require every K-12 district to adopt a formal AI policy, deadline **`1 July 2026`**; **California AB 1159** prohibits using student data to train AI models; **New York A 9190** restricts classroom AI to grade `9` and above with diagnostic and special-education exceptions; **North Carolina Session Law 2026-41** sets a state model policy by **`31 December 2026`**, local policies by **`30 June 2027`** and teacher training by **`30 June 2028`**. Federal action remains limited — a **K-12 AI Literacy and Readiness Act of 2026** advanced in House committee. 🔵 All bill numbers and dates are **search-sourced and not verified against state legislative sites**.
+
+
 #### 🆕 `p767` — 🔴 the region that **refuses to set a cadence**, for the second consecutive register — so the product is the justification, not the schedule
 
 🔴 **The structural finding, now holding twice.** `T657` recorded that the CPSC playground handbook deliberately sets no inspection interval. **ANSI A300 Part 9 and the ISA Tree Risk Assessment Qualification do exactly the same for trees.** They specify:
@@ -1530,6 +1548,24 @@ this is the third consecutive pass to return already-filed facts. Supply remains
 `p724`'s `9` new repositories are North American.**
 
 ### EMEA
+
+#### 🆕 `p768` — 🟢 the region whose compliance evidence is a **specified binary file**, with permissive parsers for it — and the register's only duty-adjacent implementation
+
+🟢 **EMEA is the strongest technical case on this register, for a reason that is new on this page: the evidence artefact is named in regulation and is machine-readable by statute.** The `.DDD` download from the vehicle unit and the driver card is a specified format, not a document somebody authors (`T699`).
+
+| Instrument | What it sets | Supply against it |
+|---|---|---|
+| **Reg (EC) 561/2006** | driving time, breaks and rest periods | 🔴 `EU 561/2006 driving time` returns **`1`** repository; `AETR driving time` returns **`0`** |
+| **Reg (EU) 165/2014** + download periods | 🟢 **driver card ≤ `28` days, vehicle unit ≤ `90` days**; retention ≥ `12` months, longer in some member states | 🟢 **`tachograph DDD parser` returns `2` and both are usable** — `way-platform/tachograph-go` (**MIT**) and `traconiq/tachoparser` (**AGPL-3.0**) |
+| Smart Tachograph 2 | 🔵 reported required for vans `2.5`–`3.5 t` in international carriage and cabotage **from `1 July 2026`** | 🔴 `smart tachograph gen2` returns **`0`** |
+| **Directive 2014/45/EU** periodic roadworthiness | annual testing for buses and coaches | 🔴 **An informed gap: the mandated leg returned nothing on this Directive.** Named so the absence is not read as coverage |
+
+🟢 **The register's closest thing to a duty layer is here and it is MIT:** `flespi-software/TachoBox` (`3★`, pushed `2026-11-10`) computes against **EU 561/2006** from the `.DDD` file. 🔵 It is tiny, so its value is as a **reference implementation to validate against**, not a dependency (`P346`).
+
+🔴 **The German-language leg inverts `p767`'s expectation and the inversion is the finding.** `Fahrtenschreiber` returns `6` repositories, four at `0★`; `Lenkzeiten` returns `4`; `Hauptuntersuchung` returns **`0`**. 🟢 **`p767`'s `Baumkataster` payout of `45` grant-carrying civic-tech repositories does not reproduce here, and the reason is structural: a municipal tree register has a public body as its data owner, while a tachograph record belongs to a private operator** (`T690`). The one German row with a grant is abandoned (`sebastian-tschen/fahrtenschreiber`, Apache-2.0, last pushed `2021-03-18`) — and its only real value turned out to be evidential, proving `T692`.
+
+**AI-in-education regulatory context for the region:** 🟢 **`T686` is corroborated and may now be stated.** The **Digital Omnibus**, reported as **Regulation (EU) 2026/1744**, defers the AI Act's **Annex III** high-risk obligations — **education among them** — to **`2 December 2027`**. Unaffected and still in force: the **Article 5(1)(f)** ban on emotion recognition in education (since **`2 February 2025`**) and the **Article 50** transparency duties (from **`2 August 2026`**). Council of the EU conclusions this year stress **reducing dependency on AI tools developed outside Europe**, including in education and training, and point to the European Digital Education Hub, the European School Education Platform and EPALE; an **OECD/EU AI literacy framework** for primary and secondary education was released in 2026 (`T703`). 🔴 The Official Journal was not read.
+
 
 #### 🆕 `p767` — 🟢 the region that **hands you all three artefacts**: a published cadence, a competence definition, and a model work instruction — and the register's largest permissive supply cluster, invisible to an English query
 
@@ -2982,6 +3018,27 @@ selling urgency against a date the amendment moved**, and that mismatch is the o
 
 ### APAC
 
+#### 🆕 `p768` — 🟢 the **strictest cadence of the four regions**, the only self-reading statutory certificate, and a regulatory picture that is invisible to English queries
+
+🟢 **Japan sets the tightest interval on this register, and it names the school bus explicitly.**
+
+| Instrument | What it sets |
+|---|---|
+| **道路運送車両法第48条** | 🟢 **a `3`-monthly statutory periodic inspection** for business-use buses — the shortest cadence on any register this base has built |
+| **車検** (vehicle inspection) | 🟢 validity of **`1` year** for buses — a second, independent recurrence rule |
+| **保安基準第48条の2** | 🟢 a **運行記録計** (tachograph) is required on specified vehicles; extended to the `7`-tonne GVW class from **April 2017**. 🟢 **White-plate (private) buses with capacity `30` or more are included, and school buses are named as a representative example** — this register's exact buyer, in the statute's own illustration |
+| Chartered buses (貸切バス) | 🟢 a **digital** tachograph is mandatory, with electromagnetic records retained **`3` years**; analogue switch-off reported **`1 April 2025`** |
+| School buses ≥ `11` passengers | 🔵 a `3`-monthly inspection in addition to 車検 is reported, **with the same source noting there is no penalty attached** — treat as unsettled |
+
+🟢 **And the region has the register's best automation case, because the compliance object reads itself.** [`seibii/shaken-qr-reader`](https://github.com/seibii/shaken-qr-reader) (**MIT**, `1,077 B` · `ec1b6f5a6fb9`) decodes the QR code on the **車検証**, so the vehicle register is populated from the statutory certificate with no transcription step (`P348`, `T699`).
+
+🔴 **This entire section exists only because `ACTION p767-A` was executed.** The mandated English and mixed-language leg returned **nothing on Japan at all** — the search result said so explicitly. The Japanese-language leg returned the statutes, the intervals, the retention period and the MIT reader. 🟢 **`運行記録` returns `15` repositories, `車検` returns `100`, `運転日報` `11`, `車検証 QR` `4`**; the English `shaken vehicle inspection japan` returns **`0`** (`T690`).
+
+🔴 **Korea and China are informed gaps on this register.** `자동차검사` returns **`0`** repositories and `운행기록` returns `5`; `车辆年检` returns `26` and `车队管理` `142`, 🔴 **but the Chinese legs are badly polluted — star-ranked results are dominated by `funNLP` (`84,526★`) and the `china-dictatorship` cluster, neither of which is fleet software** (`768-K`). **No Korean or Chinese regulatory instrument was established this pass, and none is claimed.**
+
+**AI-in-education context for the region:** APAC is reported as the **fastest-growing** agentic-AI-in-education market (Mordor) and as holding **`29.0%`** of the broader 2026 market (Coherent). **South Korea's AI Basic Act took effect `22 January 2026`**, described as the region's first comprehensive AI statute; **Vietnam's AI law** followed, with longer transition periods for education, and its high-risk decision **names education and automated assessment** among six sectors; **Vietnam MOET Decision 2422** sets a minimum number of AI content periods per class per year for grades `1`–`12`. **Australia** relies on existing law and voluntary guidance; **Japan** favours voluntary guidelines. **NTU Singapore** gave every undergraduate access to Gemini Enterprise from **August 2026**. Ipsos' 2026 Education Monitor reports support for banning AI in schools **rising in Japan, Australia and South Korea** and **falling in Indonesia**, with Australia and New Zealand highest overall. 🔵 `ACTION p763-D` observed: none of this is filed outside APAC, and no UK or Gulf item has been admitted into this section.
+
+
 #### 🆕 `p767` — 🟢 the region that publishes the only **permissive platform** on the register, and it is a ministry that published it
 
 🟢 **The find of the pass sits in this region.** [`Project-PLATEAU/Tree-management-system`](https://github.com/Project-PLATEAU/Tree-management-system) — a tree-management **台帳 (ledger)** system visualising park and street trees in 2D/3D on a map — is **Apache-2.0** (`11,357 B` · `c71d239df917`, branch `main`), and its README assigns copyright to **国土交通省 (MLIT, Japan's Ministry of Land, Infrastructure, Transport and Tourism)**. Region placed from repository evidence, not inference.
@@ -4344,6 +4401,27 @@ minority everywhere in APAC, but it is *rising* in Japan, Australia and South Ko
 capability; sell into Japan, Australia and Korea on safeguards as well.
 
 ### LATAM
+
+#### 🆕 `p768` — 🟢 the region with the **most school-specific instrument on the register**, a public federal registry to verify it against, and a supply that is large, Portuguese, and almost entirely grant-less
+
+🟢 **Brazil holds the only instrument on this register that names school transport in the statute and attaches the consequence to the right to operate.**
+
+| Instrument | What it sets |
+|---|---|
+| **CTB (Lei 9.503/1997) Art. `105`** | 🟢 the **cronotacógrafo is mandatory, school transport named explicitly** |
+| **CTB Art. `136`** | 🟢 a **`semiannual` safety inspection of every vehicle used to transport schoolchildren**, 🟢 **as a condition of the authorisation issued by the traffic authority** — so a lapse costs the right to carry children, not a fine |
+| **CONTRAN Resolution `938/2022`** | 🟢 minimum technical requirements for the tachograph, in force since **`1 April 2022`** |
+| Calibration (*aferição*) | 🟢 **publicly verifiable at `cronotacografo.rbmlq.gov.br`** — a federal registry the deliverable can check an expiry date against |
+| **MP 1.343/2026** | 🔴 would allow tachograph records as evidence of speeding; reported passed and awaiting sanction in July 2026, **final status unconfirmed** |
+
+🔵 **And the enforcement posture is unusually public:** **Ipem-SP**, a state metrology institute, publishes back-to-school guidance telling **parents** to check the device's certificate before hiring a school van. **The buyer here has a public-facing accountability the other three regions do not** — which makes a verifiable compliance record a marketing asset, not only a legal one (`P349`).
+
+🔴 **The region's open-source supply is the largest this base has ever measured on a register, and that is a trap.** `gestao de frota` returns **`812`** repositories and `gestion de flota` **`482`** — against `fleet compliance management` at `151` in English. 🔴 **Ranked by stars the Portuguese and Spanish clusters are coursework and capstone projects at `1`–`7★`, overwhelmingly carrying no grant at all.** The usable rows are small and few: `OneBus/OneBus-API` (**MIT**, `5★`), `RamomRicarto/sistema-gestao-frota` (**MIT**, `4★`), `XAndresViverosX/FleetManager` (**MIT**, `3★`), `tecno-consultores/RoSGrid` (**GPL-3.0**, `2★`, the register's only MCP server). 🟢 **The lesson is stated as a rule rather than a complaint: volume in a non-English query predicts nothing about grants; the data owner does** (`T690`, `768-N`).
+
+🔴 **And the orthography defect is a LATAM problem first.** `tacografo` returns **`57`** repositories, `tacógrafo` returns **`28`**, and they are different result sets — **GitHub does not fold diacritics**, so the correct Portuguese and Spanish spelling reaches the smaller bucket (`T689`, `ACTION p768-A`).
+
+**AI-in-education context for the region:** adoption is ahead of governance on both measures. The **Digital Education Council's 2026 LATAM survey** reports **`92%` of students and `79%` of faculty** actively engaging with AI; **UNESCO IESALC** surveyed `200` institutions across `19` countries and found **`87%` using AI but only `26%` with a formal AI strategy**; in Brazil **`53%` of school administrators use AI while only `22%` report school guidelines**. A **Universidad de los Andes** study counts **`716` AI-related regulatory instruments and proposals across `23` countries**, **more than `80%` initiated since 2023**. Brazil's legislature is considering an EU-style framework; **Argentina** submitted a bill reported to commit to keeping AI unregulated; **Colombia** adopted CONPES 4144 in February 2025; **Uruguay** was the first in the region to sign the Council of Europe's AI framework convention (2025). **UNESCO launched a regional Observatory on AI in Education for Latin America and the Caribbean in April 2026** with CAF, CENIA, Cetic.br/NIC.br, ECLAC, Fundación Ceibal, Fundación Santillana, Tecnológico de Monterrey and ProFuturo.
+
 
 #### 🆕 `p767` — 🟢 the region with the **most codified instrument on this register**, which inverts this base's regional default — and the region whose supply exists, is school-shaped, and has no grants
 
@@ -5812,6 +5890,38 @@ no code dependency) the right opening move here and makes a code-first pitch the
 first step rather than a formality.
 
 ### Global
+
+#### 🆕 `p768` — 🟢 the first register on this base with a dated cadence in **all four** regions, and the clearest statement yet of what the licence index is worth
+
+🟢 **The cadence finding, stated once for all regions.** Four registers in a row (`p764` condition, `p765` estate safety, `p766` playgrounds, `p767` trees) each had at least one region that refused to set an interval, and `p767` began generalising that into a property of North America. **School transport fleet compliance sets a dated, machine-encodable cadence in every region: `12` months (US federal), `28`/`90` days (EU downloads), `3` months plus annual 車検 (Japan), `semiannual` (Brazil, school vehicles specifically).** So `T679` describes **condition-driven estate safety**, not the United States (`T688`).
+
+🟢 **And for the first time every input a duty engine needs exists permissively at once:** the evidence format has MIT parsers, the interval has a BSD-3 engine, field capture has Apache-2.0, telematics has Apache-2.0 at `8,113★`, route definition has Apache-2.0. 🔴 **The duty layer itself is still absent for a fourth consecutive register — the gap is now exactly one component wide, and it is the component that encodes the law** (`T698`).
+
+🔴 **`NOASSERTION` carries no commercial information, and this pass can finally say so with the full span measured.** One index value covered five mutually incompatible outcomes in a single pass:
+
+| Repository | ★ | Index says | Payload says | Commercial consequence |
+|---|---|---|---|---|
+| `jkbrzt/rrule` | `3,752` | `NOASSERTION` | **BSD-3-Clause** | 🟢 use freely |
+| `dateutil/dateutil` | `2,646` | `NOASSERTION` | **Apache-2.0 *and* BSD-3**, one payload | 🟢 use freely under either |
+| `getodk/collect` | `804` | `NOASSERTION` | **Apache-2.0**, Markdown-reformatted | 🟢 use freely (`T633`) |
+| `GarethManning/education-agent-skills` | `975` | `NOASSERTION` | **CC-BY-SA-4.0** | 🔴 ShareAlike inherits to the derivative |
+| `suxrobGM/logistics-app` | `209` | `NOASSERTION` | **PolyForm Noncommercial 1.0.0** | 🔴 **no commercial use at all** |
+
+🔴 **`NOASSERTION` is an instruction to byte-read, never evidence in either direction** (`T693`). 🔵 **The symmetric correction matters too:** on `NONE` the index was right four times out of four this pass, against the payload, over complete trees — **the documented failure mode is the false negative, not a false positive** (`T691`).
+
+**Market size for AI in education, 2026, as this pass's mandated leg returned it** — the spread is a definitional artefact and is reported as a range, not a point:
+
+| Source | 2026 base | Forecast | CAGR |
+|---|---|---|---|
+| MarkWide Research | `$8.7B` | `$100.21B` by 2035 | — |
+| Precedence Research | `$9.58B` | `$136.79B` by 2035 | `34.52%` |
+| Research and Markets | `$10.6B` | `$42.48B` by 2030 | `41.5%` |
+| Coherent Market Insights | `$11.40B` | `$57.25B` by 2033 | `16.8%` |
+| **Mordor — agentic AI in education specifically** | 🟢 **`$2.37B`** | **`$11.83B` by 2031** | **`37.92%`** |
+| Grand View (via secondary) — AI tutors | `$3.6B` | `$17.7B` by 2033 | — |
+
+🔵 **The agentic figure is the one relevant to this base**, and it is roughly a fifth of the broad market: **North America largest, APAC fastest-growing, APAC at `29.0%` share of the broad 2026 market.** 🔴 Every figure is from a market-research marketing page; the four broad estimates differ by `31%` at the 2026 base and their 2035 endpoints differ by more than `3×`, **which is a definition problem, not a measurement**.
+
 
 #### 🆕 `p767` — the register placed in one table, and the two findings that are about this base's method rather than the market
 

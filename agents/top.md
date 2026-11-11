@@ -6,6 +6,94 @@ updated: 2026-11-11
 
 # Education AI Agents — Curated Top Set
 
+## 🆕 `p768` — **School transport fleet compliance (`ACTION p767-F`). The register `p767` named as the direct test of `T679` answers it: North America **does** set a cadence here — and so does every other region, the first register on this base where all four do. `15` permissive or copyleft agent rows byte-read over complete trees, `1` source-available refusal at `209★` enforcing itself with a licence-key check and an **instance heartbeat**, `5` grant-less absences stated over complete trees. And `p767`'s own headline artefact is corrected: the Apache-2.0 payload it attributed to a Japanese ministry is the **GitHub licence-picker template**, which this base had already fingerprinted `281` passes earlier.**
+
+**`50` supply queries across `11` languages · `24` complete git trees enumerated · `31` grant payloads byte-read with length and `sha256₁₂` · every `default_branch` from `git ls-remote --symref`, **none guessed and none taken from the search index** · `4` known-truth controls passed · `3` defects in this pass's own instruments caught by control before any verdict was written.**
+
+### 🔴 First, the measurement: the register was `0` as data and `6` as a promise
+
+Counted across all eleven shelves on `2026-11-11`, **with word boundaries**:
+
+| Token | Count | Token | Count |
+|---|---|---|---|
+| `digital tachograph` | **`0`** | `driver hours` | **`0`** |
+| `drivers' hours` | **`0`** | `MOT test` | **`0`** |
+| `operator licence` | **`0`** | `operator license` | **`0`** |
+| `DVSA` | **`0`** | `electronic logging` | **`0`** |
+| `hours of service` | **`0`** | `vehicle inspection` | **`0`** |
+| `driver CPC` | **`0`** | `walkaround check` | **`0`** |
+| `defect reporting` | **`0`** | `driver qualification file` | **`0`** |
+| `Fahrtenschreiber` | **`0`** | `Lenkzeiten` | **`0`** |
+| `Hauptuntersuchung` | **`0`** | `chronotachygraphe` | **`0`** |
+| `PCV` / `PSV` | **`0`** / **`0`** | `preventive maintenance inspection` | **`0`** |
+| `tachograph` | `2` | `roadworthiness` | `1` |
+| `fleet compliance` | `2` | `FMCSA` | `1` |
+| `ELD` | `15` *(see below)* | `school bus` | `17` *(see below)* |
+
+🔴 **`23` of `30` tokens at exactly `0`,** and all six occurrences of `tachograph`, `fleet compliance`, `FMCSA` and `roadworthiness` sit **inside `intel/open-gaps.md`** — this base's own directives naming the register (`p765`'s *"named and deliberately not built"* and `ACTION p767-F`). The register was a promise, not data.
+
+🔴 **`ELD` is a homograph and it is `0`.** `grep -oEi '\bELD\b'` returns `15`; **every one of them is `WIDA ELD` — English Language Development** — plus one that is the substring `requir(ed-fi)eld`. As *electronic logging device*, the token this register needs, the count is **`0`**. 🔵 `ACTION p762-C`'s rule held once more: a word-boundary count is still not a *sense* count.
+
+🔵 **`school bus` at `17` is real but it is a different register.** All `17` are `p761`'s student-transport **routing** work — HopSkipDrive, BusBoss, AlphaRoute, routing optimisation. The **vehicle-compliance** half is what `p765` and `ACTION p767-F` both record as never built, and the census confirms it (`T700`).
+
+### 🟢 The answer to the question `ACTION p767-F` was written to ask
+
+`p767-F` pointed this pass here for a stated reason: it is *"the one register on this list where North America does set intervals"*, and therefore the direct test of whether `T679` — *"North America refuses to set a cadence"* — is a property of **estate safety** or of **the United States**.
+
+🟢 **It is a property of estate safety. North America sets a hard federal cadence here, and so does every other region.**
+
+| Region | Instrument | Cadence it sets | Competent person |
+|---|---|---|---|
+| **North America** | **49 CFR 396.17** (US federal) | 🟢 **annual — a 12-month periodic inspection**, against the Appendix A item list. Records kept **14 months**; DVIRs **3 months**. 🔵 Several states go further for high-occupancy school buses (semi-annual, quarterly, monthly are each reported) | 🟢 **Specified: 49 CFR 396.19** sets inspector training and experience standards — the **first register on this base where the duty instrument names the qualification in regulation** |
+| **EMEA** | **Reg (EU) 165/2014** + download periods; **Reg (EC) 561/2006** for driving time | 🟢 **driver card ≤ `28` days, vehicle unit ≤ `90` days.** Retention ≥ `12` months, longer in some member states. 🔵 Smart Tachograph 2 reported required for vans `2.5`–`3.5 t` in international carriage and cabotage **from `1 July 2026`** | 🔴 Unspecified in the sources read for the *download* duty; driver CPC governs the driver, not the analyst |
+| **APAC** | **道路運送車両法第48条** + **保安基準第48条の2** (Japan) | 🟢 **the strictest on the register: `3`-monthly statutory periodic inspection** for business-use buses, **plus `車検` valid `1` year**. Chartered buses must use a **digital** tachograph, electromagnetic records retained **`3` years**; analogue switch-off reported `1 April 2025` | 🔴 Unspecified in the sources read |
+| **LATAM** | **CTB (Lei 9.503/1997) Art. `105` + Art. `136`**; **CONTRAN Res. `938/2022`** (Brazil) | 🟢 **the most school-specific on the register: a `semiannual` safety inspection of every vehicle used to transport schoolchildren**, as a *condition of the authorisation*. The cronotacógrafo is mandatory **and the statute names school transport explicitly** | 🔵 Not a person but an **instrument**: calibration (*aferição*) must be valid, and certificates are publicly checkable at `cronotacografo.rbmlq.gov.br` |
+
+🟢 **So this is the first register on this base with a dated, machine-encodable cadence in all four regions** (`T688`). The four previous registers each had at least one region that refused one.
+
+### 🟢 The agent layer, byte-read over complete trees
+
+Every grant below was located by **enumerating the complete git tree** and read with `cat-file blob` — no path guessed, no licence taken from the search index.
+
+| Repository | ★ | Grant, byte-read `2026-11-11` | Path | Branch | Region | Verdict for a proprietary deliverable |
+|---|---|---|---|---|---|---|
+| [`way-platform/tachograph-go`](https://github.com/way-platform/tachograph-go) | `17` | 🟢 **MIT** · `1,081 B` · `f3fe3e99f1c9` | `LICENSE` | `main` | EMEA | 🟢 **Usable.** A Go SDK for the regulated `.DDD` file. 🔵 **But the tree carries three grants:** Apache-2.0 at `.agents/skills/skill-creator/LICENSE.txt` and BSD-3-Clause at `.agents/skills/way-go-style/references/google/LICENSE`. `T683`'s path-scoped licence reproduced on a `1,376`-file tree |
+| [`traconiq/tachoparser`](https://github.com/traconiq/tachoparser) | `62` | 🔴 **AGPL-3.0** · `34,260 B` · `00352ab19865` | `LICENSE.md` | `main` | EMEA | 🔴 **Refuse for a hosted deliverable.** The most capable parser on the register — VU *and* driver card, generation 1 and 2 — and network use triggers the source obligation |
+| [`flespi-software/TachoBox`](https://github.com/flespi-software/TachoBox) | `3` | 🟢 **MIT** · `1,063 B` · `6ec1796d8b0e` | `LICENSE` | `master` | EMEA | 🟢 **Usable, and the closest thing to a duty layer on the register:** a web viewer for `.DDD` files that computes against **EU 561/2006** drivers' hours. Pushed `2026-11-10` |
+| [`seibii/shaken-qr-reader`](https://github.com/seibii/shaken-qr-reader) | `6` | 🟢 **MIT** · `1,077 B` · `ec1b6f5a6fb9` | `LICENSE` | `master` | APAC | 🟢 **Usable, and invisible to English.** Reads the QR code on the Japanese **車検証** (inspection certificate), so the vehicle register populates itself from the statutory document. Found by `ACTION p767-A`'s Japanese leg, not by any English query |
+| [`Velli20/Tachograph`](https://github.com/Velli20/Tachograph) | `14` | 🟢 **MIT** · `1,064 B` · `27f2d20c2ae6` | `LICENSE.txt` | `master` | EMEA | 🔵 **Usable but stale** — last pushed `2020-09-17`. An Android tachograph application; useful as a UI reference, not a dependency |
+| [`valdepeace/tachograph-structure`](https://github.com/valdepeace/tachograph-structure) | `11` | 🟢 **MIT** · `1,096 B` · `2c72a5316895` | `LICENSE` | `master` | EMEA | 🟢 **Usable.** A structural reference for the driver-card layout; pushed `2026-03-01` |
+| [`roidelapluie/readesm`](https://github.com/roidelapluie/readesm) | `16` | 🔴 **GPL-3.0** · `35,147 B` · `8ceb4b9ee5ad`, **plus `byref:GPL-3+`** from DEP-5 | `COPYING` + `debian/copyright` | `master` | EMEA | 🔴 **Copyleft, refuse for proprietary.** 🟢 **But its `debian/copyright` is the pass's instrument find:** a machine-readable **per-file-glob licence map**, published by upstream (`T696`) |
+| [`sebastian-tschen/fahrtenschreiber`](https://github.com/sebastian-tschen/fahrtenschreiber) | `0` | 🟢 **Apache-2.0** · `11,357 B` · `c71d239df917` | `LICENSE` | `master` | EMEA | 🔵 **Usable but abandoned** (`2021-03-18`). 🔴 **Its value is evidential, not technical:** this payload is **byte-identical** to the one `p767` attributed to a Japanese ministry (`T692`) |
+| [`shoka-jp/automotive-ai-skills`](https://github.com/shoka-jp/automotive-ai-skills) | `2` | 🟢 **MIT** · `1,069 B` · `8ac17a8065fc` | `LICENSE` | `main` | APAC | 🟢 **Usable.** Agent *skills* for vehicle diagnostics, maintenance and repair — the agent-layer shape this register otherwise lacks. Pushed `2026-11-09` |
+| [`tecno-consultores/RoSGrid`](https://github.com/tecno-consultores/RoSGrid) | `2` | 🔴 **GPL-3.0** · `35,149 B` · `3972dc9744f6` | `LICENSE` | `main` | LATAM | 🔴 **Copyleft.** 🔵 Named anyway because it is the register's **only MCP server**: a multi-tenant web console exposing fleet state to an agent. Pushed `2026-11-10` |
+| [`OneBus/OneBus-API`](https://github.com/OneBus/OneBus-API) | `5` | 🟢 **MIT** · `1,063 B` · `676bed1902a6` | `LICENSE` | `main` | LATAM | 🟢 **Usable.** Fleet management for urban bus operators, Brazilian-built — models vehicles, drivers and maintenance against the CTB shape |
+| [`RamomRicarto/sistema-gestao-frota`](https://github.com/RamomRicarto/sistema-gestao-frota) | `4` | 🟢 **MIT** · `1,070 B` · `4e016737d8d9` | `LICENSE` | `main` | LATAM | 🟢 **Usable, small** (`18`-file tree). Vehicles, drivers, maintenance — a starting schema, not a platform |
+| [`XAndresViverosX/FleetManager`](https://github.com/XAndresViverosX/FleetManager) | `3` | 🟢 **MIT** · `1,069 B` · `002c2696d92b` | `LICENSE.txt` | `master` | LATAM | 🟢 **Usable.** Cross-platform mobile fleet app; the only mobile-first permissive row on the register besides `Velli20` |
+| [`codeforbielefeld/baumkataster_frontend`](https://github.com/codeforbielefeld/baumkataster_frontend) | `3` | 🟢 **MIT** · `1,075 B` · `c4f04354559c` | `LICENSE` | `main` | EMEA | 🟢 **Usable** — and it is the **only** one of the four repositories `ACTION p767-C` named that carries a grant at all (`T691`) |
+| [`Project-PLATEAU/Tree-management-system`](https://github.com/Project-PLATEAU/Tree-management-system) | `4` | 🟢 **Apache-2.0** · `11,357 B` · `c71d239df917` | `LICENSE` | `main` | APAC | 🟢 **Usable, and re-read to settle `T677`.** 🔴 **The grant carries no ministry copyright** — the payload is the GitHub licence-picker template, holding the unfilled `Copyright [yyyy] [name of copyright owner]` boilerplate and **zero Japanese characters** (`T692`) |
+
+### 🔴 The one artefact that looks like the product forbids its use — third consecutive register, and this one enforces it
+
+| Repository | ★ | What the platform shows | What the payload says |
+|---|---|---|---|
+| `suxrobGM/logistics-app` *(code span deliberately, not a link)* | `209` | `NOASSERTION` | 🔴 **PolyForm Noncommercial License 1.0.0** · `5,022 B` · `db87c204820e`. *"Commercial use requires a commercial license."* The grant covers only the public source and **expressly excludes the closed-source modules**. 🔴 **And it is self-enforcing — a first on this base:** *"Bypassing the license key check, the portal license notice, or the instance heartbeat grants no commercial rights."* An **instance heartbeat** is a phone-home in the client's data path. By description it is the best-fitting artefact on the register — *"AI-powered fleet management platform with an agentic dispatcher"*, pushed `2026-11-05` (`T694`, `768-A`) |
+
+🔴 **`NOASSERTION` now spans five mutually incompatible commercial outcomes, measured in this single pass** — MIT-equivalent (`rrule`, BSD-3), dual Apache-2.0 **and** BSD-3 in one payload (`dateutil`), Apache-2.0 reformatted as Markdown (`collect`), **ShareAlike** (`education-agent-skills`), and **no commercial use at all** (`logistics-app`). 🟢 **The base's formulation can now be stated at full strength: `NOASSERTION` carries no commercial information whatsoever** (`T693`).
+
+### 🔴 Absences, stated over complete trees rather than guessed
+
+| Repository | ★ | Branch | Tree | Region | Why it is named anyway |
+|---|---|---|---|---|---|
+| `jugglingcats/tachograph-reader` | `94` | `master` | `50` paths | EMEA | 🔴 **The register's most-starred artefact carries no grant at any depth.** Reads driver and vehicle card data to XML — exactly the primitive the register needs. **`0` grant paths over a complete tree**, so the absence is a fact, not a failed search (`T695`, `768-B`) |
+| `kuznetsovin/go_tachograph_card` | `21` | `master` | `18` paths | EMEA | 🔴 Grant-less over a complete tree. A Go reader for driver-card `.ddd` output (`768-C`) |
+| `baumsicht/Baumkataster` | `3` | `main` | **`1` path** | EMEA | 🔴 `ACTION p767-C` named it unread as part of *"the register's largest permissive cluster"*. **It is a one-file repository with no grant** (`768-D`) |
+| `CodeforKarlsruhe/baumkataster` | `3` | `master` | `23` paths | EMEA | 🔴 Named by `ACTION p767-C`, grant-less over a complete tree (`768-E`) |
+| `loleg/baumkataster-data` | `3` | `master` | `8` paths | EMEA | 🔴 Named by `ACTION p767-C`, grant-less over a complete tree (`768-F`) |
+
+🔴 **`ACTION p767-C` is discharged and it reverses `p767`'s framing.** `p767` read `4` of the `45` `Baumkataster` repositories and generalised *"real MIT and AGPL-3.0 grants"* to the cluster. Of the **four it named as unread**, three carry **no grant at all** and one is MIT — and 🔵 **the search index said exactly that for free** (`NONE`,`NONE`,`NONE`,`MIT`), agreeing with the payload on all four. **The index's false negatives are on `NOASSERTION`, not on `NONE`; this pass found no case of the index inventing a grant** (`T691`).
+
+
 ## 🆕 `p767` — **Tree and grounds safety on the school estate (`ACTION p766-F`). `24` addresses had their licence paths **enumerated from the full git tree** rather than guessed, because this pass found that the session's git proxy serves arbitrary public repositories — so `T665`'s non-root blind spot is closed structurally, not mitigated. `14` permissive agent-layer rows, `1` proprietary refusal behind `NOASSERTION`, `5` grant-less. And the register's supply turns out to be **language-partitioned**: the mandated English queries never see the `45`-repository German civic-tech ecosystem that is its largest permissive cluster.**
 
 **`20` English supply queries + `15` targeted + `11` non-English on `search/repositories` · `24` full trees enumerated (`376,000+` paths swept) · `93` grant payloads byte-read with length and `sha256₁₂` · every `default_branch` from `git ls-remote --symref`, **none guessed and none taken from the search index** · `4` known-truth controls passed · `3` defects in this pass's own instruments caught by control before any verdict was written.**

@@ -4,6 +4,21 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `2026-11-11` — `p768` — what is new this week in the foundation layer for school transport fleet compliance
+
+| Repository | ★ | Grant, byte-read | Pushed | Why it is here |
+|---|---|---|---|---|
+| [`traccar/traccar`](https://github.com/traccar/traccar) | `8,113` | 🟢 **Apache-2.0** · `11,358 B` · `cfc7749b96f6` | `2026-11-11` | 🟢 **Pushed on the day of this pass.** The telematics spine: GPS tracking and fleet server, `1,863`-file tree, device protocols, geofencing, reports, API. **The register's one production-grade permissive platform.** 🔵 Its payload is apache.org's **authoritative canonical** text, matching `p486`'s baseline row exactly |
+| [`google/transit`](https://github.com/google/transit) | `1,097` | 🟢 **Apache-2.0** · `11,328 B` · `9ebd66b7d7dd` | `2026-11-05` | 🟢 GTFS and GTFS-Realtime — how a school transport route is described in a form every downstream tool already reads (`P350`) |
+| [`dateutil/dateutil`](https://github.com/dateutil/dateutil) | `2,646` | 🟢 **Apache-2.0 *and* BSD-3-Clause, one payload** · `2,889 B` · `ba00f51a0d92` | `2026-11-01` | 🟢 The recurrence companion to `rrule`. 🔵 **A genuine dual grant in a single file**, which is why a one-family-per-repository detector is wrong in a way that matters. Indexed `NOASSERTION` |
+| [`getodk/collect`](https://github.com/getodk/collect) | `804` | 🟢 **Apache-2.0** · `10,494 B` · `d1ee81266b96` | `2026-11-10` | 🟢 The evidence-capture layer. 🟢 **`T633`'s recorded length and `sha256₁₂` reproduce exactly from the git-blob channel** — a two-channel corroboration of a four-pass-old row |
+| [`way-platform/tachograph-go`](https://github.com/way-platform/tachograph-go) | `17` | 🟢 **MIT** · `1,081 B` · `f3fe3e99f1c9` | `2026-10-14` | 🟢 A Go SDK for the regulated `.DDD` file — **the register's recommended parser**, because the more capable alternative is AGPL-3.0. 🔵 Its tree carries **three** grants: Apache-2.0 and BSD-3 under `.agents/skills/` (`T683`) |
+
+🔵 **Stable but load-bearing, re-verified this week rather than newly trending:** [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) (`3,752★`, **BSD-3-Clause** · `3,493 B` · `6c12f89b62fc` at the British stem `LICENCE`, last pushed `2024-06-27`). 🟢 **`p766`'s `T661` interval engine finally has intervals worth encoding:** `28` days, `90` days, `3` months, `6` months and `12` months, all four regions, all expressible as recurrence rules.
+
+🔴 **Informed gaps:** nothing trending implements a statutory cadence, a competent-person check or a certificate-expiry monitor in any language. **`openMAINT`, the asset-maintenance platform this duty family belongs in, is still not canonically on GitHub** (`T666`, re-confirmed).
+
+
 ## 🆕 2026-11-11 (p767) — **`422` was never the right channel to ask. `git ls-remote` answers liveness and canonicality in one call, and it says `8` of the `13` addresses this base has been told are dead are alive and serving a `HEAD`. `ACTION p766-C` is settled by **ref-set identity**: `585 / 585` refs, so the wallet's successor is proven, not guessed. And `ACTION p766-E`'s premise is false — the `14` rows it was carried for were never broken.**
 
 **`13` addresses probed on both channels · `4` complete ref-set comparisons (`585` and `49,906` refs) · `24` full trees enumerated · `48` → `7` → `0` over-wide rows · `3` instrument defects caught by control.**

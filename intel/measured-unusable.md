@@ -4,6 +4,26 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p768` — `768-A`…`768-N` — measured on the school-transport-fleet-compliance register and recorded as unusable, with the reason and the evidence
+
+| Id | Address or item | Measured | Why it is unusable |
+|---|---|---|---|
+| `768-A` | `suxrobGM/logistics-app` (`209★`) | **PolyForm Noncommercial 1.0.0** · `5,022 B` · `db87c204820e` at `LICENSE`, `main`, `3,372`-file tree | 🔴 **No commercial use.** Closed-source modules **excluded from the grant**; *"Bypassing the license key check, the portal license notice, or the instance heartbeat grants no commercial rights."* 🔴 An **instance heartbeat** is a phone-home in the client's data path — a second, independent objection. Index shows `NOASSERTION` (`T694`) |
+| `768-B` | `jugglingcats/tachograph-reader` (`94★`) | **`0` grant paths over a complete `50`-file tree**, `master`, `58164137b35d` | 🔴 **Grant-less.** The register's most-starred artefact and exactly the primitive it needs. Absence established by enumeration, not by a failed path guess (`T695`) |
+| `768-C` | `kuznetsovin/go_tachograph_card` (`21★`) | **`0` grant paths over `18`**, `master`, `1d24292b7b9b` | 🔴 Grant-less over a complete tree |
+| `768-D` | `baumsicht/Baumkataster` (`3★`) | **`0` grant paths over a `1`-file tree**, `main`, `141e84c934c6` | 🔴 Named unread by `ACTION p767-C` as part of *"the register's largest permissive cluster"*. **A one-file repository with no grant** (`T691`) |
+| `768-E` | `CodeforKarlsruhe/baumkataster` (`3★`) | **`0` grant paths over `23`**, `master`, `1059a2a7b3d6` | 🔴 Named unread by `ACTION p767-C`; grant-less (`T691`) |
+| `768-F` | `loleg/baumkataster-data` (`3★`) | **`0` grant paths over `8`**, `master`, `81de452cb669` | 🔴 Named unread by `ACTION p767-C`; grant-less (`T691`) |
+| `768-G` | `GarethManning/education-agent-skills` (`975★`) | **CC-BY-SA-4.0** · `1,230 B` · `f952182df4eb`; also `978 B` · `f8366f5391f4` at `mcp-server/LICENSE` | 🔴 **Unusable in a proprietary deliverable without a licensing decision.** `165` education skills plus an MCP server — the most relevant education-agent corpus on this base — but **ShareAlike inherits to the derivative**. Index shows `NOASSERTION` (`T693`) |
+| `768-H` | `traconiq/tachoparser` (`62★`) | **AGPL-3.0** · `34,260 B` · `00352ab19865` | 🔴 **Refuse for a hosted deliverable.** The most capable parser on the register; network use triggers the source obligation. Usable only to cross-check output in a throwaway environment (`P346`) |
+| `768-I` | `tecno-consultores/RoSGrid` (`2★`) | **GPL-3.0** · `35,149 B` · `3972dc9744f6` | 🔴 Copyleft. Named anyway as the register's **only MCP server** |
+| `768-J` | `roidelapluie/readesm` (`16★`) | **GPL-3.0** · `35,147 B` · `8ceb4b9ee5ad` at `COPYING`, plus **DEP-5 `byref:GPL-3+`** at `debian/copyright` | 🔴 Copyleft, and last pushed `2014-11-29`. 🟢 Retained because its `debian/copyright` is the pass's instrument find (`T696`) |
+| `768-K` | The Chinese-language query legs | `车队管理` `142`, `行车记录仪` `104`, `车辆年检` `26` | 🔴 **Unusable as measured — star-ranked results are pollution.** `funNLP` (`84,526★`), the `china-dictatorship` cluster and `Some-Many-Books` (`25,955★`) dominate; none is fleet software. **No Chinese-language supply verdict is published, because none can be read off these result sets** |
+| `768-L` | `tyxak/remotepower` (`77★`, **MIT**) | Returned by `fleet compliance management` | 🔴 **A homograph, not a finding.** *"Self-hosted server and server fleet management"* — `fleet` means machines, not vehicles. Recorded so the `151`-repository English count is not read as vehicle supply |
+| `768-M` | `www.mlit.go.jp` | **`getaddrinfo ENOTFOUND`** at this session's tunnel | 🔴 **Primary verification failed.** The Japanese ministry press release is the primary source for the chartered-bus digital-tachograph mandate and the `3`-year retention period. No further primary host was attempted after the failure (`T702`) |
+| `768-N` | The Portuguese and Spanish fleet clusters | `gestao de frota` **`812`**, `gestion de flota` **`482`**, `gestion de flotte` **`310`** | 🔴 **Volume without grants.** Ranked by stars these are coursework and capstone projects at `1`–`7★`, overwhelmingly carrying no licence. **The largest counts this base has measured on any register, and the smallest usable yield** (`T690`) |
+
+
 ## 🆕 `p767` — `2026-11-11` — **🔴 A SECOND CONSECUTIVE REGISTER WHOSE BEST-DESCRIBED ARTEFACT IS PROPRIETARY BEHIND `NOASSERTION`. 🔴 A REGISTER WHOSE ONLY *SCHOOL* ARTEFACT HAS NO GRANT. 🔴 A BENCHMARK DATASET WITH `0` GRANTS IN A FULLY ENUMERATED TREE. 🟢 AND, FOR THE FIRST TIME ON THIS BASE, ABSENCES STATED OVER **COMPLETE** TREES RATHER THAN SAMPLED PATHS.**
 
 Every row below was byte-read or enumerated on `2026-11-11`. **An absence here means every path in the repository's tree was listed and none was a grant** — a stronger claim than any previous pass could make, because the path set was enumerated rather than guessed (`T670`).

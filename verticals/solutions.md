@@ -6,6 +6,19 @@ updated: 2026-11-11
 
 # Vertical Platforms — Education
 
+## 🆕 `p768` — **School transport fleet compliance: the platform layer is where this register is weakest, and the reason is structural — the duty-holder is a private operator, so there is no public body publishing the system. `p757`'s law survives a fifth consecutive register with no counter-example.**
+
+| Platform | Grant, byte-read `2026-11-11` | Branch | Region | Verdict for a school-transport deliverable |
+|---|---|---|---|---|
+| [`traccar/traccar`](https://github.com/traccar/traccar) | 🟢 **Apache-2.0** · `11,358 B` · `cfc7749b96f6` at `LICENSE.txt` | `master` | Global | 🟢 **The one production-grade permissive platform on the register, and it is genuinely a platform** — `8,113★`, `1,863`-file tree, pushed `2026-11-11`, with device protocol support, geofencing, reports and an API. 🔵 **It models the vehicle and the trip. It does not model the duty** — no inspection cadence, no competent person, no certificate expiry |
+| `suxrobGM/logistics-app` *(code span deliberately, never a link: the grant forbids commercial use)* | 🔴 **PolyForm Noncommercial 1.0.0** · `5,022 B` · `db87c204820e` | `main` | Global | 🔴 **Refuse.** The only other platform-shaped artefact on the register. No commercial use, closed-source modules excluded from the grant, and a licence-key plus **instance heartbeat** enforcement path (`768-A`) |
+| [`OneBus/OneBus-API`](https://github.com/OneBus/OneBus-API) | 🟢 **MIT** · `1,063 B` · `676bed1902a6` at `LICENSE` | `main` | LATAM | 🟢 **Usable as a starting schema for a Brazilian engagement** — built for urban bus operators, so its vehicle/driver/maintenance model already sits in the CTB's world. Not a platform at `220` files; a head start on a data model |
+| `openMAINT` | 🔴 **No verdict is published, because none can be byte-read** | — | EMEA | 🔴 **Structural absence, confirmed a second time.** `p766`'s `T666` recorded that the facility and asset-maintenance platform this entire duty family belongs in is **not canonically on GitHub**. It is still not. **Scheduled-maintenance modelling is its native feature and it cannot be verified on this base's instruments** |
+| ERP / SIS layer — `OpenEduCat`, `RosarioSIS`, `openSIS` | 🔴 **LGPL-3.0 / GPL-2.0 / GPL-2.0** | — | Global | 🔴 **Copyleft throughout, and none of them models a vehicle.** The search leg mandated for vertical platforms returned no MIT or Apache education ERP: `OpenEduCat` is LGPL-3.0 on Odoo's ORM, `RosarioSIS` is GPL-2.0, `openSIS` is GPL-2.0 at `docs/License.txt` (`T665`, re-read this pass as a control). 🔵 `OpenOLAT` is Apache-2.0 but is an LMS, not an ERP. **A school's transport duty has no permissive ERP to live inside** |
+
+🔴 **`p757`'s law holds for a fifth consecutive register and still has no counter-example: there is no permissive platform published by the community in a statutory-compliance vertical.** 🔵 **But this register is the first to show what varies.** On the previous four, the only permissive platform was published by a *public body* (`Project-PLATEAU` by MLIT). Here there is no public body — the duty falls on the operator — and the permissive platform is instead published by a **commercial telematics vendor community** (`traccar`). **The publisher changes with who holds the duty; the absence of a community platform does not** (`T698`).
+
+
 ## 🆕 `p767` — **`7` platform-tier rows for tree and grounds safety. The tier splits by *who published it*: every community-built platform on this register is copyleft, and the only permissive one was published by a national ministry. `1` structural absence re-confirmed from a second, independent channel.**
 
 **Every grant byte-read `2026-11-11` from a path **enumerated from the complete tree**; every branch from `git ls-remote --symref`.** Register: **tree and grounds safety on the school estate** (`ACTION p766-F`).

@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p768` — `P346`–`P351` — **school transport fleet compliance: the first register on this base where the duty engine can be built entirely from permissive parts, because the cadence is dated in all four regions and the evidence is a specified file format**
+
+Every repository named below was byte-read for its grant this pass over a **complete git tree** (`agents/top.md`, `repos/foundations.md`). Grants: `traccar` Apache-2.0, `rrule` BSD-3, `dateutil` Apache-2.0+BSD-3, `getodk/collect` Apache-2.0, `google/transit` Apache-2.0, `way-platform/tachograph-go` MIT, `flespi-software/TachoBox` MIT, `seibii/shaken-qr-reader` MIT, `OneBus/OneBus-API` MIT.
+
+### `P346`
+**EMEA — the tachograph compliance engine, and the only region where the evidence arrives pre-regulated.**
+🟢 **Wire:** `way-platform/tachograph-go` (**MIT**, `17★`) parses the `.DDD` download → `jkbrzt/rrule` (**BSD-3**) encodes the two statutory download periods as recurrence rules, `FREQ=DAILY;INTERVAL=28` per driver card and `FREQ=DAILY;INTERVAL=90` per vehicle unit → a scheduler fires the due-date queue → `flespi-software/TachoBox` (**MIT**) supplies the EU 561/2006 drivers'-hours reading as a reference implementation to validate against → `traccar` (**Apache-2.0**) supplies the vehicle and trip spine the records attach to.
+🔴 **Do not use `traconiq/tachoparser`** despite it being the most capable parser on the register (VU and driver card, generation 1 and 2): it is **AGPL-3.0** and a hosted deliverable triggers the source obligation. Use it only to cross-check output in a throwaway environment, never in the delivered artefact.
+🟢 **Acceptance test:** for a named operator, produce a dated per-driver register showing every card download, the interval since the previous one, and the `28`-day breach list — with the file's own timestamps as the evidence, not an operator's assertion.
+🔴 **Known limit:** the `28`-day clock counts only days with recorded activity in at least one source read, and the sources disagree on the legal basis (**Reg (EU) 165/2014** vs **Commission Reg (EU) 581/2010**). **Confirm the consolidated EUR-Lex text before a client commits to a number** (`T702`).
+
+### `P347`
+**North America — the annual inspection engine, and the first pattern on this base that can model the competent person.**
+🟢 **Wire:** `rrule` encodes **49 CFR 396.17** as `FREQ=YEARLY` per vehicle, with the record-retention windows as separate rules (`14` months for the inspection report, `3` months for DVIRs) → `getodk/collect` (**Apache-2.0**) carries the Appendix A item list as an offline form with photo and GPS evidence → `traccar` supplies odometer and utilisation so a state's stricter rule can be selected per vehicle.
+🟢 **Why this pattern is different from `P334`:** every previous duty pattern on this base recorded that the **competent person is unmodelled** because no instrument defined them. **49 CFR 396.19 defines the inspector's training and experience in regulation**, so the qualification is a data field with a legal definition rather than an operator's judgement — and the form can refuse to submit without a qualified inspector attached (`T688`).
+🔴 **Known limit:** the federal interval is annual, but **several states require semi-annual, quarterly or monthly inspection of high-occupancy school buses**, and the state layer was not enumerated this pass. **Build the cadence as a per-jurisdiction lookup from the first commit, not as a constant** — this is the same shape as `T679`'s justification requirement, and the state rules are the unmeasured half.
+
+### `P348`
+**APAC (Japan) — the strictest cadence on the register, and the only one where the statutory certificate reads itself.**
+🟢 **Wire:** `seibii/shaken-qr-reader` (**MIT**, `6★`) reads the QR code on the **車検証** → the vehicle register is populated from the statutory document itself, with no transcription step → `rrule` encodes the **`3`-monthly** periodic inspection (道路運送車両法第48条) and the **annual** 車検 expiry as two independent rules → `getodk/collect` carries the 点検整備記録簿 items → digital tachograph records are retained **`3` years** as electromagnetic records.
+🟢 **Why this is the strongest automation case of the four regions:** the compliance object is **machine-readable by design at the point of issue**. Elsewhere the certificate is a PDF or a paper form and the first engineering task is extraction; here it is a QR decode (`T699`).
+🔵 **Delivery note:** this leg exists at all only because `ACTION p767-A` was run — the Japanese query returned the full regulatory picture and an MIT reader, while the English and mixed-language queries returned **nothing on Japan** (`T690`).
+🔴 **Known limit:** every Japanese interval here is **search-sourced from commercial fleet explainers**; `www.mlit.go.jp` is refused at this session's tunnel (`T702`). The sources themselves say to verify against e-Gov. **No deck may state a Japanese interval on this base's authority.**
+
+### `P349`
+**LATAM (Brazil) — the most school-specific instrument on the register, and a public registry to check it against.**
+🟢 **Wire:** `OneBus/OneBus-API` (**MIT**) or `RamomRicarto/sistema-gestao-frota` (**MIT**) as the vehicle/driver/maintenance schema → `rrule` encodes **CTB Art. 136**'s `semiannual` school-vehicle safety inspection as `FREQ=MONTHLY;INTERVAL=6`, tied to the *authorisation* it is a condition of → a certificate-expiry monitor tracks the cronotacógrafo **aferição** against the federal registry at `cronotacografo.rbmlq.gov.br` → `getodk/collect` carries the inspection record.
+🟢 **Why this is the best-specified buyer of the four:** **CTB Art. 105 names school transport explicitly** in the tachograph mandate, and **Art. 136 makes the semiannual inspection a condition of the authorisation to operate** — so the consequence of a lapse is loss of the right to carry children, not a fine. **CONTRAN Resolution 938/2022** supplies the device's technical requirements, in force since `1 April 2022`.
+🔴 **Known limits:** the `semiannual` period is reported by commercial blogs rather than read from the CTB text; **MP 1.343/2026** (tachograph records as speeding evidence) was reported passed and awaiting sanction in July 2026 and **its final status is unconfirmed**. Check the CTB and the state Detran before committing.
+
+### `P350`
+**The cross-region spine: one data model, four cadence rules.**
+🟢 **Wire:** `traccar` (**Apache-2.0**, `8,113★`) as the vehicle, driver and trip model → `google/transit` (**Apache-2.0**) GTFS for the route definition, so school routes are described in a form every downstream tool reads → `getodk/collect` (**Apache-2.0**) as the single evidence-capture surface → `rrule` + `dateutil` (**BSD-3** / **Apache-2.0**) as the cadence layer, **swapped per jurisdiction and nothing else changing**.
+🟢 **The claim this pattern makes, and it is testable:** across the four regions the *data* is the same — vehicle, driver, qualification, inspection event, evidence file, due date. **Only the recurrence rule and the form definition differ.** A 49 CFR Appendix A walkaround, a German *Regelkontrolle*-style record, a Japanese 点検整備記録簿 and a Brazilian semiannual inspection are **one form schema with four item lists** (`T698`).
+🔴 **What is not in this pattern, stated plainly:** nothing here encodes the *duty* — who owes it, to whom, and what the consequence of breach is. `traccar` models the vehicle and the trip and **does not model the obligation**. That component does not exist in open source on any of the five registers this base has now built (`T698`).
+
+### `P351`
+**The licence-safety gate, as a committed instrument rather than a review step.**
+🟢 **Wire:** for every candidate address — `git ls-remote --symref` for liveness and the authoritative `default_branch` → blobless `--filter=blob:none --no-checkout` clone → `ls-tree -r` to enumerate **every** grant path at any depth → `cat-file blob` on each → `ingest/p768-grant-classifier.py` for the family.
+🔴 **The four refusals this gate must make, each one a real row from this pass:** (i) **`NOASSERTION` is not evidence** — five incompatible outcomes carried it in one pass, from BSD-3 to no-commercial-use (`T693`); (ii) **source-available families are not open source** — PolyForm, BUSL, SSPL, Elastic, Commons Clause, Sustainable Use, and the register's `209★` flagship is PolyForm Noncommercial **with an instance heartbeat** (`T694`); (iii) **ShareAlike on a content corpus is a licensing decision** — `education-agent-skills` at `975★` is CC-BY-SA-4.0, and a derivative inherits the obligation (`768-G`); (iv) **one repository can carry several families scoped by path** — `way-platform/tachograph-go` is MIT at root with Apache-2.0 and BSD-3 under `.agents/skills/` (`T683`).
+🟢 **Acceptance test, and it is cheap:** run the gate against four payloads whose truth is already known before trusting it on anything new. This pass used `openSIS-Classic` → GPL-2.0, `rrule` → BSD-3, `getodk/collect` → Apache-2.0, `readesm` → DEP-5 `byref:GPL-3+`. 🔴 **The first run failed the openSIS control**, returning LGPL-2.1 because GPL-2.0's preamble recommends the LGPL (`T697`). **A gate that has not been run against a known answer is not a gate.**
+
+
 ## 🆕 `P340`–`P345` — added at p767 (2026-11-11)
 
 **Register: tree and grounds safety on the school estate** (`ACTION p766-F`). Every component named below had its grant **byte-read on `2026-11-11` from a path enumerated out of the complete git tree**, on the branch returned by `git ls-remote --symref`. No path was guessed, no branch was assumed and no family was taken from GitHub's licence index.

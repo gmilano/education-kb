@@ -4,6 +4,23 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `2026-11-11` — `p768` — what is new this week on the agent layer of school transport fleet compliance
+
+🟢 **Pushed within the last `10` days, and all three are permissive:**
+
+| Repository | ★ | Grant, byte-read | Pushed | What changed |
+|---|---|---|---|---|
+| [`flespi-software/TachoBox`](https://github.com/flespi-software/TachoBox) | `3` | 🟢 **MIT** · `1,063 B` · `6ec1796d8b0e` | `2026-11-10` | 🟢 **The register's only duty-adjacent implementation**: a web viewer for `.DDD` tachograph files that computes against **EU 561/2006** drivers' hours. Tiny, active, and the right reference implementation to validate a cadence engine against |
+| [`shoka-jp/automotive-ai-skills`](https://github.com/shoka-jp/automotive-ai-skills) | `2` | 🟢 **MIT** · `1,069 B` · `8ac17a8065fc` | `2026-11-09` | 🟢 Agent **skills** for vehicle diagnostics, maintenance and repair — the agent-layer shape this register otherwise lacks entirely. Found on the Japanese leg |
+| [`tecno-consultores/RoSGrid`](https://github.com/tecno-consultores/RoSGrid) | `2` | 🔴 **GPL-3.0** · `35,149 B` · `3972dc9744f6` | `2026-11-10` | 🔵 **The register's only MCP server** — a multi-tenant web console exposing fleet state to an agent. Copyleft, so named rather than recommended |
+
+🔴 **And the week's most-starred movement is a refusal.** `suxrobGM/logistics-app` (`209★`, pushed `2026-11-05`) describes itself as *"AI-powered fleet management platform with an agentic dispatcher"* — by description the register's answer. Its grant is **PolyForm Noncommercial 1.0.0** (`5,022 B` · `db87c204820e`): no commercial use, closed-source modules excluded, and the licence text explicitly anticipates circumvention of its **licence-key check, portal notice and instance heartbeat**. The platform indexes it `NOASSERTION` (`T694`, `768-A`).
+
+🔵 **Education-agent corpus worth tracking, with a licence caveat that is the whole story.** [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) (`975★`, pushed `2026-11-03`) is `165` evidence-grounded skills for teachers and school leaders, with an MCP server — the most relevant education-agent corpus this base has placed. 🔴 **It is CC-BY-SA-4.0** (`1,230 B` · `f952182df4eb`), indexed `NOASSERTION`, so a derivative inherits ShareAlike (`768-G`).
+
+🔴 **Informed gaps for this week, stated so silence is not read as coverage:** `smart tachograph gen2` returns **`0`** repositories; `AETR driving time` **`0`**; `walkaround check defect reporting` **`0`**; `eld hours of service open source` **`0`**; `자동차검사` **`0`**. **Nothing new appeared on the duty layer in any language.**
+
+
 ## 🆕 2026-11-11 (p767) — **The register's agent layer is almost entirely `0★` and under 18 months old, and its one government-published artefact is the only permissive platform in it. New this window: a Chinese street-tree benchmark with no grant, a Colombian *school* tree inventory with no grant, an Argentine risk app on a non-`main` default branch — and the discovery that the German-language query returns `45` repositories where the English one returns homographs.**
 
 **Register: tree and grounds safety on the school estate** (`ACTION p766-F`). `46` supply queries (`20` English + `15` targeted + `11` non-English) · `24` full trees enumerated · `93` grant payloads byte-read · every `default_branch` from `git ls-remote --symref`, none guessed.

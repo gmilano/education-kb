@@ -1,0 +1,18 @@
+# p768 — ACTION p767-E discharged base-wide, 2026-11-11.
+# Every evidence/*.tsv carrying a TRUE line coordinate against a resolvable shelf column.
+# resolves = the row's own descriptive cell is still found at that line number.
+# FINDING: a line number into an append-only shelf has a useful life of about one pass.
+# p767 reported overwide-rows as 11-of-14 moved; measured here it is 14-of-14.
+# REMEDY (ACTION p768-D lineage): store a quoted substring or a line sha256, never an integer.
+evidence_file	rows	resolves	stale	unresolvable	pct_resolving
+evidence/canonical-propagation-ledger.2026-11-03-p627.tsv	50	29	21	0	58.0
+evidence/census-role.2026-11-02-p610.tsv	1382	223	1159	0	16.1
+evidence/matcher-dialects.2026-10-29-p532.tsv	1532	129	1403	0	8.4
+evidence/overwide-rows.2026-11-11-p765.tsv	14	0	14	0	0.0
+evidence/p253-date-regression.2026-10-16-p253.tsv	13	0	13	0	0.0
+evidence/p262-grade-class.2026-10-17-p262.tsv	87	0	0	87	0.0
+evidence/pagelm-citations.2026-10-13-p166.tsv	6	0	6	0	0.0
+evidence/sa-selfclaim-dates.2026-10-15-p223.tsv	3	0	3	0	0.0
+evidence/star-cell-staleness.2026-10-28-p510.tsv	25	17	7	1	68.0
+evidence/star-frame-by-structure.2026-10-28-p512.tsv	93	0	0	93	0.0
+TOTAL	3205	398	2626	181	12.4

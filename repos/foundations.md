@@ -6,6 +6,46 @@ updated: 2026-11-11
 
 # Foundational Repositories — Education
 
+## 🆕 `p768` — **The register's foundation layer is the strongest this base has measured: for the first time every *input* a compliance engine needs exists under a permissive grant, and the thing still missing is only the duty layer. `6` foundation rows byte-read over complete trees, and one of them turns out to be `ACTION p766-D`'s multi-family requirement already solved as published data.**
+
+Every grant located by **complete-tree enumeration** and read with `cat-file blob`; no path guessed, no licence taken from the index.
+
+| Repository | ★ | Grant, byte-read `2026-11-11` | Path | Branch | Region | What it contributes to this register |
+|---|---|---|---|---|---|---|
+| [`traccar/traccar`](https://github.com/traccar/traccar) | `8,113` | 🟢 **Apache-2.0** · `11,358 B` · `cfc7749b96f6` | `LICENSE.txt` | `master` | Global | 🟢 **The telematics spine, and the register's single most valuable permissive asset.** A production GPS tracking and fleet server, pushed `2026-11-11`. 🔵 Its payload is the **authoritative apache.org canonical text** — `p486` recorded exactly this fingerprint as `AUTHORITATIVE canonical` |
+| [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | `3,752` | 🟢 **BSD-3-Clause** · `3,493 B` · `6c12f89b62fc` | `LICENCE` | `master` | Global | 🟢 **The interval engine, and on this register it finally has intervals worth encoding.** `p766`'s `T661` established that a statutory period is an RFC 5545 recurrence rule; here the periods are `28` days, `90` days, `3` months, `6` months and `12` months — all four regions, all expressible. 🔵 Grant at the British stem `LICENCE` |
+| [`dateutil/dateutil`](https://github.com/dateutil/dateutil) | `2,646` | 🟢 **Apache-2.0 *and* BSD-3-Clause, both in one payload** · `2,889 B` · `ba00f51a0d92` | `LICENSE` | `master` | Global | 🟢 **Usable under either.** The recurrence companion to `rrule`. 🔵 **A genuine dual grant in a single file**, which is why a detector that returns one family per repository is wrong in a way that matters: the index says `NOASSERTION` and says nothing about either |
+| [`google/transit`](https://github.com/google/transit) | `1,097` | 🟢 **Apache-2.0** · `11,328 B` · `9ebd66b7d7dd` | `LICENSE` | `master` | Global | 🟢 **The route-definition standard.** GTFS and GTFS-Realtime specifications — how a school transport route is described in a form every downstream tool already reads. Pushed `2026-11-05` |
+| [`getodk/collect`](https://github.com/getodk/collect) | `804` | 🟢 **Apache-2.0** · `10,494 B` · `d1ee81266b96` | `LICENSE.md` | `master` | Global | 🟢 **The evidence-capture layer, re-verified on a second channel.** Offline inspection forms, photo evidence, GPS, resumable drafts — a 49 CFR Appendix A walkaround, a Brazilian semiannual inspection or a Japanese `3`-month 点検 differ only in the form definition. 🟢 **`T633`'s recorded length and `sha256₁₂` reproduce exactly from the git blob channel** |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `975` | 🔴 **CC-BY-SA-4.0** · `1,230 B` · `f952182df4eb` (and `978 B` · `f8366f5391f4` at `mcp-server/LICENSE`) | `LICENSE` | `main` | Global | 🔴 **ShareAlike, and the index hides it behind `NOASSERTION`.** `165` evidence-grounded skills for teachers and school leaders, with an MCP server — by far the most relevant education-agent corpus this base has placed. 🔴 **But incorporating the skills into a client deliverable carries a ShareAlike obligation on the derivative**, which is a licensing decision, not an engineering one (`768-G`) |
+
+### 🟢 The pass's instrument find: `ACTION p766-D`'s requirement was already solved, and this base was discarding the solution
+
+`ACTION p766-D` required a classifier that *"admits more than one family per repository, scoped by path"*, because Metabase is AGPL outside `enterprise/` and commercial inside it. `p767-D` then recorded `debian/copyright` as **noise**, on the grounds that `95` of QGIS's `126` matched paths were `cpt-city` colour-gradient metadata.
+
+🟢 **`debian/copyright` in DEP-5 form is not noise. It is exactly the artefact `p766-D` specified, published by upstream as data.** From `roidelapluie/readesm`:
+
+```
+Format: http://www.debian.org/doc/copyright-format/1.0
+Files: *
+License: GPL-3+
+Files: ressources/translations/readesm_de.ts
+Copyright: 2009,2010,2011 Martin Walch and Andreas Gölzer
+```
+
+It is a **per-file-glob licence map** with a stable, parseable grammar. 🔴 **It declares the licence by reference and substitutes a literal `[LICENSE TEXT]` placeholder, so a clause-text classifier correctly refuses it — and therefore silently discards the best evidence in the repository.** `ingest/p768-grant-classifier.py` now parses it and marks every result `byref:` so no reader mistakes a declaration for a read payload (`T696`, `ACTION p768-D`).
+
+### 🔵 Apache-2.0 at three distinct lengths in one pass, and the baseline is this base's own
+
+| Length | `sha256₁₂` | What it is |
+|---|---|---|
+| `11,358 B` | `cfc7749b96f6` | 🟢 **apache.org's authoritative text** — `traccar`. Matches `p486`'s `AUTHORITATIVE canonical` row exactly |
+| `11,357 B` | `c71d239df917` | 🔵 **The GitHub licence-picker template**, one leading blank line fewer — `Project-PLATEAU`, `sebastian-tschen/fahrtenschreiber`. Matches `p486`'s second fingerprint exactly |
+| `11,328 B` | `9ebd66b7d7dd` | `google/transit` — a third, shorter variant |
+
+🟢 **`p765`'s `T646` census is corroborated from a fourth direction**, and three MIT lengths repeated inside this pass alone (`1,063 B` and `1,069 B` each carrying **two distinct payloads**). 🔴 **The consequence is `T692`: a canonical grant `sha256₁₂` identifies the licence text, never the repository.**
+
+
 ## 🆕 `p767` — **`11` foundation rows, every grant path **enumerated from the full tree** instead of guessed. The pass's structural result: a repository does not have *a* licence, it has a **map from path scope to grant** — and `qgis/QGIS` proves it at a scale that settles `ACTION p766-D(ii)` nine times over, where `p766`'s Metabase case proved it twice.**
 
 **`5` geospatial substrate repositories + `6` register and field-capture repositories · `45,540` tree paths swept for the substrate alone · every `default_branch` from `git ls-remote --symref` · every family from **operative clause text**, never the index and never the licence's own name.**

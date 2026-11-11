@@ -1,0 +1,36 @@
+# p768 — grant map, 2026-11-11. Every path from COMPLETE git-tree enumeration (ACTION p767-B).
+# liveness + default_branch from 'git ls-remote --symref'; payload from 'git cat-file blob'. api.github.com/repos/* NOT used.
+# NO-GRANT means zero grant paths over the complete tree -- a fact, not a failed search (T695).
+address	grant_path	branch	head_sha12	tree_paths	bytes	sha256_12	family
+jkbrzt/rrule	LICENCE	master	9f2061febeeb	63	3493	6c12f89b62fc	BSD-3-Clause
+getodk/collect	LICENSE.md	master	64860ba746e7	2592	10494	d1ee81266b96	Apache-2.0
+way-platform/tachograph-go	.agents/skills/skill-creator/LICENSE.txt	main	95ca68093ad6	1376	11357	58d1e17ffe51	Apache-2.0
+way-platform/tachograph-go	.agents/skills/way-go-style/references/google/LICENSE	main	95ca68093ad6	1376	1453	911f8f578293	BSD-3-Clause
+way-platform/tachograph-go	LICENSE	main	95ca68093ad6	1376	1081	f3fe3e99f1c9	MIT
+flespi-software/TachoBox	LICENSE	master	87bde34f8433	138	1063	6ec1796d8b0e	MIT
+traconiq/tachoparser	LICENSE.md	main	55dbeb051f24	56	34260	00352ab19865	AGPL-3.0
+jugglingcats/tachograph-reader	NO-GRANT	master	58164137b35d	50	0
+Velli20/Tachograph	LICENSE.txt	master	d209383937de	441	1064	27f2d20c2ae6	MIT
+roidelapluie/readesm	COPYING	master	7837dffa3bcd	145	35147	8ceb4b9ee5ad	GPL-3.0
+roidelapluie/readesm	debian/copyright	master	7837dffa3bcd	145	581	6bfb476676df	UNRECOGNISED
+roidelapluie/readesm	loadvu/debian/copyright	master	7837dffa3bcd	145	259	e709b4ee9aa9	UNRECOGNISED
+valdepeace/tachograph-structure	LICENSE	master	384dd7a89770	151	1096	2c72a5316895	MIT
+kuznetsovin/go_tachograph_card	NO-GRANT	master	1d24292b7b9b	18	0
+suxrobGM/logistics-app	LICENSE	main	879034ea26d6	3372	5022	db87c204820e	UNRECOGNISED
+seibii/shaken-qr-reader	LICENSE	master	76b31738dea9	51	1077	ec1b6f5a6fb9	MIT
+tecno-consultores/RoSGrid	LICENSE	main	f712d1415758	707	35149	3972dc9744f6	GPL-3.0
+OneBus/OneBus-API	LICENSE	main	bca27df5f4fa	220	1063	676bed1902a6	MIT
+XAndresViverosX/FleetManager	LICENSE.txt	master	a3bfcef7cfca	118	1069	002c2696d92b	MIT
+RamomRicarto/sistema-gestao-frota	LICENSE	main	7bee9dd24975	18	1070	4e016737d8d9	MIT
+sebastian-tschen/fahrtenschreiber	LICENSE	master	3011d475587f	62	11357	c71d239df917	Apache-2.0
+shoka-jp/automotive-ai-skills	LICENSE	main	5a529d514e80	225	1069	8ac17a8065fc	MIT
+Project-PLATEAU/Tree-management-system	LICENSE	main	2df6c4189681	80	11357	c71d239df917	Apache-2.0
+baumsicht/Baumkataster	NO-GRANT	main	141e84c934c6	1	0
+CodeforKarlsruhe/baumkataster	NO-GRANT	master	1059a2a7b3d6	23	0
+codeforbielefeld/baumkataster_frontend	LICENSE	main	7e7e880b5d49	139	1075	c4f04354559c	MIT
+loleg/baumkataster-data	NO-GRANT	master	81de452cb669	8	0
+dateutil/dateutil	LICENSE	master	a78cbd81d5d0	90	2889	ba00f51a0d92	Apache-2.0+BSD-3-Clause
+traccar/traccar	LICENSE.txt	master	5575f4063c53	1863	11358	cfc7749b96f6	Apache-2.0
+google/transit	LICENSE	master	2ce6aa79e3fa	94	11328	9ebd66b7d7dd	Apache-2.0
+GarethManning/education-agent-skills	LICENSE	main	135d6275e7db	331	1230	f952182df4eb	CC-BY-SA-4.0
+GarethManning/education-agent-skills	mcp-server/LICENSE	main	135d6275e7db	331	978	f8366f5391f4	CC-BY-SA-4.0

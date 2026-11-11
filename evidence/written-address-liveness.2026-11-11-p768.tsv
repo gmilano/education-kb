@@ -1,0 +1,25 @@
+# p768 — every address written as a LINK re-verified on the git ls-remote channel AFTER writing, 2026-11-11.
+# 21/21 resolve. suxrobGM/logistics-app is excluded by design: PolyForm Noncommercial, so it appears
+# only as a code span on every shelf and is never written as a link (768-A).
+address	default_branch	head_sha12	verdict
+GarethManning/education-agent-skills	main	135d6275e7db	LIVE
+OneBus/OneBus-API	main	bca27df5f4fa	LIVE
+Project-PLATEAU/Tree-management-system	main	2df6c4189681	LIVE
+RamomRicarto/sistema-gestao-frota	main	7bee9dd24975	LIVE
+Velli20/Tachograph	master	d209383937de	LIVE
+XAndresViverosX/FleetManager	master	a3bfcef7cfca	LIVE
+codeforbielefeld/baumkataster_frontend	main	7e7e880b5d49	LIVE
+dateutil/dateutil	master	a78cbd81d5d0	LIVE
+flespi-software/TachoBox	master	87bde34f8433	LIVE
+getodk/collect	master	64860ba746e7	LIVE
+google/transit	master	2ce6aa79e3fa	LIVE
+jkbrzt/rrule	master	9f2061febeeb	LIVE
+roidelapluie/readesm	master	7837dffa3bcd	LIVE
+sebastian-tschen/fahrtenschreiber	master	3011d475587f	LIVE
+seibii/shaken-qr-reader	master	76b31738dea9	LIVE
+shoka-jp/automotive-ai-skills	main	5a529d514e80	LIVE
+tecno-consultores/RoSGrid	main	f712d1415758	LIVE
+traccar/traccar	master	5575f4063c53	LIVE
+traconiq/tachoparser	main	55dbeb051f24	LIVE
+valdepeace/tachograph-structure	master	384dd7a89770	LIVE
+way-platform/tachograph-go	main	95ca68093ad6	LIVE
