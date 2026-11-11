@@ -6,6 +6,57 @@ updated: 2026-11-11
 
 # Education AI Agents — Curated Top Set
 
+## 🆕 `p762` — **The school HR back office: the largest budget line in any school system, at `0` mentions across eight shelves. The agent layer is built for the applicant, not for the district — `29.2k★` candidate-side against `7.3k★` employer-side. And the governing licence finding is that `google/or-tools` carries two different grants on two different branches, and every pass before this one published the non-default one.**
+
+**Register: teacher recruitment, certification and licensure tracking, substitute staffing and absence management, payroll and position control.** Salaries and benefits are `70`–`80%` of a US district's general fund (Burbio, June 2026) and `91%` of Mexican federal education spending sits in one payroll fund, FONE (Mexicanos Primero). `35` addresses resolved · **`35` licence payloads byte-read** with length and sha256₁₂ · `8` addresses returned no payload across `39` probe points each and **none is published as a licence state** · `2` of `8` default-branch checks found a different grant than the guessed branch · `2` p761 controls reproduced exactly · `T593`–`T603` declared.
+
+### The shelving defect, and `ACTION p760-A` has now discharged twice running
+
+| Held (technical property) | Mentions | Not held (the buyer) | Mentions |
+|---|---|---|---|
+| `Frappe` | `806` | `human resources` | **`0`** |
+| `ERPNext` | `206` | `substitute teacher` | **`0`** |
+| `Odoo` | `155` | `substitute staffing` | **`0`** |
+| `Timefold` | `76` | `licensure` | **`0`** |
+| `OR-Tools` | `61` | `position control` | **`0`** |
+| | | `applicant tracking` | **`0`** |
+
+🔴 **And a correction to `p761`'s opening claim.** `p761` called student transport and school feeding *"the two largest operational line items in a school system's budget."* They are not. Personnel is, by a factor — the transport and feeding lines are a minority share of the `70`–`80%` this register governs (`T593`).
+
+🔴 **A correction to this pass's own first census, before it reached these shelves.** The opening measurement reported `ATS` at `531` mentions and `HRIS` at `266`. Counted with word boundaries: **`0` and `1`.** `grep -i ats` matches *formats*, *seats*, *stats*. The register is *more* uncovered than the first number said, but a pass that published it would have dropped the register as well served (`T594`, `ACTION p762-C`).
+
+### 🔴 The agent layer, measured rather than asserted — it is built for the applicant
+
+The open-source resume-AI layer is overwhelmingly **candidate-side**. The school district receiving those applications is the counterparty being automated against, not a buyer being served.
+
+| Agent | ★ | Licence (byte-read, default branch) | Side | What it actually does |
+|---|---|---|---|---|
+| [`interviewstreet/hiring-agent`](https://github.com/interviewstreet/hiring-agent) | 🟢 **`7.3k`** | 🟢 **MIT** · `1,067 B` · sha256₁₂ `307413770e09` · `main` | 🟢 **Employer** | 🟢 **The one substantial employer-side agent in the register.** HackerRank's resume evaluation pipeline: PDF → Markdown → LLM extraction to sectioned structured JSON, with GitHub contribution signals as an input. Runs fully local on Ollama or hosted on Gemini. ⚠️ Its reception included **independent validation reporting inconsistent scores** — treat output as auditable, never as a decision |
+| [`yashrajgithub/hiresense-ai`](https://github.com/yashrajgithub/hiresense-ai) | — | 🟢 **MIT** · `1,074 B` · sha256₁₂ `5345511964d2` · `main` | 🟢 **Employer** | Resume screening and ranking. Small and new; shelved because it is one of only two employer-side permissive artefacts found, not because of its size |
+| [`srbhr/Resume-Matcher`](https://github.com/srbhr/Resume-Matcher) | **`29.2k`** | 🟢 **Apache-2.0** · `11,357 B` · sha256₁₂ `c71d239df917` · `main` | 🔵 **Candidate** | 🔴 **Nearly shelved as employer-side screening on the strength of its name; it is not.** Its own description: *"The #1 AI Harness for Building Resumes, PDFs, Cover Letters & more, locally with 100+ LLMs support."* It writes applications. Useful to a district only as a model of what is arriving in its inbox (`T600`) |
+| [`feder-cr/Jobs_Applier_AI_Agent_AIHawk`](https://github.com/feder-cr/Jobs_Applier_AI_Agent_AIHawk) | — | 🟢 **MIT** · `1,065 B` · sha256₁₂ `f8e26bc469ae` · `main` | 🔵 **Candidate** | Automated job application agent. 🔵 The research channel called this **AGPL-3.0**; byte-read says MIT. 🟢 And its payload is one of the pass's two distinct MIT grants at `1,065 B` (`T596`) |
+| [`aadya940/autoresume`](https://github.com/aadya940/autoresume) | — | 🟢 **Apache-2.0** · `10,994 B` · sha256₁₂ `8ee88f8a4931` · `main` | 🔵 **Candidate** | Career agent: résumé and cover-letter generation, job matching |
+
+**`5` rows. That is what was found, and the shape of the finding is the asymmetry, not the count** — `29.2k` + `9.0k` stars of permissive candidate-side tooling against `7.3k` employer-side, in a function that is `70`–`80%` of the budget.
+
+### 🔴 Named refusals — `4`, each measured
+
+| Artefact | Verdict | Why it is refused |
+|---|---|---|
+| [`workforce-data-initiative/skills-ml`](https://github.com/workforce-data-initiative/skills-ml) · `178★` | 🔴 **UNUSABLE for a studio engagement** | The natural skills-taxonomy component for mapping teacher qualifications. Sidebar names **no licence**; **README says MIT**; `LICENSE.md` byte-read at `1,976 B` · sha256₁₂ `2cc582006b14` is a **University of Chicago grant for "educational and not-for-profit research purposes"** that *"excludes any service or part of selling a service that uses the Program."* **The excluded activity is the delivery model.** Commercial licence must come from the Polsky Center (`T598`) |
+| [`xitanggg/open-resume`](https://github.com/xitanggg/open-resume) · `9.0k★` | 🔴 **AGPL-3.0** · `34,522 B` · sha256₁₂ `20b067f86de3` | Résumé builder **and parser** — the parser is what a district would want. Network copyleft, so it cannot sit behind a hosted deliverable. 🔵 Aggregators reported this as MIT; it is not |
+| [`kimai/kimai`](https://github.com/kimai/kimai) · `5.1k★` | 🔴 **AGPL-3.0** · `34,523 B` · sha256₁₂ `0d96a4ff68ad` | The obvious open-source time-tracking layer for paraprofessional and substitute hours. Network copyleft |
+| [`ibarrajo/ApplyPilot`](https://github.com/ibarrajo/ApplyPilot) | 🔴 **AGPL-3.0** · `34,523 B` · sha256₁₂ `0d96a4ff68ad` | Candidate-side application agent. 🔵 Byte-identical payload to `kimai`'s |
+
+### 🔵 One artefact that is a copy, recorded so it is not double-counted
+
+[`NotArsal/hiring-agent`](https://github.com/NotArsal/hiring-agent) — MIT, `1,067 B`, sha256₁₂ **`307413770e09`**: **byte-identical to `interviewstreet/hiring-agent`'s payload.** It is a copy of HackerRank's agent, not a second independent employer-side artefact, and the employer-side count stands at two.
+
+### 🟢 `ACTION p761-A` corroborated — the MIT byte band holds across four new payloads
+
+`p761` measured the MIT band at `1,057`–`1,099 B` across `11` payloads. Four new payloads this pass, all inside it: `1,065` (`PyJobShop`), `1,065` (`AIHawk`, **different hash**), `1,067` (`hiring-agent`), `1,072` (`docling`), `1,074` (`hiresense-ai`). 🟢 **And the rule earned its keep: `skills-ml` at `1,976 B` is nearly twice the ceiling and its first line is not a licence title — flagged on sight, and it was the pass's worst landmine** (`T598`).
+
+
 ## 🆕 `p761` — **The student-transport and school-feeding register. The agent layer is three permissive repositories, none above `2★`, and the one purpose-built school-transport agent on GitHub carries no grant at all. The licence finding of the pass is a payload whose title line reads `MIT License` and whose first clause forbids charging a consulting fee.**
 
 **Register: student transport (routing, ridership, bell-time coupling) and school feeding (eligibility, menu planning, commodity flow).** These are the two largest operational line items in a school system's budget — not instructional technology, and not on these shelves. `44` addresses resolved · `408` licence-path probes · **`37` licence payloads byte-read** · `5` index values materially corrected, `5 / 5` from `NOASSERTION` toward a knowable grant · **`2` of this pass's own `10` "no grant" verdicts refuted by its own follow-up** · `T583`–`T592` declared.

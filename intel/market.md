@@ -6,6 +6,9 @@ updated: 2026-11-11
 
 # Education AI — Market Intelligence
 
+**Pass p762 · researched 2026-11-11.** All four mandated regional legs ran and all four returned facts. **The register is the school HR back office — teacher recruitment, certification and licensure, substitute staffing and absence management, payroll and position control — and it is the largest budget line in any school system: `70%` to more than `80%` of a US district's general fund (Burbio, June 2026) and `91%` of Mexican federal education spending, concentrated in one fund whose name is education payroll (FONE, Mexicanos Primero). Before this pass it appeared on these eight shelves at `human resources` `0`, `substitute staffing` `0`, `licensure` `0`, `position control` `0`, `applicant tracking` `0`, `payroll` `4` — while the ERP and solver substrate that is its entire technical content appeared `1,304` times (`T593`, second consecutive discharge of `ACTION p760-A`).** 🟢 **Each region's newest block is `#### 🆕 p762` under the single [`## Opportunities by region`](#opportunities-by-region) heading — all five values, each written *below* the heading it describes (`ACTION p756-C` honoured and verified after writing).** 🔴 **A correction to this base's own published claim: `p761` called student transport and school feeding "the two largest operational line items in a school system's budget." They are not. Personnel is, by a factor, and the transport and feeding lines are a minority share of it.** 🔴 **A correction to this pass's own first measurement, caught before it reached these shelves: the opening vocabulary census reported `ATS` at `531` mentions and `HRIS` at `266`; counted with word boundaries they are `0` and `1`. A substring count is not a mention count (`T594`, `ACTION p762-C`).** 🔴 **The governing licence finding is a defect in this base's most-cited repository: `google/or-tools` carries plain Apache-2.0 (`11,358 B`, `cfc7749b96f6`) on its default branch `stable` and Apache-plus-bundled-notices (`45,765 B`, `b1282fbc0b7a`) on `main`, and every pass before this one published the non-default reading. `2` of `8` default-branch checks disagreed, both on the largest repositories in the batch (`T597`, `ACTION p762-B`).** 🔴 **One procurement landmine named and byte-read, and it is the second consecutive register whose key component forbids the delivery model: `workforce-data-initiative/skills-ml` has a README saying MIT over a University of Chicago grant that excludes "any service or part of selling a service that uses the Program" (`T598`).** 🔵 **The structural market reading: there is no permissive HRIS — every open-source system of record for the employment relationship is GPL-3.0, LGPL or AGPL-3.0, and the one non-GPL-family exception is dual-licensed under a bespoke 2007 modified-MPL (`T599`). And the open-source agent layer is built for the applicant, not the district: `29.2k★` candidate-side against `7.3k★` employer-side (`T600`).** 🔴 **`ACTION p760-C` applied throughout: every adoption and savings figure below is attributed to the party that published it, and the vendor-published ones are marked as such.** 🔴 **Every regulatory cell is `search-sourced, not primary-verified` — primary hosts refuse at this tunnel and `api.github.com` returns `403`, so `default_branch` was read from rendered pages (`ACTION p758-B` carried).**
+
+
 **Pass p761 · researched 2026-11-11.** All four mandated regional legs ran and all four returned facts. **The register is student transport and school feeding — the two largest operational line items in a school system's budget, and until this pass they appeared on these eight shelves `1` and `0` times respectively while the solver substrate that is their entire technical content appeared `36` times under the name "timetabling" (`T583`, `ACTION p760-A`'s first discharge).** 🟢 **Each region's newest block is `#### 🆕 p761` under the single [`## Opportunities by region`](#opportunities-by-region) heading — all five values, each written *below* the heading it describes (`ACTION p756-C` honoured and verified after writing).** 🟢 **The demand side is the largest and best-documented of any register on these shelves: governments spent `US$84 billion` on school meals in 2024 reaching `466` million children (`+80` million since 2020), and the count of countries with a national school-meals policy nearly doubled from `56` to `107` — WFP, *State of School Feeding Worldwide*. Unlike `p760`'s education-in-emergencies register, this budget is growing, domestically funded and procurement-driven.** 🔴 **`ACTION p760-C` applied throughout: every adoption and savings figure below is attributed to the party that published it, and the vendor-funded ones are marked as such.** 🔴 **One licence landmine, byte-read: the register's only APAC software artefact ([`giziiq`](https://github.com/satryayogapratama-ux/giziiq), Indonesia MBG menu generation) is titled `MIT License` and carries a `Commons Clause` that withholds the right to charge hosting or consulting fees — the delivery model, named in the licence (`T585`).** 🔴 **And one claim from the mandated ERP/CRM leg is refuted by measurement: Huly is `EPL-2.0`, not Apache-2.0.**
 
 
@@ -265,6 +268,26 @@ credentials-and-skills axis rather than the tutoring axis.
 
 
 ### North America
+
+#### 🆕 p762 — the largest budget line in a US district, a bias-audit duty that has been enforceable for three years, and an open-source agent layer built for the applicant
+
+| Datum (read 2026-11-11) | Figure | Source, named | Why it is the engagement |
+|---|---|---|---|
+| Salaries + employee benefits as share of district general fund | 🟢 **`70%` to more than `80%`** | Burbio school tracker, June 2026 | **The register is the budget.** Mesa County Valley CO published `80.44%`; Colchester VT FY26 shows `57.6%` salaries + `21.1%` benefits. Transport and feeding (`p761`'s register) are a minority share of this |
+| Districts reporting teacher shortages | `61%`, down from `82%` in 2024 | **Frontline Education, *2026 K-12 Lens* — vendor-published** | The shortage is easing and the administrative load is not. One copy of the report shows `62%`; the version spread is noted rather than resolved |
+| Substitute shortage by management method | `18%` with an absence/substitute system · `27%` on spreadsheets · `30%` on paper | **Frontline Education, *2026 K-12 Lens* — vendor-published, and the vendor sells the system** | 🔵 **Cited with that conflict stated.** It is still the only quantified claim found that links tooling to coverage, and the direction is what a solver engagement would predict |
+| Cost to replace one teacher | `$12,000`–`$25,000` by district size | **EdStaff — vendor-published** | The savings denominator for `P305`. A second aggregator cites ~`$21,000`; treated as the same estimate, not a second source |
+| **NYC Local Law 144** | 🔴 **in force since `2023-07-05`** | Multiple law-firm and vendor analyses, **search-sourced, not primary-verified** | **Independent annual bias audit of an automated employment decision tool, results published, candidate notice.** Penalties reported at `$500`–`$1,500` per day per violation. 🔵 A NY State Comptroller audit of `2025-12` found the enforcing agency's enforcement ineffective — which is a backlog, not an amnesty |
+| Illinois HB 3773 | effective `2026-01-01` | same channel | Amends the Illinois Human Rights Act; notice and transparency rather than audits; discriminatory outcomes prohibited **regardless of intent**. 🔴 One source reports the rules paused — unresolved and flagged, not picked |
+| Colorado SB 26-189 | 🔵 signed `2026-05-14` | same channel | **Repealed and replaced the 2024 Colorado AI Act before it ever took effect**, removing bias-audit and risk-assessment duties; applies to decisions on or after `2027-01-01`. 🔵 A client told Colorado is tightening has been told the opposite of what happened |
+| California ADS regulations · Texas TRAIGA · Connecticut | `2025-10-01` · `2026-01-01` · `2026-10-01` | same channel | Three more live or imminent employment-AI regimes. The compliance surface is state-by-state and already past due in one state |
+| US AI-in-education market | `$3.28bn` (2025) → `$15.25bn` (2031) | Ken Research | Context only. 🔴 Not comparable with the other series on this page — see the bracketing section below |
+| State AI-in-education legislation | ≥`15` states as of early 2026; ~`100` K-12 AI bills tracked this year | ECS / PIE Network, search-sourced | Virginia S.B. 394 directs the state education agency to issue guidance including teacher training — 🔵 **the teacher-facing limb, which is this register** |
+
+🟢 **The offer, and it is unusually independent of what Globant builds.** `P307` sells the **bias audit itself**: a reproducible, publishable audit of a client's existing hiring tool. The duty is live, annual, and un-enforced enough that the backlog of un-audited tools is large. 🔴 **The trap is the mirror image** — shipping a teacher-screening model into New York City without an audit puts the client in breach of a law that has been enforceable for three years.
+
+🔴 **The supply-side reading for this region.** The employer side of the open-source agent layer is [`interviewstreet/hiring-agent`](https://github.com/interviewstreet/hiring-agent) (`7.3k★`, MIT, `1,067 B`, `307413770e09`) and essentially nothing else; the candidate side is [`srbhr/Resume-Matcher`](https://github.com/srbhr/Resume-Matcher) at `29.2k★` and [`xitanggg/open-resume`](https://github.com/xitanggg/open-resume) at `9.0k★`. 🔵 **Application volume at a district's inbox is being automated faster than the district's capacity to read it** (`T600`).
+
 
 #### 🆕 p761 — student transport is a measured, funded, software-buying crisis, and the free-meal reimbursement optimiser is MIT with `14` stars
 
@@ -1368,6 +1391,26 @@ this is the third consecutive pass to return already-filed facts. Supply remains
 `p724`'s `9` new repositories are North American.**
 
 ### EMEA
+
+#### 🆕 p762 — `ACTION p761-F` discharged at national level: one national authority's artefact found, and an explicit nil on any European school-HR software buyer
+
+🟢 **`ACTION p761-F` said: stop running the EU-level query, probe national and municipal authorities. Done, and it returned one usable artefact plus a channel defect worth more than the artefact.**
+
+| Datum (read 2026-11-11) | Figure | Source, named | Why it is the engagement |
+|---|---|---|---|
+| **Sweden — Arbetsförmedlingen JobTech Taxonomy** | 🟢 **`EPL-2.0`**, ~`5,950` skills vs ESCO's ~`13,890` | JobTechDev documentation (licence); the skills counts are **a forum user's count, not an official statistic** | 🟢 **The reference artefact for mapping teacher qualifications onto a national labour-market vocabulary**, ESCO-compatible, served as REST and GraphQL. 🔴 **Hosted on the JobTechDev forge, not GitHub** — `JobtechDev/jobtech-taxonomy-api` returned no payload across `39` probe points. **A GitHub-only probe records a national authority's artefact as absent** (`T602`, `ACTION p762-H`). ⚠️ Documentation states the API runs during office hours; a production use needs a local copy |
+| OECD *Education at a Glance 2026* | Teacher shortages are the edition's **special focus** | OECD, September 2026 press release | Shortages affect most OECD systems; an **ageing teaching workforce** is named as the compounding pressure. 🔵 The OECD's own caveat is the useful part: open positions are only one way to measure a shortage |
+| Netherlands — teachers not fully qualified | 🟢 **`2%`** vs OECD average **`9.1%`** (2024/25, public institutions) | OECD EaG 2026 country note | 🔵 **The spread between systems is the market.** A system at `2%` can run a qualification-matching engagement as optimisation; a system near `9.1%` is running it as triage |
+| Netherlands — mid-career entrants (*zij-instroom*) | Leads internationally | VO-raad | The qualification-mapping problem in its hardest form: entrants whose credentials were earned outside teaching. This is `P309`'s buyer |
+| EU AI Act Annex III | 🔴 high-risk regime applies **`2027-12-02`**; Digital Omnibus political agreement **`2026-05-07`** | search-sourced, **not primary-verified** | 🔴 **This register sits in both Annex III limbs at once — education *and* employment.** `Annex III` appears `586` times on these shelves and its employment limb once (`T601`) |
+| Germany — unfilled teacher posts | ~`40,000` | 🔴 **aggregator with no primary source — NOT shelved as a figure** | Recorded as a refusal so the next pass does not re-find and promote it. Cedefop's May 2026 VET-teacher report includes a German side-entrant case study but published no count in the retrievable material |
+| European Parliament CULT study | Retention matters as much as recruitment | study for the culture and education committee | 🔵 **And the methodological point that governs every number above:** definitions differ — some systems count vacancies, others count teachers without full qualifications. A cross-country shortage comparison is not measuring one thing |
+| Teachers using AI tools | `67%` | **Futuresource Consulting — vendor-published** | Carried for continuity with `p760`'s withdrawal of `ACTION p757-D`; attributed, not relied on |
+
+🔴 **The declared nil, and it is specific.** The EMEA leg returned **no European school-HR software buyer**: no national or municipal budget line for teacher-workforce or substitute-staffing software, no named programme, no procurement, no repository. The artefact it did return is a *labour-market taxonomy from an employment agency*, not an education-sector purchase. 🟢 **`ACTION p762-I`: probe school-staffing agencies and supply-teacher intermediaries in the UK and the Netherlands next pass** — that is the commercial layer where European school-staffing spend actually sits, and it is a private buyer rather than a ministry, which is why two passes of public-sector queries have missed it.
+
+🟢 **The region's supply contribution is the permissive half of the whole register.** [`TimefoldAI`](https://github.com/TimefoldAI/timefold-solver)'s solver estate — `timefold-solver`, `timefold-quickstarts`, `timefold-solver-python`, all Apache-2.0, all byte-read — is built by the original OptaPlanner team which forked from OptaPlanner on `2023-04-20`. 🔵 **Permissive optimisation from EMEA, copyleft record-keeping from APAC** (`T603`).
+
 
 #### 🆕 p761 — the EU scheme is a precisely-documented small budget and the African national programmes are large and underfunded; and the leg returned an explicit nil on European school-operations software
 
@@ -2681,6 +2724,26 @@ selling urgency against a date the amendment moved**, and that mismatch is the o
 
 ### APAC
 
+#### 🆕 p762 — the region supplies the entire open-source HRIS layer and every grant in it is copyleft; and a declared nil on school-HR demand data
+
+🔵 **This region's finding is on the supply side, which inverts this page's standing expectation and matches `p759`'s reading that APAC is this base's supply region.**
+
+| Datum (read 2026-11-11) | Figure | Source, named | Why it matters |
+|---|---|---|---|
+| **The open-source HRIS layer is South and Southeast Asian in origin** | `3` of the `4` full HRIS platforms in the register | repository pages and company sources, stated precisely below | 🔴 **And every one of them is copyleft.** The region that supplies the people-record layer supplies it under GPL-3.0 and LGPL — which is the register's central commercial constraint (`T599`, `T603`) |
+| [`frappe/hrms`](https://github.com/frappe/hrms) (**Frappe HR**) | `9.0k★` · 🔴 **GPL-3.0** · `34,916 B` · `f333043685c8` · branch `develop` | byte-read 2026-11-11 | 🟢 **The most complete free HRIS in the register** — employee records, leave, attendance and a built-in payroll engine in one app. Indian. 🔴 GPL-3.0 forecloses a proprietary derivative deliverable |
+| [`orangehrm/orangehrm`](https://github.com/orangehrm/orangehrm) | `1.2k★` · 🔴 **GPL-3.0** · `35,823 B` · `230184f60bae` · `main` | byte-read; company facts from Wikipedia and OrangeHRM press material | Founded `2005` by Sujee Saparamadu; **US-incorporated (Secaucus, NJ) with its R&D centre in Colombo**, CTO a University of Moratuwa graduate, MySQL co-founder David Axmark on the board. 🔵 **Neither "Sri Lankan" nor "American" — stated as measured.** 🔴 Open-core, and the gating is where this register needs function: free Starter withholds **API access, payroll connectors and advanced recruitment** |
+| [`horilla-opensource/horilla`](https://github.com/horilla-opensource/horilla) | `1.5k★` · 🟠 **LGPL-2.1** · `26,526 B` · `20c17d8b8c48` · branch `2.0` | byte-read 2026-11-11 | 🟢 **The most favourable grant of any full HRIS here** — weak copyleft, **no network clause**, so proprietary code may link to it. 🔵 Its page names no country, so none is asserted: *"Made with ❤️ by the Horilla Team."* Directory sources report it ships recruitment and performance modules OrangeHRM reserves for its paid tier |
+| UAE Ministry of Education | `25` generative-AI prohibitions for schools, **February 2026** | search-sourced, not primary-verified | Age suitability, privacy, academic integrity, exam restrictions. 🔵 Student-facing, **not** employment-facing — the register's regulatory limb is unaddressed here |
+| Philippines — AGAP.AI | launched **January 2026**, reported to target `1.5` million students, teachers and parents | DepEd via secondary reporting | The country's first nationwide programme for responsible AI in basic education, alongside a National Education Plan `2026`–`2035` embedding AI and digital literacy. 🔵 **Teachers are named as subjects of AI training, not as subjects of AI-assisted hiring** |
+| Ipsos *Education Monitor 2026* | Lower support for banning AI in schools across Asian markets examined | Ipsos | Permission environment is more favourable than EMEA's, which matters for `P306`-shaped work |
+| Virtual-tutor adoption | `30%` across the surveyed cohort | Times Higher Education reporting a regional survey | Patchy uptake, connectivity named as a barrier. Context, not this register |
+
+🔴 **The declared nil, stated so it is not mistaken for coverage.** The APAC leg returned **no school-HR demand datum** — no teacher-workforce or substitute-staffing budget line, no national teacher-shortage count, no employment-AI regulation touching teacher hiring in any APAC jurisdiction. The regulatory material it did return (UAE, Philippines) is **student-facing** without exception. **This region is this register's supply side and, on the evidence of this pass, not its measured demand side.**
+
+🔵 **The consequence for an APAC engagement.** It is the one region where a studio arriving to build a school HR system finds the platform already written locally — and finds it under a grant that makes the deliverable a service rather than a product. `P310` is the shape that survives that: leave the record in the authority's system or stand up Horilla under LGPL-2.1, and keep the permissive solver layer as the engineered artefact.
+
+
 #### 🆕 p761 — the two largest school-feeding programmes on earth are both in this region, one of them is `44%` of a national education budget, and the only software artefact on the register is licence-blocked
 
 | Datum (read 2026-11-11) | Figure | Source, named | Why it is the engagement |
@@ -3907,6 +3970,29 @@ minority everywhere in APAC, but it is *rising* in Japan, Australia and South Ko
 capability; sell into Japan, Australia and Korea on safeguards as well.
 
 ### LATAM
+
+#### 🆕 p762 — the best-measured demand on these shelves for this register: a national education budget that is `91%` payroll, and a retirement wave with a name and a number
+
+🟢 **LATAM is the strongest demand region for this register by a wide margin, and the figures are government and institute data rather than vendor surveys.**
+
+| Datum (read 2026-11-11) | Figure | Source, named | Why it is the engagement |
+|---|---|---|---|
+| **Mexico — share of federal education spending in the payroll fund** | 🟢 **`91%`** in **FONE**, the *Fondo de Aportaciones para la Nómina Educativa y Gasto Operativo* | **Mexicanos Primero** (civil-society organisation, cited as such) | 🟢 **The register, named as a line of the federal budget.** A fund that exists to pay teachers and operate schools, carrying `91%` of the spend. Position control against funded lines (`P308`) is not an efficiency project here — it is the budget's control surface |
+| Mexico — teaching workforce age | average **`44` years** | Vanguardia reporting specialists | Vacancy-filling difficulty concentrated in marginalised areas |
+| Mexico — projected retirements | 🟢 **`600,000`+ over the next decade** | projection cited by Vanguardia | 🔵 **A quantified, dated, inescapable workforce-planning problem.** This is the demand driver for `P308` and it cannot be deferred by policy |
+| Mexico — higher education teaching staff | ~`460,000`, of whom **`70%`** are *profesores de asignatura* | SEP | An overwhelmingly hourly-contracted workforce — which is a scheduling and position-control problem before it is an HR problem |
+| **Brazil — basic-education teachers** | 🟢 **`2,407,049`** (2025) vs `2,187,154` (2015), **+~`10%`** | **Inep** (federal education statistics institute) | 🟢 **A real census, not an estimate**, and the denominator for any national engagement |
+| Brazil — projected shortfall | `235,000` across all stages within ~`18` years, with teacher numbers falling ~`20.7%` | **SEMESP study, 2023** — cited with its date | 🔵 Dated `2023` and projecting `18` years out. **Directionally useful, not a procurement trigger** |
+| Honduras | `6,000`+ teachers left the public system in one year | El Heraldo | Attrition measured at national scale in a smaller system — the shape where a single engagement can cover the whole country |
+| LATAM higher education — AI engagement | `92%` of students, `79%` of faculty | **Digital Education Council LATAM survey 2026** (with Tecnológico de Monterrey) | Carried from previous passes. Adoption is not the gap |
+| LATAM — governance | `30%` believe their institution responded effectively; adoption *"neither uniform nor evenly distributed"* | **UNESCO IESALC** / UNU-IAS working paper | 🔵 **The standing LATAM reading holds for this register too: adoption already happened without governance.** For teacher hiring that gap is not merely a policy risk — it is an employment-decision risk with no instrument naming it |
+
+🔴 **The declared supply nil, and it is complete.** No LATAM-authored open-source artefact for any part of this register was found: no teacher-workforce system, no payroll or position-control tool, no credential-verification component, no school-staffing agent. **The region with the best-measured demand on these shelves has no measured supply.** That asymmetry is the opportunity and it is stated as a nil rather than filled with a nearest neighbour.
+
+🔴 **And a regulatory nil.** No LATAM instrument governing AI in employment decisions was found — nothing analogous to NYC Local Law 144 or Illinois HB 3773. 🔵 **The commercial reading is two-sided:** the absence lowers the compliance cost of a `P308` engagement today, and it means a client has no external standard to point at when challenged. **The audit discipline from `P307` is worth building in voluntarily**, because the alternative is building it later under a regime that does not exist yet.
+
+🟢 **The engagement, concretely.** `P308` — model the funded establishment rather than the headcount, project retirement and attrition per school, per subject, per certification, and keep the record in the ministry's existing payroll system, which for FONE is non-negotiable because it is a federal transfer with its own reporting obligations.
+
 
 #### 🆕 p761 — Brazil funds both halves of this register by name, with dated 2026 instruments for each, and the only council-facing artefact on earth is `8` years cold
 
@@ -5209,6 +5295,25 @@ no code dependency) the right opening move here and makes a code-first pitch the
 first step rather than a formality.
 
 ### Global
+
+#### 🆕 p762 — a `44`-million-teacher global gap, no permissive HRIS anywhere, and an agent layer pointed at the wrong side of the desk
+
+| Datum (read 2026-11-11) | Figure | Source, named | Why it matters |
+|---|---|---|---|
+| **Global teacher shortfall by 2030** | 🟢 **`44` million** | **UNESCO** | The demand side of this register at world scale, and the only figure on this page that every region's leg returned independently |
+| OECD *Education at a Glance 2026* | Teacher shortages are the **special focus** of the edition | OECD, September 2026 | Shortages affect most OECD systems; an **ageing teaching workforce** is the named compounding pressure. 🔵 The OECD's own methodological caveat is the usable part: open positions are only one way to measure a shortage, and systems that count differently cannot be ranked against each other |
+| **There is no permissive HRIS** | `8` platforms byte-read, `0` permissive | this pass, byte-read 2026-11-11 | 🔴 GPL-3.0 (`erpnext`, `hrms`, `orangehrm`, `sentrifugo`) · LGPL-3.0 (`odoo`) · LGPL-2.1 (`horilla`) · AGPL-3.0 (`kimai`) · dual MPL-2.0 + **CATS Public License v1.1a** (`opencats`). 🟢 **`p757`'s law confirmed on the most valuable record in the sector with no counter-example** (`T599`) |
+| The agent layer is candidate-side | `29.2k★` + `9.0k★` candidate vs `7.3k★` employer | this pass, byte-read | 🔵 **The school district is the counterparty being automated against, not the buyer being served.** The asymmetry — not a productivity claim — is the engagement (`T600`) |
+| This register is in **both** Annex III limbs | `Annex III` `586` mentions on these shelves; its employment limb `1` | this pass, word-boundary census | 🔴 A teacher-screening system is education AI **and** employment AI simultaneously. The base held one limb for hundreds of passes and never the other (`T601`) |
+| Licence identity is not a byte count | `6` Apache byte counts; `2` distinct MIT payloads at `1,065 B` | this pass, byte-read | 🟢 `ACTION p761-B` independently reproduced from different repositories **and superseded** — the property is not Apache's (`T596`, `ACTION p762-A`) |
+| The grant can depend on the branch | `2 / 8` default-branch checks disagreed | this pass | 🔴 `or-tools` and `erpnext`, the two largest repositories checked. 🔵 **The single most consequential measurement discipline this base has added in two passes** (`T597`, `ACTION p762-B`) |
+| Second consecutive register whose key component forbids the delivery model | `2 / 2` passes | `p761` `giziiq`; `p762` `skills-ml` | 🔴 A `Commons Clause` under an `MIT License` title line, then a University of Chicago grant under a README saying MIT. 🟢 `ACTION p762-E`: **no licence claim from outside the `LICENSE` payload may be shelved** |
+| AI-in-education market | ~`$10.6bn` (2026) → `$42.48bn` (2030) at `41.5%` CAGR | Research and Markets, April 2026, via secondary reporting | 🔴 Carried for continuity only, and **not reconciled** with the `$3.28bn`→`$15.25bn` US series above. See this page's bracketing section — the spread across firms on the same year remains the finding |
+| Generative-AI use by education organisations | `86%` | Microsoft 2025 report via Technavio | Attributed; the adoption denominator, not this register's |
+| Evidence base | only `45%` of the most-used edtech tools have published research meeting an ESSA evidence tier | carried from `p760` | 🔵 Still the strongest majority-negative statistic about the installed base, and it applies with more force to an employment-decision tool than to a tutoring app |
+
+🔵 **The structural reading of this register, stated once for the whole page.** Two of the three layers a school-HR engagement needs are in good shape and the third is the problem. **Optimisation is permissive, maintained and EMEA-authored** — the Apache-2.0 solver estate, which also happens to ship school timetabling and employee scheduling in the same repository. **Intake is permissive** — `docling` at `70.4k★` under MIT, which removes any need for the AGPL résumé parsers. **The record is copyleft everywhere on earth**, which is why five of the six `P305`–`P310` recipes leave the system of record where it is and compose around it. 🟢 **That is the only shape that preserves a proprietary deliverable, and it is also the shape a district actually wants**, because the district already has a payroll system it is not going to replace.
+
 
 #### 🆕 p761 — the school-feeding demand side, and a second agency confirming that multilateral programme systems stay closed
 

@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `P305`–`P310` — added at p762 (2026-11-11)
+
+**Register: the school HR back office — recruitment, certification and licensure, substitute staffing and absence management, payroll and position control.** Every component named below was byte-read for its licence on `2026-11-11`, **every licence was read from the repository's default branch, and the branch is named** (`ACTION p762-B`). 🔴 **The governing design constraint: there is no permissive HRIS.** Five of these six recipes therefore leave the system of record where it is and compose permissive components around it — the only shape that preserves a proprietary deliverable (`T599`).
+
+🟢 **Namespace note, discharging `ACTION p761-H`:** `P###` is from this pass reserved for compose patterns; instrument findings take `INS-###` (`ACTION p762-G`).
+
+---
+
+### `P305` — Substitute coverage as a solver problem, with the record left in place
+**Buyer:** a North America school-district HR or talent office. **Region: North America.** **Why now:** `61%` of districts report teacher shortages, down from `82%` in 2024, and districts running an absence/substitute management system report substitute shortages less often (`18%`) than those on spreadsheets (`27%`) or paper (`30%`) — **Frontline Education, *2026 K-12 Lens*, vendor-published and cited as such**. Replacing one teacher is reported at `$12,000`–`$25,000` (EdStaff, vendor-published). Salaries and benefits are `70`–`80%` of the general fund (Burbio, June 2026).
+
+**Wiring, in order:**
+1. **Do not migrate the record.** The district's existing SIS and payroll stay authoritative. Read absences and the substitute pool over whatever API or nightly extract exists. This is the step that keeps the deliverable proprietary.
+2. **Model the assignment** — [`TimefoldAI/timefold-quickstarts`](https://github.com/TimefoldAI/timefold-quickstarts) (Apache-2.0, `11,357 B`, `c71d239df917`, branch `stable`), starting from **`use-cases/employee-scheduling`**, not from the solver. 🟢 The same repository ships `use-cases/school-timetabling`, which these shelves already held — one dependency covers the bell schedule and the staffing problem.
+3. **Constraints that are actually the district's rules** — certification and endorsement match, grade-band and special-education entitlement, consecutive-day limits that trigger long-term-sub pay rates, seniority-ordered offer sequences from the collective agreement, and travel time between buildings for split assignments. In [`TimefoldAI/timefold-solver`](https://github.com/TimefoldAI/timefold-solver) (Apache-2.0, `11,358 B`, `cfc7749b96f6`, `main`) these are score constraints, not code.
+4. **Where the engagement is a proof rather than a platform** — [`PyJobShop/PyJobShop`](https://github.com/PyJobShop/PyJobShop) (MIT, `1,065 B`, `b0fe024ccdfc`) on CP-SAT via [`google/or-tools`](https://github.com/google/or-tools) (Apache-2.0, `11,358 B`, `cfc7749b96f6`, branch **`stable`** — see `T597` before vendoring).
+5. **Do not put an LLM in the assignment decision.** It is a constrained matching problem with a correct answer and an audit requirement. The LLM belongs at step `P306`.
+
+🔴 **Vendoring note:** take or-tools from `stable`. Its `main` branch's `LICENSE` is a different payload (`45,765 B`, `b1282fbc0b7a`) carrying bundled third-party notices that the default branch's `11,358 B` grant does not (`T597`).
+
+**Shape:** `6`–`8` weeks to a solver running against real absence data in parallel with the incumbent process.
+
+---
+
+### `P306` — Application intake at volume, permissively, with the AGPL parser left out
+**Buyer:** a district or multi-academy trust HR office. **Region: North America, EMEA.** **Why now:** the candidate side is tooled at `29.2k★` (`Resume-Matcher`) and `9.0k★` (`open-resume`) and growing; the employer side has one `7.3k★` MIT pipeline. Application volume is being automated faster than the capacity to read it (`T600`).
+
+**Wiring, in order:**
+1. **Intake** — [`docling-project/docling`](https://github.com/docling-project/docling) (MIT, `1,072 B`, `edb765d1e3e6`, `main`) converts the application packet — CV, transcripts, certificates, reference letters — to structured Markdown and JSON. 🟢 **This is the step that replaces an AGPL résumé parser:** [`xitanggg/open-resume`](https://github.com/xitanggg/open-resume) is the obvious choice and is AGPL-3.0 (`34,522 B`, `20b067f86de3`), so it cannot sit behind a hosted deliverable.
+2. **Structured extraction and scoring scaffold** — [`interviewstreet/hiring-agent`](https://github.com/interviewstreet/hiring-agent) (MIT, `1,067 B`, `307413770e09`, `main`). Take its extraction stage; **treat its scoring stage as a reference implementation to be rebuilt against the district's own rubric**, because independent validation of it reported inconsistent scores.
+3. **Qualification mapping** — against the district's certification schedule. 🔴 **Do not reach for [`workforce-data-initiative/skills-ml`](https://github.com/workforce-data-initiative/skills-ml):** its README says MIT and its `LICENSE.md` (`1,976 B`, `2cc582006b14`) is a University of Chicago non-commercial grant that excludes *"any service or part of selling a service"* (`T598`). 🟢 In EMEA, use **Arbetsförmedlingen's JobTech Taxonomy** (EPL-2.0, JobTechDev forge, not GitHub) — ESCO-compatible, so the mapping is to a published national vocabulary rather than to a model's opinion.
+4. **The output is a shortlist with provenance, never a rank with a number.** Each surfaced candidate carries the extracted field, the source page and the rule that matched. This is a compliance requirement, not a UX preference — see `P307`.
+
+**Shape:** `5`–`7` weeks. Permissive end to end; no copyleft in the deliverable.
+
+---
+
+### `P307` — The bias audit as the deliverable, not the obstacle
+**Buyer:** any district or employer using an automated employment decision tool in New York City; by extension Illinois, California, Texas and Connecticut. **Region: North America.** **Why now:** 🔴 **NYC Local Law 144 has been enforceable since `2023-07-05`** and requires an **independent annual bias audit with published results** plus candidate notice, with penalties reported at `$500`–`$1,500` per day per violation. Illinois HB 3773 took effect `2026-01-01`. Colorado SB 26-189 (signed `2026-05-14`) repealed and replaced the 2024 Colorado AI Act, removing audit duties, effective `2027-01-01`. All **search-sourced, not primary-verified** — primary hosts refuse at this tunnel (`T601`, `ACTION p758-B` carried).
+
+**Why this register and no other on these shelves:** a teacher-hiring system is **education AI and employment AI simultaneously** — both limbs of EU AI Act Annex III. `Annex III` appears `586` times across these shelves; its employment limb appears **once**.
+
+**Wiring, in order:**
+1. **Establish whether the client has an AEDT at all.** A rules-based certification filter generally is not one; a model that scores or ranks candidates is. Get this wrong in the permissive direction and the client is in breach of a three-year-old law.
+2. **Instrument the selection pipeline for auditability before improving its accuracy** — every candidate, every input, every rule fired, every outcome, retained per the governing retention rule.
+3. **Compute selection rates by category and the impact ratios the audit requires**, as a reproducible job rather than a consultant's spreadsheet, so the *annual* obligation costs a re-run.
+4. **Publish**, because LL144 requires the results to be public, and notify candidates ahead of use.
+5. 🟢 **Sell the capacity, not the deadline.** The obligation is live and recurring, the enforcing agency's own enforcement was found ineffective by a NY State Comptroller audit in `2025-12`, and the backlog of un-audited tools is the same size either way. 🔴 **Never pitch this as a 2027 EU readiness project** — the US duty is already past due and the EU Annex III regime does not bite until `2027-12-02`.
+
+**Shape:** `4`–`6` weeks for the first audit, then an annual re-run. 🟢 **Sellable whether or not Globant built the tool being audited** — which makes it the lowest-dependency offer in this register.
+
+---
+
+### `P308` — Position control: the funded-line problem, solved as a constraint model
+**Buyer:** a national or state education ministry, or a large district's budget office. **Region: LATAM (primary), Global.** **Why now:** 🟢 **the best-measured demand in this register.** **`91%`** of Mexican federal education spending is concentrated in **FONE** — *Fondo de Aportaciones para la Nómina Educativa y Gasto Operativo* — the fund whose name is literally education payroll (Mexicanos Primero). Brazil held **`2,407,049`** basic-education teachers in `2025` against `2,187,154` in `2015` (Inep), with a projected shortfall of `235,000` over roughly `18` years (SEMESP `2023`). Mexico's teaching workforce averages `44` years old with a projected **`600,000`+** retirements over the next decade (Vanguardia). UNESCO puts the global gap at **`44` million** teachers by `2030`.
+
+**Wiring, in order:**
+1. **Model the funded establishment, not the headcount** — every authorised post, its funding line, its school, its required certification, its status. This is a constraint satisfaction problem: [`google/or-tools`](https://github.com/google/or-tools) (Apache-2.0, `11,358 B`, `cfc7749b96f6`, `stable`) CP-SAT, with "no post filled against an unfunded line" and "no teacher assigned outside their certification" as hard constraints.
+2. **Retirement and attrition projection against the establishment**, not against the national total — the shortfall that matters is per school, per subject, per certification, and the national figure hides every actionable case.
+3. **Keep the record in the ministry's existing payroll system.** For FONE this is non-negotiable: it is a federal transfer with its own reporting, and the engagement is an analytical layer over it, not a replacement for it.
+4. **Where a ministry genuinely has no system**, Frappe HR ([`frappe/hrms`](https://github.com/frappe/hrms), GPL-3.0, `34,916 B`, `f333043685c8`, branch `develop`) is the most complete open-source starting point — **and the GPL obligations must be on the table at the first conversation**, because the deliverable will be a service, not licensed software.
+
+**Shape:** `10`–`14` weeks. 🟢 The strongest demand case on these shelves for this register and the clearest fit to a government buyer.
+
+---
+
+### `P309` — Teacher credential verification on an open standard
+**Buyer:** a state licensing authority, a multi-academy trust, or a ministry running in-service PD at scale. **Region: Global, EMEA.** **Why now:** `licensure` appears `0` times and `teacher certification` once across these eight shelves, while OECD *Education at a Glance 2026* makes teacher shortages its special focus and names an ageing workforce as the compounding pressure. The Netherlands reports `2%` of teachers not fully qualified against an OECD average of `9.1%` — **the spread between systems is the market**, because the systems above average need to know who is qualified before they can act.
+
+**Wiring, in order:**
+1. **Verification, not storage** — [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) (Apache-2.0, `13,185 B`, `ba1f153bdba3`, branch `develop`) validates Open Badges assertions, so PD completion and micro-credentials become checkable artefacts rather than rows in a spreadsheet. 🟢 These shelves already hold `Open Badges` `132` times — for learners. This is the same standard pointed at the workforce.
+2. **Document intake for the credentials that are not badges** — [`docling-project/docling`](https://github.com/docling-project/docling) (MIT, `1,072 B`, `edb765d1e3e6`) for scanned certificates, transcripts and overseas qualifications.
+3. **Map to a published vocabulary, not a model's judgement** — JobTech Taxonomy (EPL-2.0, JobTechDev forge) in EMEA, ESCO-compatible; the authority's own certification schedule elsewhere.
+4. 🔴 **Credential evaluation is a determination about a person's livelihood.** Every automated step produces a recommendation with its evidence attached and a named human decision-maker. In the EU this is Annex III on both limbs at once.
+
+**Shape:** `6`–`9` weeks.
+
+---
+
+### `P310` — The sovereign variant: school HR AI with no US cloud in the path
+**Buyer:** an EMEA ministry or municipality, or an APAC authority with a data-residency rule. **Region: EMEA, APAC.** **Why now:** EU AI Act Annex III's high-risk regime applies from `2027-12-02` and reaches this register on **both** the education and employment limbs; the Digital Omnibus political agreement was reached `2026-05-07`. 🔴 **`ACTION p762-I`:** the EMEA leg found a national-level artefact but **no European school-HR software buyer** — no budget line, no programme, no municipal procurement. That nil is written down rather than filled.
+
+**Wiring, in order:**
+1. **The solver layer needs no model and no cloud** — [`TimefoldAI/timefold-solver`](https://github.com/TimefoldAI/timefold-solver) (Apache-2.0, `11,358 B`, `cfc7749b96f6`) and [`google/or-tools`](https://github.com/google/or-tools) (Apache-2.0, `stable`) are deterministic optimisers that run entirely on the client's own hardware. 🟢 **In a sovereignty engagement, the fact that most of this register is a constraint problem rather than a model problem is the selling point.**
+2. **Where a model is genuinely needed** — document intake only, via `docling` (MIT) against a locally-hosted model. The intake step is the only part of `P306` that needs one.
+3. **The record stays with the authority**, in its existing system; where one must be built, Horilla ([`horilla-opensource/horilla`](https://github.com/horilla-opensource/horilla), **LGPL-2.1**, `26,526 B`, `20c17d8b8c48`, branch `2.0`) is the right choice and not Frappe HR — **LGPL-2.1 is weak copyleft with no network clause, so proprietary code may link to it, which GPL-3.0 does not allow.**
+4. **Qualification vocabulary from a European public source** — JobTech Taxonomy, EPL-2.0, ESCO-compatible.
+5. 🔴 **Do not sell this against a 2027 deadline.** Article 5 duties are live, the Annex III regime is not, and a client told the compliance regime is imminent has been sold the wrong date — the shape that survives is capacity and auditability, as in `P307`.
+
+**Shape:** `10`–`12` weeks. Permissive or weak-copyleft throughout; no AGPL, no bespoke grants, no US cloud dependency in the critical path.
+
+
 ## 🆕 `P299`–`P304` — added at p761 (2026-11-11)
 
 **Register: student transport (routing, ridership, bell-time coupling) and school feeding (eligibility, menu planning, commodity flow).** Every component named below was byte-read for its licence on `2026-11-11` and every address was probed in the same pass. The substrate is permissive end to end; the agent layer is three MIT repositories with `2` stars between them, so these recipes are deliberately **substrate-heavy and agent-light** — the honest shape of this register.

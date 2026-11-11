@@ -4,6 +4,64 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p762) — **The open-source hiring agents are built for the applicant, not for the school district: `29.2k★` candidate-side against `7.3k★` employer-side, in a function that is `70`–`80%` of a district's budget. The pass's worst landmine has a README that says MIT over a grant forbidding "any service or part of selling a service". And `google/or-tools` turns out to carry two different licences on two different branches.**
+
+**Register: the school HR back office — teacher recruitment, certification and licensure, substitute staffing and absence management, payroll and position control** · `5` agent rows filed, `4` refusals named, `1` byte-identical copy recorded · `35` addresses resolved · **`35` licence payloads byte-read** · `8` no-payload addresses, **none published as a licence state** · `2` of `8` default-branch checks disagreed with the guessed branch · `T593`–`T603`.
+
+### The week's shelving finding: `ACTION p760-A` has now discharged twice running, each time on a bigger buyer
+
+Counted across these eight shelves with word boundaries, before this pass: `Frappe` **`806`** · `ERPNext` **`206`** · `Odoo` **`155`** · `Timefold` **`76`** · `OR-Tools` **`61`** — against `human resources` **`0`** · `substitute teacher` **`0`** · `substitute staffing` **`0`** · `licensure` **`0`** · `position control` **`0`** · `applicant tracking` **`0`** · `teacher certification` **`1`** · `payroll` **`4`**.
+
+🔴 **And it corrects `p761`'s own opening line.** `p761` called student transport and school feeding *"the two largest operational line items in a school system's budget."* Personnel is, by a factor: `70`–`80%` of a US district's general fund (Burbio, June 2026), `80.44%` in Mesa County Valley CO, and **`91%`** of Mexican federal education spending concentrated in FONE, the education-payroll fund (Mexicanos Primero). `T593`.
+
+### 🔴 The week's licence story, and it is a correction to this base's most-cited row
+
+| Repo | Default branch | Grant on default | Guessed branch | Grant there |
+|---|---|---|---|---|
+| [`google/or-tools`](https://github.com/google/or-tools) `14.4k★` | `stable` | 🟢 **Apache-2.0 · `11,358 B` · `cfc7749b96f6`** — plain, no bundled notices | `main` | `45,765 B` · `b1282fbc0b7a` — Apache **plus bundled notices** |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) `41.2k★` | `develop` | 🔴 **GPL-3.0 · `35,149 B` · `3972dc9744f6`** — canonical GPLv3 | `master` | `34,916 B` · `f333043685c8` |
+
+🔵 `p761` published or-tools' `main` payload with the advice *"read the tail before shipping a notices file."* The bytes were real; the branch was not the default. **`2 / 8` = `25%` disagreement, both hits the largest repositories in the batch** — the same distribution `p761` measured for its own false negatives. `T597`, `ACTION p762-B`.
+
+### 🔴 The week's worst landmine: a README that says MIT
+
+[`workforce-data-initiative/skills-ml`](https://github.com/workforce-data-initiative/skills-ml) (`178★`) — the Open Skills Project's skills-extraction library, the natural component for mapping teacher qualifications to a competency taxonomy. GitHub's sidebar names **no licence**. The README says *"licensed under the MIT License."* `LICENSE.md`, byte-read at `1,976 B`, sha256₁₂ `2cc582006b14`, is a **University of Chicago grant for educational and not-for-profit research purposes** which *"excludes any service or part of selling a service that uses the Program."*
+
+🔴 **Second consecutive register whose key component forbids consulting delivery, by a different mechanism each time** — `p761`'s `giziiq` was a `Commons Clause` under an `MIT License` title line; this is a bespoke university grant under a README. 🟢 `ACTION p761-A`'s byte band caught it on sight: `1,976 B` against an MIT ceiling of `1,099 B`. 🟢 **`ACTION p762-E`: no licence claim from outside the `LICENSE` payload may be shelved** — index, title line, README and aggregator were each wrong about something this pass.
+
+### 🔴 The week's agent-supply measurement: the tooling is on the other side of the desk
+
+| Side | Repo | ★ | Grant (byte-read) |
+|---|---|---|---|
+| 🔵 Candidate | [`srbhr/Resume-Matcher`](https://github.com/srbhr/Resume-Matcher) | **`29.2k`** | 🟢 Apache-2.0 · `11,357 B` · `c71d239df917` |
+| 🔵 Candidate | [`xitanggg/open-resume`](https://github.com/xitanggg/open-resume) | **`9.0k`** | 🔴 AGPL-3.0 · `34,522 B` · `20b067f86de3` |
+| 🔵 Candidate | [`feder-cr/Jobs_Applier_AI_Agent_AIHawk`](https://github.com/feder-cr/Jobs_Applier_AI_Agent_AIHawk) | — | 🟢 MIT · `1,065 B` · `f8e26bc469ae` |
+| 🔵 Candidate | [`ibarrajo/ApplyPilot`](https://github.com/ibarrajo/ApplyPilot) | — | 🔴 AGPL-3.0 · `34,523 B` · `0d96a4ff68ad` |
+| 🔵 Candidate | [`aadya940/autoresume`](https://github.com/aadya940/autoresume) | — | 🟢 Apache-2.0 · `10,994 B` · `8ee88f8a4931` |
+| 🟢 **Employer** | [`interviewstreet/hiring-agent`](https://github.com/interviewstreet/hiring-agent) | `7.3k` | 🟢 MIT · `1,067 B` · `307413770e09` |
+| 🟢 **Employer** | [`yashrajgithub/hiresense-ai`](https://github.com/yashrajgithub/hiresense-ai) | — | 🟢 MIT · `1,074 B` · `5345511964d2` |
+
+🔴 **`Resume-Matcher` was nearly filed as employer-side screening on the strength of its name.** Its own description: *"The #1 AI Harness for Building Resumes, PDFs, Cover Letters & more."* It writes applications. Corrected before writing. 🔵 **The reading: application volume at a district's inbox is being automated faster than the district's capacity to read it**, and that asymmetry is the engagement — not a productivity story. `T600`.
+
+🔵 **One copy, recorded so it is not double-counted:** [`NotArsal/hiring-agent`](https://github.com/NotArsal/hiring-agent) is MIT at `1,067 B` · `307413770e09` — **byte-identical to HackerRank's payload.** The employer-side count stands at two.
+
+### 🔴 The week's regulatory finding: this register is education AI and employment AI at once
+
+`Annex III` appears **`586`** times across these shelves. Contexts pairing it with employment, hiring, recruitment or workers: **`1`**. A teacher-screening model sits in both limbs.
+
+**NYC Local Law 144 has been enforceable since `2023-07-05`**: independent annual bias audit, **results published**, candidate notice, penalties reported at `$500`–`$1,500`/day — and a NY State Comptroller audit of `2025-12` found the enforcing agency's enforcement ineffective. Illinois HB 3773 effective `2026-01-01` (one source reports the rules paused — unresolved, flagged). Colorado SB 26-189, signed `2026-05-14`, **repealed and replaced the 2024 Colorado AI Act before it took effect**, removing bias-audit duties, applying from `2027-01-01`. California ADS `2025-10-01`; Texas TRAIGA `2026-01-01`; Connecticut `2026-10-01`. 🔴 All **search-sourced, not primary-verified** — primary hosts refuse at this tunnel. `T601`.
+
+🟢 **The offer that follows is the audit itself, sellable whether or not Globant built the tool** (`P307`).
+
+### 🔴 This pass's own instrument defect, published because the next pass needs it
+
+The first-cut licence probe read payloads through `$(command substitution)`, which **strips trailing newlines** — reporting every payload one byte short with a sha256 no file reproduces. It was caught by contradicting `p761`: the stripped read put `timefold-solver` at `11,357 B`, `p761` had published `11,358 B` · `cfc7749b96f6`, and measuring the file reproduced `p761` exactly. 🟢 **`p761`'s constants are sound; this pass's first instrument was the defect.** On the stripped reading this pass had nearly published a false "AGPL collision at `34,522 B`". 🟢 `ACTION p762-D`: measure the file, never the command substitution. `T595`.
+
+🔴 **And a second defect of this pass's own making:** its opening vocabulary census reported `ATS` at `531` mentions and `HRIS` at `266`. With word boundaries: **`0` and `1`.** `grep -i ats` matches *formats*, *seats*, *stats*. 🟢 `ACTION p762-C`. `T594`.
+
+---
+
+
 ## 🆕 2026-11-11 (p761) — **The two biggest operational budgets in any school system have an agent layer of three MIT repositories, none above `2★`. The one purpose-built school-transport agent is unlicensed and was pushed yesterday. And a licence payload titled `MIT License` opens by forbidding consulting fees.**
 
 **Register: student transport and school feeding — routing, ridership, eligibility, menu planning, commodity flow** · `3` agent rows filed, `4` refusals named · `44` addresses resolved · `408` licence-path probes · **`37` licence payloads byte-read** · `5` index values corrected, `5 / 5` from `NOASSERTION` toward a knowable grant · `2` of this pass's own `10` "no grant" verdicts refuted by its own follow-up · `T583`–`T592`.

@@ -4,6 +4,201 @@ region: Global
 updated: 2026-11-11
 ---
 
+# 🆕 Trends new at `p762` (researched 2026-11-11) — `T593`–`T603`
+
+**The register is the school HR back office — teacher recruitment, certification and licensure tracking, substitute staffing and absence management, payroll and position control.** `ACTION p760-A`/`p761-G` was pointed at the ERP and solver substrate these shelves already hold and returned the largest budget line in any school system at effectively zero mentions. The governing finding, however, is a licence defect in a repository this base has published for hundreds of passes: **`google/or-tools` carries two different licence payloads on two different branches, and every pass before this one published the non-default branch's.**
+
+**A note on form, stated once.** Plain declarative prose, the shelves' structural conventions, pass id, byte-read licence cells with length and sha256₁₂, region placement, `T` tokens, `ACTION` tokens. 🔴 marks a refusal or a defect, 🟢 a usable finding, 🔵 a reading or reclassification.
+
+**Instrument, measured:** `35` addresses resolved · `27` licence payloads byte-read in the probe store plus `8` default-branch re-reads = **`35` payloads byte-read with length and sha256₁₂** · `8` addresses returned no payload across `39` exhaustive probe points each (`312` probes) and **none of them is published as a licence state** (`ACTION p761-C`) · `2` control re-measurements of p761 constants, both reproduced exactly · `2` of `8` default-branch checks found a different grant than the guessed branch.
+
+## `T593` — the register, and a correction to `p761`'s own superlative
+
+`p761` opened by calling student transport and school feeding *"the two largest operational line items in a school system's budget."* 🔴 **That is wrong, and the correct answer is the register this pass found at zero.** Salaries and employee benefits are **`70%` to more than `80%`** of a US district's general fund (Burbio, June 2026); Mesa County Valley, Colorado published `80.44%`; Colchester, Vermont's FY26 book shows `57.6%` salaries plus `21.1%` benefits. In Mexico, **`91%`** of federal education spending is concentrated in a single fund whose name *is* the register — FONE, the *Fondo de Aportaciones para la Nómina Educativa y Gasto Operativo* (Mexicanos Primero).
+
+Counted across these eight shelves before this pass, with word boundaries:
+
+| Held (the technical property) | Mentions | Not held (the buyer) | Mentions |
+|---|---|---|---|
+| `Frappe` | `806` | `human resources` | **`0`** |
+| `ERPNext` | `206` | `substitute teacher` | **`0`** |
+| `Odoo` | `155` | `substitute staffing` | **`0`** |
+| `Timefold` | `76` | `licensure` | **`0`** |
+| `OR-Tools` | `61` | `position control` | **`0`** |
+| | | `applicant tracking` | **`0`** |
+| | | `teacher certification` | `1` |
+| | | `payroll` | `4` |
+
+🔵 **The seam is the same shape as `p761`'s and one tier more valuable.** `p761` found a sector carrying `US$84` billion of annual government spending at `0` mentions. This one carries the `70`–`80%` of district spending that the transport and feeding lines are a minority share of. `ACTION p760-A` has now discharged twice on consecutive passes and both times against a buyer larger than the register that preceded it.
+
+## `T594` — a substring count is not a mention count, and this pass's own first measurement was noise
+
+🔴 **This pass's opening measurement of its own register reported `ATS` at `531` mentions and `HRIS` at `266`.** Re-counted with word boundaries: **`ATS` `0`, `HRIS` `1`.** `grep -i ats` matches *formats*, *seats*, *stats*; `grep -i hris` matches *Christmas* and *Christian*.
+
+🔵 **The correction strengthens the register rather than weakening it** — the applicant-tracking vocabulary is held *zero* times, not `531` — but a pass that had published the first number would have reported a well-covered shelf and dropped the register. 🟢 **`ACTION p762-C`: vocabulary censuses are counted with word boundaries, and every published mention count taken with a bare substring grep is of unknown value until re-counted.** This is the sibling of `ACTION p761-E` one layer down: `p761` refused a `total_count` from a prose query; this refuses a local grep over prose for the same reason.
+
+## `T595` — the trailing-newline strip, and `p761`'s constants vindicated
+
+🔴 **This pass's first-cut licence probe read every payload through `$(command substitution)`, which strips trailing newlines.** Every payload ending in `\n` was reported **one byte short, with a sha256 that no file on disk reproduces**. The defect produced three false readings before it was caught:
+
+| Repo | First-cut (stripped) | Corrected (file measured) |
+|---|---|---|
+| `TimefoldAI/timefold-solver` | `11,357 B` · `58d1e17ffe51` | 🟢 **`11,358 B` · `cfc7749b96f6`** |
+| `kimai/kimai` | `34,522 B` · `4df3c306ddda` | 🟢 **`34,523 B` · `0d96a4ff68ad`** |
+| `TimefoldAI/timefold-quickstarts` | `11,356 B` · `43070e2d4e53` | 🟢 **`11,357 B` · `c71d239df917`** |
+
+🟢 **The catch was `p761`'s own data.** The stripped read put timefold-solver at `11,357 B`, which contradicted `p761`'s published `11,358 B` · `cfc7749b96f6`. Measuring the file reproduced `p761` exactly. 🔵 **So `p761`'s constants are sound and this pass's first instrument was the defect** — and on the strength of the stripped reading this pass had very nearly published a false "AGPL second-preimage at `34,522 B`" (the two AGPL payloads are `34,522` and `34,523 B`; the difference is a trailing newline plus a byte-neutral rewrap of the "how to apply" boilerplate at lines `636`–`637`, and both are verbatim AGPL-3.0).
+
+🟢 **`ACTION p762-D`: measure the file, never the command substitution.** A licence instrument that cannot reproduce a known constant is not reporting about the repository.
+
+## `T596` — equal size is not identity, in any licence family
+
+`ACTION p761-B` recorded two canonical Apache-2.0 families at `11,357 B`. 🟢 **Independently reproduced this pass from two different organisations, with the corrected instrument:**
+
+| Bytes | sha256₁₂ | Reproduced from |
+|---|---|---|
+| `11,357` | `c71d239df917` | `TimefoldAI/timefold-quickstarts`, `srbhr/Resume-Matcher` |
+| `11,357` | `b40930bbcf80` | `wfp/designsystem` (p761 control, reproduced exactly) |
+| `11,358` | `cfc7749b96f6` | `timefold-solver`, `timefold-solver-python`, `kiegroup/optaplanner` |
+| `11,356` | `a31fce7e7096` | `graphhopper/jsprit` (p761 control, reproduced exactly) |
+| `10,994` | `8ee88f8a4931` | `aadya940/autoresume` |
+| `13,185` | `ba1f153bdba3` | `1EdTech/openbadges-validator-core` |
+
+🟢 **And the MIT family does the same thing, which `p761` did not have:** `1,065 B` holds **two distinct payloads** — `b0fe024ccdfc` (`PyJobShop/PyJobShop`) and `f8e26bc469ae` (`feder-cr/Jobs_Applier_AI_Agent_AIHawk`). They differ in the copyright holder line.
+
+🟢 **`ACTION p762-A` supersedes `ACTION p761-B`: never key a licence identity on a byte count, in any family.** `p761` framed the finding as "record two canonical Apache families"; that framing is too narrow, because the property is not Apache's. Six Apache byte counts and two distinct payloads at one MIT byte count were measured in a single pass. **The byte count is a triage signal and a cheap tamper check. It is not an identity anywhere.**
+
+## `T597` — 🔴 the branch-dependent licence, and the correction it forces on `p761`'s most-cited row
+
+`ACTION p761-D` part 2 said: derive the branch from `default_branch` rather than guessing. `api.github.com` is **`403`** at this tunnel, so the action could not be discharged as written; `default_branch` was taken from the rendered repository page instead (page-sourced, not API-sourced). **It fired on the second repository it was pointed at, and on the first it was pointed at.**
+
+| Repo | Default branch | Grant on default | Guessed branch | Grant there | Same? |
+|---|---|---|---|---|---|
+| [`google/or-tools`](https://github.com/google/or-tools) | `stable` | 🟢 **`11,358 B` · `cfc7749b96f6`** — plain Apache-2.0 | `main` | **`45,765 B` · `b1282fbc0b7a`** — Apache **plus bundled third-party notices** | 🔴 **NO** |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop` | 🟢 **`35,149 B` · `3972dc9744f6`** — canonical GPL-3.0 full text | `master` | **`34,916 B` · `f333043685c8`** — GPL-3.0, markdown title `### GNU GENERAL PUBLIC LICENSE` | 🔴 **NO** |
+| `frappe/hrms` | `develop` | `34,916 B` · `f333043685c8` | `master` | identical | 🟢 same |
+| `odoo/odoo` | `20.0` | `43,529 B` · `abc09dad5f84` | `master` | identical | 🟢 same |
+| `horilla-opensource/horilla` | `2.0` | `26,526 B` · `20c17d8b8c48` | `main` | identical | 🟢 same |
+| `TimefoldAI/timefold-quickstarts` | `stable` | `11,357 B` · `c71d239df917` | `main` | identical | 🟢 same |
+| `PyJobShop/PyJobShop` | `cpmodelplus` | `1,065 B` · `b0fe024ccdfc` | `main` | identical | 🟢 same |
+| `1EdTech/openbadges-validator-core` | `develop` | `13,185 B` · `ba1f153bdba3` | `master` | identical | 🟢 same |
+
+🔴 **`2 / 8` — `25%` — and both hits are among the largest repositories in the register** (`or-tools` `14.4k★`, `erpnext` `41.2k★`). That is the same distribution `p761` measured for its own false negatives, and the same explanation: large, long-lived projects are the ones with release branches, vendored notices and non-standard defaults.
+
+🔵 **The correction to this base.** `p761` published or-tools as *"Apache-2.0 · `45,765 B` · `b1282fbc0b7a` (Apache text **plus bundled third-party notices** — read the tail before shipping a notices file)."* The bytes are real and the advice was sound for what it read, but **it is the `main` branch's payload, and `main` is not the default branch.** A studio vendoring or-tools from the default branch gets a plain `11,358 B` Apache grant and no bundled notices. 🟢 **Both readings are now on the shelves with their branch named, because which one governs depends on which branch is actually vendored** — and that, not the byte count, is the thing to record.
+
+🟢 **`ACTION p762-B`: a licence row names the branch it was read from, and that branch is the default branch.** Where the API that returns `default_branch` is refused, read it from the rendered page and say so. **Re-read every row this base has published for repositories above ~`1,000★`**, because the measured disagreement rate on exactly those is `25%`.
+
+## `T598` — 🔴 a README that says MIT over a grant that forbids selling a service
+
+[`workforce-data-initiative/skills-ml`](https://github.com/workforce-data-initiative/skills-ml) (`178★`, default `master`) is the Open Skills Project's skills-extraction library — the natural component for mapping teacher qualifications onto a competency taxonomy. GitHub's sidebar names **no licence**. Its README states *"This project is licensed under the MIT License."* Its `LICENSE.md`, byte-read at `1,976 B`, sha256₁₂ `2cc582006b14`, is neither:
+
+> Copyright ©2018. The University of Chicago. … Permission to use, copy, modify, and distribute this software … **for educational and not-for-profit research purposes**, without fee … **For the avoidance of doubt, educational and not-for-profit research purposes excludes any service or part of selling a service that uses the Program.** To obtain a commercial license … contact the Technology Commercialization and Licensing, Polsky Center for Entrepreneurship and Innovation, University of Chicago.
+
+🔴 **The excluded activity is the delivery model.** A studio engagement is a service, and the grant excludes any service or part of a service. There is no permissive reading: a commercial licence must be negotiated with the Polsky Center or the component cannot be used.
+
+🔴 **Second consecutive register in which the key component's grant forbids consulting delivery, by a different mechanism each time.** `p761` found `giziiq` — title line `MIT License`, `Commons Clause` withholding fees for hosting or consulting. `p762` finds `skills-ml` — README says MIT, bespoke university grant excluding services. 🔵 The band rule from `ACTION p761-A` caught this one on sight: `1,976 B` is nearly twice the measured MIT ceiling, and the first line is not a licence title at all.
+
+🟢 **`ACTION p762-E`: no licence claim originating outside the `LICENSE` payload may be shelved** — not the index, not the title line, not the README, not an aggregator. All four were wrong about something this pass.
+
+## `T599` — the people record is copyleft without exception, and the one exception is bespoke
+
+`p757` stated the law *measuring is permissive, holding the record is copyleft*. 🔵 **The most valuable record in the sector — the employment record — confirms it without a single counter-example, byte-read:**
+
+| Platform | ★ | Grant (byte-read) |
+|---|---|---|
+| `frappe/erpnext` | `41.2k` | 🔴 GPL-3.0 |
+| `frappe/hrms` (Frappe HR) | `9.0k` | 🔴 GPL-3.0 |
+| `orangehrm/orangehrm` | `1.2k` | 🔴 GPL-3.0 |
+| `Sentrifugo/sentrifugo` | `8` | 🔴 GPL-3.0 |
+| `odoo/odoo` | `55.7k` | 🔴 LGPL-3.0 |
+| `horilla-opensource/horilla` | `1.5k` | 🟠 LGPL-2.1 |
+| `kimai/kimai` | `5.1k` | 🔴 AGPL-3.0 |
+| `opencats/OpenCATS` | `781` | 🟠 **dual: MPL-2.0 + CATS Public License v1.1a** |
+
+🔵 **`OpenCATS` is the only non-GPL-family record-holder in the register and it is not simply MPL.** Its `LICENSE.md` (`43,229 B`, sha256₁₂ `e012562b38ed`) opens *"This application is available under two licenses"*: the OpenCATS code under MPL-2.0, and **original 2007 'CATS Project' code under the CATS Public License v1.1a, a modified Mozilla Public License.** GitHub's sidebar names no licence for it — correctly, since no single SPDX identifier describes it. A studio can work with MPL-2.0's file-level copyleft; the bespoke 2007 limb needs reading before anything derived from that code ships.
+
+🔴 **The commercial consequence, stated plainly:** there is no permissive HRIS. Every engagement in this register either accepts GPL obligations on the record layer, or keeps the record in the client's existing proprietary system and composes permissive components around it. The second shape is the only one that preserves a proprietary deliverable, and it is what `P305`–`P310` are built on.
+
+## `T600` — the open-source resume agents are built for the applicant, not for the school district
+
+Measured by stars, the employer side of this register is a rounding error against the candidate side:
+
+| Side | Repo | ★ | Grant (byte-read) |
+|---|---|---|---|
+| 🔵 **Candidate** | `srbhr/Resume-Matcher` | **`29.2k`** | 🟢 Apache-2.0 |
+| 🔵 **Candidate** | `xitanggg/open-resume` | **`9.0k`** | 🔴 AGPL-3.0 |
+| 🔵 **Candidate** | `feder-cr/Jobs_Applier_AI_Agent_AIHawk` | — | 🟢 MIT |
+| 🔵 **Candidate** | `ibarrajo/ApplyPilot` | — | 🔴 AGPL-3.0 |
+| 🔵 **Candidate** | `aadya940/autoresume` | — | 🟢 Apache-2.0 |
+| 🟢 **Employer** | `interviewstreet/hiring-agent` | `7.3k` | 🟢 MIT |
+| 🟢 **Employer** | `yashrajgithub/hiresense-ai` | — | 🟢 MIT |
+
+🔵 **`Resume-Matcher` was nearly shelved as an employer-side screening agent on the strength of its name, and it is not one.** Its own description reads *"The #1 AI Harness for Building Resumes, PDFs, Cover Letters & more, locally with 100+ LLMs support"* — it writes applications, it does not screen them. 🟢 Corrected before writing.
+
+🔵 **The reading that matters for a district.** The applicant side is tooled, permissively, at `29.2k` stars and growing; the HR office receiving those applications has one `7.3k★` MIT scoring pipeline whose own reception included disputed, inconsistent scores on independent validation. **The volume arriving at a district's inbox is being automated faster than the district's capacity to read it**, and that asymmetry — not a productivity story — is the engagement.
+
+## `T601` — 🔴 the regulatory double-bind: this register is education AI *and* employment AI at once
+
+`Annex III` appears **`586`** times across these eight shelves. Contexts pairing it with employment, recruitment, hiring or workers: **`1`**. 🔵 **The base has held the EU AI Act's education limb for hundreds of passes and never its employment limb — and a teacher-hiring system sits in both.**
+
+Dated US instruments, all **search-sourced, not primary-verified** (`ACTION p758-B`'s blocker is carried: primary hosts refuse at this tunnel):
+
+| Instrument | Status as read 2026-11-11 | What it requires |
+|---|---|---|
+| **NYC Local Law 144** | 🔴 **in force since `2023-07-05`** | Independent annual **bias audit** of an automated employment decision tool, **results published**, candidate notice. Penalties reported at `$500`–`$1,500` per day per violation. A NY State Comptroller audit of `2025-12` found the enforcing agency's enforcement ineffective |
+| **Illinois HB 3773** | 🔴 effective `2026-01-01` | Amends the Illinois Human Rights Act; notification and transparency rather than audits; prohibits discriminatory outcomes **regardless of intent**. 🔵 One source says the rules were paused — unresolved, flagged rather than picked |
+| **Colorado SB 26-189** | 🔵 signed `2026-05-14` | **Repealed and replaced the 2024 Colorado AI Act before it took effect**, removing bias-audit and risk-assessment duties; applies to decisions on or after `2027-01-01` |
+| **California ADS regulations** | in force `2025-10-01` | Automated-decision rules reaching employment |
+| **Texas TRAIGA** | effective `2026-01-01` | Responsible AI Governance Act |
+| **Connecticut** | first hiring rule `2026-10-01` | — |
+| **EU AI Act Annex III** | high-risk regime `2027-12-02` | Both the **education** limb and the **employment** limb; Digital Omnibus political agreement `2026-05-07` |
+
+🟢 **The commercial reading is favourable and it is the opposite of a blocker.** A district deploying an AI screening tool in New York City owes a published independent bias audit *today*, not in 2027 — and the audit is a deliverable a studio can produce whether or not it built the tool. 🔴 **The trap is the inverse:** a studio that ships a teacher-screening model into NYC without an audit has put the client in breach of a law that has been enforceable for three years.
+
+## `T602` — EMEA, and `ACTION p761-F` discharged at national level with a channel defect attached
+
+`ACTION p761-F` said: stop running the EU-level query, probe **national** authorities. 🟢 **Done, and it returned an artefact and a defect.**
+
+🟢 **Sweden's Arbetsförmedlingen** (the national public employment service) publishes the **JobTech Taxonomy** — the Swedish labour market's occupation and skills vocabulary, ESCO-compatible, ~`5,950` skills against ESCO's ~`13,890` (a forum count, not an official statistic), served as REST and GraphQL. Its documentation states the API is **EPL-2.0**. 🔴 **Its source is not on GitHub** — it is on the JobTechDev forge — so `JobtechDev/jobtech-taxonomy-api` returned no payload across `39` probe points. 🔵 **A GitHub-only licence probe reports a false absence for a national authority's artefact.** That is a channel limitation, not a supply nil, and it is exactly the error class `ACTION p761-D` part 4 was written to stop.
+
+🟢 **`ACTION p762-H`: for a public-sector artefact, probe the authority's own forge before recording an absence.**
+
+**OECD *Education at a Glance 2026* makes teacher shortages its special focus** — shortages affect most OECD systems, and an ageing workforce is named as the compounding pressure. Netherlands: **`2%`** of primary and secondary teachers in public institutions were not fully qualified in `2024/25`, against an OECD average of **`9.1%`** — and the Netherlands leads internationally on mid-career entrants (`zij-instromers`). 🔴 A widely-repeated figure of ~`40,000` unfilled German teacher posts was found only on an aggregator with no primary source and is **not** shelved.
+
+## `T603` — APAC is the supply region for this register, stated precisely
+
+🔵 **The open-source HRIS layer is overwhelmingly South and Southeast Asian in origin, and this is stated from sources rather than inferred from the code:**
+
+- **OrangeHRM** — founded `2005` by Sujee Saparamadu; headquartered in Secaucus, New Jersey with its **R&D centre in Colombo**, Sri Lanka, and its CTO a University of Moratuwa graduate; MySQL co-founder David Axmark on the board. 🔵 **Not "Sri Lankan-authored" and not "American" — US-incorporated with Sri Lankan engineering.** Open-core: the free Starter edition gates external API access, payroll connectors and advanced recruitment behind a paid tier.
+- **Frappe** (`erpnext`, `hrms`) — Indian, and `frappe/hrms` is the most complete free HR app in the register at `9.0k★`.
+- **Horilla** — `1.5k★`, LGPL-2.1, default branch `2.0`; the page names no country, so none is asserted here beyond what it states: *"Made with ❤️ by the Horilla Team."*
+
+🔴 **The licence consequence of that geography is the register's central constraint:** the region that supplies the record layer supplies it under GPL-3.0 and LGPL, and the region that supplies the *permissive* half is EMEA — `TimefoldAI`'s solver estate, Apache-2.0, built by the original OptaPlanner team which forked from OptaPlanner on `2023-04-20`. 🔵 **Permissive optimisation from EMEA, copyleft record-keeping from APAC, candidate-side agents from everywhere, and the employer side of a `70`–`80%`-of-budget function served by one MIT repository.**
+
+---
+
+## Actions adopted at `p762`
+
+**`ACTION p762-A`** — supersedes `ACTION p761-B`. Never key a licence identity on a byte count, **in any family**. Measured this pass: six distinct Apache-2.0 byte counts, two distinct payloads at `11,357 B`, and two distinct MIT payloads at `1,065 B` (`T596`).
+
+**`ACTION p762-B`** — a licence row names the branch it was read from, and that branch is the **default** branch. Where `api.github.com` is refused, take `default_branch` from the rendered page and label the read page-sourced. **Re-read every published row above ~`1,000★`**: the measured disagreement rate between default and guessed branch is `2 / 8` = `25%`, and both hits were the largest repositories in the batch (`T597`).
+
+**`ACTION p762-C`** — vocabulary censuses are counted with **word boundaries**. Any published mention count taken with a bare substring grep is of unknown value until re-counted; this pass's own first census was off by `531` on one term (`T594`).
+
+**`ACTION p762-D`** — measure the file, never the command substitution. A probe that reads payloads through `$(...)` silently strips trailing newlines and reports hashes no file reproduces (`T595`).
+
+**`ACTION p762-E`** — no licence claim originating outside the `LICENSE` payload may be shelved: not the index, not the title line, not the README, not an aggregator. All four were wrong about something this pass (`T598`, `T600`).
+
+**`ACTION p762-F`** — carry `ACTION p760-A`/`p761-G` unchanged. Two consecutive discharges, each finding a buyer larger than the register before it (`T593`).
+
+**`ACTION p762-G`** — discharges `ACTION p761-H`. The `P###` namespace is hereby **reserved for compose patterns**, which hold the longer unbroken run and are the client-facing sequence; instrument findings take the prefix **`INS-###`** from this pass forward. Existing instrument-`P` tokens in `README.md` and the trending files are not rewritten — they are legacy and are to be read with their file.
+
+**`ACTION p762-H`** — for a public-sector artefact, probe the issuing authority's own forge before recording an absence. A GitHub-only probe reported a false nil on Sweden's national employment service (`T602`).
+
+**`ACTION p762-I`** — the EMEA leg returned a national-level artefact but **no European school-HR software buyer**: no budget line, no programme, no municipal procurement. Next pass should probe **school-staffing agencies and supply-teacher intermediaries** in the UK and Netherlands, which are the commercial layer where that spend actually sits.
+
+
 # 🆕 Trends new at `p761` (researched 2026-11-11) — `T583`–`T592`
 
 **The register is student transport and school feeding — the two largest operational line items in a school system's budget.** The governing finding is about this base rather than about a market, for the second consecutive pass and in the same shape: the solver substrate that is the entire technical content of both halves has been on these shelves for hundreds of passes under the name *timetabling*, while the buyers whose procurement is defined by it appeared `1` and `0` times. `ACTION p760-A` was adopted last pass as a rule and this is its first discharge.

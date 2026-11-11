@@ -6,6 +6,37 @@ updated: 2026-11-11
 
 # Vertical Platforms — Education
 
+## 🆕 `p762` — **There is no permissive HRIS. Every open-source system of record for the employment relationship is GPL-3.0, LGPL or AGPL-3.0, and the single non-GPL-family exception is dual-licensed under a bespoke modified-MPL from 2007 that GitHub's index cannot name.**
+
+**`8` platform rows · every licence byte-read · every row naming the branch it was read from.** This is `p757`'s law — *measuring is permissive, holding the record is copyleft* — confirmed on the most valuable record in the sector, the employment record, **without a single counter-example** (`T599`).
+
+### 🔴 The record layer, byte-read
+
+| Platform | ★ | Licence (byte-read) | Branch read | What it is, and what it costs a studio |
+|---|---|---|---|---|
+| [`odoo/odoo`](https://github.com/odoo/odoo) | 🔴 **`55.7k`** | 🔴 **LGPL-3.0** · `43,529 B` · sha256₁₂ `abc09dad5f84` | **`20.0`** (default) ≡ `master` | The ERP every education search returns, HR modules included. 🔴 **Its payload's first line names no licence at all** — it reads *"For copyright information, please see the COPYRIGHT file."* and states LGPLv3 on line `4`. GitHub's sidebar names no licence either. A title-line classifier returns **nothing** here — a third failure mode after `p757`'s too-pessimistic and `p761`'s too-optimistic first lines |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 **`41.2k`** | 🔴 **GPL-3.0** · `35,149 B` · sha256₁₂ `3972dc9744f6` | **`develop`** (default) | The ERP base under Frappe HR. 🔴 **Its `master` branch carries a *different* payload** — `34,916 B` · `f333043685c8`. Same project, same licence family, two grants (`T597`) |
+| [`frappe/hrms`](https://github.com/frappe/hrms) (**Frappe HR**) | 🔴 **`9.0k`** | 🔴 **GPL-3.0** · `34,916 B` · sha256₁₂ `f333043685c8` | **`develop`** (default) ≡ `master` | 🟢 **The most complete free HRIS in the register** — employee records, leave, attendance and a built-in payroll engine in one app, and the closest open-source thing to a district HR system of record. 🔴 Byte-identical payload to `erpnext`'s `master`. 🔴 GPL-3.0: a district deployment is fine, a proprietary studio deliverable derived from it is not |
+| [`orangehrm/orangehrm`](https://github.com/orangehrm/orangehrm) | 🔴 **`1.2k`** | 🔴 **GPL-3.0** · `35,823 B` · sha256₁₂ `230184f60bae` | `main` (default) | Founded `2005` by Sujee Saparamadu; US-incorporated (Secaucus, NJ) with its **R&D centre in Colombo**. 🔴 **Open-core, and the gating is exactly where this register needs function**: the free Starter edition withholds external **API access**, **payroll connectors** and **advanced recruitment**. The integration surface is the paid tier |
+| [`horilla-opensource/horilla`](https://github.com/horilla-opensource/horilla) | 🟠 **`1.5k`** | 🟠 **LGPL-2.1** · `26,526 B` · sha256₁₂ `20c17d8b8c48` | **`2.0`** (default) ≡ `main` | 🟢 **The most favourable grant of any full HRIS here.** Weak copyleft, **no network clause** — a studio can link to it from proprietary code, which GPL-3.0 does not permit. Directory sources report it ships recruitment and performance modules that OrangeHRM reserves for its paid tier. 🟢 Default branch is `2.0`; its `main` payload is byte-identical, so the branch risk did not bite here |
+| [`opencats/OpenCATS`](https://github.com/opencats/OpenCATS) | 🟠 `781` | 🟠 **DUAL: MPL-2.0 + CATS Public License v1.1a** · `43,229 B` · sha256₁₂ `e012562b38ed` | `master` (default) | 🔵 **The only non-GPL-family record-holder in the register, and the only applicant tracking system in it.** Its payload opens *"This application is available under two licenses"*: OpenCATS code under **MPL-2.0**, and original 2007 'CATS Project' code under the **CATS Public License v1.1a, a modified Mozilla Public License**. 🟢 GitHub's sidebar names no licence — **correctly**, since no single SPDX identifier describes it (`ACTION p761-C` in its benign form). MPL-2.0's file-level copyleft is workable; the bespoke limb must be read before anything derived from that code ships |
+| [`kimai/kimai`](https://github.com/kimai/kimai) | 🔴 **`5.1k`** | 🔴 **AGPL-3.0** · `34,523 B` · sha256₁₂ `0d96a4ff68ad` | `main` (default) | The obvious time-tracking layer for substitute, paraprofessional and extra-duty hours. 🔴 Network copyleft — unusable behind a hosted deliverable |
+| [`Sentrifugo/sentrifugo`](https://github.com/Sentrifugo/sentrifugo) | 🔴 `8` | 🔴 **GPL-3.0** · `35,126 B` · sha256₁₂ `c3bc1fd94148` | `master` (default) | An HRMS that search results still name. `8` stars and `54` commits: **recorded so the next pass does not re-find it as a live option.** It is not one |
+
+### 🔴 The structural consequence, stated as the engagement constraint
+
+**There is no permissive HRIS.** Every engagement in this register takes one of two shapes:
+
+1. 🔴 **Deploy and customise a copyleft HRIS** — Frappe HR or Horilla. Legitimate, and the right answer when the client wants to own a system outright. The GPL obligations attach to the deliverable, so the commercial model is services, not licensed software. 🟢 **Horilla's LGPL-2.1 is the only grant here that permits linking from proprietary code.**
+2. 🟢 **Leave the record where it is and compose permissively around it.** The district's existing SIS/ERP/payroll stays the system of record; the Apache-2.0 solver estate and MIT intake components do the work; nothing copyleft enters the deliverable. **This is the only shape that preserves a proprietary artefact**, and it is what `P305`–`P310` are built on.
+
+### 🔵 The commercial layer this register has, and the open-source layer it does not
+
+🔴 **The absence worth naming: there is no open-source substitute-teacher absence-management system.** The function is served commercially — Frontline Education, ESS, Kelly Education, Edustaff all sell it, and Frontline's own `2026` K-12 Lens reports that districts using an absence/substitute management system reported substitute shortages **less** often (`18%`) than those on spreadsheets (`27%`) or paper (`30%`) — **a vendor-published figure, cited as such** (`ACTION p760-C`). The open-source shelf for that exact function is empty, and the Apache-2.0 rostering substrate that would fill it has been sitting under the name *timetabling* for hundreds of passes.
+
+🟢 **One public-sector platform, EMEA, national, and off GitHub.** Sweden's **Arbetsförmedlingen** publishes the **JobTech Taxonomy** — ESCO-compatible occupation and skills vocabulary, REST and GraphQL, documented as **EPL-2.0**, hosted on the **JobTechDev forge rather than GitHub**. It is the reference artefact for mapping teacher qualifications onto a labour-market taxonomy, and a GitHub-only probe records it as absent (`T602`, `ACTION p762-H`).
+
+
 ## 🆕 `p761` — **The system of record for school feeding does not exist as open source, and the agency that defines the sector publishes `9` repositories with `0` lines of school-feeding code. The education ERP every search returns is `LGPL-3.0` on both its own layer and its base, and the one CRM the research channel called Apache-2.0 is `EPL-2.0`.**
 
 **`8` platform rows · all licences byte-read.** The pattern of this tier is the one `p757` stated as a law — *measuring is permissive, holding the record is copyleft* — with one addition this register makes sharper: **for school feeding, the record is not even copyleft, it is closed.**

@@ -6,6 +6,46 @@ updated: 2026-11-11
 
 # Foundational Repositories — Education
 
+## 🆕 `p762` — **The permissive substrate for school workforce planning is the same Apache-2.0 solver estate these shelves already hold for timetabling — and the single most-cited repository in it, `google/or-tools`, carries a different licence payload on its default branch than the one this base has published for hundreds of passes.**
+
+**`9` permissive foundation rows, all byte-read, every row naming the branch it was read from.** The register is the school HR back office: recruitment, licensure, substitute staffing, payroll, position control. 🟢 **The optimisation half is permissive end to end and EMEA-authored.** 🔴 **The record half is copyleft without a single counter-example and is named separately in `verticals/solutions.md` so a studio does not reach for it by accident.**
+
+### 🔴 The licence finding of the pass: the grant depends on the branch
+
+| Repo | Default branch | Grant on **default** | Grant on guessed branch | Verdict |
+|---|---|---|---|---|
+| [`google/or-tools`](https://github.com/google/or-tools) | `stable` | 🟢 **Apache-2.0** · `11,358 B` · sha256₁₂ **`cfc7749b96f6`** — plain Apache text, **no bundled notices** | `main` → `45,765 B` · sha256₁₂ `b1282fbc0b7a` — Apache **plus bundled third-party notices** | 🔴 **DIFFERENT** |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop` | 🔴 **GPL-3.0** · `35,149 B` · sha256₁₂ **`3972dc9744f6`** — canonical GPLv3 full text | `master` → `34,916 B` · sha256₁₂ `f333043685c8` — GPL-3.0 with markdown title `### GNU GENERAL PUBLIC LICENSE` | 🔴 **DIFFERENT** |
+
+🔵 **What this corrects.** `p761` published or-tools as *"Apache-2.0 · `45,765 B` · `b1282fbc0b7a` (Apache text plus bundled third-party notices — read the tail before shipping a notices file)."* Those bytes are real, but they are `main`'s, and `main` is not the default branch. **A studio vendoring or-tools from the default branch receives a plain `11,358 B` Apache grant with no bundled notices.** Both readings are shelved with their branch named, because which governs depends on which branch is vendored. `2 / 8` default-branch checks disagreed — `25%` — and both hits were the largest repositories in the batch (`T597`, `ACTION p762-B`).
+
+### 🟢 The permissive substrate — `9` rows, all byte-read, `6` Apache-2.0 / `3` MIT
+
+| Repo | ★ | Licence (byte-read) | Branch read | What it is for in this register |
+|---|---|---|---|---|
+| [`google/or-tools`](https://github.com/google/or-tools) | 🟢 **`14.4k`** | 🟢 **Apache-2.0** · `11,358 B` · `cfc7749b96f6` | **`stable`** (default) | 🟢 **The component the whole register rests on.** CP-SAT solves substitute-to-vacancy assignment as a bipartite matching with certification, grade-band and seniority constraints; the same solver covers position control — which posts may be filled against which funded lines |
+| [`TimefoldAI/timefold-solver`](https://github.com/TimefoldAI/timefold-solver) | **`1.9k`** | 🟢 **Apache-2.0** · `11,358 B` · `cfc7749b96f6` | `main` (default) | 🟢 **Employee rostering as a first-class model.** Built by the original OptaPlanner team, forked `2023-04-20`. Models consecutive-shift limits, rest periods, skills and employee preferences as constraints — which is the substitute-coverage problem exactly |
+| [`TimefoldAI/timefold-quickstarts`](https://github.com/TimefoldAI/timefold-quickstarts) | `608` | 🟢 **Apache-2.0** · `11,357 B` · `c71d239df917` | **`stable`** (default) | 🟢 **The seam `ACTION p760-A` predicted, in one repository.** It ships **`use-cases/employee-scheduling`** *and* **`use-cases/school-timetabling`** side by side. These shelves held the second for `30`-plus mentions and never the first. Start here, not from the solver |
+| [`TimefoldAI/timefold-solver-python`](https://github.com/TimefoldAI/timefold-solver-python) | — | 🟢 **Apache-2.0** · `11,358 B` · `cfc7749b96f6` | `main` | The Python binding, for a data-science team that will not take a JVM dependency |
+| [`kiegroup/optaplanner`](https://github.com/kiegroup/optaplanner) | `501` | 🟢 **Apache-2.0** · `11,358 B` · `cfc7749b96f6` | `main` (default) | The predecessor, described on its own page as *"midstream of `apache/incubator-kie-optaplanner`"*. ⚠️ **Prefer Timefold for new work** — same team, active fork, byte-identical grant |
+| [`PyJobShop/PyJobShop`](https://github.com/PyJobShop/PyJobShop) | `181` | 🟢 **MIT** · `1,065 B` · `b0fe024ccdfc` | `cpmodelplus` ≡ `main` | Scheduling by constraint programming in Python, on CP-SAT. The lightest path to a working substitute-assignment model when the engagement is a proof, not a platform |
+| [`docling-project/docling`](https://github.com/docling-project/docling) | 🟢 **`70.4k`** | 🟢 **MIT** · `1,072 B` · `edb765d1e3e6` | `main` (default) | 🟢 **The permissive résumé and transcript intake step, and the reason the register does not need an AGPL parser.** These shelves already held it `48` times for document conversion; it is the same component, pointed at an application packet instead of a textbook |
+| [`srbhr/Resume-Matcher`](https://github.com/srbhr/Resume-Matcher) | **`29.2k`** | 🟢 **Apache-2.0** · `11,357 B` · `c71d239df917` | `main` (default) | ⚠️ **Candidate-side.** Shelved as a foundation only because it is the register's largest permissive artefact and the best available model of the application volume now arriving at a district (`T600`) |
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | `61` | 🟢 **Apache-2.0** · `13,185 B` · `ba1f153bdba3` | `develop` (default) ≡ `master` | Open Badges validation in Python — the verification step for teacher micro-credentials and PD completion, which is the one part of the licensure problem that has an open standard behind it |
+
+### 🟢 `ACTION p761-B` independently reproduced, and superseded
+
+The two canonical Apache-2.0 payloads `p761` recorded at `11,357 B` were both reproduced this pass from different repositories, with a corrected instrument: `c71d239df917` from `timefold-quickstarts` and `Resume-Matcher`, `b40930bbcf80` from `wfp/designsystem` (p761 control). `graphhopper/jsprit` reproduced `11,356 B` · `a31fce7e7096` exactly. 🟢 **`p761`'s constants are sound.**
+
+🔴 **But the framing was too narrow.** Six distinct Apache byte counts were measured this pass (`10,994` / `11,356` / `11,357` ×2 hashes / `11,358` / `13,185` / `45,765`), **and the MIT family does the same thing**: `1,065 B` holds two distinct payloads, `b0fe024ccdfc` (`PyJobShop`) and `f8e26bc469ae` (`AIHawk`). 🟢 **`ACTION p762-A`: never key a licence identity on a byte count, in any family.**
+
+### 🔴 `8` addresses returned no payload — and not one is published as a licence state
+
+`dssg/skills-ml` · `JobtechDev/jobtech-taxonomy-api` · `concentricsky/badgr-server` · `1EdTech/badgr-server` · `icehrm/icehrm` · `sahasourav17/ResuMate` · `timefold/timefold-solver-python` · `gchq/stroom` — each probed across `13` licence paths × `3` branches = `39` points, `312` probes in total, no payload.
+
+🔵 **Per `ACTION p761-C` and `p761-D` part 4, that is a statement about this probe and not about those repositories.** One is already explained: **Sweden's JobTech Taxonomy is `EPL-2.0` and hosted on the JobTechDev forge, not GitHub** — a GitHub-only probe reports a false absence for a national authority's artefact (`T602`, `ACTION p762-H`). Several of the rest are probably renames: `dssg/skills-ml` resolves at `workforce-data-initiative/skills-ml`, and `timefold/timefold-solver-python` at `TimefoldAI/timefold-solver-python`. **A wrong address is not a missing grant.**
+
+
 ## 🆕 `p761` — **The routing and optimisation substrate for student transport and school feeding is permissive all the way down — `Apache-2.0`, `BSD-2-Clause`, `MIT` — and it has been on these shelves for hundreds of passes under the name "timetabling". Two of this pass's own "no grant" verdicts were false, both on the highest-starred repositories in the batch.**
 
 **`9` permissive foundation rows, all byte-read.** This is the most favourable substrate tier this register could have: every component a district routing engagement or a national school-feeding MIS needs is permissive, maintained, and pushed within four days of this pass. The copyleft components are named separately below so a studio does not reach for them by accident.

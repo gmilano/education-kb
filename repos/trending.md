@@ -4,6 +4,75 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p762) — **`google/or-tools` carries a different licence payload on its default branch than the one this base has published for hundreds of passes, and `frappe/erpnext` does the same thing. `2 / 8` default-branch checks disagreed, both on the largest repositories in the batch. And the equal-size-different-hash property `p761` found in Apache turns out to hold in MIT too.**
+
+**`9` permissive foundation rows · `8` platform rows · `35` addresses resolved · `35` licence payloads byte-read with length and sha256₁₂ · `312` exhaustive probes across `8` no-payload addresses, none published as a licence state · `2` p761 controls reproduced exactly · `2026-11-11`.**
+
+### 🔴 The finding of the pass: the grant depends on the branch
+
+`ACTION p761-D` part 2 asked for `default_branch` rather than a guess. `api.github.com` is **`403`** at this tunnel, so `default_branch` was taken from the rendered page instead (page-sourced, labelled as such). It fired twice in eight checks.
+
+| Repo | ★ | Default branch | Grant on **default** | Guessed | Grant there | Same? |
+|---|---|---|---|---|---|---|
+| [`google/or-tools`](https://github.com/google/or-tools) | **`14.4k`** | `stable` | 🟢 **Apache-2.0 · `11,358 B` · `cfc7749b96f6`** | `main` | `45,765 B` · `b1282fbc0b7a` (Apache **+ bundled notices**) | 🔴 **NO** |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | **`41.2k`** | `develop` | 🔴 **GPL-3.0 · `35,149 B` · `3972dc9744f6`** (canonical GPLv3) | `master` | `34,916 B` · `f333043685c8` | 🔴 **NO** |
+| [`frappe/hrms`](https://github.com/frappe/hrms) | `9.0k` | `develop` | GPL-3.0 · `34,916 B` · `f333043685c8` | `master` | identical | 🟢 same |
+| [`odoo/odoo`](https://github.com/odoo/odoo) | `55.7k` | `20.0` | LGPL-3.0 · `43,529 B` · `abc09dad5f84` | `master` | identical | 🟢 same |
+| [`horilla-opensource/horilla`](https://github.com/horilla-opensource/horilla) | `1.5k` | `2.0` | LGPL-2.1 · `26,526 B` · `20c17d8b8c48` | `main` | identical | 🟢 same |
+| [`TimefoldAI/timefold-quickstarts`](https://github.com/TimefoldAI/timefold-quickstarts) | `608` | `stable` | Apache-2.0 · `11,357 B` · `c71d239df917` | `main` | identical | 🟢 same |
+| [`PyJobShop/PyJobShop`](https://github.com/PyJobShop/PyJobShop) | `181` | `cpmodelplus` | MIT · `1,065 B` · `b0fe024ccdfc` | `main` | identical | 🟢 same |
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | `61` | `develop` | Apache-2.0 · `13,185 B` · `ba1f153bdba3` | `master` | identical | 🟢 same |
+
+🔵 **`p761` published or-tools' `main` payload with the advice "read the tail before shipping a notices file."** Real bytes, non-default branch. A studio vendoring from the default branch gets a plain Apache grant and no notices file to ship. Both readings now sit on the shelves with their branch named. `T597`, `ACTION p762-B` — **re-read every published row above ~`1,000★`**.
+
+### 🟢 The permissive substrate, by what it does in this register
+
+| Repo | ★ | Licence (byte-read, default branch) | Role |
+|---|---|---|---|
+| [`google/or-tools`](https://github.com/google/or-tools) | **`14.4k`** | 🟢 Apache-2.0 · `11,358 B` · `cfc7749b96f6` · `stable` | CP-SAT → substitute-to-vacancy matching and position control against funded lines |
+| [`TimefoldAI/timefold-solver`](https://github.com/TimefoldAI/timefold-solver) | `1.9k` | 🟢 Apache-2.0 · `11,358 B` · `cfc7749b96f6` · `main` | Employee rostering as a first-class model: consecutive-shift limits, rest, skills, preferences. Original OptaPlanner team, forked `2023-04-20` |
+| [`TimefoldAI/timefold-quickstarts`](https://github.com/TimefoldAI/timefold-quickstarts) | `608` | 🟢 Apache-2.0 · `11,357 B` · `c71d239df917` · `stable` | 🟢 **Ships `use-cases/employee-scheduling` AND `use-cases/school-timetabling` in one repository** — the seam `ACTION p760-A` predicted, in a single dependency |
+| [`TimefoldAI/timefold-solver-python`](https://github.com/TimefoldAI/timefold-solver-python) | — | 🟢 Apache-2.0 · `11,358 B` · `cfc7749b96f6` · `main` | Python binding, for teams that will not take a JVM |
+| [`kiegroup/optaplanner`](https://github.com/kiegroup/optaplanner) | `501` | 🟢 Apache-2.0 · `11,358 B` · `cfc7749b96f6` · `main` | Predecessor, *"midstream of `apache/incubator-kie-optaplanner"*. ⚠️ Prefer Timefold |
+| [`PyJobShop/PyJobShop`](https://github.com/PyJobShop/PyJobShop) | `181` | 🟢 MIT · `1,065 B` · `b0fe024ccdfc` | CP in Python on CP-SAT — lightest path to a working model |
+| [`docling-project/docling`](https://github.com/docling-project/docling) | 🟢 **`70.4k`** | 🟢 MIT · `1,072 B` · `edb765d1e3e6` · `main` | 🟢 **The permissive application-packet intake, and the reason this register needs no AGPL résumé parser** |
+| [`srbhr/Resume-Matcher`](https://github.com/srbhr/Resume-Matcher) | **`29.2k`** | 🟢 Apache-2.0 · `11,357 B` · `c71d239df917` · `main` | ⚠️ **Candidate-side** — the best model of what arrives in a district inbox, not a screening tool |
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | `61` | 🟢 Apache-2.0 · `13,185 B` · `ba1f153bdba3` · `develop` | Open Badges validation → teacher micro-credential and PD verification |
+
+### 🔴 The record layer, and there is no permissive member of it
+
+[`odoo/odoo`](https://github.com/odoo/odoo) `55.7k★` **LGPL-3.0** (`43,529 B` · `abc09dad5f84`) · [`frappe/erpnext`](https://github.com/frappe/erpnext) `41.2k★` **GPL-3.0** (`35,149 B` · `3972dc9744f6`) · [`frappe/hrms`](https://github.com/frappe/hrms) `9.0k★` **GPL-3.0** (`34,916 B` · `f333043685c8`) · [`kimai/kimai`](https://github.com/kimai/kimai) `5.1k★` **AGPL-3.0** (`34,523 B` · `0d96a4ff68ad`) · [`horilla-opensource/horilla`](https://github.com/horilla-opensource/horilla) `1.5k★` **LGPL-2.1** (`26,526 B` · `20c17d8b8c48`) · [`orangehrm/orangehrm`](https://github.com/orangehrm/orangehrm) `1.2k★` **GPL-3.0** (`35,823 B` · `230184f60bae`) · [`opencats/OpenCATS`](https://github.com/opencats/OpenCATS) `781★` **dual MPL-2.0 + CATS Public License v1.1a** (`43,229 B` · `e012562b38ed`) · [`Sentrifugo/sentrifugo`](https://github.com/Sentrifugo/sentrifugo) `8★` **GPL-3.0** (`35,126 B` · `c3bc1fd94148`).
+
+🟢 **Horilla's LGPL-2.1 is the only grant in the tier that permits linking from proprietary code.** 🔵 **OpenCATS is the only non-GPL-family record-holder and is not simply MPL** — its payload opens *"This application is available under two licenses"*, the second being a **modified Mozilla Public License from 2007**. GitHub names no licence for it, correctly: no single SPDX identifier fits. `T599`.
+
+### 🟢 Equal size is not identity — `p761`'s finding reproduced, and generalised past Apache
+
+| Bytes | sha256₁₂ | Reproduced from |
+|---|---|---|
+| `11,357` | `c71d239df917` | `timefold-quickstarts`, `Resume-Matcher` |
+| `11,357` | `b40930bbcf80` | `wfp/designsystem` — **p761 control, reproduced exactly** |
+| `11,358` | `cfc7749b96f6` | `timefold-solver`, `timefold-solver-python`, `optaplanner` |
+| `11,356` | `a31fce7e7096` | `graphhopper/jsprit` — **p761 control, reproduced exactly** |
+| `10,994` | `8ee88f8a4931` | `aadya940/autoresume` |
+| `13,185` | `ba1f153bdba3` | `1EdTech/openbadges-validator-core` |
+| 🟢 **`1,065`** | 🟢 **`b0fe024ccdfc`** | `PyJobShop/PyJobShop` — **MIT** |
+| 🟢 **`1,065`** | 🟢 **`f8e26bc469ae`** | `feder-cr/Jobs_Applier_AI_Agent_AIHawk` — **MIT, different payload at the same size** |
+
+🟢 **`ACTION p762-A` supersedes `ACTION p761-B`:** the property is not Apache's. Six Apache byte counts and two distinct MIT payloads at one byte count, in a single pass. **Never key a licence identity on a byte count, in any family.** `T596`.
+
+### 🔴 This pass's own instrument defect, and why `p761` is vindicated by it
+
+The first-cut probe read payloads through `$(command substitution)` and so **stripped trailing newlines**: every payload ending in `\n` came back one byte short with a sha256 no file on disk reproduces. The contradiction that caught it was `p761`'s own published constant — stripped read `11,357 B`/`58d1e17ffe51` for `timefold-solver` against `p761`'s `11,358 B`/`cfc7749b96f6`. Measuring the file reproduced `p761` exactly. 🟢 `ACTION p762-D`. `T595`.
+
+### 🔴 `8` no-payload addresses, and not one is a published licence absence
+
+`dssg/skills-ml` · `JobtechDev/jobtech-taxonomy-api` · `concentricsky/badgr-server` · `1EdTech/badgr-server` · `icehrm/icehrm` · `sahasourav17/ResuMate` · `timefold/timefold-solver-python` · `gchq/stroom` — `13` paths × `3` branches each, `312` probes.
+
+🟢 **One already explained and it is a channel defect, not a supply nil:** **Sweden's Arbetsförmedlingen** publishes the **JobTech Taxonomy** (ESCO-compatible, REST + GraphQL) documented as **EPL-2.0** and hosted on the **JobTechDev forge, not GitHub**. 🔵 Two more are renames — `workforce-data-initiative/skills-ml` and `TimefoldAI/timefold-solver-python` both resolve. **A wrong address is not a missing grant.** `T602`, `ACTION p762-H`.
+
+---
+
+
 ## 🆕 2026-11-11 (p761) — **The routing substrate for both halves of this register is `Apache-2.0`, `BSD-2-Clause` and `MIT`, and it was already on these shelves under another name. Two of this pass's own "no grant" verdicts were false, both on the largest repositories in the batch. And the canonical Apache constant this base has published for hundreds of passes is not unique at its byte count.**
 
 **`9` permissive foundation rows · `7` platform rows · `44` addresses resolved · `408` licence-path probes · `37` licence payloads byte-read `2026-11-11`.**
