@@ -4,6 +4,57 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p761) — **The two biggest operational budgets in any school system have an agent layer of three MIT repositories, none above `2★`. The one purpose-built school-transport agent is unlicensed and was pushed yesterday. And a licence payload titled `MIT License` opens by forbidding consulting fees.**
+
+**Register: student transport and school feeding — routing, ridership, eligibility, menu planning, commodity flow** · `3` agent rows filed, `4` refusals named · `44` addresses resolved · `408` licence-path probes · **`37` licence payloads byte-read** · `5` index values corrected, `5 / 5` from `NOASSERTION` toward a knowable grant · `2` of this pass's own `10` "no grant" verdicts refuted by its own follow-up · `T583`–`T592`.
+
+### The week's shelving finding: `ACTION p760-A` fired on the first register it was pointed at
+
+Counted across these eight shelves before this pass: `OR-Tools` **`36`** mentions · `Timefold` **`30`** · `optaplanner` **`11`** · `valhalla` **`10`** · `OSRM` **`9`** · `VROOM` **`6`** — against `school bus` **`1`** · `vehicle routing` **`2`** · `school meal` **`2`** · `school feeding` **`0`** · `WFP` **`0`** · `World Food Programme` **`0`** · `PNAE` **`0`** · `cold chain` **`0`**.
+
+The solver substrate was shelved under **timetabling** and the two buyers whose procurement is defined by it — a district transport department and a national school-feeding programme — were never asked for. `ACTION p760-A` was adopted last pass as a rule; this is its first discharge, and it found a `0`-mention sector carrying `US$84 billion` of annual government spending (`T583`).
+
+### 🔴 The week's licence story: the Commons Clause has reached the school-nutrition layer
+
+[`satryayogapratama-ux/giziiq`](https://github.com/satryayogapratama-ux/giziiq) — AI menu generation for **Indonesia's MBG programme**, the register's only APAC artefact — is indexed `NOASSERTION`. Byte-read: `2,219 B`, sha256₁₂ `fb74fe065a59`. Its grep-detectable title line is `MIT License`; it states `License: MIT` in plain text; and **its first 18 lines are `Commons Clause License Condition v1.0`**, which withholds the right to *Sell*, defined to include *"fees for hosting or consulting/support services related to the Software."*
+
+🔴 **The withheld right is the integrator's business model, named in the licence text.** 🟢 **The detector is the byte count: the `11` MIT payloads byte-read this pass measure `1,057`–`1,099 B`, and this one is `2,219 B`.** `ACTION p761-A`: an `MIT` title line on a payload outside the measured MIT band must be read in full. This is the mirror image of `p757`'s `T526` — there the title line was too pessimistic, here too optimistic, and the same classifier is fooled by both (`T585`).
+
+### 🔴 The week's agent-supply measurement
+
+| Probe | `total_count` | Best permissive maintained result |
+|---|---|---|
+| `school bus MCP server` | `2` | **none** |
+| `school attendance agent llm` | `0` | — |
+| `student ridership bus tracking` | `0` | — |
+| `vehicle routing LLM agent` | `9` | `2★` MIT |
+| `school menu nutrition planning` | `2` | both refused |
+| `menu planning optimization linear programming` | `1` | `0★` MIT |
+
+**Three permissive rows exist. Three are filed.** [`gjd12345/Agent_EOH`](https://github.com/gjd12345/Agent_EOH) (MIT `1,057 B` `7720014ff3c9`, `2★`) evolves CVRP heuristics; [`Eashwar-S/Routing_agent`](https://github.com/Eashwar-S/Routing_agent) (MIT `1,077 B` `ab04ed0fce54`, `0★`) is a worked example of the model/solver tool boundary; [`haiiibin/nutrition-planning-optimization`](https://github.com/haiiibin/nutrition-planning-optimization) (MIT `1,066 B` `a19dee7c5a49`, `0★`) is the only permissive menu-optimisation artefact found anywhere.
+
+### 🔴 The one purpose-built school-transport agent on GitHub, and it has no grant
+
+[`chrischall/alphaportal-mcp`](https://github.com/chrischall/alphaportal-mcp) — `0★`, **no grant at `81` probed paths**, pushed `2026-11-10`, README alive. An MCP server over **AlphaPortal / AlphaRoute**, the proprietary parent-guardian transport portal; its own README names **Charlotte-Mecklenburg Schools** (`cmsnc.alphaportal.app`). It exposes live bus GPS, assigned stops and arrival notifications, plus confirm-gated writes to notification preferences and walk-zone radius, and states *"Developed and maintained by AI."*
+
+🔵 **Filed as market intelligence rather than as a starting point**: its existence is evidence that a district transport portal has a reachable private API and no public one — the same evidentiary shape as `p760`'s `monarch-studentaid-sync` row for `StudentAid.gov`. Expect browser- or private-API-driven integration in any North America transport engagement, and expect the vendor to own the data path (`T584`).
+
+### 🔴 The week's discovery-channel defect: a copypasta corpus owns these queries
+
+[`danderfer/Comp_Sci_Sem_2`](https://github.com/danderfer/Comp_Sci_Sem_2) — `223★`, no grant, cold since `2023-04-03`, description is the Bee Movie script — returned as the **`#1` result by stars for three unrelated register queries this pass**: `school bus routing`, `school feeding`, and `school cafeteria point of sale`. On the third, **`7` of the top `10` results are copies of the same text**.
+
+🔴 **Consequence: `total_count` on a plain-language multi-word query is not a supply denominator.** `school feeding` reports `total_count=348`; the on-register count in its top `12` by stars is `3`. 🟢 **`ACTION p761-E`: no pass may publish a `total_count` from a plain-language multi-word query as a measurement of supply.** This matters retrospectively — these shelves carry published denominators of exactly that provenance (`T592`).
+
+### 🟢 The mandated trending leg, verified
+
+| Repo | ★ | Licence (byte-read) | Pushed | Note |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **`58,085`** | 🟢 Apache-2.0 · `11,408 B` · `cd2f54e1e506` | `2026-11-07` | 🔵 **Currency repair, not a discovery** — `intel/market.md` carries this at `55k★`; re-measured `+3k`, licence now byte-read rather than index-read |
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | `65` | 🟢 MIT · `1,078 B` · `4d5d987f4f89` | `2026-09-19` | Local-first teaching assistant producing **editable** lesson drafts. The editability is the transferable property |
+| [`geekjourneyx/interactive-learning`](https://github.com/geekjourneyx/interactive-learning) | `51` | 🟢 MIT · `1,069 B` · `02b7dc1969f4` | `2026-04-10` | Named by the leg via Trendshift. Description is one word (`interactive-learning`); 🔵 **shelved as licensed-and-unassessed, not as a recommendation** |
+| 🔴 [`TapXWorld/ChinaTextbook`](https://github.com/TapXWorld/ChinaTextbook) | 🔴 **`84,351`** | 🔴 **no grant at `81` probed paths** | `2026-10-26` | 🔴 **Not shelved.** A corpus of school and university textbook PDFs, not code — and a missing grant on a *content* repository is a copyright question about the textbooks. Do not let a star count carry an ingestion decision (`T586`) |
+
+
 ## 🆕 2026-11-11 (p760) — 🔴 **THIS BASE HAS HELD THE ANSWER TO THE EDUCATION-IN-EMERGENCIES REGISTER FOR HUNDREDS OF PASSES AND HAS NEVER ONCE HELD THE QUESTION. 🔴 THE AGENT LAYER IS A TRUE ZERO, AND THE AGENCIES THAT DEFINE THE SECTOR PUBLISH `25` REPOSITORIES WITH `0` EDUCATION CODE BETWEEN THEM.**
 
 **Register: education in emergencies — crisis-affected, refugee and internally displaced learners** · `6` agent rows (`1` shelvable, `1` warning, `4` refusals) · `10` foundation rows · `16` addresses probed · **`16` licence payloads byte-read** · `4` addresses confirmed live with **no grant at all** · `1` four-way licence composite resolved · `1` grant found in a `README` rather than a licence file · `2` rows novel at `0` prior mentions · `4` regional legs run · `5` region blocks written · `T566`–`T582` declared.

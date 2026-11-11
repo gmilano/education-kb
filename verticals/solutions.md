@@ -5,6 +5,86 @@ updated: 2026-11-11
 ---
 
 # Vertical Platforms — Education
+
+## 🆕 `p761` — **The system of record for school feeding does not exist as open source, and the agency that defines the sector publishes `9` repositories with `0` lines of school-feeding code. The education ERP every search returns is `LGPL-3.0` on both its own layer and its base, and the one CRM the research channel called Apache-2.0 is `EPL-2.0`.**
+
+**`8` platform rows · all licences byte-read.** The pattern of this tier is the one `p757` stated as a law — *measuring is permissive, holding the record is copyleft* — with one addition this register makes sharper: **for school feeding, the record is not even copyleft, it is closed.**
+
+### 🔴 WFP publishes `9` repositories and none of them is school feeding
+
+The World Food Programme hosts the School Meals Coalition and runs **School Connect**, its standard school-feeding monitoring platform — enrolment, attendance, food deliveries, stock movement, meals served — deployed across all `500+` WFP programme schools in Burundi with pilots in Niger and South Sudan. It is not on GitHub. The whole `wfp` organisation, measured this pass:
+
+| Repo | ★ | Licence (byte-read / index) | What it is |
+|---|---|---|---|
+| [`wfp/designsystem`](https://github.com/wfp/designsystem) | `233` | 🟢 **Apache-2.0** · `11,357 B` · sha256₁₂ **`b40930bbcf80`** | 🟢 **The one genuinely reusable WFP artefact**, and the single most useful thing in this row for an engagement: a UI kit a WFP country office already recognises. ⚠️ Cold since `2024-04-12`. 🔴 **Its payload is `T590` — see below** |
+| [`wfp/surveydesigner`](https://github.com/wfp/surveydesigner) | `6` | 🔴 **AGPL-3.0** · `34,273 B` · sha256₁₂ `5132c7f0475b` | Live (`2026-11-10`), no description, network copyleft |
+| [`wfp/common-identifier-application`](https://github.com/wfp/common-identifier-application) and 2 sibling repositories | `3` / `2` / `1` | 🔴 **AGPL-3.0** | Pseudonymous identifiers from tabular data — beneficiary deduplication. On-mission, and the licence makes it a reciprocity decision |
+| `wfp/ui-assets`, `wfp/ui-design-kit` | `3` / `5` | 🔴 index `NONE` | Asset repositories, no grant, cold since 2018/2021 |
+| `wfp/ui-reactjs` | `4` | MIT | Cold since `2018-06-27`. Superseded by `designsystem` |
+
+🔴 **`0` of `9` is school feeding.** This reproduces `p760`'s finding about UNHCR and Education Cannot Wait — `25` repositories, `0` education code — on a second agency in a second sector. 🔵 **The generalisation, and it is now two independent observations: a multilateral agency open-sources its *presentation and identity* layers and keeps its *programme* system closed.** Plan every national-programme engagement on the assumption that the MIS is a procurement, not a fork (`T591`).
+
+### 🔴 The mandated ERP/CRM leg, measured against what it claimed
+
+The mandated `open source platform {industry} ERP CRM MIT Apache` leg returned four assertions. Three were checked by byte-read; **one is false**.
+
+| Platform | The leg said | Byte-read | Verdict |
+|---|---|---|---|
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) (**Huly**) | *"fully open-source under the Apache License 2.0"* | 🔴 **`Eclipse Public License` v2.0** · `14,197 B` · sha256₁₂ `8c349f80764d` · `28,087★` | 🔴 **FALSE.** EPL-2.0 is a weak-copyleft licence with a **source-availability obligation on modified files** and a secondary-licence (GPL-2.0) compatibility clause. Usable, and **not** the permission set "Apache 2.0" implies to a studio reading a one-line summary |
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | *"fully open-source under the MIT license"* | 🟢 **MIT** · `1,078 B` · sha256₁₂ `a76aa4a4405c` · `24,134★`, pushed `2026-11-09` | 🟢 **CONFIRMED.** The only permissive CRM in the leg's answer, and the right starting point for an admissions or family-engagement CRM |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | *"GPL v3, so it doesn't meet the MIT or Apache requirement"* | 🟢 **GPL-3.0** (`35,149 B`, `3972dc9744f6`, at `develop/license.txt`) · `41,172★` | 🟢 **CONFIRMED** — though the leg could not have known it, since the grant sits at a path no standard probe reads (`T589`) |
+| [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | *"the main education-specific option … the results don't name its license"* | 🔴 **LGPL-3.0** · `8,241 B` · sha256₁₂ `528f84036800` · `910★`, pushed `2026-11-02` · index says `NOASSERTION` | 🔴 **The answer the leg could not give, and it is copyleft.** Weak copyleft: dynamic linking is fine, folding modules into a proprietary artefact is not |
+| [`odoo/odoo`](https://github.com/odoo/odoo) | *"the framework underneath OpenEduCat … the results don't state its license"* | 🔴 **LGPL-3.0** · `43,529 B` · sha256₁₂ `abc09dad5f84` · `55,704★` · index says `NOASSERTION` | 🔴 **Copyleft on the base layer too.** 🔵 The education ERP stack every search points at is LGPL-3.0 **twice over** — and `NOASSERTION` on both layers, so a checklist driven by GitHub's badge sees nothing at all |
+
+### 🟢 The school-operations platform tier that does exist, and is permissive
+
+| Platform | Repo | Licence (byte-read) | ★ | Region | Why it is the row |
+|---|---|---|---|---|---|
+| **MealsCount** | [`opensandiego/mealscount-backend`](https://github.com/opensandiego/mealscount-backend) | 🟢 **MIT** · `1,099 B` · sha256₁₂ `055bc6af65c1` | `14` | 🟢 **North America** (Open San Diego, a Code for America brigade) | 🟢 **The find of this tier.** Optimises a district's grouping of schools under the US **Community Eligibility Provision** so the federal free-meal reimbursement is maximised. This is a *money* problem with a published optimiser and `14` stars. ⚠️ Cold since `2025-09-26`; the CEP rules change, so the rule layer needs a date check before any proposal |
+| **MealsCount (frontend)** | [`opensandiego/mealscount`](https://github.com/opensandiego/mealscount) | 🟢 **MIT** · byte-identical to the backend (`1,099 B`, `055bc6af65c1`) | — | 🟢 **North America** | 🔴 **Invisible to the search channel**: `repo:opensandiego/mealscount` returns `Validation Failed`, while `raw.githubusercontent.com` serves it `200`. `p757`'s rule holds a second time — *existence on the raw channel, popularity on the search channel, never one for the other* |
+| **School Bus Transport Management System** | [`neozhu/schoolbus`](https://github.com/neozhu/schoolbus) | 🟢 **MIT** · `1,069 B` · sha256₁₂ `cef9b516873e` | `24` | 🔵 unplaced | 🟢 **The highest-starred permissive school-transport *platform* in existence.** An actual management application — routes, vehicles, drivers, students — not a solver demo. ⚠️ Cold since `2024-10-11`, and it carries **no optimiser**: it is the CRUD and the schema, which is the half a studio least wants to write |
+| **ODK Central + Collect** | [`getodk/central`](https://github.com/getodk/central) · [`getodk/collect`](https://github.com/getodk/collect) | 🟢 **Apache-2.0** · `10,494 B` · `d1ee81266b96` (identical on both) | `232` / `804` | 🟢 **Global** | The school-level collection layer for any national feeding programme. Offline-first, and already the channel in use — Sierra Leone's EU/WFP school-meals data programme is introducing ODK alongside School Connect |
+| **Ajuda Conselheiro** | [`fga-eps-mds/2017.2-AjudaConselheiro-Frontend`](https://github.com/fga-eps-mds/2017.2-AjudaConselheiro-Frontend) | 🔴 **GPL-3.0** · `35,121 B` · sha256₁₂ `e1c0ad728983` | `5` | 🟢 **LATAM** (Brazil — Universidade de Brasília, EPS/MDS course) | 🔴 **The only artefact on earth built for a PNAE *Conselho de Alimentação Escolar*** — the school-feeding council that is legally the oversight body for Brazil's `R$ 6.7` billion programme. `5★`, GPL-3.0, and **cold since `2018-09-07`**. 🔵 **Rebuild, do not fork**: the value is that it proves the user exists and names the workflow, not the code |
+| **Canteen / dining operations** | [`justpiple/school-canteen-api`](https://github.com/justpiple/school-canteen-api) | 🟢 **MIT** · `1,077 B` · sha256₁₂ `44fd2d9c7890` | `2` | 🔵 unplaced (Indonesia-authored) | Ordering and stock for a school canteen. `2★`, cold since `2025-05-02`. Named because the whole canteen tier measured `112` results with **no permissive maintained entry above `2★`** |
+| 🔴 **Refused: SMEIC** | [`pixnpatch/SMEIC`](https://github.com/pixnpatch/SMEIC) | 🔴 **no grant at `81` probed paths** | `10` | — | The highest-starred canteen-operations application in the tier, role-based and live (`2026-07-29`), and it has no licence |
+
+### 🟢 `T590` — the base's canonical Apache-2.0 constant is not unique at its byte count
+
+These shelves have published, for hundreds of passes, that a canonical `Apache-2.0` payload is **`11,357 B` with sha256₁₂ `c71d239df917`**. Measured this pass:
+
+| Payload | Bytes | sha256₁₂ |
+|---|---|---|
+| [`assafelovic/gpt-researcher`](https://github.com/assafelovic/gpt-researcher)`/master/LICENSE` (the base's own constant, re-fetched) | `11,357` | `c71d239df917` |
+| [`wfp/designsystem`](https://github.com/wfp/designsystem)`/master/LICENSE` | `11,357` | **`b40930bbcf80`** |
+
+`diff` between them is **exactly two lines**, both inside the APPENDIX boilerplate instructions:
+
+```
+181c181
+<       boilerplate notice, with the fields enclosed by brackets "[]"
+>       boilerplate notice, with the fields enclosed by brackets "{}"
+189c189
+<    Copyright [yyyy] [name of copyright owner]
+>    Copyright {yyyy} {name of copyright owner}
+```
+
+Both are **verbatim Apache License 2.0**. The `{}` form is the older-formatting distribution of the identical text, and because `[`→`{` is a one-for-one character substitution **the byte count is identical**.
+
+🔴 **Consequence: any gate that treats `11,357 B` as implying `c71d239df917`, or that refuses a payload because its hash is not the recorded constant, falsely refuses a verbatim Apache-2.0 grant.** 🟢 **`ACTION p761-B`: record two canonical Apache-2.0 families — the `[]` form (`c71d239df917`) and the `{}` form (`b40930bbcf80`) — and never treat a size match as a hash match.** The wider reading: the Apache band measured this pass spans `10,494` / `11,356` / `11,357` (two hashes) / `11,358` / `11,359` / `11,408` / `45,765 B` across **seven** projects, all genuinely Apache-2.0. **The byte count is a triage signal, never an identity.**
+
+### 🔴 `T588` — `NOASSERTION` with every obvious explanation excluded
+
+| | `getodk/collect` | `getodk/central` |
+|---|---|---|
+| Organisation | `getodk` | `getodk` |
+| `default_branch` | `master` | `master` |
+| Licence filename at root | `LICENSE.md` (only; `LICENSE`, `NOTICE`, `COPYING` all `404`) | `LICENSE.md` (only) |
+| Payload | `10,494 B` · sha256₁₂ `d1ee81266b96` | `10,494 B` · sha256₁₂ `d1ee81266b96` — **byte-identical** |
+| Fork | `false` | `false` |
+| 🔴 **Index verdict** | 🔴 **`NOASSERTION`** | 🟢 **`Apache-2.0`** |
+
+Same organisation, same default branch, same filename, same bytes, neither a fork — **two different index verdicts**. The cause was not determined and is not guessed at here. 🟢 **`ACTION p761-C`: `NOASSERTION` is a statement about the index, never about the repository, and no pass may publish it as a licence state.** This base has corrected `NOASSERTION` toward a knowable grant many times; `T588` is the measurement that shows the index can be wrong *while being right about the identical bytes next door*.
+
 ## 🆕 `p760` — 🟢 **THE SYSTEM OF RECORD FOR CRISIS EDUCATION IS `MIT`, WHICH MAKES THIS THE MOST FAVOURABLE PLATFORM TIER THIS BASE HAS MEASURED. 🔴 BUT ITS PREDECESSOR IS A FOUR-WAY LICENCE COMPOSITE WHOSE *CONTENT* IS NON-COMMERCIAL, AND THE APPLIANCE EVERY FIELD DEPLOYMENT RUNS ON IS `GPL-2.0`.**
 
 **`5` platform rows, every grant byte-read `2026-11-11`** at ref `HEAD` with length and sha256₁₂. 🟢 **Two of the five are genuine starting points and both are `MIT`** — the first time on these shelves that the register's *system of record* has been permissive rather than the exception to it. 🔴 **Two are filed as warnings and one as a refusal, and in every case the reason is the licence.**

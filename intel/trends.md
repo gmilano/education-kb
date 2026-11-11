@@ -4,6 +4,94 @@ region: Global
 updated: 2026-11-11
 ---
 
+# 🆕 Trends new at `p761` (researched 2026-11-11) — `T583`–`T592`
+
+**The register is student transport and school feeding — the two largest operational line items in a school system's budget.** The governing finding is about this base rather than about a market, for the second consecutive pass and in the same shape: the solver substrate that is the entire technical content of both halves has been on these shelves for hundreds of passes under the name *timetabling*, while the buyers whose procurement is defined by it appeared `1` and `0` times. `ACTION p760-A` was adopted last pass as a rule and this is its first discharge.
+
+**A note on form, stated once.** This section is written in plain declarative prose with the same structural conventions the shelves use — pass id, byte-read licence cells, region placement, `T` tokens, `ACTION` tokens. The emphasis conventions are used where they carry information (🔴 a refusal or a defect, 🟢 a usable finding, 🔵 a reading or a reclassification) and not as a register of voice. Nothing about the measurement discipline changes.
+
+## `T583` — the substrate/buyer seam, stated as a law
+
+A technical substrate shelved under the property it satisfies will not be found by anyone searching for the buyer whose procurement is defined by that property. Measured on these eight shelves before this pass: `OR-Tools` `36` mentions, `Timefold` `30`, `optaplanner` `11`, `valhalla` `10`, `OSRM` `9`, `VROOM` `6` — against `school bus` `1`, `vehicle routing` `2`, `school meal` `2`, `school feeding` `0`, `WFP` `0`, `PNAE` `0`, `cold chain` `0`.
+
+The buyers so missed: a US school-district transportation department with `~21,000` unfilled driver posts and routing software as its **top** technology spending line, and the national school-feeding programmes that spent **`US$84` billion** of government money in 2024 reaching **`466` million** children across **`107`** countries. 🔵 **The seam is not an absence of research. It is an index built on the wrong key**, and `ACTION p760-A` is the correct repair — this pass confirms it works on the first register it was pointed at.
+
+## `T584` — the vendor-portal MCP server as an evidence class
+
+[`chrischall/alphaportal-mcp`](https://github.com/chrischall/alphaportal-mcp) is the only purpose-built school-transport agent on GitHub (`school bus MCP server` → `total_count=2`, and the other hit is unrelated). It is `0★`, carries **no grant at `81` probed paths**, was pushed `2026-11-10`, and states *"Developed and maintained by AI."* It wraps **AlphaPortal / AlphaRoute**, a proprietary parent-guardian portal, naming **Charlotte-Mecklenburg Schools** in its own README.
+
+🔵 **The generalisation, and it is now the second instance:** an unlicensed one-person MCP wrapper over a vendor portal is **evidence about the data path**, not a component. `p760` filed `monarch-studentaid-sync` the same way and read the same conclusion — the institution's portal has a reachable private API and no public one. **When the only agent for a register is such a wrapper, the register's integration risk is vendor data ownership, and that belongs in the proposal's risk section before anything is built.**
+
+## `T585` — a licence whose title says `MIT` and whose first clause forbids the delivery model
+
+[`satryayogapratama-ux/giziiq`](https://github.com/satryayogapratama-ux/giziiq) — AI menu generation for Indonesia's MBG programme, the register's only APAC artefact — is indexed `NOASSERTION` and byte-reads `2,219 B`, sha256₁₂ `fb74fe065a59`. Its grep-detectable title line is `MIT License`. It states `License: MIT` in plain text. **And its first 18 lines are `Commons Clause License Condition v1.0`**, which withholds the right to *Sell*, defined to include *"fees for hosting or consulting/support services related to the Software."*
+
+🔴 **The withheld right is a systems integrator's business model, named in the licence.** A studio that deploys and supports this for a ministry performs exactly the withheld act.
+
+🟢 **`ACTION p761-A` — the detector is the byte count, not the title line.** The `11` MIT payloads byte-read this pass measure `1,057`–`1,099 B`. `2,219 B` is more than twice that ceiling. **An `MIT` title line on a payload outside the measured MIT band must be read in full before the row is shelved.** 🔵 This is the mirror of `p757`'s `T526` — asreview's Apache payload opens with `All rights reserved.` and the real grant starts on line 3, i.e. a title line too *pessimistic*; here the title line is too *optimistic*; and a single classifier reading first lines is fooled by both. **Read the whole payload or read the size; reading the first line is strictly worse than either.**
+
+## `T586` — a star count is not an ingestion licence, and a content repository is not a code repository
+
+[`TapXWorld/ChinaTextbook`](https://github.com/TapXWorld/ChinaTextbook) was returned by the mandated trending leg as a trending education repository: **`84,351★`**, pushed `2026-10-26`, **no grant at `81` probed paths**. It is a corpus of school and university textbook PDFs. 🔴 **The missing grant is not a software question — it is a copyright question about the textbooks themselves**, and the repository's popularity says nothing about whether the underlying works may be redistributed or used as training data. Not shelved. 🔵 **Recorded so the next pass does not propose it and so no engagement cites the star count as a reason to ingest it.**
+
+## `T587` — a `200` is not a grant: the pointer payload
+
+[`valhalla/valhalla`](https://github.com/valhalla/valhalla) (`6,439★`, index `NOASSERTION`) serves `master/LICENSE.md` with a `200`. The payload is **`44` bytes**: `For license information see [here](COPYING)`. Every existence probe and every licence probe this base runs terminates successfully on a file that grants nothing; a size-banding gate classifies `44 B` as *no known licence*. The actual grant is **MIT** at `master/COPYING` — `1,135 B`, sha256₁₂ `8bdb14aebb00`, three stacked holders (Valhalla contributors 2018, Mapillary AB, Mapzen). 🟢 **Any payload under ~`200 B` is a pointer to be followed, not a verdict to be published.**
+
+## `T588` — `NOASSERTION` on byte-identical bytes, with every obvious explanation excluded
+
+[`getodk/collect`](https://github.com/getodk/collect) is indexed `NOASSERTION`; [`getodk/central`](https://github.com/getodk/central) is indexed `Apache-2.0`. Measured: same organisation; `default_branch` = `master` on both; the only licence-shaped file at root on either is `LICENSE.md` (`LICENSE`, `NOTICE` and `COPYING` all `404` on both); the payloads are **byte-identical** at `10,494 B`, sha256₁₂ `d1ee81266b96`; neither is a fork.
+
+🔴 **Same org, same branch, same filename, same bytes — two different index verdicts.** The cause was not determined and is not guessed at here. 🟢 **`ACTION p761-C`: `NOASSERTION` is a statement about the index and never about the repository, and no pass may publish it as a licence state.** 🔵 The sharpness of this instance is what makes it worth a token: this base has corrected `NOASSERTION` toward a knowable grant dozens of times, and `T588` shows the index can be wrong **while being right about the identical bytes in the next repository of the same organisation.**
+
+## `T589` — this base's honest-negative class is biased against the repositories a client names first
+
+This pass's licence script probed `8` filenames × `3` branches = `81` paths per address and returned `10` verdicts of `ALIVE-NO-GRANT`. Its own follow-up refuted **two**:
+
+| Repo | ★ | Truth | The miss |
+|---|---|---|---|
+| [`Project-OSRM/osrm-backend`](https://github.com/Project-OSRM/osrm-backend) | `8,209` | BSD-2-Clause, `1,297 B`, `df207517bc08` | the path set carried `LICENSE.txt` but not **`LICENSE.TXT`** |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | **`41,172`** | GPL-3.0, `35,149 B`, `3972dc9744f6` | **`develop/license.txt`** — lowercase name **and** a branch that is neither `main` nor `master` |
+
+🔴 **`20%` false-negative rate on this batch, and not randomly distributed: both false verdicts landed on the two highest-starred repositories in the `NO-PAYLOAD` set.** Large, long-lived projects are precisely the ones with idiosyncratic licence filenames and non-standard default branches. 🟢 **`ACTION p761-D`:** add `LICENSE.TXT`, `LICENCE.TXT`, `license.txt`, `license.md`, `COPYING`, `COPYING.md` to the path set; **derive the branch from `default_branch`, which `search/repositories` returns on every item** (this pass read it to settle `T588` and could have read it for every row); follow payloads under `200 B` as pointers; and **re-probe the accumulated `T302` honest negatives above ~`1,000★`** — a published licence absence on a large repository is now a measured-unreliable claim.
+
+## `T590` — the canonical Apache-2.0 constant is not unique at its byte count
+
+These shelves have published for hundreds of passes that a canonical Apache-2.0 payload is `11,357 B` with sha256₁₂ `c71d239df917`. Re-fetched this pass, [`assafelovic/gpt-researcher`](https://github.com/assafelovic/gpt-researcher)`/master/LICENSE` reproduces exactly that. [`wfp/designsystem`](https://github.com/wfp/designsystem)`/master/LICENSE` is **also `11,357 B`** and hashes **`b40930bbcf80`**. `diff` is **two lines**, both inside the APPENDIX boilerplate instructions: `"[]"` vs `"{}"`, and `Copyright [yyyy] [name of copyright owner]` vs `Copyright {yyyy} {name of copyright owner}`. Both are verbatim Apache License 2.0; the `{}` form is the older-formatting distribution of the identical text, and bracket-for-brace is a one-for-one substitution, so the byte count is unchanged.
+
+🔴 **Any gate that treats `11,357 B` as implying `c71d239df917`, or that refuses a payload because its hash is not the recorded constant, falsely refuses a verbatim Apache-2.0 grant.** 🟢 **`ACTION p761-B`: record two canonical Apache families — `[]` → `c71d239df917`, `{}` → `b40930bbcf80` — and never treat a size match as a hash match.** 🔵 The wider reading: Apache payloads byte-read this pass measure `10,494` / `11,356` / `11,357` (two distinct hashes) / `11,358` / `11,359` / `11,408` / `45,765 B` across seven projects, every one genuinely Apache-2.0. **The byte count is a triage signal. It was never an identity, and this is the first second-preimage-at-equal-size these shelves have measured.**
+
+## `T591` — the multilateral layer seam: presentation open, programme closed
+
+The `wfp` GitHub organisation publishes **`9`** repositories and **`0`** of them is school feeding. `wfp/designsystem` — the UI kit — is Apache-2.0 (`233★`, cold `2024-04-12`); the live on-mission repositories (`surveydesigner`, `common-identifier-application` and two siblings) are **AGPL-3.0**. **School Connect**, WFP's school-feeding management platform deployed across all `500+` WFP programme schools in Burundi with pilots in Niger and South Sudan, is not on GitHub at all.
+
+🔵 **Second independent confirmation of `p760`'s UNHCR / Education Cannot Wait finding** (`25` repositories between them, `0` education code). **Stated as a law: a multilateral agency open-sources its presentation and identity layers and keeps its programme system closed.** The operational consequence is specific — **plan every national-programme engagement as a build or a procurement, never as a fork** — and it is now supported by two agencies in two sectors, which is why it is a law here and was a single observation last pass.
+
+## `T592` — `total_count` on a plain-language query is not a supply denominator
+
+[`danderfer/Comp_Sci_Sem_2`](https://github.com/danderfer/Comp_Sci_Sem_2) — `223★`, no grant, cold since `2023-04-03`, description is the Bee Movie script — was returned as the **`#1` star-ranked result for three unrelated register queries in this one pass**: `school bus routing`, `school feeding`, and `school cafeteria point of sale`. On the last, **`7` of the top `10`** results are copies of the same viral text.
+
+🔴 **Consequence: the `total_count` of a plain-language multi-word query measures keyword collision, not supply.** `school feeding` reports `total_count=348`; the on-register count in its top `12` by stars is `3`. 🟢 **`ACTION p761-E`: no pass may publish a `total_count` from a plain-language multi-word query as a measurement of supply.** 🔴 **This has retrospective force** — these shelves carry published denominators of exactly that provenance, and they are now of unknown value until re-measured with constrained queries (topic, language and path qualifiers) rather than prose.
+
+## 🔴 Actions declared at `p761`
+
+**`ACTION p761-A`** — an `MIT` title line on a payload outside the measured MIT byte band (`1,057`–`1,099 B` across `11` payloads this pass) must be read in full before the row is shelved. `giziiq` passes a title-line classifier and forbids consulting fees (`T585`).
+
+**`ACTION p761-B`** — record **two** canonical Apache-2.0 families, `[]` → `c71d239df917` and `{}` → `b40930bbcf80`, both `11,357 B`. Never treat a size match as a hash match, and never refuse a payload for failing to equal the recorded constant (`T590`).
+
+**`ACTION p761-C`** — `NOASSERTION` may not be published as a licence state. It is a statement about the index, and `T588` shows the index contradicting itself on byte-identical payloads in one organisation.
+
+**`ACTION p761-D`** — repair the licence probe in four parts: (1) add `LICENSE.TXT`, `LICENCE.TXT`, `license.txt`, `license.md`, `COPYING`, `COPYING.md`; (2) **derive the branch from `default_branch`** rather than guessing `{main, master, develop}`; (3) follow any payload under `200 B` as a pointer (`T587`); (4) **re-probe the accumulated `T302` honest negatives above ~`1,000★`**, because the measured false-negative rate on this batch was `20%` and both misses were the largest repositories in it (`T589`).
+
+**`ACTION p761-E`** — no `total_count` from a plain-language multi-word query may be published as supply. Re-measure the existing published denominators with constrained queries (`T592`).
+
+**`ACTION p761-F`** — the EMEA leg returned a **sourced nil** on European school-transport and school-operations digitalisation: no budget line, no programme, no vendor, no repository. Do not re-run the EU-level query next pass; probe **national and municipal transport authorities** instead (the Nordics and the Netherlands organise school transport municipally, so the buyer is a municipality, not a ministry).
+
+**`ACTION p761-G`** — carry `ACTION p760-A` unchanged and keep running it. Its first discharge, this pass, found a sector with `US$84` billion of annual government spending at `0` mentions on eight shelves. It is the highest-yield rule currently on this base.
+
+**`ACTION p761-H`** — a naming collision this pass declined to fix and must not leave unrecorded: the `P###` token namespace is used **twice** on these shelves — for compose patterns (`P295`–`P298` at `p760`) and for instrument findings (`P950`, `P977`, `P1065` in `README.md` and the trending files). The two sequences overlap and a reference like `P742` is ambiguous without its file. Next pass should rename one of the two namespaces; this pass continued the pattern sequence at `P299`–`P304` and used no instrument-`P` tokens at all.
+
+
 # 🆕 Trends new at `p760` (researched 2026-11-11) — `T566`–`T582`
 
 **THE REGISTER IS *EDUCATION IN EMERGENCIES* — CRISIS-AFFECTED AND DISPLACED LEARNERS — AND THE PASS'S GOVERNING FINDING IS ABOUT THIS BASE, NOT ABOUT A REPOSITORY: IT HAS HELD THE ANSWER FOR HUNDREDS OF PASSES AND HAS NEVER HELD THE QUESTION.** `Kolibri` appears `574` times across these eight shelves and `offline-first` `182` times, while **`education in emergencies` appears `0` times, `UNHCR` `0`, `Education Cannot Wait` `0` and `internally displaced` `0`.** 🔴 **The supply side is a measured nil in the register's own vocabulary and the demand side is the largest this base has sourced — `258` million children across `87` countries.** 🔴 **And the licence shape is the finding a proposal turns on: every offline content-delivery component on earth is `GPL` or `AGPL` except one organisation's three repositories, which are `MIT`.**

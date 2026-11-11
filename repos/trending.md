@@ -4,6 +4,58 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p761) — **The routing substrate for both halves of this register is `Apache-2.0`, `BSD-2-Clause` and `MIT`, and it was already on these shelves under another name. Two of this pass's own "no grant" verdicts were false, both on the largest repositories in the batch. And the canonical Apache constant this base has published for hundreds of passes is not unique at its byte count.**
+
+**`9` permissive foundation rows · `7` platform rows · `44` addresses resolved · `408` licence-path probes · `37` licence payloads byte-read `2026-11-11`.**
+
+### 🟢 The permissive substrate, by what it does in this register
+
+| Repo | ★ | Licence (byte-read) | Pushed | Role |
+|---|---|---|---|---|
+| [`google/or-tools`](https://github.com/google/or-tools) | **`14,361`** | 🟢 Apache-2.0 · `45,765 B` · `b1282fbc0b7a` (Apache **+ bundled third-party notices**) | `2026-11-10` | CP-SAT/routing → the capacitated VRP; linear solver → the diet problem. **One dependency covers both halves** |
+| [`Project-OSRM/osrm-backend`](https://github.com/Project-OSRM/osrm-backend) | **`8,209`** | 🟢 BSD-2-Clause · `1,297 B` · `df207517bc08` at **`master/LICENSE.TXT`**, no title line | `2026-11-07` | Travel-time matrix from OpenStreetMap |
+| [`graphhopper/graphhopper`](https://github.com/graphhopper/graphhopper) | `6,806` | 🟢 Apache-2.0 · `11,359 B` · `600cc67cc4cb` | `2026-11-10` | JVM road graph, for Java estates |
+| [`valhalla/valhalla`](https://github.com/valhalla/valhalla) | `6,439` | 🟢 **MIT** · `1,135 B` · `8bdb14aebb00` at **`master/COPYING`**; index `NOASSERTION` | `2026-11-10` | **Time-dependent** costing — AM and PM runs are different problems |
+| [`VROOM-Project/vroom`](https://github.com/VROOM-Project/vroom) | `1,913` | 🟢 BSD-2-Clause · `1,296 B` · `60cc4d664a30`, no title line | `2026-11-09` | Fast heuristic VRP at district scale |
+| [`graphhopper/jsprit`](https://github.com/graphhopper/jsprit) | `1,841` | 🟢 Apache-2.0 · `11,356 B` · `a31fce7e7096` | `2026-11-10` | Rich VRP: heterogeneous fleet, skills, multi-depot |
+| [`TimefoldAI/timefold-solver`](https://github.com/TimefoldAI/timefold-solver) | `1,864` | 🟢 Apache-2.0 · `11,358 B` · `cfc7749b96f6` | `2026-11-11` | 🔵 **Already held — for timetabling.** Bell tiers + bus runs are one coupled problem |
+| [`getodk/central`](https://github.com/getodk/central) | `232` | 🟢 Apache-2.0 · `10,494 B` · `d1ee81266b96` | `2026-11-06` | School-level reporting server |
+| [`getodk/collect`](https://github.com/getodk/collect) | `804` | 🟢 Apache-2.0 · **byte-identical** `10,494 B` · `d1ee81266b96`; 🔴 index `NOASSERTION` | `2026-11-10` | Offline-first Android collection — the register's operating condition |
+
+### 🔴 Two false "no grant" verdicts, both on the batch's largest repositories
+
+| Repo | ★ | Truth | Why the `81`-path probe missed it |
+|---|---|---|---|
+| [`Project-OSRM/osrm-backend`](https://github.com/Project-OSRM/osrm-backend) | `8,209` | 🟢 BSD-2-Clause | Path set had `LICENSE.txt`, not **`LICENSE.TXT`** |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | **`41,172`** | 🟢 GPL-3.0 · `35,149 B` · `3972dc9744f6` | **`develop/license.txt`** — lowercase name **and** a non-guessed branch |
+
+🔴 `20%` false-negative rate on this batch, concentrated on the two highest-starred addresses: large old projects are precisely the ones with idiosyncratic licence filenames and non-default branches, so the `T302` honest-negative class is **biased against the repositories a client names first**. 🟢 **`ACTION p761-D`:** add `LICENSE.TXT` / `LICENCE.TXT` / `license.txt` / `license.md` / `COPYING` / `COPYING.md`; **read `default_branch` from the search channel instead of guessing**; follow any payload under `200 B` as a pointer; and **re-probe the accumulated `T302` negatives above ~`1,000★`** (`T589`).
+
+### 🔴 `T587` — a `44`-byte payload that is a pointer, not a grant
+
+`valhalla/valhalla` serves `master/LICENSE.md` → `200`, `44 B`: `For license information see [here](COPYING)`. Every existence and licence probe terminates green on a file that grants nothing. The MIT grant is one path away at `master/COPYING` (`1,135 B`, `8bdb14aebb00`, three stacked holders: Valhalla contributors 2018, Mapillary AB, Mapzen).
+
+### 🟢 `T590` — the canonical Apache constant has a second payload at the same byte count
+
+`assafelovic/gpt-researcher` `LICENSE` = `11,357 B` / `c71d239df917` (the constant these shelves publish). `wfp/designsystem` `LICENSE` = `11,357 B` / **`b40930bbcf80`**. `diff` = **two lines**, both APPENDIX boilerplate: `"[]"` vs `"{}"`, and `Copyright [yyyy] [name of copyright owner]` vs `{yyyy} {name of copyright owner}`. Both verbatim Apache-2.0; bracket-for-brace is a one-for-one substitution so the size is unchanged. 🟢 **`ACTION p761-B`: two canonical Apache families (`[]` → `c71d239df917`, `{}` → `b40930bbcf80`), and a size match is never a hash match.** Apache sizes measured this pass: `10,494` / `11,356` / `11,357`×2 / `11,358` / `11,359` / `11,408` / `45,765 B`, seven projects, all Apache-2.0.
+
+### 🔴 The copyleft tier, named so it is not reached for by accident
+
+[`GIScience/openrouteservice`](https://github.com/GIScience/openrouteservice) `1,991★` **GPL-3.0** (`35,150 B`, `6ba8958ca511`) · [`pgRouting/pgrouting`](https://github.com/pgRouting/pgrouting) `1,447★` **GPL-2.0** (`18,092 B`, `8177f9751321`) · [`openlmis/openlmis-ref-distro`](https://github.com/openlmis/openlmis-ref-distro) `74★` **AGPL-3.0** (`34,520 B`, `76a97c878c9c`) · [`odoo/odoo`](https://github.com/odoo/odoo) `55,704★` **LGPL-3.0** (`43,529 B`, `abc09dad5f84`, index `NOASSERTION`) · [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) `910★` **LGPL-3.0** (`8,241 B`, `528f84036800`, index `NOASSERTION`) · [`hcengineering/platform`](https://github.com/hcengineering/platform) `28,087★` **EPL-2.0** (`14,197 B`, `8c349f80764d`) · [`wfp/surveydesigner`](https://github.com/wfp/surveydesigner) `6★` **AGPL-3.0** (`34,273 B`, `5132c7f0475b`) · [`fga-eps-mds/2017.2-AjudaConselheiro-Frontend`](https://github.com/fga-eps-mds/2017.2-AjudaConselheiro-Frontend) `5★` **GPL-3.0** (`35,121 B`, `e1c0ad728983`).
+
+🔴 **`EPL-2.0` on Huly is a direct refutation of the mandated research leg**, which stated *"the Huly Platform is fully open-source under the Apache License 2.0."* It is not, and the difference — source availability on modified files, plus GPL-2.0 secondary-licence compatibility — is the kind a one-line summary erases.
+
+### 🟢 Permissive school-operations platforms worth starting from
+
+[`opensandiego/mealscount-backend`](https://github.com/opensandiego/mealscount-backend) `14★` **MIT** (`1,099 B`, `055bc6af65c1`) — US Community Eligibility Provision grouping optimiser, **North America**, cold `2025-09-26` · [`opensandiego/mealscount`](https://github.com/opensandiego/mealscount) — byte-identical MIT, and 🔴 **`Validation Failed` on the search channel while the raw channel serves it `200`** (p757's two-channel rule, second confirmation) · [`neozhu/schoolbus`](https://github.com/neozhu/schoolbus) `24★` **MIT** (`1,069 B`, `cef9b516873e`) — the highest-starred permissive school-transport *platform*; CRUD and schema, **no optimiser**, cold `2024-10-11` · [`jcirni/school-bus-router`](https://github.com/jcirni/school-bus-router) `0★` **MIT** (`1,075 B`, `8fb07e0d8f81`), pushed `2026-10-22` — the only **live** permissive school-bus router; CSV in, scored routes out, routing kept local so stop coordinates never leave the district · [`mitschoolbus/SchoolBusRouting`](https://github.com/mitschoolbus/SchoolBusRouting) `19★` **MIT** (`1,090 B`, `107d18467796`) — the academic reference implementation, **Julia 0.6**, cold since `2019-01-17`; read the method, do not run the code · [`NeelBansal22/SBRP`](https://github.com/NeelBansal22/SBRP) `6★` **MIT** (`1,070 B`, `7b05a0e88b48`) — GA / simulated annealing / Clarke-Wright comparison on the single-load-plan SBRP · [`sebastian-quintero/school-bus-router`](https://github.com/sebastian-quintero/school-bus-router) `2★` **MIT** (`1,075 B`, `1920f735b902`) — depot-vs-school end-of-run modelling, cold `2021-02-03` · [`justpiple/school-canteen-api`](https://github.com/justpiple/school-canteen-api) `2★` **MIT** (`1,077 B`, `44fd2d9c7890`).
+
+🔴 **Refused, with the grant absence measured:** [`NikhilParashar23/RouteCraft`](https://github.com/NikhilParashar23/RouteCraft) (the most complete OR-Tools + MapLibre school-routing web system found, live `2026-11-01`, **no grant at `81` paths**) · [`chrischall/alphaportal-mcp`](https://github.com/chrischall/alphaportal-mcp) · [`VinayakTG/SchoolBUS`](https://github.com/VinayakTG/SchoolBUS) · [`chrisszlycoen/CAMINO`](https://github.com/chrisszlycoen/CAMINO) (`6★`, live `2026-05-15`) · [`pixnpatch/SMEIC`](https://github.com/pixnpatch/SMEIC) (`10★`, live `2026-07-29`) · [`maram642/vrp-agent`](https://github.com/maram642/vrp-agent) · [`TapXWorld/ChinaTextbook`](https://github.com/TapXWorld/ChinaTextbook) (`84,351★`).
+
+### 🔴 `T592` — `total_count` on these queries is not a denominator
+
+[`danderfer/Comp_Sci_Sem_2`](https://github.com/danderfer/Comp_Sci_Sem_2) (`223★`, no grant, description = the Bee Movie script) was the `#1` star-ranked result for `school bus routing`, `school feeding` **and** `school cafeteria point of sale`; `7 / 10` of the last query's top results are copies of that text. `school feeding` reports `total_count=348` against `3` on-register entries in its top `12`. 🟢 **`ACTION p761-E`: a plain-language multi-word `total_count` may not be published as supply.**
+
+
 ## 🆕 2026-11-11 (p760) — 🔴 **THE OFFLINE-DELIVERY SUBSTRATE FOR CRISIS EDUCATION IS `GPL`/`AGPL` ON FIVE OF EIGHT COMPONENTS, AND THE PERMISSIVE THREE SHARE ONE COPYRIGHT HOLDER. 🔴 THE `457★` ROW EVERY CLIENT NAMES IS A FOUR-WAY COMPOSITE WHOSE CONTENT IS NON-COMMERCIAL.**
 
 **`10` foundation rows · `5` platform rows · `16` addresses probed · `16` licence payloads byte-read `2026-11-11` · `4` addresses live with **no grant at all** · `1` four-way composite resolved · `1` grant found in a `README` · `2` rows novel at `0` prior mentions · `6 / 16` on a non-`main` default branch, including `unstable` and `primary` · `4` regional legs run · `T566`–`T582` declared.**

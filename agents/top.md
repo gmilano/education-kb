@@ -5,6 +5,80 @@ updated: 2026-11-11
 ---
 
 # Education AI Agents — Curated Top Set
+
+## 🆕 `p761` — **The student-transport and school-feeding register. The agent layer is three permissive repositories, none above `2★`, and the one purpose-built school-transport agent on GitHub carries no grant at all. The licence finding of the pass is a payload whose title line reads `MIT License` and whose first clause forbids charging a consulting fee.**
+
+**Register: student transport (routing, ridership, bell-time coupling) and school feeding (eligibility, menu planning, commodity flow).** These are the two largest operational line items in a school system's budget — not instructional technology, and not on these shelves. `44` addresses resolved · `408` licence-path probes · **`37` licence payloads byte-read** · `5` index values materially corrected, `5 / 5` from `NOASSERTION` toward a knowable grant · **`2` of this pass's own `10` "no grant" verdicts refuted by its own follow-up** · `T583`–`T592` declared.
+
+### The shelving defect, and it is the same shape `ACTION p760-A` predicted
+
+`ACTION p760-A` (adopted last pass) says: *when a substrate is held under a technical property, probe once for the institutional buyer whose procurement is defined by that property.* Run against the optimisation substrate, it fires immediately. Counted across these eight shelves before this pass:
+
+| Held (the technical property) | Mentions | Not held (the buyer) | Mentions |
+|---|---|---|---|
+| `OR-Tools` | `36` | `school bus` | `1` |
+| `Timefold` | `30` | `vehicle routing` | `2` |
+| `valhalla` | `10` | `school meal` | `2` |
+| `OSRM` | `9` | `school feeding` | `0` |
+| `optaplanner` | `11` | `WFP` / `World Food Programme` | `0` / `0` |
+| `VROOM` | `6` | `PNAE` | `0` |
+| `Odoo` / `ERPNext` | `121` / `171` | `cold chain` | `0` |
+
+The solver substrate has been on these shelves for hundreds of passes, filed under **timetabling**. The same solvers are the entire technical content of school-bus routing and of school-meal menu planning, and the buyers for those two are a US district transportation department (`~21,000` unfilled driver posts) and a national school-feeding programme (`US$84 billion` of government spending in 2024, `466` million children). Neither appears. `T583`.
+
+### The agent layer, measured rather than asserted
+
+| Probe (GitHub `search/repositories`) | `total_count` | Best permissive, maintained result |
+|---|---|---|
+| `school bus MCP server` | `2` | none — see the refusal row below |
+| `school attendance agent llm` | `0` | — |
+| `student ridership bus tracking` | `0` | — |
+| `vehicle routing LLM agent` | `9` | `2★`, MIT |
+| `school menu nutrition planning` | `2` | `0★` (and the `0★` one is a refusal — see below) |
+| `menu planning optimization linear programming` | `1` | `0★`, MIT |
+
+**Three permissive agent rows exist for this register. Three are written. There is no fourth, and padding the table to five would be the failure these shelves have recorded more than once.**
+
+| Agent | Repo | Licence (byte-read) | ★ | Pushed | Region | Signal |
+|---|---|---|---|---|---|---|
+| **Agent EOH** | [`gjd12345/Agent_EOH`](https://github.com/gjd12345/Agent_EOH) | 🟢 **MIT** · `1,057 B` · sha256₁₂ `7720014ff3c9` | `2` | `2026-04-05` | 🔵 unplaced — no institution in payload or README | The only agent in the register that *improves the optimiser* rather than calling it: an autonomous ReAct loop that evolves CVRP heuristics (EoH framing). For a district whose constraint set does not fit a stock VRP model, this is the shape that transfers. **Not a school artefact** — the school constraints (bell tiers, walk zones, mixed-load rules, special-needs entitlements) are the integration work |
+| **Routing agent** | [`Eashwar-S/Routing_agent`](https://github.com/Eashwar-S/Routing_agent) | 🟢 **MIT** · `1,077 B` · sha256₁₂ `ab04ed0fce54` | `0` | `2026-01-18` | 🔵 unplaced | An LLM agent that formulates and solves vehicle-routing tasks. The honest description of its value is **as a reference for the tool boundary** — where the model stops and the solver starts. Treat it as a worked example, not a dependency |
+| **Nutrition planning optimisation** | [`haiiibin/nutrition-planning-optimization`](https://github.com/haiiibin/nutrition-planning-optimization) | 🟢 **MIT** · `1,066 B` · sha256₁₂ `a19dee7c5a49` | `0` | `2026-07-08` | 🔵 unplaced | **The only permissive menu-optimisation artefact found anywhere in this register.** Four-stage linear programme over `50+` foods under cost and nutrient constraints — i.e. the diet problem as a school-feeding programme actually poses it. `0★` and it is the substrate for every national-programme menu engagement below |
+
+### 🔴 Refusal rows — named so the next pass does not propose them
+
+| Repo | ★ | Licence state (measured) | Why it is a refusal |
+|---|---|---|---|
+| [`chrischall/alphaportal-mcp`](https://github.com/chrischall/alphaportal-mcp) | `0` | 🔴 **no grant at `81` probed paths** (`T302`); index `NONE`; README alive, pushed `2026-11-10` | 🔴 **The only purpose-built school-transport agent on GitHub, and it cannot be used.** An MCP server over **AlphaPortal / AlphaRoute**, the proprietary parent-guardian transport portal run by named large US districts (its own README cites Charlotte-Mecklenburg Schools at `cmsnc.alphaportal.app`). Exposes live bus GPS, assigned stops, arrival notifications, and confirm-gated writes to notification preferences and walk-zone radius. Its README states *"Developed and maintained by AI. Use at your own discretion."* 🔵 **Read it as market intelligence, not as a starting point**: it is evidence that the district transport portal has a reachable private API and no public one, exactly as `p760`'s `monarch-studentaid-sync` row was evidence about `StudentAid.gov` (`T584`) |
+| [`satryayogapratama-ux/giziiq`](https://github.com/satryayogapratama-ux/giziiq) | `0` | 🔴 **`MIT` + `Commons Clause License Condition v1.0`** · `2,219 B` · sha256₁₂ `fb74fe065a59`; index `NOASSERTION` | 🔴 **The licence finding of the pass, and a failure class these shelves have never recorded.** See the full reading below. The register's **only** APAC artefact, and Globant may not deliver it for a fee (`T585`) |
+| [`maram642/vrp-agent`](https://github.com/maram642/vrp-agent) | `0` | 🔴 no grant at `81` probed paths | OR-Tools + KMeans + an LLM planner — the exact composition pattern this register needs, published without a grant. Rebuild it; it is a few hundred lines |
+| [`Diennhutvo/Nutrition_Optimization_with_Gurobi_Python`](https://github.com/Diennhutvo/Nutrition_Optimization_with_Gurobi_Python) | `0` | 🔴 index `NONE` | Two blockers, not one: no grant **and** a hard dependency on **Gurobi**, a commercial solver requiring a paid licence per deployment. The permissive route to the same model is OR-Tools' linear solver |
+
+### 🔴 `T585` — a licence payload whose title says `MIT` and whose first clause forbids the delivery model
+
+`giziiq` is AI-driven menu generation for **Indonesia's MBG programme** (*Makan Bergizi Gratis*) — `Rp 335` trillion in the 2026 state budget, `~57` million beneficiaries, the second-largest school-feeding programme on earth. It is the one on-register repository anywhere in APAC. Its licence payload:
+
+- The first `18` lines are **`Commons Clause License Condition v1.0`**.
+- The file then states, literally: `Software: GiziIQ` / `License: MIT` / `Licensor: Satrya Yoga Pratama`.
+- The MIT body follows in full, under the heading `MIT License (with Commons Clause)`.
+
+The Commons Clause withholds the right to **Sell**, and defines Sell as *"practicing any or all of the rights granted … to provide to third parties, for a fee or other consideration (including without limitation fees for **hosting or consulting/support services** related to the Software), a product or service whose value derives, entirely or substantially, from the functionality of the Software."*
+
+🔴 **That is a systems-integrator's business model named in the licence text.** A studio that deploys and supports this for a ministry is doing precisely the thing withheld. It is not an OSI licence and the index's `NOASSERTION` does not say so.
+
+🟢 **And the detector is the byte count, not the title line.** A title-line classifier reads `MIT License` out of this payload and shelves it green — this pass's own first-pass script did exactly that. The MIT payloads byte-read this pass measure `1,057`–`1,099 B` across `11` files; `2,219 B` is more than twice the band's ceiling. **`ACTION p761-A`: an `MIT` title line on a payload outside the measured MIT byte band must be read in full before the row is shelved.** This is the inverse of `p757`'s `T526` (asreview: `All rights reserved.` on line 1, Apache body from line 3) — there the title line was too pessimistic, here it is too optimistic, and the same instrument misses both.
+
+### 🟢 The mandated trending leg's own answer, filed where it belongs rather than where it was found
+
+The mandated `github trending {industry} AI {year}` leg returned two live education agents. Both verified here because they are the leg's result, not because they are on this register.
+
+| Agent | Repo | Licence (byte-read) | ★ | Pushed | Note |
+|---|---|---|---|---|---|
+| **DeepTutor** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** · `11,408 B` · sha256₁₂ `cd2f54e1e506` | 🟢 **`58,085`** | `2026-11-07` | 🔵 **Already held — `intel/market.md` carries this row at `55k★`. Re-measured at `58,085★`, i.e. `+3k` since the page was written, and the licence is confirmed by byte-read rather than by index.** Not a discovery; a currency repair |
+| **Claw-ED** | [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 🟢 **MIT** · `1,078 B` · sha256₁₂ `4d5d987f4f89` | `65` | `2026-09-19` | Local-first AI teaching assistant producing **editable** lesson drafts. The editability is the point: it is the shape a teacher-workload engagement needs, where a chat transcript is not |
+
+🔴 **And one number the trending leg gave that measurement refuses.** The leg reported `TapXWorld/ChinaTextbook` as a trending education repository. Measured: `84,351★`, pushed `2026-10-26`, and **no grant at `81` probed paths**. It is a corpus of school and university textbook PDFs, not code, and the absence of a grant on a *content* repository is a copyright question about the textbooks themselves. **Do not shelve it, and do not let a client's engineer cite the star count as a reason to ingest it** (`T586`).
+
 ## 🆕 `p760` — 🔴 **THE EDUCATION-IN-EMERGENCIES REGISTER HAS AN AGENT LAYER OF EXACTLY ZERO. 🔴 THE ONE ON-TOPIC ARTEFACT ON EARTH IS `7★` WITH NO LICENCE, AND THE TWO AGENCIES THAT DEFINE THE SECTOR PUBLISH `25` REPOSITORIES BETWEEN THEM WITH `0` EDUCATION CODE. 🟢 THE SUBSTRATE, HOWEVER, HAS BEEN ON THESE SHELVES FOR HUNDREDS OF PASSES UNDER A DIFFERENT NAME.**
 
 **Pass p760 · verified 2026-11-11.** 🔴 **`6` rows — `1` permissive and shelvable, `1` filed as a warning, `4` filed as refusals — every grant byte-read at ref `HEAD` with length and sha256₁₂.** 🔴 **The governing finding is against this base's own shelving, not against a repository: `Kolibri` appears `574` times across these eight shelves and `offline-first` `182` times, while `education in emergencies` appears `0` times, `UNHCR` `0`, `Education Cannot Wait` `0` and `internally displaced` `0`. The base has held the answer for hundreds of passes and never held the question (`T566`).** 🔴 **Measured supply in the register's own vocabulary is nil and the counts are published with the queries: `education in emergencies` → `94` repositories, `0` on topic; `refugee education` → `69`, one on topic at `7★` with no grant; `displaced learner certification credential` → `0` (`T567`, `T582`).** 🔴 **A new failure class is named: **licence-clean and topic-false** — a four-repository cluster with canonical `Apache-2.0` payloads that every licence gate this base has built passes green (`T573`).** 🔴 **`16 / 16` addresses confirmed on the search and raw channels because `curl -sI` is `403` at the tunnel and `gh api repos/{owner}/{name}` is refused by session scope (`T580`).** `T566`–`T582` declared.

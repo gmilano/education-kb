@@ -5,6 +5,61 @@ updated: 2026-11-11
 ---
 
 # Foundational Repositories — Education
+
+## 🆕 `p761` — **The routing and optimisation substrate for student transport and school feeding is permissive all the way down — `Apache-2.0`, `BSD-2-Clause`, `MIT` — and it has been on these shelves for hundreds of passes under the name "timetabling". Two of this pass's own "no grant" verdicts were false, both on the highest-starred repositories in the batch.**
+
+**`9` permissive foundation rows, all byte-read.** This is the most favourable substrate tier this register could have: every component a district routing engagement or a national school-feeding MIS needs is permissive, maintained, and pushed within four days of this pass. The copyleft components are named separately below so a studio does not reach for them by accident.
+
+### 🟢 The permissive substrate — all `9` byte-read, `5` Apache-2.0 / `2` BSD-2-Clause / `2` MIT
+
+| Repo | ★ | Licence (byte-read) | Pushed | What it is for in this register |
+|---|---|---|---|---|
+| [`google/or-tools`](https://github.com/google/or-tools) | 🟢 **`14,361`** | 🟢 **Apache-2.0** · `45,765 B` · sha256₁₂ `b1282fbc0b7a` (Apache text **plus bundled third-party notices** — read the tail before shipping a notices file) | `2026-11-10` | 🟢 **The single component this whole register rests on.** CP-SAT and the routing library solve the capacitated VRP with time windows, which *is* the school-bus problem; the linear solver solves the diet problem, which *is* the school-menu problem. One dependency, both halves of the register |
+| [`Project-OSRM/osrm-backend`](https://github.com/Project-OSRM/osrm-backend) | 🟢 **`8,209`** | 🟢 **BSD-2-Clause** · `1,297 B` · sha256₁₂ `df207517bc08` · at **`master/LICENSE.TXT`** · 🔴 **no title line** — first line is `Copyright (c) 2017, Project OSRM contributors` | `2026-11-07` | The road-graph and distance-matrix engine. A VRP solver needs a travel-time matrix before it can optimise anything; this produces it from OpenStreetMap at district scale |
+| [`graphhopper/graphhopper`](https://github.com/graphhopper/graphhopper) | `6,806` | 🟢 **Apache-2.0** · `11,359 B` · sha256₁₂ `600cc67cc4cb` · at `master/LICENSE.txt` | `2026-11-10` | The JVM alternative to OSRM, and the right one when the client's estate is Java — which in school-district procurement it often is |
+| [`valhalla/valhalla`](https://github.com/valhalla/valhalla) | `6,439` | 🟢 **MIT** · `1,135 B` · sha256₁₂ `8bdb14aebb00` · at **`master/COPYING`** · three stacked holders (`Valhalla contributors` 2018, `Mapillary AB`, `Mapzen`) · index says `NOASSERTION` | `2026-11-10` | Routing engine with **time-dependent** costing — the feature that matters when a morning run and an afternoon run have different travel times, which is every school route. ⚠️ **Its `LICENSE.md` is a `44`-byte pointer, not a grant** — see `T587` |
+| [`VROOM-Project/vroom`](https://github.com/VROOM-Project/vroom) | `1,913` | 🟢 **BSD-2-Clause** · `1,296 B` · sha256₁₂ `60cc4d664a30` · 🔴 **no title line** — first line is `Copyright (c) 2015-2025, Julien Coupey` | `2026-11-09` | The fast heuristic VRP solver that pairs with OSRM/Valhalla out of the box. Where OR-Tools is the modelling tool, VROOM is the one that returns a good route for `2,000` stops in seconds |
+| [`graphhopper/jsprit`](https://github.com/graphhopper/jsprit) | `1,841` | 🟢 **Apache-2.0** · `11,356 B` · sha256₁₂ `a31fce7e7096` · at `master/LICENSE.md` | `2026-11-10` | Java VRP toolkit for *rich* problems — heterogeneous fleets, multiple depots, skill constraints. The mixed-load and wheelchair-lift constraints of a real district fleet live here naturally |
+| [`TimefoldAI/timefold-solver`](https://github.com/TimefoldAI/timefold-solver) | `1,864` | 🟢 **Apache-2.0** · `11,358 B` · sha256₁₂ `cfc7749b96f6` · at `main/LICENSE.txt` | `2026-11-11` | 🔵 **Already held on these shelves — for timetabling.** The reason it belongs here too: when bell times and bus runs are one coupled problem (a two- or three-tier bell schedule sharing one fleet), the timetable and the routes must be solved together, and Timefold is the engine that already models the timetable half. **`T583` in one row** |
+| [`getodk/central`](https://github.com/getodk/central) | `232` | 🟢 **Apache-2.0** · `10,494 B` · sha256₁₂ `d1ee81266b96` | `2026-11-06` | The server half of the field-data-collection layer. This is the channel national school-feeding programmes actually use for school-level reporting — the EU/WFP Sierra Leone school-meals data programme is introducing ODK alongside WFP's own School Connect |
+| [`getodk/collect`](https://github.com/getodk/collect) | `804` | 🟢 **Apache-2.0** · `10,494 B` · sha256₁₂ `d1ee81266b96` — **byte-identical to `getodk/central`** · 🔴 index says `NOASSERTION` | `2026-11-10` | The Android client. Offline-first form filling by a school cook or head teacher with no connectivity, which is the operating condition of most of this register. ⚠️ **The index disagreement on an identical payload is `T588`** |
+
+### 🔴 `T587` — a grant one hop from the probed path, and a pointer file that looks like a grant
+
+`valhalla/valhalla` serves `master/LICENSE.md` with a `200`, so every existence and licence probe this base runs terminates successfully. The payload is **`44` bytes**:
+
+```
+For license information see [here](COPYING)
+```
+
+A size-banding gate reads `44 B` as *not MIT, not Apache, not GPL* and files the row as unknown or as a licence absence. The actual grant is **MIT** at `master/COPYING`, one path away. 🔵 **A `200` is not a grant. A probe must classify the payload, and a payload under ~`200 B` is a pointer to be followed, not a verdict** (`ACTION p761-D`, below).
+
+### 🔴 `T589` — this pass's own honest-negative verdict was wrong twice, and both times on the biggest repository in the batch
+
+This pass's licence script probed `8` filenames × `3` branches = `81` paths per address and returned `10` verdicts of `ALIVE-NO-GRANT`. The follow-up refuted **`2`**:
+
+| Repo | ★ | The verdict | The truth, and why the probe missed it |
+|---|---|---|---|
+| [`Project-OSRM/osrm-backend`](https://github.com/Project-OSRM/osrm-backend) | `8,209` | 🔴 "no grant at `81` probed paths" | 🟢 **BSD-2-Clause at `master/LICENSE.TXT`.** The path set carried `LICENSE.txt` and `LICENSE.md` but **not the uppercase extension** `LICENSE.TXT` |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🟢 **`41,172`** | 🔴 "no grant at `81` probed paths" | 🟢 **GPL-3.0** · `35,149 B` · sha256₁₂ `3972dc9744f6` at **`develop/license.txt`** — lowercase filename, **and on a branch that is neither `main` nor `master`**. Two independent misses compounding |
+
+🔴 **That is a `20%` false-negative rate on this batch, and it is not randomly distributed: both false verdicts landed on the two highest-starred repositories in the `NO-PAYLOAD` set.** Large, old projects are exactly the ones with idiosyncratic licence filenames and non-standard default branches, so the honest-negative class `T302` is **biased against the repositories a client is most likely to name**.
+
+🟢 **`ACTION p761-D` — three fixes, all mechanical, all testable:**
+1. Add `LICENSE.TXT`, `LICENCE.TXT`, `license.txt`, `license.md`, `COPYING`, `COPYING.md` to the probe path set.
+2. **Derive the branch — do not guess it.** `search/repositories` returns `default_branch` on every item; this pass read it to settle `T588` and could have read it for every row. Guessing `{main, master, develop}` found `erpnext` only by luck.
+3. Follow any payload under `200 B` as a pointer (`T587`).
+4. **Re-probe the accumulated `T302` honest negatives above ~`1,000★` under the corrected path set.** A published licence absence on a large repository is now a measured-unreliable claim.
+
+### 🔴 The copyleft tier of this register — named so nobody reaches for it by accident
+
+| Repo | ★ | Licence (byte-read) | The obligation, stated |
+|---|---|---|---|
+| [`GIScience/openrouteservice`](https://github.com/GIScience/openrouteservice) | `1,991` | 🔴 **GPL-3.0** · `35,150 B` · sha256₁₂ `6ba8958ca511` | The most feature-complete open route planner **API**, and the licence is strong copyleft. Use OSRM (BSD-2) or Valhalla (MIT) in a client deliverable |
+| [`pgRouting/pgrouting`](https://github.com/pgRouting/pgrouting) | `1,447` | 🔴 **GPL-2.0** · `18,092 B` · sha256₁₂ `8177f9751321` | Routing inside PostGIS — the architecture a GIS-led district will propose first, and the one licence decision in this tier that a studio cannot make alone |
+| [`openlmis/openlmis-ref-distro`](https://github.com/openlmis/openlmis-ref-distro) | `74` | 🔴 **AGPL-3.0** · `34,520 B` · sha256₁₂ `76a97c878c9c` | The only credible open last-mile commodity-logistics stack, and the closest thing to a school-feeding supply pipeline that exists. **§13 applies to hosting it as a service** — a reciprocity decision for counsel, not for a studio |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | `41,172` | 🔴 **GPL-3.0** (see `T589`) | Procurement and inventory for a feeding programme. Copyleft, and the grant is at a path no standard probe finds |
+
 ## 🆕 `p760` — 🔴 **THE OFFLINE-DELIVERY SUBSTRATE FOR CRISIS EDUCATION IS COPYLEFT ALL THE WAY DOWN, AND GLOBANT'S ONLY PERMISSIVE ROUTE THROUGH THE ENTIRE REGISTER IS ONE ORGANISATION'S THREE REPOSITORIES. 🔴 THE `457★` COMPONENT EVERY CLIENT WILL NAME IS A FOUR-WAY LICENCE COMPOSITE IN WHICH THE CONTENT IS NON-COMMERCIAL.**
 
 **`10` foundation rows, every grant byte-read `2026-11-11`** at ref `HEAD` with length and sha256₁₂ over `raw.githubusercontent.com`. 🟢 **The `★` column is measured on the `search/repositories` channel per `ACTION p757-E`** — no cell on this shelf says `unmeasured`, and that channel turned out to be the **only** metadata channel this environment has (`T580`). 🔴 **`5 / 10` are copyleft and are filed as client-hosted systems, not as components.** 🔴 **`6 / 10` publish from a default branch that is not `main`, including two branch names new to these shelves — `unstable` and `primary`** — reconfirming `Gap 263` on a seventh estate (`T574`). 🟢 **`2` rows are novel to this base at `0` prior mentions** (`T576`).

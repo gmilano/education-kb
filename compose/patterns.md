@@ -4,6 +4,102 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `P299`–`P304` — added at p761 (2026-11-11)
+
+**Register: student transport (routing, ridership, bell-time coupling) and school feeding (eligibility, menu planning, commodity flow).** Every component named below was byte-read for its licence on `2026-11-11` and every address was probed in the same pass. The substrate is permissive end to end; the agent layer is three MIT repositories with `2` stars between them, so these recipes are deliberately **substrate-heavy and agent-light** — the honest shape of this register.
+
+---
+
+### `P299` — District bus routing without a vendor owning the data path
+**Buyer:** a North America school-district transportation department. **Region: North America.** **Why now:** `~21,000` unfilled driver posts nationally (Stacker), `81%` of administrators calling it a problem and `26%` already cutting routes (AP-NORC 2025), and **routing software as the single largest technology spending line** among districts that are investing — `20%`, ahead of ridership tracking at `16%` (Zonar *2026 Back-to-School Readiness*, vendor-published).
+
+**Wiring, in order:**
+1. **Travel-time matrix** — [`Project-OSRM/osrm-backend`](https://github.com/Project-OSRM/osrm-backend) (BSD-2-Clause, `1,297 B`, `df207517bc08`) on an OpenStreetMap extract of the district, **or** [`valhalla/valhalla`](https://github.com/valhalla/valhalla) (MIT, `1,135 B`, `8bdb14aebb00` at `COPYING`) when AM and PM runs need **time-dependent** costing — which in practice is always.
+2. **The optimiser** — [`google/or-tools`](https://github.com/google/or-tools) (Apache-2.0, `45,765 B`, `b1282fbc0b7a`) CP-SAT or the routing library, modelling the capacitated VRP with time windows, mixed loads, walk zones and special-needs entitlements as explicit constraints. For `2,000+` stops where a good answer in seconds beats an optimal answer in an hour, put [`VROOM-Project/vroom`](https://github.com/VROOM-Project/vroom) (BSD-2-Clause, `1,296 B`, `60cc4d664a30`) in front of it.
+3. **The coupled problem** — if the district runs two- or three-tier bell times on one fleet, bell schedule and bus runs are **one** problem, not two. Solve it in [`TimefoldAI/timefold-solver`](https://github.com/TimefoldAI/timefold-solver) (Apache-2.0, `11,358 B`, `cfc7749b96f6`), which already models the timetable half and which these shelves already held — for timetabling (`T583`).
+4. **Rich-fleet constraints on the JVM** — [`graphhopper/jsprit`](https://github.com/graphhopper/jsprit) (Apache-2.0, `11,356 B`, `a31fce7e7096`) for heterogeneous fleets, multiple depots and skill/lift constraints; [`graphhopper/graphhopper`](https://github.com/graphhopper/graphhopper) (Apache-2.0, `11,359 B`, `600cc67cc4cb`) as its road graph.
+5. **The CRUD and schema nobody wants to write** — [`neozhu/schoolbus`](https://github.com/neozhu/schoolbus) (MIT, `1,069 B`, `cef9b516873e`, `24★`): routes, vehicles, drivers, students. ⚠️ Cold since `2024-10-11` and it carries **no optimiser** — take the data model, bring your own solver.
+6. **The reference harness** — [`jcirni/school-bus-router`](https://github.com/jcirni/school-bus-router) (MIT, `1,075 B`, `8fb07e0d8f81`), the only **live** permissive school-bus router (pushed `2026-10-22`): CSV in, scored routes out, and routing kept local so stop coordinates never leave the district. Read it for the scoring shape (time / fuel / safety) before designing yours.
+
+🔴 **Refusals, stated:** do **not** start from [`chrischall/alphaportal-mcp`](https://github.com/chrischall/alphaportal-mcp) or [`NikhilParashar23/RouteCraft`](https://github.com/NikhilParashar23/RouteCraft) — both have **no grant at `81` probed paths**, and RouteCraft is otherwise the most complete OR-Tools + MapLibre school-routing system in existence. Do **not** take [`pgRouting/pgrouting`](https://github.com/pgRouting/pgrouting) (GPL-2.0) or [`GIScience/openrouteservice`](https://github.com/GIScience/openrouteservice) (GPL-3.0) into a proprietary district deliverable, however naturally the client's GIS team proposes them. Do **not** read [`mitschoolbus/SchoolBusRouting`](https://github.com/mitschoolbus/SchoolBusRouting) (MIT, `19★`) as runnable — it is **Julia 0.6** and cold since `2019-01-17`; it is a method paper with code attached.
+
+**Shape of the engagement:** `8`–`10` weeks to a routing engine the district owns, run against last year's routes as the baseline. **Sell the driver-hours saved, not the mileage** — the binding constraint is drivers (`T583`), and the vendor mileage claims (`15%`, BusBoss; `30%`, AlphaRoute) are vendor-published and must be quoted as such (`ACTION p760-C`).
+
+---
+
+### `P300` — Free-meal reimbursement optimisation for a US district (money, not efficiency)
+**Buyer:** a North America district's nutrition services director and CFO. **Region: North America.**
+
+**Wiring:** [`opensandiego/mealscount-backend`](https://github.com/opensandiego/mealscount-backend) (MIT, `1,099 B`, `055bc6af65c1`, `14★`) is the **Community Eligibility Provision** grouping optimiser — it chooses how to group schools so federal free-meal reimbursement is maximised. Its frontend, [`opensandiego/mealscount`](https://github.com/opensandiego/mealscount), carries the byte-identical MIT grant. Wrap the optimiser as a single tool behind an agent that (a) ingests the district's enrolment and direct-certification data, (b) proposes groupings with the reimbursement delta attached, and (c) explains each grouping in the language of the CEP rule it satisfies.
+
+⚠️ **Two date checks before this is proposed.** The repository is cold since `2025-09-26` and **the CEP identified-student-percentage thresholds and multiplier are set by rule and move**; verify the current parameters against USDA FNS before quoting a dollar figure. And expect menu and participation data to be behind a vendor portal, not an API — [`andrewdefilippis/my-school-menus`](https://github.com/andrewdefilippis/my-school-menus) (MIT, `1,077 B`, `c3640779bb15`) exists because somebody had to scrape **Health-e Pro / My School Menus** to get at it.
+
+**Shape:** `4`–`6` weeks. The deliverable is a number with a rule citation beside it, which is why this is the easiest business case in the register.
+
+---
+
+### `P301` — A national school-feeding MIS where none exists
+**Buyer:** a ministry of education or a School Meals Coalition member state. **Region: Global** (deployment placement follows the client).
+
+**Why it is a build:** measured this pass — the `wfp` GitHub organisation publishes `9` repositories and **`0`** of them is school feeding; **School Connect**, WFP's own school-feeding platform (all `500+` WFP programme schools in Burundi, pilots in Niger and South Sudan), is not public. `107` countries now have a national school-meals policy, up from `56` in 2020. **There is no open-source school-feeding management system to fork** (`T591`).
+
+**Wiring:**
+1. **School-level collection** — [`getodk/central`](https://github.com/getodk/central) + [`getodk/collect`](https://github.com/getodk/collect) (both Apache-2.0, byte-identical `10,494 B` / `d1ee81266b96`). Offline-first on an Android handset in the hands of a school cook or head teacher: enrolment, attendance, deliveries received, stock on hand, meals served. 🟢 **This is already the channel in use** — Sierra Leone's EU/WFP school-meals data programme is introducing ODK alongside School Connect, so the client's partners will recognise it.
+2. **A UI the country office recognises** — [`wfp/designsystem`](https://github.com/wfp/designsystem) (Apache-2.0, `11,357 B`, **`b40930bbcf80`** — note the hash, `T590`). ⚠️ Cold since `2024-04-12`; treat it as a design language to re-implement, not a live dependency.
+3. **Commodity pipeline** — [`openlmis/openlmis-ref-distro`](https://github.com/openlmis/openlmis-ref-distro) (**AGPL-3.0**, `34,520 B`, `76a97c878c9c`) is the only credible open last-mile logistics stack. 🔴 **Hosting it as a service triggers §13 for the combined work. That is a reciprocity decision for counsel, not for a studio** — and if the answer is no, the pipeline is a build on top of the ODK data model instead.
+4. **Menu and nutrient layer** — `P302`.
+
+**Shape:** `12`–`16` weeks to a ministry-owned reporting backbone. **Lead with the reporting obligation, not the technology**: a Coalition member state already owes its own numbers upward.
+
+---
+
+### `P302` — Menu planning as a constrained optimisation, with the solver licence checked
+**Buyer:** any national or municipal feeding programme. **Region: Global.**
+
+**Wiring:** the school menu is the **diet problem** — minimise cost subject to nutrient floors and ceilings, seasonal availability, cultural and religious acceptability, and a local-sourcing floor. Two permissive components and nothing else exists:
+1. [`haiiibin/nutrition-planning-optimization`](https://github.com/haiiibin/nutrition-planning-optimization) (MIT, `1,066 B`, `a19dee7c5a49`, `0★`, pushed `2026-07-08`) — a four-stage linear programme over `50+` foods for institutional meal planning. **The only permissive menu-optimisation artefact found anywhere in this register.**
+2. [`google/or-tools`](https://github.com/google/or-tools)' linear solver as the engine, so the model is not tied to a commercial licence.
+
+🔴 **Two refusals, both measured:** [`Diennhutvo/Nutrition_Optimization_with_Gurobi_Python`](https://github.com/Diennhutvo/Nutrition_Optimization_with_Gurobi_Python) has **no grant *and*** a hard dependency on **Gurobi**, a commercial solver requiring a paid per-deployment licence — two blockers, and a studio that notices only the first will still ship an invoice to the client. And [`satryayogapratama-ux/giziiq`](https://github.com/satryayogapratama-ux/giziiq), the one purpose-built MBG menu generator, is **`MIT` + `Commons Clause`** (`2,219 B`, `fb74fe065a59`): the Commons Clause withholds the right to charge **hosting or consulting/support fees**, which is the delivery model itself (`T585`). **Read the model's structure from it; write the code fresh.**
+
+**Shape:** `3`–`4` weeks as a module inside `P301` or `P304`. It is the component with the clearest measurable outcome — cost per compliant meal.
+
+---
+
+### `P303` — Brazil: the PNAE `45%` family-farming floor as a sourcing optimiser
+**Buyer:** a Brazilian municipal or state education secretariat. **Region: LATAM.**
+
+**Why now:** **Resolução CD/FNDE nº 4, de 26 de fevereiro de 2026** sets PNAE's management rules, per-capita values were updated by **Resolução nº 1 de 18 de fevereiro de 2026**, the 2026 budget is **`R$ 6.7` billion** (a `21.8%` increase, `~40` million students), the statutory minimum spend with **agricultura familiar** is **`45%`**, and local-food adoption is reported at only **`20%` of schools**. A hard legal percentage, a measured shortfall, thousands of municipal buyers, and a **31/12/2026** accounts deadline through **SIGPC Ágil**.
+
+**Wiring:**
+1. **Procurement and inventory of record** — [`frappe/erpnext`](https://github.com/frappe/erpnext) (**GPL-3.0**, `35,149 B`, `3972dc9744f6` at `develop/license.txt` — `T589`) or [`odoo/odoo`](https://github.com/odoo/odoo) (**LGPL-3.0**, `43,529 B`, `abc09dad5f84`). 🔴 **Both are copyleft and both are indexed misleadingly** (ERPNext's grant is at a path no standard probe reads; Odoo is indexed `NOASSERTION`). **Name the licence in the proposal** — with LGPL-3.0, dynamic linking is fine and folding modules into a proprietary artefact is not.
+2. **The constraint** — the `45%` floor as an explicit constraint in an OR-Tools model over supplier bids, *chamada pública* responses and seasonal availability, producing a purchase plan that is compliant **by construction** rather than audited after the fact.
+3. **Integrate, do not replace, the accountability channel** — PNAE accounts are rendered through **BB Gestão Ágil** with **CAE** oversight. The system of record is a bank platform; the deliverable is evidence that flows into it.
+4. **The council-facing layer** — [`fga-eps-mds/2017.2-AjudaConselheiro-Frontend`](https://github.com/fga-eps-mds/2017.2-AjudaConselheiro-Frontend) (**GPL-3.0**, `35,121 B`, `e1c0ad728983`, `5★`, Universidade de Brasília) is the **only** artefact on earth built for a *Conselho de Alimentação Escolar*. 🔴 **Cold since `2018-09-07` — rebuild, do not fork.** Its value is that it proves the user exists and names the workflow.
+
+🟢 **And the transport half is the same ministry's programme:** **Caminho da Escola** published a price registry for **`15,000` school buses** (FNDE *Relatório de Gestão* 2025), with routing funded through **PNATE**. `P299`'s stack applies directly, and both halves can be sold to one buyer.
+
+**Shape:** `8`–`10` weeks for the sourcing optimiser against one secretariat's historical purchases; the compliance delta against the `45%` floor is the proof.
+
+---
+
+### `P304` — Indonesia MBG: `27,486` distributed kitchens as a supply-network problem
+**Buyer:** Indonesia's national nutrition agency, a provincial government, or an SPPG operator. **Region: APAC.**
+
+**Why now:** **`Rp 335` trillion** (`~US$20.7` billion) in the 2026 State Budget — **`44.2%` of 2026 education spending** (Tempo) — with **`Rp 153.2` trillion** realised by `30 September 2026`, **`~57` million** beneficiaries served through **`27,486` SPPG** units, a **publicly missed** target of `82.9` million by March 2026, and reported procurement-integrity concerns. The second-largest school-feeding programme on earth, after India's.
+
+**Wiring:**
+1. **The architecture fact first** — `27,486` distributed production units, not a central kitchen. The problem is **many-site supply, inventory, food safety and throughput**, and it decomposes per unit with a shared procurement layer.
+2. **Per-unit menu generation** — `P302` (OR-Tools LP + [`haiiibin/nutrition-planning-optimization`](https://github.com/haiiibin/nutrition-planning-optimization), MIT), **not** [`giziiq`](https://github.com/satryayogapratama-ux/giziiq) — which is the one purpose-built MBG artefact and is Commons-Clause-blocked against consulting delivery (`T585`). Rebuild it; it is a diet LP in a few hundred lines.
+3. **Inbound logistics to `27,486` sites** — OR-Tools routing again, this time a multi-depot distribution VRP rather than a pickup VRP. 🔵 **The same solver serves both halves of this register, which is the whole point of `T583`.**
+4. **Field reporting** — ODK Central + Collect (`P301`), because SPPG units are distributed and connectivity is not uniform.
+5. **Procurement traceability** — an audit trail per unit per delivery, built from the ODK data model. 🔵 **This is the response to the integrity concerns, and it is a feature a government can announce.**
+
+🔴 **The licence constraint stated once, plainly:** the register's only APAC software artefact cannot be delivered for a fee. Everything in this recipe except that one repository is MIT, Apache-2.0 or BSD-2-Clause.
+
+**Shape:** `10`–`14` weeks for one province as a reference deployment, then replicate. **Sell cost per compliant meal and units meeting throughput**, against a target the programme has already publicly missed.
+
+
 ## 🆕 `P295`–`P298` — added at p760 (2026-11-11)
 
 **Register: education in emergencies — crisis-affected, refugee and internally displaced learners.** 🔴 **The agent layer is a measured zero and the substrate is entirely built, so every recipe below is a composition rather than an integration** (`T567`). 🔴 **All four carry the same licence perimeter: the permissive chain is `learningequality/*` (`MIT`) plus `HKUDS/DeepTutor` (`Apache-2.0`); everything else in the register is `GPL-2.0`, `GPL-3.0` or `AGPL-3.0` and is client-hosted** (`T570`).
