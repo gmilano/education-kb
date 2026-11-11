@@ -4,6 +4,26 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p774` — **The vertical layer for school admissions. 🟢 The `1`-in-`10` permissive ratio finally breaks — but only for the MECHANISM: `6` of `6` deferred-acceptance implementations are MIT, while `0` of the platforms that hold the admissions RECORD are permissive, for a fifth consecutive register.**
+
+🔵 **The rule this register refines rather than repeats:** "there is no permissive SIS or school ERP" still holds, and for admissions it stops being the blocker. The allocator is the part with legal exposure under Annex III, and it can be MIT and separate.
+
+| Platform | Address | Grant (graded this pass) | Admissions capability | Customisable with AI on top? |
+|---|---|---|---|---|
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0** · branch 🔴 **`19.0`** | 🟢 Admissions + enquiry/CRM intake + document collection | 🟢 **Yes** — Odoo ORM/workflow; the richest intake surface measured. 🔴 LGPL: dynamic linking only if you intend to stay closed. |
+| **RosarioSIS** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟡 **GPL-2.0** (notice prose, `15,214 B`) · branch 🔴 **`mobile`** | 🟢 Student enrolment + records | 🟡 Yes via modules, but GPL-2.0 and **`555` refs on a `mobile` default branch** |
+| **Gibbon** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 **GPL-3.0 group** `ALTERED` `delta=86` · branch 🔴 **`v31.0.00`** | 🟢 Applications + admissions workflow | 🔴 Body-altered copyleft; legal review first |
+| **openSIS** | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **NO GRANT AT ROOT** (`33` names probed) | 🟢 Admissions + student information | 🔴 **No.** Cannot be licensed-cleared from the repository |
+| **Frappe Education** | [`frappe/education`](https://github.com/frappe/education) | 🔴 **`19`-byte grant** `License: GNU GPL V3` | 🟢 Admission + student application doctypes | 🔴 Grant statement is not SPDX and not resolvable to an arm (`T773`) |
+| **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 GPL-3.0 group `near-canonical` `delta=7` | 🔵 Registration, not competitive admissions | 🟢 Yes; strong LATAM install base |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟡 **ECL-2.0** `ALTERED` `delta=98` | 🔵 HE course/section, not school admissions | 🟡 **ECL-2.0 = Apache-2.0 with a NARROWED PATENT GRANT** (`T766`) — closer to permissive than anything else here, but read §3 |
+| **ataru** (Finland) | [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | 🟡 **EUPL-1.2** (notice, `296 B`) | 🟢 **The real thing: national application forms in production** | 🔴 Reciprocal copyleft — **reference architecture, not a base** |
+| **OpenEMIS MCP** | [`tixuz/openemis-mcp`](https://github.com/tixuz/openemis-mcp) | 🔴 **BSL-1.1 — NOT OPEN SOURCE** (`647 B`) | 🔵 Agent surface over OpenEMIS | 🔴 **No.** "Non-production evaluation and internal testing only" until `2029-01-01` |
+
+🔴 **And the platform most likely to be proposed for an EMIS engagement is the one whose own licence is contested.** UNESCO's **OpenEMIS** publishes a 2025 Software Principles document naming **CDDL-1.0**, while the same site hosts a 2019 licence agreement labelled **GPLv3**. 🟢 **CDDL-1.0 was added to `ingest/canonical/` this pass so the question becomes answerable from a payload** — but the authoritative statement still disagrees with itself, and `openemis/openemis` does not exist on GitHub (**ABSENT-OR-PRIVATE**, probed this pass), so there is no repository to read. 🔵 **Record it as contested and ask the ministry for the signed grant before scoping.**
+
+🟢 **The composition that works, and it is new this register:** MIT allocator (`daffidwilde/matching`) as a separate service + copyleft platform of the client's choice for intake + a built decision/appeal record. **The licence boundary and the Annex III oversight boundary are the same line** (`P774-1`).
+
 ## 🆕 `p773` — **The vertical layer for school safeguarding, and the `1`-in-`10` permissive ratio `p771` measured gets worse: for child-protection case management specifically it is `0` in `6`.**
 
 🔵 **The rule this register confirms for the fourth consecutive pass:** there is **no permissive SIS, school ERP, or school-safeguarding module in existence**. So the safeguarding record cannot be a fork of an existing platform — it must be a service federated to whatever the client already runs.

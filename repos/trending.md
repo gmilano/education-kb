@@ -4,6 +4,44 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `2026-11-11` · `p774` — **Admissions mechanism repos, all MIT, all verified `body:canonical` this pass — plus the first full non-free sweep this base has ever run over its own published licence claims.**
+
+🔵 **Append-only. History below.**
+
+| Repo | Branch · `HEAD` | Grant (graded) | Signal | Why it matters |
+|---|---|---|---|---|
+| [`daffidwilde/matching`](https://github.com/daffidwilde/matching) | `main` · `497602eb746f` | 🟢 **MIT** `canonical` `1,078 B` | `161` refs | The mature Python allocator — the standardisation target |
+| [`maxkapur/DeferredAcceptance.jl`](https://github.com/maxkapur/DeferredAcceptance.jl) | `main` · `c9dbcf659151` | 🟢 **MIT** `canonical` `1,052 B` | `21` refs | Nonatomic DA — reason about a national market, not one district |
+| [`Tekdirfan/Matching-Algorithms`](https://github.com/Tekdirfan/Matching-Algorithms) | `main` · `f09089b57bcd` | 🟢 **MIT** `canonical` `1,069 B` | active | DA vs Boston vs TTC in one place |
+| [`kyosek/deferred_acceptance_school_choice`](https://github.com/kyosek/deferred_acceptance_school_choice) | `master` · `22438e7d1ad3` | 🟢 **MIT** `canonical` `1,071 B` | `19` refs | Correctness oracle |
+| [`albant98/DeferredAcceptanceMata`](https://github.com/albant98/DeferredAcceptanceMata) | `main` · `844bbd916b1d` | 🟢 **MIT** `canonical+PREPENDED` `1,104 B` | niche | Stata/Mata — where evaluation units already work |
+| [`sirodoht/deferred-acceptance-algorithm`](https://github.com/sirodoht/deferred-acceptance-algorithm) | `main` · `800b31df3652` | 🟢 **MIT** `canonical` `1,060 B` | teaching | Onboarding reference |
+| [`ishandutta2007/Awesome-Enrollment-Management`](https://github.com/ishandutta2007/Awesome-Enrollment-Management) | `main` · `58797bca862b` | 🟢 **MIT** `canonical` `1,068 B` | index, updated Sept 2026 | The curated index for this space |
+| [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | `master` · `8c5839b29f31` | 🟡 **EUPL-1.2** `296 B` notice | `3,516` refs | National application system, in production |
+| [`Koha-Community/Koha`](https://github.com/Koha-Community/Koha) | — | — | — | 🟢 **The only one of `400` addresses shipping a complete `debian/` package WITH its own `debian/copyright`** (`T769`) |
+
+### 🔴 The non-free sweep — `1,592` published licence claims, run for the first time
+
+| Verdict | Count |
+|---|---|
+| 🟢 `body:canonical` | **`1,103`** |
+| 🟢 `body:near-canonical` (absolute budget, deontic-guarded) | `138` |
+| 🟢 `canonical:operative-body-match` (Apache appendix absent) | `121` |
+| 🟢 `canonical+PREPENDED` / `+APPENDED` / `+SURROUNDED` | `26` / `12` / `2` |
+| 🟢 `POINTER-resolved-by-NOTICE-PROSE` | **`73`** |
+| 🟢 `POINTER-resolved-by-SPDX-tag` | `4` |
+| 🔴 `OPERATIVE-TEXT-ALTERED` | `53` |
+| 🔴 `NO-GRANT-AT-ROOT` (after `33` case-aware names) | `29` |
+| 🔴 `POINTER-UNRESOLVED` (no tag, no notice) | `18` |
+| 🔴 `NOT-IN-CANONICAL-SET` (long bespoke text) | `8` |
+| 🔴 **`NOT-OPEN-SOURCE` (source-available or restricted)** | **`5`** |
+
+🟢 **`1,402` of `1,592` (`88.1%`) are canonical or benign; `77` pointer rows were resolved on the two further rungs; `84` need a human read.**
+
+🔴 **The `5` non-free rows: [`learningequality/ka-lite`](https://github.com/learningequality/ka-lite) (CC-BY-NC), [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) (CC-BY-NC), [`woolimi/robotics-roadmap`](https://github.com/woolimi/robotics-roadmap) (CC-BY-NC), [`satryayogapratama-ux/giziiq`](https://github.com/satryayogapratama-ux/giziiq) (Commons Clause), [`tixuz/openemis-mcp`](https://github.com/tixuz/openemis-mcp) (BSL-1.1).**
+
+🟢 **And the result that matters more than the list: all five were ALREADY on these shelves, correctly identified, with byte lengths that match this pass's independent measurement exactly (`647 B`, `1,220 B`, `2,219 B`, `3,760 B`).** 🔵 **So the sweep found no sixth. The base's non-free coverage is complete as measured — which no previous pass could state, because no previous pass checked mechanically.** 🔴 **What the sweep DID find wrong is `p772`'s own extracted `claimed_family` column, which records `MIT` for four of the five; any cross-check keyed on that column manufactures misdeclarations that the shelf prose does not contain.**
+
 ## 🆕 `p773` — `2026-11-11` — **The repository movement this week is a measurement of this base's own channel, not a star count: the industry-KB push was out of scope, not broken, and a case-aware filename list changed a verdict on a `35,000`-star-class platform.**
 
 🔴 **`make hooks` tried first, as `ACTION p772-A` requires: DENIED, fourth consecutive session (`[Code from External]`).** 🟢 **`★` remains withdrawn** (`p771` `T726`): `api.github.com` is `403` here, so every row below is identified by **default branch + `HEAD`** and **grant bytes + `sha256₁₂`**.

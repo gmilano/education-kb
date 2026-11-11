@@ -1,0 +1,42 @@
+DFE-Digital/dfe-analytics	main	MIT-LICENSE	MIT	body:canonical	1052	-
+GeminiLight/awesome-ai-llm4education	main	NO-GRANT-AT-ROOT	-	-	-	-
+LBNL-ETA/EnergyPlus-MCP	main	License.txt	UNRESOLVED	POINTER-UNRESOLVED(no tag, no notice)	2474	-
+LIST-LUXEMBOURG/eagle-aig	master	license.txt	Apache-2.0	body:canonical	11358	-
+LibreHealthIO/lh-ehr	master	NO-GRANT-AT-ROOT	-	-	-	-
+Lumieducation/Lumi	master	NO-GRANT-AT-ROOT	-	-	-	-
+OS4ED/openSIS-Classic	master	NO-GRANT-AT-ROOT	-	-	-	-
+OpenConext/Mujina	main	NO-GRANT-AT-ROOT	-	-	-	-
+OpenEMS/openems	develop	NO-GRANT-AT-ROOT	-	-	-	-
+Project-OSRM/osrm-backend	master	NO-GRANT-AT-ROOT	-	-	-	-
+apereo/mod_auth_cas	master	NO-GRANT-AT-ROOT	-	-	-	-
+aweleayomide91/Decentralized-Playground-Safety-Inspection	main	NO-GRANT-AT-ROOT	-	-	-	-
+bigdata-ustc/Agent4Edu	main	NO-GRANT-AT-ROOT	-	-	-	-
+bycs-lp/moodle-block_ai_chat	main	NO-GRANT-AT-ROOT	-	-	-	-
+bycs-lp/moodle-local_ai_manager	main	NO-GRANT-AT-ROOT	-	-	-	-
+bycs-lp/moodle-quizaccess_ai	main	NO-GRANT-AT-ROOT	-	-	-	-
+djpfs/react-vlibras	main	NO-GRANT-AT-ROOT	-	-	-	-
+dsanchez07/react-allergens	master	NO-GRANT-AT-ROOT	-	-	-	-
+dtjohnson83/osha-mcp	main	NO-GRANT-AT-ROOT	-	-	-	-
+fasiha/ebisu.js	gh-pages	NO-GRANT-AT-ROOT	-	-	-	-
+frappe/education	develop	license.txt	GPL-3.0	POINTER-resolved-by-NOTICE-PROSE	19	-
+frappe/erpnext	develop	license.txt	GPL-3.0-only|GPL-3.0-or-later [body-identical group; only-vs-or-later UNDECIDABLE from body]	body:near-canonical	35149	-	delta=13
+frappe/hrms	develop	license.txt	GPL-3.0-only|GPL-3.0-or-later [body-identical group; only-vs-or-later UNDECIDABLE from body]	OPERATIVE-TEXT-ALTERED	34916	-	delta=210
+iansan5653/open-mcr	master	license.txt	GPL-3.0	POINTER-resolved-by-NOTICE-PROSE	32423	-
+intelliboard/intelliboard	master	NO-GRANT-AT-ROOT	-	-	-	-
+kitschpatrol/yanki-connect	main	license.txt	MIT	body:canonical	1071	-
+kiwix/kiwix-js	main	NO-GRANT-AT-ROOT	-	-	-	-
+kosukeimai/fastLink	master	NO-GRANT-AT-ROOT	-	-	-	-
+kuali/kc	master	license.txt	AGPL-3.0-only|AGPL-3.0-or-later [body-identical group; only-vs-or-later UNDECIDABLE from body]	body:near-canonical	33755	-	delta=21
+learningequality/kolibri-design-system	develop	NO-GRANT-AT-ROOT	-	-	-	-
+lebmatter/exampro	main	license.txt	MIT	body:canonical	1069	-
+louistrue/ifcx-mcp	main	NO-GRANT-AT-ROOT	-	-	-	-
+nvaccess/nvda	master	copying.txt	GPL-2.0	POINTER-resolved-by-NOTICE-PROSE	53407	-
+openedx/XBlock	master	NO-GRANT-AT-ROOT	-	-	-	-
+openfisca/openfisca-france	master	NO-GRANT-AT-ROOT	-	-	-	-
+openfisca/openfisca-tunisia	master	NO-GRANT-AT-ROOT	-	-	-	-
+openstax/fine_print	main	MIT-LICENSE	MIT	body:canonical	1055	-
+scrosseye/persuade_corpus_2.0	main	NO-GRANT-AT-ROOT	-	-	-	-
+sshaaf/keycloak-mcp-server	main	NO-GRANT-AT-ROOT	-	-	-	-
+veraPDF/veraPDF-library	integration	LICENSE.GPL	GPL-3.0-only|GPL-3.0-or-later [body-identical group; only-vs-or-later UNDECIDABLE from body]	OPERATIVE-TEXT-ALTERED	35142	-	delta=58
+vkaravir/JSAV	master	NO-GRANT-AT-ROOT	-	-	-	-
+yifnli/uis-sdg4-mcp	main	NO-GRANT-AT-ROOT	-	-	-	-

@@ -4,6 +4,71 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p774` — **The school admissions and appeals register (`ACTION p773-I`). 🟢 Its stated premise HOLDS and is sharper than stated: admissions is squarely inside EU AI Act Annex III, and it is the first register where the ALGORITHM ITSELF is the regulated artefact rather than the record about it. 🔴 `make hooks` tried first and DENIED a fifth consecutive session.**
+
+**Register: school admissions and appeals** — the application, the published decision, the time-limited appeal right, and the retention clock on the whole file. `ACTION p773-I` named it for four stated reasons: statutory, per-pupil, a published decision, and a time-limited appeal right. 🟢 **All four hold.** 🔵 **And the reason it names — "squarely inside EU AI Act Annex III" — is confirmed from the instrument's own wording: Annex III point 3 lists *admission or assignment to educational institutions* as a NAMED high-risk use, alongside evaluating learning outcomes, assessing the appropriate level of education, and monitoring prohibited behaviour during tests.**
+
+### 🔴 The instrument map — four regions, four different appeal bodies
+
+| Region | Binding instrument | Who decides the appeal | Shape |
+|---|---|---|---|
+| **EMEA** (England) | **School Admission Appeals Code** (statutory; a 2026 consultation on changes was published and the final text could not be read — `eur-lex`/`gov.uk` statistical hosts do not resolve here) | 🔴 **An INDEPENDENT appeal panel — chair plus at least two members, at least one lay member and one with education experience — established BY the admission authority but reaching its OWN conclusion.** A clerk supports it, does not vote, does not advise on outcome | 🔴 **The panel's decision is LEGALLY BINDING on the school and the admission authority.** Timescales reported as ≥`20` school days to lodge, ≥`10` school days' notice of hearing, hearings within `40` school days. **Infant class size appeals can only succeed on three narrow grounds** |
+| **EMEA** (Finland) | National joint application via **Opintopolku**; the application system itself is open source (`ataru`, EUPL-1.2) | Agency-operated process | 🟢 **The only region where the STATE PUBLISHES THE APPLICATION SYSTEM'S SOURCE** (`T770`) |
+| **North America** (US) | 🔴 **No federal instrument. `50` state regimes, and the appeal right is where they diverge most** | **Wisconsin:** appeal to the **DPI** within `30` days; affirmed unless *arbitrary or unreasonable*. **Utah:** appeal to the **non-resident district's own board** — reviewed by the body that refused. **Iowa:** a receiving district's refusal is **NOT subject to appeal at all** | 🔴 **The same denial is reviewable by a state regulator, by the refusing party, or by nobody, depending on the state** (`T771`) |
+| **APAC** (India) | **RTE s.12(1)(c)** — `25%` of private unaided school intake reserved; allocation by **LOTTERY**, state-operated portals | District/Block Education Officers verify, then the lottery runs | 🟡 UP's 2026-27 cycle ran `3` phases Feb `2`–`25` with results reported `27 March 2026`; Maharashtra's first-round result reported `6 April 2026`. 🔴 **All dates are content-farm sourced; state portals were not reachable** |
+| **APAC** (Australia) | 🔴 **No national process; state and territory regimes** | **ACT:** two-step — principal **review**, then an **appeal panel** including clinical practice, an Executive Education Leader and a principal not involved in the review. **VIC:** written appeal to the school, then the **Regional Director**. **QLD:** refusal reviews via the departmental pathway, **up to `40` school days** | 🔵 The ACT is the only measured region that mandates a **clinical** member on an admissions appeal panel |
+| **LATAM** (Chile) | **Sistema de Admisión Escolar (SAE)** — centralised, national, deferred-acceptance | Ministry-operated; priorities fixed in law (siblings, priority students, staff children, alumni) | 🟢 **The single most important LATAM data point this base has recorded on admissions: the Ministry PUBLISHES THE ALGORITHM AND THE DATA ANNUALLY.** 🔴 **And it CHANGED for the 2026 intake: the Ley de Presupuestos 2025 replaced the random tiebreak (*tómbola*) with a transitional deterministic algorithm keyed on the student's `RUT` and the school's `RBD`, designed by U. de Chile and PUC academics** |
+| **LATAM** (Brazil) | 🔴 **No national system — state and municipal.** MG `SUCEM`, PE `matricularapida.pe.gov.br`, SE `Portal Matrícula Online`, BA `SIGEduc`/`ba.gov.br`, PA state portal | Secretariat-level; online cadastro then **in-person confirmation at the school** | 🔴 **The two-stage online-then-presencial pattern is the LATAM-specific build constraint:** a place is allocated digitally and FORFEITED if not confirmed physically within a short window (MG: `2` days) |
+
+### 🔴 `T772` — the retention clock spans `1 year` to `PERMANENT`, and it is the deliverable's governing variable
+
+`p773`'s `T761` made the retention clock the central mechanism of a records deliverable. Measured across four regions for admissions, the clock is not a parameter with a range — it is four incompatible regimes:
+
+| Region | Retention of the admissions/enrolment record | Source quality |
+|---|---|---|
+| **EMEA** (England) | **`DoB + 25`** (held from `p773`, safeguarding register) | Secondary, consistent |
+| **North America** (US) | 🔴 **No federal period — FERPA sets NONE.** State/local schedules, reported `4` to `99` years by record type; **admission applications reported at ~`5` years**; transcripts **permanent** | 🔴 Secondary blogs/vendor guides only |
+| **APAC** (Australia) | 🔴 **No national rule.** VIC government schools reported as **up to `1` year after the student leaves**; NSW/ACT/WA reported as **until the student turns `25`, or `7` years after leaving** | 🔴 Secondary |
+| **LATAM** (Brazil) | 🔴 **No school-specific statute at all** — practitioners are told to write their own *tabela de temporalidade* under CONARQ norms. 🟢 **But the `Livro de Registro de Matrícula` is GUARDA PERMANENTE**, and institutional tables record individual student dossiers at **`100` years** | 🟡 CONARQ-aligned institutional tables (UFPel, UNEMAT, Arquivo Público MG) + practitioner guidance |
+
+🔴 **So the spread is `1 year` to `permanent` — a factor of more than `100`, with `2` of `4` regions having NO statutory school-level period at all.** 🟢 **For a product this is the single configuration axis that cannot be defaulted:** a deletion job that is correct in Victoria destroys a record Brazil requires to be kept forever.
+
+## Opportunities by region
+
+### North America
+
+- 🟢 **The admissions opportunity is the APPEAL, not the allocation, and the reason is measurable:** the allocation mechanism is available under MIT from `6` repositories, while the appeal right differs per state in a way no product models. 🔴 **Wisconsin reviews a denial at the state regulator, Utah reviews it at the board that issued it, and Iowa does not review it at all.**
+- 🟢 **The deliverable is a per-state `appeal_route` configuration table with an evidentiary trail**, exactly as `p773`'s `P773-1` needed a `duty_discharged_by` table — and the same `43`+ unmeasured states are the missing rows (`ACTION p774-G`).
+- 🔵 **Held from `p772`/`p773`:** US estate **`99,073`–`99,088` schools / `17,648`–`19,217` LEAs**; **`79%`** of districts hold AI guidelines; **`31`→`37`** states with AI guidance; Ohio and Idaho carry the binding AI-policy duties.
+- 🔴 **Pending 2026 bills that would change the appeal surface and whose enactment this pass could NOT confirm:** NM HB 245 (appeals to the PED secretary, decided only on capacity), NH SB 101 (closed list of permitted denial reasons), SC 3199 (written reasons + notice of appeal right from the 2026-27 year). 🔵 **Recorded as pending, not as law.**
+
+### EMEA
+
+- 🟢 **The EU AI Act makes the admissions algorithm itself the regulated artefact from `2 December 2027`** — Annex III point 3 names *admission or assignment*. 🔵 **`p773`'s `T752`/`T758` date re-confirmed independently this pass: Reg. (EU) 2026/1744, OJ `24 July 2026`, in force `27 July 2026`; Article 50 transparency unchanged at `2 August 2026`; Annex I embedded `2 August 2028`.** 🔴 **Emotion recognition in education has been PROHIBITED since February 2025 — that one is live now, not deferred.**
+- 🟢 **Finland is the reference architecture and it is free to read:** `ataru` (EUPL-1.2, `3,516` refs) is a national application system in Clojure, and `koski` (EUPL-1.1) the study-records system. 🔴 **Both are copyleft, so they are a design source, not a shippable base.**
+- 🟢 **England is the only measured region with a statutory INDEPENDENT panel whose decision binds the school.** That is a product requirement, not a feature: the system must record a decision it cannot itself overturn, with the panel's composition and the clerk's non-advisory role as first-class constraints (`T773`).
+- 🔵 **Policy layer, dated:** Commission draft Article 6 guidelines published `19 May 2026` (consultation to `23 June 2026`); Commission ethical guidelines for teachers updated `9 June 2026`; Council conclusions on teachers in the AI era `11 May 2026`; Eurydice *Digital education at school in Europe 2026* published September 2026 reporting access to advanced AI at school level is still uneven.
+
+### APAC
+
+- 🟢 **The region's admissions volume is the largest and the most algorithmic already:** India's RTE `25%` quota is allocated by state-run **lottery**, which is a mechanism decision with no contestability layer attached.
+- 🟡 **The Philippines launched `AGAP.AI` in January 2026**, reported as its first nationwide programme for responsible AI integration in basic education — the clearest national procurement signal in the region.
+- 🔴 **Australia is `8` separate appeal regimes**, and the ACT's panel composition (clinical practitioner + Executive Education Leader + uninvolved principal) is a shape no other measured jurisdiction uses.
+- 🔴 **Declared gap:** fewer than half of APAC educators surveyed report strong confidence in existing institutional or government AI policy — so a governance artefact is the sellable item, and **no APAC admissions statute text was read primarily this pass**.
+
+### LATAM
+
+- 🟢 **Chile is the global reference and the opportunity is the CHANGE, not the system:** the SAE moved off a random tiebreak to a deterministic `RUT`×`RBD` algorithm for the 2026 intake under the Ley de Presupuestos 2025. 🔵 **A transitional algorithm, published annually, with a legal priority order on top of deferred acceptance, is precisely the artefact that needs an explainability and audit surface — and `ConsiliumBots` already works this problem in-country.**
+- 🔴 **Brazil's constraint is structural, not regulatory:** there is no national system, the state portals differ, and the allocation is forfeited if not confirmed **in person** within days. 🟢 **An agent that closes the online→presencial gap (reminder, document pre-check, re-offer of forfeited places) is a LATAM-specific build with a measurable loss to recover.**
+- 🟢 **Retention is the sharpest LATAM differentiator:** the `Livro de Registro de Matrícula` is **permanent**, and no school-level statute sets a period — so every Brazilian deployment needs its own CONARQ-aligned temporality table, which is billable work no product ships.
+- 🔵 **Demand-side figures, held and re-confirmed:** `92%` of students and `79%` of faculty in LATAM higher education actively engage with AI (Digital Education Council / Tec de Monterrey), while `88%` of faculty report only minimal-to-moderate engagement — adoption is wide and shallow. UNESCO (September 2026) reports adoption "neither uniform nor evenly distributed", with a public/private university gap.
+
+### Global
+
+- 🟢 **The one-line statement of this register: the allocation mechanism is a solved, MIT-licensed commodity, and the contestability layer around it does not exist in open source anywhere.** `6` permissive deferred-acceptance implementations against `0` permissive appeal implementations.
+- 🔴 **And the licence layer of this sector is not what a permissive filter assumes.** Measured across all `1,592` published licence claims on this base: **`4` repositories are ECL-2.0** — the education sector's own licence, which is Apache-2.0 **with the patent grant narrowed** — and this base held no ECL text until this pass. **`2` are EUPL**, on two different versions. **`5` are not open source at all.** 🔵 **A studio filtering on "Apache-2.0" alone gets ECL wrong in both directions: it is more permissive than copyleft and less permissive than Apache on patents.**
+- 🔵 **Market size, with the disagreement preserved rather than averaged:** AI-in-education at **`$10.6B` (2026) → `$42.48B` (2030)** at `41.5%` CAGR (Research & Markets, April 2026); **`$9.58B`** growing `>30%`/yr (Programs.com); Precedence's 2035 figure **`$136.79B`**; Technavio puts North America at **`41.7%`** of global market growth and APAC CAGR at **`20.9%`–`35.3%`** depending on source. 🔴 **The spread between the low and high 2026 figures is ~`11%` and between long-run figures is `3×`; they are orders of magnitude, not settled numbers.**
+
 ## 🆕 `p773` — **School safeguarding and child-protection records: the statutory layer, measured in four regions — and `ACTION p772-I`'s stated premise of a single duty-holder is FALSIFIED.**
 
 🔴 **`make hooks` tried first (`ACTION p772-A`): DENIED, fourth consecutive session.** 🟢 **No market size is quoted on this shelf.** `p771`'s `T738` is a standing instruction after one search returned `$2.21B`–`$11.40B` for the same year: **quote the duty's dates and the estate's COUNT.** This section does that.
@@ -38,7 +103,7 @@ updated: 2026-11-11
 
 🟢 **`p772`'s `T752` holds, confirmed from an independent reading.** 🔴 **And `ACTION p772-B`'s remediation order is withdrawn as unsafe: the `75` sites were a line-bound gate artefact, and `0` live bare assertions exist on the curated shelves** (`T758`).
 
-## Opportunities by region
+## Opportunities by region — `p773` (historical section; the live one is at the top of this file)
 
 ### North America
 
@@ -109,7 +174,7 @@ updated: 2026-11-11
 
 🟢 **This clears the `128` date assertions the subject-bound `gate-dates` flagged while the pair was contested: `2 December 2027` is settled and may be asserted freely.** 🔴 **What remains is bounded and named: `75` sites still assert the superseded `August 2026` bare — `26` of them on this file, `25` on `agents/trending.md`, `11` on `README.md`, `6` on `intel/trends.md`, `4` on `intel/open-gaps.md`, `3` on `repos/trending.md`** (`ACTION p772-B`).
 
-## Opportunities by region
+## Opportunities by region — `p772` (historical section; the live one is at the top of this file)
 
 ### North America
 

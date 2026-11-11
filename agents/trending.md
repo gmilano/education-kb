@@ -4,6 +4,34 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `2026-11-11` · `p774` — **Admissions and appeals. 🟢 The week's real signal is not a new agent but a licence fact: `4` repositories on these shelves are ECL-2.0, the education sector's own Apache-2.0 variant with a narrowed patent grant, and this base could not grade any of them until this pass.**
+
+🔵 **Append-only. Everything below this section is the record of what was believed when.**
+
+**New this pass, probed before shelving:**
+
+- 🟢 [`daffidwilde/matching`](https://github.com/daffidwilde/matching) — `main` · `497602eb746f` · **MIT** `body:canonical` `1,078 B` · `161` refs. **The permissive allocator the admissions register needed.** Student-allocation as a first-class game.
+- 🟢 [`maxkapur/DeferredAcceptance.jl`](https://github.com/maxkapur/DeferredAcceptance.jl) — `main` · `c9dbcf659151` · **MIT** `body:canonical` `1,052 B`. Discrete **and nonatomic** DA + TTC; GLPK/Cbc defaults, no commercial solver.
+- 🟢 [`Tekdirfan/Matching-Algorithms`](https://github.com/Tekdirfan/Matching-Algorithms) — `main` · `f09089b57bcd` · **MIT** `body:canonical` `1,069 B`. DA + Boston + TTC + LP together — makes a mechanism choice demonstrable.
+- 🟡 [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) — `master` · `8c5839b29f31` · **EUPL-1.2** resolved on **notice prose** from a `296 B` pointer · `3,516` refs. **A national application system published by Finland's education agency.** Copyleft.
+- 🟡 [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) — `master` · `d2ea28740d7d` · **EUPL-1.1**, `654 B` · `5,700` refs. 🔴 **A different EUPL version from its own sibling.**
+- 🟡 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) — `main` · `135d6275e7db` · **CC-BY-SA-4.0**, `1,220 B`, human-readable notice only. `165` teacher/leader agent skills. 🔴 **A ShareAlike CONTENT licence on a software-shaped artefact — a derived client skill set inherits it.**
+- 🔴 [`tixuz/openemis-mcp`](https://github.com/tixuz/openemis-mcp) — `main` · `f88a80fc1d5b` · **BSL-1.1, NOT OPEN SOURCE**, `647 B`. Already on these shelves; **re-derived mechanically this pass by a non-free detector rather than by a hand-read**, and the byte length matches the shelf exactly.
+- 🔴 [`szhangbi/school-choice-python`](https://github.com/szhangbi/school-choice-python) — `master` · `341d50b3c896` · **GPL-2.0 group, `OPERATIVE-TEXT-ALTERED` `delta=484`, `deontic=not`**, `18,047 B`. Carries DA + Immediate Acceptance but the alteration touches a negation. **Do not ship without legal review.**
+
+**Re-graded, and the verdict changed:**
+
+- 🟢 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) — was ungradeable (`NOT-IN-CANONICAL-SET`, `11,120 B`); now **ECL-2.0** after the text was added to `ingest/canonical/`. Same for [`opencast/opencast`](https://github.com/opencast/opencast), [`archivesspace/archivesspace`](https://github.com/archivesspace/archivesspace) and [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW). 🔵 **The Apereo/educational-middleware cluster runs on the sector's own licence and this base was blind to it.**
+- 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) — `main` · `60fb3bdfddb3` · **Apache-2.0 `OPERATIVE-TEXT-ALTERED` `delta=350`, `deontic=warranty`**, `11,408 B`. `p773`'s `T730` reproduced by an independent from-scratch instrument, now with the class of term that moved.
+- 🟢 [`DFE-Digital/dfe-analytics`](https://github.com/DFE-Digital/dfe-analytics) and [`openstax/fine_print`](https://github.com/openstax/fine_print) — recorded by `p772` as `NO-GRANT-PAYLOAD`; both carry **canonical MIT at `MIT-LICENSE`**. Part of a `13`-of-`42` correction (`T768`).
+- 🟢 [`nvaccess/nvda`](https://github.com/nvaccess/nvda) — grant found at lowercase `copying.txt`, resolves **GPL-2.0** on notice prose. 🔴 **An earlier build of this pass's grader called it AGPL-3.0; the defect was caught by cross-checking against the family these shelves already claimed** (`D9`).
+
+**Trending signal, recorded with its source quality:**
+
+- 🟡 **DeepTutor surfaced on GitHub Trending `30 October 2026`** per a single aggregator article — recorded as reported, not verified against GitHub's own trending page, which is `403` in this session.
+- 🟡 **`GarethManning/education-agent-skills`** appears on a Trendshift listing as `165` evidence-grounded skills for teachers and school leaders. 🔴 **`geekjourneyx/interactive-learning` appears on the same index with `0` stars gained over a `29`-day window — a stale trending entry, recorded as such.**
+- 🔴 **Discovery still depends on a single third-party web index.** `api.github.com` is `403` here and `github.com/<owner>` HTML is `403` for all `91` owner-only links probed this pass — a constraint this base had already documented at `intel/trends.md` and which is now confirmed at scale.
+
 ## 🆕 `p773` — `2026-11-11` — **What is new this week is not an agent. It is that this base's push channel was never broken — it was out of scope — and that a `1,055`-byte licence file in the MIT band turned out to be AGPL-3.0.**
 
 🔴 **First, as `ACTION p772-A` requires: `make hooks` was TRIED as the first command of this pass and DENIED again — `[Code from External]`. Fourth consecutive session, so it stays settled.** 🟢 **Not worked around.**

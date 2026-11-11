@@ -4,6 +4,112 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p774` — **Concrete recipes from the admissions and appeals register. Every component named below was probed on the ref channel and its grant body-diffed or notice-resolved THIS pass; nothing is cited that was not measured. 🟢 For the first time in nine registers the mechanism layer is MIT and the build is the layer above it.**
+
+### `P774-1` — The contestable admissions decision (the register's primary deliverable)
+
+**Why it is a build and not a buy:** the allocation mechanism is a solved MIT commodity (`6` implementations, `T770`), and `0` permissive repositories implement the refusal, the published reason, the appeal window or the panel decision — which is the whole of what England, the ACT, Wisconsin and Chile's priority order actually require.
+
+```
+[Intake]        openeducat/openeducat_erp (LGPL-3.0, branch 19.0) -- CRM intake + application
+                   or francoisjacquet/rosariosis (GPL-2.0, branch `mobile`) for SIS-first clients
+                   |
+                   v
+[Allocation]    daffidwilde/matching (MIT, 1,078 B canonical)  <-- the commodity
+                   + Tekdirfan/Matching-Algorithms (MIT) to show DA vs Boston vs TTC
+                     on the client's OWN data before the mechanism is chosen
+                   |
+                   v
+[DECISION RECORD]  <-- BUILD. the differentiated artefact. per-applicant:
+                     - rank list as submitted (immutable, hashed)
+                     - priority categories applied, each with its legal citation
+                     - the mechanism + its version + its tiebreak seed
+                     - the outcome and the REASON, in the parent's language
+                   |
+                   v
+[APPEAL]           <-- BUILD. jurisdiction-configured:
+                     appeal_route = {state_regulator | refusing_body | independent_panel | NONE}
+                     panel_composition, clerk role (non-voting, non-advisory)
+                     lodge_window, notice_period, hearing_deadline
+                   |
+                   v
+[RETENTION]        <-- BUILD. retention_clock = {DoB+25 | ~5y | age25|leave+7y | PERMANENT}
+```
+
+🔴 **The three tables that make it shippable, and none of them exists in open source:**
+
+| Table | Keyed by | Why it cannot be defaulted |
+|---|---|---|
+| `appeal_route` | jurisdiction | Wisconsin → state regulator; Utah → the refusing board; **Iowa → not appealable**; England → independent binding panel (`T773`) |
+| `priority_order` | jurisdiction | Chile fixes siblings, priority students, staff children and alumni **in law**; England's infant-class-size appeals can only succeed on `3` narrow grounds |
+| `retention_clock` | jurisdiction | `1 year` (VIC) to **permanent** (Brazil's `Livro de Registro de Matrícula`) — a `>100×` spread (`T772`) |
+
+🟢 **Share the jurisdiction registry with `P773-1`'s `duty_discharged_by` table.** Both registers need the same primitive: *which legal person does this duty bind, in this jurisdiction, with what clock.* Building it twice is the mistake.
+
+**Licence posture:** the allocation path is **MIT end to end**. The intake path is **copyleft** (LGPL-3.0 or GPL-2.0), so the decision-record and appeal services must be separate processes communicating over an API, not modules inside the LMS/SIS — which is also what the EU AI Act's logging and human-oversight obligations want. **Timeline `10`–`14` weeks.**
+
+### `P774-2` — The mechanism comparison bench (the pre-sales artefact, `2`–`3` weeks)
+
+🔵 **The cheapest credible thing a studio can put in front of a ministry**, and it exists because of `T770`.
+
+```python
+# bench/compare.py -- all three licences are MIT (verified body:canonical this pass)
+from matching.games import StudentAllocation      # daffidwilde/matching, MIT 1,078 B
+# Tekdirfan/Matching-Algorithms (MIT 1,069 B) supplies Boston + TTC for contrast
+# maxkapur/DeferredAcceptance.jl (MIT 1,052 B) for the nonatomic//large-market view
+
+def bench(students, schools, capacities, priorities):
+    """Run the client's OWN application data through three mechanisms and report
+    the three numbers a ministry actually argues about."""
+    out = {}
+    for name, solve in MECHANISMS.items():          # DA | Boston | TTC
+        match = solve(students, schools, capacities, priorities)
+        out[name] = {
+            "unassigned":        count_unassigned(match),
+            "first_preference":  share_at_rank(match, 1),
+            "justified_envy":    count_blocking_pairs(match),   # = 0 iff stable
+            "priority_respected": share_priority_honoured(match, priorities),
+        }
+    return out
+```
+
+🟢 **Why `justified_envy` is the row that sells:** deferred acceptance always produces a **stable** assignment and Pareto-dominates the other stable ones, so a non-zero count on the client's incumbent process is a measured defect in their current allocation — not an opinion. 🔴 **Chile's own 2026 change makes this live: the tiebreak moved from random to a deterministic `RUT`×`RBD` function, and the distributional consequence of that swap is exactly what this bench reports.**
+
+### `P774-3` — The LATAM online→presencial recovery agent (`3`–`4` weeks, highest measured loss)
+
+🔴 **The Brazilian constraint no product models:** a place is allocated online and **forfeited** if the family does not confirm in person at the school within a short window — Minas Gerais gives **`2` days** after the `SUCEM` cadastro. Pernambuco explicitly returns unconfirmed places to the system for a second round in January.
+
+```
+[State portal: SUCEM / matricularapida.pe / Portal Matrícula Online / SIGEduc]
+        | (allocation event, with a 2-day presencial deadline)
+        v
+[Recovery agent]  -- build on frappe/education (GPL-3.0 per a 19-BYTE grant file, T773:
+                     legal review required before shipping against it) or stand alone
+        |-- document pre-check: tells the family WHICH papers, before the trip
+        |-- WhatsApp reminder on the forfeit clock (LATAM primary channel)
+        |-- forfeited-place re-offer queue, feeding the next round
+        v
+[Measured outcome: places recovered per round]
+```
+
+🟢 **This is the rare LATAM pattern with a denominator already in the public record:** unconfirmed places are returned to the portal and re-offered, so the recovery rate is observable from the state's own second-round volumes. 🔴 **Compliance note: the whole flow touches minors' records under the LGPD, and Brazil sets no school-level retention statute — so the deployment needs its own CONARQ-aligned *tabela de temporalidade* written as part of delivery, with the `Livro de Registro de Matrícula` held permanently** (`T772`).
+
+### `P774-4` — EU AI Act Annex III conformity surface for an existing allocator (`6`–`8` weeks, EMEA)
+
+🔵 **The clock is `2 December 2027` and the subject is the ALGORITHM, not the record** (`T771`). For a client who already runs an allocator, the deliverable is the obligation surface around it:
+
+| Obligation | Artefact | Source component |
+|---|---|---|
+| Technical documentation | mechanism + version + tiebreak, as a signed manifest | built; `DeferredAcceptance.jl` and `Matching-Algorithms` make the variant explicit rather than implicit |
+| Automatic logging | per-run immutable log of inputs, priorities applied, outcome | built |
+| Bias testing across affected groups | assignment outcomes by protected characteristic, per round | `P774-2`'s bench, re-pointed at production data |
+| Human oversight | the borderline queue a human must clear before publication | built; England's **independent panel** is the statutory version of this and binds the school (`T773`) |
+| Transparency (Article 50, live since `2 August 2026`) | disclosure where families interact with a chatbot | 🔴 **already in force — not deferred** |
+
+🔴 **Do not model emotion recognition anywhere in an education deliverable: it has been PROHIBITED in education settings since February 2025**, which is a ban rather than a high-risk obligation.
+
+🟢 **Reference architecture to read, not to fork:** `Opetushallitus/ataru` (EUPL-1.2, Clojure, `3,516` refs) is a national application system in production, and `koski` (EUPL-1.1) is its records sibling. 🔴 **Both are reciprocal-licence copyleft on two different EUPL versions, so they are a design source for a studio, not a shippable base** (`T774`).
+
 ## 🆕 `p773` — **Concrete recipes from the safeguarding register. Every component named below was probed on the ref channel and its grant body-diffed this pass; no component is cited that was not verified.**
 
 ### `P773-1` — The multi-jurisdiction safeguarding concern record (the register's primary deliverable)

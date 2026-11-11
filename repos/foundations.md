@@ -4,6 +4,40 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p774` — **Foundations for the admissions and appeals register (`ACTION p773-I`). 🟢 `6` permissive foundational rows — the first register in nine where the FOUNDATION of the mechanism is MIT rather than absent. Every grant below was re-read from the measured default branch and graded against `27` canonical texts this pass.**
+
+🔵 **Why these six and not the usual LMS list:** an admissions deliverable is not a content system. Its core is a **two-sided allocation under a legally fixed priority order**, so its foundations are market-design libraries, and the LMS/SIS is merely where the application arrives. The usual Moodle/Open edX pair is the wrong layer for this register and is listed below only as intake.
+
+| Address | Branch · `HEAD` | Grant (graded) | Bytes | Foundational role |
+|---|---|---|---|---|
+| [`daffidwilde/matching`](https://github.com/daffidwilde/matching) | `main` · `497602eb746f` | 🟢 **MIT** `body:canonical` | `1,078` | 🟢 **The foundation.** `161` refs. Models student-allocation as a first-class game, so capacities and priority orders are data rather than code. The one to standardise on. |
+| [`maxkapur/DeferredAcceptance.jl`](https://github.com/maxkapur/DeferredAcceptance.jl) | `main` · `c9dbcf659151` | 🟢 **MIT** `body:canonical` | `1,052` | 🟢 Discrete **and nonatomic** DA plus TTC and the tiebreaking families — the nonatomic form is what you need to reason about a national market rather than one district. Open-source solvers (GLPK/Cbc) by default. |
+| [`Tekdirfan/Matching-Algorithms`](https://github.com/Tekdirfan/Matching-Algorithms) | `main` · `f09089b57bcd` | 🟢 **MIT** `body:canonical` | `1,069` | 🟢 DA + **Boston mechanism** + TTC + LP in one library. The only foundation that makes a mechanism CHOICE demonstrable instead of assumed. |
+| [`kyosek/deferred_acceptance_school_choice`](https://github.com/kyosek/deferred_acceptance_school_choice) | `master` · `22438e7d1ad3` | 🟢 **MIT** `body:canonical` | `1,071` | 🔵 Compact student-proposing DA. Use as a correctness oracle against the richer libraries, not as the engine. |
+| [`albant98/DeferredAcceptanceMata`](https://github.com/albant98/DeferredAcceptanceMata) | `main` · `844bbd916b1d` | 🟢 **MIT** `canonical+PREPENDED` | `1,104` | 🔵 **Stata/Mata.** Runs inside the toolchain ministry evaluation units already use — the integration path for a public-sector evaluation, not for production. |
+| [`sirodoht/deferred-acceptance-algorithm`](https://github.com/sirodoht/deferred-acceptance-algorithm) | `main` · `800b31df3652` | 🟢 **MIT** `body:canonical` | `1,060` | 🔵 Teaching reference for stable matching. Useful for onboarding a team onto the mechanism vocabulary. |
+
+### 🟡 Reference architectures — real, in production, and COPYLEFT
+
+| Address | Branch · `HEAD` | Grant (graded) | Role |
+|---|---|---|---|
+| [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | `master` · `8c5839b29f31` | 🟡 **EUPL-1.2** via notice prose, `296 B` | 🟢 **A national education application system in production, published by a state agency.** `3,516` refs, Clojure. The best available answer to "what does this actually look like at national scale" — **to read and re-implement, not to fork** (`T774`). |
+| [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) | `master` · `d2ea28740d7d` | 🟡 **EUPL-1.1** via notice prose, `654 B` | 🔴 Study-records sibling on a **different EUPL version from `ataru`**, inside the same agency. `5,700` refs. |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` · `af576e8b4d32` | 🟡 **ECL-2.0** `OPERATIVE-TEXT-ALTERED` `delta=98`, `11,120 B` | 🟢 **`15,648` refs. ECL-2.0 is Apache-2.0 with the patent grant narrowed to education communities** — the sector's own licence, newly held in `ingest/canonical/` as of this pass (`T766`). |
+
+### 🔵 Intake layer only — correct for the register, wrong as a foundation
+
+| Address | Branch · `HEAD` | Grant (graded) | Note |
+|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 `19.0` · `46a5d7d40082` | 🟡 LGPL-3.0 | Odoo-based education ERP with admissions + CRM intake. **Default branch is an Odoo version number.** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 `mobile` · `e4cd20a48bf1` | 🟡 GPL-2.0 (notice prose), `15,214 B` | SIS with admissions. **Default branch is `mobile`** — an assumed `main` reads the wrong tree. |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `main` · `afbcc55fa1bd` | 🟡 GPL-3.0 group `body:near-canonical` `delta=7`, `35,147 B` | Held. Content layer, not an allocator. |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` · `d3a86602dcf7` | 🟡 AGPL-3.0 group `canonical+APPENDED`, `35,136 B` | Held. `49,908` refs. Content layer. |
+| [`frappe/education`](https://github.com/frappe/education) | `develop` · `61408d3da518` | 🔴 **`19`-byte grant**: `License: GNU GPL V3` | 🔴 Not a usable grant statement — not SPDX, and `only` vs `or-later` is undecidable from it (`T773`). Legal review before any use. |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `master` · `8348cd069aa2` | 🔴 **NO-GRANT-AT-ROOT** after `33` case-aware names | 🔴 Unchanged from `p773`. |
+
+🔴 **Declared gap:** there is still **no permissive SIS and no permissive school ERP** — the rule now holds for a fifth consecutive register. 🟢 **What changed is that for admissions it no longer matters as much:** the allocator can be MIT and sit beside the copyleft SIS over an API, which is also the separation the EU AI Act's logging and oversight duties want (`P774-1`).
+
 ## 🆕 `p773` — **Foundations re-grounded on the safeguarding register (`ACTION p772-I`), with every grant re-graded against `19` distinct canonical bodies. 🟢 `6` foundational rows, all permissive, all probed this pass. 🔴 And a correction to this pass's own first reading: `frappe/erpnext` was graded `NO-GRANT-AT-ROOT` before a case-aware filename list found its GPL-3.0 grant at `license.txt`.**
 
 🔵 **Why these six and not the usual list:** a safeguarding record is a *per-person clinical-grade record with a statutory retention clock*. The foundations for it are health-interoperability foundations, not LMS foundations — and that is a change of shape this base has not recorded before for an education register.
