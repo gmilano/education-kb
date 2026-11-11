@@ -4,6 +4,84 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p760) — 🔴 **THIS BASE HAS HELD THE ANSWER TO THE EDUCATION-IN-EMERGENCIES REGISTER FOR HUNDREDS OF PASSES AND HAS NEVER ONCE HELD THE QUESTION. 🔴 THE AGENT LAYER IS A TRUE ZERO, AND THE AGENCIES THAT DEFINE THE SECTOR PUBLISH `25` REPOSITORIES WITH `0` EDUCATION CODE BETWEEN THEM.**
+
+**Register: education in emergencies — crisis-affected, refugee and internally displaced learners** · `6` agent rows (`1` shelvable, `1` warning, `4` refusals) · `10` foundation rows · `16` addresses probed · **`16` licence payloads byte-read** · `4` addresses confirmed live with **no grant at all** · `1` four-way licence composite resolved · `1` grant found in a `README` rather than a licence file · `2` rows novel at `0` prior mentions · `4` regional legs run · `5` region blocks written · `T566`–`T582` declared.
+
+### 🔴 The signal of the week is a shelving defect in this base, not a repository
+
+Measured across all eight shelves at `p759` `HEAD`: `Kolibri` **`574`** mentions, `offline-first` **`182`**, `Kiwix` **`65`**, `RACHEL` **`46`** — against `education in emergencies` **`0`**, `UNHCR` **`0`**, `Education Cannot Wait` **`0`**, `internally displaced` **`0`**.
+
+🔵 **The components were filed under the *technical* property they satisfy — low connectivity — and never under the *buyer* whose procurement is defined by that property and who has a dedicated multilateral fund to pay for it.** 🟢 **Rule adopted as `ACTION p760-A`:** *when a substrate is held under a technical property, probe once for the institutional buyer whose procurement is defined by that property.* A sector with a named global fund and zero mentions on eight shelves is a shelving defect, not an absence of research (`T566`).
+
+### 🔴 Measured supply nil, published with the queries that produced it
+
+| Query (`search/repositories`, `2026-11-11`) | `total_count` | On-topic above `2★` |
+|---|---|---|
+| `education in emergencies` | `94` | 🔴 **`0`** — women's-safety apps, paediatric airway training, a postcard label repository |
+| `refugee education` | `69` | 🔴 **`1`**, at `7★`, **no grant** |
+| `offline first learning platform` | `241` | 🔴 **`0`** — one author's auto-generated cluster dominates |
+| `displaced learner certification credential` | 🔴 **`0`** | — |
+| `accelerated education programme` | `2` | 🔴 **`0`** |
+
+🔴 **Three of five queries return three-figure counts and zero usable addresses.** 🔵 **`total_count` is not supply** — a pass that read the counts and not the rows would have reported this register healthy (`T567`).
+
+### 🔴 The new failure class: licence-clean and topic-false
+
+Four repositories, one owner, one description template, each *"a standalone, offline-first learning platform"*: `YucongDuan/DIKWP-Cognition-GrowthLab-2026-V1` (`6★`), `DIKWP-Music-LearnLab-2026-V1` (`5★`), `DIKWP-HumanInnovation-Studio-OS` (`4★`), `DIKWP-SemanticPhysics-LearnLab-2026-V1` (`3★`). Byte-read: **canonical `Apache-2.0`, `11,357 B`, sha256₁₂ `c71d239df917`.**
+
+🔴 **Every licence gate this base has built across `759` passes passes them green**, because the defect is not in the grant. 🔵 **The `0`-star tier this base learned to distrust is not where the risk lives; a `3`–`6★` repository with a canonical Apache payload and a plausible description is.** 🟢 **`ACTION p760-B`: add an author-concentration check — three or more candidate rows sharing an owner and a description template are filed once as a measurement, never as rows** (`T573`).
+
+### 🔴 Four refusals, filed with their evidence
+
+- 🔴 [`OmdenaAI/AmmanJordanChapter_AITutorforRefugeeEducation`](https://github.com/OmdenaAI/AmmanJordanChapter_AITutorforRefugeeEducation) — `7★`, **no licence on any of `9` probed paths**, index agrees. **The only on-topic artefact in the world, and it is unusable** (`T568`).
+- 🔴 [`unhcr/Jetson`](https://github.com/unhcr/Jetson) — `29★`, no grant. And the estate finding: **`org:UNHCR` is `25` repositories, `0` of them education** (`T569`).
+- 🔴 [`unicef/magicbox-maps-prototype`](https://github.com/unicef/magicbox-maps-prototype) — `4★`, no grant, **`ARCHIVED`**. **`org:unicef education` → `total_count 1`, and this is it** (`T569`).
+- 🔴 [`learningequality/ka-lite`](https://github.com/learningequality/ka-lite) — `457★`, index `NOASSERTION`, byte-read resolves a **four-way composite**: code `MIT`, `khan-exercises` content `CC BY-NC-SA`, Perseus data **Khan Academy proprietary**, videos `CC BY-NC-SA 3.0 US`. 🔴 **The software is permissive and the content it exists to deliver is not** — and a crisis deployment is mostly content. Dead since `2021-04-19` (`T571`).
+
+### 🔴 The licence shape of the register, and it decides the proposal
+
+🔴 **`iiab` `GPL-2.0` (`2,039★`) · `kiwix-tools` `GPL-3.0` (`992★`) · `zim-tools` `GPL-3.0` (`225★`) · `libkiwix` `GPL-3.0` (`209★`) · `UstadMobile` `AGPL-3.0` (`34★`).** 🟢 **Against `learningequality/kolibri` `MIT` (`1,175★`) · `studio` `MIT` (`212★`) · `ricecooker` `MIT` (`32★`).**
+
+🔵 **Globant's only permissive route through this entire register runs through one organisation's three repositories.** That is a single-vendor concentration risk, and the mitigation belongs in the proposal's risk register rather than in a licence column (`T570`). 🔵 **And `libkiwix` versus `kiwix-tools` is the distinction to get right**: same project, same licence, materially different exposure — a binary you shell out to is not a library you link (`P295`).
+
+### 🟢 Two novel permissive rows, both at `0` prior mentions
+
+- 🟢 [`LIST-LUXEMBOURG/eagle-aig`](https://github.com/LIST-LUXEMBOURG/eagle-aig) — `Apache-2.0` **carried in the `README`**, no licence file anywhere at `HEAD`; a **fifth grant-location mechanism** for these shelves. Placed **EMEA — Luxembourg** from the README holder line. 🔵 **The only on-topic automatic-item-generation repository in existence** (`T576`).
+- 🟢 [`pluralsight/irt_parameter_estimation`](https://github.com/pluralsight/irt_parameter_estimation) — `54★`, `Apache-2.0`, **`ARCHIVED`**. A commercial platform's item-calibration routines, published permissively and then stopped (`T576`).
+
+### 🟢 `ACTION p757-D` is withdrawn: the EMEA adoption nil has expired
+
+🔴 **`ACTION p757-D` told passes to stop asking the EMEA leg for adoption percentages** after seven consecutive sourced nils. 🟢 **This pass's EMEA leg returned two**: **`67%` of teachers using AI tools** (Futuresource) and **`76%` of students expecting to use AI in their learning** across UK, France, Italy, Germany, Spain and Poland (Epson). 🟢 **Replaced by `ACTION p760-C`: ask the EMEA leg, and attribute each figure to the vendor that funded the survey.** 🔵 **A standing instruction not to look is the one kind of rule that cannot discover its own expiry** (`T578`).
+
+### 🟢 The standing date check came back clean, and that is worth recording
+
+🔴 `p758` and `p759` both had the mandated trends leg return the **superseded April-2026 ADA deadline**. 🟢 **`p760`'s leg did not reproduce it.** It returned instead the shift from classroom tool to institutional infrastructure; **only `45%` of the most-used edtech tools having published research meeting an ESSA evidence tier**; blockchain credentialing, full-classroom VR and chatbot-as-tutor named as *fading*; `$169M` in US FIPSE awards; and Microsoft's `86%` figure for education organisations using generative AI. 🔵 **`ACTION p759-B` cost nothing this pass — a check that fires twice and then comes back clean has not become unnecessary.** 🔴 **Carry the `45%` ESSA figure**: it is a majority-negative statistic about the installed base and the demand driver for every evidence engagement on these shelves (`T579`).
+
+### 🔴 The channel map, measured — and one channel this base relies on is refused by session scope
+
+| Channel | Result `2026-11-11` |
+|---|---|
+| `gh api repos/{owner}/{name}` | 🔴 **Refused for every third-party repository** — *"GitHub access to this repository is not enabled for this session"* |
+| `gh api -X GET search/repositories -f q=repo:{owner}/{name}` | 🟢 **Resolves** — stars, default branch, `pushed_at`, `archived`, index licence. **The only metadata channel available** |
+| `raw.githubusercontent.com/{repo}/HEAD/{path}` | 🟢 **Resolves** — all `16` payload reads came from it |
+| `curl -sI https://github.com/{repo}` | 🔴 **`403` at the tunnel** — the mandated existence check is structurally unavailable, reproducing `T561` |
+| `unhcr.org` · `educationcannotwait.org` · `unicef.org` · `eur-lex` | 🔴 Unreachable; **every statistical and regulatory cell this pass is `search-sourced`.** `ACTION p758-B` carried on a seventh data point |
+
+🟢 **`ACTION p757-E` is vindicated by a mechanism it did not anticipate**: it mandated the search channel to stop passes writing `unmeasured`, and that channel turns out to be the *only* one this environment has (`T580`).
+
+### 🔴 LATAM supply nil on this register, declared with the query
+
+`refugee education` and `education in emergencies` return **no Spanish- or Portuguese-language address at any star count**. The Venezuela displacement is the largest in the hemisphere and its education response has no open-source artefact of its own. 🔵 **Written down because an unrecorded nil looks exactly like coverage** — and priced honestly, LATAM here is a build, not an integration (`T581`).
+
+### 🔵 Standing registers named and deliberately not built this pass (`ACTION p758-D`)
+
+- 🟡 **Sign-language interpretation for lecture media** — carried from `p758`/`p759`, unchanged: measured thin and copyleft-dominated. Still a market gap to write up, not a build shelf.
+- 🔵 **The duty-of-care evidence layer for monitoring vendors** — carried from `p759`, unchanged: measured supply `0` permissive addresses that audit a monitoring vendor's alert quality. The buyer is a district's counsel, not its CIO.
+- 🟢 **Education in emergencies** — 🟢 **BUILT THIS PASS**, and the finding was that the base already held the substrate (`T566`).
+- 🔵 **NEW candidate, measured and not built: assessment *validity* instrumentation.** `psychometric validation LLM education` → `total_count 0`; `standard setting Angoff` → **`0`**; `vertical scaling educational measurement` → **`0`**; `test fairness bias education assessment` → `1`. 🔵 **The substrate is healthy and already on these shelves** — `pykt-toolkit` (`MIT`, `460★`), `pyBKT` (`MIT`, `292★`), `EduKTM`/`EduCDM` (`Apache-2.0`), `girth`/`pyirt`/`pypsy` (`MIT`), `catsim` (`BSD-3-Clause`, and its payload **refutes** a search result claiming `LGPL-3.0`). 🔴 **The gap is the instrument that proves a deployed assessment is fair and valid, and it is a true zero** — which is precisely what the `45%` ESSA figure in `T579` makes buyers ask for. 🔴 **The vertical tier is `GPL-2.0` throughout** (`oat-sa/package-tao` `138★`, `oat-sa/tao-core` `64★`), so this register would be a build over a client-hosted platform.
+
+---
 ## 🆕 2026-11-11 (p759) — 🔴 **THIS BASE PUBLISHED A "MEASURED SUPPLY NIL" ON THIS REGISTER TWICE, AND BOTH TIMES IT WAS MEASURING ITS OWN VOCABULARY. 🟢 `6` NOVEL PERMISSIVE REASONING ADDRESSES, AND THE EMEA BLOCKER THAT PARKED THE REGISTER FOR ELEVEN PASSES DOES NOT APPLY TO ANY OF THEM.**
 
 **Register: student wellbeing, crisis triage and child-protection case management** · `10` agent rows · `31` addresses probed · **`27` licence payloads byte-read** · `3` addresses confirmed live with **no grant at all** · `1` literature name resolved to a **non-address** (a true `404`) · `21` shelved addresses confirmed on the fetch channel and the student-tier rows on the raw channel · `2` grants found invisible to GitHub's index · `1` literature name resolved to a different address · `4` regional legs run · `T547`–`T565` declared.

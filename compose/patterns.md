@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `P295`–`P298` — added at p760 (2026-11-11)
+
+**Register: education in emergencies — crisis-affected, refugee and internally displaced learners.** 🔴 **The agent layer is a measured zero and the substrate is entirely built, so every recipe below is a composition rather than an integration** (`T567`). 🔴 **All four carry the same licence perimeter: the permissive chain is `learningequality/*` (`MIT`) plus `HKUDS/DeepTutor` (`Apache-2.0`); everything else in the register is `GPL-2.0`, `GPL-3.0` or `AGPL-3.0` and is client-hosted** (`T570`).
+
+### 🟢 `P295` — The permissive offline-first delivery chain, with the copyleft perimeter drawn explicitly (all regions; 10–14 weeks)
+
+**The problem.** A ministry or NGO has curriculum content and learners with no reliable connectivity. The field appliance is probably already Internet-in-a-Box; the deliverable has to be something Globant can ship.
+
+**Wire it this way.**
+1. **Ingest** — [`learningequality/ricecooker`](https://github.com/learningequality/ricecooker) (`MIT`, `32★`, `main`). Write one `ricecooker` chef per client content source; it emits a Kolibri channel. **This is the seam where the engagement attaches** and it is deliberately the smallest component in the chain.
+2. **Curate** — [`learningequality/studio`](https://github.com/learningequality/studio) (`MIT`, `212★`). Self-host it so the client's curriculum team owns alignment, sequencing and metadata. 🔴 **Pin a tag: the default branch is `unstable`** (`T574`).
+3. **Deliver** — [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (`MIT`, `1,175★`). Runs on a local network with no internet; this is the learner-facing product. 🔴 Pin a tag — default branch `develop`.
+4. **Reason** — [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (`Apache-2.0`, `58,063★`) behind Kolibri, against the channel content only, with on-device or edge inference. 🟢 **Apache-2.0's explicit patent grant is why this is the reasoning row rather than a `GPL` alternative.**
+5. 🔴 **The perimeter, and write it into the SOW.** [`iiab/iiab`](https://github.com/iiab/iiab) (`GPL-2.0`) and [`kiwix/kiwix-tools`](https://github.com/kiwix/kiwix-tools) (`GPL-3.0`) are **client-deployed**; Globant integrates across process boundaries and HTTP, and ships nothing derived from them. 🔴 **Never link [`kiwix/libkiwix`](https://github.com/kiwix/libkiwix)** — same project, same licence, and linking carries the obligation into Globant's own code (`T570`).
+
+🔵 **The risk line the proposal must carry:** steps 1–3 share one copyright holder. Budget to own the integration and track Learning Equality's roadmap as a named project risk.
+
+### 🔴 `P296` — The content-licence gate: the instrument that stops a crisis deployment being unsellable (all regions; 1–2 weeks, and it runs first)
+
+**The problem, stated from the evidence.** [`learningequality/ka-lite`](https://github.com/learningequality/ka-lite) is `457★` with `MIT` code, and the content it exists to deliver is `CC BY-NC-SA` plus Khan Academy proprietary data (`T571`). **A crisis deployment is mostly content, and a licence review that reads repositories clears it anyway.**
+
+**Build it as a gate, not a report.**
+1. **Separate the two inventories.** Code dependencies and **content** assets are scored on different registers. Most tooling has no content register at all — that absence is the defect.
+2. **For every content asset resolve four fields**: licensor, grant, **commercial permission**, and **derivative permission**. `CC BY-NC-SA` fails field three; `CC BY-NC-ND` fails three and four (the shape `p758`'s `T538` byte-read on the Brazilian-Portuguese ASR corpus).
+3. 🔴 **Fail closed on "included with permission".** Perseus exercise data in KA Lite is proprietary content shipped under a bilateral arrangement that **does not transfer**. A permission granted to one party is not a licence.
+4. **Read composites to the end.** `ka-lite`'s single `LICENSE` file splits four ways *internally*; a classifier that reads a title line stops at `MIT`. 🟢 **Read the whole payload and record length and sha256₁₂** — the standard chain on these shelves.
+5. **Emit a per-asset verdict** the client's counsel can sign, and make deployment conditional on it.
+
+🔵 **Sell this as week one of the engagement.** It is cheap, it is the thing nobody else does, and on this register it is the difference between a deliverable and a write-off.
+
+### 🔴 `P297` — Displaced-learner credential custody: the one build on these shelves that is pure composition (EMEA and LATAM first; 12–16 weeks)
+
+**The gap, measured.** `displaced learner certification credential` → **`total_count 0`** (`T582`). A learner who crosses a border loses the record of what they have learned; every agency in the register names this a priority; there is **no open code addressing it at any star count**.
+
+🟢 **And this base already holds every component**, which is why it is a composition:
+1. **Credential format** — `1EdTech/openbadges-specification`, with the validator at its canonical post-rename address `1EdTech/openbadges-validator-core` (`ACTION p757-A`, corrected at `p758`'s `ACTION p758-E`).
+2. **Learner-held custody** — the learner-credential-wallet row given its byte-read `MIT` cell at `p758`. 🔵 **Custody must sit with the learner, not with an institution that may become unreachable** — that is the entire requirement, and it is an architecture decision.
+3. **Evidence of learning** — Kolibri's own progress records via `P295`, so the credential is backed by something rather than asserted.
+4. **Offline issuance and later verification** — issue signed assertions on a disconnected node; verify when connectivity returns. 🔴 **This is the one genuinely novel engineering problem in the recipe**, and it is bounded.
+5. 🔴 **Do not build a registry.** A central database of displaced learners is a protection hazard before it is a product. Signed, learner-held, selectively disclosed.
+
+🔵 **Why EMEA and LATAM first:** Sudan (`8` of `17` million school-age children out of school) and the Venezuela displacement are the two largest concentrations, and LATAM is a declared supply nil — so there is nothing to displace (`T577`, `T581`).
+
+### 🟢 `P298` — The author-concentration gate: rejecting rows that are licence-clean and worthless (Global; days, and it is reusable)
+
+**The problem this closes.** Four repositories, one owner, one description template, canonical `Apache-2.0` payloads — and **every licence gate these shelves have built across `759` passes passes them green**, because the defect is not in the grant (`T573`).
+
+**The gate.**
+1. Group candidate rows for a register **by owner**.
+2. Flag any owner contributing **≥ 3** candidates.
+3. For a flagged group, diff the descriptions and `README` openings. **High template similarity plus uniformly low stars plus a single author equals one measurement, not N rows.**
+4. Record the cluster once, with its count, owner and star range, and move on.
+5. 🔵 **Run it after the licence chain, never instead of it** — the two gates catch disjoint failures, and this one catches the class the licence chain is structurally blind to.
+
+🔵 **Offer it to clients as part of `P283`'s inventory sweep.** A client auditing its own open-source estate has exactly this problem and no instrument for it: the dangerous row is not the `0★` repository with no licence, it is the `3`–`6★` repository with a perfect one.
+
+---
 ## 🆕 `P291`–`P294` — added at p759 (2026-11-11)
 
 🟢 **Four recipes for the student-wellbeing, crisis-triage and child-protection register — the register `p748` parked at `748-E` as unbuildable and `p750` priced from the demand side while calling its supply nil.** Every component named below was byte-read for its grant this pass (`T547`–`T565`). Each recipe names its addresses, its licences and its regions, and each states what it **cannot** do.

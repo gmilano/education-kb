@@ -4,6 +4,60 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 2026-11-11 (p760) — 🔴 **THE OFFLINE-DELIVERY SUBSTRATE FOR CRISIS EDUCATION IS `GPL`/`AGPL` ON FIVE OF EIGHT COMPONENTS, AND THE PERMISSIVE THREE SHARE ONE COPYRIGHT HOLDER. 🔴 THE `457★` ROW EVERY CLIENT NAMES IS A FOUR-WAY COMPOSITE WHOSE CONTENT IS NON-COMMERCIAL.**
+
+**`10` foundation rows · `5` platform rows · `16` addresses probed · `16` licence payloads byte-read `2026-11-11` · `4` addresses live with **no grant at all** · `1` four-way composite resolved · `1` grant found in a `README` · `2` rows novel at `0` prior mentions · `6 / 16` on a non-`main` default branch, including `unstable` and `primary` · `4` regional legs run · `T566`–`T582` declared.**
+
+### 🔴 The register, and the measurement that shows how it stayed unshelved for `759` passes
+
+`Kolibri` **`574`** mentions across these eight shelves · `offline-first` **`182`** · `Kiwix` **`65`** · `RACHEL` **`46`** — against `education in emergencies` **`0`** · `UNHCR` **`0`** · `Education Cannot Wait` **`0`** · `internally displaced` **`0`**. 🔵 **Filed under the technical property, never under the buyer.** `ACTION p760-A` (`T566`).
+
+### 🔴 The copyleft perimeter, byte-read
+
+| Repo | Licence (byte-read) | ★ | Branch | Verdict |
+|---|---|---|---|---|
+| [`iiab/iiab`](https://github.com/iiab/iiab) | 🔴 `GPL-2.0` — `18,092 B`, sha256₁₂ `8177f9751321` | `2,039` | `master` | 🔴 Client-hosted appliance only |
+| [`kiwix/kiwix-tools`](https://github.com/kiwix/kiwix-tools) | 🔴 `GPL-3.0` — `35,068 B`, sha256₁₂ `fc82ca8b6fdb` | `992` | `main` | 🟡 Shell out to the binary; do not link |
+| [`openzim/zim-tools`](https://github.com/openzim/zim-tools) | 🔴 `GPL-3.0` — `35,141 B`, sha256₁₂ `589ed823e9a8` | `225` | `main` | 🟡 Same posture — a build-time tool, not a shipped component |
+| [`kiwix/libkiwix`](https://github.com/kiwix/libkiwix) | 🔴 `GPL-3.0` — `35,065 B`, sha256₁₂ `2170baac1a46` | `209` | `main` | 🔴 **Refusal — linking carries the obligation into Globant's code** |
+| [`UstadMobile/UstadMobile`](https://github.com/UstadMobile/UstadMobile) | 🔴 `AGPL-3.0` — `34,523 B`, sha256₁₂ `8486a10c4393` | `34` | 🔴 **`primary`** | 🔴 **Refusal for any hosted deliverable** |
+
+🔵 **`kiwix-tools` versus `libkiwix` is the row pair worth reading twice: one project, one licence, two materially different exposures.** The licence column cannot express it; the architecture can (`T570`, `P295`).
+
+### 🟢 The permissive chain, and its concentration
+
+| Repo | Licence (byte-read) | ★ | Branch | Note |
+|---|---|---|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` — `1,097 B`, sha256₁₂ `3c056b34a476` | `1,175` | 🔴 `develop` | Live: pushed `2026-11-10` |
+| [`learningequality/studio`](https://github.com/learningequality/studio) | 🟢 `MIT` — `1,115 B`, sha256₁₂ `5715e50830cd` | `212` | 🔴 **`unstable`** | 🔴 Scope-qualified holder line, unqualified grant (`T572`) |
+| [`learningequality/ricecooker`](https://github.com/learningequality/ricecooker) | 🟢 `MIT` — `1,087 B`, sha256₁₂ `8e7a35d64f5c` | `32` | 🟢 `main` | The programmable ingest seam (`P295`) |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` — `11,408 B`, sha256₁₂ `cd2f54e1e506` | `58,063` | 🟢 `main` | 🟢 APAC, placed from the payload (`T575`) |
+
+🔴 **Three of the four permissive rows share one copyright holder.** 🔵 **A concentration finding, not a licence finding** — it belongs in a risk register (`T570`).
+
+### 🟢 Two rows novel to this base at `0` prior mentions
+
+- 🟢 [`LIST-LUXEMBOURG/eagle-aig`](https://github.com/LIST-LUXEMBOURG/eagle-aig) — `2★`, `master`. 🔴 **No `LICENSE`, no `NOTICE`, no `pom.xml` at `HEAD`: the `Apache-2.0` grant is carried in the `README`**, with holder *Luxembourg Institute of Science and Technology (LIST)*. **A fifth grant-location mechanism** for these shelves, and the index reads it correctly from prose. 🟢 Placed **EMEA — Luxembourg**. 🔵 The only on-topic automatic-item-generation repository in existence (`T576`).
+- 🟢 [`pluralsight/irt_parameter_estimation`](https://github.com/pluralsight/irt_parameter_estimation) — `54★`, `Apache-2.0`, `11,348 B`, sha256₁₂ `90883748eb21`, 🔴 **`ARCHIVED`** since `2023-03-27`. ⚠️ Unplaceable from the payload: stock Apache text, no holder, no `NOTICE` (`T576`).
+
+### 🔴 The four grant-absences, and one of them is the register's whole lesson
+
+- 🔴 [`learningequality/ka-lite`](https://github.com/learningequality/ka-lite) — `457★`, index `NOASSERTION`, payload `3,764 B` sha256₁₂ `e49e5857275e`: **code `MIT`; `khan-exercises` content `CC BY-NC-SA`; Perseus exercise data Khan Academy proprietary; videos `CC BY-NC-SA 3.0 US`.** 🔴 **Permissive engine, non-commercial payload.** Dead since `2021-04-19` (`T571`, `P296`).
+- 🔴 [`unhcr/Jetson`](https://github.com/unhcr/Jetson) `29★` · [`unicef/magicbox-maps-prototype`](https://github.com/unicef/magicbox-maps-prototype) `4★` **`ARCHIVED`** · [`OmdenaAI/AmmanJordanChapter_AITutorforRefugeeEducation`](https://github.com/OmdenaAI/AmmanJordanChapter_AITutorforRefugeeEducation) `7★` — **no licence file at `HEAD` on any probed path; index agrees in all three cases** (`T568`, `T569`).
+
+### 🔴 The licence-clean, topic-false tier — and this base's gates all pass it
+
+`YucongDuan/DIKWP-*` ×`4` (`6★`/`5★`/`4★`/`3★`), canonical `Apache-2.0` `11,357 B` sha256₁₂ `c71d239df917`, one owner, one description template. 🟢 **`ACTION p760-B`: author-concentration check — file the cluster once as a measurement, never as rows** (`T573`).
+
+### 🔴 `Gap 263` reconfirmed on a seventh estate, with two new branch names
+
+`6 / 16` non-`main`: `develop` (`kolibri`), **`unstable`** (`studio`), **`primary`** (`UstadMobile`), `master` (`ka-lite`, `iiab`, `eagle-aig`, `irt_parameter_estimation`, `Jetson`, `magicbox-maps-prototype`). 🔴 **`unstable` and `primary` are new to these shelves**, and a `HEAD`-pinned read of Studio is a read of a branch its own maintainers called unstable (`T574`).
+
+### 🔵 The adjacent register measured this pass and not built
+
+**Assessment validity instrumentation.** 🟢 Substrate healthy and already held: `pykt-team/pykt-toolkit` (`MIT`, `460★`), `CAHLR/pyBKT` (`MIT`, `292★`), `bigdata-ustc/EduKTM` (`Apache-2.0`, `267★`), `inuyasha2012/pypsy` (`MIT`, `242★`), `bigdata-ustc/EduCDM` (`Apache-2.0`, `203★`), `douglasrizzo/catsim` (`BSD-3-Clause`, `155★`, branch `dev`), `eribean/girth` (`MIT`, `127★`), `17zuoye/pyirt` (`MIT`, `111★`). 🔴 **The agent layer is a true zero**: `psychometric validation LLM education` → `0`, `standard setting Angoff` → `0`, `vertical scaling educational measurement` → `0`, `test fairness bias education assessment` → `1`. 🔴 **Vertical tier `GPL-2.0` throughout** (`oat-sa/package-tao` `138★`, `oat-sa/tao-core` `64★`, branch `develop`). 🔵 **One search-channel correction worth keeping: a secondary source reported `catsim` as `LGPL-3.0`; the payload is `BSD 3-Clause`, `1,514 B` sha256₁₂ `1bdccc1d297a`, holder *Douglas De Rizzo Meneghetti*, and GitHub's index agrees with the payload.** The search channel was wrong and the index was right — the inverse of this base's usual finding.
+
+---
 ## 🆕 2026-11-11 (p759) — 🟢 **THE SAFETY-AND-RECORDS SUBSTRATE FOR DISCLOSURE TRIAGE IS MIT / APACHE-2.0 / BSD-3 / CC0 ALL THE WAY DOWN. 🔴 THE PRODUCTION TIER IS `AGPL-3.0` ON ALL THREE PLATFORMS, AND THE UNICEF SYSTEM OF RECORD SHIPS OPEN CODE WITH A GATED CONFIGURATION.**
 
 **`9` foundation rows · `5` platform rows · `31` addresses probed · `27` licence payloads byte-read `2026-11-11` · `3` addresses live with no grant at all · `1` literature name resolved to a true `404` · `2` grants invisible to GitHub's index · `4 / 9` foundations on a non-`main` default branch · `8 / 21` addresses overall non-`main` · `1` literature name resolved to a different address · `T547`–`T565` declared.**

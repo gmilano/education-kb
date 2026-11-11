@@ -5,6 +5,32 @@ updated: 2026-11-11
 ---
 
 # Vertical Platforms — Education
+## 🆕 `p760` — 🟢 **THE SYSTEM OF RECORD FOR CRISIS EDUCATION IS `MIT`, WHICH MAKES THIS THE MOST FAVOURABLE PLATFORM TIER THIS BASE HAS MEASURED. 🔴 BUT ITS PREDECESSOR IS A FOUR-WAY LICENCE COMPOSITE WHOSE *CONTENT* IS NON-COMMERCIAL, AND THE APPLIANCE EVERY FIELD DEPLOYMENT RUNS ON IS `GPL-2.0`.**
+
+**`5` platform rows, every grant byte-read `2026-11-11`** at ref `HEAD` with length and sha256₁₂. 🟢 **Two of the five are genuine starting points and both are `MIT`** — the first time on these shelves that the register's *system of record* has been permissive rather than the exception to it. 🔴 **Two are filed as warnings and one as a refusal, and in every case the reason is the licence.**
+
+### 🔴 Say this in the first meeting
+
+🟢 **"Your system of record is MIT, and that is unusual."** On every register these shelves have worked — wellbeing, research administration, lecture capture, child protection — the production platform was `AGPL`, `GPL` or `ECL` and the client had to host it. **Here the platform itself is permissive**, which moves Kolibri from the client's infrastructure column into Globant's deliverable column (`T570`).
+
+🔴 **"But do not let anyone bring KA Lite into the architecture."** It is `457★`, it is the name a field team will remember, its code is `MIT` — and the educational content it exists to deliver is `CC BY-NC-SA` and Khan Academy proprietary. **A humanitarian deployment feels non-commercial; Globant delivering it for a fee is a commercial use.** It has also had no push since `2021-04-19` (`T571`, `P296`).
+
+🔴 **"And the box in the field is GPL-2.0, so the client owns it, not us."** Internet-in-a-Box is the reference appliance at `2,039★` and it is the single most likely thing to be already installed. The correct posture is that the client deploys and hosts it and Globant integrates across its interfaces, shipping nothing derived from it (`P295`).
+
+| Platform | Repo | Licence (byte-read `2026-11-11`) | ★ | Region | Verdict |
+|---|---|---|---|---|---|
+| 🟢 **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** — `1,097 B`, sha256₁₂ `3c056b34a476` · holder *Learning Equality and other contributors* · *index agrees* | `1,175` | 🟢 **North America** — Foundation for Learning Equality | 🟢 **The starting point, and the answer to a client already running KA Lite or nothing.** *"The offline app for universal education"* — a full learning platform that runs on a local network with no internet at all, in production across crisis and low-connectivity deployments. Pushed `2026-11-10`. 🔴 **Publishes from `develop`; pin a tag before costing anything** (`T574`). |
+| 🟢 **Kolibri Studio** | [`learningequality/studio`](https://github.com/learningequality/studio) | 🟢 **`MIT`** — `1,115 B`, sha256₁₂ `5715e50830cd` · 🔴 holder line **scope-qualified**: *"Foundation for Learning Equality (internal apps)"*; operative clause **unqualified** | `212` | 🟢 **North America** | 🟢 **The authoring and curation half, and the component an engagement actually extends** — this is where a ministry's or NGO's own curriculum becomes a Kolibri channel. 🟢 **Verdict: usable `MIT`** — `(internal apps)` attaches to the copyright claim, not to the grant, and no field-of-use limit appears anywhere in the payload (`T572`). 🔴 **Default branch is named `unstable`.** |
+| ⚠️ **Internet-in-a-Box** | [`iiab/iiab`](https://github.com/iiab/iiab) | 🔴 **`GPL-2.0`** — `18,092 B`, sha256₁₂ `8177f9751321` · *index agrees* | `2,039` | 🔵 **Global** | ⚠️ **A warning, not a refusal — and the largest thing in the register.** The reference offline-library appliance: content server, local hotspot, curated library, deployed in schools with no connectivity. Pushed `2026-11-06`; genuinely active. 🔴 **`GPL-2.0` reaches a Globant-distributed deliverable.** 🟢 **Correct framing: a client-owned system of record Globant integrates with, exactly as `p759` framed Primero** (`P295`). |
+| 🔴 **UstadMobile** | [`UstadMobile/UstadMobile`](https://github.com/UstadMobile/UstadMobile) | 🔴 **`AGPL-3.0`** — `34,523 B`, sha256₁₂ `8486a10c4393` · *index agrees* | `34` | 🔵 **Global** | 🔴 **A refusal row, and the most on-topic platform in the register — which is what makes it worth filing.** Offline-first learning built explicitly for low-resource and displaced-learner settings, pushed `2026-10-22`. 🔴 **`AGPL-3.0` reaches a network-accessible service**: the worst case under Globant's delivery model, and no amount of architecture removes it. 🔴 Default branch `primary` (`T574`). 🟢 **Every function it performs is available permissively from the Kolibri rows above.** |
+| 🔴 **KA Lite** | [`learningequality/ka-lite`](https://github.com/learningequality/ka-lite) | 🔴 **`NOASSERTION` — resolved by byte-read to a FOUR-WAY COMPOSITE** (`3,764 B`, sha256₁₂ `e49e5857275e`): code `MIT` · `khan-exercises` content `CC BY-NC-SA` · Perseus exercise data **Khan Academy proprietary, "included here with permission"** · videos `CC BY-NC-SA 3.0 US` | `457` | 🔵 **Global** — Foundation for Learning Equality, Inc. | 🔴 **A refusal, and the row that teaches the register.** 🔴 **The engine is permissive and the payload is not** — and in crisis education the payload *is* the product. A licence checklist that reads the repository and stops returns `MIT` and clears a deliverable that cannot be sold. 🔴 **Dead since `2021-04-19`.** 🟢 **Treat any mention of it as a migration trigger to Kolibri** (`T571`, `P296`). |
+
+### 🔵 What this tier does not contain, and it is the sector's own agencies
+
+🔴 **No UNHCR platform, no UNICEF platform, no Education Cannot Wait platform.** `org:UNHCR` is `25` repositories of population statistics and data visualisation with **`0` education code**; `org:unicef education` returns `total_count 1` and it is archived with no grant. 🔵 **The bodies that write this sector's requirements do not ship its software** — which is why the system of record here is a non-profit's `MIT` platform rather than a multilateral's (`T569`).
+
+---
+
 
 ## 🆕 `p759` — 🔴 **THE PRODUCTION TIER OF THE WELLBEING AND CHILD-PROTECTION REGISTER IS `AGPL-3.0` ON ALL THREE PLATFORMS. 🔴 AND THE UNICEF SYSTEM OF RECORD SHIPS OPEN CODE WITH A **GATED CONFIGURATION** — THE REPOSITORY DOES NOT CONTAIN THE THING THAT MAKES IT A CHILD-PROTECTION SYSTEM.**
 
