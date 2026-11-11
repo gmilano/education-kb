@@ -4,6 +4,23 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p773` — **The vertical layer for school safeguarding, and the `1`-in-`10` permissive ratio `p771` measured gets worse: for child-protection case management specifically it is `0` in `6`.**
+
+🔵 **The rule this register confirms for the fourth consecutive pass:** there is **no permissive SIS, school ERP, or school-safeguarding module in existence**. So the safeguarding record cannot be a fork of an existing platform — it must be a service federated to whatever the client already runs.
+
+| Platform | Address | Grant (graded this pass) | Customisable with AI on top? |
+|---|---|---|---|
+| **Primero / CPIMS+** (UNICEF) | [`primeroIMS/primero`](https://github.com/primeroIMS/primero) | 🔴 **AGPL-3.0 family**, `canonical+PREPENDED` (`967` chars), `35,473 B` | 🔴 **The reference system for child-protection casework — deployed nationally in Sierra Leone (8→16 districts), Mexico (National Case Management Model), Eswatini and Sudan.** 🔴 **Two separate constraints: AGPL §13 network copyleft, AND the CPIMS+/GBVIMS+ configuration bundles are gated behind an email request.** Integrate; do not fork into a hosted product |
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔵 **GPL-3.0 family** `near-canonical` (δ`7`), `COPYING.txt` | 🟢 Yes, via plugins — but `p772`'s `T750` stands: of `78` claimed Moodle MCP addresses only **`3`** are installable plugins |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** `body:canonical`, `1,097 B` | 🟢 **The one permissive platform.** Content delivery; holds no safeguarding record |
+| **DHIS2** | [`dhis2/dhis2-core`](https://github.com/dhis2/dhis2-core) | 🟢 **BSD-3-Clause** `near-canonical` (δ`4`) | 🟢 **The strongest permissive route to a per-child case register**, already a ministry-scale deployment in several of this base's regions |
+| **ERPNext** | [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔵 **GPL-3.0 family** `near-canonical` (δ`13`), **`license.txt`** | 🔵 School ERP layer (fees, HR). 🔴 **This pass's own first verdict on it was a false `NO-GRANT-AT-ROOT`** (`D9`) |
+| **OpenEMR** | [`openemr/openemr`](https://github.com/openemr/openemr) | 🔵 **GPL-3.0 family** (δ`7`) | 🔵 Where the school-nurse/medical-conditions duty from `p771` meets a record system |
+| **OSCaR** | [`Children-in-Families/oscar-web`](https://github.com/Children-in-Families/oscar-web) | 🔴 **NO-GRANT-AT-ROOT** after `31` case-aware filename probes | 🔴 Case management for vulnerable children; **a search result asserts AGPL and the root carries nothing.** Not buildable as measured |
+| **OpenFn** | [`OpenFn/lightning`](https://github.com/OpenFn/lightning) · [`openfn/microservice`](https://github.com/openfn/microservice) | 🔵 **GPL-3.0 family** (δ`7`) | 🔵 The integration layer between a CP record and an SIS/social-care system. Copyleft decides the deployment shape |
+
+🔴 **Declared gap, measured not assumed:** this pass searched for a permissive school-safeguarding or child-protection records platform in English and Portuguese and probed every candidate returned. **`0` exist.** The nearest permissive route is to compose one from the FHIR/DHIS2 foundations — which is what `compose/patterns.md` `P773-1` specifies.
+
 ## 🆕 `p772` — **The platform shelf, re-verified rather than re-stocked. 🟢 `p770-D`'s pointer-plus-payload form is now confirmed on a SECOND major platform, and it is the largest one on this shelf.**
 
 ### 🟢 `T749` — Odoo carries the same pointer-plus-payload grant form as OpenEduCat, and this base graded it correctly

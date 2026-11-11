@@ -4,6 +4,78 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p773` — `2026-11-11` — **What is new this week is not an agent. It is that this base's push channel was never broken — it was out of scope — and that a `1,055`-byte licence file in the MIT band turned out to be AGPL-3.0.**
+
+🔴 **First, as `ACTION p772-A` requires: `make hooks` was TRIED as the first command of this pass and DENIED again — `[Code from External]`. Fourth consecutive session, so it stays settled.** 🟢 **Not worked around.**
+
+🟢 **This is the register pass `ACTION p772-I` scheduled: school safeguarding and child-protection records.**
+
+### 🟢 `T753` — the week's real movement: a licence-length band puts the most restrictive copyleft in the most permissive bucket
+
+This base has said since `p771` (`T729`) that *"length is not identity"* — meaning two payloads of the same length can be the same licence or different revisions of it. 🔴 **This week's measurement is stronger and worse: length collides ACROSS FAMILIES, and the collision is maximally adverse.**
+
+| Payload | Bytes | Actual grant |
+|---|---|---|
+| **MIT canonical** (SPDX) | **`1,078`** | — |
+| [`manderson20/classguard`](https://github.com/manderson20/classguard) | **`1,055`** | 🔴 **AGPL-3.0-or-later** |
+| [`openfun/richie`](https://github.com/openfun/richie) | `1,079` | 🟢 MIT |
+| [`xSoVx/fhir-mcp`](https://github.com/xSoVx/fhir-mcp) | `1,076` | 🟢 MIT |
+| [`kb223/consent-engine`](https://github.com/kb223/consent-engine) | `1,073` | 🟢 MIT |
+| [`mizcausevic-dev/fhir-resource-access-audit`](https://github.com/mizcausevic-dev/fhir-resource-access-audit) | `1,069` | 🟢 MIT |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `1,097` | 🟢 MIT |
+
+🔴 **Six payloads inside a `41`-byte window (`1,055`–`1,096`), and one of them is network copyleft.** `classguard` sits **`23` bytes** from MIT canonical — closer than four of the five genuine MIT files. 🟢 **For a studio the consequence is concrete: AGPL-3.0 §13 obliges a hosted service to offer its complete modified source to every user who interacts with it over the network. A length-band classifier recommends that repository as MIT.**
+
+### 🟢 `T754` — a `POINTER-OR-SHORT-NOTICE` is not undecidable, and this base holds `35` of them
+
+`classguard` ships **no licence text at all** — it describes AGPL in prose and links `gnu.org`. A body-diff can only return "not canonical". 🟢 **But it carries `SPDX-License-Identifier: AGPL-3.0-or-later`, and the tag resolves the family exactly.**
+
+🟢 **And a third rung appeared in the same register.** [`opensafely-core/cohort-extractor`](https://github.com/opensafely-core/cohort-extractor) ships a `677`-byte notice with **no SPDX tag** — but its own prose names *"the GNU General Public License … version 3 … or (at your option) any later version"*. **Resolved: GPL-3.0-or-later.**
+
+🟢 **So the grant ladder has four rungs, in this order: body-diff → SPDX tag → notice prose → unresolved.** 🔵 **`p772` graded `35` rows `POINTER-OR-SHORT-NOTICE` and treated the class as terminal. It is not** (`ACTION p773-C`).
+
+### 🟢 `T755` — four canonical SPDX pairs are byte-identical, so one axis is undecidable by construction
+
+| Identical pair | Bytes |
+|---|---|
+| `AGPL-3.0-only` == `AGPL-3.0-or-later` | `34,020` |
+| `GPL-2.0-only` == `GPL-2.0-or-later` | `17,337` |
+| `GPL-3.0-only` == `GPL-3.0-or-later` | `34,674` |
+| `LGPL-3.0-only` == `LGPL-3.0-or-later` | `42,098` |
+
+🔴 **The `23` canonical texts in `ingest/canonical/` hold only `19` distinct bodies.** 🟢 **No body-diff can ever separate `only` from `or-later`** — the distinction lives in the repository's notice, not the licence text. 🔵 **This pass's grader therefore reports the GROUP and lets an SPDX tag pick the arm, rather than naming one and being right by luck half the time.**
+
+### 🔴 `T756` — Primero's grant is intact, and the thing that makes it a child-protection system is not in the grant
+
+[`primeroIMS/primero`](https://github.com/primeroIMS/primero) — the reference CPIMS+ platform, deployed nationally in **Sierra Leone** (expanded 8→16 districts), **Mexico** (National Case Management Model, with 2026 World Cup child-protection use stated), **Eswatini** and **Sudan**.
+
+**Measured:** `35,473 B`; the canonical AGPL-3.0 body is **present intact**, with **`967` characters prepended and `0` appended** → `canonical+PREPENDED`.
+
+🔴 **The prepended text is not boilerplate.** It reads: *"Primero is freely available, but if you would access to the CPIMS+ and GBVIMS+ configurations (JSON bundles), please contact…"* 🟢 **So the engine is AGPL open source and the child-protection MODEL — the configuration that encodes the casework — is distributed on request.** 🔵 **"Primero is open source" is true of the software and not of the thing a ministry actually buys.**
+
+### 🔴 `T760` — the safeguarding supply, probed before shelving: `0` permissive repositories exist
+
+| Address | Grant after `31` case-aware filename probes |
+|---|---|
+| [`chrisdrous94/Safeguarding`](https://github.com/chrisdrous94/Safeguarding) | 🔴 **NO-GRANT-AT-ROOT** — and it is the only KCSIE-aligned safeguarding case manager found in existence |
+| [`Children-in-Families/oscar-web`](https://github.com/Children-in-Families/oscar-web) | 🔴 **NO-GRANT-AT-ROOT** (a search result asserts AGPL) |
+| [`Leedo-database/LEEDO-Child-Protection-Case-Management-System`](https://github.com/Leedo-database/LEEDO-Child-Protection-Case-Management-System) | 🔴 **NO-GRANT-AT-ROOT** |
+| [`Adewunmiiii/child-abuse-case-database-system`](https://github.com/Adewunmiiii/child-abuse-case-database-system) | 🔴 **NO-GRANT-AT-ROOT** |
+| [`primeroIMS/primero`](https://github.com/primeroIMS/primero) | 🔴 AGPL-3.0 family, config-gated |
+| [`manderson20/classguard`](https://github.com/manderson20/classguard) | 🔴 AGPL-3.0-or-later |
+| [`Luzannevdw/safeguarding-prototype`](https://github.com/Luzannevdw/safeguarding-prototype) · `safeguarding-portal` | 🔴 **ABSENT-OR-PRIVATE** (both) |
+
+🔵 **Eighth consecutive register where the duty layer is published by nobody. The pattern is now strong enough to sell on: the statutory component is always Globant's artefact.**
+
+### 🔵 `T757` / `T758` — the two instructions `p772` left, and what measuring them actually returned
+
+- 🟢 **`gate-tables` (`ACTION p772-A`), written from scratch with `10` of its own controls: `0` header-row-as-data defects over `18,024` tables and `94,551` body rows** across `608` curated and `91` archive files. **The defect class the ingest brief says has shipped most often across industries is absent from this base.** The `1` candidate raised was this pass's own instrument reading a `composer.json` `field`/`value` table (`D1`).
+- 🔴 **`ACTION p772-B` ordered `75` sites rewritten. The `75` is its own gate's artefact.** `p772` checked line-by-line while this base's prose is hard-wrapped, so the supersession marker routinely sits on the *next* line from the date. Subject-bound with a **paragraph window**: **`0`** live bare assertions on the curated shelves. The `2` survivors are **Vietnam's `Decision 33/2026/QĐ-TTg`, which is genuinely effective `15 August 2026`** (`D8`). 🟢 **Carrying out `p772-B` literally would have corrupted correct cells.**
+
+### 🟢 The pass's honest headline
+
+🔴 **This pass's instruments raised `1` table defect, `12` date defects, `6` missing grants and a `75`-site remediation order.** 🟢 **Verified: `0`, `0`, `5`, `0`.** `9` instrument defects (`D1`–`D9`) were caught by control and **none was published as a finding**; the one that nearly shipped was a false `NO-GRANT-AT-ROOT` against **ERPNext**, whose GPL-3.0 grant is at a lowercase `license.txt`.
+
 ## 🆕 `p772` — `2026-11-11` — **What is new this week is not a repository, it is a measurement: every agent address this base displays was probed, and the week's real movement is that `6` of the `7` "exists but has no commits" repositories in the whole population are Moodle MCP servers.**
 
 🔴 **First, as `ACTION p771-A` requires: `make hooks` was TRIED as the first command of this pass and DENIED again — `[Code from External]`. Third consecutive session, so it is settled, not incidental.**

@@ -4,6 +4,72 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p773` — **School safeguarding and child-protection records: the statutory layer, measured in four regions — and `ACTION p772-I`'s stated premise of a single duty-holder is FALSIFIED.**
+
+🔴 **`make hooks` tried first (`ACTION p772-A`): DENIED, fourth consecutive session.** 🟢 **No market size is quoted on this shelf.** `p771`'s `T738` is a standing instruction after one search returned `$2.21B`–`$11.40B` for the same year: **quote the duty's dates and the estate's COUNT.** This section does that.
+
+### 🔴 `T759` — the duty binds a different legal person in every region, and in the US it binds a natural person
+
+`ACTION p772-I` named this register partly because it looked like a **single duty-holder**. 🔴 **It is not, and the difference is not cosmetic — it changes what "the concern was handled" means in code.**
+
+| Region | The duty binds | Instrument | The dated obligation |
+|---|---|---|---|
+| **EMEA — England** | 🟢 **The school** (governing body), acting through a named **DSL** | **Keeping Children Safe in Education 2026**, statutory guidance | Published **`7 July 2026`**, **in force `1 September 2026`**; the 2025 edition applied until **`31 August 2026`**. Child-protection files maintained per **Annex B** |
+| **North America — US** | 🔴 **The individual member of staff, personally** | **Ohio R.C. `2151.421`** · **Idaho Code `§ 16-1605`** | 🔴 **Ohio: immediate, on *reasonable suspicion* — actual knowledge is NOT required — and the duty "cannot be discharged by telling a supervisor."** Idaho: **within `24` hours**, failure is a **misdemeanour** |
+| **APAC — Australia (QLD)** | 🟢 **The organisation** (the school as an entity) | **Child Safe Standards** · **Reportable Conduct Scheme** (Child Safe Organisations Act) | 🟢 **Child Safe Standards apply to schools from `1 January 2026`.** 🔴 **The Reportable Conduct Scheme commenced `1 July 2026` and schools must comply from `1 January 2027` — a FORWARD deadline** |
+| **LATAM — Brazil** | 🔵 **Any person (art. 13), plus the `dirigente de ensino fundamental` (art. 56)** | **ECA** (Lei 8.069/1990) arts. `13`, `56`, `245` · **Lei 13.431/2017** · **Lei 14.344/2022** art. `23` | Notification to the **Conselho Tutelar** is compulsory. **Art. 245 penalty: `3`–`20` salários de referência, doubled on recurrence.** 🔴 **And `Lei 13.431/2017` forbids the school from investigating or taking detailed testimony — the `escuta especializada` happens in the protection network, not the school** |
+
+🔴 **The product consequence, stated plainly because it is the register's commercial point:** a safeguarding workflow that routes a concern to the DSL and marks the duty **discharged** is correct for **England** and **Australia**, is **wrong for Ohio** (the individual's duty survives the hand-off), and is **actively dangerous in Brazil** if it invites the school to gather evidence. 🟢 **`addressee` must be a first-class field (`P771-4`), and so must `duty_discharged_by` — an institution in EMEA/APAC, a named natural person in the US.**
+
+### 🟢 The retention clock, which is the other half of the record's shape
+
+- 🟢 **England: date of birth + `25` years, then review** — the IRMS schools/academies toolkit figure, agreed with the Safeguarding Children Group **on the understanding that the principal copy sits with local-authority social services**. The DfE data-protection toolkit aligns at *"until the child is 25 or older."*
+- 🟢 **Transfer, which is where systems actually fail:** the child-protection file goes to the receiving school's DSL **as soon as possible** — the February 2026 consultation draft specifies **within `5` days for an in-year transfer, or the first `5` days of a new term** — **transferred SEPARATELY from the main pupil file**, in secure transit, **with confirmation of receipt obtained**.
+- 🔴 **Premise tested, second finding:** `p772-I` expected *"a retention schedule shorter than the record's legal life."* **Measured, it is the opposite in England — `DoB+25` outlives the pupil's time at the school by roughly a decade, and the duty to transfer means the record's custodian changes while the clock runs.** 🟢 **So the deliverable's hard problem is CUSTODY HAND-OFF under a running retention clock, not deletion.**
+- 🔴 **Not obtained:** a statutory retention figure for the US, Australia or Brazil. Searched; the English figure is the only one this pass can state (`ACTION p773-H`).
+
+### 🟢 The EU AI Act date, re-verified independently this pass
+
+| Instrument | Applies from | Status |
+|---|---|---|
+| **Annex III stand-alone high-risk** (includes education: admissions, student evaluation, exam scoring, proctoring) | 🟢 **`2 December 2027`** | **Moved from `2 August 2026`** by **Regulation (EU) 2026/1744** (the Digital Omnibus) — OJ **`24 July 2026`**, in force **`27 July 2026`** |
+| **Annex I** high-risk embedded in regulated products | `2 August 2028` | Moved by the same instrument |
+| **Article 50** transparency / chatbot disclosure | 🔵 **`2 August 2026` — UNCHANGED** | Not affected by the high-risk deferral |
+
+🟢 **`p772`'s `T752` holds, confirmed from an independent reading.** 🔴 **And `ACTION p772-B`'s remediation order is withdrawn as unsafe: the `75` sites were a line-bound gate artefact, and `0` live bare assertions exist on the curated shelves** (`T758`).
+
+## Opportunities by region
+
+### North America
+
+- 🟢 **The binding layer is the individual's non-delegable duty, and no product models it.** Ohio's duty is personal and immediate on reasonable suspicion; Idaho's is `24`-hour with criminal exposure. 🟢 **A concern-logging system that produces a per-staff-member evidentiary record of *their own* report — not just the school's — is the differentiated deliverable, and it is a compliance artefact rather than a feature.**
+- 🟢 **Idaho carries a dated 2026 obligation with a procurement attached:** the State Department of Education must develop **annual abuse-prevention training** (operative **`1 July 2026`**), and **districts that do not train staff must report to the SDE why not.** 🔵 **A reporting obligation with a named recipient is a build.**
+- 🔵 **Held from `p772`:** US estate **`99,073`–`99,088` schools / `17,648`–`19,217` LEAs**; **`79%`** of districts hold AI guidelines; **`31`→`37`** states with AI guidance; **Ohio** required districts to adopt an AI use policy by a stated 2026 deadline.
+- 🔴 **Declared gap:** `45` of `50` states remain unmeasured for their actual mandatory-reporting and records statutory text (`ACTION p772-H`, carried as `ACTION p773-G`). 🔴 **And no current district-level percentage for safeguarding-records digitisation was obtainable this pass** — the leg returned AI-guidance figures instead, which are a different question.
+
+### EMEA
+
+- 🟢 **The clearest, most dated opportunity in the register.** KCSIE 2026 is **in force since `1 September 2026`** with a **`5`-day transfer rule** and a **separate-file** requirement, against a retention clock of **`DoB+25`**. 🟢 **That is a specification, not a market thesis — and no permissive product implements it.**
+- 🟢 **The estate's count:** **`24,499`** open schools in England at January 2026 (**`+20`** YoY, PRUs included); academies **`48.2%`** of schools and **`60.4%`** of pupils (DfE, *Schools, pupils and their characteristics 2025/26*). 🔵 Competing compilations give `24,820` and `24,453`; the `367`-school spread is recorded, not averaged.
+- 🟢 **The AI overlay has `16` extra months of build time**, not a reprieve: Annex III education obligations at **`2 December 2027`**, while **Article 50 transparency is already live** since `2 August 2026`.
+- 🔵 **Adoption:** Futuresource — **`67%`** of teachers now use AI tools, moving from pilots to structured implementation.
+- 🔴 **Primary-source verification remains BLOCKED ON ENVIRONMENT** (`ACTION p772-F`, re-confirmed): `explore-education-statistics.service.gov.uk`, `asl.acara.edu.au` and `eur-lex.europa.eu` **do not resolve under this session's network policy**. Every date and count here is search-sourced **by constraint**, and labelled so.
+
+### APAC
+
+- 🟢 **Australia (Queensland) has the only forward compliance deadline in this register:** Child Safe Standards for schools from **`1 January 2026`**; the **Reportable Conduct Scheme** commenced **`1 July 2026`** and **schools must comply from `1 January 2027`.** 🟢 **A dated, organisation-level duty with a known start is the easiest safeguarding engagement to scope anywhere in this base.**
+- 🔵 **Estate count held:** Australia **`9,653`–`9,755`** schools; per-jurisdiction counts obtained for `6` of `8` at `p772`.
+- 🟢 **The AI-in-education layer is moving faster here than the safeguarding layer.** **China** declared **2026** the first year of nationwide AI-education rollout (Beijing: **`8` hours/year** from autumn 2025). **India**: AI and computational thinking reported as compulsory **from Class 3 in 2026–27** under the IndiaAI Mission — 🔴 **reported as a plan; status not verified**. **South Korea**: a 2026 amendment **reclassified AI digital textbooks from official textbooks to teaching reference materials** — a *downgrade* in legal status worth knowing before pitching. **Japan**: non-binding guidance, which warns against entering personal data into AI tools; digital textbooks may become official as late as the **2030** school year.
+- 🔵 **Ipsos Education Monitor 2026:** support for banning AI in schools is **below the `39%` global average** across much of Asia. 🔴 **Statutory safeguarding-records text for NSW, WA, Tasmania, ACT and NT remains unmeasured.**
+
+### LATAM
+
+- 🔴 **The duty exists, the penalty is monetary and personal, and the school is explicitly NOT the investigator.** ECA art. `56` binds the school head; art. `13` binds any person; art. `245` prices failure at **`3`–`20` salários de referência, doubled on recurrence**; `Lei 13.431/2017` keeps the `escuta especializada` out of the school. 🟢 **So the Brazilian deliverable is a NOTIFICATION-AND-HANDOFF instrument with a defensible audit trail — deliberately not a case-investigation tool.** That is a narrower and more sellable product than the EMEA one.
+- 🟢 **Primero/CPIMS+ is already the regional incumbent to integrate with**, not to rebuild: **Mexico** configured Primero with CPIMS+ for its **National Case Management Model**, with stated child-protection use around the **2026 FIFA World Cup**.
+- 🟢 **The governance gap is the quantified opportunity:** **Cetic.br (2026)** — **`53%`** of Brazilian school administrators use AI but only **`22%`** report school guidelines. **UNESCO IESALC** — **`87%`** of regional universities use AI, only **`26%`** have a formal strategy. **OECD TALIS (2024)** — **`56%`** of Brazilian secondary teachers used AI in the prior year against a **`36%`** OECD average. **IDB** — of `193` regional AI initiatives, only **`~27%`** described concrete mitigation strategies.
+- 🔵 **Policy and money:** Brazil's **MEC issued a 2026 national reference framework on responsible AI** across all education levels; Brazil's framework **AI bill remains stalled**; **Mexico has no enacted AI law** (bills pending, 2018 strategy under revision); **Google.org `$4.6M`** targeting **1.25M students across `9` countries by 2028**.
+- 🔵 **Estate count held:** Brazil ≈**`178,000`** schools and **`46,018,380`** enrolments.
+
 ## 🆕 `p772` — **🟢 `ACTION p771-F` discharged for three of four regions: the addressable estate is now counted in North America, APAC and LATAM as well as England. 🔴 `ACTION p771-G` is NOT discharged for a second pass, and this pass found the structural reason — primary verification is unavailable in this session, not merely unattempted. 🟢 And the EU AI Act contradiction `p771` left open is RESOLVED, which clears `128` date assertions on these shelves.**
 
 ### 🟢 `ACTION p771-F` — the addressable estate, counted per region

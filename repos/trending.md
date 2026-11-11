@@ -4,6 +4,48 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p773` — `2026-11-11` — **The repository movement this week is a measurement of this base's own channel, not a star count: the industry-KB push was out of scope, not broken, and a case-aware filename list changed a verdict on a `35,000`-star-class platform.**
+
+🔴 **`make hooks` tried first, as `ACTION p772-A` requires: DENIED, fourth consecutive session (`[Code from External]`).** 🟢 **`★` remains withdrawn** (`p771` `T726`): `api.github.com` is `403` here, so every row below is identified by **default branch + `HEAD`** and **grant bytes + `sha256₁₂`**.
+
+### 🟢 The channel finding: a `403` from the git proxy is a SCOPE statement, not a network failure
+
+🔴 **Every pass since `2026-08-02` recorded the industry-KB push as BLOCKED** — `rotation.json` carries it as `push-BLOCKED-access-restriction`, and `p772` inherited the reading without a cause. **The cause, read from the proxy's own error text:**
+
+> `access denied by the git proxy: gmilano/education-kb is not in this session's authorized repository set, so the proxy will not inject a credential for it. To fix, add the repository to the session's sources.`
+
+🟢 **The remedy was in the error message the whole time.** The repository was added to the session's authorised set and `git push --dry-run` reached the remote and returned `Everything up-to-date`. 🔵 **Three months of passes read a scope refusal as a transport failure. The distinguishing test is cheap: a transport failure does not name your repository back to you.**
+
+### 🔴 `D9` — the verdict a filename list changed, on a platform nobody would call obscure
+
+| Address | First verdict this pass | After a `31`-name case-aware probe |
+|---|---|---|
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 `NO-GRANT-AT-ROOT` | 🟢 **GPL-3.0 family**, `body:near-canonical` (δ`13`), at **`license.txt`** — lowercase, `35,148 B` |
+
+🟢 **`ACTION p772-C` is vindicated on this base's own instrument, not just on `AccessKit`.** 🔵 **`NO-GRANT-AT-ROOT` is only as strong as the filename list behind it, and the list must include lowercase `license.txt`, `COPYING.txt`, `LICENSE-MIT`/`-APACHE` and `docs/`+`.github/` paths.** The other `5` `NO-GRANT` verdicts in this register survived the wider probe and are published as findings.
+
+### 🟢 Grant identity across repositories, by hash — the control that makes these rows trustworthy
+
+🟢 **Independent repositories shipping byte-identical canonical payloads are a positive control on the probe itself:**
+
+| `sha256₁₂` | Bytes | Repositories sharing it | Family |
+|---|---|---|---|
+| `c5accbbd8546` | `11,356`/`11,358` | [`synthetichealth/synthea`](https://github.com/synthetichealth/synthea) · [`LinuxForHealth/FHIR`](https://github.com/LinuxForHealth/FHIR) | Apache-2.0 |
+| `43070e2d4e53` | `11,356`/`11,357` | [`hapifhir/hapi-fhir`](https://github.com/hapifhir/hapi-fhir) · [`openFHIR/openfhir`](https://github.com/openFHIR/openfhir) | Apache-2.0 |
+| `c53a65c2fd56` | `35,146`/`35,147` | [`moodle/moodle`](https://github.com/moodle/moodle) · [`openemr/openemr`](https://github.com/openemr/openemr) · [`openfn/microservice`](https://github.com/openfn/microservice) · [`OpenFn/lightning`](https://github.com/OpenFn/lightning) | GPL-3.0 family |
+
+🔵 **Note the GPL-3.0 group: four unrelated projects, one byte-identical payload — and the `only` vs `or-later` axis is still undecidable from it**, because the canonical texts for those two arms are themselves identical (`T755`).
+
+### 🔵 Default branches that are not `main`/`master` in this register
+
+| Address | Default branch |
+|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `develop` |
+| [`openFHIR/openfhir`](https://github.com/openFHIR/openfhir) | `develop` |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop` |
+
+🔴 **`p772` counted `330` such addresses across `99` names on this base.** Tooling that assumes `master` clones a non-default tree **silently**, and a grant probe against the wrong branch is how a false `NO-GRANT` is manufactured (`T728`).
+
 ## 🆕 `p772` — `2026-11-11` — **GitHub trending is not the measurement this week. `ACTION p771-B`'s sweep ran as the pass of its own it asked for: all `5,646` displayed addresses probed on the ref channel, `5,532` resolve, `79` do not, and `28` were never repositories at all.**
 
 **`5,646` distinct displayed addresses probed with `git ls-remote --symref` · `4,186` distinct owners · `1,592` grant payloads byte-read with length and `sha256₁₂` · `23` SPDX canonical licence texts held in `ingest/canonical/` · `330` addresses whose default branch is **not** `main`/`master`, across `99` distinct branch names · `15` defects in this pass's own instruments caught by control before any verdict was written · `1` real licence-cell defect found on this base.**

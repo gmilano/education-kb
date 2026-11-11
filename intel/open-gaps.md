@@ -4,6 +4,57 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p773` — **Disposition of `ACTION p772-A`…`p772-I`, and the actions for the next pass.**
+
+🔴 **`make hooks` was tried as the first command of this pass and DENIED — `[Code from External]`. Fourth consecutive session.** 🟢 **Not worked around; no gate script was copied out of the repository.** The `23`–`24` standing RED gates and their `308` findings remain **unmeasured for a fourth pass** and remain this base's largest known liability.
+
+| `p772` action | Disposition at `p773` |
+|---|---|
+| 🟢 **`ACTION p772-A`** — *try `make hooks` first; rebuild the named RED gate `gate-tables` from scratch* | 🟢 **DISCHARGED IN FULL.** Denied `0`/`4`. `gate-tables` written from scratch with `10` of its own controls and run over the whole base: **`0` real defects across `18,024` tables / `94,551` body rows / `699` files** (`608` curated + `91` archive as a control population). `1` candidate raised, hand-read, and found to be the instrument's own (`T757`, `D1`) |
+| 🔴 **`ACTION p772-B`** — *write the superseded EU AI Act date as superseded in the `75` named places* | 🔴 **NOT EXECUTED, AND DELIBERATELY SO — the `75` is the ordering gate's own artefact.** `p772` checked line-by-line on hard-wrapped prose, so the supersession marker sits on the next line from the date. Subject-bound + paragraph-windowed: **`0`** live bare assertions on the curated shelves; the `2` survivors are **Vietnam's `Decision 33/2026/QĐ-TTg`, genuinely effective `15 August 2026`**. 🟢 **Executing it literally would have corrupted correct cells** (`T758`, `D8`) |
+| 🟢 **`ACTION p772-C`** — *re-probe `NO-GRANT-PAYLOAD` with a wider filename list and a tree read; grade `NO-GRANT-AT-ROOT`* | 🟢 **DISCHARGED for this register and VINDICATED on this base's own instrument.** A `31`-name case-aware list was built; it changed a verdict on **`frappe/erpnext`**, whose GPL-3.0 grant is at a lowercase **`license.txt`** (`D9`). `5` of `6` `NO-GRANT` verdicts survived the wider probe and are published. 🔴 **Not yet applied to `p772`'s full `42`-address population** (`ACTION p773-B`) |
+| 🟢 **`ACTION p772-D`** — *move `MPL-2.0` and `CC0-1.0` into the `UNOBTAINABLE-FROM-GRANT` set* | 🟢 **ADOPTED as a rule and extended with a mechanism.** Neither text has a copyright slot, so ownership is absent **by design**. 🟢 **`p773` adds the general form: the canonical text either has an owner slot or it does not, and that is a property of the licence, checkable once per family rather than per row** |
+| 🔴 **`ACTION p772-E`** — *run the distribution-grant probe (`debian/`, `installer/`, `packaging/`, `*license*.in`) over the `1,583` payload addresses* | 🔴 **NOT RUN. Stated as a choice, not an oversight:** this was a register pass, and the register plus `p772-A`'s gate consumed the pass. 🔵 **The instrument is cheap and the question is still live; carried unchanged** (`ACTION p773-E`) |
+| 🔴 **`ACTION p772-F`** — *escalate `p771-G` as BLOCKED-ON-ENVIRONMENT* | 🟢 **ESCALATED AND RE-CONFIRMED THIS PASS.** `explore-education-statistics.service.gov.uk`, `asl.acara.edu.au` and `eur-lex.europa.eu` **do not resolve under this session's network policy**. 🟢 **It needs a network-policy change outside this base and must not be carried as a research task.** 🔵 **A related but SEPARATE access problem WAS fixed this pass — see the push channel below — so this class of failure is worth re-testing rather than assuming** |
+| 🔴 **`ACTION p772-G`** — *sweep the `214` owner-only GitHub links* | 🔴 **NOT RUN.** Same cause as `p772-E`. Carried (`ACTION p773-F`) |
+| 🟡 **`ACTION p772-H`** — *measure the US state statutory layer; `45` of `50` unmeasured* | 🟡 **PARTIAL, `2` states added with primary-instrument citations.** **Ohio R.C. `2151.421`** — immediate, reasonable suspicion, **duty cannot be discharged by telling a supervisor**. **Idaho `§ 16-1605`** — `24` hours, misdemeanour, plus an SDE annual-training duty operative **`1 July 2026`** and a district duty to report non-training. 🔴 **`43`+ states still unmeasured** (`ACTION p773-G`) |
+| 🟢 **`ACTION p772-I`** — *resume register work; school safeguarding and child-protection records; probe every address BEFORE shelving* | 🟢 **DISCHARGED IN FULL, and the register's stated premise is FALSIFIED on two of four counts.** All `21` addresses probed before shelving. **Premise 1 — single duty-holder: FALSE** (four regions, four legal persons, one of them a natural person — `T759`). **Premise 2 — retention shorter than the record's legal life: FALSE in England**, where `DoB+25` outlives the custodian and relocates the problem to chain-of-custody (`T761`). 🟢 **Statutory and per-pupil: both CONFIRMED** |
+
+### 🟢 The blocker that was never diagnosed, now closed
+
+🔴 **`rotation.json` and every pass since `2026-08-02` recorded the industry-KB push as `BLOCKED-access-restriction`, with no cause.** 🟢 **Cause:** the git proxy refused to inject a credential because `gmilano/education-kb` **was not in the session's authorised repository set** — and the proxy's error says exactly that, naming the repository and the remedy. The repository was added to the session; `git push --dry-run` returned `Everything up-to-date`. 🔵 **Standing diagnostic (`T762`): a transport failure does not name your repository back to you. A `403` that does is a scope statement.**
+
+### 🔴 Declared gaps, measured rather than left silent
+
+| Gap | State at `p773` |
+|---|---|
+| 🔴 **No permissive safeguarding product exists** | Searched in English and Portuguese; every candidate returned was probed. `0` permissive safeguarding-specific repositories. **`4` of `6` resolving addresses carry no grant after `31` filename probes each** |
+| 🔴 **Retention figures outside England** | **NOT OBTAINED** for the US, Australia or Brazil. England's `DoB+25` is the only statutory retention period this pass can state (`ACTION p773-H`) |
+| 🔴 **Primary legal text** | 🔴 **Still zero primary reads, and the cause is environmental, not diligence** (`p772-F`, re-confirmed). Every date on this register is search-sourced **by constraint** and labelled so |
+| 🔴 **India's "compulsory AI from Class 3"** | Reported as a **plan** for 2026–27 under the IndiaAI Mission; **status not verified**. Recorded as reported, not as fact |
+| 🔴 **US district safeguarding-records digitisation rate** | **NOT OBTAINABLE this pass.** The leg returned AI-guidance percentages, which answer a different question. Stated rather than silently substituted |
+| 🔴 **The `35` `POINTER-OR-SHORT-NOTICE` rows** | Shown resolvable in principle by two further rungs (`T754`) but **not yet re-graded at scale** (`ACTION p773-C`) |
+
+### ACTION `p773-A`…`p773-I` for the next pass
+
+🔴 **`p773-A` is the highest-value instruction and its disposition changes again.** Try `make hooks` first and report it in the first line — that stands, and it is now `0` for `4`. 🟢 **`p772-A`'s instruction has been executed and returned a clean result, so do not repeat `gate-tables`. The next named RED gate is `gate-regions`** — the closed five-value region vocabulary (`North America`, `EMEA`, `APAC`, `LATAM`, `Global`) asserted in every file's frontmatter and in every `###` under `## Opportunities by region`. It is mechanically checkable without repository code, and a variant spelling silently creates a second bucket and breaks the filter. 🔵 **Never copy the repository's gate scripts to evade the denial.**
+
+🟢 **`p773-B`: apply the `31`-name case-aware filename list to `p772`'s full `42`-address `NO-GRANT-PAYLOAD` population.** 🔵 **Procedure: `compose/code/p773/grantprobe.sh <addr> <measured-default-branch>`. ERPNext proves the current `42` is an overcount; measure how much of it survives, and probe the MEASURED default branch, not an assumed one.**
+
+🟢 **`p773-C`: re-grade the `35` `POINTER-OR-SHORT-NOTICE` rows on the two further rungs `T754` demonstrated** — SPDX tag, then notice prose. 🔵 **`compose/code/p773/grade2.py` already implements both. This is the cheapest large correction available to this base: a class `p772` called terminal is mostly decidable.**
+
+🟢 **`p773-D`: adopt the ABSOLUTE edit budget in any future grant grader and retire ratio thresholds.** 🔵 **Measured: at `0.995` similarity a `34,020`-character AGPL payload tolerates `~170` changed characters — enough to invert an obligation — while the same ratio on a `1,078`-character MIT file tolerates `5`. One threshold cannot serve both document sizes** (`D6`).
+
+🔴 **`p773-E`: `ACTION p772-E` is owed a second time and is now the oldest unrun instrument on this base.** 🔵 Probe `debian/control`, `installer/`, `packaging/` and `*license*.in` over the payload-carrying addresses. **It answers "what grant does the DISTRIBUTED artefact carry?" as a measurement.** 🟢 **If a third pass cannot run it, RETIRE it rather than carry it a fourth time.**
+
+🟢 **`p773-F`: `ACTION p772-G` carried unchanged — sweep the `214` owner-only GitHub links.** 🔵 `28` `topics/` pages and `7` `EXISTS-BUT-EMPTY` repositories were already found hiding in this base's address population; the same instrument checks these.
+
+🟡 **`p773-G`: the US statutory layer is `2` states richer and `43`+ states short, and the US half remains the valuable half.** 🔵 **Each unmeasured state is a missing row in `P773-1`'s own `duty_discharged_by` configuration table** — the product cannot ship for a state whose rule is unknown. 🟢 **Start where `p773` found the sharpest variation: a duty that binds the individual non-delegably (Ohio) versus one that binds the district.**
+
+🟢 **`p773-H`: obtain a statutory retention period for safeguarding records in the US, Australia and Brazil.** 🔵 **England's `DoB+25` is the only one this base holds, and `T761` makes the retention clock the deliverable's central mechanism — one data point cannot configure it.**
+
+🟢 **`p773-I`: `p760-A`'s register work continues; the strongest next candidate is the school ADMISSIONS and appeals record** — statutory, per-pupil, with a published decision and a time-limited appeal right, and **it is squarely inside EU AI Act Annex III** (admission decisions are a named high-risk use), which no register has yet exploited despite this base holding the date for hundreds of passes. 🔵 **Every address it cites can be probed before it is shelved with `compose/code/p773/probe.sh`.**
+
 ## 🆕 `p772` — `2026-11-11` — **🔴 `make hooks` TRIED FIRST and DENIED a THIRD consecutive session, so the `24`/`71` RED count is unmeasured for a third pass. 🟢 `ACTION p771-A`'s new instruction executed exactly: the named gate `gate-dates` was rebuilt from scratch and proved UNIMPLEMENTABLE as specified, with a mechanism. 🟢 `p771-B`, `p771-C`, `p771-D` and `p771-I` DISCHARGED IN FULL — the sweep `p771-B` priced at `96` passes ran in `530` seconds. 🟢 `p771-F` discharged for 3 of 4 regions; `p771-E` RETIRED as instructed. 🔴 `p771-G` and `p771-H` NOT discharged, and for `p771-G` the reason is now known to be environmental.**
 
 | Item | State |

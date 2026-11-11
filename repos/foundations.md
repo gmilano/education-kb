@@ -4,6 +4,23 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p773` — **Foundations re-grounded on the safeguarding register (`ACTION p772-I`), with every grant re-graded against `19` distinct canonical bodies. 🟢 `6` foundational rows, all permissive, all probed this pass. 🔴 And a correction to this pass's own first reading: `frappe/erpnext` was graded `NO-GRANT-AT-ROOT` before a case-aware filename list found its GPL-3.0 grant at `license.txt`.**
+
+🔵 **Why these six and not the usual list:** a safeguarding record is a *per-person clinical-grade record with a statutory retention clock*. The foundations for it are health-interoperability foundations, not LMS foundations — and that is a change of shape this base has not recorded before for an education register.
+
+| Address | Branch · `HEAD` | Grant (graded) | Bytes | Foundational role |
+|---|---|---|---|---|
+| [`hapifhir/hapi-fhir`](https://github.com/hapifhir/hapi-fhir) | `master` · `3f77c0353b0b` | 🟢 **Apache-2.0** `body:canonical` | `11,357` | The reference Java FHIR implementation. Consent Interceptor + `AuditEvent` give the access trail a CP file legally needs |
+| [`medplum/medplum`](https://github.com/medplum/medplum) | `main` · `cfd9d414ce45` | 🟢 **Apache-2.0** operative-body match | `9,765` | FHIR-native platform with per-role access policies — the `addressee`-aware permission model (`P771-4`) maps onto it directly |
+| [`synthetichealth/synthea`](https://github.com/synthetichealth/synthea) | `master` · `bd8a52ba0a54` | 🟢 **Apache-2.0** operative-body match | `11,357` | 🟢 **The demonstrability foundation.** A safeguarding pilot cannot use real data; this generates the population instead |
+| [`dhis2/dhis2-core`](https://github.com/dhis2/dhis2-core) | `master` · `9dfe53b779d7` | 🟢 **BSD-3-Clause** `body:near-canonical` (δ`4`) | `1,517` | Tracker programmes: per-child longitudinal case follow-up already deployed by ministries in LATAM, EMEA and APAC |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `develop` · `2d29598fc66f` | 🟢 **MIT** `body:canonical` | `1,097` | The only permissive education platform this base has located (`T727`), and the offline-first one — which matters for the estates this register serves |
+| [`google/fhir-data-pipes`](https://github.com/google/fhir-data-pipes) | `master` · `38fcd2c6ce5c` | 🟢 **Apache-2.0** `body:canonical` | `11,358` | De-identified aggregate extraction — the statutory-return path that does not move identifiable records |
+
+🟢 **`6` rows, `0` padded, every grant byte-read and body-diffed this pass.** 🔵 **Two of the six default to a branch that is not `main`/`master` (`kolibri`→`develop`, and `openfhir`→`develop` on the agents shelf): tooling that assumes `master` clones a non-default tree silently** (`T728`).
+
+🔴 **What is NOT a foundation here, stated so it is not mistaken for one:** `primeroIMS/primero` is the world's reference child-protection case-management system and it is **AGPL-3.0 with a configuration gate** — it belongs on the verticals shelf as a system to integrate or buy, not a foundation to build on (`T756`).
+
 ## 🆕 `p772` — **The foundations shelf re-graded on the body-diff, not re-stocked (`ACTION p771-C`). `23` SPDX canonical licence texts are now held in `ingest/canonical/`, which is the standing instrument `p771-C` asked for.**
 
 ### 🟢 `ingest/canonical/` — the held canonical set, and why SPDX rather than a shelved payload

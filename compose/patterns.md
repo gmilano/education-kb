@@ -4,6 +4,47 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p773` — **Concrete recipes from the safeguarding register. Every component named below was probed on the ref channel and its grant body-diffed this pass; no component is cited that was not verified.**
+
+### `P773-1` — The multi-jurisdiction safeguarding concern record (the register's primary deliverable)
+
+**Why it is a build and not a buy:** `0` permissive safeguarding-specific repositories exist (`T760`), there is no permissive SIS or school ERP (`T727`), and the only KCSIE-aligned repository in existence carries no licence.
+
+**Wiring:**
+1. **Record store — [`hapifhir/hapi-fhir`](https://github.com/hapifhir/hapi-fhir)** (Apache-2.0, `body:canonical`, `11,357 B`). Model the concern as a FHIR resource set per child; the CP file is a `List` of `Flag`/`Observation`/`DocumentReference`. Use FHIR because the record is clinical-grade and must federate, not because the client is a hospital.
+2. **Access control + audit — HAPI's Consent Interceptor** plus FHIR `AuditEvent`. Statutory requirement, not a feature: England requires the file to be stored securely and every decision recorded in writing with reasons.
+3. **Per-role policy surface — [`medplum/medplum`](https://github.com/medplum/medplum)** (Apache-2.0, operative-body match). Its access policies express "DSL sees all, class teacher sees own referrals only" without hand-rolled authorisation.
+4. **Jurisdiction layer — Globant's artefact.** Two first-class fields decide the whole design: **`addressee`** (`P771-4`) and **`duty_discharged_by`**, typed per region — an **institution** for England (governing body/DSL) and Queensland (the organisation), a **named natural person** for Ohio/Idaho, and **"any person + `dirigente`"** for Brazil. 🔴 **Hard rule from `T759`: closing a concern on hand-off to the DSL must NOT mark the duty discharged in a US jurisdiction.**
+5. **Chain-of-custody ledger — Globant's artefact, informed by [`mizcausevic-dev/fhir-resource-access-audit`](https://github.com/mizcausevic-dev/fhir-resource-access-audit)** (MIT, `body:canonical`; ⚠️ grant verified, substance unassessed). Implements `T761`: `DoB+25` retention clock, transfer within `5` days to the receiving DSL, **separate from the main pupil file**, with **confirmation of receipt** as a recorded event.
+6. **Demonstration data — [`synthetichealth/synthea`](https://github.com/synthetichealth/synthea)** (Apache-2.0). 🟢 **Non-negotiable: a safeguarding pilot must never run on real children's records.** Synthea makes the whole pattern demonstrable in a sales engagement with zero data-protection exposure.
+7. **Statutory return — [`google/fhir-data-pipes`](https://github.com/google/fhir-data-pipes)** (Apache-2.0, `body:canonical`) for de-identified aggregates, so the return leaves without identifiable records.
+
+**Licence posture:** every component is Apache-2.0, MIT or BSD-3. 🔴 **Deliberately excluded: `OpenFn/lightning` and `openfn/microservice` (GPL-3.0 family) as the orchestrator, and `primeroIMS/primero` (AGPL-3.0) as the base** — see `P773-2`.
+
+**Indicative shape:** `10`–`14` weeks for one jurisdiction; **each additional jurisdiction is a configuration of `addressee` + `duty_discharged_by` + the retention clock, not a fork** — which is the entire argument for building it this way.
+
+### `P773-2` — Federate to Primero/CPIMS+; do not fork it into a hosted product
+
+**The measurement that forces this:** `primeroIMS/primero` is **AGPL-3.0 family, `canonical+PREPENDED`** (`967` chars before an intact body), and the prepended text **gates the CPIMS+/GBVIMS+ configurations behind an email request** (`T756`).
+
+- 🔴 **AGPL §13:** a *hosted* safeguarding service derived from Primero must offer its complete corresponding source to **every user who interacts with it over the network**. For a client-bespoke product that is usually a deal-breaker, and it is invisible in a length- or title-line licence check.
+- 🔴 **The configuration gate matters more than the licence:** the JSON bundles that make Primero a child-protection system are not in the repository. **Forking the engine does not get you the casework model.**
+- 🟢 **Pattern:** stand `P773-1` up alongside Primero and exchange records with it. Primero is the **regional incumbent in LATAM** (Mexico's National Case Management Model) and in **EMEA/Africa humanitarian deployments** (Sierra Leone 8→16 districts, Eswatini, Sudan), so integration is the realistic engagement shape there, and `P773-1` is the greenfield shape in **North America and Australia**.
+- 🟢 **Where the client's estate is a ministry one, [`dhis2/dhis2-core`](https://github.com/dhis2/dhis2-core)** (BSD-3-Clause, δ`4`) **is the permissive alternative incumbent** — its tracker programmes already do per-child longitudinal follow-up.
+
+### `P773-3` — The grant-diligence rung every Globant engagement should run before it builds
+
+**This is a pattern because this pass's own instruments got it wrong nine times.** Run the ladder in this order and stop at the first rung that resolves:
+
+1. **Body-diff** the payload against the SPDX canonical text, masking the copyright slot and the title/"all rights reserved" decoration, with an **ABSOLUTE edit budget** (`≤25` changed characters) — **never a ratio.** 🔴 At `0.995` similarity a `34,020`-character AGPL text tolerates `~170` changed characters, enough to invert an obligation, while the same ratio on a `1,078`-character MIT file tolerates `5` (`D6`).
+2. **SPDX tag** — resolves payloads that ship no licence text at all (`classguard`).
+3. **Notice prose** — resolves an untagged short notice (`opensafely-core/cohort-extractor`).
+4. **Report the GROUP, not an arm**, where the canonical texts are byte-identical (`only` vs `or-later`) (`T755`).
+
+**Filename list, case-aware, before any `NO-GRANT` verdict is believed:** `LICENSE`/`LICENCE`/`License` × `{,.md,.txt,.rst}`, lowercase **`license.txt`**, `COPYING{,.txt}`, `LICENSE-MIT`, `LICENSE-APACHE`, `MIT-LICENSE`, `docs/LICENSE`, `.github/LICENSE` — `31` names. 🔴 **A list missing lowercase `license.txt` published a false `NO-GRANT-AT-ROOT` against ERPNext in this very pass** (`D9`).
+
+**And probe the MEASURED default branch:** `kolibri`→`develop`, `openfhir`→`develop`, `erpnext`→`develop`. A grant probe against an assumed `master` manufactures a false absence (`T728`).
+
 ## 🆕 `p772` — `P772-1`–`P772-5` — **five recipes from the sweep, each naming specific verified repositories. This was a sweep pass, so these are built on the `1,475` addresses whose grant is graded canonical or benign, not on new supply.**
 
 🔴 **Known limit, stated first:** `make hooks` was denied a third consecutive session (`[Code from External]`), so the repository's `71` gates are unmeasured. The two instruments this pass wrote from scratch — `gate_claims.py` (`13` controls) and the sweep (`15` catalogued defects, all caught by control) — are **additive, not parity.**

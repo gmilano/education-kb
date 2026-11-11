@@ -4,6 +4,55 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p773` — **The school safeguarding and child-protection records register (`ACTION p772-I`). 🔴 `make hooks` tried FIRST and DENIED a fourth consecutive session. 🟢 Every row below was probed on the ref channel and its grant byte-read and body-diffed BEFORE it was shelved, which is what `p772-I` asked for. 🔴 `0` of the rows are safeguarding-specific and permissive, because no such repository exists.**
+
+**`21` addresses probed · `31` case-aware grant filenames per NO-GRANT candidate · `17` payloads graded against `19` distinct canonical bodies · `9` instrument defects caught by control · `★` not reported (withdrawn at `p771` `T726`; `api.github.com` is `403` here).**
+
+### 🟢 Permissive and verified — the components a safeguarding deliverable can be built on
+
+Nothing here is a safeguarding product. These are the layers underneath one, and that is the register's point.
+
+| Address | Branch · `HEAD` | Grant (graded) | Bytes | Why it is in this register |
+|---|---|---|---|---|
+| [`hapifhir/hapi-fhir`](https://github.com/hapifhir/hapi-fhir) | `master` · `3f77c0353b0b` | 🟢 **Apache-2.0** `body:canonical` | `11,357` | The FHIR server the per-pupil safeguarding record can sit on. Its **Consent Interceptor** applies consent directives and emits audit events |
+| [`synthetichealth/synthea`](https://github.com/synthetichealth/synthea) | `master` · `bd8a52ba0a54` | 🟢 **Apache-2.0** operative-body match | `11,357` | 🟢 **The most important row in the register: it makes a child-protection workflow demonstrable without one real child's record** |
+| [`medplum/medplum`](https://github.com/medplum/medplum) | `main` · `cfd9d414ce45` | 🟢 **Apache-2.0** operative-body match | `9,765` | FHIR-native application platform with access policies — the per-role read/write rules a CP file needs |
+| [`google/fhir-data-pipes`](https://github.com/google/fhir-data-pipes) | `master` · `38fcd2c6ce5c` | 🟢 **Apache-2.0** `body:canonical` | `11,358` | FHIR→analytics pipelines; the route to a statutory return without exporting identifiable records |
+| [`LinuxForHealth/FHIR`](https://github.com/LinuxForHealth/FHIR) | `main` · `8429bf7e1f6c` | 🟢 **Apache-2.0** operative-body match | `11,358` | A second, independent FHIR server implementation — avoids a single-vendor dependency |
+| [`openFHIR/openfhir`](https://github.com/openFHIR/openfhir) | `develop` · `7643924e136f` | 🟢 **Apache-2.0** `body:canonical` | `11,357` | openEHR↔FHIR bidirectional mapping, for clients whose health estate is openEHR. 🔵 Default branch is **`develop`** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `develop` · `2d29598fc66f` | 🟢 **MIT** `body:canonical` | `1,097` | 🟢 **Still the only permissive education platform this base has found** (`T727`). Content delivery, not records. 🔵 Default branch is **`develop`** |
+| [`openfun/richie`](https://github.com/openfun/richie) | `master` · `5a2feef2639d` | 🟢 **MIT** `body:canonical` | `1,079` | Learning-portal CMS (France Université Numérique) — the parent/staff-facing surface |
+| [`dhis2/dhis2-core`](https://github.com/dhis2/dhis2-core) | `master` · `9dfe53b779d7` | 🟢 **BSD-3-Clause** `body:near-canonical` (δ`4`) | `1,517` | Tracker programmes already used for per-child case follow-up at national scale in LATAM/EMEA ministries |
+| [`xSoVx/fhir-mcp`](https://github.com/xSoVx/fhir-mcp) | `master` · `33b90a1a2bed` | 🟢 **MIT** `body:canonical` | `1,076` | ⚠️ **Grant verified; substance and maturity NOT assessed this pass.** An MCP server exposing FHIR to an agent — the agent interface for this register |
+| [`kb223/consent-engine`](https://github.com/kb223/consent-engine) | `main` · `3c6ad9855cea` | 🟢 **MIT** `body:canonical` | `1,073` | ⚠️ **Grant verified; substance NOT assessed.** Consent-compliance audit engine |
+| [`mizcausevic-dev/fhir-resource-access-audit`](https://github.com/mizcausevic-dev/fhir-resource-access-audit) | `main` · `1678fbc93f10` | 🟢 **MIT** `body:canonical` | `1,069` | ⚠️ **Grant verified; substance NOT assessed.** Append-only ledger of which tool read which patient resource |
+
+🟢 **`12` permissive rows, `0` padded.** 🔴 **And not one of them is a safeguarding product.** Every row is a layer; the layer that encodes the duty does not exist as permissive open source.
+
+### 🔴 The safeguarding-specific supply, measured — and this is the register's finding
+
+| Address | Branch · `HEAD` | Grant after `31` case-aware filename probes | Verdict for a studio |
+|---|---|---|---|
+| [`primeroIMS/primero`](https://github.com/primeroIMS/primero) | `main` · `af558c4d445a` | 🔴 **AGPL-3.0 family** · `canonical+PREPENDED` (`967` chars before an intact body) · `35,473 B` | 🔴 **The world's reference CPIMS+ system. Grant intact — and the prepended text gates the CPIMS+/GBVIMS+ configurations behind an email.** A hosted service on it triggers AGPL §13 network source disclosure (`T756`) |
+| [`manderson20/classguard`](https://github.com/manderson20/classguard) | `main` · `eac8ec536e83` | 🔴 **AGPL-3.0-or-later**, resolved from `SPDX-License-Identifier` · `1,055 B` | 🔴 **A `1,055`-byte payload sitting 23 bytes from MIT canonical.** School internet-safety / classroom management. **Do not read this as MIT** (`T753`) |
+| [`Children-in-Families/oscar-web`](https://github.com/Children-in-Families/oscar-web) | `master` · `9dd3a12e18ee` | 🔴 **NO-GRANT-AT-ROOT** | OSCaR case management for vulnerable children. 🔴 **A search result asserts AGPL; the repository root carries no grant on the measured default branch** |
+| [`chrisdrous94/Safeguarding`](https://github.com/chrisdrous94/Safeguarding) | `main` · `7f68d6edc4b5` | 🔴 **NO-GRANT-AT-ROOT** | 🔴 **The only KCSIE-aligned safeguarding case-management repository found in existence — concern logging, linked cases, family grouping — and it carries no licence. Globant may not build on it** |
+| [`Leedo-database/LEEDO-Child-Protection-Case-Management-System`](https://github.com/Leedo-database/LEEDO-Child-Protection-Case-Management-System) | `main` · `abb88ad3eda2` | 🔴 **NO-GRANT-AT-ROOT** | Child protection case management; no grant |
+| [`Adewunmiiii/child-abuse-case-database-system`](https://github.com/Adewunmiiii/child-abuse-case-database-system) | `main` · `f541f5e40d2b` | 🔴 **NO-GRANT-AT-ROOT** | A student thesis project; no grant |
+| [`Luzannevdw/safeguarding-prototype`](https://github.com/Luzannevdw/safeguarding-prototype) | — | 🔴 **ABSENT-OR-PRIVATE** | Returned by search; does not resolve on the ref channel. `safeguarding-portal` under the same owner is also absent |
+
+🔴 **`6` resolving safeguarding-specific addresses: `4` carry no grant, `2` are AGPL. `0` are permissive.** 🔵 **Eighth consecutive register in which the component that encodes the statutory duty is published by nobody — so it is Globant's artefact, not the market's.**
+
+### 🔵 Copyleft platforms that will appear in any school estate (recorded, not recommended)
+
+| Address | Branch | Grant (graded) | Note |
+|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | 🔵 **GPL-3.0 family** `body:near-canonical` (δ`7`) · `COPYING.txt` | The LMS the concern log will have to federate with |
+| [`openemr/openemr`](https://github.com/openemr/openemr) | `master` | 🔵 **GPL-3.0 family** (δ`7`) | Health records; relevant where the school nurse duty sits (`p771`) |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop` | 🔵 **GPL-3.0 family** `body:near-canonical` (δ`13`) · **`license.txt`** | 🔴 **This pass first published `NO-GRANT-AT-ROOT` against it — a defect of its own filename list, caught by control** (`D9`) |
+| [`OpenFn/lightning`](https://github.com/OpenFn/lightning) | `main` | 🔵 **GPL-3.0 family** (δ`7`) | Integration/orchestration — a real option, but copyleft decides the deployment shape |
+| [`opensafely-core/cohort-extractor`](https://github.com/opensafely-core/cohort-extractor) | `main` | 🔵 **GPL-3.0-or-later**, resolved from the NOTICE PROSE (no SPDX tag) · `677 B` | 🟢 **The third rung of the grant ladder, demonstrated: body-diff → SPDX tag → notice prose → unresolved** (`T754`) |
+
 ## 🆕 `p772` — **A sweep pass, not a register pass (`ACTION p771-I`). 🔴 `make hooks` was TRIED FIRST and DENIED a third consecutive session — `[Code from External]` — so the `24`/`71` RED count is unmeasured for a third pass. 🟢 `ACTION p771-A`'s new instruction was carried out: the named RED gate `gate-dates` was written from scratch, and the result is that its contract is UNIMPLEMENTABLE as specified, with a mechanism. 🟢 `ACTION p771-B` and `p771-I` are DISCHARGED IN FULL — all `5,646` displayed addresses swept, and `1,592` grant payloads re-graded on the body-diff. 🔴 And the pass's largest result is about this base's own reliability: of `13` apparent defects this pass's instruments raised against these shelves, `12` were the instruments' own and `1` was real.**
 
 **`5,646` addresses probed on the ref channel · `1,592` grant payloads byte-read and body-diffed against `23` SPDX canonical texts · `13` flagged rows read by hand before any verdict was published · `14` instrument defects caught by control · `1` licence cell corrected.**

@@ -4,6 +4,28 @@ region: Global
 updated: 2026-11-11
 ---
 
+## 🆕 `p773` — **Current trends, from the safeguarding register (`ACTION p772-I`). 🔴 `make hooks` tried first: DENIED, fourth consecutive session.**
+
+**`T753` — A licence-length band is not merely imprecise, it is adversely wrong across families.** MIT canonical is `1,078 B`; `manderson20/classguard` is `1,055 B` and is **AGPL-3.0-or-later**. Six payloads occupy a `41`-byte window spanning the most permissive grant and network copyleft. `p771`'s `T729` established that length is not identity *within* a family; this extends it: **the collision crosses families and lands in the worst possible direction.** Any classifier that bands by length will recommend a network-copyleft repository as MIT. **Instruction: never classify a grant by byte length, at any tolerance.**
+
+**`T754` — The grant ladder has four rungs, and this base has been stopping at one.** Body-diff → **SPDX tag** → **notice prose** → unresolved. `classguard` ships no licence text and resolves cleanly from `SPDX-License-Identifier`. `opensafely-core/cohort-extractor` ships a `677`-byte notice with no tag and resolves from its own prose naming *"GNU General Public License … version 3 … or (at your option) any later"*. **`p772` graded `35` rows `POINTER-OR-SHORT-NOTICE` and treated the class as terminal; most of it is probably resolvable** (`ACTION p773-C`).
+
+**`T755` — One licence axis is undecidable by construction, and reporting it is a false precision.** `AGPL-3.0-only` and `AGPL-3.0-or-later` are **byte-identical** (`34,020 B`), as are the `GPL-2.0`, `GPL-3.0` and `LGPL-3.0` pairs. The `23` canonical texts hold **`19` distinct bodies**. No body-diff can separate `only` from `or-later` — that lives in the repository's notice. **A grader must report the GROUP and let a tag pick the arm.**
+
+**`T756` — Open-source core, gated configuration: the shape to watch in public-sector reference systems.** `primeroIMS/primero` is `canonical+PREPENDED` — AGPL-3.0 body intact, `967` chars prepended — and the prepended text gates the **CPIMS+/GBVIMS+ configuration bundles** behind an email request. **The engine is open; the domain model is distributed on request.** For a studio this is the important distinction, because the configuration is what a ministry is actually buying, and it is not in the grant.
+
+**`T757` — The defect this knowledge-base family is warned about most often is absent from this base.** `gate-tables`, written from scratch with `10` controls: **`0` header-row-as-data defects over `18,024` tables and `94,551` body rows** across `608` curated and `91` archive files. **Measured for the first time at full scale.** The one candidate it raised was its own instrument reading a `field`/`value` table.
+
+**`T758` — A line-bound gate on hard-wrapped prose manufactures defects, and `p772-B` ordered `75` of them rewritten.** This base's prose wraps, so a supersession marker sits on the next line from the date it corrects. Subject-bound with a **paragraph window**: `0` live bare assertions of the superseded EU AI Act date on the curated shelves; the `2` survivors are **Vietnam's genuinely-August-2026 `Decision 33/2026/QĐ-TTg`**. **Carrying out the order literally would have corrupted correct cells. A remediation order inherited from a previous pass must be re-measured before it is executed.**
+
+**`T759` — Four regions, four legal persons, and for the first time one of them is a NATURAL PERSON.** England binds the school; Queensland binds the organisation; Brazil binds any person plus the school head; **the US binds the individual member of staff, and Ohio's duty expressly cannot be discharged by telling a supervisor.** **Consequence: `duty_discharged_by` must be a first-class field whose type varies by jurisdiction — an institution in EMEA/APAC, a named person in the US.** A hand-off workflow that satisfies England leaves an Ohio teacher personally exposed.
+
+**`T760` — Eighth consecutive register in which the duty layer is published by nobody.** `0` permissive safeguarding-specific repositories exist: `4` of `6` resolving addresses carry **no grant after `31` case-aware filename probes**, and the remaining `2` are AGPL. **The only KCSIE-aligned safeguarding case manager in existence carries no licence file.** The pattern across eight registers is now strong enough to state as a standing commercial position: **the statutory-compliance component is always Globant's artefact, never the market's.**
+
+**`T761` — The hard problem in a safeguarding record is custody hand-off, not deletion.** England's retention is **`DoB + 25` years, then review**, while the file must transfer to a new school's DSL **within `5` days** of an in-year move, **separately from the main pupil file**, with **confirmation of receipt**. **The record outlives its custodian by design.** `p772-I` expected a retention schedule shorter than the record's legal life; the measurement is the reverse, and it relocates the engineering problem from a deletion job to a chain-of-custody ledger.
+
+**`T762` — A `403` from a git proxy is a scope statement, not a transport failure.** Every pass since `2026-08-02` recorded the industry-KB push as BLOCKED without a cause. The proxy's own error names the repository and the remedy. **Diagnostic rule: a transport failure does not name your repository back to you.** The push channel is restored.
+
 ## 🆕 `p772` — **Thirteen trends from the sweep pass — `T740`–`T752`. The governing one is `T746`: a gate this base has carried RED for twelve passes is not implementable as specified, and proving that is worth more than carrying it a thirteenth time.**
 
 ## `T746` — 🔴 `gate-dates`'s contract is UNIMPLEMENTABLE on a bare date, and the mechanism is this base's own heading style
