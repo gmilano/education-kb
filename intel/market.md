@@ -269,6 +269,30 @@ credentials-and-skills axis rather than the tutoring axis.
 
 ### North America
 
+#### 🆕 p763 — the federal programme that funds this register is flat at `$28.5M`, has reached every state, and has **`0`** repositories carrying its name
+
+**Register: the education data warehouse and the statutory return** — where learning telemetry lands, who is accountable for it, and the report that is the actual deliverable.
+
+🟢 **The demand side is appropriated and named.** The Statewide Longitudinal Data Systems grant programme is funded at **`$28.5` million** in FY26 with the Workforce Data Quality Initiative at **`$6` million**, both unchanged from the prior year (Data Quality Campaign — **search-sourced; `dataqualitycampaign.org` is outside this session's allowed network domains and could not be primary-verified**). Across eight rounds of SLDS funding, **`50` states, `5` territories and the District of Columbia** have received at least one grant (NCES). IES's special-education SLDS-use competition (**`84.324S`**) took letters of intent by `2026-09-03` and applications by **`2026-10-01`**, with awards to **`$1,200,000`** — a research competition requiring SLDS data, not a warehouse build.
+
+🔴 **And the supply side carries the programme's name zero times.** `statewide longitudinal data system` on the repository-search channel returns **`total_count 0`** (`T604`). The reference implementation is real, permissive and findable only under a different name: [`CEDStandards/CEDS-IDS`](https://github.com/CEDStandards/CEDS-IDS) — the Common Education Data Standards **Integrated Data Store** — `51★`, Apache-2.0 byte-read at `11,357 B` / `c71d239df917` from `master`.
+
+| North America, measured `2026-11-11` | Value |
+|---|---|
+| SLDS programme, FY26 | **`$28.5M`** flat · WDQI `$6M` flat (search-sourced) |
+| States reached, 8 rounds | `50` states + `5` territories + DC |
+| `statewide longitudinal data system` repositories | **`0`** |
+| CEDS estate | `5` repositories, **`5 / 5` Apache-2.0**, all byte-read |
+| Ed-Fi adoption | **more than a quarter of US states**; a third-party list names `14` and is **not** verified against an Ed-Fi source |
+| Ed-Fi OneRoster early adoption | **`9` agencies, `4.5M+` students**; SEA commitments for SY26-27 |
+| Utah SLDS | **`$2.2M`** projected funding loss on its four-year project; system sits in the Utah Data Research Center |
+
+🟢 **The vendor-side event ran as this pass was written.** The Ed-Fi Alliance Summit was held **`2026-11-09` to `2026-11-11`** in Nashville. Its Spring 2026 release carried Data Standard `v6.1`, ODS/API `v7.3.2`, the Ed-Fi OneRoster Service and MetaEd `v4.7`, with a move to .NET 10 ahead of .NET 8 end-of-support in November 2026, and the roadmap flags a **PII flag for AI discovery** in the `6.x` line. 🔴 **No Summit outcome is indexed yet and none is published here** — the event closed the day this pass ran.
+
+🔴 **The architectural constraint comes from the standard's own authors.** Ed-Fi's May 2026 white paper *"The Ed-Fi Data Standard in the Age of AI"* recommends that **AI and analytics systems should not interact directly with the Ed-Fi API** (search-sourced; `docs.ed-fi.org` is outside this session's allowed domains). Every pattern this pass filed reads a warehouse replica instead (`T609`).
+
+🔴 **The region's own refusal, named.** [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) (`70★`) is the most-starred open early-warning model for US schools and its licence byte-reads at `2,069 B` / `11f9627267d7` as a University of Chicago research grant that **"excludes any service or part of selling a service that uses the Program"** (`T606`).
+
 #### 🆕 p762 — the largest budget line in a US district, a bias-audit duty that has been enforceable for three years, and an open-source agent layer built for the applicant
 
 | Datum (read 2026-11-11) | Figure | Source, named | Why it is the engagement |
@@ -1391,6 +1415,22 @@ this is the third consecutive pass to return already-filed facts. Supply remains
 `p724`'s `9` new repositories are North American.**
 
 ### EMEA
+
+#### 🆕 p763 — the statutory return is the buyer here too, it has four dated deadlines, and the EU's own credential standard has essentially no public code
+
+**Register: the education data warehouse and the statutory return.**
+
+🟢 **The UK is the register's best-documented EMEA demand side, and the obligation is statutory.** School data returns are collected under **section 537A of the Education Act 1996** and submitted through **COLLECT**. Dates found for 2026: spring census date **`2026-01-15`** (third Thursday in January) with the registered-independent-school statutory deadline **`2026-02-15`**; summer census **`2026-05-21`**; the autumn collection **opened `2026-10-01`**; and the separate **School Workforce Census** with census date **`2026-11-05`** and return deadline **`2026-12-04`** — the next statutory deadline on this register anywhere in the world. The EHE/CME aggregate collection is mandatory and termly across 2026-27. 🔵 Council bulletins and MIS vendors publish deadlines that differ from DfE's; the authoritative date is in COLLECT.
+
+🟢 **EMEA supplies the register's permissive record-linkage components, and both are government-authored.** [`moj-analytical-services/splink`](https://github.com/moj-analytical-services/splink) — `2,572★`, the most-starred permissive component this pass found on register — MIT byte-read at `1,076 B` / `b985d2c0fca6` from `master`, copyright **Ministry of Justice**, pushed `2026-11-11`. And [`nhsengland/NHSE_probabilistic_linkage`](https://github.com/nhsengland/NHSE_probabilistic_linkage) — `13★`, MIT at `1,068 B` / `bc445c79fdfe`, copyright NHS Digital. 🟢 **A UK public-sector linkage method, permissively licensed, is the procurement argument as much as the code** (`P313`).
+
+🟢 **And EMEA supplies the register's most-starred agent.** [`isakskogstad/Skolverket-MCP`](https://github.com/isakskogstad/Skolverket-MCP) — `13★`, MIT at `1,093 B` / `7935973493aa`, copyright *"Skolverket Syllabus MCP Contributors"*, wrapping the Swedish National Agency for Education. Alongside it [`malkreide/swiss-statistics-mcp`](https://github.com/malkreide/swiss-statistics-mcp) (`2★`, MIT, `1,069 B` / `ac1fc40e61a6`) and [`Hug0x0/mcp-french-school-map`](https://github.com/Hug0x0/mcp-french-school-map) (`0★`, MIT, `1,063 B` / `59557cd648d7`, pushed `2026-11-06`).
+
+🔴 **The EU's own standards layer is a measured near-nil.** `european learning model credential` returns **`total_count 2`**, and the only on-register entry is `0★`, index `NOASSERTION`, pushed `2026-11-06`. The European Learning Model and European Digital Credentials have no public implementation estate worth shelving.
+
+🔴 **The EU AI Act education date is still not settled and this base still does not pick a side.** The `2027-12-02` high-risk application date, said to follow the Digital Omnibus political agreement of `2026-05-07`, is **secondary and blog-sourced**, exactly as `p761` recorded it. Carried as a conflict, not as a fact.
+
+🔵 **Adoption context, vendor-published:** Futuresource reports `67%` of teachers using AI tools and expects AI-enabled devices to be `15%` of institutional PC shipments in 2026; an Epson survey of ~`3,360` respondents across six European countries finds `76%` of students expecting to use AI in their learning. Eurydice published *"Digital education at school in Europe 2026"*.
 
 #### 🆕 p762 — `ACTION p761-F` discharged at national level: one national authority's artefact found, and an explicit nil on any European school-HR software buyer
 
@@ -2724,6 +2764,26 @@ selling urgency against a date the amendment moved**, and that mismatch is the o
 
 ### APAC
 
+#### 🆕 p763 — two national databases with hard annual deadlines, and their entire public client estate is one AGPL repository with `2` stars
+
+**Register: the education data warehouse and the statutory return.**
+
+🟢 **India's UDISE+ is the largest statutory return on this register by learner count.** The Ministry of Education's Department of School Education and Literacy released the **UDISE+ Report 2025-26 on `2026-07-07`**. A letter dated `2026-07-14` sets **`2026-09-30`** as the last date to complete 2026-27 data entry (**secondary-sourced; not confirmed against `udiseplus.gov.in`**). A national UDISE+ conference was held **`2026-02-27` to `2026-02-28`** in Bhubaneswar and was specifically about **data integrity** for infrastructure, enrolment and teacher records — i.e. the register's core problem, named by the buyer. The collection feeds Samagra Shiksha planning and NEP 2020 benchmarking.
+
+🟢 **Indonesia's PDDikti is the higher-education national database**, and it is the only APAC system on this register with any public client code at all.
+
+| APAC supply, byte-read `2026-11-11` | Grant | Payload |
+|---|---|---|
+| [`andikadevs/pddikti`](https://github.com/andikadevs/pddikti) (`2★`, `main`, pushed `2026-11-07`) | **AGPL-3.0** | `34,523 B` / `0d96a4ff68ad` |
+| [`teszerrakt/pddikti-scraper`](https://github.com/teszerrakt/pddikti-scraper) (`1★`, `main`) | 🔴 **no payload at `17` paths and no manifest declaration** — published as an absence, not as a licence state | — |
+| [`hkopenai/hk-education-mcp-server`](https://github.com/hkopenai/hk-education-mcp-server) (`1★`, `main`, pushed `2026-10-02`) | MIT | `1,070 B` / `473af2606a25` |
+
+🔴 **So APAC's two national-database clients are an AGPL-3.0 repository with `2` stars and an unlicensed scraper with `1`.** For a studio that must ship a proprietary deliverable, the AGPL-3.0 client is unusable as a component and the scraper cannot be used at all. **APAC has the register's largest demand and effectively no usable supply.**
+
+🔴 **A region-vocabulary defect in the sources, recorded because this base's `region` field is a closed vocabulary.** The APAC search leg returned the **UAE's `25` generative-AI school prohibitions (February 2026)** and the **UK's January 2026 school AI safety standards** inside an APAC result set. Both are EMEA. Neither is filed here. 🔵 Secondary sources do not respect the five-value vocabulary and a pipeline that trusts their regional framing will mis-bucket findings (`T612`).
+
+🔵 **Adoption context:** Times Higher Education reports patchy uptake across the region with limited connectivity as a barrier and virtual-tutor adoption at `30%` among those surveyed; `34,000` lead teachers are being trained through 2026. The World Bank's Global EdTech Policy Academy on AI ran in Seoul `2026-08-31` to `2026-09-04`. The Ipsos Education Monitor 2026 finds lower support for school AI bans across the Asian markets examined.
+
 #### 🆕 p762 — the region supplies the entire open-source HRIS layer and every grant in it is copyleft; and a declared nil on school-HR demand data
 
 🔵 **This region's finding is on the supply side, which inverts this page's standing expectation and matches `p759`'s reading that APAC is this base's supply region.**
@@ -3970,6 +4030,33 @@ minority everywhere in APAC, but it is *rising* in Japan, Australia and South Ko
 capability; sell into Japan, Australia and Korea on safeguards as well.
 
 ### LATAM
+
+#### 🆕 p763 — a statutory return that allocates money for ~`40` million students, with a `2026-12-11` deadline, and a supply side of `12` repositories whose maximum is `3` stars
+
+**Register: the education data warehouse and the statutory return.**
+
+🟢 **Brazil has the best-documented statutory return on this register anywhere, and it is a funding instrument.** The Censo Escolar da Educação Básica 2026 runs through **Educacenso** under **Portaria Inep nº 217/2026**, and the declared structure must reflect the school as it stood on the reference date **`2026-05-27`**.
+
+| Censo Escolar 2026 — the calendar the buyer actually works to | Date |
+|---|---|
+| Reference date (structure and staffing as declared) | **`2026-05-27`** |
+| Stage 1 (*Matrícula Inicial*) collection closed | **`2026-07-31`** |
+| Declared data opened for checking in Educacenso | `2026-08-31` |
+| Checking period extended to | `2026-09-11` |
+| Deadline for corrections and complements online | `2026-10-23` *(secondary-sourced)* |
+| **Final homologated data sent to the FNDE** | **`2026-12-11`** |
+| Stage 2 (*Situação do Aluno*) | `2027-02-01` to `2027-03-12` |
+| *Indicadores de rendimento* published | `2027-05-14` |
+
+🟢 **The `2026-12-11` transmission to the FNDE is why this register has a budget in LATAM**: the census is what the federal funding allocation is computed from, for roughly `40` million students. The return is annual, dated, and has no retry.
+
+🔴 **And the supply side is a measured nil, with the denominator stated.** `censo escolar inep microdados` returns **`total_count 12`**; the **maximum star count in the entire result set is `3`**; the entries are predominantly undergraduate analyses of published microdata. The only repository naming itself a pipeline, [`kevinleandrogomes/censo-escolar-pipeline-etl`](https://github.com/kevinleandrogomes/censo-escolar-pipeline-etl), has **`0★`** and **no licence payload at `17` paths and no manifest declaration**.
+
+🔴 **And the Spanish-language probe returns nothing at all.** `educacion datos abiertos ministerio escuelas` → **`total_count 0`**. Not a thin result set — zero. The Spanish-speaking half of the region has no discoverable open estate for ministry education data under its own vocabulary (`T613`).
+
+🟢 **Globant's reading: this is the sharpest demand-to-supply gap this pass measured in any region.** A dated, funded, annual statutory return for `40` million students, against twelve repositories with three stars at the top and no licensed tooling. The components that would serve it are all NA- and EMEA-authored and all permissive (`P311`), so the build is a composition, not a research problem.
+
+🔵 **Adoption context:** the Digital Education Council's 2026 LATAM survey reports `92%` of students and `79%` of faculty engaging with AI, from `7,319` faculty across `29` institutions. UNESCO IESALC published a September 2026 working paper mapping university AI use. The figure that **~`30%` of LATAM universities have published AI-use policies** is attributed to a single conference speaker whose name varies between articles and is carried as weak. UNESCO has a cooperation agreement with Chile's **CENIA** including **Latam-GPT**; EdTech Hub and **Fundación Ceibal** announced a partnership in September 2026; the IDB published a 2026 Argentina piece on regulation and financing.
 
 #### 🆕 p762 — the best-measured demand on these shelves for this register: a national education budget that is `91%` payroll, and a retirement wave with a name and a number
 
@@ -5295,6 +5382,29 @@ no code dependency) the right opening move here and makes a code-first pitch the
 first step rather than a formality.
 
 ### Global
+
+#### 🆕 p763 — the measuring layer is permissive, the layer that holds the record is copyleft, and the best-known open LRS has been stale for `18` months
+
+**Register: the education data warehouse and the statutory return.**
+
+🟢 **UNESCO's framing makes this register the global one.** The UIS operational guide states that EMIS play the largest role in generating SDG 4 monitoring data from administrative sources, and national EMIS data reaches UIS through annual statistical surveys consolidated nationally. 🔴 **SDG 4 indicator coverage stands at `60%` across `205` countries** (UIS 2025), attributed partly to gaps in collection, quality and reporting — which is this register's problem statement, stated by the custodian of the indicators.
+
+🔴 **The governing licence structure, byte-read on `47` payloads this pass, and it is p757's law again.** Everything that *defines, measures, moves or validates* the data is permissive. Everything that *holds the student record* is copyleft.
+
+| Layer | Representative, byte-read `2026-11-11` | Grant |
+|---|---|---|
+| Standard / schema / warehouse | [`CEDStandards/CEDS-IDS`](https://github.com/CEDStandards/CEDS-IDS) `51★` · [`CEDStandards/CEDS-Data-Warehouse`](https://github.com/CEDStandards/CEDS-Data-Warehouse) `35★` · [`Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) `47★` | 🟢 **Apache-2.0** `5/5` and `9/9` |
+| Telemetry spec and store | [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) `955★` · [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) `144★` · [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) `335★` | 🟢 **Apache-2.0** |
+| Conformance | [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) `78★` `1,046 B` / `c0fc02a86ae2` | 🟢 **MIT** |
+| Record linkage | [`moj-analytical-services/splink`](https://github.com/moj-analytical-services/splink) `2,572★` | 🟢 **MIT** |
+| **The national record system** | [`OpenEMIS/core`](https://github.com/OpenEMIS/core) `24★`, `15,518 B` / `b6f03c6715ee` | 🔴 **GPL-2.0** |
+| **The best-known open LRS** | [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) `586★`, `35,141 B` / `589ed823e9a8` | 🔴 **GPL-3.0**, last pushed **`2024-05-30`** |
+
+🔴 **Liveness is the hidden risk on this register, and it is measurable.** Of adlnet's top `20` xAPI repositories, **`11` are archived**. [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) (`955★`, the largest repository on register) was last pushed `2025-07-03`. **`adlnet/tla` — the Total Learning Architecture — is archived and Unlicense.** The best-known open LRS is `18` months stale. 🟢 **The live permissive alternatives exist and are named**: `yetanalytics/lrsql` (Apache-2.0, pushed `2026-11-08`) and `adlnet/ADL_LRS` (Apache-2.0) (`T611`).
+
+🟢 **OpenEMIS is the register's government-owned EMIS and it is real**: a March 2026 concept note extends it to early-childhood tracking against SDG 4.2. 🔴 **Its only agent-layer clients are not open source** — see `T607`.
+
+🔵 **Market figures carried and labelled, not re-derived:** AI-in-education at **`$10.6B` (2026) → `$42.48B` (2030)** at a `41.5%` CAGR, against an alternative `$9.58B` base — market-research and vendor material, and the spread is the finding. North America holds roughly `38%` of revenue. `86%` of education organisations report using generative AI (Microsoft 2025, via Faculty Focus). 🔴 **Only `45%` of the most-used tools have published research meeting an ESSA evidence tier** — which is a procurement argument for this register, because the evidence has to come out of the warehouse. The OECD *Digital Education Outlook 2026* holds that AI helps learning only where pedagogy stays in control.
 
 #### 🆕 p762 — a `44`-million-teacher global gap, no permissive HRIS anywhere, and an agent layer pointed at the wrong side of the desk
 
