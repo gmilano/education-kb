@@ -26,6 +26,7 @@ updated: 2026-11-12
 
 | Finding | Where |
 |---|---|
+| 🟢 **The recurring "push blocked" is a per-session ATTACHMENT condition, not an environmental one** — this repository was not in the session's authorised set, so the git proxy declined to inject a credential and the push returned `403`. 🟢 **Attaching it fixed the push immediately and `p793` published normally.** 🔵 **A future pass seeing this `403` should ATTACH, not record "blocked"** — `p791` recorded the block as permanently fixed and it recurred, because the attachment does not persist across sessions | this ledger · README |
 | 🔴 **`2` published existence verdicts corrected: DEAD → ALIVE-BUT-EMPTY**, and a three-state instrument to replace exit-status grading | `T892` · `agents/top.md` |
 | 🔴 **`ls-tree -l` on a blobless clone is a network fetch per blob** — the cheap instrument has an expensive column | `T893` |
 | 🔴 **The sixth way to misread a licence: GPL-3.0 contains the word "affero"** (§13). Byte size + clause count separates GPL-3.0 from AGPL-3.0 exactly, `7` of `7` | `T894` |
