@@ -4,6 +4,29 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p780` — **The week the largest artefact on these shelves turned out to be courseware at `78,508★`, a real multi-agent classroom arrived at `43,337★` under MIT, and the foundational platform of this whole register was found to be citing a DEAD SLUG.**
+
+🔴 **`make hooks` tried FIRST and DENIED — `[Code from External]`. `0` for `11`.** 🟢 Not worked around.
+
+🔵 **Every star count below is from the claim channel (`search/repositories`), every grade from the bytes at a named `branch` · `HEAD`. `api.github.com/repos/*` was not called.**
+
+| New this week | Address | Branch · `HEAD` | Grant, on the bytes | Claim channel | Honest classification |
+|---|---|---|---|---|---|
+| **AI Engineering from Scratch** | [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | `main` · `a509402c0b54` | 🟢 **MIT** `1,070 B` · `d116e214adbc` | MIT · **`78,508★`** · pushed `2026-11-11` | 🔴 **COURSEWARE.** The highest star count ever shelved here, and it is a curriculum — model foundations → LLM systems → agents, with a retrieval-evaluation lab and local graders |
+| **OpenMAIC** | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `main` · `8c29069daf43` | 🟢 **MIT** `1,065 B` · `ba2525637432` | MIT · `43,337★` · pushed `2026-11-11` | 🟢 **PRODUCT, and the week's real find.** Tsinghua MAIC lab: an interactive classroom with an **AI teacher and AI classmates**, generated from a topic or a document |
+| **AI Engineering Hub** | [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | `main` · `042aeb506738` | 🟢 **MIT** `1,066 B` · `93123909818c` | MIT · `41,772★` · pushed `2026-11-01` | 🔵 **PATTERN LIBRARY.** `93`+ worked agent/RAG projects, graded beginner→advanced |
+| **DeepTutor** *(re-read as control)* | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main` · `60fb3bdfddb3` | 🟢 **Apache-2.0** `11,408 B` · `cd2f54e1e506` | Apache-2.0 · `58,362★` · pushed `2026-11-07` | 🟢 **Reproduces `p779` byte-for-byte and sha-for-sha.** `HEAD` moved; the grant did not |
+
+🟢 **All three new MIT grants sit in the `1.0`–`1.2 kB` band with three DISTINCT `sha256₁₂`** — the signature of genuine MIT with differing copyright holders, not a copied template.
+
+🔴 **The week's correction, and it is structural rather than cosmetic.** `openedx/edx-platform` **does not exist**. The claim channel says so positively — `repo:` returns HTTP **`422`**, and `user:openedx edx-platform in:name` returns **`0`** — while `user:openedx` returns the successor, [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) (`AGPL-3.0`, `8,232★`). 🟢 **Same `HEAD` `d3a86602dcf7`, same `35,136 B`, same `sha256₁₂` `e12d78569742`: one repository, renamed.** 🔴 **`306` citations on this base point at the dead slug.** 🔵 **`T810`: `raw.githubusercontent.com` follows the rename silently and answers `200` with the correct bytes — so a base that verifies by bytes alone is STRUCTURALLY BLIND to a rename, and the `422` is the only detector it has.**
+
+🔴 **`RoundTable02/socrates-skill` resolves the same way with a worse outcome:** `repo:` → `422`; `user:RoundTable02` → `9` repositories, **none by that name**; `socrates-skill in:name` → `16` rows, **none in that owner**. 🔴 **Gone, with no successor visible. Recorded as a true absence, not an index gap** — closing the second half of `ACTION p779-E`.
+
+🔴 **Three defects in this pass's own instruments, each caught by control and each reported above its own results:** `grant-read v1` measured bytes through command substitution and would have under-counted **every** grant — **retracted before it produced a verdict**; `gate-refs v2` misread the two trending shelves' date-first headings and reported their newest section as `p773` — **caught by `ACTION p779-G`'s own new check on its first run**; and the licence-history walker read *"timed out"* as *"no events"* and published `ADDS=0` for `openfun/arnold`, which demonstrably carries MIT — **withdrawn, re-run, `1` add, `0` deletions** (`T814`).
+
+🔵 **`L56` is stated explicitly for the first time this week** (`7` stems × `4` extensions × `2` cases), because `ACTION p779-F` ordered the reuse of a list this base had never written down — only its cardinality. 🟢 It earned its keep immediately: `frappe/lms`'s grant exists **only** at lower-case `license.txt`, and half of `DFE-Digital`'s grants are spelled `LICENCE`.
+
 ## 🆕 `2026-11-12` · `p779` — **The week an education agent at `58,353★` entered this base, Canada stopped being a declared gap, and LATAM finally produced code instead of institutions**
 
 🔴 **`make hooks` tried FIRST and DENIED — `0` for `10`.** 🟢 All instruments written from scratch; see [`compose/code/p779/README.md`](../compose/code/p779/README.md).

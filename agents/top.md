@@ -4,6 +4,79 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p780` — **`ACTION p779-E` answered, and neither of its two hypotheses is right: `openedx/edx-platform` does not exist. It was RENAMED, `306` citations on this base point at a dead slug, and `raw.githubusercontent.com` served the correct bytes from the dead address the whole time — so this base's byte-verification method is STRUCTURALLY BLIND to renames. 🔴 `make hooks` tried FIRST and DENIED an ELEVENTH consecutive session.**
+
+🔴 **`make hooks` was the first command of this pass and was DENIED — `[Code from External]`. `0` for `11`.** 🟢 **Not worked around.** No script held in this repository was copied out and run; all five instruments — `grant-read` (and its retracted `v1`), `gate-refs v2`/`v3`, the ref-remediator, the licence-history walker and the claim-channel probe — were written from scratch and are specified in prose in [`compose/code/p780/README.md`](../compose/code/p780/README.md), per `T763`.
+
+**Controls run BEFORE any verdict shipped · `1` row `p779` published reproduced byte-for-byte (`HKUDS/DeepTutor` `11,408 B` · `cd2f54e1e506`, exact) · `L56` stated explicitly for the first time and verified at `56` distinct names · `2` defects in this pass's own instruments caught by control and reported below their results · `1` instrument RETRACTED before it produced a verdict · `1` of this pass's own predictions FAILED and is reported as failed · `api.github.com/repos/*` not called once · every `branch` · `HEAD` from `git ls-remote --symref`, none guessed.**
+
+### 🔴 `ACTION p779-E` — the absence was never a query-form gap or an index gap. The repository was renamed.
+
+🔵 **What `p779` asked for.** `openedx/edx-platform` had been absent from the claim channel for three consecutive passes. `p779-E` named two hypotheses and demanded one be tested properly: if `user:openedx` returns it but `repo:` does not, the gap is in the **query form**; if none returns it, the gap is in the **index**.
+
+🟢 **Both are wrong, and the third answer is cleaner.** All three forms were run:
+
+| Query form | Result | Reading |
+|---|---|---|
+| `q='repo:openedx/edx-platform'` | 🔴 **HTTP `422` Validation Failed** — *"the listed users and repositories cannot be searched either because the resources do not exist…"* | Not `total_count: 0`. A **positive assertion that the slug does not exist** |
+| `q='edx-platform in:name'` | `total_count: 218` — `Edraak/`, `microsoftarchive/`, `Yarila682/`… and **no `openedx/` row** | The name survives across forks; the canonical owner does not carry it |
+| `q='user:openedx'` | `total_count: 175`, first page carries **`openedx/openedx-platform`** | 🟢 The repository is there under a **different name** |
+| `q='user:openedx edx-platform in:name'` | 🔴 **`total_count: 0`** | 🟢 **Decisive. No repository in the `openedx` organisation carries `edx-platform` in its name any more** |
+
+🟢 **And the bytes prove it is the same repository, not a different one:**
+
+| Slug | Branch · `HEAD` | Grant, graded on the bytes | Claim channel |
+|---|---|---|---|
+| 🔴 `openedx/edx-platform` *(dead slug, cited `306×` on this base)* | `master` · `d3a86602dcf7` | `LICENSE` · `35,136 B` · `e12d78569742` | 🔴 **`repo:` returns HTTP `422`** |
+| 🟢 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) *(canonical)* | `master` · `d3a86602dcf7` | 🟢 **`AGPL-3.0`** `LICENSE` · `35,136 B` · `e12d78569742` | `AGPL-3.0` · `8,232★` · pushed `2026-11-11` |
+
+🟢 **Byte-identical, sha-identical, `HEAD`-identical.** `p779`'s grade for `edx-platform` was **correct**; its *address* was stale. 🔵 **`T810`: in the claim channel, a `repo:`-qualified query returning HTTP `422` rather than `total_count: 0` is a positive rename-or-deletion detector — and it is the ONLY channel on this base that detects one.** `raw.githubusercontent.com` silently follows GitHub's rename redirect and returns the correct bytes at the dead address (measured: the old slug's `LICENSE` still answers `200`, `35,136 B`). 🔴 **A base that verifies licences by bytes alone cannot see a rename, by construction.** This is the second rename to hit this base after `NREL`→`NatLabRockies` at `p769`, and the first one its own instruments were structurally unable to notice.
+
+🟢 **`RoundTable02/socrates-skill` resolves the same way and is a different outcome:** `repo:` → `422`; `socrates-skill in:name` → `16` rows, none in `RoundTable02`; `user:RoundTable02` → `9` repositories, **none named `socrates-skill`**. 🔴 **That slug is gone — deleted or renamed with no successor visible on the claim channel.** Recorded as a true absence, not an index gap.
+
+### 🟢 Three new permissive education agents, every grade read on the bytes
+
+🔵 Found on the global sweep for this pass; every row below is PRIMARY under `T809` — `branch` · `HEAD` · bytes · `sha256₁₂`, resolved by `git ls-remote --symref` and read over `L56`.
+
+| Agent | Address | Branch · `HEAD` | Grant, graded on the bytes | Claim channel | What it is |
+|---|---|---|---|---|---|
+| **OpenMAIC** | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `main` · `8c29069daf43` | 🟢 **MIT** `LICENSE` · `1,065 B` · `ba2525637432` | MIT · `43,337★` · pushed `2026-11-11` | Tsinghua MAIC lab. Builds an **interactive classroom with an AI teacher and AI classmates** from a topic or a document. 🟢 The multi-agent classroom, not a single tutor — a composition target, not a competitor |
+| **AI Engineering from Scratch** | [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | `main` · `a509402c0b54` | 🟢 **MIT** `LICENSE` · `1,070 B` · `d116e214adbc` | MIT · **`78,508★`** · pushed `2026-11-11` | 🟢 **The largest-starred artefact this base has ever shelved.** Model foundations → LLM systems → agents, with a retrieval-evaluation lab and local graders. 🔴 **Courseware, not a product** |
+| **AI Engineering Hub** | [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | `main` · `042aeb506738` | 🟢 **MIT** `LICENSE` · `1,066 B` · `93123909818c` | MIT · `41,772★` · pushed `2026-11-01` | `93`+ worked agent/RAG projects graded beginner→advanced. 🔵 A **pattern library**, usable as a studio reference shelf |
+| **DeepTutor** *(control, re-read)* | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main` · `60fb3bdfddb3` | 🟢 **Apache-2.0** `LICENSE` · `11,408 B` · `cd2f54e1e506` | Apache-2.0 · `58,362★` · pushed `2026-11-07` | 🟢 **Reproduces `p779` exactly on bytes and `sha256₁₂`** (`HEAD` advanced, grant unchanged) |
+
+🔵 **All three new grants sit in the MIT `1.0`–`1.2 kB` band and carry three DIFFERENT `sha256₁₂`** — which is what genuine MIT looks like, because the copyright holder line differs. 🔴 **Honestly: `78,508★` and `41,772★` are courseware and a pattern library, not deployable agents.** `OpenMAIC` is the only one of the three that is a running system, and it is the one worth composing against.
+
+### 🔴 Two defects in this pass's own instruments, reported before their results
+
+| Defect | Caught by | Consequence |
+|---|---|---|
+| 🔴 **`grant-read v1` measured bytes through command substitution**, which strips trailing newlines — it would have under-counted **every** grant on this pass by one byte or more | Read before first use | 🟢 **RETRACTED and rewritten to measure the file on disk, before it produced a single verdict.** `v2`'s control then reproduced `DeepTutor` exactly, which `v1` could not have done |
+| 🔴 **`gate-refs v2`'s pass-detector misread the two trending shelves**, whose headings put the DATE before the pass (`` ## 🆕 `2026-11-12` · `p779` ``), and reported their newest section as `p773` | `ACTION p779-G`'s own new check, on its first run | 🟢 **Fixed to find `` `pNNN` `` anywhere in a `## ` heading; all `10` shelves then read correctly.** 🔵 The check `p779-G` ordered found its first defect in the gate that carried it, not in the shelves
+
+### 🔵 What else this pass established
+
+| Result | Where |
+|---|---|
+| 🟢 **`ACTION p779-A`: the `T809` split REVERSES `p779`'s headline.** Cohort `p770`–`p779` PRIMARY adoption is **`67.5%`**, not `47%` — and DERIVED rows score **`0` of `139`, in every single pass without exception**. Remediation then moved the cohort to **`76.9%`** on `47` rows, `0` control rejections | [`intel/open-gaps.md`](../intel/open-gaps.md) |
+| 🟢 **`ACTION p779-B`: the `cfs|fcs` family is REPRODUCED at `0`/`8`, and `p779` missed it because it tested a PREFIX.** The rule is an **infix**: `funding-service-{cfs,fcs}*`. `4` + `4` repositories, all `NONE`, all `0★`. 🔴 **And `p778`'s companion figure is corrected: myesf is `21` MIT + `1` NOASSERTION, not `22`/`22`** | [`repos/trending.md`](../repos/trending.md) |
+| 🟢 **`ACTION p779-C`: `T805` CONFIRMED on a second estate — after an instrument defect was isolated.** `openfun` (France) showed `5` licence deletions on `--all`; **every one is a `FUN MOOC Bot` MkDocs deploy on `origin/gh-pages`**, deleting `LICENSE/index.html` and `latest/LICENSE/index.html` — rendered docs, not grants. On `main`: **`0` deletions** | [`repos/trending.md`](../repos/trending.md) |
+| 🟢 **`ACTION p779-D`: all `6` CECILL prints read, `0` are CECILL-B or CECILL-C, and my own prediction FAILED.** `5` of `6` byte-identical at `22,960 B` · `879c27d15a28`. The `1,182 B` excess over SPDX canonical is **not CRLF** (`0` CR bytes measured) — the prints are the **FRENCH** text | [`verticals/solutions.md`](../verticals/solutions.md) |
+| 🟢 **`ACTION p779-H`: the late grants were a PLATFORM MIGRATION — neither a policy sweep nor an individual noticing.** `6` repositories, `6` separate commits, **`3` different authors**, spread over **`5` weeks**; `3` of `6` say *"initial commit for migration from azure dev ops"* | [`intel/trends.md`](../intel/trends.md) |
+| 🔴 **`ACTION p779-F` cannot be discharged as written, and that is the finding.** `p779` ordered *"reuse `p778`'s `56`-name list"* — **that list is not recorded anywhere in this base**, only its cardinality `56`. 🟢 So `L56` is **specified explicitly for the first time** and verified at exactly `56` distinct names | below |
+
+### 🟢 `L56` — the grant-filename list, stated so that it is reproducible
+
+🔴 **`p778` and `p779` published `21` absence verdicts qualified *"after `56` names"* against a list this base never wrote down.** 🟢 Specified now, by construction rather than by enumeration: **`7` stems × `4` extensions × `2` cases = `56` distinct names.**
+
+- **stems (`7`):** `LICENSE` · `LICENCE` · `COPYING` · `COPYRIGHT` · `NOTICE` · `LICENSE-CODE` · `LICENSE-MIT`
+- **extensions (`4`):** *(none)* · `.md` · `.txt` · `.rst`
+- **cases (`2`):** the stem as written, and the stem lower-cased
+
+🟢 **It covers both false absences `p779` found by control** — `moodle`'s `COPYING.txt` (`COPYING` + `.txt`) and `frappe/education`'s lowercase `license.txt` (`license` + `.txt`) — 🟢 **and it earned its keep immediately this pass:** `frappe/lms`'s grant was found **only** on the lower-case arm (`license.txt`), and `DFE-Digital`'s on the British arm (`LICENCE.md`). 🔴 **No `NO-GRANT` verdict may ship without the count of names tried.**
+
+🔴 **`T811`, recorded against `L56` itself: a filename hit is a CANDIDATE, not a grade.** Two non-grant classes both answered `200` on this pass — `chamilo/chamilo-lms`'s `license.txt` is a **copyright-holder manifest** (BeezNest, NoSoloRed, Université de Grenoble…), and `instructure/canvas-lms`'s `COPYRIGHT` is a **grant notice**. `L56` finds files; only the bytes grade them.
+
 ## 🆕 `p779` — **`ACTION p778-B` closes `T801` at a known blast radius of `2`, `ACTION p778-C` finds `autogen`'s code grant, and the named gate `gate-refs` measures this base's own falsifiability for the first time. 🔴 `make hooks` tried FIRST and DENIED a TENTH consecutive session.**
 
 🔴 **`make hooks` was the first command of this pass and was DENIED — `[Code from External]`. `0` for `10`.** 🟢 **Not worked around.** No script held in this repository was copied out and run; all eight instruments were written from scratch and are specified in prose in [`compose/code/p779/README.md`](../compose/code/p779/README.md), per `T763`.
@@ -361,7 +434,7 @@ Two pairs in the table above make the point better than an argument:
 | Agent / component | Address | Branch · `HEAD` | Grant (graded this pass) | Region | Why it matters |
 |---|---|---|---|---|---|
 | **open-tutor-ai-CE** | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `main` · `196c547291da` | 🟢 **BSD-3-Clause** · `body:canonical` · `1,531 B` | Global | 🟢 **The cleanest permissive tutor on these shelves** — exact canonical BSD-3-Clause, no alteration, no deontic movement. Community edition, so check feature parity before quoting. |
-| **kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔴 **`develop`** · `2d29598fc66f` | 🟢 **MIT** · `body:canonical` · `1,097 B` | Global | 🟢 Offline-first learning platform, the reference choice for low-connectivity deployments. 🔴 **Its default branch is `develop`** — a probe assuming `main`/`master` reads the wrong tree. |
+| **kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔴 **`develop`** · `2d29598fc66f` at `develop` · `2d29598fc66f` | 🟢 **MIT** · `body:canonical` · `1,097 B` | Global | 🟢 Offline-first learning platform, the reference choice for low-connectivity deployments. 🔴 **Its default branch is `develop`** — a probe assuming `main`/`master` reads the wrong tree. |
 | **OpenMAIC** | [`thu-maic/OpenMAIC`](https://github.com/thu-maic/OpenMAIC) | `main` · `8c29069daf43` | 🟢 **MIT** · `body:canonical` · `1,065 B` | APAC | 🟢 Tsinghua MAIC. Exact MIT. The shelves cite it as `thu-maic/openmaic`; the owner/repo is case-different (`T777`). |
 | **canvas-mcp** | [`mdweaver/canvas-mcp`](https://github.com/mdweaver/canvas-mcp) | `main` · `5b59af6e3081` | 🟢 **MIT** · `body:canonical` · `1,065 B` | North America | 🟢 MCP server over Canvas LMS — the integration seam for any agent that must read a real gradebook. |
 | **relate** | [`inducer/relate`](https://github.com/inducer/relate) | `main` · `e201e11b860c` | 🟢 **MIT** · `body:near-canonical` · `d=49` · **deontic clean** · `1,145 B` | Global | 🟢 Course/assessment platform. The `49`-character delta is the MIT/X variant wording; the guard confirms no operator moved. |
@@ -416,10 +489,10 @@ Two pairs in the table above make the point better than an argument:
 | **ataru** | [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | `master` · `8c5839b29f31` | 🟡 **EUPL-1.2** — resolved on the **notice-prose** rung, `296 B` | **EMEA** (Finland) | 🟢 **The most important row on this shelf: a NATIONAL education application system, published by the Finnish National Agency for Education, `3,516` refs.** 🔴 **And it is COPYLEFT, not permissive** — EUPL-1.2, so it is a reference architecture, not a base to ship closed. |
 | **koski** | [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) | `master` · `d2ea28740d7d` | 🟡 **EUPL-1.1** (notice prose), `654 B` | **EMEA** (Finland) | 🔴 **The sister system is on a DIFFERENT EUPL VERSION from `ataru` — 1.1 against 1.2 — inside the same agency** (`T774`). A studio integrating both inherits two copyleft regimes. |
 | **sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` · `af576e8b4d32` | 🟡 **ECL-2.0** · `OPERATIVE-TEXT-ALTERED` · `delta=98` · `11,120 B` | Global | 🟢 **ECL-2.0 is the education sector's OWN licence: Apache-2.0 with the patent grant NARROWED to education communities.** `15,648` refs. This base did not hold the text until this pass (`T766`). |
-| **rosariosis** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **`mobile`** · `e4cd20a48bf1` | 🟡 **GPL-2.0** (notice prose), `15,214 B` | Global | 🔴 **Its default branch is `mobile`.** A probe that assumed `main`/`master` would have read the wrong tree or reported no grant. SIS with an admissions module; copyleft. |
-| **openeducat_erp** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **`19.0`** · `46a5d7d40082` | 🟡 **LGPL-3.0** (as held) | Global | 🔴 **Default branch is an Odoo VERSION (`19.0`), not a branch name.** Education ERP with admissions + CRM intake. `1,001` refs. |
+| **rosariosis** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **`mobile`** · `e4cd20a48bf1` at `mobile` · `e4cd20a48bf1` | 🟡 **GPL-2.0** (notice prose), `15,214 B` | Global | 🔴 **Its default branch is `mobile`.** A probe that assumed `main`/`master` would have read the wrong tree or reported no grant. SIS with an admissions module; copyleft. |
+| **openeducat_erp** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **`19.0`** · `46a5d7d40082` at `19.0` · `46a5d7d40082` | 🟡 **LGPL-3.0** (as held) | Global | 🔴 **Default branch is an Odoo VERSION (`19.0`), not a branch name.** Education ERP with admissions + CRM intake. `1,001` refs. |
 | **education** | [`frappe/education`](https://github.com/frappe/education) | `develop` · `61408d3da518` | 🔴 **`19`-BYTE GRANT** — the entire file is `License: GNU GPL V3` | Global | 🔴 **`T773`: the only thing this repository says about its own terms is a 19-byte string that is NOT a valid SPDX identifier.** `GNU GPL V3` does not distinguish `GPL-3.0-only` from `-or-later`, so the axis is undecidable from the grant. |
-| **core** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 **`v31.0.00`** · `329ca2f07b49` | 🟡 **GPL-3.0 group** · `OPERATIVE-TEXT-ALTERED` · `delta=86` | Global | 🔴 **Default branch is a VERSION TAG name.** School management incl. admissions; copyleft and body-altered. |
+| **core** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 **`v31.0.00`** · `329ca2f07b49` at `v31.0.00` · `329ca2f07b49` | 🟡 **GPL-3.0 group** · `OPERATIVE-TEXT-ALTERED` · `delta=86` | Global | 🔴 **Default branch is a VERSION TAG name.** School management incl. admissions; copyleft and body-altered. |
 | **openSIS-Classic** | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `master` · `8348cd069aa2` | 🔴 **NO-GRANT-AT-ROOT** after **`33`** case-aware filenames | Global | 🔴 Unchanged from `p773`. The grant is not at the repository root under any of 33 names. |
 | **openemis-mcp** | [`tixuz/openemis-mcp`](https://github.com/tixuz/openemis-mcp) | `main` · `f88a80fc1d5b` | 🔴 **BSL-1.1 — NOT OPEN SOURCE**, `647 B` | APAC | 🔴 **Source-available only: "non-production evaluation and internal testing only", converting to MIT on `2029-01-01`.** Already correctly flagged on these shelves; re-derived mechanically this pass (`T765`). |
 | **education-agent-skills** | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `main` · `135d6275e7db` | 🟡 **CC-BY-SA-4.0**, human-readable notice ONLY, `1,220 B` | Global | 🔴 **A CONTENT licence on a software-shaped artefact, and it is ShareAlike.** `165` teacher/leader agent skills; a derived client skill set inherits CC-BY-SA. The repository ships the summary, not the legal code, and says so. |

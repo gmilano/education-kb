@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p780` — **`ACTION p779-B` reproduces `0`/`8` and names the reason `p779` could not: it tested a PREFIX where the family is an INFIX. `T805` confirmed on a second estate. And one `AGPL-3.0` licence measured at three lengths spanning `1,243 B`.**
+
+🔴 **`make hooks` tried FIRST and DENIED — `[Code from External]`. `0` for `11`.**
+
+### 🟢 `ACTION p779-B` — the `cfs|fcs` family, reproduced, with the matching rule stated
+
+🔵 **`p779` could not reproduce `p778`'s `0`/`8` and said so, correctly: "no repository name in the `829`-row census starts with `cfs-` or `fcs-`."** 🟢 **True — and that is why the test failed. The family is not a PREFIX of the repository name; it is an INFIX after the programme prefix.**
+
+🟢 **The matching rule, stated explicitly as instructed:** `^funding-service-(cfs|fcs)` — a prefix of the *name*, but of the **programme-qualified** name, not of the bare slug.
+
+| Family | Rule | Repositories | Grants |
+|---|---|---|---|
+| 🔴 `funding-service-{cfs,fcs}*` | `^funding-service-(cfs\|fcs)` | **`8`** — `cfs-common`, `cfs-frontend`, `cfs-fundingDataZone-schema`, `cfs-releaseManagementSchema`, `fcs`, `fcs-devops`, `fcs-crm-data-export`, `fcs-tools` | 🔴 **`0`/`8`. All `NONE`. All `0★`** |
+| 🟢 `funding-service-myesf-*` | `^funding-service-myesf` | **`22`** | 🟢 **`21` MIT + `1` NOASSERTION** |
+| *(whole programme)* | `^funding-service` | `32` | `22` MIT · `9` NONE · `1` NOASSERTION |
+
+🟢 **`0`/`8` is REPRODUCED, so `T806` keeps its load-bearing evidence.** 🔴 **And `p778`'s companion figure is CORRECTED: the myesf family is `21` MIT + `1` NOASSERTION, not `22`/`22`.** The NOASSERTION row (`funding-service-myesf-contracts-feed-processor-func`) carries *a* licence file but not one the claim channel can grade — 🟢 which is a different fact from carrying MIT, and the distinction is exactly what `p778`'s own `PageLM` catch was about.
+
+🟢 **Census control passed before any of the above was asserted:** the `829`-row estate file reproduces `p778` exactly — `515` MIT · `302` NONE · `9` NOASSERTION · `1` each Apache-2.0 / GPL-3.0 / 0BSD.
+
+### 🟢 `ACTION p779-C` — a second estate, and `T805` survives it
+
+🔵 **Estate censused to `total_count`:** [`openfun`](https://github.com/openfun) (France Université Numérique), **`100`/`100`** — `52` MIT · `21` NONE · `13` AGPL-3.0 · `7` NOASSERTION · `7` CC-BY-SA-4.0. 🟢 **`79%` granted, against `DFE-Digital`'s `63%` over `829`.**
+
+🟢 **`8` repositories walked, `2,343` commits, spanning granted and ungranted: `0` licence deletions on any real ref.**
+
+🔴 **`openfun/ralph` reported `5` deletions and every one is a FALSE POSITIVE** — `origin/gh-pages`, author `FUN MOOC Bot`, messages *"Deployed … with MkDocs 1.6.1 and mike 2.1.3"*, paths `LICENSE/index.html` · `dev/LICENSE/index.html` · `latest/LICENSE/index.html` · `master/LICENSE/index.html`. 🟢 **Rendered documentation, not grants. On `main`: `2` adds, `0` deletions.**
+
+🔵 **`T813`: a licence-history test run with `--all` admits generated publication refs, where a docs bot both adds and deletes licence files as build output.** 🟢 **`p779`'s `40,486`-commit DfE result is STRENGTHENED, not weakened** — a false-positive-prone instrument that returned zero is a stronger null. 🔴 But any estate with a `gh-pages` deploy would have produced a spurious revocation.
+
+🟢 **`T805` restated on the measurement rather than defended:** its deletion half is **confirmed on a second independent estate**; its *"exactly one additive event"* half is **refuted** (`ralph` has two adds on `main`). **A grant accretes by additive events only and is never deleted; the count is simply never negative.**
+
+### 🟢 One licence, three lengths, `1,243 B` apart — `T808` at its sharpest
+
+| Repository | Branch · `HEAD` | `AGPL-3.0` print | Closing line |
+|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | `develop` · `7f7c78b5c436` | `license.txt` · **`33,893 B`** · `db1a87ba81e8` | canonical |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` · `1c9f0bb8013e` | `LICENSE` · **`34,520 B`** · `57c8ff33c9c0` | 🟢 identical to `frappe/lms` |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `master` · `d3a86602dcf7` | `LICENSE` · **`35,136 B`** · `e12d78569742` | 🔵 differs — ends inside the service-provision clause |
+
+🟢 **All three carry the verbatim FSF header (*"Version 3, 19 November 2007"*). None is altered in its grant.** 🔴 **Any rule grading `AGPL-3.0` by length mis-grades two of these three.**
+
+🔴 **And `frappe/lms`'s grant is reachable ONLY at lower-case `license.txt`.** An upper-case-only probe publishes `NO-GRANT-AT-ROOT` against an `AGPL-3.0` repository — the same false-absence class `p779` hit on `frappe/education`, same organisation, one pass later.
+
 ## 🆕 `2026-11-12` · `p779` — **`T800` tested on two more estates and it SPLITS: one estate confirms it, one refutes it, and the restatement is sharper than the original. 🟢 And the FSM grant question is answered — a missing licence in this estate is a NON-EVENT.**
 
 🔴 **`make hooks` tried FIRST and DENIED — `0` for `10`.** 🟢 All instruments written from scratch; see [`compose/code/p779/README.md`](../compose/code/p779/README.md).

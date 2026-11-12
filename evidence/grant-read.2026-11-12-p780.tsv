@@ -1,0 +1,12 @@
+# L56: 56 generated, 56 distinct
+slug	branch	head12	name	bytes	sha256_12
+openedx/openedx-platform	master	d3a86602dcf7	LICENSE	35136	e12d78569742
+THU-MAIC/OpenMAIC	main	8c29069daf43	LICENSE	1065	ba2525637432
+patchy631/ai-engineering-hub	main	042aeb506738	LICENSE	1066	93123909818c
+rohitg00/ai-engineering-from-scratch	main	a509402c0b54	LICENSE	1070	d116e214adbc
+openeducat/openeducat_erp	19.0	46a5d7d40082	LICENSE	8241	528f84036800
+frappe/lms	develop	7f7c78b5c436	license.txt	33893	db1a87ba81e8
+chamilo/chamilo-lms	master	03def9186838	LICENSE	35147	8ceb4b9ee5ad
+chamilo/chamilo-lms	master	03def9186838	license.txt	1614	0aaf39205490
+instructure/canvas-lms	master	1c9f0bb8013e	COPYRIGHT	621	4a01fef2139c
+instructure/canvas-lms	master	1c9f0bb8013e	LICENSE	34520	57c8ff33c9c0

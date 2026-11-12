@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p780` — **Three recipes, each built only from grants this pass read on the bytes, and each wired around the constraint this pass measured: there is no permissive LMS, so the platform is never forked.**
+
+🔴 **`make hooks` tried FIRST and DENIED — `[Code from External]`. `0` for `11`.**
+
+🔵 **The constraint every recipe below obeys.** Of `6` production-scale education platforms read on their bytes this pass, **`0` are permissive**: `moodle` GPL-3.0 (`35,147 B` · `8ceb4b9ee5ad`), `chamilo` GPL-3.0 (same `sha256₁₂`), `openedx/openedx-platform` AGPL-3.0 (`35,136 B` · `e12d78569742`), `canvas-lms` **AGPL-3.0-only** (`34,520 B` · `57c8ff33c9c0`), `frappe/lms` AGPL-3.0 (`33,893 B` · `db1a87ba81e8`), `openeducat_erp` LGPL-3.0 (`8,241 B` · `528f84036800`). 🔴 **So no recipe forks a platform.** The permissive layer is the agent; the copyleft platform is reached across a process, API or plugin boundary, which keeps the agent's own licence unaffected.
+
+### `P62` — Multi-agent classroom over an existing LMS *(EMEA / LATAM, literacy-duty led)*
+
+🟢 **Wiring.** [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (**MIT** `1,065 B` · `ba2525637432`, `main` · `8c29069daf43`, `43,337★`) supplies the AI-teacher / AI-classmate ensemble and generates a classroom from a document. Mount it **beside** the institution's LMS, not inside it:
+
+1. Content in from **`moodle`** (GPL-3.0) over its web-services API, or from **`openedx/openedx-platform`** (AGPL-3.0) over its REST APIs — 🔴 **never as a plugin compiled into the platform, and never a fork.**
+2. `OpenMAIC` runs as its own service; its MIT grant is unaffected because the boundary is a network call.
+3. Tutoring depth from [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (**Apache-2.0** `11,408 B` · `cd2f54e1e506`, `58,362★`) — mastery gates and layered memory — composed as a second service, not merged.
+4. 🟢 **Transparency, which is in force in EMEA and was NOT delayed by the Digital Omnibus: the agent must identify itself as AI in every student-facing turn.** Make it a property of the response envelope, not a UI string.
+5. 🔴 **Hard stop: no emotion recognition.** Prohibited in EU schools (reported in force since February `2025`) and not covered by the Annex III postponement.
+
+🔵 **Why it sells now:** Article 4's literacy duty was softened to *"taking measures"* (reported `27 July 2026`), and `AILit` (Commission + OECD, `17 June 2026`) gives the curriculum frame. 🟢 **In LATAM the same build is sold against the measured governance deficit instead** — Brazil, `53%` of administrators using AI against `22%` with guidelines.
+
+### `P63` — Teacher-review-and-audit-trail wrapper *(North America, statute-led)*
+
+🔵 **Oklahoma `S.B. 1734` is effectively a product specification**: age-appropriate tools, **teacher review of AI output**, and **parental opt-out**. Maryland `SB 720` mandates district policy. Build the wrapper, not the model.
+
+🟢 **Wiring.** Put a review-and-audit service in front of any tutoring agent:
+
+1. **Agent layer:** `DeepTutor` (Apache-2.0) or `OpenMAIC` (MIT) — both permissive, both composable.
+2. **Review gate:** every generated artefact is held pending teacher disposition; the disposition, the reviewer and the timestamp are the audit record. 🟢 This is the statutory requirement, not a feature.
+3. **Opt-out:** parental consent is a per-student attribute read **before** inference, not a filter applied after.
+4. **Platform integration:** `canvas-lms` over LTI / REST. 🔴 **Read its `COPYRIGHT` notice (`621 B` · `4a01fef2139c`) before any code-level integration: *"version 3 of the License"* with no *"or any later version"* — it is `AGPL-3.0-**only**`,** and the claim channel's flat `AGPL-3.0` hides that. Stay on the API boundary.
+5. **Reference material:** [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) (**MIT** `1,066 B` · `93123909818c`, `41,772★`) for worked agent/RAG patterns. 🔴 It is a pattern library, not a runtime — vendor the patterns, do not depend on the repository.
+
+🔵 **Scoping honesty to carry into the pitch:** `34`+ states have guidance but only `4` mandate district policy, and there are **`0` binding federal curriculum standards**. 🟢 **Sell the wrapper as audit-readiness, not as certified compliance.**
+
+### `P64` — Permissive student-record and entitlement service on national infrastructure *(EMEA-France first, then public-sector generally)*
+
+🟢 **Wiring, and every component's grant was read on the bytes.**
+
+1. **Start from granted national code.** `openfun` (France Université Numérique) — `100` repositories, **`79%` granted**, `52` MIT — and `EsupPortail` — `132` repositories, `53` Apache-2.0. 🟢 These are the two best-granted public education estates on this base.
+2. 🔴 **Handle `CECILL-2.1` correctly, because it will appear:** `6` EsupPortail repositories carry it at `22,960 B` · `879c27d15a28`. **It is the FRENCH print, `1,182 B` longer than SPDX's English canonical — that excess is the language, not an alteration** (`T812`). 🔴 **A byte-band licence check will flag it as bespoke and be wrong.** `0` of the `6` are `CECILL-B` or `CECILL-C`, verified on the tokens.
+3. **Entitlement determination as the reference pattern:** [`bcgov/SIMS`](https://github.com/bcgov/SIMS) (Apache-2.0) is a money entitlement determined about students, published permissively. 🟢 The only permissive production precedent of this shape on this base.
+4. **SIS/ERP layer:** [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) (`19.0` · `46a5d7d40082`) is the one platform covering LMS **and** SIS. 🟡 Grade it **`LGPL-3.0`** — weak copyleft, linkable, usable. 🔴 **But do not rely on its licence file for the GPL text: it states the GPL is "included at the bottom" and, at `8,241 B`, it is not.** Read GPL-3.0 from its own canonical.
+5. 🟢 **Expect to supply the licence yourself.** In the UK DfE estate the grant arrives as a by-product of platform migration (`T815`) — six sibling services, three different committers, two different spellings, zero remediation sweeps ever. 🟢 **So put `LICENCE`/`LICENSE` + `README` + config example into the migration scaffold as one checklist item, and address it to the delivery team, not to legal.**
+
+🔵 **Probe note carried into all three recipes:** every absence verdict in this register is qualified **after `L56`** — `7` stems × `4` extensions × `2` cases, specified in [`agents/top.md`](../agents/top.md). 🔴 A probe that tries only upper-case `LICENSE` will report `NO-GRANT` against `frappe/lms` and against half of `DFE-Digital`, and be wrong both times.
+
 ## 🆕 `p779` — **Five recipes, every component graded on its own bytes at a named branch and `HEAD` this pass**
 
 🔴 **`make hooks` tried FIRST and DENIED — `0` for `10`.** 🟢 Not worked around.
@@ -185,7 +229,7 @@ updated: 2026-11-12
 | Component | Measurement | Why excluded |
 |---|---|---|
 | [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `LICENSE.md` `8,563 B` · `c834209c5f33` — **"PageLM Community License"**, *"personal, educational, or non-commercial research purposes"* | 🔴 **NOT open source.** `2,065★`, education-shaped, and a **commercial-use bar** — i.e. it bars exactly a Globant client engagement. |
-| [`microsoft/autogen`](https://github.com/microsoft/autogen) | root `LICENSE` `18,650 B` · `7e7170e3cebf` — **`CC-BY-4.0`** (`Creative Commons` ×`18`, `"MIT License"` ×`0`) | 🟡 **Do not cite the root grant as MIT.** At `61,786★` the root licence is a **content** licence. Verify the specific subpackage's own grant before depending on it. |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | root `LICENSE` `18,650 B` · `7e7170e3cebf` at `main` · `d07c667a3239` — **`CC-BY-4.0`** (`Creative Commons` ×`18`, `"MIT License"` ×`0`) | 🟡 **Do not cite the root grant as MIT.** At `61,786★` the root licence is a **content** licence. Verify the specific subpackage's own grant before depending on it. |
 | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `LICENSE` `8,241 B` · `528f84036800`, `NOASSERTION` | 🔴 **Defective grant** — promises the GPL text *"is included at the bottom as well"* and omits it. Three passes unchanged. |
 | [`frappe/education`](https://github.com/frappe/education) | `license.txt` **`19 B`** · `1fcecf395312` | 🔴 **A pointer is not a grant.** The whole file is `License: GNU GPL V3`. |
 | [`learnosity/learnosity-qti`](https://github.com/learnosity/learnosity-qti) | `develop` **GPL-2.0** `18,264 B` · `e3c23a194748` vs `master` **MIT** `1,067 B` · `705d9bb4b1df` | 🟡 **Usable only with the ref pinned.** A default clone yields copyleft (`T804`). If the MIT terms are wanted, pin `master` **in writing**. |
@@ -243,11 +287,11 @@ app/models/journeys/eligibility_checker.rb                 # orchestration acros
 
 | Estate | 🔴 Copyleft core | 🟢 Permissive seam to build in |
 |---|---|---|
-| Moodle (`7,604★`) | `moodle/moodle` **GPL-3.0** `35,147 B` · `8ceb4b9ee5ad` | [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) **Apache-2.0** `11,358 B` · `cfc7749b96f6` + Moodle web services |
-| Frappe / ERPNext (`41,202★`) | `frappe/erpnext` **GPL-3.0** `35,149 B` · `3972dc9744f6`; `frappe/education` a **`19`-byte pointer** to GPL v3 | [`frappe/frappe`](https://github.com/frappe/frappe) **MIT** `1,118 B` · `bc6001a54ffc` — build apps on the framework |
+| Moodle (`7,604★`) | `moodle/moodle` **GPL-3.0** `35,147 B` · `8ceb4b9ee5ad` at `main` · `02b713f13acc` | [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) **Apache-2.0** `11,358 B` · `cfc7749b96f6` + Moodle web services |
+| Frappe / ERPNext (`41,202★`) | `frappe/erpnext` **GPL-3.0** `35,149 B` · `3972dc9744f6` at `develop` · `0c68cdeff2e6`; `frappe/education` a **`19`-byte pointer** to GPL v3 | [`frappe/frappe`](https://github.com/frappe/frappe) **MIT** `1,118 B` · `bc6001a54ffc` — build apps on the framework |
 | Open edX | `openedx/edx-platform` **AGPL-3.0** `35,136 B` · `e12d78569742` | Integrate over APIs and LTI; **never host a modified fork** |
-| Learning records | `LearningLocker/learninglocker` **GPL-3.0**, 🔴 unmaintained since `2024-05-30` | [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) **Apache-2.0** `11,357 B` · `c71d239df917` |
-| Ministry-scale data | — | [`dhis2/dhis2-core`](https://github.com/dhis2/dhis2-core) **BSD-3-Clause** `1,517 B` · `4fc00af93f1b` |
+| Learning records | `LearningLocker/learninglocker` **GPL-3.0**, 🔴 unmaintained since `2024-05-30` | [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) **Apache-2.0** `11,357 B` · `c71d239df917` at `main` · `c2327d7c1466` |
+| Ministry-scale data | — | [`dhis2/dhis2-core`](https://github.com/dhis2/dhis2-core) **BSD-3-Clause** `1,517 B` · `4fc00af93f1b` at `master` · `9dfe53b779d7` |
 
 **Wiring.** Agent logic and any client-specific IP live in the permissive component. The copyleft core is reached over its public API only. 🔴 **Two traps this base has measured:** `francoisjacquet/rosariosis` defaults to **`mobile`**, so a clone assuming `master` silently takes the wrong tree (`T728`); and `openeducat/openeducat_erp`'s grant **promises the appended GPL text and omits it**, so flag it before any licence review rather than after.
 

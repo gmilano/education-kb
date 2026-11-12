@@ -4,6 +4,59 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p780` — **`ACTION p779-H` answered, and the answer is neither of the two options it offered: the late grants came in with a PLATFORM MIGRATION. And the licence filename splits by INDIVIDUAL COMMITTER, which is a finer unit than `T806` allows.**
+
+🔴 **`make hooks` tried FIRST and DENIED — `[Code from External]`. `0` for `11`.**
+
+### 🟢 `ACTION p779-H` — who added the late grants, and was it a sweep?
+
+🔵 **The question `p779` set, and why it mattered.** Every granted repository measured so far received its licence at the first commit or at one later additive event, with nothing ever deleted. `p779-H` named the discriminator: **a batch across sibling repositories means someone ran a remediation sweep — a POLICY event, the first this base would have found; a lone commit means an individual noticed.** The answer decides whether a public-sector client's licence ask is *a precedent* or *a first*.
+
+🟢 **Six repositories in the `funding-service-myesf-*` family, licence-add commit read in each:**
+
+| Repository | Commits | Add commit | Date | Author | Message | Filename |
+|---|---|---|---|---|---|---|
+| `funding-service-myesf-admin-api` | `90` | `9878bed` | `2026-06-17` | **Graeme Malone** | *"add LICENCE.md, update README.md and appsettings.example.json to be more informative"* | `LICENCE.md` |
+| `funding-service-myesf-docex-data-api` | `13` | `a22f327` | `2026-06-23` | **Graeme Malone** | *"initial commit for migration from azure dev ops"* | `LICENCE.md` |
+| `funding-service-myesf-vyf-data-api` | `18` | `bdd3e5f` | `2026-06-29` | **Krina DESAI** | *"Updated - appsettings, Readme, Licence files."* | `LICENCE.md` |
+| `funding-service-myesf-shared-audit-api` | `9` | `6512270` | `2026-06-29` | **Suresh** | *"initial commit for migration from azure dev ops"* | **`LICENSE`** |
+| `funding-service-myesf-allocation-statements-api` | `7` | `b0e9e87` | `2026-07-13` | **Suresh** | *"Added Readme, License and appsettings.example files"* | **`LICENSE`** |
+| `funding-service-myesf-vyf-ui` | `11` | `221de07` | `2026-07-22` | **Graeme Malone** | *"initial commit for migration from azure dev ops"* | `LICENCE.md` |
+
+🟢 **`0` deletions in all six** — `T805`'s deletion half confirmed a third time.
+
+🔴 **It was NOT a batch sweep.** Six separate commits, **three different authors**, spread across **five weeks** (`17 June` – `22 July 2026`). No remediation sweep exists anywhere in this estate.
+
+🔴 **And it was NOT an individual noticing, either.** 🟢 **Three of the six say *"initial commit for migration from azure dev ops"* — the grant arrived WITH THE REPOSITORY, as part of a platform migration from Azure DevOps to GitHub.** The other three are explicit housekeeping commits, and two of those name the same trio of files: **`LICENCE`/`LICENSE` + `README` + `appsettings.example.json`.**
+
+🔵 **`T815`: in a public-sector estate, a licence grant is a by-product of PLATFORM MIGRATION, not a legal decision and not an individual's initiative.** It appears because a team moving a repository to a public host fills in a scaffold whose checklist includes a licence file. 🟢 **The studio consequence, and it answers `p779-H`'s question directly: this client has NEVER performed licence remediation. There is no precedent. The ask is a first — and it should be addressed to whoever owns the migration scaffold, not to legal.**
+
+### 🔵 `T806` must be extended: the unit can be the INDIVIDUAL, not the team
+
+🟢 **The filename splits perfectly by committer and not by repository, subject, or date:**
+
+| Committer | Filename shipped | Repositories |
+|---|---|---|
+| **Graeme Malone** | `LICENCE.md` (British) | `3` of `3` |
+| **Krina DESAI** | `LICENCE.md` (British) | `1` of `1` |
+| **Suresh** | **`LICENSE`** (American) | `2` of `2` |
+
+🔵 **`T806` said the licence is set by "the smallest unit that HAS a publishing policy — the organisation in some estates, the delivery team in others." Here it is finer still: the individual committer.** 🟢 Within one programme, one family, one five-week window, the *spelling and extension* of the grant is a property of the person who ran the migration. 🔴 **Which is exactly why an `8`-name probe produced false absences across this estate at `p779` and `L56` does not: half of `DFE-Digital`'s grants are spelled the British way.**
+
+### 🟢 What the regional sweep says is actually changing this cycle
+
+| Trend | Evidence, and where it is weak |
+|---|---|
+| 🟢 **EMEA's high-risk clock was pushed out by `16` months, and that is the single biggest planning fact in the region** | Annex III duties, education among them, move from `2 August 2026` to **`2 December 2027`** (Digital Omnibus, Parliament `16 June 2026`). 🔴 **Not second-sourced to the Official Journal — `eur-lex.europa.eu` is outside the allowlist** |
+| 🟢 **The EMEA duty that did NOT move is the one worth building to** | **Emotion recognition in schools stays prohibited** (reported in force since February `2025`), and a student-support chatbot must **identify itself as AI**. 🔵 Neither is delayed by the Omnibus |
+| 🟢 **The AI-literacy duty was softened from *ensure* to *take measures*** | Article 4 as rewritten, reported effective `27 July 2026`. 🔵 **A weaker duty is still the cheapest sellable compliance deliverable in EMEA**, and `AILit` (Commission + OECD, `17 June 2026`) is the framework to build it against |
+| 🟢 **LATAM teachers are AHEAD of the OECD on adoption and far behind on governance** | `56%` Brazil / `55%` Chile vs OECD `36%` (TALIS); **<`10%` of regional institutions have formal guidelines** (UNESCO); Brazil `53%` of administrators use AI, **`22%` have guidelines** |
+| 🟢 **Vietnam is the APAC jurisdiction that named education in a risk instrument** | High-risk decision of **`2 July 2026`**, education among six sectors, naming automated assessment and behavioural systems. 🟢 The region's clearest compliance-led entry |
+| 🔴 **North America's binding layer is far thinner than its guidance layer, and this constrains what can be sold as "compliance"** | `34`+ states guidance vs **`4`** mandating district policy; **`0` binding federal curriculum standards** as of May `2026`. 🔴 Two sources give `34`+ and `28`+ and neither is primary |
+| 🔵 **The agentic slice is small and the totals are irreconcilable** | Agentic education **`$2.37B`** (`2026`) inside a total variously sized **`$6.4B`–`$11.4B`**. 🔴 **State the spread; do not average four incompatible definitions** |
+| 🔴 **The trending-repo signal this cycle is courseware, not product** | The two largest new artefacts found are **`78,508★` courseware** and a **`41,772★` pattern library**. 🟢 Only `THU-MAIC/OpenMAIC` (`43,337★`, MIT) is a running multi-agent classroom |
+| 🔴 **A silent-failure class this base had never recorded** | `openedx/edx-platform` was renamed; **`raw.githubusercontent.com` kept serving the correct bytes from the dead slug**, so every byte-level check passed for three passes while `306` citations pointed nowhere (`T810`) |
+
 ## 🆕 `p779` — **Eight trends, each with the measurement behind it, one standing trend SUPERSEDED by measurement, and four new theories recorded**
 
 🔴 **`make hooks` tried FIRST and DENIED — `0` for `10`.** 🟢 Not worked around.

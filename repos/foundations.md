@@ -4,6 +4,59 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p780` — **The canonical Open edX slug is corrected on this shelf, and three authentic `AGPL-3.0` prints measured in one pass span `1,243 B` — the sharpest demonstration of `T808` yet.**
+
+🔴 **`make hooks` tried FIRST and DENIED — `[Code from External]`. `0` for `11`.** 🟢 Not worked around; all instruments written from scratch (`compose/code/p780/README.md`).
+
+### 🔴 Address correction — the foundational LMS of this entire base was cited at a dead slug
+
+| Was | Is | Evidence |
+|---|---|---|
+| 🔴 `openedx/edx-platform` | 🟢 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | Same `HEAD` (`d3a86602dcf7`), same bytes (`35,136 B`), same `sha256₁₂` (`e12d78569742`). 🔴 `repo:openedx/edx-platform` returns HTTP **`422`**; `user:openedx edx-platform in:name` returns **`0`** |
+
+🔴 **`306` citations of the dead slug remain across `10` shelves** (`repos/trending.md` `134`, `agents/trending.md` `52`, `intel/open-gaps.md` `44`, `README.md` `30`, `intel/trends.md` `18`, this shelf `4`, others `17`). 🟢 **The canonical slug is carried on this `p780` section and on every `p780` row below; NOT ONE historical citation is rewritten**, because rewriting the append-only record would destroy the history this base exists to keep. 🔵 **A base-wide rename sweep is `ACTION p780-B`, and it has never been run.** 🔵 The dead address still *serves* — `raw.githubusercontent.com` follows the rename and answers `200` with the correct `35,136 B` — which is precisely why no byte-level instrument on this base could ever have caught it (`T810`).
+
+### 🟢 `T808` demonstrated a third time, on one licence and three independent repositories
+
+🔵 `p779` showed two **different** licences at an identical byte count. This pass shows the converse at scale: **one licence, three authentic prints, a `1,243 B` spread.**
+
+| Repository | Branch · `HEAD` | Grant, graded on the bytes | Opening line | Closing line |
+|---|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | `develop` · `7f7c78b5c436` | 🟢 **`AGPL-3.0`** `license.txt` · **`33,893 B`** · `db1a87ba81e8` | canonical FSF header, verbatim | `…how to apply and follow the GNU AGPL, see <http://www.gnu.org/licenses/>.` |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` · `1c9f0bb8013e` | 🟢 **`AGPL-3.0`** `LICENSE` · **`34,520 B`** · `57c8ff33c9c0` | canonical FSF header, verbatim | 🟢 **identical closing to `frappe/lms`** |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `master` · `d3a86602dcf7` | 🟢 **`AGPL-3.0`** `LICENSE` · **`35,136 B`** · `e12d78569742` | canonical FSF header, verbatim | 🔵 **differs** — ends inside the service-provision clause, not at the canonical appendix |
+
+🟢 **All three name themselves `GNU AFFERO GENERAL PUBLIC LICENSE, Version 3, 19 November 2007` with the verbatim FSF copyright header. None is altered in its grant.** 🔵 **So a `627 B` shortfall and a `616 B` excess against the same licence are both normal**, and any rule that grades `AGPL-3.0` by length will mis-grade two of these three. 🔴 **`T808` is no longer a caution; it is measured on `3`/`3`.**
+
+🔴 **And `frappe/lms`'s grant was found ONLY on `L56`'s lower-case arm** (`license.txt`). An upper-case-only probe would have published `NO-GRANT-AT-ROOT` against an `AGPL-3.0` repository — the same false-absence class `p779` hit on `frappe/education`, in the same organisation, one pass later.
+
+### 🟢 `ACTION p779-C` — `T805` confirmed on a second estate, `openfun` (France), after an instrument defect was isolated
+
+🔵 **The estate.** [`openfun`](https://github.com/openfun) — France Université Numérique, the French national MOOC operator — censused to `total_count`: **`100` of `100` repositories**, `52` MIT · `21` NONE · `13` AGPL-3.0 · `7` NOASSERTION · `7` CC-BY-SA-4.0. 🟢 **Grant rate `79%`, against `DFE-Digital`'s `63%` over `829`.**
+
+🔵 **The prediction `p779-C` set, so it could fail:** *zero deletions, and every granted repository showing exactly one additive event.* **`8` repositories walked, spanning granted and ungranted.**
+
+| Repository | Commits | Adds | Deletes | Reading |
+|---|---|---|---|---|
+| `openfun/ralph` | `724` | `18` | 🔴 **`5`** | 🔴 **Looks like a refutation. Is not.** Every event sits on `origin/gh-pages`; the author is `FUN MOOC Bot`; the messages are *"Deployed … with MkDocs 1.6.1 and mike 2.1.3"* and *"Removed master with mike 2.0.0"*; the paths are `LICENSE/index.html`, `dev/LICENSE/index.html`, `latest/LICENSE/index.html`, `master/LICENSE/index.html`. 🟢 **Rendered documentation, not grants. On `main`: `2` adds, `0` deletions** |
+| `openfun/arnold` | `1,050` | `1` | `0` | 🔴 **First reported `0` adds — WITHDRAWN as this pass's own defect** (below). Re-run: MIT `LICENSE` · `1,078 B` · `8231f43fdfc3` at `master` · `f19ea6d060de`, added `f9238a2` `2018-03-05`, *"Initial commit"* |
+| `openfun/bbb-stress-test` | `6` | `1` | `0` | 🟢 Added at project initialisation, `2020-06-10` |
+| `openfun/edx-theme` | `409` | `1` | `0` | 🔵 Added `2013-10-11` by a named human; claim channel reports `NONE` and the default branch is **`dev`**. 🔴 **Unresolved: a non-root path, or a ref the claim channel does not grade. Not asserted either way** |
+| `openfun/2023-ai-education-datasets` | `3` | `0` | `0` | 🟢 Ungranted, no event — as `T805` predicts |
+| `openfun/tutor-contrib-richie` | `10` | `0` | `0` | 🟢 Ungranted, no event |
+| `openfun/videofront-client` | `13` | `0` | `0` | 🟢 Ungranted, no event |
+| `openfun/jitsi-k8s` | `88` | `0` | `0` | 🟢 Ungranted, no event |
+
+🟢 **`T805`'s deletion half is CONFIRMED on a second, independent estate: `0` licence deletions on any real ref, across `8` repositories and `2,343` commits.** It is not local to the DfE.
+
+🔴 **`T805`'s other half is REFUTED and must be restated.** *"Every granted repository shows exactly one additive event"* is false: `ralph` has **two** adds on `main` (project init, then `docs/LICENSE.md`). 🟢 **Restated: a grant accretes by additive events only and is never deleted — the count of additions is not one, it is simply never negative.**
+
+🔵 **`T813`, and it applies retroactively to `p779`'s own method:** a licence-history test run with `--all` admits **generated publication refs**, where a documentation bot adds and deletes licence files as build output. The signature is a path of the form `*/LICENSE/index.html` and an author that is a bot. 🟢 **`p779`'s `40,486`-commit DfE result survives untouched** — a false-positive-prone instrument that returned **zero** deletions is strengthened by this, not weakened. 🔴 **But any future estate carrying a `gh-pages` docs deploy would have produced a spurious revocation finding.**
+
+### 🔴 This pass's third instrument defect, reported before the result it affects
+
+🔴 **The licence-history walker conflated "the walk timed out" with "there are no events".** `openfun/arnold` was wrapped in a `110 s` guard; the pathspec walk over `1,050` commits on a `--filter=tree:0` clone did not finish, the output was empty, and the script counted `0`. 🟢 **Caught by control** — the claim channel graded `arnold` MIT, which is impossible with zero additive events. 🟢 **Re-run on a `--filter=blob:none` clone: `1` add at the initial commit, `0` deletions.** 🔴 **The `ADDS=0` figure is withdrawn, not patched.** 🔵 **`T814`: a bounded history walk must distinguish an empty result from an unfinished one, or it manufactures false absences in the one direction nothing else checks.**
+
 ## 🆕 `p779` — **`ACTION p778-D` discharged: `T802` predicted the cause of BOTH off-band prints and was RIGHT about both — and neither repository had altered anything. 🟢 `T808` replaces byte length with the operative token body as the unit of a grade.**
 
 🔴 **`make hooks` tried FIRST and DENIED — `0` for `10`.** 🟢 Not worked around; `worddiff.py` was written from scratch with `2` controls and is specified in [`compose/code/p779/README.md`](../compose/code/p779/README.md).
@@ -65,7 +118,7 @@ updated: 2026-11-12
 |---|---|---|---|---|---|---|
 | **Ed-Fi ODS/API** | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | `main` · `ef17fff8a214` | 🟢 **Apache-2.0** `LICENSE.txt` · `10,172 B` · `59899c6091b5` — appendix omitted, operative body token-identical to canonical | Apache-2.0 | North America | The K-12 data standard and operational data store US districts actually run. 🟢 **Grade re-confirmed this pass, not assumed** |
 | **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` · `af576e8b4d32` | 🟢 **ECL-2.0** `LICENSE` · `11,120 B` · `0688f62d04f1` | ECL-2.0 · `1,239★` · pushed `2026-11-11` | Global | University LMS. 🔴 **`ECL-2.0`, not Apache-2.0** — Apache terms with the section-3 patent grant narrowed to the contribution. Re-read this pass |
-| **Opencast** | [`opencast/opencast`](https://github.com/opencast/opencast) | `master` (claim channel `ECL-2.0`, `511★`) | 🟢 **ECL-2.0** `LICENSE` · `11,340 B` · `76a975068930` | ECL-2.0 · pushed `2026-11-11` | EMEA | Lecture capture and video. Same `ECL-2.0` correction |
+| **Opencast** | [`opencast/opencast`](https://github.com/opencast/opencast) | `master` (claim channel `ECL-2.0`, `511★`) | 🟢 **ECL-2.0** `LICENSE` · `11,340 B` · `76a975068930` at `develop` · `26fbc9363f07` | ECL-2.0 · pushed `2026-11-11` | EMEA | Lecture capture and video. Same `ECL-2.0` correction |
 | **Oppia** | [`oppia/oppia`](https://github.com/oppia/oppia) | `develop` · `bbda308fd5db` | 🟢 **Apache-2.0** `LICENSE` · `11,358 B` · `cfc7749b96f6` | Apache-2.0 · `6,988★` · pushed `2026-11-11` | Global | Structured interactive lessons with a mature contributor process |
 | **RosarioSIS** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `mobile` · `e4cd20a48bf1` | 🟡 **GPL-2.0** `LICENSE` · `15,214 B` · `d954e14e5c75` — authentic pre-1999 vintage, appendix omitted | — | Global | A complete school SIS. 🟡 **Copyleft: usable as a deployed system, NOT as a base to build closed work on.** Default branch is `mobile` |
 
@@ -211,8 +264,8 @@ updated: 2026-11-12
 
 | Named by `p776-D` | Grant on the bytes | Pre-2005 FSF address? | Verdict at `p777` |
 |---|---|---|---|
-| [`ChelseaSchool/MyIEP`](https://github.com/ChelseaSchool/MyIEP) + [`ghoulmann/IEP-IPP`](https://github.com/ghoulmann/IEP-IPP) | **GPL-2.0** `18,351 B` · `1cfece9336f0` *(one payload, two repositories)* | 🔴 **YES** — `59 Temple Place` · `02111-1307` | 🟢 **`GPL-2.0` + `ALTERED-VINTAGE`.** Operative grant intact; both return `NOASSERTION` on the claim channel, which independently corroborates the grade |
-| [`postgis/postgis`](https://github.com/postgis/postgis) | **GPL-2.0** `18,092 B` · `8177f9751321` | 🟢 **NO** | 🔴 **Not vintage.** `18,092 B` is the modern canonical GPL-2.0 length |
+| [`ChelseaSchool/MyIEP`](https://github.com/ChelseaSchool/MyIEP) + [`ghoulmann/IEP-IPP`](https://github.com/ghoulmann/IEP-IPP) | **GPL-2.0** `18,351 B` · `1cfece9336f0` at `master` · `96b5cf92a2f5` *(one payload, two repositories)* | 🔴 **YES** — `59 Temple Place` · `02111-1307` | 🟢 **`GPL-2.0` + `ALTERED-VINTAGE`.** Operative grant intact; both return `NOASSERTION` on the claim channel, which independently corroborates the grade |
+| [`postgis/postgis`](https://github.com/postgis/postgis) | **GPL-2.0** `18,092 B` · `8177f9751321` at `master` · `c87677a620f8` | 🟢 **NO** | 🔴 **Not vintage.** `18,092 B` is the modern canonical GPL-2.0 length |
 | [`elgg/elgg`](https://github.com/elgg/elgg) | **GPL-2.0** `17,173 B` · `7188c83d8764` | 🟢 **NO** | 🔴 **Not vintage.** Differs for another reason, unmeasured — carried to `ACTION p777-D` |
 | [`learnosity/learnosity-qti`](https://github.com/learnosity/learnosity-qti) | **GPL-2.0** `18,264 B` · `e3c23a194748` | 🟢 **NO** | 🔴 **Not vintage.** Differs for another reason, unmeasured — carried to `ACTION p777-D` |
 
@@ -230,7 +283,7 @@ updated: 2026-11-12
 | [`opencast/opencast`](https://github.com/opencast/opencast) | `develop` · `26fbc9363f07` | **ECL-2.0** · `11,340 B` · `76a975068930` | — | Lecture capture and video at institution scale |
 | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 `19.0` · `46a5d7d40082` | 🔴 **LGPL-3.0** · `8,241 B` · `528f84036800` | — | 🔴 Education ERP on Odoo. **`p776`'s finding stands: its payload is incomplete by construction** — the file promises the appended GPL text and omits it |
 | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 `v4.0.x-develop` · `13b55d45c046` | 🔴 **LGPL-3.0** · `7,652 B` · `e3a994d82e64` | — | Virtual classroom. Non-default-branch class again |
-| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **`mobile`** · `e4cd20a48bf1` | 🔴 **GPL-2.0** · `15,214 B` · `d954e14e5c75` | — | SIS. 🔴 **`T728` re-confirmed: defaults to `mobile`, so tooling that assumes `master` silently clones a non-default tree** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **`mobile`** · `e4cd20a48bf1` at `mobile` · `e4cd20a48bf1` | 🔴 **GPL-2.0** · `15,214 B` · `d954e14e5c75` | — | SIS. 🔴 **`T728` re-confirmed: defaults to `mobile`, so tooling that assumes `master` silently clones a non-default tree** |
 | [`frappe/education`](https://github.com/frappe/education) | `develop` · `61408d3da518` | 🔴 **`19`-byte POINTER** · `1fcecf395312` — the literal text `License: GNU GPL V3` | 🟡 `NOASSERTION` · `705★` | 🔴 Already held by this base; **re-measured and unchanged**, and the claim channel's `NOASSERTION` is exactly what a `19`-byte pointer should produce |
 | [`GeminiLight/awesome-ai-llm4education`](https://github.com/GeminiLight/awesome-ai-llm4education) | `main` · `48f2d16ca617` | 🔴 **NO-GRANT-AT-ROOT** after `28` names | NONE · `222★` | 🔴 Carried for many passes as a supply lead. **No grant, and the claim channel agrees.** This base's `221★` figure was right; it is now `222` |
 
@@ -240,15 +293,15 @@ updated: 2026-11-12
 
 | Foundation | Address | Branch · `HEAD` | Grant (graded this pass) | Region | Why it is a foundation |
 |---|---|---|---|---|---|
-| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | 🔴 **GPL-3.0-or-later** · `body:near-canonical` · `35,147 B` · `8ceb4b9ee5ad` | Global | The default LMS of public education. 🔴 Copyleft — extend via plugins, do not vendor the core into a proprietary product. |
-| **Moodle App** | [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) | `main` | 🟢 **Apache-2.0** · `body:near-canonical` · `11,358 B` · `cfc7749b96f6` | Global | 🟢 **The licence split that matters commercially**: the mobile client is permissive where the core is not. |
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | 🔴 **GPL-3.0-or-later** · `body:near-canonical` · `35,147 B` · `8ceb4b9ee5ad` at `main` · `afbcc55fa1bd` | Global | The default LMS of public education. 🔴 Copyleft — extend via plugins, do not vendor the core into a proprietary product. |
+| **Moodle App** | [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) | `main` | 🟢 **Apache-2.0** · `body:near-canonical` · `11,358 B` · `cfc7749b96f6` at `main` · `02b713f13acc` | Global | 🟢 **The licence split that matters commercially**: the mobile client is permissive where the core is not. |
 | **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔵 `develop` · `2d29598fc66f` | 🟢 **MIT** · `body:canonical` · `1,097 B` · `3c056b34a476` | Global | Offline-first delivery for low-connectivity deployments. 🟢 Cleanest permissive grant of the large platforms. Default branch is `develop`, not `main`. |
 | **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` · `af576e8b4d32` | 🟢 **ECL-2.0** · `body:near-canonical` · `r=0.9913` · `11,120 B` · `0688f62d04f1` | North America | 🟢 **Independently reproduces `p775`'s upgrade of this row** from `ALTERED` to near-canonical under the deontic contract. Educational Community Licence — Apache-2.0 with an education-sector patent clause. |
-| **BigBlueButton** | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | `develop` | 🟢 **LGPL-3.0-permissions-only** · `body:canonical` · `r=1.0` · `7,652 B` · `e3a994d82e64` | Global | 🟢 **Newly resolvable this pass** (`ACTION p775-B`) — carried as `UNRESOLVED` at `r=0.3022` for several passes. Virtual classroom with the LMS integrations already written. 🔴 LGPL: dynamic linking is the safe boundary. |
+| **BigBlueButton** | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | `develop` | 🟢 **LGPL-3.0-permissions-only** · `body:canonical` · `r=1.0` · `7,652 B` · `e3a994d82e64` at `v4.0.x-develop` · `13b55d45c046` | Global | 🟢 **Newly resolvable this pass** (`ACTION p775-B`) — carried as `UNRESOLVED` at `r=0.3022` for several passes. Virtual classroom with the LMS integrations already written. 🔴 LGPL: dynamic linking is the safe boundary. |
 | **ERPNext** | [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop` · `2470b9dd0042` | 🔴 **GPL-3.0-or-later** · `body:near-canonical` · `35,149 B` · `3972dc9744f6` | Global | The Education module gives a real SIS. 🔴 Its grant sits in lowercase **`license.txt`** — the filename that produced a false `NO-GRANT-AT-ROOT` at `p773`. 🟢 **Permanent control fixture** (`T785`). |
-| **Frappe Framework** | [`frappe/frappe`](https://github.com/frappe/frappe) | `develop` | 🟢 **MIT** · `body:near-canonical` · `1,118 B` · `bc6001a54ffc` | Global | 🟢 **The second split worth knowing**: the framework is MIT where ERPNext above it is GPL-3.0. Build on the framework, not the app, when the licence matters. |
-| **H5P** | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `master` | 🔴 **GPL-3.0-or-later** · `body:near-canonical` · `35,146 B` · `c53a65c2fd56` | EMEA | Interactive content types that already embed in Moodle, Open edX, Canvas and Drupal. |
-| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `master` | 🟡 **LGPL-3.0-permissions-only** · `r=0.9674` · `wd=83` · `8,241 B` · `528f84036800` | APAC | Education ERP on the Odoo stack — admissions, courses, fees, library. 🔴 **Its grant file promises *"the text of the GPL is included at the bottom as well"* and does not include it**, so a legal review cannot close on this payload as shipped. |
+| **Frappe Framework** | [`frappe/frappe`](https://github.com/frappe/frappe) | `develop` | 🟢 **MIT** · `body:near-canonical` · `1,118 B` · `bc6001a54ffc` at `develop` · `0c68cdeff2e6` | Global | 🟢 **The second split worth knowing**: the framework is MIT where ERPNext above it is GPL-3.0. Build on the framework, not the app, when the licence matters. |
+| **H5P** | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `master` | 🔴 **GPL-3.0-or-later** · `body:near-canonical` · `35,146 B` · `c53a65c2fd56` at `master` · `2d7f937a03c9` | EMEA | Interactive content types that already embed in Moodle, Open edX, Canvas and Drupal. |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `master` | 🟡 **LGPL-3.0-permissions-only** · `r=0.9674` · `wd=83` · `8,241 B` · `528f84036800` at `19.0` · `46a5d7d40082` | APAC | Education ERP on the Odoo stack — admissions, courses, fees, library. 🔴 **Its grant file promises *"the text of the GPL is included at the bottom as well"* and does not include it**, so a legal review cannot close on this payload as shipped. |
 | **Primero** | [`primeroims/primero`](https://github.com/primeroims/primero) | `main` | 🔴 **AGPL-3.0-or-later** · `35,475 B` · `27affec55ad7` | Global | 🟢 **The nearest existing analogue to a SEND case record** — UNICEF-backed child-protection case management, with the consent, referral and confidentiality model already built. 🔴 AGPL: network use triggers the source obligation. |
 | **py-fsrs** | [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | `main` | 🟢 **MIT** · `body:canonical` · `1,079 B` · `021bff58ad26` | Global | The scheduling algorithm behind modern spaced repetition. 🟢 Small, permissive, and the right dependency rather than a reimplementation. |
 | **OpenSALT** | [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | `master` | 🟢 **MIT** · `body:canonical` · `1,080 B` · `38e322d5ab06` | North America | CASE-standard competency-framework registry. 🟢 **Directly relevant to the SEND register**: a placement decision has to cite the standards the pupil is being assessed against. |
@@ -267,7 +320,7 @@ updated: 2026-11-12
 
 | Repo | Address | Branch · `HEAD` | Grant (graded this pass) | Region | Role in an exclusion deliverable |
 |---|---|---|---|---|---|
-| **kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔴 **`develop`** · `2d29598fc66f` | 🟢 **MIT** · `body:canonical` · `1,097 B` | Global | The offline-first learner record. The layer an exclusion decision must *write back to* when a pupil moves to alternative provision. |
+| **kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔴 **`develop`** · `2d29598fc66f` at `develop` · `2d29598fc66f` | 🟢 **MIT** · `body:canonical` · `1,097 B` | Global | The offline-first learner record. The layer an exclusion decision must *write back to* when a pupil moves to alternative provision. |
 | **open-tutor-ai-CE** | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `main` · `196c547291da` | 🟢 **BSD-3-Clause** · `body:canonical` · `1,531 B` | Global | Continuity of teaching during a suspension — the statutory duty in England from day 6. |
 | **canvas-mcp** | [`mdweaver/canvas-mcp`](https://github.com/mdweaver/canvas-mcp) | `main` · `5b59af6e3081` | 🟢 **MIT** · `body:canonical` · `1,065 B` | North America | The read seam into a live gradebook/LMS, so evidence for a hearing is cited rather than retyped. |
 | **OpenMAIC** | [`thu-maic/OpenMAIC`](https://github.com/thu-maic/OpenMAIC) | `main` · `8c29069daf43` | 🟢 **MIT** · `body:canonical` · `1,065 B` | APAC | Multi-agent classroom scaffolding; the APAC-origin permissive option. |
@@ -279,9 +332,9 @@ updated: 2026-11-12
 
 | Row | p774 recorded | 🆕 `p775` measures | Why it changed |
 |---|---|---|---|
-| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔴 ECL-2.0 · `OPERATIVE-TEXT-ALTERED` · `delta=98` | 🟢 **ECL-2.0 · `body:near-canonical` · `d=5` · deontic CLEAN** · `11,120 B` @ `af576e8b4d32` | 🟢 **The ALTERED verdict does NOT survive the deontic guard `ACTION p774-C` asked for.** Sakai's ECL-2.0 is canonical for practical purposes — material, because Sakai is the largest education platform on these shelves and "altered grant" is a sentence that stops a legal review. |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔴 ECL-2.0 · `OPERATIVE-TEXT-ALTERED` · `delta=98` | 🟢 **ECL-2.0 · `body:near-canonical` · `d=5` · deontic CLEAN** · `11,120 B` @ `af576e8b4d32` at `master` · `af576e8b4d32` | 🟢 **The ALTERED verdict does NOT survive the deontic guard `ACTION p774-C` asked for.** Sakai's ECL-2.0 is canonical for practical purposes — material, because Sakai is the largest education platform on these shelves and "altered grant" is a sentence that stops a legal review. |
 | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 LGPL-3.0 "as held" | 🔴 **TRUNCATED LGPL-3.0 — `1,313` of `6,871` canonical words (19%)**, `8,241 B` @ `19.0` · `46a5d7d40082` | 🔴 **p774 carried a CLAIM, not a measurement.** The file's own prose says *"the text of the GPL is included at the bottom as well"* — **and it is not.** LGPL-3.0 is by construction a set of additional permissions on top of GPL-3.0, so a copy without the GPL text is incomplete **by its own terms** (`T776`). |
-| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔴 Apache-2.0 ALTERED `delta=350` deontic=warranty | 🔴 **REPRODUCED** — Apache-2.0 ALTERED, `sim 0.9637`, `d=97`, **deontic=`not`,`warranty`** @ `60fb3bdfddb3` | 🟢 Independently reproduced by a from-scratch instrument for the third consecutive pass, and the guard now names a **negation** moving as well as a warranty term. |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔴 Apache-2.0 ALTERED `delta=350` deontic=warranty | 🔴 **REPRODUCED** — Apache-2.0 ALTERED, `sim 0.9637`, `d=97`, **deontic=`not`,`warranty`** @ `60fb3bdfddb3` at `main` · `60fb3bdfddb3` | 🟢 Independently reproduced by a from-scratch instrument for the third consecutive pass, and the guard now names a **negation** moving as well as a warranty term. |
 | [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | 🟡 EUPL-1.2 on the notice rung, `296 B` | 🟢 **CONFIRMED, and the axis is now decided: EUPL-1.2 *or later*** @ `8c5839b29f31` | 🟢 The notice reads *"Version 1.2 or — as soon as they will be approved by the European Commission — subsequent versions"*. **This is the real-world proof of `T775`: the or-later axis lives in the notice, never in the body.** |
 
 ### 🟢 `9` canonical licence texts added this pass (`ACTION p774-B` — discharged, with a measured payoff and a measured limit)
@@ -375,7 +428,7 @@ updated: 2026-11-12
 | Address | Claims | Payload |
 |---|---|---|
 | [`metabase/metabase`](https://github.com/metabase/metabase) | `AGPL-3.0` | **`855 B`** against a `34,020 B` licence |
-| [`smart-on-fhir/client-js`](https://github.com/smart-on-fhir/client-js) | `Apache-2.0` | **`571 B`** — `p771`'s `T733` `byref:EXTERNAL-URL`, re-confirmed independently |
+| [`smart-on-fhir/client-js`](https://github.com/smart-on-fhir/client-js) | `Apache-2.0` | **`571 B` at `master` · `c004216e55fb`** — `p771`'s `T733` `byref:EXTERNAL-URL`, re-confirmed independently |
 | [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails) | `Apache-2.0` | **`654 B`** |
 | [`openfoodfacts/openfoodfacts-python`](https://github.com/openfoodfacts/openfoodfacts-python) | `MIT` | **`16 B`** |
 | [`hongyuanjia/eplusr`](https://github.com/hongyuanjia/eplusr) | `MIT` | **`64 B`** |

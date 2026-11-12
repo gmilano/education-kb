@@ -1,0 +1,8 @@
+# L56: 56 generated, 56 distinct
+slug	branch	head12	name	bytes	sha256_12
+EsupPortail/esup-sygal	master	3c637b2c60bb	LICENSE	22960	879c27d15a28
+EsupPortail/esup-geforp	allshib	08358955c134	LICENSE	22959	c798f0ac23a5
+EsupPortail/esup-stagetrek	main	8d58d35e8e0b	LICENSE	22960	879c27d15a28
+EsupPortail/esup-emc2	master	16eeeb871792	LICENSE	22960	879c27d15a28
+EsupPortail/esup-smile	main	8a7b61e16f12	LICENSE	22960	879c27d15a28
+EsupPortail/esup-sygal-import-ws	master	897ccc8c1299	LICENSE	22960	879c27d15a28
