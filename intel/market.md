@@ -4,6 +4,154 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p784` — **The market's `2026` figure is a RANGE, not a number (`$6.4B`–`$11.4B`, four firms). The adoption gap is the business: `88%` of students use AI, `36%` feel their institution encourages it — and in North America faculty intent FELL `9` points year over year. `ACTION p783-D` and `p783-E` are REFUSED ON CHANNEL and reported as refused.**
+
+### 🔴 `ACTION p783-D` and `p783-E` — REFUSED ON CHANNEL, measured on TWO independent channels
+
+🔴 **`p783` called the EMEA high-risk commencement date "the single highest-value unresolved fact in the base" and ordered it resolved against a PRIMARY source — EUR-Lex or the Commission. It also ordered the Colorado contradiction settled from a legislature source.** 🔴 **Both are impossible in this session, and that is now measured rather than asserted:**
+
+| Primary source required | Channel 1 — `curl` through the session gateway | Channel 2 — the fetch tool |
+|---|---|---|
+| 🔴 `eur-lex.europa.eu` | 🔴 **HTTP `403` to `CONNECT`** — *"gateway answered 403 (policy denial)"* | 🔴 **`ENOTFOUND`** — outside the session's allowed network domains |
+| 🔴 `digital-strategy.ec.europa.eu` | 🔴 **`403` to `CONNECT`** | 🔴 not attempted — same failure class |
+| 🔴 `leg.colorado.gov` | 🔴 **`403` to `CONNECT`** | 🔴 not attempted — same failure class |
+| 🔴 `edugit.org` *(`p783-G`, below)* | 🔴 **`403` to `CONNECT`** | 🔴 not attempted — same failure class |
+
+🔵 **The denials are confirmed in the gateway's own `recentRelayFailures` log, by host and timestamp.** 🟢 **The egress allowlist now blocks `12` hosts known to this base — the `8` `p783` recorded plus these `4`.** 🔴 **`p783-D` and `p783-E` therefore CANNOT be discharged by any pass of this session, at any effort. They require a session network-settings change, not a pass's effort** — and unlike the eleven-pass `make hooks` verdict that `p781` correctly overturned, this one is measured on two independent channels and in the gateway's log.
+
+🟢 **What this pass WILL publish, with its provenance stated plainly:** the secondary sources converge, and convergence across independent secondaries is worth recording as long as it is labelled.
+
+| EMEA obligation | Date | Status of the claim |
+|---|---|---|
+| 🔴 **Emotion-recognition AI in education — BANNED** | **in force since `2025-02`** | 🟡 **SECONDARY-CONVERGENT.** The least-disputed item; multiple independent guides agree. 🟢 **Already binding — this is not a future deadline** |
+| 🔴 **Article 50 transparency** — disclose that a system is AI; mark synthetic material | **`2026-08-02`** | 🟡 **SECONDARY-CONVERGENT, and LIVE NOW.** 🔴 **An institution running a student-facing chatbot has an obligation today.** One source narrows machine-readable marking to `2026-12-02`; unresolved |
+| 🟡 **Annex III education high-risk** — admissions, grading, exam proctoring | **`2027-12-02`** | 🟡 **SECONDARY-CONVERGENT on a `16`-month delay** via **Regulation (EU) 2026/1744**, reported in force `2026-07-27`. 🔴 **NOT primary-verified. The competing `2026-08` reading is now attributable to guides written before the amendment and is the weaker claim** |
+| 🟡 **FRIA (Art. 27)** for public institutions deploying high-risk AI | tied to the above | 🟡 SECONDARY. Public schools and universities are **deployers**, not providers, which is the lighter of the two roles |
+| 🔴 **Colorado AI Act** | 🔴 **UNRESOLVED** | 🔴 **No claim ships.** One tracker says repealed `2026-05`; another gives a delayed `2026-06-30` effective date plus a federal-court enforcement pause. 🔴 One of the two is demonstrably unreliable (it attributes bills to the wrong states) and this base cannot tell which |
+
+### 🟢 Market size — a range, and the spread is the finding
+
+| Firm | `2026` | Forecast | Implied CAGR |
+|---|---|---|---|
+| Grand View Research | **`$11.4B`** | `$57.2B` by `2033` | `~26%` |
+| Research and Markets | **`$10.6B`** | — (from `$7.52B` in `2025`, **`+40.9%` YoY**) | — |
+| Precedence Research | **`$9.58B`** | `$136.79B` by `2035` | **`34.5%`** |
+| Coherent Market Insights | 🔵 lower end of the band | — | `16.8%` |
+| 🔴 **Spread across four firms** | 🔴 **`$6.4B` – `$11.4B`** | 🔴 **`$57.2B` – `$136.79B`** | 🔴 **`16.8%` – `34.5%`** |
+
+🔴 **The `2035` forecasts differ by `2.4×` and the CAGRs by more than `2×`. No single figure from this table may be quoted as "the" market size.** 🟢 **Quote the band and name the firm.** 🔵 North America is put at **`~38%`** of `2026` share.
+
+### 🟢 The adoption gap — the most reliable numbers in this file, and the commercial opening
+
+🟢 **Digital Education Council, `2026-07`, `35` countries:**
+
+| Measure | Value | Why it matters to a studio |
+|---|---|---|
+| 🟢 Students using AI | **`88%`** | Demand is settled. Nobody is selling adoption |
+| 🟢 Faculty using AI | **`77%`** | 🔵 Also settled, and higher than most institutional narratives assume |
+| 🔴 **Students who feel their institution ENCOURAGES it** | **`36%`** | 🔴 **A `52`-point gap between use and sanction.** 🟢 **The engagement is governance, not capability** |
+| 🔴 **North American faculty intent to keep using AI** | 🔴 **`67%`, DOWN from `76%` in `2025`** | 🔴 **A `9`-point FALL.** 🟢 **The only declining headline figure in this file, and it is in the largest market** |
+| 🟢 OECD `2026` Digital Education Outlook | recommends moving **beyond general-purpose tools** to purpose-built educational AI with durable learning gains | 🟢 **This is a direct mandate for the vertical, composed stacks this base exists to assemble** |
+
+🔵 **Read together: the users have arrived, the institutions have not sanctioned it, and in North America the teachers are beginning to back away. A studio that sells "AI for learning" is selling into a settled market; a studio that sells sanctioned, auditable AI is selling into the gap.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **Market:** the largest single share, **`~38%`** of `2026`. 🔴 **And the only region where the faculty trend line is NEGATIVE (`76%`→`67%`).**
+
+🟢 **Regulatory shape — states lead, the federal level does not bind:**
+
+| Jurisdiction | Instrument | Status |
+|---|---|---|
+| 🟢 **Maryland** | State guidelines + mandatory local district AI policies | 🟢 **In effect `2026-06-01`** |
+| 🟢 **Ohio** | Model AI policy; districts must adopt a framework | 🟢 **Deadline `2026-07-01`** |
+| 🟢 **Florida** | State Board of Education AI rules, K-12 **and** state colleges | 🟢 Approved unanimously |
+| 🟢 **Arizona** | **HB 4040** — public universities and K-12 must adopt student AI-use policies, **including detection of unauthorised use** | 🟢 Enacted |
+| 🟡 **New York** | **A 9190** — would limit direct student AI use to **grade 9 and up**, with carve-outs for diagnostics and special education | 🟡 **Bill, not law** |
+| 🟡 **Federal** | **K-12 AI Literacy and Readiness Act of 2026** — advanced out of House committee | 🟡 **Not law.** 🔴 **No binding federal AI curriculum standard exists** |
+| 🟢 **Coverage** | **`28`+ states plus DC** have issued K-12 AI guidance | 🔵 **Guidance is near-universal; binding law is rare** |
+
+🔴 **The institutional counter-current is real:** **Berkeley Law banned AI on all exams and credited coursework** from summer `2026`, while simultaneously adding AI literacy to general education from fall `2026`. 🔵 **The same institution is restricting and teaching it at once — that is the shape of the whole region.**
+
+🟢 **Opportunity — the policy-to-implementation gap.** Maryland, Ohio, Florida and Arizona have each created a **legal obligation to hold an AI policy and, in Arizona, to detect misuse**, across thousands of districts with no engineering capacity to satisfy it. 🟢 **Sellable: a district-level AI governance and audit layer** — policy-as-configuration, per-assignment AI-use disclosure, an auditable record of which tool touched which student work. 🟢 **Compose it from `learning-commons-org/evaluators` (MIT code + CC-BY-4.0 prompts) for rubric-grounded evaluation and `microsoft/presidio` for student-data redaction.** 🔴 **Do NOT sell detection as accuracy** — Arizona's statute requires a process, and the honest deliverable is an auditable process, not a classifier claiming to catch cheating.
+
+### EMEA
+
+🔴 **The region's defining fact is a date this base CANNOT primary-verify (above).** 🟢 **But the planning consequence is stable either way, and that is what a client needs:**
+
+| What is live TODAY | What is deferred |
+|---|---|
+| 🔴 **Emotion recognition in education — banned since `2025-02`** | 🟡 Annex III high-risk for admissions, grading and proctoring — **reported `2027-12-02`** |
+| 🔴 **Art. 50 transparency — since `2026-08-02`.** Disclose the AI, mark synthetic teaching material | 🟡 FRIA obligations tied to the high-risk commencement |
+
+🟢 **Opportunity 1 — the transparency obligation is live and unglamorous, which is why it is winnable.** Every institution running a student-facing chatbot owes disclosure and synthetic-content marking **now**, and most shelved their AI Act programme when the high-risk rules slipped. 🟢 **Sellable immediately: a disclosure-and-marking retrofit across an institution's existing chatbots and content pipelines.**
+
+🟢 **Opportunity 2 — the deferral is a build window, not a reprieve.** 🔵 If the `2027-12-02` reading holds, a grading or admissions system has **~13 months** to be built auditable by design rather than retrofitted. 🔴 **Sell the window, never the exemption** — and state the date's provenance to the client, because this base could not reach the primary source.
+
+🟢 **Opportunity 3 — on-device and sovereign delivery.** 🔵 The ban on emotion recognition plus live transparency duties make data residency a procurement question, not a preference. 🟢 **`nazarli-shabnam/ReadAble` (Apache-2.0) does OCR and summarisation ON-DEVICE** — student work never leaves the device, which answers the residency question structurally rather than contractually. 🟢 **Pair with `ContentSquare/readapt` (Apache-2.0, branch `master`), the one corporate-maintained row on the SEND shelf.**
+
+🔴 **Declared gap — EMEA beyond the EU was NOT searched this pass.** No finding is published for the UK, the Gulf, Israel, Turkey or Africa. 🔵 **The one adjacent signal that did surface is [`obadx/quran-muaalem`](https://github.com/obadx/quran-muaalem) (`116★`), an AI Quran teacher — and it carries a `25,679 B` BESPOKE licence, so it is unusable without legal review.** 🟢 **This is a gap, stated, not coverage.**
+
+### APAC
+
+🟢 **The region is the regulatory frontrunner AND the only region with a MEASURED programme REVERSAL. Both facts are commercially load-bearing.**
+
+| Market | Position |
+|---|---|
+| 🟢 **China** | 🟢 **AI education MANDATORY across every stage**, tied to the `2026–2030` Five-Year Plan. First mover on an AI registration regime |
+| 🟢 **India** | 🟢 **AI and computational thinking in all schools from Grade 3, starting the `2026–27` academic year**, under NEP 2020. Innovation-first policy, few AI-specific rules |
+| 🟢 **South Korea** | 🟢 **AI Basic Act in force `2026-01-22`** — the world's second comprehensive AI law after the EU's. 🔴 **AND: the national AI digital-textbook rollout began `2025` and was cut back to OPTIONAL material within a year after parental and teacher backlash over screen time and data** |
+| 🟢 **Singapore** | 🟢 MOE routes Primary 4 AI through the **Student Learning Space**, structured and teacher-supervised — **explicitly not open platforms**. Teacher AI training due `2026`. Light-touch, sector-based regulation |
+| 🟡 **Japan** | Guidelines issued, pilot schools selected while the government weighs rules. Digital textbooks may become official as late as `2030` |
+| 🔵 **Public opinion** | Support for BANNING AI in schools is low: **`23%` Indonesia to `31%` South Korea** (Ipsos) |
+
+🔴 **South Korea is the most valuable lesson in this file: a national, well-funded, top-down AI curriculum rollout was REVERSED by teacher and parent objection to screen time and data handling — not by a technical failure.** 🟢 **The procurement implication is concrete: in APAC, teacher and guardian consent is the deployment risk, and a stack that cannot show what data it holds will be withdrawn after launch, not before it.**
+
+🟢 **Opportunity — the teacher-supervised, data-minimal classroom stack.** Singapore has already specified the shape (supervised, inside an institutional environment, not an open platform) and Korea has shown the failure mode. 🟢 **Compose: `Faixiang/Moodle-MCP` (MIT) to reach the institutional LMS over its own HTTP API with no GPL linkage · `microsoft/presidio` for data minimisation at the boundary · `ZeKaiNie/universal-examprep-skill` (MIT) whose handout-provenance design makes every answer traceable to a source document.** 🔵 **Traceability is the consent argument, and India's Grade-3 mandate plus China's all-stage mandate make this the largest addressable classroom population of any region.**
+
+### LATAM
+
+🟢 **`ACTION p783-F` DISCHARGED, AND `T837`'s PREMISE IS REFUTED — the star floor was never what hid LATAM. The QUERY LANGUAGE was.**
+
+🔴 **`p783` observed every LATAM find sitting at `1`–`28★`, below the `>60`/`>150`/`>250` floors this base's sweeps use, and ordered a no-floor sweep to size what the floors were hiding.** 🟢 **Run this pass in Spanish and Portuguese with no star qualifier, and the result refutes the framing:**
+
+| Find | ★ | Grant, graded on the bytes | What it is |
+|---|---|---|---|
+| 🟡 [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | **`725★`** | 🔴 **GPL-2.0** `LICENSE` · `18,092 B` · `8177f9751321` · branch 🔵 **`2.12`** | 🟢 **Brazil's largest free school-management system / SIS.** *"o maior software livre de educação do Brasil"*. Pushed `2026-10-29` |
+| 🟢 [`Universidade-Livre/ciencia-da-computacao`](https://github.com/Universidade-Livre/ciencia-da-computacao) | **`21,029★`** | 🟢 **MIT** `LICENSE` · `1,087 B` · `6520b550c69f` | Brazilian self-taught CS curriculum. 🔵 **The highest-starred LATAM-origin education repository this base has ever recorded** |
+| 🟢 [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | **`1,860★`** | 🟢 **MIT** `LICENSE` · `1,072 B` · `eaf38a4975eb` | 🟢 **MCP server over `70` Brazilian public-sector APIs.** The integration substrate for any Brazilian public-education engagement |
+| 🟢 [`institutohumai/cursos-python`](https://github.com/institutohumai/cursos-python) | `624★` | 🟢 **CC-BY-4.0** `LICENSE.md` · `3,283 B` · `62f1853816f3`, *"even commercially"* · branch 🔵 **`master`** | Instituto Humai, Argentina — full AI course material, commercially reusable with attribution |
+
+🔵 **`portabilis/i-educar` at `725★` would have cleared EVERY floor this base uses — `>60`, `>150` and `>250`. It was never hidden by a threshold. It was missed because the sweeps ran in English, and a Brazilian school-management system does not describe itself in English.** 🟢 **`T837` is replaced: "LATAM is thin" was an artefact of query LANGUAGE, not of star floors, and the no-floor sweep was the wrong instrument for the right suspicion.** 🔴 **Honest limit: `4` queries in `2` languages. A full-base re-sweep in Spanish and Portuguese has NOT been run** → `p784-A`.
+
+🟢 **Regulatory and programme shape:**
+
+| Market | Position |
+|---|---|
+| 🟢 **Brazil** | 🟢 **MEC national reference framework, `2026`** — guidance for responsible AI across every level from early childhood to postgraduate. 🔴 **Cetic.br via UNESCO: `53%` of school administrators use AI, only `22%` report their school has guidelines** |
+| 🟡 **Mexico** | 🟢 **`ACTION p783-C` DISCHARGED** — see below |
+| 🟢 **Chile** | 🟢 Regional leader in AI talent, scientific output and private investment; consistent policy. Hosted the UNESCO regional observatory launch |
+| 🟢 **Regional** | 🟢 **UNESCO Observatory on AI in Education for LAC, launched `2026-04-14` in Santiago** with CAF, CENIA, Cetic.br/NIC.br, ECLAC and Fundación Ceibal · 🟢 **Google.org `$4.6M`** via the Raspberry Pi Foundation's Experience AI — target **`24,000` educators and `1.25M` students by `2028` across `9` countries** incl. Brazil, Chile, Mexico |
+| 🔴 **Higher-ed governance deficit** | 🔴 **UNESCO IESALC `2026`: `87%` of the region's universities use AI, `26%` have a formal strategy, `9%` EVALUATE its implementation** |
+
+### 🟢 `ACTION p783-C` DISCHARGED — the Mexico search, run single-term per `T825`
+
+🔴 **`p783` recorded nothing usable on Mexico and ordered a dedicated search. Run this pass in Spanish:**
+
+| Instrument | Date | What it is |
+|---|---|---|
+| 🟢 **SEP — `10` recommendations for ethical and critical generative-AI use in higher education** | `2026-04` | 🔴 **NOT binding.** Institutional guidelines, teacher training, curriculum updates, assessment review. 🟢 **Drawn from a survey of `1.5M` students and `166,000`+ teachers — the largest AI-in-education evidence base in the region** |
+| 🟡 **SEP national rules for educational AI use — in preparation** | `2026-07` | 🟡 Reported following device restrictions in `16` states. 🔴 **`76.7%` of public-institution students do not know whether their school has any AI guideline** |
+| 🟡 **PT initiative to reform the Ley General de Educación** | `2026-07` | 🟡 **An initiative, not law.** Would put AI in the curriculum and give SEP **`180` days** to issue `lineamientos` with the state authorities |
+| 🟢 **Programa Sectorial `2025–2030`** | in force | Includes AI training for teachers. 🔴 **No public national standard requires a serving teacher to certify an AI competency** |
+| 🟢 **UNAM — Consejo Coordinador de Inteligencia Artificial** | Gaceta `2026-03-17` | Institutional governance body at the region's largest university |
+
+🔴 **The finding is an ABSENCE, and it is now a measured one: Mexico has no enacted federal AI law and no published binding SEP classroom guideline.** 🟢 **Every instrument above is a recommendation, an initiative or a sectoral plan.** 🔵 **Commercially this is the most favourable configuration in the region — a federal ministry that has surveyed `1.5M` students, published recommendations, and has no binding rule yet. `76.7%` unawareness is the gap, and SEP's own `10` recommendations are the specification a studio can build to.** 🔴 **Provenance: Mexican press reporting, not the Diario Oficial de la Federación — which this session's egress does not reach.**
+
+🟢 **Opportunity — build to SEP's `10` recommendations before they bind.** Institutional AI-use guidelines as deployable configuration, assessment redesign, and teacher training delivered on **`institutohumai/cursos-python` (CC-BY-4.0, commercially reusable, already in Spanish)** rather than translated from English. 🟢 **For Brazil, the same engagement runs on `portabilis/i-educar`'s installed SIS base** — 🔴 **but `i-educar` is GPL-2.0, so integrate across its API boundary and do not link into it.** 🟢 **`Mcp-Brasil/mcp-brasil` (MIT) is the public-data side of the same build.**
+
 ## 🆕 `2026-11-12` · `p783` — **All five regions placed, with the NA statute book now specific enough to quote by bill number, and LATAM's "gap" diagnosed as a measurement artefact rather than an absence: the code exists, it just sits below every star floor this base's sweeps use. Three LATAM university MCP servers found, two of them institution-specific and permissive.**
 
 🔵 **Region is a CLOSED vocabulary on this base — `North America`, `EMEA`, `APAC`, `LATAM`, `Global`. Country names live in the prose, never in the field.**

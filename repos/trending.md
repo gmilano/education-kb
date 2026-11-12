@@ -4,6 +4,41 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p784` — **Trending this window, and the licence fingerprint record that came out of probing it: GPL-3.0 occupies a `35,147`–`35,149 B` band with three hashes, and `ECL-2.0` sits `17 B` from canonical Apache-2.0.**
+
+🔵 **Appended. Nothing below this section was altered.**
+
+### 🟢 Trending — education and learning, verified address by address
+
+| Repository | ★ | Branch · `HEAD` | Grant, graded on the bytes | Note |
+|---|---|---|---|---|
+| 🟢 [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | **`~78,400★`** | `main` · `a509402c0b54` | 🟢 **MIT** · `1,070 B` · `d116e214adbc` | 🟢 **`+820★/day` (`2026-11-11`).** The window's clear leader |
+| 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **`58,445★`** | `main` · `60fb3bdfddb3` | 🟢 **Apache-2.0** · `11,408 B` · `cd2f54e1e506` | 🟢 Persistent-memory tutoring. **Control exact, fourth pass** |
+| 🟢 [`Universidade-Livre/ciencia-da-computacao`](https://github.com/Universidade-Livre/ciencia-da-computacao) | **`21,029★`** | `main` · `b995c118fdb3` | 🟢 **MIT** · `1,087 B` · `6520b550c69f` | 🟢 **Highest-starred LATAM-origin education repo this base has recorded** |
+| 🔴 [`microsoft/ai-edu`](https://github.com/microsoft/ai-edu) | `14,146★` | 🔵 `master` · `814bebdb4b18` | 🔴 **SPLIT, material NonCommercial** · `4,806 B` · `b71159ea7c15` | 🔴 Chinese-language AI education materials |
+| 🔴 [`mengxi-ream/read-frog`](https://github.com/mengxi-ream/read-frog) | `10,406★` | `main` · `4d986d28272e` | 🔴 **GPL-3.0** · `35,149 B` · `3972dc9744f6` | AI language learning + flashcards, immersive translation |
+| 🟢 [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) | `2,630★` | `main` · `cf291652b0da` | 🟢 **MIT** · `1,106 B` · `aad28612a5b7` | `65` ML/AI interview problems |
+| 🟢 [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | `1,860★` | `main` · `2efb258370b1` | 🟢 **MIT** · `1,072 B` · `eaf38a4975eb` | 🟢 MCP server over `70` Brazilian public APIs |
+| 🟢 [`micahkepe/vimtutor-sequel`](https://github.com/micahkepe/vimtutor-sequel) | `566★` | `main` · `ba6b0c1bf0ae` | 🟢 **MIT** · `1,067 B` · `5a98220ec6b3` | A worked model of in-tool scaffolded practice |
+| 🟢 [`institutohumai/cursos-python`](https://github.com/institutohumai/cursos-python) | `624★` | 🔵 `master` · `fd765d36d614` | 🟢 **CC-BY-4.0, "even commercially"** · `3,283 B` · `62f1853816f3` | 🟢 Instituto Humai, Argentina |
+| 🟡 [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `725★` | 🔵 **`2.12`** · `e0c53f5a305a` | 🔴 **GPL-2.0** · `18,092 B` · `8177f9751321` | 🟢 **Brazil's largest free school-management system** |
+
+### 🟢 The fingerprint record this window produced
+
+| Licence family | Prints measured | Spread |
+|---|---|---|
+| 🟢 **Apache-2.0** | `11,357` · `c71d239df917` *(canonical, reproduced across `4`+ repos)* · `11,357` · `58d1e17ffe51` *(filled appendix)* · `11,358` · `cfc7749b96f6` *(apache.org channel, `oppia`)* · `11,408` · `cd2f54e1e506` *(`DeepTutor`)* · `10,982` · `6dbc5b605ed0` *(stripped appendix, `OpenOLAT`)* · `10,761` · `bd051be10e3b` *(`AdaRubrics`)* | 🔴 **`10,761`–`11,408 B`** |
+| 🟢 **ECL-2.0** 🆕 | `11,120` · `0688f62d04f1` *(`sakai`)* · `11,340` · `76a975068930` *(`opencast`)* | 🔴 **Lands INSIDE the Apache band — `17 B` from canonical** |
+| 🔴 **GPL-3.0** | `35,147` · `8ceb4b9ee5ad` *(`moodle`, `chamilo`, `ILIAS` — three unrelated repos)* · `35,148` · `8b1ba204bb69` *(`MaxKB`)* · `35,149` · `3972dc9744f6` *(`read-frog`, `readingstrip`)* | 🟢 **`3 B`, three hashes, each reproducing** |
+| 🔴 **AGPL-3.0** | `34,520` · `57c8ff33c9c0` *(`canvas-lms`)* · `35,136` · `e12d78569742` *(`edx-platform`)* | 🔴 **`616 B` — the widest band measured** |
+| 🔴 **GPL-2.0** 🆕 | `18,092` · `8177f9751321` *(`i-educar`)* | 🟢 **~half GPL-3.0's length — a fast discriminator** |
+
+🔴 **The operational conclusion: licence families OVERLAP in byte length across family boundaries. `ECL-2.0` at `11,340 B` is nearer canonical Apache-2.0 than two authentic Apache-2.0 files are.** 🟢 **Grade on the title line. Use the hash for provenance. Never infer a family from a length.**
+
+### 🔴 Not usable, and the claim channel said nothing
+
+🔴 [`frappe/lms`](https://github.com/frappe/lms) — ALIVE on 🔵 `develop` · `7f7c78b5c436` · **no grant file at any of six names**, though widely listed as AGPL-3.0. 🔴 [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) — `~67,600★`, ALIVE on 🔵 `master` · `db59a04a8a2c` · **no grant file at any of six names**, widely cited as MIT. 🔵 **Both reported unconfirmed rather than assigned a licence, and `T839` is why: the per-repository API endpoint that would settle either is denied to this session.**
+
 ## 🆕 `2026-11-12` · `p783` — **`ACTION p781-B` / `p782-B` CLOSED. The dead set is re-derived from scratch on the only channel that can assert existence: `109` genuine deaths of `5,848` real addresses — `1.86%`, not `6.5%`. `55` of the `179` raw failures were never repository addresses. `3` repairs applied. The repair backlog is now empty.**
 
 🟢 **This is the first pass to sweep the ENTIRE published base rather than a sample:** `5,910` distinct `github.com/<owner>/<repo>` strings extracted from all ten shelves, one `git ls-remote --symref` per address, `12`-way parallel, `~4` minutes wall-clock. 🔵 **`p780-B` estimated `5,817` calls at `~3` hours and reached for the `repo:`-qualifier batch trick to avoid it. That trick is what `T810` was, and `T824` refuted it.** 🟢 **The honest instrument turned out to be cheap after all — `ls-remote` parallelises where a rate-limited search API does not.**

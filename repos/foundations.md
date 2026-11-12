@@ -4,6 +4,51 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p784` — **`10` foundational repositories re-graded on the bytes, and a new fingerprint record: the GPL-3.0 canonical occupies a `35,147`–`35,149 B` BAND with three distinct hashes, one of which now reproduces across two unrelated repositories.**
+
+### 🟢 Foundations — permissive, graded on the bytes this pass
+
+| Repository | ★ | Branch · `HEAD` | Grant, graded on the bytes | Why it is foundational |
+|---|---|---|---|---|
+| 🟢 [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | `~78,400★` | `main` · `a509402c0b54` | 🟢 **MIT** `LICENSE` · `1,070 B` · `d116e214adbc` | 🟢 **The fastest-rising education repository of this window** (`+820★` on `2026-11-11`). Build-and-ship AI engineering curriculum |
+| 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **`58,445★`** | `main` · `60fb3bdfddb3` | 🟢 **Apache-2.0** `LICENSE` · `11,408 B` · `cd2f54e1e506` | 🟢 **The reference lifelong-personalised-tutoring agent and this base's longest-running control** — exact for a fourth consecutive pass |
+| 🟢 [`microsoft/AI-For-Beginners`](https://github.com/microsoft/AI-For-Beginners) | `~70,300★` | `main` · `1ff3c870707e` | 🟢 **MIT** `LICENSE` · `1,141 B` · `c2cfccb812fe` | `12`-week, `24`-lesson curriculum. 🔴 **Not to be confused with `microsoft/ai-edu` — same owner, and that one's teaching material is NonCommercial** |
+| 🟢 [`Universidade-Livre/ciencia-da-computacao`](https://github.com/Universidade-Livre/ciencia-da-computacao) | **`21,029★`** | `main` · `b995c118fdb3` | 🟢 **MIT** `LICENSE` · `1,087 B` · `6520b550c69f` | 🟢 **The highest-starred LATAM-origin education repository in this base.** Portuguese-language CS curriculum |
+| 🟢 [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) | `2,630★` | `main` · `cf291652b0da` | 🟢 **MIT** `LICENSE` · `1,106 B` · `aad28612a5b7` | `65` ML/AI problems from real interviews — a ready assessment-item bank |
+| 🟢 [`st3v3nmw/obsidian-spaced-repetition`](https://github.com/st3v3nmw/obsidian-spaced-repetition) | `2,618★` | `main` · `3d5079f3bcd5` | 🟢 **MIT** `LICENSE` · `1,078 B` · `0a84e8f385c6` | 🟢 **The permissive spaced-practice engine.** The Anki stack is AGPL; this is the one a deliverable can embed |
+| 🟢 [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | `1,860★` | `main` · `2efb258370b1` | 🟢 **MIT** `LICENSE` · `1,072 B` · `eaf38a4975eb` | 🟢 **MCP server over `70` Brazilian public-sector APIs** — the integration substrate for Brazilian public education |
+| 🟢 [`EvolvingAgentsLabs/evolving-agents`](https://github.com/EvolvingAgentsLabs/evolving-agents) | `458★` | `main` · `d7b822aec955` | 🟢 **Apache-2.0** `LICENSE` · **`11,357 B`** · **`c71d239df917`** | 🟢 **Orchestration tier.** A director agent that learns a team's conventions from their own repository files |
+| 🟢 [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | `625★` | `main` · `31fd6dbb0c07` | 🟢 **Apache-2.0** `LICENSE` · `11,357 B` · `58d1e17ffe51` | K-12 lesson plans, Socratic tutoring, rubrics, study guides. 🔵 Canonical LENGTH, filled appendix |
+| 🟢 [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) | `205★` | `main` · `1546a7009b01` | 🟢 **MIT** `LICENSE` · `1,065 B` · `86d287c1708f` | 🟢 **The settled LMS integration tier.** HTTP to Moodle's Web Service API — **no GPL linkage to Moodle core** |
+
+### 🟢 A new fingerprint record — the GPL-3.0 canonical is a BAND, not a number
+
+🟢 **Four independent repositories graded GPL-3.0 on the title line across two passes, and they do not share a byte count:**
+
+| Repository | Bytes | `sha256₁₂` | Pass |
+|---|---|---|---|
+| 🔴 [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) · `23,147★` · branch 🔵 **`v2`** · `2900bd8b5a18` | **`35,148`** | **`8b1ba204bb69`** | 🟢 `p784` |
+| 🔴 [`mengxi-ream/read-frog`](https://github.com/mengxi-ream/read-frog) · `10,406★` · `main` · `4d986d28272e` | **`35,149`** | **`3972dc9744f6`** | 🟢 `p784` |
+| 🔴 `lupantano/readingstrip` · `40★` | **`35,149`** | **`3972dc9744f6`** | `p783` |
+| 🔴 `moodle/moodle` and `chamilo` — byte-IDENTICAL to each other | **`35,147`** | `8ceb4b9ee5ad` | `p781` |
+
+🔵 **So the GPL-3.0 canonical spans `35,147`–`35,149 B` with THREE distinct hashes — a `1`–`2` byte spread, the signature of trailing-whitespace and newline handling, not of altered terms.** 🟢 **And `3972dc9744f6` now reproduces EXACTLY across two entirely unrelated repositories in different passes, which is what makes it a genuine canonical print rather than one project's copy.** 🔵 **This is `T836` holding for a second licence family: the grade comes off the title line, and the hash is a provenance marker.** 🔴 **A `±2 B` tolerance is therefore required — an exact-match check against a single remembered GPL-3.0 length would reject two of these four authentic files.**
+
+🟢 **First GPL-2.0 print recorded in this base:** [`portabilis/i-educar`](https://github.com/portabilis/i-educar) · branch 🔵 **`2.12`** · `e0c53f5a305a` · `LICENSE` · **`18,092 B`** · **`8177f9751321`** · title *"GNU GENERAL PUBLIC LICENSE Version 2, June 1991"*. 🔵 **GPL-2.0 is roughly HALF the length of GPL-3.0 — a useful fast discriminator before reading the title line.**
+
+### 🔴 Copyleft and unusable register — real, large, and barred from a deliverable
+
+| Repository | ★ | Grant, graded on the bytes | Disposition |
+|---|---|---|---|
+| 🔴 [`1Panel-dev/MaxKB`](https://github.com/1Panel-dev/MaxKB) | `23,147★` | 🔴 **GPL-3.0** · `35,148 B` · `8b1ba204bb69` | 🔴 Enterprise agent-building platform. 🔵 **Reference architecture only** |
+| 🔴 [`mengxi-ream/read-frog`](https://github.com/mengxi-ream/read-frog) | `10,406★` | 🔴 **GPL-3.0** · `35,149 B` · `3972dc9744f6` | 🔴 Open-source AI language learning and flashcards. 🔵 The closest copyleft analogue to the permissive spaced-practice tier |
+| 🟡 [`ankitects/anki`](https://github.com/ankitects/anki) | `32,754★` | 🟡 **AGPL-3.0-*or-later*** + BSD-3 contributions + per-file CC-BY-4.0 · `LICENSE` is a `1,930 B` NOTICE, not a body · `bde7d05790a0` | 🔴 **AGPL — not in a hosted deliverable.** 🟢 **But it is this base's positive instance for `T819`: a grant that carries its own scope, in a notice file** |
+| 🟡 [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `725★` | 🔴 **GPL-2.0** · `18,092 B` · `8177f9751321` | 🟡 **Integrate ACROSS its API boundary; do not link into it.** Brazil's largest free school-management system |
+
+### 🔴 Alive and ungranted — measured at six filenames, not assumed
+
+🔴 **`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE` and `COPYING.txt` all absent at `HEAD`:** [`Nutlope/llamatutor`](https://github.com/Nutlope/llamatutor) (`2,053★`, `e29ac56679d6`) · [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) (`497★`, `9acaafc718f2`) · `flyboat403/k12-skills` (`41★`, `339a1118e168`) · `RadiantCrystal/SafeTutors` (`0★`, `bb751d955425`) · `dragonpilee/ScholarMate` (`8★`, `fec11e750224`) · [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) (`~67,600★`, branch `master`, `db59a04a8a2c`). 🔴 **The last is widely cited as MIT and this pass could NOT confirm it — reported as unconfirmed, not as MIT, because `T839` denies the per-repository lookup that would settle it.**
+
 ## 🆕 `2026-11-12` · `p783` — **The interop shelf lost its last two QTI addresses and its Open Badges server, and gained a verified replacement for the integration layer this base builds every LMS recipe on. `3` addresses REPAIRED, including the one `27` citations point at.**
 
 🔵 Every row PRIMARY: `branch` · `HEAD` from `git ls-remote --symref`, grant bytes and `sha256₁₂` measured on the file **as served at that branch**, grade read from the **title line** (`T822`). 🔴 **No row below was graded from the claim channel's SPDX field — `T836` shows why.**

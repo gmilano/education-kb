@@ -4,6 +4,56 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p784` — **Eight trends. The load-bearing one is that education's unit of AI delivery has become a PROSE SKILL PACK — which is why the vertical's licensing is structurally unlike software's, and why a software-licence filter mis-grades it.**
+
+### `T1` 🔴 **The asset is prose, so the grant is a content licence — and the claim channel cannot say so**
+
+🟢 **`8` repositories, `~115,000★` combined, every one reporting `NOASSERTION`, real grants running from `CC-BY-4.0` ("even commercially") to `CC-BY-NC-SA-4.0` (barred) to a `25,679 B` bespoke licence.** 🔴 **A shelf filtered on `license.spdx_id` collapses all of them into one "unknown" bucket that contains both assets it should ship and assets it must not.** 🔵 **This is not maintainer sloppiness; it is what the vertical's asset type implies.** 🟢 **The rule is per-ASSET: in `learning-commons-org/evaluators` the code is MIT, the prompts are CC-BY-4.0 and the two corpora are CC-BY-NC-SA-4.0 — three answers in one repository.**
+
+### `T2` 🟢 **The unit of delivery is now a SKILL PACK, not an application**
+
+🔵 **The education finds of this window are overwhelmingly packaged as agent skills rather than deployable apps:** [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) (`975★`, **`165` skills**), [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) (`625★`), [`yoli-mi/good-learning`](https://github.com/yoli-mi/good-learning) (`317★`), [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) (`380★`), `flyboat403/k12-skills` (`41★`). 🟢 **The implication is practical: integration cost collapses — a skill pack drops into an existing agent runtime — while the LICENSING risk rises, because a pack of prose is content.** 🔵 **`T1` and `T2` are the same trend seen from two sides.**
+
+### `T3` 🔴 **The gap between use and sanction is the market, and in North America the faculty are retreating**
+
+🟢 **`88%` of students and `77%` of faculty use AI; `36%` feel their institution encourages it** (Digital Education Council, `2026-07`, `35` countries). 🔴 **A `52`-point gap.** 🔴 **And North American faculty intent to continue FELL `9` points, `76%`→`67%`, year over year — the only declining headline figure in this base, in its largest market.** 🔵 **Demand is settled; permission is not. A studio selling capability is selling into a solved problem.**
+
+### `T4` 🟢 **Purpose-built is now the institutional recommendation, not a vendor pitch**
+
+🟢 **The OECD's `2026` Digital Education Outlook recommends moving BEYOND general-purpose AI tools toward purpose-built educational AI designed for durable learning gains.** 🔵 **That is a direct institutional mandate for composed, vertical stacks over a general chatbot** — and it is the single strongest external endorsement of this base's premise that has been recorded.
+
+### `T5` 🔴 **Consolidation in the integration layer is total, and nothing came back**
+
+🟢 **`14` Moodle-bridge addresses re-probed: `3` alive at byte-identical grants and unmoved `HEAD`s, `11` dead, `0` resurrections.** 🔵 **Two consecutive passes now show the same split. [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) (MIT) is the settled winner, and its design is why — it speaks HTTP to Moodle's own Web Service API, so a studio takes on no GPL linkage to Moodle's core.** 🟢 **Integration-layer bets should go to the survivor; the long tail of LMS bridges is not coming back.**
+
+### `T6` 🔴 **The APAC deployment risk is REVERSAL, and it is measured**
+
+🔴 **South Korea's national AI digital-textbook programme launched in `2025` and was cut back to OPTIONAL material within a year — defeated by parental and teacher objection to screen time and data handling, not by a technical failure.** 🟢 **Singapore pre-empted the same objection by specifying the opposite shape: Primary 4 AI is structured, teacher-supervised, and routed through the institutional Student Learning Space rather than an open platform.** 🔵 **So the risk in the region with the largest mandated classroom population — China all-stage, India from Grade 3 in `2026–27` — is post-launch withdrawal. A stack that cannot show what data it holds is the thing that gets withdrawn.**
+
+### `T7` 🟢 **"LATAM is thin" was an artefact of QUERY LANGUAGE, and it is now refuted**
+
+🔴 **Three passes treated LATAM scarcity as real and blamed star floors.** 🟢 **Swept in Spanish and Portuguese this pass: [`Universidade-Livre/ciencia-da-computacao`](https://github.com/Universidade-Livre/ciencia-da-computacao) `21,029★` MIT · [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) `1,860★` MIT · [`portabilis/i-educar`](https://github.com/portabilis/i-educar) `725★` GPL-2.0, Brazil's largest free school-management system.** 🔴 **`i-educar` at `725★` clears every floor this base uses. It was never hidden by a threshold — it was missed because the sweeps ran in English.** 🔵 **A Brazilian SIS does not describe itself in English, and no star floor was ever going to fix that.**
+
+### `T8` 🔴 **Governance is the product, and four regions now say so independently**
+
+| Region | The governance signal |
+|---|---|
+| 🟢 **North America** | Maryland, Ohio, Florida and Arizona **legally require districts and universities to HOLD an AI policy** — `28`+ states plus DC have issued guidance, with almost no binding curriculum law |
+| 🔴 **EMEA** | **Art. 50 transparency has been live since `2026-08-02`** while most institutions shelved their programmes waiting on the deferred high-risk rules |
+| 🟢 **APAC** | Korea's **AI Basic Act in force `2026-01-22`**; China first to a registration regime |
+| 🔴 **LATAM** | **Brazil: `53%` of administrators use AI, `22%` have guidelines. UNESCO IESALC: `87%` of universities use AI, `26%` hold a strategy, `9%` EVALUATE it** |
+
+🔵 **Every region independently produces the same shape — mandated or expected policy, and no capacity to implement or evaluate it.** 🟢 **The deliverable that sells in all four is an auditable governance layer over tools the institution already runs, not a new tool.**
+
+### 🔴 Declared gaps — searched and not found, which is not the same as absent
+
+| Gap | What was run |
+|---|---|
+| 🔴 **No LATAM-origin AI AGENT** | 🟢 The Spanish/Portuguese sweep returned curricula, a SIS and a public-API MCP server — 🔴 **no LATAM-origin tutoring or grading AGENT above `3★`.** The highest was [`lautioliver/numerika-ai`](https://github.com/lautioliver/numerika-ai) at `3★`. 🔵 **The region produces education SOFTWARE and AI CURRICULA, but this pass found no education AGENT** |
+| 🔴 **EMEA beyond the EU was NOT searched** | 🔴 **No finding published for the UK, the Gulf, Israel, Turkey or Africa.** The one adjacent find, `obadx/quran-muaalem` (`116★`), carries a `25,679 B` bespoke licence and is unusable without legal review |
+| 🔴 **No permissive open-source SIS in ANY region** | 🟢 Every student-information system this base has graded is copyleft: `i-educar` GPL-2.0, Moodle GPL-3.0, Canvas AGPL-3.0, Open edX AGPL-3.0. 🔴 **`AlekSIS` cannot be checked at all — its forge is blocked (`p783-G`)** |
+| 🔴 **`2` highest-value regulatory facts UNRESOLVABLE here** | 🔴 **`eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` and `leg.colorado.gov` are denied `403` at the session gateway AND fail to resolve on the fetch tool.** Two channels, logged by the gateway. 🔵 Not a pass's effort — a session network-settings change |
+
 ## 🆕 `2026-11-12` · `p783` — **The integration layer is consolidating while the agent layer holds still: `11` Moodle bridges died and one MIT survivor took the category, on an architecture that crosses a LICENCE boundary rather than a technical one. Plus the measurement trend this base has to own — two instruments retired in three passes, both for producing nulls that looked like findings.**
 
 ### 🟢 `T1` — Consolidation has reached the INTEGRATION layer, and it is the first layer to shake out

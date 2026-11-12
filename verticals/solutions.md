@@ -4,6 +4,60 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p784` — **A licence family this base had never recorded: `ECL-2.0`, the EDUCATIONAL COMMUNITY LICENSE — an Apache-2.0 derivative written for universities, carried by Sakai and Opencast. It is permissive, and its byte length sits within `~240 B` of canonical Apache-2.0, so a length-based classifier mistakes it for Apache. `10` platforms re-probed; `9` alive, `1` ungranted.**
+
+### 🟢 The vertical's platform layer, every address probed and every grant graded on the bytes
+
+| Platform | Address | Branch · `HEAD` | Grant, graded on the bytes | What it is, and how AI goes on top |
+|---|---|---|---|---|
+| 🔴 **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | `main` · `afbcc55fa1bd` | 🔴 **GPL-3.0** at 🔵 **`COPYING.txt`** · `35,147 B` · `8ceb4b9ee5ad` | 🟢 **The most-deployed LMS across every region in this base.** 🔵 **`L56` again — no `LICENSE` file exists; the grant is at a non-default name.** 🟢 **AI goes on via [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) (MIT) over the Web Service API — no GPL linkage** |
+| 🔴 **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔵 **`master`** · `d3a86602dcf7` | 🔴 **AGPL-3.0** `LICENSE` · `35,136 B` · `e12d78569742` | Large course catalogues, MOOC lineage (MIT + Harvard). 🔴 **AGPL and a heavy DevOps burden.** 🔵 `p783` warned its release ladder moved from heads to tags and changed prefix — confirm versions on tags, not heads |
+| 🔴 **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔵 **`master`** · `1c9f0bb8013e` | 🔴 **AGPL-3.0** `LICENSE` · `34,520 B` · `57c8ff33c9c0` | Modern UI, strong North American higher-ed share. 🔴 **The hardest of the three to operate independently.** 🔵 `p781` read its scope as **`-only`** from a separate `COPYRIGHT` file |
+| 🔴 **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔵 **`master`** · `e137bded10b5` | 🔴 **GPL-3.0** `LICENSE` · `35,147 B` · `8ceb4b9ee5ad` | 🟢 **Easier to self-host than Moodle; strong LATAM and francophone footprint.** Good fit for a smaller institution |
+| 🔴 **ILIAS** | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔵 **`release_11`** · `87a79b237fcc` | 🔴 **GPL-3.0** `LICENSE` · `35,147 B` · `8ceb4b9ee5ad` | 🟢 **The compliance-driven and public-sector choice, German-rooted — an EMEA procurement argument.** 🔵 **Default branch is a RELEASE branch, not `main`/`master`** |
+| 🟢 **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔵 **`master`** · `af576e8b4d32` | 🟢 **ECL-2.0** `LICENSE` · `11,120 B` · `0688f62d04f1` | 🟢 **PERMISSIVE, and the discovery of this pass.** Higher-ed collaboration and learning environment with deep university governance |
+| 🟢 **Opencast** | [`opencast/opencast`](https://github.com/opencast/opencast) | 🔵 **`develop`** · `26fbc9363f07` | 🟢 **ECL-2.0** `LICENSE` · `11,340 B` · `76a975068930` | 🟢 **PERMISSIVE.** Lecture capture and video management. 🔵 `p783` repaired this address off `apereo/opencast`; branch is **`develop`**, confirmed again |
+| 🟢 **OpenOLAT** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🔵 **`master`** · `545a686dd121` | 🟢 **Apache-2.0** `LICENSE` · `10,982 B` · `6dbc5b605ed0` | 🟢 **PERMISSIVE — and the only Apache-2.0 full LMS in this base.** Swiss-rooted, EMEA higher ed. 🔵 `375 B` short of canonical = stripped appendix (`T836`) |
+| 🟢 **Oppia** | [`oppia/oppia`](https://github.com/oppia/oppia) | 🔵 **`develop`** · `bbda308fd5db` | 🟢 **Apache-2.0** `LICENSE` · **`11,358 B`** · **`cfc7749b96f6`** | 🟢 **PERMISSIVE.** Interactive lessons with built-in misconception handling — the closest thing to an open adaptive-learning engine. 🔵 **Its print is EXACTLY `p781`'s apache.org channel print — copied from apache.org, not from GitHub's template** |
+| 🟡 **Brazil SIS — i-educar** | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔵 **`2.12`** · `e0c53f5a305a` | 🔴 **GPL-2.0** `LICENSE` · `18,092 B` · `8177f9751321` | 🟢 **Brazil's largest free school-management system / SIS**, `725★`, pushed `2026-10-29`. 🔴 **Integrate across its API boundary; do not link into it** |
+| 🔴 **Frappe LMS** | [`frappe/lms`](https://github.com/frappe/lms) | 🔵 **`develop`** · `7f7c78b5c436` | 🔴 **NO GRANT FILE at `HEAD`** — absent at all six names | 🔴 **Widely listed as AGPL-3.0; this pass could not confirm it from the repository.** Reported unconfirmed, not AGPL |
+
+### 🟢 `ECL-2.0` — education's own permissive licence, and why a length check misreads it
+
+🟢 **Two independent platforms carry the *"Educational Community License, Version 2.0"* on the title line.** 🔵 **ECL-2.0 is an OSI-approved Apache-2.0 DERIVATIVE, written for universities: its substantive change is to narrow the patent grant to each contributor's own contributions — which is precisely what a university's technology-transfer office needs before it can contribute.** 🟢 **It is permissive and a studio can build on it.**
+
+| Licence | Bytes | `sha256₁₂` | Distance from canonical Apache-2.0 (`11,357 B`) |
+|---|---|---|---|
+| 🟢 **ECL-2.0** — `sakaiproject/sakai` | `11,120` | `0688f62d04f1` | 🔴 **`−237 B`** |
+| 🟢 **ECL-2.0** — `opencast/opencast` | `11,340` | `76a975068930` | 🔴 **`−17 B`** |
+| 🟢 Apache-2.0 canonical (`T836`) | `11,357` | `c71d239df917` | — |
+| 🟢 Apache-2.0 at apache.org — `oppia/oppia` | `11,358` | `cfc7749b96f6` | `+1 B` |
+| 🟢 Apache-2.0, stripped appendix — `OpenOLAT` | `10,982` | `6dbc5b605ed0` | `−375 B` |
+
+🔴 **`opencast`'s ECL-2.0 is `17 B` from canonical Apache-2.0 — closer than two of this base's authentic Apache-2.0 prints are.** 🔵 **So a classifier that grades on length, or on "is it near `11,357`", returns *Apache-2.0* for a DIFFERENT LICENCE.** 🟢 **`T836` already said the grade comes off the title line and the hash is only a provenance marker; `ECL-2.0` is the case that makes the cost of ignoring it concrete** — and in this vertical specifically, because `ECL` exists for education and appears nowhere else.
+
+### 🔴 The structural fact of this layer: there is no permissive SIS, in any region
+
+| Tier | Permissive option | Copyleft reality |
+|---|---|---|
+| 🟢 **LMS / learning platform** | 🟢 **YES — Sakai (ECL-2.0), Opencast (ECL-2.0), OpenOLAT (Apache-2.0), Oppia (Apache-2.0)** | Moodle GPL-3.0, Chamilo GPL-3.0, ILIAS GPL-3.0, Canvas AGPL-3.0, Open edX AGPL-3.0 |
+| 🔴 **Student information system (SIS)** | 🔴 **NONE FOUND, in any region** | `i-educar` GPL-2.0 (Brazil). 🔴 `AlekSIS` (Germany) unreachable — below |
+| 🟢 **LMS↔agent bridge** | 🟢 **YES — `Faixiang/Moodle-MCP` (MIT), `G36maid/moodle-mcp` (MIT), `ictinnovations/ictexam-mcp` (MIT)** | — |
+
+🟢 **This is the seam a studio closes over: the platform stays copyleft and untouched, and the AI work lives in a permissive bridge that speaks to the platform over its own HTTP API.** 🔴 **The one tier with no permissive option at all is the SIS — so a student-record engagement is an integration engagement, never a fork.**
+
+### 🔴 `ACTION p783-G` — AlekSIS: BOTH channels measured, and the question stands UNANSWERED
+
+🔴 **`p783` asked whether `AlekSIS/AlekSIS-Core` migrated forges rather than died, noting AlekSIS is a known German free-software school-information system that self-hosts its forge.** 🟢 **Both channels run this pass:**
+
+| Channel | Result |
+|---|---|
+| 🔴 `github.com/AlekSIS/AlekSIS-Core` | 🔴 **DEAD** — `ls-remote` fails |
+| 🔴 **Its own forge, `edugit.org`** | 🔴 **HTTP `403` to `CONNECT` at the session gateway** — logged by host and timestamp in `recentRelayFailures`. **The `12`th blocked host** |
+| 🔴 Claim channel, `q=AlekSIS` | 🔴 **`122` results and NOT ONE is the project.** Every row is a fuzzy match on a personal account name — `AlekSi/zabbix`, `AleksisBoy/portfolio`, `aleksis-arendt/Differential-Geometry` |
+
+🔵 **The `122`-result page is itself worth recording: a name-shaped query returns a full page of confident, irrelevant rows. An absence here looks exactly like coverage** — the `T825`/`T838` failure mode in a new costume. 🔴 **So AlekSIS stays OUT of this file, and out of the dead register's conclusions, with the reason stated: this base cannot distinguish "left GitHub" from "ended" for any project that self-hosts on a blocked host.** 🟢 **It remains the only candidate EMEA SIS known to this base, and resolving it needs `edugit.org` allowed — a session setting, not a pass's effort.**
+
 ## 🆕 `2026-11-12` · `p783` — **Sakai's ECL-2.0 grade REPRODUCED independently, and it matters because third-party comparison pages read THIS pass still publish "Sakai is Apache 2.0." One vertical address REPAIRED to a branch no recipe would have guessed. And the AI-on-top seam for Moodle changed shape: the plugin route is dead, the API route is alive.**
 
 🔵 Every grade below read from the file **as served at the branch `git ls-remote --symref` reports** — **not** `main` by assumption, because `3` of the platforms on this shelf do not use it.

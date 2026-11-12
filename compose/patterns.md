@@ -4,6 +4,115 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p784` — **Six recipes. `P1` is new and only became possible this pass: `ECL-2.0` plus Apache-2.0 means a FULLY PERMISSIVE education platform stack exists, with no copyleft anywhere in it.**
+
+🔵 **Every component below was probed by `git ls-remote --symref` and graded on its licence bytes this pass or the last. Branches are as measured, not assumed — several are not `main`.**
+
+### 🟢 `P1` — The fully permissive education platform stack *(new; no copyleft anywhere)*
+
+🔴 **Every previous pass of this base assumed the platform tier was copyleft and that the AI work therefore had to sit behind an API boundary.** 🟢 **`ECL-2.0` refutes that for the LMS tier.**
+
+| Tier | Component | Grant | Wiring |
+|---|---|---|---|
+| Learning platform | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) · `master` · `af576e8b4d32` | 🟢 **ECL-2.0** `11,120 B` | The course, roster and gradebook surface. **Forkable** |
+| Adaptive lessons | [`oppia/oppia`](https://github.com/oppia/oppia) · 🔵 `develop` · `bbda308fd5db` | 🟢 **Apache-2.0** `11,358 B` | Interactive lessons with misconception handling. Embed as the practice engine |
+| Lecture capture | [`opencast/opencast`](https://github.com/opencast/opencast) · 🔵 `develop` · `26fbc9363f07` | 🟢 **ECL-2.0** `11,340 B` | Video pipeline; feeds transcripts to the tutor tier |
+| Alternative LMS | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) · 🔵 `master` · `545a686dd121` | 🟢 **Apache-2.0** `10,982 B` | Swap for Sakai where a Java/Swiss-hosted stack is the procurement preference |
+| Orchestration | [`EvolvingAgentsLabs/evolving-agents`](https://github.com/EvolvingAgentsLabs/evolving-agents) · `d7b822aec955` | 🟢 **Apache-2.0** `11,357 B` | Director agent over the tutor, grading and reporting agents |
+| Tutoring | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) · `60fb3bdfddb3` | 🟢 **Apache-2.0** `11,408 B` | Persistent per-learner memory |
+| Spaced practice | [`st3v3nmw/obsidian-spaced-repetition`](https://github.com/st3v3nmw/obsidian-spaced-repetition) · `3d5079f3bcd5` | 🟢 **MIT** `1,078 B` | Scheduling algorithm; the Anki stack is AGPL and is NOT used here |
+| PII boundary | [`microsoft/presidio`](https://github.com/microsoft/presidio) | 🟢 **MIT** | Redaction before any student text leaves the institution |
+
+🟢 **Why it matters commercially: a studio can MODIFY and REDISTRIBUTE this entire stack as part of a closed deliverable.** 🔴 **The Moodle/Canvas/Open edX route cannot be modified and redistributed that way, which is why every earlier pattern in this file routes around them over HTTP.** 🔵 **Estimated `10`–`14` weeks to a working pilot; the long pole is Sakai operations, not the agents.**
+
+### 🟢 `P2` — North America: the district AI governance and audit layer
+
+🔴 **Driver: Maryland (in effect `2026-06-01`), Ohio (`2026-07-01`), Florida, and Arizona HB 4040 legally require districts and universities to HOLD an AI policy — Arizona including detection of unauthorised use. `28`+ states plus DC have issued guidance. None of those districts has engineering capacity.**
+
+| Step | Component | Grant | What it does |
+|---|---|---|---|
+| 1 | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) · `e1b5dfb4631f` | 🟡 **code MIT · prompts CC-BY-4.0** | Rubric-grounded evaluation of AI output. 🔴 **Take the code and the prompts; LEAVE the CLEAR and PERSUADE corpora — they are CC-BY-NC-SA-4.0** |
+| 2 | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) · `31fd6dbb0c07` | 🟢 **Apache-2.0** `11,357 B` | Rubrics, Socratic tutoring and study-guide skills as the sanctioned teacher-facing surface |
+| 3 | [`microsoft/presidio`](https://github.com/microsoft/presidio) | 🟢 **MIT** | Student-data redaction at the boundary — the FERPA-facing control |
+| 4 | [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) · `1546a7009b01` | 🟢 **MIT** `1,065 B` | Reads the district LMS over its Web Service API. 🟢 **No GPL linkage to Moodle core** |
+| 5 | [`EvolvingAgentsLabs/evolving-agents`](https://github.com/EvolvingAgentsLabs/evolving-agents) | 🟢 **Apache-2.0** | Policy-as-configuration: the director enforces per-assignment AI-use rules and writes the audit record |
+
+🔴 **Do NOT sell detection as accuracy.** Arizona's statute requires a *process*; the honest deliverable is an auditable record of which tool touched which student work, with per-assignment disclosure. 🔵 **A classifier that claims to catch cheating will be tested by a parent and will lose.** 🟢 **`6`–`8` weeks.**
+
+### 🟢 `P3` — EMEA: the Article 50 transparency retrofit *(live obligation, today)*
+
+🔴 **Driver: Art. 50 transparency has applied since `2026-08-02` — disclose the AI, mark synthetic teaching material. Most institutions shelved their AI Act programme when the high-risk rules slipped to a reported `2027-12-02`, so the live duty is widely unmet.** 🔴 **Emotion recognition in education has been BANNED since `2025-02` — audit for it and remove it.**
+
+| Step | Component | Grant | What it does |
+|---|---|---|---|
+| 1 | [`nazarli-shabnam/ReadAble`](https://github.com/nazarli-shabnam/ReadAble) · `d8b4a47ad354` | 🟢 **Apache-2.0** `11,357 B` | 🟢 **ON-DEVICE OCR and summarisation** — student work never leaves the device, which answers data residency structurally, not contractually |
+| 2 | [`ContentSquare/readapt`](https://github.com/ContentSquare/readapt) · 🔵 `master` · `c76b44a0b831` | 🟢 **Apache-2.0** | Per-learner typographic adaptation. 🟢 The one corporate-maintained row on the SEND shelf |
+| 3 | [`microsoft/presidio`](https://github.com/microsoft/presidio) | 🟢 **MIT** | Redaction wherever on-device is not achievable |
+| 4 | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) or [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) · 🔵 `release_11` | 🟢 Apache-2.0 / 🔴 GPL-3.0 | 🟢 **OpenOLAT if the stack must stay permissive; ILIAS where public-sector procurement names it** |
+| 5 | Disclosure + marking layer — build | — | Per-interaction "this is an AI system" notice; machine-readable marking on generated teaching material |
+
+🔴 **State the date's provenance to the client.** This base could NOT reach EUR-Lex or the Commission (`403` at the gateway, two channels) — so `2027-12-02` is **secondary-convergent, not primary-verified**. 🟢 **Sell the build window; never sell an exemption.** 🟢 **`6`–`10` weeks for the retrofit.**
+
+### 🟢 `P4` — APAC: the teacher-supervised, data-minimal classroom
+
+🔴 **Driver: Korea's national AI digital-textbook programme was cut to OPTIONAL within a year of launch — defeated by parental and teacher objection to screen time and data handling, not by a technical failure. Singapore specified the opposite shape: structured, teacher-supervised, inside the institutional Student Learning Space, explicitly not open platforms. China mandates AI at every stage; India from Grade 3 in `2026–27`.**
+
+| Step | Component | Grant | What it does |
+|---|---|---|---|
+| 1 | [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) | 🟢 **MIT** | Keeps the learner inside the institutional LMS — the Singapore shape |
+| 2 | [`ictinnovations/ictexam-mcp`](https://github.com/ictinnovations/ictexam-mcp) · `5d7d8fe78b39` | 🟢 **MIT** `1,114 B` | Exams, gradebooks and **item analysis** — the assessment read the Moodle servers do not cover |
+| 3 | [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) · `e01d2f7647b0` | 🟢 **MIT** `1,065 B` | 🟢 **Handout provenance on every answer.** Traceability IS the consent argument |
+| 4 | [`microsoft/presidio`](https://github.com/microsoft/presidio) | 🟢 **MIT** | Data minimisation at the boundary — the thing Korea could not show |
+| 5 | Teacher-in-the-loop gate — build | — | No learner-facing generation without a teacher-visible record. 🔴 **Non-negotiable: this is the control whose absence ended the Korean rollout** |
+
+🔵 **Ship a data inventory as a first-class deliverable, not an annex.** 🟢 **`8`–`12` weeks.**
+
+### 🟢 `P5` — LATAM: in-language delivery on the installed base
+
+🔴 **Driver: Brazil — `53%` of administrators use AI, `22%` have guidelines; MEC published a national reference framework in `2026`. Mexico — SEP's `10` recommendations (`2026-04`, from `1.5M` students and `166k`+ teachers) are not binding, and `76.7%` of public-institution students do not know whether any guideline exists. UNESCO IESALC: `87%` of the region's universities use AI, `9%` evaluate it.**
+
+| Step | Component | Grant | What it does |
+|---|---|---|---|
+| 1 | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) · 🔵 **`2.12`** · `e0c53f5a305a` | 🔴 **GPL-2.0** `18,092 B` | 🟢 **Brazil's largest free school-management system — the installed base.** 🔴 **Integrate ACROSS its API boundary. Do not link into it** |
+| 2 | [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) · `2efb258370b1` | 🟢 **MIT** `1,072 B` | 🟢 `70` Brazilian public-sector APIs — census, school registry, public data the reporting layer needs |
+| 3 | [`institutohumai/cursos-python`](https://github.com/institutohumai/cursos-python) · 🔵 `master` | 🟢 **CC-BY-4.0, "even commercially"** | 🟢 **Teacher training material ALREADY IN SPANISH, commercially reusable with attribution — not translated from English** |
+| 4 | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) · 🔵 `master` | 🔴 GPL-3.0 | Where no LMS is installed: strong LATAM footprint, easier to self-host than Moodle. 🟢 Or **Sakai (ECL-2.0)** to keep the stack permissive |
+| 5 | Governance-and-evaluation layer — build | — | 🟢 **Build to SEP's `10` recommendations before they bind, and to MEC's framework in Brazil.** Institutional guidelines as deployable configuration + the evaluation step `91%` of the region's universities skip |
+
+🟢 **The differentiator is language, not model.** 🔴 **`T7`: this base spent three passes calling LATAM thin because it queried in English.** 🟢 **`6`–`10` weeks.**
+
+### 🟢 `P6` — The licence-triage gate for the education vertical *(the `T838` remedy, as a reusable step)*
+
+🔴 **`T838`: in education the asset is prose, so the grant is a content or split licence with no software SPDX id, and the claim channel reports `NOASSERTION`. `8` repositories, `~115,000★`, every one `NOASSERTION`, real grants from fully commercial to barred.** 🟢 **Run this gate before any education repository enters a deliverable:**
+
+```bash
+# 1. Existence — the ONLY reliable channel on this base (T824/T835).
+#    github.com HTML returns 403 through the proxy; the per-repo API is denied (T839).
+git ls-remote --symref "https://github.com/$slug" HEAD     # -> branch + HEAD, never guessed
+
+# 2. Grant bytes — probe SIX names; the grant is often not at LICENSE (Moodle: COPYING.txt).
+for f in LICENSE LICENSE.md LICENSE.txt COPYING LICENCE COPYING.txt; do
+  curl -sS -L -w '%{http_code}' -o lic "https://raw.githubusercontent.com/$slug/HEAD/$f"
+done
+
+# 3. GRADE ON THE TITLE LINE (T822/T836). Never on byte length:
+#    ECL-2.0 at 11,340 B is 17 B from canonical Apache-2.0 (11,357 B) — a DIFFERENT licence.
+head -3 lic
+```
+
+🟢 **Then apply the per-ASSET rule, because a repository can carry three answers at once:**
+
+| What the bytes say | Ships in a client deliverable? |
+|---|---|
+| 🟢 MIT · Apache-2.0 · BSD · **ECL-2.0** · **CC-BY-4.0** | 🟢 **Yes** (attribution for CC-BY) |
+| 🔴 **CC-BY-SA** | 🔴 Only if the deliverable itself can be ShareAlike |
+| 🔴 **CC-BY-NC / NC-SA** · Microsoft ToU "non-commercial" | 🔴 **Never** |
+| 🔴 GPL / AGPL | 🔴 **Integrate across an API boundary; never link** |
+| 🔴 Bespoke *(e.g. `quran-muaalem`, `25,679 B`)* · no grant file at any of six names | 🔴 **Legal review, or drop** |
+| 🟡 **SPLIT** *(`evaluators`: code MIT / prompts CC-BY-4.0 / corpora CC-BY-NC-SA-4.0)* | 🟡 **Grade EACH asset separately** |
+
+🔴 **The gate's whole value is that it catches what a `license.spdx_id` filter cannot: it would have DROPPED `institutohumai/cursos-python` (commercially reusable) and SHIPPED `microsoft/ai-edu`'s NonCommercial teaching material.**
+
 ## 🆕 `2026-11-12` · `p783` — **One recipe RETIRED and rebuilt from scratch: the Moodle bridge every LMS recipe in this base depended on is `11`-for-`11` dead, and its replacement crosses a licence boundary that makes the deliverable closeable for the first time. Plus a new SEND recipe, a LATAM recipe built on code that exists, and a one-day grant gate.**
 
 🔵 **Every address in every recipe below was re-resolved on `git ls-remote --symref` THIS pass, and every grant was graded on the bytes served at the branch the symref reports.** 🔴 **`3` of the components named below are not on `main`** — `opencast/opencast` is `develop`, `ContentSquare/readapt` and `sakaiproject/sakai` are `master`. 🟢 A recipe that pins `main` on those three gets nothing.

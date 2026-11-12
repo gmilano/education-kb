@@ -4,6 +4,36 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p784` — **New this window: a `975★` education skill pack that is `CC-BY-SA`, not software; a `78,400★` MIT curriculum rising `+820★/day`; and `ECL-2.0`, a permissive licence family this base had never seen.**
+
+🔵 **Appended. Nothing below this section was altered.**
+
+### 🟢 Rising, and usable
+
+| Agent / pack | Address | ★ | Grant, graded on the bytes | Why it is new |
+|---|---|---|---|---|
+| 🟢 **ai-engineering-from-scratch** | [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | **`~78,400★`** | 🟢 **MIT** · `1,070 B` · `d116e214adbc` | 🟢 **`+820★` on `2026-11-11` alone — the fastest-rising education repository of this window.** Ship-focused AI engineering curriculum |
+| 🟢 **evolving-agents** | [`EvolvingAgentsLabs/evolving-agents`](https://github.com/EvolvingAgentsLabs/evolving-agents) | `458★` | 🟢 **Apache-2.0** · `11,357 B` · `c71d239df917` | 🟢 A director agent that **learns a team's conventions from their own repository files** — the orchestration tier a teaching stack was missing |
+| 🟢 **universal-examprep-skill** | [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | `380★` | 🟢 **MIT** · `1,065 B` · `21f44893f051` | 🟢 **Cross-session memory with handout PROVENANCE to suppress hallucination.** The anti-fabrication tier |
+| 🟢 **good-learning** | [`yoli-mi/good-learning`](https://github.com/yoli-mi/good-learning) | `317★` | 🟢 **MIT** · `1,064 B` · `ab76adc704d0` | Study plans, daily lessons, **mistake review**, LaTeX PDF output |
+| 🟢 **live-classroom** | [`internetphysics/live-classroom`](https://github.com/internetphysics/live-classroom) | `103★` | 🟢 **MIT** · `1,072 B` · `59aab99d6ddd` | 🟢 **LLM-planned lessons rendered just-in-time as a continuous channel** — generative curriculum delivery, not retrieval |
+| 🟡 **evaluators** | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | `88★` | 🟡 **SPLIT:** code **MIT**, prompts **CC-BY-4.0**, corpora **CC-BY-NC-SA-4.0** · `1,615 B` · `86c7be78af8b` | 🟢 **Evaluates AI output against trusted educational rubrics** — the grading-quality tier. 🔴 **Take the code and prompts; leave the two corpora** |
+
+### 🔴 Rising, and NOT usable — the licence is the story
+
+| Repository | ★ | Claim channel | The bytes |
+|---|---|---|---|
+| 🔴 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **`975★`** | 🔴 `NOASSERTION` | 🔴 **CC-BY-SA-4.0** · `1,230 B` · `f952182df4eb`. **`165` evidence-grounded skills for teachers and school leaders — the largest education skill pack of this window, and ShareAlike** |
+| 🔴 [`microsoft/ai-edu`](https://github.com/microsoft/ai-edu) | `14,146★` | 🔴 `NOASSERTION` | 🔴 **SPLIT: teaching material is Microsoft ToU, *"non-commercial … without monetization"*; code is MIT** · `4,806 B` · `b71159ea7c15` |
+| 🔴 [`obadx/quran-muaalem`](https://github.com/obadx/quran-muaalem) | `116★` | 🔴 `NOASSERTION` | 🔴 **A BESPOKE `25,679 B` licence — "QURAN MUAALEM LICENSE (QML) Version 1.0"** · `0d0d60d058d4` |
+| 🔴 [`Nutlope/llamatutor`](https://github.com/Nutlope/llamatutor) | `2,053★` | 🔴 `NONE` | 🔴 **No grant file at any of six names.** The most-starred ungranted tutor in this base |
+
+🔵 **Four of the window's most prominent education finds, `~17,300★` between them, and not one is usable as-is. `3` of the `4` report `NOASSERTION` and the restriction is only visible in the bytes** — see `T838` in [`agents/top.md`](../agents/top.md).
+
+### 🟢 Stable — consolidation held, second consecutive pass
+
+🟢 **`Faixiang/Moodle-MCP` (MIT, `1,065 B` · `86d287c1708f`) remains the canonical Moodle bridge.** 🟢 **`14` addresses re-probed: `3` alive at unmoved `HEAD`s and byte-identical grants, `11` dead, `0` resurrections.** 🟢 **`HKUDS/DeepTutor` `58,445★`, `11,408 B` · `cd2f54e1e506` — exact for a fourth consecutive pass.**
+
 ## 🆕 `2026-11-12` · `p783` — **The week a whole category DIED and nobody noticed: `11` Moodle-MCP bridges, the connective tissue between every agent on this shelf and the world's most-deployed LMS, are gone — and a `205★` MIT replacement arrived that is architecturally better than all of them. Plus the assistive-reading shelf this base has been blind to for `783` passes, because the query shape hid it.**
 
 🔵 **The structural signal of this window is a DEATH, not an arrival, and it is in the integration layer rather than the agent layer.** 🔴 **Eleven Moodle bridge repositories that this base shelved now fail `git ls-remote`:** `DeepLearningHarness-Team/Moodle-MCP`, `Hiroya-319/moodle-mcp-server`, `JaipuriaAILabs/Moodle-MCP`, `Marcus2012/MCP_Moodle`, `NiccoloSalvini/mcp-moodle-staff`, `NiccoloSalvini/mcp-moodle-teacher`, `NmaaAlhawary/MCP-Moodle`, `OGjoyce/mcp-moodle`, `alnyx-dev/PGEK-moodle-mcp`, `enovation/moodle-local_mcp_helper`, `jmolpea/moodle-block_openaiagent`. 🔵 **That is the single largest dead cluster in the base and it is not a coincidence of eleven abandonments — it is a shake-out.** 🟢 **Late 2025 and early 2026 produced a Moodle-MCP server per enthusiast; late 2026 has consolidated onto one that is actually engineered.**

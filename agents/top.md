@@ -4,6 +4,96 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p784` — **`T838`: in education the asset is PROSE, so the grant is a CONTENT or SPLIT licence — which has no software SPDX id and reports `NOASSERTION`. `8` repositories, `~115,000★` combined, every one of them `NOASSERTION`, and their real grants run from fully permissive to BARRED. A shelf filtered on `license.spdx_id` cannot tell those apart.**
+
+🟢 **Controls run BEFORE any verdict shipped.** 🔵 `DeepTutor` `11,408 B` · `cd2f54e1e506` **exact — fourth consecutive pass** · `k12-teacher-skills` `11,357 B` · `58d1e17ffe51` exact against `p783` · `Faixiang/Moodle-MCP` `1,065 B` · `86d287c1708f` exact · `G36maid/moodle-mcp` `1,064 B` · `5da1fff0a1db` exact · `ictexam-mcp` `1,114 B` · `32fa441f2467` exact · **`2` planted negative controls (`zzz-not-a-real-org-xyz/nope-nope`, `Priyamakeshwari/TeachGPT`) FAILED as designed.** 🟢 **All `3` of `p783`'s predictions tested; all `3` CONFIRMED.** 🔴 **`2` of `p783`'s `7` actions are REFUSED ON CHANNEL and reported as refused, not discharged.**
+
+### 🔴 `T838` — the education vertical's grant is not a software grant, and `NOASSERTION` is its signature
+
+🔴 **Every row below reports `NOASSERTION` on the claim channel. Not one of their real grants is readable from that field.** 🟢 Graded on the bytes this pass, `raw.githubusercontent.com/<slug>/HEAD/<file>`:
+
+| Repository | ★ | Grant file · bytes · `sha256₁₂` | What the bytes actually say | Ships in a client deliverable? |
+|---|---|---|---|---|
+| 🔴 [`microsoft/ai-edu`](https://github.com/microsoft/ai-edu) | `14,146★` | `LICENSE.md` · `4,806 B` · `b71159ea7c15` | 🔴 **SPLIT.** Tutorial Materials under **Microsoft Terms of Use — *"non-commercial or personal use only without monetization"***; code under **MIT**; `mnist_extension.py` under **Apache-2.0** | 🔴 **CODE ONLY.** The teaching material is NonCommercial |
+| 🔴 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `975★` | `LICENSE` · `1,230 B` · `f952182df4eb` | 🔴 **CC-BY-SA-4.0** — ShareAlike. `165` evidence-grounded skills for teachers and school leaders | 🔴 **Only if the deliverable itself can be ShareAlike.** Highest-star education-specific skill pack in this base |
+| 🔴 [`obadx/quran-muaalem`](https://github.com/obadx/quran-muaalem) | `116★` | `LICENSE` · `25,679 B` · `0d0d60d058d4` | 🔴 **A BESPOKE licence — "QURAN MUAALEM LICENSE (QML) Version 1.0", `25 KB` of custom terms** | 🔴 **No. Legal review, not a grade** |
+| 🔴 [`CMUCTAT/CTAT`](https://github.com/CMUCTAT/CTAT) | `125★` | `LICENSE.md` · `7,295 B` · `aabb4a450d2b` | 🔴 Bespoke CMU academic software licence. Cognitive Tutor Authoring Tools — real ITS authoring lineage | 🔴 **No.** Reference for ITS design only |
+| 🟡 [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | `88★` | `LICENSE.md` · `1,615 B` · `86c7be78af8b` | 🟡 **THREE-WAY SPLIT:** 🟢 code **MIT** · 🟢 prompts + settings **CC-BY-4.0** · 🔴 the annotated **CLEAR** and **PERSUADE 2.0** corpora **CC-BY-NC-SA-4.0** | 🟡 **Code and prompts yes; the two corpora never.** Evaluates AI output against trusted educational rubrics |
+| 🟢 [`institutohumai/cursos-python`](https://github.com/institutohumai/cursos-python) | `624★` | `LICENSE.md` · `3,283 B` · `62f1853816f3` | 🟢 **CC-BY-4.0, and the file says so in terms: *"for any purpose, even commercially"*** | 🟢 **YES, with attribution.** Instituto Humai, Argentina — a LATAM-origin asset |
+| 🟡 [`ankitects/anki`](https://github.com/ankitects/anki) | `32,754★` | `LICENSE` · `1,930 B` · `bde7d05790a0` | 🟡 **AGPL-3.0-*or-later*** + BSD-3 for user contributions + per-file CC-BY-4.0 (`statsbg.py`) | 🔴 **AGPL — not in a hosted deliverable.** 🔵 But see below: this file CARRIES ITS SCOPE |
+| 🔴 [`harvard-edge/cs249r_book`](https://github.com/harvard-edge/cs249r_book) *(`p783`)* | `30,155★` | `LICENSE.md` · `631 B` · `4452118f3ca0` | 🔴 **CC-BY-NC-SA-4.0** | 🔴 **BARRED.** Carried forward unchanged |
+
+🔵 **`T838`, stated: education's primary asset is prose — lessons, rubrics, corpora, skill packs — so its grant is a CONTENT licence (`CC-*`) or a SPLIT grant that licenses code and material separately. Neither has a software SPDX id, so the claim channel emits `NOASSERTION`.** 🔴 **A shelf that filters on `license.spdx_id` reads all eight as one undifferentiated "unknown" class — and that class contains both a freely commercial CC-BY-4.0 asset it would wrongly DROP and two NonCommercial assets it would wrongly SHIP.** 🟢 **The decision rule is per-asset, not per-repository:** `CC-BY-4.0` ships · `CC-BY-SA` ships only into a ShareAlike deliverable · `CC-BY-NC*` never ships · a SPLIT grant must be read **per asset**, because in `evaluators` the code, the prompts and the corpora carry three different answers.
+
+🔵 **This is the highest `NOASSERTION` density of any shelf in this base, and it is not an accident of sloppy maintainers — it is what the vertical's asset type implies.**
+
+### 🟢 `T819` CONFIRMED on a positive instance — a grant that DOES carry its scope
+
+🔴 **`p781`'s `T819` found `744` distinct GPL-family grants in this base and `0` carrying a `-only`/`-or-later` scope, and predicted scope lives in a per-file notice or a separate `NOTICE`/`COPYRIGHT`, never in the licence body.** 🟢 **`ankitects/anki` is the positive instance that confirms the mechanism:** its `1,930 B` `LICENSE` is **not a licence body at all** — it is a notice that *states* the scope (`"version 3 or later"`), names the BSD-3 contribution carve-out, and enumerates per-file exceptions. 🔵 **The scope was always reachable; it was never in the place a body-grading instrument looks.**
+
+### 🟢 New permissive agent shelf — graded on the bytes, every row MIT or Apache-2.0
+
+| Agent | Address | Branch · `HEAD` | Grant, graded on the bytes | Claim channel | What it is |
+|---|---|---|---|---|---|
+| 🟢 **evolving-agents** | [`EvolvingAgentsLabs/evolving-agents`](https://github.com/EvolvingAgentsLabs/evolving-agents) | `main` · `d7b822aec955` | 🟢 **Apache-2.0** `LICENSE` · **`11,357 B`** · **`c71d239df917`** | Apache-2.0 · `458★` · pushed `2026-11-06` | 🟢 **A director agent that learns a team's conventions by reading their `CLAUDE.md`.** The orchestration tier for a multi-agent teaching stack |
+| 🟢 **ai-engineering-from-scratch** | [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | `main` · `a509402c0b54` | 🟢 **MIT** `LICENSE` · `1,070 B` · `d116e214adbc` | MIT · `~78,400★` · pushed `2026-11-12` | 🟢 **The single fastest-rising education repository of this window** (`+820★/day`, `2026-11-11`). Curriculum for shipping AI engineering |
+| 🟢 **good-learning** | [`yoli-mi/good-learning`](https://github.com/yoli-mi/good-learning) | `main` · `1255c4d7f0b6` | 🟢 **MIT** `LICENSE` · `1,064 B` · `ab76adc704d0` | MIT · `317★` · pushed `2026-09-24` | Structured study plans, daily lessons, **mistake review** and LaTeX PDF output. The spaced-practice tier |
+| 🟢 **universal-examprep-skill** | [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | `main` · `e01d2f7647b0` | 🟢 **MIT** `LICENSE` · `1,065 B` · `21f44893f051` | MIT · `380★` · pushed `2026-10-27` | 🟢 **Cross-session memory with handout provenance to suppress hallucination** — the anti-fabrication tier, and the property an exam-prep deliverable is judged on |
+| 🟢 **live-classroom** | [`internetphysics/live-classroom`](https://github.com/internetphysics/live-classroom) | `main` · `5a07110fa4e0` | 🟢 **MIT** `LICENSE` · `1,072 B` · `59aab99d6ddd` | MIT · `103★` · pushed `2026-09-02` | 🟢 **LLM-planned lessons rendered just-in-time as a continuous channel.** Generative-curriculum delivery, not retrieval |
+| 🟢 **AI-For-Beginners** | [`microsoft/AI-For-Beginners`](https://github.com/microsoft/AI-For-Beginners) | `main` · `1ff3c870707e` | 🟢 **MIT** `LICENSE` · `1,141 B` · `c2cfccb812fe` | MIT · `~70,300★` | `12`-week, `24`-lesson AI curriculum. 🔵 **Contrast with `microsoft/ai-edu` above — same owner, and the grants are NOT the same** |
+| 🟢 **AI-Builder-Python100** | [`guanyuchery-rgb/AI-Builder-Python100`](https://github.com/guanyuchery-rgb/AI-Builder-Python100) | `main` · `4812b540e7fd` | 🟢 **MIT** `LICENSE` · `1,090 B` · `4b32511989c7` | MIT · `77★` · pushed `2026-06-10` | `100`-day Python curriculum for AI, data, quant and agent projects |
+| 🟢 **obsidian-spaced-repetition** | [`st3v3nmw/obsidian-spaced-repetition`](https://github.com/st3v3nmw/obsidian-spaced-repetition) | `main` · `3d5079f3bcd5` | 🟢 **MIT** `LICENSE` · `1,078 B` · `0a84e8f385c6` | MIT · `2,618★` · pushed `2026-11-01` | Spaced repetition over notes. 🟢 **The permissive alternative to the Anki stack**, which is AGPL |
+| 🟢 **TorchLeet** | [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) | `main` · `cf291652b0da` | 🟢 **MIT** `LICENSE` · `1,106 B` · `aad28612a5b7` | MIT · `2,630★` · pushed `2026-11-06` | `65` ML/AI interview problems. The assessment-item bank for technical upskilling |
+| 🟢 **vimtutor-sequel** | [`micahkepe/vimtutor-sequel`](https://github.com/micahkepe/vimtutor-sequel) | `main` · `ba6b0c1bf0ae` | 🟢 **MIT** `LICENSE` · `1,067 B` · `5a98220ec6b3` | MIT · `566★` · pushed `2026-11-07` | Advanced Vim lessons. 🔵 Included as a **worked model of in-tool scaffolded practice**, not for its subject |
+
+### 🔴 Alive, and measured UNUSABLE — no grant file at any of six names
+
+| Repository | ★ | Measured | Verdict |
+|---|---|---|---|
+| 🔴 [`Nutlope/llamatutor`](https://github.com/Nutlope/llamatutor) | `2,053★` | 🟢 ALIVE `main` · `e29ac56679d6` · 🔴 **no grant at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`, `COPYING.txt`** | 🔴 **Unusable at `2,053★`.** An AI personal tutor on Llama 3.1 — the most-starred ungranted tutor in this base |
+| 🔴 [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | `497★` | 🟢 ALIVE `main` · `9acaafc718f2` · 🔴 no grant at any of the six | 🔴 Unusable. A 501(c)(3) delivering multilingual AI tutoring |
+| 🔴 [`flyboat403/k12-skills`](https://github.com/flyboat403/k12-skills) | `41★` | 🟢 ALIVE `main` · `339a1118e168` · 🔴 no grant at any of the six | 🔴 Unusable. K-12 lesson planning and differentiation |
+| 🔴 [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | `~67,600★` | 🟢 ALIVE `master` · `db59a04a8a2c` · 🔴 **no grant file at HEAD at any of the six** | 🔴 **Widely cited as MIT; this pass could not find a grant file to confirm it.** 🔵 Reported as unconfirmed, not as MIT |
+
+### 🔴 `ACTION p783-B` DISCHARGED — and its PREMISE IS REFUTED. `T840`: the base's placeholder detector is feeding on the base's OWN diagnostic prose
+
+🔴 **`p783` ordered the two template-leakage addresses removed, calling them "a real repository NAME under a placeholder OWNER — the exact example-row-compiled-as-an-entity defect".** 🟢 **Audited this pass, every occurrence in the live base, and the order rests on a misreading.**
+
+| Where the strings occur in the published base | Occurrences | What they actually are |
+|---|---|---|
+| 🟢 `README.md` | `8` | 🟢 **Diagnostic prose** — `p781`–`p783` writing *about* the defect. `README.md:21838` says so in terms: *"came out of the extractor as ABSENT. **It is not a row**"* |
+| 🟢 `intel/open-gaps.md`, `intel/trends.md`, `intel/measured-unusable.md` | `8` | 🟢 **Diagnostic prose** — the action text and the dead-class classification |
+| 🟢 `agents/trending.md`, `repos/trending.md` | `23` | 🟢 **Diagnostic prose and `4` classification TABLE ROWS** — and all `4` are rows *about* the placeholder, e.g. `\| **PLACEHOLDER** \| 1 \| your-username/SafeTutors — a documentation placeholder \|` |
+| 🔴 **Rows publishing either string as a repository ENTITY** | 🟢 **`0`** | 🟢 **None. Anywhere.** `grep` for a pipe-delimited row carrying either as an address returns `0` in `README.md` and, in the two trending files, only the `4` classification rows above |
+
+🔵 **`T840`, stated: a base that documents a bad address in prose RE-PLANTS that address for its own next extraction sweep.** 🔴 **The `10` "placeholder addresses the base PUBLISHES as data" that `p783` reported were not data. They were `p781`'s, `p782`'s and `p783`'s own write-ups being re-scraped by the sweep that each of those passes ran.** 🟢 **The loop is self-sustaining and the count can only grow: every pass that honestly reports the defect plants the string one more time.** 🔵 **This is the same shape as `p783`'s own regex harvesting `repos/HKUDS` out of an `api.github.com` URL that `p783` had itself printed — a base measuring its own text and reading it as the world.**
+
+🟢 **Remedies, and the right one is the cheap one:** 🔴 deleting the diagnostic prose would destroy the record of a real defect and is refused; 🟢 **the extractor must exclude addresses that occur inside the base's own diagnostic context, OR a placeholder must be written so it never re-parses as an address.** 🟢 **Nothing was removed from the base this pass, because there was nothing to remove — and that is the discharge.**
+
+🟢 **The repair sub-order — "a real `SafeTutors` and a real `scholarmate` may well exist" — answered, with a negative:**
+
+| String | Real repositories that exist | Worth to this base |
+|---|---|---|
+| `SafeTutors` | 🔴 **`2` results total. Only [`RadiantCrystal/SafeTutors`](https://github.com/RadiantCrystal/SafeTutors)** — ALIVE `main` · `bb751d955425` · `0★` · 🔴 no grant at any of the six names | 🔴 **Nothing.** `0★`, ungranted |
+| `scholarmate` | 🟡 `100` results, all trivial. Best: [`dragonpilee/ScholarMate`](https://github.com/dragonpilee/ScholarMate) `8★` 🔴 no grant · [`Raofin/ScholarMate`](https://github.com/Raofin/ScholarMate) `2★` 🟢 MIT `1,073 B` · `c38ce631e500` (branch 🔵 **`master`**) | 🔴 **Nothing.** The only granted candidate sits at `2★` |
+
+🔵 **A template placeholder carries a plausible repository NAME precisely because the template author picked one** — so "find the real owner" lands on a `0`–`8★` project, as it did both times here. 🟢 **The `6` legitimate query-syntax placeholders (`OWNER/REPO`, `x/y`, `O/R`, `GIT_USER_ID/GIT_REPO_ID`, `org/repo`, `owner/name`) were LEFT in place, as `p783` directed.**
+
+### 🟢 `PREDICTION p783-1` CONFIRMED — Moodle-bridge consolidation held exactly
+
+🟢 **All `14` addresses re-probed. `3` ALIVE at byte-identical grants and unmoved `HEAD`s; `11` still DEAD.** 🔵 The prediction was that the survivor persists and the dead stay dead; both halves hold, and no dead address returned.
+
+| Outcome | Addresses |
+|---|---|
+| 🟢 **ALIVE, `HEAD` and grant bytes identical to `p783`** | `Faixiang/Moodle-MCP` (`1546a7009b01`), `G36maid/moodle-mcp` (`18bd1777eb0b`), `ictinnovations/ictexam-mcp` (`5d7d8fe78b39`) |
+| 🔴 **Still DEAD (`11`)** | `DeepLearningHarness-Team/Moodle-MCP`, `Hiroya-319/moodle-mcp-server`, `JaipuriaAILabs/Moodle-MCP`, `Marcus2012/MCP_Moodle`, `NiccoloSalvini/mcp-moodle-staff`, `NiccoloSalvini/mcp-moodle-teacher`, `NmaaAlhawary/MCP-Moodle`, `OGjoyce/mcp-moodle`, `alnyx-dev/PGEK-moodle-mcp`, `enovation/moodle-local_mcp_helper`, `jmolpea/moodle-block_openaiagent` |
+
+🟢 **`Faixiang/Moodle-MCP` remains the canonical Moodle bridge:** MIT, speaks HTTP to Moodle's own Web Service API, so there is **no GPL linkage** to Moodle's core.
+
+### 🔴 `T839` — the claim channel exists only in AGGREGATE; the per-repository endpoint is denied
+
+🔴 **`gh api repos/<owner>/<name>` returns HTTP `403` — *"GitHub access to this repository is not enabled for this session"*** — for any repository outside this session's attached scope. 🟢 **`gh api search/repositories` is NOT scope-bound and serves every repository.** 🔵 **So a single repository's claimed licence, star count or default branch can be obtained only by finding that repository inside a search result; it can never be looked up directly.** 🟢 **This explains and vindicates `p783`'s discipline of never calling `api.github.com/repos/*`: on this base it is not a preference, it is the only thing that works.** 🔴 **Operational consequence: `labmlai`'s claimed grant above could not be checked, because the one repository in question did not surface in a search page.**
+
 ## 🆕 `2026-11-12` · `p783` — **`ACTION p782-B` DISCHARGED on the authoritative channel: the base's dead-address figure is `1.86%`, not the `6.5%` `p781` published — inflated `3.4×`. `55` of the `179` "dead" addresses were never addresses at all. And a SECOND instrument is refuted: a multi-term claim-channel query ANDs its terms and returns an empty set indistinguishable from absence — which was hiding an Apache-2.0 K-12 shelf at `625★`.**
 
 🟢 **Every address the published base displays was probed this pass — `5,910` distinct slugs, one `git ls-remote --symref` call each, `12`-way parallel, `~4` minutes.** 🔵 `T824` established `git ls-remote` as the only channel on this base that can assert existence; this is the first pass to actually run it over the whole base rather than a sample.
