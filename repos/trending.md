@@ -1,8 +1,56 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-11
+updated: 2026-11-12
 ---
+
+## 🆕 `2026-11-11` · `p777` — **The UK state's own `829`-repository education estate, and the instrument defects that nearly got published**
+
+🔵 **APPEND-ONLY.** New section at the top; everything below is history and is untouched.
+
+### 🟢 Trending by measurement, not by impression
+
+| Repo | Branch · `HEAD` | Grant on the bytes | Claim channel | Signal |
+|---|---|---|---|---|
+| [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) | `master` · `7c6715c29548` | 🟢 **MIT** `LICENSE.md` `1,120 B` · `92cd3e89e133` | MIT · **`5,786★`** · `401` forks | 🆕 **`0` → `5,786★` in `8` days.** One `SKILL.md`; no runtime, no dependencies |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main` · `60fb3bdfddb3` | 🟢 **Apache-2.0** `11,408 B` · `cd2f54e1e506` | Apache-2.0 · **`58,317★`** · `7,085` forks | 🔴 **Press is `8k`–`13k` stars stale** and one source still says MIT. Measured: Apache-2.0 |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop` · `2470b9dd0042` | 🔴 **GPL-3.0** `35,149 B` · `3972dc9744f6` | GPL-3.0 · **`41,202★`** · `13,497` forks | 🟢 Pushed the day of this pass. The ERP substrate under `frappe/education` |
+| [`frappe/frappe`](https://github.com/frappe/frappe) | `develop` · `0c68cdeff2e6` | 🟢 **MIT** `1,118 B` · `bc6001a54ffc` | MIT · **`11,088★`** | 🟢 **MIT framework under a GPL-3.0 application** — the licence seam to build on |
+| [`topoteretes/cognee`](https://github.com/topoteretes/cognee) | `main` · `8853378eae53` | 🟢 **Apache-2.0** `11,344 B` · `a471e34908f5` | — | 🆕 Graph memory. New to these shelves |
+| [`TencentCloud/TencentDB-Agent-Memory`](https://github.com/TencentCloud/TencentDB-Agent-Memory) | 🔴 `feat/server_team` · `42d4cde50c5a` | 🟢 **MIT** `1,315 B` · `bcaf06dea1a6` | — | 🆕 APAC-origin memory hub. 🔴 Default branch is a feature branch |
+| [`vectorize-io/hindsight`](https://github.com/vectorize-io/hindsight) | `main` · `7cec128b8fdb` | 🟢 **MIT** `1,075 B` · `01fde0bedf83` | — | Outcome-updated memory |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `master` · `03def9186838` | 🔴 **GPL-3.0** `35,147 B` · `8ceb4b9ee5ad` | GPL-3.0 · `1,023★` | 🟢 Pushed the day of this pass. Strong LATAM/EMEA institutional footprint |
+| [`dhis2/dhis2-core`](https://github.com/dhis2/dhis2-core) | `master` · `9dfe53b779d7` | 🟢 **BSD-3-Clause** `1,517 B` · `4fc00af93f1b` | BSD-3-Clause · `361★` | 🟢 Pushed the day of this pass. Permissive public-sector platform |
+| [`inducer/relate`](https://github.com/inducer/relate) | `main` · `e201e11b860c` | 🟢 **MIT** `1,145 B` · `66ff89ebf05f` | 🟡 `NOASSERTION` · `438★` | 🟢 Pushed the day of this pass. University course platform |
+
+### 🟢 The find of the window for an EMEA engagement: `DFE-Digital`
+
+🔵 **`829` repositories** in the UK Department for Education's own GitHub organisation, measured on the search channel this pass. The top of it by stars, with grants graded on the bytes where probed:
+
+| Repo | Licence | Stars | Last push |
+|---|---|---|---|
+| [`DFE-Digital/apply-for-teacher-training`](https://github.com/DFE-Digital/apply-for-teacher-training) | 🟢 **MIT** · `1,094 B` · `1018ba112e86` | `38★` | **`2026-11-11`** |
+| `DFE-Digital/rails-template` | 🔴 NONE | `34★` | `2026-06-24` |
+| `DFE-Digital/technical-guidance` | 🟡 `NOASSERTION` | `27★` | `2026-11-09` |
+| [`DFE-Digital/teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies) | 🟢 **MIT** · `1,092 B` · `c561ea849ed6` | `27★` | **`2026-11-11`** |
+| `DFE-Digital/get-into-teaching-app` | 🟢 MIT | `25★` | **`2026-11-11`** |
+| `DFE-Digital/terraform-azurerm-container-apps-hosting` | 🟢 MIT | `19★` | **`2026-11-11`** |
+| `DFE-Digital/schools-experience` | 🟢 MIT | `16★` | **`2026-11-11`** |
+| [`DFE-Digital/claim-additional-payments-for-teaching`](https://github.com/DFE-Digital/claim-additional-payments-for-teaching) | 🟢 **MIT** · `1,099 B` · `7d38b1b17881` | `15★` | **`2026-11-11`** |
+| [`DFE-Digital/check-free-school-meals-eligibility-parent`](https://github.com/DFE-Digital/check-free-school-meals-eligibility-parent) | 🔴 **NO-GRANT** after `28` names | `3★` | `2026-11-02` |
+
+🔵 **Low stars, high value.** `15★` on a service that computes a statutory entitlement for a whole teaching workforce is not a popularity signal — it is a **reference implementation of a government determination**, under MIT, maintained today. 🔴 **Star count is the wrong instrument for public-sector supply**, and this base has spent several passes unable to measure stars at all.
+
+### 🔴 The two instrument defects this pass caught before publishing anything
+
+🔵 Published here because `p772`–`p776` each found that most "defects" an instrument raises are its own, and the record of that is worth more than the verdict.
+
+| | Defect | What it would have published | How it was caught |
+|---|---|---|---|
+| **`D1`** | The grant prober took the **first** matching filename as the grant | 🔴 `ghoulmann/IEP-IPP` graded `NOT-IN-CANONICAL-SET` on a `1,188 B` *notice* that itself says the grant is in `COPYING` — **contradicting `p776`'s correct `GPL-2.0` verdict** | Control **C4**: re-measure a row `p776` already published and require the bytes to match. They did not. Contract corrected to probe every name and adjudicate on the payload that carries a family marker |
+| **`D2`** | The bare-owner scanner tested display text with a loose `owner/repo` pattern | 🔴 `3` "convertible" citations that do not exist — the pattern was matching the display string `` `github.com/flysheep-ai` `` | Hand-read of all three hits before any edit was made |
+
+🟢 **`2` instrument defects, `1` that would have falsified correct prior work, `0` published as findings.** 🔵 **Five consecutive passes with the same shape.**
 
 ## 🆕 `2026-11-11` · `p776` — **The named gate `gate-claims` (`ACTION p775-A`), run from scratch over every shelf: `3,714` claim-carrying repositories, `59` apparent contradictions, `0` real. And the case-fold census (`ACTION p775-D`), which corrects `p775`'s own number upward.**
 

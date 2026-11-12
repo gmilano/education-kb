@@ -1,0 +1,67 @@
+slug	default_branch	head_sha12	grant_file	bytes	sha256_12	family_on_bytes	flags	channel
+moodle/moodle	main	afbcc55fa1bd	COPYING.txt	35147	8ceb4b9ee5ad	GPL-3.0		ref+raw
+pykt-team/pykt-toolkit	main	ccbaf37b07e3	LICENSE	1066	f5f955194636	MIT		ref+raw
+gmilano/this-repo-does-not-exist-p777	-	-	-	-	-	ABSENT-OR-PRIVATE	synthetic-control	ref
+ghoulmann/IEP-IPP	master	96b5cf92a2f5	COPYING	18351	1cfece9336f0	GPL-2.0	ALTERED-VINTAGE	ref+raw
+ChelseaSchool/MyIEP	LastWorking	87c5df4ab619	LICENSE.txt	18351	1cfece9336f0	GPL-2.0	ALTERED-VINTAGE	ref+raw
+postgis/postgis	master	c87677a620f8	LICENSE.TXT	18092	8177f9751321	GPL-2.0	no-vintage-marker	ref+raw
+elgg/elgg	7.x	c51aaa07390f	LICENSE	17173	7188c83d8764	GPL-2.0	no-vintage-marker	ref+raw
+learnosity/learnosity-qti	develop	8ebee8850596	LICENSE	18264	e3c23a194748	GPL-2.0	no-vintage-marker	ref+raw
+tutornew/OpenTutor	main	41e769432aaf	-	-	-	NO-GRANT-AT-ROOT	28-names-probed	ref+raw
+RoundTable02/socrates-skill	main	becb2e51fe7e	LICENSE	1069	39c287accada	MIT	DUPLICATE-PAYLOAD	ref+raw
+bevibing/socrates-skill	main	becb2e51fe7e	LICENSE	1069	39c287accada	MIT	DUPLICATE-PAYLOAD	ref+raw
+JEFF7712/claude-tutor	main	473586fa8e57	LICENSE	1062	0bc943d7464d	MIT		ref+raw
+sebastianelvis/hammer	main	c5b86153b156	LICENSE	1068	f50ea7289295	MIT		ref+raw
+dimayip/learn-x	main	35c8bf9fb46e	LICENSE	1064	a66d5329c6ba	MIT		ref+raw
+HKUDS/DeepTutor	main	60fb3bdfddb3	LICENSE	11408	cd2f54e1e506	Apache-2.0		ref+raw
+microsoft/ai-agents-for-beginners	main	4bcf574c06d3	LICENSE	1141	c2cfccb812fe	MIT		ref+raw
+ashishpatel26/500-AI-Agents-Projects	main	e48f78ccf182	LICENSE	1070	2108a479cb7f	MIT		ref+raw
+huggingface/agents-course	main	9b3d6b3887bc	LICENSE	11357	c71d239df917	Apache-2.0		ref+raw
+janestreet/socratic-tutor	-	-	-	-	-	ABSENT-OR-PRIVATE	name-guess-T779	ref
+janestreet/skills	-	-	-	-	-	ABSENT-OR-PRIVATE	name-guess-T779	ref
+janestreet/claude-skills	-	-	-	-	-	ABSENT-OR-PRIVATE	name-guess-T779	ref
+janestreet/agent_skills	master	7c6715c29548	LICENSE.md	1120	92cd3e89e133	MIT	NEW-AT-p777	ref+raw
+nuwaves/socratic-tutor	main	2e34df6e23bd	LICENSE	1143	67111b9eb08b	MIT	NEW-AT-p777	ref+raw
+openedx/edx-platform	master	d3a86602dcf7	LICENSE	35136	e12d78569742	AGPL-3.0		ref+raw
+instructure/canvas-lms	master	1c9f0bb8013e	LICENSE	34520	57c8ff33c9c0	AGPL-3.0		ref+raw
+sakaiproject/sakai	master	af576e8b4d32	LICENSE	11120	0688f62d04f1	ECL-2.0		ref+raw
+learningequality/kolibri	develop	2d29598fc66f	LICENSE	1097	3c056b34a476	MIT		ref+raw
+openeducat/openeducat_erp	19.0	46a5d7d40082	LICENSE	8241	528f84036800	LGPL-3.0	incomplete-payload-p776	ref+raw
+frappe/education	develop	61408d3da518	license.txt	19	1fcecf395312	NOT-IN-CANONICAL-SET	19-byte-pointer-GPL-v3	ref+raw
+francoisjacquet/rosariosis	mobile	e4cd20a48bf1	LICENSE	15214	d954e14e5c75	GPL-2.0	non-default-branch-T728	ref+raw
+ILIAS-eLearning/ILIAS	release_11	fca533556af8	LICENSE	35147	8ceb4b9ee5ad	GPL-3.0	byte-identical-to-moodle	ref+raw
+opencast/opencast	develop	26fbc9363f07	LICENSE	11340	76a975068930	ECL-2.0		ref+raw
+CAHLR/OATutor	main	fae8cc474484	LICENSE	1105	5baaaf977a28	MIT		ref+raw
+h5p/h5p-php-library	master	2d7f937a03c9	LICENSE.txt	35146	c53a65c2fd56	GPL-3.0	1-byte-delta-0-word-delta	ref+raw
+bigbluebutton/bigbluebutton	v4.0.x-develop	13b55d45c046	LICENSE	7652	e3a994d82e64	LGPL-3.0		ref+raw
+GibbonEdu/core	v31.0.00	329ca2f07b49	LICENSE	35121	93178a43d6d3	GPL-3.0		ref+raw
+Vacademy-io/vacademy_platform	main	e715a28c72e5	LICENSE	34523	0d96a4ff68ad	AGPL-3.0		ref+raw
+DaRL-GenAI/instructional_agents	main	f835eb45f508	LICENSE	1067	4e085d826a64	MIT		ref+raw
+GeminiLight/awesome-ai-llm4education	main	48f2d16ca617	-	-	-	NO-GRANT-AT-ROOT	28-names-probed	ref+raw
+Open-TutorAi/open-tutor-ai-CE	main	196c547291da	LICENSE	1531	57c341d09920	BSD-3-Clause		ref+raw
+thedotmack/claude-mem	main	57fff541c6a7	LICENSE	11358	cfc7749b96f6	Apache-2.0		ref+raw
+vectorize-io/hindsight	main	7cec128b8fdb	LICENSE	1075	01fde0bedf83	MIT		ref+raw
+topoteretes/cognee	main	8853378eae53	LICENSE	11344	a471e34908f5	Apache-2.0	NEW-AT-p777	ref+raw
+mem0ai/mem0	main	f1791daa86d4	LICENSE	11349	0bbcbe931c35	Apache-2.0		ref+raw
+TencentCloud/TencentDB-Agent-Memory	feat/server_team	42d4cde50c5a	LICENSE	1315	bcaf06dea1a6	MIT	NEW-AT-p777;non-default-branch	ref+raw
+datosgobar/portal-andino	master	3126ff94f72b	LICENSE	1109	79d4edfa11f8	MIT	reproduces-p776	ref+raw
+datosgobar/georef-ar-api	master	3e4655be0920	LICENSE	1109	ee8033dc560b	MIT	reproduces-p776	ref+raw
+CeibalUy/Ceibal	main	b104e714d7da	-	-	-	NO-GRANT-AT-ROOT	reproduces-p776	ref+raw
+huayra-linux/huayra	-	-	-	-	-	ABSENT-OR-PRIVATE	name-guess-T779	ref
+escuelaslinux/escuelaslinux	-	-	-	-	-	ABSENT-OR-PRIVATE	name-guess-T779	ref
+gleducar/gleducar	-	-	-	-	-	ABSENT-OR-PRIVATE	name-guess-T779	ref
+duanyytop/agents-radar	master	9a8e85330eff	LICENSE	1062	332a95a412b5	MIT		ref+raw
+DFE-Digital/claim-additional-payments-for-teaching	master	11adcbfe499b	LICENSE	1099	7d38b1b17881	MIT	NEW-AT-p777;state-published-determination	ref+raw
+DFE-Digital/check-free-school-meals-eligibility-parent	main	11eb3a47f9f6	-	-	-	NO-GRANT-AT-ROOT	NEW-AT-p777;28-names-probed	ref+raw
+DFE-Digital/apply-for-teacher-training	main	0c7c7ae13a70	LICENSE	1094	1018ba112e86	MIT	NEW-AT-p777	ref+raw
+DFE-Digital/teaching-vacancies	main	0956b5abae2b	LICENSE	1092	c561ea849ed6	MIT	NEW-AT-p777	ref+raw
+Linpaws7/fsm-eligibility-england-2021-2026	main	ef0ef21b2911	LICENSE	1071	0d339f35312b	MIT	NEW-AT-p777	ref+raw
+bakervictor93/eligibility-checking-web-prototype	main	96b4e6d17821	LICENSE	35149	3972dc9744f6	GPL-3.0	NEW-AT-p777	ref+raw
+LearningLocker/learninglocker	master	5fec948a823e	LICENSE	35141	589ed823e9a8	GPL-3.0	backlog-closed-p777	ref+raw
+chamilo/chamilo-lms	master	03def9186838	LICENSE	35147	8ceb4b9ee5ad	GPL-3.0	backlog-closed-p777	ref+raw
+dhis2/dhis2-core	master	9dfe53b779d7	LICENSE	1517	4fc00af93f1b	BSD-3-Clause	backlog-closed-p777	ref+raw
+frappe/erpnext	develop	2470b9dd0042	license.txt	35149	3972dc9744f6	GPL-3.0	backlog-closed-p777	ref+raw
+frappe/frappe	develop	0c68cdeff2e6	license.txt	1118	bc6001a54ffc	MIT	backlog-closed-p777	ref+raw
+inducer/relate	main	e201e11b860c	LICENSE	1145	66ff89ebf05f	MIT	backlog-closed-p777;claim-channel-abstains	ref+raw
+moodlehq/moodleapp	main	02b713f13acc	LICENSE	11358	cfc7749b96f6	Apache-2.0	backlog-closed-p777	ref+raw
+yetanalytics/xapipe	main	c2327d7c1466	LICENSE	11357	c71d239df917	Apache-2.0	backlog-closed-p777	ref+raw

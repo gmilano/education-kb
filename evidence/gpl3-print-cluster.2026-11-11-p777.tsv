@@ -1,0 +1,9 @@
+slug	grant_bytes	sha256_12	word_ratio_vs_chamilo	words_added	words_removed	deontic_tokens_touched	delta_description
+chamilo/chamilo-lms	35147	8ceb4b9ee5ad	1.000000	0	0	NONE	reference print
+moodle/moodle	35147	8ceb4b9ee5ad	1.000000	0	0	NONE	byte-identical
+ILIAS-eLearning/ILIAS	35147	8ceb4b9ee5ad	not-diffed	0	0	NONE	byte-identical by sha
+h5p/h5p-php-library	35146	c53a65c2fd56	1.000000	0	0	NONE	1-byte whitespace/line-ending only
+frappe/erpnext	35149	3972dc9744f6	0.999117	5	5	NONE	http->https x4; gnu.org/philosophy -> gnu.org/licenses
+bakervictor93/eligibility-checking-web-prototype	35149	3972dc9744f6	not-diffed	5	5	NONE	same payload as erpnext by sha
+LearningLocker/learninglocker	35141	589ed823e9a8	0.999470	2	4	NONE	appendix placeholders: <program> <name> of <author> -> <project> <fullname>
+GibbonEdu/core	35121	93178a43d6d3	not-diffed	-	-	not-measured	carried for a later pass

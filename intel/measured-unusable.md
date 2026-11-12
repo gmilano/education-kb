@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-11
+updated: 2026-11-12
 ---
 ## 🆕 `p772` — `2026-11-11` — **the base-wide address sweep: `79` displayed addresses that do not resolve and `7` that resolve to an EMPTY repository, from a probed population of `5,646`**
 

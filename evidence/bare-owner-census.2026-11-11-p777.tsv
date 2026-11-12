@@ -1,0 +1,6 @@
+measure	value	note
+bare_owner_link_instances	186	markdown links to https://github.com/<owner> with no repo path segment, 11 curated shelves
+distinct_owners	90	
+instances_whose_display_names_a_repo	0	ACTION p776-C predicted 29; measured 0 after D2 was corrected
+instances_whose_display_names_only_the_owner	186	the owner-citation CONVENTION (T788)
+excluded_non_citation_paths	orgs,topics,search,trending,...	not repository citations at all

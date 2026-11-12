@@ -1,8 +1,59 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-11
+updated: 2026-11-12
 ---
+
+## 🆕 `2026-11-11` · `p777` — **A quant firm takes the education-agent crown in eight days, and the week's real infrastructure story is memory**
+
+🔵 **APPEND-ONLY.** This section is new at the top; every dated section below it is the history and is left exactly as it was.
+
+### 🟢 Signal 1 — the most-starred education artefact of this window is a single markdown file
+
+[`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) · `master` · `7c6715c29548` · **MIT** `LICENSE.md` `1,120 B` · `92cd3e89e133` · © *Jane Street Group, LLC* · **`5,786★` · `401` forks** · created and pushed **`2026-11-03`**.
+
+🔵 **Eight days from publication to `5,786★`.** The repository holds one skill, `socratic-tutor/SKILL.md`, read first-hand this pass: diagnostic placement, `4`–`10` subskills, a `0`–`5` level map, one question at a time, spaced review, final assessment — plus an **intent guard** that refuses to start a tutoring loop on a one-off question (*"A false start costs the user an unwanted quiz; a confirmation costs one word"*).
+
+🔴 **Why this is a trend and not a curiosity.** Three things in it are new together: the **publisher** is a quantitative trading firm with no education product; the **artefact** is a prompt contract, not software, so it carries no runtime, no dependencies and no deployment; and the **licence is MIT on prose**, which makes the pedagogy itself the forkable asset. 🟢 Its first derivative is already measurable — [`nuwaves/socratic-tutor`](https://github.com/nuwaves/socratic-tutor) (`main` · `2e34df6e23bd`, **MIT** `1,143 B` · `67111b9eb08b`, pushed `2026-11-09`), with its own bytes and its own copyright line, declaring its lineage.
+
+### 🔴 Signal 2 — the discovery surface is inflating this class, and it is provable
+
+A single search for Socratic tutoring skills returned [`RoundTable02/socrates-skill`](https://github.com/RoundTable02/socrates-skill) and [`bevibing/socrates-skill`](https://github.com/bevibing/socrates-skill) as two findings. 🔴 **They are one payload:** identical `HEAD` (`becb2e51fe7e`), identical grant bytes (**MIT** `1,069 B` · `39c287accada`), one copyright holder (*© 2026 RoundTable02*), and only one of the two is returned by the claim channel at all (`360★`, pushed `2026-04-02`).
+
+🟢 **`T793`: count payloads, not listings.** `p776` proved the same shape on the hash for `MyIEP`/`IEP-IPP`. Two consecutive passes, two inflated supplies, same instrument — the `sha256` of the grant file is the cheapest duplicate detector this base has.
+
+### 🟢 Signal 3 — agent MEMORY is the week's infrastructure class, and it is the enabler of lifelong tutoring
+
+🔵 Every one of these was graded on its own bytes this pass. **None is education software** — which is exactly why they matter: persistent learner state is what separates a tutor from a chatbot, and `DeepTutor`'s *lifelong tutoring* claim rests on this layer.
+
+| Repo | Branch · `HEAD` | Grant on the bytes | Note |
+|---|---|---|---|
+| [`topoteretes/cognee`](https://github.com/topoteretes/cognee) | `main` · `8853378eae53` | 🟢 **Apache-2.0** · `11,344 B` · `a471e34908f5` | 🆕 **Not previously on these shelves.** Memory as a graph built from ingested documents — the closest fit to a curriculum-shaped learner model. |
+| [`TencentCloud/TencentDB-Agent-Memory`](https://github.com/TencentCloud/TencentDB-Agent-Memory) | 🔴 **`feat/server_team`** · `42d4cde50c5a` | 🟢 **MIT** · `1,315 B` · `bcaf06dea1a6` | 🆕 New to these shelves, APAC-origin. 🔴 **Its default branch is a feature branch** — `p773-B`'s class again (`103` of `183` addresses that pass). Tooling that assumes `main` clones nothing. |
+| [`vectorize-io/hindsight`](https://github.com/vectorize-io/hindsight) | `main` · `7cec128b8fdb` | 🟢 **MIT** · `1,075 B` · `01fde0bedf83` | Memory that updates itself from outcomes. |
+| [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem) | `main` · `57fff541c6a7` | 🟢 **Apache-2.0** · `11,358 B` · `cfc7749b96f6` | Already held; re-verified on the bytes. |
+| [`mem0ai/mem0`](https://github.com/mem0ai/mem0) | `main` · `f1791daa86d4` | 🟢 **Apache-2.0** · `11,349 B` · `0bbcbe931c35` | Already held; re-verified on the bytes. |
+
+🔵 **Permissive across the board** — `3` Apache-2.0, `2` MIT, `0` copyleft. For a studio this is the one layer of the education stack with no licence friction at all.
+
+### 🔴 Signal 4 — a correction to the press, and it is `13` thousand stars wide
+
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) · `main` · `60fb3bdfddb3` · **Apache-2.0** `11,408 B` · `cd2f54e1e506` · **`58,317★` · `7,085` forks** · pushed `2026-11-07`.
+
+🔴 **October 2026 write-ups put it at `45,224` and `50,224★`, and one source still claims MIT.** Measured this pass: **Apache-2.0 on the bytes**, `58,317★` on the claim channel. 🟢 **Both of this base's own channels agree with each other and neither agrees with the press.**
+
+### 🟢 Signal 5 — the state as publisher
+
+[`DFE-Digital`](https://github.com/DFE-Digital) — the UK Department for Education's own organisation — carries **`829` repositories** on the search channel, with `MIT` on its live national services and **pushes dated the day of this pass**: `apply-for-teacher-training` (MIT, `38★`), `teaching-vacancies` (MIT, `27★`), `get-into-teaching-app` (MIT, `25★`), `schools-experience` (MIT, `16★`), `claim-additional-payments-for-teaching` (MIT, `15★`). 🔴 **The exception is the one that touches a household: `check-free-school-meals-eligibility-parent` carries NO grant after `28` case-aware names.**
+
+### 🔵 What did NOT show up, stated so silence is not mistaken for coverage
+
+| Looked for | Result |
+|---|---|
+| A new LATAM-origin education agent | 🔴 **None.** `huayra-linux/huayra`, `escuelaslinux/escuelaslinux`, `gleducar/gleducar` all `ABSENT-OR-PRIVATE` as named — and per `T779` that is **not** evidence those projects do not exist, only that those names do not resolve. The regional press names `EducatuX` (last updated `2019`), `Escuelas Linux` and `Huayra` — **Linux distributions, not AI.** |
+| A new APAC-origin education agent | 🟡 **One, and it is infrastructure, not education** — `TencentDB-Agent-Memory`. |
+| An EMEA-origin education **agent** | 🔴 **None.** What EMEA produced this window is **government services** (`DFE-Digital`), not agents. |
+| An open implementation of a pupil-premium or disadvantage allocation | 🔴 **`total_count: 0`** on the repository-search channel. |
 
 ## 🆕 `2026-11-11` · `p776` — **What is new on the agent shelf this week, probed rather than reported. 🔴 Every star count in the sources below is unverifiable in this session: `api.github.com`, `github.com` HTML and `codeload` are all `403`. Where a figure appears it is attributed to its source and marked second-hand.**
 

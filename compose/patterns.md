@@ -1,8 +1,80 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-11
+updated: 2026-11-12
 ---
+
+## 🆕 `p777` — **Four recipes, each wired from repositories this pass graded on their own bytes**
+
+🔵 Every address below was probed on the ref channel for existence and default branch, and its grant read and graded on the raw channel this pass. Where a component is copyleft it says so, because that changes the delivery shape and not just the paperwork.
+
+### 🟢 `P777-1` — Entitlement determination as reviewable code *(EMEA public sector · `6`–`8` weeks)*
+
+🔵 **Why this exists:** `ACTION p776-I` set out to test whether the decision layer is ever published. It is — once — and this recipe is how to reuse it.
+
+**Fork the shape, not the policy.** [`DFE-Digital/claim-additional-payments-for-teaching`](https://github.com/DFE-Digital/claim-additional-payments-for-teaching) (`master` · `11adcbfe499b`, **MIT** `1,099 B` · `7d38b1b17881`) organises a statutory determination as:
+
+```
+app/models/policies/<policy_name>/eligibility.rb           # the rule, one class per statute
+app/models/policies/<policy_name>/policy_eligibility_checker.rb
+spec/models/policies/<policy_name>/eligibility_spec.rb     # the rule's test, beside the rule
+app/models/journeys/eligibility_checker.rb                 # orchestration across policies
+```
+
+**Wiring.**
+1. One `eligibility.rb` per named statutory basis — five exist upstream (`student_loans`, `early_career_payments`, `early_years_payments`, `further_education_payments`, `international_relocation_payments`). **Do not collapse them into a rules engine**: the one-class-per-statute shape is what makes a determination auditable against the instrument that authorises it.
+2. Every rule ships with its spec in the mirrored path. A determination without a test beside it is not reviewable.
+3. Add an **`enforcement_forum`** field to the decision record (`T797`): the body that decides and the body that enforces can differ, as England's SEND route proves.
+4. 🔴 **Do not wire in [`DFE-Digital/check-free-school-meals-eligibility-parent`](https://github.com/DFE-Digital/check-free-school-meals-eligibility-parent)** — `NO-GRANT-AT-ROOT` after `28` case-aware names. Read it for the interaction design; reimplement the logic.
+5. Public-body deployer? **Article 27 fundamental-rights impact assessment applies now**, not in 2027.
+
+🔴 **Where it does NOT transfer:** a determination about a child. The same shape is legally fine, but `T792` says there is no upstream to fork, and Annex III point 3(c) obligations bite **`2 December 2027`**.
+
+### 🟢 `P777-2` — Socratic tutor with durable learner state *(any region · `3`–`4` weeks)*
+
+**Components, all permissive, all graded this pass:**
+
+| Role | Component | Grant on the bytes |
+|---|---|---|
+| Pedagogical contract | [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) `master` · `7c6715c29548` | 🟢 **MIT** `1,120 B` · `92cd3e89e133` |
+| Learner state across sessions | [`topoteretes/cognee`](https://github.com/topoteretes/cognee) `main` · `8853378eae53` | 🟢 **Apache-2.0** `11,344 B` · `a471e34908f5` |
+| or outcome-updated memory | [`vectorize-io/hindsight`](https://github.com/vectorize-io/hindsight) `main` · `7cec128b8fdb` | 🟢 **MIT** `1,075 B` · `01fde0bedf83` |
+| Mastery estimation | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) `main` · `ccbaf37b07e3` | 🟢 **MIT** `1,066 B` · `f5f955194636` |
+| Proven ITS reference | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) `main` · `fae8cc474484` | 🟢 **MIT** `1,105 B` · `5baaaf977a28` |
+| Offline / low-connectivity delivery | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) `develop` · `2d29598fc66f` | 🟢 **MIT** `1,097 B` · `3c056b34a476` |
+
+**Wiring.**
+1. Take `socratic-tutor/SKILL.md` as the **interaction contract**, not as inspiration: diagnostic placement, `4`–`10` subskills, a `0`–`5` level per subskill, one question per turn, spaced review, final assessment.
+2. 🟢 **Keep its intent guard.** The skill refuses to start a tutoring loop on a one-off question and asks one clarifying question when intent is ambiguous. **That guard is the difference between a tutor and an irritant**, and it is the part a reimplementation usually drops.
+3. Persist the `0`–`5` skill map in `cognee` (graph-shaped, so prerequisites are edges) or `hindsight` (outcome-updated). **Do not keep it in the prompt** — that is what makes the tutor amnesiac between sessions.
+4. Replace the skill's heuristic level estimate with a **BKT or DKT estimator from `pykt-toolkit`** once you have interaction logs; `OATutor` is the reference for how BKT drives item selection in a deployed ITS.
+5. Ship through `Kolibri` where connectivity is intermittent — LATAM rural, APAC rural, refugee contexts.
+6. 🔴 **EU deployment:** disclose the AI system (transparency duties live since `2 August 2026`) and **do not add engagement or affect detection** — emotion inference in education has been prohibited since February 2025.
+
+### 🟢 `P777-3` — Permissive seam into a copyleft LMS estate *(EMEA / LATAM institutional · `4`–`6` weeks)*
+
+🔵 **The problem this solves:** every major LMS on these shelves is GPL, AGPL or LGPL, so the instinct to fork is a licence trap. 🟢 **Every one of them has a permissive adjacent component, and that is where the work goes.**
+
+| Estate | 🔴 Copyleft core | 🟢 Permissive seam to build in |
+|---|---|---|
+| Moodle (`7,604★`) | `moodle/moodle` **GPL-3.0** `35,147 B` · `8ceb4b9ee5ad` | [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) **Apache-2.0** `11,358 B` · `cfc7749b96f6` + Moodle web services |
+| Frappe / ERPNext (`41,202★`) | `frappe/erpnext` **GPL-3.0** `35,149 B` · `3972dc9744f6`; `frappe/education` a **`19`-byte pointer** to GPL v3 | [`frappe/frappe`](https://github.com/frappe/frappe) **MIT** `1,118 B` · `bc6001a54ffc` — build apps on the framework |
+| Open edX | `openedx/edx-platform` **AGPL-3.0** `35,136 B` · `e12d78569742` | Integrate over APIs and LTI; **never host a modified fork** |
+| Learning records | `LearningLocker/learninglocker` **GPL-3.0**, 🔴 unmaintained since `2024-05-30` | [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) **Apache-2.0** `11,357 B` · `c71d239df917` |
+| Ministry-scale data | — | [`dhis2/dhis2-core`](https://github.com/dhis2/dhis2-core) **BSD-3-Clause** `1,517 B` · `4fc00af93f1b` |
+
+**Wiring.** Agent logic and any client-specific IP live in the permissive component. The copyleft core is reached over its public API only. 🔴 **Two traps this base has measured:** `francoisjacquet/rosariosis` defaults to **`mobile`**, so a clone assuming `master` silently takes the wrong tree (`T728`); and `openeducat/openeducat_erp`'s grant **promises the appended GPL text and omits it**, so flag it before any licence review rather than after.
+
+### 🟢 `P777-4` — Two-channel licence gate for any client deliverable *(any region · `2`–`3` days)*
+
+🔵 **Built from this pass's own instruments, and it costs almost nothing to run.**
+
+1. **Ref channel — existence and default branch.** `git ls-remote --symref https://github.com/<slug> HEAD`. 🔴 Never assume `main`: this pass alone hit `mobile`, `19.0`, `v31.0.00`, `release_11`, `v4.0.x-develop`, `LastWorking`, `7.x`, `feat/server_team`, `develop`.
+2. **Raw channel — grade the bytes.** Probe **all** `28` case-aware grant filenames against the resolved default branch; record `bytes` + `sha256₁₂`. 🔴 **Adjudicate on the payload that carries a family marker, not on the first filename that returns `200`** — `D1` this pass: `ghoulmann/IEP-IPP`'s root `LICENSE` is a `1,188 B` *notice* that points at `COPYING`, and taking it as the grant produced a false verdict.
+3. **Claim channel — corroborate, never decide.** `gh api -X GET search/repositories -f q='<name> user:<owner>'` returns `license.spdx_id`, `stargazers_count`, `forks_count`, `pushed_at`. 🔴 **It may never override the bytes.** `NOASSERTION` = GitHub found a grant it could not map; `NONE` = none found. Measured over `25` rows this pass: `24` agree, `1` abstains, `0` contradict.
+4. **Duplicate detection, free.** Equal grant `sha256₁₂` + equal `HEAD` ⇒ **one payload** regardless of how many owners list it (`T793`).
+5. **Vintage guard.** `59 Temple Place` / `02111-1307` ⇒ a pre-2005 FSF print. 🟢 **Report it as `ALTERED-VINTAGE`, which is explicitly NOT an altered grant** — calling an old print "altered" alarms a legal reviewer for nothing (`ACTION p776-D`).
+6. **Deontic guard.** Diff at word level against the canonical text and fail only when a **negation, modal or scope word** differs. 🟢 Proved useful this pass: `erpnext`'s `5`-word delta is `http`→`https`, touches `0` deontic tokens, and is clean (`T794`).
 
 ## 🆕 `p776` — **`5` patterns from the SEND register. Every repository named below was probed on the ref channel and its grant graded on the raw channel THIS pass; no pattern names a component this pass did not verify.**
 

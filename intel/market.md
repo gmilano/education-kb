@@ -1,8 +1,108 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-11
+updated: 2026-11-12
 ---
+
+## 🆕 `p777` — **The disadvantage-funding determination market, placed by region (`ACTION p776-I`). 🟢 The register's regional result: the determination layer IS forkable in EMEA today, under MIT, from the ministry that operates it — and `T792` says why that is true there and nowhere else.**
+
+🔵 **All four mandated regional legs ran and all four returned facts.** 🔴 **Two regional cells came back empty and are written down as empty below, because an informed gap is information and silence looks exactly like coverage.**
+
+🔴 **Primary legal text: SEVENTH consecutive pass at zero, and the cause is now NAMED rather than observed.** Six passes recorded *"`eur-lex.europa.eu` does not resolve"* as if it were a site outage. Measured this pass through **two independent tools**: `eur-lex.europa.eu`, `www.gov.uk`, `law.go.kr`, `elaw.klri.re.kr`, `cbse.gov.in`, `www.bcn.cl` and `www.in.gov.br` all fail identically, and the fetch tool names the cause — **the host is outside this session's allowed network domains.** 🟢 **So this is a session NETWORK-ALLOWLIST boundary, not a per-site failure, and no pass can work around it: the remedy is a change to the session's network settings.** 🔵 **`T796`: every legal cell on these shelves is secondary-sourced by construction, and must be labelled as such until that allowlist changes.** The channels that *are* open are the web-search tool and the GitHub ref/raw/search channels.
+
+### 🔵 What the duty actually is, per region — the disadvantage/entitlement determination
+
+| Region | The statutory object | Who decides | Appeal route | Forum type | Published in the open? |
+|---|---|---|---|---|---|
+| **EMEA** (England) | **Pupil premium**: a per-pupil disadvantage grant. `£1,550` primary · `£1,100` secondary · `£2,690` looked-after and previously looked-after (Pupil Premium Plus) · `£360` service premium; deprivation element gated on the **`£7,400`** FSM income threshold | 🔴 **The Department, not the school.** It is a **derived** value: eligibility is computed centrally from the **October school census** (mainstream and special), or the **January census** for PRUs and AP academies — *not* submitted by schools as an entitlement claim | 🔴 **NONE FOUND.** Searched; no appeal, review or query route against an allocation surfaced | — | 🔴 **The allocation: NO.** 🟢 **The sibling determination (teacher payments): YES — MIT, five statutory policies, with tests** |
+| **North America** | No federal equivalent; Title I Part A allocation formulas run state-by-state | The state education agency and the district | Varies by state; not a child-level appeal | regulator | 🔴 **Not probed this pass** — declared below |
+| **APAC** | No regional equivalent surfaced | — | — | — | 🔴 **NOT FOUND** |
+| **LATAM** | Chile's **`subvención` escolar preferencial** is the nearest analogue and is tied to diagnosis under Decreto 170 (`T783`) | Mineduc | 🔴 Superintendencia complaint route **NOT FOUND, second consecutive pass** | regulator | 🔴 **NO** |
+
+🟢 **`T797` — the register adds a COLUMN, exactly as `p775` and `p776` each did.** `appeal_route` v4 needs **`forum_type {tribunal | regulator | prosecutor-child-protection | none}`** *and* **`enforcement_forum`**, because this pass found a jurisdiction where the two differ:
+
+🔵 **England, SEND, discharging `ACTION p776-F`:** the EHC plan **stays in force** while an appeal is live — a cease notice does not end it until the appeal window expires or the appeal concludes, and the **section 42 duty to deliver the provision is not paused** (Children and Families Act 2014, s.42). 🟢 **So `interim_effect: freeze` is a property of SEND itself, not of the United States** — the `T679`-shaped test `p776-F` designed, and it passes. 🔴 **But the First-tier Tribunal has NO jurisdiction over the s.42 delivery duty and no enforcement powers**: non-delivery goes to the Local Government and Social Care Ombudsman or to judicial review. **The body that decides and the body that enforces are different bodies**, which is a column no register before this one needed.
+
+## Opportunities by region
+
+🔵 Each subsection names what a studio can sell **this quarter**, the asset it starts from, and the measured obstacle. Figures are given with their conflicts stated, never averaged (`p771` doctrine).
+
+### North America
+
+🟢 **The sellable thing: AI-policy compliance tooling, because the mandates have arrived and most districts have nothing.** 🔴 **Ohio is the first state to REQUIRE every K-12 district to adopt a formal AI use policy — deadline `1 July 2026`, now passed.** North Carolina's **Session Law 2026-41** stages it: state model policy by `31 December 2026`, local school-unit policies by `30 June 2027`, teacher training by `2028`. Virginia requires school boards to adopt policies consistent with state guidance; Idaho's **SB 1227** would mandate a statewide framework and prohibit AI replacing human teachers; Illinois was directed to produce guidance by `July 2026`.
+
+🔵 **Scale of the policy surface, with the source disagreement kept:** one tracker counts **`134` bills across `31` states** in the 2026 session, another about **`100`**. Guidance coverage is counted at **`33`–`35` states plus Puerto Rico**, up from roughly `28` in early 2025; one source says `34` by end-2025. 🔴 **Most of it is advisory, which is why the Ohio and North Carolina *mandates* are the commercial trigger, not the guidance count.**
+
+🔴 **The hard constraint to design around: California AB 1159 bars using student data to train AI models.** Any tutoring or analytics product sold into California must be able to prove training-data provenance. 🟢 **North America is also the largest regional share of the AI-in-education market at `36%`.**
+
+🟢 **Assets to start from:** `DFE-Digital/claim-additional-payments-for-teaching`'s *shape* for rules-as-reviewable-code (MIT, portable across jurisdictions) · `CAHLR/OATutor` (MIT, UC Berkeley, BKT) · `janestreet/agent_skills` (MIT) for the tutoring contract.
+
+🔴 **Declared gap:** **Canada and Mexico returned nothing** in the North America leg — the regional result is United States-only, and this is the second shelf to say so rather than let "North America" imply coverage. 🔴 **Title I disadvantage-allocation supply was not probed this pass.**
+
+### EMEA
+
+🟢 **The sellable thing, and it is new this pass: the UK state has published its own production determination services under MIT, and nobody in this KB has used them.** `DFE-Digital` carries **`829` repositories**, with MIT on live national services pushed **the day of this pass** — `apply-for-teacher-training` (`38★`), `teaching-vacancies` (`27★`), `get-into-teaching-app` (`25★`), `schools-experience` (`16★`), `claim-additional-payments-for-teaching` (`15★`). 🔵 **Star counts are the wrong instrument here: `15★` on a service that computes a statutory entitlement for a national teaching workforce is a reference implementation, not a popularity contest.**
+
+🟢 **The regulatory clock, now with its MECHANISM rather than just its date.** This base has carried `2 December 2027` for Annex III education duties since `p772` without recording *why* it moved off `2 August 2026`. 🟢 **The cause is the Digital Omnibus on AI — Regulation (EU) 2026/1744, published in the Official Journal on `24 July 2026` and applicable from `27 July 2026`** — which defers the standalone Annex III obligations by roughly `16` months. 🔴 **Secondary-sourced, per `T796`: the Official Journal text is unread because `eur-lex.europa.eu` is off this session's allowlist.**
+
+🔴 **What is already live and is therefore this quarter's work, not 2027's:**
+- **Chatbot transparency duties applied from `2 August 2026`** — a tutoring agent must disclose it is an AI system **now**.
+- **Emotion inference in education has been PROHIBITED since February 2025** (Art 5(1)(f)), outside medical and safety uses. 🔴 **This kills engagement-detection and affect-aware proctoring features in the EU outright** — not deferred, banned.
+- **Article 27 fundamental-rights impact assessment** applies to public bodies deploying high-risk systems.
+- 🟡 **Article 4's AI-literacy duty was SOFTENED** by the Omnibus from *ensuring* a level of AI literacy to *taking measures* — a weaker obligation than the one earlier passes may have priced in.
+- 🟢 **The Commission and the OECD published the `AILit` AI-literacy framework on `17 June 2026`**, with primary and secondary classroom exemplars in all `24` official EU languages — a ready-made curriculum spine for a literacy engagement.
+
+🟢 **Assets:** the `DFE-Digital` MIT service layer · `ILIAS` and `Chamilo` for institutional estates (GPL-3.0, integrate don't fork) · `moodleapp` (Apache-2.0) as the permissive seam into Moodle · `Sakai`/`Opencast` (ECL-2.0).
+
+🔴 **Declared gaps:** no EMEA-origin education **agent** appeared this window — what EMEA shipped is government services. England's SEND reform timetable remains contested (legislation `~2029`, EHCP provision changes `~2030`, both unconfirmed).
+
+### APAC
+
+🔴 **The sellable thing is high-risk classification work, because one APAC jurisdiction has now named education as high-risk in a binding instrument.** 🟢 **Vietnam's Decision `33/2026/QD-TTg` identifies high-risk AI systems across six sectors and names education explicitly — automated assessment and behavioural systems.** 🔵 **That is the most direct education-AI rule in the region and it is narrower and more concrete than the EU's**: a studio selling assessment automation into Vietnam needs a classification answer now.
+
+🔵 **The rest of the region diverges sharply, which is the regional sale:**
+- **South Korea:** the **AI Basic Act** (Framework Act on the Development of Artificial Intelligence) **took effect `22 January 2026`** — a comprehensive statute, in force.
+- **Japan:** promotion-first. **No fines, no prohibitions**; the **second AI Basic Plan was approved `14 July 2026`**, revising the December 2025 original. A strategy, not law. Adoption is climbing fast — one tracker has Japan moving from `56th` (H1 2025) to `48th` (Q1 2026), `+3.4` points in a quarter.
+- **China:** no general AI law, but binding sectoral rules already apply — AI-content labelling since `1 September 2025`, and **companion-service rules effective `15 July 2026`**.
+- **India:** no dedicated statute yet, a July 2026 signal that one may come, and **synthetic-content labelling obligations from `20 February 2026`**. Enterprise generative-AI use measured at `34.5%` (March 2026).
+
+🔴 **The attitude constraint, which matters for a classroom rollout:** the **Ipsos Education Monitor 2026** finds support for *banning* AI in schools at `23%` in Indonesia, `26%` India, `29%` Japan, **`31%` South Korea** — and rising in Japan and Australia. 🟢 **APAC is simultaneously the fastest-growing region, at a `35.3%` CAGR.**
+
+🟢 **Assets:** `HKUDS/DeepTutor` (Apache-2.0, **`58,317★`**, `7,085` forks — the region's anchor and the most-forked education agent in this KB) · `TencentDB-Agent-Memory` (MIT) · `dg13788/iep-system` (MIT, the only clean permissive IEP grant `p776` found) · `Kolibri` (MIT) for low-connectivity deployments.
+
+🔴 **Declared gaps:** Japan and South Korea SEND placement and appeal procedure — **nothing authoritative, unchanged.** 🔴 **South Korea's retention figure is WITHDRAWN this pass** — see `ACTION p776-G`'s disposition in [`intel/open-gaps.md`](open-gaps.md). No APAC disadvantage-funding analogue surfaced.
+
+### LATAM
+
+🟢 **The sellable thing: jurisdiction-splitting compliance work, because this region's two biggest education systems now impose OPPOSITE duties and the gap is widening.**
+
+🟢 **`T783` strengthened, and it is now propagating downward.** Brazil's **Portaria MEC nº 421, de 15 de maio de 2026** forbids conditioning enrolment, schooling or AEE on a diagnosis, `laudo` or health-professional report. 🟢 **This pass found that rule replicating at state and municipal level: Resolução CEE/MG nº 507/2026 (Minas Gerais)** carries the same prohibition in nearly the same words, and a 2026 municipal decree in Rio Grande do Sul forbids refusing enrolment of special-education pupils *"sob qualquer alegação"*. 🔴 **Chile remains the inverse — Decreto Supremo nº 170 requires the diagnosis and ties the `subvención` to it** — and Mineduc is now **updating the Decreto 170 Orientaciones Técnicas through new `cartillas`, in response to Contraloría recommendations**, so the Chilean requirement is being refined rather than relaxed. 🔴 **A North-America-shaped product that asks for a diagnosis is a compliance defect in Brazil and a funding prerequisite in Chile.**
+
+🟢 **`ACTION p776-H`, part-discharged, and the shape is the finding.** Brazil's route when enrolment or AEE is refused is **not an appeal to an education body at all**: the escalation runs **Conselho Tutelar → Ministério Público (Promotoria da Infância e Juventude) → Defensoria Pública**, with **Disque 100** as the complaint channel, resting on CF art. 208, the ECA and Lei 13.146/2015. 🔵 **`T798`: in Brazil a SEND refusal is a child-protection matter prosecuted on the child's behalf, not an administrative review the operator participates in.** 🔴 **Chile's Superintendencia procedure against a Decreto 170 diagnostic evaluation: NOT FOUND for a second consecutive pass** — and per `T783` the Brazilian answer may not be generalised to it.
+
+🔵 **The legislative weather, measured:** the CELE Observatorio Legislativo counts at least **`201` digital-technology bills between January 2025 and February 2026** — **Argentina `63`, Brazil `36`, Mexico `35`**. Brazil's **PL 2338/2023** passed the Senate in December 2024 and **remains pending in the Câmara dos Deputados**, with detailed regulation expected around **Q4 2026**. 🔴 **Mexico has no general federal AI law**; regulation is sectoral and state-level, e.g. the Estado de México reform encouraging responsible, phased AI use in upper-secondary and higher education.
+
+🟡 **Adoption, with its traceability flagged.** UNESCO-attributed reporting puts the region at the **highest generative-AI adoption rate among university students**, while only a minority of institutions have approved internal rules. 🔴 **Several widely-repeated LATAM figures — a `71%` weekly-use rate, a `$412M` ministry investment, "first country with a binding educational framework" — trace to a single low-traceability blog and are NOT adopted by this base.**
+
+🟢 **Assets:** `datosgobar/portal-andino` and `datosgobar/georef-ar-api` (both MIT, both re-verified byte-for-byte this pass) remain the only citable LATAM public-sector anchors · `Chamilo` (GPL-3.0) for institutional estates · `Kolibri` (MIT) for rural and offline.
+
+🔴 **Declared gaps, measured not assumed:** **no new LATAM-origin education agent exists on this window's evidence.** `huayra-linux/huayra`, `escuelaslinux/escuelaslinux` and `gleducar/gleducar` are `ABSENT-OR-PRIVATE` **as names** — per `T779` that is not evidence the projects do not exist. What the regional press actually names — **EducatuX** (last updated `2019`), **Escuelas Linux**, **Huayra** — are **Linux distributions, not AI**. `CeibalUy/Ceibal` resolves and carries **no grant** after `44` names at `p776` and `28` at `p777`: real, corroborated, unusable.
+
+### Global
+
+🔵 **Market size, with the disagreement preserved rather than averaged.** Four research firms price AI-in-education for 2026 between **`$6.4B` and `$11.4B`**: Precedence Research **`$9.58B`**, Grand View Research **`$11.4B`**, Research-and-Markets **`$10.6B`** (→ `$42.48B` by 2030), one aggregator **`$10.4B`**. 🔴 **Growth rates disagree even more violently — `16.8%` CAGR to 2033 against `41.5%` CAGR to 2030.** 🔵 **A `2.5×` spread in the base year and a `2.5×` spread in the rate: quote the range and the source, never a point estimate.** 🔴 Several of these figures come from vendor marketing pages.
+
+🟢 **Adoption, which is less contested than size.** A survey of **`45,398` respondents across `35` countries** puts student AI use at **`88%`** and faculty use at **`77%`**. Another series has adoption rising **`34%` (2023) → `61%` (2026)**. Regional shares: **North America `36%`**, **APAC fastest at `35.3%` CAGR**.
+
+🟢 **The structural opportunity this pass establishes, independent of any market figure.** `T792`: the decision layer is published when the decision is about **money owed to an adult** and withheld when it is about **a child**. For a studio that is a build/buy map, not a philosophical point:
+
+| Layer | Licence reality at `p777` | Studio move |
+|---|---|---|
+| Learner-facing tutoring | 🟢 **MIT/Apache in abundance** — `janestreet/agent_skills`, `DeepTutor`, `OATutor`, the skill class | 🟢 **Compose and customise.** Do not build |
+| Agent memory / learner state | 🟢 **`3` Apache-2.0 + `2` MIT, `0` copyleft** | 🟢 **Compose.** The one layer with no licence friction at all |
+| Platform / LMS / SIS | 🔴 **GPL, AGPL, LGPL, ECL** almost without exception | 🟡 **Integrate.** Fork only `Kolibri`, `dhis2-core`, `relate`, `frappe/frappe`, `moodleapp`, `xapipe` |
+| Adult entitlement determination | 🟢 **MIT, from the deciding ministry, with tests** (`DFE-Digital`) | 🟢 **Fork the shape.** Highest-leverage unused asset in this KB |
+| **Child-facing determination** | 🔴 **Published by NOBODY, in `4` registers, in every region** | 🔴 **Build — and build it for Annex III point 3(c) obligations biting `2 December 2027`** |
 
 ## 🆕 `p776` — **The SEND assessment and placement market, placed by region (`ACTION p775-I`). 🔴 The register's regional result is that LATAM is one `region:` field holding two OPPOSITE legal rules — Brazil forbade the diagnostic gate in May 2026, and Chile still requires it.**
 
@@ -27,7 +127,7 @@ updated: 2026-11-11
 
 🔴 **Source conflict recorded, not averaged** (`p771` doctrine): the parent decree behind Portaria 421 is cited as **nº 12.686/2025** by some sources and **nº 12.773/2025** by others. Both are recorded; neither is preferred; the Diário Oficial is the arbiter and did not resolve under this session's proxy.
 
-## Opportunities by region
+## Opportunities by region — `p776` (historical section; the live one is at the top of this file)
 
 ### North America
 
@@ -105,7 +205,7 @@ updated: 2026-11-11
 
 🔴 **The design consequence is the real result: `T772`'s `retention_clock` registry cannot be a single column of durations.** Singapore proves at least one major jurisdiction expresses the duty as a purpose test with no clock at all, so the column must be `{duration | purpose-test | none}` with the rule text attached.
 
-## Opportunities by region
+## Opportunities by region — `p775` (historical section; the live one is at the top of this file)
 
 🔵 Each subsection below names what a studio can sell **this quarter**, the asset it starts from, and the measured obstacle. Market figures are given with their source and their disagreement, not averaged into a single invented number.
 

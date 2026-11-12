@@ -1,8 +1,53 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-11
+updated: 2026-11-12
 ---
+
+## 🆕 `p777` — **Eight trends, each with the measurement that supports it**
+
+🔵 A trend on this shelf must name what was measured. Impressions go in the prose of the shelf that measured them, not here.
+
+### 1. 🟢 The highest-value education artefact of the window is a prompt contract, not software
+
+[`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) reached **`5,786★` and `401` forks in `8` days** with **one `SKILL.md`** under **MIT** (`1,120 B` · `92cd3e89e133`, © *Jane Street Group, LLC*). No runtime, no dependencies, no deployment. 🔵 **The class was already on these shelves** (`kunbo928/k-teach`, `DaRL-GenAI/instructional_agents-skills`); **what changed is who publishes it** — a quantitative trading firm with no education product. 🟢 **Consequence for a studio: pedagogy is now a licensable, forkable, reviewable artefact on its own**, and the cheapest education IP to ship is a tested instruction set.
+
+### 2. 🟢 Agent memory is the infrastructure layer of this window, and it is uniformly permissive
+
+`5` memory layers graded on their bytes this pass: `cognee` **Apache-2.0**, `claude-mem` **Apache-2.0**, `mem0` **Apache-2.0**, `hindsight` **MIT**, `TencentDB-Agent-Memory` **MIT**. 🟢 **`0` copyleft out of `5`.** 🔵 Persistent learner state is what separates a tutor from a chatbot — `DeepTutor`'s *lifelong tutoring* claim rests entirely on this layer — and it is the only tier of the education stack with **no licence friction at all**.
+
+### 3. 🟢 The state has become a credible open-source *vendor* in education — in one region
+
+`DFE-Digital` holds **`829` repositories**, MIT on live national services, **pushed the day of this pass**. 🔴 **This is an EMEA phenomenon on this window's evidence**: the North America leg produced state *policy mandates*, APAC produced *statutes*, LATAM produced *contradictory duties* — **none produced a published service estate.**
+
+### 4. 🟢 `T792` — what the open supply withholds is the decision about a CHILD, not "the decision"
+
+Four registers: admissions (`p774`), exclusion (`p775`), SEND placement (`p776`), teacher-payment eligibility (`p777`). 🟢 **The fourth is published — MIT, by the deciding department, as `app/models/policies/<policy>/eligibility.rb` across five statutory policies, each with a spec.** 🔴 The first three are not. 🔵 **The variable was never difficulty; it is whose rights the decision engages.** And the child-facing half is exactly what Annex III point 3(c) starts regulating on **`2 December 2027`**.
+
+### 5. 🔴 The live EU obligations are not the 2027 ones, and a studio that waits for 2027 ships three defects
+
+🔴 **Already in force:** chatbot **transparency** duties since `2 August 2026`; **emotion inference in education PROHIBITED since February 2025** (Art 5(1)(f), outside medical/safety); **Article 27 fundamental-rights impact assessments** for public-body deployers. 🟡 **Already softened:** Article 4's AI-literacy duty, from *ensure* to *take measures*, by the **Digital Omnibus on AI (Regulation (EU) 2026/1744**, OJ `24 July 2026`, applicable `27 July 2026`) — which is also the instrument that moved Annex III education duties off `2 August 2026`. 🔵 **Engagement detection and affect-aware proctoring are not "coming under scrutiny" in the EU. They are banned, and have been for over a year.**
+
+### 6. 🟢 Regulatory divergence in APAC is now sharp enough to be a product requirement
+
+**Vietnam's Decision `33/2026/QD-TTg` names education — automated assessment and behavioural systems — as high-risk**, which is narrower and more actionable than the EU's framing. **South Korea's AI Basic Act is in force (`22 January 2026`)**. **Japan has no fines and no prohibitions** and approved its second AI Basic Plan `14 July 2026`. **China regulates by service type** (content labelling since `1 September 2025`, companion services from `15 July 2026`). **India has labelling duties from `20 February 2026` and no statute.** 🔵 **Five jurisdictions, five different answers to "is automated assessment regulated?" — so assessment automation needs a per-jurisdiction switch, not a global setting.**
+
+### 7. 🟢 The discovery surface systematically over-counts the supply, and the grant hash is the cheapest corrective
+
+🔴 `RoundTable02/socrates-skill` and `bevibing/socrates-skill` arrived as two findings and are **one payload**: same `HEAD` (`becb2e51fe7e`), same grant bytes (`39c287accada`), one copyright holder. 🔴 `p776` proved the identical shape for `MyIEP`/`IEP-IPP` (`18,351 B` · `1cfece9336f0`). 🟢 **`T793`: count payloads, not listings** — and the `sha256` of the grant file is a one-call duplicate detector. 🔴 **The press over-counts too, in the other direction:** October 2026 write-ups put `DeepTutor` at `45k`–`50k★` and one still calls it MIT; measured this pass, **Apache-2.0** and **`58,317★`**.
+
+### 8. 🟢 A licence "anomaly" is usually a print, not a licence — now proved at the word level
+
+The `body:near-canonical` backlog this base carried for three passes resolves to **`12` addresses whose residual deltas touch `0` deontic operators**: `moodle` ≡ `chamilo` ≡ `ILIAS` byte-identical; `h5p` differs by **`1` byte and `0` words**; `erpnext` by `5` words, all `http`→`https` and `gnu.org/philosophy`→`gnu.org/licenses`; `learninglocker` by `6` words in the *how to apply* appendix. 🟢 **`T794`.** 🔵 And the complementary result: of the `4` repositories `p776-D` grouped as a GPL-2.0 *vintage* cluster, **only `1` payload carries the pre-2005 FSF address** (`T795`). **Family resemblance is not evidence; the bytes are.**
+
+### 🔵 Standing method notes added this pass
+
+| Note | Content |
+|---|---|
+| **`T796`** | Every legal cell on these shelves is **secondary-sourced by construction**. Two independent tools fail identically on `eur-lex.europa.eu`, `www.gov.uk`, `law.go.kr`, `elaw.klri.re.kr`, `cbse.gov.in`, `www.bcn.cl`, `www.in.gov.br` — the hosts are **outside this session's allowed network domains**. 🔴 A network-allowlist boundary, not a site outage; the remedy is a session settings change and no pass can route around it |
+| **`T797`** | `appeal_route` v4 needs `forum_type {tribunal \| regulator \| prosecutor-child-protection \| none}` **and** `enforcement_forum`, because England's SEND route decides in one forum (First-tier Tribunal) and enforces in another (LGSCO / judicial review) |
+| **`T798`** | In Brazil a SEND or enrolment refusal is a **child-protection matter prosecuted on the child's behalf** (Conselho Tutelar → Ministério Público → Defensoria Pública, Disque 100), not an administrative review the operator takes part in |
+| **`T799`** | The claim channel (`gh api search/*`) returns licence and star metadata the `repos/<slug>` endpoint refuses. 🔴 It is a **CLAIM, never a grade**, and `NOASSERTION` is a useful pre-filter for altered or unusual prints — both halves of the `MyIEP`/`IEP-IPP` payload return it |
 
 ## 🆕 `p776` — **Trends from the SEND register, and three doctrine corrections this base had already half-paid for. 🔴 `make hooks` DENIED a seventh consecutive session, `0` for `7`.**
 

@@ -1,8 +1,46 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-11
+updated: 2026-11-12
 ---
+
+## 🆕 `p777` — **A vertical class this base has never shelved: the STATE as the platform vendor**
+
+🔵 Eight registers' worth of vertical rows on these shelves are **vendor** platforms — Moodle, Open edX, Canvas, Sakai, OpenEduCat, Kolibri. 🟢 **`p777` adds a class that behaves differently and is licensed better: production national services, published by the ministry that operates them, under MIT.**
+
+### 🟢 Class A — the state service layer (new at `p777`, EMEA)
+
+| Platform | Address | Grant, graded on the bytes | What it actually is | How a studio uses it |
+|---|---|---|---|---|
+| **Claim Additional Payments for Teaching** | [`DFE-Digital/claim-additional-payments-for-teaching`](https://github.com/DFE-Digital/claim-additional-payments-for-teaching) · `master` · `11adcbfe499b` | 🟢 **MIT** · `1,099 B` · `7d38b1b17881` | 🟢 **A statutory eligibility determination in production.** `app/models/policies/{student_loans,early_career_payments,early_years_payments,further_education_payments,international_relocation_payments}/eligibility.rb`, each with `policy_eligibility_checker.rb` and a `spec/`; `app/models/journeys/eligibility_checker.rb` orchestrates. Rails, Azure, `617` code hits for `eligibility` | 🟢 **The reference pattern for "rules as reviewable code".** Fork the *shape* — one eligibility class per named policy, one checker, one spec — for any entitlement determination in any jurisdiction. It is the only artefact in this KB that shows how a government writes a statutory rule so an auditor can read it |
+| **Apply for Teacher Training** | [`DFE-Digital/apply-for-teacher-training`](https://github.com/DFE-Digital/apply-for-teacher-training) · `main` · `0c7c7ae13a70` | 🟢 **MIT** · `1,094 B` · `1018ba112e86` | National applications and offers service, `38★`, pushed `2026-11-11` | 🟢 Admissions-workflow substrate that pairs with `p774`'s MIT deferred-acceptance finding — **mechanism and workflow are now both available permissively** |
+| **Teaching Vacancies** | [`DFE-Digital/teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies) · `main` · `0956b5abae2b` | 🟢 **MIT** · `1,092 B` · `c561ea849ed6` | National vacancy service, `27★`, pushed `2026-11-11` | 🟢 Workforce-matching base; the search and notification layer is reusable for any sector |
+| **Check FSM eligibility (parent)** | [`DFE-Digital/check-free-school-meals-eligibility-parent`](https://github.com/DFE-Digital/check-free-school-meals-eligibility-parent) · `main` · `11eb3a47f9f6` | 🔴 **NO GRANT** after `28` case-aware names | The household-facing eligibility check — the **input** to the pupil-premium determination | 🔴 **Read it, do not build on it.** 🔵 The one service in this organisation that touches a family's data is the one with no licence, which is a pattern worth watching rather than a coincidence |
+
+🔵 **The contrast that makes this class useful.** `829` repositories, MIT on the live services, pushes dated the day of this pass — against a vendor LMS estate that is GPL/AGPL/ECL almost without exception. 🟢 **For an EMEA public-sector engagement the licence risk has moved from the platform to the data.**
+
+### 🟢 Class B — the established platform layer, every grant re-measured on its own bytes this pass
+
+| Platform | Address | Grant on the bytes | Licence posture for a studio |
+|---|---|---|---|
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) · `main` · `afbcc55fa1bd` | 🔴 **GPL-3.0** · `35,147 B` · `8ceb4b9ee5ad` · `7,604★` | 🔴 Copyleft. 🟢 **But [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) is Apache-2.0 (`11,358 B` · `cfc7749b96f6`)** — the permissive seam into the world's largest LMS estate |
+| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) · `master` · `d3a86602dcf7` | 🔴 **AGPL-3.0** · `35,136 B` · `e12d78569742` | 🔴 Network copyleft: a hosted derivative must publish. Plan integration, not modification |
+| **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) · `master` · `1c9f0bb8013e` | 🔴 **AGPL-3.0** · `34,520 B` · `57c8ff33c9c0` | 🔴 Same posture; heavy to operate (Rails + Postgres at scale) |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) · `master` · `af576e8b4d32` | 🟡 **ECL-2.0** · `11,120 B` · `0688f62d04f1` · `1,239★` | 🟡 **The education sector's own licence** — Apache-2.0 with the patent grant narrowed to education needs (`T766`). Permissive in practice, unusual in review |
+| **Opencast** | [`opencast/opencast`](https://github.com/opencast/opencast) · `develop` · `26fbc9363f07` | 🟡 **ECL-2.0** · `11,340 B` · `76a975068930` | 🟡 Same posture. Lecture capture at institution scale |
+| **ILIAS** | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) · `release_11` · `fca533556af8` | 🔴 **GPL-3.0** · `35,147 B` · `8ceb4b9ee5ad` | 🔴 Copyleft. 🔵 Strong EMEA public-sector and HE footprint, especially DACH |
+| **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) · `master` · `03def9186838` | 🔴 **GPL-3.0** · `35,147 B` · `8ceb4b9ee5ad` · `1,023★` | 🔴 Copyleft. 🟢 **Real LATAM and francophone institutional adoption** — the LMS to name in a Spanish-language engagement |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) · `develop` · `2d29598fc66f` | 🟢 **MIT** · `1,097 B` · `3c056b34a476` | 🟢 **The best-licensed platform in this table.** Offline-first; built for intermittent connectivity. **First pick for LATAM rural, APAC rural and refugee-context work** |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) · `19.0` · `46a5d7d40082` | 🔴 **LGPL-3.0** · `8,241 B` · `528f84036800` | 🔴 Education ERP on Odoo (SIS + LMS + fees + admissions). 🔴 **`p776`'s defect stands: the grant file promises the appended GPL text and omits it** — flag it in any licence review |
+| **RosarioSIS** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) · **`mobile`** · `e4cd20a48bf1` | 🔴 **GPL-2.0** · `15,214 B` · `d954e14e5c75` | 🔴 Copyleft. 🔴 **Defaults to `mobile`** — a clone that assumes `master` gets the wrong tree silently (`T728`) |
+| **Frappe Education** | [`frappe/education`](https://github.com/frappe/education) · `develop` · `61408d3da518` | 🔴 **`19`-byte pointer** `License: GNU GPL V3` · `1fcecf395312` · `705★` | 🔴 The newest OSS SIS, and its entire grant is a `19`-byte sentence. 🟢 **The framework beneath it, [`frappe/frappe`](https://github.com/frappe/frappe), is MIT (`1,118 B` · `bc6001a54ffc`)** — build there, not in the app |
+| **BigBlueButton** | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) · `v4.0.x-develop` · `13b55d45c046` | 🔴 **LGPL-3.0** · `7,652 B` · `e3a994d82e64` | 🟡 Virtual classroom; LGPL makes linking workable, modification not |
+| **Gibbon** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) · `v31.0.00` · `329ca2f07b49` | 🔴 **GPL-3.0** · `35,121 B` · `93178a43d6d3` | 🔴 School management; copyleft |
+| **DHIS2** | [`dhis2/dhis2-core`](https://github.com/dhis2/dhis2-core) · `master` · `9dfe53b779d7` | 🟢 **BSD-3-Clause** · `1,517 B` · `4fc00af93f1b` · `361★` | 🟢 **Permissive, ministry-grade, and already deployed across African and APAC ministries.** The EMIS-shaped base nobody in this KB has used yet |
+| **Learning Locker** | [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) · `master` · `5fec948a823e` | 🔴 **GPL-3.0** · `35,141 B` · `589ed823e9a8` | 🔴 LRS. 🔴 **Unmaintained since `2024-05-30`** — prefer [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) (Apache-2.0 · `11,357 B` · `c71d239df917`) for new xAPI work |
+| **Relate** | [`inducer/relate`](https://github.com/inducer/relate) · `main` · `e201e11b860c` | 🟢 **MIT** · `1,145 B` · `66ff89ebf05f` · `438★` | 🟢 University course platform, MIT, pushed the day of this pass. 🟡 Claim channel abstains (`NOASSERTION`) — cite the bytes |
+
+🟢 **Permissive platform shortlist, after this pass's grading:** `Kolibri` (MIT) · `dhis2-core` (BSD-3-Clause) · `relate` (MIT) · `frappe/frappe` (MIT) · `moodleapp` (Apache-2.0) · `xapipe` (Apache-2.0) · `Sakai`/`Opencast` (ECL-2.0, permissive in substance) · **plus the whole `DFE-Digital` MIT service layer.** 🔴 Everything else on these shelves is GPL, AGPL or LGPL and belongs in an integration plan, not a fork plan.
 
 ## 🆕 `p776` — **The SEND layer on top of the real platforms: what each one already carries, and the one thing none of them carry.**
 

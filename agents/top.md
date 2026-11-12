@@ -1,8 +1,68 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-11
+updated: 2026-11-12
 ---
+
+## 🆕 `p777` — **The pupil-premium / disadvantage funding determination register (`ACTION p776-I`), and the pass where `T782` finally BREAKS. 🔴 `make hooks` tried FIRST and DENIED an EIGHTH consecutive session, so all four instruments were written from scratch again. 🟢 `p776-I` designed this register as a falsification test for the law `p774`–`p776` stated, and it worked: the decision layer IS published — by the state, as production code, under MIT — when the decision is about money owed to an adult, and is published by nobody when it is about a child. 🟢 And a channel that `400`+ passes recorded as closed turns out to be open: star counts and SPDX ids are obtainable.**
+
+**`66` distinct addresses probed on the ref channel · `28` case-aware grant filenames per candidate · every grant graded on its own bytes with a vintage guard and the standing deontic guard · `25` rows cross-checked against a SECOND independent licence channel (`24` agree, `1` abstains, `0` contradict) · `5` rows published by `p776` reproduced byte-for-byte by an independent from-scratch instrument · `2` defects in this pass's own instruments caught by control before any verdict was published · `0` calls to `api.github.com/repos/*` for a verdict.**
+
+### 🟢 `ACTION p776-I`'s falsification test, and the answer it returns
+
+🔵 **`p776-I` named this register for one stated reason:** three registers running — admissions (`p774`), exclusion (`p775`), SEND placement (`p776`) — had concluded `T782`, *the open supply publishes the record and never the decision about the record*. `p776-I` argued that if the duty layer goes unpublished because the **decision** is hard, then a register whose decision is a **funding formula** should break the pattern — making it a falsification test rather than another confirmation.
+
+🟢 **It breaks the pattern. `T791`: the deciding department publishes its own statutory eligibility determination as production code under MIT** — and it is not a toy.
+
+| Component | Address | Branch · `HEAD` | Grant, graded on the bytes | Claim channel | Region | Verdict |
+|---|---|---|---|---|---|---|
+| **Claim Additional Payments for Teaching** | [`DFE-Digital/claim-additional-payments-for-teaching`](https://github.com/DFE-Digital/claim-additional-payments-for-teaching) | `master` · `11adcbfe499b` | 🟢 **MIT** · `1,099 B` · `7d38b1b17881` | MIT · `15★` · `17` forks · pushed **`2026-11-11`** | EMEA | 🟢 **The statutory determination itself, in the open.** `app/models/policies/<policy>/eligibility.rb` + `policy_eligibility_checker.rb` for **five named statutory policies** — `student_loans`, `early_career_payments`, `early_years_payments`, `further_education_payments`, `international_relocation_payments` — each with a `spec/` beside it, plus `app/models/journeys/eligibility_checker.rb`. `617` code hits for `eligibility`; `32` for `"def eligible"`. **Published by the department that makes the decision, pushed the day of this pass.** |
+| **Check free school meals eligibility (parent-facing)** | [`DFE-Digital/check-free-school-meals-eligibility-parent`](https://github.com/DFE-Digital/check-free-school-meals-eligibility-parent) | `main` · `11eb3a47f9f6` | 🔴 **NO-GRANT-AT-ROOT** after `28` case-aware names | NONE · `3★` · pushed `2026-11-02` | EMEA | 🔴 **The input to the determination, published by the state and UNGRANTED.** README `1,959 B`: `eligib*` ×`4`, and 🔴 `decision`, `appeal`, `refus*`, `determination`, `dispute`, `reject*` **×`0` each**. A studio may read it and may not build on it. |
+| **Apply for teacher training** | [`DFE-Digital/apply-for-teacher-training`](https://github.com/DFE-Digital/apply-for-teacher-training) | `main` · `0c7c7ae13a70` | 🟢 **MIT** · `1,094 B` · `1018ba112e86` | MIT · `38★` · pushed **`2026-11-11`** | EMEA | 🟢 A national admissions service under MIT — and `p774` concluded admissions was the one register whose mechanism *is* permissively published. **Same owner, same licence, consistent with `p774`.** |
+| **Teaching Vacancies** | [`DFE-Digital/teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies) | `main` · `0956b5abae2b` | 🟢 **MIT** · `1,092 B` · `c561ea849ed6` | MIT · `27★` · pushed **`2026-11-11`** | EMEA | 🟢 Live national service, MIT, pushed the day of this pass. |
+| **FSM eligibility analysis (England 2021–2026)** | [`Linpaws7/fsm-eligibility-england-2021-2026`](https://github.com/Linpaws7/fsm-eligibility-england-2021-2026) | `main` · `ef0ef21b2911` | 🟢 **MIT** · `1,071 B` · `0d339f35312b` | — | EMEA | 🔵 Reproducible Python analysis **of** the eligibility data. Analysis, not determination — filed so the next pass does not mistake it for one. |
+| **Eligibility-checking prototype** | [`bakervictor93/eligibility-checking-web-prototype`](https://github.com/bakervictor93/eligibility-checking-web-prototype) | `main` · `96b4e6d17821` | 🔴 **GPL-3.0** · `35,149 B` · `3972dc9744f6` | GPL-3.0 | EMEA | 🔴 Copyleft, `0★`. 🔵 Its grant payload is **byte-identical to `frappe/erpnext`'s** — the same GPL-3.0 print, two unrelated projects. |
+
+🔴 **And the half that stays unpublished, measured rather than asserted.** The **pupil premium allocation** — the per-pupil disadvantage determination itself — returns **`total_count: 0`** on the repository-search channel for `pupil premium school`. 🔴 **Zero repositories, anywhere that channel can see.** The lexical field is owned by eye-tracking (`pupil-labs/pupil` and its forks), which is why this register needed a measurement and not a search impression.
+
+🟢 **So `T782` is not refuted, it is RESOLVED into its real variable.** It was never *"the decision is hard"*. Across four registers:
+
+| Register | The decision is about | Decision layer published? |
+|---|---|---|
+| Admissions (`p774`) | a child's place | 🟡 mechanism yes (MIT deferred acceptance), refusal/appeal **no** |
+| Exclusion (`p775`) | a child's removal | 🔴 **no** |
+| SEND placement (`p776`) | a child's provision | 🔴 **no** — `0` of `7` candidates |
+| Teacher-payment eligibility (`p777`) | **money owed to an adult professional** | 🟢 **YES — by the deciding department, MIT, five policies, with tests** |
+
+🔵 **`T792`: what is withheld is not the decision, it is the decision ABOUT A CHILD.** A money determination addressed to an adult is published by the state itself; a determination that engages a child's rights is published by nobody, in any region, in four registers running. **For a studio this inverts the build/buy line:** the EMEA public-sector determination layer is forkable *today* under MIT, and the child-facing determination layer will have to be built under Annex III point 3(c) obligations from `2 December 2027`.
+
+### 🟢 New agent supply this pass — and the headline entrant is not software
+
+| Agent | Address | Branch · `HEAD` | Grant, graded on the bytes | Claim channel | Region | Why it matters |
+|---|---|---|---|---|---|---|
+| **Socratic Tutor** | [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) | `master` · `7c6715c29548` | 🟢 **MIT** · `LICENSE.md` `1,120 B` · `92cd3e89e133` · © *Jane Street Group, LLC* | MIT · **`5,786★`** · **`401`** forks · created/pushed `2026-11-03` | North America | 🆕 **New at `p777`, and the most-starred education artefact of this window.** 🔵 **It is not software: one `SKILL.md` of pedagogical instructions.** Diagnostic placement, a `0`–`5` skill map per subskill, one question at a time, spaced review, a final assessment — and an explicit **intent guard**: *"If the user asked a one-off question … answer it normally and do not start the tutoring loop."* 🔴 **The publisher is a quantitative trading firm**, not an edtech vendor or a university lab. |
+| **socratic-tutor** | [`nuwaves/socratic-tutor`](https://github.com/nuwaves/socratic-tutor) | `main` · `2e34df6e23bd` | 🟢 **MIT** · `1,143 B` · `67111b9eb08b` | MIT · `1★` · pushed `2026-11-09` | Global | 🆕 A genuine derivative — **different bytes, own copyright line** — that states its lineage from Jane Street's `agent_skills`. Skill map plus saved progress. |
+| **socrates-skill** | [`bevibing/socrates-skill`](https://github.com/bevibing/socrates-skill) ≡ [`RoundTable02/socrates-skill`](https://github.com/RoundTable02/socrates-skill) | `main` · `becb2e51fe7e` — **the same `HEAD` for both** | 🟢 **MIT** · `1,069 B` · `39c287accada` — **the same bytes for both**, © *2026 RoundTable02* | MIT · `360★` · pushed `2026-04-02` *(one of the two is not returned by the claim channel at all)* | Global | 🆕 **Two search hits, one payload, proved on the hash** — same `HEAD`, same grant bytes, one copyright holder. 🔴 **The discovery surface inflates the supply**, exactly as `p776` found for `MyIEP`/`IEP-IPP`. Count payloads, not listings (`T793`). |
+| **claude-tutor** | [`JEFF7712/claude-tutor`](https://github.com/JEFF7712/claude-tutor) | `main` · `473586fa8e57` | 🟢 **MIT** · `1,062 B` · `0bc943d7464d` | — | Global | 🔵 Already on these shelves; **re-verified on the bytes this pass** and unchanged. Adaptive coach skill. |
+| **hammer** | [`sebastianelvis/hammer`](https://github.com/sebastianelvis/hammer) | `main` · `c5b86153b156` | 🟢 **MIT** · `1,068 B` · `f50ea7289295` | — | Global | 🆕 New at `p777`. Role-inverted learning skills — the agent tutors, the human answers. |
+| **learn-x** | [`dimayip/learn-x`](https://github.com/dimayip/learn-x) | `main` · `35c8bf9fb46e` | 🟢 **MIT** · `1,064 B` · `a66d5329c6ba` | — | Global | 🆕 New at `p777`. Topic-agnostic learning harness. |
+| **DeepTutor** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main` · `60fb3bdfddb3` | 🟢 **Apache-2.0** · `11,408 B` · `cd2f54e1e506` | Apache-2.0 · **`58,317★`** · **`7,085`** forks · pushed `2026-11-07` | APAC | 🟢 Still the anchor. 🔴 **And the secondary press is stale: write-ups from October 2026 put it at `45k`–`50k★`.** Measured on the claim channel this pass: **`58,317`**. |
+| **OpenTutor** *(tutornew)* | [`tutornew/OpenTutor`](https://github.com/tutornew/OpenTutor) | `main` · `41e769432aaf` | 🔴 **NO-GRANT-AT-ROOT** after **`28`** case-aware names | NONE · `8★` · pushed `2026-02-27` | Global | 🔴 **REFUSED again, and the refusal is now much stronger.** This base previously probed `4` names; `p773-B` measured that a short name list over-counts NO-GRANT by `31%`. **`28` names, still nothing** — and the claim channel independently returns `NONE`. Not the MIT `zijinz456/OpenTutor` filed earlier; a different project with the same name. |
+
+🟢 **The class this entrant belongs to was already named on this shelf** — `kunbo928/k-teach` and `DaRL-GenAI/instructional_agents-skills` are the same artefact type. 🔵 **What is new at `p777` is the publisher, not the form:** a trading firm shipping `5,786★` of education IP as a prompt contract under MIT, in `8` days, with `401` forks. **A `1,120 B` grant over a single markdown file now outranks every piece of education *software* published this window.**
+
+### 🟢 The channel discovery, which outranks any single row
+
+🔴 Every pass since `p769` records `api.github.com` as `403` and concludes *"no star count appears anywhere in this section"*. 🟢 **Re-measured this pass, that is true of one endpoint and false of another.**
+
+| Channel | Result at `p777` | Use |
+|---|---|---|
+| `gh api repos/<slug>` | 🔴 **`403`** — *"GitHub access to this repository is not enabled for this session"* | 🔴 Unusable, as recorded |
+| `gh api -X GET search/repositories` | 🟢 **Works for public repositories** — returns `license.spdx_id`, `stargazers_count`, `forks_count`, `default_branch`, `pushed_at` | 🟢 **A second, independent CLAIM channel** |
+| `gh api -X GET search/code` | 🟢 **Works for public repositories** — `617` hits inside one repo this pass, with paths | 🟢 Locates the decision layer inside a service |
+| `git ls-remote` (ref) + `raw.githubusercontent.com` | 🟢 Unchanged | 🟢 Still the only **grading** channel |
+
+🔴 **The discipline this needs, stated before anyone uses it:** the claim channel is GitHub's **own detection**, not the bytes. It may never override a body-graded verdict. `NOASSERTION` means GitHub found a grant it could not map; `NONE` means it found none. 🟢 **Cross-checked over `25` rows: `24` AGREE, `0` CONTRADICT, and the single divergence is an ABSTENTION in the conservative direction** — `inducer/relate` grades `MIT` `1,145 B` on its bytes and returns `NOASSERTION` on the claim channel. 🔵 **So `NOASSERTION` is a cheap pre-filter for altered or unusual prints:** both halves of the nineteen-year-old `MyIEP`/`IEP-IPP` payload return it, which is independent corroboration of this pass's `ALTERED-VINTAGE` grade.
 
 ## 🆕 `p776` — **The SEND / special-educational-needs assessment and placement register (`ACTION p775-I`). 🔴 `make hooks` tried FIRST and DENIED a SEVENTH consecutive session, so all four instruments were written from scratch again. 🟢 `p775-I`'s premise HOLDS and is the first register premise in three to survive intact: SEND placement *is* squarely inside Annex III point 3(c). 🔴 And the register's governing result completes a three-pass law — of `7` candidates probed, `1` carries a clean permissive grant, and `0` implement the statutory object.**
 

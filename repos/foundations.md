@@ -1,8 +1,82 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-11
+updated: 2026-11-12
 ---
+
+## 🆕 `p777` — **The foundations re-graded on their own bytes, and a backlog carried for three passes CLOSED with proof rather than carried a fourth**
+
+🔴 **`make hooks` tried first and DENIED — eighth consecutive session, `0` for `8`.** 🟢 Instruments written from scratch; contracts in [`compose/code/p777/README.md`](../compose/code/p777/README.md).
+
+### 🟢 `ACTION p776-B` + `p775-C`: the "138-row / 91-outstanding" near-canonical backlog is **`12` addresses**, and all `12` are now graded
+
+🔵 **`ACTION p776-B` ordered the enumeration FIRST, because three passes had carried a backlog nobody could list.** Enumerated to [`evidence/near-canonical-backlog.2026-11-11-p777.tsv`](../evidence/near-canonical-backlog.2026-11-11-p777.tsv) before anything was fetched.
+
+| Measure | Value |
+|---|---|
+| `body:near-canonical` row instances across the `11` curated shelves | **`40`** |
+| Of those, instances carrying **no address in the row** (prose about the class, not graded rows) | **`15`** |
+| 🟢 **Distinct addresses actually carrying the verdict** | 🟢 **`12`** |
+| Carried by `p775`/`p776` as outstanding | 🔴 `138` / `91` |
+
+🔴 **So the backlog was never `138` rows or `91` rows. It is `12` addresses** — an order of magnitude smaller than the figure three passes carried, which is precisely why `ACTION p776-B`'s instruction to *enumerate before grading* was right.
+
+🟢 **All `12` graded this pass on both channels — and the result is that the whole class is ONE licence with print variation, not twelve licence problems.**
+
+| Address | Branch · `HEAD` | Grant on the bytes | Claim channel | Verdict |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `main` · `afbcc55fa1bd` | **GPL-3.0** · `COPYING.txt` `35,147 B` · `8ceb4b9ee5ad` | GPL-3.0 · `7,604★` · `7,712` forks | 🟢 **Canonical reference print** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `master` · `03def9186838` | **GPL-3.0** · `35,147 B` · `8ceb4b9ee5ad` | GPL-3.0 · `1,023★` | 🟢 **Byte-identical to Moodle** |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 `release_11` · `fca533556af8` | **GPL-3.0** · `35,147 B` · `8ceb4b9ee5ad` | — | 🟢 **Byte-identical to Moodle.** Default branch is neither `main` nor `master` |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `master` · `2d7f937a03c9` | **GPL-3.0** · `35,146 B` · `c53a65c2fd56` | GPL-3.0 · `155★` | 🟢 **`1`-byte delta, `0`-WORD delta** — whitespace only |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop` · `2470b9dd0042` | **GPL-3.0** · `license.txt` `35,149 B` · `3972dc9744f6` | GPL-3.0 · **`41,202★`** | 🟢 **`5` words: `http`→`https` ×4 and `gnu.org/philosophy`→`gnu.org/licenses`.** 🔵 **Independently reproduces `p776`'s own diagnosis of its `D1` defect** — a URL modernisation, not an altered grant |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | `master` · `5fec948a823e` | **GPL-3.0** · `35,141 B` · `589ed823e9a8` | GPL-3.0 · `586★` · pushed `2024-05-30` | 🟢 `6` words, all in the *how to apply* appendix placeholders. 🔴 Unmaintained since `2024` |
+| [`frappe/frappe`](https://github.com/frappe/frappe) | `develop` · `0c68cdeff2e6` | 🟢 **MIT** · `license.txt` `1,118 B` · `bc6001a54ffc` | MIT · **`11,088★`** | 🟢 **The permissive half of the Frappe stack** — the framework is MIT while ERPNext above it is GPL-3.0 |
+| [`dhis2/dhis2-core`](https://github.com/dhis2/dhis2-core) | `master` · `9dfe53b779d7` | 🟢 **BSD-3-Clause** · `1,517 B` · `4fc00af93f1b` | BSD-3-Clause · `361★` | 🟢 **Permissive, and the most deployed public-sector data platform in this base** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` · `af576e8b4d32` | **ECL-2.0** · `11,120 B` · `0688f62d04f1` | ECL-2.0 · `1,239★` | 🟢 The education sector's own licence (`T766`), confirmed on the bytes |
+| [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) | `main` · `02b713f13acc` | 🟢 **Apache-2.0** · `11,358 B` · `cfc7749b96f6` | Apache-2.0 · `1,005★` | 🟢 **Moodle's own mobile client is Apache-2.0 while Moodle is GPL-3.0** — the permissive entry point into the largest LMS estate in the world |
+| [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) | `main` · `c2327d7c1466` | 🟢 **Apache-2.0** · `11,357 B` · `c71d239df917` | Apache-2.0 · `17★` | 🟢 xAPI statement pipeline. Low stars, correct licence, real maintainer |
+| [`inducer/relate`](https://github.com/inducer/relate) | `main` · `e201e11b860c` | 🟢 **MIT** · `1,145 B` · `66ff89ebf05f` | 🟡 **`NOASSERTION`** · `438★` · pushed `2026-11-11` | 🟢 **The one row where the two channels diverge — and the body channel wins.** The claim channel ABSTAINS; it does not contradict |
+
+🟢 **The proof, run rather than asserted.** Word-level diff of the GPL-3.0 cluster against the canonical print, recorded in [`evidence/gpl3-print-cluster.2026-11-11-p777.tsv`](../evidence/gpl3-print-cluster.2026-11-11-p777.tsv):
+
+| Payload | word-ratio vs canonical | words ± | **deontic tokens touched** |
+|---|---|---|---|
+| `moodle` / `chamilo` / `ILIAS` `35,147 B` | `1.000000` | `0` / `0` | **NONE** |
+| `h5p` `35,146 B` | **`1.000000`** | `0` / `0` | **NONE** |
+| `erpnext` `35,149 B` | `0.999117` | `+5` / `−5` | **NONE** |
+| `learninglocker` `35,141 B` | `0.999470` | `+2` / `−4` | **NONE** |
+
+🟢 **`T794`: across this base's entire GPL-3.0 population the residual variation is whitespace, an `http`→`https` modernisation and appendix placeholder names. Not one deontic operator differs.** 🔵 So `body:near-canonical` on a GPL-3.0 print was never a licence question — it was a print question, and the honest verdict for all of them is **`GPL-3.0`, canonical in substance**. 🟢 **The backlog is CLOSED, not advanced.**
+
+### 🟢 `ACTION p776-D` discharged — and the vintage cluster is `1` payload, not `4`
+
+🔵 `p776-D` named `4` repositories said to trip the deontic guard *for vintage reasons alone* and asked for `ALTERED-VINTAGE` to be adopted as a verdict class so an old print stops alarming a legal reviewer. 🟢 **Adopted. 🔴 And the population is corrected downward by measurement.**
+
+| Named by `p776-D` | Grant on the bytes | Pre-2005 FSF address? | Verdict at `p777` |
+|---|---|---|---|
+| [`ChelseaSchool/MyIEP`](https://github.com/ChelseaSchool/MyIEP) + [`ghoulmann/IEP-IPP`](https://github.com/ghoulmann/IEP-IPP) | **GPL-2.0** `18,351 B` · `1cfece9336f0` *(one payload, two repositories)* | 🔴 **YES** — `59 Temple Place` · `02111-1307` | 🟢 **`GPL-2.0` + `ALTERED-VINTAGE`.** Operative grant intact; both return `NOASSERTION` on the claim channel, which independently corroborates the grade |
+| [`postgis/postgis`](https://github.com/postgis/postgis) | **GPL-2.0** `18,092 B` · `8177f9751321` | 🟢 **NO** | 🔴 **Not vintage.** `18,092 B` is the modern canonical GPL-2.0 length |
+| [`elgg/elgg`](https://github.com/elgg/elgg) | **GPL-2.0** `17,173 B` · `7188c83d8764` | 🟢 **NO** | 🔴 **Not vintage.** Differs for another reason, unmeasured — carried to `ACTION p777-D` |
+| [`learnosity/learnosity-qti`](https://github.com/learnosity/learnosity-qti) | **GPL-2.0** `18,264 B` · `e3c23a194748` | 🟢 **NO** | 🔴 **Not vintage.** Differs for another reason, unmeasured — carried to `ACTION p777-D` |
+
+🔵 **`T795`: `ALTERED-VINTAGE`'s population on these shelves is ONE payload across TWO repositories.** `p776-D`'s `4` was an inference from a shared guard trip, and `3` of the `4` do not carry the fingerprint at all. 🟢 **A verdict class earns its rows by measurement, never by family resemblance.**
+
+### 🟢 The rest of the foundations layer, re-graded on the bytes this pass
+
+| Repo | Branch · `HEAD` | Grant on the bytes | Claim channel | What it is |
+|---|---|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` · `d3a86602dcf7` | 🔴 **AGPL-3.0** · `35,136 B` · `e12d78569742` | — | The MOOC-scale LMS. Network copyleft — a hosted derivative must publish |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` · `1c9f0bb8013e` | 🔴 **AGPL-3.0** · `34,520 B` · `57c8ff33c9c0` | — | The HE market leader's community edition |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `develop` · `2d29598fc66f` | 🟢 **MIT** · `1,097 B` · `3c056b34a476` | — | 🟢 **Offline-first learning for low-connectivity deployments — MIT, and the single most reusable asset for a LATAM or rural-APAC engagement** |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | `main` · `fae8cc474484` | 🟢 **MIT** · `1,105 B` · `5baaaf977a28` | — | UC Berkeley ITS with Bayesian Knowledge Tracing. Proven adaptive base |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | `main` · `ccbaf37b07e3` | 🟢 **MIT** · `1,066 B` · `f5f955194636` | — | The knowledge-tracing reference toolkit. **Used as this pass's control C2** |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | `develop` · `26fbc9363f07` | **ECL-2.0** · `11,340 B` · `76a975068930` | — | Lecture capture and video at institution scale |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 `19.0` · `46a5d7d40082` | 🔴 **LGPL-3.0** · `8,241 B` · `528f84036800` | — | 🔴 Education ERP on Odoo. **`p776`'s finding stands: its payload is incomplete by construction** — the file promises the appended GPL text and omits it |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 `v4.0.x-develop` · `13b55d45c046` | 🔴 **LGPL-3.0** · `7,652 B` · `e3a994d82e64` | — | Virtual classroom. Non-default-branch class again |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **`mobile`** · `e4cd20a48bf1` | 🔴 **GPL-2.0** · `15,214 B` · `d954e14e5c75` | — | SIS. 🔴 **`T728` re-confirmed: defaults to `mobile`, so tooling that assumes `master` silently clones a non-default tree** |
+| [`frappe/education`](https://github.com/frappe/education) | `develop` · `61408d3da518` | 🔴 **`19`-byte POINTER** · `1fcecf395312` — the literal text `License: GNU GPL V3` | 🟡 `NOASSERTION` · `705★` | 🔴 Already held by this base; **re-measured and unchanged**, and the claim channel's `NOASSERTION` is exactly what a `19`-byte pointer should produce |
+| [`GeminiLight/awesome-ai-llm4education`](https://github.com/GeminiLight/awesome-ai-llm4education) | `main` · `48f2d16ca617` | 🔴 **NO-GRANT-AT-ROOT** after `28` names | NONE · `222★` | 🔴 Carried for many passes as a supply lead. **No grant, and the claim channel agrees.** This base's `221★` figure was right; it is now `222` |
 
 ## 🆕 `p776` — **Foundations re-graded on the bytes, and `2` long-unresolvable rows closed. 🟢 The canonical corpus went `36` → `38` texts and that alone moved `bigbluebutton` and `openbadgeslib` from UNRESOLVABLE to exactly canonical.**
 
