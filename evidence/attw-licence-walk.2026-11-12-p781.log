@@ -1,0 +1,13 @@
+CLONE START 03:46:53
+Cloning into '/tmp/p781/attw-fresh'...
+DEFAULT_BRANCH=main
+COMMITS_TOTAL=34516
+COMMITS_SINCE_2026=826
+--- licence events, default branch only (T813), since 2026-01-01 ---
+WALK_EXIT=0
+--- full history, licence events (bounded; report UNFINISHED not 0 per T814) ---
+COMMIT	98f407766	2020-03-16	Theodor Vararu	Create LICENSE
+
+A	LICENCE
+FULL_WALK_EXIT=0
+DONE 03:46:59

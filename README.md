@@ -4,6 +4,55 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p781` — reads `2026-11-12`, commit `2026-11-12` — **🟢 `make hooks` IS NOT BLOCKED AND NEVER WAS. It ran, exit `0`, on the first try — in `/home/user/globant-kb`, the repository `CLAUDE.md` names. Eleven passes recorded "BLOCKED-ON-ENVIRONMENT — the remedy is a session permission change" for what was a WORKING-DIRECTORY error in their own method. 🔴 And `378` of this base's `5,817` addresses do not resolve.**
+
+🟢 **`make hooks` was the first command of this pass and it SUCCEEDED.** `1` for `12`. Exit `0`, `32` lines, `9` articles classified into `5` studios, `0` working-tree changes.
+
+🔴 **Both arms measured, deliberately, because an eleven-pass verdict deserved a test rather than a repetition:**
+
+| Arm | Command | Result |
+|---|---|---|
+| 🟢 `/home/user/globant-kb` *(primary working directory, the repo `CLAUDE.md` names)* | `make hooks` | 🟢 **ALLOWED — exit `0`** |
+| 🔴 `/tmp/education-kb` *(the cloned KB)* | `make hooks` | 🔴 **DENIED — `[Code from External]`** |
+| 🔴 `/tmp/education-kb` | `python3 compose/code/p779/gate_refs_cohort.py .` | 🔴 **DENIED — identical reason** |
+
+🔵 **`T818`: the denial is scoped to executing code that arrived from the cloned EXTERNAL repository, not to `make hooks` as an operation.** 🟢 **The honest half of eleven passes stands — instruments genuinely cannot be reused from the clone, so rebuilding them from scratch was correct and remains forced.** 🔴 **The gap those passes should have declared is the real one: `p780-A`-style instructions to *"reuse `p779`'s gate"* are unexecutable.**
+
+### 🔴 `6.5%` of the addresses this base displays do not resolve — and `71%` of those are repairable
+
+🟢 **`ACTION p780-B` discharged at scale, on a cheaper instrument than it specified.** `p780-B` ordered one call per slug (`5,817` calls, ~`3` hours). Measured instead: **a query carrying `N` `repo:` qualifiers returns exactly the LIVE slugs and silently drops the dead; HTTP `422` fires only when every slug in the batch is dead.** 🟢 **Requested-minus-returned is the dead set — `146` calls at `batch=40`.**
+
+| Measurement | Value |
+|---|---|
+| Distinct slugs DISPLAYED · URL-form citations | **`5,817`** · `21,452` |
+| Alive on the claim channel | **`5,424`** |
+| 🔴 Extraction artefacts (this pass's own defect, classified out) | `15` |
+| 🔴 **GENUINE dead addresses** | **`378`** = **`6.5%`**, carrying **`1,109`** citations |
+| 🟢 **RENAMED-OR-UNINDEXED** — `ls-remote` OK, address stale, content alive | **`268`** (`70.9%`) |
+| 🔴 **DELETED-OR-PRIVATE** — gone | **`110`** (`29.1%`) |
+
+🔴 **`p780-B`'s prediction — *"`edx-platform` and `socrates-skill` are not the only two"* — CONFIRMED by a factor of `189`.** 🟢 **Successors resolved: `packbackbooks/lti-1-3-php-library` → [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) (a vendor→STANDARDS-BODY transfer), `NVIDIA/NeMo-Guardrails` → [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails).** 🔴 **`microsoft/presidio` and `mitodl/open-learning-ai-tutor` have none, and the entire `1EdTech`/IMS **Caliper** reference-implementation family is DELETED.**
+
+### 🔴 The two findings a client engagement would actually pay for
+
+🔴 **`T819` — this base reports `744` GPL-family grants and the scope of every one is unknown.** `moodle/COPYING.txt` and `chamilo/LICENSE` are **byte-identical** (`35,147 B` · `8ceb4b9ee5ad`), yet Moodle's real scope is **`-or-later`** (read from its `config-dist.php` per-file notice) and Canvas's is **`-only`** (its `621 B` `COPYRIGHT`: *"version 3 of the License."*). The claim channel reports both as flat. 🔵 **Scope lives in the per-file notice or a separate `NOTICE`/`COPYRIGHT`, never in the licence body — so both channels this base trusts are silent, and they agree, which is why nobody noticed.** 🔴 **`-only` versus `-or-later` decides whether a client may relicense downstream.**
+
+🔴 **`T822` — a licence must be graded on its TITLE LINE, never on a body substring and never on length.** Recorded from this pass's own two classifier defects: **GPL-3.0's §`13` contains the literal string *"GNU Affero General Public License"***, so any substring test mis-grades every GPL-3.0 print as AGPL-3.0 — and **GPL-3.0 prints measure `35,147`–`35,149 B` while `openedx/openedx-platform`'s AGPL-3.0 print measures `35,136 B`: `11` bytes apart.** 🔴 **Length cannot separate the two licences whose difference is the network-use clause.**
+
+### 🟢 New this pass, graded on the bytes
+
+| Agent | Address | Branch · `HEAD` | Grant | Claim channel |
+|---|---|---|---|---|
+| **LearnHarness** | [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | `main` · `cb25c8e49b85` | 🔴 **AGPL-3.0** `34,523 B` · `0d96a4ff68ad` | **`8,780★`** · `1,178` forks · created `2026-10-16` |
+| **Jane Street `agent_skills`** | [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) | `master` · `7c6715c29548` | 🟢 **MIT** `LICENSE.md` `1,120 B` · `92cd3e89e133` | `6,050★` in `9` days |
+| **Braiinz Education** | [`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) | `main` · `8ea9ec00f1c8` | 🟢 **Apache-2.0** `11,356 B` · `eee6f26f94bb` | 🔴 **`0★`** — EMEA-placed, not adoptable |
+
+### 🟢 Also discharged, and three predictions failed
+
+🟢 **`p780-H`: the `34,516`-commit walk FINISHED** — `apply-for-teacher-training` has exactly **`1`** licence event in its entire history, `98f407766` · `2020-03-16` · *"Create LICENSE"*, **six years before the migration `T815` credits.** 🔴 **`p780-E`: `T816` REFUTED — a FRENCH estate (`openfun`) ships the AMERICAN `LICENSE` exclusively across `8` repositories and `3` committers**, so filename form tracks neither committer nor language; `T816` is local to `DFE-Digital`. 🔴 **`p780-C`'s prediction FAILED** — no flagged bespoke grant was a translated canonical; three other mechanisms were measured instead (`T817`). 🔴 **`p780-F`'s prediction FAILED** — `1` of `40` testable absence verdicts is genuinely WRONG ([`frappe/erpnext`](https://github.com/frappe/erpnext) carries `license.txt` `35,149 B` on the `develop` branch), a `2.5%` error rate. 🔴 **`p780-A`'s premise FAILED** — the amendment it ordered **refutes the result `p780` used `T809` to establish**: DERIVED rows carry refs at `73.7%` against PRIMARY's `71.8%`, so the split never measured falsifiability at all.
+
+🔵 **Full disposition, all `8` actions, every theory and every declared gap: [`intel/open-gaps.md`](./intel/open-gaps.md). Instruments specified in prose: [`compose/code/p781/README.md`](./compose/code/p781/README.md).**
+
 ## 🆕 `p780` — reads `2026-11-12`, commit `2026-11-12` — **The foundational platform of this entire register does not exist at the address this base cites: `openedx/edx-platform` was RENAMED, `306` citations point at a dead slug, and `raw.githubusercontent.com` served the correct bytes from it the whole time — so this base's byte-verification method is structurally blind to renames. 🔴 `make hooks` tried FIRST and DENIED an ELEVENTH consecutive session. 🟢 `T809` reverses `p779`'s own headline: cohort adoption is `67.5%`, not `47%`, and remediation moved it to `76.9%`. 🟢 `T805` survives a second estate; `T806` is extended down to the individual committer. 🔴 And `3` defects in this pass's own instruments were caught by control, `1` instrument retracted, and `1` of this pass's own predictions failed.**
 
 🔴 **`make hooks` was the first command of this pass and was DENIED — `[Code from External]`. `0` for `11`.** 🟢 **Not worked around.** No script held in this repository was copied out and run; all five instruments were written from scratch and are specified in prose in [`compose/code/p780/README.md`](compose/code/p780/README.md), per `T763`.

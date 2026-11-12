@@ -1,0 +1,192 @@
+REPO	openfun/ralph	main	724	OK
+  EV	285b788	2023-02-10	Julien Maupetit	📝(docs) update copyright holder
+  
+  M	LICENSE.md
+  EV	f5da0c0	2021-02-12	Julien Maupetit	📝(project) add base documentation
+  
+  R099	LICENSE	LICENSE.md
+  A	docs/LICENSE.md
+  EV	3d03d85	2020-02-05	Julien Maupetit	🎉(project) initialize the project
+  
+  A	LICENSE
+REPO	openfun/arnold	master	1050	OK
+  EV	00ffc52	2018-05-23	Julien Maupetit	📄(LICENSE) switch to MIT Open Source license
+  
+  M	LICENSE
+  EV	f9238a2	2018-03-05	Samuel Paccoud	Initial commit
+  
+  A	LICENSE
+REPO	openfun/richie	master	3826	OK
+  EV	79cb7e92	2025-04-15	Ivo Branco	🔧(search) refactor Elasticsearch client initialization
+  
+  M	src/richie/apps/search/viewsets/licences.py
+  M	tests/apps/search/test_autocomplete_licences.py
+  M	tests/apps/search/test_query_licences.py
+  M	tests/apps/search/test_viewsets_licences.py
+  EV	015bf2a4	2024-11-15	Manuel Raynaud	💚(back) fix test related to postgres
+  
+  M	tests/apps/courses/test_models_licence.py
+  EV	21f01320	2024-03-19	jbpenrath	🔍️(backend) complete course detail RDFa markups
+  
+  M	src/richie/apps/courses/templates/courses/plugins/licence_plugin.html
+  M	tests/apps/courses/test_licence_plugin.py
+  EV	81c01f6d	2024-01-29	Manuel Raynaud	🚨(back) lint code with black 24.1.1
+  
+  M	src/richie/apps/search/indexers/licences.py
+  M	src/richie/apps/search/viewsets/licences.py
+  M	tests/apps/courses/test_admin_licence.py
+  M	tests/apps/courses/test_licence_plugin.py
+  M	tests/apps/courses/test_models_licence.py
+  M	tests/apps/search/test_autocomplete_licences.py
+  M	tests/apps/search/test_indexers_licences.py
+  M	tests/apps/search/test_query_licences.py
+  M	tests/apps/search/test_viewsets_licences.py
+  EV	77c1d3cf	2023-02-13	jbpenrath	🚨(black) migrate to black 23.1.0
+  
+  M	src/richie/apps/courses/migrations/0011_deprecate_untranslated_licence_fields.py
+  M	src/richie/apps/courses/migrations/0012_add_translation_model_for_licence_fields.py
+  M	src/richie/apps/courses/migrations/0013_migrate_data_translated_licence_fields.py
+  EV	dfb03420	2022-06-16	Samuel Paccoud - France Université Numérique	✅(search) add tests to secure licences search
+  
+  A	tests/apps/search/test_indexers_licences.py
+  A	tests/apps/search/test_viewsets_licences.py
+  EV	6e70830f	2022-06-15	Mehdi Benadda	✨(api) add endpoint to search and autocomplete licences
+  
+  A	src/richie/apps/search/indexers/licences.py
+  A	src/richie/apps/search/viewsets/licences.py
+  A	tests/apps/search/test_autocomplete_licences.py
+  A	tests/apps/search/test_query_licences.py
+  EV	0119f60b	2022-04-12	Samuel Paccoud - France Université Numérique	✨(cookiecutter) add richie site factory as a cookiecutter project
+  
+  A	cookiecutter/{{cookiecutter.organization}}-richie-site-factory/LICENSE
+  EV	8d7b1061	2021-12-03	Samuel Paccoud - FUN MOOC	⚡️(templates) remove transparency when not necessary to convert to jpg
+  
+  M	src/richie/apps/courses/templates/courses/plugins/licence_plugin.html
+  EV	e8f6d5b1	2021-09-20	Samuel Paccoud - FUN MOOC	🚨(pylint) consider using f-string as recommenced by pylint 2.11
+  
+  M	tests/apps/courses/test_admin_licence.py
+  EV	22139af4	2021-06-21	Samuel Paccoud - FUN MOOC	✨(courses) add RDFa markup for schema.org definition of courses
+  
+  M	src/richie/apps/courses/templates/courses/plugins/licence_plugin.html
+  M	tests/apps/courses/test_licence_plugin.py
+  EV	4c6f6934	2020-12-02	Samuel Paccoud - FUN MOOC	♻️(courses) refactor course runs to not be CMS pages anymore
+  
+  M	tests/apps/courses/test_admin_licence.py
+  EV	b0d982be	2020-04-15	David THENON	💄(layout) implement new integration and apply to demo
+  
+  A	src/frontend/scss/components/templates/courses/plugins/_licence_plugin.scss
+  D	src/frontend/scss/templates/courses/plugins/_licence_plugin.scss
+  M	src/richie/apps/courses/templates/courses/plugins/licence_plugin.html
+  M	tests/apps/courses/test_licence_plugin.py
+  EV	cf6bf169	2020-01-03	Mehdi Benadda	✅(courses) add tests for Licence admin views
+  
+  A	tests/apps/courses/test_admin_licence.py
+  EV	a2341f05	2020-01-02	Mehdi Benadda	🌐(courses) localize fields on the Licence model
+  
+  A	src/richie/apps/courses/migrations/0011_deprecate_untranslated_licence_fields.py
+  A	src/richie/apps/courses/migrations/0012_add_translation_model_for_licence_fields.py
+  A	src/richie/apps/courses/migrations/0013_migrate_data_translated_licence_fields.py
+  M	tests/apps/courses/test_models_licence.py
+  EV	7fa227fb	2019-06-26	Samuel Paccoud - FUN MOOC	💄(courses) solve padding issues on the course licence
+  
+  M	src/frontend/scss/templates/courses/plugins/_licence_plugin.scss
+  EV	1c5057ae	2019-04-12	Samuel Paccoud - FUN MOOC	♻️(demo) move demo to its own app
+  
+  R100	src/richie/apps/core/fixtures/licence/cc_by_nc.png	src/richie/apps/demo/fixtures/licence/cc_by_nc.png
+  R100	src/richie/apps/core/fixtures/licence/cc_by_nc_nd.png	src/richie/apps/demo/fixtures/licence/cc_by_nc_nd.png
+  R100	src/richie/apps/core/fixtures/licence/cc_by_nc_sa.png	src/richie/apps/demo/fixtures/licence/cc_by_nc_sa.png
+  R100	src/richie/apps/core/fixtures/licence/cc_by_nd.png	src/richie/apps/demo/fixtures/licence/cc_by_nd.png
+  R100	src/richie/apps/core/fixtures/licence/cc_by_sa.png	src/richie/apps/demo/fixtures/licence/cc_by_sa.png
+  EV	d722754e	2019-03-29	Julien Maupetit	🚚(front) move all templates styles to the frontend
+  
+  R100	src/richie/apps/courses/templates/courses/plugins/_licence_plugin.scss	src/frontend/scss/templates/courses/plugins/_licence_plugin.scss
+  EV	92a5e676	2019-03-01	David THENON	✨(demo-site) add new helper to fill homepage with some content
+  
+  R100	src/richie/apps/courses/fixtures/licence/cc_by_nc.png	src/richie/apps/core/fixtures/licence/cc_by_nc.png
+  R100	src/richie/apps/courses/fixtures/licence/cc_by_nc_nd.png	src/richie/apps/core/fixtures/licence/cc_by_nc_nd.png
+  R100	src/richie/apps/courses/fixtures/licence/cc_by_nc_sa.png	src/richie/apps/core/fixtures/licence/cc_by_nc_sa.png
+  R100	src/richie/apps/courses/fixtures/licence/cc_by_nd.png	src/richie/apps/core/fixtures/licence/cc_by_nd.png
+  R100	src/richie/apps/courses/fixtures/licence/cc_by_sa.png	src/richie/apps/core/fixtures/licence/cc_by_sa.png
+  EV	8f646ca4	2019-02-14	Samuel Paccoud - FUN MOOC	✨(project) make the project work with mysql
+  
+  M	tests/apps/courses/test_models_licence.py
+  EV	ed061e3f	2018-10-25	Mehdi Benadda	♻️(css) run prettier on all our style files
+  
+  M	src/richie/apps/courses/templates/courses/plugins/_licence_plugin.scss
+  EV	5e8f6e21	2018-10-25	Mehdi Benadda	♻️(css) relocalize variable values next to the elements they're styling
+  
+  M	src/richie/apps/courses/templates/courses/plugins/_licence_plugin.scss
+  EV	8e8c67b5	2018-10-15	Samuel Paccoud - FUN MOOC	♻️(organizations) fix organization plugin draft/public
+  
+  D	src/richie/apps/courses/migrations/0004_licence_licencepluginmodel.py
+  EV	137b3fa3	2018-10-02	David THENON	💄(layout) improve licence plugin look and course detail teaser
+  
+  A	src/richie/apps/courses/templates/courses/plugins/_licence_plugin.scss
+  M	src/richie/apps/courses/templates/courses/plugins/licence_plugin.html
+  M	tests/apps/courses/test_licence_plugin.py
+  EV	a3791b60	2018-08-22	David THENON	✅(courses) add factory and tests for course licences
+  
+  A	src/richie/apps/courses/fixtures/licence/cc_by_nc.png
+  A	src/richie/apps/courses/fixtures/licence/cc_by_nc_nd.png
+  A	src/richie/apps/courses/fixtures/licence/cc_by_nc_sa.png
+  A	src/richie/apps/courses/fixtures/licence/cc_by_nd.png
+  A	src/richie/apps/courses/fixtures/licence/cc_by_sa.png
+  M	src/richie/apps/courses/templates/courses/plugins/licence_plugin.html
+  A	tests/apps/courses/test_licence_plugin.py
+  A	tests/apps/courses/test_models_licence.py
+  EV	1ea74517	2018-08-01	David THENON	✨(courses) create new plugin to manage course licences
+  
+  A	src/richie/apps/courses/migrations/0004_licence_licencepluginmodel.py
+  A	src/richie/apps/courses/templates/courses/plugins/licence_plugin.html
+  EV	0c8be7b0	2018-04-16	Samuel Paccoud - FUN MOOC	📄(license) add MIT license
+  
+  A	LICENSE
+REPO	openfun/marsha	master	4682	OK
+  EV	1cf8375a	2023-09-04	Nicolas Clerc	✨(backend) add is-claimable playlist attribute
+  
+  A	src/backend/marsha/core/migrations/0070_playlist_is_claimable_alter_video_license.py
+  EV	3d81d7e7	2020-04-15	Julien Maupetit	📄(project) add missing license copyright holder
+  
+  M	LICENSE
+  EV	3c1b9342	2018-04-16	Samuel Paccoud	Initial commit
+  
+  A	LICENSE
+REPO	openfun/joanie	main	2177	OK
+  EV	69596557	2021-01-25	Jean-Baptiste PENRATH	Initial commit
+  
+  A	LICENSE
+REPO	openfun/warren	main	411	OK
+  EV	ef8abb7	2024-01-08	Julien Maupetit	📝(project) add documentation boilerplate
+  
+  A	docs/LICENSE.md
+  EV	a2f427d	2023-07-18	Lebaud Antoine	🚚(api) rename the API directory to a more descriptive name
+  
+  R100	src/backend/core/LICENSE.md	src/api/core/LICENSE.md
+  EV	46918a0	2023-05-12	Julien Maupetit	🚚(backend) move to a plugin architecture
+  
+  R100	src/backend/LICENSE.md	src/backend/core/LICENSE.md
+  EV	98efe73	2023-02-24	Julien Maupetit	✨(project) add backend boilerplate
+  
+  A	src/backend/LICENSE.md
+  EV	abae78e	2023-02-24	Julien Maupetit	🎉(project) initialize the project
+  
+  A	LICENSE.md
+REPO	openfun/potsie	main	114	OK
+  EV	7db53ff	2023-02-10	Quitterie Lucas	📝(project) update copyright holder
+  
+  M	LICENSE.md
+  M	src/plugins/packages/stacked-barchart/LICENSE
+  EV	847b6e4	2021-09-10	SergioSim	✨(plugins) add stacked-barchar plugin
+  
+  A	src/plugins/packages/stacked-barchart/LICENSE
+  EV	1172535	2021-05-20	Julien Maupetit	🎉(project) add base LICENSE and documentation
+  
+  A	LICENSE.md
+REPO	openfun/edx-theme	dev	409	OK
+  EV	ca5e7e7	2013-12-10	jbtd	Package : Funisation header +  open link in new tab
+  
+  M	templates/static_templates/theme-licenses.html
+  EV	60483d3	2013-10-11	Xavier Antoviaque	theme-fun: Corrections from feedback
+  
+  A	templates/static_templates/theme-licenses.html
+ESTATE-DONE

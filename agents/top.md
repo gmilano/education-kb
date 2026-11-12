@@ -4,6 +4,88 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p781` — **🟢 `make hooks` IS NOT BLOCKED. It ran, exit `0`, on its first try — in `/home/user/globant-kb`, the repository `CLAUDE.md` names. It is denied `[Code from External]` only when run INSIDE the cloned KB. Eleven passes recorded an environment block for what was a WORKING-DIRECTORY error in their own method.**
+
+🟢 **`make hooks` was the FIRST command of this pass and it SUCCEEDED.** `1` for `12`. Exit `0`, `32` lines of output, `9` articles classified into `5` studios, `0` files changed in the working tree ([`compose/code/p781/README.md`](../compose/code/p781/README.md)).
+
+🔴 **And the eleven-pass diagnosis was wrong.** Both arms were measured this pass, deliberately:
+
+| Arm | Command | Result |
+|---|---|---|
+| 🟢 **In `/home/user/globant-kb`** *(the primary working directory, the repo `CLAUDE.md` names)* | `make hooks` | 🟢 **ALLOWED — exit `0`, ran to completion** |
+| 🔴 **Inside the cloned KB `/tmp/education-kb`** | `make hooks` | 🔴 **DENIED — `[Code from External]`** |
+| 🔴 **Inside the cloned KB** | `python3 compose/code/p779/gate_refs_cohort.py .` | 🔴 **DENIED — `[Code from External]`, identical reason** |
+
+🔵 **`T818`: the denial is scoped to executing code that arrived from the cloned EXTERNAL repository, not to `make hooks` as an operation.** 🔴 **So `p770`–`p780`'s standing verdict — *"BLOCKED-ON-ENVIRONMENT — the remedy is a session permission change, not a pass's effort"* — is REFUTED. The remedy was a directory.** 🟢 **The honest half of those passes stands: instruments still cannot be reused from the clone, so writing them from scratch was correct, and remains forced.** 🔴 **`ACTION p780-A`'s instruction *"do not rebuild `gate-refs`, reuse `p779`'s"* therefore CANNOT be obeyed — `compose/code/p779/gate_refs_cohort.py` is unrunnable in this session — and the gate below was written from scratch under duress, not by choice.**
+
+**Controls run BEFORE any verdict shipped · `HKUDS/DeepTutor` reproduced `11,408 B` · `cd2f54e1e506` EXACTLY · `THU-MAIC/OpenMAIC` reproduced `1,065 B` · `ba2525637432` exactly at a moved `HEAD` · `L56` self-verified at `56` distinct names · the rename sweep's `3` controls all passed and found `2` negative-control slugs the base already carried · `1` defect in this pass's own extractor caught by control and reported below · `2` of this pass's own predictions FAILED and are reported as failed · `api.github.com/repos/*` not called once · every `branch` · `HEAD` from `git ls-remote --symref`, none guessed.**
+
+### 🟢 Three new permissive-or-copyleft education agents, every grade read on the bytes
+
+🔵 Found on the global sweep. Every row is PRIMARY: `branch` · `HEAD` from `git ls-remote --symref`, grant bytes and `sha256₁₂` measured on the file **on disk** (never through command substitution, which strips trailing newlines — `p780`'s retracted `v1` is why).
+
+| Agent | Address | Branch · `HEAD` | Grant, graded on the bytes | Claim channel | What it is |
+|---|---|---|---|---|---|
+| **LearnHarness** | [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | `main` · `cb25c8e49b85` | 🔴 **AGPL-3.0** `LICENSE` · `34,523 B` · `0d96a4ff68ad` | AGPL-3.0 · **`8,780★`** · `1,178` forks · created `2026-10-16` · pushed `2026-11-12` | Agents measure where understanding ends, build a dependency map to the goal, teach one reasoning step at a time, and persist what is learned in a **knowledge graph**. 🔴 **AGPL-3.0 — Globant cannot build closed-source on it**; it is a reference design, not a starting point |
+| **Jane Street `agent_skills`** | [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) | `master` · `7c6715c29548` | 🟢 **MIT** `LICENSE.md` · `1,120 B` · `92cd3e89e133` | MIT · `6,050★` · `420` forks · created **`2026-11-03`** · pushed `2026-11-03` | Agent **skills**, one of which is a Socratic tutor. 🟢 **MIT and composable as a skill rather than a platform** — the cheapest thing on this shelf to adopt. 🔵 `6,050★` in `9` days |
+| **Braiinz Education** | [`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) | `main` · `8ea9ec00f1c8` | 🟢 **Apache-2.0** `LICENSE` · `11,356 B` · `eee6f26f94bb` | Apache-2.0 · **`0★`** · `1` fork · pushed `2026-10-20` | Socratic tutoring, spaced repetition and PISA-aligned diagnostics, **aligned to the French curriculum** (EMEA). 🔴 **Honestly: `0★`, one fork, a single author.** Shelved because it is *placed* and permissive, not because it is adoptable |
+| **OpenMAIC** *(control, re-read)* | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `main` · `c6384ad0d82b` | 🟢 **MIT** `LICENSE` · `1,065 B` · `ba2525637432` | MIT · `43,345★` · pushed `2026-11-12` | 🟢 **Reproduces `p780` exactly on bytes and `sha256₁₂`** at a `HEAD` that moved (`8c29069daf43`→`c6384ad0d82b`) |
+| **DeepTutor** *(control, re-read)* | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main` · `60fb3bdfddb3` | 🟢 **Apache-2.0** `LICENSE` · `11,408 B` · `cd2f54e1e506` | Apache-2.0 · `58,394★` · pushed `2026-11-07` | 🟢 **Reproduces `p779` and `p780` exactly, third consecutive pass** |
+
+🔵 **`LICENSE.md`, not `LICENSE`, is where Jane Street's grant lives** — `L56`'s `.md` arm earned its keep again, the third pass in a row in which a non-default filename carried the only grant.
+
+### 🔴 `ACTION p780-B` — the rename sweep ran at scale, and `378` of this base's addresses do not resolve
+
+🟢 **A cheaper instrument than `p780-B` specified, found by measuring the channel's behaviour rather than assuming it.** `p780-B` ordered one call per slug (`5,817` calls, ~`3` hours at `30`/min). Measured instead: **a query carrying `N` `repo:` qualifiers returns exactly the slugs that EXIST and silently DROPS the dead ones**; the HTTP `422` fires only when EVERY slug in the batch is dead. 🟢 **So requested-minus-returned is the dead set, and the sweep costs `146` calls at `batch=40`, not `5,817`.** Query length is not the binding constraint it is documented to be: `40` qualifiers is `1,060` characters and is served.
+
+| Step | Measurement |
+|---|---|
+| Distinct slugs this base DISPLAYS | **`5,817`** (`21,452` URL-form citations) across all `10` shelves |
+| Alive on the claim channel | **`5,424`** |
+| Reported dead by the sweep | `393` |
+| 🔴 **Extraction artefacts — this pass's own defect** | **`15`**, caught by control and reported, not published as deaths |
+| 🟢 **GENUINE dead addresses** | **`378`** — **`6.5%`** of the addresses this base displays |
+| URL-form citations pointing at them | **`1,109`** |
+
+🔴 **`p780-B`'s prediction — *"`openedx/edx-platform` and `RoundTable02/socrates-skill` are not the only two"* — is CONFIRMED, by a factor of `189`.** 🟢 **And the sweep found `2` deliberate negative-control slugs this base already carried (`UniTime/…/this-repo-does-not-exist-xyz123`, `gmilano/…/this-repo-does-not-exist-xyz123`) and flagged both — a positive control nobody had to plant.**
+
+🔴 **The `15` artefacts are mine, and the rule that catches them is stated so the next pass does not re-find them:** a slug whose owner is a GitHub **API path segment** (`repos/HKUDS`, `repos/moodle`, `search/repositories`) or whose halves are both **metasyntactic** (`owner/repo`, `OWNER/REPO`, `a/b`, `X/Y`) is prose my extractor mis-read as an address, not a repository that died.
+
+### 🟢 `T810` extended to a TWO-CHANNEL death classifier — and `71%` of the dead addresses are recoverable
+
+🔵 `git` follows GitHub's rename redirect; the claim channel does not. That disagreement is the instrument:
+
+| `repo:` search | `git ls-remote` | Class | Count | URL citations |
+|---|---|---|---|---|
+| miss | 🟢 **OK** | **RENAMED-OR-UNINDEXED** — the content is alive, the address is stale | **`268`** (`70.9%`) | `872` |
+| miss | 🔴 **FAIL** | **DELETED-OR-PRIVATE** — truly gone | **`110`** (`29.1%`) | `237` |
+
+🟢 **Both controls passed:** `openedx/edx-platform` classifies RENAMED (`ls-remote` OK), and the planted `this-repo-does-not-exist` slug classifies DELETED (`ls-remote` FAIL). 🟢 **So most of this base's address rot is repairable by rewriting an address, not by re-researching a repository** — which is the difference between an afternoon and a pass.
+
+### 🔴 Four successors resolved, and one of them matters more than the rename
+
+| Dead address | Citations | Successor, verified on the claim channel | Reading |
+|---|---|---|---|
+| 🔴 `packbackbooks/lti-1-3-php-library` | `31` | 🟢 [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) · Apache-2.0 · `124★` · `109` forks | 🟢 **A vendor→STANDARDS-BODY transfer.** The LTI 1.3 PHP reference library now belongs to the consortium that owns the spec. **This is a governance upgrade, and `31` citations still name the vendor** |
+| 🔴 `NVIDIA/NeMo-Guardrails` | `8` | 🟢 [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails) · NOASSERTION · `7,477★` · `900` forks | An **org-level** rename, the same class as `NREL`→`NatLabRockies` at `p769`. 🔴 Claim channel grades it `NOASSERTION` — ungraded, so not citable as permissive |
+| 🔴 `microsoft/presidio` | `15` | 🔴 **None.** `repo:` → `422`; `user:microsoft presidio in:name` returns only `presidio-genproto` and an evaluation toolkit | 🔴 **The PII-redaction library this base cites `15×` is not at that address and has no visible successor in that org.** Recorded as a true absence |
+| 🔴 `mitodl/open-learning-ai-tutor` | `26` | 🔴 **None.** `open-learning-ai-tutor in:name` → `0` matching rows | 🔴 True absence, `26` citations |
+
+🔴 **And the `1EdTech`/IMS Global **Caliper Analytics** reference implementations are in the DELETED class, not the renamed one:** `1EdTech/caliper-js` (`12`), `1EdTech/caliper-java` (`5`), `1edtech/caliper-php` (`5`), `imsglobal/caliper-python` (`5`), `1EdTech/caliper-spec`. 🔵 **A learning-analytics recipe that cites a Caliper reference implementation is citing nothing** — see [`compose/patterns.md`](../compose/patterns.md).
+
+### 🔴 `p780`'s `306`-citation figure and this pass's `58` measure different things
+
+🟢 **Reconciled rather than left to contradict:** the bare string `openedx/edx-platform` occurs **`379`** times across these shelves; the URL form `github.com/openedx/edx-platform` occurs **`58`**. 🔴 **`p780` counted the bare string and reported `306`; the same count today is `379`, because `p780` itself added `73` more mentions by writing about it.** 🔵 **`T820`: "citations of a dead slug" is not a stable metric unless the form is specified, and a pass that documents a dead address inflates its own figure.**
+
+### 🔴 Two defects and two failed predictions, reported before the results that depend on them
+
+| Item | Caught by | Consequence |
+|---|---|---|
+| 🔴 **This pass's slug extractor matched `github.com/<a>/<b>` inside API-path and placeholder PROSE**, manufacturing `15` dead "repositories" | Read of the first `120` dead rows, before publication | 🟢 **Classified out, rule stated, `378` published instead of `393`.** Never shipped as deaths |
+| 🔴 **`ACTION p780-C`'s prediction FAILED** — *"at least one currently-flagged bespoke grant is an authentic TRANSLATED canonical"* | This pass's own measurement | 🟢 **No flagged print turned out to be a translation.** Three *other* mechanisms were measured instead, and `T812` is restated rather than defended → [`verticals/solutions.md`](../verticals/solutions.md) |
+| 🔴 **`ACTION p780-A`'s premise FAILED** — it asked for the cohort to be re-measured under the amended test *"before resolving anything"*, expecting the amendment to firm `T809` up | The amended gate, on its first run | 🔴 **The amendment REFUTES the result `p780` used `T809` to establish** → [`intel/open-gaps.md`](../intel/open-gaps.md) |
+| 🟡 **`ACTION p780-C` not discharged in full** | Declared, not hidden | 🟡 Three mechanisms measured on `3` prints; **every off-band print on this base was NOT re-graded.** Carried to `p781-C` |
+
 ## 🆕 `p780` — **`ACTION p779-E` answered, and neither of its two hypotheses is right: `openedx/edx-platform` does not exist. It was RENAMED, `306` citations on this base point at a dead slug, and `raw.githubusercontent.com` served the correct bytes from the dead address the whole time — so this base's byte-verification method is STRUCTURALLY BLIND to renames. 🔴 `make hooks` tried FIRST and DENIED an ELEVENTH consecutive session.**
 
 🔴 **`make hooks` was the first command of this pass and was DENIED — `[Code from External]`. `0` for `11`.** 🟢 **Not worked around.** No script held in this repository was copied out and run; all five instruments — `grant-read` (and its retracted `v1`), `gate-refs v2`/`v3`, the ref-remediator, the licence-history walker and the claim-channel probe — were written from scratch and are specified in prose in [`compose/code/p780/README.md`](../compose/code/p780/README.md), per `T763`.

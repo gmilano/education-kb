@@ -4,6 +4,33 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p781` — **The week `make hooks` turned out never to have been blocked, `378` of this base's `5,817` addresses were found not to resolve, and an `8,780★` tutor arrived under AGPL-3.0 — unusable as a starting point and worth reading anyway.**
+
+🟢 **`make hooks` ran, exit `0`, first command of the pass.** `1` for `12`. 🔴 **And the eleven-pass "environment block" was a working-directory error:** allowed in `/home/user/globant-kb`, denied `[Code from External]` inside the cloned KB, both arms measured (`T818`, [`agents/top.md`](./top.md)).
+
+### 🟢 New this week, graded on the bytes
+
+| Agent | Address | Branch · `HEAD` | Grant | Claim channel | Why it is here |
+|---|---|---|---|---|---|
+| **LearnHarness** | [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | `main` · `cb25c8e49b85` | 🔴 **AGPL-3.0** `LICENSE` · `34,523 B` · `0d96a4ff68ad` | AGPL-3.0 · **`8,780★`** · `1,178` forks · created `2026-10-16` | 🔵 **`8,780★` in `27` days.** Dependency-mapped teaching with a persistent knowledge graph. 🔴 **AGPL-3.0: a reference design for Globant, not a base to build closed-source on** |
+| **Jane Street `agent_skills`** | [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) | `master` · `7c6715c29548` | 🟢 **MIT** `LICENSE.md` · `1,120 B` · `92cd3e89e133` | MIT · `6,050★` · `420` forks · created `2026-11-03` | 🟢 **`6,050★` in `9` days, MIT, and shaped as a SKILL not a platform** — the lowest-cost adoption on this shelf. A Socratic tutor is one skill among several |
+| **Braiinz Education** | [`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) | `main` · `8ea9ec00f1c8` | 🟢 **Apache-2.0** `LICENSE` · `11,356 B` · `eee6f26f94bb` | Apache-2.0 · **`0★`** · pushed `2026-10-20` | 🔴 **`0★`, one author.** Shelved only because it is EMEA-placed (French curriculum, PISA-aligned) and permissive — **not** because it is adoptable |
+
+🔵 **The LearnHarness fork ecosystem is itself the signal:** `learnharness in:name` returns **`34`** repositories, including a Cursor-API fork, an unofficial self-hosted server fork and a Claude-subscription fork — all AGPL-3.0, all within four weeks of the original. 🟢 **A copyleft tutor spawning hosting forks within a month is a demand signal for a managed deployment, which is a service, not a licence problem.**
+
+### 🔴 The agents shelf is citing dead addresses, and now the count is known
+
+🟢 `378` genuine dead addresses of `5,817` distinct (`6.5%`); `268` RENAMED-OR-UNINDEXED, `110` DELETED-OR-PRIVATE; `1,109` URL-form citations. **Agent-shelf casualties with successors:** `NVIDIA/NeMo-Guardrails` → [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails) (`7,477★`, 🔴 NOASSERTION — ungraded, do not cite as permissive); **without** successors: `microsoft/presidio` (`15` citations) and `mitodl/open-learning-ai-tutor` (`26` citations). 🔴 **The append-only history below is NOT rewritten.**
+
+### 🔵 Declared gaps this week, searched and missing rather than silent
+
+| Gap | State |
+|---|---|
+| 🔴 **No education-specific open-source agent found in LATAM this window** | Searched; the regional sweep returned regulation and institutions, no code. 🔴 **And `latam-gpt/syco-bench` — a LATAM address this base displays — is in the dead set** |
+| 🔴 **No APAC education-specific agent found this window** | 🔴 `aisingapore/sea-lion` is in the dead set too. The region's named efforts (SEA-LION, NTT Sarashina, Sarvam AI) are **general national LLMs, not education products** |
+| 🟡 **EMEA produced exactly one agent and it has `0★`** | `braiinz94/braiinz-education`. 🔵 Placed, permissive, not adoptable. **An informed gap, not coverage** |
+| 🟢 **North America produced the two that matter** | `janestreet/agent_skills` (MIT) and `amosblomqvist/learnharness` (AGPL-3.0) |
+
 ## 🆕 `2026-11-12` · `p780` — **The week the largest artefact on these shelves turned out to be courseware at `78,508★`, a real multi-agent classroom arrived at `43,337★` under MIT, and the foundational platform of this whole register was found to be citing a DEAD SLUG.**
 
 🔴 **`make hooks` tried FIRST and DENIED — `[Code from External]`. `0` for `11`.** 🟢 Not worked around.

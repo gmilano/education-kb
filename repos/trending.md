@@ -4,6 +4,44 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p781` — **`ACTION p780-B` discharged at scale: `378` of this base's `5,817` addresses do not resolve, `71%` of them are recoverable, and the LTI 1.3 PHP reference library has moved from a vendor to the standards body.**
+
+🟢 **A cheaper instrument than `p780-B` ordered.** `p780-B` specified one `repo:` call per slug — `5,817` calls, ~`3` hours. Measured instead: **a query carrying `N` `repo:` qualifiers returns exactly the LIVE slugs and silently drops the dead ones**; HTTP `422` fires only when every slug in the batch is dead. 🟢 **Requested-minus-returned is the dead set: `146` calls at `batch=40`.** `40` qualifiers is `1,060` characters and is served, so the documented `256`-character query ceiling does not bind `repo:`-qualified search.
+
+| Step | Measurement |
+|---|---|
+| Distinct slugs DISPLAYED on this base | **`5,817`** · `21,452` URL-form citations · all `10` shelves |
+| Alive on the claim channel | **`5,424`** |
+| Reported dead | `393` |
+| 🔴 **Extraction artefacts (this pass's own defect)** | **`15`** — classified out, never published as deaths |
+| 🟢 **GENUINE dead addresses** | **`378`** = **`6.5%`** |
+| URL-form citations at a dead address | **`1,109`** |
+| 🟢 **RENAMED-OR-UNINDEXED** (`ls-remote` OK → content alive, address stale) | **`268`** (`70.9%`), `872` citations |
+| 🔴 **DELETED-OR-PRIVATE** (`ls-remote` FAIL → gone) | **`110`** (`29.1%`), `237` citations |
+
+🟢 **Three controls, all passed, run before the sweep:** an all-alive batch returns `4`/`4`; a batch carrying exactly one known-dead slug isolates it; an all-dead batch is detected as `422` and **sub-probed by bisection** rather than recorded as alive. 🟢 **And the sweep independently flagged `2` deliberate `this-repo-does-not-exist` control slugs the base already carried.**
+
+### 🔴 Dead reference implementations a learning-analytics recipe must stop citing
+
+| Address | Citations | Class | Successor |
+|---|---|---|---|
+| 🔴 `packbackbooks/lti-1-3-php-library` | `31` | RENAMED | 🟢 [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) · **Apache-2.0** · `124★` · `109` forks · pushed `2024-08-20`. 🟢 **Vendor → standards body: a governance upgrade** |
+| 🔴 `1EdTech/caliper-js` | `12` | **DELETED** | 🔴 None |
+| 🔴 `1EdTech/caliper-java` · `1edtech/caliper-php` · `imsglobal/caliper-python` · `IMSGlobal/caliper-spec` | `5`+`5`+`5`+… | **DELETED** | 🔴 None. **The whole Caliper Analytics reference-implementation family is gone from its addresses** |
+| 🔴 `IMSGlobal/lti-1-3-php-library` · `IMSGlobal/openbadges-specification` | — | DEAD | 🔵 The `IMSGlobal`→`1EdTech` rebrand left both spellings cited on this base; **only the `1EdTech` LTI repo resolves** |
+| 🔴 `apereo/opencast` | `6` | **DELETED** | 🟢 Live at [`opencast/opencast`](https://github.com/opencast/opencast) — already shelved and graded `ECL-2.0` at `p778` |
+| 🔴 `trilogy-group/oneroster-ts` · `theopenem/OneRoster.NET` | `14`+ | DEAD | 🔴 None found. **OneRoster client libraries are an address-rot cluster** |
+| 🔴 `concentricsky/badgr-server` | `6` | **DELETED** | 🔴 None under that owner |
+| 🔴 `openedx/edx-platform` | `58` (URL form) | RENAMED | 🟢 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) · AGPL-3.0 · `8,232★` — resolved at `p780`, bytes identical |
+
+🔵 **`T821`: the interoperability-standards layer of this register (LTI, Caliper, OneRoster, Open Badges) has the HIGHEST address-rot rate of any cluster on this base**, because those repositories move with consortium rebrands (`IMSGlobal`→`1EdTech`, `apereo`→`opencast`) rather than with code. 🔴 **A standards citation decays faster than a product citation, which is the opposite of what a studio would assume.**
+
+### 🔴 `p780`'s `306` and this pass's `58` are not the same measurement
+
+🟢 Bare string `openedx/edx-platform` occurs **`379`** times on these shelves; the URL form `github.com/openedx/edx-platform` occurs **`58`**. 🔴 **`p780` reported `306` on the bare-string count; the same count is `379` today because `p780` added `73` mentions by documenting it.** 🔵 **`T820`: "citations of a dead slug" is unstable unless the form is named, and writing about one inflates it.**
+
+🔴 **The append-only history below is NOT rewritten.** Live sell rows are corrected; historical rows keep their original addresses on purpose.
+
 ## 🆕 `2026-11-12` · `p780` — **`ACTION p779-B` reproduces `0`/`8` and names the reason `p779` could not: it tested a PREFIX where the family is an INFIX. `T805` confirmed on a second estate. And one `AGPL-3.0` licence measured at three lengths spanning `1,243 B`.**
 
 🔴 **`make hooks` tried FIRST and DENIED — `[Code from External]`. `0` for `11`.**

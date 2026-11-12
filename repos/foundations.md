@@ -4,6 +4,46 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p781` — **The LTI 1.3 PHP reference library now belongs to the standards body, the Caliper reference implementations are gone outright, and `6.5%` of this base's addresses do not resolve.**
+
+🟢 **`make hooks` ran, exit `0`, first command of this pass** — `1` for `12`, and the eleven-pass "environment block" was a working-directory error (`T818`, [`agents/top.md`](../agents/top.md)).
+
+### 🟢 Foundational repositories, re-verified on the bytes this pass
+
+| Repo | Address | Branch · `HEAD` | Grant, graded on the bytes | Claim channel | Role |
+|---|---|---|---|---|---|
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | `main` · `afbcc55fa1bd` | **GPL-3.0** `COPYING.txt` · `35,147 B` · `8ceb4b9ee5ad` | GPL-3.0 · pushed `2026-11-11` | The LMS default. 🔴 **Scope is `-or-later`, and nothing on this base said so until now** |
+| **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `master` | **GPL-3.0** `LICENSE` · `35,147 B` · `8ceb4b9ee5ad` | GPL-3.0 | 🔴 **BYTE-IDENTICAL grant to Moodle's** — same `sha256₁₂`. Reproduces `p780` |
+| **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` | **AGPL-3.0** + `COPYRIGHT` · `621 B` | AGPL-3.0 | 🔴 **The `621 B` notice says `-only`.** Reproduces `p780`'s byte count exactly |
+| **Open edX** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `master` · `d3a86602dcf7` | **AGPL-3.0** `LICENSE` · `35,136 B` · `e12d78569742` | AGPL-3.0 · `8,232★` | 🔴 **Cite this address, not `openedx/edx-platform`** (renamed; `58` URL citations still stale) |
+| **LTI 1.3 PHP library** | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | — | **Apache-2.0** (claim channel) | Apache-2.0 · `124★` · `109` forks · pushed `2024-08-20` | 🟢 **NEW ADDRESS this pass.** Moved from `packbackbooks/` to the consortium that owns the spec — `31` citations on this base still name the vendor |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | — | MIT *(established, not re-read this pass — DERIVED)* | MIT | Offline-first classroom. 🟢 **The one permissive platform in this table** |
+| **OpenOLAT** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | — | Apache-2.0 *(established, DERIVED)* | Apache-2.0 | 🟢 Apache-2.0 Java LMS — the permissive alternative to Moodle |
+| **Frappe LMS** | [`frappe/lms`](https://github.com/frappe/lms) | — | **AGPL-3.0**, grant at lower-case `license.txt` | AGPL-3.0 | 🔵 `L56`'s lower-case arm is the only thing that finds this grant |
+
+🔵 **Rows marked DERIVED restate a grade established in an earlier pass and are labelled so deliberately** — `T809`, as amended this pass, counts a row as PRIMARY only if it is the FIRST assertion of a grade. 🔴 **A row that quotes bytes is not thereby a measurement.**
+
+### 🔴 `ACTION p780-D` — `T819`: this base reports `744` GPL-family grants, and the scope of every one of them is unknown
+
+🔵 **`p780-D` asked the sharp question: how many `-only` vs `-or-later` grants does this base report as flat?** 🟢 **Answer, measured: all `744`, and the licence file cannot settle it by construction.**
+
+| Step | Measurement |
+|---|---|
+| Distinct (slug, GPL-family grade) pairs on these shelves | **`744`** — `AGPL-3.0`, `GPL-3.0`, `GPL-2.0`, `LGPL-*` |
+| Reported with a `-only` / `-or-later` scope | 🔴 **`0`. Every one is flat** |
+| 🔴 **Proof that the grant bytes cannot determine scope** | `moodle/COPYING.txt` and `chamilo/LICENSE` are **byte-identical** — both `35,147 B` · `8ceb4b9ee5ad` |
+| 🟢 **Where Moodle's real scope lives** | `config-dist.php`, a **per-file notice**: *"either version 3 of the License, or (at your option) any later version"* → **`-or-later`** |
+| 🔴 **Where Canvas's real scope lives** | `COPYRIGHT`, `621 B`, a separate **notice** file: *"Software Foundation, version 3 of the License."* — **no later-version clause** → **`-only`** |
+| 🔴 **What the claim channel reports** | `moodle/moodle` → `GPL-3.0` · `chamilo/chamilo-lms` → `GPL-3.0` · `instructure/canvas-lms` → `AGPL-3.0`. **Flat. Neither `-only` nor `-or-later` appears** |
+
+🔴 **`T819`: GPL-family scope lives in the per-file notice or a separate `NOTICE`/`COPYRIGHT` file, NEVER in the licence body — so a base that grades on licence-body bytes plus a claim channel's `spdx_id` is STRUCTURALLY BLIND to scope.** 🔵 This is the same shape as `T810`'s rename blindness: the two channels this base trusts agree with each other and are both silent. 🔴 **And this one is commercially load-bearing: `-only` versus `-or-later` decides whether a client may relicense downstream, which is exactly the question a studio engagement asks first.**
+
+🟡 **Honest limit:** `3` repositories were read to establish the mechanism. **The `744` pairs were COUNTED, not individually scoped** — scoping them needs a per-file-notice read per repository, which is a pass of its own → `p781-D`.
+
+### 🔴 Address rot in the foundations layer
+
+🟢 `378` genuine dead addresses of `5,817` distinct (`6.5%`), `1,109` URL-form citations, `268` recoverable by rewriting an address and `110` gone. 🔵 **`T821`: the interop-standards cluster (LTI, Caliper, OneRoster, Open Badges) rots fastest, because those repositories move with consortium rebrands rather than with code** — see [`repos/trending.md`](./trending.md).
+
 ## 🆕 `p780` — **The canonical Open edX slug is corrected on this shelf, and three authentic `AGPL-3.0` prints measured in one pass span `1,243 B` — the sharpest demonstration of `T808` yet.**
 
 🔴 **`make hooks` tried FIRST and DENIED — `[Code from External]`. `0` for `11`.** 🟢 Not worked around; all instruments written from scratch (`compose/code/p780/README.md`).

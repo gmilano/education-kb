@@ -4,6 +4,88 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p781` — **Five recipes, and the first thing each one does now is CHECK ITS OWN ADDRESSES. `6.5%` of the addresses this base displays do not resolve, and the interop-standards layer — the layer every integration recipe depends on — is the worst-affected cluster.**
+
+🟢 **`make hooks` ran, exit `0`, first command of this pass** — `1` for `12` (`T818`, [`agents/top.md`](../agents/top.md)).
+
+🔴 **Corrections applied to every recipe below, from this pass's measurements:**
+- 🔴 **Do not cite `packbackbooks/lti-1-3-php-library`** → 🟢 [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) (Apache-2.0, `124★`)
+- 🔴 **Do not cite ANY Caliper reference implementation** — `1EdTech/caliper-js`, `caliper-java`, `caliper-php`, `imsglobal/caliper-python` are **DELETED, with no successors**
+- 🔴 **Do not cite `openedx/edx-platform`** → 🟢 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform)
+- 🔴 **Do not cite `NVIDIA/NeMo-Guardrails`** → 🟢 [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails), and 🔴 **it is `NOASSERTION` on the claim channel — ungraded, so it may NOT be presented as permissive**
+- 🔴 **Do not cite `microsoft/presidio` or `mitodl/open-learning-ai-tutor`** — dead, no successors. **A PII-redaction step must name a different library and verify it**
+
+### 🟢 `P1` — Socratic tutor as a SKILL, not a platform *(fastest path, MIT throughout)*
+
+🔵 **Why this is first: it is the only recipe on this shelf with no copyleft reach and no platform migration.**
+
+| Layer | Component | Grant, verified this pass | Wiring |
+|---|---|---|---|
+| Tutoring behaviour | [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) `master` · `7c6715c29548` | 🟢 **MIT** `LICENSE.md` `1,120 B` · `92cd3e89e133` | Take the Socratic-tutor skill as a **skill definition**; drop it into the client's existing agent harness. **No new platform** |
+| Curriculum grounding | Client's own LMS content via [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | 🟢 Apache-2.0 | LTI 1.3 launch from Moodle/Canvas → the skill receives `context_id` + roles. 🔴 **Use the `1EdTech` address** |
+| Mastery state | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) exercise log *(MIT)* | 🟢 MIT | Kolibri holds per-learner mastery offline; the skill reads it as a tool call |
+
+🟢 **Effort: `3`–`4` weeks.** 🟢 **Licence posture: MIT + Apache-2.0 end to end — a closed-source deliverable is clean.** 🔴 **Limit: a skill inherits the harness's safety posture; it does not bring one.**
+
+### 🟢 `P2` — Multi-agent classroom on a permissive platform *(APAC-sourced, Apache/MIT)*
+
+| Layer | Component | Grant, verified this pass | Wiring |
+|---|---|---|---|
+| Classroom simulation | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) `main` · `c6384ad0d82b` | 🟢 **MIT** `1,065 B` · `ba2525637432` | AI teacher + AI classmates generated from a topic or document. **The only running multi-agent classroom on these shelves** |
+| Tutor depth | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) `main` · `60fb3bdfddb3` | 🟢 **Apache-2.0** `11,408 B` · `cd2f54e1e506` | DeepTutor as the one-to-one remediation path when OpenMAIC's classroom detects a gap |
+| Host platform | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 | 🟢 **Chosen over Moodle deliberately: Apache-2.0 has no copyleft reach into client plugin code** |
+| Guardrails | [`NVIDIA-NeMo/Guardrails`](https://github.com/NVIDIA-NeMo/Guardrails) | 🔴 **NOASSERTION — ungraded** | 🔴 **Blocking: resolve the grant before shipping, or substitute.** Named here because the recipe needs the layer, not because the licence is cleared |
+
+🟢 **Effort: `8`–`10` weeks.** 🔴 **The guardrails row is an open licence question, stated as such rather than quietly dropped.**
+
+### 🟡 `P3` — Knowledge-graph tutor, delivered as a MANAGED SERVICE *(the AGPL answer)*
+
+🔵 **The honest recipe for [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness)** (`main` · `cb25c8e49b85`, 🔴 **AGPL-3.0** `34,523 B` · `0d96a4ff68ad`, `8,780★`, `1,178` forks).
+
+🔴 **Globant cannot build a closed-source derivative.** 🟢 **But `34` `learnharness`-named repositories exist within four weeks of the original — self-hosted-server forks, Cursor-API forks, subscription forks — which is a measured demand signal for hosting, not for a product.**
+
+| Layer | Component | Posture |
+|---|---|---|
+| Engine | `learnharness` **unmodified**, deployed per tenant | 🟢 **AGPL-3.0 obligations are satisfied by offering the source; no derivative is created** |
+| Identity + roster | `1EdTech/lti-1-3-php-library` (Apache-2.0) | LTI 1.3 launch; roster from the client SIS |
+| Separation | Client-specific logic in a **separate service** over HTTP | 🟢 The boundary that keeps client IP out of AGPL reach — **have counsel confirm per engagement** |
+| Offline arm | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (MIT) | 🟢 For LATAM / rural APAC where connectivity is the constraint |
+
+🟢 **Effort: `6`–`8` weeks to a managed pilot.** 🔴 **Sell operations and curriculum alignment. Do not sell a derivative.**
+
+### 🟢 `P4` — EMEA AI Act readiness, built against the REAL deadlines
+
+🔵 **This recipe is mostly compliance plumbing, and it sells because most vendors are quoting the wrong date.**
+
+| Obligation | Real date | What to build |
+|---|---|---|
+| 🔴 Art. 5 — emotion recognition in education | 🔴 **Already prohibited** | An **inventory + kill-list** pass over the client's deployed tools. First deliverable, and often the only urgent one |
+| 🟢 Art. 4 — AI literacy | In force since **Feb 2025** | Staff training; maps onto the **`25%`-trained** gap |
+| 🟢 Art. 50 — transparency | **`2026-08-02`**; machine-readable marking of older generative systems by **`2026-12-02`** | Output labelling at the LMS boundary — an LTI-level content filter |
+| 🟢 **Annex III high-risk (grading, admissions)** | 🟢 **`2027-12-02`** — moved by Regulation (EU) `2026/1744`, **not `2026-08-02`** | A two-year runway: FRIA (Art. 27) inside the tender, vendor/school responsibility split in contract |
+
+| Layer | Component | Grant |
+|---|---|---|
+| Platform of record | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) or `moodle/moodle` | AGPL-3.0 / GPL-3.0 🔴 **`-or-later` for Moodle; UNKNOWN for Open edX (`T819`)** |
+| Audit trail | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (xAPI LRS) | 🔵 **Use xAPI, NOT Caliper — the Caliper reference implementations are deleted** |
+| Data minimisation | 🔴 **PII redaction library TBD** | 🔴 `microsoft/presidio` is dead with no successor. **This row is an open task, not a solved one** |
+
+🟢 **Effort: `10`–`12` weeks.** 🔴 **Not second-sourced to EUR-Lex (blocked, eleventh pass) — verify `2027-12-02` against the Official Journal before contracting.**
+
+### 🟢 `P5` — Licence due diligence as a billable first engagement *(new this pass, and it exists because `T819` exists)*
+
+🔵 **This pass found that `744` GPL-family grants on this base carry NO scope, and that neither channel it trusts can supply one. A client's own estate is in the same condition, and nobody has told them.**
+
+| Step | Method, as measured this pass | Why it is not optional |
+|---|---|---|
+| `1` | **Enumerate addresses** and sweep them with batched `repo:` queries (`40` per call) — requested-minus-returned is the dead set | 🟢 `6.5%` of this base's own addresses were dead. **A client's dependency manifest will be worse** |
+| `2` | **Split dead addresses two-channel:** `repo:` miss + `git ls-remote` OK = **renamed** (fix the address); `ls-remote` FAIL = **gone** (replace the component) | 🟢 `71%` were recoverable here — **an afternoon, not a re-architecture** |
+| `3` | **Read every grant on the BYTES over `L56`** (`7` stems × `4` extensions × `2` cases) | 🔵 Grants hide at `LICENSE.md`, lower-case `license.txt`, British `LICENCE.md` and `LICENSE-CODE` |
+| `4` | 🔴 **Read SCOPE from the per-file notice or `NOTICE`/`COPYRIGHT` — NEVER from the licence body** | 🔴 **`T819`: Moodle and Chamilo have byte-identical `35,147 B` grants and Moodle is `-or-later`; Canvas's `621 B` notice is `-only`.** Scope decides whether the client may relicense downstream |
+| `5` | **Grade off-band prints against a SET of canonicals, not one** | 🔵 **`T817`: Apache-2.0 is `11,358 B` at apache.org and `10,280 B` at SPDX.** A single canonical manufactures false bespoke-licence alarms |
+
+🟢 **Effort: `2`–`3` weeks for a mid-size estate, and it is the cheapest credible opener in this whole file** — it produces a defensible artefact, needs no platform access, and routinely finds a `-only` dependency that blocks the client's actual roadmap.
+
 ## 🆕 `p780` — **Three recipes, each built only from grants this pass read on the bytes, and each wired around the constraint this pass measured: there is no permissive LMS, so the platform is never forked.**
 
 🔴 **`make hooks` tried FIRST and DENIED — `[Code from External]`. `0` for `11`.**

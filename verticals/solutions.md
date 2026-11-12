@@ -4,6 +4,41 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p781` — **`ACTION p780-C`'s prediction FAILED, and the truth is worse for the rule it was defending: a canonical licence has NO single byte count. Apache-2.0 is `11,358 B` at apache.org and `10,280 B` at SPDX — same licence, same language, `1,078 B` apart.**
+
+🟢 **`make hooks` ran, exit `0`, first command of this pass** — `1` for `12` (`T818`, [`agents/top.md`](../agents/top.md)).
+
+### 🔴 `ACTION p780-C` — the prediction failed, and `T812` is restated rather than defended
+
+🔵 **`p780-C` predicted: *"at least one currently-flagged bespoke grant is an authentic TRANSLATED canonical."*** 🔴 **It is not. No flagged print on this base turned out to be a translation.** 🟢 **Three OTHER mechanisms were measured instead, each of which makes an authentic canonical read "off-band" — and together they are a bigger hole than the one `T812` named.**
+
+| # | Mechanism | Measured this pass | Delta |
+|---|---|---|---|
+| **1** | 🔴 **CHANNEL** — the same licence has different canonical bytes depending on where the canonical is fetched FROM | `Apache-2.0` is **`11,358 B` · `cfc7749b96f6`** at [`www.apache.org/licenses/LICENSE-2.0.txt`](https://www.apache.org/licenses/LICENSE-2.0.txt) and **`10,280 B` · `074e6e32c86a`** at `spdx/license-list-data` `text/Apache-2.0.txt` | 🔴 **`1,078 B`, same language** |
+| **2** | 🟢 **PLACEHOLDER FILL** — the Apache appendix is MEANT to be edited, so an authentic grant is never byte-equal to the canonical | [`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) `main` · `8ea9ec00f1c8`, `LICENSE` **`11,356 B` · `eee6f26f94bb`**. Diff against apache.org is **ONE line**: `Copyright [yyyy] [name of copyright owner]` → `Copyright 2026 Mourad Barkaoui / Braiinz` | **`2 B`** |
+| **3** | 🟢 **LINE WRAPPING** — hard-wrapping changes byte count without changing a word | [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) `main` · `cb25c8e49b85`, `LICENSE` **`34,523 B` · `0d96a4ff68ad`** vs SPDX `AGPL-3.0-only` **`34,020 B` · `d8a6cc31abc1`** | **`503 B`** |
+
+🟢 **Mechanism 3, pinned exactly rather than asserted:** strip ALL whitespace from both and they are `28,156 B` against `28,153 B` — **exactly `3` bytes apart**, and those `3` bytes are the three `http://`→`https://` scheme updates on the `fsf.org` and `gnu.org` URLs. 🟢 **`0` CR bytes measured, so it is NOT CRLF** (the same negative `p779` found for CECILL). The print carries `661` newlines against SPDX's `235`: **it is hard-wrapped.** 🟢 **`0` deontic operators differ. The grant is authentic AGPL-3.0.**
+
+🔵 **`T817`: a licence's canonical byte count is CHANNEL- and FORMATTING-specific, not merely language-specific (`T812`). "Off-band" is not evidence of a bespoke licence — it is evidence that the comparison had one canonical where it needed a set.** 🔴 **`T812` keeps its CECILL evidence and loses its monopoly on the explanation:** `p777-C`'s bespoke-licence rule fires on translation, on channel choice, on an intended placeholder edit and on a text reflow, and this base cannot currently tell those four apart.
+
+🟡 **Honest limit, declared:** `3` prints were measured. **`p780-C` asked for EVERY off-band print on this base to be re-graded, and that was not done** → carried to `p781-C`.
+
+### 🔴 The platform layer, and the scope question that decides whether a client can ship
+
+| Platform | Address | Grant, on the bytes | 🔴 **Real scope** | Customisable with AI on top? |
+|---|---|---|---|---|
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | GPL-3.0 · `COPYING.txt` `35,147 B` · `8ceb4b9ee5ad` | 🟢 **`-or-later`**, from the `config-dist.php` per-file notice | Yes — plugin API. 🔴 Copyleft reaches derived plugin code |
+| **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | GPL-3.0 · `LICENSE` `35,147 B` · `8ceb4b9ee5ad` | 🔴 **Unknown — not asserted** | 🔴 **Its grant is BYTE-IDENTICAL to Moodle's, which is exactly why bytes cannot answer the scope question** |
+| **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | AGPL-3.0 · `COPYRIGHT` `621 B` | 🔴 **`-only`** — *"version 3 of the License."*, no later-version clause | Yes, but 🔴 **AGPL network clause + `-only`**: the narrowest terms in this table |
+| **Open edX** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | AGPL-3.0 · `LICENSE` `35,136 B` · `e12d78569742` | 🔴 Unknown | Yes — Tutor/Docker. 🔴 **Cite this address, not the renamed `openedx/edx-platform`** |
+| **OpenOLAT** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | Apache-2.0 *(DERIVED)* | 🟢 n/a — permissive | 🟢 **Yes, and no copyleft reach. The best platform base for a closed deliverable** |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | MIT *(DERIVED)* | 🟢 n/a | 🟢 **Yes.** Offline-first — the right base where connectivity is the constraint (LATAM, Africa, rural APAC) |
+| **RosarioSIS** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 *(established `p778`: `15,214 B` · `d954e14e5c75`)* | 🔴 Unknown | SIS. 🔴 GPL-2.0 — **incompatible with GPL-3.0 code unless `-or-later`, which is the unknown** |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 *(DERIVED)* | 🔴 Unknown | 🟢 Odoo-based ERP+SIS+LMS. **LGPL is the mildest copyleft here** |
+
+🔴 **`T819`, and it is the most commercially consequential finding of this pass:** `744` distinct (slug, GPL-family grade) pairs on this base, **`0`** carrying a scope. Scope lives in a per-file notice or a separate `NOTICE`/`COPYRIGHT`, never in the licence body — so **both channels this base trusts are silent, and they agree, which is why nobody noticed.** 🔵 Full measurement in [`repos/foundations.md`](../repos/foundations.md).
+
 ## 🆕 `p780` — **`ACTION p779-D` discharged on all `6` French prints with `0` CECILL-B/C, my own CRLF prediction FAILED, and the vertical every roundup recommends for education ERP ships a licence file that CONTRADICTS ITSELF.**
 
 🔴 **`make hooks` tried FIRST and DENIED — `[Code from External]`. `0` for `11`.** 🟢 Not worked around.

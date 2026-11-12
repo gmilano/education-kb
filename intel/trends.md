@@ -4,6 +4,60 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p781` — **`ACTION p780-E` and `p780-H` both land, and both REFUTE the theory they were built to confirm. `T816` is LOCAL to the DfE: a FRENCH organisation writes the AMERICAN `LICENSE`, exclusively. And the largest service in the DfE estate got its grant in `2020`, by hand, six years before the migration `T815` credits.**
+
+🟢 **`make hooks` ran, exit `0`, first command of this pass** — `1` for `12` (`T818`, [`agents/top.md`](../agents/top.md)).
+
+### 🔴 `ACTION p780-H` — the `34,516`-commit walk FINISHED, and `T815` does not reach the biggest service
+
+🔵 `p780` could not afford this walk and published no figure, correctly. 🟢 **It completes in under a minute with the right bounds:** `--filter=blob:none --no-checkout --single-branch`, default branch only (`T813`).
+
+| Measurement | Value |
+|---|---|
+| Repository | [`DFE-Digital/apply-for-teacher-training`](https://github.com/DFE-Digital/apply-for-teacher-training) |
+| Default branch · total commits | `main` · **`34,516`** — 🟢 **reproduces `p780`'s figure exactly** |
+| Commits since `2026-01-01` | `826` |
+| 🟢 **Licence events since `2026-01-01`** | **`0`** — and the walk **completed**, exit `0`. 🟢 **A genuine zero, not an unfinished one (`T814` satisfied)** |
+| 🟢 **Licence events in the ENTIRE history** | **exactly `1`** |
+| The one event | **`98f407766`** · **`2020-03-16`** · **Theodor Vararu** · *"Create LICENSE"* · adds **`LICENCE`** |
+
+🔴 **So the answer to `p780-H`'s question is the one it offered as the less likely branch: this IS the case where the grant was a deliberate, standalone act.** 🟢 **And it is stronger than that — the grant predates the `2026` Azure DevOps migration cohort by SIX YEARS**, so `T815`'s mechanism cannot have produced it. 🔵 ***"Create LICENSE"* is the GitHub web form's default commit message**, which places the act precisely: one person, through the web UI, in `2020`. 🔴 **`T815` is therefore restated as a mechanism that explains the estate's RECENT grants, not its oldest or its largest.**
+
+### 🔴 `ACTION p780-E` — `T816` tested on a French estate exactly as specified, and it is REFUTED
+
+🔵 **`p780-E` designed its own falsification and deserves credit for it:** *"A French estate is the right test precisely because `LICENCE` is the correct spelling in French too — so if the filename still splits by person rather than by language, `T816` is strong; if it does not split at all, `T816` is local to `DFE-Digital`."*
+
+🟢 **`8` repositories of the `openfun` estate (France) walked on their default branches, `0` unfinished:**
+
+| Repository | Branch · commits | Licence events |
+|---|---|---|
+| `openfun/ralph` | `main` · `724` | `3d03d85` `2020-02-05` **Julien Maupetit** *"🎉(project) initialize the project"* → **A `LICENSE`** · `f5da0c0` `2021-02-12` **R099 `LICENSE`→`LICENSE.md`** · `285b788` `2023-02-10` M `LICENSE.md` |
+| `openfun/arnold` | `master` · `1,050` | `f9238a2` `2018-03-05` **Samuel Paccoud** *"Initial commit"* → **A `LICENSE`** · 🔴 `00ffc52` `2018-05-23` **Julien Maupetit** *"📄(LICENSE) switch to MIT Open Source license"* |
+| `openfun/richie` | `master` · `3,826` | 🔵 `0119f60b` `2022-04-12` adds `cookiecutter/{{cookiecutter.organization}}-richie-site-factory/LICENSE` — **a grant inside a SCAFFOLD** |
+| `openfun/edx-theme` | `dev` · `409` | 🔴 `templates/static_templates/theme-licenses.html` only (**Xavier Antoviaque `2013-10-11`**, jbtd `2013-12-10`) |
+
+🔴 **`T816` REFUTED, and cleanly: `openfun` is a French organisation and it ships `LICENSE` / `LICENSE.md` — the AMERICAN spelling — EXCLUSIVELY. Zero `LICENCE` prints across `8` repositories and three committers.** 🟢 **The filename neither splits by individual committer nor follows the language.** 🔵 **So `T816` is LOCAL to `DFE-Digital`, and the British `LICENCE` in that estate is house style, not language** — which also removes the inference `p780` was tempted by, that spelling tracks locale.
+
+🟢 **`T815` SPLITS on this estate rather than confirming:** the grant arrives at repository creation in `ralph` (*"initialize the project"*) and `arnold` (*"Initial commit"*) — 🟢 **the creation half CONFIRMED on a second estate** — but `arnold` then carries a deliberate, standalone *"switch to MIT Open Source license"* commit. 🔴 **So "never a deliberate act" is refuted twice this pass**, here and at `apply-for-teacher-training`. 🟢 **Restated: in a public-sector or publicly-funded estate the grant USUALLY arrives with the repository or its scaffold; a standalone licence commit is rare but real, and it is what a relicensing decision looks like in the log.**
+
+🟢 **And `richie` makes `T815`'s mechanism literal:** the grant that repository adds is one inside a **cookiecutter template** — the "migration scaffold whose checklist includes a licence file" is not an inference here, it is a committed directory.
+
+### 🟢 `p780`'s 🟡 `openfun/edx-theme` gap — CLOSED
+
+🔴 `p780` left this unresolved: *"a licence was added `2013-10-11` by a named human and the claim channel reports `NONE`; default branch is `dev`. Unresolved."* 🟢 **Resolved: there is no grant. Every licence event in that repository's history is at `templates/static_templates/theme-licenses.html` — a Django template that RENDERS a licences page.** 🟢 **The claim channel's `NONE` is CORRECT.** 🔵 **`T813` extended: the publication-artefact class is not confined to generated refs like `gh-pages` — it lives inside the source tree too, as a template whose filename contains `licenses`.** 🔴 **A licence-history walker that globs `*licence*` across a web application will keep finding pages, views and tests instead of grants.**
+
+🔵 **And `richie` supplies the fourth non-grant class under `T811`:** its licence events are overwhelmingly a **Django licence DATA MODEL** — `apps/search/indexers/licences.py`, `viewsets/licences.py`, `migrations/*_translated_licence_fields.py`, `test_models_licence.py`. 🔵 **Licence-as-application-domain-object**, alongside the copyright-holder manifest, the grant notice and the rendered page.
+
+### 🔵 Sector trends this window, with the source class named
+
+| Trend | Evidence | Reading for a studio |
+|---|---|---|
+| 🟢 **Copyleft is winning the new education agents** | [`learnharness`](https://github.com/amosblomqvist/learnharness) **AGPL-3.0** at `8,780★` in `27` days, and **`34`** `learnharness`-named repositories already exist — Cursor-API, self-hosted-server and Claude-subscription forks, all AGPL-3.0 | 🔴 **Globant cannot build closed-source on AGPL-3.0.** 🟢 **But a copyleft tutor spawning hosting forks within a month is a demand signal for MANAGED DEPLOYMENT, which is a service and carries no licence problem** |
+| 🟢 **Skills are displacing platforms as the unit of adoption** | [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) — **MIT**, `6,050★` in `9` days, a Socratic tutor as ONE SKILL rather than an application | 🟢 **The cheapest integration path on these shelves.** A skill composes into an existing harness; a platform demands migration |
+| 🔴 **The large-star education artefacts are COURSEWARE, not products** | `p780` shelved `78,508★` and `41,772★` artefacts that are a curriculum and a pattern library | 🔴 **Star count does not indicate deployability in this sector**, and it is the metric a client will quote first |
+| 🟢 **The interop-standards layer is rotting fastest** | `T821`: LTI, Caliper, OneRoster and Open Badges repositories move with CONSORTIUM REBRANDS (`IMSGlobal`→`1EdTech`, `packbackbooks`→`1EdTech`, `apereo`→`opencast`) | 🔴 **A standards citation decays faster than a product citation — the opposite of the intuition.** `1EdTech`'s Caliper reference implementations are deleted outright |
+| 🟢 **Policy mandates are outrunning policy funding** | Ohio's `2026-07-01` district-policy deadline; most US state laws mandate training or curriculum with no dedicated money | 🟢 **Implementation capacity is the scarce good**, which matches the `25%`-trained figure |
+
 ## 🆕 `p780` — **`ACTION p779-H` answered, and the answer is neither of the two options it offered: the late grants came in with a PLATFORM MIGRATION. And the licence filename splits by INDIVIDUAL COMMITTER, which is a finer unit than `T806` allows.**
 
 🔴 **`make hooks` tried FIRST and DENIED — `[Code from External]`. `0` for `11`.**
