@@ -1,0 +1,829 @@
+apply-for-teacher-training	MIT	38	2026-11-11	false	false	Ruby	A service for applying to teacher training courses
+rails-template	NONE	34	2026-06-24	false	false	Ruby	Rails 8 template with GOV.UK Frontend
+technical-guidance	NOASSERTION	27	2026-11-09	false	false	HTML	Principles, standards and guidance for digital delivery teams
+teaching-vacancies	MIT	27	2026-11-11	false	false	Ruby	Teaching Vacancies is a free job-listing service from the Department for Education.
+govuk-rails-boilerplate	MIT	25	2022-06-27	true	false	Ruby	A simple boilerplate built on Ruby on Rails to kick start new services 
+get-into-teaching-app	MIT	25	2026-11-11	false	false	Ruby	The Department for Education's Get Into Teaching website
+architecture	NOASSERTION	24	2026-11-11	false	false	SCSS	Guide to DfE architecture and design
+terraform-azurerm-container-apps-hosting	MIT	19	2026-11-11	false	false	HCL	Azure Container Apps Hosting terraform module
+gias-query-tool	NONE	17	2025-10-03	false	false	SQL	The easiest way to write advanced queries against the Get Information About Schools (GIAS) database
+schools-experience	MIT	16	2026-11-11	false	false	Ruby	The Department for Education's Get Schools Experience Service which allows you to find out more about teaching by visiting schools.
+claim-additional-payments-for-teaching	MIT	15	2026-11-11	false	false	Ruby	-
+bat-design-history	MIT	13	2026-09-03	false	false	JavaScript	A history of the product, design, technology, and policy decisions shaping the services that enable and support trainee teacher recruitment.
+samling	MIT	13	2017-03-15	false	false	JavaScript	Serverless SAML IDP for testing SAML integrations
+publish-teacher-training	MIT	12	2026-11-11	false	false	Ruby	Publish teacher training courses - lets providers edit and publish their courses | Find teacher training courses - lets candidates find courses
+register-trainee-teachers	MIT	12	2026-11-12	false	false	Ruby	Register trainee teachers is the service that providers use to register trainees that have accepted places onto their ITT courses. Providers can use this service to award trainees their qualifications. This service has replaced the Database for Trainee Teachers and providers (DTTP). 
+dfe-analytics	MIT	12	2026-11-11	false	false	Ruby	Emit standard analytics events from your Rails application
+Enterprise-Security-Architecture	NOASSERTION	11	2023-10-10	false	false	-	Repository for ESA-related artefacts
+apply-for-teacher-training-prototype	MIT	11	2026-11-02	false	false	HTML	Prototype for the ‘Apply for teacher training’ service
+slack-incident-bot	MIT	11	2025-08-19	true	false	Ruby	A Slack app used for incident management at Department for Education Digital
+get-help-with-tech	MIT	10	2023-03-06	true	false	Ruby	Provide guidance and forms for the "Get Help With Tech" COVID-19 response initiative
+teacher-services-cloud	NONE	9	2026-11-11	false	false	HCL	-
+dfe-job-descriptions	NONE	9	2025-01-24	true	false	HTML	A collection of DfE Job Descriptions. Published at https://dfe-digital.github.io/dfe-job-descriptions/
+early-careers-framework	MIT	9	2026-05-15	true	false	Ruby	-
+register-trainee-teachers-prototype-old	MIT	9	2025-09-08	true	false	Nunjucks	Prototype for the ‘Register trainee teachers’ service
+get-information-about-schools	MIT	9	2026-11-11	false	false	C#	Get information about schools
+govuk-onelogin-aspnetcore	MIT	8	2026-05-06	false	false	C#	GOV.UK One Login authentication library for ASP.NET Core applications
+npq-registration	MIT	8	2026-11-11	false	false	Ruby	Rails app for the NPQ Registration service
+github-actions	NONE	8	2026-11-04	false	false	Shell	A central repo for sharing useful github actions
+buy-for-your-school	MIT	8	2026-11-11	false	false	Ruby	A free and compliant service to help you buy for your school, trust or academy
+get-into-teaching-api	MIT	8	2026-11-10	false	false	C#	Provides a RESTful API for integrating with the Get into Teaching CRM.
+teaching-record-system	MIT	8	2026-11-11	false	false	C#	-
+accessibility-manual	NONE	7	2026-03-09	false	false	HTML	The DfE accessibility manual built and maintained by the DesignOps team.
+login.dfe.public-api	MIT	7	2026-10-21	false	false	JavaScript	API for external consumers to interact with DfE login
+govuk-markdown-prototype-kit	NONE	7	2023-09-09	false	false	Slim	Minimal prototyping kit built around govuk_markdown
+dfe-analytics-dataform	MIT	7	2026-11-11	false	false	JavaScript	Dataform package containing commonly used SQL functions and table definitions, for use with event data streamed to BigQuery using DfE-Digital/dfe-analytics
+apply-for-qualified-teacher-status	MIT	7	2026-11-11	false	false	Ruby	A service that allows international teachers to apply for qualified teacher status (QTS) in England.
+sts-plan-technology-for-your-school	MIT	7	2026-11-11	false	false	C#	Web application to help schools plan a technology roadmap
+find-teacher-training	MIT	6	2023-02-24	true	false	Ruby	Find postgraduate teacher training
+manage-teacher-training-applications-prototype	MIT	6	2026-03-09	false	false	Nunjucks	Prototype for the ‘Manage teacher training applications’ service
+cpd-service-manual	NOASSERTION	6	2024-07-04	true	false	HTML	The service manual for the Continuing Professional Development Services
+single-unique-identifier	MIT	6	2026-11-11	false	false	C#	Components and documentation created by the single unique identifier programme.
+govuk-wizardry	MIT	6	2022-10-21	true	false	Ruby	Wizard builder for Rails
+childrens-social-care-cpd	MIT	6	2026-04-28	true	false	HTML	Children's Social Care Career Development
+ucd-manual	MIT	6	2023-05-03	true	false	Nunjucks	Use the repository: dfe-digital/design
+gias-data	NONE	6	2024-07-12	true	false	Ruby	Easily download GIAS data in JSON
+teaching-vacancies-prototype	MIT	5	2026-11-11	false	false	Nunjucks	A research prototype for the Teaching Vacancies service
+publish-teacher-training-2022	MIT	5	2022-06-14	true	false	Ruby	Publish teacher training courses - lets providers edit and publish their courses
+govuk-markdown	NONE	5	2026-10-30	false	false	Ruby	Convert markdown into GOV.UK Frontend-styled HTML
+early-years-foundation-recovery	MIT	5	2026-11-11	false	false	Ruby	The Early Years Covid Recovery project application
+prepare-academy-transfers	NONE	5	2024-10-16	true	false	C#	Academy Transfers frontend service to talk to Academies API backend.
+dfe-wizard	MIT	5	2026-11-04	false	false	Ruby	Extracted from Apply - A set of design of creating multi step forms
+early-years-foundation-reform	MIT	5	2026-11-11	false	false	Ruby	A way for content editors to compose the content to describe changes in the guidance for  Early Years Child Care providers
+check-an-early-years-qualification	MIT	5	2026-11-10	false	false	C#	Check an early years qualification
+eligibility-checking-engine	NONE	5	2026-11-11	false	false	C#	-
+bat-infrastructure	NONE	5	2026-03-16	false	false	PowerShell	bat-monitoring
+teacher-services-upptime	MIT	4	2026-11-12	false	false	Markdown	📈 Uptime monitor and status page for Department for Education - Digital, powered by @upptime
+vulnerability-disclosure-program	MIT	4	2026-08-18	false	false	HCL	This project aims to deploy a security.txt and thanks.txt file under the vulnerability disclosure program started by DfE with NCSC.
+fh-referral-ui	MIT	4	2024-08-22	true	false	C#	Ui for the management of a person/family referral to a Local Authority, Voluntary, Charitable or Faith organisation.
+childcare-support-platform	MIT	4	2026-11-11	false	false	Python	-
+secure-by-design-docs	NONE	4	2026-03-30	false	false	HCL	-
+fh-service-directory-admin-ui	MIT	4	2024-08-06	true	false	C#	An administration user interface for managing the Family Hubs service directory. 
+terraform-modules	NONE	4	2026-11-11	false	false	HCL	-
+education-benchmarking-and-insights	MIT	4	2026-11-11	false	false	C#	A service that allows you to compare school metrics against similar schools
+govuk_feature_flags	MIT	4	2023-05-15	false	false	CSS	-
+service-security-posture-hardening	MIT	4	2026-11-09	false	false	Rust	-
+dfe-reference-data	MIT	4	2026-11-03	false	false	Ruby	Uniform interface to high-quality reference data lists
+education-provider-registry-core	MIT	4	2026-11-11	false	false	C#	Education Provider Registry Query Service is a lightweight, read‑optimised API that exposes canonical education provider data for downstream consumers. It provides fast, consistent access through stable query endpoints, supporting data shaping, searching, filtering, and future expansion across GIAS‑aligned services.
+login.dfe.support	MIT	4	2026-09-16	false	false	JavaScript	Application for support staff to service user requests
+find-a-lost-trn	MIT	4	2026-11-10	false	false	Ruby	Support teachers to find their teacher reference number
+pre-ab-conversions	MIT	3	2023-11-24	false	false	HTML	-
+formbuilder-demo	MIT	3	2021-11-13	true	false	Ruby	A demo app showing the basic use of the GOV.UK Design System Formbuilder
+apply-for-qts-prototype	MIT	3	2024-04-16	false	false	HTML	Prototype of Professional recognition service.
+keyvault-yaml-secret	MIT	3	2024-05-10	false	false	TypeScript	A GitHub action that fetches secret keys from Azure Key Vault
+prepare-academy-conversions	MIT	3	2026-11-11	false	false	C#	-
+buying-for-schools-v2	MIT	3	2025-06-05	false	false	JavaScript	-
+ey-recovery-prototype	MIT	3	2026-04-24	false	false	HTML	The prototype for the Early Years Covid Recovery project
+service-assessment-service	MIT	3	2025-06-03	true	false	C#	Service to book, manage, assess, and report on Service Assessments
+funding-service-myesf-vyf-data-api	MIT	3	2026-10-30	false	false	C#	-
+care-leavers	MIT	3	2026-11-10	false	false	C#	Care Leavers Support Website - BETA
+get-teacher-training-adviser-service	MIT	3	2026-03-16	false	false	Makefile	DFE-Digital Get Teacher Training Adviser Service
+academies-academisation-api	MIT	3	2026-11-11	false	false	C#	-
+communicating-funding-prototype	MIT	3	2026-09-01	false	false	HTML	Prototypes for the Funding Service's Communicating Funding Alpha
+apply-service-standard-in-dfe	MIT	3	2023-04-21	false	false	HTML	-
+accessibility-issues-statements	NONE	3	2025-07-25	false	false	HTML	DesignOps owned product for managing accessibility issues and automatically generating statements
+register-early-career-teachers-public	MIT	3	2026-11-11	false	false	Ruby	Register early career teachers
+dfe-identity-account-prototype	MIT	3	2024-08-05	false	false	JavaScript	Prototype for the DfE identity account
+fh-service-directory-ui	MIT	3	2024-08-06	true	false	C#	A service directory for local authorities, voluntary, charitable and faith organisations to list and manage their services.
+find-information-about-schools-and-trusts	MIT	3	2026-11-11	false	false	C#	-
+rspec-retry	MIT	3	2022-12-05	false	false	Ruby	Retry randomly failing rspec example. This is an extension to the original gem, that will log flakey tests to an output file.
+check-your-eligibility-prototype	MIT	3	2026-11-10	false	false	HTML	School and LA child eligibilty checker tool
+refer-serious-misconduct	MIT	3	2026-11-11	false	false	Ruby	-
+check-free-school-meals-eligibility-parent	NONE	3	2026-11-02	false	false	CSS	-
+dsi-platform	MIT	3	2026-11-04	false	false	C#	This repository contains various projects to support the DfE Sign-in platform.
+fh-referral-dashboard-ui	MIT	3	2024-07-02	true	false	C#	UI for the management of a person/family referral to an organisation.
+academies-api	MIT	3	2026-11-11	false	false	C#	Simple api for getting data from the TRAMS system
+login.dfe.examples.rails	MIT	3	2020-04-03	true	false	Ruby	A rails example RP for login.dfe
+vcf-sw-career-development-prototype	MIT	3	2024-05-10	false	false	HTML	Social worker career development prototype
+terraform-azurerm-front-door-app-gateway-waf	MIT	3	2026-11-11	false	false	HCL	Deploy a WAF Policy against Azure Front Door or Application Gateway
+funding-service-odl-prototype	NONE	3	2026-10-10	false	false	Python	A collection of prototypes and mock-ups relating to the ODL (Operational Data Layer) work.
+find-teacher-training-prototype	MIT	3	2026-04-28	false	false	Nunjucks	Prototype for the ‘Find postgraduate teacher training’ service
+fh-referral-api	MIT	3	2024-08-07	true	false	C#	Api for the management of a person/family referral to a Local Authority, Voluntary, Charitable or Faith organisation.
+dfe-autocomplete	MIT	3	2026-05-27	false	false	JavaScript	Autocomplete built on top of accessible autocomplete
+support-for-social-workers	MIT	2	2026-08-20	false	false	C#	This repository contains the code needed to host the Social Workforce career progression service. This service helps workers in this profession to easily find information about the pathways to further their career.
+teaching-vacancies-design-history	MIT	2	2026-10-03	false	false	Nunjucks	Design history for Teaching Vacancies
+tra-digital-design-history	MIT	2	2024-04-03	false	false	JavaScript	How the Teaching Regulation Agency (TRA) services have changed over time
+teacher-services-data-transformation	NONE	2	2022-07-14	false	false	-	General repo for TS cross cutting data transformation (formerly known as teacher id)
+sdd-concerns-prototype	MIT	2	2022-04-12	false	false	HTML	-
+academisation-nuget-packages	MIT	2	2024-10-10	true	false	C#	-
+login.dfe.directories	MIT	2	2026-11-04	false	false	JavaScript	Directories API for the login.dfe service
+spi-event-broker	MIT	2	2023-01-23	false	false	C#	-
+curriculum-materials	MIT	2	2020-06-24	true	false	Ruby	-
+get-into-teaching-crm-exports	NONE	2	2022-06-27	true	false	TSQL	A holding place for findings and scripts created while researching and planning a reporting tool for GIT
+CSharp-.NET-Template	MIT	2	2026-11-11	false	false	C#	A template for C# .NET development in Schools Digital
+search-and-compare-ui	MIT	2	2020-03-02	true	false	C#	Find postgraduate teacher training
+school-placements-alpha-prototype	MIT	2	2026-04-10	true	false	JavaScript	A service for training providers and schools to manage their participation in ITT, view mentors and ITT partnerships
+feat	NONE	2	2026-04-07	false	false	HTML	Find Education and Training
+funding-service-myesf-vyf-document-generator-func	MIT	2	2026-10-30	false	false	C#	-
+teacher-cpd-design-history	MIT	2	2026-09-23	false	false	JavaScript	Teacher CPD design history
+manage-teaching-jobs-prototype	MIT	2	2026-11-12	false	false	Nunjucks	Prototype for the ‘Manage teaching jobs’ service
+dfe-checkov-policies	MIT	2	2026-11-02	false	false	HCL	Repository for custom policies, examples, and CI integrations to scan Azure IaC using Checkov. Helps enforce security standards across DfE CIP and ELZ subscriptions.
+SchoolAccount-Web	NONE	2	2026-11-11	false	false	C#	-
+SUI_Matcher	MIT	2	2026-11-10	false	false	C#	-
+login.dfe.applications	MIT	2	2026-08-24	false	false	JavaScript	API for application consuming DfE Sign-in
+funding-service-myesf-docex-data-api	MIT	2	2026-11-04	false	false	C#	-
+analytics-preparation	NONE	2	2020-02-27	false	false	PLpgSQL	School Experience Analytics Helper Objects
+dfe-cs-templates	MIT	2	2022-11-23	false	false	-	-
+apply-for-qualified-teacher-status-dataform	NONE	2	2026-11-11	false	false	JavaScript	Dataform for Apply for QTS service.
+sap-sector	NOASSERTION	2	2026-11-11	false	false	C#	Sector facing output of the SAP project
+teacher-training-entitlement	MIT	2	2026-11-11	false	false	Ruby	Rails app for the TTE service
+funding-service-myesf-vyf-ui	MIT	2	2026-10-30	false	false	HTML	-
+buying-for-schools-prototype	MIT	2	2019-03-15	false	false	HTML	-
+check-childrens-barred-list	MIT	2	2026-11-11	false	false	Ruby	-
+curriculum-materials-prototype	MIT	2	2020-09-04	false	false	HTML	DFE_CurriculumMaterials_Prototype
+get-into-teaching-wizard	MIT	2	2023-03-31	false	false	Ruby	Base classes for building a wizard - suitable for a GDS transactional service
+sap-public	NOASSERTION	2	2026-11-11	false	false	C#	Public facing output of the SAP project. 
+npd-find-and-explore	MIT	2	2023-01-20	false	false	Ruby	The Find and explore data in the National Pupil Database (NPD) service allows users to explore, search and find metadata contained in the NPD.
+login.dfe.search	MIT	2	2026-06-17	false	false	JavaScript	API for searching aggregated data with DfE Sign-in
+design	NONE	2	2026-05-20	false	false	HTML	Design manual for the Department for Education. This service is owned by the Design Ops team. Changes and approvals are managed by @andyjones81 or DfE Design Ops. (See the DFE Design Manual for details)
+ehcp-guidance-prototype	MIT	2	2024-09-18	false	false	HTML	Repository to hold prototyping to support the creation of an EHCP information and guidance service
+dops-sas	NONE	2	2026-09-28	false	false	HTML	Service assessment service for assessing services against government service standard.
+funding-service-myesf-fundingclaim-data-api	MIT	2	2026-11-04	false	false	C#	-
+dfe-analytics-dotnet	MIT	2	2026-11-11	false	false	C#	-
+bat-platform-building-blocks	MIT	2	2022-06-07	false	false	Ruby	ARM - VSTS POC for Becoming a Teacher
+nrs-diagnostic-prototype	MIT	2	2023-01-24	false	false	HTML	Prototype for NRS Diagnostic UI for getting help to retrain
+wizard_steps	NONE	2	2021-03-17	false	false	Ruby	Multi-step form helper for gov.uk type forms
+tra-dqt-automation	NONE	2	2025-08-27	true	false	C#	-
+SfSW-Infra	MIT	2	2026-05-20	false	false	HTML	-
+rsd-clamav-api	MIT	2	2026-11-10	false	false	C#	ClamAV All‑in‑One Container (ClamAV + freshclam + .NET 8 Minimal API)
+manage-entitlement-funding-for-early-years-providers	MIT	2	2026-11-11	false	false	C#	Early years education providers manage their entitlement administration tasks: check entitlement codes, and record key data to share with their Local Authority in entitlement claims, in order to receive funding.
+accessing-childcare-entitlement-checker	MIT	2	2026-11-11	false	false	C#	An entitlement checker that translates data from parents and carers into a personalised summary of available childcare support.
+record-concerns-support-trusts	NONE	2	2026-11-11	false	false	C#	-
+login.dfe.access	MIT	2	2026-10-10	false	false	JavaScript	API for managing user permissions
+teaching-school-hub-finder	NONE	2	2026-11-10	false	false	Ruby	Rails App for the Teaching School Hub Finder
+rsd-core-libs	MIT	2	2026-11-10	false	false	C#	-
+fh-family-experience-web	NONE	2	2022-11-21	false	false	CSS	fh-family-experience-web
+dsi-tools	NONE	2	2026-05-02	false	false	PowerShell	Tools to assist with local development of DfE Sign-in .NET components.
+teacher-services-tech-docs	NONE	2	2026-11-09	false	false	Ruby	Technical documentation for DfE Teacher Services
+content-prototype	MIT	2	2020-09-13	true	false	JavaScript	Lightweight prototype that can make use of GovSpeak templates
+login.dfe.services	MIT	2	2026-07-22	false	false	JavaScript	DfE Service launch pad
+npq-separation	NONE	2	2024-03-11	true	false	Ruby	-
+teacher-services-architectural-diagrams	MIT	2	2020-03-12	false	false	-	 Architecture diagrams for Teacher Services (within the Department for Education)
+version-control-for-content-designers	NONE	2	2020-06-02	false	false	-	-
+dau-sssr-pipeline-daily-run	NONE	2	2026-02-18	false	false	R	-
+get-information-about-pupils	MIT	2	2026-11-11	false	false	C#	.NET MVC Web application for the Get Information About Pupils (GIAP) service
+spi-istore-adapter	MIT	2	2022-11-30	false	false	C#	iStore adapter service for the SPI project
+sdd-design-history	MIT	2	2024-09-11	false	false	Nunjucks	This is a 'design-history' for the SDD services to document their designs.
+Dfe.Academies.External	MIT	2	2026-11-05	false	false	C#	Apply to Become an Academy
+flexforms-web	NONE	2	2026-11-11	false	false	C#	-
+tra-trn-generation-api	MIT	2	2025-09-23	true	false	C#	-
+login.dfe.manage	MIT	2	2026-07-29	false	false	JavaScript	Login.DfE relying party for "Service Owners" to provision/manage DfE Sign-in details. 
+dfe-complete-conversions-transfers-and-changes	MIT	2	2026-11-06	false	false	Ruby	An application to help the process of schools converting to academies, transferring between academy trusts or changing their academy status.
+funding-service-myesf-shared-audit-api	MIT	2	2026-10-30	false	false	C#	Funding Service MYESF Shared Audit API
+get-information-about-schools-api-prototype	MIT	2	2026-06-01	false	false	C#	An example web API prototype project to demonstrate an approach to surfacing GIAS data to internal DFE service consumers.
+funding-service-myesf-shared-email-processor-func	MIT	2	2026-10-30	false	false	C#	Funding Service MYESF Shared email processor func
+funding-service-myesf-admin-api	MIT	2	2026-10-30	false	false	C#	-
+funding-service-myesf-docex-ui	MIT	2	2026-11-05	false	false	C#	-
+presentation-merger	MIT	2	2023-01-05	false	false	JavaScript	Merge multiple presentation documents together into a single document
+dfe-frontend	MIT	2	2024-05-05	false	false	SCSS	Read the guidance on the DfE Design Manual
+login.dfe.help	MIT	2	2026-11-06	false	false	JavaScript	User help section of DfE Sign-in
+SchoolAccount-CollectAPI	NONE	2	2026-11-09	false	false	C#	-
+database-of-qualified-teachers	NONE	2	2023-07-10	false	false	ASL	general repo for TRA service components as they come into DfE Teacher Services
+cdc-events	NONE	2	2023-01-31	false	false	C#	Contains the CDC Events API and Event Generator
+power-pages-security-utils	NONE	2	2026-08-04	false	false	Python	power pages security utils to analyse and audit power page apps / sites
+funding-service-myesf-docex-file-processor-func	MIT	2	2026-11-05	false	false	C#	-
+check-childcare-eligibility-admin	NONE	2	2026-11-11	false	false	C#	-
+access-your-teaching-qualifications	MIT	2	2026-11-11	false	false	Ruby	-
+find-teacher-training-tests	MIT	1	2022-01-07	true	false	TypeScript	End to end / smoke tests for Find Postgraduate Teacher Training
+rails-7-boilerplate	NONE	1	2021-09-19	true	false	Ruby	Quick attempt at getting Rails 7 running with GOV.UK Frontend
+spi-rates-adapter	MIT	1	2022-11-30	false	false	C#	Rates adapter service for the SPI project
+apply-the-service-standard-in-dfe	NONE	1	2026-04-10	false	false	HTML	Apply the Service Standard in DfE service
+terraform-azurerm-aspnet-data-protection	MIT	1	2026-11-11	false	false	HCL	Deploys a Key Vault and generates a Cryptographic Key that can be used by ASP.NET for Data Protection
+funding-service-myesf-contracts-notifier-func	MIT	1	2026-10-30	false	false	C#	-
+login.dfe.examples.dotnet46-oidc-client	MIT	1	2017-10-09	false	false	C#	Example OIDC client using .NET 4.6
+get-help-with-remote-education	NONE	1	2023-03-05	true	false	HTML	-
+academy-transfers-frontend	MIT	1	2021-02-03	true	false	Ruby	Academy Transfers frontend proof of concept, a part of the Schools Delivery Division. Talks to https://github.com/DFE-Digital/academy-transfers-api
+search-prototype	MIT	1	2024-11-21	false	false	C#	Prototype for a shared search tool
+fh-family-experience-prototype	MIT	1	2023-04-24	true	false	HTML	Family Hubs Family Experience prototype
+find-school-choices	MIT	1	2025-09-25	false	false	C#	An example web prototype project to demonstrate an approach to allow parents to choose a school
+feat-poc	NONE	1	2026-03-04	false	false	C#	Find Education and Training. Proof of concept
+login.dfe.jwt-strategies	MIT	1	2026-11-09	false	false	JavaScript	JWT strategies for login.dfe components
+GITISContent	NONE	1	2022-10-12	true	false	Makefile	Get Into Teaching Content
+SDD-IxD-Clan	MIT	1	2022-06-08	true	false	CSS	-
+get-help-with-tech-prototype	MIT	1	2026-05-03	false	false	HTML	Prototype for Get help with technology
+academy-transfers-technical-documentation	NONE	1	2022-02-10	true	false	HTML	-
+fh-services	MIT	1	2025-04-03	true	false	HTML	A mono repo containing source code for services, libraries and other code artefacts relating to Family Hubs development.
+FaUAPI-Linked-Imported-APIs-Examples	NONE	1	2026-11-09	false	false	-	This repo will store examples of json definitions of a FauAPI linked APIs imported from an URL  + supporting README file, explaining the different scenarios. Its purpose is to help FauAPI API developers to use the Linked Imported API feature.
+find-a-buying-solution	NONE	1	2026-11-10	false	false	CSS	Find a buying solution
+nrs-pre-private-beta	MIT	1	2019-02-18	false	false	CSS	-
+curriculum-materials-frontend-tests	MIT	1	2020-09-12	true	false	JavaScript	Cypress tests for the Curriculum Materials app
+manage-school-improvement-prototype	MIT	1	2026-04-30	false	false	HTML	Prototype for the Manage school improvement service
+buying-for-schools-admin	NONE	1	2024-02-06	false	false	JavaScript	-
+infrastructure-cognitive-search	MIT	1	2026-06-10	false	false	C#	A library to provide an accessible api for working with Azure cognitive search
+funding-service-myesf-vyp-api	MIT	1	2026-10-30	false	false	C#	-
+spi-models	MIT	1	2022-12-08	false	false	C#	Models repo for the SPI project.
+spi-registry	MIT	1	2023-01-30	false	false	C#	Registry of linked identifiers
+rsd-ddd-clean-architecture	MIT	1	2025-07-04	false	false	C#	This template is a .NET solution for Domain-Driven Design (DDD), built on top of Clean Architecture principles for robust and maintainable web API/Application development.
+manage-training-for-early-career-teachers-prototype	MIT	1	2024-07-29	true	false	HTML	-
+sts-ai-support	NONE	1	2026-01-15	false	false	HTML	AI services to support Schools Technology Services internal working
+funding-service-myesf-vyp-import-func	MIT	1	2026-10-19	false	false	C#	-
+funding-service-myesf-contracts-approver-func	MIT	1	2026-10-30	false	false	C#	-
+funding-service-myesf-vyf-email-generator-func	MIT	1	2026-10-30	false	false	C#	-
+fh-connect-families-support-testing	NONE	1	2026-01-19	false	false	JavaScript	Family Hubs - Connect families to support - Referral Service - Testing
+login.dfe.maintenance	MIT	1	2020-04-19	true	false	HTML	Generic maintenance / holding page for DfE Sign-In
+qualifications-service-prototype	MIT	1	2024-03-18	false	false	HTML	-
+ecf2-rails-prototype	NONE	1	2024-08-30	true	false	Ruby	-
+ey-provider-journey-prototype	MIT	1	2025-07-18	false	false	HTML	Claim Early Years prototype
+login.dfe.jobs	MIT	1	2026-11-05	false	false	JavaScript	Generic job processing service
+spi-search	MIT	1	2020-04-03	true	false	C#	Search API for Single Point of Information
+itt-mentoring-alpha-prototype	MIT	1	2022-12-12	false	false	JavaScript	-
+conversions-design-history	MIT	1	2022-11-24	true	false	Nunjucks	-
+complete-conversions-transfers-and-changes-prototype	MIT	1	2026-01-06	false	false	HTML	-
+single-starting-point-prototype	MIT	1	2023-08-22	false	false	HTML	CX&D team's single strating point prototype
+terraform-azurerm-logic-app-workflow-slack	MIT	1	2026-11-11	false	false	HCL	Terraform module for deploying an Azure Logic App Workflow that routes to Slack
+dfe-core-libraries	MIT	1	2026-11-05	false	false	C#	-
+login.dfe.api.auth	MIT	1	2026-11-09	false	false	JavaScript	-
+flexforms-prism	MIT	1	2026-11-04	false	false	C#	-
+claim-additional-payments-eytfi-prototype	MIT	1	2026-11-10	false	false	HTML	Prototype of the EYTFI service
+improving-children-and-family-services-through-digital-technology	NONE	1	2022-02-16	false	false	Slim	https://improving-children-and-family-digital-services.netlify.app/
+spi-common	MIT	1	2022-12-08	false	false	C#	A repository for all things common, regarding the SPI project.
+check-childrens-barred-list-prototype	MIT	1	2024-07-18	true	false	JavaScript	-
+check-the-record-of-a-teacher-prototype	MIT	1	2024-09-20	false	false	HTML	-
+funding-service-myesf-contracts-feed-processor-func	NOASSERTION	1	2026-10-30	false	false	C#	-
+education-provider-registry-data	MIT	1	2026-11-03	false	false	C#	-
+eapim-developer-hub	MIT	1	2025-03-25	false	false	JavaScript	DFE Developer Hub for external suppliers & third party developers
+early-career-framework-register-prototype	MIT	1	2023-03-09	true	false	HTML	ECF prototype for register and partner user journeys
+Grafana.Plugin.CostManagement	NONE	1	2024-04-19	false	false	Go	Grafana.Plugin.CostManagement
+res-design-history	MIT	1	2021-03-26	false	false	Nunjucks	-
+find-a-tuition-partner	MIT	1	2024-08-28	true	false	C#	-
+login.dfe.automated-tasks	NONE	1	2026-10-26	false	false	TypeScript	Automated BAU tasks for DfE Sign-in
+manage-standards	MIT	1	2026-10-27	false	false	HTML	-
+dfe-reference-data-webapp	NONE	1	2026-11-11	false	false	Ruby	Simple data viewer app for the dfe-reference-data gem
+architecture-test	NOASSERTION	1	2020-02-26	true	false	CSS	Testing / sandbox to try GitHub pages
+cf-monitoring	NONE	1	2022-08-23	false	false	HCL	Deploy the prometheus ecosystem to Cloud Foundry
+improve-workload-and-wellbeing-for-school-staff	NONE	1	2026-08-31	false	false	HTML	Promote staff wellbeing and support workload reduction in your school with free resources.
+design-history	NONE	1	2025-08-29	false	false	JavaScript	Frontend for design-history.education.gov.uk. Changes and approvals are managed by @andyjones81 or DfE Design Ops. (See the DFE Design Manual for details)
+manage-your-dfe-connect-data-prototype	MIT	1	2025-02-04	false	false	HTML	A research prototype for the Manage your DfE Connect data team
+dfefrontend	NONE	1	2026-06-08	false	false	HTML	Version 3 of DfE Frontend with Nuget and NPM packages
+education-provider-registry-web	MIT	1	2026-11-11	false	false	C#	A GDS‑aligned web frontend for the Education Provider Registry, consuming the Query Service to deliver fast, consistent establishment lookups. Implements GOV.UK Design System patterns, secure-by-default practices, and a modular UI architecture ready for future expansion across GIAS‑related services.
+ecf2-prototype	MIT	1	2026-11-11	false	false	HTML	-
+track-my-skills-competency-prototype	NONE	1	2023-09-14	false	false	JavaScript	Speak to Andy Jones about this if you want info
+search-and-compare-docs	NONE	1	2018-08-02	true	false	-	Documentation for contributors to the search-and-compare* repos
+funding-service-myesf-allocation-statements-api	MIT	1	2026-10-30	false	false	C#	-
+spi-entitysquasher	MIT	1	2022-11-30	false	false	C#	Entity Squasher Service for the SPI project.
+api-example-nodejs-client	NONE	1	2020-09-18	false	false	-	-
+eapim-facadeapi	NONE	1	2020-11-02	true	false	-	Consolidated Support Facade API Specificatiom
+login.dfe.config.schema	MIT	1	2024-12-09	true	false	JavaScript	Schemas and validation for DfE login config
+security-manual	NONE	1	2025-07-08	false	false	HTML	Manual for security guidance and secure by design in DfE
+dfe-standards	MIT	1	2026-04-10	false	false	HTML	The repo for the DfE Standards manual
+funding-service-workflows	MIT	1	2026-09-09	false	false	-	A set of centrally managed workflows by the Funding Service, geared towards deploying containerised applications
+funding-service-myesf-vyp-ui	MIT	1	2026-10-19	false	false	CSS	-
+funding-service-myesf-fundingclaim-processor-func	MIT	1	2026-11-05	false	false	C#	-
+bat-node-prototype	MIT	1	2018-11-05	true	false	TypeScript	-
+spi-graphql-api	MIT	1	2022-12-08	false	false	C#	GraphQL API to query Single Point of Information
+eapim-platform-api	MIT	1	2024-11-07	false	false	-	Enterprise API Management Platform API for managing applications,  subscriptions & retreiving api details 
+twd-workforce-data-api	MIT	1	2023-02-01	false	false	C#	-
+fh-admin-service-testing	MIT	1	2025-10-20	false	false	JavaScript	Family Hubs - Manage family support services and accounts
+funding-service-myesf-vyf-funding-feed-reader-func	MIT	1	2026-10-30	false	false	C#	-
+fh-load-testing	NONE	1	2023-09-28	false	false	HTML	load testing activities for all family hubs apps 
+ixd-standards	NONE	1	2022-08-22	false	false	-	Interaction Design standards created Anne Chan, the SDD IxD Clan and DfE Interaction Designers
+find-a-prototype	MIT	1	2026-01-01	false	false	HTML	-
+find-a-lost-trn-prototype	NONE	1	2024-12-19	false	false	HTML	Prototypes of Find a lost TRN and Get an identity
+terraform-azurerm-key-vault-tfvars	MIT	1	2026-11-11	false	false	HCL	Use Azure Key Vault for centralising your Terraform variables
+ey-claimant-journey-prototype	MIT	1	2025-08-04	false	false	HTML	-
+school-based-nurseries-prototype	MIT	1	2026-05-15	false	false	HTML	School based nurseries (SBN) prototype
+infrastructure-persistence-cosmosdb	MIT	1	2026-01-22	false	false	C#	-
+teacher-success-dataform	NONE	1	2026-11-03	false	false	JavaScript	-
+education-provider-registry-docs	MIT	1	2026-11-11	false	false	PLpgSQL	-
+tslr	NONE	1	2019-01-29	false	false	Vue	-
+login.dfe.config.schema.common	MIT	1	2026-11-05	false	false	JavaScript	Common config schema components of DfE Sign-in
+get-help-to-retrain-smoke-tests	MIT	1	2022-12-10	false	false	JavaScript	Get Help to Retrain - smoke tests with cypress
+software-jargon-buster	NONE	1	2023-08-29	false	false	-	A collection of software-isms at the DfE, and what it all means.
+SchoolAccount-Alpha-App	NONE	1	2026-07-29	false	false	HTML	School Account Alpha Web App
+DfE-School-Account-Alpha	MIT	1	2026-11-11	false	false	HTML	-
+education-provider-registry-public-API	MIT	1	2026-11-11	false	false	Makefile	Integration API exposing Education Provider Registry data for internal workflows and external consumers. Provides reliable, structured establishment information for system‑to‑system use.
+manage-courses-ui	MIT	1	2019-09-06	true	false	C#	DO NOT USE | Replaces by manage-courses-frontend (ruby on rails rails)
+func-applytobecome-processapplicationform	NONE	1	2023-01-13	true	false	C#	An Azure function used to process submitted application forms from 'Apply to Become an Academy'
+get-an-identity	NONE	1	2026-07-28	true	false	C#	-
+fh-find-support-family-testing	NONE	1	2026-02-03	false	false	JavaScript	Family Hubs -   Find support for your family - Testing 
+manage-applications	MIT	1	2018-08-01	false	false	HTML	-
+cdc-data	NONE	1	2022-03-10	false	false	C#	Infrastructure and code relating to data in the CDC integration environment
+cdc-common	NONE	1	2021-03-15	false	false	-	Common infrastructure and code for the CDC integration environment
+school-placements-prototype	MIT	1	2025-04-08	false	false	HTML	A service for training providers and schools to manage their mentors and placements
+dfe-sign-in-design-history	MIT	1	2024-01-29	false	false	HTML	A design history for the DfE Sign-in service.
+records-management	NONE	1	2026-07-08	false	false	-	For the Records Management DfE
+refer-serious-misconduct-by-a-teacher-prototype	MIT	1	2024-03-19	false	false	HTML	Refer serious misconduct by a teacher prototype
+GitHubDash	NONE	1	2023-01-19	false	false	Ruby	Dashboard for Github
+fh-service-directory-api	MIT	1	2024-08-06	true	false	C#	The Family Hubs service directory enables local authorities to list and manage their available vulnerable children and family services.
+search-prototype-web-mvc	MIT	1	2024-11-26	false	false	C#	Web MVC frontend host for search-prototype application 
+dfe-complete-conversions-transfers-and-changes-frontend-prototype	MIT	1	2024-11-27	true	false	C#	Contains a spike of moving the complete app to dotnet
+register-training-providers	NONE	1	2026-11-06	false	false	Ruby	Register of training providers is a service for managing a single source of truth for all ITT training providers.
+claim-additional-payments-for-teaching-infrastructure	NONE	1	2023-09-14	true	false	HCL	Infrastructure code for https://github.com/DFE-Digital/claim-additional-payments-for-teaching
+a2b-prototype	MIT	1	2026-01-06	false	false	HTML	-
+cpd-information	MIT	1	2026-03-16	false	false	Makefile	Information and guidance about career development options for teachers and school leaders.
+ecf-bips-team	NONE	1	2020-06-24	true	false	Makefile	-
+.github	NONE	1	2026-04-09	false	false	-	DfE community health files. These will propagate to all repos within the DfE organisation
+ddt-job-descriptions	NONE	1	2026-06-10	true	false	JavaScript	JD's are now managed in a CMS (get in touch with DesignOps) and provided via Deliver Good Services. This repo is no longer in use. 
+itt-mentor-services	MIT	1	2026-11-09	false	false	Ruby	ITT Mentor-related services
+ai-coe-repeatable-patterns	NONE	1	2026-11-11	false	false	-	A repo for repeatable AI infrastructure and software solution patterns
+sdd-services-prototype	MIT	1	2022-05-23	true	false	HTML	-
+get-into-teaching-legacy-site-export	NONE	1	2021-05-11	true	false	Roff	-
+ecf-engage-and-learn-prototype	MIT	1	2021-11-10	true	false	HTML	-
+pre-ab-transfers	MIT	1	2022-06-09	false	false	HTML	-
+childrens-social-care-cpd-grafana	MIT	1	2024-02-29	false	false	Dockerfile	Grafana Container Image for Childrens Social Care
+feat-data	NONE	1	2026-02-09	false	false	Python	Find Education and Training Data Science
+teacher-success	NONE	1	2026-10-05	false	false	Ruby	"Get Ready To Teach" website of the Teacher Success service
+publish-teacher-training-prototype	MIT	1	2026-11-06	false	false	JavaScript	Prototype for the ‘Publish teacher training courses’ service
+gias-transformation-prototype	MIT	1	2026-11-10	false	false	CSS	Alpha prototypes for testing iterations of GIAS with users.
+eapim-consolidatedsupport	NONE	1	2020-11-02	true	false	-	-
+sdd-a2b-internal-service-prototype	MIT	1	2022-06-01	false	false	HTML	-
+funding-service-myesf-contracts-contract-processor-func	MIT	1	2026-10-30	false	false	C#	-
+get-help-to-retrain-devops	NONE	1	2020-01-22	false	false	JavaScript	Platform for the Get Help to Retrain Project
+teach-in-further-education	0BSD	1	2022-05-05	true	false	C#	-
+fh-service-directory-shared	MIT	1	2024-07-01	true	false	C#	A class library to hold artefacts shared between Service Directory projects.
+TRAMS-alpha	MIT	1	2024-07-19	false	false	JavaScript	Prototypes for Find information about academies and trusts (previously known as the TRAMS replacement)
+splunk-app-packager	MIT	1	2025-10-27	false	false	Python	A packaging tool for Splunk apps. Package up your Splunk app configuration files, get them validated and push them to splunkcloud with a cli tool or github actions
+schools-experience-tests	MIT	1	2022-12-09	false	false	JavaScript	Cypress tests for the schools-experience repository
+get-into-teaching-prototype	NONE	1	2020-05-07	true	false	CSS	A prototype website for user testing purposes
+early-careers-framework-gov-templates	MIT	1	2023-01-24	true	false	JavaScript	Testing otu the ECF content using gov.uk patterns
+npq-old-prototype	MIT	1	2022-10-27	true	false	HTML	-
+funding-service-myesf-contracts-data-api	MIT	1	2026-10-30	false	false	C#	-
+teacher-payments-service-verify	NONE	1	2020-11-02	false	false	Dockerfile	-
+cdc-file-adapter	MIT	1	2021-03-26	false	false	C#	Contains the CDC File Adapter API
+spi-translation	NONE	1	2022-11-30	false	false	C#	Provides reference data translation services to the adapters and GraphQL api.
+dfe-glossary	MIT	1	2024-01-31	true	false	Nunjucks	A glossary of Department for Education abbreviations
+find-and-use-an-api-upptime	MIT	1	2026-06-06	false	false	Markdown	Uptime monitor and status page for Department for Education - Find and Use an API, powered by @upptime
+flexforms-api	MIT	1	2026-11-11	false	false	C#	-
+login.dfe.infrastructure	MIT	1	2026-06-24	false	false	TSQL	DfE-Signin Azure infrastructure automation using ARM templates
+nrs-alpha-1-test-3	MIT	0	2019-02-14	false	false	CSS	A clickable prototype for the end to end MVS
+login.dfe.ruby	GPL-3.0	0	2018-08-29	true	false	Dockerfile	Repository for SAML ruby fixes
+dfe-mps-prototype	MIT	0	2020-09-04	false	false	HTML	DfE Maths and Physics Prototype Service
+data-exchange-helpdesk-prototype	MIT	0	2020-09-04	false	false	HTML	Prototype of helpdesk UI for managing incoming school collections.
+fa-shortlisting-prototype	MIT	0	2020-09-04	false	false	JavaScript	fostering availability/shortlisting prototype
+sdd-technical-documentation	NONE	0	2021-11-01	false	false	-	-
+dfe-covid-content-prototype	MIT	0	2020-09-04	false	false	HTML	-
+get-into-teaching-contract-test-fixtures	MIT	0	2020-09-26	false	false	Ruby	-
+govuk_openapi_reference	NONE	0	2020-10-27	true	false	Ruby	WIP - Don't use
+get-into-teaching-ui	NONE	0	2020-04-20	false	false	CSS	-
+data-allowances-prototype	MIT	0	2023-01-19	false	false	Ruby	Prototype form for collecting information on eligibility for data allowances
+school-account	MIT	0	2023-06-05	false	false	C#	-
+fe-college-reference-data	NONE	0	2024-02-20	false	false	-	Database of general FE colleges and their parent organisations
+fips-v4	MIT	0	2026-01-23	false	false	HTML	-
+teacher-cpd-dataform	NONE	0	2026-11-10	false	false	JavaScript	-
+get-into-teaching-content	NOASSERTION	0	2021-04-28	true	false	HTML	-
+git-apprentice-project	MIT	0	2022-03-27	false	false	CSS	-
+fa-diary-api-spec	MIT	0	2019-12-11	false	false	-	Foster Parents' LA API OpenAPI specification
+prototype_ghw_dp	MIT	0	2026-05-28	false	false	HTML	Prototype of get help with data protection in schools - speak to CJ for info
+deploy-azure-container-apps-action	MIT	0	2026-06-18	false	false	-	A GitHub Action you can use to deploy Azure Container Apps
+dfe-academic-year-research	MIT	0	2021-08-05	false	false	JavaScript	-
+ecf-engage-and-learn-redirector-production	NONE	0	2022-07-01	true	false	-	-
+das-fjaa-prototype	MIT	0	2022-08-01	false	false	CSS	-
+standards-manual-design-history	MIT	0	2023-03-09	false	false	JavaScript	-
+npq-prototype	MIT	0	2026-01-07	true	false	HTML	-
+schools-digital-architecture	NONE	0	2026-10-20	false	false	-	Hub for sharing architecture resources and documentation
+get-into-teaching-api-ruby-client	NONE	0	2026-08-25	false	false	Ruby	Ruby client for the Get into Teaching API
+SchoolAccount-Beta-ObservabilitySpike	NONE	0	2026-07-24	false	false	C#	-
+prototype-rules-engine-2030	NONE	0	2026-10-27	false	false	HTML	-
+GITIS-AZURE	NONE	0	2026-11-01	false	false	C#	-
+funding-service-fcs	NONE	0	2026-11-05	false	false	Gherkin	funding-service-fcs
+npd-modernisation	MIT	0	2020-09-04	false	false	HTML	-
+early-years-foundation-reform-dotnet	MIT	0	2026-06-22	false	false	Ruby	A dotnet repository for recreating help for early years providers in dotnet
+tech-docs-monitor	MIT	0	2022-01-25	false	false	Ruby	Part of alphagov/tech-docs-template (issues 👉https://github.com/alphagov/tech-docs-template/issues)
+ey-recovery-temp	NONE	0	2022-05-04	false	false	-	-
+teacher-misconduct-prototype	NONE	0	2023-03-06	false	false	HTML	Report serious misconduct by a teacher
+get-school-experience-prototype	MIT	0	2022-04-28	false	false	HTML	-
+sts-content-support	NONE	0	2024-10-08	false	false	C#	Using Specify part of knowledgebase -DfE help schools to describe the digital technology they want to buy?.
+itt-mentoring-beta-prototype	MIT	0	2025-03-06	true	false	JavaScript	Claim funding for mentor training is a service to enable schools to claim payment for the time their mentors have taken to do training with ITT providers.
+prototype-standards-management	NONE	0	2024-12-17	false	false	JavaScript	Standards product team - prototype for managing standards with CMS.
+d365-gds-powerpages	NONE	0	2026-06-08	false	false	HTML	-
+support-for-ects	MIT	0	2022-10-26	true	false	CSS	(CPD/ECF) ECT (and a few extras) view of the Support for Early Career Teachers service 
+manage-teacher-training-applications-proto	MIT	0	2022-12-05	false	false	HTML	Manage teacher training applications (prototype)
+manage-teacher-misconduct-referrals-prototype	MIT	0	2023-03-03	false	false	HTML	-
+ssphp-github-webhooks-to-splunk	NONE	0	2026-04-23	false	false	Rust	-
+npx-discovery	NONE	0	2026-10-08	false	false	Makefile	Documentation for NPQ (NPD + NPQ) preliminary work
+eduk-cms-spike	MIT	0	2020-06-06	true	false	Ruby	-
+login.dfe.ui-toolkit	MIT	0	2026-01-19	true	false	HTML	User interface toolkit for the dfe.login service
+login.dfe.hot-config	MIT	0	2019-11-01	true	false	JavaScript	Runtime configuration API for the login.dfe service 
+terraform-azurerm-web-app-services-hosting	MIT	0	2026-11-11	false	false	HCL	Azure Web App Services Hosting terraform module
+prma-webform-prototype	MIT	0	2020-09-04	false	false	CSS	Prototype for PRMA collection for local authorities
+func-sip-insertfinanciallinks	NONE	0	2021-10-25	true	false	-	-
+register-of-services-prototype	MIT	0	2022-07-20	false	false	CSS	-
+seo-developer-tech-test	NONE	0	2021-12-14	false	false	-	-
+architecture-manual	NONE	0	2024-05-17	false	false	CSS	The new manual for architecture in DfE
+find-information-products-services-tests	NONE	0	2026-03-31	false	false	C#	-
+d365-design-manual	NONE	0	2026-08-26	false	false	HTML	-
+funding-service-cfs-common	NONE	0	2026-10-29	false	false	C#	Common shared components for the Calculate Funding Service (CFS), including reusable libraries, domain models, infrastructure code, messaging utilities, data access components, configuration, and cross-cutting services used across multiple CFS applications.
+funding-platform-building-blocks	NONE	0	2026-10-27	false	false	-	Funding Build Blocks
+single-place-for-education-govuk-prototype	NONE	0	2019-08-19	false	false	HTML	A prototype for the Single Place for Educaion
+operations-devops-deployment	NONE	0	2023-12-11	false	false	-	-
+ecf-wordpress-cf-configuration	NONE	0	2020-07-03	true	false	PHP	-
+support-for-mentors	MIT	0	2022-10-26	true	false	CSS	(CPD/ECF) Mentor (and a few extras) view of the Support for Early Career Teachers service
+teacher-services-landing-page-prototype	MIT	0	2022-09-30	false	false	JavaScript	-
+fh-family-hubs	MIT	0	2023-07-20	true	false	-	Connect families to support is part of the Family Hubs project to create a national directory of local children, young adults and family support services within a local authority and allow direct on-system support requests from users to those support services.
+schools-checking-exercise	MIT	0	2024-04-26	false	false	HTML	Best practice and accessibility updates to the Schools Checking form.
+casework_desktop	MIT	0	2025-03-05	false	false	-	Web application POC for DEFINE team about 
+Evaluation-Service	NONE	0	2025-05-30	false	false	-	-
+teaching-qualifications-dataform	MIT	0	2026-11-06	false	false	JavaScript	Repository for the analytics data form files for Access your teaching qualifications & Check the record of a teacher in England
+school-complaints-prototype	MIT	0	2026-10-09	false	false	HTML	Prototype of the DfE RSD School Complaints service
+get-to-an-answer	NONE	0	2026-11-11	false	false	TypeScript	Content flow service for service users to finding relevant content/support
+login.dfe.sanitization	MIT	0	2026-11-05	false	false	JavaScript	Express middleware to sanitize input
+login.dfe.public-api.jobs.client	MIT	0	2024-08-06	true	false	JavaScript	Client for Public Api jobs
+send-data-dev-hub-prototype	MIT	0	2019-05-14	false	false	CSS	Prototype for the Send data to DfE developer hub
+get-help-to-retrain	MIT	0	2023-01-19	false	false	Ruby	-
+full-text-indexing-strategies	NONE	0	2020-11-18	true	false	Ruby	Brain dump of various approaches for speeding up full-text searching in PostgreSQL
+ecf-dqt-api	NONE	0	2020-11-16	false	false	-	Draft proposal for a DQT API that ECF will consume
+edis-source-adapter-roatp	MIT	0	2021-01-26	false	false	C#	Source adapter to acquire RoATP changes for EDIS platform
+edis-source-adapter-ukrlp	MIT	0	2021-03-25	false	false	C#	Source adapter to acquire UKRLP changes for EDIS platform
+GovUkWizard	NONE	0	2021-03-31	false	false	-	The Gov UK Wizard guides the user through a sequence of questions towards a conclusion, whilst hiding the underlying state or complexity. 
+national-professional-qualification	MIT	0	2021-02-11	false	false	Ruby	National Professional Qualification Management.
+tra-paas-monitoring	NONE	0	2022-11-24	true	false	HCL	-
+fh-shared-kernel	MIT	0	2024-07-04	true	false	C#	DDD shared kernel for the family hubs projects containing artefacts that can be shared across projects. 
+trs-console-prototype	MIT	0	2023-12-20	true	false	HTML	TRS console prototype
+school-account.ui-tests	MIT	0	2023-05-31	false	false	-	-
+template-frontend-manual	NONE	0	2023-06-26	false	false	JavaScript	-
+maeves-test-prototype	MIT	0	2023-01-31	false	false	JavaScript	-
+find-and-use-products-services-cms-mvp	NONE	0	2025-07-30	false	false	TypeScript	CMS for Find and use
+find-courses-and-training	MIT	0	2026-10-08	false	false	HTML	the prototype for find courses and training
+register-placement-schools	NONE	0	2026-10-05	true	false	Ruby	Register of placement schools is a service for managing a single source of truth for all ITT placement schools.
+SchoolAccount.Alpha.CollectAPISpike	NONE	0	2026-07-03	false	false	C#	Technical investigation for consuming COLLECT data via database integration
+education-provider-registry-data-replication-prototype	MIT	0	2026-09-15	false	false	PowerShell	POC for replication from GIAS new database schema to projected read views 
+check-performance-data	NONE	0	2026-11-11	false	false	C#	Repository for the service that will replace the current CYPMD solution.
+login.dfe.validation	MIT	0	2026-07-16	false	false	JavaScript	-
+rba-prototype	NONE	0	2019-02-28	false	false	HTML	-
+schema-explorer	MIT	0	2019-11-11	false	false	-	Just enough azure things to deploy https://schemaexplorer.io/ (dockerized) into publish/find qa/staging
+get-into-teaching-publisher	NONE	0	2023-03-16	true	false	Ruby	Static site generator for Get Into Teaching website
+school-leaders-user-experience-prototype	MIT	0	2022-02-11	false	false	HTML	-
+rsd-azure-waf	MIT	0	2026-11-11	false	false	CSS	Azure App Gateway WAF for RSD
+ecf-gov-guidance	NONE	0	2023-05-04	true	false	Slim	-
+deliver-good-services-frontend	NONE	0	2026-04-28	false	false	C#	-
+design-histories-asset-repo	NONE	0	2022-10-18	false	false	-	Speak to Andy Jones if you have a query about this repo
+ghbs-energy-as-a-service	MIT	0	2026-05-23	false	false	HTML	Get Help Buying For Schools: Energy as a Service
+teach-in-fe-site-tools	MIT	0	2024-09-09	false	false	JavaScript	A set of tools to test the Teach in FE campaign site
+product-manual	NONE	0	2024-04-23	false	false	-	The manual for the product profession in DfE
+statement-service-prototype	MIT	0	2025-01-30	false	false	HTML	-
+s186-accessibility-issues-cms	NONE	0	2025-07-22	false	false	TypeScript	Headless CMS providing API and data for accessibility issues service
+prototype-register-of-services	NONE	0	2025-06-17	false	false	HTML	Prototype for the Register of services product being designed for the Objective1 theme within DDT
+ba-manual	NONE	0	2025-04-22	false	false	JavaScript	Business analysis menu
+cleanarch-crosscutting	MIT	0	2026-03-25	false	false	C#	CrossCutting concerns and contracts
+rsd-common-ai-services	NONE	0	2026-11-03	false	false	C#	Provisioning common RSD AI services.
+Kate-hackathon-team99	NONE	0	2026-10-21	false	false	Jupyter Notebook	-
+SchoolAccount-Platform-ACE	NONE	0	2026-11-09	false	false	HCL	-
+eduk-prototype	MIT	0	2019-01-10	false	false	HTML	Prototype to discuss a potential new front page for the DfE
+login.dfe.examples.oidc-client	MIT	0	2026-05-06	false	false	JavaScript	Sample OIDC client to consumer DfE login
+github-basics-demo-practice	NONE	0	2020-11-02	false	false	Ruby	-
+spi-tools	MIT	0	2024-09-16	false	false	C#	Various tools for used for development of SPI solution
+teach-in-further-education-design-history	MIT	0	2022-02-18	false	false	JavaScript	-
+paas-billing-exporter	NONE	0	2022-01-13	true	false	Ruby	Prometheus exporter exposing cost metrics fetched from paas-billing
+rsd-frontdoor	MIT	0	2026-11-11	false	false	HCL	RSD FrontDoor Terraform project
+gds-ghwt-prototype	MIT	0	2022-04-21	false	false	HTML	-
+what-is-a-digital-service-presentation	NONE	0	2025-03-25	true	false	Makefile	-
+help-for-early-years-providers	NONE	0	2024-04-08	false	false	Ruby	-
+rsd-kv-secret-scanner	NONE	0	2025-05-09	true	false	HCL	Scan Key Vaults in Azure for Secrets and notify when expiry dates are less than 90 days away
+exploring-datatypes	NONE	0	2025-08-05	true	false	HTML	Example app that uses a variety of datatypes
+dau-sssr-significant-change	NONE	0	2026-04-01	false	false	-	-
+new-npq-prototype	MIT	0	2026-06-26	false	false	HTML	-
+SchoolAccount.Alpha.PersonalisationSpike	MIT	0	2026-07-06	false	false	C#	Technical spike from Design Sprint to personalise a user's experience via DSI and the Academies API
+tte-prototype	MIT	0	2026-11-02	false	false	HTML	-
+tra-shared-services	NONE	0	2026-11-09	false	false	HCL	-
+SchoolAccount-Platform-Shared	NONE	0	2026-11-09	false	false	HCL	-
+neet-digital	MIT	0	2026-11-10	false	false	HTML	NEET Digital - Guiding and empowering Young People Not in Education, Employment or Training
+childrens-social-care-placement	MIT	0	2023-05-31	false	false	Ruby	prototype tool for  foster childrens diary log and shortlisting foster parents
+DfE_data_tables_excel_parser	NONE	0	2019-02-11	false	false	Ruby	-
+search-and-compare-api	MIT	0	2020-01-07	true	false	C#	-
+login.dfe.saml-config	MIT	0	2017-12-15	true	false	-	SAML config API for the SAML component of Login.DfE
+nrsproto2	MIT	0	2018-11-29	false	false	CSS	-
+support-for-apply-prototype	MIT	0	2024-11-05	true	false	Nunjucks	Prototype for the support console for the ‘Apply for teacher training’ service
+login.dfe.dsi-client	NONE	0	2022-01-24	true	false	-	Sample Clients for DSI OIDC Provider
+login.dfe.support-v2	MIT	0	2023-11-15	true	false	JavaScript	Application for support staff to service user requests
+rsd-renovate-config	NONE	0	2025-04-08	false	false	-	Shared configuration for Renovate
+case-aggregation-api	MIT	0	2026-11-11	false	false	C#	-
+GSII-concept-testing	MIT	0	2026-05-23	false	false	HTML	-
+funding-service-cfs-frontend	NONE	0	2026-10-29	false	false	TypeScript	The web application for the Calculate Funding Service (CFS), providing users with a user-friendly interface to manage funding specifications, calculations, datasets, providers, approvals, and releases.
+dfe-azure-access-token	NONE	0	2026-11-10	false	false	Ruby	Simple ruby sinatra app provides endpoint to get azure access token using client credentials flow
+csc-swr-prototype	MIT	0	2021-02-17	false	false	Ruby	-
+meeting-timer	NONE	0	2021-05-14	false	false	C#	-
+ruby-technical-test	MIT	0	2021-04-09	false	false	Ruby	-
+get-a-teacher-relocation-payment	NONE	0	2026-01-08	true	false	Ruby	-
+bat-e2e-tests	NONE	0	2024-03-20	false	false	Ruby	An end-to-end test suite for the BAT service line
+DFE-Prototype	NONE	0	2023-11-27	false	false	-	Prototype for DFE Content
+myrepo	NONE	0	2025-11-28	false	false	-	Repository for testing my Git/GitHub setup
+find-and-use-products-services-mvp	NONE	0	2025-08-01	false	false	HTML	-
+am-2025-refresh	NONE	0	2025-07-21	false	false	HTML	Accessibility manual refresh
+Manage-service-assessments	NONE	0	2025-09-13	false	false	HTML	A multi-tenant update to support FIPS and full cross-government 
+SchoolAccount-Beta-ResilienceSpike	NONE	0	2026-07-17	false	false	C#	A small playground for building and running resilience/emulation test integrations used by the SchoolAccount project. This repo contains a lightweight Dashboard and several Emulated Integration endpoints you can run locally to simulate slow or failing downstream services.
+sip-public	MIT	0	2026-09-16	false	false	HTML	-
+dfe-reference-data-dotnet	NONE	0	2026-10-20	false	false	C#	-
+apply-for-postgraduate-teacher-training-tech-docs	NONE	0	2019-12-16	true	false	-	Technical documentation for the ‘Apply for postgraduate teacher training’ service  
+get-help-with-remote-education-cms	MIT	0	2023-01-27	false	false	Ruby	This is an experimental fork of the new EYFS CMS adapted for use for the GHRE service
+login.dfe.express-flash-2	MIT	0	2026-11-06	false	false	JavaScript	-
+dfe-digital.github.io	NONE	0	2021-04-17	false	false	HTML	-
+design-manual-design-history	MIT	0	2023-03-09	false	false	JavaScript	-
+rsd-status-page	NONE	0	2026-11-11	false	false	HCL	A static website that polls Azure functions in s184 CIP to collate service availability
+itt-mentor-payment-sampling-clawback	MIT	0	2024-09-27	false	false	HTML	-
+school-account-tsi-tool	MIT	0	2024-05-23	false	false	HTML	Prototype of the Task Service Index
+NEET	MIT	0	2026-05-11	true	false	HTML	-
+document-analysis-agentic-poc	MIT	0	2026-06-01	false	false	Python	Proof of concept to explore and validate assumptions on an LLM's ability to detect conflict, duplication and inconsistencies within documentation.
+SchoolAccount-CollectStateLedgerDatabase	NONE	0	2026-09-24	false	false	TSQL	Migrations and stored procedures to track state changes of Collections in CollectPortal
+fh-family-experience-data-import	NONE	0	2022-12-13	false	false	-	Import venues and services for Family Hubs (Family Experience)
+funding-service-cfs-fundingDataZone-schema	NONE	0	2026-10-30	false	false	TSQL	The Funding Data Zone Schema repository contains the database schema definitions, scripts, and related assets used by the Funding Data Zone (FDZ).
+login.dfe.notifications	MIT	0	2018-01-17	true	false	JavaScript	-
+bat-platform-automation	NONE	0	2019-08-28	true	false	PowerShell	PowerShell helper scripts to be used locally and in Azure Pipelines for the Become-A-Teacher (BAT) services. It also includes a checklist for creating new helper scripts, a code layout and formatting guide, script documentation and testing details.
+fh-orchestration-api	MIT	0	2023-09-04	true	false	C#	-
+get-into-teaching-api-csharp-client	NONE	0	2022-12-07	false	false	C#	C# client for the Get into Teaching API
+api-example-java-client	NONE	0	2020-07-28	false	false	-	-
+das-ufab-prototype	MIT	0	2023-02-22	false	false	HTML	We're building clickable prototypes of the ROI tool to test with Employers.
+user-research-manual	MIT	0	2023-11-17	false	false	HTML	User research manual
+cpd-lpdob-prototype	MIT	0	2023-08-31	true	false	HTML	-
+teacher-cpd-ecf-rewrite-presentation	NONE	0	2024-04-11	true	false	Makefile	-
+cisd-terraform	NONE	0	2024-04-11	false	false	HCL	-
+login.dfe.jobs-client	MIT	0	2026-11-06	false	false	JavaScript	Client for sending notifications within DfE Login
+childrens-social-care-cpd-indexer	NONE	0	2024-03-27	false	false	C#	-
+login.dfe.express-helpers	MIT	0	2026-11-06	false	false	JavaScript	Sanitization and error handling middleware for express applications
+ddt-manual-dev	NONE	0	2025-08-07	false	false	HTML	-
+find-information-products-services-cms	NONE	0	2026-02-02	false	false	TypeScript	-
+user-research-new-manual	NONE	0	2026-09-23	false	false	HTML	New manual for user research
+tv-okr-viewer-prototype	NONE	0	2026-11-04	false	false	HTML	-
+school-experience-devops	MIT	0	2021-05-27	false	false	Shell	-
+npd-find-and-explore-infra	MIT	0	2020-01-29	false	false	-	-
+edis-kafka-adapter	MIT	0	2021-03-25	false	false	C#	Adapter for Kafka
+fa-diary-review-prototype	MIT	0	2020-09-04	false	false	JavaScript	review foster parent diary entries 
+care-leavers-gov-prototype	MIT	0	2025-01-10	false	false	HTML	-
+incident-response-tool	MIT	0	2026-11-04	false	false	Ruby	A tool to help generate incident response documentation
+external-applications-prototype	MIT	0	2026-01-09	false	false	HTML	-
+ci-general-prototype	MIT	0	2026-11-06	false	false	HTML	A prototype hub for the DfE RSD Continuous Improvement team
+login.dfe.migration.admin.jobs	MIT	0	2018-02-21	true	false	JavaScript	Job handlers for migration admin
+school-experience-redirect	NONE	0	2019-05-02	false	false	Shell	a trivial repo storing web.config
+login.dfe.public-api.jobs	MIT	0	2024-10-01	true	false	JavaScript	Jobs required for DfE Sign-in public api
+ghtr-accessibility-vagrant-base	MIT	0	2019-09-17	false	false	-	Vagrant base box for accessibility toolkit
+remote-education-review-framework-prototype	MIT	0	2021-02-03	false	false	CSS	-
+Objective-template	MIT	0	2022-08-24	false	false	-	Design template for designers to use when setting personal objectives for their learning, development and growth
+school-trip-accessibility-service	MIT	0	2024-06-25	false	false	HTML	A fake service to demonstrate inaccessible service using gov design. Built for DfE accessibility month. Speak to DesignOps about it if you want to find out more. 
+trs-support-console	MIT	0	2025-08-06	false	false	HTML	-
+teacher-success-prototype	MIT	0	2025-10-20	false	false	HTML	-
+terraform-azurerm-logic-app-workflow-teams	MIT	0	2026-03-24	false	false	Smarty	Terraform module for deploying an Azure Logic App Workflow that routes to Teams
+find-teacher-training-accounts-prototype	MIT	0	2026-05-23	false	false	HTML	-
+deliver-good-services-cms	NONE	0	2026-09-21	false	false	TypeScript	-
+login.dfe.policy-engine	MIT	0	2026-11-09	false	false	JavaScript	Applies access policies to determine available roles for users
+rsd-ai-libs	MIT	0	2026-11-06	false	false	C#	.NET library for building and evaluating Azure AI Foundry agents with guardrails, Azure AI Search, and MCP server support.
+claim-additional-payments-for-teaching-1	NONE	0	2026-06-09	false	false	Python	Test repo for Claim migration from Jira 
+teacher-pay-calculator	NONE	0	2026-10-02	false	false	Ruby	-
+compass	NONE	0	2026-10-27	false	false	HTML	Central Operation performance and compliance reporting product
+trs-post-mvp	MIT	0	2026-10-29	false	false	HTML	-
+login.dfe.winston-appinsights	MIT	0	2025-02-10	false	false	JavaScript	Winston transport for Application Insights
+send-data-developer-hub-prototype	MIT	0	2023-01-09	false	false	CSS	-
+dfe-apad	MIT	0	2020-09-04	false	false	HTML	-
+bat-apply-prototype	MIT	0	2018-12-18	true	false	HTML	Prototype - Apply for postgraduate teacher training
+early-career-framework	NONE	0	2020-09-10	false	false	-	-
+early-career-framework-beta-prototype	MIT	0	2020-12-04	true	false	JavaScript	-
+cpd-ecf-ucd-prototype-2	MIT	0	2023-06-15	true	false	CSS	-
+find-teacher-training-hackday-prototype	MIT	0	2023-05-29	false	false	JavaScript	Prototype for the ‘Find postgraduate teacher training’ service
+school-placements-beta-prototype	MIT	0	2024-11-28	true	false	JavaScript	A service for training providers and schools to manage their mentors and placements
+my-first-repo	NONE	0	2021-06-21	false	false	-	test
+automated-threat-models	NONE	0	2024-08-12	false	false	Python	-
+book-manage-assure-services	NONE	0	2023-12-11	false	false	HTML	-
+home-learning-support-prototype	MIT	0	2022-12-16	false	false	JavaScript	-
+apply-ops-dashboard	NONE	0	2023-07-24	true	false	Ruby	Experimental dashboard to see what is going on in our environments
+api-example-csharp-client	NONE	0	2020-10-07	false	false	C#	An example api client written in C# for the DFE Developer Hub DFEInformation API
+NSA-Alpha-DotNetCore-Sample	MIT	0	2017-08-31	false	false	C#	-
+first-contributions	NONE	0	2022-12-08	false	false	-	-
+fh-web-components	NONE	0	2024-06-25	true	false	C#	A class library to hold web component artefacts shared between family hub projects.
+govuk-filters	MIT	0	2023-01-19	false	false	Ruby	-
+sa-concept	NONE	0	2024-01-15	false	false	HTML	-
+rsd-academies-reporting-db	MIT	0	2025-02-11	true	false	HCL	-
+care-leavers-dfe-prototype	MIT	0	2025-03-27	false	false	HTML	-
+ghbs-school-collab	MIT	0	2026-04-10	false	false	HTML	-
+screenshot-creator	NONE	0	2025-02-04	false	false	JavaScript	Small script built by designops to take screenshots from a sitemap.
+npq-tte-data-model-experiments	NONE	0	2026-10-06	true	false	Makefile	-
+check-performance-data-prototype	MIT	0	2026-11-11	false	false	HTML	CYPMD prototype
+login.dfe.migration.admin	MIT	0	2019-11-06	true	false	JavaScript	-
+login.dfe.audit.winston-sequelize-transport	MIT	0	2026-11-06	false	false	JavaScript	-
+nrs-alpha-round-4-remote	MIT	0	2019-02-14	false	false	CSS	-
+dfe-data-provider-hub	MIT	0	2020-09-04	false	false	JavaScript	-
+cpd-adr	MIT	0	2021-03-31	true	false	-	Architectural Decision Records for Continuing Professional Development repositories (ECF etc)
+cpd-ecf-ucd-prototype	MIT	0	2023-02-06	true	false	-	-
+dfe-design-documentation	NONE	0	2022-05-20	false	false	-	-
+standardsv2	MIT	0	2022-06-29	false	false	JavaScript	-
+rsd-azure-slack-workflow	MIT	0	2026-11-11	false	false	HCL	Manage a Logic App Workflow for an Azure Alert sink
+design-history-cms	MIT	0	2022-02-08	false	false	Nunjucks	-
+support-for-ect-data-extractor	NONE	0	2023-10-16	true	false	Ruby	-
+record-concerns	MIT	0	2026-03-06	false	false	HTML	-
+SchoolAccount-Connect	NONE	0	2026-07-24	false	false	C#	-
+get-into-teaching-crm	NONE	0	2026-09-07	false	false	HCL	Department for Education Get into Teaching Customer Relationship Management 
+analyse-school-performance	NONE	0	2026-10-06	false	false	C#	-
+GH-Azure-PrototypeBuilder	NONE	0	2026-10-05	false	false	C#	Andy's prototype builder with GitHub and Azure integration
+funding-service-fcs-devops	NONE	0	2026-11-06	false	false	-	-
+login.dfe.organisations	MIT	0	2026-10-16	false	false	JavaScript	-
+login.dfe.healthcheck	MIT	0	2026-11-06	false	false	JavaScript	Express middleware to provide health check endpoints
+general-hospital-schools-census-prototype	MIT	0	2023-01-09	false	false	CSS	-
+NSA-Alpha-AzureFunction-Sample	MIT	0	2017-09-07	false	false	C#	-
+login.dfe.end-to-end-tests	MIT	0	2017-12-27	true	false	JavaScript	End to end tests for DfE Login
+childrens-social-care-architecture	NONE	0	2021-02-09	false	false	HTML	Source of Technical Documentation for Childrens Social Care Placement
+service-manual-drafts	NONE	0	2021-11-12	false	false	Slim	-
+teaching-vacancies-slackbot	MIT	0	2021-05-26	true	false	JavaScript	NodeJS application to utilise slack APIs using Bolt framework
+content-design-framework	NONE	0	2022-07-12	false	false	-	-
+onboarding-notes	NONE	0	2022-08-22	false	false	-	-
+assure-prototype-2	NONE	0	2023-08-16	false	false	HTML	-
+sd-teams-incident-bot	MIT	0	2025-12-22	false	false	Ruby	A bot that allows teams members to create and list incidents.
+briefing-buddy-copilot-agent	NONE	0	2026-09-10	false	false	-	A briefing Buddy Copilot agent
+rsd-github-actions	MIT	0	2026-11-11	false	false	-	-
+login.dfe.monitor	MIT	0	2023-01-03	true	false	JavaScript	-
+edis-source-adapter-sld	MIT	0	2021-02-16	false	false	C#	Source adapter to acquire Submit Learner Data changes for EDIS platform
+vcf-sw-assessment-accreditation-premigration	MIT	0	2022-08-04	false	false	HTML	-
+Gitis.d365	NONE	0	2026-10-19	false	false	C#	-
+funding-service-fcs-crm-data-export	NONE	0	2026-10-15	false	false	TSQL	FCS CRM Data Export 
+fh-api-gateway	MIT	0	2023-09-04	true	false	C#	A gateway to control access to the various family hub services
+early-years-foundation-recovery-UI-test	Apache-2.0	0	2022-03-10	false	false	-	UI test automation for the "Early years foundation recovery" project
+get-help-buying-for-schools	NONE	0	2026-03-26	false	false	CSS	.NET version of GHBS website
+refer-serious-misconduct-dataform	NONE	0	2026-11-05	false	false	JavaScript	-
+SchoolAccount-CollectNotifications	NONE	0	2026-11-09	false	false	C#	-
+manage-teacher-training-applications	MIT	0	2019-03-19	true	false	-	A service for providers of teacher training, to manage incoming applications to their courses.
+login.dfe.notifications.jobs	MIT	0	2024-10-25	true	false	EJS	Job handlers for notifications
+login.dfe.express-error-handling	MIT	0	2026-11-05	false	false	JavaScript	Error handling middleware for express applications
+csc-swr-ur-prototype	MIT	0	2021-03-16	false	false	CSS	-
+get-into-teaching-frontend-tests	NONE	0	2022-03-02	true	false	JavaScript	-
+support-for-publish-prototype	MIT	0	2026-04-10	true	false	JavaScript	Prototype for the support console for the ‘Publish teacher training courses’ service
+SDD-Academy-Transfers	MIT	0	2021-01-30	true	false	CSS	SDD Academy Transfers
+teacher-self-service-prototype	NONE	0	2023-03-07	false	false	HTML	Prototype for Teacher self-serve service
+eapim-developerhub-maintenance	NONE	0	2020-12-14	false	false	HTML	-
+dfe-info-sharing-prototype	MIT	0	2022-05-30	false	false	CSS	Prototype for the info-sharing project
+find-pub-load-test	NONE	0	2022-08-25	false	false	Ruby	This repo contains jmeter configuration for running load tests against the Find and Publish service
+govuk-dotnet-boilerplate	MIT	0	2022-06-28	false	false	-	A simple boilerplate built on .net to kick start new services
+local-authority-information-services	MIT	0	2022-08-01	false	false	-	A project to host and manage local authority information service such as family information services
+ecf-data-model-prototypes	NONE	0	2023-10-22	true	false	Makefile	Short lived prototype databases to experiment with schema for ECF records
+services-week-resources	NONE	0	2024-03-22	false	false	-	-
+data-software-engineering-technical-guidance	NONE	0	2024-03-12	false	false	-	Principles, standards and guidance for the Data Directorate - Software Engineering Team
+panellist_portal	NONE	0	2024-02-29	false	false	Ruby	-
+job-specification-builder-prototype	MIT	0	2023-07-01	false	false	HTML	Prototype job builder
+find-placement-schools	MIT	0	2026-11-09	false	false	Ruby	-
+ghbfs-design-history	MIT	0	2025-01-06	true	false	JavaScript	-
+access-your-teaching-profile	MIT	0	2023-08-25	true	false	Ruby	Where teachers can change their personal details
+eyfs_platform	NONE	0	2021-01-22	false	false	-	-
+publish-performance-dashboard-prototype	MIT	0	2026-05-03	false	false	JavaScript	-
+govuk-moodle-assessment-activity	MIT	0	2025-12-15	true	false	PHP	Moodle Assessment activity plugin to support Early Career Social Worker Direct Observations
+vcf-sw-career-development-design-history	MIT	0	2024-03-25	false	false	Nunjucks	A design history for the social worker career development programme
+ecf-data-model-prototypes-separate	NONE	0	2024-06-28	true	false	Makefile	-
+product	NONE	0	2026-02-26	false	false	JavaScript	Product manual - Speak to Deb Blanchard or Andy Jones
+s186-accessibility-issues-frontend	NONE	0	2025-07-11	false	false	C#	-
+CaseWorkDesktopTool	MIT	0	2026-06-05	false	false	C#	Web application POC for DEFINE team about 
+dfe-standards-cms	NONE	0	2025-02-11	false	false	JavaScript	The Strapi CMS instance for managing DfE Standards. Speak to DesignOps for more information on this product.
+rsd-nuget-hello-world	MIT	0	2026-03-30	false	false	C#	RSD - NuGet Hello World (For testing the Code Signing workflow)
+claim-additional-payments-find-a-lost-trn-prototype	NONE	0	2026-03-31	false	false	HTML	Claim's copy of the find a lost TRN prototype
+social-work-national-professional-development-offer	MIT	0	2026-06-10	false	false	PowerShell	The repository will be used to store project source code for the social work national professional development offer
+external-applications-api	MIT	0	2026-11-11	false	false	C#	-
+funding-service-fcs-tools	NONE	0	2026-10-13	false	false	C#	FCS Tool Repo
+manage-school-improvement	MIT	0	2026-11-11	false	false	C#	-
+ghbs-auto	NONE	0	2026-11-06	false	false	Ruby	Automated testing for Get Help Buying for Schools
+SchoolAccount-LocalDevTools	NONE	0	2026-11-05	false	false	-	Supporting services and tools to support local development in the school account
+complete-conversions-transfers-changes	MIT	0	2026-11-11	false	false	C#	Complete application with accompanying API service to help the process of schools converting to academies, transferring between academy trusts or changing their academy status.
+buying-for-schools	MIT	0	2023-01-03	false	false	HTML	-
+eapim-infrastructure	MIT	0	2023-03-21	false	false	PowerShell	Azure templates for building DfE Enterprise API Management
+eapim-b2cpolicies	MIT	0	2023-06-20	false	false	PowerShell	Enterprise API Management ( DFE Developer Hub  website ) B2C policies for signin, sign-up, password reset &  edit profile  
+fa-diary	MIT	0	2019-11-28	false	false	-	-
+school-account-prototype	MIT	0	2023-06-06	false	false	HTML	-
+infrastructure-persistence-sql	MIT	0	2026-02-05	false	false	C#	A library to provide strongly typed, dependency-injected Dapper persistence designed for multi-database applications.
+funding-service-cfs-releaseManagementSchema	NONE	0	2026-10-30	false	false	TSQL	The Release Management Schema repository contains the database schema, SQL projects, and deployment artefacts used by the Calculate Funding Service (CFS) Release Management component.
+ghbs-reporting-sync	NONE	0	2026-10-28	false	false	Ruby	-
+external-applications-web	NONE	0	2026-11-11	false	false	C#	-
+rsd-file-scanner-function	MIT	0	2026-11-10	false	false	C#	Serverless Virus Scanner Azure Function for Azure File Share
+fh-notification-api	MIT	0	2024-06-25	true	false	C#	Provides a standardised api for notifications
+ghbfs-external-prototype	MIT	0	2023-06-20	false	false	HTML	-
+free-schools-store-prototype-backend	NONE	0	2023-07-25	false	false	C#	-
+login.dfe.saml-assertions	MIT	0	2026-10-27	false	false	JavaScript	-
+login.dfe.migration.admin.jobs.client	MIT	0	2018-02-20	true	false	JavaScript	Client for queue migration admin jobs
+manage-courses-ucas-importer	NONE	0	2018-11-01	true	false	C#	obsolete repo, functionality has been merged in to manage-api
+fa-diary-home-study	MIT	0	2020-09-16	false	false	-	-
+csc-tech-docs-publisher	NONE	0	2020-11-02	false	false	Dockerfile	-
+govuk-ghwt-prototype	MIT	0	2020-12-04	false	false	JavaScript	-
+accessibility-scanner	NONE	0	2023-04-11	false	false	Ruby	Docker container which holds the PA11Y Scanner
+get-into-teaching-paas-deploy	NONE	0	2020-05-18	false	false	-	Docker Container giving the tools needed for GITHUB Actions to deploy to Gov PaaS
+get-help-with-tech-holding	NONE	0	2022-06-30	false	false	CSS	-
+tra-dqt-notifications	MIT	0	2023-03-13	true	false	TSQL	-
+ey-qualifications-prototype	MIT	0	2025-08-29	false	false	HTML	Design prototypes for the ‘Check an Early Years Qualification' service
+github-basics-demo	NONE	0	2020-11-24	false	false	Ruby	A repository to demo some basic Git and GitHub skills.
+school-experience-prototype	MIT	0	2020-07-08	true	false	HTML	This is for the prototyping element of the book a school experience project
+get-an-identity-dataform	NONE	0	2024-05-31	false	false	JavaScript	-
+bat-data-maps	NONE	0	2023-11-15	true	false	Ruby	-
+dfe-gds-ui-components	MIT	0	2022-11-10	false	false	-	-
+data-infrastructure-and-reporting	NONE	0	2021-11-17	false	false	-	Documentation for data infrastructure and reporting in Teacher Services
+record-concerns-and-support	MIT	0	2026-01-06	false	false	HTML	Prototypes for the Record concerns and support for trusts product
+school-workload-reduction-alpha	MIT	0	2023-09-15	true	false	HTML	A place to test prototypes for the School workload reduction team.
+plan-technology-for-your-school-terraform-azurerm	MIT	0	2023-10-13	false	false	-	Azure Container Apps Hosting terraform module for Plan technology For Your School
+identifiers-api	MIT	0	2024-12-02	true	false	C#	-
+standards-manual	NONE	0	2025-07-23	false	false	JavaScript	The new standards manual
+get-into-teaching-interface-api	NONE	0	2026-10-30	false	false	Ruby	-
+estate-data-collection	NONE	0	2026-10-27	false	false	C#	-
+rsd-lsrp-validation-function	MIT	0	2026-11-09	false	false	C#	-
+login.dfe.samlclient	MIT	0	2026-07-10	false	false	JavaScript	Example SAML client to connect to DfE Login SAML Proxy
+search-and-compare-ui-offline	MIT	0	2018-12-11	true	false	HTML	github pages site for when the service is offline, routed to by load balancer. doesn't work with azure front-door for some reason
+nrs-alpha-round-4	MIT	0	2019-02-14	false	false	CSS	-
+send-data-ur-surveys	MIT	0	2019-08-07	false	false	JavaScript	-
+school-experience-beta	NONE	0	2018-10-24	true	false	CSS	DfE School Experience - Beta
+login.dfe.service-notifications.jobs.client	MIT	0	2024-08-09	true	false	JavaScript	Client for raising inter-service notifications
+get-help-to-retrain-ncs-job-profile-api	NONE	0	2020-01-27	false	false	-	-
+get-help-with-tech-design-history	MIT	0	2026-07-24	false	false	Nunjucks	Design history for Get help with technology
+login.dfe.global	NONE	0	2022-04-07	true	false	PowerShell	SSP Signin Global 
+at-design-history	NONE	0	2019-11-26	false	false	CSS	This is an design iteration history recording static HTML app
+npq-registration-maintenance-page	NONE	0	2023-10-17	true	false	Slim	A maintenance page that will be used while we're migrating NPQ registration from PaaS to Azure
+sw-career-development	NONE	0	2022-10-04	false	false	-	Social Worker Career Development
+fh-organisation-api	MIT	0	2022-10-05	true	false	C#	API for adding, editing and deleting Local Authority, Voluntary, Charitable and Faith Organisations, their Users and their Roles.
+MYESF_Cookies_Privacy	NONE	0	2021-03-25	false	false	-	Cookie Policy content
+teach-in-fe-matching-experiment	MIT	0	2024-02-29	false	false	TypeScript	An experimental service to test matching potential FE teachers with local colleges
+standards	NONE	0	2024-06-17	false	false	JavaScript	Standards hub for the Department for Education
+awarding-organisation-digital-platform-prototype	MIT	0	2024-08-09	false	false	HTML	-
+survey-service	MIT	0	2025-07-18	false	false	JavaScript	Survey service for design maturity
+terraform-azurerm-static-site-hosting	MIT	0	2026-03-24	false	false	HCL	Azure Static Site Hosting terraform module
+ai-briefing-tool-prototype	NONE	0	2026-09-01	false	false	C#	Area for non-production build for Use case 21 - Briefing tool.
+persons-api	MIT	0	2026-11-11	false	false	C#	-
+register-placement-schools-prototype	MIT	0	2026-11-06	false	false	JavaScript	Prototype for the ‘Register of placement schools’ proof of concept
+fiat-prototype	MIT	0	2026-10-22	false	false	Nunjucks	A prototype to aid designers and developers on the FIAT (Find Information about Academies and Trusts) project.
+login.dfe.request-verification	MIT	0	2025-05-08	false	false	JavaScript	-
+login.dfe.async-retry	MIT	0	2026-11-06	false	false	JavaScript	Async retry library for NodeJS built on top of retry
+spi-ukrlp-adapter	MIT	0	2023-11-13	false	false	C#	UKRLP adapter service for SPI
+csc-placement-prototype	MIT	0	2020-10-15	false	false	CSS	-
+teacher-misconduct-system	NONE	0	2024-01-10	false	false	C#	-
+azure-hello-rails	NONE	0	2022-09-16	false	false	Ruby	A basic rails repo used for testing and demonstrating Azure migration
+tuition_parser	NONE	0	2022-06-24	false	false	Ruby	Parse spreadsheets with tuition information from providers and generate csv files to be imported into a database.
+accessibility	MIT	0	2022-09-01	false	false	HTML	-
+dfe-standards-manual-prototype	MIT	0	2023-07-24	false	false	Nunjucks	Prototype for updated standards manual - Speak to Design Ops.
+fh-report-staging-api	MIT	0	2024-03-25	true	false	-	Api for the family hub products report staging
+common-application	MIT	0	2025-05-15	false	false	C#	A library to provide clean architecture constructs at the application tier
+estate-manager-services-prototype	NONE	0	2025-01-27	false	false	-	The interactive prototype of Estate Manager Services, being developed within Education Estates Directorate.
+DfE-Connect-Prototype	MIT	0	2026-05-23	false	false	HTML	Code prototype for the DfE Connect team
+rsd-nuget-sign	MIT	0	2026-03-30	false	false	-	RSD - Sign NuGet packages using certificates stored in Azure Key Vault
+eapim-backuprestore	NONE	0	2019-03-27	false	false	-	solution for backup and restoring of the enterprise apim's configuration
+ecf-spikes	NONE	0	2020-10-14	true	false	Ruby	-
+cpd-payment-calculations	MIT	0	2021-05-21	true	false	Ruby	This code has moved. See readme.
+tech-docs-sandbox	NONE	0	2020-12-24	false	false	Ruby	Test repo for playing around with tech docs
+apply-for-teacher-training-statistics	MIT	0	2021-12-01	false	false	HTML	-
+buy-digital-technology-for-childrens-social-care	NONE	0	2021-10-20	true	false	Slim	-
+rsd-academies-db-migration	NONE	0	2023-08-17	false	false	Python	-
+care-leavers-poc	NONE	0	2025-02-04	false	false	C#	POC for the Care Leavers website - a dotnet site with a Contentful back end
+credential_revalidator	NONE	0	2026-04-14	false	false	Rust	Validate secrets found by scanning
+register-training-providers-prototype	MIT	0	2026-11-06	false	false	JavaScript	Prototype for the ‘Register of training providers’ service
+bat-apply-backend-api	NONE	0	2019-01-10	true	false	Ruby	Backend and API for Become a Teacher Apply services
+vcf-sw-assessment-accreditation-prototype	MIT	0	2022-08-05	false	false	HTML	-
+service-manual-gone	NONE	0	2022-06-27	false	false	-	Holding page for when we remove the DfE Service Manual
+prepare-spike-ad-roles	NONE	0	2022-09-08	false	false	C#	-
+aqts-prototype	MIT	0	2025-06-12	false	false	HTML	-
+rsd-azure-utilities	NONE	0	2026-11-11	false	false	Shell	-
+get-information-about-schools-data-ingestion-prototype	MIT	0	2026-04-21	false	false	C#	A prototype in support of GIAS 2.0 alpha to demonstrate data ingestion capability
+test-prototype	MIT	0	2026-07-04	false	false	JavaScript	-
+login.dfe.oidc-dotnetclient	MIT	0	2022-10-17	false	false	CSS	.NET client for DfE Sign-in
+Gitis.CRMtoBQIntegration	NONE	0	2026-10-19	false	false	C#	-
+support-for-early-career-teachers	NONE	0	2026-10-19	false	false	Slim	-
+Dfe.Unified.Intake	MIT	0	2026-11-05	false	false	C#	Unified Intake portal
+login.dfe.service-notifications.jobs	MIT	0	2024-08-09	true	false	JavaScript	Processor for inter-service notifications
+login.dfe.request-promise-retry	MIT	0	2024-08-09	true	false	JavaScript	Wrapper of request-promise to support retries using login.dfe.async-retry
+login.dfe.migration	MIT	0	2019-11-06	true	false	JavaScript	-
+login.dfe.notifications.client	MIT	0	2024-11-05	true	false	JavaScript	Client for sending user notifications within DfE Login
+covid-content-external-link-checker	NONE	0	2020-05-12	false	false	Ruby	-
+apply-for-postgraduate-teacher-training-api	NONE	0	2019-02-27	true	false	-	-
+content-design-ddat-framework-prototype	MIT	0	2022-08-15	false	false	JavaScript	-
+design-histories-cms-strapi	NONE	0	2024-01-01	false	false	JavaScript	-
+deploy-http-echo	NONE	0	2024-03-08	false	false	-	Deploy mendhak/http-https-echo to AKS
+ProviderProfile	NONE	0	2025-01-29	false	false	-	Code report for ProviderProfile development
+accessing-childcare-calculator-prototype	MIT	0	2026-05-23	false	false	HTML	Prototype exploring feasibility of accessing childcare calculator
+ddt-service-manual	NONE	0	2025-12-03	false	false	HTML	-
+uir-prototype	MIT	0	2026-08-25	false	false	Nunjucks	A prototype for the "Unified Intake and Routing Model"
+Find-Teachers-For-Research	NONE	0	2026-08-21	false	false	C#	Internal (DfE) facing .Net application for finding active teachers and creating research rounds. It manages the research rounds in a way that avoids duplicate requests for research from DfE, helping to eliminate over burdening teachers with requests.
+rsd-reep	MIT	0	2026-09-22	false	false	HTML	-
+dauPortalTools	NONE	0	2026-11-06	false	false	R	-
+SchoolAccount-ApiTemplate	NONE	0	2026-11-09	false	false	C#	-
+manage-courses-api	MIT	0	2019-09-12	true	false	C#	ye olde c# codebase for publish, dead
+manage-courses-support	MIT	0	2019-12-18	true	false	Ruby	This app is used by the user support team to help publishers with the Pubish teacher training courses service.
+get-help-to-retrain-prototype	MIT	0	2020-09-04	false	false	HTML	Prototype for NRS UI for getting help to retrain
+login.dfe.kue	MIT	0	2025-02-18	true	false	JavaScript	-
+user-research	NONE	0	2022-06-22	false	false	SCSS	Guide to DfE User Research https://dfe-digital.github.io/user-research
+fh-referral-shared	MIT	0	2024-07-03	true	false	C#	A class library to hold artefacts shared between Referral projects.
+login.dfe.gateway	NONE	0	2022-10-21	true	false	C#	-
+pe-allocations-prototype	MIT	0	2020-09-04	false	false	HTML	Prototype for requesting PE allocations
+spi-gias-adapter	MIT	0	2023-01-25	false	false	C#	GIAS adapter service for SPI
+fe-interventions-api	MIT	0	2021-03-01	false	false	C#	API to surface data for the FE Interventions portal
+NPQ-Alpha-Prototype	MIT	0	2022-11-18	true	false	HTML	Prototype for the NPQ Alpha
+prototype-request-manage-discovery-peer-review	MIT	0	2023-10-10	false	false	HTML	Prototype for a new service to request and manage discovery peer reviews.  (p: disco) - Built by #Design-Ops team
+bat-ops-dashboard	NONE	0	2022-01-28	false	false	Ruby	A dashboard that shows the current deployment status for Becoming A Teacher services.
+API-SIP-SharePointOnline	NONE	0	2026-11-11	false	false	C#	-
+social-work-induction-programme-digital-service	MIT	0	2025-12-19	true	false	C#	Digital service for the Social Work Induction programme in children's social care
+find-teacher-training-filters-prototype	MIT	0	2026-05-23	false	false	HTML	The Publish and Find team are testing how we might improve filters on Find
+single-place-for-education-frontend	NONE	0	2023-01-19	false	false	Ruby	-
+digital-tools	NONE	0	2021-01-26	false	false	-	-
+apply-for-teacher-training-tests	MIT	0	2022-02-14	true	false	JavaScript	Smoke tests for https://github.com/DFE-Digital/apply-for-teacher-training
+register-tech-spikes	NONE	0	2020-08-10	false	false	Ruby	-
+GHWCT_2	MIT	0	2022-11-24	false	false	CSS	-
+schools-upptime	MIT	0	2024-06-30	false	false	Markdown	Infrastructure monitoring using upptime service
+support-for-early-career-teachers-legacy	MIT	0	2023-10-25	true	false	Ruby	-
+terraform-statuscake-tls-monitor	MIT	0	2026-11-11	false	false	HCL	Monitor your web apps TLS certificates using StatusCake
+teacher-services-hedgedoc	NONE	0	2026-10-27	false	false	HCL	-
+claim-levelling-up-premium-further-education-prototype	MIT	0	2025-08-29	true	false	HTML	Prototype for the Levelling Up Premium Payment (Further Education) addition to the Claim Additional Payments for Teaching service
+free-schools-store-prototype	MIT	0	2025-12-08	false	false	HTML	-
+rsd-acr	MIT	0	2026-11-11	false	false	HCL	Azure Container Registry for RSD
+govuk-moodle-theme	NONE	0	2025-12-18	true	false	Mustache	A GOV.UK Moodle theme plugin
+rsd-mcp-server	NONE	0	2026-08-24	false	false	C#	RSD MCP server that retrieve data from multiple data sources.
+SchoolAccount-Experiments	NONE	0	2026-09-10	false	false	C#	A collection of experiments and spikes done leading to SchoolAccount-Web
+grant-transformations-alpha	MIT	0	2026-09-24	false	false	-	Alpha PoC testing & documentation for the Grant Transformations Programme
+digitised-nc	MIT	0	2026-10-14	false	false	-	-
+fips-compass-integration	MIT	0	2026-09-28	false	false	C#	Find Information about Products and Services which integrates with COMPASS service register data.
+register-trainee-teachers-prototype	MIT	0	2026-11-06	false	false	JavaScript	Prototype for the ‘Register trainee teachers’ service
+gias-terraform	NONE	0	2026-11-06	false	false	HCL	Infra Build for Get Information About Schools in CIP
+nrs-v1	NONE	0	2018-12-18	false	false	HTML	v1 of nrs motivation prototype: employees
+rollover-allocations-prototype	MIT	0	2020-09-04	false	false	JavaScript	Prototype for rollover and mentions PE allocations
+csc-swr-architecture	NONE	0	2021-02-17	false	false	HTML	-
+bat-manage-applications-prototype	MIT	0	2020-04-04	true	false	HTML	Manage teacher training applications
+delivery-management	MIT	0	2022-08-16	false	false	SCSS	-
+sts-digital-strategy-design-history	MIT	0	2023-03-06	false	false	JavaScript	A design history for the Schools Technology Services Digital Strategy project
+pageobjects-testing-infrastructure	MIT	0	2025-05-06	false	false	C#	A library to support composition of PageModels
+children-in-social-care-schemas	MIT	0	2026-05-19	false	false	-	-
+rsd-service-bus	MIT	0	2026-03-24	false	false	HCL	Terraform project for deploying Service Bus, Topics and subscriptions within RSD
+terraform-linting-actions	MIT	0	2026-05-11	false	false	-	-
+early-years-foundation-recovery-rewrite-dotnet	MIT	0	2026-07-28	false	false	C#	Migrated .net code for EYFS project
+manage-free-school-projects	MIT	0	2026-11-11	false	false	C#	-

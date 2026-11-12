@@ -4,6 +4,95 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p778` — **`ACTION p777-D` discharged: both GPL-2.0 "anomalies" explained, and NEITHER was an alteration. 🟢 `T794` closes over GPL-2.0.**
+
+🔵 **What `p777-D` asked.** Two GPL-2.0 prints carried unexplained lengths against the canonical `18,092 B` and **neither was vintage**, so `p777` could not account for them: `elgg/elgg` at `17,173 B` and `learnosity/learnosity-qti` at `18,264 B`. The instruction was to word-diff both against the canonical print and report **whether any deontic operator differs.**
+
+🟢 **Answer: no deontic operator differs in the operative terms of either print.** 🔴 **But both length anomalies had causes `p777` did not consider, and one of them is a live hazard.**
+
+### 🟢 The canonical reference, re-measured this pass
+
+[`postgis/postgis`](https://github.com/postgis/postgis) · `master` · `c87677a620f8` · `COPYING` · **`18,092 B`** · `8177f9751321`. 🔵 Used as the canonical GPL-2.0 body because `p777` established it carries the modern FSF address and the full document.
+
+### 🟢 `learnosity/learnosity-qti` — whitespace, and nothing else
+
+| Measure | `develop` (**default branch**) | Canonical | Delta |
+|---|---|---|---|
+| Grant | `LICENSE` `18,264 B` · `e3c23a194748` | `COPYING` `18,092 B` · `8177f9751321` | `+172 B` |
+| `must` | `9` | `9` | `0` |
+| `shall` | `0` | `0` | `0` |
+| `may not` | `3` | `3` | `0` |
+| `may` | `17` | `17` | `0` |
+| `required` | `3` | `3` | `0` |
+| `permit` | `7` | `7` | `0` |
+| `prohibit` | `1` | `1` | `0` |
+| **Differing word tokens** | — | — | 🟢 **`0`** |
+
+🟢 **Zero differing word tokens across the whole document.** The `172`-byte delta is **whitespace and indentation only**. 🔵 `p777`'s expected outcome, confirmed: the GPL-2.0 population closes the same way the GPL-3.0 one did (`T794`).
+
+🔴 **And the finding `p777-D` did not ask for but which matters more.** The ref channel advertises this repository's default branch as **`develop`**, not `master` — and the two branches carry **different licences**:
+
+| Branch | Bytes · `sha256₁₂` | Licence |
+|---|---|---|
+| `develop` (**default**) | `18,264 B` · `e3c23a194748` | 🔴 **GPL-2.0** |
+| `master` | `1,067 B` · `705d9bb4b1df` | 🟢 **MIT** (*"Copyright (c) 2020 Learnosity"*) |
+
+🟢 **`T804`: the grant is a property of the REF, not of the repository.** A default clone returns copyleft; a `master` clone returns permissive. **A licence grade published without a branch and `HEAD` beside it is unfalsifiable**, and this is the first measured instance in this base of a single repository carrying two incompatible grants simultaneously.
+
+### 🟢 `elgg/elgg` — a COMPOSITE grant, not an altered one
+
+[`elgg/elgg`](https://github.com/elgg/elgg) · branch **`7.x`** · `c51aaa07390f` · `LICENSE.txt` · `17,173 B` · `7188c83d8764` (🟢 reproducing `p777`'s bytes exactly).
+
+🔵 **Read whole, the file has three parts** — which is why it graded as one anomalous GPL-2.0 print:
+
+1. **Line 1, a scope statement:** *"Bundled plugins (the contents of the "/mod" directory) are available only under the GPLv2 license."*
+2. **Lines 2–52, an MIT licence** — `2,173 B` of header, carrying *"shall be included"* and *"IN NO EVENT SHALL"*.
+3. **Lines 53–end, the GPL-2.0 text**, beginning at the standard preamble with the **modern** FSF address (`51 Franklin Street, Fifth Floor, Boston, MA 02110-1301`).
+
+🔴 **Graded whole, the file trips a deontic guard: `shall` = `2` against the canonical `0`.** 🟢 **Graded correctly — MIT header stripped, GPL body alone — every operative operator matches:**
+
+| Operator | elgg GPL body | Canonical | |
+|---|---|---|---|
+| `must` | `9` | `9` | 🟢 |
+| `shall` | `0` | `0` | 🟢 |
+| `may not` | `3` | `3` | 🟢 |
+| `required` | `3` | `3` | 🟢 |
+| `prohibit` | `1` | `1` | 🟢 |
+| `may` | `15` | `17` | 🟡 |
+| `permit` | `5` | `7` | 🟡 |
+
+🟢 **And the two residual deltas are fully accounted for.** The elgg GPL body is `15,137 B` against the canonical `18,092 B`, a delta of **`−2,955 B`**; the canonical document's text from `END OF TERMS AND CONDITIONS` onward measures **`2,921 B`**. 🔵 **The `472` differing word tokens are, in their entirety, the "How to Apply These Terms to Your New Programs" appendix** — the advisory that carries *"does not permit incorporating your program into proprietary programs"* and *"consider it more useful to permit linking proprietary applications"*. **That appendix is instructional, not operative**: it is the model notice, not the licence terms. Removing it changes no permission, condition or limitation.
+
+🟢 **Verdict: `elgg/elgg` is dual-licensed — MIT for the core, GPL-2.0 for the bundled `/mod` plugins — and says so in its own first line.** The `shall`×`2` that `p777`'s guard would have flagged comes from the **prepended MIT licence**, not from an altered GPL.
+
+🔵 **`T802`: a length anomaly in a grant file is more often a SECOND licence than an altered one.** Two independent prints, two causes, zero alterations:
+
+| Repo | Apparent anomaly | Actual cause |
+|---|---|---|
+| `learnosity/learnosity-qti` | `+172 B` | 🟢 whitespace only (`0` word tokens differ) |
+| `elgg/elgg` | `−919 B` whole / `−2,955 B` body | 🟢 **MIT prepended** (`+2,173 B`) **and the non-operative appendix omitted** (`−2,921 B`) |
+
+🟢 **So `ALTERED-VINTAGE`'s population stays at `1` payload** — the `MyIEP`/`IEP-IPP` print (`18,351 B` · `1cfece9336f0`), re-confirmed by this pass's gate as **the only shelved row carrying the pre-2005 FSF address** (`repos/foundations.md` L58, one row, two repositories). `p776-D`'s inferred cluster of `4` remains corrected to `1`.
+
+### 🟢 The foundational supply, re-graded on both channels this pass
+
+🔵 Body grade on the bytes; stars and `pushed_at` from the claim channel on `2026-11-12`. 🔴 **Where the two channels disagreed, the BYTES decided and the shelf was corrected** (`T799`).
+
+| Repo | Branch · `HEAD` | Grant, graded on the bytes | Claim channel | Region | Why it is foundational |
+|---|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `main` · `afbcc55fa1bd` | 🔴 **GPL-3.0** `COPYING.txt` · `35,147 B` · `8ceb4b9ee5ad` | `GPL-3.0` · `7,604★` · `2026-11-11` | Global | 🟢 **Canonical GPL-3.0 to the byte** (`35,147`). The world's most-deployed VLE. 🔴 Copyleft — plugin boundary, never a fork. |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` · `d3a86602dcf7` | 🔴 **AGPL-3.0** `LICENSE` · `35,136 B` · `e12d78569742` (*"GNU AFFERO"*, `Affero` ×`15`) | 🔴 **ABSENT from the claim channel** | North America | Axim Collaborative (Harvard/MIT). 🔴 AGPL-3.0 — the network-use clause reaches a hosted studio deployment. |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` · `1c9f0bb8013e` | 🔴 **AGPL-3.0** `LICENSE` · `34,520 B` · `57c8ff33c9c0` | `AGPL-3.0` · `6,910★` · `2026-11-10` | North America | 🟢 Canonical AGPL-3.0 band (`34,523 B`), `3 B` delta. The dominant North American higher-ed LMS. |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` · `af576e8b4d32` | 🟢 **ECL-2.0** `LICENSE` · `11,120 B` · `0688f62d04f1` | `ECL-2.0` · `1,239★` · `2026-11-11` | Global | 🟢 **CORRECTED THIS PASS from `Apache-2.0`.** Apache-2.0 terms with a **narrowed section 3 patent grant**. The most studio-friendly full VLE in this table. |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | `develop` · `26fbc9363f07` | 🟢 **ECL-2.0** `LICENSE` · `11,340 B` · `76a975068930` | `ECL-2.0` · `511★` · `2026-11-11` | EMEA | 🟢 **CORRECTED THIS PASS from `Apache-2.0`.** Lecture capture and video pipeline — the ingest layer for any transcription/summarisation agent. |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | `main` · `ef17fff8a214` | 🟢 **Apache-2.0** `LICENSE.txt` · `10,172 B` · `59899c6091b5` | `Apache-2.0` · `28★` · `2026-11-11` | North America | 🟢 **The K-12 data standard and operational data store.** Permissive, and the interoperability layer a US district engagement starts from. 🔵 `10,172 B` is a trimmed Apache print — below the `11,358 B` canonical, so flagged for a body-diff next pass. |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `mobile` · `e4cd20a48bf1` | 🔴 **GPL-2.0-band** `LICENSE` · `15,214 B` · `d954e14e5c75` | `GPL-2.0` · `654★` · `2026-11-10` | LATAM | A K-12 SIS with Moodle integration, strong Spanish/French localisation. 🔵 `15,214 B` is **off the canonical GPL-2.0 band** (`18,092 B`) → a `T802` candidate for next pass. |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **`19.0`** · `46a5d7d40082` | 🔴 **INCOMPLETE GRANT** `LICENSE` · `8,241 B` · `528f84036800` | 🟡 `NOASSERTION` · `910★` · `2026-11-02` | APAC | Odoo-based education ERP (SIS+LMS+finance+HR). 🔴 **Unchanged from `p776`: the grant promises the GPL text *"is included at the bottom as well"* and omits it.** `NOASSERTION` on the claim channel, which is what an unmappable print should produce. |
+| [`frappe/education`](https://github.com/frappe/education) | `develop` · `61408d3da518` | 🔴 **`19`-byte POINTER** `license.txt` · `1fcecf395312` | 🟡 `NOASSERTION` · `705★` · `2026-10-30` | APAC | 🔴 **Re-measured byte-for-byte, unchanged across three passes:** the literal string `License: GNU GPL V3` and no licence text. A pointer is not a grant. |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | `main` · `96f33faaf028` | 🟢 **Apache-2.0** `LICENSE` · `11,357 B` · `c71d239df917` | `Apache-2.0` · `30,321★` · `2026-11-10` | EMEA | 🟢 Canonical Apache-2.0 (`11,357` v `11,358`). The minimal agent runtime this base recommends as the composition layer. |
+
+🟢 **Ten foundational rows, every one graded on its own bytes, `2` corrected this pass, `0` padded.** 🔴 **The licence shape of the education platform layer, stated plainly: of the five full platforms, three are copyleft (GPL-3.0, AGPL-3.0 ×2) and the two studio-usable ones are `ECL-2.0` — a licence this base learned the name of this pass.**
+
 ## 🆕 `p777` — **The foundations re-graded on their own bytes, and a backlog carried for three passes CLOSED with proof rather than carried a fourth**
 
 🔴 **`make hooks` tried first and DENIED — eighth consecutive session, `0` for `8`.** 🟢 Instruments written from scratch; contracts in [`compose/code/p777/README.md`](../compose/code/p777/README.md).

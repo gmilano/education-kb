@@ -4,6 +4,81 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p778` — **The determination market re-placed by region after `T792`'s refutation, and the regional asymmetry that replaces it. 🟢 The `829`-repository census gives EMEA the largest permissive public-sector estate this base has measured anywhere; LATAM's AI-in-education activity is now measured and it is concentrated in governance, not supply.**
+
+🔵 **What changed for the market map this pass.** `p777` told a studio that the EMEA public-sector determination layer is forkable *because of what the determination is about*. 🔴 **That was wrong** (`T792` refuted — see [`agents/top.md`](../agents/top.md)). 🟢 **It is forkable because of which delivery team's template the repository was cut from** (`T800`), which changes the diligence step, not the opportunity: the asset is real and larger than `p777` knew, but it must be probed repository by repository rather than assumed estate-wide.
+
+### 🟢 The measured regional position
+
+| Region | Open-source supply, measured | Regulatory clock | The studio's binding constraint |
+|---|---|---|---|
+| **EMEA** | 🟢 **`829` repositories, `515` MIT, `0` forks, `231` pushed in `2026`** from one ministry ([`DFE-Digital`](https://github.com/DFE-Digital)). Plus `ECL-2.0` platforms ([`opencast`](https://github.com/opencast/opencast)) and the only EMEA-origin agent runtime ([`smolagents`](https://github.com/huggingface/smolagents), Apache-2.0 `11,357 B`). | 🔴 **EU AI Act Annex III**: admissions, grading and cheating-detection are **high-risk**. Stand-alone application **`2 December 2027`** (delayed from `2 August 2026` by the Omnibus agreement; sources still conflict, so treat the date as the planning anchor, not a settled fact). **AI-literacy duty live since February `2025`.** UK: DfE generative-AI product safety standards (**January `2026`**), Ofqual coursework-integrity resources (**March `2026`**). | 🟢 **Supply is not the constraint — conformity evidence is.** The code exists and is permissive; what a client lacks is the Annex III documentation trail. |
+| **North America** | 🟢 **`Ed-Fi ODS` (Apache-2.0, `10,172 B`)** is the permissive K-12 interoperability asset. 🔴 The LMS layer is copyleft: `canvas-lms` and `edx-platform` both **AGPL-3.0**. Agents: `ai-agents-for-beginners` (MIT, `79,435★`), `OATutor` (MIT, `279★`), `janestreet/agent_skills` (MIT). | 🔴 **State-led and fragmenting: `134` bills across `31` states in `2026`.** NC Session Law `2026-41` — AI-literacy standards, **state model policy by `2026-12-31`**, teacher training by `2028-06-30`. NY A 9190 limits classroom AI to grade `9`+. CA AB 1159 targets training on student data; ID SB 1227 requires privacy protections. Federal: April `2025` executive order; K-12 AI Literacy and Readiness Act of `2026` in committee. | 🔴 **Fifty compliance surfaces, not one.** The sellable asset is a **policy-configurable** deployment — per-state data and grade-level rules as configuration, not code. |
+| **APAC** | 🟢 **`DeepTutor`** (`HKUDS`, Apache-2.0 `11,408 B`, **`58,333★`**) is the region's and this base's flagship tutoring agent. 🔴 The ERP layer is defective: `openeducat_erp` incomplete grant, `frappe/education` a `19`-byte pointer. | 🔴 **South Korea's AI Basic Act in force `22 January 2026`** — transparency, risk assessment, human oversight, documentation for high-impact systems; enforcement decrees still being finalised, guidance-first grace period through `2026`. 🟡 **Vietnam**: a binding AI law effective **`March 2026`** treating education as high-risk requiring pre-deployment registration — **sources disagree on the instrument's legal name**, recorded as unverified. China: mandatory registration + content labelling. Japan/Singapore: voluntary (AI Verify). **Australia: TEQSA requires every higher-education provider to file an institutional generative-AI action plan.** | 🟡 **Jurisdiction-by-jurisdiction gating.** Australia's TEQSA plan requirement is the clearest near-term, concretely billable engagement in the region. |
+| **LATAM** | 🔴 **No LATAM-origin education agent, measured not assumed.** The research leg returned institutions, not repositories. 🟢 The usable platform row is [`rosariosis`](https://github.com/francoisjacquet/rosariosis) — K-12 SIS, strong Spanish/French localisation, Moodle integration — and it is **GPL-2.0**. | 🟡 **Policy-first, instruments proliferating:** Universidad de los Andes counts **`716` AI regulatory instruments across `23` countries, `>80%` initiated since `2023``. Brazil's PL `2.338/2023` (risk-based, Senate-approved, still in the Chamber). Colombia CONPES `4144` (February `2025`). Argentina, Brazil, Chile, Colombia, Costa Rica, Mexico and Peru have adopted the OECD AI Principles. | 🟢 **The constraint is governance capacity, and it is measured:** UNESCO IESALC across `200` institutions in `19` countries — **`87%` use AI in at least one area, `26%` have a formal AI strategy, `55%` have no AI budget, `<10%` have formal guidelines.** |
+
+### 🔵 `ACTION p777-H` — Chile, and the asymmetry this pass publishes instead of a third empty cell
+
+🔵 **`p777-H` instructed: stop searching for the complaint route directly; try the obligation side; and if the route still does not surface, publish the asymmetry as the result.** 🟢 **Done, in that order.**
+
+🔴 **The complaint route against a `Decreto 170` diagnostic evaluation did NOT surface, for a third consecutive pass.** 🟢 **The obligation side did, and it is substantial** — the Superintendencia de Educación's sanctioning power over schools is extensively exercised and judicially tested:
+
+| Date | Finding | Source class |
+|---|---|---|
+| **April `2026`** | 🟢 **Corte Suprema validated the Superintendencia's sanctioning power** for repeated *incumplimientos previsionales*, and held that **fiscalización may proceed by sampling (`muestreo`)**. | legal press |
+| **February `2026`** | 🟢 Enrolment cancellation requires **formal notification, an opportunity to present `descargos`, and reconsideration** before taking effect; a fine of `3%` of the *subvención* upheld. | legal press |
+| **December `2025`** | 🟡 **Limits affirmed:** the authority may not classify as an infraction conduct that does not meet the factual and legal preconditions; legality, congruence, reasonableness and due process bind it. | legal press |
+| **`2026` (Rol `35.641-2026`)** | 🟡 A `56` UTM fine **annulled for insufficient reasoning** in the sanctioning resolution. | legal press |
+| **`2026`** | 🟡 A `300` UTM fine found **disproportionate and reduced to `150` UTM**. | legal press |
+| **September `2026`** | 🟢 Fines upheld for incomplete application of *convivencia escolar* protocols; **remedying after the deadline does not void the sanction.** | legal press |
+| **`2026` plan** | 🔵 The Superintendencia is shifting to a **formative** model — `70%` preventive programmes; **`20,286` fiscalización actions** in the prior year. | regional press |
+
+🟢 **So the published result, as `p777-H` directed: Chile ties special-education funding to a diagnosis under `Decreto 170` and publishes no route to contest THE DIAGNOSIS — while publishing an extensive, judicially-tested, quantified route to contest THE SCHOOL'S CONDUCT.** 🔵 **The contestable object is the operator's behaviour; the determination about the child is not contestable through any channel this base can find.** That asymmetry is a stronger finding than another empty cell, and it is the third region in which this base has found the determination layer unchallengeable.
+
+🔴 **Caveat stated rather than buried:** every row above is from Chilean legal and regional press, not primary text. `www.bcn.cl` and the other primary-law hosts are **outside this session's network allowlist** (`T796`), so none of it is second-sourced to the official record.
+
+## Opportunities by region
+
+🔵 Each subsection names what a studio can sell **this quarter**, the asset it starts from with its measured grant, and the constraint that actually binds.
+
+### North America
+
+🟢 **Sell: a state-policy-configurable K-12 AI deployment.** Start from **[`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS)** (`main` · `ef17fff8a214`, **Apache-2.0** `10,172 B` · `59899c6091b5`) as the data spine, integrate Canvas over **LTI 1.3 rather than forking it** (`canvas-lms` is AGPL-3.0 `34,520 B`), and compose tutoring from **[`CAHLR/OATutor`](https://github.com/CAHLR/OATutor)** (MIT `1,105 B` · `5baaaf977a28`, pushed `2026-11-11`) for its Bayesian Knowledge Tracing.
+
+🔴 **The binding constraint is `134` bills across `31` states, not model quality.** North Carolina's Session Law `2026-41` sets a **hard date — a state model policy by `2026-12-31`** — and NY A 9190's grade-`9`+ restriction means **grade-level gating must be configuration**. 🟢 **The billable artefact is the policy matrix**: per-state data-use, grade-level and disclosure rules expressed as configuration over one deployment.
+
+🔴 **Declared gap: Canada and Mexico returned nothing education-specific.** Canadian AI rules surface under workplace legislation (Working for Workers Four Act, 2024; pending Ontario AI hiring disclosure), **not education.** This region's result is **United States-only**, for the second consecutive pass.
+
+### EMEA
+
+🟢 **Sell: Annex III conformity engineering on top of code the client's own ministry already published.** The estate is `829` repositories, `515` MIT. The determination exemplar is **[`claim-additional-payments-for-teaching`](https://github.com/DFE-Digital/claim-additional-payments-for-teaching)** (`master` · `11adcbfe499b`, **MIT** `1,099 B` · `7d38b1b17881`) — five named statutory policies, each with a `spec/` beside it, which is a **ready-made worked example of a documented, tested statutory decision**.
+
+🔴 **Diligence step that is new this pass and non-negotiable (`T800`):** probe each repository's grant on its own bytes before relying on it. `62%` is the estate base rate, not a guarantee — and the sibling rule holds (`funding-service-myesf-*` `22`/`22` granted, `funding-service-cfs|fcs-*` `0`/`8`).
+
+🟢 **Second EMEA line: `ECL-2.0` higher-education work.** **[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai)** and **[`opencast/opencast`](https://github.com/opencast/opencast)** are the only forkable full platforms in this base — Apache-style terms with a narrowed patent grant. **Opencast is the video-ingest front end for transcription and summarisation agents**, and it was pushed the day before this pass.
+
+🔴 **The one thing to tell a client plainly:** England's FSM determination engine ([`eligibility-checking-engine`](https://github.com/DFE-Digital/eligibility-checking-engine)) is **ungranted**. The child-facing determination layer must be **built**, under Annex III point 3(c) obligations, against the **`2 December 2027`** clock.
+
+### APAC
+
+🟢 **Sell: TEQSA institutional generative-AI action plans in Australia, and Korean AI Basic Act readiness.** Australia's requirement that **every** higher-education provider file an institutional plan addressing generative-AI risk is the most concrete, immediately billable engagement in any region this pass — a defined deliverable with a defined regulator.
+
+🟢 **Start from [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)** (`main` · `60fb3bdfddb3`, **Apache-2.0** `11,408 B` · `cd2f54e1e506`, `58,333★`) for the tutoring layer — permissive, regionally originated, and the credibility asset for an APAC pitch. 🔵 **Note the deceleration:** `+979` in `p777`'s window, `+179` since. Momentum, not a rocket.
+
+🔴 **Do not build the SIS/ERP layer on this region's supply.** Both candidates are defective at the grant: `openeducat_erp` promises GPL text it omits (`8,241 B`, `NOASSERTION`), `frappe/education` ships a `19`-byte pointer. 🟢 **Use `Ed-Fi ODS` or `Sakai` as the spine even for APAC work.**
+
+🟡 **Korea's enforcement decrees are still being finalised with a guidance-first grace period through `2026`** — so documentation and human-oversight design sold now is cheap insurance; a compliance *certification* sold now is premature.
+
+### LATAM
+
+🟢 **Sell AI governance capacity, because that is the measured gap — and the numbers are the pitch.** UNESCO IESALC over `200` institutions in `19` countries: **`87%` already use AI in at least one area, `26%` have a formal strategy, `<10%` have formal guidelines, `55%` have no AI budget.** Brazil: **`53%` of school administrators use AI, `22%` of their schools have guidelines.** 🔵 **Adoption is already done; the institution has no policy, no budget line and no oversight design.** That is a governance engagement, not a build engagement, and it is the one this region is actually buying.
+
+🟢 **Where a build is wanted, start from [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis)** (`mobile` · `e4cd20a48bf1`, `15,214 B` · `d954e14e5c75`) for its Spanish localisation and Moodle integration — 🔴 **GPL-2.0, so module/plugin, never a fork.** 🔵 Its byte count is off the canonical GPL-2.0 band and is flagged for a body-diff next pass.
+
+🟢 **Partner surface, named:** the UNESCO **Observatory on AI in Education for Latin America and the Caribbean**, launched **April `2026` in Santiago**, with Tecnológico de Monterrey and CENIA (Chile); plus Ceibal (Uruguay, where **`75%` of public-school teachers report using these tools**) and Cetic.br (Brazil).
+
+🔴 **Declared gap, measured and unchanged: no LATAM-origin education agent exists in this supply.** The region's AI-in-education output is **measurement and governance instruments**, not shipped open-source agents — and a studio should sell into that shape rather than wait for a regional repository to adopt.
+
 ## 🆕 `p777` — **The disadvantage-funding determination market, placed by region (`ACTION p776-I`). 🟢 The register's regional result: the determination layer IS forkable in EMEA today, under MIT, from the ministry that operates it — and `T792` says why that is true there and nowhere else.**
 
 🔵 **All four mandated regional legs ran and all four returned facts.** 🔴 **Two regional cells came back empty and are written down as empty below, because an informed gap is information and silence looks exactly like coverage.**
@@ -23,7 +98,7 @@ updated: 2026-11-12
 
 🔵 **England, SEND, discharging `ACTION p776-F`:** the EHC plan **stays in force** while an appeal is live — a cease notice does not end it until the appeal window expires or the appeal concludes, and the **section 42 duty to deliver the provision is not paused** (Children and Families Act 2014, s.42). 🟢 **So `interim_effect: freeze` is a property of SEND itself, not of the United States** — the `T679`-shaped test `p776-F` designed, and it passes. 🔴 **But the First-tier Tribunal has NO jurisdiction over the s.42 delivery duty and no enforcement powers**: non-delivery goes to the Local Government and Social Care Ombudsman or to judicial review. **The body that decides and the body that enforces are different bodies**, which is a column no register before this one needed.
 
-## Opportunities by region
+## Opportunities by region — `p777` (historical section; the live one is at the top of this file)
 
 🔵 Each subsection names what a studio can sell **this quarter**, the asset it starts from, and the measured obstacle. Figures are given with their conflicts stated, never averaged (`p771` doctrine).
 

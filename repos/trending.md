@@ -4,6 +4,83 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p778` — **The `829`-repository census `p777-F` asked for, and the defect it exposed in this base's own reasoning**
+
+🔵 **APPEND-ONLY.** This section is new at the top; every dated section below it is the history and is left exactly as it was.
+
+### 🟢 The census, completed: `829` of `829`
+
+🔵 `p777-F` called the `DFE-Digital` estate *"the largest unexploited asset in this KB"* and noted `p777` had read `6` repositories of it. 🟢 **All `829` are now censused** — the full `total_count`, nine pages of `100`, written to [`evidence/dfe-digital-estate-census.2026-11-12-p778.tsv`](../evidence/dfe-digital-estate-census.2026-11-12-p778.tsv) with name, SPDX id, stars, `pushed_at`, archived flag, fork flag, language and description.
+
+| | |
+|---|---|
+| Repositories | **`829`** |
+| 🟢 MIT | **`515`** (`62%`) |
+| 🔴 No licence | **`302`** (`36%`) |
+| 🟡 `NOASSERTION` | `9` |
+| 🟢 `Apache-2.0` / `0BSD` | `1` / `1` |
+| 🔴 `GPL-3.0` | `1` |
+| Forks | 🟢 **`0`** — every repository is original |
+| Archived | `175` (`21%`) |
+| Pushed in `2026` | `352` (`42%`) |
+
+🟢 **This is the largest permissively-licensed public-sector education estate this base has measured in any region.** `515` MIT repositories from one education ministry, `231` of them pushed in `2026`.
+
+### 🔴 The census's real result: the grant does not track the subject matter
+
+🔵 `p777-F` asked a specific question — *how many other statutory determinations are published as code?* — because `T792` rested on the answer. 🔴 **The answer refutes `T792`, and the cross-tabs show why.** Grant rate is flat against everything that could encode a policy about subject matter (`63%` not-archived, `67%` archived, `78%` prototypes, `59%` services, `66%` for `2026`, `62%` for `2022`, `71%` C#, `56%` Ruby) — and sharp against exactly one thing:
+
+| Family | Granted / total |
+|---|---|
+| 🟢 [`funding-service-myesf-*`](https://github.com/DFE-Digital/funding-service-myesf-admin-api) | **`22` / `22`** |
+| 🔴 `funding-service-cfs-*`, `funding-service-fcs-*` | **`0` / `8`** |
+
+🟢 **And the bytes show the mechanism.** [`funding-service-myesf-allocation-statements-api`](https://github.com/DFE-Digital/funding-service-myesf-allocation-statements-api) (`main` · `bf5cb264e180`, `LICENSE`, `1,103 B`) and [`funding-service-myesf-fundingclaim-data-api`](https://github.com/DFE-Digital/funding-service-myesf-fundingclaim-data-api) (`main` · `3baa2550ac04`, `LICENCE.md`, `1,103 B`) carry **byte-identical grants, `47f93074f399`, under different filenames.** One template, propagated. 🔵 A second instance in the same estate: [`check-your-eligibility-prototype`](https://github.com/DFE-Digital/check-your-eligibility-prototype) and [`accessing-childcare-calculator-prototype`](https://github.com/DFE-Digital/accessing-childcare-calculator-prototype) both carry `LICENCE.txt` `1,105 B` · **`6dc768320ae8`**.
+
+🟢 **`T800`: in a large public-sector estate the licence is a property of the TEAM'S TEMPLATE, not of the subject matter.** 🔵 **`T803`: the grant-file `sha256` detects template propagation as cheaply as it detects duplicate payloads** (`T793`). Full analysis and the refutation of `T792` on [`agents/top.md`](../agents/top.md).
+
+### 🔴 The statutory determinations, enumerated — and the pattern is *programme*, not *subject*
+
+| Determination published as code | Grant on the bytes | Who it decides about |
+|---|---|---|
+| 🟢 [`claim-additional-payments-for-teaching`](https://github.com/DFE-Digital/claim-additional-payments-for-teaching) — `5` named statutory policies, each with a `spec/` | **MIT** `1,099 B` · `7d38b1b17881` | adult |
+| 🟢 [`accessing-childcare-entitlement-checker`](https://github.com/DFE-Digital/accessing-childcare-entitlement-checker) — `15`/`30` hours free childcare, Tax-Free Childcare | **MIT** `1,102 B` · `97952c3f6069` | **child, claimed by an adult** |
+| 🟢 [`teacher-training-entitlement`](https://github.com/DFE-Digital/teacher-training-entitlement) | **MIT** `1,091 B` · `af7b3fcaafcb` | adult |
+| 🟢 [`manage-entitlement-funding-for-early-years-providers`](https://github.com/DFE-Digital/manage-entitlement-funding-for-early-years-providers) | **MIT** `1,098 B` · `99037586c36a` | provider org |
+| 🔴 [`eligibility-checking-engine`](https://github.com/DFE-Digital/eligibility-checking-engine) — **the ECE + Check FSM API itself**, .NET 8, `828` code hits for `eligibility` | **NO-GRANT-AT-ROOT** (`56` names) | **child, claimed by an adult** |
+| 🔴 [`check-free-school-meals-eligibility-parent`](https://github.com/DFE-Digital/check-free-school-meals-eligibility-parent) | **NO-GRANT-AT-ROOT** (`56` names) | child |
+| 🔴 [`teacher-pay-calculator`](https://github.com/DFE-Digital/teacher-pay-calculator) — live `2026` pay-award service | **NO-GRANT-AT-ROOT** (`56` names) | **adult** |
+
+🔴 **Four MIT, three ungranted, and the child/adult axis runs straight through both columns.** 🟢 **That is the refutation, in one table.**
+
+### 🟢 Four distinct MIT byte-lengths in one estate — the template fingerprint
+
+🔵 A single department, one licence, **six** distinct prints. Each is a different team's copy with a different copyright line:
+
+| Bytes | `sha256₁₂` | Seen on |
+|---|---|---|
+| `1,091 B` | `af7b3fcaafcb` | `teacher-training-entitlement` |
+| `1,092 B` | `c561ea849ed6` | `teaching-vacancies` |
+| `1,094 B` | `1018ba112e86` | `apply-for-teacher-training` |
+| `1,098 B` | `99037586c36a` | `manage-entitlement-funding-for-early-years-providers` |
+| `1,099 B` | `7d38b1b17881` | `claim-additional-payments-for-teaching` |
+| `1,102 B` | `97952c3f6069` | `accessing-childcare-entitlement-checker` |
+| `1,103 B` | `47f93074f399` | **`2`× `funding-service-myesf-*`** |
+| `1,105 B` | `6dc768320ae8` | **`2`× childcare prototypes** |
+
+🟢 **Eight prints, `10` repositories, `2` collisions — and both collisions are template propagation inside one programme.** 🔵 For the studio this is a usable heuristic: **a grant digest shared with a sibling repository means a shared template, which means the sibling's licence is probably deliberate; a unique digest means a team wrote its own, which means the next repository from that team may not have one at all.**
+
+### 🔴 Instrument defects caught by control before any verdict was published
+
+🟢 **`2` this pass, both caught by running controls first, and `1` of them would have published a false claim.**
+
+| | Defect | How control caught it | Consequence avoided |
+|---|---|---|---|
+| **`D1`** | The GPL-2.0 diff was first run against `learnosity/learnosity-qti`'s **`master`** branch, which returned `1,067 B` with `must`=`0`, `may`=`0` — nothing like a GPL-2.0 print. | 🟢 The row contradicted `p777`'s published `18,264 B` · `e3c23a194748`. **A contradiction against correct prior work was treated as a defect in THIS pass's instrument, not in `p777`** — per `p767-E`. Re-probing through the ref channel returned the default branch `develop` and reproduced `p777`'s bytes exactly. | 🔴 Would have published *"`p777`'s learnosity grade is wrong"* against a correct row — **and would have missed `T804` entirely.** The defect became the finding. |
+| **`D2`** | `check-childcare-eligibility-admin` was initially scored as a determination service with no grant, strengthening `T792`. | 🟢 Reading its README (`2,702 B`) before publishing showed a **Cypress setup guide** — a test harness. | 🔴 Would have inflated the register with a row that is not a determination, in the direction this pass's own hypothesis favoured. **Downgraded in the published table rather than quietly dropped.** |
+
+🔵 **Both defects ran in the direction of this pass's prior expectations**, which is the only direction worth building controls against.
+
 ## 🆕 `2026-11-11` · `p777` — **The UK state's own `829`-repository education estate, and the instrument defects that nearly got published**
 
 🔵 **APPEND-ONLY.** New section at the top; everything below is history and is untouched.

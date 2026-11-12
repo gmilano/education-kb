@@ -4,6 +4,38 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p778` — **The vertical layer re-graded on its licences, and the education sector turns out to have its OWN licence**
+
+🔵 **`T801`, discovered this pass:** `ECL-2.0` — the **Educational Community License, Version 2.0** — is `Apache-2.0` with the **section 3 patent grant narrowed to the education community**, confirmed first-hand on the bytes of two shelved platforms. This base graded both as `Apache-2.0` for hundreds of passes. 🔴 **"Apache-2.0" was wrong in the one dimension a client engagement turns on: patent scope.**
+
+### 🟢 The vertical platform layer, every row graded on its own bytes
+
+🔵 Body grade from the raw channel; stars and `pushed_at` from the claim channel on `2026-11-12`. **The `Fork?` column is the only question a studio actually needs answered.**
+
+| Platform | Address | Branch · `HEAD` | Grant, on the bytes | Claim · stars · pushed | Region | Fork for a client? |
+|---|---|---|---|---|---|---|
+| **Sakai** (VLE) | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` · `af576e8b4d32` | 🟢 **ECL-2.0** · `11,120 B` · `0688f62d04f1` | `ECL-2.0` · `1,239★` · `2026-11-11` | Global | 🟢 **YES, with counsel on patent scope.** Apache-style terms; the **only forkable full VLE in this table.** |
+| **Opencast** (lecture capture) | [`opencast/opencast`](https://github.com/opencast/opencast) | `develop` · `26fbc9363f07` | 🟢 **ECL-2.0** · `11,340 B` · `76a975068930` | `ECL-2.0` · `511★` · `2026-11-11` | EMEA | 🟢 **YES.** The video ingest/transcode layer — the natural front end for transcription and summarisation agents. |
+| **Ed-Fi ODS** (K-12 data standard) | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | `main` · `ef17fff8a214` | 🟢 **Apache-2.0** · `10,172 B` · `59899c6091b5` | `Apache-2.0` · `28★` · `2026-11-11` | North America | 🟢 **YES.** 🔵 **The highest-leverage row here:** the US K-12 interoperability standard *and* a reference operational data store, permissively licensed. Low stars, high institutional weight. |
+| **Moodle** (VLE) | [`moodle/moodle`](https://github.com/moodle/moodle) | `main` · `afbcc55fa1bd` | 🔴 **GPL-3.0** · `35,147 B` · `8ceb4b9ee5ad` | `GPL-3.0` · `7,604★` · `2026-11-11` | Global | 🔴 **NO — build a PLUGIN.** Canonical GPL-3.0 to the byte. Moodle's plugin API is the whole point; a fork inherits copyleft. |
+| **Open edX** (MOOC platform) | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` · `d3a86602dcf7` | 🔴 **AGPL-3.0** · `35,136 B` · `e12d78569742` | 🔴 **absent from claim channel** · — | North America | 🔴 **NO.** AGPL-3.0's network clause reaches a **hosted** studio deployment, not just a distributed one. Extend via XBlock. |
+| **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` · `1c9f0bb8013e` | 🔴 **AGPL-3.0** · `34,520 B` · `57c8ff33c9c0` | `AGPL-3.0` · `6,910★` · `2026-11-10` | North America | 🔴 **NO.** Integrate over LTI 1.3 / the REST API instead. The dominant North American higher-ed LMS. |
+| **OpenEduCat** (education ERP) | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **`19.0`** · `46a5d7d40082` | 🔴 **INCOMPLETE GRANT** · `8,241 B` · `528f84036800` | 🟡 `NOASSERTION` · `910★` · `2026-11-02` | APAC | 🔴 **NO — the grant is defective.** The file promises the GPL text *"is included at the bottom as well"* **and omits it.** Unchanged across three passes. 🔵 The *"Odoo for education"* this base keeps being asked for, and its licence cannot be relied on. |
+| **RosarioSIS** (K-12 SIS) | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `mobile` · `e4cd20a48bf1` | 🔴 **GPL-2.0-band** · `15,214 B` · `d954e14e5c75` | `GPL-2.0` · `654★` · `2026-11-10` | LATAM | 🔴 **NO — plugin/module.** 🔵 Strong Spanish and French localisation, Moodle integration — **the most LATAM-ready SIS in this base**, and copyleft. |
+| **Frappe Education** | [`frappe/education`](https://github.com/frappe/education) | `develop` · `61408d3da518` | 🔴 **`19`-byte POINTER** · `1fcecf395312` | 🟡 `NOASSERTION` · `705★` · `2026-10-30` | APAC | 🔴 **NO.** The entire grant is the string `License: GNU GPL V3`. **A pointer is not a grant**; re-measured byte-for-byte for a third pass. |
+
+🟢 **Nine platforms, all real, all measured.** 🔴 **The structural result, stated plainly: of the five full teaching platforms, three are copyleft and the two a studio can fork are both `ECL-2.0` — a licence this base could not name until this pass.**
+
+### 🟢 The vertical class `p777` opened, carried forward: the STATE as platform vendor
+
+🔵 `p777` shelved this class on the strength of `6` repositories. 🟢 **It is now measured at `829`** — see [`repos/trending.md`](../repos/trending.md).
+
+**`515` MIT repositories from one education ministry** ([`DFE-Digital`](https://github.com/DFE-Digital)), `0` forks, `231` pushed in `2026`, covering national admissions ([`apply-for-teacher-training`](https://github.com/DFE-Digital/apply-for-teacher-training), MIT `1,094 B`), recruitment ([`teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies), MIT `1,092 B`), statutory payment determination ([`claim-additional-payments-for-teaching`](https://github.com/DFE-Digital/claim-additional-payments-for-teaching), MIT `1,099 B`, five policies each with a `spec/`), childcare entitlement ([`accessing-childcare-entitlement-checker`](https://github.com/DFE-Digital/accessing-childcare-entitlement-checker), MIT `1,102 B`) and provider funding ([`manage-entitlement-funding-for-early-years-providers`](https://github.com/DFE-Digital/manage-entitlement-funding-for-early-years-providers), MIT `1,098 B`).
+
+🔴 **And the warning that comes with it, which is new this pass.** `T800`: the grant tracks **the delivery team's template**, not the subject. `funding-service-myesf-*` is `22`/`22` granted; `funding-service-cfs-*`/`fcs-*` is `0`/`8`. 🟢 **So "DfE publishes under MIT" is NOT a safe generalisation at repository level — it is a `62%` base rate.** Before any fork: probe that specific repository's grant on its own bytes, and check whether its digest is shared with a sibling (shared digest ⇒ deliberate template; unique digest ⇒ a team that may not have granted the next one).
+
+🔴 **The one that matters most is the one you cannot have.** [`eligibility-checking-engine`](https://github.com/DFE-Digital/eligibility-checking-engine) — England's **Eligibility Checking Engine and Check Free School Meals API**, .NET 8, `828` code-channel hits for `eligibility`, pushed `2026-11-11` — is **`NO-GRANT-AT-ROOT` after `56` candidate names.** A studio may read it and may not build on it.
+
 ## 🆕 `p777` — **A vertical class this base has never shelved: the STATE as the platform vendor**
 
 🔵 Eight registers' worth of vertical rows on these shelves are **vendor** platforms — Moodle, Open edX, Canvas, Sakai, OpenEduCat, Kolibri. 🟢 **`p777` adds a class that behaves differently and is licensed better: production national services, published by the ministry that operates them, under MIT.**

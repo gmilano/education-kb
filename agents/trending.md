@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p778` — **The week the claim channel caught this base being wrong five times, and a popular education agent turned out not to be open source**
+
+🔵 **APPEND-ONLY.** This section is new at the top; every dated section below it is the history and is left exactly as it was.
+
+### 🔴 Signal 1 — the most-starred education artefact in this base is a curriculum, not a product, and that is now the pattern
+
+Three of the four largest education repositories measured this pass are **teaching material**, not software:
+
+| Artefact | Stars (`2026-11-12`) | Created | What ships |
+|---|---|---|---|
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | **`79,435★`** | `2024-11-28` | `18` lessons |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | **`78,502★`** | **`2026-03-18`** | project curriculum |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | `41,772★` | `2024-10-21` | `93+` projects |
+| [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) | `5,859★` | **`2026-11-03`** | one `SKILL.md` |
+
+🟢 **`rohitg00/ai-engineering-from-scratch` is the story: created `2026-03-18`, `78,502★` in under eight months**, MIT (`1,070 B` · `d116e214adbc`), pushed `2026-11-11`. 🔵 **This continues the trend `p777` opened with Jane Street** — the forkable asset in education is increasingly the **pedagogy** (a curriculum, a lesson set, a prompt contract) rather than a runtime. 🟢 **Jane Street's entry corroborates it from the other end: `5,786★` → `5,859★` (`+73`) with `HEAD` unmoved at `7c6715c29548` since publication.** Stars still accruing on a repository nobody is committing to.
+
+🔴 **Why this matters commercially and not just descriptively.** A curriculum has no runtime, no dependencies and no deployment surface — so for a Globant studio it is the cheapest possible starting point *and* the one that carries no technical moat. 🔵 The differentiator moves to **integration and data**, which is exactly where the `DFE-Digital` material on [`repos/trending.md`](../repos/trending.md) becomes the scarce half.
+
+### 🔴 Signal 2 — `PageLM` is not open source, and this base said it was
+
+[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) · `main` · `e1de68833d1c` · `LICENSE.md` **`8,563 B`** · `c834209c5f33` · `2,065★` · pushed `2026-11-04`.
+
+🔴 **The grant is a bespoke "PageLM Community License"**, read first-hand this pass: permission is granted *"to use, copy, modify, and run the Software for **personal, educational, or non-commercial research purposes**"*. 🔴 **A commercial-use bar.** The claim channel returns `NOASSERTION` for it, and this base carried an `MIT` claim for it in at least one row.
+
+🟢 **It was found by `ACTION p777-C`'s pre-filter working exactly as specified** — sweep for `NOASSERTION`, then grade only those on the bytes. 🔵 `8,563 B` sits in no standard licence band: MIT prints land at `1.0`–`1.2 kB`, Apache-2.0 at `11,358 B`, GPL-3.0 at `35,147 B`. **A grant file whose byte count matches no canonical form is the signature of a bespoke licence**, and `NOASSERTION` is the free way to find them.
+
+🔴 **Standing warning for the studio:** popularity is not a licence. A `2,065★` education agent with a non-commercial bar is unusable in a client engagement, and it is the second consecutive pass where the cheapest instrument in this base caught an inflated or mis-stated supply (`T793` at `p777`, `T801`/`PageLM` here).
+
+### 🟢 Signal 3 — `ECL-2.0`: the education sector has its own OSI licence and this base did not know it
+
+🔵 The single most consequential finding of the pass, and it came from a second opinion costing one API call per owner.
+
+- [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) · `master` · `af576e8b4d32` · `LICENSE` `11,120 B` · `0688f62d04f1` · `1,239★` · pushed `2026-11-11`
+- [`opencast/opencast`](https://github.com/opencast/opencast) · `develop` · `26fbc9363f07` · `LICENSE` `11,340 B` · `76a975068930` · `511★` · pushed `2026-11-11`
+
+🔴 **Both were shelved as `Apache-2.0`. Both are `ECL-2.0`**, confirmed on their own bytes (*"Educational Community License, Version 2.0 (ECL-2.0)"*, ×`5` and ×`6`). 🔵 **The text explains itself:** ECL-2.0 *"consists of the Apache 2.0 license, **modified to change the scope of the patent grant in section 3** to be specific to the needs of the education community."*
+
+🟢 **The trend reading:** two long-lived, actively-pushed education platforms — a VLE and a lecture-capture system — both pushed the day before this pass, both running on a licence written **by and for the education sector**. 🔵 **ECL-2.0 is not an anomaly, it is an institutional-education convention**, and a studio doing higher-education work in EMEA or North America will meet it. **Its band is `11.1`–`11.4 kB`; Apache-2.0's is `11,358 B`. They are `~200 B` apart and they grant different patent scopes.**
+
+### 🟡 Signal 4 — two branches, two licences, on one repository
+
+[`learnosity/learnosity-qti`](https://github.com/learnosity/learnosity-qti): the default branch advertised on the ref channel is **`develop`**, not `master`.
+
+| Branch | `LICENSE` | Bytes · `sha256₁₂` | Licence |
+|---|---|---|---|
+| `develop` (**default**) | present | `18,264 B` · `e3c23a194748` | 🔴 **GPL-2.0** |
+| `master` | present | **`1,067 B`** · `705d9bb4b1df` | 🟢 **MIT** |
+
+🔴 **A default `git clone` of this repository yields GPL-2.0. A clone of `master` yields MIT.** Same repository, same day, two incompatible grants. 🟢 **`T804`: the grant is a property of the REF, not of the repository**, and any grade published without a branch and `HEAD` beside it is unfalsifiable. 🔵 This base's convention of printing `branch · HEAD` on every row is what made the divergence visible at all — and it is why `p777` recorded `18,264 B` while a naive `master` probe this pass first returned `1,067 B`.
+
+### 🔵 Signal 5 — what the agent supply did NOT produce this window, measured
+
+🔴 **No new LATAM-origin education agent.** Measured, not assumed — the regional research leg returned institutional and policy actors (UNESCO IESALC, the new UNESCO Observatory in Santiago, CENIA, Tecnológico de Monterrey, Ceibal, Cetic.br) and **no LATAM-origin agent repository**. 🔵 That is a real and repeatable finding about the region's AI-in-education activity: it is concentrated in **measurement and governance**, not in shipped open-source agents.
+
+🔴 **No new EMEA-origin education AGENT either.** `huggingface/smolagents` remains the standing EMEA entry. What EMEA shipped this window is **government services** — see the `829`-repository `DFE-Digital` census on [`agents/top.md`](top.md).
+
+🔴 **`openedx/edx-platform` is absent from the claim channel.** Two separate queries returned no row for it, while its body grades cleanly as **AGPL-3.0** (`LICENSE` `35,136 B`, *"GNU AFFERO GENERAL PUBLIC LICENSE"*, `Affero` ×`15`, `master` · `d3a86602dcf7`). 🔵 **A channel gap, recorded as one** — the claim channel is a second opinion, not a census, and this is the measured proof that it misses repositories.
+
 ## 🆕 `2026-11-11` · `p777` — **A quant firm takes the education-agent crown in eight days, and the week's real infrastructure story is memory**
 
 🔵 **APPEND-ONLY.** This section is new at the top; every dated section below it is the history and is left exactly as it was.

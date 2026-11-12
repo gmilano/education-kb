@@ -4,6 +4,96 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p778` — **Four recipes, each wired from repositories this pass graded on their own bytes**
+
+🔵 Every component below carries its `branch · HEAD`, its grant as measured on the raw channel this pass, and the `sha256₁₂` of that grant. 🔴 **No component is named that was not graded.** Where a component is copyleft or ungranted, the recipe says what to do instead rather than omitting the problem.
+
+---
+
+### 🟢 `P1` — Annex III conformity pack for an EMEA statutory determination · **`6`–`8` weeks**
+
+🔵 **Who it is for:** an EMEA ministry or local authority that must bring an education decision system under EU AI Act Annex III before **`2 December 2027`**, or a UK body meeting the DfE's January `2026` generative-AI product safety standards.
+
+🟢 **The insight that makes it cheap: the worked example already exists under MIT.**
+
+| Role | Component | Branch · `HEAD` | Grant on the bytes |
+|---|---|---|---|
+| **Reference determination** | [`DFE-Digital/claim-additional-payments-for-teaching`](https://github.com/DFE-Digital/claim-additional-payments-for-teaching) | `master` · `11adcbfe499b` | 🟢 **MIT** `1,099 B` · `7d38b1b17881` |
+| **Second reference** (child entitlement) | [`DFE-Digital/accessing-childcare-entitlement-checker`](https://github.com/DFE-Digital/accessing-childcare-entitlement-checker) | `main` · `d03f270a1545` | 🟢 **MIT** `1,102 B` · `97952c3f6069` |
+| **Agent runtime** | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | `main` · `96f33faaf028` | 🟢 **Apache-2.0** `11,357 B` · `c71d239df917` |
+| **Data spine** | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | `main` · `ef17fff8a214` | 🟢 **Apache-2.0** `10,172 B` · `59899c6091b5` |
+
+**Wiring.** Take `claim-additional-payments-for-teaching`'s structure literally: `app/models/policies/<policy>/eligibility.rb` plus `policy_eligibility_checker.rb`, **one directory per named statutory policy, each with a `spec/` beside it**. That layout *is* an Annex III artefact — a separately-testable, separately-documented rule set per legal basis. Mirror it for the client's own policies: one module per statutory basis, one test suite per module, and the test suite is the conformity evidence. Put `smolagents` **only** on the explanation surface (turning a determination into prose for the claimant) and never on the determination itself — the rule engine stays deterministic code, which is what makes it auditable. Persist decisions against Ed-Fi ODS so the audit trail uses a standard schema rather than a bespoke one.
+
+🔴 **The hard boundary, and tell the client in week one:** England's own FSM determination engine, [`DFE-Digital/eligibility-checking-engine`](https://github.com/DFE-Digital/eligibility-checking-engine) (`main` · `511506f47a58`, .NET 8, `828` code-channel hits for `eligibility`, pushed `2026-11-11`), is **`NO-GRANT-AT-ROOT` after `56` candidate names.** It can be *read* as a design reference and **cannot be copied**. The child-facing half must be built.
+
+🔴 **Diligence step, mandatory (`T800`):** before adopting any sibling repository from this estate, probe its grant on its own bytes. The estate base rate is `62%`, and `funding-service-cfs|fcs-*` is `0`/`8` while `funding-service-myesf-*` is `22`/`22`.
+
+---
+
+### 🟢 `P2` — Lecture-capture → transcript → tutor, entirely on forkable platforms · **`8`–`10` weeks**
+
+🔵 **Who it is for:** a higher-education institution in EMEA or North America that wants tutoring grounded in **its own** lecture content, and that cannot accept AGPL.
+
+🟢 **This recipe exists because of `T801`.** Until this pass, this base believed the only full education platforms were GPL/AGPL. **Two are `ECL-2.0`** — Apache-style terms with a narrowed patent grant — and that makes the whole chain forkable.
+
+| Role | Component | Branch · `HEAD` | Grant on the bytes |
+|---|---|---|---|
+| **Video ingest / capture** | [`opencast/opencast`](https://github.com/opencast/opencast) | `develop` · `26fbc9363f07` | 🟢 **ECL-2.0** `11,340 B` · `76a975068930` |
+| **VLE / course context** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` · `af576e8b4d32` | 🟢 **ECL-2.0** `11,120 B` · `0688f62d04f1` |
+| **Agent runtime** | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | `main` · `96f33faaf028` | 🟢 **Apache-2.0** `11,357 B` · `c71d239df917` |
+| **Tutoring loop (prompt contract)** | [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) — `socratic-tutor/SKILL.md` | `master` · `7c6715c29548` | 🟢 **MIT** `1,120 B` · `92cd3e89e133` |
+| **Mastery model** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | `main` · `fae8cc474484` | 🟢 **MIT** `1,105 B` · `5baaaf977a28` |
+
+**Wiring.** Opencast already does capture, transcode and scheduling, and emits transcripts — take its transcript output as the corpus boundary. Index per **course**, not per institution, so a tutor can never ground an answer in material the student is not enrolled in; Sakai supplies the enrolment context that makes that boundary enforceable. Drive the tutoring loop from `agent_skills`' `socratic-tutor` contract rather than writing prompts: it already specifies diagnostic placement, `4`–`10` subskills, a `0`–`5` level map, one question at a time, spaced review and a final assessment — **plus an intent guard that refuses to open a tutoring loop on a one-off question**, which is the behaviour institutions complain about most. Borrow OATutor's Bayesian Knowledge Tracing for the mastery estimate so "has this student learned it" is a published model rather than a vibe. `smolagents` is the runtime; keep it stateless and put learner state in the mastery store.
+
+🟢 **Why ECL-2.0 is the point:** the client can fork and modify both platforms. 🔴 **Brief counsel on one thing only** — ECL-2.0's section 3 patent grant is **narrowed relative to Apache-2.0**, so a patent-heavy client needs that reviewed, which is a one-meeting item, not a blocker.
+
+---
+
+### 🟢 `P3` — State-policy-configurable K-12 AI deployment (North America) · **`10`–`12` weeks**
+
+🔵 **Who it is for:** a US district, state agency or K-12 vendor facing `134` bills across `31` states, North Carolina's **`2026-12-31`** model-policy deadline and New York's grade-`9`+ restriction.
+
+| Role | Component | Branch · `HEAD` | Grant on the bytes |
+|---|---|---|---|
+| **Data spine / interop** | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | `main` · `ef17fff8a214` | 🟢 **Apache-2.0** `10,172 B` · `59899c6091b5` |
+| **Tutoring / mastery** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | `main` · `fae8cc474484` | 🟢 **MIT** `1,105 B` · `5baaaf977a28` |
+| **Agent patterns library** | [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | `main` · `042aeb506738` | 🟢 **MIT** `1,066 B` · `93123909818c` |
+| **Staff AI-literacy curriculum** | [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | `main` · `4bcf574c06d3` | 🟢 **MIT** `1,141 B` · `c2cfccb812fe` |
+| **LMS integration** | `instructure/canvas-lms` — 🔴 **AGPL-3.0** `34,520 B` · `57c8ff33c9c0` | `master` · `1c9f0bb8013e` | 🔴 **DO NOT FORK** |
+
+**Wiring.** The billable artefact is **the policy matrix**, not the model. Build one deployment in which per-state rules are *configuration*: data-use and training-on-student-data restrictions (CA AB 1159, ID SB 1227), grade-level gating (NY A 9190 — grade `9`+ with diagnostic and special-education exceptions), disclosure and AI-literacy requirements (NC Session Law `2026-41`, with teacher training due `2028-06-30`). Express each as a policy record attached to the Ed-Fi education-organisation hierarchy, so a district inherits its state's rules automatically and an override is auditable. 🔴 **Reach Canvas over LTI 1.3 and the REST API only** — AGPL-3.0's network clause reaches a hosted deployment, so a fork contaminates the whole engagement. Ship the Microsoft curriculum as the staff-training deliverable rather than writing one: it is MIT and it satisfies the AI-literacy line item directly.
+
+---
+
+### 🟢 `P4` — LATAM AI-governance instrumentation · **`4`–`6` weeks**, and it is deliberately NOT a build
+
+🔵 **Who it is for:** a LATAM university or ministry that is already using AI everywhere and has no policy, no budget line and no oversight design. 🟢 **The measurement is the pitch:** `87%` of `200` institutions across `19` countries use AI in at least one area, `26%` have a formal strategy, `<10%` have formal guidelines, `55%` have no AI budget; in Brazil `53%` of school administrators use AI and `22%` of their schools have guidelines.
+
+| Role | Component | Branch · `HEAD` | Grant on the bytes |
+|---|---|---|---|
+| **SIS / records spine** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `mobile` · `e4cd20a48bf1` | 🔴 **GPL-2.0-band** `15,214 B` · `d954e14e5c75` — **module, never a fork** |
+| **Inventory + audit agent** | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | `main` · `96f33faaf028` | 🟢 **Apache-2.0** `11,357 B` · `c71d239df917` |
+| **Faculty curriculum (Spanish-ready)** | [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | `main` · `4bcf574c06d3` | 🟢 **MIT** `1,141 B` · `c2cfccb812fe` |
+| **Reference policy frame** | Brazil PL `2.338/2023` (risk-based); Colombia CONPES `4144`; OECD AI Principles (AR, BR, CL, CO, CR, MX, PE) | — | — |
+
+**Wiring.** Deliver four artefacts, in this order. **(1) An AI-use inventory** — run a `smolagents` agent over the institution's own systems and procurement records to enumerate what is actually in use, because the UNESCO finding is that institutions do not know. **(2) A risk register** mapped to Brazil's PL `2.338/2023` risk tiers so it survives that bill's passage, and cross-referenced to the OECD principles the country has already adopted. **(3) A policy pack** — acceptable use, disclosure, assessment integrity, data handling — in Spanish or Portuguese, sized to an institution with no AI budget. **(4) The staff curriculum**, forked from the MIT Microsoft lessons.
+
+🔴 **Why this recipe builds almost nothing, deliberately.** This base has now measured across multiple passes that **no LATAM-origin education agent exists in the open supply**, and the regional output is measurement and governance instruments. 🟢 **Selling a build here means importing an agent the institution cannot govern; selling governance means fixing the constraint UNESCO actually measured.** 🔵 Partner surface, named: the UNESCO **Observatory on AI in Education for LAC** (launched April `2026`, Santiago; Tecnológico de Monterrey, CENIA), Ceibal (Uruguay), Cetic.br (Brazil).
+
+---
+
+### 🔴 Components a recipe must NOT use, and why — measured this pass
+
+| Component | Measurement | Why excluded |
+|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `LICENSE.md` `8,563 B` · `c834209c5f33` — **"PageLM Community License"**, *"personal, educational, or non-commercial research purposes"* | 🔴 **NOT open source.** `2,065★`, education-shaped, and a **commercial-use bar** — i.e. it bars exactly a Globant client engagement. |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | root `LICENSE` `18,650 B` · `7e7170e3cebf` — **`CC-BY-4.0`** (`Creative Commons` ×`18`, `"MIT License"` ×`0`) | 🟡 **Do not cite the root grant as MIT.** At `61,786★` the root licence is a **content** licence. Verify the specific subpackage's own grant before depending on it. |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `LICENSE` `8,241 B` · `528f84036800`, `NOASSERTION` | 🔴 **Defective grant** — promises the GPL text *"is included at the bottom as well"* and omits it. Three passes unchanged. |
+| [`frappe/education`](https://github.com/frappe/education) | `license.txt` **`19 B`** · `1fcecf395312` | 🔴 **A pointer is not a grant.** The whole file is `License: GNU GPL V3`. |
+| [`learnosity/learnosity-qti`](https://github.com/learnosity/learnosity-qti) | `develop` **GPL-2.0** `18,264 B` · `e3c23a194748` vs `master` **MIT** `1,067 B` · `705d9bb4b1df` | 🟡 **Usable only with the ref pinned.** A default clone yields copyleft (`T804`). If the MIT terms are wanted, pin `master` **in writing**. |
+
 ## 🆕 `p777` — **Four recipes, each wired from repositories this pass graded on their own bytes**
 
 🔵 Every address below was probed on the ref channel for existence and default branch, and its grant read and graded on the raw channel this pass. Where a component is copyleft it says so, because that changes the delivery shape and not just the paperwork.

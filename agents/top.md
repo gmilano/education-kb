@@ -4,6 +4,107 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p778` — **`ACTION p777-I`'s falsifier fires, and `T792` is REFUTED. 🔴 `make hooks` tried FIRST and DENIED a NINTH consecutive session, so all four instruments were written from scratch again. 🟢 The register `p777` designed to confirm its own law instead breaks it in BOTH directions, and the `829`-repository census (`ACTION p777-F`) names the variable that actually governs: not the subject of the determination, but the TEAM that created the repository.**
+
+**`829` repositories censused on the claim channel for `ACTION p777-F` · `8,507` claim rows captured over `152` owners in `152` calls · `56` case-aware grant names per candidate · `5` of `p777`'s published rows reproduced byte-for-byte before any verdict was published · `773`-row body-vs-claim overlap, `678` agree, `5` disagree, `0.7%` · `5` of `5` disagreements re-read on their own bytes and `5` of `5` resolve AGAINST this base's own shelves · `0` calls to `api.github.com/repos/*` for a verdict.**
+
+### 🔴 `ACTION p777-I`'s falsification test fires, and it refutes the law it was built to confirm
+
+🔵 **What `p777` asked for.** `T792` claimed the open supply publishes a statutory determination when it concerns **money owed to an adult** and withholds it when it concerns **a child**. `p777-I` named the sharpest possible falsifier: *a money entitlement whose beneficiary is a child and whose claimant is an adult* — free school meals, or a childcare entitlement. 🟢 **The register was built and it fired.**
+
+| Determination | Address | Branch · `HEAD` | Grant, graded on the bytes | Claim channel | Beneficiary / claimant | Verdict for `T792` |
+|---|---|---|---|---|---|---|
+| **Eligibility Checking Engine (ECE) + Check Free School Meals API** | [`DFE-Digital/eligibility-checking-engine`](https://github.com/DFE-Digital/eligibility-checking-engine) | `main` · `511506f47a58` | 🔴 **NO-GRANT-AT-ROOT** after `56` names | NONE · `5★` · pushed **`2026-11-11`** | child / adult | 🟢 **CONSISTENT.** The real thing, not a prototype: README reads *"the API for Eligibility Checking Engine (ECE) and the Check Free School Meals (FSM) service"*, .NET 8, **`828` code-channel hits for `eligibility`**, pushed the day before this pass. 🔴 **England's child-entitlement determination engine is in the open and UNUSABLE.** |
+| **Check FSM eligibility (parent-facing)** | [`DFE-Digital/check-free-school-meals-eligibility-parent`](https://github.com/DFE-Digital/check-free-school-meals-eligibility-parent) | `main` · `11eb3a47f9f6` | 🔴 **NO-GRANT-AT-ROOT** after `56` names | NONE · `3★` · pushed `2026-11-02` | child / adult | 🟢 **CONSISTENT.** `p777`'s row, reproduced from scratch. |
+| **Accessing Childcare Entitlement Checker** | [`DFE-Digital/accessing-childcare-entitlement-checker`](https://github.com/DFE-Digital/accessing-childcare-entitlement-checker) | `main` · `d03f270a1545` | 🟢 **MIT** `LICENCE` · `1,102 B` · `97952c3f6069` | MIT · `2★` · pushed **`2026-11-11`** | **child / adult** | 🔴 **REFUTES `T792`.** README: *"A digital service developed by the Department for Education (DfE) to help parents and carers in England check their eligibility and entitlement for various childcare support schemes (e.g., 15/30 hours free childcare, Tax-Free Childcare)."* **Exactly the case `p777-I` said would break the law — a child's money entitlement claimed by an adult — and it is published under MIT.** |
+| **Calculate teacher pay** | [`DFE-Digital/teacher-pay-calculator`](https://github.com/DFE-Digital/teacher-pay-calculator) | `main` · `b1ab41e91b45` | 🔴 **NO-GRANT-AT-ROOT** after `56` names | NONE · `0★` · pushed `2026-10-02` | **adult / adult** | 🔴 **REFUTES `T792` IN THE OTHER DIRECTION.** README: *"School teachers and leaders in England can use this service to see how their salary could change following the 2026 pay award."* A live adult-money service, **ungranted** — the half `T792` said is always published. |
+| **Manage entitlement funding for early-years providers** | [`DFE-Digital/manage-entitlement-funding-for-early-years-providers`](https://github.com/DFE-Digital/manage-entitlement-funding-for-early-years-providers) | `main` · `b71e7c4c6f8f` | 🟢 **MIT** `LICENSE` · `1,098 B` · `99037586c36a` | MIT · `2★` · pushed `2026-11-11` | child / **provider org** | 🔵 Provider-facing, so it does not bear on the child/adult axis. Filed so the next pass does not score it as one. |
+| **Teacher training entitlement** | [`DFE-Digital/teacher-training-entitlement`](https://github.com/DFE-Digital/teacher-training-entitlement) | `main` · `1245738c1ebc` | 🟢 **MIT** `LICENCE` · `1,091 B` · `af7b3fcaafcb` | MIT · `2★` · pushed `2026-11-11` | adult / adult | 🟢 Consistent, and the fourth distinct MIT byte-length in this estate. |
+| **Check childcare eligibility (admin)** | [`DFE-Digital/check-childcare-eligibility-admin`](https://github.com/DFE-Digital/check-childcare-eligibility-admin) | `main` · `7ca392824958` | 🔴 **NO-GRANT-AT-ROOT** after `56` names | NONE · `2★` · pushed `2026-11-11` | — | 🔴 **DOWNGRADED BY THIS PASS, deliberately.** Its README (`2,702 B`) is a **Cypress setup guide** — this is a test harness, not a determination service. 🔵 Scoring its missing grant as evidence about determinations would have been the easy and wrong move. |
+| **Check your eligibility (prototype)** | [`DFE-Digital/check-your-eligibility-prototype`](https://github.com/DFE-Digital/check-your-eligibility-prototype) | `main` · `31ced25c4f6b` | 🟢 **MIT** `LICENCE.txt` · `1,105 B` · `6dc768320ae8` | MIT · `3★` · pushed `2026-11-10` | child / adult | 🔵 A **prototype**, and its grant bytes are **byte-identical** to `accessing-childcare-calculator-prototype` (`6dc768320ae8`) — see `T803`. |
+
+🔴 **So `T792` does not survive its own designed test.** The law said *child → withheld, adult → published*. The register returns a child-entitlement service **under MIT** and an adult-pay service **with no grant at all**. 🟢 **Two counter-examples, from the same department, in the same estate, measured the same way.** `T792` is **REFUTED** and is withdrawn rather than patched — the honest move, and the one `p777-I` committed this pass to in advance.
+
+### 🟢 `T800` — what actually governs the grant, measured over `829` repositories (`ACTION p777-F`)
+
+🔵 **`p777-F` said the right number was unknown and that it was the empirical basis of `T792`. It was: the number refutes it.** The whole `DFE-Digital` estate was censused on the claim channel — **`829` repositories**, the full `total_count`, nine pages, written to [`evidence/dfe-digital-estate-census.2026-11-12-p778.tsv`](../evidence/dfe-digital-estate-census.2026-11-12-p778.tsv).
+
+| Licence across the estate | Count |
+|---|---|
+| 🟢 **MIT** | **`515`** |
+| 🔴 **NONE** | **`302`** |
+| 🟡 `NOASSERTION` | `9` |
+| 🟢 `Apache-2.0` | `1` |
+| 🔴 `GPL-3.0` | `1` |
+| 🟢 `0BSD` | `1` |
+
+🔴 **And then the cross-tabs, which is where `T792` dies.** The grant rate is **flat** against every property that could carry a policy about subject matter:
+
+| Predictor | Granted / total | Rate |
+|---|---|---|
+| Not archived | `409` / `654` | `63%` |
+| Archived | `118` / `175` | `67%` |
+| Prototype or template by name | `157` / `202` | `78%` |
+| Service-shaped by name | `370` / `627` | `59%` |
+| Pushed in `2026` | `231` / `352` | `66%` |
+| Pushed in `2022` | `55` / `89` | `62%` |
+| C# | `127` / `179` | `71%` |
+| Ruby | `57` / `102` | `56%` |
+
+🟢 **One predictor is not flat, and it is not about children, money or statute. It is the programme that created the repository:**
+
+| Repository family | Granted / total | Rate |
+|---|---|---|
+| 🟢 `funding-service-myesf-*` | **`22` / `22`** | **`100%`** |
+| 🔴 `funding-service-cfs-*` and `funding-service-fcs-*` | **`0` / `8`** | **`0%`** |
+
+🔵 **Both families are funding services inside one department, shipping at the same time.** `myesf` is granted without exception; `cfs`/`fcs` is ungranted without exception. 🟢 **And the mechanism is visible in the bytes:** [`funding-service-myesf-allocation-statements-api`](https://github.com/DFE-Digital/funding-service-myesf-allocation-statements-api) (`main` · `bf5cb264e180`, `LICENSE`, `1,103 B`) and [`funding-service-myesf-fundingclaim-data-api`](https://github.com/DFE-Digital/funding-service-myesf-fundingclaim-data-api) (`main` · `3baa2550ac04`, `LICENCE.md`, `1,103 B`) carry **byte-identical grants — `47f93074f399` — under two different filenames.** The same print, propagated by a repository template.
+
+🟢 **`T800`: in a large public-sector estate the licence is a property of the TEAM'S TEMPLATE, not of the subject matter.** 🔵 **`T803`: the `sha256` of the grant file detects template propagation as cheaply as it detects duplicate payloads** (`T793`) — `6dc768320ae8` across the two childcare prototypes is the second instance this pass.
+
+🔴 **For a studio this is the operative correction.** `p777` told a Globant engagement that the EMEA public-sector determination layer is forkable *because of what the determination is about*. It is forkable **because of which delivery team's template the repository was cut from** — which means the question to ask before a fork is *"which programme owns this repo"*, not *"who does this decision affect"*, and it means a sibling service in the same department is **not** safe to assume.
+
+### 🔴 `T801` — ECL-2.0, the education sector's own licence, and this base has been grading it as Apache-2.0
+
+🔵 `ACTION p777-B` predicted the claim channel would be a cheap second opinion. 🟢 **It found a licence class this base's `38`-form corpus does not hold at all**, which no amount of body grading against that corpus could have caught.
+
+| Repo | Branch · `HEAD` | Shelf said | Claim said | Re-read on the bytes | Verdict |
+|---|---|---|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` · `af576e8b4d32` | 🔴 `Apache-2.0`, `LGPL-2.1` | `ECL-2.0` | `LICENSE` `11,120 B` · `0688f62d04f1` — *"Educational Community License, Version 2.0 (ECL-2.0)"*, ×`5` | 🔴 **Shelf WRONG.** `1,239★`, pushed `2026-11-11` |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | `develop` · `26fbc9363f07` | 🔴 `Apache-2.0` | `ECL-2.0` | `LICENSE` `11,340 B` · `76a975068930` — same title, ×`6` | 🔴 **Shelf WRONG.** `511★`, pushed `2026-11-11` |
+
+🔵 **And the licence text states its own difference, which is exactly the difference a studio cares about:** *"The Educational Community License version 2.0 ("ECL") consists of the Apache 2.0 license, **modified to change the scope of the patent grant in section 3** to be specific to the needs of the education community."*
+
+🔴 **So "Apache-2.0" was wrong in the one dimension that matters for a client engagement: patent scope.** A studio that read this base's Sakai row and assumed an Apache-2.0 patent grant assumed a grant it does not have. 🟢 **`T801`: `ECL-2.0` enters the corpus as a required form, and every `Apache-2.0` grade on an education-sector repository of roughly `11.1`–`11.4 kB` is now a row to re-read, because that is the ECL band and the Apache band sits at `11,358 B`.**
+
+### 🔴 Two more corrections the claim channel forced, and one trap it caught
+
+| Repo | Shelf said | Re-read on the bytes | Verdict |
+|---|---|---|---|
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) `main` · `d07c667a3239` | 🔴 `MIT` | `LICENSE` **`18,650 B`** · `7e7170e3cebf` — first line *"Attribution 4.0 International"*, **`Creative Commons` ×`18`, `"MIT License"` ×`0`** | 🔴 **Shelf WRONG at `61,786★`.** The root grant of one of the most-cited agent frameworks in this base is **`CC-BY-4.0`, a content licence, not a software licence.** |
+| [`yetanalytics/xapi-schema`](https://github.com/yetanalytics/xapi-schema) `master` · `671753d570d2` | 🔴 `Unlicense` | `LICENSE` `11,218 B` · `a5cb01efb664` — *"THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE PUBLIC LICENSE"* | 🔴 **Shelf WRONG.** `EPL`, not `Unlicense` — the opposite end of the permissive scale. |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) `main` · `e1de68833d1c` | 🔴 `MIT` in one row | `LICENSE.md` `8,563 B` · `c834209c5f33` — **"PageLM Community License"**: use *"for **personal, educational, or non-commercial research purposes**"* | 🔴 **NOT OPEN SOURCE, at `2,065★`.** A bespoke source-available licence with a commercial-use bar. 🟢 **Found by `ACTION p777-C`'s `NOASSERTION` pre-filter, exactly as designed.** |
+| [`malaysia-ai/malaysian-dataset`](https://github.com/malaysia-ai/malaysian-dataset) `master` · `87c0562cb419` | 🔴 `MIT` | 🔴 **NO-GRANT-AT-ROOT** after `56` names; claim says `Apache-2.0` | 🟡 **Both channels disagree with the shelf.** The claim channel sees a grant below the root; the root has none. `348★`. |
+
+🔴 **`PageLM` is the one a studio would have been burned by.** It is education software, it is popular, this base carried an MIT claim for it, and its actual grant forbids commercial use — which is precisely a Globant client engagement.
+
+### 🟢 The verified agent supply, re-measured on both channels this pass
+
+🔵 Every row graded on its own bytes; stars and `pushed_at` from the claim channel on `2026-11-12`.
+
+| Agent / artefact | Address | Branch · `HEAD` | Grant on the bytes | Stars · pushed | Region | What it is |
+|---|---|---|---|---|---|---|
+| **AI Agents for Beginners** | [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | `main` · `4bcf574c06d3` | 🟢 **MIT** `LICENSE` · `1,141 B` · `c2cfccb812fe` | **`79,435★`** · `2026-11-07` | North America | The largest education artefact in this base. A `18`-lesson curriculum for building agents — teaching material, Microsoft-maintained. |
+| **AI Engineering from Scratch** | [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | `main` · `a509402c0b54` | 🟢 **MIT** `LICENSE` · `1,070 B` · `d116e214adbc` | **`78,502★`** · `2026-11-11` | Global | 🟢 **Created `2026-03-18` — `78.5k★` in under eight months.** Project-based AI-engineering curriculum; the steepest curve in this class. |
+| **DeepTutor** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main` · `60fb3bdfddb3` | 🟢 **Apache-2.0** `LICENSE` · `11,408 B` · `cd2f54e1e506` | **`58,333★`** · `2026-11-07` | APAC | Lifelong personalised tutoring, HKU Data Science. 🔵 **Decelerating:** `p777` measured `58,154★` with `+979` in its window; `+179` since. |
+| **AI Engineering Hub** | [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | `main` · `042aeb506738` | 🟢 **MIT** `LICENSE` · `1,066 B` · `93123909818c` | `41,772★` · `2026-11-01` | Global | `93+` runnable agent/RAG projects graded by difficulty — the richest source of **composable** examples for a studio. |
+| **smolagents** | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | `main` · `96f33faaf028` | 🟢 **Apache-2.0** `LICENSE` · `11,357 B` · `c71d239df917` | `30,321★` · `2026-11-10` | EMEA | 🟢 **Canonical Apache-2.0 to the byte** (`11,357` against `11,358`). Minimal code-writing agent runtime; the EMEA-origin entry in this table. |
+| **Jane Street `agent_skills`** | [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) | `master` · `7c6715c29548` | 🟢 **MIT** `LICENSE.md` · `1,120 B` · `92cd3e89e133` | **`5,859★`** · `2026-11-03` | North America | 🔵 **`p777`'s headline entrant, re-measured: `5,786★` → `5,859★`, `+73`.** `HEAD` unmoved since `2026-11-03` — the stars are still climbing on a repository that has not been touched. A `socratic-tutor` prompt contract under MIT, with no runtime. |
+| **OATutor** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | `main` · `fae8cc474484` | 🟢 **MIT** `LICENSE` · `1,105 B` · `5baaaf977a28` | `279★` · `2026-11-11` | North America | UC Berkeley's intelligent tutoring system with Bayesian Knowledge Tracing. 🟢 Small but **actively pushed**, and the only ITS here with published learning-science grounding. |
+| **PageLM** | [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `main` · `e1de68833d1c` | 🔴 **"PageLM Community License"** · `8,563 B` · `c834209c5f33` | `2,065★` · `2026-11-04` | Global | 🔴 **LISTED AS A WARNING, NOT A STARTING POINT.** Non-commercial bar; unusable in a client engagement. |
+
+🟢 **Seven usable agents, one named trap** — `7` real permissive rows, stated as `7` rather than padded. 🔴 **Declared gap, unchanged and measured rather than left silent: no LATAM-origin education agent appears in this supply, and `smolagents` remains the only EMEA-origin one.** What EMEA shipped this window is again **government services** (`DFE-Digital`), not agents.
+
 ## 🆕 `p777` — **The pupil-premium / disadvantage funding determination register (`ACTION p776-I`), and the pass where `T782` finally BREAKS. 🔴 `make hooks` tried FIRST and DENIED an EIGHTH consecutive session, so all four instruments were written from scratch again. 🟢 `p776-I` designed this register as a falsification test for the law `p774`–`p776` stated, and it worked: the decision layer IS published — by the state, as production code, under MIT — when the decision is about money owed to an adult, and is published by nobody when it is about a child. 🟢 And a channel that `400`+ passes recorded as closed turns out to be open: star counts and SPDX ids are obtainable.**
 
 **`66` distinct addresses probed on the ref channel · `28` case-aware grant filenames per candidate · every grant graded on its own bytes with a vintage guard and the standing deontic guard · `25` rows cross-checked against a SECOND independent licence channel (`24` agree, `1` abstains, `0` contradict) · `5` rows published by `p776` reproduced byte-for-byte by an independent from-scratch instrument · `2` defects in this pass's own instruments caught by control before any verdict was published · `0` calls to `api.github.com/repos/*` for a verdict.**

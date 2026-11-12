@@ -4,6 +4,60 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p778` — **Eight trends, each with the measurement that supports it, and one standing trend WITHDRAWN**
+
+### 🔴 `1` — WITHDRAWN: *"the open supply publishes the decision about an adult and withholds the decision about a child"* (`T792`)
+
+🔵 `p777` concluded this across four registers and `p777-I` designed a fifth to falsify it. 🟢 **The falsifier fired and the trend does not survive.** [`accessing-childcare-entitlement-checker`](https://github.com/DFE-Digital/accessing-childcare-entitlement-checker) is a live DfE service determining a **child's** money entitlement claimed by an **adult** — `15`/`30` hours free childcare, Tax-Free Childcare — published under **MIT** (`1,102 B` · `97952c3f6069`). [`teacher-pay-calculator`](https://github.com/DFE-Digital/teacher-pay-calculator) is a live **adult** pay-award service with **no grant at all**. 🔴 **Counter-examples in both directions, same department, same estate, same instrument.** `T792` is withdrawn rather than patched.
+
+🔵 **Recorded because a withdrawn trend is information.** Four passes built on `T792`; a studio briefed from `p777` was told the determination layer's licence follows the subject of the decision, and that is false.
+
+### 🟢 `2` — The licence in a large public-sector estate is set by the TEAM'S TEMPLATE (`T800`)
+
+**Measurement:** all `829` `DFE-Digital` repositories. Grant rate is flat across archived (`63%`/`67%`), prototype-vs-service (`78%`/`59%`), push year (`66%` in `2026`, `62%` in `2022`) and language (`71%` C#, `56%` Ruby) — and **sharp across programme**: `funding-service-myesf-*` **`22`/`22`** granted, `funding-service-cfs|fcs-*` **`0`/`8`**. 🟢 **Mechanism visible in the bytes:** two myesf grants are byte-identical (`47f93074f399`) under different filenames.
+
+🔵 **Why it is a trend and not a quirk:** it predicts that *"this ministry publishes under MIT"* will be false at repository level in any estate large enough to have more than one delivery team — and it converts licence diligence from a policy question into a **per-repository, per-template** check.
+
+### 🟢 `3` — The education sector runs on its own licence, and the industry mis-grades it (`T801`)
+
+**Measurement:** [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) (`11,120 B` · `0688f62d04f1`) and [`opencast/opencast`](https://github.com/opencast/opencast) (`11,340 B` · `76a975068930`) both carry **`ECL-2.0`** on their own bytes; both were shelved here as `Apache-2.0`; both were pushed `2026-11-11`.
+
+🔵 **ECL-2.0 is Apache-2.0 with the section 3 patent grant narrowed to the education community**, per its own text. 🔴 **The two bands are `~200 B` apart** — ECL at `11.1`–`11.4 kB`, Apache-2.0 at `11,358 B` — **and they grant different patent scopes.** Any byte-length grader without ECL in its corpus will mis-grade institutional education software by default.
+
+### 🟢 `4` — The forkable asset in education is increasingly PEDAGOGY, not software
+
+**Measurement**, all on `2026-11-12`: [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) **`79,435★`** (`18` lessons), [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) **`78,502★`** (created **`2026-03-18`**), [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) `41,772★` (`93+` projects), [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) `5,859★` (**one `SKILL.md`**).
+
+🟢 **Three of the four largest education artefacts in this base ship no runtime.** 🔵 Jane Street's entry sharpens it: `5,786★` → `5,859★` (`+73`) with **`HEAD` unmoved** at `7c6715c29548` since `2026-11-03`. **Stars accruing on a repository nobody is committing to** — the asset is the prompt contract, not the code.
+
+🔴 **Commercial consequence:** the cheapest starting point is also the one with no technical moat. Differentiation moves to **integration and data**, which is where the permissive public-sector estate becomes the scarce half.
+
+### 🟢 `5` — A grant file's length anomaly is usually a SECOND licence, not an altered one (`T802`)
+
+**Measurement:** two prints `p777` could not account for, both explained, neither altered. `learnosity/learnosity-qti` `+172 B` = **whitespace only** (`0` differing word tokens against canonical GPL-2.0). `elgg/elgg` `−919 B` = **MIT prepended** (`+2,173 B`) **minus the non-operative "How to Apply These Terms" appendix** (`−2,921 B`), with every operative deontic operator matching (`must` `9`=`9`, `may not` `3`=`3`, `required` `3`=`3`, `prohibit` `1`=`1`, `shall` `0`=`0`).
+
+🟢 **`T794` therefore closes over GPL-2.0 as it did over GPL-3.0**, and `ALTERED-VINTAGE`'s population stays at **`1` payload**.
+
+### 🟢 `6` — The grant is a property of the REF, not the repository (`T804`)
+
+**Measurement:** [`learnosity/learnosity-qti`](https://github.com/learnosity/learnosity-qti) advertises `develop` as its default branch. `develop/LICENSE` = **GPL-2.0** `18,264 B` · `e3c23a194748`. `master/LICENSE` = **MIT** `1,067 B` · `705d9bb4b1df`. 🔴 **A default clone yields copyleft; a `master` clone yields permissive. Same repository, same day.**
+
+🔵 **Consequence for every licence table anywhere:** a grade published without `branch · HEAD` beside it is unfalsifiable. 🟢 This base's existing convention of printing both is what made the divergence detectable, and it is the first measured instance here of one repository carrying two incompatible grants at once.
+
+### 🟢 `7` — `NOASSERTION` is a working detector for non-open-source licences wearing open-source clothes
+
+**Measurement:** `72` shelved repositories return `NOASSERTION` on the claim channel. The best catch: [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM), **`2,065★`**, `LICENSE.md` `8,563 B` · `c834209c5f33` = a bespoke **"PageLM Community License"** permitting use *"for personal, educational, or non-commercial research purposes"* — 🔴 **a commercial-use bar, on a repository this base carried an `MIT` claim for.**
+
+🔵 **The generalisable rule:** `8,563 B` matches no canonical band (MIT `1.0`–`1.2 kB`, Apache-2.0 `11,358 B`, GPL-3.0 `35,147 B`). **A grant whose byte count matches no canonical form is the signature of a bespoke licence**, and `NOASSERTION` finds them for one API call per owner.
+
+### 🔴 `8` — Adoption has outrun governance, and in LATAM the gap is quantified
+
+**Measurement:** UNESCO IESALC across `200` institutions in `19` countries — **`87%`** use AI in at least one area, **`26%`** have a formal AI strategy, **`55%`** have no AI budget, **`<10%`** have formal guidelines. Digital Education Council with Tecnológico de Monterrey: **`92%` of students, `79%` of faculty** actively engaging. Uruguay: **`75%`** of public-school teachers. Brazil: **`65%`** of internet users aged `9`–`17`, and **`53%` of school administrators use AI while `22%` of their schools have guidelines**. Universidad de los Andes: **`716` regulatory instruments across `23` countries, `>80%` since `2023`.**
+
+🟢 **This is the clearest instance in this base of a market whose binding constraint is institutional capacity rather than technology**, and it is why the LATAM opportunity on [`intel/market.md`](market.md) is a governance engagement rather than a build.
+
+🔵 **The same shape, differently clocked, elsewhere:** EMEA has the code and lacks Annex III conformity evidence before **`2 December 2027`**; North America has `134` bills across `31` states and a hard North Carolina deadline of **`2026-12-31`**; APAC has Korea's AI Basic Act in force since **`22 January 2026`** with decrees unfinished and Australia's TEQSA plan requirement already binding on every provider. 🟢 **In all four regions the scarce good is the compliance artefact, not the model.**
+
 ## 🆕 `p777` — **Eight trends, each with the measurement that supports it**
 
 🔵 A trend on this shelf must name what was measured. Impressions go in the prose of the shelf that measured them, not here.
