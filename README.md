@@ -91,6 +91,7 @@ declared by `perseus_viewer`, the exercise renderer. Core is clean.
 | Licence grant | 🟢 **Byte-verified** — served licence bytes graded by **clause presence**, cross-checked by byte size |
 | Dependency licences | 🟢 **Byte-verified at the PINNED VERSION** — `pnpm-lock` importers + per-version registry reads, `==` pins + per-version PyPI reads, and the **published tarball** when a field is blank |
 | Star counts | 🔴 **One figure re-measured this pass** — `HKUDS/DeepTutor` `58,585★` (`gh api search/repositories`, exact). `github.com` and `api.github.com/repos/*` are **`403`**, so every other star count is **carried forward, not re-measured** |
+| Publishing | 🟢 **Works — and the recurring `403` has a known fix.** This repository must be **attached to the session's authorised set** before a push; the proxy otherwise declines to inject a credential. The attachment is **per-session**, so a future pass seeing `403` should attach, not record "blocked" |
 | Every market, adoption and regulatory figure | 🔴 **Search-channel testimony.** `eur-lex.europa.eu`, `oecd.org`, `unesco.org`, `arxiv.org` and `wikipedia.org` are **not byte-reachable** from this session (`T844`) |
 
 🔴 **Six recorded ways to misread a licence, every one found by a control on a row this base had
