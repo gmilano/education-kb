@@ -4,6 +4,67 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p795` — **four patterns. `P795-1` is the one this base has been missing: AI inside the LMS of record rather than beside it. `P795-2` is a licence-clearance service productised out of this pass's own instrument.**
+
+### 🟢 `P795-1` — AI inside the LMS of record, as a plugin · **Global; EMEA and North America first** · 6–8 weeks
+
+🔵 **Why this pattern exists, and why it is late.** 🔴 Every platform pattern in this file so far proposes a system: Moodle, Canvas, Open edX, Sakai, Chamilo. 🔴 **An institution with a working LMS of record is not buying a replacement**, and this file had no catalogued artefact for the other shape until this pass.
+
+**The wiring, named to artefacts:**
+1. **Delivery surface** — [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) (🟡 **GPL-3.0**, `35,153 B`, ★`281`, pushed `2026-11-07`) as the in-Moodle plugin: tutoring, quizzes, mind maps and RAG over the course's own materials.
+2. **Retrieval corpus** — the client's existing Moodle course files. 🟢 **No content migration, which is where LMS-replacement projects die.**
+3. **Model routing** — a self-hosted gateway so prompts never leave the institution's boundary; [`ollama/ollama`](https://github.com/ollama/ollama) (MIT, ★`186,787`) for the local-inference option EMEA clients ask for first.
+4. **Diagnostic layer** — [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) (🟢 **MIT**, `1,102 B`) to make the tutor identify the misconception before teaching, not after.
+5. **Provenance** — the handout-sourcing approach in [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) (🟢 **MIT**, `1,065 B`): every answer cites the course material it came from. 🟢 **This is the answer to the `16%`-efficacy-belief problem — a teacher can check the citation.**
+6. **Analytics** — 🔴 **run [`metabase/metabase`](https://github.com/metabase/metabase) as its own AGPL-3.0 application behind SSO and LINK to it. Do NOT embed `app-embed.js` in a client-branded surface (`T912`).**
+
+🔴 **The licence decision to make before writing a line, stated to the client in week one:** 🔴 **a Moodle plugin inherits GPL-3.0, permanently, and there is no permissive option inside Moodle's plugin boundary.** 🟢 **For most institutional clients this is fine — they are deploying, not redistributing.** 🔴 **It is NOT fine for a client who intends to resell the plugin as a product**, and that question must be asked before week two. 🟢 **If the answer is "resell", switch to [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) (🟢 Apache-2.0, `11,342 B`) as a standalone surface and integrate via LTI instead.**
+
+🟢 **Why 6–8 weeks and not 10–12:** no data migration, no new system of record, no procurement of a platform. 🔵 The work is the plugin, the retrieval corpus and the governance sign-off.
+
+### 🟢 `P795-2` — Open-source licence clearance for an education AI programme · **Global; sellable in every region** · 3–4 weeks
+
+🔵 **This pattern is this pass's instrument, productised — and `p795` is the evidence it is needed.** 🔴 **In one sweep of `167` repositories this base found: a `★158,483` row that cannot be white-labelled, a `★50,301` row whose embed file forbids removing the vendor's logo, an MIT-looking licence that is non-commercial and bars redistribution, a `★2,053` row with no licence at all, a `★125` row that is Business Source License 1.1, and a `★707` row whose "licence" is `19` bytes of prose.** 🟢 **Every one of those is a finding a client's own procurement would have missed, and four of them were missed by GitHub's classifier.**
+
+**The deliverable, and it is an artefact not a report:**
+1. **Address extraction** from the client's manifests and the repositories they intend to build on.
+2. **Four-state existence** — `git ls-remote` exit status + ref count, plus `archived` and `pushed_at` from `gh api search/repositories` (`10` × `repo:` per call). 🟢 **LIVE-MAINTAINED · LIVE-ARCHIVED · EMPTY · ABSENT, plus a staleness band.**
+3. **Grant grading from the BYTES** — blobless bare clone, `cat-file -s` and `-p` on root licence files. 🔴 **Match the first non-blank line only, never a body substring (`T910`).**
+4. **The rider gate** — byte size against the family's canonical size (`>25%` = read it), numbered-clause count against the family's, and a restriction vocabulary (NC / ND / SA / branding / field-of-use) 🔴 **scoped by family so the GPL does not vote against itself (`T911`)**, in every language the corpus contains.
+5. **Licence-FILE count per repository** — 🔴 **`metabase` has four and the dangerous one governs a single file (`T912`).**
+6. **A family field AND a consequence field** per row (`T909`). 🟢 **"Can we ship it" is the question the client is actually asking.**
+7. **Dependency licences at the RESOLVED version** — lockfile pins read against `pypi.org` / `registry.npmjs.org` per version. 🔴 **`T884`: a licence is a property of a version.**
+
+🟢 **Controls are part of the deliverable, not the methodology section:** plant a known-absent address, a known-ridered licence, and a non-English grant, and show they are detected. 🔵 **This pass's gate returned `0` flags on its first build and was only known to be broken because a control fired.**
+
+🟢 **Why it sells in every region:** it is pre-engagement work with a fixed scope, it produces a defensible artefact for counsel, and 🟢 **it is the cheapest possible way to discover that the surface you planned to white-label cannot be white-labelled** — before the design review, not after.
+
+### 🟢 `P795-3` — Vietnam automated-assessment conformity, now against a DATED instrument · **APAC 🇻🇳** · 10–12 weeks
+
+🟢 **`P791-1` was written at `p791` against an anticipated Vietnamese instrument. `p795` supplies the dates, so the pattern is now sellable rather than speculative.**
+
+🔴 **The facts to lead with:** Vietnam's AI law took effect **`2026-03-01`**, and a **July 2026 decision classes certain education AI systems — automated assessment specifically — as HIGH-RISK.** 🟢 **Separately, Vietnam's Ministry of Education has set AI content hours for grades `1`–`12`**, so two budget lines exist in the same ministry.
+
+🟢 **Sell them together, in this order:** (1) a conformity assessment for any automated-assessment system the client already runs or intends to procure — 🔴 **high-risk classification means documentation, risk management and human oversight, and the grade must be reserved to the teacher**, which is this base's standing `P788-1`/`P790-1` rule and is now a statutory requirement rather than a design preference; (2) curriculum-delivery work against the grades `1`–`12` AI content hours, reusing the `P793-2` provincial-delivery shape.
+
+🟢 **Artefacts:** [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) (Apache-2.0) as the permissive delivery surface, [`vulinh1704/ai-tutor-agent`](https://github.com/vulinh1704/ai-tutor-agent) (MIT, 🇻🇳-origin, added `p794`) as the in-country reference, and the diagnostic/provenance skills from `P795-1` for the audit trail. 🔴 **Do not propose `CaviraOSS/PageLM` here or anywhere else — non-commercial, redistribution prohibited (`T908`).**
+
+### 🟢 `P795-4` — Institutional AI evaluation office · **LATAM 🇺🇾 🇧🇷 🇨🇱 🇨🇴 first; ports to North America** · 6–8 weeks
+
+🟢 **The pitch is one pair of numbers: `87%` of LATAM institutions use AI in at least one area, and `9%` evaluate whether it works** (UNESCO IESALC, `200` HEIs, `19` countries). 🔴 **`55%` have no AI budget at all**, so the engagement must be funded from an existing programme line — 🟢 **which is why it is scoped as an evaluation office rather than a platform.**
+
+**The deliverable:**
+1. **A measurement artefact first**, as `P793-1` was: sessions triggered · accepted · turns per session · practice-days-with-a-turn — 🟢 **the dosage instrument `p794-E` identifies as the scarce component**, read from the institution's LMS.
+2. **An institutional AI policy** mapped to the **OECD AI Principles** (adopted by Argentina, Brazil, Chile, Colombia, Costa Rica, Mexico and Peru) — 🔴 **NOT to a sectoral education statute, because no LATAM country has one** (declared in `intel/market.md`).
+3. **A baseline and a second measurement** at week 6, so the client owns a before/after rather than a pilot anecdote.
+4. **Institutional partners to name in the bid:** UNESCO's **Observatory on AI in Education for LAC** (launched April 2026 at ECLAC, Santiago), **Tecnológico de Monterrey**, **CENIA** (Chile); and **Ceibal** (Uruguay, `75%` of public-school teachers using AI) and **Cetic.br** (Brazil, `22%` of schools with guidelines) as the data sources a ministry already trusts.
+
+🟢 **Why it ports to North America without redesign:** `4` states (**Idaho, Maryland, Oklahoma, Virginia**) now mandate district-level AI policy adoption, and roughly a quarter of faculty report a formal institutional AI policy. 🔵 **Same deliverable, different driver — statutory mandate instead of an evaluation gap.** 🔴 **In the US add the `April 2026` ADA accessibility obligation**, which reaches purchased edtech and not only what the client built.
+
+### 🔴 Still unwritable, and why
+
+🔴 **An EMEA pattern with a conformity DEADLINE on it.** 🔴 The EU AI Act's high-risk education obligations reportedly moved from `2026-08-02` to `2027-12-02`, and `T906` blocks the primary source that would settle it. 🟢 **`P792-3` and `P794-2` remain valid in SCOPE** — the emotion-recognition ban and AI-literacy duty are in force since `2025-02-02` and are not contested. 🔴 **Do not put the date on a slide until counsel confirms it.**
+
 ## 🆕 `p794` — **four patterns, one per region, and the first is a reversal of what every prior pattern here optimised**
 
 🔵 **`T907` changed the premise.** Thirteen passes of this base have ranked **tutors**. The strongest trial ever run on an AI tutor reports `96%` uptake, `⅓` dosage and `0.06` SD — 🔴 **so the tutor was not the scarce component, and three of the four patterns below are built around that.**

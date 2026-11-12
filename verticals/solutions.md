@@ -4,6 +4,42 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p795` — **The BI layer this file recommends forbids the embed it was recommended for, and the strongest new platform row is a Moodle plugin — AI on top of the incumbent, not a replacement for it.**
+
+### 🔴 `T912` — `metabase` cannot be embedded white-labelled, and this file's analytics advice assumed it could
+
+🔴 **`metabase/metabase` carries `4` root licence files, and the one no pass had opened governs a single FILE.** `LICENSE-EMBEDDING.txt` (`8,877 B`) applies to `app-embed.js`, lifts it out of AGPL-3.0 (*"free and clear of any Affero GPL License requirements"*), and then:
+
+| Clause | 🔴 What it forbids |
+|---|---|
+| `§2` | Modifying `app-embed.js`, or *"blocking, overlaying, or otherwise obstructing the contents of the embedded element"* |
+| 🔴 **`§3`** | 🔴 ***"the removal of the Metabase's name or logo in the iframe that is embedded in your application"*** |
+| `§2(b)` | Transferring, sublicensing, leasing or distributing the Software to any third party |
+
+🟢 **Corrected rule for this file.** 🔴 **Do NOT embed `app-embed.js` into a client-branded learning-analytics surface** — the Metabase mark must remain visible, so the surface cannot carry only the institution's identity. 🟢 **Do run metabase as its own AGPL-3.0 application behind SSO and link to it from the client surface**; that uses the AGPL grant, needs no embedding licence, and keeps the institution's deployment intact. 🔵 **Identical in shape to `T900` (Open WebUI's branding rider), which this file corrected last pass — two of this file's recommended surfaces now turn out to be un-white-labellable, and that is a pattern worth stating to delivery leads before the design review, not after.**
+
+### 🟢 `T909` — platform rows now carry a CONSEQUENCE beside `UNGRADED`
+
+🔴 **`UNGRADED` is a verdict about which licence FAMILY applies; this file was reading it as a verdict about whether a platform can ship.** 🟢 **For `CaviraOSS/PageLM` the two answers are opposite:** the family is genuinely unclassifiable **and** the licence is non-commercial with a section headed *"Prohibition on Redistribution"* — 🔴 **so it cannot be in a client deliverable in any form**, which `UNGRADED` alone never said. 🟢 Carried as a consequence field, not a re-grade.
+
+### 🟢 The platform row added this pass — and it is the "AI on top of the incumbent" path
+
+| Platform | Repo | Grant, on the bytes | Deps | Region | Note |
+|---|---|---|---|---|---|
+| **Moodle AI Skill Navigator** | [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 🟡 **GPL-3.0** · `35,153 B` · `a0ca524c0129` | 🔵 unmeasured (`p795-C`) | Global | 🟢 **AI tutoring, quizzes, mind maps and RAG over course materials, delivered as a Moodle plugin** (★`281`, pushed `2026-11-07`). 🟢 **GPL-3.0 is correct and unavoidable** — a Moodle plugin inherits Moodle's licence. 🔵 **This is the shape most institutional clients actually want: the LMS of record stays, the AI arrives as a plugin inside it** |
+| **AI Shifu** | [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 **Apache-2.0** · `11,342 B` · `0150fcb2599f` | 🔵 unmeasured (`p795-C`) | APAC 🇨🇳 | 🟢 Permissive conversational teaching platform, pushed `2026-11-12`. 🟢 The deployable alternative when a client will not accept AGPL |
+| **DeepTutor-AILearning** | [`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning) | 🟢 **Apache-2.0** · `11,408 B` · `ae1dbfc5e74c` | 🔵 unmeasured (`p795-C`) | APAC 🇨🇳 | 🟢 **Multi-tenant by construction**: platform → institution → campus → teacher/student. 🔵 **The only row in this file with a tenancy model already built**, which is what a training-provider client buys rather than builds |
+
+🔵 **The strategic point, and it cuts against this file's historical bias.** 🟢 This file has catalogued **replacement** platforms — Moodle, Canvas, Open edX, Sakai, Chamilo, ILIAS — and graded their licences. 🔴 **An institution with a working LMS of record is not buying a replacement.** 🟢 **The `moodle-ai-skill-navigator` row is the first catalogued artefact of the other engagement shape: leave the system of record alone and deliver AI as a plugin inside it.** 🟡 **The licence consequence is the trade: that path is GPL-3.0 by inheritance, permanently, and no permissive option exists inside Moodle's plugin boundary.**
+
+### 🔴 The maintenance field this file never had (`ACTION p794-A`)
+
+🟢 **Archived platform rows: still exactly `3`, confirmed across `167` addresses.** 🔴 **But `Kosudo/nextSIS` — an SIS in this file's Student Information section — has not been pushed since `2018-07-16`, `88` months.** 🔴 **For a system that holds student records that is not staleness, it is an unowned CVE surface**, and the correct advice is a deliberate fork with a named maintainer, or a different SIS. 🟡 `jkbrzt/rrule` (`28` mo) corrected in place above with its consequence graded as near-harmless.
+
+### 🟢 `ACTION p794-C` — one `Deps` cell closed, the rest named
+
+🟢 **`oppia/oppia` CONFIRMED on the second instrument** (PyPI version-scoped JSON: `mutagen==1.47.0` → `GPL-2.0-or-later`); the hosted-deployment rule in this file is unchanged. 🔴 **Every other `Deps` cell in this file remains a claim about a version nobody has identified.** 🟢 **`DSpace/DSpace` is next and the target is already located: a `91,354 B` `LICENSES_THIRD_PARTY` anthology in its root tree.**
+
 ## 🆕 `p794` — **The delivery surface this file recommends cannot carry a client's name, and the ePortfolio it recommends is archived.**
 
 🟢 **All platform rows re-measured on the byte channel plus GitHub's own classifier: `118/118` licence agreement, `0` clone failures, `1` correction — and the correction is on the row a client sees first.**
@@ -196,7 +232,7 @@ architecture**, not a convenience.
 | **MyScriptJS** 🔴 **ARCHIVED** | [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) | 🟢 **Apache-2.0 (by reference)** · `570 B` · `968021fcc1f4` | — | EMEA | 🔴 **ARCHIVED UPSTREAM, last push `2021-01-04` (`T901`)** — `★357`. Handwriting and **maths** input recognition, French origin, the input primitive for a maths tutor on a tablet — 🔴 **but unmaintained for nearly six years.** Rescued from this base's unusable class this pass |
 | **Mahara** 🔴 **ARCHIVED** | [`MaharaProject/mahara`](https://github.com/MaharaProject/mahara) | 🔴 GPL-3.0 · `35,148 B` | — | Global | 🔴 **ARCHIVED UPSTREAM, last push `2023-11-16` (`T901`)** — read-only, `★120`. ePortfolio, still the natural home for skills-based credentialing, 🔴 **but the engagement owns the fork from day one** |
 | **DSpace** | [`DSpace/DSpace`](https://github.com/DSpace/DSpace) | 🟢 BSD-3-Clause · `1,504 B` · `2d991b4832bb` | — | Global | Institutional repository for OER, theses and research output |
-| **Anki** | [`ankitects/anki`](https://github.com/ankitects/anki) | 🔴 AGPL-3.0 · `1,930 B` · `a5461e33e3db` | — | Global | The reference spaced-repetition scheduler. 🟢 For a permissive recurrence primitive instead, use [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) (BSD-3, `3,493 B`) |
+| **Anki** | [`ankitects/anki`](https://github.com/ankitects/anki) | 🔴 AGPL-3.0 · `1,930 B` · `a5461e33e3db` | — | Global | The reference spaced-repetition scheduler. 🟡 For a permissive recurrence primitive instead, use [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) (BSD-3, `3,493 B`) — 🔴 **but it is STALE: last push `2024-06-27`, `28` months, not archived (`p795`).** 🟢 Recurrence rules are frozen mathematics, so the staleness is near-harmless here; pin the version and own the fork knowingly |
 | **ODK Collect** | [`getodk/collect`](https://github.com/getodk/collect) | 🟢 **Apache-2.0** · `10,494 B` · `2344bb9c5da4` | — | Global | 🟢 Offline mobile data collection — the field instrument for a readiness diagnostic or a baseline survey where connectivity fails |
 | 🔴 **Metabase** | [`metabase/metabase`](https://github.com/metabase/metabase) | 🔴 **SPLIT BY DIRECTORY** · `855 B` · `6006cc9c65dd` | — | Global | Frequently the BI layer a client already runs over learning data. 🔴 **AGPL-3.0 outside `enterprise/`, Metabase Commercial License inside it.** Deploy it; do not vendor code out of it without deciding which side of the boundary you are on |
 

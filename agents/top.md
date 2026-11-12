@@ -4,6 +4,71 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p795` — **`p794-B`'s rider gate was blind to the row that motivated it, and rebuilding it on the bytes found an MIT grant sentence used as camouflage. `p794-A` discharged: the `ARCHIVED` count is CLOSED at `3`, and the real exposure is staleness.**
+
+🟢 **`ACTION p794-A`, `ACTION p794-B` and `ACTION p794-C` (for `oppia`) all discharged this pass.** 🔴 **`p794-F` is NOT discharged and cannot be by this session** — all `6` primary-source domains still fail at `CONNECT` (`T906` persists). 🔴 **`p794-D`, `p794-E` and `p794-H` not reached; carried.** Machine output: [`evidence/rider-gate.2026-11-12-p795.tsv`](../evidence/rider-gate.2026-11-12-p795.tsv) and [`evidence/maintenance-sweep.2026-11-12-p795.tsv`](../evidence/maintenance-sweep.2026-11-12-p795.tsv).
+
+### 🔴 The pass's headline: a gate keyed on a classifier cannot find what makes that classifier abstain
+
+🔴 **`p794-B` specified the rider gate as "exceed the canonical size **for its family**". Keyed on GitHub's SPDX family, it flagged `0` of `167` rows — including `open-webui/open-webui`, the `★158,483` branding-rider row that is the entire reason the action existed.** 🔵 **A rider is *why* the classifier returns `NOASSERTION`, so rows with riders are exactly the rows with no family to compare against.** 🔴 **`46` of `167` rows — `27.5%` — have no GitHub SPDX family at all.** 🟢 **Rebuilt on the licence bytes (title line + clause count + restriction vocabulary), the gate reproduces `6` of `6` controls and yields `T908`, `T910`, `T911`, `T912` and `T913`.**
+
+### 🔴 `T908` — the MIT grant sentence as camouflage, and THIS BASE'S OWN probe would fall for it
+
+🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) `LICENSE.md` `8,563 B` `e1de68833d1c` opens with the **canonical MIT grant sentence verbatim**, then narrows it inside the same sentence to *"personal, educational, or **non-commercial** research purposes"*, then adds a heading reading **"Prohibition on Redistribution"**.
+
+🔴 **This base's multilingual grant probe keys on exactly that phrase. Measured by grant phrase alone, `PageLM` grades MIT.** 🟢 **Byte size is the discriminator that holds: `8,563 B` vs canonical MIT `1,070 B` = `+700%`.** 🔵 **`T902` said a missed restriction costs more than a missed grant. `T908` says both can arrive in one sentence — and the grant is written first.**
+
+### 🔴 `T909` — `UNGRADED` answers "which family", and this base reads it as "can we ship it"
+
+🟢 Keep `UNGRADED` for the family; 🔴 **carry a CONSEQUENCE beside it.** Corrected in place below for the two rows where the consequence is absolute.
+
+### 🟢 `ACTION p794-A` discharged — four states across `167` rows, and the archived layer is closed
+
+| State | Count | vs `p794` |
+|---|---|---|
+| 🟢 LIVE-MAINTAINED | `155` | — |
+| 🔴 LIVE-ARCHIVED | `3` | 🟢 **`0` new in `164` further rows — `T901`'s "floor" is refuted; it was a count** |
+| 🟡 EMPTY | `2` | unchanged |
+| 🔴 ABSENT | `0` | unchanged |
+
+🔴 **The field nobody had read is `pushed_at`: `9` rows are stale beyond `24` months with no archived flag**, led by [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) (★`3,752`, `2024-06-27`) which this base recommends as a primitive, and [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) (`2018-07-16`, 🔴 **`88` months**), whose grant `p790` spent a pass rescuing. 🔵 **Full table in [`repos/trending.md`](../repos/trending.md).** 🟢 **`archived` is the flag a maintainer sets; `pushed_at` is the one they cannot forget.**
+
+### 🟢 `12` rows added — byte-verified, star-exact, placed
+
+| Agent | Repo | Grant, on the bytes | ★ (exact) | Last push | Region | Verdict for Globant |
+|---|---|---|---|---|---|---|
+| **MCP for Beginners** | [`microsoft/mcp-for-beginners`](https://github.com/microsoft/mcp-for-beginners) | 🟢 **MIT** · `1,141 B` · `9e841e7a26e4` | `17,644` | 🟢 `2026-11-11` | Global | 🟢 **Internal enablement, not a client deliverable.** The MCP curriculum to put under the studio's own engineers before an education-MCP engagement |
+| **Education agent skills** | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🟡 **CC-BY-SA-4.0** · `1,230 B` · `c1286baf485e` | `977` | 🟢 `2026-11-03` | EMEA 🇬🇧 | 🟡 **`165` evidence-grounded skills for teachers and school leaders — the richest teacher-facing skill pack measured here.** 🔴 **ShareAlike reaches a derivative pack: a client-specific fork must itself be published CC-BY-SA.** 🔴 GitHub said `NOASSERTION`; the bytes say otherwise |
+| **Exam-prep skill** | [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 **MIT** · `1,065 B` · `86368b24a966` | `380` | `2026-10-27` | APAC 🇨🇳 | 🟢 Cross-session memory + handout provenance as an anti-hallucination device. 🔵 Built for 公务员 civil-service exams; the provenance pattern ports anywhere |
+| **Colloquium** | [`natolambert/colloquium`](https://github.com/natolambert/colloquium) | 🟢 **MIT** · `1,071 B` · `fa99b0d5d035` | `367` | 🟢 `2026-11-10` | North America 🇺🇸 | 🟢 Markdown-native slides for academics building with agents — the lecture-artefact layer this base had no row for |
+| **AI Shifu** | [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 **Apache-2.0** · `11,342 B` · `0150fcb2599f` | `332` | 🟢 `2026-11-12` | APAC 🇨🇳 | 🟢 Permissive conversational teaching platform, actively pushed. A deployable alternative to the AGPL tutors |
+| **Bloom** | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 **MIT** · `1,069 B` · `c8351ac37830` | `305` | `2026-10-20` | APAC 🇨🇳 | 🟢 Tutor that models *how* a learner learns and adapts teaching style — the learner-model layer, permissively licensed |
+| **DeepTutor-AILearning** | [`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning) | 🟢 **Apache-2.0** · `11,408 B` · `ae1dbfc5e74c` | `290` | `2026-10-09` | APAC 🇨🇳 | 🟢 **Multi-tenant** platform for offline training institutions: platform → institution → campus → teacher/student. 🔵 The only row here with a tenancy model built in, which is the shape a training-provider client actually buys |
+| **Moodle AI Skill Navigator** | [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 🟡 **GPL-3.0** · `35,153 B` · `a0ca524c0129` | `281` | 🟢 `2026-11-07` | Global | 🟡 **AI tutoring, quizzes, mind maps and RAG over course materials as a Moodle plugin.** 🟢 **GPL-3.0 is correct and unavoidable here** — Moodle plugins inherit it; this is the "AI on top of the incumbent LMS" path, not a replacement |
+| **Diagnostic tutor skill** | [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 **MIT** · `1,102 B` · `b5c46c4fb03c` | `267` | 🟢 `2026-11-11` | APAC 🇨🇳 | 🟢 **Diagnosis-first**: identifies the misconception before teaching, with no mode or command surface. 🔵 Closest public artefact to the dosage/engagement instrument `p794-E` asks for |
+| **Freelingo** | [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🔴 **AGPL-3.0** · `34,514 B` · `128919466b58` | `261` | 🟢 `2026-11-12` | EMEA 🇪🇸 | 🔴 **AGPL-3.0 §13 reaches a hosted service** — language-learning platform, local or cloud LLMs. 🟡 Fine for an institution hosting it; a licensing decision before any client-branded SaaS |
+| **StudyAI** | [`zuhairhalawa/studyai`](https://github.com/zuhairhalawa/studyai) | 🟢 **MIT** · `1,069 B` · `df4c8912c038` | `249` | `2026-10-24` | Global | 🟢 **Local-first** university study platform: lecture slides in, spaced repetition out. 🔵 Pairs with `jkbrzt/rrule` for the scheduling half |
+| **Claw-ED** | [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 🟢 **MIT** · `1,078 B` · `ec5640f4f262` | `65` | `2026-09-19` | Global | 🟢 Local-first teaching assistant producing **editable** lesson drafts and student materials — editability is the teacher-trust property `p790` identified |
+
+🔵 **The shape of this week's supply is the SKILL PACK, not the application.** 🟢 Four of the twelve are prompt/skill bundles for an existing harness: `0` infrastructure to deploy, and the licence is the only integration question — which is why `education-agent-skills`' ShareAlike is the most consequential licence fact in the table.
+
+### 🔴 `3` candidates graded and REFUSED, with the reason
+
+| Candidate | ★ | 🔴 Why not |
+|---|---|---|
+| 🔴 [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | `125` | 🔴 **Business Source License 1.1** · `4,539 B` · `06d125b6096c` — **source-available, NOT open source.** GitHub said `NOASSERTION`. 🔵 **BSL is a licence family new to this base's education corpus** — note it is *not* the Boost `BSL-1.0` already recorded at `p789`; same abbreviation, opposite meaning |
+| 🔴 [`Nutlope/llamatutor`](https://github.com/Nutlope/llamatutor) | `2,053` | 🔴 **No root licence file.** LIVE and pushed `2026-10-23` — 🔴 **the highest-starred ungranted education row ever measured here.** With no grant there is nothing to ship |
+| 🔵 [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | `168` | 🔵 `UNGRADED` + consequence (`T909`): `LICENSE.md` is a `5,789 B` *"licensing framework"* explainer splitting code from content, **not a grant instrument.** 🟡 Promising as a trusted-instructional-content data layer; ask upstream for a real grant first |
+
+### 🔴 Corrected in place below
+
+| Row | Was | 🟢 Now |
+|---|---|---|
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔵 `UNGRADED` | 🔵 `UNGRADED` **+ 🔴 NON-COMMERCIAL · REDISTRIBUTION PROHIBITED** — cannot be in a client deliverable in any form (`T908`, `T909`) |
+| 🔴 [`1edtech/caliper-spec`](https://github.com/1edtech/caliper-spec) | 🔵 `UNGRADED` | 🔵 `UNGRADED` **+ 🟡 implementable, NOT redistributable**; IMS is sole arbiter of compliance (`T909`) |
+| 🔴 [`frappe/education`](https://github.com/frappe/education) | `19 B` grant, unresolved since `T905` | 🔴 **`DECLARED-GPL-3.0-NO-GRANT-TEXT`** — `license.txt` is `19` bytes reading `License: GNU GPL V3`, blob `beca17940a71`. No grant instrument exists (`T913`) |
+| 🔴 [`Tzxser/aipha-learning-os`](https://github.com/Tzxser/aipha-learning-os) | 🔴 PROPRIETARY | 🟢 **Confirmed PROPRIETARY on re-read** — *"Public visibility does not make the original AIpha source open source"*; no derivative works. Grade stands |
+
 ## 🆕 `p794` — **a licence CORRECTION on the `★158,480` row this base green-flagged, and a third existence state the instrument still could not see: `ARCHIVED`.**
 
 🟢 **`ACTION p793-A` and `ACTION p793-B` both discharged across `170` addresses** — every repository address in the six live files, not just `agents/top.md`'s `122`. 🔵 **Three instruments ran, each on a different channel**: three-state existence (`git ls-remote` + ref count), a **multilingual** root-grant probe on blobless trees + lazy blob reads, and `gh api search/repositories` for exact stars **and** GitHub's own SPDX verdict. Machine output: [`evidence/master-row-measurements.2026-11-12-p794.tsv`](../evidence/master-row-measurements.2026-11-12-p794.tsv).

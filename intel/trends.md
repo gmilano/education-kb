@@ -4,6 +4,67 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p795` — **six findings. The headline is that a gate built to catch licence riders was specified to key on the very classifier whose silence a rider causes, so it returned zero on `167` rows including the row it was built for.**
+
+## `T908` — the MIT grant sentence can be camouflage, and the restriction arrives in the same sentence
+
+🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) · `LICENSE.md` · `8,563 B` · `e1de68833d1c`. 🔴 **It opens with the canonical MIT grant, word for word:** *"Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to use, copy, modify, and run the Software"* — 🔴 **and completes that same sentence with** *"for **personal, educational, or non-commercial research purposes**"*, before a later section headed **"Prohibition on Redistribution"**: *"Redistribution of the Software, in whole or in part, in source or binary form, is strictly prohibited."*
+
+🔴 **This base's own multilingual grant probe (`p793-B`, re-run `p794`) keys on that exact phrase.** 🔴 **Measured by grant phrase alone, `PageLM` grades MIT** — a permissive-biased failure on a repository that forbids both commercial use and redistribution.
+
+🔵 **Why the previous failures did not predict this one.** `T900` (open-webui) appended a **fourth clause** to a three-clause licence — detectable by clause count. `T902` (Dirigo) wrote the restriction in **another language** — detectable by vocabulary. 🔴 **`T908` writes the restriction in English, in the first sentence, as a subordinate clause of the grant itself.** 🟢 **Neither clause-counting nor restriction-vocabulary would catch it alone; what caught it was BYTE SIZE — `8,563 B` against canonical MIT's `1,070 B`, `+700%`.**
+
+🟢 **Generalised rule: a grant phrase establishes a licence FAMILY only when the byte size is consistent with that family.** 🟢 **Cheap, deterministic, and it subsumes all three failures so far.**
+
+## `T909` — `UNGRADED` answers "which family", and a reader needs "can we ship it"
+
+🟢 **This base's `UNGRADED` verdict is correct and hard-won** — `T845`–`T849` are a series of failures caused by forcing bespoke licences into OSI families. 🔴 **But `UNGRADED` is silent about consequence, and on two rows the consequence is absolute:** `PageLM` is non-commercial and bars redistribution; `1edtech/caliper-spec` is implementable but not redistributable, with IMS as *"the sole arbitrator of compliance"*.
+
+🔵 **The defect is not the grade, it is the shape of the record.** 🟢 **A classification field and a usability field are different questions and both must be published.** 🔴 **An engineer who reads `UNGRADED` and opens nothing learns that the family is unclear — not that the answer is "no".** 🟢 **Fix shipped as a consequence field beside the family field, in `agents/top.md`, `repos/foundations.md` and `verticals/solutions.md`.**
+
+## `T910` — a licence that NAMES other licences defeats substring classification, and this completes the pair
+
+🔴 **EUPL-1.2 carries an Appendix of compatible licences; line `269` reads *"GNU Affero General Public License (AGPL) v. 3"*.** 🔴 **A probe testing for AGPL before EUPL therefore mis-families `3` of `3` EUPL rows in this corpus** — `hedyorg/hedy`, `open-education-api/specification`, `european-commission-empl/European-Learning-Model` — 🟢 **and GitHub's classifier got all three right.**
+
+🔵 **Set beside `p794`'s `ECL-2.0` finding this is now a complete statement of how title-matching fails, in both directions:**
+
+| Family | Failure | Cause |
+|---|---|---|
+| 🔴 `ECL-2.0` | **MISSED** (returns `UNRECOGNISED`) | Its body does **not** contain *"Apache License"*, the title it derives from — `0` occurrences |
+| 🔴 `EUPL-1.2` | **MIS-CALLED** (returns `AGPL-3.0`) | Its body **does** contain the titles of licences it is not |
+
+🟢 **Remedy: match the first non-blank line only — never a substring of the body — and order the most specific family first.** 🟢 **Byte size is the independent check that would have caught it anyway: `13,827 B` is nowhere near AGPL-3.0's `34,523 B`.** 🔵 **Two instruments disagreeing is information; one instrument reading a licence's bibliography as its identity is not.**
+
+## `T911` — a restriction token must be scoped by family, or a licence votes against itself
+
+🔴 **GPL-3.0 and AGPL-3.0 contain the word *"noncommercially"* in their own permissive text** — *"alternative is allowed only occasionally and noncommercially"*, line `271` of the canonical body. 🔴 **An unscoped NonCommercial probe flags `27` of `27` GPL-family rows in this corpus as NonCommercial-restricted; all `27` are false**, including `moodle/moodle`, `openedx/edx-platform`, `instructure/canvas-lms` and `odoo/odoo`.
+
+🟢 **But the DIRECTION is the opposite of `T900`, `T902` and `T908`, and that matters more than the count.** 🔵 **This failure returns an answer LESS usable than the truth.** 🟢 **`p794-G` says never let an instrument err toward "usable"; `T911` is the companion: both directions are defects, and they are not the same price.** 🔴 **An over-report costs an engineer an afternoon of licence reading. An under-report puts a NonCommercial repository into a client deliverable.** 🟢 **So suppress over-reports — but never by a change that buys even one new under-report.**
+
+🔴 **Two further instrument defects in this pass, same shape, all caught by controls before any verdict shipped:** a bare `"trade name"` token flagged `BRANDING` on every Apache-2.0 and `ECL-2.0` row (their `§6` trademark section uses the phrase), and a loose `atribuci` token mis-called the Spanish **MIT** control (`goyanedelv/paes-mcp`) as **CC**. 🟢 **`3` defects, `3` caught, `0` shipped — the control set is doing its job, and it is the same control set `p793` built.**
+
+## `T912` — a licence boundary can run per-FILE, and the carve-out can forbid the recommended use
+
+🔴 **`metabase/metabase` carries FOUR root licence files. This base recorded two of them and described the split as "BY DIRECTORY".** 🔴 **`LICENSE-EMBEDDING.txt` (`8,877 B`) governs a single file — `app-embed.js` — lifting it out of AGPL (*"free and clear of any Affero GPL License requirements"*) and into a proprietary EULA that forbids modifying it, forbids *"blocking, overlaying, or otherwise obstructing the contents of the embedded element"*, and in `§3` forbids *"the removal of the Metabase's name or logo in the iframe that is embedded in your application."***
+
+🔴 **This base recommends `metabase` as the BI layer under learning-analytics dashboards. Embedding it white-labelled is the prohibited act.** 🟢 **Narrow, deployable conclusion rather than a withdrawal: run metabase as its own AGPL-3.0 application behind SSO and link to it.**
+
+🔵 **The generalisation is about granularity, and it is new to this base.** 🟢 Licence scope has been read here at two levels — repository (`T884`: a licence is a property of a VERSION) and directory (metabase's `enterprise/`). 🔴 **`T912` adds a third: a single FILE can carry its own licence, and the file that does is likely to be the one the vendor most wants to control — the embed, the client, the SDK.** 🟢 **So count the licence files before describing a boundary**, and note that this pass found the same branding-restriction shape on two different recommended surfaces (`T900`, `T912`).
+
+## `T913` — a declaration is not a grant
+
+🔴 **`frappe/education` `license.txt` is `19` bytes: `License: GNU GPL V3`** (blob `beca17940a71`, no trailing newline). ★`707`, LIVE, pushed `2026-10-30`. 🟢 **GitHub returns `NOASSERTION` and GitHub is right.**
+
+🔵 **The holder has NAMED a licence without shipping one.** 🔴 **There is no grant text, no copyright line, no warranty disclaimer — nothing to accept and nothing to rely on.** 🔵 **A statement *about* a licence is evidence of intent, not an instrument**, and the gap bites in both directions: a client can rely neither on GPL-3.0 terms that were never published, nor on permission that was never granted. 🟢 **Graded `DECLARED-GPL-3.0-NO-GRANT-TEXT`, and the remedy is free — an upstream issue asking Frappe to commit the licence body.** 🟢 **This also resolves the identity of the `19`-byte file `T905` could not account for.**
+
+## 🟢 The pass's negative results, recorded because they cost a pass to establish
+
+🟢 **`T901`'s prediction is REFUTED.** `p794` found `3` archived rows in `164` measurements and wrote *"the `3` is a floor, not a count"*. 🟢 **`167` rows measured this pass: still exactly `3`, the same `3`. It was a count.** 🔵 **Worth recording because the instinct to assume a new finding generalises is exactly what `T903` (a search-index miss is not an absence) warns about in the other direction.**
+
+🟢 **`p794-C` CONFIRMED with no correction.** `oppia`'s `mutagen==1.47.0` → PyPI version-scoped JSON returns `license: "GPL-2.0-or-later"` plus the OSI `GPLv2+` classifier, agreeing with the lockfile instrument. 🟢 **The GPL-2.0-not-AGPL-3.0 distinction this base's `oppia` deliverable rule depends on holds.** 🔵 **`T884` is why a version-level claim still had to be checked after four passes.**
+
+🔴 **`T906` persists, re-tested.** All `6` primary-source domains fail at `CONNECT` with no HTTP status. 🔴 **And this pass shows the cost precisely: the EU AI Act's high-risk education deadline reportedly moved `16` months, to `2027-12-02`, and that fact — which resets every EMEA conformity pattern in this base — cannot be raised above "reportedly" from here.** 🟢 **`p794-F` remains the highest-leverage single action available to anyone with access to this session's configuration.**
+
 ## 🆕 `p794` — **eight findings. The headline is that a `★158,480` row this base green-flagged as BSD-3-Clause carries a fourth clause that bars white-labelling, and that `ARCHIVED` is an existence state no instrument here has ever read.**
 
 🟢 **`170` addresses measured on three independent channels.** 🟢 **`118` of `118` licence grades agree with GitHub's own SPDX classifier · `0` disagree.** 🔴 **`1` grade corrected · `3` rows found archived upstream · `5` defects in this pass's own instruments, all caught before publication.**

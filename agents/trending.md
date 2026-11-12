@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p795` — **`p794-B`'s rider gate, built exactly as `p794` specified it, returned `0` flags on `167` rows — including the row whose rider is the reason the action exists. Keyed on the licence BYTES instead of GitHub's SPDX it finds `4` new defects, one of them an MIT grant sentence used as camouflage for a no-redistribution licence.**
+
+🟢 **Channel status, re-measured this pass:** `gh api search/repositories` 🟢 **batched `10` × `repo:` per call — exact stars + SPDX + `pushed_at` + `archived`, `167` of `173` returned** · blobless bare clone + `ls-tree --name-only` + `cat-file -s`/`-p` 🟢 (`173` clones, `12` parallel, `0` failures) · `pypi.org` 🟢 **JSON API per-version** · `registry.npmjs.org` 🟢 · `git ls-remote` 🟢 · 🔴 **`eur-lex.europa.eu`, `www.oecd.org`, `www.unesco.org`, `op.europa.eu`, `www.iesalc.unesco.org`, `digital-strategy.ec.europa.eu` → all `6` fail at `CONNECT` (curl exit before any HTTP status). `T906` persists unchanged into `p795`; `p794-F` is NOT discharged and cannot be discharged by this session.**
+
+🟢 **`6` of `6` controls reproduced before any verdict shipped:** `open-webui/open-webui` ridered-BSD (`2,819 B`, `4` numbered clauses, `99f39e7feff2`) · `goyanedelv/paes-mcp` Spanish-MIT grant (`2,018 B`) · `luscitiosus/Dirigo` Spanish CC-BY-**NC**-**SA** (`362 B`) · `opencast/opencast` + `sakaiproject/sakai` `ECL-2.0` (`11,340 B` / `11,120 B`) · `oppia/oppia` canonical Apache-2.0 (`11,358 B`). 🔴 **`2` defects in this pass's own instrument, both caught by those controls before anything shipped** — see `T911` and the note under it.
+
+### 🔴 `ACTION p794-B` — the gate as specified is blind to the row that motivated it
+
+🔴 **Keyed on GitHub's SPDX family, exactly as the action's own specification implies (*"exceed the canonical size **for its family**"*), the gate flagged `0` of `167` rows.** 🔴 **Including `open-webui/open-webui`** — the `★158,480` branding-rider row `T900` found, which is the entire reason `p794-B` was queued.
+
+🔵 **The mechanism, and it is structural, not a coding slip:** a rider is *why* GitHub's classifier abstains. So the rows that carry riders are exactly the rows with no SPDX family — and with no family there is no canonical size to exceed and no clause count to compare.
+
+| Channel | Rows with a usable licence family | Blind |
+|---|---|---|
+| GitHub SPDX (`search/repositories`) | `121` of `167` | 🔴 **`46` — `26` `NOASSERTION` + `20` `NONE` = `27.5%` of the corpus** |
+| 🟢 Licence **bytes** (title line) | 🟢 **`149` of `155` graded files** | `6` `UNRECOGNISED` — 🟢 **and `UNRECOGNISED` is itself the strongest rider signal** |
+
+🟢 **Rebuilt on the bytes, the gate reproduces all `6` controls and trips `open-webui` correctly** (`BSD` family · `2,819 B` · `+88%` · `4` clauses · `BRANDING`). 🔵 **The lesson generalises past licences: never key a gate on the classifier whose abstention is the thing you are hunting.**
+
+### 🔴 `T908` — the MIT grant sentence as camouflage, and this base's own probe would fall for it
+
+🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) · `LICENSE.md` · `8,563 B` · blob `e1de68833d1c`. 🔴 **It opens with the canonical MIT grant sentence, word for word** — *"Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to use, copy, modify, and run the Software"* — 🔴 **and then narrows it in the same sentence** to *"for **personal, educational, or non-commercial research purposes**"*, before adding a section headed **"Prohibition on Redistribution"**: *"Redistribution of the Software, in whole or in part, in source or binary form, is strictly prohibited."*
+
+🔴 **This base's multilingual grant probe (`p793-B`, re-run at `p794`) keys on exactly that phrase.** 🔴 **Had `PageLM` ever been re-measured by grant phrase alone it would have been graded MIT** — a permissive-biased failure on a row that forbids both commercial use and redistribution. 🟢 **It was caught only because clause count and the restriction vocabulary ran alongside the grant probe, not after it.**
+
+🟢 **The reliable discriminator is byte size, by a wide margin:** `8,563 B` against canonical MIT's `1,070 B` is **`+700%`**. 🔵 **`T902` said a missed restriction costs more than a missed grant; `T908` says the two can arrive in the same sentence, and the grant goes first.**
+
+### 🔴 `T909` — `UNGRADED` is a verdict about the FAMILY, and this base reads it as a verdict about usability
+
+🟢 **This base already publishes `PageLM` and `1edtech/caliper-spec` as `UNGRADED`, and calls that "the correct verdict".** 🟢 **As to family it is correct** — forcing either into an OSI family is the error `T845`–`T849` keep catching. 🔴 **But `UNGRADED` is silent on consequence, and on both rows the consequence is absolute:**
+
+| Row | Published here as | 🔴 What the bytes actually forbid |
+|---|---|---|
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔵 `UNGRADED` | 🔴 **Non-commercial only, AND redistribution "strictly prohibited" without written permission.** Cannot be in a client deliverable in any form |
+| 🔴 [`1edtech/caliper-spec`](https://github.com/1edtech/caliper-spec) | 🔵 `UNGRADED` | 🟡 IMS *Specification Document License*: licensee must agree to terms, **IMS is "the sole arbitrator of compliance"** and sole grantor of compliant designations. Readable and implementable; **not** redistributable as a grant |
+
+🔵 **The fix is a field, not a re-grade:** keep `UNGRADED` for the family and carry a **consequence** beside it. 🟢 **An engineer reading `UNGRADED` must not have to open the licence to learn that the answer is "no".**
+
+### 🔴 `T910` — a licence that NAMES other licences defeats substring classification
+
+🔴 **EUPL-1.2 carries an Appendix of compatible licences, and line `269` of it reads *"GNU Affero General Public License (AGPL) v. 3"*.** 🔴 **So a probe that tests for AGPL before EUPL mis-families every EUPL row — `3` of `3` here:**
+
+| Row | 🔴 My byte-probe said | 🟢 GitHub said (correct) | Bytes |
+|---|---|---|---|
+| 🔴 [`hedyorg/hedy`](https://github.com/hedyorg/hedy) | 🔴 `AGPL-3.0` | 🟢 **`EUPL-1.2`** | `13,827` |
+| 🔴 [`open-education-api/specification`](https://github.com/open-education-api/specification) | 🔴 `AGPL-3.0` | 🟢 **`EUPL-1.2`** | `13,827` |
+| 🔴 [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | 🔴 `AGPL-3.0` | 🟢 **`EUPL-1.2`** | `13,865` |
+
+🔵 **This generalises `p794`'s `ECL-2.0` finding into a pair of opposite failures, and the pair is the useful part:** 🔴 **`ECL-2.0` is missed because its text does NOT contain the title it derives from** (*"Apache License"* appears `0` times); 🔴 **`EUPL-1.2` is mis-called because its text DOES contain the titles of licences it is not.** 🟢 **Remedy: match on the title line only — the first non-blank line — never on a substring of the body, and order the most specific family first.** 🟢 **Byte size would also have separated these cleanly: `13,827 B` is nowhere near AGPL-3.0's `34,523 B`, and nothing in the gate was checking.**
+
+### 🔴 `T911` — a restriction token must be scoped by family, or the GPL votes against itself
+
+🔴 **GPL-3.0 and AGPL-3.0 contain the word *"noncommercially"* in their own permissive text** — `§4`/`§5`, *"alternative is allowed only occasionally and noncommercially"* (line `271` of the canonical body). 🔴 **An unscoped NonCommercial probe therefore flags `27` of `27` GPL-family rows in this corpus as NonCommercial-restricted. All `27` are false.** Affected rows include `moodle/moodle`, `openedx/edx-platform`, `instructure/canvas-lms`, `chamilo/chamilo-lms`, `ILIAS-eLearning/ILIAS`, `frappe/erpnext` and `odoo/odoo`.
+
+🔵 **But read the DIRECTION, because it is the opposite of `T900`/`T902`/`T908`:** this failure returns an answer **less** usable than the truth. 🟢 **`p794-G` says never let an instrument err toward "usable" — `p795` adds the companion: the two directions are both defects but they are not the same price.** 🔴 **An over-report burns an engineer's afternoon; an under-report puts a NonCommercial repository in a client deliverable.** 🟢 **So scope the token to suppress the over-report, and never trade it for even one new under-report.**
+
+🔴 **The pass's second instrument defect, same shape:** a bare `"trade name"` token flagged `BRANDING` on every Apache-2.0 and `ECL-2.0` row, because their `§6` trademark section uses that phrase. 🟢 **Both defects were caught by the `opencast`/`sakai` and `paes-mcp` controls before any verdict shipped** — and a third, a loose `atribuci` token that mis-called the Spanish **MIT** control as **CC**, was caught by the same means.
+
+### 🟢 `12` rows added — byte-verified, star-exact, and placed
+
+| Agent | Grant, on the bytes | ★ | Last push | Region |
+|---|---|---|---|---|
+| 🟢 [`microsoft/mcp-for-beginners`](https://github.com/microsoft/mcp-for-beginners) | 🟢 **MIT** · `1,141 B` · `9e841e7a26e4` | `17,644` | 🟢 `2026-11-11` | Global |
+| 🟡 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🟡 **CC-BY-SA-4.0** · `1,230 B` · `c1286baf485e` — 🔴 GitHub said `NOASSERTION` | `977` | 🟢 `2026-11-03` | EMEA 🇬🇧 |
+| 🟢 [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 **MIT** · `1,065 B` · `86368b24a966` | `380` | `2026-10-27` | APAC 🇨🇳 |
+| 🟢 [`natolambert/colloquium`](https://github.com/natolambert/colloquium) | 🟢 **MIT** · `1,071 B` · `fa99b0d5d035` | `367` | 🟢 `2026-11-10` | North America 🇺🇸 |
+| 🟢 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 **Apache-2.0** · `11,342 B` · `0150fcb2599f` | `332` | 🟢 `2026-11-12` | APAC 🇨🇳 |
+| 🟢 [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 **MIT** · `1,069 B` · `c8351ac37830` | `305` | `2026-10-20` | APAC 🇨🇳 |
+| 🟢 [`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning) | 🟢 **Apache-2.0** · `11,408 B` · `ae1dbfc5e74c` | `290` | `2026-10-09` | APAC 🇨🇳 |
+| 🟡 [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 🟡 **GPL-3.0** · `35,153 B` · `a0ca524c0129` — 🟢 correct for a Moodle plugin | `281` | 🟢 `2026-11-07` | Global |
+| 🟢 [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 **MIT** · `1,102 B` · `b5c46c4fb03c` | `267` | 🟢 `2026-11-11` | APAC 🇨🇳 |
+| 🔴 [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🔴 **AGPL-3.0** · `34,514 B` · `128919466b58` | `261` | 🟢 `2026-11-12` | EMEA 🇪🇸 |
+| 🟢 [`zuhairhalawa/studyai`](https://github.com/zuhairhalawa/studyai) | 🟢 **MIT** · `1,069 B` · `df4c8912c038` | `249` | `2026-10-24` | Global |
+| 🟢 [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 🟢 **MIT** · `1,078 B` · `ec5640f4f262` | `65` | `2026-09-19` | Global |
+
+🔵 **The shape of the week is the *skill pack*, not the application.** 🟢 `universal-examprep-skill`, `universal-diagnostic-tutor-skill`, `education-agent-skills` and `Claw-ED` are all **prompt/skill bundles for an existing agent harness**, not services to deploy — `0` infrastructure, and the licence is the only integration question. 🔴 **Which is why `education-agent-skills`' `CC-BY-SA-4.0` matters more than it looks: ShareAlike reaches a derivative skill pack, so a client-specific fork of those `165` teacher skills must itself be published CC-BY-SA.**
+
+### 🔴 `3` candidates graded and NOT recommended, with the reason
+
+| Candidate | ★ | 🔴 Why not |
+|---|---|---|
+| 🔴 [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | `125` | 🔴 **Business Source License 1.1** (`4,539 B`, `06d125b6096c`) — GitHub said `NOASSERTION`. **Source-available, not open source**; BSL's grant is time-delayed and use-restricted. 🔵 **A licence family new to this base's education corpus** |
+| 🔴 [`Nutlope/llamatutor`](https://github.com/Nutlope/llamatutor) | `2,053` | 🔴 **No root licence file at all.** `★2,053` and LIVE (`2026-10-23`) — and with no grant there is nothing to ship. 🔵 The highest-starred ungranted education row this base has measured |
+| 🔵 [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | `168` | 🔵 `UNGRADED` — `LICENSE.md` is a `5,789 B` *"licensing framework"* explainer covering code and content differently, **not a grant instrument**. 🟢 Graded with the `T909` consequence field, not left silent |
+
 ## 🆕 `2026-11-12` · `p794` — **A `★158,480` row this base green-flagged as BSD-3-Clause has a fourth clause that bars white-labelling, and `3` rows it recommends are ARCHIVED upstream. `170` addresses, three instruments, `118/118` agreement with GitHub's own classifier, `1` grade corrected.**
 
 🟢 **Channel status, re-measured this pass:** `git ls-remote` 🟢 (🔴 **and still blind to `ARCHIVED` — `T901`, NEW**) · blobless clone + `ls-tree -r --name-only` 🟢 · **lazy blob fetch via `cat-file -p HEAD:<path>` on a blobless clone** 🟢 **NEW — single-channel grant bytes, no `raw` aliasing risk (`T885` sidestepped)** · `git rev-parse HEAD:<path>` ≡ `git hash-object` ≡ `ls-tree` blob 🟢 **controlled exact** · `gh api search/repositories` 🟢 **batched `10` × `repo:` per call — exact stars + SPDX + `pushed_at` + `archived`** · `registry.npmjs.org` 🟢 · `pypi.org` 🟢 · `raw.githubusercontent.com` 🟢 `301` · `github.com` / `api.github.com` 🔴 `400`/`403` · 🔴 **every statutory, EU, OECD, UNESCO and ministry host → gateway `403` at `CONNECT` — a network-POLICY denial, not an unreachable site (`T906`, NEW)**.

@@ -4,6 +4,48 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p795` — **The rider gate this file needed was specified to key on GitHub's SPDX, and `27.5%` of this file's rows have no SPDX. Rebuilt on the bytes it found a per-FILE proprietary carve-out in the BI row this file recommends, and a `19`-byte "licence" that grants nothing.**
+
+### 🔴 `ACTION p794-B` discharged — and the gate had to be rebuilt before it found anything
+
+🔴 **As specified (*"exceed the canonical size for its family"*, family from `gh api search/repositories`), the gate flagged `0` of `167` rows** — including `open-webui`, whose rider is why the action was queued. 🔵 **A rider is the reason a classifier abstains, so riders and `NOASSERTION` are the same population.**
+
+| Channel | Usable family | Blind |
+|---|---|---|
+| GitHub SPDX | `121` / `167` | 🔴 **`46` = `27.5%`** (`26` `NOASSERTION` + `20` `NONE`) |
+| 🟢 Licence **bytes**, title line | 🟢 `149` / `155` graded files | `6` `UNRECOGNISED` — 🟢 and that is the rider signal itself |
+
+🟢 **Rule for this file: grade from the bytes, use GitHub's SPDX only as a disagreement alarm.** 🟢 **The two channels agreed on `118`/`118` at `p794` and disagreed usefully on `3` this pass (`T910`).**
+
+### 🔴 `T912` — the BI row: the boundary is per-FILE, and the prohibited act is the one this file recommended
+
+🔴 **`metabase/metabase` has FOUR root licence files, not two.** 🔴 **`LICENSE-EMBEDDING.txt` (`8,877 B`) governs the single file `app-embed.js`, carves it out of AGPL (*"free and clear of any Affero GPL License requirements"*), forbids modifying or overlaying the embedded element, and `§3` forbids *"the removal of the Metabase's name or logo in the iframe that is embedded in your application."*** 🔴 **This file recommended metabase as the BI layer under learning-analytics dashboards — embedding it white-labelled is exactly what `§3` prohibits.** 🟢 **Corrected in place; the deployable form is to run metabase as its own AGPL-3.0 application and link to it.** 🔵 **Same shape as `T900`, different row, same gate, same pass.**
+
+### 🔴 `T913` — a `19`-byte declaration is not a grant
+
+🔴 **`frappe/education` `license.txt` is `19` bytes: `License: GNU GPL V3`** (blob `beca17940a71`, no trailing newline). ★`707`, LIVE, pushed `2026-10-30`. 🟢 **GitHub's `NOASSERTION` is right.** 🔵 **The holder named a licence without shipping one — no grant text, no copyright line, no disclaimer.** 🔴 **A client can rely neither on GPL-3.0 terms never published nor on permission never granted.** 🟢 Graded **`DECLARED-GPL-3.0-NO-GRANT-TEXT`**; the remedy is a free upstream issue. 🟢 **This also resolves the identity of `T905`'s `19`-byte file.**
+
+### 🔴 `T910` — `3` licence grades this file would have got wrong, and GitHub got right
+
+🔴 **EUPL-1.2's Appendix names *"GNU Affero General Public License (AGPL) v. 3"* at line `269`, so a body-substring probe mis-families every EUPL row as AGPL-3.0** — `hedyorg/hedy`, `open-education-api/specification` and `european-commission-empl/European-Learning-Model`, all three `EUPL-1.2`, all three called `AGPL-3.0` by my probe. 🔵 **Paired with `p794`'s `ECL-2.0` finding this is a complete statement of the failure mode:** 🔴 **`ECL-2.0` is MISSED because its body omits the title it derives from; `EUPL-1.2` is MIS-CALLED because its body contains the titles of licences it is not.** 🟢 **Match the first non-blank line only; and note byte size would have caught it too — `13,827 B` is nowhere near AGPL-3.0's `34,523 B`.**
+
+### 🟢 `ACTION p794-C` — discharged for `oppia`, CONFIRMED, and honestly scoped
+
+🟢 **`mutagen==1.47.0` verified on the second instrument: PyPI `/pypi/mutagen/1.47.0/json` returns `license: "GPL-2.0-or-later"` and the OSI `GPLv2+` classifier.** 🟢 **Both channels agree, the pin is DIRECT (`requirements.in:25`, `requirements.txt:1079`), and the GPL-2.0-not-AGPL-3.0 distinction this file's `oppia` deliverable rule rests on HOLDS.** 🟢 **No correction needed — and `T884` is why a version-level claim still had to be checked.**
+
+🔴 **Scope limit, named rather than hidden: `p794-C` asked for EVERY remaining `Deps` cell and only `oppia` was done.** 🟢 **Next target identified with the channel already proven:** `DSpace/DSpace` ships `LICENSES_THIRD_PARTY` at **`91,354 B`** in its root tree — a dependency-licence anthology no pass here has opened. 🔵 **Re-queued as `p795-C`, fourth carry.**
+
+### 🔴 `9` rows this file recommends are STALE and carry no archived flag (`ACTION p794-A`)
+
+🟢 **The archived count is CLOSED at `3`** — `164` further rows measured, `0` new, so `T901`'s "the `3` is a floor" is **refuted**. 🔴 **But `pushed_at` exposes `9` rows untouched beyond `24` months**, two of which this file actively recommends:
+
+| Repo | ★ | 🔴 Last push | Consequence, graded by kind |
+|---|---|---|---|
+| 🔴 [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | `3,752` | `2024-06-27` (`28` mo) | 🟢 **Near-harmless** — recurrence rules are frozen mathematics. 🟡 Pin the version; own the fork knowingly |
+| 🔴 [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | `17` | 🔴 **`2018-07-16` (`88` mo)** | 🔴 **An SIS holding student records, unmaintained for over seven years = a fork the engagement owns on day one, under CVE pressure.** 🔵 `p790` rescued its GRANT; no pass asked about its LIFE |
+
+🔵 **Second landing of `p794`'s lesson: a licence rescue is not a viability rescue.** 🟢 Full `9`-row table and the `12`–`24` month watch list in [`repos/trending.md`](trending.md).
+
 ## 🆕 `p794` — **`3` repositories this file recommends are ARCHIVED upstream, and the sector's own licence (`ECL-2.0`) is one that no generic probe can see.**
 
 🟢 **All `170` addresses in this base re-measured on three channels** — three-state existence, a multilingual root-grant probe on blobless trees with lazy blob reads, and `gh api search/repositories` for exact stars, SPDX, `pushed_at` and `archived`. 🟢 **`0` clone failures · `118/118` licence agreement with GitHub's own classifier · `1` grade corrected.** Machine output: [`evidence/master-row-measurements.2026-11-12-p794.tsv`](../evidence/master-row-measurements.2026-11-12-p794.tsv).
@@ -22,7 +64,7 @@ updated: 2026-11-12
 
 ### 🟢 `23` rows where the bytes beat GitHub's `NOASSERTION`
 
-🔴 `metabase/metabase` **AGPL-3.0** (`★50,301` — §13 reaches a hosted service) · `odoo/odoo` **LGPL-3.0** · `ankitects/anki` **AGPL-3.0** · `INGInious/INGInious` **AGPL-3.0** · `openeducat/openeducat_erp` **LGPL-3.0** · 🟢 `Gego-K12/gegok12` **MIT** · 🟢 `getodk/collect` **Apache-2.0** · 🔴 `TarrySingh/…Tutorials` **CC-BY-NC-SA-4.0** · 🔴 `Tzxser/aipha-learning-os` **PROPRIETARY** · 🔴 `open-webui/open-webui` **BSD-3-Clause + rider** (`T900` — 🟢 **the one row where the classifier was more honest than this file**).
+🔴 `metabase/metabase` **AGPL-3.0** (`★50,301` — §13 reaches a hosted service) · `odoo/odoo` **LGPL-3.0** · `ankitects/anki` **AGPL-3.0** · `INGInious/INGInious` **AGPL-3.0** · `openeducat/openeducat_erp` **LGPL-3.0** · 🟢 `Gego-K12/gegok12` **MIT** · 🟢 `getodk/collect` **Apache-2.0** · 🔴 `TarrySingh/…Tutorials` **CC-BY-NC-SA-4.0** · 🔴 `Tzxser/aipha-learning-os` **PROPRIETARY** · 🔴 `open-webui/open-webui` **BSD-3-Clause + rider** (`T900` — 🟢 **the one row where the classifier was more honest than this file**) · 🔴 `CaviraOSS/PageLM` **NON-COMMERCIAL + NO REDISTRIBUTION** behind an MIT incipit (`T908`, `p795`) · 🔴 `Oriole-FDU/Wisepen` **Business Source License 1.1 — source-available, not OSS** (`p795`) · 🔴 `frappe/education` **DECLARED-GPL-3.0-NO-GRANT-TEXT** (`T913`, `p795`).
 
 ### 🔴 Corrected in this file
 
@@ -217,7 +259,7 @@ title found by scanning for a line that *is* a licence title at any depth (`T863
 | **brightspace-d2l-mcp** `NEW` | [`anonymousonyx22/brightspace-d2l-mcp`](https://github.com/anonymousonyx22/brightspace-d2l-mcp) | **MIT** · `1,200 B` · `a873478a6b4e` | — | North America | 🟢 MCP server over **D2L Brightspace** — the third major North American LMS, and the first attachment point this base has for it |
 | **ODK Collect** `NEW` | [`getodk/collect`](https://github.com/getodk/collect) | **Apache-2.0** · `10,494 B` · `2344bb9c5da4` | — | Global | Offline mobile data collection — the field instrument for a readiness diagnostic where connectivity fails |
 | **elimu-ai** (7 repos) `NEW` | [`elimu-ai/webapp`](https://github.com/elimu-ai/webapp) · [`appstore`](https://github.com/elimu-ai/appstore) · [`launcher`](https://github.com/elimu-ai/launcher) · [`model`](https://github.com/elimu-ai/model) · [`ml-authentication`](https://github.com/elimu-ai/ml-authentication) · [`ml-storybook-reading-level`](https://github.com/elimu-ai/ml-storybook-reading-level) · [`ml-storybook-recommender`](https://github.com/elimu-ai/ml-storybook-recommender) | **MIT** · `1,065 B` each · shas in `agents/top.md` | — | EMEA | 🟢 **A 66-repository MIT African education ecosystem, pushed this week** — Android delivery without an app store, a shared data model, and **ML models for storybook reading level and recommendation**. 🔵 This base was already citing `elimu-ai` and had never placed it |
-| **rrule** `NEW` | [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | **BSD-3-Clause** · `3,493 B` · `9f2061febeeb` | — | Global | Recurrence rules — the scheduling primitive under timetabling and spaced review. 🔵 Grant served at `LICENCE`, the **British spelling**, which a US-spelling-only probe misses |
+| **rrule** | [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | **BSD-3-Clause** · `3,493 B` · `9f2061febeeb` | 🔴 **STALE — last push `2024-06-27` (`28` mo), ★`3,752`, NOT archived** (`p795`) | Global | Recurrence rules — the scheduling primitive under timetabling and spaced review. 🔵 Grant served at `LICENCE`, the **British spelling**, which a US-spelling-only probe misses |
 | **annotated DL implementations** `NEW` | [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | **MIT** · `1,082 B` · `db59a04a8a2c` | — | Global | Annotated paper implementations — a teaching corpus under a permissive grant. Rescued from the ungranted class |
 | **MyScriptJS** 🔴 **ARCHIVED** | [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) | **Apache-2.0 (by reference)** · `570 B` · `968021fcc1f4` | — | EMEA | 🔴 **ARCHIVED UPSTREAM — read-only, last push `2021-01-04`, nearly six years stale (`T901`).** `★357`. Handwriting and maths-input recognition (French origin). 🟡 **`p786` rescued the GRANT and no pass checked MAINTENANCE — a licence rescue is not a viability rescue.** It is the standard Apache-2.0 grant-by-reference boilerplate, URL and AS-IS clause included. 🔴 **It was dismissed for being short — the exact error `T845` forbids** |
 
@@ -313,11 +355,11 @@ family check. Verified again this pass: all copyleft controls still reproduce.
 | Address | Grant, on the bytes | Why it is barred |
 |---|---|---|
 | [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) ✏️ | 🟢 **GPL-3.0** · `39,890 B` · 🟢 `01fa8c8c4c6e` | ✏️ **`p794` removes the stale `PROPRIETARY` text that survived `p790`'s correction in this file.** A named Student Information System, 🔵 Previously filed merely "ungranted". **A `39,890 B` licence is a long licence, not an open one** |
-| [`metabase/metabase`](https://github.com/metabase/metabase) | 🔴 **SPLIT BY DIRECTORY** · `855 B` · `6006cc9c65dd` | AGPL-3.0 outside `enterprise/`, **Metabase Commercial License** inside it. 🟢 Reporting one family for this repo would itself be the error — the boundary is the fact. Common BI layer under learning-analytics dashboards |
+| [`metabase/metabase`](https://github.com/metabase/metabase) | 🔴 **SPLIT BY DIRECTORY *AND* BY FILE** · `4` root licence files | AGPL-3.0 (`LICENSE.txt`, `37,265 B`) outside `enterprise/`; **Metabase Commercial License** (`LICENSE-MCL.txt`, `425 B`) inside it; 🔴 **and `LICENSE-EMBEDDING.txt` (`8,877 B`) carves the single file `app-embed.js` out of AGPL into a proprietary EULA whose `§3` forbids *"the removal of the Metabase's name or logo in the iframe that is embedded in your application"* (`T912`, `p795`).** 🔴 **So the white-labelled embed this file used to recommend is the prohibited act.** 🟢 **Deployable form: run metabase as its own AGPL-3.0 app and link to it; do not embed `app-embed.js` in a client-branded surface** |
 | [`Tzxser/aipha-learning-os`](https://github.com/Tzxser/aipha-learning-os) | 🔴 **PROPRIETARY** · `1,296 B` · `aa476a6a6a03` | Source-available multi-agent learning OS; now graded rather than `UNGRADED` |
 | [`luscitiosus/Dirigo`](https://github.com/luscitiosus/Dirigo) | 🔴 **CC BY-NC-SA 4.0 (Spanish), SCOPE-LIMITED** · `362 B` · `9ed32d5c2577` | Spanish school-leadership regulation. 🔴 **This base's published reason was wrong** — see `T863`. NonCommercial bars a commercial deliverable, and the BOE/BOC statutory texts are excluded from the grant entirely |
 | [`TarrySingh/…-Machine-Learning-Tutorials`](https://github.com/TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials) | 🔴 **CC-NonCommercial** · `20,850 B` · `bac3481e8d78` | `4,025★`. NonCommercial cannot be cured by asking. 🔵 `HEAD` moved from `e66c269d4819` since `p786` |
-| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) · [`1edtech/caliper-spec`](https://github.com/1edtech/caliper-spec) | 🔵 `UNGRADED` · `8,563 B` · `e1de68833d1c` / `12,402 B` · `1849e118b47a` | Bespoke *PageLM Community License* and 1EdTech consortium terms. 🟢 **`UNGRADED` is the correct verdict**, not a failure — forcing either into an OSI family is the error `T845`–`T849` keep catching |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) · [`1edtech/caliper-spec`](https://github.com/1edtech/caliper-spec) | 🔵 `UNGRADED` **+ CONSEQUENCE** · `8,563 B` · `e1de68833d1c` / `12,402 B` · `1849e118b47a` | Bespoke *PageLM Community License* and 1EdTech consortium terms. 🟢 **`UNGRADED` remains the correct verdict as to FAMILY** — forcing either into an OSI family is the error `T845`–`T849` keep catching. 🔴 **But `UNGRADED` was silent on consequence, and `T909`/`p795` fills it in: `PageLM` is NON-COMMERCIAL and its licence heads a section *"Prohibition on Redistribution"* — it cannot be in a client deliverable in any form, and its licence opens with the canonical MIT grant sentence verbatim before narrowing it (`T908`).** 🟡 `caliper-spec` is implementable but not redistributable; IMS is *"the sole arbitrator of compliance"* |
 
 ## Counts
 

@@ -4,6 +4,79 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p795` — **Repo movement: `ACTION p794-A` discharged across `167` rows and the `ARCHIVED` count did NOT grow — `T901`'s "`3` is a floor" is refuted. The movement nobody was measuring is STALENESS, and it holds a `★3,752` row this file recommends as a primitive.**
+
+🟢 **Controls reproduced before any verdict:** `173` blobless bare clones, `12` parallel, `0` failures · `gh api search/repositories` returned `167` of `173` (the same `6` search-index misses `T903` named, all LIVE on the git channel) · `oppia/oppia` canonical Apache-2.0 at `11,358 B` · `pypi.org` per-version JSON reachable.
+
+### 🟢 `ACTION p794-A` discharged — four-state existence, and the archived layer is CLOSED
+
+| State | Count | Change vs `p794` |
+|---|---|---|
+| 🟢 LIVE-MAINTAINED | **`155`** | — |
+| 🔴 **LIVE-ARCHIVED** | **`3`** | 🟢 **`0` new — `164` further rows measured, nothing found** |
+| 🟡 EMPTY (`rc=0` ∧ `0` refs) | **`2`** | unchanged, both named at `p793` |
+| 🔴 ABSENT | 🟢 **`0`** | unchanged |
+
+🔴 **`T901` predicted the `3` was "a floor, not a count". It was a count.** 🟢 **The three archived rows are exactly the three `p794` named** — `MaharaProject/mahara`, `MyScript/MyScriptJS`, `european-commission-empl/European-Learning-Model` — and no fourth exists in this corpus. 🔵 **Worth recording as a clean negative: a prediction that a sweep would widen a finding, refuted by running the sweep.**
+
+### 🔴 But the same response carried a field nobody had read: `9` rows are STALE and not archived
+
+🔴 **`archived: true` is the flag maintainers remember to set. `pushed_at` is the one that cannot be forgotten.** 🔴 **`9` rows have had no push in over `24` months and carry no archived flag at all** — commercially identical to archived, with nothing to warn you:
+
+| Repo | ★ | 🔴 Last push | Age | Role in this base |
+|---|---|---|---|---|
+| 🔴 [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | 🔴 **`3,752`** | 🔴 `2024-06-27` | `28` mo | 🔴 **The recurrence primitive `repos/foundations.md` and `verticals/solutions.md` BOTH recommend** as the permissive alternative to Anki's AGPL scheduler |
+| 🔴 [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | `17` | 🔴 **`2018-07-16`** | 🔴 **`88` mo** | 🔴 The SIS row `p790` "rescued" from a PROPRIETARY mis-grade to GPL-3.0 |
+| 🔴 [`OpenTreeMap/otm-core`](https://github.com/OpenTreeMap/otm-core) | `195` | `2023-08-03` | `39` mo | Campus/estate mapping adjacency |
+| 🟡 [`nestauk/skills-taxonomy-v2`](https://github.com/nestauk/skills-taxonomy-v2) | `43` | `2022-10-12` | `49` mo | EMEA skills-taxonomy reference |
+| 🟡 [`Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider`](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider) | `11` | `2021-03-25` | `68` mo | xAPI bridge in the learning-analytics path |
+| 🟡 [`LIST-LUXEMBOURG/eagle-aig`](https://github.com/LIST-LUXEMBOURG/eagle-aig) | `2` | `2022-07-01` | `52` mo | EMEA 🇱🇺 research row |
+| 🟡 [`gsidhu/udise-district-dump`](https://github.com/gsidhu/udise-district-dump) | `2` | `2022-02-08` | `57` mo | APAC 🇮🇳 UDISE dataset dump |
+| 🟡 [`ftrujillo36/TutorLSM`](https://github.com/ftrujillo36/TutorLSM) | `0` | `2023-05-02` | `42` mo | LATAM row |
+| 🟡 [`praj2408/RAG-Enhanced-NCERT-Tutor`](https://github.com/praj2408/RAG-Enhanced-NCERT-Tutor) | `5` | `2024-10-20` | `24` mo | APAC 🇮🇳 NCERT RAG tutor |
+
+🟢 **And `5` more in the `12`–`24` month band**, worth a watch rather than a warning: `elimu-ai/ml-authentication` (`2025-02-25`), `orancs11/GradeAI` (`2025-06-02`), `Seongbong-Ha/Haeksim` (`2025-09-16`), `1EdTech/caliper-spec` (`2025-10-07`), `A-R007/Multi-Agent-Study-Assistant` (`2025-11-04`).
+
+🔴 **`rrule` is the row that matters, and it is the second time this exact lesson has landed.** 🔵 `p794` wrote *"a licence rescue is not a viability rescue"* about `MyScriptJS`. 🔴 **`nextSIS` is the same shape again — `p790` spent a pass rescuing its grant from PROPRIETARY to GPL-3.0 and no pass asked whether anyone had pushed to it since 2018.** 🟢 **Grade the consequence by kind, as `p794` said:** a **recurrence-rule library** is frozen mathematics and `28` months of quiet is near-harmless; an **SIS that holds student records** at `88` months is a fork the engagement owns on day one.
+
+### 🟢 `ACTION p794-C` discharged for `oppia` — CONFIRMED on the second instrument, no correction
+
+🟢 **`p794-C` asked for `oppia`'s `mutagen==1.47.0` GPL-2.0 finding to be verified against a second instrument. It is confirmed.**
+
+| Instrument | Result |
+|---|---|
+| 🟢 Pin location (first instrument, `p792`) | `requirements.in` line `25`; `requirements.txt` line `1079` — 🔴 **DIRECT**, not transitive |
+| 🟢 **PyPI JSON, version-scoped** (`/pypi/mutagen/1.47.0/json`) | 🔴 **`license: "GPL-2.0-or-later"`** · classifier 🔴 **`License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)`** |
+
+🟢 **Both channels agree, and the distinction this base rests its `oppia` deliverable rule on HOLDS:** `mutagen` is **GPL-2.0-or-later**, whose copyleft is **distribution-triggered**, *not* AGPL-3.0 with its network-service trigger. 🟢 **So for the normal hosted-institution deployment the obligation does not reach the client's own code**, and the standing rule — replace `mutagen` or carry GPL-2.0 at the boundary **only if the Python service is distributed** — is unchanged. 🔵 **A carried action discharged with "no correction needed" is still a discharge: `T884` happened because a version-level claim went unverified for four passes.**
+
+🔴 **Scope limit, stated rather than hidden:** `p794-C` also asked for every remaining `Deps` cell in `verticals/solutions.md`. 🔴 **Only `oppia` was done this pass** — the budget went to `p794-A`, `p794-B` and the regional research. 🟢 **`DSpace/DSpace` is the identified next target and the channel is already proven:** it ships a `LICENSES_THIRD_PARTY` anthology of **`91,354 B`** at the repository root, which is a dependency-licence manifest nobody here has opened. 🔵 **Re-queued as `p795-C`, fourth carry, same priority.**
+
+### 🔴 `T912` — `metabase`'s licence boundary is per-FILE, not only per-directory, and the per-file licence bars the use this base recommends
+
+🔴 **This base publishes `metabase/metabase` as "SPLIT BY DIRECTORY — AGPL-3.0 outside `enterprise/`, Metabase Commercial License inside it", and calls the boundary "the fact".** 🔴 **There are FOUR licence files at the root, and the split is finer than that:**
+
+| File | Bytes | What it governs |
+|---|---|---|
+| `LICENSE.txt` | `37,265` | AGPL-3.0 body |
+| `LICENSE-AGPL.txt` | — | AGPL-3.0 reference copy |
+| `LICENSE-MCL.txt` | `425` | 🔴 The `enterprise/` **directory** carve-out this base already records |
+| 🔴 **`LICENSE-EMBEDDING.txt`** | 🔴 **`8,877`** | 🔴 **ONE FILE — `app-embed.js` — carved OUT of AGPL and into a proprietary EULA** |
+
+🔴 **`LICENSE-EMBEDDING.txt §1` grants only the right to *Execute* `app-embed.js`, *"free and clear of any Affero GPL License requirements"*. `§2` forbids modifying it or *"blocking, overlaying, or otherwise obstructing the contents of the embedded element"*. `§3` forbids *"the removal of the Metabase's name or logo in the iframe that is embedded in your application."***
+
+🔴 **This base recommends `metabase` as "the common BI layer under learning-analytics dashboards" — and embedding it in a client's product under the client's name is the act `§3` prohibits.** 🔵 **Identical in shape to `T900`'s `open-webui` branding rider, on a different row, found by the same gate in the same pass.** 🟢 **The deployable conclusion is narrow, not a withdrawal: run `metabase` as its own AGPL-3.0 application and link to it; do not embed `app-embed.js` into a white-labelled client surface.**
+
+### 🔴 `T913` — a `19`-byte declaration is not a grant, and this resolves `T905`'s mystery file
+
+🔴 [`frappe/education`](https://github.com/frappe/education) · `license.txt` · 🔴 **`19` bytes** · blob `beca17940a71` · contents in full: 🔴 **`License: GNU GPL V3`** (no trailing newline). ★`707`, pushed `2026-10-30`, LIVE-MAINTAINED.
+
+🟢 **GitHub returns `NOASSERTION`, and GitHub is right.** 🔵 **The copyright holder has *named* a licence without shipping one** — there is no grant text, no copyright line, no warranty disclaimer, nothing to accept. 🔵 **A statement *about* a licence is evidence of intent, not an instrument**, and the gap matters precisely because the named licence is strong copyleft: a client cannot rely on GPL-3.0 terms that were never published, and cannot rely on permission that was never granted either. 🟢 **Graded `DECLARED-GPL-3.0-NO-GRANT-TEXT`** — and the remedy is free: open an issue upstream asking Frappe to commit the licence body.
+
+### 🟢 Star counts, re-measured exactly this pass (`167` rows)
+
+`open-webui/open-webui` **`158,483`** (was `158,480`) · `ollama/ollama` **`186,787`** · `microsoft/ai-agents-for-beginners` **`79,500`** · `rohitg00/ai-engineering-from-scratch` **`78,560`** · `HKUDS/DeepTutor` **`58,596`** · `odoo/odoo` **`55,743`** · `metabase/metabase` **`50,301`** · `langchain-ai/langgraph` **`44,865`** · `frappe/erpnext` **`41,231`** · `jkbrzt/rrule` **`3,752`** · `bigbluebutton/bigbluebutton` **`9,274`** · `moodle/moodle` **`7,607`** · `oppia/oppia` **`6,989`** · `frappe/education` **`707`** · `sakaiproject/sakai` **`1,239`**.
+
 ## 🆕 `2026-11-12` · `p794` — **Repo movement: `3` recommended repositories are ARCHIVED upstream and this base never had a field for it; the education sector's own licence (`ECL-2.0`) is invisible to every generic probe; and `164` star counts stop being carried forward.**
 
 🟢 **Controls reproduced before any verdict:** `git rev-parse HEAD:LICENSE` ≡ `git hash-object` ≡ `ls-tree` blob id on `sakaiproject/sakai` (`2d2098a9192769636e5293867809c6e571dc6d97`, `11,120 B`) · lazy blob fetch on a blobless clone returns the Spanish-MIT control bytes for `goyanedelv/paes-mcp` (`2,018 B`) · planted absent address → `rc=128`. 🟢 **`170` blobless clones in `22` seconds, `0` failures.**
