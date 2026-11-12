@@ -4,6 +4,78 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p794` — **four patterns, one per region, and the first is a reversal of what every prior pattern here optimised**
+
+🔵 **`T907` changed the premise.** Thirteen passes of this base have ranked **tutors**. The strongest trial ever run on an AI tutor reports `96%` uptake, `⅓` dosage and `0.06` SD — 🔴 **so the tutor was not the scarce component, and three of the four patterns below are built around that.**
+
+### 🟢 `P794-1` — Engagement-triggered tutoring: put the tutor on the LMS event, not on a button · **North America first** · 8–10 weeks
+
+🔴 **The failure mode is measured, not hypothesised.** Khanmigo in `18` Tennessee middle schools: **`96%` of students used it, the median student messaged it on about `⅓` of practice days, two-year ITT `≈0.06` SD** against `0.2`–`0.4` SD for high-dosage human tutoring. 🟢 **Khan Academy's own 2026 fix was to stop waiting to be invoked and auto-activate during practice.** 🔵 **The product lesson generalises: a tutor behind a button is a tutor that is not used, and no model upgrade repairs that.**
+
+**What this pattern builds:** not a tutor — **a trigger policy that owns when the tutor appears**, with the tutor itself as a replaceable component behind MCP.
+
+**The wiring**
+
+1. **Tutor as a tool, not an application.** [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) — 🟢 **MIT, `1,073 B`, `7f7f7a24de57`**, `1,279`-file tree, pushed `2026-11-12`, `★102`. 🔵 **This is why it is the right shape:** it exposes the Intelligent Tutoring System *as an MCP server*, so the trigger owns the interaction and the tutor is swappable. 🟡 **At `★102` it is a seed — pin a sha and expect to co-maintain.**
+2. **Read the moment of difficulty from the system of record.** [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT, `1,071 B`, `★323`) for Canvas; `P793-1` already specifies the hardening this server needs and the per-tool allowlist it cannot get from the Canvas API. 🔴 **Deny-by-default stays: the trigger reads submissions and attempts; it does not write grades.**
+3. **Trigger policy as an explicit graph, not prompt text.** [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) — 🟢 **MIT, `★44,865`**. Nodes: *attempt failed twice on the same objective* · *time-on-task exceeded without submission* · *quiz item below mastery threshold* → offer the tutor **in the practice surface**, not in a side panel. 🟢 **Make every trigger a named, logged, teacher-overridable rule** — this is what you will be asked to evidence.
+4. **Dosage is the primary metric, before any outcome metric.** Instrument *sessions triggered · sessions accepted · turns per session · practice days with ≥1 tutor turn*. 🔴 **The Khanmigo trial failed on the fourth of those and nobody was watching it.** 🟢 Ship the dosage dashboard in week 3, before the tutor is tuned.
+5. **Teacher control is the regulatory hinge and the pedagogical one.** Teacher activation, a maximum-interaction cap, and no automated grade — 🟢 **Singapore's MOE independently shipped exactly these three guardrails on its own Learning Assistant**, so the design is defensible by precedent as well as by argument.
+6. **Model serving stays local where the data does.** [`ollama/ollama`](https://github.com/ollama/ollama) (MIT, `★186,787`) for single-site, [`vllm-project/vllm`](https://github.com/vllm-project/vllm) (Apache-2.0, `★96,826`) for district scale.
+
+🔴 **Licence constraint to state at kickoff:** 🔴 **do NOT reach for [`open-webui/open-webui`](https://github.com/open-webui/open-webui) as the delivery surface.** `T900` — its `LICENSE` carries a fourth clause making alteration of *"Open WebUI" branding* a **material breach**, so it cannot be delivered under the client's name. 🟢 In this pattern the surface is the LMS the client already owns, which sidesteps the problem entirely.
+
+🟢 **Why it closes in North America now:** **North Carolina's state model policy is due `2026-12-31`** with local policies `2027-06-30`, **Ohio's deadline has already passed**, and 🇨🇦 **Ontario has made "Cyber Safety and Artificial Intelligence" a mandatory `2026-27` Professional Activity topic with no province-wide policy** — `72` boards each needing their own. 🔵 **A triggered-tutoring deployment with a dosage dashboard and a rule log is the artefact that satisfies a board policy and shows an effect.**
+
+### 🟢 `P794-2` — Purpose-built tutoring against the `63/16` gap, with the FRIA as the first deliverable · **EMEA** · 10–12 weeks
+
+🟢 **`p794` finally has the EMEA demand number, and it is better than an adoption rate.** **`63%` of European teachers use AI; `16%` believe general-purpose AI improves learning outcomes** (Sanoma Learning European Teacher Survey 2026, `>20,000` teachers, `14` countries); **`52%` are asking for clear guidelines**; 🔴 **`10` of `23` ministries have a GenAI position at all.** 🔵 **A `47`-point gap between use and believed benefit is not a market to be educated — it is a market that has already tried the generic tool and rejected it.**
+
+**The wiring**
+
+1. **Lead with the obligation that is already in force, not the one that is deferred.** 🔴 **Art. 50 transparency has applied since `2026-08-02`; Art. 27 FRIA is required now; the Art. 5 emotion-recognition ban is live.** Annex III high-risk for education is **`2027-12-02`**. 🟢 **The FRIA is the paid first deliverable and the reason the rest of the engagement exists.** This base ships the marking and exposure scanners for Art. 50 at [`compose/code/aiact-50-2-marking/`](code/aiact-50-2-marking/) and [`aiact-50-2-exposure/`](code/aiact-50-2-exposure/).
+2. **Platform: permissive, and now with the patent caveat measured.** [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) (**ECL-2.0**, `11,120 B`, `2d2098a91927`) or [`opencast/opencast`](https://github.com/opencast/opencast) (**ECL-2.0**, `11,340 B`, `66581567bcbb`) where lecture capture matters. 🔴 **Say this to the client's counsel, because no prior pass here said it:** ECL-2.0 is Apache-2.0 with **§3's patent grant narrowed** — for a contributor employed by an institution it reaches only patent claims where *the author is also the inventor* **and** the institution may grant under its research-funding agreements. 🟡 **Copyright permissions are identical to Apache-2.0; patent coverage is materially thinner, and these codebases are overwhelmingly university-contributed.** 🟢 Ship it; do not tell a procurement officer "it's basically Apache".
+3. **Purpose-built, curriculum-aligned tutoring — the thing the `16%` figure says is missing.** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (Apache-2.0, `★58,596`) as the spine; align content to the national instrument rather than a generic syllabus — 🇮🇪 Ireland's *Guidance on AI in Schools*, 🇮🇹 Italy's Ministry of Education and Merit guidelines (November 2025), 🇫🇮 Finland's National Agency recommendations, and the Commission's **March 2026 AI-and-data-ethics teacher guidelines**.
+4. **Evidence instrumentation is the deliverable that closes the belief gap.** Pre/post on a named objective set, dosage from `P794-1`'s metric list, and an effect estimate the institution can publish. 🔵 **Benchmark honestly against `0.06`–`0.14` SD, not against vendor claims** — a client who is told the realistic number and then beats it is a reference; one told `70%` improvement is a churn event.
+5. **Sovereignty by default.** [`ollama/ollama`](https://github.com/ollama/ollama) or [`vllm-project/vllm`](https://github.com/vllm-project/vllm) on institution-controlled hardware; retrieval over institutional content only.
+6. 🔴 **Do not build the credential layer on [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) without telling the client it is ARCHIVED** (`T901`, last push `2024-02-14`). 🟡 It is still the right vocabulary — a published model may legitimately freeze — but the client, not the engagement, should decide to depend on a read-only Commission repository.
+
+🟢 **Why it closes:** the obligation is live, the belief gap is measured, and 🔴 **`22%` of Greek schools and `12%` of European schools on average have no AI rules at all** — so the governance artefact has a buyer even where the tutor does not yet.
+
+### 🟢 `P794-3` — NCERT Classes III–VIII AI-curriculum delivery at national scale · **APAC 🇮🇳** · 10–12 weeks
+
+🟢 **Writable for the first time: `p793-D` reached the Indian instrument, and it is a curriculum mandate rather than a statute.** **NCERT, with CBSE, has introduced a dedicated Computational Thinking and AI curriculum for Classes `III`–`VIII` from the `2026-27` academic year; the Grade `9`–`12` AI curriculum is finalised.** Governance is named: an **NCERT textbook-development team for Classes `11`–`12`**, a **CBSE expert committee chaired by Prof Karthik Raman (IIT Madras)**, and the **Department of School Education and Literacy** coordinating CBSE, NCERT, **KVS**, **NVS** and state/UT departments under an **"AI for Public Good"** framing. 🔴 **Wording discipline: the primary release says "introduced", not "mandatory"** — do not put "mandatory" in a proposal.
+
+**The wiring**
+
+1. **Content spine mapped to the curriculum, stage by stage** — Classes III–V interactive and concrete, VI–VIII computational thinking, IX–XII the finalised AI subject track. Deliver against NCERT/CBSE structure, not a generic AI-literacy syllabus.
+2. **Generation at curriculum scale, permissive and APAC-origin.** [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — **MIT root, `1,065 B`, `76abc5f13261`, `★43,389`**, `4,388`-file tree. 🔴 **Carry `p793`'s tree finding into procurement: the root grant is not the tree's grant** — `TREE[MIT root + LGPL + ARPHIC-PL + OFL + bespoke-CN font]`. 🟡 The font grants travel with the artefact; keep the notices.
+3. **Multilingual delivery is the hard part and the differentiator.** KVS and NVS span every state language. 🔵 Build the content pipeline language-parameterised from day one — and note this base's own lesson: 🔴 **[`SoukhyadP991/Multilingual-NCERT-Doubt-Solver`](https://github.com/SoukhyadP991/Multilingual-NCERT-Doubt-Solver) is ungranted**, so the obvious head start cannot be used until its author grants a licence.
+4. **Offline-first for the schools that need it most.** [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (MIT) — and `p793`'s audit is the procurement answer: core is clean, `0` GPL-family across `208` locked runtime packages, 🔴 **with the residual risk confined to one plugin (`perseus_viewer`, via `@khanacademy/mathjax-renderer@3.0.2`, which ships with no grant).** 🟢 Drop that plugin or replace the renderer.
+5. **Teacher-facing tooling, grade reserved to the teacher** — the same gate as every other jurisdiction in this base, and the one that makes the deployment portable.
+6. **Assessment-integrity material** rather than detection theatre; task-redesign guidance travels better than a classifier.
+
+🔴 **Honest scoping note:** this pattern is built from the curriculum instrument and verified supply. 🔴 **No Indian procurement document was reachable** (`T906`), so pricing, tender route and state-level purchasing remain unmodelled — the named next channel is state tender portals.
+
+### 🟢 `P794-4` — Institutional agent fleet with the evaluation layer the sector is missing · **LATAM 🇨🇱 🇧🇷 🇨🇴** · 8–10 weeks
+
+🟢 **`p794` found LATAM's reference deployment, and its own stated gap is the engagement.** **Pontificia Universidad Católica de Chile runs `194` pedagogical agents across nearly `100` courses** — 🔴 **and is still expanding its measurement of learning outcomes.** 🔵 **Scale is proven in Spanish; effect is not.** The same gap appears verbatim in Singapore (the minister said MOE lacks outcome data) and region-wide (`9%` evaluation coverage).
+
+**Why LATAM first:** 🟢 **teacher adoption leads the world** — 🇧🇷 `56%` · 🇨🇱 `55%` · 🇨🇴 `53%` · 🇨🇷 `52%` against `41%` for reference countries (IADB **Nota CIMA 37**, from TALIS 2024) — 🟢 **AI training ranks first among PD needs in Chile and Costa Rica and second in Brazil and Colombia**, and 🔴 **there is no AI-in-education statute in Brazil, Mexico or Chile.** 🔵 **No deadline to sell against means the sale must be made on evidence, which is precisely what is absent.**
+
+**The wiring**
+
+1. **Fleet management before fleet expansion.** `194` agents across `100` courses is already past the point where per-course prompt maintenance works. 🟢 Model each agent as a versioned configuration — objective set, tool scope, escalation rule, owner — in one registry, and make the registry the deployment unit.
+2. **Evaluation harness as the primary artefact.** Per-agent: objective coverage, dosage (`P794-1`'s metric list), escalation rate to a human, and a pre/post instrument per course. 🟢 **Report in SD against the `0.06`–`0.14` benchmark** so the institution's result is interpretable and publishable.
+3. **Orchestration, permissive.** [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) (MIT, `★44,865`) or [`huggingface/smolagents`](https://github.com/huggingface/smolagents) (Apache-2.0, `★30,336`) for the lighter agents.
+4. **A Spanish-language, curriculum-anchored reference already exists and is permissive.** [`goyanedelv/paes-mcp`](https://github.com/goyanedelv/paes-mcp) — 🟢 **MIT, in Spanish (`"Se concede permiso, libre de cargos"`), `2,018 B`** — Chile's PAES as an MCP server: the model for anchoring an agent to a national assessment rather than to a generic subject.
+5. 🔴 **Licence trap to avoid, measured this pass.** [`luscitiosus/Dirigo`](https://github.com/luscitiosus/Dirigo) looks like a Spanish school-leadership regulation asset and 🔴 **it is `CC BY-NC-SA 4.0`, NonCommercial, stated in Spanish** (`T902`) — barred in a paid engagement, and an English-only licence probe grades it `CC-BY-4.0`. 🔵 **In this region, read the licence in the language it was written in.**
+6. **Analytics, with the copyleft named.** 🔴 [`metabase/metabase`](https://github.com/metabase/metabase) is **AGPL-3.0 on the bytes** (`★50,301`, and GitHub's classifier says `NOASSERTION`) — 🔴 **AGPL §13 reaches a hosted service, which is how this would ship.** 🟢 Deploy it as a separate service the institution operates, or use [`jupyter/notebook`](https://github.com/jupyter/notebook) (BSD-3-Clause, `★13,464`) for the evaluation reporting instead.
+7. **Teacher-pipeline tie-in where it is funded.** 🇨🇱 **"Futuros Docentes en IA"** (March 2026 — Ministerio de Ciencia with CRUCH, UMCE, CENIA, Kodea) is installing AI capability in CRUCH universities running teacher-education programmes. 🟢 **An evaluation harness is a natural contribution to a consortium whose purpose is capability, and it is the cheapest route to a public reference.**
+
+🔵 **Why this is the region's clearest unclaimed offer:** every other region is buying governance against a deadline. 🟢 **LATAM has adoption, no deadline, a `194`-agent reference deployment and `9%` evaluation coverage — so the product is proof, and nobody is selling it.**
+
+---
 ## 🆕 `p793` — **two patterns, both named to artefacts measured this pass**
 
 ### 🟢 `P793-1` — Certify an education MCP deployment into the systems of record · **North America first (Canvas), ports to EMEA** · 8–10 weeks

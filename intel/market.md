@@ -4,6 +4,155 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p794` — **the two thinnest regions are no longer thin: Canada and Mexico placed by name, and EMEA finally has adoption numbers — `63%` of European teachers use AI and `16%` believe it improves learning.**
+
+🟢 **`ACTION p793-D`, `p793-E` and `p793-F` all discharged.** 🔵 Three passes had returned US-only material for North America and not one European adoption figure; both absences were query artefacts, exactly as `T883` diagnosed for EMEA. 🔴 **The channel limit is now diagnosed precisely rather than described:** `eur-lex.europa.eu`, `oecd.org`, `unesco.org`, `op.europa.eu`, `ec.europa.eu`, `pib.gov.in`, `moe.gov.sg`, `ontario.ca` and `edresearch.edu.au` **all fail at `CONNECT` with a gateway `403` — a network-policy denial, not an unreachable site** (`T906`). Everything below is therefore **search-channel testimony**, and labelled as such.
+
+### 🔴 The number this pass would put on the first slide
+
+| | |
+|---|---|
+| 🟢 European teachers using AI | **`63%`** |
+| 🔴 European teachers who believe **general-purpose** AI improves learning outcomes | 🔴 **`16%`** |
+| Instrument | **Sanoma Learning European Teacher Survey 2026** — `>20,000` teachers, `14` European countries |
+
+🔴 **A `47`-point gap between use and believed benefit is the EMEA commercial thesis in one line.** 🟢 **The market is not waiting to be convinced to adopt AI — it has adopted it and does not believe the general-purpose tools work.** 🔵 That is a demand for purpose-built, curriculum-aligned, evidence-instrumented education AI, which is what this base's permissive supply is for.
+
+## Opportunities by region
+
+### North America
+
+🟢 **`p793-E` DISCHARGED — Canada and Mexico placed for the first time in this base, and neither needed a query containing the words "North America".**
+
+| 🇨🇦 Canada — Ontario | Detail |
+|---|---|
+| 🟢 **The instrument is a mandatory teacher-training topic, not a statute** | **"Cyber Safety and Artificial Intelligence"** is one of three required Professional Activity day topics for the **`2026-27` school year**, pointing schools at the **Ontario Trustworthy AI Framework** |
+| 🟢 Curriculum | Mandatory learning on digital literacy, AI awareness and responsible technology use added across subjects — **Grades 1–8** safe use of digital tools; **Grades 9–12** AI inside Business Studies and Geography |
+| 🔴 **What does NOT exist** | 🔴 **No province-wide AI policy memorandum** — AI appears in no Policy/Program Memorandum. One survey puts **`42.3%`** of Ontario boards as having a formal AI policy (Fraser Institute, secondary source) |
+| 🟢 **The opening** | 🟢 **Board-by-board, not province-wide.** Ontario has `72` boards, a mandated training day with an AI topic and no central policy — **the buyer is the board and the deadline is the PA day calendar.** 🔵 Structurally the same sale as the US state-by-state pattern this base covers well |
+
+| 🇲🇽 Mexico — SEP | Detail |
+|---|---|
+| 🟢 **Evidence base is unusually strong** | SEP's **Encuesta Nacional sobre IA generativa en educación superior**, described in coverage as the most extensive exercise of its kind. 🔴 **Figures vary by source: ~`70%` (7 in 10) to `80%` (8 in 10) of university students use AI** |
+| 🔴 **The gap SEP itself measured** | 🔴 **~`8` in `10` students and `7` in `10` teachers do not know whether their institution has AI guidelines** |
+| 🟢 Policy instrument | **April 2026** — Secretary **Mario Delgado** presented **`10` acciones/recomendaciones** to rectors for ethical, critical and purposeful use, asking institutions to write transparent internal guidelines **with teachers and students**. 🟡 **Recommendations, not binding regulation**; reporting describes a regulation in preparation |
+| 🔴 Basic education | 🔴 **No published national standard requiring in-service teachers to certify AI competency**, and **`>1,000,000` teachers** would need training. Programa Nacional de Educación Superior **2026–2030** sets the higher-ed frame |
+| 🟢 **The opening** | 🟢 **SEP has told every university to write its own guidelines and `80%` of their students cannot find them.** That is a per-institution governance-and-publication engagement with a national mandate behind it and no central platform — and `P791-2` already describes the build |
+
+🟢 **United States — the outcome evidence arrived, and it is the most useful number in this file.**
+
+| Khanmigo two-year cluster RCT — `18` Tennessee middle schools (Hamilton County), Oreopoulos & Low | Result |
+|---|---|
+| Intent-to-treat, two years combined | **`≈0.06` SD** |
+| Year 2 alone | **`0.08` SD** |
+| 🔴 Year 1 alone | 🔴 **`0.020` SD — indistinguishable from zero** |
+| 🟡 Implied full year of **active participation** | 🟡 **`≈0.14` SD** — participation-adjusted, **not** ITT |
+| High-dosage human tutoring benchmark | `0.2`–`0.4` SD |
+| 🔴 **Why it underperformed** | 🟢 **`96%` of students used Khanmigo — but the median student messaged it on only about `⅓` of practice days** |
+| Sample | All students below grade level in a daily maths intervention block; **`>¼`** with a special-education designation |
+
+🔴 **The binding constraint on AI-tutoring outcomes in the best trial yet run is ENGAGEMENT SCHEDULING, not model quality.** 🟢 Khan Academy's own 2026 response confirms the diagnosis — Khanmigo was **redesigned to activate automatically during practice** because student-initiated use came in below expectation. 🔵 **Sell the scheduler, not the tutor** (`P794-1`).
+
+🔴 **Declared gap for North America:** 🔴 **no figure for Canadian or Mexican *spend*** — both placements are policy and adoption, not budget. 🔵 And the Ontario board-policy percentage rests on a secondary source; the Ministry's own PPM index is `403` from here (`T906`).
+
+### EMEA
+
+🟢 **`p793-F` DISCHARGED — and with more than the one figure it asked for.**
+
+| Instrument | Figure | Note |
+|---|---|---|
+| 🟢 **Sanoma Learning European Teacher Survey 2026** | 🟢 **`63%`** of teachers use AI · 🔴 **`16%`** believe general-purpose AI improves outcomes | `>20,000` teachers, `14` countries. Intent to use for preparing materials **`49%` → `63%`**; confidence in GenAI **`28%` → `42%` in one year** |
+| 🟡 European School Education Platform survey (EC), 2026 | **`81%`** use AI "a lot" or "partially" · **`52%`** want clear school/national guidelines | 🔴 `1,130` responses, self-selected — treat as directional |
+| 🟢 OECD Digital Education Outlook 2026 | 🇪🇪 **Estonia `53%`** of ~`4,000` teachers use AI tools; TALIS 2024 **`37%`** of teachers use GenAI | The only national-sample European figure reached |
+| 🟡 Seven-country European report, Aug 2026 | 🔴 🇬🇷 **Greece `22%`** of schools have **no** AI rules — against a European average of **`12%`** | 🟢 The first *governance-gap* percentage this base has for Europe |
+| 🟢 Eurydice, *Digital education at school in Europe 2026* (`2026-09-22`) | **`38` education systems**, incl. all `27` EU Member States | 🔴 PDF not byte-reachable (`T906`); the country-level tables remain unread |
+| 🟢 OECD/European survey of ministries, 2025 | **`10` of `23`** responding countries formally address GenAI in existing or planned strategies; **`9`** are developing guidance | 🔵 So **fewer than half of European ministries have a GenAI position at all** |
+
+🟢 **Named national instruments now placed:** 🇮🇪 **Ireland** — *Guidance on Artificial Intelligence (AI) in Schools*, explicitly a dynamic document; 🇮🇹 **Italy** — Ministry of Education and Merit guidelines for introducing AI in schools, **November 2025**; 🇫🇮 **Finland** — National Agency for Education recommendations on AI in education; 🇫🇷 **France** — ministry-backed AI teaching tools. 🟢 **EU level:** Commission published **four** sets of teacher guidelines in **March 2026** (two new, two updated) covering **AI and data ethics**, digital literacy, content selection and informatics — a flagship Digital Education Action Plan action; the Council's **review of the DEAP 2021–2027** is `ST-15439-2026 ADD 1`, cross-referenced to **`COM(2026) 770`**, and states that challenges remain in broadening adoption across Member States.
+
+🟡 **Spend, with the honesty it deserves:** Europe AI-in-education **`2026`** estimates from market-research houses span **`$2.11B`** → **`$2.64B`** → **`$2.75B`** → **`$5.86B`** — 🔴 **a `2.8×` spread, which means none of them is a number to quote to a client.** Europe edtech overall is put at **`$61.11B`** (different scope). 🔴 **AI venture funding into edtech fell to `$2.4B` in 2025, `−89%` from the 2021 peak** (HolonIQ, via secondary source). 🔵 **The defensible statement is the shape, not the size: public money and institutional budgets, not venture money.**
+
+🟢 **The EMEA opening, now evidence-backed rather than inferred:** the regulatory calendar was already the densest anywhere (Art. 5 emotion-recognition ban live; **Art. 50 transparency in force since `2026-08-02`**; **Art. 27 FRIA required now**; Annex III high-risk **`2027-12-02`**; embedded products `2028-08-02`). 🟢 **`p794` adds the demand side: `63%` already use it, `16%` think the generic tools work, `52%` are asking for guidelines and `>½` of ministries have no position.** 🔵 **Sell the FRIA and the evidence instrumentation together** — the obligation and the `47`-point belief gap have the same remedy.
+
+🔴 **Declared gap for EMEA:** 🔴 **still no European-origin open-source education agent.** `p794` adds the first European *agent* row in some passes — [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (MIT, 🇫🇷, `★102`) — 🟡 **but at `★102` it is a seed, not a sector.** 🔴 And two of the three archived rows found this pass are the EMEA ones (`T901`).
+
+### APAC
+
+🟢 **`p793-D` DISCHARGED for India and Singapore; Australia placed but with a negative finding.**
+
+| 🇮🇳 India | Detail |
+|---|---|
+| 🟢 **The procurement-relevant document, not the statute** | PIB: **NCERT with CBSE has introduced a dedicated Computational Thinking and AI curriculum for Classes `III`–`VIII` from the `2026-27` academic year**; the **Grade `9`–`12`** AI curriculum is **finalised** |
+| 🟢 Supply chain of the mandate | **NCERT has constituted a textbook development team for Classes `11`–`12` AI**; **CBSE's expert committee is chaired by Prof Karthik Raman (IIT Madras)**; the Department of School Education and Literacy coordinates CBSE, NCERT, **KVS**, **NVS** and state/UT departments. Framing: **"AI for Public Good"** |
+| 🔴 Wording discipline | 🔴 **Official wording is "introduced", not "mandatory"** — several outlets say mandatory; the primary release does not |
+| 🟢 **The opening** | 🟢 **A curriculum for Classes III–VIII live in `2026-27` across KVS and NVS is a content-and-assessment build at national scale**, and NCERT remains this base's richest APAC source |
+
+| 🇸🇬 Singapore | Detail |
+|---|---|
+| 🟢 **MOE's own position, April 2026** | Classroom AI tools are **MOE-built and accessed through the Student Learning Space (SLS)** — explicitly **not general-purpose chatbots**. From **Primary 4**, use is structured, limited, in class and under close teacher supervision |
+| 🟢 The guardrails are named | **Learning Assistant requires teacher activation**, allows a **maximum interaction count**, and prompts to encourage thinking and perspective-taking |
+| 🟡 Tool set (secondary sources) | FA-Math, SAFA, LEA and the **Adaptive Learning System** (Maths, Geography) plus an authoring copilot for teachers; secondary-level as of March 2026 |
+| 🔴 **The admission that is the opening** | 🔴 **February 2026 — Education Minister Desmond Lee said publicly that MOE lacks Singapore-specific data linking AI tool use to learning outcomes** |
+| 🟢 **The opening** | 🟢 **A ministry that built its own tools and says it cannot yet measure them is asking for evaluation, not for another tutor.** 🔵 And `0` procurement documents were reachable — the tender channel (GeBIZ) is unread |
+
+| 🇦🇺 Australia | Detail |
+|---|---|
+| 🟡 **No new 2026 framework** | The **Australian Framework for Generative AI in Schools** remains the national instrument; ministers endorsed a **June 2025** review that found it **fit for purpose** |
+| 🟢 Where the live work is | **AI Taskforce working groups funded through Education Services Australia are developing national product expectations for edtech AI tools** — ministers allocated **`$1M`** to ESA for this |
+| 🟢 Standards in pilot | **AERO + ESA** piloting national quality standards for education technology; **Safer Technologies 4 Schools** piloting a **Responsible AI (RAI) Standard and Evaluation** |
+| 🟢 Dated | **AERO, *AI in schools: considerations for policymakers*, October 2026**; Parliament's **Joint Select Committee on AI reports by `2026-11-30`** |
+| 🟢 **The opening** | 🟢 **Product expectations and an RAI standard are both in pilot right now** — the window to be a conformant reference implementation closes when they publish. 🔵 The framework already bars products that sell student data |
+
+🟢 **Carried and unchanged:** 🇨🇳 China 《"人工智能+教育"行动计划》 **教科信〔2026〕1号**, five ministries, `2026-04-02`, provincial procurement; 🇰🇷 Korea AI Basic Act `2026-01-22`; 🇻🇳 Vietnam `2027-09-01` for pre-existing education systems.
+
+🔴 **Declared gap for APAC:** 🔴 **no procurement document for India, Singapore or Australia** — curriculum, ministry statements and standards-in-pilot were reached; **tenders were not**. Singapore's GeBIZ and India's state tender portals are the named next channel.
+
+### LATAM
+
+🟢 **The adoption lead is now attributable to a primary-ish instrument, and one figure in this base needs reconciling.**
+
+| | |
+|---|---|
+| 🟢 Instrument | **IADB, Nota CIMA `37` — *Inteligencia artificial en las escuelas: evidencia desde TALIS 2024*** |
+| 🟢 Teachers who used AI in the last year | 🇧🇷 **`56%`** · 🇨🇱 **`55%`** · 🇨🇴 **`53%`** · 🇨🇷 **`52%`** |
+| 🔴 **Comparison baseline — and this base publishes a different one** | 🔴 **Nota CIMA 37 gives `41%` as the average of reference countries. This base publishes "vs OECD `36%`".** 🔵 Both may be right about different comparison groups — 🔴 **but the base must say which, because a `56%`-vs-`36%` story is a `20`-point lead and `56%`-vs-`41%` is a `15`-point one** |
+| 🟢 Training demand | AI training ranks **first** among professional-development needs in 🇨🇱 Chile and 🇨🇷 Costa Rica, **second** in 🇧🇷 Brazil and 🇨🇴 Colombia |
+
+🟢 **Named, dated programmes — and one is new and funded:**
+
+| Programme | Detail |
+|---|---|
+| 🟢 🇨🇱 **"Futuros Docentes en IA"** 🆕 | Launched **March 2026** by the **Ministerio de Ciencia** with **CRUCH**, **UMCE**, **CENIA** and **Kodea** — installs AI capability in CRUCH universities that run teacher-education programmes. 🔵 **A public–private consortium aimed at the teacher-training pipeline, not at classrooms** |
+| 🟢 🇨🇱 Chile national AI policy | Updated; horizon to **`2031`**, three axes |
+| 🟢 🇨🇴 Colombia | **Política Nacional de Inteligencia Artificial adopted February 2025**, six objectives from ethical governance to digital-talent formation. **Ministerio de Educación + Google** announced new AI training routes (UNESCO press roundup, October 2026) |
+| 🔴 🇧🇷 🇨🇴 | 🔴 **National AI strategies advanced; no education-sector-specific regulation in either** |
+
+🟢 **`p794`'s best LATAM find is a deployment with numbers, which this base has never had:**
+
+| | |
+|---|---|
+| 🟢 **Pontificia Universidad Católica de Chile** 🆕 | 🟢 **`194` pedagogical agents running across nearly `100` courses** |
+| 🔴 The honest half | 🔴 **The university is still expanding its measurement of learning outcomes** — scale is proven, effect is not |
+| 🔵 Why it matters commercially | 🟢 **It is the reference deployment for "agents at institutional scale" in Spanish, and its own stated gap is evaluation** — which is the same gap Singapore's minister admitted and the same one `9%` evaluation coverage describes region-wide |
+
+🟢 **The LATAM opening, unchanged in direction and now better evidenced:** the region leads on teacher adoption, has `~9` in `10` 15-year-olds using AI (PISA 2025), 🔴 **has no AI-in-education statute in Brazil, Mexico or Chile — no deadline to sell against** — and has the sector's thinnest evaluation coverage. 🟢 **Evidence instrumentation remains the clearest unclaimed offer, and PUC Chile is now the proof that the demand is real at `194`-agent scale.**
+
+### Global
+
+🟢 **The outcome literature matured this window, and it says something uncomfortable and useful.**
+
+| Finding | Detail |
+|---|---|
+| 🔴 **Scoping review of `474` studies, 2026** | 🔴 **The research landscape remains fragmented and pedagogical design is still poorly connected to technical capability** |
+| 🟡 Two 2026 meta-analyses | Large average effects for ChatGPT-supported learning — 🔴 **one covers `35` studies and `4,193` participants**, so the base is thin |
+| 🔴 What remains unevidenced | 🔴 **Sustained retention, transfer across domains and system-level cost-effectiveness** |
+| 🟢 Where deployment evidence IS strong | 🟢 **Where the agent's role is narrow and educator-controlled** — which is exactly the architecture every regulator above independently requires |
+
+🟢 **The architectural convergence this base has recorded for several passes is now supported from three directions at once:** regulators require a named human decision-maker, the strongest RCT shows the limit is engagement under teacher control, and the deployment literature finds effects only where scope is narrow and educator-controlled. 🟢 **AI proposes, a named human decides, the system proves it** — and the evidence pack ports across jurisdictions by re-labelling, not re-engineering.
+
+🔴 **Declared gaps, global:** 🔴 no credible single market-size figure (the `2.8×` European spread is the proof); 🔴 **no independent security or data-governance evaluation of any education MCP server** (`p792-D`, still unclaimed); 🔴 **no primary-source byte access to any statutory, OECD, UNESCO or EU document from this session** (`T906`).
+
+---
 ## 🆕 `p793` — **China placed at ministry level with a document number, LATAM's adoption lead extended to four countries, and `2` regions where the adoption question returned nothing**
 
 🔴 **Channel discipline, restated because every figure in this block depends on it.** Repository existence, licence grants, byte sizes and dependency resolutions in this pass are **byte-verified** (`git ls-remote` ref counts, served licence bytes, npm/PyPI reads at pinned versions, published tarballs). 🔴 **Every market, adoption and regulatory figure below is search-channel testimony** — `eur-lex.europa.eu`, `oecd.org`, `unesco.org` and `wikipedia.org` remain **not byte-reachable** from this session (`T844`), and `github.com` pages and `api.github.com` are **`403`** this pass, so star counts other than `DeepTutor`'s are carried forward rather than re-measured.
@@ -34,7 +183,7 @@ updated: 2026-11-12
 
 🔵 **The gap between the first rows and the last rows IS the offer.** Nobody needs persuading to adopt; the unmet need is governance, evidence and defensibility.
 
-## Opportunities by region
+## Opportunities by region — `p793` and earlier (superseded by the `p794` block above)
 
 ### North America
 

@@ -4,6 +4,40 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p794` — **`3` repositories this file recommends are ARCHIVED upstream, and the sector's own licence (`ECL-2.0`) is one that no generic probe can see.**
+
+🟢 **All `170` addresses in this base re-measured on three channels** — three-state existence, a multilingual root-grant probe on blobless trees with lazy blob reads, and `gh api search/repositories` for exact stars, SPDX, `pushed_at` and `archived`. 🟢 **`0` clone failures · `118/118` licence agreement with GitHub's own classifier · `1` grade corrected.** Machine output: [`evidence/master-row-measurements.2026-11-12-p794.tsv`](../evidence/master-row-measurements.2026-11-12-p794.tsv).
+
+### 🔴 `T901` — the field this file never had
+
+🔴 **The word *archived* appeared `0` times in this file before `p794`.** Three rows below are archived upstream and are now labelled: **Mahara** (`2023-11-16`), **MyScriptJS** (`2021-01-04`), **European Learning Model** (`2024-02-14`). 🔴 **`git ls-remote` cannot tell an archived repository from a healthy one** — `rc=0`, refs present, valid `HEAD`, licence grades fine. 🟢 `archived: true` is free in the same call that returns the star count.
+
+🔵 **Two lessons this file should carry forward:** 🔴 **resolving canonicity is not resolving maintenance** — this file correctly records `mahara/mahara` as DEAD and `MaharaProject/mahara` as canonical, and the canonical address is the archived one. 🔴 **A licence rescue is not a viability rescue** — `MyScriptJS`'s grant was rescued at `p786` and nothing has been pushed to it in nearly six years. 🟡 Grade the consequence by kind: an archived **data model** may legitimately freeze; archived **application code** is a fork the engagement now owns.
+
+### 🟢 `ECL-2.0` — the one licence family a generic probe structurally cannot find
+
+🟢 **Sakai, Opencast and `SakaiXAPI-Provider` are `ECL-2.0`** — Apache-2.0 with §3's patent grant narrowed for education. 🔴 **The string `"Apache License"` occurs `0` times in the text**, and **Opencast's ECL-2.0 is `11,340 B` against canonical Apache-2.0's `11,358 B` — `18` bytes apart.** 🔴 **So title matching misses it and size matching mis-grades it;** the only reliable discriminator is the phrase *"Educational Community License"*.
+
+🔵 **And the narrowed patent grant is a real diligence item this file has never stated.** §3: *"Any patent license granted hereby with respect to contributions by an individual employed by an institution or organization is limited to patent claims where the individual that is the author of the Work is also the inventor … and where the organization or institution has the right to grant such license under applicable grant and research funding agreements."* 🟡 **Copyright permissions identical to Apache-2.0; patent coverage materially thinner — and these codebases are overwhelmingly university-contributed.** 🟢 **Still permissive, still shippable — just not "basically Apache".**
+
+### 🟢 `23` rows where the bytes beat GitHub's `NOASSERTION`
+
+🔴 `metabase/metabase` **AGPL-3.0** (`★50,301` — §13 reaches a hosted service) · `odoo/odoo` **LGPL-3.0** · `ankitects/anki` **AGPL-3.0** · `INGInious/INGInious` **AGPL-3.0** · `openeducat/openeducat_erp` **LGPL-3.0** · 🟢 `Gego-K12/gegok12` **MIT** · 🟢 `getodk/collect` **Apache-2.0** · 🔴 `TarrySingh/…Tutorials` **CC-BY-NC-SA-4.0** · 🔴 `Tzxser/aipha-learning-os` **PROPRIETARY** · 🔴 `open-webui/open-webui` **BSD-3-Clause + rider** (`T900` — 🟢 **the one row where the classifier was more honest than this file**).
+
+### 🔴 Corrected in this file
+
+| Row | Was | 🟢 Now |
+|---|---|---|
+| `open-webui/open-webui` | 🟢 *"BSD-3-Clause … the quickest compliant front end"* | 🔴 **`BSD-3-Clause + branding rider`, non-OSI — cannot be delivered white-labelled** (`T900`) |
+| `Kosudo/nextSIS` | 🔴 **`PROPRIETARY`**, stale since `p790` corrected it | 🟢 **`GPL-3.0`**, `39,890 B`, reproduced on the bytes |
+| `Mahara` · `MyScriptJS` · `European Learning Model` | no maintenance field | 🔴 **ARCHIVED, with last-push dates** |
+| `1edtech/caliper-spec` | 🔵 `UNGRADED` | 🔵 **Positively identified: IMS Global *Specification Document License* — non-OSI, requires agreement to terms. `UNGRADED` was the right call; this is the name of the thing** |
+| `frappe/education` | 🔴 Published as **`GPL-3.0`** in a table cell *and* as a `19`-byte reference in prose, with **three different shas** | 🔴 **The prose is right and the cell is wrong.** `19 B`, `License: GNU GPL V3` and nothing else — **a declaration, not a conveyance.** Blob sha `beca17940a71`, reproduced |
+
+### 🟢 `ACTION p793-C` — NOT done, and named as a scope limit rather than logged as blocked
+
+🔴 **`p793-C` asked for the lockfile audit to be extended to every remaining `Deps` cell.** 🔴 **It was not done this pass.** 🔵 The pass's budget went to `p793-A`, `p793-B` and the three regional gaps (`p793-D`/`E`/`F`), all of which discharged — and the two findings that displaced it (`T900`, `T901`) were both **corrections to rows this file actively recommends**, which outranks extending a clean audit. 🟢 **The method remains proven on three rows and both channels; `oppia`'s `mutagen==1.47.0` GPL-2.0 finding is still unverified against the second instrument.** 🔵 **Re-queued as `p794-C` with the same priority, not silently dropped.**
+
 ## 🆕 `p793` — **`ACTION p792-A` discharged on the row that carries this file's whole argument: `kolibri`'s dependency claim is EXACT, and the half nobody had measured is clean.**
 
 🔴 **`p792-A` was blunt about the stakes:** *"`kolibri`'s '2 LGPL of 32' is now the row carrying the embedding argument and it has never been lockfile-resolved… until this is done, every `Deps` cell in this base is a claim about a version nobody identified."*
@@ -174,7 +208,7 @@ title found by scanning for a line that *is* a licence title at any depth (`T863
 | **JupyterHub** | [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | **BSD-3-Clause** · `1,475 B` · `41fffb935326` | — | Global | Multi-user notebook serving — the cohort-scale delivery layer under `nbgrader` |
 | **Jupyter Notebook** | [`jupyter/notebook`](https://github.com/jupyter/notebook) | **BSD-3-Clause** · `1,588 B` · `5662506ad194` | — | Global | The notebook surface itself |
 | **DSpace** | [`DSpace/DSpace`](https://github.com/DSpace/DSpace) | **BSD-3-Clause** · `1,504 B` · `2d991b4832bb` | — | Global | Institutional repository for theses, OER and research output |
-| **Open WebUI** | [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | **BSD-3-Clause** · `2,819 B` · `b0e6098e9409` | — | Global | Self-hosted LLM delivery surface; the quickest compliant front end for a school-hosted model |
+| **Open WebUI** ✏️ | [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | 🔴 **`BSD-3-Clause + BRANDING RIDER` (non-OSI)** · `2,819 B` · 🟢 `99f39e7feff2` | — | Global | 🔴 **CORRECTED at `p794` (`T900`) — was published here as plain BSD-3-Clause.** Clause `4` bars altering, removing or replacing *"Open WebUI" branding*; alteration is a **material breach**. 🔴 **So it cannot be white-labelled for a client**, which is the whole point of a delivery surface. 🔵 Ship it unbranded, or use it only where the Open WebUI name may remain visible. `★158,480` |
 | **LangGraph** | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | **MIT** · `1,072 B` · `b4cb0f19e3d8` | — | Global | Stateful agent graphs — the orchestration layer in most recipes here |
 | **smolagents** | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | **Apache-2.0** · `11,357 B` · `96f33faaf028` | — | Global | Minimal agent runtime where LangGraph is more than the engagement needs |
 | **xAPI service** `NEW` | [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) | **MIT** · `1,070 B` · `685c342129c5` | — | Global | 🟢 **Rescued from this base's ungranted class.** An xAPI **Learning Record Store** service under MIT. This base called its Caliper/QTI/xAPI cluster "its most dead cluster"; the live, permissive half was filed as an absence. **This is the component an audit-trail claim actually needs** |
@@ -185,7 +219,7 @@ title found by scanning for a line that *is* a licence title at any depth (`T863
 | **elimu-ai** (7 repos) `NEW` | [`elimu-ai/webapp`](https://github.com/elimu-ai/webapp) · [`appstore`](https://github.com/elimu-ai/appstore) · [`launcher`](https://github.com/elimu-ai/launcher) · [`model`](https://github.com/elimu-ai/model) · [`ml-authentication`](https://github.com/elimu-ai/ml-authentication) · [`ml-storybook-reading-level`](https://github.com/elimu-ai/ml-storybook-reading-level) · [`ml-storybook-recommender`](https://github.com/elimu-ai/ml-storybook-recommender) | **MIT** · `1,065 B` each · shas in `agents/top.md` | — | EMEA | 🟢 **A 66-repository MIT African education ecosystem, pushed this week** — Android delivery without an app store, a shared data model, and **ML models for storybook reading level and recommendation**. 🔵 This base was already citing `elimu-ai` and had never placed it |
 | **rrule** `NEW` | [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | **BSD-3-Clause** · `3,493 B` · `9f2061febeeb` | — | Global | Recurrence rules — the scheduling primitive under timetabling and spaced review. 🔵 Grant served at `LICENCE`, the **British spelling**, which a US-spelling-only probe misses |
 | **annotated DL implementations** `NEW` | [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | **MIT** · `1,082 B` · `db59a04a8a2c` | — | Global | Annotated paper implementations — a teaching corpus under a permissive grant. Rescued from the ungranted class |
-| **MyScriptJS** `NEW` | [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) | **Apache-2.0 (by reference)** · `570 B` · `968021fcc1f4` | — | EMEA | Handwriting and maths-input recognition (French origin). 🟢 **Rescued: `p786` filed this `570 B` file as a "proprietary notice".** It is the standard Apache-2.0 grant-by-reference boilerplate, URL and AS-IS clause included. 🔴 **It was dismissed for being short — the exact error `T845` forbids** |
+| **MyScriptJS** 🔴 **ARCHIVED** | [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) | **Apache-2.0 (by reference)** · `570 B` · `968021fcc1f4` | — | EMEA | 🔴 **ARCHIVED UPSTREAM — read-only, last push `2021-01-04`, nearly six years stale (`T901`).** `★357`. Handwriting and maths-input recognition (French origin). 🟡 **`p786` rescued the GRANT and no pass checked MAINTENANCE — a licence rescue is not a viability rescue.** It is the standard Apache-2.0 grant-by-reference boilerplate, URL and AS-IS clause included. 🔴 **It was dismissed for being short — the exact error `T845` forbids** |
 
 ## 🟢 Permissive rows added this pass (`p789`)
 
@@ -254,7 +288,7 @@ MPL-2.0 and LGPL-2.1 at layer 2, both weak copyleft, neither triggered by the wa
 | **H5P core** | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🔴 **GPL-3.0** · `35,146 B` · `2d7f937a03c9` | EMEA | Norwegian-origin interactive content types, embedded in Moodle and Canvas |
 | **Gibbon** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 **GPL-3.0** · `35,121 B` · `59334a28613f` | Global | School management joined to teaching tools in one system |
 | **RosarioSIS** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** · `15,214 B` · `e4cd20a48bf1` | Global | Student Information System with strong Spanish and French localisation — the SIS that fits LATAM deployments |
-| **Mahara** | [`MaharaProject/mahara`](https://github.com/MaharaProject/mahara) | 🔴 **GPL-3.0** · `35,148 B` · `0881d0f9c2fe` | Global | ePortfolio. Canonical owner is `MaharaProject`; `mahara/mahara` is DEAD |
+| **Mahara** 🔴 **ARCHIVED** | [`MaharaProject/mahara`](https://github.com/MaharaProject/mahara) | 🔴 **GPL-3.0** · `35,148 B` | Global | 🔴 **ARCHIVED UPSTREAM — read-only, last push `2023-11-16` (`T901`).** ePortfolio, `★120`. 🔵 Canonical owner is `MaharaProject` (`mahara/mahara` is DEAD) — 🔴 **but resolving canonicity is not resolving maintenance.** Do not start an ePortfolio engagement here without owning the fork |
 | **Anki** | [`ankitects/anki`](https://github.com/ankitects/anki) | 🔴 **AGPL-3.0** · `1,930 B` · `a5461e33e3db` | Global | Spaced repetition; the reference implementation of the scheduling model tutors copy |
 | **BigBlueButton** | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **LGPL** · `7,652 B` · `13b55d45c046` | Global | Virtual classroom built for teaching rather than meetings. LGPL is weaker than GPL — dynamic linking is permitted |
 | **Odoo** | [`odoo/odoo`](https://github.com/odoo/odoo) | 🔴 **LGPL-3.0** · `43,529 B` · `3ce3a7dc8ecb` | Global | The ERP base under OpenEduCat. ⚠️ `T847`: states LGPL-3.0 on line 3 behind a deferral. 🔵 `HEAD` moved from `75447d905934` since `p787` |
@@ -268,7 +302,7 @@ MPL-2.0 and LGPL-2.1 at layer 2, both weak copyleft, neither triggered by the wa
 |---|---|---|---|---|
 | **Hedy** | [`hedyorg/hedy`](https://github.com/hedyorg/hedy) | 🟡 **EUPL-1.2** · `13,827 B` · `38d5db7214ff` | EMEA | Gradual programming language for classrooms; `1,697★`. A long-standing EMEA education anchor |
 | **OOAPI specification** | [`open-education-api/specification`](https://github.com/open-education-api/specification) | 🟡 **EUPL-1.2** · `13,827 B` · `d9c5b0a1a68d` | EMEA | Open Education API — a **live** interop standard |
-| **European Learning Model** `NEW` | [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | 🟡 **EUPL-1.2** · `13,865 B` · `9d7c5d220022` | EMEA | 🟢 The **European Commission's own** learning/credential data model. Re-verified out of the ungranted class. 🔵 `13,865 B` against Hedy's `13,827 B` — **two EUPL-1.2 texts differing by `38 B`**, which is why length is never a verdict |
+| **European Learning Model** 🟡 **ARCHIVED** | [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | 🟡 **EUPL-1.2** · `13,865 B` | EMEA | 🟡 **ARCHIVED UPSTREAM — last push `2024-02-14` (`T901`).** `★54`. 🔵 Milder than the other two: a published vocabulary may legitimately freeze — but say so to the client. 🟢 The **European Commission's own** learning/credential data model. Re-verified out of the ungranted class. 🔵 `13,865 B` against Hedy's `13,827 B` — **two EUPL-1.2 texts differing by `38 B`**, which is why length is never a verdict |
 
 🔵 **`T849`, carried:** EUPL-1.2 **names GPL-2.0, GPL-3.0, AGPL, EPL and CeCILL inside its
 compatibility appendix**, so a licence that *lists other licences* must be matched **before** any
@@ -278,7 +312,7 @@ family check. Verified again this pass: all copyleft controls still reproduce.
 
 | Address | Grant, on the bytes | Why it is barred |
 |---|---|---|
-| [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🔴 **PROPRIETARY** · `39,890 B` · `60e422c7d93e` | A named Student Information System with an all-rights-reserved grant. 🔵 Previously filed merely "ungranted". **A `39,890 B` licence is a long licence, not an open one** |
+| [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) ✏️ | 🟢 **GPL-3.0** · `39,890 B` · 🟢 `01fa8c8c4c6e` | ✏️ **`p794` removes the stale `PROPRIETARY` text that survived `p790`'s correction in this file.** A named Student Information System, 🔵 Previously filed merely "ungranted". **A `39,890 B` licence is a long licence, not an open one** |
 | [`metabase/metabase`](https://github.com/metabase/metabase) | 🔴 **SPLIT BY DIRECTORY** · `855 B` · `6006cc9c65dd` | AGPL-3.0 outside `enterprise/`, **Metabase Commercial License** inside it. 🟢 Reporting one family for this repo would itself be the error — the boundary is the fact. Common BI layer under learning-analytics dashboards |
 | [`Tzxser/aipha-learning-os`](https://github.com/Tzxser/aipha-learning-os) | 🔴 **PROPRIETARY** · `1,296 B` · `aa476a6a6a03` | Source-available multi-agent learning OS; now graded rather than `UNGRADED` |
 | [`luscitiosus/Dirigo`](https://github.com/luscitiosus/Dirigo) | 🔴 **CC BY-NC-SA 4.0 (Spanish), SCOPE-LIMITED** · `362 B` · `9ed32d5c2577` | Spanish school-leadership regulation. 🔴 **This base's published reason was wrong** — see `T863`. NonCommercial bars a commercial deliverable, and the BOE/BOC statutory texts are excluded from the grant entirely |

@@ -4,6 +4,82 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p794` — **Repo movement: `3` recommended repositories are ARCHIVED upstream and this base never had a field for it; the education sector's own licence (`ECL-2.0`) is invisible to every generic probe; and `164` star counts stop being carried forward.**
+
+🟢 **Controls reproduced before any verdict:** `git rev-parse HEAD:LICENSE` ≡ `git hash-object` ≡ `ls-tree` blob id on `sakaiproject/sakai` (`2d2098a9192769636e5293867809c6e571dc6d97`, `11,120 B`) · lazy blob fetch on a blobless clone returns the Spanish-MIT control bytes for `goyanedelv/paes-mcp` (`2,018 B`) · planted absent address → `rc=128`. 🟢 **`170` blobless clones in `22` seconds, `0` failures.**
+
+### 🔴 The movement that matters: three repositories stopped moving, and nobody here noticed
+
+| Repo | ★ | 🔴 Last push | Role in this base |
+|---|---|---|---|
+| 🔴 [`MaharaProject/mahara`](https://github.com/MaharaProject/mahara) | `120` | 🔴 **`2023-11-16`** | The **ePortfolio** recommendation in `repos/foundations.md` *and* `verticals/solutions.md` |
+| 🔴 [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) | `357` | 🔴 **`2021-01-04`** | The **maths-input primitive**, 🟢 **"Rescued"** at `p786` and recommended ever since |
+| 🟡 [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | `54` | 🟡 **`2024-02-14`** | The **EMEA credential vocabulary** |
+
+🔴 **`git ls-remote` returns `rc=0` with refs and a valid `HEAD` for every one of them** — indistinguishable from a healthy repository, which is why `p793`'s three-state instrument passed them. 🟢 **`archived: true` arrives free in `gh api search/repositories`.** 🟢 **Existence needs four states: LIVE-MAINTAINED · LIVE-ARCHIVED · EMPTY · ABSENT** (`T901`).
+
+🔵 **Grade the consequence by kind, not uniformly:** an archived **data model** may legitimately freeze (the Commission row); archived **application code** under CVE pressure is a fork the engagement now owns (Mahara, MyScriptJS).
+
+### 🔴 `ECL-2.0` — the sector's own licence, and no generic probe can see it
+
+🟢 **`sakaiproject/sakai` (`11,120 B`), `opencast/opencast` (`11,340 B`) and `Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider` are `ECL-2.0`** — the **Educational Community License**, Apache-2.0 modified to narrow the §3 patent grant. 🔴 **The string `"Apache License"` appears `0` times in it**; only the prose reference *"consists of the Apache 2.0 license, modified…"* survives. 🔴 **So a probe keyed on the Apache title line returns `UNRECOGNISED`, and a probe keyed on byte size returns the wrong answer:**
+
+| Licence | Bytes | Δ vs canonical Apache-2.0 |
+|---|---|---|
+| Apache-2.0 (`oppia/oppia`) | `11,358` | — |
+| 🔴 **ECL-2.0 (`opencast`)** | 🔴 **`11,340`** | 🔴 **`18` bytes · `0.16%`** |
+| ECL-2.0 (`sakai`) | `11,120` | `238` bytes · `2.1%` |
+
+🔴 **Size discriminates GPL-3.0 from AGPL-3.0 (`T894`) and FAILS on ECL-2.0 vs Apache-2.0.** 🟢 **The only reliable discriminator is the title line `"Educational Community License"`.**
+
+🔵 **And the narrowed patent grant is commercially real, which no pass here had stated.** ECL-2.0 §3 closes with: *"Any patent license granted hereby with respect to contributions by an individual employed by an institution or organization is limited to patent claims where the individual that is the author of the Work is also the inventor of the patent claims licensed, and where the organization or institution has the right to grant such license under applicable grant and research funding agreements."* 🟡 **Copyright permissions are identical to Apache-2.0; patent coverage is materially thinner — and Sakai and Opencast are overwhelmingly university-contributed on grant-funded work.** 🟢 **Ship them. Do not tell procurement "it's basically Apache."**
+
+### 🟢 Foundational-layer licence record cross-checked against GitHub's own classifier
+
+🟢 **`118` of `118` agree · `0` disagree.** 🟢 **`23` rows where the bytes beat `NOASSERTION`**, and the platform rows among them are the ones that change a deployment decision:
+
+| Repo | ★ | GitHub | 🟢 On the bytes |
+|---|---|---|---|
+| [`metabase/metabase`](https://github.com/metabase/metabase) | `50,301` | 🔴 `NOASSERTION` | 🔴 **AGPL-3.0** — §13 reaches a hosted service |
+| [`odoo/odoo`](https://github.com/odoo/odoo) | `55,743` | 🔴 `NOASSERTION` | **LGPL-3.0** |
+| [`ankitects/anki`](https://github.com/ankitects/anki) | `32,762` | 🔴 `NOASSERTION` | 🔴 **AGPL-3.0** |
+| [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | — | 🔴 `NOASSERTION` | 🔴 **AGPL-3.0** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | — | 🔴 `NOASSERTION` | **LGPL-3.0** |
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | — | 🔴 `NOASSERTION` | 🟢 **MIT** — still the only permissive school ERP/SIS here |
+| [`getodk/collect`](https://github.com/getodk/collect) | — | 🔴 `NOASSERTION` | 🟢 **Apache-2.0** |
+| [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | `158,480` | 🔴 `NOASSERTION` | 🔴 **BSD-3-Clause + branding rider** (`T900`) — 🟢 **the classifier was the more honest one here** |
+
+### 🔴 `T904` — the ungranted set reproduced exactly, and `formalms` shows the shape that fools both probes
+
+🟢 **`20` LIVE repositories serve no recognised root grant, and all `20` were already recorded here. `p794` adds no absence and removes none.** The two outside the base's own `19`-row list are both recorded elsewhere in the file set: [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) — 🔴 **its only licence paths are vendored CKEditor plugin grants, which say nothing about the host** — and [`formalms/formalms`](https://github.com/formalms/formalms).
+
+🔵 **`formalms` deserves the note:** its licences sit at `html/lib/System/license/license_<language>.txt`, **one file per language, none at root.** 🟢 **It is simultaneously the one shape where a multilingual probe pays off and the one shape that grants nothing to the host** (`T886` — non-root is vendored). 🔴 A probe tuned for language and blind to position would "find" a grant and be wrong twice.
+
+### 🟢 Star counts — carried-forward figures replaced with measured ones
+
+🟢 **`gh api search/repositories` takes `10` × `repo:` qualifiers per call and returns the exact integer plus SPDX, `pushed_at` and `archived`. `164` of `170` re-measured; the standing 🔴 README limitation is lifted.**
+
+| Repo | ★ (exact, `2026-11-12`) | Licence |
+|---|---|---|
+| [`ollama/ollama`](https://github.com/ollama/ollama) | **`186,787`** | MIT |
+| [`vllm-project/vllm`](https://github.com/vllm-project/vllm) | **`96,826`** | Apache-2.0 |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) 🆕 | **`78,560`** | MIT |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | **`41,231`** | GPL-3.0 |
+| [`jupyter/notebook`](https://github.com/jupyter/notebook) | **`13,464`** | BSD-3-Clause |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | **`9,274`** | LGPL-3.0 |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **`7,607`** | GPL-3.0 |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **`6,989`** | Apache-2.0 |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **`1,239`** | 🟢 **ECL-2.0 — classifier agrees with the bytes** |
+
+### 🔴 `T905` — the `sha=` provenance column cannot do the job it exists for
+
+🟢 **`8` of `8` byte sizes reproduced exactly. `1` of `8` shas reproduced as a git blob sha.** `frappe/education`'s one `19`-byte file carries **three** different published hash values — git blob sha (correct), `sha256` of the content, and one matching neither. 🔴 **A column that mixes hash functions cannot prove bytes have not changed, and a future pass "re-verifying" against it will manufacture mismatches out of nothing.** 🟢 **Byte size is the anchor.** `p794`'s shas are `git rev-parse HEAD:<path>` truncated to `12`.
+
+### 🔴 `T906` — the primary-source channel is a policy denial, not an unreachable internet
+
+🟢 **Positive controls in the same minute:** `registry.npmjs.org` `200`, `pypi.org` `200`, `raw.githubusercontent.com` `301`. 🔴 **Denied at `CONNECT` with a gateway `403`:** `ec.europa.eu`, `education.ec.europa.eu`, `op.europa.eu`, `data.consilium.europa.eu`, `europarl.europa.eu`, `pib.gov.in`, `moe.gov.sg`, `ontario.ca`, `edresearch.edu.au`. 🔵 **The dependency audits work because `registry.npmjs.org`, `pypi.org` and `files.pythonhosted.org` sit in the gateway's `noProxy` set.** 🟢 **This is a session configuration a human can change, so it is logged as an action (`p794-F`), not as a standing limitation.**
+
+---
 ## 🆕 `2026-11-12` · `p793` — **`ACTION p792-A` discharged on the row that carries this base's embedding argument. `kolibri`'s "2 LGPL of 32" is EXACT — and the `208` npm runtime packages nobody had resolved are clean except for one plugin.**
 
 🟢 **Controls reproduced before any verdict:** `HKUDS/DeepTutor` `11,408 B` · `oppia/oppia` `LICENSE` `11,358 B` · `csev/tsugi` `10,273 B` Apache (`72` vendored non-root grants, correctly constrained to their subtrees) · `vishalsachdev/canvas-mcp` `1,071 B` MIT. 🟢 **New channel this pass: npm tarball download** — the only way to answer "does the thing that ships carry a grant?".

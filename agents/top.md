@@ -4,6 +4,134 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p794` — **a licence CORRECTION on the `★158,480` row this base green-flagged, and a third existence state the instrument still could not see: `ARCHIVED`.**
+
+🟢 **`ACTION p793-A` and `ACTION p793-B` both discharged across `170` addresses** — every repository address in the six live files, not just `agents/top.md`'s `122`. 🔵 **Three instruments ran, each on a different channel**: three-state existence (`git ls-remote` + ref count), a **multilingual** root-grant probe on blobless trees + lazy blob reads, and `gh api search/repositories` for exact stars **and** GitHub's own SPDX verdict. Machine output: [`evidence/master-row-measurements.2026-11-12-p794.tsv`](../evidence/master-row-measurements.2026-11-12-p794.tsv).
+
+| Gate | Result |
+|---|---|
+| 🟢 Addresses swept, all three instruments | **`170`** · 🟢 **`0` clone failures** |
+| 🟢 Existence re-graded three-state (`p793-A`) | **`168` LIVE · `2` EMPTY · `0` ABSENT** — 🟢 **`0` corrections** |
+| 🔴 **Rows ARCHIVED upstream — an axis no instrument here has ever read** | 🔴 **`3`**, and the word *archived* appeared **`0` times** in this base |
+| 🟢 Licence grades cross-checked against GitHub's SPDX classifier | 🟢 **`118` of `118` AGREE · `0` disagree** |
+| 🟢 Rows where the **bytes** beat GitHub's `NOASSERTION` | 🟢 **`23`** |
+| 🔴 **Licence grades this pass CORRECTED** | 🔴 **`1`** — [`open-webui/open-webui`](https://github.com/open-webui/open-webui) (`T900`) |
+| 🟢 Star counts re-measured **exactly** (no longer carried forward) | 🟢 **`164` of `170`** · `6` LIVE but absent from the search index (`T903`) |
+| 🔴 Defects in **this pass's own instruments**, all caught before publication | 🔴 **`5`** |
+
+### 🔴 `T900` — the correction: `open-webui` is **not** BSD-3-Clause, and the clause that makes the difference bars white-labelling
+
+This base publishes Open WebUI twice — [`repos/foundations.md`](../repos/foundations.md) *"the quickest compliant front end for a school-hosted model"* and [`verticals/solutions.md`](../verticals/solutions.md) 🟢 *"BSD-3-Clause"* — on a `2,819 B` licence file. 🔴 **Canonical BSD-3-Clause has exactly three numbered clauses. This file has four.**
+
+> `4.` Notwithstanding any other provision of this License, and as a material … from altering, removing, obscuring, or replacing any **"Open WebUI" branding**, including but not limited to the name, logo, or any visual … alteration of the "Open WebUI" branding shall constitute a **material** breach.
+
+🔴 **Corrected grade: `BSD-3-Clause + branding rider` — not OSI-conformant, and it prohibits precisely the act a Globant engagement performs on a delivery surface: putting the client's name on it.** 🔵 Two details make this a trap rather than an oversight:
+
+| Detail | Why it defeats a reader |
+|---|---|
+| 🔴 The repository ships **three** root licence files — `LICENSE` (`2,819 B`, ridered), `LICENSE_HISTORY` (`2,872 B`, 🟢 **clean BSD-3-Clause**) and `LICENSE_NOTICE` (`721 B`) | 🔴 **Opening the wrong one of three gives the wrong answer**, and `LICENSE_HISTORY` is the one that reads clean |
+| 🟢 GitHub's classifier says `NOASSERTION` here | 🟢 **The classifier was more honest than this base's hand grade** — the one row in `141` where that is true |
+| 🟢 Byte size would have caught it | 🟢 Canonical BSD-3-Clause is ≈`1,500 B`; this is **`2,819 B`** — `p790-F`'s size-triggered gate works, it was simply never pointed here |
+
+🔵 **`T900` is the seventh recorded way to misread a licence, and the first that is additive: a rider does not change the title line, the clause language or the family — it appends.** Family matching cannot see it. 🟢 **Clause count can**: `3` for BSD-3, `2` for BSD-2, anything more is a rider.
+
+### 🔴 `T901` — `ARCHIVED` is a third existence state, and this base recommends three archived repositories
+
+🟢 `p793` split existence into LIVE · EMPTY · ABSENT and that was right. 🔴 **It is still not enough: `git ls-remote` returns `rc=0` with `refs ≥ 1` for a repository that is archived, read-only and years stale — a signature identical to a healthy one.** The signal is free in the same call that returns stars.
+
+| Row | Where this base recommends it | 🔴 Last push | What it costs |
+|---|---|---|---|
+| 🔴 [`MaharaProject/mahara`](https://github.com/MaharaProject/mahara) `★120` | `repos/foundations.md` + `verticals/solutions.md` — *"ePortfolio, the natural home for skills-based credentialing"* | 🔴 **`2023-11-16`** | 🔴 **Three years stale, read-only.** 🔵 And this base did canonicity work on this very row (*"`mahara/mahara` is DEAD"*) — so **resolving to the canonical owner is not resolving to a maintained repository** (`T887` extended) |
+| 🔴 [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) `★357` | `repos/foundations.md` 🆕 + `verticals/solutions.md` — *"the input primitive for a maths tutor on a tablet"*, 🟢 **"Rescued"** at `p786` | 🔴 **`2021-01-04`** | 🔴 **Nearly six years stale.** 🔵 **A licence rescue is not a viability rescue** — `p786` cleared the grant axis and no pass has ever checked the maintenance axis |
+| 🟡 [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) `★54` | `repos/foundations.md` 🆕 + `verticals/solutions.md` — *"the vocabulary an EU public-sector client will expect"* | 🟡 **`2024-02-14`** | 🟡 **Milder: a published data model may legitimately freeze.** 🔴 But an EMEA client is being pointed at an archived Commission repository without being told it is archived |
+
+🔵 **The fix is one field, and it is already in this pass's evidence:** `archived` from `gh api search/repositories`. 🟢 **Existence now needs four states — LIVE-MAINTAINED · LIVE-ARCHIVED · EMPTY · ABSENT.**
+
+### 🟢 `p793-B` discharged — and the multilingual probe's real finding is the opposite of the one predicted
+
+🔴 **`p793-B` predicted that English-only clause matching *under-reports* usable repositories, LATAM especially.** 🟢 **Measured across `170` addresses with grant phrases in `20` languages — English, Spanish, Portuguese, German, French, Italian, Dutch, Polish, Russian, Ukrainian, Turkish, Indonesian, Chinese, Japanese, Korean, Hindi, Arabic, Vietnamese, Thai, Hebrew — plus the Creative Commons families: exactly ONE non-English grant exists on this whole corpus**, [`goyanedelv/paes-mcp`](https://github.com/goyanedelv/paes-mcp) (Spanish MIT), which `T864` already had. 🟢 **The prediction is refuted at the grant layer: `19` added languages bought `0` new rows.**
+
+🔴 **But the sweep found language-blindness doing something far worse than under-reporting, and `T902` is the sharper form of `T848`:**
+
+| | |
+|---|---|
+| Row | [`luscitiosus/Dirigo`](https://github.com/luscitiosus/Dirigo) `362 B`, Spain 🇪🇸 |
+| 🔴 What an English-only CC probe returns | 🔴 **`CC-BY-4.0`** — permissive, commercially usable |
+| 🟢 What the bytes say | 🟢 **`CC BY-NC-SA 4.0`** — *"licencia Creative Commons Atribución-**NoComercial**-**CompartirIgual** 4.0"* |
+| 🔴 Why | 🔴 **The sub-family tokens are English-only.** `NoComercial` is not `NonCommercial`; `CompartirIgual` is not `ShareAlike`. Matched `0` times each |
+
+🔴 **Language-blindness on a restriction does not cost you a row — it STRIPS THE RESTRICTION and hands you a NonCommercial repository graded as permissive.** 🟢 Under-reporting loses an opportunity; over-reporting puts a commercially barred repository into a client deliverable. 🔵 **This base is not exposed** — `T863` already graded `Dirigo` correctly by hand — but any probe built from `p793-B`'s brief would have been. 🟢 **Remedy shipped**: NC · ND · SA token sets in `13` languages, re-run, `Dirigo` now grades `CC-BY-NC-SA-4.0`.
+
+### 🔴 The `5` defects in this pass's own instruments
+
+| # | Defect | Caught by |
+|---|---|---|
+| 1 | 🔴 **The address extractor admitted a command template.** `github.com/OWNER/REPO` from a fenced code block in `repos/foundations.md` swept as an address and returned `ABSENT` — the pass's only `rc=128` | 🟢 Reading the one `ABSENT` row instead of counting it. 🔵 This base **already** rejects that shape; my extractor did not |
+| 2 | 🔴 **The clause set had no `ECL-2.0` — this industry's own licence.** `sakaiproject/sakai`, `opencast/opencast` and `SakaiXAPI-Provider` came back `UNRECOGNISED`. 🔴 **ECL-2.0 is Apache-2.0 with a narrowed patent grant and the string `"Apache License"` appears `0` times in it** | 🟢 All three were already graded `ECL-2.0` by hand here. 🔵 A *multilingual* probe that omits the sector's licence is tuned for the wrong axis |
+| 3 | 🔴 **A grant-shaped root filename is not a grant.** `NOTICE`, `COPYRIGHT`, `LICENSE_HEADER`, `LICENSE.header`, `COPYRIGHT_NOTICE`, `LICENSE-EMBEDDING`, `LICENSE_NOTICE` and a **`19`-byte pointer** all admitted as grants | 🟢 Reading all `17` `UNRECOGNISED` files. 🔵 **`0` were new absences** — every one sat on a row this base had already graded correctly |
+| 4 | 🔴 **CC sub-family detection was English-only** → `T902`, above | 🟢 A control on a row with a known Spanish grant |
+| 5 | 🔴 **Family matching is blind to additive riders** → `T900`, above | 🟢 Clause counting, after GitHub's `NOASSERTION` disagreed with my confident `BSD-3-Clause` |
+
+🔵 **`4` of the `5` are one mistake: I graded on a proxy — a filename, a clause set, a family, an English token — instead of reading the bytes.** That is `p792-G` and `p793-G` arriving together, and the instrument that caught most of them was **this base's own published record**, which disagreed with my probe and was right every time.
+
+### 🟢 `4` rows added — byte-verified, star-exact
+
+| Agent | Repo | Grant, on the bytes | ★ (exact) | Last push | Region | Verdict for Globant |
+|---|---|---|---|---|---|---|
+| 🟢 **tutor-mcp** 🆕 | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** · `1,073 B` · `7f7f7a24de57` | `102` | 🟢 **`2026-11-12`** | EMEA 🇫🇷 | 🟢 **The category this base was missing.** It has MCP servers that reach *into* systems of record (`p792`) and tutors that *are* applications — this is **the tutor itself as an MCP server**, so an Intelligent Tutoring System attaches to any MCP-speaking host instead of owning the front end. `1,279`-file tree, pushed today |
+| 🟢 **kaogong-skill** 🆕 | [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | 🟢 **MIT** · `1,083 B` · `68908d0d445e` | `241` | `2026-10-12` | APAC 🇨🇳 | 🟢 **Teaching-as-a-skill, third instance, and the first for high-stakes exam preparation** — Chinese civil-service (考公) exam prep packaged as a coding-agent skill set. `51` files. 🔵 Confirms the packaging shift `p792` recorded is not a one-off |
+| 🟡 **ai-tutor-agent** 🆕 | [`vulinh1704/ai-tutor-agent`](https://github.com/vulinh1704/ai-tutor-agent) | 🟢 **MIT** · `1,071 B` · `9075c1821610` | 🔴 **`0`** | `2026-11-09` | APAC 🇻🇳 | 🟡 **Listed for its shape, not its traction — and the `0` is published, not hidden.** FastAPI + LangGraph, Socratic hints, rubric grading, session memory, offline demo mode: the cleanest minimal reference for the architecture this base recommends. `58` files |
+| 🟡 **ai-engineering-from-scratch** 🆕 | [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | 🟢 **MIT** · `1,070 B` · `61442168db9a` | 🟢 **`78,560`** | 🟢 **`2026-11-12`** | Global | 🟡 **The largest MIT education-adjacent repository this base has ever measured — and it is NOT a client deliverable.** `542` lessons, `11,299` files, teaching AI engineering to engineers. 🔵 **Place it correctly: an internal enablement asset for the studio's own staff**, not an education-sector product |
+
+### 🟢 Star counts — no longer carried forward
+
+🔴 **This base's README states star counts are carried forward because `github.com` and `api.github.com` return `403`.** 🟢 **That limitation is now lifted: `gh api search/repositories` with batched `repo:` qualifiers answers `10` addresses per call and returns the exact integer, the SPDX verdict, the push date and `archived`.** `164` of `170` re-measured.
+
+| Row | Published here | 🟢 Re-measured `2026-11-12` |
+|---|---|---|
+| [`ollama/ollama`](https://github.com/ollama/ollama) | — | 🟢 **`186,787`** MIT |
+| [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | — | 🟢 **`158,480`** 🔴 `NOASSERTION` → `T900` |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | — | 🟢 **`79,500`** MIT |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `58,585` | 🟢 **`58,596`** Apache-2.0 |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `43,365` | 🟢 **`43,389`** MIT |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | — | **`7,607`** GPL-3.0 |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | — | **`1,239`** 🟢 **`ECL-2.0` — GitHub's classifier agrees with the bytes** |
+
+### 🔴 `T903` — a search-index miss is not an absence, and owner casing is not canonical
+
+🔴 **`6` of `170` addresses are absent from `search/repositories` and every one of them clones and serves refs**, including [`openedx/edx-platform`](https://github.com/openedx/edx-platform) — among the largest repositories in this sector: `DaRL-GenAI/instructional_agents` · `NikolasSchaeffner/lehrer-agent` · `cosark/OpenTutor` · `csev/tsugi` · `foradian/fedena` · `openedx/edx-platform`. 🟢 **Verified LIVE on the git channel with `git ls-remote --symref`.** 🔵 `p793-G` instantiated for a new instrument: **name the blind spot before recording the zero.**
+
+🟢 **And the same call hands over a canonicity signal for free — it normalises owner casing.** Two addresses this base publishes come back cased differently: `1edtech/caliper-spec` → 🟢 **`1EdTech/caliper-spec`**, `anonymousonyx22/brightspace-d2l-mcp` → 🟢 **`AnonymousOnyx22/brightspace-d2l-mcp`**.
+
+### 🟢 `T904` — the `20` ungranted LIVE rows reproduce this base's record exactly
+
+🟢 **`20` LIVE repositories serve no recognised root grant, and all `20` were already recorded here as ungranted, refused or absent. `p794` adds no absence and removes none.** The two the base's own `19`-row list does not name — [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) and [`formalms/formalms`](https://github.com/formalms/formalms) — are both recorded elsewhere in this file set (*"NO GRANT SERVED"* at this exact address, and the any-depth-title gate). 🔵 **`formalms` adds one detail worth keeping:** its licences live at `html/lib/System/license/license_<language>.txt` — a **localised, non-root licence directory**, the one shape where a multilingual probe would pay off and the one shape that still grants nothing to the host.
+
+### 🔴 Corrected in place below — stale rows that contradict this base's own corrections
+
+| Row | 🔴 Stale text still published | 🟢 This pass |
+|---|---|---|
+| `Bestisco/My-WASSCE-Companion` · `Elite2828/ACE-AI-Tutor` | 🔴 *"DEAD — `git ls-remote` `rc=2`, re-probed and confirmed"* in the rejected-rows table, **contradicting `p793`'s own correction `20` lines above** | 🟢 **`rc=0`, `0` refs, `0` `HEAD` — ALIVE and EMPTY, reproduced.** 🔴 **`rc=2` is not reproducible on any of the three states** and should never have been published |
+| `Kosudo/nextSIS` | 🔴 **`PROPRIETARY`** still published in `repos/foundations.md` and `verticals/solutions.md` after `p790` corrected it | 🟢 **`GPL-3.0`**, `39,890 B`, reproduced on the bytes |
+
+### 🔴 `T905` — the `sha=` column is not one hash function, and some of it is neither
+
+🔴 **Byte sizes in this base reproduce exactly. The `12`-char `sha` beside them does not.** Measured against `git rev-parse HEAD:<path>` (controlled: `rev-parse` ≡ `git hash-object` ≡ `ls-tree` blob, exact on `sakaiproject/sakai`):
+
+| Row | Bytes | Published `sha` | 🟢 git blob sha | What the published value actually is |
+|---|---|---|---|---|
+| `frappe/education` | `19` 🟢 | `beca17940a71` | 🟢 `beca17940a71` | 🟢 **git blob sha — correct** |
+| `frappe/education` | `19` 🟢 | `1fcecf395312` | `beca17940a71` | 🔴 **`sha256` of the content** — same file, same pass |
+| `frappe/education` | `19` 🟢 | `61408d3da518` | `beca17940a71` | 🔴 **Neither** — unidentified |
+| `VictorOsondu/ai-adoption-education` | `752` 🟢 | `2e9c34096bf9` | `e51a2ad5fd53` | 🔴 **`sha256`** |
+| `sakaiproject/sakai` | `11,120` 🟢 | `593c74e1c7a5` | `2d2098a91927` | 🔴 **Neither** |
+| `luscitiosus/Dirigo` | `362` 🟢 | `9ed32d5c2577` | `3e22da8fe678` | 🔴 **Neither** |
+| `Kosudo/nextSIS` | `39,890` 🟢 | `60e422c7d93e` | `01fa8c8c4c6e` | 🔴 **Neither** |
+| `THU-MAIC/OpenMAIC` | `1,065` 🟢 | `717b69cbe2f4` | `76abc5f13261` | 🔴 **Neither** |
+
+🔴 **One file in one pass carries three different hash values, so this is internal, not drift: the column mixes at least two hash functions and contains values matching neither.** 🟢 **Byte size is the reproducible provenance anchor — `8` of `8` exact.** 🔵 **Treat every `sha=` in this base as unverified until re-measured**, and record which function produced it. `p794`'s own shas are `git rev-parse HEAD:<path>`, truncated to `12`.
+
+---
 ## 🆕 `p793` — **the whole list re-measured on an independent instrument in `11` seconds: `103` root grants sized and sha'd, `0` licence grades corrected, `2` existence verdicts corrected.**
 
 🟢 **`ACTION p792-B` discharged across all `122` repository addresses in this file**, carrying `p791-E` (tree audit) and `p791-F` (byte sizes) in one sweep as instructed. 🔵 **Method is deliberately different from the channel that produced these rows**, so agreement means something: blobless tree enumeration (`git clone --filter=blob:none --no-checkout --depth 1` + `git ls-tree -r --name-only`), root-only grant selection, extension filtering, non-root grants treated as **vendored**, and the grant bytes then read on the `raw` channel. Full machine output at [`evidence/licence-tree-gate-corrected.2026-11-12-p793.tsv`](../evidence/licence-tree-gate-corrected.2026-11-12-p793.tsv).
@@ -529,7 +657,7 @@ split-by-directory finding, **split by section instead.**
 | [`luscitiosus/Dirigo`](https://github.com/luscitiosus/Dirigo) | ALIVE · `9ed32d5c2577` · `362 B` | 🔴 **CORRECTION — this base's published reason was WRONG.** `p786` recorded *"a file named `LICENSE` containing a Latin boast and no grant of any kind"*. The Latin boast is line 1; **lines 3–5 grant CC BY-NC-SA 4.0, in Spanish, with a link to the Spanish legal code**, and a scope clause excluding the downloaded BOE/BOC statutory texts. Still barred commercially — but **NonCommercial is a harder bar than an absence, and the stated reason was false** (`T863`) |
 | [`cosark/OpenTutor`](https://github.com/cosark/OpenTutor) | ALIVE · MIT · fork of `zijinz456/OpenTutor` at `0★` | 🔴 **Not a distinct project** |
 | [`gabrielmahia/shule-ai`](https://github.com/gabrielmahia/shule-ai) | ALIVE · `01d074b6aaf3` · **`209 B` · `9dd285c3704d`** | 🔴 **`CC BY-NC-ND 4.0` — NonCommercial AND NoDerivatives.** Kenya's CBC/KCSE tutor answering in Kiswahili. **Barred twice: not in a paid engagement, and not modifiable at all.** 🔵 Indexed `NOASSERTION` by the search channel |
-| [`Bestisco/My-WASSCE-Companion`](https://github.com/Bestisco/My-WASSCE-Companion) · [`Elite2828/ACE-AI-Tutor`](https://github.com/Elite2828/ACE-AI-Tutor) | 🔴 **DEAD — `git ls-remote` `rc=2`, re-probed and confirmed** | 🔴 **Returned by the search channel this pass and gone from the byte channel.** `2` of the `5` Ghanaian addresses probed. 🔵 A search result is a claim; `rc` is the fact |
+| [`Bestisco/My-WASSCE-Companion`](https://github.com/Bestisco/My-WASSCE-Companion) · [`Elite2828/ACE-AI-Tutor`](https://github.com/Elite2828/ACE-AI-Tutor) | ✏️ **ALIVE but EMPTY — `rc=0`, `0` refs, no `HEAD`** · 🔴 **`p794` CORRECTS the stale text here**, which still read *"DEAD — `rc=2`, re-probed and confirmed"* and contradicted `p793`'s correction in this same file | 🟡 **Returned by the search channel and ALIVE-BUT-EMPTY on the byte channel — authors who claimed a name and never pushed.** `2` of the `5` Ghanaian addresses probed. 🔵 A search result is a claim; `rc` is the fact |
 | [`lehrer-tools/lehrer-agent`](https://github.com/lehrer-tools/lehrer-agent) ≡ [`NikolasSchaeffner/lehrer-agent`](https://github.com/NikolasSchaeffner/lehrer-agent) | Both ALIVE · **identical `HEAD` `3ddcfbbabc56`** · neither serves a licence | 🔴 **ONE German teacher agent, carried by this base as TWO ungranted rows.** 🟢 **`ACTION p787-G` discharged mechanically (`T865`):** `p787` said only a page read could separate a fork from a project. **Identical `HEAD` sha proves it on the byte channel**, and the page channel is `403` this pass |
 | [`narumi-mase/osaka-lesson-dataset`](https://github.com/narumi-mase/osaka-lesson-dataset) | ALIVE · `212cb10e48eb` · no licence on 10 filenames × 3 branches | 🔴 Japan's best education-AI artefact, **ungranted**. An upstream licence request, not a permanent exclusion |
 | [`silja-graf/Didaktikus-…-LP21`](https://github.com/silja-graf/Didaktikus-KI-Spezialist-f-r-Unterrichtsplanung-und-Beurteilung-nach-LP21) | ALIVE · `8d747cda689e` · no licence | 🔴 A **Swiss LP21-curriculum** lesson-planning and assessment agent — the single most engagement-shaped EMEA artefact found, and ungranted. 🔵 **Ask for this one** |

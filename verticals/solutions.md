@@ -4,6 +4,40 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p794` — **The delivery surface this file recommends cannot carry a client's name, and the ePortfolio it recommends is archived.**
+
+🟢 **All platform rows re-measured on the byte channel plus GitHub's own classifier: `118/118` licence agreement, `0` clone failures, `1` correction — and the correction is on the row a client sees first.**
+
+### 🔴 `T900` — Open WebUI cannot be white-labelled, and this file told clients to use it as the front end
+
+🔴 This file published [`open-webui/open-webui`](https://github.com/open-webui/open-webui) (`★158,480`) as 🟢 `BSD-3-Clause`, *"the fastest data-resident front end"*. 🔴 **Canonical BSD-3-Clause has three numbered clauses; the served `LICENSE` (`2,819 B`) has four.** Clause `4` bars *"altering, removing, obscuring, or replacing any 'Open WebUI' branding"* and makes alteration a **material breach**.
+
+🔵 **For this file specifically, that is the difference between a usable row and a trap**, because a delivery surface is the one component a client expects to carry its own name. 🟢 **Two ways to keep it:** ship it **with Open WebUI branding intact** where that is acceptable, or 🟢 **put the tutor in the LMS the client already owns** — which is what `P794-1` does and why that pattern needs no chat surface at all.
+
+🔴 **And the trap is laid three files deep:** `LICENSE` (`2,819 B`, ridered) · **`LICENSE_HISTORY` (`2,872 B`, grades as clean BSD-3-Clause)** · `LICENSE_NOTICE` (`721 B`, a title line only). 🟢 GitHub's classifier says `NOASSERTION` — **more honest than this file's grade.**
+
+### 🔴 `T901` — platform rows have no maintenance field, and three are archived
+
+🔴 **Mahara** — the ePortfolio recommendation — is 🔴 **ARCHIVED, last push `2023-11-16`**. 🔴 **MyScriptJS** — the maths-input primitive — is 🔴 **ARCHIVED, last push `2021-01-04`**. 🟡 **European Learning Model** — the EMEA credential vocabulary — is 🟡 **ARCHIVED, last push `2024-02-14`**. 🔴 **All three return `rc=0` with refs and a valid `HEAD`, so every existence instrument this base has ever run called them healthy.** 🟢 All three are now labelled in place with their last-push dates.
+
+🔵 **What this changes in a proposal:** an archived platform is not disqualified — it is a **fork you own from day one**, with the maintenance cost priced in. 🔴 **Saying so is the deliverable; discovering it in month three is the failure.**
+
+### 🟢 `ECL-2.0` — why Sakai and Opencast stay recommended, with one sentence added for counsel
+
+🟢 **Both remain the permissive answer in a copyleft sector**, and both are `ECL-2.0` — verified on the bytes (`11,120 B` and `11,340 B`) and confirmed by GitHub's classifier. 🔵 **The sentence to add:** ECL-2.0's §3 narrows Apache-2.0's patent grant so that, for institution-employed contributors, it reaches only claims where the author is also the inventor **and** the institution may grant under its research-funding agreements. 🟡 **Copyright permissions are identical to Apache-2.0; patent coverage is thinner, and these are university-contributed codebases.** 🟢 Ship them — and do not describe them as Apache-equivalent in a procurement response.
+
+### 🔴 Corrected in this file
+
+| Row | Was | 🟢 Now |
+|---|---|---|
+| **Open WebUI** | 🟢 `BSD-3-Clause` | 🔴 **`BSD-3-Clause + branding rider`, non-OSI — not white-labellable** |
+| **nextSIS** | 🔴 `PROPRIETARY`, *"named here only so it is not mistaken for an option"* | 🟢 **`GPL-3.0` — it IS an option**; deploy separately, integrate at the boundary (stale since `p790`) |
+| **Mahara** · **MyScriptJS** · **European Learning Model** | no maintenance field | 🔴 **ARCHIVED**, with last-push dates |
+
+### 🟢 Platform licence reality, re-measured — the rule this file exists to state is unchanged
+
+🔴 **The platform layer is still copyleft and the agent layer is still permissive.** Measured this pass: `moodle/moodle` GPL-3.0 (`★7,607`) · `openedx/edx-platform` AGPL-3.0 · `chamilo/chamilo-lms` GPL-3.0 (`35,147 B`, affero×`3` — 🟢 the `T894` discriminator reproduced) · `frappe/erpnext` GPL-3.0 (`★41,231`) · `odoo/odoo` **LGPL-3.0** · `openeducat/openeducat_erp` **LGPL-3.0** · `ankitects/anki` **AGPL-3.0** · `metabase/metabase` **AGPL-3.0** (`★50,301`) · `bigbluebutton/bigbluebutton` LGPL-3.0 (`★9,274`) · 🟢 **permissive: `sakaiproject/sakai` and `opencast/opencast` ECL-2.0, `getodk/collect` Apache-2.0, `Gego-K12/gegok12` MIT, `learningequality/kolibri` MIT, `jupyter/notebook` BSD-3-Clause.** 🟢 **`Gego-K12/gegok12` remains the only permissive school ERP/SIS in this file and the only place an agent can live *inside* the system of record.**
+
 ## 🆕 `p793` — **The MCP edge was read, not assumed: the canonical Canvas server has real data-governance engineering and its hardened settings are self-declared placeholders.**
 
 `p792` added MCP as "the Odoo pattern's edge — permissive even when the platform is not". 🔴 **`ACTION p792-D` required that claim be measured before any security offer was written, starting with the auth model.** Measured.
@@ -143,7 +177,7 @@ architecture**, not a convenience.
 | **Gibbon** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 GPL-3.0 · `35,121 B` · `59334a28613f` | Global | School management and teaching in one system; common in international K-12 |
 | **Frappe Education** | [`frappe/education`](https://github.com/frappe/education) | 🔴 **GPL-3.0** · **`19 B`** · `61408d3da518` | APAC | Frappe's school-management module: admissions, programmes, fees, assessment. 🔵 **The shortest grant in this base and a real one** — the whole `license.txt` reads `License: GNU GPL V3` |
 | **ERPNext** | [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 GPL-3.0 · `34,916 B` · `447313109fdd` | APAC | Finance, HR and procurement for school groups |
-| 🔴 **nextSIS** | [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🔴 **PROPRIETARY** · `39,890 B` · `60e422c7d93e` | Global | 🔴 **Named here only so it is not mistaken for an option.** All rights reserved. Previously filed in this base as merely "ungranted" |
+| ✏️ **nextSIS** | [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🟢 **GPL-3.0** · `39,890 B` · 🟢 `01fa8c8c4c6e` | Global | ✏️ **`p794` removes the stale `PROPRIETARY` row that survived `p790`'s correction.** 🟢 **It IS usable** — copyleft, so deploy separately and integrate at the boundary. Previously filed in this base as merely "ungranted" |
 
 ## Assessment, content and classroom
 
@@ -159,8 +193,8 @@ architecture**, not a convenience.
 | 🔴 **INGInious** | [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | 🔴 **AGPL-3.0** · `34,764 B` · `98d56ade0351` | — | EMEA | Automated grading from UCLouvain — a real, mature European platform in the **regulated** surface. 🔴 AGPL **and** ⚠️ **SCOPE-LIMITED**: its licence covers *"most of the files"* and defers the rest to per-file notices. **Study it; do not vendor it** |
 | **Opencast** | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **ECL-2.0** · `11,340 B` · `94aecba33ed9` | — | EMEA | 🟢 Permissive lecture capture — transcription, chaptering and summarisation attach naturally |
 | **BigBlueButton** | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 LGPL · `7,652 B` · `13b55d45c046` | — | Global | Virtual classroom designed for teaching; LGPL allows dynamic linking |
-| **MyScriptJS** | [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) | 🟢 **Apache-2.0 (by reference)** · `570 B` · `968021fcc1f4` | — | EMEA | 🟢 Handwriting and **maths** input recognition, French origin — the input primitive for a maths tutor on a tablet. Rescued from this base's unusable class this pass |
-| **Mahara** | [`MaharaProject/mahara`](https://github.com/MaharaProject/mahara) | 🔴 GPL-3.0 · `35,148 B` · `0881d0f9c2fe` | — | Global | ePortfolio — the natural home for skills-based credentialing |
+| **MyScriptJS** 🔴 **ARCHIVED** | [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) | 🟢 **Apache-2.0 (by reference)** · `570 B` · `968021fcc1f4` | — | EMEA | 🔴 **ARCHIVED UPSTREAM, last push `2021-01-04` (`T901`)** — `★357`. Handwriting and **maths** input recognition, French origin, the input primitive for a maths tutor on a tablet — 🔴 **but unmaintained for nearly six years.** Rescued from this base's unusable class this pass |
+| **Mahara** 🔴 **ARCHIVED** | [`MaharaProject/mahara`](https://github.com/MaharaProject/mahara) | 🔴 GPL-3.0 · `35,148 B` | — | Global | 🔴 **ARCHIVED UPSTREAM, last push `2023-11-16` (`T901`)** — read-only, `★120`. ePortfolio, still the natural home for skills-based credentialing, 🔴 **but the engagement owns the fork from day one** |
 | **DSpace** | [`DSpace/DSpace`](https://github.com/DSpace/DSpace) | 🟢 BSD-3-Clause · `1,504 B` · `2d991b4832bb` | — | Global | Institutional repository for OER, theses and research output |
 | **Anki** | [`ankitects/anki`](https://github.com/ankitects/anki) | 🔴 AGPL-3.0 · `1,930 B` · `a5461e33e3db` | — | Global | The reference spaced-repetition scheduler. 🟢 For a permissive recurrence primitive instead, use [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) (BSD-3, `3,493 B`) |
 | **ODK Collect** | [`getodk/collect`](https://github.com/getodk/collect) | 🟢 **Apache-2.0** · `10,494 B` · `2344bb9c5da4` | — | Global | 🟢 Offline mobile data collection — the field instrument for a readiness diagnostic or a baseline survey where connectivity fails |
@@ -194,9 +228,9 @@ category deployable**, and both already exist in permissive code.
 |---|---|---|---|---|
 | **Tsugi** | [`csev/tsugi`](https://github.com/csev/tsugi) | 🟢 **Apache-2.0** · `10,273 B` · `f54555227df1` | Global | 🟢 **The single most useful licensing tool in this file.** Hosts LTI tools that any LMS can launch *across a process boundary* — so permissive or proprietary AI code serves Moodle, Canvas or Sakai **without becoming a derivative work of them** |
 | **OOAPI** | [`open-education-api/specification`](https://github.com/open-education-api/specification) | 🟡 EUPL-1.2 · `13,827 B` · `d9c5b0a1a68d` | EMEA | 🟢 A **live** open education interop standard — courses, offerings, enrolments, results |
-| **European Learning Model** | [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | 🟡 EUPL-1.2 · `13,865 B` · `9d7c5d220022` | EMEA | 🟢 **The European Commission's own** learning and credential data model — the vocabulary an EU public-sector client is most likely to be asked to speak. Rescued from the ungranted class this pass |
+| **European Learning Model** 🟡 **ARCHIVED** | [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | 🟡 EUPL-1.2 · `13,865 B` | EMEA | 🟡 **ARCHIVED UPSTREAM, last push `2024-02-14` (`T901`)**, `★54`. 🟢 **The European Commission's own** learning and credential data model — the vocabulary an EU public-sector client is most likely to be asked to speak. Rescued from the ungranted class this pass |
 | **Hedy** | [`hedyorg/hedy`](https://github.com/hedyorg/hedy) | 🟡 EUPL-1.2 · `13,827 B` · `38d5db7214ff` | EMEA | Gradual programming language for classrooms, `1,697★` |
-| **Open WebUI** | [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | 🟢 BSD-3-Clause · `2,819 B` · `b0e6098e9409` | Global | Self-hosted chat surface over a school-controlled model — the fastest data-resident front end |
+| **Open WebUI** ✏️ | [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | 🔴 **`BSD-3-Clause + BRANDING RIDER` (non-OSI)** · `2,819 B` · 🟢 `99f39e7feff2` | Global | 🔴 **CORRECTED at `p794` (`T900`).** Self-hosted chat surface over a school-controlled model — still the fastest data-resident front end, 🔴 **but clause `4` makes removing or replacing the "Open WebUI" branding a material breach, so it cannot be delivered white-labelled.** 🔵 Two of its three root licence files read clean; `LICENSE` is the one that governs |
 
 ## The rule this file exists to state — amended this pass
 
