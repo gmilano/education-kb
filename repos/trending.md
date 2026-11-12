@@ -4,6 +4,47 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p786` — **`ACTION p785-A` CLOSED on the complete unusable class: `157` addresses swept, `8` DEAD, `84` carrying a grant, `65` genuinely grant-less across `17` case variants. `12` of `13` of `p785`'s own additions reproduce exactly — and the one that does not is a `4,025★` repository that is NonCommercial, not ungranted.**
+
+### 🟢 The sweep, complete rather than sampled
+
+| | Count | Share |
+|---|---|---|
+| 🟢 Distinct addresses cited by `intel/measured-unusable.md` | **`157`** | — |
+| 🔴 DEAD on `git ls-remote --symref` | **`8`** | `5.1%` |
+| 🟢 ALIVE with a grant found across `17` case variants | **`84`** | `53.5%` |
+| 🔴 ALIVE with **no grant at any of `17` variants** | **`65`** | `41.4%` |
+
+🔵 **"Grant found" is not "usable", and this is where the previous framing was loose.** 🟢 Graded by family on the title line:
+
+| Family on the title line | Rows | Deliverable status |
+|---|---|---|
+| 🟢 **MIT** | `21` | 🟢 Usable |
+| 🟢 **Apache-2.0** | `7` | 🟢 Usable |
+| 🔴 **OTHER / BESPOKE** | `20` | 🔴 Each needs reading; this is where community licences, consortium terms and deferrals live |
+| 🔴 **AGPL** | `13` | 🔴 Network copyleft |
+| 🔴 **GPL** | `11` | 🔴 Copyleft |
+| 🔴 **CC-NonCommercial** | `4` | 🔴 Hard commercial block |
+| 🟡 **ECL-2.0** | `3` | 🟡 Permissive-with-patent-clause; education's own licence |
+| 🔴 **CC-BY-SA** | `2` | 🔴 ShareAlike |
+| 🟡 **EUPL** · **OSL-3.0** · **LGPL** | `1` each | 🟡 Copyleft, varying reach |
+
+🟢 **So `28` of the `157` carry a permissive grant** (`21` MIT + `7` Apache-2.0) — **`17.8%` of a class whose name asserts the opposite.** 🔴 **And `65` are genuinely grant-less**, which is the number that should have been the headline all along.
+
+### 🟢 Cross-pass control: `p785`'s `13` additions, re-measured
+
+🟢 **`12` of `13` reproduce exactly as `NO-GRANT` across `17` variants** — `FreedomIntelligence/Awesome-Rubrics`, `MARKTECHPOST-AI-MEDIA-INC/AI-Agents-Projects-Tutorials`, `Machine-Learning-Tokyo/Interactive_Tools`, `Nutlope/llamatutor`, `OS4ED/openSIS-Classic`, `RadiantCrystal/SafeTutors`, `TingsongYu/PyTorch-Tutorial-2nd`, `TingsongYu/PyTorch_Tutorial`, `aaryansamanta/ai-ethos`, `flyboat403/k12-skills`, `formalms/formalms`, `jecampagne/cours_mallat_cdf`.
+
+🔴 **`1` of `13` does not:** [`TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials`](https://github.com/TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials) carries `LICENSE` at `20,850 B` · `e66c269d4819`, title line **`Attribution-NonCommercial-ShareAlike 4.0 International`**. 🔵 **`datawhalechina/hello-agents` carries the same licence family at `20,849 B` · `1349a4b61484` — one byte apart, different file.** 🟢 A `92.3%` reproduction rate on an adversarial re-measurement is the strongest cross-pass agreement this base has recorded.
+
+### 🔴 `ACTION p785-B` — PARTIAL, and honestly so
+
+🟢 **The clause `p785-B` specified was implemented** — an owner must match `^[A-Za-z0-9]([A-Za-z0-9-]{0,37}[A-Za-z0-9])?$`, at most `39` characters, and a repository segment of `archive` / `blob` / `releases` / `tree` / `raw` or a `.tar` / `.gz` / `.zip` suffix is rejected. 🔴 **Run against this file's extraction it rejected `0` of `157`, because the `6` surviving artefacts `p785-B` names live in the BASE-WIDE extraction, not in this file.** 🟢 **The clause is correct and is now written down; it is not yet discharged, because it has not been run on the population that contains its targets** → `ACTION p786-B`.
+
+### 🔵 `ACTION p785-C` — NOT settled, and the blocker is now named exactly
+
+🔴 `jecampagne/cours_mallat_cdf` (`40★`): the claim channel asserts **`ECL-2.0`** with a full licence object. 🔴 **`17` case variants at root return nothing. `COPYRIGHT`, `NOTICE`, `docs/LICENSE`, `LICENSE/LICENSE`, `doc/LICENSE` all `404`. The `README.md` serves `200` at `15,732 B` and contains no occurrence of "licen" in any case.** 🔴 **The tree listing `p785-C` asked for requires `gh api repos/{owner}/{repo}/git/trees`, and this session answers that endpoint with *"GitHub access to this repository is not enabled for this session"*** — the `T839` boundary. 🟢 **Verdict: unresolvable on the channels available to this session, with the specific missing channel named.** 🔵 It is the live inverse of `T838` and remains worth settling if the repository tree ever becomes reachable.
+
 ## 🆕 `2026-11-12` · `p785` — **`ACTION p784-B` CLOSED: `142` genuine dead of `6,196` real published addresses (`2.29%`), from a complete `ls-remote` sweep with `11` planted controls all failing as designed. And the fingerprint record is replaced by a working instrument — MIT's body is an exact invariant, while two DIFFERENT Apache-2.0 files share one byte length.**
 
 ### 🟢 The base-wide sweep, complete rather than sampled

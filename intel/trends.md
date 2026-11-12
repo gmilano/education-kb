@@ -4,6 +4,40 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p786` — **Eight trends. The load-bearing one is that two of this base's own conclusions were wrong in the same way: a blocked channel was mistaken for an unanswerable question, and a published grant was mistaken for a valid one. Both were settled this pass in a single query and a single `grep`.**
+
+### `T1` 🔴 **A blocked host is not an unanswerable question — name the instrument instead**
+
+🔴 **`p783-D` asked a single factual question: when do the EU's high-risk obligations bite for education? Three passes could not answer it, and `p785-G` ordered it struck as *"a settled impossibility"* because six `europa.eu` hosts are unreachable.** 🟢 **It took one query carrying a regulation NUMBER.** Regulation (EU) 2026/1744 — the *Digital Omnibus on AI*, in the Official Journal `24 July 2026`, in force `27 July` — moved Annex III stand-alone high-risk systems, education among them, from `2 August 2026` to **`2 December 2027`**. 🟢 **Trend, stated: an unfetchable primary source is a channel problem, and channel problems have workarounds — a numbered instrument can be corroborated across many reachable secondary sources.** 🔴 The failure mode to watch is a knowledge base concluding that *the world is unknowable* when the true finding is that *one door is shut*.
+
+### `T2` 🔴 **This base can only ever byte-verify GitHub — and should say so once rather than rediscover it per domain**
+
+🔴 **Measured on ten hosts: only GitHub hosts and the package registries are reachable; `eur-lex.europa.eu`, `oecd.org`, `unesco.org`, `arxiv.org`, `en.wikipedia.org` and `ey.com` all fail to connect.** 🔴 **`p784-E` called it four hosts; `p785-G` called it the `europa.eu` family. Both were too narrow** — the boundary is the session's network policy, not any domain. 🟢 **The honest division of this base: repository existence, licence bytes and claim-channel metadata are byte-verified; every market, adoption and regulatory figure is search-channel testimony.** 🔵 Both halves are usable — but a client paying for "verified" must be told which half a given number came from.
+
+### `T3` 🔴 **A file named `LICENSE` is not a licence, and byte length will not tell you**
+
+🔴 **`legalize-dev/legalize-pt` was published by this base as *"MIT — usable, and the most valuable single row of the pass"*. Its `1,002 B` payload contains none of MIT's four operative strings.** It states that a DIFFERENT repository is MIT and that the content is Portuguese public-sector open data. 🔴 **Meanwhile `luscitiosus/Dirigo` serves a `362 B` `LICENSE` reading *"Hadrianus Muratellensis me fecit"*.** 🟢 **And three MITs `59`–`61 B` below canonical are fully intact — so length points the WRONG WAY on this sample.** 🟢 **Grade a grant on the clauses that do the legal work.**
+
+### `T4` 🔴 **The title line mis-grades exactly the files that matter most**
+
+🔴 **The two most-deployed ERPs in this vertical — `odoo/odoo` and `OpenEduCat/openeducat_erp` — both open their grant file with *"For copyright information, please see the COPYRIGHT file."* and both state **LGPL-3.0 on line `3`**.** 🔴 This pass's own first verdict on them was `INDETERMINATE`, which would have struck the sector's leading open ERP off a shortlist. 🟢 **LGPLv3 permits linking from proprietary code: the difference between "unusable" and "usable if you link rather than fork" was three lines of text.** 🔵 Three independent failure modes of one instrument are now on record — case-blindness (`T842`), title-line insufficiency (`T847`), and length-as-integrity (`T845`) — **all three found on rows this base had already published, none found by looking at the world.**
+
+### `T5` 🟢 **EUPL is education's European shelf, and it was invisible because nobody queried for it**
+
+🟢 **`16` repositories for `license:eupl-1.2 education`, `91` for learning/school — and the anchor is `hedyorg/hedy` at `1,697★`, a gradual programming language for children.** 🟢 **The most useful one is quieter: `open-education-api/specification`, the Dutch higher-education interop standard, alive and specified where this base measured Caliper/QTI/OpenBadges/LTI as its worst-affected dead cluster.** 🔵 EUPL exists because EU public bodies needed a licence valid in every official language; so EU-funded education is precisely where its population lives. 🔴 **It is copyleft, with a compatibility list — an advantage for a public-sector buyer, a block for a proprietary deliverable.**
+
+### `T6` 🔴 **The unusable class was `17.8%` wrong, and the right headline was always the other number**
+
+🟢 **Swept all `157` addresses: `8` dead, `84` carrying a grant, `65` genuinely grant-less across `17` variants.** 🟢 **`28` of the `157` carry MIT or Apache-2.0 — `17.8%` of a class whose name asserts the opposite.** 🔴 **But `65` really are ungranted, and that is the number worth publishing.** 🟢 **Cross-pass agreement is the quieter good news: `12` of `13` of `p785`'s additions reproduced exactly on an adversarial re-measurement (`92.3%`).** 🔴 **The one that did not is a `4,025★` repository filed as "no grant" that is actually `CC-BY-NC-SA-4.0` — the verdict held, the reason was wrong, and the true reason is the stronger one.**
+
+### `T7` 🟢 **Regulation of education AI is converging on one shape: the human must be on the record**
+
+🟢 Independently, in four jurisdictions, the binding requirement is **a recorded human decision**, not a model property. 🔵 Oklahoma bars AI used **solely** for grading, discipline or promotion. Idaho bars AI from replacing teachers. Israel's Education Ministry makes teacher oversight mandatory **and approves every tool**. Türkiye's **YAZEK** system requires an ethical declaration filed **before** deployment. The EU AI Act requires human oversight on Annex III systems. 🟢 **Trend, stated: the deliverable that satisfies all five is the same deliverable — an audit record proving a human decided.** 🔵 That is a logging-and-workflow build, not a model build, and it is reusable across every region in this file.
+
+### `T8` 🔴 **The region gap in this base is a measurement artefact, and the star floor is the instrument**
+
+🟢 **`T837` re-confirmed with new evidence: LATAM education MCP servers exist at `0★`** — `Matias-Sanmiguel/teams-facultad-mcp` (MIT) and `goyanedelv/paes-mcp` (MIT, Chile's PAES admissions corpus) are real, permissive and live. 🔴 **Any sweep with a star floor reports a LATAM absence that is not there.** 🟢 **Mexico, searched directly per `ACTION p783-C`: `educacion AI mexico` returns `total_count: 0`, yet `Frangersal/TutoriasITA` (MIT, TecNM) and `ftrujillo36/TutorLSM` (Apache-2.0) exist and were found by querying bare Spanish terms.** 🔵 **The lesson generalises past LATAM:** the Kenya CBC agent (`Moses-Githinji/meta-cv-hktn-edu-agent`, MIT) sits at `2★`, and China's curriculum-localised teacher skills at `3★`. 🔴 **Non-anglophone education supply is systematically small-`★`, so popularity-ranked discovery will keep reporting that it does not exist.**
+
 ## 🆕 `2026-11-12` · `p785` — **Eight trends. The load-bearing one is a measurement trend: this base's grant-absence instrument was case-blind against a case-sensitive channel for at least `20` passes, and the corrections it needed were already sitting in its own files. The second is that a high-star `NOASSERTION` in education usually means NOTHING, not Creative Commons.**
 
 ### `T1` 🔴 **An absence is a property of the instrument until proved otherwise**

@@ -4,6 +4,39 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p786` — **New this window: a `48★` MIT agent that tutors the developer instead of the student, Mexico's first two permissively-granted education artefacts in this base, and a Chilean university-admissions MCP server. Plus a `4,025★` repository whose "no grant" verdict was wrong in the direction that matters — it is NonCommercial.**
+
+### 🟢 New to this base this window, every grant read on its title line
+
+| Agent | Address | Grant, on the bytes | ★ | Region | Why it is here |
+|---|---|---|---|---|---|
+| 🟢 **TutoriasITA** | [`Frangersal/TutoriasITA`](https://github.com/Frangersal/TutoriasITA) `main` | 🟢 MIT `1,077 B` · `394d61563650` | `7★` | LATAM | 🟢 **The find of the window for `ACTION p783-C`.** A tutoring system from Tecnológico Nacional de México (Campus Acapulco) — institutional provenance, permissive grant |
+| 🟢 **TutorLSM** | [`ftrujillo36/TutorLSM`](https://github.com/ftrujillo36/TutorLSM) `main` | 🟢 Apache-2.0 `11,357 B` · `c71d239df917` | `0★` | LATAM | 🟢 Mexican Sign Language tutor. 🔵 Accessibility supply that is Spanish-first rather than translated |
+| 🟢 **paes-mcp** | [`goyanedelv/paes-mcp`](https://github.com/goyanedelv/paes-mcp) `main` | 🟢 MIT `2,018 B` · `c9ad6fc95c99` | `0★` | LATAM | 🟢 MCP over Chile's **PAES** admissions test corpus. 🔵 Admissions is the single most regulated education use-case worldwide; this is the only open artefact on it this base has found |
+| 🟢 **teams-facultad-mcp** | [`Matias-Sanmiguel/teams-facultad-mcp`](https://github.com/Matias-Sanmiguel/teams-facultad-mcp) `main` | 🟢 MIT `1,088 B` · `fd3aa048f141` | `0★` | LATAM | 🟢 Local-first MCP over Teams Educación. 🔵 *Local* + *MCP* is the `T3` procurement vocabulary, in Spanish |
+| 🟢 **no-vibe** | [`rizukirr/no-vibe`](https://github.com/rizukirr/no-vibe) `main` | 🟢 MIT `1,065 B` · `0eddd198e9a1` | `48★` | Global | 🟢 **The window's cleanest new idea:** it turns the coding agent into a tutor that assesses the developer's level and adapts. 🔵 Workforce-reskilling framing, not classroom framing |
+| 🟢 **GradeAI** | [`orancs11/GradeAI`](https://github.com/orancs11/GradeAI) `main` | 🟢 MIT `1,061 B` · `cad56b3e9837` | `4★` | Global | 🟢 Automated grading, MIT, small. 🔵 Named because grading is what Oklahoma's `2026` Act bars from running without a teacher |
+| 🟢 **china-k12-teacher-skills** | [`myvipbackup2/china-k12-teacher-skills`](https://github.com/myvipbackup2/china-k12-teacher-skills) `main` | 🟢 Apache-2.0 `11,359 B` · `1ddb849c5dad` | `3★` | APAC | 🟢 Curriculum-aware K-12 teacher skills, localised to China |
+| 🟢 **Math-Modeling-Agent-Flow** | [`mantou6666/Math-Modeling-Agent-Flow`](https://github.com/mantou6666/Math-Modeling-Agent-Flow) `main` | 🟢 MIT `1,067 B` · `b66691d6d740` | `28★` | APAC | 🟢 Competition-shaped four-stage pipeline (CUMCM / MCM-ICM) |
+| 🟢 **VeryMath-textbook-copilot** | [`VeryMath/VeryMath-textbook-copilot`](https://github.com/VeryMath/VeryMath-textbook-copilot) `main` | 🟢 Apache-2.0 `11,338 B` · `78818d360ee0` | `21★` | APAC | 🟢 Textbook-beside-agent workbench producing exercises, knowledge graphs and LaTeX courseware |
+
+### 🔴 Corrections to rows this base already published
+
+| Address | What the base said | What the bytes say this pass |
+|---|---|---|
+| 🔴 [`TarrySingh/…-Machine-Learning-Tutorials`](https://github.com/TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials) | `p785`: **no grant across `17` case variants**, added to the unusable class | 🔴 **`LICENSE` exists: `20,850 B` · `e66c269d4819`, `Attribution-NonCommercial-ShareAlike 4.0 International`.** `4,025★`. 🟢 Still barred — and now barred for a reason that cannot be cured by asking the maintainer |
+| 🔴 [`legalize-dev/legalize-pt`](https://github.com/legalize-dev/legalize-pt) | **"MIT. Usable, and the most valuable single row of the pass"** | 🔴 **`1,002 B` with none of MIT's four clauses.** It states that a DIFFERENT repository (`legalize-dev/legalize-pipeline`) is MIT — see `T845` on [`agents/top.md`](../agents/top.md) |
+| 🟢 [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | carried as an absence | 🟢 **MIT `1,067 B` · `4e085d826a64` — RESTORED** |
+| 🟢 [`uchit/mcp-regulated-ai-compliance`](https://github.com/uchit/mcp-regulated-ai-compliance) | carried as an absence | 🟢 **Apache-2.0 `12,227 B` · `6828b74db122` — RESTORED** |
+
+### 🔵 Shelved this window, with the reason on the bytes
+
+🔴 [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) — `496★`, the window's highest-star education-adjacent newcomer (idea → explainer video), **AGPL-3.0 `34,523 B` · `0d96a4ff68ad`**: network copyleft, so it is a hosted-service hazard rather than a deliverable component. 🔴 [`saniales/ai-lesson-planner`](https://github.com/saniales/ai-lesson-planner) — `20★`, multi-agent course and lesson planning, **GPL-3.0 `35,149 B` · `4f04c705a26c`**. 🔴 [`Tzxser/aipha-learning-os`](https://github.com/Tzxser/aipha-learning-os) — multi-agent learning OS with a Neo4j knowledge graph, **source-available only** (`AIpha Source-Available Competition and Portfolio License`, `1,296 B` · `a5c81e676435`). 🔴 [`AnhThuHoang0518/GradingCopilot`](https://github.com/AnhThuHoang0518/GradingCopilot) — Vietnamese writing assessment, **no grant at `17` variants**.
+
+### 🟢 Declared gap for this window, so silence is not read as coverage
+
+🔴 **No new permissive agent was found this window for: special-educational-needs provision beyond `p785`'s assistive-reading shelf; school-operations agents (timetabling, attendance, safeguarding); or any African national curriculum other than Kenya's.** 🟢 Searched on the claim channel with `education agent LLM created:>2026-08-01` (`225` results), `tutor agent AI pushed:>2026-10-01` (`430`), `automated grading LLM assessment` (`24`), `lesson plan AI teacher agent` (`23`). 🔴 **The grading and lesson-planning heads are thin in absolute terms — `24` and `23` total results — and most of what is there carries no grant.**
+
 ## 🆕 `2026-11-12` · `p785` — **New this window: a `65★` MIT local-first teaching assistant, the UK's own publicly-funded lesson planner under MIT, an Apache-2.0 teaching agent that delivers over WhatsApp — and the largest artefact ever shelved in this base, at `123,387★`. Plus `7` agents RESTORED from "no grant" by a case-aware probe.**
 
 ### 🟢 New to this base this window, every grant read on its title line

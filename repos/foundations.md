@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p786` — **`ACTION p785-E` DISCHARGED: the EUPL shelf exists, it is European-public-sector by construction, and its highest-star education artefact is a `1,697★` children's programming language. `EUPL-1.2` has THREE distinct byte-forms in this base's population, one of them carrying a UTF-8 BOM.**
+
+🟢 **Every address below resolved on `git ls-remote --symref` this pass and was graded across `17` case-variant grant filenames.**
+
+### 🟢 `ACTION p785-E` — the EUPL population in education, counted and graded
+
+🔵 `p785` predicted that *"EUPL exists for EU public bodies, so EU-funded education projects are where its population lives"*. 🟢 **Confirmed, and sized:** the claim channel returns **`16`** repositories for `license:eupl-1.2 education` and **`91`** for `license:eupl-1.2 learning OR school OR teaching`.
+
+| Repository | Branch | Grant file | Bytes · `sha256₁₂` | ★ | Region | What it is |
+|---|---|---|---|---|---|---|
+| 🟢 [`hedyorg/hedy`](https://github.com/hedyorg/hedy) | `main` | `LICENSE` | `13,827 B` · `6fc9e709ccbf` | `1,697★` | EMEA | 🟢 **The shelf's anchor.** A *gradual* programming language for teaching children to program — the language itself grows in steps as the learner does. Dutch-origin, multilingual |
+| 🟢 [`open-education-api/specification`](https://github.com/open-education-api/specification) | `main` | `LICENSE.md` | `13,827 B` · `6fc9e709ccbf` | `41★` | EMEA | 🟢 **The most load-bearing find of the pass for interop.** OpenAPI specification for the **Open Education API (OOAPI)** — the Dutch higher-education interoperability standard. 🔵 This matters because `p785` measured the Caliper / QTI / OpenBadges / LTI cluster as the **worst-affected dead cluster in the whole base** (`14` dead addresses). OOAPI is alive, specified, and permissively reachable |
+| 🟢 [`SharezoneApp/sharezone-app`](https://github.com/SharezoneApp/sharezone-app) | `main` | 🔵 **`LICENCE`** | `13,826 B` · `469bc06528d4` | `311★` | EMEA | 🟢 Collaborative school-organisation app (iOS, Android, macOS, web). 🔵 Its grant is at the British spelling — reachable only because `LICENCE` is in the probe set |
+| 🟢 [`CSCfi/Ristiinopiskelupalvelu`](https://github.com/CSCfi/Ristiinopiskelupalvelu) | `main` | `LICENSE.txt` | `13,827 B` · `6fc9e709ccbf` | `0★` | EMEA | 🟢 Finland's **Cross-Institutional Study Information Service** — centralised cross-enrolment between institutions, run by CSC (the Finnish national IT centre for science) |
+| 🟢 [`projectestac/exelearning-repo`](https://github.com/projectestac/exelearning-repo) | `main` | `LICENSE` | 🔵 `14,152 B` · `b1e85ac8fe94` | `1★` | EMEA | 🟢 Embeddable front-end for a repository of **eXeLearning** resources, from the Catalan education department's `projectestac`. 🔵 **Its payload carries a UTF-8 BOM** — the `﻿` prefix is visible on the title line |
+| 🟢 [`WikiNarau/wikinarau`](https://github.com/WikiNarau/wikinarau) | `main` | `LICENSE` | `13,826 B` · `469bc06528d4` | `1★` | EMEA | 🟢 A wiki for building collaborative educational material |
+
+🔴 **`EUPL-1.2` is COPYLEFT.** 🟢 It carries a compatibility list (GPL-2.0/3.0, AGPL-3.0, OSL, EPL, CeCILL, MPL-2.0, LGPL and others) that permits relicensing of derivative works under a listed licence — so it composes *with* copyleft, never *into* a proprietary deliverable. 🔵 **Procurement note:** for an EU public-sector client the EUPL is an advantage, not an obstacle — it is the Commission's own instrument and is published in all official EU languages, each version equally authentic.
+
+### 🔵 `T846` — one licence family, three byte-forms, and a BOM
+
+| Form | Bytes · `sha256₁₂` | Seen on |
+|---|---|---|
+| 🟢 Canonical with trailing newline | `13,827 B` · `6fc9e709ccbf` | `hedyorg/hedy`, `open-education-api/specification`, `CSCfi/Ristiinopiskelupalvelu` |
+| 🟢 Canonical without trailing newline | `13,826 B` · `469bc06528d4` | `SharezoneApp/sharezone-app`, `WikiNarau/wikinarau` |
+| 🔵 With UTF-8 BOM and layout variance | `14,152 B` · `b1e85ac8fe94` | `projectestac/exelearning-repo` |
+| 🔵 Variant text (EC's own repository) | `13,865 B` · `6e5399ad2f45` | `european-commission-empl/European-Learning-Model` |
+
+🟢 **Four byte-forms of one licence family across six addresses.** 🔵 This is the companion to `p785`'s finding that two DIFFERENT Apache-2.0 files share one byte length: **length neither identifies a licence nor distinguishes one** — it is a weak hint in both directions, which is the same lesson `T845` reaches from the integrity side.
+
+### 🟢 Permissive foundations restored from the unusable class this pass
+
+| Repository | Grant, on the bytes | What it unlocks |
+|---|---|---|
+| 🟢 [`uchit/mcp-regulated-ai-compliance`](https://github.com/uchit/mcp-regulated-ai-compliance) | 🟢 Apache-2.0 `12,227 B` · `6828b74db122` | 🟢 An MCP-shaped compliance layer. 🔵 Every regulated-deployment recipe in this base has had to hand-roll this |
+| 🟢 [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | 🟢 MIT `1,067 B` · `4e085d826a64` | 🟢 Instructional-design agents, permissive |
+| 🟢 [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) | 🟢 MIT `1,070 B` · `99a909b026f0` at lowercase `license` | 🟢 The xAPI learning-record store that `p785` used to rebuild the retired analytics recipe — re-confirmed this pass at branch `master` |
+| 🟢 [`LearningLocker/xapi-validation`](https://github.com/LearningLocker/xapi-validation) | 🟢 MIT `1,070 B` · `99a909b026f0` at lowercase `license` | 🟢 Statement validation for the same pipeline — byte-identical grant |
+
 ## 🆕 `2026-11-12` · `p785` — **`ACTION p784-B` DISCHARGED on the authoritative channel: `142` genuine dead of `6,196` real published addresses — `2.29%`. And the foundational interop layer is confirmed as the worst-affected cluster in the base: `14` dead addresses, every one of them in Caliper, QTI, OpenBadges or LTI. Plus a working licence-grading instrument to replace the fingerprint superstition.**
 
 🟢 **Every address this base publishes was probed, one `git ls-remote --symref` call each, `14`-way parallel.** 🔵 `T824` established `ls-remote` as the only channel on this base that can assert existence; `T835` established that the web page returns `403` for every address through this gateway, so it cannot corroborate.

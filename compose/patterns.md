@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p786` — **Six recipes. `P786-1` is the one with a deadline attached: the EU moved education's high-risk date to `2 December 2027`, which converts compliance from a blocker into a `16`-month build window. `P786-6` is the grant gate that would have caught all three of this base's instrument defects.**
+
+🟢 **Every component below was resolved on `git ls-remote --symref` this pass and graded on its licence bytes. Branches are stated because several of these platforms serve `HEAD` from neither `main` nor `master`.**
+
+### 🟢 `P786-1` — EU Annex III readiness, built in the window the Omnibus opened *(`8`–`10` weeks, EMEA)*
+
+🔵 **Why now:** Regulation (EU) 2026/1744 moved education's high-risk obligations to `2 December 2027`, but Article `4` AI-literacy and Article `50` chatbot-disclosure duties are **already live**. The deliverable is the evidence base, assembled before it is enforceable.
+
+| Layer | Component | Grant, on the bytes | Role |
+|---|---|---|---|
+| Interop | [`open-education-api/specification`](https://github.com/open-education-api/specification) `main` | 🟡 EUPL-1.2 `13,827 B` · `6fc9e709ccbf` | 🟢 Course, offering, enrolment and result contracts over HTTP — **implement the spec, do not fork it**, so no copyleft reaches the deliverable |
+| Records | [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) `master` | 🟢 MIT `1,070 B` · `99a909b026f0` | 🟢 The learning-record store that holds the Article `12` logging evidence |
+| Validation | [`LearningLocker/xapi-validation`](https://github.com/LearningLocker/xapi-validation) `master` | 🟢 MIT `1,070 B` · `99a909b026f0` | 🟢 Rejects malformed statements at the boundary, so the log is admissible |
+| Compliance | [`uchit/mcp-regulated-ai-compliance`](https://github.com/uchit/mcp-regulated-ai-compliance) `main` | 🟢 Apache-2.0 `12,227 B` · `6828b74db122` | 🟢 **Restored from the unusable class this pass.** Exposes the control set as MCP tools an agent must call |
+| LMS seam | [`moodle/moodle`](https://github.com/moodle/moodle) `main` via Web Service API | 🟡 GPL-3.0 `35,147 B` · `8ceb4b9ee5ad` | 🟢 HTTP client only — `T783-1`: the API route does not inherit GPL, the plugin route does |
+| Moodle bridge | [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) | 🟢 MIT `1,065 B` · `86d287c1708f` | 🟢 The surviving Moodle route in this base; an HTTP client of the Web Service API |
+
+🟢 **Wiring:** OOAPI (or Moodle-MCP) supplies roster and result context → the agent plans or assesses → **every inference writes an xAPI statement through `xapi-validation` into `xapi-service`** → `mcp-regulated-ai-compliance` gates any action classified Annex III behind a recorded human decision. 🔴 **Hard constraint:** emotion recognition is **prohibited in schools since `2 February 2025`** — no affect-detection component may enter this pipeline at any date. 🟢 **Article `50` is satisfied at the UI layer by disclosure, which costs nothing and is already due.**
+
+### 🟢 `P786-2` — District policy compiled into runtime guards *(`4`–`6` weeks, North America)*
+
+🔵 **Why:** Oklahoma's Act bars AI used **solely** for grading, discipline or promotion; Idaho SB 1227 requires a local policy and bars replacing teachers; California AB 1159 bars training on student data. 🔴 **Those are runtime properties, and districts currently hold them as PDFs.**
+
+| Component | Grant | Role |
+|---|---|---|
+| [`orancs11/GradeAI`](https://github.com/orancs11/GradeAI) `main` | 🟢 MIT `1,061 B` · `cad56b3e9837` | 🟢 The grading path to be constrained — small enough to audit end to end |
+| [`uchit/mcp-regulated-ai-compliance`](https://github.com/uchit/mcp-regulated-ai-compliance) `main` | 🟢 Apache-2.0 `12,227 B` · `6828b74db122` | 🟢 Holds the policy as callable controls |
+| [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) `master` | 🟢 MIT `1,070 B` · `99a909b026f0` | 🟢 The teacher-decision record that evidences "not solely AI" |
+
+🟢 **Wiring:** four guards, each traceable to an instrument — **(1)** a grading or discipline output is a *draft* until a teacher record exists in the store (Oklahoma); **(2)** an age gate keyed to grade (New York A 9190, if enacted); **(3)** a no-training egress rule on student data (California AB 1159); **(4)** a parental opt-out flag that short-circuits inference. 🟢 **Sell it against Utah's sandbox first** — a jurisdiction that has already built a controlled test environment is the cheapest place to prove the guards.
+
+### 🟢 `P786-3` — Spanish-first institutional tutoring, from parts that already exist *(`5`–`7` weeks, LATAM)*
+
+🔵 **Why:** Mexico has permissive education data and institutional tools and **no agent layer** (`educacion AI mexico` → `total_count: 0`). The parts are there; the composition is not.
+
+| Component | Grant, on the bytes | Role |
+|---|---|---|
+| [`Frangersal/TutoriasITA`](https://github.com/Frangersal/TutoriasITA) `main` | 🟢 MIT `1,077 B` · `394d61563650` | 🟢 Tutoring workflow with real institutional shape (TecNM Acapulco) |
+| [`Matias-Sanmiguel/teams-facultad-mcp`](https://github.com/Matias-Sanmiguel/teams-facultad-mcp) `main` | 🟢 MIT `1,088 B` · `fd3aa048f141` | 🟢 Coursework, announcements and documents as MCP tools |
+| [`goyanedelv/paes-mcp`](https://github.com/goyanedelv/paes-mcp) `main` | 🟢 MIT `2,018 B` · `c9ad6fc95c99` | 🟢 Admissions-test corpus (Chile PAES) for exam-aligned practice |
+| [`agn3si/ResultadosUNAM---data`](https://github.com/agn3si/ResultadosUNAM---data) `main` | 🟢 MIT `1,063 B` · `13e4dd489fe9` | 🟢 UNAM admission-results open data — cohort baselines without collecting new student data |
+
+🟢 **Wiring:** `teams-facultad-mcp` gives the agent the learner's real coursework; `TutoriasITA` supplies the tutoring loop; `paes-mcp` provides exam-aligned items; `ResultadosUNAM---data` calibrates difficulty against published cohort outcomes. 🟢 **Entirely MIT/Apache-2.0 — no copyleft anywhere in this stack.** 🔵 **Procurement angle:** every component is institutionally authored in-region, which answers the appropriateness question a foreign vendor cannot.
+
+### 🟢 `P786-4` — A curriculum-bound programming tutor on Hedy *(`6`–`8` weeks, EMEA)*
+
+| Component | Grant | Role |
+|---|---|---|
+| [`hedyorg/hedy`](https://github.com/hedyorg/hedy) `main` | 🟡 EUPL-1.2 `13,827 B` · `6fc9e709ccbf` | 🟢 `1,697★` gradual language — **its levels ARE a curriculum ladder** |
+| [`rizukirr/no-vibe`](https://github.com/rizukirr/no-vibe) `main` | 🟢 MIT `1,065 B` · `0eddd198e9a1` | 🟢 Level-assessment-and-adapt loop, already built |
+
+🟢 **Wiring:** bind the agent to the learner's **current Hedy level** rather than letting it infer ability — the level is explicit, so the tutor cannot drift above the syllabus. `no-vibe`'s loop supplies the adaptation; Hedy's level definitions supply the ceiling. 🔴 **Licence seam:** Hedy is EUPL-1.2, which is copyleft. 🟢 **Run it as a deployed service and speak to it over HTTP; do not vendor its source into the deliverable.** 🔵 For an EU public-sector buyer, EUPL is the Commission's own instrument and reads as a credential rather than a constraint.
+
+### 🟢 `P786-5` — Spanish-first accessibility, on-device *(`4`–`5` weeks, LATAM + EMEA)*
+
+| Component | Grant | Role |
+|---|---|---|
+| [`ftrujillo36/TutorLSM`](https://github.com/ftrujillo36/TutorLSM) `main` | 🟢 Apache-2.0 `11,357 B` · `c71d239df917` | 🟢 Mexican Sign Language learning and practice |
+| [`nazarli-shabnam/ReadAble`](https://github.com/nazarli-shabnam/ReadAble) `main` | 🟢 **Apache-2.0 `11,357 B` · `c71d239df917`** — measured this pass, where `p785` recorded only a commit | 🟢 **On-device OCR — learner text never leaves the handset** |
+
+🟢 **Wiring:** keep recognition and rendering on the device, send only anonymised progress events to the record store. 🔵 **The architecture IS the compliance argument:** with no learner text crossing the boundary, the pipeline sits outside the Annex III perimeter by construction rather than by policy — and that argument holds in EMEA under the AI Act and in North America under California AB 1159 simultaneously.
+
+### 🟢 `P786-6` — The grant gate, with all three known failure modes closed *(`2`–`3` days, reusable)*
+
+🔴 **This base has now recorded three independent ways its grant instrument has been wrong, each found on rows it had already published.** 🟢 A gate that passes all three:
+
+| Clause | Catches | Evidence |
+|---|---|---|
+| 🟢 **1. Probe `17` case variants**, not `6` uppercase | A grant at `license`, `licence`, `COPYING.txt`, `LICENCE` | `T842`; `moodle/moodle` → `COPYING.txt`, `frappe/lms` → `license.txt`, `SharezoneApp` → `LICENCE` |
+| 🟢 **2. Scan the first ~`15` lines for a licence-NAMING statement**, not the title line alone | A grant file that opens with a deferral | `T847`; `odoo/odoo` and `OpenEduCat/openeducat_erp` both state LGPL-3.0 on line `3` |
+| 🟢 **3. Require the operative CLAUSES, not a plausible byte length** | A file named `LICENSE` that grants nothing | `T845`; `legalize-dev/legalize-pt` `1,002 B` has none of MIT's four clauses · `luscitiosus/Dirigo` `362 B` reads *"Hadrianus Muratellensis me fecit"* |
+
+🟢 **Implementation:** for MIT require `Permission is hereby granted`, `substantial portions of the Software`, `WITHOUT WARRANTY OF ANY KIND` and `IN NO EVENT SHALL`; for Apache-2.0 require the title line plus `Licensed under the Apache License`; for any copyleft family record the family and route the component to an HTTP seam rather than a link. 🔴 **Always run planted negatives** — a non-existent address and a known-ungranted address — and read `git ls-remote`'s exit status **directly**, never through a pipe: this pass's own first control passed a dead repository because `head`'s exit code was read instead of git's.
+
 ## 🆕 `2026-11-12` · `p785` — **Six recipes. `P1` is the big one: the learning-analytics recipe this base RETIRED at `p782` is REBUILT, because the three MIT/Apache components it needed were never missing — they were hidden behind an uppercase-only licence probe. Plus a corrected grant gate that would have caught all `16`.**
 
 🟢 **Every component below was resolved on `git ls-remote --symref` and graded on its licence bytes AT ITS TITLE LINE this pass. Branches are stated because `9` of the platforms in this base serve `HEAD` from neither `main` nor `master`.**

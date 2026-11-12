@@ -4,6 +4,48 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p786` — **Six EUPL-1.2 European public-sector platforms added, including a `1,697★` teaching language and the Dutch higher-education interop standard. Two platforms re-graded: one defers its grant to a second file, one is GPL where the base carried it as an absence.**
+
+🟢 **Every row resolved on `git ls-remote --symref` this pass; grants graded on their bytes across `17` case-variant filenames.**
+
+### 🟢 The EUPL shelf — European public-sector education platforms
+
+| Platform | Branch | Grant file | Bytes · `sha256₁₂` | Family | Region | AI-on-top seam |
+|---|---|---|---|---|---|---|
+| 🟢 [`hedyorg/hedy`](https://github.com/hedyorg/hedy) | `main` | `LICENSE` | `13,827 B` · `6fc9e709ccbf` | 🟡 **EUPL-1.2** | EMEA | 🟢 **Gradual-language levels are an explicit curriculum ladder** — an agent can be bound to the learner's current level rather than guessing it. Multilingual by design |
+| 🟢 [`open-education-api/specification`](https://github.com/open-education-api/specification) | `main` | `LICENSE.md` | `13,827 B` · `6fc9e709ccbf` | 🟡 **EUPL-1.2** | EMEA | 🟢 **A specification, not a server: implement it and an agent reads courses, offerings, enrolments and results over a standard HTTP contract.** 🔵 The live replacement for this base's dead Caliper/QTI shelf |
+| 🟢 [`SharezoneApp/sharezone-app`](https://github.com/SharezoneApp/sharezone-app) | `main` | 🔵 `LICENCE` | `13,826 B` · `469bc06528d4` | 🟡 **EUPL-1.2** | EMEA | 🟢 Timetable, homework and class-group data already modelled — the operations surface this base has repeatedly declared missing |
+| 🟢 [`CSCfi/Ristiinopiskelupalvelu`](https://github.com/CSCfi/Ristiinopiskelupalvelu) | `main` | `LICENSE.txt` | `13,827 B` · `6fc9e709ccbf` | 🟡 **EUPL-1.2** | EMEA | 🟢 Cross-institutional enrolment messaging — the integration point for a national-scale student-mobility agent |
+| 🟢 [`projectestac/exelearning-repo`](https://github.com/projectestac/exelearning-repo) | `main` | `LICENSE` | `14,152 B` · `b1e85ac8fe94` | 🟡 **EUPL-1.2** | EMEA | 🟢 Public repository of reusable learning objects, embeddable — a retrieval corpus with provenance |
+| 🟢 [`WikiNarau/wikinarau`](https://github.com/WikiNarau/wikinarau) | `main` | `LICENSE` | `13,826 B` · `469bc06528d4` | 🟡 **EUPL-1.2** | EMEA | 🟢 Collaborative authoring of educational material |
+
+🔴 **All six are copyleft.** 🟢 For a public-sector client in the EU this is the expected and preferred posture; for a proprietary deliverable it is a block. 🔵 **The seam is the same one `T783-1` established for Moodle: speak to these systems over their HTTP contract and the deliverable does not inherit their grant; fork or extend them in-tree and it does.**
+
+### 🔴 Platform rows re-graded this pass — and a defect in THIS pass's own instrument
+
+🔴 **This pass first graded Odoo and OpenEduCat `INDETERMINATE` because their grant files OPEN with a deferral. That verdict was written, tested, and REFUTED before shipping.** 🟢 **Both state their grant plainly — on line `3`, not on the title line.**
+
+| Platform | Branch | What the bytes say | Deliverable status |
+|---|---|---|---|
+| 🟢 [`odoo/odoo`](https://github.com/odoo/odoo) | 🔵 **`20.0`** | 🟢 `LICENSE` `43,529 B` · `abc09dad5f84`. Line `1`: *"For copyright information, please see the COPYRIGHT file."* 🟢 **Line `3`: *"Odoo is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3)"***, full LGPL + GPL text included. `COPYRIGHT` resolves at `433 B` · `86e49232d216` | 🟡 **LGPL-3.0** — 🟢 **usable**: LGPLv3 permits linking from proprietary code, so an AI layer that links rather than forks does not inherit copyleft |
+| 🟢 [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🔵 **`19.0`** | 🟢 `LICENSE` `8,241 B` · `528f84036800`, same structure: 🟢 **line `3` states *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3)"***. 🔴 **Its `COPYRIGHT` file is `404` at `COPYRIGHT`, `COPYRIGHT.txt`, `COPYRIGHT.md` and `copyright`** | 🟡 **LGPL-3.0 — usable.** 🔴 **The dangling pointer is to COPYRIGHT ATTRIBUTION, not to the grant**, so it is an attribution defect to raise with the maintainer, not a licence risk |
+| 🔴 [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop` | 🔴 `license.txt` `35,149 B` · `3972dc9744f6` — **GNU GENERAL PUBLIC LICENSE** | 🔴 Carried as an absence; it is GPL. Copyleft, grant at the lowercase filename |
+| 🔴 [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` | 🔴 `LICENSE` `34,520 B` · `57c8ff33c9c0` — **GNU AFFERO GENERAL PUBLIC LICENSE** | 🔴 Re-confirmed. Network copyleft: the API route is the only safe seam |
+| 🟢 [`frappe/lms`](https://github.com/frappe/lms) | 🔵 **`develop`** | 🟢 `license.txt` `33,893 B` · `db1a87ba81e8` — **AGPL** | 🟢 Re-confirmed as a control; grant at the lowercase filename |
+| 🟢 [`UnlockedLabs/UnlockEdv2`](https://github.com/UnlockedLabs/UnlockEdv2) | `main` | 🟢 `LICENSE.md` `9,177 B` · `65976209c00e` — **Apache License, Version 2.0** | 🟢 **Permissive.** Education delivery for correctional and other restricted-connectivity settings |
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | 🟡 `COPYING.txt` `35,147 B` · `8ceb4b9ee5ad` — **GPL-3.0** | 🟡 Control row, reproduced exactly. 🟢 Web Service API over HTTP is the non-inheriting seam |
+
+### 🔴 `T847` — the title line is NECESSARY BUT NOT SUFFICIENT, and this base's rule says otherwise
+
+🔴 **The standing rule on this base is *"grade the grant on its title line"*. It mis-grades every file that opens with a deferral** — and the two most-deployed ERPs in this vertical both do.
+
+| | Title line | Line `3` | Correct family |
+|---|---|---|---|
+| `odoo/odoo` | 🔴 *"For copyright information, please see the COPYRIGHT file."* | 🟢 *"…GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3)"* | 🟡 **LGPL-3.0** |
+| `OpenEduCat/openeducat_erp` | 🔴 *"For copyright information, please see the COPYRIGHT file."* | 🟢 *"…GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3)"* | 🟡 **LGPL-3.0** |
+
+🟢 **Amended rule, stated for the instrument and not just for the record:** scan the first `~15` lines for a licence-NAMING statement and grade on that; treat a title line that names no licence as a deferral to be followed, not as an absence and not as a verdict. 🔵 **Commercially this is not a rounding error:** `INDETERMINATE` would have barred both platforms from a shortlist, while **LGPL-3.0 permits a linked AI layer** — the difference between "cannot use the sector's leading open ERP" and "can, provided you link rather than fork". 🔵 Together with `T845` (clause presence beats byte length) and `T842` (case-aware filenames), the grant instrument now has three independent failure modes on record, all three found on rows the base had already published.
+
 ## 🆕 `2026-11-12` · `p785` — **`20` platforms re-probed at a resolved branch with a CASE-AWARE grant probe. `2` are ungranted at `HEAD`. A third `ECL-2.0` platform found. And the branch field is doing real work: `7` of `20` serve `HEAD` from neither `main` nor `master`, including Brazil's largest school system, which serves from `2.12`.**
 
 🟢 **Every row re-resolved on `git ls-remote --symref` this pass and graded on its bytes across `17` case-variant filenames.** 🔵 Case variants matter here specifically: `moodle/moodle`'s grant is at `COPYING.txt` and `frappe/lms`'s at lowercase `license.txt` — two of the most-deployed platforms in the vertical, neither reachable at `LICENSE`.

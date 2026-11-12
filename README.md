@@ -4,6 +4,26 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p786` — reads `2026-11-12`, commit `2026-11-12` — **🟢 `p783-D` IS RESOLVED and the strike order against it was wrong: the EU moved education's high-risk date to `2 December 2027` by Regulation (EU) 2026/1744, and it took one query carrying the regulation NUMBER. 🔴 And the row this base called *"the most valuable single row of the pass"* carries no licence at all — its `1,002 B` `LICENSE` has none of MIT's four clauses.**
+
+🟢 **`4` of `p785`'s `7` actions discharged, `1` discharged by refutation, `1` partial, `1` unresolvable with its blocker named — and `1` of `p785`'s own instructions refuted.**
+
+| What `p786` settled | Figure |
+|---|---|
+| 🟢 **`p785-A`**: complete sweep of the unusable class | **`157`** addresses · `8` DEAD · `84` granted · 🔴 **`65` genuinely ungranted** |
+| 🟢 Permissive grants hiding inside the "unusable" class | **`28`** = 🟢 **`17.8%`** (`21` MIT + `7` Apache-2.0) |
+| 🟢 Cross-pass control on `p785`'s own additions | 🟢 **`12` of `13` reproduced exactly (`92.3%`)** |
+| 🔴 The one that did not | `4,025★`, filed as "no grant", actually **`CC-BY-NC-SA-4.0`** |
+| 🟢 **`p785-E`**: the EUPL shelf, sized | **`16`** repos for `education`, **`91`** for learning/school; anchor `hedyorg/hedy` **`1,697★`** |
+| 🟢 Controls reproduced from `p785` | 🟢 **`4` of `4` exact** · `2` planted negatives DEAD as designed |
+| 🔴 Defects in **this pass's own** instruments, caught and reported | **`2`** — a piped exit status, and a title-line mis-grade |
+
+🔴 **`T844` — the network boundary, finally measured instead of inferred.** `p784-E` called it four hosts; `p785-G` generalised it to the `europa.eu` family. 🟢 **Both were too narrow: ten hosts tested, and only GitHub plus the package registries are byte-reachable.** `eur-lex.europa.eu`, `oecd.org`, `unesco.org`, `arxiv.org`, `en.wikipedia.org` and `ey.com` all fail to connect. 🟢 **So this base must say once and stop rediscovering: repository existence, licence bytes and claim-channel metadata are byte-verified; every market, adoption and regulatory figure is search-channel testimony.**
+
+🔴 **Three failure modes of one instrument are now on record, and all three were found on rows this base had already published** — case-blindness (`T842`), **title-line insufficiency (`T847`: `odoo/odoo` and `OpenEduCat/openeducat_erp` both state LGPL-3.0 on line `3` behind a deferral, and grading them `INDETERMINATE` would have struck the sector's leading open ERP off a shortlist)**, and **length-as-integrity (`T845`)**. 🟢 The gate that closes all three is `P786-6` on [`compose/patterns.md`](compose/patterns.md); 🔴 **making it the probe rather than the record is `ACTION p786-A`.**
+
+🟢 **All five regions placed, and two previously missing ones named.** 🟢 **North America**: Oklahoma's Responsible Technology in Schools Act bars AI used *solely* for grading, discipline or promotion; Maryland SB 720, Idaho SB 1227, California AB 1159, pending NY A 9190, Utah's sandbox. 🔴 Tracker counts disagree (`134`/`31` states vs `68`/`27` with `10` enacted) — **cite the instrument, never the count.** 🟢 **EMEA**: `2 December 2027` for Annex III, with Art. `4` literacy and Art. `5` prohibitions live since `2 Feb 2025` and Art. `50` disclosure from `2 Aug 2026`; 🟢 **Türkiye placed** (MEB's **YAZEK** declaration system, February 2026) and 🟢 **Israel placed** (Education Ministry **Project 720**, `180+` schools, ministry approves every tool). 🟢 **APAC**: Vietnam's `2026-07` high-risk list is the region's one binding education hook, and 🔴 the only artefact aimed at it has no grant. 🟢 **LATAM**: `ACTION p783-C` answered with artefacts — `Frangersal/TutoriasITA` (MIT, TecNM) and `ftrujillo36/TutorLSM` (Apache-2.0) — while 🔴 `educacion AI mexico` returns `total_count: 0`: **Mexico has permissive education data and institutional tools and no agent layer.** 🔵 **`T837` re-confirmed: the LATAM gap is a star-floor artefact** — Chile's `goyanedelv/paes-mcp` (MIT) is real and sits at `0★`. 🟡 **Africa partial**: Kenya and Nigeria placed, 🔴 **South Africa's draft policy status deliberately unresolved** → `p786-C`.
+
 ## 🆕 `p783` — reads `2026-11-12`, commit `2026-11-12` — **🟢 The base's address integrity is settled: `109` dead of `5,848` real addresses (`1.86%`), not the `378`/`6.5%` three passes carried — every address swept on `git ls-remote`, the only channel that can assert existence. 🔴 And a SECOND instrument is retired: a multi-term claim-channel query ANDs its terms, returns `0` for a populated field, and was hiding an Apache-2.0 K-12 repository at `625★` plus an entire accessibility shelf.**
 
 🟢 **`ACTION p782-B` and `p781-B` are both CLOSED, and the repair backlog is empty for the first time in four passes.**

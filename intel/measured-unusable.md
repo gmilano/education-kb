@@ -4,6 +4,46 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p786` — `2026-11-12` — **The complete class swept for the first time: `157` addresses, `8` DEAD, `84` carrying a grant, `65` genuinely ungranted. `28` rows (`17.8%`) carry MIT or Apache-2.0. And the row this base called its most valuable is not licensed at all.**
+
+🟢 **`ACTION p785-A` DISCHARGED.** Every distinct address this file cites was resolved on `git ls-remote --symref` and graded across `17` case-variant grant filenames, `12`-way parallel, with `4` known-good and `2` planted-negative controls run first.
+
+### 🔴 The headline correction — a row published as usable that carries no grant for its own contents
+
+| Address | What this base published | What the bytes say |
+|---|---|---|
+| 🔴 [`legalize-dev/legalize-pt`](https://github.com/legalize-dev/legalize-pt) | 🟢 *"**MIT.** `LICENSE` · `1,002 B` · `309f2212fb92` — Usable, and the most valuable single row of the pass: a national statute corpus citing `EN 1176-7` under a permissive grant (`T653`)"* | 🔴 **`Permission is hereby granted` — absent. `substantial portions of the Software` — absent. `WITHOUT WARRANTY OF ANY KIND` — absent. `IN NO EVENT SHALL` — absent.** The file states the **pipeline** software is MIT at `legalize-dev/legalize-pipeline`, a DIFFERENT address, and that the legislative content is Portuguese public-sector open data under *Decreto-Lei n.º 83/2016* and *Lei n.º 68/2021* |
+
+🟢 **`T653` must be read down, not deleted:** the corpus **is** lawfully reusable — Portuguese law grants universal free access — 🔴 **but not under MIT, and not by that repository's grant.** 🔵 A studio citing "MIT" here would be citing the wrong instrument for the wrong artefact.
+
+### 🟢 REMOVED from the unusable class this pass — carried as absences, and granted all along
+
+| Address | Grant found at | Bytes · `sha256₁₂` | Family | Status |
+|---|---|---|---|---|
+| 🟢 [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | `LICENSE` | `1,067 B` · `4e085d826a64` | 🟢 **MIT** | 🟢 Usable |
+| 🟢 [`uchit/mcp-regulated-ai-compliance`](https://github.com/uchit/mcp-regulated-ai-compliance) | `LICENSE` | `12,227 B` · `6828b74db122` | 🟢 **Apache-2.0** | 🟢 Usable — and it fills the compliance gap every regulated recipe in this base had to hand-roll |
+
+### 🟡 REASON corrected — still barred, but not for the reason recorded
+
+| Address | What this file said | The real reason |
+|---|---|---|
+| 🔴 [`TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials`](https://github.com/TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials) | `p785`: **no grant across `17` case variants** | 🔴 **`LICENSE` `20,850 B` · `e66c269d4819` — `Attribution-NonCommercial-ShareAlike 4.0 International`.** `4,025★`. 🟢 NonCommercial is a HARDER block than an absence: an absence can be cured by asking, this cannot |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | carried as an absence | 🔴 **`LICENSE.md` `8,563 B` · `c834209c5f33` — `# PageLM Community License`.** Bespoke, not OSI |
+| 🔴 [`frappe/erpnext`](https://github.com/frappe/erpnext) | carried as an absence | 🔴 **`license.txt` `35,149 B` · `3972dc9744f6` — GPL.** Grant is at the lowercase filename |
+| 🟢 [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | carried as an absence | 🟢 **NOT barred at all: `LICENSE` `8,241 B` · `528f84036800` states LGPL-3.0 on line `3`** (its title line is a deferral). 🔴 Its `COPYRIGHT` file is `404` at four variants — an ATTRIBUTION defect, not a licence one. 🟢 **Usable under LGPLv3 by linking rather than forking** → `T847` |
+
+### 🔴 ADDED to the unusable class — measured this pass, reason on the bytes
+
+| Address | Grant, on the bytes | Reason |
+|---|---|---|
+| 🔴 [`luscitiosus/Dirigo`](https://github.com/luscitiosus/Dirigo) | 🔴 `LICENSE` `362 B` · `5d52ddb859a6` — title line **`Hadrianus Muratellensis me fecit`** | 🔴 **A file named `LICENSE` containing a Latin boast and no grant of any kind.** Spanish school-leadership regulation |
+| 🔴 [`Tzxser/aipha-learning-os`](https://github.com/Tzxser/aipha-learning-os) | 🔴 `1,296 B` · `a5c81e676435` — **`AIpha Source-Available Competition and Portfolio License`** | 🔴 Source-available, not open source; claim channel says `NOASSERTION` |
+| 🔴 [`AnhThuHoang0518/GradingCopilot`](https://github.com/AnhThuHoang0518/GradingCopilot) | 🔴 **no grant at any of `17` case variants** | 🔴 Vietnamese writing assessment (OCR + LLM) — 🔵 and **Vietnam's `2026-07` high-risk list names education including automated assessment**, so the one artefact aimed at that surface is unusable |
+
+### 🟢 The class, re-stated by family
+
+🟢 **`65` ungranted · `21` MIT · `20` OTHER/BESPOKE · `13` AGPL · `11` GPL · `8` DEAD · `7` Apache-2.0 · `4` CC-NonCommercial · `3` ECL-2.0 · `2` CC-BY-SA · `1` each EUPL, OSL-3.0, LGPL.** 🔴 **The `20` bespoke grants are the next pass's work** → `ACTION p786-D`. 🔵 **The `65` ungranted are questions for maintainers, not permanent verdicts** → `ACTION p786-E`.
+
 ## 🆕 `p785` — `2026-11-12` — **`8` rows REMOVED from the unusable class, `1` row's REASON corrected, and `2` platforms added. The unusable class was overstated because the probe that built it was case-blind (`T842`).**
 
 🔴 **This file's absences were measured with a six-name UPPERCASE probe against `raw.githubusercontent.com`, which is CASE-SENSITIVE.** 🟢 Re-probed across `17` case variants this pass.

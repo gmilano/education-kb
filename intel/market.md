@@ -4,6 +4,126 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p786` — **`p783-D` IS RESOLVED and `ACTION p785-G` is therefore WRONG to strike it. The EU moved education's high-risk date to `2 December 2027` by a NAMED instrument — Regulation (EU) 2026/1744. And `T844` replaces eleven passes of per-domain "host blocked" findings with the actual boundary: this session can fetch bytes from GitHub and package registries ONLY.**
+
+### 🟢 `p783-D` — SETTLED, by querying the instrument number instead of the host
+
+🔴 **`p785-G` ordered `p783-D` struck from the queue as *"a settled impossibility, not a pending task"*, on the grounds that six `europa.eu` hosts are unreachable.** 🟢 **The date was resolvable all along. The hosts were never the only channel — the instrument has a NUMBER, and the number is quotable.**
+
+| What `p783-D` disputed | Settled value |
+|---|---|
+| 🟢 Instrument | **Regulation (EU) 2026/1744**, the *Digital Omnibus on AI* |
+| 🟢 Published in the Official Journal | **`24 July 2026`** |
+| 🟢 Entered into force | **`27 July 2026`** |
+| 🟢 **Annex III stand-alone high-risk — INCLUDING education** (admissions, grading, proctoring) | 🟢 **moved from `2 August 2026` to `2 December 2027`** — `16` months later |
+| 🟢 Annex I — AI embedded in regulated products | **`2 August 2028`** |
+| 🔴 **NOT delayed:** Article `5` prohibitions, incl. **emotion recognition in schools** | in force since **`2 February 2025`** |
+| 🔴 **NOT delayed:** Article `4` AI-literacy duty on every deployer, schools included | in force since **`2 February 2025`** |
+| 🔴 **NOT delayed:** Article `50` transparency — a student-facing chatbot must disclose it is AI | applies from **`2 August 2026`** |
+| 🔵 New prohibitions | **`2 December 2026`** |
+| 🔵 National regulatory-sandbox deadline | **`2 August 2027`** |
+
+🟢 **Corroboration: the date and the regulation number agree across roughly eight mutually independent secondary publishers** (a Big-Four tax alert, two EU law firms, two AI-governance consultancies, a French AI news outlet, an Italian compliance firm and a technology news site). 🔴 **Zero of them are byte-fetchable from this session — see `T844`.** 🟡 **One claim appears in a single source only and is NOT adopted here:** that high-risk systems operated by public authorities run to `2 August 2030`.
+
+🟢 **The transferable lesson, which is worth more than the date:** when the primary host is unreachable, **stop probing hosts and start naming instruments.** A regulation number, bill number or docket number converts an unfetchable primary source into a claim that many reachable secondary sources can be checked against. 🔵 `p783-D` sat open for three passes and was then struck as impossible; it took one query carrying the number.
+
+### 🔴 `T844` — the network boundary, measured, and it is not about `europa.eu`
+
+🔴 **`p784-E` concluded the block was four hosts. `p785-G` generalised it to "the whole `europa.eu` domain family". Both were too narrow.** 🟢 **Ten hosts, one `HEAD` request each:**
+
+| Host | Result |
+|---|---|
+| 🟢 `raw.githubusercontent.com` | `301` — reachable |
+| 🟢 `api.github.com` · `github.com` | `400` — reachable, rejecting a bare `HEAD /` |
+| 🟢 `pypi.org` | `200` — reachable |
+| 🔴 `eur-lex.europa.eu` | **no connection** |
+| 🔴 `www.oecd.org` · `www.unesco.org` | **no connection** |
+| 🔴 `arxiv.org` · `en.wikipedia.org` | **no connection** |
+| 🔴 `www.ey.com` | **no connection** |
+
+🟢 **The proxy's own status endpoint explains it:** the only hosts exempted are GitHub and the package registries (`pypi.org`, `registry.npmjs.org`, `jsr.io`, `index.crates.io`, `proxy.golang.org`). 🟢 **So the rule is: GitHub plus package registries are byte-reachable; every other host is not.** 🔴 **Consequence this base must state once and stop rediscovering: every regulatory, market and adoption figure in it is SEARCH-CHANNEL TESTIMONY, never a byte-verified primary document.** 🟢 Repository existence, licence bytes and claim-channel metadata remain fully verifiable — which is exactly the half of this base that carries its value.
+
+### 🔴 The `2026` market figure, re-measured: a narrower spread than `p785`, still a disagreement
+
+| Source | `2026` AI-in-education market |
+|---|---|
+| AI Business Weekly | `$10.4B` |
+| Eklavvya | `$11.4B` |
+| x-pilot.ai | `$12.3B` |
+
+🟡 **A `1.18×` spread across three secondary summaries — far tighter than `p785`'s `5.9×` ($1.94B–$11.40B) across six.** 🔴 **Do not read that as convergence: it is a smaller sample of the same secondary-aggregator population, and none of the three publishes a method.** 🟢 **The durable numbers remain the adoption-governance gaps**, because they come from named surveys with stated populations:
+
+| Measure | Value | Source population |
+|---|---|---|
+| 🟢 Students using AI in their studies | **`86%`** across `16` countries | Digital Education Council |
+| 🟢 K-12 teachers using generative AI | **`83%`** | reported via Azumo's compilation |
+| 🔴 …who feel unprepared to manage it in class | **`85%`** | same |
+| 🔴 Faculty reporting a formal institutional AI policy | **~`25%`** | surveys cited by Eklavvya |
+
+🔵 **The `83%`-use / `85%`-unprepared pair is the single most sellable number in this file:** it is not an adoption gap, it is a capability gap, and capability gaps are bought as enablement programmes rather than as software.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The engagement is compliance-by-jurisdiction, and it is now quotable by bill number.** 🔴 **Bill counts disagree between trackers — MultiState counts ~`134` AI-in-education bills across `31` states; FutureEd tracks `68` across `27` states with `10` enacted in 2026** — so cite the instrument, never the count.
+
+| Instrument | What it requires |
+|---|---|
+| 🟢 **Oklahoma, Responsible Technology in Schools Act** (enacted May 2026) | District AI policies before the `2027–28` school year; teacher-directed use; 🔴 **bans AI tools used solely for grading, discipline or student promotion** |
+| 🟢 **Maryland SB 720**, AI Ready Schools Act | State AI guidance, professional development, help for districts evaluating tools |
+| 🟢 **Idaho SB 1227** | Local district AI policies; privacy protections; 🔴 bars AI from replacing teachers |
+| 🟢 **California AB 1159** | 🔴 Bars use of student data to train AI models |
+| 🟡 **New York A 9190** (pending) | Would restrict classroom AI to grade `9`+, with diagnostic and special-education exceptions |
+| 🟢 **Utah** | A regulatory **sandbox** for schools to test tools under controlled conditions |
+
+🟢 **Opportunity:** a **policy-to-configuration** deliverable — district AI policy expressed as enforceable runtime constraints (age gate, teacher-in-the-loop on any grading path, no-training-on-student-data, parental opt-out), not as a PDF. 🔵 `35+` states now publish education-department AI guidance, so the differentiator is enforcement, not authorship. 🔴 **Graduation-requirement bills (Iowa, Illinois, Ohio, Alabama, Missouri) create a second line: AI-literacy curriculum at state scale.** 🔴 NYC has moved to restrict student-facing generative AI; **two reports disagree on the timing and scope, so it is recorded as disputed, not as fact.**
+
+### EMEA
+
+🟢 **The date is now certain and it is the whole commercial story: `2 December 2027` for education's high-risk obligations, with transparency and AI-literacy duties ALREADY live.** 🔵 That shape — 🔴 *"the hard deadline moved, the soft duties did not"* — is the opposite of what a client who read one headline in August 2026 believes.
+
+| Live now | Due `2 December 2027` |
+|---|---|
+| 🔴 Emotion recognition in schools — **prohibited since `2 Feb 2025`** | Admissions, grading and proctoring as Annex III high-risk |
+| 🔴 **AI literacy (Art. `4`) — since `2 Feb 2025`**, on every school as deployer | Conformity assessment, risk management, logging, human oversight |
+| 🔴 **Chatbot disclosure (Art. `50`) — from `2 Aug 2026`** | |
+
+🟢 **Opportunity 1 — the `16`-month window is a readiness engagement, not a reprieve:** build the Annex III evidence base (data governance, logs, human-oversight records) while the obligation is not yet enforceable, so the 2027 date is a formality. 🟢 **Opportunity 2 — the EUPL shelf is the procurement advantage here.** `hedyorg/hedy` (`1,697★`), `open-education-api/specification`, `CSCfi/Ristiinopiskelupalvelu`, `SharezoneApp/sharezone-app` and `projectestac/exelearning-repo` are all EUPL-1.2, the Commission's own instrument: for a public-sector buyer that is the expected posture. 🔵 **Opportunity 3 — OOAPI replaces a dead layer.** With Caliper/QTI/OpenBadges/LTI the worst-affected dead cluster in this base, a live Dutch-standard interop contract is the safer foundation. 🟢 **Türkiye is now placed:** the Ministry of National Education (**MEB**) runs the **YAZEK** ethical-declaration system (launched February 2026 — a declaration must be filed before a tool is deployed), under the *AI in Education Policy Document and Action Plan 2025–2029* (updated `13 April 2026`), with a supreme AI ethics committee and provincial committees. 🔴 **No AI statute in Türkiye as of April 2026** — these are administrative rules, which makes MEB approval the real gate. 🟢 **Israel is now placed:** the Education Ministry's **Project 720** went from a `28`-school pilot (`2025–26`, `17` local authorities) to `180+` schools and is planned nationwide within three years; AI is age-gated by grade, teacher oversight is mandatory, **and the ministry approves every tool** — so the ministry's approval list, not procurement, is the route to market. Grades `8`–`9` take a `20`-hour AI course; AI enters matriculation work in `10+` STEM subjects. 🔴 **No Israeli AI statute for schools was found; ministry guidelines are the governing mechanism.**
+
+### APAC
+
+🟢 **No binding education-AI statute anywhere in the region, and one hard exception that matters.**
+
+| Jurisdiction | Instrument | Education relevance |
+|---|---|---|
+| 🔴 **Vietnam** | high-risk list, `2026-07` | 🔴 **Names education, including automated assessment** — the region's one binding education hook |
+| 🟢 **Japan** | AI Promotion Act, in force `4 June 2025`; AI Basic Plan adopted `14 July 2026` | 🟢 Promotional, **no direct penalties** |
+| 🟢 **Singapore** | No binding statute; IMDA **Model AI Governance Framework for Agentic AI**, January 2026 | 🟢 Voluntary; `60.9%` AI diffusion among working-age adults, 2nd globally |
+| 🟡 **India** | IT Amendment Rules 2026, in force `20 February 2026` | 🟡 Principles-based, narrow today; fastest-growing APAC AI market at `38.9%` CAGR |
+| 🟡 **China** | No general AI law; binding labelling rules for AI-generated content already in force | 🟡 Labelling reaches AI-generated teaching material |
+
+🔴 **`1` in `10` APAC enterprises considers itself "very mature" in AI adoption** — the lowest confidence of any region measured this pass. 🟢 **Opportunity 1 — the EU is APAC's binding regulator by export.** An APAC EdTech selling proctoring or admissions into the EU inherits Annex III and `2 December 2027`; a *conformity-ready export* engagement is sellable in Singapore, India and Japan today. 🟢 **Opportunity 2 — curriculum-localised agents are the live supply:** `myvipbackup2/china-k12-teacher-skills` (Apache-2.0) and `mantou6666/Math-Modeling-Agent-Flow` (MIT) show the pattern — bind the agent to a named national curriculum or examination. 🔴 **Opportunity 3 is a gap, stated as one: the one artefact aimed at Vietnam's regulated surface — `AnhThuHoang0518/GradingCopilot`, Vietnamese writing assessment — has NO GRANT at `17` probed filenames.** A permissive Vietnamese assessment component does not exist in this base; building it is the opening.
+
+### LATAM
+
+🟢 **Adoption runs far ahead of governance, and this is now measured on both sides.**
+
+| Measure | Value |
+|---|---|
+| 🟢 Secondary teachers who used AI in the prior year (TALIS 2024) | **Brazil `56%`, Chile `55%`** vs **OECD average `36%`** |
+| 🟢 15-year-olds who used AI chatbots for schoolwork (PISA 2025) | **`9` in `10`**, across `13` regional countries |
+| 🔴 Brazil: school administrators using AI / schools with guidelines (Cetic.br) | **`53%` use · `22%` have guidelines** |
+| 🔴 Universities using AI / with a strategy / evaluating it (UNESCO IESALC) | **`87%` use · `26%` strategy · `9%` evaluating** |
+
+🔴 **Regulation: Peru's Ley 31814 is still the region's ONLY enacted AI statute.** Brazil's PL 2338/2023 passed the Senate in December 2024 and remains in Chamber of Deputies committee; Mexico's Federal AI law is under Senate discussion; Chile's bill is Boletín 16821-19, pending.
+
+🟢 **`ACTION p783-C` — the dedicated Mexico search, run and ANSWERED with artefacts rather than a gap.** 🟢 Found and verified on the bytes: [`Frangersal/TutoriasITA`](https://github.com/Frangersal/TutoriasITA) (MIT, Tecnológico Nacional de México Campus Acapulco), [`ftrujillo36/TutorLSM`](https://github.com/ftrujillo36/TutorLSM) (Apache-2.0, Mexican Sign Language), [`agn3si/ResultadosUNAM---data`](https://github.com/agn3si/ResultadosUNAM---data) (MIT, UNAM admission-results open database). 🔴 **The precise shape of the Mexican gap, measured: `educacion AI mexico` returns `total_count: 0` on the claim channel.** Mexico has permissive education **data** and small **institutional tools**, and **no agent layer at all**. 🟢 That is a build opportunity with existing permissive inputs, not an empty market.
+
+🟢 **`T837` re-confirmed: the LATAM "gap" is a THRESHOLD artefact.** [`Matias-Sanmiguel/teams-facultad-mcp`](https://github.com/Matias-Sanmiguel/teams-facultad-mcp) (MIT) and [`goyanedelv/paes-mcp`](https://github.com/goyanedelv/paes-mcp) (MIT, Chile's PAES admissions corpus) are real, permissive and live at `0★` — below every star floor this base's sweeps use. 🔴 **Any LATAM sweep with a star floor will report an absence that is not there.**
+
+🟢 **Opportunity:** the `53%`/`22%` and `87%`/`26%` gaps are **governance retrofits on systems already in use** — the inverse of the EMEA engagement, where the system is not yet built. 🔵 Sell guidelines, evaluation and teacher capability into institutions that have already adopted; `goyanedelv/paes-mcp` shows admissions is the surface where a regional regulator will arrive first.
+
 ## 🆕 `2026-11-12` · `p785` — **The `2026` market figure spans `$1.94B`–`$11.40B` across six named firms — a `5.9×` disagreement, wider than `p784` reported. The durable numbers are the adoption-governance gaps, and all four regions now have one measured. `ACTION p784-E` ESCALATED, not retried: the block is the whole `europa.eu` domain family, not four hosts.**
 
 ### 🔴 `ACTION p784-E` — escalated with a GENERALISATION, and two more hosts measured
