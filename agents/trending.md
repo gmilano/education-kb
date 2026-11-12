@@ -4,6 +4,38 @@ region: Global
 updated: 2026-11-12
 ---
 
+## `2026-11-12` · `p799` — **the week's finding is that a predicate made the search WORSE, and the contaminant it recruited has a name: the university course-project report**
+
+🟢 **Window:** repositories pushed since `2026-06-01`, reached on `gh api search/repositories`, `sort=updated`, `per_page=30`, `5` in-language legs (`4` `es`, `1` `pt`) carrying the domain predicate `ACTION p798-D` specified. 🟢 **`150` rows read, `56` education-domain, `27` granted.** 🟢 Machine output: [`predicate-leg-census`](../evidence/predicate-leg-census.2026-11-12-p799.tsv) · [`predicate-leg-finding`](../evidence/predicate-leg-finding.2026-11-12-p799.tsv).
+
+### 🔴 `ACTION p798-D` discharged, and it REFUTES its own premise
+
+🔴 **`p798-D` reasoned: `6` of `73` census rows were not education, because in Spanish *educativo* often means "this is a teaching example" — so add a domain predicate (`student` · `aula` · `docente` · `curriculum` · `evaluación`) and precision will rise.**
+
+| Leg | `total_count` | rows read | education-domain | 🔴 **course-project reports** | granted |
+|---|---|---|---|---|---|
+| `agente educativo docente aula` | `86` | `30` | `14` | `3` | `6` |
+| `tutor IA estudiantes evaluacion` | `606` | `30` | `9` | `11` | `4` |
+| 🔴 **`asistente docente planificacion clase`** | `308` | `30` | 🔴 **`3`** | 🔴 **`24`** | `1` |
+| `agente educacional professor aula` (`pt`) | `111` | `30` | `11` | `6` | `10` |
+| 🟢 **`IA educativa curriculo escolar`** | 🟢 **`55`** | `30` | 🟢 **`19`** | `2` | `6` |
+
+🔴 **The third leg returned `3` education-domain rows out of `30`, and `24` university course-project reports:** `upc-pre-202620-1asi0730-16712-wrunners/edgewatch-report`, `1ASI0728-2620-9077-NaturaTech/NaturaTech-report`, `G1-Emergentes/Reporte`, and twenty more of the same shape. 🔴 **The predicate RECRUITS them, because a course repository names its course, its section and its cycle — and `docente`, `clase` and `planificación` are exactly those words.** 🟢 **These are students' assignments ABOUT building software, not education software.**
+
+🟢 **What DID predict precision was not the predicate but `total_count`:** the narrowest leg (`55`) gave `19` of `30`; the broadest (`606`) gave `9` of `30`. 🔵 **A cheap, usable screen that costs one field of the response and no new vocabulary** → `p799-C`.
+
+🟢 **The control `p798-D` asked for PASSED:** granted rows still return, `27` across `5` legs, per-leg grant rate `3%`–`33%`.
+
+### 🟢 `6` rows promoted to [`agents/top.md`](top.md), `1` re-graded, and the design signature replicates
+
+🟢 **Promoted:** [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (MIT, `43,394★`, **now placed APAC 🇨🇳**) · [`RowanFalcao/inclusign-ai`](https://github.com/RowanFalcao/inclusign-ai) (MIT, LATAM 🇧🇷, Libras) · [`leandroeaguilar/aulento`](https://github.com/leandroeaguilar/aulento) (MIT, FSRS v5) · [`Krakaur/sendero-matematico`](https://github.com/Krakaur/sendero-matematico) (MIT, offline) · [`chasquimallx-byte/yachay-wasi`](https://github.com/chasquimallx-byte/yachay-wasi) (**no licence**, LATAM 🇵🇪) · [`communityrbh-hub/rebuild-choco`](https://github.com/communityrbh-hub/rebuild-choco) (**no licence**, LATAM 🇨🇴) · [`programadores-obreros/Agente-editor-inet`](https://github.com/programadores-obreros/Agente-editor-inet) (GPL-3.0, LATAM 🇦🇷).
+
+🟢 **`T940`'s design claim REPLICATES on an independent query leg.** `p798` said to read the in-language population as design evidence — offline-capable, LMS-attached, messaging-delivered, teacher-gated. 🟢 **This week's legs returned, unprompted:** `yachay-wasi` (offline Android school), `sendero-matematico` (offline practice, local teacher reports), `rebuild-choco` (offline local AI, disaster zones), `asistente-docente-sin-conexion` (laptop-as-server over local Wi-Fi), `EDUNEXT` (offline-first PWA for primaria), `aulento` (local-first FSRS + MCP). 🔵 **Six offline-first designs in one week's in-language intake is no longer an observation; it is the region's requirement.**
+
+🟡 **Recorded, not shelved:** `Aldair0sorio/GoJarol`, `ivnmtz09/edubid`, `AngelLagunak/cuaderno-docente`, `israelmontas63-lgtm/planifica-maestro`, `franksimonduran/EDUNEXT`, `GustavoCintra98/EduAdapt-IA`, `14lucas-mendes/ai-tutor-skill` (MIT `1,069 B`, `4★`), `mizaelsouto/CursoTecnico` (MIT, `34★` — teaching content, not an agent), `jesusgarciafernandez/Aula-y-Comunidad-Educativa-Aumentada`, `ChincoLinux/Yap` (MIT, `3★`, Spanish local agent but not education-specific), `fabianastudillo/cafe-con-prompts`, `alapvi/ai-secure-campus` (**no licence**, IES Doctor Lluís Simarro, Xàtiva — EMEA 🇪🇸), `vladimiracunadev-create/lifelong-learning-ecosystem`.
+
+🔴 **Zero-star still dominates the in-language intake**, consistent with `T940`'s ceiling: of the `56` education-domain rows read this week, the highest star count on an in-language education agent was `5`.
+
 ## `2026-11-12` · `p798` — **the in-language education-agent population has a ceiling of `5` stars, and that is the week's finding**
 
 🟢 **Window:** repositories pushed since `2026-06-01`, reached on `gh api search/repositories` across `10` in-language legs (`6` `es`, `4` `pt`) and `6` English control legs. 🟢 **`73` in-language addresses · `149` English addresses · `0` clone failures on the `15` byte-verified.**

@@ -1,0 +1,12 @@
+leg	instrument	population	unit	measure	value	comparable_to_latam	note
+LATAM	UNESCO IESALC 2026	200 HEIs / 19 countries	institution	uses AI in at least one area	87%	n/a	the adoption half of the headline
+LATAM	UNESCO IESALC 2026	200 HEIs / 19 countries	institution	has a formal AI strategy	26%	baseline	the governance half of the headline
+LATAM	UNESCO IESALC 2026	200 HEIs / 19 countries	institution	no specific AI budget	55%	regional	public universities lowest rate
+LATAM	Digital Education Council LATAM 2026	students+faculty	individual	faculty able to critically evaluate AI output rigorously	11%	regional	capability not policy
+GLOBAL	IREX / Development Gateway + UNSDSN (Nov 2025-Jan 2026)	46 universities / 25 countries	respondent	institution has a clear AI strategy	34.2%	yes-approx	respondent-reported not institution-reported
+GLOBAL	IREX / Development Gateway + UNSDSN	46 universities / 25 countries	respondent	institution has approved AI-related policies	39.5%	yes-approx	same instrument
+GLOBAL	Coursera 2026	educators	individual	university has a formal AI policy	20%	partly	a second figure of 26% appears in the same source family - CONFLICT declared
+NORTH AMERICA	EDUCAUSE 2026 (via secondary)	higher-ed professionals	individual	aware of any formal institutional guidelines	54%	no	awareness not existence
+NORTH AMERICA	EDUCAUSE 2026 (via secondary)	higher-ed professionals	individual	using AI in their work	94%	no	adoption half
+NORTH AMERICA	Strata Information Group Sept 2026	39 respondents	institution	finished or actively building formal AI governance policy	85% (30% finished)	no	n=39 and skewed to senior IT leaders
+GLOBAL	UNESCO 2023 baseline	450+ institutions	institution	formal institutional guidance on GenAI	<10%	historical	the base rate three years earlier

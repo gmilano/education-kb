@@ -1,0 +1,9 @@
+channel	probe	result	reproduces	consequence
+curl -sI live address	https://github.com/moodle/moodle	403 Forbidden	T923	cannot verify existence
+curl -sI invented address	https://github.com/zzz-not-a-real-owner-p799/zzz-nope	403 Forbidden	T923	identical to live - channel carries NO information
+gh api search/repositories	q=moodle ai agent	200 with total_count 62	T941	the whole metadata channel
+gh api repos/{owner}/{repo}	repos/moodle/moodle	refused - GitHub access to this repository is not enabled for this session	T941	per-repository metadata unreachable
+gh api users/{login}	users/moodle	refused - sessions are bound to their configured repositories	T935	origin location field unreachable
+execute committed repository code	bash ingest/p797-brand-layer-gate.sh	DENIED by command classifier - Code from External	p797-H	make hooks and every gate-run action undischargeable - SIXTH pass
+blobless clone live address	towardsai/ai-tutor-app	HEAD 7a498edabed9 + root tree	p796-F	verification channel - matches p798 exactly
+blobless clone invented address	zzz-not-a-real-owner-p799/zzz-nope	fatal - could not read Username	p796-F	controlled in BOTH directions unlike curl

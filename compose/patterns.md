@@ -4,6 +4,81 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p799` — `P799-1` … `P799-4`
+
+🔵 **Each pattern names the repositories, the grant under which each may be used, and the wiring.** 🔴 **`P799-2` REPLACES the LATAM-governance framing every pass since `p795` has carried, because `T949` measured the rate against a global control and it does not survive.**
+
+## `P799-1` — LATAM 🇻🇪🇵🇪🇨🇴: the offline, ministry-grounded teacher assistant
+
+🟢 **Why this pattern exists now.** 🟢 **`p799` found six independent offline-first education agents in one week's in-language intake, and placed three of them to a country on government-document evidence.** 🔵 **Offline is not a degraded mode in this market; it is the requirement.** 🔴 **And `T949` says the governance pitch is not the regional differentiator — this is.**
+
+**The build:**
+
+| Layer | Use | Grant | Why this one |
+|---|---|---|---|
+| 🟢 **Curriculum corpus** | [`Ignacio-Ghub/asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion) → `web/api/curriculo/*.json` as the **SHAPE**, re-populated from the client jurisdiction's ministry | 🔴 **GPL-3.0 code — boundary-only. Copy the SCHEMA, not the source** | 🟢 `11` files carrying `nivel`, `grado` and per-area `fuentes` citing `mppe.gob.ve` documents with publication months. 🟢 **The only ministry-cited curriculum structure in this base** |
+| 🟢 **Agent base** | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT `1,065 B`** | 🟢 `43,394★`, permissive, document → interactive classroom. 🟢 Localise it per `P798-1` rather than building from scratch |
+| 🟢 **Local inference** | **Ollama** with a quantised instruct model — the Venezuelan row runs `gemma4:e4b-it-qat` at `6.1 GB` | 🟢 MIT | 🟢 **A `6.1 GB` model on a teacher's laptop is the proven envelope**, measured in the field rather than estimated |
+| 🟢 **Scheduling / mastery** | [`leandroeaguilar/aulento`](https://github.com/leandroeaguilar/aulento) — FSRS v5 | 🟢 **MIT `1,072 B`** | 🟢 **Puts the learning claim on a published algorithm, not the model** — which is what an academic council will interrogate |
+| 🟢 **Delivery** | Laptop-as-server over classroom Wi-Fi to teachers' phones (the Venezuelan topology); 🟢 Android offline client per [`chasquimallx-byte/yachay-wasi`](https://github.com/chasquimallx-byte/yachay-wasi) | 🔴 **`yachay-wasi` is UNGRANTED — architecture only** | 🟢 No cloud dependency, no per-seat connectivity assumption |
+| 🟢 **Accessibility** | [`RowanFalcao/inclusign-ai`](https://github.com/RowanFalcao/inclusign-ai) for Libras / sign-language translation | 🟢 **MIT `1,252 B`** | 🟢 Satisfies a Brazilian inclusion requirement and NA's ADA driver from one component |
+
+🟢 **Two non-negotiable design rules, both taken from the Venezuelan author rather than invented here:**
+🟢 **(1) The support alert is a RULE, not the model** — *"El aviso sale de una regla simple, no de la IA."* 🔵 A consequential judgement about a child must have a basis a teacher can read and a regulator can audit; every instrument in [`intel/market.md`](../intel/market.md) demands exactly that.
+🟢 **(2) Declare the gap on screen.** Where the ministry has published no content document for an area, the UI says so instead of generating. 🔵 **That single behaviour is the difference between a tool a school inspectorate accepts and one it bans.**
+🟢 **(3) Statutory grading scales are data, not configuration guesses** — the Venezuelan row implements *art. `108` del Reglamento de la LOE* (`A`–`E` Primaria, `1`–`20` Media General, pass `10`). 🟢 Capture the client jurisdiction's equivalent BEFORE the first sprint.
+
+**Sequence:** `2` weeks curriculum ingest + ministry citation model → `3` weeks `OpenMAIC` localisation → `2` weeks FSRS mastery layer → `2` weeks offline topology and device testing → `1` week rule-based alerting and gap-declaration UI. 🟢 **`10` weeks, and the curriculum ingest is the only step that cannot be compressed.**
+
+## `P799-2` — Global: the appraisal-and-governance RETROFIT (replaces the LATAM-governance pitch)
+
+🔴 **What this replaces.** 🔴 **Five passes have treated "adoption outpaces governance" as a LATAM opportunity.** 🟢 **`T949`: LATAM's `26%` formal strategy sits between Coursera's global `20%` and IREX's global `34.2%`. The gap is `1.32×` — the same size as `p798`'s "real but modest" grant gap, and nothing like `T940`'s categorical `4.8×`.** 🟢 **So this is a GLOBAL offer, and pricing it as a regional one leaves the larger market unserved.**
+
+🔵 **The actual shape of the problem, which is what makes it sellable:** `94%` of higher-ed professionals use AI at work while `54%` know of any institutional guideline; `86%` of students use AI in their studies; `~26%` of faculty report a formal policy. 🟢 **The institution did not choose these tools — its staff and students already adopted them. So the engagement is a RETROFIT over an existing, unsanctioned estate, never a greenfield deployment.**
+
+**The build:**
+
+| Layer | Use | Grant | Why this one |
+|---|---|---|---|
+| 🟢 **Estate discovery** | An inventory of what staff and students already use, before any policy is drafted | — | 🔵 **Policy written against an imagined estate is the `54%`-awareness failure reproduced at the client's expense** |
+| 🟢 **Appraisal training** | 🔴 **The `11%` figure is the target: faculty able to critically evaluate AI output with rigorous methodology** | — | 🔵 **This is the deliverable LATAM asks for and the global market needs equally.** A policy PDF is free; appraisal capability is not |
+| 🟢 **Grounding layer** | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) agentic-RAG over the institution's own corpus | 🟢 **Apache-2.0 `11,386 B`** | 🟢 Converts an ungrounded assistant into one answering from the client's curriculum — the OECD `2026` Digital Education Outlook's "purpose-built rather than general-purpose" recommendation, implemented |
+| 🟢 **Content boundary** | [`danielgalanv/oral-ia`](https://github.com/danielgalanv/oral-ia)'s `571`-byte `NOTICE` as the template | 🟢 **Apache-2.0** | 🟢 **`T936`: the grant covers code, tests, specs and own docs; NOT teaching material, NOT third-party texts, NOT the models.** 🔵 Ship this file with every curriculum-grounded deliverable |
+| 🟢 **Disclosure + logging** | Article `50`-style disclosure and interaction logging, switched on from day one | — | 🟢 Binds in EMEA from August `2026` and is cheap now, expensive retrofitted |
+
+**Sequence:** `2` weeks estate discovery → `2` weeks policy drafted against the measured estate → `4` weeks grounding layer → `3` weeks faculty appraisal programme → ongoing. 🟢 **`11` weeks.** 🔵 **Sell the appraisal programme first where there is no budget line, because it is the half that creates the budget holder.**
+
+## `P799-3` — APAC 🇻🇳: remediation inside Vietnam's `18`-month transition
+
+🔴 **A dated, statutory trigger.** 🔴 **Vietnam's Law on Artificial Intelligence took effect `2026-03-01` and classifies AI used in EDUCATION as HIGH-RISK, with an `18`-month transition for systems already in operation.** 🟢 **So any AI already in a Vietnamese classroom has a remediation window with an end date, and the ministry's `12` periods per class per year of AI content for grades `1`–`12` is a delivery opportunity sitting beside it.**
+
+**The build:**
+
+| Layer | Use | Grant | Why this one |
+|---|---|---|---|
+| 🟢 **Classification + gap assessment** | Map each deployed system against the statute's high-risk obligations | — | 🟢 **The transition is a clock, so the first deliverable is a dated remediation plan, not a platform** |
+| 🟢 **Per-jurisdiction policy nodes** | 🔴 **Do NOT ship one global policy.** Korea's AI Basic Act (in force Jan `2026`) and Taiwan's statute are comprehensive; Vietnam names education high-risk; Japan, Australia and India are lighter-touch | — | 🔵 **Four regimes, one product — so the policy must be a swappable node, which is `P798-6`'s APAC shape confirmed by a new statute** |
+| 🟢 **Agent base** | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) · [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **MIT `1,065 B` · Apache-2.0 `11,408 B`** | 🟢 Both APAC-origin and permissive. 🔵 **Prefer `DeepTutor` where counsel asks about patent exposure — Apache-2.0 carries a patent grant, MIT does not** |
+| 🟢 **Curriculum delivery** | The `12`-periods/year AI content mandate, grades `1`–`12` | — | 🟢 A funded, named curriculum requirement with national scope |
+
+🟡 **Price against the incumbent shape:** NTU Singapore gave **every** undergraduate Gemini Enterprise, AI Studio and Vertex AI from August `2026`. 🔵 **Whole-institution vendor procurement is the competitor, so compete on grounding, governance and jurisdictional fit rather than on model access.**
+
+## `P799-4` — North America: the dated compliance package, with accessibility attached
+
+🟢 **Why dates make this sellable.** 🟢 `~134` AI-in-education bills across `31` states in `2026`; four states (Maryland, Idaho, Oklahoma, Virginia) now mandate **both** state guidance and district-level policy adoption. 🔴 **North Carolina `Session Law 2026-41` supplies the calendar: state model policy `2026-12-31`, local school-unit policies `2027-06-30`, teacher training `2028-06-30`.**
+
+**The build:**
+
+| Layer | Use | Grant | Why this one |
+|---|---|---|---|
+| 🟢 **District policy kit** | One model policy, instantiated per school unit against the state deadline | — | 🟢 **A statutory due date is the budget argument.** Replicable across `31` states with different dates |
+| 🟢 **Product constraints, applied as code** | 🔴 No training on student data (`AB 1159`, `SB 1227`); 🔴 no AI as direct instructor (`HB2400`); 🔴 grade-`9`+ gate with a diagnostics / special-education carve-out (`A 9190`) | — | 🔵 **These are product-shape constraints, not policy text — they must be enforced in the system, and the carve-out means the gate needs a role, not a birthdate** |
+| 🟢 **Teacher gate** | [`falkenslab/miyagi`](https://github.com/falkenslab/miyagi) — asks before anything reaches a student | 🟢 **MIT `1,078 B`** | 🟢 **Implements "no AI as direct instructor" as an architecture** rather than a promise |
+| 🟢 **Accessibility** | [`RowanFalcao/inclusign-ai`](https://github.com/RowanFalcao/inclusign-ai) | 🟢 **MIT `1,252 B`** | 🟢 Against the April `2026` ADA accessibility deadline for large public institutions — 🔵 a second, independently funded driver in the same account |
+| 🟢 **Grounding** | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟢 **Apache-2.0** | 🟢 District-corpus grounding, so claims are checkable |
+
+**Sequence:** `1` week state-law mapping → `3` weeks model policy + district instantiation → `4` weeks product-constraint enforcement and teacher gate → `3` weeks accessibility remediation → `2` weeks teacher training design. 🟢 **`13` weeks, and it lands before `2027-06-30` if it starts inside Q1.**
+
 ## 🆕 `p798` — `P798-1` … `P798-4`
 
 🔵 **Each pattern names the repositories, the grant under which each one may be used, and the wiring.** 🔴 **`P798-1` replaces the LATAM advice `P797-1` gave, because the measurement it rested on has been corrected** (`T940`).

@@ -1,0 +1,6 @@
+leg	language	predicate_terms	total_count	rows_read	education_domain_rows	course_project_report_rows	dominant_contaminant	granted_rows
+agente educativo docente aula	es	educativo+docente+aula	86	30	14	3	personal/institutional landing pages with no agent	6
+tutor IA estudiantes evaluacion	es	tutor+estudiantes+evaluacion	606	30	9	11	hackathon and prompt-testing coursework	4
+asistente docente planificacion clase	es	docente+planificacion+clase	308	30	3	24	UPC Peru course-project reports (upc-pre-202620-*)	1
+agente educacional professor aula	pt	educacional+professor+aula	111	30	11	6	academic portfolios and discipline final projects	10
+IA educativa curriculo escolar	es	educativa+curriculo+escolar	55	30	19	2	none dominant - highest precision leg	6

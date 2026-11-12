@@ -1,0 +1,5 @@
+claim	p798_D_expectation	p799_measurement	verdict
+adding a domain predicate raises precision	6 of 73 rows were not education; a predicate on student/aula/docente/curriculum/evaluacion will remove them	the predicate RECRUITS a new contaminant class: 46 of 150 rows read are university course-project reports	REFUTED for the docente+planificacion+clase leg
+the contaminant is educativo meaning this is a teaching example	stated as the mechanism	present but minor; the dominant mechanism is that a course repository NAMES its course, section and cycle, which matches docente/clase/planificacion directly	REFRAMED
+narrower predicates are safer	implied	the narrowest leg (curriculo+escolar, total 55) had the highest precision at 19 of 30; the broadest (606) had 9 of 30	SUPPORTED - total_count is a usable precision proxy
+the 16 granted rows still return	the control p798-D asked for	27 granted rows across 5 legs; grant rate per leg 3%-33%	CONTROL PASSED

@@ -1,0 +1,21 @@
+address	head_commit	licence_file	licence_blob	licence_bytes	grant	stars	last_push	region_signal	region_verdict	readme_restriction
+THU-MAIC/OpenMAIC	a2aeffcec2f4	LICENSE	76abc5f13261	1065	MIT	43394	2026-11-12	acr=[] ctry=[] tld=[] inst=[] sub=[] apac=[thu-;tsinghua]	APAC:thu-	none
+HKUDS/DeepTutor	60fb3bdfddb3	LICENSE	ae1dbfc5e74c	11408	Apache-2.0	58630	2026-11-07	acr=[] ctry=[] tld=[] inst=[] sub=[] apac=[]	unresolved	none
+RowanFalcao/inclusign-ai	094976020211	LICENSE	10e530c65bee	1252	MIT	0	2026-11-01	acr=[] ctry=[] tld=[] inst=[pivic;unirv;universidade] sub=[] apac=[]	LATAM:universidade	none
+leandroeaguilar/aulento	9f33c0d53e97	LICENSE	86311ac79ffa	1072	MIT	0	2026-11-11	acr=[] ctry=[] tld=[] inst=[] sub=[] apac=[]	unresolved	none
+Krakaur/sendero-matematico	4565c51673cd	LICENSE	c26412208df3	1083	MIT	0	2026-10-22	acr=[SEP] ctry=[] tld=[] inst=[] sub=[] apac=[]	unresolved	none
+14lucas-mendes/ai-tutor-skill	e87e2d7730ea	LICENSE	1d154ae2ec83	1069	MIT	4	2026-10-22	acr=[] ctry=[] tld=[] inst=[] sub=[] apac=[]	unresolved	none
+chasquimallx-byte/yachay-wasi	8b649a9f850b	NA	NA	NA	NA_no_licence_file	0	2026-10-25	acr=[] ctry=[perú] tld=[] inst=[] sub=[] apac=[]	LATAM:perú	none
+communityrbh-hub/rebuild-choco	b716e92b209e	NA	NA	NA	NA_no_licence_file	1	2026-08-28	acr=[] ctry=[colombia] tld=[] inst=[] sub=[] apac=[]	LATAM:colombia	none
+programadores-obreros/Agente-editor-inet	3160cccb9f6d	LICENSE	f288702d2fa1	35149	GPL	2	2026-10-27	acr=[INET] ctry=[] tld=[.net.ar] inst=[] sub=[] apac=[]	LATAM:.ar	none
+balejosg/tiza	d981d2753832	LICENSE	b1fb916e7254	1065	MIT	1	2026-11-12	acr=[] ctry=[] tld=[] inst=[] sub=[] apac=[]	unresolved	none
+nmarafo/OpenDidactia	fe6106b7e90a	LICENSE.md	219578ceae50	2123	OTHER_unclassified	0	2026-10-17	acr=[] ctry=[] tld=[] inst=[] sub=[andalucia;aragon;baleares;canarias] apac=[]	EMEA:andalucia	none
+Ignacio-Ghub/asistente-docente-sin-conexion	ab739c9765fa	LICENSE	f288702d2fa1	35149	GPL	0	2026-11-03	acr=[] ctry=[venezuela] tld=[] inst=[] sub=[] apac=[]	LATAM:venezuela	none
+jeffercbs/chispa-mcp	b8d40f2527cd	LICENSE	a304e1253c64	1066	MIT	0	2026-11-12	acr=[] ctry=[] tld=[] inst=[] sub=[] apac=[]	unresolved	none
+ANFAIA/SkillNet	cf2fa524cbd1	LICENSE	ac436c04442f	10758	Apache-2.0	24	2026-10-15	acr=[] ctry=[] tld=[.es] inst=[] sub=[] apac=[]	EMEA:.es	none
+danielgalanv/oral-ia	c5e433674702	LICENSE	57bc88a15a0e	11358	Apache-2.0	0	2026-11-10	acr=[] ctry=[] tld=[] inst=[universidad] sub=[] apac=[]	unresolved	none
+XAIHT/Tlamatini	b3e61fb8810c	LICENSE	6d93cdbdf7d0	1062	MIT	15	2026-11-12	acr=[] ctry=[] tld=[] inst=[] sub=[] apac=[]	unresolved	do not remove (Angela's name is kept in every build)
+zzz-not-a-real-owner-p799/zzz-nope	NA_clone_failed	NA	NA	NA	NA_clone_failed	NA	NA	NA	NA_unresolved	NA
+nmarafo/open-lex-edu	5ad542282c8f	LICENSE.md	8b359db8f6f2	2874	OTHER_unclassified	0	2026-09-15	acr=[] ctry=[españa] tld=[] inst=[universidades;xunta] sub=[aragon;baleares;canarias;castilla] apac=[]	CONFLICT:EMEA=xunta/LATAM=universidade	none
+falkenslab/miyagi	8dc5987155a4	LICENSE	1998b8260d0e	1078	MIT	0	2026-11-12	acr=[] ctry=[] tld=[] inst=[] sub=[] apac=[]	unresolved	none
+moodle/moodle	afbcc55fa1bd	COPYING.txt	94a9ed024d38	35147	GPL	7607	2026-11-12	acr=[] ctry=[] tld=[] inst=[] sub=[] apac=[]	unresolved	none

@@ -4,6 +4,59 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p799` — **`ACTION p798-A` discharged, and it splits. One of the two `LATAM?` rows resolves to a COUNTRY on government-document evidence — 🇻🇪 Venezuela, by its ministry's own curriculum — and the other is declared unresolvable after SIX channels, because it is built to be country-agnostic. 🔴 The method `p798-A` specified found neither: origin for the resolved row is in the TREE and a localised readme, not in root-README prose.**
+
+🟢 **`6` agents added, every grant byte-verified. `10` instrument defect cycles — `7` caught by the instrument's own controls and `3` by the publication gates — `0` shipped.** 🟢 Machine output: [`payload-region-provenance`](../evidence/payload-region-provenance.2026-11-12-p799.tsv) · [`mit-clause-identity-population`](../evidence/mit-clause-identity-population.2026-11-12-p799.tsv) · [`instrument-defect-cycles`](../evidence/instrument-defect-cycles.2026-11-12-p799.tsv) · [`channel-reprobe`](../evidence/channel-reprobe.2026-11-12-p799.tsv) · instrument: [`ingest/p799-payload-region-probe.sh`](../ingest/p799-payload-region-probe.sh).
+
+### 🟢 `T942` — the row `p798` could not place is 🇻🇪 **Venezuela**, and the evidence is a ministry document
+
+🟢 **[`Ignacio-Ghub/asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion) — `LATAM?` → `LATAM` 🇻🇪, on three independent payload facts:**
+
+| Evidence | Value |
+|---|---|
+| 🟢 **Curriculum source, by URL host** | 🟢 **`mppe.gob.ve`** — *Ministerio del Poder Popular para la Educación*, `periodo-escolar-2025-2026`, payload reviewed `28/10/2026` |
+| 🟢 **Grading scale, by statute** | 🟢 **art. `108` del Reglamento de la LOE** — literals `A`–`E` in Primaria, `1`–`20` in Media General, pass mark `10` |
+| 🟢 **School structure** | 🟢 Primaria `1.º`–`6.º` grado **+** Media General `1.º`–`5.º` año — the Venezuelan shape, not the Chilean or Colombian one |
+
+🔵 **Why this row is worth a finding of its own.** 🟢 **It is `T940`'s "design evidence" claim, instantiated at the highest quality this base has recorded.** A laptop is the server, teachers' phones are the clients over local Wi-Fi, the model is `gemma4:e4b-it-qat` under Ollama at `6.1 GB`, there are **no external libraries — only Python 3**, and student records never leave the teacher's phone. 🟢 **And the support alert is a RULE, not the model**: *"El aviso sale de una regla simple, no de la IA."* 🔵 **Every regulator in this base demands a named human decision-maker and a non-opaque basis for a consequential judgement about a child; this author shipped both without being asked** → [`compose/patterns.md`](../compose/patterns.md) `P799-1`.
+
+🟢 **It also declares its own gap, which is the behaviour this base is built to reward:** Educación Física and the other Media General areas have no published content document at the ministry, **so the screen tells the teacher so** rather than generating into the void.
+
+### 🔴 `T943` — the other `LATAM?` row stays `LATAM?`, and the question mark is now load-bearing
+
+🔴 **[`jeffercbs/chispa-mcp`](https://github.com/jeffercbs/chispa-mcp) was tested on SIX channels and none carries an origin:**
+
+| Channel | Result |
+|---|---|
+| Root `README.md` prose | 🔴 no country, no ccTLD, no institution |
+| `ARCHITECTURE.md` · `SECURITY.md` | 🔴 none |
+| `package.json` author/homepage | 🔴 scope `@jeffercbs`, registry `npm.pkg.github.com` |
+| Commit author identity | 🔴 a `gmail.com` address and a personal name |
+| Bound service host | 🔴 **a generic `*.supabase.co` project host** |
+| 🟢 **Configuration** | 🟢 **`CHISPA_CURRENCY` must be a 3-letter code** |
+
+🟢 **The last row is positive evidence, not another absence: a configurable currency means the product is MULTI-COUNTRY by design.** 🔵 **So `LATAM?` here is not a gap in the search — it is the correct answer about a country-agnostic artefact, and the next pass should stop paying to resolve it** → `p799-A`.
+
+🔴 **Consequence for `p798-A` as written:** it specified *"read each candidate's `NOTICE`/README for a funder, an institution, a cc-TLD or a curriculum reference."* 🔴 **Run exactly as specified over both rows, that method returns `NA_none` on BOTH.** 🟢 **What worked was the TREE (`web/api/curriculo/*.json`) and a localised second readme (`app/LEEME.md`), plus — for other rows — the repository DESCRIPTION on `search/*`** (`T946`).
+
+### 🟢 `6` rows added — grant byte-verified, blob and HEAD sha beside every one
+
+🟢 Verified on the blobless-clone channel; `curl -sI` re-probed this pass and is still `403` for live and invented addresses alike (`T923` holds, [`channel-reprobe`](../evidence/channel-reprobe.2026-11-12-p799.tsv)). 🟢 Stars and recency from `search/*`, the only metadata channel open here (`T941`).
+
+| Agent | Repo | Grant (byte-verified) | ★ | Last push | Region | What it is, and why it is here |
+|---|---|---|---|---|---|---|
+| 🟢 **OpenMAIC** `RE-GRADED` | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT · `1,065 B` · HEAD `a2aeffcec2f4`** | 🟢 **`43,394`** | `2026-11-12` | 🟢 **APAC 🇨🇳** | 🟢 **The largest MIT-granted education agent in this base, and `p799` PLACES it.** Tsinghua MAIC — any topic or document becomes an interactive classroom. 🟢 `p798` carried it with two unresolved shas (*"Neither"*); 🟢 **this pass supplies a live HEAD and re-confirms `1,065 B` MIT.** 🔴 **It is also `T945`'s negative control: a bare country scan grades it `LATAM` off its i18n list** |
+| 🟢 **inclusign-ai** `NEW` | [`RowanFalcao/inclusign-ai`](https://github.com/RowanFalcao/inclusign-ai) | 🟢 **MIT · `1,252 B` · HEAD `094976020211`** | `0` | `2026-11-01` | 🟢 **LATAM 🇧🇷** | 🟢 **Educational inclusion + translation to Libras (Brazilian Sign Language) as an agent platform.** 🟢 Placed on `universidade` in payload **and** `PIVIC / UniRV` in its description — Universidade de Rio Verde, Goiás. 🔵 **The first accessibility-first row in this base, against a `2026-04` ADA deadline in NA and an EMEA accessibility duty** |
+| 🟢 **aulento** `NEW` | [`leandroeaguilar/aulento`](https://github.com/leandroeaguilar/aulento) | 🟢 **MIT · `1,072 B` · HEAD `9f33c0d53e97`** | `0` | `2026-11-11` | 🟡 **`LATAM?`** | 🟢 **Local-first study system: FSRS v5 spaced repetition + an AI tutor + an MCP server + Obsidian.** 🔵 **The only row in this base that pairs a NAMED, published scheduling algorithm with an agent** — so the learning claim rests on FSRS, not on the model |
+| 🟢 **sendero-matematico** `NEW` | [`Krakaur/sendero-matematico`](https://github.com/Krakaur/sendero-matematico) | 🟢 **MIT · `1,083 B` · HEAD `4565c51673cd`** | `0` | `2026-10-22` | 🟡 **`LATAM?`** | 🟢 Adaptive mathematics with **offline practice and LOCAL teacher reports**. 🔵 Offline + local reporting is the in-language signature `T940` identified, and this is the permissive instance of it |
+| 🟢 **yachay-wasi** `NEW` | [`chasquimallx-byte/yachay-wasi`](https://github.com/chasquimallx-byte/yachay-wasi) | 🔴 **NO LICENCE FILE** | `0` | `2026-10-25` | 🟢 **LATAM 🇵🇪** | 🟡 **An Android virtual school with NO INTERNET for `1.º`/`2.º` de primaria.** 🟢 **Placed 🇵🇪 on the DESCRIPTION channel alone** (`T946`) — its payload names no country. 🔴 **Ungranted, so architecture-only: read it, do not link it** |
+| 🟡 **rebuild-choco** `NEW` | [`communityrbh-hub/rebuild-choco`](https://github.com/communityrbh-hub/rebuild-choco) | 🔴 **NO LICENCE FILE** | `1` | `2026-08-28` | 🟢 **LATAM 🇨🇴** | 🟡 **An offline, local-AI resilience tutor for children `5`–`10` in disaster-affected areas** (Chocó, Colombia; GoFest 26). 🔴 **Ungranted.** 🔵 **Cite it as the strongest statement in this base of what "offline" is actually FOR** |
+| 🟡 **Agente-editor-inet** `NEW` | [`programadores-obreros/Agente-editor-inet`](https://github.com/programadores-obreros/Agente-editor-inet) | 🔴 **GPL-3.0 · `35,149 B` · HEAD `3160cccb9f6d`** | `2` | `2026-10-27` | 🟢 **LATAM 🇦🇷** | 🟡 *Tecnia Bot* — teaches Arduino and ESP32 in **Argentine technical schools under the INET programme**. 🟢 Placed on the `INET` acronym (boundary-matched, `T944`) **and** a `.net.ar` host. 🔴 **Copyleft, so boundary-only** |
+
+🔴 **Declared and NOT shelved:** [`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia) re-measured at `2,123 B` — 🟢 **the identical byte count `p270` recorded, `~500` passes earlier**, and still **CC BY-SA 4.0 at payload**, so content-copyleft and not a code dependency. 🟢 Placed **EMEA** on four Spanish autonomous communities in payload, which independently reproduces the base's existing Spain/LOMLOE grading.
+
+🔴 **Two DECLARED FALSE NEGATIVES in this pass's own instrument, both already placed correctly by earlier human reads:** [`balejosg/tiza`](https://github.com/balejosg/tiza) (**EMEA**, Comunidad de Madrid — the base's own `ESO` analysis) and [`danielgalanv/oral-ia`](https://github.com/danielgalanv/oral-ia) (**EMEA 🇪🇸**, UPM Madrid in its `NOTICE`). 🔴 **Cause in both: `grep` runs byte-oriented in this session, so a trailing `\b` after a multibyte letter can never hold and `Politécnica` is unmatchable.** 🟢 **Named, not papered over** → `p799-B`.
+
 ## 🆕 `p798` — **`ACTION p797-E` inverted on its own premise. `p797` found `5` LATAM-origin agents, `0` with a grant, and concluded the constraint was grant hygiene. `p798` gives that claim a denominator and a control: `78.1%` of `73` in-language rows serve no grant — against `60.4%` of `149` on the English leg. The grant gap is real and it is `1.29×`. 🔴 What is categorical is something else entirely: `94.5%` of the in-language population has ZERO stars and the whole population's MAXIMUM is `5`.**
 
 🟢 **`ACTION p797-E` discharged as a measurement and REFRAMED as a recommendation. `ACTION p797-F` discharged (negative).** 🟢 Machine output: [`latam-grant-census`](../evidence/latam-grant-census.2026-11-12-p798.tsv) · [`en-leg-grant-control`](../evidence/en-leg-grant-control.2026-11-12-p798.tsv) · [`candidate-grant-bytes`](../evidence/candidate-grant-bytes.2026-11-12-p798.tsv) · [`mit-clause-identity`](../evidence/mit-clause-identity.2026-11-12-p798.tsv) · 🔴 [`candidate-grant-bytes-UNCORRECTED-v1`](../evidence/candidate-grant-bytes-UNCORRECTED-v1.2026-11-12-p798.tsv).

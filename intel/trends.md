@@ -4,6 +4,94 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p799` — **Ten instrument defects in one pass, every one caught before publication and none shipped. 🔴 Five of the ten are ONE class this base has now met four times: a region or licence token that is a SUBSTRING of ordinary text. 🟢 The class is cheap to defeat and expensive to miss, and `p799` publishes the rule rather than another screen.**
+
+🟢 Machine output: [`instrument-defect-cycles`](../evidence/instrument-defect-cycles.2026-11-12-p799.tsv) · [`mit-clause-identity-population`](../evidence/mit-clause-identity-population.2026-11-12-p799.tsv) · [`channel-reprobe`](../evidence/channel-reprobe.2026-11-12-p799.tsv).
+
+### 🔴 `T944` — an ACRONYM region-token is a substring of ordinary words, and it produces right answers for wrong reasons
+
+🔴 **Two measured instances, from one run:**
+
+| Grade produced | Token that produced it | Where it actually occurred | Truth |
+|---|---|---|---|
+| 🔴 `LATAM` on [`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia) | **`ENEM`** (Brazil's national exam) | 🔴 **inside the ordinary Spanish word `tenemos`** | 🟢 **EMEA** — Madrid, Galicia, Andalucía, LOMLOE |
+| 🟡 `LATAM` on [`communityrbh-hub/rebuild-choco`](https://github.com/communityrbh-hub/rebuild-choco) | **`INEP`** (Brazil's education research institute) | 🔴 **inside a camelCase identifier, `...lineP...`** | 🟢 **LATAM 🇨🇴** — correct grade, **provably wrong reason** |
+
+🔴 **The second row is the dangerous one.** 🟢 **It is right.** 🔴 **It is right by accident, and nothing in the artefact said so** — a reviewer checking the grade would have confirmed it and moved on, and the instrument would have kept its false mechanism.
+
+🔵 **This base has now met the class four times:** `p796-G`'s `icon` inside *semiconductor*; its own `ESO` inside the tails of *proceso* and *peso*; and `ENEM`/`INEP` here. 🟢 **`p799`'s rule, and it is two cheap requirements rather than a cleverer predicate:** 🟢 **(1) match an acronym CASE-SENSITIVELY with word boundaries; (2) make the verdict CARRY the token that produced it, so a grade is re-derivable from the bytes beside it.** 🔵 **Requirement (2) is what turned `rebuild-choco` from a silent pass into a caught defect, and it is [`p796-H`](open-gaps.md)/`p797-C`'s standing demand satisfied at the point of writing instead of in a later audit.**
+
+### 🔴 `T945` — a bare ccTLD is unusable against any document that contains file paths
+
+🔴 **`Paraguay`'s ccTLD is `.py`. 🔴 The Python file extension is `.py`.** 🔴 **A Spanish-only payload graded `CONFLICT:EMEA=.es/LATAM=.py` off its own source listing.**
+
+🔴 **The collision is systematic, not a one-off:**
+
+| ccTLD | Country | Also | 
+|---|---|---|
+| `.py` | Paraguay | 🔴 **Python source** |
+| `.cl` | Chile | 🔴 **OpenCL kernels** |
+| `.es` | Spain | 🔴 **ECMAScript modules** |
+| `.do` | Dominican Republic | 🔴 **JSP actions** |
+| `.ar` | Argentina | 🔴 **archive files** |
+| `.pl` | Poland | 🔴 **Perl** |
+
+🟢 **Fix, and it is a restriction rather than an addition: a ccTLD counts only inside a URL HOST.** 🟢 That is what preserved 🇻🇪 Venezuela's `mppe.gob.ve` and 🇦🇷 Argentina's `.net.ar` while removing `.py`.
+
+### 🔴 `T946` — a bare COUNTRY NAME is not origin evidence either, because i18n lists name countries
+
+🔴 **[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — Tsinghua University — graded `LATAM:brazil`.** 🔴 **The single occurrence is `README.md` line `887`, an interface-locale list:** *"`12` locales across `11` languages: … **Portuguese (Brazil), Spanish (Mexico)** …"*.
+
+🟢 **So the origin channels rank, and `p799` publishes the ranking:**
+
+| Rank | Channel | Strength |
+|---|---|---|
+| 🟢 **1** | **Government/ministry document at a URL host** (`mppe.gob.ve`) | 🟢 decisive — a curriculum cited to a ministry is origin |
+| 🟢 **2** | **Institutional affiliation in `NOTICE`/description** (UPM Madrid; `PIVIC / UniRV`) | 🟢 strong |
+| 🟢 **3** | **ccTLD inside a URL host** | 🟢 strong |
+| 🟡 **4** | **Subnational territory name** (Andalucía, Galicia) | 🟡 good for EMEA; excludes names shared across regions — *Valencia* is also a city in Venezuela |
+| 🟡 **5** | 🆕 **the repository DESCRIPTION on `search/*`** | 🟡 **resolved 🇵🇪 Peru where the payload could not** — and `p798-A` never named it |
+| 🔴 **6** | **Bare country name in prose** | 🔴 **contaminated by i18n locale lists — never sufficient alone** |
+| 🔴 **7** | **Commit author identity** | 🔴 **`5` of `5` were `gmail.com` or `users.noreply.github.com`. Useless for origin** |
+
+### 🔴 `T951` — and the class is not only acronyms: `universidade` is Galician AND Portuguese
+
+🟢 **[`nmarafo/open-lex-edu`](https://github.com/nmarafo/open-lex-edu), verified this pass at `2,874 B` / HEAD `5ad542282c8f`, returned `CONFLICT:EMEA=xunta/LATAM=universidade`.** 🟢 **`Xunta` (de Galicia) resolves it EMEA.** 🔵 **But the lesson is that a whole WORD can be regionally ambiguous, not just a four-letter acronym — `universidade` is correct Galician orthography and correct Portuguese simultaneously.** 🔴 **This pass's [`RowanFalcao/inclusign-ai`](https://github.com/RowanFalcao/inclusign-ai) placement rests on `universidade` plus a corroborating description (`PIVIC / UniRV`); on the token alone it was a coin-flip between Galicia and Brazil.** 🟢 **Which is the argument for the CONFLICT state itself: a two-state verdict would have picked one and published it.**
+
+### 🔴 `T947` — a defect this base NAMED at `p214` recurred in a brand-new instrument `~585` passes later
+
+🔴 **This pass's own classifier read [`Ignacio-Ghub/asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion) as `AGPL-3.0` where `p798` had read `GPL-3.0`.** 🟢 **`p798` was right.** 🔴 **The payload's title line is `GNU GENERAL PUBLIC LICENSE / Version 3, 29 June 2007`; the string `GNU Affero` appears further down, in section `13`, *"Use with the GNU Affero General Public License."***
+
+🔴 **And `p799` claims NO novelty here, because this base already owns the finding.** 🔴 **`p214` recorded it in these exact terms:** *"the mechanism is now named: `GPL-3.0` §`13` is titled **'Use with the GNU Affero General Public License'** and the blob says `Affero` `3` times, so a whole-body matcher flips the family."* 🔴 **`8` of `518` repositories printed two grants there, all `8` on the GNU axis.**
+
+🔵 **So the finding is NOT the mechanism. It is that a correctly diagnosed, correctly written-down defect was reproduced from scratch by a new instrument `~585` passes later, because the knowledge lived in a PROSE LEDGER and not in a shared classifier.** 🟢 **`T938` said an instrument library can regress by ADDING something; 🆕 this says a KNOWLEDGE base can regress by writing something down and nowhere else.** 🔴 **`p798-B`'s shape too — "the instrument existed, was built pre-reset, and has never been run."**
+
+🟢 **Fix applied here: classify on the TITLE — the first five lines — never on the body.** 🟢 **Fix the next pass owes: ONE licence classifier, shared, with `p214`'s GNU-axis case and this pass's title rule as its controls, so the third re-discovery costs nothing** → `p799-H`. 🔵 **The defect is silent and it inverts a COPYLEFT REACH judgement — AGPL network-use obligations are precisely what a studio must not get wrong in a hosted-tutor deliverable, which is why it has now been worth finding twice.**
+
+### 🟢 `T948` — `ACTION p798-C` discharged: `p795-A`'s byte band is retired, and it was biased by NAME LENGTH
+
+🟢 **`p135`'s normalisation re-implemented in this pass's own command, because executing committed repository code is refused here (`p797-H`, sixth pass).** 🟢 **`8` MIT payloads, copyright notices removed as spans, whitespace collapsed, then hashed:**
+
+| Measure | Result |
+|---|---|
+| Raw byte spread | 🔴 **`1,061` → `1,250 B`** (`189 B`) |
+| 🟢 **Distinct normalised clause hashes** | 🟢 **`1` — `745e05f91f85`, on all `8`** |
+| 🟢 **Normalised clause bytes** | 🟢 **`1,032 B`, identical on all `8`** |
+| 🔴 **`p795-A` band verdict (`1,066`–`1,072 B`)** | 🔴 **`5` of `8` flagged OUTLIER — a `62.5%` false-alarm rate on byte-identical grants** |
+
+🔴 **And the mechanism is not neutral. The whole `189`-byte spread is the copyright LINE, so the false-alarm rate rises with the length of the holder's NAME:**
+
+| Holder line | Bytes | Band verdict |
+|---|---|---|
+| `Copyright (c) 2026 XAIHT` | `1,062` | 🔴 OUTLIER |
+| `Copyright (c) 2026 jeffercbs` | `1,066` | 🟢 inside |
+| `Copyright (c) 2026 Lucas Mendes` | `1,069` | 🟢 inside |
+| `Copyright (c) 2026 Leandro Aguilar` | `1,072` | 🟢 inside |
+| `Copyright (c) 2026 Dirk Hans Krakaur Florane…` | `1,083` | 🔴 OUTLIER |
+| `Copyright (c) 2026 Rowan Falcão Rodrigues L…` | 🔴 **`1,252`** | 🔴 OUTLIER |
+
+🔴 **Spanish and Portuguese naming convention carries two surnames. A screen keyed on licence-file LENGTH therefore flags Iberian and LATAM authors' MIT grants as anomalous at a higher rate than Anglo single-surname authors' — for a reason that has nothing to do with the grant.** 🔵 **That is a regional bias inside an instrument this base built to do regional work, and it is `p798-G`'s caution — measure a rate where it should NOT hold — applied to the base's own shelf.** 🟢 **`p795-A`'s band is RETIRED as a grading screen; the normalised clause hash replaces it.**
+
 ## 🆕 `p798` — `T935`–`T941`
 
 🔵 **The pass's through-line: four of these seven are about an instrument being pointed at the wrong unit** — a region inferred from a query language, a rider inferred from a byte count, a restriction looked for in a licence file, a supply gap diagnosed from five rows with no denominator. 🟢 **Each one was caught by adding a CONTROL, and in two cases the control already existed in this repository and had stopped being used.**

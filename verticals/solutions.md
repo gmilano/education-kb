@@ -4,6 +4,35 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p799` — **A ministry's own curriculum, published as structured JSON by a teacher with no budget, is the most reusable vertical asset found this pass. 🟢 `p799` names the pattern: CURRICULUM-AS-DATA, and there are now two independent instances, one LATAM and one EMEA.**
+
+🟢 Machine output: [`payload-region-provenance`](../evidence/payload-region-provenance.2026-11-12-p799.tsv).
+
+### 🟢 Curriculum-as-data — the asset an engagement cannot generate and must not invent
+
+🔵 **Every tutor deliverable in this base needs the same thing before it can be grounded: the client jurisdiction's official contents and expected learnings, as structured data with a citation back to the publishing authority.** 🟢 **Two repositories have now done that work, in two regions, and both are readable today:**
+
+| Asset | Repo | Licence at payload | Region | What it contains |
+|---|---|---|---|---|
+| 🟢 **MPPE curriculum, 🇻🇪 Venezuela** | [`Ignacio-Ghub/asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion) → `web/api/curriculo/*.json` | 🔴 **GPL-3.0 · `35,149 B`** (code); the curriculum content is the **ministry's** | 🟢 **LATAM 🇻🇪** | 🟢 **`11` files — Primaria `1.º`–`6.º` and Media General `1.º`–`5.º`** — each carrying `nivel`, `grado`, and per-area `fuentes` citing *Ministerio del Poder Popular para la Educación* documents at `mppe.gob.ve` with their publication months |
+| 🟢 **LOMLOE curriculum + legislation, 🇪🇸 Spain** | [`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia) · [`nmarafo/open-lex-edu`](https://github.com/nmarafo/open-lex-edu) | 🔴 **share-alike content, byte-verified separately: `2,123 B` (`OpenDidactia`, HEAD `fe6106b7e90a`) and `2,874 B` (`open-lex-edu`, HEAD `5ad542282c8f`)** — 🟢 `OpenDidactia`'s count reproduces `p270` exactly, `~500` passes apart | 🟢 **EMEA 🇪🇸** | 🟢 Spanish educational legislation and curricular schemas in **Open Knowledge Format (OKF)**, spanning Madrid, Galicia, Andalucía, Aragón, Canarias and Baleares |
+
+🔴 **`T950` — the two files are NOT the same licence, and the byte counts are how this pass knows.** 🔴 **`2,123 B` and `2,874 B` cannot both be the same payload, so "CC BY-SA 4.0" cannot be carried from one to the other.** 🟢 **`OpenDidactia` is the row `p270` graded; `open-lex-edu`'s `2,874 B` payload is graded `OTHER_unclassified` by this pass's classifier and is NOT yet read.** 🔵 **Recorded as a gap rather than assumed, because a share-alike content licence is exactly the obligation a client deliverable cannot inherit silently** → `p799-F`.
+
+🔴 **`T951` — `universidade` is GALICIAN as well as Portuguese, so it cannot place a row by itself.** 🟢 **[`nmarafo/open-lex-edu`](https://github.com/nmarafo/open-lex-edu) returned `CONFLICT:EMEA=xunta/LATAM=universidade` — the conflict state working as designed.** 🟢 **`Xunta` resolves it to Galicia, so the row is EMEA 🇪🇸.** 🔵 **A sixth instance of `p799`'s substring-and-ambiguity class, and this one is a WORD rather than an acronym: the token is correct Galician orthography and correct Portuguese at once.** 🟢 **This pass's own [`RowanFalcao/inclusign-ai`](https://github.com/RowanFalcao/inclusign-ai) placement survives only because the DESCRIPTION corroborated it with `PIVIC / UniRV`** — 🔴 **on the `universidade` token alone it would have been a coin-flip between Galicia and Brazil.**
+
+🔴 **Read the licence column carefully, because the two halves differ and that is the whole point of `T936`'s `571`-byte precedent:** 🔴 **the Venezuelan repository's CODE is GPL-3.0, so boundary-only** — but the curriculum it loads is a ministry publication, cited to its source, and it is the half an engagement actually needs. 🔴 **`OpenDidactia` is share-alike CONTENT: usable, attributable, and it propagates its licence to derivatives, so it is never a silent dependency in a client deliverable.**
+
+🟢 **The pattern to copy, rather than the repository to fork:** cite the ministry document, carry its publication date in the record, structure per level and area, and 🟢 **declare the gaps — the Venezuelan author's screen tells the teacher when an area has no published content document instead of generating into the void.** 🔵 **That is the behaviour a client's academic council will ask for, and it is already written down** → [`compose/patterns.md`](../compose/patterns.md) `P799-1`.
+
+### 🟡 `ACTION p798-F` NOT discharged, and the honest reason
+
+🟡 **`p798-F` asked for one number: the recurring cost of carrying a DE-BRANDED Moodle fork across a year of upstream releases**, since `p797-G` established that the licensed partner route publishes no price. 🔴 **NOT DONE this pass.** 🟢 **Honest reason: `p799`'s budget went to the discovery legs the scheduler mandates plus four queued actions that returned findings, and this one needs an asset inventory of Moodle's brand files across two releases — real work with no finding attached, which is `p795-D`'s failure mode exactly.** 🟢 **Re-queued unchanged and FIRST, with the note that it is now the oldest unstarted costing question on this shelf.**
+
+### 🟢 Platform shelf — unchanged this pass, and re-stated because the licence claims in the channel are wrong again
+
+🔴 **This pass's vertical leg returned a comparison article asserting that Open edX is "Apache License 2.0" and another placing Canvas and Open edX in the same AGPL row.** 🟢 **The shelf's existing gradings stand and are byte-verified:** **Moodle** GPL-3.0 (with the brand-layer restriction `T924` found in `moodle/moodle` itself), **Open edX** AGPL-3.0 platform, **Canvas** AGPL-3.0, **Sakai** ECL-2.0, **Chamilo** GPL-3.0, **Kolibri** MIT, **OpenEduCat** LGPL-3.0, **Frappe Learning / LMS** 🔴 **governed by a policy in the SIBLING repository `frappe/erpnext`** (`T925` — still ungated, `ACTION p797-D`, third carry). 🔵 **`OpenOlat` (Apache-2.0) is the one genuinely permissive LMS in the channel and remains the right base when a client's counsel refuses copyleft.**
+
 ## 🆕 `p798` — **`ACTION p797-G` discharged to a hard answer nobody wants: the Moodle Certified Partner route — the licensed way to say the word *Moodle* while selling a service — publishes NO fee schedule, NO royalty terms and NO trademark-usage terms. The restriction is public and the remedy is not. Plus the first `571`-byte template for the content boundary every white-label deliverable has.**
 
 ### 🟡 `ACTION p797-G` — the Partner route, as far as the public record goes

@@ -6,17 +6,32 @@ updated: 2026-11-12
 
 # Globant AI Studios — Education KB
 
-**Pass `p798` · `2026-11-12`** — `p797` found five LATAM-origin education agents, none of them
-licensed, and concluded that the region's constraint was grant hygiene. 🟢 **`p798` gave that claim
-a denominator and a control leg, and it does not survive either.** 🔴 **Ungranted is the default for
-a young repository in ANY language — `78.1%` in-language against `60.4%` in English.** 🔴 **What is
-specific to the in-language population is that nobody has adopted any of it: `94.5%` sit at zero
-stars and the whole population's ceiling is `5`.** 🟢 **Four of this pass's seven findings are an
-instrument pointed at the wrong unit, and in two cases the right instrument was already in this
-repository and had fallen out of use.** The two trending ledgers and the action ledger are appended
-to, never rewritten.
+**Pass `p799` · `2026-11-12`** — `p798` reversed a LATAM claim about licensing by giving it a control
+leg. 🟢 **`p799` pointed the same instrument at this base's most-cited LATAM statistic and at its own
+tooling, and both moved.** 🔴 **UNESCO IESALC's "`87%` adoption, `26%` formal strategy" is real and is
+NOT regional — `26%` sits between a global `20%` and a global `34.2%`, so the gap is `1.32×`, not the
+categorical `4.8×` a regional pathology would look like.** 🟢 **What IS regional is money and
+capability: `55%` of universities carry no AI budget and `11%` of faculty can rigorously evaluate AI
+output.** 🔴 **And the pass's own instrument produced TEN defects, every one caught before publication and
+none published — two of which were findings in their own right.** The two trending ledgers and the
+action ledger are appended to, never rewritten.
 
 ## What this pass established
+
+| | |
+|---|---|
+| 🔴 **The LATAM governance pitch is retired, and replaced by a GLOBAL one** | 🔴 **`T949`: `26%` LATAM formal strategy vs global `34.2%` (IREX, `46` universities / `25` countries) and global `20%` (Coursera) — `1.32×`. 🟢 The offer is appraisal capability and a funding case, not another acceptable-use policy** |
+| 🟢 **`ACTION p798-A` discharged, and it splits** | 🟢 **🇻🇪 Venezuela resolved on ministry-document evidence (`mppe.gob.ve`, art. `108` LOE grading). 🔴 The second row stays `LATAM?` after SIX channels — and is country-agnostic BY DESIGN** |
+| 🔴 **The method `p798-A` specified found neither** | 🔴 **Root-README prose returned `NA_none` on both. 🟢 What worked: the TREE, a localised `LEEME.md`, and the repository DESCRIPTION — a channel no prior pass named** |
+| 🟢 **`ACTION p798-C` discharged — `p795-A` RETIRED** | 🟢 **`8` MIT payloads, `1,061`–`1,250 B`, ONE clause hash, `1,032 B` normalised every time. 🔴 The band flagged `5` of `8`, and the mechanism is the holder's NAME — so two-surname convention is penalised** |
+| 🔴 **`ACTION p798-D` discharged as a REFUTATION** | 🔴 **The domain predicate recruited a new contaminant: `24` of `30` rows on one leg were university course-project reports. 🟢 `total_count` predicted precision where the predicate did not** |
+| 🟢 **`ACTION p798-E` discharged inside the instrument** | 🟢 **`4` typed gates + a `{"message"` guard: `0` refused-API cells and `0` shape failures across `17` rows × `11` columns** |
+| 🔴 **`10` instrument defects, `0` shipped** | 🔴 **Five are one class: a token that is a SUBSTRING of ordinary text. Brazil's `ENEM` inside Spanish *tenemos*; Paraguay's `.py` on Python files; "Portuguese (Brazil)" in an i18n list; `GPL-3.0` §`13` naming the AGPL — 🔴 the last of which `p214` had ALREADY named, and a fresh instrument rebuilt it anyway** |
+| 🟢 **`6` agents added, `3` newly placed to a country** | 🟢 🇻🇪 🇵🇪 🇨🇴 🇧🇷 🇦🇷 — and `T940`'s offline-first signature replicated with six independent instances in one week |
+| 🔴 **APAC gains the first statute that names education** | 🔴 **Vietnam, in force `2026-03-01`: education AI is HIGH-RISK with an `18`-month transition** |
+| 🔴 **North America's calendar is dated** | 🔴 **NC `Session Law 2026-41`: `2026-12-31` / `2027-06-30` / `2028-06-30`; `~134` bills across `31` states** |
+| 🔴 **Two session-policy limits, SIXTH pass each** | 🔴 **Committed code cannot be executed here (`p797-H`), so `p135` was re-implemented and said so. Ten government domains refuse at `CONNECT` (`T906`)** |
+
 
 | | |
 |---|---|

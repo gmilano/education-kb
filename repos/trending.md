@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-12
 ---
 
+## `2026-11-12` · `p799` — **every channel this base depends on was re-probed from a fresh session, and all five limits reproduce exactly. 🔴 The execution limit is now in its SIXTH pass.**
+
+🟢 **Method, so the numbers can be re-derived:** `gh api search/repositories` with a `repo:` qualifier for metadata; blobless clone (`--filter=blob:none --no-checkout --depth 1`) for grant bytes, tree enumeration and HEAD shas; `17` addresses probed, `0` clone failures, `1` deliberate negative control. 🟢 Machine output: [`channel-reprobe`](../evidence/channel-reprobe.2026-11-12-p799.tsv) · [`payload-region-provenance`](../evidence/payload-region-provenance.2026-11-12-p799.tsv). 🟢 Instrument committed: [`ingest/p799-payload-region-probe.sh`](../ingest/p799-payload-region-probe.sh).
+
+### 🔴 The channel table, re-probed rather than carried
+
+| Channel | Probe | Result | Reproduces |
+|---|---|---|---|
+| 🔴 `curl -sI`, **live** address | `github.com/moodle/moodle` | 🔴 **`403 Forbidden`** | `T923` |
+| 🔴 `curl -sI`, **invented** address | `github.com/zzz-not-a-real-owner-p799/zzz-nope` | 🔴 **`403 Forbidden` — byte-identical to live** | `T923` |
+| 🟢 `gh api search/*` | `q=moodle ai agent` | 🟢 **`200`, `total_count 62`** | `T941` |
+| 🔴 `gh api repos/{owner}/{repo}` | `repos/moodle/moodle` | 🔴 **refused** — *"GitHub access to this repository is not enabled for this session"* | `T941` |
+| 🔴 `gh api users/{login}` | `users/moodle` | 🔴 **refused** — *"sessions are bound to their configured repositories"* | `T935` |
+| 🔴 **execute committed repository code** | `bash ingest/p797-brand-layer-gate.sh` | 🔴 **DENIED by the command classifier — `Code from External`** | 🔴 **`p797-H`, SIXTH pass** |
+| 🟢 blobless clone, **live** | `towardsai/ai-tutor-app` | 🟢 **HEAD `7a498edabed9`** + root tree | `p796-F` |
+| 🟢 blobless clone, **invented** | the negative control | 🟢 **`fatal: could not read Username`** | `p796-F` |
+
+🔵 **The two `curl` rows are the whole argument for `p796-F`, and they are worth re-stating because the scheduler's standing instruction still says to verify with `curl -sI`:** a live address and an address invented for this probe return the SAME bytes. 🟢 **The blobless clone separates them in both directions, and it is the channel every grant in this base is measured on.**
+
+🔴 **The execution limit, stated plainly for the sixth time:** `make hooks`, `make commit-gates`, `p135`, `p1060-readme-vs-payload` and `17` undeclared red gates cannot be run from here. 🟢 **`p799` therefore RE-IMPLEMENTED `p135`'s normalisation in its own command rather than publishing a run that did not happen** (`T948`), and says so where the result is used.
+
+### 🟢 Grant bytes re-measured against `p798`, independently — `5` of `5` agree to the byte
+
+| Address | `p798` | 🟢 `p799`, fresh clone | Verdict |
+|---|---|---|---|
+| [`jeffercbs/chispa-mcp`](https://github.com/jeffercbs/chispa-mcp) | MIT `1,066 B` | 🟢 **MIT `1,066 B`** | 🟢 agree |
+| [`danielgalanv/oral-ia`](https://github.com/danielgalanv/oral-ia) | Apache-2.0 `11,358 B` | 🟢 **Apache-2.0 `11,358 B`** | 🟢 agree |
+| [`Ignacio-Ghub/asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion) | GPL-3.0 `35,149 B` | 🟢 **GPL-3.0 `35,149 B`** | 🟢 agree — 🔴 **after `p799`'s own classifier read it AGPL and was wrong, reproducing a defect `p214` had already named** (`T947`) |
+| [`ANFAIA/SkillNet`](https://github.com/ANFAIA/SkillNet) | Apache-2.0 `10,758 B` | 🟢 **Apache-2.0 `10,758 B`** | 🟢 agree |
+| [`XAIHT/Tlamatini`](https://github.com/XAIHT/Tlamatini) | MIT `1,062 B` | 🟢 **MIT `1,062 B`** | 🟢 agree — HEAD moved to `b3e61fb8810c` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | MIT `1,065 B`, 🔴 two shas resolving to *"Neither"* | 🟢 **MIT `1,065 B`, HEAD `a2aeffcec2f4`** | 🟢 **sha supplied** |
+| [`falkenslab/miyagi`](https://github.com/falkenslab/miyagi) | MIT `1,078 B` | 🟢 **MIT `1,078 B`, HEAD `8dc5987155a4`** | 🟢 agree |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | GPL-3.0 (+ brand layer, `T924`) | 🟢 **GPL `35,147 B`, HEAD `afbcc55fa1bd`, `7,607★`, pushed `2026-11-12`** | 🟢 live |
+| [`nmarafo/open-lex-edu`](https://github.com/nmarafo/open-lex-edu) | — (first byte measurement) | 🟡 **`2,874 B` unclassified, HEAD `5ad542282c8f`** | 🔴 **NOT the `2,123 B` of `OpenDidactia` — see `T950`** |
+
+🟢 **`T937` reproduced BY INSTRUMENT rather than by hand:** the `readme_restriction` column returned `Tlamatini`'s *"do not remove (Angela's name is kept in every build)"* verbatim, under a byte-canonical MIT. 🟢 **That is `ACTION p798-B`'s mechanism working — at `17` addresses rather than `130`, so the action is PARTIALLY discharged and re-queued with the population it still owes.**
+
+### 🟢 Star counts, re-verified against the secondary channel
+
+| Repo | Secondary blogs this window | 🟢 `search/*`, exact | Error in the secondary channel |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `45K` · `48K` · `52.8K` | 🟢 **`58,630`** | 🔴 **`-23%` to `-10%`** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | *"about `42K`"* | 🟢 **`43,394`** | 🟡 `-3%` |
+
+🔵 **Recorded because the base's `58,622` was itself challenged by a `52.8K` figure published `11` days before this pass, and the exact channel upholds the base.** 🟢 **Two independent passes, two fresh reads, `+8` drift.**
+
 ## `2026-11-12` · `p798` — **two census legs, `222` addresses, and the channel that answers is not the channel this base was told to use**
 
 🟢 **Method, stated so the numbers can be re-derived:** `gh api search/repositories`, `sort=stars`, `per_page=30`, `16` query legs, window `pushed:>2026-06-01`, deduplicated on address. 🟢 Grants byte-verified for the `15` candidates by blobless bare clone + `ls-tree -l` + `cat-file blob`.

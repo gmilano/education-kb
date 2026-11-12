@@ -4,6 +4,37 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p799` — **`ACTION p798-C` discharged: the MIT grants on this shelf are ONE document, and the screen that was flagging them is retired. 🔴 `8` payloads spanning `189` bytes normalise to a single clause hash, and the byte band flagged `5` of the `8`.**
+
+🟢 Machine output: [`mit-clause-identity-population`](../evidence/mit-clause-identity-population.2026-11-12-p799.tsv). 🔴 **Method declared: `p135` could not be RUN — executing committed repository code is refused in this session (`p797-H`, sixth pass) — so its `body`-level normalisation was re-implemented in this pass's own command. The result is a re-implementation, not a `p135` run.**
+
+| Measure | Result |
+|---|---|
+| MIT payloads measured | `8`, all byte-verified on the blobless-clone channel |
+| Raw byte spread | 🔴 **`1,061 B` → `1,250 B`** |
+| 🟢 **Distinct normalised clause hashes** | 🟢 **`1` — `745e05f91f85`** |
+| 🟢 **Normalised clause bytes** | 🟢 **`1,032 B` on every one** |
+| 🔴 `p795-A` band (`1,066`–`1,072 B`) verdict | 🔴 **`5` of `8` OUTLIER** |
+
+🔴 **The spread is entirely the copyright line, so `p795-A` was screening on the length of the holder's NAME** — `XAIHT` at `1,062 B` and `Rowan Falcão Rodrigues L…` at `1,250 B` carry byte-identical grants. 🔵 **Spanish and Portuguese convention carries two surnames, so the screen's false-alarm rate is higher for Iberian and LATAM authors than for Anglo ones — a regional bias inside an instrument this base built for regional work** (`T948`, [`intel/trends.md`](../intel/trends.md)).
+
+🟢 **Adopted: the normalised clause hash replaces the byte band as the MIT identity test.** 🟢 **A grant row ships `blob <sha>` or `HEAD <sha>` per `T927`, and now additionally `clause <md5>` where the question is whether the grant text itself was modified** — which is the question `p795-A` was built to answer and could not.
+
+### 🟢 `T946`'s channel ranking belongs on this shelf too
+
+🟢 **A foundation's REGION is graded by the same ranking the agent shelf now uses, strongest first:** ministry/government document at a URL host → institutional affiliation in `NOTICE` or description → ccTLD inside a URL host → subnational territory → 🆕 repository description on `search/*` → 🔴 bare country name in prose (**contaminated by i18n locale lists**) → 🔴 commit author identity (**useless: `5` of `5` were `gmail.com` or `users.noreply.github.com`**).
+
+🟢 **Reproduction worth recording across `~500` passes:** [`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia)'s payload measures **`2,123 B`** this pass — the identical count `p270` recorded — and remains **CC BY-SA 4.0 at payload**, i.e. a CONTENT asset under share-alike, never a code dependency. 🟢 Placed **EMEA** on four Spanish autonomous communities in its own payload, independently reproducing the base's Spain/LOMLOE grading.
+
+### 🟢 Foundations confirmed live this pass, with exact counts
+
+| Repo | Grant (byte-verified) | ★ (exact, `search/*`) | Last push | Region | Role |
+|---|---|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT · `1,065 B` · HEAD `a2aeffcec2f4`** | 🟢 **`43,394`** | `2026-11-12` | APAC 🇨🇳 | 🟢 **The largest MIT-granted education base available to this studio** — document/topic → interactive classroom. 🟢 Permissive, so it may be embedded in a client deliverable without a reciprocity analysis |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0 · `11,408 B` · HEAD `60fb3bdfddb3`** | 🟢 **`58,630`** | `2026-11-07` | APAC 🇨🇳 | 🟢 The lifelong-tutoring reference: three-layer memory, mastery-gated paths. 🟢 Apache-2.0 carries a patent grant, which MIT does not — 🔵 prefer it where a client's counsel asks about patent exposure |
+| [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟢 **Apache-2.0 · `11,386 B` · HEAD `7a498edabed9`** | `34` | `2026-10-22` | Global | 🟢 Agentic-RAG tutor over a real course corpus (LangGraph + FastAPI) — the working answer to *"a tutor grounded in OUR curriculum"* |
+| [`leandroeaguilar/aulento`](https://github.com/leandroeaguilar/aulento) | 🟢 **MIT · `1,072 B` · HEAD `9f33c0d53e97`** | `0` | `2026-11-11` | `LATAM?` | 🟢 **The only base here whose learning claim rests on a NAMED published algorithm (FSRS v5) rather than on the model** — plus an MCP server and Obsidian integration |
+
 ## 🆕 `p798` — **No row changes grade this pass, and the reason is worth more than a grade change: the instrument that grades the MIT rows is measuring the length of the author's name. `p795-A`'s byte-size band flags `3` of `4` byte-identical MIT payloads, and this base built the exact replacement at `p135` and then stopped using it.**
 
 🟢 Machine output: [`mit-clause-identity`](../evidence/mit-clause-identity.2026-11-12-p798.tsv) · [`candidate-grant-bytes`](../evidence/candidate-grant-bytes.2026-11-12-p798.tsv).
