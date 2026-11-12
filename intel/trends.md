@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p797` — `T924`–`T934`
+
+### 🔴 `T924` — the brand layer is not an exception on the platform shelf, it is a structural feature of it: `6` of `37` addresses, and two of the `6` are the two most-deployed systems in this industry
+
+🟢 **`p796` found `3` of `3` on rows chosen for being RECOMMENDED and called that the argument for a standing gate. `p797` ran the gate over `37` platform addresses and `54` candidate licence files: `6` bespoke brand restrictions.** 🔴 **The two new ones are [`moodle/moodle`](https://github.com/moodle/moodle) (`TRADEMARK.txt`, `3,367 B`: *"the GNU GPL does not include an implied right or licence to use Moodle's trade marks"*) and [`frappe/erpnext`](https://github.com/frappe/erpnext) (`TRADEMARK_POLICY.md`, `3,020 B`: permission only where *"your project is non-commercial in nature"*), plus [`ankitects/anki`](https://github.com/ankitects/anki), whose logo licence requires the mark be used **unmodified**.** 🔵 **The generalisation: in this industry the permissive-or-copyleft question governs the CODE, and a second, differently-licensed layer governs the thing the client actually wants — their own name on the product.** 🟢 **Grading the root `LICENSE` finds none of the six.**
+
+### 🆕 🔴 `T925` — the restriction can live in a different REPOSITORY, and no per-address sweep can see it
+
+🔴 **[`frappe/education`](https://github.com/frappe/education) and [`frappe/lms`](https://github.com/frappe/lms) carry no brand instrument. The policy that binds their brand is in `frappe/erpnext`.** 🔵 **`T914` moved the unit of analysis from the repository to the FILE. `T925` moves it again, to the project FAMILY — and unlike `T914`, this one is invisible to the instrument that found it: `p797`'s sweep enumerates one root tree per address and would report `frappe/education` clean forever.** 🟢 **Rule: a brand clearance names the upstream PROJECT and reads every repository that shares its name.**
+
+### 🔴 `T926` — this base's `12`-hex provenance column is TWO object kinds in one visual position, plus a third that resolves to neither
+
+🟢 **`83` cells across the three recommendation shelves, re-measured against first-hand bytes: `43` are COMMIT shas, `9` are licence-file BLOB shas, `31` resolve to neither today** ([`provenance-cell-kinds`](../evidence/provenance-cell-kinds.2026-11-12-p797.tsv)). 🔵 **`T905` said the column *"is not one hash function"* and `p796-B` concluded it should be deleted. The measurement says otherwise: `52` of `83` resolve, and most of the `31` are an old `HEAD` on a repository that has since been pushed — which is a staleness signal, not an error.** 🔴 **The real defect is AMBIGUITY: a reader must guess the object kind before they can check anything.** 🟢 **Fix adopted: a provenance cell carries its kind (`blob <sha>` / `HEAD <sha>`) or it does not ship. Re-typing the history is mechanical and queued as `p797-B`.**
+
+### 🔴 `T927` — a brand file moved upstream the SAME DAY this base first read it
+
+🔴 **`p796` measured [`ankitects/anki`](https://github.com/ankitects/anki)`:LICENSE` at `1,930 B`. `p797` measures `1,937 B` — and the diff is commit `9c539a036804`, `2026-11-12 16:06:11 -0300`, *"docs: update logo copyright holder in LICENSE"*.** 🔵 **Two passes on one day, and the brand layer changed between them — on the axis the first pass had just made its headline.** 🟢 **Consequence for every byte-size anchor in this base: a size without a commit sha beside it is a snapshot, not a verification.** 🟢 **It also vindicates keeping byte size (it reproduced exactly against an unchanged file on `3` of `3` rows) while typing the sha — the two together are falsifiable, either alone is not.**
+
+### 🔴 `T928` — two defects in one instrument: a vocabulary match with no word boundary, and an object size with no object type
+
+🔴 **v1 of `p797`'s brand gate matched `icon` as a SUBSTRING and reported it on every GPL-3.0 row in the base, because GPL-3.0 §`0` says *"semiconductor masks"* — `17` rows carried a term they do not contain.** 🔴 **The same v1 graded [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai)`:licenses` as a `4,380 B` licence file; `cat-file -s` returns a size for a TREE, and the instrument never asked the type.** 🔵 **Both are the same error in different clothes — asking a question whose answer type is wider than the question assumes.** 🟢 Both published: [`brand-layer-census-UNCORRECTED-v1`](../evidence/brand-layer-census-UNCORRECTED-v1.2026-11-12-p797.tsv).
+
+### 🔴 `T929` — SCOPE, not the predicate, is what bounds a corpus-wide gate: `15,591` → `5,093` → `18`
+
+🔴 **`ACTION p796-E`'s gate over `2,093` evidence files (`2,097` once this pass's own artefacts landed) reported `15,591` offending rows on its first run, where `6` addresses are real. Narrowing the predicate twice got it to `5,093`. Keying it on the DECLARED HEADER — only the `696` files whose column `0` is headed `repo`/`addr`/`slug`/`address` — got it to `18`, which is the truth (`6` addresses × `3` files).** 🔴 **All `21` of v1's controls passed at every step.** 🔵 **`p796-G` says a control set must span the population's kinds; `T929` is the limit of that rule — a control set cannot span kinds its author has not met, and this population held four (a URL in column `0`, a prose sentence in column `0`, a repository name legally ending in `-`, and a file path).** 🟢 **What saved the gate was not a better rule but a smaller, DECLARED scope. Prefer a gate over a column that has promised what it holds.**
+
+### 🔴 `T930` — `p796` graded its own NEGATIVE CONTROL as a defect
+
+🔴 **`p796` reported *"a template placeholder found in a PUBLISHED evidence artefact: the literal row `OWNER/REPO`"*.** 🟢 **Read: `existence-three-state.2026-11-12-p794.tsv:41` is `OWNER/REPO  ABSENT  128  0  0` — the deliberate negative control `p796`'s own README cites approvingly two sections later (*"with a NEGATIVE control that fails as required"*).** 🔴 **And `address-census.2026-11-12-p781.tsv` lines `109`/`625` are not placeholders either: they are COUNTS of how often `owner/repo` (`24`) and `OWNER/REPO` (`6`) occur in this base's own markdown.** 🔵 **The gate `p796` specified — reject `OWNER`, `REPO`, `NEW`, `EXAMPLE` as literals — would have deleted the control and the census.** 🟢 **`47` candidate rows in `24` files; `41` are headers, prose-literal counts or controls; `6` are the real defect, a STATUS MARKER glued onto an address (`NEW/ArnaudGuiovanna/tutor-mcp`), fixed by stripping the prefix rather than deleting rows that carry real measurements.** 🔵 **An instrument that cannot tell a placeholder from a control will delete the control, because the control is the thing that looks wrong on purpose.**
+
+### 🔴 `T931` — the LATAM supply is not missing. It is unlicensed.
+
+🔴 **Five consecutive passes recorded `0` LATAM-origin intake and attributed it to `T883`, the English-query shape. One hour on the `es` and `pt` legs returned five addresses — and `5` of `5` are `NOASSERTION`: no licence file of any kind. None has more than ONE star; three were pushed within six weeks.** 🔵 **This inverts the remedy. A supply gap is answered by discovery; a grant gap is answered by a conversation with a reachable author who has no reason to refuse.** 🟢 **And it re-dates the risk: these are new repositories, so the licence is missing by omission rather than by choice** → [`agents/top.md`](../agents/top.md) `p797`, `P797-1`.
+
+### 🔴 `T932` — Korea is this base's first measured REVERSAL, and it is the strongest evidence against a mandate-led offer
+
+🔴 **`AI 디지털교과서` adoption: `4,095` schools (`34.2%`) in `1H 2025` → `1,481` (`12.5%`) → `622` (`5.2%`) in `1H 2026`, after the August `2025` statutory reclassification from *교과용 도서* to *교육자료* made adoption discretionary.** 🔴 **`94.8%` of schools stopped once nobody made them continue.** 🔵 **Every regional opening in this base is anchored to a compelled document, and `T932` is the limit of that strategy: a compelled deployment survives exactly as long as the compulsion.** 🟢 **It is `T907` restated at national scale — the binding constraint is whether a teacher chooses the thing — and it is why `P797-1` sells an instrument that proves voluntary use rather than a rollout that proves compliance.** 🟢 **What remains is a better-shaped buyer: `1,900` self-selecting lead schools, and AI-subject 인정 교과서 piloting `1H 2027`.**
+
+### 🔴 `T933` — the primary-source channel loses a seventh domain, and this time it holds the pass's headline
+
+🔴 **`www.gov.br` does not resolve from this session, joining `eur-lex.europa.eu`, `oecd.org`, `unesco.org`, `op.europa.eu`, `iesalc.unesco.org` and `digital-strategy.ec.europa.eu` (`T906`).** 🔴 **So `Parecer CNE/CP nº 15/2026` — the first compelled AI-in-education deadline in LATAM — is `CITED, NOT READ`.** 🟢 **`p795-F`'s mitigation applies and is the reason this is publishable: name the instrument, not a paraphrase of it.** 🔵 **`p794-F`'s cost is no longer bookkeeping. It is now measured in regulatory deadlines this base can name but not verify.**
+
+### 🆕 🟢 `T934` — a dosage metric that drops the zeros measures the engaged, and the engaged were never the question
+
+🟢 **`ACTION p796-A` built at last ([`compose/code/p797-dosage/`](../compose/code/p797-dosage/)), and its first control caught its first defect: it took the median practice-days over only the students who practised, reading `2.5` where the honest answer is `2`.** 🔴 **The student it dropped had been offered the tutor twice and never took a turn — the population `T907` says dominates.** 🔵 **This is `T916`'s shape on a different axis: when an instrument must summarise a mixed population, the half it silently discards is the half that carries the bad news.** 🟢 **Rule: a dosage denominator is everyone who was OFFERED the thing.**
+
 ## 🆕 `p796` — **eight findings. The headline is that on the rows this base recommends for white-labelling, the permissive grant covers the CODE and the BRAND ASSETS are licensed separately and more restrictively — three independent instances, one of them `NoDerivs`. The second headline is that `5` of my own `32` initial multi-grant flags survived, and the controls that certified the instrument could not have caught the error.**
 
 ## `T914` — the brand layer is licensed separately from the code layer, and that is where white-labelling dies

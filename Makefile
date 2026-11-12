@@ -153,7 +153,7 @@ HOOK_GATES = gate-offline recount gate-derived-counts gate-enumeration gate-tabl
              gate-conjunctive-grant gate-branch-alias \
              gate-promotion gate-recency gate-promotion-ledger \
              gate-grant-presence gate-cell-reproduction \
-             gate-promotion-ratchet
+             gate-promotion-ratchet gate-evidence-address
 
 # ---------------------------------------------------------------- p427
 # 🟢 p427: A GRANT MAY CARRY TWO FAMILIES CONJUNCTIVELY, AND THIS BASE HAD NO SCOPE FOR
@@ -1598,3 +1598,19 @@ gate-delivery-fitness: ## p556 — Gap 556-E: every verdict arm is exercised bef
 
 delivery-fitness: ## p556 — the measurement alone: grade a harvest TSV against Globant's delivery model.  Never a failure.
 	@$(PY) -I ingest/delivery-fitness.py $(or $(HARVEST),evidence/platform-harvest.2026-10-30-p556.tsv)
+
+# ---------------------------------------------------------------- p797
+# 🟢 `ACTION p796-E` — the published MACHINE OUTPUT gets the same policing this base has applied
+# to its TABLES since `p277`, and `ACTION QO`'s ten-pass wish for a standing licence-adjacent gate
+# that cannot fail on vocabulary drift is finally satisfied by one keyed on SHAPE and SCOPE rather
+# than on a word list.
+#
+# `p796` specified this as "reject `OWNER`, `REPO`, `NEW`, `EXAMPLE` as literals". That gate would
+# have deleted this base's own deliberate NEGATIVE CONTROL (`OWNER/REPO  ABSENT  128  0  0`) and
+# the census rows that COUNT those literals in the shelves. Three predicates over-reported before
+# the scope was narrowed to files that DECLARE column 0 to be an address: 15 591 rows → 5 093 →
+# 18, where 18 is the truth (6 addresses × 3 files). All of v1's 21 controls passed while it was
+# wrong on 15 591 rows — `p796-G` at full strength, reproduced one pass after it was written.
+gate-evidence-address: ## p797 — ACTION p796-E: a published address may not wear a status marker.  Scoped to the evidence files that DECLARE column 0 an address (696 of 2 093 when built).  No network.
+	@cd compose/code/p797-evidence-address-gate && { $(PY) -I test_evidence_address_gate.py > $(GATE_LOG) 2>&1 || { echo "🔴 p797-evidence-address-gate FAILED — its own report follows:" ; sed "s/^/   /" $(GATE_LOG) ; false ; } ; } && echo "── p797-evidence-address-gate (21 field cases + 3 scope assertions; 4 of the kinds present are ones that broke an earlier version of this gate)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p797-evidence-address-gate/evidence_address_gate.py . || exit 1

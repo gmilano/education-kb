@@ -4,6 +4,31 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p797` — **the brand-layer census extended from `3` recommended rows to the whole platform layer: `37` addresses, `54` candidate licence files, `6` bespoke brand restrictions — and `Moodle` and `ERPNext` are two of them. Plus `83` provenance cells re-typed and found to be two different object kinds.**
+
+🟢 **Machine output:** [`brand-layer-census.2026-11-12-p797.tsv`](../evidence/brand-layer-census.2026-11-12-p797.tsv) · 🔴 [`brand-layer-census-UNCORRECTED-v1`](../evidence/brand-layer-census-UNCORRECTED-v1.2026-11-12-p797.tsv) *(published deliberately: it matched `icon` as a substring and graded a directory as a licence file)* · [`provenance-cell-kinds.2026-11-12-p797.tsv`](../evidence/provenance-cell-kinds.2026-11-12-p797.tsv) · 🔴 [`evidence-address-gate-UNCORRECTED-v1`](../evidence/evidence-address-gate-UNCORRECTED-v1.2026-11-12-p797.txt) *(`15,591` rows where `6` are real)*. 🟢 Instruments: [`ingest/p797-brand-layer-gate.sh`](../ingest/p797-brand-layer-gate.sh) · [`compose/code/p797-evidence-address-gate/`](../compose/code/p797-evidence-address-gate/) (WIRED into `make hooks`).
+
+### 🔴 The brand-layer sweep — `ACTION p796-C` discharged
+
+| Brand grade | Files | Addresses |
+|---|---|---|
+| 🔴 **BESPOKE restriction** | 🔴 **`6`** | `moodle` · `frappe/erpnext` · `OpenOLAT` · `open-webui` · `metabase` · `anki` |
+| 🟡 **STOCK reservation only** | 🟡 **`23`** | GPL-family §`7(e)` `15` · Apache-2.0 §`6` `7` · EUPL-1.2 `1` |
+| 🟢 **No brand term** | 🟢 **`25`** | MIT/BSD/short-text rows |
+
+🟢 **`37` addresses attempted · `37` cloned · 🟢 `0` failures · `100` seconds at `12` parallel.** 🔴 **`OS4ED/openSIS-Classic` re-confirmed with `0` licence files of any kind at `HEAD` `8348cd069aa2`** — fourth consecutive pass, `0` drift.
+
+### 🔴 Two structural findings on top of the count
+
+- 🆕 🔴 **`T925` — the brand restriction can be in a different REPOSITORY.** `frappe/education` and `frappe/lms` are brand-clean by inspection; the policy that binds them is in `frappe/erpnext` and grants permission only to NON-COMMERCIAL projects. 🔵 **No per-address sweep can find that, including this one.**
+- 🔴 **`T927` — [`ankitects/anki`](https://github.com/ankitects/anki)`:LICENSE` changed between `p796` and `p797`, on the same day**: `1,930 B` → `1,937 B`, commit `9c539a036804` at `16:06:11 -0300`, *"docs: update logo copyright holder in LICENSE"*. 🔵 **A byte size without a commit sha beside it is a snapshot, not a verification.**
+
+### 🔴 Corrections to this base's own machine output
+
+- 🔴 **`Kosudo/nextSIS`'s `39,890 B` `license.txt` is an ANTHOLOGY of three grants with its own table of contents** (GPL-3.0 + CodeIgniter + Twitter Bootstrap, plus a Glyphicons attribution). 🔴 **`p796`'s grant-block census recorded `1`.** 🟢 The GPL-3.0 verdict stands.
+- ✏️ **`frappe/erpnext` published here at `34,916 B`; measured `35,149 B`** — 🔴 the figure `p796`'s own census carried the same day.
+- 🟢 **`18` rows across `3` evidence files had a status marker stripped from the address field** (`NEW/owner/repo` → `owner/repo`), which is the only real defect in the `47` rows `ACTION p796-E` pointed at; 🔴 **the other `41` were headers, prose-literal counts, or this base's deliberate negative control** (`T930`).
+
 ## 🆕 `2026-11-12` · `p796` — **the first licence-FILE census this base has ever run: `174` live addresses, `13` rows carrying `2`+ root licence files, `19` carrying none, and `5` rows serving more than one GRANT — `3` of them inside a single file. Plus `DSpace`'s `91,354 B` third-party anthology opened, and it is a deliverable rather than a hazard.**
 
 🟢 **Machine output:** [`evidence/licence-file-and-grant-block-census.2026-11-12-p796.tsv`](../evidence/licence-file-and-grant-block-census.2026-11-12-p796.tsv) · [`evidence/mit-bsd-bytesize-filter.2026-11-12-p796.tsv`](../evidence/mit-bsd-bytesize-filter.2026-11-12-p796.tsv) · 🔴 [`evidence/licence-block-census-UNCORRECTED-v1.2026-11-12-p796.tsv`](../evidence/licence-block-census-UNCORRECTED-v1.2026-11-12-p796.tsv) *(published deliberately, so the `32`→`5` correction can be re-derived)*.

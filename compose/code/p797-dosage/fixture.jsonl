@@ -1,0 +1,14 @@
+{"student":"s1","session":"a1","event":"offered","ts":"2026-11-01T09:00:00"}
+{"student":"s1","session":"a1","event":"accepted","ts":"2026-11-01T09:01:00"}
+{"student":"s1","session":"a1","event":"turn","ts":"2026-11-01T09:02:00"}
+{"student":"s1","session":"a1","event":"turn","ts":"2026-11-01T09:05:00"}
+{"student":"s1","session":"a2","event":"offered","ts":"2026-11-03T09:00:00"}
+{"student":"s1","session":"a3","event":"offered","ts":"2026-11-04T09:00:00"}
+{"student":"s1","session":"a3","event":"turn","ts":"2026-11-04T10:00:00"}
+{"student":"s2","session":"b1","event":"offered","ts":"2026-11-01T09:00:00"}
+{"student":"s2","session":"b2","event":"offered","ts":"2026-11-02T09:00:00"}
+{"student":"s3","session":"c1","event":"offered","ts":"2026-11-01T09:00:00"}
+{"student":"s3","session":"c1","event":"accepted","ts":"2026-11-01T09:00:30"}
+{"student":"s3","session":"c1","event":"turn","ts":"2026-11-01T09:01:00"}
+{"student":"s3","session":"c1","event":"turn","ts":"2026-11-02T09:01:00"}
+{"student":"s3","session":"c1","event":"turn","ts":"2026-11-03T09:01:00"}

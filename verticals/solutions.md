@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p797` — **`ACTION p796-C` discharged over the whole platform layer, and the two most-deployed platforms in this industry both carve the brand out of the permissive grant. `6` bespoke brand restrictions in `37` addresses — and a kind `T914` could not see at all: the restriction in a DIFFERENT REPOSITORY from the code.**
+
+🟢 **`ACTION p796-C` DISCHARGED** across `37` platform addresses / `54` candidate licence files / `0` clone failures, in `100` seconds on the blobless-clone channel. 🟢 Machine output: [`brand-layer-census`](../evidence/brand-layer-census.2026-11-12-p797.tsv) · 🔴 [`brand-layer-census-UNCORRECTED-v1`](../evidence/brand-layer-census-UNCORRECTED-v1.2026-11-12-p797.tsv) · instrument: [`ingest/p797-brand-layer-gate.sh`](../ingest/p797-brand-layer-gate.sh).
+
+### 🔴 The pass's headline: `Moodle` and `ERPNext` both say the open-source licence does not carry the brand
+
+🔴 **`p796` checked `3` rows and found `3`. `p797` checked `37` and the count is `6` — and `3` of the `6` are new, including the sector default and the ERP underneath half the school-group offers in this file.**
+
+| Row | Code grant | 🔴 The brand instrument, and what it actually says |
+|---|---|---|
+| 🆕 🔴 [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 GPL-3.0 · `COPYING.txt` `35,147 B` | 🔴 **`TRADEMARK.txt` (`3,367 B`, blob `e9f276f70841`) — *"the GNU GPL does not include an implied right or licence to use Moodle's trade marks"*.** Prohibited without written permission from Moodle Pty Ltd: the word *Moodle* **or any Moodle logo for commercial purposes**, in a software name, a company name, a domain name, advertising keywords, or *"to describe services around Moodle"* |
+| 🆕 🔴 [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 GPL-3.0 · `license.txt` `35,149 B` | 🔴 **`TRADEMARK_POLICY.md` (`3,020 B`, blob `30e864b80ac5`) — permission is required to use the ERPNext name or logo *"as part of any project, product, service, domain or company name"*, and it is granted only where *"your project is non-commercial in nature"*.** Explicitly: *"not OK to use it as part of your company or product logo or branding itself"* |
+| 🔴 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 · `10,982 B` | 🔴 `NOTICE.TXT` `14,412 B` · blob `ec55ab01ac0d` — logo and icons `CC BY-ND 2.5`. 🟢 **`T914` reproduced exactly, byte for byte** |
+| 🔴 [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | 🔴 BSD-3-Clause + rider · `2,819 B` | 🔴 Clause `4` bars altering the branding (`T900`) |
+| 🔴 [`metabase/metabase`](https://github.com/metabase/metabase) | 🔴 AGPL-3.0 · `37,265 B` | 🔴 `LICENSE-EMBEDDING.txt` `8,877 B` · blob `ae4a3ee15ff1` — logo and trademark terms, no OSI grant |
+| 🆕 🔴 [`ankitects/anki`](https://github.com/ankitects/anki) | 🔴 AGPL-3.0-or-later **by reference** · `1,937 B` | 🔴 **The logo is AGPL-3.0 *plus* a bespoke alternative licence whose conditions include *"The logo must be used unmodified — no cropping, changing of colours or adding or deleting content"*** — 🔵 a `NoDerivs` in substance inside a file `T919` had already graded as a statement about grants. 🆕 **And a sixth grant nobody had named: `docs-site/` is `CC BY-SA 4.0`** |
+
+🔵 **The commercial reading, and it is not a licence-compliance footnote.** A white-labelled LMS is the deliverable in most engagements on this shelf. 🔴 **Moodle's policy makes the *marketing* of that deliverable the restricted act, not the code**: shipping a GPL-3.0 derivative is fine, calling it *"<Client> Moodle"*, selling *"Moodle services"* or putting the logo in the product is not. 🟢 **The licensed route is Moodle's Certified Partner programme, and that is a commercial decision to take in week one, not a legal one to discover in month six.** 🔴 **ERPNext is stricter in one direction** — the permission it offers is conditioned on the project being non-commercial, which a client engagement never is — 🟢 **and more permissive in another: describing the service (*"offering ERPNext consulting"*) is expressly allowed.**
+
+### 🆕 🔴 `T925` — the brand restriction can live in a DIFFERENT REPOSITORY from the code you ship
+
+🔴 **[`frappe/education`](https://github.com/frappe/education) and [`frappe/lms`](https://github.com/frappe/lms) — both recommended in this file — carry NO brand instrument of their own.** Their root trees were enumerated this pass and hold `license.txt` and nothing else of the kind. 🔴 **The policy that governs their brand is in `frappe/erpnext`, a sibling repository, and it names ERPNext.** 🔵 **`T914` said the restriction can be in a different FILE from the grant. `T925` is the next step out: it can be in a different REPOSITORY, and no per-repository sweep — including this pass's — would find it for `frappe/education`.** 🟢 **Rule: clear the brand at the PROJECT FAMILY, not at the address.**
+
+### 🟢 The three-state grade — and the false-alarm class is `19` of the `24` rows a naive gate would report
+
+🟢 **`p796-G` is the reason this table has three states rather than two.** Apache-2.0 clause `6` and GPL-3.0 clause `7(e)` both decline to grant trademark rights, in every repository that carries them:
+
+| Grade | Files | What it means for a delivery |
+|---|---|---|
+| 🔴 **BESPOKE restriction** | 🔴 **`6`** of `54`, on `6` of `37` addresses | A term the stock licence does not contain. Must be read before a brand decision |
+| 🟡 **STOCK reservation** | 🟡 **`23`** | GPL/AGPL/LGPL-family §`7(e)` (`15` files) · Apache-2.0 §`6` (`7`) · EUPL-1.2 (`1`). 🔵 **Not a finding — but also not permission.** No OSI licence grants trademark rights |
+| 🟢 **No brand term at all** | 🟢 **`25`** | MIT/BSD/short-text rows, plus `OpenOLAT`'s Apache-2.0 `LICENSE` — 🔵 **the row whose `NOTICE` carries the `NoDerivs`, which is the whole argument for enumerating the tree** |
+
+🟢 **`hedyorg/hedy`'s `EUPL-1.2` (`13,827 B`) grades STOCK**, and its `icon` matches are the Licence's own *"clicking on an icon 'I agree'"* acceptance clause — 🔵 **a vocabulary collision, not a brand term, and the reason this gate reports the words it matched rather than a verdict alone.**
+
+### 🔴 `T928` — `2` defects in this pass's own instrument, and the second one is the lesson
+
+🔴 **v1 matched `icon` as a SUBSTRING and reported it on every GPL-3.0 row in the base, because GPL-3.0 §`0` says *"semiconductor masks"*. `17` rows carried a term they do not contain.** 🔴 **v1 also graded [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai)`:licenses` as a `4,380 B` licence file. It is a directory** — `cat-file -s` returns a size for a tree, so the instrument never asked the object's type. 🟢 **Both corrected, both published: the uncorrected run ships beside the corrected one so the `30`→`29` row delta and the `17` dropped terms can be re-derived rather than taken on trust.**
+
+### ✏️ Corrected in place below
+
+| Row | Published here | ✏️ Measured this pass |
+|---|---|---|
+| ✏️ [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 `34,916 B` | ✏️ **`35,149 B`** · blob `f288702d2fa1` — 🔴 **and `p796`'s own census already said `35,149`, so this file contradicted a machine artefact published the same day** |
+| ✏️ [`ankitects/anki`](https://github.com/ankitects/anki) | 🔴 ✏️ `1,937 B` (`p797`: changed upstream `2026-11-12 16:06 -0300`) | ✏️ **`1,937 B`** · blob `1296baf6f4a0` — 🟢 **not a mis-measurement: upstream commit `9c539a036804` at `2026-11-12 16:06:11 -0300`, *"docs: update logo copyright holder in LICENSE"*.** 🔵 **The brand layer on this row moved hours after this base first read it** (`T927`) |
+| ✏️ [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🟢 GPL-3.0 · `39,890 B` · `1` grant block | ✏️ 🔴 **An ANTHOLOGY of three, with its own table of contents: *"2. nextSIS GNU General Public License Version 3 · 3. CodeIgniter License · 4. Twitter Bootstrap License"*, plus a Glyphicons icon attribution at line `17`.** 🟢 The GPL-3.0 verdict stands; 🔴 **the grant COUNT does not** (`T915`) |
+| 🟢 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **NO GRANT SERVED** · `8348cd069aa2` | 🟢 **Re-confirmed at the same HEAD, root tree enumerated: `0` licence files of any kind.** 🔵 Where there is no grant the brand question is moot |
+
 ## 🆕 `p796` — **the brand layer is a separate licence question, and on three platforms in this file the answer is more restrictive than the code. `metabase`'s carve-out is now SIZED; `DSpace`'s third-party anthology is opened and turns out to be a deliverable.**
 
 ### 🔴 `T914` — the licence that lets you ship the platform is not the licence that lets you put the client's name on it
@@ -229,7 +277,7 @@ architecture**, not a convenience.
 
 | Platform | Address | Grant, on the bytes | Deps | Region | Where an AI layer attaches |
 |---|---|---|---|---|---|
-| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 GPL-3.0 · `35,147 B` · `afbcc55fa1bd` | — | Global | The sector default — if a client has an LMS, assume this. 🔴 A plugin is a derivative work and must be GPL-3.0. 🟢 **Attach through LTI via Tsugi, or Moodle's web services API, and your code stays yours** |
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 GPL-3.0 · `35,147 B` · blob `94a9ed024d38` · 🔴 **brand: `TRADEMARK.txt` `3,367 B` — *"the GNU GPL does not include an implied right or licence to use Moodle's trade marks"* (`p797`)** | — | Global | The sector default — if a client has an LMS, assume this. 🔴 A plugin is a derivative work and must be GPL-3.0. 🟢 **Attach through LTI via Tsugi, or Moodle's web services API, and your code stays yours** |
 | **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 · `35,136 B` · `d3a86602dcf7` | — | Global | MOOC-scale delivery; deploy with `overhangio/tutor`. 🔴 AGPL network clause — attach as an **XBlock across a service boundary**, never by linking |
 | **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 AGPL-3.0 · `34,520 B` · `1c9f0bb8013e` | — | North America | Dominant in US higher ed. 🟢 Strong LTI 1.3 support — the sanctioned attachment point |
 | **D2L Brightspace** | proprietary SaaS — [`anonymousonyx22/brightspace-d2l-mcp`](https://github.com/anonymousonyx22/brightspace-d2l-mcp) | 🟢 **MIT** · `1,200 B` · `a873478a6b4e` | — | North America | 🟢 **New this pass.** The third major North American LMS, and until now the only one with no attachment point in this base. The platform is proprietary; **the MCP server over it is MIT**, which is the whole point — attach, never replace |
@@ -250,7 +298,7 @@ architecture**, not a convenience.
 | **RosarioSIS** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 GPL-2.0 · `15,214 B` · `e4cd20a48bf1` | Global | 🟢 Mature SIS with strong **Spanish and French** localisation — the SIS that fits a LATAM or Francophone-African engagement |
 | **Gibbon** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 GPL-3.0 · `35,121 B` · `59334a28613f` | Global | School management and teaching in one system; common in international K-12 |
 | **Frappe Education** | [`frappe/education`](https://github.com/frappe/education) | 🔴 **GPL-3.0** · **`19 B`** · `61408d3da518` | APAC | Frappe's school-management module: admissions, programmes, fees, assessment. 🔵 **The shortest grant in this base and a real one** — the whole `license.txt` reads `License: GNU GPL V3` |
-| **ERPNext** | [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 GPL-3.0 · `34,916 B` · `447313109fdd` | APAC | Finance, HR and procurement for school groups |
+| **ERPNext** | [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 GPL-3.0 · ✏️ **`35,149 B`** · blob `f288702d2fa1` · 🔴 **brand: `TRADEMARK_POLICY.md` `3,020 B`, permission only for NON-COMMERCIAL projects (`p797`)** | APAC | Finance, HR and procurement for school groups. 🔴 **The name and logo may not go in the client's product, company or domain name** |
 | ✏️ **nextSIS** | [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🟢 **GPL-3.0** · `39,890 B` · 🟢 `01fa8c8c4c6e` | Global | ✏️ **`p794` removes the stale `PROPRIETARY` row that survived `p790`'s correction.** 🟢 **It IS usable** — copyleft, so deploy separately and integrate at the boundary. Previously filed in this base as merely "ungranted" |
 
 ## Assessment, content and classroom
@@ -270,7 +318,7 @@ architecture**, not a convenience.
 | **MyScriptJS** 🔴 **ARCHIVED** | [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) | 🟢 **Apache-2.0 (by reference)** · `570 B` · `968021fcc1f4` | — | EMEA | 🔴 **ARCHIVED UPSTREAM, last push `2021-01-04` (`T901`)** — `★357`. Handwriting and **maths** input recognition, French origin, the input primitive for a maths tutor on a tablet — 🔴 **but unmaintained for nearly six years.** Rescued from this base's unusable class this pass |
 | **Mahara** 🔴 **ARCHIVED** | [`MaharaProject/mahara`](https://github.com/MaharaProject/mahara) | 🔴 GPL-3.0 · `35,148 B` | — | Global | 🔴 **ARCHIVED UPSTREAM, last push `2023-11-16` (`T901`)** — read-only, `★120`. ePortfolio, still the natural home for skills-based credentialing, 🔴 **but the engagement owns the fork from day one** |
 | **DSpace** | [`DSpace/DSpace`](https://github.com/DSpace/DSpace) | 🟢 BSD-3-Clause · `1,504 B` · `2d991b4832bb` | — | Global | Institutional repository for OER, theses and research output |
-| **Anki** | [`ankitects/anki`](https://github.com/ankitects/anki) | 🔴 AGPL-3.0 · `1,930 B` · `a5461e33e3db` 🔴 **(`p796` `T919`: the `1,930 B` is a POINTER, not a grant — it DECLARES `AGPL-3.0-or-later` plus BSD-3 contributed portions, and neither text ships at root)** | — | Global | The reference spaced-repetition scheduler. 🟡 For a permissive recurrence primitive instead, use [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) (BSD-3, `3,493 B`) — 🔴 **but it is STALE: last push `2024-06-27`, `28` months, not archived (`p795`).** 🟢 Recurrence rules are frozen mathematics, so the staleness is near-harmless here; pin the version and own the fork knowingly |
+| **Anki** | [`ankitects/anki`](https://github.com/ankitects/anki) | 🔴 AGPL-3.0 · ✏️ `1,937 B` (`p797`: changed upstream `2026-11-12 16:06 -0300`) · `a5461e33e3db` 🔴 **(`p796` `T919`: the ✏️ `1,937 B` (`p797`: changed upstream `2026-11-12 16:06 -0300`) is a POINTER, not a grant — it DECLARES `AGPL-3.0-or-later` plus BSD-3 contributed portions, and neither text ships at root)** | — | Global | The reference spaced-repetition scheduler. 🟡 For a permissive recurrence primitive instead, use [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) (BSD-3, `3,493 B`) — 🔴 **but it is STALE: last push `2024-06-27`, `28` months, not archived (`p795`).** 🟢 Recurrence rules are frozen mathematics, so the staleness is near-harmless here; pin the version and own the fork knowingly |
 | **ODK Collect** | [`getodk/collect`](https://github.com/getodk/collect) | 🟢 **Apache-2.0** · `10,494 B` · `2344bb9c5da4` | — | Global | 🟢 Offline mobile data collection — the field instrument for a readiness diagnostic or a baseline survey where connectivity fails |
 | 🔴 **Metabase** | [`metabase/metabase`](https://github.com/metabase/metabase) | 🔴 **SPLIT BY DIRECTORY** · `855 B` · `6006cc9c65dd` | — | Global | Frequently the BI layer a client already runs over learning data. 🔴 **AGPL-3.0 outside `enterprise/`, Metabase Commercial License inside it.** Deploy it; do not vendor code out of it without deciding which side of the boundary you are on |
 

@@ -4,6 +4,39 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p797` — **`ACTION p796-D` discharged on the Spanish and Portuguese legs, and the answer is the opposite of the one five passes assumed: LATAM-origin education agents are NOT hidden behind the English query shape. They exist, they are weeks old — and `5` of `5` serve NO LICENCE. Plus `ACTION p796-A` BUILT after three carries.**
+
+🟢 **`ACTION p796-D` DISCHARGED for `es` + `pt`, and partially for `zh` · `ja` · `ko`** (the East-Asian legs returned policy instruments rather than repositories — see [`intel/market.md`](../intel/market.md)). 🟢 Machine output: [`latam-apac-inlanguage-discovery`](../evidence/latam-apac-inlanguage-discovery.2026-11-12-p797.tsv).
+
+### 🔴 The finding: the supply is real and unshippable
+
+🔴 **Five passes recorded `0` LATAM-origin intake and blamed `T883`, the English-query shape. The in-language leg finds five addresses in one hour. Every one of them is `NOASSERTION` — no licence file, no grant of any kind — and none has more than ONE star.**
+
+| Address | Leg | ★ | Grant | Pushed | 🔴 Verdict |
+|---|---|---|---|---|---|
+| [`nifalconi/educational-agents`](https://github.com/nifalconi/educational-agents) | 🇪🇸 `es` | `1` | 🔴 **NONE** | `2026-11-10` | 🔴 **REFUSED.** Spanish-first agent library with `es`-LATAM parameter names, out of a *Niñas Pro* course — 🔵 **the most interesting design in the set and the clearest example of the problem** |
+| [`giovanayngrid-gk/multiagent-ai-tutor`](https://github.com/giovanayngrid-gk/multiagent-ai-tutor) | 🇧🇷 `pt` | `0` | 🔴 **NONE** | `2026-10-30` | 🔴 **REFUSED.** LangGraph-era stack done right for a constrained budget: LangChain + Llama 3 on local Ollama + Streamlit |
+| [`svrodela/curso_agentes_ia`](https://github.com/svrodela/curso_agentes_ia) | 🇪🇸 `es` | `0` | 🔴 **NONE** | `2026-11-08` | 🔴 **REFUSED.** Course material |
+| [`comercisandro/RecursoEducativoAbierto`](https://github.com/comercisandro/RecursoEducativoAbierto) | 🇪🇸 `es` | `0` | 🔴 **NONE** | `2026-10-14` | 🔴 **REFUSED.** An *open* educational resource that is not openly licensed |
+| [`alesdrobysh/miguelito`](https://github.com/alesdrobysh/miguelito) | 🇪🇸 `es` | `0` | 🔴 **NONE** | `2026-07-08` | 🔴 **REFUSED.** Spanish tutor on Telegram with long-term memory and twice-daily practice prompts — 🔵 **a dosage design in the wild** |
+
+🔵 **What this changes about the LATAM offer.** 🔴 **Discovery was never the constraint.** 🟢 **The constraint is grant hygiene, and it is addressable in a way a supply gap is not:** three of the five were pushed within the last six weeks and have one or zero stars, so an author is reachable and has no incentive to refuse. 🟢 **For a LATAM engagement the move is a licensing conversation with a named author, not a search** — and until one happens, the shippable base stays the global permissive layer this file already holds.
+
+### 🟢 `ACTION p796-A` — the dosage instrument, BUILT
+
+🟢 **Three passes scoped it and none built it. [`compose/code/p797-dosage/`](../compose/code/p797-dosage/) is the smallest honest version:** sessions triggered · accepted · turns per accepted session · practice-days-with-a-turn, over a tutor-agnostic event log, with a one-function Canvas adapter for [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT) and `11` offline controls spanning the four field kinds. 🔴 **Its own first control caught its first defect, and the defect is the industry's:** it took the median over only the students who practised, reading `2.5` where the honest answer is `2`, because it had silently dropped the student who was offered the tutor twice and never took a turn — 🔵 **the student `T907` says dominates the population.** 🟢 **A dosage metric that excludes the zeros measures the engaged, and the engaged were never the question.**
+
+### 🟢 Stars re-measured exactly this pass
+
+| Row | ★ `p797` | Grant | Pushed | |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **`58,622`** | 🟢 Apache-2.0 | `2026-11-07` | 🔴 **The search channel reported ~`45,224` for the same window — a `-23%` error in a secondary source, and the reason this base re-measures rather than quotes** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **`43,392`** | 🟢 MIT | `2026-11-12` | 🟢 Pushed the day of this pass |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | 🟢 **`41,804`** | 🟢 MIT | `2026-11-01` | 🟢 `+3` on `p796`'s `41,801` |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🟢 **`933`** | 🔴 GPL-3.0 | `2026-02-20` | 🔴 **`9` months unpushed.** Theory-of-mind tutor; copyleft, so boundary-only |
+
+🟢 **`datawhalechina/hello-agents` surfaced a second time on the `zh` leg and stays REFUSED** — `CC-BY-NC-SA-4.0`, NonCommercial **and** ShareAlike (`p771-B`). 🔵 **No search result mentioned its licence; this base's triage is ahead of the channel that keeps proposing it.**
+
 ## 🆕 `p796` — **`ACTION p795-B` discharged, and the licence-FILE count found the pattern it was pointed at plus one it was not: on the rows this base recommends for white-labelling, the permissive grant covers the CODE and the brand assets are carved out separately — `CC BY-ND 2.5` on an LMS logo, a clause-`4` branding rider, an `8,877 B` embedding licence. `4` agents added. `p795-A`, `p795-C` and `p795-F` also discharged.**
 
 🟢 **`ACTION p795-A`, `p795-B`, `p795-C` (for its located target) and `p795-F` all discharged this pass.** 🔴 **`p795-D` NOT done, third carry. `p795-E` and `p795-H` partially addressed. `p794-F`/`T906` still undischargeable from this session.** 🟢 Machine output: [`licence-file-and-grant-block-census`](../evidence/licence-file-and-grant-block-census.2026-11-12-p796.tsv) · [`mit-bsd-bytesize-filter`](../evidence/mit-bsd-bytesize-filter.2026-11-12-p796.tsv) · 🔴 [`licence-block-census-UNCORRECTED-v1`](../evidence/licence-block-census-UNCORRECTED-v1.2026-11-12-p796.tsv).

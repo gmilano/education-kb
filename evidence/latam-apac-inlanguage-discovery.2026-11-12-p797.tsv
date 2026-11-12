@@ -1,0 +1,10 @@
+addr	language_leg	stars	github_spdx	pushed	verdict	note
+nifalconi/educational-agents	es (Spanish)	1	NOASSERTION	2026-11-10	REFUSED-NO-GRANT	Spanish-first agent library, parameter names in es-LATAM; born in a Ninas Pro course. No licence served.
+giovanayngrid-gk/multiagent-ai-tutor	pt (Portuguese)	0	NOASSERTION	2026-10-30	REFUSED-NO-GRANT	LangChain + Llama 3 via local Ollama + Streamlit, Brazilian docs. No licence served.
+svrodela/curso_agentes_ia	es (Spanish)	0	NOASSERTION	2026-11-08	REFUSED-NO-GRANT	Course material, TypeScript. No licence served.
+comercisandro/RecursoEducativoAbierto	es (Spanish)	0	NOASSERTION	2026-10-14	REFUSED-NO-GRANT	Open educational resource, text preprocessing to agents. No licence served.
+alesdrobysh/miguelito	es (Spanish)	0	NOASSERTION	2026-07-08	REFUSED-NO-GRANT	Spanish-tutor bot for Telegram with long-term memory. No licence served.
+THU-MAIC/OpenMAIC	zh (Simplified Chinese)	43392	MIT	2026-11-12	CARRIED-REMEASURED	Already published here. Stars re-measured exactly this pass.
+HKUDS/DeepTutor	zh (Simplified Chinese)	58622	Apache-2.0	2026-11-07	CARRIED-REMEASURED	Already published here. Stars re-measured exactly this pass.
+datawhalechina/hello-agents	zh (Simplified Chinese)	-	CC-BY-NC-SA-4.0	-	ALREADY-REFUSED	Surfaced again by the zh leg; this base refused it at p771-B for NonCommercial + ShareAlike. The search channel did not mention the licence.
+jesusgarciafernandez/Aula-y-Comunidad-Educativa-Aumentada	es (Spanish)	-	-	-	ALREADY-MEASURED-UNUSABLE	Spanish teacher-facing agents/skills environment, already triaged into intel/measured-unusable.md

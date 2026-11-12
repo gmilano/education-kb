@@ -1,0 +1,41 @@
+# p796-C named ten explicitly
+moodle/moodle
+instructure/canvas-lms
+openedx/edx-platform
+chamilo/chamilo-lms
+sakaiproject/sakai
+ILIAS-eLearning/ILIAS
+OS4ED/openSIS-Classic
+francoisjacquet/rosariosis
+frappe/education
+frappe/erpnext
+# the three p796 already graded POSITIVE — controls for the false zero (p795-G)
+OpenOLAT/OpenOLAT
+open-webui/open-webui
+metabase/metabase
+# the rest of the platform layer in verticals/solutions.md — p796-G: the control set must span kinds,
+# so this includes permissive, GPL, AGPL, MPL and EUPL rows, large and small
+learningequality/kolibri
+oppia/oppia
+bigbluebutton/bigbluebutton
+h5p/h5p-php-library
+DSpace/DSpace
+opencast/opencast
+MaharaProject/mahara
+GibbonEdu/core
+csev/tsugi
+openeducat/openeducat_erp
+odoo/odoo
+ankitects/anki
+jupyterhub/jupyterhub
+jupyter/nbgrader
+frappe/lms
+getodk/collect
+hedyorg/hedy
+Khan/perseus
+INGInious/INGInious
+foradian/fedena
+Kosudo/nextSIS
+ai-shifu/ai-shifu
+openedx/edx-ora2
+LearningLocker/xapi-service

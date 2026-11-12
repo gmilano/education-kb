@@ -4,6 +4,32 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p797` — **the provenance column re-measured against first-hand bytes: `83` twelve-hex cells on this base's recommendation shelves are TWO object kinds and a third that resolves to neither. `43` commit · `9` blob · `31` unresolved. `ACTION p796-B` discharged, and its premise inverted.**
+
+🟢 **`ACTION p796-B` DISCHARGED — as a measurement, which is not what it asked for.** The action read `T905` as *"the column mixes hash functions and holds values matching neither, so DELETE it"* and argued deletion *"is one pass and cannot fail"*. 🟢 **It did not need to be deleted. It needed to be TYPED.** Machine output: [`provenance-cell-kinds`](../evidence/provenance-cell-kinds.2026-11-12-p797.tsv).
+
+| What the `12`-hex cells actually are | Count | |
+|---|---|---|
+| 🟢 **A COMMIT sha — `HEAD` at measurement time, still current today** | 🟢 **`43`** | Resolvable, useful, and silently a different object kind from its neighbours |
+| 🟢 **A licence-file BLOB sha — still current today** | 🟢 **`9`** | What the column's name implies throughout |
+| 🔴 **Resolves to neither today** | 🔴 **`31`** | 🔵 **Mostly not an error: an old `HEAD` on a repository that has since been pushed.** [`odoo/odoo`](https://github.com/odoo/odoo) carries two such cells on one line; [`ankitects/anki`](https://github.com/ankitects/anki)'s went stale **hours** before this pass (`T927`) |
+
+🔵 **So the defect is not wrongness, it is AMBIGUITY: the same `12` hex characters in the same visual position mean a commit on one row and a blob on the next, with nothing in the cell to say which.** 🔴 **A reader cannot verify any of them without guessing the object kind first.** 🟢 **`52` of `83` resolve today, so deleting them would have thrown away working provenance to fix a labelling problem** — and the `31` that do not resolve are the staleness signal this base otherwise pays a maintenance sweep to produce.
+
+🟢 **Rule adopted, and every cell written at `p797` follows it: a provenance cell carries its KIND — `blob <sha>` or `HEAD <sha>` — or it does not go in.** 🔵 Re-typing the `83` historical cells is mechanical, needs no network, and is queued as `p797-B` with the instrument already built and its output published.
+
+### 🆕 `T925` — a brand restriction can live in a different REPOSITORY from the code
+
+🔴 **[`frappe/education`](https://github.com/frappe/education) (`19 B` grant by reference) and [`frappe/lms`](https://github.com/frappe/lms) (AGPL-3.0, `33,893 B`) carry no brand instrument at all.** 🔴 **The policy that governs their brand is `TRADEMARK_POLICY.md` in [`frappe/erpnext`](https://github.com/frappe/erpnext), and it grants permission only to NON-COMMERCIAL projects.** 🟢 **Clear the brand at the project FAMILY** → [`verticals/solutions.md`](../verticals/solutions.md) `p797`, [`intel/trends.md`](../intel/trends.md) `T925`.
+
+### ✏️ Corrected in place below
+
+| Row | Published here | ✏️ `p797` |
+|---|---|---|
+| ✏️ [`ankitects/anki`](https://github.com/ankitects/anki) | `1,930 B` | ✏️ **`1,937 B`** · blob `1296baf6f4a0` — upstream commit `9c539a036804`, `2026-11-12 16:06:11 -0300`, *"docs: update logo copyright holder in LICENSE"*. 🔴 **Plus two grants this base had not recorded: a bespoke logo licence requiring the logo be used UNMODIFIED, and `CC BY-SA 4.0` on `docs-site/`** |
+| ✏️ [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | `1` grant block | ✏️ 🔴 **three, with a table of contents: GPL-3.0 + CodeIgniter + Twitter Bootstrap, plus a Glyphicons attribution.** 🟢 The GPL-3.0 verdict stands |
+| ✏️ [`frappe/erpnext`](https://github.com/frappe/erpnext) | `34,916 B` | ✏️ **`35,149 B`** · blob `f288702d2fa1` — 🔴 **the figure `p796`'s own census published the same day** |
+
 ## 🆕 `p796` — **the first licence-FILE census this base has run: `19` rows with no root licence file, `13` with two or more, and `5` serving more than one GRANT. `EUPL-1.2` added as a family. `DSpace`'s `91,354 B` third-party anthology opened and reframed.**
 
 ### 🟢 `EUPL-1.2` — the third licence family this base's clause set was missing, and the European one

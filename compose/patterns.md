@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p797` — `P797-1`–`P797-5`
+
+🟢 **Every pattern here is anchored to a COMPELLED document with a date, or to a measured refusal.** 🔴 **`P797-2` is new and global: the brand-layer clearance is now a week-one gate with a procedure, because `6` of `37` platform addresses carry a restriction the root `LICENSE` does not mention and one of them is not in the repository at all.**
+
+### 🟢 `P797-1` — LATAM 🇧🇷 · **the `12`-month compliance clock, sold as an instrument and not a department**
+
+| | |
+|---|---|
+| 🔴 **The compelled document** | 🔴 **`Parecer CNE/CP nº 15/2026`, homologated `2026-11-10`. Prohibited practices effective on publication; `12` months for systems and institutions to adjust policies, governance instruments and CONTRACTS; four risk levels; permanent CNE monitoring** |
+| 🔴 **The constraint that sets the price** | 🔴 **UNESCO IESALC: `8%` of LATAM universities have ANY dedicated AI budget — `4%` among PUBLIC ones.** 🟢 So the deliverable is an instrument with ONE named owner, not an evaluation office |
+| 🟢 **Build** | 🟢 [`compose/code/p797-dosage/`](../compose/code/p797-dosage/) (the four dosage metrics, `11` controls) + [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT, auth model read at `p793`) for the system of record + [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (MIT) where connectivity is the binding constraint + a risk-classification register mapping each AI use to one of the Parecer's four levels |
+| 🟢 **Why it lands** | 🟢 **The Parecer compels governance over CONTRACTS, and `87%` of these institutions already use AI with `9%` evaluating it. The artefact they must produce in `12` months is exactly the artefact nobody has: evidence of who decided what, and whether the thing was used** |
+| 🔴 **Say this out loud** | 🔴 **The instrument is `CITED, NOT READ` (`T933`) — quote the number, let the client's counsel read the text. 🟢 Do NOT sell the March `2026` `Referencial`'s mention of open-source solutions as an obligation; it is a stated direction** |
+| Shape | `6`–`8` weeks, one owner, one dashboard |
+
+### 🔴 `P797-2` — GLOBAL · **the week-one brand-layer clearance, with the procedure and the family rule**
+
+🟢 **`P796-5` proposed this on three instances. `p797` ran it on `37` addresses and it survives contact: `6` bespoke restrictions, `23` stock reservations, `25` clean.** The procedure, in the order that finds things:
+
+1. 🟢 **Enumerate the ROOT TREE, do not grade the root `LICENSE`.** `git clone --filter=blob:none --bare` then `git ls-tree HEAD` — `37` addresses in `100` seconds, `0` failures ([`ingest/p797-brand-layer-gate.sh`](../ingest/p797-brand-layer-gate.sh)). 🔴 **`curl -sI` cannot do this: it returns `403` for a live address and an invented one alike** (`T923`).
+2. 🟢 **Read every non-`LICENSE` candidate: `NOTICE*`, `TRADEMARK*`, `BRAND*`, `COPYRIGHT*`, `LICENSE_*`.** `OpenOLAT`'s `NoDerivs` logo clause is in `NOTICE.TXT`; `Moodle`'s policy is in `TRADEMARK.txt`; `metabase`'s carve-out is in `LICENSE-EMBEDDING.txt`.
+3. 🟡 **Grade three-state.** Apache-2.0 §`6` and GPL-3.0 §`7(e)` decline trademark rights in EVERY repository that carries them — `23` of the `29` term-matching files. 🔵 **A two-state gate reports them and means nothing.**
+4. 🆕 🔴 **Then clear the FAMILY, not the address** (`T925`). `frappe/education` and `frappe/lms` are brand-clean by inspection and brand-restricted in fact, from `frappe/erpnext`.
+5. 🟢 **Record the kind of every sha you write** (`T926`): `blob` or `HEAD`, never a bare `12`-hex.
+
+🔵 **Cost: under two hours on any shortlist.** 🔴 **Value: on `Moodle` — the platform to assume if a client has an LMS — the restricted act is MARKETING the deliverable, not building it, and the licensed route is the Certified Partner programme. That is a commercial decision for week one.**
+
+### 🟢 `P797-3` — APAC 🇰🇷 · **the post-mandate offer: sell to the school, prove it to the teacher**
+
+🔴 **The evidence: `34.2%` → `5.2%` in twelve months once adoption became discretionary** (`T932`). 🟢 **The buyer that remains is `1,900` lead schools that CHOSE, plus AI-subject 인정 교과서 piloting `1H 2027`.** 🟢 **Build:** a teacher-controlled narrow-scope tutor on [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (MIT, ★`43,392`) or [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (Apache-2.0, ★`58,622`) + `p797-dosage` reporting **acceptance** and **practice-days** per class, not licences issued. 🔵 **The pitch is one sentence: the last national rollout lost `94.8%` of its schools, and the only defence is a number that shows the teachers who kept choosing it.** 🔴 **`0` Korean procurement documents have been reached — this is an argument, not a tender, and it must be presented as one.**
+
+### 🟢 `P797-4` — APAC 🇨🇳 · **the only contribution-shaped entry in this base**
+
+🟢 **`教科信〔2026〕1号` commissions a state-sponsored OPEN-SOURCE community — the `启悟学习社区`, led by 上海交通大学 — alongside the `国家教育智能算力服务平台` (BUPT-led), `23` education-purpose large models and `13` subject-vertical models.** 🔵 **Every other regional route in this base is procurement-shaped; this one is contribution-shaped, and contribution is a route a foreign studio can actually take.** 🟢 **Build:** publish a reusable component against the national platform's interfaces (assessment rubric scoring, curriculum alignment) under MIT/Apache-2.0, with the `p797-dosage` metrics as the evaluation artefact. 🔴 **Say the limits: the plan is read through secondary coverage, the platform's interface documentation has not been reached from this session, and no procurement route is established.**
+
+### 🟢 `P797-5` — EMEA · **transparency now, conformity by `2027-12-02`** (re-anchored, unchanged in substance)
+
+🟢 **Art. `50` transparency has applied since `2026-08-02` and was NOT deferred; Annex III standalone high-risk moved to `2027-12-02` (`Regulation (EU) 2026/1744`).** 🔵 **So the expensive work has `13` months of slack and the cheap work is already late.** 🟢 **Build:** the disclosure layer first (every AI-assisted artefact labelled at the point of production, a named human decision-maker per decision class, an Art. `27` FRIA skeleton for the deployer) on a permissive base — 🔴 **and NOT on `OpenOLAT` if the deliverable is white-labelled, because its logo and icons are `CC BY-ND 2.5`** (`T914`). 🟢 **`63%` of European teachers use AI; `16%` think the generic tool improves outcomes. Sell into the `47`-point gap.**
+
 ## 🆕 `p796` — **five patterns. The regional four are each anchored to a COMPELLED document with a date — `Regulation (EU) 2026/1744`'s Art. `50`, Vietnam's registration, TEQSA's action plan, North Carolina's `SL 2026-41`. `P796-5` is a week-one gate productised from `T914`, because on three platforms this base recommends, white-labelling is barred or restricted by a licence file nobody opened.**
 
 ### 🟢 `P796-1` — The Art. `50` transparency pack: sell what `2026/1744` did NOT defer · **EMEA** · 5–7 weeks

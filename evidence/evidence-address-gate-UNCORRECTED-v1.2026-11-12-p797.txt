@@ -1,0 +1,42 @@
+── p797-evidence-address-gate: 2093 evidence files swept, column 0 only
+🔴 15591 rows whose address field is not an address:
+   evidence/abstention-gate-newrows.2026-10-28-p501.tsv:6  'spogoda-lab/gcse-QLA-Intervention-System CC-BY-NC'  — name-fails-name-grammar
+   evidence/abstention-gate.2026-10-28-p501.tsv:2  'KNOWN-BAD Wakoma/nimble CERN-OHL-S-2.0'  — owner-fails-name-grammar
+   evidence/abstention-gate.2026-10-28-p501.tsv:3  'KNOWN-GOOD GeminiLight/SocialCoach Apache'  — owner-fails-name-grammar
+   evidence/abstention-gate.2026-10-28-p501.tsv:4  'FurkanHuman/Student_Exam_Generator Apache'  — name-fails-name-grammar
+   evidence/abstention-gate.2026-10-28-p501.tsv:5  'porroto/Agentic-Education MIT'  — name-fails-name-grammar
+   evidence/action-p378e-quebec-talis.2026-10-22-p379.tsv:18  'A PRIMARY DOCUMENT EXISTS on a gouv.qc.ca domain: "123-02 Directive visant a baliser l\'utilisation de l\'intelligence [artificielle generative]", csspb.gouv.qc.ca, uploaded 2026/10'  — owner-fails-name-grammar
+   evidence/action-p378e-quebec-talis.2026-10-22-p379.tsv:19  "The Ministere de l'Education published a 2026 edition of its pedagogical/ethical/legal generative-AI guide for teaching staff, in force from the late-August 2026 school year, which delegates tool authorisation to school bodies"  — 3-segments-not-an-address
+   evidence/action-p378e-quebec-talis.2026-10-22-p379.tsv:20  'The January 2026 update to the government MCN/IT management framework carried generative-AI guidelines for Quebec public bodies for the first time'  — owner-fails-name-grammar
+   evidence/address-census-summary.2026-10-27-p480.tsv:2  'distinct github.com/owner/repo-shaped addresses cited across all 8 shelves'  — 3-segments-not-an-address
+   evidence/address-census-summary.2026-10-27-p480.tsv:6  '- of which github.com/topics or /trending paths (false positives, not repos)'  — 3-segments-not-an-address
+   evidence/address-census-summary.2026-10-27-p480.tsv:7  '- of which a documented command template (OWNER/REPO)'  — owner-fails-name-grammar
+   evidence/address-census.2026-11-12-p781.tsv:830  'MoralesPascualJosue/Plataforma-educativa-MC-'  — name-fails-name-grammar
+   evidence/address-census.2026-11-12-p781.tsv:1326  'hwl668/Scientific-learning-skills-'  — name-fails-name-grammar
+   evidence/address-census.2026-11-12-p781.tsv:2296  'Arseniiiii-ai/ai-learning-gap-detector-'  — name-fails-name-grammar
+   evidence/address-census.2026-11-12-p781.tsv:2368  'Dillax/Di-rio-de-Classe-Avalia-es-'  — name-fails-name-grammar
+   evidence/address-census.2026-11-12-p781.tsv:3648  'BleeGleeWee/Voice-Based-Native-Language-Service-Agent-'  — name-fails-name-grammar
+   evidence/address-census.2026-11-12-p781.tsv:3751  'DooWuy/AI-tutor-'  — name-fails-name-grammar
+   evidence/address-census.2026-11-12-p781.tsv:3815  'FadyCoding/EPEPEP-'  — name-fails-name-grammar
+   evidence/address-census.2026-11-12-p781.tsv:3904  'Jarrod5988/Playground-Safety-Inspection-'  — name-fails-name-grammar
+   evidence/address-census.2026-11-12-p781.tsv:3920  'Jose-ctr/think-plus-outlook-study-hub-'  — name-fails-name-grammar
+   evidence/address-census.2026-11-12-p781.tsv:4352  'afrojorin/Allergen-Safe-Canteen-Management-System-'  — name-fails-name-grammar
+   evidence/address-census.2026-11-12-p781.tsv:4393  'alguarito/Conciencia-'  — name-fails-name-grammar
+   evidence/address-census.2026-11-12-p781.tsv:5271  'nduka4real/Student-Information-System-SIS-'  — name-fails-name-grammar
+   evidence/address-census.2026-11-12-p781.tsv:5540  'shivanandmn/saint_plus-knowledge-tracing-'  — name-fails-name-grammar
+   evidence/address-ledger.tsv:231  'alguarito/Conciencia-'  — name-fails-name-grammar
+   evidence/address-ledger.tsv:449  'BleeGleeWee/Voice-Based-Native-Language-Service-Agent-'  — name-fails-name-grammar
+   evidence/address-ledger.tsv:830  'Dillax/Di-rio-de-Classe-Avalia-es-'  — name-fails-name-grammar
+   evidence/address-ledger.tsv:854  'DooWuy/AI-tutor-'  — name-fails-name-grammar
+   evidence/address-ledger.tsv:1345  'hwl668/Scientific-learning-skills-'  — name-fails-name-grammar
+   evidence/address-ledger.tsv:1549  'Jose-ctr/think-plus-outlook-study-hub-'  — name-fails-name-grammar
+   evidence/address-ledger.tsv:3640  'AmnaaPatel/Proctoring-System-'  — name-fails-name-grammar
+   evidence/address-liveness.2026-10-21-p353.tsv:2  'https://github.com/0xnavarro/IA-PARA-TODOS'  — url-in-address-field
+   evidence/address-liveness.2026-10-21-p353.tsv:3  'https://github.com/1EdTech/caliper-spec'  — url-in-address-field
+   evidence/address-liveness.2026-10-21-p353.tsv:4  'https://github.com/1EdTech/openbadges-specification'  — url-in-address-field
+   evidence/address-liveness.2026-10-21-p353.tsv:5  'https://github.com/1EdTech/openbadges-validator-core'  — url-in-address-field
+   evidence/address-liveness.2026-10-21-p353.tsv:6  'https://github.com/24kchengYe/human-skill-tree'  — url-in-address-field
+   evidence/address-liveness.2026-10-21-p353.tsv:7  'https://github.com/AI-for-Education/edu-qurating'  — url-in-address-field
+   evidence/address-liveness.2026-10-21-p353.tsv:8  'https://github.com/AI-for-Education/fabdata-llm'  — url-in-address-field
+   evidence/address-liveness.2026-10-21-p353.tsv:9  'https://github.com/AI-for-Education/fabdata-parsedoc'  — url-in-address-field
+   evidence/address-liveness.2026-10-21-p353.tsv:10  'https://github.com/AI-for-Education/lesson-plan-parse-mbsse'  — url-in-address-field

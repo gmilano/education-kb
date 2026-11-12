@@ -4,6 +4,37 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p797` — **the `es` and `pt` discovery legs ran for the first time and inverted five passes of assumption: LATAM-origin education agents are NOT missing, they are UNLICENSED — `5` found in one hour, `5` of `5` serving no grant at all. Plus the dosage instrument BUILT after three carries, and `4` headline star counts re-measured exactly.**
+
+🟢 **Channel status, re-measured this pass:** blobless bare clone + `ls-tree`/`cat-file` 🟢 (`37` platform addresses, `12` parallel, **`100` seconds**, 🟢 **`0` failures**) · `gh api search/repositories` 🟢 batched `10` × `repo:` — exact stars + SPDX + `pushed_at` + `archived` · 🔴 **`www.gov.br` added to the `CONNECT`-denied list, making `7`** (`T933`); `eur-lex.europa.eu` and the other `5` unchanged (`T906`, fourth consecutive pass).
+
+### 🔴 `5` candidates graded and REFUSED, with the reason — the `es`/`pt` leg's whole yield
+
+| Candidate | Leg | ★ | Grant | Last push | 🔴 Why refused |
+|---|---|---|---|---|---|
+| [`nifalconi/educational-agents`](https://github.com/nifalconi/educational-agents) | 🇪🇸 | `1` | 🔴 **NONE** (`NOASSERTION`) | `2026-11-10` | 🔴 **No licence file.** 🔵 The best design in the set — agents in two lines, `es`-LATAM parameter names, errors that say how to fix themselves — and unshippable for a reason an email could fix |
+| [`giovanayngrid-gk/multiagent-ai-tutor`](https://github.com/giovanayngrid-gk/multiagent-ai-tutor) | 🇧🇷 | `0` | 🔴 **NONE** | `2026-10-30` | 🔴 **No licence file.** LangChain + Llama 3 on local Ollama + Streamlit — the right stack for a `4%`-AI-budget institution |
+| [`alesdrobysh/miguelito`](https://github.com/alesdrobysh/miguelito) | 🇪🇸 | `0` | 🔴 **NONE** | `2026-07-08` | 🔴 **No licence file.** 🔵 Twice-daily practice prompts and long-term memory — a DOSAGE design in the wild, which is `p796-A`'s subject |
+| [`svrodela/curso_agentes_ia`](https://github.com/svrodela/curso_agentes_ia) | 🇪🇸 | `0` | 🔴 **NONE** | `2026-11-08` | 🔴 **No licence file**, and course material rather than a tool |
+| [`comercisandro/RecursoEducativoAbierto`](https://github.com/comercisandro/RecursoEducativoAbierto) | 🇪🇸 | `0` | 🔴 **NONE** | `2026-10-14` | 🔴 **An *open* educational resource that is not openly licensed** |
+
+🟢 Machine output: [`latam-apac-inlanguage-discovery`](../evidence/latam-apac-inlanguage-discovery.2026-11-12-p797.tsv). 🔵 **`0` rows added to [`agents/top.md`](top.md) this pass, and that is the finding rather than a shortfall** — `T931`.
+
+### 🟢 `ACTION p796-A` built — [`compose/code/p797-dosage/`](../compose/code/p797-dosage/)
+
+🟢 **Four metrics (sessions triggered · accepted · turns per accepted session · practice-days-with-a-turn), a tutor-agnostic event log, a one-function [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) adapter, `11` offline controls over `4` field kinds.** 🔴 **Its first control caught it dropping the students who never took a turn (`T934`).** 🔵 **Three passes scoped this; the version that shipped is the one that stopped scoping.**
+
+### 🟢 Stars re-measured exactly — and one secondary source off by `-23%`
+
+| Row | ★ `p797` | Grant | Pushed | |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **`58,622`** | 🟢 Apache-2.0 | `2026-11-07` | 🔴 **A trend blog reported ~`45,224` for the same window** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **`43,392`** | 🟢 MIT | `2026-11-12` | 🟢 Pushed on the day of this pass |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | 🟢 **`41,804`** | 🟢 MIT | `2026-11-01` | 🟢 `+3` on `p796` |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🟢 **`933`** | 🔴 GPL-3.0 | 🔴 `2026-02-20` | 🔴 `9` months unpushed; boundary-only |
+
+🟢 **`datawhalechina/hello-agents` surfaced again on the `zh` leg and stays REFUSED** (`CC-BY-NC-SA-4.0`, `p771-B`). 🔵 **No search result mentioned its licence.**
+
 ## 🆕 `2026-11-12` · `p796` — **`p795-B` asked for a licence-FILE count and the count found the pattern it was pointed at plus one it was not: on the rows this base recommends for white-labelling, the permissive grant covers the CODE and the brand assets are carved out separately — including `NoDerivs` on an LMS logo. `4` agents added, `1` evidence artefact corrected, `5` of my own `32` multi-grant flags survived.**
 
 🟢 **Channel status, re-measured this pass:** blobless bare clone + `ls-tree --name-only` + `cat-file -s`/`-p` 🟢 (`176` clones, `12` parallel, **`16` seconds**, 🟢 **`0` failures**) · `gh api search/repositories` 🟢 batched `10` × `repo:` — exact stars + SPDX + `pushed_at` + `archived` · `raw.githubusercontent.com` 🟢 · 🔴 **`eur-lex.europa.eu` and the other `5` primary-source domains still fail at `CONNECT` (`T906`, third consecutive pass; `p794-F` remains undischargeable from here).**

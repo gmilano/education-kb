@@ -25,15 +25,15 @@ ILIAS-eLearning/ILIAS	OK	1	4	LICENSE	LICENSE=35147B/4blk;
 LearningLocker/xapi-service	OK	1	1	license	license=1070B/1blk;
 Khan/perseus	OK	1	1	LICENSE	LICENSE=1052B/1blk;
 LIST-LUXEMBOURG/eagle-aig	OK	1	1	license.txt	license.txt=11358B/1blk;
-NEW/ArnaudGuiovanna/tutor-mcp	CLONE_FAIL	0	0		
+ArnaudGuiovanna/tutor-mcp	CLONE_FAIL	0	0		
 LearningLocker/xapi-validation	OK	1	1	license	license=1070B/1blk;
-NEW/Ebimsv/AITutorAgent	CLONE_FAIL	0	0		
-NEW/KeWang0622/kaogong-skill	CLONE_FAIL	0	0		
-NEW/vulinh1704/ai-tutor-agent	CLONE_FAIL	0	0		
+Ebimsv/AITutorAgent	CLONE_FAIL	0	0		
+KeWang0622/kaogong-skill	CLONE_FAIL	0	0		
+vulinh1704/ai-tutor-agent	CLONE_FAIL	0	0		
 DSpace/DSpace	OK	4	3	LICENSE,LICENSE.header,LICENSES_THIRD_PARTY,NOTICE	LICENSE=1504B/1blk;LICENSE.header=194B/0blk;LICENSES_THIRD_PARTY=91354B/2blk;NOTICE=1410B/0blk;
-NEW/hari7261/AI-Tutor	CLONE_FAIL	0	0		
+hari7261/AI-Tutor	CLONE_FAIL	0	0		
 Masondo86/homework-hero-sa	OK	1	1	LICENSE	LICENSE=1070B/1blk;
-NEW/rohitg00/ai-engineering-from-scratch	CLONE_FAIL	0	0		
+rohitg00/ai-engineering-from-scratch	CLONE_FAIL	0	0		
 Louisdelez/dowze	OK	1	1	LICENSE	LICENSE=1068B/1blk;
 MaharaProject/mahara	OK	1	4	COPYING	COPYING=35148B/4blk;
 OWNER/REPO	CLONE_FAIL	0	0		
@@ -162,10 +162,10 @@ rizukirr/no-vibe	OK	1	1	LICENSE	LICENSE=1065B/1blk;
 oppia/oppia	OK	2	1	LICENSE,NOTICE	LICENSE=11358B/1blk;NOTICE=146B/0blk;
 praj2408/RAG-Enhanced-NCERT-Tutor	OK	1	1	LICENSE	LICENSE=1072B/1blk;
 silja-graf/Didaktikus-KI-Spezialist-f-r-Unterrichtsplanung-und-Beurteilung-nach-LP21	OK	0	0		
-tosinamuda/teacher-agent-itu-hackathon	OK	0	0		
+osinamuda/teacher-agent-itu-hackathon	OK	0	0		
 sakaiproject/sakai	OK	2	2	LICENSE,licenses	LICENSE=11120B/2blk;licenses=4380B/0blk;
 shivarajbakale/coursewright	OK	1	1	LICENSE	LICENSE=1072B/1blk;
-thesavvybyjude/Offline-First-Android-AI-Tutoring-App	OK	1	1	LICENSE	LICENSE=1070B/1blk;
+hesavvybyjude/Offline-First-Android-AI-Tutoring-App	OK	1	1	LICENSE	LICENSE=1070B/1blk;
 sangadanson1-dot/-Vet-IDEA-TZ	OK	1	1	LICENSE	LICENSE=1067B/1blk;
 shan8851/classcharts-agent	OK	1	1	LICENSE	LICENSE=1066B/1blk;
 satvik314/educhain	OK	1	1	LICENSE	LICENSE=1092B/1blk;
