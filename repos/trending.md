@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p785` — **`ACTION p784-B` CLOSED: `142` genuine dead of `6,196` real published addresses (`2.29%`), from a complete `ls-remote` sweep with `11` planted controls all failing as designed. And the fingerprint record is replaced by a working instrument — MIT's body is an exact invariant, while two DIFFERENT Apache-2.0 files share one byte length.**
+
+### 🟢 The base-wide sweep, complete rather than sampled
+
+| | Count |
+|---|---|
+| 🟢 Real published addresses, amended extractor | **`6,196`** |
+| 🟢 ALIVE | **`6,039`** (`97.71%`) |
+| 🔴 GENUINE dead | **`142`** (**`2.29%`**) |
+| 🟢 Planted negative controls in the dead set | `11` — **all failed as designed** |
+| 🔴 This pass's own remaining extraction artefacts | `6` — owners `...` and `a/`, **reported and excluded from the rate** |
+| 🔴 Excluded by rule: non-repo first segment / placeholder / diagnostic-prose-only | `68` / `13` / `12` |
+
+🔵 **`p781` `6.50%` (refuted, inflated `3.4×`) → `p783` `1.86%` → `p785` `2.29%`.** 🔴 **The rise is NOT decay — it is `348` more addresses under a different exclusion rule. The figures are different measurements and must not be read as a trend.**
+
+🔴 **A defect in this pass's FIRST extractor run, caught by its own output and fixed before publication:** the `T840` diagnostic-context test matched *"diagnostic"* inside the repository NAME `SenmuuuuW/dsh-diagnostic-tutor`, wrongly excluding `19` real addresses and yielding `6,372`. 🟢 Fixed by stripping the candidate address's own text from its context before testing it.
+
+### 🔴 The dead set's one real cluster — the interop-standards layer
+
+🔴 **`14` of `142`, and nothing else comes close.** Caliper: `1EdTech/caliper-java`, `1EdTech/caliper-js`, `1edtech/caliper-php`, `IMSGlobal/caliper-php`, `imsglobal/caliper-php`, `imsglobal/caliper-python`. QTI: `1EdTech/qti-central`, `LongsightGroup/qti3-core`, `stmath/go-qti`. Open Badges: `openlearnbadges/openbadges-bakery`, `openlearnbadges/openbadges-validator`, `rollercoaster-dev/openbadges-monorepo`. LTI: `Tyru5/1EdTech-LTI-1-3`. Spec hosting: `1EdTech/spec-central`. 🟢 **`AlekSIS/AlekSIS-Core` also confirmed DEAD, consistent with `p784-G`'s unresolvable verdict.**
+
+### 🟢 Trending this window, verified address by address
+
+| Repository | ★ | Branch | Grant, on the title line |
+|---|---|---|---|
+| 🟢 [`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners) | **`123,387★`** | `main` | 🟢 MIT `1,141 B` · `c2cfccb812fe` |
+| 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **`58,463★`** | `main` · `60fb3bdfddb3` | 🟢 Apache-2.0 `11,408 B` · `cd2f54e1e506` |
+| 🟢 [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | `~67,600★` | `master` · `db59a04a8a2c` | 🟢 **MIT, SETTLED** at 🔵 `license` · `1,082 B` · `22c7cae23a2b` |
+| 🟢 [`Sion612/rubrictrail`](https://github.com/Sion612/rubrictrail) | `128★` | `main` | 🟢 Apache-2.0 `11,324 B` · `50e6751797c5` |
+| 🟢 [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | `65★` | `main` | 🟢 MIT `1,078 B` · `4d5d987f4f89` |
+| 🟢 [`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) | `35★` | `main` | 🟢 MIT `1,077 B` · `d150aadcccd2` |
+| 🟢 [`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform) | `24★` | `main` | 🟢 Apache-2.0 `11,287 B` · `c589d95090ce` |
+| 🟢 [`StudentSuite/awesome-study-resources`](https://github.com/StudentSuite/awesome-study-resources) | `37★` | `main` | 🟢 MIT `1,069 B` · `537c697c69a5` |
+
+### 🟢 The licence fingerprint record, and the instrument that replaces it
+
+🟢 **`T843`. Substituted-holder families (MIT, BSD, ISC) can have NO canonical hash — the holder is written into the body — but the body is an exact invariant:**
+
+```
+total_bytes − length_of_copyright_line = TEMPLATE CONSTANT
+1037 → "MIT License"            20 of 23 grants
+1047 → "The MIT License (MIT)"   2 — labmlai, utkukaynar/kolaykolej
+1104 → Microsoft's MIT template  1 — microsoft/AI-For-Beginners (= generative-ai-for-beginners)
+```
+
+🟢 **Derived on `9` grants, then tested on `9` fresh unrelated grants: `8` returned `1037` and the ninth returned `1047` — and that one is titled `The MIT License (MIT)`, as the constant predicted BEFORE its title was read.** 🟢 **It also dissolves a standing anomaly: `ictexam-mcp`'s MIT at `1,114 B` is not a variant — its holder line is `76 B`, and `1114 − 76 = 1037`.** 🔵 Observed MIT totals span `1,055`–`1,141 B` while the body never varies by a byte.
+
+🔴 **Placeholder-holder families (Apache-2.0, GPL, AGPL, ECL) have a stable body — and whitespace alone puts two DIFFERENT hashes at ONE length:**
+
+| Length | Hash | Leading blank | Trailing newline |
+|---|---|---|---|
+| `11,357 B` | `c71d239df917` | 🔴 no | 🟢 yes |
+| `11,357 B` | **`58d1e17ffe51`** | 🟢 **yes** | 🔴 **no** |
+| `11,358 B` | `cfc7749b96f6` | 🟢 yes | 🟢 yes |
+
+🟢 **`diff` returns one difference: the stray newline moved from the end to the beginning. Same text, same length, different hash.** 🟢 **Independently reproduced on `terracotta-education/terracotta` (`11,323 B`) vs `autolab/Autolab` (`11,324 B`) — Indiana University and CMU, one newline apart.** 🔴 **A general `11,356 + lead + trail` model was then built and REFUTED: it fits `3` of `15`. The remaining `12` span `11,323`–`11,525 B` with `≥12` hashes, varying the APPENDIX rather than the whitespace.** 🔵 **First CRLF Apache-2.0 print on this base: `adlnet/xAPI-Spec`, `11,525 B` · `a1587287ff04`, `200` `CR` bytes.**
+
+🟢 **Family bands measured this pass, widening every one `p784` recorded:**
+
+| Family | Range | Note |
+|---|---|---|
+| Apache-2.0 | `11,323`–`11,525 B` | `202 B`, `≥12` hashes |
+| ECL-2.0 | **`9,899`–`12,413 B`** | `2,514 B` — and canonical Apache-2.0 sits INSIDE it |
+| GPL-3.0 | `35,121`–`35,149 B` | `28 B`, `≥6` hashes. 🟢 `8ceb4b9ee5ad` CONFIRMED byte-identical on `moodle` + `chamilo` + `ILIAS`; `3972dc9744f6` now reproduces on a **fourth** unrelated repository (`frappe/erpnext`, `programadores-obreros/Agente-editor-inet`) |
+| GPL-2.0 | `18,027`–`18,092 B` | 🟢 `8177f9751321` CONFIRMED on `portabilis/i-educar`, exactly as `p784` recorded |
+| AGPL-3.0 | `33,893`–`34,523 B` | 🔴 **Two DIFFERENT hashes at an identical `34,523 B`** — `carmonabernaldiego/sistema-escolar` `8486a10c4393` and `dpaul0501/OpenVidya` `0d96a4ff68ad` |
+| Composite | `39,890 B` | `Kosudo/nextSIS` — *"2. nextSIS GNU General Public License Version 3"*, `4,741 B` above canonical GPL-3.0 |
+
+🔴 **`T845`: a `200` at a licence filename is not a grant.** `frappe/education`'s `license.txt` is **`19 B`** · `1fcecf395312` — the entire file is `License: GNU GPL V3`.
+
+### 🔴 Not usable, and the claim channel said nothing useful either way
+
+🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) and [`formalms/formalms`](https://github.com/formalms/formalms) — both ALIVE on `master`, **no grant at `17` case variants**: two named platforms in this vertical, ungranted at `HEAD`. 🔴 [`Nutlope/llamatutor`](https://github.com/Nutlope/llamatutor) `2,053★`, [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) `497★`, [`flyboat403/k12-skills`](https://github.com/flyboat403/k12-skills) `41★` — re-measured across `17` variants, all still ungranted, so these are now real absences rather than instrument artefacts. 🔴 [`jecampagne/cours_mallat_cdf`](https://github.com/jecampagne/cours_mallat_cdf) `40★` — **the claim channel asserts `ECL-2.0`; no grant file at `17` variants on `4` refs.** The one live candidate for a claim-channel over-report.
+
 ## 🆕 `2026-11-12` · `p784` — **Trending this window, and the licence fingerprint record that came out of probing it: GPL-3.0 occupies a `35,147`–`35,149 B` band with three hashes, and `ECL-2.0` sits `17 B` from canonical Apache-2.0.**
 
 🔵 **Appended. Nothing below this section was altered.**

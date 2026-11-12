@@ -4,6 +4,150 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p785` — **The `2026` market figure spans `$1.94B`–`$11.40B` across six named firms — a `5.9×` disagreement, wider than `p784` reported. The durable numbers are the adoption-governance gaps, and all four regions now have one measured. `ACTION p784-E` ESCALATED, not retried: the block is the whole `europa.eu` domain family, not four hosts.**
+
+### 🔴 `ACTION p784-E` — escalated with a GENERALISATION, and two more hosts measured
+
+🟢 **`p784-E` ordered: do NOT re-probe `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu`, `leg.colorado.gov`, `edugit.org`. They were not re-probed.** 🟢 **Instead, two hosts this base had NEVER tested were measured, both carrying primary documents found by this pass's regional leg:**
+
+| Host | Document | `curl` | Fetch tool |
+|---|---|---|---|
+| 🔴 `data.consilium.europa.eu` | Council of the EU `ST-14902-2026-INIT` (`2026-10-29`), on AI in education and academic integrity | 🔴 **`403` to `CONNECT`** | 🔴 **`ENOTFOUND`** |
+| 🔴 `www.europarl.europa.eu` | European Parliament briefing `IUST_BRI(2026)784574`, *Artificial Intelligence in Classrooms* | 🔴 **`403` to `CONNECT`** | 🔴 **`ENOTFOUND`** |
+
+🔵 **Generalisation, which is more useful than the host list it replaces: the block is not four hosts, it is the `europa.eu` domain family.** 🔴 **`p783-D` — "resolve the EMEA high-risk commencement date against a PRIMARY source" — is therefore NOT DISCHARGEABLE BY ANY PASS of this session, and should be struck from the action queue rather than carried.** 🟢 **The remedy is a session network-settings change; `14` hosts are now logged as blocked.**
+
+🟢 **Published as SECONDARY-CONVERGENT, with that limit stated on the row:** Annex III education high-risk obligations **`2027-12-02`** via Reg. (EU) `2026/1744` (Digital Omnibus, OJ `2026-07-24`), postponed from `2026-08-02`; **Art. 4 AI-literacy duty already in force since `2025-02`**; Art. 50 transparency live since `2026-08-02`; emotion-recognition ban in education in force since `2025-02`. 🔵 Two independent secondary sources agree on `2027-12-02`; no primary confirmation is reachable.
+
+### 🟢 Market size — the spread IS the finding, and it is wider than `p784` published
+
+🔴 **`p784` reported a `2026` range of `$6.4B`–`$11.4B` across four firms. Measured across six named firms this pass, the range is `$1.94B`–`$11.40B` — a factor of `5.9`.**
+
+| Firm | `2026` | Forecast | CAGR |
+|---|---|---|---|
+| Coherent Market Insights | **`$11.40B`** | `$57.25B` by `2033` | `16.8%` |
+| Research and Markets | `$10.6B` *(from `$7.52B` in `2025`)* | `$42.48B` by `2030` | `41.5%` |
+| Resourcera (citing) | `$10.4B` | `$32.27B` by `2030` | `31.2%` |
+| Global Growth Insights | `$2.21B` | `$6.47B` by `2035` | `12.7%` |
+| Market Reports World | **`$1.94B`** | `$48.36B` by `2035` | `42.95%` |
+| Trend X Insights | — | `$61.26B` by `2034` | `31.50%` |
+
+🔵 **Segment views, which are more comparable than the totals:** higher education `$4.09B` (`2026`) → `$13.46B` (`2030`) at `34.7%` *(The Business Research Company)*; K-12 `~$0.7B` (`2026`) at `38.1%` to `2036` *(Future Market Insights)*. 🔵 Technavio reports **incremental** growth of `+$3.37B` (`2026`–`2030`) at `45%` — not a total, and not comparable.
+
+🔴 **Operative reading: do not quote a single market number for this vertical. Quote the segment, the firm and the definition, or quote the adoption gap instead.** 🟢 **The CAGR range (`12.7%`–`45%`) is as wide as the base figure, so the disagreement is about what counts as the market, not about growth.**
+
+### 🟢 The most reliable numbers in this file — adoption runs far ahead of governance, in every region
+
+| Measure | Figure | Source type |
+|---|---|---|
+| Students in higher education using AI, globally | **`86%`** | Digital Education Council survey |
+| Universities using AI to automate admin (enrolment, scheduling, integrity) | `90%` | Secondary |
+| Faculty reporting a formal institutional AI policy | 🔴 **`~25%`** | Survey-based |
+| LATAM higher-education institutions using AI in ≥1 area | **`87%`** of `200` institutions, `19` countries | 🟢 **UNESCO IESALC** |
+| …of those, with a formal AI framework | 🔴 **`26%`** | 🟢 UNESCO IESALC |
+| …with no dedicated AI budget | 🔴 **`55%`** | 🟢 UNESCO IESALC |
+
+🟢 **`T844` — the governance deficit is the single most reproducible finding in this vertical, it is measured independently in four regions, and it is the sales motion.** 🔵 Adoption is already won; the institution cannot evidence that its use is safe, lawful or pedagogically sound. 🟢 **The deliverable is the evidence layer, not the model.**
+
+### 🟢 The pedagogical argument now has an institutional owner — and it is empirical, not a vendor claim
+
+🟢 **The OECD *Digital Education Outlook 2026*, subtitled *Exploring Effective Uses of Generative AI in Education*, recommends PURPOSE-BUILT educational AI over general-purpose chatbots, on a measured basis:** general-purpose GenAI improves students' performance on tasks but **does not necessarily produce learning gains, and the advantage disappears — and sometimes reverses — in exams once access is removed.** 🟢 Its recommendations name intelligent tutoring systems moving from scripted tutors to *digital pedagogical agents* that question, nudge and switch strategy in dialogue, and require **teacher control over AI behaviour, including acceptable error levels and monitoring of student interaction.** 🔵 **This converts `p784`'s `T4` from an observation into a procurement criterion a studio can be measured against.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The statute book is specific enough to quote by bill number, and the activity is at STATE level.** 🔴 **`~134` AI-in-education bills across `31` states in `2026`** *(MultiState)*, concentrated on student-data privacy, classroom-use limits and curriculum integration — favouring guardrails over mandated adoption.
+
+| Instrument | What it requires |
+|---|---|
+| 🔴 **California AB 1159** | Bars using student data to train AI models |
+| 🔴 **Idaho SB 1227** | Privacy protections for school AI tools |
+| 🔴 **New York A 9190** | Limits classroom AI to grade `9`+, with exceptions for diagnostics and special education |
+| 🟢 **New Jersey A 4352 / S 2862** | Requires K-12 AI instruction and public higher-ed AI certificate and degree programmes |
+| 🟢 **North Carolina Session Law 2026-41** | AI-literacy standards; **state model policy due `2026-12-31`, local policies `2027-06-30`, teacher training `2028-06-30`** |
+| 🟡 **Virginia** | School boards must set and enforce AI policies consistent with state guidance; Maryland, Idaho, Oklahoma and Virginia require both state guidance and district adoption |
+| 🟡 **Federal** | US Dept of Education guidance on responsible AI and federal grant funds (`2025-07`); **K-12 AI Literacy and Readiness Act of 2026** advanced in House committee |
+| 🟡 **California, de facto** | OpenAI + Common Sense Media "Parents & Kids Safe AI Act" ballot initiative would reach edtech AI features for minors |
+| 🔴 **Canada** | 🔴 **Declared gap, explicitly.** No education-specific AI statute found; the Working for Workers Four Act, 2024 is employment, not schools |
+
+🟢 **Opportunity — the dated-deadline engagement.** North Carolina's three dated milestones are a procurement calendar: a model policy in `2026-12`, district policies by `2027-06`, teacher training by `2028-06`. 🟢 **Build the policy-to-evidence pipeline: `rubrictrail` (Apache-2.0) for evidence-linked assignment trails, `anthropics/k12-teacher-skills` (Apache-2.0) for the rubric layer, `EducationalTestingService/rsmtool` (Apache-2.0) to validate any scoring model before it touches a grade.** 🔴 **Hard constraint from AB 1159 and SB 1227: no student data into training. Any NA deliverable must be inference-only over institutional data, which makes `Ollama`/local-weights serving a requirement, not a preference.**
+
+### EMEA
+
+🟢 **The binding framework is the EU AI Act; education access and assessment are Annex III high-risk.** Dates as above, secondary-convergent. 🟢 **An October `2026` Council of the EU document highlights Reg. (EU) `2024/1689` and calls for support for education providers developing AI policies including academic integrity** *(reference only — the text is unreachable from this session)*.
+
+| Jurisdiction | Position |
+|---|---|
+| 🟢 **United Kingdom** | 🟢 **DfE generative-AI product safety standards for education (`2026-01`); Ofqual resources on AI and coursework integrity (`2026-03`).** Non-EU, and moving faster than the EU on product-level assurance |
+| 🟢 **Gulf** | Policy-led and well-resourced; **KHDA Dubai has issued explicit guidance to private schools** on responsible AI use |
+| 🟡 **Estonia, Slovakia, Greece, Italy** | Government education partnerships with OpenAI on access, AI literacy and evaluation *(company source)* |
+| 🔴 **Türkiye, Israel, Africa** | 🔴 **Declared gap on REGULATION.** No instrument found this pass. 🟢 Code supply was found and is below |
+
+🟢 **Opportunity — the UK assurance engagement, which now has code behind it.** 🟢 **`oaknational/oak-ai-lesson-assistant` (MIT, `1,077 B` · `d150aadcccd2`) is Oak National Academy's own "Aila" lesson planner — a UK publicly-funded curriculum body shipping under MIT.** That is a reference implementation a UK engagement can start from rather than argue about. 🟢 **Pair it with the DfE product safety standards as the acceptance criteria and `CSCDP/AnnexA_CiNCensus_Cleaner` / `data-to-insight/ofsted-ilacs-scrape-tool` (both MIT) for the inspection-data layer.**
+
+🟢 **Opportunity — the EUPL interop engagement.** 🟢 **`european-commission-empl/European-Learning-Model` (EUPL-1.2, restored this pass) is the EU's own learning and credential data model.** Building an EMEA credentials deliverable on the Commission's own vocabulary is the cheapest possible answer to "is this interoperable and sovereign?" 🔴 **EUPL-1.2 is copyleft — check the compatibility list before combining it with AGPL or GPL components.**
+
+🟡 **Türkiye — supply exists, placed EMEA:** `bahattinyunus/ai_courses` (`103★`, MIT), `bahattinyunus/gelistirme_araclari` (`97★`, MIT), `anadolubiltekmyo/YapayZekaAkademisi` (`24★`, MIT — Anadolu University's AI Academy `2026` materials), `code-alchemist01/Machine-Learning-Kingdom-Open-Souce` (`22★`, MIT), `utkukaynar/kolaykolej` (`3★`, MIT — school/dormitory management). 🟡 **Gulf:** `ahmed3bead/teach-me` (`1★`, MIT). 🔴 **Ceiling is `103★`; this is curriculum supply, not platform supply.**
+
+### APAC
+
+🟢 **Two binding education-touching AI laws are now IN FORCE, and the regional clocks differ by more than a year.**
+
+| Jurisdiction | Position |
+|---|---|
+| 🔴 **South Korea** | 🔴 **AI Basic Act IN FORCE `2026-01-22`.** Covers "high-impact AI" explicitly including **education**. Guidance-focused grace period through `2026` |
+| 🔴 **Vietnam** | 🔴 **AI law effective `2026-03-01`.** High-risk systems — education named — require **pre-deployment registration in the National AI Database** |
+| 🔴 **China** | Most comprehensive: mandatory registration, content-labelling duties, penalties to **`¥50M`** |
+| 🟡 **Australia** | Proposal paper on mandatory guardrails for high-risk AI including education. 🟢 **TEQSA requires ALL higher-education providers to submit institutional action plans addressing generative-AI risk** |
+| 🟡 **Singapore** | Frameworks and toolkits (**AI Verify**) rather than statute |
+| 🟡 **Japan** | Light-touch, voluntary governance |
+| 🟡 **India** | 🟡 Supply found (`dpaul0501/OpenVidya`, AGPL-3.0, NCERT/CBSE-aligned); no education-specific AI statute found this pass |
+
+🟢 **Opportunity — the registration-and-evidence engagement, which is the highest-urgency item in this file.** 🔴 **Vietnam's pre-deployment registration and Korea's high-impact classification both demand a documented system description BEFORE deployment.** 🟢 **Sell the dossier: model provenance, data lineage, human-oversight design and an error-rate statement. `rubrictrail`'s evidence-linking and `rsmtool`'s scoring validation are the two components that produce evidence an auditor accepts.** 🔴 **`T6`'s deployment risk stands: Australia's TEQSA action-plan duty applies to EVERY provider, so the APAC motion is volume compliance, not bespoke pilots.** 🔵 **Cross-border exposure: APAC edtech selling proctoring or admissions tools into the EU inherits Annex III high-risk status.**
+
+### LATAM
+
+🟢 **The region has the best-instrumented adoption data in the world and the thinnest governance — the gap is measured, not asserted.**
+
+| Measure | Figure |
+|---|---|
+| 🟢 HEIs using AI in ≥1 area (`200` institutions, `19` countries) | **`87%`** *(UNESCO IESALC)* |
+| 🔴 …with a formal AI framework | **`26%`** |
+| 🔴 …with no dedicated AI budget | **`55%`** |
+| 🔴 Institutions with formal guidelines AND sufficient capacity | 🔴 **`<10%`** *(UNESCO Observatory)* |
+| 🟢 Students / faculty actively engaging with AI | **`92%` / `79%`** *(Digital Education Council LATAM `2026`)* |
+| 🟢 Uruguay public-school teachers using AI tools | **`75%`** *(UNESCO)* |
+| 🟢 Brazilian internet users aged `9`–`17` using AI tools | **`65%`** |
+| 🔴 Brazilian schools with AI tools in use that have guidelines | 🔴 **`22%`** |
+| 🟡 AI regulatory instruments, rules and bills, `23` countries | **`716`**, `>80%` since `2023` *(Universidad de los Andes)* |
+
+🟢 **Institutions to work through:** UNESCO IESALC (research and the regional Observatory, launched `2026-04` at ECLAC, Santiago) · Tecnológico de Monterrey (UNESCO agreement; DEC survey partner) · CENIA, Chile · Cetic.br, Brazil · Ceibal, Uruguay · Universidad de los Andes.
+
+🟢 **Opportunity — the `26%`-to-`87%` governance engagement, at regional scale.** `87%` are using AI and `26%` can govern it; `55%` have no budget line, so the offer must be small, fast and reusable across institutions — a governance template plus an evidence pipeline, not a platform build. 🟢 **Start from `portabilis/i-educar` (GPL-2.0, branch `2.12`, Brazil's largest free school-management system) and `francoisjacquet/rosariosis` (branch `mobile`) for the records layer, and keep the AI tier in a separate permissive process so the deliverable stays closeable.**
+
+🔴 **`ACTION p784-A` DISCHARGED, and `p784`'s conclusion is BOUNDED rather than confirmed.** 🟢 Swept this base's query set in Spanish and Portuguese: the in-language populations are LARGE — `gestão escolar` **`2,243`**, `gestión escolar` **`1,637`**, `escola sistema gestão` `861`, `plano de aula IA` `133`, `tutoria inteligente` `43`, `aula virtual IA` `35`, `agente educativo IA` `23`, `agente educacional IA` `21`. 🔴 **But the star CEILING in-language is `158★`** (`carmonabernaldiego/sistema-escolar`, AGPL-3.0), then `50★`, `32★`, `22★`, `20★`. 🔵 **So "LATAM is thin" was not an artefact of query language, and it was not simply true either: in-language querying multiplies the COUNT by two orders of magnitude while the ceiling stays low. `portabilis/i-educar` at `725★` is an outlier, not a typical hidden case.** 🟢 **This is the correction `p784-A` asked to be SIZED, and it is sized.**
+
+🟢 **`ACTION p784-G` DISCHARGED — the declared gap is ANSWERED, with a bound.** LATAM-origin education AGENTS exist and are permissively granted; the ceiling is `8★`:
+
+| Agent | Grant, on the bytes | ★ | Placed |
+|---|---|---|---|
+| 🟢 [`jmatias2411/Taller-AgenteIA`](https://github.com/jmatias2411/Taller-AgenteIA) | MIT `1,077 B` · `f594c3d75802` | `8★` | LATAM — local agent with tools, teaching workshop |
+| 🟢 [`matheusmontelro/plataforma-agentes-ia`](https://github.com/matheusmontelro/plataforma-agentes-ia) | MIT `1,073 B` · `706cffd52dce` | `5★` | LATAM — Brazil; self-hostable educational agent platform, FastAPI |
+| 🟡 [`programadores-obreros/Agente-editor-inet`](https://github.com/programadores-obreros/Agente-editor-inet) | GPL-3.0 `35,149 B` · `3972dc9744f6` | `2★` | 🟢 **LATAM — Argentina.** "Tecnia Bot", teaching Arduino and ESP32 in Argentine technical schools |
+| 🟢 [`OrlandContreras/rag-agent-crew`](https://github.com/OrlandContreras/rag-agent-crew) | MIT `1,084 B` · `939e79e1a619` | `1★` | LATAM — `100%` local multi-agent RAG, CrewAI + Ollama + Qdrant |
+| 🟢 [`balejosg/tiza`](https://github.com/balejosg/tiza) | MIT `1,065 B` · `e5d43db441b9` | `1★` | 🟢 **A CLI and skill that publishes pages, tasks, quizzes and H5P activities into a virtual classroom** — the authoring bridge the LMS recipes need |
+| 🟢 [`patyfreitasbr/agente-educacional-ia`](https://github.com/patyfreitasbr/agente-educacional-ia) | MIT `1,070 B` · `296d59252005` | `0★` | LATAM — Brazil; study-schedule agent |
+| 🟡 [`CrisIntriago/aulavirtual-ia-taws`](https://github.com/CrisIntriago/aulavirtual-ia-taws) | 🔴 ungranted | `0★` | LATAM — Ecuador; MCP server for ESPOL's virtual classroom |
+
+🔴 **Restated gap: LATAM-origin education agents are present, permissive and PRE-PRODUCTION. Previous best was `3★`; it is now `8★`. There is still no LATAM-origin education agent at a scale a client engagement can adopt as-is** — the value is as a placed starting point and a local partner signal, not as a component.
+
+### Global
+
+🟢 **`microsoft/generative-ai-for-beginners` at `123,387★` (MIT, `1,141 B` · `c2cfccb812fe`) is the largest artefact ever shelved in this base** and is region-neutral curriculum. 🟢 **`HKUDS/DeepTutor` at `58,463★` (Apache-2.0) is the largest purpose-built tutor.** 🔵 Both are Global, not placed: they carry no jurisdictional assumption, which is exactly why they are safe defaults for the teaching tier of any regional engagement.
+
+🔴 **Declared gaps — searched this pass and not found, which is not the same as absent:** no education-specific AI statute found for **Canada**, **Türkiye**, **Israel**, **Africa** or **India**; no EMEA-specific hard adoption rate for European schools; and no primary-source confirmation of any EU date, because the `europa.eu` domain family is unreachable from this session.
+
 ## 🆕 `2026-11-12` · `p784` — **The market's `2026` figure is a RANGE, not a number (`$6.4B`–`$11.4B`, four firms). The adoption gap is the business: `88%` of students use AI, `36%` feel their institution encourages it — and in North America faculty intent FELL `9` points year over year. `ACTION p783-D` and `p783-E` are REFUSED ON CHANNEL and reported as refused.**
 
 ### 🔴 `ACTION p783-D` and `p783-E` — REFUSED ON CHANNEL, measured on TWO independent channels

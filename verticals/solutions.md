@@ -4,6 +4,41 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p785` — **`20` platforms re-probed at a resolved branch with a CASE-AWARE grant probe. `2` are ungranted at `HEAD`. A third `ECL-2.0` platform found. And the branch field is doing real work: `7` of `20` serve `HEAD` from neither `main` nor `master`, including Brazil's largest school system, which serves from `2.12`.**
+
+🟢 **Every row re-resolved on `git ls-remote --symref` this pass and graded on its bytes across `17` case-variant filenames.** 🔵 Case variants matter here specifically: `moodle/moodle`'s grant is at `COPYING.txt` and `frappe/lms`'s at lowercase `license.txt` — two of the most-deployed platforms in the vertical, neither reachable at `LICENSE`.
+
+| Platform | Branch serving `HEAD` | Grant file | Bytes · `sha256₁₂` | Family, on the title line | AI-on-top seam |
+|---|---|---|---|---|---|
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | 🔵 **`COPYING.txt`** | `35,147 B` · `8ceb4b9ee5ad` | 🟡 **GPL-3.0** | 🟢 **Web Service API over HTTP** — no GPL linkage. The plugin route is copyleft; the API route is not |
+| 🟡 [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `master` | `LICENSE` | `35,147 B` · `8ceb4b9ee5ad` | 🟡 **GPL-3.0** | 🔵 **Byte-identical grant to Moodle and ILIAS** |
+| 🟡 [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔵 `release_11` | `LICENSE` | `35,147 B` · `8ceb4b9ee5ad` | 🟡 **GPL-3.0** | 🟢 **`p784`'s hash CONFIRMED across all three.** SOAP/REST API |
+| 🟡 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` · `d3a86602dcf7` | `LICENSE` | `35,136 B` · `e12d78569742` | 🔴 **AGPL-3.0** | 🔴 AGPL — not in a hosted deliverable. 🔵 Address classifies **RENAMED**, and `raw` serves bytes from it regardless (`p780`) |
+| 🔴 [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` | `LICENSE` | `34,520 B` · `57c8ff33c9c0` | 🔴 **AGPL-3.0** | 🟢 **REST API + LTI.** Integrate, never fork |
+| 🔴 [`frappe/lms`](https://github.com/frappe/lms) | 🔵 `develop` | 🔵 **`license.txt`** | `33,893 B` · `db1a87ba81e8` | 🔴 **AGPL-3.0** | 🟢 **SETTLED THIS PASS** (`p784-F`). Was published as *"no grant file at any of six names"* |
+| 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔵 `develop` | `LICENSE` | `1,097 B` · `3c056b34a476` | 🟢 **MIT** | 🟢 **The permissive platform.** Offline-first; fork and ship |
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `master` | `LICENSE` | `10,982 B` · `6dbc5b605ed0` | 🟢 **Apache-2.0** | 🟢 **The permissive full LMS.** European (Switzerland), Apache-2.0 |
+| 🟢 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` · `af576e8b4d32` | `LICENSE` | `11,120 B` · `0688f62d04f1` | 🟢 **ECL-2.0** | 🟢 Permissive. 🔴 **Third-party comparison pages still publish "Sakai is Apache 2.0." It is not** |
+| 🟢 [`opencast/opencast`](https://github.com/opencast/opencast) | 🔵 `develop` · `26fbc9363f07` | `LICENSE` | `11,340 B` · `76a975068930` | 🟢 **ECL-2.0** | Lecture capture at scale. 🔵 `develop`, not `main` — a recipe guessing `main` fails |
+| 🟢 [`anvc/scalar`](https://github.com/anvc/scalar) | `master` · `daf68e2cca8e` | 🔵 **`license.txt`** | `11,193 B` · `11ce2365d157` | 🟢 **ECL-2.0** | 🟢 **A THIRD `ECL-2.0` platform, restored from `BLOCK` this pass.** Scholarly multimedia publishing, `244★` |
+| 🟡 [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `master` | 🔵 `LICENSE.txt` | `35,146 B` · `c53a65c2fd56` | 🟡 **GPL-3.0** | Interactive content types. 🔵 `1 B` below the Moodle/Chamilo/ILIAS print, different hash |
+| 🟡 [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔵 `v4.0.x-develop` | `LICENSE` | `7,652 B` · `e3a994d82e64` | 🟡 **LGPL-3.0** | 🟢 **LGPL — linkable.** Virtual classroom; `v4.0.x-develop`, not `main` |
+| 🟡 [`OpenEduCat/openeducat_erp`](https://github.com/OpenEduCat/openeducat_erp) | 🔵 `19.0` | `LICENSE` | `8,241 B` · `528f84036800` | 🟡 **LGPL-3.0, via a file that NAMES it** — *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"* | Education ERP/SIS on Odoo. 🔵 Branch is a version number |
+| 🟡 [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔵 **`2.12`** | `LICENSE` | `18,092 B` · `8177f9751321` | 🟡 **GPL-2.0** | 🟢 **Brazil's largest free school-management system.** 🟢 **`p784`'s first GPL-2.0 print CONFIRMED exactly.** 🔴 Serves `HEAD` from `2.12` |
+| 🟡 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔵 `mobile` | `LICENSE` | `15,214 B` · `d954e14e5c75` | 🟡 **GPL-2.0 family** | Student information system, strong LATAM/Spanish deployment. 🔴 Serves `HEAD` from `mobile` |
+| 🟡 [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔵 `v31.0.00` | `LICENSE` | `35,121 B` · `93178a43d6d3` | 🟡 **GPL-3.0** | School management. 🔵 **The lowest GPL-3.0 print in this base** |
+| 🟢 [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | `master` | `LICENSE` | `10,273 B` · `73ba74dfaa52` | 🟢 **Apache-2.0** | 🟢 **The permissive LTI hosting framework** — how a closeable tool enters a copyleft LMS |
+| 🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `master` | 🔴 **none** | — | 🔴 **No grant at `17` case variants** | 🔴 **Unusable.** A named SIS platform, ungranted at `HEAD` |
+| 🔴 [`formalms/formalms`](https://github.com/formalms/formalms) | `master` | 🔴 **none** | — | 🔴 **No grant at `17` case variants** | 🔴 **Unusable.** A named LMS platform, ungranted at `HEAD` |
+
+### 🟢 `ECL-2.0` after a full population sweep — and the warning that comes with it
+
+🟢 **`ACTION p784-D` discharged: the claim channel holds `408` `ECL-2.0` repositories.** 🟢 **Three are education platforms this base can build on — `sakai`, `opencast`, `anvc/scalar` — plus `oaeproject/3akai-ux` (`12,413 B` · `26eb150501f6`) and `oaeproject/Hilary` (`12,322 B` · `34d6dd461117`), the Open Academic Environment, which is Sakai-lineage.** 🔴 **But `ECL-2.0` is NOT an education signal: the long tail is university coursework choosing a licence by its NAME — number-plate recognition, a MOSFET model, a Hungarian geospatial framework, a snake game from an OOP lab.** 🔵 **Measured `ECL-2.0` byte range: `9,899`–`12,413 B`, a `2,514 B` span for one licence family — and canonical Apache-2.0 (`11,357 B`) sits INSIDE it.**
+
+### 🔴 The branch field is load-bearing, and `35%` of this shelf would break a recipe that guesses
+
+🔴 **`7` of `20` platforms serve `HEAD` from neither `main` nor `master`:** `kolibri` → `develop` · `openedx` → `master` *(but RENAMED)* · `opencast` → `develop` · `bigbluebutton` → `v4.0.x-develop` · `openeducat_erp` → `19.0` · `i-educar` → **`2.12`** · `rosariosis` → `mobile` · `ILIAS` → `release_11` · `GibbonEdu/core` → `v31.0.00`. 🟢 **Every recipe in `compose/patterns.md` names the branch for this reason.**
+
 ## 🆕 `2026-11-12` · `p784` — **A licence family this base had never recorded: `ECL-2.0`, the EDUCATIONAL COMMUNITY LICENSE — an Apache-2.0 derivative written for universities, carried by Sakai and Opencast. It is permissive, and its byte length sits within `~240 B` of canonical Apache-2.0, so a length-based classifier mistakes it for Apache. `10` platforms re-probed; `9` alive, `1` ungranted.**
 
 ### 🟢 The vertical's platform layer, every address probed and every grant graded on the bytes

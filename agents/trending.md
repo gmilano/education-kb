@@ -4,6 +4,51 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p785` — **New this window: a `65★` MIT local-first teaching assistant, the UK's own publicly-funded lesson planner under MIT, an Apache-2.0 teaching agent that delivers over WhatsApp — and the largest artefact ever shelved in this base, at `123,387★`. Plus `7` agents RESTORED from "no grant" by a case-aware probe.**
+
+### 🟢 New to this base this window, every grant read on its title line
+
+| Agent | Address | Grant, on the bytes | ★ | Why it is here |
+|---|---|---|---|---|
+| 🟢 **Claw-ED** | [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) `main` | 🟢 MIT `1,078 B` · `4d5d987f4f89` | `65★` | 🟢 **The new entrant of the window.** Local-first teaching assistant producing **editable** lesson drafts, student materials and slides. 🔵 *Local-first* + *editable* is the procurement vocabulary of `T3` |
+| 🟢 **oak-ai-lesson-assistant (Aila)** | [`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) `main` | 🟢 MIT `1,077 B` · `d150aadcccd2` | `35★` | 🟢 **The best `p784-H` find: a UK publicly-funded curriculum body shipping its AI lesson planner under MIT.** Provenance answers the appropriateness question that a vendor pitch cannot |
+| 🟢 **rumi-platform** | [`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform) `main` | 🟢 Apache-2.0 `11,287 B` · `c589d95090ce` | `24★` | 🟢 **Delivers over WhatsApp** — classroom coaching, reading assessments, lesson plans. 🔵 The only agent in this base that assumes no school device estate |
+| 🟢 **rubrictrail** | [`Sion612/rubrictrail`](https://github.com/Sion612/rubrictrail) `main` | 🟢 Apache-2.0 `11,324 B` · `50e6751797c5` | `128★` | Local-first, **evidence-linked** assignment planner — the audit tier every regulated recipe in this base now depends on |
+| 🟢 **generative-ai-for-beginners** | [`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners) `main` | 🟢 MIT `1,141 B` · `c2cfccb812fe` | **`123,387★`** | 🟢 **The largest artefact ever shelved in this base** — previous high was `78,508★`. 🔵 Grant is byte-identical to `microsoft/AI-For-Beginners` |
+| 🟢 **reading-explorer-lesson-plan-skill** | [`CathyErer/reading-explorer-lesson-plan-skill`](https://github.com/CathyErer/reading-explorer-lesson-plan-skill) `main` | 🟢 MIT `1,066 B` · `8bf7663233bc` | `19★` | Turns a unit PDF into a `5`-file **bilingual** ESL teaching set |
+
+### 🟢 `7` agents and libraries RESTORED from "no grant" — the supply was never missing
+
+🔴 **A six-name uppercase licence probe cannot see a lowercase filename. These were on this base's shelves as grant-less or blocked, and all seven are permissive:**
+
+| Restored | Grant file | Grant, on the bytes | Was published as |
+|---|---|---|---|
+| 🟢 [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | 🔵 `license` | **MIT** `1,082 B` · `22c7cae23a2b` | 🔴 *"MIT unconfirmed"* at `~67,600★` — `p784-F` |
+| 🟢 [`anvc/scalar`](https://github.com/anvc/scalar) | 🔵 `license.txt` | **ECL-2.0** `11,193 B` · `11ce2365d157` | 🔴 *"the week's clearest `BLOCK`"* at `244★` |
+| 🟢 [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) | 🔵 `license` | **MIT** `1,070 B` · `99a909b026f0` | 🔴 *"no grant"* |
+| 🟢 [`LearningLocker/xapi-validation`](https://github.com/LearningLocker/xapi-validation) | 🔵 `license` | **MIT** `1,070 B` · `99a909b026f0` | 🔴 *"no grant"* |
+| 🟢 [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | 🔵 `License` | **MIT** `1,079 B` · `021bff58ad26` | 🔴 *"NO GRANT in 6 filenames"* |
+| 🟢 [`kitschpatrol/yanki-connect`](https://github.com/kitschpatrol/yanki-connect) | 🔵 `license.txt` | **MIT** `1,071 B` · `1d5701eb0350` | 🔴 *"`7` root grant paths, all `404`"* |
+| 🟡 [`kstateome/canvas-api`](https://github.com/kstateome/canvas-api) | 🔵 `License.txt` | **LGPL-3.0** `7,651 B` · `da7eabb7bafd` | 🔴 *"declared in `pom.xml`; no `LICENSE` file"* |
+
+🟡 **And one restored in the other direction, which matters more:** [`0x454447415244/HandwritingRecognitionSystem`](https://github.com/0x454447415244/HandwritingRecognitionSystem) (`465★`) was published as *"UNGRANTED → exclusive copyright, the most-starred ungranted row in this KB"* after **`40` probes**. 🔴 **Its `License.md` is `CC-BY-NC-4.0`** (`14,831 B` · `34937a987102`). 🟡 Still barred from a commercial deliverable — but a shelf that reads "unknown, probably fine" would have shipped it.
+
+### 🟡 LATAM-origin agents — the declared gap is answered, and the ceiling is `8★`
+
+🟢 **`ACTION p784-G` discharged by querying domain-bound terms in-language per `T841`:** [`jmatias2411/Taller-AgenteIA`](https://github.com/jmatias2411/Taller-AgenteIA) `8★` MIT · [`matheusmontelro/plataforma-agentes-ia`](https://github.com/matheusmontelro/plataforma-agentes-ia) `5★` MIT *(Brazil)* · [`programadores-obreros/Agente-editor-inet`](https://github.com/programadores-obreros/Agente-editor-inet) `2★` GPL-3.0 — **"Tecnia Bot", teaching Arduino and ESP32 in Argentine technical schools** · [`OrlandContreras/rag-agent-crew`](https://github.com/OrlandContreras/rag-agent-crew) `1★` MIT *(`100%` local, CrewAI + Ollama + Qdrant)* · [`balejosg/tiza`](https://github.com/balejosg/tiza) `1★` MIT — **publishes pages, tasks, quizzes and H5P into a virtual classroom** · [`patyfreitasbr/agente-educacional-ia`](https://github.com/patyfreitasbr/agente-educacional-ia) `0★` MIT · [`CrisIntriago/aulavirtual-ia-taws`](https://github.com/CrisIntriago/aulavirtual-ia-taws) `0★` ungranted *(MCP for ESPOL, Ecuador)*. 🔴 **Previous best `3★` → now `8★`. Permissive, placed, and pre-production.**
+
+### 🟡 EMEA beyond the EU — supply found, ceiling `103★`
+
+🟡 **Türkiye:** [`bahattinyunus/ai_courses`](https://github.com/bahattinyunus/ai_courses) `103★` MIT `1,078 B` · `ac0cfbe2af7a` · [`bahattinyunus/gelistirme_araclari`](https://github.com/bahattinyunus/gelistirme_araclari) `97★` MIT · [`anadolubiltekmyo/YapayZekaAkademisi`](https://github.com/anadolubiltekmyo/YapayZekaAkademisi) `24★` MIT `1,105 B` · `cf1b8423efd1` *(Anadolu University AI Academy `2026`)* · [`code-alchemist01/Machine-Learning-Kingdom-Open-Souce`](https://github.com/code-alchemist01/Machine-Learning-Kingdom-Open-Souce) `22★` MIT · [`utkukaynar/kolaykolej`](https://github.com/utkukaynar/kolaykolej) `3★` MIT. 🟡 **United Kingdom:** [`CSCDP/AnnexA_CiNCensus_Cleaner`](https://github.com/CSCDP/AnnexA_CiNCensus_Cleaner) `8★` MIT · [`data-to-insight/ofsted-ilacs-scrape-tool`](https://github.com/data-to-insight/ofsted-ilacs-scrape-tool) `2★` MIT · [`jdkram/ofsted-report-scraper`](https://github.com/jdkram/ofsted-report-scraper) `2★` MIT. 🟡 **Gulf:** [`ahmed3bead/teach-me`](https://github.com/ahmed3bead/teach-me) `1★` MIT. 🟡 **India (APAC):** [`dpaul0501/OpenVidya`](https://github.com/dpaul0501/OpenVidya) `2★` AGPL-3.0, NCERT/CBSE-aligned.
+
+### 🔵 Flat, and recorded as flat
+
+🔵 **`EvolvingAgentsLabs/evolving-agents` `458★` → `458★` · `yoli-mi/good-learning` `317★` → `317★` · `internetphysics/live-classroom` `103★` → `103★` · `anthropics/k12-teacher-skills` `625★` → `626★`.** 🟢 **`HKUDS/DeepTutor` is now explicitly `58,463★`, `main` · `60fb3bdfddb3`, Apache-2.0 `11,408 B` · `cd2f54e1e506` — fifth consecutive pass at an identical grant print.** 🔴 **`p784` reported `rohitg00/ai-engineering-from-scratch` rising `+820★/day` at `~78,400★`; this pass did not reproduce a star count for it and makes no claim either way.**
+
+### 🔴 Measured absences this window
+
+🔴 **`11` Moodle-MCP bridges still DEAD, `3` still ALIVE at byte-identical grants and unmoved `HEAD`s (`1546a7009b01`, `18bd1777eb0b`, `5d7d8fe78b39`) — `0` resurrections, third consecutive pass.** 🔴 **`5` of `6` education repositories above `500★` reporting `NOASSERTION` have NO grant at `17` case variants — true absences, not Creative Commons.** 🔴 **Still no dominant open-source education agent EVALUATION or observability project.**
+
 ## 🆕 `2026-11-12` · `p784` — **New this window: a `975★` education skill pack that is `CC-BY-SA`, not software; a `78,400★` MIT curriculum rising `+820★/day`; and `ECL-2.0`, a permissive licence family this base had never seen.**
 
 🔵 **Appended. Nothing below this section was altered.**

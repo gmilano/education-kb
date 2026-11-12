@@ -4,6 +4,114 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p785` — **Six recipes. `P1` is the big one: the learning-analytics recipe this base RETIRED at `p782` is REBUILT, because the three MIT/Apache components it needed were never missing — they were hidden behind an uppercase-only licence probe. Plus a corrected grant gate that would have caught all `16`.**
+
+🟢 **Every component below was resolved on `git ls-remote --symref` and graded on its licence bytes AT ITS TITLE LINE this pass. Branches are stated because `9` of the platforms in this base serve `HEAD` from neither `main` nor `master`.**
+
+### 🟢 `P1` — Learning analytics, REBUILT from the retirement `p782` declared *(permissive end-to-end, `5`–`7` weeks)*
+
+🔴 **Why it was retired:** `p782` killed this recipe when `4` of `5` Caliper implementations died and the surviving spec turned out to be a bespoke consortium licence. 🟢 **Why it is back:** the xAPI route was always available and the base could not see its grants.
+
+| Tier | Component | Branch | Grant, on the title line |
+|---|---|---|---|
+| Record store | [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) | `master` | 🟢 **MIT** `1,070 B` · `99a909b026f0` 🔵 *restored `p785`* |
+| Statement validation | [`LearningLocker/xapi-validation`](https://github.com/LearningLocker/xapi-validation) | `master` | 🟢 **MIT** `1,070 B` · `99a909b026f0` *(byte-identical)* |
+| Reference LRS / conformance | [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) · [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) | `master` | 🟢 **Apache-2.0** `11,357 B` · `58d1e17ffe51` · `11,358 B` · `cfc7749b96f6` |
+| Source of events | [`moodle/moodle`](https://github.com/moodle/moodle) Web Service API | `main` | 🟡 GPL-3.0 `COPYING.txt` — 🟢 **spoken to over HTTP, so no linkage** |
+| Scoring validation | [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) | `main` | 🟢 **Apache-2.0** `11,358 B` · `e11d83966208` |
+
+🟢 **Wiring:** Moodle (or Canvas/Kolibri) emits events → a thin adapter maps them to **xAPI statements** → `xapi-validation` rejects malformed statements at the boundary → `xapi-service` persists them → `ADL_LRS` is kept as the conformance oracle in CI, not in production → any model that produces a score is validated by `rsmtool` **before** the score reaches a gradebook. 🔴 **Do NOT build on Caliper: `6` dead implementations across four owner spellings this pass, and the surviving spec is not permissive.** 🟢 **Deliverable is closeable: every tier is MIT or Apache-2.0, and the only copyleft component is behind an HTTP boundary.**
+
+### 🟢 `P2` — The UK assurance engagement, starting from the UK's own reference implementation *(`6`–`8` weeks, EMEA)*
+
+| Tier | Component | Grant |
+|---|---|---|
+| Lesson planning | [`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) `main` | 🟢 **MIT** `1,077 B` · `d150aadcccd2` |
+| Rubric + eval layer | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) `main` | 🟢 **Apache-2.0** `11,357 B` · `58d1e17ffe51` |
+| Evidence trail | [`Sion612/rubrictrail`](https://github.com/Sion612/rubrictrail) `main` | 🟢 **Apache-2.0** `11,324 B` · `50e6751797c5` |
+| Inspection data | [`CSCDP/AnnexA_CiNCensus_Cleaner`](https://github.com/CSCDP/AnnexA_CiNCensus_Cleaner) · [`data-to-insight/ofsted-ilacs-scrape-tool`](https://github.com/data-to-insight/ofsted-ilacs-scrape-tool) | 🟢 **MIT** `1,083 B` · `0de2348805d0` · `1,056 B` · `da3ece2d2daf` |
+
+🟢 **Wiring:** adopt Aila as the planning tier rather than rebuilding it — it is Oak National Academy's own MIT-licensed assistant, so "is this appropriate for English schools?" is answered by provenance instead of argument. 🟢 **Acceptance criteria come from the DfE generative-AI product safety standards (`2026-01`) and Ofqual's coursework-integrity resources (`2026-03`); `rubrictrail` produces the artefact that evidences them.** 🔵 The Ofsted tooling gives the inspection-facing data layer, which is what makes this a procurement conversation rather than a pilot.
+
+### 🟢 `P3` — North America: the dated-deadline policy-to-evidence pipeline *(`8`–`10` weeks)*
+
+🟢 **The calendar is the brief.** North Carolina Session Law `2026-41`: state model policy **`2026-12-31`**, local district policies **`2027-06-30`**, teacher training **`2028-06-30`**. Virginia, Maryland, Idaho and Oklahoma require both state guidance and district adoption.
+
+🔴 **The binding constraint is architectural, not legal advice:** California **AB 1159** bars using student data to train AI models and Idaho **SB 1227** mandates privacy protections for school AI tools. 🟢 **Therefore the serving tier must be inference-only over institutional data, on local weights — `Ollama` or `vLLM`, not a hosted training-capable endpoint.** 🟢 Then: `k12-teacher-skills` (Apache-2.0) for rubrics → `rubrictrail` (Apache-2.0) for the evidence-linked trail → `rsmtool` (Apache-2.0) to validate any scoring model before a grade depends on it → `xapi-service` (MIT) for the interaction record. 🔴 **New York A 9190 limits classroom AI to grade `9`+ with diagnostic and special-education exceptions, so the deliverable needs a grade-band gate as a first-class feature, not a configuration note.**
+
+### 🟢 `P4` — APAC: the pre-deployment registration dossier *(`4`–`6` weeks, highest urgency in this base)*
+
+🔴 **Korea's AI Basic Act is IN FORCE since `2026-01-22` and names education high-impact. Vietnam's AI law is effective `2026-03-01` and requires high-risk education systems to be REGISTERED in the National AI Database BEFORE deployment. Australia's TEQSA requires EVERY higher-education provider to file an institutional action plan on generative-AI risk.**
+
+🟢 **The product is the dossier, and it is mostly assembly:** model and weights provenance (pinned by digest) · data lineage for every corpus that touched a prompt · human-oversight design with the teacher-control properties the OECD names · a stated error rate produced by `rsmtool` rather than asserted · an interaction record from `xapi-service` to evidence oversight actually happened · `rubrictrail`'s evidence links so each claim resolves to a document. 🟢 **This recipe sells at volume because TEQSA's duty applies to every provider and the dossier is `80%` template.** 🔴 **Cross-border: an APAC provider selling proctoring or admissions into the EU inherits Annex III high-risk status, so build to the stricter of the two from the start.**
+
+### 🟢 `P5` — LATAM: governance at scale on a `55%`-no-budget constraint *(`5`–`6` weeks, reusable per institution)*
+
+🔴 **The brief is set by the numbers: `87%` of LATAM HEIs use AI, `26%` have a framework, `55%` have no AI budget line.** 🟢 **So the unit sold is a reusable template plus a thin evidence pipeline — never a platform build.**
+
+| Tier | Component | Branch | Grant |
+|---|---|---|---|
+| Student records | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 **`2.12`** | 🟡 GPL-2.0 `18,092 B` · `8177f9751321` |
+| Alternative SIS | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **`mobile`** | 🟡 GPL-2.0 family `15,214 B` · `d954e14e5c75` |
+| Classroom authoring | [`balejosg/tiza`](https://github.com/balejosg/tiza) | `main` | 🟢 **MIT** `1,065 B` · `e5d43db441b9` |
+| Zero-device delivery | [`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform) | `main` | 🟢 **Apache-2.0** `11,287 B` · `c589d95090ce` |
+| Offline platform | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔵 `develop` | 🟢 **MIT** `1,097 B` · `3c056b34a476` |
+
+🟢 **Wiring:** the records tier stays as deployed and is spoken to over its API — **`i-educar` and `rosariosis` are GPL-2.0, so the AI tier runs as a separate process and the deliverable stays closeable.** 🟢 **`tiza` is the authoring bridge: a CLI and skill that publishes pages, tasks, quizzes and H5P activities into a virtual classroom, so generated material lands in the LMS instead of a document.** 🟢 **`rumi-platform` delivers over WhatsApp — the only component in this base that assumes no school device estate**, which is the difference between a pilot in a capital city and a deployment in a rural district. 🟢 Kolibri covers offline-first where connectivity fails. 🔵 Partner through UNESCO IESALC's Observatory (launched `2026-04`, ECLAC Santiago), Tecnológico de Monterrey, CENIA, Cetic.br or Ceibal — the `716` regulatory instruments across `23` countries make a local institutional partner a requirement, not a courtesy.
+
+### 🟢 `P6` — The fully permissive education stack: no copyleft anywhere *(`8`–`10` weeks)*
+
+🟢 **`ECL-2.0` plus Apache-2.0 plus MIT means a complete education platform can be assembled with no copyleft component at all** — and this pass added a third ECL platform to it.
+
+| Tier | Component | Branch | Grant |
+|---|---|---|---|
+| LMS | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `master` | 🟢 Apache-2.0 `10,982 B` · `6dbc5b605ed0` |
+| Collaboration / portfolio | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` · `af576e8b4d32` | 🟢 ECL-2.0 `11,120 B` · `0688f62d04f1` |
+| Lecture capture | [`opencast/opencast`](https://github.com/opencast/opencast) | 🔵 `develop` · `26fbc9363f07` | 🟢 ECL-2.0 `11,340 B` · `76a975068930` |
+| Scholarly publishing | [`anvc/scalar`](https://github.com/anvc/scalar) | `master` · `daf68e2cca8e` | 🟢 ECL-2.0 `11,193 B` · `11ce2365d157` 🔵 *restored `p785`* |
+| Tool hosting / LTI | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | `master` | 🟢 Apache-2.0 `10,273 B` · `73ba74dfaa52` |
+| Lesson authoring | [`oppia/oppia`](https://github.com/oppia/oppia) | 🔵 `develop` | 🟢 Apache-2.0 `11,358 B` · `cfc7749b96f6` |
+| Spaced practice | [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | `main` | 🟢 MIT `1,079 B` · `021bff58ad26` 🔵 *restored `p785`* |
+| Credentials vocabulary | [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | `master` · `9d7c5d220022` | 🟡 **EUPL-1.2** `13,865 B` · `6e5399ad2f45` |
+
+🔴 **One caution, stated rather than buried: the credentials vocabulary is EUPL-1.2, which IS copyleft.** 🟢 Keep it as a data model consumed over a boundary — a schema, not linked code — or check the EUPL compatibility list before combining it with anything else. 🟢 **`fsrs4anki-helper` is the permissive route to spaced practice; the Anki stack itself is AGPL-3.0 and must not enter a hosted deliverable.**
+
+### 🟢 `P7` — The grant gate, CORRECTED — the one-day check that would have caught all `16` *(1 day)*
+
+🔴 **The gate this base has been running is case-blind and grades on fingerprints. Both defects are fixed here.**
+
+```bash
+# 1. EXISTENCE — the only channel on this base that can assert it.
+#    The web page returns 403 for every address through this gateway (T835);
+#    api.github.com/repos/<owner>/<name> is denied outside session scope (T839).
+git ls-remote --symref "https://github.com/$SLUG" HEAD    # also yields the real branch
+
+# 2. GRANT — probe CASE VARIANTS, not six uppercase names (T842).
+for f in LICENSE LICENSE.md LICENSE.txt COPYING LICENCE COPYING.txt \
+         license license.md license.txt licence copying \
+         License License.md License.txt Licence; do
+  curl -fsS "https://raw.githubusercontent.com/$SLUG/HEAD/$f" && break
+done
+# frappe/lms -> license.txt   labmlai -> license   HandwritingRecognitionSystem -> License.md
+
+# 3. GRADE on the TITLE LINE. Never on a byte length, never on a hash (T843).
+#    ECL-2.0 sits 17 B from Apache-2.0; two DIFFERENT Apache files share 11,357 B.
+head -40 "$f" | grep -m1 -iE 'Educational Community License|Apache License|MIT License|\
+GNU (GENERAL|AFFERO|LESSER)|BSD|Mozilla|Creative Commons|European Union Public Licence'
+
+# 4. SIZE CHECK — a 200 is not a grant (T845).
+#    frappe/education's license.txt is 19 B: "License: GNU GPL V3".
+[ "$(wc -c <"$f")" -lt 400 ] && echo "DECLARATION, NOT A GRANT — escalate"
+
+# 5. TAMPER CHECK for substituted-holder families (T843).
+#    MIT body is invariant; only the holder line varies.
+DIFF=$(( $(wc -c <"$f") - $(grep -m1 -i copyright "$f" | wc -c) ))
+case $DIFF in 1037|1047|1104) echo "MIT body intact" ;;
+  *) echo "MIT claimed but body MODIFIED (DIFF=$DIFF) — read it" ;; esac
+```
+
+🟢 **Decision rule, per ASSET and not per repository:** `MIT`/`Apache-2.0`/`BSD`/`ECL-2.0` ship · `LGPL` links but is not forked · `GPL`/`AGPL`/`EUPL` stay behind an HTTP or data boundary · `CC-BY` ships with attribution · `CC-BY-SA` ships only into a ShareAlike deliverable · **`CC-BY-NC*` never ships** · no grant at `17` variants means exclusive copyright, which is the strictest outcome of all. 🔵 **A split grant is read per asset — `learning-commons-org/evaluators` carries three different answers in one repository.**
+
 ## 🆕 `2026-11-12` · `p784` — **Six recipes. `P1` is new and only became possible this pass: `ECL-2.0` plus Apache-2.0 means a FULLY PERMISSIVE education platform stack exists, with no copyleft anywhere in it.**
 
 🔵 **Every component below was probed by `git ls-remote --symref` and graded on its licence bytes this pass or the last. Branches are as measured, not assumed — several are not `main`.**

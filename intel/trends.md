@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p785` — **Eight trends. The load-bearing one is a measurement trend: this base's grant-absence instrument was case-blind against a case-sensitive channel for at least `20` passes, and the corrections it needed were already sitting in its own files. The second is that a high-star `NOASSERTION` in education usually means NOTHING, not Creative Commons.**
+
+### `T1` 🔴 **An absence is a property of the instrument until proved otherwise**
+
+🔴 **`raw.githubusercontent.com` is case-sensitive. This base's standing probe set is six uppercase filenames. `16` addresses carry a grant it structurally cannot see** — among them a `~67,600★` repository reported as "MIT unconfirmed", a `244★` repository published as the week's clearest `BLOCK`, and the European Commission's own learning-model repository. 🔴 **The base had already found the mechanism twice — `p765` on an uppercase EXTENSION, `p276` by enumerating trees — and the fix never entered the instrument, only the record.** 🟢 **Trend, stated: the failure mode of a mature knowledge base is not ignorance, it is corrections that never reach the probe.** 🔵 Measured: `3` of the first `8` addresses re-probed flipped (`37.5%`).
+
+### `T2` 🔴 **In education, a high-star `NOASSERTION` means NOTHING AT ALL more often than it means Creative Commons**
+
+🔴 **`T838` predicted a CC-family or split grant behind `NOASSERTION` above `500★`. Tested on `6` instances across `17` case variants: `1` confirms (`CC-BY-NC-SA-4.0` at `4,025★`), `5` are TRUE absences** — `8,030★`, `4,634★`, `2,948★`, `2,892★` and `128★`, every one of them a courseware or tutorial COLLECTION. 🟢 **Refinement: `T838` holds for assets published AS content — skill packs, books, corpora — and fails for collections, which are simply never granted.** 🔴 **The direction matters commercially and it is the pessimistic one: "probably CC" is reusable with conditions; "probably nothing" is exclusive copyright and is not reusable at all.** 🔵 Running total `5`/`11`.
+
+### `T3` 🟢 **The unit of delivery is still a SKILL PACK, and the new entrants are LOCAL-FIRST and EDITABLE**
+
+🟢 **Confirmed for a fourth pass, with a sharper property.** This window's new agents name their differentiator in the description: `SirhanMacx/Claw-ED` (`65★`, MIT) ships *"local-first"* and *"editable lesson drafts"*; `Sion612/rubrictrail` (`128★`, Apache-2.0) ships *"local-first, evidence-linked"*; `OrlandContreras/rag-agent-crew` ships *"`100%` local"*. 🔵 **`local-first` + `editable` + `evidence-linked` is the procurement vocabulary of this vertical now** — it answers the data-residency objection, the teacher-autonomy objection and the audit objection in one phrase, and it is the direct product consequence of `T4`.
+
+### `T4` 🟢 **Purpose-built beats general-purpose, and the OECD now says so with evidence**
+
+🟢 **The OECD *Digital Education Outlook 2026* recommends purpose-built educational AI over general-purpose chatbots on a measured basis: general tools improve task PERFORMANCE but not necessarily LEARNING, and the advantage disappears — sometimes reverses — in exams once access is removed.** 🟢 It names the target architecture as *digital pedagogical agents* that question, nudge and switch strategy in dialogue, and requires **teacher control over AI behaviour including acceptable error levels**. 🔵 **This is the trend that turns a studio pitch into an acceptance criterion: "configurable error tolerance, teacher-visible interaction logs" is now citable to an institutional source rather than asserted.**
+
+### `T5` 🔴 **The interop-standards layer is the least durable layer in this entire base, and now it is measured on a complete sweep**
+
+🔴 **`14` of the `142` genuine dead addresses are Caliper, QTI, Open Badges or LTI reference libraries — the single largest cluster, from a complete `6,196`-address probe.** `6` dead Caliper implementations across four owner spellings, `3` dead QTI, `3` dead Open Badges, `1` dead LTI, plus `1EdTech/spec-central`. 🟢 **Consequence already applied in the recipes: integrate against a PLATFORM'S OWN web-service API, never against a standards-body reference library.** 🔵 **The one durable interop asset found this pass is the European Commission's own European Learning Model (EUPL-1.2) — a data MODEL rather than an implementation, which is why it survives.**
+
+### `T6` 🔴 **Two APAC education-touching AI laws are now IN FORCE, and both demand a pre-deployment dossier**
+
+🔴 **Korea's AI Basic Act (in force `2026-01-22`) classifies education as high-impact. Vietnam's AI law (effective `2026-03-01`) requires high-risk systems — education named — to be REGISTERED in a National AI Database before deployment.** 🟡 Australia's TEQSA requires **every** higher-education provider to file an institutional action plan on generative-AI risk; China carries labelling duties and `¥50M` penalties. 🔵 **The trend is not "regulation is coming" — it is that the artefact being regulated is a DOCUMENT about the system, not the system.** 🟢 Whoever can produce provenance, data lineage, oversight design and an error-rate statement wins the engagement, and none of that requires a frontier model.
+
+### `T7` 🟡 **"LATAM is thin" is neither an artefact nor true: in-language querying multiplies the COUNT, not the CEILING**
+
+🔴 **`p784` replaced `T837` with "LATAM was hidden by query LANGUAGE". Swept properly this pass, that is BOUNDED.** 🟢 In-language populations are two orders of magnitude larger than the English sweeps suggested (`gestão escolar` `2,243`; `gestión escolar` `1,637`). 🔴 **But the in-language star ceiling is `158★`, and for AI agents specifically it is `8★`.** 🔵 **`portabilis/i-educar` at `725★` is an outlier, not evidence of a hidden population at scale.** 🟢 **Restated: LATAM supply is abundant, permissive and pre-production. That is a partnering and placement story, not a component-reuse story** — and it is a more useful thing to tell a client than either of the two previous versions.
+
+### `T8` 🔴 **A knowledge base's keyword vocabulary collides with its subject vocabulary, and `T840` bites its own detector**
+
+🔴 **This pass's first extractor excluded `19` real addresses because its `T840` diagnostic-context test matched the word *"diagnostic"* inside a repository NAME** (`SenmuuuuW/dsh-diagnostic-tutor`). 🟢 Fixed by stripping the candidate address's own text before testing its context. 🔴 **`T841`'s word-sense contamination reproduced on a new term: `gcse` returns `daviddengcn/gcse` at `272★` — a Go search engine.** 🔵 **Stated: in a base that documents its own defects in prose, the defect vocabulary and the domain vocabulary are the same words, so no keyword rule can separate them. The address's own text must be excluded from its own context test** — and that is a general rule for any self-documenting corpus, not a quirk of this one.
+
+### 🟢 New theorems established this pass
+
+| # | Statement |
+|---|---|
+| 🔴 **`T842`** | **An absence measured over a case-variant filename set is not an absence.** `raw.githubusercontent.com` distinguishes `LICENSE.txt` from `license.txt`; a six-name uppercase probe missed `16` grants in this base, `7` of them permissive and one `CC-BY-NC` at `465★`. 🔴 The defect cuts both ways: it suppresses usable supply AND hides barred assets behind "unknown" |
+| 🟢 **`T843`** | **Licence families split by whether the holder is SUBSTITUTED into the body.** For MIT/BSD/ISC no canonical hash can exist, but `total − holder_line` is an exact invariant: `1037` for `MIT License`, `1047` for `The MIT License (MIT)`, `1104` for Microsoft's template — `23`/`23`, and the constant PREDICTED the title variant on a held-out sample. 🔴 For Apache/GPL/AGPL/ECL the body is stable but whitespace alone puts two different hashes at ONE length (`11,357 B` = `c71d239df917` **or** `58d1e17ffe51`, differing only in whether the stray newline is leading or trailing). 🟢 **The pair (length, hash) identifies a FILE; the title line identifies the FAMILY; only the title line is a grade** |
+| 🟢 **`T844`** | **The governance deficit is the most reproducible finding in this vertical and it is the sales motion.** `86%` of students use AI vs `~25%` of faculty reporting an institutional policy; LATAM `87%` adoption vs `26%` with a framework and `55%` with no budget; `<10%` with guidelines AND capacity. 🔵 Adoption is already won — the institution cannot EVIDENCE that its use is safe, lawful or sound |
+| 🔴 **`T845`** | **A grant file can be present, found, and still not be a grant.** `frappe/education`'s `license.txt` is **`19 B`**: the entire file is `License: GNU GPL V3`. 🔴 HTTP `200` at a licence filename is necessary and not sufficient; a grade requires the file to contain operative terms, which `19 B` cannot |
+| 🔴 **`ECL-2.0` is not an education signal** | `408` repositories carry it. The top of the distribution is the Apereo lineage (`sakai`, `opencast`, `oaeproject/*`, `sakaicontrib/*`, `anvc/scalar`) — a deliberate choice, since ECL narrows Apache's patent grant to each contributor's own work. 🔴 **The long tail is university coursework choosing a licence by its NAME:** number-plate recognition, a MOSFET model, a Hungarian geospatial framework, a snake game from an OOP lab. 🔵 Measured span `9,899`–`12,413 B`, with canonical Apache-2.0 sitting inside it |
+
+### 🔴 Declared gaps — searched and not found, which is not the same as absent
+
+🔴 **No education-specific AI statute found for Canada, Türkiye, Israel, Africa or India.** 🔴 **No primary-source confirmation of any EU date: the `europa.eu` domain family is denied at this gateway on both channels, and `p783-D` should be STRUCK from the queue rather than carried.** 🔴 **No EMEA-specific hard adoption rate for European schools.** 🔴 **No LATAM-origin education agent above `8★`.** 🔴 **No dominant open-source education agent EVALUATION or observability project — carried forward from `p784` and still not found.** 🔴 **`jecampagne/cours_mallat_cdf` remains the one live candidate for a claim-channel over-report: `ECL-2.0` asserted, no grant file at `17` case variants on `4` refs.**
+
 ## 🆕 `2026-11-12` · `p784` — **Eight trends. The load-bearing one is that education's unit of AI delivery has become a PROSE SKILL PACK — which is why the vertical's licensing is structurally unlike software's, and why a software-licence filter mis-grades it.**
 
 ### `T1` 🔴 **The asset is prose, so the grant is a content licence — and the claim channel cannot say so**

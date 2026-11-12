@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p785` — `2026-11-12` — **`8` rows REMOVED from the unusable class, `1` row's REASON corrected, and `2` platforms added. The unusable class was overstated because the probe that built it was case-blind (`T842`).**
+
+🔴 **This file's absences were measured with a six-name UPPERCASE probe against `raw.githubusercontent.com`, which is CASE-SENSITIVE.** 🟢 Re-probed across `17` case variants this pass.
+
+### 🟢 REMOVED from the unusable class — these are granted, and `7` of the `8` are permissive
+
+| Address | Grant found at | Bytes · `sha256₁₂` | Family, on the title line | What this file said |
+|---|---|---|---|---|
+| 🟢 [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | 🔵 `license` | `1,082 B` · `22c7cae23a2b` | 🟢 **MIT** | *"no grant file at HEAD at any of the six"* — `~67,600★` |
+| 🟢 [`anvc/scalar`](https://github.com/anvc/scalar) | 🔵 `license.txt` | `11,193 B` · `11ce2365d157` | 🟢 **ECL-2.0** | *"`BLOCK — NO GRANT`. No payload at `5` probes"* — `244★` |
+| 🟢 [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) | 🔵 `license` | `1,070 B` · `99a909b026f0` | 🟢 **MIT** | *"no grant"* |
+| 🟢 [`LearningLocker/xapi-validation`](https://github.com/LearningLocker/xapi-validation) | 🔵 `license` | `1,070 B` · `99a909b026f0` | 🟢 **MIT** | *"no grant"* |
+| 🟢 [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | 🔵 `License` | `1,079 B` · `021bff58ad26` | 🟢 **MIT** | *"NO GRANT in `6` filenames"* |
+| 🟢 [`kitschpatrol/yanki-connect`](https://github.com/kitschpatrol/yanki-connect) | 🔵 `license.txt` | `1,071 B` · `1d5701eb0350` | 🟢 **MIT** | *"`7` root grant paths probed, all `7` → `404`"* (`T261`) |
+| 🟢 [`LIST-LUXEMBOURG/eagle-aig`](https://github.com/LIST-LUXEMBOURG/eagle-aig) | 🔵 `license.txt` | `11,358 B` · `cfc7749b96f6` | 🟢 **Apache-2.0** | *"grant carried in the `README`… no licence file anywhere at `HEAD`"* — 🔴 the "fifth grant-location mechanism" was an artefact |
+| 🟡 [`kstateome/canvas-api`](https://github.com/kstateome/canvas-api) | 🔵 `License.txt` | `7,651 B` · `da7eabb7bafd` | 🟡 **LGPL-3.0** — linkable | *"declared in `pom.xml`; no `LICENSE` file"* |
+| 🟡 [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | 🔵 `license` | `13,865 B` · `6e5399ad2f45` | 🟡 **EUPL-1.2** | *"no grant at any of the ten probed addresses"* |
+| 🟡 [`frappe/lms`](https://github.com/frappe/lms) | 🔵 `license.txt` | `33,893 B` · `db1a87ba81e8` | 🔴 **AGPL-3.0** — still boundary-only | *"no grant file at any of six names"* |
+| 🟡 [`polimediaupv/paella`](https://github.com/polimediaupv/paella) | 🔵 `license.txt` | `9,915 B` · `15efd2f640ed` | 🟢 **ECL-2.0** | 🔴 **This pass's OWN draft called it a claim-channel over-report. The draft was wrong and was deleted** |
+
+### 🟡 REASON corrected — still barred, but not for the stated reason
+
+| Address | ★ | This file said | Measured this pass |
+|---|---|---|---|
+| 🔴 [`0x454447415244/HandwritingRecognitionSystem`](https://github.com/0x454447415244/HandwritingRecognitionSystem) | `465★` | 🔴 *"No grant at **40 probes**. ⛔ **UNGRANTED** → exclusive copyright. The most-starred ungranted row in this KB"* | 🔴 **`License.md`, `14,831 B` · `34937a987102` — `CC-BY-NC-4.0`.** 🟡 **Still barred from a commercial deliverable; but it IS granted, and non-commercial reuse is permitted where exclusive copyright would forbid it** |
+| 🔴 [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | `0★` | 🔴 *"NO GRANT — `17` filenames probed"* | 🔴 **`license.txt`, `39,890 B` · `cd7a49230f22` — a COMPOSITE titled *"2. nextSIS GNU General Public License Version 3"*, `4,741 B` above canonical GPL-3.0. Legal review, not a grade** |
+| 🔴 [`frappe/education`](https://github.com/frappe/education) | — | Listed in a `NIL` sweep | 🔴 **`license.txt` exists and is `19 B` · `1fcecf395312`: the whole file is `License: GNU GPL V3`.** 🔴 **`T845` — found, and still not a grant** |
+
+### 🔴 ADDED to the unusable class — measured across `17` case variants, so these are real
+
+| Address | Measured | Verdict |
+|---|---|---|
+| 🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | ALIVE `master` · 🔴 no grant at `17` case variants | 🔴 **A named SIS platform in this vertical, ungranted at `HEAD`** |
+| 🔴 [`formalms/formalms`](https://github.com/formalms/formalms) | ALIVE `master` · 🔴 no grant at `17` case variants | 🔴 **A named LMS platform in this vertical, ungranted at `HEAD`** |
+| 🔴 [`TingsongYu/PyTorch_Tutorial`](https://github.com/TingsongYu/PyTorch_Tutorial) | `8,030★` · 🔴 no grant at `17` | 🔴 Exclusive copyright. 🔵 Refutes `T838` for courseware collections |
+| 🔴 [`TingsongYu/PyTorch-Tutorial-2nd`](https://github.com/TingsongYu/PyTorch-Tutorial-2nd) | `4,634★` · 🔴 no grant at `17` | 🔴 Exclusive copyright |
+| 🔴 [`MARKTECHPOST-AI-MEDIA-INC/AI-Agents-Projects-Tutorials`](https://github.com/MARKTECHPOST-AI-MEDIA-INC/AI-Agents-Projects-Tutorials) | `2,948★` · 🔴 no grant at `17` | 🔴 Exclusive copyright |
+| 🔴 [`Machine-Learning-Tokyo/Interactive_Tools`](https://github.com/Machine-Learning-Tokyo/Interactive_Tools) | `2,892★` · 🔴 no grant at `17` | 🔴 Exclusive copyright |
+| 🔴 [`TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials`](https://github.com/TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials) | `4,025★` · `LICENSE` `20,850 B` · `e66c269d4819` | 🔴 **`CC-BY-NC-SA-4.0` — barred.** 🟢 The one instance that CONFIRMS `T838` this pass |
+| 🔴 [`FreedomIntelligence/Awesome-Rubrics`](https://github.com/FreedomIntelligence/Awesome-Rubrics) | `128★` · 🔴 no grant at `17` | 🔴 Exclusive copyright |
+| 🔴 [`jecampagne/cours_mallat_cdf`](https://github.com/jecampagne/cours_mallat_cdf) | `40★` · 🔴 no grant at `17` variants on `4` refs, **claim channel asserts `ECL-2.0`** | 🔴 **The one live candidate for a claim-channel over-report** → `p785-C` |
+
+🔴 **Still unusable, now re-measured on a probe that can see lowercase:** [`Nutlope/llamatutor`](https://github.com/Nutlope/llamatutor) `2,053★`, [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) `497★`, [`flyboat403/k12-skills`](https://github.com/flyboat403/k12-skills) `41★`, [`RadiantCrystal/SafeTutors`](https://github.com/RadiantCrystal/SafeTutors) `0★`. 🟢 **These four are confirmed absences rather than instrument artefacts.**
+
+🔴 **`ACTION p785-A` is owed and is the highest-value item for `p786`: this pass re-probed the `647` addresses that co-occur with a grant-less PHRASE, which is not the same as the unusable CLASS. This file alone holds `134` addresses and the `p764`–`p771` registers hold more. Every absence in them was stated over an uppercase-only probe.**
+
 ## 🆕 `p783` — `2026-11-12` — **the complete authoritative dead set: `109` addresses that do not resolve on `git ls-remote`, out of `5,848` real addresses the base publishes (`1.86%`). This REPLACES `p781`'s `378`/`6.5%`, which was inflated `3.4×`.**
 
 🔵 **Instrument: `git ls-remote --symref https://github.com/<slug> HEAD`, one call per address, EVERY address the published base displays (`5,910` distinct strings), `12`-way parallel, `~4` minutes.** 🔴 **`T824` — a `repo:` search `422` cannot assert deletion; it fires on live repositories. 🔴 `T835` — the HTML page returns HTTP `403` for every address through this session's proxy, including `HKUDS/DeepTutor`, so it cannot corroborate anything.** 🟢 **Controls: all `10` of `p782`'s settled verdicts reproduced EXACTLY; `6` planted negative controls failed as designed.**

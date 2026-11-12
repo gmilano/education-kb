@@ -4,6 +4,97 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p785` — **`ACTION p784-B` DISCHARGED on the authoritative channel: `142` genuine dead of `6,196` real published addresses — `2.29%`. And the foundational interop layer is confirmed as the worst-affected cluster in the base: `14` dead addresses, every one of them in Caliper, QTI, OpenBadges or LTI. Plus a working licence-grading instrument to replace the fingerprint superstition.**
+
+🟢 **Every address this base publishes was probed, one `git ls-remote --symref` call each, `14`-way parallel.** 🔵 `T824` established `ls-remote` as the only channel on this base that can assert existence; `T835` established that the web page returns `403` for every address through this gateway, so it cannot corroborate.
+
+### 🟢 `ACTION p784-B` — the amended extractor, and the number it produces
+
+| Step | Count | Note |
+|---|---|---|
+| 🟢 **Real published addresses** | **`6,196`** | After the amended rule below |
+| 🔴 Excluded — non-repository first segment | `68` | `repos/HKUDS`, `orgs/moodle`, `marketplace/new`, `topics/…`, `search/…` — `p783`'s own defect class, now excluded by rule, and the `api.` host stripped |
+| 🔴 Excluded — placeholder addresses | `13` | `OWNER/REPO`, `X/Y`, `O/R`, `GIT_USER_ID/GIT_REPO_ID`, `your-username/SafeTutors`, `yourusername/scholarmate` and `7` more |
+| 🔴 Excluded — occurring ONLY inside the base's own diagnostic prose (`T840`) | `12` | The re-planting class. 🔵 `T840` is CONFIRMED as a real mechanism and SIZED for the first time: `12` addresses, not the `10` `p783` reported as data |
+| 🟢 **ALIVE** | **`6,039`** | `97.71%` |
+| 🔴 **GENUINE dead** | **`142`** | **`2.29%`** |
+| 🟢 Planted negative controls in the dead set | `11` | 🟢 **All `11` FAILED as designed** — `gmilano/negative-control-…-p709`, `…-p714`, `nope-does-not-exist-99999`, `this-repo-does-not-exist-xyz123`, `moodle/zzz-does-not-exist-91`, `this-host-does-not-exist-xyz-control/nope`, `this-org-does-not-exist-zzz9/nope`, `zzz-not-a-real-org-xyz/nope-nope`, `UniTime/this-repo-does-not-exist-xyz123`, `Priyamakeshwari/TeachGPT` |
+| 🔴 **This pass's OWN remaining extraction artefacts** | `6` | 🔴 **Reported, not hidden:** owners `...` (`.../archive`, `.../blob`, `.../releases`, `.../tar.gz`) and `a/` — the regex still harvests a path fragment from a truncated URL. 🟢 Excluded from the rate; the rule needs one more clause |
+
+🔴 **And a defect in this pass's FIRST extractor run, caught by its own output:** the `T840` diagnostic-context test matched the word *"diagnostic"* **inside a repository NAME** (`SenmuuuuW/dsh-diagnostic-tutor`), wrongly excluding `19` real addresses and giving `6,372`. 🟢 **Fixed by stripping the candidate address's own text before testing its context; the corrected figure is the `6,196` above.** 🔵 **`T840` bites its own detector: a base whose diagnostic vocabulary overlaps its subject vocabulary cannot separate the two by keyword.**
+
+🟢 **Trajectory, stated honestly:** `p781` published `378`/`5,817` = `6.50%` (refuted, inflated `3.4×`) → `p783` `109`/`5,848` = `1.86%` → `p785` `142`/`6,196` = **`2.29%`**. 🔵 **The rise from `1.86%` to `2.29%` is NOT decay: it is `348` more addresses probed under a different exclusion rule. The two figures are not the same measurement and should not be read as a trend.**
+
+### 🔴 The worst-affected cluster is the one every integration recipe depends on
+
+🔴 **`14` of the `142` dead addresses are in the interop-standards layer, and nothing else comes close:**
+
+| Standard | Dead addresses measured this pass |
+|---|---|
+| 🔴 **Caliper** (learning analytics) | `1EdTech/caliper-java` · `1EdTech/caliper-js` · `1edtech/caliper-php` · `IMSGlobal/caliper-php` · `imsglobal/caliper-php` · `imsglobal/caliper-python` |
+| 🔴 **QTI** (assessment items) | `1EdTech/qti-central` · `LongsightGroup/qti3-core` · `stmath/go-qti` |
+| 🔴 **Open Badges** (credentials) | `openlearnbadges/openbadges-bakery` · `openlearnbadges/openbadges-validator` · `rollercoaster-dev/openbadges-monorepo` |
+| 🔴 **LTI** | `Tyru5/1EdTech-LTI-1-3` |
+| 🔴 **Spec hosting** | `1EdTech/spec-central` |
+
+🔵 **This confirms `p781`'s cluster finding and `p782`'s Caliper verdict on a complete sweep rather than a sample.** 🟢 **The operative consequence is already in the recipes: an integration recipe must speak to a PLATFORM'S OWN WEB SERVICE API, not to a standards-body reference library, because the reference libraries are the least durable addresses in this entire base.**
+
+### 🟢 `T843` — a WORKING licence-grading instrument, replacing the fingerprint superstition
+
+🔴 **`780`-plus passes of this base have recorded licence "fingerprints" (byte length + `sha256₁₂`) and repeatedly discovered they do not identify a licence.** 🟢 **The reason is now measured, and it splits licence families in two.**
+
+**🟢 Family A — SUBSTITUTED-HOLDER (MIT, BSD, ISC): the holder is written INTO the body, so no canonical hash can ever exist. But the body is an exact invariant.**
+
+🟢 **Measured on `23` independent MIT grants, across `2` disjoint samples, `5` countries and years `2019`–`2026`:**
+
+```
+total_bytes − length_of_copyright_line  =  TEMPLATE CONSTANT
+```
+
+| Template constant | Title line it predicts | Instances |
+|---|---|---|
+| 🟢 **`1037`** | `MIT License` | **`20` of `23`** |
+| 🟢 **`1047`** | `The MIT License (MIT)` | `2` — `labmlai/annotated_deep_learning_paper_implementations`, `utkukaynar/kolaykolej` |
+| 🟢 **`1104`** | Microsoft's MIT template | `1` — `microsoft/AI-For-Beginners`, and `microsoft/generative-ai-for-beginners` is byte-identical to it |
+
+🟢 **The constant is PREDICTIVE, not fitted.** The relation was derived on sample 1 (`9` grants, `DIFF` `1037` for all `9`); sample 2 (`9` fresh EMEA grants) returned `8` at `1037` and **one at `1047` — and that one, `utkukaynar/kolaykolej`, is titled `The MIT License (MIT)`, exactly as the constant predicted before the title was read.** 🔵 **It also DISSOLVES an anomaly this base carried: `ictexam-mcp`'s MIT at `1,114 B` is not a variant licence — its holder line is `76 B` long (`"Copyright (c) 2026 Tahir Almas, ICT Innovations (https://ictinnovations.com)"`). `1114 − 76 = 1037`.** 🟢 **Observed MIT totals span `1,055`–`1,141 B` (`86 B`) while the body never varies by one byte.**
+
+**🔴 Family B — PLACEHOLDER-HOLDER (Apache-2.0, GPL, AGPL, ECL): the holder stays a placeholder, so the body IS stable — but whitespace alone splits one text across two hashes at one length.**
+
+🟢 **`nwuzmedoutlook/university`'s `License` reproduces the canonical Apache-2.0 print `11,357 B` · `c71d239df917` EXACTLY, which CONFIRMS half of `p784`'s prediction.** 🔴 **The other half is REFUTED: `c71d239df917` is NOT the only print at `11,357 B`.**
+
+| Length | Hash | Leading blank line | Trailing newline | Instances measured this pass |
+|---|---|---|---|---|
+| `11,357 B` | `c71d239df917` | 🔴 no | 🟢 yes | `smolagents`, `numbas/Numbas`, `yetanalytics/lrsql`, `CENIA-DEV/multilingual-translator-app`, `nwuzmedoutlook/university` |
+| `11,357 B` | **`58d1e17ffe51`** | 🟢 **yes** | 🔴 **no** | `anthropics/k12-teacher-skills`, `UniTime/unitime`, `adlnet/ADL_LRS` |
+| `11,358 B` | `cfc7749b96f6` | 🟢 yes | 🟢 yes | `oppia/oppia`, `adlnet/CATAPULT`, `google/or-tools`, `bcgov/SIMS`, `JuneYaooo/lineage-skill`, `LIST-LUXEMBOURG/eagle-aig` |
+
+🟢 **`diff` on the two `11,357 B` files returns ONE difference: the first has a leading blank line and no final newline; the second has no leading blank line and a final newline. Both carry `201` `LF`. The licence TEXT is identical; `10,246` bytes differ only because everything is shifted one position.** 🟢 **Independently reproduced on a second, unrelated pair: `terracotta-education/terracotta` (`11,323 B`, no trailing newline) and `autolab/Autolab` (`11,324 B`, trailing newline) — Indiana University and CMU, same text, one newline apart.**
+
+🔴 **And the general model built from that is REFUTED, which is the honest result.** A rule of `11,356 + lead + trail` fits **`3` of `15`** Apache-2.0 files tested. The other `12` span **`11,323`–`11,525 B`** with `≥12` distinct hashes, because they vary the *appendix*, not the whitespace. 🔵 **First CRLF Apache-2.0 print on this base: `adlnet/xAPI-Spec`, `11,525 B` · `a1587287ff04`, `200` `CR` bytes.**
+
+🟢 **`T843`, stated: the pair (length, hash) identifies a FILE. The title line identifies the FAMILY. Only the title line is a grade.** 🟢 **For substituted-holder families, `total − holder line` is a valid second check and a tamper detector — a file claiming MIT whose `DIFF` is not in `{1037, 1047, 1104}` has a MODIFIED body.**
+
+### 🟢 The foundational shelf, re-graded this pass at a resolved branch and on the bytes
+
+| Repository | Branch | Grant file | Bytes · `sha256₁₂` | Family, on the title line | Role |
+|---|---|---|---|---|---|
+| 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔵 `develop` | `LICENSE` | `1,097 B` · `3c056b34a476` | 🟢 **MIT** | 🟢 **The only permissive full learning platform in this base.** Offline-first — the foundation for any low-connectivity deliverable |
+| 🟢 [`oppia/oppia`](https://github.com/oppia/oppia) | 🔵 `develop` | `LICENSE` | `11,358 B` · `cfc7749b96f6` | 🟢 **Apache-2.0** | Interactive lesson authoring with built-in pedagogy |
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `master` | `LICENSE` | `10,982 B` · `6dbc5b605ed0` | 🟢 **Apache-2.0** | 🟢 **The only permissively-granted full LMS on this shelf.** `T836`'s stripped-appendix variant |
+| 🟢 [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | `master` | `LICENSE` | `10,273 B` · `73ba74dfaa52` | 🟢 **Apache-2.0** | LTI tool hosting framework — the permissive route into any LMS |
+| 🟢 [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) | `master` | 🔵 `license` | `1,070 B` · `99a909b026f0` | 🟢 **MIT** | 🟢 **RESTORED THIS PASS.** An xAPI Learning Record Store service — the permissive replacement for the dead Caliper layer |
+| 🟢 [`LearningLocker/xapi-validation`](https://github.com/LearningLocker/xapi-validation) | `master` | 🔵 `license` | `1,070 B` · `99a909b026f0` | 🟢 **MIT** | 🟢 **RESTORED THIS PASS.** Statement validation, byte-identical grant |
+| 🟢 [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | `master` | `LICENSE` | `11,357 B` · `58d1e17ffe51` | 🟢 **Apache-2.0** | The reference xAPI LRS from ADL, who authored the spec |
+| 🟢 [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) | `master` | `LICENSE` | `11,358 B` · `cfc7749b96f6` | 🟢 **Apache-2.0** | cmi5 conformance tooling |
+| 🟢 [`anvc/scalar`](https://github.com/anvc/scalar) | `master` · `daf68e2cca8e` | 🔵 `license.txt` | `11,193 B` · `11ce2365d157` | 🟢 **ECL-2.0** | 🟢 **RESTORED THIS PASS** from `BLOCK`. Scholarly multimedia publishing, `244★` |
+| 🟡 [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | `master` · `9d7c5d220022` | 🔵 `license` | `13,865 B` · `6e5399ad2f45` | 🟡 **EUPL-1.2** | 🟢 **RESTORED THIS PASS.** The EU's own learning/credential data model — the authoritative EMEA interop vocabulary |
+| 🟡 [`kstateome/canvas-api`](https://github.com/kstateome/canvas-api) | `master` | 🔵 `License.txt` | `7,651 B` · `da7eabb7bafd` | 🟡 **LGPL-3.0** | 🟢 **RESTORED THIS PASS.** Java client for the Canvas REST API; LGPL links without infecting the caller |
+| 🟢 [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | `main` | 🔵 `License` | `1,079 B` · `021bff58ad26` | 🟢 **MIT** | 🟢 **RESTORED THIS PASS.** FSRS scheduling — the permissive spaced-practice engine, where the Anki stack is AGPL |
+| 🟢 [`kitschpatrol/yanki-connect`](https://github.com/kitschpatrol/yanki-connect) | `main` · `b7da500a71ee` | 🔵 `license.txt` | `1,071 B` · `1d5701eb0350` | 🟢 **MIT** | 🟢 **RESTORED THIS PASS.** Typed AnkiConnect client |
+| 🟢 [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | `master` · `db59a04a8a2c` | 🔵 `license` | `1,082 B` · `22c7cae23a2b` | 🟢 **MIT** | 🟢 **SETTLED THIS PASS at `~67,600★`.** Annotated reference implementations — the teaching corpus for ML internals |
+| 🟡 [`EducationalTestingService/rsmtool`](https://github.com/EducationalTestingService/rsmtool) | `main` | `LICENSE` | `11,358 B` · `e11d83966208` | 🟢 **Apache-2.0** | Automated scoring-model evaluation from ETS — the rubric-validation tier |
+
 ## 🆕 `2026-11-12` · `p784` — **`10` foundational repositories re-graded on the bytes, and a new fingerprint record: the GPL-3.0 canonical occupies a `35,147`–`35,149 B` BAND with three distinct hashes, one of which now reproduces across two unrelated repositories.**
 
 ### 🟢 Foundations — permissive, graded on the bytes this pass
