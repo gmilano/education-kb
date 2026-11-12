@@ -4,6 +4,117 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p779` — **`ACTION p778-B` closes `T801` at a known blast radius of `2`, `ACTION p778-C` finds `autogen`'s code grant, and the named gate `gate-refs` measures this base's own falsifiability for the first time. 🔴 `make hooks` tried FIRST and DENIED a TENTH consecutive session.**
+
+🔴 **`make hooks` was the first command of this pass and was DENIED — `[Code from External]`. `0` for `10`.** 🟢 **Not worked around.** No script held in this repository was copied out and run; all eight instruments were written from scratch and are specified in prose in [`compose/code/p779/README.md`](../compose/code/p779/README.md), per `T763`.
+
+🟢 **`4` rows `p778` published were reproduced byte-for-byte before any verdict was written this pass:** `sakai` `11,120 B` · `0688f62d04f1`, `opencast` `11,340 B` · `76a975068930`, `Ed-Fi-ODS` `10,172 B` · `59899c6091b5`, `rosariosis` `15,214 B` · `d954e14e5c75`, and `PageLM`'s non-OSS print `8,563 B` · `c834209c5f33`. 🟢 **Apache-2.0's canonical `11,358 B` was reproduced independently from `www.apache.org` itself**, not taken from this base’s own record.
+
+### 🟢 `p779-A` — `T801` is closed, and its blast radius was `2` rows, not an unknown number
+
+`p778` left this base unable to say how many of its `Apache-2.0` cells were really `ECL-2.0`. That number is now measured rather than feared.
+
+| Step | Measurement |
+|---|---|
+| Population | **`927`** unique repository slugs whose own table row grades them `Apache-2.0`, extracted across all `11` shelves |
+| In the suspect band | **`599`** of `927` ship a grant of `11.0`–`11.5 kB` — the band in which `ECL-2.0` and `Apache-2.0` are indistinguishable by length |
+| Byte-read | **`599` of `599`**, first `200` bytes each, title line classified ([`evidence/ecl-band-decision.2026-11-12-p779.tsv`](../evidence/ecl-band-decision.2026-11-12-p779.tsv)) |
+| Result | 🟢 **`597` genuinely `Apache-2.0` · `2` `ECL-2.0` · `0` `OTHER` · `0` `EMPTY`** |
+| The `2` | `sakaiproject/sakai` and `opencast/opencast` — **both already corrected at `p778`** |
+
+🟢 **So `T801` is CLOSED: no shelved row other than the two `p778` already fixed was wrong in patent scope.** The claim channel agrees from the other direction — of `8,507` census rows, exactly `12` carry `spdx_id` `ECL-2.0`, and **all `12` sit inside the `sakaiproject` and `opencast` organisations**. `9` of those `12` are not shelved at all.
+
+🟢 **One row promoted from unmeasured to measured.** `repos/trending.md` carried [`opencast/annotation-tool`](https://github.com/opencast/annotation-tool) as *"`ECL-2.0` family (unmeasured)"*. Measured now: `master` · `cc17e6a9ec08`, `LICENSE` `11,340 B` · `76a975068930` — **byte-identical to `opencast/opencast`'s print**. The ECL text is itself the organisation's template, which is `T800` showing up in the licence body rather than in the grant rate.
+
+### 🟢 `p779-B` — where `microsoft/autogen` actually grants its code (`ACTION p778-C`)
+
+This base cited `autogen` as `MIT` for many passes. `p778` found the root `LICENSE` is `CC-BY-4.0` and could not say where the code grant lived. It lives in `LICENSE-CODE`.
+
+| Path on `main` · `d07c667a3239` | Bytes · `sha256₁₂` | Terms |
+|---|---|---|
+| `LICENSE` | `18,650 B` · `7e7170e3cebf` | 🔴 **`CC-BY-4.0`** — opens *"Attribution 4.0 International"*, `"Creative Commons"` ×`18`, `"MIT License"` ×`0`. Reproduces `p778` |
+| `LICENSE-CODE` | `1,141 B` · `c2cfccb812fe` | 🟢 **`MIT`** — `"MIT License"` ×`1` |
+| `python/packages/{autogen-core,autogen-agentchat,autogen-ext,autogen-studio}/LICENSE-CODE` | each `1,141 B` · `c2cfccb812fe` | 🟢 **`MIT`, byte-identical to root** |
+| `python/samples/gitty/LICENSE` | `1,141 B` · `c2cfccb812fe` | 🟢 **`MIT`, byte-identical** |
+
+🟢 **`12` `LICENSE-CODE` paths exist in the tree and every one is the same blob.** Word-diffed against canonical `MIT` (SPDX, `1,078 B`): ratio `0.985`, **one** changed run, and the only differing tokens are `microsoft corporation` against SPDX's `<year> <copyright holders>` placeholder. 🟢 **Zero deontic operators differ.**
+
+🔵 **Verdict: the cell was right about the terms and wrong about the path.** `autogen`'s code is `MIT`. The grant must be cited as `LICENSE-CODE`, never as `LICENSE`, and a recipe that cites the root file is citing a documentation licence. `p778-C`'s bar — *"until that is measured, no recipe may cite autogen's licence"* — is met, and [`compose/patterns.md`](../compose/patterns.md) may cite it again.
+
+### 🔴 `p779-C` — `gate-refs`: this base's own licence cells are `98.0%` unfalsifiable, and the convention switched on at `p771`
+
+The named gate for `ACTION p778-A`, built from scratch, `7` controls, all passed. It re-grades nothing; it counts.
+
+| Shelf | Licence rows | …citing `branch` · `HEAD` | 🔴 Unfalsifiable | Absence grades | …with ref | 🔴 Unfalsifiable |
+|---|---|---|---|---|---|---|
+| `README.md` | `722` | `2` | `720` | `78` | `1` | `77` |
+| `agents/top.md` | `932` | `89` | `843` | `80` | `24` | `56` |
+| `agents/trending.md` | `4,635` | `25` | `4,610` | `201` | `2` | `199` |
+| `compose/patterns.md` | `721` | `25` | `696` | `5` | `0` | `5` |
+| `intel/market.md` | `172` | `0` | `172` | `13` | `0` | `13` |
+| `intel/measured-unusable.md` | `77` | `3` | `74` | `21` | `1` | `20` |
+| `intel/open-gaps.md` | `1,138` | `1` | `1,137` | `125` | `1` | `124` |
+| `intel/trends.md` | `330` | `0` | `330` | `10` | `0` | `10` |
+| `repos/foundations.md` | `1,036` | `70` | `966` | `27` | `3` | `24` |
+| `repos/trending.md` | `5,786` | `41` | `5,745` | `154` | `1` | `153` |
+| `verticals/solutions.md` | `536` | `39` | `497` | `31` | `4` | `27` |
+| **TOTAL** | **`16,085`** | **`295`** | 🔴 **`15,790`** | **`745`** | **`37`** | 🔴 **`708`** |
+
+🔴 **`16,498` of `16,830` licence-asserting rows — `98.0%` — cannot be re-read.** 🟢 **But the flat number would have been misread, so it was resolved by pass cohort, and the cohort view says the opposite of the headline:**
+
+| Cohort | Licence rows | …with ref | Share |
+|---|---|---|---|
+| 🟢 **`p770`–`p778`** | `606` | `286` | 🟢 **`47.2%`** |
+| `p750`–`p769` | `1,106` | `0` | 🔴 `0.0%` |
+| `p700`–`p749` | `792` | `0` | 🔴 `0.0%` |
+| `p600`–`p699` | `958` | `0` | 🔴 `0.0%` |
+| `p400`–`p599` | `2,860` | `3` | 🔴 `0.1%` |
+| `p1`–`p399` | `548` | `12` | 🔴 `2.2%` |
+| unattributed sections | `9,708` | `25` | 🔴 `0.3%` |
+
+🔵 **The convention switches on sharply at `p771`** — `p769` `0.0%`, `p770` `0.0%`, then `p771` `59.5%`, `p773` `35.8%`, `p774` `63.8%`, `p775` `58.9%`, `p776` `31.5%`, `p777` `65.0%`, `p778` `56.7%`. Over `386` passes seen (`p11` to `p778`).
+
+🟢 **So the convention is REAL, not aspirational** — it did not exist before `p771` and has held in every pass since. 🔴 **And it is only half-adopted even now: `320` of the `606` rows this base has written in its last nine passes still cannot be re-read.** That is the actionable number, and it is the one `p779-A` of the next actions is set against.
+
+### 🟢 The verified agent and service supply at `p779` — every row read on three channels
+
+Every row below carries `branch` · `HEAD` from `git ls-remote --symref`, and a grant read **at that branch** with its byte length and `sha256₁₂`. `21` rows, `0` padded. Full evidence: [`evidence/verified-rows.2026-11-12-p779.tsv`](../evidence/verified-rows.2026-11-12-p779.tsv).
+
+| Agent / service | Address | Branch · `HEAD` | Grant, graded on the bytes | Claim channel | Region | What it is |
+|---|---|---|---|---|---|---|
+| **DeepTutor** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main` · `60fb3bdfddb3` | 🟢 **Apache-2.0** `LICENSE` · `11,408 B` · `cd2f54e1e506` | Apache-2.0 · `58,353★` · pushed **`2026-11-07`** | APAC | 🟢 **The largest education-specific agent this base has ever shelved.** Lifelong personalised tutoring from HKU Data Science; ships desktop builds for macOS (Apple Silicon and Intel) and Windows, docs at `deeptutor.info`, README in `4` languages |
+| **smolagents** | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | `main` · `96f33faaf028` | 🟢 **Apache-2.0** `LICENSE` · `11,357 B` · `c71d239df917` | Apache-2.0 · `30,322★` · pushed `2026-11-10` | EMEA | Still the only EMEA-origin general agent framework in this base; code-writing agent loop |
+| **Oppia** | [`oppia/oppia`](https://github.com/oppia/oppia) | `develop` · `bbda308fd5db` | 🟢 **Apache-2.0** `LICENSE` · `11,358 B` · `cfc7749b96f6` | Apache-2.0 · `6,988★` · pushed `2026-11-11` | Global | Interactive lesson platform with explorations; **note the default branch is `develop`, not `main`** |
+| **OpenJudge** | [`agentscope-ai/openjudge`](https://github.com/agentscope-ai/openjudge) | `main` · `6d69c4637be8` | 🟢 **Apache-2.0** `LICENSE` · `11,357 B` · `c71d239df917` | Apache-2.0 · `1,092★` · pushed `2026-11-11` | APAC | 🟢 **Grader/rubric framework for AI applications.** README: ready-to-use graders, scenario-specific rubrics as graders, and conversion of grading results into reward signals — an assessment harness that happens to be general |
+| **k12-teacher-skills** | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | `main` · `31fd6dbb0c07` | 🟢 **Apache-2.0** `LICENSE` · `11,357 B` · `58d1e17ffe51` | Apache-2.0 · `625★` · pushed `2026-10-14` | North America | Teacher-facing skill definitions for K-12 |
+| **EduKTM** | [`bigdata-ustc/EduKTM`](https://github.com/bigdata-ustc/EduKTM) | `main` · `5625056855ff` | 🟢 **Apache-2.0** `LICENSE` · `11,367 B` · `59f13c04f0e6` | Apache-2.0 · `267★` · pushed `2024-01-02` | APAC | Knowledge-tracing model library (USTC). 🟡 Unpushed for `~2` years — a model zoo, not a live service |
+| **EduNLP** | [`bigdata-ustc/EduNLP`](https://github.com/bigdata-ustc/EduNLP) | `master` · `95cd9fc71a1b` | 🟢 **Apache-2.0** `LICENSE` · `11,346 B` · `8aaf2e630b1c` | Apache-2.0 · `64★` · pushed `2024-03-20` | APAC | Educational-text NLP toolkit (USTC). 🟡 Same staleness caveat |
+| **Coding-Tutor** | [`iwangjian/Coding-Tutor`](https://github.com/iwangjian/Coding-Tutor) | `main` · `d1fa15b50e09` | 🟢 **Apache-2.0** `LICENSE` · `11,357 B` · `c71d239df917` | Apache-2.0 · `92★` · pushed `2025-06-02` | APAC | Dialogue-based programming tutoring agent |
+| **MAIC-Core** | [`THU-MAIC/MAIC-Core`](https://github.com/THU-MAIC/MAIC-Core) | `main` · `4d7c92e46b17` | 🟢 **Apache-2.0** `LICENSE` · `11,357 B` · `c71d239df917` | Apache-2.0 · `42★` · pushed `2025-08-21` | APAC | Tsinghua AI-classroom core. 🟡 Stale |
+| **University curriculum enabling tool** | [`intel/university-curriculum-enabling-tool`](https://github.com/intel/university-curriculum-enabling-tool) | `main` · `d6288dc3c07c` | 🟢 **Apache-2.0** `LICENSE` · `11,356 B` · `43070e2d4e53` | Apache-2.0 · `14★` · pushed `2026-11-03` | North America | Vendor-published curriculum generation tooling |
+| **Education AI Suite** | [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | `main` · `3c0b7433480c` | 🟢 **Apache-2.0** `LICENSE` · `11,351 B` · `3f17cff4210f` | Apache-2.0 · `2★` · pushed `2026-11-11` | North America | Edge-deployed education AI pipeline; actively pushed |
+| **SIMS — Student Information Management System** | [`bcgov/SIMS`](https://github.com/bcgov/SIMS) | `main` · `3625777259a1` | 🟢 **Apache-2.0** `LICENSE` · `11,358 B` · `cfc7749b96f6` | Apache-2.0 · `29★` · pushed **`2026-11-12`** | North America | 🟢 **CANADA, and it closes a declared gap.** README: *"will replace existing provincial student financial aid information systems"* — a **money entitlement determined about students**, published permissively by the Province of British Columbia |
+| **EDUC-STUDENT-ADMIN** | [`bcgov/EDUC-STUDENT-ADMIN`](https://github.com/bcgov/EDUC-STUDENT-ADMIN) | `master` · `ff419803628b` | 🟢 **Apache-2.0** `LICENSE` · `11,357 B` · `c71d239df917` | Apache-2.0 · `6★` · pushed `2026-11-10` | North America | 🟢 **Canada.** British Columbia's student administration back office |
+| **DNP provisioning reference API** | [`Skolverket/dnp-ss12000-reference-api`](https://github.com/Skolverket/dnp-ss12000-reference-api) | `main` · `a3187df2baf0` | 🟢 **Apache-2.0** `LICENSE` · `11,340 B` · `ac2e2b321b48` | Apache-2.0 · `5★` · pushed `2026-01-26` | EMEA | 🟢 **A national education agency publishing the statutory plumbing.** README verbatim: a subset of **SIS SS 12000** *"with interpretations made by Statens Skolverk ('Skolverket'), the Swedish National Agency for Education"*, for provisioning the **digitala nationella prov** — and explicitly *"not intended to run in a production environment"* |
+| **PAS2-Public** | [`Utdanningsdirektoratet/PAS2-Public`](https://github.com/Utdanningsdirektoratet/PAS2-Public) | `master` · `489129c42c9d` | 🟢 **Apache-2.0** `LICENSE` · `11,325 B` · `cb5e8e7e5f4a` | Apache-2.0 · `8★` · pushed `2026-09-29` | EMEA | 🟢 **Norway's Directorate for Education and Training**, exam-administration surface |
+| **ComparIA** | [`betagouv/ComparIA`](https://github.com/betagouv/ComparIA) | `develop` · `3d616f23b28e` | 🟢 **Apache-2.0** `LICENSE` · `11,357 B` · `c71d239df917` | Apache-2.0 · `87★` · pushed `2026-11-11` | EMEA | 🟢 **France, `beta.gouv.fr`.** Blind model-comparison arena used for public AI literacy; **default branch `develop`** |
+| **egovframe-msa-edu** | [`eGovFramework/egovframe-msa-edu`](https://github.com/eGovFramework/egovframe-msa-edu) | `main` · `8767ea12eca3` | 🟢 **Apache-2.0** `LICENSE` · `11,357 B` · `c71d239df917` | Apache-2.0 · `166★` · pushed `2026-11-08` | APAC | 🟢 **South Korea's national eGovFramework**, microservice education reference |
+| **Multilingual translator (Rapa Nui)** | [`CENIA-DEV/multilingual-translator-app`](https://github.com/CENIA-DEV/multilingual-translator-app) | `main` · `2405fac50625` | 🟢 **Apache-2.0** `LICENSE` · `11,357 B` · `c71d239df917` | Apache-2.0 · `1★` · pushed `2026-11-04` | LATAM | 🟢 **The first LATAM-origin permissive AI service this base has placed, and it is from CENIA**, Chile's national AI centre — the very institution previously recorded as producing institutions and no code. Serves `CenIA/nllb-200-3.3B-spa-rap`: **Spanish → Rapa Nui**, an indigenous-language asset |
+| **newschool-backend** | [`NewSchoolApp/newschool-backend`](https://github.com/NewSchoolApp/newschool-backend) | `master` · `2b6dcd5d8854` | 🟢 **Apache-2.0** `LICENSE` · `11,357 B` · `c71d239df917` | Apache-2.0 · `119★` · pushed `2026-10-31` | LATAM | 🟢 **Brazil.** The most-starred LATAM-origin education backend in this base |
+| **seedling** | [`arvoreeducacao/seedling`](https://github.com/arvoreeducacao/seedling) | `main` · `238c481d2412` | 🟢 **Apache-2.0** `LICENSE` · `11,358 B` · `cfc7749b96f6` | Apache-2.0 · `1★` · pushed `2026-11-03` | LATAM | 🟢 **Brazil, Árvore Educação** — a commercial LATAM edtech publishing permissively |
+| **PageLM** | [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `main` · `e1de68833d1c` | 🔴 **NOT OPEN SOURCE** `LICENSE.md` · `8,563 B` · `c834209c5f33` | NOASSERTION · `2,065★` · pushed `2026-11-04` | APAC | 🔴 **Control row, reproduced.** A bespoke *"PageLM Community License"*. Retained as a **warning row** so nobody re-adds it as permissive |
+
+### 🔵 `T808` — a licence print's byte count is not a grade, demonstrated twice in this pass's own data
+
+Two pairs in the table above make the point better than an argument:
+
+| Pair | Measurement | What it proves |
+|---|---|---|
+| `Skolverket/dnp-ss12000-reference-api` `11,340 B` · `ac2e2b321b48` **vs** `opencast/opencast` `11,340 B` · `76a975068930` | **Identical byte length, different licences** — one Apache-2.0, one ECL-2.0 | Byte length cannot distinguish a licence, even between two different licence families |
+| `anthropics/k12-teacher-skills` `11,357 B` · `58d1e17ffe51` **vs** the `c71d239df917` cluster, also `11,357 B` | **Identical byte length, same licence, different bytes** | Byte length cannot even distinguish two prints of the same licence |
+
+🔵 **`T808` is therefore recorded: the falsifiable unit of a licence grade is the operative token body plus its `sha256₁₂`, never the byte length.** Byte length remains useful only as a **pre-filter** — which is exactly how `p779-A` used it, and why the band sweep was followed by `599` byte reads rather than ending at the lengths.
+
 ## 🆕 `p778` — **`ACTION p777-I`'s falsifier fires, and `T792` is REFUTED. 🔴 `make hooks` tried FIRST and DENIED a NINTH consecutive session, so all four instruments were written from scratch again. 🟢 The register `p777` designed to confirm its own law instead breaks it in BOTH directions, and the `829`-repository census (`ACTION p777-F`) names the variable that actually governs: not the subject of the determination, but the TEAM that created the repository.**
 
 **`829` repositories censused on the claim channel for `ACTION p777-F` · `8,507` claim rows captured over `152` owners in `152` calls · `56` case-aware grant names per candidate · `5` of `p777`'s published rows reproduced byte-for-byte before any verdict was published · `773`-row body-vs-claim overlap, `678` agree, `5` disagree, `0.7%` · `5` of `5` disagreements re-read on their own bytes and `5` of `5` resolve AGAINST this base's own shelves · `0` calls to `api.github.com/repos/*` for a verdict.**

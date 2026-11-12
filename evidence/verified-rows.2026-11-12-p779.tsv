@@ -1,0 +1,22 @@
+slug	spdx	stars	pushed	branch	HEAD	file	bytes	sha256_12	title
+bcgov/EDUC-STUDENT-ADMIN	Apache-2.0	6	2026-11-10	master	ff419803628b	LICENSE	11357	c71d239df917	Apache License Version 2.0, January 2004 http://www.apache.o
+bcgov/SIMS	Apache-2.0	29	2026-11-12	main	3625777259a1	LICENSE	11358	cfc7749b96f6	Apache License Version 2.0, January 2004 
+Skolverket/dnp-ss12000-reference-api	Apache-2.0	5	2026-01-26	main	a3187df2baf0	LICENSE	11340	ac2e2b321b48	Apache License Version 2.0, January 2004 http://www.apache.o
+Utdanningsdirektoratet/PAS2-Public	Apache-2.0	8	2026-09-29	master	489129c42c9d	LICENSE	11325	cb5e8e7e5f4a	Apache License Version 2.0, January 2004 http://www.apache.o
+CENIA-DEV/multilingual-translator-app	Apache-2.0	1	2026-11-04	main	2405fac50625	LICENSE	11357	c71d239df917	Apache License Version 2.0, January 2004 http://www.apache.o
+arvoreeducacao/seedling	Apache-2.0	1	2026-11-03	main	238c481d2412	LICENSE	11358	cfc7749b96f6	Apache License Version 2.0, January 2004 
+NewSchoolApp/newschool-backend	Apache-2.0	119	2026-10-31	master	2b6dcd5d8854	LICENSE	11357	c71d239df917	Apache License Version 2.0, January 2004 http://www.apache.o
+eGovFramework/egovframe-msa-edu	Apache-2.0	166	2026-11-08	main	8767ea12eca3	LICENSE	11357	c71d239df917	Apache License Version 2.0, January 2004 http://www.apache.o
+betagouv/ComparIA	Apache-2.0	87	2026-11-11	develop	3d616f23b28e	LICENSE	11357	c71d239df917	Apache License Version 2.0, January 2004 http://www.apache.o
+THU-MAIC/MAIC-Core	Apache-2.0	42	2025-08-21	main	4d7c92e46b17	LICENSE	11357	c71d239df917	Apache License Version 2.0, January 2004 http://www.apache.o
+agentscope-ai/openjudge	Apache-2.0	1092	2026-11-11	main	6d69c4637be8	LICENSE	11357	c71d239df917	Apache License Version 2.0, January 2004 http://www.apache.o
+HKUDS/DeepTutor	Apache-2.0	58353	2026-11-07	main	60fb3bdfddb3	LICENSE	11408	cd2f54e1e506	Apache License Version 2.0, January 2004 
+CaviraOSS/PageLM	NOASSERTION	2065	2026-11-04	main	e1de68833d1c	LICENSE.md	8563	c834209c5f33	# PageLM Community License **Copyright (c) 2025 nullure & re
+intel/university-curriculum-enabling-tool	Apache-2.0	14	2026-11-03	main	d6288dc3c07c	LICENSE	11356	43070e2d4e53	Apache License Version 2.0, January 2004 http://www.apache.o
+open-edge-platform/education-ai-suite	Apache-2.0	2	2026-11-11	main	3c0b7433480c	LICENSE	11351	3f17cff4210f	Apache License Version 2.0, January 2004 http://www.apache.o
+anthropics/k12-teacher-skills	Apache-2.0	625	2026-10-14	main	31fd6dbb0c07	LICENSE	11357	58d1e17ffe51	Apache License Version 2.0, January 2004 
+iwangjian/Coding-Tutor	Apache-2.0	92	2025-06-02	main	d1fa15b50e09	LICENSE	11357	c71d239df917	Apache License Version 2.0, January 2004 http://www.apache.o
+bigdata-ustc/EduNLP	Apache-2.0	64	2024-03-20	master	95cd9fc71a1b	LICENSE	11346	8aaf2e630b1c	Apache License Version 2.0, January 2004 http://www.apache.o
+bigdata-ustc/EduKTM	Apache-2.0	267	2024-01-02	main	5625056855ff	LICENSE	11367	59f13c04f0e6	Apache License Version 2.0, January 2004 http://www.apache.o
+huggingface/smolagents	Apache-2.0	30322	2026-11-10	main	96f33faaf028	LICENSE	11357	c71d239df917	Apache License Version 2.0, January 2004 http://www.apache.o
+oppia/oppia	Apache-2.0	6988	2026-11-11	develop	bbda308fd5db	LICENSE	11358	cfc7749b96f6	Apache License Version 2.0, January 2004 

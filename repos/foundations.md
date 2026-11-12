@@ -4,6 +4,73 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p779` — **`ACTION p778-D` discharged: `T802` predicted the cause of BOTH off-band prints and was RIGHT about both — and neither repository had altered anything. 🟢 `T808` replaces byte length with the operative token body as the unit of a grade.**
+
+🔴 **`make hooks` tried FIRST and DENIED — `0` for `10`.** 🟢 Not worked around; `worddiff.py` was written from scratch with `2` controls and is specified in [`compose/code/p779/README.md`](../compose/code/p779/README.md).
+
+### 🟢 The canonical references, re-measured this pass — and one channel lost
+
+| Canonical | Source | Bytes | State |
+|---|---|---|---|
+| **Apache-2.0** | `www.apache.org/licenses/LICENSE-2.0.txt` | **`11,358 B`** | 🟢 **In the allowlist, and it reproduces this base's figure independently.** The first time this base has read Apache's canonical print from Apache itself rather than carrying its own number forward |
+| **GPL-2.0** | `www.gnu.org/licenses/old-licenses/gpl-2.0.txt` | — | 🔴 **BLOCKED.** `connect_rejected` from the egress proxy — a NEW allowlist gap, not previously recorded |
+| **GPL-2.0** (substitute) | `spdx/license-list-data` `main` · `31846481de7e`, `text/GPL-2.0-only.txt` | `17,337 B` | 🟢 Used instead, and **named as a substitute** rather than passed off as the FSF print. It is `755 B` shorter than the `18,092 B` gnu.org print this base records |
+| **ECL-2.0** | same SPDX tree, `text/ECL-2.0.txt` | `11,111 B` | 🟢 **`ECL-2.0` is now IN this base's corpus** (`ACTION p778-B`), which it was not at `p778` |
+| **MIT** | same SPDX tree, `text/MIT.txt` | `1,078 B` | 🟢 Added, and used to grade `autogen`'s `LICENSE-CODE` |
+
+### 🟢 `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` — `T802` confirmed exactly, on one single run
+
+[`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS), `main` · `ef17fff8a214`, `LICENSE.txt` `10,172 B` · `59899c6091b5` — reproduces `p778`'s print byte-for-byte.
+
+| Measurement | Result |
+|---|---|
+| Token streams | `1,431` tokens against canonical Apache-2.0's `1,608` |
+| Changed runs | 🟢 **`1`** — a single insert |
+| Tokens only in Ed-Fi's print | 🟢 **`0`** |
+| Tokens only in canonical | `177`, and they are exactly *"APPENDIX: How to apply the Apache License to your work…"* |
+| Operative bodies with the named appendix stripped | 🟢 **`1,431` against `1,431`, TOKEN-IDENTICAL** |
+| Deontic operators differing in the operative terms | 🟢 **NONE** |
+
+🟢 **Verdict: unmodified, verbatim Apache-2.0 with the non-operative appendix omitted. The `1,186 B` deficit is fully explained and the grade stands.** 🔵 The deontic operators that *do* appear in the canonical-only run (`may`, `not`, `except`, `unless`, `required`, `warranties`) are inside the appendix's **sample NOTICE boilerplate** — instructions to a future licensor about what to paste into a file header, not terms binding anyone. A gate that counted them without reading them would have raised a false alarm on this base's most load-bearing permissive North American asset.
+
+### 🟢 `francoisjacquet/rosariosis` — `T802` confirmed again, plus three residuals and every one authentic
+
+🟡 **First, a ref finding worth its own line: `rosariosis`'s default branch is `mobile`, not `master`.** 🟢 The `LICENSE` is **byte-identical on both** (`15,214 B` · `d954e14e5c75` at `mobile` · `e4cd20a48bf1`), so the grade does not move — but a base that had cited this grade without a branch would not have known that, which is `T804` in one repository.
+
+| Measurement | Result |
+|---|---|
+| Token streams | `2,512` against SPDX canonical GPL-2.0's `2,931` |
+| Changed runs | `4` |
+| The large one | `423` tokens only in canonical — *"How to Apply These Terms to Your New Programs…"*, the named non-operative appendix |
+| Residual operative differences | `3`, totalling `6` tokens |
+| Deontic operators differing in the operative terms | 🟢 **NONE, in either direction** |
+
+🟢 **All three residuals are authentic-print artefacts, and two of them are in the FSF's own history rather than in this repository:**
+
+| Residual | `rosariosis` | SPDX canonical | What it actually is |
+|---|---|---|---|
+| 1 | `51 Franklin St, Fifth Floor` | `51 Franklin Street, Fifth Floor` | 🟢 The FSF's **postal address**, abbreviated. Not a term |
+| 2 | *"the GNU **Library** General Public License instead."* | *"the GNU **Lesser** General Public License instead."* | 🟢 **The original 1991 wording.** The FSF renamed the Library GPL to the Lesser GPL in 1999; `rosariosis` ships the **pre-rename print**. An older authentic text, not an altered one |
+| 3 | an extra `GNU GENERAL PUBLIC LICENSE` before section `0` | absent | 🟢 The centred **section title** above *"TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION"*. SPDX's print flattens it away — so here **`rosariosis` is the more complete print and the canonical is the lossy one** |
+
+🟢 **Verdict: authentic verbatim GPL-2.0 of a pre-1999 vintage, with the non-operative appendix omitted. `T802` is `2` for `2` on a prediction that could have failed, and `rosariosis` was never altered.**
+
+🔵 **`T808`, recorded from these two results together: byte length is a PRE-FILTER, not a grade.** The same canonical licence legitimately ships at several byte lengths — appendix present or omitted, vintage, trailing newline — and two different licences can ship at identical length (`Skolverket` and `opencast`, both `11,340 B`, see [`agents/top.md`](../agents/top.md)). The falsifiable unit is the **operative token body plus `sha256₁₂`, cited at a branch and `HEAD`.**
+
+### 🟢 The foundational supply, re-graded on three channels this pass
+
+`5` foundational repositories, every one byte-read at its resolved branch. `0` padded rows.
+
+| Foundation | Address | Branch · `HEAD` | Grant, graded on the bytes | Claim channel | Region | Why it is foundational |
+|---|---|---|---|---|---|---|
+| **Ed-Fi ODS/API** | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | `main` · `ef17fff8a214` | 🟢 **Apache-2.0** `LICENSE.txt` · `10,172 B` · `59899c6091b5` — appendix omitted, operative body token-identical to canonical | Apache-2.0 | North America | The K-12 data standard and operational data store US districts actually run. 🟢 **Grade re-confirmed this pass, not assumed** |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` · `af576e8b4d32` | 🟢 **ECL-2.0** `LICENSE` · `11,120 B` · `0688f62d04f1` | ECL-2.0 · `1,239★` · pushed `2026-11-11` | Global | University LMS. 🔴 **`ECL-2.0`, not Apache-2.0** — Apache terms with the section-3 patent grant narrowed to the contribution. Re-read this pass |
+| **Opencast** | [`opencast/opencast`](https://github.com/opencast/opencast) | `master` (claim channel `ECL-2.0`, `511★`) | 🟢 **ECL-2.0** `LICENSE` · `11,340 B` · `76a975068930` | ECL-2.0 · pushed `2026-11-11` | EMEA | Lecture capture and video. Same `ECL-2.0` correction |
+| **Oppia** | [`oppia/oppia`](https://github.com/oppia/oppia) | `develop` · `bbda308fd5db` | 🟢 **Apache-2.0** `LICENSE` · `11,358 B` · `cfc7749b96f6` | Apache-2.0 · `6,988★` · pushed `2026-11-11` | Global | Structured interactive lessons with a mature contributor process |
+| **RosarioSIS** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `mobile` · `e4cd20a48bf1` | 🟡 **GPL-2.0** `LICENSE` · `15,214 B` · `d954e14e5c75` — authentic pre-1999 vintage, appendix omitted | — | Global | A complete school SIS. 🟡 **Copyleft: usable as a deployed system, NOT as a base to build closed work on.** Default branch is `mobile` |
+
+🔵 **The permissive spine for a studio remains `Ed-Fi-ODS` (North America) and `Oppia` (Global); `sakai` and `opencast` are usable but their patent grant is narrower than Apache-2.0 and that difference is now stated rather than hidden; `rosariosis` is GPL and belongs in a deployment, not in a product.**
+
 ## 🆕 `p778` — **`ACTION p777-D` discharged: both GPL-2.0 "anomalies" explained, and NEITHER was an alteration. 🟢 `T794` closes over GPL-2.0.**
 
 🔵 **What `p777-D` asked.** Two GPL-2.0 prints carried unexplained lengths against the canonical `18,092 B` and **neither was vintage**, so `p777` could not account for them: `elgg/elgg` at `17,173 B` and `learnosity/learnosity-qti` at `18,264 B`. The instruction was to word-diff both against the canonical print and report **whether any deontic operator differs.**

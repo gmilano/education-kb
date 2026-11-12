@@ -4,6 +4,62 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p779` — **The vertical layer re-graded at its resolved branch, and a defect in THIS pass's own instrument caught by control: a licence absence measured against `8` filenames is not an absence**
+
+🔴 **`make hooks` tried FIRST and DENIED — `0` for `10`.** 🟢 Not worked around.
+
+### 🔴 The instrument defect, reported before the results it would have corrupted
+
+`verify_row.sh` probes a repository's grant by trying candidate filenames in order. It was written with **`8`** names (`LICENSE`, `LICENCE`, `LICENSE.txt`, `LICENSE.md`, `LICENCE.txt`, `COPYING`, `LICENSE-CODE`, `LICENSE-APACHE`). Run over the vertical platforms it reported **no grant at all** for `moodle/moodle`, `OS4ED/openSIS-Classic` and `frappe/education`.
+
+🔴 **Two of those three were wrong.** A second probe over `9` further names found:
+
+| Platform | What the `8`-name probe said | What is actually there |
+|---|---|---|
+| `moodle/moodle` | 🔴 no grant | 🟢 **`COPYING.txt` `35,147 B` · `8ceb4b9ee5ad`** — GPL-3.0. Moodle ships **no `LICENSE` file at all** |
+| `frappe/education` | 🔴 no grant | 🟢 **`license.txt` `19 B` · `1fcecf395312`** — lowercase |
+| `OS4ED/openSIS-Classic` | 🔴 no grant | 🟢 **Genuinely absent**, now across `17` filenames |
+
+🔵 **Recorded as a specification, because it generalises past this pass:** `p778` reports absences as *"NO-GRANT-AT-ROOT after `56` names"*, and that qualifier is load-bearing. **An absence is only as strong as the name list it was measured against, and the list must be stated with the verdict.** This pass's `8`-name list was too short, the control caught it, and the three rows were re-measured before anything was published. 🟢 No false absence shipped.
+
+### 🟢 The vertical platforms, graded on their bytes at their resolved branch
+
+`8` platforms, `0` padded rows. Every grant read at the branch named, not at `HEAD`.
+
+| Platform | Address | Branch · `HEAD` | Grant, graded on the bytes | Claim channel | Region | Can a studio build ON it? |
+|---|---|---|---|---|---|---|
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | `main` · `afbcc55fa1bd` | 🟡 **GPL-3.0** `COPYING.txt` · `35,147 B` · `8ceb4b9ee5ad` | GPL-3.0 · `7,604★` · pushed `2026-11-11` | Global | 🟡 **Deploy and extend via plugins, do not link into closed work.** The largest installed base in the vertical. Note: **no `LICENSE` file**, only `COPYING.txt` |
+| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` · `d3a86602dcf7` | 🔴 **AGPL-3.0** `LICENSE` · `35,136 B` · `e12d78569742` | 🔴 **absent from the claim channel** | Global | 🔴 **AGPL — network copyleft.** Running a modified Open edX as a service obliges you to offer the source to its users. The single most consequential licence fact in this vertical |
+| **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` · `1c9f0bb8013e` | 🔴 **AGPL-3.0** `LICENSE` · `34,520 B` · `57c8ff33c9c0` | AGPL-3.0 · `6,910★` · pushed `2026-11-10` | North America | 🔴 **AGPL, same constraint as Open edX.** The commercial product is SaaS; the open core is network-copyleft |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` · `af576e8b4d32` | 🟢 **ECL-2.0** `LICENSE` · `11,120 B` · `0688f62d04f1` | ECL-2.0 · `1,239★` · pushed `2026-11-11` | Global | 🟢 **Yes, with one caveat.** Permissive, but the section-3 patent grant is **narrowed to the contribution** versus Apache-2.0. The most build-on-able full LMS in the vertical |
+| **Opencast** | [`opencast/opencast`](https://github.com/opencast/opencast) | `master` | 🟢 **ECL-2.0** `LICENSE` · `11,340 B` · `76a975068930` | ECL-2.0 · `511★` · pushed `2026-11-11` | EMEA | 🟢 **Yes**, same `ECL-2.0` caveat. Lecture capture, transcoding and video delivery |
+| **Ed-Fi ODS/API** | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | `main` · `ef17fff8a214` | 🟢 **Apache-2.0** `LICENSE.txt` · `10,172 B` · `59899c6091b5` | Apache-2.0 | North America | 🟢 **Yes, and it is the cleanest grant in the vertical** — verified this pass to be verbatim Apache-2.0 with only the non-operative appendix omitted. The K-12 data layer, not an LMS |
+| **UniTime** | [`UniTime/unitime`](https://github.com/UniTime/unitime) | `master` · `3dcfafdf1132` | 🟢 **Apache-2.0** `LICENSE` · `11,357 B` · `58d1e17ffe51` | Apache-2.0 · `358★` · pushed `2026-11-11` | Global | 🟢 **Yes.** University course timetabling and exam scheduling — a hard constraint-solving problem that nobody should rewrite |
+| **RosarioSIS** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `mobile` · `e4cd20a48bf1` | 🟡 **GPL-2.0** `LICENSE` · `15,214 B` · `d954e14e5c75` | — | Global | 🟡 **Deploy, do not build closed work on it.** A complete school SIS. **Default branch is `mobile`** |
+
+### 🔴 The two incomplete grants, re-measured byte-for-byte for a third consecutive pass
+
+Neither has moved. Both are reproduced exactly, not carried forward on an old note.
+
+| Platform | Branch · `HEAD` | Grant print | State at `p779` |
+|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **`19.0`** · `46a5d7d40082` | `LICENSE` `8,241 B` · `528f84036800` | 🔴 **The broken promise is CONFIRMED VERBATIM.** The file states: *"Since the LGPL is a set of additional permissions on top of the GPL, the text of the GPL is included at the bottom as well."* 🔴 **It is not.** `178` lines, LGPLv3 only; the GPL text the LGPL depends on is absent. Claim channel: `NOASSERTION` · `910★`. 🟡 **Note the default branch is `19.0`, a version number, not `main`** |
+| [`frappe/education`](https://github.com/frappe/education) | `develop` · `61408d3da518` | `license.txt` **`19 B`** · `1fcecf395312` | 🔴 **Unchanged.** The entire grant is the literal string `License: GNU GPL V3` and nothing else — no terms, no version text, no copyright holder. Claim channel: `NOASSERTION` · `705★` |
+
+🔵 **What a studio does with these two.** Both are *intentions* to license rather than licences: a court would be asked to infer terms that the file does not contain. 🟢 **Neither is unusable — both are fixable with one pull request** adding the referenced text, and that PR is a cheap, high-goodwill opening contribution on a client engagement. 🔴 **Until it is merged, neither should sit under a deliverable whose licence compliance has to be asserted.**
+
+### 🔵 The licence map a studio actually needs, in one line per tier
+
+| Tier | Permissive and build-on-able | Copyleft — deploy only |
+|---|---|---|
+| **LMS / courseware** | 🟢 `sakai` (ECL-2.0), `oppia` (Apache-2.0) | 🔴 `edx-platform`, `canvas-lms` (**AGPL**), `moodle` (GPL-3.0) |
+| **Student data / SIS** | 🟢 `Ed-Fi-ODS` (Apache-2.0), `bcgov/SIMS` (Apache-2.0) | 🟡 `rosariosis` (GPL-2.0) |
+| **Scheduling** | 🟢 `UniTime` (Apache-2.0) | — |
+| **Video / capture** | 🟢 `opencast` (ECL-2.0) | — |
+| **ERP / administration** | — | 🔴 `openeducat_erp` (**incomplete grant**) |
+| **Assessment / grading** | 🟢 `agentscope-ai/openjudge` (Apache-2.0) | — |
+| **Tutoring** | 🟢 `HKUDS/DeepTutor` (Apache-2.0) | 🔴 `CaviraOSS/PageLM` (**not open source**) |
+
 ## 🆕 `p778` — **The vertical layer re-graded on its licences, and the education sector turns out to have its OWN licence**
 
 🔵 **`T801`, discovered this pass:** `ECL-2.0` — the **Educational Community License, Version 2.0** — is `Apache-2.0` with the **section 3 patent grant narrowed to the education community**, confirmed first-hand on the bytes of two shelved platforms. This base graded both as `Apache-2.0` for hundreds of passes. 🔴 **"Apache-2.0" was wrong in the one dimension a client engagement turns on: patent scope.**

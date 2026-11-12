@@ -4,6 +4,102 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p779` — **Five recipes, every component graded on its own bytes at a named branch and `HEAD` this pass**
+
+🔴 **`make hooks` tried FIRST and DENIED — `0` for `10`.** 🟢 Not worked around.
+
+🟢 **Licensing rule applied to every recipe below:** no component is cited unless its grant was read on the body channel **this pass**, at the branch named. 🔴 **AGPL components (`edx-platform`, `canvas-lms`) appear only where a recipe deploys them unmodified**, never as a base to build on. 🟢 **`autogen` may be cited again** now that `ACTION p778-C` has located its code grant — **as `LICENSE-CODE` (MIT), never as `LICENSE` (CC-BY-4.0)**.
+
+### 🟢 Recipe 1 — Tutoring pilot on a permissive stack, deployable in any region
+
+**Problem it solves.** A client wants an AI tutor pilot and the usual answer is a from-scratch tutor loop plus a six-week licensing review.
+
+| Role | Component | Branch · `HEAD` | Grant |
+|---|---|---|---|
+| Tutor agent | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main` · `60fb3bdfddb3` | 🟢 Apache-2.0 `11,408 B` · `cd2f54e1e506` |
+| Courseware / lesson structure | [`oppia/oppia`](https://github.com/oppia/oppia) | `develop` · `bbda308fd5db` | 🟢 Apache-2.0 `11,358 B` · `cfc7749b96f6` |
+| Answer grading + rubrics | [`agentscope-ai/openjudge`](https://github.com/agentscope-ai/openjudge) | `main` · `6d69c4637be8` | 🟢 Apache-2.0 `11,357 B` · `c71d239df917` |
+| Agent orchestration | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | `main` · `96f33faaf028` | 🟢 Apache-2.0 `11,357 B` · `c71d239df917` |
+
+**How to wire it.**
+1. Author the curriculum as Oppia **explorations** — they already carry state, hints and misconception branches, so the pedagogy is data rather than prompt text.
+2. Run `DeepTutor` as the learner-facing loop. Its desktop builds matter: a pilot in a low-connectivity school runs locally instead of per-seat in the cloud.
+3. Define each exercise's mark scheme as an **`openjudge` grader**, not as a prompt. `openjudge` generates scenario-specific rubrics and converts results to reward signals, so the same artefact serves marking *and* later tuning.
+4. Use `smolagents` only for tool-calling the tutor needs beyond dialogue (retrieval, calculator, code execution).
+
+🔵 **Why this ordering.** 🔴 **Do not start from an LMS.** Every mature LMS in this vertical is copyleft (`moodle` GPL-3.0, `edx-platform` and `canvas-lms` **AGPL**), so starting there puts network copyleft under the deliverable on day one. Starting from `oppia` + `DeepTutor` keeps the whole stack Apache-2.0 and defers the LMS to an integration.
+
+### 🟢 Recipe 2 — US K-12 district integration that survives the state-law patchwork
+
+**Problem it solves.** A US K-12 product must work across jurisdictions whose rules do not reconcile, and must not train on student data.
+
+| Role | Component | Branch · `HEAD` | Grant |
+|---|---|---|---|
+| Student data spine | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | `main` · `ef17fff8a214` | 🟢 Apache-2.0 `LICENSE.txt` `10,172 B` · `59899c6091b5` |
+| Ed-Fi data loading | [`edanalytics/earthmover`](https://github.com/edanalytics/earthmover) + [`edanalytics/lightbeam`](https://github.com/edanalytics/lightbeam) | — | 🟢 Apache-2.0, canonical prints in this pass's band sweep |
+| Standards vocabulary | [`CEDStandards/CEDS-Elements`](https://github.com/CEDStandards/CEDS-Elements) | — | 🟢 Apache-2.0, canonical |
+| Evaluation harness | [`agentscope-ai/openjudge`](https://github.com/agentscope-ai/openjudge) | `main` · `6d69c4637be8` | 🟢 Apache-2.0 |
+
+**How to wire it.**
+1. Land district data in **Ed-Fi ODS** and never in a bespoke schema — `earthmover` transforms source extracts to Ed-Fi shape, `lightbeam` posts them to the API.
+2. **Architect inference-only over student data.** California **AB 1159** prohibits using student data to train AI models; assume that is the national floor and confine training to synthetic or licensed corpora.
+3. Put every jurisdictional rule — grade-band restrictions, disclosure text, parental consent, retention — behind a **per-state policy configuration**, because trackers disagree on the counts (`134`/`31` states vs `118`/`32` vs *"at least `11`"*) but agree that divergence is permanent.
+4. Generate synthetic cohorts for testing with `synthetichealth/synthea`-style tooling (Apache-2.0, canonical print verified in the sweep) so no real student record leaves the district.
+
+🔵 **Ed-Fi's grant is now the cleanest in the vertical** — verified this pass as verbatim Apache-2.0 with only the non-operative appendix omitted — which is why it carries the integration rather than a bespoke model.
+
+### 🟢 Recipe 3 — Nordic public-sector engagement: conform to the standard, fill the production gap
+
+**Problem it solves.** A Nordic education authority has a published standard and a published reference implementation that is explicitly **not production-ready**. That gap is the engagement.
+
+| Role | Component | Branch · `HEAD` | Grant |
+|---|---|---|---|
+| Provisioning reference (Sweden) | [`Skolverket/dnp-ss12000-reference-api`](https://github.com/Skolverket/dnp-ss12000-reference-api) | `main` · `a3187df2baf0` | 🟢 Apache-2.0 `11,340 B` · `ac2e2b321b48` |
+| Exam administration (Norway) | [`Utdanningsdirektoratet/PAS2-Public`](https://github.com/Utdanningsdirektoratet/PAS2-Public) | `master` · `489129c42c9d` | 🟢 Apache-2.0 `11,325 B` · `cb5e8e7e5f4a` |
+| Identity / federation | [`apereo/cas`](https://github.com/apereo/cas) | — | 🟢 Apache-2.0, canonical print in the sweep |
+| Scheduling | [`UniTime/unitime`](https://github.com/UniTime/unitime) | `master` · `3dcfafdf1132` | 🟢 Apache-2.0 `11,357 B` · `58d1e17ffe51` |
+
+**How to wire it.**
+1. Treat **SIS SS 12000** as the contract. Skolverket's repository is the authority's own interpretation of it — conform to that, do not design a data model.
+2. Take the reference API's **pull-method** provisioning as the integration shape, then build what the README says is missing: *"not to be considered a finished product and is not intended to run in a production environment"* — hardening, observability, scale, operations.
+3. Federate with `apereo/cas`; schedule with `UniTime` rather than writing a timetabling solver.
+
+🔵 **The reusable insight, and it is `T805` from the other side:** a public authority that publishes a *reference* while keeping *production* elsewhere has told you exactly where the paid work is.
+
+### 🟢 Recipe 4 — Public-sector licence remediation as an opening contribution
+
+**Problem it solves.** A government education client's code has no licence, and the engagement stalls on what looks like a legal question.
+
+**What this pass measured.** Across `9` `DFE-Digital` repositories and **`40,486` commits**, there are **zero** licence deletions. Every granted repository shows exactly one additive event; every ungranted one shows none.
+
+**How to run it.**
+1. Clone the client's estate treeless (`git clone --no-checkout --filter=blob:none`) and run the licence-history test: current tree, first commit, and `git log --all --diff-filter=D` over `*LICENSE*`/`*LICENCE*`/`*COPYING*`.
+2. **If there are no deletions, the absence is an unfilled template and you can say so with evidence.** That converts a legal escalation into a delivery-team task.
+3. Fix it at the **scaffold**, not the leaves — [`DFE-Digital/rails-template`](https://github.com/DFE-Digital/rails-template) (`121` commits, no licence) stamps the absence into every repository created from it.
+4. Census the estate on the claim channel (`q='user:<owner>'`, `100` rows per call) and report grant rate **by repository-name family**, because that is where the variance lives (`myesf` `22`/`22` vs `cfs|fcs` `0`/`8`; `EsupPortail` `esup` `56.6%` vs `moodle` `0`/`3`).
+5. 🔵 **First check whether the organisation has an org-level policy** (`T806`): the Sunbird estate is `MIT` at ~`100%` across every family, and in that case there is nothing to remediate and nobody to ask.
+
+🟢 **Two concrete one-PR fixes available right now**, both verified byte-for-byte this pass: [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) (`19.0` · `46a5d7d40082`, `LICENSE` `8,241 B` · `528f84036800`) promises *"the text of the GPL is included at the bottom as well"* and omits it; [`frappe/education`](https://github.com/frappe/education) (`develop` · `61408d3da518`) ships a **`19`-byte** `license.txt` reading only `License: GNU GPL V3`.
+
+### 🟢 Recipe 5 — LATAM engagement: governance first, and an indigenous-language differentiator
+
+**Problem it solves.** LATAM's measured shortage is not tooling. Teacher adoption exceeds **`50%`** in Chile and Brazil while **only ~`10%`** of institutions have formal AI guidelines.
+
+| Role | Component | Branch · `HEAD` | Grant |
+|---|---|---|---|
+| Low-resource / indigenous language | [`CENIA-DEV/multilingual-translator-app`](https://github.com/CENIA-DEV/multilingual-translator-app) | `main` · `2405fac50625` | 🟢 Apache-2.0 `11,357 B` · `c71d239df917` |
+| Regional education backend | [`NewSchoolApp/newschool-backend`](https://github.com/NewSchoolApp/newschool-backend) | `master` · `2b6dcd5d8854` | 🟢 Apache-2.0 `11,357 B` · `c71d239df917` |
+| Evaluation / testing requirement | [`agentscope-ai/openjudge`](https://github.com/agentscope-ai/openjudge) | `main` · `6d69c4637be8` | 🟢 Apache-2.0 |
+| Tutor loop | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main` · `60fb3bdfddb3` | 🟢 Apache-2.0 |
+
+**How to wire it.**
+1. **Lead with governance, not a pilot.** Deliver an institutional AI policy, an acceptable-use framework and teacher training — the `>50%` / `~10%` gap is the brief.
+2. Stand up `openjudge` as the **evaluation harness** early. Brazil's **Bill 2397/2026** carries a testing requirement for AI in educational institutions; if it passes, every deployed system needs one, and having it already is the differentiator.
+3. For indigenous and low-resource language work, start from **CENIA's** `spa-rap` (Spanish → Rapa Nui) service rather than a general translation API, and partner with CENIA directly — it is Chile's national AI centre and a UNESCO partner on ethical AI in education, including **Latam-GPT**.
+4. Use `newschool-backend` as the regional reference for Portuguese-language education backends.
+
+🔵 **Why governance-first is the right order here and not elsewhere:** in North America and EMEA the constraint is a *rule* that already exists, so compliance is design work. In LATAM the rule mostly does not exist yet while usage already does — so the institution's own policy is the missing artefact, and writing it is both the immediate deliverable and the position from which the tooling work follows.
+
 ## 🆕 `p778` — **Four recipes, each wired from repositories this pass graded on their own bytes**
 
 🔵 Every component below carries its `branch · HEAD`, its grant as measured on the raw channel this pass, and the `sha256₁₂` of that grant. 🔴 **No component is named that was not graded.** Where a component is copyleft or ungranted, the recipe says what to do instead rather than omitting the problem.

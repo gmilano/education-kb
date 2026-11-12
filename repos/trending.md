@@ -4,6 +4,95 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p779` — **`T800` tested on two more estates and it SPLITS: one estate confirms it, one refutes it, and the restatement is sharper than the original. 🟢 And the FSM grant question is answered — a missing licence in this estate is a NON-EVENT.**
+
+🔴 **`make hooks` tried FIRST and DENIED — `0` for `10`.** 🟢 All instruments written from scratch; see [`compose/code/p779/README.md`](../compose/code/p779/README.md).
+
+### 🟢 `ACTION p778-E` — the second and third estates, censused the same way as `DFE-Digital`
+
+`T800` rested entirely on one ministry. It now rests on three estates, and they do not all agree. `267` repositories censused in `4` calls: [`evidence/estate-census.2026-11-12-p779.tsv`](../evidence/estate-census.2026-11-12-p779.tsv).
+
+| Estate | Repos | Licence distribution |
+|---|---|---|
+| `EsupPortail` (France, higher-ed consortium) | `132` | Apache-2.0, `NONE`, `GPL-3.0`, **`CECILL-2.1`** ×`6`, `LGPL-3.0`, `NOASSERTION` — 🔴 **heterogeneous** |
+| `project-sunbird` + `Sunbird-Ed` (India, national education stack) | `135` | 🟢 **`MIT`, almost to the exclusion of everything else** |
+| **Total** | **`267`** | `MIT` `124` · Apache-2.0 `59` · `NONE` `56` · `NOASSERTION` `14` · `GPL-3.0` `6` · `CECILL-2.1` `6` · `LGPL-3.0` `1` · `GPL-2.0` `1` |
+
+### 🔴 `T800`'s own named test — "does grant rate cluster by name family rather than subject?" — gets opposite answers in the two estates
+
+| Estate | Name family | Granted | Rate | Licences in the family |
+|---|---|---|---|---|
+| 🟢 **Sunbird** | `sunbird-*` (project-sunbird) | `47`/`47` | **`100.0%`** | `MIT` only |
+| 🟢 Sunbird | `sb-*` | `13`/`13` | **`100.0%`** | `MIT` only |
+| 🟢 Sunbird | `cordova-*` (both orgs) | `15`/`15` | **`100.0%`** | `MIT`, Apache-2.0 |
+| 🟢 Sunbird | `sunbirded-*` | `6`/`6` | **`100.0%`** | `MIT` only |
+| 🟢 Sunbird | `ml-*` | `4`/`4` | **`100.0%`** | `MIT` only |
+| 🟡 Sunbird | `sunbird-*` (Sunbird-Ed) | `11`/`13` | `84.6%` | `MIT`, `NONE` |
+| 🔴 **EsupPortail** | `esup-*` | `56`/`99` | `56.6%` | Apache-2.0, CECILL-2.1, GPL-3.0, LGPL-3.0, NOASSERTION, NONE |
+| 🔴 EsupPortail | `cas-*` | `2`/`5` | `40.0%` | Apache-2.0, NONE |
+| 🔴 EsupPortail | `prolongationent-*` | `1`/`4` | `25.0%` | Apache-2.0, NONE |
+| 🔴 EsupPortail | `moodle-*` | `0`/`3` | **`0.0%`** | NONE only |
+
+🔴 **In the Sunbird estate, name family predicts NOTHING: every family is at or near `100%` and all of it is `MIT`.** 🟢 **In `EsupPortail`, name family predicts strongly** — `0%` to `56.6%` across four families, exactly the `DFE-Digital` shape (`myesf` `22`/`22` against `cfs|fcs` `0`/`8`).
+
+🟢 **Controls on the cross-tab, so the family signal is not an artefact:** grant rate against **language** is flat and uninformative (`50%`–`100%` with no clean split across `13` languages ≥`3` repos); against **archived** it is `65.2%` (`30`/`46`) versus `75.6%` (`167`/`221`) — a mild gradient, not a mechanism.
+
+### 🔵 `T806` — `T800` RESTATED, not refuted
+
+🔵 **`T806`: a public-sector estate's licence is set by the smallest unit that actually HAS a publishing policy — and that unit is the ORGANISATION in some estates and the DELIVERY TEAM in others.**
+
+- Where the organisation has a policy, it overrides everything beneath it: **Sunbird is `MIT` in every family**, and family membership carries no information.
+- Where it does not, the decision falls to whoever scaffolded the repository: **`DFE-Digital` and `EsupPortail` both vary sharply by family**, and `EsupPortail` varies by licence *family* too.
+
+🟢 **So repository-name family is a PROXY for the publishing unit, never the cause.** `T800`'s wording — *"the licence is the team's template"* — was true in the one estate it was measured in and is **local to estates without an org-level policy**. 🔵 **Operationally this is the more useful form: before asking a public-sector client about licensing, measure whether their estate has an org-level policy, because that determines whether the conversation is with the department or with one delivery team.**
+
+### 🟢 `ACTION p778-H` — the FSM grant is an UNFILLED TEMPLATE, not a deliberate withholding, and the proof is in the history
+
+`p778-H` asked for the difference between a policy and an oversight. The current tree cannot tell them apart; the commit history can. `9` repositories cloned treeless, `40,486` commits of history searched for every licence add, delete and rename: [`evidence/licence-history.2026-11-12-p779.tsv`](../evidence/licence-history.2026-11-12-p779.tsv).
+
+| `DFE-Digital` repository | Commits | Grant now | At first commit | Add events | 🔴 **DELETE events** |
+|---|---|---|---|---|---|
+| `eligibility-checking-engine` — the production FSM service | `2,369` | 🔴 none | no | `0` | 🟢 **`0`** |
+| `rails-template` — the DfE's own scaffold | `121` | 🔴 none | no | `0` | 🟢 **`0`** |
+| `gias-query-tool` | `65` | 🔴 none | no | `0` | 🟢 **`0`** |
+| `teacher-services-cloud` | `1,500` | 🔴 none | no | `0` | 🟢 **`0`** |
+| `dfe-job-descriptions` | `193` | 🔴 none | no | `0` | 🟢 **`0`** |
+| `check-your-eligibility-prototype` — the prototype of the same determination | `1,691` | 🟢 `LICENCE.txt` | 🟢 **YES — commit `471eaee`, *"Create prototype"*** | `1` | 🟢 **`0`** |
+| `funding-service-myesf-docex-data-api` | `13` | 🟢 MIT | 🟢 **YES** | `1` | 🟢 **`0`** |
+| `funding-service-myesf-vyf-data-api` | `18` | 🟢 MIT | no | `1` | 🟢 **`0`** |
+| `apply-for-teacher-training` | `34,516` | 🟢 MIT | no | `1` | 🟢 **`0`** |
+
+🔵 **`T805`: in this estate a missing licence is a NON-EVENT, not a decision.** Across `9` repositories and `40,486` commits, **not one grant was ever removed anywhere** — zero deletions, zero reverts, zero renames away. Every granted repository shows **exactly one** additive event; every ungranted repository shows **none of any kind**. Granting leaves a trace; withholding leaves nothing, because nothing happened.
+
+🟢 **Why this matters more than it looks.** `p778-H` said the distinction *"changes what a studio can ask the client for"*, and it does:
+
+- 🟢 **The production FSM service's missing grant is not a refusal.** In `2,369` commits nobody ever added a licence file, and nobody ever took one away. The prototype has `LICENCE.txt` only because the scaffold it was created from carried one, in its **very first commit**.
+- 🟢 **So the ask is a template fix, addressed to the delivery team, not a policy reversal addressed to the department's legal function.** The `rails-template` repository — the DfE's own Rails scaffold, `121` commits, no licence — is the single highest-leverage place to fix it, because it is the thing that stamps the absence into every repository created from it.
+- 🔴 **The counter-reading is closed off, not left open:** if the absence were a policy, at least one of the five ungranted repositories would show a deletion. None does.
+
+### 🔴 What the estate work did NOT find, stated rather than left silent
+
+| Looked for | Result |
+|---|---|
+| A `cfs-*` / `fcs-*` name family in `p778`'s `829`-row census | 🔴 **Not reproducible by prefix match.** `p778` reported `cfs|fcs-*` at `0`/`8`; no repository name in that census *starts* with `cfs-` or `fcs-`. The `0`/`8` may be a substring match or a different grouping — 🟡 **recorded as unresolved rather than repeated as fact** |
+| A public-sector estate of `DFE-Digital`'s size (`829`) | 🔴 None of the five candidates is close: `EsupPortail` `132`, `AI4Bharat` `115`, `datosgobar` `102`, `openfun` `100`, `project-sunbird` `77`, `Sunbird-Ed` `58`. 🟢 The `T800` test does not need size, only multiple families, so it was run anyway |
+| `AI4Bharat`, `datosgobar`, `openfun` | 🟡 **Sized but NOT censused this pass** — budget went to the two estates that answered the question. Carried to `p779-E` |
+
+### 🟢 `CECILL-2.1` — a licence family this base had not placed, in the French public sector
+
+`6` `EsupPortail` repositories publish under **`CECILL-2.1`**, the French state's own copyleft licence, drafted to be enforceable under French law:
+
+| Repository | Stars | Pushed | Language |
+|---|---|---|---|
+| [`EsupPortail/esup-sygal`](https://github.com/EsupPortail/esup-sygal) | `3★` | `2025-09-23` | PHP |
+| [`EsupPortail/esup-geforp`](https://github.com/EsupPortail/esup-geforp) | `3★` | `2026-09-21` | JavaScript |
+| [`EsupPortail/esup-stagetrek`](https://github.com/EsupPortail/esup-stagetrek) | `2★` | `2026-02-13` | JavaScript |
+| [`EsupPortail/esup-emc2`](https://github.com/EsupPortail/esup-emc2) | `2★` | `2026-10-19` | PHP |
+| [`EsupPortail/esup-smile`](https://github.com/EsupPortail/esup-smile) | `1★` | `2024-11-18` | JavaScript |
+| [`EsupPortail/esup-sygal-import-ws`](https://github.com/EsupPortail/esup-sygal-import-ws) | `1★` | `2024-11-22` | PHP |
+
+🟡 **`CECILL-2.1` is copyleft and is NOT on Globant's build-on list.** 🔵 It is recorded because an EMEA engagement touching French higher education will meet it, and meeting it unprepared is the problem — it is GPL-compatible, so a French public-sector component cannot be linked into closed work. 🔴 **These `6` are claim-channel grades only; their bytes were NOT read this pass** → `p779-D`.
+
 ## 🆕 `2026-11-12` · `p778` — **The `829`-repository census `p777-F` asked for, and the defect it exposed in this base's own reasoning**
 
 🔵 **APPEND-ONLY.** This section is new at the top; every dated section below it is the history and is left exactly as it was.

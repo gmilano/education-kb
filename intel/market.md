@@ -4,6 +4,97 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p779` — **The market re-placed by region, with Canada entering the map for the first time and LATAM entering it with code. 🔴 Market SIZE remains a conflict this base reports rather than resolves.**
+
+🔴 **`make hooks` tried FIRST and DENIED — `0` for `10`.** 🟢 Not worked around.
+
+### 🔴 Market size: four estimates that do not reconcile, published as a conflict
+
+This base does not have a primary market-size source and has never had one. The figures below are **secondary and mutually inconsistent**, and the inconsistency is the finding.
+
+| Figure | Claimed for | Source type |
+|---|---|---|
+| `$10.6B` (2026) → `$42.5B` (2030), `41.5%` CAGR | Global AI-in-education | Vendor/market-research blog |
+| `$9.58B`, growing `>30%`/yr | Global AI-in-education | Different market-research pitch |
+| `$10B`–`$23B` by 2026–2027 | Global AI-in-education | Third aggregator |
+| `86%` of education organisations using generative AI | Adoption, not size | Microsoft 2025 report, cited secondhand |
+
+🔴 **The spread between the low and high estimate is more than `2×` for the same year and the same market.** 🟢 **Planning anchor this base uses:** adoption is high and growing fast, size is unresolved, and **no engagement should be sized off these numbers.** 🔵 The useful quantity is not market size but the one measured number in the adoption literature: only **`45%`** of the most-used edtech tools have published research meeting an ESSA evidence tier. **The market rewards proof of efficacy, and most products cannot supply it** — which is where a studio engagement actually starts.
+
+### 🟢 The supply map, by what is actually publishable, measured this pass
+
+| Layer | Permissive leader (studio can build on it) | Region of origin |
+|---|---|---|
+| Tutoring agent | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) Apache-2.0 `58,353★` | APAC |
+| Agent framework | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) Apache-2.0 `30,322★` | EMEA |
+| Assessment / grading | [`agentscope-ai/openjudge`](https://github.com/agentscope-ai/openjudge) Apache-2.0 `1,092★` | APAC |
+| Courseware | [`oppia/oppia`](https://github.com/oppia/oppia) Apache-2.0 `6,988★` | Global |
+| Full LMS | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) ECL-2.0 `1,239★` | Global |
+| K-12 data layer | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) Apache-2.0 | North America |
+| Scheduling | [`UniTime/unitime`](https://github.com/UniTime/unitime) Apache-2.0 `358★` | Global |
+| Video / lecture capture | [`opencast/opencast`](https://github.com/opencast/opencast) ECL-2.0 `511★` | EMEA |
+| Student financial aid | [`bcgov/SIMS`](https://github.com/bcgov/SIMS) Apache-2.0 `29★` | North America |
+
+🔴 **The gap in the map, stated: there is no permissive leader for the ERP/administration layer.** The only candidate, `openeducat_erp`, ships an incomplete grant.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The region stopped being United States-only this pass.** That was a declared gap for two consecutive passes and it is now closed with measured evidence.
+
+| Signal | Measurement | What a studio does with it |
+|---|---|---|
+| 🟢 **Canada enters the map** | [`bcgov/SIMS`](https://github.com/bcgov/SIMS) Apache-2.0 `11,358 B` · `cfc7749b96f6`, `main` · `3625777259a1`, pushed **`2026-11-12`**; [`bcgov/EDUC-STUDENT-ADMIN`](https://github.com/bcgov/EDUC-STUDENT-ADMIN) Apache-2.0, `master` · `ff419803628b` | 🔵 **British Columbia publishes student financial aid and student administration permissively and actively.** A Canadian provincial engagement has a real, current, Apache-2.0 reference implementation to anchor on — and `bcgov` is a well-known permissive publisher, so the licensing conversation is already settled |
+| 🟡 **US state legislation is the dominant constraint** | Trackers disagree: `134` bills in `31` states (MultiState, March `2026`); `118` bills across `32` states with `25` enacted laws in `16` states (AAAS); *"at least `11` states"* enacted (TNTP). ~`35` state education agencies have issued guidance | 🔵 **Build the compliance surface as configuration, not code.** The counts conflict but the direction does not: per-state divergence is now permanent, so a US K-12 product needs per-jurisdiction policy switches on day one |
+| 🔴 **Student-data-for-training is being prohibited outright** | California **AB 1159** prohibits using student data to train AI models; one California bill would prohibit most classroom AI use **before ninth grade** | 🔴 **Assume no training on student data in the US K-12 market.** Architect for inference-only on customer data, with training confined to synthetic or licensed corpora |
+| 🟢 **Federal posture is funding, not rules** | The US Department of Education finalised an **AI in Education priority** directing discretionary grant funding to AI literacy, personalised learning and educator professional development | 🔵 **The money is in literacy and teacher enablement, not in autonomous instruction.** Proposals should be written to that priority's language |
+| 🟢 **The permissive data spine is here** | `Ed-Fi-ODS` Apache-2.0, verified verbatim this pass; `CEDStandards/*` and `edanalytics/*` all canonical Apache-2.0 in the band sweep | 🔵 Ed-Fi is the integration point for any US K-12 engagement, and its grant is now the cleanest in the vertical |
+| 🔴 **Mexico** | 🔴 **Nothing education-specific found, measured this pass specifically.** One secondary source says generative AI adoption is accelerating across Mexico's education and workforce systems; a 2024 briefing says Mexico is not prioritising AI regulation. **The two conflict and neither is primary** | 🔴 Recorded as an open gap, not as an opportunity |
+
+### EMEA
+
+🟢 **EMEA's output this window is government services again — the third consecutive pass with that shape.**
+
+| Signal | Measurement | What a studio does with it |
+|---|---|---|
+| 🟢 **National agencies publish the statutory plumbing permissively** | [`Skolverket/dnp-ss12000-reference-api`](https://github.com/Skolverket/dnp-ss12000-reference-api) Apache-2.0 `11,340 B` · `ac2e2b321b48` (Sweden's National Agency for Education, **SIS SS 12000** for the *digitala nationella prov*); [`Utdanningsdirektoratet/PAS2-Public`](https://github.com/Utdanningsdirektoratet/PAS2-Public) Apache-2.0 `11,325 B` · `cb5e8e7e5f4a` (Norway) | 🔵 **Nordic public education runs on published standards with published reference implementations.** An engagement there starts by conforming to SS 12000, not by designing a data model — and Skolverket's own README warns the reference is **not production-ready**, which is precisely the gap a studio fills |
+| 🟡 **The EU AI Act classifies education as high-risk, and the date is contested** | Admissions, access and assessment of learning outcomes are high-risk. 🔴 Sources conflict between **`2 August 2026`** and **`2 December 2027`** (the latter attributed to Regulation (EU) 2026/1744). Council and Parliament reached a **provisional agreement on 7 May 2026** to amend the Act | 🔵 **Plan to the later date, design to the earlier one.** The conflict is unresolved in this base and `www.gov.uk`/`eur-lex.europa.eu` are outside the session allowlist, so it cannot be settled here. Treat high-risk conformity as a 2026 design constraint regardless of when enforcement lands |
+| 🟢 **Emotion recognition in schools is already banned** | Prohibited since **2 February 2025**, except for medical or safety reasons | 🔴 **A hard architectural exclusion, not a roadmap item.** No affect detection in any EMEA education deliverable |
+| 🟢 **AI literacy is a duty with a soft floor** | The Act's AI-literacy duty does not require guaranteeing any specific level (as of July 2026). The **EU-OECD AILit Framework** for primary and secondary education provides the common reference; the Council approved conclusions on **teachers in the era of AI on 11 May 2026** | 🔵 **Teacher enablement is the funded, lowest-risk entry point into EMEA education** — a literacy obligation with no specified standard is a services opportunity |
+| 🟡 **France publishes under its own national licence** | `6` `EsupPortail` repositories under **`CECILL-2.1`**; [`betagouv/ComparIA`](https://github.com/betagouv/ComparIA) Apache-2.0, `develop` · `3d616f23b28e`, `87★` | 🟡 **French higher education will hand you CeCILL, which is GPL-compatible copyleft.** Budget for it in due diligence; `beta.gouv.fr` itself publishes Apache-2.0, so the state is not uniformly copyleft |
+| 🔴 **No EMEA-origin education agent** | `smolagents` remains the only EMEA agent framework and it is general-purpose | 🔴 Unchanged for several passes. Stated, not padded |
+
+### APAC
+
+🟢 **APAC is where the agent supply actually is, and this pass it produced the largest education agent in this base.**
+
+| Signal | Measurement | What a studio does with it |
+|---|---|---|
+| 🟢 **The supply leader** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) Apache-2.0 `11,408 B` · `cd2f54e1e506`, `main` · `60fb3bdfddb3`, **`58,353★`**, pushed `2026-11-07`, desktop builds for macOS and Windows | 🔵 **Start from DeepTutor for any tutoring engagement, in any region.** It is permissive, current and productised; the alternative is building a tutor loop from scratch |
+| 🟢 **Assessment tooling** | [`agentscope-ai/openjudge`](https://github.com/agentscope-ai/openjudge) Apache-2.0 `1,092★` pushed `2026-11-11` | 🔵 The grader/rubric layer for automated marking |
+| 🟢 **National curriculum mandates create volume demand** | **China**: the Ministry of Education formalised *"Artificial Intelligence and Technology"* as a school subject for **2026–2027**. **India**: AI and computational thinking enters all schools **from Grade 3 in 2026–27**, tied to NEP 2020 and framed against *Viksit Bharat 2047*. **Japan**: basic AI and data literacy for all students regardless of field | 🔵 **Curriculum and teacher-training content at national scale is the APAC opportunity**, and it is a content/services engagement before it is a software one |
+| 🟢 **India's national stack is permissive and org-wide** | `project-sunbird` + `Sunbird-Ed`: `135` repositories, **`MIT` in essentially every name family** (`47`/`47`, `13`/`13`, `15`/`15`, `6`/`6`, `4`/`4`) | 🔵 **India's education stack has an organisation-level MIT policy** — the single most build-on-able public-sector education estate this base has measured. No per-repository licensing negotiation needed |
+| 🟢 **Korea's eGovFramework** | [`eGovFramework/egovframe-msa-edu`](https://github.com/eGovFramework/egovframe-msa-edu) Apache-2.0, `main` · `8767ea12eca3`, `166★`, pushed `2026-11-08` | 🔵 Korean public-sector education work conforms to eGovFramework; the education microservice reference is permissive |
+| 🟡 **The research supply is real but stale** | `EduKTM` `267★` (last push `2024-01-02`), `EduNLP` `64★` (`2024-03-20`), `MAIC-Core` `42★` (`2025-08-21`) | 🟡 **Usable as model zoos, not as dependencies.** Fork and vendor; do not expect upstream maintenance |
+| 🔴 **Regional governance is fragmented** | An ASEAN Foundation study found Southeast Asian systems at uneven AI readiness with the gap **widening**. UNESCO's 2023 recommendation has seen limited uptake in education safeguards. 🟡 **Vietnam**: a binding instrument reportedly effective **March 2026** treats education as high-risk with pre-deployment registration — 🔴 **two sources give it different legal names, so the instrument is recorded as unverified** | 🔵 **Do not sell one APAC compliance story.** Per-country readiness differs more than per-US-state readiness does |
+| 🔴 **Japan / South Korea SEND placement and appeal procedure** | 🔴 **Nothing authoritative, unchanged** | Open gap |
+
+### LATAM
+
+🟢 **The region shipped code this pass, from the institution previously recorded as shipping only institutions.**
+
+| Signal | Measurement | What a studio does with it |
+|---|---|---|
+| 🟢 **CENIA ships, and it ships an indigenous-language asset** | [`CENIA-DEV/multilingual-translator-app`](https://github.com/CENIA-DEV/multilingual-translator-app) Apache-2.0 `11,357 B` · `c71d239df917`, `main` · `2405fac50625`, pushed `2026-11-04`, serving `CenIA/nllb-200-3.3B-spa-rap` — **Spanish → Rapa Nui** | 🔵 **Chile's national AI centre is a buildable partner, not just a policy body.** And **indigenous-language education is an artefact class no other region in this base has produced** — a genuine LATAM differentiator for a studio proposal |
+| 🟢 **Brazil has permissive education code** | [`NewSchoolApp/newschool-backend`](https://github.com/NewSchoolApp/newschool-backend) Apache-2.0 `119★` pushed `2026-10-31`; [`arvoreeducacao/seedling`](https://github.com/arvoreeducacao/seedling) Apache-2.0 pushed `2026-11-03` (Árvore Educação, commercial) | 🔵 Brazilian edtech publishes permissively, including commercially — a lower-friction partnering market than the licence picture in EMEA |
+| 🟡 **Brazil's education-specific AI bill is live** | **Bill 2397/2026**, national ethical parameters for AI in public and private educational institutions, **including a testing requirement**, introduced in the Senate, under deliberation as of May `2026` | 🔵 **A testing requirement is a services opportunity.** If enacted, every deployed education AI in Brazil needs an evaluation harness — which is what `openjudge` is |
+| 🟢 **Chile leads on policy** | National AI Policy since `2021`, law under discussion; **CENIA partnered with UNESCO** on ethical AI in education, including the **Latam-GPT** model | 🔵 Chile is the regional policy anchor; align proposals to CENIA/UNESCO framing |
+| 🟡 **Adoption is high and governance is not** | A UNESCO observatory (launched **April 2026**) reports **more than half** of teachers in Chile and Brazil already use AI tools in daily instruction, and **only ~`10%`** of institutions have formal AI guidelines. A 2026 higher-ed survey reports `92%` of students using AI regularly, `67%` weekly | 🔵 **The gap between teacher adoption (`>50%`) and institutional policy (`~10%`) is the LATAM engagement.** Governance, guidelines and teacher enablement — not tooling — is what the region is short of |
+| 🔴 **Mexico** | 🔴 Nothing education-specific. Sources conflict on whether AI regulation is a priority at all | Open gap, shared with the North America leg |
+| 🔴 **No LATAM-origin agent framework** | 🔴 **Still none.** The three repositories above are services and backends | Stated, not padded |
+| 🔴 **Chile's `Decreto 170` complaint route** | 🔴 **NOT FOUND, fourth consecutive pass.** Primary text is on `www.bcn.cl`, outside the session allowlist | 🟢 The obligation side is sourced; the asymmetry stands as the published result |
+
 ## 🆕 `p778` — **The determination market re-placed by region after `T792`'s refutation, and the regional asymmetry that replaces it. 🟢 The `829`-repository census gives EMEA the largest permissive public-sector estate this base has measured anywhere; LATAM's AI-in-education activity is now measured and it is concentrated in governance, not supply.**
 
 🔵 **What changed for the market map this pass.** `p777` told a studio that the EMEA public-sector determination layer is forkable *because of what the determination is about*. 🔴 **That was wrong** (`T792` refuted — see [`agents/top.md`](../agents/top.md)). 🟢 **It is forkable because of which delivery team's template the repository was cut from** (`T800`), which changes the diligence step, not the opportunity: the asset is real and larger than `p777` knew, but it must be probed repository by repository rather than assumed estate-wide.
@@ -37,7 +128,7 @@ updated: 2026-11-12
 
 🔴 **Caveat stated rather than buried:** every row above is from Chilean legal and regional press, not primary text. `www.bcn.cl` and the other primary-law hosts are **outside this session's network allowlist** (`T796`), so none of it is second-sourced to the official record.
 
-## Opportunities by region
+## Opportunities by region — `p778` (historical section; the live one is at the top of this file)
 
 🔵 Each subsection names what a studio can sell **this quarter**, the asset it starts from with its measured grant, and the constraint that actually binds.
 

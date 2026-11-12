@@ -4,6 +4,84 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p779` — **Eight trends, each with the measurement behind it, one standing trend SUPERSEDED by measurement, and four new theories recorded**
+
+🔴 **`make hooks` tried FIRST and DENIED — `0` for `10`.** 🟢 Not worked around.
+
+### 🟢 Trend 1 — the education agent supply crossed from research artefact to shipped product
+
+🔵 **Measured, not asserted:** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) is Apache-2.0 at `58,353★`, pushed `2026-11-07`, and ships installers for macOS Apple Silicon, macOS Intel and Windows with docs at `deeptutor.info` and a README in four languages.
+
+🔴 **This SUPERSEDES `p778`'s standing signal** that *"the most-starred education artefact in this base is a curriculum, not a product."* 🟢 That signal was true when written and is now false by measurement; it is **withdrawn rather than patched**, which is the same disposition `p778` gave `T792`.
+
+### 🟢 Trend 2 — the education sector has its own OSI licence, and the problem was never its size
+
+`ECL-2.0` — the Educational Community License, Apache-2.0's terms with the **section-3 patent grant narrowed to the contribution** — is now in this base's corpus. 🟢 **And `ACTION p778-B` established that its blast radius was `2` rows, not the unknown number `p778` feared:** `599` of `927` `Apache-2.0`-graded repositories sit in the `11.0`–`11.5 kB` band where the two licences are indistinguishable by length, all `599` were byte-read, and **`597` were genuinely Apache-2.0 with exactly `2` ECL-2.0 — both already corrected.**
+
+🔵 **The trend is narrower and more useful than "watch out for ECL":** `ECL-2.0` is **concentrated in the Apereo family**. All `12` `ECL-2.0` rows in a `8,507`-row claim-channel census sit inside `sakaiproject` and `opencast`. If an engagement does not touch Apereo, this licence will not appear.
+
+### 🔵 Trend 3 — public-sector education code is governed by whoever scaffolded the repository, not by the subject matter
+
+🟢 **Measured across three estates and `1,096` repositories** (`DFE-Digital` `829` at `p778`, plus `EsupPortail` `132` and the Sunbird estate `135` this pass).
+
+The pattern splits, and the split is the finding: where an organisation has a publishing policy it overrides everything beneath it (**Sunbird: `MIT` at or near `100%` in every name family**); where it does not, the grant follows the delivery team's template (**`EsupPortail`: `0%` to `56.6%` across four families; `DFE-Digital`: `myesf` `22`/`22` against `cfs|fcs` `0`/`8`**).
+
+🔵 **Recorded as `T806`, which restates `T800` rather than refuting it:** *a public-sector estate's licence is set by the smallest unit that actually has a publishing policy, and that unit is the organisation in some estates and the delivery team in others.* **Repository-name family is a proxy for that unit, never the cause.**
+
+🟢 **Control that keeps this from being an artefact:** grant rate against **language** is flat and uninformative across `13` languages (`50%`–`100%`, no clean split); against **archived** it is a mild gradient (`65.2%` vs `75.6%`), not a mechanism.
+
+### 🔵 Trend 4 — a missing open-source licence in government is almost never a decision
+
+🟢 **`T805`, and it is the most directly actionable finding of this pass.** Across `9` `DFE-Digital` repositories and **`40,486` commits of history**, searched for every licence add, delete and rename: **zero deletions, zero reverts, zero renames away — anywhere.**
+
+Every granted repository shows **exactly one** additive licence event. Every ungranted repository shows **none of any kind**, including the production Free School Meals determination service at `2,369` commits and the DfE's own `rails-template` scaffold at `121`.
+
+🔵 **Granting leaves a trace; withholding leaves nothing, because nothing happened.** 🟢 **What it changes for a studio:** the ask for a licence on public-sector code is a **template fix addressed to the delivery team**, not a policy reversal addressed to the department's legal function — and the scaffold repository is the highest-leverage place to fix it, because it stamps the absence into everything created from it.
+
+### 🔵 Trend 5 — a licence print's byte count is not a grade
+
+🟢 **`T808`, demonstrated twice in this pass's own data rather than argued:**
+
+| Pair | Measurement | Consequence |
+|---|---|---|
+| `Skolverket/dnp-ss12000-reference-api` `11,340 B` · `ac2e2b321b48` vs `opencast/opencast` `11,340 B` · `76a975068930` | Identical length, **different licences** (Apache-2.0 / ECL-2.0) | Length cannot distinguish licence families |
+| `anthropics/k12-teacher-skills` `11,357 B` · `58d1e17ffe51` vs the `c71d239df917` cluster at `11,357 B` | Identical length, same licence, **different bytes** | Length cannot distinguish prints of one licence |
+
+🟢 **And both of `p778-D`'s "anomalies" turned out to be authentic prints:** `Ed-Fi-ODS`'s `1,186 B` deficit is exactly the named non-operative Apache appendix (operative bodies **token-identical**, `1,431` = `1,431`); `rosariosis`'s deficit is the GPL-2.0 *"How to Apply"* appendix plus three artefacts — an abbreviated FSF postal address, the **pre-1999 "GNU Library General Public License"** wording, and a section title that SPDX's own print flattens away. 🟢 **Zero deontic operators differ in either.** `T802` went `2` for `2` on a prediction that could have failed.
+
+🔵 **The falsifiable unit is the operative token body plus `sha256₁₂`, cited at a branch and `HEAD`.** Byte length is a **pre-filter** — which is exactly how this pass used it.
+
+### 🔴 Trend 6 — a repository can grant its code and its documentation under different licences, and the licence cell must name the path
+
+🟢 `microsoft/autogen`, `main` · `d07c667a3239`: root `LICENSE` is **`CC-BY-4.0`** (`18,650 B` · `7e7170e3cebf`, `"MIT License"` ×`0`); the code grant is **`MIT`** at **`LICENSE-CODE`** (`1,141 B` · `c2cfccb812fe`), byte-identical across all **`12`** `LICENSE-CODE` paths in the tree.
+
+🔵 **The trend: two-channel licensing is now common enough that "the licence" is an incomplete question.** A grade without a path is ambiguous on any repository that ships docs and code together. 🟢 This base cited `autogen` as MIT for many passes and was **right about the terms and wrong about the path** — a distinction that only a byte read at a named path can make.
+
+### 🔴 Trend 7 — regulation is diverging per jurisdiction, permanently, and the open supply is converging
+
+🔴 **Divergence on the rules side**, from this pass's regional legs: US state counts that do not reconcile across trackers (`134`/`31` states; `118`/`32` states with `25` laws in `16`; *"at least `11`"*); an EU high-risk date contested between **2 August 2026** and **2 December 2027**; a Vietnamese instrument effective **March 2026** recorded under **two different legal names**; ASEAN readiness gaps **widening**; Brazil's **Bill 2397/2026** with a testing requirement still in deliberation.
+
+🟢 **Convergence on the supply side:** `597` of `599` band members ship the *same* canonical Apache-2.0, and a single print — `11,357 B` · `c71d239df917` — recurs across `bcgov` (Canada), `CENIA-DEV` (Chile), `NewSchoolApp` (Brazil), `eGovFramework` (Korea), `betagouv` (France), `THU-MAIC` (China) and `huggingface` (EMEA).
+
+🔵 **The planning consequence: build the product once on a converging permissive supply, and treat jurisdiction as configuration.** Anything that hard-codes a jurisdiction's rules will be rewritten within a year.
+
+### 🟡 Trend 8 — teacher enablement is the funded entry point in every region, and for different reasons
+
+🟢 Four independent regional measurements point the same way:
+
+- **North America** — the US Department of Education's **AI in Education priority** directs discretionary grant funding to AI literacy, personalised learning and **educator professional development**.
+- **EMEA** — the AI Act carries an **AI-literacy duty with no specified level**, plus the **EU-OECD AILit Framework** and Council conclusions on **teachers in the era of AI** (11 May 2026).
+- **APAC** — national curriculum mandates (China's *"Artificial Intelligence and Technology"* subject for 2026–27; India's AI from **Grade 3** in 2026–27) create teacher-training demand at national scale.
+- **LATAM** — a UNESCO observatory finds **>`50%`** of teachers in Chile and Brazil already using AI daily while **only ~`10%`** of institutions have formal guidelines.
+
+🔵 **The convergent reading: every region is funding the humans before the autonomy.** LATAM's version is the sharpest, because the adoption-versus-governance gap is a measured number rather than a policy intention.
+
+### 🔴 Trend 9 — this base's own licence claims are mostly unfalsifiable, and it now knows by how much
+
+`gate-refs` over `11` shelves: **`16,498` of `16,830` licence-asserting rows (`98.0%`) carry no `branch` · `HEAD`.** 🟢 Resolved by cohort the picture inverts — the convention **switches on at `p771`** (`0.0%` at `p769`/`p770` → `59.5%`) and has held at `31%`–`65%` since, so the flat figure is dominated by ~`16,000` pre-convention rows.
+
+🔵 **`T807`: a documentation convention's adoption rate must be measured by cohort, never in aggregate, because an append-only corpus makes every young convention look like a failing one.** 🔴 **The actionable residue: `320` of the `606` rows written in this base's last nine passes still cannot be re-read.**
+
 ## 🆕 `p778` — **Eight trends, each with the measurement that supports it, and one standing trend WITHDRAWN**
 
 ### 🔴 `1` — WITHDRAWN: *"the open supply publishes the decision about an adult and withholds the decision about a child"* (`T792`)

@@ -4,6 +4,76 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p779` — **The week an education agent at `58,353★` entered this base, Canada stopped being a declared gap, and LATAM finally produced code instead of institutions**
+
+🔴 **`make hooks` tried FIRST and DENIED — `0` for `10`.** 🟢 All instruments written from scratch; see [`compose/code/p779/README.md`](../compose/code/p779/README.md).
+
+### 🟢 Signal 1 — `DeepTutor` is the largest education-specific agent this base has ever shelved, and it ships as a desktop product
+
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) — `main` · `60fb3bdfddb3`, **Apache-2.0** `LICENSE` `11,408 B` · `cd2f54e1e506`, **`58,353★`**, pushed **`2026-11-07`**, from HKU Data Science (**APAC**).
+
+🔵 **Why it matters beyond the star count.** `p778`'s standing signal was that *the most-starred education artefact in this base is a curriculum, not a product*. 🟢 **That signal is now superseded by measurement rather than by argument:** `DeepTutor` is a product, it is education-specific, it is permissive, and it is larger than the curricula. Its README ships download badges for **macOS Apple Silicon, macOS Intel and Windows**, documentation at `deeptutor.info`, and a README translated into English, Simplified Chinese, Traditional Chinese and Japanese — the distribution profile of something meant for learners, not for researchers.
+
+🟡 **The caveat, stated:** `58,353★` on a repository this young is a star curve this base has not verified against the trend channel, and star counts are claim-channel data. The licence, branch, `HEAD` and bytes **are** measured.
+
+### 🟢 Signal 2 — `OpenJudge`: assessment arrives as a general grader framework, not as an edtech product
+
+[`agentscope-ai/openjudge`](https://github.com/agentscope-ai/openjudge) — `main` · `6d69c4637be8`, **Apache-2.0** `11,357 B` · `c71d239df917`, `1,092★`, pushed `2026-11-11` (**APAC**).
+
+README verbatim: ready-to-use **graders**, generation of **scenario-specific rubrics as graders**, and conversion of grading results into **reward signals** for fine-tuning. 🔵 **This is the shape the assessment layer keeps arriving in** — built for evaluating AI applications, directly reusable for evaluating student work, and permissive. A studio building automated marking should start here rather than from an edtech-labelled repository, because the general tool is better maintained and the rubric abstraction is the same.
+
+### 🟢 Signal 3 — **Canada is no longer a declared gap**, and the repository that closes it is a money determination about students
+
+🔴 This base recorded, for two consecutive passes: *"Canada and Mexico returned nothing education-specific"* and *"The North America leg is United States-only."* 🟢 **Both are now answered with measured evidence from the Province of British Columbia:**
+
+| Repository | Branch · `HEAD` | Grant | Claim channel | What it is |
+|---|---|---|---|---|
+| [`bcgov/SIMS`](https://github.com/bcgov/SIMS) | `main` · `3625777259a1` | 🟢 **Apache-2.0** `11,358 B` · `cfc7749b96f6` | Apache-2.0 · `29★` · pushed **`2026-11-12`** | README: *"will replace existing provincial student financial aid information systems"* — **a money entitlement determined about students, published permissively** |
+| [`bcgov/EDUC-STUDENT-ADMIN`](https://github.com/bcgov/EDUC-STUDENT-ADMIN) | `master` · `ff419803628b` | 🟢 **Apache-2.0** `11,357 B` · `c71d239df917` | Apache-2.0 · `6★` · pushed `2026-11-10` | Student administration back office |
+
+🔵 **And `bcgov/SIMS` lands on `T792`'s territory from the supporting side.** `T792` — the theory that determinations about children are published while determinations about money are not — was **REFUTED at `p778`**. `SIMS` is a determination that is *both* about money *and* about students, it is run by a government, and it is Apache-2.0 and pushed **today**. 🟢 **A third independent counter-example, and it confirms `p778` was right to withdraw `T792` rather than patch it.**
+
+🟡 **Mexico remains a gap.** Nothing education-specific surfaced for Mexico this pass either. Stated, not padded.
+
+### 🟢 Signal 4 — LATAM produced CODE this window, from the institution previously recorded as producing only institutions
+
+🔴 The standing entry read: *"No LATAM-origin education agent — the LATAM research leg returned institutions and instruments (UNESCO IESALC, the Santiago Observatory, CENIA, Tec de Monterrey, Ceibal, Cetic.br) and no agent repository."* 🟢 **CENIA has now shipped:**
+
+| Repository | Branch · `HEAD` | Grant | Claim channel | What it is |
+|---|---|---|---|---|
+| [`CENIA-DEV/multilingual-translator-app`](https://github.com/CENIA-DEV/multilingual-translator-app) | `main` · `2405fac50625` | 🟢 **Apache-2.0** `11,357 B` · `c71d239df917` | Apache-2.0 · `1★` · pushed `2026-11-04` | 🟢 **Chile's national AI centre**, serving `CenIA/nllb-200-3.3B-spa-rap` — **Spanish → Rapa Nui**, the Easter Island language |
+| [`NewSchoolApp/newschool-backend`](https://github.com/NewSchoolApp/newschool-backend) | `master` · `2b6dcd5d8854` | 🟢 **Apache-2.0** `11,357 B` · `c71d239df917` | Apache-2.0 · `119★` · pushed `2026-10-31` | **Brazil.** The most-starred LATAM-origin education backend in this base |
+| [`arvoreeducacao/seedling`](https://github.com/arvoreeducacao/seedling) | `main` · `238c481d2412` | 🟢 **Apache-2.0** `11,358 B` · `cfc7749b96f6` | Apache-2.0 · `1★` · pushed `2026-11-03` | **Brazil**, Árvore Educação — a commercial LATAM edtech publishing permissively |
+
+🔵 **The honest reading: this is a LATAM-origin permissive AI *service*, not an autonomous agent.** 🟢 The gap is **narrowed and re-characterised, not declared closed** — the region now demonstrably ships permissive education AI code, and an **indigenous-language asset** is a kind of artefact no other region in this base has produced at all. 🔴 **A LATAM-origin agent framework still does not exist.**
+
+### 🟢 Signal 5 — two national education agencies publish the statutory plumbing, and one says out loud that it is a reference
+
+| Agency | Repository | Branch · `HEAD` | Grant |
+|---|---|---|---|
+| **Skolverket** — Swedish National Agency for Education | [`Skolverket/dnp-ss12000-reference-api`](https://github.com/Skolverket/dnp-ss12000-reference-api) | `main` · `a3187df2baf0` | 🟢 **Apache-2.0** `11,340 B` · `ac2e2b321b48` |
+| **Utdanningsdirektoratet** — Norwegian Directorate for Education and Training | [`Utdanningsdirektoratet/PAS2-Public`](https://github.com/Utdanningsdirektoratet/PAS2-Public) | `master` · `489129c42c9d` | 🟢 **Apache-2.0** `11,325 B` · `cb5e8e7e5f4a` |
+
+🔵 **Skolverket's README is the find, not the repository.** It implements a subset of the **SIS SS 12000** standard *"with interpretations made by Statens Skolverk"* for provisioning the **digitala nationella prov** — the Swedish digital national tests — and then states plainly: *"not to be considered a finished product and is not intended to run in a production environment."*
+
+🟢 **That is this base's recurring law stated by the publisher itself:** the open supply publishes the **record and the reference**, and keeps the **production decision** elsewhere. `p778` reached the same conclusion inductively from `829` repositories. Here a national agency writes it into its own README.
+
+### 🔵 Signal 6 — what the agent supply did NOT produce this window, measured
+
+| Looked for | Result |
+|---|---|
+| A LATAM-origin **agent framework** | 🔴 **None.** `3` LATAM permissive education repositories found, all services or backends |
+| An EMEA-origin education **agent** | 🔴 **Unchanged** — [`huggingface/smolagents`](https://github.com/huggingface/smolagents) (`main` · `96f33faaf028`, Apache-2.0 `11,357 B` · `c71d239df917`, `30,322★`) is still the only one, and it is general, not education-specific. What EMEA shipped this window is **government services** again |
+| Anything education-specific for **Mexico** | 🔴 **Nothing**, a first measured pass for Mexico specifically |
+| A **live** APAC research agent | 🟡 `EduKTM` (`267★`), `EduNLP` (`64★`) and `MAIC-Core` (`42★`) are all real and all **stale** — last pushes `2024-01-02`, `2024-03-20`, `2025-08-21`. Shelved with the staleness stated, not presented as current |
+| `openedx/edx-platform` on the claim channel | 🔴 **Still absent**, unchanged from `p778`. Its body still grades cleanly as `AGPL-3.0`. 🟢 Standing proof that the claim channel is a second opinion, not a census |
+
+### 🔴 Signal 7 — this base's own licence cells are `98.0%` unfalsifiable, and that is the week's most important finding about itself
+
+`gate-refs`, the named gate for `ACTION p778-A`, over `11` shelves: **`16,498` of `16,830` licence-asserting rows carry no `branch` · `HEAD`** and therefore cannot be re-read. 🟢 **Resolved by cohort, the picture inverts:** the convention switches on at **`p771`** (`0.0%` at `p769` and `p770`, then `59.5%`) and has held at `31%`–`65%` in every pass since; the flat `2.0%` is dominated by `~16,000` rows written before the convention existed.
+
+🔴 **The number that is actually actionable: `320` of the `606` licence rows written in the last nine passes still cannot be re-read.** Full per-shelf and per-cohort tables in [`agents/top.md`](top.md) and [`evidence/gate-refs.2026-11-12-p779.tsv`](../evidence/gate-refs.2026-11-12-p779.tsv).
+
 ## 🆕 `2026-11-12` · `p778` — **The week the claim channel caught this base being wrong five times, and a popular education agent turned out not to be open source**
 
 🔵 **APPEND-ONLY.** This section is new at the top; every dated section below it is the history and is left exactly as it was.
