@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p787` — **`4` dead addresses in this base repaired to live canonical owners, and `T849` found: `hedyorg/hedy` and `open-education-api/specification` serve an IDENTICAL `13,827 B` licence that this base's probe graded `GPL-?` — because **EUPL-1.2 names GPL-2.0, GPL-3.0, AGPL, EPL and CeCILL inside its own compatibility appendix.** A licence that lists other licences must be matched before any family check.**
+
+🟢 **The headline for a studio, measured across `35` foundational repositories this pass: `15` permissive, `18` copyleft, `2` EUPL-1.2 — and every famous name is in the copyleft column.** Moodle (GPL-3.0), Open edX / Canvas / Frappe LMS (AGPL-3.0), H5P, Gibbon, ERPNext, Mahara, Anki. 🟢 The repos Globant can link into client code are a different, smaller set: **Kolibri (MIT), Oppia (Apache-2.0), Sakai (ECL-2.0), OpenOLAT (Apache-2.0), Opencast (ECL-2.0), Tsugi (Apache-2.0), Perseus (MIT), OATutor (MIT), nbgrader/JupyterHub (BSD-3), DSpace (BSD-3).**
+
+### 🟢 Address repairs — dead in this base, live under the correct owner
+
+| Was (DEAD) | Is (ALIVE) | Grant, on the bytes |
+|---|---|---|
+| 🔴 `tsugi/tsugi` | 🟢 [`csev/tsugi`](https://github.com/csev/tsugi) | Apache-2.0 `10,273 B` · `f54555227df1` |
+| 🔴 `openedx/openassessment` | 🟢 [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | AGPL-3.0 `35,135 B` · `0d60a779e29d` |
+| 🔴 `mahara/mahara` | 🟢 [`MaharaProject/mahara`](https://github.com/MaharaProject/mahara) | GPL-3.0 `35,148 B` · `0881d0f9c2fe` |
+| 🔴 `openedx/tutor` | 🟢 [`overhangio/tutor`](https://github.com/overhangio/tutor) | AGPL-3.0 `34,523 B` · `bca91d56136f` |
+
+🔵 **All four were plausible-looking org/repo guesses** — the project name as the org, or the umbrella org for a community distribution. 🟢 `git ls-remote` is the only channel that separates a wrong guess from a dead project.
+
+### 🔴 `T849` — appendix contamination, found on two rows this base already carried
+
+| Address | Bytes · `sha256₁₂`-free `HEAD` | Probe said | Truth |
+|---|---|---|---|
+| 🟡 [`hedyorg/hedy`](https://github.com/hedyorg/hedy) | `13,827 B` · `38d5db7214ff` | 🔴 `GPL-?` | 🟡 **EUPL-1.2** |
+| 🟡 [`open-education-api/specification`](https://github.com/open-education-api/specification) | `13,827 B` · `d9c5b0a1a68d` | 🔴 `GPL-?` | 🟡 **EUPL-1.2** |
+
+🟢 **Identical byte counts across two unrelated owners is what exposed it** — one canonical licence text, served twice, mis-graded twice the same way. 🔴 **This is the fifth recorded failure mode of one instrument** (case-blindness `T842`, title-line insufficiency `T847`, length-as-integrity `T845`, language-blindness `T848`, appendix contamination `T849`). 🟢 **Every one was caught by a control on a row this base had already published, never by inspection.** Fix verified: after matching EUPL/CeCILL first, the copyleft controls (Moodle GPL-3.0, Canvas AGPL-3.0, Frappe LMS AGPL-3.0, Anki AGPL-3.0, BigBlueButton LGPL) all still reproduce.
+
+### 🟢 Foundations placed or re-verified this window
+
+| Repo | Address | Grant, on the bytes | Region | Note |
+|---|---|---|---|---|
+| 🟢 **Kolibri** `NEW` | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** `1,097 B` · `fe298f54494c` | Global | 🟢 **The most valuable permissive row in education.** Offline-first, curated open content, teacher tools, runs on legacy hardware; `1.2k★`, reported across `195` countries. **MIT ⇒ embed the AI layer directly** |
+| 🟢 **Oppia** `NEW` | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 `11,358 B` · `bbda308fd5db` | Global | Interactive lessons that behave like one-to-one tutoring; `7.0k★` |
+| 🟢 **OpenOLAT** `NEW` | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 `10,982 B` · `322e90dd5507` | EMEA | 🟢 **The permissive LMS for a European university.** ⚠️ `375 B` short of canonical Apache — clause-verified genuine, deviation is in the trailing appendix |
+| 🟢 **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** `11,120 B` · `593c74e1c7a5` | North America | 🟢 ECL-2.0 is an **Apache-2.0 derivative** — the only mature, permissively-granted university LMS here |
+| 🟢 **nbgrader** `NEW` | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 BSD-3 `1,512 B` · `91d5c12f989b` | Global | 🟢 **The permissive autograding core**, with a human-review step already in its model — which is what every grading regulation in `T854` requires |
+| 🟢 **Perseus** `NEW` | [`Khan/perseus`](https://github.com/Khan/perseus) | 🟢 MIT `1,052 B` · `e722e959afd0` | North America | Khan Academy's exercise/question renderer |
+| 🟢 **Opencast** `NEW` | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 ECL-2.0 `11,340 B` · `94aecba33ed9` | EMEA | Permissive lecture capture — transcription and summarisation attach cleanly |
+| 🔴 **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0** `34,520 B` · `1c9f0bb8013e` | North America | 🟢 **Settles a search-channel conflict:** sources claimed both AGPL-3.0 and ECL-2.0. The bytes are the canonical `34,520 B` AGPL-3.0 text |
+| 🔴 **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** `35,147 B` · `afbcc55fa1bd` | Global | 🔴 **This row caught a defect in this pass's own probe:** an initial whole-file grep graded it `AGPL-3.0`, because **GPL-3.0 §13 names the Affero licence**. Family is now decided on the title line only |
+| 🔴 **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 `35,136 B` · `d3a86602dcf7` | Global | Community release line *Verawood* (June 2026, 22nd release) |
+| 🔴 **Odoo** / **OpenEduCat** | [`odoo/odoo`](https://github.com/odoo/odoo) · [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 LGPL `43,529 B` · `75447d905934` · LGPL `8,241 B` · `46a5d7d40082` | Global | `T847` re-confirmed: both state LGPL-3.0 on **line 3 behind a deferral**. 🟢 OpenEduCat is the closest thing to "Odoo for education" — SIS + LMS + finance |
+
+### 🔴 `p786-E` carried forward — still grant-less after a language-aware re-probe
+
+| Address | Finding |
+|---|---|
+| 🔴 [`formalms/formalms`](https://github.com/formalms/formalms) | ALIVE `446a77a9b9cb` · no licence on `8` filenames × `3` branches |
+| 🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | ALIVE `8348cd069aa2` · same |
+| 🔴 [`Nutlope/llamatutor`](https://github.com/Nutlope/llamatutor) | ALIVE `e29ac56679d6` · same |
+| 🔴 [`flyboat403/k12-skills`](https://github.com/flyboat403/k12-skills) | ALIVE `339a1118e168` · same |
+
+🟢 **The language-aware gate (`T848`) did NOT rescue any of the four, which strengthens the verdict rather than weakening it** — these are not translated grants being misread, they are repositories serving no licence at all. 🔵 The deliverable remains an upstream licence request, not a permanent exclusion.
+
+### 🔵 `p786-D` — the bespoke-grant bucket, byte-sized but deliberately left `UNGRADED`
+
+| Address | Bytes | Grant family |
+|---|---|---|
+| 🔵 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `8,563 B` `main:LICENSE.md` | *PageLM Community License* — bespoke |
+| 🔵 [`Tzxser/aipha-learning-os`](https://github.com/Tzxser/aipha-learning-os) | `1,296 B` | *AIpha Source-Available…* — source-available, **not** open source |
+| 🔵 [`1edtech/caliper-spec`](https://github.com/1edtech/caliper-spec) | `12,402 B` `master:LICENSE.md` | IMS/1EdTech consortium terms |
+| 🔵 [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) | `570 B` | *Copyright MyScript.* — proprietary notice |
+
+🟢 **`UNGRADED` is the correct verdict here, not a failure.** None belongs to an OSI family, and forcing one of them into MIT/Apache/GPL would be the exact error `T845`–`T849` keep catching. 🔴 **For a studio all four are barred from client code** until counsel reads the specific terms.
+
 ## 🆕 `2026-11-12` · `p786` — **`ACTION p785-A` CLOSED on the complete unusable class: `157` addresses swept, `8` DEAD, `84` carrying a grant, `65` genuinely grant-less across `17` case variants. `12` of `13` of `p785`'s own additions reproduce exactly — and the one that does not is a `4,025★` repository that is NonCommercial, not ungranted.**
 
 ### 🟢 The sweep, complete rather than sampled

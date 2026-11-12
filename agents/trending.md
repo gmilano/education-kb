@@ -4,6 +4,41 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p787` — **New this window: tutoring shipped as a *skill directory* that roughly tripled in two days (`janestreet/agent_skills`, MIT, `2` commits, `2.1k★`→`6.6k★`), UC Berkeley's Bayesian-Knowledge-Tracing tutor placed at last, and a phantom second project struck — `cosark/OpenTutor` is a `0★` FORK of `zijinz456/OpenTutor` that the search channel served as a peer.**
+
+🟢 **Controls ran BEFORE any verdict shipped: `4` of `4` known-good rows reproduce this base's recorded bytes exactly** — `HKUDS/DeepTutor` `11,408 B`, `moodle/moodle` `35,147 B`, `sakaiproject/sakai` `11,120 B`, `frappe/lms` `33,893 B`. 🟢 `2` planted negatives DEAD as designed. 🔴 **`3` defects in this pass's own probe, caught by those controls and fixed before use** — a pipe-swallowed exit status, `Affero`-inside-GPLv3 (which graded Moodle as AGPL), and `T849` appendix contamination.
+
+### 🟢 New to this base this window
+
+| Agent | Address | Grant, on the bytes | ★ | Region | Why it is here |
+|---|---|---|---|---|---|
+| 🟢 **agent_skills** `NEW` | [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) | 🟢 MIT `1,120 B` · `7c6715c29548` | `6.6k` | North America | 🟢 **The packaging shift of the window (`T851`).** The `socratic-tutor/` skill is a diagnostic, a skill map at levels 0–5, one question at a time, spaced review and a final assessment — **no runtime, no server, no model dependency.** 🔵 `2` commits. 🔴 Search channel had it at `~2.1k★` on `2026-11-10`; page-read `6.6k★` on `2026-11-12` |
+| 🟢 **OATutor** `NEW` | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT `1,105 B` · `fae8cc474484` | `279` | North America | 🟢 **UC Berkeley, and it supplies the mastery model every recipe in this base was missing** — Bayesian Knowledge Tracing, React, optional Firebase logging. Permissive |
+| 🟢 **OpenTutor** `NEW` | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 MIT `1,068 B` · `cfe41f874290` | `175` | Global | Block-based adaptive workspace that runs **locally** — material in, notes/quizzes/flashcards/adaptive tutor out. `3` specialist agents (Tutor, Planner, Layout), 10+ LLM providers |
+| 🟢 **Learning-Agent-System** `NEW` | [`VaishnaviSingh-Analyst/Learning-Agent-System`](https://github.com/VaishnaviSingh-Analyst/Learning-Agent-System) | 🟢 MIT `1,086 B` · `fb2da327c928` | — | Global | LangGraph tutor on Ollama: checkpointed paths, tiered `5-3-2` assessment, `70%` pass bar, Feynman-style re-teaching |
+| 🟡 **learnharness** `NEW` | [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | 🔴 **AGPL-3.0** `34,523 B` · `cb25c8e49b85` | — | Global | Agent harness for learning hard subjects. 🔴 **Network-use triggers source disclosure** — reference or separately-deployed service only. 🔵 Filed **Global**: the account name suggests a Nordic origin and a name is not evidence |
+| 🟢 **ai-engineering-hub** `NEW` | [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | 🟢 MIT `1,066 B` · `042aeb506738` | ~`40k` | Global | Tutorial collection graded beginner→advanced. 🔴 ★ is search-channel, not page-read |
+
+### 🟢 Movement on rows this base already carries
+
+| Agent | Address | This window | Note |
+|---|---|---|---|
+| 🟢 **DeepTutor** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `58.5k★`, `v1.7.2` tagged `2026.11.6` | 🔴 Search channel reported `~20k★` in June, `45–48k★` in late October, `53k★` on `2026-11-01`; page-read **`58.5k★`** today. 🟢 Growth is real and fast; **the rounded figures across sources are not comparable** |
+| 🟢 **OpenMAIC** | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `43.4k★`, `v1.5.0-rc.1` news `2026-11-10` | 🔴 **NEW licensing caveat found this pass: the repo grant is MIT but bundled `packages/mathml2omml` is LGPL-3.0-or-later.** A repo-level licence read is not a dependency audit |
+| 🟢 **paes-mcp** | [`goyanedelv/paes-mcp`](https://github.com/goyanedelv/paes-mcp) | Re-graded 🟢 **MIT (Spanish text)** | 🔴 **`T848`:** all four MIT clauses present **in Spanish**; this base's English-only probe returned `UNGRADED`. 🟢 **A valid LATAM grant was indistinguishable from no grant at all** |
+
+### 🔴 Probed this window and NOT usable
+
+| Address | Finding | Verdict |
+|---|---|---|
+| 🔴 [`tahseenparray1/agentic-rag-tutor`](https://github.com/tahseenparray1/agentic-rag-tutor) | ALIVE · `5160dde7e7d7` · no licence on `8` filenames × `3` branches | 🔴 **No grant served**, and the search channel recommended it as a grading-agent starting point. 🟢 An ungranted repo is a question for its maintainer, not a dependency |
+| 🔴 [`cosark/OpenTutor`](https://github.com/cosark/OpenTutor) | ALIVE · MIT `1,068 B` · **fork of `zijinz456/OpenTutor`**, `0★` | 🔴 **Not a distinct project.** 🔵 The search channel returned parent and fork with **identical prose**, which is how a fork becomes a phantom finding — the only separating evidence was the fork notice on the page |
+| 🔴 [`jane-street/agent_skills`](https://github.com/jane-street/agent_skills) | **DEAD** | 🔴 The plausible hyphenated spelling of a real org. Canonical is `janestreet/agent_skills` |
+
+### 🔴 EMEA agent supply — a measured gap, not an unsearched one
+
+The query `open source education AI agent Europe EMEA Germany France Netherlands 2026 github sovereign` returned **sovereign-LLM infrastructure and compliance commentary only**: OpenEuroLLM, Germany's SOOFI (~€20M), the Netherlands' GPT-NL, Apertus, Teuken, Mistral, Haystack. 🔴 **No European-origin education agent repository surfaced.** 🟢 This base's one EMEA-placed agent remains Kenya's [`Moses-Githinji/meta-cv-hktn-edu-agent`](https://github.com/Moses-Githinji/meta-cv-hktn-edu-agent) (MIT `1,081 B`). 🔵 **Europe is building the substrate and not the education layer on top of it** — recorded as an opportunity in `intel/market.md`, not as an absence of searching.
+
 ## 🆕 `2026-11-12` · `p786` — **New this window: a `48★` MIT agent that tutors the developer instead of the student, Mexico's first two permissively-granted education artefacts in this base, and a Chilean university-admissions MCP server. Plus a `4,025★` repository whose "no grant" verdict was wrong in the direction that matters — it is NonCommercial.**
 
 ### 🟢 New to this base this window, every grant read on its title line
