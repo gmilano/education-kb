@@ -4,6 +4,75 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p796` — **the first licence-FILE census this base has ever run: `174` live addresses, `13` rows carrying `2`+ root licence files, `19` carrying none, and `5` rows serving more than one GRANT — `3` of them inside a single file. Plus `DSpace`'s `91,354 B` third-party anthology opened, and it is a deliverable rather than a hazard.**
+
+🟢 **Machine output:** [`evidence/licence-file-and-grant-block-census.2026-11-12-p796.tsv`](../evidence/licence-file-and-grant-block-census.2026-11-12-p796.tsv) · [`evidence/mit-bsd-bytesize-filter.2026-11-12-p796.tsv`](../evidence/mit-bsd-bytesize-filter.2026-11-12-p796.tsv) · 🔴 [`evidence/licence-block-census-UNCORRECTED-v1.2026-11-12-p796.tsv`](../evidence/licence-block-census-UNCORRECTED-v1.2026-11-12-p796.tsv) *(published deliberately, so the `32`→`5` correction can be re-derived)*.
+
+### 🟢 The census — `ACTION p795-B` discharged
+
+| Root licence files | Rows | |
+|---|---|---|
+| `0` | 🔴 **`19`** | the ungranted-at-root population |
+| `1` | `142` | |
+| `2` | `10` | `DSpace`-class and code/content splits |
+| `3` | `1` | `open-webui` |
+| `4` | `2` | `metabase`, `DSpace` |
+
+🟢 **`176` addresses attempted · `174` OK · `2` `EMPTY_TREE` · 🟢 `0` clone failures · `16` seconds at `12` parallel.** 🟢 **The `2` empty trees are the same two rows for a FOURTH consecutive pass** (`Bestisco/My-WASSCE-Companion`, `Elite2828/ACE-AI-Tutor`) — `0` drift.
+
+### 🔴 The `5` multi-grant rows — and `3` hide inside one file
+
+| Row | Files | Grants | Where |
+|---|---|---|---|
+| 🔴 [`odoo/odoo`](https://github.com/odoo/odoo) | `1` | 🔴 **`2`** | `LGPL-3.0` at line `15`, then the **full `GPL-3.0` text** at line `183` — one `43,529 B` file |
+| 🔴 [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | `1` | 🔴 **`2`** | its own BSD-3, then **`python-dateutil`'s** — `3,493 B`. 🔵 Shipping `rrule` carries Niemeyer's and Pieviläinen's notices too |
+| 🟡 [`uchit/mcp-regulated-ai-compliance`](https://github.com/uchit/mcp-regulated-ai-compliance) | `1` | 🟡 **`2`** | Apache-2.0 + a Creative Commons grant in one `12,227 B` file |
+| 🔴 [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | `3` | 🔴 **`3`** | ridered BSD; **MIT + BSD in `LICENSE_HISTORY`** (`2,872 B`) |
+| 🟢 [`kumaken-1/school-office-generative-ai-30`](https://github.com/kumaken-1/school-office-generative-ai-30) | `2` | 🟢 **`2`** | MIT (`LICENSE-CODE`) + CC BY 4.0 (`LICENSE-CONTENT`) — 🟢 reproduces this base's `T869` |
+
+🔴 **`12` further rows serve a licence file this pass could not grade** — `EUPL-1.2` ×`3` (`T918`), a `19 B` name-only file (`frappe/education`), `anki`'s `1,930 B` pointer (`T919`), `1edtech/caliper-spec`'s `12,402 B` specification licence, `Dirigo`'s `362 B` Spanish CC BY-NC-SA, `paes-mcp`'s bilingual MIT, and `4` short notices. 🟢 **Published as `12`, not folded into the `19`.**
+
+### 🟢 `DSpace`'s anthology opened — `ACTION p795-C` discharged for its located target
+
+🟢 **`721` dependency entries, grouped by licence, in `91,354 B`.** 🟢 **And the file states the project's policy itself:** *"DSpace actually does NOT allow for any dependencies that are solely released under GPL terms."*
+
+🟢 **The policy holds under measurement.** The `GPL-3.0` section contains **exactly one** entry — `juniversalchardet:2.5.0` — 🟢 **and that same artefact is also listed under `LGPL`, i.e. dual-licensed, the case the preamble describes.**
+
+🟡 **What is real: ~`13` `LGPL`-named entries** — `openpdf:2.0.5`, `jna:5.18.1` (`LGPL-2.1-or-later`), `JHighlight:1.1.1`, `FindBugs-Annotations:3.0.1u2`, and **`8` `java-json-tools` artefacts** (`json-patch:1.13`, `json-schema-validator:2.2.14`, `json-schema-core:1.2.14`, `jackson-coreutils:2.0`, `jackson-coreutils-equivalence:1.0`, `btf:1.3`, `msg-simple:1.2`, `uri-template:0.10`). 🟢 **Low risk for a server-side repository platform — no modified library is distributed — and the first question a client's legal review asks.**
+
+🟢 **Reframe: `DSpace` is the ONLY platform in this base that ships a pre-built third-party licence disclosure.** 🔵 That is a procurement asset, not a liability. 🔴 **Every other `Deps` cell here is still a claim about a version nobody identified** — carried as `p796-C`.
+
+### 🔴 `T918` — `EUPL-1.2`, the third missing licence family in three passes
+
+| Row | ★ | Bytes | Note |
+|---|---|---|---|
+| 🟢 [`hedyorg/hedy`](https://github.com/hedyorg/hedy) | `1,697` | `13,827 B` | 🟢 **`EUROPEAN UNION PUBLIC LICENCE v. 1.2`** · school programming environment · pushed `2026-11-06` |
+| 🟢 [`open-education-api/specification`](https://github.com/open-education-api/specification) | — | `13,827 B` | 🟢 **byte-identical to `hedy`'s** — a positive cross-check |
+| 🔴 [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | — | `13,865 B` | 🔴 **archived upstream** (`T901`) |
+
+🟢 **GitHub's SPDX independently returns exactly `3` `EUPL-1.2` rows — the same three.** 🔵 `ECL-2.0` was missing at `p793`, `BSL-1.0` at `p795`, `EUPL-1.2` now. 🟢 **All three found by reading bytes, none by trusting a family name.**
+
+### 🔴 My own instrument's `3` over-reports — recorded because the correction is the finding
+
+🔴 **First instrument: count grants by matching the licence NAME at line start → `32` multi-grant rows. True count `5`.** 🔵 A single `35,147 B` GPL-3.0 text names itself at line start **four** times, so every GPL row scored `4` and every Apache/ECL row scored `3`. 🟢 **Ground truth read by hand on `moodle` (`1` grant), `chamilo` (`1`) and `odoo` (genuinely `2`).**
+
+🔴 **Why `p795-G`'s control rule did not save it: all `4` controls were short permissive files (`2,819`–`11,358 B`) and none could exhibit a defect that only occurs in `35 KB` copyleft texts.** 🟢 **Rebuilt on per-grant VERSION LINES, the gate reproduces `9` of `9` controls across both kinds.** 🔴 **Two residual over-reports, both `grep -c` counting LINES not occurrences:** `kumaken-1` `3`→`2`, `OpenOLAT` `2`→`1`. 🟢 **`0` shipped.** → `T917`, `p796-G`.
+
+### 🔴 Stale-row watch — carried forward, re-measured
+
+| Row | Last push | Months | Consequence, graded by kind |
+|---|---|---|---|
+| 🔴 [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | `2018-07-16` | 🔴 **`88`** | 🔴 **An SIS holding student records. Unowned CVE surface — fork with a named maintainer, or choose another SIS** |
+| 🔴 [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | `2024-06-27` | `28` | 🟢 Near-harmless — recurrence rules are frozen mathematics. 🔴 **But `p796` adds: it serves TWO BSD grants, so the attribution obligation is doubled** |
+| 🔴 [`MaharaProject/mahara`](https://github.com/MaharaProject/mahara) | `2023-11-16` | `36` | 🔴 **Archived upstream** — the ePortfolio recommendation |
+| 🔴 [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) | `2021-01-04` | `70` | 🔴 **Archived upstream** — the maths-input primitive |
+| 🟡 [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | `2025-06-03` | `17` | 🟡 **New to the watch** — below the `24`-month line, trending toward it |
+
+### 🔴 Declared gap for this window
+
+🔴 **`0` non-English and `0` LATAM-origin repositories entered this window from discovery.** 🟢 The census covered every carried address regardless of origin, but *new* intake was English-query-shaped for a fifth consecutive pass (`T883`). 🔵 **Remedy priced in `p796-D`: per-region in-language discovery legs, not a sixth English query.**
+
+
 ## 🆕 `2026-11-12` · `p795` — **Repo movement: `ACTION p794-A` discharged across `167` rows and the `ARCHIVED` count did NOT grow — `T901`'s "`3` is a floor" is refuted. The movement nobody was measuring is STALENESS, and it holds a `★3,752` row this file recommends as a primitive.**
 
 🟢 **Controls reproduced before any verdict:** `173` blobless bare clones, `12` parallel, `0` failures · `gh api search/repositories` returned `167` of `173` (the same `6` search-index misses `T903` named, all LIVE on the git channel) · `oppia/oppia` canonical Apache-2.0 at `11,358 B` · `pypi.org` per-version JSON reachable.

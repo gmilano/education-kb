@@ -4,6 +4,57 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p796` — **`p795-B` asked for a licence-FILE count and the count found the pattern it was pointed at plus one it was not: on the rows this base recommends for white-labelling, the permissive grant covers the CODE and the brand assets are carved out separately — including `NoDerivs` on an LMS logo. `4` agents added, `1` evidence artefact corrected, `5` of my own `32` multi-grant flags survived.**
+
+🟢 **Channel status, re-measured this pass:** blobless bare clone + `ls-tree --name-only` + `cat-file -s`/`-p` 🟢 (`176` clones, `12` parallel, **`16` seconds**, 🟢 **`0` failures**) · `gh api search/repositories` 🟢 batched `10` × `repo:` — exact stars + SPDX + `pushed_at` + `archived` · `raw.githubusercontent.com` 🟢 · 🔴 **`eur-lex.europa.eu` and the other `5` primary-source domains still fail at `CONNECT` (`T906`, third consecutive pass; `p794-F` remains undischargeable from here).**
+
+🟢 **`9` of `9` controls reproduced across BOTH licence kinds before any verdict shipped** — short permissive (`rrule` `3,493 B`/`2` grants · `PageLM` `8,563 B` · `open-webui` `2,819 B` · `oppia` `11,358 B` · `opencast` ECL-2.0 `11,340 B`) **and** long copyleft (`moodle` `35,147 B`/`1` grant · `chamilo` `35,147 B`/`1` · `odoo` `43,529 B`/`2` · `metabase` `37,265 B`/`1`). 🔴 **`3` over-reports in my own instruments, all caught by reading bytes, `0` shipped** — see `T917`.
+
+### 🟢 `4` agents added — byte-verified, star-exact, placed
+
+| Agent | Repo | Licence (bytes, byte-verified) | ★ | Last push | Region | What it is, and why it earns a row |
+|---|---|---|---|---|---|---|
+| 🟢 **ai-engineering-hub** `NEW` | [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | 🟢 **MIT · `1,066 B`** | `41,801` | `2026-11-01` | Global | 🟢 **The highest-starred row added to this base in several passes.** Structured, runnable agent/RAG curricula — the *teaching corpus* for an engagement's own engineers, not a classroom tool. 🔵 Byte size `1,066 B` is inside the canonical MIT band, so `p795-A`'s filter passes it clean |
+| 🟢 **AI-Teaching-Agent** `NEW` | [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 **MIT · `1,069 B`** | `0` | `2026-08-23` | Global | 🟢 **The teacher-side counterpart this base is thin on: labs, exams and grading as structured DSLs with human review, sandboxed evaluation and CLI/MCP tools.** 🔵 Grading path is self-described MVP — cite it for its *shape* (DSL + named human reviewer), which is exactly `P794-2`'s architecture |
+| 🟢 **ai-tutor-agent** `NEW` | [`vulinh1704/ai-tutor-agent`](https://github.com/vulinh1704/ai-tutor-agent) | 🟢 **MIT · `1,071 B`** | `0` | `2026-11-09` | APAC 🇻🇳 | 🟢 **FastAPI + LangGraph tutoring starter with the two controls this base keeps asking for: Socratic hint escalation, and answer-leak checking before a reply is sent.** 🟢 Rubric grading computes totals **in code, not by the model** — the single most reusable decision in the row |
+| 🟡 **AITutorAgent** | [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🟢 **MIT · `1,072 B`** | `15` | 🔴 `2025-06-03` (`17` mo) | Global | 🟡 Carried from `p794`'s candidate list and now graded. 🔴 **Stale at `17` months** — below the `24`-month line but trending toward it. 🔵 Reference only |
+
+🔵 **All four byte sizes fall in `1,066`–`1,072 B`, i.e. inside canonical MIT.** 🟢 **That is `p795-A`'s filter doing its intended job on new intake rather than on history.**
+
+### 🔴 The brand layer — three recommended rows, corrected in place
+
+🔴 **`T914`. Counting licence FILES rather than grading the root `LICENSE` found that on three rows this base recommends, the brand assets are licensed separately and more restrictively than the code:**
+
+- 🔴 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) — 🟢 Apache-2.0 code, 🔴 **but `NOTICE.TXT` (`14,412 B`, never opened here) puts the logo and icons under `CC BY-ND 2.5` — `NoDerivs`.** 🔴 This base calls it *"the permissive LMS for an EMEA engagement"*; an engagement that rebrands it must replace, not modify, the brand assets.
+- 🔴 [`open-webui/open-webui`](https://github.com/open-webui/open-webui) — `T900`'s clause-`4` branding rider, 🟢 **plus a third licence file found this pass: `LICENSE_HISTORY` carries TWO grants (MIT and BSD), which is why it grades "clean".**
+- 🔴 [`metabase/metabase`](https://github.com/metabase/metabase) — 🔴 **`4` root licence files; only `1` holds an OSI grant.** The embedding carve-out is `8,877 B` of terms with **no recognised grant at all**.
+
+### 🔴 `1` evidence artefact corrected — and the row it describes was already right
+
+🔴 **`daddysystem/nextgen-learn`: [`evidence/rider-gate.2026-11-12-p795.tsv`](../evidence/rider-gate.2026-11-12-p795.tsv) grades it `MIT`. The served bytes are `Boost Software License 1.0`, and GitHub's SPDX agrees (`BSL-1.0`).** 🟢 **This base's PUBLISHED rows already said `BSL-1.0 (Boost)` and needed no change** — it is the machine artefact that was wrong. 🔵 **`T921`: an action specified as "a filter, not a new measurement" inherits every defect of the file it filters.**
+
+### 🟢 Rows re-measured this pass — stars exact
+
+| Row | ★ (`p796`, exact) | Last push | Note |
+|---|---|---|---|
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | `41,801` | `2026-11-01` | 🟢 added this pass |
+| [`hedyorg/hedy`](https://github.com/hedyorg/hedy) | `1,697` | `2026-11-06` | 🟢 **`EUPL-1.2`, a family this base's clause set lacked (`T918`)** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `451` | `2026-11-12` | 🟢 actively maintained; 🔴 brand assets `CC BY-ND 2.5` |
+| [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | `3,752` | 🔴 `2024-06-27` (`28` mo) | 🔴 **TWO BSD grants, not one (`T915`)** |
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | `15` | 🔴 `2025-06-03` (`17` mo) | 🟡 graded this pass |
+| [`uchit/mcp-regulated-ai-compliance`](https://github.com/uchit/mcp-regulated-ai-compliance) | `1` | `2026-06-06` | 🟡 Apache-2.0 **+ CC** in one file |
+| [`kumaken-1/school-office-generative-ai-30`](https://github.com/kumaken-1/school-office-generative-ai-30) | `0` | `2026-08-12` | 🟢 MIT + CC BY 4.0 split reproduced |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | `0` | `2026-08-23` | 🟢 added this pass |
+| [`vulinh1704/ai-tutor-agent`](https://github.com/vulinh1704/ai-tutor-agent) | `0` | `2026-11-09` | 🟢 added this pass |
+| [`daddysystem/nextgen-learn`](https://github.com/daddysystem/nextgen-learn) | `0` | `2026-10-15` | 🟢 `BSL-1.0` confirmed on three channels |
+
+### 🔴 Declared gaps for this window
+
+🔴 **No new APAC-origin or LATAM-origin agent reached this pass's discovery queries.** 🟢 The `4` additions place Global ×`3` and APAC 🇻🇳 ×`1`. 🔵 **The three highest-adoption education agents in this base remain APAC university projects (`DeepTutor` ★`52,783`-class, `OpenMAIC` ★`42K`-class, `Omni-Edu`) and none of them moved into this window's results** — the queries that found the `4` additions were English and framework-shaped, which is the query artefact `T883` has now diagnosed five times. 🟢 **Remedy is per-region in-language discovery, carried as `p796-D`.**
+
+🔴 **`0` European-origin agents added.** 🟡 `tutor-mcp` 🇫🇷 (★`102`, added `p794`) remains the only one, and `p796` adds no second. 🟢 **But `T918` adds a European finding of a different kind: `EUPL-1.2`, with `hedy` (★`1,697`) as its carrier.**
+
+
 ## 🆕 `2026-11-12` · `p795` — **`p794-B`'s rider gate, built exactly as `p794` specified it, returned `0` flags on `167` rows — including the row whose rider is the reason the action exists. Keyed on the licence BYTES instead of GitHub's SPDX it finds `4` new defects, one of them an MIT grant sentence used as camouflage for a no-redistribution licence.**
 
 🟢 **Channel status, re-measured this pass:** `gh api search/repositories` 🟢 **batched `10` × `repo:` per call — exact stars + SPDX + `pushed_at` + `archived`, `167` of `173` returned** · blobless bare clone + `ls-tree --name-only` + `cat-file -s`/`-p` 🟢 (`173` clones, `12` parallel, `0` failures) · `pypi.org` 🟢 **JSON API per-version** · `registry.npmjs.org` 🟢 · `git ls-remote` 🟢 · 🔴 **`eur-lex.europa.eu`, `www.oecd.org`, `www.unesco.org`, `op.europa.eu`, `www.iesalc.unesco.org`, `digital-strategy.ec.europa.eu` → all `6` fail at `CONNECT` (curl exit before any HTTP status). `T906` persists unchanged into `p795`; `p794-F` is NOT discharged and cannot be discharged by this session.**

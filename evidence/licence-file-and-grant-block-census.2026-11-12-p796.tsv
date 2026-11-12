@@ -1,0 +1,179 @@
+slug	status	n_lic_files	n_grant_blocks	files	detail
+Bestisco/My-WASSCE-Companion	EMPTY_TREE	0	0		
+A-R007/Multi-Agent-Study-Assistant	OK	0	0		
+7irelo/aptiverse	OK	0	0		
+Annyfee/agent-craft	OK	1	1	LICENSE	LICENSE=1064B/1blk[MIT/BSL:1 ];
+Adarsh-61/FunctionVisualizer-V3	OK	1	1	LICENSE	LICENSE=1056B/1blk[MIT/BSL:1 ];
+Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider	OK	1	0	LICENSE_HEADER	LICENSE_HEADER=558B/0blk[];
+CAHLR/OATutor	OK	1	1	LICENSE	LICENSE=1105B/1blk[MIT/BSL:1 ];
+ArnaudGuiovanna/tutor-mcp	OK	1	1	LICENSE	LICENSE=1073B/1blk[MIT/BSL:1 ];
+1edtech/caliper-spec	OK	1	0	LICENSE.md	LICENSE.md=12402B/0blk[];
+Ass-Gaye/waec-ai-tutor	OK	1	1	LICENSE	LICENSE=1065B/1blk[MIT/BSL:1 ];
+Ahhsaaaaan/Thesaurus	OK	1	1	LICENSE.txt	LICENSE.txt=11343B/1blk[APL2:1 ];
+CREARED-EDU-CO/GenPrompt-Pre-ICFES-11	OK	1	1	LICENSE	LICENSE=34523B/1blk[AGPL3:1 ];
+CGSeb/lessonfolk	OK	1	1	LICENSE	LICENSE=1063B/1blk[MIT/BSL:1 ];
+Elite2828/ACE-AI-Tutor	EMPTY_TREE	0	0		
+CaviraOSS/PageLM	OK	1	1	LICENSE.md	LICENSE.md=8563B/1blk[MIT/BSL:1 ];
+Ebimsv/AITutorAgent	OK	1	1	LICENSE	LICENSE=1072B/1blk[MIT/BSL:1 ];
+DaRL-GenAI/instructional_agents	OK	1	1	LICENSE	LICENSE=1067B/1blk[MIT/BSL:1 ];
+Frangersal/TutoriasITA	OK	1	1	LICENSE	LICENSE=1077B/1blk[MIT/BSL:1 ];
+HKUDS/DeepTutor	OK	1	1	LICENSE	LICENSE=11408B/1blk[APL2:1 ];
+INGInious/INGInious	OK	1	1	LICENSE	LICENSE=34764B/1blk[AGPL3:1 ];
+GibbonEdu/core	OK	1	1	LICENSE	LICENSE=35121B/1blk[GPL3/LGPL3:1 ];
+KeWang0622/kaogong-skill	OK	1	1	LICENSE	LICENSE=1083B/1blk[MIT/BSL:1 ];
+Gego-K12/gegok12	OK	1	1	LICENSE	LICENSE=1150B/1blk[MIT/BSL:1 ];
+ILIAS-eLearning/ILIAS	OK	1	1	LICENSE	LICENSE=35147B/1blk[GPL3/LGPL3:1 ];
+Kosudo/nextSIS	OK	1	1	license.txt	license.txt=39890B/1blk[GPL3/LGPL3:1 ];
+Khan/perseus	OK	1	1	LICENSE	LICENSE=1052B/1blk[MIT/BSL:1 ];
+MRiARC/VidyaSetu	OK	0	0		
+LearningLocker/xapi-service	OK	1	1	license	license=1070B/1blk[MIT/BSL:1 ];
+LearningLocker/xapi-validation	OK	1	1	license	license=1070B/1blk[MIT/BSL:1 ];
+Louisdelez/dowze	OK	1	1	LICENSE	LICENSE=1068B/1blk[MIT/BSL:1 ];
+DSpace/DSpace	OK	4	1	LICENSE,LICENSE.header,LICENSES_THIRD_PARTY,NOTICE	LICENSE=1504B/1blk[BSD:1 ];LICENSE.header=194B/0blk[];LICENSES_THIRD_PARTY=91354B/0blk[];NOTICE=1410B/0blk[];
+LIST-LUXEMBOURG/eagle-aig	OK	1	1	license.txt	license.txt=11358B/1blk[APL2:1 ];
+Matias-Sanmiguel/teams-facultad-mcp	OK	1	1	LICENSE	LICENSE=1088B/1blk[MIT/BSL:1 ];
+NSK-394/schoolbridge-mcp	OK	0	0		
+Masondo86/homework-hero-sa	OK	1	1	LICENSE	LICENSE=1070B/1blk[MIT/BSL:1 ];
+Miaotofu01/Study-Mate	OK	1	1	LICENSE	LICENSE=1064B/1blk[MIT/BSL:1 ];
+MrEug3n1o/spanish-tutor-ai	OK	1	1	LICENSE	LICENSE=1069B/1blk[MIT/BSL:1 ];
+NikolasSchaeffner/lehrer-agent	OK	0	0		
+MaharaProject/mahara	OK	1	1	COPYING	COPYING=35148B/1blk[GPL3/LGPL3:1 ];
+MyScript/MyScriptJS	OK	1	0	LICENSE	LICENSE=570B/0blk[];
+Nayak-indie/Timable	OK	1	1	LICENSE	LICENSE=11357B/1blk[APL2:1 ];
+RAFCERAY/horizonia	OK	0	0		
+OS4ED/openSIS-Classic	OK	0	0		
+Prady029/NCERT-AI-Teacher-Assistant	OK	1	1	LICENSE	LICENSE=35149B/1blk[GPL3/LGPL3:1 ];
+OpenTreeMap/otm-core	OK	1	1	LICENSE	LICENSE=35366B/1blk[AGPL3:1 ];
+SoukhyadP991/Multilingual-NCERT-Doubt-Solver	OK	0	0		
+Seongbong-Ha/Haeksim	OK	1	1	LICENSE	LICENSE=1069B/1blk[MIT/BSL:1 ];
+SeydinaBANE/sherpa	OK	1	1	LICENSE	LICENSE=1063B/1blk[MIT/BSL:1 ];
+TaoYu-ds/TutorMesh	OK	0	0		
+VaishnaviSingh-Analyst/Learning-Agent-System	OK	1	1	LICENSE	LICENSE=1086B/1blk[MIT/BSL:1 ];
+VeryMath/VeryMath-textbook-copilot	OK	1	1	LICENSE	LICENSE=11338B/1blk[APL2:1 ];
+Tzxser/aipha-learning-os	OK	1	0	LICENSE	LICENSE=1296B/0blk[];
+OpenOLAT/OpenOLAT	OK	2	2	LICENSE,NOTICE.TXT	LICENSE=10982B/1blk[APL2:1 ];NOTICE.TXT=14412B/1blk[MPL2:1 ];
+Warok-dev/parcours-maths-ia	OK	1	1	LICENSE	LICENSE=1066B/1blk[MIT/BSL:1 ];
+XiucuiGuan/addie-instructional-designer	OK	1	1	LICENSE	LICENSE=1099B/1blk[MIT/BSL:1 ];
+THU-MAIC/OpenMAIC	OK	1	1	LICENSE	LICENSE=1065B/1blk[MIT/BSL:1 ];
+VictorOsondu/ai-adoption-education	OK	1	1	LICENSE	LICENSE=752B/1blk[CC:1 ];
+TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials	OK	2	1	LICENSE,NOTICE	LICENSE=20850B/1blk[CC:1 ];NOTICE=1257B/0blk[];
+Zahraishag/schoolflow-agent	OK	1	1	LICENSE	LICENSE=1081B/1blk[MIT/BSL:1 ];
+Yuanpeng-Li/gradescope-mcp	OK	1	1	LICENSE	LICENSE=1068B/1blk[MIT/BSL:1 ];
+XAIHT/Tlamatini	OK	1	1	LICENSE	LICENSE=1062B/1blk[MIT/BSL:1 ];
+ZeKaiNie/examprep-agent	OK	1	1	LICENSE	LICENSE=1065B/1blk[MIT/BSL:1 ];
+amosblomqvist/learnharness	OK	1	1	LICENSE	LICENSE=34523B/1blk[AGPL3:1 ];
+ankitects/anki	OK	1	0	LICENSE	LICENSE=1930B/0blk[];
+anonymousonyx22/brightspace-d2l-mcp	OK	1	1	LICENSE	LICENSE=1200B/1blk[MIT/BSL:1 ];
+ZoodiacR/llm-edu-suite	OK	1	1	LICENSE	LICENSE=1065B/1blk[MIT/BSL:1 ];
+bruchris/canvas-lms-mcp	OK	1	1	LICENSE	LICENSE=1070B/1blk[MIT/BSL:1 ];
+bigbluebutton/bigbluebutton	OK	1	1	LICENSE	LICENSE=7652B/1blk[GPL3/LGPL3:1 ];
+cosark/OpenTutor	OK	1	1	LICENSE	LICENSE=1068B/1blk[MIT/BSL:1 ];
+ciro-maciel/awesome-ia-sala-de-aula	OK	1	1	LICENSE	LICENSE=7049B/1blk[CC:1 ];
+chc-chupea/news-grade-reader	OK	1	1	LICENSE	LICENSE=35149B/1blk[GPL3/LGPL3:1 ];
+abhijeetgupta23/ai-agent-to-learn-faster-and-better	OK	1	1	LICENSE	LICENSE=1071B/1blk[MIT/BSL:1 ];
+csev/tsugi	OK	1	1	LICENSE	LICENSE=10273B/1blk[APL2:1 ];
+dpaul0501/OpenVidya	OK	1	1	LICENSE	LICENSE=34523B/1blk[AGPL3:1 ];
+elimu-ai/appstore	OK	1	1	LICENSE	LICENSE=1065B/1blk[MIT/BSL:1 ];
+daddysystem/nextgen-learn	OK	1	1	LICENSE	LICENSE=1338B/1blk[MIT/BSL:1 ];
+chamilo/chamilo-lms	OK	2	1	LICENSE,license.txt	LICENSE=35147B/1blk[GPL3/LGPL3:1 ];license.txt=1614B/0blk[];
+elimu-ai/launcher	OK	1	1	LICENSE	LICENSE=1065B/1blk[MIT/BSL:1 ];
+dymchenkko/claude-study-agent	OK	1	1	LICENSE	LICENSE=1067B/1blk[MIT/BSL:1 ];
+elimu-ai/model	OK	1	1	LICENSE	LICENSE=1065B/1blk[MIT/BSL:1 ];
+elimu-ai/ml-storybook-recommender	OK	1	1	LICENSE	LICENSE=1065B/1blk[MIT/BSL:1 ];
+elimu-ai/ml-authentication	OK	1	1	LICENSE	LICENSE=1065B/1blk[MIT/BSL:1 ];
+elimu-ai/ml-storybook-reading-level	OK	1	1	LICENSE	LICENSE=1065B/1blk[MIT/BSL:1 ];
+elimu-ai/webapp	OK	1	1	LICENSE	LICENSE=1065B/1blk[MIT/BSL:1 ];
+foradian/fedena	OK	1	0	NOTICE	NOTICE=679B/0blk[];
+formalms/formalms	OK	0	0		
+francoisjacquet/rosariosis	OK	1	1	LICENSE	LICENSE=15214B/1blk[GPL2:1 ];
+frappe/erpnext	OK	1	1	license.txt	license.txt=35149B/1blk[GPL3/LGPL3:1 ];
+frappe/lms	OK	1	1	license.txt	license.txt=33893B/1blk[AGPL3:1 ];
+gabrielmahia/shule-ai	OK	1	1	LICENSE	LICENSE=209B/1blk[CC:1 ];
+ghwmelite-dotcom/brilla-study-platform	OK	0	0		
+frappe/education	OK	1	0	license.txt	license.txt=19B/0blk[];
+ftrujillo36/TutorLSM	OK	1	1	LICENSE	LICENSE=11357B/1blk[APL2:1 ];
+european-commission-empl/European-Learning-Model	OK	2	0	licence-EUPL 1.2-brightgreen.svg,license	licence-EUPL 1.2-brightgreen.svg=1151B/0blk[];license=13865B/0blk[];
+getodk/collect	OK	1	1	LICENSE.md	LICENSE.md=10494B/1blk[APL2:1 ];
+gsidhu/udise-district-dump	OK	1	1	LICENSE	LICENSE=1075B/1blk[MIT/BSL:1 ];
+haziqhalifi/StudyLah	OK	1	1	LICENSE	LICENSE=1069B/1blk[MIT/BSL:1 ];
+hari7261/AI-Tutor	OK	1	1	LICENSE	LICENSE=1090B/1blk[MIT/BSL:1 ];
+iagommendes/bncc-lesson-generator	OK	1	1	LICENSE	LICENSE=1068B/1blk[MIT/BSL:1 ];
+hedyorg/hedy	OK	1	0	LICENSE	LICENSE=13827B/0blk[];
+h5p/h5p-php-library	OK	1	1	LICENSE.txt	LICENSE.txt=35146B/1blk[GPL3/LGPL3:1 ];
+ionpetro/skepsis	OK	1	1	LICENSE	LICENSE=1072B/1blk[MIT/BSL:1 ];
+ibenian/algebench	OK	1	1	LICENSE	LICENSE=1063B/1blk[MIT/BSL:1 ];
+janestreet/agent_skills	OK	1	1	LICENSE.md	LICENSE.md=1120B/1blk[MIT/BSL:1 ];
+goyanedelv/paes-mcp	OK	1	0	LICENSE	LICENSE=2018B/0blk[];
+huggingface/smolagents	OK	1	1	LICENSE	LICENSE=11357B/1blk[APL2:1 ];
+instructure/canvas-lms	OK	1	1	LICENSE	LICENSE=34520B/1blk[AGPL3:1 ];
+jinlize-tech/edu-ai-usage-policy-agent	OK	1	1	LICENSE	LICENSE=11358B/1blk[APL2:1 ];
+jeevanjacob1/TIMETABLE-SOFTWARE	OK	1	1	LICENSE	LICENSE=1056B/1blk[MIT/BSL:1 ];
+jkbrzt/rrule	OK	1	2	LICENCE	LICENCE=3493B/2blk[BSD:2 ];
+jungtaejin/spring-ai-tutor	OK	1	1	LICENSE	LICENSE=1069B/1blk[MIT/BSL:1 ];
+jupyter/nbgrader	OK	1	1	LICENSE	LICENSE=1512B/1blk[BSD:1 ];
+kaikai52125/NeoTutor	OK	0	0		
+jupyter/notebook	OK	1	1	LICENSE	LICENSE=1588B/1blk[BSD:1 ];
+jw-wuzhen/hsk-tcsl-skills	OK	1	1	LICENSE	LICENSE=1108B/1blk[MIT/BSL:1 ];
+jupyterhub/jupyterhub	OK	1	1	LICENSE	LICENSE=1475B/1blk[BSD:1 ];
+jolicastrog/mi_icfes	OK	1	1	LICENSE	LICENSE=1068B/1blk[MIT/BSL:1 ];
+kamalelafoui/Agentic-AI-EdTech-J33-J34	OK	1	1	LICENSE	LICENSE=1071B/1blk[MIT/BSL:1 ];
+jinlize-tech/education-ai-ecosystem	OK	2	1	LICENSE,LICENSE_STATUS.md	LICENSE=11358B/1blk[APL2:1 ];LICENSE_STATUS.md=1394B/0blk[];
+lehrer-tools/lehrer-agent	OK	0	0		
+labmlai/annotated_deep_learning_paper_implementations	OK	1	1	license	license=1082B/1blk[MIT/BSL:1 ];
+llwand1/xuelian-agent	OK	1	1	LICENSE	LICENSE=1062B/1blk[MIT/BSL:1 ];
+learningequality/kolibri	OK	1	1	LICENSE	LICENSE=1097B/1blk[MIT/BSL:1 ];
+langchain-ai/langgraph	OK	1	1	LICENSE	LICENSE=1072B/1blk[MIT/BSL:1 ];
+mandarab76/CBSE_Home-Tutor	OK	1	1	LICENSE	LICENSE=1077B/1blk[MIT/BSL:1 ];
+mantou6666/Math-Modeling-Agent-Flow	OK	1	1	LICENSE	LICENSE=1067B/1blk[MIT/BSL:1 ];
+mingxuanyan07-lgtm/ai-for-education-showcase	OK	0	0		
+luscitiosus/Dirigo	OK	1	0	LICENSE	LICENSE=362B/0blk[];
+masa-san-jp/jp-k12-digital-ai-textbook	OK	1	1	LICENSE.md	LICENSE.md=1068B/1blk[MIT/BSL:1 ];
+microsoft/ai-agents-for-beginners	OK	1	1	LICENSE	LICENSE=1141B/1blk[MIT/BSL:1 ];
+narumi-mase/osaka-lesson-dataset	OK	0	0		
+kumaken-1/school-office-generative-ai-30	OK	2	3	LICENSE-CODE,LICENSE-CONTENT	LICENSE-CODE=1102B/1blk[MIT/BSL:1 ];LICENSE-CONTENT=925B/2blk[CC:2 ];
+nahisaho/teacher-genai-playbook	OK	1	1	LICENSE	LICENSE=1222B/1blk[CC:1 ];
+moodle/moodle	OK	1	1	COPYING.txt	COPYING.txt=35147B/1blk[GPL3/LGPL3:1 ];
+nitoni-jim/ai-tutor-app	OK	1	1	LICENSE	LICENSE=1074B/1blk[MIT/BSL:1 ];
+nuwaves/socratic-tutor	OK	1	1	LICENSE	LICENSE=1143B/1blk[MIT/BSL:1 ];
+nestauk/skills-taxonomy-v2	OK	1	1	LICENSE	LICENSE=1096B/1blk[MIT/BSL:1 ];
+ollama/ollama	OK	1	1	LICENSE	LICENSE=1058B/1blk[MIT/BSL:1 ];
+naritaroad/tracen-ai-tazuna	OK	2	1	LICENSE,NOTICE.md	LICENSE=1067B/1blk[MIT/BSL:1 ];NOTICE.md=7341B/0blk[];
+omerfarooq223/AutoGrader-Agent	OK	1	1	LICENSE	LICENSE=1077B/1blk[MIT/BSL:1 ];
+metabase/metabase	OK	4	1	LICENSE-AGPL.txt,LICENSE-EMBEDDING.txt,LICENSE-MCL.txt,LICENSE.txt	LICENSE-AGPL.txt=37265B/1blk[AGPL3:1 ];LICENSE-EMBEDDING.txt=8877B/0blk[];LICENSE-MCL.txt=425B/0blk[];LICENSE.txt=855B/0blk[];
+open-education-api/specification	OK	1	0	LICENSE.md	LICENSE.md=13827B/0blk[];
+openeducat/openeducat_erp	OK	1	1	LICENSE	LICENSE=8241B/1blk[GPL3/LGPL3:1 ];
+openedx/edx-ora2	OK	1	1	LICENSE	LICENSE=35135B/1blk[AGPL3:1 ];
+odoo/odoo	OK	1	2	LICENSE	LICENSE=43529B/2blk[GPL3/LGPL3:2 ];
+opencast/opencast	OK	1	1	LICENSE	LICENSE=11340B/1blk[ECL2:1 ];
+onderwijsin/agents	OK	1	1	LICENSE	LICENSE=1079B/1blk[MIT/BSL:1 ];
+orancs11/GradeAI	OK	1	1	LICENSE	LICENSE=1061B/1blk[MIT/BSL:1 ];
+openedx/edx-platform	OK	1	1	LICENSE	LICENSE=35136B/1blk[AGPL3:1 ];
+paoloantinori/school-timetable-timefold-case-study	OK	1	1	LICENSE	LICENSE=1081B/1blk[MIT/BSL:1 ];
+redoneabouaali-lab/najih	OK	0	0		
+plastic-labs/tutor-gpt	OK	1	1	LICENSE	LICENSE=35149B/1blk[GPL3/LGPL3:1 ];
+praj2408/RAG-Enhanced-NCERT-Tutor	OK	1	1	LICENSE	LICENSE=1072B/1blk[MIT/BSL:1 ];
+open-webui/open-webui	OK	3	3	LICENSE,LICENSE_HISTORY,LICENSE_NOTICE	LICENSE=2819B/1blk[BSD:1 ];LICENSE_HISTORY=2872B/2blk[MIT/BSL:1 BSD:1 ];LICENSE_NOTICE=721B/0blk[];
+overhangio/tutor	OK	1	1	LICENSE.txt	LICENSE.txt=34523B/1blk[AGPL3:1 ];
+myvipbackup2/china-k12-teacher-skills	OK	2	1	LICENSE,NOTICE	LICENSE=11359B/1blk[APL2:1 ];NOTICE=693B/0blk[];
+rizukirr/no-vibe	OK	1	1	LICENSE	LICENSE=1065B/1blk[MIT/BSL:1 ];
+qiyuxi24/AI-tutor	OK	1	1	LICENSE	LICENSE=1065B/1blk[MIT/BSL:1 ];
+silja-graf/Didaktikus-KI-Spezialist-f-r-Unterrichtsplanung-und-Beurteilung-nach-LP21	OK	0	0		
+tosinamuda/teacher-agent-itu-hackathon	OK	0	0		
+oppia/oppia	OK	2	1	LICENSE,NOTICE	LICENSE=11358B/1blk[APL2:1 ];NOTICE=146B/0blk[];
+sakaiproject/sakai	OK	2	1	LICENSE,licenses	LICENSE=11120B/1blk[ECL2:1 ];licenses=4380B/0blk[];
+rohitg00/ai-engineering-from-scratch	OK	1	1	LICENSE	LICENSE=1070B/1blk[MIT/BSL:1 ];
+shivarajbakale/coursewright	OK	1	1	LICENSE	LICENSE=1072B/1blk[MIT/BSL:1 ];
+shan8851/classcharts-agent	OK	1	1	LICENSE	LICENSE=1066B/1blk[MIT/BSL:1 ];
+satvik314/educhain	OK	1	1	LICENSE	LICENSE=1092B/1blk[MIT/BSL:1 ];
+thesavvybyjude/Offline-First-Android-AI-Tutoring-App	OK	1	1	LICENSE	LICENSE=1070B/1blk[MIT/BSL:1 ];
+uchit/mcp-regulated-ai-compliance	OK	1	2	LICENSE	LICENSE=12227B/2blk[APL2:1 CC:1 ];
+sangadanson1-dot/-Vet-IDEA-TZ	OK	1	1	LICENSE	LICENSE=1067B/1blk[MIT/BSL:1 ];
+villadalmine/rag-tutor	OK	1	1	LICENSE	LICENSE=7450B/1blk[APL2:1 ];
+vishalsachdev/canvas-mcp	OK	1	1	LICENSE	LICENSE=1071B/1blk[MIT/BSL:1 ];
+vulinh1704/ai-tutor-agent	OK	1	1	LICENSE	LICENSE=1071B/1blk[MIT/BSL:1 ];
+zulfahmi93/susun-jadual	OK	0	0		
+vllm-project/vllm	OK	1	1	LICENSE	LICENSE=11357B/1blk[APL2:1 ];
+yashpandey2409/Multimodal-RAG-AI-Tutor-Agent	OK	1	1	LICENSE	LICENSE=1068B/1blk[MIT/BSL:1 ];
+zijinz456/OpenTutor	OK	1	1	LICENSE	LICENSE=1068B/1blk[MIT/BSL:1 ];
+littlecookie0722/AI-Teaching-Agent	OK	1	1	LICENSE	LICENSE=1069B/1blk[MIT/BSL:1 ];
+patchy631/ai-engineering-hub	OK	1	1	LICENSE	LICENSE=1066B/1blk[MIT/BSL:1 ];

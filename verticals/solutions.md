@@ -4,6 +4,44 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p796` — **the brand layer is a separate licence question, and on three platforms in this file the answer is more restrictive than the code. `metabase`'s carve-out is now SIZED; `DSpace`'s third-party anthology is opened and turns out to be a deliverable.**
+
+### 🔴 `T914` — the licence that lets you ship the platform is not the licence that lets you put the client's name on it
+
+🔴 **Every engagement in this file ends in a white-labelled deployment. `p796` counted root licence FILES across `174` addresses and found that on three platforms recommended here, the brand assets are carved out of the permissive grant:**
+
+| Platform | Code licence | 🔴 Brand / embed layer | 🟢 What to do about it |
+|---|---|---|---|
+| 🔴 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · `10,982 B` | 🔴 **`NOTICE.TXT` (`14,412 B`): *"The OpenOlat logo and icons … are released under the Creative Commons Attribution-NoDerivs 2.5 license."*** | 🟢 **REPLACE the logo and icon set outright.** 🔵 `NoDerivs` forbids modifying them; it does not forbid shipping your own. 🟢 The code stays Apache-2.0 and the row stays the permissive EMEA choice |
+| 🔴 [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | 🔴 **BSD-3-Clause + a fourth clause** · `2,819 B` | 🔴 **Clause `4`: altering, removing or replacing *"Open WebUI" branding* is a material breach** (`T900`) | 🔴 **Cannot be delivered white-labelled at all.** 🟢 Use it as an internal tool or negotiate a licence; do not plan a rebranded delivery on it |
+| 🔴 [`metabase/metabase`](https://github.com/metabase/metabase) | 🔴 **AGPL-3.0** · `37,265 B` | 🔴 **`4` root licence files, `1` OSI grant.** `LICENSE-EMBEDDING.txt` is **`8,877 B` of terms containing NO recognised grant**, plus `LICENSE-MCL.txt` (`425 B`) and `LICENSE.txt` (`855 B`) | 🔴 **Embedding analytics into a client portal is the exact act the `8,877 B` governs.** 🟢 Read it, or choose a dashboard without a per-file carve-out |
+
+🔵 **The general rule, and it is cheap to apply: list the root tree, not just the root `LICENSE`.** 🟢 **A vendor's carve-out is always on the piece they most want to control — the embed, the client, the brand.** 🔴 **Three for three, on rows this file already recommended.**
+
+### 🟢 `DSpace` — the third-party anthology is a procurement asset (`T920`)
+
+🟢 **[`DSpace/DSpace`](https://github.com/DSpace/DSpace) ships `LICENSES_THIRD_PARTY` (`91,354 B`): `721` dependency entries grouped by licence, with the project's policy stated in its own preamble — *"DSpace actually does NOT allow for any dependencies that are solely released under GPL terms."*** 🟢 **Verified: the single `GPL-3.0` entry (`juniversalchardet:2.5.0`) is dual-listed under `LGPL`.** 🟡 **~`13` `LGPL`-named entries** (`openpdf`, `jna` `LGPL-2.1-or-later`, `JHighlight`, `8` × `java-json-tools`) — 🟢 low risk for a server-side repository, and the first thing legal asks for. 🟢 **Hand this file over rather than generating one.**
+
+### 🔴 `odoo`'s licence file carries the GPL verbatim as well as the LGPL
+
+🔴 **[`odoo/odoo`](https://github.com/odoo/odoo)'s single `43,529 B` `LICENSE` holds TWO grants: `LGPL-3.0` at line `15` and the FULL `GPL-3.0` text at line `183`.** 🔵 **This base spent four passes (`p222`–`p225`) resolving `openeducat`'s LGPL bound against Odoo's manifest grammar. `p796` adds the structural fact underneath it: the file those readings rest on is not one licence.** 🟢 **For a deployment that only *uses* Odoo the practical answer is unchanged; for one that redistributes a modified Odoo, both texts are in scope.**
+
+### 🟢 Platform licence-file counts — the census row every platform here now has
+
+| Platform | Root licence files | Grants | Note |
+|---|---|---|---|
+| `metabase/metabase` | 🔴 **`4`** | `1` OSI | 🔴 `8,877 B` embedding carve-out with no grant |
+| `DSpace/DSpace` | `4` | `1` | 🟢 `91,354 B` third-party disclosure — an asset |
+| `open-webui/open-webui` | 🔴 **`3`** | 🔴 `3` | 🔴 branding rider + MIT/BSD relicensing record |
+| `OpenOLAT/OpenOLAT` | `2` | `1` | 🔴 `CC BY-ND 2.5` brand assets in `NOTICE.TXT` |
+| `oppia/oppia` | `2` | `1` | 🟢 Apache-2.0 + a `146 B` NOTICE — clean |
+| `chamilo/chamilo-lms` | `2` | `1` | 🟢 one `GPL-3.0` grant; the second file is a `1,614 B` notice |
+| `sakaiproject/sakai` | `2` | `1` | 🟢 `ECL-2.0` |
+| `moodle/moodle` · `odoo/odoo` · `instructure/canvas-lms` · `openedx/edx-platform` | `1` | `1` · 🔴 **`2`** · `1` · `1` | 🟢 `odoo` is the outlier — see above |
+
+🔵 **`19` rows in this base serve no root licence file at all and `12` serve one this pass could not grade.** 🟢 Both numbers are published; neither is folded into the other.
+
+
 ## 🆕 `p795` — **The BI layer this file recommends forbids the embed it was recommended for, and the strongest new platform row is a Moodle plugin — AI on top of the incumbent, not a replacement for it.**
 
 ### 🔴 `T912` — `metabase` cannot be embedded white-labelled, and this file's analytics advice assumed it could
@@ -196,7 +234,7 @@ architecture**, not a convenience.
 | **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 AGPL-3.0 · `34,520 B` · `1c9f0bb8013e` | — | North America | Dominant in US higher ed. 🟢 Strong LTI 1.3 support — the sanctioned attachment point |
 | **D2L Brightspace** | proprietary SaaS — [`anonymousonyx22/brightspace-d2l-mcp`](https://github.com/anonymousonyx22/brightspace-d2l-mcp) | 🟢 **MIT** · `1,200 B` · `a873478a6b4e` | — | North America | 🟢 **New this pass.** The third major North American LMS, and until now the only one with no attachment point in this base. The platform is proprietary; **the MCP server over it is MIT**, which is the whole point — attach, never replace |
 | **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** · `11,120 B` · `593c74e1c7a5` | — | North America | 🟢 **Permissive and mature.** When a client wants a customised LMS they can own outright, this is the one that does not force disclosure |
-| **OpenOLAT** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · `10,982 B` · `322e90dd5507` | — | EMEA | 🟢 The permissive choice for a European university, already trusted in Swiss and German HE |
+| **OpenOLAT** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · `10,982 B` · `322e90dd5507` | — | EMEA | 🟢 The permissive choice for a European university, already trusted in Swiss and German HE. 🔴 **`p796` (`T914`): `NOTICE.TXT` (`14,412 B`) licenses the logo and icons `CC BY-ND 2.5` — `NoDerivs`. Replace the brand assets; do not modify them** |
 | **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 GPL-3.0 · `35,147 B` · `e137bded10b5` | — | EMEA | 🟢 **The strongest Spanish-language LMS footprint; widely deployed across LATAM ministries and universities** — the incumbent to integrate with, not displace |
 | **ILIAS** | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 GPL-3.0 · `35,147 B` · `87a79b237fcc` | — | EMEA | German public-sector and university installs; SCORM-heavy |
 | **Frappe LMS** | [`frappe/lms`](https://github.com/frappe/lms) | 🔴 AGPL-3.0 · `33,893 B` · `45edbff87486` | — | APAC | Modern Indian-origin LMS; pairs with ERPNext and `frappe/education` for a full institution stack |
@@ -232,7 +270,7 @@ architecture**, not a convenience.
 | **MyScriptJS** 🔴 **ARCHIVED** | [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) | 🟢 **Apache-2.0 (by reference)** · `570 B` · `968021fcc1f4` | — | EMEA | 🔴 **ARCHIVED UPSTREAM, last push `2021-01-04` (`T901`)** — `★357`. Handwriting and **maths** input recognition, French origin, the input primitive for a maths tutor on a tablet — 🔴 **but unmaintained for nearly six years.** Rescued from this base's unusable class this pass |
 | **Mahara** 🔴 **ARCHIVED** | [`MaharaProject/mahara`](https://github.com/MaharaProject/mahara) | 🔴 GPL-3.0 · `35,148 B` | — | Global | 🔴 **ARCHIVED UPSTREAM, last push `2023-11-16` (`T901`)** — read-only, `★120`. ePortfolio, still the natural home for skills-based credentialing, 🔴 **but the engagement owns the fork from day one** |
 | **DSpace** | [`DSpace/DSpace`](https://github.com/DSpace/DSpace) | 🟢 BSD-3-Clause · `1,504 B` · `2d991b4832bb` | — | Global | Institutional repository for OER, theses and research output |
-| **Anki** | [`ankitects/anki`](https://github.com/ankitects/anki) | 🔴 AGPL-3.0 · `1,930 B` · `a5461e33e3db` | — | Global | The reference spaced-repetition scheduler. 🟡 For a permissive recurrence primitive instead, use [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) (BSD-3, `3,493 B`) — 🔴 **but it is STALE: last push `2024-06-27`, `28` months, not archived (`p795`).** 🟢 Recurrence rules are frozen mathematics, so the staleness is near-harmless here; pin the version and own the fork knowingly |
+| **Anki** | [`ankitects/anki`](https://github.com/ankitects/anki) | 🔴 AGPL-3.0 · `1,930 B` · `a5461e33e3db` 🔴 **(`p796` `T919`: the `1,930 B` is a POINTER, not a grant — it DECLARES `AGPL-3.0-or-later` plus BSD-3 contributed portions, and neither text ships at root)** | — | Global | The reference spaced-repetition scheduler. 🟡 For a permissive recurrence primitive instead, use [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) (BSD-3, `3,493 B`) — 🔴 **but it is STALE: last push `2024-06-27`, `28` months, not archived (`p795`).** 🟢 Recurrence rules are frozen mathematics, so the staleness is near-harmless here; pin the version and own the fork knowingly |
 | **ODK Collect** | [`getodk/collect`](https://github.com/getodk/collect) | 🟢 **Apache-2.0** · `10,494 B` · `2344bb9c5da4` | — | Global | 🟢 Offline mobile data collection — the field instrument for a readiness diagnostic or a baseline survey where connectivity fails |
 | 🔴 **Metabase** | [`metabase/metabase`](https://github.com/metabase/metabase) | 🔴 **SPLIT BY DIRECTORY** · `855 B` · `6006cc9c65dd` | — | Global | Frequently the BI layer a client already runs over learning data. 🔴 **AGPL-3.0 outside `enterprise/`, Metabase Commercial License inside it.** Deploy it; do not vendor code out of it without deciding which side of the boundary you are on |
 
@@ -289,7 +327,7 @@ That second clause is new, and it is the whole point of `T861`:
 | `CAHLR/OATutor` | MIT | 🟢 `0` of `43` copyleft | 🟢 **Yes** |
 | `learningequality/kolibri` | MIT | 🟡 `2` LGPL of `32` | 🟡 **Yes, with the LGPL components kept replaceable and their source available** |
 | `oppia/oppia` | Apache-2.0 | 🔴 `1` **AGPL-3.0** of `171` | 🔴 **Not until `angular-shepherd` is removed or replaced** |
-| `sakaiproject/sakai` · `OpenOLAT` · `opencast` | ECL-2.0 / Apache-2.0 | ⚪ not audited | 🟡 **Permissive at the root; audit before shipping** |
+| `sakaiproject/sakai` · `OpenOLAT` · `opencast` | ECL-2.0 / Apache-2.0 | ⚪ not audited | 🟡 **Permissive at the root; audit before shipping.** 🔴 **`p796`: `OpenOLAT` audited and the root was not the whole answer — brand assets `CC BY-ND 2.5` in `NOTICE.TXT` (`T914`)** |
 | 🟢 **`Kosudo/nextSIS`** `CORRECTED p790` | 🔴 **GPL-3.0** (served in an anthology) | ⚪ not audited | 🔴 **No — separate deployment, integrate at the boundary.** 🟢 **But it is now *usable*, which is the change:** this base barred it as proprietary for two passes. **The only open Student Information System it holds** |
 | 🟢 **`MrEug3n1o/spanish-tutor-ai`** `NEW p790` | 🟢 MIT | ⚪ not audited | 🟡 **Permissive at the root — and the only row here with no external model call in its default loop.** That removes the cross-border data question instead of governing it, which is why `P788-4` now has a reference implementation |
 | 🟡 **`jinlize-tech/*`** `NEW p790` | 🟢 Apache-2.0 (`100/100` sampled) | ⚪ not audited | 🟡 **Grant clean, code `0/130` platform-validated by its own README.** Take the `8`-centre back-office taxonomy now; take the packages only after your own tests |

@@ -4,6 +4,160 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p796` — **eight findings. The headline is that on the rows this base recommends for white-labelling, the permissive grant covers the CODE and the BRAND ASSETS are licensed separately and more restrictively — three independent instances, one of them `NoDerivs`. The second headline is that `5` of my own `32` initial multi-grant flags survived, and the controls that certified the instrument could not have caught the error.**
+
+## `T914` — the brand layer is licensed separately from the code layer, and that is where white-labelling dies
+
+🔴 **`T900` found a branding rider on one row and read it as a rider problem. `p796` counted licence FILES across `174` addresses (`p795-B`) and the rider turns out to be one instance of a structural pattern: the repository's permissive grant governs the code, and the logo, icons and embed are carved out separately.** 🔴 **Three independent instances, all on rows this base actively recommends:**
+
+| Row | Published grade | 🔴 What a second licence file actually says |
+|---|---|---|
+| 🔴 [`open-webui/open-webui`](https://github.com/open-webui/open-webui) `★158,483` | 🟢 `BSD-3-Clause` | 🔴 **Clause `4` of `LICENSE` (`2,819 B`) makes altering or replacing *"Open WebUI" branding* a material breach** (`T900`). 🟢 `p796` adds the third file: `LICENSE_HISTORY` (`2,872 B`) carries **two** grants — MIT *and* BSD — i.e. it is the relicensing record, which is why it grades "clean" |
+| 🔴 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) `★451` | 🟢 `Apache-2.0` · `10,982 B` | 🔴 **`NOTICE.TXT` (`14,412 B`) — a file this base had never opened — states: *"The OpenOlat logo and icons … are released under the Creative Commons Attribution-NoDerivs 2.5 license."*** 🔴 **`NoDerivs` on the brand assets of the row this base calls *"the permissive LMS for an EMEA engagement"*** |
+| 🔴 [`metabase/metabase`](https://github.com/metabase/metabase) | 🔴 `AGPL-3.0` | 🔴 **`4` root licence files, and only `1` contains an OSI grant.** `LICENSE-AGPL.txt` (`37,265 B`) is the AGPL. 🔴 **`LICENSE-EMBEDDING.txt` is `8,877 B` of terms containing NO recognised grant at all**, plus `LICENSE-MCL.txt` (`425 B`) and `LICENSE.txt` (`855 B`) (`T912`) |
+
+🔵 **The commercial statement, and it is the same sentence in all three cases: the licence that lets you ship the software is not the licence that lets you put the client's name on it.** 🟢 **An engagement whose deliverable is a white-labelled platform must grade the brand layer as a separate question, and the brand layer is never in the root `LICENSE`.** 🔵 **Grading the root `LICENSE` alone finds none of these three.**
+
+## `T915` — `p795-B` asked for a licence-FILE count; the unit is the GRANT, and a file count is only a proxy for it
+
+🟢 **`ACTION p795-B` discharged across `174` live addresses in `16` seconds** ([`evidence/licence-file-and-grant-block-census.2026-11-12-p796.tsv`](../evidence/licence-file-and-grant-block-census.2026-11-12-p796.tsv)). 🟢 **Nothing in this base had ever recorded a licence-file count per repository.**
+
+| Root licence files | Rows | |
+|---|---|---|
+| `0` | 🔴 **`19`** | 🔵 the ungranted-at-root population, already tracked here by other means |
+| `1` | `142` | |
+| `2` | `10` | |
+| `3` | `1` | `open-webui` |
+| `4` | `2` | `metabase`, `DSpace` |
+
+🔴 **But a file count is the wrong unit in both directions.** 🟢 **`5` rows carry MORE THAN ONE GRANT, and `3` of the `5` carry them inside a SINGLE file — invisible to any file count:**
+
+| Row | Files | 🔴 Grants actually served | Read |
+|---|---|---|---|
+| 🔴 [`odoo/odoo`](https://github.com/odoo/odoo) | `1` | 🔴 **`2` — `LGPL-3.0` at line `15`, then the FULL `GPL-3.0` text at line `183`**, in one `43,529 B` file | 🟢 byte-read |
+| 🔴 [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | `1` | 🔴 **`2` BSD-3-Clause grants — its own, then `python-dateutil`'s** (Niemeyer / Pieviläinen), because `rrule.js` is a port. `3,493 B` | 🟢 byte-read |
+| 🔴 [`uchit/mcp-regulated-ai-compliance`](https://github.com/uchit/mcp-regulated-ai-compliance) | `1` | 🟡 **`2` — Apache-2.0 + a Creative Commons grant** in one `12,227 B` file | 🟡 measured, not byte-read |
+| 🔴 [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | `3` | 🔴 **`3` — ridered BSD, plus MIT + BSD in `LICENSE_HISTORY`** | 🟢 byte-read |
+| 🟢 [`kumaken-1/school-office-generative-ai-30`](https://github.com/kumaken-1/school-office-generative-ai-30) | `2` | 🟢 **`2` — MIT (`LICENSE-CODE`) + CC BY 4.0 (`LICENSE-CONTENT`)** | 🟢 byte-read · 🟢 **reproduces this base's own `T869`** |
+
+🔵 **And `19` rows have no root licence file while `31` return no recognised grant — so `12` rows serve a licence file this pass could not grade.** 🟢 **Both numbers are published rather than collapsed into one.**
+
+## `T916` — a classifier's ABSTENTION is a signal; its NON-abstention on a multi-grant row is a silent loss, and what it drops is the content licence
+
+🟢 **`T900` established that GitHub's `NOASSERTION` was more honest than this base's hand grade. `p796` measures the rule and finds it two-sided.**
+
+🟢 **Enrichment: `3` of the `5` multi-grant rows are `NOASSERTION` in GitHub's SPDX** (`odoo`, `rrule`, `open-webui`) 🔴 **against a base rate of `26` of `167` = `15.6%`** — 🟢 **a ~`3.9×` enrichment, so abstention is a cheap screen for multi-grant rows.** 🔵 **But only `3` of `26` `NOASSERTION` rows are multi-grant, so abstention is a screen and never a verdict.**
+
+🔴 **The other half is worse, and it is new.** 🔴 **The `2` multi-grant rows GitHub DID grade are both code/content splits, and in BOTH cases it reported the CODE licence and silently discarded the CONTENT licence:**
+
+| Row | 🔴 GitHub SPDX | 🔴 What it dropped |
+|---|---|---|
+| [`kumaken-1/school-office-generative-ai-30`](https://github.com/kumaken-1/school-office-generative-ai-30) | `MIT` | 🔴 **CC BY 4.0 on every quest text, explanation and printable** — i.e. the teaching material |
+| [`uchit/mcp-regulated-ai-compliance`](https://github.com/uchit/mcp-regulated-ai-compliance) | `Apache-2.0` | 🔴 **the Creative Commons grant in the same file** |
+
+🔵 **In this industry that is exactly the wrong half to lose. The code licence governs the software; the content licence governs the curriculum — the asset a client most wants to reuse, translate and rebrand.** 🟢 **Rule: on any row with more than one grant, the classifier's single answer is a fraction, not a summary — and the fraction it keeps is the code.**
+
+## `T917` — a control set drawn from the rows that motivated a gate cannot detect the gate's FALSE POSITIVES
+
+🔴 **`p795-G` required that a gate be controlled on the row that motivated it. I did that, on `4` rows (`rrule`, `open-webui`, `PageLM`, `oppia`), and all `4` reproduced. The instrument was still wrong on `26` rows.**
+
+🔴 **The first instrument counted grants by matching the licence NAME at line start. It reported `32` multi-grant rows. The true count is `5`.** 🔵 **Mechanism: a single long copyleft text names itself several times — GPL-3.0's `35,147 B` contains `GNU General Public License` at line start **four** times (title, preamble, §14, and the appendix notice). So every GPL row scored `4` and every Apache/ECL row scored `3`.** 🟢 **Ground truth read by hand: `moodle/moodle`'s `COPYING.txt` is ONE grant; `chamilo/chamilo-lms` is ONE; `odoo/odoo` is genuinely TWO.**
+
+🔴 **Why `p795-G`'s rule was necessary but not sufficient: all four of my controls were SHORT PERMISSIVE files — `3,493 B`, `2,819 B`, `8,563 B`, `11,358 B`.** 🔴 **None of them is a `35 KB` copyleft text, so none of them could exhibit the defect.** 🟢 **Rebuilt on per-grant VERSION LINES (`Version 3, 29 June 2007`, `Version 2.0, January 2004`, …), which occur exactly once per grant instance, the gate reproduces `9` of `9` controls across BOTH kinds.**
+
+🔴 **Two further over-reports in the rebuilt instrument, both caught by reading the bytes and both the same mistake — `grep -c` counts LINES, not occurrences:** 🔴 `kumaken-1`'s `925 B` `LICENSE-CONTENT` names CC BY 4.0 on two lines and is ONE grant (`3`→`2`); 🔴 `OpenOLAT`'s `NOTICE.TXT` mentions the Mozilla Public License in a third-party list and is NOT an MPL grant (`2`→`1`). 🟢 **`0` of these three over-reports reached publication, and the uncorrected artefact is published beside the corrected one** ([`licence-block-census-UNCORRECTED-v1`](../evidence/licence-block-census-UNCORRECTED-v1.2026-11-12-p796.tsv)) 🔵 **so the `32`→`5` correction can be re-derived rather than taken on trust.**
+
+🟢 **→ `p796-G`: a control set must span the population's KINDS, not just the rows that motivated the gate.** 🔵 **`p795-G` protects against a false zero; it does nothing about a false alarm. `T911` already said over-reports and under-reports are both defects at different prices — `T917` says they also need different control sets.**
+
+## `T918` — `EUPL-1.2` is the third licence FAMILY this base's clause set has been missing, and it is the European one
+
+🔴 **`p793-B` found the clause set had no `ECL-2.0` — this industry's own licence. `p795` found it had no `BSL-1.0`. `p796` finds it has no `EUPL-1.2`.**
+
+🟢 **`3` rows serve it, and two of them are byte-identical:** [`hedyorg/hedy`](https://github.com/hedyorg/hedy) (★`1,697`, `13,827 B`) and [`open-education-api/specification`](https://github.com/open-education-api/specification) (`13,827 B`) — 🟢 **the same `EUROPEAN UNION PUBLIC LICENCE v. 1.2` text to the byte** — plus 🔴 [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) (`13,865 B`, 🔴 **archived**, `T901`). 🟢 **GitHub's SPDX independently reports exactly `3` `EUPL-1.2` rows, so the identification is two-channel.**
+
+🔵 **Why it matters commercially and not just taxonomically: `EUPL-1.2` is the European Commission's own licence, it is COPYLEFT, and it is the one licence in this base with a statutory compatibility list rather than a compatibility opinion.** 🔴 **It is also the licence an EMEA public-sector education engagement is most likely to actually meet** — and the row carrying it, `hedy`, is a `★1,697` school programming environment. 🟢 **Three passes, three missing families, and all three were found by measuring bytes rather than trusting a family name.**
+
+## `T919` — a licence file can be a STATEMENT ABOUT grants rather than a grant, and both a file count and a grant count misread it
+
+🔴 [`ankitects/anki`](https://github.com/ankitects/anki) · `LICENSE` · `1,930 B`. 🔴 **It contains no licence text at all. It reads:** *"Anki is licensed under the GNU Affero General Public License, version 3 or later, with portions contributed by Anki users licensed under the BSD-3 license (see CONTRIBUTORS)."*
+
+🔴 **A file count reads `1`. A grant-block count reads `0`. The truth is TWO families, `AGPL-3.0-or-later` and `BSD-3-Clause`, neither of whose text ships at root.** 🔵 **`T913` said a declaration is not a grant; `T919` adds that a declaration can be the only thing in the file, and that it can declare MORE than the classifier records** — 🟢 GitHub grades `anki` `AGPL-3.0` and the BSD-3 portions are invisible there too, which is `T916`'s loss in a second shape.
+
+🟢 **This base publishes `anki` as `🔴 AGPL-3.0 · 1,930 B`, which is right about the governing licence and silent about the `1,930 B` being a pointer.** 🟢 Corrected in place in [`verticals/solutions.md`](../verticals/solutions.md).
+
+## `T920` — `DSpace`'s `91,354 B` third-party anthology is a DELIVERABLE, not a hazard, and it says so itself (`p795-C`)
+
+🟢 **`ACTION p795-C` discharged for its located target.** 🔴 **`p795` recorded a `91,354 B` `LICENSES_THIRD_PARTY` file in `DSpace/DSpace`'s root tree as "unopened" — the implication being an undiscovered copyleft exposure under a row graded `BSD-3-Clause` (`1,504 B`). 🟢 Opened, it is close to the opposite.**
+
+🟢 **`721` dependency entries grouped by licence, and the file states the project's own policy in its preamble:** *"DSpace actually does NOT allow for any dependencies that are solely released under GPL terms."* 🟢 **The policy holds under measurement: the `GPL-3.0` section contains exactly ONE entry — `juniversalchardet:2.5.0` — and that same artefact is ALSO listed under `LGPL`, i.e. it is dual-licensed, which is precisely the case the preamble describes.**
+
+🟡 **What is real: ~`13` `LGPL`-named entries**, including `openpdf:2.0.5`, `jna:5.18.1` (`LGPL-2.1-or-later`), `JHighlight`, `FindBugs-Annotations` and **`8` `java-json-tools` artefacts** (`json-patch`, `json-schema-validator`, `json-schema-core`, `jackson-coreutils`, …). 🟢 **For a server-side repository platform that is low risk — no modified library is distributed — but it is the first question a client's legal review asks.**
+
+🟢 **The commercial reframe: this file is the third-party licence disclosure an engagement would otherwise have to generate, already built and already versioned.** 🔵 **`DSpace` is the only platform in this base that ships one. 🔴 Every other `Deps` cell here remains a claim about a version nobody identified.**
+
+## `T921` — `p795-A`'s own specified data source carries a grade that the same pass's published rows contradict
+
+🟢 **`ACTION p795-A` discharged as a filter over `91` MIT- and BSD-graded rows** ([`evidence/mit-bsd-bytesize-filter.2026-11-12-p796.tsv`](../evidence/mit-bsd-bytesize-filter.2026-11-12-p796.tsv)). 🟢 **`5` outliers, and the filter works: `PageLM` — the `T908` row the action was written for — is flagged, which is `p795-G`'s control satisfied.**
+
+| Row | Bytes | Verdict |
+|---|---|---|
+| 🔴 `CaviraOSS/PageLM` | `8,563 B` (`+700%`) | 🔴 Known (`T908`) — non-commercial, redistribution prohibited |
+| 🔴 `open-webui/open-webui` | `2,819 B` (`+88%`) | 🔴 Known (`T900`) — branding rider |
+| 🟢 `goyanedelv/paes-mcp` | `2,018 B` | 🟢 **Benign as predicted — a bilingual MIT** |
+| 🔴 `jkbrzt/rrule` | `3,493 B` | 🆕 🔴 **NOT a rider — TWO BSD grants** (`T915`) |
+| 🟡 `daddysystem/nextgen-learn` | `1,338 B` | 🆕 🔴 **The TSV grades it `MIT`. The bytes are `Boost Software License 1.0`** |
+
+🔴 **And `nextgen-learn` is the finding, because it is not a correction to this base — it is a correction to this base's EVIDENCE.** 🟢 **The published rows in [`agents/top.md`](../agents/top.md) and [`repos/foundations.md`](../repos/foundations.md) already say `BSL-1.0 (Boost)`, and they are RIGHT** — confirmed on two further channels this pass (the served bytes open *"Boost Software License - Version 1.0 - August 17th, 2003"*; GitHub's SPDX returns `BSL-1.0`). 🔴 **It is `evidence/rider-gate.2026-11-12-p795.tsv` — the artefact `p795-A` names as its data source — whose `grade` column says `MIT`.**
+
+🔵 **Mechanism, and it is `T908`'s mechanism with a benign outcome: Boost 1.0 opens *"Permission is hereby granted, free of charge, to any person or organization obtaining a copy"* — the MIT grant sentence plus two words.** 🟢 **The consequence here is nil, because Boost is OSI-permissive and waives attribution for object-code-only distribution.** 🔴 **But the lesson is not nil: an action specified as *"a filter, not a new measurement"* inherits every defect of the artefact it filters.** 🟢 **→ `p796-H`: a grade column in an evidence file must be re-derivable from the bytes recorded beside it, or the file must not carry one.**
+
+## 🟢 The pass's negative results, recorded because they cost budget to establish
+
+🟢 **`0` of `174` addresses failed to clone**, and the `7` `CLONE_FAIL` results in the first run were 🔴 **my own address list, not the internet**: `6` rows in [`evidence/master-row-measurements.2026-11-12-p794.tsv`](../evidence/master-row-measurements.2026-11-12-p794.tsv) are prefixed `NEW/` (a column marker captured into the address), and 🔴 **one row is the literal string `OWNER/REPO`** — a template placeholder sitting in a published evidence artefact. 🔵 **Exactly the defect class this base guards against in its tables, found in its machine output instead.**
+
+🟢 **`2` `EMPTY_TREE` rows reproduce `p793`/`p794`/`p795` exactly** (`Bestisco/My-WASSCE-Companion`, `Elite2828/ACE-AI-Tutor`) — 🟢 **four consecutive passes, same two rows, `0` drift.**
+
+🔴 **`p795-D` (the `sha=` column) is NOT discharged for a third consecutive pass.** 🔵 The budget went to `p795-A`, `p795-B`, `p795-C`, `p795-F` and the regional legs. 🟢 **`T905` stands and every `sha=` written this pass is a git blob sha, labelled.**
+
+🔴 **`p794-F`/`T906` persists into a third pass: the primary-source domains still fail at `CONNECT`.** 🔴 **Which is why `T922` below is an instrument NUMBER and not a quotation.**
+
+## `T923` — the verification method this base is INSTRUCTED to use returns the same answer for a live repository and a nonexistent one
+
+🔴 **The standing instruction for this KB is to verify every repository URL with `curl -sI` before writing it, on the principle that *"a 404 is not a finding"*. 🔴 In this environment that method is not merely unavailable — it is actively misleading.**
+
+🟢 **Measured, with controls in both directions:**
+
+| Address | `curl -sI` | 🟢 Blobless-clone channel |
+|---|---|---|
+| All `22` repository URLs written this pass | 🔴 **`403`** | 🟢 **`22` of `22` `OK`** |
+| 🟢 `torvalds/linux` *(positive control — certainly live)* | 🔴 **`403`** | — |
+| 🔴 `this-owner-does-not-exist-xyz/nope-99999` *(negative control)* | 🔴 **`403`** | 🟢 **`CLONE_FAIL`** |
+
+🔴 **`curl -sI` against `github.com` returns `403` for everything: the agent proxy refuses the HEAD before GitHub ever sees it. A live repository and an invented one are indistinguishable.** 🔵 **So a pass that followed the instruction literally would record `403` on every row and either publish nothing or — far worse — read `403` as "not `404`, therefore fine" and publish every invented address it was handed.**
+
+🟢 **The clone channel discriminates, and it was controlled in both directions this pass:** `git clone --filter=blob:none --bare --depth 1` returns refs and a readable `HEAD` for live addresses and fails for nonexistent ones. 🟢 **`176` addresses in `16` seconds at `12` parallel, `0` false failures, and a negative control that fails as required.** 🟢 **It is also strictly stronger than a HEAD request, because it returns the licence bytes this base grades on rather than a status line.**
+
+🔵 **This is `T906`'s shape in a second place, and the generalisation is the point: a channel that returns one answer for every input is not a verification, whatever its status code says.** 🟢 **`p793-G` required that an instrument's silence be read as a property of the instrument. `T923` is the stronger case — a UNIFORM NON-SILENT answer, which looks like data.** 🔴 **Recorded here so the instruction can be corrected rather than quietly failed** → `p796-F`.
+
+## `T922` — the EU AI Act education deadline is settled to an INSTRUMENT, not a paraphrase (`p795-F`)
+
+🟢 **`ACTION p795-F` discharged, by the route the action specified: not the blocked primary sources, but convergent secondary trackers all naming the same instrument.**
+
+🟢 **The instrument is `Regulation (EU) 2026/1744`** — the *Digital Omnibus on AI* — reported published in the Official Journal on **`2026-07-24`** and in force **`2026-07-27`**.
+
+| Obligation | Was | 🔴 Now |
+|---|---|---|
+| 🔴 **Annex III standalone high-risk — THIS INCLUDES EDUCATION** | `2026-08-02` | 🔴 **`2027-12-02`** (Art. `113`) — **a `16`-month shift** |
+| Annex I (high-risk in regulated products) | `2027-08-02` | `2028-08-02` |
+| High-risk systems used by public authorities | — | `2030-08-02` (Art. `111(2)`) |
+| 🟢 **Art. `50` transparency** | `2026-08-02` | 🟢 **UNCHANGED — in force since `2026-08-02`** |
+| 🟢 Art. `5` prohibitions | live | 🟢 **UNCHANGED — live** |
+
+🔴 **Commercially this resets the clock this base has been selling against for four passes (`P792-3`, `P794-2`): admissions, grading and exam-assessment systems are Annex III, so their conformity deadline is now `2027-12-02`.** 🟢 **But the part that did NOT move is the part that bites first: Art. `50` transparency has applied since `2026-08-02`, so an AI tutor must already disclose itself, today, regardless of the deferral.**
+
+🔵 **Channel discipline: this is still secondary testimony — `eur-lex.europa.eu` remains `403` at `CONNECT` (`T906`), so the text has not been read here.** 🟢 **What changed is that a named instrument with an article number can be verified by anyone in one lookup, which a paraphrase cannot.** 🔴 **Status: `CITED, NOT READ`.**
+
+
 ## 🆕 `p795` — **six findings. The headline is that a gate built to catch licence riders was specified to key on the very classifier whose silence a rider causes, so it returned zero on `167` rows including the row it was built for.**
 
 ## `T908` — the MIT grant sentence can be camouflage, and the restriction arrives in the same sentence

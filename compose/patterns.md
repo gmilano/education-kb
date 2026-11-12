@@ -4,6 +4,108 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p796` — **five patterns. The regional four are each anchored to a COMPELLED document with a date — `Regulation (EU) 2026/1744`'s Art. `50`, Vietnam's registration, TEQSA's action plan, North Carolina's `SL 2026-41`. `P796-5` is a week-one gate productised from `T914`, because on three platforms this base recommends, white-labelling is barred or restricted by a licence file nobody opened.**
+
+### 🟢 `P796-1` — The Art. `50` transparency pack: sell what `2026/1744` did NOT defer · **EMEA** · 5–7 weeks
+
+🔵 **Why this pattern exists, and why it replaces a pattern in this file.** 🔴 `P792-3` and `P794-2` were both timed against an Annex III high-risk deadline of `2026-08-02`. 🔴 **`Regulation (EU) 2026/1744` moved that to `2027-12-02` (`T922`), so both patterns' urgency is gone.** 🟢 **But Art. `50` transparency was NOT deferred — it has applied since `2026-08-02`.** 🔵 **So the expensive work got a `16`-month reprieve and the cheap work is already overdue. That inversion is the sale.**
+
+**The wiring, named to artefacts:**
+1. **Disclosure surface** — every AI-generated turn labelled at the point of delivery. Build it into the tutor boundary, not the UI chrome: [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (🟢 **MIT**, ★`102`, 🇫🇷) is the only European-origin tutor-as-MCP-server in this base, and an MCP boundary is the natural place to stamp provenance on every response.
+2. **Evidence spine** — [`uchit/mcp-regulated-ai-compliance`](https://github.com/uchit/mcp-regulated-ai-compliance) (Apache-2.0, `12,227 B`) for Art. `27` FRIA artefacts. 🔴 **Licence note from this pass: that file carries TWO grants — Apache-2.0 AND a Creative Commons grant — and GitHub reports only the Apache half (`T916`). Read both before vendoring; the CC half governs its documents, which is what you will reuse.**
+3. **Teacher-controlled trigger** — the `T907` finding holds regardless of the deadline shift: `96%` uptake, `⅓` dosage, `≈0.06` SD. 🟢 Carry `P794-1`'s engagement trigger forward unchanged.
+4. **Delivery surface** — [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (🟢 Apache-2.0, `10,982 B`, pushed `2026-11-12`) remains the permissive European LMS. 🔴 **But `NOTICE.TXT` licenses its logo and icons `CC BY-ND 2.5` — replace the brand assets, do not modify them (`T914`).**
+5. **Schools-sector surface, if the client is K-12** — [`hedyorg/hedy`](https://github.com/hedyorg/hedy) (🟢 **`EUPL-1.2`**, ★`1,697`, pushed `2026-11-06`). 🔴 **`EUPL-1.2` is copyleft with a statutory compatibility list (`T918`); treat it as you would GPL for redistribution purposes, and note it is the Commission's own licence — which is an argument *for* it in a public-sector bid, not against.**
+6. **Named human decision-maker** — a role, in the contract, with a logged identity on every consequential decision. 🟢 This is the one component that satisfies NA, EMEA, APAC and LATAM simultaneously.
+
+🟢 **The pitch in one line:** *"Your conformity deadline moved to December 2027. Your disclosure obligation started in August 2026. We close the second now and leave you ready for the first."*
+
+🔵 **Why 5–7 weeks:** disclosure, logging and a decision register are small, well-bounded builds. 🔴 **No conformity assessment in scope — that is the `2027` engagement, and selling it now is selling against a deadline that no longer exists.**
+
+### 🟢 `P796-2` — The compelled-document factory: one evidence instrument, two regulators · **APAC 🇻🇳 🇦🇺** · 8–10 weeks
+
+🔵 **Why this pattern exists.** 🔴 **`Gap 254` has said for several passes that APAC coverage here is regulation-only, with no compellable hook. `p796` found two, both with dates:**
+
+| Jurisdiction | The compelled document | 🔴 Who must produce it |
+|---|---|---|
+| 🇻🇳 **Vietnam** | 🔴 **Pre-deployment registration in the National AI Database** — education is a high-risk category under the Law on AI, effective **`2026-03-01`** | Every operator of an education AI system |
+| 🇦🇺 **Australia** | 🔴 **An institutional action plan addressing generative-AI risks, required by TEQSA** | 🟢 **EVERY higher-education provider in the country** |
+
+🟢 **The insight that makes this one engagement rather than two: both documents want the same evidence** — an inventory of AI systems, a risk classification per system, a named human decision-maker, a record of oversight, and an outcome-measurement commitment. 🔵 **The regulator differs; the artefact differs only in its labelling.**
+
+**The wiring:**
+1. **System inventory** — enumerate AI touchpoints from the LMS itself via [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT) where Canvas is the system of record. 🟢 **An inventory read from the LMS is defensible; one assembled from interviews is not.**
+2. **Risk classification** — map each system to the local category (Vietnam's high-risk list; TEQSA's risk domains). 🟢 Reuse [`uchit/mcp-regulated-ai-compliance`](https://github.com/uchit/mcp-regulated-ai-compliance)'s FRIA structure as the template — 🔵 **EU-shaped, which is an advantage: the EU structure is a superset of both.**
+3. **Oversight record** — the named-decision-maker log from `P796-1`, unchanged.
+4. **Outcome commitment** — 🟢 **the dosage instrument (`p795-E`, still unbuilt) is what both regulators will eventually ask for and neither can be fobbed off on.** 🟢 Scope it here as the second deliverable: sessions triggered · accepted · turns per session · practice-days-with-a-turn.
+5. **Tutor behind the boundary, if one is in scope** — [`vulinh1704/ai-tutor-agent`](https://github.com/vulinh1704/ai-tutor-agent) (🟢 **MIT**, `1,071 B`, 🇻🇳, pushed `2026-11-09`): Socratic hint escalation, answer-leak checking before send, 🟢 **and rubric totals computed in code rather than by the model — which is exactly what a regulator wants to hear about an assessment system.**
+
+🟢 **Export angle worth stating in the first meeting:** 🔴 **APAC ed-tech selling proctoring or admissions tools into the EU is in Annex III, so `2027-12-02` is an APAC export deadline.** 🟢 One evidence pack, three jurisdictions.
+
+🔴 **Declared limit: `0` procurement documents reached for Vietnam or Australia** — these are statutory and regulator obligations, not tenders. 🟢 The buyer is the institution's registrar or DVC, not a procurement portal.
+
+### 🟢 `P796-3` — Local-policy conformance for the US district pipeline · **North America 🇺🇸** · 6–8 weeks
+
+🔵 **Why this pattern exists.** 🟢 **`134` AI-in-education bills across `31` states in `2026`, and `35`+ states with departmental guidance, produce a shape no other region has: a state model policy followed by hundreds of LOCAL policies, each with its own deadline.**
+
+🟢 **The calendar is the pipeline:**
+
+| Jurisdiction | Instrument | Deadline |
+|---|---|---|
+| 🇺🇸 **North Carolina** | **Session Law `2026-41`** | 🔴 **Model policy `2026-12-31`** → **local school-unit policies `2027-06-30`** → teacher PD `2028-06-30` |
+| 🇺🇸 **Maryland** | state law | 🔴 **District AI policies by autumn `2026`** |
+| 🇨🇦 **Ontario** | mandatory `2026-27` PA-day topic, 🔴 **no province-wide memorandum** | 🟢 **The buyer is the board — and there are `72`** |
+
+🔵 **The commercial observation that matters: a district does not need a policy written — the state writes the model. It needs to PROVE it is following the one it adopted.** 🔴 **No district can produce that evidence today.**
+
+**The wiring:**
+1. **Policy-to-control mapping** — take the adopted local policy and decompose each clause into a checkable control (disclosure present · student data not used for training · human review on consequential decisions · grade-level restriction honoured). 🟡 **`NY A 9190`-style grade-level limits and `CA AB 1159`-style training-data bars are the two clauses most likely to appear, so build those controls first.**
+2. **Instrumentation at the LMS** — [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT) to read actual usage. 🟢 **Evidence that a control holds must come from the system, not a survey.**
+3. **Engagement trigger** — [`P794-1`](compose/patterns.md) unchanged: the `T907` trial says the binding constraint is dosage under teacher control, and a district's own PD deadline (`2028-06-30` in NC) is the lever.
+4. **Teacher-side authoring** — [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) (🟢 **MIT**, `1,069 B`): labs, exams and grading as explicit DSLs with human review and sandboxed evaluation. 🔵 **A DSL artefact IS the audit trail — the lesson and its review are the same object.** 🟡 Its grading path is self-described MVP; use the structure, build the grader.
+5. **Reporting** — 🔴 **run [`metabase/metabase`](https://github.com/metabase/metabase) as its own AGPL-3.0 application behind SSO and link to it.** 🔴 **`p796` sizes the reason: its embedding carve-out is `8,877 B` of terms containing no OSI grant at all (`T914`), and embedding into a district-branded portal is precisely what it governs.**
+
+🔵 **Why 6–8 weeks:** the policy already exists and the LMS already exists. The build is the control mapping and the evidence reader.
+
+🔴 **Declared gap: no spend figure for Canada or Mexico**, so Ontario and SEP engagements are scoped on policy and adoption evidence, not on a budget benchmark.
+
+### 🟢 `P796-4` — The institutional evaluation office, priced for a `4%` budget · **LATAM 🇺🇾 🇧🇷 🇨🇱 🇨🇴 🇨🇷** · 6–8 weeks
+
+🔵 **Why this pattern exists, and why `p796` re-prices it.** 🟢 **The gap is measured and extreme: `87%` of Latin American universities use AI, `26%` have a formal strategy, `18.5%` have institution-wide policies, `9%` have formal evaluation mechanisms** (UNESCO IESALC 2026, `200` institutions, `19` countries). 🔴 **And the constraint is now measured too: `8%` have a dedicated AI budget, and among PUBLIC universities it is `4%`.**
+
+🔴 **So the `p794`/`p795` framing — an evaluation *office* — is priced above what `96%` of public institutions can buy.** 🟢 **`p796` re-scopes it as an INSTRUMENT with an institutional owner, not a department.**
+
+**The wiring:**
+1. **One measurement, not a programme** — the dosage instrument: sessions triggered · accepted · turns per session · practice-days-with-a-turn, read from the LMS. 🟢 **`p795` verified that no published open-source implementation of this exists**, which makes it the clearest unclaimed artefact in this base.
+2. **Read from the system of record** — [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT), or the Moodle plugin boundary where Moodle is in place.
+3. **Tutor behind the boundary** — [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (MIT) or the institution's existing tutor; 🟢 **the instrument must not assume a particular tutor, because PUC Chile already runs `194` pedagogical agents across ~`100` courses and its own stated gap is outcome measurement.**
+4. **Spanish/Portuguese-first surface** — 🔴 **and a licence caution this base learned the hard way: [`luscitiosus/Dirigo`](https://github.com/luscitiosus/Dirigo)'s `362 B` Spanish licence is `CC BY-NC-SA 4.0`, which an English-only probe graded as `CC-BY-4.0`, silently stripping NonCommercial (`T902`). 🔴 NonCommercial bars a client deliverable. Read restriction vocabulary in the local language first.**
+5. **Publication target** — 🟢 **new this pass: UNESCO has launched a regional Observatory on AI in Education for Latin America and the Caribbean, and has partnered with Chile's CENIA.** 🔵 **An institution that can feed an observatory has a reason to fund the instrument, and a citation it can use.**
+
+🟢 **The pitch:** 🔴 *"`87%` of your peers use AI. `9%` can say whether it works. `4%` of public universities have a budget for finding out."* 🟢 **So we build the measurement, not the office** — and the regulatory environment reinforces it: 🇨🇱 **Chile's bill replaces EU-style conformity assessment with self-classification, which is cheaper to comply with and harder to PROVE.** 🟢 **Self-classification raises the value of evidence, it does not lower it.**
+
+🔴 **Declared limit: no AI-in-education statute in Brazil, Mexico or Chile, so there is no deadline to sell against.** 🟢 The sale is made on the evaluation gap, which is measured, and on 🆕 **Cetic.br's `53%`-use / `22%`-guidelines split in Brazil**, which is the same gap at school level.
+
+### 🟢 `P796-5` — The brand-layer licence gate, week one · **Global; every engagement in this file** · 3–5 days
+
+🔵 **Why this pattern exists.** 🔴 **Nearly every engagement in this file ends in a white-labelled deployment, and `p796` found that on THREE platforms this base recommends, the brand assets are licensed more restrictively than the code (`T914`) — a fact invisible to grading the root `LICENSE`.**
+
+**The gate, and it is five commands, not a project:**
+1. **List the root tree, not the root `LICENSE`.** `git clone --filter=blob:none --bare --depth 1` then `git ls-tree --name-only HEAD`. 🟢 **`176` addresses in `16` seconds at `12` parallel, `0` failures — cost is not the obstacle; nobody had asked.**
+2. **Count licence FILES.** 🔴 **`13` of `174` rows in this base carry two or more; `metabase` has `4`, `DSpace` has `4`, `open-webui` has `3`.**
+3. **Count GRANTS inside each file, keyed on per-grant VERSION LINES** (`Version 3, 29 June 2007`, `Version 2.0, January 2004`, …) — 🔴 **never on the licence NAME, which recurs four times inside a single GPL-3.0 text and over-reported `32` rows where `5` were real (`T917`).**
+4. **Grep the non-`LICENSE` files for brand vocabulary** — `logo`, `icon`, `branding`, `trademark`, `NoDerivs`, `ND`. 🔴 **This is the step that finds `OpenOLAT`'s `CC BY-ND 2.5` logo clause, which sits in `NOTICE.TXT`, `14,412 B`, a file this base had never opened.**
+5. **Grade the DELIVERY question separately from the SHIPPING question.** 🟢 Three outcomes, and they are genuinely different:
+
+| Finding | Example | 🟢 Verdict |
+|---|---|---|
+| 🔴 Branding alteration is a **material breach** | `open-webui` clause `4` | 🔴 **No white-labelled delivery. Internal tool only, or negotiate** |
+| 🟡 Brand assets are **`NoDerivs`** | `OpenOLAT` `CC BY-ND 2.5` | 🟢 **Ship it — REPLACE the logo and icon set.** `ND` forbids modifying theirs, not shipping yours |
+| 🔴 The **embed** has its own non-OSI terms | `metabase` `LICENSE-EMBEDDING.txt`, `8,877 B` | 🟢 **Run it standalone behind SSO and link to it.** Do not embed in a client-branded surface |
+
+🟢 **Sell it as the first week of any platform engagement, or run it unbilled as a qualification step** — 🔵 **the alternative is discovering in week ten that the deliverable cannot carry the client's name.** 🟢 **`3` for `3` on rows this base had already recommended, which is the honest argument for making it standing rather than optional.**
+
+
 ## 🆕 `p795` — **four patterns. `P795-1` is the one this base has been missing: AI inside the LMS of record rather than beside it. `P795-2` is a licence-clearance service productised out of this pass's own instrument.**
 
 ### 🟢 `P795-1` — AI inside the LMS of record, as a plugin · **Global; EMEA and North America first** · 6–8 weeks

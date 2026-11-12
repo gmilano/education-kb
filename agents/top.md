@@ -4,6 +4,61 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p796` — **`ACTION p795-B` discharged, and the licence-FILE count found the pattern it was pointed at plus one it was not: on the rows this base recommends for white-labelling, the permissive grant covers the CODE and the brand assets are carved out separately — `CC BY-ND 2.5` on an LMS logo, a clause-`4` branding rider, an `8,877 B` embedding licence. `4` agents added. `p795-A`, `p795-C` and `p795-F` also discharged.**
+
+🟢 **`ACTION p795-A`, `p795-B`, `p795-C` (for its located target) and `p795-F` all discharged this pass.** 🔴 **`p795-D` NOT done, third carry. `p795-E` and `p795-H` partially addressed. `p794-F`/`T906` still undischargeable from this session.** 🟢 Machine output: [`licence-file-and-grant-block-census`](../evidence/licence-file-and-grant-block-census.2026-11-12-p796.tsv) · [`mit-bsd-bytesize-filter`](../evidence/mit-bsd-bytesize-filter.2026-11-12-p796.tsv) · 🔴 [`licence-block-census-UNCORRECTED-v1`](../evidence/licence-block-census-UNCORRECTED-v1.2026-11-12-p796.tsv).
+
+### 🔴 The pass's headline: the licence that lets you ship the code is not the licence that lets you put the client's name on it
+
+🔴 **`T900` found a branding rider on one row and this base read it as a rider problem. `p796` counted licence FILES across `174` addresses and it is structural — `3` independent instances, every one on a row this base actively recommends** (`T914`):
+
+| Row | Published grade | 🔴 What the second licence file says |
+|---|---|---|
+| 🔴 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 | 🔴 **`NOTICE.TXT` (`14,412 B`, never opened here): the logo and icons are `CC BY-ND 2.5` — `NoDerivs`** |
+| 🔴 [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | 🟢 BSD-3-Clause | 🔴 Clause `4` bars altering the branding (`T900`); 🆕 **a third file, `LICENSE_HISTORY`, carries TWO grants (MIT + BSD)** |
+| 🔴 [`metabase/metabase`](https://github.com/metabase/metabase) | 🔴 AGPL-3.0 | 🔴 **`4` licence files, `1` OSI grant. The embedding carve-out is `8,877 B` with NO recognised grant** |
+
+🔵 **Grading the root `LICENSE` alone finds none of the three.** 🟢 **For an engagement whose deliverable is a white-labelled platform, the brand layer is a separate licence question and must be graded as one.**
+
+### 🔴 `T915`/`T916` — `5` rows serve more than one grant, and a classifier that answers anyway drops the CONTENT licence
+
+🟢 **`5` of `174` rows carry more than one grant; `3` of the `5` carry them inside a SINGLE file**, so no file count can see them: `odoo` (LGPL-3.0 + full GPL-3.0, `43,529 B`), `rrule` (its own BSD + bundled `python-dateutil`'s), `uchit/mcp-regulated-ai-compliance` (Apache-2.0 + CC), plus `open-webui` (`3` grants / `3` files) and `kumaken-1` (MIT code + CC BY 4.0 content).
+
+🔴 **`3` of the `5` are `NOASSERTION` in GitHub's SPDX against a `15.6%` base rate — a ~`3.9×` enrichment, so abstention is a cheap screen.** 🔴 **The `2` GitHub DID grade are both code/content splits, and in BOTH it reported the CODE licence and silently dropped the CONTENT licence** — `kumaken-1` → `MIT` (dropping CC BY 4.0 on every quest text and printable), `uchit` → `Apache-2.0` (dropping the CC grant). 🔵 **In education that is the wrong half to lose: the content licence governs the curriculum.**
+
+### 🟢 `4` rows added — byte-verified, star-exact, placed
+
+| Agent | Repo | Licence (byte-verified) | ★ | Last push | Region | What it is |
+|---|---|---|---|---|---|---|
+| 🟢 **ai-engineering-hub** `NEW` | [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | 🟢 **MIT · `1,066 B`** | `41,801` | `2026-11-01` | Global | 🟢 **Highest-starred row added here in several passes.** Runnable agent/RAG curricula — the teaching corpus for an engagement's own engineers |
+| 🟢 **AI-Teaching-Agent** `NEW` | [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 **MIT · `1,069 B`** | `0` | `2026-08-23` | Global | 🟢 Labs, exams and grading as structured DSLs with **human review** and sandboxed evaluation, CLI + MCP. 🔵 Grading path self-described MVP — cite the shape, which is `P794-2`'s architecture |
+| 🟢 **ai-tutor-agent** `NEW` | [`vulinh1704/ai-tutor-agent`](https://github.com/vulinh1704/ai-tutor-agent) | 🟢 **MIT · `1,071 B`** | `0` | `2026-11-09` | APAC 🇻🇳 | 🟢 FastAPI + LangGraph tutor with **Socratic hint escalation** and **answer-leak checking before send**; 🟢 **rubric totals computed in code, not by the model** |
+| 🟡 **AITutorAgent** | [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🟢 **MIT · `1,072 B`** | `15` | 🔴 `2025-06-03` (`17` mo) | Global | 🟡 `p794` candidate, now graded. 🔴 Stale at `17` months. Reference only |
+
+🟢 **All four sit in `1,066`–`1,072 B` — inside canonical MIT, so `p795-A`'s filter passes them clean.** 🔵 That is the new filter working on intake rather than on history.
+
+### 🔴 `T921` — `p795-A` discharged, and its own data source was the thing that was wrong
+
+🟢 **`5` byte-size outliers of `91` MIT/BSD rows. `PageLM` — the row the action was written for — is flagged, so `p795-G`'s control is satisfied.** 🟢 `paes-mcp` (`2,018 B`) benign as predicted. 🆕 `rrule` (`3,493 B`) is **two BSD grants, not a rider.**
+
+🔴 **`daddysystem/nextgen-learn` is the finding: [`evidence/rider-gate.2026-11-12-p795.tsv`](../evidence/rider-gate.2026-11-12-p795.tsv) grades it `MIT`; the bytes are `Boost Software License 1.0` and GitHub's SPDX agrees.** 🟢 **The published rows in this file and in [`repos/foundations.md`](../repos/foundations.md) already said `BSL-1.0 (Boost)` and needed no change.** 🔵 **An action specified as "a filter, not a new measurement" inherits every defect of the artefact it filters** → `p796-H`.
+
+### 🔴 `T917` — `3` over-reports in this pass's own instruments, `0` shipped
+
+🔴 **The first grant counter reported `32` multi-grant rows; the true count is `5`.** 🔵 It keyed on the licence NAME, and a `35,147 B` GPL-3.0 text names itself at line start four times. 🔴 **All `4` of my controls were short permissive files, so none could exhibit the defect — `p795-G`'s rule protects against a false zero and does nothing about a false alarm.** 🟢 Rebuilt on per-grant version lines: `9` of `9` controls across both kinds. 🔴 Two residual `grep -c` line-vs-occurrence errors corrected (`kumaken-1` `3`→`2`, `OpenOLAT` `2`→`1`). 🟢 **The uncorrected artefact is published beside the corrected one so the `32`→`5` correction is re-derivable.**
+
+### 🔴 Corrected in place below
+
+| Row | Was | 🟢 Now |
+|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | "the permissive LMS for an EMEA engagement" | 🔴 **Apache-2.0 code + `CC BY-ND 2.5` logo and icons.** Still the permissive EMEA LMS; 🔴 **brand assets must be REPLACED, not modified** |
+| [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | BSD-3-Clause · `3,493 B` | 🔴 **TWO BSD-3-Clause grants** — its own plus bundled `python-dateutil`. Attribution obligation doubled |
+| [`ankitects/anki`](https://github.com/ankitects/anki) | AGPL-3.0 · `1,930 B` | 🔴 **The `1,930 B` is a POINTER, not a grant: `AGPL-3.0-or-later` **plus** BSD-3 contributed portions** (`T919`) |
+| [`hedyorg/hedy`](https://github.com/hedyorg/hedy) | — | 🟢 **`EUPL-1.2` · `13,827 B` · ★`1,697`** — a family this base's clause set lacked (`T918`) |
+| [`metabase/metabase`](https://github.com/metabase/metabase) | per-file carve-out noted | 🟢 **Carve-out now SIZED: `4` files, `1` OSI grant, `8,877 B` of embedding terms with no grant** |
+| [`DSpace/DSpace`](https://github.com/DSpace/DSpace) | BSD-3-Clause, anthology unopened | 🟢 **Anthology opened: `721` deps, GPL policy verified, ~`13` LGPL entries** (`T920`) |
+
+
 ## 🆕 `p795` — **`p794-B`'s rider gate was blind to the row that motivated it, and rebuilding it on the bytes found an MIT grant sentence used as camouflage. `p794-A` discharged: the `ARCHIVED` count is CLOSED at `3`, and the real exposure is staleness.**
 
 🟢 **`ACTION p794-A`, `ACTION p794-B` and `ACTION p794-C` (for `oppia`) all discharged this pass.** 🔴 **`p794-F` is NOT discharged and cannot be by this session** — all `6` primary-source domains still fail at `CONNECT` (`T906` persists). 🔴 **`p794-D`, `p794-E` and `p794-H` not reached; carried.** Machine output: [`evidence/rider-gate.2026-11-12-p795.tsv`](../evidence/rider-gate.2026-11-12-p795.tsv) and [`evidence/maintenance-sweep.2026-11-12-p795.tsv`](../evidence/maintenance-sweep.2026-11-12-p795.tsv).

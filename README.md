@@ -6,115 +6,123 @@ updated: 2026-11-12
 
 # Globant AI Studios — Education KB
 
-**Pass `p794` · `2026-11-12`** — `170` repository addresses measured on **three independent channels**, the
-licence record cross-checked against GitHub's own classifier, and **the three regional gaps this base had
-carried for several passes all closed**. 🔴 The two most valuable findings were not on the queue: a licence
-rider on a `★158,480` row this base green-flagged, and three recommended repositories that are **archived
-upstream** — a dimension this base had no field for. The two trending ledgers and the action ledger are
-appended to, never rewritten.
+**Pass `p796` · `2026-11-12`** — `176` repository addresses swept on the **first licence-FILE census this base has
+run**, and the dimension a queued action only half-specified turned out to hold the finding that matters most to a
+delivery engagement. 🔴 **On three platforms this base actively recommends, the brand assets are licensed more
+restrictively than the code** — `NoDerivs` logos, a branding rider, an `8,877 B` embedding carve-out — and
+white-labelling is the deliverable in nearly every engagement here. 🟢 **The EU AI Act education deadline is also
+settled to an instrument number at last.** The two trending ledgers and the action ledger are appended to, never
+rewritten.
 
 ## What this pass established
 
 | | |
 |---|---|
-| 🟢 Addresses measured on all three instruments | **`170`** · 🟢 **`0` clone failures**, `170` blobless clones in **`22` seconds** |
-| 🟢 Existence re-graded three-state (`p793-A`) | **`168` LIVE · `2` EMPTY · `0` ABSENT** — 🟢 **`0` corrections** |
-| 🔴 **Recommended rows found ARCHIVED upstream** | 🔴 **`3`** — and the word *archived* appeared **`0` times** in this base (`T901`) |
-| 🟢 Licence grades agreeing with GitHub's SPDX classifier | 🟢 **`118` of `118`** · `0` disagreements |
-| 🟢 Rows where the **bytes** beat GitHub's `NOASSERTION` | 🟢 **`23`** |
-| 🔴 **Licence grades CORRECTED** | 🔴 **`1`** — `open-webui/open-webui` (`T900`) |
-| 🟢 Star counts re-measured **exactly** — the carried-forward limitation is lifted | 🟢 **`164` of `170`** |
-| 🟢 Queued actions discharged | 🟢 **`6` of `7`** · `1` named as a scope limit |
-| 🔴 Defects in **this pass's own instruments**, all caught before publication | 🔴 **`5`** — `4` of them the same mistake |
+| 🟢 Addresses swept on the blobless-clone channel | **`176`** · 🟢 **`0` clone failures** · `16` seconds at `12` parallel |
+| 🔴 **Rows where the BRAND layer is licensed separately from the CODE** | 🔴 **`3` of `3` checked** — and all three were chosen for being *recommended*, not for being suspicious |
+| 🟢 Licence-FILE census — never measured here before | 🟢 **`19` rows with none · `142` one · `10` two · `1` three · `2` four** |
+| 🔴 **Rows serving MORE THAN ONE grant** | 🔴 **`5`** — and `3` of the `5` hide them inside a **single file** |
+| 🔴 **Licence family missing from this base's clause set** | 🔴 **`EUPL-1.2`** — the third in three passes, after `ECL-2.0` and `BSL-1.0` |
+| 🟢 **EU AI Act education deadline — settled to an instrument** | 🟢 **`Regulation (EU) 2026/1744`** · Annex III → **`2027-12-02`** · 🟢 **Art. `50` did NOT move** |
+| 🟢 Queued actions discharged | 🟢 **`4` of `8`** · `1` partial · `2` carried · `1` escalated |
+| 🔴 Defects in **this pass's own instruments**, all caught before publication | 🔴 **`3`** — the first one over-reported `32` rows where `5` are real |
+| 🔴 **A template placeholder found in a PUBLISHED evidence artefact** | 🔴 **`OWNER/REPO`**, plus `6` addresses prefixed `NEW/` |
 
 ## 🟢 The three findings worth reading first
 
-**1. A row this base recommends as a client delivery surface cannot carry the client's name.**
-[`open-webui/open-webui`](https://github.com/open-webui/open-webui) (`★158,480`) is published here twice as
-🟢 `BSD-3-Clause`. 🔴 **Canonical BSD-3-Clause has three numbered clauses; the served `LICENSE` has four**, and
-clause `4` makes altering, removing or replacing *"Open WebUI" branding* a **material breach**. 🔴 **So it
-cannot be delivered white-labelled** — the one thing a delivery surface is for. 🔵 The trap is three files
-deep: the repository also ships `LICENSE_HISTORY`, which grades as **clean** BSD-3-Clause. 🟢 **GitHub's
-`NOASSERTION` was more honest than this base's hand grade — the one row in `141` where that is true.**
-🔵 `T900` is the **seventh** recorded way to misread a licence here and the first that is **additive**: the
-family matches perfectly and something has been appended to it. 🟢 **Match the family, then count the clauses.**
-→ [`intel/trends.md`](intel/trends.md) `T900`, [`verticals/solutions.md`](verticals/solutions.md)
+**1. The licence that lets you ship the code is not the licence that lets you put the client's name on it.**
+🔴 `p795-B` asked for a count of licence FILES. The count found something the action did not ask for: on three
+platforms this base recommends, the **brand** layer is carved out of the permissive grant.
+🔴 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) is published here as 🟢 `Apache-2.0` and called *"the
+permissive LMS for an EMEA engagement"* — 🔴 **but `NOTICE.TXT` (`14,412 B`, a file never opened here) licenses the
+logo and icons `CC BY-ND 2.5`: `NoDerivs`.**
+🔴 [`open-webui/open-webui`](https://github.com/open-webui/open-webui) (`★158,483`) bars altering its branding
+outright (`T900`), and `p796` adds its third licence file — `LICENSE_HISTORY`, which carries **two** grants.
+🔴 [`metabase/metabase`](https://github.com/metabase/metabase) has **four** root licence files and only **one**
+contains an OSI grant; the embedding carve-out is **`8,877 B` of terms with no grant at all**.
+🟢 **Grading the root `LICENSE` finds none of the three. Listing the root tree finds all three, in seconds.**
+🔵 **Three for three on rows already recommended is the argument for making this a standing week-one gate**
+→ [`compose/patterns.md`](compose/patterns.md) `P796-5`, [`intel/trends.md`](intel/trends.md) `T914`
 
-**2. `ARCHIVED` is an existence state no instrument here has ever read, and three recommendations are in it.**
-🟢 `p793` replaced exit-status grading with LIVE · EMPTY · ABSENT, and `p794` reproduced that across `170`
-addresses with **`0` corrections**. 🔴 **It is still not enough: an archived repository returns `rc=0` with refs
-and a valid `HEAD`** — identical to a healthy one. 🔴 **[`MaharaProject/mahara`](https://github.com/MaharaProject/mahara)**
-(the ePortfolio recommendation, last push **`2023-11-16`**), 🔴 **[`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS)**
-(the maths-input primitive, **"Rescued"** at `p786`, last push **`2021-01-04`**) and
-🟡 **[`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model)**
-(the EMEA credential vocabulary, **`2024-02-14`**). 🔵 Two lessons sharper than the finding: 🔴 **resolving
-canonicity is not resolving maintenance** — this base correctly moved `mahara/mahara` → `MaharaProject/mahara`
-and the canonical address is the archived one; and 🔴 **a licence rescue is not a viability rescue.**
-🟢 **Existence needs four states, and `archived` is free in the call that returns the star count.**
-→ [`intel/trends.md`](intel/trends.md) `T901`
+**2. A classifier's abstention is a signal; its non-abstention on a multi-grant row is a silent loss — and what it
+drops is the content licence.** 🟢 `T900` established that GitHub's `NOASSERTION` was more honest than this base's
+hand grade. 🟢 **`p796` measures the rule: `3` of the `5` multi-grant rows are `NOASSERTION` against a `15.6%`
+base rate — a `3.9×` enrichment, so abstention is a cheap screen.** 🔴 **The other half is new and worse: the `2`
+multi-grant rows GitHub DID grade are both code/content splits, and in BOTH it reported the CODE licence and
+silently discarded the CONTENT licence** — `kumaken-1` → `MIT`, dropping CC BY 4.0 on every quest text and
+printable; `uchit` → `Apache-2.0`, dropping the CC grant in the same file. 🔵 **In this industry that is the wrong
+half to lose: the code licence governs the software, the content licence governs the curriculum — the asset a
+client most wants to reuse, translate and rebrand.**
+→ [`intel/trends.md`](intel/trends.md) `T916`
 
-**3. The strongest trial ever run on an AI tutor says the scarce component is not the tutor.**
-A two-year cluster-randomised trial of Khanmigo across `18` Tennessee middle schools: 🟢 **`96%` of assigned
-students used it**, 🔴 **the median student messaged it on about `⅓` of practice days**, and the two-year
-intent-to-treat effect was **`≈0.06` SD** (Year 1 alone: 🔴 **`0.020` SD, indistinguishable from zero**) against
-`0.2`–`0.4` SD for high-dosage human tutoring. 🟢 **Khan Academy's own 2026 fix was to stop waiting to be
-invoked and auto-activate during practice.** 🔵 **That is a scheduling failure, not a capability failure, and no
-model upgrade repairs it.** 🟢 Corroborated from two directions: the deployment literature finds effects only
-where the role is *narrow and educator-controlled*, and a `474`-study scoping review finds pedagogical design
-still poorly connected to technical capability. 🟢 **Thirteen passes of this base have ranked tutors; `P794-1`
-ranks the trigger instead.**
-→ [`intel/trends.md`](intel/trends.md) `T907`, [`compose/patterns.md`](compose/patterns.md) `P794-1`
+**3. The EU AI Act education deadline has an instrument number, and the half that did NOT move is the half that
+bites.** 🟢 **`Regulation (EU) 2026/1744`**, the *Digital Omnibus on AI*, reported published in the Official Journal
+`2026-07-24` and in force `2026-07-27`. 🔴 **Annex III standalone high-risk — which is where education sits —
+moves `2026-08-02` → `2027-12-02` (Art. `113`), a `16`-month shift that resets `P792-3` and `P794-2`.**
+🟢 **But Art. `50` transparency was not deferred and has applied since `2026-08-02`, and Art. `5` prohibitions are
+live.** 🔵 **So the deferral removed the urgency from the expensive work and left it on the cheap work.** 🟢 The
+EMEA offer stops being *"beat the August deadline"* and becomes *"be provably transparent now, conformity-ready by
+December 2027"*. 🔴 Still `CITED, NOT READ` — `eur-lex` remains `403` at `CONNECT` (`T906`) — 🟢 **but an article
+number can be verified by anyone in one lookup, which a paraphrase cannot.**
+→ [`intel/trends.md`](intel/trends.md) `T922`, [`intel/market.md`](intel/market.md), `P796-1`
 
 ## Regional summary
 
 | Region | The opening | The named gap |
 |---|---|---|
-| **North America** | 🟢 **`p793-E` DISCHARGED — Canada and Mexico placed for the first time.** 🇨🇦 Ontario has made **"Cyber Safety and Artificial Intelligence" a mandatory `2026-27` Professional Activity topic** pointing at the Ontario Trustworthy AI Framework, with 🔴 **no province-wide policy memorandum** — so the buyer is the board, and there are `72` of them. 🇲🇽 **SEP has told every university to write its own AI guidelines and `~8` in `10` of their students cannot find them.** 🇺🇸 The calendar still leads: **NC model policy `2026-12-31`**, Ohio passed, local policies `2027-06-30` | 🔴 **No spend figure for Canada or Mexico** — both placements are policy and adoption, not budget. 🔴 And the Ontario board-policy percentage rests on a secondary source |
-| **EMEA** | 🟢 **`p793-F` DISCHARGED and overshot. `63%` of European teachers use AI and `16%` believe general-purpose AI improves learning outcomes** (Sanoma Learning 2026, `>20,000` teachers, `14` countries). 🔵 **A `47`-point gap between use and believed benefit is the whole commercial thesis** — this market has tried the generic tool and rejected it. Plus **`52%`** asking for guidelines, 🔴 **`10` of `23` ministries with any GenAI position**, and the obligations that are **not** deferred: Art. 5 live, **Art. 50 since `2026-08-02`**, **Art. 27 FRIA now** | 🔴 **Spend is still unanswerable** — `2026` European estimates span `$2.11B`–`$5.86B`, a **`2.8×`** spread. 🔴 Still **no European-origin open-source education agent** at scale: `p794` adds the first in several passes, [`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) 🇫🇷, 🟡 **but `★102` is a seed, not a sector** |
-| **APAC** | 🟢 **`p793-D` DISCHARGED for India and Singapore.** 🇮🇳 **NCERT with CBSE has introduced a Computational Thinking + AI curriculum for Classes `III`–`VIII` from `2026-27`**, Grade `9`–`12` finalised, governance named down to the committee chair. 🇸🇬 **MOE built its own tools inside SLS and its Minister said in February 2026 that it lacks outcome data** — 🟢 **a ministry asking for evaluation, not another tutor.** 🇦🇺 Product expectations and an RAI standard are **both in pilot right now**. 🇨🇳 carried: 教科信〔2026〕1号, provincial procurement | 🔴 **`0` procurement documents reached for India, Singapore or Australia.** Curriculum, ministry statements and standards-in-pilot were reached; **tenders were not** — GeBIZ and state tender portals are the named channel |
-| **LATAM** | 🟢 **The adoption lead now has a primary-ish instrument** — IADB **Nota CIMA `37`** from TALIS 2024: 🇧🇷 `56%` · 🇨🇱 `55%` · 🇨🇴 `53%` · 🇨🇷 `52%`, with AI training the **first**-ranked PD need in Chile and Costa Rica. 🟢 **And the region's reference deployment is found: PUC Chile runs `194` pedagogical agents across ~`100` courses.** 🟢 New and funded: 🇨🇱 **"Futuros Docentes en IA"** (March 2026, Ministerio de Ciencia + CRUCH + UMCE + CENIA + Kodea) | 🔴 **No AI-in-education statute in Brazil, Mexico or Chile — no deadline to sell against**, so the sale must be made on evidence. 🔴 **And PUC Chile's own stated gap is outcome measurement.** 🟢 With `9%` evaluation coverage region-wide, **evidence instrumentation is still the clearest unclaimed offer, and now it has a `194`-agent proof of demand** |
-| **Global** | 🟢 **Three independent sources now converge on one architecture:** regulators require a named human decision-maker, the best RCT shows the limit is engagement under teacher control, and the deployment literature finds effects only where scope is narrow and educator-controlled. 🟢 **AI proposes, a named human decides, the system proves it** — the evidence pack ports by re-labelling, not re-engineering | 🔴 The platform layer is copyleft while the agent layer is permissive and mostly APAC-origin — the same architectural decision in every engagement. 🔴 And **no independent security or data-governance evaluation of any education MCP server has been published** (`p792-D`, still unclaimed) |
+| **North America** | 🟢 **The densest legislative calendar in the world, and it is a pipeline rather than a market:** 🔴 **`134` AI-in-education bills across `31` states in `2026`**, `35`+ states with departmental guidance. 🔴 **North Carolina `SL 2026-41`: state model policy `2026-12-31` → local school-unit policies `2027-06-30` → teacher PD `2028-06-30`.** 🔴 Maryland districts by autumn `2026`. Proposed: NY `A 9190` (grade `9`+ limit), CA `AB 1159` (no student data for training). 🟢 **The insight: a district does not need a policy written — the state writes the model. It needs to PROVE it follows the one it adopted, and none can today** | 🔴 **No spend figure for Canada or Mexico, and the `p796` leg returned US-only results** — the same artefact `p793-E` diagnosed, recurring because the mandated query contains "North America". 🟢 Carried placements stand: 🇨🇦 Ontario's mandatory `2026-27` PA topic with **no province-wide memorandum** (the buyer is the board, and there are `72`); 🇲🇽 SEP's `10` acciones |
+| **EMEA** | 🟢 **`Regulation (EU) 2026/1744` dates everything** (above). 🟢 **The commercial thesis is still the best line in this base: `63%` of European teachers use AI and `16%` believe general-purpose AI improves learning outcomes** (Sanoma, `>20,000` teachers, `14` countries) — 🔵 **a `47`-point gap is a market that has tried the generic tool and rejected it.** 🟢 New: 🇬🇧 **DfE generative-AI product safety standards (Jan `2026`)** and Ofqual coursework-integrity resources (Mar `2026`) — a *product-standards* buyer, rarer and more durable than a guidance buyer. 🟢 EP briefing `PE 784574`. 🟢 🇦🇪 Dubai KHDA guidance to private schools | 🔴 **Spend still unanswerable: `2026` European estimates span `$2.11B`–`$5.86B`, a `2.8×` spread.** 🔴 **Still only ONE European-origin open-source education agent at scale** — `tutor-mcp` 🇫🇷 (★`102`); `p796` adds no second and says so. 🟢 **But it adds a European finding of another kind: `EUPL-1.2`** (`T918`), carried by [`hedy`](https://github.com/hedyorg/hedy) (★`1,697`) |
+| **APAC** | 🟢 **APAC gains its first COMPELLABLE education-AI obligations, which is what `Gap 254` has asked for across several passes.** 🔴 🇻🇳 **Vietnam's Law on AI (effective `2026-03-01`) makes education a high-risk category requiring PRE-DEPLOYMENT REGISTRATION in the National AI Database.** 🔴 🇦🇺 **TEQSA requires EVERY higher-education provider to submit an institutional action plan on generative-AI risk** — a compelled document from every university in the country. 🇰🇷 AI Basic Act in force `2026-01-22` (decrees pending, grace period through `2026`). 🇸🇬 MOE builds its own tools and 🔴 **says it lacks outcome data.** 🇨🇳 carried: 教科信〔2026〕1号 | 🔴 **`0` procurement documents reached for India, Singapore or Australia for a third consecutive pass.** 🟢 **`Gap 254`'s prediction was half right — the finding was statutory filings, not tenders.** 🔴 **And `0` new APAC-origin repositories entered discovery, while the three highest-adoption agents here remain APAC university projects.** 🔵 Both priced in `p796-D` |
+| **LATAM** | 🟢 **The evaluation gap now has a denominator AND its constraint.** UNESCO IESALC `2026` (`200` institutions, `19` countries): 🟢 **`87%` of universities use AI** · 🔴 **`26%` formal strategy** · 🔴 **`18.5%` institution-wide policies** · 🔴 **`9%` formal evaluation** · 🔴 **`8%` any dedicated AI budget — `4%` among PUBLIC universities.** 🟢 New: 🇺🇾 **Ceibal `75%` of public-school teachers**; 🇧🇷 **Cetic.br `53%` of administrators use AI, `22%` have guidelines**; 🟢 **UNESCO has launched a regional AI-in-education Observatory and partnered with CENIA** | 🔴 **No AI-in-education statute in Brazil, Mexico or Chile — no deadline to sell against, so the sale is made on evidence.** 🟢 **And `p796` re-prices the offer because of the `4%`: the `p794`/`p795` "evaluation office" is above what `96%` of public institutions can buy, so `P796-4` is scoped as an INSTRUMENT with an owner, not a department.** 🟡 `p795-H` named but not reconciled — `36%` is the all-TALIS average, IADB's `41%` a reference subset |
+| **Global** | 🟢 **Three sources still converge on one architecture** — regulators require a named human decision-maker, the best RCT says the limit is engagement under teacher control (`T907`), and the deployment literature finds effects only where scope is narrow and educator-controlled. 🟢 **AI proposes, a named human decides, the system proves it.** 🟢 **`p796` adds a fourth leg from the licence side: the delivery surface is a licence question before it is an engineering one** (`T914`) | 🔴 The platform layer is copyleft (`GPL-3.0`, `AGPL-3.0`, `EUPL-1.2`) while the agent layer is permissive and mostly APAC-origin — the same architectural decision in every engagement. 🔴 And **no independent security or data-governance evaluation of any education MCP server has been published** (`p792-D`, still unclaimed) |
 
 ## Files
 
 | File | What it holds | Mode |
 |---|---|---|
-| [`agents/top.md`](agents/top.md) | `126` addresses, `4` added this pass, stars re-measured | rewritten each pass |
-| [`agents/trending.md`](agents/trending.md) | What is new per window · **`935` sections across `54` distinct dates** (measured) | 🟢 **append-only** |
-| [`repos/foundations.md`](repos/foundations.md) | Foundational repos, permissive/copyleft split, 🔴 **archived rows now labelled** | rewritten each pass |
-| [`repos/trending.md`](repos/trending.md) | Repo movement per window · **`933` sections across `47` distinct dates** (measured) | 🟢 **append-only** |
-| [`verticals/solutions.md`](verticals/solutions.md) | LMS, SIS, assessment and interop platforms to build on | rewritten each pass |
+| [`agents/top.md`](agents/top.md) | `130` addresses, `4` added this pass, stars exact | rewritten each pass |
+| [`agents/trending.md`](agents/trending.md) | What is new per window · **`937` `##` sections** (measured) | 🟢 **append-only** |
+| [`repos/foundations.md`](repos/foundations.md) | Foundational repos; 🟢 **`EUPL-1.2` added as a family**; archived and stale rows labelled | rewritten each pass |
+| [`repos/trending.md`](repos/trending.md) | Repo movement per window · **`935` `##` sections** (measured) | 🟢 **append-only** |
+| [`verticals/solutions.md`](verticals/solutions.md) | LMS, SIS, assessment and interop platforms · 🔴 **brand-layer column added** | rewritten each pass |
 | [`intel/market.md`](intel/market.md) | Market range and **Opportunities by region** (`5` subsections) | rewritten each pass |
-| [`intel/trends.md`](intel/trends.md) | `T900`–`T907` | rewritten each pass |
-| [`compose/patterns.md`](compose/patterns.md) | `P794-1`–`P794-4`, one per region | rewritten each pass |
-| [`intel/open-gaps.md`](intel/open-gaps.md) | Action ledger · `p793` disposition + `p795` queue | 🟢 **append-only** |
-| `evidence/*2026-11-12-p794*` | The five machine outputs behind this pass | — |
-| `archive/2026-11-12-p794-pre-rewrite/` | Prior versions of every rewritten file | — |
+| [`intel/trends.md`](intel/trends.md) | `T914`–`T923` | rewritten each pass |
+| [`compose/patterns.md`](compose/patterns.md) | `P796-1`–`P796-5` — four regional, one global week-one gate | rewritten each pass |
+| [`intel/open-gaps.md`](intel/open-gaps.md) | Action ledger · `p795` disposition + `p797` queue | 🟢 **append-only** |
+| `evidence/*2026-11-12-p796*` | The three machine outputs behind this pass, 🔴 **including the UNCORRECTED first run** | — |
+| `archive/2026-11-12-p796-pre-rewrite/` | Prior versions of every rewritten file | — |
 
-🔴 **One carried figure removed rather than reproduced:** the previous README reported **`371` dated sections** in each trending ledger. 🔴 **That number does not reproduce under any heading pattern** — the ledgers hold `935` and `933` `##` sections across `54` and `47` distinct dates. 🔵 Same class as `T905`: a published count nobody could re-derive. 🟢 Replaced with measured values.
+🔴 **One artefact published deliberately in its WRONG form:**
+[`licence-block-census-UNCORRECTED-v1`](evidence/licence-block-census-UNCORRECTED-v1.2026-11-12-p796.tsv) is the
+first run of this pass's grant counter, which reported **`32`** multi-grant rows where **`5`** are real. 🟢 **It
+ships beside the corrected census so the `32`→`5` correction can be re-derived rather than taken on trust.**
 
 ## 🔴 Channel discipline — read before quoting anything here
 
 | Claim type | Status |
 |---|---|
-| Repository existence | 🟢 **Byte-verified three-state** (`rc` + ref count), `170` of `170`. 🔴 **But three states are not enough — `ARCHIVED` reads as healthy** (`T901`) |
-| Repository **maintenance** | 🔴 **NEW and mostly unmeasured.** `archived` and `pushed_at` were read for `164` rows this pass; `3` archived rows found. 🔵 Treat any row without a last-push date as unassessed |
-| Licence grant | 🟢 **Byte-verified**, graded by clause presence on the served bytes, 🟢 **cross-checked against GitHub's SPDX classifier: `118/118`**. 🔴 **But check for riders** — family matching cannot see what is appended (`T900`) |
-| Licence **restrictions** | 🔴 **The direction instruments fail in.** NonCommercial in Spanish and a branding rider in English both returned a *more usable* answer than the truth (`T902`, `T900`). 🔵 Restriction vocabulary, in every language, before grant vocabulary |
-| Dependency licences | 🟢 **Byte-verified at the PINNED VERSION** where measured — 🔴 **but only `3` rows have been; every other `Deps` cell is a claim about a version nobody identified** (`p794-C`) |
-| Byte sizes | 🟢 **Reproducible — `8` of `8` exact across two independent passes** |
-| 🔴 **`sha=` values** | 🔴 **NOT reproducible and not one hash function.** The column mixes git blob sha1, `sha256` and values matching neither; one `19`-byte file carries **three** published hashes (`T905`). 🔵 **Treat every carried `sha=` as unverified.** `p794`'s are `git rev-parse HEAD:<path>`, truncated to `12` |
-| Star counts | 🟢 **Re-measured exactly, `164` of `170`** — `gh api search/repositories` takes `10` × `repo:` per call. 🔴 **`6` addresses are absent from the search index and all `6` clone and serve refs** (`T903`) — a search index is a view, not a census |
-| Publishing | 🟢 **Works.** This repository must be **attached to the session's authorised set** before a push; the proxy otherwise declines to inject a credential. The attachment is **per-session**, so a future pass seeing `403` should attach, not record "blocked" |
-| Every market, adoption and regulatory figure | 🔴 **Search-channel testimony.** 🟢 **And now diagnosed:** `eur-lex`, `oecd.org`, `unesco.org`, `op.europa.eu`, `ec.europa.eu`, `pib.gov.in`, `moe.gov.sg`, `ontario.ca` and `edresearch.edu.au` are refused with a **gateway `403` at `CONNECT` — a network-POLICY denial, not an unreachable site** (`T906`). 🔵 Positive controls passed in the same minute. **A human can fix this in one place → `p794-F`** |
+| Repository existence | 🟢 **Byte-verified on the blobless-clone channel, `176` addresses, `0` failures, 🟢 with a NEGATIVE control that fails as required.** 🔴 **`curl -sI` — the method this KB's own instructions prescribe — returns `403` for `torvalds/linux` AND for an invented address, so it cannot distinguish live from dead here (`T923`)** → `p796-F` |
+| Repository **maintenance** | 🟡 `archived` and `pushed_at` read for the rows measured; `3` archived rows and `9` stale beyond `24` months, both labelled in place. 🔵 Treat any row without a last-push date as unassessed |
+| Licence **grant** | 🟢 **Byte-verified by title line + clause count + restriction vocabulary.** 🔴 **But the unit is the GRANT, not the file and not the repository: `5` rows serve more than one and `3` of those hide it in a single file (`T915`)** |
+| Licence **restrictions** | 🔴 **Still the direction instruments fail in.** NonCommercial in Spanish (`T902`), an English branding rider (`T900`), an MIT grant sentence used as camouflage (`T908`) and 🆕 **`NoDerivs` on brand assets in a `NOTICE` file (`T914`)** all returned a *more usable* answer than the truth |
+| **Brand / white-label rights** | 🔴 **NEW this pass and mostly unmeasured. `3` of `3` platforms checked carry a brand-layer restriction the root `LICENSE` does not mention.** 🔴 **The other ten platforms in [`verticals/solutions.md`](verticals/solutions.md) have NOT been checked** → `p796-C` |
+| Dependency licences | 🟢 **`DSpace` byte-verified from its own `91,354 B` `LICENSES_THIRD_PARTY`: `721` entries, GPL policy confirmed, ~`13` LGPL entries** (`T920`). 🔴 **Every other `Deps` cell remains a claim about a version nobody identified** |
+| Byte sizes | 🟢 **Reproducible — `3` of `3` exact against `p795` after one self-caught defect** (`$(…)` strips trailing newlines; `cat-file -s` is authoritative) |
+| 🔴 **`sha=` values** | 🔴 **Values written BEFORE `p795` are not reproducible and not one hash function (`T905`).** 🟢 Everything written at `p795` and `p796` is `git rev-parse HEAD:<path>`, labelled. 🔵 **`p796-B` proposes DELETING the rest rather than a fifth attempt to re-measure it** |
+| Star counts | 🟢 **Re-measured exactly via `gh api search/repositories`, `10` × `repo:` per call.** 🔴 **A search index is a view, not a census — `6` addresses are absent from it and all `6` clone and serve refs (`T903`)** |
+| GitHub's SPDX classifier | 🟢 **Useful in both directions, now quantified:** 🟢 abstention is `3.9×` enriched among multi-grant rows, 🔴 **and when it does NOT abstain on one, it reports the code licence and drops the content licence (`T916`)** |
+| Publishing | 🟢 **Works.** This repository must be **attached to the session's authorised set** before a push; the proxy otherwise declines to inject a credential. 🔵 The attachment is **per-session**, so a future pass seeing `403` should attach, not record "blocked" |
+| Every market, adoption and regulatory figure | 🔴 **Search-channel testimony.** 🔴 **`T906` persists into a third pass: `eur-lex.europa.eu`, `oecd.org`, `unesco.org`, `op.europa.eu`, `iesalc.unesco.org` and `digital-strategy.ec.europa.eu` all fail at `CONNECT` — a network-POLICY denial, not an unreachable site.** 🟢 **`p795-F` discharged WITHOUT them by naming an instrument instead of quoting a text; 🔴 `p795-H` could not, because reconciling two averages requires reading both** |
 
-🔴 **Seven recorded ways to misread a licence, every one found by a control on a row this base had already
+🔴 **Eight recorded ways to misread a licence, every one found by a control on a row this base had already
 published** — case-blindness (`T842`), title-line insufficiency (`T847`), length-as-integrity (`T845`),
-language-blindness (`T848`), appendix contamination (`T849`), affero-substring (`T894`) and
-🆕 **additive riders (`T900`)**.
+language-blindness (`T848`), appendix contamination (`T849`), affero-substring (`T894`), additive riders (`T900`),
+camouflaged grant sentences (`T908`) — and 🆕 **`T914`: the restriction is in a different FILE from the grant.**
 
-🔵 **`4` of this pass's `5` self-caught defects were one mistake: grading on a proxy — a filename, a clause
-set, a family, an English token — instead of reading the thing itself.** 🟢 **And the instrument that caught
-most of them was this base's own published record, which disagreed with my probe and was right every time.**
-🔴 `p794` adds the companion caution to `p793-G`: **check which direction your instrument errs in, and never
-let it err toward "usable"** (`p794-G`).
+🔵 **Two standing cautions now hold simultaneously, and `p796` earned the second the hard way.** 🟢 **`p795-G`:
+before trusting a sweep that returns zero, re-run it on the finding that caused it to be queued.** 🔴 **`p796-G`:
+that is not enough — a control set must span the population's KINDS. I controlled this pass's gate on four
+known-positive rows, all four passed, and the instrument was still wrong on `26` others, because all four
+controls were short permissive files and the defect only occurs in `35 KB` copyleft texts.** 🔵 **A zero is a
+measurement; an uncontrolled zero is a guess wearing a number; and a control set drawn only from the motivating
+rows certifies nothing about the rest of the population.**
