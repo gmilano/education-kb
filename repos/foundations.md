@@ -4,7 +4,7 @@ region: Global
 updated: 2026-11-12
 ---
 
-# Foundational education repositories — `p788`
+# Foundational education repositories — `p789`
 
 **The single most useful fact in this file, carried:** in education, *the famous platforms are
 copyleft and the permissive layer is narrow and specific.* Moodle, Open edX, Canvas, Chamilo,
@@ -47,6 +47,56 @@ title found by scanning for a line that *is* a licence title at any depth (`T863
 | **rrule** `NEW` | [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | **BSD-3-Clause** · `3,493 B` · `9f2061febeeb` | — | Global | Recurrence rules — the scheduling primitive under timetabling and spaced review. 🔵 Grant served at `LICENCE`, the **British spelling**, which a US-spelling-only probe misses |
 | **annotated DL implementations** `NEW` | [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | **MIT** · `1,082 B` · `db59a04a8a2c` | — | Global | Annotated paper implementations — a teaching corpus under a permissive grant. Rescued from the ungranted class |
 | **MyScriptJS** `NEW` | [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) | **Apache-2.0 (by reference)** · `570 B` · `968021fcc1f4` | — | EMEA | Handwriting and maths-input recognition (French origin). 🟢 **Rescued: `p786` filed this `570 B` file as a "proprietary notice".** It is the standard Apache-2.0 grant-by-reference boilerplate, URL and AS-IS clause included. 🔴 **It was dismissed for being short — the exact error `T845` forbids** |
+
+## 🟢 Permissive rows added this pass (`p789`)
+
+| Repo | Address | Grant, on the bytes | Region | Why it is foundational |
+|---|---|---|---|---|
+| 🟢 **Timable** `NEW` | [`Nayak-indie/Timable`](https://github.com/Nayak-indie/Timable) | 🟢 Apache-2.0 · `11,357 B` · `c71d239df917` | Global | **OR-Tools** timetabling — a real constraint solver under a permissive grant. The scheduling primitive this base had no row for |
+| 🟢 **school-timetable-timefold-case-study** `NEW` | [`paoloantinori/school-timetable-timefold-case-study`](https://github.com/paoloantinori/school-timetable-timefold-case-study) | 🟢 MIT · `1,081 B` · `12e2a597e655` | Global | **Timefold** solver on Quarkus, driven by coding agents — the reference wiring for `P789-1` |
+| 🟢 **jp-k12-digital-ai-textbook** `NEW` | [`masa-san-jp/jp-k12-digital-ai-textbook`](https://github.com/masa-san-jp/jp-k12-digital-ai-textbook) | 🟢 MIT · `1,068 B` · `d7c583c9f444` | APAC 🇯🇵 | A `12`-grade curriculum tree aligned to the **next 学習指導要領** and the **UNESCO AI Competency Framework** — content infrastructure, not an app |
+| 🟢 **classcharts-agent** `NEW` | [`shan8851/classcharts-agent`](https://github.com/shan8851/classcharts-agent) | 🟢 MIT · `1,066 B` · `65ef4f07f833` | EMEA 🇬🇧 | A **read-only** attachment to a live UK school MIS — this base's second EMEA LMS/MIS attachment point |
+
+## 🟢 BSL-1.0 (Boost) — a licence family new to this base (`p789`)
+
+| Repo | Address | Grant, on the bytes | Region | Note |
+|---|---|---|---|---|
+| 🟢 **nextgen-learn** `NEW` | [`daddysystem/nextgen-learn`](https://github.com/daddysystem/nextgen-learn) | 🟢 **BSL-1.0 · `1,338 B` · `c9bff7573892`** | EMEA 🇿🇦 | Free **CAPS**-curriculum study site with an AI tutor |
+
+🟢 **Boost-1.0 is permissive, OSI-approved, and in one respect *weaker* than MIT:** it waives the
+attribution requirement for distribution in object-code-only form. Nothing in it restricts
+commercial use, linking or relicensing of derivatives.
+🔴 **It is also the pass's sixth instrument defect, and the reason it is called out here:**
+**BSL-1.0 opens with MIT's exact sentence** — *"Permission is hereby granted, free of charge, to
+any person or organization obtaining a copy"*. A phrase-matching probe grades it MIT. Only the
+title separates them. 🔵 `BSL-1.0` must not be confused with the **Business Source License
+(BUSL-1.1)**, which is *not* open source; the SPDX id `BSL-1.0` is Boost.
+
+## 🔴 `T872` — The second dependency layer, and a first-layer audit is a screen not a clearance
+
+🟢 **`ACTION p788-D` discharged, bounded, with the boundary stated first: layer 2 only.**
+`jupyter/nbgrader` → **`18`** declared direct runtime dependencies (🟢 the exact count `p788`
+recorded — a control on this channel) → **`65`** new transitive packages at layer 2.
+Each grant read **PEP 639 `license_expression` first**, then classifiers, then the free-text field,
+because `p788` recorded PEP 639 blindness as a defect; **`28` of the `65` are decided by
+`license_expression`** and a classifier-only instrument would read them `UNDECLARED`.
+
+| Package | Grant | Enters through | Effect |
+|---|---|---|---|
+| 🔴 **`certifi`** | **MPL-2.0** | 🔴 `requests` → `certifi` | 🟡 **File-level copyleft.** Triggers on modifying `certifi`'s own files; linking and redistribution are clean. Nobody modifies a CA bundle — **but the graph is no longer "no copyleft"** |
+| 🔴 **`paramiko`** | **LGPL-2.1** (PEP 639) | 🔴 `jupyter-client` → `paramiko` | 🟡 **Weak copyleft, dynamic linking permitted.** 🔴 It arrives via `jupyter-client`, a *core* runtime dependency of every Jupyter-based grading stack — not an optional extra |
+| 🟡 `pytest-ruff` | **UNDECLARED** | `setuptools` → `pytest-ruff` | 🔵 Build/test-time only. Recorded because an undeclared grant is a fact, not an omission |
+
+🟢 **The other `62` are permissive** — MIT, BSD-2/3-Clause, Apache-2.0, ISC, PSF-2.0 — including
+three SPDX **compound** expressions that are mis-read in opposite directions: `packaging` is
+`Apache-2.0 OR BSD-2-Clause` (**an election**, both permissive), `prometheus-client` is
+`Apache-2.0 AND BSD-2-Clause` (**cumulative — both apply**), and `jupyter-builder` is
+`Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND ISC AND MIT`.
+
+🟢 **Verdict for `P788-1`, which rests on `nbgrader`: it still holds, and its licensing claim is now
+weaker and true.** What changes is the sentence a client is told — not *"the grading component's
+dependencies are entirely permissive"*, which was true only of layer 1, but *"its graph includes
+MPL-2.0 and LGPL-2.1 at layer 2, both weak copyleft, neither triggered by the way we deploy it."*
 
 ## 🔴 Copyleft — real, dominant, and a licensing decision before a line is written
 
@@ -100,14 +150,21 @@ family check. Verified again this pass: all copyleft controls still reproduce.
 
 | | Count |
 |---|---|
-| Foundational repos with a byte-verified grant | **48** |
-| 🟢 **Permissive** (MIT · Apache-2.0 · BSD-3 · ECL-2.0) | **24** (was 15) |
+| Foundational repos with a byte-verified grant | **53** (was 48) |
+| 🟢 **Permissive** (MIT · Apache-2.0 · BSD-3 · ECL-2.0 · **BSL-1.0**) | **29** (was 24) |
 | 🔴 Copyleft (GPL · AGPL · LGPL) | **20** |
 | 🟡 EUPL-1.2 | **3** |
+| 🟢 **BSL-1.0 (Boost)** — new family this pass | **1** |
 | 🔴 Not open source (proprietary · NonCommercial · split · bespoke) | **6** |
-| 🟢 **Rescued from the ungranted/bespoke class this pass** | **8** — `xapi-service`, `xapi-validation`, `eagle-aig`, `brightspace-d2l-mcp`, `getodk/collect`, `labmlai/annotated…`, `MyScript/MyScriptJS`, `jkbrzt/rrule` |
-| 🟢 Permissive repos with a **first-layer dependency audit** | **4 of 48** — `nbgrader` 🟢, `OATutor` 🟢, `Kolibri` 🟡, `Oppia` 🔴 |
+| 🟢 Permissive repos with a **first-layer** dependency audit | **4 of 53** — `nbgrader` 🟢, `OATutor` 🟢, `Kolibri` 🟡, `Oppia` 🔴 |
+| 🟢 Permissive repos with a **second-layer** dependency audit | **1 of 53** — `nbgrader` 🟡 (`65` transitive packages, `2` weak-copyleft) |
 | Dead addresses previously corrected to a live canonical owner | **4** — `tsugi/tsugi`→`csev/tsugi`, `openedx/openassessment`→`openedx/edx-ora2`, `mahara/mahara`→`MaharaProject/mahara`, `openedx/tutor`→`overhangio/tutor` |
+| 🟢 Controls reproduced exactly before any verdict shipped | **13 of 13** · `2` planted negatives DEAD |
+
+🔴 **Declared gaps on this file:** transitive depth `3+` is **unmeasured by design**; the npm-side
+layer-2 graphs (`OATutor` `43` direct, `Oppia` `171` direct) were **not** re-audited this pass, and
+Oppia's layer-1 AGPL-3.0 finding already governs that decision; and these are **declared ranges
+from registry metadata, not resolved versions from a lockfile**, so a client's actual tree may differ.
 
 🔴 **Still grant-less after a re-probe with this pass's variant-tolerant, locale-safe,
 any-depth-title gate:** [`formalms/formalms`](https://github.com/formalms/formalms) `446a77a9b9cb`,

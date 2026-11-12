@@ -4,7 +4,7 @@ region: Global
 updated: 2026-11-12
 ---
 
-# Vertical platforms — real systems an AI layer can sit on top of — `p788`
+# Vertical platforms — real systems an AI layer can sit on top of — `p789`
 
 The pattern that works in education is the Odoo pattern: **take a mature, deployed, customisable
 platform that already holds the institution's data, and add agents at its edge.** Nobody replaces a
@@ -64,6 +64,28 @@ was run; a blank cell means not audited, not clean.**
 | **Anki** | [`ankitects/anki`](https://github.com/ankitects/anki) | 🔴 AGPL-3.0 · `1,930 B` · `a5461e33e3db` | — | Global | The reference spaced-repetition scheduler. 🟢 For a permissive recurrence primitive instead, use [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) (BSD-3, `3,493 B`) |
 | **ODK Collect** | [`getodk/collect`](https://github.com/getodk/collect) | 🟢 **Apache-2.0** · `10,494 B` · `2344bb9c5da4` | — | Global | 🟢 Offline mobile data collection — the field instrument for a readiness diagnostic or a baseline survey where connectivity fails |
 | 🔴 **Metabase** | [`metabase/metabase`](https://github.com/metabase/metabase) | 🔴 **SPLIT BY DIRECTORY** · `855 B` · `6006cc9c65dd` | — | Global | Frequently the BI layer a client already runs over learning data. 🔴 **AGPL-3.0 outside `enterprise/`, Metabase Commercial License inside it.** Deploy it; do not vendor code out of it without deciding which side of the boundary you are on |
+
+## 🟢 School operations — timetabling, substitution and behaviour (`p789`)
+
+🟢 **New category this pass, and it is the one with the clearest architecture.** The permissive
+supply here is **solvers plus approval gates**, not conversational agents — which means the AI layer
+sits at the *edges* of a deterministic core, reading intent and explaining outcomes, never deciding
+the schedule itself.
+
+| Platform / component | Address | Grant | What an AI layer attaches to |
+|---|---|---|---|
+| 🟢 **Timefold** (via case study) | [`paoloantinori/school-timetable-timefold-case-study`](https://github.com/paoloantinori/school-timetable-timefold-case-study) | 🟢 MIT · `1,081 B` · `12e2a597e655` | A **constraint solver** on Quarkus. The LLM turns plain-English policy into constraints and explains rejections; the solver produces the timetable |
+| 🟢 **OR-Tools** (via Timable) | [`Nayak-indie/Timable`](https://github.com/Nayak-indie/Timable) | 🟢 Apache-2.0 · `11,357 B` · `c71d239df917` | Clash-free, priority-aware scheduling with a Streamlit surface — the second independent solver |
+| 🟢 **schoolflow-agent** | [`Zahraishag/schoolflow-agent`](https://github.com/Zahraishag/schoolflow-agent) | 🟢 MIT · `1,081 B` · `1b7481d92d0f` | **Disruption handling** — absences and substitutions — with a **human approval step** before any schedule is written |
+| 🟢 **ClassCharts** (via agent) | [`shan8851/classcharts-agent`](https://github.com/shan8851/classcharts-agent) | 🟢 MIT · `1,066 B` · `65ef4f07f833` | 🇬🇧 A live UK homework/behaviour MIS, attached **read-only** on a parent account |
+| 🟢 **D2L Brightspace** (via MCP) | [`anonymousonyx22/brightspace-d2l-mcp`](https://github.com/anonymousonyx22/brightspace-d2l-mcp) | 🟢 MIT · `1,200 B` · `a873478a6b4e` | The third major North American LMS, over MCP |
+| 🔴 **School ERP** (via MCP) | [`NSK-394/schoolbridge-mcp`](https://github.com/NSK-394/schoolbridge-mcp) | 🔴 **ungranted** | **Role-based** agent access to attendance, fees and student records. 🔵 The right control surface, no grant — an upstream licence request |
+
+🔴 **The caution this section exists to state.** Timetabling, attendance and safeguarding touch
+children's personal data and, in the EU, sit close to the high-risk boundary when they feed
+decisions about individuals. 🟢 The read-only attachment (`classcharts-agent`) and the approval gate
+(`schoolflow-agent`) are not conveniences — **they are the two design choices that keep this
+category deployable**, and both already exist in permissive code.
 
 ## Interop — the layer that makes all of the above composable
 

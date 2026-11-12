@@ -4,7 +4,7 @@ region: Global
 updated: 2026-11-12
 ---
 
-# Education AI — market map and opportunities — `p788`
+# Education AI — market map and opportunities — `p789`
 
 > 🔴 **Channel warning, amended this pass (`T860`).** Only `raw.githubusercontent.com`, the package
 > registries, `git ls-remote` and `search/repositories` are byte-reachable from this session.
@@ -34,6 +34,15 @@ market size would be the least defensible sentence in this base.
 | Global Growth Insights — 🔴 **low outlier, narrower scope** | `$2.21B` | `$6.47B` by 2035 | `12.7%` |
 | Technavio — **incremental growth, not a level** | — | `+$3.3678B` over 2026–2030 | `45.0%` |
 
+🟢 **The agentic segment, isolated this pass (`p789`).** Mordor Intelligence prices **agentic AI in
+education and learning technologies** at **`$2.37B` in 2026 → `$11.83B` by 2031, a `37.92%` CAGR** —
+the only house found that separates agentic from AI-in-education generally. 🔵 Read against the
+totals above, that puts agentic at roughly **a fifth to a quarter of the 2026 market** on the
+mid-range estimates, growing faster than the whole. 🔴 **One source, one definition, no corroboration
+— treat the ratio as indicative and the direction as the finding.** Technavio independently
+describes the shift as moving *from experimental generative AI to strategic deployment of autonomous
+agentic workflows*, which is the same claim without a number attached.
+
 🟢 **How to use this with a client:** cite the *spread* (`$2.2B`–`$11.4B` for 2026) and the
 *consensus direction* (every house except one forecasts a 30–45% CAGR), then move the conversation
 to the institution's own budget line. The segment figure — higher ed at `$4.09B` — is more useful
@@ -58,6 +67,30 @@ bring you AI" addresses a need that is already met.
 ## Opportunities by region
 
 ### North America
+
+🟢 **`p789` regulatory update — the US picture is state-level, dense, and now on dated deadlines.**
+A legislative tracker counts **`134` AI-in-education bills across `31` states** as of March 2026, and
+**~`34` states plus DC and Puerto Rico** have issued AI guidance. 🟢 **Most of it governs *how* AI is
+used, not whether** — which is a procurement opportunity, not a barrier. Dated obligations worth
+putting in a proposal:
+
+| Jurisdiction | Obligation | Deadline |
+|---|---|---|
+| **North Carolina** (Session Law 2026-41) | State model policy | `2026-12-31` |
+| **North Carolina** | Local school-unit policies | `2027-06-30` |
+| **North Carolina** | Specified teacher professional development | `2028-06-30` |
+| **Ohio** | Schools must adopt an AI framework | `2026-07-01` |
+| **Maryland** (SB 720) | Guidance requirements + district AI policy mandates | in force |
+
+🔴 **No binding federal AI curriculum standard exists.** A 2025 executive order created a White House
+AI education task force, and the **K-12 AI Literacy and Readiness Act of 2026** has been advanced by
+the House Education and Workforce Committee — a possible federal funding pathway, **not yet law.**
+🟢 **The adoption split is the sales argument:** university student AI use is reported at **`92%`**
+against **`54%`** of K-12 students. Higher ed has the adoption and the integrity problem; K-12 has
+the policy deadlines and the budget trigger. 🔵 Two different pitches, same components.
+🟢 **New supply this pass:** `brightspace-d2l-mcp` is joined by `classcharts-agent` as a second
+read-only MIS attachment, and the school-operations category (`T874`) now has `5` permissive rows —
+directly relevant to the district-policy deadlines above.
 
 🟢 **The regulated-grading market, and it is live now rather than pending.**
 
@@ -91,6 +124,32 @@ bring you AI" addresses a need that is already met.
   — precisely the line Oklahoma drew and others are drawing. See `compose/patterns.md` → `P788-1`.
 
 ### EMEA
+
+🟢 **`p789` regulatory update — the high-risk education deadline MOVED, and this changes the sales
+calendar.** 🔴 **Regulation (EU) 2026/1744 pushed stand-alone high-risk education AI — admissions,
+grading, exam proctoring — from `2026-08-02` to `2027-12-02`.** Any guide still citing August 2026 is
+out of date. What is **in force now**:
+
+| Obligation | Status |
+|---|---|
+| **Article 50 transparency** — chatbot and synthetic-content disclosure | 🟢 **In force `2026-08-02`** |
+| Synthetic-content watermarking | 🟡 Narrower grace period to `2026-12-02` |
+| **Emotion recognition in schools** | 🔴 **Banned since February 2025** |
+| Staff **AI-literacy** duty | 🟢 In force; the 2026 amendments set **no specific attainment level** |
+| **FRIA** (Fundamental Rights Impact Assessment) for public bodies deploying high-risk systems | 🟢 Required before deployment |
+| General-purpose chatbots in schools | 🟢 **Not banned** |
+
+🟢 **How to use the delay — and the trap in it.** The `13`-month slip is not a reprieve; it is a
+window in which **transparency is already enforceable while grading is not yet**. The sellable
+engagement today is the **Article 50 + AI-literacy + FRIA readiness** package, with the grading
+system built against the 2027 bar rather than retrofitted into it. 🔴 **An institution that treats
+December 2027 as the start date will be buying remediation in 2027 at the price of a rebuild.**
+🔵 Commission ethical-AI-in-education guidelines were updated May 2026 and Council conclusions on a
+human-centred approach exist, but both were single-sourced this pass and are carried as soft context.
+🟢 **New supply this pass:** Nigeria and South Africa are placed (`T871`) — `5` permissive rows
+against **WAEC/NERDC** and **CAPS** national curricula, including an offline on-device tutor, plus
+🇬🇧 `classcharts-agent`. African curriculum work is filed EMEA in this base's closed vocabulary; the
+country is in the prose.
 
 🟢 **The compliance-deadline market — and the supply gap this base recorded here was WRONG.**
 
@@ -155,6 +214,37 @@ bring you AI" addresses a need that is already met.
 
 ### APAC
 
+🟢 **`p789` regulatory update — and the headline is that Vietnam named education high-risk.**
+🔴 **A July 2026 Vietnamese decision identifies high-risk AI systems in six sectors, education among
+them, naming automated assessment and behavioural systems explicitly.** With Korea's AI Basic Act
+(`T866`), that is **two APAC jurisdictions binding education AI** — the region's "light-touch"
+reputation no longer describes it.
+
+| Jurisdiction | Instrument | Status |
+|---|---|---|
+| 🔴 **Vietnam** | AI law in effect; **education named high-risk** (automated assessment, behavioural) | July 2026 decision |
+| 🔴 **South Korea** | AI Basic Act — binds education | In force January 2026 (`T866`) |
+| 🟡 **China** | No general AI law, but binding specific rules: **AI-content labelling since `2025-09-01`**, plus an amended Cybersecurity Law carrying its first AI clause | In force |
+| 🟡 **India** | **Synthetic-content labelling and provenance markers from `2026-02-20`**; government signalled dedicated AI legislation July 2026 | Partial; no general law |
+| 🟢 **Japan** | **AI Promotion Act** (2025) — promotion, not penalty. First AI Basic Plan `2025-12-23`; second-phase plan `2026-07-14` | In force, non-punitive |
+
+🟢 **Demand and sentiment, measured.** Ipsos Education Monitor 2026 puts **support for *banning* AI
+in schools** at `23%` Indonesia, `26%` India, `29%` Japan, `31%` South Korea — 🔵 **public resistance
+is a minority everywhere in APAC, but it is highest in the two jurisdictions that regulate most.**
+Japan's own AI adoption is climbing fast from a low base (Microsoft data: **56th in H1 2025 → 48th in
+Q1 2026**), and Japanese support for a ban rose `21%` → `29%` over the same period — **adoption and
+resistance are rising together.**
+🔵 **Commercial players:** India — **PhysicsWallah** launched its own AI tutor (IPO ~`$5B`,
+November 2025); **BYJU'S collapse** still shapes buyer caution. China — **TAL** pivoted into AI
+learning hardware; **ByteDance's Gauth** is a leading education app in the US. 🔴 China's 2021
+private-tutoring crackdown pushed the sector toward non-academic and AI-focused offerings.
+🟢 **New supply this pass: Japan is placed for the first time** (`T870`) with `3` rows, including a
+`12`-grade MIT curriculum tree aligned to the next 学習指導要領 **and** the UNESCO AI Competency
+Framework — directly usable against Japan's promotion-first posture. 🟢 Plus a commercially-shaped
+multi-tenant DeepTutor derivative (`3yangyang9/DeepTutor-AILearning`, Apache-2.0, `287★`) aimed at
+offline training institutions — evidence the Chinese supply is now productising.
+🔴 **Malaysia remains unplaced:** its one timetabling repository is ungranted.
+
 🟢 **Strongest open-source agent supply — and no longer the weakest regulation.**
 
 - 🔴 **THE REGULATORY CORRECTION ON THIS PAGE (`T866`).** `p787` called APAC *"the region with the
@@ -206,6 +296,34 @@ bring you AI" addresses a need that is already met.
   assessment listing. See `compose/patterns.md` → `P788-5`.
 
 ### LATAM
+
+🟢 **`p789` market update — Brazil is the cohort, and the AI being deployed is mostly generative.**
+HolonIQ's **2026 Latin America EdTech 100** is led by Brazil, which accounts for **nearly half the
+cohort** and the clear majority of recorded deal and award activity. 🔵 Named operators worth knowing
+in a pitch: **Teachy** 🇧🇷 (AI lesson preparation — the teacher-workload play) and **Mattilda** 🇲🇽
+(billing for private schools — the operations play, and a reminder that LATAM edtech money is in
+administration as much as instruction).
+
+🟢 **The IDB's own numbers on what is actually running.** Across **`193` AI initiatives** in Latin
+America and the Caribbean: **`59%` generative AI**, `27%` language models, `24%` NLP — and the IDB's
+stated conclusion is that **responsible AI still needs to move from agenda to implementation.**
+🔵 That sentence is the engagement: the region has pilots and lacks governance, which is exactly what
+`P788-6` (institutional AI-readiness) is built to sell.
+
+| Jurisdiction | Instrument | Status |
+|---|---|---|
+| 🟡 **Brazil** | **PL 2338/2023** — would be the region's first comprehensive AI law | Advanced legislative process; 🔴 **passage not confirmed this pass** |
+| 🔴 **Mexico** | Multiple AI bills introduced | 🔴 **None enacted** as of early 2026; policy emphasis on *technological sovereignty* |
+| 🟡 **Brazil (education-specific)** | National Education Council preparing sector guidance for schools and universities | 🔴 Single low-authority source — carried as unverified |
+
+🟢 **Public-sector openings.** UNESCO's **Observatory on AI in Education for Latin America and the
+Caribbean** has held its first member meeting, and a **Mexican pilot with CONALEP and DGETI** aims to
+build centres of excellence. 🔵 Vocational education systems with national reach and no AI governance
+are the cleanest entry point in the region.
+🔴 **`T855` stands and is reinforced:** adoption has outrun governance, and the general AI bills are
+moving while the education-specific ones are not. **Nothing in LATAM obliges an institution to do
+this by a date** — which means the sale is never compliance here, it is teacher workload, dropout
+risk and cost per learner.
 
 🟢 **Teachers out-adopt the OECD, institutions have no governance, and now the general AI bills are
 moving while the education-specific ones are not.**

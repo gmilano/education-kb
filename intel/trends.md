@@ -4,10 +4,132 @@ region: Global
 updated: 2026-11-12
 ---
 
-# Current trends — `p788`
+# Current trends — `p789`
 
 🟢 **Byte-verified** claims concern repositories, grants, `sha`s and dependency manifests.
 🔴 **Search-channel testimony** covers every market, adoption and regulatory figure (`T844`).
+
+## `T869` — In education the grant is often TWO grants, and a single-file probe reads it as none
+
+🟢 **Education repositories ship code *and* teaching content, so they licence them separately** —
+and the split is structural to the industry, not incidental. Measured this pass:
+
+| Repo | Code | Content | How it is served |
+|---|---|---|---|
+| [`kumaken-1/school-office-generative-ai-30`](https://github.com/kumaken-1/school-office-generative-ai-30) | 🟢 MIT `1,102 B` · `c42f19d27c4d` | 🟢 CC BY 4.0 `925 B` · `738b8fc14a61` | **Two files** — `LICENSE-CODE` and `LICENSE-CONTENT` |
+| [`VictorOsondu/ai-adoption-education`](https://github.com/VictorOsondu/ai-adoption-education) | 🟢 MIT | 🟢 CC BY 4.0 | **One file**, two headed sections, `752 B` |
+
+🔴 **Both were reported `NOASSERTION` or unlocatable by the claim channel, and both are usable.**
+The first defeated this pass's probe entirely: GitHub asserted `MIT` while the byte channel found
+**no licence on 11 filename paths**, because the file is named `LICENSE-CODE`. The second was
+graded `CC` by a first pass that read only its opening heading and missed the MIT section below.
+
+🟢 **The operative consequence is a question, not a flag.** For an education asset the right question
+is never *"what licence is this repo?"* but **"what licence covers the code, and what licence covers
+the material?"** — because the content grant is the one that decides whether a client may publish
+derived worksheets, and `NC` on the content bars the engagement even when the code is MIT
+(see [`nahisaho/teacher-genai-playbook`](https://github.com/nahisaho/teacher-genai-playbook),
+CC BY-NC 4.0). 🔵 This is the same shape as `T864` (`paes-mcp`: MIT code, third-party exam corpus)
+and `764-C`/`metabase` (split by directory) — **three different mechanisms, one lesson: the grant has
+a scope, and the scope is part of the grant.**
+
+## `T870` — Japan's supply gap was a CATEGORY error, and `T867` needs amending
+
+🔴 **`p788` measured Japan at `3` repositories in Japanese and called it this base's only *measured*
+rather than suspected gap** — a gap that had already survived translation into the local language.
+🟢 **It did not survive a change of *category*.** The query `校務 AI` (*kōmu* — school
+administrative duties) returns **`5`** repositories, `塾 AI 学習` (cram-school learning) returns
+**`7`**, `学習指導要領 AI` (national curriculum guidelines) returns **`2`**, and two of those carry
+clean MIT grants, including a full `12`-grade curriculum tree.
+
+🟢 **`T867` said supply gaps in this base are *vocabulary* gaps. Amend it: some are *taxonomy*
+gaps.** Translating "tutoring agent" into Japanese was correct and still found almost nothing,
+because **Japan is not publishing tutoring agents.** It is publishing school administration and
+curriculum alignment. The missing step was not a dictionary but a question: *what would this
+country's teachers actually automate first?*
+
+🔵 **And the answer differs by country in a way that is now measured, not asserted:** India publishes
+**curriculum-specific tutors** (NCERT/CBSE), China publishes **evaluated multi-agent classrooms**
+and commercial derivatives, Korea publishes **tutoring APIs**, Japan publishes **administrative
+workflow and curriculum alignment**. 🔴 A single "APAC education agent" search term cannot find all
+four, and a pass that uses one will report three absences.
+
+## `T871` — Africa's curriculum supply is large and almost entirely ungranted
+
+🟢 **`WAEC AI tutor` returns `35` repositories.** 🔴 **`32` of them serve no licence.**
+The same ratio holds for South Africa: `CAPS curriculum South Africa AI` → **`10`**, of which **`2`**
+carry a grant. Ghana: **`1`** repository, ungranted. Tanzania (`NECTA`): 🔴 **`0`**.
+
+🟢 **The finding is the ratio, not the count.** `p788` recorded African curricula beyond Kenya and
+Morocco as *"none found"*. The supply was there; what is missing is **licensing practice**, not
+engineering. 🔵 And the ungranted repositories include the *best-designed* ones —
+[`7irelo/aptiverse`](https://github.com/7irelo/aptiverse) (CAPS practice tests with **auditable
+marking**, the highest-starred of the set) and
+[`tosinamuda/teacher-agent-itu-hackathon`](https://github.com/tosinamuda/teacher-agent-itu-hackathon)
+(**teacher-in-the-loop**, from the ITU AI for Good Lab). **Auditable marking and
+teacher-in-the-loop are the two design choices this base recommends in every pattern it
+publishes, and both are sitting in African repositories without a grant.**
+
+🟢 **The actionable consequence:** for West and Southern African engagements the deliverable is an
+**upstream licence request campaign**, not a build. Three MIT WAEC tutors and two CAPS tools exist
+today; a handful of emails could double the usable set. 🔴 Until then the permissive African base is
+`5` repositories plus the `66`-repo `elimu-ai` ecosystem.
+
+## `T872` — A first-layer dependency audit is a screen, not a clearance
+
+🟢 **`p788` audited `473` direct dependencies across `7` repositories and found `nbgrader` clean.**
+🔴 **At layer 2, `nbgrader` is not clean** — `65` new transitive packages bring **MPL-2.0**
+(`requests` → `certifi`) and **LGPL-2.1** (`jupyter-client` → `paramiko`).
+
+🟢 **Both are weak copyleft and neither bars the pattern.** MPL-2.0 is file-level and triggers on
+modifying `certifi`'s own files; LGPL-2.1 permits dynamic linking. `P788-1` remains deliverable.
+🔴 **What changes is the sentence a client is told.** "Entirely permissive dependencies" was true of
+layer 1 and is false of the graph. The accurate claim is narrower and survives diligence:
+*MPL-2.0 and LGPL-2.1 are present at layer 2, both weak copyleft, neither triggered by this
+deployment shape.*
+
+🔵 **Two mechanical notes worth carrying.** First, **PEP 639 `license_expression` decided `28` of the
+`65`** — a classifier-only reader would have called them `UNDECLARED`, which is the defect `p788`
+recorded in its own instrument. Second, **SPDX compound expressions are mis-read in opposite
+directions**: `packaging` is `Apache-2.0 OR BSD-2-Clause` (**an election** — pick one) while
+`prometheus-client` is `Apache-2.0 AND BSD-2-Clause` (**cumulative** — both apply). Reading `AND`
+as a choice under-states the obligation; reading `OR` as a conjunction over-states it.
+
+🔴 **Declared boundary:** depth `3+` is unmeasured, the npm-side graphs are unmeasured at layer 2,
+and these are declared ranges from registry metadata rather than resolved versions from a lockfile.
+
+## `T873` — `tutor` is a polluted search term, and a grant gate is not a relevance gate
+
+🔴 `tutor AI created:>2026-10-01 stars:>30` returns **`39`** repositories, and **`5` of the top `8`
+are one repository re-published under five owners** — `apimartyvp957u6/api-proxy-tutorial`,
+`apimartpx0d7edg8/llm-gateway-tutorial`, `apimartat5/llm-api-tutorial`,
+`apimartmk8/multi-model-api-tutorial`, `apimartc30lq1/unified-ai-tutorial` — at `78`–`91★` with
+byte-identical descriptions advertising a commercial API relay. 🔵 **They are not education at all;
+they match because `tutor` ⊂ `tutorial`.**
+
+🟢 **The instructive part: one of them serves a perfectly valid MIT licence** (`1,181 B` ·
+`9c1378a7528b`). **A real grant on an irrelevant repository.** This base's grant gate (`P788-7`)
+would pass it; only a human or a relevance gate rejects it. 🔴 Star-sorted education queries must
+exclude the `tutorial` stem, and **a licence check is not evidence that a row belongs in the base.**
+
+## `T874` — The school-operations category is a solver with an approval gate, not a chatbot
+
+🟢 **The category `p788` recorded as empty has five permissive rows, and they agree with each other
+about architecture.** Two independent rows put a **real constraint solver** at the centre —
+Timefold ([`paoloantinori/school-timetable-timefold-case-study`](https://github.com/paoloantinori/school-timetable-timefold-case-study))
+and OR-Tools ([`Nayak-indie/Timable`](https://github.com/Nayak-indie/Timable)) — with the LLM at the
+edges, turning plain-English policy into constraints and explaining rejections. A third
+([`Zahraishag/schoolflow-agent`](https://github.com/Zahraishag/schoolflow-agent)) puts a **human
+approval step** before any schedule is written. A fourth
+([`shan8851/classcharts-agent`](https://github.com/shan8851/classcharts-agent)) attaches to a live
+school MIS **read-only**.
+
+🟢 **Nobody in this category is asking a language model to produce a timetable**, and that is the
+finding. Scheduling is a constraint-satisfaction problem with hard feasibility requirements; an LLM
+that invents a plausible-looking timetable produces a school day that does not work. 🔵 The same
+division of labour — deterministic core, LLM at the edges, human gate before write — is what
+`P788-1` arrived at independently for grading. **Two unrelated categories converging on one
+architecture is the strongest design signal this base has.**
 
 ## `T861` — A repository grant is not a dependency grant, and 4 of 7 permissive leaders carry copyleft
 

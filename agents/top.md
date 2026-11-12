@@ -4,7 +4,7 @@ region: Global
 updated: 2026-11-12
 ---
 
-# Education AI agents — `p788`
+# Education AI agents — `p789`
 
 **Every row below was verified this pass on two byte channels:** existence via `git ls-remote`
 (exit status read directly, never through a pipe), and the licence grant by **clause presence** in
@@ -106,15 +106,33 @@ are education agents** — they are agent-training course materials (a Samsung p
 curriculum, "AI maestro" week-4 coursework). 🟢 The productive query was `학습 튜터 AI`
 (*learning tutor*), which returned `12`. **A word that means two things returns the wrong head.**
 
-### 🔴 Japan — a measured gap, and it survived in-language querying
+### 🟢 Japan — the measured gap, DISCHARGED, and it was a category error (`p789`)
 
-🔴 **This is the pass's cleanest negative result.** `AI 教育 エージェント` returned **3** repositories
-in total; `学習支援 AI エージェント` returned **1**. The best Japan-origin artefact found is
-[`narumi-mase/osaka-lesson-dataset`](https://github.com/narumi-mase/osaka-lesson-dataset) —
-Osaka City Education Center junior-high lesson plans structured as a dataset for education-AI
-research — and it is **ALIVE at `212cb10e48eb` serving no licence on 10 filenames × 3 branches.**
-🟢 **Japan's absence is now measured in Japanese, not inferred from English**, which is what
-`p787-F` asked for. See `intel/market.md` → APAC.
+🔴 **`p788` measured Japan at `3` repositories and called it this base's only *measured* supply
+gap, surviving in-language querying.** 🟢 **It does not survive the right *category*.** Japanese
+education-AI work is published under **`校務`** (*kōmu* — school administrative duties), not under
+tutoring vocabulary. The supply is **administrative and curricular, not conversational** — the
+opposite of the Indian and Chinese supply this base has placed (`T870`).
+
+| Agent | Address | Grant, on the bytes | ★ | What it is |
+|---|---|---|---|---|
+| 🟢 **jp-k12-digital-ai-textbook** `NEW` | [`masa-san-jp/jp-k12-digital-ai-textbook`](https://github.com/masa-san-jp/jp-k12-digital-ai-textbook) | 🟢 MIT · `1,068 B` · `d7c583c9f444` | `1` | 🟢 **The best Japan-origin education artefact this base has placed, and it is permissive.** All `12` grades (小1–高3), aligned to the **next 学習指導要領** *and* the **UNESCO AI Competency Framework** |
+| 🟢 **school-office-generative-ai-30** `NEW` | [`kumaken-1/school-office-generative-ai-30`](https://github.com/kumaken-1/school-office-generative-ai-30) | 🟢 **MIT · `1,102 B` · `c42f19d27c4d`** (`LICENSE-CODE`) **+ CC BY 4.0 · `925 B` · `738b8fc14a61`** (`LICENSE-CONTENT`) | `0` | 「生成AI 30のチャレンジⅡ〜校務編〜」 — `30` graded exercises on real school-administration tasks for staff who have finished an introductory course. 🔵 Its split grant is defect `7` of this pass (`T869`) |
+| 🟡 **tracen-ai-tazuna** `NEW` | [`naritaroad/tracen-ai-tazuna`](https://github.com/naritaroad/tracen-ai-tazuna) | 🟢 MIT · `1,067 B` · `5aff4e618c56` | `0` | A school **administrative** AI proof-of-concept. 🔴 **Barred from client work despite its grant:** an unofficial *Uma Musume* fan project — MIT covers the authors' code, never the franchise's trademarks or characters |
+
+🔴 **The one that is barred, which is the useful half of the finding.**
+[`nahisaho/teacher-genai-playbook`](https://github.com/nahisaho/teacher-genai-playbook) — teacher
+generative-AI training material for classroom *and* `校務` use, the most engagement-shaped Japanese
+artefact found — is **CC BY-NC 4.0 · `1,222 B` · `92625a14d19b`. NonCommercial: it cannot be used in
+a paid engagement.** The search channel said `NOASSERTION`; the bytes name the bar precisely.
+🔴 Also measured: [`chc-chupea/news-grade-reader`](https://github.com/chc-chupea/news-grade-reader)
+**GPL-3.0 · `35,149 B` · `3972dc9744f6`** — grade-levelled news rewriting against MEXT curriculum
+guidance, copyleft, and it states in terms that it is *not* MEXT-endorsed.
+
+🔵 **Measured Japanese totals, so the shape of the supply is on the record:** `校務 AI` → **`5`** ·
+`塾 AI 学習` → **`7`** · `学習指導要領 AI` → **`2`** · `教育 LLM 日本語` → **`1`** ·
+`授業 支援 AI 教材` → **`0`**. 🔴 [`narumi-mase/osaka-lesson-dataset`](https://github.com/narumi-mase/osaka-lesson-dataset)
+remains **ungranted** and remains worth asking for.
 
 ### China
 
@@ -124,6 +142,56 @@ research — and it is **ALIVE at `212cb10e48eb` serving no licence on 10 filena
 | **VeryMath-textbook-copilot** | [`VeryMath/VeryMath-textbook-copilot`](https://github.com/VeryMath/VeryMath-textbook-copilot) | Apache-2.0 · `11,338 B` · `1183af0d8197` | `21` | Textbook pane beside a coding-agent pane: explanations, exercises, mind maps, knowledge graphs, LaTeX courseware |
 | **Math-Modeling-Agent-Flow** | [`mantou6666/Math-Modeling-Agent-Flow`](https://github.com/mantou6666/Math-Modeling-Agent-Flow) | MIT · `1,067 B` · `69b2a4f15995` | `28` | Four-stage Solver→Paper pipeline for the CUMCM / MCM-ICM modelling competitions |
 | **xuelian-agent** | [`llwand1/xuelian-agent`](https://github.com/llwand1/xuelian-agent) | MIT · `1,062 B` · `956783be029f` | — | Chinese-language study agent |
+
+## 🟢 School operations — `p788`'s standing gap, discharged with `5` permissive rows (`p789`)
+
+🔴 **`p788`: "School-operations agents (timetabling, attendance, safeguarding) — still no
+permissive row."** 🟢 **There are five, and the category has a genuine architectural signature: a
+constraint solver with a human approval gate, not a chatbot** (`T874`).
+
+| Agent | Address | Grant, on the bytes | ★ | Region | What it is |
+|---|---|---|---|---|---|
+| 🟢 **schoolflow-agent** `NEW` | [`Zahraishag/schoolflow-agent`](https://github.com/Zahraishag/schoolflow-agent) | 🟢 MIT · `1,081 B` · `1b7481d92d0f` | `0` | Global | 🟢 **The row the gap was asking for.** Timetable **disruptions**, teacher absences and substitutions, with **human-approved** schedule updates. 🔵 The approval gate is the project's own design, not this base's retrofit |
+| 🟢 **school-timetable-timefold-case-study** `NEW` | [`paoloantinori/school-timetable-timefold-case-study`](https://github.com/paoloantinori/school-timetable-timefold-case-study) | 🟢 MIT · `1,081 B` · `12e2a597e655` | `1` | Global | 🟢 **The reference architecture for the category:** a real **constraint solver** (Timefold) on Quarkus, driven by coding agents. Scheduling is a solver problem with an LLM at the edges |
+| 🟢 **Timable** `NEW` | [`Nayak-indie/Timable`](https://github.com/Nayak-indie/Timable) | 🟢 Apache-2.0 · `11,357 B` · `c71d239df917` | `1` | Global | High-school timetabling on **OR-Tools** + Streamlit. The second independent solver row, which is what makes it a pattern rather than a project |
+| 🟢 **classcharts-agent** `NEW` | [`shan8851/classcharts-agent`](https://github.com/shan8851/classcharts-agent) | 🟢 MIT · `1,066 B` · `65ef4f07f833` | `0` | EMEA 🇬🇧 | 🟢 **Read-only** CLI and agent skill over **ClassCharts** (UK homework/behaviour system). 🔵 A deliberately read-only attachment to a live school system — the safest first integration, and this base's second EMEA LMS/MIS attachment point after `brightspace-d2l-mcp` |
+| 🟢 **TIMETABLE-SOFTWARE** `NEW` | [`jeevanjacob1/TIMETABLE-SOFTWARE`](https://github.com/jeevanjacob1/TIMETABLE-SOFTWARE) | 🟢 MIT · `1,056 B` · `1126322e2cc8` | `0` | Global | Clash-free generator on React + TypeScript + Supabase — the web-stack variant of the same job |
+| 🟢 **ai-adoption-education** `NEW` | [`VictorOsondu/ai-adoption-education`](https://github.com/VictorOsondu/ai-adoption-education) | 🟢 **CC BY 4.0 content + MIT code**, one `752 B` file · `2e9c34096bf9` | `2` | Global | 🟢 **Safeguarding-first** AI adoption guidance for schools and higher ed, with task-suitability and assessment-integrity material. 🔵 Search channel said `NOASSERTION`; the bytes grant **commercial** use with a named attribution string |
+
+🔴 **Ungranted in this category and worth asking for:**
+[`NSK-394/schoolbridge-mcp`](https://github.com/NSK-394/schoolbridge-mcp) — an MCP server giving
+agents **role-based** access to school ERP data (attendance, fees, student records). 🔵 Role-based
+access over an SIS is exactly the control surface a school engagement needs.
+🔴 [`zulfahmi93/susun-jadual`](https://github.com/zulfahmi93/susun-jadual) 🇲🇾 — Malaysian
+*sekolah rendah/menengah* timetabling, ungranted; **Malaysia remains unplaced.**
+
+## 🟢 Africa — Nigeria and South Africa placed for the first time (`p789`)
+
+🔴 **`p788`: "African national curricula other than Kenya's CBC and Morocco's Bac — none found."**
+🟢 **They exist in quantity.** `WAEC AI tutor` alone returns **`35`** repositories. 🔴 **And `32` of
+them serve no grant** — the ratio is the finding, not the count (`T871`).
+
+| Agent | Address | Grant, on the bytes | ★ | Country | What it is |
+|---|---|---|---|---|---|
+| 🟢 **Offline-First-Android-AI-Tutoring-App** `NEW` | [`thesavvybyjude/Offline-First-Android-AI-Tutoring-App`](https://github.com/thesavvybyjude/Offline-First-Android-AI-Tutoring-App) | 🟢 MIT · `1,070 B` · `a2fe733bd153` | `1` | 🇳🇬 NG | 🟢 **The headline African row, and the artefact `p788` asked for by name.** `p788` flagged an offline NCERT doubt-solver as "exactly the shape a low-connectivity engagement needs" **and had to file it ungranted**. This is that shape for Africa **with a grant**: on-device LLM, RAG over the **WAEC/NERDC** curriculum, spaced repetition |
+| 🟢 **ai-tutor-app** `NEW` | [`nitoni-jim/ai-tutor-app`](https://github.com/nitoni-jim/ai-tutor-app) | 🟢 MIT · `1,074 B` · `d33e0685ea0f` | `1` | 🇳🇬 NG | Intelligent tutoring system over **WAEC / NECO / JAMB** — all three Nigerian examination boards in one tree |
+| 🟢 **waec-ai-tutor** `NEW` | [`Ass-Gaye/waec-ai-tutor`](https://github.com/Ass-Gaye/waec-ai-tutor) | 🟢 MIT · `1,065 B` · `54383781845a` | `0` | 🇳🇬 NG | The third permissive WAEC row of the `35` |
+| 🟢 **homework-hero-sa** `NEW` | [`Masondo86/homework-hero-sa`](https://github.com/Masondo86/homework-hero-sa) | 🟢 MIT · `1,070 B` · `88eb94d99d6c` | `0` | 🇿🇦 ZA | 🟢 **South Africa placed for the first time.** Homework scheduling and learner accountability on the **CAPS** curriculum — an operations tool, not a tutor |
+| 🟢 **nextgen-learn** `NEW` | [`daddysystem/nextgen-learn`](https://github.com/daddysystem/nextgen-learn) | 🟢 **BSL-1.0 (Boost) · `1,338 B` · `c9bff7573892`** | `0` | 🇿🇦 ZA | Free **CAPS**-following study site with an AI tutor. 🟢 **A licence family new to this base:** Boost is permissive, OSI-approved, and waives attribution for object-code-only distribution |
+
+🔵 **Measured African totals, so the remaining gaps are informed ones:** `WAEC AI tutor` → **`35`**
+(`3` permissive) · `CAPS curriculum South Africa AI` → **`10`** (`2` permissive) ·
+`Nigeria curriculum AI tutor` → **`6`** · `BECE Ghana AI education` → **`1`**, and it is ungranted
+([`ghwmelite-dotcom/brilla-study-platform`](https://github.com/ghwmelite-dotcom/brilla-study-platform),
+BECE/WASSCE/NSMQ) · `NECTA Tanzania education AI` → 🔴 **`0` — a measured zero, not an unexamined silence.**
+
+🔴 **Ungranted and worth asking for:** [`7irelo/aptiverse`](https://github.com/7irelo/aptiverse) 🇿🇦
+`4★` — CAPS-aligned practice tests with **auditable marking**, the highest-starred and most
+engagement-shaped African artefact found; and
+[`tosinamuda/teacher-agent-itu-hackathon`](https://github.com/tosinamuda/teacher-agent-itu-hackathon)
+🇳🇬 — *Plan-to-Tutor*, a **teacher-in-the-loop** agent on the Nigerian curriculum from the
+**ITU AI for Good** Lab hackathon. 🔵 Teacher-in-the-loop and auditable marking are the two design
+choices this base keeps recommending — both found in African repositories, both ungranted.
 
 ## Tutors and adaptive engines
 
@@ -212,18 +280,24 @@ luck rather than design, and is now on the record as a reason to keep resting on
 
 | | Count |
 |---|---|
-| Agents and components listed with a byte-verified grant | **48** |
-| of which **permissive** (MIT · Apache-2.0 · ECL-2.0 · BSD) | **44** |
-| of which copyleft, flagged | **4** (`learnharness` AGPL-3.0, `OpenVidya` AGPL-3.0, `NCERT-AI-Teacher-Assistant` GPL-3.0, `frappe/lms` AGPL-3.0) |
-| 🟢 **NEW to this base this pass** | **30** |
-| Placed **EMEA** | **13** (6 agents + 7 `elimu-ai`) — was **1** |
-| Placed **APAC** | **12** (6 India · 2 Korea · 4 China) — was **6**, all China/HK |
+| Agents and components listed with a byte-verified grant | **62** (was 48) |
+| of which **permissive** (MIT · Apache-2.0 · ECL-2.0 · BSD · **BSL-1.0** · CC BY 4.0 content) | **58** |
+| of which copyleft, flagged | **6** (`learnharness` AGPL-3.0, `OpenVidya` AGPL-3.0, `NCERT-AI-Teacher-Assistant` GPL-3.0, `frappe/lms` AGPL-3.0, `news-grade-reader` GPL-3.0, `frametell` AGPL-3.0) |
+| 🟢 **NEW to this base this pass** | **16** |
+| Placed **EMEA** | **19** (6 agents + 7 `elimu-ai` + 5 Africa + 1 🇬🇧) — Nigeria and South Africa placed for the first time |
+| Placed **APAC** | **16** (6 India · 2 Korea · 5 China · **3 Japan**) — 🟢 **Japan placed for the first time** |
 | Placed **LATAM** | **5** |
 | Placed **North America** | **4** |
-| Placed **Global** | **14** |
-| Probed and rejected | **15** (2 proprietary, 1 split-by-directory, 1 NonCommercial, 1 fork, 1 duplicate address pair, 9 ungranted) |
-| 🔴 Rows whose published verdict this pass CORRECTED | **4** (`paes-mcp` scope · `Dirigo` grant · `MyScript/MyScriptJS` grant · the `lehrer-agent` double-count) |
-| 🔴 Defects found in this pass's OWN instruments, by controls, before publication | **6** |
+| Placed **Global** | **18** |
+| Probed and rejected | **22** (2 proprietary, 1 split-by-directory, **2** NonCommercial, 1 fork, 1 duplicate address pair, **15** ungranted) |
+| 🔴 Rows whose published verdict this pass CORRECTED | **1** — Japan re-graded from *measured gap* to *placed*, on a category change, not new supply |
+| 🔴 Defects found in this pass's OWN instruments, by controls, before publication | **7** — and `2` of them are previously-recorded defects of this base, reproduced by a fresh instrument |
+| 🟢 Controls reproduced exactly before any verdict shipped | **13 of 13** (12 licence-byte + 1 dependency-count) · `2` planted negatives DEAD |
+
+🟢 **`3` of `p788`'s `4` declared gaps are discharged, and `2` of those were category errors rather
+than absences.** Japan's supply is in `校務` (school administration); Africa's curriculum supply is
+large and almost entirely ungranted. 🔴 **The thinnest *measured* regions are now Tanzania (`0`),
+Ghana (`1`, ungranted) and Malaysia (`1`, ungranted)** — all measured, none inferred.
 
 🟢 **EMEA agent supply is no longer this base's thinnest region, and the correction was
 instrumental rather than factual.** Europe's education agents were always there; the queries were

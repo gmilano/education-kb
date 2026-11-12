@@ -4,6 +4,39 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p789` — **`ACTION p788-D` DISCHARGED at the second layer: `nbgrader`'s clean first layer is not a clean graph. `65` new transitive packages, `2` weak-copyleft, and both arrive through the most ordinary plumbing in Python — `requests` and `jupyter-client`.**
+
+🟢 **Control on the dependency channel before any verdict: `nbgrader` declares `18` direct runtime dependencies — the exact count `p788` recorded.** The instrument reads **PEP 639 `license_expression` first**, then classifiers, then the free-text `license` field, because `p788` recorded PEP 639 blindness as a defect of its own dependency probe. Of the `65` layer-2 packages, **`28` are decided by `license_expression`** and would have been read as `UNDECLARED` by a classifier-only instrument.
+
+### 🔴 `T872` — Layer 2 of `nbgrader`, the component `P788-1` rests on
+
+🔵 **Scope stated before the result: layer 2 only.** `18` direct dependencies → **`65` new transitive packages**. Depth `3+` is **not** measured and is a declared gap below.
+
+| Package | Grant | Read from | Enters through | Effect |
+|---|---|---|---|---|
+| 🔴 **`certifi`** | **MPL-2.0** | classifier | 🔴 **`requests`** → `certifi` | 🟡 **File-level copyleft.** Triggers on modifying `certifi`'s own files; linking and redistribution are clean. Nobody modifies a CA bundle — **but the graph is no longer "no copyleft"** |
+| 🔴 **`paramiko`** | **LGPL-2.1** | `license_expression` (PEP 639) | 🔴 **`jupyter-client`** → `paramiko` | 🟡 **Weak copyleft, dynamic linking permitted.** 🔴 It arrives through `jupyter-client` — a *core* runtime dependency of every Jupyter-based grading stack, not an optional extra |
+| 🟡 `pytest-ruff` | **UNDECLARED** | — | `setuptools` → `pytest-ruff` | 🔵 Build/test-time only. Recorded because an undeclared grant is a fact, not an omission |
+
+🟢 **The other `62` are permissive**: MIT, BSD-2/3-Clause, Apache-2.0, ISC, PSF-2.0, and three SPDX *compound* expressions that a naive reader mis-grades — `packaging` is `Apache-2.0 OR BSD-2-Clause` (a choice, both permissive), `prometheus-client` is `Apache-2.0 AND BSD-2-Clause` (**both apply, cumulatively**), and `jupyter-builder` is `Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND ISC AND MIT`. 🔵 `OR` is an election and `AND` is a conjunction; reading either as "one licence" is wrong in opposite directions.
+
+🟢 **Verdict for `P788-1`, which rests on `nbgrader`: it still holds, and its licensing claim is now weaker and true.** The pattern is deliverable. What changes is the sentence a client is told: not *"the grading component's dependencies are entirely permissive"* — that was true only of layer 1 — but *"its graph includes MPL-2.0 and LGPL-2.1 at layer 2, both weak copyleft, neither triggered by the way we deploy it."* 🔴 **A first-layer audit is a screen, not a clearance.**
+
+### 🟢 Foundational rows added this pass
+
+| Repo | Address | Grant, on the bytes | Region | Why it is foundational |
+|---|---|---|---|---|
+| 🟢 **Timable** `NEW` | [`Nayak-indie/Timable`](https://github.com/Nayak-indie/Timable) | 🟢 Apache-2.0 `11,357 B` · `c71d239df917` | Global | **OR-Tools** timetabling — a real constraint solver under a permissive grant, the scheduling primitive this base had no row for |
+| 🟢 **school-timetable-timefold-case-study** `NEW` | [`paoloantinori/school-timetable-timefold-case-study`](https://github.com/paoloantinori/school-timetable-timefold-case-study) | 🟢 MIT `1,081 B` · `12e2a597e655` | Global | **Timefold** solver on Quarkus, driven by coding agents — the second solver, and the reference wiring for `P789-1` |
+| 🟢 **jp-k12-digital-ai-textbook** `NEW` | [`masa-san-jp/jp-k12-digital-ai-textbook`](https://github.com/masa-san-jp/jp-k12-digital-ai-textbook) | 🟢 MIT `1,068 B` · `d7c583c9f444` | APAC 🇯🇵 | A full `12`-grade curriculum tree aligned to the **next 学習指導要領** and the **UNESCO AI Competency Framework** — content infrastructure, not an app |
+| 🟢 **nextgen-learn** `NEW` | [`daddysystem/nextgen-learn`](https://github.com/daddysystem/nextgen-learn) | 🟢 **BSL-1.0 (Boost) `1,338 B`** · `c9bff7573892` | EMEA 🇿🇦 | 🟢 **A new licence family for this base.** Boost-1.0: permissive, OSI-approved, and it waives attribution for object-code-only distribution |
+| 🟢 **classcharts-agent** `NEW` | [`shan8851/classcharts-agent`](https://github.com/shan8851/classcharts-agent) | 🟢 MIT `1,066 B` · `65ef4f07f833` | EMEA 🇬🇧 | A **read-only** attachment to a live UK school system — this base's second EMEA LMS/MIS attachment point |
+
+### 🔴 Declared gaps for this window
+
+🔴 **Transitive depth `3` and beyond — unmeasured by design.** `T872` stops at layer 2. 🔴 **The npm-side graphs are unmeasured at layer 2** — `OATutor` (`43` direct, layer 1 clean) and `Oppia` (`171` direct, AGPL-3.0 at layer 1) were not re-audited this pass; Oppia's layer-1 finding already governs the decision. 🔴 **No lockfile audit:** these are *declared* ranges from registry metadata, not resolved versions from a lockfile, so a client's actual tree may differ.
+
+
 ## 🆕 `2026-11-12` · `p788` — **`ACTION p787-A` DISCHARGED after three passes: the login-validity clause run on the BASE-WIDE extraction — `6,855` distinct owner/repo pairs from `54,380` address occurrences, `48` rejected (`0.70%`), and `38` of those rejects are `topics/<tag>` browse URLs this base has been counting as repositories. Its ONE false positive, `elimu-ai/wiki`, turned out to be a real MIT repo and led to a `66`-repository African education ecosystem the base had been citing and never placed.**
 
 🟢 **`8` rows RESCUED from this base's ungranted and bespoke classes by a variant-tolerant, locale-safe, any-depth-title gate** — including an **MIT xAPI Learning Record Store**, the **European Commission's own** learning model, and a `570 B` Apache grant this base had filed as a "proprietary notice".

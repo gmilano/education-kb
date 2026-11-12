@@ -4,7 +4,7 @@ region: Global
 updated: 2026-11-12
 ---
 
-# Compose patterns — `p788`
+# Compose patterns — `p789`
 
 Each recipe names **real, byte-verified repositories**, the grant on each, how they wire together,
 and the licensing boundary that keeps client code owned by the client. Grants and `sha`s were read
@@ -24,6 +24,118 @@ AGPL-3.0.**
 🔴 **Rule 3, NEW this pass (`T864`).** In education the **content** has a rights-holder and the
 repository is the cheap part. A permissive grant over a wrapper is not a grant over the exam papers,
 textbooks or statutes inside it. **Read the scope clause; ask who owns the content.**
+
+---
+
+## `P789-1` — School-operations agent: timetable disruption and substitution, with an approval gate · **North America + EMEA first; APAC-portable** · 8–10 weeks
+
+🟢 **The pattern `p788` could not write, because the category had no permissive row. It has five now
+(`T874`), and they agree about architecture: a real constraint solver with an LLM at the edges and a
+human gate before any write.** 🔵 Nobody in this category asks a language model to produce a
+timetable — a plausible-looking timetable is a school day that does not work.
+
+| Component | Address | Grant | Role |
+|---|---|---|---|
+| **Solver core** | [`paoloantinori/school-timetable-timefold-case-study`](https://github.com/paoloantinori/school-timetable-timefold-case-study) | 🟢 MIT · `1,081 B` · `12e2a597e655` | 🟢 **Timefold on Quarkus** — the reference wiring. Hard constraints stay hard |
+| Solver alternative | [`Nayak-indie/Timable`](https://github.com/Nayak-indie/Timable) | 🟢 Apache-2.0 · `11,357 B` · `c71d239df917` | **OR-Tools** + Streamlit, if the client is Python-shop rather than JVM |
+| **Disruption agent** | [`Zahraishag/schoolflow-agent`](https://github.com/Zahraishag/schoolflow-agent) | 🟢 MIT · `1,081 B` · `1b7481d92d0f` | 🟢 Absences and substitutions with **human-approved** schedule updates — the gate is the project's own design |
+| MIS attachment 🇬🇧 | [`shan8851/classcharts-agent`](https://github.com/shan8851/classcharts-agent) | 🟢 MIT · `1,066 B` · `65ef4f07f833` | 🟢 **Read-only** against a live UK homework/behaviour system |
+| LMS attachment 🇺🇸🇨🇦 | [`anonymousonyx22/brightspace-d2l-mcp`](https://github.com/anonymousonyx22/brightspace-d2l-mcp) | 🟢 MIT · `1,200 B` · `a873478a6b4e` | D2L Brightspace over MCP |
+| Orchestration | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 MIT · `1,072 B` | Stateful graph: detect → propose → **halt for approval** → write |
+| Audit trail | [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) | 🟢 MIT · `1,070 B` | Every proposal and every approver stored as a validated statement |
+| Adoption/safeguarding frame | [`VictorOsondu/ai-adoption-education`](https://github.com/VictorOsondu/ai-adoption-education) | 🟢 CC BY 4.0 content + MIT code · `752 B` | Safeguarding-first task-suitability guidance — the **policy** half of the deliverable |
+
+**Wiring.** The MIS/LMS connector detects the disruption (absence, room loss) → `schoolflow-agent`
+assembles the affected set → **the solver** (Timefold or OR-Tools) produces feasible substitution
+options under the school's hard constraints → the LLM's only jobs are **translating plain-English
+policy into constraints** and **explaining why an option was rejected** → LangGraph halts → a named
+human approves → only then is the schedule written → the proposal, the options, the approver and the
+timestamp go to the xAPI store.
+
+🟢 **Why it sells:** it targets the one budget line every school already has — **cover and
+timetabling staff time** — and it needs no change to assessment policy, which is where every AI
+conversation in education currently stalls. 🔵 **Jurisdictional fit:** in the EU this is deliberately
+*not* a high-risk system (it schedules staff and rooms, it does not evaluate students), so it ships
+today under Article 50 transparency instead of waiting for `2027-12-02`. 🟢 In North America it is a
+direct answer to the district AI-policy deadlines (Ohio `2026-07-01`, North Carolina `2027-06-30`).
+🔴 **The caution to state in the proposal:** timetabling and attendance touch children's personal
+data. The read-only attachment and the approval gate are not conveniences — they are what keeps this
+category deployable. 🔴 **Ask upstream for** [`NSK-394/schoolbridge-mcp`](https://github.com/NSK-394/schoolbridge-mcp):
+role-based agent access to school ERP data is the right control surface and it is ungranted.
+
+---
+
+## `P789-2` — Offline WAEC/NERDC exam-prep tutor for low-connectivity classrooms · **EMEA (West + Southern Africa)** · 8–10 weeks
+
+🟢 **`P788-2` was the offline-first pattern built on components this base had to file as ungranted.
+This is the same shape with the grants present** (`T871`), against real national examination boards.
+
+| Component | Address | Grant | Role |
+|---|---|---|---|
+| **On-device tutor core** | [`thesavvybyjude/Offline-First-Android-AI-Tutoring-App`](https://github.com/thesavvybyjude/Offline-First-Android-AI-Tutoring-App) | 🟢 MIT · `1,070 B` · `a2fe733bd153` | 🟢 **The load-bearing row:** on-device LLM, RAG over the **WAEC/NERDC** curriculum, spaced repetition — already offline-first by design |
+| Board coverage | [`nitoni-jim/ai-tutor-app`](https://github.com/nitoni-jim/ai-tutor-app) | 🟢 MIT · `1,074 B` · `d33e0685ea0f` | **WAEC / NECO / JAMB** in one tree — the three Nigerian boards |
+| Third WAEC row | [`Ass-Gaye/waec-ai-tutor`](https://github.com/Ass-Gaye/waec-ai-tutor) | 🟢 MIT · `1,065 B` · `54383781845a` | Cross-check and component reuse |
+| 🇿🇦 CAPS operations | [`Masondo86/homework-hero-sa`](https://github.com/Masondo86/homework-hero-sa) | 🟢 MIT · `1,070 B` · `88eb94d99d6c` | Homework scheduling and learner accountability for the South African port |
+| 🇿🇦 CAPS content | [`daddysystem/nextgen-learn`](https://github.com/daddysystem/nextgen-learn) | 🟢 **BSL-1.0** · `1,338 B` · `c9bff7573892` | CAPS-following study material. 🔵 Boost — permissive, and *weaker* than MIT on attribution |
+| **Offline delivery** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟡 MIT · `1,097 B` | Proven offline learning platform. 🔴 `T861`: LGPL at layer 1 — dynamic linking only |
+| Mastery model | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT · `1,105 B` | Bayesian Knowledge Tracing — audited clean at layer 1 |
+| Device delivery without a store | [`elimu-ai/appstore`](https://github.com/elimu-ai/appstore) | 🟢 MIT · `1,065 B` | 🟢 APK delivery **without an app store** — the distribution problem this pattern actually has |
+| Local inference | [`ollama/ollama`](https://github.com/ollama/ollama) | 🟢 MIT | Quantised small model on-device; no per-token cost, no connectivity assumption |
+
+**Wiring.** Kolibri carries the curriculum packages and sync; the on-device tutor runs a quantised
+model locally with RAG over the WAEC/NERDC corpus; OATutor's BKT turns attempts into a mastery
+estimate that survives being offline; spaced repetition schedules the next session **on the device**;
+`elimu-ai/appstore` distributes updates where Play Store access is unreliable; everything syncs
+opportunistically when a connection appears.
+
+🟢 **Why it sells:** it is priced against **cost per learner with no connectivity assumption and no
+per-token bill**, and it targets national examinations that millions of families already pay for.
+🔵 **Port to South Africa** by swapping the corpus for CAPS and adding `homework-hero-sa`; the
+architecture is unchanged. 🔴 **Scope boundary, stated up front (`T864`):** these grants cover code.
+**Past examination papers are the boards' copyright** — WAEC, NECO, JAMB and the South African DBE —
+so a client engagement needs a content licence or must generate practice items rather than reproduce
+past papers. **This is the single most likely way for this pattern to fail legal review.**
+🔴 **Ask upstream for** [`7irelo/aptiverse`](https://github.com/7irelo/aptiverse) (CAPS practice with
+**auditable marking**) and [`tosinamuda/teacher-agent-itu-hackathon`](https://github.com/tosinamuda/teacher-agent-itu-hackathon)
+(**teacher-in-the-loop**, ITU AI for Good) — the two best-designed African artefacts found, both ungranted.
+
+---
+
+## `P789-3` — Japanese school-administration (`校務`) automation and curriculum alignment · **APAC 🇯🇵** · 6–8 weeks
+
+🟢 **Japan is placed for the first time (`T870`), and the pattern follows the supply rather than the
+assumption.** Japan is not publishing tutoring agents; it is publishing **school administration and
+curriculum alignment**. 🔵 Selling a conversational tutor into a Japanese school is selling against
+the grain of what its teachers are actually automating.
+
+| Component | Address | Grant | Role |
+|---|---|---|---|
+| **Curriculum spine** | [`masa-san-jp/jp-k12-digital-ai-textbook`](https://github.com/masa-san-jp/jp-k12-digital-ai-textbook) | 🟢 MIT · `1,068 B` · `d7c583c9f444` | 🟢 All `12` grades aligned to the **next 学習指導要領** *and* the **UNESCO AI Competency Framework** — national and international alignment in one tree |
+| **Staff enablement** | [`kumaken-1/school-office-generative-ai-30`](https://github.com/kumaken-1/school-office-generative-ai-30) | 🟢 **MIT `1,102 B`** (code) **+ CC BY 4.0 `925 B`** (content) | 🟢 `30` graded exercises on **real `校務` tasks**. 🔵 CC BY on the content means a client may **adapt and republish** the training material — commercially |
+| Operations core | [`Zahraishag/schoolflow-agent`](https://github.com/Zahraishag/schoolflow-agent) + solver (`P789-1`) | 🟢 MIT / Apache-2.0 | Substitution and disruption handling, approval-gated |
+| Orchestration | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 MIT · `1,072 B` | Approval-gated workflow graph |
+| Local inference | [`ollama/ollama`](https://github.com/ollama/ollama) · [`vllm-project/vllm`](https://github.com/vllm-project/vllm) | 🟢 MIT / Apache-2.0 | On-premises serving — the default posture for Japanese public-sector data |
+
+**Wiring.** The curriculum spine supplies the alignment vocabulary (grade, subject, competency); the
+`校務` exercise set becomes the staff-training track and the task inventory of what to automate first;
+the operations core automates the highest-frequency administrative tasks behind an approval gate;
+inference runs on-premises.
+
+🟢 **Why it sells:** Japan's **AI Promotion Act** is promotion-first and carries no penalty regime,
+and the Cabinet's second-phase AI Basic Plan (`2026-07-14`) actively encourages adoption — so the
+engagement is **not** a compliance project. It is **teacher workload**, in a country whose teacher
+hours are a standing national issue, with adoption climbing fast from a low base (Microsoft: 56th in
+H1 2025 → 48th in Q1 2026). 🔴 **And the resistance is real and rising:** Ipsos 2026 puts support for
+banning AI in schools at `29%` in Japan, up from `21%`. **Lead with administrative relief for staff,
+not with anything that touches instruction or assessment.**
+🔴 **Two grant traps, both measured this pass.**
+[`nahisaho/teacher-genai-playbook`](https://github.com/nahisaho/teacher-genai-playbook) is the most
+engagement-shaped Japanese teacher-training artefact and it is **CC BY-NC 4.0 — unusable in a paid
+engagement**. [`naritaroad/tracen-ai-tazuna`](https://github.com/naritaroad/tracen-ai-tazuna) is MIT
+but an **unofficial *Uma Musume* fan project** — the grant covers the authors' code, never the
+franchise's IP. 🔴 **Ask upstream for**
+[`narumi-mase/osaka-lesson-dataset`](https://github.com/narumi-mase/osaka-lesson-dataset) — Osaka City
+Education Center lesson plans, still ungranted after two passes.
 
 ---
 

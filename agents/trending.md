@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p789` — **New this window: `3` of `p788`'s `4` declared gaps are DISCHARGED, and the two that mattered were category errors, not absences. Japan's education-AI supply is real and sits in school administration (`校務`), not tutoring. West African and South African curricula are PLACED for the first time — `35` WAEC repositories exist and `3` carry a grant. Plus `7` defects in this pass's own probe, one of which graded a Boost licence as MIT.**
+
+🟢 **Controls ran BEFORE any verdict shipped: `12` of `12` known-good rows reproduce this base's recorded bytes exactly** — `HKUDS/DeepTutor` `11,408 B`, `moodle/moodle` `35,147 B`, `sakaiproject/sakai` `11,120 B`, `frappe/lms` `33,893 B`, `hedyorg/hedy` `13,827 B`, `jupyter/nbgrader` `1,512 B`, `oppia/oppia` `11,358 B`, `learningequality/kolibri` `1,097 B`, `CAHLR/OATutor` `1,105 B`, `THU-MAIC/OpenMAIC` `1,065 B`, `janestreet/agent_skills` `1,120 B`, `open-education-api/specification` `13,827 B`. 🟢 `2` planted negatives DEAD as designed. 🟢 A `13th` control reproduced on the dependency channel: `nbgrader` declares **`18`** direct runtime dependencies, the exact count `p788` recorded.
+
+🟢 **Channel note, correcting the tone of `T860` without contradicting its finding.** `p788` recorded that "the page channel is gone". Confirmed: `github.com/{owner}/{repo}` and `api.github.com/repos/{owner}/{repo}` both return `403` through this session's proxy. 🟢 **But the *byte* channel is fully alive** — `raw.githubusercontent.com/{owner}/{repo}/{branch}/{file}` serves licence files at `200`, and it is what reproduced all `12` controls above. The base is not degraded; it has one channel for claims (`search/repositories`, exact stars and SPDX id) and one for bytes (`raw`), and the second is the one that decides.
+
+### 🔴 `7` defects in this pass's OWN probe, each caught by a control before use
+
+| # | Defect | How the control exposed it | Consequence if unfixed |
+|---|---|---|---|
+| 1 | `COPYING.txt` was not a candidate filename | `moodle/moodle` read as `NOFILE` against a recorded `35,147 B` | 🔴 The sector's **largest** platform scored as ungranted |
+| 2 | Filename matching was case-sensitive | `frappe/lms` read as `NOFILE`; its file is lowercase `license.txt` | 🔴 An AGPL-3.0 row would have shipped as "no grant" |
+| 3 | Default branch assumed `main`/`master` | `frappe/lms` is `develop`; so is `oppia/oppia` | 🔴 Silent misses on any repo not using `main` |
+| 4 | `Affero`-inside-GPLv3 | `moodle/moodle` graded **AGPL-3.0** on a whole-file match | 🔴 **`p787` recorded this exact defect and my instrument reproduced it.** GPLv3 §13 *names* the Affero licence |
+| 5 | EUPL compatibility appendix | `hedyorg/hedy` graded **LGPL** | 🔴 `T849` again: EUPL-1.2 names GPL-2.0, GPL-3.0, AGPL, EPL and CeCILL **inside itself** |
+| 6 | 🔴 **Boost read as MIT** | `daddysystem/nextgen-learn` graded MIT; the search channel said `BSL-1.0` and **the search channel was right** | 🔴 **BSL-1.0 opens with MIT's exact sentence** — *"Permission is hereby granted, free of charge, to any person or organization obtaining a copy"*. A phrase-match cannot separate them; only the title can |
+| 7 | 🔴 **Split `code`/`content` grants invisible** | `kumaken-1/school-office-generative-ai-30`: search channel asserted MIT, byte channel found **no file on 11 paths** | 🔴 See `T869` — the grant is in `LICENSE-CODE` **and** `LICENSE-CONTENT`, and this is structural for education, not incidental |
+
+🔵 **Defects `4` and `5` are previously-recorded defects of this base reproduced by a fresh instrument.** That is the argument for keeping the controls: a known defect is only known while something re-tests for it.
+
+### 🟢 Japan — `p788`'s only MEASURED gap, DISCHARGED, and it was a category error
+
+🔴 `p788` measured Japan at **`3` repositories total** and called it "this base's only *measured* rather than *suspected* supply gap", surviving in-language querying. 🟢 **It does not survive the right *category*.** Japanese education-AI work is published under **`校務`** (*kōmu* — school administrative duties), not under tutoring vocabulary.
+
+| Agent | Address | Grant, on the bytes | ★ | Why it is here |
+|---|---|---|---|---|
+| 🟢 **jp-k12-digital-ai-textbook** `NEW` | [`masa-san-jp/jp-k12-digital-ai-textbook`](https://github.com/masa-san-jp/jp-k12-digital-ai-textbook) | 🟢 MIT `1,068 B` · `d7c583c9f444` | `1` | 🟢 **The best Japan-origin education artefact this base has ever placed, and it is permissive.** All `12` grades (小1–高3), aligned to the **next 学習指導要領** *and* the **UNESCO AI Competency Framework** — a national curriculum and an international competency frame in one tree |
+| 🟢 **school-office-generative-ai-30** `NEW` | [`kumaken-1/school-office-generative-ai-30`](https://github.com/kumaken-1/school-office-generative-ai-30) | 🟢 **MIT `1,102 B`** · `c42f19d27c4d` (`LICENSE-CODE`) **+ CC BY 4.0 `925 B`** · `738b8fc14a61` (`LICENSE-CONTENT`) | `0` | 「生成AI 30のチャレンジⅡ〜校務編〜」 — **30 graded exercises on real school-administration tasks** for staff who have finished an introductory course. 🔵 The `校務` query that found it is the finding |
+| 🟡 **tracen-ai-tazuna** `NEW` | [`naritaroad/tracen-ai-tazuna`](https://github.com/naritaroad/tracen-ai-tazuna) | 🟢 MIT `1,067 B` · `5aff4e618c56` | `0` | A school **administrative** AI proof-of-concept. 🔴 **Caveat that bars it from client work regardless of its grant:** it is an unofficial *Uma Musume* fan project. The MIT grant covers the authors' code; it cannot and does not grant the franchise's trademarks or characters |
+
+🔴 **And the one that is barred, which is the useful half of the finding.** [`nahisaho/teacher-genai-playbook`](https://github.com/nahisaho/teacher-genai-playbook) — teacher generative-AI training material for classroom *and* `校務` use, the single most engagement-shaped Japanese artefact found — is **CC BY-NC 4.0 `1,222 B` · `92625a14d19b`**. 🔴 **NonCommercial: it cannot be used in a paid engagement.** The search channel reported `NOASSERTION`; the bytes name the bar precisely. 🔴 Also measured: [`chc-chupea/news-grade-reader`](https://github.com/chc-chupea/news-grade-reader) **GPL-3.0 `35,149 B` · `3972dc9744f6`**, grade-levelled news rewriting against MEXT curriculum guidance — copyleft, and it states in terms that it is *not* MEXT-endorsed.
+
+🔵 **Measured Japanese totals this pass, so the shape of the supply is on the record:** `校務 AI` → **`5`** · `塾 AI 学習` → **`7`** · `学習指導要領 AI` → **`2`** · `教育 LLM 日本語` → **`1`** · `授業 支援 AI 教材` → **`0`**. Japan's supply is **administrative and curricular, not conversational** — the opposite of the Indian and Chinese supply this base has placed.
+
+### 🟢 School operations — `p788`'s standing gap, DISCHARGED with `5` permissive rows
+
+🔴 `p788`: *"School-operations agents (timetabling, attendance, safeguarding) — still no permissive row."* 🟢 **There are five, and the category has a genuine architectural signature: a solver plus a human approval gate.**
+
+| Agent | Address | Grant, on the bytes | ★ | Why it is here |
+|---|---|---|---|---|
+| 🟢 **schoolflow-agent** `NEW` | [`Zahraishag/schoolflow-agent`](https://github.com/Zahraishag/schoolflow-agent) | 🟢 MIT `1,081 B` · `1b7481d92d0f` | `0` | 🟢 **The row the gap was asking for.** Timetable **disruptions**, teacher absences and substitutions — with **human-approved** schedule updates. 🔵 The approval gate is in the project's own description, not retrofitted by this base |
+| 🟢 **school-timetable-timefold-case-study** `NEW` | [`paoloantinori/school-timetable-timefold-case-study`](https://github.com/paoloantinori/school-timetable-timefold-case-study) | 🟢 MIT `1,081 B` · `12e2a597e655` | `1` | 🟢 **The reference architecture for the whole category:** a real **constraint solver** (Timefold) on Quarkus, driven by coding agents. Scheduling is a solver problem with an LLM at the edges — **not** an LLM problem |
+| 🟢 **Timable** `NEW` | [`Nayak-indie/Timable`](https://github.com/Nayak-indie/Timable) | 🟢 Apache-2.0 `11,357 B` · `c71d239df917` | `1` | High-school timetabling on **OR-Tools** + Streamlit: clash-free, priority-aware. The second independent solver-based row, which makes the pattern a pattern |
+| 🟢 **classcharts-agent** `NEW` | [`shan8851/classcharts-agent`](https://github.com/shan8851/classcharts-agent) | 🟢 MIT `1,066 B` · `65ef4f07f833` | `0` | 🟢 **Read-only** CLI and agent skill over **ClassCharts** (UK homework/behaviour system), on a parent account. 🔵 A deliberately read-only attachment to a live school system — the safest possible first integration, and a second EMEA LMS attachment point after `brightspace-d2l-mcp` |
+| 🟢 **TIMETABLE-SOFTWARE** `NEW` | [`jeevanjacob1/TIMETABLE-SOFTWARE`](https://github.com/jeevanjacob1/TIMETABLE-SOFTWARE) | 🟢 MIT `1,056 B` · `1126322e2cc8` | `0` | Clash-free generator on React + TypeScript + Supabase — the web-stack variant of the same job |
+| 🟢 **ai-adoption-education** `NEW` | [`VictorOsondu/ai-adoption-education`](https://github.com/VictorOsondu/ai-adoption-education) | 🟢 **CC BY 4.0 content + MIT code**, one `752 B` file · `2e9c34096bf9` | `2` | 🟢 **Safeguarding-first** AI adoption guidance for schools and higher ed, with task-suitability and assessment-integrity material. 🔵 Search channel said `NOASSERTION`; the bytes grant **commercial use with a named attribution string** (`T869`) |
+
+🔴 **Still ungranted in this category, and worth asking for:** [`NSK-394/schoolbridge-mcp`](https://github.com/NSK-394/schoolbridge-mcp) — an MCP server giving agents **role-based** access to school ERP data (attendance, fees, student records). 🔵 Role-based access over an SIS is precisely the control surface a school engagement needs, and it serves no licence on any probed path. 🔴 [`zulfahmi93/susun-jadual`](https://github.com/zulfahmi93/susun-jadual) 🇲🇾 — Malaysian *sekolah rendah/menengah* timetabling, ungranted; Malaysia remains unplaced.
+
+### 🟢 Africa — `p788`'s curriculum gap DISCHARGED for Nigeria and South Africa, and the ratio is the finding
+
+🔴 `p788`: *"African national curricula other than Kenya's CBC and Morocco's Bac — none found."* 🟢 **They exist in quantity. `WAEC AI tutor` alone returns `35` repositories.** 🔴 **And `32` of them serve no grant** (`T871`).
+
+| Agent | Address | Grant, on the bytes | ★ | Country | Why it is here |
+|---|---|---|---|---|---|
+| 🟢 **Offline-First-Android-AI-Tutoring-App** `NEW` | [`thesavvybyjude/Offline-First-Android-AI-Tutoring-App`](https://github.com/thesavvybyjude/Offline-First-Android-AI-Tutoring-App) | 🟢 MIT `1,070 B` · `a2fe733bd153` | `1` | 🇳🇬 NG | 🟢 **The headline African row, and it is the artefact `p788` asked for by name.** `p788` flagged an offline NCERT doubt-solver as "exactly the shape a low-connectivity engagement needs" **and had to file it ungranted**. This is the same shape for Africa **with a grant**: on-device LLM, RAG over the **WAEC/NERDC** curriculum, spaced repetition |
+| 🟢 **ai-tutor-app** `NEW` | [`nitoni-jim/ai-tutor-app`](https://github.com/nitoni-jim/ai-tutor-app) | 🟢 MIT `1,074 B` · `d33e0685ea0f` | `1` | 🇳🇬 NG | Intelligent tutoring system over **WAEC / NECO / JAMB** — all three Nigerian examination boards in one tree |
+| 🟢 **waec-ai-tutor** `NEW` | [`Ass-Gaye/waec-ai-tutor`](https://github.com/Ass-Gaye/waec-ai-tutor) | 🟢 MIT `1,065 B` · `54383781845a` | `0` | 🇳🇬 NG | The third permissive WAEC row of the `35` |
+| 🟢 **homework-hero-sa** `NEW` | [`Masondo86/homework-hero-sa`](https://github.com/Masondo86/homework-hero-sa) | 🟢 MIT `1,070 B` · `88eb94d99d6c` | `0` | 🇿🇦 ZA | 🟢 **South Africa placed for the first time.** Homework scheduling and learner accountability on the **CAPS** curriculum — an operations tool, not a tutor |
+| 🟢 **nextgen-learn** `NEW` | [`daddysystem/nextgen-learn`](https://github.com/daddysystem/nextgen-learn) | 🟢 **BSL-1.0 (Boost) `1,338 B`** · `c9bff7573892` | `0` | 🇿🇦 ZA | Free **CAPS**-following study site with an AI tutor. 🟢 **A licence family new to this base** — Boost is permissive, OSI-approved, and *weaker* than MIT in one respect: object-code-only distribution needs no attribution. 🔴 It is also defect `6` above |
+
+🔵 **Measured African totals, so the gaps that remain are informed ones:** `WAEC AI tutor` → **`35`** (3 permissive) · `CAPS curriculum South Africa AI` → **`10`** (2 permissive) · `Nigeria curriculum AI tutor` → **`6`** · `BECE Ghana AI education` → **`1`**, and it is **ungranted** ([`ghwmelite-dotcom/brilla-study-platform`](https://github.com/ghwmelite-dotcom/brilla-study-platform), BECE/WASSCE/NSMQ) · `NECTA Tanzania education AI` → 🔴 **`0`. A measured zero, not an unexamined silence.**
+
+🔴 **Ungranted and worth asking for:** [`7irelo/aptiverse`](https://github.com/7irelo/aptiverse) 🇿🇦 `4★` — CAPS-aligned practice tests with **auditable marking**, the most engagement-shaped African artefact found and the highest-starred; and [`tosinamuda/teacher-agent-itu-hackathon`](https://github.com/tosinamuda/teacher-agent-itu-hackathon) 🇳🇬 — *Plan-to-Tutor*, a **teacher-in-the-loop** agent on the Nigerian curriculum from the **ITU AI for Good** Lab hackathon. 🔵 Teacher-in-the-loop and auditable marking are the two design choices this base keeps recommending, both found in African repositories, both ungranted.
+
+### 🟢 Movement on rows this base already carries
+
+| Agent | Address | This window | Note |
+|---|---|---|---|
+| 🟢 **DeepTutor** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **`58,523★`**, pushed `2026-11-07` | `p788` recorded `58,508★`. **`+15` in the window** — the near-vertical climb of Sep–Oct has flattened at the top |
+| 🟢 **OpenMAIC** | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **`43,374★`**, pushed **today** | Still actively developed |
+| 🟢 **agent_skills** | [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) | **`6,947★`**, pushed `2026-11-03` | `p787` page-read `6.6k★`. 🟢 Growth continues but the doubling has stopped; `T851`'s packaging claim stands on the derivative, not the stars |
+| 🟢 **OATutor** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **`279★`**, pushed **today** | 🟢 **Unchanged from `p787`'s recorded `279★`** — it behaved as a control as well as a row |
+| 🟢 **Kolibri** · **Oppia** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) · [`oppia/oppia`](https://github.com/oppia/oppia) | `1,176★` · `6,988★`, both pushed this week | Both alive; licence bytes unchanged |
+
+### 🟢 New arrivals in the trending window
+
+| Agent | Address | Grant, on the bytes | ★ | Note |
+|---|---|---|---|---|
+| 🟢 **DeepTutor-AILearning** `NEW` | [`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning) | 🟢 Apache-2.0 `11,408 B` · `cd2f54e1e506` | `287` | 🇨🇳 **A commercially-shaped DeepTutor derivative**: multi-tenant for offline training institutions — platform bills tenants, tenants run campuses, campuses run teachers and students. 🟢 **Its licence file is byte-identical to the parent's** — same `11,408 B`, same `cd2f54e1e506` — which is byte-channel evidence of genuine descent, not a coincidence of family |
+| 🟢 **studyai** `NEW` | [`zuhairhalawa/studyai`](https://github.com/zuhairhalawa/studyai) | 🟢 MIT `1,069 B` · `24ef01c8186a` | `248` | **Local-first** university study platform: lecture slides in, spaced repetition and exams out. The highest-starred *permissive* new arrival of the window |
+| 🔴 **frametell** | [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | 🔴 **AGPL-3.0 `34,523 B`** · `0d96a4ff68ad` | `497` | The window's highest-starred education-adjacent arrival — explainer video generation with a director agent — **and it is AGPL-3.0.** Network use triggers disclosure: reference or separately-deployed service only |
+
+### 🔴 Channel hygiene — `tutor` is a polluted search term (`T873`)
+
+🔴 `tutor AI created:>2026-10-01 stars:>30` returns **`39`** repositories, and **`5` of the top `8` are the same repository re-published under different owners** — `apimartyvp957u6/api-proxy-tutorial`, `apimartpx0d7edg8/llm-gateway-tutorial`, `apimartat5/llm-api-tutorial`, `apimartmk8/multi-model-api-tutorial`, `apimartc30lq1/unified-ai-tutorial`, at `78`–`91★` with byte-identical descriptions advertising an API relay. 🔵 **They are not education at all; they match on `tutor`⊂`tutorial`.** One of them serves a perfectly valid MIT file (`1,181 B` · `9c1378a7528b`) — **a real grant on an irrelevant repository**, which is why a grant gate is not a relevance gate. 🟢 Star-sorted education queries must exclude the `tutorial` stem.
+
+### 🟢 Declared gaps for this window, so silence is not read as coverage
+
+🔴 **Tanzania (`NECTA`) — a measured `0`.** 🔴 **Ghana — a measured `1`, ungranted.** 🔴 **Malaysia — unplaced; its one timetabling repository is ungranted.** 🔴 **Transitive depth beyond layer 2 — still unmeasured;** `T872` reaches the second layer of one repository and stops there by design. 🔴 **The `apimart` cluster was not reported to GitHub** — out of scope for this base, recorded so the next pass does not re-discover it.
+
+
 ## 🆕 `2026-11-12` · `p788` — **New this window: the EMEA agent gap is REFUTED, not filled — Europe's education agents were always there and `p787` asked for them in English. `6` European-origin permissive agents and a `66`-repo MIT African ecosystem, found by querying in Dutch, French, German and Greek. Plus the pass's headline: `4` of the `7` highest-star permissive education repos carry copyleft in their declared direct dependencies, and Oppia's is AGPL-3.0.**
 
 🟢 **Controls ran BEFORE any verdict shipped: `7` of `7` known-good rows reproduce this base's recorded bytes exactly** — `HKUDS/DeepTutor` `11,408 B`, `moodle/moodle` `35,147 B`, `sakaiproject/sakai` `11,120 B`, `frappe/lms` `33,893 B`, `hedyorg/hedy` `13,827 B`, `jupyter/nbgrader` `1,512 B`, `oppia/oppia` `11,358 B`. 🟢 `2` planted negatives DEAD as designed. 🔴 **`6` defects in this pass's own instruments, caught by those controls and fixed before use** — trailing-newline erasure (every byte count `1 B` short), single-rendering translation matching (a valid Spanish MIT still scored `UNGRADED` *after* the `T848` fix), byte-wise accent blindness (`SIN GARANT.A` cannot match `SIN GARANTÍA`), fixed-window title search (`INGInious` defers to line `9`), abbreviation blindness (`frappe/education` serves `19 B`: `License: GNU GPL V3`), and PEP 639 metadata blindness in the new dependency instrument. See `intel/trends.md` `T863`.
