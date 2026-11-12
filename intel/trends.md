@@ -4,6 +4,58 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p782` — **The education agent is shipping as a SKILL, not a platform — six of eleven finds this pass — and the regulatory clocks have split: EMEA's high-risk deadline slipped to `2027-12-02` while Vietnam's education transition is already running.**
+
+### 🟢 `T1` — The education agent has changed SHAPE: skill, not application
+
+🔵 **Six of the eleven agents found this pass ship as a skill for an existing agent harness rather than as an application:** [`JuneYaooo/teacher-to-skills`](https://github.com/JuneYaooo/teacher-to-skills) (Apache-2.0, `475★`), [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) (MIT, `380★`), [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) (MIT, `302★`), [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) (MIT, `265★`), [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) (MIT, `240★`), [`kevinnio/tutor`](https://github.com/kevinnio/tutor) (MIT, `14★`). 🟢 **And `p781`'s largest surprise fits the same pattern: [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) took `6,050★` in `9` days and contains a Socratic tutor as one skill among many — now `6,121★` at an unmoved `HEAD`.**
+
+🟢 **What a skill is, in commercial terms: a prompt, a few files, a declared tool surface, and no infrastructure.** 🔵 **Days to deploy instead of weeks, and it inherits the client's existing harness rather than adding one.** 🔴 **And it holds no student model, persists no mastery state across sessions, and produces nothing a regulator can audit.** 🔵 **`T828`: the skill and the platform are complements — the skill is the delivery vehicle, the platform is the system of record — and an engagement that picks one and not the other will fail on either speed or compliance.**
+
+### 🟢 `T2` — DeepTutor is not slowing down, and the moat is memory
+
+🔵 `22k★` when this base first shelved it in July `2026`; **`58,407★`** now, `7,100` forks, `v1.7.2` on `2026-11-06` — **`+165%` in four months**, still Apache-2.0, grant unchanged across four consecutive passes (`11,408 B` · `cd2f54e1e506`). 🟢 **The architecture that is winning: three-layer INSPECTABLE memory (traces, facts, synthesis) that the learner can review and edit, mastery-gated learning paths, and subagents that reach out to external harnesses.** 🔵 **Inspectable memory is the feature an institution can actually be sold, because it is the one a student, a parent and an auditor can all read.**
+
+### 🟢 `T3` — The multi-agent CLASSROOM is now a real category, and it is MIT
+
+🔵 [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — MIT, `43,346★`, `6,681` forks, `v1.5.0-rc.1` on `2026-11-10`, Tsinghua MAIC lab — generates a lesson from a topic or a document and staffs it with an **AI teacher and AI classmates**: discussion, roundtable debate, Q&A, shared whiteboard. 🟢 **It exports PPTX, offline HTML and a classroom ZIP.** 🔵 **That export list is not a nice-to-have; it is what a ministry or a university procurement actually requires, and it is why this is the composition target rather than a competitor to a tutor.**
+
+### 🟢 `T4` — Grounding by SIMULATOR, not by retrieval
+
+🔵 [`122-syf-wcy/PhysicsOS`](https://github.com/122-syf-wcy/PhysicsOS) (Apache-2.0, `269★`) couples an LLM to a real **physics engine**: the model reads and interprets the problem, and the engine supplies the ground truth, making the result interactive, observable and *verifiable*. 🟢 **This is the first architecture on this base that solves STEM hallucination structurally rather than probabilistically** — the model is not asked to compute the answer. 🔵 **`T829`: wherever a domain has a deterministic simulator — physics, chemistry, circuits, accounting, logistics — "LLM interprets, engine decides" dominates retrieval-grounded tutoring, and it is a pattern Globant can port to every one of those domains.**
+
+### 🟢 `T5` — Individual adoption has outrun institutional governance, in every region
+
+🔵 The same gap, four datasets: LATAM `87%` of HEIs using AI against **`26%`** with a formal strategy; Brazil `53%` of administrators using AI against **`22%`** with guidelines; North America roughly a quarter of faculty reporting an institutional policy; `86%` of students across `16` countries using AI in their studies. 🟢 **Nobody needs to be sold AI for education — they have it, unmanaged.** 🔵 **The sellable work is governance, auditability and the replacement of general-purpose chatbots with purpose-built systems, which is exactly what the OECD's `2026` Digital Education Outlook now recommends.**
+
+### 🔴 `T6` — The regulatory clocks have SPLIT, and the spread is over a year
+
+| Jurisdiction | Clock | Date |
+|---|---|---|
+| 🔴 **EU** — stand-alone high-risk education systems | 🟢 **slipped** by the Digital Omnibus, Reg. (EU) `2026/1744` | **`2026-08-02` → `2027-12-02`** |
+| 🟢 **EU** — Art. `50` transparency | in force | `2026-08-02` |
+| 🔴 **EU** — emotion recognition in education | banned, in force | since `2025-02` |
+| 🔴 **Vietnam** — education named high-risk, Decision `33/2026/QD-TTg` | **running now**, `18`-month transition | from `2026-03-01` |
+| 🟢 **North Carolina** — state model policy → district policies | **mandated** | `2026-12-31` → **`2027-06-30`** |
+
+🔵 **`T830`: there is no longer a single "AI compliance" conversation in education — an EMEA client has `16` months of runway that did not exist in this base's earlier reading, while a Vietnamese client's transition period is already consuming itself.** 🔴 **Selling one roadmap into both is malpractice.**
+
+### 🟢 `T7` — Sovereignty has moved from sentiment to Council text
+
+🔵 The Council of the EU's **October `2026`** conclusions call for *reducing dependencies associated with AI tools and technologies developed outside Europe, including in education and training*. 🟢 **That is a procurement preference stated by the Council, and it is directly monetisable: European-hosted, European-licensed, auditable stacks.** 🔴 **In direct tension with it: OpenAI is already embedded in a national education system via Estonia's AI Leap 2025 and is expanding OpenAI Academy into Europe.** 🔵 **The permissive European assets to build the sovereign answer are already on this base — [`openfun/richie`](https://github.com/openfun/richie) (MIT) and [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (MIT) — and crucially neither Moodle nor Open edX is permissive.**
+
+### 🟢 `T8` — Knowledge tracing is real, and this base has been overstating it
+
+🔵 [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) remains the field's MIT reference, carrying UKT, HCGKT, MTKT, RobustKT, MoCKT and DenoiseKT in its model list. 🔴 **But this base has published `1.2k★` for pyKT since `v6`, and the measured figure is `460★`.** 🔴 **Likewise `CAHLR/OATutor` at `279★`, not `~300`+, and `DaRL-GenAI/instructional_agents` at `492★` and MIT — this base published `~200★` and Apache-2.0.** 🔵 **`T831`: knowledge tracing is a research-grade capability with production-grade claims attached to it, and the star counts this base used to justify "entering production" were inflated two-to-three-fold.** 🟢 **The capability is still the right foundation for adaptive learning; the adoption evidence for it is much thinner than `v6` asserted.**
+
+### 🟢 `T9` — The LATAM code gap was partly an instrument artefact; EMEA's was not
+
+🔵 `ACTION p781-H` ordered the agent sweep re-run in Spanish, Portuguese, French and German. 🟢 **LATAM: three permissively- or openly-licensed education agents appeared that the English sweep had never returned, including [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) — MIT, Universidad Tecnológica de Pereira, built for rural higher education in Colombia and already integrated with Open edX.** 🔴 **All three sit at `0★`.** 🔴 **EMEA: the French and German arms returned nothing permissive the English sweep had missed.** 🔵 **`T832`: LATAM has permissive institutional code and zero adoption signal; EMEA's code gap survived a deliberate attempt to explain it away as a search artefact, so it is more likely to be real.**
+
+### 🟡 `T10` — Interop standards are the weakest layer, and the surviving spec is not permissive
+
+🔴 **`4` of the `5` Caliper Analytics reference implementations are gone from GitHub for good**, confirmed dead on both channels this pass. 🟢 **The spec itself is ALIVE — `p781` was wrong to bury it — but its grant is a bespoke consortium licence (`12,402 B`, title line "IMS GLOBAL LEARNING CONSORTIUM, INC."), not Apache or MIT.** 🟢 **LTI 1.3 is in better shape and moved the right way: the PHP reference library now belongs to [`1EdTech`](https://github.com/1EdTech/lti-1-3-php-library) rather than a vendor, Apache-2.0, graded on the bytes.** 🔵 **So: build integrations on LTI 1.3, and treat learning analytics as a layer you implement against a spec rather than a library you adopt.**
+
 ## 🆕 `p781` — **`ACTION p780-E` and `p780-H` both land, and both REFUTE the theory they were built to confirm. `T816` is LOCAL to the DfE: a FRENCH organisation writes the AMERICAN `LICENSE`, exclusively. And the largest service in the DfE estate got its grant in `2020`, by hand, six years before the migration `T815` credits.**
 
 🟢 **`make hooks` ran, exit `0`, first command of this pass** — `1` for `12` (`T818`, [`agents/top.md`](../agents/top.md)).

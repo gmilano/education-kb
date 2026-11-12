@@ -4,6 +4,82 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p782` — **Six recipes, every address re-resolved on `git ls-remote` this pass. The learning-analytics recipe is RETIRED as written — `4` of the `5` Caliper libraries it depended on are gone and the surviving spec is not permissive — and a new LATAM recipe starts from a Colombian university's MIT tutor.**
+
+🔵 **Addresses in these recipes were re-resolved this pass, and `4` of `p781`'s "dead" ones turned out to be alive** (`microsoft/presidio`, `RoundTable02/socrates-skill`, `mitodl/open-learning-ai-tutor`, `1EdTech/caliper-spec`). 🟢 **`p781`'s instruction to check addresses before running a recipe was right; its list of which ones were broken was not** → `T824` in [`agents/top.md`](../agents/top.md).
+
+### 🟢 `P1` — Governance layer over an existing LMS estate · North America · `6`–`8` weeks
+
+🔵 **The buyer problem:** `134` AI-in-education bills across `31` states, North Carolina's districts needing local policies by **`2027-06-30`**, and roughly a quarter of faculty reporting any institutional AI policy. 🔴 **The client already has unmanaged AI use; they do not need a tutor, they need to be able to answer for one.**
+
+**Wiring:**
+1. **Base of record** — the estate's existing [`moodle/moodle`](https://github.com/moodle/moodle) (`main` · `afbcc55fa1bd`, GPL) or [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) (`master` · `d3a86602dcf7`, AGPL-3.0). 🔴 **Do not fork either.**
+2. **Extension point** — [`openedx/XBlock`](https://github.com/openedx/XBlock) (`master` · `52d0c10b2b86`, **Apache-2.0**, `LICENSE.TXT`). 🟢 **This is the licence lever: an Apache-2.0 component inside an AGPL platform can be built and shipped permissively.**
+3. **Tutor** — [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (Apache-2.0, `11,408 B` · `cd2f54e1e506`), deployed behind the institution's boundary. 🟢 **Use its three-layer inspectable memory as the audit surface** — traces, facts, synthesis are readable by student, parent and regulator.
+4. **Policy gate** — per-state configuration of three things the bills actually name: data-handling (CA **AB 1159** training exclusion, Idaho **SB 1227**), grade gating (NY **A 9190**, ninth grade and above), and decision authority (Clark County — AI never the sole basis for discipline, placement or special-education determinations).
+5. **PII boundary** — [`microsoft/presidio`](https://github.com/microsoft/presidio) (`main` · `1d7005932261`). 🟢 **Re-confirmed ALIVE this pass; `p781` published it as absent and `15` recipes on this base were about to be rewritten around a working library.**
+
+🟢 **Sell the gate, not the tutor.** 🔵 The tutor is Apache-2.0 and free; the per-jurisdiction gate is the engagement.
+
+### 🟢 `P2` — Sovereign, auditable stack · EMEA · `10`–`12` weeks
+
+🔵 **The buyer problem:** the Council of the EU's October `2026` call to reduce dependence on AI developed outside Europe, against OpenAI's existing national footprint in Estonia. 🟢 **And `16` months of runway: high-risk education obligations moved to `2027-12-02` under Reg. (EU) `2026/1744`, while Art. `50` transparency is already in force.**
+
+**Wiring:**
+1. **Portal** — [`openfun/richie`](https://github.com/openfun/richie) (`master` · `5a2feef2639d`, **MIT**, `1,079 B` · `e4b2a3148135`). 🟢 **MIT and EMEA-authored — France Université Numérique.**
+2. **Offline/edge delivery** — [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (**`develop`** · `fe298f54494c`, **MIT**, `1,097 B` · `3c056b34a476`). 🔵 **Note the branch: `develop`, not `main`.**
+3. **Classroom generation** — [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (MIT, `1,065 B` · `ba2525637432`), run against **local** model providers, which it supports natively (Ollama, self-hosted TTS, FunASR). 🟢 **MIT means the sovereignty requirement is satisfiable without a vendor negotiation.**
+4. **Interop** — [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) (`master` · `3a192de99f37`, Apache-2.0, `11,343 B` · `78b49eeaddbf`). 🟢 **Cite the consortium address, not `packbackbooks/`.**
+5. **Compliance artefacts to produce from day one** — Art. `50` disclosure, Art. `4` AI-literacy evidence, and an **emotion-recognition negative assertion** (banned in education since `2025-02`, and the ban is in force *now*, unlike the high-risk obligations).
+
+🔴 **England is a separate sub-case:** its January `2026` generative-AI product safety standards for education explicitly address **cognitive offloading**. 🟢 **Pair [`kevinnio/tutor`](https://github.com/kevinnio/tutor) (MIT, **`master`** · `f0ad1ee514a0`) — an agent that refuses to do the learner's work — as the evidence that the system builds capability rather than substituting for it.**
+
+### 🟢 `P3` — Rural, offline-first tutoring from a regional asset · LATAM · `6`–`8` weeks
+
+🔵 **New this pass, and it exists because `ACTION p781-H` ran the sweep in Spanish.**
+
+**Wiring:**
+1. **Start from the regional asset** — [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) (`main` · `032b5aa520ea`, **MIT**, `1,069 B` · `346d7b5d3913`), Universidad Tecnológica de Pereira. 🟢 **It is already built for rural higher education in Risaralda, Colombia, in Spanish, and already integrates with Open edX.** 🔴 **`0★` — treat it as a well-placed starting point with no community, not as a maintained dependency.**
+2. **LMS base** — [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) (**`master`** · `03def9186838`, GPL) where the client is already Chamilo, which in Colombia, Ecuador and Bolivia is common; otherwise Open edX to match `TutorIA`'s existing integration.
+3. **Offline delivery** — [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (MIT, **`develop`**). 🔵 **Low bandwidth is the binding constraint, not model quality.**
+4. **Retention** — [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) (`main` · `d7d65125e846`, MIT, `1,074 B` · `0ef87fdb98da`). 🟢 **Spaced repetition over MCP, so it works offline and syncs later.**
+5. **Reference deployment to cite** — **Uruguay's Ceibal**, at `75%` of public-school teachers using these tools. 🔵 **The highest penetration figure in any region, in the region with the lowest governance coverage — `26%` of LATAM HEIs have a formal AI strategy.**
+
+🔴 **Do not use** [`bzsantos/adaptive-Llama-agente-tutor`](https://github.com/bzsantos/adaptive-Llama-agente-tutor) **as a dependency** — it is **CC0-1.0**, not MIT as a web source claims, and it bundles mental-health support, which carries clinical duty-of-care exposure a studio should not inherit silently. 🔵 Read it for the local-Llama + RAG + MCP architecture, which is sound.
+
+### 🟢 `P4` — Ministry-scale curriculum production · APAC · `8`–`10` weeks
+
+🔵 **The buyer problem has a unit of measure, which is rare:** Vietnam's **MOET Decision 2422** requires **`12` periods per class per year** of AI content for **grades 1–12**, and Decision **`33/2026/QD-TTg`** names education high-risk with an `18`-month transition already running from `2026-03-01`.
+
+**Wiring:**
+1. **Generation** — [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (MIT). 🟢 **One-click lesson generation from a topic or a document, plus PPTX / offline-HTML / classroom-ZIP export** — which is exactly the deliverable format a ministry specifies.
+2. **Instructional design at volume** — [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) (`main` · `f835eb45f508`, **MIT**, `1,067 B` · `4e085d826a64`, `492★`, EACL 2026). 🔴 **This base published it as Apache-2.0 at `~200★`; it is MIT at `492★`.** 🟢 ADDIE roles generate syllabus → slides → assessments.
+3. **Verifiable STEM** — [`122-syf-wcy/PhysicsOS`](https://github.com/122-syf-wcy/PhysicsOS) (`main` · `7b0a1ab0ecab`, Apache-2.0, `11,356 B` · `f1a2e5fccede`). 🟢 **The LLM interprets the problem; the physics engine supplies the answer.** 🔵 Port the pattern to chemistry and circuits for the rest of the curriculum.
+4. **Localisation** — [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) (MIT, `1,064 B` · `dc1997d82189`) and [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) (MIT) are Chinese-language-first. 🔵 **Budget localisation as a line item, not a bug.**
+5. **Compliance** — the `18`-month education transition under Decision `33` is the deadline to plan against, and it is shorter than EMEA's by well over a year.
+
+### 🟢 `P5` — Skill-first pilot, platform-second · any region · `2`–`3` weeks to first value
+
+🔵 **Built on `T828`: the skill is the delivery vehicle, the platform is the system of record.** 🟢 **Use this when the client wants evidence before a platform decision.**
+
+**Wiring:**
+1. **Week 1 — ship a skill into the harness the client already runs.** [`JuneYaooo/teacher-to-skills`](https://github.com/JuneYaooo/teacher-to-skills) (`main` · `0ca966c83044`, Apache-2.0, `11,358 B` · `cfc7749b96f6`) to distil a named expert into a source-backed teaching skill; [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) (`main` · `69cbadb6c986`, MIT) for diagnosis-first tutoring; [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) (**`master`** · `7c6715c29548`, MIT, `LICENSE.md` · `1,120 B` · `92cd3e89e133`) for a Socratic tutor. 🟢 **No infrastructure, days not weeks.**
+2. **Weeks 2–3 — turn documents into assessable material.** [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) (`main` · `f8849746d85c`, MIT, **`LICENSE.md`** · `1,122 B` · `15ce43afa44a`). 🔵 **Corporate L&D already owns the source documents; this is the shortest path from what they have to what they can measure.**
+3. **The handover that must be designed in from the start** — 🔴 **a skill holds no student model and persists no mastery state, so the pilot cannot become the product.** 🟢 **Promote to [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (memory + mastery gates) or [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) (`main` · `cfe41f874290`, MIT, local-first) when the client needs persistence or an audit trail.**
+4. **Knowledge tracing when it is genuinely warranted** — [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) (`main` · `ccbaf37b07e3`, MIT) and [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (`main` · `fae8cc474484`, MIT, BKT). 🔴 **At `460★` and `279★` these are research-grade, not production-proven — `T831`. Do not promise otherwise.**
+
+### 🔴 `P6` — Learning analytics: the previous recipe is RETIRED, and here is what replaces it
+
+🔴 **Every learning-analytics recipe this base has published depended on a Caliper Analytics reference implementation, and `4` of the `5` are confirmed dead on both channels:** `1EdTech/caliper-js`, `1EdTech/caliper-java`, `1edtech/caliper-php`, `imsglobal/caliper-python`. 🟢 **`p781` was right that this cluster is gone.** 🔴 **It was wrong about the fifth:** [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) is **ALIVE** (`master` · `1849e118b47a`) — **but its grant is a bespoke consortium licence** (`LICENSE.md` · `12,402 B` · `6178707d6c68`, title line *"IMS GLOBAL LEARNING CONSORTIUM, INC."*), **not Apache or MIT.**
+
+🔵 **So the correct replacement is not a substitute library — it is a change of layer:**
+1. 🟢 **Implement against the Caliper SPEC**, which is alive and readable, rather than adopting a library. 🔴 **Review the consortium licence terms before shipping a derivative; do not assume permissive.**
+2. 🟢 **Carry events over LTI 1.3** using [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) (Apache-2.0), which is genuinely permissive and now standards-body-owned.
+3. 🟢 **Model mastery with** [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) (MIT) **rather than inferring it from clickstream.**
+4. 🔵 **Expect to build the emitter.** 🟢 That is a known, bounded cost; citing a dead library is an unknown one.
+
+🔵 **`T833`: when a reference implementation dies but its specification survives, the recipe must move DOWN a layer — from library adoption to spec implementation — and the licence of the spec becomes the thing to check, because it is frequently not the licence of the dead libraries.**
+
 ## 🆕 `p781` — **Five recipes, and the first thing each one does now is CHECK ITS OWN ADDRESSES. `6.5%` of the addresses this base displays do not resolve, and the interop-standards layer — the layer every integration recipe depends on — is the worst-affected cluster.**
 
 🟢 **`make hooks` ran, exit `0`, first command of this pass** — `1` for `12` (`T818`, [`agents/top.md`](../agents/top.md)).

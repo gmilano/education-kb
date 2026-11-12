@@ -4,6 +4,41 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p782` — **`ACTION p781-B` could not be discharged as written, because the dead set it was built on is unsound: `T810`'s `422`-as-deletion rule is REFUTED and `3` of `p781`'s absences are alive. Repairs made anyway, including the one address `58` citations point at.**
+
+🔴 **`p781-B` ordered the `268` RENAMED addresses repaired, on the authority of `p781`'s `378`-dead sweep.** 🔴 **That sweep's classifier was sound; the verdicts published off it were not** — `microsoft/presidio`, `RoundTable02/socrates-skill` and `mitodl/open-learning-ai-tutor` all resolve on `git ls-remote` right now, and all three were published as dead or absent. 🔵 **Repairing `268` rows against a list that contains live addresses would have rewritten working citations into "successors" they never needed** → so the repair was run only where BOTH channels agree, and the list itself is carried forward for re-derivation as `p782-B`.
+
+### 🟢 Repairs made, each confirmed on both channels before the rewrite
+
+| Stale address | Citations | Successor, confirmed | Class |
+|---|---|---|---|
+| 🔴 `OpenEduCat-Inc/OpenEduCat` | live sell rows in [`verticals/solutions.md`](../verticals/solutions.md) | 🟢 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) · branch **`19.0`** · `46a5d7d40082` · `910★` · pushed `2026-11-02` | 🔴 **DEAD on BOTH channels at the old address — a genuine deletion, not a redirect.** 🟢 Successor found via `openeducat in:name`, confirmed on `git` |
+| 🔴 `openedx/edx-platform` | **`58`** URL-form, `379` bare-string | 🟢 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) · `master` · `d3a86602dcf7` · AGPL-3.0 `35,136 B` · `e12d78569742` | 🟢 **Byte-, sha- and `HEAD`-identical to the old address — the same repository, renamed.** 🔵 `git` follows the redirect, which is why this base could not see it for three passes |
+| 🔴 `packbackbooks/lti-1-3-php-library` | `31` | 🟢 [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) · `master` · `3a192de99f37` · Apache-2.0 `11,343 B` · `78b49eeaddbf` · `124★` | 🟢 **A vendor → STANDARDS-BODY transfer, now graded on the bytes.** The old address still resolves on `git`, so nothing is broken today — but the consortium address is the one to cite |
+
+🔴 **Not repaired, because they need no repair — the "dead" verdict was the error:** `microsoft/presidio` (`main` · `1d7005932261`), `RoundTable02/socrates-skill` (`main` · `becb2e51fe7e`), `mitodl/open-learning-ai-tutor` (`main` · `1ad3ad7a4b60`), `1EdTech/caliper-spec` (`master` · `1849e118b47a`). 🟢 **`4` rows this base was about to rewrite into successors that do not exist.**
+
+🟢 **A real successor found anyway, and the grant bytes prove the relationship:** [`MIT-OL-AI-Tutoring/Open_Learning_AI_Tutor`](https://github.com/MIT-OL-AI-Tutoring/Open_Learning_AI_Tutor) (`main` · `e3c6905a7b6e`, MIT `1,069 B` · `77a612c534cf`) carries a grant **byte- and sha-identical** to `mitodl/open-learning-ai-tutor`'s (`1,069 B` · `77a612c534cf`) — same copyright holder line, so the same project in a dedicated org. 🔵 **Both are alive at different `HEAD`s, so this is a migration in progress, not a rename: cite `mitodl` for history and watch the new org.**
+
+🔴 **Genuinely dead, re-confirmed on BOTH channels and load-bearing in a recipe:** `1EdTech/caliper-js`, `1EdTech/caliper-java`, `1edtech/caliper-php`, `imsglobal/caliper-python`. 🔵 **`4` of the `5` Caliper addresses are gone, every learning-analytics recipe on this base depended on one of them, and the surviving `caliper-spec` is NOT permissive** — see the correction in [`compose/patterns.md`](../compose/patterns.md).
+
+### 🟢 Trending repos this window, graded on the bytes
+
+| Repo | Address | Grant | Signal | Why it is here |
+|---|---|---|---|---|
+| **DeepTutor** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 · `11,408 B` · `cd2f54e1e506` | **`58,407★`** (+`36k` since July) · `7,100` forks | 🟢 The category. `v1.7.2`, `2026-11-06` |
+| **OpenMAIC** | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 MIT · `1,065 B` · `ba2525637432` | **`43,346★`** · `6,681` forks | 🟢 MIT multi-agent classroom. `v1.5.0-rc.1`, `2026-11-10` |
+| **agent_skills** | [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) | 🟢 MIT · `LICENSE.md` · `1,120 B` · `92cd3e89e133` | `6,121★` *(was `6,050★` at `p781`)* | 🟢 **Reproduces `p781` exactly at an unmoved `HEAD`.** Contains a Socratic tutor as a *skill* |
+| **Study-Mate** | [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 MIT · `1,064 B` · `dc1997d82189` | `1,433★` | APAC. Route → teach → build |
+| **learn-from-materials** | [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | 🟢 MIT · `LICENSE.md` · `1,122 B` · `15ce43afa44a` | `1,390★` | Documents → traceable learning objects |
+| **openeducat_erp** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0, via a COMPOSITE grant** · `8,241 B` · `528f84036800` | `910★` · pushed `2026-11-02` | 🟢 Education ERP on Odoo — admissions, SIS, gradebook. 🔴 **Its `LICENSE` opens with a referral to a `COPYRIGHT` file that returns `404`**; the grade is readable only from the body |
+| **teacher-to-skills** | [`JuneYaooo/teacher-to-skills`](https://github.com/JuneYaooo/teacher-to-skills) | 🟢 Apache-2.0 · `11,358 B` · `cfc7749b96f6` | `475★` | 🟢 Verbatim apache.org canonical print |
+| **anki-mcp-server** | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 MIT · `1,074 B` · `0ef87fdb98da` | `554★` | MCP over Anki |
+| **PhysicsOS** | [`122-syf-wcy/PhysicsOS`](https://github.com/122-syf-wcy/PhysicsOS) | 🟢 Apache-2.0 · `11,356 B` · `f1a2e5fccede` | `269★` | Physics engine as ground truth |
+| **frametell** | [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | 🔴 **AGPL-3.0** · `34,523 B` · `0d96a4ff68ad` | `496★` | Material → explainer video. 🔴 AGPL — reference only |
+
+🟢 **An unplanned result for `ACTION p781-C`, free of charge.** `frametell`'s AGPL print is **`34,523 B` · `0d96a4ff68ad` — byte- AND sha-identical to `learnharness`'s**, which `p781` analysed at length and resolved to exactly `3` content bytes against the SPDX print. 🔵 **Two unrelated projects carrying the identical print means `34,523 B` · `0d96a4ff68ad` is a WIDELY CIRCULATING canonical variant, not a bespoke wrap by one author.** 🟢 **That strengthens `T817` considerably: `p781` had to reason its way to "this is canonical despite being off-band"; a second independent instance of the same `sha256` establishes it directly.** 🔴 **Compare `helixnow/deep-student`, also AGPL, at `34,532 B` · `894342980454` — `9 B` and a different `sha` from the same licence.** 🔵 **Three AGPL prints, three byte counts, all authentic.**
+
 ## 🆕 `2026-11-12` · `p781` — **`ACTION p780-B` discharged at scale: `378` of this base's `5,817` addresses do not resolve, `71%` of them are recoverable, and the LTI 1.3 PHP reference library has moved from a vendor to the standards body.**
 
 🟢 **A cheaper instrument than `p780-B` ordered.** `p780-B` specified one `repo:` call per slug — `5,817` calls, ~`3` hours. Measured instead: **a query carrying `N` `repo:` qualifiers returns exactly the LIVE slugs and silently drops the dead ones**; HTTP `422` fires only when every slug in the batch is dead. 🟢 **Requested-minus-returned is the dead set: `146` calls at `batch=40`.** `40` qualifiers is `1,060` characters and is served, so the documented `256`-character query ceiling does not bind `repo:`-qualified search.

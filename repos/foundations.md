@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p782` — **The interop layer this base builds every integration recipe on is in worse shape than `p781` reported in one direction and better in another: `4` of `5` Caliper implementations are gone for good, but the surviving spec is ALIVE — and its grant is a bespoke consortium licence, not the permissive one a recipe would assume.**
+
+🔵 Every row PRIMARY: `branch` · `HEAD` from `git ls-remote --symref`, grant bytes and `sha256₁₂` measured on the file **on disk**, grade read from the **title line** (`T822`) except where a referral defeats it (`T826`, below).
+
+### 🟢 Foundational repositories, re-graded this pass
+
+| Repo | Address | Branch · `HEAD` | Grant, graded on the bytes | Claim channel | Base for AI? |
+|---|---|---|---|---|---|
+| **Open edX platform** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `master` · `d3a86602dcf7` | 🔴 **AGPL-3.0** `LICENSE` · `35,136 B` · `e12d78569742` | AGPL-3.0 · `8,232★` | 🟡 **XBlock API is the entry point, but AGPL-3.0 governs the platform.** 🔵 **This is the CANONICAL address; `openedx/edx-platform` is the stale one `58` citations still name** |
+| **XBlock** | [`openedx/XBlock`](https://github.com/openedx/XBlock) | `master` · `52d0c10b2b86` | 🟢 **Apache-2.0** `LICENSE.TXT` · `11,358 B` · `cfc7749b96f6` | Apache-2.0 · `471★` · pushed `2026-11-10` | 🟢 **Yes — and this is the lever.** Apache-2.0 component framework *inside* an AGPL platform: an XBlock can be built and shipped permissively. 🔵 Grant is at **`LICENSE.TXT`**, upper-case, declared in `pyproject.toml` |
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | `main` · `afbcc55fa1bd` | 🔴 **GPL** `COPYING.txt` · `35,147 B` · `8ceb4b9ee5ad` | GPL-3.0 | 🟡 Plugin ecosystem is the route. 🔴 Scope is `-or-later`, readable only from the per-file notice (`T819`) |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔵 **`develop`** · `fe298f54494c` | 🟢 **MIT** `LICENSE` · `1,097 B` · `3c056b34a476` | MIT | 🟢 **Yes — and it is the most permissive platform on this shelf.** Built for **offline and low-bandwidth** classrooms, which is the binding constraint in rural LATAM, Sub-Saharan Africa and parts of APAC |
+| **Richie** | [`openfun/richie`](https://github.com/openfun/richie) | `master` · `5a2feef2639d` | 🟢 **MIT** `LICENSE` · `1,079 B` · `e4b2a3148135` | MIT · `311★` | 🟢 Yes. MIT MOOC portal front, France Université Numérique. EMEA-placed |
+| **pyKT** | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | `main` · `ccbaf37b07e3` | 🟢 **MIT** `LICENSE` · `1,066 B` · `f5f955194636` | MIT · **`460★`** | 🟢 Yes — the knowledge-tracing reference. 🔴 **This base has published `1.2k★` for pyKT since `v6`; the measured figure is `460★`.** Corrected |
+| **OATutor** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | `main` · `fae8cc474484` | 🟢 **MIT** `LICENSE` · `1,105 B` · `5baaaf977a28` | MIT · `279★` | 🟢 Yes. Bayesian Knowledge Tracing, UC Berkeley, OpenStax-derived content |
+| **instructional_agents** | [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | `main` · `f835eb45f508` | 🟢 **MIT** `LICENSE` · `1,067 B` · `4e085d826a64` | MIT · **`492★`** | 🟢 Yes. ADDIE multi-agent course-material generation, EACL 2026. 🔴 **This base published Apache-2.0 and `~200★`; both corrected** |
+| **LTI 1.3 PHP library** | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | `master` · `3a192de99f37` | 🟢 **Apache-2.0** `LICENSE` · `11,343 B` · `78b49eeaddbf` | Apache-2.0 · `124★` | 🟢 Yes — **the standards body now owns it.** Cite this, not `packbackbooks/` |
+| **Caliper spec** | [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) | `master` · `1849e118b47a` | 🔴 **BESPOKE** `LICENSE.md` · `12,402 B` · `6178707d6c68` · title line **"IMS GLOBAL LEARNING CONSORTIUM, INC."** | `total_count: 1` | 🔴 **NO — and this is the important correction.** The spec is ALIVE (`p781` called it deleted) but its grant is a consortium licence, **not** permissive. 🔴 A recipe that assumed Apache/MIT here assumed wrong |
+| **OpenEduCat ERP** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔵 **`19.0`** · `46a5d7d40082` | 🔴 **LGPL-3.0, COMPOSITE** `LICENSE` · `8,241 B` · `528f84036800` | NOASSERTION · `910★` | 🟡 Education ERP on Odoo. 🔴 **Repairs the dead `OpenEduCat-Inc/OpenEduCat` address this base carried** |
+| **Frappe LMS** | [`frappe/lms`](https://github.com/frappe/lms) | 🔵 **`develop`** · `7f7c78b5c436` | 🔴 **AGPL-3.0** `license.txt` · `33,893 B` · `db1a87ba81e8` | AGPL-3.0 · `3.4k★` | 🔴 AGPL. 🔵 **Non-`main` branch AND a lower-case grant filename — the exact `frappe/erpnext` pattern `p781-F` was built on, reproduced on a sibling repo** |
+
+### 🔴 `T826` — `T822`'s title-line rule has a referral exception, and `openeducat_erp` is it
+
+🔵 **`T822` says grade by the title line alone, because GPL-3.0 §`13` names the AGPL verbatim and the two prints sit `11 B` apart.** 🔴 **That rule returns NOTHING here.** `openeducat_erp`'s `LICENSE` opens:
+
+> *"For copyright information, please see the COPYRIGHT file."*
+
+🔴 **The title line names no licence, and the file it points at returns HTTP `404`.** 🟢 **The grade is recoverable only from the body, three lines down, which states LGPLv3 and then includes the GPL text beneath it** — a composite of referral + declaration + included text. 🔵 **And the claim channel reports `NOASSERTION`, exactly as it should: no automated detector can grade this file.**
+
+🔵 **`T826`: grade by the title line WHEN the title line names a licence. When it is a referral, follow the referral — and if the referral target is missing, grade from the body and record that the referral is broken.** 🔴 **A `NOASSERTION` on the claim channel is therefore not evidence of a missing grant; it is often evidence of a composite one, and this base has been treating the two as the same thing.**
+
+### 🟡 A bounded contribution to `ACTION p781-D`, not a discharge
+
+🔵 `p781-D` asked for the top `40` GPL-family grants to be scoped `-only` / `-or-later` / `UNDETERMINED`. 🔴 **It was not discharged this pass** — the `T810` refutation consumed the budget, and guessing scopes would be worse than leaving them open. 🟢 **What this pass did add is a third byte-identical instance, which sharpens `T819` rather than merely repeating it:**
+
+| Repo | Grant file | Bytes · `sha256₁₂` | Real scope |
+|---|---|---|---|
+| `moodle/moodle` | `COPYING.txt` | `35,147 B` · `8ceb4b9ee5ad` | `-or-later` *(per-file notice, read at `p780`)* |
+| `chamilo/chamilo-lms` | `LICENSE` | **`35,147 B` · `8ceb4b9ee5ad`** | 🔴 **UNDETERMINED** |
+| 🆕 `ILIAS-eLearning/ILIAS` | `LICENSE` | **`35,147 B` · `8ceb4b9ee5ad`** | 🔴 **UNDETERMINED** |
+
+🔴 **Three independent LMS projects, three different real scopes possible, ONE identical licence file.** 🟢 **`T819` is not a subtlety — it is the whole of the scope question, and the licence body is provably incapable of answering it for `3` of the `4` largest open-source LMS platforms in this base.** 🔵 `ILIAS` is also on branch **`release_11`**, not `main`.
+
 ## 🆕 `p781` — **The LTI 1.3 PHP reference library now belongs to the standards body, the Caliper reference implementations are gone outright, and `6.5%` of this base's addresses do not resolve.**
 
 🟢 **`make hooks` ran, exit `0`, first command of this pass** — `1` for `12`, and the eleven-pass "environment block" was a working-directory error (`T818`, [`agents/top.md`](../agents/top.md)).

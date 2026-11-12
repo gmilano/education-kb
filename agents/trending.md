@@ -4,6 +4,38 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p782` — **The week the education agent stopped being a platform and became a SKILL: six of this pass's eleven finds ship as an agent skill, not an application. Plus the first LATAM-placed permissive tutor this base has ever shelved, and `T810` refuted.**
+
+🔵 **The structural signal of this window, and it is a category change rather than a new entrant.** 🟢 **Six of the eleven agents found this pass are distributed as *skills* for an existing agent harness — not as applications with a UI, a database and a deployment story:** [`JuneYaooo/teacher-to-skills`](https://github.com/JuneYaooo/teacher-to-skills) (Apache-2.0, `475★`), [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) (MIT, `380★`), [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) (MIT, `265★`), [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) (MIT, `302★`), [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) (MIT, `240★`), [`kevinnio/tutor`](https://github.com/kevinnio/tutor) (MIT, `14★`). 🔵 **`p781` shelved `janestreet/agent_skills` (MIT, `6,050★` in `9` days) and called it "the cheapest thing on this shelf to adopt." That was not a one-off; it was the leading edge of this.**
+
+🟢 **Why it matters commercially, stated plainly.** A skill is a prompt, a few files and a declared tool surface. 🟢 **It carries no infrastructure, so it can be dropped into an engagement in days rather than integrated over weeks** — and it inherits whatever harness the client already runs. 🔴 **And it carries no infrastructure, so it cannot hold a student model, cannot persist mastery state between sessions, and cannot be audited for a regulator.** 🔵 **The two families are therefore complements, not competitors: the skill is the delivery vehicle, the platform is the system of record** → the recipes in [`compose/patterns.md`](../compose/patterns.md) now pair them deliberately.
+
+### 🟢 Hot this window
+
+| Agent | Address | Grant *(graded on the bytes)* | Signal | Why it matters |
+|---|---|---|---|---|
+| **DeepTutor** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 · `11,408 B` · `cd2f54e1e506` | **`58,407★`** · `7,100` forks · `v1.7.2` on `2026-11-06` | 🟢 **Still the category leader and still Apache-2.0.** `22k★` when this base first shelved it in July; `58.4k★` now — **`+165%` in four months.** Three-layer inspectable memory, mastery gates, external-agent subagents |
+| **OpenMAIC** | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | MIT · `1,065 B` · `ba2525637432` | **`43,346★`** · `6,681` forks · `v1.5.0-rc.1` on `2026-11-10` | 🟢 **MIT, and the only multi-agent CLASSROOM at scale** — AI teacher plus AI classmates, whiteboard, debate and roundtable modes. Tsinghua MAIC. Exports PPTX and offline HTML, which is what a ministry procurement actually asks for |
+| **Study-Mate** | [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | MIT · `1,064 B` · `dc1997d82189` | `1,433★` · pushed `2026-11-06` | Route → instruction → project, in one loop. 🔵 APAC-authored, Chinese-language UI — a localisation cost, not a blocker |
+| **learn-from-materials** | [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | MIT · `LICENSE.md` · `1,122 B` · `15ce43afa44a` | `1,390★` · pushed `2026-10-19` | 🟢 **Material-in, traceable-learning-object-out.** The single most reusable piece this pass found for corporate L&D, where the source documents already exist |
+| **PhysicsOS** | [`122-syf-wcy/PhysicsOS`](https://github.com/122-syf-wcy/PhysicsOS) | Apache-2.0 · `11,356 B` · `f1a2e5fccede` | `269★` · pushed `2026-11-12` | 🟢 **A physics ENGINE as the ground truth, with the LLM only reading the problem.** The clearest answer this base has seen to STEM hallucination: the model does not compute the answer, the simulator does |
+| **anki-mcp-server** | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | MIT · `1,074 B` · `0ef87fdb98da` | `554★` · pushed `2026-11-07` | 🟢 **MCP over the world's installed spaced-repetition base.** Retention plumbing for free |
+| **TutorIA** | [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | MIT · `1,069 B` · `346d7b5d3913` | 🔴 **`0★`** · pushed `2026-10-27` | 🟢 **The first LATAM-placed, permissively-licensed education agent this base has ever shelved** — Universidad Tecnológica de Pereira, built for **rural** higher education in Risaralda, Colombia, and already integrated with Open edX. 🔴 **Zero stars. Shelved because it is placed, permissive and institutional, not because it is adopted** |
+
+🔴 **Not adoptable, recorded anyway:** [`helixnow/deep-student`](https://github.com/helixnow/deep-student) (AGPL-3.0 · `34,532 B` · `894342980454` · `310★`) and [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) (AGPL-3.0 · `496★`) are both AGPL — reference designs only. [`sayjinblackbelt/Agente-PMT`](https://github.com/sayjinblackbelt/Agente-PMT) (LATAM, Brazil) has **no grant at all** after `27` filename variants and `3` metadata files were probed on `main` · `811156a7682c`.
+
+### 🔴 Corrections to this base's own standing claims, this window
+
+| Claim this base carried | Measured this pass | Status |
+|---|---|---|
+| `RoundTable02/socrates-skill` *"is gone"* (`p780`) | 🟢 `main` · `becb2e51fe7e`, `README.md` served at `200`, `2,459 B` | 🔴 **FALSE — alive at that exact address** |
+| `microsoft/presidio` *"not at that address, no visible successor"* (`p781`, `15` citations) | 🟢 `main` · `1d7005932261` | 🔴 **FALSE — alive** |
+| `mitodl/open-learning-ai-tutor` *"True absence"* (`p781`, `26` citations) | 🟢 `main` · `1ad3ad7a4b60`, MIT `1,069 B` · `77a612c534cf` | 🔴 **FALSE — alive** |
+| `1EdTech/caliper-spec` in the DELETED cluster (`p781`) | 🟢 `master` · `1849e118b47a` | 🔴 **FALSE — alive, but its grant is a bespoke consortium licence, not permissive** |
+| `instructional_agents` is Apache-2.0 | 🟢 **MIT** `LICENSE` · `1,067 B` · `4e085d826a64`, `492★` | 🔴 **Grade corrected, and the star count was understated by `2.5×`** |
+
+🔵 **The common cause is one instrument error, now named as `T824`: a `repo:`-qualified `422` from the claim channel was read as "deleted". GitHub's error body says the resource does not exist OR is not visible to this token, and those two are indistinguishable in the response** → the full argument and the negative control are in [`agents/top.md`](../agents/top.md).
+
 ## 🆕 `2026-11-12` · `p781` — **The week `make hooks` turned out never to have been blocked, `378` of this base's `5,817` addresses were found not to resolve, and an `8,780★` tutor arrived under AGPL-3.0 — unusable as a starting point and worth reading anyway.**
 
 🟢 **`make hooks` ran, exit `0`, first command of the pass.** `1` for `12`. 🔴 **And the eleven-pass "environment block" was a working-directory error:** allowed in `/home/user/globant-kb`, denied `[Code from External]` inside the cloned KB, both arms measured (`T818`, [`agents/top.md`](./top.md)).

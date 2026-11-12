@@ -4,6 +4,53 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p782` — **Sakai is NOT Apache-2.0 and never was — it is the Educational Community License, which this base has mis-graded for six versions. One vertical address was dead outright. And a third LMS turns up carrying the SAME licence file as Moodle and Chamilo, byte for byte.**
+
+🔵 Every grade below read from the file **on disk**, at the branch `git ls-remote --symref` reports — **not** `main` by assumption, because `4` of the `8` platforms here do not use it.
+
+### 🟢 Vertical platforms, re-graded on the bytes this pass
+
+| Platform | Address | Branch · `HEAD` | Grant, graded on the bytes | Reach | Use it for |
+|---|---|---|---|---|---|
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | `main` · `afbcc55fa1bd` | 🔴 **GPL** `COPYING.txt` · `35,147 B` · `8ceb4b9ee5ad` | ~`400M` users | Universal LMS. 🔴 Scope `-or-later`, from the per-file notice only |
+| **Open edX** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔵 **`master`** · `d3a86602dcf7` | 🔴 **AGPL-3.0** `LICENSE` · `35,136 B` · `e12d78569742` | `50M+` learners | MOOC, national and corporate estates. 🟢 **Extend via Apache-2.0 XBlocks, not by forking the platform** |
+| **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔵 **`master`** · `03def9186838` | 🔴 **GPL** `LICENSE` · **`35,147 B` · `8ceb4b9ee5ad`** | `70M+` users | 🟢 **Lightweight, and genuinely dominant in LATAM** — Colombia, Ecuador, Bolivia |
+| **ILIAS** | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔵 **`release_11`** · `fca533556af8` | 🔴 **GPL** `LICENSE` · **`35,147 B` · `8ceb4b9ee5ad`** | `14M` users | 🟢 EMEA institutional — Germany, Switzerland, Austria. 🔵 **Third platform on this identical licence file** |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔵 **`master`** · `af576e8b4d32` | 🔴 **ECL-2.0** `LICENSE` · `11,120 B` · `0688f62d04f1` · title line **"Educational Community License, Version 2.0 (ECL-2.0)"** | `400+` institutions | 🟡 North American university LMS. 🔴 **NOT Apache-2.0 — see the correction below** |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔵 **`develop`** · `fe298f54494c` | 🟢 **MIT** `LICENSE` · `1,097 B` · `3c056b34a476` | — | 🟢 **The most permissive platform on this shelf.** Offline / low-bandwidth classrooms — rural LATAM, APAC, Sub-Saharan Africa |
+| **Richie** | [`openfun/richie`](https://github.com/openfun/richie) | 🔵 **`master`** · `5a2feef2639d` | 🟢 **MIT** `LICENSE` · `1,079 B` · `e4b2a3148135` | `5+` national MOOC portals | 🟢 MIT portal front. EMEA-placed, France Université Numérique |
+| **OpenEduCat ERP** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔵 **`19.0`** · `46a5d7d40082` | 🔴 **LGPL-3.0, COMPOSITE** `LICENSE` · `8,241 B` · `528f84036800` | `910★` | 🟡 Education ERP on Odoo — admissions, SIS, gradebook, finance. 🔴 **Address repaired this pass** |
+| **RosarioSIS** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔵 **`mobile`** · `e4cd20a48bf1` | 🔴 **GPL** `LICENSE` · `15,214 B` · `d954e14e5c75` | — | 🟡 Student information system. 🔵 **Default branch is `mobile`** — the most unusual on this base |
+| **Frappe LMS** | [`frappe/lms`](https://github.com/frappe/lms) | 🔵 **`develop`** · `7f7c78b5c436` | 🔴 **AGPL-3.0** `license.txt` · `33,893 B` · `db1a87ba81e8` | `3.4k★` | 🔴 AGPL. 🔵 Lower-case grant filename on a non-`main` branch |
+
+### 🔴 The Sakai correction, and why it is not pedantry
+
+🔴 **This base has published Sakai as `Apache-2.0` since `v6`.** 🟢 **The bytes say otherwise: `11,120 B` · `0688f62d04f1`, title line "Educational Community License, Version 2.0 (ECL-2.0)".** 🔵 **ECL-2.0 is an Apache-2.0 *derivative* written for universities, and the difference is in the patent grant: ECL-2.0 narrows it to the contributor's own contributions rather than the work as a whole, which is precisely the clause a university's counsel asked for.**
+
+🔵 **Why a studio must care.** 🟢 **ECL-2.0 is OSI-approved and permissive, so Sakai remains a legitimate starting point — the recommendation does not change.** 🔴 **What changes is the patent-indemnity position Globant can represent to a client, and "Apache-2.0" overstates it.** 🔵 **`T827`: an Apache-DERIVED licence is not Apache-2.0, and the title line is the only place the difference is visible — the body reads almost identically, which is exactly how this grade survived six versions.**
+
+### 🔴 A third byte-identical GPL file, and `T819` is now unavoidable
+
+| Platform | Grant file | Bytes · `sha256₁₂` | Real scope |
+|---|---|---|---|
+| `moodle/moodle` | `COPYING.txt` | `35,147 B` · `8ceb4b9ee5ad` | 🟢 `-or-later` *(per-file notice, `p780`)* |
+| `chamilo/chamilo-lms` | `LICENSE` | **identical** | 🔴 **UNDETERMINED** |
+| 🆕 `ILIAS-eLearning/ILIAS` | `LICENSE` | **identical** | 🔴 **UNDETERMINED** |
+
+🔴 **Three independent platforms — `~400M`, `70M+` and `14M` users — ship the identical licence file, and the file cannot tell you which GPL scope any of them actually grants.** 🟢 **`T819` said scope lives in the per-file notice or a separate `NOTICE`/`COPYRIGHT`, never in the licence body. Three instances now say it is not an edge case but the normal condition of the GPL-family LMS estate.** 🔵 **Commercially this is the difference between "we can relicense a derivative under GPL-3.0" and "we cannot", decided per platform, and this base can currently answer for exactly one of the three.**
+
+### 🔴 `T826` — the referral grant, found in a vertical this base recommends
+
+🔵 `OpenEduCat` was carried on this shelf at the address `OpenEduCat-Inc/OpenEduCat`. 🔴 **That address is DEAD on both channels — `git ls-remote` fails, so it is a genuine deletion, not a rename behind a redirect.** 🟢 **Repaired to [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp), branch `19.0`, `910★`, pushed `2026-11-02`.**
+
+🔴 **And the grant there defeats this base's own grading rule.** `T822` says grade by the title line. The title line is:
+
+> *"For copyright information, please see the COPYRIGHT file."*
+
+🔴 **It names no licence, and the `COPYRIGHT` file it points to returns HTTP `404`.** 🟢 **The real grade — **LGPL-3.0** — appears three lines into the body, with the GPL text included beneath it.** 🔵 **The claim channel's `NOASSERTION` is therefore CORRECT behaviour, not a gap: no automated detector can grade a composite file.** 🟢 **`T826`: follow a referral title line; if the referral target is missing, grade from the body and record the break. And stop reading `NOASSERTION` as "ungraded therefore unusable" — here it means "composite", and the composite says LGPL-3.0.**
+
+🔴 **The practical consequence for the ERP recommendation: LGPL-3.0, not LGPL-3.0-by-reputation.** 🟢 Linking is fine; modifying the OpenEduCat modules themselves carries copyleft on those modules. 🔵 **Which is the standard Odoo-ecosystem position, and the reason an AI layer belongs in a separate module that *calls* OpenEduCat rather than inside it.**
+
 ## 🆕 `p781` — **`ACTION p780-C`'s prediction FAILED, and the truth is worse for the rule it was defending: a canonical licence has NO single byte count. Apache-2.0 is `11,358 B` at apache.org and `10,280 B` at SPDX — same licence, same language, `1,078 B` apart.**
 
 🟢 **`make hooks` ran, exit `0`, first command of this pass** — `1` for `12` (`T818`, [`agents/top.md`](../agents/top.md)).
