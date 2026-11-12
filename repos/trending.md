@@ -4,6 +4,56 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p793` — **`ACTION p792-A` discharged on the row that carries this base's embedding argument. `kolibri`'s "2 LGPL of 32" is EXACT — and the `208` npm runtime packages nobody had resolved are clean except for one plugin.**
+
+🟢 **Controls reproduced before any verdict:** `HKUDS/DeepTutor` `11,408 B` · `oppia/oppia` `LICENSE` `11,358 B` · `csev/tsugi` `10,273 B` Apache (`72` vendored non-root grants, correctly constrained to their subtrees) · `vishalsachdev/canvas-mcp` `1,071 B` MIT. 🟢 **New channel this pass: npm tarball download** — the only way to answer "does the thing that ships carry a grant?".
+
+### 🟢 The Python side — claim exact, and the `32` finally located
+
+🔴 **`requirements.txt` is a decoy and says so in line 1** (*"This file exists only as the sink for any EXTRA_REQUIREMENTS injected at build time"*). The real set is the **`base` dependency group in `pyproject.toml`**: `32` packages, **every one `==`-pinned**, so the manifest is the resolution.
+
+| | |
+|---|---|
+| 🔴 `zeroconf-py2compat==0.19.17` | LGPL-2.1 (`license` field **and** classifier) |
+| 🔴 `json-schema-validator==2.4.1` | 🔴 `license` field **EMPTY**; classifier says LGPL |
+| 🟢 The other `30` | `18` BSD-family · `9`+ MIT · `3` Apache-2.0 · `1` dual Apache/BSD |
+
+🟢 **`2` LGPL of `32` — exactly as published, now version-resolved.** 🔵 And the second row runs `p791-G` backwards: an empty `license` field with a copyleft classifier would make a field-reading audit *under*-report copyleft.
+
+### 🔴 The npm side — `208` packages, and the root manifest is why nobody had seen them
+
+🔴 **`kolibri`'s root `package.json` declares `0` runtime `dependencies`.** It is a **pnpm workspace with `40` importers**; a root-manifest audit measures nothing and returns a confident clean result.
+
+Resolved across all `40` importers, **each at its locked version**: **`208`** runtime packages → `175` MIT · `10` Apache-2.0 · `9` BSD · `5` ISC · `5` other permissive (MIT-0, CC0-1.0, Unlicense, WTFPL, BlueOak-1.0.0) · `1` MPL-2.0 · `1` dual `(MPL-2.0 OR Apache-2.0)` · `1` **ungranted** · 🟢 **`0` GPL · LGPL · AGPL**.
+
+🟢 **Zero GPL-family in the JavaScript that reaches a learner's browser — the embedding argument is stronger after measurement than the row claimed.**
+
+### 🔴 `T896` — one package ships with no grant anywhere, and its upstream address is gone
+
+| `@khanacademy/mathjax-renderer@3.0.2` | Declared by `kolibri/plugins/perseus_viewer` → `dependencies` |
+|---|---|
+| Registry metadata at the pin | 🔴 `license` absent, `licenses` absent |
+| 🟢 **Published tarball, `336,573 B`** | 🔴 **no `LICENSE`/`LICENCE`/`COPYING`/`NOTICE` at any path**; packaged `package.json` has no `license`; no README licence line |
+| Upstream `Khan/mathjax-renderer` | 🔴 **`git ls-remote` `rc=128`** — does not resolve |
+
+🟡 Khan Academy's other `21` packages in the same tree (`@khanacademy/perseus`, `perseus-core`, `perseus-score`, `kas`, `math-input`, `wonder-blocks-*`, `wonder-stuff-core`) **all** resolve MIT at their pins — so this is one package, not a vendor posture.
+
+🔵 **Residual risk is one plugin, named:** `mathquill@0.10.1` (MPL-2.0, `16,725 B`, bytes confirmed — file-level copyleft, fine unmodified, carry the notice) and the ungranted package above are **both** `perseus_viewer` dependencies, the exercise renderer that ships to learners. `dompurify@3.4.17` is dual-licensed and sits in core → 🟢 elect Apache-2.0. 🟢 **A deployment without Perseus exercises avoids both questions; one with them has a `2`-item checklist.**
+
+Machine output: `evidence/kolibri-npm-lockfile-resolved.2026-11-12-p793.tsv` · `evidence/kolibri-pypi-pinned-resolved.2026-11-12-p793.tsv`.
+
+### 🔴 `T893` — the tree instrument has a trap, and it is the byte-size column
+
+🟢 `git clone --filter=blob:none --no-checkout --depth 1` + `git ls-tree -r --name-only` is local and free. 🔴 **Adding `-l` makes git lazily fetch every blob in the tree to print sizes** — on `kolibri` it ran over two minutes before being stopped, symptomless except for background `gc` notices. 🟢 **Corrected recipe: `--name-only` for the tree, one `ls-tree` for the single sha you want, and the `raw` channel for the bytes.** `122` repositories in `10.9` seconds.
+
+🔵 **General rule: in a partial clone every column is cheap except the one that is a property of the thing you declined to download.**
+
+### 🟢 Vertical-platform channel, re-measured — and it returned nothing new
+
+The query `open source platform education ERP SIS LMS MIT Apache 2026` produced **no new permissive education ERP or SIS**. It returned OpenEduCat (LGPL-3.0 community edition, built on Odoo — 🔴 and with vendor-site install figures that **contradict each other**, `6,300+` vs `22,000+` institutions, on the same vendor's own pages), Open edX, Canvas CE (AGPL-3.0), Forma LMS (GPL), ERPNext, and an Apache-2.0 row in a comparison table **that does not name the product**.
+
+🟢 **`T879` therefore stands unrefuted for a further pass: in education ERP the permissive layer is not narrow, it is empty.** 🔵 Recording the measured negative matters here — silence would look exactly like coverage, and this is the fourth pass in which the ERP question has been asked and answered the same way.
+
 ## 🆕 `2026-11-12` · `p792` — **The standing sentence at the top of `repos/foundations.md` survives, but the warning attached to its best permissive row does not: `oppia/oppia` is shippable, and this base said otherwise for four passes.**
 
 🟢 **Controls reproduced before any verdict:** `HKUDS/DeepTutor` `11,408 B` · `moodle/moodle` `COPYING.txt` `35,147 B` · `oppia/oppia` `LICENSE` `11,358 B`. 🟢 **Two new channels this pass:** `registry.npmjs.org` and `pypi.org/pypi/*/json`, both giving **per-version** licences — which is the whole finding.

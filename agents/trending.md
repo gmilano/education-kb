@@ -4,6 +4,60 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p793` — **All `122` addresses in `agents/top.md` re-measured on an independent instrument in `10.9` seconds: `103` root grants sized and sha'd, `0` licence grades wrong, and `2` rows this base called DEAD are alive, empty and owner-claimed. The sixth way to misread a licence is a grep for the word "affero".**
+
+🟢 **Channel status, re-measured this pass:** `git ls-remote` 🟢 (🔴 **but see `T892` — the exit status does not answer the question**) · blobless clone + `ls-tree -r --name-only` 🟢 · 🔴 **`ls-tree -l` on a blobless clone = a network fetch per blob (`T893`, NEW)** · `raw.githubusercontent.com` 🟢 · `gh api search/repositories` 🟢 exact integers · **npm registry per-version** 🟢 · **npm tarball download** 🟢 NEW · **PyPI per-version JSON** 🟢 · `api.github.com/repos/*` 🔴 `403` · `github.com` pages 🔴 `403`.
+
+🟢 **Controls reproduced before any verdict shipped:** `HKUDS/DeepTutor` `LICENSE` `11,408 B` Apache · `oppia/oppia` `LICENSE` `11,358 B` Apache, `vendored_nonroot=0` · `THU-MAIC/OpenMAIC` `1,065 B` MIT · `vishalsachdev/canvas-mcp` `1,071 B` MIT · planted absent address `gmilano/this-definitely-does-not-exist-xyz` → `rc=128` **DEAD as designed**. 🟢 **`4` of `4` exact, `1` of `1` negative.**
+
+### 🟢 `ACTION p792-B` — the corrected gate, controlled on its own known failure modes FIRST
+
+| Control row (`T886`) | Uncorrected gate | 🟢 Corrected gate |
+|---|---|---|
+| `mingxuanyan07-lgtm/ai-for-education-showcase` | 🔴 would have **rescued** an ungranted repo | 🟢 `NO_ROOT_GRANT`, `2` vendored (`Rethlas/LICENSE`, `scripts/vendor/katex/LICENSE.txt`) — **not rescued** |
+| `oppia/oppia` | 🔴 flagged a clean repo on `23` path hits | 🟢 `ROOT_GRANT` Apache `11,358 B`, `vendored_nonroot=0` — **not flagged** |
+
+**Sweep over `122` addresses:** `103` `ROOT_GRANT` (path + byte size + `12`-char blob sha recorded) · `19` `NO_ROOT_GRANT` · `0` clone failures · 🟢 **`0` licence grades corrected.** Machine output: `evidence/licence-tree-gate-corrected.2026-11-12-p793.tsv`.
+
+### 🔴 `T892` — two rows corrected: "DEAD" → ALIVE, EMPTY, owner-claimed
+
+| Address | Published | 🟢 Measured | Signature |
+|---|---|---|---|
+| `Bestisco/My-WASSCE-Companion` | 🔴 DEAD | 🟡 **ALIVE, EMPTY** | `rc=0`, **`0` refs**, clones, no `HEAD`, `raw` `404` |
+| `Elite2828/ACE-AI-Tutor` | 🔴 DEAD | 🟡 **ALIVE, EMPTY** | same |
+| `RAFCERAY/horizonia` (contrast) | ungranted | 🟢 LIVE | `rc=0`, `2` refs, `HEAD` `fffd7246dfab` |
+| planted absent (contrast) | — | 🔴 ABSENT | **`rc=128`** |
+
+🟢 **Three-state instrument replaces exit-status grading: LIVE = `rc=0` ∧ `refs ≥ 1`; EMPTY = `rc=0` ∧ `refs = 0`; ABSENT = `rc=128`.** 🟡 The Ghana row's recorded `rc=2` for these two is **not reproducible** here on either form of the command — declared, not resolved, and the correction does not rest on it.
+
+🔵 **Ghana improves commercially:** `11` repositories of which `2` are **authors mid-intent**, not `2` dead ends — the same outreach channel as a licence request.
+
+### 🔴 `T894` — the sixth way to misread a licence: GPL-3.0 contains the word "affero"
+
+🔴 **GPL-3.0 §13 is titled "Use with the GNU Affero General Public License"**, so a substring test for *affero* grades every GPL-3.0 repository as AGPL-3.0. Joins case-blindness (`T842`), title-line insufficiency (`T847`), length-as-integrity (`T845`), language-blindness (`T848`), appendix contamination (`T849`).
+
+🟢 **Discriminator: `35,149 B` + `affero`×`3` = GPL-3.0 · `34,523 B` + `affero`×`15` = AGPL-3.0.** Applied to `7` copyleft rows → 🟢 **`7` of `7` match this base's published grade**, `nextSIS`'s `39,890 B` anthology included.
+
+### 🔴 This pass's own defects, caught by controls before publication
+
+| # | Defect | Caught by |
+|---|---|---|
+| 🔴 `1` | **`ls-tree -l` on a blobless clone lazily fetched blobs over the network** — ran >2 min on `kolibri` with only background `gc` notices as a symptom | Timing, on the first repository attempted |
+| 🔴 `2` | **Clause set was English-only** — `goyanedelv/paes-mcp`'s Spanish MIT (*"Se concede permiso, libre de cargos"*) returned `UNRECOGNISED`. 🔵 `T848` re-created by a brand-new instrument one pass after being written down | Cross-check against the published row |
+| 🔴 `3` | **A path name was treated as a grant candidate too generously** — `Tzxser/aipha-learning-os`'s `COPYRIGHT_NOTICE` ("All rights reserved… public visibility does not grant permission") matched the grant pattern | Reading the bytes of every `UNRECOGNISED` row |
+| 🔴 `4` | **A GPL-3.0 row would have been graded AGPL-3.0** by a bare *affero* grep | Byte-size cross-check (`T894`) |
+| 🔴 `5` | **Framed `kolibri`'s "32" as an npm count** before locating it; it is the Python `base` group, and the npm side is `208` | Reading `pyproject.toml` rather than assuming |
+
+🟢 **`0` of the five reached a published verdict.** 🔵 **Four of five are the same mistake in different clothes — grading on a proxy (an exit code, an English clause, a file name, a word) instead of reading the thing itself.** That is `p792-G` generalised, and it is now the base's most frequently self-caught error.
+
+### 🟢 New rows of fact, not new agent rows
+
+🟢 **`p793` adds no agents.** The generic English query `top open source AI agents education 2026 github MIT` returned **no education-specific agent** at all — ten results, all general-purpose agent listicles. 🔵 **That is an informed negative worth recording:** this base's leaders (`DeepTutor`, `OpenMAIC`) are invisible to the obvious English query, which is exactly why the in-language and topic-page channels carry this base.
+
+🟢 **Star channel, the one figure re-measured:** `HKUDS/DeepTutor` → **`58,585★`**, Apache-2.0, pushed **`2026-11-07`** (`gh api search/repositories`, exact integer) — confirms the carried `58.5k`. Third-party trend digests for the same window reported `~48,268★` (Oct 29) and `~45,224★` (earlier October), i.e. 🔴 **digest figures lag the API by weeks and by `~10k` stars**; `THU-MAIC/OpenMAIC` appears in digests at `~42k` against this base's carried `43.4k`. 🔴 **Every other star count in `agents/top.md` is carried forward, not re-measured** — `github.com` and `api.github.com/repos/*` are `403`.
+
+🟡 **One trending candidate seen and NOT added, with the reason:** `patchy631/ai-engineering-hub` (`~40,466★`, reported `+1,191` in a day) is a tutorial collection for AI engineering, not an education agent — a category error of the `T877` shape if admitted. 🟡 `Claw-ED` (local-first teaching assistant, `62★`, last updated Sept 2026) is below this base's threshold and unverified this pass.
+
 ## 🆕 `2026-11-12` · `p792` — **This base's own "DO NOT ship" verdict on the sector's best permissive lessons platform is REFUTED: the AGPL-3.0 it warned about arrived at `v22` and `oppia` pins `v11`. Plus a new category — MCP into the system of record — a canonicity trap caught at `★10` vs `★323`, three statutory dates resolved, and `5` self-inflicted defects reported.**
 
 🟢 **Channel status:** `git ls-remote` 🟢 · `--symref` 🟢 (now mandatory) · blobless clone + `cat-file` 🟢 · `raw.githubusercontent.com` 🟡 **silent `master`→default alias (`T885`)** · `search/repositories` 🟢 exact · **npm registry** 🟢 NEW · **PyPI JSON** 🟢 NEW · `api.github.com/repos/*` 🔴 `403` · `github.com` 🔴 `403`.

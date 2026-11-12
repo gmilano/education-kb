@@ -4,6 +4,57 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p793` — **`ACTION p792-A` discharged on the row that carries this file's whole argument: `kolibri`'s dependency claim is EXACT, and the half nobody had measured is clean.**
+
+🔴 **`p792-A` was blunt about the stakes:** *"`kolibri`'s '2 LGPL of 32' is now the row carrying the embedding argument and it has never been lockfile-resolved… until this is done, every `Deps` cell in this base is a claim about a version nobody identified."*
+
+### 🟢 The Python side — the claim is exact, and the `32` is finally identified
+
+The `32` is the **`base` dependency group in `pyproject.toml`**, not `requirements.txt`. 🔴 **`requirements.txt` is a decoy and says so in its own first line** — *"Bundled runtime dependencies are resolved from the `base` dependency group in `pyproject.toml`… This file exists only as the sink for any EXTRA_REQUIREMENTS injected at build time."* An audit that read it would have found `0` dependencies and reported a confidently clean result.
+
+🟢 **Every entry in `base` is `==`-pinned, so the manifest IS the resolution.** Resolved against PyPI at each pin — `32` packages, `2` LGPL, exactly as published:
+
+| Package | Pin | `license` field | Classifier | Trigger |
+|---|---|---|---|---|
+| 🔴 `zeroconf-py2compat` | `0.19.17` | `LGPL` | GNU Lesser GPL v2 | 🟡 Distribution |
+| 🔴 `json-schema-validator` | `2.4.1` | 🔴 **EMPTY** | GNU Library or Lesser GPL | 🟡 Distribution |
+
+🔵 **The second row is `p791-G` running in the opposite direction**: the `license` field is empty and only the classifier carries the copyleft, so a field-reading audit would have *under*-reported it. A blank field is not a verdict either way.
+
+The other `30` are permissive: `18` BSD-family (`django==3.2.25`, `djangorestframework==3.14.0`, `Click==8.0.4`, `cheroot`, `magicbus`, `configobj`, `idna`, `semver`, `django-{csp,filter,redis-cache,sortedm2m}`, …), `9` MIT (`morango`, `le-utils`, `pytz==2026.3.post1`, `redis`, `whitenoise`, `tzlocal`, `html5lib`, `jsonfield`, `django-mptt`, `ifaddr`, `colorlog`, `django-js-reverse`), `3` Apache-2.0 (`requests==2.27.1`, `diskcache`, `importlib-metadata`/`importlib_resources`), `1` dual Apache/BSD (`python-dateutil`). Machine output: [`evidence/kolibri-pypi-pinned-resolved.2026-11-12-p793.tsv`](../evidence/kolibri-pypi-pinned-resolved.2026-11-12-p793.tsv).
+
+### 🔴 The npm side — `208` runtime packages, never measured before, and the root manifest explains why
+
+🔴 **`kolibri`'s root `package.json` declares `0` runtime `dependencies`.** It is a **pnpm workspace with `40` importers**, so any audit that read the root manifest measured nothing at all and would have seen a clean, empty result.
+
+Collecting `dependencies` + `optionalDependencies` across all `40` importers and resolving **each at its locked version** against the registry gives **`208`** distinct runtime packages:
+
+| Grant, resolved at the pinned version | Count |
+|---|---|
+| 🟢 MIT | `175` |
+| 🟢 Apache-2.0 | `10` |
+| 🟢 BSD-2 / BSD-3 | `9` |
+| 🟢 ISC | `5` |
+| 🟢 MIT-0 · CC0-1.0 · Unlicense · WTFPL · BlueOak-1.0.0 | `5` |
+| 🟡 **MPL-2.0** | **`1`** — `mathquill@0.10.1` (bytes confirmed, `16,725 B`) |
+| 🟡 **`(MPL-2.0 OR Apache-2.0)`** | **`1`** — `dompurify@3.4.17` → 🟢 **elect Apache-2.0** |
+| 🔴 **No grant on any channel** | **`1`** — `@khanacademy/mathjax-renderer@3.0.2` |
+| 🟢 **GPL · LGPL · AGPL** | 🟢 **`0`** |
+
+🟢 **Zero GPL-family packages in the JavaScript that reaches a learner's browser.** This file's central claim — that `kolibri` is the permissive platform Globant can link into client code — is **stronger** after measurement than the row claimed.
+
+### 🔴 Where the residual risk actually is: one plugin, named
+
+| Package | Grant | Declared by |
+|---|---|---|
+| 🟡 `mathquill@0.10.1` | MPL-2.0 — file-level copyleft; 🟢 fine if unmodified, carry the notice | `kolibri/plugins/perseus_viewer` → `dependencies` |
+| 🔴 `@khanacademy/mathjax-renderer@3.0.2` | 🔴 **None.** Tarball (`336,573 B`) has no `LICENSE`/`NOTICE`/`COPYING` at any path; registry `license` absent; upstream `Khan/mathjax-renderer` **`rc=128`, address does not resolve** | `kolibri/plugins/perseus_viewer` → `dependencies` |
+| 🟢 `dompurify@3.4.17` | Dual → elect Apache-2.0 | `packages/kolibri-common` (core) |
+
+🔵 **The actionable shape for an engagement:** `kolibri` core is clean; the exercise renderer is where the two questions live. A deployment that does not need Perseus exercises avoids both. A deployment that does needs one licence request (`mathjax-renderer`) and one notice obligation (`mathquill`). 🟢 **That is a `2`-item licensing checklist on a platform this base had been describing with a single ambiguous cell.**
+
+🟢 **Standing instruction for every `Deps` cell in this base, now proven on a second row:** resolve the **lockfile or the pin**, never the manifest and never `latest`; and when a registry field is blank, read the **tarball**, because the tarball *is* the version. See `T895`, `T896`.
+
 ## 🆕 `p792` — **This base's standing "DO NOT ship `oppia`" verdict is REFUTED on the lockfile. The AGPL-3.0 it warns about is real, and `oppia` does not use it.**
 
 🟢 **Control before any verdict:** `HKUDS/DeepTutor` `LICENSE` reproduced at **`11,408 B`**, `moodle/moodle` `COPYING.txt` at **`35,147 B`**, `oppia/oppia` `LICENSE` at **`11,358 B`** — all three match the bytes this base already records. 🔴 **`5` defects in this pass's own instruments were caught by controls before any verdict shipped** — see `intel/trends.md` `T884`–`T886` and the defect list at the foot of `agents/trending.md`.
@@ -111,7 +162,7 @@ title found by scanning for a line that *is* a licence title at any depth (`T863
 
 | Repo | Address | Grant, on the bytes | Deps | Region | Role |
 |---|---|---|---|---|---|
-| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** · `1,097 B` · `fe298f54494c` | 🟡 **2 LGPL of 32** | Global | 🟢 **Still the most valuable permissive row in education.** Offline-first learning platform: curated openly-licensed content library, teacher tools, sync, runs on low-cost and legacy hardware, downloads once then works with no connectivity. `1,176★`, reported in use across 195 countries. ⚠️ **`zeroconf-py2compat` (LGPL-2) and `json-schema-validator` (LGPL)** — dynamic linking is permitted, so usable; the components must stay replaceable with source available |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** · `1,097 B` · `fe298f54494c` | 🟢 **`2` LGPL of `32` Python pins — CONFIRMED exactly at `p793`; plus `208` npm runtime packages resolved for the first time: `0` GPL-family, `1` MPL-2.0, 🔴 `1` ungranted — all risk inside `perseus_viewer`** | Global | 🟢 **Still the most valuable permissive row in education.** Offline-first learning platform: curated openly-licensed content library, teacher tools, sync, runs on low-cost and legacy hardware, downloads once then works with no connectivity. `1,176★`, reported in use across 195 countries. ⚠️ **`zeroconf-py2compat` (LGPL-2) and `json-schema-validator` (LGPL)** — dynamic linking is permitted, so usable; the components must stay replaceable with source available |
 | **Oppia** | [`oppia/oppia`](https://github.com/oppia/oppia) | **Apache-2.0** · `11,358 B` · `bbda308fd5db` | 🔴 **1 AGPL-3.0 of 171** | Global | Interactive lessons that behave like a one-to-one tutoring conversation. `7.0k★`. 🔴 **DO NOT ship as-is: `angular-shepherd` is AGPL-3.0, and a browser bundle is network delivery.** Remove or replace it first |
 | **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** · `11,120 B` · `593c74e1c7a5` | — | North America | Full higher-ed LMS under the **Educational Community Licence 2.0 — an Apache-2.0 derivative**, so permissive. The only mature, permissively-granted university LMS in this base |
 | **OpenOLAT** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** · `10,982 B` · `322e90dd5507` | — | EMEA | Swiss-origin university LMS. ⚠️ `375 B` short of the canonical Apache text — clause-verified genuine, the deviation is in the trailing appendix. **The permissive LMS for an EMEA engagement** |

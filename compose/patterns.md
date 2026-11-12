@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p793` — **two patterns, both named to artefacts measured this pass**
+
+### 🟢 `P793-1` — Certify an education MCP deployment into the systems of record · **North America first (Canvas), ports to EMEA** · 8–10 weeks
+
+🔴 **The opportunity `p792-D` identified, re-aimed after measurement.** The premise was "no LMS vendor ships an official MCP server, community servers hold tokens that reach student records, and no independent evaluation exists". 🟢 **Two of three hold. The third does not:** [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT) already ships an audit trail with identifier masking, code-hash logging, three deployment overlays and its own security reviews. 🔵 **So the engagement is not "your server is insecure" — it is "your controls are designed and explicitly unwired, and an institution cannot pass Annex III on a placeholder."** That is both truer and easier to sell.
+
+**What you are handed, and what is actually missing**
+
+| Designed and present | 🔴 Declared but labelled *"pending feature wiring"* / *"placeholder"* |
+|---|---|
+| `core/audit.py` — `log_data_access`, `log_code_execution`, `log_access_change`, `_sanitize_endpoint` ID masking | `MCP_CLIENT_AUTH_MODE=api_key_or_mtls` · `MCP_CLIENT_API_KEY_REQUIRED=true` · `MCP_CLIENT_CERT_AUTHORITY` (`enterprise.env`) |
+| `core/access/tokens.py` — HMAC client tokens (`oid`/`jti`/`exp`) | `TOKEN_STORAGE_BACKEND=keyring` (`public.env`) |
+| Sandbox with `TS_SANDBOX_BLOCK_OUTBOUND_NETWORK=true`, enterprise host allowlist | `LOG_REDACT_PII=true` (*"some flags are placeholders"*) |
+| `scripts/rotate-canvas-token.mjs`, security CI | 🔴 **Per-tool authorisation above an account-scoped Canvas token — does not exist and cannot, at the Canvas API** |
+
+**The wiring**
+
+1. **Pin the base.** `vishalsachdev/canvas-mcp` at a read sha; `1,071 B` MIT grant verified — no licence negotiation.
+2. **Finish the three placeholder paths** as the project's own comments specify: client API-key *or* mTLS enforcement, keyring-backed token storage, and a real `LOG_REDACT_PII` implementation with a test that fails when a student identifier reaches a log line.
+3. **Add the layer Canvas cannot give you.** The upstream token is account-scoped, so put a **per-tool allowlist and a role gate in front of the server**: deny `bulk_grade_submissions` and `get_student_submission` by default; enable per course, per role, per time window. 🟢 This is the control that makes the account-scoped token survivable.
+4. **Reserve the grade to a named human.** `bulk_grade_submissions` is Annex III point 3. Wire it as *propose → named human decides → system proves it* — the architecture `P787-1` established and every jurisdiction that regulates at all accepts.
+5. **Produce the evidence pack**: FRIA (Art. 27, 🔴 **already required**, not deferred), the audit-log schema with the masking rules, token lifecycle and rotation runbook, FERPA and GDPR data-flow maps, and the Annex III technical documentation for **`2027-12-02`**.
+6. **Extend the same frame to the second server**: `Yuanpeng-Li/gradescope-mcp` (MIT) on the assessment side.
+
+🟢 **Why it closes:** the client already runs Canvas, staff are already pointing MCP clients at it, and the credential in play is account-scoped. 🔵 **The deliverable is a certified deployment plus the Annex III evidence pack — repeatable across every Canvas institution, and the 13-month runway is the deadline that funds it.**
+
+### 🟢 `P793-2` — Provincial AI-curriculum delivery against China's five-ministry Action Plan · **APAC 🇨🇳** · 10–12 weeks
+
+🟢 **The first `P79x` pattern this base can write for China**, because `T898` finally reached the instrument: **《"人工智能+教育"行动计划》, 教科信〔2026〕1号**, issued jointly by 教育部 · 国家发展改革委 · 工业和信息化部 · 科技部 · 国家数据局, signed `2026-04-02`.
+
+**Why it is a programme and not a pilot:** the Plan writes AI education into **local** curriculum systems, with each locality issuing its own course guide specifying objectives, content and **class-hour requirements** — so procurement is provincial and there are many buyers, against one national instrument. It also commits to strengthening K-12 AI education bases, to supporting **rural and remote** schools through the national platform, to revising the compulsory-education and senior-secondary information-technology curriculum standards, and to drafting **人工智能应用安全评估指标 (AI application security assessment indicators)**. Target: deep AI–education integration by **2030**.
+
+**The wiring**
+
+1. **Content spine against the national guideline.** Map deliverables to 《中小学人工智能通识教育指南》 and 《中小学生生成式人工智能使用指南（2025年版）》 by stage, with the class-hour structure the provincial guides require.
+2. **Agent layer, permissive and APAC-origin — no licensing negotiation.** [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (MIT, `1,065 B`, `76abc5f13261`) for generated interactive classrooms with AI teachers and peers; [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (Apache-2.0, `11,408 B`, `ae1dbfc5e74c`, **`58,585★`**, pushed `2026-11-07`) for lifelong-memory tutoring. 🔵 Both Chinese-origin, which is a procurement advantage here rather than a neutral fact.
+3. **Delivery to rural and remote schools: offline-first.** [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (MIT) — and `p793` has the licensing checklist for it: core is clean, `0` GPL-family in `208` resolved runtime packages; if Perseus exercises are in scope, carry the `mathquill` MPL-2.0 notice and resolve `@khanacademy/mathjax-renderer@3.0.2`, which ships with **no grant** (`T896`).
+4. **Teacher-facing tooling** against 《教师生成式人工智能应用指引》, with the grade reserved to the teacher — the same gate as every other jurisdiction.
+5. 🔴 **Build the security-assessment evidence now, before the indicators land.** 人工智能应用安全评估指标 is in draft; a vendor that can already evidence data flows, logging and human-decision points is positioned when it issues. 🟢 **This is the earliest-mover item in the pattern.**
+
+🔵 **Honest scoping note:** this pattern is built from the ministry instrument and this base's verified supply. It does **not** include a data-residency or ICP/filing analysis, which a real engagement in this market needs and this base has not measured.
+
+### 🔴 Still unwritable, and why — `p792-E` discharged for `1` of `4`
+
+🟢 China placed at ministry level with a document number. 🔴 **India, Australia and Singapore remain unplaced at ministry level**, so no `P79x` pattern can be written for them. What `p793` reached is national AI regulation, not education-ministry procurement: 🇰🇷 Korea's AI Basic Act **in force `2026-01-22`** with a "high-impact AI" category; 🇯🇵 Japan's AI Promotion Act (in force `2025-06-04`, **no penalties**) plus a new Cabinet AI Basic Plan; 🇸🇬 Singapore with **no binding AI statute** and IMDA's Model AI Governance Framework for Agentic AI (`2026-01-22`) plus AI Verify; 🇮🇳 India signalling dedicated AI legislation in July 2026, with AI-content labelling rules already applying. 🔵 **The named gap is procurement and curriculum documents from the education ministries of India, Australia and Singapore — and the channel that works is the in-language query, proven four passes running.**
+
 ## 🆕 `p792` — **four patterns, each named to repos verified this pass**
 
 🔵 **Rule 1, carried and now narrower:** in education the platform a client already runs is almost always copyleft, so AI code lives at its edge. 🟢 **`p792` adds Rule 1a: the edge can be an MCP server, and the MCP server can be MIT even when the platform is AGPL.** 🔴 **Rule 2, strengthened by `T884`:** before you embed anything, resolve its **lockfile** — a licence read at `latest` is not the licence you ship.

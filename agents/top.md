@@ -4,6 +4,87 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p793` — **the whole list re-measured on an independent instrument in `11` seconds: `103` root grants sized and sha'd, `0` licence grades corrected, `2` existence verdicts corrected.**
+
+🟢 **`ACTION p792-B` discharged across all `122` repository addresses in this file**, carrying `p791-E` (tree audit) and `p791-F` (byte sizes) in one sweep as instructed. 🔵 **Method is deliberately different from the channel that produced these rows**, so agreement means something: blobless tree enumeration (`git clone --filter=blob:none --no-checkout --depth 1` + `git ls-tree -r --name-only`), root-only grant selection, extension filtering, non-root grants treated as **vendored**, and the grant bytes then read on the `raw` channel. Full machine output at [`evidence/licence-tree-gate-corrected.2026-11-12-p793.tsv`](../evidence/licence-tree-gate-corrected.2026-11-12-p793.tsv).
+
+| Gate result over `122` addresses | Count |
+|---|---|
+| 🟢 `ROOT_GRANT` — path, **byte size and `12`-char blob sha now recorded** | **`103`** |
+| 🔴 `NO_ROOT_GRANT` | **`19`** |
+| 🔴 Clone failures | 🟢 **`0`** |
+| 🟢 **Licence grades this sweep CORRECTED** | 🟢 **`0` of `122`** |
+| 🔴 Existence verdicts this sweep corrected | **`2`** (`T892`) |
+
+🟢 **Controlled before use, on the two rows `T886` recorded as the gate's known failure modes — correct in both directions:** `mingxuanyan07-lgtm/ai-for-education-showcase` → `NO_ROOT_GRANT` with `2` vendored paths, correctly **not** rescued; `oppia/oppia` → `ROOT_GRANT` Apache-2.0 `11,358 B` with `vendored_nonroot=0`, correctly **not** flagged.
+
+### 🔴 `p793` CORRECTS two existence verdicts — "DEAD" was wrong, and the right answer is commercially better
+
+| Address | Published | 🟢 Measured at `p793` | What it means |
+|---|---|---|---|
+| [`Bestisco/My-WASSCE-Companion`](https://github.com/Bestisco/My-WASSCE-Companion) | 🔴 DEAD | 🟡 **ALIVE, EMPTY** — `rc=0`, **`0` refs**, clones, no `HEAD`, `raw` `404` | 🟢 An author who claimed the name and has not pushed |
+| [`Elite2828/ACE-AI-Tutor`](https://github.com/Elite2828/ACE-AI-Tutor) | 🔴 DEAD | 🟡 **ALIVE, EMPTY** — same signature | 🟢 Same — reachable, and a *future* row |
+
+🔵 **Ghana's measured position therefore improves**: not `11` repositories of which `2` are dead ends, but `11` of which `2` are authors mid-intent — the same outreach channel as a licence request. Mechanism, the three-state instrument that replaces exit-status grading, and the one unreproducible detail are all at [`intel/trends.md`](../intel/trends.md) → `T892`.
+
+### 🟢 The `19` ungranted rows — confirmed, and now split into three states rather than one
+
+🟢 **Every one of the `19` was already recorded by this base as ungranted, refused or absent. `p793` adds no new absence and removes none** — it separates them:
+
+| State | Rows |
+|---|---|
+| 🟡 **ALIVE but EMPTY** (`0` refs) | `Bestisco/My-WASSCE-Companion` · `Elite2828/ACE-AI-Tutor` |
+| 🟡 **ALIVE, essentially empty** (`1` file) | `RAFCERAY/horizonia` |
+| 🔴 **ALIVE with a real tree and no root grant** | `7irelo/aptiverse` (`1,726`) · `ghwmelite-dotcom/brilla-study-platform` (`2,012`) · `tosinamuda/teacher-agent-itu-hackathon` (`3,375`, `1` vendored) · `MRiARC/VidyaSetu` (`908`) · `kaikai52125/NeoTutor` (`521`) · `mingxuanyan07-lgtm/ai-for-education-showcase` (`189`, `2` vendored) · `TaoYu-ds/TutorMesh` (`143`) · `redoneabouaali-lab/najih` (`141`) · `NikolasSchaeffner/lehrer-agent` and `lehrer-tools/lehrer-agent` (`103` each) · `narumi-mase/osaka-lesson-dataset` (`26`) · `silja-graf/Didaktikus-…-LP21` (`23`) · `A-R007/Multi-Agent-Study-Assistant` (`19`) · `NSK-394/schoolbridge-mcp` (`19`) · `SoukhyadP991/Multilingual-NCERT-Doubt-Solver` (`18`) · `zulfahmi93/susun-jadual` (`10`) |
+
+🔵 **Tree size is the ranking signal for a licence request**: `7irelo/aptiverse` 🇿🇦 (`1,726` files) and `ghwmelite-dotcom/brilla-study-platform` 🇬🇭 (`2,012` files) are substantial bodies of work one e-mail away from being usable, while a `10`-file repository is not worth the ask.
+
+### 🟢 The copyleft rows re-graded on a second instrument — GPL-3.0 and AGPL-3.0 separated by bytes
+
+🟢 **`7` of `7` match this base's published grade.** The discriminator is byte size plus the count of the word *affero*, and 🔴 **a bare grep for "affero" gets it backwards**, because GPL-3.0's §13 is titled *"Use with the GNU Affero General Public License"* — the **sixth** recorded way to misread a licence here (`T894`).
+
+| Row | Bytes | `affero` | Verdict |
+|---|---|---|---|
+| `CREARED-EDU-CO/GenPrompt-Pre-ICFES-11` · `dpaul0501/OpenVidya` · `amosblomqvist/learnharness` | `34,523` | `15` | 🔴 **AGPL-3.0** |
+| `Prady029/NCERT-AI-Teacher-Assistant` · `chc-chupea/news-grade-reader` · `plastic-labs/tutor-gpt` | `35,149` | `3` | 🔴 **GPL-3.0** |
+| `Kosudo/nextSIS` | `39,890` anthology | `3` | 🔴 **GPL-3.0** — matches `p790`'s correction |
+
+🔵 **Why Globant should care which one:** AGPL-3.0 §13 reaches a **hosted** service, which is how a client engagement would ship; GPL-3.0's does not.
+
+### 🔴 The gate's own defect, and it re-created a failure mode within minutes of reading about it
+
+Four rows came back `UNRECOGNISED` from my clause-grep. 🟢 **All four were already graded correctly by hand in this file** — so the finding is about the instrument, not the data:
+
+| Row | Why the gate failed | Correct grade |
+|---|---|---|
+| 🔴 `goyanedelv/paes-mcp` | 🔴 **My clause set was English-only** — the grant reads *"Se concede permiso, libre de cargos"* | 🟢 **MIT (Spanish text)** — `T864`, re-confirmed |
+| 🔴 `Tzxser/aipha-learning-os` | 🔴 **A path name matched (`COPYRIGHT_NOTICE`) on a file that grants nothing** — *"All rights reserved… Public visibility does not grant permission"* | 🔴 **PROPRIETARY** — matches |
+| `gabrielmahia/shule-ai` · `luscitiosus/Dirigo` · `nahisaho/teacher-genai-playbook` | Creative Commons clause text, not software-licence clause text | 🔴 **CC BY-NC-ND 4.0 · CC BY-NC-SA 4.0 · CC BY-NC 4.0** — all match |
+
+🟢 **Two rules the gate now carries: a path name selects a candidate and only the clauses decide; and the clause set must be multilingual.** 🔵 `T848` (language-blindness) was written down one pass ago and this pass's brand-new instrument reproduced it immediately — the strongest available evidence that it is the **default** behaviour of a probe written in English, not an accident.
+
+### 🔴 Dependency grants — `ACTION p792-A` discharged, and `kolibri`'s row survives with its argument strengthened
+
+🟢 **"2 LGPL of 32" is EXACT**, and the `32` is now identified: the **Python `base` dependency group in `pyproject.toml`**, every entry `==`-pinned, resolved against PyPI at each pin → `zeroconf-py2compat==0.19.17` (LGPL-2.1) and `json-schema-validator==2.4.1` (classifier LGPL, 🔴 **`license` field empty**). Both distribution-triggered, not network-triggered.
+
+🔴 **The npm side had never been measured.** `kolibri` is a pnpm workspace of `40` importers whose root `package.json` declares **`0`** runtime dependencies. Resolved across all importers at locked versions: **`208`** runtime packages — 🟢 **`0` GPL/LGPL/AGPL**, `175` MIT, `10` Apache-2.0, `9` BSD, `5` ISC, `5` other permissive, `1` MPL-2.0 (`mathquill@0.10.1`), `1` dual `(MPL-2.0 OR Apache-2.0)` (`dompurify@3.4.17` → 🟢 elect Apache-2.0), and **`1` with no grant at all**:
+
+| 🔴 `@khanacademy/mathjax-renderer@3.0.2` | Declared by `kolibri/plugins/perseus_viewer` → `dependencies` |
+|---|---|
+| Registry metadata at the pin | 🔴 `license` absent |
+| 🟢 **The published tarball** (`336,573 B`) — what actually ships | 🔴 **No `LICENSE`/`NOTICE`/`COPYING` at any path** |
+| Upstream `Khan/mathjax-renderer` | 🔴 **`git ls-remote` `rc=128` — address does not resolve** |
+
+🔵 **So `kolibri`'s residual licence risk is one plugin, not the platform**: `mathquill` (MPL-2.0, file-level) and the ungranted package above are both declared by `perseus_viewer`, the exercise renderer that ships to learners. Everything in core is permissive. Evidence: [`evidence/kolibri-npm-lockfile-resolved.2026-11-12-p793.tsv`](../evidence/kolibri-npm-lockfile-resolved.2026-11-12-p793.tsv) · [`evidence/kolibri-pypi-pinned-resolved.2026-11-12-p793.tsv`](../evidence/kolibri-pypi-pinned-resolved.2026-11-12-p793.tsv) · `T895`, `T896`.
+
+### 🟢 Canvas MCP's auth model, read before any offer was written (`ACTION p792-D`)
+
+[`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — MIT, `1,071 B`, `3c7307584ae4`, `529`-file tree. 🟢 **`p792-D`'s premise is partly refuted:** it ships a structured audit trail (`core/audit.py`, `215` lines) that **masks identifiers** (`/courses/12345/users/678` → `/courses/***/users/***`) and logs executed code as a **SHA-256 hash**, three deployment overlays, an outbound-blocked sandbox, token rotation and its own prior security reviews. 🔴 **But its hardened flags are labelled *"pending feature wiring"* and *"some flags are placeholders"*** — including `MCP_CLIENT_AUTH_MODE=api_key_or_mtls` and `LOG_REDACT_PII=true` — and its token layer authenticates *clients to the server*, while `SECURITY.md` states that the Canvas credential underneath **"has full access to your Canvas account"**. 🔵 Full reading and the corrected commercial framing: `T897`, and the recipe at [`compose/patterns.md`](../compose/patterns.md) → `P793-1`.
+
+### 🟡 Star counts this pass — one channel open, one closed
+
+🟢 `gh api search/repositories` with a `repo:` qualifier is **open** and returns exact integers: **[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) `58,585★`, Apache-2.0, pushed `2026-11-07`** — confirming the `58.5k` this base carried. 🔴 `curl https://github.com/…` and `api.github.com/repos/…` are both **`403`** in this session, so page-channel star reads were unavailable and every other star figure in this file is **carried forward from a prior pass, not re-measured at `p793`**.
+
 ## 🆕 `p792` — **a new category: agents that reach INTO the system of record. Plus one canonicity trap, `6` rows added, `1` tree cleared.**
 
 🟢 **Method unchanged from `p791`.** Existence via `git ls-remote` (exit status read directly). Grant by **anchored title lines** in the served licence bytes. Trees enumerated with `git clone --filter=blob:none --no-checkout --depth 1` + `git cat-file`. Stars are `search/repositories` reads with a `repo:` qualifier, which return **exact integers**. 🔴 **New channel caution this pass (`T885`): a `200` from `raw.githubusercontent.com` on `.../master/...` does NOT prove a `master` branch exists** — the host aliases the legacy name to the default branch. Every row below is addressed by its **real default branch**, read from `git ls-remote --symref`.
@@ -275,7 +356,7 @@ reasons differ.**
 | Country | What was measured | Verdict |
 |---|---|---|
 | 🔴 🇹🇿 **Tanzania** | `elimu AI Tanzania` → **`2`**. One is ungranted (`kadioko/ElimuAI`, Swahili e-learning with M-Pesa). The other, [`sangadanson1-dot/-Vet-IDEA-TZ`](https://github.com/sangadanson1-dot/-Vet-IDEA-TZ), **is MIT · `1,067 B` · `238c1bbb3bc0`** | 🔴 **NOT DISCHARGED — and the MIT row is a CATEGORY ERROR IN THE OPPOSITE DIRECTION FROM JAPAN'S (`T877`).** Read in Swahili, `Vet Idea TZ` serves **wafugaji na wataalamu wa mifugo** — livestock keepers and veterinary professionals. It teaches **afya ya wanyama, magonjwa, chanjo, lishe** (animal health, disease, vaccination, nutrition). 🟢 It is real, granted, AI-bearing education — **veterinary extension education, not school education.** 🔵 Placing it would have discharged the gap on paper and left a client engagement with nothing. **Tanzania's school-education agent supply is still `0`** |
-| 🔴 🇬🇭 **Ghana** | `WASSCE AI tutor` → **`11`**; `Ghana education AI tutor curriculum` → **`0`**. `5` probed on the byte channel: `3` ALIVE serving **no grant**, **`2` DEAD** (`Bestisco/My-WASSCE-Companion`, `Elite2828/ACE-AI-Tutor` — both `rc=2`, re-probed and confirmed) | 🔴 **NOT DISCHARGED, and now QUANTIFIED rather than estimated.** `p789`'s "`1`, ungranted" understated the supply by about `10×` and read the grant correctly. 🟢 **Ghana's WASSCE supply is substantial and its grant rate is `0`** — the same shape `T871` recorded for Africa generally, measured at one country. 🔵 **And the search index is stale here specifically:** `2` of `5` addresses it returned no longer exist |
+| 🔴 🇬🇭 **Ghana** | `WASSCE AI tutor` → **`11`**; `Ghana education AI tutor curriculum` → **`0`**. `5` probed on the byte channel: `3` ALIVE serving **no grant**, 🔴 **`2` CORRECTED at `p793` from "DEAD" to ALIVE-BUT-EMPTY** (`Bestisco/My-WASSCE-Companion`, `Elite2828/ACE-AI-Tutor` — both `rc=0` with **zero refs**; they clone, hold no `HEAD`, and `raw` serves `404`. 🟢 **Existing, owner-claimed, never pushed — so `2` reachable authors, not `2` dead ends.** `T892`) | 🔴 **NOT DISCHARGED, and now QUANTIFIED rather than estimated.** `p789`'s "`1`, ungranted" understated the supply by about `10×` and read the grant correctly. 🟢 **Ghana's WASSCE supply is substantial and its grant rate is `0`** — the same shape `T871` recorded for Africa generally, measured at one country. 🔵 **And the search index is stale here specifically:** `2` of `5` addresses it returned no longer exist |
 | 🔴 🇰🇪 **Kenya** | `AI tutor Kenya CBC curriculum` → **`3`**, all probed. `2` serve no grant | 🔴 **The third is a HARDER bar than an absence.** [`gabrielmahia/shule-ai`](https://github.com/gabrielmahia/shule-ai) — KCPE/KCSE prep on the **CBC** syllabus answering in Kiswahili — serves **`209 B` · `9dd285c3704d`: Creative Commons `CC BY-NC-ND 4.0`**. 🔴 **NonCommercial *and* NoDerivatives — it cannot be used in a paid engagement and cannot be modified at all**, which bars even the adaptation a curriculum row exists for. 🔵 **The search channel indexed it `NOASSERTION`.** Third consecutive pass in which index silence hid a grant, and the second in which the hidden grant was a *bar* (`T863`) |
 
 🔵 **The useful sentence for an African engagement, now measured across four countries:** Nigeria and
@@ -454,7 +535,7 @@ split-by-directory finding, **split by section instead.**
 | [`silja-graf/Didaktikus-…-LP21`](https://github.com/silja-graf/Didaktikus-KI-Spezialist-f-r-Unterrichtsplanung-und-Beurteilung-nach-LP21) | ALIVE · `8d747cda689e` · no licence | 🔴 A **Swiss LP21-curriculum** lesson-planning and assessment agent — the single most engagement-shaped EMEA artefact found, and ungranted. 🔵 **Ask for this one** |
 | [`RAFCERAY/horizonia`](https://github.com/RAFCERAY/horizonia) · [`redoneabouaali-lab/najih`](https://github.com/redoneabouaali-lab/najih) · [`MRiARC/VidyaSetu`](https://github.com/MRiARC/VidyaSetu) · [`TaoYu-ds/TutorMesh`](https://github.com/TaoYu-ds/TutorMesh) · [`kaikai52125/NeoTutor`](https://github.com/kaikai52125/NeoTutor) · [`SoukhyadP991/Multilingual-NCERT-Doubt-Solver`](https://github.com/SoukhyadP991/Multilingual-NCERT-Doubt-Solver) · [`mingxuanyan07-lgtm/ai-for-education-showcase`](https://github.com/mingxuanyan07-lgtm/ai-for-education-showcase) | all ALIVE · none serving a licence | 🔴 **7 further ungranted agents, placed by region so the absence is useful:** FR, Morocco, IN, CN, CN (a DeepTutor re-implementation on LangGraph), IN (offline NCERT doubt-solver), CN (auditable multi-agent maths teaching). 🟢 These are **licence requests**, and three of them are the best artefact found for their country |
 
-## Counts for this pass
+## Counts — `p792` (see the `p793` block above for this pass's sweep)
 
 | | Count |
 |---|---|
@@ -467,7 +548,7 @@ split-by-directory finding, **split by section instead.**
 | Placed **EMEA** | **20** (7 agents + 7 `elimu-ai` + 5 Africa + 1 🇬🇧) |
 | Placed **North America** | **4** |
 | Placed **Global** | **21** |
-| Probed and rejected | **25** (1 split-by-directory, **3** NonCommercial — one of them also NoDerivatives, 1 fork, 1 duplicate address pair, **17** ungranted, **2 DEAD**) · 🟢 **`1` row LEFT this bucket: `nextSIS`** |
+| Probed and rejected | **25** (1 split-by-directory, **3** NonCommercial — one of them also NoDerivatives, 1 fork, 1 duplicate address pair, **17** ungranted, 🔴 **`2` ALIVE-BUT-EMPTY — corrected at `p793` from "DEAD" (`T892`)**) · 🟢 **`1` row LEFT this bucket: `nextSIS`** |
 | 🔴 Rows whose published verdict this pass CORRECTED | **1** — [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS), **proprietary → GPL-3.0**, on a licence *anthology* graded by one line belonging to a bundled dependency |
 | 🔴 Defects found in this pass's OWN instruments, by controls, before publication | **7** — `0` found by inspection |
 | 🟢 Controls reproduced exactly before any verdict shipped | **10 of 10** known-good rows · `3` planted negatives DEAD as designed |

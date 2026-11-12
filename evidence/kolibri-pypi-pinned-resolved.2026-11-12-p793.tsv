@@ -1,0 +1,32 @@
+djangorestframework	3.14.0	BSD	BSD License
+django-csp	3.8	BSD	BSD License
+django-mptt	0.14.0	MIT-License	MIT License
+django-filter	21.1	BSD	BSD License
+configobj	5.0.8	BSD (2 clause)	BSD License
+django	3.2.25	BSD-3-Clause	BSD License
+colorlog	6.12.0	MIT License	MIT License
+diskcache	5.6.3	Apache 2.0	Apache Software License
+requests	2.27.1	Apache 2.0	Apache Software License
+cheroot	10.0.1	EMPTY	BSD License
+tzlocal	4.2	MIT	MIT License
+semver	2.13.0	BSD	BSD License
+python-dateutil	2.9.0.post0	Dual License	Apache Software License; BSD License
+le-utils	0.2.18	MIT	no-classifier
+jsonfield	3.1.0	MIT	no-classifier
+pytz	2026.3.post1	MIT	MIT License
+morango	0.8.15	MIT	MIT License
+django-js-reverse	0.10.2	MIT	MIT License
+redis	3.5.3	MIT	MIT License
+magicbus	4.1.2	EMPTY	BSD License
+zeroconf-py2compat	0.19.17	LGPL	GNU Lesser General Public License v2 (LGPLv2)
+html5lib	1.1	MIT License	MIT License
+colorama	0.4.6	EMPTY	BSD License
+whitenoise	5.3.0	MIT	MIT License
+idna	3.7	EMPTY	BSD License
+Click	8.0.4	BSD-3-Clause	BSD License
+django-redis-cache	3.0.1	BSD	BSD License
+ifaddr	0.1.7	MIT	MIT License
+importlib-metadata	4.8.3	EMPTY	Apache Software License
+importlib_resources	5.4.0	EMPTY	Apache Software License
+django-sortedm2m	3.1.1	BSD	BSD License
+json-schema-validator	2.4.1	EMPTY	GNU Library or Lesser General Public License (LGPL)

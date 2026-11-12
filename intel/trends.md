@@ -4,6 +4,194 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p793` — **eight findings. The headline is that this base's most fundamental instrument — existence by exit status — cannot tell a live repository from an empty one, and two rows published as DEAD are neither.**
+
+🟢 **`p792-A` and `p792-B` both DISCHARGED, and `p792-B` cost `11` seconds for all `122` rows.** 🔴 **`2` published verdicts corrected.** 🟢 **`0` corrections required to any licence grade** — an independent instrument, built on a different channel, reproduced this base's published grade on `7` of `7` cross-checked rows including the Spanish-language MIT and the GPL-3.0/AGPL-3.0 split.
+
+## `T892` — existence by EXIT STATUS cannot distinguish a live repository from an empty one
+
+🔴 **This base's standing existence instrument is `git ls-remote`, with the exit status "read directly, never through a pipe".** That discipline was built to defeat pipe-swallowed failures, and it does. 🔴 **But it answers the wrong question.** An address that exists and holds **no refs at all** returns `rc=0` — indistinguishable from a healthy repository.
+
+Measured this pass, four addresses on one instrument:
+
+| Address | `ls-remote` `rc` | refs returned | `raw` README | clone | `HEAD` |
+|---|---|---|---|---|---|
+| `RAFCERAY/horizonia` | `0` | **`2`** | `200` | ok | `fffd7246dfab` |
+| 🔴 `Bestisco/My-WASSCE-Companion` | `0` | **`0`** | `404` | ok | 🔴 unresolvable |
+| 🔴 `Elite2828/ACE-AI-Tutor` | `0` | **`0`** | `404` | ok | 🔴 unresolvable |
+| `gmilano/this-definitely-does-not-exist-xyz` | **`128`** | `0` | `404` | fails | — |
+
+🔴 **CORRECTION TO THIS BASE.** `agents/top.md` and the Ghana row record these two as **`2` DEAD**. They are not dead. They **exist, are claimed by their owners, and are empty** — created and never pushed. `git clone` succeeds on both and leaves a repository with no `HEAD`.
+
+🟡 **One loose end, declared rather than resolved.** The Ghana row records these two as *"both `rc=2`, re-probed and confirmed"*. 🔴 **`rc=2` is not reproducible in this session on either form of the command** — `git ls-remote URL HEAD` and `git ls-remote URL` both return `rc=0` with zero refs for these addresses, and `rc=128` for a planted absent one. So the provenance of the recorded `2` is unexplained, and it may have come from a different instrument or a different `git` build. 🟢 **The correction does not depend on it:** the repositories clone, hold no refs and serve `404` on `raw`, so *"DEAD"* is the wrong verdict whichever exit code a prior probe saw. 🔵 **And it is the reason to stop grading existence on exit codes at all — they are not portable across instruments, and the ref count is.**
+
+🟢 **The corrected instrument: existence requires `rc=0` AND at least one ref.** Three states, not two:
+
+| State | Test | What it means commercially |
+|---|---|---|
+| 🟢 **LIVE** | `rc=0`, `refs ≥ 1` | A real artefact to read |
+| 🟡 **EMPTY** | `rc=0`, `refs = 0` | 🟢 **An author who registered an intent.** Reachable, and a *future* row |
+| 🔴 **ABSENT** | `rc=128` | Nothing there |
+
+🔵 **Why the distinction earns its place:** an absence is a dead end, but an empty repository is a **named person who claimed a name and has not shipped** — the same channel as a licence request, and a better prospect than a repository that never existed. Ghana's measured position improves: not `11` repositories with `2` dead, but `11` with `2` authors mid-intent.
+
+🔴 **And this is `p792-G` reaching the base's own foundation.** `p792-G` said: if a verdict rests on a count, read the rows. `T892` is the same lesson one level lower — *if a verdict rests on an exit status, read the refs.*
+
+## `T893` — a blobless clone turns `git ls-tree -l` into a NETWORK call per blob, silently
+
+🟢 `git clone --filter=blob:none --no-checkout --depth 1` is the right tree instrument: trees arrive, blobs do not, and `git ls-tree -r --name-only` is then purely local. 🔴 **Adding `-l` to get byte sizes inverts that.** A size is a property of a blob, so a partial clone must **lazily fetch every blob in the tree** to print the column — on `learningequality/kolibri` the command had fetched a large fraction of the repository and been running for over two minutes before it was stopped, with the only visible symptom a stream of background `git gc` notices.
+
+🟢 **The corrected recipe, and it is what produced this pass's `103` byte sizes:**
+
+```bash
+git -c gc.auto=0 clone --quiet --filter=blob:none --no-checkout --depth 1 "https://github.com/$slug" "$d"
+git ls-tree -r --name-only HEAD          # local: trees only, no blob fetch
+git ls-tree HEAD -- "$root_path"         # the ONE sha you need
+curl -s "https://raw.githubusercontent.com/$slug/HEAD/$root_path"   # the bytes, on the byte channel
+```
+
+🔵 **The general shape: in a partial clone, every column is cheap except the one that is a property of the thing you declined to download.** `122` rows cost `10.9` seconds this way; the `-l` form did not finish one.
+
+## `T894` — GPL-3.0 and AGPL-3.0 are separable deterministically, and a grep for "affero" gets it BACKWARDS
+
+🔴 **GPL-3.0's own §13 is titled "Use with the GNU Affero General Public License".** So the canonical GPL-3.0 text contains the word *affero* — and a substring test for it grades every GPL-3.0 repository as AGPL-3.0. This is the **sixth** recorded way to misread a licence in this base, joining case-blindness (`T842`), title-line insufficiency (`T847`), length-as-integrity (`T845`), language-blindness (`T848`) and appendix contamination (`T849`).
+
+🟢 **The discriminator, measured on `7` rows this pass and exact on all `7`:**
+
+| Served bytes | `affero` occurrences | Verdict |
+|---|---|---|
+| **`35,149`** | **`3`** (all in §13's cross-reference) | 🔴 **GPL-3.0** |
+| **`34,523`** | **`15`** (the grant itself) | 🔴 **AGPL-3.0** |
+
+| Row | Bytes | `affero` | Verdict | This base's published grade |
+|---|---|---|---|---|
+| [`CREARED-EDU-CO/GenPrompt-Pre-ICFES-11`](https://github.com/CREARED-EDU-CO/GenPrompt-Pre-ICFES-11) | `34,523` | `15` | AGPL-3.0 | 🟢 **AGPL-3.0 — matches** |
+| [`dpaul0501/OpenVidya`](https://github.com/dpaul0501/OpenVidya) | `34,523` | `15` | AGPL-3.0 | 🟢 **AGPL-3.0 — matches** |
+| [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | `34,523` | `15` | AGPL-3.0 | 🟢 **AGPL-3.0 — matches** |
+| [`Prady029/NCERT-AI-Teacher-Assistant`](https://github.com/Prady029/NCERT-AI-Teacher-Assistant) | `35,149` | `3` | GPL-3.0 | 🟢 **GPL-3.0 — matches** |
+| [`chc-chupea/news-grade-reader`](https://github.com/chc-chupea/news-grade-reader) | `35,149` | `3` | GPL-3.0 | 🟢 **GPL-3.0 — matches** |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | `35,149` | `3` | GPL-3.0 | 🟢 **GPL-3.0 — matches** |
+| [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | `39,890` anthology | `3` | GPL-3.0 | 🟢 **GPL-3.0 — matches `p790`'s correction** |
+
+🟢 **`7` of `7`. This base's copyleft record is correct, and now it is correct on two independent instruments.** 🔵 The commercial reason the split matters: AGPL-3.0's §13 reaches a **hosted** education service, which is how Globant would deliver one; GPL-3.0's does not.
+
+## `T895` — `kolibri`'s dependency claim is EXACT on the side it was measured, and the other side had `208` packages nobody had looked at
+
+`ACTION p792-A` asked for every `Deps` claim to be re-audited against a resolved lockfile, naming `kolibri`'s **"2 LGPL of 32"** as the row that carries this base's embedding argument.
+
+🟢 **The claim is CONFIRMED, exactly, and the "32" is now identified.** It is the **Python `base` dependency group in `pyproject.toml`** — `32` packages, every one `==`-pinned, so the manifest *is* the resolution. Resolved against PyPI **at each pin**, exactly `2` are LGPL:
+
+| Package | Pin | `license` field | Classifier |
+|---|---|---|---|
+| 🔴 `zeroconf-py2compat` | `0.19.17` | `LGPL` | GNU Lesser General Public License v2 |
+| 🔴 `json-schema-validator` | `2.4.1` | 🔴 **EMPTY** | GNU Library or Lesser General Public License |
+
+🔵 **Note the second row: the `license` field is empty and only the classifier carries the copyleft.** `p791-G` warned that a blank field is not a verdict; here the blank field would have *under*-reported copyleft. The caution runs in both directions.
+
+🔴 **But the npm side of the same repository had never been resolved at all.** `kolibri` is a **pnpm workspace with `40` importers**; its root `package.json` declares **`0` runtime dependencies**, so any audit that read the root manifest measured nothing. Collecting `dependencies` + `optionalDependencies` across all `40` importers and resolving each **at its locked version** against the registry gives **`208`** version-resolved runtime packages:
+
+| | Count |
+|---|---|
+| MIT | `175` |
+| Apache-2.0 | `10` |
+| BSD (2/3-clause, incl. one `BSD`-only field read from bytes as 3-clause) | `9` |
+| ISC | `5` |
+| MIT-0 · CC0-1.0 · Unlicense · WTFPL · BlueOak-1.0.0 | `5` |
+| 🟡 MPL-2.0 | **`1`** — `mathquill@0.10.1`, bytes confirmed (`16,725 B`) |
+| 🟡 `(MPL-2.0 OR Apache-2.0)` | **`1`** — `dompurify@3.4.17`, 🟢 **elect Apache-2.0** |
+| 🔴 **No grant anywhere** | **`1`** — see `T896` |
+| 🟢 **GPL · LGPL · AGPL** | 🟢 **`0`** |
+
+🟢 **Zero GPL-family packages in `208` version-resolved runtime dependencies.** 🟢 **The embedding argument survives, and is now stronger than the row claimed** — the copyleft in `kolibri` is `2` LGPL Python packages, both distribution-triggered rather than network-triggered, and nothing at all in the JavaScript that reaches a learner's browser.
+
+🔴 **Where the residual risk actually sits is one plugin.** `mathquill` (MPL-2.0, file-level copyleft) and the ungranted package of `T896` are **both** declared by `kolibri/plugins/perseus_viewer` → `dependencies` — the exercise renderer, which ships to learners. `dompurify` sits in `packages/kolibri-common`, i.e. core, and is dual-licensed so Apache-2.0 can simply be elected.
+
+🔵 **`requirements.txt` was a decoy, and it says so in its own first line** — *"This file exists only as the sink for any EXTRA_REQUIREMENTS injected at build time"*. A `Deps` audit that read it would have found `0` packages and reported a clean result. 🔴 **That is `p792-G` again: a file that structurally cannot contain the answer returns a confident `0`.**
+
+## `T896` — a package can ship with no grant anywhere, and have no upstream address left
+
+[`@khanacademy/mathjax-renderer@3.0.2`](https://registry.npmjs.org/@khanacademy/mathjax-renderer/3.0.2) is a **direct `dependencies` entry of `kolibri/plugins/perseus_viewer`**. Three channels, all read:
+
+| Channel | Result |
+|---|---|
+| Registry metadata at the pinned version | 🔴 `license` absent · `licenses` absent |
+| 🟢 **The published tarball — what actually ships** (`336,573 B`) | 🔴 **No `LICENSE`, `LICENCE`, `COPYING` or `NOTICE` file at any path**; `license` absent from the packaged `package.json`; no licence line in `README` |
+| Upstream repository named in the metadata (`Khan/mathjax-renderer`) | 🔴 **`git ls-remote` `rc=128` — the address does not resolve** |
+
+🔴 **So the artefact a client would deploy carries no grant, and the project it came from has no reachable home.** 🟡 Khan Academy's other packages in the same tree (`@khanacademy/perseus`, `wonder-blocks-*`, `kas`, `math-input`) all resolve MIT at their pins, so this is one package, not a vendor posture.
+
+🟢 **Reading the tarball, not the registry field, is what settles it** — and that is the version-level form of `T884`: the registry field describes a *version*, and the tarball *is* the version.
+
+🔵 **Disposition: this is a licence-request target with a measured, specific ask** — not "please add a licence" but *"`3.0.2` ships without a grant and `Khan/mathjax-renderer` no longer resolves; which licence governs it, and where does it now live?"*
+
+## `T897` — a hardening config is a CLAIM, not a control, and the best-engineered server in this sector says so in its own comments
+
+`ACTION p792-D` asked for the canonical Canvas MCP's auth model to be read **before** any security offer was written. Read: [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp), MIT (`1,071 B`, `3c7307584ae4`), `529`-file tree.
+
+🟢 **`p792-D`'s premise is PARTLY REFUTED, and that is good news badly needed in this sector.** This is not a server that never considered governance. It ships:
+
+| Control | Evidence |
+|---|---|
+| 🟢 Structured audit trail | `src/canvas_mcp/core/audit.py` — `6,420 B`, `215` lines, `log_data_access` · `log_code_execution` · `log_access_change` |
+| 🟢 **Identifier masking in the audit log** | `_sanitize_endpoint`: `/courses/12345/users/678` → `/courses/***/users/***` |
+| 🟢 Executed code logged as a **hash**, never raw | `log_code_execution(code_hash=…)` — SHA-256 prefix |
+| 🟢 Three deployment overlays | `config/overlays/{baseline,public,enterprise}.env` |
+| 🟢 Sandbox with outbound network blocked by default | `TS_SANDBOX_BLOCK_OUTBOUND_NETWORK=true` in all three overlays |
+| 🟢 Token rotation + security CI + its own prior reviews | `scripts/rotate-canvas-token.mjs` · `.github/workflows/security-testing.yml` · `docs/audits/2026-09-23-*` · `security/student-feature-review-2026-10-08.md` |
+
+🔴 **And then the two findings that matter.**
+
+**1. The hardened flags are self-declared placeholders.** `enterprise.env` sets `MCP_CLIENT_AUTH_MODE=api_key_or_mtls`, `MCP_CLIENT_API_KEY_REQUIRED=true` and `MCP_CLIENT_CERT_AUTHORITY` under the comment **"(pending feature wiring)"**; `public.env` sets `TOKEN_STORAGE_BACKEND=keyring` under the same comment and `LOG_REDACT_PII=true` under **"Logging hygiene (some flags are placeholders)"**. 🔴 **An institution that reads `enterprise.env` as a control inventory would believe mTLS client authentication and PII redaction are in force.** The project is honest in its comments; the risk is in how a procurement reader uses the file.
+
+**2. The token layer protects the MCP server, not the Canvas account.** `core/access/tokens.py` is `50` lines: `mint_token` / `verify_token` over HMAC-signed claims (`oid`, `jti`, `exp`) — authentication **of clients to this server**. The Canvas credential underneath is untouched, and `SECURITY.md` states the consequence plainly: 🔴 **"Your Canvas API token has full access to your Canvas account."** There is no per-tool scoping, because Canvas does not offer one; the mitigation on offer is `chmod 600 .env`.
+
+🔴 **Meanwhile `bulk_grade_submissions` writes grades.** That is Annex III, point 3 — *evaluation of learning outcomes* — reached by an MCP tool call, holding an account-scoped credential, from `2027-12-02`.
+
+🟢 **The corrected offer, and it is sharper than the one `p792-D` imagined:** the scaffolding exists and is explicitly unfinished. The engagement is **wiring and certifying controls the project has already designed** — finish the client-auth and keyring paths, make `LOG_REDACT_PII` real, add per-tool allowlisting above an account-scoped token, and produce the FRIA and audit evidence that Annex III will require. 🔵 **That is a far better conversation to open than "your server is insecure", and it is true.**
+
+## `T898` — China placed at ministry level, in-language, with a document number (`p792-E`, first of four)
+
+🟢 **The in-language ministry channel paid a fourth consecutive time** (`T891` predicted it). Searching `教育部 人工智能 教育 2026 政策 中小学 指南` returns the instrument itself, on `moe.gov.cn`:
+
+**《"人工智能+教育"行动计划》 — "AI + Education" Action Plan, document number 教科信〔2026〕1号.** Issued **jointly by five bodies**: 教育部 (Ministry of Education), 国家发展改革委 (NDRC), 工业和信息化部 (MIIT), 科技部 (MOST) and 国家数据局 (National Data Administration). Signed **`2026-04-02`**, published **`2026-04-10`**.
+
+| What it commits to | Why it is a procurement hook |
+|---|---|
+| Continue developing 《中小学人工智能通识教育指南》 (K-12 AI general-education guideline) and run AI courses fully | 🟢 Curriculum-aligned content, per stage, is a named deliverable |
+| AI education written into **local** curriculum systems, each locality issuing its own course guide with objectives, content and **class-hour requirements** | 🟢 **Procurement is provincial, and there are ~`34` of them** |
+| Strengthen K-12 AI education bases; support **rural and remote** schools via the national platform | 🟢 Offline-first and low-bandwidth delivery — exactly `kolibri`'s shape |
+| Revise compulsory-education and senior-secondary information-technology **curriculum standards** | 🟡 Content that must track a moving standard |
+| 🔴 **Draft 人工智能应用安全评估指标 — AI application security assessment indicators** | 🔴 **A conformity regime is being written.** Earliest-mover advantage for anyone who can evidence controls |
+| Goal: deep AI–education integration by **2030** | A multi-year programme, not a pilot |
+
+Prior instruments in the same series, all pre-existing: 《中小学人工智能通识教育指南（2025年版）》, 《中小学生生成式人工智能使用指南（2025年版）》, 《职业院校人工智能应用指引》, 《教师生成式人工智能应用指引》.
+
+🔵 **So APAC's "supply-rich, demand-blind" asymmetry is now half-corrected.** China has the strongest permissive agent supply this base has measured **and** a named five-ministry programme with a security-assessment regime in draft. 🔴 **India, Australia and Singapore remain unplaced at ministry level** — `p792-E` is discharged for `1` of `4`.
+
+## `T899` — `p792-B`'s corrected gate works, is cheap, and found no licence errors to fix
+
+🟢 **`ACTION p792-B` DISCHARGED across all `122` repository addresses in `agents/top.md`, in `10.9` seconds**, carrying `p791-E` (tree audit) and `p791-F` (byte sizes) together as instructed.
+
+🟢 **The gate was controlled on the two known-answer rows before use, and behaved correctly in both directions** — the two failure modes `T886` recorded:
+
+| Control row | Uncorrected gate (`T886`) | 🟢 Corrected gate |
+|---|---|---|
+| `mingxuanyan07-lgtm/ai-for-education-showcase` | 🔴 would have **rescued** it | 🟢 `NO_ROOT_GRANT`, `2` vendored paths (`Rethlas/LICENSE`, `scripts/vendor/katex/LICENSE.txt`) — correctly **not** rescued |
+| `oppia/oppia` | 🔴 flagged on `23` path hits | 🟢 `ROOT_GRANT` Apache-2.0 `11,358 B`, `vendored_nonroot=0` — correctly **not** flagged |
+
+**Results across `122` rows:** `103` root grants, each with path, **byte size and `12`-char blob sha recorded** · `19` with no root grant · `0` clone failures.
+
+🟢 **And the outcome on grades is the one worth stating: `0` corrections.** Every row cross-checked against this base's published verdict matched — including the four rows whose root grant my own clause-grep returned as `UNRECOGNISED`, every one of which this base had already graded correctly by hand:
+
+| Row | Gate said | Bytes say | Published grade |
+|---|---|---|---|
+| `goyanedelv/paes-mcp` | 🔴 `UNRECOGNISED` | 🟢 **MIT, in Spanish** — *"Se concede permiso, libre de cargos"* | 🟢 **MIT (Spanish text) — matches (`T864`)** |
+| `gabrielmahia/shule-ai` | 🔴 `UNRECOGNISED` | CC BY-NC-ND 4.0 | 🟢 **matches — "barred twice"** |
+| `luscitiosus/Dirigo` | 🔴 `UNRECOGNISED` | CC BY-NC-SA 4.0 | 🟢 **matches (`p786` correction)** |
+| `Tzxser/aipha-learning-os` | 🔴 `UNRECOGNISED` | "All rights reserved"; visibility ≠ permission | 🟢 **PROPRIETARY — matches** |
+
+🔴 **The gate's own defect, found by this comparison: `COPYRIGHT_NOTICE` matched its grant-path pattern.** `Tzxser/aipha-learning-os` has no grant at all, and a path-name match nearly promoted a file that is the *opposite* of a grant. 🟢 **A path name selects a candidate; only the clauses decide.** And my clause set was English-only, so it re-created `T848` on `paes-mcp` within minutes of `T848` being written down — 🔵 **which is the strongest available argument that the language-blind failure mode is the default, not an accident.**
+
 ## 🆕 `p792` — **eight findings. The headline is that this base told clients not to ship its most-recommended platform, on a licence that platform does not use.**
 
 🟢 **Channel status, re-measured:** `git ls-remote` 🟢 · `git ls-remote --symref` 🟢 (new, and now mandatory — see `T885`) · blobless clone + `ls-tree` + `cat-file` 🟢 · `raw.githubusercontent.com` 🟡 **works, with a silent branch alias** · `search/repositories` 🟢 exact integers · **npm registry** `registry.npmjs.org` 🟢 (new, per-version licences) · **PyPI** `pypi.org/pypi/*/json` 🟢 (new) · `api.github.com/repos/*` 🔴 `403` · `github.com` page 🔴 `403`.

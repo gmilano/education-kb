@@ -4,6 +4,36 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p793` — **The MCP edge was read, not assumed: the canonical Canvas server has real data-governance engineering and its hardened settings are self-declared placeholders.**
+
+`p792` added MCP as "the Odoo pattern's edge — permissive even when the platform is not". 🔴 **`ACTION p792-D` required that claim be measured before any security offer was written, starting with the auth model.** Measured.
+
+### 🟢 [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — MIT, `1,071 B`, `3c7307584ae4`, `529`-file tree
+
+🟢 **This is not an unconsidered server, and the base's working assumption that community MCP servers hold institutional tokens with no governance thought does NOT survive contact with the canonical one:**
+
+| Control it actually ships | Evidence in the tree |
+|---|---|
+| 🟢 Structured audit trail | `src/canvas_mcp/core/audit.py` — `6,420 B`, `215` lines: `log_data_access` · `log_code_execution` · `log_access_change` |
+| 🟢 **Identifier masking in the log** | `_sanitize_endpoint`: `/courses/12345/users/678` → `/courses/***/users/***` |
+| 🟢 Executed code recorded as a **hash**, never raw | `log_code_execution(code_hash=…)` — SHA-256 prefix |
+| 🟢 **Three deployment tiers** | `config/overlays/baseline.env` · `public.env` · `enterprise.env` |
+| 🟢 Sandbox, outbound network blocked by default in all three | `TS_SANDBOX_BLOCK_OUTBOUND_NETWORK=true`; enterprise adds `TS_SANDBOX_ALLOWLIST_HOSTS` |
+| 🟢 Token rotation · security CI · its own prior reviews | `scripts/rotate-canvas-token.mjs` · `.github/workflows/security-testing.yml` · `docs/audits/2026-09-23-codex-review.md` · `security/student-feature-review-2026-10-08.md` |
+| 🟢 Entra / Azure auth path | `deploy/azure/authsettingsv2.example.json` |
+
+### 🔴 And the two things an institution must not misread
+
+**1. The hardened flags are labelled unfinished by the project itself.** `enterprise.env` declares `MCP_CLIENT_AUTH_MODE=api_key_or_mtls`, `MCP_CLIENT_API_KEY_REQUIRED=true` and `MCP_CLIENT_CERT_AUTHORITY` under the comment **"(pending feature wiring)"**. `public.env` declares `TOKEN_STORAGE_BACKEND=keyring` under the same comment and `LOG_REDACT_PII=true` under **"Logging hygiene (some flags are placeholders)"**. 🔴 **A procurement reviewer who treats `enterprise.env` as a control inventory will believe mTLS client authentication and PII redaction are in force.** The project is honest in its comments; the hazard is entirely in how the file gets read.
+
+**2. The token layer protects the server, not the Canvas account.** `src/canvas_mcp/core/access/tokens.py` is `50` lines of HMAC-signed claims (`oid`, `jti`, `exp`) — authentication **of clients to this MCP server**. The Canvas credential underneath is untouched, and `SECURITY.md` says so without hedging: 🔴 **"Your Canvas API token has full access to your Canvas account."** No per-tool scoping exists, because Canvas offers none; the documented mitigation is `chmod 600 .env`.
+
+🔴 **And the tool surface includes `bulk_grade_submissions`** — writing grades, i.e. EU AI Act **Annex III point 3** (*evaluation of learning outcomes*), reached by a tool call holding an account-scoped credential, from **`2027-12-02`**.
+
+### 🟢 The rule this file carries forward, amended
+
+🟢 **The LTI/MCP edge is still the right architecture** — a permissive process on one side of a boundary, a copyleft platform on the other (`csev/tsugi`, Apache-2.0, remains the most useful licensing component in the sector). 🔵 **What `p793` adds: the edge component's governance must be read from its code and its comments, not from its settings file.** A config key is a claim; a wired control is a control. Recipe: [`compose/patterns.md`](../compose/patterns.md) → `P793-1`. Mechanism: [`intel/trends.md`](../intel/trends.md) → `T897`.
+
 ## 🆕 `p792` — **The Odoo pattern gets its missing piece: a permissive, tool-scoped way INTO a copyleft platform. Plus the one row this file told clients to avoid is cleared.**
 
 🔵 **This file's governing pattern, carried:** take a mature, deployed platform that already holds the institution's data and add agents **at its edge** — nobody replaces a Student Information System in an engagement. 🔴 **The problem has always been that the edge was an LTI tool or a REST client, which is a lot of integration work per deliverable.** 🟢 **`p792` records a better edge.**
