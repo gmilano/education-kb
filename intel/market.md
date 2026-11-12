@@ -4,6 +4,89 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p783` — **All five regions placed, with the NA statute book now specific enough to quote by bill number, and LATAM's "gap" diagnosed as a measurement artefact rather than an absence: the code exists, it just sits below every star floor this base's sweeps use. Three LATAM university MCP servers found, two of them institution-specific and permissive.**
+
+🔵 **Region is a CLOSED vocabulary on this base — `North America`, `EMEA`, `APAC`, `LATAM`, `Global`. Country names live in the prose, never in the field.**
+
+🔴 **Market size, and it is still not reconcilable.** AI-in-education for `2026` was read this pass at **`$10.6B`** (→ `$42.48B` by `2030`, `41.5%` CAGR), at **`$9.58B`** growing `>30%`/yr, with long-range forecasts diverging to **`~$41B` by `2030`** (Mordor) and **`~$137B` by `2035`** (Precedence). 🟢 **The defensible statement is unchanged from `p782` and now holds across a second independent set of sources: AI-in-education is a `$10B`–`$12B` market in `2026`.** 🔴 **The growth rates diverge too widely to average and are not averaged here.**
+
+🟢 **The one adoption number that is consistent across sources and worth quoting to a client: Microsoft's measurement puts generative-AI use at `86%` of education organisations — the HIGHEST of any industry.** 🔵 **Pair it with the governance figures by region below, and the sales argument writes itself: adoption is universal, governance is not, and the gap is the engagement.**
+
+🔴 **What is fading, per this pass's sources, stated so a studio does not pitch it:** blockchain credentialing, full-classroom VR, and the chatbot-as-tutor framing. 🟢 **Instructure's Canvas Career — a skills-first AI LMS — reached GA in `2026-01`**, which is the commercial shape that replaced the chatbot pitch. 🔵 **OECD's `2026` Digital Education Outlook: AI helps learning only where pedagogy stays in control** — the single most quotable line for an engagement that needs to justify a human-in-the-loop design.
+
+🔴 **STRUCTURAL DEFECT FIXED THIS PASS: this file carried FIVE bare `## Opportunities by region` headings.** 🔵 `p776`–`p778` established the convention — a superseded region section is relabelled `## Opportunities by region — pNNN (historical section…)` so exactly ONE live heading remains. 🔴 **`p779`, `p780`, `p781` and `p782` each left theirs bare, so a compiler reading this file saw five identical headings and no way to tell which was current.** 🟢 **All four relabelled; there is now exactly one live `## Opportunities by region`, immediately below.**
+
+## Opportunities by region
+
+### 🟢 North America
+
+🟢 **The statute book is now specific enough to design against, and it is the strongest regulatory-engineering opportunity in this base.** 🔵 **Scale: MultiState counts `134` AI-in-education bills across `31` states in `2026`; FutureEd's narrower cut counts `77` across `27`.** 🟢 **The posture is measured — research, transparency and guardrails rather than mandated adoption.**
+
+| Enacted | Date | What it REQUIRES a system to do |
+|---|---|---|
+| 🟢 **Oklahoma SB 1734** | signed `2026-05-12` | Educator oversight of instructional AI · 🔴 **AI barred as the primary basis for grading or discipline** · annual parental disclosure **and opt-out** |
+| 🟢 **Maryland SB 720** | signed `2026-05-26` | An **AI coordinator designated per local school system** · creates the Maryland AI Education Collaborative |
+| 🟢 **Idaho SB 1227** | signed `2026-03-26` | District and charter AI-use policies · state **AI-literacy standards** · 🔴 no AI may "replace or eliminate a human teacher" |
+| 🔵 **New York A 9190** | **pending** | Classroom AI restricted to **grade 9 and above**, excepting diagnostics and special-education interventions |
+
+🟢 **The opportunity, named concretely: these four instruments demand the same four artefacts — an oversight record, a disclosure/opt-out register, a "not the primary basis" audit trail on every grading or discipline decision, and an AI-literacy curriculum mapping.** 🔵 **None of those is a model; all four are software a district must be able to show an auditor.** 🟢 **And because the requirements differ by state, the sellable thing is a POLICY-CONFIGURABLE deployment rather than fifty bespoke builds** — which is what `P3` on [`compose/patterns.md`](../compose/patterns.md) already builds toward.
+
+🔴 **Declared uncertainty, not smoothed over: Colorado's status is contradictory in this pass's sources** — one tracker claims the AI Act was repealed in `2026-05`, another gives a delayed effective date of `2026-06-30` plus a federal-court enforcement pause. 🔴 **Not reconciled, and no Colorado claim should ship off this base until it is.** 🔵 One of the trackers consulted is demonstrably unreliable (it attributes bills to the wrong states), which is why bill numbers above are only those corroborated across sources.
+
+### 🟢 EMEA
+
+🔴 **The single most consequential number in this file is in dispute, and a studio that gets it wrong misprices the engagement by more than a year.** 🔵 **Education-sector high-risk obligations under the EU AI Act were read this pass as starting `2026-08` by several vendor guides, and as `2027-12-02` by others** — the later date tied to the `2026` **Digital Omnibus** amendment (Council adoption reported `2026-06-29`, 🔴 **not verified against EUR-Lex or the Commission's own pages this pass**). 🟢 **`p782` published `2027-12-02`; this pass finds the conflict still live and does NOT resolve it.** 🔵 **Quote the band and the dependency, not a date.**
+
+🟢 **What IS settled and can be designed against today:**
+- 🟢 **In force since `2025-02`:** the **ban on emotion recognition in education**, and the **AI-literacy duty**.
+- 🟢 **Schools, universities and non-profit training providers are DEPLOYERS** under the Act — obligations attach to them, not only to vendors.
+- 🟢 **Inside high-risk: admissions, assessment, proctoring.** 🔵 **Outside, per the Commission's `2026-05` draft guidelines: tutoring, practice feedback and information chatbots.**
+- 🔵 **Utrecht is the replicable institutional reference** — AI systems classified by risk tier with a **pre-approval gate** before a tool reaches students.
+
+🟢 **The opportunity: the classification boundary IS the product.** 🔵 **A tutoring tool that stays outside Annex III and an assessment tool that falls inside it are the same codebase with different data flows** — so the sellable artefact is the risk-tier classification, the evidence pack behind it, and an architecture that keeps the tutoring path provably out of the assessment path. 🟢 **`nazarli-shabnam/ReadAble`'s on-device OCR (Apache-2.0) is a concrete instance of winning that argument by construction rather than by policy.** 🔵 Adoption is bifurcated — K-12 cautious on curriculum, teacher autonomy and equity; higher ed and corporate learning moving fast. 🔵 Mistral AI is the flagship European model provider where sovereignty is a requirement.
+
+### 🟢 APAC
+
+🟢 **No single regional model, and the divergence is the opportunity rather than an obstacle.**
+
+| Jurisdiction | Posture | Education-specific detail |
+|---|---|---|
+| 🔴 **China** | **Binding, most prescriptive** | Service-specific rules: recommendation algorithms, deep synthesis, generative AI, **labelling of AI-generated content** |
+| 🔴 **South Korea** | **Binding** | — |
+| 🟢 **Japan** | **Promotion, not penalty** | AI Promotion Act (`2025`); **second-phase AI Basic Plan adopted `2026-07-14`** |
+| 🔵 **India** | **Guidance-led, unsettled** | 🔴 No AI law; dedicated legislation signalled `2026-07`. 🟢 **IT Rules synthetic-content labelling in force since `2026-02-20`** |
+| 🟢 **Vietnam** | **Binding, and the sharpest education clock in the region** | 🟢 **The `2026-07` high-risk list names EDUCATION — including automated assessment — among six sensitive sectors** |
+
+🔵 **Public opinion differs enough to change product design: support for banning AI in schools runs `26%` in India and `29%` in Japan** (Ipsos Education Monitor `2026`), with Australia and New Zealand higher. 🔵 Confidence in the national education system is highest in Singapore, lowest in Japan and South Korea.
+
+🟢 **Players, and the market is post-crackdown:** China's `2021` tutoring crackdown reshaped the field — **TAL** moved into AI learning hardware, **ByteDance's Gauth** competes on homework help, and India's **PhysicsWallah** launched an AI tutor. 🟢 **The permissive code is here too and this base has it:** `Miaotofu01/Study-Mate`, `ZeKaiNie/universal-examprep-skill`, `122-syf-wcy/PhysicsOS` and `THU-MAIC/OpenMAIC` (`43,349★`, MIT, Tsinghua) are all APAC-origin. 🟢 **The opportunity is multi-jurisdiction compliance as a feature** — one codebase that satisfies Vietnam's automated-assessment duty, China's content labelling and Japan's promotion posture, because a regional client operates across all three.
+
+### 🟢 LATAM
+
+🟢 **`ACTION p781-H` is closed in the direction it predicted, and the diagnosis is now specific: the LATAM "gap" in this base is a THRESHOLD artefact (`T837`).** 🔴 **The base's sweeps use star floors of `>150`, `>250` and `>60`. Every LATAM-placed education repository found this pass sits at `1`–`28★`.** 🟢 **The shelf was never empty; it was below the floor.**
+
+| Address | Grant, on the bytes | Claim channel | Placement |
+|---|---|---|---|
+| 🟢 [`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp) | 🟢 **MIT** · `1,107 B` · `3bf0a0b64f7d` · `main` · `003ee781daa0` | `28★` · pushed **`2026-11-12`** | 🟢 **Brazil** — Universidade de São Paulo, Portuguese-language agent access to university services |
+| 🟢 [`nialvape/utn-mcp`](https://github.com/nialvape/utn-mcp) | 🟢 **ISC** · `748 B` · `2ad14eb14513` · `main` · `96e782115969` | `12★` · pushed `2026-11-09` | 🟢 **Argentina** — UTN, unofficial student MCP server. 🔵 **ISC** — permissive, and the first ISC grant on this base |
+| 🟢 [`psychohub/rag-onpremise`](https://github.com/psychohub/rag-onpremise) | 🟢 **MIT** · `1,078 B` · `6d2af0e36690` · `main` · `07f904e0f0df` | `2★` · pushed `2026-09-17` | 🟢 Spanish — on-premise RAG with Ollama + Qdrant, 🟢 **explicitly no GPU and no cloud** |
+| 🟢 [`LucasSpinola/assistentes-educacionais-com-ia`](https://github.com/LucasSpinola/assistentes-educacionais-com-ia) | 🟢 **MIT** · `1,128 B` · `c19b91f630de` · `main` · `0a7ab3372361` | `2★` · pushed `2026-06-14` | 🟢 **Brazil** — open track for building educational assistants, Portuguese |
+
+🔴 **Regulation: there is NO AI law in force anywhere in the region, and that is the finding.** 🔵 **Brazil's PL 2338/2023 (Marco Legal da IA) passed the Senate in `2024-12` and sits in a Chamber of Deputies special committee.** The rapporteur (Aguinaldo Ribeiro) put the vote after the October elections and then at year-end; `H1-2026` targets were missed; 🔴 **and if the Chamber amends the text it returns to the Senate before signature.** 🔴 **No education-specific provisions were found in the bill this pass.** 🟢 **What DOES apply today: the LGPD already grants review rights over automated decisions** — which is the hook for any grading or placement system. 🔵 The AI-labelling duty currently covers election advertising only. 🔴 **A dedicated Mexico search is still owed and is carried forward as `p783-C`.**
+
+🟢 **And the governance gap is measured, which makes it sellable:**
+- 🔴 **Cetic.br: `53%` of school administrators use AI — `22%` have guidelines on its use.**
+- 🔴 **UNESCO IESALC: `87%` of regional universities already use AI — `26%` have a formal strategy, `9%` evaluate implementation.**
+- 🟢 **TALIS `2024`: `56%` of Brazilian secondary teachers used AI in the prior year, against a `36%` OECD average.**
+
+🔵 **That is the inverse of EMEA: in Europe the regulation arrives before the adoption, in LATAM the adoption arrived first and the regulation has not.** 🟢 **So the LATAM deliverable is not a compliance build against a statute that does not exist — it is the governance instrumentation itself: the usage register, the automated-decision review trail the LGPD already requires, and the evaluation `91%` of universities are not doing.** 🔵 **That is `P4` on [`compose/patterns.md`](../compose/patterns.md), and this pass confirms its premise rather than revising it.**
+
+🟢 **Market and players:** Brazil is **≈ half** the HolonIQ LATAM EdTech `100` cohort and the clear majority of deal activity. **Teachy** (BR, AI lesson preparation, has expanded into Asia), **Ginia** (MX, AI employability), **Vetto** (BR, same thesis), **Mattilda** (MX, school billing), **Talisis** (MX, post-secondary + financing). 🟢 **Google.org and the Raspberry Pi Foundation are funding Experience AI at `$4.6M`, targeting `24,000` educators and `1.25M` students by `2028`**, delivered locally by **Sincroniza Educação** (BR) and **Educación para Compartir** (MX). 🔵 UNESCO is piloting centres of excellence with **CONALEP** and **DGETI** in Mexico.
+
+### 🔵 Global
+
+🟢 **Cross-cutting, and the reason regional placement matters commercially: the regulatory clocks now differ by more than a year.** 🔴 **EMEA's education high-risk deadline is disputed between `2026-08` and `2027-12-02`; Vietnam's education transition is already running; North America has `134` bills across `31` states with four enacted statutes carrying different duties; LATAM has none in force.** 🟢 **A client operating in two of those regions cannot buy one compliance posture, and that is the argument for a policy-configurable architecture rather than a product.**
+
 ## 🆕 `2026-11-12` · `p782` — **Every region placed, and for the first time LATAM has CODE in it: a Colombian public university's Open edX tutor, MIT-licensed. The regulatory clocks now differ by region by more than a year, and that gap is the sales argument.**
 
 🔵 **Region is a CLOSED vocabulary on this base — `North America`, `EMEA`, `APAC`, `LATAM`, `Global`. Country names live in the prose.** 🔴 **Market-size estimates for `2026` do not agree and are not reconciled here on purpose:** `$10.4B`, `$11.4B` and `$12.3B` (HolonIQ) are all published for the same year on different scope definitions. 🟢 **The defensible statement is the band — AI-in-education is a `$10B`–`$12B` market in `2026` on every source this pass read — and the growth rates diverge too widely to average.**
@@ -21,7 +104,7 @@ updated: 2026-11-12
 
 🔵 **Read commercially: nobody is being sold "AI for education" any more — they already have it, unmanaged. The sellable work is governance, auditability and purpose-built replacement of general-purpose chatbots.** 🟢 **That is a services shape, not a licence shape, and it is where a studio wins.**
 
-## Opportunities by region
+## Opportunities by region — `p782` (historical section; the live one is at the top of this file)
 
 ### North America
 
@@ -113,7 +196,7 @@ updated: 2026-11-12
 
 🔴 **Declared, not papered over: every global adoption figure above is a vendor or aggregator number reached through a secondary page.** `OECD Digital Education Outlook 2026` and the `EDUCAUSE` surveys were NOT read at source this pass. 🟢 **The training gap (`25%`) is the one figure whose direction is corroborated across independent sources, and it is the one that sells services rather than licences.**
 
-## Opportunities by region
+## Opportunities by region — `p781` (historical section; the live one is at the top of this file)
 
 ### 🟢 North America
 
@@ -201,7 +284,7 @@ updated: 2026-11-12
 
 🔵 **Usable reading:** the honest statement to a client is *"the agentic slice is roughly `$2.4B` in `2026` against a total variously sized `$6.4B`–`$11.4B`, and the disagreement is about scope, not growth."* 🔴 **Venture figures conflict outright and neither is second-sourced:** one source reports **`$512M` across `63` deals in Q1 `2026`, down `24%`**; another reports **`$4.2B` into EdTech AI across `2025`**. 🔴 **Both are secondary. Stated as unresolved rather than reconciled.**
 
-## Opportunities by region
+## Opportunities by region — `p780` (historical section; the live one is at the top of this file)
 
 ### North America
 
@@ -302,7 +385,7 @@ This base does not have a primary market-size source and has never had one. The 
 
 🔴 **The gap in the map, stated: there is no permissive leader for the ERP/administration layer.** The only candidate, `openeducat_erp`, ships an incomplete grant.
 
-## Opportunities by region
+## Opportunities by region — `p779` (historical section; the live one is at the top of this file)
 
 ### North America
 

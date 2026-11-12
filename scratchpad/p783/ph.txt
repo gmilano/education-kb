@@ -1,0 +1,10 @@
+OWNER/REPO
+X/Y
+org/repo
+owner/name
+owner/repo
+x/y
+your-username/SafeTutors
+yourusername/scholarmate
+GIT_USER_ID/GIT_REPO_ID
+O/R

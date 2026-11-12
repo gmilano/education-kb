@@ -4,6 +4,82 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p783` — **One recipe RETIRED and rebuilt from scratch: the Moodle bridge every LMS recipe in this base depended on is `11`-for-`11` dead, and its replacement crosses a licence boundary that makes the deliverable closeable for the first time. Plus a new SEND recipe, a LATAM recipe built on code that exists, and a one-day grant gate.**
+
+🔵 **Every address in every recipe below was re-resolved on `git ls-remote --symref` THIS pass, and every grant was graded on the bytes served at the branch the symref reports.** 🔴 **`3` of the components named below are not on `main`** — `opencast/opencast` is `develop`, `ContentSquare/readapt` and `sakaiproject/sakai` are `master`. 🟢 A recipe that pins `main` on those three gets nothing.
+
+### 🔴 `P783-0` — RETIRED: every Moodle-plugin bridge in this base
+
+🔴 **Any recipe in this base that reaches Moodle through a `moodle-local_*` or `moodle-block_*` plugin is retired as written.** 🔴 **All eleven candidate substrates fail `ls-remote`:** `DeepLearningHarness-Team/Moodle-MCP`, `Hiroya-319/moodle-mcp-server`, `JaipuriaAILabs/Moodle-MCP`, `Marcus2012/MCP_Moodle`, `NiccoloSalvini/mcp-moodle-staff`, `NiccoloSalvini/mcp-moodle-teacher`, `NmaaAlhawary/MCP-Moodle`, `OGjoyce/mcp-moodle`, `alnyx-dev/PGEK-moodle-mcp`, `enovation/moodle-local_mcp_helper`, `jmolpea/moodle-block_openaiagent`.
+
+🟢 **It is replaced by `P783-1`, and the replacement is better on licence grounds even where the old route still worked:** a Moodle plugin lives inside GPL-3.0 code and a studio deliverable shipped as one **inherits GPL-3.0**. An API client does not.
+
+### 🟢 `P783-1` — The Moodle agent seam, outside the copyleft boundary *(any region · `1`–`2` weeks)*
+
+🔵 **What it is:** agent access to a live Moodle estate — courses, assignments, submissions, gradebook — with the deliverable remaining closeable.
+
+| Tier | Component | Grant, verified this pass | Role |
+|---|---|---|---|
+| 🟢 Tool surface | [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) `main` · `1546a7009b01` | 🟢 **MIT** `1,065 B` · `86d287c1708f` | Zero-dependency MCP server over Moodle's **Web Service API** |
+| 🟢 Fallback surface | [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) `main` · `18bd1777eb0b` | 🟢 **MIT** `1,064 B` · `5da1fff0a1db` | Second implementation of the same seam — insurance against a one-maintainer substrate |
+| 🟢 Assessment read | [`ictinnovations/ictexam-mcp`](https://github.com/ictinnovations/ictexam-mcp) `main` · `5d7d8fe78b39` | 🟢 **MIT** `1,114 B` · `32fa441f2467` | Gradebook + **item analysis** — the psychometric read neither Moodle server exposes |
+| 🟢 Teacher-facing layer | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) `main` · `31fd6dbb0c07` | 🟢 **Apache-2.0** `11,357 B` · `58d1e17ffe51` | Skills **and eval rubrics** — the procurement-facing half |
+
+🟢 **Wiring.** Enable Moodle's Web Service API and mint a service token **scoped to the capabilities the engagement needs** — the MCP server is a client, so Moodle's own capability checks remain the authorisation boundary and no new permission model is invented. Run `Faixiang/Moodle-MCP` beside Moodle, not inside it. Mount `ictexam-mcp` as a second server for gradebook/item-analysis reads. Put `k12-teacher-skills` on top as the harness-facing skill layer so teachers get rubric-backed workflows rather than raw tool calls.
+
+🔴 **The licence argument, which is the point of the recipe:** Moodle stays GPL-3.0 and **untouched**. The agent speaks HTTP to a documented API. 🟢 **No linkage, no inheritance, and the client owns the deliverable.** 🔵 **Say this explicitly in the SOW** — it is the difference between a deliverable a client owns and one they must publish.
+
+🔴 **Do NOT:** ship any part of this as a Moodle plugin; pull `lupantano/readingstrip` (GPL-3.0) in; or assume a `moodle-*` repository from an older pass still resolves.
+
+### 🟢 `P783-2` — SEND / assistive-reading pipeline, compliant by construction *(EMEA + North America · `3`–`4` weeks)*
+
+🔵 **What it is:** per-learner reading support that stays **outside** the EU AI Act's Annex III perimeter by never moving learner text off the device.
+
+| Tier | Component | Grant, verified this pass | Role |
+|---|---|---|---|
+| 🟢 Intake | [`nazarli-shabnam/ReadAble`](https://github.com/nazarli-shabnam/ReadAble) `main` · `d8b4a47ad354` | 🟢 **Apache-2.0** `11,357 B` · `c71d239df917` | 🟢 **ON-DEVICE OCR** + summarisation, mobile |
+| 🟢 Adaptation | [`ContentSquare/readapt`](https://github.com/ContentSquare/readapt) 🔵 **`master`** · `c76b44a0b831` | 🟢 **Apache-2.0** `11,357 B` · `c71d239df917` | Per-learner typographic profile. 🟢 Corporate-maintained |
+| 🟢 Comprehension scaffold | [`raucvr/Paper2Manga-Prism`](https://github.com/raucvr/Paper2Manga-Prism) `main` · `936fb36432ed` | 🟢 **Apache-2.0** `11,357 B` · `c71d239df917` | Dense text → sequential art, for ADHD and dyslexic readers |
+| 🟢 Browser delivery | [`developer-diganta/Dino`](https://github.com/developer-diganta/Dino) `main` · `e2d610d7099a` | 🟢 **MIT** 🔵 `LICENSE.md` `1,073 B` · `8d3abe465a2a` | In-page support where the learner works in a browser |
+
+🟢 **Wiring.** `ReadAble` does OCR and summarisation **on the handset**; the learner's profile (font, spacing, colour, strip) is produced by `readapt` and stored **per device**, never centrally; `Paper2Manga-Prism` renders the comprehension scaffold on demand; `Dino` carries the same profile into the browser. 🔵 **The only thing that ever leaves the device is an anonymous aggregate of which adaptations were used** — and even that is optional.
+
+🟢 **Why it is compliant by construction, not by policy.** 🔵 **In EMEA the emotion-recognition ban and the AI-literacy duty have been in force since `2025-02`, admissions/assessment/proctoring sit INSIDE Annex III, and tutoring/practice feedback sit outside it per the Commission's `2026-05` draft guidelines.** 🟢 **A pipeline that never transmits learner text, and never scores or ranks the learner, is a tutoring aid rather than an assessment system — and the architecture is the evidence.** 🔴 **The high-risk commencement date is disputed (`2026-08` vs `2027-12-02`); this recipe is designed so the answer does not change the build.** 🔵 **For North America it also satisfies Oklahoma SB 1734's "AI not the primary basis" constraint trivially — it never grades.**
+
+🔴 **Do NOT:** include `lupantano/readingstrip` (GPL-3.0, `35,149 B` · `3972dc9744f6`) or `Jojobeans1981/Ember-Campfire-Edition` (**no grant file**) in a deliverable.
+
+### 🟢 `P783-3` — LATAM university assistant, built from code that actually exists *(LATAM · `4`–`6` weeks)*
+
+🔵 **What it is:** a Portuguese- or Spanish-language agent over a university's own services, with retrieval on-premise, and the governance artefacts as a first-class deliverable.
+
+| Tier | Component | Grant, verified this pass | Role |
+|---|---|---|---|
+| 🟢 Institutional surface | [`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp) `main` · `003ee781daa0` | 🟢 **MIT** `1,107 B` · `3bf0a0b64f7d` | 🟢 **Brazil** — USP services via MCP, Portuguese. Pushed **`2026-11-12`** |
+| 🟢 Institutional surface *(alt)* | [`nialvape/utn-mcp`](https://github.com/nialvape/utn-mcp) `main` · `96e782115969` | 🟢 **ISC** `748 B` · `2ad14eb14513` | 🟢 **Argentina** — UTN student services, Spanish |
+| 🟢 Retrieval, on-prem | [`psychohub/rag-onpremise`](https://github.com/psychohub/rag-onpremise) `main` · `07f904e0f0df` | 🟢 **MIT** `1,078 B` · `6d2af0e36690` | Ollama + Qdrant, 🟢 **no GPU, no cloud** — nothing leaves the institution |
+| 🟢 Pedagogical track | [`LucasSpinola/assistentes-educacionais-com-ia`](https://github.com/LucasSpinola/assistentes-educacionais-com-ia) `main` · `0a7ab3372361` | 🟢 **MIT** `1,128 B` · `c19b91f630de` | Portuguese-language build track for educational assistants |
+| 🟢 LMS seam, if Moodle is present | `P783-1` above | 🟢 MIT | Moodle is widely deployed across the region |
+
+🟢 **Wiring.** Fork the institution-specific MCP server closest to the client (`usp-mcp` for a Brazilian university, `utn-mcp` for an Argentine one) — 🔵 **these are small repositories (`28★`, `12★`) and the fork is the starting point, not the product.** Put `rag-onpremise` behind it so course material is retrieved locally. 🟢 **Then build the deliverable that the region actually lacks: a usage register, an automated-decision review trail, and an evaluation harness.**
+
+🔵 **Why the governance layer IS the product here, not a wrapper on one.** 🔴 **No LATAM jurisdiction has an AI law in force — Brazil's PL 2338/2023 is still in a Chamber special committee.** 🟢 **But the LGPD already grants review rights over automated decisions, so a placement or grading assistant needs that trail today, statute or no statute.** 🔴 **And the measured gap is stark: Cetic.br `53%` use / `22%` guidelines; UNESCO IESALC `87%` university use / `26%` strategy / `9%` evaluating.** 🟢 **Selling the model is selling into the `87%`. Selling the evaluation is selling into the `91%` that have none.**
+
+🔵 **`T837` caveat to state plainly in a proposal:** every LATAM component above sits at `1`–`28★`. 🟢 **That is not a quality signal, it is a visibility one — these are institution-specific tools with institution-sized audiences** — but it does mean the engagement owns maintenance from day one. Price it that way.
+
+### 🟢 `P783-4` — The grant-authentication gate *(any region · `1` day, run before every quote)*
+
+🔴 **Two repositories this pass would have passed a careless licence check and poisoned a deliverable:** [`harvard-edge/cs249r_book`](https://github.com/harvard-edge/cs249r_book) at `30,155★` reports `NOASSERTION` on the claim channel and is **CC-BY-NC-SA-4.0** on the bytes — 🔴 **NonCommercial**; [`datawhalechina/easy-vibe`](https://github.com/datawhalechina/easy-vibe) at `20,403★` is alive with **no grant file on any of five filenames**.
+
+🟢 **The gate, in order. Five steps, each one defeated a real error this pass:**
+
+1. 🟢 **`git ls-remote --symref <url> HEAD`** — existence AND the branch. 🔴 **Never assume `main`:** `opencast/opencast` is `develop`, `sakaiproject/sakai` and `ContentSquare/readapt` are `master`, `harvard-edge/cs249r_book` is `dev`. 🔴 **Do not use a `repo:` search `422` as a death certificate (`T824`), and do not use the HTML page — it returns `403` for everything through the proxy (`T835`).**
+2. 🟢 **Fetch the grant at that branch across all five filenames** — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`. 🔵 **`L56`: a non-default filename carried the only grant on a fourth consecutive pass** (`developer-diganta/Dino` → `LICENSE.md`).
+3. 🟢 **Read the grade off the TITLE LINE** (`T822`), not off the claim channel's SPDX field. 🔴 `NOASSERTION` means *go read the bytes*, not *no licence*.
+4. 🟢 **Record `bytes` + `sha256₁₂`.** 🔵 Canonical Apache-2.0 is `11,357 B` · `c71d239df917`. 🔴 **A different hash at that length is a filled appendix and a shorter file is a stripped appendix — both fine (`T836`).** 🟢 **Byte count alone authenticates nothing.**
+5. 🟢 **Name the grant EXACTLY in the licence schedule.** 🔴 **`sakaiproject/sakai` is ECL-2.0 (`11,120 B` · `0688f62d04f1`), not Apache-2.0** — vendor comparison pages read this pass still say Apache, and ECL's patent grant is narrower. 🔵 Getting the name right closes counsel's question in one exchange.
+
+🔴 **Reject outright:** any component with no grant file; anything carrying an `NC` clause; GPL/AGPL anywhere inside a closed deliverable. 🔵 **Copyleft as a reference implementation is fine and should be said out loud — `openedx/openedx-platform` (AGPL-3.0) and Moodle (GPL-3.0) are both legitimate to run, read and integrate with over an API.**
+
 ## 🆕 `2026-11-12` · `p782` — **Six recipes, every address re-resolved on `git ls-remote` this pass. The learning-analytics recipe is RETIRED as written — `4` of the `5` Caliper libraries it depended on are gone and the surviving spec is not permissive — and a new LATAM recipe starts from a Colombian university's MIT tutor.**
 
 🔵 **Addresses in these recipes were re-resolved this pass, and `4` of `p781`'s "dead" ones turned out to be alive** (`microsoft/presidio`, `RoundTable02/socrates-skill`, `mitodl/open-learning-ai-tutor`, `1EdTech/caliper-spec`). 🟢 **`p781`'s instruction to check addresses before running a recipe was right; its list of which ones were broken was not** → `T824` in [`agents/top.md`](../agents/top.md).

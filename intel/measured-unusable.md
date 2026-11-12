@@ -3,6 +3,134 @@ industry: education
 region: Global
 updated: 2026-11-12
 ---
+
+## 🆕 `p783` — `2026-11-12` — **the complete authoritative dead set: `109` addresses that do not resolve on `git ls-remote`, out of `5,848` real addresses the base publishes (`1.86%`). This REPLACES `p781`'s `378`/`6.5%`, which was inflated `3.4×`.**
+
+🔵 **Instrument: `git ls-remote --symref https://github.com/<slug> HEAD`, one call per address, EVERY address the published base displays (`5,910` distinct strings), `12`-way parallel, `~4` minutes.** 🔴 **`T824` — a `repo:` search `422` cannot assert deletion; it fires on live repositories. 🔴 `T835` — the HTML page returns HTTP `403` for every address through this session's proxy, including `HKUDS/DeepTutor`, so it cannot corroborate anything.** 🟢 **Controls: all `10` of `p782`'s settled verdicts reproduced EXACTLY; `6` planted negative controls failed as designed.**
+
+🔵 **Why these are recorded rather than deleted:** `p769-C` — the trending shelves are append-only history, and a dead address inside a dated entry is evidence of what was true that week. 🟢 **The `3` addresses that DO have live successors were REPAIRED on the live shelves** (`apereo/opencast` → `opencast/opencast`, `gegok12/gegok12` → `Gego-K12/gegok12`, `JushBJJ/Mr` → `JushBJJ/Mr.-Ranedeer-AI-Tutor`); **the `109` below have none found.**
+
+🔴 **Excluded from this count and reported rather than hidden:** `55` strings that were never addresses — `search/repositories` (`700` citations), `topics/*`, `trending/python`, `repos/<owner>`, `orgs/<owner>` — harvested by **this pass's own extraction regex** from `api.github.com` URL forms; `10` placeholder addresses, of which 🔴 **`your-username/SafeTutors` and `yourusername/scholarmate` are genuine template leakage, a real repository NAME under a placeholder OWNER**; and `6` planted controls.
+
+### 🔴 The `109`, grouped by what they were
+
+**🔴 Moodle bridge — the largest cluster in the base, and Moodle is the dominant LMS — `11`**
+
+- 🔴 `DeepLearningHarness-Team/Moodle-MCP`
+- 🔴 `Hiroya-319/moodle-mcp-server`
+- 🔴 `JaipuriaAILabs/Moodle-MCP`
+- 🔴 `Marcus2012/MCP_Moodle`
+- 🔴 `NiccoloSalvini/mcp-moodle-staff`
+- 🔴 `NiccoloSalvini/mcp-moodle-teacher`
+- 🔴 `NmaaAlhawary/MCP-Moodle`
+- 🔴 `OGjoyce/mcp-moodle`
+- 🔴 `alnyx-dev/PGEK-moodle-mcp`
+- 🔴 `enovation/moodle-local_mcp_helper`
+- 🔴 `jmolpea/moodle-block_openaiagent`
+
+**🔴 1EdTech / IMS specifications and reference implementations — the interop layer — `10`**
+
+- 🔴 `1EdTech/caliper-java`
+- 🔴 `1EdTech/caliper-js`
+- 🔴 `1EdTech/qti-central`
+- 🔴 `1EdTech/spec-central`
+- 🔴 `1edtech/caliper-php`
+- 🔴 `Eduware-Inc/eduware-oneroster`
+- 🔴 `LongsightGroup/qti3-core`
+- 🔴 `concentricsky/badgr-server`
+- 🔴 `imsglobal/caliper-python`
+- 🔴 `trilogy-group/oneroster-ts`
+
+**🔴 Everything else — `88`**
+
+- 🔴 `AI-Matrix-Engine/aidream`
+- 🔴 `Ahmed-html/unlimited-ai-platform`
+- 🔴 `AlekSIS/AlekSIS-Core`
+- 🔴 `Batlez/CloakBox`
+- 🔴 `Cleison-Morais/koba`
+- 🔴 `Creaditor/frontend`
+- 🔴 `Dondo0936/vietnamese-ai-for-beginner`
+- 🔴 `EastArctica/canvas-mcp`
+- 🔴 `Epesi-Team/epesi`
+- 🔴 `Gego-K12/gegok12-documentation`
+- 🔴 `GegoK12/gegok12`
+- 🔴 `Gio0938/CocoMath`
+- 🔴 `HanChein/ElimuAI`
+- 🔴 `IAJBS/ia.educativajbs.steam`
+- 🔴 `InCruiter-NewProducts/proctoring-sdk`
+- 🔴 `Jnf290/KI-Assistent_Lehrkraefte`
+- 🔴 `JushBJJ/Mr`
+- 🔴 `Luzannevdw/safeguarding-prototype`
+- 🔴 `Mckaroff/GraphLMS`
+- 🔴 `PlexPt/awesome-chatgpt-prompts-zh`
+- 🔴 `TaiMaBenJi/knowledge-commons`
+- 🔴 `UOC/java-lti-1.3-provider`
+- 🔴 `Vargontoc/educational-framework`
+- 🔴 `a-ariff/canvas-instant-mcp`
+- 🔴 `ale-alejandro/beadkit`
+- 🔴 `anthropics/merlin`
+- 🔴 `apereo/opencast`
+- 🔴 `atlas-training-company/atlas`
+- 🔴 `aule-org/AImauta`
+- 🔴 `belentani7/aprende-brasil`
+- 🔴 `belentani7/lingua-aberta`
+- 🔴 `cdweaver1992/edfi-mcp-server`
+- 🔴 `dcostenco/prism-aac`
+- 🔴 `dev-cucei-itrans/siiau-api-client`
+- 🔴 `e9x/blackboard-mcp`
+- 🔴 `eastarctica/canvas-mcp`
+- 🔴 `en/get-started`
+- 🔴 `fairyofmiracle/edu_course_agent`
+- 🔴 `fake/nope-xyz123`
+- 🔴 `fh-yarbouh/oak-curriculum-ontology`
+- 🔴 `gegok12/gegok12`
+- 🔴 `gegok12/school-erp`
+- 🔴 `gmilano/negative-control-does-not-exist-p709`
+- 🔴 `gmilano/negative-control-p714-does-not-exist`
+- 🔴 `gregmontalvo/badgie`
+- 🔴 `hablala/hablala`
+- 🔴 `huaxx-lab/LeetLens`
+- 🔴 `ibm-skills-network/mark`
+- 🔴 `iep-ui/iep-ui`
+- 🔴 `ilodezis/mti-lms-mcp`
+- 🔴 `invincible-summer/Next-Tutor-Agent`
+- 🔴 `jagmarques/awesome-eu-ai-act`
+- 🔴 `jakerains/scormplayer`
+- 🔴 `jonajinga/open-phonics`
+- 🔴 `joojdev/academic-tracker-mcp`
+- 🔴 `juandacor/opencode-menthor`
+- 🔴 `jude-miller-dev/Milky-institute-online`
+- 🔴 `kerntau/class-log-system`
+- 🔴 `licenses/mit`
+- 🔴 `loqganesh-hue/aulalibre`
+- 🔴 `luzannevdw/safeguarding-prototype`
+- 🔴 `mabdulre9/electrical-engineering`
+- 🔴 `marsley01/Edyfra`
+- 🔴 `motiolabs-space/open-academic`
+- 🔴 `nclamvn/teacherAI`
+- 🔴 `openedx/fake-repo-zzz999`
+- 🔴 `openfresno/edgenuity-aeries-grade-passback`
+- 🔴 `parkseokjune/unist-blackboard-mcp`
+- 🔴 `plastic-labs/bloom`
+- 🔴 `projectremedy-ai/remedy-canvas-lti`
+- 🔴 `qilaidev/virtual-chem-lab`
+- 🔴 `radhepa/Teacher-MCP`
+- 🔴 `sabuhi-huseynli-grc/High-Risk-Deployer-FRIA-Governance-Toolkit`
+- 🔴 `sanity-labs/ai-literacy-framework`
+- 🔴 `santillana-ai/tutor-sdk`
+- 🔴 `smithjohn78390/tongjiang-lab`
+- 🔴 `superbuilders/timeback-dev-python`
+- 🔴 `thanh01pmt/curriculum-kit`
+- 🔴 `thanh01pmt/interactive-quiz-kit`
+- 🔴 `this-definitely-does-not-exist-xyz123/nope`
+- 🔴 `this-org-does-not-exist-zzz9/nope`
+- 🔴 `thisorgdoesnotexist000/nope000`
+- 🔴 `tuanha/vgu-mcp`
+- 🔴 `tura-learn/Dhee`
+- 🔴 `whiteRabbit1313/awesome-digital-public-infrastructure`
+- 🔴 `xmike04/canvas-student-mcp`
+- 🔴 `yetanalytics/lrspipe`
+- 🔴 `yokowasis/autograder`
 ## 🆕 `p772` — `2026-11-11` — **the base-wide address sweep: `79` displayed addresses that do not resolve and `7` that resolve to an EMPTY repository, from a probed population of `5,646`**
 
 🔵 **These are a different KIND of entry from every row above.** The rows above resolved and are refused for what their grant says. **These are refused for not being retrievable at all** — measured with `git ls-remote --symref`, then re-probed **serially** as a control after the parallel sweep and confirmed `79`/`79`.

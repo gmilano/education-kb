@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p783` — **The interop shelf lost its last two QTI addresses and its Open Badges server, and gained a verified replacement for the integration layer this base builds every LMS recipe on. `3` addresses REPAIRED, including the one `27` citations point at.**
+
+🔵 Every row PRIMARY: `branch` · `HEAD` from `git ls-remote --symref`, grant bytes and `sha256₁₂` measured on the file **as served at that branch**, grade read from the **title line** (`T822`). 🔴 **No row below was graded from the claim channel's SPDX field — `T836` shows why.**
+
+### 🟢 `ACTION p782-B` repairs applied to this shelf
+
+| Address this shelf displayed | Citations in base | 🟢 Resolution this pass |
+|---|---|---|
+| 🔴 `apereo/opencast` | `6` | 🟢 **REPAIRED → [`opencast/opencast`](https://github.com/opencast/opencast)**, branch 🔵 **`develop`** · `26fbc9363f07`. The project left the `apereo` org. 🔵 A recipe that clones `main` here gets nothing — Opencast's default branch is `develop` |
+| 🔴 `gegok12/gegok12` | `27` | 🟢 **REPAIRED → [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12)**, `main` · `99da145f55a1`. Owner re-cased to `Gego-K12`. 🔴 `GegoK12/gegok12` and `Gego-K12/gegok12-documentation` are both genuinely dead |
+| 🟢 `apereo/cas` | `7` | 🟢 **ALIVE and unmoved** — `master` · `370c8fa758a6`. 🔵 The `apereo` org is not gone; only Opencast left it. CAS, `java-cas-client`, `mod_auth_cas`, `phpCAS` and `cas-initializr` all still resolve |
+
+### 🔴 The interop layer keeps shrinking, and the remaining losses have no successor
+
+| Address | Citations | Verdict on the authoritative channel |
+|---|---|---|
+| 🔴 `trilogy-group/oneroster-ts` | **`40`** | 🔴 **DEAD, no successor found.** The highest-cited genuine death in this base. OneRoster rostering in TypeScript — a recipe depending on it must now implement the spec or buy |
+| 🔴 `concentricsky/badgr-server` | `6` | 🔴 **DEAD.** `1EdTech/badgr-server` also fails. 🔵 Open Badges' reference server; Badgr went commercial under Instructure and the open server went with it |
+| 🔴 `1EdTech/qti-central`, `1EdTech/spec-central` | — | 🔴 **DEAD.** The consortium's spec-hosting repositories |
+| 🔴 `LongsightGroup/qti3-core`, `1edtech/qti3-core` | — | 🔴 **DEAD, both spellings.** 🔴 **QTI 3 now has NO resolvable reference implementation on this base** |
+| 🔴 `1EdTech/caliper-js`, `1EdTech/caliper-java`, `1edtech/caliper-php`, `imsglobal/caliper-python` | `43`+ | 🔴 **DEAD — re-confirmed on both channels, a second consecutive pass.** Reproduces `p782` exactly |
+| 🟢 `1EdTech/caliper-spec` | — | 🟢 **ALIVE** — 🔵 `master` · `1849e118b47a`. Reproduces `p782`. 🔴 Grant remains a bespoke consortium licence, **not permissive** |
+| 🔴 `AlekSIS/AlekSIS-Core` | — | 🔴 **DEAD on GitHub.** 🔵 A free German school-information system; the project is known to self-host its forge, so this is a **platform migration, not necessarily a death of the project** — but it is not retrievable at the address this base publishes |
+| 🔴 `Epesi-Team/epesi` | — | 🔴 **DEAD.** 🔵 PHP school-management framework |
+
+🔵 **The shape of the interop story, stated plainly: the 1EdTech/IMS specification repositories are evaporating from GitHub while the specifications themselves remain in force.** 🔴 **Nine of this base's eleven 1EdTech-adjacent addresses now fail.** 🟢 **The operational consequence for a studio is specific — Caliper, QTI 3 and OneRoster are still what a client's procurement will name, but there is no longer a permissive reference implementation to start from for any of the three.** 🔵 Budget for implementing from the written spec, and treat "we'll fork the reference library" as unavailable.
+
+### 🟢 The integration layer, replaced — `3` live MIT substrates for the dominant LMS
+
+🔴 **The eleven-address Moodle bridge cluster is dead** (enumerated in [`agents/trending.md`](../agents/trending.md)). 🟢 **These three resolve and are graded:**
+
+| Repo | Address | Branch · `HEAD` | Grant, on the bytes | Claim channel | Why it is foundational |
+|---|---|---|---|---|---|
+| 🟢 **Moodle-MCP** | [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) | `main` · `1546a7009b01` | 🟢 **MIT** `LICENSE` · `1,065 B` · `86d287c1708f` | MIT · `205★` · `2026-11-01` | 🟢 **Client of Moodle's Web Service API, not a Moodle plugin.** 🔵 **The licence boundary is the architecture:** the dead cluster was full of `moodle-local_*` / `moodle-block_*` plugins that live inside GPL-3.0 code; an HTTP client does not inherit it |
+| 🟢 **moodle-mcp** | [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | `main` · `18bd1777eb0b` | 🟢 **MIT** `LICENSE` · `1,064 B` · `5da1fff0a1db` | MIT · `29★` · `2026-10-20` | Second implementation of the same seam — insurance against a single-maintainer substrate |
+| 🟢 **ictexam-mcp** | [`ictinnovations/ictexam-mcp`](https://github.com/ictinnovations/ictexam-mcp) | `main` · `5d7d8fe78b39` | 🟢 **MIT** `LICENSE` · `1,114 B` · `32fa441f2467` | MIT · `17★` · `2026-10-26` | 🟢 Gradebook and **item analysis** — the psychometric read, which no Moodle MCP server exposes |
+
+### 🟢 `T836` — the grant fingerprints this shelf should check against
+
+🟢 **Canonical Apache-2.0: `11,357 B` · `sha256₁₂` `c71d239df917`.** Reproduced independently on four unrelated repositories this pass (`Paper2Manga-Prism`, `ReadAble`, `readapt`, `langgptai/LangGPT`). 🔴 **But `11,357 B` is NOT a fingerprint on its own** — [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) is `11,357 B` · `58d1e17ffe51`, the same length with the appendix filled in, and [`alphadl/AdaRubrics`](https://github.com/alphadl/AdaRubrics) is `10,761 B` · `bd051be10e3b` with the appendix stripped. 🟢 **All three are Apache-2.0 on the title line; all three are usable; the hash tells you which variant you have, and nothing more.**
+
+🔵 **Canonical MIT clusters tightly around `1,064`–`1,114 B`** and the variance is entirely the copyright line — `Faixiang` `1,065`, `G36maid` `1,064`, `ictexam` `1,114`, `Dino` `1,073`, `usp-mcp` `1,107`. 🟢 **A "MIT" file far outside that band is worth reading before it is trusted.**
+
 ## 🆕 `2026-11-12` · `p782` — **The interop layer this base builds every integration recipe on is in worse shape than `p781` reported in one direction and better in another: `4` of `5` Caliper implementations are gone for good, but the surviving spec is ALIVE — and its grant is a bespoke consortium licence, not the permissive one a recipe would assume.**
 
 🔵 Every row PRIMARY: `branch` · `HEAD` from `git ls-remote --symref`, grant bytes and `sha256₁₂` measured on the file **on disk**, grade read from the **title line** (`T822`) except where a referral defeats it (`T826`, below).

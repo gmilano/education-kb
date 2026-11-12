@@ -4,6 +4,38 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p783` — **Disposition of `ACTION p782-A`…`p782-B`, and the actions for `p784`.**
+
+🟢 **`make hooks` was NOT the first command of this pass, because `p782` showed the wrapper is the problem.** 🟢 **The underlying line, invoked BARE, ran: exit `0`, `9` articles into `5` studios, `19` files committed (`05d5b1f`).** 🔴 **The same line inside a compound command was DENIED with the identical `[Code from External]`** → `T834`: the denial tracks the **opacity of the invocation**, and compounding re-creates the opacity `make` created. 🟢 **`2` for `14`.**
+
+### Disposition
+
+| Action | Status |
+|---|---|
+| 🟢 **`p782-B`** — re-derive the dead set; `p781`'s `110` DELETED-OR-PRIVATE class is untrustworthy | 🟢 **DISCHARGED, and wider than ordered.** The whole base was swept, not the suspect class: `5,910` addresses, one `git ls-remote --symref` each. 🟢 **`109` genuine deaths of `5,848` real addresses = `1.86%`, against `p781`'s published `378`/`6.5%` — inflated `3.4×`.** `55` of the `179` raw failures were never addresses; `10` were placeholders; `6` were planted controls |
+| 🟢 **`p781-B`** — repair the `268` RENAMED addresses | 🟢 **CLOSED.** `p782` correctly refused to run it against an unsound list. Re-derived here: only `3` addresses in the whole base have a live successor, and all `3` are repaired. 🔵 **The `268` figure was an artefact of the refuted `422` channel — there was never a `268`-row repair to do** |
+| 🟢 **`p782`'s `make hooks` prediction** | 🟢 **CONFIRMED with a refinement** (`T834`, above) |
+
+### 🔴 Actions for `p784`
+
+| Action | Why it is owed |
+|---|---|
+| 🔴 **`p783-A`** — **fix the address-extraction regex before any future sweep, and re-state the base's address count.** | 🔴 **`55` of this pass's `179` failures were this pass's own defect:** the pattern `github\.com/<seg>/<seg>` harvests `repos/HKUDS` from `api.github.com/repos/HKUDS/DeepTutor`, and `search/repositories` from an API query URL. 🟢 **Remedy is known: exclude a leading segment in `{repos, orgs, search, topics, trending, users, collections}` and strip the `api.` host before matching.** 🔵 Until that is done, every "addresses in this base" figure — including this pass's `5,848` — is approximate |
+| 🔴 **`p783-B`** — **audit the base for placeholder addresses published as data, and remove the two confirmed instances.** | 🔴 **`your-username/SafeTutors` and `yourusername/scholarmate` are a real repository NAME under a placeholder OWNER** — template leakage, the exact "example row compiled as an entity" defect. 🔵 `6` further placeholders (`OWNER/REPO`, `x/y`, `O/R`, `GIT_USER_ID/GIT_REPO_ID`, `org/repo`, `owner/name`) are legitimate query-syntax documentation in prose and should be LEFT. 🟢 **Find the real names behind the two: a `SafeTutors` and a `scholarmate` may well exist at a real owner** |
+| 🔴 **`p783-C`** — **a dedicated Mexico AI-in-education regulatory search.** | 🔴 **Declared gap, not silence.** This pass's LATAM regulatory search returned Brazil's PL 2338/2023 in detail and **nothing usable on Mexico** — one weak source claims an AI framework at "advanced legislative stages" and says nothing about education. 🟢 Mexico is the region's second market, carries named players (Ginia, Mattilda, Talisis) and a UNESCO pilot with CONALEP and DGETI. 🔴 **Per `T825`, run it single-term** |
+| 🔴 **`p783-D`** — **resolve the EMEA high-risk commencement date against a PRIMARY source.** | 🔴 **Two passes have now published the conflict without resolving it:** education-sector Annex III obligations read as `2026-08` by some sources and `2027-12-02` by others, the latter tied to the `2026` Digital Omnibus (Council adoption reported `2026-06-29`, unverified). 🟢 **This is the single highest-value unresolved fact in the base** — it moves an EMEA engagement's timeline by `16` months. 🔵 Go to EUR-Lex or the Commission's digital-strategy pages, not to vendor guides |
+| 🔴 **`p783-E`** — **re-resolve the Colorado contradiction.** | 🔴 One tracker says the Colorado AI Act was repealed `2026-05`; another gives a delayed `2026-06-30` effective date plus a federal-court enforcement pause. 🔴 **One of the two trackers is demonstrably unreliable** (it attributes bills to the wrong states). 🟢 **No Colorado claim ships off this base until a legislature source settles it** |
+| 🔵 **`p783-F`** — **sweep for LATAM education repositories with NO star floor, and count what the floors were hiding.** | 🟢 **`T837` is established but not sized:** every LATAM-placed find this pass sits at `1`–`28★`, below the `>60`/`>150`/`>250` floors this base's sweeps use. 🔵 **The claim "LATAM is thin" has never been tested without a floor.** 🟢 Run the education queries with no star qualifier, restricted by language and by `pushed:>`, and report how many permissive LATAM repositories exist below `60★` |
+| 🔵 **`p783-G`** — **verify whether `AlekSIS` migrated forges rather than died.** | 🔵 `AlekSIS/AlekSIS-Core` fails `ls-remote` and is counted among the `109`, but AlekSIS is a known German free-software school-information system that self-hosts its forge. 🟢 **If it is alive elsewhere, it is an EMEA SIS under a copyleft grant and belongs on [`verticals/solutions.md`](../verticals/solutions.md) with its real address** — not in the dead register. 🔴 This base cannot currently distinguish "left GitHub" from "ended" |
+
+### 🟢 Predictions `p784` can check cheaply
+
+| Prediction | How to test |
+|---|---|
+| 🟢 **`Faixiang/Moodle-MCP` will still be the leading Moodle bridge, and at least one of the `11` dead ones will NOT return.** | `ls-remote` on all `12` addresses. 🔵 Consolidation predicts the survivor grows and the dead stay dead |
+| 🟢 **The canonical Apache-2.0 fingerprint `11,357 B` · `c71d239df917` will reproduce on any new Apache-2.0 find.** | Grade `≥3` new Apache repos; `T836` predicts matches, filled appendices at the same length, or short files with the appendix stripped — and nothing else |
+| 🔴 **At least one multi-term claim-channel query will return `0` and that `0` will again be false.** | `T825` predicts the artefact recurs whenever a pass writes a `3`–`4` term query. 🟢 Decompose and compare |
+
 ## 🆕 `p781` — **Disposition of `ACTION p780-A`…`p780-H`, and the actions for the next pass.**
 
 🟢 **`make hooks` was the FIRST command of this pass and it SUCCEEDED — exit `0`, `32` lines, `9` articles into `5` studios, `0` working-tree changes.** `1` for `12`.

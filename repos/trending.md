@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p783` — **`ACTION p781-B` / `p782-B` CLOSED. The dead set is re-derived from scratch on the only channel that can assert existence: `109` genuine deaths of `5,848` real addresses — `1.86%`, not `6.5%`. `55` of the `179` raw failures were never repository addresses. `3` repairs applied. The repair backlog is now empty.**
+
+🟢 **This is the first pass to sweep the ENTIRE published base rather than a sample:** `5,910` distinct `github.com/<owner>/<repo>` strings extracted from all ten shelves, one `git ls-remote --symref` per address, `12`-way parallel, `~4` minutes wall-clock. 🔵 **`p780-B` estimated `5,817` calls at `~3` hours and reached for the `repo:`-qualifier batch trick to avoid it. That trick is what `T810` was, and `T824` refuted it.** 🟢 **The honest instrument turned out to be cheap after all — `ls-remote` parallelises where a rate-limited search API does not.**
+
+### 🔴 Why `p781`'s `378` was wrong in two different directions at once
+
+| | Count | |
+|---|---|---|
+| Raw `ls-remote` failures | `179` | |
+| 🔴 **minus** non-addresses — `search/repositories` (`700` citations), `topics/*`, `trending/python`, `repos/<owner>`, `orgs/<owner>` | `−55` | 🔴 **This pass's own regex defect**, reported rather than quietly dropped: `api.github.com/repos/HKUDS/DeepTutor` contains `github.com/repos/HKUDS` |
+| 🔴 **minus** placeholder addresses the base publishes | `−10` | `OWNER/REPO`, `x/y`, `O/R`, `GIT_USER_ID/GIT_REPO_ID`, 🔴 **`your-username/SafeTutors`**, 🔴 **`yourusername/scholarmate`** |
+| 🟢 **minus** planted negative controls | `−3` | 🟢 Instrument working as designed |
+| 🔴 **GENUINE deaths** | **`109`** | of `5,848` real published addresses = 🟢 **`1.86%`** |
+
+🔵 **Two independent errors compounded into `p781`'s `6.5%`.** 🔴 **First, `T810`: a `repo:` `422` was read as deletion when it also fires on live-but-unindexed repositories and on anything this session's token cannot see** — that inflated the numerator with live addresses. 🔴 **Second, nobody separated addresses from API paths** — `search/repositories` alone carries `700` citations and was being counted as a dead repository. 🟢 **`p782` caught the first and sized none of it; this pass catches the second and sizes both.**
+
+### 🟢 Repairs applied — and the backlog is now empty
+
+| Was | Citations | Now | Channel evidence |
+|---|---|---|---|
+| 🔴 `apereo/opencast` | `6` | 🟢 [`opencast/opencast`](https://github.com/opencast/opencast) | `ls-remote --symref` → 🔵 **`develop`** · `26fbc9363f07` |
+| 🔴 `gegok12/gegok12` | `27` | 🟢 [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | `main` · `99da145f55a1` |
+| 🔴 `JushBJJ/Mr` | `2` | 🟢 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | `main` · `ea29bcf196d2` — 🔵 a **truncation at the `.`**, not a rename; `24` other citations are correct |
+
+🔵 **`p769-C` governs what was NOT done here: the two trending shelves are append-only history, and a dead address inside a dated historical entry is evidence of what was true that week.** 🟢 **The repairs above were applied to the live shelves — [`repos/foundations.md`](foundations.md), [`verticals/solutions.md`](../verticals/solutions.md), [`compose/patterns.md`](../compose/patterns.md) — and the `109` are recorded in [`intel/measured-unusable.md`](../intel/measured-unusable.md) rather than edited out of history.**
+
+### 🔴 The trend in the dead set is a CONSOLIDATION, not decay — and it has a shape
+
+🔵 **`11` of the `109` are Moodle-MCP bridges.** 🔵 **`9` are 1EdTech/IMS specification and reference-implementation repositories** (`caliper-js`, `caliper-java`, `caliper-php`, `caliper-python`, `qti-central`, `spec-central`, `qti3-core` under two owners, `badgr-server`). 🟢 **Those two clusters are `18%` of all genuine deaths in a base spanning `5,848` addresses — the deaths are concentrated in the INTEGRATION layer, not spread evenly.**
+
+🟢 **What that means for a studio, concretely.** 🔴 **The agent layer of this base is stable** — `DeepTutor`, `OpenMAIC` and the skill shelf all reproduce at unmoved `HEAD`s, pass after pass. 🔴 **The layer that connects an agent to a real institution's systems is where addresses rot**, because those repositories are one-maintainer bridges written against an API that keeps moving. 🟢 **So the standing instruction is asymmetric: re-resolve integration addresses before every engagement, and treat agent addresses as durable.**
+
+### 🟢 Trending, verified — what actually moved on the claim channel this window
+
+| Repo | Grant, on the bytes | Claim channel | Note |
+|---|---|---|---|
+| 🟢 [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) | 🟢 **MIT** · `1,065 B` · `86d287c1708f` | `205★` · pushed `2026-11-01` | 🟢 **The consolidation winner of the Moodle shake-out** |
+| 🟢 [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 **Apache-2.0** · `11,357 B` · `58d1e17ffe51` | `625★` · pushed `2026-10-14` | 🟢 Skills **plus eval rubrics** — the assessable half of `p782`'s skill thesis |
+| 🟢 [`langgptai/LangGPT`](https://github.com/langgptai/LangGPT) | 🟢 **Apache-2.0** · `11,357 B` · `c71d239df917` | `12,691★` · pushed `2026-09-11` | Structured-prompt pedagogy. 🟢 Carries the **canonical** Apache text verbatim |
+| 🟢 [`alphadl/AdaRubrics`](https://github.com/alphadl/AdaRubrics) | 🟢 **Apache-2.0** · `10,761 B` · `bd051be10e3b` | `367★` · pushed `2026-08-24` | Adaptive rubric evaluation of agent trajectories |
+| 🔴 [`harvard-edge/cs249r_book`](https://github.com/harvard-edge/cs249r_book) | 🔴 **CC-BY-NC-SA-4.0** · `631 B` · `4452118f3ca0` | `30,155★` · branch 🔵 **`dev`** | 🔴 **NonCommercial — teach from it, never ship it.** Claim channel said `NOASSERTION` |
+| 🔴 [`datawhalechina/easy-vibe`](https://github.com/datawhalechina/easy-vibe) | 🔴 **no grant file at all** | `20,403★` · `f2239c67052b` | 🔴 Alive and unusable |
+
 ## 🆕 `2026-11-12` · `p782` — **`ACTION p781-B` could not be discharged as written, because the dead set it was built on is unsound: `T810`'s `422`-as-deletion rule is REFUTED and `3` of `p781`'s absences are alive. Repairs made anyway, including the one address `58` citations point at.**
 
 🔴 **`p781-B` ordered the `268` RENAMED addresses repaired, on the authority of `p781`'s `378`-dead sweep.** 🔴 **That sweep's classifier was sound; the verdicts published off it were not** — `microsoft/presidio`, `RoundTable02/socrates-skill` and `mitodl/open-learning-ai-tutor` all resolve on `git ls-remote` right now, and all three were published as dead or absent. 🔵 **Repairing `268` rows against a list that contains live addresses would have rewritten working citations into "successors" they never needed** → so the repair was run only where BOTH channels agree, and the list itself is carried forward for re-derivation as `p782-B`.

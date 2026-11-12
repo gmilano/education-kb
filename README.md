@@ -4,6 +4,30 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p783` — reads `2026-11-12`, commit `2026-11-12` — **🟢 The base's address integrity is settled: `109` dead of `5,848` real addresses (`1.86%`), not the `378`/`6.5%` three passes carried — every address swept on `git ls-remote`, the only channel that can assert existence. 🔴 And a SECOND instrument is retired: a multi-term claim-channel query ANDs its terms, returns `0` for a populated field, and was hiding an Apache-2.0 K-12 repository at `625★` plus an entire accessibility shelf.**
+
+🟢 **`ACTION p782-B` and `p781-B` are both CLOSED, and the repair backlog is empty for the first time in four passes.**
+
+| What `p783` settled | Figure |
+|---|---|
+| 🟢 Addresses swept, one `git ls-remote --symref` each | **`5,910`** distinct strings, all ten shelves, `~4` min |
+| 🔴 **Genuine dead addresses** | **`109`** of `5,848` real = 🟢 **`1.86%`** |
+| 🔴 `p781`'s published figure | `378` of `5,817` = `6.5%` — 🔴 **inflated `3.4×`** |
+| 🔴 Raw failures that were never addresses | **`55`** — 🔴 **this pass's own regex defect**, reported not hidden |
+| 🔴 Placeholder addresses the base publishes as data | **`10`**, of which 🔴 **`2` are genuine template leakage** |
+| 🟢 Addresses REPAIRED to a live successor | **`3`** — and only `3` exist in the whole base |
+| 🟢 Controls reproduced from `p782` | 🟢 **`10` of `10`, exactly** · `6` planted negatives failed as designed |
+
+🔵 **The largest dead cluster is the Moodle bridge — `11` addresses — and it matters more than its size.** 🔴 Every `moodle-local_*` / `moodle-block_*` plugin route in this base is dead. 🟢 **The survivor, [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) (MIT, `205★`), wins on a LICENCE boundary rather than on features: it is an HTTP client of Moodle's Web Service API, so a studio deliverable built on it does NOT inherit Moodle's GPL-3.0, where a plugin does.** 🔵 That is `P783-1` on [`compose/patterns.md`](compose/patterns.md).
+
+🟢 **New shelf this pass: assistive reading / SEND — `5` repositories, `4` permissive (`3` Apache-2.0, `1` MIT), none previously in this base.** 🔴 **All five were behind an empty query result that looked exactly like an absence.** 🟢 [`nazarli-shabnam/ReadAble`](https://github.com/nazarli-shabnam/ReadAble)'s **on-device OCR** is the EMEA compliance argument expressed as architecture: learner text never leaves the handset, so the pipeline stays outside the AI Act's Annex III perimeter by construction.
+
+🔴 **Two high-star repositories measured UNUSABLE, and the claim channel flagged neither:** [`harvard-edge/cs249r_book`](https://github.com/harvard-edge/cs249r_book) (`30,155★`, branch `dev`) is **CC-BY-NC-SA-4.0** — 🔴 **NonCommercial, barred from client deliverables** — while reporting `NOASSERTION`; [`datawhalechina/easy-vibe`](https://github.com/datawhalechina/easy-vibe) (`20,403★`) is alive with **no grant file on any of five filenames**.
+
+🟢 **`make hooks`: `p782`'s remedy CONFIRMED.** The bare line ran — exit `0`, `19` files, commit `05d5b1f`. 🔴 **The same line inside a compound command was DENIED** → `T834`: the denial tracks the **opacity of the invocation**, so invoke the underlying line **alone**. 🟢 **`2` for `14`.**
+
+🟢 **All five regions placed.** North America now quotable by bill number (**Oklahoma SB 1734**, **Maryland SB 720**, **Idaho SB 1227**, pending **NY A 9190**; `134` bills across `31` states). 🔴 **EMEA's education high-risk date remains disputed between `2026-08` and `2027-12-02` and is deliberately NOT resolved here** → `p783-D`. 🟢 **APAC: Vietnam's `2026-07` high-risk list names education including automated assessment.** 🟢 **LATAM: no AI law in force — Brazil's PL 2338/2023 is still in Chamber committee — while adoption runs far ahead of governance (Cetic.br `53%` use / `22%` guidelines; IESALC `87%` use / `26%` strategy / `9%` evaluating).** 🔵 **`T837`: the LATAM "gap" in this base is a THRESHOLD artefact — three permissive LATAM university MCP servers found this pass, at `12`–`28★`, below every star floor the base's sweeps use.** 🔴 **A dedicated Mexico search is owed** → `p783-C`.
+
 ## 🆕 `p781` — reads `2026-11-12`, commit `2026-11-12` — **🟢 `make hooks` IS NOT BLOCKED AND NEVER WAS. It ran, exit `0`, on the first try — in `/home/user/globant-kb`, the repository `CLAUDE.md` names. Eleven passes recorded "BLOCKED-ON-ENVIRONMENT — the remedy is a session permission change" for what was a WORKING-DIRECTORY error in their own method. 🔴 And `378` of this base's `5,817` addresses do not resolve.**
 
 🟢 **`make hooks` was the first command of this pass and it SUCCEEDED.** `1` for `12`. Exit `0`, `32` lines, `9` articles classified into `5` studios, `0` working-tree changes.

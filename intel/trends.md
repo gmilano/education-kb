@@ -4,6 +4,57 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p783` — **The integration layer is consolidating while the agent layer holds still: `11` Moodle bridges died and one MIT survivor took the category, on an architecture that crosses a LICENCE boundary rather than a technical one. Plus the measurement trend this base has to own — two instruments retired in three passes, both for producing nulls that looked like findings.**
+
+### 🟢 `T1` — Consolidation has reached the INTEGRATION layer, and it is the first layer to shake out
+
+🔵 **The agent layer of this base has been stable for four passes:** `HKUDS/DeepTutor` (`58,424★`, Apache-2.0) and `THU-MAIC/OpenMAIC` (`43,349★`, MIT) reproduce at unmoved `HEAD`s pass after pass, and the skill shelf `p782` identified keeps growing without displacing them. 🔴 **The integration layer did the opposite: `11` Moodle-MCP bridge repositories died between `p782` and this pass's sweep, and `9` 1EdTech/IMS specification repositories with them.** 🟢 **Those two clusters are `18%` of all `109` genuine deaths in a `5,848`-address base.**
+
+🔵 **The mechanism is not mysterious.** 🟢 **An agent framework is a general artefact with many users; a Moodle bridge is a one-maintainer adapter written against someone else's moving API.** 🔴 **So addresses in the integration layer rot at a far higher rate than addresses in the agent layer** — which makes the standing operational rule asymmetric: **re-resolve integration addresses before every engagement; treat agent addresses as durable.**
+
+### 🟢 `T2` — The winning integration architecture is chosen by LICENCE BOUNDARY, not by features
+
+🔴 **The dead Moodle cluster is full of `moodle-local_*` and `moodle-block_*` plugins** — code that lives *inside* Moodle's GPL-3.0 tree. 🟢 **The survivor, [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) (MIT, `205★`, `1,065 B` · `86d287c1708f`), is a zero-dependency client of Moodle's Web Service API.**
+
+🔵 **That is the trend, stated generally: the integrations that survive are the ones that sit OUTSIDE the copyleft platform they integrate with.** 🟢 **A plugin inherits GPL-3.0 and cannot be a closed deliverable; an HTTP client against a documented API inherits nothing.** 🔴 **The eleven that died were, in licence terms, unsellable for studio work even while they lived.** 🟢 **The market selected for the architecture that is also the commercially viable one — which is rare and worth naming.**
+
+### 🔴 `T3` — Two instruments retired in three passes, both for the same failure mode: a null that looked like a finding
+
+| Pass | Instrument | How it failed |
+|---|---|---|
+| 🔴 `p780`→`p782` | `T810` — a `repo:` query returning HTTP `422` reads as deletion | 🔴 **REFUTED (`T824`).** `422` also fires on live-but-unindexed repositories and on anything the session's token cannot see. Produced `3` published false absences and inflated the dead count `3.4×` |
+| 🔴 `p783` | A multi-term `in:name,description` claim-channel query | 🔴 **REFUTED (`T825`).** GitHub ANDs free-text terms; `3`–`4` terms rarely co-occur in one short description, so the query returns `0` for a populated field. Was hiding an Apache-2.0 `625★` repository and a whole accessibility shelf |
+
+🔵 **The common shape: both instruments answered "is there anything there?" with a null, and a null is indistinguishable from an absence unless it is tested against a known positive.** 🟢 **The methodological consequence, and this base should treat it as standing: EVERY absence claim must be produced by an instrument that has been shown to return a positive on a control in the same call pattern.** 🔴 **`T835` adds a third trap in the same family — `github.com/<slug>` returns HTTP `403` for every address through this session's proxy, including live ones, so the HTML page cannot corroborate anything.**
+
+🟢 **Why this is a *trend* entry rather than housekeeping: a knowledge base that publishes absences is making its most valuable and most dangerous claims.** 🔵 **"There is no permissive SEND agent" is exactly the sentence a studio would act on by quoting a from-scratch build.** 🔴 **This pass found four permissive assistive-reading repositories behind one such null.**
+
+### 🟢 `T4` — Accessibility / SEND emerged as a buildable category, with no copyleft centre of gravity
+
+🟢 **Four of five repositories on the new assistive-reading shelf are permissive — three Apache-2.0, one MIT** ([`raucvr/Paper2Manga-Prism`](https://github.com/raucvr/Paper2Manga-Prism), [`nazarli-shabnam/ReadAble`](https://github.com/nazarli-shabnam/ReadAble), [`ContentSquare/readapt`](https://github.com/ContentSquare/readapt), [`developer-diganta/Dino`](https://github.com/developer-diganta/Dino)). 🔵 **That licence distribution is unusual for accessibility software, which historically clusters GPL** — and it is what converts SEND from a category a studio studies into one it can ship.
+
+🟢 **The architecturally significant member is `ReadAble`, for its ON-DEVICE OCR.** 🔵 **In EMEA that is not a performance choice, it is the compliance argument:** with admissions, assessment and proctoring inside Annex III and tutoring outside it, a pipeline that never moves the learner's text off the handset stays outside the high-risk perimeter **by construction**. 🟢 **Design-for-jurisdiction is becoming a property of the architecture rather than a document attached to it.**
+
+### 🟢 `T5` — The skill-shaped agent got its missing half: rubrics
+
+🔵 **`p782`'s `T1` observed six of eleven finds shipping as skills for an existing harness rather than as applications.** 🔴 **A skill with no rubric is unassessable, which is fatal in a sector where procurement asks for evidence of efficacy.** 🟢 **[`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) (Apache-2.0, `625★`, `11,357 B` · `58d1e17ffe51`) ships skills AND eval rubrics for K-12 teachers**, and [`alphadl/AdaRubrics`](https://github.com/alphadl/AdaRubrics) (Apache-2.0, `367★`) provides the generic adaptive-rubric machinery under the same idea. 🟢 **The skill form is maturing toward something a district can procure rather than merely install.**
+
+### 🔴 `T6` — The regulatory clocks have split by more than a year, and that is now a design constraint
+
+🔵 **EMEA:** education high-risk obligations read as `2026-08` by some sources and `2027-12-02` by others (Digital Omnibus), 🔴 **unresolved this pass and deliberately not resolved**; the emotion-recognition ban and AI-literacy duty have been in force since `2025-02`. 🟢 **APAC:** Vietnam's `2026-07` high-risk list already names education including automated assessment; Japan promotes (`AI Basic Plan`, `2026-07-14`); China binds by service type; India has no law but labels synthetic content since `2026-02-20`. 🟢 **North America:** `134` bills across `31` states, four enacted statutes with four different duty sets. 🔴 **LATAM:** nothing in force; Brazil's PL 2338/2023 still in committee.
+
+🟢 **The consequence is architectural, not legal: no single compliance posture serves a client in two regions, so the sellable artefact is a POLICY-CONFIGURABLE deployment.** 🔵 This is the second consecutive pass to reach that conclusion from independent evidence.
+
+### 🔴 `T7` — Adoption is near-universal and governance is not, and the gap is widening fastest where adoption is highest
+
+🟢 **`86%` of education organisations use generative AI — the highest of any industry** (Microsoft). 🔴 **Against that: LATAM runs `53%` administrator use against `22%` with guidelines (Cetic.br), and `87%` university use against `26%` with a strategy and `9%` evaluating it (UNESCO IESALC).** 🟢 **Brazil's teachers are at `56%` use versus a `36%` OECD average (TALIS `2024`) — ahead of the OECD on adoption, far behind on governance.**
+
+🔵 **`p782` called governance the barrier; this pass can say where it bites hardest.** 🟢 **The `9%`-evaluate figure is the most actionable number in this base** — it means the evaluation layer, not the model layer, is the unbuilt thing, and OECD's `2026` Digital Education Outlook ("AI helps learning only where pedagogy stays in control") is the argument for funding it.
+
+### 🔴 `T8` — What is fading, so a studio does not pitch it
+
+🔴 **Blockchain credentialing, full-classroom VR, and the chatbot-as-tutor framing are all reported fading this pass.** 🟢 **What replaced the last one commercially is skills-first infrastructure — Instructure's Canvas Career reached GA in `2026-01`.** 🔵 **Corroborating signal from this base's own measurements: the Open Badges reference server (`concentricsky/badgr-server`) is DEAD at both spellings, and the Caliper and QTI 3 reference implementations with it.** 🟢 **The credentialing-rails story is receding in code as well as in commentary.**
+
 ## 🆕 `2026-11-12` · `p782` — **The education agent is shipping as a SKILL, not a platform — six of eleven finds this pass — and the regulatory clocks have split: EMEA's high-risk deadline slipped to `2027-12-02` while Vietnam's education transition is already running.**
 
 ### 🟢 `T1` — The education agent has changed SHAPE: skill, not application

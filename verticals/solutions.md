@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p783` — **Sakai's ECL-2.0 grade REPRODUCED independently, and it matters because third-party comparison pages read THIS pass still publish "Sakai is Apache 2.0." One vertical address REPAIRED to a branch no recipe would have guessed. And the AI-on-top seam for Moodle changed shape: the plugin route is dead, the API route is alive.**
+
+🔵 Every grade below read from the file **as served at the branch `git ls-remote --symref` reports** — **not** `main` by assumption, because `3` of the platforms on this shelf do not use it.
+
+### 🟢 `p782`'s Sakai correction REPRODUCED, and why it must keep being restated
+
+| Platform | Address | Branch · `HEAD` | Grant, graded on the bytes | 🔴 What the market says |
+|---|---|---|---|---|
+| 🟢 **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔵 **`master`** · `af576e8b4d32` | 🟢 **Educational Community License v2.0 (ECL-2.0)** · `LICENSE` · `11,120 B` · `0688f62d04f1` | 🔴 **A vendor LMS-comparison page read this pass states "Sakai is Apache 2.0 licensed."** It is not, and it never was |
+
+🔵 **`T826` territory, restated with the fingerprint so the next pass does not have to re-litigate it.** 🟢 **ECL-2.0 is an Apache-2.0 *derivative*: the body is Apache's, which is why the file is a plausible `11,120 B` and why automated detectors and comparison blogs round it to "Apache."** 🔴 **The deviation is in the patent grant — ECL narrows it to the contributor's own "Original Work" rather than the whole combined work, a change written specifically for universities contributing to a shared codebase.** 🟢 **Operationally: ECL-2.0 is OSI-approved and permissive, so Globant CAN build on Sakai and close over the result.** 🔴 **But a licence schedule in a client contract that names it "Apache-2.0" is simply inaccurate, and the narrower patent grant is exactly the clause a client's counsel will ask about.** 🔵 **Name it ECL-2.0, cite `11,120 B` · `0688f62d04f1`, and the question closes in one exchange.**
+
+### 🟢 Address repaired on this shelf
+
+| Was | Now | Evidence |
+|---|---|---|
+| 🔴 `apereo/opencast` — lecture capture / media management | 🟢 [`opencast/opencast`](https://github.com/opencast/opencast) | `ls-remote --symref` → branch 🔵 **`develop`** · `26fbc9363f07` |
+
+🔵 **Two traps in one row.** 🔴 **The org moved** (`apereo` → `opencast`), **and the default branch is `develop`, not `main` or `master`.** 🟢 A recipe that pins `main` against the corrected address still gets nothing. 🔵 **This is the third platform on this shelf whose default branch is not `main`** — with Sakai (`master`) and `ContentSquare/readapt` (`master`) — which is why the standing rule on this shelf is to read the symref rather than assume.
+
+### 🔴 The AI-on-top seam for Moodle has CHANGED SHAPE, and the old route is gone
+
+🔵 **The question this shelf exists to answer is "what real system can a studio customise with AI on top."** 🔴 **For Moodle — the most-deployed LMS across every region this base covers — the answer changed this window, and the change is a licence boundary rather than a technical one.**
+
+| Route | Status | Licence consequence |
+|---|---|---|
+| 🔴 **Moodle PLUGIN** (`moodle-local_*`, `moodle-block_*`) | 🔴 **DEAD as an option in this base** — `enovation/moodle-local_mcp_helper` and `jmolpea/moodle-block_openaiagent` both fail `ls-remote`, along with `9` more | 🔴 **A plugin lives inside Moodle's GPL-3.0 codebase. A studio deliverable shipped as a Moodle plugin inherits GPL-3.0** — it cannot be closed |
+| 🟢 **Web Service API CLIENT** | 🟢 **ALIVE and consolidating** — [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP), MIT, `1,065 B` · `86d287c1708f`, `main` · `1546a7009b01`, `205★` | 🟢 **An HTTP client against a documented API does not link Moodle's code and does not inherit its grant.** MIT in, MIT out |
+
+🟢 **So the vertical recipe for Moodle is now: leave Moodle untouched, enable its Web Service API, and put the agent outside the GPL boundary.** 🔵 **That is a better answer than the plugin route was even when the plugin route existed** — it survives Moodle upgrades, and it is the difference between a deliverable a client owns and one they must publish.
+
+### 🔵 The LMS grant landscape, as measured rather than as advertised
+
+🔴 **No mainstream LMS is MIT-licensed, and this pass found no exception to that.** 🟢 **The shelf, by what a studio can actually do with it:**
+
+| Platform | Grant | Can a studio close over a derivative? |
+|---|---|---|
+| 🟢 **Sakai** | **ECL-2.0** (measured: `11,120 B` · `0688f62d04f1`) | 🟢 **YES** — the only permissively-licensed mainstream LMS on this shelf. 🔵 Apereo-stewarded, founded by a US university consortium |
+| 🔴 **Open edX** | AGPL-3.0 — [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform), reproduced at `e12d78569742` by `p782` | 🔴 **NO** — network copyleft. Reference and self-host, not a closed deliverable |
+| 🔴 **Moodle** | GPL-3.0 | 🔴 **NO for plugins** · 🟢 **YES for API clients** — see the seam above |
+| 🔴 **Canvas** | AGPL-3.0 core, commercial cloud | 🔴 **NO.** 🔵 Self-hosting is operationally heavy and some commercial features are absent from the open code |
+| 🔴 **ILIAS**, **Chamilo** | GPL-3.0 | 🔴 **NO** |
+| 🔴 **OpenEduCat** *(LMS + SIS, PostgreSQL)* | LGPL-3.0 | 🔵 **PARTIALLY** — LGPL permits proprietary code to link the library, but modifications to OpenEduCat itself stay LGPL. 🔴 Its own marketing figures are internally inconsistent (Moodle user counts given as both `350M+` and `400M+` on its own pages) and are not relied on here |
+| 🔴 **FenixEdu Academic** *(SIS)* | LGPL-3.0 · `FenixEdu/fenixedu-academic` | 🔴 **ALIVE but STALE — last push `2023-06-14`.** 🔵 A Portuguese university SIS (EMEA); usable as a data-model reference, not as a platform to build on in `2026` |
+| 🔴 `AlekSIS/AlekSIS-Core`, `Epesi-Team/epesi` | — | 🔴 **Not retrievable at the published address** — see [`repos/foundations.md`](../repos/foundations.md) |
+
+🟢 **The one-line answer a studio needs: if the engagement requires a closed derivative of an LMS, it is Sakai (ECL-2.0) or it is an API client sitting outside a copyleft platform. There is no third option on this shelf.**
+
 ## 🆕 `2026-11-12` · `p782` — **Sakai is NOT Apache-2.0 and never was — it is the Educational Community License, which this base has mis-graded for six versions. One vertical address was dead outright. And a third LMS turns up carrying the SAME licence file as Moodle and Chamilo, byte for byte.**
 
 🔵 Every grade below read from the file **on disk**, at the branch `git ls-remote --symref` reports — **not** `main` by assumption, because `4` of the `8` platforms here do not use it.
