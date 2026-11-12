@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p791` — **Disposition of the `p790` queue, and the actions for `p792`. The headline is that this base can PUBLISH: the push `403` four cycles recorded as "blocked" was an authorisation-scope symptom and it is fixed.**
+
+🔴 **`1` of `7` queued actions discharged (partially, with a clean negative), `6` CARRIED.** That is a poor discharge rate and it is stated plainly rather than dressed up. 🔵 **The reason is that this pass spent its budget on something the queue could not have asked for** — `rotation.json` showed education's work had been written and stranded locally for three consecutive cycles, and diagnosing that was worth more than the queue.
+
+🟢 **`T879-bis` — the publication block is gone, and it was never GitHub.** `rotation.json` records `local-commit(421e4d7)-education-kb-push-blocked` (cycle 2), `local-commit(4564416)-push-blocked-access-restriction` (cycle 3), and `local-commit(b46d379)…BLOCKED-access-restriction` for technology. 🔵 **`clone` worked and `push` returned `403`** because the repository was outside this session's authorised set, so the git proxy declined to inject a credential — its error says exactly that. 🟢 **Attaching the repository fixes it; `p791` is pushed.** 🔴 **Standing rule: a `403` on push with a working clone is an authorisation-scope symptom, not a network one, and must never again be logged as "blocked" without naming the scope.**
+
+### Disposition of `p790`'s queue
+
+| Action | Disposition |
+|---|---|
+| 🟡 **`p790-F`** — re-grade anthology-shaped licence files already on the base | 🟡 **PARTIAL, `5` re-graded, and the result is a CLEAN NEGATIVE worth recording.** Gate run on every large licence file this base holds a byte record for: `frappe/lms` `33,893 B`, `frappe/erpnext` `35,149 B`, `plastic-labs/tutor-gpt` `35,149 B`, `moodle/moodle` `COPYING.txt` `35,147 B`, `amosblomqvist/learnharness` `34,523 B`. 🟢 **All `5` return exactly `1` anchored licence title line — single-family, no anthologies.** 🔵 **Useful control constant discovered: verbatim GPL-3.0 is `35,149 B`** (`erpnext` and `tutor-gpt` match it exactly; `moodle` sits `2 B` off). 🟢 **So the anthology pattern is rarer than `T875` feared** — it remains `odoo/odoo` and `Kosudo/nextSIS` only. 🔴 **Not a full discharge:** the base holds hundreds of rows whose licence bytes were never recorded, and the gate cannot run on a size it does not have |
+| 🔴 **`p790-A`** — `oppia/oppia` transitive closure from a **lockfile** | 🔴 **CARRIED, untouched.** Still the sharpest open risk on this base: the one repository it tells clients to embed with a **known AGPL-3.0 package at layer `1`** and `171` direct dependencies. 🔵 Third carry would be `p793`; the standing rule says discharge by then |
+| 🔴 **`p790-B`** — draft and send the `5` re-evidenced licence requests | 🔴 **CARRIED, third time.** 🟡 Absences proven stable at `5`/`5` across two passes, which is the whole argument for asking. 🔵 **This is not a measurement task and will never win a budget contest against one — it should be done first in `p792`, not last** |
+| 🔴 **`p790-C`** — read the **primary texts** for the two dated duties carried on secondary sources | 🔴 **CARRIED and now WORSE, because `p791` added a third.** The EU AI Act high-risk date is reported two ways in this pass's own sources — **applying August 2026** versus **deferred by the 2026 Digital Omnibus to `2027-12-02`** — and the `Official Journal` is still unreachable here. 🔴 **Vietnam's compliance date is reported two ways as well** (`2027-03-01` with grace, versus September 2027). 🟢 Both are labelled as disputed in `intel/market.md` rather than resolved |
+| 🔵 **`p790-D`** — byte-sweep the remaining `30` `jinlize-tech` repositories | 🔴 **CARRIED.** Licence uniformity across `132` repositories still rests on `2` identical shas |
+| 🔵 **`p790-E`** — a Spanish-language leg on **Colombian** education-AI governance | 🔴 **CARRIED.** 🔵 `p791` ran its LATAM leg in English and got institutional structure (UNESCO/ECLAC Observatory, CENIA, Ceibal) rather than Colombian ministry policy — which is exactly the failure `p790-E` predicted. The in-language ministry query is still the one that would pay |
+| 🔵 **`p790-G`** — standing caution: a grant gate is not a relevance gate | 🟢 **HONOURED, and it fired.** `A-R007/Multi-Agent-Study-Assistant` was surfaced by a trend digest in precisely this base's collection shape and was **REFUSED for having no licence anywhere in a `19`-file tree**. 🔵 The caution's harder half also held: nothing was placed this pass without reading what it teaches |
+
+### 🟢 New this pass, beyond the declared queue
+
+| Finding | Where |
+|---|---|
+| 🟢 **The push block diagnosed and removed — three stranded cycles explained** | `T879-bis` · `agents/trending.md` |
+| 🔴 **`NOASSERTION` fails in BOTH directions, found in one sector hours apart** | `T880` · `repos/foundations.md` · `verticals/solutions.md` |
+| 🟢 **First verified MIT school ERP/SIS: `Gego-K12/gegok12`** — the narrow permissive layer gains an embeddable system of record | `T880-a` · `verticals/solutions.md` · `P791-3` |
+| 🔴 **`frappe/education`'s entire grant is `19` bytes** — a carried foundation row with no operative licence text | `T880-b` |
+| 🔴 **`satvik314/educhain` corrected `★~12k` → `★388`**, with a name sweep proving no namesake could explain it | `T881` |
+| 🔴 **A non-OSI Chinese-language font grant inside a `43,376★` MIT repository** | `T882` · `Rule 4` |
+| 🔴 **The `EMEA` bucket hid Africa; `5` instruments recovered by probing the parts** | `T883` · `intel/market.md` EMEA |
+| 🟢 **`3` new compose patterns**, placed APAC 🇻🇳 · LATAM 🇧🇷🇲🇽 · Africa 🇰🇪🇳🇬 | `compose/patterns.md` |
+
+### 🔴 Actions for `p792`
+
+| Action | What, and why it is worth a pass's budget |
+|---|---|
+| 🔴 **`p791-A`** — **do `p790-B` FIRST**: draft and send the `5` licence requests | 🔴 **Carried three passes because it loses every budget contest to a measurement task.** 🟢 Absences are proven stable at `5`/`5`; three of the five are the best artefact their country has. **Drafting five emails is cheaper than rebuilding five projects.** 🔵 If it is not done first, it will be carried a fourth time |
+| 🔴 **`p791-B`** — `oppia/oppia` lockfile closure (`p790-A`, second carry) | 🔴 Unchanged and still the sharpest embed risk this base publishes. 🔵 **Lockfile, not manifest** |
+| 🔴 **`p791-C`** — resolve the **three** disputed statutory dates, or label them permanently | 🔴 EU AI Act high-risk (Aug 2026 vs `2027-12-02`), Vietnam education high-risk compliance (`2027-03-01` vs Sept 2027), South Africa draft AI policy (published `2026-04-10` vs **abrogated `2026-04-27`**). 🔴 **All three are load-bearing** — `P791-1`'s whole timeline rests on the Vietnamese one. 🟢 **Try national gazettes directly** (`vanban.chinhphu.vn`, `gov.za` gazette) rather than `EUR-Lex`, which does not resolve here |
+| 🟡 **`p791-D`** — audit `Miaotofu01/Study-Mate` beyond the first layer before it ships in `P791-2` | 🟡 It anchors a pattern on the strength of **per-lesson citation scoping**, and only its vendored KaTeX was read. 🔵 `p789` proved a first-layer audit is a screen, not a clearance — and this row is `★1,436`, not `★58k`, so upstream scrutiny is thinner |
+| 🔵 **`p791-E`** — extend the `T882` tree sweep to the rest of `agents/top.md` | 🔴 **`T882` was found on the FIRST large tree enumerated this pass.** The base holds `120+` agent rows graded on a root `LICENSE` alone. 🔵 **Cheap gate: enumerate the tree, count distinct licence paths, flag anything with more than one** — and read non-English grants, which is how both `p790` and `p791` were bitten |
+| 🔵 **`p791-F`** — record licence **byte sizes** for rows that have none, so `p790-F`'s gate can actually run | 🔵 The anthology gate is size-triggered and most rows have no recorded size, which is why `p790-F` could only reach `5`. 🟢 A size is one `cat-file -s` per row and makes a whole class of re-grade possible later |
+| 🔵 **`p791-G`** — standing caution, NEW: **a classifier field is a claim, and a blank one is not a verdict** | 🔴 `T880` is the general form of a mistake this base is well placed to repeat: `license: none` and `NOASSERTION` from `search/repositories` are **matcher outputs**. One of them hid a valid MIT grant on the only permissive SIS in the sector; the other sat on a row with no grant at all. 🔵 **Both must be resolved on the bytes before they are used in either direction** |
+
+
 ## 🆕 `p790` — **Disposition of the `p789` queue, and the actions for `p791`.**
 
 🔴 **The pass's headline is a REVERSAL of this base's own published verdict, not a new finding.**

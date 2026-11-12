@@ -4,6 +4,27 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p791` — two agents added, one count corrected, one candidate REFUSED, one tree re-audited
+
+🟢 **Method unchanged from `p790` and extended once.** Existence via `git ls-remote` (exit status read directly). Grant by **anchored title lines** in the served licence bytes, reported as a **set** when the file is an anthology (`T875`). Stars are claim-channel reads of `search/repositories` with a `repo:` qualifier, which return **exact integers**. 🟢 **New instrument this pass:** `git clone --filter=blob:none --no-checkout --depth 1` followed by `git cat-file -p HEAD:<path>` — it enumerates the whole tree, is case-exact, and fetches only the blobs actually read. It is now the cheapest byte channel this base has, and it is what settled `T882`.
+
+| Agent | Repo | Grant, on the bytes | ★ (exact) | Last push | Verdict for Globant |
+|---|---|---|---|---|---|
+| **Study-Mate** 🆕 | [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 **MIT** · `1,064 B` · `1b105b8e1b6b` | `1,436` | `2026-11-06` | 🟢 **Added, and the most directly reusable new row this pass.** A multi-agent builder turns a one-sentence goal into a private course, then a **course-scoped RAG tutor** teaches it with **per-lesson citations**. 🟢 The citation scoping is the valuable part: it is the architecture that answers *"where did the tutor get this?"* — the question every education client asks. 🟡 `363` files; vendors KaTeX (`lib/katex/LICENSE`, MIT) — clean to the first layer |
+| **tutor-gpt** 🆕 | [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 **GPL-3.0** · `35,149 B` · `f288702d2fa1` | `932` | `2026-02-20` | 🟡 **Added with two warnings, because the trend digests that surface it state neither.** A *diagnosis-first* tutor — it reasons about the learner's state before answering, which is the pedagogically interesting part. 🔴 **It is GPL-3.0, not permissive**, so it is a boundary deployment, never an embed. 🔴 **And it is `~9` months stale** (`2026-02-20`), so treat it as a reference architecture to read, not a dependency to adopt. 🔵 Its licence is also a live `T875` specimen: §13 at line `552` *names* the Affero GPL and a substring grader returns `AGPL-3.0` — the grant is GPL-3.0 |
+| **Educhain** ✏️ | [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 **MIT** · `1,092 B` · `b46290b36e7f` | 🔴 **`388`** | `2026-05-29` | ✏️ **CORRECTED — this base published `~9k★` (cycle 2) and `~12k★` (cycle 3). The exact count is `388`**, and a full name sweep finds no `educhain` anywhere above `★22`, so the figure described no real repository (`T881`). 🟢 **The tool is still genuinely useful** — MIT, document/YouTube-to-course generation — but it is a small, six-month-stale project and must be presented as one |
+| **OpenMAIC** 🔍 | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟡 **`TREE[MIT root + LGPL + ARPHIC-PL + OFL + bespoke-CN font]`** · root `1,065 B` · `76abc5f13261` | `43,376` | `2026-11-12` | 🔍 **Carried row, re-audited on the full `4,388`-file tree, and the root grant is not the tree's grant (`T882`).** Tsinghua MAIC's multi-agent interactive classroom; the largest education-specific agent repository this base holds after DeepTutor, and pushed today. 🟢 Root and all `7` first-party sub-packages are MIT. 🔴 `packages/mathml2omml` is **LGPL**; the renderer ships **three font grants**, one of them a non-OSI Chinese-language licence with **no-rename** and **no-resale-as-product** terms. 🟢 Usable — **carry the font licences and keep font names intact** |
+| **DeepTutor** 🔍 | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** · `11,408 B` (control reproduced) | `58,554` | `2026-11-07` | 🟢 **Carried, and still the single strongest permissive starting point in the sector.** 🔵 **Count re-read this pass: `58,554`.** For scale on how fast this row moves, this base published `~22k` at cycle 2 and `~24k` at cycle 3; search-channel digests put it near `52,800` on `2026-11-01`. 🟢 Apache-2.0, agent-native, actively pushed — the default spine for a tutoring engagement |
+
+### 🔴 `p791` REFUSES one candidate, and says why
+
+| Candidate | Why it was surfaced | Why it is REFUSED |
+|---|---|---|
+| [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant) | A GitHub trend digest presents it as *"6 specialized agents for personalized education"* — exactly the shape this base collects | 🔴 **There is no licence file anywhere in its tree.** `19` files enumerated on a blobless clone, `0` match `licen|copying|legal|terms|notice`; `search/repositories` independently returns `license: none`. 🔴 **No grant means no rights** — not "permissive by default". `★66`, last push `2025-11-04`, so it is also a year stale. 🔵 It is listed here rather than silently dropped, so the next pass does not spend the same probe on it |
+
+🔵 **This refusal is the brief's rule working as intended: `fewer real rows always beat padding`.** `p791` adds `2` agents, corrects `1` count, re-audits `2` trees and refuses `1` candidate — and the refused row is the one a star-ranked digest would have published.
+
+
 # Education AI agents — `p790`
 
 **Every row below was verified this pass on two byte channels:** existence via `git ls-remote`

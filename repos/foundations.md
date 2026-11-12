@@ -4,6 +4,18 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p791` — the permissive layer gains a real SIS/ERP, and a carried foundation row loses its grant text
+
+🟢 **The carried sentence at the top of this file is amended for the first time in four passes, and only slightly.** The famous education platforms are still copyleft — Moodle, Open edX, Canvas, Chamilo, ILIAS, Frappe LMS and ERPNext are GPL or AGPL, and `p790` added `nextSIS` (GPL-3.0) to that list rather than to the permissive one. 🟢 **`p791` adds the first genuinely MIT Student-Information/ERP system this base has verified on the bytes.**
+
+| Repository | Grant, on the bytes | ★ | What it is, and why it matters here |
+|---|---|---|---|
+| 🆕 [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🟢 **MIT** · `1,150 B` · `f86101816893` | `56` | 🟢 **A K-12 school ERP under a real MIT grant — the narrow permissive layer finally has an SIS-shaped member.** Laravel/PHP + Vue, `7,623` files: students, attendance, timetables, fees, and role-scoped portals for admin, teacher, student, parent, accountant and reception. 🟢 **First-layer dependency audit clean:** the one vendored package, `custompackages/brozot/laravel-fcm`, is **MIT** (`1,080 B`); the `15` `*.js.LICENSE.txt` files are webpack-extracted banners, not additional grants. 🔴 **`★56` — this is a small project.** Its value is that it is *embeddable*: AI code can live directly inside it, which is true of almost nothing else in this column |
+| ✏️ [`frappe/education`](https://github.com/frappe/education) | 🔴 **`19 B` — `License: GNU GPL V3` and nothing else** · `beca17940a71` | `706` | ✏️ **Carried row, corrected, and it is the sharper half of `T880`.** Its entire licence file is a **family reference with no operative grant text**. Its own siblings in the same org serve the real thing: [`frappe/lms`](https://github.com/frappe/lms) `33,893 B`, [`frappe/erpnext`](https://github.com/frappe/erpnext) `35,149 B`. 🟡 **Treat as intent-to-GPL-3.0:** plan copyleft at the boundary, do not embed, and get the grant confirmed before a derivative ships. 🔵 Almost certainly an upstream oversight — the fix is an issue filed, not an avoidance |
+
+🔵 **Why `Gego-K12/gegok12` is worth a small row.** This file's standing problem is that every platform a client already runs is copyleft, which pushes all AI work to a process or API boundary (`compose/patterns.md`, Rule 1). A permissive SIS changes the available shapes: it is the one place in this sector where an agent can be written **as a module inside the system of record** without a copyleft obligation reaching the client's own code. 🔴 **At `★56` it is not a safe bet for a large deployment** — but for a greenfield K-12 build, or as the reference for how an SIS schema is shaped, it is the only permissive option this base has found.
+
+
 # Foundational education repositories — `p790`
 
 **The single most useful fact in this file, carried:** in education, *the famous platforms are

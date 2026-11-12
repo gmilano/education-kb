@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p791` — four findings, and one of them is that this base can finally PUBLISH
+
+🟢 **Channel status, re-measured this pass:** `git ls-remote` 🟢 · blobless clone + `ls-tree` 🟢 · `git cat-file` on a `--filter=blob:none` clone 🟢 (lazy blob fetch works, and it is the cheapest byte channel this base has) · `search/repositories` 🟢 (exact integers) · `api.github.com/repos/*` 🔴 `403` · `github.com` page 🔴 `403`. Unchanged from `p790`.
+
+🟢 **`T879-bis` — the push block is GONE, and four cycles of this base's history explain why it mattered.** `rotation.json` records, for education alone, `local-commit(421e4d7)-education-kb-push-blocked` (cycle 2) and `local-commit(4564416)-push-blocked-access-restriction` (cycle 3); the technology base records the same at `b46d379`. The cause was never GitHub — it was that `gmilano/education-kb` sat outside this session's authorised repository set, so the git proxy declined to inject a credential and returned `403` on push while `clone` succeeded. 🟢 **Attaching the repository to the session fixes it; this pass pushed.** 🔵 **The lesson is diagnostic, not clerical: a `403` on push with a working `clone` is an authorisation scope symptom, not a network one, and it should never again be recorded as "blocked" without naming the scope.**
+
+## `T880` — `NOASSERTION` is NOT a licence verdict, and it fails in BOTH directions
+
+🔴 **This pass found the two opposite causes of the same classifier output, in the same sector, hours apart.** GitHub's `licensee` matcher reports `NOASSERTION` when it cannot match canonical bytes. That is a statement about the matcher, not about the grant.
+
+| Repository | `search/repositories` says | The bytes say | Why they disagree |
+|---|---|---|---|
+| [`frappe/education`](https://github.com/frappe/education) | `NOASSERTION` | 🔴 **`19 B`** — `License: GNU GPL V3`, blob `beca17940a71`, and **nothing else** | There is **no operative grant text at all** — only a family *name* |
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | `NOASSERTION` | 🟢 **`1,150 B` valid MIT**, blob `f86101816893` | The matcher is defeated by an injected `<!-- SPDX-License-Identifier: MIT -->` HTML comment on line `3` and by **typographic curly quotes** (`“Software”`) in the operative text |
+
+🔴 **`frappe/education` is the more consequential half, because this base already carries it** in `repos/foundations.md` and `verticals/solutions.md`. Its own siblings show what a grant looks like in the same org: [`frappe/lms`](https://github.com/frappe/lms) serves `33,893 B` and [`frappe/erpnext`](https://github.com/frappe/erpnext) serves `35,149 B` — full operative texts. `frappe/education` serves `19`.
+
+🟡 **What that means for an engagement.** `License: GNU GPL V3` is a **stated intent**, not a licence: GPL-3.0 is granted by reproducing its terms, and a bare reference leaves the actual permission unstated. Treat the row as **intent-to-GPL-3.0** — plan for copyleft at the boundary, and get the grant confirmed in writing before any derivative ships. 🔵 It is almost certainly an oversight rather than a trap, and the fix is an upstream issue, not an avoidance.
+
+🟢 **Rule added: `NOASSERTION` is a prompt to read the bytes, never an answer.** It joins `T875` (a long licence file may be an anthology) as the second case of a licence *signal* that cannot be graded without reading.
+
+## `T881` — a star count this base published was inflated `23×`, and a name sweep proves it was not a namesake
+
+🔴 **Published by this base at cycle 2 (`~9k★`) and cycle 3 (`~12k★`):** [`satvik314/educhain`](https://github.com/satvik314/educhain).
+
+🟢 **Measured, `search/repositories` with a `repo:` qualifier — exact integer: `★388`.** MIT (`1,092 B`, blob `b46290b36e7f`), last push `2026-05-29`.
+
+🔵 **The obvious defence is a namesake — so it was tested.** A `search/repositories` sweep on the bare name `educhain` returns, in full: `satvik314/educhain` `★388` · `lukepark327/educhain` `★22` · `SailFish-Finance/educhain-ai-agent-kit` `★6` · `EDUchain-US/EDUchain` `★3` · `Tuprott991/Educhain-AI` `★4` · `Kaustubh-1-7/crowdRaise-educhain` `★0`. 🔴 **No repository of that name anywhere exceeds `★22`.** The `~9k`/`~12k` figures were not a near-miss on a different repo; there is no candidate they could describe.
+
+🔴 **This is the same defect class the technology base recorded** (`prior cycles' star counts were pipeline-inflated`) and it is now confirmed independently in education. 🟢 **The row survives on its licence and is corrected on its count** — MIT and genuinely useful for document-to-course generation, but it is a `★388` project with a six-month-stale tree, and it must never again be presented to a client as a `12k★` one.
+
+## `T882` — an MIT root is not an MIT tree, and this pass found a non-OSI grant inside a `43,376★` MIT repository
+
+🟢 [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — `★43,376`, pushed `2026-11-12`, root `LICENSE` **MIT**, `1,065 B`, blob `76abc5f13261`. 🟢 **Root grant confirmed, and the seven first-party sub-packages are MIT too** (`dsl`, `editor`, `generation`, `geometry`, `importer`, `renderer`, `storage` — each `1,065 B`).
+
+🔴 **Then the tree was enumerated — `4,388` files — and it is not uniformly MIT:**
+
+| Path in tree | Bytes | Grant on the bytes |
+|---|---|---|
+| `packages/mathml2omml/LICENSE` | `7,652 B` | 🔴 **LGPL** — vendored copyleft inside an MIT repo |
+| `packages/@openmaic/renderer/font-licenses/ARPHIC-PL.txt` | `6,863 B` | 🟡 **ARPHIC Public License** (copyleft-style font grant) |
+| `packages/@openmaic/renderer/font-licenses/OFL.txt` | `4,998 B` | 🟢 SIL Open Font License |
+| `packages/@openmaic/renderer/font-licenses/ZcoolHappy-LICENSE.txt` | `817 B` | 🔴 **Not an OSI licence at all** — see below |
+
+🔴 **`ZcoolHappy-LICENSE.txt` is a bespoke Chinese-language font grant** (站酷快乐体, ZCOOL). Its operative terms, read on the bytes: **free perpetual use including commercial use** (`可免费商用，永久免费授权所有人使用`), but **the font's original name may not be changed** (`禁止...改变站酷免费字体的原有名称`), **the font may not be resold as a product or used to profit as a product** (`禁止任何人将站酷免费字体作为商品进行转售及牟利`), and **attribution to the typeface designers is retained** (`造字者保留署名权`).
+
+🟡 **What that means for an engagement.** The restrictions are mild and compatible with ordinary client delivery — but they are **not MIT**, they are **not OSI**, and they are written in a language the rest of the audit chain is not reading. Shipping OpenMAIC's `renderer` ships this grant. 🟢 **Deliverable rule: if the renderer goes to a client, carry the three font-licence files with it and keep the font names intact.** 🔴 **And an education deliverable must never resell the bundled font as an asset** — which a "template pack" or "font bundle" line item would do.
+
+🟢 **`T882` extends `T861` (read the dependencies) and `T875` (a licence file may quote others) one layer further: read the TREE, and read it in every language it is written in.** This base has now been bitten by Spanish (`p790`, defects 1–3) and Chinese (this pass) on the same axis.
+
+## `T883` — "EMEA" as one bucket hid an entire continent, and the gap was in the QUERY, not the territory
+
+🔴 **The regional sweep for EMEA returned, on Africa, nothing.** The honest summary of that result was: *"For Africa, I found no useful source in these results"* and *"Africa coverage is essentially absent."*
+
+🟢 **A single targeted query returned five named instruments and a continental strategy.** They are recorded in `intel/market.md` under `EMEA`. 🔴 **So the finding is not "Africa has no AI-education policy" — it is that a query which buckets Europe, the Middle East and Africa into one term returns European results and calls it EMEA.**
+
+🔵 **Why this is a method finding and not a note.** This base's brief asks that an empty region be written down explicitly, because *"an informed gap is information, while silence looks exactly like coverage."* `T883` adds the failure mode one level up: **a region that is ANSWERED but answered only in part looks exactly like a region that is covered.** A composite region must be probed by its parts before any gap over it is declared. 🟢 **EMEA is now probed as Europe · Middle East · Africa separately, and the Africa row is placed.**
+
+
 # Current trends — `p790`
 
 🟢 **Byte-verified** claims concern repositories, grants, `sha`s and dependency manifests.

@@ -4,6 +4,18 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p791` — a vendor licence claim that HOLDS, and a `19`-byte grant on a platform this file recommends
+
+🔵 **`p790`'s block on education ERP ended with three vendor licence claims failing on the bytes.** `p791` ran the same test on two more and got one of each — which is the useful outcome, because it shows the probe is not simply biased against vendors.
+
+| Platform | Address | Grant, on the bytes | ★ | Deps | Verdict for an AI layer |
+|---|---|---|---|---|---|
+| **GegoK12** 🆕 | [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🟢 **MIT** · `1,150 B` · `f86101816893` | `56` | 🟢 `laravel-fcm` **MIT** (`1/1` audited) | 🟢 **The vendor claim HOLDS, and it is the only permissive school ERP in this file.** Laravel K-12 ERP/SIS — students, attendance, timetables, fees, multi-role portals. 🟢 **Direct embedding is clean (`T861` satisfied to the first layer)**, so an agent can be an in-process module rather than an LTI tool or an API client. 🔴 **But `★56`**: pick it for greenfield K-12 or as a schema reference, not to replace a running SIS. 🔵 Vendor pages also market a cloud/paid tier — the open-core split is real, so read what the free tier contains |
+| **Frappe Education** ✏️ | [`frappe/education`](https://github.com/frappe/education) | 🔴 **`19 B` reference, NO grant text** · `beca17940a71` | `706` | — | ✏️ **Corrected, and this file recommended it.** The ERPNext-based education module is a genuine fit for the Odoo pattern — mature ERP underneath, education modules on top. 🔴 **Its licence file says `License: GNU GPL V3` in `19` bytes and stops**, while `frappe/lms` (`33,893 B`) and `frappe/erpnext` (`35,149 B`) carry full texts. 🟡 **Build at the boundary and treat it as intent-to-GPL-3.0** until upstream confirms; the ERPNext layer beneath it is properly granted, so a Frappe-stack engagement is not blocked — only this module's own derivative status is unsettled |
+
+🟢 **The Odoo-pattern conclusion is unchanged and slightly strengthened.** Nobody replaces a Student Information System in an engagement, so the AI layer sits at the platform's edge. `p791` adds the one exception worth knowing: **when the platform is `gegok12`, the edge and the inside are the same place**, because the grant permits it.
+
+
 # Vertical platforms — real systems an AI layer can sit on top of — `p790`
 
 The pattern that works in education is the Odoo pattern: **take a mature, deployed, customisable

@@ -4,6 +4,42 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p791` — **The permissive layer in education gains its first verified Student-Information/ERP system — and it was one `NOASSERTION` field away from being thrown out. A carried foundation row simultaneously loses its grant text, in `19` bytes.**
+
+🟢 **Control before any verdict: the `p790` known-good rows reproduced** — `HKUDS/DeepTutor` `11,408 B`, `THU-MAIC/OpenMAIC` root `1,065 B`. 🟢 **New instrument this pass:** `git clone --filter=blob:none --no-checkout --depth 1` + `git cat-file -p HEAD:<path>`, which enumerates a full tree case-exactly and fetches only the blobs read. It settled `T882` and it is the method `p790`'s `T875` called for.
+
+### 🟢 `T880-a` — the narrow permissive layer finally has an SIS
+
+🔴 **This file's standing sentence, carried for four passes:** *in education, the famous platforms are copyleft and the permissive layer is narrow and specific.* Moodle, Open edX, Canvas, Chamilo, ILIAS, Frappe LMS, ERPNext — GPL or AGPL. `p790` added `nextSIS` to the copyleft column, not the permissive one.
+
+| Measured | Value | Channel |
+|---|---|---|
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) root grant | 🟢 **MIT**, `1,150 B`, blob `f86101816893` | byte channel |
+| Files in tree | **`7,623`** | blobless clone + `ls-tree` |
+| Vendored dependency grant | 🟢 `custompackages/brozot/laravel-fcm` — **MIT**, `1,080 B` (`1/1` audited) | byte channel |
+| `*.js.LICENSE.txt` files | `15` — **webpack-extracted banners, not additional grants** | blobless clone |
+| ★ | 🔴 **`56`** | `search/repositories` |
+| 🔴 GitHub licence classifier | **`NOASSERTION`** | claim channel |
+
+🔴 **Why the classifier is wrong here:** the grant carries `<!-- SPDX-License-Identifier: MIT -->` on line `3` and **typographic curly quotes** (`“Software”`) in the operative text. `licensee` wants canonical bytes and will not match. 🟢 **The grant is valid MIT.** 🔵 **A `★56` Laravel K-12 ERP is small — but it is the one place in this sector where an agent can be written as a module inside the system of record with no copyleft reaching client code.** That changes the available architectures, which is why it earns a row at `★56` when this base routinely declines larger ones.
+
+### 🔴 `T880-b` — and a carried foundation row has no grant text at all
+
+| Measured | Value |
+|---|---|
+| [`frappe/education`](https://github.com/frappe/education) `license.txt` | 🔴 **`19 B`** · blob `beca17940a71` |
+| Its full contents | `License: GNU GPL V3` |
+| [`frappe/lms`](https://github.com/frappe/lms) `license.txt` | `33,893 B` |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) `license.txt` | `35,149 B` |
+| ★ | `706` |
+
+🔴 **Both halves of `T880` are the same classifier output with opposite causes.** GPL-3.0 is granted by reproducing its terms; a bare family reference leaves the permission unstated. 🟡 **Recorded as intent-to-GPL-3.0** in `repos/foundations.md` and `verticals/solutions.md`: boundary-only, no embedding, confirm upstream before a derivative ships. 🔵 The ERPNext layer beneath it is properly granted, so a Frappe-stack engagement is not blocked — only this module's derivative status is unsettled. The fix is an upstream issue, not an avoidance.
+
+### 🔍 `T882` — read the tree, not the root
+
+[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) · `★43,376` · pushed `2026-11-12` · root MIT `1,065 B`. Seven first-party sub-packages all MIT at `1,065 B` each. 🔴 **And then:** `packages/mathml2omml/LICENSE` **LGPL** `7,652 B` · `font-licenses/ARPHIC-PL.txt` **ARPHIC Public License** `6,863 B` · `font-licenses/OFL.txt` **SIL OFL** `4,998 B` · `font-licenses/ZcoolHappy-LICENSE.txt` `817 B` **non-OSI, Chinese-language**, permitting free commercial use but **forbidding renaming the font and reselling it as a product**. 🟢 Usable — carry the font licences, keep the names intact, never line-item the fonts as an asset.
+
+
 ## 🆕 `2026-11-12` · `p790` — **The largest permissively-granted education repository set this base has ever measured is real at `132` repositories and `0/130` validated by its own README. Plus a reversal: the `39,890 B` licence file this base called proprietary is an ANTHOLOGY containing a full GPL-3.0 grant, and a blobless clone is the instrument that settles such a file.**
 
 🟢 **Control before any verdict: `10` of `10` known-good rows reproduced this base's recorded licence bytes exactly**, and `3` planted negatives returned DEAD. Full control table in `agents/trending.md` `p790`.

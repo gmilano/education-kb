@@ -4,6 +4,43 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p791` — **This base can PUBLISH again: the push `403` that four cycles recorded as "blocked" was an authorisation-scope symptom, not a network one, and it is fixed. Plus `NOASSERTION` shown to fail in both directions in the same sector, a `★` figure corrected `23×` downward, a non-OSI Chinese font grant found inside a `43,376★` MIT repository, and one trend-digest darling REFUSED for having no licence at all.**
+
+🟢 **Channel status, re-measured:** `git ls-remote` 🟢 · **blobless clone + `ls-tree` + `cat-file`** 🟢 (new, and now the cheapest byte channel this base has) · `raw.githubusercontent.com` 🟢 · `search/repositories` 🟢 exact integers · `api.github.com/repos/*` 🔴 `403` · `github.com` page 🔴 `403`.
+
+🟢 **`T879-bis` — the publication block is gone.** `rotation.json` records `local-commit(421e4d7)-education-kb-push-blocked` (cycle 2), `local-commit(4564416)-push-blocked-access-restriction` (cycle 3), and the same at `b46d379` for technology. 🔵 **The cause was never GitHub.** `clone` succeeded and `push` returned `403` because the repository sat outside this session's authorised set, so the git proxy declined to inject a credential — the error says so in terms: *"not in this session's authorized repository set"*. 🟢 **Attaching the repository fixes it. `p791` is pushed.** 🔴 **A `403` on push with a working clone must never again be logged as "blocked" without naming the scope** — three cycles of education research and at least one of technology were written and then stranded locally.
+
+### 🆕 `2` agents added, `1` count corrected, `1` candidate refused
+
+| Row | Grant, on the bytes | ★ exact | Note |
+|---|---|---|---|
+| 🆕 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 **MIT** · `1,064 B` · `1b105b8e1b6b` | `1,436` | Multi-agent course builder + **course-scoped RAG tutor with per-lesson citations**; pushed `2026-11-06`. 🟢 The citation scoping is a governance primitive, not a feature — it is why it anchors `P791-2` |
+| 🆕 [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 **GPL-3.0** · `35,149 B` · `f288702d2fa1` | `932` | *Diagnosis-first* tutoring. 🔴 **Copyleft and `~9` months stale** (`2026-02-20`) — the digests surfacing it say neither. A reference architecture, not a dependency |
+| ✏️ [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 MIT · `1,092 B` | 🔴 **`388`** | **Corrected from this base's own `~9k` / `~12k`** (`T881`) |
+| 🔍 [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟡 `TREE[MIT + LGPL + ARPHIC-PL + OFL + bespoke-CN]` | `43,376` | Root MIT confirmed; **tree is not** (`T882`). Pushed today |
+| 🔍 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 · `11,408 B` control reproduced | `58,554` | Still the strongest permissive spine in the sector |
+
+### 🔴 REFUSED — [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant)
+
+A trend digest presents it as *"6 specialized agents for personalized education"* — exactly this base's collection shape. 🔴 **`19` files enumerated on a blobless clone; `0` match `licen|copying|legal|terms|notice`.** `search/repositories` independently returns `license: none`. **No grant means no rights**, not "permissive by default". `★66`, last push `2025-11-04`. 🔵 Recorded as refused so the next pass does not re-probe it.
+
+### `T880` — `NOASSERTION` fails in BOTH directions, found in one sector hours apart
+
+🔴 [`frappe/education`](https://github.com/frappe/education): `NOASSERTION` because its licence file is **`19 B`** — `License: GNU GPL V3`, blob `beca17940a71`, no operative text. Siblings `frappe/lms` `33,893 B` and `frappe/erpnext` `35,149 B` carry full grants. **This base already carries the row in `repos/foundations.md` and `verticals/solutions.md`** — now flagged **intent-to-GPL-3.0**.
+
+🟢 [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12): `NOASSERTION` because a **valid `1,150 B` MIT grant** carries `<!-- SPDX-License-Identifier: MIT -->` on line `3` and **curly quotes** in the operative text, which defeat the strict matcher. 🟢 **It is the first genuinely MIT school ERP/SIS this base has verified** — and it was one classifier field away from being discarded.
+
+🟢 **Rule: `NOASSERTION` is a prompt to read the bytes, never an answer.**
+
+### `T882` — a non-OSI grant inside a `43,376★` MIT repository
+
+`THU-MAIC/OpenMAIC`'s `4,388`-file tree: `packages/mathml2omml/LICENSE` is **LGPL** (`7,652 B`); the renderer ships `ARPHIC-PL.txt` (`6,863 B`), `OFL.txt` (`4,998 B`), and `ZcoolHappy-LICENSE.txt` (`817 B`) — the last a **bespoke Chinese-language font grant**: free commercial use, but **no renaming the font**, **no reselling it as a product**, attribution retained. 🟡 Mild terms, but **not MIT and not OSI**, and written in a language the audit chain was not reading. 🔴 **This base has now been bitten by Spanish (`p790`) and Chinese (`p791`) on the same axis** — hence `Rule 4`: read the tree, in every language it is written in.
+
+### `T883` — the `EMEA` bucket hid a continent
+
+🔴 The EMEA sweep returned *"Africa coverage is essentially absent."* 🟢 One targeted query returned **Kenya's National AI Strategy 2025–2030**, **Nigeria's NERDC directive and National EdTech Strategy 2025–2030**, **South Africa's draft National AI Policy** (`2026-04-10`; 🔴 one source says abrogated `2026-04-27` — conflicting), the **AU Continental AI Strategy** and the **Continental Education Strategy for Africa 2026–2035**. 🔴 **The gap was in the query.** A region answered *in part* looks exactly like a region covered — so a composite region is now probed by its parts before any gap over it is declared.
+
+
 ## 🆕 `2026-11-12` · `p790` — **One of this base's own published verdicts is REVERSED: `Kosudo/nextSIS` is not proprietary, it is GPL-3.0, and the `39,890 B` file this base graded as "all-rights-reserved" is a licence ANTHOLOGY whose one such line belongs to a bundled EllisLab dependency. 🇧🇷 Brazil and 🇨🇴 Colombia placed for the first time; 🇲🇾 Malaysia's declared gap discharged. 🔴 Tanzania's is NOT — its only granted artefact teaches livestock health. Plus `7` defects in this pass's own probe, three of them Spanish-language blind spots.**
 
 🟢 **Controls ran BEFORE any verdict shipped: `10` of `10` known-good rows reproduce this base's recorded bytes exactly** — `HKUDS/DeepTutor` `11,408 B`, `THU-MAIC/OpenMAIC` `1,065 B`, `amosblomqvist/learnharness` `34,523 B`, `goyanedelv/paes-mcp` `2,018 B` (and its `SCOPE-LIMITED` flag), `luscitiosus/Dirigo` `362 B`, `daddysystem/nextgen-learn` `1,338 B`, `jupyter/nbgrader` `1,512 B`, `CAHLR/OATutor` `1,105 B`, `kumaken-1/school-office-generative-ai-30` `1,102 B` (`LICENSE-CODE`), `Kosudo/nextSIS` `39,890 B`. 🟢 **`3` planted negatives DEAD as designed.** 🔵 **`0` defects were found by inspection; all `7` were found by controls on rows this base had already published.**

@@ -4,6 +4,71 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p791` — three recipes, and `Rule 4`
+
+🔴 **Rule 4, NEW this pass (`T882`).** Rule 2 says read the dependencies. **Rule 4 says read the TREE, in every language it is written in.** A root `LICENSE` governs the root. `THU-MAIC/OpenMAIC` is MIT at the root and ships an **LGPL** package plus **three font grants**, one of them a non-OSI Chinese-language licence forbidding renaming and resale-as-product. Before any repository is handed to a client, enumerate it and grade every grant found:
+
+```bash
+git clone --filter=blob:none --no-checkout --depth 1 https://github.com/OWNER/REPO /tmp/x
+git -C /tmp/x ls-tree -r --name-only HEAD | grep -iE 'licen|copying|legal|terms|notice'
+git -C /tmp/x cat-file -p HEAD:PATH        # lazily fetches only that blob
+```
+
+🔵 **And `Rule 5`, from `T880`:** `NOASSERTION` on a licence API is **not** a verdict. It means the matcher failed, which happens both when there is no grant (`frappe/education`, `19 B`) and when there is a perfectly good one (`Gego-K12/gegok12`, `1,150 B` MIT defeated by an HTML comment and curly quotes). **Read the bytes.**
+
+---
+
+## `P791-1` — Vietnam high-risk conformity for automated assessment · **APAC 🇻🇳 first** · 10–12 weeks
+
+🔴 **Why this exists.** Vietnam's **Law on Artificial Intelligence** (in force `2026-03-01`) is the only instrument this base has found that **names education as high-risk and names automated assessment and behavioural monitoring inside it**. Compliance lands `2027-03-01` (six-month grace for systems already running; one source says September 2027). **The clock is real and the work is now.**
+
+| Layer | Repository | Grant | Role |
+|---|---|---|---|
+| Tutoring spine | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | Learner interaction; patent grant matters for a regulated deliverable |
+| Marking, human-reserved | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 BSD-3 · `0/18` deps copyleft (`T861`) | Autograding where the **grade is proposed, never written** |
+| Policy boundary | [`csev/tsugi`](https://github.com/csev/tsugi) | 🟢 Apache-2.0 | LTI process boundary into Moodle/Canvas without inheriting copyleft |
+| Orchestration | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 MIT | **One policy node per jurisdiction** — the shape that survives six APAC regimes |
+
+🟢 **Wiring.** `tsugi` exposes the agent as an LTI tool to the institution's LMS, so no copyleft reaches client code. `langgraph` holds a **jurisdiction node** evaluated before any assessment action: it decides whether automated marking is permitted, whether a human must confirm, and what must be logged. `nbgrader` computes a **proposed** grade; the teacher commits it. `DeepTutor` never sees the gradebook.
+
+🔴 **The two conformity artefacts that are the actual deliverable:** (a) an **immutable decision log** — every automated assessment action, its inputs, the policy node's verdict, and the human who confirmed it; (b) a **behavioural-monitoring register** stating what is *not* collected, because the statute names monitoring and the cheapest way to comply is to be able to prove absence. 🔵 Sell the log, not the tutor.
+
+---
+
+## `P791-2` — Institutional AI governance made operational · **LATAM 🇧🇷 🇲🇽 first** · 6–8 weeks
+
+🔴 **Why this exists.** LATAM's measured gap is not capability, it is governance: **`87%` of institutions use AI, `26%` have a strategy; `92%` of students and `79%` of faculty already engage with it; in Brazil `53%` of administrators use AI and `22%` of schools have guidelines.** 🟢 **Shipping another tutor addresses nothing. The unmet need is a policy that is enforced rather than published.**
+
+| Layer | Repository | Grant | Role |
+|---|---|---|---|
+| Platform (already deployed) | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 GPL-3.0 — **boundary only** | System of record; untouched |
+| Boundary | [`csev/tsugi`](https://github.com/csev/tsugi) | 🟢 Apache-2.0 | LTI tool; client code stays the client's |
+| Course-scoped tutor | [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 MIT · `1,064 B` | 🟢 **Its per-lesson citation scoping is the governance primitive** — it answers *"where did this come from?"* per answer |
+| Policy engine | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 MIT | Acceptable-use rules as a graph, **swappable per country** |
+| Evidence | [`metabase/metabase`](https://github.com/metabase/metabase) | 🟡 split-by-directory (read which part) | Disclosure and usage reporting for the rectorate |
+
+🟢 **Wiring.** The institution's acceptable-use policy is authored as **configuration, not prose**: per course, whether AI assistance is permitted, whether it must be disclosed, and whether it may touch credited work. `langgraph` enforces it at request time; `Study-Mate` serves answers **with citations scoped to that course's own materials**, which is what makes a disclosure claim checkable; `metabase` produces the per-faculty report that turns `26%`-have-a-strategy into `100%`.
+
+🔴 **Brazil and Argentina must be separate policy bundles from day one** — Brazil is converging on an EU-style framework and signed a Brazil–EU agreement (June 2026) while Argentina's executive has backed keeping AI unregulated. 🔵 Same product, two bundles; `Ceibal` and `Latam-GPT` are the references that open the public-sector conversation.
+
+---
+
+## `P791-3` — Offline-first, teacher-facing AI under a curriculum mandate · **Africa 🇰🇪 🇳🇬 first** · 8–10 weeks
+
+🔴 **Why this exists, and why it is NOT a tutor.** Kenya's **National AI Strategy 2025–2030** and Nigeria's **NERDC directive** create a curriculum mandate; every source on the continent names the same binding constraint — **teacher capacity, electricity, connectivity and devices**, not model quality. 🔴 **A cloud-only student chatbot fails here for reasons unrelated to AI.**
+
+| Layer | Repository | Grant | Role |
+|---|---|---|---|
+| Offline spine | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT · 🟡 `2` LGPL of `32` deps | Runs without connectivity; syncs opportunistically. The one proven offline platform in this base |
+| School system of record | [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🟢 **MIT** · `1,150 B` | 🟢 **Permissive, so the agent can be an in-process module** — no LTI boundary needed (`p791`, `T880`) |
+| Lesson generation | [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 MIT · `★388` | Document-to-course generation, run **batch and offline**. 🔴 Present it at its real size, not the `~12k★` this base once published (`T881`) |
+| Local inference | `ollama` | 🟢 MIT | On-premise model; no per-token cost, no connectivity dependence |
+
+🟢 **Wiring.** Generation happens **where the power is** — a district office or teacher-training centre — not in the classroom: `educhain` turns syllabus documents into lesson material in batch, output is packaged into `kolibri` channels, and schools sync by whatever means they have, including sneakernet. The agent inside `gegok12` is **teacher-facing**: it drafts lesson plans, assembles differentiated worksheets and prepares marking schemes. 🟢 **Because `gegok12` is MIT and its one vendored dependency is MIT, that agent ships as a module inside the system of record** — the only place in this base where that is licensing-clean for an SIS.
+
+🔵 **The deliverable is teacher time, measured.** Baseline the hours a teacher spends on planning and marking, then report the delta. Against the constraint every African source names, that number is the business case — and it is the same number whether or not the connectivity ever arrives.
+
+
 # Compose patterns — `p790`
 
 Each recipe names **real, byte-verified repositories**, the grant on each, how they wire together,
