@@ -4,6 +4,97 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p788` — **New this window: the EMEA agent gap is REFUTED, not filled — Europe's education agents were always there and `p787` asked for them in English. `6` European-origin permissive agents and a `66`-repo MIT African ecosystem, found by querying in Dutch, French, German and Greek. Plus the pass's headline: `4` of the `7` highest-star permissive education repos carry copyleft in their declared direct dependencies, and Oppia's is AGPL-3.0.**
+
+🟢 **Controls ran BEFORE any verdict shipped: `7` of `7` known-good rows reproduce this base's recorded bytes exactly** — `HKUDS/DeepTutor` `11,408 B`, `moodle/moodle` `35,147 B`, `sakaiproject/sakai` `11,120 B`, `frappe/lms` `33,893 B`, `hedyorg/hedy` `13,827 B`, `jupyter/nbgrader` `1,512 B`, `oppia/oppia` `11,358 B`. 🟢 `2` planted negatives DEAD as designed. 🔴 **`6` defects in this pass's own instruments, caught by those controls and fixed before use** — trailing-newline erasure (every byte count `1 B` short), single-rendering translation matching (a valid Spanish MIT still scored `UNGRADED` *after* the `T848` fix), byte-wise accent blindness (`SIN GARANT.A` cannot match `SIN GARANTÍA`), fixed-window title search (`INGInious` defers to line `9`), abbreviation blindness (`frappe/education` serves `19 B`: `License: GNU GPL V3`), and PEP 639 metadata blindness in the new dependency instrument. See `intel/trends.md` `T863`.
+
+🔴 **Channel change (`T860`):** the **page channel is gone** — `github.com` and `api.github.com/repos/{owner}/{repo}` both return `403` through this session's proxy for non-attached repos. 🟢 **Replaced by something better:** `search/repositories` with `repo:` qualifiers returns **exact star integers**, and every one reproduces `p787`'s rounded page-read.
+
+### 🟢 EMEA — `ACTION p787-E` discharged by REFUTATION
+
+| Agent | Address | Grant, on the bytes | ★ | Country | Why it is here |
+|---|---|---|---|---|---|
+| 🟢 **onderwijsin/agents** `NEW` | [`onderwijsin/agents`](https://github.com/onderwijsin/agents) | 🟢 MIT `1,079 B` · `0b3eabc034fa` | `0` | 🇳🇱 NL | 🟢 **The single row that refutes `T856`.** Provider-agnostic AI plugins and skills for Dutch *onderwijs*. 🔵 The query `onderwijs AI agent` returned **exactly one** repository — this one. At `0★` it sits below every star floor this base has used |
+| 🟢 **sherpa** `NEW` | [`SeydinaBANE/sherpa`](https://github.com/SeydinaBANE/sherpa) | 🟢 MIT `1,063 B` · `6411f2de98c1` | `0` | 🇫🇷 FR | Exam-preparation tutor with **grounded RAG and citations**. 🔵 Provenance as architecture — the direct answer to `T859` |
+| 🟢 **parcours-maths-ia** `NEW` | [`Warok-dev/parcours-maths-ia`](https://github.com/Warok-dev/parcours-maths-ia) | 🟢 MIT `1,066 B` · `51dc673f15a0` | `0` | 🇫🇷 FR | 2D maths game for the French **CE1–CE2** curriculum with automatic exercise generation |
+| 🟢 **dowze** `NEW` | [`Louisdelez/dowze`](https://github.com/Louisdelez/dowze) | 🟢 MIT `1,068 B` · `2a30b43ecd06` | `0` | 🇫🇷 FR | Lifelong-learning AI tutor framed explicitly as a **bien commun** |
+| 🟢 **skepsis** `NEW` | [`ionpetro/skepsis`](https://github.com/ionpetro/skepsis) | 🟢 MIT `1,072 B` · `31a864169289` | `3` | 🇬🇷 GR | Greek-in-English etymology lessons; ships a web app **and an MCP server**, so another agent can teach from it |
+| 🟢 **eagle-aig** `NEW` | [`LIST-LUXEMBOURG/eagle-aig`](https://github.com/LIST-LUXEMBOURG/eagle-aig) | 🟢 Apache-2.0 `11,358 B` · `99cecb066ecf` | — | 🇱🇺 LU | 🟢 **Luxembourg Institute of Science and Technology** — a national public research institute. **Rescued from this base's own ungranted class**: it was filed as an absence and has carried Apache-2.0 all along |
+
+🟢 **And `elimu-ai` — `66` repositories, MIT, an African education ecosystem pushed this week.** All `7` core repos serve an identical `1,065 B` MIT text: [`webapp`](https://github.com/elimu-ai/webapp) `41★`, [`appstore`](https://github.com/elimu-ai/appstore) `29★` (APK delivery **without an app store**), [`ml-authentication`](https://github.com/elimu-ai/ml-authentication) `16★`, [`wiki`](https://github.com/elimu-ai/wiki) `13★`, [`launcher`](https://github.com/elimu-ai/launcher) `9★`, [`ml-storybook-reading-level`](https://github.com/elimu-ai/ml-storybook-reading-level) `8★`, [`ml-storybook-recommender`](https://github.com/elimu-ai/ml-storybook-recommender) `3★`, [`model`](https://github.com/elimu-ai/model) `4★`. 🔴 **This base has been citing `elimu-ai` at `agents/trending.md:24964` and never placed it.** 🔵 It surfaced only as the **one false positive** of `p787-A`'s login-validity clause — `wiki` is a legal repository name as well as a GitHub path word. **A false positive produced the pass's best regional find.**
+
+### 🟢 APAC — `ACTION p787-F` discharged, and the three countries differ completely
+
+| Agent | Address | Grant, on the bytes | ★ | Country | Why it is here |
+|---|---|---|---|---|---|
+| 🟡 **OpenVidya** `NEW` | [`dpaul0501/OpenVidya`](https://github.com/dpaul0501/OpenVidya) | 🔴 **AGPL-3.0** `34,523 B` · `1224dcd5693b` | `2` | 🇮🇳 IN | 🟢 **The most strategically interesting row of the pass: an OpenMAIC derivative redesigned for NCERT/CBSE** — the localisation move `P787-5` recommends, already done. 🔴 **And relicensed upward:** MIT parent, AGPL-3.0 fork, so it **cannot** be embedded the way its parent can (`T868`) |
+| 🟢 **RAG-Enhanced-NCERT-Tutor** `NEW` | [`praj2408/RAG-Enhanced-NCERT-Tutor`](https://github.com/praj2408/RAG-Enhanced-NCERT-Tutor) | 🟢 MIT `1,072 B` · `adf4c082db90` | `5` | 🇮🇳 IN | Retrieval-grounded tutor over the **NCERT** national curriculum |
+| 🟢 **ai-agent-to-learn-faster-and-better** `NEW` | [`abhijeetgupta23/ai-agent-to-learn-faster-and-better`](https://github.com/abhijeetgupta23/ai-agent-to-learn-faster-and-better) | 🟢 MIT `1,071 B` · `df69fd3331dd` | `4` | 🇮🇳 IN | Personalises **lesson modality** from a learning-science knowledge graph |
+| 🟢 **CBSE_Home-Tutor** `NEW` | [`mandarab76/CBSE_Home-Tutor`](https://github.com/mandarab76/CBSE_Home-Tutor) | 🟢 MIT `1,077 B` · `f987f634f5e0` | `1` | 🇮🇳 IN | **CBSE** classes 1–12 |
+| 🟢 **FunctionVisualizer-V3** `NEW` | [`Adarsh-61/FunctionVisualizer-V3`](https://github.com/Adarsh-61/FunctionVisualizer-V3) | 🟢 MIT `1,056 B` · `10099c811f61` | `3` | 🇮🇳 IN | Interactive NCERT mathematics visualisation |
+| 🔴 **NCERT-AI-Teacher-Assistant** `NEW` | [`Prady029/NCERT-AI-Teacher-Assistant`](https://github.com/Prady029/NCERT-AI-Teacher-Assistant) | 🔴 GPL-3.0 `35,149 B` · `5e24bf860660` | `5` | 🇮🇳 IN | Lesson plans and question sets. 🔴 Copyleft |
+| 🟢 **spring-ai-tutor** `NEW` | [`jungtaejin/spring-ai-tutor`](https://github.com/jungtaejin/spring-ai-tutor) | 🟢 MIT `1,069 B` · `8ca838adabcc` | `0` | 🇰🇷 KR | 🟢 **Korea placed for the first time.** Tutoring API on Spring AI: structured output, conversation memory, tool calling, SSE streaming |
+| 🟢 **Haeksim** `NEW` | [`Seongbong-Ha/Haeksim`](https://github.com/Seongbong-Ha/Haeksim) | 🟢 MIT `1,069 B` · `242b3f09aa73` | `0` | 🇰🇷 KR | 핵심 ("core") — NLP AI learning tutor |
+| 🟢 **AI-tutor** `NEW` | [`qiyuxi24/AI-tutor`](https://github.com/qiyuxi24/AI-tutor) | 🟢 MIT `1,065 B` · `046f65596541` | `4` | 🇨🇳 CN | Knowledge-graph guidance agent: knowledge map, learning path, learner profile, question generation. `413` test cases, L1–L4 live-API evaluation, BM25 gating with RRF hybrid retrieval — **the most explicitly evaluated small agent in this base** |
+
+🔴 **Korea's semantic trap, recorded because it will recur.** **교육** means both *education* and *corporate training*. `AI 교육 에이전트` returned `20` repositories of which almost none are education agents — they are agent-training **course materials** (a Samsung practitioner curriculum, "AI maestro" week-4 coursework). 🟢 The productive term was **학습** (*learning*): `학습 튜터 AI` → `12` relevant results.
+
+🔴 **Japan is a MEASURED gap and it survived in-language querying** — this base's only *measured* rather than *suspected* supply gap. `AI 教育 エージェント` → **`3` repositories in total**; `学習支援 AI エージェント` → **`1`**. The best Japan-origin artefact is [`narumi-mase/osaka-lesson-dataset`](https://github.com/narumi-mase/osaka-lesson-dataset) — Osaka City Education Center junior-high lesson plans structured for education-AI research — **ALIVE at `212cb10e48eb`, serving no licence on `10` filenames × `3` branches.**
+
+### 🟢 Teaching-as-a-skill — `T851` produced a derivative in six days
+
+| Agent | Address | Grant, on the bytes | ★ | Note |
+|---|---|---|---|---|
+| 🟢 **socratic-tutor** `NEW` | [`nuwaves/socratic-tutor`](https://github.com/nuwaves/socratic-tutor) | 🟢 MIT `1,143 B` · `2e34df6e23bd` | `2` | 🟢 **The first downstream derivative of `janestreet/agent_skills`' `socratic-tutor/`, created `2026-11-09`** — the same skill extracted as a standalone installable unit with saved progress. `T851` predicted the packaging would travel; it travelled in under a week |
+
+### 🟢 Further new rows, all byte-verified
+
+| Agent | Address | Grant, on the bytes | ★ | Region | Note |
+|---|---|---|---|---|---|
+| 🟢 **Tlamatini** `NEW` | [`XAIHT/Tlamatini`](https://github.com/XAIHT/Tlamatini) | 🟢 MIT `1,062 B` · `b1f06f7e736f` | `15` | LATAM | Voice-driven AI into code, 3D worlds and hardware. 🔵 **`Tlamatini` is Nahuatl for *one who knows*** — named in an Indigenous Mexican language, which is why no English query reaches it |
+| 🟢 **algebench** `NEW` | [`ibenian/algebench`](https://github.com/ibenian/algebench) | 🟢 MIT `1,063 B` · `6794217849f9` | `8` | Global | Interactive **3D** maths visualiser with an agentic tutor |
+| 🟢 **rag-tutor** `NEW` | [`villadalmine/rag-tutor`](https://github.com/villadalmine/rag-tutor) | 🟢 **Apache-2.0** `7,450 B` · `b0bc280f04ec` | `2` | Global | Sovereign local-first tutor over technical books: hybrid RAG + agentic loop + MCP server. 🔴 **GitHub indexes it `NOASSERTION`; the bytes are Apache-2.0 with all `9` operative sections verified individually** — the `3,907 B` shortfall is the omitted non-operative APPENDIX |
+| 🟢 **lessonfolk** `NEW` | [`CGSeb/lessonfolk`](https://github.com/CGSeb/lessonfolk) | 🟢 MIT `1,063 B` · `7710ddf025ab` | `3` | Global | Learn AI from zero to advanced with an agent as tutor |
+| 🟢 **claude-study-agent** `NEW` | [`dymchenkko/claude-study-agent`](https://github.com/dymchenkko/claude-study-agent) | 🟢 MIT `1,067 B` · `527f9ac590a0` | `3` | Global | University-course study agent learning from the learner's own slides and PDFs |
+| 🟢 **examprep-agent** `NEW` | [`ZeKaiNie/examprep-agent`](https://github.com/ZeKaiNie/examprep-agent) | 🟢 MIT `1,065 B` · `83fad934ea90` | `1` | Global | Teaches **only** from the learner's own material — a scoping constraint, not a limitation |
+| 🟢 **llm-edu-suite** `NEW` | [`ZoodiacR/llm-edu-suite`](https://github.com/ZoodiacR/llm-edu-suite) | 🟢 MIT `1,065 B` · `da605cdaf27e` | `3` | Global | Learn LLM engineering by building and measuring each layer |
+| 🟢 **Thesaurus** `NEW` | [`Ahhsaaaaan/Thesaurus`](https://github.com/Ahhsaaaaan/Thesaurus) | 🟢 Apache-2.0 `11,343 B` · `dc29f0d739ff` | `0` | Global | Classroom knowledge base: teachers upload documents, students query over RAG |
+| 🟢 **brightspace-d2l-mcp** `NEW` | [`anonymousonyx22/brightspace-d2l-mcp`](https://github.com/anonymousonyx22/brightspace-d2l-mcp) | 🟢 MIT `1,200 B` · `a873478a6b4e` | — | North America | 🟢 MCP over **D2L Brightspace** — the third major North American LMS, and the first attachment point this base has had for it |
+| 🟢 **xapi-service** · **xapi-validation** `NEW` | [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) · [`xapi-validation`](https://github.com/LearningLocker/xapi-validation) | 🟢 MIT `1,070 B` · `685c342129c5` / `13ffff748515` | — | Global | 🟢 **xAPI Learning Record Store and statement validation, MIT — both rescued from this base's ungranted class.** This base called its xAPI/Caliper cluster "its most dead cluster"; the live permissive half was filed as an absence |
+
+### 🔴 The dependency audit — `ACTION p787-D` discharged, and it is the pass's headline
+
+🟢 **`473` declared direct dependencies read across `7` repositories, each dependency's grant taken from npm or PyPI.** 🔵 **First layer only — transitive dependencies were NOT audited.**
+
+| Repo | Repo grant | Direct deps | Copyleft found |
+|---|---|---|---|
+| 🔴 [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | `171` | 🔴 **`angular-shepherd` — AGPL-3.0.** This base files Oppia under *"ship them in client code"*. **A browser bundle is network delivery, which is AGPL's trigger** |
+| 🟡 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT | `32` | 🔴 `zeroconf-py2compat` LGPL-2 · `json-schema-validator` LGPL. 🟢 Dynamic linking permitted, so still usable — **but not the unqualified MIT story this base has been telling about its "most valuable permissive row"** |
+| 🟡 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | `27` | 🔴 `pyte` LGPL-3.0. The sector's **#1 agent at `58,508★`**. `pyte` is a terminal emulator — probably droppable |
+| 🟡 [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 MIT | `181` | 🔴 `mathml2omml` LGPL-3.0-or-later (a **declared dependency** as well as the bundled package `p787` found) · 🟡 **`jszip` is NEW and dual: `MIT OR GPL-3.0-or-later`** — permissive only once the MIT arm is **elected in writing** |
+| 🟢 [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT | `43` | 🟢 **none** |
+| 🟢 [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 BSD-3 | `18` | 🟢 **none** — and it is the component `P788-1` rests on |
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 MIT | `1` | 🟢 **none** |
+
+### 🔴 Corrections to rows this base already published
+
+| Address | What the base said | What the bytes say this pass |
+|---|---|---|
+| 🔴 [`goyanedelv/paes-mcp`](https://github.com/goyanedelv/paes-mcp) | 🟢 *"MCP server over an open repository of Chile's PAES test"*, MIT, and `P787-3` was built on it | 🔴 **SCOPE-LIMITED (`T864`).** The MIT grant covers **the source code and documentation only**. The licence states in terms that it does not — and could not — cover the PAES stems, figures and answer keys, whose rights belong to **DEMRE, Universidad de Chile**. 🟢 Pattern repaired as `P788-3` |
+| 🔴 [`luscitiosus/Dirigo`](https://github.com/luscitiosus/Dirigo) | 🔴 *"a file named `LICENSE` containing a Latin boast and no grant of any kind"* | 🔴 **WRONG.** The Latin is line 1; **lines 3–5 grant CC BY-NC-SA 4.0 in Spanish**, linking the Spanish legal code, and exclude the downloaded BOE/BOC statutory texts. Still barred — **for a harder reason than the one published** |
+| 🟢 [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) | 🔴 *"`570 B`, proprietary notice"*, left `UNGRADED` | 🟢 **Apache-2.0 by reference — the standard boilerplate, URL and AS-IS clause included. REMOVED from the unusable class.** 🔴 It was dismissed for being short, the exact error `T845` forbids |
+| 🔴 [`lehrer-tools/lehrer-agent`](https://github.com/lehrer-tools/lehrer-agent) ≡ [`NikolasSchaeffner/lehrer-agent`](https://github.com/NikolasSchaeffner/lehrer-agent) | two separate ungranted rows | 🔴 **ONE repository.** Both resolve to `3ddcfbbabc560675914da9703f53101c1c4d5123`. 🟢 **`ACTION p787-G` discharged mechanically (`T865`): identical `HEAD` is byte-channel proof that two addresses are one project** — and the page channel `p787` relied on is `403` this pass |
+| 🔴 [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | filed as "ungranted" | 🔴 **PROPRIETARY** — `39,890 B` · `60e422c7d93e`, all rights reserved. A named SIS. 🔵 **A long licence is not an open one** |
+
+### 🔴 Probed this window and NOT usable — `9` ungranted agents, placed by country so the absence is useful
+
+🔴 [`silja-graf/Didaktikus-…-LP21`](https://github.com/silja-graf/Didaktikus-KI-Spezialist-f-r-Unterrichtsplanung-und-Beurteilung-nach-LP21) 🇨🇭 — a **Swiss LP21-curriculum** lesson-planning and assessment agent, **the most engagement-shaped EMEA artefact found this pass, and ungranted. Ask for this one.** 🔴 [`lehrer-tools/lehrer-agent`](https://github.com/lehrer-tools/lehrer-agent) 🇩🇪 — teacher agent for lesson prep, test creation and regulation questions. 🔴 [`RAFCERAY/horizonia`](https://github.com/RAFCERAY/horizonia) 🇫🇷 — AI-education platform for 10–17s with a Socratic tutor. 🔴 [`redoneabouaali-lab/najih`](https://github.com/redoneabouaali-lab/najih) 🇲🇦 — free **Moroccan Bac** preparation. 🔴 [`narumi-mase/osaka-lesson-dataset`](https://github.com/narumi-mase/osaka-lesson-dataset) 🇯🇵. 🔴 [`MRiARC/VidyaSetu`](https://github.com/MRiARC/VidyaSetu) 🇮🇳 `11★` and 🔴 [`SoukhyadP991/Multilingual-NCERT-Doubt-Solver`](https://github.com/SoukhyadP991/Multilingual-NCERT-Doubt-Solver) 🇮🇳 — an **offline** multilingual NCERT doubt-solver, exactly the shape a low-connectivity engagement needs. 🔴 [`TaoYu-ds/TutorMesh`](https://github.com/TaoYu-ds/TutorMesh) 🇨🇳 and 🔴 [`kaikai52125/NeoTutor`](https://github.com/kaikai52125/NeoTutor) 🇨🇳 `17★` — a **DeepTutor re-implementation on LangChain/LangGraph**, evidence that DeepTutor is now spawning derivatives. 🔴 [`mingxuanyan07-lgtm/ai-for-education-showcase`](https://github.com/mingxuanyan07-lgtm/ai-for-education-showcase) 🇨🇳 — *auditable* multi-agent maths teaching with evidence binding and bounded orchestration; the right idea, no grant.
+
+### 🟢 Declared gaps for this window, so silence is not read as coverage
+
+🔴 **Japan** — the only *measured* supply gap left: `3` total repositories in Japanese, best artefact ungranted. 🔴 **School-operations agents** (timetabling, attendance, safeguarding) — still no permissive row; `AI teacher classroom agent created:>2026-09-01` returned **`6` results in total**, of which `5` carry no grant. 🔴 **African national curricula other than Kenya's CBC and Morocco's Bac** — none found. 🔴 **No transitive dependency audit** — `T861` measured the first layer only, and the first layer already changed four rows.
+
+
 ## 🆕 `2026-11-12` · `p787` — **New this window: tutoring shipped as a *skill directory* that roughly tripled in two days (`janestreet/agent_skills`, MIT, `2` commits, `2.1k★`→`6.6k★`), UC Berkeley's Bayesian-Knowledge-Tracing tutor placed at last, and a phantom second project struck — `cosark/OpenTutor` is a `0★` FORK of `zijinz456/OpenTutor` that the search channel served as a peer.**
 
 🟢 **Controls ran BEFORE any verdict shipped: `4` of `4` known-good rows reproduce this base's recorded bytes exactly** — `HKUDS/DeepTutor` `11,408 B`, `moodle/moodle` `35,147 B`, `sakaiproject/sakai` `11,120 B`, `frappe/lms` `33,893 B`. 🟢 `2` planted negatives DEAD as designed. 🔴 **`3` defects in this pass's own probe, caught by those controls and fixed before use** — a pipe-swallowed exit status, `Affero`-inside-GPLv3 (which graded Moodle as AGPL), and `T849` appendix contamination.

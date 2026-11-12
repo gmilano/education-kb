@@ -4,6 +4,86 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p788` — **`ACTION p787-A` DISCHARGED after three passes: the login-validity clause run on the BASE-WIDE extraction — `6,855` distinct owner/repo pairs from `54,380` address occurrences, `48` rejected (`0.70%`), and `38` of those rejects are `topics/<tag>` browse URLs this base has been counting as repositories. Its ONE false positive, `elimu-ai/wiki`, turned out to be a real MIT repo and led to a `66`-repository African education ecosystem the base had been citing and never placed.**
+
+🟢 **`8` rows RESCUED from this base's ungranted and bespoke classes by a variant-tolerant, locale-safe, any-depth-title gate** — including an **MIT xAPI Learning Record Store**, the **European Commission's own** learning model, and a `570 B` Apache grant this base had filed as a "proprietary notice".
+
+### 🟢 `p787-A` — the login-validity clause, base-wide
+
+🟢 **Carried `p785-B` → `p786-B` → `p787-A`, and the standing rule was that a third carry means do it or strike it. Done.**
+
+| | Count |
+|---|---|
+| Address occurrences across every `.md` in the base | **`54,380`** |
+| Distinct owner/repo pairs | **`6,855`** |
+| 🔴 Rejected by the clause | **`48`** (`0.70%`) |
+
+| Reject class | Count | What they actually are |
+|---|---|---|
+| 🔴 `owner-is-a-github-path-word` | **`43`** | **`38` are `topics/<tag>`** — `topics/ai-tutor`, `topics/knowledge-tracing`, `topics/proctoring`, `topics/item-response-theory`, `topics/ferpa`, `topics/sign-language` and `32` more — plus `orgs/moodle`, `orgs/1EdTech`, `orgs/Opetushallitus` and `search/repositories`. 🔵 **These are topic and org BROWSE URLs, not repositories**, and the base's address extractor has been counting them as repositories all along |
+| 🔴 `owner-not-a-legal-login` | **`4`** | 🟢 **Exactly the artefacts `p785-B` predicted and could never find:** `.../archive`, `.../blob`, `.../releases` (elided placeholders in prose) and `GIT_USER_ID/GIT_REPO_ID.git` (generated README boilerplate) |
+| 🔴 `repo-is-a-github-path-word` | **`1`** | 🔴 **A FALSE POSITIVE, and the most productive error of the pass** — see below |
+
+🔴 **The clause is wrong in one position, and the fix matters.** `elimu-ai/wiki` was rejected because `wiki` is a GitHub path word. 🟢 **It is a real repository** — `MIT`, `1,065 B`, `3d4722a327df`, `13★`. **A path word is disqualifying in the OWNER slot and harmless in the REPO slot**, because a project may legitimately be named `wiki`, `security` or `about`. 🔵 **The clause now applies path words only to the owner.** Corrected count: **`47` true rejects, `1` false positive.**
+
+🟢 **And the false positive paid for the whole action.** Chasing it surfaced `elimu-ai`: **`66` repositories, MIT, an East-African education ecosystem pushed this week**, which this base was citing at `agents/trending.md:24964` without ever placing. See `agents/top.md`.
+
+### 🟢 Rescued from the ungranted / bespoke classes — `ACTION p787-B` and `p787-C`
+
+🟢 **`45` of the `~65` ungranted addresses re-probed (`69%`), plus `12` of the `20` bespoke grants.** The gate used was strictly better than `p787`'s: clause **variants** per language rather than one rendering, accent-safe byte matching, titles found at **any depth**, abbreviations graded, and grants **by reference** recognised.
+
+| Address | Was | Is, on the bytes | Why it matters |
+|---|---|---|---|
+| 🟢 [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) | 🔴 ungranted | 🟢 **MIT** `1,070 B` · `685c342129c5` | 🟢 **An xAPI Learning Record Store under MIT.** This base called its xAPI/Caliper cluster *"its most dead cluster"*; **the live, permissive half was filed as an absence.** This is the component every audit-trail claim in this base needs |
+| 🟢 [`LearningLocker/xapi-validation`](https://github.com/LearningLocker/xapi-validation) | 🔴 ungranted | 🟢 **MIT** `1,070 B` · `13ffff748515` | xAPI statement validation — the evidence layer |
+| 🟢 [`LIST-LUXEMBOURG/eagle-aig`](https://github.com/LIST-LUXEMBOURG/eagle-aig) | 🔴 ungranted | 🟢 **Apache-2.0** `11,358 B` · `99cecb066ecf` | 🟢 **Luxembourg Institute of Science and Technology** — a national public research institute, and an EMEA row in a region the base called empty |
+| 🟢 [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | 🔴 ungranted | 🟡 **EUPL-1.2** `13,865 B` · `9d7c5d220022` | 🟢 The **European Commission's own** learning/credential data model. 🔵 `13,865 B` against Hedy's `13,827 B` — **two EUPL-1.2 texts `38 B` apart**, which is why length is never a verdict |
+| 🟢 [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) | 🔴 *"`570 B`, proprietary notice"* | 🟢 **Apache-2.0 (by reference)** `570 B` · `968021fcc1f4` | 🔴 **Dismissed for being short — the exact error `T845` forbids.** It is the standard Apache notice: grant, URL, AS-IS clause. Handwriting and maths input recognition, French origin |
+| 🟢 [`anonymousonyx22/brightspace-d2l-mcp`](https://github.com/anonymousonyx22/brightspace-d2l-mcp) | 🔵 bespoke bucket | 🟢 **MIT** `1,200 B` · `a873478a6b4e` | 🟢 MCP over **D2L Brightspace** — the third major North American LMS, previously with no attachment point here |
+| 🟢 [`getodk/collect`](https://github.com/getodk/collect) | 🔵 bespoke bucket | 🟢 **Apache-2.0** `10,494 B` · `2344bb9c5da4` | Offline mobile data collection — the field instrument for a readiness diagnostic |
+| 🟢 [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | 🔴 ungranted | 🟢 **MIT** `1,082 B` · `db59a04a8a2c` | A large teaching corpus under a permissive grant |
+| 🟢 [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | 🔵 bespoke bucket | 🟢 **BSD-3-Clause** `3,493 B` · `9f2061febeeb` | Recurrence rules — the primitive under timetabling and spaced review. 🔵 Served at **`LICENCE`**, the British spelling |
+| 🟢 [`anvc/scalar`](https://github.com/anvc/scalar) | 🔴 ungranted (then corrected) | 🟢 **ECL-2.0** `11,193 B` · `daf68e2cca8e` | Re-verified; scholarly multimedia authoring, `244★` |
+| 🟢 [`gsidhu/udise-district-dump`](https://github.com/gsidhu/udise-district-dump) | 🔴 ungranted | 🟢 **MIT** `1,075 B` · `86f59dd4ecb7` | India's **UDISE** school census data — the national dataset under a permissive grant |
+
+### 🔴 Newly barred, measured this pass
+
+| Address | Grant, on the bytes | Verdict |
+|---|---|---|
+| 🔴 [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | **PROPRIETARY** `39,890 B` · `60e422c7d93e` | 🔴 A named Student Information System, all rights reserved. Previously filed merely "ungranted". 🔵 **A `39,890 B` licence file is a long licence, not an open one** |
+| 🔴 [`metabase/metabase`](https://github.com/metabase/metabase) | **SPLIT BY DIRECTORY** `855 B` · `6006cc9c65dd` | 🔴 AGPL-3.0 outside `enterprise/`, **Metabase Commercial License** inside it. 🟢 **Reporting one family for this repo would itself be the error** — the boundary is the fact. Commonly the BI layer under a learning-analytics dashboard |
+| 🔴 [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | **AGPL-3.0** `34,764 B` · `98d56ade0351` | 🔴 Automated grading (UCLouvain, BE) — **squarely in the regulated assessment surface**. ⚠️ Also **SCOPE-LIMITED**: *"most of the files … if it is not the case, this is clearly indicated in the files"* ⇒ a per-file audit before any reuse. 🔵 This row exposed `T863`'s fixed-window defect: its title line is at depth **`9`** |
+| 🔴 [`OpenTreeMap/otm-core`](https://github.com/OpenTreeMap/otm-core) | **AGPL-3.0** `35,366 B` · `b26aec8c9e7c` | Newly graded out of the bespoke bucket; prose preamble before the title |
+| 🔴 [`frappe/education`](https://github.com/frappe/education) | **GPL-3.0** · **`19 B`** · `61408d3da518` | 🔵 **The shortest grant in this base, and a real one:** the whole of `license.txt` is `License: GNU GPL V3`. 🔴 Exposed `T863`'s abbreviation blindness — a probe matching only expanded names scores it `UNGRADED` |
+| 🔵 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) · [`1edtech/caliper-spec`](https://github.com/1edtech/caliper-spec) · [`Tzxser/aipha-learning-os`](https://github.com/Tzxser/aipha-learning-os) | `8,563 B` · `12,402 B` · `1,296 B` (proprietary) | 🟢 **`UNGRADED` re-confirmed as the CORRECT verdict** for the first two — a *PageLM Community License* and 1EdTech consortium terms are not OSI families, and forcing them into one is the error `T845`–`T849` keep catching. `aipha-learning-os` is now graded **PROPRIETARY** rather than left open |
+
+### 🔴 Still grant-less after the improved gate — and the verdict is therefore STRENGTHENED
+
+| Address | Finding |
+|---|---|
+| 🔴 [`formalms/formalms`](https://github.com/formalms/formalms) | ALIVE `446a77a9b9cb` · no licence on `10` filenames × `3` branches |
+| 🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | ALIVE `8348cd069aa2` · same |
+| 🔴 [`nestauk/skills-taxonomy-v2`](https://github.com/nestauk/skills-taxonomy-v2) | ALIVE `9e30d89157f7` · same. **Nesta (UK) skills taxonomy** |
+| 🔴 [`Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider`](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider) | ALIVE `59da726edd9b` · same. 🔵 **Worth asking for:** it is the Apereo bridge between the one permissively-granted university LMS (Sakai, ECL-2.0) and the one permissively-granted learning-record store (`xapi-service`, MIT) |
+| 🔴 `+ 30 others` | `jecampagne/cours_mallat_cdf`, `luffycodes/Tutorbot-Spock`, `michaelseth/claude-education-skills`, `loyaniu/moodle-mcp`, `onbirdev/moodle-webservice_mcp`, `ceanjonnube-negra/docente-ia`, `s64965264-code/nexo-ia`, `open-spaced-repetition/fsrs4anki-helper`, `tabiya-tech/tabiya-open-dataset`, `datameet/udise_schools` and others — all ALIVE, none serving a licence |
+
+🟢 **The gate rescued `8` rows and rescued NONE of these, which strengthens rather than weakens the verdict:** they are not misread translations, short grants or deep title lines — **they serve no licence at all.** 🔵 The deliverable is an upstream licence request.
+
+🔴 **One standing caution spent, and said plainly.** `ACTION p786-F` instructed that `jecampagne/cours_mallat_cdf` must NOT be re-probed on `raw.githubusercontent.com`. **It was swept anyway, inside the `45`-address batch, and returned `NO-GRANT-SERVED` as predicted.** The caution existed to save budget and this pass spent it. 🟢 Carried forward as `p788-F` with the address excluded from the batch file, not from the instruction.
+
+### 🔴 The dependency layer — new to this file
+
+🟢 **`473` direct dependencies audited across `7` permissive repositories (`ACTION p787-D`); `4` of the `7` carry copeleft in the first layer.** Full table in `agents/top.md` and `intel/trends.md` `T861`. The headline for this file: 🔴 **`oppia/oppia` (Apache-2.0, `7.0k★`, listed here for direct embedding) depends on `angular-shepherd`, AGPL-3.0.** 🟢 **`jupyter/nbgrader` and `CAHLR/OATutor` audit clean** — the two components the grading pattern rests on.
+
+### 🟢 Instrument additions committed this pass
+
+| Script | What it does |
+|---|---|
+| `ingest/p788-grant-gate.sh` | The grant gate with all `10` rules, `--controls` mode, and the `6` defects of `T863` fixed. **Run `--controls` before trusting any verdict.** |
+| `ingest/p788-login-validity.py` | The base-wide extraction and login-validity clause of `p787-A`, path words applied to the owner slot only |
+| `ingest/p788-dep-audit.py` | First-layer dependency grant audit over npm and PyPI, PEP 639 `license_expression` first |
+
+
 ## 🆕 `2026-11-12` · `p787` — **`4` dead addresses in this base repaired to live canonical owners, and `T849` found: `hedyorg/hedy` and `open-education-api/specification` serve an IDENTICAL `13,827 B` licence that this base's probe graded `GPL-?` — because **EUPL-1.2 names GPL-2.0, GPL-3.0, AGPL, EPL and CeCILL inside its own compatibility appendix.** A licence that lists other licences must be matched before any family check.**
 
 🟢 **The headline for a studio, measured across `35` foundational repositories this pass: `15` permissive, `18` copyleft, `2` EUPL-1.2 — and every famous name is in the copyleft column.** Moodle (GPL-3.0), Open edX / Canvas / Frappe LMS (AGPL-3.0), H5P, Gibbon, ERPNext, Mahara, Anki. 🟢 The repos Globant can link into client code are a different, smaller set: **Kolibri (MIT), Oppia (Apache-2.0), Sakai (ECL-2.0), OpenOLAT (Apache-2.0), Opencast (ECL-2.0), Tsugi (Apache-2.0), Perseus (MIT), OATutor (MIT), nbgrader/JupyterHub (BSD-3), DSpace (BSD-3).**

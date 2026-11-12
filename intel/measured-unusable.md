@@ -4,6 +4,85 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p788` — `2026-11-12` — **`11` rows REMOVED from the unusable class, `2` rows' published REASON corrected, `3` rows newly barred — and the class shrinks because the PROBE improved, not because the repositories changed.**
+
+🟢 **`45` of the `~65` ungranted addresses and `12` of the `20` bespoke grants re-read with a gate that is variant-tolerant across languages, accent-safe at the byte level, finds a licence title at any depth, grades abbreviations, and recognises a grant by reference** (`ingest/p788-grant-gate.sh`, rules in `compose/patterns.md` → `P788-7`). Controls first: `7` of `7` known-good rows reproduced this base's recorded bytes, `2` planted negatives DEAD.
+
+### 🟢 REMOVED from the unusable class — granted all along
+
+| Address | What this base said | What the bytes say | Family |
+|---|---|---|---|
+| 🟢 [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) | 🔴 ungranted | `LICENSE` · `1,070 B` · `685c342129c5` | 🟢 **MIT** — 🟢 **an xAPI Learning Record Store.** This base called its xAPI/Caliper cluster *"its most dead cluster"*; **the live, permissive half was filed as an absence** |
+| 🟢 [`LearningLocker/xapi-validation`](https://github.com/LearningLocker/xapi-validation) | 🔴 ungranted | `LICENSE` · `1,070 B` · `13ffff748515` | 🟢 **MIT** — xAPI statement validation |
+| 🟢 [`LIST-LUXEMBOURG/eagle-aig`](https://github.com/LIST-LUXEMBOURG/eagle-aig) | 🔴 ungranted | `LICENSE` · `11,358 B` · `99cecb066ecf` | 🟢 **Apache-2.0** — **Luxembourg Institute of Science and Technology**, a national public research institute, in the region `p787` recorded as empty |
+| 🟢 [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | 🔴 ungranted | `license` · `13,865 B` · `9d7c5d220022` | 🟡 **EUPL-1.2** — the **European Commission's own** learning/credential data model. 🔵 `38 B` from Hedy's EUPL text, which is why length is never a verdict |
+| 🟢 [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) | 🔴 *"`570 B`, proprietary notice"* (`p786-D`) | `LICENSE` · `570 B` · `968021fcc1f4` | 🟢 **Apache-2.0 (by reference)** — the standard notice: grant, URL, AS-IS clause. 🔴 **Dismissed for being short, the exact error `T845` forbids** |
+| 🟢 [`anonymousonyx22/brightspace-d2l-mcp`](https://github.com/anonymousonyx22/brightspace-d2l-mcp) | 🔵 bespoke bucket | `LICENSE` · `1,200 B` · `a873478a6b4e` | 🟢 **MIT** — **the first D2L Brightspace attachment point in this base** |
+| 🟢 [`getodk/collect`](https://github.com/getodk/collect) | 🔵 bespoke bucket | `LICENSE.md` · `10,494 B` · `2344bb9c5da4` | 🟢 **Apache-2.0** — offline mobile data collection |
+| 🟢 [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) | 🔵 bespoke bucket | **`LICENCE`** · `3,493 B` · `9f2061febeeb` | 🟢 **BSD-3-Clause** — 🔵 served at the **British spelling**, which a US-spelling-only filename list never reaches |
+| 🟢 [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | 🔴 ungranted | `LICENSE` · `1,082 B` · `db59a04a8a2c` | 🟢 **MIT** — a large teaching corpus, permissively granted |
+| 🟢 [`gsidhu/udise-district-dump`](https://github.com/gsidhu/udise-district-dump) | 🔴 ungranted | `LICENSE` · `1,075 B` · `86f59dd4ecb7` | 🟢 **MIT** — India's **UDISE** school census, district-level |
+| 🟢 [`anvc/scalar`](https://github.com/anvc/scalar) | 🔴 *"BLOCK — NO GRANT"* | `license.txt` · `11,193 B` · `daf68e2cca8e` | 🟢 **ECL-2.0** re-verified, `244★` |
+
+### 🔴 REASON corrected — the published reason was false
+
+| Address | What this base published | What the bytes say |
+|---|---|---|
+| 🔴 [`luscitiosus/Dirigo`](https://github.com/luscitiosus/Dirigo) | 🔴 *"**A file named `LICENSE` containing a Latin boast and no grant of any kind.**"* (`p786`) | 🔴 **The Latin boast is line 1. Lines 3–5 grant `CC BY-NC-SA 4.0` — in Spanish — with a link to the Spanish legal code**, and a scope clause excluding the downloaded BOE/BOC statutory texts. `362 B` · `9ed32d5c2577`. 🟢 **Still barred commercially, and for a HARDER reason than the one published**: NonCommercial cannot be cured by asking, an absence can. 🔴 **This is `T847` title-line insufficiency recurring in Spanish, on a row this base made the headline of its own "ADDED to the unusable class" table** |
+| 🔴 [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🔴 *ungranted* | 🔴 **PROPRIETARY.** `LICENSE` · `39,890 B` · `60e422c7d93e` — all rights reserved. A named Student Information System. 🔵 **A `39,890 B` licence file is a long licence, not an open one** |
+
+### 🔴 ADDED to the unusable class — measured this pass, reason on the bytes
+
+| Address | Grant, on the bytes | Reason |
+|---|---|---|
+| 🔴 [`metabase/metabase`](https://github.com/metabase/metabase) | **SPLIT BY DIRECTORY** · `855 B` · `6006cc9c65dd` | 🔴 **AGPL-3.0 outside `enterprise/`, `Metabase Commercial License` inside it.** 🟢 **Reporting any single family for this repo would itself be the error** — the boundary is the fact. Frequently the BI layer a client already runs over learning data, so deploy it and do not vendor code out of it without deciding which side you are on. Same shape as `764-C` |
+| 🔴 [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | **AGPL-3.0** · `34,764 B` · `98d56ade0351` | 🔴 Automated grading from UCLouvain — mature, European, and **squarely in the regulated assessment surface**. ⚠️ **Also SCOPE-LIMITED:** *"Most of the files … are distributed under the GNU AGPL v3 … If it is not the case, this is clearly indicated in the files."* ⇒ a per-file audit before any reuse. 🔵 **This row exposed `T863`'s fixed-window defect — its title line sits at depth `9`** behind that prose caveat, and the probe graded it `UNGRADED` against a verdict this base had already recorded correctly |
+| 🔴 [`OpenTreeMap/otm-core`](https://github.com/OpenTreeMap/otm-core) | **AGPL-3.0** · `35,366 B` · `b26aec8c9e7c` | Graded out of the bespoke bucket; prose preamble before the title line |
+
+### 🟡 Re-confirmed as correctly `UNGRADED` — the verdict was right
+
+| Address | Bytes | Why `UNGRADED` is correct |
+|---|---|---|
+| 🔵 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `LICENSE.md` · `8,563 B` · `e1de68833d1c` | *PageLM Community License* — bespoke, not an OSI family |
+| 🔵 [`1edtech/caliper-spec`](https://github.com/1edtech/caliper-spec) | `LICENSE.md` · `12,402 B` · `1849e118b47a` | 1EdTech consortium terms |
+| 🔴 [`Tzxser/aipha-learning-os`](https://github.com/Tzxser/aipha-learning-os) | `LICENSE` · `1,296 B` · `aa476a6a6a03` | Now graded **PROPRIETARY** rather than left open — source-available competition/portfolio licence |
+
+🟢 **`UNGRADED` is a verdict, not a failure.** Forcing a bespoke grant into an OSI family is precisely the error `T845`–`T849` keep catching.
+
+### 🔴 The duplicate-address correction
+
+| Addresses | Finding |
+|---|---|
+| 🔴 [`lehrer-tools/lehrer-agent`](https://github.com/lehrer-tools/lehrer-agent) ≡ [`NikolasSchaeffner/lehrer-agent`](https://github.com/NikolasSchaeffner/lehrer-agent) | **Both ALIVE at the identical `HEAD` `3ddcfbbabc560675914da9703f53101c1c4d5123`; neither serves a licence.** 🔴 **ONE German teacher agent, carried by this base as TWO ungranted rows** — so the class was overstated by one. 🟢 **`ACTION p787-G` discharged mechanically (`T865`):** identical `HEAD` is byte-channel proof that two addresses are one project, and it needs no page read — which matters because the page channel is `403` this pass |
+
+### 🔴 Still grant-less after the improved gate — `34` addresses, and the verdict is STRENGTHENED
+
+🟢 **The gate rescued `11` rows and rescued NONE of these, which strengthens rather than weakens the verdict:** they are not misread translations, short grants, deep title lines or grants by reference — **they serve no licence at all.**
+
+Named anchors, all ALIVE with no licence on `10` filenames × `3` branches:
+[`formalms/formalms`](https://github.com/formalms/formalms) `446a77a9b9cb` ·
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) `8348cd069aa2` ·
+[`nestauk/skills-taxonomy-v2`](https://github.com/nestauk/skills-taxonomy-v2) `9e30d89157f7` (**Nesta UK skills taxonomy**) ·
+[`Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider`](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider) `59da726edd9b` ·
+[`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) `fcec41644339` ·
+[`michaelseth/claude-education-skills`](https://github.com/michaelseth/claude-education-skills) `b2bd17670ea2` ·
+[`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) `1b5c3b21becc` ·
+[`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) `198246e5d712` ·
+[`ceanjonnube-negra/docente-ia`](https://github.com/ceanjonnube-negra/docente-ia) `e612521a1761` ·
+[`s64965264-code/nexo-ia`](https://github.com/s64965264-code/nexo-ia) `5561a79802d9` ·
+[`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) `b59775666804` ·
+[`tabiya-tech/tabiya-open-dataset`](https://github.com/tabiya-tech/tabiya-open-dataset) `815c85d4be9b` ·
+[`datameet/udise_schools`](https://github.com/datameet/udise_schools) `de9b0aacf1ef` ·
+[`0x454447415244/HandwritingRecognitionSystem`](https://github.com/0x454447415244/HandwritingRecognitionSystem) `73f965804c4a` ·
+[`AnhThuHoang0518/GradingCopilot`](https://github.com/AnhThuHoang0518/GradingCopilot) `1b42f963c729` ·
+and 19 others.
+
+🔴 **One DEAD:** [`fairyofmiracle/edu_course_agent`](https://github.com/fairyofmiracle/edu_course_agent) no longer resolves on `git ls-remote`.
+
+🟢 **`4` of these are worth an upstream licence request rather than permanent exclusion**, because each is the best artefact found for its slot: `SakaiXAPI-Provider` (**the bridge between the one permissively-granted university LMS and the one permissively-granted record store**), 🇨🇭 `silja-graf/Didaktikus-…-LP21`, 🇯🇵 `narumi-mase/osaka-lesson-dataset`, 🇮🇳 `SoukhyadP991/Multilingual-NCERT-Doubt-Solver`. → `ACTION p788-B`
+
+🔴 **And one honest note on method.** `jecampagne/cours_mallat_cdf` was re-probed this pass **despite `ACTION p786-F` instructing that it must not be** — it was swept inside the `45`-address batch and returned `NO-GRANT-SERVED` as predicted. 🟢 Recorded rather than quietly dropped. → `ACTION p788-F`
+
 ## 🆕 `p786` — `2026-11-12` — **The complete class swept for the first time: `157` addresses, `8` DEAD, `84` carrying a grant, `65` genuinely ungranted. `28` rows (`17.8%`) carry MIT or Apache-2.0. And the row this base called its most valuable is not licensed at all.**
 
 🟢 **`ACTION p785-A` DISCHARGED.** Every distinct address this file cites was resolved on `git ls-remote --symref` and graded across `17` case-variant grant filenames, `12`-way parallel, with `4` known-good and `2` planted-negative controls run first.

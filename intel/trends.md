@@ -4,175 +4,311 @@ region: Global
 updated: 2026-11-12
 ---
 
-# Current trends — `p787`
+# Current trends — `p788`
 
-🟢 **Byte-verified** claims concern repositories, grants and `sha`s. 🔴 **Search-channel testimony**
-covers every market, adoption and regulatory figure (`T844`).
+🟢 **Byte-verified** claims concern repositories, grants, `sha`s and dependency manifests.
+🔴 **Search-channel testimony** covers every market, adoption and regulatory figure (`T844`).
 
-## `T850` — The sector's two leading agents are both permissive, and both APAC-origin
+## `T861` — A repository grant is not a dependency grant, and 4 of 7 permissive leaders carry copyleft
 
-🟢 **Byte-verified.** `HKUDS/DeepTutor` is **Apache-2.0** (`11,408 B`) at `58.5k★`;
-`THU-MAIC/OpenMAIC` is **MIT** (`1,065 B`) at `43.4k★`. Hong Kong and Tsinghua respectively.
+🟢 **Byte-verified across 7 repositories and 473 declared direct dependencies.** `ACTION p787-D`
+discharged, and it is the most consequential measurement this base has made about its own
+recommendations.
 
-Two things follow, and they point in opposite directions:
+| Repo | Repo grant | Direct deps | Copyleft in the first layer |
+|---|---|---|---|
+| `oppia/oppia` | Apache-2.0 | `171` | 🔴 **`angular-shepherd` — AGPL-3.0** |
+| `learningequality/kolibri` | MIT | `32` | 🔴 `zeroconf-py2compat` LGPL-2 · `json-schema-validator` LGPL |
+| `HKUDS/DeepTutor` | Apache-2.0 | `27` | 🔴 `pyte` LGPL-3.0 |
+| `THU-MAIC/OpenMAIC` | MIT | `181` | 🔴 `mathml2omml` LGPL-3.0-or-later · 🟡 `jszip` `MIT OR GPL-3.0-or-later` |
+| `CAHLR/OATutor` | MIT | `43` | 🟢 none |
+| `jupyter/nbgrader` | BSD-3 | `18` | 🟢 none |
+| `zijinz456/OpenTutor` | MIT | `1` | 🟢 none |
 
-- 🟢 **Commercially:** the state of the art in education agents needs no licensing negotiation. A
-  studio can fork, embed and ship. In most verticals the leaders are proprietary; here they are not.
-- 🔴 **Strategically:** the capability centre of gravity in education AI sits in **APAC**, while the
-  **regulatory** centre of gravity sits in **EMEA** and **North America**. Engagements in the
-  regulated regions will consist largely of **wrapping APAC-origin agents in regional governance**.
+🔴 **The sharpest row is Oppia.** This base files Oppia under *"build on these, link them, **ship
+them in client code**"*. It depends on an **AGPL-3.0** front-end library, and AGPL's trigger is
+network delivery — which is exactly how a browser bundle reaches a learner.
 
-⚠️ **One licensing trap already found:** OpenMAIC's repo grant is MIT, but the bundled workspace
-package `packages/mathml2omml` is **LGPL-3.0-or-later**. A repo-level licence read is not a
-dependency audit.
+🔵 **Three consequences a studio should act on.**
+1. 🟢 **The flagship pattern survives unchanged.** `nbgrader` and `OATutor`, the two components
+   `P788-1` rests on, are the two that audit clean. That was luck; it is now a documented reason.
+2. 🟡 **LGPL is survivable, AGPL is not.** Python and Node both link dynamically, so Kolibri and
+   DeepTutor stay usable provided the LGPL component remains replaceable and its source available.
+   Oppia's AGPL dependency must be removed or replaced, not managed.
+3. 🟡 **A dual grant is permissive only once you elect it.** `jszip` is `MIT OR GPL-3.0-or-later`.
+   Election is a decision with a date and an author, not an assumption.
 
-## `T851` — Tutoring is being packaged as a *skill*, not an application
+🔴 **And state the limit of the measurement honestly: this is the FIRST dependency layer only.**
+Transitive dependencies were not audited. The first layer was already enough to change four rows,
+so the second will change more.
 
-🟢 **Byte-verified.** `janestreet/agent_skills` — **MIT**, `1,120 B`, `7c6715c29548`, **2 commits** —
-contains a `socratic-tutor/` directory: a diagnostic, a skill map with levels 0–5, one question at a
-time, spaced review, a final assessment. 🔴 **Search-channel:** ~`2.1k★` on `2026-11-10`;
-🟢 **page-channel, read this pass:** `6.6k★` on `2026-11-12`. **Roughly tripling in two days.**
+## `T862` — The EMEA agent gap was an artefact of English-only querying, and it is refuted
 
-🔵 **Why it matters more than the star count.** The pedagogy here ships as a **prompt-and-protocol
-directory**, with no runtime, no server and no model dependency. It drops into any agent host. For a
-studio this is the cheapest viable unit of educational IP: a skill is reviewable by a curriculum
-specialist who cannot read code, versionable in git, and portable across whichever model the client
-has already bought. `myvipbackup2/china-k12-teacher-skills` (Apache-2.0) is the same pattern applied
-to a national curriculum.
+🔴 **`T856` is REFUTED, not refined.** `p787` recorded: *"no European-origin education agent
+repository surfaced … Europe is building the substrate and not the education layer on top of it."*
+🟢 **Querying the same slot in the languages Europe actually writes in returned agents on the first
+attempt**, and six are byte-verified in `agents/top.md`:
 
-## `T852` — The permissive layer in education is narrow, and it is not where the famous names are
+| Query | Language | Result |
+|---|---|---|
+| `tutor education AI Germany France Netherlands Spain` | 🔴 English | **`0`** |
+| `onderwijs AI agent` | 🟢 Dutch | **`1`** — `onderwijsin/agents`, MIT |
+| `tuteur IA education` | 🟢 French | **`9`** — incl. `sherpa`, `dowze`, `parcours-maths-ia`, all MIT |
+| `KI Unterricht Agent` | 🟢 German | **`2`** — incl. a Swiss LP21-curriculum agent |
 
-🟢 **Byte-verified across 35 foundational repositories this pass.** Of these, **15 permissive, 18
-copyleft, 2 EUPL-1.2.** The split is not random — it follows institutional history:
+🟢 **Plus `elimu-ai`: 66 repositories, MIT, an African education ecosystem pushed this week** — and
+**this base was already citing it** at `agents/trending.md:24964` without ever placing it.
+
+🔵 **The lesson generalises past Europe, and it is the same lesson as `T848`.** An instrument written
+in English, against American naming conventions, with a star floor, will under-report every region
+that is not the United States. This base has now been caught doing that **twice** — once on a
+licence probe (`T848`, Spanish MIT read as no grant) and once on a discovery query (here). 🔴 **Both
+times the under-reported regions were the two the base is explicitly told to serve.**
+
+## `T863` — Six defects in one pass's own instruments, and four are biased against non-English grants
+
+🟢 **Every one was caught by a control on a row this base had already published; none by inspection.**
+
+| | Failure mode | How it showed up | Fix |
+|---|---|---|---|
+| 🔴 **NEW** | **Trailing-newline erasure** | `$(curl …)` strips the trailing newline, so **every** licence in the pass measured exactly `1 B` short — `11,407` against the recorded `11,408`, six for six | Bytes counted **on the file**, never through command substitution |
+| 🔴 **NEW** | **Single-rendering translation matching** | The `T848` fix matched *one* Spanish rendering. `paes-mcp` says `partes sustanciales`; the probe required `porciones sustanciales` — **the repaired probe still scored a valid Spanish MIT as `UNGRADED`** | Every clause matched as a **set** of circulating renderings per language |
+| 🔴 **NEW** | **Byte-wise accent blindness** | `SIN GARANT.A` cannot match `SIN GARANTÍA`: `grep` matches bytes, and `Í` is two of them, so `.` fails. 🔴 **The fix for language-blindness was itself defeated by the locale** | Patterns ASCII-only up to the first accent; locale declared explicitly |
+| 🔴 **NEW** | **Fixed-window title search** | `p787` widened the title check to 5 lines for Odoo's line-3 deferral. `INGInious` defers to **line 9** behind a prose scope caveat, and graded `UNGRADED` — against a grant this base had already correctly recorded as AGPL-3.0 | The title is **found by scanning for a line that *is* a licence title**, at any depth. A fixed line budget is the wrong instrument and the next file will exceed any budget chosen |
+| 🔴 **NEW** | **Abbreviation blindness** | `frappe/education` serves **19 bytes**: `License: GNU GPL V3`. Matching only expanded names scored a real grant `UNGRADED` | Abbreviations (`GPL`, `AGPL`, `LGPL`, `v3`) graded as titles |
+| 🔴 **NEW** | **Metadata-field blindness** (dependency instrument) | PyPI's legacy `license` field is empty for modern packages, so `pydantic`, `tenacity`, `typer`, `jsonschema` and `packaging` all reported `NONE-DECLARED` — 5 false absences on the first dependency audit this base has ever run | **PEP 639 `license_expression`** read first, then classifiers, then the legacy field |
+
+🔴 **Three of these six under-report non-English grants specifically**, and a fourth under-reports
+short grants. 🟢 **The two corrections they produced on already-published rows:**
+
+- **`luscitiosus/Dirigo`** — published as *"a Latin boast and no grant of any kind"*. The Latin is
+  line 1; **lines 3–5 grant CC BY-NC-SA 4.0 in Spanish** with a link to the Spanish legal code.
+  Still barred commercially, 🔴 **but the published reason was false** and NonCommercial is a harder
+  bar than an absence.
+- **`MyScript/MyScriptJS`** — published as a *"proprietary notice"* at `570 B`, left `UNGRADED`.
+  The bytes are the **standard Apache-2.0 grant-by-reference boilerplate**, URL and AS-IS clause
+  included. 🟢 **Removed from the unusable class.** It was dismissed for being short, which is
+  precisely what `T845` forbids.
+
+🔵 **Seven recorded failure modes have now become thirteen**, and the pattern across all of them is
+one sentence: **a licence probe fails in whichever direction its author's defaults point.**
+
+## `T864` — The grant covers the code; the corpus belongs to someone else
+
+🟢 **Byte-verified, and it corrects a pattern this base shipped.** `goyanedelv/paes-mcp` is MIT —
+and its licence text states in terms that the grant covers **the source code and the documentation
+only**, and does *not* and *could* not cover the PAES question stems, figures and answer keys, whose
+rights belong to **DEMRE, Universidad de Chile**. That material is included from freely published
+official sources, for educational use, with attribution.
+
+🔴 **`P787-3` was written as though the exam corpus were MIT.** It is not. The pattern is repaired as
+`P788-3` with the boundary explicit.
+
+🔵 **This is the third time this base has made the same mistake**, and it is now a rule rather than
+an anecdote: `legalize-dev/legalize-pt` (MIT for a *different* repository, Portuguese statutes under
+public-sector open data), `Dirigo` (CC BY-NC-SA for the code, BOE/BOC statutory texts excluded), and
+now `paes-mcp`. 🟢 **In education this will be the normal case, not the exception** — exam items,
+textbooks and curricula are the assets with rights-holders, and the repository that wraps them is
+the cheap part. **Read the scope clause, and ask who owns the content** before costing a deliverable
+on it.
+
+## `T865` — Identical `HEAD` proves two addresses are one project, with no page read
+
+🟢 **`ACTION p787-G` discharged mechanically.** `p787` recorded that the only evidence separating a
+fork from a distinct project was the fork notice on the github.com page. 🔴 **That page returns `403`
+this pass.** 🟢 `lehrer-tools/lehrer-agent` and `NikolasSchaeffner/lehrer-agent` both resolve to
+`3ddcfbbabc560675914da9703f53101c1c4d5123` — **the same commit**. One German teacher agent, carried
+by this base as two separate ungranted rows.
+
+🔵 **This is a better instrument than the one `p787` asked for.** It needs no page, no API and no
+licence fetch: `git ls-remote` already returns the discriminating value, and two addresses sharing a
+`HEAD` are one project until proven otherwise. 🟢 **It is also cheap enough to run on every row**,
+which the page read never was.
+
+## `T860` — The page channel closed; the claim channel got better
+
+🔴 **Channel status changed between `p787` and `p788`, and it must be stated rather than assumed.**
+`github.com` and `api.github.com/repos/{owner}/{repo}` now return **`403`** through this session's
+proxy for every non-attached repository — so `p787`'s page-read star counts cannot be reproduced by
+the method that produced them.
+
+🟢 **The replacement is better than what it replaces.** `search/repositories` with `repo:` qualifiers
+is reachable and returns **exact integers**: DeepTutor `58,508`, OpenMAIC `43,365`,
+`agent_skills` `6,813`, `hedyorg/hedy` `1,697`, Kolibri `1,176`, OATutor `279`, OpenTutor `175`.
+🔵 **Every one reproduces `p787`'s rounded page figure** (`58.5k`, `43.4k`, `6.6k`, `1,697`, `1.2k`,
+`279`, `175`), which both validates the new channel and retires the old one. 🟢 **Stars in this base
+are now exact and dated, not rounded** — and still claim-channel, so still weaker evidence than a
+licence byte.
+
+## `T866` — South Korea binds education, so APAC is no longer the low-regulation region
+
+🔴 **Search-channel, and it overturns this base's APAC position.** `p787` recorded APAC as *"the
+region with the strongest open-source agent supply and the weakest binding regulation"*, naming
+**Vietnam** as its one binding education hook. 🔴 **South Korea's AI Basic Act (Act No. 20676) took
+effect `2026-01-22`** — a risk-based statute with mandatory transparency and impact assessment for
+**high-impact AI**, and the high-impact category **names education explicitly**, alongside
+healthcare, finance, employment and essential services.
+
+🟢 **So the regional story is now: Korea and the EU both bind education; the US binds it state by
+state; Japan does not bind it at all.**
+
+| Jurisdiction | Instrument | Binding on education? |
+|---|---|---|
+| 🟢 **South Korea** | **AI Basic Act, Act No. 20676, in force `2026-01-22`** | 🔴 **Yes — education named as high-impact AI** |
+| EU | AI Act Annex III point 3; Reg. (EU) 2026/1744 defers to `2027-12-02` | 🔴 Yes |
+| Vietnam | 2026-07 high-risk sector list, citing automated assessment | 🔴 Yes |
+| Japan | AI Promotion Act (2025); AI Basic Plan `2026-07-14` | 🟢 **No penalties, no risk tiers** |
+| India | Amended IT Rules from `2026-02-20` | 🟡 Provenance labelling only |
+| China | Sector measures; Cybersecurity Law AI clause from `2026-01-01` | 🟡 Not education-specific |
+
+🔵 **Commercially this is the most actionable regulatory change in the pass**, because Korea's
+statute is **already in force** while the EU's education obligations are 13 months out. An APAC
+engagement in Korea is remediation work today.
+
+## `T867` — Supply gaps in this base are vocabulary gaps
+
+🟢 **Measured on the claim channel, `ACTION p787-F` discharged.** The same slot, queried two ways:
+
+| Country | English query | Result | In-vocabulary query | Result |
+|---|---|---|---|---|
+| India | `tutor agent education India CBSE NCERT curriculum` | 🔴 **`0`** | `NCERT AI` | 🟢 **`330`** |
+| Netherlands | `tutor education AI … Netherlands` | 🔴 **`0`** | `onderwijs AI agent` | 🟢 **`1`** (MIT) |
+| Korea | — | — | `AI 교육 에이전트` | 🔴 **`20`, almost none relevant** |
+| Korea | — | — | `학습 튜터 AI` | 🟢 **`12`, relevant** |
+| Japan | — | — | `AI 教育 エージェント` | 🔴 **`3` — a real gap** |
+
+🔴 **Korea carries a semantic trap worth recording:** **교육** means both *education* and *corporate
+training*, so the obvious query returns agent-training **course material** — a Samsung practitioner
+curriculum, "AI maestro" coursework — rather than education agents. The productive term was
+**학습** (*learning*).
+
+🟢 **Japan is the one gap that survived in-language querying**, which makes it this base's only
+*measured* rather than *suspected* supply gap. Its best artefact,
+`narumi-mase/osaka-lesson-dataset` (Osaka City Education Center lesson plans), serves **no licence**.
+
+🔵 **The operating rule:** before recording a regional absence, query in the region's language and
+in the region's own curriculum vocabulary — `NCERT`, `CBSE`, `PAES`, `LP21`, `CBC`, `Bac`. **A gap
+found in English is a gap in the query.**
+
+## `T851` — Tutoring is packaged as a *skill*, and the derivative arrived in six days
+
+🟢 **Byte-verified, and now with downstream evidence.** `janestreet/agent_skills` (MIT, `1,120 B`,
+`6,813★`) ships `socratic-tutor/` as a prompt-and-protocol directory: diagnostic, skill map at
+levels 0–5, one question at a time, spaced review, final assessment. 🟢 **`nuwaves/socratic-tutor`
+(MIT, `1,143 B`, created `2026-11-09`) is the same skill extracted as a standalone installable unit
+with saved progress** — a third party re-packaged it within a week.
+
+🔵 **Why this remains the cheapest viable unit of educational IP:** no runtime, no server, no model
+dependency; reviewable by a curriculum specialist who cannot read code; versionable in git; portable
+across whichever model the client already bought. 🟢 `myvipbackup2/china-k12-teacher-skills`
+(Apache-2.0) is the same pattern applied to a national curriculum, and `onderwijsin/agents` (MIT) is
+the Dutch one.
+
+## `T868` — A localised derivative can be *less* usable than its parent
+
+🟢 **Byte-verified, and new.** `dpaul0501/OpenVidya` is OpenMAIC *"redesigned for NCERT/CBSE"* — the
+exact localisation move `P787-5` recommends. 🔴 **Its grant is AGPL-3.0, where OpenMAIC's is MIT.**
+
+🔵 MIT permits relicensing a derivative under AGPL, so nothing improper happened. But the
+consequence matters for a studio: **the India-localised classroom cannot be embedded in a client
+deliverable the way its permissive parent can.** 🟢 **The practical reading: localise OpenMAIC
+yourself from the MIT parent rather than adopting a copyleft fork of it** — and check the grant of
+any localisation before treating it as a shortcut.
+
+## `T852` — The permissive layer is narrow, and it is not where the famous names are
+
+🟢 **Byte-verified across 38 foundational repositories this pass: 18 permissive, 18 copyleft,
+2 EUPL-1.2.** The split follows institutional history, not chance.
 
 | The names a client will say | Grant | The permissive repo that does the same job |
 |---|---|---|
 | Moodle | 🔴 GPL-3.0 | Sakai (ECL-2.0) · OpenOLAT (Apache-2.0) |
 | Open edX · Canvas | 🔴 AGPL-3.0 | Sakai (ECL-2.0) |
-| Frappe LMS · ERPNext | 🔴 AGPL / GPL-3.0 | — 🔴 no permissive equivalent in this base |
+| D2L Brightspace | proprietary SaaS | 🟢 `brightspace-d2l-mcp` (MIT) — attach, don't replace |
 | H5P content types | 🔴 GPL-3.0 | `Khan/perseus` (MIT) |
 | edx-ora2 assessment | 🔴 AGPL-3.0 | `jupyter/nbgrader` (BSD-3) |
+| xAPI / learning records | — | 🟢 `LearningLocker/xapi-service` (MIT) — **rescued this pass** |
 | Anki scheduling | 🔴 AGPL-3.0 | — 🔴 no permissive equivalent in this base |
 
-🟢 **The actionable consequence:** `csev/tsugi` (Apache-2.0) is the most useful licensing component
-in education open source, because LTI across a process boundary lets permissive code serve a
-copyleft LMS without becoming a derivative work of it.
+🟢 `csev/tsugi` (Apache-2.0) remains the most useful licensing component in education open source,
+because **LTI across a process boundary** lets permissive code serve a copyleft LMS without becoming
+a derivative work of it.
 
-## `T853` — Regulation has bifurcated: the EU bought 13 months, the US states did not
+## `T853` / `T854` — Regulation bifurcated, and assessment is the regulated surface everywhere
 
-🔴 **Search-channel.** 🟢 **EU:** Regulation (EU) 2026/1744 (*Digital Omnibus on AI*), OJ
-`2026-07-24`, in force `2026-07-27`, moved Annex III stand-alone high-risk — education included —
-from `2026-08-02` to **`2027-12-02`**. 🔴 **Not** deferred: Art. 5 prohibitions and Art. 4 AI
-literacy (both live since `2025-02-02`, including the **emotion-recognition ban in education**), and
-Art. 50 transparency from `2026-08-02`.
+🔴 **Search-channel, carried and re-confirmed.** 🟢 **EU:** Regulation (EU) 2026/1744 (*Digital
+Omnibus on AI*), OJ `2026-07-24`, in force `2026-07-27`, moved Annex III stand-alone high-risk —
+education included — from `2026-08-02` to **`2027-12-02`**. 🔴 **Not** deferred: Art. 5 prohibitions
+and Art. 4 AI literacy (live since `2025-02-02`, **including the emotion-recognition ban in
+education**), and Art. 50 transparency from `2026-08-02`. The Commission's own FAQ confirms
+supervision and enforcement rules apply from `2026-08-02`, and that the AI-literacy duty already
+applies; **Art. 4 is enforced by national market surveillance authorities, not the AI Office.**
 
-🟢 **North America, meanwhile, is enacting now:** North Carolina's model policy is due
-`2026-12-31`; Ohio's mandate is in force; Oklahoma bars AI used *solely* for grading, discipline or
-promotion; the U.S. Department of Education finalised AI-grant prioritisation on `2026-04-13`.
+🟢 **North America is enacting now, not pending:** **Idaho, Maryland, Oklahoma and Virginia** all
+enacted education-specific AI measures in 2026; **Maryland SB 720 / HB 1057** direct the state
+education department to issue guidance and require local AI policies; **California AB 1159** bars
+using student data to train AI models; **Ohio's** district AI-policy mandate had a July 2026
+deadline; **North Carolina** defended a **`$10M`** earmark in **Senate Bill 1006** to fund Khanmigo
+tutoring statewide; **New York City** issued traffic-light guidance in March 2026. 🔴 **Do not quote
+tracker totals** — `134` bills / `31` states and `68` / `27` circulate simultaneously, and guidance
+counts range `33`–`35+`. **Cite the bill.**
 
-🔵 **So the pitch inverts by region.** In EMEA the deadline is the selling instrument and there is
-runway to build properly. In North America the obligation is already live and the work is
-remediation. 🔴 **And do not quote tracker totals** — `134`/`31 states` and `68`/`27 with 10 enacted`
-circulate simultaneously. Cite the bill.
-
-## `T854` — Assessment is the regulated surface in every jurisdiction that regulates at all
-
-🔴 **Search-channel, and strikingly consistent across unrelated legal systems:**
-
-| Jurisdiction | Instrument | What it catches |
-|---|---|---|
-| EU | AI Act **Annex III, point 3** | Admissions · evaluating learning outcomes · assigning education levels · **exam proctoring**; final-grade determination is high-risk |
-| Vietnam | 2026-07 high-risk sector list | Education named, **citing automated assessment** |
-| Oklahoma | Responsible Technology in Schools Act | AI used **solely** for grading, discipline or promotion |
-| New York | A 9190 (pending) | Classroom AI restricted to grade 9+, diagnostic/special-ed exceptions |
-| India | Amended IT Rules, from `2026-02-20` | Provenance labels on AI-generated content — reaches generated courseware |
-
-🟢 **One architecture satisfies all five:** AI proposes, a named human decides, and the system keeps
-an audit trail joining the proposal, the evidence and the decision-maker. `jupyter/nbgrader`
-(BSD-3) already has that shape, which is why it anchors `P787-1`. 🔵 The word doing the work in
-Oklahoma's statute is **"solely"** — it regulates *autonomy*, not assistance, and a
-human-in-the-loop design is not a compliance tax but the product.
+🟢 **One architecture satisfies every jurisdiction that regulates assessment** — EU Annex III
+(admissions, learning outcomes, education levels, **exam proctoring**), Korea (high-impact),
+Vietnam (automated assessment), Oklahoma (AI used **solely** for grading, discipline or promotion),
+New York A 9190 (grade floor): **AI proposes, a named human decides, and the system keeps an audit
+trail joining the proposal, the evidence and the decision-maker.** 🔵 The word doing the work in
+Oklahoma's statute is **"solely"** — it regulates *autonomy*, not assistance, so human-in-the-loop
+is the product rather than a compliance tax. `jupyter/nbgrader` (BSD-3, **and `0` copyleft
+dependencies**) already has that shape, which is why it anchors `P788-1`.
 
 ## `T855` — LATAM adoption has outrun LATAM governance by about 60 points
 
 🔴 **Search-channel.** Teacher AI use in the past year (TALIS 2024): **Brazil `56%`, Chile `55%`,
-Colombia `53%`, Costa Rica `52%`** against an **OECD average of `36%`**. 🟢 **LATAM teachers
-out-adopt the OECD.** Meanwhile `87%` of regional universities use AI, **`26%`** have a strategy,
-**`9%`** evaluate it (UNESCO IESALC); in Brazilian schools `53%` of administrators use AI and
-**`22%`** report any guidelines (Cetic.br).
+Colombia `53%`, Costa Rica `52%`** against an **OECD average of `36%`**. UNESCO's observatory launch
+reports **more than `50%`** of teachers already using these tools in countries such as Chile and
+Brazil, while **fewer than `10%`** of regional institutions have formal guidelines. `87%` of regional
+universities use AI, **`26%`** have a strategy, **`9%`** evaluate it (UNESCO IESALC); in Brazilian
+schools `53%` of administrators use AI and **`22%`** report any guidelines (Cetic.br).
 
-🔵 **The strategic reading.** This is not a market to be *introduced* to AI — that already happened,
-bottom-up, through teachers. It is a market that needs its existing, ungoverned use made
-defensible. 🔴 **And there is no regulator to sell against:** no AI-in-education statute was found
-for Brazil, Mexico or Chile; the governing layer is UNESCO-convened soft governance. The buying
-trigger is institutional risk and the readiness gap, not a deadline.
+🟢 **New this pass, and it changes the regulatory read:** general AI bills are now **moving** —
+**Brazil's comprehensive AI bill is in the Chamber of Deputies** (so the text can still change), and
+**Chile has a government-sponsored risk-based bill** tied to its forthcoming data-protection
+authority. 🔴 **Mexico remains the laggard: multiple bills introduced, none enacted.** 🔴 **Still no
+AI-in-*education* statute in Brazil, Mexico or Chile** — the governing layer remains UNESCO-convened
+soft governance. A regional index (October 2026) adds that all `20` countries offer postgraduate AI
+programmes, `65%` have specialised research centres, and **more than half have incorporated AI into
+school curricula**; Brazil holds **`87.7%`** of the GPUs in that study's coverage.
 
-## `T856` — EMEA is building the substrate and not the education layer
+🔵 **The strategic reading is unchanged and now better evidenced.** This is not a market to be
+*introduced* to AI — that already happened, bottom-up, through teachers. It is a market that needs
+its existing, ungoverned use made defensible. The buying trigger is institutional risk and the
+readiness gap, not a deadline.
 
-🔴 **Search-channel, and a deliberate negative result.** A query for European-origin open-source
-education **agents** returned **only** sovereign-LLM infrastructure and compliance commentary:
-OpenEuroLLM, Germany's SOOFI (~€20M, public-sector deployment targeted mid-2026), the Netherlands'
-**GPT-NL** (explicitly scoped to health, **education** and public services), Switzerland's Apertus,
-Fraunhofer's Teuken, Mistral, Haystack.
-
-🟢 **Byte-verified counterpoint:** EMEA's real education open source is **platforms and languages**,
-not agents — OpenOLAT (Apache-2.0), Opencast (ECL-2.0), ILIAS, Chamilo, H5P, and `hedyorg/hedy`
-(EUPL-1.2, `1,697★`). One EMEA-placed *agent* exists in this base and it is Kenyan
-(`Moses-Githinji/meta-cv-hktn-edu-agent`, MIT).
-
-🔵 **An empty slot with a funded substrate beneath it and a `2027-12-02` deadline above it is the
-most legible build opportunity in this pass.**
-
-## `T857` — Three more failure modes of one instrument, all caught by controls *before* publication
-
-🟢 **This is `ACTION p786-A` discharged: the grant gate is now in the probe, not in the record** —
-and putting it there immediately paid for itself three times. Controls ran before any verdict shipped.
-
-| | Failure mode | How it showed up | Fix |
-|---|---|---|---|
-| `T847` | **Title-line insufficiency** (recorded by `p786`) | `odoo/odoo`, `openeducat_erp` state LGPL-3.0 on line 3 behind a deferral | Carried; both graded LGPL correctly this pass |
-| 🔴 `T848` | **Language-blindness** — NEW | `goyanedelv/paes-mcp` served a **valid MIT grant in Spanish** and the English-only clause probe returned `UNGRADED`. 🔴 **A translated grant looked exactly like no grant** | Gate now matches MIT's four clauses in **English, Spanish, Portuguese and French**, and reports `MIT(translated)` so the distinction survives |
-| 🔴 `T849` | **Appendix contamination** — NEW | `hedyorg/hedy` and `open-education-api/specification` both serve an identical `13,827 B` licence and both graded `GPL-?` — because **EUPL-1.2 names GPL-2.0, GPL-3.0, AGPL, EPL and CeCILL inside its compatibility appendix** | A licence that *lists other licences* is matched **before** any family check |
-| 🔴 — | **Pipe-swallowed exit status** | A negative control returned exit `0` because `git ls-remote` was piped into `head`, so `head`'s status was read | Status read directly; `${PIPESTATUS[0]}` never relied on |
-| 🔴 — | **Affero-in-GPLv3** | Moodle graded `AGPL-3.0`, because **GPL-3.0 §13 names the Affero licence**. 🔴 Caught only because a known-good control asserted GPL-3.0 | Family decided on the **title line**, not a whole-file grep |
-
-🔵 **The lesson this base should stop re-learning.** Five distinct ways to misread a licence have now
-been recorded — case-blindness (`T842`), title-line insufficiency (`T847`), length-as-integrity
-(`T845`), language-blindness (`T848`), appendix contamination (`T849`). 🟢 **Every one was found by a
-control on a row this base had already published, and none by inspection.** The instrument that
-catches them is cheap; the discipline that runs it before shipping a verdict is the whole method.
-
-🟢 **And both new failure modes are biased in a direction that matters commercially:**
-language-blindness under-reports **LATAM**, and appendix contamination mis-grades the **EU's own
-licence**. 🔴 **A probe written in English against American licence conventions will quietly
-under-report exactly the two regions this base is told to serve.**
-
-## `T858` — Purpose-built is displacing general-purpose, on the record
+## `T858` — Purpose-built is displacing general-purpose, and the commits agree with the commentary
 
 🔴 **Search-channel.** The OECD's 2026 Digital Education Outlook recommends moving **beyond
 general-purpose AI tools toward purpose-built educational AI** designed for durable learning gains;
-1EdTech frames 2026 as the shift **from experimentation to governance**; HolonIQ expects focus on
-ethics, transparency, agentic use cases and proven instructional benefit. One outlook calls 2026
-"the year of the agentic AI university".
+1EdTech frames 2026 as the shift **from experimentation to governance**.
 
-🟢 **Byte-verified corroboration, which is the useful part:** the artefacts actually trending are
-purpose-built rather than general — a classroom generator (OpenMAIC), a lifelong tutor with mastery
-tracking (DeepTutor), a Socratic protocol (`agent_skills`), a curriculum-specific skill pack
-(`china-k12-teacher-skills`), an admissions-test MCP server (`paes-mcp`). 🔵 **The commentary and the
-commits agree for once**, which is rare enough in this base to note.
+🟢 **Byte-verified corroboration, which is the useful part — and it got stronger this pass.** Of the
+30 agents new to this base, the ones with traction are curriculum- and instrument-specific rather
+than general: an NCERT/CBSE classroom, a PAES admissions MCP server, a Swiss LP21 lesson planner, a
+Mexican Sign Language tutor, a Greek etymology tutor with an MCP server, a storybook **reading-level
+model**, a Socratic protocol extracted as an installable skill. 🔵 **Nothing in this pass's new
+supply is a general-purpose chatbot.**
 
 ## `T859` — A national AI policy was withdrawn for citing sources AI invented
 
-🔴 **Search-channel, and `p786-C` is now settled.** South Africa's draft National AI Policy was
-gazetted as **Notice 3880 of 2026 on `2026-04-10`** and **withdrawn on `2026-04-26`** by Minister
-Solly Malatsi, after fabricated, AI-hallucinated citations were found in its reference list —
-reportedly **at least 6 of its 67 academic citations**. One source records abrogation on
-`2026-04-27`, a day later, so 🔴 **cite both dates**. A seven-person panel is reviewing it with no
-published timeline. The Department of Basic Education's **National AI in Education Framework**
-remains 🔴 **unpublished, with no timeline**.
+🔴 **Search-channel, carried.** South Africa's draft National AI Policy was gazetted as **Notice 3880
+of 2026 on `2026-04-10`** and **withdrawn on `2026-04-26`** by Minister Solly Malatsi, after
+fabricated, AI-hallucinated citations were found in its reference list — reportedly **at least 6 of
+its 67** academic citations. One source records abrogation on `2026-04-27`, so 🔴 **cite both
+dates**. A seven-person panel is reviewing it with no published timeline; the Department of Basic
+Education's **National AI in Education Framework** remains 🔴 **unpublished, with no timeline**.
 
 🔵 **Keep this row.** It is the most persuasive provenance argument available in an education
 engagement: the failure mode was not a model hallucinating in a classroom but **an AI-drafted
-governance document failing its own review** — and the cost was a withdrawn national policy and a
-governance vacuum in a country where, as commentary in the same window put it, AI is already inside
-the classrooms and nobody is governing it.
+governance document failing its own review**. 🟢 **And this pass adds the component that answers it:**
+`SeydinaBANE/sherpa` (MIT, EMEA) is a tutor built on **grounded RAG with citations** — provenance as
+an architectural property rather than a policy promise.
