@@ -4,10 +4,176 @@ region: Global
 updated: 2026-11-12
 ---
 
-# Current trends — `p789`
+# Current trends — `p790`
 
 🟢 **Byte-verified** claims concern repositories, grants, `sha`s and dependency manifests.
 🔴 **Search-channel testimony** covers every market, adoption and regulatory figure (`T844`).
+
+## `T875` — A licence file may QUOTE other licences, so substring grading is unsound in both directions
+
+🔴 **The finding that reversed one of this base's own published verdicts, and it is a method change
+rather than an erratum.** This base published, twice, that
+[`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) is **PROPRIETARY**, reasoning that *"a
+`39,890 B` licence file is not evidence of an open grant — it is evidence of a long one."*
+
+🟢 **Measured.** The file is served at **`license.txt`** (lowercase, `.txt`) and is a licence
+**anthology** with its own table of contents:
+
+| § | Contents | Whose terms |
+|---|---|---|
+| 1 | Overview | nextSIS |
+| 2 | **nextSIS GNU General Public License Version 3** | 🟢 nextSIS's own grant — **full operative GPL-3.0**, `Version 3, 29 June 2007` |
+| 3 | CodeIgniter License | EllisLab, Inc. — a bundled framework |
+| 4 | Twitter Bootstrap License | a bundled front end |
+
+🔴 **The single `All rights reserved.` in `39,890` bytes is at line `703` — the second line of §3,
+`Copyright (c) 2008 - 2011, EllisLab, Inc.` — and EllisLab's very next clause reads `You are
+permitted to use, copy, modify, and distribute the Software`.** The line the verdict rested on is
+not nextSIS's, **and the licence it belongs to is not proprietary either.**
+
+🔴 **Then the same file defeated two more probes, differently each time.** A fresh instrument built
+for this pass graded it **`AGPL-3.0`**, because **GPL-3.0's own §13 names the GNU Affero GPL**; and
+its NonCommercial gate fired, because **GPL-3.0 §6 uses the word "noncommercial"**. 🔵 **Three
+probes, three different wrong answers, one cause.**
+
+🟢 **The rule, and it generalises past this row.** Grade by **anchored title lines** — a licence
+title occupying its own line — and **report the set, not a family**. A file containing `N` licence
+titles is an **`ANTHOLOGY`** and has no single family. `nextSIS` reads
+`ANTHOLOGY[GPL-3.0, +CodeIgniter]`; **`odoo/odoo`**, the most-cited vertical platform in this sector,
+reads **`ANTHOLOGY[LGPL, GPL-3.0]`** at `43,529 B` — so the education-ERP tables that call Odoo
+"LGPL" are stating one of its two families.
+
+🟢 **And read the tree, never a filename list.** `raw.githubusercontent.com` is **case-sensitive**;
+`p789` missed this grant on `11` candidate paths and this pass missed it on `10`:
+
+```bash
+git clone --filter=blob:none --no-checkout --depth 1 https://github.com/OWNER/REPO /tmp/x
+git -C /tmp/x ls-tree -r --name-only HEAD | grep -iE 'licen|copying|legal|terms|notice'
+```
+
+🔵 **Relationship to the base's existing laws.** This is `metabase`'s *split-by-directory* finding
+**split by section instead**, and it is `T845` (*"length is not a verdict"*) proved at **both** ends
+in one pass: **`39,890` bytes was not proprietary, and `19` bytes is a real grant** —
+[`frappe/education`](https://github.com/frappe/education) serves exactly `License: GNU GPL V3` and
+nothing else.
+
+## `T876` — Brazil mandated a human in the loop, not a ban, and the research channel served the superseded draft
+
+🔴 **`Parecer CNE/CP nº 15/2026`, homologated `2026-11-10` and published in the `DOU` `2026-11-11`
+(reported; primary act NOT read), gives Brazilian institutions `12` months to adapt.** Under
+**`Lei nº 9.131/1995`** a CNE parecer binds only once the Minister's homologation act is published,
+so the clock starts there and not at the `2026-09-01` approval.
+
+🔴 **The version the CNE approved on `2026-09-01` prohibited AI correction of essays and
+dissertative questions outright. MEC judged that too restrictive and released the use.** At least
+one outlet still reports the prohibition as current, and **this base's first reading of the research
+channel took that superseded draft as the rule.** 🟢 The error was caught by noticing that sources
+*disagreed* and chasing the disagreement to its history — not by a better query.
+
+🟢 **The homologated position:** AI **may assist** correction as a first filter; **the mark is
+reserved to the teacher**; **no student may be penalised on an AI detector's output alone**;
+**educação infantil and anos iniciais (to `5º ano`) may not use AI tools unsupervised**; individual
+use is permitted from **ensino médio** upward.
+
+🟢 **Commercially this is the best news in the LATAM block.** A human-in-the-loop grading pipeline
+with a reserved teacher decision is what `P788-1` already is. 🔴 **What Brazil forbids is the
+autograder that assigns the mark** — the product most vendors lead with. 🔵 **Convergence worth
+naming:** Florida bars AI on graded work unless the instructor permits; New York would gate direct
+student use by grade; the EU regulates assessment as Annex III high-risk; Brazil reserves the mark.
+**Four jurisdictions, one regulated surface — and now an age dimension too.**
+
+🔴 **Standing caution this trend creates.** `T858`/`p758` recorded the research channel handing this
+base a **superseded federal deadline**. It has now happened again, in a different country, on the
+single most decision-relevant rule in the region. 🟢 **When sources disagree about a regulation,
+the disagreement is usually a *version history*, not noise — look for the draft before the
+amendment.**
+
+## `T877` — A category error can FABRICATE a region as easily as it can hide one
+
+🟢 **`p789`'s best result was finding that Japan's "measured gap" was a category error:** the supply
+was real and sat in `校務` (school administration), not tutoring. 🔴 **This pass found the same error
+running backwards, and it would have produced a false placement rather than a false absence.**
+
+🔴 **`p789` declared Tanzania a measured gap at `0`.** `elimu AI Tanzania` returns **`2`**
+repositories, and one of them —
+[`sangadanson1-dot/-Vet-IDEA-TZ`](https://github.com/sangadanson1-dot/-Vet-IDEA-TZ) — **is MIT,
+byte-verified at `1,067 B` · `238c1bbb3bc0`**. Grant: clean. Education: present. AI: present.
+Country: Tanzania. **On every field this base indexes, it discharges the gap.**
+
+🔴 **Read in Swahili, it serves `wafugaji na wataalamu wa mifugo` — livestock keepers and veterinary
+professionals — teaching `afya ya wanyama, magonjwa, chanjo, lishe`: animal health, disease,
+vaccination, nutrition.** 🟢 It is real, granted, AI-bearing education. **It is veterinary extension
+education, and this base is about school education.**
+
+🔵 **The asymmetry that makes this worth a trend of its own.** A category error in the *hiding*
+direction costs a pass and is recoverable — Japan was rescued. **A category error in the
+*fabricating* direction is not self-correcting**: the gap closes on the shelf, the region stops being
+queried, and the first time anyone finds out is when an engagement opens the row. 🔴 **`elimu` means
+*education* in Swahili and the word does not distinguish schooling from extension work** — exactly
+the semantic trap `T867` recorded for Korean `교육`, but with the trap set in the opposite direction.
+
+🟢 **The gate, added to `P788-8`:** after a grant verifies, **read what the artefact teaches and to
+whom, in its own language, before placing it.** A grant gate is not a relevance gate (`T873`) — and
+a *relevance* gate is not a *sector* gate either.
+
+## `T878` — A declared ecosystem is not a built one, and the honest ones say so
+
+🟡 **[`jinlize-tech`](https://github.com/jinlize-tech/education-ai-ecosystem) is the largest
+permissively-granted education-agent repository set this base has ever measured, and the claim is
+true:** **`132`** repositories under the owner, **`100` of `100`** sampled carrying **Apache-2.0**,
+hub licence byte-verified at `11,358 B` · `cfc7749b96f6`. The hub declares **`130` products — `97`
+Skills and `33` Agents**.
+
+🔴 **And its own README states what it has not got:** `WorkBuddy platform validation: 0/130,
+NOT_EXECUTED` · `GitHub Release verified: 30/130` · *"They do not prove WorkBuddy parsing,
+installation, model behavior, review, or publication."* Sampled agent repositories read
+`Agent | … | Planned / 待研发` — **planned / to be developed**.
+
+🔵 **Writing "`33` education agents, Apache-2.0" was the single largest padding opportunity available
+to this base this pass, and the repository itself supplied the refutation.** 🟢 **It is carried as
+`2` byte-verified rows plus a measured org count** — see `agents/top.md`.
+
+🟢 **What it is genuinely worth is the taxonomy, and that part needs no validation at all:** an
+`8`-centre decomposition of the education **back office** — 招生营销 (admissions-marketing),
+教学教研 (teaching-research), 教务运营 (academic-operations), 财务运营 (finance), 人力组织 (HR),
+校区标准化 (multi-campus standardisation). 🔵 **It is the first *organisational* map of education AI
+this base holds** rather than another list of tutors, and it agrees with `T858` and the OECD: the
+money is moving to the back office.
+
+🔵 **The general rule for this base:** when a repository set is large and uniformly licensed,
+**measure the org on the claim channel, sample it on the byte channel, and then read what the
+repositories say about their own readiness** — because a set this size is usually a *plan* expressed
+as repositories, and a plan is intelligence of a different kind than code.
+
+## `T879` — In education ERP the permissive layer is not narrow, it is EMPTY — and two vendor claims do not survive a probe
+
+🟢 **`6` education ERP / SIS platforms probed on the byte channel this pass. `0` carry MIT, Apache-2.0
+or BSD.**
+
+| Platform | Claimed | Measured on the bytes |
+|---|---|---|
+| **OpenEduCat** | LGPL-3 | 🟡 **LGPL** `8,241 B` — 🟢 **the only vendor claim that holds** |
+| **Odoo** | LGPL | 🔴 **`ANTHOLOGY[LGPL, GPL-3.0]`** `43,529 B` — two families, not one |
+| **Frappe Education** | "based on ERPNext" | 🔴 **GPL-3.0 by reference, in `19` bytes** — and **not** the AGPL-3.0 of its sibling `frappe/lms` |
+| **openSIS Classic** | GPL-2.0 | 🔴 **no licence served** (`8348cd069aa2` — reproduced this base's own prior measurement as an unplanned 11th control) |
+| **Fedena** | **Apache-2.0**, per a competitor's comparison table | 🔴 **REFUTED — no licence served on `10` paths** |
+| **GegoK12** | **MIT**, plus *"modification, rebranding and resale are permitted"* | 🔴 **REFUTED — `gegok12/gegok12` does not exist (`rc=128`), and a GitHub-wide search for `gegok12` returns `13` results, none of them this product** |
+
+🔴 **The most permissive claim in the entire education-ERP market has no locatable source.** 🟢 **An
+MIT claim with no repository is not a finding** — the same rule as *a 404 is not a finding*, applied
+to a licence rather than a URL.
+
+🟢 **The architectural conclusion, now measured on the administrative side as well as the
+instructional one.** `T852` established that the famous **LMSs** are copyleft. This pass establishes
+that the **SIS/ERP** layer is too — including `nextSIS`, whose correction *adds* a copyleft open SIS
+rather than a permissive one. 🔴 **So the AI layer in this sector is always an integration, never an
+embed.**
+
+🔵 **Which makes the MIT attachment points this base holds worth more than they look:**
+`brightspace-d2l-mcp`, `classcharts-agent` (read-only), `teams-facultad-mcp`,
+`LearningLocker/xapi-service`. 🟢 **An MIT MCP server in front of a GPL platform is the whole
+architecture, not a convenience** — and it is the one shape that is deliverable in every region this
+base covers.
 
 ## `T869` — In education the grant is often TWO grants, and a single-file probe reads it as none
 

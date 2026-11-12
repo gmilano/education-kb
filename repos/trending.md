@@ -4,6 +4,55 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p790` — **The largest permissively-granted education repository set this base has ever measured is real at `132` repositories and `0/130` validated by its own README. Plus a reversal: the `39,890 B` licence file this base called proprietary is an ANTHOLOGY containing a full GPL-3.0 grant, and a blobless clone is the instrument that settles such a file.**
+
+🟢 **Control before any verdict: `10` of `10` known-good rows reproduced this base's recorded licence bytes exactly**, and `3` planted negatives returned DEAD. Full control table in `agents/trending.md` `p790`.
+
+### 🟡 `T878` — A declared ecosystem is not a built one, and this one says so itself
+
+| Measured | Value | Channel |
+|---|---|---|
+| Repositories under `jinlize-tech` | **`132`** | `search/repositories` (`user:` qualifier) |
+| Of `100` sampled, carrying **Apache-2.0** | **`100`** | `search/repositories`, SPDX id |
+| Hub licence bytes | **`11,358 B`** · `cfc7749b96f6` | `raw` — byte channel |
+| Declared products | `130` = **`97` Skills + `33` Agents** | the hub's own `README` |
+| 🔴 **WorkBuddy platform validation** | **`0/130`, `NOT_EXECUTED`** | the hub's own `README` |
+| 🔴 GitHub Release verified | **`30/130`** | the hub's own `README` |
+| Sampled agent repository status | **`Planned / 待研发`** (to be developed) | repository descriptions |
+
+🟢 **The licensing claim is TRUE at scale** — this is by a wide margin the largest permissively-granted education-agent repository set this base has measured, and two of its members are placed on `agents/top.md` with their bytes. 🔴 **And the hub states what it has not got, in terms:** *"They do not prove WorkBuddy parsing, installation, model behavior, review, or publication."*
+
+🔵 **So it is carried as `2` rows plus a measured org count, not as `33` agents.** Writing *"`33` education agents, Apache-2.0"* was the single largest padding opportunity available to this base this pass, and **the repository itself supplied the refutation.** 🟢 **What it is genuinely worth is the taxonomy:** the `8`-centre decomposition of the education back office — 招生营销 (admissions-marketing), 教学教研 (teaching-research), 教务运营 (academic-operations), 财务运营 (finance), 人力组织 (HR), 校区标准化 (multi-campus standardisation) — is reusable intelligence even where the code is not, and it is the first *organisational* map of education AI this base holds rather than a list of tutors.
+
+### 🟢 `T875` applied to repository reading — a blobless clone settles a licence file that `11` paths cannot find
+
+🔴 **`Kosudo/nextSIS` read `NO-GRANT-SERVED` against `10` candidate filenames, and `p789` read it against `11`.** The grant is at **`license.txt`** — lowercase, `.txt`. `raw.githubusercontent.com` is **case-sensitive**, so a path list is a guess and a tree is a fact.
+
+🟢 **The instrument that settles it, and it is cheap:**
+
+```bash
+git clone --filter=blob:none --no-checkout --depth 1 https://github.com/OWNER/REPO /tmp/x
+git -C /tmp/x ls-tree -r --name-only HEAD | grep -iE 'licen|copying|legal|terms|notice'
+```
+
+🟢 **`221` files enumerated, one match, no guessing** — and no blobs downloaded. 🔵 **This replaces the candidate-filename list for any address that matters**, and it is the generalisation of `p789`'s defect `2` (case-sensitivity) and `p790`'s defect `4` (the same defect, reproduced by a fresh instrument). 🔴 **A licence probe that enumerates filenames will keep producing false absences; one that reads the tree cannot.**
+
+### 🟢 Foundational rows added this pass
+
+| Repo | Address | Grant, on the bytes | Region | Why it is foundational |
+|---|---|---|---|---|
+| 🟢 **nextSIS** `CORRECTED` | [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🔴 **GPL-3.0**, served in an `ANTHOLOGY[GPL-3.0, +CodeIgniter]` · `39,890 B` · `cd7a49230f22` | Global | 🟢 **The only open Student Information System this base holds** — and it was published here as `PROPRIETARY` for two passes. 🔴 Copyleft: separate deployment, boundary integration, never embedded. Bundles **CodeIgniter** (EllisLab) and **Twitter Bootstrap** |
+| 🟡 **education-ai-ecosystem** `NEW` | [`jinlize-tech/education-ai-ecosystem`](https://github.com/jinlize-tech/education-ai-ecosystem) | 🟢 Apache-2.0 · `11,358 B` · `b59ceae4181d` | Global | A `132`-repository Apache-2.0 education product system. 🟡 **Foundational as a taxonomy, not yet as code** — `0/130` platform-validated by its own account |
+| 🟢 **awesome-ia-sala-de-aula** `NEW` | [`ciro-maciel/awesome-ia-sala-de-aula`](https://github.com/ciro-maciel/awesome-ia-sala-de-aula) | 🟢 **CC0-1.0** · `7,049 B` · `be5467501439` | LATAM 🇧🇷 | 🟢 **A new licence family and the most permissive grant in this base** — a public-domain dedication with no attribution condition. Content: classroom AI tools with each one's **minimum age, privacy posture and the Brazilian rules that apply** — the exact compliance input `P790-1` needs |
+| 🟢 **spanish-tutor-ai** `NEW` | [`MrEug3n1o/spanish-tutor-ai`](https://github.com/MrEug3n1o/spanish-tutor-ai) | 🟢 MIT · `1,069 B` · `6f0ebd566861` | Global | 🟢 **The local-only reference stack `P788-4` never had:** local open-source models end to end, retrieval over notes, a **QLoRA-fine-tuned** checker, and a planning agent — **no API keys anywhere in the loop** |
+
+### 🔵 Declared gaps on the repository channel
+
+🔴 **Transitive depth `3+` remains unmeasured.** `p789` measured layer `2` of `nbgrader` (`65` packages, `2` weak-copyleft) and declared depth `3+` open; this pass did not advance it, and says so rather than letting the omission read as a clean result. 🔴 **`oppia/oppia`'s transitive closure is still unmeasured**, and it is the repository this base tells clients to embed with a known **AGPL-3.0** package at layer `1`. Carried as `ACTION p790-A`.
+
+🔴 **The `jinlize-tech` set is sampled, not swept.** `100` of `132` repositories were read for their SPDX id on the claim channel and **`2` on the byte channel.** The remaining `30` are unmeasured and the licence-byte agreement across the set is assumed from two identical shas (`cfc7749b96f6`), not proven. Carried as `ACTION p790-D`.
+
+
 ## 🆕 `2026-11-12` · `p789` — **`ACTION p788-D` DISCHARGED at the second layer: `nbgrader`'s clean first layer is not a clean graph. `65` new transitive packages, `2` weak-copyleft, and both arrive through the most ordinary plumbing in Python — `requests` and `jupyter-client`.**
 
 🟢 **Control on the dependency channel before any verdict: `nbgrader` declares `18` direct runtime dependencies — the exact count `p788` recorded.** The instrument reads **PEP 639 `license_expression` first**, then classifiers, then the free-text `license` field, because `p788` recorded PEP 639 blindness as a defect of its own dependency probe. Of the `65` layer-2 packages, **`28` are decided by `license_expression`** and would have been read as `UNDECLARED` by a classifier-only instrument.

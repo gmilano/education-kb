@@ -4,6 +4,53 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p790` — **Disposition of the `p789` queue, and the actions for `p791`.**
+
+🔴 **The pass's headline is a REVERSAL of this base's own published verdict, not a new finding.**
+[`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) was published as **PROPRIETARY** at `p787-B`
+and again at `p789`. It is **GPL-3.0**. The `39,890 B` file is a licence **anthology** and the single
+`All rights reserved.` it was graded on is at line `703`, inside **EllisLab's CodeIgniter** section,
+two lines above EllisLab's own grant of permission. See `T875`.
+
+🔴 **`7` defects in this pass's own instruments, all caught by controls on rows this base had already
+published, `0` by inspection.** Three were **Spanish-language blind spots** — the third consecutive
+pass in which `p788-G`'s standing caution paid, and the first in which a *bar* (NonCommercial) was
+the thing being missed.
+
+### Disposition of `p789`'s declared gaps
+
+| Gap | Disposition |
+|---|---|
+| 🟢 🇲🇾 **Malaysia** (`1`, ungranted) | 🟢 **DISCHARGED.** [`haziqhalifi/StudyLah`](https://github.com/haziqhalifi/StudyLah), MIT `1,069 B` · `c6ee7bb5db4a` — SPM Form 5 mathematics, explanations in **Bahasa Malaysia**, explanation *style* matched to measured accuracy. 🟢 Demand placed too: National Education Plan 2026–2035, MOE **AI Literacy Guidelines 2026** (May), `20`/`20` public universities on Gemini for Education — **the widest demand-to-supply gap in the APAC block** |
+| 🔴 🇬🇭 **Ghana** (`1`, ungranted) | 🔴 **NOT discharged, and RE-MEASURED.** `WASSCE AI tutor` → **`11`**; `5` probed: `3` alive **ungranted**, **`2` DEAD** (`rc=2`, re-probed and confirmed). 🟢 `p789` understated the supply ~`10×` and read the grant rate (`0`) exactly right. 🔵 Also: **the search index is stale here specifically** — `2` of `5` returned addresses no longer exist |
+| 🔴 🇹🇿 **Tanzania** (`0`) | 🔴 **NOT discharged, and the near-miss is `T877`.** `2` repositories exist; the only granted one is MIT **and teaches livestock health** (`wafugaji na wataalamu wa mifugo`) — veterinary extension, not school education. 🔵 **Placing it would have closed the gap on paper and left an engagement with nothing** |
+| 🟢 **`p788-F`** — carry the standing exclusion **in the data** | 🟢 **DISCHARGED AS SPECIFIED.** `jecampagne/cours_mallat_cdf` was written to an `EXCLUDE.txt` and filtered out of the batch file **before** the sweep ran, rather than living in prose. 🔵 `p788` recorded that an instruction only in prose gets violated by a bulk sweep; this pass put it in the data and it held |
+| 🟡 **`p788-B`** — upstream licence requests | 🟡 **PARTIAL — re-evidenced, not sent.** `5` of `5` standing ungranted targets re-probed and **all `5` confirmed still ungranted** at new shas: `narumi-mase/osaka-lesson-dataset` (🇯🇵), `silja-graf/Didaktikus-…-LP21` (🇨🇭), `SoukhyadP991/Multilingual-NCERT-Doubt-Solver` (🇮🇳), `TaoYu-ds/TutorMesh` (🇨🇳), `mingxuanyan07-lgtm/ai-for-education-showcase` (🇨🇳). 🟢 **These are stable absences, not transient ones** — which is what makes the requests worth drafting. 🔴 **Still not drafted** → `p790-B` |
+
+### 🟢 New this pass, beyond the declared queue
+
+| Finding | Where |
+|---|---|
+| 🟢 🇧🇷 **Brazil and** 🇨🇴 **Colombia placed for the first time** | `agents/top.md` LATAM · `4` new rows |
+| 🔴 **Brazil's `Parecer CNE/CP nº 15/2026`** — homologated `2026-11-10`, `12` months to adapt, mark reserved to the teacher | `intel/market.md` LATAM · `T876` · `P790-1` |
+| 🔴 **The research channel served a SUPERSEDED draft of it** (the `2026-09-01` version banned AI essay correction outright) | `T876` |
+| 🔴 **`0` of `6` education ERP/SIS platforms are permissive, and `2` vendor licence claims are REFUTED** | `verticals/solutions.md` · `T879` |
+| 🟡 **`132`-repository Apache-2.0 education ecosystem, `0/130` validated by its own README** | `agents/top.md` · `T878` |
+| 🔴 **EMEA Annex III reported postponed to `2027-12-02`; Art. 50 already in force since `2026-08-02`** | `intel/market.md` EMEA |
+
+### 🔴 Actions for `p791`
+
+| Action | What, and why it is worth a pass's budget |
+|---|---|
+| 🔴 **`p790-A`** — measure `oppia/oppia`'s transitive closure from a **lockfile** | 🔴 **It is the only repository this base tells clients to embed that has a known AGPL-3.0 package at layer `1`**, and `171` direct dependencies. `p789` measured layer `2` of `nbgrader` (`65` packages, `2` weak-copyleft) and proved a first-layer audit is a screen, not a clearance. 🔵 **Use a lockfile, not a manifest** — a manifest is a request and a lockfile is what ships |
+| 🔴 **`p790-B`** — **draft and send** the `5` re-evidenced licence requests | 🟡 Carried twice now and re-evidenced this pass at `5`/`5`. 🔵 **Three of the five are the best artefact found for their country** (🇯🇵 Japan's only serious artefact, 🇨🇭 the most engagement-shaped EMEA artefact, 🇮🇳 offline multilingual NCERT). 🟢 **Drafting five emails is cheaper than rebuilding five projects, and the absences are now proven stable rather than transient** |
+| 🔴 **`p790-C`** — read the **primary texts** for the two dated duties this pass carried on secondary sources | 🔴 **`porvir.org` and `www.gov.br` do not resolve in this session**, so Brazil's `DOU` homologation act was not read, and the EMEA Annex III postponement to `2027-12-02` was not read on `EUR-Lex`. 🔴 **Both are now load-bearing:** `P790-1`'s whole timeline and the EMEA sales order rest on them. 🟢 **Either find a reachable primary channel or label both as reported, permanently and visibly** |
+| 🔵 **`p790-D`** — sweep the remaining `30` `jinlize-tech` repositories on the **byte** channel | 🟡 `100` of `132` were read on the *claim* channel and **`2` on the byte channel**. Licence-byte uniformity across the set is inferred from two identical shas (`cfc7749b96f6`), **not proven**. 🔵 Cheap, and it either confirms the largest permissive education set this base holds or finds the exception that matters |
+| 🔵 **`p790-E`** — one Spanish-language leg on **Colombian** education-AI governance | 🔴 Colombia is now **placed on supply and empty on policy** — and its one placed row is a *score-prediction* tool, the shape most likely to attract a rule. 🔵 Query `Ministerio de Educación Nacional` and `ICFES` directly rather than a fourth regional English query. 🟢 **The channel is proven**: in-language ministry legs paid at `p664`, `p665` and again for Brazil this pass |
+| 🔴 **`p790-F`** — re-grade every **anthology-shaped** licence file already on this base | 🔴 **`T875` is not one row.** `odoo/odoo` reads `ANTHOLOGY[LGPL, GPL-3.0]` on first application, and this base has published single families for large licence files for hundreds of passes. 🔵 **Cheap gate: any `LICENSE` over ~`30,000 B` that is not a verbatim GPL/AGPL constant, plus any file containing more than one licence title line.** 🟢 The reversal above is the argument for running it |
+| 🔵 **`p790-G`** — standing caution: **a grant gate is not a relevance gate, and neither is a sector gate** | 🔴 `T873` established that `tutor` is a polluted term. `T877` adds the harder case: a row can pass **existence, grant, language, country and "education"** and still be the wrong sector — Tanzania's MIT row teaches **animal** health. 🔵 **After a grant verifies, read what the artefact teaches and to whom, in its own language, before placing it.** 🔴 **And note the asymmetry: a hiding error is recoverable and a fabricating error is not** — the gap closes on the shelf and nobody queries the region again |
+
+
 ## 🆕 `p788` — **Disposition of `ACTION p787-A`…`p787-G`, and the actions for `p789`.**
 
 🟢 **`6` of `7` discharged — `5` outright and `1` by refutation — with `1` partial (`p787-B`, `45` of `~65` addresses swept).** 🔵 `p787-A` was discharged at its third carry, which the standing rule required. 🔴 **And one standing caution was spent rather than honoured, which is recorded below rather than quietly dropped.**

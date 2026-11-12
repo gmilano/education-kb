@@ -4,11 +4,30 @@ region: Global
 updated: 2026-11-12
 ---
 
-# Foundational education repositories — `p789`
+# Foundational education repositories — `p790`
 
 **The single most useful fact in this file, carried:** in education, *the famous platforms are
 copyleft and the permissive layer is narrow and specific.* Moodle, Open edX, Canvas, Chamilo,
 ILIAS, Frappe LMS and ERPNext — the names a client will say out loud — are **GPL or AGPL**.
+
+🟢 **`p790` adds one name to that list, and takes it off a different one.** [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS)
+— a named **Student Information System** — was published by this base for two passes as
+**`PROPRIETARY`**. It is **`GPL-3.0`**. Its `39,890 B` `license.txt` is a licence **anthology**
+(§2 nextSIS's own full operative GPL-3.0, §3 **CodeIgniter**/EllisLab, §4 **Twitter Bootstrap**), and
+the single `All rights reserved.` this base graded on sits at line `703`, inside EllisLab's section,
+two lines above EllisLab's own grant of permission. 🟢 **The carried sentence therefore holds more
+strongly, not less: the open SIS is copyleft too.** 🔴 And the correction is a method change —
+**a licence file that quotes other licences cannot be graded by substring presence** (`T875`). Read
+the tree, never a filename list:
+
+```bash
+git clone --filter=blob:none --no-checkout --depth 1 https://github.com/OWNER/REPO /tmp/x
+git -C /tmp/x ls-tree -r --name-only HEAD | grep -iE 'licen|copying|legal|terms|notice'
+```
+
+🟢 **`221` files enumerated, one match (`license.txt`, lowercase), no blobs downloaded.** `raw` is
+case-sensitive, so a candidate-filename probe produces **false absences** — which is what both
+`p789` and this pass's first instrument produced on this very row.
 
 🔴 **The single most useful fact ADDED this pass (`T861`):** a permissive repository grant tells you
 nothing about its dependencies, and **4 of the 7 highest-star permissive education repos carry
@@ -155,11 +174,19 @@ family check. Verified again this pass: all copyleft controls still reproduce.
 | 🔴 Copyleft (GPL · AGPL · LGPL) | **20** |
 | 🟡 EUPL-1.2 | **3** |
 | 🟢 **BSL-1.0 (Boost)** — new family this pass | **1** |
-| 🔴 Not open source (proprietary · NonCommercial · split · bespoke) | **6** |
+| 🔴 Not open source (proprietary · NonCommercial · split · bespoke) | **5** — 🟢 **`1` fewer: `nextSIS` is GPL-3.0, corrected this pass** |
+| 🟢 **CC0-1.0** — new family this pass (`awesome-ia-sala-de-aula`), the most permissive grant in this base | **1** |
 | 🟢 Permissive repos with a **first-layer** dependency audit | **4 of 53** — `nbgrader` 🟢, `OATutor` 🟢, `Kolibri` 🟡, `Oppia` 🔴 |
 | 🟢 Permissive repos with a **second-layer** dependency audit | **1 of 53** — `nbgrader` 🟡 (`65` transitive packages, `2` weak-copyleft) |
 | Dead addresses previously corrected to a live canonical owner | **4** — `tsugi/tsugi`→`csev/tsugi`, `openedx/openassessment`→`openedx/edx-ora2`, `mahara/mahara`→`MaharaProject/mahara`, `openedx/tutor`→`overhangio/tutor` |
-| 🟢 Controls reproduced exactly before any verdict shipped | **13 of 13** · `2` planted negatives DEAD |
+| 🟢 Controls reproduced exactly before any verdict shipped | **10 of 10** (`p790`) · `3` planted negatives DEAD · 🔴 `7` defects found by those controls, `0` by inspection |
+
+🔴 **Declared gaps added by `p790`:** the `jinlize-tech` set is **sampled, not swept** — `100` of its
+`132` repositories were read for an SPDX id on the *claim* channel and only **`2` on the byte
+channel**, so licence-byte agreement across the set is inferred from two identical shas
+(`cfc7749b96f6`), not proven (`ACTION p790-D`). And `oppia/oppia`'s transitive closure is **still
+unmeasured** while it remains the repository this base tells clients to embed and carries a known
+layer-1 **AGPL-3.0** package (`ACTION p790-A`).
 
 🔴 **Declared gaps on this file:** transitive depth `3+` is **unmeasured by design**; the npm-side
 layer-2 graphs (`OATutor` `43` direct, `Oppia` `171` direct) were **not** re-audited this pass, and

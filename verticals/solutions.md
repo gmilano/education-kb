@@ -4,7 +4,7 @@ region: Global
 updated: 2026-11-12
 ---
 
-# Vertical platforms — real systems an AI layer can sit on top of — `p789`
+# Vertical platforms — real systems an AI layer can sit on top of — `p790`
 
 The pattern that works in education is the Odoo pattern: **take a mature, deployed, customisable
 platform that already holds the institution's data, and add agents at its edge.** Nobody replaces a
@@ -15,6 +15,36 @@ necessary condition for direct embedding, **not a sufficient one**: the host's *
 be read too. `oppia/oppia` is Apache-2.0 and depends on an **AGPL-3.0** library; `learningequality/kolibri`
 is MIT and depends on two LGPL ones (`T861`). **`Deps` below records the first-layer audit where one
 was run; a blank cell means not audited, not clean.**
+
+
+## 🆕 `p790` — Education ERP / SIS, probed on the bytes, and **three vendor licence claims fail**
+
+🔵 **Why this block exists.** The brief for this base asks for *real systems an AI layer can sit on
+top of* — Odoo for ERP, OpenMRS for health, Moodle for learning. The education-ERP market answers
+that question mostly through **vendor comparison tables**, and vendor tables are a claim channel.
+Each row below was read on the byte channel instead.
+
+| Platform | Address | Grant, on the bytes | ★ | Verdict for an AI layer |
+|---|---|---|---|---|
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL** · `8,241 B` · `46a5d7d40082` | `911` | 🟡 **The vendor claim HOLDS — the only one here that does.** Education ERP built on Odoo's ORM, with `openeducat_core` as the SIS. 🟢 **LGPL tolerates dynamic linking**, so an AI layer calling it as a service or an Odoo module is clean; keep the LGPL components replaceable and their source available |
+| **Odoo** (the ERP underneath) | [`odoo/odoo`](https://github.com/odoo/odoo) | 🔴 **`ANTHOLOGY[LGPL, GPL-3.0]`** · `43,529 B` · `3ce3a7dc8ecb` | `55,739` | 🔴 **`T875` lands on the most-cited vertical platform in the sector on its first application.** Odoo's single `LICENSE` carries **two** copyleft families; reporting it as "LGPL" — as the education-ERP tables do — states one of the two. 🟡 Build **modules**, not a fork, and read which family governs the part you touch |
+| **Frappe Education** | [`frappe/education`](https://github.com/frappe/education) | 🔴 **GPL-3.0 — BY REFERENCE, in `19` bytes** · `1fcecf395312` · `61408d3da518` | `705` | 🔴 **The shortest grant this base has ever measured, and it is a real one.** The entire file reads `License: GNU GPL V3` — no operative text. 🟢 `T845` at its extreme: **`19` bytes is a grant and `39,890` was not proprietary.** 🔴 Copyleft; and note it is **GPL-3.0**, *not* the AGPL-3.0 this base records for its sibling `frappe/lms` — the two Frappe education products differ in family |
+| **openSIS Classic** | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **NO GRANT SERVED** · `8348cd069aa2` | `351` | 🔴 **Re-confirmed, and it reproduced an unplanned 11th control** — this base already records this address at this exact sha as grant-less. 🔵 The vendor tables list it `GPL-2.0`; the repository serves nothing |
+| **Fedena** | [`foradian/fedena`](https://github.com/foradian/fedena) | 🔴 **NO GRANT SERVED** · `333477b06f1d` | — | 🔴 **CLAIM REFUTED.** OpenEduCat's own comparison table lists Fedena as **Apache-2.0**. The repository serves **no licence on `10` paths**. 🔵 A competitor's table is not a licence |
+| **GegoK12** | `gegok12/gegok12` | 🔴 **ADDRESS DOES NOT EXIST** (`git ls-remote` `rc=128`) | — | 🔴 **CLAIM REFUTED, and this is the sharpest one.** The vendor site states an **MIT** licence and that *"modification, rebranding, and resale are permitted"* — the most permissive claim in the entire education-ERP market. 🔴 **A GitHub-wide search for `gegok12` returns `13` results and none is this product.** There is no locatable source. 🟢 **An MIT claim with no repository is not a finding** |
+
+🟢 **The sentence to carry into an engagement.** In education ERP/SIS the permissive layer is not
+narrow — **it is empty**. `0` of `6` platforms probed carry MIT, Apache-2.0 or BSD: four are
+copyleft (`LGPL`, `LGPL+GPL-3.0`, `GPL-3.0`, and `nextSIS`'s corrected `GPL-3.0`), and the two that
+were *claimed* permissive are a refuted table entry and a non-existent address. 🔴 **So the AI layer
+in this sector is always an integration, never an embed** — which is the same conclusion
+`repos/foundations.md` reaches for LMSs, now measured on the administrative side too.
+
+🔵 **And the pattern that follows from it:** the attachment points this base already holds —
+`brightspace-d2l-mcp` (MIT), `classcharts-agent` (MIT, read-only), `teams-facultad-mcp` (MIT),
+`LearningLocker/xapi-service` (MIT) — are **more valuable than they look**, because every system
+they attach to is copyleft. 🟢 **An MIT MCP server in front of a GPL platform is the whole
+architecture**, not a convenience.
 
 ## Learning Management — the delivery layer
 
@@ -119,6 +149,20 @@ That second clause is new, and it is the whole point of `T861`:
 | `learningequality/kolibri` | MIT | 🟡 `2` LGPL of `32` | 🟡 **Yes, with the LGPL components kept replaceable and their source available** |
 | `oppia/oppia` | Apache-2.0 | 🔴 `1` **AGPL-3.0** of `171` | 🔴 **Not until `angular-shepherd` is removed or replaced** |
 | `sakaiproject/sakai` · `OpenOLAT` · `opencast` | ECL-2.0 / Apache-2.0 | ⚪ not audited | 🟡 **Permissive at the root; audit before shipping** |
+| 🟢 **`Kosudo/nextSIS`** `CORRECTED p790` | 🔴 **GPL-3.0** (served in an anthology) | ⚪ not audited | 🔴 **No — separate deployment, integrate at the boundary.** 🟢 **But it is now *usable*, which is the change:** this base barred it as proprietary for two passes. **The only open Student Information System it holds** |
+| 🟢 **`MrEug3n1o/spanish-tutor-ai`** `NEW p790` | 🟢 MIT | ⚪ not audited | 🟡 **Permissive at the root — and the only row here with no external model call in its default loop.** That removes the cross-border data question instead of governing it, which is why `P788-4` now has a reference implementation |
+| 🟡 **`jinlize-tech/*`** `NEW p790` | 🟢 Apache-2.0 (`100/100` sampled) | ⚪ not audited | 🟡 **Grant clean, code `0/130` platform-validated by its own README.** Take the `8`-centre back-office taxonomy now; take the packages only after your own tests |
+
+🟢 **`p790` gives that rule a denominator.** The `5` new permissive rows placed this pass were each
+probed for a scope carve-out and **`0` of `5` carry one** — their grants are unqualified at the
+repository level. 🔴 **That is not the same as the curriculum being cleared.**
+`bncc-lesson-generator` generates against Brazil's **BNCC**, `mi_icfes` against Colombia's
+**Saber 11**, `StudyLah` against Malaysia's **SPM** — three state or ministry instruments, and
+**none of the three repositories makes any claim about them in either direction.** 🔵 **The absence
+of a scope clause is the absence of a *statement*, not a grant of the content.** `paes-mcp`, which
+does state it (and names **DEMRE** as the rights-holder of Chile's PAES items), is the row that
+taught this base to look — and it remains the only row in the base that answers the question
+out loud.
 
 🔵 **And one more rule, from `T864`.** In education the **content** has a rights-holder and the
 repository is the cheap part. Exam items, textbooks and curricula belong to ministries, universities

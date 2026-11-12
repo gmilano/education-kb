@@ -4,7 +4,7 @@ region: Global
 updated: 2026-11-12
 ---
 
-# Compose patterns — `p789`
+# Compose patterns — `p790`
 
 Each recipe names **real, byte-verified repositories**, the grant on each, how they wire together,
 and the licensing boundary that keeps client code owned by the client. Grants and `sha`s were read
@@ -26,6 +26,78 @@ repository is the cheap part. A permissive grant over a wrapper is not a grant o
 textbooks or statutes inside it. **Read the scope clause; ask who owns the content.**
 
 ---
+
+## `P790-1` — BNCC lesson planning + AI-assisted marking with the grade RESERVED to the teacher · **LATAM 🇧🇷 first** · 8–10 weeks
+
+🔴 **Why this exists now and not next quarter.** `Parecer CNE/CP nº 15/2026` was homologated
+`2026-11-10` (`DOU` `2026-11-11`, reported) and gives Brazilian institutions **`12` months to
+adapt** — so roughly **`2027-11-10`**. It **permits** AI-assisted correction of essays and
+dissertative questions and **reserves the mark to the teacher**; bars penalising a student on an
+AI-detector output alone; and bars unsupervised AI use **up to `5º ano`**. 🟢 **That is a
+human-in-the-loop mandate, not a ban — and it is a specification.** `T876`.
+
+🟢 **Every component below is byte-verified on this base.**
+
+| Layer | Component | Grant | Why this one |
+|---|---|---|---|
+| Lesson planning | [`iagommendes/bncc-lesson-generator`](https://github.com/iagommendes/bncc-lesson-generator) | 🟢 MIT `1,068 B` · `171e1db7278e` | **BNCC**-aligned plans from an ordinary form — **`zero-prompt para o professor`**, which removes the adoption barrier that kills teacher tooling |
+| Marking assist | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 BSD-3 `1,512 B` | 🟢 **The cleanest audited component in this base** — `0`/`18` copyleft at layer 1. 🟡 Layer 2 adds MPL-2.0 (`certifi`) and LGPL-2.1 (`paramiko`), **neither triggered by this deployment** (`T872`) |
+| Mastery / adaptivity | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT `1,105 B` | Bayesian Knowledge Tracing, and **`0` of `43` direct dependencies are copyleft** |
+| Compliance input | [`ciro-maciel/awesome-ia-sala-de-aula`](https://github.com/ciro-maciel/awesome-ia-sala-de-aula) | 🟢 **CC0-1.0** `7,049 B` | Classroom AI tools **with each one's minimum age and privacy posture and the Brazilian rules that apply** — the `5º ano` age gate has a source, not an assumption |
+| Policy agent | [`jinlize-tech/edu-ai-usage-policy-agent`](https://github.com/jinlize-tech/edu-ai-usage-policy-agent) | 🟢 Apache-2.0 `11,358 B` | 🟡 **Reference only** — `0/130` platform-validated by its own README (`T878`). Take the shape, write the code |
+| Evidence trail | [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) + [`xapi-validation`](https://github.com/LearningLocker/xapi-validation) | 🟢 MIT `1,070 B` each | Every suggestion, every teacher override and every final mark as a validated xAPI statement |
+| FRIA evidence | [`uchit/mcp-regulated-ai-compliance`](https://github.com/uchit/mcp-regulated-ai-compliance) | 🟢 Apache-2.0 | Carries the same deliverable into an EMEA port |
+
+### The wiring, and the one gate the whole pattern exists for
+
+```
+teacher form  ──>  bncc-lesson-generator  ──>  lesson plan (A4/PDF)
+                                                    │
+student work ──>  nbgrader  ──>  AI first-filter ──> SUGGESTED score + rationale
+                                                    │
+                                        ┌───────────┴────────────┐
+                                        │  🔴 TEACHER DECISION   │  <-- the mark is assigned HERE
+                                        │  (no default, no       │      and nowhere else
+                                        │   auto-accept, no      │
+                                        │   timeout-to-approve)  │
+                                        └───────────┬────────────┘
+                                                    │
+                            xapi-service  <─────────┴──> OATutor (mastery update)
+                                   │
+                            validated statement: suggestion, override, final mark, actor, timestamp
+```
+
+🔴 **Three implementation rules that are the difference between compliant and not:**
+
+1. 🔴 **No auto-accept and no timeout-to-approve.** A suggested score that becomes final because
+   nobody clicked is an **AI-assigned mark**. The teacher action must be affirmative and recorded.
+   🔵 `schoolflow-agent`'s human-approved schedule gate is the design precedent in this base.
+2. 🔴 **AI-detector output must not reach any disciplinary path.** Brazil bars penalising a student
+   on a detector alone. 🟢 **The safe build is not to ship a detector in this pipeline at all** —
+   the risk is unbounded and the regulatory upside is zero.
+3. 🔴 **Age gate at `5º ano`.** Student-facing AI must be off, not merely supervised, for educação
+   infantil and anos iniciais. 🟢 The *teacher*-facing half of the pattern (planning, marking assist)
+   is unaffected by the age rule, which is why it is the half to deliver first.
+
+🟢 **Why it is defensible commercially:** `P788-1` sold "defensible AI grading" on a US/EMEA audit
+argument. 🟢 **In Brazil the audit trail is now a dated legal requirement with a deadline**, and the
+pattern's weakest commercial feature — that the teacher still does the work — **is the compliance
+feature.** 🔴 Vendors leading with autograders cannot sell into Brazilian basic education at all.
+
+🔵 **Ports, with the change named each time:** 🇺🇸 **Florida** (AI barred on graded work *unless the
+instructor allows* → the same affirmative-action gate, instructor-scoped) · 🇺🇸 **New York A 9190**
+(grade-9 gate instead of `5º ano`) · 🇪🇺 **EMEA** (Annex III assessment, reported `2027-12-02`, plus
+**Art. 50 transparency already in force since `2026-08-02`** — so the disclosure UI ships first) ·
+🇰🇷 **Korea** (AI Basic Act in force `2026-01-22`, automated assessment in the high-impact category).
+🟢 **One gate, five jurisdictions** — `T853`/`T854` is now a product decision rather than an
+observation.
+
+🔴 **Stated limits.** The `DOU` text was **not read** (two research hosts do not resolve in this
+session), so the `2026-11-10` date and the `12`-month window are **reported, not verified**
+(`ACTION p790-C`). `bncc-lesson-generator` is `0★` and single-contributor — **fork it, do not depend
+on it.** And its MIT grant covers its code: **it makes no claim about the BNCC**, which is a public
+MEC instrument, and `0` of this pass's `5` new permissive rows carry a scope clause either way
+(`T864`).
 
 ## `P789-1` — School-operations agent: timetable disruption and substitution, with an approval gate · **North America + EMEA first; APAC-portable** · 8–10 weeks
 

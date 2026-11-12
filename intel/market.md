@@ -4,7 +4,7 @@ region: Global
 updated: 2026-11-12
 ---
 
-# Education AI — market map and opportunities — `p789`
+# Education AI — market map and opportunities — `p790`
 
 > 🔴 **Channel warning, amended this pass (`T860`).** Only `raw.githubusercontent.com`, the package
 > registries, `git ls-remote` and `search/repositories` are byte-reachable from this session.
@@ -68,6 +68,42 @@ bring you AI" addresses a need that is already met.
 
 ### North America
 
+
+#### 🟢 `p790` — North America is `134` bills in `31` states and `0` binding federal curriculum standards
+
+| Measured | Value |
+|---|---|
+| AI-in-education bills tracked | **`134` across `31` states** (as of March 2026) |
+| 🔴 Binding **federal** AI curriculum standards | **`0`** (as of May 2026) |
+| Federal bill advanced in committee | **K-12 AI Literacy and Readiness Act of 2026** — a *funding pathway*, not a standard |
+| States with K-12 AI guidance | 🔴 **sources disagree: ">28 plus DC" vs "34+"** — recorded as a range, not a number |
+| Faculty reporting a formal institutional AI policy | **~`25%`** |
+| Student AI use | **`54%`** K-12 (from a `2025` RAND survey — 🔴 **stale, flagged**) · **`92%`** university |
+
+🟢 **Named, dated state instruments — these are what a US engagement is actually scoped against:**
+
+| Jurisdiction | Instrument | The operative detail |
+|---|---|---|
+| **Ohio** | model AI policy + mandate | 🔴 **Districts must adopt an AI framework by `2026-07-01`** — a dated duty, already passed |
+| **Maryland** | **SB 720** | State education department must publish AI guidance; establishes a statewide K-12 AI collaborative |
+| **New York** | **A 9190** (proposed) | Would restrict direct student AI use to **grade 9 and above**, with carve-outs for diagnostics and **special-education interventions** |
+| **Florida** | State Board of Education rules | Cover K-12 **and the `28` state colleges**; public colleges must bar AI on graded work **unless the instructor allows it** |
+| **Mississippi** | framework | **AI literacy embedded in general education for all incoming undergraduates from Fall 2026** |
+| **New Jersey** | proposed | Would require public colleges to offer AI certificate and degree programmes |
+| **NYC DOE** | preliminary guidance, March 2026 | **Traffic-light framework**; full playbook expected June 2026 |
+
+🔵 **The pattern across all of it, and it is the sellable insight:** the United States regulates
+**the graded artefact and the student's age**, not the model. Florida bars AI on graded work by
+default; New York would gate *direct student use* by grade; Brazil reserves the **mark** to the
+teacher; the EU regulates **assessment** as high-risk. 🟢 **Four jurisdictions, four instruments, one
+surface: assessment.** That is `T853`/`T854` confirmed a third consecutive pass, now with an
+age-gating dimension that `P789-1`-style tooling has to carry as configuration.
+
+🔵 **Also measured, and useful in a different register:** a student-led framework — the
+**"STUDENTS FIRST Act of 2026"**, produced by students from all `50` states — **rejects both an
+outright ban and unrestricted adoption**. 🟢 It is not law and will not be; it is the best available
+read on what the end-user constituency will accept, which is the thing a district pilot fails on.
+
 🟢 **`p789` regulatory update — the US picture is state-level, dense, and now on dated deadlines.**
 A legislative tracker counts **`134` AI-in-education bills across `31` states** as of March 2026, and
 **~`34` states plus DC and Puerto Rico** have issued AI guidance. 🟢 **Most of it governs *how* AI is
@@ -124,6 +160,54 @@ directly relevant to the district-policy deadlines above.
   — precisely the line Oklahoma drew and others are drawing. See `compose/patterns.md` → `P788-1`.
 
 ### EMEA
+
+
+#### 🟢 `p790` — The EMEA date that matters moved, and the near-term duty is a different article
+
+🔴 **Sources conflict on the AI Act's education timetable, and the conflict is itself the finding.**
+The high-risk obligations that cover education — **Annex III**, which is where assessment, admission
+and proctoring sit — are reported **postponed from `2026-08-02` to `2027-12-02`** following an
+amendment approved by Parliament and Council. 🔴 **Older guides still print `August 2026`**, and this
+base has carried that date. 🟡 **Carried as reported, primary `EUR-Lex` text NOT read**
+(`ACTION p790-C` covers both this and the Brazilian `DOU`).
+
+🟢 **What is NOT postponed, and is therefore the live duty:**
+
+| Duty | Status | Why it reaches an education deployment |
+|---|---|---|
+| 🔴 **Art. 5 — emotion-recognition ban in education** | **in force since `2025-02-02`** | Not a timetable item at all. **Already illegal**, and it is the clause that touches engagement/attention analytics |
+| 🔴 **Art. 50 — transparency for chatbots and generated content** | applies **since `2026-08-02`** | **Every tutor row in this base is a chatbot producing generated content.** This is the article that governs them *today*, not Annex III |
+| 🟢 **AI Office + national authorities enforcing** | since **`2026-08-02`** | There is now an addressee for a complaint |
+| 🟡 **Art. 4 — AI literacy** | in force | Deployers include **public schools, private universities and non-profit training providers** |
+| 🔵 **Annex III high-risk (assessment, admission)** | reported **`2027-12-02`** | The compliance build has `~13` more months than this base has been assuming |
+
+🔵 **The strategic read, and it reverses the sales order.** This base has been selling EMEA on an
+Annex III deadline. 🟢 **The nearer, unavoidable duty is Art. 50 transparency plus the standing
+Art. 5 ban** — cheaper to deliver, already enforceable, and it buys the relationship that the
+`2027-12-02` build is then sold into. 🔴 **Selling a 2027 deadline as 2026 is a credibility risk if a
+client's own counsel has the amendment.**
+
+🔵 **Programmes and national frameworks worth naming in an EMEA conversation:** the **AI Skills
+Academy** (Digital Europe Programme funded, operating since **May 2026**, generative-AI training);
+**AI-ENTR4YOUTH** (JA Europe, with Intel and the Commission, expanded to Albania, Bulgaria, Czechia,
+France, Greece, Romania and Ukraine — ⚠️ sponsored content); and the national frameworks
+**🇪🇸 `#CompDigEdu`**, **🇵🇹 Digital Transition Plan**, **🇮🇹 National Digital School Strategy**.
+🔴 **Teacher training is repeatedly named as the binding constraint on scale, not technology** — which
+is what `P788-6`'s readiness diagnostic is for.
+
+#### 🔴 `p790` — Africa, measured at four countries, and the grant rate is the headline
+
+| Country | Supply measured | Grants | Engagement consequence |
+|---|---|---|---|
+| 🟢 🇳🇬 **Nigeria** | placed `p789` | 🟢 **`3` MIT** (WAEC/NECO/JAMB, one offline-first) | 🟢 Deliverable today |
+| 🟢 🇿🇦 **South Africa** | placed `p789` | 🟢 **`2`** (MIT + **BSL-1.0**) | 🟢 Deliverable today (**CAPS**) |
+| 🔴 🇬🇭 **Ghana** | **`11`** repositories (`WASSCE AI tutor`) | 🔴 **`0`** · `3` alive ungranted, **`2` DEAD** | 🔴 Real demand, nothing usable. **Licence request** |
+| 🔴 🇰🇪 **Kenya** | **`3`** (`CBC` curriculum) | 🔴 **`0` usable** — one is **`CC BY-NC-ND 4.0`** | 🔴 **Barred twice over**: no commercial use, no modification |
+| 🔴 🇹🇿 **Tanzania** | **`2`** | 🔴 **`0` for school education** — the one MIT row is **veterinary extension** | 🔴 Still empty, and now empty *for a measured reason* |
+
+🔵 **The sentence for an African engagement:** **two countries are deliverable and three are
+licence-request work.** 🟢 That is a far better position than "Africa is thin", and it is the whole
+value of measuring per country rather than per region.
 
 🟢 **`p789` regulatory update — the high-risk education deadline MOVED, and this changes the sales
 calendar.** 🔴 **Regulation (EU) 2026/1744 pushed stand-alone high-risk education AI — admissions,
@@ -214,6 +298,32 @@ country is in the prose.
 
 ### APAC
 
+
+#### 🟢 `p790` — Malaysia, placed on supply and now placed on demand
+
+🔴 `p789` listed Malaysia among its thinnest *measured* regions. 🟢 **Both halves are answered this
+pass:** supply is placed ([`haziqhalifi/StudyLah`](https://github.com/haziqhalifi/StudyLah), MIT,
+**SPM** Form 5 mathematics, explanations in **Bahasa Malaysia**), and the demand behind it is
+national and dated.
+
+| Instrument | Date | What it does |
+|---|---|---|
+| **National Education Plan 2026–2035** | launched **January 2026** | Embeds AI, STEM and digital literacy across the whole system |
+| **MOE AI Literacy Guidelines 2026** | **May 2026** | Ministry guidance for introducing AI literacy in the education system |
+| **National AI Action Plan 2026–2030 (AI Nation 2030)** | current | Includes an education workstream on **AI-supported tertiary learning**, led by the Ministry of Higher Education |
+| 🔴 **AI Governance Bill** | public consultation **`2026-07-10` → `2026-08-01`** | 🔴 **Malaysia has NO dedicated AI law.** A bill is consulted, not enacted — so Malaysia is a *guidance* jurisdiction, like Japan and unlike Korea |
+| Higher-ed adoption | **2026** | All **`20` public universities** introduced Google's Gemini for Education tools |
+
+🔵 **The commercially useful asymmetry:** Malaysia has **system-wide policy and `20` universities
+already deployed**, and a measured open-source supply of **exactly one repository**. 🔴 **That is the
+widest demand-to-supply gap in the APAC block** — the opposite of India, where supply is rich
+(`NCERT AI` → `330`) and the legal instrument is still signalled rather than drafted.
+
+🔵 **One source caveat recorded rather than dropped:** a Malay Mail item on the AI Nation plan
+carries a date (`2026-12-14`) **later than this pass**, so it was not used. A date that cannot have
+happened is an index defect, and this base has been handed superseded and impossible dates in the
+same pass (see the Brazil block and `T879`).
+
 🟢 **`p789` regulatory update — and the headline is that Vietnam named education high-risk.**
 🔴 **A July 2026 Vietnamese decision identifies high-risk AI systems in six sectors, education among
 them, naming automated assessment and behavioural systems explicitly.** With Korea's AI Basic Act
@@ -297,6 +407,77 @@ offline training institutions — evidence the Chinese supply is now productisin
 
 ### LATAM
 
+
+#### 🔴 `2026-11-10/11` — Brazil now has a national AI-in-education framework, and it is `12` months from binding
+
+🔴 **This is the freshest dated duty on this base and it landed two days before this pass.**
+**`Parecer CNE/CP nº 15/2026`**:
+
+| Step | Date | Source channel |
+|---|---|---|
+| Conselho Pleno approved the parecer | **`2026-09-01`** | secondary (consistent across sources) |
+| Súmula published in the `DOU` | **`2026-10-06`**, Edição 189, Seção 1, p. 18 | secondary (a citation precise enough to retrieve) |
+| MEC homologation reported | **`2026-11-10`**, published `DOU` **`2026-11-11`** | 🔴 secondary only — **the primary act was NOT read** |
+| Institutions' adaptation window | **`12` months from homologation** → ~**`2027-11-10`** | secondary |
+
+🔴 **Legal-effect subtlety that makes the date matter.** Under **`Lei nº 9.131/1995`** a CNE parecer
+produces effects **only after the Minister's homologation act is published**. So the `2026-09-01`
+approval and the `2026-10-06` súmula were *not* binding, and the clock starts at homologation.
+🔴 **Two research hosts (`porvir.org`, `www.gov.br`) do not resolve in this session, so the `DOU`
+text was not read.** The date is carried as **reported**, not verified, and the `DOU` retrieval is
+`ACTION p790-C`.
+
+🔴 **A superseded version of this rule is in wide circulation, and this base nearly published it.**
+The version the CNE approved on `2026-09-01` **prohibited** AI correction of essays and dissertative
+questions outright. **MEC judged that too restrictive and released the use.** At least one outlet
+still reports the prohibition. 🟢 **The homologated position, consistent across every other source:**
+
+| Provision | What it actually says |
+|---|---|
+| 🟢 **AI-assisted correction** | **PERMITTED** — AI may assist in correcting essays and dissertative questions, as a first-filter |
+| 🔴 **Grade assignment** | **RESERVED TO THE TEACHER.** The final mark is the teacher's responsibility and may not be assigned by the system |
+| 🔴 **AI detectors** | **No student may be penalised academically or disciplinarily on the basis of an automatic AI-detection result alone** |
+| 🔴 **Educação infantil and anos iniciais (to `5º ano`)** | Students **may not use AI tools unsupervised** |
+| 🟢 **Ensino médio and higher education** | Individual use **permitted**, with rules on commercially exploitable data and protection of authorship |
+| Structure | Risk-level classification plus a list of prohibited practices |
+
+🟢 **Read commercially, this is the best news in the LATAM block, not the worst.** It is a
+**human-in-the-loop mandate, not a ban** — and a human-in-the-loop grading pipeline with a reserved
+teacher decision is precisely what `P788-1` already builds. 🔴 **What it forbids is the autograder
+that assigns the mark**, which is the product most vendors lead with. 🔵 **Brazil is therefore the
+one LATAM market where this base's flagship grading pattern is both legal and differentiated** —
+and `P790-1` below is that pattern with the reserved-grade gate made explicit.
+
+🟢 **And supply arrived in the same window.** Brazil is **placed on `agents/top.md` for the first
+time** this pass — [`iagommendes/bncc-lesson-generator`](https://github.com/iagommendes/bncc-lesson-generator)
+(MIT, **BNCC**-aligned lesson plans, *zero-prompt para o professor*) and
+[`ciro-maciel/awesome-ia-sala-de-aula`](https://github.com/ciro-maciel/awesome-ia-sala-de-aula)
+(**CC0-1.0**, classroom AI tools with each one's **minimum age and privacy posture and the Brazilian
+rules that apply** — a compliance input, days before a compliance deadline).
+
+🔵 **Earlier `2026` Brazilian guidance, for context and non-binding:** the March *Referencial para
+Desenvolvimento e Uso Responsáveis de Inteligência Artificial na Educação* and the practical guide
+*Inteligência Artificial na Educação Básica*, which instructs managers to **align AI learning to the
+BNCC with objectives per stage**. 🔵 One source notes states and municipalities must declare updated
+curricula to qualify for **VAAR** supplementary **Fundeb** funds — a funding lever attached to
+curriculum compliance, which is the kind of thing a ministry engagement is actually bought on.
+
+#### 🟢 Colombia — placed on supply this pass, and an INFORMED GAP on policy
+
+🟢 **Colombia is placed on `agents/top.md` for the first time** — [`jolicastrog/mi_icfes`](https://github.com/jolicastrog/mi_icfes)
+(MIT, **Saber 11** score prediction) and [`CREARED-EDU-CO/GenPrompt-Pre-ICFES-11`](https://github.com/CREARED-EDU-CO/GenPrompt-Pre-ICFES-11)
+(**AGPL-3.0**, `4★`, the highest-starred Colombian education-AI repository measured). `ICFES Saber 11 IA`
+returned **`5`** repositories; `IA educativa agente docente` and `tutor IA matematicas escuela`
+returned **`0`** each.
+
+🔴 **An informed gap, written down because silence looks like coverage.** A dedicated search for
+Colombian AI-in-education *policy* — ministry guidance, MEN instruments, ICFES rules on AI —
+**returned nothing usable.** 🔵 This base therefore knows Colombia's **supply** and does **not** know
+its **governance**, and the one placed row is a *score-prediction* tool, which is the shape most
+likely to attract a rule. 🔵 **Remedy and cost:** one Spanish-language leg against
+`Ministerio de Educación Nacional` and `ICFES` directly, rather than a fourth regional English
+query. Carried as `ACTION p790-E`.
+
 🟢 **`p789` market update — Brazil is the cohort, and the AI being deployed is mostly generative.**
 HolonIQ's **2026 Latin America EdTech 100** is led by Brazil, which accounts for **nearly half the
 cohort** and the clear majority of recorded deal and award activity. 🔵 Named operators worth knowing
@@ -376,6 +557,36 @@ moving while the education-specific ones are not.**
   `compose/patterns.md` → `P788-3` and `P788-6`.
 
 ### Global
+
+
+#### 🟢 `p790` — The `2026` market-size estimates, and why the range is the answer
+
+| Estimate for AI-in-education, `2026` | Source chain |
+|---|---|
+| **~`$10.4` B** | Resourcera, via AI Business Weekly |
+| **~`$11.4` B** | Eklavvya, citing Grand View Research |
+| **~`$12.3` B** | X-Pilot, citing HolonIQ |
+
+🔴 **A `~19%` spread between the lowest and highest estimate of the same year**, all third-party and
+all re-reported rather than primary. 🟢 **The honest form is the range — `$10.4`–`12.3` B — and this
+base publishes the range.** 🔵 A single number quoted to a client is a hostage; a range with its
+three source chains named is a position that survives their analyst.
+
+🟢 **The demand figures are more decision-useful than the size figures**, because they are about
+behaviour rather than revenue: **`86%` of students across `16` countries report using AI in their
+studies**, and **AI-related deals were `12%` of higher-ed partnerships in 2026** (HolonIQ Q3).
+🔴 Against that, **only ~`25%` of faculty report a formal institutional AI policy** (North America).
+🟢 **That gap — near-universal use, quarter-coverage governance — is the single most reliable fact in
+this file, it reproduces across all four regions, and it is what `P788-6` sells.**
+
+🔵 **Commentary convergence worth naming, because it matches the commits (`T858`).** The **OECD
+`2026` Digital Education Outlook** urges institutions toward **purpose-built educational AI rather
+than general-purpose chatbots**; Campus Technology's industry panel expects AI **embedded in
+admissions, advising and administration** rather than run as standalone pilots. 🟢 **This base's own
+supply measurements agree independently:** Japan's granted supply is **administrative** (`校務`),
+`jinlize-tech`'s taxonomy is **back-office by business centre**, and `p789`'s school-operations
+category is a **solver with an approval gate**. 🔵 **Three unrelated channels, one direction: the
+money is moving to the back office.**
 
 - 🟢 **The two leading education agents are permissive at the repository level** — DeepTutor
   (Apache-2.0, `58,508★`) and OpenMAIC (MIT, `43,365★`) — so a studio can build on the state of the

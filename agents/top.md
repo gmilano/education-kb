@@ -4,11 +4,18 @@ region: Global
 updated: 2026-11-12
 ---
 
-# Education AI agents — `p789`
+# Education AI agents — `p790`
 
 **Every row below was verified this pass on two byte channels:** existence via `git ls-remote`
 (exit status read directly, never through a pipe), and the licence grant by **clause presence** in
 the served `LICENSE` bytes. No row is carried on a vendor claim, a star ranking or a blog.
+
+🔴 **New rule this pass, and it reverses one of this base's own published verdicts (`T875`).** A
+licence file may **quote other licences**. Grading one by substring presence is therefore unsound in
+both directions: GPL-3.0's own §13 *names* the GNU Affero GPL, and a bundled dependency's
+`All rights reserved.` line sits inside a file whose own grant is open. **A file containing `N`
+licence titles is an ANTHOLOGY and has no single family** — it is graded by anchored title lines and
+reported as a set. `Kosudo/nextSIS` is the row this cost, and it is corrected below.
 
 > **Channel discipline (`T844`, amended this pass — `T860`).** Repository existence and licence
 > bytes are **byte-verified**. 🔴 **The page channel is GONE this pass:** `github.com` returns
@@ -60,6 +67,7 @@ first attempt. Every row below is byte-verified and **new to this base**.
 | **dowze** `NEW` | [`Louisdelez/dowze`](https://github.com/Louisdelez/dowze) | **MIT** · `1,068 B` · `2a30b43ecd06` | `0` | EMEA | French lifelong-learning AI tutor, explicitly framed as a **bien commun** (commons) |
 | **skepsis** `NEW` | [`ionpetro/skepsis`](https://github.com/ionpetro/skepsis) | **MIT** · `1,072 B` · `31a864169289` | `3` | EMEA | Teaches the Greek hiding inside everyday English in 3-minute lessons; ships a web app **and an MCP server**, so another agent can teach from it |
 | **eagle-aig** `NEW` | [`LIST-LUXEMBOURG/eagle-aig`](https://github.com/LIST-LUXEMBOURG/eagle-aig) | **Apache-2.0** · `11,358 B` · `99cecb066ecf` | — | EMEA | 🟢 **Luxembourg Institute of Science and Technology** — a national public research institute. **Rescued from this base's ungranted class this pass** (`p787-B`): it was filed as an absence and has carried Apache-2.0 all along |
+| 🟢 **EduAgentic** `NEW` | [`kamalelafoui/Agentic-AI-EdTech-J33-J34`](https://github.com/kamalelafoui/Agentic-AI-EdTech-J33-J34) | 🟢 **MIT** · `1,071 B` · `7685db14663f` | `0` | EMEA (francophone) | 🟢 **The first EMEA row in this base that is an MCP **server** plus an A2A multi-agent system rather than an application** — six EdTech tools exposed over **MCP**, agents that **discover and delegate** over **A2A**, and a Streamlit dashboard to observe both. Dated `2026-11-11`. 🟢 **`100 % synthétiques · 0 apprenant réel`** — the author states on the record that no real learner data is present, which is the declaration an EMEA deployment has to make anyway. 🔵 Francophone, authored under a *Centre des Très Petites Entreprises Solidaires* programme; **the country is not stated in the repository and is not inferred here** |
 
 ### 🟢 `elimu-ai` — a 66-repository MIT African education ecosystem this base was already citing
 
@@ -134,6 +142,20 @@ guidance, copyleft, and it states in terms that it is *not* MEXT-endorsed.
 `授業 支援 AI 教材` → **`0`**. 🔴 [`narumi-mase/osaka-lesson-dataset`](https://github.com/narumi-mase/osaka-lesson-dataset)
 remains **ungranted** and remains worth asking for.
 
+### 🟢 Malaysia — `p789`'s declared gap, DISCHARGED (`p790`)
+
+🔴 `p789` recorded Malaysia as one of its three thinnest *measured* regions at **`1`, ungranted**.
+🟢 **It is now placed, and the repository is granted.**
+
+| Agent | Address | Grant, on the bytes | ★ | What it is |
+|---|---|---|---|---|
+| 🟢 **StudyLah** `NEW` | [`haziqhalifi/StudyLah`](https://github.com/haziqhalifi/StudyLah) | 🟢 MIT · `1,069 B` · `c6ee7bb5db4a` | `0` | 🟢 **Malaysia placed.** Adaptive learning for **SPM Form 5 Mathematics**: diagnostic quiz inferring misconceptions per topic, next-question selection from weakest topic + recent accuracy trend, generated MCQs targeting measured skill gaps, spaced-repetition scheduling — and **explanations written in Bahasa Malaysia**. 🔵 It also matches *explanation style* (step-by-step / formula-first / shortcut / analogy) to measured accuracy, which is a pedagogy choice almost no row in this base makes explicit. ⚠️ Hackathon-origin, single contributor |
+
+🔵 **Measured Malaysian totals, so the shape is on the record:** `AI tutor SPM Malaysia` → **`1`** ·
+`tutor AI pendidikan Malaysia` → **`0`**. 🔴 **The supply is one repository.** It is placed because it
+is real and granted, not because it is deep — and the national demand behind it is large
+(`intel/market.md`, APAC).
+
 ### China
 
 | Agent | Address | Grant, on the bytes | ★ | What it is |
@@ -179,6 +201,23 @@ them serve no grant** — the ratio is the finding, not the count (`T871`).
 | 🟢 **homework-hero-sa** `NEW` | [`Masondo86/homework-hero-sa`](https://github.com/Masondo86/homework-hero-sa) | 🟢 MIT · `1,070 B` · `88eb94d99d6c` | `0` | 🇿🇦 ZA | 🟢 **South Africa placed for the first time.** Homework scheduling and learner accountability on the **CAPS** curriculum — an operations tool, not a tutor |
 | 🟢 **nextgen-learn** `NEW` | [`daddysystem/nextgen-learn`](https://github.com/daddysystem/nextgen-learn) | 🟢 **BSL-1.0 (Boost) · `1,338 B` · `c9bff7573892`** | `0` | 🇿🇦 ZA | Free **CAPS**-following study site with an AI tutor. 🟢 **A licence family new to this base:** Boost is permissive, OSI-approved, and waives attribution for object-code-only distribution |
 
+#### 🔴 Tanzania, Ghana and Kenya — probed this pass, and NOT discharged (`p790`)
+
+🔴 **`p789` named Tanzania (`0`), Ghana (`1`, ungranted) and Malaysia (`1`, ungranted) as its
+thinnest measured regions. Malaysia is discharged above. The two African ones are not, and the
+reasons differ.**
+
+| Country | What was measured | Verdict |
+|---|---|---|
+| 🔴 🇹🇿 **Tanzania** | `elimu AI Tanzania` → **`2`**. One is ungranted (`kadioko/ElimuAI`, Swahili e-learning with M-Pesa). The other, [`sangadanson1-dot/-Vet-IDEA-TZ`](https://github.com/sangadanson1-dot/-Vet-IDEA-TZ), **is MIT · `1,067 B` · `238c1bbb3bc0`** | 🔴 **NOT DISCHARGED — and the MIT row is a CATEGORY ERROR IN THE OPPOSITE DIRECTION FROM JAPAN'S (`T877`).** Read in Swahili, `Vet Idea TZ` serves **wafugaji na wataalamu wa mifugo** — livestock keepers and veterinary professionals. It teaches **afya ya wanyama, magonjwa, chanjo, lishe** (animal health, disease, vaccination, nutrition). 🟢 It is real, granted, AI-bearing education — **veterinary extension education, not school education.** 🔵 Placing it would have discharged the gap on paper and left a client engagement with nothing. **Tanzania's school-education agent supply is still `0`** |
+| 🔴 🇬🇭 **Ghana** | `WASSCE AI tutor` → **`11`**; `Ghana education AI tutor curriculum` → **`0`**. `5` probed on the byte channel: `3` ALIVE serving **no grant**, **`2` DEAD** (`Bestisco/My-WASSCE-Companion`, `Elite2828/ACE-AI-Tutor` — both `rc=2`, re-probed and confirmed) | 🔴 **NOT DISCHARGED, and now QUANTIFIED rather than estimated.** `p789`'s "`1`, ungranted" understated the supply by about `10×` and read the grant correctly. 🟢 **Ghana's WASSCE supply is substantial and its grant rate is `0`** — the same shape `T871` recorded for Africa generally, measured at one country. 🔵 **And the search index is stale here specifically:** `2` of `5` addresses it returned no longer exist |
+| 🔴 🇰🇪 **Kenya** | `AI tutor Kenya CBC curriculum` → **`3`**, all probed. `2` serve no grant | 🔴 **The third is a HARDER bar than an absence.** [`gabrielmahia/shule-ai`](https://github.com/gabrielmahia/shule-ai) — KCPE/KCSE prep on the **CBC** syllabus answering in Kiswahili — serves **`209 B` · `9dd285c3704d`: Creative Commons `CC BY-NC-ND 4.0`**. 🔴 **NonCommercial *and* NoDerivatives — it cannot be used in a paid engagement and cannot be modified at all**, which bars even the adaptation a curriculum row exists for. 🔵 **The search channel indexed it `NOASSERTION`.** Third consecutive pass in which index silence hid a grant, and the second in which the hidden grant was a *bar* (`T863`) |
+
+🔵 **The useful sentence for an African engagement, now measured across four countries:** Nigeria and
+South Africa are **placed and granted** (`5` rows above); **Ghana, Kenya and Tanzania have real
+supply and no usable grant.** The remedy is the same in all three and it is not engineering — it is
+an upstream licence request, carried as `ACTION p790-B`.
+
 🔵 **Measured African totals, so the remaining gaps are informed ones:** `WAEC AI tutor` → **`35`**
 (`3` permissive) · `CAPS curriculum South Africa AI` → **`10`** (`2` permissive) ·
 `Nigeria curriculum AI tutor` → **`6`** · `BECE Ghana AI education` → **`1`**, and it is ungranted
@@ -208,6 +247,9 @@ choices this base keeps recommending — both found in African repositories, bot
 | **Learning-Agent-System** | [`VaishnaviSingh-Analyst/Learning-Agent-System`](https://github.com/VaishnaviSingh-Analyst/Learning-Agent-System) | MIT · `1,086 B` · `fb2da327c928` | — | Global | LangGraph tutor on Ollama: checkpointed learning paths, tiered 5-3-2 assessment, a 70% pass bar, Feynman-style re-teaching |
 | **no-vibe** | [`rizukirr/no-vibe`](https://github.com/rizukirr/no-vibe) | MIT · `1,065 B` · `5b8cb2f6d072` | `48` | Global | Turns a coding agent into a tutor that reads the learner's level and adapts — pedagogy applied to the agent rather than the content |
 | **llm-edu-suite** `NEW` | [`ZoodiacR/llm-edu-suite`](https://github.com/ZoodiacR/llm-edu-suite) | MIT · `1,065 B` · `da605cdaf27e` | `3` | Global | Learn LLM engineering by building and measuring each layer — tokenizer, transformer, pre-training |
+| 🟢 **coursewright** `NEW` | [`shivarajbakale/coursewright`](https://github.com/shivarajbakale/coursewright) | 🟢 MIT · `1,072 B` · `4fd5e20735ab` | `0` | Global | Name a subject; **a team of agents writes the course** — chapters from first principles, step-by-step diagrams, quizzes, projects, notes beside every chapter, and a tutor that answers **from the generated course only**. 🔵 The scoping constraint (`examprep-agent`'s virtue) applied to *generated* rather than supplied material |
+| 🟢 **spanish-tutor-ai** `NEW` | [`MrEug3n1o/spanish-tutor-ai`](https://github.com/MrEug3n1o/spanish-tutor-ai) | 🟢 MIT · `1,069 B` · `6f0ebd566861` | `0` | Global | 🟢 **The most complete local-only tutor this base has placed, and the sovereignty pattern's best single reference.** Runs **entirely on local open-source models — no API keys, no per-token bill** — and checks its own work: chat tutor with tools, synthetic-data generator, retrieval over grammar notes, a **QLoRA-fine-tuned** article checker, and an agent that **plans each day's lesson itself**. Wrong quiz answers return the topic to tomorrow's plan. 🔵 Named for the language taught, not a region — it is `P788-4`'s missing reference implementation |
+| 🟢 **Multimodal-RAG-AI-Tutor-Agent** `NEW` | [`yashpandey2409/Multimodal-RAG-AI-Tutor-Agent`](https://github.com/yashpandey2409/Multimodal-RAG-AI-Tutor-Agent) | 🟢 MIT · `1,068 B` · `59d3fe71eea6` | `0` | Global | Multimodal retrieval-grounded tutor — the multimodal variant of the citation-grounded shape `T859` argues an education deliverable most needs |
 | **learnharness** | [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | 🔴 **AGPL-3.0** · `34,523 B` · `cb25c8e49b85` | — | Global | Agent harness for learning difficult subjects. 🔴 **Copyleft: network-use triggers source disclosure** — reference or separately-deployed service only |
 
 ## Assessment and grading
@@ -226,6 +268,37 @@ choices this base keeps recommending — both found in African repositories, bot
 | **paes-mcp** | [`goyanedelv/paes-mcp`](https://github.com/goyanedelv/paes-mcp) | **MIT (Spanish text)** · `2,018 B` · `84e7f6106b38` · 🔴 **SCOPE-LIMITED** | `0` | LATAM | MCP server over Chile's **PAES** university-admission test. 🔴 **CORRECTION TO `p787` (`T864`): the MIT grant covers the SOURCE CODE AND DOCUMENTATION ONLY.** The licence text states in terms that it does *not* — and *could* not — cover the PAES items, figures and answer keys, whose rights belong to **DEMRE, Universidad de Chile**; that material is included from freely published official sources for educational use with attribution. **`P787-3` was built on this row as though the corpus were MIT. It is not** |
 | **teams-facultad-mcp** | [`Matias-Sanmiguel/teams-facultad-mcp`](https://github.com/Matias-Sanmiguel/teams-facultad-mcp) | MIT · `1,088 B` · `17b51f4db2b0` | `0` | LATAM | Local MCP server over Teams Educación — coursework, announcements, documents |
 | **Tlamatini** `NEW` | [`XAIHT/Tlamatini`](https://github.com/XAIHT/Tlamatini) | MIT · `1,062 B` · `b1f06f7e736f` | `15` | LATAM | Speak an idea, build the real thing: voice-driven AI into code, 3D worlds and hardware. 🔵 **`Tlamatini` is Nahuatl for *one who knows*** — named in an Indigenous Mexican language, which is why no English query reaches it |
+| 🟢 **bncc-lesson-generator** `NEW` | [`iagommendes/bncc-lesson-generator`](https://github.com/iagommendes/bncc-lesson-generator) | 🟢 MIT · `1,068 B` · `171e1db7278e` | `0` | LATAM 🇧🇷 | 🟢 **BRAZIL PLACED FOR THE FIRST TIME, and against the country's brand-new national framework.** Open-source lesson-plan generator aligned to the **BNCC**: the teacher fills an ordinary form, the system assembles the pedagogical prompt behind the scenes and returns a structured A4/PDF plan. **"Zero-prompt para o professor"** — the teacher never writes a prompt, which is the single biggest adoption barrier `T876` names. Next.js + TypeScript; the public demo runs on mocked data, real generation needs your own key |
+| 🟢 **mi_icfes** `NEW` | [`jolicastrog/mi_icfes`](https://github.com/jolicastrog/mi_icfes) | 🟢 MIT · `1,068 B` · `1c05d19ed1d3` | `0` | LATAM 🇨🇴 | 🟢 **COLOMBIA PLACED FOR THE FIRST TIME.** PWA that **predicts** a **Saber 11** result. ⚠️ **Read the use before the grant:** predicting a student's state-examination outcome is score *prediction*, not tutoring — under the EU AI Act this shape is Annex III high-risk, and it is the one LATAM row in this base that a North American or EMEA client could not simply re-deploy |
+| 🟢 **awesome-ia-sala-de-aula** `NEW` | [`ciro-maciel/awesome-ia-sala-de-aula`](https://github.com/ciro-maciel/awesome-ia-sala-de-aula) | 🟢 **CC0-1.0** · `7,049 B` · `be5467501439` | `0` | LATAM 🇧🇷 | Curated register of classroom AI assistants **with each one's minimum age and privacy posture, and the Brazilian education rules that apply**. 🟢 **CC0 is a new licence family for this base and the most permissive grant it holds** — a public-domain dedication, no attribution condition at all. 🔵 Its subject matter is exactly `P790-1`'s compliance input |
+| 🔴 **GenPrompt-Pre-ICFES-11** `NEW` | [`CREARED-EDU-CO/GenPrompt-Pre-ICFES-11`](https://github.com/CREARED-EDU-CO/GenPrompt-Pre-ICFES-11) | 🔴 **AGPL-3.0** · `34,523 B` · `1ca3134446d7` | `4` | LATAM 🇨🇴 | Generator producing thousands of distinct Pre-**ICFES** grade-11 prompts — **the highest-starred Colombian education-AI repository measured**. 🔴 **Copyleft, and network use triggers disclosure:** reference or separately-deployed service only, never embedded in a client deliverable |
+
+## 🟡 The largest permissive education-agent repository set this base has met — and what it actually contains
+
+| Address | Grant, on the bytes | Measured | Verdict |
+|---|---|---|---|
+| 🟡 **education-ai-ecosystem** `NEW` | [`jinlize-tech/education-ai-ecosystem`](https://github.com/jinlize-tech/education-ai-ecosystem) | 🟢 **Apache-2.0** · `11,358 B` · `b59ceae4181d` · licence sha `cfc7749b96f6` | **`132` repositories in the org; `100` of `100` sampled are Apache-2.0** | 🟡 **Real grant, real scale, and by its OWN README mostly unbuilt** |
+| 🟡 **edu-ai-usage-policy-agent** `NEW` | [`jinlize-tech/edu-ai-usage-policy-agent`](https://github.com/jinlize-tech/edu-ai-usage-policy-agent) | 🟢 **Apache-2.0** · `11,358 B` · `dab9f0cd5a3c` · **identical licence sha `cfc7749b96f6`** | — | 🟢 The one member most relevant here: an **AI-usage-policy** agent, which is the artefact every regulated engagement in `intel/market.md` needs |
+
+🟢 **The claim checked out and the honesty is the finding.** The hub declares **`130` products — `97`
+Skills and `33` Agents**, each in its own repository, all Apache-2.0. `search/repositories` returns
+**`132`** repositories for the owner and **`100` of `100`** sampled carry Apache-2.0, so *the
+licensing claim is true at scale* — this is, by a wide margin, the largest permissively-granted
+education-agent repository set this base has ever measured.
+
+🔴 **And its own README states what it has not got:** `WorkBuddy platform validation: 0/130,
+NOT_EXECUTED` · `GitHub Release verified: 30/130` · *"They do not prove WorkBuddy parsing,
+installation, model behavior, review, or publication."* Sampled agent repositories are described
+`Agent | … | Planned / 待研发` — **planned / to be developed.** The agents are organised by business
+centre (招生营销 admissions-marketing, 教学教研 teaching-research, 教务运营 academic-operations,
+财务运营 finance, 人力组织 HR, 校区标准化 multi-campus standardisation).
+
+🔵 **So it is placed as `2` rows with a measured org count, not as `33` agents (`T878`).** Writing
+"`33` education agents, Apache-2.0" would have been the single largest padding event available to
+this base this pass, and the repository itself supplies the refutation. 🟢 **What it is genuinely
+worth:** a **product taxonomy for the education back office** — the `8`-centre decomposition is
+reusable intelligence even where the code is not, and `edu-ai-usage-policy-agent` addresses a need
+`P790-1` has to meet anyway.
 
 ## Agent-adjacent infrastructure this base composes with
 
@@ -262,15 +335,55 @@ every case the repository's own `LICENSE` file says nothing about it. 🔵 **The
 — `nbgrader` and `OATutor` — are the two this base's grading pattern already rests on**, which is
 luck rather than design, and is now on the record as a reason to keep resting on them.
 
+## 🔴 CORRECTION TO THIS BASE — `Kosudo/nextSIS` is NOT proprietary (`p790`)
+
+🔴 **This base published, at `p787-B` and again at `p789`: *"PROPRIETARY, newly measured … a
+`39,890 B` licence file is not evidence of an open grant — it is evidence of a long one."* That
+verdict is FALSE, and the reasoning that produced it is the thing worth keeping.**
+
+🟢 **Measured this pass.** The address is alive at `60e422c7d93e` — **the exact sha this base
+recorded**, so nothing moved. Its grant is served at **`license.txt`** (lowercase, `.txt`), which is
+why `p789`'s `11`-path probe reported `NO-GRANT-SERVED` and mine did too until the tree was
+enumerated. The file is `39,890 B` · `cd7a49230f22`, and it is a **licence anthology** with a table
+of contents:
+
+| § | Contents | Whose terms |
+|---|---|---|
+| 1 | Overview | nextSIS |
+| 2 | **nextSIS GNU General Public License Version 3** | 🟢 **nextSIS's own grant — full operative GPL-3.0 text, `Version 3, 29 June 2007`, `5 ×` `TERMS AND CONDITIONS`** |
+| 3 | CodeIgniter License | EllisLab, Inc. (bundled framework) |
+| 4 | Twitter Bootstrap License | Bootstrap (bundled front end) |
+
+🔴 **The single `All rights reserved.` in the file is at line `703`. It is the second line of §3 —
+`Copyright (c) 2008 - 2011, EllisLab, Inc.` — and EllisLab's very next clause reads `You are
+permitted to use, copy, modify, and distribute the Software`.** So the line this base graded on
+does not belong to nextSIS, **and the licence it does belong to is not proprietary either.** The
+verdict was wrong twice over on one line.
+
+🟢 **Corrected verdict: `Kosudo/nextSIS` is `GPL-3.0`** — a named, open-source Student Information
+System. 🔴 **Copyleft, so it is flagged, not cleared:** deploy it as a separate system and integrate
+at its boundary; **never embed it in a proprietary client deliverable.** 🟢 **But it moves from
+`barred` to `usable-with-care`, and it is the only open SIS this base holds** — against `T852`'s
+point that the famous names are copyleft, this is one more confirmation, not an exception.
+
+🔵 **Why this is a method change and not an erratum (`T875`):** my own instrument graded the same
+file **`AGPL-3.0`**, because GPL-3.0's §13 *names* the GNU Affero GPL, and it fired the NonCommercial
+bar, because GPL-3.0 §6 *uses the word* "noncommercial". **Three different probes, three different
+wrong answers, one cause: a licence file that quotes other licences cannot be graded by substring
+presence.** The grader now matches **anchored title lines** and reports a **set**, and `nextSIS`
+reads `ANTHOLOGY[GPL-3.0, +CodeIgniter]`. This is the same defect class as `metabase`'s
+split-by-directory finding, **split by section instead.**
+
 ## 🔴 Probed this pass and NOT usable
 
 | Address | Finding | Why it is barred |
 |---|---|---|
-| [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | ALIVE · `60e422c7d93e` · **`39,890 B` — all-rights-reserved, no grant of permission** | 🔴 **PROPRIETARY, newly measured.** A named Student Information System, filed by this base as merely "ungranted". 🔵 A `39,890 B` licence file is not evidence of an open grant — it is evidence of a long one |
 | [`Tzxser/aipha-learning-os`](https://github.com/Tzxser/aipha-learning-os) | ALIVE · `aa476a6a6a03` · `1,296 B` bespoke | 🔴 **PROPRIETARY**, now graded rather than left `UNGRADED`. Source-available multi-agent learning OS |
 | [`metabase/metabase`](https://github.com/metabase/metabase) | ALIVE · `6006cc9c65dd` · `855 B` | 🔴 **SPLIT BY DIRECTORY, not one licence.** AGPL-3.0 outside `enterprise/`, **Metabase Commercial License** inside it. 🟢 Reporting one family for this repo would be the error; the boundary is the fact. Same shape as `764-C` |
 | [`luscitiosus/Dirigo`](https://github.com/luscitiosus/Dirigo) | ALIVE · `9ed32d5c2577` · `362 B` | 🔴 **CORRECTION — this base's published reason was WRONG.** `p786` recorded *"a file named `LICENSE` containing a Latin boast and no grant of any kind"*. The Latin boast is line 1; **lines 3–5 grant CC BY-NC-SA 4.0, in Spanish, with a link to the Spanish legal code**, and a scope clause excluding the downloaded BOE/BOC statutory texts. Still barred commercially — but **NonCommercial is a harder bar than an absence, and the stated reason was false** (`T863`) |
 | [`cosark/OpenTutor`](https://github.com/cosark/OpenTutor) | ALIVE · MIT · fork of `zijinz456/OpenTutor` at `0★` | 🔴 **Not a distinct project** |
+| [`gabrielmahia/shule-ai`](https://github.com/gabrielmahia/shule-ai) | ALIVE · `01d074b6aaf3` · **`209 B` · `9dd285c3704d`** | 🔴 **`CC BY-NC-ND 4.0` — NonCommercial AND NoDerivatives.** Kenya's CBC/KCSE tutor answering in Kiswahili. **Barred twice: not in a paid engagement, and not modifiable at all.** 🔵 Indexed `NOASSERTION` by the search channel |
+| [`Bestisco/My-WASSCE-Companion`](https://github.com/Bestisco/My-WASSCE-Companion) · [`Elite2828/ACE-AI-Tutor`](https://github.com/Elite2828/ACE-AI-Tutor) | 🔴 **DEAD — `git ls-remote` `rc=2`, re-probed and confirmed** | 🔴 **Returned by the search channel this pass and gone from the byte channel.** `2` of the `5` Ghanaian addresses probed. 🔵 A search result is a claim; `rc` is the fact |
 | [`lehrer-tools/lehrer-agent`](https://github.com/lehrer-tools/lehrer-agent) ≡ [`NikolasSchaeffner/lehrer-agent`](https://github.com/NikolasSchaeffner/lehrer-agent) | Both ALIVE · **identical `HEAD` `3ddcfbbabc56`** · neither serves a licence | 🔴 **ONE German teacher agent, carried by this base as TWO ungranted rows.** 🟢 **`ACTION p787-G` discharged mechanically (`T865`):** `p787` said only a page read could separate a fork from a project. **Identical `HEAD` sha proves it on the byte channel**, and the page channel is `403` this pass |
 | [`narumi-mase/osaka-lesson-dataset`](https://github.com/narumi-mase/osaka-lesson-dataset) | ALIVE · `212cb10e48eb` · no licence on 10 filenames × 3 branches | 🔴 Japan's best education-AI artefact, **ungranted**. An upstream licence request, not a permanent exclusion |
 | [`silja-graf/Didaktikus-…-LP21`](https://github.com/silja-graf/Didaktikus-KI-Spezialist-f-r-Unterrichtsplanung-und-Beurteilung-nach-LP21) | ALIVE · `8d747cda689e` · no licence | 🔴 A **Swiss LP21-curriculum** lesson-planning and assessment agent — the single most engagement-shaped EMEA artefact found, and ungranted. 🔵 **Ask for this one** |
@@ -280,26 +393,35 @@ luck rather than design, and is now on the record as a reason to keep resting on
 
 | | Count |
 |---|---|
-| Agents and components listed with a byte-verified grant | **62** (was 48) |
-| of which **permissive** (MIT · Apache-2.0 · ECL-2.0 · BSD · **BSL-1.0** · CC BY 4.0 content) | **58** |
-| of which copyleft, flagged | **6** (`learnharness` AGPL-3.0, `OpenVidya` AGPL-3.0, `NCERT-AI-Teacher-Assistant` GPL-3.0, `frappe/lms` AGPL-3.0, `news-grade-reader` GPL-3.0, `frametell` AGPL-3.0) |
-| 🟢 **NEW to this base this pass** | **16** |
-| Placed **EMEA** | **19** (6 agents + 7 `elimu-ai` + 5 Africa + 1 🇬🇧) — Nigeria and South Africa placed for the first time |
-| Placed **APAC** | **16** (6 India · 2 Korea · 5 China · **3 Japan**) — 🟢 **Japan placed for the first time** |
-| Placed **LATAM** | **5** |
+| Agents and components listed with a byte-verified grant | **75** (was 62) |
+| of which **permissive** (MIT · Apache-2.0 · ECL-2.0 · BSD · BSL-1.0 · **CC0-1.0** · CC BY 4.0 content) | **69** |
+| of which copyleft, flagged | **8** (`learnharness` AGPL-3.0, `OpenVidya` AGPL-3.0, `GenPrompt-Pre-ICFES-11` AGPL-3.0, `NCERT-AI-Teacher-Assistant` GPL-3.0, **`nextSIS` GPL-3.0 — corrected from "proprietary" this pass**, `frappe/lms` AGPL-3.0, `news-grade-reader` GPL-3.0, `frametell` AGPL-3.0) |
+| 🟢 **NEW to this base this pass** | **13** |
+| Placed **LATAM** | **9** (was 5) — 🟢 **🇧🇷 Brazil and 🇨🇴 Colombia placed for the first time** |
+| Placed **APAC** | **17** (6 India · 2 Korea · 5 China · 3 Japan · **1 Malaysia**) — 🟢 **Malaysia placed, `p789` gap discharged** |
+| Placed **EMEA** | **20** (7 agents + 7 `elimu-ai` + 5 Africa + 1 🇬🇧) |
 | Placed **North America** | **4** |
-| Placed **Global** | **18** |
-| Probed and rejected | **22** (2 proprietary, 1 split-by-directory, **2** NonCommercial, 1 fork, 1 duplicate address pair, **15** ungranted) |
-| 🔴 Rows whose published verdict this pass CORRECTED | **1** — Japan re-graded from *measured gap* to *placed*, on a category change, not new supply |
-| 🔴 Defects found in this pass's OWN instruments, by controls, before publication | **7** — and `2` of them are previously-recorded defects of this base, reproduced by a fresh instrument |
-| 🟢 Controls reproduced exactly before any verdict shipped | **13 of 13** (12 licence-byte + 1 dependency-count) · `2` planted negatives DEAD |
+| Placed **Global** | **21** |
+| Probed and rejected | **25** (1 split-by-directory, **3** NonCommercial — one of them also NoDerivatives, 1 fork, 1 duplicate address pair, **17** ungranted, **2 DEAD**) · 🟢 **`1` row LEFT this bucket: `nextSIS`** |
+| 🔴 Rows whose published verdict this pass CORRECTED | **1** — [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS), **proprietary → GPL-3.0**, on a licence *anthology* graded by one line belonging to a bundled dependency |
+| 🔴 Defects found in this pass's OWN instruments, by controls, before publication | **7** — `0` found by inspection |
+| 🟢 Controls reproduced exactly before any verdict shipped | **10 of 10** known-good rows · `3` planted negatives DEAD as designed |
 
-🟢 **`3` of `p788`'s `4` declared gaps are discharged, and `2` of those were category errors rather
-than absences.** Japan's supply is in `校務` (school administration); Africa's curriculum supply is
-large and almost entirely ungranted. 🔴 **The thinnest *measured* regions are now Tanzania (`0`),
-Ghana (`1`, ungranted) and Malaysia (`1`, ungranted)** — all measured, none inferred.
+### Where the three declared gaps of `p789` stand
 
-🟢 **EMEA agent supply is no longer this base's thinnest region, and the correction was
-instrumental rather than factual.** Europe's education agents were always there; the queries were
-in the wrong languages. 🔴 **The thinnest region is now Japan**, measured in Japanese at **3 total
-repositories**, and the thinnest *grant* is Japan's too — its one serious artefact carries none.
+| `p789` gap | `p790` disposition |
+|---|---|
+| 🇲🇾 **Malaysia** (`1`, ungranted) | 🟢 **DISCHARGED** — `haziqhalifi/StudyLah`, MIT, SPM Form 5 mathematics in Bahasa Malaysia |
+| 🇬🇭 **Ghana** (`1`, ungranted) | 🔴 **NOT discharged, and RE-MEASURED at `11` repositories with `0` grants** — `p789` understated the supply ~`10×` and read the grant rate correctly. `2` of `5` probed addresses are DEAD |
+| 🇹🇿 **Tanzania** (`0`) | 🔴 **NOT discharged.** `2` repositories exist; the only granted one (MIT) is **veterinary extension education**, not school education — a category error in the opposite direction from Japan's (`T877`) |
+
+🟢 **The honest summary of this pass: `1` region placed, `1` region placed for two countries, `2`
+regions measured and still empty, and `1` of this base's own published verdicts reversed.** 🔴 **The
+reversal is the most valuable item**, because the instrument that produced it — grading a licence
+file by substring presence — is still in use everywhere else licence files are read, and three
+independent probes got three different wrong answers from the same file.
+
+🔵 **The thinnest regions are now Tanzania (`0` school-education agents, measured), Ghana (`11`
+repositories, `0` grants) and Kenya (`3` repositories, `0` usable grants — one barred `NC-ND`).** All
+three are measured; none is inferred; and all three have the same remedy, which is a licence request
+rather than an engineering task.

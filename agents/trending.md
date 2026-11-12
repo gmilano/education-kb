@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p790` — **One of this base's own published verdicts is REVERSED: `Kosudo/nextSIS` is not proprietary, it is GPL-3.0, and the `39,890 B` file this base graded as "all-rights-reserved" is a licence ANTHOLOGY whose one such line belongs to a bundled EllisLab dependency. 🇧🇷 Brazil and 🇨🇴 Colombia placed for the first time; 🇲🇾 Malaysia's declared gap discharged. 🔴 Tanzania's is NOT — its only granted artefact teaches livestock health. Plus `7` defects in this pass's own probe, three of them Spanish-language blind spots.**
+
+🟢 **Controls ran BEFORE any verdict shipped: `10` of `10` known-good rows reproduce this base's recorded bytes exactly** — `HKUDS/DeepTutor` `11,408 B`, `THU-MAIC/OpenMAIC` `1,065 B`, `amosblomqvist/learnharness` `34,523 B`, `goyanedelv/paes-mcp` `2,018 B` (and its `SCOPE-LIMITED` flag), `luscitiosus/Dirigo` `362 B`, `daddysystem/nextgen-learn` `1,338 B`, `jupyter/nbgrader` `1,512 B`, `CAHLR/OATutor` `1,105 B`, `kumaken-1/school-office-generative-ai-30` `1,102 B` (`LICENSE-CODE`), `Kosudo/nextSIS` `39,890 B`. 🟢 **`3` planted negatives DEAD as designed.** 🔵 **`0` defects were found by inspection; all `7` were found by controls on rows this base had already published.**
+
+🟢 **Channel status, re-measured:** `git ls-remote` 🟢 · `raw.githubusercontent.com` 🟢 · `search/repositories` 🟢 (exact stars) · `api.github.com/repos/*` 🔴 `403` · `github.com` page 🔴 `403`. 🔴 **New this pass: two research hosts do not resolve in this session** (`porvir.org`, `www.gov.br`), so the Brazilian framework below is carried on secondary Brazilian press and **the primary `DOU` act was NOT read** — stated here rather than implied.
+
+### 🔴 `T875` — The correction, and why it is a method change rather than an erratum
+
+🔴 **Published by this base at `p787-B` and again at `p789`:** *"`Kosudo/nextSIS` … **PROPRIETARY, newly measured** … A `39,890 B` licence file is not evidence of an open grant — it is evidence of a long one."*
+
+🟢 **The address is alive at `60e422c7d93e` — the exact sha this base recorded, so nothing moved.** Its grant is served at **`license.txt`** (lowercase, `.txt`), a path `p789`'s probe and mine both missed until the tree was enumerated with a blobless clone. The file is a **licence anthology** with its own table of contents: §2 is **nextSIS's own full operative GPL-3.0**, §3 **CodeIgniter** (EllisLab), §4 **Twitter Bootstrap**.
+
+🔴 **The single `All rights reserved.` is at line `703` — the second line of §3, `Copyright (c) 2008 - 2011, EllisLab, Inc.` — and EllisLab's very next clause reads `You are permitted to use, copy, modify, and distribute the Software`.** The line graded does not belong to nextSIS, and the licence it belongs to is not proprietary either.
+
+🟢 **Corrected: `nextSIS` is `GPL-3.0`, the only open Student Information System this base holds.** Copyleft, so deploy separately and integrate at the boundary; never embed. **It moves from `barred` to `usable-with-care`.**
+
+🔵 **Three probes, three different wrong answers, one cause.** `p789` said *proprietary* (read one line). My v1 grader said **`AGPL-3.0`** (GPL-3.0 §13 *names* the Affero GPL). My v1 bar fired **NonCommercial** (GPL-3.0 §6 *uses the word* "noncommercial"). 🔴 **A licence file that quotes other licences cannot be graded by substring presence at all.** The grader now matches **anchored title lines** and reports a **set**: `ANTHOLOGY[GPL-3.0, +CodeIgniter]`. 🟢 **Same defect class as `metabase`'s split-by-directory finding — split by *section* instead.**
+
+### 🔴 `7` defects in this pass's OWN probe, each caught by a control before use
+
+| # | Defect | How the control exposed it | Consequence if unfixed |
+|---|---|---|---|
+| 1 | Spanish MIT grant clause unmatched | `goyanedelv/paes-mcp` graded `UNGRADED-BESPOKE`; the served bytes read **`Se concede permiso, libre de cargos`**, not the phrase I encoded | 🔴 A **placed, permissive LATAM row** would have been demoted to ungraded |
+| 2 | 🔴 NonCommercial bar was English-only | `luscitiosus/Dirigo` graded `UNGRADED-BESPOKE`; its bytes read **`Atribución-NoComercial-CompartirIgual 4.0`** | 🔴 **A NonCommercial-barred repo would have passed as merely "ungraded"** — the bar failing in the dangerous direction |
+| 3 | Scope-carve-out probe was English-only | Same row: its carve-out reads **`no quedan cubiertos por esta licencia`** (BOE/BOC statutes) | 🔴 `T864`'s whole finding would be invisible in Spanish |
+| 4 | 🔴 Licence path matching missed case | `Kosudo/nextSIS` read `NO-GRANT-SERVED` on `10` paths; the file is **`license.txt`** | 🔴 **This is defect `2` of `p789` reproduced by a fresh instrument** — and it is half of the reversal above |
+| 5 | Scope clause spanned a **line break** | `…oficiales y no\nquedan cubiertos…` — `grep` is line-based, so the clause was unreachable even once encoded | 🔴 A correct pattern still misses when the file wraps |
+| 6 | 🔴 **`Affero`-inside-GPLv3** | `nextSIS` graded **`AGPL-3.0`** | 🔴 **This base has now recorded this defect at `p787`, `p789` and `p790` — three instruments, three reproductions.** GPLv3 §13 names the Affero licence |
+| 7 | 🔴 **`noncommercial`-inside-GPLv3** | The NC bar fired on `learnharness` (AGPL-3.0) **and** `nextSIS` (GPL-3.0) | 🔴 **Every copyleft row in the base would have been mislabelled NonCommercial.** GPL-3.0 §6 uses the word |
+
+🔵 **Defects `6` and `7` are one finding: grading a licence by a word that the licence itself uses.** Defects `1`, `2` and `3` are one finding too — **the instrument fails in the direction of its author's language**, which is `p788-G` stated as a standing caution and confirmed for the third consecutive pass. 🟢 **The caution paid for itself: all three Spanish defects were found by deliberately planting Spanish controls, not by reading the code.**
+
+### 🟢 Placed this window — `13` new rows, and two first-ever countries
+
+| Agent | Address | Grant, on the bytes | ★ | Region | Why it is new |
+|---|---|---|---|---|---|
+| 🟢 **bncc-lesson-generator** | [`iagommendes/bncc-lesson-generator`](https://github.com/iagommendes/bncc-lesson-generator) | 🟢 MIT `1,068 B` · `171e1db7278e` | `0` | LATAM 🇧🇷 | 🟢 **BRAZIL PLACED FOR THE FIRST TIME** — **BNCC**-aligned lesson plans, **`zero-prompt para o professor`**, A4/PDF out |
+| 🟢 **mi_icfes** | [`jolicastrog/mi_icfes`](https://github.com/jolicastrog/mi_icfes) | 🟢 MIT `1,068 B` · `1c05d19ed1d3` | `0` | LATAM 🇨🇴 | 🟢 **COLOMBIA PLACED FOR THE FIRST TIME** — **Saber 11** score prediction. ⚠️ Prediction, not tutoring: Annex III shape |
+| 🟢 **awesome-ia-sala-de-aula** | [`ciro-maciel/awesome-ia-sala-de-aula`](https://github.com/ciro-maciel/awesome-ia-sala-de-aula) | 🟢 **CC0-1.0** `7,049 B` · `be5467501439` | `0` | LATAM 🇧🇷 | 🟢 **A new licence family and the most permissive grant in this base** — classroom AI register with each tool's minimum age and privacy posture |
+| 🔴 **GenPrompt-Pre-ICFES-11** | [`CREARED-EDU-CO/GenPrompt-Pre-ICFES-11`](https://github.com/CREARED-EDU-CO/GenPrompt-Pre-ICFES-11) | 🔴 **AGPL-3.0** `34,523 B` · `1ca3134446d7` | `4` | LATAM 🇨🇴 | **The highest-starred Colombian education-AI repo measured** — and copyleft |
+| 🟢 **StudyLah** | [`haziqhalifi/StudyLah`](https://github.com/haziqhalifi/StudyLah) | 🟢 MIT `1,069 B` · `c6ee7bb5db4a` | `0` | APAC 🇲🇾 | 🟢 **MALAYSIA PLACED — `p789` gap discharged.** SPM Form 5 maths, explanations **in Bahasa Malaysia**, explanation *style* matched to measured accuracy |
+| 🟢 **EduAgentic** | [`kamalelafoui/Agentic-AI-EdTech-J33-J34`](https://github.com/kamalelafoui/Agentic-AI-EdTech-J33-J34) | 🟢 MIT `1,071 B` · `7685db14663f` | `0` | EMEA (francophone) | 🟢 **First EMEA row that is an MCP *server* + A2A multi-agent system, not an application.** `100 % synthétiques · 0 apprenant réel`, dated `2026-11-11` |
+| 🟢 **spanish-tutor-ai** | [`MrEug3n1o/spanish-tutor-ai`](https://github.com/MrEug3n1o/spanish-tutor-ai) | 🟢 MIT `1,069 B` · `6f0ebd566861` | `0` | Global | 🟢 **The sovereignty pattern's missing reference implementation** — entirely local models, no API keys, QLoRA-fine-tuned checker, agent plans each day's lesson |
+| 🟢 **coursewright** | [`shivarajbakale/coursewright`](https://github.com/shivarajbakale/coursewright) | 🟢 MIT `1,072 B` · `4fd5e20735ab` | `0` | Global | A team of agents writes the course; the tutor answers **only from it** |
+| 🟢 **Multimodal-RAG-AI-Tutor-Agent** | [`yashpandey2409/Multimodal-RAG-AI-Tutor-Agent`](https://github.com/yashpandey2409/Multimodal-RAG-AI-Tutor-Agent) | 🟢 MIT `1,068 B` · `59d3fe71eea6` | `0` | Global | Multimodal variant of the citation-grounded shape `T859` calls for |
+| 🟡 **education-ai-ecosystem** | [`jinlize-tech/education-ai-ecosystem`](https://github.com/jinlize-tech/education-ai-ecosystem) | 🟢 Apache-2.0 `11,358 B` · `b59ceae4181d` | `0` | Global | 🟡 **`132` repos in the org, `100/100` sampled Apache-2.0 — and `0/130` platform-validated by its own README.** See `T878` |
+| 🟡 **edu-ai-usage-policy-agent** | [`jinlize-tech/edu-ai-usage-policy-agent`](https://github.com/jinlize-tech/edu-ai-usage-policy-agent) | 🟢 Apache-2.0 `11,358 B` · `dab9f0cd5a3c` | `0` | Global | The member that matters here: an **AI-usage-policy** agent |
+| 🟢 **nextSIS** `CORRECTED` | [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🔴 **GPL-3.0** (`ANTHOLOGY`) `39,890 B` · `cd7a49230f22` | — | Global | 🟢 **Was published as PROPRIETARY. It is not.** The only open SIS this base holds |
+| 🟢 **socratic-tutor** `re-verified` | [`nuwaves/socratic-tutor`](https://github.com/nuwaves/socratic-tutor) | 🟢 MIT `1,143 B` · `2e34df6e23bd` | `2` | Global | `p789` placed it at `2★` on day `0`; **`2★` and unchanged `6` days later** — `T851`'s derivative travelled, then stalled |
+
+### 🔴 Not placed, and the reasons are worth more than the rows would have been
+
+🔴 **🇹🇿 Tanzania — `p789`'s `0` is NOT discharged, and the near-miss is instructive (`T877`).** `elimu AI Tanzania` → **`2`**. One is ungranted. The other, [`sangadanson1-dot/-Vet-IDEA-TZ`](https://github.com/sangadanson1-dot/-Vet-IDEA-TZ), **is MIT `1,067 B` · `238c1bbb3bc0`** — and read in Swahili it serves **`wafugaji na wataalamu wa mifugo`**, livestock keepers and veterinary professionals, teaching **`afya ya wanyama, magonjwa, chanjo, lishe`**. 🟢 Real, granted, AI-bearing education — **veterinary extension, not school education.** 🔵 **Placing it would have closed the gap on paper and left an engagement with nothing.** This is `p789`'s Japan finding running backwards: there, the right category *rescued* a region; here, the wrong category would have *fabricated* one.
+
+🔴 **🇬🇭 Ghana — NOT discharged, and now quantified.** `WASSCE AI tutor` → **`11`**; `Ghana education AI tutor curriculum` → **`0`**. `5` probed: `3` ALIVE with **no grant**, **`2` DEAD** (`rc=2`, re-probed). 🟢 `p789`'s "`1`, ungranted" **understated the supply by ~`10×` and read the grant rate exactly right.** 🔵 Ghana is `T871` measured at one country: large curriculum supply, `0` grants.
+
+🔴 **🇰🇪 Kenya — a harder bar than an absence.** `3` repositories, all probed; `2` ungranted; [`gabrielmahia/shule-ai`](https://github.com/gabrielmahia/shule-ai) serves **`209 B` · `9dd285c3704d`: `CC BY-NC-ND 4.0`** — **NonCommercial *and* NoDerivatives.** It cannot be used in a paid engagement **and cannot be modified at all**, which bars the one thing a curriculum row exists for. 🔴 **The search channel indexed it `NOASSERTION`** — third consecutive pass where index silence hid a grant, second where the hidden grant was a bar.
+
+🟢 **Standing ungranted rows re-probed and CONFIRMED still ungranted**, so the licence requests of `ACTION p788-B` remain the right action and are now re-evidenced: `narumi-mase/osaka-lesson-dataset` (🇯🇵, `212cb10e48eb`), `silja-graf/Didaktikus-…-LP21` (🇨🇭, `8d747cda689e`), `SoukhyadP991/Multilingual-NCERT-Doubt-Solver` (🇮🇳, `e55b512ab2b8`, now `2★`), `TaoYu-ds/TutorMesh` (🇨🇳, `2a91578cc200`), `mingxuanyan07-lgtm/ai-for-education-showcase` (🇨🇳, `fcb1f8158d91`). 🔵 **`5` of `5` unchanged — these are stable absences, not transient ones.**
+
+🔵 **Drift measured on carried rows:** `THU-MAIC/OpenMAIC` `HEAD` moved `717b69cbe2f4` → **`a2aeffcec2f4`** (licence bytes unchanged at `1,065 B`); `HKUDS/DeepTutor` `58,508★` → **`58,541★`**; `daddysystem/nextgen-learn` `HEAD` `c9bff7573892` → **`681c9f2349bf`** (licence unchanged). 🟢 **`p788`'s standing exclusion was honoured this pass and honoured *in the data*:** `jecampagne/cours_mallat_cdf` sits in an `EXCLUDE.txt` filtered out of the batch file before the sweep ran, which is `p788-F` executed as specified rather than as prose.
+
+
 ## 🆕 `2026-11-12` · `p789` — **New this window: `3` of `p788`'s `4` declared gaps are DISCHARGED, and the two that mattered were category errors, not absences. Japan's education-AI supply is real and sits in school administration (`校務`), not tutoring. West African and South African curricula are PLACED for the first time — `35` WAEC repositories exist and `3` carry a grant. Plus `7` defects in this pass's own probe, one of which graded a Boost licence as MIT.**
 
 🟢 **Controls ran BEFORE any verdict shipped: `12` of `12` known-good rows reproduce this base's recorded bytes exactly** — `HKUDS/DeepTutor` `11,408 B`, `moodle/moodle` `35,147 B`, `sakaiproject/sakai` `11,120 B`, `frappe/lms` `33,893 B`, `hedyorg/hedy` `13,827 B`, `jupyter/nbgrader` `1,512 B`, `oppia/oppia` `11,358 B`, `learningequality/kolibri` `1,097 B`, `CAHLR/OATutor` `1,105 B`, `THU-MAIC/OpenMAIC` `1,065 B`, `janestreet/agent_skills` `1,120 B`, `open-education-api/specification` `13,827 B`. 🟢 `2` planted negatives DEAD as designed. 🟢 A `13th` control reproduced on the dependency channel: `nbgrader` declares **`18`** direct runtime dependencies, the exact count `p788` recorded.
