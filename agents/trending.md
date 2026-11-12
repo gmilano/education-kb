@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-12
 ---
 
+## `2026-11-12` · `p800` — **the week's finding is a FORK TRAP on the row this base added last pass, and the channel that caught it is one `curl` cannot do**
+
+🟢 **Window:** every address this pass touched was read from rendered `github.com` HTML — the only GitHub channel that carries information in this session. `curl -sI` returns `403` for live and invented addresses alike (`T923`); `api.github.com` refuses everything outside a single repository (**seventh pass**). 🟢 **`34` addresses read, `1` deliberate negative control, `6` absence anomalies resolved, `6` rows granted to `agents/top.md`.** 🟢 Machine output: [`html-channel-control`](../evidence/html-channel-control.2026-11-12-p800.tsv) · [`search-absence-mechanism`](../evidence/search-absence-mechanism.2026-11-12-p800.tsv) · [`cross-channel-remeasure`](../evidence/cross-channel-remeasure.2026-11-12-p800.tsv).
+
+### 🔴 `tutor-mcp` has a `0`-star fork that reads exactly like the canonical, and search ranks it alongside
+
+`p799` added [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (🟢 MIT · `102★` · `v0.7.4`) as *"the tutor itself as an MCP server"*. 🔴 **A general search for that category returns [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) in the same result set, with a BYTE-IDENTICAL description** — *"An open-source MCP server that turns any LLM into an Intelligent Tutoring System. 50 years of cognitive science, MIT licensed."*
+
+🔴 **It is a fork with `0` stars, no releases of its own, and a README whose version link points at the upstream.** 🔵 The copied description is what makes it dangerous: nothing in the search result distinguishes it, and a KB that collects on description match collects the fork. 🟢 **The discriminator is one field — `forked from` — and it is present in the rendered page and absent from a description match.**
+
+🟢 **Rule for intake:** the fork notice is read BEFORE the row is written, not after a star count looks wrong. `p800` found `5` forks among `34` addresses (`15%`), and `3` of them stood in for a materially larger canonical.
+
+### 🔴 The agentic-coursework problem now has a vendor position on the record, and it is "no"
+
+🔴 **Instructure marked a community request to block AI agents from logging in on behalf of students `Will not consider`.** 🔴 **And the technical reason detection is not a fallback:** agents of this class drive the Canvas **user interface** through cloud browser automation rather than the REST API, so server-side detection is, in Instructure engineers' own forum framing, *near-impossible*. 🟡 Institutions are responding at the endpoint instead — SMU's IT office determined OpenClaw *"is not approved for use on university-owned or managed devices at this time."*
+
+🔵 **Reported but NOT verified here, and recorded as unverified rather than dropped:** a widely circulated account of a Canvas-completing student agent being forced offline at a named university did not corroborate on a direct search. 🔴 **The vendor position and the detection asymmetry corroborate; the incident does not.** Do not carry the incident into a client deck.
+
+🟢 **Why this is a trending signal and not a news item:** it fixes which side of the boundary an education engagement can build on. **An LMS cannot tell an agent from a student, so authorisation has to be issued by the institution** — which is exactly the shape of [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) (scope-gated, confirm-token, audit-logged) and the opposite of a browser agent wearing a student's session.
+
+### 🟡 `microsoft/autogen` is ARCHIVED — and this base never had a row for it to lose
+
+🔴 **[`microsoft/autogen`](https://github.com/microsoft/autogen) (`61.8k★`) is archived and no longer maintained**, with Microsoft directing new work to [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) (🟢 MIT · `14.7k★` · .NET + Python). 🔵 **AutoGen was named as a top education agent in several of this project's earlier generations and in much of the public "best agents for education" writing that is still being indexed.** 🟢 **A `61.8k`-star archived repository is the most citable dead dependency in this sector** — it will keep appearing in roundups for a year. 🔴 **Its licence also splits: MIT for code, CC-BY-4.0 for documentation.**
+
+### 🟢 New this window, placed
+
+- 🟢 **APAC 🇨🇳** — [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) cut `v1.5.0-rc.2` **on `2026-11-12`**, three days after `v1.4.2`. MIT, `43.4k★`, Tsinghua. 🔵 Days-not-weeks cadence on the second-largest row in this base.
+- 🟢 **APAC 🇭🇰** — [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) at `v1.7.2` (`2026.11.6`), `58.6k★`, Apache-2.0. Still `#1`.
+- 🟢 **Global** — [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp), announced through the Open edX blog on `2026-09-24`, 🔴 AGPL-3.0, `3★`: `27` LMS + `8` CMS tools against Open edX **Ulmo**.
+- 🟡 **Global** — [`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions), 🔴 AGPL-3.0, `17★`, 🔴 **README says EXPERIMENTAL**; LiteLLM multi-provider, Aspects event analytics.
+- 🟢 **EMEA 🇩🇪** — [`lehrer-tools/lehrer-agent`](https://github.com/lehrer-tools/lehrer-agent) (`5★`, MIT in README only): German-language teacher agent for lesson planning, test creation and school-regulation lookup, shipped as a **Claude Code plugin**. 🔵 The root of the `2`-deep fork chain `p799` had recorded at its leaf.
+- 🟡 **Global** — [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) (Apache-2.0, `2★`): ArguLens automated essay scoring, mean QWK `0.813`. 🔴 **Training corpus PERSUADE 2.0 is non-commercial.**
+
+### 🔴 Declared gaps for this window
+
+- 🔴 **No grant BYTES and no blob shas this pass.** The clone channel was not available; every licence here is GitHub's sidebar **classification** or a README assertion, and both are weaker than bytes.
+- 🔴 **No new LATAM-origin repository.** `p800`'s discovery effort went into resolving `p799`'s absence anomaly, not into in-language legs; the LATAM supply picture is `p799`'s, unchanged.
+- 🔴 **`0` independent security or data-governance evaluation of any education MCP server** — `p792-D` unclaimed for the ninth pass, now with `blend-ed/openedx-mcp` added to the set that needs one.
+
 ## `2026-11-12` · `p799` — **the week's finding is that a predicate made the search WORSE, and the contaminant it recruited has a name: the university course-project report**
 
 🟢 **Window:** repositories pushed since `2026-06-01`, reached on `gh api search/repositories`, `sort=updated`, `per_page=30`, `5` in-language legs (`4` `es`, `1` `pt`) carrying the domain predicate `ACTION p798-D` specified. 🟢 **`150` rows read, `56` education-domain, `27` granted.** 🟢 Machine output: [`predicate-leg-census`](../evidence/predicate-leg-census.2026-11-12-p799.tsv) · [`predicate-leg-finding`](../evidence/predicate-leg-finding.2026-11-12-p799.tsv).

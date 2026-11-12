@@ -1,0 +1,7 @@
+written_address	mechanism	resolves_to	canonical_stars	written_address_stars	canonical_licence_channel	consequence_for_this_base
+DaRL-GenAI/instructional_agents	FORK	Hyan-Yao/instructional_agents	22	492	sidebar MIT	fork carries the traction, upstream carries the provenance - TRACTION INVERSION
+NikolasSchaeffner/lehrer-agent	FORK (depth 2)	lucaotten-debug/lehrer-agent -> lehrer-tools/lehrer-agent	5	0	README only, no sidebar	fork CHAIN - two hops to the root
+cosark/OpenTutor	FORK	zijinz456/OpenTutor	175	0	sidebar MIT	shelf address is a 0-star fork of a 175-star canonical
+foradian/fedena	FORK	projectfedena/fedena	547	4	README only, no sidebar	shelf address is a 4-star fork; canonical grant is UNCLASSIFIED
+csev/tsugi	REDIRECT (owner/rename)	tsugiproject/tsugi	377	n/a	sidebar Apache-2.0	old slug serves by HTTP redirect only
+openedx/edx-platform	REDIRECT (rename)	openedx/openedx-platform	8200	n/a	sidebar AGPL-3.0	old slug serves by HTTP redirect only

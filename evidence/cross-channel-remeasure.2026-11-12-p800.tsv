@@ -1,0 +1,33 @@
+address	stars_html_channel_p800	licence_html_channel_p800	release_or_version	base_carried_value	agreement	note
+HKUDS/DeepTutor	58600	Apache-2.0	v1.7.2 (2026.11.6)	58622	AGREES (HTML rounds to 58.6k)	independent channel confirms p799
+THU-MAIC/OpenMAIC	43400	MIT	v1.5.0-rc.2 2026-11-12; v1.4.2 2026-11-09	43392	AGREES	release candidate cut the day of this pass
+ollama/ollama	186800	MIT	-	186787	AGREES	
+moodle/moodle	7600	GPL-3.0	-	7607	AGREES	
+ArnaudGuiovanna/tutor-mcp	102	MIT	v0.7.4	102	AGREES	p799 new row holds
+CAHLR/OATutor	279	MIT	-	carried	AGREES	
+Open-TutorAi/open-tutor-ai-CE	117	BSD-3-Clause	-	absent from shelves	NEW	open-core, proprietary Enterprise Edition above it
+pykt-team/pykt-toolkit	461	MIT	none tagged	absent from shelves	NEW	knowledge-tracing measurement layer
+satvik314/educhain	388	MIT	v0.3.13 (Oct 2024)	carried	STALE FLAG	no release in ~2 years
+microsoft/autogen	61800	MIT code + CC-BY-4.0 docs	-	absent	NEW - ARCHIVED	repo archived; MS directs new work to Agent Framework
+microsoft/agent-framework	14700	MIT	-	absent	NEW	successor to AutoGen, .NET + Python
+blend-ed/openedx-mcp	3	AGPL-3.0	none tagged	absent from shelves	NEW	27 LMS + 8 CMS tools, scopes, confirm tokens, audit table
+openedx/openedx-ai-extensions	17	AGPL-3.0	none tagged	absent from shelves	NEW	EXPERIMENTAL, not for production; LiteLLM multi-provider
+openedx/openedx-platform	8200	AGPL-3.0	-	written as openedx/edx-platform	RENAME	canonical slug recovered
+tsugiproject/tsugi	377	Apache-2.0	-	written as csev/tsugi	REDIRECT	canonical slug recovered
+zijinz456/OpenTutor	175	MIT	none tagged	written as cosark/OpenTutor	FORK	canonical recovered; local-first, 10+ providers, KG + spaced repetition
+projectfedena/fedena	547	NONE in sidebar (README asserts Apache-2.0)	-	written as foradian/fedena	FORK	canonical is UNGRANTED by classifier
+lehrer-tools/lehrer-agent	5	NONE in sidebar (README asserts MIT)	-	written as NikolasSchaeffner/...	FORK CHAIN	EMEA DE, Claude Code plugin
+Hyan-Yao/instructional_agents	22	MIT	-	written as DaRL-GenAI/...	FORK	upstream of the 492-star shelf address
+wwrwbs/AI_AWE	2	Apache-2.0	-	absent from shelves	NEW	ArguLens AES; PERSUADE 2.0 training data is NON-COMMERCIAL
+kvnloo/tutor-mcp	0	MIT	none (points upstream)	absent	NEW - FORK TRAP	0-star fork of the 102-star canonical
+huggingface/smolagents	30300	Apache-2.0	-	carried	AGREES	
+langchain-ai/langgraph	44900	MIT	-	carried	AGREES	
+BerriAI/litellm	63200	NOT DISPLAYED in sidebar; separate commercial licence for enterprise	-	carried as MIT	FLAG	grant not assertable from this channel
+qdrant/qdrant	35500	Apache-2.0	-	carried	AGREES	
+learningequality/kolibri	1200	MIT	-	carried	AGREES	
+instructure/canvas-lms	6900	AGPL-3.0	-	carried	AGREES	
+bigbluebutton/bigbluebutton	9300	LGPL-3.0	4.0	carried	AGREES	
+openeducat/openeducat_erp	911	LGPL-3.0	-	carried	AGREES	
+h5p/h5p-php-library	155	GPL-3.0	-	carried	AGREES	
+GeminiLight/awesome-ai-llm4education	223	NONE in sidebar	-	carried	FLAG	no grant
+panaversity/learn-agentic-ai	4400	MIT	-	carried	AGREES	no enrolment figure on the page

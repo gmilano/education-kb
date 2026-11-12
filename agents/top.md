@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p800` — **Six addresses this base recorded as "absent from `search/repositories` but clonable" are now EXPLAINED, and the explanation is not a channel defect. 🔴 `4` of the `6` are FORKS and `2` are RENAME REDIRECTS — and because they are forks, four shelf addresses point at the wrong repository.**
+
+🟢 **A channel that `curl` and `gh api` cannot replace in this session was introduced and controlled: the rendered `github.com` HTML page.** `curl -sI` returns `403` for live and invented addresses alike (`T923`, carried), and `api.github.com` refuses everything outside one repository (`403`, **seventh pass**). 🟢 **The HTML channel discriminates: `404` for an invented address, a full page with stars, licence, release and fork-state for a live one.** The negative control is published, not asserted.
+
+🟢 Machine output: [`search-absence-mechanism`](../evidence/search-absence-mechanism.2026-11-12-p800.tsv) · [`cross-channel-remeasure`](../evidence/cross-channel-remeasure.2026-11-12-p800.tsv) · [`html-channel-control`](../evidence/html-channel-control.2026-11-12-p800.tsv).
+
+🔴 **Declared up front, so no row is read as more than it is:** this channel reports what GitHub *renders* — star counts as displayed (`58.6k`, not `58,622`), the sidebar licence **classification**, and the `forked from` notice. 🔴 **It measures NO grant bytes and NO blob shas.** Every byte figure in this base still comes from the clone channel, and nothing in this pass replaces one.
+
+### 🔴 `T950` — the `p799` absence anomaly resolves into two mechanisms, and four of this base's addresses are forks
+
+`p799` recorded `6` of `170` addresses as absent from `search/repositories` while cloning and serving refs, and left the mechanism open. 🟢 **All six are now resolved, and neither mechanism is a defect in the search channel — both are the channel behaving as documented.**
+
+| Written address | Mechanism | Resolves to | Canonical ★ | Written ★ |
+|---|---|---|---|---|
+| [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | 🔴 **FORK** | [`Hyan-Yao/instructional_agents`](https://github.com/Hyan-Yao/instructional_agents) | `22` | 🟢 **`492`** |
+| [`cosark/OpenTutor`](https://github.com/cosark/OpenTutor) | 🔴 **FORK** | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **`175`** | 🔴 **`0`** |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | 🔴 **FORK** | [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | 🟢 **`547`** | 🔴 **`4`** |
+| [`NikolasSchaeffner/lehrer-agent`](https://github.com/NikolasSchaeffner/lehrer-agent) | 🔴 **FORK CHAIN, depth `2`** | `lucaotten-debug/lehrer-agent` → [`lehrer-tools/lehrer-agent`](https://github.com/lehrer-tools/lehrer-agent) | `5` | 🔴 **`0`** |
+| [`csev/tsugi`](https://github.com/csev/tsugi) | 🟡 **REDIRECT** (owner rename) | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 **`377`** | — |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🟡 **REDIRECT** (rename) | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🟢 **`8.2k`** | — |
+
+🔵 **Why the search channel never had them:** `search/repositories` excludes forks unless `fork:true` is asked for, and it indexes a repository under its CURRENT slug only. A clone follows the HTTP redirect; a search does not. 🟢 **The rule, so no later pass re-spends this probe: an address absent from search but alive on clone is a FORK or a RENAME before it is anything else — test those two before suspecting the channel.**
+
+🔴 **The operational consequence is the part that matters.** Three of the four forks are the *less* significant repository: a `0`-star fork standing in for a `175`-star canonical, a `4`-star fork for a `547`-star canonical, a `0`-star fork two hops from its root. 🔵 **One inverts:** `DaRL-GenAI/instructional_agents` carries `492` stars against its upstream's `22`, because the EACL-2026 paper points at the lab's fork. **The fork holds the traction and the upstream holds the provenance — record both, and do not silently swap one for the other.**
+
+🔴 **And `projectfedena/fedena`, the canonical this base should be pointing at, has NO sidebar licence at all** — Apache-2.0 is asserted in its README and nowhere a classifier can see it. Moving the address to the canonical repository moves it from *"forked, small"* to **ungranted**. That is a worse position honestly stated, not a better one.
+
+### 🟢 `6` rows added — the shelves this base has been thinnest on
+
+| Agent | Address | Licence (sidebar) | ★ | Region | What it is |
+|---|---|---|---|---|---|
+| 🟢 **OpenTutor** 🆕 | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** | `175` | Global | 🟢 **The canonical this base's `cosark` address was shadowing.** Local-first block-based learning workspace: uploaded material → notes, quizzes, flashcards, adaptive tutor; `10`+ LLM providers, spaced repetition, knowledge graph. 🔵 **Local-first is the whole EMEA/minors story in one repository** |
+| 🟢 **Open TutorAI CE** 🆕 | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause** | `117` | Global | Community Edition tutoring platform — Ollama and OpenAI-compatible providers, local retrieval over learning material, Docker deploy. 🔴 **Open-core: a proprietary Enterprise Edition sits directly above it, so the upgrade path leaves the grant** |
+| 🟢 **pyKT** 🆕 | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | `461` | Global | PyTorch knowledge-tracing library: standardised preprocessing for the standard datasets plus the commonly compared DL models. 🔵 **The MEASUREMENT layer this base has never had a row for** — every mastery claim in a proposal needs one |
+| 🟢 **openedx-mcp** 🆕 | [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | 🔴 **AGPL-3.0** | `3` | Global | 🟢 **The only agent→LMS WRITE path in this base.** `27` LMS tools + `8` CMS tools, scope-gated (`read`, `write:courses`, `destructive`), confirm tokens on high-impact calls, rate limits, audit table. Targets Open edX **Ulmo**. 🔴 **AGPL-3.0 and `3` stars — a reference design, not a dependency** |
+| 🟡 **openedx-ai-extensions** 🆕 | [`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions) | 🔴 **AGPL-3.0** | `17` | Global | First-party-adjacent AI plugin: MFE plugin slots, unit content extraction, summarisation, LiteLLM multi-provider. 🔴 **Its own README says EXPERIMENTAL and not for production** |
+| 🟡 **AI_AWE / ArguLens** 🆕 | [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) | 🟢 **Apache-2.0** | `2` | Global | Automated essay scoring: discourse-move classifier + LightGBM scorer + LLM feedback, Gradio UI, reported mean QWK `0.813` cross-validated. 🔴 **The CODE is Apache-2.0 and the PERSUADE 2.0 training data is NON-COMMERCIAL — the trap is in the corpus, not the repo** |
+
+🔴 **`satvik314/educhain`, already on this shelf, gets a staleness flag:** MIT and `388` stars, but its latest version is **`v0.3.13`, October 2024**. Two years without a release is not a maintained dependency.
+
+### 🟢 Cross-channel re-measurement — `p799`'s headline numbers hold
+
+🟢 **Every carried figure the HTML channel could reach AGREES**, within the rounding the channel renders: `DeepTutor` `58.6k` against `58,622`; `OpenMAIC` `43.4k` against `43,392`; `ollama` `186.8k` against `186,787`; `moodle` `7.6k` against `7,607`; `tutor-mcp` `102` against `102`. 🔵 **Two independent channels now stand behind the top of this base.**
+
+🟢 **`OpenMAIC` cut `v1.5.0-rc.2` on `2026-11-12`, the day of this pass** (`v1.4.2` on `2026-11-09`) — the release cadence is days, not weeks.
+
+🔴 **One carried grant does NOT survive:** [`BerriAI/litellm`](https://github.com/BerriAI/litellm) (`63.2k★`) **displays no licence in its sidebar**, and a separate *LiteLLM Commercial License* governs enterprise features. This base has carried it as MIT. 🔴 **It is a dependency of `openedx-ai-extensions`, so it is inside the Open edX AI path** — the grant has to be read from the `LICENSE` file on the clone channel before any deliverable depends on it. **Flagged, not corrected: this pass cannot measure bytes.**
+
 ## 🆕 `p799` — **`ACTION p798-A` discharged, and it splits. One of the two `LATAM?` rows resolves to a COUNTRY on government-document evidence — 🇻🇪 Venezuela, by its ministry's own curriculum — and the other is declared unresolvable after SIX channels, because it is built to be country-agnostic. 🔴 The method `p798-A` specified found neither: origin for the resolved row is in the TREE and a localised readme, not in root-README prose.**
 
 🟢 **`6` agents added, every grant byte-verified. `10` instrument defect cycles — `7` caught by the instrument's own controls and `3` by the publication gates — `0` shipped.** 🟢 Machine output: [`payload-region-provenance`](../evidence/payload-region-provenance.2026-11-12-p799.tsv) · [`mit-clause-identity-population`](../evidence/mit-clause-identity-population.2026-11-12-p799.tsv) · [`instrument-defect-cycles`](../evidence/instrument-defect-cycles.2026-11-12-p799.tsv) · [`channel-reprobe`](../evidence/channel-reprobe.2026-11-12-p799.tsv) · instrument: [`ingest/p799-payload-region-probe.sh`](../ingest/p799-payload-region-probe.sh).

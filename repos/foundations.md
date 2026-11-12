@@ -4,6 +4,46 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p800` — **`4` rows added and `1` carried grant withdrawn. 🔴 The withdrawal is the important half: `litellm` displays NO licence, and it sits inside the Open edX AI path.**
+
+🟢 Machine output: [`cross-channel-remeasure`](../evidence/cross-channel-remeasure.2026-11-12-p800.tsv) · [`search-absence-mechanism`](../evidence/search-absence-mechanism.2026-11-12-p800.tsv).
+
+🔴 **Scope statement, so these rows are not over-read:** every licence below is GitHub's **sidebar classification** read from the rendered page, or a README assertion where the sidebar is empty. 🔴 **No grant bytes, no blob shas, no dependency trees this pass** — the clone channel was unavailable (`api.github.com` and `curl` both refuse, seventh pass). A row that says *"MIT"* here means *"GitHub classifies it MIT"*, which `T937` has already shown can diverge from the payload.
+
+### 🔴 `T951` — `litellm` has no displayed grant, and it is a dependency of the Open edX AI plugin
+
+| Measure | Result |
+|---|---|
+| Address | [`BerriAI/litellm`](https://github.com/BerriAI/litellm) |
+| ★ | 🟢 `63,200` |
+| Sidebar licence | 🔴 **NOT DISPLAYED** |
+| Second grant | 🔴 **A separate *LiteLLM Commercial License* governs enterprise features** |
+| Carried in this base as | 🔴 **MIT** |
+| Reaches education how | 🔴 **[`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions) uses it for multi-provider LLM access** |
+
+🔴 **So the most load-bearing piece of plumbing in the Open edX AI path is the one whose grant this base cannot currently assert.** 🟢 **Not corrected, flagged** — asserting MIT from a sidebar that shows nothing would be exactly the inference this base exists to refuse. 🔵 **Next pass, on the clone channel: read `LICENSE` at HEAD, size it, hash the clause, and establish whether the OSS grant and the commercial grant partition by directory or by feature flag.** Until then, **a client deliverable that gateways through LiteLLM is a commercial-terms question, not a settled permissive one.**
+
+### 🟢 `4` rows added
+
+| Repo | Address | Licence (sidebar) | ★ | Why it belongs on this shelf |
+|---|---|---|---|---|
+| 🟢 **pyKT** 🆕 | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | `461` | 🟢 **The measurement layer this base has never had.** PyTorch knowledge tracing with standardised preprocessing of the standard datasets and the commonly compared DL models. 🔵 Every *"mastery improved"* claim in a proposal needs a model someone else can re-run — this is that model. 🔴 No tagged releases |
+| 🟢 **Microsoft Agent Framework** 🆕 | [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) | 🟢 **MIT** | `14,700` | Successor to the archived AutoGen. .NET **and** Python, sequential/concurrent/handoff/group orchestration, hosting and observability. 🔵 **The .NET half is why it matters here:** university and ministry IT estates that will not run a Python agent host will run this one |
+| 🟡 **AutoGen** 🆕 | [`microsoft/autogen`](https://github.com/microsoft/autogen) | 🟡 **MIT (code) + CC-BY-4.0 (docs)** | `61,800` | 🔴 **ARCHIVED and unmaintained** — listed so it is REFUSED knowingly. 🔴 It is still named as a top education agent across indexed roundups and in this project's own earlier generations. **A `61.8k`-star dead repository is the most citable wrong answer in this sector** |
+| 🟢 **Tsugi** 🆕 | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 **Apache-2.0** | `377` | 🟢 **The canonical address for what this base wrote as `csev/tsugi`** (owner rename, `T950`). LTI interop framework — the standards-compliant way a tool enters Moodle, Canvas, Sakai, Open edX **without touching their copyleft core**. 🔵 **Apache-2.0 at the integration seam is the cleanest boundary this sector offers** |
+
+### 🟡 Canonical addresses corrected on this shelf
+
+🟢 **Open edX's platform monolith is [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform)** (🔴 AGPL-3.0, `8.2k★`). 🔵 **`p606-K` already SETTLED this canonical address** — 🔴 **and the shelves never followed: this row and [`verticals/solutions.md`](../verticals/solutions.md) both still write `openedx/edx-platform`, a slug that now serves only by HTTP redirect.** 🟢 **`T950` supplies the mechanism that makes the stale slug consequential rather than cosmetic: a redirect clones but is NOT indexed, which is why `search/repositories` never returned the largest platform repository in this sector.** 🔵 **A settled fact that stops at the ledger and never reaches the shelf is a fact this base does not actually hold.** 🔵 **A redirect is not an address.** The old slug clones; it does not resolve in metadata, and a KB whose addresses only work on one channel is a KB with a silent single point of failure.
+
+### 🟢 Carried rows re-measured, independently, and holding
+
+🟢 [`ollama/ollama`](https://github.com/ollama/ollama) `186.8k` MIT · [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) `44.9k` MIT · [`qdrant/qdrant`](https://github.com/qdrant/qdrant) `35.5k` Apache-2.0 · [`huggingface/smolagents`](https://github.com/huggingface/smolagents) `30.3k` Apache-2.0 · [`learningequality/kolibri`](https://github.com/learningequality/kolibri) `1.2k` MIT · [`panaversity/learn-agentic-ai`](https://github.com/panaversity/learn-agentic-ai) `4.4k` MIT.
+
+🔴 **Two carried rows have NO sidebar grant and are flagged, not dropped:** [`GeminiLight/awesome-ai-llm4education`](https://github.com/GeminiLight/awesome-ai-llm4education) (`223★`, no licence field) and [`projectfedena/fedena`](https://github.com/projectfedena/fedena) (`547★`, Apache-2.0 asserted in README only). 🔵 **An awesome-list with no grant is still readable as a bibliography** — it is the *code* shelves where no grant means no rights.
+
+🔴 **And `panaversity/learn-agentic-ai` carries no enrolment figure anywhere on its page.** This base and its predecessors have cited a `250k`-student number against it; the page states an *aspirational* goal to train millions and a `10`-million-concurrent-agent **design challenge**. 🔴 **Neither is an enrolment. The figure is withdrawn.**
+
 ## 🆕 `p799` — **`ACTION p798-C` discharged: the MIT grants on this shelf are ONE document, and the screen that was flagging them is retired. 🔴 `8` payloads spanning `189` bytes normalise to a single clause hash, and the byte band flagged `5` of the `8`.**
 
 🟢 Machine output: [`mit-clause-identity-population`](../evidence/mit-clause-identity-population.2026-11-12-p799.tsv). 🔴 **Method declared: `p135` could not be RUN — executing committed repository code is refused in this session (`p797-H`, sixth pass) — so its `body`-level normalisation was re-implemented in this pass's own command. The result is a re-implementation, not a `p135` run.**

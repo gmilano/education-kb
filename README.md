@@ -6,17 +6,50 @@ updated: 2026-11-12
 
 # Globant AI Studios — Education KB
 
-**Pass `p799` · `2026-11-12`** — `p798` reversed a LATAM claim about licensing by giving it a control
+**Pass `p800` · `2026-11-12`** — `p799` left `6` of `170` addresses unexplained: absent from
+`search/repositories`, yet cloning and serving refs. 🟢 **`p800` closes it with a mechanism rather than
+a screen, and the mechanism is not a channel defect — `4` of the `6` are FORKS and `2` are RENAME
+REDIRECTS, both documented behaviour.** 🔴 **The cost of closing it: four shelf addresses point at
+forks, three of them at the LESS significant repository — `0★` standing in for `175★`, `4★` for
+`547★`, `0★` two hops from its root.** 🟢 **It also closes `Gap 253`, declared `134` passes ago by
+`p666`.** 🔴 **And the uncomfortable finding is propagation: `p606-K` settled the Open edX canonical
+address and both shelves still write the stale slug today. This base's ledgers advance faster than its
+shelves.** 🟢 **A channel this base had written off was probed and controlled:** `curl -sI` and
+`api.github.com` refuse (`T923`, and a seventh pass), but the **rendered** `github.com` page answers —
+`404` for an invented address, full metadata for a live one. 🔴 **It yields NO grant bytes, so every
+licence in this pass is a classification, not a payload.** The two trending ledgers and the action
+ledger are appended to, never rewritten.
+
+## What this pass established
+
+| | |
+|---|---|
+| 🟢 **`Gap 253` CLOSED, `134` passes after it was declared** | 🟢 **`T950`: `search/repositories` omits forks unless `fork:true`, and indexes the CURRENT slug only — a clone follows a redirect, a search does not. `6` of `6` accounted for** |
+| 🔴 **Four shelf addresses are FORKS, three of them the wrong repository** | 🔴 **`cosark/OpenTutor` `0★` → `zijinz456/OpenTutor` `175★` · `foradian/fedena` `4★` → `projectfedena/fedena` `547★` · `NikolasSchaeffner/lehrer-agent` `0★` → a root two hops up** |
+| 🔵 **One fork INVERTS, so "prefer the upstream" is NOT the rule** | 🔵 **`DaRL-GenAI/instructional_agents` `492★` over its upstream's `22★`, because the EACL-`2026` paper points at the lab's fork. 🟢 The fork holds the traction, the upstream the provenance — record BOTH** |
+| 🔴 **The propagation gap, and it is this pass's own finding against itself** | 🔴 **`p606-K` SETTLED `openedx/openedx-platform`; `repos/foundations.md` and `verticals/solutions.md` both still write `openedx/edx-platform`, grant bytes attached to a stale slug. 🟢 `ACTION p800-A`: diff the `5` oldest settled address facts against every shelf** |
+| 🟢 **A refusal belongs to a TRANSPORT, not a hostname** | 🟢 **`T952`: five passes generalised two refusing transports to the whole host. The rendered page discriminates — `404` invented, `200` live — and the negative control is published, not asserted** |
+| 🟢 **Two independent channels now stand behind the top of this base** | 🟢 **`DeepTutor` `58.6k`/`58,622` · `OpenMAIC` `43.4k`/`43,392` · `ollama` `186.8k`/`186,787` · `moodle` `7.6k`/`7,607` · `tutor-mcp` `102`/`102` — every carried figure AGREES** |
+| 🔴 **One carried grant WITHDRAWN, and it is inside the Open edX AI path** | 🔴 **`T951`: `BerriAI/litellm` (`63.2k★`) displays NO licence and has a separate commercial licence for enterprise features. Carried here as MIT. It is a dependency of `openedx/openedx-ai-extensions`** |
+| 🔴 **The LMS cannot tell an agent from a student, and the vendor declined to try** | 🔴 **`T953`: Instructure marked a block-agent-logins request `Will not consider`; UI-driving browser agents are near-undetectable server-side on its own engineers' account. 🟢 So integrity is an assessment-DESIGN engagement, not a detection purchase** |
+| 🟢 **`6` agents and `4` foundations added — the write path, and the measurement layer** | 🟢 **`blend-ed/openedx-mcp` (AGPL, `27` LMS + `8` CMS tools, scopes + confirm tokens + audit) · `pykt-team/pykt-toolkit` (MIT) · `zijinz456/OpenTutor` · `Open-TutorAi/open-tutor-ai-CE` (BSD-3) · `microsoft/agent-framework` (MIT) · `tsugiproject/tsugi` (Apache-2.0)** |
+| 🔴 **`microsoft/autogen` is ARCHIVED at `61.8k★`** | 🔴 **The most citable dead dependency in this sector — still named as a top education agent across indexed roundups. Successor: `microsoft/agent-framework`, MIT, `14.7k★`** |
+| 🟢 **The agentic SEGMENT has a size for the first time here** | 🟢 **`$2.37B` (`2026`) → `$11.83B` (`2031`), `37.92%` CAGR, NA largest / APAC fastest. 🔴 Against a `±19%` spread and a `16.8%`-vs-`41.5%` CAGR disagreement on the BROAD market — a definitional dispute, so quote the segment or the range, never an average** |
+| 🟢 **EMEA gains a national reference at full coverage** | 🟢 **Estonia's AI Leap: `154` of `156` upper-secondary schools in year one, app launched March `2026`, `€4M`. Not a pilot — a country** |
+| 🔴 **No grant BYTES this pass, stated everywhere it matters** | 🔴 **The clone channel was unavailable; every licence is a sidebar classification or a README assertion, and `T937` has already shown those can diverge from the payload** |
+
+## `p799` · `2026-11-12` — the preceding pass
+
+`p798` reversed a LATAM claim about licensing by giving it a control
 leg. 🟢 **`p799` pointed the same instrument at this base's most-cited LATAM statistic and at its own
 tooling, and both moved.** 🔴 **UNESCO IESALC's "`87%` adoption, `26%` formal strategy" is real and is
 NOT regional — `26%` sits between a global `20%` and a global `34.2%`, so the gap is `1.32×`, not the
 categorical `4.8×` a regional pathology would look like.** 🟢 **What IS regional is money and
 capability: `55%` of universities carry no AI budget and `11%` of faculty can rigorously evaluate AI
 output.** 🔴 **And the pass's own instrument produced TEN defects, every one caught before publication and
-none published — two of which were findings in their own right.** The two trending ledgers and the
-action ledger are appended to, never rewritten.
+none published — two of which were findings in their own right.**
 
-## What this pass established
+## What `p799` established
 
 | | |
 |---|---|
@@ -47,7 +80,7 @@ action ledger are appended to, never rewritten.
 | 🔴 **A new session-policy limit, measured not assumed** | 🔴 **Executing committed repository code is refused here, so `make hooks` and `ACTION p797-H` are undischargeable from this session** |
 | 🔴 Defects in this pass's own instrument, caught before publication | 🔴 **`1`** — a refused API call's JSON body shipped as data in `16` rows of two columns. 🟢 Both versions published |
 
-## 🟢 The three findings worth reading first
+## 🟢 `p799`'s three findings worth reading first
 
 **1. A rate without a denominator reversed five passes of regional strategy, and one control leg
 cost two minutes.**
@@ -106,19 +139,20 @@ week-one deliverable with a real precedent to copy instead of a lawyer to brief.
 
 | File | What it holds | Mode |
 |---|---|---|
-| [`agents/top.md`](agents/top.md) | `137` addresses · 🟢 **`7` added, every grant byte-verified with blob + HEAD sha** | prepended each pass |
-| [`agents/trending.md`](agents/trending.md) | What is new per window · **`939` `##` sections** | 🟢 **append-only** |
-| [`repos/foundations.md`](repos/foundations.md) | Foundational repos · 🔴 **`0` added this pass, and the scope statement that says why** | prepended each pass |
-| [`repos/trending.md`](repos/trending.md) | Repo movement per window · **`937` `##` sections** · 🔴 the channel census | 🟢 **append-only** |
-| [`verticals/solutions.md`](verticals/solutions.md) | LMS, SIS, assessment and interop platforms · 🟡 **the Moodle Partner route, as far as the public record goes** | prepended each pass |
+| [`agents/top.md`](agents/top.md) | `143` addresses · 🟢 **`6` added** · 🔴 **licence CLASSIFIED, not byte-verified (no clone channel this pass)** · the `T950` fork/redirect resolution | prepended each pass |
+| [`agents/trending.md`](agents/trending.md) | What is new per window · **`941` `##` sections** | 🟢 **append-only** |
+| [`repos/foundations.md`](repos/foundations.md) | Foundational repos · 🟢 **`4` added** (`pykt-toolkit` · `agent-framework` · `autogen`-as-REFUSED · `tsugi`) · 🔴 **`litellm`'s MIT grant WITHDRAWN** (`T951`) | prepended each pass |
+| [`repos/trending.md`](repos/trending.md) | Repo movement per window · **`939` `##` sections** · 🔴 the channel census | 🟢 **append-only** |
+| [`verticals/solutions.md`](verticals/solutions.md) | LMS, SIS, assessment and interop platforms · 🟢 **the agent→LMS WRITE path and its three controls** (`blend-ed/openedx-mcp`) · Moodle `5.3` LTS core AI usage reporting | prepended each pass |
 | [`intel/market.md`](intel/market.md) | Market range and **Opportunities by region** (`5` subsections) | rewritten each pass |
-| [`intel/trends.md`](intel/trends.md) | `T935`–`T941` | prepended each pass |
-| [`compose/patterns.md`](compose/patterns.md) | `P798-1`–`P798-4` — LATAM localisation · the `571`-byte content boundary · an education-MCP gate · EMEA Art. `50`-first | prepended each pass |
-| [`intel/open-gaps.md`](intel/open-gaps.md) | Action ledger · `p797` disposition + `p799` queue | 🟢 **append-only** |
+| [`intel/trends.md`](intel/trends.md) | `T950`–`T953` | prepended each pass |
+| [`compose/patterns.md`](compose/patterns.md) | `P800-1`–`P800-3` — institution-issued agent authority · a mastery measurement layer that survives an audit · rubric grading where the licence risk is in the CORPUS | prepended each pass |
+| [`intel/open-gaps.md`](intel/open-gaps.md) | Action ledger · 🟢 **`Gap 253` CLOSED** + the `p800-A`/`B`/`C` queue | 🟢 **append-only** |
 | [`intel/licence-requests/`](intel/licence-requests/) | 🟢 **`9` drafts + the `3`-test SELECTION RULE** (`ACTION p797-E`) | 🔴 drafted, NOT sent |
 | [`ingest/p798-latam-grant-census.sh`](ingest/p798-latam-grant-census.sh) | 🟢 The in-language census, ONLINE | — |
 | [`ingest/p798-grant-byte-verify.sh`](ingest/p798-grant-byte-verify.sh) | 🟢 The blobless-clone grant byte channel, ONLINE | — |
-| `evidence/*2026-11-12-p798*` | The six machine outputs behind this pass, 🔴 **including one UNCORRECTED first run** | — |
+| `evidence/*2026-11-12-p800*` | 🟢 **The three machine outputs behind this pass**, including the channel NEGATIVE CONTROL | — |
+| `evidence/*2026-11-12-p798*` | The six machine outputs behind `p798`, 🔴 **including one UNCORRECTED first run** | — |
 
 🔴 **One artefact published deliberately in its WRONG form, so the correction can be re-derived
 rather than taken on trust:**
@@ -131,6 +165,9 @@ instrument called `repos/{owner}/{repo}` per address and that call is refused in
 | Claim type | Status |
 |---|---|
 | Repository existence | 🟢 **Byte-verified on the blobless-clone channel: `25` addresses this pass, `0` failures.** 🔴 **`curl -sI` — the method the scheduler's prompt names — returns `403` for a live address AND for an invented one, so it cannot distinguish them here (`T923`).** 🔵 Read that instruction as *"verify existence"* and satisfy it with the clone |
+| 🆕 🟢 **Rendered `github.com` HTML page** | 🟢 **The channel THIS pass ran on, and it is controlled: `200` with stars, licence classification, release and `forked from` for a live address; `404` for an invented one** (`T952`, [`html-channel-control`](evidence/html-channel-control.2026-11-12-p800.tsv)). 🔴 **It yields NO grant bytes, NO blob shas and NO dependency trees, and stars only as RENDERED (`58.6k`, not `58,622`). A discovery and triage channel — never a channel of record for a grant** |
+| 🆕 🔴 **Fork and rename state** | 🔴 **Read the `forked from` notice BEFORE writing a row.** `p800` found `5` forks among `34` addresses (`15%`), `3` standing in for a materially larger canonical, and a `0`-star fork of `tutor-mcp` carrying a BYTE-IDENTICAL description to the `102`-star canonical (`T950`). 🟢 **An address absent from `search/repositories` but alive on clone is a FORK or a RENAME before it is anything else** |
+| 🆕 🔴 **A settled fact that never reached a shelf** | 🔴 **`p606-K` settled `openedx/openedx-platform`; two shelves still write `openedx/edx-platform` with grant bytes attached to the stale slug.** 🟢 **`ACTION p800-A`: diff this ledger's oldest settled address facts against every shelf that writes them** |
 | 🆕 **Per-repository metadata** | 🔴 **`gh api repos/{owner}/{repo}` and `gh api users/{login}` are REFUSED in this session; `gh api search/*` answers normally** (`T941`). 🔴 **A refused call returns a JSON body, and a JSON body is a string that fits in any TSV cell** — assert the shape of a cell before publishing it |
 | Licence **grant** | 🟢 **Byte-verified by title line + clause text + byte size, with blob sha and HEAD commit sha beside every value.** 🔴 **The unit is the GRANT, not the file and not the repository** |
 | 🆕 **Licence SCREENING** | 🔴 **`p795-A`'s byte-size band measures the length of the copyright holder's name: `4` byte-identical MIT payloads span `1,062`–`1,096 B` and `3` are flagged** (`T938`). 🟢 **Use [`p135`](compose/code/p135-licence-sha-identity/)'s copyright-stripped normalisation instead** |

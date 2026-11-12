@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p800` — `P800-1` … `P800-3`
+
+🔵 **Each pattern names the repositories, the grant under which each may be used, and the wiring.** 🔴 **Every grant below is a GitHub sidebar CLASSIFICATION or a README assertion, not a byte-verified payload** — the clone channel was unavailable this pass (`T952`). 🔴 **Before any of these ships, re-read the grants on the clone channel.** 🔴 **`P800-1` supersedes nothing, but it REPLACES the detection framing that any assessment-integrity conversation defaults to, because `T953` shows the LMS cannot tell an agent from a student and its vendor has declined to try.**
+
+## `P800-1` — Institution-issued agent authority for an LMS (NA 🇺🇸 · Global)
+**The problem it solves:** a client wants agents to do registrarial and course work in their LMS, and their actual exposure is the opposite case — student-side agents already inside sessions the platform cannot distinguish from a human.
+
+**Components**
+- 🔴 [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) — **AGPL-3.0** · `3★` · **as a REFERENCE DESIGN, not a dependency.** It is the only education MCP server in this base that writes: `27` LMS tools + `8` CMS tools against Open edX **Ulmo**, Django app + Tutor plugin, LMS at `^api/mcp/`, CMS at `^api/mcp/cms/`, streamable-http with an `X-MCP-Key` bearer token.
+- 🟢 [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) — **Apache-2.0** · `377★` — the LTI seam, so the agent host enters Moodle/Canvas/Sakai/Open edX **without linking their copyleft core**.
+- 🟢 [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) — **MIT** · `14.7k★` — the orchestration host. 🔵 **Chosen over a Python-only framework specifically because it ships .NET**, and university and ministry IT estates that refuse a Python agent host will run .NET.
+- 🟢 [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) — **MIT** · `44.9k★` — where the engagement is already Python; its durable state and human-review interrupts map directly onto the confirm-token step below.
+
+**The wiring — and the three controls are the deliverable, not the tools**
+1. **Re-implement, do not deploy.** AGPL-3.0 on a server-side plugin reaches your modifications and network delivery is the trigger. 🟢 **Lift the DESIGN: three controls, re-implemented under your own grant.**
+2. **Scope-gate every tool.** `read` · `write:courses` · `destructive`, exactly as the reference partitions them. A token issued for `read` cannot reach `deactivate_user`.
+3. **Confirm-token the high-impact calls.** `deactivate_user`, `request_retirement`, `invalidate_certificate`, `bulk_enroll` are **registrarial** — an agent calling them is exercising institutional authority, not assisting a learner. 🟢 **Two-step: the agent proposes and receives a token; a NAMED human redeems it.** This is `LangGraph`'s interrupt or `Agent Framework`'s handoff, not new machinery.
+4. **Append-only audit table, rate limits on writes.** Every write lands with actor, scope, token and timestamp.
+5. **Terminate agent identity at the institution.** Agents get their own issued credentials; **no agent ever wears a student's session.**
+
+**Why it sells:** 🟢 scope-gating, confirm tokens and an audit trail are the three things a university or ministry procurement asks for, and `T953` gives the client a reason they cannot defer — **their LMS vendor has stated it will not block student-side agents, and UI-driving agents cannot be detected server-side.** 🟢 **Pair it with assessment-design work rather than a detection tool**, which is also defensible on the record: detection tools are reported as unreliable and as risking false accusations.
+**Effort:** `8`–`10` weeks for the authority layer against one LMS; `+4` weeks per additional LMS through the LTI seam.
+🔴 **Open risk, ninth pass (`p792-D`): no independent security or data-governance evaluation of any education MCP server exists.** Budget the review; do not assume the reference design was audited.
+
+## `P800-2` — A mastery measurement layer that survives an audit (Global · EMEA 🇪🇺)
+**The problem it solves:** every education proposal claims improved learning, and almost none can produce a number a third party can re-derive. 🔵 **This is the pattern that makes `AI proposes, a human decides, the system PROVES it` into something shippable** — the base has had the slogan since `p79x` and no measurement row until now.
+
+**Components**
+- 🟢 [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) — **MIT** · `461★` — PyTorch knowledge tracing with standardised preprocessing of the standard datasets and the commonly compared DL models. 🟢 **The point is REPRODUCIBILITY: a published model on a public dataset, so the client's own analysts can re-run the claim.** 🔴 No tagged releases — pin a commit.
+- 🟢 [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) — **MIT** · `279★` — Bayesian Knowledge Tracing in a deployable React tutor, static-site deployable with optional logging and LTI. 🟢 **`p799` audited its dependency tree CLEAN** — the one row in this base with no copyleft contamination.
+- 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) — **MIT** · `175★` — local-first learner-facing surface: material → notes, quizzes, flashcards, adaptive tutor; `10`+ providers, spaced repetition, knowledge graph. 🔵 **Use THIS address, not the `0★` fork this base carried (`T950`).**
+- 🟢 [`ollama/ollama`](https://github.com/ollama/ollama) — **MIT** · `186.8k★` — inference inside the jurisdiction.
+- 🟢 [`qdrant/qdrant`](https://github.com/qdrant/qdrant) — **Apache-2.0** · `35.5k★` — grounding store.
+
+**The wiring**
+1. `OATutor` or `OpenTutor` is the learner surface; every interaction emits a `(learner, skill, item, correct, timestamp)` event. **Define the skill model BEFORE any content is authored** — retrofitting one is the reason most of these projects cannot produce a number.
+2. `pyKT` consumes the event stream offline and fits the knowledge-tracing model. 🟢 **Report against a PUBLISHED dataset as a baseline alongside the client's own cohort**, so the method is separable from the data.
+3. `OATutor`'s BKT drives live mastery decisions; `pyKT` is the audit and the model-selection channel. 🔵 **Two models on purpose: the fast one acts, the rigorous one is accountable.**
+4. Grounding in `Qdrant`, inference via `Ollama` — 🟢 **so an EMEA deployment keeps learner data in-jurisdiction and needs no DPIA for a third-party model.**
+5. **Evidence out:** per-skill mastery curves and the pinned model commit. 🟢 **Under EU AI Act Annex III, learning-outcome evaluation is high-risk from `2027-12-02` — a reproducible mastery model is the technical-documentation artefact that obligation will ask for**, built before the deadline rather than after.
+
+**Why it sells:** 🟢 it is the only pattern here whose output a regulator, an accreditor and a CFO all read the same way. 🔵 **And it inverts the APAC critique this base carries** — adaptive-tutoring products optimising standardised-test performance — by measuring *mastery* against a published model instead of test deltas.
+**Effort:** `6`–`8` weeks for the measurement layer over an existing tutor; `10`–`12` weeks greenfield including the skill model.
+
+## `P800-3` — Rubric grading where the licence risk is in the CORPUS (Global)
+**The problem it solves:** a client wants automated scoring of written work with feedback, and the licence review looks at the repositories and misses the thing that actually blocks commercial use.
+
+**Components**
+- 🟡 [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) (ArguLens) — **Apache-2.0** · `2★` — discourse-move classifier + LightGBM scorer + LLM feedback generator, Gradio UI, reported mean QWK `0.813` cross-validated, runs locally. 🔴 **`2★` research code: read it as a METHOD, not a dependency.**
+- 🟢 [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) — **BSD-3-Clause** · `1.4k★` — 🟢 **`p799` audited it CLEAN, and it already anchors `P788-1`** — the human-in-the-loop grading spine.
+- 🟢 [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) (**MIT**) or [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) (**MIT**) — review-queue orchestration with a human gate.
+- 🟢 [`ollama/ollama`](https://github.com/ollama/ollama) — **MIT** — local inference, so student writing never leaves the institution.
+
+**The wiring**
+1. 🔴 **Resolve the corpus question FIRST, before any engineering.** `AI_AWE` is Apache-2.0 and its base models are Apache-2.0 on Hugging Face, 🔴 **but PERSUADE 2.0, the training data, is NON-COMMERCIAL.** 🟢 **A permissive repository can be commercially unusable because of its DATA** — a class this base's licence work had not met. **Either licence the corpus, or train on client-owned work under a data agreement, or do not ship the trained artefact.**
+2. Take the ARCHITECTURE regardless, because it is the part that survives: a **discourse-feature classifier + a transparent scorer (LightGBM) + an LLM confined to FEEDBACK TEXT**. 🟢 **The score is produced by an auditable model and the generative component never decides the grade** — which is what every regulator in this base and the OECD `2026` reading require.
+3. `nbgrader` holds rubric, submissions and the human override; nothing reaches a transcript without a named human releasing it.
+4. 🔴 **Report QWK on the client's own double-marked sample.** `0.813` is the paper's cross-validated figure, 🔴 **and its authors note human-rater comparison is still future work.** Do not quote it as a client-facing accuracy claim.
+5. `Ollama` for feedback generation in-jurisdiction.
+
+**Why it sells:** 🟢 it is the pattern that passes a legal review for the reason nobody expects — the engagement arrives already knowing that the corpus, not the code, is the blocker — and the architecture puts a transparent model on the decision and the LLM only on the prose.
+**Effort:** `6`–`8` weeks on an existing rubric and a client-owned corpus; 🔴 **add the corpus-licensing timeline, which is legal and not engineering, and has in this sector been the longer of the two.**
+
 ## 🆕 `p799` — `P799-1` … `P799-4`
 
 🔵 **Each pattern names the repositories, the grant under which each may be used, and the wiring.** 🔴 **`P799-2` REPLACES the LATAM-governance framing every pass since `p795` has carried, because `T949` measured the rate against a global control and it does not survive.**

@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p800` — **`Gap 253` is CLOSED with a mechanism, and it was declared `134` passes ago. 🔴 Two of this pass's four findings are facts this base already held in its ledger and never propagated to its shelves.**
+
+🟢 Machine output: [`search-absence-mechanism`](../evidence/search-absence-mechanism.2026-11-12-p800.tsv) · [`html-channel-control`](../evidence/html-channel-control.2026-11-12-p800.tsv) · [`cross-channel-remeasure`](../evidence/cross-channel-remeasure.2026-11-12-p800.tsv).
+
+### 🟢 `Gap 253` — CLOSED
+
+| | |
+|---|---|
+| Declared | **`2026-11-05`**, `p666`, `agents/trending.md` · `666-I` |
+| The gap, as declared | *"`gh api search/repositories -f q='repo:OWNER/NAME'` returns `total_count = 0` for repositories that resolve under `git ls-remote --symref`"* |
+| Carried as | 🔴 **A live hazard rather than a measurement gap**, and reproduced by `p799` on `6` of `170` addresses |
+| 🟢 **Disposition** | 🟢 **CLOSED — `T950`. Two mechanisms, both documented channel behaviour, `6` of `6` addresses accounted for: `4` FORKS (`search/repositories` omits forks unless `fork:true`) and `2` RENAME REDIRECTS (it indexes the CURRENT slug only; a clone follows the redirect, a search does not).** |
+| 🟢 Remedy, and its cost | 🟢 **One field on the rendered page (`forked from`) plus one slug comparison. Two probes per anomalous address, no instrument to build.** The rule: *an address absent from search but alive on clone is a FORK or a RENAME before it is anything else.* |
+| 🔴 What closing it COST this base | 🔴 **Four shelf addresses point at forks, three of them at the less significant repository** (`0★` for `175★`, `4★` for `547★`, `0★` two hops from root) |
+
+### 🔴 `p800-A` — the propagation gap, and it is the pass's uncomfortable finding
+
+🔴 **Two of this pass's four findings were already known to this base and had not reached its shelves.** `Gap 253` sat open for `134` passes while `p799` re-derived its symptom. 🔴 **`p606-K` SETTLED that the Open edX canonical address is [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform), and both [`repos/foundations.md`](../repos/foundations.md) and [`verticals/solutions.md`](../verticals/solutions.md) still write `openedx/edx-platform` today, with byte-verified grants attached to the stale slug.**
+
+🔵 **The pattern is one thing, not two: this base's ledgers advance faster than its shelves, so a settled fact can be true in `intel/` and wrong in `agents/` at the same time.** 🟢 **ACTION `p800-A`, for `p801`: pick the `5` oldest settled address facts in this ledger and diff each against every shelf that writes that address.** 🔵 **Cost is `5` greps. A settled fact that never reaches the shelf is a fact this base does not hold.**
+
+### 🔴 `p800-B` — `litellm`'s grant, and it is inside the Open edX AI path
+
+🔴 **`T951`: [`BerriAI/litellm`](https://github.com/BerriAI/litellm) (`63.2k★`) displays NO sidebar licence, and a separate *LiteLLM Commercial License* governs enterprise features. This base has carried it as MIT.** 🔴 **It is a declared dependency of [`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions).** 🟢 **Withdrawn rather than corrected** — this pass has no byte channel.
+
+🟢 **ACTION `p800-B`, for `p801`, on the clone channel:** read `LICENSE` at HEAD, size it, hash the clause, and establish **whether the OSS and commercial grants partition by DIRECTORY or by FEATURE FLAG.** 🔵 **The first is auditable at build time; the second is not, and only the second makes a gateway deployment a commercial-terms conversation.**
+
+### 🟡 `p800-C` — the channel generalisation, now measured
+
+🔴 **Five passes recorded GitHub as unreachable; that was true of `curl -sI` (`T923`) and `api.github.com` (seventh pass) and was generalised to the HOST.** 🟢 **`T952`: the rendered HTML page returns `200` with stars, licence classification, release and fork-state for a live address and `404` for an invented one — negative control published.** 🔴 **It yields no grant bytes, no blob shas, no dependency trees, and stars only as RENDERED.**
+
+🟢 **ACTION `p800-C`, standing:** when a host refuses, **enumerate its transports and probe each separately, with a negative control.** 🔴 **A channel that answers everything is worth exactly what a channel that refuses everything is worth** — `T923` proved the second half, `T952` the first.
+
+### 🔴 Carried, unchanged
+
+🔴 **`p792-D`, NINTH pass: no independent security or data-governance evaluation of any education MCP server exists** — and the set now includes [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp), whose `27` LMS tools reach `deactivate_user`, `request_retirement`, `invalidate_certificate` and `bulk_enroll`. 🔵 **Registrarial reach raises the cost of this gap; it does not change the remedy.**
+
+🔴 **`T906` (ten government domains refuse at `CONNECT`) and the code-execution limit (`p797-H`) both hold — and `openedx.org` joins the refusing set this pass**, so the Open edX MCP announcement was read through secondary channels and the repository itself, never the vendor blog. 🔴 **Brazil's `PL 2338/2023` status conflicts across sources and `p800` does not resolve it.** 🔴 **`Gap 251` (Opetushallitus, `~167` unread repositories) and `Gap 252` (EUPL misclassification) remain OPEN and untouched this pass.**
+
 ## 🆕 `p799` — **Disposition of the `p798` queue, and the actions for `p800`. The headline is that `5` of `9` discharged, `2` of the `5` REFUTED the premise of the action that asked for them, and this pass's own instrument produced TEN defects — every one caught before publication, none shipped.**
 
 🟢 **`5` of `9` discharged (`p798-A` split, `p798-C` fully, `p798-D` as a refutation, `p798-E` as built-in gates, `p798-B` partially). `1` standing caution honoured and extended. `3` carried. `2` remain ESCALATED.** 🔴 **`10` defects in this pass's own instrument — `7` caught by its controls, `3` by the publication gates — `0` published.**

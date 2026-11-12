@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-12
 ---
 
+## `2026-11-12` · `p800` — **a channel this base had written off as dead is informative after all, and it is the one that closed `p799`'s absence anomaly**
+
+🟢 **Method, so the numbers can be re-derived:** rendered `github.com` HTML pages, read one address at a time. `34` addresses probed, `1` deliberate negative control, `0` transport failures. 🔴 **No `gh api` and no clone** — both refuse in this session. 🟢 Machine output: [`html-channel-control`](../evidence/html-channel-control.2026-11-12-p800.tsv) · [`search-absence-mechanism`](../evidence/search-absence-mechanism.2026-11-12-p800.tsv) · [`cross-channel-remeasure`](../evidence/cross-channel-remeasure.2026-11-12-p800.tsv).
+
+### 🟢 The channel census, with the control that makes it usable
+
+| Channel | Probe | Result | Carries information? |
+|---|---|---|---|
+| `curl -sI` live address | `github.com/moodle/moodle` | 🔴 `403` | 🔴 **No** (`T923`, carried) |
+| `curl -sI` invented address | `github.com/zzz-not-a-real-owner-p799/zzz-nope` | 🔴 `403` | 🔴 **No** — identical to live |
+| `gh api` / `api.github.com` | `GET /repos/HKUDS/DeepTutor` | 🔴 `403`, session scope is one repository | 🔴 **No**, **seventh pass** |
+| `git clone --filter=blob:none` | any `github.com` address | 🔴 Not attempted — same transport as `curl` | 🔴 **No grant BYTES this pass** |
+| 🟢 **HTML render** 🆕 | `github.com/HKUDS/DeepTutor` | 🟢 `200` — stars, licence, release, `forked from` | 🟢 **Yes** |
+| 🟢 **HTML render, NEGATIVE CONTROL** 🆕 | `github.com/zzz-not-a-real-owner-p800/zzz-nope-negative-control` | 🟢 **`404 Not Found`** | 🟢 **Yes — the control passes** |
+
+🔵 **Why this is worth a section rather than a footnote.** Five passes of this base have recorded GitHub as unreachable and reasoned around the gap. 🔴 **That was true of two transports and was generalised to the host.** The rendered page was never probed. 🟢 **The lesson is narrow and reusable: a refusal belongs to a TRANSPORT, not to a hostname. Probe each transport separately, and publish the negative control, because a channel that returns a page for everything is worth exactly as much as one that returns `403` for everything.**
+
+🔴 **What the channel still cannot do, stated so no later pass over-reads these rows:** no grant bytes, no blob shas, no dependency enumeration, no `license: none` from a classifier API, and star counts only as RENDERED (`58.6k`, not `58,622`). 🟢 **It is a discovery and triage channel. The clone channel remains the channel of record for grants.**
+
+### 🔴 `4` forks and `2` redirects — the whole of `p799`'s anomaly, mechanised
+
+`p799` left `6` of `170` addresses unexplained: absent from `search/repositories`, yet cloning and serving refs. 🟢 **All six resolve, and both mechanisms are documented behaviour rather than defects** — `search/repositories` omits forks unless asked for them, and indexes only a repository's CURRENT slug.
+
+🔴 **`DaRL-GenAI/instructional_agents` → `Hyan-Yao/instructional_agents`** (`492★` fork over a `22★` upstream — the one **inversion**) · 🔴 **`cosark/OpenTutor` → `zijinz456/OpenTutor`** (`0★` over `175★`) · 🔴 **`foradian/fedena` → `projectfedena/fedena`** (`4★` over `547★`) · 🔴 **`NikolasSchaeffner/lehrer-agent` → `lucaotten-debug/…` → `lehrer-tools/lehrer-agent`** (chain of depth `2`) · 🟡 **`csev/tsugi` → `tsugiproject/tsugi`** (rename) · 🟡 **`openedx/edx-platform` → `openedx/openedx-platform`** (rename).
+
+🟢 **Intake rule published rather than another screen:** an address that is absent from search but alive on clone is a **fork or a rename** before it is anything else. Two cheap probes settle it, and both are one field on the rendered page.
+
+### 🟡 Movement worth recording this window
+
+- 🟢 [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — `43.4k★`, MIT, **`v1.5.0-rc.2` on `2026-11-12`**, `v1.4.2` on `2026-11-09`. 🔵 A release candidate three days after a patch release: this is a daily-cadence project at `43k` stars.
+- 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) — `58.6k★`, Apache-2.0, `v1.7.2` (`2026.11.6`). Unmoved at `#1`.
+- 🔴 [`microsoft/autogen`](https://github.com/microsoft/autogen) — `61.8k★` and **ARCHIVED**. 🔵 The largest archived repository adjacent to this sector; successor is [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) (MIT, `14.7k★`).
+- 🔴 [`satvik314/educhain`](https://github.com/satvik314/educhain) — `388★`, MIT, **latest version `v0.3.13`, October 2024**. Two years unreleased.
+- 🔴 [`BerriAI/litellm`](https://github.com/BerriAI/litellm) — `63.2k★`, **no sidebar licence**, separate commercial licence for enterprise features (`T951`).
+
+### 🔴 Declared gaps
+
+🔴 **No grant bytes this pass, so no row's licence was *verified* — only classified.** 🔴 **No new LATAM or APAC-origin discovery legs were run:** the pass spent its probe budget resolving `p799`'s anomaly, and the regional supply picture is `p799`'s. 🔴 **`p792-D` still unclaimed** — no independent security or data-governance evaluation of any education MCP server, now including `blend-ed/openedx-mcp`.
+
 ## `2026-11-12` · `p799` — **every channel this base depends on was re-probed from a fresh session, and all five limits reproduce exactly. 🔴 The execution limit is now in its SIXTH pass.**
 
 🟢 **Method, so the numbers can be re-derived:** `gh api search/repositories` with a `repo:` qualifier for metadata; blobless clone (`--filter=blob:none --no-checkout --depth 1`) for grant bytes, tree enumeration and HEAD shas; `17` addresses probed, `0` clone failures, `1` deliberate negative control. 🟢 Machine output: [`channel-reprobe`](../evidence/channel-reprobe.2026-11-12-p799.tsv) · [`payload-region-provenance`](../evidence/payload-region-provenance.2026-11-12-p799.tsv). 🟢 Instrument committed: [`ingest/p799-payload-region-probe.sh`](../ingest/p799-payload-region-probe.sh).

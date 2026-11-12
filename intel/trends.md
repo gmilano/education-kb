@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p800` — **`T950`–`T953`. 🟢 One open anomaly closed with a mechanism rather than a screen, one carried grant withdrawn, and one refusal this base had generalised from a transport to a whole host — wrongly, for five passes.**
+
+🟢 Machine output: [`search-absence-mechanism`](../evidence/search-absence-mechanism.2026-11-12-p800.tsv) · [`html-channel-control`](../evidence/html-channel-control.2026-11-12-p800.tsv) · [`cross-channel-remeasure`](../evidence/cross-channel-remeasure.2026-11-12-p800.tsv).
+
+### 🟢 `T950` — an address absent from search but alive on clone is a FORK or a RENAME before it is anything else
+
+`p799` recorded `6` of `170` addresses with that exact signature and left the cause open. 🟢 **All six resolve to documented channel behaviour: `4` forks and `2` rename redirects.** `search/repositories` omits forks unless `fork:true` is requested, and indexes a repository only under its CURRENT slug — a clone follows the HTTP redirect, a search does not.
+
+🔴 **The consequence is not bookkeeping.** Four of this base's shelf addresses were pointing at forks, and three of those forks are the LESS significant repository: `0★` standing in for `175★` ([`cosark/OpenTutor`](https://github.com/cosark/OpenTutor) → [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor)), `4★` for `547★` ([`foradian/fedena`](https://github.com/foradian/fedena) → [`projectfedena/fedena`](https://github.com/projectfedena/fedena)), `0★` two hops from its root ([`NikolasSchaeffner/lehrer-agent`](https://github.com/NikolasSchaeffner/lehrer-agent) → `lucaotten-debug/…` → [`lehrer-tools/lehrer-agent`](https://github.com/lehrer-tools/lehrer-agent)).
+
+🔵 **And one INVERTS, which is why the rule cannot be "always prefer the upstream".** [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) holds `492★` against its upstream [`Hyan-Yao/instructional_agents`](https://github.com/Hyan-Yao/instructional_agents) at `22★`, because the EACL-`2026` paper points at the lab's fork. 🟢 **The rule: the fork holds the traction, the upstream holds the provenance. Record BOTH addresses on the row, and never silently substitute one.**
+
+🔴 **Worse honestly than before:** moving `fedena` to its canonical moves it from *"small fork"* to **ungranted** — `projectfedena/fedena` shows no sidebar licence at all, with Apache-2.0 asserted in its README alone. 🟢 **A correction that makes a row look worse is still a correction.**
+
+### 🔴 `T951` — `litellm` displays no grant, and it is inside the Open edX AI path
+
+[`BerriAI/litellm`](https://github.com/BerriAI/litellm) (`63.2k★`) **shows no licence in its sidebar**, and a separate *LiteLLM Commercial License* governs enterprise features. 🔴 **This base has carried it as MIT.** 🔴 **It is a declared dependency of [`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions)**, so the most load-bearing piece of plumbing in the Open edX AI path is the one whose grant cannot currently be asserted.
+
+🟢 **Withdrawn, not corrected.** Asserting MIT from an empty sidebar is precisely the inference this base exists to refuse. 🔵 **The open question for the clone channel is whether the OSS and commercial grants partition by DIRECTORY or by FEATURE FLAG** — the first is auditable at build time, the second is not, and only the second makes a gateway deployment a commercial-terms conversation.
+
+### 🟢 `T952` — a refusal belongs to a TRANSPORT, not to a hostname
+
+🔴 **Five passes of this base recorded GitHub as unreachable and reasoned around the gap.** 🟢 **That was true of two transports — `curl -sI` returns `403` for live and invented addresses alike (`T923`), and `api.github.com` refuses everything outside one repository (seventh pass) — and it was generalised to the host. The rendered HTML page was never probed.** It returns `200` with stars, licence classification, release and `forked from` for a live address, and 🟢 **`404` for an invented one**, which is the negative control that makes it usable at all.
+
+🔵 **The generalisation was the error, and it is a cheap class to defeat: enumerate the transports, probe each one, publish the control.** 🔴 **A channel that returns a page for everything is worth exactly as much as one that returns `403` for everything** — `T923` is the proof of the first half and this pass is the proof of the second.
+
+🔴 **What the new channel does NOT do, so it is not over-claimed:** no grant bytes, no blob shas, no dependency enumeration, and stars only as RENDERED (`58.6k`, not `58,622`). 🟢 **It is a discovery and triage channel; the clone channel remains the channel of record for grants.** 🟢 **What it bought immediately: independent confirmation of `p799`'s headline numbers** — `DeepTutor` `58.6k`/`58,622`, `OpenMAIC` `43.4k`/`43,392`, `ollama` `186.8k`/`186,787`, `moodle` `7.6k`/`7,607`, `tutor-mcp` `102`/`102`. 🔵 **Two channels now stand behind the top of this base, which is the first time that has been true.**
+
+### 🔴 `T953` — the LMS cannot distinguish an agent from a student, and the vendor has declined to try
+
+🔴 **Instructure marked a community request to block AI agents logging in on behalf of students `Will not consider`.** 🔴 **Detection is not a fallback: agents of this class drive the Canvas USER INTERFACE through cloud browser automation rather than the REST API**, which, on Instructure engineers' own forum account, makes server-side detection near-impossible. 🟡 Institutions are responding at the endpoint instead (SMU: OpenClaw *"not approved for use on university-owned or managed devices at this time"*).
+
+🔵 **Recorded as unverified rather than dropped:** a widely circulated account of a Canvas-completing student agent being forced offline at a named university did **not** corroborate on direct search. 🔴 **The vendor position and the detection asymmetry corroborate; the incident does not. Do not carry the incident into a client deck.**
+
+🟢 **Why this is a trend and not an anecdote: it settles an architectural question this base has been circling.** There are exactly two agent↔LMS topologies, and they are opposites. 🟢 **Institution-issued authority** — scoped, confirm-token-gated, audit-logged, as in [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) (`27` LMS + `8` CMS tools, AGPL-3.0, `3★`) — versus 🔴 **an unauthenticated agent inside a student's session that the platform cannot see.** 🟢 **The second is not blockable by the LMS, which means assessment integrity is an assessment-DESIGN engagement and not a detection-tool purchase** — and detection tools are separately reported as unreliable and as risking false accusations, which is a procurement liability worth showing a client.
+
+### 🟡 Carried trends, re-measured
+
+- 🔴 **`microsoft/autogen` is ARCHIVED at `61.8k★`** (MIT code, CC-BY-4.0 docs), with Microsoft directing new work to [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) (MIT, `14.7k★`, .NET + Python). 🔵 **AutoGen is still named as a top education agent across indexed roundups and in this project's own earlier generations — the most citable dead dependency in the sector, and it will keep appearing for a year.**
+- 🔴 **[`satvik314/educhain`](https://github.com/satvik314/educhain) has not released since `v0.3.13`, October 2024**, at `388★` MIT.
+- 🟢 **Release cadence at the top is days, not weeks:** `OpenMAIC` cut `v1.5.0-rc.2` on `2026-11-12`, three days after `v1.4.2`; `DeepTutor` is at `v1.7.2` (`2026.11.6`).
+- 🟢 **Core-LMS AI is becoming reportable rather than merely present:** Moodle `5.3` LTS (`2026-10-05`) adds Claude as a core provider **and course-level AI usage reporting**, supported to October `2027`/`2029`. 🔵 **Usage reporting is the compliance artefact every regulator in this base implicitly demands.**
+- 🔴 **The corpus, not the code, is where grading licences fail:** [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) is Apache-2.0 with base models Apache-2.0 on Hugging Face, 🔴 **but PERSUADE 2.0, its training data, is NON-COMMERCIAL.** 🟢 **A new class for this base's licence work: a permissive repository can still be unusable commercially because of its DATA.**
+
+### 🔴 Declared gaps
+
+🔴 **No grant bytes this pass** — every licence is a sidebar classification or a README assertion, both weaker than bytes, and `T937` has already shown the two can diverge. 🔴 **No new LATAM or APAC-origin discovery legs** — the probe budget went to closing `T950`. 🔴 **`p792-D` unclaimed, ninth pass:** no independent security or data-governance evaluation of any education MCP server exists, and the set now includes one with registrarial reach (`deactivate_user`, `request_retirement`, `invalidate_certificate`, `bulk_enroll`). 🔴 **Brazil's `PL 2338/2023` status is genuinely conflicting across sources and `p800` does not resolve it.**
+
 ## 🆕 `p799` — **Ten instrument defects in one pass, every one caught before publication and none shipped. 🔴 Five of the ten are ONE class this base has now met four times: a region or licence token that is a SUBSTRING of ordinary text. 🟢 The class is cheap to defeat and expensive to miss, and `p799` publishes the rule rather than another screen.**
 
 🟢 Machine output: [`instrument-defect-cycles`](../evidence/instrument-defect-cycles.2026-11-12-p799.tsv) · [`mit-clause-identity-population`](../evidence/mit-clause-identity-population.2026-11-12-p799.tsv) · [`channel-reprobe`](../evidence/channel-reprobe.2026-11-12-p799.tsv).

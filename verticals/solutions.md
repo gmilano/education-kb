@@ -4,6 +4,59 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p800` — **The agent→LMS WRITE path exists, it is `3` stars and AGPL-3.0, and its design is the deliverable. 🟢 `p800` names the pattern: INSTITUTION-ISSUED AGENT AUTHORITY — and the alternative, a browser agent wearing a student's session, is what the LMS vendor has declined to block.**
+
+🟢 Machine output: [`cross-channel-remeasure`](../evidence/cross-channel-remeasure.2026-11-12-p800.tsv) · [`search-absence-mechanism`](../evidence/search-absence-mechanism.2026-11-12-p800.tsv).
+
+### 🟢 `blend-ed/openedx-mcp` — the first education MCP server on this shelf that WRITES, and the control surface is why it is here
+
+| Measure | Result |
+|---|---|
+| Address | [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) |
+| Licence (sidebar) | 🔴 **AGPL-3.0** |
+| ★ | 🔴 **`3`** |
+| Target release | 🟢 **Open edX `Ulmo`** |
+| Shape | Django app + Tutor plugin; LMS at `^api/mcp/`, CMS at `^api/mcp/cms/`; streamable-http client, `X-MCP-Key` bearer token |
+| LMS tools | 🟢 **~`27`** — `whoami`, `audit_log`, `analytics_overview`, `list_courses`, `course_detail`, `list_users`, `user_roles`, `course_team`, `user_grade`, `set_role`, `instructor_access`, `enroll`, `unenroll`, `bulk_enroll`, `create_user`, `reset_student_attempts`, `deactivate_user`, `generate_certificate`, `regenerate_certificates`, `invalidate_certificate`, `list_course_certificates`, `user_certificates`, `submit_report`, `report_tasks`, `report_downloads`, `retirement_status`, `request_retirement` |
+| CMS tools | 🟢 **`8`** — `read_course_outline`, `read_course_settings`, `create_block`, `create_block_tree`, `update_block`, `publish_block`, `delete_block`, `update_course_settings` |
+| Controls | 🟢 **Scopes (`read`, `write:courses`, `destructive`) gate every tool; write operations rate-limited; confirm tokens on high-impact actions; all writes logged to an audit table** |
+
+🔴 **`3` stars and AGPL-3.0 means this is a REFERENCE DESIGN, not a dependency.** AGPL on a server-side Django plugin reaches any modification an engagement makes to it and delivers over a network — which is the trigger. 🟢 **But the control surface is the reusable asset, and it is not a research sketch: scope-gating, confirm tokens on destructive calls, and an append-only audit table are exactly the three things a ministry or university procurement will ask for, and no earlier row in this base has all three.**
+
+🔵 **The architectural point, and it is the one to carry into an engagement:** `deactivate_user`, `request_retirement`, `invalidate_certificate` and `bulk_enroll` are **registrarial** actions. An agent that can call them is operating institutional authority, not assisting a learner. 🟢 **The boundary that makes that safe is the one this repository draws — authority issued BY the institution, scoped, confirmed and logged — and the engagement decision is whether to re-implement it under a permissive grant or to deploy this and accept AGPL.**
+
+### 🔴 The alternative is already deployed, and the LMS vendor has declined to block it
+
+🔴 **Instructure marked a community request to block AI agents logging in on behalf of students `Will not consider`.** 🔴 **Detection is not a fallback either:** agents of this class drive the Canvas **UI** through cloud browser automation rather than the API, so server-side detection is near-impossible on Instructure engineers' own account. 🟡 Institutions are acting at the endpoint instead — SMU determined OpenClaw *"is not approved for use on university-owned or managed devices at this time."*
+
+🟢 **So the two paths are now both real and they are opposites.** An institution-issued, scoped, audited agent identity (`openedx-mcp`) versus an unauthenticated agent inside a student session that the platform cannot see. 🔵 **Every assessment-integrity, proctoring and LMS-integration proposal in this sector now has to say which one it is building, and the honest answer for a client is that the second is not blockable by the LMS and must be addressed in assessment DESIGN.**
+
+### 🟡 `openedx/openedx-ai-extensions` — the first-party-adjacent AI plugin, and it says experimental in its own README
+
+| Measure | Result |
+|---|---|
+| Address | [`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions) |
+| Licence | 🔴 **AGPL-3.0** · ★ `17` |
+| Readiness | 🔴 **Its README: *"this plugin is in active development and should not be used in production environments"*** |
+| What it does | Learning + Authoring MFE plugin slots, course-unit content extraction, summarisation, workflow-based AI processing, 🟢 **LiteLLM multi-provider (OpenAI, Anthropic, local models)**, observable workflows with Aspects event analytics, configuration-driven (no code changes) |
+| Demo profiles | flashcards, chat-with-summaries, function calling, streaming chat, educator assistant, mocked streaming |
+
+🔴 **Its LiteLLM dependency is the `T951` problem arriving inside the Open edX AI path:** LiteLLM displays no sidebar licence and has a separate commercial licence for enterprise features. 🟢 **The plugin's own configuration-driven, provider-agnostic design is the right shape** — a local model via Ollama satisfies an EMEA or minors deployment with no code change. 🔵 **Use it as the integration CONTRACT, build the implementation outside the AGPL boundary.**
+
+### 🟢 Moodle `5.3` LTS — Claude is now a first-party provider, and AI usage is reportable per course
+
+🟢 **Moodle `5.3` LTS released `2026-10-05`**; general fixes to October `2027`, security fixes to October `2029`. 🟢 **Two AI changes that matter commercially:** Anthropic Claude added as a **provider** in the core AI subsystem (generate, summarise, explain), and **course-level AI usage reporting** so a teacher can see how AI was used in their course.
+
+🔵 **Usage reporting is the sleeper feature.** Every regulator in this base — EU AI Act Art. `50`, Brazil's `Parecer CNE/CP nº 15/2026`, the US state frameworks — demands evidence of *how* AI was used, not a policy document saying it may be. 🟢 **Core Moodle now emits that evidence per course, which turns a compliance narrative into a report an institution can run.** 🔴 **Core remains deliberately narrow:** providers, capabilities, privacy and cost all need deliberate configuration, and adaptive learning paths still require custom development. 🔴 **GPL-3.0 core, so the agent layer stays outside it** — 🟢 the LTI seam via [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) (Apache-2.0) is the clean way in, and it is the canonical address for what this base wrote as `csev/tsugi`.
+
+### 🟡 Canonical addresses corrected on this shelf
+
+🔴 **`openedx/edx-platform` is a REDIRECT, and this shelf still writes it** — at the `Open edX` row below, grant bytes and all. The canonical is [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) (AGPL-3.0, `8.2k★`), 🔵 **settled by `p606-K` and never propagated here.** 🟢 `T950` gives the consequence: a renamed slug clones but is not indexed, which is why the metadata channel never returned it. 🔴 **`foradian/fedena` is a `4`-star FORK** of [`projectfedena/fedena`](https://github.com/projectfedena/fedena) (`547★`) — 🔴 **and the canonical has NO sidebar licence**, Apache-2.0 being asserted in its README alone. 🔵 **Moving to the canonical SIS address moves it from "small fork" to "ungranted", which is a worse position stated honestly.**
+
+🟢 **Re-measured and holding:** [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) `6.9k★` AGPL-3.0 · [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) `9.3k★` LGPL-3.0 (v`4.0`) · [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) `911★` LGPL-3.0 · [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) `155★` GPL-3.0 · [`moodle/moodle`](https://github.com/moodle/moodle) `7.6k★` GPL-3.0 · [`learningequality/kolibri`](https://github.com/learningequality/kolibri) `1.2k★` MIT.
+
+🔴 **The shape of this shelf is unchanged and is the single most consequential fact on it: the platform layer is copyleft — AGPL, GPL, LGPL — and every permissive thing lives at the integration seam or above it.**
+
 ## 🆕 `p799` — **A ministry's own curriculum, published as structured JSON by a teacher with no budget, is the most reusable vertical asset found this pass. 🟢 `p799` names the pattern: CURRICULUM-AS-DATA, and there are now two independent instances, one LATAM and one EMEA.**
 
 🟢 Machine output: [`payload-region-provenance`](../evidence/payload-region-provenance.2026-11-12-p799.tsv).

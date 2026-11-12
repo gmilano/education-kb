@@ -1,0 +1,8 @@
+channel	probe	result	discriminates_live_from_invented	consequence
+curl -sI github.com (T923, carried)	https://github.com/moodle/moodle	403 Forbidden	no	channel carries NO information in this session
+curl -sI github.com (T923, carried)	https://github.com/zzz-not-a-real-owner-p799/zzz-nope	403 Forbidden	no	identical to live address
+gh api / api.github.com	GET /repos/HKUDS/DeepTutor	403 - session GitHub scope is one repo only	not testable	metadata channel refused, SEVENTH pass
+git clone --filter=blob:none	any github.com address	not attempted - same transport as curl	unknown	no grant BYTES measurable this pass
+HTML render of github.com (p800, NEW)	https://github.com/HKUDS/DeepTutor	200 - stars, licence, release, fork-state all present	yes	informative
+HTML render of github.com (p800, NEW)	https://github.com/zijinz456/OpenTutor	200 - 175 stars, MIT, not a fork	yes	informative
+HTML render of github.com (p800, NEGATIVE CONTROL)	https://github.com/zzz-not-a-real-owner-p800/zzz-nope-negative-control	404 Not Found	yes	control passes - 404 for invented, 200 for live
