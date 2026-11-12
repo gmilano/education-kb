@@ -4,6 +4,44 @@ region: Global
 updated: 2026-11-12
 ---
 
+## `2026-11-12` · `p798` — **the in-language education-agent population has a ceiling of `5` stars, and that is the week's finding**
+
+🟢 **Window:** repositories pushed since `2026-06-01`, reached on `gh api search/repositories` across `10` in-language legs (`6` `es`, `4` `pt`) and `6` English control legs. 🟢 **`73` in-language addresses · `149` English addresses · `0` clone failures on the `15` byte-verified.**
+
+### 🔴 What moved, and what did not
+
+| Signal | Reading |
+|---|---|
+| 🔴 **No in-language education-agent repository above `5` stars** | `69` of `73` sit at zero. 🔵 **A new one appears almost daily and none accumulates anything** |
+| 🔴 **`78.1%` of in-language rows serve no licence** | 🟡 Against `60.4%` on the English control leg — a `1.29×` gap, not the categorical one `p797` reported from `5` rows |
+| 🟢 **`16` English-leg rows at `≥20` stars**, topping at `4,912` | 🔵 The adoption signal exists; it is only in English |
+| 🟢 **Education MCP servers are arriving from individuals** | [`jeffercbs/chispa-mcp`](https://github.com/jeffercbs/chispa-mcp) (MIT), `77` tools, teacher-permission scoped, pushed the day of this pass |
+| 🟢 **The teacher-gate is becoming a product feature** | [`falkenslab/miyagi`](https://github.com/falkenslab/miyagi) (MIT) leads with *"asks before anything reaches your students"*; [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) (MIT, ★`65`) with *"lessons you can review and edit"* |
+| 🟢 **Offline is a design target in-language and nowhere else** | [`Ignacio-Ghub/asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion) (GPL-3.0) — *sin conexión* is in the repository NAME. 🔴 Copyleft, boundary-only |
+
+### 🟢 New this window — byte-verified grants
+
+| Repo | Grant | ★ | Pushed | Note |
+|---|---|---|---|---|
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 🟢 MIT · `1,078 B` | `65` | `2026-09-19` | Local-first teaching assistant; starts from the teacher's existing material |
+| [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟢 Apache-2.0 · `11,386 B` | `34` | `2026-10-22` | Agentic-RAG tutor over a real course corpus, LangGraph + FastAPI |
+| [`ANFAIA/SkillNet`](https://github.com/ANFAIA/SkillNet) | 🟢 Apache-2.0 · `10,758 B` | `24` | `2026-10-15` | 🇪🇸 Material → courses + grounded tutors + adaptive interfaces |
+| [`Man0dya/Tutor-AI`](https://github.com/Man0dya/Tutor-AI) | 🟢 Apache-2.0 · `10,251 B` | `17` | `2026-10-20` | FastAPI + React full learning workflow; sound, undifferentiated |
+| [`XAIHT/Tlamatini`](https://github.com/XAIHT/Tlamatini) | 🟢 MIT · `1,062 B` | `15` | `2026-11-12` | 🔴 README asserts a do-not-remove author banner MIT does not grant (`T937`) |
+| [`hwl668/Scientific-learning-skills-`](https://github.com/hwl668/Scientific-learning-skills-) | 🟢 MIT · `1,096 B` | `15` | `2026-10-30` | Diagnosis-first study skills as agent skills |
+| [`falkenslab/miyagi`](https://github.com/falkenslab/miyagi) | 🟢 MIT · `1,078 B` | `0` | `2026-11-11` | 🇪🇸 Moodle-attached, asks before reaching a student |
+| [`jeffercbs/chispa-mcp`](https://github.com/jeffercbs/chispa-mcp) | 🟢 MIT · `1,066 B` | `0` | `2026-11-12` | `77`-tool classroom MCP at teacher permissions |
+| [`danielgalanv/oral-ia`](https://github.com/danielgalanv/oral-ia) | 🟢 Apache-2.0 · `11,358 B` | `0` | `2026-11-10` | 🇪🇸 UPM pilot; 🟢 `NOTICE` carves out teaching material (`T936`) |
+| [`matheusmontelro/plataforma-agentes-ia`](https://github.com/matheusmontelro/plataforma-agentes-ia) | 🟢 MIT · `1,073 B` | `5` | `2026-08-02` | 🔴 The ceiling of the whole in-language population |
+| [`FelipeSartuu/Beelingue-lite`](https://github.com/FelipeSartuu/Beelingue-lite) | 🟢 MIT · `1,073 B` | `0` | `2026-06-16` | 🇧🇷 English-learning agent |
+| [`ciro-maciel/awesome-ia-sala-de-aula`](https://github.com/ciro-maciel/awesome-ia-sala-de-aula) | 🟡 CC0-1.0 · `7,049 B` | `0` | `2026-11-10` | 🇧🇷 Curation incl. minimum age and privacy — a list, not code |
+
+### 🔴 Refused this window, with the reason
+
+🔴 **`57` of `73` in-language addresses serve no licence file and are REFUSED for want of a grant, not for want of quality.** 🔵 The ones worth an author's reply, if a human ever sends one: [`vaguzmang/nexa-agent`](https://github.com/vaguzmang/nexa-agent) (learning-difficulty detection), [`JuanFZ/ada-ucv`](https://github.com/JuanFZ/ada-ucv) (a named university's teaching assistant), [`Daniel-ux1026/Tutor-Inteligente`](https://github.com/Daniel-ux1026/Tutor-Inteligente) and [`BrayanG877/ia-educativa-reto`](https://github.com/BrayanG877/ia-educativa-reto) (the only in-language rows above zero stars without a grant). 🔴 **Drafting a request is authorised here; sending one is not** — see [`intel/licence-requests/README.md`](../intel/licence-requests/README.md).
+
+🔴 **Also refused: `6` `es`-leg rows that the query shape returned and that are not education at all** — a crypto analyst, a fictional supermarket's RAG agent, a colorectal-screening simulator. 🔵 **The word *educativo* in a Spanish README frequently means *"this is a teaching example"*, not *"this is for education"*. A leg tuned for in-language discovery buys that ambiguity with it** → `p798-D`.
+
 ## 🆕 `2026-11-12` · `p797` — **the `es` and `pt` discovery legs ran for the first time and inverted five passes of assumption: LATAM-origin education agents are NOT missing, they are UNLICENSED — `5` found in one hour, `5` of `5` serving no grant at all. Plus the dosage instrument BUILT after three carries, and `4` headline star counts re-measured exactly.**
 
 🟢 **Channel status, re-measured this pass:** blobless bare clone + `ls-tree`/`cat-file` 🟢 (`37` platform addresses, `12` parallel, **`100` seconds**, 🟢 **`0` failures**) · `gh api search/repositories` 🟢 batched `10` × `repo:` — exact stars + SPDX + `pushed_at` + `archived` · 🔴 **`www.gov.br` added to the `CONNECT`-denied list, making `7`** (`T933`); `eur-lex.europa.eu` and the other `5` unchanged (`T906`, fourth consecutive pass).

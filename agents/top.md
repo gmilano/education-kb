@@ -4,6 +4,77 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p798` — **`ACTION p797-E` inverted on its own premise. `p797` found `5` LATAM-origin agents, `0` with a grant, and concluded the constraint was grant hygiene. `p798` gives that claim a denominator and a control: `78.1%` of `73` in-language rows serve no grant — against `60.4%` of `149` on the English leg. The grant gap is real and it is `1.29×`. 🔴 What is categorical is something else entirely: `94.5%` of the in-language population has ZERO stars and the whole population's MAXIMUM is `5`.**
+
+🟢 **`ACTION p797-E` discharged as a measurement and REFRAMED as a recommendation. `ACTION p797-F` discharged (negative).** 🟢 Machine output: [`latam-grant-census`](../evidence/latam-grant-census.2026-11-12-p798.tsv) · [`en-leg-grant-control`](../evidence/en-leg-grant-control.2026-11-12-p798.tsv) · [`candidate-grant-bytes`](../evidence/candidate-grant-bytes.2026-11-12-p798.tsv) · [`mit-clause-identity`](../evidence/mit-clause-identity.2026-11-12-p798.tsv) · 🔴 [`candidate-grant-bytes-UNCORRECTED-v1`](../evidence/candidate-grant-bytes-UNCORRECTED-v1.2026-11-12-p798.tsv).
+
+### 🔴 The correction: `p797` measured a real gap and named the wrong one
+
+🔴 **`p797`'s `5 of 5` was five hand-reached rows with no denominator. `T931` read it as a LATAM pathology. With a control leg it is not one.**
+
+| Measure | 🇪🇸🇧🇷 `es`/`pt` legs | 🌍 `en` control leg | Ratio |
+|---|---|---|---|
+| Addresses returned | `73` | `149` | — |
+| 🔴 **No licence file at all** | 🔴 **`57` · `78.1%`** | 🔴 **`90` · `60.4%`** | 🟡 **`1.29×`** |
+| 🟢 Permissive grant | 🟢 `13` · `17.8%` | 🟢 `50` · `33.6%` | `0.53×` |
+| Copyleft | `2` · `2.7%` | `6` · `4.0%` | — |
+| 🔴 **Zero stars** | 🔴 **`69` · `94.5%`** | `29` · `19.5%` | 🔴 **`4.8×`** |
+| 🔴 **Highest star count in the whole population** | 🔴 **`5`** | `4,912` | 🔴 **`982×`** |
+| Rows at `≥20` stars | 🔴 **`0`** | `16` | — |
+
+🔵 **Read the two rows that matter together.** 🟢 **An ungranted repository is the DEFAULT for a small, recent education-agent project in either language** — `60.4%` of the English leg has no licence either, so a licence campaign aimed at LATAM is aimed at a property of young repositories, not of a region. 🔴 **The thing that is specific to the in-language population is that none of it has been adopted by anyone.** `94.5%` at zero stars, a ceiling of `5`, and not one row above `20`.
+
+🟢 **So the engagement advice changes, and it changes away from both of the last two passes' conclusions.** 🔴 **`p797` said: start with a licensing conversation.** 🟢 **`p798` says: for a LATAM engagement, take a global permissive base and localise it — and read the in-language repositories as DESIGN EVIDENCE rather than as dependencies.** 🔵 **They are worth reading precisely because nobody starred them: they show what a teacher in the region actually builds when nobody is watching** — and what they build is offline-capable, Moodle-attached, and delivered over a channel the student already has.
+
+### 🔴 `T935` — the `es` leg is not the LATAM leg, and two of this pass's best rows prove it
+
+🔴 **`p797` labelled every `es`-leg find "LATAM-origin". `p798` opened the payloads and two of the strongest are SPANISH.** 🔴 [`danielgalanv/oral-ia`](https://github.com/danielgalanv/oral-ia)'s `NOTICE` names *Universidad Politécnica de Madrid*; [`ANFAIA/SkillNet`](https://github.com/ANFAIA/SkillNet) publishes from `skillnet.es`. 🟢 **Both are EMEA and are placed as EMEA below.**
+
+🔴 **And origin cannot be resolved at scale from this session: `gh api users/{login}` is REFUSED** (*"sessions are bound to their configured repositories"*), as is `gh api repos/{owner}/{repo}`, while `gh api search/*` answers normally. 🔵 **So language is the only origin signal available in bulk, and language is exactly the signal that fails here.** 🟢 **Declared, not papered over: every `es`-leg row below whose payload does not name a country is placed `LATAM?` — a question mark this base has not used before and should use whenever the evidence is a query language rather than a document** → `p798-A`.
+
+### 🟢 `7` rows added — grant byte-verified, blob sha and HEAD commit sha beside every one
+
+🟢 All byte-verified on the blobless-clone channel (`T923`'s rule: `curl -sI` cannot distinguish a live address from an invented one here). 🟢 Recency from `search/repositories`, because `repos/{owner}/{repo}` is refused this session.
+
+| Agent | Repo | Grant (byte-verified) | ★ | Last push | Region | What it is, and why it is here |
+|---|---|---|---|---|---|---|
+| 🟢 **miyagi** `NEW` | [`falkenslab/miyagi`](https://github.com/falkenslab/miyagi) | 🟢 **MIT · `1,078 B` · blob `1998b8260d0e` · HEAD `968d0713f7a3`** | `0` | `2026-11-11` | EMEA 🇪🇸 | 🟢 **The human-in-the-loop requirement, implemented rather than promised.** A teacher's assistant that prepares a subject *with* the teacher and, in their Moodle course, **asks before anything reaches a student**. 🔵 **Every regulator in this base demands a named human decision-maker; this is the first row whose README states the gate as its headline feature** |
+| 🟢 **chispa-mcp** `NEW` | [`jeffercbs/chispa-mcp`](https://github.com/jeffercbs/chispa-mcp) | 🟢 **MIT · `1,066 B` · blob `a304e1253c64` · HEAD `b8d40f2527cd`** | `0` | `2026-11-12` | LATAM? | 🟢 **An education MCP server with `77` tools that runs with the teacher's own permissions** — stdio, npm-packaged. 🔴 **It is also `p792-D` made concrete: `77` tools over classroom management is the largest education MCP attack surface this base has recorded, and no independent security or data-governance evaluation of ANY education MCP server has been published.** 🔵 Cite the architecture; gate it before it touches a roster |
+| 🟢 **oral-ia** `NEW` | [`danielgalanv/oral-ia`](https://github.com/danielgalanv/oral-ia) | 🟢 **Apache-2.0 · `11,358 B` · blob `57bc88a15a0e` · HEAD `c5e433674702`** 🔴 **+ `NOTICE` `571 B` carve-out** | `0` | `2026-11-10` | EMEA 🇪🇸 | 🟢 Local self-study assistant with RAG, built under a Universidad Politécnica de Madrid teaching-AI pilot grant. 🟢 **Its `NOTICE` is the most useful `571` bytes in this pass — see `T936`** |
+| 🟡 **asistente-docente-sin-conexion** `NEW` | [`Ignacio-Ghub/asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion) | 🔴 **GPL-3.0 · `35,149 B` · blob `f288702d2fa1` · HEAD `ab739c9765fa`** | `0` | `2026-11-03` | LATAM? | 🟡 **A teacher's assistant that runs with NO INTERNET.** 🔵 **The single most LATAM-shaped design in the census and it is copyleft, so boundary-only** — read the architecture, do not link the code |
+| 🟢 **Claw-ED** `NEW` | [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 🟢 **MIT · `1,078 B` · blob `ec5640f4f262` · HEAD `18f2e223cdd1`** | `65` | `2026-09-19` | Global | 🟢 **Highest-starred education-domain row added this pass.** Local-first teaching assistant that starts from the teacher's EXISTING lesson plans and produces lessons they review and edit. 🟢 Ships a `SECURITY.md` and a versioned release (`v9.18.2026.1`); 🟡 self-described Beta |
+| 🟢 **SkillNet** `NEW` | [`ANFAIA/SkillNet`](https://github.com/ANFAIA/SkillNet) | 🟢 **Apache-2.0 · `10,758 B` · blob `ac436c04442f` · HEAD `cf2fa524cbd1`** | `24` | `2026-10-15` | EMEA 🇪🇸 | 🟢 Turns an organisation's own material into courses, **grounded** tutors and adaptive interfaces — one person to one organisation. 🔵 The closest thing in this pass to the corporate-L&D shape of an enterprise engagement |
+| 🟢 **ai-tutor-app** `NEW` | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟢 **Apache-2.0 · `11,386 B` · blob `6903d3d27ad6` · HEAD `7a498edabed9`** | `34` | `2026-10-22` | Global | 🟢 Agentic-RAG tutor over a real course corpus (LangGraph + FastAPI). 🔵 A working reference for *"tutor grounded in OUR curriculum"*, which is the request every engagement opens with |
+
+🟡 **Graded and NOT shelved, with the reason stated:** [`XAIHT/Tlamatini`](https://github.com/XAIHT/Tlamatini) (MIT · `1,062 B` · blob `6d93cdbdf7d0`, ★`15`) — see `T937`, its README asserts a restriction MIT does not grant. [`Fazmin/AILearningGuide`](https://github.com/Fazmin/AILearningGuide) (MIT · `1,081 B`, ★`254`) and [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) (MIT · `1,076 B`, ★`93`) are **learning content, not agents an engagement composes** — recorded in [`agents/trending.md`](trending.md) rather than shelved here. [`Man0dya/Tutor-AI`](https://github.com/Man0dya/Tutor-AI) (Apache-2.0 · `10,251 B`, ★`17`) is sound and undifferentiated against `ai-tutor-app`. [`matheusmontelro/plataforma-agentes-ia`](https://github.com/matheusmontelro/plataforma-agentes-ia) (MIT · `1,073 B`, ★`5`) is the **most-starred in-language row in the entire census** and is a local install guide, which is itself the finding above.
+
+### 🔴 `T936` — the best `571` bytes in this pass: an author carved the CONTENT licence out himself
+
+🔴 **`T916` established that in education the content licence is the half you cannot afford to lose, and that GitHub's classifier silently drops it.** 🟢 **[`danielgalanv/oral-ia`](https://github.com/danielgalanv/oral-ia) does the opposite, unprompted, in `571` bytes:** its `NOTICE` states that the Apache-2.0 grant covers *"el código, las pruebas, las especificaciones y la documentación propios"* and explicitly **does NOT** cover *"el material docente ni los textos de documentos de terceros usados en el piloto"* — which keep their holders' rights — **nor the language models, which have their own licences.**
+
+🟢 **This is the shape this base has been describing for three passes and had never found written down by an author.** 🔵 **It is also a deliverable: an engagement that ships a tutor over a client's curriculum needs exactly this file, and now there is a `571`-byte precedent to copy instead of a lawyer to brief** → [`compose/patterns.md`](../compose/patterns.md) `P798-2`.
+
+### 🔴 `T937` — a fourth place to hide a restriction: the README, under an unmodified MIT
+
+🔴 **`T914` said the restriction can be in a different FILE. `T925` said a different REPOSITORY. [`XAIHT/Tlamatini`](https://github.com/XAIHT/Tlamatini) says it can be in the README, inside an HTML comment, under a byte-canonical MIT grant:** *"Tlamatini Author Banner — do not remove (Angela's name is kept in every build)."*
+
+🔴 **MIT requires the copyright notice to survive in copies of the SOFTWARE. It does not require a banner to survive in every BUILD, and it grants the right to modify.** 🟡 **So the licence and the README disagree, and the README is the one a contributor reads.** 🔵 **Not a refusal — an MIT grant is an MIT grant — but a row where the author's expectation and the author's licence are not the same document, which is the thing to settle in writing before using it in a client deliverable.** 🟢 **This base already owns the instrument for exactly this read: [`compose/code/p1060-readme-vs-payload/`](../compose/code/p1060-readme-vs-payload/), built pre-reset and never pointed at the current shelf** → `p798-B`.
+
+### 🔴 `T938` — `p795-A`'s byte-size band is a regression against `p135`, and the mechanism is the author's name
+
+🔴 **`p795-A` filters MIT grades by byte size, with a canonical band of `1,066`–`1,072 B`. Four MIT payloads measured this pass span `1,062`–`1,096 B` and their clause text is BYTE-IDENTICAL** — md5 `aeb812008e99` over all four once the copyright line is removed:
+
+| Row | Bytes | Copyright line | `p795-A` verdict |
+|---|---|---|---|
+| [`jeffercbs/chispa-mcp`](https://github.com/jeffercbs/chispa-mcp) | `1,066` | `Copyright (c) 2026 jeffercbs` | 🟢 inside band |
+| [`XAIHT/Tlamatini`](https://github.com/XAIHT/Tlamatini) | `1,062` | `Copyright (c) 2026 XAIHT` | 🔴 **OUTLIER** |
+| [`falkenslab/miyagi`](https://github.com/falkenslab/miyagi) | `1,078` | `Copyright (c) 2026 Francisco Vargas Ruiz` | 🔴 **OUTLIER** |
+| [`hwl668/Scientific-learning-skills-`](https://github.com/hwl668/Scientific-learning-skills-) | `1,096` | `Copyright (c) 2026 Scientific Learning Skills Contributors` | 🔴 **OUTLIER** |
+
+🔴 **The `34`-byte spread is the length of the copyright holder's name and nothing else. `3` of `4` clean MIT rows are flagged, and the flag rate rises with the length of the author's name.** 🔵 **An instrument that fires more often on `Scientific Learning Skills Contributors` than on `jeffercbs` is measuring names, not riders.**
+
+🟢 **And this base already solved it, `660` passes ago.** 🔴 **[`compose/code/p135-licence-sha-identity/`](../compose/code/p135-licence-sha-identity/) says so in its own README** — *"every real MIT file carries a copyright line the SPDX template leaves as a placeholder, so a real MIT payload NEVER hashes to the canonical MIT text"* — and its `body` normalisation level **removes copyright notices as spans** and reports `TEMPLATE_MATCH`, with `MODIFIED_SUPERSET` for *"MIT + a visible-attribution clause"*, which is precisely the rider class `p795-A` was written to catch. 🔵 **`p795-A` did not improve on `p135`; it replaced an exact instrument with a proxy for it.** 🟢 **The fix is to re-point the filter, not to build a third one** → `p798-C`. 🔴 **Declared: `p135` was READ this pass, not RUN — executing committed repository code is refused in this session, so the four-row identity above is measured by this pass's own command and `p135` is cited from its README and source.**
+
 ## 🆕 `p797` — **`ACTION p796-D` discharged on the Spanish and Portuguese legs, and the answer is the opposite of the one five passes assumed: LATAM-origin education agents are NOT hidden behind the English query shape. They exist, they are weeks old — and `5` of `5` serve NO LICENCE. Plus `ACTION p796-A` BUILT after three carries.**
 
 🟢 **`ACTION p796-D` DISCHARGED for `es` + `pt`, and partially for `zh` · `ja` · `ko`** (the East-Asian legs returned policy instruments rather than repositories — see [`intel/market.md`](../intel/market.md)). 🟢 Machine output: [`latam-apac-inlanguage-discovery`](../evidence/latam-apac-inlanguage-discovery.2026-11-12-p797.tsv).

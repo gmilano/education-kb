@@ -42,3 +42,43 @@ are current as of this pass.
 | `Multilingual-NCERT-Doubt-Solver` | *(not sent)* |
 | `TutorMesh` | *(not sent)* |
 | `ai-for-education-showcase` | *(not sent)* |
+
+## 🆕 `p798` — `ACTION p797-E`: the SELECTION RULE, and `4` more drafts
+
+🔴 **`p797-E` asked for a reusable request template because `T931` reported `5` of `5` LATAM-origin
+agents ungranted. 🟢 The template already existed (this directory). 🔴 What was missing is the thing
+that makes it affordable, because `p798` measured the real denominator: `57` of `73` in-language
+addresses serve no licence — and `90` of `149` on the ENGLISH control leg do too** (`T940`).
+
+🔵 **At a `60.4%` baseline, "ask every ungranted author" is not a programme, it is a mailing list.**
+🟢 **The rule that makes it a programme — all three must hold:**
+
+| Test | Why |
+|---|---|
+| 🟢 **Substantial** — more than ~`50` files in tree | 🔴 **Below that it is a course exercise, and the author has nothing to grant that an engagement needs** |
+| 🟢 **Live** — pushed within `60` days | 🟢 An author who pushed last month answers; one who stopped in `2025` does not |
+| 🟢 **Unique for its role** — no granted alternative does the same job | 🔵 **If a permissive row already covers the role, the request buys nothing** |
+
+🟢 **Applied to the `p798` census, the rule selects `4` of `57`** — and 🔵 **the row it REJECTS is the
+instructive one: [`JuanFZ/ada-ucv`](https://github.com/JuanFZ/ada-ucv), a named university's teaching
+assistant, is `1` file (a README). A rule that selected it would be selecting an intention.**
+
+| Draft | Files | ★ | Last push | Role it uniquely covers |
+|---|---|---|---|---|
+| [`tutor-inteligente.md`](tutor-inteligente.md) | `145` | `1` | `2026-10-08` | The most complete in-language intelligent tutor found; CI + Docker |
+| [`ia-educativa-reto.md`](ia-educativa-reto.md) | `123` | `1` | `2026-11-03` | 🟢 Socratic design — guides by questions rather than delivering answers |
+| [`nexa-agent.md`](nexa-agent.md) | `118` | `0` | `2026-11-07` | 🟢 **Learning-difficulty DETECTION — almost nobody publishes this open** |
+| [`saphira-education-agent.md`](saphira-education-agent.md) | `68` | `0` | `2026-10-29` | A full platform with its own backend and student routes |
+
+🔴 **Region on all four: UNRESOLVED.** 🔴 **They were reached on the `es` leg, which returns Spain as
+well as Latin America (`T935`), and `gh api users/{login}` is refused in this session, so the
+author's location cannot be read.** 🟢 **Frontmatter says `Global`, because the closed region
+vocabulary has no way to say "probably LATAM" and a guess becomes data.** 🔵 **Each draft states
+the language evidence in prose instead** → `p798-A`.
+
+🔴 **Status unchanged and restated deliberately: DRAFTED, NOT SENT.** 🔵 **Sending means opening
+issues on third-party repositories — an outward-facing act this curation task does not authorise,
+and `9` drafts sitting here honestly are worth more than `9` issues nobody sanctioned.** 🟢 **Each
+body now also links [`oral-ia`'s `571`-byte `NOTICE`](https://github.com/danielgalanv/oral-ia/blob/main/NOTICE)
+as the content-boundary example** (`T936`), **so the request offers the author something instead of
+only asking.**

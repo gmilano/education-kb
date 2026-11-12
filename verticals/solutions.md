@@ -4,6 +4,37 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p798` — **`ACTION p797-G` discharged to a hard answer nobody wants: the Moodle Certified Partner route — the licensed way to say the word *Moodle* while selling a service — publishes NO fee schedule, NO royalty terms and NO trademark-usage terms. The restriction is public and the remedy is not. Plus the first `571`-byte template for the content boundary every white-label deliverable has.**
+
+### 🟡 `ACTION p797-G` — the Partner route, as far as the public record goes
+
+🔴 **`T924` established the constraint: `moodle/moodle`'s `TRADEMARK.txt` (`3,367 B`) prohibits, without written permission, the word *Moodle* or any Moodle logo for commercial purposes — in a software name, a company name, a domain name, advertising keywords, or *"to describe services around Moodle"*.** 🟢 **`p797-G` asked what the licensed alternative costs. Searched this pass; here is the whole of what is public:**
+
+| Question a studio must answer before week one | 🟢 Public answer |
+|---|---|
+| Does a licensed route exist? | 🟢 **Yes — two tiers: Certified Moodle Partner and Premium Certified Partner.** Moodle certifies only after satisfying itself of the applicant's service and technical standards |
+| How many exist? | 🟢 **`101`+ worldwide**, per Moodle's own announcement |
+| What may a Certified Partner sell? | 🟢 Training, hosting, implementation and support for **Moodle LMS**. 🔴 **Moodle Workplace requires PREMIUM certification** |
+| 🔴 **Application fee? Annual fee? Revenue share or royalty?** | 🔴 **NOT PUBLISHED.** No fee schedule appears anywhere in the search channel |
+| 🔴 **What trademark rights does partner status actually grant?** | 🔴 **NOT PUBLISHED.** The partner agreement is not public |
+| What IS priced publicly? | 🟡 **The Moodle Educator Certification (`MEC`), ~`AU$2,500` for `6` courses at one partner** — 🔴 **an educator training product, NOT a partner fee.** 🔵 Quoting it as the cost of partnership would be wrong by category |
+
+🔵 **So the verdict is a shape, not a number: the restriction is published to the byte and the remedy is behind a sales conversation.** 🟢 **What that means operationally is still decidable, and it is the useful half:** 🟢 **a) the restricted act is MARKETING, so an engagement can build, deploy and operate a Moodle-based deliverable on the GPL alone;** 🔴 **b) naming it — in the product name, the domain, the deck or the words *"Moodle services"* — needs either written permission or partner status, whose price is unknown;** 🟢 **c) the priceable alternative is a fully de-branded fork, and that cost IS estimable from this base: the marks live in a known set of assets, and `OpenOLAT`'s `CC BY-ND 2.5` logo precedent (`T914`) says brand assets must be REPLACED rather than edited.** 🔴 **Still not priced here: the maintenance cost of carrying a de-branded fork across Moodle's release cadence** → `p798-F`.
+
+🔴 **Declared: `moodle.com`'s partner pages and the partner agreement were NOT read directly — the finding is search-channel testimony over Moodle's own announcements and a partner's published MEC pricing.** 🔵 **The one-lookup rule (`p795-F`) applies: "two tiers, `101`+ partners, no public fee schedule" is checkable by anyone in a minute, which is why it is publishable at all.**
+
+### 🟢 The content boundary, as a `571`-byte deliverable
+
+🟢 **Every platform row in this file is a base an engagement white-labels, and the deliverable always mixes four layers with four different owners: the platform code, the studio's code, the CLIENT's curriculum, and the model.** 🔴 **`T916` found that GitHub's classifier silently drops the CONTENT licence on code/content splits; `T919` found a licence file that is a statement about grants rather than a grant.** 🟢 **[`danielgalanv/oral-ia`](https://github.com/danielgalanv/oral-ia) ships the answer as a `571 B` `NOTICE`, written by its author under an Apache-2.0 grant and naming a university pilot as the funder:** the grant covers *code, tests, specifications and its own documentation*; it does **not** cover *teaching material or third-party document texts*, which keep their holders' conditions; and it does **not** cover *the language models, which have their own licences*.
+
+🟢 **Recommended as the standing shape for every platform-based deliverable in this file** → [`compose/patterns.md`](../compose/patterns.md) `P798-2`. 🔵 **It is four sentences and it forecloses the argument that an engagement's curriculum was swept into an open-source grant by being committed next to code.**
+
+### 🟢 Platform-layer signal, recorded not shelved
+
+🟡 **Instructure has launched `Canvas Career`, a skills-first AI LMS aimed at workforce learning** — reported in the trend channel this pass, not verified against Instructure's own filings. 🔵 **Relevant here only because `Canvas LMS`'s open core is `AGPL-3.0` while the commercial surface moves toward a separate skills product: an engagement that assumes "Canvas" means the AGPL core should confirm which product the client bought** → recorded as a watch item, no shelf change.
+
+🔴 **`0` platform rows added or re-graded this pass.** 🟢 The brand-layer three-state grade over all `37` addresses (`6` bespoke · `23` stock reservation · `25` clean) stands from `p797`; 🔴 **`frappe/education` and `frappe/lms` remain graded clean and are NOT — their brand policy lives in `frappe/erpnext` (`T925`), and clearing the layer at the project FAMILY rather than the address is still queued** (`p797-D`, carried).
+
 ## 🆕 `p797` — **`ACTION p796-C` discharged over the whole platform layer, and the two most-deployed platforms in this industry both carve the brand out of the permissive grant. `6` bespoke brand restrictions in `37` addresses — and a kind `T914` could not see at all: the restriction in a DIFFERENT REPOSITORY from the code.**
 
 🟢 **`ACTION p796-C` DISCHARGED** across `37` platform addresses / `54` candidate licence files / `0` clone failures, in `100` seconds on the blobless-clone channel. 🟢 Machine output: [`brand-layer-census`](../evidence/brand-layer-census.2026-11-12-p797.tsv) · 🔴 [`brand-layer-census-UNCORRECTED-v1`](../evidence/brand-layer-census-UNCORRECTED-v1.2026-11-12-p797.tsv) · instrument: [`ingest/p797-brand-layer-gate.sh`](../ingest/p797-brand-layer-gate.sh).

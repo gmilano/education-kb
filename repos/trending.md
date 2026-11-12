@@ -4,6 +4,48 @@ region: Global
 updated: 2026-11-12
 ---
 
+## `2026-11-12` · `p798` — **two census legs, `222` addresses, and the channel that answers is not the channel this base was told to use**
+
+🟢 **Method, stated so the numbers can be re-derived:** `gh api search/repositories`, `sort=stars`, `per_page=30`, `16` query legs, window `pushed:>2026-06-01`, deduplicated on address. 🟢 Grants byte-verified for the `15` candidates by blobless bare clone + `ls-tree -l` + `cat-file blob`.
+
+### 🔴 The channel finding — `search/*` answers, `repos/*` and `users/*` refuse
+
+| Call | Result this session |
+|---|---|
+| `gh api search/repositories` | 🟢 **Answers.** Returns `license.spdx_id`, `stargazers_count`, `pushed_at`, `archived` as DATA |
+| `gh api repos/{owner}/{repo}` | 🔴 **REFUSED** — *"GitHub access to this repository is not enabled for this session"* |
+| `gh api users/{login}` | 🔴 **REFUSED** — *"sessions are bound to their configured repositories"* |
+| `git clone --filter=blob:none` on any public address | 🟢 **Works.** The grant-byte channel is unaffected |
+| `curl -sI https://github.com/...` | 🔴 Still `403` for live and invented addresses alike (`T923`) |
+
+🔴 **Consequence, and it cost this pass an artefact:** [`candidate-grant-bytes-UNCORRECTED-v1`](../evidence/candidate-grant-bytes-UNCORRECTED-v1.2026-11-12-p798.tsv) has a JSON error blob in its `archived` and `pushed` columns on all `16` rows, because the instrument called `repos/{owner}/{repo}` for them. 🟢 **Corrected by DROPPING the two columns and naming `search/repositories` as the recency channel in the row — published beside the wrong version so the correction is re-derivable** (`p796`/`p797` practice). 🔵 **The general rule this earns: per-repository metadata must come from `search/`, and a `search/` row is the only metadata channel a session scoped to one repository can rely on** → `p798-E`.
+
+### 🟢 Population movement, in-language vs English
+
+| | 🇪🇸🇧🇷 `es`/`pt` | 🌍 `en` |
+|---|---|---|
+| Addresses | `73` | `149` |
+| Zero stars | 🔴 **`69` · `94.5%`** | `29` · `19.5%` |
+| Median stars | `0` | `2` |
+| Max stars | 🔴 **`5`** | `4,912` |
+| `≥20` stars | 🔴 **`0`** | `16` |
+| No licence file | 🔴 **`78.1%`** | `60.4%` |
+
+🔵 **The English leg's own `60.4%` ungranted rate is the number to keep.** 🟢 **It means "no licence" is a property of a young repository anywhere, so a grant-hygiene campaign is a general intake rule, not a regional programme** — which is the half of `ACTION p797-E` this pass could actually settle.
+
+### 🟢 English-leg rows worth watching (permissive, `≥20` stars, pushed in window)
+
+| Repo | Grant | ★ | Pushed | Note |
+|---|---|---|---|---|
+| [`pguso/ai-agents-from-scratch`](https://github.com/pguso/ai-agents-from-scratch) | 🟢 MIT | `4,912` | `2026-07-24` | 🔵 **The highest-starred row either leg returned, and it is a TEACHING repo about agents, not an agent for teaching.** The engineer-upskilling corpus, same class as `patchy631/ai-engineering-hub` (`p796`) |
+| [`Fazmin/AILearningGuide`](https://github.com/Fazmin/AILearningGuide) | 🟢 MIT · `1,081 B` | `254` | `2026-11-12` | `58` labs, desktop app. Learning content, not a composable agent |
+| [`minmaxflow/mini-kode`](https://github.com/minmaxflow/mini-kode) | 🟢 MIT | `305` | `2026-11-03` | Educational coding-agent CLI — pedagogy for engineers |
+| [`opena2a-org/damn-vulnerable-ai-agent`](https://github.com/opena2a-org/damn-vulnerable-ai-agent) | 🟢 Apache-2.0 | `150` | `2026-11-04` | 🟢 **Deliberately vulnerable agent — a training range.** 🔵 The nearest thing to an answer for `p792-D`: if no education MCP server has been security-evaluated, this is where the evaluators train |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🟢 MIT · `1,076 B` | `93` | `2026-10-30` | Multi-agent builder: one sentence → a learning path |
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 🟢 MIT · `1,078 B` | `65` | `2026-09-19` | 🟢 Shelved in [`agents/top.md`](../agents/top.md) |
+
+🔴 **Declared absence:** `0` new foundational PLATFORM repositories this window. 🔵 Not a discovery failure — the platform layer was swept address-by-address at `p797` across `37` addresses, and these legs were tuned for agents. 🟢 **The platform shelf is unchanged and still graded; see [`verticals/solutions.md`](../verticals/solutions.md).**
+
 ## 🆕 `2026-11-12` · `p797` — **the brand-layer census extended from `3` recommended rows to the whole platform layer: `37` addresses, `54` candidate licence files, `6` bespoke brand restrictions — and `Moodle` and `ERPNext` are two of them. Plus `83` provenance cells re-typed and found to be two different object kinds.**
 
 🟢 **Machine output:** [`brand-layer-census.2026-11-12-p797.tsv`](../evidence/brand-layer-census.2026-11-12-p797.tsv) · 🔴 [`brand-layer-census-UNCORRECTED-v1`](../evidence/brand-layer-census-UNCORRECTED-v1.2026-11-12-p797.tsv) *(published deliberately: it matched `icon` as a substring and graded a directory as a licence file)* · [`provenance-cell-kinds.2026-11-12-p797.tsv`](../evidence/provenance-cell-kinds.2026-11-12-p797.tsv) · 🔴 [`evidence-address-gate-UNCORRECTED-v1`](../evidence/evidence-address-gate-UNCORRECTED-v1.2026-11-12-p797.txt) *(`15,591` rows where `6` are real)*. 🟢 Instruments: [`ingest/p797-brand-layer-gate.sh`](../ingest/p797-brand-layer-gate.sh) · [`compose/code/p797-evidence-address-gate/`](../compose/code/p797-evidence-address-gate/) (WIRED into `make hooks`).

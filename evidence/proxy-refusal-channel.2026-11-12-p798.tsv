@@ -1,0 +1,6 @@
+domain	why_tested	http_code	verdict	action
+www.moe.go.kr	p797-F: Korea's AI digital textbook reversal (T932) originates in MoE / National Assembly material	000	CONNECT-REFUSED	T906 gains an 8th domain
+moe.go.kr	same, apex	000	CONNECT-REFUSED	T906 gains a 9th domain
+english.moe.go.kr	same, English service	000	CONNECT-REFUSED	T906 gains a 10th domain
+www.gov.br	p797 headline instrument (Parecer CNE/CP no 15/2026) — retest	000	CONNECT-REFUSED	confirms T933, not a transient
+unesco.org	T906 member — retest	000	CONNECT-REFUSED	confirms, not a transient

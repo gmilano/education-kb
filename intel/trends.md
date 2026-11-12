@@ -4,6 +4,72 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p798` — `T935`–`T941`
+
+🔵 **The pass's through-line: four of these seven are about an instrument being pointed at the wrong unit** — a region inferred from a query language, a rider inferred from a byte count, a restriction looked for in a licence file, a supply gap diagnosed from five rows with no denominator. 🟢 **Each one was caught by adding a CONTROL, and in two cases the control already existed in this repository and had stopped being used.**
+
+## `T935` — a query language is not a region, and this base has been treating it as one
+
+🔴 **`p797` ran `es` and `pt` discovery legs and labelled every find "LATAM-origin". `p798` opened the payloads: [`danielgalanv/oral-ia`](https://github.com/danielgalanv/oral-ia)'s `NOTICE` names *Universidad Politécnica de Madrid*, and [`ANFAIA/SkillNet`](https://github.com/ANFAIA/SkillNet) publishes from `skillnet.es`.** 🟢 **Both are EMEA. Both were counted as LATAM evidence.**
+
+🔴 **And origin is not resolvable in bulk from this session: `gh api users/{login}` is refused** (*"sessions are bound to their configured repositories"*), so the `location` field that would settle it is unreachable. 🟢 **The only reliable origin signals left are inside the payload — a `NOTICE` naming a funder, a `.es`/`.br` domain in the README, a country-specific curriculum reference.** 🔵 **That is a per-row read, not a census column.**
+
+🟢 **The rule: a row placed by the language of the query that found it is placed on an inference, and the closed region vocabulary cannot express an inference.** 🟢 **`p798` therefore writes `LATAM?` where the evidence is a query language and nothing else** — 🔵 **the first time this base has published a placement it is not sure of rather than choosing a bucket.** 🔴 **Spain and Portugal will keep arriving on the LATAM leg, and Gulf states on the APAC leg** (the UAE's `25` school prohibitions did exactly that this pass) → `p798-A`.
+
+## `T936` — an author wrote the content carve-out this base has been asking for, in `571` bytes
+
+🟢 **[`danielgalanv/oral-ia`](https://github.com/danielgalanv/oral-ia) (Apache-2.0 · `11,358 B` · blob `57bc88a15a0e` · HEAD `c5e433674702`) ships a `571 B` `NOTICE` stating that the grant covers the code, tests, specifications and its own documentation, and does NOT cover the teaching material, the third-party document texts used in the pilot, or the language models — each keeping its own holders' conditions.**
+
+🔴 **`T916` established why this matters: on code/content splits GitHub's classifier reports the CODE licence and silently drops the CONTENT licence, and in education the content licence is the one that governs the curriculum.** 🟢 **Here the author pre-empted it without being asked, under a university pilot grant.**
+
+🔵 **The trend worth naming is not a licensing fashion — one row is not a fashion. It is that the four-layer boundary (platform code · studio code · client curriculum · model weights) is becoming visible to the people writing the code, not just to the people reviewing it.** 🟢 **And it converts directly into a deliverable: four sentences, reusable, cheaper than the argument it prevents** → [`compose/patterns.md`](../compose/patterns.md) `P798-2`.
+
+## `T937` — the fourth place a restriction hides: the README, under an unmodified grant
+
+🔴 **The locations this base has now recorded: a second licence FILE (`T914`), a different REPOSITORY (`T925`), inside a single file as a second grant (`T915`) — and now the README.**
+
+🔴 **[`XAIHT/Tlamatini`](https://github.com/XAIHT/Tlamatini) (MIT · `1,062 B` · blob `6d93cdbdf7d0`, ★`15`, pushed `2026-11-12`) carries a byte-canonical MIT grant and an HTML comment in its README: *"Tlamatini Author Banner — do not remove (Angela's name is kept in every build)."*** 🔴 **MIT requires the copyright notice to survive in copies of the software; it does not require a banner to survive in every BUILD, and it expressly grants the right to modify.**
+
+🟡 **Not a refusal — an MIT grant is an MIT grant — but a row where the licence and the author's stated expectation are different documents, and the README is the one a contributor reads.** 🔵 **For a client deliverable that strips author banners as a matter of course, this is the difference between a compliance question and a relationship question, and it is settled in one message before the fork, not after the launch.** 🟢 **This base already owns the instrument: [`compose/code/p1060-readme-vs-payload/`](../compose/code/p1060-readme-vs-payload/), built pre-reset, never pointed at the current shelf** → `p798-B`.
+
+## `T938` — a byte-size band is a proxy for an exact instrument this base built and stopped using
+
+🔴 **`p795-A` screens MIT grades by byte size against a canonical `1,066`–`1,072 B` band. Four MIT payloads this pass span `1,062`–`1,096 B` with BYTE-IDENTICAL clause text** (md5 `aeb812008e99` with the copyright line removed). 🔴 **The `34`-byte spread is the holder's name: `jeffercbs` against `Scientific Learning Skills Contributors`. `3` of `4` clean rows flagged, and the flag rate rises with name length.**
+
+🟢 **[`compose/code/p135-licence-sha-identity/`](../compose/code/p135-licence-sha-identity/) says it outright in its README** — *"every real MIT file carries a copyright line the SPDX template leaves as a placeholder, so a real MIT payload NEVER hashes to the canonical MIT text"* — **and its `body` level removes copyright notices as spans, reporting `TEMPLATE_MATCH`, with `MODIFIED_SUPERSET` for the `MIT + visible-attribution` rider class `p795-A` exists to catch.**
+
+🔵 **The general lesson, and it is about this base rather than about licences: an instrument library of this size can regress by ADDING something.** 🔴 **`p795-A` did not replace a worse method; it replaced a better one that was `660` passes old and out of sight.** 🟢 **Before building a screen, grep the library for the measurement it approximates** → `p798-C`. 🔴 **Declared: `p135` was read, not run — executing committed repository code is refused in this session.**
+
+## `T939` — an instrument number survived a direct challenge, which is what makes `CITED, NOT READ` usable
+
+🟢 **`p795-F` published `Regulation (EU) 2026/1744` from a single reading and labelled it `CITED, NOT READ`. This pass's EMEA leg challenged the number explicitly.** 🟢 **Re-run deep: four independent legal-practice readings name the same regulation and agree on OJ publication `2026-07-24`, entry into force `2026-07-27`, Annex III standalone high-risk (education) `2027-12-02`, Annex I `2028-08-02`, and that Art. `50` transparency was NOT deferred.** 🟡 Residual disagreement on adoption/signature dates, immaterial to a contract.
+
+🔵 **The method claim is now tested rather than asserted: a numbered instrument is checkable by anyone in one lookup, so publishing the number while unable to open the text is honest and useful.** 🔴 **`eur-lex.europa.eu` has still never resolved from this session, and `T906` now names TEN refused government and multilateral domains after Korea's ministry was added this pass.** 🟢 **No commercial domain has ever failed this way — which is why it is a network policy and not an outage.**
+
+## `T940` — the in-language supply has a ceiling of `5` stars, and that is a different problem from the one `p797` diagnosed
+
+🔴 **`p797`: `5` of `5` LATAM-origin agents serve no grant → the constraint is grant hygiene.** 🟢 **`p798`, with a denominator and a control leg:**
+
+| | 🇪🇸🇧🇷 `es`/`pt` | 🌍 `en` | Ratio |
+|---|---|---|---|
+| Addresses | `73` | `149` | — |
+| No licence file | `78.1%` | `60.4%` | 🟡 `1.29×` |
+| 🔴 **Zero stars** | 🔴 **`94.5%`** | `19.5%` | 🔴 **`4.8×`** |
+| 🔴 **Population maximum** | 🔴 **`5` ★** | `4,912` ★ | 🔴 **`982×`** |
+| Rows at `≥20` ★ | 🔴 **`0`** | `16` | — |
+
+🔵 **Both numbers are real and they point at different actions.** 🟢 **Ungranted is the DEFAULT for a young repository in any language, so grant hygiene is an intake rule, not a regional programme.** 🔴 **What is specific to the in-language population is that none of it has been adopted by anyone — a new project appears almost daily and nothing accumulates.**
+
+🟢 **The engagement consequence, stated plainly because it reverses advice this base gave nine days ago: do not shop for an in-language base and do not run a licensing campaign to unlock one. Take a global permissive base, localise it, and read the in-language repositories as DESIGN EVIDENCE.** 🔵 **They are worth reading *because* nobody starred them — they show what a regional teacher builds with no audience: [`asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion) runs with no internet; [`miyagi`](https://github.com/falkenslab/miyagi) attaches to Moodle and asks before anything reaches a student; [`chispa-mcp`](https://github.com/jeffercbs/chispa-mcp) exposes classroom management at the teacher's own permissions; `p797`'s [`miguelito`](https://github.com/alesdrobysh/miguelito) delivers a tutor over Telegram twice a day.** 🟢 **Offline-first, LMS-attached, messaging-delivered, teacher-gated — that is a requirements document, and it came from repositories with zero stars.**
+
+## `T941` — in a session scoped to one repository, `search/*` is the whole metadata channel
+
+🔴 **Measured this pass: `gh api repos/{owner}/{repo}` and `gh api users/{login}` are both REFUSED, while `gh api search/repositories` returns `license.spdx_id`, `stargazers_count`, `pushed_at` and `archived` normally, and `git clone --filter=blob:none` works on any public address.**
+
+🔴 **It cost an artefact before it was noticed: [`candidate-grant-bytes-UNCORRECTED-v1`](../evidence/candidate-grant-bytes-UNCORRECTED-v1.2026-11-12-p798.tsv) carries a JSON error blob in its `archived` and `pushed` columns on all `16` rows, because the instrument called `repos/{owner}/{repo}` per row.** 🟢 **Corrected by dropping the two columns and naming the recency channel in the row; both versions published so the correction is re-derivable.**
+
+🔵 **The failure mode worth remembering: a refused API call returns a `200`-shaped JSON body, so it lands in a TSV cell as text and looks like data.** 🟢 **It is `T923`'s class — a uniform non-silent answer that reads as a measurement — and the defence is the same: assert the shape of a cell you are about to publish, because an error message is a string and a string fits anywhere.** 🟢 **`p797` wired `gate-evidence-address` into `make hooks` for exactly this kind of published-artefact defect; it checks addresses, not cell shapes** → `p798-E`.
+
 ## 🆕 `p797` — `T924`–`T934`
 
 ### 🔴 `T924` — the brand layer is not an exception on the platform shelf, it is a structural feature of it: `6` of `37` addresses, and two of the `6` are the two most-deployed systems in this industry

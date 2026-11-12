@@ -4,6 +4,32 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p798` — **No row changes grade this pass, and the reason is worth more than a grade change: the instrument that grades the MIT rows is measuring the length of the author's name. `p795-A`'s byte-size band flags `3` of `4` byte-identical MIT payloads, and this base built the exact replacement at `p135` and then stopped using it.**
+
+🟢 Machine output: [`mit-clause-identity`](../evidence/mit-clause-identity.2026-11-12-p798.tsv) · [`candidate-grant-bytes`](../evidence/candidate-grant-bytes.2026-11-12-p798.tsv).
+
+### 🔴 `T938` — the byte-size band is a proxy for an exact instrument this base already owns
+
+🔴 **Four MIT payloads measured this pass: `1,062`, `1,066`, `1,078`, `1,096 B`. Their clause text is byte-identical** — md5 `aeb812008e99` over all four with the copyright line removed. 🔴 **The `34`-byte spread is `Copyright (c) 2026 jeffercbs` against `Copyright (c) 2026 Scientific Learning Skills Contributors`, and nothing else.** 🔴 **`p795-A`'s `1,066`–`1,072 B` band therefore flags `3` of the `4`, and its false-alarm rate rises with the length of the holder's name.**
+
+🟢 **[`compose/code/p135-licence-sha-identity/`](../compose/code/p135-licence-sha-identity/) states the problem in its own README** — *"every real MIT file carries a copyright line the SPDX template leaves as a placeholder, so a real MIT payload NEVER hashes to the canonical MIT text"* — and answers it with five normalisation levels, of which `body` **removes copyright notices as spans** (`TEMPLATE_MATCH`) and `MODIFIED_SUPERSET` reports *"the whole canonical body plus extra clauses"*, i.e. the `MIT + visible-attribution` rider class that `p795-A` exists to catch.
+
+🔵 **So the ordering is the finding: `p135` (pre-reset) built an exact grant-identity instrument; `p795-A` (`3` passes ago) adopted a byte proxy for it; `p796` and `p797` then reported byte-size outliers as candidate riders.** 🟢 **Nothing published is wrong — every outlier `p795`–`p797` reported was separately read — but the screen is noisier than it needs to be and gets noisier as the corpus internationalises, because long institutional holder names are exactly what a university repository carries** → `p798-C`.
+
+🔴 **Declared channel limit:** `p135` was **READ, not RUN** — executing committed repository code is refused in this session — so the four-row identity above is this pass's own measurement and `p135` is cited from its README and source.
+
+### 🟢 The grading rules that stand unchanged
+
+🟢 **Every foundational row's grant was byte-verified at `p795`–`p797` and nothing in this pass contradicts any of them.** 🔴 **The nine recorded ways to misread a licence gain a fourth LOCATION this pass:** the restriction can be in a different FILE (`T914`), a different REPOSITORY (`T925`), and now **the README under an unmodified grant** (`T937`, [`XAIHT/Tlamatini`](https://github.com/XAIHT/Tlamatini) — *"Author Banner — do not remove"* under a byte-canonical MIT). 🟢 **The instrument for that read also already exists and has never been pointed at the current shelf: [`compose/code/p1060-readme-vs-payload/`](../compose/code/p1060-readme-vs-payload/)** → `p798-B`.
+
+### 🟢 `T936` — a `571`-byte NOTICE is now the recommended shape for a foundational row's content boundary
+
+🟢 **[`danielgalanv/oral-ia`](https://github.com/danielgalanv/oral-ia) (Apache-2.0 · `11,358 B` · blob `57bc88a15a0e`) ships a `571 B` `NOTICE` that states the grant covers the code, tests, specifications and its own documentation, and does NOT cover the teaching material, third-party document texts, or the language models.** 🔵 **Every foundational row in this file has the same boundary and almost none of them says so.** 🟢 **For a Globant deliverable built on any row here, this file is the template** → [`compose/patterns.md`](../compose/patterns.md) `P798-2`.
+
+### 🔴 Declared: `0` foundational rows added this pass
+
+🔴 **This pass added no platform or framework row, and that is a scope statement, not a dry well.** 🟢 **What was searched:** `16` query legs across `es`, `pt` and `en` tuned for AGENTS (tutor, teaching assistant, assessment, classroom, educational platform), window `pushed:>2026-06-01`, `222` deduplicated addresses. 🟢 **What was not searched:** the platform layer, swept address-by-address at `p797` across `37` addresses with a brand-layer gate, `0` clone failures. 🔵 **A pass that re-runs the platform sweep nine days later and reports it as new discovery is padding; the platform shelf below is current and the agent legs are where the new addresses were.**
+
 ## 🆕 `p797` — **the provenance column re-measured against first-hand bytes: `83` twelve-hex cells on this base's recommendation shelves are TWO object kinds and a third that resolves to neither. `43` commit · `9` blob · `31` unresolved. `ACTION p796-B` discharged, and its premise inverted.**
 
 🟢 **`ACTION p796-B` DISCHARGED — as a measurement, which is not what it asked for.** The action read `T905` as *"the column mixes hash functions and holds values matching neither, so DELETE it"* and argued deletion *"is one pass and cannot fail"*. 🟢 **It did not need to be deleted. It needed to be TYPED.** Machine output: [`provenance-cell-kinds`](../evidence/provenance-cell-kinds.2026-11-12-p797.tsv).

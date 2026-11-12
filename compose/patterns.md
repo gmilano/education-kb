@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p798` — `P798-1` … `P798-4`
+
+🔵 **Each pattern names the repositories, the grant under which each one may be used, and the wiring.** 🔴 **`P798-1` replaces the LATAM advice `P797-1` gave, because the measurement it rested on has been corrected** (`T940`).
+
+## `P798-1` — LATAM 🇧🇷🇲🇽: localise a global base, mine the in-language repos for requirements
+
+🔴 **Why this replaces `p797`'s LATAM recipe.** 🔴 `p797` recommended opening a licensing conversation with in-language authors to unlock a regional base. 🟢 **`p798` measured the population: `73` addresses, `78.1%` ungranted (against `60.4%` on the English control leg), `94.5%` at zero stars, maximum `5` stars, `0` rows above `20`.** 🔵 **There is no in-language base with a community to inherit. Licensing one unlocks a project nobody has used.**
+
+**The build:**
+
+| Layer | Use | Grant | Why this one |
+|---|---|---|---|
+| Platform | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 GPL-3.0 + 🔴 `TRADEMARK.txt` (`3,367 B`) | The regional default. 🔴 **Build and operate freely; do NOT name the deliverable *Moodle* or sell *"Moodle services"* without written permission or partner status** (`T924`, and see [`verticals/solutions.md`](../verticals/solutions.md) for what the licensed route does and does not publish) |
+| Tutor | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | ★`58,622`, re-measured exactly at `p797`. The base with an actual community |
+| Teacher gate | [`falkenslab/miyagi`](https://github.com/falkenslab/miyagi) | 🟢 MIT · `1,078 B` | 🟢 **Read its Moodle integration and its ask-before-send gate.** EMEA-origin, permissive, tiny — copy the shape |
+| Offline path | [`Ignacio-Ghub/asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion) | 🔴 GPL-3.0 | 🔴 **ARCHITECTURE ONLY — copyleft, do not link.** Read how it degrades with no connectivity |
+| Delivery channel | `p797`'s [`alesdrobysh/miguelito`](https://github.com/alesdrobysh/miguelito) | 🔴 none | 🔴 **Ungranted — read, do not use.** Its dosage design (twice-daily practice prompts over a messaging app) is the citable part |
+| Evidence | [`compose/code/p797-dosage/`](code/p797-dosage/) | — | 🟢 Sessions triggered · accepted · turns per accepted session · practice-days-with-a-turn, **counting the students who never took a turn** |
+| Content boundary | `P798-2` below | — | 🟢 The `571`-byte `NOTICE` |
+
+🟢 **The requirements document, taken from repositories with zero stars** (`T940`): **offline-capable · LMS-attached · delivered over a channel the student already has · nothing reaches a student without a teacher's action.** 🔵 **That list is not in any analyst report in this base and it is what the region's own developers build when nobody is watching.**
+
+🔴 **Compliance anchor:** `Parecer CNE/CP nº 15/2026`, homologated `2026-11-10` — prohibitions effective on publication, **`12` months for policies, governance instruments and CONTRACTS.** 🔴 **`CITED, NOT READ`: `www.gov.br` refused again this pass.** 🟢 Commercial anchor: **`92%` of students and `79%` of faculty using AI against `30%` who think their institution has responded** (Digital Education Council LATAM `2026`, with Tecnológico de Monterrey), and 🔴 **`4%` of PUBLIC universities with any AI budget** (UNESCO IESALC) — 🟢 **so price it as one instrument with one named owner, not a department.**
+
+🟢 **Timeline:** `6`–`8` weeks to a Moodle-attached, teacher-gated tutor with dosage evidence and the `NOTICE` in place. 🔵 Deliverable one is the evidence, not the tutor — it is what the `12`-month clock asks for.
+
+## `P798-2` — Global: the `571`-byte content boundary, as a week-one deliverable
+
+🔴 **The problem, measured three passes running.** 🔴 A deliverable mixes four layers with four owners — **platform code · studio code · the CLIENT's curriculum · the model weights** — and `T916` found that GitHub's classifier, on a code/content split, reports the code licence and **silently drops the content licence.** 🔴 In education the content licence is the one that governs the curriculum.
+
+🟢 **The template, copied from [`danielgalanv/oral-ia`](https://github.com/danielgalanv/oral-ia)'s `NOTICE`** (`571 B`, Apache-2.0 row, written by the author under a Universidad Politécnica de Madrid pilot — `T936`):
+
+```
+<DELIVERABLE NAME>
+Copyright <YEAR> <CLIENT / STUDIO>
+
+This product includes software developed under <ENGAGEMENT / GRANT>.
+
+The <Apache-2.0 | MIT> licence of this repository covers the code, the tests, the
+specifications and our own documentation. It does NOT cover the teaching material, nor
+third-party document texts used in the pilot, which retain the rights and conditions of
+their holders; nor the language models, which carry their own licences.
+```
+
+🟢 **Wire it as a gate, not a document:** add the file in week one; have the repository's CI assert it exists and names all four layers; and put the same four sentences in the SOW. 🔵 **Four sentences, written before the first curriculum file is committed, forecloses the argument that the client's curriculum was swept into an open-source grant by sitting next to code.**
+
+🔴 **Where it does NOT help:** it is a statement about grants, not a grant (`T919`'s class). It does not clear the brand layer — that is `TRADEMARK.txt`, `NOTICE` brand carve-outs and, on the `frappe` family, a policy in a DIFFERENT repository (`T925`).
+
+## `P798-3` — Global: gate an education MCP server before it touches a roster
+
+🔴 **Why now.** 🔴 `p792-D` has stood unclaimed for six passes: **no independent security or data-governance evaluation of any education MCP server has been published.** 🟢 **`p798` makes it concrete: [`jeffercbs/chispa-mcp`](https://github.com/jeffercbs/chispa-mcp) (🟢 MIT · `1,066 B` · blob `a304e1253c64`) exposes `77` classroom-management tools over stdio and runs with the teacher's own permissions.** 🔵 **`77` tools at a teacher's permission level is the largest education MCP surface this base has recorded, and the design is sound — which is exactly why it will be copied.**
+
+**The gate, assembled from rows this base already holds:**
+
+| Step | Use | Grant |
+|---|---|---|
+| Enumerate the surface | [`compose/code/mcp-allowlist-gateway/`](code/mcp-allowlist-gateway/) | — |
+| Classify each tool read vs write | 🟢 **Write tools touching a roster, a grade or a parent contact are the high-risk set** — Annex III, education | — |
+| Require a named human decision for every write to a grade | [`compose/code/p797-dosage/`](code/p797-dosage/) logs the decision and the dosage | — |
+| Adversarial test | [`opena2a-org/damn-vulnerable-ai-agent`](https://github.com/opena2a-org/damn-vulnerable-ai-agent) | 🟢 Apache-2.0 · ★`150` |
+| Reference tutor to gate | [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟢 Apache-2.0 · ★`34` |
+
+🟢 **Regulatory hook that makes it billable rather than virtuous:** 🔴 🇻🇳 Vietnam requires **pre-deployment registration** of education AI in the National AI Database (`2026-03-01`); 🔴 🇦🇺 **TEQSA compels an institutional generative-AI action plan from every provider**; 🟢 🇪🇺 **Art. `50` transparency is live now** and Art. `27` FRIA is owed by public deployers. 🔵 **Three jurisdictions already require the artefact this gate produces.**
+
+🟢 **Timeline:** `3`–`4` weeks for the gate plus a written evaluation of one server. 🔵 **And if it is published, it is the first of its kind** — `p792-D` closes.
+
+## `P798-4` — EMEA 🇪🇺: sell the half of the AI Act that did not move
+
+🟢 **The split is the whole commercial point and it is now four-source corroborated** (`T939`): 🟢 **Art. `50` transparency has applied since `2026-08-02` and was NOT deferred**; 🔴 **Annex III standalone high-risk — education — moved to `2027-12-02`** by `Regulation (EU) 2026/1744` (OJ `2026-07-24`, in force `2026-07-27`). 🔵 **The expensive work has `13` months of slack. The cheap work is already late.**
+
+**The build:**
+
+| Layer | Use | Grant |
+|---|---|---|
+| Platform | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 code · 🔴 **logo and icons `CC BY-ND 2.5` — brand assets must be REPLACED, not edited** (`T914`) |
+| Course/material agent | [`ANFAIA/SkillNet`](https://github.com/ANFAIA/SkillNet) | 🟢 Apache-2.0 · `10,758 B` · ★`24` · 🇪🇸 |
+| Teacher gate | [`falkenslab/miyagi`](https://github.com/falkenslab/miyagi) | 🟢 MIT · `1,078 B` · 🇪🇸 |
+| Local/self-study path | [`danielgalanv/oral-ia`](https://github.com/danielgalanv/oral-ia) | 🟢 Apache-2.0 · `11,358 B` · 🇪🇸 — 🟢 and the `NOTICE` of `P798-2` |
+| Art. `50` marking | [`compose/code/aiact-50-2-marking/`](code/aiact-50-2-marking/) · [`aiact-50-2-pack`](code/aiact-50-2-pack/) | — |
+| Art. `27` FRIA + evidence | [`compose/code/p797-dosage/`](code/p797-dosage/) | — |
+
+🟢 **The sales line, from the strongest EMEA datapoint in this base: `63%` of European teachers use AI and `16%` believe general-purpose AI improves outcomes** (Sanoma, `>20,000` teachers, `14` countries). 🔵 **A `47`-point gap is a market that has already tried the generic tool and rejected it** — 🟢 **corroborated this pass by a six-country adult-education study finding teachers adopting AI autonomously, with no regulatory framework, and naming applied professional development as the shared priority.** 🔵 **That is a services engagement, and the OECD's `2026` Digital Education Outlook supplies the pitch in one clause: AI helps learning only when pedagogy stays in control.**
+
+🟢 **Timeline:** `4` weeks to Art. `50` conformity on an existing deployment (the late, cheap work), then `10`–`12` weeks to Annex III readiness ahead of `2027-12-02`. 🔴 **Sequence it that way round** — the deferral removed urgency from the expensive half only.
+
 ## 🆕 `p797` — `P797-1`–`P797-5`
 
 🟢 **Every pattern here is anchored to a COMPELLED document with a date, or to a measured refusal.** 🔴 **`P797-2` is new and global: the brand-layer clearance is now a week-one gate with a procedure, because `6` of `37` platform addresses carry a restriction the root `LICENSE` does not mention and one of them is not in the repository at all.**

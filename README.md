@@ -6,142 +6,129 @@ updated: 2026-11-12
 
 # Globant AI Studios — Education KB
 
-**Pass `p797` · `2026-11-12`** — two days ago Brazil's MEC homologated the first compelled
-AI-in-education deadline in Latin America, and twelve months ago Korea's national AI textbook
-programme lost `94.8%` of its schools. 🟢 **`5` of `8` queued actions discharged, and `3` of the
-`5` inverted the premise of the action that asked for them.** 🔴 **The brand-layer gate `p796`
-built on three rows now covers the whole platform layer, and `Moodle` — the platform this base
-tells every engagement to assume — says in `3,367` bytes that the GPL does not carry its marks.**
-The two trending ledgers and the action ledger are appended to, never rewritten.
+**Pass `p798` · `2026-11-12`** — `p797` found five LATAM-origin education agents, none of them
+licensed, and concluded that the region's constraint was grant hygiene. 🟢 **`p798` gave that claim
+a denominator and a control leg, and it does not survive either.** 🔴 **Ungranted is the default for
+a young repository in ANY language — `78.1%` in-language against `60.4%` in English.** 🔴 **What is
+specific to the in-language population is that nobody has adopted any of it: `94.5%` sit at zero
+stars and the whole population's ceiling is `5`.** 🟢 **Four of this pass's seven findings are an
+instrument pointed at the wrong unit, and in two cases the right instrument was already in this
+repository and had fallen out of use.** The two trending ledgers and the action ledger are appended
+to, never rewritten.
 
 ## What this pass established
 
 | | |
 |---|---|
-| 🔴 **LATAM has a DATE, and this base said for six passes that it did not** | 🔴 **`Parecer CNE/CP nº 15/2026`** · homologated **`2026-11-10`** · prohibitions on publication · 🔴 **`12` months for policies, governance instruments and CONTRACTS** |
-| 🔴 **The first measured REVERSAL in this base** | 🔴 🇰🇷 **`34.2%` → `12.5%` → `5.2%` of schools** in twelve months, after a statutory reclassification made adoption discretionary (`T932`) |
-| 🟢 Brand layer swept over the whole platform layer (`ACTION p796-C`) | 🟢 **`37` addresses · `54` candidate licence files · `0` clone failures · `100` seconds** |
-| 🔴 **Bespoke brand restrictions found** | 🔴 **`6`**, two of them new and both load-bearing: [`moodle/moodle`](https://github.com/moodle/moodle) and [`frappe/erpnext`](https://github.com/frappe/erpnext) |
-| 🟡 The false-alarm class a two-state gate would have reported | 🟡 **`23` STOCK reservations** — Apache-2.0 §`6`, GPL-family §`7(e)`, EUPL-1.2. 🔵 Not findings, and not permission either |
-| 🆕 🔴 **A brand restriction in a different REPOSITORY from the code** | 🔴 **`frappe/education` and `frappe/lms` are bound by a policy in `frappe/erpnext`** — invisible to any per-address sweep, including this pass's (`T925`) |
-| 🟢 The `sha=` column, re-measured instead of deleted (`ACTION p796-B`) | 🟢 **`83` cells: `43` COMMIT shas · `9` BLOB shas · `31` resolve to neither.** 🔵 Deletion would have destroyed `52` working cells to fix a labelling problem |
-| 🟢 **`ACTION p796-A` BUILT after three carries** | 🟢 [`compose/code/p797-dosage/`](compose/code/p797-dosage/) — four metrics, `11` offline controls, `4` field kinds |
-| 🟢 **`ACTION QO` satisfied after ~`10` passes** | 🟢 `gate-evidence-address` WIRED into `make hooks`: green over `2,097` evidence files, `700` in declared scope (`2,093`/`696` when the sweep ran, plus this pass's own `4` artefacts) |
-| 🔴 Defects in **this pass's own instruments**, all caught before publication | 🔴 **`4`** — and one of them over-reported `15,591` rows where `6` are real |
-| 🔴 **The primary-source channel loses a seventh domain** | 🔴 **`www.gov.br`** — so this pass's headline instrument is `CITED, NOT READ` (`T933`) |
+| 🔴 **The LATAM recommendation reverses, nine days after it was given** | 🔴 **Not a search (`p797`), not a licensing campaign (`p798` corrects that): localise a global permissive base and read the in-language repositories as DESIGN EVIDENCE** |
+| 🟢 **The census that did it** | 🟢 **`73` in-language addresses · `149` English control addresses · `16` query legs · `222` deduplicated rows** |
+| 🔴 **The gap that is real but modest** | 🔴 **`78.1%` vs `60.4%` ungranted — `1.29×`** |
+| 🔴 **The gap that is categorical** | 🔴 **`94.5%` vs `19.5%` at ZERO stars · population max `5` vs `4,912` · `0` rows above `20` stars vs `16`** |
+| 🟢 `7` agents added, every grant byte-verified | 🟢 **Blob sha + HEAD commit sha on every row** (`T927`'s rule), `0` clone failures on `15` addresses |
+| 🟢 **`ACTION p797-G` discharged — and the answer is a shape, not a price** | 🔴 **Moodle's partner fees, royalties and trademark grants are NOT published.** 🟢 Two tiers, `101`+ partners, scope known |
+| 🔴 **`ACTION p797-F` discharged, negative** | 🔴 **Korea's ministry is the 8th, 9th and 10th domain `T906` names** |
+| 🟢 **`ACTION p797-E` discharged as a measurement and reframed as a deliverable** | 🟢 **A selection rule (`3` tests) + `4` new drafts out of `57` candidates** — and the row the rule REJECTS is the instructive one |
+| 🟢 **The EMEA anchor survived a direct challenge** | 🟢 **`Regulation (EU) 2026/1744` — four independent legal readings concur on the number and the dates** |
+| 🔴 **A new session-policy limit, measured not assumed** | 🔴 **Executing committed repository code is refused here, so `make hooks` and `ACTION p797-H` are undischargeable from this session** |
+| 🔴 Defects in this pass's own instrument, caught before publication | 🔴 **`1`** — a refused API call's JSON body shipped as data in `16` rows of two columns. 🟢 Both versions published |
 
 ## 🟢 The three findings worth reading first
 
-**1. Latin America stopped being the region with no deadline, and the clock is already running.**
-🔴 **`Parecer CNE/CP nº 15/2026`** was homologated by the Ministério da Educação on **`2026-11-10`**:
-Brazil's first national AI-in-education guidelines, creche to postgraduate, with four risk levels.
-🔴 **The prohibited practices apply on publication in the `Diário Oficial da União` — no grace
-period — and institutions have `12` months to adjust policies, governance instruments and
-CONTRACTS.** 🟢 Beside it sit **`Edital MEC nº 01/2026`**, a regulatory sandbox open to
-universities, startups and civil society, and the March `2026` `Referencial`, which names
-*national and open-source solutions* as a desirable direction — 🔵 **the first regulator in this
-base to point at open source in the text rather than in a reading of it.** 🔴 **It is a direction,
-not an obligation.** 🔴 **And the whole finding is `CITED, NOT READ`: `www.gov.br` does not resolve
-from this session** — 🟢 which is survivable only because an instrument number can be checked by
-anyone in one lookup, the rule `p795-F` proved.
-→ [`intel/market.md`](intel/market.md), [`compose/patterns.md`](compose/patterns.md) `P797-1`
+**1. A rate without a denominator reversed five passes of regional strategy, and one control leg
+cost two minutes.**
+🔴 `p797` reported *"`5` of `5` LATAM-origin agents serve no grant"* and `T931` read it as a regional
+pathology. 🟢 **`p798` ran the same question on `gh api search/repositories` across `10` in-language
+legs and `6` English control legs: `78.1%` of `73` in-language rows are ungranted — against `60.4%`
+of `149` English rows.** 🔵 **So "no licence" is a property of a YOUNG repository, not of a region,
+and a LATAM licensing campaign is aimed at the wrong variable.** 🔴 **The thing that IS regional is
+adoption: `94.5%` of the in-language population has zero stars, its maximum is `5`, and not one row
+clears `20` — against `16` English rows above `20` and a maximum of `4,912`.** 🟢 **The engagement
+consequence, stated plainly because it reverses advice this base gave nine days ago: take a global
+permissive base, localise it, and read the in-language repositories as a REQUIREMENTS DOCUMENT.**
+🔵 **They are worth reading precisely because nobody starred them — what a regional teacher builds
+with no audience is offline-capable, LMS-attached, messaging-delivered and teacher-gated.**
+→ [`agents/top.md`](agents/top.md), [`intel/trends.md`](intel/trends.md) `T940`, [`compose/patterns.md`](compose/patterns.md) `P798-1`
 
-**2. The licence that lets you ship the code still does not let you put the client's name on it —
-and that is now measured across the platform layer rather than inferred from three rows.**
-🟢 `p796` checked `3` addresses and found `3`. 🟢 **`p797` checked `37` and found `6`.** 🔴 **The two
-new ones are the sector default and the ERP underneath the school-group offers:**
-🔴 [`moodle/moodle`](https://github.com/moodle/moodle)'s `TRADEMARK.txt` (`3,367 B`) states that
-*"the GNU GPL does not include an implied right or licence to use Moodle's trade marks"* and
-prohibits, without written permission, the word *Moodle* or any Moodle logo **for commercial
-purposes**, in a software name, a company name, a domain name, advertising keywords, or *"to
-describe services around Moodle"*. 🔴 [`frappe/erpnext`](https://github.com/frappe/erpnext)'s
-`TRADEMARK_POLICY.md` (`3,020 B`) grants permission only where *"your project is non-commercial in
-nature"*. 🔵 **So on the two platforms most likely to be under an engagement, the restricted act is
-MARKETING the deliverable, not building it** — and the licensed route (Moodle's Certified Partner
-programme) is a commercial decision for week one, not a legal discovery for month six.
-🆕 🔴 **And the unit of analysis moved again: `T914` said the restriction can be in a different
-FILE; `T925` says it can be in a different REPOSITORY, where no per-address sweep will ever find
-it.**
-→ [`verticals/solutions.md`](verticals/solutions.md), [`intel/trends.md`](intel/trends.md) `T924`/`T925`, `P797-2`
+**2. An instrument library this size can regress by ADDING something.**
+🔴 **`p795-A` screens MIT grades by byte size against a `1,066`–`1,072 B` band. Four MIT payloads
+measured this pass span `1,062`–`1,096 B` and their clause text is byte-identical** — md5
+`aeb812008e99` once the copyright line is removed. 🔴 **The `34`-byte spread is
+`Copyright (c) 2026 jeffercbs` against
+`Copyright (c) 2026 Scientific Learning Skills Contributors`, and nothing else: `3` of `4` clean
+rows are flagged, and the flag rate rises with the length of the author's name.** 🟢 **And this base
+built the exact instrument `660` passes ago:
+[`compose/code/p135-licence-sha-identity/`](compose/code/p135-licence-sha-identity/) states the
+problem in its own README and answers it with a `body` normalisation level that removes copyright
+notices as spans, plus `MODIFIED_SUPERSET` for the `MIT + visible-attribution` rider class
+`p795-A` exists to catch.** 🔵 **Before building a screen, grep the library for the measurement it
+approximates.** 🔴 **Same pass, same shape, twice more: the README-vs-payload read `T937` needed
+already exists at [`p1060-readme-vs-payload`](compose/code/p1060-readme-vs-payload/), and the origin
+read `T935` needs exists at [`p800-region-provenance`](compose/code/p800-region-provenance/).**
+→ [`repos/foundations.md`](repos/foundations.md), [`intel/trends.md`](intel/trends.md) `T938`
 
-**3. A mandate buys deployment and nothing else: when Korea's ended, `94.8%` of schools stopped.**
-🔴 **`AI 디지털교과서` adoption went `4,095` schools (`34.2%`) → `1,481` (`12.5%`) → `622` (`5.2%`)
-across `1H 2025`–`1H 2026`, after the August `2025` amendment reclassified it from *교과용 도서*
-(textbook) to *교육자료* (educational material) and moved adoption from national to
-school-by-school.** 🔵 **Every regional opening in this base is anchored to a compelled document.
-`T932` is the limit of that strategy, stated by a national experiment with twelve thousand schools
-in it: a compelled deployment survives exactly as long as the compulsion.** 🟢 **It is `T907`
-restated at scale — the binding constraint is whether a teacher chooses the thing — and it is why
-`p797` finally built the instrument that can show voluntary use** ([`compose/code/p797-dosage/`](compose/code/p797-dosage/)).
-🟢 What remains in Korea is a better-shaped buyer: `1,900` self-selecting lead schools, and
-AI-subject 인정 교과서 piloting in `1H 2027`.
-→ [`intel/market.md`](intel/market.md), [`intel/trends.md`](intel/trends.md) `T932`, `P797-3`
+**3. An author wrote the content carve-out this base has been asking for, in `571` bytes.**
+🔴 `T916` established that on a code/content split GitHub's classifier reports the CODE licence and
+silently drops the CONTENT licence — and in education the content licence governs the curriculum.
+🟢 **[`danielgalanv/oral-ia`](https://github.com/danielgalanv/oral-ia)'s `NOTICE` does it unprompted:
+the Apache-2.0 grant covers the code, tests, specifications and its own documentation, and does NOT
+cover the teaching material, the third-party document texts used in the pilot, or the language
+models — each keeping its own holders' conditions.** 🔵 **Every deliverable in this base mixes those
+same four layers with four different owners and almost none of them says so.** 🟢 **It is now a
+week-one deliverable with a real precedent to copy instead of a lawyer to brief.**
+→ [`verticals/solutions.md`](verticals/solutions.md), [`compose/patterns.md`](compose/patterns.md) `P798-2`
 
 ## Regional summary
 
 | Region | The opening | The named gap |
 |---|---|---|
-| **North America** | 🔴 **Still the densest legislative calendar in the world and still a pipeline rather than a market: `134` AI-in-education bills across `31` states in `2026`, `35`+ states with guidance, no binding federal curriculum standard.** 🟢 Dated obligations to sell against: NC `SL 2026-41` (`2026-12-31` → `2027-06-30` → `2028-06-30`), 🔴 **Ohio's districts must adopt an AI framework by `2026-07-01`**, 🟢 **Mississippi embeds AI literacy in general education for all incoming undergraduates from Fall `2026`.** 🟡 A `K-12 AI Literacy and Readiness Act of 2026` has advanced in committee. 🟢 **The offer: the state writes the model policy — the district has to PROVE it follows the one it adopted, and `p797` makes that provable** | 🔴 **No spend figure for Canada or Mexico, fourth pass, because the mandated query contains "North America".** 🟡 State trackers disagree on the status of several bills (Maryland `SB 720`/`HB 1057`), so quote the state, not the tracker |
-| **EMEA** | 🟢 **`Regulation (EU) 2026/1744` dates everything and the SPLIT is the commercial point: Art. `50` transparency has applied since `2026-08-02` and was NOT deferred, while Annex III standalone high-risk — education — moved to `2027-12-02`.** 🔵 The expensive work has `13` months of slack; the cheap work is already late. 🟢 Art. `5` prohibitions live; Art. `27` FRIA owed by public deployers. 🟢 **The best line in this base still holds: `63%` of European teachers use AI and `16%` believe general-purpose AI improves outcomes** (Sanoma, `>20,000` teachers, `14` countries) — 🔵 a `47`-point gap is a market that tried the generic tool and rejected it | 🔴 **Spend still unanswerable: `2026` European estimates span `$2.11B`–`$5.86B`, a `2.8×` spread.** 🔴 **Still ONE European-origin open-source education agent at scale** (`tutor-mcp` 🇫🇷, ★`102`); `p797` adds no second and says so. 🔴 **And the permissive EMEA platform this base recommends is the one whose logo is `CC BY-ND 2.5`** |
-| **APAC** | 🔴 **`p797`'s regional headline is a warning: Korea `34.2%` → `5.2%`** (`T932`). 🟢 **The compellable obligations stand and are where the money is:** 🇻🇳 Vietnam's Law on AI (`2026-03-01`) makes education high-risk requiring **pre-deployment registration**; 🇦🇺 **TEQSA compels an institutional generative-AI action plan from EVERY provider**; 🇰🇷 AI Basic Act in force `2026-01-22`. 🟢 🇨🇳 **`教科信〔2026〕1号` now has three nameable assets — the `国家教育智能算力服务平台` (BUPT-led), `23` education-purpose + `13` subject-vertical models, and 🆕 a state-commissioned OPEN-SOURCE community, the `启悟学习社区` (SJTU-led)** — 🔵 **the only contribution-shaped entry route in this base.** 🟢 🇯🇵 MEXT `Ver. 2.0` operative, `Ver. 2.1` tabled `2026-06-30`, `2026` pilots at `10`/`100`/`51` municipalities | 🔴 **`0` procurement documents for India, Singapore or Australia for a FOURTH pass** — 🟢 now specific: a TENDER-ACCESS gap, not a discovery gap, since the `ja`/`ko`/`zh` legs did return the policy layer. 🔴 **`0` new APAC-origin repositories, while the two highest-starred rows here remain APAC university projects** (`DeepTutor` ★`58,622`, `OpenMAIC` ★`43,392`, both re-measured exactly) |
-| **LATAM** | 🟢 **The region's offer changes more this pass than in any since `p790`: Brazil has a `12`-month clock** (above), plus `Edital MEC nº 01/2026` and a `Referencial` that names open source. 🟢 **The evaluation gap keeps its denominator and its constraint** (UNESCO IESALC, `200` institutions / `19` countries): `87%` use · `26%` strategy · `18.5%` policy · `9%` evaluation · 🔴 **`8%` any AI budget, `4%` among PUBLIC universities.** 🟢 Corroborated from a second instrument — UNESCO's Observatory (ECLAC, Santiago, `2026-04-14`): `>50%` of teachers in Chile and Brazil using AI against `<10%` of institutions with formal guidelines. 🟢 New: 🇲🇽 **`ENIAG` surveyed `1.5M`+ students and ~`170,000` teachers, against `MXN 284.1M` for teacher professional development in `2026`** | 🔴 **The supply-side correction that reverses five passes: LATAM-origin open-source education agents are NOT missing — `5` found in one hour on the `es`/`pt` legs, and `5` of `5` serve NO grant at all** (`T931`). 🟢 **So the engagement starts with a licensing conversation with a reachable author, not a search** → `p797-E`. 🟡 `ILIA 2026` (🇨🇱 `71.4` · 🇨🇴 `56.8` · 🇲🇽 `52.0`) recorded with an explicit non-comparability warning |
-| **Global** | 🟢 **Five converging legs now.** Regulators require a named human decision-maker; the best RCT says the binding constraint is engagement under teacher control (`T907`); the deployment literature finds effects only where scope is narrow and educator-controlled; the delivery surface is a licence question before an engineering one (`T914`); 🆕 **and that licence question is not answered at the repository (`T925`).** 🟢 **AI proposes, a named human decides, the system proves it — and `p797` is the pass where "proves it" stopped being a slogan, because the dosage instrument exists, has controls, and counts the students who never showed up** | 🔴 The platform layer is copyleft (`GPL-3.0`, `AGPL-3.0`, `EUPL-1.2`, `LGPL-3.0`) while the agent layer is permissive and mostly APAC-origin — the same architectural decision in every engagement. 🔴 **And no independent security or data-governance evaluation of any education MCP server has been published** (`p792-D`, still unclaimed) |
+| **North America** | 🔴 **The densest legislative calendar in the world and still a pipeline rather than a market.** 🟡 **Three trackers, three counts, three definitions: `134` bills across `31` states (`p797`), *"nearly `100`"* state bills touching student AI use, `15`+ states having introduced or passed legislation — 🔵 quote the STATE and the bill number, never the national total.** 🟢 Dated obligations to sell against: NC `SL 2026-41` (`2026-12-31` → `2027-06-30` → `2028-06-30`), 🔴 **Ohio's districts must adopt an AI framework by `2026-07-01`**, 🟢 Mississippi embeds AI literacy for all incoming undergraduates from Fall `2026`. 🆕 🟡 **A California ballot initiative on AI and MINORS would bind education deployments through child-safety law rather than education law** | 🔴 **No spend figure for Canada or Mexico, FIFTH pass, because the mandated query says "North America" and returns US-only results.** 🟢 Specific enough to fix: name the countries. 🆕 🔵 **Chegg cut `45%` of staff (`388` roles) — the first thing AI destroyed here was the answer-delivery business, which is what "a chatbot that answers student questions" asks to become** |
+| **EMEA** | 🟢 **`Regulation (EU) 2026/1744` dates everything, now FOUR-source corroborated (`T939`), and the SPLIT is the commercial point: Art. `50` transparency live since `2026-08-02` and NOT deferred, while Annex III standalone high-risk — education — moved to `2027-12-02`.** 🔵 The expensive work has `13` months of slack; the cheap work is already late. 🟢 Art. `5` prohibitions live (emotion recognition in education banned since Feb `2025`); Art. `27` FRIA owed by public deployers; 🆕 Commission Art. `6` draft guidelines `2026-05-19`. 🟢 **Still the best line in this base: `63%` of European teachers use AI and `16%` believe general-purpose AI improves outcomes** — a `47`-point gap is a market that tried the generic tool and rejected it | 🔴 **Spend unanswerable: `$2.11B`–`$5.86B`, a `2.8×` spread.** 🔴 **Still ONE European-origin open-source education agent at scale** ([`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) 🇫🇷, ★`102`); 🆕 🟢 **`p798` adds three European permissive rows and NONE is at scale** — supply is appearing, adoption is not. 🔵 Same shape as LATAM, one tier up |
+| **APAC** | 🔴 **The regional headline is still a warning: Korea `34.2%` → `5.2%` of schools in twelve months once the mandate became discretionary — 🔴 and `p798` could not reach the ministry to verify it.** 🟢 **The compellable obligations are where the money is:** 🇻🇳 education high-risk under the Law on AI (`2026-03-01`) requiring **pre-deployment registration**; 🇦🇺 **TEQSA compels an institutional generative-AI action plan from EVERY provider**; 🇰🇷 AI Basic Act in force `2026-01-22`. 🟢 🇨🇳 `教科信〔2026〕1号` with three nameable assets incl. the state-commissioned open-source `启悟学习社区` — 🔵 the only contribution-shaped entry route here. 🆕 🟢 **Ipsos `2026` finds LOWER support for banning AI in schools across Asian markets — permission to operate running AHEAD of regulation, the inverse of Europe** | 🔴 **`0` procurement documents for India, Singapore or Australia, FIFTH pass — a TENDER-access gap, not a discovery gap.** 🔴 **`0` new APAC-origin repositories this pass, while the two highest-starred rows in this base remain APAC university projects** (`DeepTutor` ★`58,622`, `OpenMAIC` ★`43,392`). 🆕 🟢 **A named place to look: the World Bank's Global EdTech Policy Academy on AI, Seoul, `2026-08-31`–`09-04`** |
+| **LATAM** | 🟢 **Brazil's `12`-month clock is the anchor: `Parecer CNE/CP nº 15/2026`, homologated `2026-11-10`, prohibitions effective on publication, `12` months for policies, governance instruments and CONTRACTS** — 🔴 `CITED, NOT READ`, `www.gov.br` refused again. 🆕 🟢 **A second adoption instrument, and the strongest LATAM number this base holds: Digital Education Council LATAM `2026` with Tecnológico de Monterrey — `92%` of students and `79%` of faculty using AI against `30%` who believe their institution has responded effectively.** 🟢 The evaluation gap keeps its denominator (UNESCO IESALC, `200` institutions / `19` countries): `87%` use · `9%` evaluation · 🔴 **`8%` any AI budget, `4%` among PUBLIC universities.** 🆕 🟢 **Two named channels: the IDB's `193`-initiative LAC inventory, and EdTech Hub + Fundación Ceibal (Sept `2026`)** | 🔴 **The supply correction that reverses `p797`: `78.1%` ungranted against a `60.4%` English baseline, so grant hygiene is an intake rule rather than a regional programme — while `94.5%` zero stars and a ceiling of `5` is the real constraint** (`T940`). 🔴 **And `es` ≠ LATAM: two of this pass's best in-language rows are Spanish, `gh api users/{login}` is refused, so origin is not resolvable at scale and `LATAM?` is published rather than guessed** (`T935`) |
+| **Global** | 🟢 **Five converging legs, and the fifth arrived from the multilateral channel this pass: the OECD's `2026` Digital Education Outlook says AI helps learning only when pedagogy stays in control** — 🔵 **the same conclusion as `T907`'s RCT reading and as every regulator here. When the trials, the regulators and the OECD agree on the control point, it stops being a design preference and becomes the thing a proposal must evidence.** 🟢 **AI proposes, a named human decides, the system proves it** | 🔴 The platform layer is copyleft while the agent layer is permissive — the same architectural decision in every engagement. 🔴 **And `p792-D` is still unclaimed with a sharper edge: no independent security or data-governance evaluation of any education MCP server exists, and [`jeffercbs/chispa-mcp`](https://github.com/jeffercbs/chispa-mcp) now exposes `77` classroom tools at the teacher's own permission level** |
 
 ## Files
 
 | File | What it holds | Mode |
 |---|---|---|
-| [`agents/top.md`](agents/top.md) | `130` addresses · 🔴 **`0` added this pass and that is the finding** (`T931`) · `4` headline star counts re-measured exactly | prepended each pass |
-| [`agents/trending.md`](agents/trending.md) | What is new per window · **`938` `##` sections** (measured) | 🟢 **append-only** |
-| [`repos/foundations.md`](repos/foundations.md) | Foundational repos; 🟢 **the `83`-cell provenance re-typing**; archived and stale rows labelled | prepended each pass |
-| [`repos/trending.md`](repos/trending.md) | Repo movement per window · **`936` `##` sections** (measured) | 🟢 **append-only** |
-| [`verticals/solutions.md`](verticals/solutions.md) | LMS, SIS, assessment and interop platforms · 🔴 **brand layer graded three-state across all `37`** | prepended each pass |
+| [`agents/top.md`](agents/top.md) | `137` addresses · 🟢 **`7` added, every grant byte-verified with blob + HEAD sha** | prepended each pass |
+| [`agents/trending.md`](agents/trending.md) | What is new per window · **`939` `##` sections** | 🟢 **append-only** |
+| [`repos/foundations.md`](repos/foundations.md) | Foundational repos · 🔴 **`0` added this pass, and the scope statement that says why** | prepended each pass |
+| [`repos/trending.md`](repos/trending.md) | Repo movement per window · **`937` `##` sections** · 🔴 the channel census | 🟢 **append-only** |
+| [`verticals/solutions.md`](verticals/solutions.md) | LMS, SIS, assessment and interop platforms · 🟡 **the Moodle Partner route, as far as the public record goes** | prepended each pass |
 | [`intel/market.md`](intel/market.md) | Market range and **Opportunities by region** (`5` subsections) | rewritten each pass |
-| [`intel/trends.md`](intel/trends.md) | `T924`–`T934` | prepended each pass |
-| [`compose/patterns.md`](compose/patterns.md) | `P797-1`–`P797-5` — LATAM 🇧🇷 · a global week-one gate · APAC 🇰🇷 · APAC 🇨🇳 · EMEA | prepended each pass |
-| [`intel/open-gaps.md`](intel/open-gaps.md) | Action ledger · `p796` disposition + `p798` queue | 🟢 **append-only** |
-| [`compose/code/p797-dosage/`](compose/code/p797-dosage/) | 🟢 **`ACTION p796-A`, built: the four dosage metrics + `11` offline controls** | — |
-| [`compose/code/p797-evidence-address-gate/`](compose/code/p797-evidence-address-gate/) | 🟢 **`ACTION p796-E`, built and WIRED into `make hooks`** | — |
-| [`ingest/p797-brand-layer-gate.sh`](ingest/p797-brand-layer-gate.sh) | 🟢 The brand-layer sweep, ONLINE, out of hooks by the `carried-existence-sweep` rule | — |
-| `evidence/*2026-11-12-p797*` | The five machine outputs behind this pass, 🔴 **including two UNCORRECTED first runs** | — |
+| [`intel/trends.md`](intel/trends.md) | `T935`–`T941` | prepended each pass |
+| [`compose/patterns.md`](compose/patterns.md) | `P798-1`–`P798-4` — LATAM localisation · the `571`-byte content boundary · an education-MCP gate · EMEA Art. `50`-first | prepended each pass |
+| [`intel/open-gaps.md`](intel/open-gaps.md) | Action ledger · `p797` disposition + `p799` queue | 🟢 **append-only** |
+| [`intel/licence-requests/`](intel/licence-requests/) | 🟢 **`9` drafts + the `3`-test SELECTION RULE** (`ACTION p797-E`) | 🔴 drafted, NOT sent |
+| [`ingest/p798-latam-grant-census.sh`](ingest/p798-latam-grant-census.sh) | 🟢 The in-language census, ONLINE | — |
+| [`ingest/p798-grant-byte-verify.sh`](ingest/p798-grant-byte-verify.sh) | 🟢 The blobless-clone grant byte channel, ONLINE | — |
+| `evidence/*2026-11-12-p798*` | The six machine outputs behind this pass, 🔴 **including one UNCORRECTED first run** | — |
 
-🔴 **Two artefacts published deliberately in their WRONG form, so the corrections can be
-re-derived rather than taken on trust:**
-[`brand-layer-census-UNCORRECTED-v1`](evidence/brand-layer-census-UNCORRECTED-v1.2026-11-12-p797.tsv)
-matched `icon` as a substring (hitting *"semiconductor"* in every GPL-3.0 row) and graded a
-directory as a `4,380 B` licence file; and
-[`evidence-address-gate-UNCORRECTED-v1`](evidence/evidence-address-gate-UNCORRECTED-v1.2026-11-12-p797.txt)
-reported **`15,591`** offending rows where **`6`** are real.
+🔴 **One artefact published deliberately in its WRONG form, so the correction can be re-derived
+rather than taken on trust:**
+[`candidate-grant-bytes-UNCORRECTED-v1`](evidence/candidate-grant-bytes-UNCORRECTED-v1.2026-11-12-p798.tsv)
+carries a JSON error blob in its `archived` and `pushed` columns on all `16` rows, because the
+instrument called `repos/{owner}/{repo}` per address and that call is refused in this session.
 
 ## 🔴 Channel discipline — read before quoting anything here
 
 | Claim type | Status |
 |---|---|
-| Repository existence | 🟢 **Byte-verified on the blobless-clone channel: `37` addresses this pass, `0` failures, `100` seconds; `176` at `p796` in `16` seconds.** 🔴 **`curl -sI` — the method this base is instructed to use — returns `403` for `torvalds/linux` AND for an invented address, so it cannot distinguish live from dead here (`T923`).** 🔵 **`p796-F`: that instruction lives in the scheduler's prompt, not in this repository, so read it as "verify existence" and satisfy it with the clone** |
-| Repository **maintenance** | 🟡 `archived` and `pushed_at` read for the rows measured. 🔵 Treat any row without a last-push date as unassessed |
-| Licence **grant** | 🟢 **Byte-verified by title line + clause count + restriction vocabulary.** 🔴 **The unit is the GRANT, not the file and not the repository — and `p797` adds a count defect to the known grade defects: `Kosudo/nextSIS`'s `39,890 B` licence file is an anthology of THREE grants with its own table of contents, and `p796`'s census recorded `1`** |
-| Licence **restrictions** | 🔴 **Still the direction instruments fail in.** NonCommercial in Spanish (`T902`), an English branding rider (`T900`), an MIT grant sentence as camouflage (`T908`), `NoDerivs` on brand assets in a `NOTICE` (`T914`) — 🆕 **and `T925`: in another repository entirely** |
-| **Brand / white-label rights** | 🟢 **Now measured across the whole platform layer: `37` addresses, `54` files, three-state — `6` bespoke · `23` stock reservation · `25` clean.** 🔴 **`frappe/education` and `frappe/lms` are graded clean and are NOT: their policy is in `frappe/erpnext`** → `p797-D` |
-| Byte sizes | 🟢 **Reproducible, and now with a caveat earned the hard way: `ankitects/anki`'s `LICENSE` went `1,930 B` → `1,937 B` between `p796` and `p797` ON THE SAME DAY** (commit `9c539a036804`, `16:06:11 -0300`, *"update logo copyright holder"*). 🔵 **A byte size without a commit sha beside it is a snapshot, not a verification** (`T927`) |
-| 🟢 **Provenance `sha` cells** | 🟢 **Re-measured: `83` cells across the three recommendation shelves are `43` COMMIT shas, `9` licence-file BLOB shas and `31` that resolve to neither today** (`T926`). 🔴 **The defect is AMBIGUITY, not wrongness — a reader must guess the object kind before checking anything.** 🟢 **Every cell written at `p797` carries its kind; re-typing the history is `p797-B`** |
-| Star counts | 🟢 **Re-measured exactly via `gh api search/repositories`, `10` × `repo:` per call.** 🔴 **A secondary source was off by `-23%` on the largest row in this base** (`DeepTutor` reported ~`45,224`, measured `58,622`) |
-| Published machine output | 🟢 **Policed for the first time: `gate-evidence-address` is in `make hooks`, green over `2,097` files / `700` in declared scope** — `2,093`/`696` when the sweep ran, and it judges this pass's own `4` new artefacts too. 🔴 **Getting there took three predicates — `15,591` → `5,093` → `18` rows — and what bounded it was a SMALLER DECLARED SCOPE, not a cleverer rule** (`T929`) |
-| 🔴 **The gate suite's own health** | 🔴 **Measured this pass, and it is worse than this base has ever said out loud: `make hooks` runs `72` gates and `21` are RED — at `HEAD` before this pass it was `21` of `71`, the same `21`.** 🟢 **So `p797` adds no red and one green.** 🔴 **But `DECLARED_RED` names only `4` of them, which leaves `17` UNDECLARED reds, and `make commit-gates` would therefore refuse every commit if `ingest/pre-commit` were installed — which `Gap 423-B` says a fresh clone never does.** 🔵 **A blocking suite that nothing blocks on is not a gate, it is a report** → `p797-H` |
-| Publishing | 🟢 **Works.** This repository must be **attached to the session's authorised set** before a push; the proxy otherwise declines to inject a credential. 🔵 The attachment is **per-session**, so a future pass seeing `403` should attach, not record "blocked" |
-| Every market, adoption and regulatory figure | 🔴 **Search-channel testimony.** 🔴 **`T906` persists into a FOURTH pass and gains a seventh domain: `eur-lex.europa.eu`, `oecd.org`, `unesco.org`, `op.europa.eu`, `iesalc.unesco.org`, `digital-strategy.ec.europa.eu` and 🆕 `www.gov.br` all fail at `CONNECT` — a network-POLICY denial, not an unreachable site.** 🔴 **This pass's headline instrument is behind the newest one.** 🟢 **`moe.go.kr` has NOT been tested and is queued as `p797-F`** |
+| Repository existence | 🟢 **Byte-verified on the blobless-clone channel: `25` addresses this pass, `0` failures.** 🔴 **`curl -sI` — the method the scheduler's prompt names — returns `403` for a live address AND for an invented one, so it cannot distinguish them here (`T923`).** 🔵 Read that instruction as *"verify existence"* and satisfy it with the clone |
+| 🆕 **Per-repository metadata** | 🔴 **`gh api repos/{owner}/{repo}` and `gh api users/{login}` are REFUSED in this session; `gh api search/*` answers normally** (`T941`). 🔴 **A refused call returns a JSON body, and a JSON body is a string that fits in any TSV cell** — assert the shape of a cell before publishing it |
+| Licence **grant** | 🟢 **Byte-verified by title line + clause text + byte size, with blob sha and HEAD commit sha beside every value.** 🔴 **The unit is the GRANT, not the file and not the repository** |
+| 🆕 **Licence SCREENING** | 🔴 **`p795-A`'s byte-size band measures the length of the copyright holder's name: `4` byte-identical MIT payloads span `1,062`–`1,096 B` and `3` are flagged** (`T938`). 🟢 **Use [`p135`](compose/code/p135-licence-sha-identity/)'s copyright-stripped normalisation instead** |
+| Licence **restrictions** | 🔴 **Still the direction instruments fail in, and the LOCATION keeps moving:** a second licence file (`T914`), a different repository (`T925`), two grants in one file (`T915`), 🆕 **and the README under an unmodified MIT** (`T937`) |
+| **Region placement** | 🔴 **A query LANGUAGE is not a region** (`T935`). 🔴 **The `es` leg returns Spain; the APAC leg returned the UAE.** 🟢 **Rows placed on language alone are published as `LATAM?`, and the closed vocabulary is never given a guess** |
+| Star counts | 🟢 **Re-measured on `search/repositories`.** 🔴 A secondary source was off by `-23%` on this base's largest row at `p797` |
+| 🆕 **Running this repository's own code** | 🔴 **REFUSED in this session.** An attempt to run one instrument's test suite was declined by the command classifier. 🔴 **So `make hooks`, `make commit-gates` and `ACTION p797-H` are undischargeable from here, and [`p135`](compose/code/p135-licence-sha-identity/) is cited from its README and source rather than from a run.** 🟢 **No claim in this pass depends on executing committed code** |
+| Every market, adoption and regulatory figure | 🔴 **Search-channel testimony.** 🔴 **`T906` now names TEN domains that fail at `CONNECT`:** `eur-lex.europa.eu`, `oecd.org`, `unesco.org`, `op.europa.eu`, `iesalc.unesco.org`, `digital-strategy.ec.europa.eu`, `www.gov.br`, and 🆕 **`www.moe.go.kr`, `moe.go.kr`, `english.moe.go.kr`.** 🔵 **Every one is a government or multilateral publisher and no commercial domain has ever failed this way — a network POLICY, not an outage** |
+| 🟢 **A numbered instrument** | 🟢 **Now tested rather than asserted: `Regulation (EU) 2026/1744` was challenged by this pass's own EMEA leg and held across four independent legal readings** (`T939`). 🔵 **`CITED, NOT READ` is usable because anyone can check a number in one lookup** |
 
-🔴 **Nine recorded ways to misread a licence, every one found by a control on a row this base had
-already published** — case-blindness (`T842`), title-line insufficiency (`T847`),
-length-as-integrity (`T845`), language-blindness (`T848`), appendix contamination (`T849`),
-affero-substring (`T894`), additive riders (`T900`), camouflaged grant sentences (`T908`), the
-restriction in a different FILE (`T914`) — and 🆕 **`T925`: the restriction in a different
-REPOSITORY.**
-
-🔵 **Three standing cautions now hold simultaneously, and `p797` earned the third by reproducing
-the second one's failure mode inside a single pass.** 🟢 **`p795-G`: before trusting a sweep that
-returns zero, re-run it on the finding that caused it to be queued.** 🔴 **`p796-G`: that is not
-enough — a control set must span the population's KINDS.** 🔴 **`p797-A`: and that is not enough
-either, because a control set cannot span kinds its author has not met. `21` controls across `14`
-kinds all passed while the gate was wrong on `15,591` rows.** 🟢 **What worked was narrowing the
-SCOPE to a column that had declared what it holds — `15,591` → `18`.** 🔵 **Prefer a smaller
-declared scope to a cleverer predicate.**
+🔵 **Four standing cautions now hold simultaneously, and `p798` earned the fourth by watching a
+two-minute control leg overturn five passes of narrative.** 🟢 **`p795-G`: re-run a zero-returning
+sweep on the finding that queued it.** 🔴 **`p796-G`: a control set must span the population's
+KINDS.** 🔴 **`p797-A`: prefer a smaller DECLARED scope to a cleverer predicate.** 🆕 🟢 **`p798-G`:
+when a finding is a RATE, measure that rate somewhere it should NOT hold — it is the cheapest of
+the four and it is the one that would have caught `T931` before it shipped.**
