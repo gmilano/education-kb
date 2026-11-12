@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p792` — **This base's standing "DO NOT ship `oppia`" verdict is REFUTED on the lockfile. The AGPL-3.0 it warns about is real, and `oppia` does not use it.**
+
+🟢 **Control before any verdict:** `HKUDS/DeepTutor` `LICENSE` reproduced at **`11,408 B`**, `moodle/moodle` `COPYING.txt` at **`35,147 B`**, `oppia/oppia` `LICENSE` at **`11,358 B`** — all three match the bytes this base already records. 🔴 **`5` defects in this pass's own instruments were caught by controls before any verdict shipped** — see `intel/trends.md` `T884`–`T886` and the defect list at the foot of `agents/trending.md`.
+
+### 🔴 `T884` — the row this file has published for four passes, measured on the lockfile
+
+🔴 **What this file said, carried since `p787`:** `oppia/oppia` · `🔴 1 AGPL-3.0 of 171` · *"**DO NOT ship as-is: `angular-shepherd` is AGPL-3.0, and a browser bundle is network delivery.** Remove or replace it first."*
+
+🟢 **The `171` is exactly right** — `83` `dependencies` + `88` `devDependencies` in `package.json`, distinct count `171`. 🟢 **`angular-shepherd` is genuinely declared**, at `package.json` line `179`, in `dependencies` (not `devDependencies`), so it does reach the browser bundle. 🔴 **And the licence verdict is still wrong**, because it was read off the package rather than off the version:
+
+| Measured | Value | Channel |
+|---|---|---|
+| `angular-shepherd` declared range | `^11.0.0` · in `dependencies` | `package.json` byte channel |
+| 🟢 **`yarn.lock` RESOLVES it to** | 🟢 **`11.0.0`** — integrity `sha512-Ig0OU6vE0JAbyWFTH+qgmTgPKUxLmUXMCJde6XFBAg2gc624fvcJ5s6GapM/lUaFaDjtLkGJuAkb9pI0dUo8rQ==` | `yarn.lock` byte channel |
+| 🟢 **Licence of `angular-shepherd@11.0.0`** | 🟢 **MIT** | npm registry |
+| 🔴 Licence of `angular-shepherd@latest` (`22.0.0`) | 🔴 **AGPL-3.0** | npm registry |
+| 🟢 **Where the relicence happened** | 🟢 **MIT from `v0.0.1`; AGPL-3.0 from `v22.0.0`** — one transition, full version history swept | npm registry |
+| `shepherd.js` declared / resolved | `^8.0.1` → 🟢 **`8.3.1`**, MIT (`latest` `16.0.0` is AGPL-3.0) | `yarn.lock` + npm |
+
+🟢 **So `oppia` ships MIT versions of both Shepherd packages, and its caret ranges cannot reach the AGPL ones.** `^11.0.0` admits `>=11.0.0 <12.0.0`; the AGPL-3.0 begins at `22.0.0`. `^8.0.1` admits `>=8.0.1 <9.0.0`; `shepherd.js`'s AGPL-3.0 begins at `16.0.0`. **No resolution inside either range is AGPL-3.0.**
+
+🟢 **The verdict therefore flips, and the rule flips with it.**
+
+| Then | Now |
+|---|---|
+| 🔴 *Do not ship `oppia` as-is; remove or replace `angular-shepherd` first* | 🟢 **Ship `oppia`. Pin Shepherd and gate the major bump.** The exposure is an **upgrade** risk, not a present one |
+
+🔵 **Why this matters beyond one row.** `oppia/oppia` is the interactive-lessons platform this base recommends most often, and the warning was strong enough to steer an engagement away from it. 🔴 **It was wrong in the direction that costs the most** — it removed a usable, Apache-2.0, `7.0k★` option on the strength of a licence field read at `latest`. 🟢 **`T884`'s general form: a licence is a property of a VERSION, not of a package.** A dependency audit that does not resolve the lockfile is reading a licence the project does not use.
+
+### 🟢 And the Python layer has a strong-copyleft direct dependency nobody had recorded
+
+🔵 `oppia` carries two independent dependency layers and this base had audited neither to its lockfile. The Python one is a real `pip-compile` lockfile — `requirements.txt`, `2,504` lines, `--generate-hashes`, **`152` distinct pinned packages** — and all `152` resolved against PyPI with **`0` unresolved**.
+
+| Package | Licence | Direct or transitive |
+|---|---|---|
+| 🔴 **`mutagen==1.47.0`** | 🔴 **GPL-2.0-or-later** | 🔴 **DIRECT** — `# via -r requirements.in`, named at `requirements.in` line `25` |
+| 🟡 `certifi` | MPL-2.0 (file-level weak copyleft) | transitive — via `httpcore`, `httpx`, `requests` |
+| 🟡 `orjson` | `MPL-2.0 AND (Apache-2.0 OR MIT)` | transitive |
+
+🔴 **`mutagen` is strong copyleft and it is a declared direct dependency** of a platform this file lists as permissive — and this base had never named it. 🟢 **But it is GPL-2.0, not AGPL-3.0, and the difference is the whole point:** GPL-2.0's copyleft is **distribution-triggered**, and AGPL-3.0's adds a **network-service** trigger. 🟢 **For the normal education deployment — a hosted platform the institution runs — GPL-2.0 does not reach the client's own code.** Had the AGPL claim been true, it would have.
+
+🟡 **Deliverable rule for `oppia`, replacing the old one:** pin `angular-shepherd` and `shepherd.js` and gate their major bumps in CI; and if the Python service is **distributed** rather than hosted, either replace `mutagen` or carry GPL-2.0 at that boundary. `requirements.in` has only **`29`** direct entries, so the substitution is a small, bounded piece of work.
+
+🔵 **`oppia`'s own tree is single-family.** `23` paths match the licence gate; `21` are Angular source files and screenshots for Oppia's in-product *licence page* (`license-page.component.ts` and friends), not grants. The actual grants are `LICENSE` (Apache-2.0, `11,358 B`) and `NOTICE`. 🔴 **A path-name gate over-reports — see `T886`.**
+
+### 🟢 `p791-D` discharged — `Miaotofu01/Study-Mate` cleared beyond the first layer, with one addition
+
+| Path in tree | Bytes | Grant |
+|---|---|---|
+| `LICENSE` | `1,064 B` | 🟢 MIT |
+| `lib/katex/LICENSE` | `1,107 B` | 🟢 MIT (KaTeX — already recorded at `p791`) |
+| 🆕 `lib/katex/fonts/LICENSE` | `4,616 B` | 🟡 **SIL Open Font License** — **not read at `p791`** |
+| `lib/watch/notice.ts` | `3,871 B` | — a TypeScript source file, not a grant (gate false positive) |
+
+🟢 **`363` files enumerated; `Study-Mate` is `TREE[MIT + MIT + OFL]` and it is usable.** 🔴 **And for the second consecutive pass, the grant the first layer missed was a FONT grant** (`p791`: OpenMAIC's `ZcoolHappy`; `p792`: KaTeX's OFL). 🟢 **Deliverable rule: carry the OFL file and keep the font names intact.** 🔵 KaTeX turned up in **three** separate repositories this pass — it is the sector's most-vendored maths renderer, and its font grant travels with it every time.
+
+
 ## 🆕 `p791` — the permissive layer gains a real SIS/ERP, and a carried foundation row loses its grant text
 
 🟢 **The carried sentence at the top of this file is amended for the first time in four passes, and only slightly.** The famous education platforms are still copyleft — Moodle, Open edX, Canvas, Chamilo, ILIAS, Frappe LMS and ERPNext are GPL or AGPL, and `p790` added `nextSIS` (GPL-3.0) to that list rather than to the permissive one. 🟢 **`p791` adds the first genuinely MIT Student-Information/ERP system this base has verified on the bytes.**

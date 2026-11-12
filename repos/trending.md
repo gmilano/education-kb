@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p792` — **The standing sentence at the top of `repos/foundations.md` survives, but the warning attached to its best permissive row does not: `oppia/oppia` is shippable, and this base said otherwise for four passes.**
+
+🟢 **Controls reproduced before any verdict:** `HKUDS/DeepTutor` `11,408 B` · `moodle/moodle` `COPYING.txt` `35,147 B` · `oppia/oppia` `LICENSE` `11,358 B`. 🟢 **Two new channels this pass:** `registry.npmjs.org` and `pypi.org/pypi/*/json`, both giving **per-version** licences — which is the whole finding.
+
+### 🔴 `T884` — the dependency warning on this base's most-recommended permissive platform, measured on the lockfile
+
+🔴 **The carried row:** `oppia/oppia` · Apache-2.0 · `🔴 1 AGPL-3.0 of 171` · *"DO NOT ship as-is: `angular-shepherd` is AGPL-3.0, and a browser bundle is network delivery. Remove or replace it first."*
+
+| Measured | Value | Channel |
+|---|---|---|
+| `package.json` direct deps | `83` + `88` = **`171`** | byte channel — 🟢 the count was right |
+| `angular-shepherd` declared | `^11.0.0`, section `dependencies` (line `179`) | byte channel — 🟢 it does ship to the browser |
+| 🟢 **`yarn.lock` resolution** | 🟢 **`11.0.0`**, integrity `sha512-Ig0OU6…Uo8rQ==` | byte channel |
+| 🟢 Licence at `11.0.0` | 🟢 **MIT** | npm registry |
+| 🔴 Licence at `latest` `22.0.0` | 🔴 **AGPL-3.0** | npm registry |
+| 🟢 **Relicence boundary, full history swept** | 🟢 **MIT from `v0.0.1`; AGPL-3.0 from `v22.0.0`** — exactly one transition | npm registry |
+| `shepherd.js` | `^8.0.1` → **`8.3.1`** MIT (AGPL-3.0 from `16.0.0`) | `yarn.lock` + npm |
+
+🟢 **`^11.0.0` admits `>=11.0.0 <12.0.0`; `^8.0.1` admits `>=8.0.1 <9.0.0`. Neither range can reach an AGPL-3.0 release.** 🟢 **`oppia` ships MIT Shepherd.**
+
+🟢 **The deliverable rule replaces the old one:**
+
+| Then | Now |
+|---|---|
+| 🔴 Do not ship `oppia`; strip `angular-shepherd` first | 🟢 **Ship `oppia`. Pin both Shepherd packages and gate their major bumps in CI.** The exposure is an **upgrade** risk |
+
+🔴 **And the Python layer carries a strong-copyleft direct dependency this base had never named.** `requirements.txt` is a real `pip-compile` lockfile — `2,504` lines, `--generate-hashes`, **`152` distinct pinned packages**, all `152` resolved against PyPI, **`0` unresolved**:
+
+| Package | Licence | Direct / transitive |
+|---|---|---|
+| 🔴 **`mutagen==1.47.0`** | 🔴 **GPL-2.0-or-later** | 🔴 **DIRECT** — `requirements.in` line `25` (of only `29` direct entries) |
+| 🟡 `certifi` | MPL-2.0 | transitive (`httpcore`, `httpx`, `requests`) |
+| 🟡 `orjson` | `MPL-2.0 AND (Apache-2.0 OR MIT)` | transitive |
+
+🟡 **GPL-2.0 is distribution-triggered; AGPL-3.0 is network-triggered.** 🟢 **For a hosted education platform — the normal case — `mutagen` does not reach client code.** Had the AGPL claim been true, it would have. 🟢 **`29` direct Python entries makes substitution a bounded piece of work if the service is ever distributed rather than hosted.**
+
+🔵 **`oppia`'s own tree is single-family Apache-2.0** — `LICENSE` (`11,358 B`) and `NOTICE`. The other `21` gate hits are its in-product licence **page** (`license-page.component.ts`, `licensePage-snap.png`). See `T886`.
+
+### 🟢 The permissive layer gains a different kind of member: MCP into the systems of record
+
+🔴 **This file's standing sentence is unchanged and still true:** *in education the famous platforms are copyleft and the permissive layer is narrow and specific.* Moodle, Open edX, Canvas, Chamilo, ILIAS, Frappe LMS, ERPNext, `nextSIS` — GPL or AGPL. 🟢 **`p792` adds the layer that routes around it**: you do not need a permissive LMS if you have a permissive, tool-scoped **way in** to the copyleft one.
+
+| Repository | Grant, on the bytes | ★ | Files | Licence paths | Role |
+|---|---|---|---|---|---|
+| 🟢 [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · `1,071 B` · `3c7307584ae4` | **`323`** | `529` | 🟢 **`1`** | 🟢 **Canonical MCP server for Canvas LMS.** Courses, assignments, submissions, grading, announcements as agent tools, plus agent skills. Pushed `2026-11-12`. 🟢 **The single most useful new foundation row this pass**: Canvas is what a North American higher-ed client runs, and this is an MIT path into it that does not touch Canvas's AGPL |
+| 🟢 [`Yuanpeng-Li/gradescope-mcp`](https://github.com/Yuanpeng-Li/gradescope-mcp) | 🟢 **MIT** · `1,068 B` · `0e01db542a01` | `8` | `80` | 🟢 **`1`** | MCP into **Gradescope** — rubrics, submissions, grading surfaces. 🔴 `★8`: a reference for the auth and rubric shape, not a dependency |
+
+🔴 **Canonicity, and it nearly went wrong (`T887`).** The first hit was [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) — MIT, `1,070 B`, `501` files, **`★10`**. Granted and real, but a derivative. Sweep: canonical `★323` · `boyuchengz/canvas-mcp` `★119` MIT · 🔴 `DMontgomery40/mcp-canvas-lms` `★104` **ungranted**. 🔵 `1,070` vs `1,071` bytes, `501` vs `529` files.
+
+🔴 **No LMS vendor ships an official MCP server.** Instructure documents the Canvas REST and GraphQL APIs and LTI 1.3 / LTI Advantage. Commercial hosted options exist (Atomic Jolt, ibl.ai). 🔴 **And no independent security or data-governance evaluation of any education MCP server has been published** — a server holding an institutional Canvas token reaches student records. 🟢 **That gap is a Globant offer, written up in `intel/market.md` under `Global`.**
+
+### 🔴 Carried actions NOT advanced this pass, stated rather than omitted
+
+- 🔴 **`p790-D`** — the `jinlize-tech` set is still **sampled, not swept**: `100` of `132` read on the claim channel, `2` on the byte channel; `30` unmeasured; licence uniformity across `132` repositories still rests on `2` identical shas. **Untouched this pass.**
+- 🔴 **Transitive depth `3+` remains unmeasured.** 🟢 **But layer `1` is now measured properly for the one row that mattered most** — `oppia`, on both of its lockfiles, which is what `p790-A`/`p791-B` asked for. 🔴 `nbgrader` depth `3+` is still open.
+- 🔴 **`p791-E`** — the tree sweep across the rest of `agents/top.md` is **not** done. `p792` built the gate, ran it on `4` repositories, and **found the gate itself defective in both directions** (`T886`). 🟢 The corrected gate is cheap and specified; the sweep is re-queued with it.
+- 🔴 **`p791-F`** — licence **byte sizes** recorded only for the `11` rows this pass touched, not for the base's `120+`. **Mostly carried.**
+
+
 ## 🆕 `2026-11-12` · `p791` — **The permissive layer in education gains its first verified Student-Information/ERP system — and it was one `NOASSERTION` field away from being thrown out. A carried foundation row simultaneously loses its grant text, in `19` bytes.**
 
 🟢 **Control before any verdict: the `p790` known-good rows reproduced** — `HKUDS/DeepTutor` `11,408 B`, `THU-MAIC/OpenMAIC` root `1,065 B`. 🟢 **New instrument this pass:** `git clone --filter=blob:none --no-checkout --depth 1` + `git cat-file -p HEAD:<path>`, which enumerates a full tree case-exactly and fetches only the blobs read. It settled `T882` and it is the method `p790`'s `T875` called for.
@@ -61133,6 +61192,3 @@ Adyacentes que aparecieron en trending de educación AI sin que pudiéramos veri
 
 ---
 *Historia conservada. Append-only: agregar arriba, nunca sobrescribir.*
-
-
-

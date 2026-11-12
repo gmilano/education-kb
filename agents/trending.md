@@ -4,6 +4,89 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `2026-11-12` · `p792` — **This base's own "DO NOT ship" verdict on the sector's best permissive lessons platform is REFUTED: the AGPL-3.0 it warned about arrived at `v22` and `oppia` pins `v11`. Plus a new category — MCP into the system of record — a canonicity trap caught at `★10` vs `★323`, three statutory dates resolved, and `5` self-inflicted defects reported.**
+
+🟢 **Channel status:** `git ls-remote` 🟢 · `--symref` 🟢 (now mandatory) · blobless clone + `cat-file` 🟢 · `raw.githubusercontent.com` 🟡 **silent `master`→default alias (`T885`)** · `search/repositories` 🟢 exact · **npm registry** 🟢 NEW · **PyPI JSON** 🟢 NEW · `api.github.com/repos/*` 🔴 `403` · `github.com` 🔴 `403`.
+
+🟢 **Controls:** `HKUDS/DeepTutor` `11,408 B` · `moodle/moodle` `35,147 B` · `oppia/oppia` `11,358 B` — all reproduced.
+
+### 🔴 `T884` — the headline, and it is a reversal of this base's own instruction
+
+| Measured | Value |
+|---|---|
+| This base published | 🔴 `oppia/oppia` · `1 AGPL-3.0 of 171` · *"DO NOT ship as-is"* |
+| `package.json` direct deps | **`171`** 🟢 the count was exactly right |
+| `angular-shepherd` declared | `^11.0.0`, in `dependencies` 🟢 does reach the bundle |
+| 🟢 `yarn.lock` resolves | 🟢 **`11.0.0`** · **MIT** |
+| 🔴 `latest` (`22.0.0`) | 🔴 AGPL-3.0 |
+| 🟢 Relicence boundary | 🟢 **MIT `v0.0.1`–`v21`; AGPL-3.0 from `v22.0.0`** |
+| `shepherd.js` | `^8.0.1` → **`8.3.1`**, MIT (AGPL from `16.0.0`) |
+
+🟢 **`^11.0.0` cannot reach `22.0.0`. `oppia` ships MIT.** 🟢 **Verdict flips from *do not ship* to *ship it, pin Shepherd, gate the major bump*.** 🔴 **A false positive on copyleft is not the safe direction of error** — it removed an Apache-2.0, `7.0k★` platform from consideration for four passes. 🟢 **Rule: a dependency licence claim must name the RESOLVED version, or it is not a measurement.**
+
+🟢 **The same audit found the real one, which nobody had recorded:** `mutagen==1.47.0`, **GPL-2.0-or-later**, **DIRECT** at `requirements.in:25` of a `152`-package `pip-compile` lockfile (`0` of `152` unresolved). 🟡 Strong copyleft but **distribution-triggered, not network-triggered** — for a hosted platform it does not reach client code. The claimed AGPL-3.0 would have.
+
+### 🆕 The new category: agents that reach INTO the system of record
+
+🔵 Every prior pass collected *tutors*. These hold authenticated, tool-scoped access to the platform the institution already runs — which is where an education client's work actually sits.
+
+| Row | Grant, on the bytes | ★ exact | Note |
+|---|---|---|---|
+| 🟢 🆕 [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · `1,071 B` · `3c7307584ae4` | **`323`** | 🟢 **Canonical Canvas LMS MCP server** — courses, assignments, submissions, grading, announcements as agent tools. `529` files, **ONE** licence path. Pushed `2026-11-12` |
+| 🟢 🆕 [`Yuanpeng-Li/gradescope-mcp`](https://github.com/Yuanpeng-Li/gradescope-mcp) | 🟢 **MIT** · `1,068 B` · `0e01db542a01` | `8` | MCP into **Gradescope** — rubrics and submissions. `80` files, ONE licence path |
+| 🆕 [`omerfarooq223/AutoGrader-Agent`](https://github.com/omerfarooq223/AutoGrader-Agent) | 🟢 MIT · `1,077 B` · `b6f57bd5a4ab` | `3` | 🟡 First permissive **grading** agent in this base. A pattern, not a dependency |
+| 🆕 [`jw-wuzhen/hsk-tcsl-skills`](https://github.com/jw-wuzhen/hsk-tcsl-skills) | 🟢 MIT · `1,108 B` · `dd5503456a1e` | `12` | **HSK**-level-aware skills for teaching Chinese as a second language |
+| 🆕 [`XiucuiGuan/addie-instructional-designer`](https://github.com/XiucuiGuan/addie-instructional-designer) | 🟢 MIT · `1,099 B` · `9030c75868f8` | `1` | 🟢 First row automating the **instructional-design method** (ADDIE), not the teaching |
+| 🆕 [`Annyfee/agent-craft`](https://github.com/Annyfee/agent-craft) | 🟢 MIT · `1,064 B` · `caea6648b806` | `536` | 🔵 Agent toolkit from an in-language 教学 query — **not education-specific**, and placed with that said |
+| 🔍 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 control reproduced | **`58,575`** | `58,508` → `58,554` → **`58,575`** across three passes |
+| 🔍 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟡 **`TREE[MIT + MIT + OFL]`** | `1,436` | 🟢 **`p791-D` discharged** on `363` files. New: `lib/katex/fonts/LICENSE` **SIL OFL `4,616 B`** |
+
+### 🔴 `T887` — the canonicity trap, caught at `★10` against `★323`
+
+A `grading agent` query put [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) first: **MIT, `1,070 B`, `501` files, `★10`** — real, granted, **not canonical**. The name sweep: `vishalsachdev/canvas-mcp` **`★323`** (`1,071 B`, `529` files) · `boyuchengz/canvas-mcp` `★119` MIT · 🔴 `DMontgomery40/mcp-canvas-lms` `★104` **ungranted**. 🔵 **`1,070` vs `1,071` bytes is what a derivative looks like.** 🟢 **Sweep the name whenever a repo implements a named platform or protocol** — search ranks by query match, not canonicity.
+
+### 🟢 `T888` — three disputed statutory dates RESOLVED (`p791-C` discharged)
+
+- 🇪🇺 **EU AI Act high-risk (education): `2027-12-02`.** Digital Omnibus political agreement `2026-05-07`; draft high-risk guidelines consultation closed `2026-06-23`. The "August 2026" figure is superseded.
+- 🇻🇳 **Vietnam: both prior figures were right about different things.** Law `134/2025/QH15` (`2025-12-10`; `8` chapters, `35` articles) in force **`2026-03-01`**; education is high-risk; pre-existing systems in **health, education and finance** get **`18` months** → **`2027-09-01`**. `2027-03-01` is the `12`-month general case.
+- 🇿🇦 **South Africa: withdrawn, not abrogated, and the reason is the finding.** Published Gazette `54477` `2026-04-10`; Minister announced withdrawal `2026-04-26`; **withdrawn in its entirety by Notice `3978` of `2026`, Gazette `54840`, `2026-06-12`** — 🔴 **because the draft contained AI-hallucinated references.** DCDT targets FY2026/27 for a rework. 🟢 **A government retracted a national AI policy for shipping unverified AI output. This base's method is the counter-example, and that is now a procurement argument.**
+
+### 🔴 `T885` / `T886` — two instrument findings
+
+🔴 **`T885`:** `raw.githubusercontent.com` **silently aliases `master` to the default branch when `master` does not exist** — `bruchris/canvas-lms-mcp` (`59` heads, no `master`) and `jupyter/nbgrader` both serve `200` on `.../master/...`; `sakaiproject/sakai` (default `master`, no `main`) serves `404` on `main`; a bogus ref `404`s. 🟢 **One-directional legacy alias.** No grant verdict changes — the bytes are the default branch's — but **branch existence must come from `ls-remote --symref`**.
+
+🔴 **`T886`:** a **licence-path count is not a grant test**, and it failed both ways on its first two subjects. [`mingxuanyan07-lgtm/ai-for-education-showcase`](https://github.com/mingxuanyan07-lgtm/ai-for-education-showcase) now matches `2` paths — `Rethlas/LICENSE` (Apache-2.0) and `scripts/vendor/katex/LICENSE.txt` (MIT) — **both vendored, no root grant: still ungranted.** `oppia/oppia` matches `23` paths of which `21` are Angular source files and screenshots for its in-product *licence page*. 🟢 **Corrected gate: root grant only, source/image extensions excluded, non-root = vendored.**
+
+### 🟡 `T889` — second consecutive pass where the missed grant was a FONT grant
+
+`p791`: OpenMAIC's non-OSI `ZcoolHappy`. `p792`: Study-Mate's KaTeX **OFL**. 🔵 **KaTeX appeared in three repositories this pass.** 🟢 In education, maths rendering is near-universal — **assume a font grant and go read it.**
+
+### 🔴 `T890` — a source's regional bucket is not this base's `region` field
+
+🔴 The APAC leg returned, as APAC, **the UK's school generative-AI safety standards (Jan 2026)** and **the UAE's 25 generative-AI prohibitions (Feb 2026)**. Both are **EMEA** and are filed there. 🔵 `T883` found a composite bucket hiding a continent; **`T890` is the other half — a bucket can also contain things that are not in it.** 🟢 **Assign `region` from the named country, never from the source's heading.**
+
+### 🟢 `T891` — `p790-E` discharged: the in-language ministry query pays
+
+🟢 One Spanish-language leg returned named, dated Colombian instruments where two English legs had returned institutional structure: **CONPES 4144 de 2025**, the first classroom **lineamientos** (Jan 2026), **Directiva 01 of `2026-03-05`**, and the **Decálogo de IA para la Educación Superior**. Also **MarIA** (Jul 2026) and a MinEducación–Google training agreement (Oct 2026). 🔵 Third consecutive pass in which query *language*, not supply, decided visibility.
+
+### 🔴 `5` defects in this pass's own instruments, all caught by controls
+
+| # | Defect | Status |
+|---|---|---|
+| **D1** | 🔴 Copyleft grep matched **`MPL` inside `uriteMPLate`** — a package name, not a licence (`uritemplate` is dual-permissive) | 🟢 Fixed; matched on the licence field. 🔵 `T875`'s substring lesson, in this pass's own tooling |
+| **D2** | 🔴 Audited the **Python** lockfile for an AGPL claim living in the **npm** layer, and was ready to publish the refutation | 🟢 Fixed; both layers audited. 🔴 A refutation aimed at the wrong layer is worse than the claim it corrects |
+| **D3** | 🔴 Grepped `yarn.lock` for `agpl` and read the `0` as evidence — **lockfiles do not record licences** | 🟢 Fixed; per-version licences from the npm registry |
+| **D4** | 🔴 Filled in an **elided slug** and recorded `rc=128` (DEAD) for a repository that is alive and was pushed `2026-08-23` | 🟢 Fixed; full `59`-char slug recovered. 🔴 **An elided slug is not an address** |
+| **D5** | 🔴 The new path-count gate would have **rescued an ungranted row on someone else's vendored grants** | 🟢 Fixed (`T886`) |
+
+🔵 **Four of five are one mistake: counting a result instead of reading it.** 🟢 **If a verdict rests on a count, read the rows.**
+
+### 🟢 `ACTION p791-A` discharged as far as this session's authority allows
+
+🟢 **The `5` licence requests are DRAFTED and committed** at [`intel/licence-requests/`](../intel/licence-requests/) — one file per target, each naming the measured absence, the tree size, the sha and the exact ask. 🟢 **Absences re-confirmed a third consecutive time** (`5`/`5` ungranted on the tree channel). 🔴 **They are NOT sent.** Sending means opening issues on third-party repositories, which is outside this session's GitHub authorisation (scoped to `gmilano/*`) and is an outward-facing act on other people's projects that this task does not authorise. 🔵 **Stated plainly rather than logged as "blocked"** — which is the `T879-bis` lesson. The drafts are the part that was ever in scope, and they are done.
+
+
+
 ## 🆕 `2026-11-12` · `p791` — **This base can PUBLISH again: the push `403` that four cycles recorded as "blocked" was an authorisation-scope symptom, not a network one, and it is fixed. Plus `NOASSERTION` shown to fail in both directions in the same sector, a `★` figure corrected `23×` downward, a non-OSI Chinese font grant found inside a `43,376★` MIT repository, and one trend-digest darling REFUSED for having no licence at all.**
 
 🟢 **Channel status, re-measured:** `git ls-remote` 🟢 · **blobless clone + `ls-tree` + `cat-file`** 🟢 (new, and now the cheapest byte channel this base has) · `raw.githubusercontent.com` 🟢 · `search/repositories` 🟢 exact integers · `api.github.com/repos/*` 🔴 `403` · `github.com` page 🔴 `403`.
@@ -78111,6 +78194,3 @@ Los star counts de ciclos anteriores estaban inflados por el pipeline, no medido
 
 ---
 *Historia conservada. Append-only: agregar arriba, nunca sobrescribir.*
-
-
-

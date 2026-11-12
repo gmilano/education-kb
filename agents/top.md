@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p792` — **a new category: agents that reach INTO the system of record. Plus one canonicity trap, `6` rows added, `1` tree cleared.**
+
+🟢 **Method unchanged from `p791`.** Existence via `git ls-remote` (exit status read directly). Grant by **anchored title lines** in the served licence bytes. Trees enumerated with `git clone --filter=blob:none --no-checkout --depth 1` + `git cat-file`. Stars are `search/repositories` reads with a `repo:` qualifier, which return **exact integers**. 🔴 **New channel caution this pass (`T885`): a `200` from `raw.githubusercontent.com` on `.../master/...` does NOT prove a `master` branch exists** — the host aliases the legacy name to the default branch. Every row below is addressed by its **real default branch**, read from `git ls-remote --symref`.
+
+### 🟢 MCP into the systems of record — the shift this pass records
+
+🔵 **Every pass of this base has collected *tutors*: agents that teach a learner.** `p792` records a different and more commercially useful shape — agents that hold **authenticated, tool-scoped access to the platform the institution already runs**. Grading, enrolment, assignments and submissions are where an education client's actual work sits, and these are the first permissive rows this base has that reach it.
+
+| Agent | Repo | Grant, on the bytes | ★ (exact) | Last push | Verdict for Globant |
+|---|---|---|---|---|---|
+| 🟢 **Canvas MCP** 🆕 | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · `1,071 B` · `3c7307584ae4` | `323` | `2026-11-12` | 🟢 **The most immediately useful row this pass, and the canonical one.** An MCP server over **Canvas LMS** — the LMS a North American higher-ed client is most likely to be running — exposing courses, assignments, submissions, grading and announcements as agent tools, plus agent skills. 🟢 **`529` files, exactly ONE licence path, MIT:** single-family tree, clean to the gate. 🟢 Pushed today. 🔵 Community project, **not** an Instructure product — Instructure documents the REST/GraphQL APIs and LTI 1.3, not an MCP server of its own |
+| 🟢 **Gradescope MCP** 🆕 | [`Yuanpeng-Li/gradescope-mcp`](https://github.com/Yuanpeng-Li/gradescope-mcp) | 🟢 **MIT** · `1,068 B` · `0e01db542a01` | `8` | `2026-11-12` | 🟢 **Small but precisely placed: MCP access to Gradescope**, the assessment platform that holds the submissions and rubrics in a large share of university STEM courses. 🟢 `80` files, ONE licence path — clean. 🔴 `★8`: read it as a working reference for how the auth and rubric surfaces are shaped, not as a dependency |
+| **AutoGrader-Agent** 🆕 | [`omerfarooq223/AutoGrader-Agent`](https://github.com/omerfarooq223/AutoGrader-Agent) | 🟢 **MIT** · `1,077 B` · `b6f57bd5a4ab` | `3` | `2026-11-02` | 🟡 Rubric-driven automated grading with feedback generation. 🔵 Placed because **grading is the task education clients ask for first** and this base held no permissive grading agent at all — but at `★3` it is a pattern to read, not a build to adopt |
+
+🔴 **`T887` — the canonicity trap, and it nearly put the wrong row in this file.** The first Canvas MCP this pass found was [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) — **MIT, `1,070 B`, `1acff129baf3`, `501` files, `★10`** — surfaced top-of-list by a `grading agent` query. It is a real, granted repository and it is **not canonical**. A name sweep returns `vishalsachdev/canvas-mcp` at **`★323`** (`529` files, `1,071 B`, different sha), then `boyuchengz/canvas-mcp` at `★119` (MIT), then 🔴 `DMontgomery40/mcp-canvas-lms` at `★104` **ungranted**. 🔵 **`1,070` vs `1,071` bytes and `501` vs `529` files is what a derivative looks like.** 🟢 **Rule, extending `p790`'s `janestreet`/`jane-street` finding: when a repository implements a named third-party protocol or platform, sweep the name before writing the row — the first hit is ranked by query match, not by canonicity.**
+
+### 🆕 Teaching-as-a-skill and instructional design — three more permissive rows
+
+| Agent | Repo | Grant, on the bytes | ★ | Region | What it is |
+|---|---|---|---|---|---|
+| **hsk-tcsl-skills** 🆕 | [`jw-wuzhen/hsk-tcsl-skills`](https://github.com/jw-wuzhen/hsk-tcsl-skills) | 🟢 **MIT** · `1,108 B` · `dd5503456a1e` | `12` | APAC | Agent skills for **HSK** and *teaching Chinese as a second language* — level-aware vocabulary and grading against a published proficiency scale. 🟢 **A curriculum-standard-aware skill set**, which is the shape `p791`'s `socratic-tutor` finding predicted would spread |
+| **addie-instructional-designer** 🆕 | [`XiucuiGuan/addie-instructional-designer`](https://github.com/XiucuiGuan/addie-instructional-designer) | 🟢 **MIT** · `1,099 B` · `9030c75868f8` | `1` | Global | 🟢 **The first row in this base that automates the INSTRUCTIONAL DESIGN method rather than the teaching** — an agent that walks **ADDIE** (Analyse, Design, Develop, Implement, Evaluate). 🔵 `★1`, so it is a template; but ADDIE is the vocabulary a corporate-learning or ministry client uses to specify work, and no other row speaks it |
+| **agent-craft** 🆕 | [`Annyfee/agent-craft`](https://github.com/Annyfee/agent-craft) | 🟢 **MIT** · `1,064 B` · `caea6648b806` | `536` | APAC | Agent-building toolkit surfaced by a Chinese-language 教学 (*teaching*) query. 🔵 **Not education-specific** — placed here with that stated, because it is the largest permissive result the in-language teaching query returns and it is what a Chinese-language team would reach for |
+
+### 🔍 Carried rows, re-measured this pass
+
+| Agent | Grant | ★ (exact) | Note |
+|---|---|---|---|
+| **DeepTutor** | 🟢 Apache-2.0 · `11,408 B` control reproduced | `58,575` | 🟢 Still the strongest permissive spine in the sector. `58,508` (`p790`) → `58,554` (`p791`) → **`58,575`** |
+| **Study-Mate** | 🟢 **`TREE[MIT + MIT + OFL]`** | `1,436` | 🟢 **`p791-D` discharged — cleared on the full `363`-file tree.** The addition is `lib/katex/fonts/LICENSE`, **SIL OFL `4,616 B`**, unread at `p791`. Carry the OFL file, keep font names intact |
+
+### 🔴 `p792` REFUSES nothing new, and re-confirms `5` absences instead
+
+🟢 **The `5` standing ungranted rows were re-probed on the tree channel — a third consecutive confirmation.** These are the targets of `ACTION p791-A`, and the drafted requests are now in [`intel/licence-requests/`](../intel/licence-requests/).
+
+| Repo | Files in tree | Licence paths | ★ | Last push | Status |
+|---|---|---|---|---|---|
+| [`narumi-mase/osaka-lesson-dataset`](https://github.com/narumi-mase/osaka-lesson-dataset) | `26` | 🔴 **`0`** | `0` | `2026-06-30` | 🔴 Ungranted. Japan's best education-AI artefact |
+| [`silja-graf/Didaktikus-KI-Spezialist-f-r-Unterrichtsplanung-und-Beurteilung-nach-LP21`](https://github.com/silja-graf/Didaktikus-KI-Spezialist-f-r-Unterrichtsplanung-und-Beurteilung-nach-LP21) | `23` | 🔴 **`0`** | `0` | `2026-08-23` | 🔴 Ungranted. 🟢 **Full slug recovered this pass** — this base had carried it elided as `Didaktikus-…-LP21`, and an elided slug is not an address (see defect `D4`) |
+| [`SoukhyadP991/Multilingual-NCERT-Doubt-Solver`](https://github.com/SoukhyadP991/Multilingual-NCERT-Doubt-Solver) | `18` | 🔴 **`0`** | `2` | `2026-01-13` | 🔴 Ungranted |
+| [`TaoYu-ds/TutorMesh`](https://github.com/TaoYu-ds/TutorMesh) | `143` | 🔴 **`0`** | `1` | 🟢 **`2026-11-12`** | 🔴 Ungranted — **and pushed today**, so the author is active and reachable. 🟢 The best of the five to ask |
+| [`mingxuanyan07-lgtm/ai-for-education-showcase`](https://github.com/mingxuanyan07-lgtm/ai-for-education-showcase) | `189` | 🟡 **`2` — and NEITHER grants the repo** | `0` | `2026-11-05` | 🔴 **Still ungranted, and this is `T886`.** The two paths are `Rethlas/LICENSE` (Apache-2.0, `11,558 B`) and `scripts/vendor/katex/LICENSE.txt` (MIT, `1,107 B`) — **both vendored subdirectories**. There is **no root grant**. A licence-path *count* would have rescued this row wrongly |
+
+
 ## 🆕 `p791` — two agents added, one count corrected, one candidate REFUSED, one tree re-audited
 
 🟢 **Method unchanged from `p790` and extended once.** Existence via `git ls-remote` (exit status read directly). Grant by **anchored title lines** in the served licence bytes, reported as a **set** when the file is an anthology (`T875`). Stars are claim-channel reads of `search/repositories` with a `repo:` qualifier, which return **exact integers**. 🟢 **New instrument this pass:** `git clone --filter=blob:none --no-checkout --depth 1` followed by `git cat-file -p HEAD:<path>` — it enumerates the whole tree, is case-exact, and fetches only the blobs actually read. It is now the cheapest byte channel this base has, and it is what settled `T882`.

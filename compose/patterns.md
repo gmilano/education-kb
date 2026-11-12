@@ -4,6 +4,70 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p792` — **four patterns, each named to repos verified this pass**
+
+🔵 **Rule 1, carried and now narrower:** in education the platform a client already runs is almost always copyleft, so AI code lives at its edge. 🟢 **`p792` adds Rule 1a: the edge can be an MCP server, and the MCP server can be MIT even when the platform is AGPL.** 🔴 **Rule 2, strengthened by `T884`:** before you embed anything, resolve its **lockfile** — a licence read at `latest` is not the licence you ship.
+
+### 🟢 `P792-1` — Canvas-native grading and course-ops agent (North America, higher ed)
+
+**The engagement shape:** a university runs Canvas; faculty want grading help and course operations; IT will not accept code inside an AGPL LMS.
+
+| Layer | Component | Grant | Why this one |
+|---|---|---|---|
+| Way in | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 MIT `1,071 B` | Canonical Canvas MCP: courses, assignments, submissions, grading, announcements as tools. **Calls Canvas, never links it** — the AGPL stays on the far side of the boundary |
+| Grading logic | [`omerfarooq223/AutoGrader-Agent`](https://github.com/omerfarooq223/AutoGrader-Agent) | 🟢 MIT `1,077 B` | Rubric-driven grading + feedback generation. 🔴 `★3` — **fork it, read it, do not depend on it** |
+| Rubric source | [`Yuanpeng-Li/gradescope-mcp`](https://github.com/Yuanpeng-Li/gradescope-mcp) | 🟢 MIT `1,068 B` | Only if the client also runs Gradescope. 🔴 `★8` — reference shape |
+| Design method | [`XiucuiGuan/addie-instructional-designer`](https://github.com/XiucuiGuan/addie-instructional-designer) | 🟢 MIT `1,099 B` | Gives the deliverable the **ADDIE** vocabulary the client's instructional designers already specify work in |
+
+**Wiring.** Canvas MCP runs as a service with a **scoped** institutional token — not an admin token. The grading agent reads submissions and the rubric through MCP tools, proposes a grade and feedback, and **writes nothing back without a human action**; Canvas's own gradebook stays the system of record. Keep the agent in its own process so its licence is yours to choose.
+
+🔴 **The part that is actually the sale, and it is not the agent.** An MCP server holding a Canvas token reaches **student records** → **FERPA**. No independent security or data-governance evaluation of *any* education MCP server has been published. 🟢 **Deliverable: token scoping, per-tool allowlisting, audit logging of every tool call, and a data-protection review — before the first grading run.** Budget it as a named workstream, because the client's counsel will ask and nobody upstream has an answer. **Estimate: 6–8 weeks**, of which ~2 are governance.
+
+### 🟢 `P792-2` — Cited-answer tutor on the client's own curriculum (Global; the answer to the evidence problem)
+
+**The engagement shape:** the client has been told "AI tutor" and is sceptical, because **only `45 %` of the most-used edtech tools have ESSA-tier published evidence** and the chatbot-as-tutor pitch is visibly fading.
+
+| Layer | Component | Grant | Why this one |
+|---|---|---|---|
+| Spine | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 `11,408 B` · `★58,575` | The strongest permissive tutoring platform in the sector, actively pushed |
+| Citation architecture | [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟡 `TREE[MIT + MIT + OFL]` | **Course-scoped RAG with per-lesson citations** — read it for the scoping design, which is the part that answers *"where did the tutor get this?"* |
+| Lessons engine | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 `11,358 B` | 🟢 **Newly available (`T884`)** — interactive lessons that behave like tutoring. Pin `angular-shepherd@11` and `shepherd.js@8`; **gate the major bump in CI** |
+| Offline reach | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT `1,097 B` | Where connectivity is the binding constraint. 🟡 Two LGPL packages — keep them replaceable, source available |
+
+**Wiring.** Ingest the client's *own* curriculum as the only retrieval corpus. Every tutor answer carries a **per-lesson citation into that corpus**, and an answer with no citation is a refusal, not a guess. `oppia` supplies the practice loop; mastery state drives what the tutor teaches next.
+
+🔴 **Two deliverable rules.** *(1)* 🟡 **Carry the OFL file** and keep font names intact — Study-Mate ships KaTeX fonts under SIL OFL (`4,616 B`), and KaTeX turned up in **three** repositories this pass, so assume it is present (`T889`). *(2)* 🔴 If the Python service is **distributed** rather than hosted, `oppia`'s `mutagen==1.47.0` is **GPL-2.0-or-later** and direct — replace it or carry copyleft at that boundary. `requirements.in` has `29` direct entries, so substitution is bounded. **Estimate: 8–10 weeks.**
+
+### 🟢 `P792-3` — EU AI Act high-risk conformity runway for an education deployment (EMEA)
+
+**The engagement shape:** an EMEA education client has an AI system in or near production and a **hard date**.
+
+🟢 **The date is settled (`T888`): high-risk obligations, education included, apply from `2027-12-02`** — deferred by the Digital Omnibus (political agreement `2026-05-07`). 🔴 **From today that is roughly `13` months.** The deferral is a selling window, not a reprieve.
+
+| Step | What it produces | Built with |
+|---|---|---|
+| 1. Classify | A written determination of whether the system is high-risk, and why. Education uses that score, assess or admit are the ones that land in scope | The client's own use cases against the Act's education heading |
+| 2. Human oversight | A reviewable decision point for every consequential output, with the human action logged | 🟢 The `P792-1` boundary: the agent **proposes**, the gradebook records a human act |
+| 3. Provenance | Per-answer citations into a known corpus, retained and auditable | 🟢 `Study-Mate`'s citation scoping; `DeepTutor` as the spine |
+| 4. Technical documentation | Dependency and grant inventory **resolved from lockfiles**, per `T884` | 🟢 `yarn.lock` / `requirements.txt` resolution, npm + PyPI per-version licences |
+| 5. Pedagogical control | Evidence that pedagogy governs the system, not the model | 🔵 OECD *Digital Education Outlook 2026*; EU Council conclusions on teachers in the AI era (`2026-05-11`); Eurydice (`2026-09-22`) |
+
+🟢 **The strongest argument available to this engagement is a real one, and it is `T888`'s South African case**: a government **withdrew its own national AI policy** (Notice `3978` of `2026`, Gazette `54840`, `2026-06-12`) because the draft contained **AI-hallucinated references**. 🟢 **Verification discipline is not a technical nicety — it is the thing whose absence retracted a national policy.** **Estimate: 10–12 weeks**, run in parallel with the build, not after it.
+
+### 🟢 `P792-4` — Ministry-programme delivery against a named instrument (APAC 🇰🇷 · LATAM 🇨🇴)
+
+**The engagement shape:** a public-sector education buyer whose obligations come from a document with a number. 🔵 **This pattern exists because `T891` keeps proving that the instrument is findable only in the local language** — and a proposal that cites it by number is a different proposal.
+
+| Region | The instrument to cite | The deliverable it creates |
+|---|---|---|
+| 🇰🇷 **APAC** | **MOE personal-information management standards** for learning-support software selected as 교육자료 (**July 2026**); the **16 AI subjects** programme (**August 2026**, teacher-led, 교육자료 → 인정교과서, with MSIT and 10 provincial offices); AIDT expanding toward 2028 | 🟢 A **privacy-compliance and teacher-workload** deliverable. 🔴 Teachers' organisations publicly criticised the standards for shifting responsibility and workload onto teachers — **that grievance is the scope**: tooling that discharges the standard *without* adding teacher work. 🔵 Programme scale reported at **₩1.4tn** and **4.83M students' data** |
+| 🇨🇴 **LATAM** | **CONPES 4144 de 2025** (national AI policy); **Directiva 01 of `2026-03-05`** (safe, ethical, inclusive, pedagogical ICT/AI integration in schools); the **Decálogo de IA para la Educación Superior** | 🟢 Close the **`92 %` use / `30 %` published-policy** gap: an institutional AI-use policy written against the Decálogo and Directiva 01, plus the tooling to evidence compliance. 🔵 **Latam-GPT** (UNESCO–CENIA) is the sovereignty-flavoured model option the region is asking for |
+
+**Wiring, both regions.** Same technical spine as `P792-2`. 🟢 **What changes is the artefact set**: the proposal cites the instrument by number, the audit log is shaped to what that instrument asks to see, and the model choice answers a sovereignty question rather than a benchmark. 🔴 **Do not reuse an English-language regional summary for either** — both countries' operative documents exist only in their own language, and `p791` ran an English LATAM leg and got institutional structure instead of ministry policy. **Estimate: 6–8 weeks** per country, the ministry-document reading being the first week.
+
+🔴 **Declared gap on this pattern:** **China, India, Australia and Singapore have no ministry-level instrument placed in this base**, so `P792-4` cannot be written for them yet. 🔵 **Cost to fix: one in-language leg per country** — the channel is now proven three times (`NCERT`, `학습 튜터`, Spanish-language Colombian ministry vocabulary).
+
+
 ## 🆕 `p791` — three recipes, and `Rule 4`
 
 🔴 **Rule 4, NEW this pass (`T882`).** Rule 2 says read the dependencies. **Rule 4 says read the TREE, in every language it is written in.** A root `LICENSE` governs the root. `THU-MAIC/OpenMAIC` is MIT at the root and ships an **LGPL** package plus **three font grants**, one of them a non-OSI Chinese-language licence forbidding renaming and resale-as-product. Before any repository is handed to a client, enumerate it and grade every grant found:

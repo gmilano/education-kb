@@ -4,6 +4,103 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p792` — **eight findings. The headline is that this base told clients not to ship its most-recommended platform, on a licence that platform does not use.**
+
+🟢 **Channel status, re-measured:** `git ls-remote` 🟢 · `git ls-remote --symref` 🟢 (new, and now mandatory — see `T885`) · blobless clone + `ls-tree` + `cat-file` 🟢 · `raw.githubusercontent.com` 🟡 **works, with a silent branch alias** · `search/repositories` 🟢 exact integers · **npm registry** `registry.npmjs.org` 🟢 (new, per-version licences) · **PyPI** `pypi.org/pypi/*/json` 🟢 (new) · `api.github.com/repos/*` 🔴 `403` · `github.com` page 🔴 `403`.
+
+## `T884` — a licence is a property of a VERSION, not of a package
+
+🔴 **This base has published, for four passes, that `oppia/oppia` carries `1 AGPL-3.0 of 171` direct dependencies, with the instruction: *"DO NOT ship as-is."*** 🟢 **The dependency count is exactly right. The licence is not.**
+
+| Measured | Value |
+|---|---|
+| `package.json` direct deps | `83` + `88` = **`171`** 🟢 matches |
+| `angular-shepherd` declared | `^11.0.0`, in `dependencies` 🟢 reaches the bundle |
+| 🟢 `yarn.lock` resolves to | 🟢 **`11.0.0`** · integrity-pinned |
+| 🟢 Licence of `11.0.0` | 🟢 **MIT** |
+| 🔴 Licence of `latest` (`22.0.0`) | 🔴 **AGPL-3.0** |
+| 🟢 Relicence boundary | 🟢 **MIT `v0.0.1`–`v21.x`; AGPL-3.0 from `v22.0.0`** |
+
+🟢 **`^11.0.0` admits `>=11.0.0 <12.0.0`. The AGPL-3.0 starts at `22.0.0`. The range cannot reach it.** The same holds for `shepherd.js@^8.0.1` → `8.3.1` (MIT; AGPL-3.0 from `16.0.0`).
+
+🔴 **The error was reading the licence field at `latest` and attributing it to the pinned dependency.** 🟢 **The remedy is one step: resolve the lockfile.** `p791-B` asked for exactly that — *"lockfile, not manifest"* — and it was the right instruction for a reason the queue did not anticipate.
+
+🔵 **Why this is the most expensive defect class this base has found.** A false *positive* on copyleft removes a usable option: `oppia` is Apache-2.0, `7.0k★`, and the single best interactive-lessons platform in the sector, and this base steered engagements away from it. 🔴 **A grant gate that errs toward refusal still errs.** 🟢 **New rule: a dependency licence claim must name the RESOLVED version it was read from, or it is not a measurement.**
+
+🟢 **The same audit found what the base had missed in the other direction:** `mutagen==1.47.0`, **GPL-2.0-or-later**, a **direct** entry at `requirements.in` line `25` of `oppia`'s `152`-package `pip-compile` lockfile. 🟡 Strong copyleft, but **distribution-triggered, not network-triggered** — for a hosted platform it does not reach client code, where the claimed AGPL-3.0 would have.
+
+## `T885` — `raw.githubusercontent.com` silently aliases `master` to the default branch, in one direction only
+
+🔴 **Noticed because six unrelated repositories returned byte-identical licences on both `main` and `master`.** That should not happen, and it does not mean what it looks like.
+
+| Repository | True default | `main` head exists? | `master` head exists? | raw `main` | raw `master` |
+|---|---|---|---|---|---|
+| `bruchris/canvas-lms-mcp` | `main` | 🟢 yes | 🔴 **no** (of `59` heads) | `200` | 🔴 **`200`** |
+| `jupyter/nbgrader` | `main` | 🟢 yes | 🔴 **no** | `200` | 🔴 **`200`** |
+| `sakaiproject/sakai` | `master` | 🔴 **no** | 🟢 yes | 🔴 **`404`** | `200` |
+| control: any repo, bogus ref | — | — | — | `404` | `404` |
+
+🟢 **So the alias is real, specific and one-directional: `master` resolves to the default branch when `master` is absent; `main` does not.** A bogus name `404`s, so this is a legacy-name alias and not a blanket fallback.
+
+🟢 **Consequence for this base: no grant verdict is wrong because of it** — the bytes served are the default branch's bytes, which is what should have been read anyway. 🔴 **But any row recorded as "verified on `master`" has a false branch attribution**, and a probe that tests branch *existence* by asking `raw` for a file will report `master` alive on repositories that have no such branch. 🟢 **Branch existence is now read from `git ls-remote --symref` only.**
+
+## `T886` — a licence-path COUNT is not a grant test
+
+🔴 **This pass built the cheap gate `p791-E` asked for** — enumerate the tree, count paths matching `licen|copying|notice|legal|terms`, flag anything above one — **and the gate is wrong in both directions on its first two subjects.**
+
+🔴 **False rescue.** [`mingxuanyan07-lgtm/ai-for-education-showcase`](https://github.com/mingxuanyan07-lgtm/ai-for-education-showcase) is one of this base's five standing **ungranted** rows. It now matches **`2`** licence paths: `Rethlas/LICENSE` (Apache-2.0, `11,558 B`) and `scripts/vendor/katex/LICENSE.txt` (MIT, `1,107 B`). 🔴 **Both are vendored subdirectories and there is no root grant.** A count-based gate would have moved this row from *ungranted* to *granted* on someone else's licence.
+
+🔴 **False flag.** `oppia/oppia` matches **`23`** paths. `21` of them are Angular **source files and screenshots** implementing Oppia's in-product licence page (`license-page.component.ts`, `licensePage-snap.png`). The grants are `LICENSE` and `NOTICE`. A count-based gate reports a `43,376★`-class anthology risk on a single-family Apache-2.0 repository.
+
+🟢 **The corrected gate, and it is still cheap:** *(1)* the host's grant is the **root** grant and nothing else; *(2)* exclude source and image extensions before counting; *(3)* a non-root grant is a **vendored** grant — it constrains redistribution of that subtree and says nothing about the host's terms.
+
+## `T887` — when a repository implements a named platform, sweep the name before writing the row
+
+🔴 A `grading agent` query returned [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) first — MIT, `1,070 B`, `501` files, **`★10`**. 🟢 A name sweep returns the canonical [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) at **`★323`** (`1,071 B`, `529` files), then `boyuchengz/canvas-mcp` `★119` (MIT), then 🔴 `DMontgomery40/mcp-canvas-lms` `★104` **ungranted**. 🔵 `1,070` vs `1,071` bytes and `501` vs `529` files is the signature of a derivative. 🟢 **Search ranks by query match, not by canonicity** — this extends `p790`'s `janestreet`/`jane-street` finding from owners to protocols.
+
+## `T888` — the three disputed statutory dates are RESOLVED, and one of them is a governance lesson
+
+🟢 **`ACTION p791-C` discharged on all three.** `p791` labelled these rather than resolving them, and said to try national gazettes instead of `EUR-Lex`. That worked.
+
+| Instrument | `p791` recorded | 🟢 `p792` resolves |
+|---|---|---|
+| 🇪🇺 **EU AI Act**, high-risk incl. education | 🔴 *"applying August 2026 **vs** deferred to `2027-12-02`"* | 🟢 **`2027-12-02`.** The **Digital Omnibus** reached Council–Parliament political agreement on **`2026-05-07`** and defers high-risk obligations — education, employment, biometrics — to that date. Commission consultation on the draft high-risk guidelines ran to **`2026-06-23`** |
+| 🇻🇳 **Vietnam**, education as high-risk | 🔴 *"`2027-03-01` **vs** September 2027"* | 🟢 **Both figures were right about different things.** **Law `134/2025/QH15`** (dated `2025-12-10`, `8` chapters, `35` articles) took effect **`2026-03-01`**. Pre-existing systems get a transition; for **health, education and finance** it is **`18` months** → **`2027-09-01`**. The `2027-03-01` figure is the `12`-month general case. 🟡 One source gives the range as `12`–`18` months, so the category boundary is the residual uncertainty, not the dates |
+| 🇿🇦 **South Africa**, draft National AI Policy | 🔴 *"published `2026-04-10` vs abrogated `2026-04-27` — conflicting"* | 🟢 **Both happened, and neither word was right.** Cabinet approved the draft `2026-03-25`; published for comment in **Gazette `54477`** on **`2026-04-10`**; the Minister **announced** withdrawal on **`2026-04-26`**; it was formally **withdrawn in its entirety by Notice `3978` of `2026`, Gazette `54840`, dated `2026-06-12`**; Cabinet approved the withdrawal in June. 🔴 One regulatory database still lists the withdrawal as `2026-09-27` — a tertiary source against a gazette notice |
+
+🔴 **The South African reason is the finding, not the date: the draft was withdrawn because it contained AI-hallucinated references.** The Minister cited a failure that compromised the integrity and credibility of the draft. 🔵 **A national AI policy was retracted because it was drafted with unverified AI output** — and the department is still targeting FY2026/27 to finalise a reworked framework. 🟢 **This base's entire method is the counter-example to that failure**, and it is now worth saying so to a client in one sentence: *the verification discipline is the deliverable.*
+
+## `T889` — for the second consecutive pass, the grant the first layer missed was a FONT grant
+
+🟡 `p791`: OpenMAIC's `ZcoolHappy` — a non-OSI Chinese-language font licence inside a `43,376★` MIT repository. 🟡 `p792`: `Study-Mate`'s `lib/katex/fonts/LICENSE` — **SIL OFL, `4,616 B`** — inside an MIT repository whose first-layer audit `p791` recorded as clean.
+
+🔵 **KaTeX appeared in THREE separate repositories this pass** (`Study-Mate`, `ai-for-education-showcase`, and vendored again under `scripts/vendor/`). 🟢 **It is the sector's most-vendored maths renderer, and it ships two grants: MIT for the code and OFL for the fonts.** 🟢 **Standing rule: in education, maths rendering is near-universal, so assume a font grant is present and go and read it.**
+
+## `T890` — a source's regional bucket is not this base's regional field
+
+🔴 **The APAC leg of this pass's regional sweep returned, as APAC findings, the UK's generative-AI safety standards for schools (January 2026) and the UAE Ministry of Education's 25 generative-AI prohibitions (February 2026).** Neither is APAC. 🟢 Both are placed under **EMEA** in `intel/market.md`, where they belong.
+
+🔵 **Why this is worth a trend ID rather than a correction note.** This base's `region` field is a **closed vocabulary of five values**, and its whole purpose is that an engagement can filter on it. 🔴 **A search result arrives with the *source's* bucket attached, and sources bucket by convenience** — a vendor report covering Asia-Pacific sales territory will file the Gulf under APAC because that is how the sales team is organised. 🟢 **The region field must be assigned by the curator from the named country, never carried over from the source.** `T883` found that a composite bucket hides a continent; `T890` is the other half — **a bucket can also contain things that are not in it.**
+
+## `T891` — the in-language ministry query pays, and `p790-E` predicted exactly this
+
+🟢 **`ACTION p790-E` discharged, third carry.** `p790` predicted that an English-language LATAM leg would return institutional structure rather than ministry policy, and that a Spanish-language **Colombian** leg would pay. 🔴 `p791` ran English and got UNESCO/ECLAC, CENIA and Ceibal — structure, exactly as predicted. 🟢 **One Spanish-language query returned named, dated Colombian instruments**, recorded in `intel/market.md` under LATAM: the first classroom AI **lineamientos** (January 2026), **Directiva 01 of `2026-03-05`**, the **Decálogo de IA para la Educación Superior**, and **CONPES 4144 de 2025** as the governing national AI policy.
+
+🔵 **Three passes of this base now agree on one thing: the language of the query decides whether a ministry is visible.** `p787` (India: `NCERT`, not `tutor`), `p789` (Korea: `학습 튜터`, not `교육 에이전트`), `p790`/`p792` (Colombia: Spanish ministry vocabulary). 🟢 **It is no longer a caution; it is the default method for a regional leg.**
+
+### 🔴 `5` defects in this pass's own instruments, all caught by controls before any verdict shipped
+
+| # | Defect | How it was caught | Status |
+|---|---|---|---|
+| **D1** | 🔴 A copyleft grep matched **`MPL` inside `uriteMPLate`** — the package *name*, not its licence (`uritemplate` is `BSD-3-Clause OR Apache-2.0`, dual-permissive) | Reading the matched rows instead of counting them | 🟢 Fixed: match restricted to the licence field. 🔵 **This is `T875`'s substring lesson reappearing in this pass's own tooling** |
+| **D2** | 🔴 Audited `oppia`'s **Python** lockfile and was ready to publish a refutation of an AGPL claim that lives in the **npm** layer | The base's own published text names `angular-shepherd`, an npm package | 🟢 Fixed: both layers audited. 🔴 **A refutation aimed at the wrong layer would have been a worse error than the claim it corrected** |
+| **D3** | 🔴 Grepped `yarn.lock` for `agpl` and read the `0` as evidence | Lockfiles record resolutions and integrity hashes, **not licences** — the `0` was structurally guaranteed | 🟢 Fixed: per-version licences read from the npm registry |
+| **D4** | 🔴 Filled in an **elided slug** (`Didaktikus-…-LP21` → a guess) and got `rc=128`, i.e. DEAD | A guessed address cannot produce a DEAD verdict; the owner sweep returned the real `59`-character slug, **alive and pushed `2026-08-23`** | 🟢 Fixed, and the full slug is now recorded. 🔴 **An elided slug is not an address** — the base must stop storing them |
+| **D5** | 🔴 The new licence-path-count gate would have **rescued an ungranted row on vendored grants** | Reading the two paths instead of counting them | 🟢 Fixed: root-only, extension-filtered (`T886`) |
+
+🔵 **Four of the five are the same mistake: counting a result instead of reading it.** 🟢 **That is now this base's most reliable self-check — if a verdict rests on a count, read the rows.**
+
+
 ## 🆕 `p791` — four findings, and one of them is that this base can finally PUBLISH
 
 🟢 **Channel status, re-measured this pass:** `git ls-remote` 🟢 · blobless clone + `ls-tree` 🟢 · `git cat-file` on a `--filter=blob:none` clone 🟢 (lazy blob fetch works, and it is the cheapest byte channel this base has) · `search/repositories` 🟢 (exact integers) · `api.github.com/repos/*` 🔴 `403` · `github.com` page 🔴 `403`. Unchanged from `p790`.

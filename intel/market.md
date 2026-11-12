@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p792` — **three disputed statutory dates resolved, Colombia placed by name, Korea's procurement reached, and a regional bucket corrected**
+
+🔴 **Everything in this section is search-channel testimony** (`T844`). Market sizes, adoption percentages and policy dates are **claims**, named to their source where the source matters. Only repository facts in this base are byte-verified.
+
+### Market size — still a range, and the range has widened
+
+🔴 **`p792` re-measured and the honest answer is worse than `p791`'s, not better.** Published 2026 figures for *AI in education* span **`$4.5B` to `$10.6B`** — a factor of `2.4` — because the firms are not counting the same market.
+
+| Source | 2026 size | Forecast | CAGR |
+|---|---|---|---|
+| The Business Research Company | **`$10.6B`** (from `$7.52B` in 2025) | — | `40.9 %` |
+| Stratistics MRC | **`$4.5B`** | `$28.0B` by 2034 | `25.5 %` |
+| (unnamed firm, via aggregator) | **`$6.02B`** | `$12.30B` by 2032 | `12.55 %` |
+| (unnamed firm, via aggregator) | — | `$79.6B` by 2034 | `31.35 %` |
+| Technavio | 🔴 **not a size** | `$3.37B` **incremental** 2025–2030 | `45 %` |
+
+🔴 **The Technavio figure is the one most likely to be misquoted** — `$3.37B` is growth *added* over the period, not the market. 🟡 **Planning range for a proposal: `$5–11B` for 2026, CAGR anywhere from `13 %` to `41 %`.** Cite the range and the disagreement, never a single number.
+
+🔴 **Capital has tightened sharply.** AI venture funding in EdTech reported at **`$2.4B` in 2025 — an `89 %` fall from the 2021 peak** (HolonIQ, via secondary citation; 🔵 not verified against HolonIQ directly). 🟢 **Read together with `40 %`-class growth forecasts, this is the sector's defining tension: demand is rising while the money to build speculative products has gone.** It favours exactly what this base is for — building on verified open source rather than funding a new platform.
+
+### Demand signal — adoption has outrun governance everywhere, and now there is a number for it
+
+| Measure | Value | Source |
+|---|---|---|
+| Education organisations using generative AI | **`86 %`** | Microsoft, 2025 |
+| 🔴 **Teachers who say their school's AI policy is clear** | 🔴 **`6 %`** | Stanford AI Index 2026 |
+| Teens who have used AI tools | **`>4 in 5`**; `>2/3` regular users | June 2026 report |
+| Teachers using AI tools (Europe) | **`67 %`** | Futuresource Consulting |
+| Students expecting to use AI in learning (Europe) | **`76 %`** | Epson survey |
+| LATAM students / faculty actively engaging | **`92 %` / `79 %`** | Digital Education Council LATAM 2026 (`7,319` faculty, `29` institutions) |
+| 🔴 LATAM universities with a published AI policy | 🔴 **`30 %`** | same |
+| Most-used edtech tools with ESSA-tier published evidence | 🔴 **`45 %`** | edtech analysis, 2026 |
+
+🟢 **`6 %` is the single most useful number in this file.** It is not "schools have no policy" — it is that **teachers cannot tell what the policy is**. That is a deliverable: policy-to-practice translation, not policy authorship.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The buying signal is federal money with an AI condition attached, and the blocker is that nobody can read the rules.**
+
+- **Federal:** executive orders between 2025 and early 2026 produced a national framework for AI in education, with workforce training at the centre. The Department of Education's **AI priority** directs discretionary grant funding to AI literacy, personalised learning and educator professional development, with first competitions expected in the **2026–27 cycle**. Separately, **`$169M` in FIPSE awards** includes support for responsible AI use.
+- **State:** at least **`15` states** have introduced or passed education-specific AI legislation; one tracker counted **~`100` state bills** in 2026 that could affect student AI use. Named duties: **Illinois** — state board must publish district and educator guidance by **`2026-07-01`**; **North Carolina** — state board to adopt K-12 AI standards; **Virginia S.B. 394** — guidance including teacher training; **Ohio** — a **July 2026** mandate.
+- **Institutional:** Columbus City Schools adopted a formal AI policy for teachers, staff and students; NYC issued preliminary guidance; the University of Florida chairs Florida's K-12 AI Education Task Force; Panorama Education worked with **Utah, North Carolina, West Virginia and Wisconsin** on transparency principles; the **Education Commission of the States** published nine recommendations.
+- 🟢 **Opportunity, stated as work:** *(1)* **compliance translation** — `15` states × district guidance, against the `6 %` clarity figure; *(2)* **grant-aligned delivery** — proposals that match the ED AI priority's three named areas; *(3)* 🟢 **Canvas is the system of record here, and `vishalsachdev/canvas-mcp` (MIT, `★323`) is now a verified permissive way into it** — see `compose/patterns.md` `P792-1`.
+- 🔵 **Market note:** North America still holds the largest revenue share while APAC grows fastest.
+
+### EMEA
+
+🟢 **The date that governs every EMEA education deliverable is now settled: `2027-12-02`.**
+
+- 🇪🇺 **EU AI Act:** high-risk obligations — **education** among them — apply from **`2027-12-02`**, deferred by the **Digital Omnibus** (Council–Parliament political agreement **`2026-05-07`**). The Commission's consultation on draft high-risk guidelines ran to **`2026-06-23`**. 🟢 **This replaces the "August 2026" figure this base carried as disputed** (`T888`).
+- 🇪🇺 **Policy and evidence:** EU education ministers approved conclusions on **teachers in the AI era** on **`2026-05-11`**; Eurydice published ***Digital education at school in Europe 2026*** on **`2026-09-22`**; the **OECD Digital Education Outlook 2026** addresses generative AI and reportedly warns that AI helps learning **only when pedagogy stays in control**.
+- 🇬🇧 **United Kingdom:** generative-AI **safety standards for schools**, introduced **January 2026**. 🔴 **Filed under "APAC" by the source that reported it — corrected here (`T890`).**
+- 🇦🇪 **United Arab Emirates:** the Ministry of Education issued **25 generative-AI prohibitions** in schools, **February 2026**, covering age suitability, privacy, academic integrity and exam restrictions. 🔴 **Also mis-filed as APAC by the source.**
+- 🌍 **Africa** (carried from `T883`, which found this bucket hiding a continent): **Kenya** National AI Strategy 2025–2030; **Nigeria** NERDC directive and National EdTech Strategy 2025–2030; **African Union** Continental AI Strategy; **Continental Education Strategy for Africa 2026–2035**. 🟢 **South Africa resolved this pass:** the draft National AI Policy was published in **Gazette `54477`** on **`2026-04-10`** and **withdrawn in its entirety by Notice `3978` of `2026`, Gazette `54840`, `2026-06-12`** — 🔴 **because the draft contained AI-hallucinated references.** The **2024 National AI Policy Framework** is a separate, surviving instrument; DCDT targets **FY2026/27** for a reworked policy.
+- 🟢 **Opportunity, stated as work:** *(1)* 🟢 **a `2027-12-02` conformity runway** — an EMEA education client has roughly **13 months** from today to classify, document and get human oversight in place, and the deferral is the selling window, not a reprieve; *(2)* **`67 %` teacher use against `76 %` student expectation** — the gap is governance, not enthusiasm; *(3)* **South Africa is the live reference**: a government retracted a policy for unverified AI output, which makes verification discipline a procurement argument rather than a technical nicety.
+
+### APAC
+
+🟢 **`Gap 254`'s remedy worked: in-language ministry legs return procurement, not news.**
+
+- 🇰🇷 **South Korea** — placed with real procurement detail for the first time. **AI 디지털교과서 (AIDT)**: four subjects from 2025, expanding toward six by 2028, with teacher training alongside. In **July 2026** the Ministry of Education published **personal-information management standards** for selecting learning-support software, including AIDT, as 교육자료 (*educational material*); 🔴 **teachers' organisations publicly criticised the standards for shifting responsibility and workload onto teachers.** In **August 2026** the Ministry announced **16 AI-related subjects** selected by open call, to be developed teacher-led from 교육자료 through to 인정교과서 (*approved textbook*), with author training on **`2026-08-28`–`29`**, in collaboration with **MSIT and 10 provincial education offices**. 🔵 Reported programme scale: **₩1.4 trillion** and **4.83M students' data** — a figure that has driven a public data-ownership argument. 🔴 The AIDT's classification as *educational material* rather than *textbook* remains contested, and the Minister has argued the downgrade itself weakens personal-data protection.
+- 🇯🇵 **Japan** — 🟢 **a clean negative, and worth recording as one.** The operative instrument is still **MEXT's 初等中等教育段階における生成AIの利活用に関するガイドライン Ver. 2.0, published `2024-12-26`**. 🔴 **No 2026 revision exists**, although vendor pages present "the 2026 latest guideline". MEXT materials dated **`2026-04-30`** and **`2026-06-30`/`07-07`** cover school AI use and **generative-AI pilot schools (生成AIパイロット校)**, under 校務 (*school administrative duties*) — consistent with `T870`: Japan's supply is administrative, not conversational.
+- 🌏 **Regional:** the **Ipsos Education Monitor 2026** finds **lower support for banning AI in schools across Asian markets** than elsewhere — the inverse of the Gulf posture above. Virtual tutors reached **`30 %`** adoption in one surveyed cohort; adoption is uneven and connectivity is a named barrier. The **World Bank Global EdTech Policy Academy on AI** is set for **Seoul, `2026-08-31`–`09-04`**.
+- 🔴 **Declared gap, narrowed but not closed:** this pass placed **Korea** and **Japan** by name. **China, India, Australia and Singapore remain unplaced at ministry level** in this file. 🔵 **Remedy and cost, with the channel now proven twice:** one in-language leg per country (Simplified Chinese against provincial platforms, Hindi/English against MoE and NCERT, English against the Australian framework and Singapore MOE). **Cost: one pass. Expected shape: procurement and curriculum documents, not news.**
+- 🟢 **Opportunity, stated as work:** *(1)* 🟢 **Korea is the most concrete AI-education procurement pipeline in this file** — a named programme, a budget, a 2028 horizon, a stated privacy-compliance obligation and a teacher-workload grievance that is a deliverable in itself; *(2)* **APAC supply is permissive and strong** (`DeepTutor` Apache-2.0 `★58,575`, `OpenMAIC` MIT root, `agent-craft` MIT `★536`), so APAC engagements can build from in-region code.
+
+### LATAM
+
+🟢 **Colombia placed by name this pass — `ACTION p790-E` discharged (`T891`).**
+
+- 🇨🇴 **Colombia:** **CONPES 4144 de 2025** is the governing **Política Nacional de Inteligencia Artificial**, prioritising ethical AI use to transform key sectors including education. The Ministry of Education issued its **first classroom AI lineamientos** (**January 2026**) for responsible AI use; **Directiva 01 of `2026-03-05`** carries an obligation to apply guidelines for the safe, ethical, inclusive and pedagogical integration of ICT and AI in school environments; and the **Decálogo de Inteligencia Artificial para la Educación Superior** (2026) is a governance reference framework for higher-education institutions, grounded in CONPES 4144's risk-mitigation axis. 🔵 Also: **MarIA**, the ministry's own institutional AI assistant (**July 2026**); a **MinEducación–Google** agreement on AI training pathways (**October 2026**); and a **Plan Decenal de Educación** presented **July 2026**. 🔴 The DNP is still developing the broader national AI policy, so the framework is not settled.
+- 🌎 **Regional adoption, now precisely sourced:** **`92 %` of students and `79 %` of faculty** actively engage with AI (Digital Education Council LATAM 2026, with Tecnológico de Monterrey, **`7,319` faculty across `29` institutions**). 🔴 **Only `30 %` of universities have published AI-use policies**, and only `30 %` believe their institution has responded effectively. 🟢 **This replaces `p791`'s `87 %`-use / `26 %`-strategy pairing with a better-sourced version of the same gap.**
+- 🌎 **Institutions:** **UNESCO IESALC** describes adoption as *"neither uniform nor evenly distributed"* and calls for stronger governance and digital-literacy investment; **UNESCO and Chile's CENIA** signed a cooperation agreement on ethical AI in education that includes integrating **Latam-GPT**, the region's open LLM; **EdTech Hub and Fundación Ceibal** launched a LATAM/Caribbean partnership; the **IDB** flags regulation and financing as open questions in Argentina. In **Mexico**, analysis frames generative-AI adoption as requiring regulatory alignment, institutional reform and curriculum redesign. 🔴 **Computing and adoption gaps are widening within the region.**
+- 🟢 **Opportunity, stated as work:** *(1)* 🟢 **the `92 %`/`30 %` gap is the clearest governance deliverable in this file** — near-universal student use against a two-thirds policy vacuum, and Colombia now supplies the instruments to write against (**Directiva 01**, the **Decálogo**, CONPES 4144); *(2)* **Latam-GPT plus a permissive tutor** is a sovereignty-flavoured build the region's institutions are actively asking for; *(3)* 🔵 **a LATAM proposal should cite the ministry instrument by number** — this is the difference between a regional pitch and a national one.
+
+### Global
+
+- 🟢 **The structural shift this pass records is MCP reaching the systems of record.** Community MCP servers now exist for **Canvas** (canonical: `vishalsachdev/canvas-mcp`, MIT, `★323`, pushed `2026-11-12`), **Gradescope** (`Yuanpeng-Li/gradescope-mcp`, MIT), and reportedly **Open edX**. 🔴 **No LMS vendor ships an official MCP server:** Instructure documents the Canvas REST and GraphQL APIs and LTI 1.3 / LTI Advantage, not MCP. Hosted commercial options exist (Atomic Jolt's Atomic MCP for Canvas, ibl.ai connectors).
+- 🔴 **And nobody has published an independent security or data-governance evaluation of any of them.** 🟢 **That is the most defensible Globant offer in this file**: an MCP server holding an institutional Canvas token reaches student records, so **FERPA/GDPR review, token scoping and audit logging around an education MCP deployment is work no one is currently doing** — and it is the kind of work that cannot be done without the verification discipline this base already runs.
+- 🟡 **What is fading, per 2026 analysis:** blockchain credentialling, full-classroom VR, and **the chatbot-as-tutor pitch**. 🔵 The last one matters for how this base's tutor rows are sold: products that solve a specific, provable problem are winning, and **only `45 %` of the most-used tools have ESSA-tier published evidence**. 🟢 **`Study-Mate`'s per-lesson citation scoping is the answer to that**, which is why it anchors a pattern.
+- 🟢 **Workforce and credentials:** Instructure launched **Canvas Career**, a skills-first AI LMS for workforce learning; universities deepened industry-aligned microcredentials; employers accelerated in-flow-of-work learning.
+
+
 # Education AI — market map and opportunities — `p790`
 
 > 🔴 **Channel warning, amended this pass (`T860`).** Only `raw.githubusercontent.com`, the package
@@ -64,7 +149,7 @@ not teacher willingness — it is **governance, evidence and procurement readine
 "we will make your existing AI use defensible" addresses a measured deficit; one built on "we will
 bring you AI" addresses a need that is already met.
 
-## Opportunities by region
+## Opportunities by region — `p791` and earlier (superseded by the block above)
 
 ### North America
 

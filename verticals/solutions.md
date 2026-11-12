@@ -4,6 +4,35 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p792` — **The Odoo pattern gets its missing piece: a permissive, tool-scoped way INTO a copyleft platform. Plus the one row this file told clients to avoid is cleared.**
+
+🔵 **This file's governing pattern, carried:** take a mature, deployed platform that already holds the institution's data and add agents **at its edge** — nobody replaces a Student Information System in an engagement. 🔴 **The problem has always been that the edge was an LTI tool or a REST client, which is a lot of integration work per deliverable.** 🟢 **`p792` records a better edge.**
+
+### 🟢 MCP is the Odoo pattern's edge, and it is permissive even when the platform is not
+
+| Platform | The permissive way in | Grant, on the bytes | ★ | Verdict for an AI layer |
+|---|---|---|---|---|
+| 🟢 **Canvas LMS** (AGPL core) | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · `1,071 B` · `3c7307584ae4` | **`323`** | 🟢 **The most useful row added to this file in four passes.** Canvas is what a North American higher-ed client is running, and its core is **AGPL** — which is exactly why every AI deliverable has had to sit outside it. 🟢 **An MIT MCP server is a clean boundary**: courses, assignments, submissions, grading and announcements become agent tools, the agent code stays MIT/proprietary as the client prefers, and **Canvas's AGPL is never linked, only called**. `529` files, **one** licence path. Pushed `2026-11-12` |
+| 🟢 **Gradescope** (proprietary SaaS) | [`Yuanpeng-Li/gradescope-mcp`](https://github.com/Yuanpeng-Li/gradescope-mcp) | 🟢 **MIT** · `1,068 B` · `0e01db542a01` | `8` | 🟡 Rubrics and submissions as tools. 🔴 `★8` — read it for the auth and rubric shape; do not depend on it |
+| 🟡 **Open edX** (AGPL) | reported MCP integration | 🔵 **not byte-verified this pass** | — | 🔵 Named because a secondary source reports it and this base will want it. **Unverified — do not cite to a client until read** |
+
+🔴 **Canonicity matters here more than anywhere else in this base (`T887`).** The first Canvas MCP a query returns is [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) — MIT, `1,070 B`, `501` files, **`★10`**: granted, real, and a derivative. Canonical is `★323`. 🔴 `DMontgomery40/mcp-canvas-lms` at `★104` is **ungranted**. 🟢 **Sweep the name; the top hit is ranked by query match.**
+
+🔴 **The governance caveat is the commercial opportunity, and it must be said in the same breath.** 🔴 **No LMS vendor ships an official MCP server** — Instructure documents the REST/GraphQL APIs and LTI 1.3 / LTI Advantage. Hosted commercial alternatives exist (Atomic Jolt's Atomic MCP for Canvas; ibl.ai connectors). 🔴 **And no independent security or data-governance evaluation of any education MCP server has been published.** An MCP server holding an institutional Canvas token can reach **student records**, which in North America means **FERPA** and in EMEA **GDPR** plus the EU AI Act's high-risk regime from **`2027-12-02`**. 🟢 **Token scoping, audit logging and a data-protection review around an education MCP deployment is work nobody is currently doing, on a component everybody is about to deploy.**
+
+### ✏️ `oppia/oppia` — this file's dependency warning is withdrawn
+
+🔴 **What this file said:** `oppia/oppia` is Apache-2.0 and **depends on an AGPL-3.0 library**, cited as the lead example of why *"a permissive host is a necessary condition for direct embedding, not a sufficient one."*
+
+🟢 **Measured on the lockfile (`T884`): `oppia` resolves `angular-shepherd` to `11.0.0`, which is MIT.** The AGPL-3.0 relicence happened at **`v22.0.0`**, and `^11.0.0` cannot reach it. `shepherd.js` resolves to `8.3.1`, also MIT.
+
+🟢 **The RULE this file states is still correct and still worth its place** — a host's dependencies must be read. 🔴 **The EXAMPLE was wrong, and `kolibri`'s two LGPL packages now have to carry the argument instead.** 🟡 **`oppia` moves from "do not embed" to "embeddable, with Shepherd pinned and its major bump gated"** — and it gains a separate, smaller note: `mutagen==1.47.0` (**GPL-2.0-or-later**) is a direct Python dependency, which matters only if the service is **distributed** rather than hosted.
+
+### 🟢 Carried, unchanged
+
+🟢 **`Gego-K12/gegok12`** (MIT, `1,150 B`, `★56`) remains the only permissive school ERP/SIS in this file and the only place an agent can live **inside** the system of record. 🔴 **`frappe/education`** remains **intent-to-GPL-3.0** on a `19`-byte licence file — boundary only, no embedding, confirm upstream before a derivative ships. 🔵 Both verdicts were re-read this pass and neither changed.
+
+
 ## 🆕 `p791` — a vendor licence claim that HOLDS, and a `19`-byte grant on a platform this file recommends
 
 🔵 **`p790`'s block on education ERP ended with three vendor licence claims failing on the bytes.** `p791` ran the same test on two more and got one of each — which is the useful outcome, because it shows the probe is not simply biased against vendors.
