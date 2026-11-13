@@ -7,6 +7,46 @@ updated: 2026-11-13
 # Education vertical platforms — real systems to customize AI on top of
 
 
+## 🟢 Seventeenth pass (`p812`, 2026-11-13) — the second open-source education ERP gains an agent surface, and LATAM's university systems gain one for the first time
+
+### Frappe Education — reachable with no education-specific code, on a FIRST-PARTY MIT connector
+
+🟢 **This file has said since `p807` that OpenEduCat is the cheapest SIS engagement in this KB
+because Odoo has generic connectors. There is now a second, and its connector is better.**
+
+| Platform | Repo | License | Stars | Notes |
+|---|---|---|---|---|
+| **Frappe Education** | https://github.com/frappe/education | 🔴 GPL-3.0 (byte-read `license.txt`, `19 B`) | 709 | Students, programs, enrolment, assessment, fees, on the Frappe framework. `494` forks. 🟢 **Reachable through Frappe Framework's BUILT-IN MCP server (MIT) with no education-specific code** — `13` DocType-generic tools, discovery included. 🔴 Copyleft core: integrate, never derive |
+| **Frappe Framework** | https://github.com/frappe/frappe | **MIT** | 11.1k | The substrate. 🟢 **The connector is first-party, reuses the site's REST v2 permissions, labels `update`/`delete` with `destructiveHint: True`, and is OFF until `enable_mcp` is set.** 🔵 **Unlike Odoo, no third-party connector and no "YOLO mode" to grep for** |
+| **Frappe LMS** | https://github.com/frappe/lms | 🔴 AGPL-3.0 | 3.4k | Same substrate, same connector, `1,593` forks. 🔴 Network clause — hosted delivery needs legal review |
+
+🔵 **The decision rule, now that there are two.** Odoo/OpenEduCat (`P12`) where the client already
+runs Odoo or needs its finance and procurement depth; **Frappe Education (`P29`) where the client
+is greenfield or already on Frappe/ERPNext** — because its connector is first-party and MIT, which
+removes the third-party-connector risk that `P12` has to manage.
+
+### 🇦🇷🇧🇷 The LATAM university self-management tier — a platform layer this file had never named
+
+🔴 **Every section below assumes Moodle, Canvas, an SIS vendor or a European school portal.** 🟢
+**Across Argentina and Brazil the system a student actually logs into is a national or
+institutional self-management platform, and `p812` found agent surfaces for three of them.**
+
+| Platform | What institutions run it | Agent surface found this pass | License | Risk posture |
+|---|---|---|---|---|
+| **SIGAA** (*Sistema Integrado de Gestão de Atividades Acadêmicas*) | 🇧🇷 Brazilian federal and state universities and institutes (UNEMAT, IFSC, UFRPE, UFPA observed) | [`GallegoSz/sigaa-mcp`](https://github.com/GallegoSz/sigaa-mcp) (`13` tools), [`heitorsDev/sigaa-ifsc-mcp`](https://github.com/heitorsDev/sigaa-ifsc-mcp), [`Pedromaia0/sigaa-mcp`](https://github.com/Pedromaia0/sigaa-mcp), [`EduardoBidese/sigaa-agente`](https://github.com/EduardoBidese/sigaa-agente) | MIT ×4 | 🟢 **read-only by construction** 🔴 **plaintext password in client config; HTML parsing; one student per install** |
+| **Sysacad + UTN aula virtual** | 🇦🇷 Universidad Tecnológica Nacional, `18` regionales named | [`nialvape/utn-mcp`](https://github.com/nialvape/utn-mcp) (`12★`, `8` forks) | **ISC** | 🟢 **OAuth server; password never stored; token hashed; session encrypted; preview-then-confirm writes; REFUSES campuses without valid HTTPS** |
+| **SIU Guaraní** | 🇦🇷 most Argentine national universities | [`HyNuwa/UniMCP`](https://github.com/HyNuwa/UniMCP) (Moodle + Guaraní) | **MIT + inherited ISC** | 🟢 **Guaraní read-only — *"Guaraní no tiene API"*, the server reads the G3W pages** 🔴 tested thoroughly only at UNJu |
+| **SUAP** | 🇧🇷 Institutos Federais | [`fabrica-de-inovacao/expeditto`](https://github.com/fabrica-de-inovacao/expeditto) — prepares the teacher's RIT as a **draft** | 🔴 AGPL-3.0 | 🟢 draft-not-submit 🔴 copyleft; the only other SUAP server has no licence |
+| **SIAGIE** | 🇵🇪 Peruvian national K-12 | 🔴 **NONE — `25` repositories, zero agents, zero licences** | — | 🔴 **widest open slot found this pass** |
+| **SIMAT** | 🇨🇴 Colombian national enrolment | 🔴 **NONE — `total_count=0`** | — | 🔴 hard nil |
+
+🔵 **Scoping consequence, and it is the kind that decides a bid.** A Brazilian or Argentine
+university engagement does **not** start at the LMS. It starts at SIGAA, Sysacad or Guaraní —
+**none of which publishes an API** (Guaraní's own integrator says so outright), so every path
+above is an unofficial parser, scraper or RPA driver against an authenticated session. 🔴 **That
+is a contract and data-protection question before it is an architecture one**, exactly as `p810`
+concluded for the proprietary national SIS products in EMEA.
+
 ## 🟢 Sixteenth pass (`p811`, 2026-11-13) — a whole PLATFORM LAYER this file had never named: the national and regional school portal
 
 🔴 **Every section below this one assumes the institution's system of record is an LMS or an

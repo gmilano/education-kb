@@ -11,6 +11,39 @@ repos**, all verified on the `gh api search/repositories` `repo:` channel
 (license field + star count + push date), which this pass CONTROLLED against two
 invented addresses (`T970`).
 
+🟢 **Seventeenth pass (`p812`, 2026-11-13): six repos added, and the lead this shelf has
+carried unrun since `p808` is CLOSED — `frappe/education` has an agent surface, and it is
+first-party.** 🔵 **Count re-derived, not carried:** `grep -cE '^\| .*github\.com'
+repos/foundations.md` = `76` after insertion (`70` before).
+
+## The Frappe layer — the generic platform connector, now FIRST-PARTY (new, seventeenth pass `p812`)
+
+🟢 **`p808` wrote the lead and no pass ran it:** *"`frappe/education` sits on the Frappe
+framework, which is the next place to look for the same generic-connector trick."* 🟢 **Run at
+`p812`, it returns more than the Odoo case did: Frappe Framework now ships a BUILT-IN MCP server,
+it is MIT, and it is generic over DocTypes.**
+
+🔴 **Verified from SOURCE, not from documentation: `docs.frappe.io` does not resolve under this
+session's network policy.** The evidence is
+`raw.githubusercontent.com/frappe/frappe/develop/frappe/mcp/` — `__init__.py`, `server.py` and
+`tools/__init__.py` all return `200`.
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/frappe/frappe | **MIT** (byte-read, `1,083 B`-class) | 11.1k | **New (`p812`) — the row that matters.** Frappe Framework, `5,534` forks, pushed `2026-11-13`. 🟢 **Ships a built-in MCP server at `frappe/mcp/` exposing `13` tools, every one taking the DocType as a PARAMETER:** `search_doctypes`, `get_doctype_schema`, `search_methods`, `get_method_schema`, `list_document_methods`, `list_documents`, `get_document`, `count_documents`, `create_document`, `update_document`, `delete_document`, `call_method`, `call_document_method`. 🟢 **Self-describing** — an agent discovers `Student` / `Program Enrollment` / `Assessment Result` at runtime instead of being told. 🟢 **Governed:** `tools/documents.py` states *"Document tools reuse REST API v2 permissions and controller hooks"*, tools carry correct MCP annotations (`readOnlyHint` on reads, **`destructiveHint: True` on `update_document` and `delete_document`**), and `__init__.py` raises `NotFound` unless the **`enable_mcp`** system setting is on. 🔴 **Generic means generic: the write and `call_method` tools reach every DocType the role can reach. The gate is Frappe's permission model, so the work is ROLE DESIGN** — see `P29` |
+| https://github.com/frappe/education | 🔴 **GPL-3.0 — byte-read `license.txt` (`19 B`, `sha256:1fcecf395312d876…`, `License: GNU GPL V3`), against GitHub's `NOASSERTION`** | 709 | **New (`p812`).** The Frappe education app — students, programs, enrolment, assessment, fees. `494` forks, pushed `2026-10-30`. 🟢 **Reachable through the framework's built-in MCP server with NO education-specific code**, exactly as OpenEduCat is reachable through the Odoo connectors (`T13`). 🔴 **GPL-3.0: a system of record to integrate with, never to derive from.** 🔵 Sixth instance of `NOASSERTION` meaning "read the bytes" |
+| https://github.com/frappe/mcp | **MIT** (byte-read, `1,083 B`, `sha256:a2f4480ba60bfae2…`) | 170 | **New (`p812`) — shelved as a TRAP MARKER, not as a dependency.** 🔴 **Deprecated by its own README: *"This app is deprecated. Frappe Framework now has a built-in MCP server. Use the built-in MCP server for new projects."*** 🔴 **And it is a different KIND of thing: a tool-authoring SDK (`@mcp.tool()` decorators over WSGI, written because the official Python SDK assumes ASGI), NOT a generic connector.** 🔵 **It is the repository every search surfaces for "frappe mcp", at `170★` with a clean MIT grant — so it is precisely the artifact a future pass will shelve by mistake and mis-scope an engagement on.** Its own README also says *"highly experimental … bugs, breaking changes and large updates. Mostly without notice."* |
+| https://github.com/frappe/lms | 🔴 **AGPL-3.0** (byte-read `license.txt`, `33,893 B`, `sha256:db1a87ba81e885b6…`) | 3.4k | **New (`p812`).** Frappe LMS, `1,593` forks, pushed `2026-11-13`. 🔴 **AGPL network clause — integrate as a separate service, never derive.** Reachable by the same built-in MCP server |
+| https://github.com/rakeshgangwar/erpnext-mcp-server | **MIT** (byte-read, `1,071 B`, `sha256:aed951366a50288e…`) | 131 | **New (`p812`).** Third-party ERPNext MCP server, the option that predates the built-in one. Pushed `2026-04-25`. 🔵 **Useful where the site runs a Frappe version without `enable_mcp`;** otherwise prefer first-party |
+| https://github.com/nasroykh/foxmayn_frappe_cli | **MIT** (byte-read, `1,060 B`, `sha256:ccd3695dc9fee04e…`) | 16 | **New (`p812`).** CLI, MCP server and desktop app for Frappe/ERPNext, described as *"scripts, AI assistants with approval"*. Pushed `2026-11-11`. 🔵 **The approval gate is in the product description — worth reading next to `P29`'s role design** |
+
+🔵 **Why this layer is more than one more connector (`T35`).** The Odoo path (`T13`) needed two
+**third-party** connectors, one of which ships a "YOLO mode" that bypasses its own access control.
+Frappe's connector is **in the framework**, **MIT**, **permission-reusing**, **annotation-labelled**
+and **off by default**. 🟢 **That moves a write gate from a build item to a configuration item —
+and it means the second-largest open-source education ERP in this base is now reachable on a
+permissive grant.**
+
 🟢 **Sixteenth pass (`p811`, 2026-11-13): one repo added, one phantom killed, and the
 OneRoster nil re-tested rather than restated.** The addition is
 [`LongsightGroup/oneroster`](https://github.com/LongsightGroup/oneroster) (`MIT`, REST *and*

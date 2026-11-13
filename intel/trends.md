@@ -6,7 +6,20 @@ updated: 2026-11-13
 
 # Education AI — current trends
 
-**Thirty-three** trends, each with the evidence behind it and what it implies for an
+**Thirty-five** trends — derived trends: **35** — each with the evidence behind it and
+what it implies for an engagement. 🟢 **Seventeenth pass (`p812`, 2026-11-13): `T34`–`T35` added,
+`T20` extended to a sixth jurisdiction, `T26` inverted, and `T27` given a fourth and fifth
+direction.** 🔵 **Re-derived before writing: `grep -cE '^## T[0-9]+ —' intel/trends.md` = `35`.**
+🟢 **`ingest/derive-counts.py` now GRADES this file instead of abstaining on it.** 🔴 **It had
+reported `derived=0 claimed=None · AMBER` for every pass since it was written, because its id
+regex accepted `## 31. ` and `## … Trend 31:` but never `## T31 —`, which is the only scheme this
+page has ever used.** 🟢 **Fixed at `p812` by widening the regex to accept this page's actual
+convention — the same class of fix the script's own comments record making at `p568` (family-
+suffixed recipe ids) and `p718` (column signatures instead of prose).** 🔵 **An abstaining gate is
+indistinguishable from a passing one in `make hooks` output, which is exactly how
+`repos/foundations.md` went stale by `10` and `verticals/solutions.md` by `5`.**
+
+**Thirty-three** trends as of `p811`, each with the evidence behind it and what it implies for an
 engagement. 🟢 **Sixteenth pass (`p811`, 2026-11-13): `T31`–`T33` added, and `T30` extended
 to five jurisdictions.** 🔵 **Re-derived before writing: `grep -c '^## T' intel/trends.md` =
 `33`.** 🟢 **`T31` (EMEA's agent supply is attached to national and regional school portals,
@@ -43,6 +56,111 @@ the second time.** 🔵 **The amendment uses no component discovered this pass**
 three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
+
+## T34 — LATAM's education agent supply is attached to UNIVERSITY SELF-MANAGEMENT systems, it CONSOLIDATES rather than scatters, and it carries the best credential engineering in this base
+
+**The evidence.** Before `p812` this base had never written the name of a single Latin American
+education system: `SIGAA` `0` mentions, `SIAGIE` `0`, `SIMAT` `0`, `SUAP` `0`, `SIU-Guarani` `0`.
+Naming them returned **`15` repositories**, `9` build-safe, in two countries:
+
+- 🇦🇷 **Argentina, the UTN cluster — `8` repositories.** [`nialvape/utn-mcp`](https://github.com/nialvape/utn-mcp)
+  (**ISC**, `12★`, **`8` forks**) serves the `aula virtual` (Moodle) across UTN's regionales *and*
+  **Sysacad**, the classic self-management system, via connectors for `18` named regionales.
+- 🇧🇷 **Brazil, the SIGAA cluster — `6` repositories from `6` unrelated authors**, plus `2` on
+  **SUAP**. [`GallegoSz/sigaa-mcp`](https://github.com/GallegoSz/sigaa-mcp) (**MIT**) exposes `13`
+  tools and is read-only by construction.
+
+**Why it is a trend and not a list.** 🟢 **Three things make this different from `T31`'s EMEA
+finding one pass earlier:**
+
+1. 🟢 **The tier is HIGHER EDUCATION SELF-MANAGEMENT, not the school portal and not the LMS.**
+   These systems hold enrolment, marks, attendance, finals and *correlatividades* — the student
+   record, not the courseware. EMEA's cluster sat on school portals; LATAM's sits on the SIS.
+2. 🟢 **The supply CONSOLIDATES.** [`HyNuwa/UniMCP`](https://github.com/HyNuwa/UniMCP)'s `LICENSE`
+   carries two grants — MIT for its own work, ISC for *"Portions of this software are derived from
+   `utn-mcp`"* — and generalises its upstream from one university to Argentine universities as a
+   class. With `8` forks on `utn-mcp`, this is a lineage. 🔵 **`T24` called education's supply
+   "numerous and atomised." That holds for EMEA. LATAM is numerous and consolidating, which is a
+   materially better market to enter.**
+3. 🟢 **The controls are the strongest here.** `utn-mcp` in HTTP mode is its own OAuth
+   authorization server: the password mints a token **once** and is *"no se guarda"*, only the
+   client token's **hash** is stored, sessions are encrypted at rest. 🟢 **And it is the first
+   agent in this base to DROP deployment targets on transport-security grounds** — Rafaela, Santa
+   Cruz and Trenque Lauquen are excluded because their Sysacad lacks valid HTTPS and *"la
+   contraseña viajaría expuesta."*
+
+🔴 **The counterweight, and it must be quoted with the finding: the credential posture is
+OPPOSITE across the two countries.** The Brazilian cluster puts the student's password in
+plaintext in the client config and warns against hosting for anyone else. 🔵 **Same seam, same
+window, same licence class — and the difference between the two is the entire engagement risk.
+Never quote "LATAM has agents" without naming which cluster.**
+
+🔴 **And the supply is not regional.** `SIMAT` (Colombia) returns `total_count=0`; Mexican,
+Chilean and Q-Acadêmico legs each returned `0`; `SIAGIE` (Peru) returns `25` repositories with
+**zero agents and zero licence files**. 🟢 **LATAM's agent supply is Argentine and Brazilian.
+Said as "LATAM coverage" it is a false claim.**
+
+**What it implies for an engagement.** A Brazilian or Argentine university engagement starts at
+SIGAA, Sysacad or Guaraní, **not** at the LMS — and none of them publishes an API, so every
+existing path is an unofficial parser, scraper or RPA driver against an authenticated student
+session. Price the contract and data-protection question first, the architecture second. 🟢 **Take
+`utn-mcp`'s credential design as the reference and `expeditto`'s draft-not-submit as the write
+gate; take neither Brazilian credential handling nor any of the six ungranted repositories.**
+
+🔵 **`T26` inverted, and this is the reusable half.** `T26` says: when this base names a platform
+often and shelves nothing for it, that is a search instruction. 🟢 **`T34` adds the converse: when
+this base has NEVER named a region's systems, a regional zero on its shelf is a fact about the
+shelf, not about the world.** `p811` published `LATAM 0` as "a published nil, not an omission."
+**It was an omission.** A nil is informed only if the query that produced it was.
+
+## T35 — The generic platform connector has gone FIRST-PARTY, and it arrived carrying the controls the third-party ones lack
+
+**The evidence.** `T13` established the most valuable search move in this base: when a vertical
+gap looks empty, search the **platform** the vertical is built on — which is how OpenEduCat
+(LGPL-3.0) turned out to be reachable through two Odoo MCP connectors whose tools take the model
+name as a parameter. 🟢 **`p812` ran the same move on Frappe, the lead this base wrote at `p808`
+and never executed, and the result is a step change rather than a repeat.**
+
+**Frappe Framework ships a BUILT-IN MCP server.** Verified from source at
+`raw.githubusercontent.com/frappe/frappe/develop` — 🔴 **`docs.frappe.io` does not resolve under
+this session's network policy, so the documentation was unavailable and the code was read
+instead.** `frappe/mcp/tools/__init__.py` registers **`13` tools, every one DocType-generic**:
+`search_doctypes`, `get_doctype_schema`, `search_methods`, `get_method_schema`,
+`list_document_methods`, `list_documents`, `get_document`, `count_documents`, `create_document`,
+`update_document`, `delete_document`, `call_method`, `call_document_method`.
+
+**Why first-party changes the engagement, point by point:**
+
+| | Odoo path (`T13`, `P12`) | Frappe path (`T35`, `P29`) |
+|---|---|---|
+| Connector origin | two **third-party** servers | 🟢 **in the framework itself** |
+| Licence | MIT / MPL-2.0 | 🟢 **MIT** (`frappe/frappe`) |
+| Access control | companion Odoo module, per-model allowlist | 🟢 **reuses the site's REST v2 permissions and controller hooks** |
+| Destructive-tool labelling | not stated | 🟢 **MCP annotations: `readOnlyHint` on reads, `destructiveHint: True` on `update`/`delete`** |
+| Default state | installed = reachable | 🟢 **`NotFound` unless the `enable_mcp` system setting is on** |
+| Known footgun | 🔴 **"YOLO mode" bypasses all MCP access control, exposes 200+ models, full mode permits delete** | 🔴 generic writes reach any DocType the role can reach |
+| Discovery | tools must be told the model | 🟢 **`search_doctypes` + `get_doctype_schema` — the agent discovers `Student`, `Program Enrollment`, `Assessment Result` at runtime** |
+
+🟢 **The consequence for pricing: a write gate moves from a BUILD item to a CONFIGURATION item.**
+The institution's existing roles become the agent's permission boundary, so the deliverable is
+role design plus an audit trail, not a bespoke allowlist service.
+
+🔴 **The trap, recorded because this pass nearly fell into it.** `frappe/mcp` (**MIT**, `170★`) is
+the repository every search surfaces for "frappe mcp" — and it is the wrong artifact twice over:
+its README's first lines say *"This app is deprecated. Frappe Framework now has a built-in MCP
+server"*, and it is a **tool-authoring SDK** (`@mcp.tool()` decorators over WSGI), not a generic
+connector. 🟢 **Shelved on stars and licence alone it would have produced "Frappe has an MCP
+connector at `170★`" and mis-scoped every Frappe engagement as hand-written tools per DocType.**
+🔵 **`T969` generalises one layer up: the licence field is not the only field that lies. A clean
+grant and healthy traction say nothing about whether the artifact is current or is the thing you
+think it is.**
+
+**What it implies.** 🟢 **Two open-source education ERPs are now agent-reachable on permissive
+connectors** — OpenEduCat via Odoo (`P12`) and **Frappe Education** (`709★`, `494` forks, GPL-3.0
+core) via the built-in server (`P29`). 🔵 **Decision rule: Odoo where the client already runs it
+or needs its finance depth; Frappe where the client is greenfield or already on ERPNext, because
+the first-party connector removes the third-party risk `P12` must manage.** 🔴 **Both cores are
+copyleft: integrate with the system of record, never derive from it.**
 
 ## T31 — EMEA's education agent supply has arrived, and it is attached to NATIONAL AND REGIONAL SCHOOL PORTALS rather than to the LMS
 

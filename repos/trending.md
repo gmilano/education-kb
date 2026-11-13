@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (seventeenth pass) — **The generic platform connector went FIRST-PARTY, and it arrived with the controls the third-party ones lacked**
+
+**Pass `p812`.** 🟢 **The lead this base wrote down at `p808` and never ran — *"`frappe/education`
+sits on the Frappe framework, which is the next place to look for the same generic-connector
+trick"* — was run this pass, and it returned more than the Odoo case did.**
+
+### What moved
+
+| Repo | Licence (byte-read) | ★ | Forks | Pushed | Why it is here |
+|---|---|---|---|---|---|
+| [`frappe/frappe`](https://github.com/frappe/frappe) | **MIT** `1,083 B`-class, verified in-source | `11,094` | `5,534` | `2026-11-13` | 🟢 **Ships a BUILT-IN MCP server exposing `13` DocType-generic tools. This is the row that gives `frappe/education` an agent surface** |
+| [`frappe/mcp`](https://github.com/frappe/mcp) | **MIT** `1,083 B` | `170` | — | `2026-10-27` | 🔴 **DEPRECATED by its own README — and shelved anyway, as a trap marker.** *"This app is deprecated. Frappe Framework now has a built-in MCP server."* A tool-authoring SDK (`@mcp.tool()` decorators), **not** a generic connector |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 **GPL-3.0** — byte-read `license.txt` (`19 B`: `License: GNU GPL V3`), against GitHub's `NOASSERTION` | `709` | `494` | `2026-10-30` | The education app the connector reaches. Copyleft, so it is a system of record to integrate with, never to derive from |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** `33,893 B` | `3,417` | `1,593` | `2026-11-13` | The Frappe LMS. 🔴 AGPL + network clause: integrate, never derive |
+| [`rakeshgangwar/erpnext-mcp-server`](https://github.com/rakeshgangwar/erpnext-mcp-server) | **MIT** `1,071 B` | `131` | — | `2026-04-25` | Third-party ERPNext MCP server, the pre-built-in option |
+| [`nasroykh/foxmayn_frappe_cli`](https://github.com/nasroykh/foxmayn_frappe_cli) | **MIT** `1,060 B` | `16` | — | `2026-11-11` | CLI + MCP + desktop for Frappe/ERPNext, *"AI assistants with approval"* — an approval gate stated in the description |
+
+### 🟢 The architecture question, answered from SOURCE rather than from documentation
+
+🔴 **`docs.frappe.io` does not resolve under this session's network policy**, so the built-in
+server was verified by reading `raw.githubusercontent.com/frappe/frappe/develop` directly.
+`frappe/mcp/__init__.py` and `frappe/mcp/server.py` are present; `frappe/mcp/tools/__init__.py`
+holds the registry. 🟢 **`13` tools, every one taking the DocType as a PARAMETER:**
+
+- **Discovery** — `search_doctypes`, `get_doctype_schema`, `search_methods`, `get_method_schema`,
+  `list_document_methods`
+- **CRUD** — `list_documents`, `get_document`, `count_documents`, `create_document`,
+  `update_document`, `delete_document`
+- **Methods** — `call_method`, `call_document_method`
+
+🟢 **So the Odoo trick transfers, and it transfers BETTER:** the Odoo path needs two third-party
+connectors, while Frappe's is **in the framework itself, first-party and MIT**, and it is
+**self-describing** — `search_doctypes` + `get_doctype_schema` let an agent discover
+`Student`, `Program Enrollment` and `Assessment Result` at runtime rather than being told.
+
+🟢 **And it is the best-governed connector in this base, verified line by line:**
+
+- `frappe/mcp/tools/documents.py` line 3: *"Document tools reuse REST API v2 permissions and
+  controller hooks."* 🔵 **The agent inherits the institution's existing role and permission
+  model — it does not define a parallel one.**
+- 🟢 **Tools carry MCP annotations and they are correct:** `readOnlyHint: True` on the three read
+  tools, `destructiveHint: False` on `create_document`, **`destructiveHint: True` on
+  `update_document` and `delete_document`.**
+- 🟢 **The whole endpoint is off until a site enables it:** `frappe/mcp/__init__.py` raises
+  `NotFound` unless the `enable_mcp` system setting is on.
+
+🔴 **The risk, stated plainly because the tools are generic:** `create_document`,
+`update_document`, `delete_document` and `call_method` reach **every** DocType the authenticated
+role can reach, student records included. 🔵 **The control is real but it is Frappe's permission
+model, so the engagement work is role design, not tool design** — see `P29`.
+
+### 🔴 The correction this pass nearly shipped
+
+🔴 **`frappe/mcp` (`170★`, MIT) is the repository every search surfaces, and it is the WRONG
+artifact** — deprecated, and an SDK for hand-writing tools rather than a generic connector. 🟢
+**Had this pass shelved it on stars and licence alone, it would have published "Frappe has an MCP
+connector at `170★`" and mis-scoped every Frappe engagement that followed: hand-written tools per
+DocType instead of configuration.** 🔵 **The deprecation notice was in the first ten lines of its
+README. Read the README, not the sidebar** (`T969`, one layer up: the licence field is not the
+only field that lies).
+
+
 ## `2026-11-13` (sixteenth pass) — **One repo added, one phantom killed, and the OneRoster nil re-tested instead of restated**
 
 **Pass `p811`.** 🟢 **A deliberately small movement on this shelf, because the window's

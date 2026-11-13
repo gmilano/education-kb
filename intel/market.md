@@ -6,10 +6,12 @@ updated: 2026-11-13
 
 # Education AI — market map and opportunities by region
 
-Researched 2026-11-13, across **sixteen** passes; each region's updates are
-ordered **newest first** directly under its heading. 🟢 **Sixteenth pass (`p811`):
-`58` `#### Update` blocks across five regions — North America `13`, EMEA `13`,
-APAC `13`, LATAM `13`, Global `6`. Every region gained one.** 🔵 **Re-derived this pass with
+Researched 2026-11-13, across **seventeen** passes; each region's updates are
+ordered **newest first** directly under its heading. 🟢 **Seventeenth pass (`p812`):
+`63` `#### Update` blocks across five regions — North America `14`, EMEA `14`,
+APAC `14`, LATAM `14`, Global `7`. Every region gained one, as every pass must.**
+🔵 **Re-derived this pass with an `awk` tally over `^#### Update` per `### ` section, not
+carried forward.** 🔵 **Re-derived this pass with
 `grep -c '^#### '` per region section, not carried forward.** 🟢 **Every region gained a
 block this pass, which is the point of the rotation — a North America or EMEA engagement is
 served as well as a LATAM one.** 🔴 **This line said "four passes" through the
@@ -94,6 +96,40 @@ across EMEA.
 ## Opportunities by region
 
 ### North America
+
+#### Update 2026-11-13 (seventeenth pass, `p812`) — 🟢 The state-policy count moves again, and the regional supply gap is now the SHARPEST it has been
+
+🔵 **Source confidence, stated once for this block.** Figures marked `MR` come from
+market-research marketing pages or vendor-commissioned surveys read through search summaries and
+are **order-of-magnitude only**; figures marked `PRIMARY-CITED` name a primary issuance that was
+**not** read directly under this session's network policy. 🔴 **Nothing in this block was read
+from a primary source this pass.**
+
+- **State legislation is the binding layer, and it is accelerating.** The PIE Network tracked
+  **nearly `100` state bills** that could affect K-12 AI use in 2026; a separate analysis counts
+  **at least `15` states** that have introduced or passed AI-in-education legislation
+  (`PRIMARY-CITED`). The Education Commission of the States describes federal executive orders
+  issued between 2025 and early 2026 as having produced a **national framework** for AI in
+  education. 🔵 **Consistent with `T18` and `T21`: the instrument that binds a US engagement is
+  the state's or the system's own policy, with a date on it — not federal law.**
+- **A ballot measure, which is a different kind of risk.** A **California ballot initiative on how
+  AI companies interact with minors** was announced in January 2026 (`PRIMARY-CITED`). 🔴 **A
+  ballot measure cannot be negotiated or phased the way an agency rule can**; for any product
+  touching under-18 users in California, treat the measure's text as a hard date once qualified.
+- **Consolidation is visible in demand, not just in headcount.** Chegg cut **45%** of staff as AI
+  tools reduced demand for homework help (`MR`). 🔵 **The read for a studio: the "answer a
+  student's question" layer is commoditised. The defensible layer is the one bound to the
+  institution's system of record** — which is what `P19`, `P27` and `P29` sell.
+- 🔴 **The agent-supply picture for North America got WORSE in relative terms this pass, and the
+  number is from this base's own shelf.** `agents/top.md` now holds `74` build-safe agents, of
+  which **North America is `4`** — unchanged while EMEA went to `10` and LATAM to `8`. 🟢 **The
+  highest-ceiling openings remain the ones this base has already evidenced: OneRoster has
+  **zero** agent implementations (`P27`), PowerSchool has three servers and **no permissive
+  one**, and Ellucian Banner, Colleague and Workday Student have **none of any kind**.**
+- 🔵 **Market size, unchanged in character: contested and vendor-sourced.** US AI-in-education
+  put at **$3,280M (2025) → $15,250M (2031)** by one outlook; Technavio puts the global market at
+  **$3.37B with a 45% CAGR** and North America at **38%** share (`MR`, and the two are not
+  reconcilable). Student AI usage reported rising **66% (2024) → 92% (2025)** (`MR`).
 
 #### Update 2026-11-13 (sixteenth pass, `p811`) — 🟢 A fourth dated state obligation, and the consolidation this base predicted is now visible in HEADCOUNT
 
@@ -665,6 +701,44 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-13 (seventeenth pass, `p812`) — 🟢 The university campus-virtual tier joins the school-portal tier, and the Gulf adds a hard prohibition list
+
+🔵 **Source confidence, stated once for this block.** Figures marked `MR` come from
+market-research marketing pages or vendor-commissioned surveys read through search summaries and
+are **order-of-magnitude only**; figures marked `PRIMARY-CITED` name a primary issuance that was
+**not** read directly under this session's network policy. 🔴 **Nothing in this block was read
+from a primary source this pass.**
+
+- 🟢 **`p811`'s EMEA finding extends one tier UP.** `p811` found agents on national and regional
+  **school** portals. `p812` adds the **university campus virtual**:
+  [`rdereparadores/cvuex-mcp`](https://github.com/rdereparadores/cvuex-mcp) (**MIT**,
+  byte-verified) serves the Campus Virtual of the **Universidad de Extremadura** 🇪🇸, created
+  `2026-09-26`. 🔵 **Same shape and same window as the Argentine cluster** — which is what makes
+  `T34` a cross-regional pattern rather than a LATAM curiosity. **EMEA is now `10` of this base's
+  `74` build-safe agents, the largest regional bloc after `Global`.**
+- 🔴 **The UAE set `25` generative-AI PROHIBITIONS for schools (February 2026)** covering age
+  suitability, privacy, academic integrity and exams (`PRIMARY-CITED`, single secondary source —
+  verify before quoting). 🔵 **Placed in EMEA deliberately: the Gulf is EMEA in this file's closed
+  region vocabulary, and a search engine filing it under APAC is a vocabulary error, not a fact.**
+  🟢 **A prohibition LIST is a cheaper compliance artifact to build against than a principles
+  document** — it maps directly onto `P14`'s deployment registry.
+- **Adoption is past the pilot stage and the hardware follows.** Futuresource reports **67% of
+  teachers now using AI tools** and adoption moving *"from experimentation to structured
+  implementation"*; AI-enabled devices are forecast at **15% of institutional PC shipments in
+  2026**, growing **4.3M units (2026) → 15M (2030)** (`MR`, vendor-commissioned).
+- 🔴 **Teacher confidence is the brake, and it is measurable.** An Epson-commissioned survey of
+  ~`3,360` people across the UK, France, Italy, Germany, Spain and Poland found **80% of teachers
+  worry AI is entering the classroom faster than schools can manage**, while **76% of students
+  expect to be able to use AI in their learning** (`MR`). 🔵 **That gap — students pulling,
+  teachers braking — is the demand signal for `P20` (AI literacy) and `P14` (registry), not for
+  another tutor.**
+- **Policy instruments to cite by name:** the **OECD Digital Education Outlook 2026**; the
+  Council's **conclusions on teachers in the AI era (11 May 2026)**; **Eurydice, *Digital
+  education at school in Europe 2026***; the Commission's **draft Article 6 high-risk guidelines
+  (19 May 2026**, consultation to **23 June 2026**) (`PRIMARY-CITED`). 🔵 **The Digital Omnibus
+  shift of the education high-risk obligations to `2 December 2027` is already recorded in this
+  file and remains the single most important date for an EMEA assessment engagement.**
 
 #### Update 2026-11-13 (sixteenth pass, `p811`) — 🟢 `ACTION p802-B` is half-discharged from the SUPPLY side: German classroom integration CODE exists at Land level, even though the statistics still do not
 
@@ -1256,6 +1330,36 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-13 (seventeenth pass, `p812`) — 🔴 A region whose agent supply has now been overtaken twice, and a public-opinion finding that cuts against the ban narrative
+
+🔵 **Source confidence, stated once for this block.** Figures marked `MR` come from
+market-research marketing pages or vendor-commissioned surveys read through search summaries and
+are **order-of-magnitude only**; figures marked `PRIMARY-CITED` name a primary issuance that was
+**not** read directly under this session's network policy. 🔴 **Nothing in this block was read
+from a primary source this pass.**
+
+- 🔴 **APAC is now the SMALLEST regional bloc on this base's agent shelf: `3` of `74` build-safe
+  rows**, overtaken by EMEA (`10`) at `p811` and by LATAM (`8`) at `p812`. 🔵 **This is a finding
+  about supply VISIBILITY, not about capability** — `T8` still holds that education AI's centre of
+  gravity is APAC. 🟢 **The actionable reading: the seam-naming transform that produced `15`
+  LATAM repositories in one hour has never been run against APAC's national systems.** Nobody has
+  queried the Indian, Indonesian, Vietnamese or Philippine school platforms by name in this base.
+  🔴 **Declared as an open leg for the next pass, not as an absence.**
+- 🟢 **Public opinion is NOT where the ban narrative assumes.** The **Ipsos Education Monitor
+  2026** reports **lower support for banning AI in schools across the Asian markets examined**,
+  while support for limiting children's social media use stays high (`MR`). 🔵 **Useful in a
+  ministry conversation: the political constraint in APAC is on social media and child safety,
+  not on classroom AI as such.**
+- **Adoption is real but uneven.** A regional survey reports **virtual tutors used by 30%** of the
+  cohort, with uptake *"patchy"* and connectivity a limiting factor (`MR`). One market report
+  claims a **50% increase** in AI-learning-platform adoption over two years (`MR`).
+- **Convening calendar worth tracking, because these are where ministry buyers appear:** the
+  **World Bank Global EdTech Policy Academy on AI**, Seoul, **31 August – 4 September 2026**;
+  **Cambridge English's APAC leaders convening**, Kuala Lumpur, **April 2026**; **EdTech Hub's
+  AI-in-education topic briefs for Southeast Asia** (`PRIMARY-CITED`). One report cites **34,000
+  teachers** being trained through 2026 for an AI classroom rollout (`MR`, region unspecified —
+  🔴 do not attribute to a country without checking).
+
 #### Update 2026-11-13 (sixteenth pass, `p811`) — 🟢 A fifth national instrument with a dated window and a NAMED population, plus a dated Australian obligation
 
 🔴 **`CITED, NOT READ`: `www.pna.gov.ph` does not resolve under this session's network
@@ -1841,6 +1945,48 @@ example of.
 
 ### LATAM
 
+#### Update 2026-11-13 (seventeenth pass, `p812`) — 🟢 The agent-supply nil this file published one pass ago is CLOSED, and it was a measurement error
+
+🟢 **`p811` recorded `0` of `65` build-safe agents integrating with a system operated in this
+region and called it "a published nil, not an omission." This pass withdraws that.** 🔴 **It was
+an omission, and the cause is nameable: no search in sixteen passes had ever written `SIGAA`,
+`SIAGIE`, `SIMAT`, `SUAP` or `SIU-Guarani`.** 🟢 **Naming them returned `15` repositories in one
+hour, `9` build-safe. LATAM is now `8` of `74` — the third-largest bloc, ahead of North America.**
+
+🔵 **Source confidence, stated once for this block.** Figures marked `MR` come from
+market-research marketing pages or vendor-commissioned surveys read through search summaries and
+are **order-of-magnitude only**; figures marked `PRIMARY-CITED` name a primary issuance that was
+**not** read directly under this session's network policy. 🔴 **Nothing in this block was read
+from a primary source this pass.**
+
+- 🟢 **The supply, precisely.** 🇦🇷 **Argentina — the UTN cluster (`8` repos):**
+  [`nialvape/utn-mcp`](https://github.com/nialvape/utn-mcp) (**ISC**, `12★`, `8` forks) over the
+  `aula virtual` **and Sysacad** across `18` regionales, with
+  [`HyNuwa/UniMCP`](https://github.com/HyNuwa/UniMCP) (**MIT + inherited ISC**) generalising it and
+  adding **SIU Guaraní**. 🇧🇷 **Brazil — the SIGAA cluster (`6` repos, `6` unrelated authors)**
+  plus `2` on **SUAP**. 🔵 **Full detail in `agents/trending.md`; the pattern is `P30`.**
+- 🔴 **It is NOT regional coverage, and this is the sentence to carry into a bid.** `SIMAT`
+  (Colombia) → `total_count=0`. Mexican, Chilean and Q-Acadêmico legs → `0`. `SIAGIE` (Peru) →
+  `25` repositories, **zero agents and zero licence files**. 🟢 **LATAM's agent supply is
+  Argentine and Brazilian.**
+- 🟢 **Peru is the widest open slot this pass found anywhere.** SIAGIE has an active developer
+  community — attendance uploaders, grade consolidation, analytics dashboards — and **no agentic
+  surface and no grants at all**. 🔵 **An entry there competes with nobody.**
+- 🔴 **`40%` of the region's repositories carry no licence file** (`6` of `15`), including a `5★`
+  UTN campus agent and the most developed Brazilian SIGAA server. 🟢 **The licence request is the
+  cheapest high-value move available in this region** — it costs an issue.
+- **Demand-side, consistent with what this file already holds.** The Digital Education Council's
+  **LATAM survey 2026** with Tecnológico de Monterrey (**30,000+** responses, **29** institutions)
+  reports **92% of students and 79% of faculty** actively engaging with AI, while **only 30%**
+  believe their institutions have responded effectively (`MR`). UNESCO IESALC's survey of **200
+  institutions across 19 countries** finds the same adoption-vs-governance gap, and the Latin
+  America AI Index notes LAC accounts for **14% of global visits to AI tools** against **11%** of
+  global internet users (`PRIMARY-CITED`). 🔵 **Demand is the highest in the world and governance
+  is the thinnest — which is `P4`'s entire thesis, and now `P30` gives it an engineering path.**
+- **Institutional buyers to name:** UNESCO IESALC, the **IDB** (its snapshot of **193** real AI
+  initiatives across LAC), **Fundación Ceibal** and **EdTech Hub** (partnership announced
+  September 2026), UNU-IAS, Tecnológico de Monterrey (`PRIMARY-CITED`).
+
 #### Update 2026-11-13 (sixteenth pass, `p811`) — 🔴 The agent-supply nil is now MEASURED: `0` of `65` build-safe agents integrate with a system operated in this region
 
 🔴 **This is the hardest number this file has produced about LATAM, and it comes from this
@@ -2407,6 +2553,35 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-13 (seventeenth pass, `p812`) — 🟢 A second open-source education ERP becomes agent-reachable, and the evidence base stays thin
+
+🔵 **Source confidence, stated once for this block.** Figures marked `MR` come from
+market-research marketing pages or vendor-commissioned surveys read through search summaries and
+are **order-of-magnitude only**; figures marked `PRIMARY-CITED` name a primary issuance that was
+**not** read directly under this session's network policy. 🔴 **Nothing in this block was read
+from a primary source this pass.**
+
+- 🟢 **The structural change this pass: `frappe/education` (`709★`, `494` forks) is now reachable
+  by an agent on a FIRST-PARTY MIT connector**, because Frappe Framework ships a built-in MCP
+  server with `13` DocType-generic tools (verified in source — 🔴 `docs.frappe.io` does not
+  resolve under this session's network policy). 🔵 **Two open-source education ERPs now have
+  permissive agent paths — OpenEduCat via Odoo (`P12`) and Frappe Education (`P29`)** — and the
+  Frappe one reuses the site's own permission model, which turns a write gate from a build item
+  into a configuration item. See `T35`.
+- 🔴 **The evidence problem has not moved, and it is the best objection a buyer can raise.** Only
+  **45%** of the most-used education tools have published research meeting an **ESSA evidence
+  tier** (`MR`). 🔵 **Every tutor in `agents/top.md` claims pedagogical effect and none can be
+  compared on it** — the `AITutor-EvalKit` gap, still unlicensed and still `4★`. 🟢 **`P15` (the
+  tutor-efficacy gate) is the pattern that answers this, and it is build-not-adopt.**
+- **Market framing from this window:** the **OECD Digital Education Outlook 2026** argues AI helps
+  learning only where pedagogy stays in control; **Instructure launched Canvas Career**, a
+  skills-first AI LMS aimed at workforce learning (`MR`/`PRIMARY-CITED`). 🔵 **Canvas Career is
+  the incumbent LMS moving onto `T23`'s ground — assessment shifting from "did the student learn
+  the course" to "can this person do the task" — and it is the clearest commercial confirmation of
+  that trend this base has recorded.** It also sharpens `P18`, whose buyer is a workforce agency.
+- 🔴 **The prescribed discovery battery returned its EIGHTH consecutive nil** (see
+  `agents/trending.md`). 🟢 **Retire it as a discovery instrument; keep it as a control.**
 
 #### Update 2026-11-13 (sixteenth pass, `p811`) — 🔴 The capital has turned, and it turned AWAY from education toward workforce
 

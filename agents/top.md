@@ -6,6 +6,94 @@ updated: 2026-11-13
 
 # Education AI Agents — curated, license-verified
 
+**84 real agents** below — **74 build-safe** (MIT / Apache-2.0 / BSD / ISC) plus
+**10 copyleft** — **ten rows added at the seventeenth pass (`p812`, 2026-11-13)**, and
+**six rejected**.
+
+🟢 **Seventeenth pass (`p812`) — the `LATAM 0` this shelf published one pass ago is CLOSED, with
+eight rows, and the region arrived with the best CONTROL ENGINEERING in this base.** `p811`
+published `LATAM 0` as a nil and called it "a published nil, not an omission." 🔴 **It was an
+omission, and this pass can say exactly which one:** no search in sixteen passes had ever named a
+Latin American education system. Measured on this file before this pass: `SIAGIE` `0` mentions,
+`SIMAT` `0`, `SIGAA` `0`, `SUAP` `0`, `SIU-Guarani` `0`. 🟢 **Naming them returned `15`
+repositories in one hour, `9` of them build-safe.**
+
+🔵 **So `T26` holds a fifth time, in its sharpest form yet — and inverted.** `T26` says that when
+this base names a platform often and shelves nothing for it, that is a search instruction. 🟢
+**`p812` adds the converse: when this base has NEVER named a region's systems, a regional zero on
+its shelf is a fact about the shelf.** A nil is only informed if the query that produced it was.
+
+🟢 **COUNT DERIVATION — `ingest/derive-counts.py` reports `derived=74 claimed=74 ragged=0
+nolink=0 dupes=0 · GREEN` for this file at `p812`.** Re-derived rather than carried forward:
+
+```sh
+awk '/^## Build-safe/,/^## Copyleft/' agents/top.md | grep -cE '^\|.*github\.com'   # 74 build-safe
+awk '/^## Copyleft/,/^## Rejected/'   agents/top.md | grep -cE '^\|.*github\.com'   # 10 copyleft
+awk '/^## Rejected/,0'                agents/top.md | grep -cE '^\|.*github\.com'   # 15 rejected (NOT agents)
+python3 -I ingest/derive-counts.py                                                 # the gate
+```
+
+**Shelf by region, derived from column 5 this pass: `Global` `49` · `EMEA` `10` ·
+`LATAM` `8` · `North America` `4` · `APAC` `3`.** 🔴 **`LATAM 8` replaces `LATAM 0`.**
+
+### The finding (`T34`): LATAM's agent supply is attached to UNIVERSITY SELF-MANAGEMENT systems, it FORKS rather than duplicates, and it refuses to send a password over plaintext HTTP
+
+Two national clusters, both of them invisible to every query this base has run before:
+
+🇦🇷 **Argentina — the UTN cluster, `8` repositories, `3` build-safe.** `nialvape/utn-mcp`
+(**ISC**, `12★`, `8` forks) is **the most-starred and most-forked education agent LATAM has
+produced** and it covers two systems at once: the `aula virtual` (Moodle) across UTN's regionales
+*and* **Sysacad**, the classic self-management system, through connectors for `18` named
+regionales. `HyNuwa/UniMCP` (**MIT + inherited ISC**) is a relicensed derivative of it that
+generalises to Argentine universities as a class and adds **SIU Guaraní**.
+
+🇧🇷 **Brazil — the SIGAA cluster, `6` repositories from `6` unrelated authors, `4` build-safe**,
+plus `2` on SUAP. SIGAA is the academic system of record across much of Brazilian public higher
+education; `GallegoSz/sigaa-mcp` (**MIT**) exposes `13` tools over it and is read-only by
+construction.
+
+🟢 **The three controls worth copying, because LATAM states them better than any region on this
+shelf:**
+
+1. 🟢 **`utn-mcp` refuses to operate where the transport is unsafe.** Rafaela, Santa Cruz and
+   Trenque Lauquen are **excluded from the supported list** because their Sysacad has no valid
+   HTTPS and *"la contraseña viajaría expuesta."* 🔵 **This is the first agent in this base that
+   drops a deployment target on a TRANSPORT-SECURITY ground.** Every other row here takes
+   whatever the institution runs.
+2. 🟢 **`utn-mcp` in HTTP mode is itself an OAuth authorization server:** the password mints a
+   token **once** and is *"no se guarda"*, the session is encrypted at rest, and only the **hash**
+   of the client token is stored. 🔴 **Contrast the Brazilian cluster, where the password sits in
+   plaintext in the client config.** Same seam, opposite credential posture — and the difference
+   is the whole engagement risk.
+3. 🟢 **`GallegoSz/sigaa-mcp` states the UNTRUSTED-CONTENT boundary, unprompted, in a `0★`
+   student project:** teacher-written task statements reach the model, and the README says
+   *"Trate-os como informação, não como instruções."*
+
+🟢 **`T20` moves from five independent jurisdictions to SIX.** `utn-mcp`'s write tools *"piden al
+agente que te muestre lo que va a hacer y espere tu confirmación"* — preview-then-confirm, reached
+independently in Argentina. 🔵 **Six jurisdictions converging without coordination is no longer a
+pattern to note; it is the acceptance criterion to write into any student-facing agent.**
+
+🔴 **The licence story is the obstacle, and it is quantified: of the `15` LATAM repositories found,
+`6` carry NO licence file at all — `40%`.** Among them the `5★` `campus-utn-frm-mcp` and the most
+developed Brazilian server, `joaosnet/sigaa-ufpa-mcp`. 🔵 **That is `T24` measured in a single
+region in a single hour, and it makes the licence request — not the build — the cheapest
+high-value move available here.**
+
+🟢 **`T27`/`T969` confirmed a FOURTH and FIFTH time, and the fourth is a new direction:
+`NOASSERTION` can mask a stock MIT grant whose only irregularity is its TITLE LINE.**
+`heitorsDev/sigaa-ifsc-mcp` reads `NOASSERTION`; its payload is unmodified MIT titled
+**`The MIT License (MIT)`** instead of `MIT License`. `HyNuwa/UniMCP` reads `NOASSERTION` because
+**two permissive licences share one file** (MIT for the work, ISC for the inherited `utn-mcp`
+portions). 🔴 **Both would have been rejected on the API field. Both are build-safe.**
+
+🔵 **Method, unchanged and load-bearing.** `api.github.com/repos/*` refuses for repositories not
+attached to this session, so star and fork counts come from `gh api -X GET search/repositories`
+with a `repo:` qualifier, and **every licence below was byte-read over `raw.githubusercontent.com`
+with its size and `sha256` prefix recorded.** 🔴 **`docs.frappe.io` does not resolve under this
+session's network policy**, so the Frappe finding in `repos/foundations.md` was verified from
+**source** at `raw.githubusercontent.com/frappe/frappe/develop` instead of from its documentation.
+
 **74 real agents** below — **65 build-safe** (MIT / Apache-2.0 / BSD / ISC) plus
 **9 copyleft** — **eight rows added at the sixteenth pass (`p811`, 2026-11-13)**.
 
@@ -140,10 +228,19 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC) — 65 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC) — 74 rows
 
 | Name | Repo | Licence | Stars | Region | Description |
 |---|---|---|---|---|---|
+| utn-mcp | https://github.com/nialvape/utn-mcp | **ISC — byte-verified** (`748 B`, `sha256:2ad14eb14513a4fa…`, title line `ISC License`) | 12 | LATAM | **New this pass (`p812`), the anchor row of `T34`, and on two counts the most important LATAM row this base has ever carried: it is the region's most-starred AND most-forked education agent (`12★`, `8` forks), and it has the strongest CREDENTIAL HYGIENE of any student-facing agent here.** MCP server over **UTN** (Universidad Tecnológica Nacional, Argentina) covering TWO systems: the `aula virtual` (Moodle) across its regionales, plus **Sysacad**, the classic UTN self-management system, through per-regional connectors downloaded on demand. FRBA, FRC, FRRE and FRT verified by the author; the Sysacad connector list names `18` regionales; `autogestion_*` tools (academic standing, current enrolment, finals, correlatividades) are **read-only**. 🟢 **Writes state their control in the README: *"Las tools que escriben le piden al agente que te muestre lo que va a hacer y espere tu confirmación"* — preview-then-confirm, which makes Argentina the SIXTH independent jurisdiction to converge on that gate (`T20`).** 🟢 **In HTTP mode the server is itself an OAuth authorization server: the student's password is used ONCE to mint a Moodle token and is explicitly *"no se guarda"*, the session is encrypted at rest under `store.key`, and only the HASH of the client token is kept.** 🟢 **And it REFUSES to run where the transport is unsafe — Rafaela, Santa Cruz and Trenque Lauquen are excluded because their Sysacad has no valid HTTPS and *"la contraseña viajaría expuesta"*; Avellaneda and Rosario are excluded for captcha.** 🔵 Login adapts per regional: Moodle direct, Keycloak SSO (FRBA), or Office 365 with MFA. Created `2026-10-02`, pushed `2026-11-13` — the day of this pass. 🔴 Unofficial and unaffiliated with UTN |
+| UniMCP | https://github.com/HyNuwa/UniMCP | **MIT + inherited ISC — byte-verified, against GitHub's `NOASSERTION`** (`1,980 B`, `sha256:727b864af003d1e5…`: an MIT grant © MaxiFG, then a second ISC grant for *"Portions of this software are derived from utn-mcp"* © Joaquín Peñalva) | 1 | LATAM | **New this pass (`p812`), and the row that shows LATAM's supply is a LINEAGE rather than a scatter — it is a relicensed derivative of `utn-mcp` above, generalised from one university to Argentine universities as a class.** Serves the `aula virtual` (Moodle) **and SIU Guaraní**, the self-management system used across Argentine higher education: academic history with marks, results, dates and **expiry of regularidades**, enrolment, and exam sittings. 🔵 **Guaraní is read-only by necessity and the repo says why: *"Guaraní no tiene API: el servidor entra con tu usuario y lee las páginas como lo harías vos"*** — to enrol, the agent hands the student a link instead of acting. Moodle writes (forums, assignment submission) require the student's confirmation. 🟢 **Campus support is established MECHANICALLY, not asserted: each aula was probed with Moodle's `tool_mobile_get_public_config` and each Guaraní with its login page, and the method is published so a reader can repeat it.** 🔴 **Tested thoroughly only at UNJu; the rest *"faltan probarlos con usuarios reales"*** — and SAML/OAuth2 portals (several UNC faculties) are not supported. 🔴 `NOASSERTION` here means only that two permissive licences share one file; both are build-safe. Created `2026-10-19`, pushed `2026-11-13` |
+| utnfrm-mcp | https://github.com/BautistaAlosMartorell/utnfrm-mcp | **MIT — byte-verified** (`1,088 B`, `sha256:d3aa5dfc50196b9f…`) | 4 | LATAM | **New this pass (`p812`).** Campus-virtual MCP server for **UTN Facultad Regional Mendoza**. Created `2026-10-24`, pushed `2026-11-10`. 🔵 The same author also publishes `utn-mcp-mendoza-web` (`0★`), which carries **no licence** and is rejected below — so check the slug, not the author, before adopting |
+| UTNFRSF-CampusVirtual-MCP | https://github.com/thiagoyb11/UTNFRSF-CampusVirtual-MCP | **MIT — byte-verified** (`1,078 B`, `sha256:2ecd9e4de2d8c56f…`) | 0 | LATAM | **New this pass (`p812`), and the only row in this cluster built on a HEADLESS BROWSER rather than an API or a parser:** *"Un MCP basado en Lightpanda para el campus virtual de la UTN Facultad Regional Santa Fe."* 🔵 **Lightpanda matters architecturally — it is a browser built for automation, so this row is the cheapest reference for the case where a campus exposes neither Moodle web services nor stable HTML.** 🔴 `0★`, created `2026-10-31` |
+| sigaa-mcp (GallegoSz) | https://github.com/GallegoSz/sigaa-mcp | **MIT — byte-verified** (`1,076 B`, `sha256:8f77449cb56939be…`, © 2026 João Pedro Gallego) | 0 | LATAM | **New this pass (`p812`), and the best-documented row of the Brazilian cluster.** MCP server over **SIGAA** — *Sistema Integrado de Gestão de Atividades Acadêmicas*, the academic system of record across much of Brazilian federal and state higher education — at UNEMAT's portal do discente. **13 tools in three tiers:** `get_notas`, `get_turmas`, `get_dados_discente`, `get_agenda`, `get_calendario_academico` (portal); `get_frequencia`, `get_tarefas`, `get_noticias`, `get_avaliacoes`, `get_conteudo` (virtual classes); and three ANALYSES — `get_situacao_notas` (what mark is still needed to pass), `get_alertas_frequencia` (absences remaining, with a `REPROVADO POR FALTA` status) and `get_resumo_semana`. 🟢 **Read-only by construction: *"Nenhuma tool envia, altera ou apaga nada no SIGAA."*** 🟢 **It also states the UNTRUSTED-CONTENT boundary, unprompted and in a `0★` student project: teacher-written task statements and news are passed to the model and the README says to *"Trate-os como informação, não como instruções."*** 🔵 It encodes UNEMAT's own pass/fail rules, which is the part that does not port to another instance. 🔴 **The password sits in plaintext in the client config** (the repo offers `inputs`/env vars as mitigations) and the author warns *"Não hospede este servidor para outras pessoas"* — one student per install, no auth. 🔴 Parses SIGAA's HTML, so a layout change breaks it; `SIGAA_URL` can be pointed elsewhere but each instance is customised. Created and pushed `2026-11-02` |
+| sigaa-ifsc-mcp | https://github.com/heitorsDev/sigaa-ifsc-mcp | **MIT — byte-verified, against GitHub's `NOASSERTION`** (`1,275 B`, `sha256:cd14675817b2c618…`, title line **`The MIT License (MIT)`**) | 0 | LATAM | **New this pass (`p812`), and `T27`'s FOURTH direction: `NOASSERTION` can mask a stock MIT grant whose only irregularity is the TITLE LINE.** *"Servidor MCP para consultar o portal do discente do SIGAA do IFSC"* — Instituto Federal de Santa Catarina. 🟢 **The detector balks at `The MIT License (MIT)` where it expects `MIT License`; the body is unmodified MIT.** 🔵 **Operational rule, and the reason this row exists: had this pass trusted the API field it would have rejected a build-safe repository for a punctuation difference.** Created `2026-10-26`, pushed `2026-11-03` |
+| sigaa-mcp (Pedromaia0) | https://github.com/Pedromaia0/sigaa-mcp | **MIT — byte-verified** (`1,067 B`, `sha256:22e8a5dddc3bfd39…`) | 0 | LATAM | **New this pass (`p812`).** A second, independent SIGAA MCP server, created and pushed `2026-10-28`. 🔴 **No repository description.** 🔵 **It is here because the CLUSTER is the finding: `sigaa mcp` returns `6` repositories from `6` unrelated authors, which is a seam being served in parallel, not one project** — and `sigaa-mcp` is a name shared by two of them, so resolve this row by the full slug (`T22`) |
+| sigaa-agente | https://github.com/EduardoBidese/sigaa-agente | **MIT — byte-verified** (`1,076 B`, `sha256:da53ac6f2eef7651…`) | 0 | LATAM | **New this pass (`p812`), and the only row in this base whose integration shape is RPA rather than API or parser:** *"Use o SIGAA com um agente de IA (Claude ou Codex) no seu Firefox, pela extensão Ui.Vision."* 🔵 **It drives the real browser session the student is already signed into, so it needs no credential storage of its own and no web-service token — which is a genuinely different risk profile from the four rows above, and the only one that survives a campus with captcha or MFA on every request.** 🔴 **It also inherits RPA's weaknesses: it is bound to one browser, one extension and the rendered DOM.** `0★`, created and pushed `2026-10-02` |
+| cvuex-mcp | https://github.com/rdereparadores/cvuex-mcp | **MIT — byte-verified** (`1,074 B`, `sha256:db6ddec81755f4cd…`) | 0 | EMEA | **New this pass (`p812`), and it extends `p811`'s EMEA finding one tier UP — from the national/regional SCHOOL portal to the UNIVERSITY campus virtual.** *"Servidor MCP para consultar el Campus Virtual de la Universidad de Extremadura (CVUEx)"* 🇪🇸. 🔵 **Same shape as the Argentine cluster and arrived in the same window** (created `2026-09-26`, pushed `2026-11-03`), which is what makes `T34` a cross-regional pattern rather than a LATAM curiosity. 🔴 `0★`, `0` forks, single maintainer |
 | lanis | https://github.com/udondan/lanis | MIT | 2 | EMEA | **New this pass (`p811`), and the anchor row of this pass's finding (`T31`).** Unofficial SDK, CLI **and MCP server for Schulportal Hessen (Lanis)** — the student/parent portal operated by a GERMAN FEDERAL STATE, not by an LMS vendor. Created `2026-03-22`, pushed `2026-11-09`; `0` forks. 🟢 **This is the first agent in this base that attaches to a Länder-level education system**, which is exactly the altitude `ACTION p802-B` said German deployment evidence would be found at — and it was found as SOFTWARE before it was found as a statistic. 🔴 `2★` and a single-maintainer account: read it as a reference implementation of the seam, not as a dependency |
 | dsbmobile | https://github.com/udondan/dsbmobile | MIT | 0 | EMEA | **New this pass (`p811`).** *Inoffizielles SDK, CLI und MCP-Server für **DSBmobile*** — substitution plans (`Vertretungspläne`), timetables, news and documents. Same maintainer and same creation date as `lanis` (`2026-03-22`), pushed `2026-11-12`. 🔵 **DSBmobile is the daily-notification layer above whatever LMS a German school runs**, so the pair `lanis` + `dsbmobile` covers portal plus timetable for one country without touching Moodle at all. 🔴 `0★`, `0` forks |
 | admentum-mcp | https://github.com/andyswe/admentum-mcp | MIT | 0 | EMEA | **New this pass (`p811`), and the safest-shaped row of the `T31` cluster.** *"A **read-only** MCP server that syncs your messages from **Admentum**, the Swedish school platform, to local storage, and serves them to a personal AI agent **one item at a time**."* Created `2026-10-25`, pushed `2026-11-11`. 🟢 **Two controls stated in the description itself — read-only, and a one-item-at-a-time serving discipline that bounds how much of a child's correspondence can enter a model context in one call.** 🔵 That second control is not present in any other row in this file and is worth copying. 🔴 `0★` |
@@ -214,6 +311,7 @@ are deliberately NOT shelved. They are leads for the next pass, not findings.
 
 | Agent | Repo | License | Stars | What it does |
 |---|---|---|---|---|
+| expeditto | https://github.com/fabrica-de-inovacao/expeditto | **AGPL-3.0 — byte-verified** (`34,523 B`, `sha256:0d96a4ff68ad6d4b…`, title line `GNU AFFERO GENERAL PUBLIC LICENSE`) | 1 | **New this pass (`p812`), and the only agent in this base whose user is a TEACHER doing compliance paperwork rather than a student studying.** *"Expeditto: seu segundo expediente, resolvido. Prepara o RIT do SUAP (IFMA) como rascunho, via CLI e MCP."* The **RIT** (*Registro Individual de Trabalho*) is the workload return Brazilian federal-institute teachers must file in **SUAP**, the Instituto Federal administrative suite. 🟢 **The write gate is in the product definition, not bolted on: it prepares the RIT *as a draft* (`rascunho`) and a human files it.** 🔵 **That is the cleanest statement of `P6`/`P26`'s principle found so far — the agent does the assembly and never the submission — and it is worth quoting to any client nervous about agents touching a system of record.** 🔴 **AGPL-3.0: integrate as a separate service, never derive.** 🔵 Its licence payload is byte-identical to `LearnHarness`'s (`34,523 B`, `sha256:0d96a4ff68ad6d4b…`), which corroborates both as stock AGPL-3.0 rather than a modified grant. Created `2026-09-30`, pushed `2026-10-22` |
 | edu-by-agent | https://github.com/Severnbli/edu-by-agent | GPL-3.0 | 0 | **New this pass (`p811`), and the FIFTH independent instance of preview-then-confirm (`T20`).** *"CLI, MCP server and Claude Code skills for managing school websites in the **edu.by** site constructor: pages, menus, news, images – **with preview and confirmation before every write**."* `edu.by` is the Belarusian national school-website constructor. Created `2026-11-09`, pushed `2026-11-13` — the day of this pass. 🔴 **GPL-3.0, so the code propagates**: take the preview/confirm write gate, which is stated as a property of EVERY write rather than of selected verbs. 🔴 `0★`, four days old |
 | pronoteConnect | https://github.com/sairo-cyber/pronoteConnect | **GPL-3.0-or-later — byte-verified, against GitHub's `NOASSERTION`** | 2 | **New this pass (`p811`), and `T27`'s third direction: `NOASSERTION` masked INHERITED copyleft.** *Connecteur **PRONOTE** open source et auto-hébergé pour ChatGPT via MCP, avec connexion **EduConnect** locale* — PRONOTE is the dominant French secondary-school information system and EduConnect is the state identity provider. Created and pushed `2026-09-08`. 🟢 **`LICENSE` read first-hand on `raw.githubusercontent.com`: line 1 is `SPDX-License-Identifier: GPL-3.0-or-later`.** 🔴 **And the file states WHY, which is the commercially important part: *"This license choice is compatible with the declared GPL-3.0-or-later license of the `@blockshub/pawnote-lts` dependency used by this prototype."*** 🔵 **The copyleft is not the author's preference, it is inherited from the only available PRONOTE client library — so a permissive French PRONOTE agent cannot be produced by relicensing this repo; it requires a clean-room client.** See `T33` |
 | canvas-pilot | https://github.com/X-isdoingreat/canvas-pilot | AGPL-3.0 | 125 | **New this pass (`p808`) — the highest-starred NEW education agent found in this window, and the only one of six LMS-seam candidates with meaningful traction.** Local-first Canvas LMS agent that **learns each course's recurring assignment workflow and replays it** through an explicit `scan -> approval -> execute` cycle with a student review step before anything is submitted. 🟢 **The workflow-learning loop is the genuinely new idea in this base:** every other Canvas agent here (`canvas-mcp`, `opencode-class-agents`) exposes Canvas as tools and leaves orchestration to the model, whereas this one treats the *recurring shape of a course's work* as the persistent artifact. 🔴 **AGPL-3.0 — the network clause makes it unusable as the base of a hosted or distributed client product**, exactly as with `LearnHarness`. Take the scan/approve/execute topology, not the code. 🔴 **Traction signal is internally odd and must not be quoted without this caveat: `125★` against `1` commit.** A single-commit repository at `125★` is either a squashed initial release or externally promoted; either way the star count does not evidence sustained maintenance. Licence verified from the rendered sidebar (`AGPL-3.0 license`). |
@@ -231,6 +329,12 @@ Globant can build a client deliverable on.
 
 | Candidate | Repo | Actual license | Stars | Why rejected |
 |---|---|---|---|---|
+| Sigaa-UFRPE-MCP | https://github.com/DaviPac/Sigaa-UFRPE-MCP | **No licence — `404` for `LICENSE`, `LICENSE.md`, `LICENSE.txt` and `COPYING` at `main` AND `master`** | 0 | **New rejection this pass (`p812`).** SIGAA MCP server for UFRPE (Universidade Federal Rural de Pernambuco). Created `2026-09-05`. Default all-rights-reserved |
+| sigaa-ufpa-mcp | https://github.com/joaosnet/sigaa-ufpa-mcp | **No licence — `404` at both branch roots** | 1 | **New rejection this pass (`p812`), and the most developed of the ungranted Brazilian servers:** *"Este projeto implementa um servidor MCP (Model Context Protocol) específico para automatizar o acesso ao SIGAA"* (UFPA). Pushed `2026-11-08`. 🔵 **The highest-value licence request in the Brazilian cluster** — see `intel/licence-requests/` |
+| campus-utn-frm-mcp | https://github.com/ignaw05/campus-utn-frm-mcp | **No licence — `404` at both branch roots** | 5 | **New rejection this pass (`p812`), and the one that stings: at `5★` it is the second-most-starred UTN campus agent and it carries no grant at all.** Pushed `2026-11-06` |
+| utn-mcp (PedroCarassale) | https://github.com/PedroCarassale/utn-mcp | **No licence — `404` at both branch roots** | 1 | **New rejection this pass (`p812`).** *"Servidor MCP para el campus virtual (Moodle) de la UTN FRLP"* (La Plata). 🔴 **Shares the bare name `utn-mcp` with the ISC-licensed `nialvape/utn-mcp` on the shelf above — the `T22` collision, and here the ungranted one is the namesake.** Pushed `2026-10-31` |
+| moodle-utn-mcp | https://github.com/NicolasViruel/moodle-utn-mcp | **No licence — `404` at both branch roots** | 2 | **New rejection this pass (`p812`).** *"Agente conectado via MCP para el consumo de la informacion de la facultad."* Pushed `2026-10-19` |
+| suap-mcp | https://github.com/frjunioalves/suap-mcp | **No licence — `404` at both branch roots** | 0 | **New rejection this pass (`p812`).** The only other SUAP server besides the AGPL-3.0 `expeditto`. 🔴 **So SUAP, like PowerSchool, has no permissive agent: one copyleft and one ungranted.** Pushed `2026-05-22` |
 | Sotto | https://github.com/affromero/Sotto | **PolyForm Noncommercial License 1.0.0 — byte-verified, against GitHub's `NOASSERTION`** | 35 | **New rejection this pass (`p810`), and the exact mirror of `webworn/openfoam-mcp-server`.** Self-hosted open-source AI language learning: CEFR courses, adaptive listening, speaking practice; `10` forks; pushed `2026-11-13`, the day of this pass. 🔴 **`LICENSE` blob `1a71cb643975`, `4,563 B`: "Any noncommercial purpose is a permitted purpose."** PolyForm Noncommercial is **not an OSI licence** and forbids exactly what Globant does — commercial client delivery. 🔴 **It calls itself "open source" in its own description.** 🟢 Read it for the CEFR course structure; do not ship a line of it. See `T969` |
 | mcp-powerschool | https://github.com/443pablo/mcp-powerschool | **No licence — GitHub reports `NONE`, no `LICENSE` in the repository** | 2 | **New rejection this pass (`p810`).** The highest-starred PowerSchool MCP server found, and it carries no grant at all. 🔴 **PowerSchool is the largest US K-12 SIS and this base has named it `382` times; the only other candidates are `zuvy/ps-mcp-server` (`NONE`) and `thesupersupersigma/powerschoolMCP` (`GPL-3.0`, copyleft).** 🟢 **So the PowerSchool gap is NOT closed this pass, and it is a LICENCE gap rather than a supply gap** — three servers exist, none is build-safe |
 | d2l-mcp-server | https://github.com/bencered/d2l-mcp-server | **No LICENSE file — `404` at `main` AND `master` root; GitHub sidebar shows none** | 12 | **New rejection this pass (`p809`).** The README carries a `License` section reading `MIT`, but **no licence payload exists at either branch root** and GitHub's own detector reports nothing, so on its face the repository is default all-rights-reserved. 🔵 **This is the T6 pattern in its most deniable form, and the transmission path was identified:** an aggregator (`glama.ai`) published *"License MIT"* read off the README, and that is where the claim entered circulation — the same channel that mis-reported `RohanMuppa/brightspace-mcp-server` as `AGPL-3.0` when its payload is a byte-verified `MIT`. 🔴 **Aggregator licence fields are not evidence in either direction.** `3` commits. Re-test the payload before any future admission. |
@@ -242,6 +346,50 @@ Globant can build a client deliverable on.
 | AI-Grading-Tool | https://github.com/end13s/AI-Grading-Tool | **No licence file — sidebar shows none** | 0 | **New rejection this pass (`p808`).** The only *Moodle*-targeted grader found in the LMS-seam leg, and functionally the closest fit to a real client ask: imports a Moodle roster and submissions, has an LLM check each one against the instructor's rubric, routes every result through human review, then exports grades back to Moodle. 🔴 **`134` commits and no grant of any kind — the default is all-rights-reserved.** 🔵 **This is the fourth education repository in this base to be substantial and unlicensed** (`llamatutor` `2.1k★`, `AITutor-EvalKit`, `educational-agents`, now this), which is itself the finding recorded as `T24`. Worth an upstream licence request; cannot be adopted as published. |
 
 ## Declared gaps
+
+- **🟢 CLOSED this pass (`p812`): the `LATAM 0` gap — and the reason it stood for sixteen passes
+  is a search defect, stated precisely so it is not repeated.** Eight rows now attach to systems
+  operated in Latin America. 🔴 **The defect: this file had never written the word `SIGAA`,
+  `SIAGIE`, `SIMAT`, `SUAP` or `SIU-Guarani` once.** 🔵 **The transferable rule: a regional nil
+  is only informed if a query named that region's OWN systems. Otherwise it reports the shelf,
+  not the world** — and `p811` published it as a fact about the world.
+
+- 🔴 **`SIAGIE` (Peru) — an INFORMED NIL, and now a properly evidenced one.** `gh api -X GET
+  search/repositories q="siagie"` returns **`25` repositories and not one agent**: attendance
+  uploaders, grade-consolidation reports, nómina tools, analytics dashboards, scrapers. 🔴
+  **Every single one carries NO licence file.** 🔵 **So Peru's national K-12 system has an active
+  developer community and zero agentic surface and zero grants** — the widest open slot this
+  pass found, and the cheapest to enter.
+
+- 🔴 **`SIMAT` (Colombia) — a HARD NIL.** `q="simat educacion"` returns `total_count=0`. Not a
+  thin result; an empty one. Colombia's national enrolment system has no open-source presence of
+  any kind on this channel.
+
+- 🔴 **`SUAP` (Brazil) — a LICENCE gap, not a supply gap, and the second instance of the
+  PowerSchool shape.** Two servers exist: `expeditto` (**AGPL-3.0**, shelved to the copyleft
+  table) and `frjunioalves/suap-mcp` (**no licence**, rejected). 🔵 **Neither is build-safe, so
+  SUAP joins PowerSchool as a system of record whose agents all fail the licence test rather than
+  the existence test.**
+
+- 🔴 **Q-Acadêmico (Brazil) and the Mexican, Chilean and Colombian school systems — NIL on a
+  dedicated leg.** `q="q-academico mcp"`, `q="mcp server mexico universidad escuela"`,
+  `q="mcp uc chile universidad"` and `q="mcp colegio escolar notas alumno"` each returned
+  `total_count=0`. 🔵 **LATAM's supply is real but it is concentrated in exactly two countries —
+  Argentina and Brazil.** Quote the region's eight rows as Argentine and Brazilian, never as
+  "LATAM coverage."
+
+- 🔴 **`ingest/derive-counts.py` is RED on `repos/foundations.md` and
+  `verticals/solutions.md`, and this pass did NOT force it green — the diagnosis is recorded
+  instead, because the fix is a judgement call.** The gate looks for ONE canonical shelf per file
+  (`| Repo | Licence | Stars | Default branch | Why it is a foundation |` and
+  `| Platform | Repo | Licence | Branch | Stack | Use case |`). 🔵 **Measured this pass: those two
+  pages carry `13` and `13` tables respectively, deliberately organised BY LAYER** — rostering,
+  LTI, xAPI, QTI, Caliper, curriculum corpus — with headers of the shape
+  `| Repo | License | Stars | Notes |`. 🔴 **Flattening thirteen layered tables into one shelf to
+  satisfy the gate would destroy the structure that makes those pages usable.** 🟢 **The right
+  fix is to teach the gate to sum rows across a file's layer tables, as it was already taught at
+  `p568` to accept family-suffixed recipe ids and at `p718` to key on column signatures instead of
+  prose.** Left open deliberately, with the numbers above, so the next pass can act on evidence.
 
 - 🔴 **`OneRoster` — an INFORMED NIL, and the cleanest one this base has produced.**
   OneRoster is named **`3,043`** times across these files and is the roster-sync standard

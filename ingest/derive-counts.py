@@ -82,6 +82,14 @@ if os.path.exists(tre):
     body = open(tre, encoding="utf-8").read()
     ids = {int(m) for m in re.findall(r"^## (\d+)\. ", body, re.M)}
     ids |= {int(m) for m in re.findall(r"^## .*?Trend (\d+):", body, re.M)}
+    # p812: the ONLY id scheme this page has ever used is '## T<n> — ...'. The two patterns
+    # above accept '## 31. ' and '## ... Trend 31:' and matched NEITHER of the 33 headings
+    # present, so the gate reported derived=0/claimed=None -- an AMBER abstain, which in
+    # `make hooks` output is indistinguishable from a pass -- for every pass since it was
+    # written. Widened to the page's actual convention, exactly as p568 widened the recipe
+    # pattern for family-suffixed ids ('P-571-A') and p718 replaced prose-keying with column
+    # signatures. Same defect class, third file.
+    ids |= {int(m) for m in re.findall(r"^## [^A-Za-z0-9]*T(\d+)\b", body, re.M)}
     n = len(ids)
     claimed = claim_in(tre, "trends")
     print(f"intel/trends.md       trends:  derived={n}  claimed={claimed}")
