@@ -3,6 +3,89 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+## `2026-11-13` (twelfth pass) — **A fifth nil on supply, and the one durable finding came from checking a NAME rather than finding a repository: "LearnHarness" resolves to three different repositories with three different licence positions**
+
+**Pass `p807`.** 🔴 **Zero agent rows from the search tier — the fifth consecutive nil.**
+All four prescribed global legs ran, plus **two differentiated legs** added because four
+prior passes had established the prescribed battery as saturated.
+
+🔵 **What the prescribed legs returned.** `top open source AI agents education 2026
+github MIT` returned general-purpose agents almost exclusively — `OpenHands`,
+`SWE-agent`, `MetaGPT`, `CrewAI`, `AutoGen`, `LangGraph`, `DSPy`, `Agent Zero`,
+`elizaOS`, plus two curated *lists* (`ashishpatel26/500-AI-Agents-Projects`,
+`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`). 🟢 **Not one education-specific agent that
+this base does not already hold.** `github trending education AI 2026` returned
+`THU-MAIC/OpenMAIC`, `HKUDS/DeepTutor` and `patchy631/ai-engineering-hub` — 🔴 **all
+three already shelved, for the fifth pass running.**
+
+🟢 **`p804`'s characterisation of the trending channel now holds for a FIFTH window and
+should be treated as settled fact, not an observation:** GitHub's education-AI trending
+surface returns **repositories for learning about AI**, not **repositories that apply AI
+to learning**.
+
+### The differentiated legs — and why they also came up nil
+
+🔵 **Two legs were run specifically to attack the saturation**, chosen to probe
+sub-domains the prescribed battery cannot reach:
+
+| Leg | Returned | Verdict |
+|---|---|---|
+| `open source adaptive learning engine github Apache 2026 knowledge tracing` | `h4ksclaw/learnharness`, `OpenLearn-AI/OpenLearn-AI`, `CAHLR/OATutor`, + ~6 student projects | 🔴 **Nil for the shelf.** `OATutor` already held. See below for `learnharness`. |
+| `open source AI grading assessment feedback github MIT Apache 2026 rubric` | `macsnoeren/genai-open-assessment`, `joelparkerhenderson/ai-course-assessment-feedback`, `spChalk/rubric-evaluator`, + ~5 single-author apps | 🔴 **Nil for the shelf.** Verified: `genai-open-assessment` is **GPL-3.0 at `0★`/`0` forks**. The rest are coursework-scale Streamlit apps. |
+
+🟡 **`OpenLearn-AI/OpenLearn-AI` was the closest miss and is recorded rather than
+shelved.** Verified from the rendered page: **AGPL-3.0, `6★`, `3` forks, `365` commits**,
+Arabic-first adaptive learning over OCR + RAG + knowledge graphs. 🔴 **Its own README
+labels it `pre-alpha` and states the backend, frontend and services are "under active
+construction and not yet runnable end-to-end."** 🔵 **Worth a re-check in a later pass
+purely because an Arabic-first education platform would be the first of its kind on this
+base** — the EMEA/Gulf shelf has no Arabic-language row at all. Filed as `Gap 807-E`.
+
+### The finding: "LearnHarness" is not a unique name, and the collision is licence-shaped
+
+🟢 **This pass's only durable contribution to the agent shelf came from verifying a name
+this base already carries.** The adaptive-learning leg returned a repository called
+`LearnHarness` — which this base shelved at `p79x` as **the fastest-growing education
+artefact it has tracked**. 🔴 **It is not the same repository.**
+
+| | [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) (shelved) | [`h4ksclaw/learnharness`](https://github.com/h4ksclaw/learnharness) (returned this pass) |
+|---|---|---|
+| Stars / forks | `9.1k` / `1.2k` | `3` / `1` |
+| Commits | `1,202` | `52` |
+| Description | *"Agent harness for learning difficult things."* | *"Open-source adaptive learning harness with FSRS, BKT, and LLM-powered knowledge graphs. Domain-agnostic."* |
+| Sidebar licence | `AGPL-3.0` | **none shown** |
+| Grant file | `LICENSE`, `34,523 B`, `sha256:0d96a4ff68ad6d4b…`, byte-verified AGPL-3.0 | 🔴 **NONE — `404` on `LICENSE` and `LICENSE.md`, on BOTH `main` and `master`** |
+| Licence claim | platform field + README + bytes, all agreeing | 🔴 **README `## License` → the bare word `MIT`, and nothing else anywhere** |
+| Fork relationship | upstream | 🟢 **not a fork — no "forked from" line, disjoint history** |
+
+🔴 **The trap is specific and it points the wrong way.** A studio searching *adaptive
+learning* finds the `3★` repository, reads `MIT`, and concludes the harness is
+build-safe. The `9.1k★` one it probably meant is **AGPL-3.0 and byte-verified as such**.
+🔵 **The small one is not MIT either**: GitHub shows no licence because there is no
+licence file, and a bare `MIT` in a README is a statement of intent, not a grant — the
+default position is all-rights-reserved. 🟢 **Neither repository is safe to ship from,
+for two different reasons, and the one that *looks* safe is the one with no grant at
+all.**
+
+🔵 **Distinct from `T966`.** That trend records two `0★` forks of the shelved repo
+serving a **byte-identical** AGPL-3.0 payload with an empty sidebar. `h4ksclaw` is a
+**third** repository: non-zero stars, independent history, no payload at all. 🟢 **The
+`agents/top.md` row now carries the full disambiguation** and the standing instruction to
+resolve that row by slug, never by name.
+
+### Standing read after five nils
+
+🔴 **The prescribed supply battery should be considered exhausted as a discovery
+channel**, and this pass demonstrates that even well-chosen *differentiated* queries
+return the same shape of result: the open education-AI space below the known names is
+made of **coursework-scale single-author projects**, and the filter that matters is not
+"is it education" but **"does it have a grant file and more than one contributor."**
+🟢 **Two methods have produced every non-trivial finding of the last three passes:
+(1) auditing this base's own trending logs against its shelves (`p806`, Ed-Fi), and
+(2) verifying an identifier this base already carries (`p807`, this finding).** 🔵 Both
+are **internal** methods. Neither needs the search tier.
+
+
 ## `2026-11-13` (eleventh pass) — **The search legs nil for a fourth pass, so the audit was made repeatable instead of manual — and it found the US K-12 data standard mentioned 249 times in these logs and zero times on any shelf**
 
 **Pass `p806`.** 🔵 **Zero agent rows from the search tier — the fourth consecutive nil

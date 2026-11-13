@@ -3,6 +3,68 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+## `2026-11-13` (twelfth pass) — **A fifth nil from the trending channel, and the vertical leg's repeated nil finally yielded a structural reading: every education ERP/CRM in the open is copyleft, every permissive one is general-purpose**
+
+**Pass `p807`.** 🔴 **`0` education-specific repositories from the GitHub trending leg,
+fifth consecutive pass.** `github trending education AI 2026` returned
+`THU-MAIC/OpenMAIC` (reported ~`42k★`), `HKUDS/DeepTutor` (reported ~`45k★`, against
+~`52.8k★` last pass — 🔴 **the third-party figures for this repo have now disagreed
+across three windows and should not be quoted**) and `patchy631/ai-engineering-hub`
+(~`40k★`). 🟢 **All three already shelved.**
+
+🔵 **Provenance caution, repeated because it keeps mattering.** Every star figure in that
+leg traces to `coddykit.com` blog roundups, which are promotional and whose numbers move
+in both directions between windows. 🔴 **No figure from that source has ever been
+adopted onto a shelf without a rendered-page read, and none was this pass either.**
+
+### The vertical-platform leg: eight nils, and the eighth one was finally READ
+
+🔴 **`open source platform education ERP CRM MIT Apache` returned this shelf's own
+contents for an eighth consecutive pass** — `OpenEduCat`, `Frappe Education`, `ERPNext`,
+`Moodle`, `Odoo`. 🟢 **This pass the nil was treated as data instead of being logged and
+discarded, and it has a structure worth stating:**
+
+> **Every education-specific ERP/CRM the leg returns is copyleft. Every permissive
+> ERP/CRM it returns is general-purpose. In eight passes it has never once returned a
+> permissively licensed education ERP.**
+
+🔵 **That is not a gap in the query — it is a fact about the market**, and it has a direct
+consequence: **admissions and enrolment is CRM-shaped work** (pipeline, stages,
+attribution, nurture) and this base had been implicitly routing it to the SIS shelf,
+which is entirely copyleft. 🟢 **Three permissive general-purpose platforms were
+therefore verified and promoted to `verticals/solutions.md` under a new
+`## Admissions and enrolment CRM` section:**
+
+| Repo | Licence (sidebar, read this pass) | Stars | Forks | Note |
+|---|---|---|---|---|
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | **MIT** | `24.1k` | `1.7k` | 🟢 **The largest permissively licensed CRM this base has found.** Org location states **India** → APAC-origin. Laravel/PHP — **same stack as `portabilis/i-educar`**, which makes a LATAM pairing cheap |
+| [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | **Apache-2.0** | `2.2k` | `532` | Low-code modeller rather than a CRM to bend. Not archived. 🔴 Org location states **"International"** — no origin asserted (`Gap 807-D`) |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | **Apache-2.0** | `1.2k` | `764` | 🟡 Listed with a caution — breadth is the problem, not the attraction |
+
+🔴 **None of the three ships an agent surface and no MCP server exists for any of them**
+— but all three are conventional API-first web platforms, so a wrapper over an admissions
+subset is days of work, unlike the SIS shelf where `RosarioSIS` and `Gibbon` have no
+connector of any kind.
+
+### A licence-verification result worth recording on its own
+
+🟢 **`raw.githubusercontent.com` remains the working grant-verification transport on this
+session; `api.github.com` does not.** 🔴 **Confirmed again this pass: the GitHub API
+returns `GitHub access to this repository is not enabled for this session` for every repo
+outside the session's attached set**, so metadata must come from the **rendered page**
+(WebFetch) and grant bytes from `raw.githubusercontent.com`. 🔵 **Both worked on every
+repository tried.** 🟢 **A `404` from `raw` on `LICENSE` across both `main` and `master`
+is itself a finding** — it is how `h4ksclaw/learnharness` was shown to have **no grant
+file at all** behind a README that says `MIT` (see `agents/trending.md`, same pass).
+
+🔴 **Primary-source policy transports remain blocked**: `federalregister.gov`, `ed.gov`,
+`regulations.justia.com`, `cortezaproject.org` and `krayincrm.com` are all outside this
+session's allowed network domains. 🔵 **`github.com` and `raw.githubusercontent.com` are
+not.** 🟢 **Practical rule for the next pass: repository facts are fully verifiable here;
+government-instrument facts are not, and must be marked as secondary-sourced when they
+are written down.**
+
+
 ## `2026-11-13` (eleventh pass) — **A fourth nil from the trending channel, and four infrastructure repositories promoted off the back of a scripted audit — led by the US K-12 data standard this base had discussed 249 times without ever shelving it**
 
 **Pass `p806`.** 🔵 **`0` education-specific repositories from the GitHub trending leg,

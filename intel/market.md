@@ -6,8 +6,12 @@ updated: 2026-11-13
 
 # Education AI — market map and opportunities by region
 
-Researched 2026-11-13, across four passes; the fourth-pass updates sit under
-each region below. Where sources disagree, the disagreement is shown rather
+Researched 2026-11-13, across **twelve** passes; each region's updates are
+ordered **newest first** directly under its heading. 🔴 **This line said "four
+passes" through the twelfth pass (`p807`) while the file held twelve** — the same
+prose-count drift that `agents/top.md` and `compose/patterns.md` have each had to
+correct. It was produced by counting `#### Update` blocks, and the next pass should
+count them rather than carry this sentence forward. Where sources disagree, the disagreement is shown rather
 than averaged away. Market-size figures for AI in education come largely from
 vendor blogs citing differing research firms and should be treated as
 order-of-magnitude only.
@@ -85,6 +89,58 @@ across EMEA.
 ## Opportunities by region
 
 ### North America
+
+#### Update 2026-11-13 (twelfth pass, `p807`) — 🟢 the federal instrument this file has described in prose for five passes now has a NUMBER, a CITATION and an EFFECTIVE DATE — and it is not a "rule"
+
+🔴 **This is a correction, not an addition.** Since the fourth pass this file has carried
+two federal items as unnumbered prose: *"the April 2025 executive order 'Advancing
+Artificial Intelligence Education for American Youth'"* and *"the US Department of
+Education finalized a rule prioritizing federal education grants."* 🟢 **Both are real.
+Neither was citable, and the second was mischaracterised.** A proposal cannot quote
+"a rule".
+
+🟢 **The parent instrument is [Executive Order 14277](https://www.whitehouse.gov/presidential-actions/2025/04/Advancing-Artificial-Intelligence-Education-For-American-youth/),
+"Advancing Artificial Intelligence Education for American Youth."** Signed
+**2025-04-23**, published **2025-04-28** at **90 FR 17519**. 🔵 **Note the year — 2025,
+not 2026.** The North America search leg returned it inside a 2026 framing and it would
+have entered this file as a 2026 instrument had it not been checked. It creates the
+White House Task Force on AI Education, orders a Presidential AI Challenge within `90`
+days, and — **the operative clause for this market** — directs the Secretary of
+Education to **prioritise AI in discretionary grant programmes for teacher training
+within `120` days**.
+
+🟢 **That `120`-day clause is what produced the second instrument, and it is NOT a rule.**
+It is a **Secretary's final supplemental priority and definitions**, *"Advancing
+Artificial Intelligence in Education"*, under **34 CFR Part 75**, Docket
+**ED-2025-OS-0118**, document **2026-07087**, published **2026-04-13** at
+**91 FR 18774–18780**, **effective 2026-05-13**. 🔴 **It is an *invitational* priority**,
+usable in **any** Department discretionary grant competition that elects to adopt it —
+which is why this file was right to call it "indirect" and wrong to call it binding or
+a rule. The final text **added universal-design principles** and **broadened the
+AI-literacy definition to include ethics, critical thinking and societal impact**, after
+`300`+ public comments on the July 2025 proposal.
+
+🔵 **Why the distinction is commercial, not pedantic.** An invitational priority does not
+create demand; it creates **scoreable language**. A district or university writing any
+ED discretionary-grant application can claim points for AI literacy, CS-and-AI
+coursework, educator development, or embedding AI into teacher preparation — and the
+final text's own additions tell a proposal writer which words score. 🟢 **The sellable
+artefact for a North American public-sector engagement is therefore a grant-aligned
+scope document**, not a platform pitch, and it is cheap to produce.
+
+🔴 **Verification limit, stated plainly.** `federalregister.gov`, `ed.gov` and
+`regulations.justia.com` are **all outside this session's allowed network domains**, so
+the citation above could **not** be read from a primary source this pass. It is
+corroborated across four independent secondary sources (AEI, MeriTalk, the Justia
+regulation-tracker listing, and the `ED-2025-OS-0118` public-inspection PDF path), which
+agree on volume, page range, docket, document number and both dates. 🔵 **Before it goes
+in a client proposal, read `91 FR 18774` directly** → `Gap 807-A`.
+
+🟢 **Net effect on this file's standing read.** *"Federal remains effectively empty"*
+(sixth pass, line 368) stays **true for curriculum mandates** — the K-12 AI Literacy and
+Readiness Act is still only out of committee — but it is now **false for funding**, and
+funding is the channel a studio can actually act on.
+
 
 #### Update 2026-11-13 (eleventh pass, `p806`) — 🔵 the regional leg returned NOTHING this file did not already hold, and the thing that moved is an architecture decision, not an instrument
 
@@ -456,6 +512,29 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-13 (twelfth pass, `p807`) — 🔴 regulatory nil for a THIRD consecutive pass, and the only EMEA movement is a corporate one recorded under Global
+
+🔴 **Explicit nil.** The EMEA leg returned Council document `ST-14902-2026`, the EU AI
+Act Annex III high-risk classification and its Digital Omnibus delay, the UK DfE
+generative-AI product safety standards (January 2026), Ofqual's coursework-integrity
+material (March 2026), Dubai KHDA's responsible-AI guidance to private schools, and
+OpenAI's Estonia / Slovakia / Greece / Italy partnerships. 🟢 **Every one of those is
+already recorded below**, most of them with tighter dating than the leg supplied.
+
+🔵 **Three consecutive regulatory nils is now the dominant signal for this region, and it
+has a cause worth naming.** EMEA's instrument set is **frozen until `2027-12-02`** — the
+Digital Omnibus moved the Annex III education obligations there, and nothing else is
+scheduled to bite before it. 🟢 **The practical consequence for a studio is that EMEA
+regulatory research has reached the point of diminishing returns and the budget should
+move to deployment evidence**, which is where the ninth pass's national teacher-adoption
+figure came from and where the next EMEA finding will come from too.
+
+🟡 **One EMEA-relevant corporate move did land this pass and is recorded under `Global`
+rather than here**, because it is a cross-region transaction: **Pearson's acquisition of
+Workera**. Pearson is UK-listed, which makes it EMEA-headquartered supply, but the
+target, the customers and the buying centre are North American enterprise.
+
 
 #### Update 2026-11-13 (eleventh pass, `p806`) — 🔵 regulatory nil for a second consecutive pass, and the EMEA movement this window is SOFTWARE
 
@@ -877,6 +956,37 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-13 (twelfth pass, `p807`) — 🟡 near-nil, with one date this file was missing and one regional posture it had never characterised
+
+🔴 **Near-complete nil on instruments.** The APAC leg returned Korea's **AI Basic Act**,
+**Vietnam's** binding AI law with education in its high-risk category, Australia's
+**TEQSA** request for institutional generative-AI action plans, China's
+algorithm/deepfake/generative rules, and Japan's and Singapore's voluntary toolkits.
+🟢 **All already held below.**
+
+🟢 **Two genuine gains, both small and both stated as such.**
+
+1. 🔵 **Vietnam's law has a commencement date this file never carried: `2026-03-01`.**
+   The instrument was recorded; the date was not, and a date is what decides whether a
+   Vietnamese deployment is already non-compliant or merely planning to be. Pre-deployment
+   registration and human oversight for high-risk systems have therefore been **live for
+   eight months**, not pending.
+2. 🔵 **Malaysia, Australia and New Zealand share a posture this file had not named:
+   deliberate *sectoral* regulation** — guardrails added to existing statutes rather than
+   a standalone AI act. 🟢 This generalises the ninth pass's reading of Australia as
+   "deliberate non-regulation" into a **three-country regional pattern**, and it changes
+   the EMEA-style compliance pitch: in these markets there is no AI act to comply with,
+   so the buying trigger is the **sector regulator** (TEQSA for Australian higher ed),
+   not a horizontal law. 🔴 Malaysia is otherwise **absent from this file entirely** and
+   no Malaysian education instrument, figure or deployment has ever been recorded →
+   `Gap 807-B`.
+
+🟡 **Korea's enforcement posture, already partly held, sharpened:** `2026` is in practice
+a **pilot year** — enforcement decrees still being finalised, and a grace period oriented
+to guidance rather than penalties. 🔵 A Korean engagement in `2026` is therefore selling
+**readiness**, not remediation.
+
+
 #### Update 2026-11-13 (eleventh pass, `p806`) — 🟢 `p805`'s "regulation-only" verdict is DISCHARGED: APAC now has a named, dated, institution-wide deployment — and the region's fourth AI statute was missing from this file entirely
 
 🔴 **Taiwan had `0` mentions in every shelf file of this knowledge base before this
@@ -1258,6 +1368,33 @@ example of.
 
 ### LATAM
 
+#### Update 2026-11-13 (twelfth pass, `p807`) — 🔴 a second consecutive complete nil, and that is now a finding about the CHANNEL rather than the region
+
+🔴 **Complete nil, declared.** The LATAM leg returned the UNESCO IESALC study
+(`200` institutions, `19` countries, `87%` using AI in at least one area, `26%` with a
+formal strategy), the Digital Education Council LATAM survey (`92%` students / `79%`
+faculty), Uruguay's Ceibal teacher figure, Brazil's Cetic.br administrator figures, the
+Universidad de los Andes inventory of `716` instruments across `23` countries, the
+`55%`-of-universities-without-an-AI-budget figure, and the UNESCO regional observatory
+launched at ECLAC. 🟢 **Every single one is already in this file**, several of them since
+the fourth pass.
+
+🔵 **Two consecutive complete nils means the prescribed LATAM query has been exhausted,
+not that LATAM has gone quiet.** The region's facts in this file all trace to a small set
+of repeat publishers — UNESCO/IESALC, the Digital Education Council, Ceibal, Cetic.br,
+CENIA, Universidad de los Andes — and the annual-report cadence of those bodies is slower
+than this base's pass cadence. 🔴 **Querying them hourly cannot produce new information.**
+
+🟢 **The channel that did produce LATAM findings is the one the tenth pass used:** it
+found the region's largest school-management system (`portabilis/i-educar`) by looking at
+**software**, not at policy. 🔵 **Standing recommendation for the next LATAM pass: drop
+the adoption/governance query, which is saturated, and sweep Portuguese- and
+Spanish-language repository space instead** → `Gap 807-C`.
+
+🟡 **The adoption/governance gap itself is unchanged and remains this file's most
+sellable LATAM number.** Nothing this pass weakens it.
+
+
 #### Update 2026-11-13 (eleventh pass, `p806`) — 🔴 a complete nil, declared: no new instrument, no new figure, no new repository
 
 🔴 **This is the honest result and it is being written down rather than padded.** The
@@ -1630,6 +1767,41 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-13 (twelfth pass, `p807`) — 🟢 the assessment layer consolidated: a `150`-year-old publisher bought an AI-native skills-verification platform
+
+🟢 **[Pearson](https://plc.pearson.com/) agreed to acquire [Workera](https://workera.ai/),
+announced `2026-09-29`, terms undisclosed, completion expected in H2 `2026` subject to
+customary conditions.** Workera goes into Pearson's **Enterprise Learning & Skills**
+unit; founder-CEO **Kian Katanforoosh** joins that unit's leadership.
+
+🔵 **What Workera actually is, because the category matters more than the deal.** It
+combines **agentic AI, psychometrics and adaptive assessment** to measure proficiency
+through **role-specific scenarios and simulations** rather than through item banks.
+Reported customers include **ServiceNow, Accenture and the US Space Force** — 🔴 **note
+that none of those is a school.** This is enterprise workforce assessment, bought by an
+education company.
+
+🟢 **Why this belongs in an education KB.** It is the clearest market evidence yet for a
+trend this base already carries in a weaker form: **the money in AI-era assessment is
+moving from "did the student learn the course" to "can this person do the task."** A
+publisher with Pearson's assessment franchise paying for an **AI-native, simulation-based**
+verification capability is a statement that its existing psychometric stack does not
+measure the thing buyers now want measured.
+
+🔵 **Consequence for a studio.** Two distinct offers now exist where this base previously
+described one. 🟢 **(a) Institutional assessment** — grading, feedback, integrity — which
+is regulated (EU AI Act Annex III) and sells to registrars and faculty. 🟢 **(b) Skills
+verification** — scenario-based, continuous, credential-linked — which is **largely
+unregulated**, sells to HR and L&D, and is where the acquisition money is going. 🔴 **They
+share almost no architecture:** (a) needs LMS integration and an audit trail against a
+rubric; (b) needs simulation environments and a credential format. This base's
+credential-layer rows (`CredentialEngine/osmt`, `CredentialRegistry`) serve (b) and have
+been filed as an education shelf; they are better read as **workforce** supply.
+
+🟡 **Dating caveat.** One outlet dates the announcement `2026-10-05`; the Pearson release
+and the majority of coverage give `2026-09-29`, which is what is asserted here.
+
 
 **Opportunities not tied to one region:**
 1. **Grading and feedback agents — the one genuinely open field.** No dominant

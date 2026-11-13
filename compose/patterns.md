@@ -6,7 +6,7 @@ updated: 2026-11-13
 
 # Compose patterns — education
 
-**Twenty** concrete recipes. Each names the actual repos, the license
+**Twenty-one** concrete recipes. Each names the actual repos, the license
 consequence, how the pieces wire together, and a rough build estimate. All
 components were license-verified on 2026-11-13 (see `agents/top.md` and
 `repos/foundations.md`). 🔴 **Count defect, third occurrence, fixed again at
@@ -14,6 +14,15 @@ components were license-verified on 2026-11-13 (see `agents/top.md` and
 sixteen `## P` headings. It is now "Eighteen" and it matches
 `grep -c '^## P'`.** 🔵 **A count written in prose drifts every time a pattern is
 appended; until it is generated, this line will keep going stale.**
+
+🟢 **New at `p807` (twelfth pass): `P21` — admissions and enrolment agent on a
+permissive CRM.** 🔵 **It is the first pattern in this file with NO copyleft anywhere in
+the tree**, which is why it exists: a studio can fork, brand and ship it. The count
+`Twenty-one` was checked with `grep -c '^## P'` before being written. 🔴 **All six
+infrastructure slugs it cites were re-resolved this pass** against
+`raw.githubusercontent.com` (`200` on `README.md@main` for each) because
+`curl` to `github.com` returns a uniform `403` through this session's proxy and
+therefore verifies nothing.
 
 🟢 **New at `p806`: `P19` (agent on the state data standard) and `P20`
 (AI-literacy programme from an open corpus).** 🔵 **The count above was checked with
@@ -1340,3 +1349,85 @@ specific mandate.
 - 🔴 **The mandate is already met by a national programme.** Australia's rollout has
   materials and a funder (Code for Schools, AWS support). 🔵 **Check what the ministry
   already bought before proposing to build it.**
+
+
+## P21 — Admissions and enrolment agent on a permissive CRM (Global, and the only pattern here that touches no copyleft at all)
+
+🟢 **New at the twelfth pass (`p807`, 2026-11-13).** Every other pattern in this file
+either integrates with a copyleft platform or accepts one in the tree. 🔵 **This is the
+first end-to-end recipe a studio can fork, rebrand and ship as a product**, and it exists
+because `p807` finally read the vertical leg's eight-pass nil instead of logging it: the
+education-specific ERP/CRMs are all copyleft, so the permissive base has to be a
+general-purpose CRM with the education domain built on top.
+
+**The problem it solves.** Admissions and enrolment is **CRM-shaped work** — enquiry →
+application → offer → acceptance → enrolment, with campaigns, attribution, document
+chase and nurture. 🔴 **This base had been implicitly routing it to the SIS shelf, which
+is entirely copyleft and structurally wrong anyway**: an SIS records students who are
+already students. The pipeline before that is a sales funnel with a prospectus.
+
+### Components — all permissive, all verified `2026-11-13`
+
+| Layer | Component | Licence | Why this one |
+|---|---|---|---|
+| CRM base | [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | **MIT** (`24.1k★`, `1.7k` forks) | The largest permissively licensed CRM found. Lead → opportunity → stage maps onto enquiry → application → offer with no structural violence |
+| Alternative base | [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | **Apache-2.0** (`2.2k★`) | Swap in **only** where the admissions process is unusual (multi-intake, competitive, ministry-reported) — it is a modeller, not a CRM to bend |
+| Agent runtime | [`pydantic-ai`](https://github.com/pydantic/pydantic-ai) or [`LangGraph`](https://github.com/langchain-ai/langgraph) | **MIT** | Typed tool-calling; `LangGraph` where the offer path needs an explicit approval node |
+| Model serving | [`vllm`](https://github.com/vllm-project/vllm) or [`ollama`](https://github.com/ollama/ollama) | **Apache-2.0** / **MIT** | Self-host where applicant PII cannot leave the institution — the usual EMEA and public-sector constraint |
+| Gateway | [`litellm`](https://github.com/BerriAI/litellm) | **MIT** | One endpoint, per-programme cost attribution |
+| Durable workflow | [`temporal`](https://github.com/temporalio/temporal) | **MIT** | Admissions runs for **months**; document chase and deferrals are long-lived timers, not request/response |
+| Handoff to SIS | `OpenEduCat` via `erpipe-org/mcp-odoo`, or `Ed-Fi` (`P19`) | *integration only* | 🔴 **Copyleft stays on the far side of an API boundary — nothing is derived** |
+
+### How it wires together
+
+1. **Model the education domain in Krayin first, before any AI.** Add `Programme`,
+   `Intake`, `Application`, `Qualification` and `Document` as custom entities; map
+   Krayin's native `Lead` → `Applicant` and its pipeline stages → the admissions funnel.
+   🔵 **This is configuration plus migrations, and it is the bulk of the schedule.**
+2. **Wrap an admissions subset of Krayin's REST API as an MCP server.** 🔴 **No MCP
+   server exists for Krayin, Corteza or OFBiz — this is net-new**, but all three are
+   conventional API-first web apps, so it is days, not a connector project. 🟢 **Expose
+   reads broadly and writes narrowly:** `search_applicants`, `get_application`,
+   `list_outstanding_documents` read-side; `request_document`, `advance_stage`,
+   `log_interaction` write-side.
+3. **Apply `T20`'s preview-then-confirm discipline to every write.** Three independent
+   LMS agent projects in three jurisdictions converged on it. 🔴 **An agent that advances
+   an applicant's stage or issues an offer without an explicit human confirm is the
+   failure mode that ends the engagement** — offers are contractual.
+4. **Put Temporal behind anything with a clock.** Document chase, conditional-offer
+   deadlines, deferral windows, clearing. 🔵 **The agent decides; Temporal remembers** —
+   an LLM loop cannot be trusted to still be running in six weeks.
+5. **Hand off at enrolment, do not absorb.** When an applicant converts, write to the SIS
+   over its API — `OpenEduCat` through the Odoo MCP connectors, or a state system through
+   `P19`'s Ed-Fi path in North America. 🟢 **The copyleft SIS is never in your tree.**
+
+### Build estimate
+
+🟢 **`8`–`10` weeks** for a single-intake institution: ~`3` weeks domain modelling in
+Krayin, ~`2` weeks MCP server, ~`2` weeks agent plus preview-then-confirm, ~`1` week
+Temporal workflows, ~`2` weeks SIS handoff and UAT. 🔴 **Add `3`–`4` weeks for Corteza
+instead of Krayin** — more modelling, less out of the box.
+
+### Why the licence position is the selling point
+
+🟢 **Every component above is MIT or Apache-2.0.** 🔵 **A studio can fork this, brand it,
+host it multi-tenant and sell it as a product** — which is true of no other pattern in
+this file. 🔴 **The moment the SIS enters the tree rather than sitting behind an API,
+that stops being true**, and the usual way it happens is a developer deciding it is
+simpler to patch OpenEduCat than to call it.
+
+### Three disqualifiers — check these first
+
+- 🔴 **The institution already runs a commercial admissions CRM** (Slate dominates US
+  higher ed; Salesforce Education Cloud is common). 🔵 **Then this is a displacement sale
+  against an entrenched incumbent, which is a different and much harder motion** — pitch
+  an agent layer on *their* CRM instead.
+- 🔴 **Admissions is statutorily centralised.** UCAS in the UK, and national
+  clearing-house systems elsewhere, mean the institution does not own the top of the
+  funnel. 🟡 **The pattern still works below the centralised step — check where the
+  boundary falls before scoping.**
+- 🔴 **The client expects an education-ready product out of the box.** 🔵 **Krayin knows
+  nothing about education**; there is no applicant, programme or intake entity until you
+  build one. **If the client is comparing against OpenEduCat's admissions module on
+  features, they will not like the first demo** — sell the licence position and the
+  product ceiling, or do not sell this.

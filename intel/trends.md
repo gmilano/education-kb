@@ -6,8 +6,14 @@ updated: 2026-11-13
 
 # Education AI — current trends
 
-**Twenty-one** trends, each with the evidence behind it and what it implies for an
-engagement. 🟢 **Eleventh pass (`p806`, 2026-11-13): `T20` and `T21` added, and `T19`'s
+**Twenty-three** trends, each with the evidence behind it and what it implies for an
+engagement. 🟢 **Twelfth pass (`p807`, 2026-11-13): `T22` and `T23` added.** The count
+above was produced by `grep -c '^## T'` before being written, not carried forward.
+🔵 **`T22` (a repository name is not an identifier) came from verifying a name this base
+already carried, not from a search; `T23` (assessment is splitting into institutional
+and workforce) came from the one genuine market event of the window — Pearson/Workera.**
+🔴 **The prescribed battery returned nil on supply for a fifth pass and nil on regional
+facts for a second.** 🟢 **Eleventh pass (`p806`, 2026-11-13): `T20` and `T21` added, and `T19`'s
 headline claim narrowed** — the first open-licensed education AI-literacy curriculum
 surfaced, but at `3★` it is a seed rather than a corpus. 🔵 **Neither new trend came
 from the prescribed search battery, which returned nil on supply for a fourth pass and
@@ -863,3 +869,92 @@ surface, and it will never appear in a "trending AI repos" search.** This base l
 the adjacent lesson at `T13` — *when a vertical system has no agent surface, check the
 general-purpose platform underneath it.* **`T21` is the same move one layer further
 down: check the regulator's data model.**
+
+
+## T22 — A repository NAME is not an identifier, and in this space the collision is licence-shaped
+
+**Evidence.** 🟢 **Measured directly this pass (`p807`, 2026-11-13).** The name
+`LearnHarness` resolves to **at least three distinct GitHub repositories** with three
+different licence positions:
+[`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) —
+`9.1k★`, `1,202` commits, **AGPL-3.0 byte-verified** (`LICENSE`, `34,523 B`,
+`sha256:0d96a4ff68ad6d4b…`);
+[`h4ksclaw/learnharness`](https://github.com/h4ksclaw/learnharness) — `3★`, `52`
+commits, **no `LICENSE` file at all** (`404` from `raw.githubusercontent.com` on
+`LICENSE` *and* `LICENSE.md`, on *both* `main` and `master`) behind a README whose
+`## License` section contains the bare word `MIT`; and the two `0★` forks already
+recorded at `T966`, which serve a byte-identical AGPL-3.0 payload under an **empty**
+sidebar. 🔴 **`h4ksclaw` is not a fork** — no "forked from" line, disjoint history,
+different description, different purpose.
+
+**Why it is a trend and not an anecdote.** 🔵 **This base has now hit the same class of
+defect four times by four different mechanisms**: `NOASSERTION` from a classifier
+defeated by an SPDX comment and curly quotes (`GegoK12`); a licence stated only in a
+German README (`SVWS-NRW`); two halves of one vendor's stack under *different* copyleft
+grants (`frappe/education` GPL-3.0 vs `frappe/lms` AGPL-3.0); and now **a name that
+resolves to repositories whose grants disagree.** 🟢 **The common factor is that the
+cheap, fast way to answer "what licence is this?" — read the sidebar, or search the name
+— fails in a different way each time, and in education specifically it fails often**,
+because the space is full of small single-author projects that copy a well-known
+project's name.
+
+🔴 **The directional hazard is what makes this expensive.** In every one of the four
+cases, the **wrong** answer is the **more permissive** one. A studio that stops at the
+name here concludes `MIT` on a `3★` repository and ships; the `9.1k★` project it
+probably meant is AGPL-3.0, and the `3★` one has **no grant at all**, which is
+all-rights-reserved by default — 🔵 **strictly worse than the AGPL it was mistaken for.**
+
+**What it implies for an engagement.** 🟢 **Three rules, all cheap:**
+1. **Resolve every component by `owner/repo`, never by product name** — and record the
+   slug in the deliverable, not the name.
+2. **Treat a licence named only in prose as unverified.** A `## License` heading reading
+   `MIT` with no grant file is a statement of intent. 🔵 **`raw.githubusercontent.com`
+   settles it in one request, and a `404` across `main` and `master` is a positive
+   finding, not a failed check.**
+3. **An empty GitHub licence sidebar carries no information in either direction**
+   (`T966`) — it means the classifier declined, which happens both to repositories with
+   a perfectly good bespoke-formatted grant *and* to repositories with none.
+
+🔵 **Generalisable beyond education:** any industry KB assembling a component shelf from
+search results inherits this, and the cost is asymmetric — a missed copyleft obligation
+surfaces at client due-diligence, not at build time.
+
+
+## T23 — The money in AI-era assessment is moving from "did the student learn the course" to "can this person do the task", and the two have almost no architecture in common
+
+**Evidence.** 🟢 **[Pearson agreed to acquire Workera](https://www.reworked.co/learning-development/pearson-acquires-ai-skills-verification-platform-workera/),
+announced `2026-09-29`, terms undisclosed, completion expected H2 `2026`.** Workera goes
+into Pearson's **Enterprise Learning & Skills** unit; founder-CEO Kian Katanforoosh joins
+its leadership. 🔵 **The product is the signal:** agentic AI + psychometrics + adaptive
+assessment measuring proficiency through **role-specific scenarios and simulations**,
+with reported customers **ServiceNow, Accenture and the US Space Force** — 🔴 **not one
+of which is a school.** 🟢 Corroborating from the same window: the EMEA leg returned
+**Instructure building an AI study coach into Canvas**, i.e. the incumbent LMS moving on
+*instructional* assessment while the publisher buys *workforce* verification.
+
+**Why it is a trend.** 🔴 **A company with Pearson's assessment franchise paying for an
+AI-native verification capability is a statement that its existing psychometric stack
+does not measure what buyers now want measured.** 🔵 The unit of assessment is shifting
+from the **course** (did you pass it) to the **task** (can you do it), and simulation is
+the mechanism.
+
+**What it implies for an engagement.** 🟢 **There are two offers here, not one, and this
+base had been describing them as one.**
+
+| | **(a) Institutional assessment** | **(b) Skills verification** |
+|---|---|---|
+| Buyer | Registrar, faculty, assessment office | HR, L&D, enterprise capability |
+| Regulatory load | 🔴 **High** — EU AI Act Annex III names assessment high-risk (obligations `2027-12-02`); US state integrity rules | 🟢 **Low** — largely unregulated |
+| Core architecture | LMS/LTI integration, rubric, audit trail, human-in-the-loop | Simulation environment, scenario authoring, credential format |
+| Shelf support here | `Moodle`/`Canvas`/`Open edX` + QTI rows + `T17` tutor benchmarks | `CredentialEngine/osmt`, `CredentialRegistry`, `tabiya-tech/compass` |
+| Sales cycle | Institutional, slow, procurement-gated | Enterprise, faster, budget already exists |
+
+🔴 **They share almost no architecture, and conflating them is how an education-shaped
+proposal loses an L&D deal.** 🟢 **Consequence for this base's own shelves: the
+credential-layer rows have been filed as education supply and are better read as
+*workforce* supply** — they serve (b), where the acquisition money is going, and they
+are the part of this knowledge base that a Globant enterprise engagement can use without
+touching a school at all.
+
+🟡 **Dating caveat.** One outlet dates the announcement `2026-10-05`; the Pearson release
+and the majority of coverage give `2026-09-29`, which is what is asserted.

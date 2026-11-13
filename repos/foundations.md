@@ -6,9 +6,40 @@ updated: 2026-11-13
 
 # Foundational open-source repos for education
 
-The platforms and libraries an education engagement actually builds on. **63
+The platforms and libraries an education engagement actually builds on. **62
 repos**, all verified from the rendered repository page (license field + star
-count). 🔴 **Count corrected at the eleventh pass (`p806`): the header said "57
+count).
+
+🔴 **Count defect, SIXTH occurrence, corrected at the twelfth pass (`p807`,
+2026-11-13): the header said `63` while the tables hold `62`.** 🔵 **`p806` corrected
+this same line from `57` to `63` and overshot by one.** The figure above was derived
+three ways, all agreeing: table rows matching `^\|.*github\.com` = `62`; unique repo
+slugs in those rows = `62`; total slug occurrences = `62` (so the mapping is `1:1` and no
+row carries two repositories). 🟢 **The four non-repo `|` rows in this file are the xAPI
+/ Caliper comparison matrix around line `169`, which names repositories without linking
+them and must be excluded** — that matrix is the most likely cause of every
+miscount this line has had. 🔵 **Next pass: re-derive with those three commands rather
+than carry this sentence forward.**
+
+🔴 **Zero foundation repos added this pass — the search tier was nil for a fifth
+consecutive window.** The four prescribed global legs plus two differentiated legs
+(adaptive learning / knowledge tracing; AI grading against rubrics) returned nothing
+education-specific that this file does not already hold. 🟡 **What those legs did return
+was verified and rejected on the merits, not on a hunch:**
+[`OpenLearn-AI/OpenLearn-AI`](https://github.com/OpenLearn-AI/OpenLearn-AI) —
+**AGPL-3.0, `6★`, `3` forks**, README states it is `pre-alpha` and *"not yet runnable
+end-to-end"*; [`macsnoeren/genai-open-assessment`](https://github.com/macsnoeren/genai-open-assessment)
+— **GPL-3.0, `0★`, `0` forks**;
+[`h4ksclaw/learnharness`](https://github.com/h4ksclaw/learnharness) — **`3★` and NO
+licence file at all** (see `T22`). 🟢 **Fewer real rows beat padding, so none was
+written.**
+
+🟢 **The one supply-side gain this pass is on `verticals/solutions.md`, not here**: three
+permissive general-purpose ERP/CRM platforms (`krayin/laravel-crm` MIT `24.1k★`,
+`cortezaproject/corteza` Apache-2.0 `2.2k★`, `apache/ofbiz-framework` Apache-2.0
+`1.2k★`). 🔵 **They are deliberately NOT on this shelf** — this file is for repos an
+*education* engagement builds on, and none of the three is education-aware. They are
+platform substrate, which is what `verticals/` is for. 🔴 **Count corrected at the eleventh pass (`p806`): the header said "57
 repos" while the tables held 59.** The figure above was produced by counting rows
 programmatically, and the next pass should do that rather than carry this sentence
 forward. 🟢 **Four rows added this pass — a new two-repo K-12 data-standard layer

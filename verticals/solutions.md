@@ -12,6 +12,24 @@ of these**, not replacing it. All licenses and star counts verified from the
 repository page (2026-11-13, with the LTI and Moodle-MCP rows verified this
 pass).
 
+### What changed this pass (twelfth pass, `p807`, 2026-11-13) — a new section, because the saturated vertical leg finally said something
+
+🟢 **One new section, three new rows, no changes to any existing row:
+`## Admissions and enrolment CRM`.** The prescribed vertical-platform leg has now
+returned this shelf's own contents **eight passes running**. 🔵 **This pass the nil was
+read instead of recorded:** the leg keeps pairing education platforms that are copyleft
+with permissive platforms that are not educational, and that pairing is a structural
+fact about the market rather than a failure of the query.
+
+🟢 **Consequence: admissions is CRM-shaped work and this base had no CRM.** Added
+`krayin/laravel-crm` (**MIT**, `24.1k★` — the largest permissively licensed CRM this base
+has found), `cortezaproject/corteza` (**Apache-2.0**, `2.2k★`) and `apache/ofbiz-framework`
+(**Apache-2.0**, `1.2k★`, listed with a caution). All three verified from the rendered
+repository page this pass.
+
+🔴 **One claim was withdrawn before publication** — Corteza's origin — and the withdrawal
+is recorded in the section rather than quietly dropped.
+
 ### What changed this pass (eleventh pass, `p806`, 2026-11-13) — two rows, and the second one changes the altitude of every North American engagement
 
 🟢 **`numbas/Numbas` (Apache-2.0, `217★`/`130` forks) is the largest permissively
@@ -164,6 +182,49 @@ integration. 🔵 **Placed: `GegoK12` → APAC, `SVWS-NRW` → EMEA, `i-educar` 
 LATAM, OpenEduCat → APAC/LATAM SMB, RosarioSIS → LATAM, Canvas/Open edX →
 North America.** 🔴 **Both permissive rows are under 60 stars; verify
 maintenance before committing a client to either.**
+
+## Admissions and enrolment CRM — where the permissive option is general-purpose, not educational
+
+🟢 **New section at the twelfth pass (`p807`, 2026-11-13).** The prescribed
+vertical-platform leg (`open source platform education ERP CRM MIT Apache`) has returned
+this shelf's own contents for **eight consecutive passes**. 🔵 **This pass it returned
+them again — but the shape of the nil is itself the finding, and it had never been
+written down.**
+
+🔴 **The structural fact: every education-specific ERP/CRM in the open is copyleft, and
+every permissive ERP/CRM is general-purpose.** There is no MIT or Apache-2.0 system in
+existence that ships an *education* admissions pipeline. The leg confirms it from the
+other direction each time it runs — `OpenEduCat` (LGPL-3.0), `Frappe Education`
+(GPL-3.0), `ERPNext` (GPL-3.0) on the education side; `Apache OFBiz`, `Corteza`,
+`Krayin`, `Huly`, `iDURAR` on the permissive side, none of them educational.
+
+🔵 **Why this matters more than it sounds.** Admissions and enrolment is **CRM-shaped
+work, not SIS-shaped work** — pipelines, stages, campaigns, attribution, nurture — and a
+studio that reaches for the SIS table above to serve it is reaching for the wrong tool
+and inheriting copyleft for no reason. 🟢 **The correct move is a permissive general CRM
+with an education domain model built on top**, which is a configuration exercise plus an
+agent, not a platform build.
+
+| Platform | Repo | License | Stars | Why it is the right base for education admissions |
+|---|---|---|---|---|
+| **Krayin CRM** | https://github.com/krayin/laravel-crm | **MIT** | 24.1k | 🟢 **The largest permissively licensed CRM this base has found, by a wide margin — `24.1k★`, `1.7k` forks.** Laravel/PHP, built for lead, customer and sales management; the lead→opportunity→stage model maps onto enquiry→application→offer→enrolment with no structural violence. 🔵 **MIT means a studio can fork it and ship an admissions product**, which is impossible anywhere on the SIS table except `GegoK12` (`56★`). 🔴 **Nothing in it is education-aware** — no applicant, programme, intake or qualification entity — so budget the domain model as net-new. 🟢 **Shares a stack with `i-educar` (PHP/Laravel), which makes a LATAM pairing unusually cheap.** |
+| **Corteza** | https://github.com/cortezaproject/corteza | **Apache-2.0** | 2.2k | 🟢 **Low-code platform for data-driven business apps and workflows — Apache-2.0, `532` forks, not archived.** Where Krayin gives a CRM to bend, Corteza gives a **modeller**: define the admissions entities and the workflow, rather than inherit a sales one. 🔵 **The better choice when the institution's process is unusual** (multi-intake, competitive programmes, ministry reporting) and the worse choice when it is ordinary. 🟡 Materially smaller community than Krayin — read the release cadence before committing. |
+| **Apache OFBiz** | https://github.com/apache/ofbiz-framework | **Apache-2.0** | 1.2k | 🟡 **Listed for completeness and with a caution.** Java enterprise automation spanning ERP, CRM, e-commerce, SCM and manufacturing, `764` forks. 🔴 **Its breadth is the problem, not the attraction** — an admissions pipeline uses a thin slice and pays the whole framework's learning curve. Reach for it only where the client already runs OFBiz. |
+
+🔴 **Agent surface: none of the three ships one, and no MCP server for any of them was
+found this pass.** 🟢 **That is a smaller obstacle here than on the SIS table**: all three
+are API-first with conventional REST/GraphQL surfaces, so an MCP wrapper over an
+admissions subset is days of work, not a connector project. See `compose/patterns.md`
+`P21`.
+
+🔵 **Placement, and one correction made before this page was written.** `Krayin`'s GitHub
+organisation states its location as **India** → 🟢 **APAC-origin**, though the product is
+deployment-neutral. 🔴 **`Corteza` was drafted here as "EMEA-origin (Slovenia)" from
+recollection and that claim was withdrawn on checking:** the `cortezaproject` organisation
+states its location as **"International"**, and `cortezaproject.org` is outside this
+session's allowed network domains, so **no origin is asserted** → `Gap 807-D`. `OFBiz` is
+an ASF project with no regional centre. 🟢 **None of the three carries a regional
+constraint — unlike the SIS table, where the incumbent decides the region for you.**
 
 ## Content, delivery and classroom
 
