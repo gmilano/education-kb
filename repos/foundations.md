@@ -6,15 +6,46 @@ updated: 2026-11-13
 
 # Foundational open-source repos for education
 
-The platforms and libraries an education engagement actually builds on. **26
-repos**, all verified on 2026-11-13 from the rendered repository page (license
-field + star count). Grouped by the job they do, because "foundational" in
-education means four different layers: the LMS, the student record, the content
-format, and the learning-data/ML layer.
+The platforms and libraries an education engagement actually builds on. **30
+repos**, all verified from the rendered repository page (license field + star
+count) — 26 on 2026-11-13 plus **4 new LTI 1.3 libraries verified this pass**.
+Grouped by the job they do, because "foundational" in education means five
+different layers: the LMS, the student record, the content format, the
+learning-data/ML layer, and **the integration layer that mounts anything into
+anything**.
 
 License matters more here than anywhere else in this KB: the big three LMSs are
 **AGPL-3.0 or GPL-3.0**, which governs what a studio can hand a client as a
 derived product. The MIT/Apache/BSD/ECL rows are the ones that compose freely.
+
+**What changed this pass:** this file previously declared "no open-source LTI
+1.3 tool-provider library made the verified set" and called it greenfield.
+**That gap is closed and the conclusion was wrong.** Four LTI 1.3 libraries
+verified below, led by `ltijs` (Apache-2.0, 373 stars) implementing the full
+LTI Advantage service set. Do not quote the old greenfield claim to a client.
+
+## The integration layer — LTI 1.3 (new this pass)
+
+Build the AI tool once as an LTI 1.3 tool provider and it mounts in Moodle,
+Canvas, Open edX, Sakai and ILIAS. This is the highest-leverage single
+investment in an education engagement, and it does **not** need to be written
+from scratch.
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/Cvmcosta/ltijs | Apache-2.0 | 373 | **The reference implementation.** Node.js; covers launches, Deep Linking, Assignment and Grade Services, Names and Role Provisioning, and Dynamic Registration — the complete LTI Advantage surface. v7 is a full rewrite with a migration guide from v5. 86 forks. README thanks CourseKey for making "the certification process possible" but **does not itself claim LTI Advantage certification** — a fork, `edugatorlabs/ltijs`, is the one advertising certified status. Verify certification claims before repeating them to a client. |
+| https://github.com/packbackbooks/lti-1-3-php-library | Apache-2.0 | 54 | **The PHP answer** — matters because Moodle and Chamilo are PHP shops. Validates launches from any LTI consumer and uses Names & Roles Provisioning for rosters and Assignment & Grades for grade writeback. 27 forks. |
+| https://github.com/Simon-Initiative/lti_1p3 | MIT | 16 | Elixir library for LTI 1.3 **both as Tool and as Platform**. Built to support the Open Learning Initiative's next-generation platform, Torus — i.e. production provenance, not a toy. 4 forks. |
+| https://github.com/lti-tool/lti-tool | MIT | 8 | **Serverless-native** LTI 1.3 toolkit (TypeScript) for AWS Lambda and Cloudflare Workers, Hono-first. OIDC, AGS, NRPS, Deep Linking, Dynamic Registration, JWT verification and nonce validation; pluggable storage (memory, DynamoDB, PostgreSQL, MySQL, Cloudflare D1). Early at 8 stars and its README is internally inconsistent about which frameworks are supported versus planned — but it is the only serverless-shaped option found. |
+
+**Leads deliberately not tabled** (surfaced in search, not adopted):
+`SanDiegoCodeSchool/lti-node-library` (MIT, metadata indicates ~7 years old —
+likely stale, and its README admits only limited Assignment & Grade Services
+support); `bnsoftware/lti-1p3-tool`, a PHP fork whose **own README says "you
+should not use this library at this time"**; `stevenweathers/peregrine-lti`
+(Go), explicitly pre-v1.0 with an unstable public API. None were
+license-verified on the repository page this pass; treat all three as
+unverified.
 
 ## Learning platforms (LMS / MOOC)
 
@@ -25,8 +56,8 @@ derived product. The MIT/Apache/BSD/ECL rows are the ones that compose freely.
 | https://github.com/instructure/canvas-lms | AGPL-3.0 | 6.9k | The open LMS by Instructure; dominant in North American higher ed. Pair with `canvas-mcp` for agent access. |
 | https://github.com/frappe/lms | AGPL-3.0 | 3.4k | Modern, lightweight LMS on the Frappe framework. Fastest to stand up of the group. |
 | https://github.com/overhangio/tutor | AGPL-3.0 | 1.1k | Docker-based Open edX distribution. In practice this is *how* you deploy Open edX. |
-| https://github.com/chamilo/chamilo-lms | GPL-3.0 | 1.0k | LMS focused on ease of use and accessibility; strong LATAM and francophone footprint. |
 | https://github.com/sakaiproject/sakai | ECL-2.0 | 1.2k | Higher-ed teaching/research/collaboration suite. **ECL-2.0 is Apache-2.0 with a patent clause tuned for universities** — permissive, and the friendliest license in this table. |
+| https://github.com/chamilo/chamilo-lms | GPL-3.0 | 1.0k | LMS focused on ease of use and accessibility; strong LATAM and francophone footprint. |
 | https://github.com/ILIAS-eLearning/ILIAS | GPL-3.0 | 510 | Long-lived German LMS; heavy use in EMEA public sector and military/vocational training. |
 
 ## Student information systems and institutional ERP
@@ -65,13 +96,15 @@ derived product. The MIT/Apache/BSD/ECL rows are the ones that compose freely.
 ## Interoperability standards worth knowing (not all are code repos)
 
 - **LTI 1.3 / LTI Advantage** (1EdTech) — how any tool mounts inside Moodle,
-  Canvas, Open edX, Sakai, ILIAS. The single highest-leverage integration to
-  support: build the LTI tool once, reach every LMS above.
+  Canvas, Open edX, Sakai, ILIAS. **Implementations now verified above**; see
+  the LTI table rather than planning a from-scratch build.
 - **xAPI (Experience API)** and **Caliper Analytics** — the two learning-event
   telemetry standards. Emit one of them from any agent you build, or the
   institution cannot report on it.
 - **QTI** — assessment item interchange. Matters the moment a client wants to
   move an item bank between systems.
+- **SCORM** — legacy but ubiquitous in corporate and vocational training; still
+  the delivery format many EMEA/APAC clients require.
 
 ## Declared gaps
 
@@ -79,7 +112,13 @@ derived product. The MIT/Apache/BSD/ECL rows are the ones that compose freely.
   deployment is GPL/AGPL except Sakai (ECL-2.0). A client who needs a
   proprietary derived platform cannot start from Moodle, Canvas, or Open edX —
   that constraint should be surfaced in week one, not month three.
-- **No open-source LTI 1.3 tool-provider library made the verified set.** The
-  standard is the key integration path and the tooling for it is scattered
-  across language-specific libraries; none surfaced as a clear foundational repo
-  in this window. Worth a dedicated pass.
+- **No LTI 1.3 library in Python.** The verified set is Node/TypeScript (×2),
+  PHP, and Elixir. Since almost every AI agent layer in this KB is Python
+  (DeepTutor, educhain, Faixiang's Moodle MCP, AI_AWE, pyKT), the standard
+  architecture is forced into a two-process shape: Python agent service behind a
+  Node or PHP LTI front door. Worth knowing before estimating. A Python LTI 1.3
+  tool-provider library remains genuinely greenfield.
+- **No open-source QTI item-bank toolchain surfaced.** QTI is named in every
+  procurement document and no foundational repo for it reached this set.
+  Unverified this pass rather than confirmed absent — it needs a dedicated
+  search.

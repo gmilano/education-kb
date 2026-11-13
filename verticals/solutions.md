@@ -8,8 +8,9 @@ updated: 2026-11-13
 
 The education equivalent of "Odoo for ERP". These are the systems institutions
 already run; an AI engagement almost always means **adding an agent layer to one
-of these**, not replacing it. All licenses and star counts verified 2026-11-13
-from the repository page.
+of these**, not replacing it. All licenses and star counts verified from the
+repository page (2026-11-13, with the LTI and Moodle-MCP rows verified this
+pass).
 
 ## The decision that governs every education engagement
 
@@ -20,17 +21,32 @@ makes the client's derived platform copyleft. Instead mount the AI layer as an
 layer MIT/Apache, and emit **xAPI** or **Caliper** events so the institution can
 report on it. Every pattern in `compose/patterns.md` follows this shape.
 
+**Both halves of that sentence now have verified implementations.** LTI 1.3:
+`Cvmcosta/ltijs` (Apache-2.0, 373 stars, full LTI Advantage). MCP: Canvas via
+`canvas-mcp` (MIT, 324) and — new this pass — **Moodle via `Faixiang/Moodle-MCP`
+(MIT, 206)**. The previous edition of this file said Moodle had no significant
+MCP server. It does.
+
 ## Learning management — the host systems
 
 | Platform | Repo | License | Stars | Where it is the incumbent | AI customization surface |
 |---|---|---|---|---|---|
-| Moodle | https://github.com/moodle/moodle | GPL-3.0 | 7.6k | Global, strongest in EMEA, LATAM, APAC public education | Mature plugin API; LTI 1.3; web services REST API |
-| Open edX | https://github.com/openedx/openedx-platform | AGPL-3.0 | 8.2k | MOOCs, corporate academies, national platforms | **`openedx-ai-extensions`** is the official AI plugin point; XBlocks; deploy via `tutor` |
-| Canvas LMS | https://github.com/instructure/canvas-lms | AGPL-3.0 | 6.9k | North American higher ed (dominant) | Rich REST API + LTI 1.3; **`canvas-mcp` (MIT) gives agents 102 tools** |
+| Moodle | https://github.com/moodle/moodle | GPL-3.0 | 7.6k | Global, strongest in EMEA, LATAM, APAC public education | Mature plugin API; LTI 1.3; web services REST API. **MCP now available: `Faixiang/Moodle-MCP` (MIT, 206) read-only; `falkenslab/moodle-mcp` (MIT) ~260 tools via browser SSO; `MarcosNahuel/moodle-mcp` (MIT) idempotent content publishing** |
+| Open edX | https://github.com/openedx/openedx-platform | AGPL-3.0 | 8.2k | MOOCs, corporate academies, national platforms | **`openedx-ai-extensions`** is the official AI plugin point; XBlocks; deploy via `tutor`. MCP only via `openedx-mcp` (AGPL-3.0, 3 stars) |
+| Canvas LMS | https://github.com/instructure/canvas-lms | AGPL-3.0 | 6.9k | North American higher ed (dominant) | Rich REST API + LTI 1.3; **`canvas-mcp` (MIT, 324) — README claims up to 128 tools, sidebar says 102** |
 | Frappe LMS | https://github.com/frappe/lms | AGPL-3.0 | 3.4k | SMB/corporate training, India | Frappe framework hooks; shares a stack with ERPNext |
-| Sakai | https://github.com/sakaiproject/sakai | ECL-2.0 | 1.2k | Research universities | **Permissive license** — the one platform a studio can extend without copyleft reaching the product |
-| Chamilo | https://github.com/chamilo/chamilo-lms | GPL-3.0 | 1.0k | LATAM, francophone Africa, Spain | Web services API; accessibility-first |
+| Sakai | https://github.com/sakaiproject/sakai | ECL-2.0 | 1.2k | Research universities | **Permissive license** — the one platform a studio can extend without copyleft reaching the product. `Simon-Initiative/lti_1p3` (MIT, Elixir) comes from adjacent higher-ed work |
+| Chamilo | https://github.com/chamilo/chamilo-lms | GPL-3.0 | 1.0k | LATAM, francophone Africa, Spain | Web services API; accessibility-first. PHP — pair with `packbackbooks/lti-1-3-php-library` (Apache-2.0) |
 | ILIAS | https://github.com/ILIAS-eLearning/ILIAS | GPL-3.0 | 510 | German-speaking EMEA, vocational and public sector | Plugin slots; SCORM/xAPI |
+
+## The integration layer — build once, mount everywhere
+
+| Library | Repo | License | Stars | Use when |
+|---|---|---|---|---|
+| ltijs | https://github.com/Cvmcosta/ltijs | Apache-2.0 | 373 | Default choice. Node.js, full LTI Advantage (launches, Deep Linking, AGS, NRPS, Dynamic Registration) |
+| lti-1-3-php-library | https://github.com/packbackbooks/lti-1-3-php-library | Apache-2.0 | 54 | The client is a PHP shop (Moodle, Chamilo); roster via NRPS, grade writeback via AGS |
+| lti_1p3 | https://github.com/Simon-Initiative/lti_1p3 | MIT | 16 | Elixir stack, or you need to act as **Platform** as well as Tool |
+| lti-tool | https://github.com/lti-tool/lti-tool | MIT | 8 | Serverless target (Lambda, Cloudflare Workers); early but the only one of its shape |
 
 ## Student information systems and institutional ERP
 
@@ -40,7 +56,6 @@ report on it. Every pattern in `compose/patterns.md` follows this shape.
 | RosarioSIS | https://github.com/francoisjacquet/rosariosis | GPL-2.0 | 654 | K-12 school management; widely deployed in LATAM, Spanish/French/Portuguese localization in core. |
 | Gibbon | https://github.com/GibbonEdu/core | GPL-3.0 | 638 | Flexible school management; strong in international K-12 schools. |
 | openSIS Classic | https://github.com/OS4ED/openSIS-Classic | GPL (README) | 351 | Student information system; commercial editions available from OS4ED. |
-| ERPNext (education context) | https://github.com/openeducat/openeducat_erp | LGPL-3.0 | 911 | For institutional finance/HR alongside academics, the Odoo/Frappe ERP families are the two realistic bases. |
 
 ## Content, delivery and classroom
 
@@ -62,13 +77,14 @@ report on it. Every pattern in `compose/patterns.md` follows this shape.
 | nbgrader | https://github.com/jupyter/nbgrader | BSD-3-Clause | 1.4k | Assignment release and autograding for notebooks. **The grading substrate to wrap an agent around.** |
 | pyKT | https://github.com/pykt-team/pykt-toolkit | **MIT** | 461 | Deep knowledge-tracing benchmarks — real mastery estimation to pair with an LLM tutor. |
 | ODK Collect | https://github.com/getodk/collect | Apache-2.0 | 805 | Offline Android form collection; used for education field assessment at national scale. |
+| AI Scoring Platform | https://github.com/wwrwbs/AI_AWE | Apache-2.0 (README) | 2 | Essay scoring + label-aware feedback, locally deployable. Prototype scale, but the only open grading *system* found. |
 | Caliper | https://github.com/1edtech/caliper-spec | IMS spec-document license | 22 | Learning analytics event spec. Implement it; do not vendor the repo. |
 
 ## Standards that make the above interchangeable
 
 | Standard | Why it decides the architecture |
 |---|---|
-| **LTI 1.3 / LTI Advantage** | Build the AI tool once as an LTI tool provider and it mounts in Moodle, Canvas, Open edX, Sakai, and ILIAS. Highest-leverage single investment in an education engagement. |
+| **LTI 1.3 / LTI Advantage** | Build the AI tool once as an LTI tool provider and it mounts in Moodle, Canvas, Open edX, Sakai, and ILIAS. Highest-leverage single investment in an education engagement — and `ltijs` means you do not write it from scratch. |
 | **xAPI** | Learner-activity telemetry; what an agent should emit so the institution can report on it. |
 | **Caliper Analytics** | The 1EdTech-native alternative to xAPI; common in North American higher ed. |
 | **QTI** | Assessment item interchange — matters as soon as item banks must move between systems. |
@@ -79,8 +95,13 @@ report on it. Every pattern in `compose/patterns.md` follows this shape.
 - **No permissively licensed LMS at deployment scale** except Sakai. Surface
   this constraint in week one of any engagement that needs a proprietary
   derived platform.
-- **MCP coverage is thin and uneven.** Canvas has a strong MIT MCP server
-  (`canvas-mcp`, 324 stars, 102 tools). Open edX has only `openedx-mcp`
-  (AGPL-3.0, **3 stars** — reference only). **Moodle has no significant MCP
-  server in this window** despite being the most-deployed LMS in the world.
-  That is the clearest build opportunity in this file.
+- **MCP coverage is no longer absent for Moodle — it is fragmented.** Seven
+  Moodle MCP servers verified, 1–206 stars, licenses split MIT/GPL/AGPL, and no
+  two agree on tool surface or auth model (web-service token vs interactive
+  browser SSO vs companion plugin). Canvas, by contrast, has consolidated on
+  one 324-star MIT server. **Open edX remains the real gap**: `openedx-mcp`
+  (AGPL-3.0, 3 stars) is the only option and it is reference-grade at best.
+- **No MCP server for any SIS.** OpenEduCat, RosarioSIS, Gibbon and openSIS all
+  hold the student record — the data an advising or early-warning agent needs —
+  and none has an agent interface. The LMS got all the attention; the student
+  record got none.

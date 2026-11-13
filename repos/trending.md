@@ -4,6 +4,87 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (second pass) — **The LTI 1.3 "greenfield" this base declared ten hours ago has a 373-star Apache-2.0 reference implementation, and none of the four verified libraries is Python**
+
+**Window:** foundational and trending education repos, verified 2026-11-13 from
+the rendered repository page (GitHub license field + star count). This pass
+targeted the integration layer specifically, because the previous pass declared
+it empty. **30 repos now in `repos/foundations.md`, up from 26.**
+
+### The correction
+
+Earlier today this base wrote: *"No open-source LTI 1.3 tool-provider library
+made the verified set... none surfaced as a clear foundational repo in this
+window"*, and `intel/market.md` sold "an LTI 1.3 AI tool provider, MIT-licensed,
+built once" as **greenfield**. LTI 1.3 is the single highest-leverage
+integration in education — build it once, mount in Moodle, Canvas, Open edX,
+Sakai and ILIAS — so that claim was both the most valuable and the most
+expensive one in the file.
+
+It was wrong. Four libraries verified:
+
+| Repo | License | Stars | Forks | Stack | Surface |
+|---|---|---|---|---|---|
+| https://github.com/Cvmcosta/ltijs | Apache-2.0 | **373** | 86 | Node.js | **Full LTI Advantage**: launches, Deep Linking, Assignment & Grade Services, Names & Role Provisioning, Dynamic Registration. v7 is a full rewrite with a v5 migration guide |
+| https://github.com/packbackbooks/lti-1-3-php-library | Apache-2.0 | 54 | 27 | PHP | Launch validation, Names & Roles Provisioning (rosters), Assignment & Grades (writeback) |
+| https://github.com/Simon-Initiative/lti_1p3 | MIT | 16 | 4 | Elixir | **Tool *and* Platform** sides; built for the Open Learning Initiative's Torus platform |
+| https://github.com/lti-tool/lti-tool | MIT | 8 | 8 | TypeScript | **Serverless-native** (AWS Lambda, Cloudflare Workers, Hono-first): OIDC, AGS, NRPS, Deep Linking, Dynamic Registration, JWT verification, nonce validation; storage adapters for memory, DynamoDB, PostgreSQL, MySQL, Cloudflare D1 |
+
+### The constraint that replaces the gap
+
+**None of the four is Python.** The verified set is Node ×2, PHP, Elixir — while
+nearly every agent and ML component in this KB is Python: DeepTutor, educhain,
+`Faixiang/Moodle-MCP`, `wwrwbs/AI_AWE`, pyKT, nbgrader. So the standard
+education architecture is structurally **two-process**: a Python agent service
+behind a Node or PHP LTI front door. That seam is real work and it was invisible
+while the whole layer was marked greenfield. **A Python LTI 1.3 tool-provider
+library is the part that is actually greenfield** — a much narrower and more
+honest opportunity than "build the LTI layer".
+
+### Certification claim worth not repeating
+
+`Cvmcosta/ltijs` does **not** claim LTI Advantage certification in its README;
+it thanks CourseKey for making "the certification process possible". The fork
+`edugatorlabs/ltijs` is the one advertising IMS **LTI Advantage Complete
+Certified** status. If a client's procurement requires certification, that
+distinction decides which repo goes in the proposal — verify it directly with
+1EdTech rather than from either README.
+
+### Leads examined and deliberately not admitted
+
+- `SanDiegoCodeSchool/lti-node-library` (MIT) — search metadata indicates ~7
+  years old, and its own README admits only limited Assignment & Grade Services
+  support. Likely stale.
+- `bnsoftware/lti-1p3-tool` (PHP fork) — **its own README says "you should not
+  use this library at this time."** Taking a maintainer at their word.
+- `stevenweathers/peregrine-lti` (Go) — explicitly pre-v1.0, public API
+  described as not yet stable.
+
+None of the three was license-verified on its repository page this pass; they
+are recorded as unverified leads, not as rows.
+
+### Still-standing foundational facts (unchanged this pass)
+
+- https://github.com/openedx/openedx-platform — AGPL-3.0, 8.2k. Canonical name;
+  `openedx/edx-platform` redirects here. Earlier passes of this KB carried both
+  as separate entities, inflating the Open edX footprint.
+- Seven of eight significant open-source LMSs are GPL-3.0/AGPL-3.0. **Sakai
+  (ECL-2.0) remains the only permissive one at deployment scale.**
+- https://github.com/ankitects/anki — AGPL-3.0 (read from `LICENSE`; the sidebar
+  does not name it), 32.8k.
+
+### Declared gaps this window
+
+- **No Python LTI 1.3 library.** Newly identified, and the real shape of the
+  gap the previous pass mis-stated.
+- **No open-source QTI item-bank toolchain surfaced.** QTI appears in every
+  education procurement document and no foundational repo for it reached the
+  verified set. **Unverified rather than confirmed absent** — it needs a
+  dedicated search, and this pass does not claim it is missing.
+- **No MCP server for any student information system** (OpenEduCat, RosarioSIS,
+  Gibbon, openSIS). The LMS layer has eight MCP servers across Moodle, Canvas
+  and Open edX; the student-record layer has none.
+
 ## `2026-11-13` — **`openedx/edx-platform` is gone as a name: the canonical repo is `openedx/openedx-platform`, and this KB had both as separate rows**
 
 **Window:** foundational and trending education repos, verified 2026-11-13 from

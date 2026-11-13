@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (second pass) — **The Moodle MCP gap was never a gap: seven servers exist, one at 206 stars MIT. And education AI has its first LATAM and Africa agents, both at zero stars**
+
+**Window:** education-specific AI agents, verified 2026-11-13 by fetching each
+repository page and reading GitHub's own license field and star count. This pass
+probed the three gaps the earlier pass today declared open (Moodle MCP, LTI
+libraries, grading) plus regional origin. 18 agents now admitted, up from 11;
+4 rejected on license. `curl -sI` against `github.com` returns `403` under this
+session's egress policy for non-attached repositories, and `api.github.com`
+refuses the same way, so the rendered repository page remains the verification
+channel.
+
+### The correction that matters this week
+
+This KB stated, earlier today, that **"Moodle — the most-deployed LMS in the
+world — has no significant MCP server in this window."** That was wrong. Seven
+exist:
+
+| Repo | License | Stars | Surface | Auth |
+|---|---|---|---|---|
+| https://github.com/Faixiang/Moodle-MCP | MIT | 206 | 10 tools, **read-only**; v1.4.0 dated 2026-11-02; docs in 10 languages; Moodle 3.x/4.x, verified vs 4.3.6 | Web-service token |
+| https://github.com/G36maid/moodle-mcp | MIT | 29 | Courses, assignments, forums, grades, files-as-markdown; Rust; verified live vs **Moodle 3.7, 4.5 and 5.2** | Token |
+| https://github.com/falkenslab/moodle-mcp | MIT | 2 | **~260 tools** incl. grading and quiz building; Moodle 4.5/5.x | **Interactive browser login, SSO + 2FA, no token, no admin, no plugin** |
+| https://github.com/MarcosNahuel/moodle-mcp | MIT | 1 | 40 tools + `ws_raw`; writes are **upsert-by-`idnumber`, so republishing is idempotent**; v0.5.2, self-reported ~80% operability | Token + companion plugin `local_italiciamcp` |
+| https://github.com/csmediapro/moodle-mcp-server | **AGPL-3.0** | 2 | 10 core tools; **additional tools sold as a paid premium plugin** | Token |
+| https://github.com/lmscloud-io/moodle-mcp-server | **GPL-3.0** | 1 | Unstated; no repo description | Token |
+| `ernesto-butto/moodle-mcp-server` | (fork of `peancor`) | — | Multi-course fork, tested vs Moodle 4.5 | Token |
+
+The substance of the old claim survives in weakened form — none of these is
+production-hardened, and at 1–2 stars most are one-author prototypes — but
+"no significant MCP server" cannot stand against a maintained 206-star MIT
+server shipping releases this month. **The lesson is methodological: a declared
+gap is a claim and needs verifying before it is sold as an opportunity.** Two of
+the three gaps probed this pass were already closed by existing projects.
+
+### New agents admitted
+
+| Agent | License | Stars | Why it is in |
+|---|---|---|---|
+| https://github.com/JuneYaooo/teacher-to-skills | Apache-2.0 | 475 | **Third-largest education agent on GitHub.** Distils a *named teacher's* materials into a source-backed Skill that teaches to their standard and tapers support. Conclusions tied to sources; unevidenced material flagged, not filled in; learner progress stored outside the Skill. 73 forks. |
+| https://github.com/Faixiang/Moodle-MCP | MIT | 206 | See above. Read-only by design, which is an asset in a conformity story. |
+| https://github.com/SirhanMacx/Claw-ED | MIT | 65 | Local-first teaching assistant drafting lessons/materials/slides from the teacher's own plans. v9.18.2026.1 Beta. Unusually honest README: single-teacher not multi-tenant, student features experimental, hosted models still see prompt content. |
+| https://github.com/G36maid/moodle-mcp | MIT | 29 | Widest verified Moodle version coverage (3.7→5.2), Rust single binary. |
+| https://github.com/wwrwbs/AI_AWE | Apache-2.0 (README/LICENSE; sidebar shows only a generic "License" link) | 2 | **The only credible open grading system found.** Qwen2.5-7B LoRA discourse classifier → LightGBM scorer over 31 features → label-aware feedback, Gradio UI, locally deployable. |
+| https://github.com/falkenslab/moodle-mcp | MIT | 2 | ~260 tools and the only token-free auth model found. |
+| https://github.com/MarcosNahuel/moodle-mcp | MIT | 1 | Idempotent content publishing — the right primitive for generated courseware. |
+| https://github.com/Jeanikt/tutor-ai-agent | MIT | 0 | **First LATAM-origin education agent found.** "Manu": voice-first math tutor in Brazilian Portuguese, 1st grade → university, TypeScript + LiveKit, chalkboard rendering of spoken explanation. |
+| https://github.com/Keitous/EDUKAI-LONGVIEW | ISC | 0 | **First Africa-origin education agent found.** MCP-powered longitudinal learner intelligence across academic periods, evidence retrieval, recurring-difficulty detection, "agent recommends, teacher decides". Bilingual FR/EN, authored in **Guinea**, synthetic data only. |
+
+### Movement on previously tracked agents
+
+| Agent | License | Stars | Note |
+|---|---|---|---|
+| https://github.com/HKUDS/DeepTutor | Apache-2.0 | **58.7k** (was 58.6k) | **v1.7.2 released 2026-11-06**; 7.1k forks. Secondary roundups still call it MIT; the repository says Apache-2.0. A 2026-11-01 third-party report carried ~52.8k — that figure is now ~6k stale. |
+| https://github.com/THU-MAIC/OpenMAIC | MIT | 43.4k | 6.7k forks. **GitHub Releases is empty**; the README News section lists v1.5.0-rc.2 dated 2026-11-12, a release candidate. A search result claiming "v1.4.0, 2026-11-04" as latest disagrees with the README. Ships **pt-BR and es-MX locales** — directly relevant to LATAM localization. |
+| https://github.com/vishalsachdev/canvas-mcp | MIT | 324 | 106 forks. **Its own page contradicts itself on tool count: README says "up to 128 tools", sidebar About says 102.** Default profile registers fewer; feature-gated tools raise the total. This KB previously carried 102 as fact. |
+
+### New rejection
+
+https://github.com/nifalconi/educational-agents (1 star) — **no license file**,
+therefore all-rights-reserved and unusable. Worth naming anyway: it is a
+Spanish-language teaching library from the **Niñas Pro** applied-AI course for
+girls in **Chile**, built on the OpenAI Agents SDK via OpenRouter, v0.1.0. It is
+LATAM education provenance that a single LICENSE file would make adoptable —
+a contribution opportunity rather than a dead end.
+
+### Citation trap found this window
+
+The grading system published on arXiv as **"ArguLens"** is named nothing of the
+sort in its own repository (`wwrwbs/AI_AWE`, "AI Scoring Platform"). Anyone
+searching GitHub for the paper's name finds nothing and concludes the code was
+never released.
+
+### Declared gaps this window
+
+- **Grading remains effectively unbuilt** — one 2-star Apache-2.0 prototype,
+  `nbgrader` as notebook infrastructure, and Kaggle-era coursework. Several
+  LLM graders found are API-only (OpenAI/Azure/Cohere), unusable where data
+  residency binds.
+- **Pedagogical evaluation unchanged at 4 stars** (`AITutor-EvalKit`). Nothing
+  new entered this layer.
+- **No SIS has an agent interface.** Seven Moodle MCP servers and **zero** for
+  OpenEduCat, RosarioSIS, Gibbon or openSIS — the systems that actually hold
+  the student record that advising and retention agents need. Newly identified
+  this pass and the widest open space found.
+- **Open edX MCP is still reference-grade only** (`openedx-mcp`, AGPL-3.0, 3
+  stars), in contrast to Canvas's consolidated 324-star MIT server and Moodle's
+  seven.
+- **No APAC-ex-China education agent at scale** — the three largest are all
+  Chinese academic projects (DeepTutor, OpenMAIC, teacher-to-skills). India
+  remains public infrastructure (BHASHINI, DIKSHA) and announcements (Bharat
+  EduAI Stack, September 2026), not published agent repos.
+
 ## `2026-11-13` — **DeepTutor crosses 58k and is Apache-2.0, not MIT; two of the week's most-recommended "open source" tutors are not open source**
 
 **Window:** education-specific AI agents, verified 2026-11-13 by fetching each
