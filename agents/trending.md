@@ -3,6 +3,30 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+## `2026-11-13` (seventh pass) — **The largest new education repository of this window cannot be shipped, and this base spent a pass publishing a licence it had itself already refuted**
+
+**Pass `p802`.** Two things moved. 🟢 A genuinely new education artifact appeared at the top of the
+size distribution — **[`LearnHarness`](https://github.com/amosblomqvist/learnharness), `9.1k★` /
+`1.2k` forks** — and its grant was read **at the byte level**, not classified: root `LICENSE`,
+`34,523 B`, `affero×16`, title line `GNU AFFERO GENERAL PUBLIC LICENSE`. 🔴 **AGPL-3.0, so it is a
+design to read and not a dependency to ship.** 🔴 The second thing is worse and is about this base:
+**`agents/top.md` went on publishing `AITutor-EvalKit` as `MIT` for a full pass after `p801`'s `T961`
+established that the repository serves no licence at all.**
+
+| | |
+|---|---|
+| 🔴 **`T967`: the propagation gap recurred, and this time against a fact this base had itself settled** | 🔴 **`p801` refuted the `MIT` claim over [`AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit); the shelf row kept saying `MIT`.** 🟢 `p802` re-probed and reproduced `T961` **exactly** — same `HEAD` `a71078456a90`, same `7`-entry tree, still no `LICENSE`/`COPYING` in the root tree. 🟢 **Row moved to the rejected table with the evidence attached.** `ACTION p802-A` |
+| 🟢 **`T964`: a new education repo enters near the top of the size distribution** | 🟢 **`LearnHarness` `9.1k★`, `1.2k` forks, `1,202` commits.** Agents plan and teach toward a goal; a **local knowledge graph stores ideas and their links rather than ability ratings** — a third persistence model beside `DeepTutor`'s learner model and `OATutor`'s Bayesian Knowledge Tracing. 🔴 **AGPL-3.0 on the bytes** |
+| 🟢 **`T965`: `T958`'s discriminator survives a third repository, and SIZE is confirmed useless** | 🟢 **AGPL-3.0 = `affero×16` at `34,523 B` here, against `p801`'s `affero×16` at `35,136 B`.** 🔵 **The OCCURRENCE COUNT is the fingerprint; the byte size is not** — exactly the warning `p801` issued, now reproduced rather than asserted |
+| 🔴 **`T966`: the blank licence sidebar carries no information — twice more** | 🔴 **Both `LearnHarness` forks ([`alexvinasdev`](https://github.com/alexvinasdev/learnharness), [`GeneralKnowledge`](https://github.com/GeneralKnowledge/learnharness)) show an EMPTY sidebar licence field and serve a byte-identical AGPL-3.0 payload** (`sha256:0d96a4ff68ad6d4b…`). `T956` reproduced |
+| 🔵 **The fork rule from `p800` applies and does NOT invert here** | 🔵 **Both forks sit at `0★` / `0` forks against upstream's `9.1k`.** 🟢 Their `HEAD`s differ from upstream's `cb25c8e49b85` (`02301d0bb480`, `47b3d5812d55`), so the **code** has diverged — but there is no traction to follow. Record, do not adopt |
+| 🟢 **`T968`: a refusal belongs to a TRANSPORT *and a CLIENT*, not a hostname — `T952` extended** | 🔴 **`curl` to `github.com` now returns `403` for a LIVE address and `403` for an INVENTED one — no discrimination, so that client is useless as an instrument.** 🟢 **The rendered-page channel read through a fetching client kept its control: `404` invented / `200` live.** Both legs published |
+| 🟢 **`janestreet/agent_skills` carried figure CONFIRMED on two channels** | 🟢 **`7.9k★` on the rendered page; `MIT` in the sidebar AND in the payload — `LICENSE.md`, `1,120 B`, `affero×0`, title `The MIT License`.** 🔵 Forks `510` → `516`. Still `2` commits |
+| 🔴 **`D1` — this pass's own instrument defect, caught before publication** | 🔴 **The probe counted affero-matching LINES (`15`), not OCCURRENCES (`16`), and would have published a FALSE divergence from `T958`.** 🟢 Caught by computing both measures before writing a word. 🔵 **`p801`'s `D2` class recurring: a count is not a count until its unit is stated** |
+| 🔴 **`ACTION p801-D` remains UNDISCHARGEABLE from this session** | 🔴 **Filing the upstream licence issue on `AITutor-EvalKit` requires write access to a third-party repository; this session's GitHub scope is restricted to the `gmilano` bases.** Declared, not silently dropped — the `p797-H` class |
+
+---
+
 ## `2026-11-13` (sixth pass) — **The decisive education-AI finding this window is not an agent: an Apache-2.0 LMS ships a pluggable AI provider layer in-tree, with per-learner opt-out and token accounting**
 
 **Window:** education-specific AI agents, plus — new this pass — **AI capability

@@ -1,10 +1,73 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-12
+updated: 2026-11-13
 ---
 
 # Globant AI Studios — Education KB
+
+**Pass `p802` · `2026-11-13`** — `p801` closed with EMEA having produced **regulation and not one
+deployment figure**, and with a licence it had refuted still sitting in a shelf table. 🟢 **`p802`
+closes both.** 🟢 **`ACTION p801-E` is DISCHARGED: the UK supplies EMEA's first dated, funded,
+national education-AI deployment programme — `450,000` pupils a year, `£2.88m` across `8` suppliers,
+trials from autumn `2026` — alongside a measured teacher baseline (`76%` using AI, `49%` of schools
+with no policy at all).** 🔴 **And the uncomfortable half: this base published `MIT` over
+`AITutor-EvalKit` for a full pass after its own `T961` refuted it, in `4` places — one table row,
+one prose paragraph and two compose patterns.** 🟢 **All four are corrected here, and the
+append-only ledgers are deliberately NOT rewritten.** 🟢 One genuinely new repository entered near
+the top of the size distribution — **`LearnHarness`, `9.1k★`, AGPL-3.0 on the bytes.** 🔴 **One
+instrument defect was produced and caught before publication.** The two trending ledgers are
+appended to, never rewritten.
+
+## What this pass established
+
+| | |
+|---|---|
+| 🟢 **`ACTION p801-E` DISCHARGED — EMEA has deployment figures, and they are national and dated** | 🟢 **UK DfE AI Tutoring: up to `450,000` disadvantaged pupils a year, trials from autumn `2026`, tools to schools by end `2027`, `£2.88m` split equally across `8` suppliers incl. Google and Pearson, English/maths/science/MFL, gated on the DfE Generative AI Product Safety Standards.** 🔴 Year groups conflict (`9`–`11` vs `9`–`10`) |
+| 🟢 **EMEA's governance deficit is no longer a LATAM story — it is measured in the UK** | 🟢 **NEU, fielded `5`–`16 Feb 2026`: `76%` of teachers use AI day-to-day (from `53%`); 🔴 `49%` of schools have NO AI policy at all; `66%` have none for student use, unchanged from 2025.** 🟢 Independent check agrees: Bett/YouGov `48%` no staff-use policy. 🔴 Sample size reported as both `9,408` and `10,311` |
+| 🔴 **`T967`: the propagation gap recurred against this base's OWN settled fact, in `4` places** | 🔴 **`p801` refuted the `MIT` over [`AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit); `agents/top.md`, its own gap prose, and `P?`-patterns at two sites kept publishing it.** 🟢 **`p802` re-probed — same `HEAD` `a71078456a90`, still no licence in the root tree — moved the row to the REJECTED table and corrected all `4` live sites.** 🟢 **`ACTION p802-A` discharged IN-pass** |
+| 🟢 **The ledgers were left alone on purpose, and that is the rule working** | 🟢 **`4` further stale `MIT` mentions survive in `agents/trending.md`.** 🔵 **They are history, not shelves — correcting them would rewrite the record the append-only rule exists to keep.** The correction rides at the top of the ledger instead |
+| 🟢 **`T964`: a new education repo enters near the top of the size distribution** | 🟢 **[`LearnHarness`](https://github.com/amosblomqvist/learnharness) `9.1k★` / `1.2k` forks / `1,202` commits. Local knowledge graph stores IDEAS AND THEIR LINKS, not ability ratings — a third persistence model beside `DeepTutor`'s learner model and `OATutor`'s BKT.** 🔴 **AGPL-3.0 byte-verified — read it, do not ship it** |
+| 🟢 **`T965`: `T958`'s discriminator holds on a third repo, and SIZE is confirmed useless** | 🟢 **AGPL-3.0 = `affero×16` at `34,523 B`, against `p801`'s `affero×16` at `35,136 B`.** 🔵 **The OCCURRENCE COUNT is the fingerprint; the byte size is not** — `p801`'s warning reproduced rather than repeated |
+| 🔴 **`T966`: the blank licence sidebar carries no information — twice more** | 🔴 **Both `LearnHarness` forks show an EMPTY sidebar and serve a byte-identical AGPL-3.0 payload (`sha256:0d96a4ff68ad6d4b…`).** 🔵 Both sit at `0★` against upstream's `9.1k`, so `p800`'s fork-inversion does NOT apply here — `HEAD`s differ, traction does not |
+| 🟢 **`T968`: a refusal belongs to a transport AND A CLIENT — `T952` extended** | 🔴 **`curl` to `github.com` returns `403` for a LIVE address and `403` for an INVENTED one — no discrimination, so it is not an instrument.** 🟢 **The rendered page read through a fetching client kept its `404`/`200` control.** Both legs published |
+| 🟢 **`T16`/`P14`: the artifact four regimes presuppose and none provides** | 🟢 **Philippines DepEd Order `003`, s. `2026` creates an AI REGISTRY of all deployments with risk tiers.** 🔵 **EU Art. `27` FRIA, Oklahoma's teacher-review and parent opt-out, and Vietnam's sole-basis test all silently require the same inventory.** 🟢 `P14` builds it from `learnmcp-xapi` + `AI-Teaching-Agent` + `mcp-education`. 🔴 **No open-source registry exists — stated, not filled with a near-match** |
+| 🟢 **APAC's timetable refined; NA gains two named statewide vendor deployments** | 🟢 **Korea's AI Basic Act in force `2026-01-22`. Vietnam: compliance `2027-03-01`, `+6` months for education systems live before `2026-08-15`, decree `142/2026/ND-CP`.** 🔵 **High-risk often turns on output being the SOLE basis for a decision — a human-in-the-loop design is an architectural lever out of the tier.** 🟢 **NA: Utah ships Gemini for Education statewide `2026`–`27`; Microsoft Copilot free to Washington classrooms** |
+| 🟢 **LATAM's gap converges across two independent instruments** | 🟢 **UNESCO IESALC `~200` institutions / `19` countries: `87%` adoption, `26%` formal strategy — and a separate survey says `30%` published policies.** 🔴 **Binding constraint is capability: `55%` no AI budget, `17%` of public universities using AI in teaching give NO staff training.** 🔵 **"Borrowed ethics" names it.** 🔴 **Do NOT merge this with the Observatory's `716`/`23` — different instruments** |
+| 🔴 **`D1` — this pass's own instrument defect, caught before publication** | 🔴 **The licence probe counted affero-matching LINES (`15`), not OCCURRENCES (`16`), and would have published a FALSE divergence from `T958`.** 🟢 Caught by computing both measures before writing. 🔵 **A count is not a count until its unit is stated** |
+| 🔴 **Two declared gaps and one session limit, none smoothed** | 🔴 **Germany, France and the Nordics returned NO deployment figures on a dedicated leg (`ACTION p802-B`).** 🔴 **`gov.uk` and `neu.org.uk` fail to resolve — `T906` now at twelve domains, so every figure here is secondary-sourced.** 🔴 **`ACTION p801-D` (file the upstream licence issue) stays UNDISCHARGEABLE: this session's GitHub scope is the `gmilano` bases only** |
+| 🟢 **`p797-H` IS RETIRED — this base's own gate suite RUNS in this session** | 🟢 **`make hooks` executed `72` gates. Six passes recorded "committed repository code cannot be executed here"; that limit no longer holds and was re-tested rather than inherited.** 🔴 **The result is uncomfortable: `HEAD` fails `23` of `72` gates, and was pushed that way** |
+| 🟢 **The `23` failures are NOT this pass's — a baseline control was run** | 🟢 **Changes stashed, gates re-run on pristine `HEAD`: `48/72` green, the SAME `23` red. Restored and re-run: identical.** 🔵 **`p802` introduced no regression, and the control is published rather than asserted** |
+| 🟢 **`gate-region-headings` REPAIRED — the region filter works again** | 🔴 **`intel/market.md` carried `### Global / cross-region`, which is OUT of the closed vocabulary `North America \| EMEA \| APAC \| LATAM \| Global` — so it formed its own bucket and the `## Opportunities by region` block simultaneously read as MISSING a `Global` section.** 🟢 **Renamed to `### Global`; gate now reports `0` findings, GREEN** |
+| 🟢 **`4` disputed licence cells resolved ON BYTES, and the shelves won `3` of `4`** | 🟢 **`DeepTutor` = Apache-2.0 (`11,408 B`) · `h5p-php-library` = GPL-3.0 (`affero×3`, `T958` hit exactly) · `openeducat_erp` = **LGPL-3.0**, grant declared in the body · `open-moodle` = MIT.** 🔵 **In every case the curated shelf was right and the gap-ledger prose was wrong** |
+| 🔴 **`D2` — a second caught defect, and it nearly cost this base its SIS foundation** | 🔴 **The "title = first non-blank line" rule read OpenEduCat's grant as `For copyright information, please see the COPYRIGHT file.` and would have published it as UNGRANTED — taking `P12`, the cheapest SIS engagement here, with it.** 🟢 Caught by reading the payload body. 🔵 **A preamble or pointer defeats the title rule** |
+| 🔴 **A SECOND dangling grant reference, so `litellm` was not a one-off** | 🔴 **OpenEduCat's `LICENSE` cites a `COPYRIGHT` file ABSENT from the root tree, exactly as `litellm`'s root grant cited `enterprise/LICENSE` where only `LICENSE.md` existed.** 🔵 **A dangling reference is not an absent grant** |
+| 🔴 **`ACTION p802-D`: two of this base's own rules are in direct conflict** | 🔴 **`gate-shelf-consistency` treats `intel/open-gaps.md` as a LIVE shelf, while this base's rule says the gap ledger is appended to and never rewritten.** 🔴 **So the gate cannot go green without breaking the stronger rule. `p802` left the ledger intact and the gate RED, deliberately, and says so here rather than editing history to get a green** |
+
+### Open actions carried into `p803`
+
+- 🔴 **`ACTION p802-A` — discharged in-pass, now STANDING.** The propagation gap has appeared in
+  three consecutive passes (`p800`, `p801`, `p802`). Diff every shelf row against settled licence
+  facts **before** publishing, not after. `make gate-evidence-address` is the natural host.
+- 🔴 **`ACTION p802-B`** — per-ministry EMEA legs for **Germany, France and the Nordics**. The UK and
+  the Gulf are now well covered; the rest of EMEA is a declared blank, not a quiet one.
+- 🔴 **`ACTION p802-C`** — no open-source education AI deployment registry exists (`T16`). Probe once
+  more with different vocabulary ("AI inventory", "EdTech asset register") before `P14` commits to
+  "build, do not adopt".
+- 🔴 **`ACTION p801-D` carried, undischargeable here** — upstream licence issue on `AITutor-EvalKit`.
+- 🔴 **`ACTION p802-D` — resolve the append-only/consistency conflict.** Either scope
+  `gate-shelf-consistency` to the curated shelves and exclude `intel/open-gaps.md`, or give the
+  ledger an inline-correction convention the gate can read. **Do not fix it by rewriting history.**
+- 🔴 **`ACTION p802-E` — `22` gates remain RED on `HEAD` and now demonstrably CAN be run.**
+  `p797-H` is retired, so there is no longer an excuse for pushing red. Triage them in priority
+  order; `gate-region-headings` was repaired this pass and is the template.
+- 🟢 **Instrument note for `p803`:** the licence probe lives at `compose/code/` scope only as a
+  description — it was run from the session scratchpad this pass. Its two defects (`D1` affero
+  LINES vs OCCURRENCES, `D2` the title-line rule) are fixed in the version described in
+  `repos/trending.md`; re-derive it there rather than from `p801`'s text.
+
+
+## `p801` · `2026-11-12` — the preceding pass
 
 **Pass `p801` · `2026-11-12`** — `p800` attached one sentence to every licence it published: *"no grant
 bytes, no blob shas, no dependency trees this pass."* 🟢 **`p801` removes it. A fourth GitHub transport
@@ -20,7 +83,7 @@ instrument defects were produced and both were caught before publication; one wa
 shelf row contradicting the instrument, which has not happened in this base before.** The two trending
 ledgers and the gap ledger are appended to, never rewritten.
 
-## What this pass established
+## What `p801` established
 
 | | |
 |---|---|

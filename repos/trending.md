@@ -3,6 +3,71 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+## `2026-11-13` (seventh pass) — **A `9.1k★` education repo appeared that no prior pass had seen, and the channel that found it is the one `p800` nearly wrote off**
+
+**Pass `p802`.** The trending leg returned exactly one repository worth shelving, and the useful part
+is *how* it had to be checked. 🔴 **Three indexed write-ups gave three different sizes for it —
+`1.5k★`, `5.7k★`, and "about 2,100" for a neighbouring repo — none of them current.** 🟢 The rendered
+page said `9.1k★` / `1.2k` forks, and the clone channel then read the grant **as bytes**. 🔵 **An
+aggregator's star count is not evidence; it is a timestamp nobody wrote down.**
+
+| Repo | Grant (how it was established) | Size | Verdict |
+|---|---|---|---|
+| [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | **AGPL-3.0, payload-verified** — root `LICENSE`, `34,523 B`, `sha256:0d96a4ff68ad6d4b…`, `affero×16`, title `GNU AFFERO GENERAL PUBLIC LICENSE`. Sidebar agrees. `HEAD` `cb25c8e49b85` | `9.1k★` / `1.2k` forks / `1,202` commits | 🔴 **Read, do not ship.** The network clause rules it out as the base of a hosted or distributed client product. 🟢 The **knowledge-graph persistence model** (ideas and their links, not ability ratings) is the transferable asset |
+| [`alexvinasdev/learnharness`](https://github.com/alexvinasdev/learnharness) | **AGPL-3.0, payload-verified**, byte-identical to upstream (`sha256:0d96a4ff68ad6d4b…`) 🔴 **sidebar licence field is EMPTY** | `0★` / `0` forks · `HEAD` `02301d0bb480` | 🔵 Fork; code HAS diverged from upstream's `HEAD`. Adds a persistent "scope" topic tree and deterministic exercises, and REMOVES the teaching/practice sessions. **No traction — record only** |
+| [`GeneralKnowledge/learnharness`](https://github.com/GeneralKnowledge/learnharness) | **AGPL-3.0, payload-verified**, byte-identical (`sha256:0d96a4ff68ad6d4b…`) 🔴 **sidebar licence field is EMPTY** | `0★` / `0` forks · `HEAD` `47b3d5812d55` | 🔵 Fork; `HEAD` differs. Emphasises local storage + bring-your-own keys, and its README is **honest that local storage is not local processing** — the same disclosure `Claw-ED` makes. Record only |
+| [`janestreet/agent_skills`](https://github.com/janestreet/agent_skills) | **MIT, payload-verified this pass** — `LICENSE.md`, `1,120 B`, `affero×0`, title `The MIT License`. Sidebar agrees | `7.9k★` / `516` forks / `2` commits | 🟢 **Carried figure CONFIRMED on two independent channels.** Forks `510` → `516` since `p801`. Unchanged otherwise |
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | 🔴 **NO licence in the root tree, re-verified at `HEAD` `a71078456a90`** — identical to `p801`'s probe | `4★` | 🔴 **Demoted to the rejected table this pass.** The `EACL 2026` paper's "MIT-licensed" claim is refuted on bytes for the second pass running |
+
+### 🟢 Four disputed licence cells resolved ON BYTES — and the shelves won three of four
+
+This base's own `gate-shelf-consistency` reported **`4` slugs carrying disagreeing licence cells on
+the live shelves**. 🟢 **All four were put to the clone channel. In every case the curated shelf was
+right and the prose in the gap ledger was wrong** — which is the reassuring direction, and worth as
+much as a defect would have been.
+
+| Slug | Disagreement | 🟢 Payload verdict | Who was right |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `agents/top.md` **Apache-2.0** vs gap-ledger prose **MIT** | **Apache-2.0** — `LICENSE`, `11,408 B`, `affero×0`, title `Apache License`, `HEAD` `60fb3bdfddb3` | 🟢 **The shelf.** The largest education agent in this base is correctly licensed on its table row |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `repos/foundations.md` + `verticals/solutions.md` **GPL-3.0** vs gap-ledger prose **Apache-2.0** | **GPL-3.0** — `LICENSE.txt`, `35,146 B`, **`affero×3`**, title `GNU GENERAL PUBLIC LICENSE`, `HEAD` `2d7f937a03c9` | 🟢 **Both shelves.** 🔵 `affero×3` is `T958`'s GPL-3.0 signature, hit exactly — at `35,146 B` against `p801`'s `35,147 B`, so **`T965` again: the count identifies, the size does not** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | shelves **LGPL-3.0** vs ledger **AGPL-3.0 / ECL-2.0 / GPL-3.0 / MIT** (four values in one row) | **LGPL-3.0** — `LICENSE`, `8,241 B`, `HEAD` `46a5d7d40082`, declaring *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3), as included below"*, with the full LGPLv3 text following | 🟢 **The shelves.** This matters beyond one row — **`P12`, the cheapest SIS engagement in this KB, rests on this grant** |
+| [`sonstellar969/open-moodle`](https://github.com/sonstellar969/open-moodle) | ledger **AGPL-3.0** vs ledger **MIT** (self-disagreement) | **MIT** — `LICENSE`, `1,088 B`, `affero×0`, title `MIT License`, `HEAD` `c705e91d8239` | 🔵 Neither shelf — the ledger disagreed with itself. 🔴 Note the trap: a repository *named* `open-moodle` is **not** under Moodle's GPL-3.0 |
+
+### 🔴 `D2` — this pass's second instrument defect, caught by OpenEduCat
+
+🔴 **The probe's "title = first non-blank line" rule, inherited from `p801`, read OpenEduCat's grant
+as `For copyright information, please see the COPYRIGHT file.`** — a pointer, not a licence title.
+Had the probe been trusted, this base would have published its SIS foundation as **ungranted** and
+`P12` with it. 🟢 **Caught by reading the whole payload instead of the heuristic's answer.**
+🔵 **The rule to carry forward: the first line is the title only when the file opens with the grant.
+A preamble or a pointer defeats it — read the body before concluding absence.**
+
+🔴 **And a second instance of a class `p801` found once:** OpenEduCat's `LICENSE` directs the reader
+to a **`COPYRIGHT` file that does not exist in the root tree** — exactly `litellm`'s shape, where the
+root grant pointed at `enterprise/LICENSE` and the tree held only `LICENSE.md`. 🔵 **Upstream grants
+routinely cite files that are not there; a dangling reference is not an absent grant.**
+
+🔴 **`gate-shelf-consistency` will stay RED after this pass, and deliberately.** The four wrong cells
+live in `intel/open-gaps.md`, which this base's own rule says is **appended to, never rewritten**.
+The gate treats that ledger as a live shelf, so **the append-only rule and the consistency gate are
+in direct conflict**. Resolving it by editing history would break the stronger rule. `ACTION p802-D`.
+
+### 🔴 What the channel census says this pass
+
+- **`curl` to `github.com`: `403` on a live address AND `403` on an invented one.** A transport that
+  cannot separate those two is not an instrument, and this pass says so rather than quietly
+  switching clients. 🟢 The rendered page read through a fetching client **kept** its control
+  (`404` invented / `200` live) — so `T952` holds, but it is **client-specific**, which `p800` did
+  not establish.
+- 🟢 **The clone channel (`git -c protocol.version=2 fetch --depth 1 --filter=blob:none` +
+  `git cat-file blob`) ran `6`-for-`6` with `0` failures** and remains the only channel in this base
+  that yields grant BYTES.
+- 🔴 **`api.github.com` and the GitHub MCP tools are both unavailable for third-party addresses** —
+  this session's repository scope is restricted to the `gmilano` bases, which is *why* this base has
+  spent eight passes building transport workarounds. Stated here so the next pass does not re-probe it.
+
+---
+
 ## `2026-11-13` (sixth pass) — **`OpenOLAT` is Apache-2.0, and four passes of sidebar-reading could never have found it**
 
 **Window:** foundational education repos, specifically **the LMS layer** — the

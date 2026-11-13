@@ -558,3 +558,35 @@ requirement. 🔵 **The open question for the next pass:** whether OpenOLAT's AI
 features are reachable over an API for an external agent, or only from the
 platform UI. Nothing in the paths read this pass settles it, and it decides
 whether `P13` can be combined with the agent patterns in this file.
+
+## T16 — Every education-AI regime now imposes duties on a deployment inventory that nobody has built
+
+**Established `p802` (seventh pass, 2026-11-13).**
+
+Four regimes on three continents converged this pass on the same unstated premise, and one of them
+finally names it.
+
+- 🟢 **The Philippines wrote it down.** DepEd **Order No. `003`, s. `2026`** (2026-02-20) creates an
+  **AI registry of all deployments** in basic education and **sorts tools into risk tiers**, with
+  stricter treatment of **grading and admissions**.
+- 🔴 **Everyone else assumes it.** The EU AI Act's **Article 27 Fundamental Rights Impact
+  Assessment** requires a public deployer to assess *the high-risk systems it deploys* — which
+  presupposes knowing what they are. **Oklahoma** requires **teacher review of AI output** and
+  **parent opt-out** — both unenforceable without an inventory of what is running and for whom.
+  **Vietnam** makes high-risk status contingent on whether a system's output is **the sole basis for
+  a decision** — a per-deployment property, not a per-product one. The **NEU** figure that `49%` of
+  UK schools have **no AI policy at all** is the same hole measured from the other side.
+- 🔵 **So the gap is not policy and it is not product — it is the register in between.** This base
+  has repeatedly found the governance deficit measured as *missing documents* (`26%` formal strategy
+  in LATAM, `30%` published policies, `49%` of UK schools with none). A document cannot be written
+  about systems nobody has enumerated, which is why **training and appraisal capability**, not
+  policy templates, is what `p799` found actually binding.
+
+**Why this is a trend and not an observation:** the registry is the **first deliverable that is
+simultaneously compliant in all four regimes** and does not depend on which way the contested EU
+high-risk date resolves. It is also cheap, it is the natural first engagement artifact, and it
+produces exactly the inventory that every later pattern in `compose/patterns.md` needs as input.
+
+🔴 **The honest limit:** no open-source implementation of an education AI deployment registry was
+found in this pass. It is a **build**, not an adoption — which is unusual for this KB and is stated
+plainly rather than filled with a near-match. See `P14`.

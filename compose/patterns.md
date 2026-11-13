@@ -216,7 +216,9 @@ institution is already exposed and cannot afford a frontier-API product.
    the constraint, `learningequality/kolibri` (MIT, offline-first) as the
    delivery platform.
 3. **Evaluation harness — the differentiator, because 9% evaluate.**
-   `kaushal0494/AITutor-EvalKit` (MIT) for pedagogical effectiveness,
+   🔴 `kaushal0494/AITutor-EvalKit` (**NO licence file — not adoptable; `p801`
+   refuted the `MIT` claim and `p802` re-verified the absence at `HEAD`
+   `a71078456a90`. Read it, do not ship it**) for pedagogical effectiveness,
    `pykt-team/pykt-toolkit` (MIT) for mastery measurement, xAPI/Caliper
    telemetry into a dashboard. Thin upstream; say so, and own the gap.
 4. **Teacher enablement** in Spanish/Portuguese — the one intervention every
@@ -567,9 +569,12 @@ for a deliverable. This one is MIT.
    `yetanalytics/lrsql` (Apache-2.0), using the skill's own 0-5 levels as the
    `practiced` / `mastered` progression. The sub-skill map is already the shape
    an LRS wants, which is why this composes cleanly with `P9`.
-5. **Measure it, with the caveat stated.** `kaushal0494/AITutor-EvalKit` (MIT, 4
+5. **Measure it, with the caveat stated — and the caveat is now a licence, not
+   just coverage.** `kaushal0494/AITutor-EvalKit` (🔴 **no licence file; the `MIT`
+   claim is refuted on bytes, re-verified `p802` at `HEAD` `a71078456a90`**, 4
    stars, mathematics only) is still the only pedagogy-specific eval harness in
-   this KB. Use it and tell the client what it does not cover.
+   this KB. 🔴 **It cannot go into a client deliverable.** Use it as an internal
+   reference, tell the client what it does not cover, and request a grant upstream.
 
 **Why this is the cheapest pattern here:** steps 1-2 are the deliverable and
 steps 3-5 are reuse. There is no model to train, no service to scale, and the
@@ -890,3 +895,68 @@ than a procurement, and it is the missing piece that would make this pattern
 composable with every agent pattern in this file. 🔴 **Not opened unprompted —
 it is an outward action**, and this KB's standing rule (see `Gap 240`) is that
 outward actions are proposed, not taken.
+
+## P14 — The AI deployment registry (Global, compliant in four regimes at once, and the cheapest first engagement in this file)
+
+**New `p802` (seventh pass, 2026-11-13).** Built from `T16`. 🔵 **This is the only pattern in this
+file whose output is an inventory rather than a capability** — and it is the input every other
+pattern here silently assumes.
+
+🔴 **State the unusual thing first: there is no repository to adopt for the registry itself.** A
+search of this pass found no open-source education AI deployment registry. The registry is ~300 lines
+of schema and CRUD; **the value is in what it is wired to**, and every one of those components is
+already byte-verified in this KB.
+
+### The components — all verified in this base
+
+| Component | Repo | Grant | Role in this pattern |
+|---|---|---|---|
+| Learner-record spine | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | MIT | The **only** agent↔learner-record write path in this KB. xAPI 1.0.3 statements make agent activity *reportable*; `ACTOR_UUID` separation is what makes **per-learner opt-out** mechanically enforceable rather than a policy sentence |
+| LRS target | SQL LRS / Ralph / Veracity | — | Verified targets of `learnmcp-xapi`. The registry stores *which* LRS a deployment writes to; the LRS stores the activity |
+| Review gate | [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | MIT | Its shape, not its code: **nothing publishes automatically**, a human decision gates export. This is Oklahoma's "teacher review of AI output" implemented rather than asserted |
+| Write-boundary reference | [`zavora-ai/mcp-education`](https://github.com/zavora-ai/mcp-education) | Apache-2.0 | `9` read-only + `3` approval-gated write tools. The **server declares** the read/write boundary — copy this contract for any registry-registered tool that touches a gradebook |
+| Governed platform connector | [`ivnvxd/mcp-server-odoo`](https://github.com/ivnvxd/mcp-server-odoo) | MPL-2.0 | Where the institution must own the policy: per-model allowlist in a **companion Odoo module**, so the client's administrator — not an env var — decides agent reach. 🔴 Ban "YOLO mode" in the registry's own policy text |
+| Permissive LMS host | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | Apache-2.0 (`10,982 B`, affero×`0`, payload-verified) | The EMEA sovereignty-compatible host. See `P13` |
+
+### How it wires together
+
+1. **Enumerate.** One row per *deployment*, not per product: tool, version, vendor, which cohort,
+   which subject, who approved it, what it writes to, and **whether its output is the sole basis for
+   any decision**. That last field is not optional ceremony — it is the exact predicate that decides
+   Vietnam's high-risk tier and the EU's profiling question.
+2. **Tier.** Apply the Philippines' DepEd Order `003` risk tiers. **Grading and admissions are the
+   high-stakes tier everywhere**; a reading-practice tutor is not.
+3. **Bind each row to telemetry.** A registered deployment must name its LRS endpoint. Agent
+   activity lands as xAPI statements through `learnmcp-xapi` under an `ACTOR_UUID`.
+4. **Enforce opt-out at the identifier, not in prose.** Parent opt-out (Oklahoma) = suppress that
+   learner's `ACTOR_UUID`. The registry holds the flag; the spine honours it.
+5. **Gate the high-stakes tier behind review.** Anything in the grading/admissions tier adopts
+   `AI-Teaching-Agent`'s no-automatic-publication shape and `mcp-education`'s declared write boundary.
+6. **Emit the compliance artifact.** The same table renders an EU **Article 27 FRIA** input, a UK
+   **DfE Generative AI Product Safety Standards** conformance list, a Philippine registry return, and
+   a district policy appendix for **Ohio / Maryland / Idaho / Oklahoma / Virginia / Tennessee**.
+
+### Why it survives review in four regimes at once
+
+🟢 **It does not depend on the contested EU date.** Whether education high-risk obligations bite in
+**August 2026** or **2 December 2027** under **Regulation (EU) 2026/1744**, the registry is identical
+work and is compliant under both — this base's standing advice to plan to the earlier date, with no
+rework if the later one holds. 🟢 **Article 50 transparency applies from 2026-08-02 regardless**, and
+the registry is where the disclosure obligation per deployment is tracked.
+
+### Estimate
+
+**`3`–`5` weeks** for the registry and one bound telemetry path, against an institution that already
+has an LMS. **`8`–`10` weeks** with the review gate and a governed platform connector in the
+high-stakes tier. 🔵 **Deliberately small** — this is the engagement that *qualifies* the larger ones
+by producing the inventory they need.
+
+### Three disqualifiers — check these first
+
+1. 🔴 **No LMS or SIS the client actually controls.** Without one, there is no deployment population
+   to register, and `learnmcp-xapi` has nothing to bind to.
+2. 🔴 **The client wants detection of student AI use.** `T953` settled this: UI-driving agents are
+   near-undetectable server-side and Instructure marked the request **`Will not consider`**. That is
+   an assessment-**design** engagement, not a registry.
+3. 🔴 **The client expects the registry to be bought.** No open-source implementation exists (`T16`).
+   If procurement requires an off-the-shelf product, this pattern does not apply this quarter.

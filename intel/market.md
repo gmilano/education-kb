@@ -326,6 +326,34 @@ consistent with `T8`, which puts the agent centre of gravity in APAC.
   institution, and two institutions in the same state can be buying opposite
   products.** Segment the pipeline by institution, not by state.
 
+#### Update 2026-11-13 (seventh pass) — two statewide vendor deployments are now named, and the mandate count keeps climbing
+
+- 🟢 **North America now has *named statewide platform deployments*, not just policy.** **Utah** is
+  deploying **Google Gemini for Education across all K-12 schools statewide from the 2026–27 school
+  year**, and **Microsoft** has announced **Copilot and Teams for Education free to Washington state
+  classrooms from 2026**. 🔵 **This is the displacement risk to put in front of any North American
+  client:** where a hyperscaler lands the state contract, the studio's opening is **integration,
+  assessment redesign and compliance evidence**, not a competing tutor.
+- 🟢 **Guidance is now near-universal at state level: roughly `33`–`35` state education departments
+  plus Puerto Rico publish official K-12 AI guidance**, up from about `28` in early 2025.
+- 🟢 **Mandatory district AI policy is the live procurement trigger.** **Ohio** was first — every
+  district had to adopt the state model policy or a locally developed equivalent **by 2026-07-01**.
+  **Maryland**'s law is **effective 2026-06-01** (state guidance plus mandatory local policy), and
+  **Idaho, Oklahoma and Virginia** carry 2026 laws of the same shape. **Oklahoma** additionally
+  requires age-appropriate tools, **teacher review of AI output**, and **parent opt-out**, with
+  district policies in place **before the 2027–28 school year**. **Tennessee** also requires district
+  policies. 🔵 **California's model policy is advisory, not binding** — do not price it as a deadline.
+- 🔴 **The tracker disagreement `T906` flagged has not closed.** One tracker counts **`134` bills
+  across `31` states** in 2026; bill numbers and attributions conflict between sources (Georgia
+  `SB 179` vs Idaho `SB 1227`; Tennessee numbering varies). 🔴 **Every instrument in this section is
+  secondary-sourced** — `gov.uk`-class primary access is refused from this session for US state
+  legislature domains too. Quote the *shape* of the requirement, never a bill number, without
+  checking enacted text.
+- 🔵 **Parent opt-out and teacher-review clauses are a product requirement, not a legal footnote.**
+  Oklahoma's wording maps directly onto controls this KB already holds: `learnmcp-xapi`'s per-learner
+  `ACTOR_UUID` separation for opt-out scoping, and `AI-Teaching-Agent`'s human review gate.
+
+
 ### EMEA
 
 **Adoption/regulation:** The binding regime is the **EU AI Act**, under which
@@ -602,6 +630,57 @@ Journal before it goes in a proposal.**
   `P13` and `intel/trends.md` `T15`. **For an EMEA public-sector buyer this is
   the strongest single asset added to this KB.**
 
+#### Update 2026-11-13 (seventh pass) — 🟢 `ACTION p801-E` DISCHARGED: EMEA finally has deployment figures, and they are national, dated and funded
+
+`p801` closed with EMEA having produced **regulation and not one deployment figure**. That gap is now
+closed from two directions — a funded national programme and a measured teacher-side baseline.
+
+- 🟢 **The UK has EMEA's first dated, funded, national education-AI deployment programme.** The
+  **DfE AI Tutoring** programme targets **up to `450,000` disadvantaged pupils a year** (pupils on
+  free school meals), with **trials starting in secondary schools from autumn 2026** and **tools
+  available to schools by the end of 2027**. 🟢 **`£2.88m` was split equally across `8` suppliers —
+  Google and Pearson among them — to co-design the tools**, starting with **English, maths, science
+  and modern foreign languages**. 🟢 **Tools must meet the DfE Generative AI Product Safety
+  Standards** before rollout — the standards this file already recorded in January 2026 now have a
+  procurement attached to them.
+  🔴 **Year groups conflict across reports: some say years `9`–`11`, others years `9`–`10`.** Quote
+  the pupil count and the dates; do not quote the year range without checking the tender.
+  🔴 **Criticism is on the record and a client will raise it:** the procurement runs *in parallel*
+  with the evaluation meant to establish whether AI tutoring works, and tutoring bodies have asked
+  the DfE to test at smaller scale first. 🔵 **That is the studio's opening, not an obstacle — the
+  programme needs evaluation instrumentation, and this KB holds the only agent↔learner-record write
+  path (`learnmcp-xapi`, xAPI 1.0.3) that makes agent activity reportable.**
+- 🟢 **EMEA now has a measured teacher-side baseline.** The **National Education Union State of
+  Education survey, fielded 5–16 February 2026**, reports **`76%` of teachers using AI tools for
+  day-to-day work, up from `53%` a year earlier**. 🔴 **`49%` of schools have NO AI policy at all for
+  staff or students**, and **`66%` of teachers report no policy specific to *student* use —
+  unchanged from 2025.** **`66%` of secondary teachers agreed students' critical thinking has
+  declined.**
+  🔴 **Sample size is reported inconsistently: `9,408` vs `10,311` English state-school teachers.**
+  🟢 **An independent check agrees on the shape:** a Bett/YouGov poll of UK teachers in June found
+  **`48%` said their school had no policy on staff AI use, and `19%` did not know.**
+  🔵 **Read the two together and the EMEA sales motion is unambiguous:** usage has crossed three
+  quarters of the profession while **half of schools have no policy** — the governance deficit this
+  file has been selling in LATAM is **also a UK fact**, and it is now measured.
+- 🟢 **The Gulf is the other place with real deployment numbers.** The **UAE** mandated a nationwide
+  **K-12 AI curriculum** (Cabinet decision May 2025 — reported as the first such national mandate),
+  extended for the **2026–27 academic year, which began 31 August 2026**, to **government schools and
+  MoE-curriculum private schools from KG to Grade 12**. Capability figures: **`1,000`+ AI-trained
+  teachers deployed** and a teacher-competency programme covering **`23,000` educators and
+  administrators**. 🔴 **Sources conflict on whether coverage is already all private schools or only
+  MoE-curriculum ones**, and **no source gives a student count.**
+- 🔴 **The gap that did NOT close, stated rather than smoothed: Germany, France and the Nordics
+  returned no deployment figures on this pass.** A dedicated leg over those three returned UAE
+  coverage and essentially nothing else — no national programme, no school count, no student count.
+  🔵 **This is a real asymmetry, not a search failure to paper over: EMEA's measurable deployment
+  evidence is concentrated in the UK and the Gulf.** `ACTION p802-B` carries the per-ministry legs.
+  🔵 France remains present in this file for one thing only — the **Caliper event store** recorded in
+  the fifth pass.
+- 🔴 **Primary-source access remains refused.** `gov.uk` and `neu.org.uk` both **fail to resolve from
+  this session** — the `T906` class, now at **twelve** government/institutional domains. **Every
+  figure in this update is secondary-sourced and says so here.**
+
+
 ### APAC
 
 **Adoption/regulation:** The most fragmented region, and education is usually
@@ -830,6 +909,36 @@ framework. **Stated as a confirmed non-change, not as unchecked.**
   Mordor puts APAC at **44.20% CAGR**. **Quote "high-30s to 40s, contested", or
   quote neither.**
 
+#### Update 2026-11-13 (seventh pass) — the Philippines supplies the instrument this whole market has been missing: a register of what is actually deployed
+
+- 🟢 **The single most transferable regulatory artifact found this pass is APAC's.** The Philippines
+  **Department of Education Order No. `003`, s. `2026`, issued 2026-02-20** — described as the first
+  comprehensive national guideline for AI in basic education — **creates an AI registry of all
+  deployments** and **sorts tools into risk tiers**, with stricter rules for high-stakes uses such as
+  **grading and admissions**. 🔵 **A registry is a deliverable, not a constraint.** Every other regime
+  in this file imposes duties on systems nobody has enumerated; this one enumerates first. **Build the
+  registry as the first engagement artifact in any jurisdiction** — it is what the EU's Article 27
+  FRIA, Oklahoma's teacher-review clause and the UNESCO governance gap all silently presuppose.
+- 🟢 **South Korea's AI Basic Act entered into force 2026-01-22**, with enforcement decrees still
+  being finalised and a grace period through 2026 focused on guidance rather than penalties.
+  🔵 **New to this file** — `p799` recorded only that Korea's ministry domains refuse at `CONNECT`;
+  the statute itself is now dated.
+- 🔴 **Vietnam's timetable is refined, and this base's carried date was incomplete.** This file
+  recorded "in force 2026-03-01 with an 18-month education transition". The fuller picture:
+  **compliance is required by 2027-03-01**, **education systems already operating before 2026-08-15
+  receive a further six months**, and an **implementing decree, `142/2026/ND-CP`, was issued
+  2026-04-30**. 🔵 **Material refinement: many listed systems are high-risk *only* where their output
+  is the sole basis for a decision without meaningful human review** — so a human-in-the-loop design
+  can move an education deployment out of the high-risk tier entirely. That is an architectural
+  lever, and this KB already holds the components for it.
+- 🟢 **APAC faculty remain the region most positive on AI: `57%` report being excited about it** and
+  believe it can make learning more effective — the highest of any region in the same survey.
+- 🔴 **Declared gap, unchanged: China, Japan, Singapore, Australia and India returned no education-
+  specific binding instruments or deployment counts on this pass.** One secondary note only — China
+  has made AI compulsory for school students from age six. 🔴 **No named APAC edtech vendor emerged
+  at any point in this leg.**
+
+
 ### LATAM
 
 **Adoption/regulation:** The widest gap between use and governance of any
@@ -870,8 +979,11 @@ Manu (`Jeanikt/tutor-ai-agent`, MIT, Brazilian Portuguese voice math tutor) and
    evaluation harness.
 2. **Evaluation and measurement.** Only 9% evaluate. An evaluation layer
    (pedagogical eval plus xAPI/Caliper telemetry plus dashboards) is a
-   defensible, repeatable deliverable — and `AITutor-EvalKit` (MIT) plus pyKT
-   (MIT) give it an open-source spine, thin as they are.
+   defensible, repeatable deliverable — but 🔴 **its eval half no longer has a
+   usable grant: `AITutor-EvalKit` serves NO licence file** (`p801` refuted the
+   `MIT` claim; `p802` re-verified the absence at `HEAD` `a71078456a90`), so the
+   open-source spine here is **`pykt-team/pykt-toolkit` (MIT) alone**, plus
+   xAPI/Caliper telemetry. Thin, and now thinner than this file claimed.
 3. **Low-budget deployment models.** 55% have no AI budget, so the offer must be
    cheap to run: Kolibri (MIT, offline-first) or Moodle plus self-hosted open
    weights, not per-seat frontier API spend.
@@ -1065,7 +1177,40 @@ from the first and the write protocol from the second.**
   🔵 **Teacher-training delivery at that scale is a services contract, and it is
   the shape of `P7`.**
 
-### Global / cross-region
+#### Update 2026-11-13 (seventh pass) — the adoption/governance gap holds at a second instrument, and the binding constraint is capability, not policy
+
+- 🟢 **The UNESCO IESALC headline reproduces, and its denominator is now explicit.** *AI
+  Implementation in Higher Education in Latin America and the Caribbean* draws on **~`200`
+  institutions across `19` countries**: **`87%` use AI in at least one area of activity**, while
+  **only `26%` have a formal AI strategy**. 🔴 **Note the instrument boundary — this is NOT the same
+  artifact as the UNESCO Observatory (`716` instruments, `23` countries) recorded in an earlier
+  pass. Two instruments, two denominators; do not merge them into one statistic.**
+- 🟢 **A second, independent instrument agrees on the shape:** a separate survey finds **only `30%`
+  of Latin American universities have published policies on AI use**. 🔵 `26%` and `30%` from
+  different instruments is **convergence**, and it is the strongest version of this file's
+  longest-running regional claim.
+- 🔴 **The binding constraint is capability and money, and `p799`'s correction holds.** **`55%` of
+  universities carry no specific AI budget.** New this pass: **`17%` of public universities already
+  using AI in teaching provide NO academic staff training at all.** 🔵 **Staff training is common but
+  student training lags** — so the gap is not "no policy", it is **nobody able to implement one**.
+  Sell appraisal capability and a funding case, not another acceptable-use document.
+- 🟢 **A funded regional governance programme is now named: `Integrity AI`, EU-funded under
+  Erasmus+, building governance frameworks with `7` universities across `4` Latin American
+  countries.** 🔵 **This is a partner and a template, not a competitor** — and it is the first
+  EMEA↔LATAM governance bridge this file has been able to name.
+- 🔴 **Brazil's regulatory position is still pending, and this file should stop anticipating it.**
+  The national AI bill that would classify education AI as **high-risk had not passed the Chamber as
+  of June 2026 and is not law**. **LGPD applies to AI in higher education today** and is the
+  instrument to design against. 🔴 Broader analyses describe South American regulation of AI in
+  higher education as close to non-existent, and a 2026 study of `52` documents names
+  **"borrowed ethics"** — institutions adopting international frameworks without the capacity to
+  implement them. 🔵 **"Borrowed ethics" is the precise name for what the `55%`/`17%` figures
+  measure, and it is the sharpest phrase in this file for a LATAM pitch.**
+- 🔴 **Every figure in this update is secondary-sourced from coverage of the underlying reports**;
+  sources are inconsistent on dates and sample sizes. `T906` holds.
+
+
+### Global
 
 **Opportunities not tied to one region:**
 1. **Grading and feedback agents — the one genuinely open field.** No dominant
