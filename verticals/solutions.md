@@ -7,7 +7,7 @@ updated: 2026-11-13
 # Education vertical platforms — real systems to customize AI on top of
 
 
-## Education vertical platforms — 81 rows
+## Education vertical platforms — 86 rows
 
 🟢 **Eighteenth pass (`p813`, 2026-11-13): this file is gradeable for the first time since
 `p718`,** for the reason set out in `repos/foundations.md` — `ACTION p811-A` option (a),
@@ -18,6 +18,27 @@ implemented with uncounted-table detection. Gate output:
 claimed `70` — the pre-insertion figure — and the gate rejected it: *"RED heading claims 70, the
 file holds 81."* 🟢 **That is precisely the drift `compose/patterns.md` has had to confess four
 times in prose. It is now caught by a program instead of by the next pass's reader.**
+
+## 🟢 Nineteenth pass (`p814`, 2026-11-13) — the platform tier this file had never named: the RESEARCH LIBRARY, and the only permissively licensed platform in the education stack
+
+🔴 **This file has named `81` platforms across eighteen passes — LMS, SIS, ERP, parent portals,
+national school portals, university self-management — and not one of them is the system a
+graduate student, a doctoral candidate or a researcher logs into.** 🟢 **Every row below is a
+system institutions ALREADY RUN and already staff, with a published REST API and a build-safe
+agent surface shelved in `agents/top.md` this pass.**
+
+🟢 **The licence headline: `DSpace` is BSD-3-Clause.** 🔴 **Moodle is GPL-3.0, Open edX AGPL-3.0,
+Koha GPL-3.0, OJS GPL-3.0, OpenEduCat LGPL-3.0, Sakai Apache-2.0.** 🔵 **So of the platforms a
+university runs, DSpace is the one a studio can fork and ship inside a deliverable — and the
+budget sits with the library, not with the IT department that owns the LMS.**
+
+| Platform | Repo | License | Stars | Notes |
+|---|---|---|---|---|
+| **DSpace** — institutional repository (theses, datasets, open-access output) | https://github.com/DSpace/DSpace | 🟢 **BSD-3-Clause — byte-read** (`1,504 B`, `sha256:baf9ee18…`) | 1111 | 🟢 **New this pass (`p814`).** The thesis and research-output repository of most universities worldwide; DSpace 7+ ships a published REST API. 🟢 **Agent surface in two regions, both MIT and both read-only: `mpasternak/dspace-mcp` 🇵🇱 (*"Read-only by construction, not by promise"*) and `suren-kk/armenian-national-library-mcp` 🇦🇲 (DSpace 9, rights check BEFORE retrieval, writes not implemented).** 🔵 **Customisation slot: discovery and summarisation over a corpus the institution already owns outright — no `T40` source-legality exposure at all, because the institution IS the rights holder** |
+| **Zotero** — reference manager (the researcher's own library) | https://github.com/zotero/zotero | 🟡 **AGPL-3.0 — byte-read at `COPYING`** (`35,358 B`, `sha256:5b7dc919…`); 🔴 the API reports `NOASSERTION` | 15942 | 🟢 **New this pass (`p814`) — the densest agent surface in education: `348` repositories on one query.** Local-first desktop app with a Web API v3 and, on Zotero 10+, a local API. 🔵 **Customisation slot: `oscardvs/zoteus` (MIT) already does versioned writes, reversible trash, CSL citation formatting and `zotero_check_citations` for invented citations and misquotes — fork that, do not start from scratch.** 🔴 **AGPL upstream, so integrate over the protocol and never derive** |
+| **Open Journal Systems (OJS)** — scholarly publishing | https://github.com/pkp/ojs | 🔴 **GPL-3.0 — byte-read** (`35,148 B`, `sha256:8b1ba204…`) | 1053 | 🟢 **New this pass (`p814`).** Runs the university-published journal, editorial workflow and peer review; heavily deployed in 🇧🇷 Brazil and 🇲🇽 Mexico. 🟢 **Agent surface `mpasternak/ojs-mcp` (MIT) with `OJS_ALLOW_WRITES=1` OFF by default.** 🟡 **Prerequisite the studio does NOT own: `api_key_secret` in `config.inc.php`, set by the institution's OJS admin, or every token request returns `401`** |
+| **Koha** — integrated library system (the catalogue and circulation) | https://github.com/Koha-Community/Koha | 🔴 **GPL-3.0 — byte-read** (`35,150 B`, `sha256:9edff973…`) | 601 | 🟢 **New this pass (`p814`).** The public and academic library ILS, strongest in 🇮🇳 India and APAC. 🟢 **Its REST API supports OAuth2 `client_credentials` — the only non-password auth any agent in this base uses.** Agent surface `asjolaviral/koha-mcp-server` (MIT). 🟡 **Prerequisite: REST API enabled plus an OAuth2 key pair, issued by the library** |
+| **Aldine** — self-hosted collaborative LaTeX (where the thesis is written) | https://github.com/trahloff/Aldine | 🔴 **AGPL-3.0 — byte-read** (`34,522 B`, `sha256:4df3c306…`) | 126 | 🟢 **New this pass (`p814`) — the AUTHORING end of the layer, and an Overleaf alternative.** 🔵 **Self-hosting is the whole value for an institution that cannot send unpublished research to a SaaS — a procurement argument, not a technical one.** 🔵 **Composes directly with `PedroSmaxY/abnt-mcp` 🇧🇷 (norm audit) and `oscardvs/zoteus` (citations into the draft).** 🔴 **AGPL-3.0 and it is a network service by design, so offering it to students triggers the source obligation: deploy it, do not fork it into a product** |
 
 ## 🟢 Eighteenth pass (`p813`, 2026-11-13) — the two platform tiers this file had never named: 🇨🇳 China's university LMS, and 🇺🇸 the North American K-12 parent portal
 

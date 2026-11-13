@@ -6,7 +6,7 @@ updated: 2026-11-13
 
 # Compose patterns — education
 
-**Thirty-three** concrete recipes — derived recipes: **33**. 🟢 **Eighteenth pass (`p813`): `P31`–`P33` added** — the Chinese university study agent with a written integrity boundary, the North American multi-system family agent, and the clean-room client library that every cluster in this base needs and none of them has. All components licence-verified by byte-read on 2026-11-13. 🟢 **Seventeenth pass (`p812`): `P29`–`P30` added** — the Frappe-based education ERP agent, and the LATAM university self-management agent. Each names the actual
+**Thirty-six** concrete recipes — derived recipes: **36**. 🟢 **Nineteenth pass (`p814`): `P34`–`P36` added** — the citation-integrity service (the first integrity-POSITIVE recipe in this base), the sovereign institutional-repository agent on the only permissively licensed platform in the education stack, and the Brazilian norm-compliance pipeline. All components licence-verified by byte-read on 2026-11-13. 🟢 **Eighteenth pass (`p813`): `P31`–`P33` added** — the Chinese university study agent with a written integrity boundary, the North American multi-system family agent, and the clean-room client library that every cluster in this base needs and none of them has. All components licence-verified by byte-read on 2026-11-13. 🟢 **Seventeenth pass (`p812`): `P29`–`P30` added** — the Frappe-based education ERP agent, and the LATAM university self-management agent. Each names the actual
 repos, the license consequence, how the pieces wire together, and a rough build estimate.
 All components were license-verified on 2026-11-13 (see `agents/top.md` and
 `repos/foundations.md`). 🟢 **Sixteenth pass (`p811`): `P27`–`P28` added** — the OneRoster
@@ -117,6 +117,130 @@ decision instead of a constraint:
   and it is the one argument that still favours `ltijs` on a long engagement.
 
 ---
+
+## P34 — Citation-integrity service for a university (Global, and the first integrity-POSITIVE recipe in this base)
+
+🔵 **Who buys it.** A graduate school, a research office or an academic-integrity office that has
+no mechanical way to tell an invented citation from a real one, and is currently reading theses
+by hand. 🟢 **Every other recipe in this file reduces an agent's capacity for harm. This one sells
+a capability that DETECTS harm, which is a different conversation with a different budget.**
+
+**Components, all licence-verified by byte-read on 2026-11-13:**
+
+| Role | Repo | Licence | Why this one |
+|---|---|---|---|
+| Integrity engine | [`oscardvs/zoteus`](https://github.com/oscardvs/zoteus) | **MIT** (`1,067 B`, `sha256:c20cd2f8…`) | `zotero_check_citations` reads a Markdown/LaTeX/plain-text draft, finds every citation form (pandoc, `\cite`, author-year, numeric, DOI, `[@ITEMKEY]`), reports which are in the library, ambiguous or absent, then looks up each direct quotation in the cited PDF — found with its page, close (with the source's real wording), or not found. It is read-only and checks wording, not meaning |
+| Reference store | [`zotero/zotero`](https://github.com/zotero/zotero) | 🟡 **AGPL at `COPYING`** | The library itself. 🔴 **Integrate over the Zotero 10+ local API or Web API v3 — never derive** |
+| Catalogue verification | [`leomcamilo/bx-scholar-mcp`](https://github.com/leomcamilo/bx-scholar-mcp) | **MIT** (`1,071 B`, `sha256:af97dd08…`) | OpenAlex + CrossRef with no credential and no paywall, to resolve a DOI the local library does not hold |
+| Norm layer (🇧🇷 only) | [`PedroSmaxY/abnt-mcp`](https://github.com/PedroSmaxY/abnt-mcp) | **MIT** (`1,086 B`, `sha256:1cdab623…`) | ABNT NBR 6023/10520:2023 reference and citation conformance on top of existence |
+
+**How it wires together.**
+
+1. 🟢 **Ingest the draft, not the student's account.** The service takes a file. 🔵 **No learner
+   credential enters the system at all, which clears `T36` axis (a) by construction rather than
+   by configuration.**
+2. 🟢 **Resolve every citation against the supervisor's or department's Zotero library** via
+   `zoteus`, running against the local API so nothing leaves the institution.
+3. 🟡 **Anything unresolved goes to `bx-scholar-mcp`** for an OpenAlex/CrossRef lookup — an open
+   catalogue, so axis (c) stays 🟢 **clean**. 🔴 **Do NOT add a full-text retriever here. That is
+   where `T40`'s structural grade enters a design, and it is not needed: existence and wording
+   are checkable from metadata plus the PDFs the library already holds.**
+4. 🟢 **Quotation verification is the differentiator** — `zoteus` looks the quotation up in the
+   cited PDF and reports *found with page / close with the source's real wording / not found*.
+   🔵 **"Close, and here is what the source actually says" is the output an integrity office
+   cannot currently produce at all.**
+5. 🇧🇷 **In Brazil, chain `abnt-mcp` after step 4** so the same pass returns norm defects
+   (NBR 10520:2023 mixed-case author-date, 4 cm long quotations, NBR 6023 reference layout)
+   alongside integrity findings.
+6. 🟢 **Deliver as a report, never as a verdict.** The output names the finding and the evidence;
+   a human adjudicates. 🔵 **Under the EU AI Act this keeps the deployment out of the
+   access/admission/evaluation high-risk triggers — see `P2` — and it is the right design
+   everywhere else too.**
+
+**Licence consequence.** 🟢 **The whole chain is MIT and forkable. Zotero is AGPL and stays
+behind its protocol boundary.** **Rough build: 4–6 weeks** for the pipeline, the report format
+and the institutional Zotero integration; add 1–2 weeks for the ABNT chain.
+
+🔵 **The honest limitation to state in the proposal:** it checks wording, not meaning. A correctly
+quoted source that does not support the claim will pass.
+
+## P35 — Sovereign institutional-repository agent (EMEA, and the only permissive platform fork in the education stack)
+
+🔵 **Who buys it.** A European university, national library or research institute that wants
+discovery and summarisation over its own holdings, cannot send unpublished work to a SaaS, and
+has an AI Act `deployer` obligation to discharge. 🟢 **This is the recipe where the licence is the
+differentiator.**
+
+**Components, all licence-verified by byte-read on 2026-11-13:**
+
+| Role | Repo | Licence | Why this one |
+|---|---|---|---|
+| Platform | [`DSpace/DSpace`](https://github.com/DSpace/DSpace) | 🟢 **BSD-3-Clause** (`1,504 B`, `sha256:baf9ee18…`) | 🟢 **The ONLY major education platform that is permissively licensed — forkable, embeddable, shippable inside a deliverable. DSpace 7+ ships a published REST API** |
+| Agent surface | [`mpasternak/dspace-mcp`](https://github.com/mpasternak/dspace-mcp) | **MIT** (`1,073 B`, `sha256:900b820e…`) | *"Read-only by construction, not by promise"*; env-var-first credentials with keychain guidance; restricted files require `get_download_link` rather than the raw `download_url` |
+| Rights-check pattern | [`suren-kk/armenian-national-library-mcp`](https://github.com/suren-kk/armenian-national-library-mcp) | **MIT** (`1,072 B`, `sha256:b47a07d3…`) | 🟢 **Copy its sequence: rights review BEFORE retrieval. Writes are not implemented; links and redirects must stay HTTPS on the exact host; bounded text extraction with MIME verification; hardened Compose profile (`127.0.0.1` only, read-only rootfs, dropped capabilities)** |
+| Journal arm (optional) | [`mpasternak/ojs-mcp`](https://github.com/mpasternak/ojs-mcp) | **MIT** (`1,096 B`, `sha256:56a6229a…`) | The university's own journals, with `OJS_ALLOW_WRITES=1` off by default |
+| Catalogue arm (optional) | [`asjolaviral/koha-mcp-server`](https://github.com/asjolaviral/koha-mcp-server) | **MIT** (`1,084 B`, `sha256:a8be4d3f…`) | Koha via OAuth2 `client_credentials` — the only non-password auth in this base |
+
+**How it wires together.**
+
+1. 🟢 **Deploy against the institution's existing DSpace.** Nothing is migrated. 🔵 **The
+   institution is the rights holder for its own theses, datasets and open-access output, so axis
+   (c) is 🟢 **clean by ownership** — the strongest position any recipe in this file has.**
+2. 🟢 **Front it with `dspace-mcp`, read-only.** 🔵 **"Read-only by construction" is a sentence an
+   AI Act conformity file can carry; "read-only by promise" is not.**
+3. 🟢 **Insert the Armenian server's rights gate before any file retrieval**, including for
+   material the institution hosts but does not own the rights to (deposited third-party work).
+4. 🟡 **Week-zero prerequisites the studio does NOT own:** OJS needs `api_key_secret` in
+   `config.inc.php`, Koha needs its REST API enabled plus an OAuth2 key pair. 🔵 **Both are
+   institutional admin actions — put them in the kick-off checklist or the first sprint stalls.**
+5. 🟢 **Keep it off the high-risk triggers.** Discovery and summarisation over holdings does not
+   determine access, admission or evaluate learning outcomes. 🔴 **The moment someone asks for
+   "assess this thesis", the deployment changes category — refuse or re-scope.**
+
+**Licence consequence.** 🟢 **DSpace BSD-3-Clause plus four MIT agents: the entire stack can be
+forked, modified and shipped with attribution only.** **Rough build: 6–8 weeks**, plus 2 weeks per
+optional arm.
+
+## P36 — Norm-compliance pipeline for Brazilian academic writing (LATAM, and the norms do the selling)
+
+🔵 **Who buys it.** A Brazilian university, federal institute or graduate programme whose staff
+check ABNT conformance by hand on every TCC, dissertation and thesis, every term. 🟢 **The norms
+are published, numbered and mechanically checkable, which makes this the most concretely scoped
+recipe in this file.**
+
+**Components, all licence-verified by byte-read on 2026-11-13:**
+
+| Role | Repo | Licence | Why this one |
+|---|---|---|---|
+| Norm engine | [`PedroSmaxY/abnt-mcp`](https://github.com/PedroSmaxY/abnt-mcp) | **MIT** (`1,086 B`, `sha256:1cdab623…`) | Implements NBR 14724 (structure, typography, `3-3-2-2` pagination), NBR 10520:2023, NBR 6023, 6022, 6024, 6027, 6028 and IBGE tabular rules, and flags revoked practice (*"prática formalmente extinta pela atualização da ABNT NBR 10520:2023"*) |
+| Authoring | [`trahloff/Aldine`](https://github.com/trahloff/Aldine) | 🔴 **AGPL-3.0** (`34,522 B`, `sha256:4df3c306…`) | Self-hosted collaborative LaTeX. 🔵 **Self-hosting IS the pitch for unpublished research.** 🔴 **Offering it to students triggers the network-use source obligation: deploy it, never fork it into a product** |
+| Citations | [`oscardvs/zoteus`](https://github.com/oscardvs/zoteus) | **MIT** | CSL formatting into the draft, plus `zotero_check_citations` — chain `P34` behind this |
+| Publication | [`pkp/ojs`](https://github.com/pkp/ojs) | 🔴 **GPL-3.0** (`35,148 B`, `sha256:8b1ba204…`) | The university's journals; agent surface `mpasternak/ojs-mcp` (MIT), writes off by default |
+| Translation (optional) | [`PDFMathTranslate/PDFMathTranslate`](https://github.com/PDFMathTranslate/PDFMathTranslate) | 🔴 **AGPL-3.0** (`34,522 B`, `sha256:20b067f8…`) | Layout-, formula- and table-preserving translation of English-language literature for a Portuguese-language cohort. 🔴 **Separate service only** |
+
+**How it wires together.**
+
+1. 🟢 **The student writes in Aldine, self-hosted inside the institution.**
+2. 🟢 **`abnt-mcp` audits the manuscript against the norms by number**, returning defects with the
+   NBR clause attached. 🔵 **A defect that cites "NBR 10520:2023" is actionable; "citation style
+   looks wrong" is not.**
+3. 🟢 **`zoteus` formats the references and then checks them** — chain `P34` here so norm
+   conformance and citation integrity arrive in one report.
+4. 🟡 **On submission, `ojs-mcp` reads the journal's requirements**; 🔴 **leave
+   `OJS_ALLOW_WRITES` off — a human submits.**
+5. 🔴 **Draw the licence boundary at process edges:** Aldine (AGPL), OJS (GPL) and
+   PDFMathTranslate (AGPL) each run as their own service. 🟢 **Only the MIT components —
+   `abnt-mcp`, `zoteus` — are forked into the deliverable.**
+
+**Why it passes the integrity grade.** 🟢 **`abnt-mcp`'s capability set is *auditoria, formatação
+formal, consulta em bases indexadas e compilação para PDF*: it audits and formats a document the
+student wrote. It is not a ghostwriter, and the proposal should say so in those words** — because
+the first question any Brazilian graduate programme will ask is whether this writes the thesis.
+
+**Rough build: 6–8 weeks** for the audit-plus-integrity pipeline on an existing Aldine or Overleaf
+install; add 3–4 weeks for the OJS submission arm. 🔵 **Adjacent open slot, measured this pass:
+`q="enem vestibular mcp agente"` → `total_count=0`. Brazil's national admissions system has no
+agentic surface of any licence.**
 
 ## P1 — Compliance-safe practice tutor (North America, restrictive states)
 

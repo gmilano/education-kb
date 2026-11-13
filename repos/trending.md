@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (nineteenth pass) — **The layer under THIS layer does exist, it is BSD-3-Clause, and that is the opposite of what `p813` found one layer down**
+
+**Pass `p814`.** 🟢 **`p813` asked what its `29` agents build on and answered "nothing — each one
+reimplements the login". `p814` asked the same question of the research-library layer and got the
+opposite answer: every row builds on a real, maintained, decades-old platform.**
+
+### The measurement — the upstreams, byte-read this pass
+
+| Platform | Repo | Licence (byte-read) | ★ | Lang | Pushed |
+|---|---|---|---|---|---|
+| **DSpace** | https://github.com/DSpace/DSpace | 🟢 **BSD-3-Clause** (`1,504 B`, `sha256:baf9ee18…`) | 1,111 | Java | `2026-11-13` |
+| **Zotero** | https://github.com/zotero/zotero | 🟡 **AGPL at `COPYING`** (`35,358 B`, `sha256:5b7dc919…`) — API says `NOASSERTION` | 15,942 | JavaScript | `2026-11-13` |
+| **OJS** | https://github.com/pkp/ojs | 🔴 **GPL-3.0** (`35,148 B`, `sha256:8b1ba204…`) | 1,053 | PHP | `2026-11-13` |
+| **pkp-lib** | https://github.com/pkp/pkp-lib | 🔴 **GPL-3.0** (`35,148 B`, same hash) | 353 | PHP | `2026-11-13` |
+| **Koha** | https://github.com/Koha-Community/Koha | 🔴 **GPL-3.0** (`35,150 B`, `sha256:9edff973…`) | 601 | Perl | `2026-11-13` |
+| **Zotero translators** | https://github.com/zotero/translators | 🔴 **no payload at either branch root** | 1,736 | JavaScript | `2026-11-13` |
+| **OpenAlex tutorials** | https://github.com/ourresearch/openalex-api-tutorials | 🟢 **MIT** | 150 | Jupyter | `2024-04-25` |
+
+🟢 **The commercially useful line: `DSpace` is BSD-3-Clause.** 🔴 **Every other major education
+platform this base has ever shelved is copyleft — Moodle GPL-3.0, Open edX AGPL-3.0, Koha
+GPL-3.0, OJS GPL-3.0, OpenEduCat LGPL-3.0.** 🔵 **So DSpace is the one institutional platform a
+studio can fork, embed and ship inside a client deliverable without a source obligation, and it
+is a repository platform that every university on earth either runs or should.**
+
+### The shape this layer has that `p813`'s did not
+
+🟢 **All seven upstreams were pushed on `2026-11-13`, the day of this pass, except the OpenAlex
+tutorials (`2024-04-25`).** 🔵 **`p813`'s LMS agents sat on reverse-engineered logins against
+vendors who do not publish an API. This layer sits on published REST APIs (DSpace 7+, OJS,
+Koha with OAuth2, OpenAlex, CrossRef, PubMed/NCBI) with real clients beneath them —
+`gyger/mcp-pyzotero` builds on the maintained `pyzotero`, rather than reimplementing it.**
+
+🟡 **The one hole, and it is an institutional prerequisite rather than a code gap:** OJS answers
+`401` to every token-carrying request unless `api_key_secret` is set in `config.inc.php`, and
+Koha needs its REST API enabled plus an OAuth2 key pair. 🔵 **Both are server-side changes the
+institution's admin makes, not the studio — put them in the engagement's week-zero checklist.**
+
+---
+
 ## `2026-11-13` (eighteenth pass) — **The layer under the agents does not exist, and that is the most commercially useful thing this pass found**
 
 **Pass `p813`.** 🟢 **This pass shelved `29` agents across four regions. It then asked what they

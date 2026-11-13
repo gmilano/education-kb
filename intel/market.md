@@ -100,6 +100,38 @@ across EMEA.
 
 ### North America
 
+#### Update 2026-11-13 (nineteenth pass, `p814`) — 🟢 The region's research-agent supply binds to a federal AGENCY API, not to a cultural institution, and the policy picture stayed where `p813` left it
+
+🔵 **Source confidence.** Repository measurements below are `FIRST-HAND` — run this pass against
+`gh api -X GET search/repositories` with licences byte-read from `raw.githubusercontent.com`.
+Policy figures are `SECONDARY` (web search summaries of trackers and vendor blogs) and are
+flagged as such inline; nothing below replaces `p813`'s `PRIMARY-CITED` policy block.
+
+🟢 **The supply finding, and it is new.** `q="pubmed mcp"` returns **`318`** repositories.
+[`genomoncology/biomcp`](https://github.com/genomoncology/biomcp) (**MIT**, `679★`, byte-read
+`1,066 B`) is shelved as the region's reference row: PubMed, PubTator3, Europe PMC, PMC OA,
+ClinVar, ClinicalTrials.gov API v2, NCI CTS, OncoKB, keyed to `NCBI_API_KEY`.
+
+🔴 **The CULTURAL-institution layer, by contrast, is a measured `1` and it is copyleft.**
+`q="library of congress mcp catalog"` → `total_count=1`:
+[`msuicaut/lc-vocabularies-mcp`](https://github.com/msuicaut/lc-vocabularies-mcp) (GPL-3.0,
+`4★`). `q="apa citation style mcp"` → `0`. `q="eric ed.gov mcp education research"` → `0`.
+
+🔵 **So the region's binding is to AGENCY APIs — NIH/NLM — and not to a national catalogue, which
+is the inverse of 🇦🇲 Armenia and 🇧🇷 Brazil this pass (`T42`).** 🟢 **The opportunity: a US
+university engagement that needs a research-literature agent starts from an MIT row that already
+documents its per-source data terms, which is `T40`'s clean grade and a ready-made compliance
+artifact.**
+
+🟡 **Policy context (`SECONDARY`, 2026 web sources, consistent with `p813`'s direction).** The
+PIE Network tracked nearly `100` state bills in 2026 touching student AI use; more than `28`
+states plus DC have issued K-12 AI guidance, and a handful moved from guidance to binding
+district-policy and teacher-training mandates (Ohio, Oklahoma, South Carolina, Massachusetts,
+New York are named by a vendor blog — treat as unverified). District teacher AI training
+reportedly rose `24% → 48%` and student ChatGPT use for schoolwork `13% → 26%`. 🔴 **Canada and
+Mexico returned nothing usable on this channel: an informed gap, not coverage.**
+
+
 #### Update 2026-11-13 (eighteenth pass, `p813`) — 🟢 The supply gap this region has carried for eleven passes is CLOSED, and the bill count moves again
 
 🔵 **Source confidence, stated once for this block.** Policy figures below are
@@ -752,6 +784,40 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-13 (nineteenth pass, `p814`) — 🟢 The region holds the best-engineered research-library agents in the world, and they are MIT
+
+🔵 **Source confidence.** Repository and licence figures `FIRST-HAND` this pass; AI Act dates
+`SECONDARY` and **in conflict between sources**, so `p813`'s block remains the authority.
+
+🟢 **The supply finding.** EMEA gained `4` build-safe rows this pass and every one is MIT:
+
+| Row | Country | Binds to | Why it matters |
+|---|---|---|---|
+| [`mpasternak/dspace-mcp`](https://github.com/mpasternak/dspace-mcp) | 🇵🇱 Poland | DSpace 7+ institutional repositories | *"Read-only by construction, not by promise"* — the cleanest read-only argument in this base, plus correct credential guidance (env var over `--password`, keychain) |
+| [`mpasternak/ojs-mcp`](https://github.com/mpasternak/ojs-mcp) | 🇵🇱 Poland | Open Journal Systems | `OJS_ALLOW_WRITES=1` OFF by default, with the reason stated: *"Writes change real journal data"* |
+| [`suren-kk/armenian-national-library-mcp`](https://github.com/suren-kk/armenian-national-library-mcp) | 🇦🇲 Armenia | the National Library of Armenia's DSpace 9 | 🟢 **The first agent in this base that puts a RIGHTS CHECK before retrieval — the direct antidote to `T40`** |
+| [`asjolaviral/koha-mcp-server`](https://github.com/asjolaviral/koha-mcp-server) | — | Koha ILS | OAuth2 `client_credentials` with token refresh: the only non-password auth in this base |
+
+🟢 **The opportunity, and it is specific to this region's regulatory posture.** 🔵 **An AI Act
+`deployer` obligation is easiest to discharge on a system whose agent is read-only by
+construction and whose data the institution itself owns — which describes DSpace exactly.** 🟢
+**`DSpace` is **BSD-3-Clause** (byte-read `1,504 B`, `sha256:baf9ee18…`), so a studio can fork and
+ship it; every other platform in the education stack is copyleft.** 🔵 **Sell the sovereign,
+self-hosted institutional-repository agent: no learner credential, no third-party data source,
+no emotion inference, and nothing leaves the institution.**
+
+🟡 **Policy context (`SECONDARY`).** Education AI systems that determine access, admission or
+evaluate learning outcomes are high-risk; the emotion-recognition prohibition in education has
+applied since `2 February 2025`; schools are `deployers` and carry an AI-literacy obligation for
+staff. A provisional Council/Parliament agreement amending the AI Act was reached `7 May 2026`,
+and one school-focused source puts high-risk education obligations at `2 December 2027` under a
+2026 Digital Omnibus amendment — 🔴 **that regulation number could not be confirmed against a
+primary source and must not be quoted to a client.** The Commission published draft Article 6
+guidelines on `19 May 2026` (consultation to `23 June 2026`); education ministers adopted
+conclusions on teachers in the era of AI on `11 May 2026`; the `AILit` framework is the common
+AI-literacy reference for primary and secondary schools.
+
 
 #### Update 2026-11-13 (eighteenth pass, `p813`) — 🟢 The high-risk clock moved a year, and the region's most permissive grant yet appears in Norway
 
@@ -1426,6 +1492,44 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-13 (nineteenth pass, `p814`) — 🟡 The region's research-agent supply is placed by LANGUAGE, and its highest-starred row is the one that cannot be shipped
+
+🔵 **Source confidence.** Repository figures `FIRST-HAND`; adoption figures `SECONDARY`.
+
+🟢 **The supply finding.** [`wp-a/nature-academic-search`](https://github.com/wp-a/nature-academic-search)
+(**MIT**, `388★`, byte-read `1,060 B`) is the region's new row, and it is placed by audience
+rather than by national system: an academic paper-search harness written for 中文科研用户
+(Chinese-language research users) over global catalogues. 🔵 **This is `T42`'s fourth binding
+type and the only instance of it in the base.**
+
+🔴 **And the region's most-starred candidate is a rejection.**
+[`cookjohn/cnki-skills`](https://github.com/cookjohn/cnki-skills) (`1,067★`) — CNKI (中国知网)
+search, journal browsing, indexing checks, PDF/CAJ download, Zotero export — 🔴 **has no licence
+payload at either branch root, so `1,067★` buys no permission; it is the most-starred ungranted
+repository in this base.** 🟡 **A second and separate question: it drives the user's own manually
+authenticated CNKI session, so automated bulk retrieval is an institutional subscription-terms
+matter for the library's licence desk — NOT the copyright question Sci-Hub raises (`T40`).**
+
+🟢 **The opportunity.** 🔵 **The cheapest unblock in the region is a conversation, not code: one
+`LICENSE` commit converts a `1,067★` CNKI toolchain into a build-safe row.** 🔵 **And the
+language-placed binding generalises — a Japanese-, Korean-, Thai- or Bahasa-language research
+harness over the same global catalogues is an open slot with a `388★` proof of demand.**
+
+🟡 **Adoption context (`SECONDARY`, 2026 web sources).** An ASEAN Foundation / Google.org study
+puts 🇹🇭 Thailand first in ASEAN AI adoption at over `90%` of students and `81%` of teachers,
+while **fewer than half** of educators report confidence in institutional policy or government
+regulation — the adoption/readiness gap is the sellable problem. 🇵🇭 The Philippines' DepEd
+launched `AGAP.AI` in January 2026, the country's first nationwide responsible-AI programme in
+basic education, targeting `1.5M` students, teachers and parents, with a reported `92%`
+classroom-integration target by 2028. The `AI Opportunity Fund: Asia-Pacific` is a `$35M` AVPN
+initiative with Google.org and ADB, shifting from awareness to applied learning; an ASEAN
+programme targets `1.7M` learners and educators. Ipsos' Education Monitor 2026 covers nine APAC
+markets including 🇮🇳 India and 🇯🇵 Japan and finds lower support for banning AI in schools than
+the global `39%`. 🔴 **Country-level policy detail for India, China and Japan did not resolve on
+this channel this pass — an informed gap; `T38`'s two binding national laws remain the
+authority.**
+
+
 #### Update 2026-11-13 (eighteenth pass, `p813`) — 🔴 TWO binding national AI laws now name education, and they demand DIFFERENT artifacts — while the region's agent supply turns out to be the densest in the world
 
 🔵 **Source confidence.** Regulatory items are `PRIMARY-CITED` from law-firm and consultancy
@@ -2088,6 +2192,47 @@ example of.
 
 ### LATAM
 
+#### Update 2026-11-13 (nineteenth pass, `p814`) — 🟢 The region's new row binds to a national STANDARDS BODY, which is a binding type nothing else in this base has
+
+🔵 **Source confidence.** Repository and norm figures `FIRST-HAND` (README read this pass);
+adoption and regulation figures `SECONDARY`.
+
+🟢 **The supply finding.** [`PedroSmaxY/abnt-mcp`](https://github.com/PedroSmaxY/abnt-mcp)
+(**MIT**, byte-read `1,086 B`, holder `Pedro Henrique da Silva Novais`) — *"ABNT Copilot MCP —
+Servidor Model Context Protocol para Padronização, Auditoria e Conformidade Documental Acadêmica
+(ABNT/IBGE)"* — implements 🇧🇷 Brazil's academic norms **by number and edition**: NBR 14724
+(structure, typography, `3-3-2-2` pagination), NBR 10520:2023 (author-date in mixed case, long
+quotations at 4 cm), NBR 6023 (references), 6022, 6024 (no terminal period after `1.1`), 6027,
+6028 (150–500-word single-paragraph abstracts), plus IBGE tabular presentation — and it flags
+revoked practice such as all-caps authorship in parentheses, *"prática formalmente extinta pela
+atualização da ABNT NBR 10520:2023"*.
+
+🟢 **Graded on `T36` axis (b) it PASSES: the capability set is *auditoria, formatação formal,
+consulta em bases indexadas e compilação para PDF* — it audits and formats a document the student
+wrote. It is not a ghostwriter, and that distinction is the whole reason it is shippable.**
+
+🟢 **The opportunity, and it is the most concrete in this pass.** 🔵 **Every Brazilian university
+checks ABNT conformance by hand, on every TCC, dissertation and thesis, every term — and the
+norms are mechanically checkable.** 🔵 **Compose it with `pkp/ojs` (GPL-3.0; the backbone of
+Brazilian and Mexican university journals) and `trahloff/Aldine` (AGPL-3.0, self-hosted LaTeX)
+and the result is a norm-compliance pipeline from draft to submission, with the licence boundary
+drawn at process edges.** 🔴 **`q="enem vestibular mcp agente"` → `total_count=0`: Brazil's
+national admissions system has zero agentic surface of any licence — the widest open slot the
+region shows.**
+
+🟡 **Adoption and regulation context (`SECONDARY`, 2026 web sources).** UNESCO and ECLAC launched
+an `Observatorio de IA en Educación` for Latin America and the Caribbean; the IDB documents `193`
+real AI initiatives in the region. A Tecnológico de Monterrey figure cited at that launch claims
+`92%` of LAC higher-education students already use these tools regularly — 🔴 **single-institution
+data cited by third parties; do not quote it as regional fact.** 🔴 **Regulation remains
+fragmented: no unified regional framework; 🇨🇱 Chile leads with a National AI Policy since 2021
+and a bill in discussion; 🇧🇷 Brazil and 🇨🇴 Colombia have national strategies but no
+education-sector regulation, and Brazil's MEC ran a public call on AI in education from
+`30 March` to `13 May 2026`; 🇲🇽 Mexico has no national law or binding guidance for AI in
+universities.** An OEI/ProFuturo report finds adoption uneven and limited against other regions,
+and places Mexico in a second tier with Argentina, Brazil and Colombia.
+
+
 #### Update 2026-11-13 (eighteenth pass, `p813`) — 🟢 The supply crown changes hands in one pass, and the governance gap is now quantified from a 19-country study
 
 🔵 **Source confidence.** 🔴 **`iesalc.unesco.org` and `www.gov.br` still refuse at `CONNECT`
@@ -2738,6 +2883,47 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-13 (nineteenth pass, `p814`) — 🟢 `17` of `25` new rows are Global, and that is the finding rather than a placement failure
+
+🔵 **Source confidence.** All repository, star and licence figures `FIRST-HAND` this pass;
+market-size figures `SECONDARY` and mutually inconsistent, flagged inline.
+
+🟢 **The structural finding (`T42`).** The research-library layer is region-neutral by
+construction: Zotero, OpenAlex, CrossRef, arXiv, Semantic Scholar and PubMed are global
+catalogues, so an agent over them has no nation to attach to. `Global` is now `70` of `128`
+build-safe rows (`55%`).
+
+🟢 **The Global opportunity set, ranked by what a studio can actually sell:**
+
+1. 🟢 **Fork `oscardvs/zoteus` (MIT, `65★`) for citation integrity.** Its
+   `zotero_check_citations` reads a draft, finds every citation form (pandoc, `\cite`,
+   author-year, numeric, DOI, `[@ITEMKEY]`), reports which are in the library, ambiguous or
+   absent, then looks up each direct quotation in the cited PDF — found with its page, close with
+   the source's real wording, or not found. 🔵 **This is the first integrity-POSITIVE capability
+   in this base: every other graded row was graded on how badly it could be abused. It is the
+   single most sellable artifact of the pass to any institution worried about invented
+   citations.**
+2. 🟢 **Start from `DSpace` (BSD-3-Clause) for anything the institution owns outright** — no
+   learner credential, no third-party source, no `T40` exposure, and a permissive fork.
+3. 🟢 **Use `leomcamilo/bx-scholar-mcp` (MIT) over OpenAlex/CrossRef as the zero-credential
+   entry point** — no Zotero, no subscription, nothing to negotiate.
+4. 🟡 **Run `PDFMathTranslate` (AGPL-3.0, `38,407★`) as a SEPARATE SERVICE** for non-English
+   cohorts reading English-language literature — layout-, formula- and table-preserving paper
+   translation. 🔴 **Never derive from it.**
+
+🟡 **Market sizing (`SECONDARY`, and the estimates do not agree — carry the range, not a point).**
+AI in education: `~$10.6B` (2026) → `$42.48B` (2030) at `41.5%` CAGR per a Research and Markets
+summary; IMARC says `$6.4B` (2025) → `$79.6B` (2034); Hyde Park Capital says `$8.3B` (2025) →
+`$32.3B` (2030). AI tutoring and adaptive learning alone: `$6.5B` (2025) → `$45.5B` (2035)
+per Astute Analytica. 🔴 **Agentic-specific figures are the least reliable of all — one report
+says `US$2.1B` in 2026 at `4.5%` CAGR, another `$1.72B` (2025) → `$27.23B` (2034); these are
+irreconcilable and neither should be quoted.** 🟡 **A funding counterpoint worth knowing before a
+pitch: AI venture funding in EdTech reportedly fell to `$2.4B` in 2025, an `89%` drop from the
+2021 peak, with AI-enabled startups taking most of what remained.** 🔵 **The defensible line to a
+client is not the market size; it is that `348` maintained repositories exist in one layer and
+`855` addresses of this base's prior index contained none of them.**
+
 
 #### Update 2026-11-13 (eighteenth pass, `p813`) — 🟢 One rule now covers every region's supply, and the market-size figures remain irreconcilable
 

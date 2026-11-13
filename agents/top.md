@@ -6,9 +6,135 @@ updated: 2026-11-13
 
 # Education AI Agents — curated, license-verified
 
-**113 real agents** below — **103 build-safe** (MIT / Apache-2.0 / BSD / ISC / 0BSD) plus
-**10 copyleft** — **twenty-nine rows added at the eighteenth pass (`p813`, 2026-11-13)**, and
-**seven rejected**.
+**143 real agents** below — **128 build-safe** (MIT / Apache-2.0 / BSD / ISC / 0BSD) plus
+**15 copyleft** — **thirty rows added at the nineteenth pass (`p814`, 2026-11-13): 25 build-safe
+and 5 copyleft**, with **9 newly rejected**. The eighteenth pass (`p813`) added twenty-nine.
+
+🟢 **Nineteenth pass (`p814`) — this pass did not close a regional nil. It found a WHOLE SYSTEM
+LAYER that eighteen passes never queried once, and it is the largest supply this base has ever
+measured.** `p811` closed EMEA on national school portals, `p812` closed LATAM on university
+self-management, `p813` closed APAC and North America on `Chaoxing`/`StudentVUE`/`Schoology`.
+🔴 **Every one of those passes was harvesting the LMS/attendance layer, whose star ceiling across
+all three is `98★`.** 🟢 **`p814` asked what OTHER system a learner logs into, answered "the
+research library", and `gh api search/repositories q="zotero mcp"` returned `348` repositories —
+with `claude-scholar` at `6,046★`, `54yyyu/zotero-mcp` at `5,908★`, `paper-search-mcp` at
+`3,085★`, `Agentero` at `2,487★` and `PDFMathTranslate` at `38,407★`.**
+
+🔴 **COUNTED AGAINST THIS BASE'S OWN INDEX: of the `855` GitHub addresses published across the
+live shelves before this pass, ZERO are in that layer.** Not under-weighted — absent.
+
+### The finding (`T39`): the layer this base missed is one to two orders of magnitude larger than the layer it harvested, and the reason is that a reference manager is not a Learning Management System
+
+🔵 **The rule `p813` stated — *education agent supply is attached to the SYSTEM A LEARNER LOGS
+INTO* — was right and was applied too narrowly.** Eighteen passes read "the system a learner logs
+into" as the LMS or the SIS: Moodle, Canvas, Chaoxing, SIGAA, Skyward, TronClass. 🔴 **A graduate
+student, a doctoral candidate and a researcher log into a reference manager and a catalogue far
+more often than into a gradebook, and that is where the open-source agent supply actually is.**
+
+🟢 **What the layer contains, measured this pass: `25` build-safe rows added (MIT ×24,
+Apache-2.0 ×1), `5` copyleft, `9` rejected.** 🟢 **Fourteen of the `25` exceed `56★`; five exceed
+`1,000★`.** 🔴 **For comparison, the single most-starred row on this shelf before this pass was
+`xuexitong-cli` at `24★`.**
+
+🔵 **The engagement consequence, and it is the practical half of the finding.** A university
+engagement that starts at the LMS gets small, regionally-locked, integrity-compromised agents. The
+same engagement started at the library gets `6,046★` of maintained, permissively licensed,
+read-only tooling — and the library is also where the institution's own staff already have budget.
+
+### The second finding (`T40`): there is a THIRD risk axis, it is the DATA SOURCE's legality, and `p813`'s two-axis grade shelves a tool a studio cannot ship
+
+🔴 **`p813` closed by ruling that a candidate is graded on two independent axes: (a) how it handles
+the learner's credential, and (b) what the tool does once authenticated.** 🟢 **`p814` found the
+specimen that passes both and is still unshippable.**
+[`0jsDanny/academic-research-mcp`](https://github.com/0jsDanny/academic-research-mcp) is **MIT,
+byte-read and valid**; it requires **no learner credential at all**; it submits **no coursework**.
+🔴 **And its README documents the mechanism in a capability table: *"**Sci-Hub** | Subscription
+Journals | Automated TLS spoofing via `curl_cffi` to bypass paywalls and bot challenges"*, with
+`download_scihub_pdf` and `search_scihub_by_doi` as named tools.**
+
+🟢 **So axis (c) is the legality of the SOURCE, and it is independent of both predecessors —
+independent of the licence on the code, and independent of credential handling.** 🔵 **And it is
+three-valued, which the pass established by finding all three states in one layer:**
+
+| Grade | Specimen | What it means for an engagement |
+|---|---|---|
+| 🟢 **Clean** | `genomoncology/biomcp` (MIT, `679★`) | Sources are NIH/NLM and ClinicalTrials.gov, and the README states the obligation and ships `docs/reference/source-licensing.md` per source |
+| 🟡 **Configurable** | `openags/paper-search-mcp` (MIT, `3,085★`) | Sci-Hub is LAST and optional in an OA-first fallback chain; shippable with that path disabled, and the engagement must record that it was |
+| 🔴 **Structural** | `0jsDanny/academic-research-mcp` (MIT, `0★`) | Paywall circumvention is the headline feature; no configuration removes it |
+
+🔵 **And a distinction that must not be collapsed, because the remedies differ.**
+`cookjohn/cnki-skills` (`1,067★`, no licence) drives
+the user's **own manually authenticated** CNKI session. 🟡 **That is a question about the
+INSTITUTION'S subscription terms on automated bulk retrieval — a terms-of-use matter, answerable
+by the library's licence desk.** 🔴 **Sci-Hub is copyright circumvention, answerable by nobody.**
+
+🟢 **The antidote also exists on this shelf now, and it is a workflow, not a warning.**
+`suren-kk/armenian-national-library-mcp`
+puts the rights check BEFORE retrieval: *"Review the record's rights and access fields. When
+access is public and your intended use is permitted, call `list_item_files` or
+`get_file_download`"*. 🔵 **That is the sequence to copy into any engagement that touches a
+repository.**
+
+### The third finding (`T41`): the licence byte-hash is a lineage instrument ONLY for families whose stock text embeds a holder — `p813` published it unbounded, and this pass bounds it
+
+🟢 **`p813` established the byte-hash as a de-duplication instrument and it works. This pass used
+it to catch something GitHub's own metadata gets wrong.**
+[`lricher7329/zotero-mcp-claude-code`](https://github.com/lricher7329/zotero-mcp-claude-code)
+(`45★`) returns a licence payload **byte-identical** to
+[`cookjohn/zotero-mcp`](https://github.com/cookjohn/zotero-mcp)'s — `1,091 B`,
+`sha256:e8ed0429…`, holder string `the Zotero-MCP project contributors` — 🔴 **while the GitHub
+API reports `fork: false` for it.** 🔵 **A re-upload is not a GitHub fork, so the platform's own
+lineage field misses it and the hash does not. It is shelved as that row's derivative and is NOT
+counted as an independent agent.**
+
+🔴 **And the bound, which `p813` did not state: for AGPL-3.0 and GPL-3.0 the hash proves NOTHING
+about lineage.** 🟢 **Measured this pass: `yilewang/llm-for-zotero` and
+`papersgpt/papersgpt-for-zotero` return byte-identical AGPL payloads (`34,519 B`,
+`sha256:d8de5179…`) and are unrelated projects; `msuicaut/lc-vocabularies-mcp`, `pkp/ojs` and
+`pkp/pkp-lib` return byte-identical GPL payloads (`35,148 B`, `sha256:8b1ba204…`) across three
+unrelated projects.** 🔵 **The reason is mechanical: stock MIT and BSD text embeds a
+`Copyright (c) <year> <holder>` line, so identity is a claim about a HOLDER; stock AGPL/GPL text
+carries the holder in file headers instead, so identity is only a template check.**
+
+🟡 **A corollary the pass also found: an MIT holder line is an AUTHORSHIP claim that can disagree
+with the repository owner.** [`beita6969/ScienceClaw`](https://github.com/beita6969/ScienceClaw)
+(`1,028★`) carries holder `Peter Steinberger`. 🔵 **Where the holder and the owner disagree, the
+row is shelved with an unresolved-provenance flag and the paper is cited instead of the repo.**
+
+### The fourth finding (`T42`): supply is attached to the system a learner logs into — and the system's REGION is the region of its CATALOGUE, not of its users
+
+🔴 **`17` of this pass's `25` build-safe rows are region `Global`, which looks like a regression
+after three passes of regional placement. It is not; it is the rule's actual shape.** 🟢 **An LMS
+is national because a ministry or a university procures it. A CATALOGUE is global because Zotero,
+OpenAlex, CrossRef, arXiv and Semantic Scholar are global.** So the layer is region-neutral by
+construction, and the rows that ARE placed are placed by what they bind to:
+
+| Region | Binds to | Row |
+|---|---|---|
+| **LATAM** | 🇧🇷 a national STANDARDS BODY — ABNT NBR 14724/10520:2023/6023/6022/6024/6027/6028 + IBGE | `PedroSmaxY/abnt-mcp` |
+| **EMEA** | 🇦🇲 a national INSTITUTION — the National Library of Armenia's DSpace 9 | `suren-kk/armenian-national-library-mcp` |
+| **EMEA** | 🇵🇱 institutional DEPLOYMENTS — DSpace 7+ repositories, OJS journals, Koha catalogues | `mpasternak/dspace-mcp`, `mpasternak/ojs-mcp`, `asjolaviral/koha-mcp-server` |
+| **North America** | 🇺🇸 a national AGENCY — NIH/NLM: PubMed, PubTator3, PMC OA, ClinVar, ClinicalTrials.gov | `genomoncology/biomcp` |
+| **APAC** | 🇨🇳 a LANGUAGE audience — 中文科研用户, over global catalogues | `wp-a/nature-academic-search` |
+
+🔵 **So the placement question to ask of any research-layer candidate is not "where is the author"
+but "whose catalogue, whose standard, or whose language does this bind to".**
+
+### The fifth finding (`T43`): GitHub's licence field measures a FILENAME, and the anchor of a 348-repository layer reads as unlicensed because of it
+
+🔴 **[`zotero/zotero`](https://github.com/zotero/zotero) (`15,942★`) reports
+`license.spdx_id = NOASSERTION` on the search API.** 🟢 **It is not unlicensed: it carries a
+`35,358 B` AGPL payload at **`COPYING`** (`sha256:5b7dc919…`, *"Zotero is Copyright © 2018
+Corporation for Digital Scholarship, Vienna, Virginia, USA"*), while `LICENSE`, `LICENSE.txt`,
+`license.txt` and `COPYING.txt` all return `404`.** 🔴 **Any shelf that trusted the API field
+alone would have called the upstream of its own largest layer ungranted** — and this base's
+rejection table rejects on exactly that signal, which is why the probe list must keep `COPYING`
+in it. 🔵 **The practical consequence for a client: Zotero itself is AGPL, so every agent in this
+layer integrates with it over a protocol or a local API and none of them derive from it — which
+is precisely why the layer is MIT-dense on top of a copyleft base.**
+
+
+---
 
 🟢 **Eighteenth pass (`p813`) — the system-layer query shape has now closed THREE regional nils in
 three passes, and this pass closes the last two at once: `APAC 3 → 17` and `North America 4 → 12`.**
@@ -32,14 +158,19 @@ passes of this shelf graded only the first.** Both are graded in column 6 from t
 🟢 **COUNT DERIVATION — re-derived on the file after insertion, not carried forward:**
 
 ```sh
-awk '/^## Build-safe/,/^## Copyleft/' agents/top.md | grep -cE '^\|.*github\.com'   # 103 build-safe
-awk '/^## Copyleft/,/^## Rejected/'   agents/top.md | grep -cE '^\|.*github\.com'   # 10 copyleft
-awk '/^## Rejected/,0'                agents/top.md | grep -cE '^\|.*github\.com'   # 22 rejected (NOT agents)
+awk '/^## Build-safe/,/^## Copyleft/' agents/top.md | grep -cE '^\|.*github\.com'   # 128 build-safe
+awk '/^## Copyleft/,/^## Rejected/'   agents/top.md | grep -cE '^\|.*github\.com'   # 15 copyleft
+awk '/^## Rejected/,0'                agents/top.md | grep -cE '^\|.*github\.com'   # 31 rejected (NOT agents)
 python3 -I ingest/derive-counts.py                                                 # the gate
 ```
 
-**Shelf by region, derived from column 5 after insertion: `Global` `53` · `APAC` `17` ·
-`EMEA` `12` · `North America` `12` · `LATAM` `9`.** 🔴 **`APAC 17` replaces `APAC 3`;
+**Shelf by region, derived from column 5 after insertion at `p814`: `Global` `70` · `APAC` `18` ·
+`EMEA` `16` · `North America` `14` · `LATAM` `10` — total `128`, re-derived on the file, not
+carried forward.** 🔵 **`Global` grew by `17` and is now `55%` of the shelf, which is `T41`'s
+finding and not a placement regression: the research-library layer binds to GLOBAL catalogues.
+The `p813` figures (`53`/`17`/`12`/`12`/`9`) are retained as the prior reading.**
+
+🔵 **`p813`'s reading of its own pass, kept verbatim:** 🔴 **`APAC 17` replaces `APAC 3`;
 `North America 12` replaces `North America 4`.** 🟢 **Every region is now double digits, for the
 first time in eighteen passes.**
 
@@ -296,10 +427,35 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 103 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 128 rows
 
 | Name | Repo | Licence | Stars | Region | Description |
 |---|---|---|---|---|---|
+| claude-scholar | https://github.com/Galaxy-Dawn/claude-scholar | **MIT — byte-read** (`1,068 B`, `sha256:0458c162…`, holder `Gaorui Zhang`) | 6046 | Global | **New this pass (`p814`) — and the single most-starred education agent this base has ever shelved, by a factor of 250 over `p813`'s anchor.** Semi-automated research assistant for academic research and software-literature work. 🟢 **`T39`: this row is the measurement. Eighteen passes harvested the LMS/attendance layer and its ceiling was `98★`; the research-library layer opens at `6,046★` and nobody had looked.** Pushed `2026-10-19` |
+| zotero-mcp (54yyyu) | https://github.com/54yyyu/zotero-mcp | **MIT — byte-read** (`1,079 B`, `sha256:f0c6d358…`, holder `Zotero MCP Contributors`) | 5908 | Global | **New this pass (`p814`) — the canonical Zotero MCP server and the layer's reference implementation.** Connects a local or cloud Zotero library to Claude and other MCP clients. Pushed `2026-11-13` (the day of this pass). 🔵 **Name-collision group with `cookjohn/zotero-mcp` below, separated by licence bytes, NOT by name — see `T41`** |
+| paper-search-mcp | https://github.com/openags/paper-search-mcp | **MIT — byte-read** (`1,063 B`, `sha256:f159d578…`, holder `OPENAGS`) | 3085 | Global | **New this pass (`p814`) — and the specimen that makes axis (c) THREE-valued, not binary (`T40`).** Search and download across arXiv, PubMed, bioRxiv, medRxiv, Google Scholar, Semantic Scholar, Crossref, OpenAlex, PMC, CORE, Europe PMC, dblp, OpenAIRE, CiteSeerX, DOAJ, BASE, Zenodo, HAL, SSRN, OpenReview, Unpaywall. 🟡 **Its `download_with_fallback` chain is OA-FIRST and Sci-Hub LAST and optional: *"source-native download → OpenAIRE/CORE/Europe PMC/PMC discovery → Unpaywall DOI resolution → optional Sci-Hub"*, and it carries a dedicated `Sci-Hub Notice` section.** 🟡 **So this is not a rejection and not a clean row — it is a CONFIGURATION OBLIGATION: shippable with the optional Sci-Hub path disabled, and an engagement must record that it was.** Contrast `0jsDanny/academic-research-mcp` in the rejected table, where the same source is the headline feature |
+| Agentero | https://github.com/poco-ai/Agentero | **MIT — byte-read** (`1,063 B`, `sha256:06efb279…`, holder `poco-ai`) | 2487 | Global | **New this pass (`p814`).** Unified research workspace for humans *and* agents: PDF Q&A with citations. 🟢 The largest payload of the layer's build-safe rows (`43.6 MB` of tree) and pushed `2026-11-13` |
+| zotero-mcp (cookjohn) | https://github.com/cookjohn/zotero-mcp | **MIT — byte-read** (`1,091 B`, `sha256:e8ed0429…`, holder `the Zotero-MCP project contributors`) | 1278 | Global | **New this pass (`p814`) — a Zotero PLUGIN extension rather than an external server, so it installs inside Zotero itself.** 🔴 **`T41`'s specimen: [`lricher7329/zotero-mcp-claude-code`](https://github.com/lricher7329/zotero-mcp-claude-code) (`45★`) returns a BYTE-IDENTICAL licence payload — same `1,091 B`, same `sha256:e8ed0429…`, same holder string — while GitHub's own `fork` field reports `false` for it.** 🔵 **It is therefore shelved HERE, as this row's derivative, and is NOT counted as an independent agent.** Pushed `2026-11-12` |
+| gs-skills | https://github.com/cookjohn/gs-skills | **MIT — byte-read** (`1,055 B`, `sha256:3bed3331…`, holder line `Copyright (c) 2025` with NO name) | 546 | Global | **New this pass (`p814`).** Google Scholar skills for Claude Code: search, citation tracking. 🔵 **Payload lives at `master`, not `main` — a branch-alias data point for `gate-branch-alias`.** 🟡 **Its MIT holder line names no holder at all, which is a weaker authorship claim than every other row in this block** |
+| mcp-zotero (kaliaboi) | https://github.com/kaliaboi/mcp-zotero | **MIT — byte-read** (`1,070 B`, `sha256:01de2c6d…`, holder `Abhishek Kalia`) | 163 | Global | **New this pass (`p814`) — the OLDEST row of the layer (pushed `2025-02-04`), which dates the layer itself: Zotero agents predate every LMS agent on this shelf.** Claude Desktop connector for Zotero collections and sources. 🟡 Smallest tree in the block (`23 KB`) and untouched for 21 months |
+| zotero-mcp (kujenga) | https://github.com/kujenga/zotero-mcp | **MIT — byte-read** (`1,068 B`, `sha256:9cdf67f1…`, holder `Aaron Taylor`) | 162 | Global | **New this pass (`p814`) — third member of the `zotero-mcp` name-collision group, and a third distinct licence hash.** Deliberately lightweight server over the Zotero API. Pushed `2026-08-07` |
+| cli-anything-zotero | https://github.com/PiaoyangGuohai1/cli-anything-zotero | **Apache-2.0 — byte-read** (`11,356 B`, `sha256:e7a7ce22…`, title line `Apache License`) | 142 | Global | **New this pass (`p814`) — the only Apache-2.0 row of the layer, so the only one that carries a patent grant.** CLI server for Zotero 7/8/9 with 70+ commands. Pushed `2026-11-04` |
+| seerai | https://github.com/dralkh/seerai | **MIT — byte-read** (`1,062 B`, `sha256:84181be8…`, holder `dralkh`) | 97 | Global | **New this pass (`p814`).** Zotero 10 AI plugin and research assistant — chat with the library. 🔵 **Pinned to Zotero 10, which makes it the layer's clearest upstream-version dependency** |
+| chiken | https://github.com/yuanjua/chiken | **MIT — byte-read** (`1,068 B`, `sha256:ab0e04f2…`, holder `Yuanzhou Cai`) | 90 | Global | **New this pass (`p814`).** Zotero + RAG + MCP + deep research in one package — the layer's only row that bundles a retrieval stack rather than exposing the library raw. Pushed `2025-09-05` |
+| ZotPilot | https://github.com/xunhe730/ZotPilot | **MIT — byte-read** (`1,061 B`, `sha256:5c2bb763…`, holder `xunhe`) | 74 | Global | **New this pass (`p814`).** MCP server *plus* a packaged agent skill — the two-surface shape (`server` + `skill`) that `p813` first saw in the Chaoxing tier, here independently |
+| research-hub | https://github.com/WenyuChiou/research-hub | **MIT — byte-read** (`1,068 B`, `sha256:c08e49d6…`, holder `Wen-Yu Chang`) | 67 | Global | **New this pass (`p814`).** AI-operable research workspace spanning Zotero, Obsidian and NotebookLM. 🔵 **The only row that treats the reference manager as ONE of several systems rather than the system — the closest thing in this layer to an integration pattern.** Payload at `master`; pushed `2026-11-13` |
+| zoteus | https://github.com/oscardvs/zoteus | **MIT — byte-read** (`1,067 B`, `sha256:c20cd2f8…`, holder `Oscar Devos`) | 65 | Global | 🟢 **New this pass (`p814`), and the best-graded row of the pass on BOTH of `p813`'s axes plus the new third one — the direct antonym of `T36`'s Tier 3.** Search by keyword or meaning, passages with page locators, CSL citation formatting via citeproc-js, `.docx` with live Zotero field codes. 🟢 **Writes are versioned with optimistic locking, trash is reversible by default, and permanent deletion is opt-in and confirmation-gated.** 🟢 **And `zotero_check_citations` is an INTEGRITY-POSITIVE capability, the first on this shelf: it reads a draft, finds every citation (pandoc, `\cite`, author-year, numeric, DOI, `[@ITEMKEY]`), reports which are in the library, which are ambiguous and which are absent, then looks up each direct quotation in the cited PDF — found with its page, close (with the source's real wording), or not found.** 🔵 **`T36` graded agents on how badly they can be abused; this is the first row that measurably reduces abuse, and it is the one to put in front of a client worried about invented citations.** Pushed `2026-11-11` |
+| zotero-code-execution | https://github.com/kerim/zotero-code-execution | **MIT — byte-read** (`1,090 B`, `sha256:7dec1382…`, holder `Zotero Code Execution Contributors`) | 62 | Global | **New this pass (`p814`).** Multi-strategy Zotero search built on the code-execution pattern rather than tool-per-query — the layer's one architectural dissent, and the cheapest on tokens |
+| mcp-pyzotero | https://github.com/gyger/mcp-pyzotero | **MIT — byte-read** (`1,068 B`, `sha256:4c4a98dc…`, holder `Samuel Gyger`) | 56 | Global | **New this pass (`p814`).** Connector for a local Zotero library built on `pyzotero`, so it inherits a maintained Python client instead of reimplementing the API. Pushed `2025-11-20` |
+| bx-scholar-mcp | https://github.com/leomcamilo/bx-scholar-mcp | **MIT — byte-read** (`1,071 B`, `sha256:af97dd08…`, holder `Leonardo Camilo`) | 0 | Global | **New this pass (`p814`).** 25+ tools over OpenAlex, CrossRef and the open-metadata backbone — no credential, no paywall, no library required. 🟢 **The layer's floor case: at `0★` it is the cheapest honest starting point for a studio that wants the catalogue layer without Zotero at all** |
+| biomcp | https://github.com/genomoncology/biomcp | **MIT — byte-read** (`1,066 B`, `sha256:dd4dd888…`, holder `Ian Maurer`) | 679 | North America | 🟢 **New this pass (`p814`) — the North America reference row, and the ONLY agent in this base whose README encodes the new third risk axis as a first-class document.** PubMed, PubTator3, Europe PMC, PMC OA, ClinVar, ClinicalTrials.gov API v2, NCI CTS, OncoKB, Semantic Scholar. 🟢 **It opens by stating the obligation: *"BioMCP retrieves data from upstream biomedical sources. Those sources' terms govern how you use the data they return: some restrict commercial or clinical use. Check each source's terms and obtain any licence you need before relying on the data"*, and ships `docs/reference/source-licensing.md` with the per-source breakdown.** 🔵 **`T40`: an MIT licence on the CODE says nothing about the terms on the DATA, and this is the row that says so out loud. Quote it to a client.** Keyed to NIH/NLM and `NCBI_API_KEY`; pushed `2026-11-10` |
+| ScienceClaw (beita6969) | https://github.com/beita6969/ScienceClaw | **MIT — byte-read** (`1,073 B`, `sha256:33923cdb…`) 🟡 **holder reads `Peter Steinberger`, which is NOT the repository owner** | 1028 | North America | **New this pass (`p814`), shelved with an UNRESOLVED provenance flag.** Verifiable program-level self-evolution for AI-for-Science agents; backed by `arXiv:2610.08691`, a Hugging Face dataset card, and `mcp-servers/` carrying arXiv-LaTeX and ChEMBL servers. 🟢 **Substantive: *"Every row of the dataset records its own source, license and URL"* and ports record upstream transformations.** 🟡 **But the MIT holder line names a third party, and a name-collision sibling [`AgentTeam-TaichuAI/ScienceClaw`](https://github.com/AgentTeam-TaichuAI/ScienceClaw) (`682★`, NO licence) was created two days later (`2026-03-11` vs `2026-03-13`).** 🔴 **Neither is established as canonical on this channel, so cite the arXiv paper, not the repository, until the lineage is resolved — registered as a gap below** |
+| nature-academic-search | https://github.com/wp-a/nature-academic-search | **MIT — byte-read** (`1,060 B`, `sha256:d3f91696…`, holder `wp-a`) | 388 | APAC | **New this pass (`p814`) — the APAC row of the research-library layer, and it is placed by LANGUAGE rather than by a national system.** 🇨🇳 Academic paper search harness for Codex / Claude Code / DeepSeek, written for 中文科研用户 (Chinese-language research users). 🔵 **`T42`: the catalogue is global, so the agent is placed by the audience it addresses — the first row in this base where that is the operative placement rule.** Pushed `2026-10-01` |
+| dspace-mcp | https://github.com/mpasternak/dspace-mcp | **MIT — byte-read** (`1,073 B`, `sha256:900b820e…`, holder `Michał Pasternak`) | 3 | EMEA | 🟢 **New this pass (`p814`) — Tier 1 on credential hygiene, and the cleanest read-only DECLARATION in this base, because it is not a declaration.** 🇵🇱 Read-only MCP server over DSpace 7+ institutional repositories. 🟢 **Its own section heading is *"Read-only by construction, not by promise"*** — the argument is structural, not a pledge, which is exactly the distinction `p813`'s Tier 1 could only assert. 🟢 **Credential guidance is explicit and correct: *"Prefer the environment variable over `--password`"* because a command line is visible to other processes, with keychain storage recommended; anonymous installs pay no token cost for account tools at all.** 🔵 **Handing a restricted file to a person requires `get_download_link` rather than the raw `download_url` — a deliberate access boundary.** Ships an installable `.mcpb` bundle; pushed `2026-07-25` |
+| ojs-mcp | https://github.com/mpasternak/ojs-mcp | **MIT — byte-read** (`1,096 B`, `sha256:56a6229a…`, holder `Michał Pasternak <michal.dtz@…>`) | 1 | EMEA | 🟢 **New this pass (`p814`) — and the layer's model WRITE GATE.** 🇵🇱 MCP server over the authenticated Open Journal Systems REST API: submissions, issues, editorial statistics, plus five write tools. 🟢 **`OJS_ALLOW_WRITES=1` is OFF by default, and the README states the reason rather than the setting: *"Writes change real journal data"*.** 🟢 **Write tools were verified by reading state back (`check_writes.py`), and the read tools have their own harness.** 🔵 **Deployment reality worth knowing before an engagement: OJS answers `401` to every token-carrying request unless `api_key_secret` is set in `config.inc.php` — a server-side change the institution's OJS admin must make, not the studio.** Pushed `2026-09-10` |
+| armenian-national-library-mcp | https://github.com/suren-kk/armenian-national-library-mcp | **MIT — byte-read** (`1,072 B`, `sha256:b47a07d3…`, holder `Suren Karapetyan`) | 7 | EMEA | 🟢 **New this pass (`p814`) — the FIRST agent in this base that encodes a RIGHTS CHECK as a workflow step, which is the direct antidote to `T40`.** 🇦🇲 Independent, provider-neutral, read-only MCP integration for the National Library of Armenia's public DSpace 9 repository. 🟢 **Its documented procedure puts the rights review BEFORE retrieval: *"Review the record's rights and access fields. When access is public and your intended use is permitted, call `list_item_files` or `get_file_download`"*.** 🟢 **`"File writes are disabled and are not implemented by this server"`; all links and redirects must stay HTTPS on the exact host under the configured API base path; bounded text extraction with MIME verification, and binaries over `NLA_MAX_INLINE_BINARY_BYTES` are never base64'd into model context.** 🟢 **Ships a hardened Compose profile — `127.0.0.1:3000` only, read-only root filesystem, dropped capabilities, no-new-privileges — and tells issue reporters not to post credentials or file bytes.** 🔵 **A national-institution agent built to a standard the commercial rows in this layer do not reach.** Pushed `2026-11-13`, the day of this pass |
+| koha-mcp-server (asjolaviral) | https://github.com/asjolaviral/koha-mcp-server | **MIT — byte-read** (`1,084 B`, `sha256:a8be4d3f…`, holder `Koha MCP Server contributors`) | 1 | EMEA | **New this pass (`p814`) — the only build-safe agent over Koha, the integrated library system used by public and academic libraries worldwide.** 🟢 **OAuth2 `client_credentials` with automatic token refresh — the strongest AUTH mechanism of any row this pass, and the only one that is not a password.** 🟡 **But the install step is `nano config.json # fill in your Koha credentials`, so the `client_secret` lands on disk in cleartext: Tier 2 on axis (a) despite Tier 1 machinery.** 🔵 Requires Koha's REST API enabled and an OAuth2 key pair — an institutional prerequisite, like `ojs-mcp`'s. Pushed `2026-08-23` |
+| abnt-mcp | https://github.com/PedroSmaxY/abnt-mcp | **MIT — byte-read** (`1,086 B`, `sha256:1cdab623…`, holder `Pedro Henrique da Silva Novais`) | 2 | LATAM | 🟢 **New this pass (`p814`) — the LATAM row, and the first agent in this base bound to a NATIONAL STANDARDS BODY rather than to a national software system.** 🇧🇷 *"ABNT Copilot MCP — Servidor Model Context Protocol para Padronização, Auditoria e Conformidade Documental Acadêmica (ABNT/IBGE)"*, for TCCs, master's dissertations, doctoral theses and journal articles. 🟢 **It implements the norms by number and edition — NBR 14724 (structure, typography, `3-3-2-2` pagination), NBR 10520:2023 (author-date in mixed case, `(Silva, 2023)`, long quotations at 4 cm indent), NBR 6023 (references), 6022, 6024 (no terminal period after `1.1`), 6027, 6028 (150–500-word single-paragraph abstracts) — plus IBGE tabular presentation, and it flags REVOKED practice such as all-caps authorship in parentheses, *"prática formalmente extinta pela atualização da ABNT NBR 10520:2023"*.** 🟢 **Graded on `T36` axis (b) and it PASSES: the capability set is *auditoria, formatação formal, consulta em bases indexadas e compilação para PDF* — it conforms and audits a document the student wrote; it is not a ghostwriter.** 🔵 **The engagement value is that norm compliance is mechanically checkable and currently done by hand across every Brazilian university.** CI configured; pushed `2026-10-27` |
 | xuexitong-cli | https://github.com/DanMo661/xuexitong-cli | **MIT — byte-read** (`1,065 B`, `sha256:3486ae61…`) | 24 | APAC | **New this pass (`p813`) — the anchor of the Chaoxing/学习通 cluster and the most-starred APAC education agent in this base.** 🇨🇳 CLI + MCP server + desktop watcher over 学习通: timetable (with `.ics` export), assignment deadlines, exams, chapter task-points, notices,材料 download, cloud disk. `2` forks, pushed `2026-10-27`, created `2026-09-11`. 🟢 **Read-only by DECLARATION: *"所有工具均为 GET/查询语义，不提交任何表单"*.** 🟢 **Credentials env-var first (`CHAOXING_PHONE`/`CHAOXING_PASSWORD`), *"凭据不落盘"*; `config.json` and `session_cookies.json` gitignored *"绝不入库"*.** 🟢 **Turns the abuse case away in its own README (`T36` Tier 1): *"自动签到/刷课/答题类需求请绕行"*.** 🔵 Renamed `chaoxing-mcp` → `xuexitong-mcp` → here — see `T22` |
 | chaoxing-mcp (Han-maker-wp) | https://github.com/Han-maker-wp/chaoxing-mcp | **MIT — byte-read** (`1,069 B`, `sha256:55fe2518…`) | 15 | APAC | **New this pass (`p813`) — `T36` Tier 2.** 🇨🇳 Direct-HTTP 学习通 server, sub-second, cookie persistence across restarts. Every tool labelled `🟢 只读`; account stays on the user's machine (*"没有任何中间服务器"*). 🔴 **Ships a REVERSE-ENGINEERED AES login (the phone/password encryption parameters lifted from Chaoxing's JS) and documents `XT_PASSWORD` as a PLAINTEXT value in the MCP client config block** — same defect class as `p812`'s SIGAA servers. 🔵 Ships an `AGENTS.md` written for the installing agent |
 | chaoxing (DeliciousBuding) | https://github.com/DeliciousBuding/chaoxing | **Apache-2.0 — byte-read** (`11,324 B`, `sha256:50e67517…`) | 0 | APAC | 🔴 **New this pass (`p813`) — SHELVED AS A WARNING, `T36` Tier 3: DO NOT ADOPT.** 🟢 **The best security architecture in this base:** one Go binary, three separated surfaces (React console / remote `POST /mcp` / loopback `POST /call`), OAuth scopes that *"can narrow but never widen"*, **no generic `write` scope by design**, PBKDF2 owner password, AES-GCM credential+cookie vault with a separately stored key, CSRF + `__Host-` session cookie, HTTPS-only publication, and a contract that never returns raw credentials, cookies, tokens or captcha secrets. 🔴 **And its scope list includes `chaoxing.sign` — *"normal, location, and operator-coded password/gesture sign-in"* — with a watcher that polls classes during course hours and submits attendance automatically, plus "answer generation and coursework submission".** 🔴 **Licence-safe, un-shippable. Cite the architecture, never the product** |
@@ -408,6 +564,11 @@ are deliberately NOT shelved. They are leads for the next pass, not findings.
 
 | Agent | Repo | License | Stars | What it does |
 |---|---|---|---|---|
+| PDFMathTranslate | https://github.com/PDFMathTranslate/PDFMathTranslate | **AGPL-3.0 — byte-verified** (`34,522 B`, `sha256:20b067f8…`, title line `GNU AFFERO GENERAL PUBLIC LICENSE`) | 38407 | **New this pass (`p814`) — the largest repository this base has shelved in any industry, and it is an EDUCATION tool nobody here had measured.** EMNLP 2025 demo: scientific-paper PDF translation that preserves layout, formulas, tables and figures. 🟢 **The research-library layer's highest-value capability for a non-English programme: a Spanish-, Portuguese- or Chinese-language cohort reading English-language literature.** 🔴 **AGPL-3.0: run it as a separate service behind an API, never derive from it or link it into a client deliverable.** Pushed `2026-11-13` |
+| llm-for-zotero | https://github.com/yilewang/llm-for-zotero | **AGPL-3.0 — byte-verified** (`34,519 B`, `sha256:d8de5179…`, title line `GNU AFFERO GENERAL PUBLIC LICENSE`) | 3556 | **New this pass (`p814`).** Open research-agent system over a Zotero library. 🔵 **Its licence payload is BYTE-IDENTICAL to `papersgpt-for-zotero`'s below (`34,519 B`, same hash) and the two are unrelated projects — which is the evidence for `T41`'s bound, not evidence of lineage.** Pushed `2026-11-10` |
+| papersgpt-for-zotero | https://github.com/papersgpt/papersgpt-for-zotero | **AGPL-3.0 — byte-verified** (`34,519 B`, `sha256:d8de5179…`, title line `GNU AFFERO GENERAL PUBLIC LICENSE`) | 2706 | **New this pass (`p814`).** Zotero plugin: chat with PDFs and whole-library question answering. The most-starred in-Zotero plugin of the layer. Pushed `2026-11-13` |
+| Aldine | https://github.com/trahloff/Aldine | **AGPL-3.0 — byte-verified** (`34,522 B`, `sha256:4df3c306…`, title line `GNU AFFERO GENERAL PUBLIC LICENSE`) | 126 | **New this pass (`p814`) — self-hosted collaborative LaTeX editor, an Overleaf alternative.** 🟢 **The AUTHORING end of the layer: `abnt-mcp` audits a manuscript and `zoteus` cites into it, and this is where a thesis is actually written. Self-hosting matters for institutions that cannot send unpublished work to a SaaS.** 🔴 **AGPL-3.0 and it is a hosted service by design, so the network-use clause is live: offering it to students triggers the source obligation.** Pushed `2026-11-12` |
+| lc-vocabularies-mcp | https://github.com/msuicaut/lc-vocabularies-mcp | **GPL-3.0 — byte-verified** (`35,148 B`, `sha256:8b1ba204…`, title line `GNU GENERAL PUBLIC LICENSE`) | 4 | **New this pass (`p814`) — and the honest answer to "what does North America's national-institution layer hold?": exactly one repository, and it is copyleft.** Experimental MCP server over the Library of Congress linked-data vocabularies (subject headings, name authorities). 🔵 **Its licence payload is byte-identical to `pkp/ojs`'s and `pkp/pkp-lib`'s (`35,148 B`, `sha256:8b1ba204…`) across three unrelated projects — a THIRD independent confirmation of `T41`'s bound.** 🔴 **GPL-3.0: a separate process, not a library.** Pushed `2026-03-24` |
 | expeditto | https://github.com/fabrica-de-inovacao/expeditto | **AGPL-3.0 — byte-verified** (`34,523 B`, `sha256:0d96a4ff68ad6d4b…`, title line `GNU AFFERO GENERAL PUBLIC LICENSE`) | 1 | **New this pass (`p812`), and the only agent in this base whose user is a TEACHER doing compliance paperwork rather than a student studying.** *"Expeditto: seu segundo expediente, resolvido. Prepara o RIT do SUAP (IFMA) como rascunho, via CLI e MCP."* The **RIT** (*Registro Individual de Trabalho*) is the workload return Brazilian federal-institute teachers must file in **SUAP**, the Instituto Federal administrative suite. 🟢 **The write gate is in the product definition, not bolted on: it prepares the RIT *as a draft* (`rascunho`) and a human files it.** 🔵 **That is the cleanest statement of `P6`/`P26`'s principle found so far — the agent does the assembly and never the submission — and it is worth quoting to any client nervous about agents touching a system of record.** 🔴 **AGPL-3.0: integrate as a separate service, never derive.** 🔵 Its licence payload is byte-identical to `LearnHarness`'s (`34,523 B`, `sha256:0d96a4ff68ad6d4b…`), which corroborates both as stock AGPL-3.0 rather than a modified grant. Created `2026-09-30`, pushed `2026-10-22` |
 | edu-by-agent | https://github.com/Severnbli/edu-by-agent | GPL-3.0 | 0 | **New this pass (`p811`), and the FIFTH independent instance of preview-then-confirm (`T20`).** *"CLI, MCP server and Claude Code skills for managing school websites in the **edu.by** site constructor: pages, menus, news, images – **with preview and confirmation before every write**."* `edu.by` is the Belarusian national school-website constructor. Created `2026-11-09`, pushed `2026-11-13` — the day of this pass. 🔴 **GPL-3.0, so the code propagates**: take the preview/confirm write gate, which is stated as a property of EVERY write rather than of selected verbs. 🔴 `0★`, four days old |
 | pronoteConnect | https://github.com/sairo-cyber/pronoteConnect | **GPL-3.0-or-later — byte-verified, against GitHub's `NOASSERTION`** | 2 | **New this pass (`p811`), and `T27`'s third direction: `NOASSERTION` masked INHERITED copyleft.** *Connecteur **PRONOTE** open source et auto-hébergé pour ChatGPT via MCP, avec connexion **EduConnect** locale* — PRONOTE is the dominant French secondary-school information system and EduConnect is the state identity provider. Created and pushed `2026-09-08`. 🟢 **`LICENSE` read first-hand on `raw.githubusercontent.com`: line 1 is `SPDX-License-Identifier: GPL-3.0-or-later`.** 🔴 **And the file states WHY, which is the commercially important part: *"This license choice is compatible with the declared GPL-3.0-or-later license of the `@blockshub/pawnote-lts` dependency used by this prototype."*** 🔵 **The copyleft is not the author's preference, it is inherited from the only available PRONOTE client library — so a permissive French PRONOTE agent cannot be produced by relicensing this repo; it requires a clean-room client.** See `T33` |
@@ -426,6 +587,15 @@ Globant can build a client deliverable on.
 
 | Candidate | Repo | Actual license | Stars | Why rejected |
 |---|---|---|---|---|
+| academic-research-mcp | https://github.com/0jsDanny/academic-research-mcp | 🟡 **MIT, byte-read and VALID** (`1,084 B`, `sha256:2a3fdf99…`, holder `Daniel Santos & Contributors`) — 🔴 **rejected on a basis the licence cannot cure** | 0 | 🔴 **New rejection this pass (`p814`), and the specimen that establishes the THIRD risk axis (`T40`).** 🟢 **Axis (a) is clean — it needs no learner credential at all. Axis (b) is clean — it retrieves literature and submits no coursework. `p813`'s two-axis grade would have SHELVED this row.** 🔴 **And it is unshippable, because its own README documents the mechanism: *"**Sci-Hub** \| Subscription Journals \| Automated TLS spoofing via `curl_cffi` to bypass paywalls and bot challenges"*, with `download_scihub_pdf` and `search_scihub_by_doi` as first-class tools and a "Sci-Hub Mirror" branch in its architecture diagram.** 🔴 **Paywall circumvention is a legality question about the DATA SOURCE, independent of the licence on the code and of how the credential is handled. A studio cannot ship it, fork it, or cite it.** 🔵 **Contrast `openags/paper-search-mcp` on the build-safe shelf: same source, last in an OA-first chain and optional — a configuration obligation, not a rejection. The axis is three-valued: clean / configurable / STRUCTURAL** |
+| cnki-skills | https://github.com/cookjohn/cnki-skills | 🔴 **No licence — `404` for `LICENSE`, `LICENSE.md`, `LICENSE.txt` and `LICENSE-MIT` at `main` AND `master`, while `README.md` returns `200`** | 1067 | 🔴 **New rejection this pass (`p814`) — the most-starred ungranted repository in this base by a wide margin, and the APAC counterpart to `p813`'s `moodle-mcp` lesson.** 🇨🇳 CNKI (中国知网) skills for Claude Code: search papers, browse journals, check indexing status, download PDF/CAJ, export to Zotero. 🔴 **Rejected on the licence alone: `1,067★` buys no permission.** 🟡 **And a second, SEPARATE question a studio must not conflate with Sci-Hub: it drives the user's own manually authenticated Chrome session (*"Chrome browser (login handled manually for downloads)"*), so the issue is the INSTITUTION'S subscription terms on automated bulk retrieval — a terms-of-use matter, not copyright circumvention.** 🔵 **Naming that distinction precisely is the point: `T40` grades the data source, and "unlawful" and "outside your licence" are different findings with different remedies** |
+| ScienceClaw (AgentTeam-TaichuAI) | https://github.com/AgentTeam-TaichuAI/ScienceClaw | 🔴 **No licence — no payload at either branch root; repository EXISTS (positive control fires)** | 682 | 🔴 **New rejection this pass (`p814`).** Personal research assistant built with LangChain. 🔵 **Half of a name-collision group: created `2026-03-13`, two days after `beita6969/ScienceClaw` (`2026-03-11`, MIT but with a third-party holder line). Neither is established as canonical, and this half has no grant at all** |
+| docsagent | https://github.com/docsagent/docsagent | 🔴 **No licence — no payload at either branch root; `README.md` `200`** | 580 | 🔴 **New rejection this pass (`p814`).** Private document access for AI agents — squarely the research-library layer's use case, at `580★`, with no grant |
+| ZotSeek | https://github.com/introfini/ZotSeek | 🔴 **No licence — no payload at either branch root; `README.md` `200`** | 239 | 🔴 **New rejection this pass (`p814`).** AI semantic search for Zotero with a built-in MCP server. 🔴 **The highest-starred ungranted Zotero agent, and the capability (semantic search over the library) that the build-safe rows cover least well — so this is the pass's most expensive rejection after `cnki-skills`** |
+| ZotLink | https://github.com/TonybotNi/ZotLink | 🔴 **No licence — no payload at either branch root; `README.md` `200`** | 137 | 🔴 **New rejection this pass (`p814`).** Self-described production-ready Zotero MCP server for saving open preprints (arXiv and others). 🔵 *"Production-ready"* and ungranted is a contradiction a studio should name to the author |
+| zotero-mcp-setup | https://github.com/ehawkin/zotero-mcp-setup | 🔴 **No licence — no payload at either branch root; `README.md` `200`** | 51 | 🔴 **New rejection this pass (`p814`).** Install scripts and a user guide for Zotero MCP — documentation, not an agent, and ungranted either way |
+| koha-mcp-server (wrecks1997) | https://github.com/wrecks1997/koha-mcp-server | 🔴 **No licence — no payload at either branch root; `README.md` `200`** | 2 | 🔴 **New rejection this pass (`p814`).** MCP server over a specific institution's Koha catalogue (GBS library). 🔵 **Name-collision with the build-safe `asjolaviral/koha-mcp-server`, and the two are separated by the licence channel alone — same name, same purpose, opposite verdict** |
+| agentilab-openalex | https://github.com/simonpierreboucher02/agentilab-openalex | 🔴 **No licence — no payload at either branch root; `README.md` `200`** | 0 | 🔴 **New rejection this pass (`p814`).** OpenAlex API docs, MCP server and agent skill over the free open catalogue. 🔵 **Use `leomcamilo/bx-scholar-mcp` (MIT) for the same catalogue instead** |
 | moodle-mcp (loyaniu) | https://github.com/loyaniu/moodle-mcp | 🔴 **No licence — `404` for `LICENSE`, `LICENSE.md`, `LICENSE.txt` and `COPYING` at `main` AND `master`, while `README.md` returns `200` at both** | 57 | 🔴 **New rejection this pass (`p813`), and the most expensive one this base has ever recorded.** At `57★` and `17` forks it is **the most-starred Moodle MCP server in existence** and the first hit on every `moodle mcp` query — so it is precisely the row a future pass shelves by reflex and an engagement then depends on. 🟢 **The positive control fires: the repository EXISTS (`README.md` `200`) and simply has no grant** (`T37`). 🔴 **No licence means no permission: not forkable, not vendorable, not citable as a dependency.** 🔵 **Contact-the-author is the cheapest unblock in this base — one `LICENSE` commit converts the tier's anchor into a build-safe row** |
 | tronclass-mcp (markbee66) | https://github.com/markbee66/tronclass-mcp | 🔴 **No licence — `404` at both branch roots; `README.md` `200`** | 1 | 🔴 **New rejection this pass (`p813`).** 🇹🇼 TronClass is the LMS of a large share of Taiwanese universities. `2` forks |
 | TronClass-MCP (cantpr09ram) | https://github.com/cantpr09ram/TronClass-MCP | 🔴 **No licence — `404` at both branch roots; `README.md` `200`** | 3 | 🔴 **New rejection this pass (`p813`) — the most-starred and oldest of the TronClass tier (`2025-04-12`), and still ungranted after nineteen months** |
@@ -450,6 +620,39 @@ Globant can build a client deliverable on.
 | AI-Grading-Tool | https://github.com/end13s/AI-Grading-Tool | **No licence file — sidebar shows none** | 0 | **New rejection this pass (`p808`).** The only *Moodle*-targeted grader found in the LMS-seam leg, and functionally the closest fit to a real client ask: imports a Moodle roster and submissions, has an LLM check each one against the instructor's rubric, routes every result through human review, then exports grades back to Moodle. 🔴 **`134` commits and no grant of any kind — the default is all-rights-reserved.** 🔵 **This is the fourth education repository in this base to be substantial and unlicensed** (`llamatutor` `2.1k★`, `AITutor-EvalKit`, `educational-agents`, now this), which is itself the finding recorded as `T24`. Worth an upstream licence request; cannot be adopted as published. |
 
 ## Declared gaps
+
+- 🔴 **`p814` — the lineage of the `ScienceClaw` name-collision group is UNRESOLVED, and it is
+  registered rather than guessed.** [`beita6969/ScienceClaw`](https://github.com/beita6969/ScienceClaw)
+  (`1,028★`, MIT, created `2026-03-11`) carries an MIT holder line naming `Peter Steinberger`,
+  who is not the repository owner; [`AgentTeam-TaichuAI/ScienceClaw`](https://github.com/AgentTeam-TaichuAI/ScienceClaw)
+  (`682★`, no licence, created `2026-03-13`) is the sibling. 🔴 **`search/repositories` reports
+  `fork: false` for both, and `p814` established that the field misses re-uploads (`T41`), so the
+  channel cannot settle it.** 🔵 **What WOULD settle it: full-history comparison, which needs
+  per-repository API reads — blocked for unattached repositories in this environment. Cite
+  `arXiv:2610.08691`, not the repository, until then.**
+
+- 🔴 **`p814` — North America's national-institution layer is a MEASURED `1`, not a nil, and it
+  is copyleft.** Queries run this pass: `q="library of congress mcp catalog"` → `total_count=1`,
+  and it is [`msuicaut/lc-vocabularies-mcp`](https://github.com/msuicaut/lc-vocabularies-mcp)
+  (GPL-3.0, `4★`); `q="apa citation style mcp"` → `total_count=0`; `q="eric ed.gov mcp education
+  research"` → `total_count=0`. 🟢 **So North America is NOT thin on this layer overall — it is
+  served through NIH/NLM (`q="pubmed mcp"` → `318` repositories, `genomoncology/biomcp` at `679★`
+  shelved build-safe).** 🔵 **The transferable reading: the United States binds its education and
+  research agents to AGENCY APIs (NIH/NLM, `NCBI_API_KEY`), not to a cultural-institution
+  catalogue — the inverse of 🇦🇲 Armenia and 🇧🇷 Brazil this pass.**
+
+- 🔴 **`p814` — a HARD NIL on the admissions layer, measured in both directions.**
+  `q="ucas admissions mcp"` → `total_count=0` (🇬🇧 UK) and `q="enem vestibular mcp agente"` →
+  `total_count=0` (🇧🇷 Brazil). 🔵 **Two national admissions systems that gate access to higher
+  education for millions, and zero agentic surface of any licence on this channel. The widest
+  open slot `p814` found, and it is open in both hemispheres.**
+
+- 🟡 **`p814` — the layer's SEMANTIC-SEARCH capability is the one a build-safe row covers least
+  well, and the gap is a licence gap, not a capability gap.** The strongest semantic search over
+  a Zotero library is [`introfini/ZotSeek`](https://github.com/introfini/ZotSeek) (`239★`) and it
+  carries no grant; [`yuanjua/chiken`](https://github.com/yuanjua/chiken) (MIT, `90★`) and
+  [`oscardvs/zoteus`](https://github.com/oscardvs/zoteus) (MIT, `65★`) cover it at a quarter of
+  the attention. 🔵 **Cheapest unblock in the pass: one `LICENSE` commit by `introfini`.**
 
 - **🟢 CLOSED this pass (`p812`): the `LATAM 0` gap — and the reason it stood for sixteen passes
   is a search defect, stated precisely so it is not repeated.** Eight rows now attach to systems

@@ -6,8 +6,12 @@ updated: 2026-11-13
 
 # Education AI — current trends
 
-**Thirty-eight** trends — derived trends: **38** — each with the evidence behind it and
-what it implies for an engagement. 🟢 **Eighteenth pass (`p813`, 2026-11-13): `T36`–`T38` added,
+**Forty-three** trends — derived trends: **43** — each with the evidence behind it and
+what it implies for an engagement. 🟢 **Nineteenth pass (`p814`, 2026-11-13): `T39`–`T43` added —
+a whole system layer this base had never queried (`T39`), a THIRD risk axis (`T40`), the
+byte-hash instrument bounded and shown to beat GitHub's own `fork` field (`T41`), the region rule
+corrected to follow the CATALOGUE (`T42`), and the licence field shown to measure a filename
+(`T43`).** 🔵 **Re-derived after insertion: `grep -cE '^## T[0-9]+ —' intel/trends.md` = `43`. 🟢 **Eighteenth pass (`p813`, 2026-11-13): `T36`–`T38` added,
 `T31`/`T34` generalised into a single stated rule, and `T22` given a mechanical instrument.**
 🟢 **And `ingest/derive-counts.py` now returns `EXIT=0` on ALL FIVE graded files for the first
 time** — `repos/foundations.md` and `verticals/solutions.md` had been RED since `p718`, which
@@ -62,6 +66,144 @@ the second time.** 🔵 **The amendment uses no component discovered this pass**
 three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
+
+## T39 — The education agent market has TWO system layers, not one, and the one the industry talks about is the smaller by two orders of magnitude
+
+🔴 **Evidence, measured `2026-11-13` on `gh api -X GET search/repositories`.** The LMS/SIS layer —
+Moodle, Canvas, Chaoxing, StudentVUE, Schoology, Skyward, SIGAA, TronClass, SIAKAD, NEIS — is
+where eighteen passes of this base harvested, and its star ceiling is `98★`
+(`WeiWeiK/no-8-a.m.-class`, a TronClass check-in script). 🟢 **The research-library layer —
+Zotero, OpenAlex, CrossRef, arXiv, PubMed, DSpace, OJS, Koha — returns `348` repositories on
+`q="zotero mcp"` and `318` on `q="pubmed mcp"`, with `PDFMathTranslate` at `38,407★`,
+`Galaxy-Dawn/claude-scholar` at `6,046★`, `54yyyu/zotero-mcp` at `5,908★` and
+`openags/paper-search-mcp` at `3,085★`.**
+
+🔵 **Why the gap exists, and it is not a measurement artifact.** An LMS agent is written by one
+student against one university's deployment and is useful to that university. A reference-manager
+agent is written against Zotero's published API and is useful to every researcher on earth.
+🟢 **The LMS layer is fragmented by procurement; the library layer is unified by the catalogue.**
+
+🔵 **What it implies for an engagement.** 🔴 **Entering a university client at the LMS buys small,
+regionally locked, frequently integrity-compromised tooling.** 🟢 **Entering at the library buys
+maintained, permissively licensed, read-only tooling — and `DSpace` is **BSD-3-Clause**, the only
+major education platform a studio can fork and ship inside a deliverable without a source
+obligation.** 🔵 **The budget sits in a different place too: with the library and the research
+office, not with the IT function that owns the LMS.**
+
+## T40 — Agent risk in education has THREE independent axes, and the third is the legality of the DATA SOURCE
+
+🟢 **`T36` established two axes: (a) how the agent handles the learner's credential, and (b) what
+the tool does once authenticated.** 🔴 **Both can be clean while the tool remains unshippable.**
+
+🔴 **The specimen.** [`0jsDanny/academic-research-mcp`](https://github.com/0jsDanny/academic-research-mcp)
+is MIT with a byte-read, valid payload; it needs **no** learner credential; it submits **no**
+coursework. 🔴 **And its own capability table reads *"**Sci-Hub** | Subscription Journals |
+Automated TLS spoofing via `curl_cffi` to bypass paywalls and bot challenges"*, with
+`download_scihub_pdf` and `search_scihub_by_doi` as named tools.** 🟢 **A two-axis grade shelves
+it. A three-axis grade rejects it.**
+
+🟢 **Axis (c) is three-valued, and all three states were found in one layer in one pass:**
+
+| Grade | Specimen | ★ | What an engagement must do |
+|---|---|---|---|
+| 🟢 **Clean** | `genomoncology/biomcp` (MIT) | 679 | Nothing — sources are NIH/NLM and ClinicalTrials.gov, and its README states the per-source obligation and ships `docs/reference/source-licensing.md` |
+| 🟡 **Configurable** | `openags/paper-search-mcp` (MIT) | 3,085 | Ship with the optional Sci-Hub path disabled, and RECORD that it was: the chain is OA-first (`source-native → OpenAIRE/CORE/Europe PMC/PMC → Unpaywall → optional Sci-Hub`) |
+| 🔴 **Structural** | `0jsDanny/academic-research-mcp` (MIT) | 0 | Reject. No configuration removes the headline feature |
+
+🟡 **And a distinction that must not be collapsed, because the remedies are different people.**
+[`cookjohn/cnki-skills`](https://github.com/cookjohn/cnki-skills) (`1,067★`, no licence) drives
+the user's **own manually authenticated** CNKI session — so the question is the institution's
+subscription terms on automated bulk retrieval, answerable by the library's licence desk.
+🔴 **Sci-Hub is copyright circumvention, answerable by nobody.** 🔵 ***"Unlawful"* and *"outside
+your licence"* are different findings with different owners, and an engagement that files them
+together will mis-escalate one of them.**
+
+🟢 **The antidote is already on the shelf as a WORKFLOW rather than a warning.**
+[`suren-kk/armenian-national-library-mcp`](https://github.com/suren-kk/armenian-national-library-mcp)
+(MIT) puts the rights check before retrieval: *"Review the record's rights and access fields.
+When access is public and your intended use is permitted, call `list_item_files` or
+`get_file_download`"*. 🔵 **Copy that sequence into any engagement that touches a repository, and
+pair it with `genomoncology/biomcp`'s per-source licensing document as the deliverable's own
+artifact.**
+
+## T41 — A licence byte-hash establishes lineage only where the stock text embeds a HOLDER, and GitHub's own `fork` field misses re-uploads that the hash catches
+
+🟢 **`T37` established the byte-hash as a de-duplication instrument. This trend states its reach
+and its bound, both measured `2026-11-13`.**
+
+🟢 **Where it beats the platform.**
+[`lricher7329/zotero-mcp-claude-code`](https://github.com/lricher7329/zotero-mcp-claude-code)
+(`45★`) returns a licence payload byte-identical to
+[`cookjohn/zotero-mcp`](https://github.com/cookjohn/zotero-mcp)'s — `1,091 B`,
+`sha256:e8ed0429…`, holder string `the Zotero-MCP project contributors` — 🔴 **while
+`search/repositories` reports `fork: false` for it.** 🔵 **A re-upload is not a GitHub fork, so
+the platform's lineage field is blind to it and the hash is not.**
+
+🔴 **Where it proves nothing.** `yilewang/llm-for-zotero` and `papersgpt/papersgpt-for-zotero`
+return byte-identical AGPL-3.0 payloads (`34,519 B`, `sha256:d8de5179…`) and are unrelated
+projects. `msuicaut/lc-vocabularies-mcp`, `pkp/ojs` and `pkp/pkp-lib` return byte-identical
+GPL-3.0 payloads (`35,148 B`, `sha256:8b1ba204…`) across three unrelated projects.
+
+🔵 **The mechanism, stated so it is not re-derived.** Stock MIT and BSD text embeds a
+`Copyright (c) <year> <holder>` line, so byte identity is a claim about a HOLDER. Stock AGPL and
+GPL text carries the holder in per-file headers instead, so byte identity is only a template
+check. 🟢 **Use the hash for lineage on MIT/BSD; use it for template conformance on AGPL/GPL.**
+
+🟡 **The corollary: an MIT holder line is an AUTHORSHIP claim that can disagree with the
+repository owner.** [`beita6969/ScienceClaw`](https://github.com/beita6969/ScienceClaw) (`1,028★`)
+names holder `Peter Steinberger`, who is not the owner, and has a same-name sibling created two
+days later with no licence at all. 🔵 **Where holder and owner disagree, cite the paper and flag
+the provenance; do not promote the row to canonical.**
+
+## T42 — Agent supply is attached to the system a learner logs into, and that system's REGION is the region of its CATALOGUE, not of its users
+
+🟢 **`T31` and `T34` generalised into a rule at `p813`: education agent supply attaches to the
+system a learner logs into, and that system is regional even where the LMS is not.** 🔴 **`p814`
+found the rule's missing half: the attachment holds, but the REGION follows what the system
+catalogues, not who uses it.**
+
+🔴 **`17` of `p814`'s `25` build-safe rows are `Global`, and `Global` is now `55%` of the shelf
+(`70` of `128`).** 🟢 **That is not a placement regression. An LMS is national because a ministry
+or a university procures it; Zotero, OpenAlex, CrossRef, arXiv and Semantic Scholar are global,
+so an agent over them has no nation to attach to.**
+
+🟢 **Where the layer IS placed, it is placed by one of four bindings, and this is the question to
+ask of any candidate — not "where is the author", which `T32` already established is a privacy
+boundary and not resolvable:**
+
+| Binding | Region | Specimen |
+|---|---|---|
+| A national **STANDARDS BODY** | **LATAM** | 🇧🇷 ABNT NBR 14724 / 10520:2023 / 6023 / 6022 / 6024 / 6027 / 6028 + IBGE — `PedroSmaxY/abnt-mcp` |
+| A national **INSTITUTION** | **EMEA** | 🇦🇲 the National Library of Armenia's DSpace 9 — `suren-kk/armenian-national-library-mcp` |
+| A national **AGENCY API** | **North America** | 🇺🇸 NIH/NLM — PubMed, PubTator3, PMC OA, ClinVar, ClinicalTrials.gov, `NCBI_API_KEY` — `genomoncology/biomcp` |
+| A **LANGUAGE** audience over global catalogues | **APAC** | 🇨🇳 中文科研用户 — `wp-a/nature-academic-search` |
+
+🔵 **The engagement consequence: for the research layer, ask the client which catalogue, which
+standard and which language — not which country. For the LMS layer, `T31`'s original rule still
+holds, and the two layers need different discovery questions.**
+
+## T43 — GitHub's licence field measures a FILENAME, and the upstream of the largest agent layer in education reads as unlicensed because of it
+
+🔴 **[`zotero/zotero`](https://github.com/zotero/zotero) (`15,942★`) reports
+`license.spdx_id = NOASSERTION`.** 🟢 **It is fully licensed: a `35,358 B` AGPL payload sits at
+**`COPYING`** (`sha256:5b7dc919…`, *"Zotero is Copyright © 2018 Corporation for Digital
+Scholarship, Vienna, Virginia, USA"*), while `LICENSE`, `LICENSE.txt`, `license.txt` and
+`COPYING.txt` all return `404`.**
+
+🔴 **Why this matters to this base specifically: the rejection table rejects rows on exactly that
+signal** — "no payload at `LICENSE`/`LICENSE.md`/`LICENSE.txt` at either branch root" — 🟢 **and
+`COPYING` must therefore stay in every probe list, or the instrument will one day reject the
+upstream of its own largest layer.**
+
+🔵 **What it implies for a client conversation.** 🟢 **Zotero being AGPL is the structural reason
+the `348`-repository layer above it is MIT-dense: every agent integrates over MCP, the Web API v3
+or the Zotero 10+ local API, and none of them derive from it.** 🔵 **"The platform is copyleft and
+the ecosystem is permissive" is a shippable architecture, and it is worth saying out loud to a
+procurement team that hears "AGPL" and stops listening.** 🟡 **The counter-case in the same layer:
+[`zotero/translators`](https://github.com/zotero/translators) (`1,736★`), the ~600 site-specific
+metadata scrapers that make one-click capture work, has NO payload at either branch root — so the
+most-reused asset in the layer carries no machine-readable permission. Call Zotero and let Zotero
+call it; do not vendor it.**
 
 ## T34 — LATAM's education agent supply is attached to UNIVERSITY SELF-MANAGEMENT systems, it CONSOLIDATES rather than scatters, and it carries the best credential engineering in this base
 

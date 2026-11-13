@@ -4,6 +4,77 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (nineteenth pass) — **An entire system layer that eighteen passes never queried, `348` repositories deep, with a star ceiling 390× higher than the layer we were harvesting**
+
+**Pass `p814`.** 🟢 **Thirty rows added — `25` build-safe (MIT ×24, Apache-2.0 ×1) and `5`
+copyleft, every licence byte-read; `9` rejected.** 🟢 **`Global 70 · APAC 18 · EMEA 16 ·
+North America 14 · LATAM 10` = `128` build-safe, re-derived on the file.**
+
+### The headline: we were reading "the system a learner logs into" as the LMS, and a researcher logs into a library
+
+`p811`, `p812` and `p813` each closed a regional nil by naming that region's own LMS or SIS —
+national school portals, university self-management, `Chaoxing`/`StudentVUE`/`Schoology`.
+🔴 **The star ceiling across all three of those passes is `98★`.** 🟢 **`p814` asked what other
+system a learner logs into and queried the research library:**
+
+| Query | `total_count` | Top row | ★ | Licence |
+|---|---|---|---|---|
+| `zotero mcp` | 🟢 **`348`** | `PDFMathTranslate/PDFMathTranslate` | **38,407** | AGPL-3.0 |
+| `zotero mcp` | — | `Galaxy-Dawn/claude-scholar` | **6,046** | 🟢 MIT |
+| `zotero mcp` | — | `54yyyu/zotero-mcp` | **5,908** | 🟢 MIT |
+| `pubmed mcp` | 🟢 **`318`** | `openags/paper-search-mcp` | **3,085** | 🟢 MIT |
+| `scielo mcp` | `3` | `PedroSmaxY/abnt-mcp` 🇧🇷 | 2 | 🟢 MIT |
+| `dspace mcp` | `19` | `mpasternak/dspace-mcp` 🇵🇱 | 3 | 🟢 MIT |
+| `koha mcp` | `11` | `asjolaviral/koha-mcp-server` | 1 | 🟢 MIT |
+| `open journal systems mcp` | `2` | `mpasternak/ojs-mcp` 🇵🇱 | 1 | 🟢 MIT |
+| `ucas admissions mcp` | 🔴 **`0`** | — | — | hard nil |
+| `enem vestibular mcp agente` | 🔴 **`0`** | — | — | hard nil |
+| `apa citation style mcp` | 🔴 **`0`** | — | — | hard nil |
+| `eric ed.gov mcp education research` | 🔴 **`0`** | — | — | hard nil |
+| `library of congress mcp catalog` | `1` | `msuicaut/lc-vocabularies-mcp` | 4 | 🔴 GPL-3.0 |
+
+🔴 **Counted against this base's own index: of the `855` GitHub addresses published across the
+live shelves before this pass, ZERO were in this layer.**
+
+### What changed in the grading, and it is the part to carry forward
+
+🟢 **`p813` ruled that a candidate is graded on two axes — credential hygiene, and what the tool
+does once authenticated. `p814` found the specimen that passes both and is still unshippable, so
+there is a third axis: the legality of the DATA SOURCE.**
+
+| Grade | Specimen | ★ | Licence | Reading |
+|---|---|---|---|---|
+| 🟢 Clean | `genomoncology/biomcp` | 679 | MIT | NIH/NLM sources, and the README states the per-source terms obligation and ships the breakdown |
+| 🟡 Configurable | `openags/paper-search-mcp` | 3,085 | MIT | Sci-Hub is last and optional in an OA-first chain — ship it with that path off, and record that you did |
+| 🔴 Structural | `0jsDanny/academic-research-mcp` | 0 | MIT | *"Automated TLS spoofing via `curl_cffi` to bypass paywalls"* is the headline feature; no configuration removes it |
+
+🟡 **And a distinction with different remedies: `cookjohn/cnki-skills` (`1,067★`, no licence)
+drives the user's OWN manually authenticated CNKI session, which is an institutional
+subscription-terms question. Sci-Hub is copyright circumvention. "Unlawful" and "outside your
+licence" are not the same finding.**
+
+🟢 **The antidote is on the shelf as a workflow rather than a warning:
+`suren-kk/armenian-national-library-mcp` puts the rights check before retrieval — *"Review the
+record's rights and access fields. When access is public and your intended use is permitted,
+call `list_item_files` or `get_file_download`"*.**
+
+### Two instrument corrections this pass earned
+
+🟢 **`T41` — the licence byte-hash beat GitHub's own metadata, and then showed its own bound.**
+`lricher7329/zotero-mcp-claude-code` returns a payload byte-identical to `cookjohn/zotero-mcp`'s
+(`1,091 B`, `sha256:e8ed0429…`, same holder string) while the API reports `fork: false`. 🔴 **But
+`yilewang/llm-for-zotero` and `papersgpt/papersgpt-for-zotero` are byte-identical AGPL (`34,519 B`)
+and unrelated; `msuicaut/lc-vocabularies-mcp`, `pkp/ojs` and `pkp/pkp-lib` are byte-identical GPL
+(`35,148 B`) across three unrelated projects.** 🔵 **The hash is a lineage instrument only where
+the stock text embeds a holder line — MIT and BSD yes, AGPL/GPL no.**
+
+🟢 **`T43` — GitHub's licence field measures a FILENAME.** `zotero/zotero` (`15,942★`), the
+upstream of this entire layer, reports `NOASSERTION`, and carries a `35,358 B` AGPL payload at
+**`COPYING`** while `LICENSE`, `LICENSE.txt`, `license.txt` and `COPYING.txt` all `404`. 🔴 **This
+base rejects rows on exactly that signal, so `COPYING` must stay in the probe list.**
+
+---
+
 ## `2026-11-13` (eighteenth pass) — **The two thin regions close in one hour, APAC turns out to hold the densest agent cluster on earth, and the best-engineered agent in it is the one to refuse**
 
 **Pass `p813`.** 🟢 **Twenty-nine rows added, all build-safe, all licences byte-read; seven

@@ -11,7 +11,7 @@ The platforms and libraries an education engagement actually builds on, all veri
 licence-verified by BYTE-READ over `raw.githubusercontent.com`, controlled in both directions
 against two invented addresses (`T970`, `T37`).
 
-## Foundational repos — 76 rows
+## Foundational repos — 83 rows
 
 🟢 **Eighteenth pass (`p813`, 2026-11-13): the gate that could not read this file for ninety-five
 passes now reads it, and the number above is its output rather than a `grep` written by hand.**
@@ -34,6 +34,28 @@ python3 -I ingest/derive-counts.py        # the gate, now green on all five file
 carried unrun since `p808` is CLOSED — `frappe/education` has an agent surface, and it is
 first-party.** 🔵 **Count re-derived, not carried:** `grep -cE '^\| .*github\.com'
 repos/foundations.md` = `76` after insertion (`70` before). 🔵 **Superseded at `p813` by the machine count above.**
+
+## The research-library layer — 🟢 **the one platform tier in education that is PERMISSIVELY licensed** (new, nineteenth pass `p814`)
+
+🔴 **Eighteen passes of this file catalogued the LMS, the SIS, the ERP, the rostering, LTI, xAPI,
+SCORM and Caliper layers, and never once named the system a graduate student or a researcher
+actually logs into.** 🟢 **`p814` named it, and the headline is a licence: `DSpace` is
+BSD-3-Clause, which makes it the only major education platform in this base a studio can fork,
+embed and ship inside a client deliverable with no source obligation.**
+
+🟢 **Every licence below was byte-read this pass, not taken from the API field — which `T43`
+established is a measurement of a FILENAME.** `zotero/zotero` reads `NOASSERTION` on the search
+API and carries a full AGPL payload at `COPYING`.
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/DSpace/DSpace | 🟢 **BSD-3-Clause — byte-read** (`1,504 B`, `sha256:baf9ee18…`, title line `BSD 3-Clause`, holder `Copyright (c) 2002-2021`) | 1111 | 🟢 **New this pass (`p814`), and the most commercially significant row added to this file in nineteen passes.** The institutional-repository platform: Java, DSpace 7+ exposes a published REST API, pushed `2026-11-13`. 🟢 **BSD-3-Clause against Moodle's GPL-3.0, Open edX's AGPL-3.0, Koha's GPL-3.0, OJS's GPL-3.0 and OpenEduCat's LGPL-3.0 — the single permissive platform in the whole education stack.** 🔵 **It already has a build-safe agent surface in two regions: `mpasternak/dspace-mcp` 🇵🇱 (MIT, read-only by construction) and `suren-kk/armenian-national-library-mcp` 🇦🇲 (MIT, over the National Library of Armenia's DSpace 9)** |
+| https://github.com/zotero/zotero | 🟡 **AGPL-3.0 — byte-read at `COPYING`** (`35,358 B`, `sha256:5b7dc919…`, *"Zotero is Copyright © 2018 Corporation for Digital Scholarship, Vienna, Virginia, USA"*) — 🔴 **the search API reports `NOASSERTION` because `LICENSE`, `LICENSE.txt`, `license.txt` and `COPYING.txt` all `404`** | 15942 | 🟢 **New this pass (`p814`) — the upstream of a `348`-repository agent layer, and `T43`'s specimen.** 🔵 **The structural point for a client: because Zotero is copyleft, every agent above it integrates over MCP, the Web API v3 or the Zotero 10+ local API and NONE of them derive from it — which is exactly why that layer is MIT-dense on a copyleft base.** Pushed `2026-11-13` |
+| https://github.com/pkp/ojs | 🔴 **GPL-3.0 — byte-read** (`35,148 B`, `sha256:8b1ba204…`) | 1053 | 🟢 **New this pass (`p814`).** Open Journal Systems: the scholarly-publishing platform, PHP, pushed `2026-11-13`. 🔵 **LATAM-weighted in deployment — it is the backbone of Brazilian and Mexican university journals.** 🟡 **Week-zero prerequisite for any agent work: OJS answers `401` to every token-carrying request unless `api_key_secret` is set in `config.inc.php`, which the institution's admin must do.** Agent surface: `mpasternak/ojs-mcp` (MIT, writes off by default) |
+| https://github.com/pkp/pkp-lib | 🔴 **GPL-3.0 — byte-read** (`35,148 B`, `sha256:8b1ba204…` — byte-identical to `pkp/ojs`) | 353 | 🟢 **New this pass (`p814`).** The shared library under OJS, OMP and OPS. 🔵 **This is the real client-library layer `p813` went looking for and could not find one level down: the scholarly stack HAS a shared library, and the LMS stack does not** |
+| https://github.com/Koha-Community/Koha | 🔴 **GPL-3.0 — byte-read** (`35,150 B`, `sha256:9edff973…`) | 601 | 🟢 **New this pass (`p814`).** The integrated library system, Perl, pushed `2026-11-13`; run by public and academic libraries worldwide and strongest in 🇮🇳 India and APAC. 🟢 **Its REST API supports OAuth2 `client_credentials`, which is the strongest auth mechanism any agent in this base uses.** Agent surface: `asjolaviral/koha-mcp-server` (MIT) |
+| https://github.com/zotero/translators | 🔴 **No licence payload at either branch root** | 1736 | 🟢 **New this pass (`p814`), shelved as a WARNING row.** The ~`600` site-specific metadata translators that make Zotero's one-click capture work — the most reused asset in the whole layer. 🔴 **And no grant file at `main` or `master`, so `1,736★` of de-facto-standard scrapers carry no machine-readable permission.** 🔵 **Do not vendor it; call Zotero and let Zotero call it** |
+| https://github.com/ourresearch/openalex-api-tutorials | 🟢 **MIT** | 150 | 🟢 **New this pass (`p814`).** OurResearch's own notebooks for OpenAlex, the free and open scholarly catalogue (works, authors, institutions, funders). 🔵 **The catalogue has no credential and no paywall, which is why `leomcamilo/bx-scholar-mcp` (MIT) over it is the cheapest honest entry point in the layer — no Zotero, no subscription, no `T40` exposure.** 🟡 Last pushed `2024-04-25`: the tutorials are stale, the API is not |
 
 ## The client-library layer — 🔴 **it does not exist, and that is this pass's most commercially useful finding** (new, eighteenth pass `p813`)
 
