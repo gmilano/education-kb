@@ -1,7 +1,82 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-12
+updated: 2026-11-13
+---
+
+## `2026-11-13` — **`openedx/edx-platform` is gone as a name: the canonical repo is `openedx/openedx-platform`, and this KB had both as separate rows**
+
+**Window:** foundational and trending education repos, verified 2026-11-13 from
+the rendered repository page (GitHub license field + star count). 26 repos
+admitted to `repos/foundations.md` this pass.
+
+### The rename, and why it is a data defect and not a trivia item
+
+https://github.com/openedx/openedx-platform — AGPL-3.0, **8.2k stars**, "The
+Open edX LMS & Studio, powering education sites around the world!", README
+states *"Formerly known as edx-platform"*. Fetching
+`https://github.com/openedx/edx-platform` serves this same repository.
+
+Earlier passes of this KB carried `openedx/edx-platform` **and**
+`openedx/openedx-platform` as two separate entries. They are one repository. A
+compiler reading both produced two entities for one platform, which inflates
+the Open edX footprint and splits any star or license fact attached to it.
+Canonical name going forward: **`openedx/openedx-platform`**.
+
+### Verified star counts this pass
+
+| Repo | License | Stars | Layer |
+|---|---|---|---|
+| https://github.com/ankitects/anki | AGPL-3.0 (read from `LICENSE`; sidebar does not name it) | 32.8k | Spaced repetition |
+| https://github.com/bigbluebutton/bigbluebutton | LGPL-3.0 | 9.3k | Virtual classroom |
+| https://github.com/jupyterhub/jupyterhub | BSD-3-Clause | 8.4k | Teaching infrastructure |
+| https://github.com/openedx/openedx-platform | AGPL-3.0 | 8.2k | LMS/MOOC |
+| https://github.com/moodle/moodle | GPL-3.0 | 7.6k | LMS |
+| https://github.com/oppia/oppia | Apache-2.0 | 7.0k | Learning platform |
+| https://github.com/instructure/canvas-lms | AGPL-3.0 | 6.9k | LMS |
+| https://github.com/frappe/lms | AGPL-3.0 | 3.4k | LMS |
+| https://github.com/Khan/perseus | MIT | 1.6k | Exercise renderer |
+| https://github.com/jupyter/nbgrader | BSD-3-Clause | 1.4k | Autograding |
+| https://github.com/learningequality/kolibri | MIT | 1.2k | Offline-first learning |
+| https://github.com/sakaiproject/sakai | ECL-2.0 | 1.2k | Higher-ed suite |
+| https://github.com/overhangio/tutor | AGPL-3.0 | 1.1k | Open edX deployment |
+| https://github.com/chamilo/chamilo-lms | GPL-3.0 | 1.0k | LMS |
+| https://github.com/openeducat/openeducat_erp | LGPL-3.0 | 911 | SIS/ERP on Odoo |
+| https://github.com/getodk/collect | Apache-2.0 | 805 | Offline data collection |
+| https://github.com/francoisjacquet/rosariosis | GPL-2.0 | 654 | SIS |
+| https://github.com/GibbonEdu/core | GPL-3.0 | 638 | School management |
+| https://github.com/opencast/opencast | ECL-2.0 | 511 | Lecture capture |
+| https://github.com/ILIAS-eLearning/ILIAS | GPL-3.0 | 510 | LMS (EMEA public sector) |
+| https://github.com/pykt-team/pykt-toolkit | MIT | 461 | Knowledge tracing |
+| https://github.com/OS4ED/openSIS-Classic | GPL (README only) | 351 | SIS |
+| https://github.com/h5p/h5p-php-library | GPL-3.0 | 155 | Interactive content |
+| https://github.com/learningequality/kolibri-design-system | **none shown** | 53 | Design system |
+| https://github.com/1edtech/caliper-spec | IMS Global Spec Document License | 22 | Learning analytics spec |
+| https://github.com/openedx/openedx-ai-extensions | AGPL-3.0 | 17 | Official Open edX AI plugin point |
+
+### The structural finding: permissive licensing is absent from the LMS layer
+
+Of the eight real LMS platforms above, **seven are GPL-3.0 or AGPL-3.0**. The
+only permissive one is Sakai (ECL-2.0 — Apache-2.0 plus a university-oriented
+patent clause). Permissive licenses in education cluster in the *content and
+modelling* layer instead: Perseus (MIT), Kolibri (MIT), pykt-toolkit (MIT),
+Oppia (Apache-2.0), nbgrader and JupyterHub (BSD-3-Clause), ODK Collect
+(Apache-2.0).
+
+Read as engagement guidance: **build the AI layer permissively and mount it
+into the copyleft LMS over LTI 1.3**, rather than forking the LMS.
+
+### Non-trending, explicitly checked
+
+- **No general-purpose "GitHub trending" education repo surfaced from a primary
+  source this window.** GitHub's live trending page is not reachable through
+  this session's egress policy; all trending claims this pass come from
+  third-party roundups and were re-verified repo-by-repo. Star figures in those
+  roundups were consistently stale by 3–6k for the fast movers.
+- **No LTI 1.3 tool-provider library** reached the bar for a foundational row,
+  despite LTI being the key integration standard. Searched; the tooling is
+  fragmented per language. Open gap.
+
 ---
 
 ## `2026-11-12` · `p801` — **a fourth GitHub transport exists, it serves BLOBS, and the shelf caught the instrument before the instrument could publish**

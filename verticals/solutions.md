@@ -1,549 +1,86 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-12
+updated: 2026-11-13
 ---
 
-## 🆕 `p801` — **🟢 A PERMISSIVE LMS exists. `OpenOLAT` is byte-verified Apache-2.0, and five passes of this shelf missed it because its licence sidebar is blank. 🔴 And the one roundup-nominated "MIT LMS" is AGPL-3.0 on both channels.**
+# Education vertical platforms — real systems to customize AI on top of
 
-🟢 Machine output: [`grant-bytes`](../evidence/grant-bytes.2026-11-12-p801.tsv) · [`propagation-diff`](../evidence/propagation-diff.2026-11-12-p801.tsv).
+The education equivalent of "Odoo for ERP". These are the systems institutions
+already run; an AI engagement almost always means **adding an agent layer to one
+of these**, not replacing it. All licenses and star counts verified 2026-11-13
+from the repository page.
 
-🟢 **Every grant below is a PAYLOAD read at `HEAD`** on the git byte channel (`T954`), with size, title line and `affero` count — 🔴 **not a sidebar classification, which is what this shelf has been built on until now.**
+## The decision that governs every education engagement
 
-### 🟢 The platform layer is no longer uniformly copyleft — `T960`
+**Do not fork the LMS.** Seven of the eight significant open-source LMS
+platforms are GPL-3.0 or AGPL-3.0 (only Sakai is permissive, ECL-2.0). A fork
+makes the client's derived platform copyleft. Instead mount the AI layer as an
+**LTI 1.3 tool** or an **MCP server** against the platform's API, keep that
+layer MIT/Apache, and emit **xAPI** or **Caliper** events so the institution can
+report on it. Every pattern in `compose/patterns.md` follows this shape.
 
-🔴 **This shelf has carried a clean dichotomy for several passes: *"the platform layer is copyleft and the agent layer is permissive."*** 🟢 **`p801` breaks the first half with a payload.**
+## Learning management — the host systems
 
-| Platform | Grant, byte-verified | Bytes | ★ | Network-disclosure exposure |
-|---|---|---|---|---|
-| 🟢 **[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)** | 🟢 **Apache-2.0** · affero×`0` | `10,982 B` | `451` | 🟢 **NONE.** Permissive: modify and host without source disclosure, with an explicit patent grant |
-| [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 GPL-3.0 · affero×`3` | `35,147 B` | `7.6k` | 🟡 Copyleft on distribution; 🟢 **no network clause** |
-| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 GPL-3.0 · affero×`3` | `35,147 B` | — | 🟡 as `moodle` — **byte-identical licence file** |
-| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 **AGPL-3.0** · affero×`16` | `35,136 B` | `8.2k` | 🔴 **Serving it over a network triggers source disclosure** |
-| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** · affero×`16` | `33,893 B` | `3.4k` | 🔴 **Same network clause** — 🔴 **and an indexed roundup calls this one MIT** (`T959`) |
-| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 GPL-2.0 · affero×`0` | `15,214 B` | `654` | 🟡 Copyleft on distribution; 🔴 **no explicit patent grant** (GPL-2.0, `Version 2, June 1991`) |
-
-🔵 **How to read this, because the dichotomy was useful and is only now qualified:** the copyleft platforms still hold essentially the whole installed base, so most engagements remain AGPL/GPL conversations. 🟢 **But *"there is no permissive LMS to build on"* is now FALSE, and for a client who cannot accept the AGPL network clause `OpenOLAT` is the single most valuable row on this shelf.** 🔴 **Price `451★` as a staffing and continuity risk** — it is a small community, and that is a different risk from a licensing one, not a smaller one.
-
-🔴 **The reason this took so long to find is the finding underneath it (`T956`): `OpenOLAT`'s GitHub sidebar names NO licence.** Its README carries an `Apache 2.0` badge and the payload confirms it, but on a classifying channel it looks like an unlicensed repository. 🔵 **Any shelf built on classification will keep missing permissive projects that never filled that field in.**
-
-### 🔴 The agent→LMS write path, with its grant now certain
-
-🔴 **[`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) is byte-verified AGPL-3.0** — `34,524 B`, affero×`16`, `HEAD` `1c5424da9de3`. 🔴 **So the write path into the LMS is copyleft with a network clause**, which `p800` recorded as a classification and `p801` confirms as a payload. 🔴 **Deploy it across a service boundary, never linked into client code.** 🔴 **`p792-D`, TENTH pass: still no independent security or data-governance evaluation**, and its `27` LMS tools reach `deactivate_user`, `request_retirement`, `invalidate_certificate` and `bulk_enroll`.
-
-🟢 **The permissive attachment path, byte-verified this pass:** [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) — **Apache-2.0**, `10,273 B`, affero×`0`. 🔵 **LTI across a service boundary is how a permissively licensed agent attaches to a copyleft LMS without taking the copyleft with it.** 🔴 [`overhangio/tutor`](https://github.com/overhangio/tutor), the Open edX deployment path, is **AGPL-3.0** on bytes (`34,523 B`) — this shelf had not stated that beside it.
-
-### 🔴 Addresses corrected on this shelf — `ACTION p800-A`
-
-🟢 **Open edX** rows now write the canonical [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform). 🔵 **The grant bytes were never wrong** — the old slug is a transparent rename redirect to the same `HEAD` (`32e2f7d8ec6a`) and the same `35,136 B` payload, so the defect was findability, not data.
-
-🟢 **Fedena** row now writes the canonical [`projectfedena/fedena`](https://github.com/projectfedena/fedena) (`547★`) instead of the `4★` fork. 🔴 **These two ARE different repositories** (`68a84ac4` vs `333477b0`), and 🔴 **`p801` confirms on bytes that NEITHER serves a root licence blob** — the `Apache-2.0` claim in OpenEduCat's comparison table remains refuted, now on a second channel.
-
-🔴 **Left unchanged ON PURPOSE:** the lines in this file that record what a *past* pass measured still read `openedx/edx-platform`. 🔵 **A current shelf row gets corrected; a historical measurement does not get rewritten.**
-
-🔴 **Unresolved, and recorded as unresolved rather than absent:** `OpenEduCat`'s repository failed to resolve on three address spellings this pass (`OpenEduCat/openeducat`, `openeducat/openeducat`, `openeducat/openeducat-erp`). 🔴 **The byte channel's negative control cannot separate a wrong address from a private or deleted one** (`T954`), so this shelf's existing `openeducat/openeducat_erp` **LGPL-3.0** row stands on its earlier evidence and is **not** re-verified. 🟢 **`ACTION p801-B`: resolve the OpenEduCat address on the rendered channel, which returns `404` for an invented address and therefore CAN discriminate.**
-
-## 🆕 `p800` — **The agent→LMS WRITE path exists, it is `3` stars and AGPL-3.0, and its design is the deliverable. 🟢 `p800` names the pattern: INSTITUTION-ISSUED AGENT AUTHORITY — and the alternative, a browser agent wearing a student's session, is what the LMS vendor has declined to block.**
-
-🟢 Machine output: [`cross-channel-remeasure`](../evidence/cross-channel-remeasure.2026-11-12-p800.tsv) · [`search-absence-mechanism`](../evidence/search-absence-mechanism.2026-11-12-p800.tsv).
-
-### 🟢 `blend-ed/openedx-mcp` — the first education MCP server on this shelf that WRITES, and the control surface is why it is here
-
-| Measure | Result |
-|---|---|
-| Address | [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) |
-| Licence (sidebar) | 🔴 **AGPL-3.0** |
-| ★ | 🔴 **`3`** |
-| Target release | 🟢 **Open edX `Ulmo`** |
-| Shape | Django app + Tutor plugin; LMS at `^api/mcp/`, CMS at `^api/mcp/cms/`; streamable-http client, `X-MCP-Key` bearer token |
-| LMS tools | 🟢 **~`27`** — `whoami`, `audit_log`, `analytics_overview`, `list_courses`, `course_detail`, `list_users`, `user_roles`, `course_team`, `user_grade`, `set_role`, `instructor_access`, `enroll`, `unenroll`, `bulk_enroll`, `create_user`, `reset_student_attempts`, `deactivate_user`, `generate_certificate`, `regenerate_certificates`, `invalidate_certificate`, `list_course_certificates`, `user_certificates`, `submit_report`, `report_tasks`, `report_downloads`, `retirement_status`, `request_retirement` |
-| CMS tools | 🟢 **`8`** — `read_course_outline`, `read_course_settings`, `create_block`, `create_block_tree`, `update_block`, `publish_block`, `delete_block`, `update_course_settings` |
-| Controls | 🟢 **Scopes (`read`, `write:courses`, `destructive`) gate every tool; write operations rate-limited; confirm tokens on high-impact actions; all writes logged to an audit table** |
-
-🔴 **`3` stars and AGPL-3.0 means this is a REFERENCE DESIGN, not a dependency.** AGPL on a server-side Django plugin reaches any modification an engagement makes to it and delivers over a network — which is the trigger. 🟢 **But the control surface is the reusable asset, and it is not a research sketch: scope-gating, confirm tokens on destructive calls, and an append-only audit table are exactly the three things a ministry or university procurement will ask for, and no earlier row in this base has all three.**
-
-🔵 **The architectural point, and it is the one to carry into an engagement:** `deactivate_user`, `request_retirement`, `invalidate_certificate` and `bulk_enroll` are **registrarial** actions. An agent that can call them is operating institutional authority, not assisting a learner. 🟢 **The boundary that makes that safe is the one this repository draws — authority issued BY the institution, scoped, confirmed and logged — and the engagement decision is whether to re-implement it under a permissive grant or to deploy this and accept AGPL.**
-
-### 🔴 The alternative is already deployed, and the LMS vendor has declined to block it
-
-🔴 **Instructure marked a community request to block AI agents logging in on behalf of students `Will not consider`.** 🔴 **Detection is not a fallback either:** agents of this class drive the Canvas **UI** through cloud browser automation rather than the API, so server-side detection is near-impossible on Instructure engineers' own account. 🟡 Institutions are acting at the endpoint instead — SMU determined OpenClaw *"is not approved for use on university-owned or managed devices at this time."*
-
-🟢 **So the two paths are now both real and they are opposites.** An institution-issued, scoped, audited agent identity (`openedx-mcp`) versus an unauthenticated agent inside a student session that the platform cannot see. 🔵 **Every assessment-integrity, proctoring and LMS-integration proposal in this sector now has to say which one it is building, and the honest answer for a client is that the second is not blockable by the LMS and must be addressed in assessment DESIGN.**
-
-### 🟡 `openedx/openedx-ai-extensions` — the first-party-adjacent AI plugin, and it says experimental in its own README
-
-| Measure | Result |
-|---|---|
-| Address | [`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions) |
-| Licence | 🔴 **AGPL-3.0** · ★ `17` |
-| Readiness | 🔴 **Its README: *"this plugin is in active development and should not be used in production environments"*** |
-| What it does | Learning + Authoring MFE plugin slots, course-unit content extraction, summarisation, workflow-based AI processing, 🟢 **LiteLLM multi-provider (OpenAI, Anthropic, local models)**, observable workflows with Aspects event analytics, configuration-driven (no code changes) |
-| Demo profiles | flashcards, chat-with-summaries, function calling, streaming chat, educator assistant, mocked streaming |
-
-🔴 **Its LiteLLM dependency is the `T951` problem arriving inside the Open edX AI path:** LiteLLM displays no sidebar licence and has a separate commercial licence for enterprise features. 🟢 **The plugin's own configuration-driven, provider-agnostic design is the right shape** — a local model via Ollama satisfies an EMEA or minors deployment with no code change. 🔵 **Use it as the integration CONTRACT, build the implementation outside the AGPL boundary.**
-
-### 🟢 Moodle `5.3` LTS — Claude is now a first-party provider, and AI usage is reportable per course
-
-🟢 **Moodle `5.3` LTS released `2026-10-05`**; general fixes to October `2027`, security fixes to October `2029`. 🟢 **Two AI changes that matter commercially:** Anthropic Claude added as a **provider** in the core AI subsystem (generate, summarise, explain), and **course-level AI usage reporting** so a teacher can see how AI was used in their course.
-
-🔵 **Usage reporting is the sleeper feature.** Every regulator in this base — EU AI Act Art. `50`, Brazil's `Parecer CNE/CP nº 15/2026`, the US state frameworks — demands evidence of *how* AI was used, not a policy document saying it may be. 🟢 **Core Moodle now emits that evidence per course, which turns a compliance narrative into a report an institution can run.** 🔴 **Core remains deliberately narrow:** providers, capabilities, privacy and cost all need deliberate configuration, and adaptive learning paths still require custom development. 🔴 **GPL-3.0 core, so the agent layer stays outside it** — 🟢 the LTI seam via [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) (Apache-2.0) is the clean way in, and it is the canonical address for what this base wrote as `csev/tsugi`.
-
-### 🟡 Canonical addresses corrected on this shelf
-
-🔴 **`openedx/edx-platform` is a REDIRECT, and this shelf still writes it** — at the `Open edX` row below, grant bytes and all. The canonical is [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) (AGPL-3.0, `8.2k★`), 🔵 **settled by `p606-K` and never propagated here.** 🟢 `T950` gives the consequence: a renamed slug clones but is not indexed, which is why the metadata channel never returned it. 🔴 **`foradian/fedena` is a `4`-star FORK** of [`projectfedena/fedena`](https://github.com/projectfedena/fedena) (`547★`) — 🔴 **and the canonical has NO sidebar licence**, Apache-2.0 being asserted in its README alone. 🔵 **Moving to the canonical SIS address moves it from "small fork" to "ungranted", which is a worse position stated honestly.**
-
-🟢 **Re-measured and holding:** [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) `6.9k★` AGPL-3.0 · [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) `9.3k★` LGPL-3.0 (v`4.0`) · [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) `911★` LGPL-3.0 · [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) `155★` GPL-3.0 · [`moodle/moodle`](https://github.com/moodle/moodle) `7.6k★` GPL-3.0 · [`learningequality/kolibri`](https://github.com/learningequality/kolibri) `1.2k★` MIT.
-
-🔴 **The shape of this shelf is unchanged and is the single most consequential fact on it: the platform layer is copyleft — AGPL, GPL, LGPL — and every permissive thing lives at the integration seam or above it.**
-
-## 🆕 `p799` — **A ministry's own curriculum, published as structured JSON by a teacher with no budget, is the most reusable vertical asset found this pass. 🟢 `p799` names the pattern: CURRICULUM-AS-DATA, and there are now two independent instances, one LATAM and one EMEA.**
-
-🟢 Machine output: [`payload-region-provenance`](../evidence/payload-region-provenance.2026-11-12-p799.tsv).
-
-### 🟢 Curriculum-as-data — the asset an engagement cannot generate and must not invent
-
-🔵 **Every tutor deliverable in this base needs the same thing before it can be grounded: the client jurisdiction's official contents and expected learnings, as structured data with a citation back to the publishing authority.** 🟢 **Two repositories have now done that work, in two regions, and both are readable today:**
-
-| Asset | Repo | Licence at payload | Region | What it contains |
-|---|---|---|---|---|
-| 🟢 **MPPE curriculum, 🇻🇪 Venezuela** | [`Ignacio-Ghub/asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion) → `web/api/curriculo/*.json` | 🔴 **GPL-3.0 · `35,149 B`** (code); the curriculum content is the **ministry's** | 🟢 **LATAM 🇻🇪** | 🟢 **`11` files — Primaria `1.º`–`6.º` and Media General `1.º`–`5.º`** — each carrying `nivel`, `grado`, and per-area `fuentes` citing *Ministerio del Poder Popular para la Educación* documents at `mppe.gob.ve` with their publication months |
-| 🟢 **LOMLOE curriculum + legislation, 🇪🇸 Spain** | [`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia) · [`nmarafo/open-lex-edu`](https://github.com/nmarafo/open-lex-edu) | 🔴 **share-alike content, byte-verified separately: `2,123 B` (`OpenDidactia`, HEAD `fe6106b7e90a`) and `2,874 B` (`open-lex-edu`, HEAD `5ad542282c8f`)** — 🟢 `OpenDidactia`'s count reproduces `p270` exactly, `~500` passes apart | 🟢 **EMEA 🇪🇸** | 🟢 Spanish educational legislation and curricular schemas in **Open Knowledge Format (OKF)**, spanning Madrid, Galicia, Andalucía, Aragón, Canarias and Baleares |
-
-🔴 **`T950` — the two files are NOT the same licence, and the byte counts are how this pass knows.** 🔴 **`2,123 B` and `2,874 B` cannot both be the same payload, so "CC BY-SA 4.0" cannot be carried from one to the other.** 🟢 **`OpenDidactia` is the row `p270` graded; `open-lex-edu`'s `2,874 B` payload is graded `OTHER_unclassified` by this pass's classifier and is NOT yet read.** 🔵 **Recorded as a gap rather than assumed, because a share-alike content licence is exactly the obligation a client deliverable cannot inherit silently** → `p799-F`.
-
-🔴 **`T951` — `universidade` is GALICIAN as well as Portuguese, so it cannot place a row by itself.** 🟢 **[`nmarafo/open-lex-edu`](https://github.com/nmarafo/open-lex-edu) returned `CONFLICT:EMEA=xunta/LATAM=universidade` — the conflict state working as designed.** 🟢 **`Xunta` resolves it to Galicia, so the row is EMEA 🇪🇸.** 🔵 **A sixth instance of `p799`'s substring-and-ambiguity class, and this one is a WORD rather than an acronym: the token is correct Galician orthography and correct Portuguese at once.** 🟢 **This pass's own [`RowanFalcao/inclusign-ai`](https://github.com/RowanFalcao/inclusign-ai) placement survives only because the DESCRIPTION corroborated it with `PIVIC / UniRV`** — 🔴 **on the `universidade` token alone it would have been a coin-flip between Galicia and Brazil.**
-
-🔴 **Read the licence column carefully, because the two halves differ and that is the whole point of `T936`'s `571`-byte precedent:** 🔴 **the Venezuelan repository's CODE is GPL-3.0, so boundary-only** — but the curriculum it loads is a ministry publication, cited to its source, and it is the half an engagement actually needs. 🔴 **`OpenDidactia` is share-alike CONTENT: usable, attributable, and it propagates its licence to derivatives, so it is never a silent dependency in a client deliverable.**
-
-🟢 **The pattern to copy, rather than the repository to fork:** cite the ministry document, carry its publication date in the record, structure per level and area, and 🟢 **declare the gaps — the Venezuelan author's screen tells the teacher when an area has no published content document instead of generating into the void.** 🔵 **That is the behaviour a client's academic council will ask for, and it is already written down** → [`compose/patterns.md`](../compose/patterns.md) `P799-1`.
-
-### 🟡 `ACTION p798-F` NOT discharged, and the honest reason
-
-🟡 **`p798-F` asked for one number: the recurring cost of carrying a DE-BRANDED Moodle fork across a year of upstream releases**, since `p797-G` established that the licensed partner route publishes no price. 🔴 **NOT DONE this pass.** 🟢 **Honest reason: `p799`'s budget went to the discovery legs the scheduler mandates plus four queued actions that returned findings, and this one needs an asset inventory of Moodle's brand files across two releases — real work with no finding attached, which is `p795-D`'s failure mode exactly.** 🟢 **Re-queued unchanged and FIRST, with the note that it is now the oldest unstarted costing question on this shelf.**
-
-### 🟢 Platform shelf — unchanged this pass, and re-stated because the licence claims in the channel are wrong again
-
-🔴 **This pass's vertical leg returned a comparison article asserting that Open edX is "Apache License 2.0" and another placing Canvas and Open edX in the same AGPL row.** 🟢 **The shelf's existing gradings stand and are byte-verified:** **Moodle** GPL-3.0 (with the brand-layer restriction `T924` found in `moodle/moodle` itself), **Open edX** AGPL-3.0 platform, **Canvas** AGPL-3.0, **Sakai** ECL-2.0, **Chamilo** GPL-3.0, **Kolibri** MIT, **OpenEduCat** LGPL-3.0, **Frappe Learning / LMS** 🔴 **governed by a policy in the SIBLING repository `frappe/erpnext`** (`T925` — still ungated, `ACTION p797-D`, third carry). 🔵 **`OpenOlat` (Apache-2.0) is the one genuinely permissive LMS in the channel and remains the right base when a client's counsel refuses copyleft.**
-
-## 🆕 `p798` — **`ACTION p797-G` discharged to a hard answer nobody wants: the Moodle Certified Partner route — the licensed way to say the word *Moodle* while selling a service — publishes NO fee schedule, NO royalty terms and NO trademark-usage terms. The restriction is public and the remedy is not. Plus the first `571`-byte template for the content boundary every white-label deliverable has.**
-
-### 🟡 `ACTION p797-G` — the Partner route, as far as the public record goes
-
-🔴 **`T924` established the constraint: `moodle/moodle`'s `TRADEMARK.txt` (`3,367 B`) prohibits, without written permission, the word *Moodle* or any Moodle logo for commercial purposes — in a software name, a company name, a domain name, advertising keywords, or *"to describe services around Moodle"*.** 🟢 **`p797-G` asked what the licensed alternative costs. Searched this pass; here is the whole of what is public:**
-
-| Question a studio must answer before week one | 🟢 Public answer |
-|---|---|
-| Does a licensed route exist? | 🟢 **Yes — two tiers: Certified Moodle Partner and Premium Certified Partner.** Moodle certifies only after satisfying itself of the applicant's service and technical standards |
-| How many exist? | 🟢 **`101`+ worldwide**, per Moodle's own announcement |
-| What may a Certified Partner sell? | 🟢 Training, hosting, implementation and support for **Moodle LMS**. 🔴 **Moodle Workplace requires PREMIUM certification** |
-| 🔴 **Application fee? Annual fee? Revenue share or royalty?** | 🔴 **NOT PUBLISHED.** No fee schedule appears anywhere in the search channel |
-| 🔴 **What trademark rights does partner status actually grant?** | 🔴 **NOT PUBLISHED.** The partner agreement is not public |
-| What IS priced publicly? | 🟡 **The Moodle Educator Certification (`MEC`), ~`AU$2,500` for `6` courses at one partner** — 🔴 **an educator training product, NOT a partner fee.** 🔵 Quoting it as the cost of partnership would be wrong by category |
-
-🔵 **So the verdict is a shape, not a number: the restriction is published to the byte and the remedy is behind a sales conversation.** 🟢 **What that means operationally is still decidable, and it is the useful half:** 🟢 **a) the restricted act is MARKETING, so an engagement can build, deploy and operate a Moodle-based deliverable on the GPL alone;** 🔴 **b) naming it — in the product name, the domain, the deck or the words *"Moodle services"* — needs either written permission or partner status, whose price is unknown;** 🟢 **c) the priceable alternative is a fully de-branded fork, and that cost IS estimable from this base: the marks live in a known set of assets, and `OpenOLAT`'s `CC BY-ND 2.5` logo precedent (`T914`) says brand assets must be REPLACED rather than edited.** 🔴 **Still not priced here: the maintenance cost of carrying a de-branded fork across Moodle's release cadence** → `p798-F`.
-
-🔴 **Declared: `moodle.com`'s partner pages and the partner agreement were NOT read directly — the finding is search-channel testimony over Moodle's own announcements and a partner's published MEC pricing.** 🔵 **The one-lookup rule (`p795-F`) applies: "two tiers, `101`+ partners, no public fee schedule" is checkable by anyone in a minute, which is why it is publishable at all.**
-
-### 🟢 The content boundary, as a `571`-byte deliverable
-
-🟢 **Every platform row in this file is a base an engagement white-labels, and the deliverable always mixes four layers with four different owners: the platform code, the studio's code, the CLIENT's curriculum, and the model.** 🔴 **`T916` found that GitHub's classifier silently drops the CONTENT licence on code/content splits; `T919` found a licence file that is a statement about grants rather than a grant.** 🟢 **[`danielgalanv/oral-ia`](https://github.com/danielgalanv/oral-ia) ships the answer as a `571 B` `NOTICE`, written by its author under an Apache-2.0 grant and naming a university pilot as the funder:** the grant covers *code, tests, specifications and its own documentation*; it does **not** cover *teaching material or third-party document texts*, which keep their holders' conditions; and it does **not** cover *the language models, which have their own licences*.
-
-🟢 **Recommended as the standing shape for every platform-based deliverable in this file** → [`compose/patterns.md`](../compose/patterns.md) `P798-2`. 🔵 **It is four sentences and it forecloses the argument that an engagement's curriculum was swept into an open-source grant by being committed next to code.**
-
-### 🟢 Platform-layer signal, recorded not shelved
-
-🟡 **Instructure has launched `Canvas Career`, a skills-first AI LMS aimed at workforce learning** — reported in the trend channel this pass, not verified against Instructure's own filings. 🔵 **Relevant here only because `Canvas LMS`'s open core is `AGPL-3.0` while the commercial surface moves toward a separate skills product: an engagement that assumes "Canvas" means the AGPL core should confirm which product the client bought** → recorded as a watch item, no shelf change.
-
-🔴 **`0` platform rows added or re-graded this pass.** 🟢 The brand-layer three-state grade over all `37` addresses (`6` bespoke · `23` stock reservation · `25` clean) stands from `p797`; 🔴 **`frappe/education` and `frappe/lms` remain graded clean and are NOT — their brand policy lives in `frappe/erpnext` (`T925`), and clearing the layer at the project FAMILY rather than the address is still queued** (`p797-D`, carried).
-
-## 🆕 `p797` — **`ACTION p796-C` discharged over the whole platform layer, and the two most-deployed platforms in this industry both carve the brand out of the permissive grant. `6` bespoke brand restrictions in `37` addresses — and a kind `T914` could not see at all: the restriction in a DIFFERENT REPOSITORY from the code.**
-
-🟢 **`ACTION p796-C` DISCHARGED** across `37` platform addresses / `54` candidate licence files / `0` clone failures, in `100` seconds on the blobless-clone channel. 🟢 Machine output: [`brand-layer-census`](../evidence/brand-layer-census.2026-11-12-p797.tsv) · 🔴 [`brand-layer-census-UNCORRECTED-v1`](../evidence/brand-layer-census-UNCORRECTED-v1.2026-11-12-p797.tsv) · instrument: [`ingest/p797-brand-layer-gate.sh`](../ingest/p797-brand-layer-gate.sh).
-
-### 🔴 The pass's headline: `Moodle` and `ERPNext` both say the open-source licence does not carry the brand
-
-🔴 **`p796` checked `3` rows and found `3`. `p797` checked `37` and the count is `6` — and `3` of the `6` are new, including the sector default and the ERP underneath half the school-group offers in this file.**
-
-| Row | Code grant | 🔴 The brand instrument, and what it actually says |
-|---|---|---|
-| 🆕 🔴 [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 GPL-3.0 · `COPYING.txt` `35,147 B` | 🔴 **`TRADEMARK.txt` (`3,367 B`, blob `e9f276f70841`) — *"the GNU GPL does not include an implied right or licence to use Moodle's trade marks"*.** Prohibited without written permission from Moodle Pty Ltd: the word *Moodle* **or any Moodle logo for commercial purposes**, in a software name, a company name, a domain name, advertising keywords, or *"to describe services around Moodle"* |
-| 🆕 🔴 [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 GPL-3.0 · `license.txt` `35,149 B` | 🔴 **`TRADEMARK_POLICY.md` (`3,020 B`, blob `30e864b80ac5`) — permission is required to use the ERPNext name or logo *"as part of any project, product, service, domain or company name"*, and it is granted only where *"your project is non-commercial in nature"*.** Explicitly: *"not OK to use it as part of your company or product logo or branding itself"* |
-| 🔴 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 · `10,982 B` | 🔴 `NOTICE.TXT` `14,412 B` · blob `ec55ab01ac0d` — logo and icons `CC BY-ND 2.5`. 🟢 **`T914` reproduced exactly, byte for byte** |
-| 🔴 [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | 🔴 BSD-3-Clause + rider · `2,819 B` | 🔴 Clause `4` bars altering the branding (`T900`) |
-| 🔴 [`metabase/metabase`](https://github.com/metabase/metabase) | 🔴 AGPL-3.0 · `37,265 B` | 🔴 `LICENSE-EMBEDDING.txt` `8,877 B` · blob `ae4a3ee15ff1` — logo and trademark terms, no OSI grant |
-| 🆕 🔴 [`ankitects/anki`](https://github.com/ankitects/anki) | 🔴 AGPL-3.0-or-later **by reference** · `1,937 B` | 🔴 **The logo is AGPL-3.0 *plus* a bespoke alternative licence whose conditions include *"The logo must be used unmodified — no cropping, changing of colours or adding or deleting content"*** — 🔵 a `NoDerivs` in substance inside a file `T919` had already graded as a statement about grants. 🆕 **And a sixth grant nobody had named: `docs-site/` is `CC BY-SA 4.0`** |
-
-🔵 **The commercial reading, and it is not a licence-compliance footnote.** A white-labelled LMS is the deliverable in most engagements on this shelf. 🔴 **Moodle's policy makes the *marketing* of that deliverable the restricted act, not the code**: shipping a GPL-3.0 derivative is fine, calling it *"<Client> Moodle"*, selling *"Moodle services"* or putting the logo in the product is not. 🟢 **The licensed route is Moodle's Certified Partner programme, and that is a commercial decision to take in week one, not a legal one to discover in month six.** 🔴 **ERPNext is stricter in one direction** — the permission it offers is conditioned on the project being non-commercial, which a client engagement never is — 🟢 **and more permissive in another: describing the service (*"offering ERPNext consulting"*) is expressly allowed.**
-
-### 🆕 🔴 `T925` — the brand restriction can live in a DIFFERENT REPOSITORY from the code you ship
-
-🔴 **[`frappe/education`](https://github.com/frappe/education) and [`frappe/lms`](https://github.com/frappe/lms) — both recommended in this file — carry NO brand instrument of their own.** Their root trees were enumerated this pass and hold `license.txt` and nothing else of the kind. 🔴 **The policy that governs their brand is in `frappe/erpnext`, a sibling repository, and it names ERPNext.** 🔵 **`T914` said the restriction can be in a different FILE from the grant. `T925` is the next step out: it can be in a different REPOSITORY, and no per-repository sweep — including this pass's — would find it for `frappe/education`.** 🟢 **Rule: clear the brand at the PROJECT FAMILY, not at the address.**
-
-### 🟢 The three-state grade — and the false-alarm class is `19` of the `24` rows a naive gate would report
-
-🟢 **`p796-G` is the reason this table has three states rather than two.** Apache-2.0 clause `6` and GPL-3.0 clause `7(e)` both decline to grant trademark rights, in every repository that carries them:
-
-| Grade | Files | What it means for a delivery |
-|---|---|---|
-| 🔴 **BESPOKE restriction** | 🔴 **`6`** of `54`, on `6` of `37` addresses | A term the stock licence does not contain. Must be read before a brand decision |
-| 🟡 **STOCK reservation** | 🟡 **`23`** | GPL/AGPL/LGPL-family §`7(e)` (`15` files) · Apache-2.0 §`6` (`7`) · EUPL-1.2 (`1`). 🔵 **Not a finding — but also not permission.** No OSI licence grants trademark rights |
-| 🟢 **No brand term at all** | 🟢 **`25`** | MIT/BSD/short-text rows, plus `OpenOLAT`'s Apache-2.0 `LICENSE` — 🔵 **the row whose `NOTICE` carries the `NoDerivs`, which is the whole argument for enumerating the tree** |
-
-🟢 **`hedyorg/hedy`'s `EUPL-1.2` (`13,827 B`) grades STOCK**, and its `icon` matches are the Licence's own *"clicking on an icon 'I agree'"* acceptance clause — 🔵 **a vocabulary collision, not a brand term, and the reason this gate reports the words it matched rather than a verdict alone.**
-
-### 🔴 `T928` — `2` defects in this pass's own instrument, and the second one is the lesson
-
-🔴 **v1 matched `icon` as a SUBSTRING and reported it on every GPL-3.0 row in the base, because GPL-3.0 §`0` says *"semiconductor masks"*. `17` rows carried a term they do not contain.** 🔴 **v1 also graded [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai)`:licenses` as a `4,380 B` licence file. It is a directory** — `cat-file -s` returns a size for a tree, so the instrument never asked the object's type. 🟢 **Both corrected, both published: the uncorrected run ships beside the corrected one so the `30`→`29` row delta and the `17` dropped terms can be re-derived rather than taken on trust.**
-
-### ✏️ Corrected in place below
-
-| Row | Published here | ✏️ Measured this pass |
-|---|---|---|
-| ✏️ [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 `34,916 B` | ✏️ **`35,149 B`** · blob `f288702d2fa1` — 🔴 **and `p796`'s own census already said `35,149`, so this file contradicted a machine artefact published the same day** |
-| ✏️ [`ankitects/anki`](https://github.com/ankitects/anki) | 🔴 ✏️ `1,937 B` (`p797`: changed upstream `2026-11-12 16:06 -0300`) | ✏️ **`1,937 B`** · blob `1296baf6f4a0` — 🟢 **not a mis-measurement: upstream commit `9c539a036804` at `2026-11-12 16:06:11 -0300`, *"docs: update logo copyright holder in LICENSE"*.** 🔵 **The brand layer on this row moved hours after this base first read it** (`T927`) |
-| ✏️ [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🟢 GPL-3.0 · `39,890 B` · `1` grant block | ✏️ 🔴 **An ANTHOLOGY of three, with its own table of contents: *"2. nextSIS GNU General Public License Version 3 · 3. CodeIgniter License · 4. Twitter Bootstrap License"*, plus a Glyphicons icon attribution at line `17`.** 🟢 The GPL-3.0 verdict stands; 🔴 **the grant COUNT does not** (`T915`) |
-| 🟢 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **NO GRANT SERVED** · `8348cd069aa2` | 🟢 **Re-confirmed at the same HEAD, root tree enumerated: `0` licence files of any kind.** 🔵 Where there is no grant the brand question is moot |
-
-## 🆕 `p796` — **the brand layer is a separate licence question, and on three platforms in this file the answer is more restrictive than the code. `metabase`'s carve-out is now SIZED; `DSpace`'s third-party anthology is opened and turns out to be a deliverable.**
-
-### 🔴 `T914` — the licence that lets you ship the platform is not the licence that lets you put the client's name on it
-
-🔴 **Every engagement in this file ends in a white-labelled deployment. `p796` counted root licence FILES across `174` addresses and found that on three platforms recommended here, the brand assets are carved out of the permissive grant:**
-
-| Platform | Code licence | 🔴 Brand / embed layer | 🟢 What to do about it |
-|---|---|---|---|
-| 🔴 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · `10,982 B` | 🔴 **`NOTICE.TXT` (`14,412 B`): *"The OpenOlat logo and icons … are released under the Creative Commons Attribution-NoDerivs 2.5 license."*** | 🟢 **REPLACE the logo and icon set outright.** 🔵 `NoDerivs` forbids modifying them; it does not forbid shipping your own. 🟢 The code stays Apache-2.0 and the row stays the permissive EMEA choice |
-| 🔴 [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | 🔴 **BSD-3-Clause + a fourth clause** · `2,819 B` | 🔴 **Clause `4`: altering, removing or replacing *"Open WebUI" branding* is a material breach** (`T900`) | 🔴 **Cannot be delivered white-labelled at all.** 🟢 Use it as an internal tool or negotiate a licence; do not plan a rebranded delivery on it |
-| 🔴 [`metabase/metabase`](https://github.com/metabase/metabase) | 🔴 **AGPL-3.0** · `37,265 B` | 🔴 **`4` root licence files, `1` OSI grant.** `LICENSE-EMBEDDING.txt` is **`8,877 B` of terms containing NO recognised grant**, plus `LICENSE-MCL.txt` (`425 B`) and `LICENSE.txt` (`855 B`) | 🔴 **Embedding analytics into a client portal is the exact act the `8,877 B` governs.** 🟢 Read it, or choose a dashboard without a per-file carve-out |
-
-🔵 **The general rule, and it is cheap to apply: list the root tree, not just the root `LICENSE`.** 🟢 **A vendor's carve-out is always on the piece they most want to control — the embed, the client, the brand.** 🔴 **Three for three, on rows this file already recommended.**
-
-### 🟢 `DSpace` — the third-party anthology is a procurement asset (`T920`)
-
-🟢 **[`DSpace/DSpace`](https://github.com/DSpace/DSpace) ships `LICENSES_THIRD_PARTY` (`91,354 B`): `721` dependency entries grouped by licence, with the project's policy stated in its own preamble — *"DSpace actually does NOT allow for any dependencies that are solely released under GPL terms."*** 🟢 **Verified: the single `GPL-3.0` entry (`juniversalchardet:2.5.0`) is dual-listed under `LGPL`.** 🟡 **~`13` `LGPL`-named entries** (`openpdf`, `jna` `LGPL-2.1-or-later`, `JHighlight`, `8` × `java-json-tools`) — 🟢 low risk for a server-side repository, and the first thing legal asks for. 🟢 **Hand this file over rather than generating one.**
-
-### 🔴 `odoo`'s licence file carries the GPL verbatim as well as the LGPL
-
-🔴 **[`odoo/odoo`](https://github.com/odoo/odoo)'s single `43,529 B` `LICENSE` holds TWO grants: `LGPL-3.0` at line `15` and the FULL `GPL-3.0` text at line `183`.** 🔵 **This base spent four passes (`p222`–`p225`) resolving `openeducat`'s LGPL bound against Odoo's manifest grammar. `p796` adds the structural fact underneath it: the file those readings rest on is not one licence.** 🟢 **For a deployment that only *uses* Odoo the practical answer is unchanged; for one that redistributes a modified Odoo, both texts are in scope.**
-
-### 🟢 Platform licence-file counts — the census row every platform here now has
-
-| Platform | Root licence files | Grants | Note |
-|---|---|---|---|
-| `metabase/metabase` | 🔴 **`4`** | `1` OSI | 🔴 `8,877 B` embedding carve-out with no grant |
-| `DSpace/DSpace` | `4` | `1` | 🟢 `91,354 B` third-party disclosure — an asset |
-| `open-webui/open-webui` | 🔴 **`3`** | 🔴 `3` | 🔴 branding rider + MIT/BSD relicensing record |
-| `OpenOLAT/OpenOLAT` | `2` | `1` | 🔴 `CC BY-ND 2.5` brand assets in `NOTICE.TXT` |
-| `oppia/oppia` | `2` | `1` | 🟢 Apache-2.0 + a `146 B` NOTICE — clean |
-| `chamilo/chamilo-lms` | `2` | `1` | 🟢 one `GPL-3.0` grant; the second file is a `1,614 B` notice |
-| `sakaiproject/sakai` | `2` | `1` | 🟢 `ECL-2.0` |
-| `moodle/moodle` · `odoo/odoo` · `instructure/canvas-lms` · `openedx/edx-platform` | `1` | `1` · 🔴 **`2`** · `1` · `1` | 🟢 `odoo` is the outlier — see above |
-
-🔵 **`19` rows in this base serve no root licence file at all and `12` serve one this pass could not grade.** 🟢 Both numbers are published; neither is folded into the other.
-
-
-## 🆕 `p795` — **The BI layer this file recommends forbids the embed it was recommended for, and the strongest new platform row is a Moodle plugin — AI on top of the incumbent, not a replacement for it.**
-
-### 🔴 `T912` — `metabase` cannot be embedded white-labelled, and this file's analytics advice assumed it could
-
-🔴 **`metabase/metabase` carries `4` root licence files, and the one no pass had opened governs a single FILE.** `LICENSE-EMBEDDING.txt` (`8,877 B`) applies to `app-embed.js`, lifts it out of AGPL-3.0 (*"free and clear of any Affero GPL License requirements"*), and then:
-
-| Clause | 🔴 What it forbids |
-|---|---|
-| `§2` | Modifying `app-embed.js`, or *"blocking, overlaying, or otherwise obstructing the contents of the embedded element"* |
-| 🔴 **`§3`** | 🔴 ***"the removal of the Metabase's name or logo in the iframe that is embedded in your application"*** |
-| `§2(b)` | Transferring, sublicensing, leasing or distributing the Software to any third party |
-
-🟢 **Corrected rule for this file.** 🔴 **Do NOT embed `app-embed.js` into a client-branded learning-analytics surface** — the Metabase mark must remain visible, so the surface cannot carry only the institution's identity. 🟢 **Do run metabase as its own AGPL-3.0 application behind SSO and link to it from the client surface**; that uses the AGPL grant, needs no embedding licence, and keeps the institution's deployment intact. 🔵 **Identical in shape to `T900` (Open WebUI's branding rider), which this file corrected last pass — two of this file's recommended surfaces now turn out to be un-white-labellable, and that is a pattern worth stating to delivery leads before the design review, not after.**
-
-### 🟢 `T909` — platform rows now carry a CONSEQUENCE beside `UNGRADED`
-
-🔴 **`UNGRADED` is a verdict about which licence FAMILY applies; this file was reading it as a verdict about whether a platform can ship.** 🟢 **For `CaviraOSS/PageLM` the two answers are opposite:** the family is genuinely unclassifiable **and** the licence is non-commercial with a section headed *"Prohibition on Redistribution"* — 🔴 **so it cannot be in a client deliverable in any form**, which `UNGRADED` alone never said. 🟢 Carried as a consequence field, not a re-grade.
-
-### 🟢 The platform row added this pass — and it is the "AI on top of the incumbent" path
-
-| Platform | Repo | Grant, on the bytes | Deps | Region | Note |
+| Platform | Repo | License | Stars | Where it is the incumbent | AI customization surface |
 |---|---|---|---|---|---|
-| **Moodle AI Skill Navigator** | [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 🟡 **GPL-3.0** · `35,153 B` · `a0ca524c0129` | 🔵 unmeasured (`p795-C`) | Global | 🟢 **AI tutoring, quizzes, mind maps and RAG over course materials, delivered as a Moodle plugin** (★`281`, pushed `2026-11-07`). 🟢 **GPL-3.0 is correct and unavoidable** — a Moodle plugin inherits Moodle's licence. 🔵 **This is the shape most institutional clients actually want: the LMS of record stays, the AI arrives as a plugin inside it** |
-| **AI Shifu** | [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 **Apache-2.0** · `11,342 B` · `0150fcb2599f` | 🔵 unmeasured (`p795-C`) | APAC 🇨🇳 | 🟢 Permissive conversational teaching platform, pushed `2026-11-12`. 🟢 The deployable alternative when a client will not accept AGPL |
-| **DeepTutor-AILearning** | [`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning) | 🟢 **Apache-2.0** · `11,408 B` · `ae1dbfc5e74c` | 🔵 unmeasured (`p795-C`) | APAC 🇨🇳 | 🟢 **Multi-tenant by construction**: platform → institution → campus → teacher/student. 🔵 **The only row in this file with a tenancy model already built**, which is what a training-provider client buys rather than builds |
+| Moodle | https://github.com/moodle/moodle | GPL-3.0 | 7.6k | Global, strongest in EMEA, LATAM, APAC public education | Mature plugin API; LTI 1.3; web services REST API |
+| Open edX | https://github.com/openedx/openedx-platform | AGPL-3.0 | 8.2k | MOOCs, corporate academies, national platforms | **`openedx-ai-extensions`** is the official AI plugin point; XBlocks; deploy via `tutor` |
+| Canvas LMS | https://github.com/instructure/canvas-lms | AGPL-3.0 | 6.9k | North American higher ed (dominant) | Rich REST API + LTI 1.3; **`canvas-mcp` (MIT) gives agents 102 tools** |
+| Frappe LMS | https://github.com/frappe/lms | AGPL-3.0 | 3.4k | SMB/corporate training, India | Frappe framework hooks; shares a stack with ERPNext |
+| Sakai | https://github.com/sakaiproject/sakai | ECL-2.0 | 1.2k | Research universities | **Permissive license** — the one platform a studio can extend without copyleft reaching the product |
+| Chamilo | https://github.com/chamilo/chamilo-lms | GPL-3.0 | 1.0k | LATAM, francophone Africa, Spain | Web services API; accessibility-first |
+| ILIAS | https://github.com/ILIAS-eLearning/ILIAS | GPL-3.0 | 510 | German-speaking EMEA, vocational and public sector | Plugin slots; SCORM/xAPI |
 
-🔵 **The strategic point, and it cuts against this file's historical bias.** 🟢 This file has catalogued **replacement** platforms — Moodle, Canvas, Open edX, Sakai, Chamilo, ILIAS — and graded their licences. 🔴 **An institution with a working LMS of record is not buying a replacement.** 🟢 **The `moodle-ai-skill-navigator` row is the first catalogued artefact of the other engagement shape: leave the system of record alone and deliver AI as a plugin inside it.** 🟡 **The licence consequence is the trade: that path is GPL-3.0 by inheritance, permanently, and no permissive option exists inside Moodle's plugin boundary.**
+## Student information systems and institutional ERP
 
-### 🔴 The maintenance field this file never had (`ACTION p794-A`)
+| Platform | Repo | License | Stars | Notes |
+|---|---|---|---|---|
+| OpenEduCat | https://github.com/openeducat/openeducat_erp | LGPL-3.0 | 911 | **SIS + LMS + finance as Odoo modules** — the literal "Odoo for education". If the client already runs Odoo, this is the shortest path. |
+| RosarioSIS | https://github.com/francoisjacquet/rosariosis | GPL-2.0 | 654 | K-12 school management; widely deployed in LATAM, Spanish/French/Portuguese localization in core. |
+| Gibbon | https://github.com/GibbonEdu/core | GPL-3.0 | 638 | Flexible school management; strong in international K-12 schools. |
+| openSIS Classic | https://github.com/OS4ED/openSIS-Classic | GPL (README) | 351 | Student information system; commercial editions available from OS4ED. |
+| ERPNext (education context) | https://github.com/openeducat/openeducat_erp | LGPL-3.0 | 911 | For institutional finance/HR alongside academics, the Odoo/Frappe ERP families are the two realistic bases. |
 
-🟢 **Archived platform rows: still exactly `3`, confirmed across `167` addresses.** 🔴 **But `Kosudo/nextSIS` — an SIS in this file's Student Information section — has not been pushed since `2018-07-16`, `88` months.** 🔴 **For a system that holds student records that is not staleness, it is an unowned CVE surface**, and the correct advice is a deliberate fork with a named maintainer, or a different SIS. 🟡 `jkbrzt/rrule` (`28` mo) corrected in place above with its consequence graded as near-harmless.
+## Content, delivery and classroom
 
-### 🟢 `ACTION p794-C` — one `Deps` cell closed, the rest named
+| Platform | Repo | License | Stars | Notes |
+|---|---|---|---|---|
+| Kolibri | https://github.com/learningequality/kolibri | **MIT** | 1.2k | Offline-first learning platform. The right base for low-connectivity deployments (rural LATAM, Sub-Saharan Africa, remote APAC). Permissive. |
+| Oppia | https://github.com/oppia/oppia | **Apache-2.0** | 7.0k | Interactive lesson "explorations" with built-in misconception handling. Permissive and substantial. |
+| H5P | https://github.com/h5p/h5p-php-library | GPL-3.0 | 155 | The de facto interactive-content format; renders inside Moodle, Canvas, Open edX. |
+| Khan Perseus | https://github.com/Khan/perseus | **MIT** | 1.6k | Khan Academy's exercise editor/renderer. MIT — drop real exercise rendering into any product. |
+| BigBlueButton | https://github.com/bigbluebutton/bigbluebutton | LGPL-3.0 | 9.3k | Virtual classroom with LTI into Moodle/Canvas; recordings feed transcript pipelines. |
+| Opencast | https://github.com/opencast/opencast | ECL-2.0 | 511 | Lecture capture at scale — the upstream source for transcript/summarization agents. |
+| Anki | https://github.com/ankitects/anki | AGPL-3.0 | 32.8k | Spaced-repetition scheduling; the algorithm is the asset for retention features. |
 
-🟢 **`oppia/oppia` CONFIRMED on the second instrument** (PyPI version-scoped JSON: `mutagen==1.47.0` → `GPL-2.0-or-later`); the hosted-deployment rule in this file is unchanged. 🔴 **Every other `Deps` cell in this file remains a claim about a version nobody has identified.** 🟢 **`DSpace/DSpace` is next and the target is already located: a `91,354 B` `LICENSES_THIRD_PARTY` anthology in its root tree.**
+## Teaching, grading and learning-data infrastructure
 
-## 🆕 `p794` — **The delivery surface this file recommends cannot carry a client's name, and the ePortfolio it recommends is archived.**
+| Platform | Repo | License | Stars | Notes |
+|---|---|---|---|---|
+| JupyterHub | https://github.com/jupyterhub/jupyterhub | BSD-3-Clause | 8.4k | Multi-user notebooks; the standard for CS/data-science teaching. |
+| nbgrader | https://github.com/jupyter/nbgrader | BSD-3-Clause | 1.4k | Assignment release and autograding for notebooks. **The grading substrate to wrap an agent around.** |
+| pyKT | https://github.com/pykt-team/pykt-toolkit | **MIT** | 461 | Deep knowledge-tracing benchmarks — real mastery estimation to pair with an LLM tutor. |
+| ODK Collect | https://github.com/getodk/collect | Apache-2.0 | 805 | Offline Android form collection; used for education field assessment at national scale. |
+| Caliper | https://github.com/1edtech/caliper-spec | IMS spec-document license | 22 | Learning analytics event spec. Implement it; do not vendor the repo. |
 
-🟢 **All platform rows re-measured on the byte channel plus GitHub's own classifier: `118/118` licence agreement, `0` clone failures, `1` correction — and the correction is on the row a client sees first.**
+## Standards that make the above interchangeable
 
-### 🔴 `T900` — Open WebUI cannot be white-labelled, and this file told clients to use it as the front end
-
-🔴 This file published [`open-webui/open-webui`](https://github.com/open-webui/open-webui) (`★158,480`) as 🟢 `BSD-3-Clause`, *"the fastest data-resident front end"*. 🔴 **Canonical BSD-3-Clause has three numbered clauses; the served `LICENSE` (`2,819 B`) has four.** Clause `4` bars *"altering, removing, obscuring, or replacing any 'Open WebUI' branding"* and makes alteration a **material breach**.
-
-🔵 **For this file specifically, that is the difference between a usable row and a trap**, because a delivery surface is the one component a client expects to carry its own name. 🟢 **Two ways to keep it:** ship it **with Open WebUI branding intact** where that is acceptable, or 🟢 **put the tutor in the LMS the client already owns** — which is what `P794-1` does and why that pattern needs no chat surface at all.
-
-🔴 **And the trap is laid three files deep:** `LICENSE` (`2,819 B`, ridered) · **`LICENSE_HISTORY` (`2,872 B`, grades as clean BSD-3-Clause)** · `LICENSE_NOTICE` (`721 B`, a title line only). 🟢 GitHub's classifier says `NOASSERTION` — **more honest than this file's grade.**
-
-### 🔴 `T901` — platform rows have no maintenance field, and three are archived
-
-🔴 **Mahara** — the ePortfolio recommendation — is 🔴 **ARCHIVED, last push `2023-11-16`**. 🔴 **MyScriptJS** — the maths-input primitive — is 🔴 **ARCHIVED, last push `2021-01-04`**. 🟡 **European Learning Model** — the EMEA credential vocabulary — is 🟡 **ARCHIVED, last push `2024-02-14`**. 🔴 **All three return `rc=0` with refs and a valid `HEAD`, so every existence instrument this base has ever run called them healthy.** 🟢 All three are now labelled in place with their last-push dates.
-
-🔵 **What this changes in a proposal:** an archived platform is not disqualified — it is a **fork you own from day one**, with the maintenance cost priced in. 🔴 **Saying so is the deliverable; discovering it in month three is the failure.**
-
-### 🟢 `ECL-2.0` — why Sakai and Opencast stay recommended, with one sentence added for counsel
-
-🟢 **Both remain the permissive answer in a copyleft sector**, and both are `ECL-2.0` — verified on the bytes (`11,120 B` and `11,340 B`) and confirmed by GitHub's classifier. 🔵 **The sentence to add:** ECL-2.0's §3 narrows Apache-2.0's patent grant so that, for institution-employed contributors, it reaches only claims where the author is also the inventor **and** the institution may grant under its research-funding agreements. 🟡 **Copyright permissions are identical to Apache-2.0; patent coverage is thinner, and these are university-contributed codebases.** 🟢 Ship them — and do not describe them as Apache-equivalent in a procurement response.
-
-### 🔴 Corrected in this file
-
-| Row | Was | 🟢 Now |
-|---|---|---|
-| **Open WebUI** | 🟢 `BSD-3-Clause` | 🔴 **`BSD-3-Clause + branding rider`, non-OSI — not white-labellable** |
-| **nextSIS** | 🔴 `PROPRIETARY`, *"named here only so it is not mistaken for an option"* | 🟢 **`GPL-3.0` — it IS an option**; deploy separately, integrate at the boundary (stale since `p790`) |
-| **Mahara** · **MyScriptJS** · **European Learning Model** | no maintenance field | 🔴 **ARCHIVED**, with last-push dates |
-
-### 🟢 Platform licence reality, re-measured — the rule this file exists to state is unchanged
-
-🔴 **The platform layer is still copyleft and the agent layer is still permissive.** Measured this pass: `moodle/moodle` GPL-3.0 (`★7,607`) · `openedx/edx-platform` AGPL-3.0 · `chamilo/chamilo-lms` GPL-3.0 (`35,147 B`, affero×`3` — 🟢 the `T894` discriminator reproduced) · `frappe/erpnext` GPL-3.0 (`★41,231`) · `odoo/odoo` **LGPL-3.0** · `openeducat/openeducat_erp` **LGPL-3.0** · `ankitects/anki` **AGPL-3.0** · `metabase/metabase` **AGPL-3.0** (`★50,301`) · `bigbluebutton/bigbluebutton` LGPL-3.0 (`★9,274`) · 🟢 **permissive: `sakaiproject/sakai` and `opencast/opencast` ECL-2.0, `getodk/collect` Apache-2.0, `Gego-K12/gegok12` MIT, `learningequality/kolibri` MIT, `jupyter/notebook` BSD-3-Clause.** 🟢 **`Gego-K12/gegok12` remains the only permissive school ERP/SIS in this file and the only place an agent can live *inside* the system of record.**
-
-## 🆕 `p793` — **The MCP edge was read, not assumed: the canonical Canvas server has real data-governance engineering and its hardened settings are self-declared placeholders.**
-
-`p792` added MCP as "the Odoo pattern's edge — permissive even when the platform is not". 🔴 **`ACTION p792-D` required that claim be measured before any security offer was written, starting with the auth model.** Measured.
-
-### 🟢 [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — MIT, `1,071 B`, `3c7307584ae4`, `529`-file tree
-
-🟢 **This is not an unconsidered server, and the base's working assumption that community MCP servers hold institutional tokens with no governance thought does NOT survive contact with the canonical one:**
-
-| Control it actually ships | Evidence in the tree |
+| Standard | Why it decides the architecture |
 |---|---|
-| 🟢 Structured audit trail | `src/canvas_mcp/core/audit.py` — `6,420 B`, `215` lines: `log_data_access` · `log_code_execution` · `log_access_change` |
-| 🟢 **Identifier masking in the log** | `_sanitize_endpoint`: `/courses/12345/users/678` → `/courses/***/users/***` |
-| 🟢 Executed code recorded as a **hash**, never raw | `log_code_execution(code_hash=…)` — SHA-256 prefix |
-| 🟢 **Three deployment tiers** | `config/overlays/baseline.env` · `public.env` · `enterprise.env` |
-| 🟢 Sandbox, outbound network blocked by default in all three | `TS_SANDBOX_BLOCK_OUTBOUND_NETWORK=true`; enterprise adds `TS_SANDBOX_ALLOWLIST_HOSTS` |
-| 🟢 Token rotation · security CI · its own prior reviews | `scripts/rotate-canvas-token.mjs` · `.github/workflows/security-testing.yml` · `docs/audits/2026-09-23-codex-review.md` · `security/student-feature-review-2026-10-08.md` |
-| 🟢 Entra / Azure auth path | `deploy/azure/authsettingsv2.example.json` |
+| **LTI 1.3 / LTI Advantage** | Build the AI tool once as an LTI tool provider and it mounts in Moodle, Canvas, Open edX, Sakai, and ILIAS. Highest-leverage single investment in an education engagement. |
+| **xAPI** | Learner-activity telemetry; what an agent should emit so the institution can report on it. |
+| **Caliper Analytics** | The 1EdTech-native alternative to xAPI; common in North American higher ed. |
+| **QTI** | Assessment item interchange — matters as soon as item banks must move between systems. |
+| **SCORM** | Legacy but ubiquitous in corporate and vocational training; still the delivery format many EMEA/APAC clients require. |
 
-### 🔴 And the two things an institution must not misread
+## Declared gaps
 
-**1. The hardened flags are labelled unfinished by the project itself.** `enterprise.env` declares `MCP_CLIENT_AUTH_MODE=api_key_or_mtls`, `MCP_CLIENT_API_KEY_REQUIRED=true` and `MCP_CLIENT_CERT_AUTHORITY` under the comment **"(pending feature wiring)"**. `public.env` declares `TOKEN_STORAGE_BACKEND=keyring` under the same comment and `LOG_REDACT_PII=true` under **"Logging hygiene (some flags are placeholders)"**. 🔴 **A procurement reviewer who treats `enterprise.env` as a control inventory will believe mTLS client authentication and PII redaction are in force.** The project is honest in its comments; the hazard is entirely in how the file gets read.
-
-**2. The token layer protects the server, not the Canvas account.** `src/canvas_mcp/core/access/tokens.py` is `50` lines of HMAC-signed claims (`oid`, `jti`, `exp`) — authentication **of clients to this MCP server**. The Canvas credential underneath is untouched, and `SECURITY.md` says so without hedging: 🔴 **"Your Canvas API token has full access to your Canvas account."** No per-tool scoping exists, because Canvas offers none; the documented mitigation is `chmod 600 .env`.
-
-🔴 **And the tool surface includes `bulk_grade_submissions`** — writing grades, i.e. EU AI Act **Annex III point 3** (*evaluation of learning outcomes*), reached by a tool call holding an account-scoped credential, from **`2027-12-02`**.
-
-### 🟢 The rule this file carries forward, amended
-
-🟢 **The LTI/MCP edge is still the right architecture** — a permissive process on one side of a boundary, a copyleft platform on the other (`csev/tsugi`, Apache-2.0, remains the most useful licensing component in the sector). 🔵 **What `p793` adds: the edge component's governance must be read from its code and its comments, not from its settings file.** A config key is a claim; a wired control is a control. Recipe: [`compose/patterns.md`](../compose/patterns.md) → `P793-1`. Mechanism: [`intel/trends.md`](../intel/trends.md) → `T897`.
-
-## 🆕 `p792` — **The Odoo pattern gets its missing piece: a permissive, tool-scoped way INTO a copyleft platform. Plus the one row this file told clients to avoid is cleared.**
-
-🔵 **This file's governing pattern, carried:** take a mature, deployed platform that already holds the institution's data and add agents **at its edge** — nobody replaces a Student Information System in an engagement. 🔴 **The problem has always been that the edge was an LTI tool or a REST client, which is a lot of integration work per deliverable.** 🟢 **`p792` records a better edge.**
-
-### 🟢 MCP is the Odoo pattern's edge, and it is permissive even when the platform is not
-
-| Platform | The permissive way in | Grant, on the bytes | ★ | Verdict for an AI layer |
-|---|---|---|---|---|
-| 🟢 **Canvas LMS** (AGPL core) | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · `1,071 B` · `3c7307584ae4` | **`323`** | 🟢 **The most useful row added to this file in four passes.** Canvas is what a North American higher-ed client is running, and its core is **AGPL** — which is exactly why every AI deliverable has had to sit outside it. 🟢 **An MIT MCP server is a clean boundary**: courses, assignments, submissions, grading and announcements become agent tools, the agent code stays MIT/proprietary as the client prefers, and **Canvas's AGPL is never linked, only called**. `529` files, **one** licence path. Pushed `2026-11-12` |
-| 🟢 **Gradescope** (proprietary SaaS) | [`Yuanpeng-Li/gradescope-mcp`](https://github.com/Yuanpeng-Li/gradescope-mcp) | 🟢 **MIT** · `1,068 B` · `0e01db542a01` | `8` | 🟡 Rubrics and submissions as tools. 🔴 `★8` — read it for the auth and rubric shape; do not depend on it |
-| 🟡 **Open edX** (AGPL) | reported MCP integration | 🔵 **not byte-verified this pass** | — | 🔵 Named because a secondary source reports it and this base will want it. **Unverified — do not cite to a client until read** |
-
-🔴 **Canonicity matters here more than anywhere else in this base (`T887`).** The first Canvas MCP a query returns is [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) — MIT, `1,070 B`, `501` files, **`★10`**: granted, real, and a derivative. Canonical is `★323`. 🔴 `DMontgomery40/mcp-canvas-lms` at `★104` is **ungranted**. 🟢 **Sweep the name; the top hit is ranked by query match.**
-
-🔴 **The governance caveat is the commercial opportunity, and it must be said in the same breath.** 🔴 **No LMS vendor ships an official MCP server** — Instructure documents the REST/GraphQL APIs and LTI 1.3 / LTI Advantage. Hosted commercial alternatives exist (Atomic Jolt's Atomic MCP for Canvas; ibl.ai connectors). 🔴 **And no independent security or data-governance evaluation of any education MCP server has been published.** An MCP server holding an institutional Canvas token can reach **student records**, which in North America means **FERPA** and in EMEA **GDPR** plus the EU AI Act's high-risk regime from **`2027-12-02`**. 🟢 **Token scoping, audit logging and a data-protection review around an education MCP deployment is work nobody is currently doing, on a component everybody is about to deploy.**
-
-### ✏️ `oppia/oppia` — this file's dependency warning is withdrawn
-
-🔴 **What this file said:** `oppia/oppia` is Apache-2.0 and **depends on an AGPL-3.0 library**, cited as the lead example of why *"a permissive host is a necessary condition for direct embedding, not a sufficient one."*
-
-🟢 **Measured on the lockfile (`T884`): `oppia` resolves `angular-shepherd` to `11.0.0`, which is MIT.** The AGPL-3.0 relicence happened at **`v22.0.0`**, and `^11.0.0` cannot reach it. `shepherd.js` resolves to `8.3.1`, also MIT.
-
-🟢 **The RULE this file states is still correct and still worth its place** — a host's dependencies must be read. 🔴 **The EXAMPLE was wrong, and `kolibri`'s two LGPL packages now have to carry the argument instead.** 🟡 **`oppia` moves from "do not embed" to "embeddable, with Shepherd pinned and its major bump gated"** — and it gains a separate, smaller note: `mutagen==1.47.0` (**GPL-2.0-or-later**) is a direct Python dependency, which matters only if the service is **distributed** rather than hosted.
-
-### 🟢 Carried, unchanged
-
-🟢 **`Gego-K12/gegok12`** (MIT, `1,150 B`, `★56`) remains the only permissive school ERP/SIS in this file and the only place an agent can live **inside** the system of record. 🔴 **`frappe/education`** remains **intent-to-GPL-3.0** on a `19`-byte licence file — boundary only, no embedding, confirm upstream before a derivative ships. 🔵 Both verdicts were re-read this pass and neither changed.
-
-
-## 🆕 `p791` — a vendor licence claim that HOLDS, and a `19`-byte grant on a platform this file recommends
-
-🔵 **`p790`'s block on education ERP ended with three vendor licence claims failing on the bytes.** `p791` ran the same test on two more and got one of each — which is the useful outcome, because it shows the probe is not simply biased against vendors.
-
-| Platform | Address | Grant, on the bytes | ★ | Deps | Verdict for an AI layer |
-|---|---|---|---|---|---|
-| **GegoK12** 🆕 | [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🟢 **MIT** · `1,150 B` · `f86101816893` | `56` | 🟢 `laravel-fcm` **MIT** (`1/1` audited) | 🟢 **The vendor claim HOLDS, and it is the only permissive school ERP in this file.** Laravel K-12 ERP/SIS — students, attendance, timetables, fees, multi-role portals. 🟢 **Direct embedding is clean (`T861` satisfied to the first layer)**, so an agent can be an in-process module rather than an LTI tool or an API client. 🔴 **But `★56`**: pick it for greenfield K-12 or as a schema reference, not to replace a running SIS. 🔵 Vendor pages also market a cloud/paid tier — the open-core split is real, so read what the free tier contains |
-| **Frappe Education** ✏️ | [`frappe/education`](https://github.com/frappe/education) | 🔴 **`19 B` reference, NO grant text** · `beca17940a71` | `706` | — | ✏️ **Corrected, and this file recommended it.** The ERPNext-based education module is a genuine fit for the Odoo pattern — mature ERP underneath, education modules on top. 🔴 **Its licence file says `License: GNU GPL V3` in `19` bytes and stops**, while `frappe/lms` (`33,893 B`) and `frappe/erpnext` (`35,149 B`) carry full texts. 🟡 **Build at the boundary and treat it as intent-to-GPL-3.0** until upstream confirms; the ERPNext layer beneath it is properly granted, so a Frappe-stack engagement is not blocked — only this module's own derivative status is unsettled |
-
-🟢 **The Odoo-pattern conclusion is unchanged and slightly strengthened.** Nobody replaces a Student Information System in an engagement, so the AI layer sits at the platform's edge. `p791` adds the one exception worth knowing: **when the platform is `gegok12`, the edge and the inside are the same place**, because the grant permits it.
-
-
-# Vertical platforms — real systems an AI layer can sit on top of — `p790`
-
-The pattern that works in education is the Odoo pattern: **take a mature, deployed, customisable
-platform that already holds the institution's data, and add agents at its edge.** Nobody replaces a
-Student Information System in an engagement. The grants below decide *where* the AI code can live.
-
-🔴 **New rule this pass, and it changes the last section of this file.** A permissive host is a
-necessary condition for direct embedding, **not a sufficient one**: the host's **dependencies** must
-be read too. `oppia/oppia` is Apache-2.0 and depends on an **AGPL-3.0** library; `learningequality/kolibri`
-is MIT and depends on two LGPL ones (`T861`). **`Deps` below records the first-layer audit where one
-was run; a blank cell means not audited, not clean.**
-
-
-## 🆕 `p790` — Education ERP / SIS, probed on the bytes, and **three vendor licence claims fail**
-
-🔵 **Why this block exists.** The brief for this base asks for *real systems an AI layer can sit on
-top of* — Odoo for ERP, OpenMRS for health, Moodle for learning. The education-ERP market answers
-that question mostly through **vendor comparison tables**, and vendor tables are a claim channel.
-Each row below was read on the byte channel instead.
-
-| Platform | Address | Grant, on the bytes | ★ | Verdict for an AI layer |
-|---|---|---|---|---|
-| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL** · `8,241 B` · `46a5d7d40082` | `911` | 🟡 **The vendor claim HOLDS — the only one here that does.** Education ERP built on Odoo's ORM, with `openeducat_core` as the SIS. 🟢 **LGPL tolerates dynamic linking**, so an AI layer calling it as a service or an Odoo module is clean; keep the LGPL components replaceable and their source available |
-| **Odoo** (the ERP underneath) | [`odoo/odoo`](https://github.com/odoo/odoo) | 🔴 **`ANTHOLOGY[LGPL, GPL-3.0]`** · `43,529 B` · `3ce3a7dc8ecb` | `55,739` | 🔴 **`T875` lands on the most-cited vertical platform in the sector on its first application.** Odoo's single `LICENSE` carries **two** copyleft families; reporting it as "LGPL" — as the education-ERP tables do — states one of the two. 🟡 Build **modules**, not a fork, and read which family governs the part you touch |
-| **Frappe Education** | [`frappe/education`](https://github.com/frappe/education) | 🔴 **GPL-3.0 — BY REFERENCE, in `19` bytes** · `1fcecf395312` · `61408d3da518` | `705` | 🔴 **The shortest grant this base has ever measured, and it is a real one.** The entire file reads `License: GNU GPL V3` — no operative text. 🟢 `T845` at its extreme: **`19` bytes is a grant and `39,890` was not proprietary.** 🔴 Copyleft; and note it is **GPL-3.0**, *not* the AGPL-3.0 this base records for its sibling `frappe/lms` — the two Frappe education products differ in family |
-| **openSIS Classic** | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **NO GRANT SERVED** · `8348cd069aa2` | `351` | 🔴 **Re-confirmed, and it reproduced an unplanned 11th control** — this base already records this address at this exact sha as grant-less. 🔵 The vendor tables list it `GPL-2.0`; the repository serves nothing |
-| **Fedena** | [`projectfedena/fedena`](https://github.com/projectfedena/fedena) `547★` 🔵 *(this shelf wrote the `4★` fork [`foradian/fedena`](https://github.com/foradian/fedena) until `p801`)* | 🔴 **NO GRANT SERVED** · canonical `HEAD` `68a84ac445bf` · fork `HEAD` `333477b06f1d` | — | 🔴 **CLAIM REFUTED, and now on bytes.** OpenEduCat's comparison table lists Fedena as **Apache-2.0**; 🔴 **`p801` read the root tree of BOTH addresses on the byte channel and NEITHER serves a licence blob.** 🔵 A competitor's table is not a licence. 🟢 The two addresses are genuinely different repositories (distinct `HEAD`s), so this correction moves the row to the `547★` original |
-| **GegoK12** | `gegok12/gegok12` | 🔴 **ADDRESS DOES NOT EXIST** (`git ls-remote` `rc=128`) | — | 🔴 **CLAIM REFUTED, and this is the sharpest one.** The vendor site states an **MIT** licence and that *"modification, rebranding, and resale are permitted"* — the most permissive claim in the entire education-ERP market. 🔴 **A GitHub-wide search for `gegok12` returns `13` results and none is this product.** There is no locatable source. 🟢 **An MIT claim with no repository is not a finding** |
-
-🟢 **The sentence to carry into an engagement.** In education ERP/SIS the permissive layer is not
-narrow — **it is empty**. `0` of `6` platforms probed carry MIT, Apache-2.0 or BSD: four are
-copyleft (`LGPL`, `LGPL+GPL-3.0`, `GPL-3.0`, and `nextSIS`'s corrected `GPL-3.0`), and the two that
-were *claimed* permissive are a refuted table entry and a non-existent address. 🔴 **So the AI layer
-in this sector is always an integration, never an embed** — which is the same conclusion
-`repos/foundations.md` reaches for LMSs, now measured on the administrative side too.
-
-🔵 **And the pattern that follows from it:** the attachment points this base already holds —
-`brightspace-d2l-mcp` (MIT), `classcharts-agent` (MIT, read-only), `teams-facultad-mcp` (MIT),
-`LearningLocker/xapi-service` (MIT) — are **more valuable than they look**, because every system
-they attach to is copyleft. 🟢 **An MIT MCP server in front of a GPL platform is the whole
-architecture**, not a convenience.
-
-## Learning Management — the delivery layer
-
-| Platform | Address | Grant, on the bytes | Deps | Region | Where an AI layer attaches |
-|---|---|---|---|---|---|
-| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 GPL-3.0 · `35,147 B` · blob `94a9ed024d38` · 🔴 **brand: `TRADEMARK.txt` `3,367 B` — *"the GNU GPL does not include an implied right or licence to use Moodle's trade marks"* (`p797`)** | — | Global | The sector default — if a client has an LMS, assume this. 🔴 A plugin is a derivative work and must be GPL-3.0. 🟢 **Attach through LTI via Tsugi, or Moodle's web services API, and your code stays yours** |
-| **Open edX** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 AGPL-3.0 · `35,136 B` · blob `1eb391f38837` · affero×`16` | — | Global | MOOC-scale delivery; deploy with [`overhangio/tutor`](https://github.com/overhangio/tutor) (🔴 **AGPL-3.0 too** — `34,523 B`, byte-verified `p801`). 🔴 AGPL network clause — attach as an **XBlock across a service boundary**, never by linking. 🟢 **`p801`:** canonical address, grant re-read on bytes and unchanged |
-| **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 AGPL-3.0 · `34,520 B` · `1c9f0bb8013e` | — | North America | Dominant in US higher ed. 🟢 Strong LTI 1.3 support — the sanctioned attachment point |
-| **D2L Brightspace** | proprietary SaaS — [`anonymousonyx22/brightspace-d2l-mcp`](https://github.com/anonymousonyx22/brightspace-d2l-mcp) | 🟢 **MIT** · `1,200 B` · `a873478a6b4e` | — | North America | 🟢 **New this pass.** The third major North American LMS, and until now the only one with no attachment point in this base. The platform is proprietary; **the MCP server over it is MIT**, which is the whole point — attach, never replace |
-| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** · `11,120 B` · `593c74e1c7a5` | — | North America | 🟢 **Permissive and mature.** When a client wants a customised LMS they can own outright, this is the one that does not force disclosure |
-| **OpenOLAT** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · `10,982 B` · `322e90dd5507` | — | EMEA | 🟢 The permissive choice for a European university, already trusted in Swiss and German HE. 🔴 **`p796` (`T914`): `NOTICE.TXT` (`14,412 B`) licenses the logo and icons `CC BY-ND 2.5` — `NoDerivs`. Replace the brand assets; do not modify them** |
-| **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 GPL-3.0 · `35,147 B` · `e137bded10b5` | — | EMEA | 🟢 **The strongest Spanish-language LMS footprint; widely deployed across LATAM ministries and universities** — the incumbent to integrate with, not displace |
-| **ILIAS** | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 GPL-3.0 · `35,147 B` · `87a79b237fcc` | — | EMEA | German public-sector and university installs; SCORM-heavy |
-| **Frappe LMS** | [`frappe/lms`](https://github.com/frappe/lms) | 🔴 AGPL-3.0 · `33,893 B` · `45edbff87486` | — | APAC | Modern Indian-origin LMS; pairs with ERPNext and `frappe/education` for a full institution stack |
-| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** · `1,097 B` · `fe298f54494c` | 🟡 **2 LGPL of 32** | Global | 🟢 **Still the platform for low-connectivity deployments** — offline-first, syncs when a link appears, runs on legacy hardware. First choice for rural LATAM, African and remote-APAC programmes. ⚠️ **Two LGPL dependencies**: dynamic linking is permitted so this remains usable, but the components must stay replaceable with source available |
-| **Oppia** | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 Apache-2.0 · `11,358 B` · `bbda308fd5db` | 🔴 **1 AGPL-3.0 of 171** | Global | Interactive lessons that behave like one-to-one tutoring, `7.0k★`. 🔴 **DO NOT ship as-is: `angular-shepherd` is AGPL-3.0 and a browser bundle is network delivery.** Replace or remove it, then embed freely |
-
-## Student Information / School Management — where the institution's data actually lives
-
-| Platform | Address | Grant, on the bytes | Region | Note |
-|---|---|---|---|---|
-| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 LGPL · `8,241 B` · `46a5d7d40082` | Global | 🟢 **The closest thing to "Odoo for education"** — SIS + LMS + finance in one, on Odoo. LGPL permits dynamic linking, so a separate AI module is clean |
-| **Odoo** | [`odoo/odoo`](https://github.com/odoo/odoo) | 🔴 LGPL-3.0 · `43,529 B` · `3ce3a7dc8ecb` | Global | The ERP base underneath. ⚠️ `T847`: the grant sits on line 3 behind a deferral |
-| **RosarioSIS** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 GPL-2.0 · `15,214 B` · `e4cd20a48bf1` | Global | 🟢 Mature SIS with strong **Spanish and French** localisation — the SIS that fits a LATAM or Francophone-African engagement |
-| **Gibbon** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 GPL-3.0 · `35,121 B` · `59334a28613f` | Global | School management and teaching in one system; common in international K-12 |
-| **Frappe Education** | [`frappe/education`](https://github.com/frappe/education) | 🔴 **GPL-3.0** · **`19 B`** · `61408d3da518` | APAC | Frappe's school-management module: admissions, programmes, fees, assessment. 🔵 **The shortest grant in this base and a real one** — the whole `license.txt` reads `License: GNU GPL V3` |
-| **ERPNext** | [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 GPL-3.0 · ✏️ **`35,149 B`** · blob `f288702d2fa1` · 🔴 **brand: `TRADEMARK_POLICY.md` `3,020 B`, permission only for NON-COMMERCIAL projects (`p797`)** | APAC | Finance, HR and procurement for school groups. 🔴 **The name and logo may not go in the client's product, company or domain name** |
-| ✏️ **nextSIS** | [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🟢 **GPL-3.0** · `39,890 B` · 🟢 `01fa8c8c4c6e` | Global | ✏️ **`p794` removes the stale `PROPRIETARY` row that survived `p790`'s correction.** 🟢 **It IS usable** — copyleft, so deploy separately and integrate at the boundary. Previously filed in this base as merely "ungranted" |
-
-## Assessment, content and classroom
-
-| Platform | Address | Grant, on the bytes | Deps | Region | Note |
-|---|---|---|---|---|---|
-| **nbgrader** | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 **BSD-3-Clause** · `1,512 B` · `91d5c12f989b` | 🟢 **0 of 18** | Global | 🟢 **The permissive autograding core, and the cleanest audit in this file.** Release → collect → autograde → feedback, with a human-review step already in the model — exactly what EU Annex III, Korea's AI Basic Act and US state grading rules require |
-| **JupyterHub** | [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 🟢 BSD-3-Clause · `1,475 B` · `41fffb935326` | — | Global | Cohort-scale serving under nbgrader |
-| **OATutor** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT** · `1,105 B` · `fae8cc474484` | 🟢 **0 of 43** | North America | UC Berkeley Bayesian Knowledge Tracing — the mastery model. 🟢 Clean to the first layer |
-| **Perseus** | [`Khan/perseus`](https://github.com/Khan/perseus) | 🟢 **MIT** · `1,052 B` · `e722e959afd0` | — | North America | Khan Academy's exercise/question renderer — the content primitive for interactive items |
-| **xAPI service** | [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) | 🟢 **MIT** · `1,070 B` · `685c342129c5` | — | Global | 🟢 **New to this file, and it closes a real hole: a Learning Record Store under MIT.** Every "audit trail" claim in this base previously had to hand-roll its storage. Pair with [`xapi-validation`](https://github.com/LearningLocker/xapi-validation) (MIT, `1,070 B`) |
-| **H5P** | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🔴 GPL-3.0 · `35,146 B` · `2d7f937a03c9` | — | EMEA | Interactive content types already embedded in Moodle and Canvas — generate *H5P content*, which is data, not derivative code |
-| **edx-ora2** | [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🔴 AGPL-3.0 · `35,135 B` · `0d60a779e29d` | — | Global | Open-response, peer and staff assessment — the rubric model to mirror |
-| 🔴 **INGInious** | [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | 🔴 **AGPL-3.0** · `34,764 B` · `98d56ade0351` | — | EMEA | Automated grading from UCLouvain — a real, mature European platform in the **regulated** surface. 🔴 AGPL **and** ⚠️ **SCOPE-LIMITED**: its licence covers *"most of the files"* and defers the rest to per-file notices. **Study it; do not vendor it** |
-| **Opencast** | [`opencast/opencast`](https://github.com/opencast/opencast) | 🟢 **ECL-2.0** · `11,340 B` · `94aecba33ed9` | — | EMEA | 🟢 Permissive lecture capture — transcription, chaptering and summarisation attach naturally |
-| **BigBlueButton** | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 LGPL · `7,652 B` · `13b55d45c046` | — | Global | Virtual classroom designed for teaching; LGPL allows dynamic linking |
-| **MyScriptJS** 🔴 **ARCHIVED** | [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) | 🟢 **Apache-2.0 (by reference)** · `570 B` · `968021fcc1f4` | — | EMEA | 🔴 **ARCHIVED UPSTREAM, last push `2021-01-04` (`T901`)** — `★357`. Handwriting and **maths** input recognition, French origin, the input primitive for a maths tutor on a tablet — 🔴 **but unmaintained for nearly six years.** Rescued from this base's unusable class this pass |
-| **Mahara** 🔴 **ARCHIVED** | [`MaharaProject/mahara`](https://github.com/MaharaProject/mahara) | 🔴 GPL-3.0 · `35,148 B` | — | Global | 🔴 **ARCHIVED UPSTREAM, last push `2023-11-16` (`T901`)** — read-only, `★120`. ePortfolio, still the natural home for skills-based credentialing, 🔴 **but the engagement owns the fork from day one** |
-| **DSpace** | [`DSpace/DSpace`](https://github.com/DSpace/DSpace) | 🟢 BSD-3-Clause · `1,504 B` · `2d991b4832bb` | — | Global | Institutional repository for OER, theses and research output |
-| **Anki** | [`ankitects/anki`](https://github.com/ankitects/anki) | 🔴 AGPL-3.0 · ✏️ `1,937 B` (`p797`: changed upstream `2026-11-12 16:06 -0300`) · `a5461e33e3db` 🔴 **(`p796` `T919`: the ✏️ `1,937 B` (`p797`: changed upstream `2026-11-12 16:06 -0300`) is a POINTER, not a grant — it DECLARES `AGPL-3.0-or-later` plus BSD-3 contributed portions, and neither text ships at root)** | — | Global | The reference spaced-repetition scheduler. 🟡 For a permissive recurrence primitive instead, use [`jkbrzt/rrule`](https://github.com/jkbrzt/rrule) (BSD-3, `3,493 B`) — 🔴 **but it is STALE: last push `2024-06-27`, `28` months, not archived (`p795`).** 🟢 Recurrence rules are frozen mathematics, so the staleness is near-harmless here; pin the version and own the fork knowingly |
-| **ODK Collect** | [`getodk/collect`](https://github.com/getodk/collect) | 🟢 **Apache-2.0** · `10,494 B` · `2344bb9c5da4` | — | Global | 🟢 Offline mobile data collection — the field instrument for a readiness diagnostic or a baseline survey where connectivity fails |
-| 🔴 **Metabase** | [`metabase/metabase`](https://github.com/metabase/metabase) | 🔴 **SPLIT BY DIRECTORY** · `855 B` · `6006cc9c65dd` | — | Global | Frequently the BI layer a client already runs over learning data. 🔴 **AGPL-3.0 outside `enterprise/`, Metabase Commercial License inside it.** Deploy it; do not vendor code out of it without deciding which side of the boundary you are on |
-
-## 🟢 School operations — timetabling, substitution and behaviour (`p789`)
-
-🟢 **New category this pass, and it is the one with the clearest architecture.** The permissive
-supply here is **solvers plus approval gates**, not conversational agents — which means the AI layer
-sits at the *edges* of a deterministic core, reading intent and explaining outcomes, never deciding
-the schedule itself.
-
-| Platform / component | Address | Grant | What an AI layer attaches to |
-|---|---|---|---|
-| 🟢 **Timefold** (via case study) | [`paoloantinori/school-timetable-timefold-case-study`](https://github.com/paoloantinori/school-timetable-timefold-case-study) | 🟢 MIT · `1,081 B` · `12e2a597e655` | A **constraint solver** on Quarkus. The LLM turns plain-English policy into constraints and explains rejections; the solver produces the timetable |
-| 🟢 **OR-Tools** (via Timable) | [`Nayak-indie/Timable`](https://github.com/Nayak-indie/Timable) | 🟢 Apache-2.0 · `11,357 B` · `c71d239df917` | Clash-free, priority-aware scheduling with a Streamlit surface — the second independent solver |
-| 🟢 **schoolflow-agent** | [`Zahraishag/schoolflow-agent`](https://github.com/Zahraishag/schoolflow-agent) | 🟢 MIT · `1,081 B` · `1b7481d92d0f` | **Disruption handling** — absences and substitutions — with a **human approval step** before any schedule is written |
-| 🟢 **ClassCharts** (via agent) | [`shan8851/classcharts-agent`](https://github.com/shan8851/classcharts-agent) | 🟢 MIT · `1,066 B` · `65ef4f07f833` | 🇬🇧 A live UK homework/behaviour MIS, attached **read-only** on a parent account |
-| 🟢 **D2L Brightspace** (via MCP) | [`anonymousonyx22/brightspace-d2l-mcp`](https://github.com/anonymousonyx22/brightspace-d2l-mcp) | 🟢 MIT · `1,200 B` · `a873478a6b4e` | The third major North American LMS, over MCP |
-| 🔴 **School ERP** (via MCP) | [`NSK-394/schoolbridge-mcp`](https://github.com/NSK-394/schoolbridge-mcp) | 🔴 **ungranted** | **Role-based** agent access to attendance, fees and student records. 🔵 The right control surface, no grant — an upstream licence request |
-
-🔴 **The caution this section exists to state.** Timetabling, attendance and safeguarding touch
-children's personal data and, in the EU, sit close to the high-risk boundary when they feed
-decisions about individuals. 🟢 The read-only attachment (`classcharts-agent`) and the approval gate
-(`schoolflow-agent`) are not conveniences — **they are the two design choices that keep this
-category deployable**, and both already exist in permissive code.
-
-## Interop — the layer that makes all of the above composable
-
-| Component | Address | Grant, on the bytes | Region | Why it matters |
-|---|---|---|---|---|
-| **Tsugi** | [`csev/tsugi`](https://github.com/csev/tsugi) | 🟢 **Apache-2.0** · `10,273 B` · `f54555227df1` | Global | 🟢 **The single most useful licensing tool in this file.** Hosts LTI tools that any LMS can launch *across a process boundary* — so permissive or proprietary AI code serves Moodle, Canvas or Sakai **without becoming a derivative work of them** |
-| **OOAPI** | [`open-education-api/specification`](https://github.com/open-education-api/specification) | 🟡 EUPL-1.2 · `13,827 B` · `d9c5b0a1a68d` | EMEA | 🟢 A **live** open education interop standard — courses, offerings, enrolments, results |
-| **European Learning Model** 🟡 **ARCHIVED** | [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | 🟡 EUPL-1.2 · `13,865 B` | EMEA | 🟡 **ARCHIVED UPSTREAM, last push `2024-02-14` (`T901`)**, `★54`. 🟢 **The European Commission's own** learning and credential data model — the vocabulary an EU public-sector client is most likely to be asked to speak. Rescued from the ungranted class this pass |
-| **Hedy** | [`hedyorg/hedy`](https://github.com/hedyorg/hedy) | 🟡 EUPL-1.2 · `13,827 B` · `38d5db7214ff` | EMEA | Gradual programming language for classrooms, `1,697★` |
-| **Open WebUI** ✏️ | [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | 🔴 **`BSD-3-Clause + BRANDING RIDER` (non-OSI)** · `2,819 B` · 🟢 `99f39e7feff2` | Global | 🔴 **CORRECTED at `p794` (`T900`).** Self-hosted chat surface over a school-controlled model — still the fastest data-resident front end, 🔴 **but clause `4` makes removing or replacing the "Open WebUI" branding a material breach, so it cannot be delivered white-labelled.** 🔵 Two of its three root licence files read clean; `LICENSE` is the one that governs |
-
-## The rule this file exists to state — amended this pass
-
-🟢 **An engagement's licensing posture is decided by where the AI code sits, not by which LMS the
-client runs.** Three safe attachment points, in order of preference:
-
-1. **LTI across a process boundary** (`csev/tsugi`, Apache-2.0) — works with Moodle, Canvas, Sakai,
-   Open edX; your code never links to theirs. For D2L Brightspace, the equivalent is
-   `brightspace-d2l-mcp` (MIT).
-2. **The platform's web API / web services** — same boundary, no LTI ceremony.
-3. **Generated content rather than generated code** — producing H5P or QTI items is authoring data,
-   which carries none of the host platform's copyleft.
-
-🔴 **Only embed directly when the host itself is permissive — AND its dependencies have been read.**
-That second clause is new, and it is the whole point of `T861`:
-
-| Host | Repo grant | First-layer deps | Embed directly? |
-|---|---|---|---|
-| `jupyter/nbgrader` | BSD-3 | 🟢 `0` of `18` copyleft | 🟢 **Yes** |
-| `CAHLR/OATutor` | MIT | 🟢 `0` of `43` copyleft | 🟢 **Yes** |
-| `learningequality/kolibri` | MIT | 🟡 `2` LGPL of `32` | 🟡 **Yes, with the LGPL components kept replaceable and their source available** |
-| `oppia/oppia` | Apache-2.0 | 🔴 `1` **AGPL-3.0** of `171` | 🔴 **Not until `angular-shepherd` is removed or replaced** |
-| `sakaiproject/sakai` · `OpenOLAT` · `opencast` | ECL-2.0 / Apache-2.0 | ⚪ not audited | 🟡 **Permissive at the root; audit before shipping.** 🔴 **`p796`: `OpenOLAT` audited and the root was not the whole answer — brand assets `CC BY-ND 2.5` in `NOTICE.TXT` (`T914`)** |
-| 🟢 **`Kosudo/nextSIS`** `CORRECTED p790` | 🔴 **GPL-3.0** (served in an anthology) | ⚪ not audited | 🔴 **No — separate deployment, integrate at the boundary.** 🟢 **But it is now *usable*, which is the change:** this base barred it as proprietary for two passes. **The only open Student Information System it holds** |
-| 🟢 **`MrEug3n1o/spanish-tutor-ai`** `NEW p790` | 🟢 MIT | ⚪ not audited | 🟡 **Permissive at the root — and the only row here with no external model call in its default loop.** That removes the cross-border data question instead of governing it, which is why `P788-4` now has a reference implementation |
-| 🟡 **`jinlize-tech/*`** `NEW p790` | 🟢 Apache-2.0 (`100/100` sampled) | ⚪ not audited | 🟡 **Grant clean, code `0/130` platform-validated by its own README.** Take the `8`-centre back-office taxonomy now; take the packages only after your own tests |
-
-🟢 **`p790` gives that rule a denominator.** The `5` new permissive rows placed this pass were each
-probed for a scope carve-out and **`0` of `5` carry one** — their grants are unqualified at the
-repository level. 🔴 **That is not the same as the curriculum being cleared.**
-`bncc-lesson-generator` generates against Brazil's **BNCC**, `mi_icfes` against Colombia's
-**Saber 11**, `StudyLah` against Malaysia's **SPM** — three state or ministry instruments, and
-**none of the three repositories makes any claim about them in either direction.** 🔵 **The absence
-of a scope clause is the absence of a *statement*, not a grant of the content.** `paes-mcp`, which
-does state it (and names **DEMRE** as the rights-holder of Chile's PAES items), is the row that
-taught this base to look — and it remains the only row in the base that answers the question
-out loud.
-
-🔵 **And one more rule, from `T864`.** In education the **content** has a rights-holder and the
-repository is the cheap part. Exam items, textbooks and curricula belong to ministries, universities
-and publishers — `paes-mcp`'s MIT grant covers its code and explicitly not Chile's PAES papers, which
-belong to DEMRE. **Read the scope clause. Ask who owns the content.**
+- **No permissively licensed LMS at deployment scale** except Sakai. Surface
+  this constraint in week one of any engagement that needs a proprietary
+  derived platform.
+- **MCP coverage is thin and uneven.** Canvas has a strong MIT MCP server
+  (`canvas-mcp`, 324 stars, 102 tools). Open edX has only `openedx-mcp`
+  (AGPL-3.0, **3 stars** — reference only). **Moodle has no significant MCP
+  server in this window** despite being the most-deployed LMS in the world.
+  That is the clearest build opportunity in this file.

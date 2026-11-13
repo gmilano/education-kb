@@ -1,7 +1,63 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-12
+updated: 2026-11-13
+---
+
+## `2026-11-13` — **DeepTutor crosses 58k and is Apache-2.0, not MIT; two of the week's most-recommended "open source" tutors are not open source**
+
+**Window:** education-specific AI agents, verified 2026-11-13 by fetching each
+repository page and reading GitHub's own license field and star count. 14
+candidates probed, 11 admitted, 3 rejected on license. `curl -sI` against
+`github.com` returns `403` under this session's egress policy for
+non-attached repositories, and `api.github.com` refuses outside the attached
+repo, so the rendered repository page is the verification channel this pass.
+
+### Movement
+
+| Agent | License | Stars (2026-11-13) | Note |
+|---|---|---|---|
+| https://github.com/HKUDS/DeepTutor | Apache-2.0 | 58.6k | Up from the ~52.8k a 2026-11-01 third-party trend report carried. **Secondary roundups describe it loosely as MIT; the repository says Apache-2.0.** |
+| https://github.com/THU-MAIC/OpenMAIC | MIT | 43.4k | Tsinghua MAIC multi-agent classroom. A November roundup put it at ~42k; the page reads 43.4k. Fastest riser in education agents. |
+| https://github.com/ArnaudGuiovanna/tutor-mcp | MIT | 102 | **v0.7.0** (late October) adds institutional courses, invitations, version validation, program/enrollment management, plus a desktop client with per-tool permissions. Small star count, unusually mature design: progression is governed by an auditable engine *outside* the model. |
+| https://github.com/vishalsachdev/canvas-mcp | MIT | 324 | Now advertises up to 102 tools and 8 agent skills; v1.17.0 latest. The Canvas-side agent surface is consolidating here. |
+
+### The license correction that matters this week
+
+Two projects that appear on 2026 "best open source AI agents for education"
+lists are **not** open source:
+
+- https://github.com/CaviraOSS/PageLM (2.1k) ships under a **"PageLM Community
+  License" / CaviraOSS Community License** and requires prior written
+  permission for commercial use or resale.
+- https://github.com/Nutlope/llamatutor (2.1k) has **no license file at all** —
+  default all-rights-reserved.
+
+Both are described as open source in their own marketing and in third-party
+roundups. A studio that pulled either into a client stack on the strength of a
+listicle would be shipping unlicensed code.
+
+Also reclassified: https://github.com/GarethManning/education-agent-skills
+(977) is **CC BY-SA 4.0** — a share-alike *content* license covering 165
+evidence-grounded education skills. Valuable as pedagogy source material,
+wrong license class for shipped software.
+
+### Declared gaps this window
+
+- **Grading/assessment agents: nothing dominant.** No education agent of
+  consequence targets grading. `nbgrader` (BSD-3-Clause, 1.4k) remains
+  infrastructure, not an agent.
+- **Pedagogical evaluation: effectively empty.** The only education-specific
+  eval harness found is https://github.com/kaushal0494/AITutor-EvalKit (MIT, 4
+  stars), scoped to mathematics.
+- **Regional origin is concentrated.** Of the four movers above, two are from
+  China (HKUDS, Tsinghua MAIC) and two are individual-maintainer projects in
+  North America/EMEA. **No APAC-ex-China, no LATAM, and no Africa-origin
+  education agent surfaced in this window** — searched explicitly, found
+  nothing at a scale worth a row. India's activity this year is in public
+  infrastructure (BHASHINI/DIKSHA, Bharat EduAI Stack announcements), not in
+  published agent repos.
+
 ---
 
 ## `2026-11-12` · `p801` — **the week's finding is that the channel this base called dead for five passes serves LICENCE BYTES, and the first thing it did was overturn a grant `p800` withdrew**
