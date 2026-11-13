@@ -12,6 +12,17 @@ of these**, not replacing it. All licenses and star counts verified from the
 repository page (2026-11-13, with the LTI and Moodle-MCP rows verified this
 pass).
 
+### What changed this pass (tenth pass, `p805`, 2026-11-13) — three SIS rows, none of them new
+
+🔴 **The prescribed search battery returned nil on supply for the third consecutive
+pass.** 🟢 **So this pass audited what the base had already verified and never
+shelved, and the student-information table was where the damage was.** Three
+systems — `Gego-K12/gegok12` (**MIT**), `SVWS-NRW/SVWS-Server` (**BSD-3-Clause**)
+and `portabilis/i-educar` (**GPL-2.0**) — were license-verified in earlier passes,
+recorded in the append-only trending log, and **written to no shelf file at all**.
+One of them had been described in that log as already being on this shelf. All
+three were re-verified live before being added below.
+
 ### Unresolved this pass (ninth pass, `p804`, 2026-11-13) — an informed gap, not a finding
 
 🔴 **The Open edX stewardship and licence question was raised this pass and could not
@@ -96,6 +107,9 @@ MCP server. It does.
 | RosarioSIS | https://github.com/francoisjacquet/rosariosis | GPL-2.0 | 654 | K-12 school management; widely deployed in LATAM, Spanish/French/Portuguese localization in core. |
 | Gibbon | https://github.com/GibbonEdu/core | GPL-3.0 | 638 | Flexible school management; strong in international K-12 schools. |
 | openSIS Classic | https://github.com/OS4ED/openSIS-Classic | GPL (README) | 351 | Student information system; commercial editions available from OS4ED. |
+| **GegoK12** | **https://github.com/Gego-K12/gegok12** | **MIT** | 56 | 🟢 **The first genuinely MIT school ERP/SIS in this base, and this pass is the one that put it on the shelf.** Laravel/PHP 8.4+, 123 commits, API-first with a mobile app. Covers student management, attendance, timetables and fees. 🔴 **The licence had to be read from the file: GitHub's classifier returns `NOASSERTION` because the `1,150 B` grant carries `<!-- SPDX-License-Identifier: MIT -->` on line 3 and curly quotes in the operative text.** Confirmed first-hand this pass — the file opens `MIT License`, SPDX `MIT`, *"Copyright (c) 2025 GegoSoft Technologies and GegoK12 Contributors."* 🔵 **Region: APAC** — `.env.example` ships `TIMEZONE = 'Asia/Kolkata'` and `config/app.php` resolves from it, which is a stronger placement signal than an owner profile because a deployer inherits it without choosing it. 🔴 **56 stars: this is a real but small project.** Vendor pages also market a cloud edition, so read the repo, not the marketing. |
+| **SVWS-NRW** | **https://github.com/SVWS-NRW/SVWS-Server** | **BSD-3-Clause** | 42 | 🟢 **A state-government school-administration server, permissively licensed — new to this shelf this pass.** *Schulverwaltungssoftware Nordrhein-Westfalen*: the SIS the German state of **North Rhine-Westphalia** builds for its own schools, Java + TypeScript, **10,015 commits**. 🔵 **Region: EMEA.** 🔴 **The index reads `NOASSERTION`; BSD-3-Clause is stated in the README** (*"lizenziert unter der BSD 3-Clause Lizenz"*). 🟢 **Engagement reading: commit count says this is a maintained production system, not a pilot, and a BSD-3 grant on public-sector education software is rare enough to be the reason to look at EMEA public K-12 at all.** German-language domain model — budget for that, not for the licence. |
+| **i-educar** | **https://github.com/portabilis/i-educar** | **GPL-2.0** | 725 | 🟢 **The largest free-software school-management system in Brazil, and the most-starred SIS in this table.** PHP/Laravel, **34,951 commits** on branch `2.12`, 555 forks; first built by the Itajaí (SC) city government and now deployed by municipalities across Brazil. 🔵 **Region: LATAM.** 🔴 **GPL-2.0 — copyleft, so this is a system a client self-hosts and you extend, not a tree a studio derives a product from.** Companion `i-diario` (AGPL-3.0) is the class-diary/attendance-and-grades surface from the same vendor. 🔴 **Correction recorded this pass: the trending log has claimed since `p667` that this row was "carried on the verticals shelf", and it was not — it had never been written to any shelf file.** |
 
 🔴 **Agent surface across the SIS row, stated plainly because it decides which
 client you can serve this quarter.** **OpenEduCat: yes**, via the Odoo
@@ -106,9 +120,24 @@ the same generic-connector trick, and nobody has checked. **RosarioSIS
 connector of the Odoo kind** — searched by project name this pass, nothing
 returned. Those two are the genuinely unserved incumbents, and they are
 precisely the ones that dominate **LATAM K-12** (RosarioSIS) and
-**international K-12** (Gibbon). 🔵 **Engagement reading: a LATAM K-12 client on
+**international K-12** (Gibbon). 🔴 **Amended this pass: naming
+RosarioSIS as what dominates LATAM K-12 understated the field — `portabilis/i-educar`
+is larger by stars, forks and commits and is deployed by Brazilian municipalities,
+and it had never been written to this shelf.** 🔵 **Engagement reading: a LATAM K-12 client on
 RosarioSIS is a build; a private-education or India/LATAM SMB client on
 OpenEduCat is a configuration.**
+
+🟢 **The licence picture of this table changed this pass, and it is the most
+consequential thing on this page.** Every SIS row above used to be copyleft —
+LGPL-3.0, GPL-3.0, GPL-2.0 — which meant the standing advice was *integrate,
+never derive*. **`GegoK12` is MIT and `SVWS-NRW` is BSD-3-Clause.** Both are
+small next to OpenEduCat or i-educar, so this is not a recommendation to replace
+them; it is the first time a studio has **a permissive SIS tree it can actually
+fork and ship** when the engagement calls for a product rather than an
+integration. 🔵 **Placed: `GegoK12` → APAC, `SVWS-NRW` → EMEA, `i-educar` →
+LATAM, OpenEduCat → APAC/LATAM SMB, RosarioSIS → LATAM, Canvas/Open edX →
+North America.** 🔴 **Both permissive rows are under 60 stars; verify
+maintenance before committing a client to either.**
 
 ## Content, delivery and classroom
 

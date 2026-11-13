@@ -7,7 +7,13 @@ updated: 2026-11-13
 # Education AI — current trends
 
 Nineteen trends, each with the evidence behind it and what it implies for an
-engagement. Researched 2026-11-13. 🔴 **The count in this line said "Eight" for
+engagement. Researched 2026-11-13. 🔴 **Tenth pass (`p805`, 2026-11-13):
+no trend was added and none was retired — the four global and four regional legs
+returned facts already carried here, the third consecutive nil.** 🟢 **One trend was
+amended on new shelf evidence: `T7`, where two permissive student-information systems
+and a third permissive platform row weaken the "platform layer is copyleft" claim for
+the second time.** 🔵 **The amendment uses no component discovered this pass** — all
+three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
 
@@ -158,6 +164,30 @@ mounted into a copyleft platform over LTI/MCP. One practical wrinkle found this
 pass: **every verified LTI 1.3 library is Node, PHP or Elixir — none is
 Python**, while nearly every agent in this KB is Python. Budget for a
 two-process shape (Python agent behind a Node/PHP LTI front door).
+
+🔴 **Revised again, tenth pass (`p805`, 2026-11-13) — the "platform layer is
+copyleft" half weakens a second time, and this time it is the *student-record*
+layer, not the LMS.** Until this pass every student-information and institutional-ERP
+row in this base was copyleft: OpenEduCat (LGPL-3.0), Frappe Education (GPL-3.0),
+RosarioSIS (GPL-2.0), Gibbon (GPL-3.0), openSIS (GPL), i-educar (GPL-2.0). **Two
+permissive SIS trees are now shelved:**
+[`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) (**MIT**, 56★, Laravel,
+APAC) and [`SVWS-NRW/SVWS-Server`](https://github.com/SVWS-NRW/SVWS-Server)
+(**BSD-3-Clause**, 42★, 10,015 commits, a German state government's own school
+administration server, EMEA). A third permissive platform row,
+[`elimu-ai/webapp`](https://github.com/elimu-ai/webapp) (**MIT**, 41★), joins the
+LMS table.
+
+🔵 **The revised statement:** permissive platform software in education exists at
+**every** layer — LMS, SIS, content — but it is **consistently one to two orders of
+magnitude smaller** than the copyleft incumbent beside it. OpenOLAT 451★ against
+Moodle 7.6k; GegoK12 56★ against OpenEduCat 911★; SVWS-NRW 42★ against i-educar
+725★. 🟢 **So the architectural rule is unchanged for an incumbent-replacement
+engagement — integrate, do not derive — but it is now wrong as a blanket statement
+about what a studio may fork.** When the deliverable must be a product the client
+owns outright, there is a permissive tree at each layer; it is just small, and the
+maintenance burden transfers to the studio. 🔴 **Both permissive SIS rows are under
+60 stars: verify maintenance before committing a client.**
 
 ## T8 — Education AI's centre of gravity is APAC; LATAM and Africa are nascent, not absent
 

@@ -3,6 +3,55 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+## `2026-11-13` (tenth pass) — **The trending leg nils for a third pass, and the repositories worth shelving this week were already in this file**
+
+**Pass `p805`.** 🔵 **`0` education-specific repositories from the trending leg, third
+consecutive pass.** `github trending education AI 2026` returned `HKUDS/DeepTutor`
+(reported ~52.8k★, Apache-2.0 — shelved), `THU-MAIC/OpenMAIC` (~42k★, MIT — shelved),
+`patchy631/ai-engineering-hub` (~40k★ — shelved at `p804`) and
+`rohitg00/ai-engineering-from-scratch` (shelved at `p804`). 🔴 **All four were already
+held. Nothing was added from this leg.**
+
+🟢 **`p804`'s observation reproduces a third time and is now a stable property of the
+channel, not an artifact of one window:** what GitHub's education-AI trending surface
+returns is **repositories for learning about AI**, not **repositories that apply AI to
+learning**. The vertical-platform leg behaved the same way — `OpenEduCat`, `RosarioSIS`,
+`OpenOLAT`, `Open edX`, `Moodle`, `ERPNext`, `GegoK12` — 🔴 **a sixth consecutive pass
+returning this shelf's own contents.**
+
+### What this pass added instead: a promotion audit
+
+🔴 **This file and `agents/trending.md` together are 141,505 lines.** A `comm` of
+green-marked, byte-verified slugs in them against the four shelf files returned **11
+verified repositories present in no shelf file**. 🟢 **Eight were promoted to
+`repos/foundations.md` and three to `verticals/solutions.md`**, all re-verified live
+first. The full table, the licences and the refusals are in `agents/trending.md` under
+this same pass.
+
+| Promoted to `repos/foundations.md` | Licence | ★ | Layer |
+|---|---|---|---|
+| [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) | 🟢 MIT | 42 | xAPI statement service |
+| [`LearningLocker/xapi-validation`](https://github.com/LearningLocker/xapi-validation) | 🟢 MIT | 12 | xAPI statement validation |
+| [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🟢 ECL-2.0 | 62 | Learning-record warehouse |
+| [`CredentialEngine/osmt`](https://github.com/CredentialEngine/osmt) | 🟢 Apache-2.0 | 67 | Skills authoring (CTDL/RSD) |
+| [`CredentialEngine/CredentialRegistry`](https://github.com/CredentialEngine/CredentialRegistry) | 🟢 Apache-2.0 | 15 | Credential registry |
+| [`CredentialEngine/transcript-ctid-matcher`](https://github.com/CredentialEngine/transcript-ctid-matcher) | 🟢 Apache-2.0 | — | Transcript → CTID matching |
+| [`tabiya-tech/compass`](https://github.com/tabiya-tech/compass) | 🟢 MIT | 14 | Lived-experience skills elicitation |
+| [`elimu-ai/webapp`](https://github.com/elimu-ai/webapp) | 🟢 MIT | 41 | Learning platform (out-of-school children) |
+
+🟢 **The xAPI rows close a real hole:** every compose pattern in this KB instructs an
+agent to *"emit xAPI"*, and until this pass **this base named nothing that would reject
+a malformed emission.** `xapi-validation` is that component, it is MIT, and it had been
+sitting verified in this log.
+
+🔴 **Provenance, stated plainly:** `curl -sI` to `github.com` returns **`403` from this
+session's egress proxy**, so the prescribed URL check could not be run as written.
+Every row above was instead verified by fetching the rendered repository page, and
+`Gego-K12/gegok12`'s grant by fetching the `LICENSE` blob itself. **Sidebar-verified,
+not payload-verified**, except that one.
+
+---
+
 ## `2026-11-13` (ninth pass) — **The trending leg returned two MIT repos larger than anything in this base, and neither of them is an education project — which is the finding**
 
 **Pass `p804`.** 🔵 **`0` education-specific repositories from the trending leg, for the second

@@ -7,7 +7,28 @@ updated: 2026-11-13
 # Education AI Agents — curated, license-verified
 
 **34 real agents** below — **29 build-safe** (MIT / Apache-2.0 / BSD / ISC) plus
-**5 copyleft** — **unchanged through the ninth pass (`p804`, 2026-11-13)**.
+**5 copyleft** — **unchanged through the tenth pass (`p805`, 2026-11-13)**.
+
+🔵 **`p805` added zero rows. That is the third consecutive nil on agent supply, and
+this pass stopped treating it as a result to re-derive and started treating it as a
+budget to spend elsewhere.** All eight prescribed legs ran again. The global legs
+returned `DeepTutor`, `OpenMAIC`, `ai-engineering-hub`, `ai-engineering-from-scratch`,
+`OpenEduCat`, `RosarioSIS`, `OpenOLAT`, `Open edX`, `Moodle` and `Canvas` — 🟢 **every
+education-specific name already curated here or in `repos/foundations.md`.** The only
+non-generic candidate the battery produced that was *not* obviously held —
+**GegoK12** — turned out to be verified by this base at `p802` already.
+
+🔴 **So this pass audited the base against itself instead, and found a propagation
+defect.** A diff of byte-verified, green-marked repository slugs in the two append-only
+trending logs against the four files a studio actually reads returned **11 verified
+repositories that had reached no shelf file at all** — including one,
+`portabilis/i-educar`, that the log has claimed since `p667` was already shelved.
+🟢 **All 11 were re-verified live this pass and the adoptable ones promoted**: three to
+the xAPI layer, four to a new skills-and-credentials layer, one to the LMS table, three
+to the SIS table in `verticals/solutions.md`. 🔵 **None belongs in *this* table** —
+none is an agent. 🔴 **The underlying cause is structural and is not fixed:
+`agents/trending.md` is 79,190 lines and `repos/trending.md` is 62,315. Append-only
+preserves the trend and buries the finding.**
 
 🔵 **`p804` added zero rows, and `p803`'s saturation finding reproduced exactly.** All
 eight prescribed legs ran again; every education-specific name they returned was

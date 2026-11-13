@@ -3,6 +3,91 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+## `2026-11-13` (tenth pass) — **Three passes of nil supply, so this one audited the base against itself: 11 byte-verified repositories had reached no shelf a studio reads, and one of them the log claimed was already there**
+
+**Pass `p805`.** 🔵 **Zero agent rows added — the third consecutive nil on supply.**
+All eight prescribed legs ran, four global and four regional. The global legs returned
+`DeepTutor`, `OpenMAIC`, `ai-engineering-hub`, `ai-engineering-from-scratch`,
+`OpenEduCat`, `RosarioSIS`, `OpenOLAT`, `Open edX`, `Moodle`, `Canvas` and `GegoK12`.
+🟢 **Every education-specific name was already held.** `GegoK12` was the only candidate
+that looked new from the search tier alone, and this base verified it at `p802`.
+
+🔴 **The finding of this pass is not on the supply side. It is that this base cannot
+read itself.** `agents/trending.md` is **79,190 lines** and `repos/trending.md` is
+**62,315**. Both are append-only by instruction, which is correct for preserving a
+trend and catastrophic for retrieval: a finding verified at `p667` and never promoted
+is, in practice, lost.
+
+### The audit
+
+A diff of green-marked slugs carrying a `github.com` address in the recent window
+of both trending logs against the concatenation of the four shelf files —
+`agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`,
+`compose/patterns.md`. **179 green-marked slugs; 11 adoptable ones absent from every
+shelf.**
+
+🔴 **The diff was NOT applied in bulk, and that is deliberate.** The same output
+contains a literal **`owner`-slash-`repo`** placeholder and dozens of non-education
+repositories picked up during channel exploration — `excalidraw/excalidraw`,
+`nvaccess/nvda`, `LBNL-ETA/EnergyPlus-MCP`, `ABC-TransitionBasCarbone/bilan-carbone`.
+🔵 **A `comm` output is a candidate list, not a shelf.** Promotion stayed a judgement,
+and the log's explicit refusals were honoured: `academico-sis/academico` was refused
+placement at `p665` with evidence and was **not** promoted here.
+
+### What was promoted, all re-verified live this pass
+
+| Repo | Licence (verified this pass) | ★ | Shelf | Region |
+|---|---|---|---|---|
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🟢 **MIT** — read from `LICENSE`: `MIT License`, SPDX `MIT` line 3, *"Copyright (c) 2025 GegoSoft Technologies and GegoK12 Contributors"* | 56 | `verticals/solutions.md` | **APAC** |
+| [`SVWS-NRW/SVWS-Server`](https://github.com/SVWS-NRW/SVWS-Server) | 🟢 **BSD-3-Clause** (README; index `NOASSERTION`) | 42 | `verticals/solutions.md` | **EMEA** |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 **GPL-2.0** (sidebar) | 725 | `verticals/solutions.md` | **LATAM** |
+| [`LearningLocker/xapi-service`](https://github.com/LearningLocker/xapi-service) | 🟢 **MIT** (sidebar) | 42 | `repos/foundations.md` | Global |
+| [`LearningLocker/xapi-validation`](https://github.com/LearningLocker/xapi-validation) | 🟢 **MIT** (sidebar) | 12 | `repos/foundations.md` | Global |
+| [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🟢 **ECL-2.0** (sidebar) | 62 | `repos/foundations.md` | Global |
+| [`CredentialEngine/osmt`](https://github.com/CredentialEngine/osmt) | 🟢 **Apache-2.0** (file; index `NOASSERTION`) | 67 | `repos/foundations.md` | **North America** |
+| [`CredentialEngine/CredentialRegistry`](https://github.com/CredentialEngine/CredentialRegistry) | 🟢 **Apache-2.0** (sidebar) | 15 | `repos/foundations.md` | **North America** |
+| [`CredentialEngine/transcript-ctid-matcher`](https://github.com/CredentialEngine/transcript-ctid-matcher) | 🟢 **Apache-2.0** | — | `repos/foundations.md` | **North America** |
+| [`tabiya-tech/compass`](https://github.com/tabiya-tech/compass) | 🟢 **MIT** (sidebar) | 14 | `repos/foundations.md` | Global |
+| [`elimu-ai/webapp`](https://github.com/elimu-ai/webapp) | 🟢 **MIT** (sidebar) | 41 | `repos/foundations.md` | **APAC** |
+
+### The row that is a correction, not a promotion
+
+🔴 **[`portabilis/i-educar`](https://github.com/portabilis/i-educar).** This log stated
+at `p667`, and repeated at `p799`, that the row was *"carried on the verticals shelf
+since `p667`"*. **It was not on any shelf.** 🔵 **A base that cites its own prose as
+evidence of its own state will reproduce whatever it got wrong the first time** — the
+check that catches this is `grep` against the shelf file, not a reading of the log, and
+it costs one command.
+
+### Consequences written to the shelf
+
+🟢 **`T7` amended** in `intel/trends.md`: the *"platform layer is copyleft"* claim
+weakens a second time, now at the student-record layer — two permissive SIS trees
+(`GegoK12` MIT, `SVWS-NRW` BSD-3) against six copyleft ones. The revised statement is
+that permissive platform software exists at **every** layer in education but is
+**one to two orders of magnitude smaller** than the copyleft incumbent beside it.
+🟢 **Two new compose patterns**: `P17` (defensible tutor audit trail — validate, emit,
+store, consolidate, all permissive, the Article 50 answer) and `P18`
+(skills-and-credentials advising, North America, CTDL/RSD).
+🟢 **All four regional subsections of `intel/market.md` updated**, each recording its
+leg's nil explicitly.
+
+### Declared gaps, stated so a later pass does not re-buy them
+
+- 🔴 **APAC, fourth consecutive pass:** the regional leg returns regulation and **no
+  market** — no adoption metrics, no market sizes, no named vendor for China, India,
+  Japan or Korea. **WebSearch is the wrong channel for this**; it needs ministry
+  programmes and regional edtech market reports, and no pass has tried one.
+- 🔴 **EMEA and LATAM:** no permissive skills-and-credentials stack. CTDL/RSD is US-only;
+  ESCO is a vocabulary, not an implementation.
+- 🔴 **LATAM:** no permissive SIS with a regional deployment base. `GegoK12` is
+  APAC-shaped, `SVWS-NRW` is one German state's system.
+- 🔴 **Structural, unfixed:** these two logs grow ~10,000 lines per day of passes.
+  Append-only preserves the trend and buries the finding. **The promotion audit above
+  should run every pass; it took one `comm` and found 11 unshelved verified rows.**
+
+---
+
 ## `2026-11-13` (ninth pass) — **The battery is saturated for a second consecutive pass, and the pass that confirmed it found the deadline this base had never written down: 64 campuses, 48 days**
 
 **Pass `p804`.** 🔵 **Zero agent rows added; `p803`'s saturation finding reproduces exactly.** All eight

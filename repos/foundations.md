@@ -6,7 +6,7 @@ updated: 2026-11-13
 
 # Foundational open-source repos for education
 
-The platforms and libraries an education engagement actually builds on. **49
+The platforms and libraries an education engagement actually builds on. **57
 repos**, all verified from the rendered repository page (license field + star
 count) — 34 across the four earlier passes on 2026-11-13, plus **the six-repo
 Caliper Analytics layer and the seven-repo QTI assessment layer verified this
@@ -22,6 +22,22 @@ anything**.
 License matters more here than anywhere else in this KB: the big three LMSs are
 **AGPL-3.0 or GPL-3.0**, which governs what a studio can hand a client as a
 derived product. The MIT/Apache/BSD/ECL rows are the ones that compose freely.
+
+**What changed this pass (tenth pass, `p805`, 2026-11-13):** **57 repos**, up
+from 49, and **not one of the eight is a discovery.** 🔴 **All eight were
+license-verified in earlier passes and never reached this file** — they existed
+only in `agents/trending.md` / `repos/trending.md`, which are now 79,190 and
+62,315 lines long and which nobody opens during an engagement. The prescribed
+search battery returned **nil on supply for the third consecutive pass**, so
+this pass spent itself on the propagation defect instead: a diff of
+green-marked, byte-verified slugs in the trending logs against the four shelf
+files (`agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`,
+`compose/patterns.md`). 🟢 **Three rows open the xAPI service/validation/warehouse
+layer, four open a new skills-and-credentials layer, one is the first MIT row in
+the learning-platform table.** 🟢 **Every one re-verified live this pass before
+being written here.** 🔵 **The audit is deliberately not automated into a bulk
+copy: the same diff surfaces a literal `owner`-slash-`repo` placeholder and dozens of
+non-education repositories, so promotion stays a judgement, not a `comm` output.**
 
 **What changed this pass (ninth pass, `p804`, 2026-11-13):** **49 repos**, up
 from 47. A new **curriculum-corpus layer** was opened at the end of this file
@@ -106,6 +122,10 @@ here the permissive option is also the leading one.
 |---|---|---|---|
 | https://github.com/yetanalytics/lrsql | Apache-2.0 | 144 | **The default choice.** SQL-based LRS: a persistent store for xAPI statements plus their attachments and documents. Verified DBMS matrix is broad and current — SQLite 3.42, **Postgres 14/15/16/17/18**, MariaDB 10.6–11.8, MySQL 8.0.44/8.4/9.5. **Apache-2.0 means the learner-record store can ship inside a client deliverable with no copyleft reach** — the only data-layer component in this KB for which that is true. 42 forks. |
 | https://github.com/openfun/ralph | MIT | 51 | LRS **plus** a CLI for building learning-analytics pipelines **plus** a Python library for fetching, converting and serializing learning events. Pick it over SQL LRS when the engagement is *analytics*-shaped rather than *storage*-shaped, or when the agent layer is Python and you want one language end to end. Elasticsearch backend in its documented local setup. From **France Université Numérique** — EMEA public-education provenance, which is usable evidence in an EU data-sovereignty conversation. 19 forks. Releases section empty. |
+
+| https://github.com/LearningLocker/xapi-service | **MIT** | 42 | **New this pass (tenth, `p805`) — promoted off the trending log, where it has sat verified and unshelved.** "A service for the xAPI": the Learning Locker project's standalone statement service, Node/TypeScript, 1,329 commits. Topics `nodejs`, `tincan`, `typescript`, `xapi`. 🟢 **MIT on the sidebar, confirmed this pass by direct read.** Matters because Learning Locker itself is the LRS most institutions have heard of, and its commercial editions are **not** permissive — this component is. Pick it over `lrsql` when the stack is already Node and you want the statement endpoint as a service rather than a database product. 🔴 No release dates visible on the page; treat maintenance as unverified and pin a commit. |
+| https://github.com/LearningLocker/xapi-validation | **MIT** | 12 | **New this pass (tenth, `p805`).** "A package for validating xAPI statements" — the companion that checks a statement is well-formed *before* it reaches the store. 🟢 **This is the piece that makes an audit trail defensible rather than merely present:** every compose pattern in this KB tells an agent to emit xAPI, and none of them, until now, named anything that rejects a malformed emission. MIT, TypeScript. Use it in the agent process, not only at the LRS edge. |
+| https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW | **ECL-2.0** | 62 | **New this pass (tenth, `p805`).** "Standards-based learning record warehouse built for a scalable learning analytics environment" — Java, from Apereo's Learning Analytics Initiative. 🔵 **A warehouse, not a store: it is the layer above an LRS**, where statements from several sources are consolidated for analysis. **ECL-2.0 is OSI-approved and Apache-derived**, so it composes with the permissive rows here; it is the same licence as Sakai, which is not a coincidence — this is the Apereo/educational-middleware cluster running on the sector's own licence. Pick it when the engagement is multi-system analytics rather than one platform's telemetry. |
 
 Pair either one with `DavidLMS/learnmcp-xapi` (MIT, 16 stars — see
 `agents/top.md`), the MCP server that lets an agent read and write these records
@@ -209,6 +229,7 @@ tool, not a delivery component.
 | **https://github.com/OpenOLAT/OpenOLAT** | **Apache-2.0** | **451** | 🟢 **New this pass, and it overturns this file's standing "no permissive LMS" gap.** Java LMS, 32,338 commits, 165 forks; origin OLAT at the University of Zurich, maintained by frentix GmbH (Switzerland). **License read verbatim from the `LICENSE` file** — *"Apache License / Version 2.0, January 2004"*, followed by two attribution notices (olat.org / University of Zurich, openolat.org / frentix GmbH and community). **GitHub's sidebar names no license and the org listing renders it as "Other"** — the reason four passes of sidebar reads missed it. Uniquely in this table it carries a **first-party AI layer in-tree**: `org/olat/core/commons/services/ai/` with provider SPIs for `anthropic`, `generic` (OpenAI-compatible), `localonnx` and `openAI`. |
 | https://github.com/chamilo/chamilo-lms | GPL-3.0 | 1.0k | LMS focused on ease of use and accessibility; strong LATAM and francophone footprint. |
 | https://github.com/ILIAS-eLearning/ILIAS | GPL-3.0 | 510 | Long-lived German LMS; heavy use in EMEA public sector and military/vocational training. |
+| **https://github.com/elimu-ai/webapp** | **MIT** | 41 | 🟢 **New this pass (tenth, `p805`), promoted off the trending log, and the only MIT row in this table.** Java/Spring web application hosting Android apps and educational content for **elimu.ai — "free open-source learning software for out-of-school children."** Shipped content databases for **Hindi, Tagalog, Thai, Vietnamese and English**, which is an unusual language set for this base and places it **APAC**-first rather than Global. 🔵 **Engagement reading: this is the only platform row a studio can derive a product from without a copyleft conversation** — every other LMS here is GPL/AGPL/ECL. Sibling repos carry the ML layer: `ml-storybook-reading-level`, `ml-storybook-recommender`, `ml-authentication`. 🔴 Small project; adopt for low-resource and out-of-school programmes, not as a Moodle replacement. |
 
 ## Student information systems and institutional ERP
 
@@ -294,6 +315,25 @@ What came back was developer curriculum (above), vendor courseware, and national
 programmes whose materials are not published under an open grant. **This is the
 clearest unserved content gap in this base, and it has three dated mandates
 pointing at it.**
+
+## The skills-and-credentials layer (new, tenth pass)
+
+The layer that answers *"what did this learner actually end up able to do"* —
+distinct from the learner-record layer, which answers *"what did they do"*. It
+matters for an engagement because workforce-outcome claims are what a ministry,
+a state system or a corporate academy buys, and because **all four rows below
+are permissive**.
+
+🟢 **All four were verified in earlier passes and never reached this file.**
+They are promoted here, not discovered here; the audit that found them is
+written up in `repos/trending.md` under `p805`.
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/CredentialEngine/osmt | **Apache-2.0** | 67 | **Open Skills Management Tool.** Kotlin + Spring Boot + Angular, 1,647 commits on `develop`. Authoring and publishing of **Rich Skill Descriptors (RSD)** against the **CTDL** vocabulary — the US credential-transparency data model. 🔴 **The GitHub sidebar links a `LICENSE` without naming the grant and the index reads `NOASSERTION`; Apache-2.0 was read from the file itself.** Region: **North America** — CTDL/RSD is a US ecosystem, and that placement is the point of the row, not a caveat. |
+| https://github.com/CredentialEngine/CredentialRegistry | **Apache-2.0** | 15 | The registry the skill descriptors are published *into* — Ruby, "Repository for development of the Credential Registry". 🟢 **Apache-2.0 named directly on the sidebar this pass.** Pair with `osmt`: `osmt` authors, `CredentialRegistry` stores and serves. Region: **North America**. |
+| https://github.com/CredentialEngine/transcript-ctid-matcher | **Apache-2.0** | — | Matches transcript line items to **CTIDs** (Credential Transparency Identifiers). 🟢 **This is the hard, boring, valuable part** — mapping a registrar's course rows onto a public credential vocabulary is exactly the work a studio is hired for, and a permissive reference implementation removes the worst of it. Region: **North America**. |
+| https://github.com/tabiya-tech/compass | **MIT** | 14 | "An AI chatbot designed to assist job-seekers in exploring and discovering their skills" — Python backend, TS frontend. 🟢 **The only agent in this base that works on *lived-experience* skills elicitation rather than coursework**, which is the shape of the problem in informal and youth-employment programmes. MIT, so it composes into a client deliverable. Companion repos `tabiya-livelihoods-classifier` and `taxonomy-model-application` carry the taxonomy side. 🔴 Small and young — adopt the approach and the licence, read the code before promising the model. |
 
 ## Declared gaps
 

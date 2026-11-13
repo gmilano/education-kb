@@ -86,6 +86,31 @@ across EMEA.
 
 ### North America
 
+#### Update 2026-11-13 (tenth pass, `p805`) — the regional leg returned nothing new, and the opportunity that moved is a stack this base had already verified
+
+🔴 **`AI education North America 2026 adoption regulation players` returned only facts
+this file already holds**: 134 AI-in-education bills across 31 states, the SUNY
+systemwide AI-literacy requirement for incoming undergraduates from fall 2026, the
+Bonamici *AI Education and Workforce Readiness Act* (introduced, **not passed**), the
+proposed Florida Board of Governors rule (**not final**), FERPA as the binding
+procurement constraint, and Northeastern in Anthropic's Claude for Higher Education
+programme. 🔵 **Recorded as a nil, not omitted** — a silent region is indistinguishable
+from an uncovered one.
+
+🟢 **What did change is on the supply side.** The **Credential Engine stack** —
+[`osmt`](https://github.com/CredentialEngine/osmt) (Apache-2.0, 67★),
+[`CredentialRegistry`](https://github.com/CredentialEngine/CredentialRegistry)
+(Apache-2.0, 15★) and
+[`transcript-ctid-matcher`](https://github.com/CredentialEngine/transcript-ctid-matcher)
+(Apache-2.0) — was verified in an earlier pass and had **never been written to a shelf
+file**. It is now in `repos/foundations.md` and is the basis of new pattern `P18`.
+🔵 **This is the North America opportunity with the clearest buyer in this file**:
+CTDL/RSD is a US public vocabulary, the buyers are state systems, community colleges
+and workforce boards, and the whole reference stack is permissive. 🔴 **It does not
+transfer out of North America** — see the APAC and EMEA subsections for why that is a
+gap and not an oversight.
+
+
 **Adoption/regulation:** The most legislatively active region, and the activity
 is restrictive rather than enabling. Trackers count **134 AI-in-education bills
 across 31 states in 2026**, with the consensus read that states favour
@@ -405,6 +430,32 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-13 (tenth pass, `p805`) — regulatory position unchanged and re-confirmed; one permissive public-sector SIS reaches the shelf
+
+🔴 **The EMEA leg returned this file's own contents.** Re-confirmed, not re-reported:
+the **Digital Omnibus, Regulation (EU) 2026/1744**, moved the Annex III high-risk
+obligations for admissions, grading and exam monitoring to **2 December 2027**;
+**Article 50 transparency duties were not postponed and apply from 2026-08-02**; the
+**emotion-recognition ban in education has applied since February 2025** and is not
+deferred. 🔴 **Several vendor guides still print August 2026 for the high-risk date —
+they are wrong, and this file has said so since the sixth pass.**
+
+🟢 **Supply-side change:** [`SVWS-NRW/SVWS-Server`](https://github.com/SVWS-NRW/SVWS-Server)
+— **BSD-3-Clause**, 42★, **10,015 commits** — is the school-administration server the
+German state of **North Rhine-Westphalia** builds for its own schools, and it is now on
+the verticals shelf. 🔵 **Why it matters for EMEA specifically: a permissive grant on
+public-sector education software is rare, and the commit count says production system,
+not pilot.** Pair with `P13` (OpenOLAT, Apache-2.0, sovereign AI in-tree) and the EMEA
+engagement is the only one in this base that can be served end to end — platform, SIS
+and AI layer — **without a copyleft conversation and without data leaving the
+institution**.
+
+🔴 **Declared gap, EMEA:** the Credential Engine stack above is CTDL/RSD and therefore
+US-only. **This base knows of no equivalent permissive skills-and-credentials stack for
+EMEA** (ESCO is a vocabulary, not an implementation). Searched this pass; nothing
+returned.
+
 
 **Adoption/regulation:** The binding regime is the **EU AI Act**, under which
 AI for **access, allocation, assessment, or monitoring of pupils during tests**
@@ -771,6 +822,34 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-13 (tenth pass, `p805`) — the regional leg is regulation-only again, and that is itself the finding
+
+🔴 **`AI education APAC 2026 adoption regulation players` returned regulation and no
+market.** Re-confirmed: **South Korea's AI Basic Act** is in force (2026-01-22) and
+names **education among its ten high-impact sectors**, with a grace period reported to
+run to **September 2027** for education/healthcare/finance; **China** layers PIPL + CSL
++ DSL with the Algorithm Recommendation, Deep Synthesis and Generative AI measures, and
+has **550+ generative-AI services filed** by mid-2026; **Japan** remains promotion
+without fines; **India** is unsettled — no AI law, but a **July 2026 signal that
+dedicated legislation may be pursued**.
+
+🔴 **What the leg did not return, for the fourth consecutive pass: adoption metrics,
+market sizes, or a single named education-AI vendor for any of these four countries.**
+🔵 **That is an informed gap, and it is the largest one in this file.** This base's own
+`T8` says education AI's centre of gravity is APAC; the evidence for that is repository
+provenance, not market data. **Closing it needs a different channel than WebSearch —
+national ministry programmes and regional edtech market reports — and no pass has tried
+one.**
+
+🟢 **Supply-side change:** [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) —
+**MIT**, 56★, Laravel — is now on the verticals shelf as **the first genuinely MIT
+school ERP/SIS in this base**, placed APAC because `.env.example` ships
+`TIMEZONE = 'Asia/Kolkata'`. 🟢 [`elimu-ai/webapp`](https://github.com/elimu-ai/webapp)
+(**MIT**, 41★) joins the platform table with shipped content databases for **Hindi,
+Tagalog, Thai, Vietnamese and English** — out-of-school-children programmes, a buyer
+shape this file had not previously named.
+
+
 **Adoption/regulation:** The most fragmented region, and education is usually
 caught as a *high-risk category inside general* AI law rather than addressed
 directly. **South Korea's AI Basic Act entered into force 2026-01-22** and
@@ -1076,6 +1155,34 @@ procurement-led" corner of that matrix, which `P5` did not previously have a nam
 example of.
 
 ### LATAM
+
+#### Update 2026-11-13 (tenth pass, `p805`) — the region's largest school-management system was never on any shelf
+
+🔴 **The LATAM leg returned held facts**: the **UNESCO Observatory on AI in Education
+for Latin America and the Caribbean**; **>50% of teachers in Chile and Brazil already
+using AI tools while fewer than 10% of institutions have formal guidelines**; Brazil's
+**AI Bill 2338/2023** passed the Senate (Dec 2024) and awaiting the Chamber of Deputies;
+**Peru's Ley N° 31814** as the first enacted national AI statute in the region; Chile's
+bill still in draft; **Mexico with no comprehensive horizontal AI law**. Consistent with
+the UNESCO IESALC figures this file already carries (87% of institutions using AI in ≥1
+area, 26% with any formal framework, 55% with no AI budget, 9% evaluating).
+
+🔴 **Correction, and it is this pass's sharpest one.**
+[`portabilis/i-educar`](https://github.com/portabilis/i-educar) — **GPL-2.0, 725★, 555
+forks, 34,951 commits**, first built by the Itajaí (SC) city government and deployed by
+municipalities across Brazil — **is the largest free-software school-management system
+in LATAM, and it had never been written to any shelf file.** The trending log has
+asserted since `p667` that it was "carried on the verticals shelf"; it was not. 🔵 **The
+standing engagement line — "a LATAM K-12 client on RosarioSIS is a build" — understated
+the field: i-educar is larger than RosarioSIS by stars, forks and commits.** Both are
+copyleft, so both are integrate-not-derive; the companion `i-diario` (AGPL-3.0) carries
+attendance and grades.
+
+🔴 **Declared gap, LATAM:** no permissive SIS for this region. `GegoK12` (MIT) is
+APAC-shaped and `SVWS-NRW` (BSD-3) is a German state system — **neither is a LATAM
+answer**, and this base knows of no MIT/Apache school-management tree with a LATAM
+deployment base.
+
 
 **Adoption/regulation:** The widest gap between use and governance of any
 region, and the best-documented. **UNESCO IESALC, across 200 institutions in 19

@@ -6,13 +6,21 @@ updated: 2026-11-13
 
 # Compose patterns — education
 
-**Thirteen** concrete recipes. Each names the actual repos, the license
+**Eighteen** concrete recipes. Each names the actual repos, the license
 consequence, how the pieces wire together, and a rough build estimate. All
 components were license-verified on 2026-11-13 (see `agents/top.md` and
-`repos/foundations.md`). 🔴 **Count defect fixed this pass: the intro said "Ten
-concrete recipes" and then "the rule all eight follow" in the next paragraph.**
+`repos/foundations.md`). 🔴 **Count defect, third occurrence, fixed again at
+`p805`: `p804` corrected "Ten" to "Thirteen" while the file already carried
+sixteen `## P` headings. It is now "Eighteen" and it matches
+`grep -c '^## P'`.** 🔵 **A count written in prose drifts every time a pattern is
+appended; until it is generated, this line will keep going stale.**
 
-**The rule twelve of the thirteen follow:** keep the AI layer permissive
+🟢 **New at `p805`: `P17` (defensible tutor audit trail) and `P18`
+(skills-and-credentials advising).** Neither uses a component discovered this
+pass — both are built from repos this base had verified and never shelved, now
+promoted into `repos/foundations.md`.
+
+**The rule sixteen of the eighteen follow:** keep the AI layer permissive
 (MIT/Apache/BSD), mount it into the copyleft platform over **LTI 1.3** or
 **MCP**, and emit **xAPI** or **Caliper** events. Never fork the LMS.
 
@@ -1102,3 +1110,107 @@ and the inventory is the part that is worth money and the part that is reusable.
   writes to a gradebook before the policy exists is the one failure that ends it.
 - 🟢 **Everything in the table is MIT or Apache-2.0** — the kit is deliverable to the
   client as a derived product with no copyleft propagation.
+
+## P17 — The defensible tutor audit trail (Global, and the only pattern here that survives an EU AI Act Article 50 question)
+
+**When to use.** Any engagement where an AI tutor or grader touches learners and
+**someone will eventually ask what it did**. That is now most of them: EU
+Article 50 transparency duties apply from **2026-08-02** and were *not*
+postponed by the Digital Omnibus; FERPA binds any US tool handling personally
+identifiable student data; South Korea's AI Basic Act names education a
+high-impact sector. 🔵 **Every other pattern in this file tells the agent to
+"emit xAPI". This one is the pattern that receives, validates, stores and
+consolidates it — and until `p805` this base named no component that could
+reject a malformed emission.**
+
+### The components — all permissive, all re-verified live at `p805`
+
+| Piece | Where | License |
+|---|---|---|
+| Statement validation, in the agent process | `github.com/LearningLocker/xapi-validation` | **MIT** (12★) |
+| Statement service / LRS endpoint | `github.com/LearningLocker/xapi-service` | **MIT** (42★) |
+| Or the database-shaped LRS | `github.com/yetanalytics/lrsql` | **Apache-2.0** (144★) |
+| Record warehouse, multi-source | `github.com/Apereo-Learning-Analytics-Initiative/OpenLRW` | **ECL-2.0** (62★) |
+| Agent↔record bridge | `github.com/DavidLMS/learnmcp-xapi` | **MIT** |
+| The LMS it hangs off | Moodle (GPL-3.0) over LTI 1.3, or OpenOLAT (Apache-2.0) natively | — |
+
+### How it wires together
+
+1. **Validate before you emit.** The agent builds an xAPI statement and runs it
+   through `xapi-validation` **in its own process**. A malformed statement is
+   rejected at the source, where there is still a stack trace, rather than
+   silently accepted by a lenient store.
+2. **Emit to `xapi-service`** (Node stacks) **or `lrsql`** (when the client
+   wants a database product with a verified Postgres/MariaDB/MySQL matrix).
+   Both are permissive, so the store ships inside the deliverable.
+3. **`learnmcp-xapi` gives the agent read access back** — the tutor reads the
+   learner's own record before deciding what to do next, which is what makes
+   the trail *useful* rather than merely compliant.
+4. **Consolidate into `OpenLRW`** when more than one system emits — LMS, tutor,
+   assessment tool. ECL-2.0 is Apache-derived and OSI-approved, so it composes
+   with everything above it.
+5. **Point the Article 50 answer at the warehouse**, not at the model: what the
+   regulator wants is *which learner, which interaction, disclosed as AI, when*
+   — which is a query, once the trail exists.
+
+**Licence consequence.** MIT + MIT + Apache-2.0 + ECL-2.0 — **no copyleft
+anywhere in the trail.** The GPL stays in the LMS, on the far side of LTI.
+
+**Estimate.** **4–6 weeks** to a working trail against one LMS and one tutor;
+**+3–4 weeks** for the OpenLRW consolidation and a regulator-facing query layer.
+
+🔴 **Caveats.** `xapi-service` and `xapi-validation` show no release dates on
+their pages — **pin commits and budget to carry them**. `OpenLRW` is Apereo
+middleware: Java, institutional, and not a quick install. And an audit trail is
+a *record*, not a defence — if the tutor's behaviour is wrong, the trail proves
+it precisely.
+
+## P18 — Skills-and-credentials advising (North America, and the only pattern here whose buyer is a workforce agency)
+
+**When to use.** State systems, community colleges, workforce boards and
+corporate academies — buyers who are not asking "did the learner engage" but
+**"what is this person able to do, and what does that credential actually
+certify"**. 🔵 **This is the one engagement shape in this KB whose data model
+is a public vocabulary rather than a vendor schema**, which is why it is cheap
+to be interoperable and expensive to be proprietary.
+
+### The components — all permissive, promoted to the shelf at `p805`
+
+| Piece | Where | License |
+|---|---|---|
+| Skill authoring against CTDL/RSD | `github.com/CredentialEngine/osmt` | **Apache-2.0** (67★) |
+| The registry skills publish into | `github.com/CredentialEngine/CredentialRegistry` | **Apache-2.0** (15★) |
+| Transcript line → CTID matching | `github.com/CredentialEngine/transcript-ctid-matcher` | **Apache-2.0** |
+| Lived-experience skills elicitation | `github.com/tabiya-tech/compass` | **MIT** (14★) |
+| Taxonomy side | `tabiya-tech/taxonomy-model-application`, `tabiya-livelihoods-classifier` | **MIT** |
+| Learner record in / out | `lrsql` or `xapi-service` (see `P17`) | Apache-2.0 / MIT |
+
+### How it wires together
+
+1. **`transcript-ctid-matcher` maps the registrar's course rows to CTIDs.**
+   This is the unglamorous core of the engagement and the reason a studio gets
+   paid — a permissive reference implementation removes the worst of it.
+2. **`osmt` authors Rich Skill Descriptors** for what the institution teaches;
+   **`CredentialRegistry` publishes them** so employers and other institutions
+   can resolve them.
+3. **`compass` runs the learner-facing half**, eliciting skills from lived
+   experience rather than coursework — the only agent in this base that does.
+   Its output is a skills profile, not a transcript.
+4. **Join the two.** The advising agent answers *"given what you have done, here
+   is the credential nearest to the job you want, and here is the gap"* — with
+   both sides expressed in the same public vocabulary.
+5. **Emit the advising session over xAPI** into `P17`'s trail.
+
+**Licence consequence.** Apache-2.0 + MIT throughout — **fully derivable**.
+
+**Estimate.** **8–10 weeks** for transcript→CTID matching plus a published skill
+set against one institution; **+4 weeks** to add the `compass` elicitation front
+end.
+
+🔴 **Caveats, and they are real.** **CTDL/RSD is a US ecosystem** — this pattern
+does **not** transfer to EMEA, APAC or LATAM without replacing the vocabulary,
+and there is no equivalent permissive stack in this base for those regions
+(**declared gap, `p805`**). `osmt`'s grant had to be read from the file because
+the index says `NOASSERTION`. All four repos are under 70 stars: adopt the
+vocabulary and the licence with confidence, read the code before promising the
+pipeline.
