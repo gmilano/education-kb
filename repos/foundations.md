@@ -6,9 +6,10 @@ updated: 2026-11-13
 
 # Foundational open-source repos for education
 
-The platforms and libraries an education engagement actually builds on. **30
+The platforms and libraries an education engagement actually builds on. **34
 repos**, all verified from the rendered repository page (license field + star
-count) — 26 on 2026-11-13 plus **4 new LTI 1.3 libraries verified this pass**.
+count) — 33 across the three earlier passes on 2026-11-13 plus **one Python LTI
+1.3 library verified this pass**.
 Grouped by the job they do, because "foundational" in education means five
 different layers: the LMS, the student record, the content format, the
 learning-data/ML layer, and **the integration layer that mounts anything into
@@ -18,7 +19,14 @@ License matters more here than anywhere else in this KB: the big three LMSs are
 **AGPL-3.0 or GPL-3.0**, which governs what a studio can hand a client as a
 derived product. The MIT/Apache/BSD/ECL rows are the ones that compose freely.
 
-**What changed this pass:** this file previously declared "no open-source LTI
+**What changed this pass (fourth pass, 2026-11-13):** **34 repos**, up from 33.
+One addition, and it is a correction rather than an increment:
+`dmitry-viskov/pylti1.3` (MIT, 138 stars) is a **Python** LTI 1.3 Advantage
+library, which falsifies this KB's standing claim that no Python LTI library
+exists. That claim was load-bearing — `compose/patterns.md` built a mandatory
+two-process architecture on it — so the correction propagates there too.
+
+**What changed at the third pass:** this file previously declared "no open-source LTI
 1.3 tool-provider library made the verified set" and called it greenfield.
 **That gap is closed and the conclusion was wrong.** Four LTI 1.3 libraries
 verified below, led by `ltijs` (Apache-2.0, 373 stars) implementing the full
@@ -31,9 +39,19 @@ Canvas, Open edX, Sakai and ILIAS. This is the highest-leverage single
 investment in an education engagement, and it does **not** need to be written
 from scratch.
 
+**Updated 2026-11-13 (fourth pass): there are now five, and one of them is
+Python.** The previous edition of this file and of `compose/patterns.md` stated
+that every verified LTI 1.3 library was Node, PHP or Elixir and that a Python
+agent therefore had to sit behind a non-Python LTI front door. **That is wrong.**
+`dmitry-viskov/pylti1.3` (MIT, 138 stars) implements the full LTI Advantage
+service set in Python with Django and Flask adapters. Single-language Python
+deployments are available; see the revised constraint note in
+`compose/patterns.md`.
+
 | Repo | License | Stars | Notes |
 |---|---|---|---|
 | https://github.com/Cvmcosta/ltijs | Apache-2.0 | 373 | **The reference implementation.** Node.js; covers launches, Deep Linking, Assignment and Grade Services, Names and Role Provisioning, and Dynamic Registration — the complete LTI Advantage surface. v7 is a full rewrite with a migration guide from v5. 86 forks. README thanks CourseKey for making "the certification process possible" but **does not itself claim LTI Advantage certification** — a fork, `edugatorlabs/ltijs`, is the one advertising certified status. Verify certification claims before repeating them to a client. |
+| https://github.com/dmitry-viskov/pylti1.3 | MIT | 138 | **The Python answer — new this pass, and it overturns this KB's "no Python LTI" finding.** Full LTI Advantage: Assignments and Grades, Names and Roles **and** Deep Linking, with shipped adapters for **Django and Flask** (another framework needs only `OIDCLogin` and `MessageLaunch` reimplemented). It is a port of the `packbackbooks` PHP library below, so the two are architecturally aligned and a PHP-to-Python move is cheap. 84 forks. **Maintenance caveat, stated because it governs adoption:** GitHub **Releases is empty**, the newest PyPI version is **2.0.0**, and a third-party scanner reports the last publish at roughly three years ago — pin the version, vendor it, and budget for carrying security patches yourself. Even so, at 138 stars and 84 forks it is the second most-used library in this table after `ltijs`. |
 | https://github.com/packbackbooks/lti-1-3-php-library | Apache-2.0 | 54 | **The PHP answer** — matters because Moodle and Chamilo are PHP shops. Validates launches from any LTI consumer and uses Names & Roles Provisioning for rosters and Assignment & Grades for grade writeback. 27 forks. |
 | https://github.com/Simon-Initiative/lti_1p3 | MIT | 16 | Elixir library for LTI 1.3 **both as Tool and as Platform**. Built to support the Open Learning Initiative's next-generation platform, Torus — i.e. production provenance, not a toy. 4 forks. |
 | https://github.com/lti-tool/lti-tool | MIT | 8 | **Serverless-native** LTI 1.3 toolkit (TypeScript) for AWS Lambda and Cloudflare Workers, Hono-first. OIDC, AGS, NRPS, Deep Linking, Dynamic Registration, JWT verification and nonce validation; pluggable storage (memory, DynamoDB, PostgreSQL, MySQL, Cloudflare D1). Early at 8 stars and its README is internally inconsistent about which frameworks are supported versus planned — but it is the only serverless-shaped option found. |

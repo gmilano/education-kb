@@ -6,13 +6,29 @@ updated: 2026-11-13
 
 # Education AI Agents — curated, license-verified
 
-**20 real agents** below, up from 18 at the second pass and 11 at the first. Every row was verified on
+**26 real agents** below, up from 20 at the third pass, 18 at the second and 11
+at the first. Every row was verified on
 2026-11-13 by fetching the repository page and reading GitHub's own license
 field and star count. Four candidates that circulate on "best open source AI
 agent" lists are **rejected on license grounds** and listed in the exclusions
 section rather than deleted silently — an excluded candidate is information.
 
-**What changed this third pass (2026-11-13):** the KB's attention so far has
+**What changed this fourth pass (2026-11-13):** the three earlier passes today
+worked the LMS surface and then the learner-record surface, and all three
+concluded that **no SIS anywhere has an agent interface** — the third pass
+called it "a confirmed absence across two consecutive passes." **That conclusion
+was over-generalized and is corrected here.** Two MIT MCP servers do reach a
+student information system: `edupage-mcp` (31 tools, EduPage — Slovakia and
+Czechia) and `mcp_hemis_student` (HEMIS — Uzbek universities). The precise
+finding that survives: **no *open-source* SIS has an agent interface, while
+national proprietary SIS products are getting them from individual developers.**
+Four further entries: `janestreet/agent_skills` (MIT, **7.9k**) — the largest
+permissively licensed education artifact in this base, and not a program at all;
+`zavora-ai/mcp-education`, the only server that gates writes in its own tool
+contract; and two 0-star repos admitted purely for design — `ai-tutor-agent`
+for tutoring guardrails and `AI-Teaching-Agent` for its human review gate.
+
+**What changed at the third pass:** the KB's attention so far has
 been on the *LMS* surface — seven Moodle MCP servers, one Canvas server. This
 pass went after the **learner record** instead, and found the layer that was
 missing: `DavidLMS/learnmcp-xapi` (MIT) is an MCP server over any xAPI-compliant
@@ -59,6 +75,12 @@ come from the rendered repository page (GitHub's own license detection).
 | Manu (tutor-ai-agent) | https://github.com/Jeanikt/tutor-ai-agent | MIT | 0 | **New this pass — the first LATAM-origin education agent this KB has found.** Voice-first math tutor **in Brazilian Portuguese**, adapting from 1st grade to university; spoken explanations render to an on-screen chalkboard. TypeScript + LiveKit Agents with a Next.js front end. In development, no public deployment. 0 stars — a seed, not a dependency. |
 | EDUKAI LongView | https://github.com/Keitous/EDUKAI-LONGVIEW | ISC | 0 | **New this pass — the first Africa-origin education agent this KB has found.** MCP-powered *longitudinal* learning intelligence: tracks a learner across multiple academic periods rather than single test scores, retrieves supporting evidence, flags sustained strengths and recurring difficulties, and recommends for teacher review ("agent recommends, teacher decides"). Bilingual FR/EN, author based in **Guinea**. Node.js/Express. **Synthetic data only** — a prototype. |
 | EduAgentic (EduMCP) | https://github.com/kamalelafoui/Agentic-AI-EdTech-J33-J34 | MIT | 0 | **New this pass — the only MCP + A2A education example found.** FastMCP server on SSE exposing six tools (`search_courses`, `get_learner_profile`, `recommend_learning_path`, `generate_quiz`, `grade_quiz`, `get_learning_statistics`) **plus an A2A orchestrator** over three named agents (Tutor, Evaluation, Orientation). Every other education agent in this table is single-agent or MCP-only; this is the one place in the set to read an agent-to-agent education topology. **French-language** repo and docs — francophone provenance; the author's country is not stated on the page and is not asserted here. 0 stars, 0 forks, no releases: a course artifact. Take the **topology**, not the code. |
+| socratic-tutor (Jane Street `agent_skills`) | https://github.com/janestreet/agent_skills | MIT | 7.9k | **New this pass — the largest permissively licensed education artifact in this KB, and it is not software.** Jane Street's first public agent skill: a strict Socratic tutor that runs a 3-5 question diagnostic, maps the topic into **4-10 sub-skills rated 0-5**, asks **one question at a time**, then adds spaced review and a final assessment. 510 forks, **2 commits** — it is a `SKILL.md` instruction set, so it needs an LLM host (coding agent or chatbot), ships no code and carries **no dependency or CVE surface**. Compare `education-agent-skills` (977 stars, CC BY-SA) in the rejected table: same artifact class, wrong instrument. This one is MIT and can go into a client deliverable as-is. Third-largest education agent here after DeepTutor and OpenMAIC, on two commits. |
+| edupage-mcp | https://github.com/oliverhruby/edupage-mcp | MIT | 4 | **New this pass — the first verified agent-to-SIS path in this KB.** 31 tools over **EduPage**, the school information system used across Slovakia and Czechia: timetables, grades, homework and a daily summary, plus meal ordering, multi-school discovery, role-aware student switching and **2FA**. Distributed on PyPI (`edupage-mcp-full`), Docker/GHCR and the MCP Registry. **The caveat governs adoption:** it reaches EduPage through the community `edupage-api` library, which uses **undocumented endpoints** — there is no vendor contract, so it can break on any EduPage release. Python 3.10+, 1 fork, 123 commits. Take the topology; do not ship the dependency. |
+| mcp_hemis_student | https://github.com/sukhrobyangibaev/mcp_hemis_student | MIT | 0 | **New this pass — the second agent-to-SIS path, and the first Central Asian project in this KB.** MCP server over **HEMIS** (Higher Education Management Information System), the student-information platform used by Uzbek universities: a student pulls their own academic record, schedule, grades and attendance. 9 commits, no repository description, no releases, 0 stars. Admitted **for the SIS topology only** — it is evidence that the student-record gap is closing from the national-platform direction, not a dependency. |
+| mcp-education (zavora-ai) | https://github.com/zavora-ai/mcp-education | Apache-2.0 (per README; sidebar shows only a generic "License" link) | 1 | **New this pass — the only Rust education MCP server found, and the only server at any star count that gates writes in its tool contract.** Canvas LMS API: courses, assignments, grades, students, announcements. **12 tools split 9 read-only + 3 write operations that require approval** — the read/write boundary is declared by the server rather than left to the host's discretion, which is the design to copy for any education MCP server that writes to a gradebook. Built for "ADK-Rust Enterprise"; Rust 1.94.1, 1 fork. |
+| ai-tutor-agent | https://github.com/vulinh1704/ai-tutor-agent | MIT | 0 | **New this pass — the clearest tutoring *guardrail* implementation found at any star count.** FastAPI + LangGraph, with three controls this KB has not found written down elsewhere: a **Socratic hint ladder** that escalates one level per turn up to a configurable cap; an **answer-leak guard** that regenerates a draft which reveals the final answer and substitutes a safe hint if it still leaks; and **rubric grading in which per-criterion scores are validated against the rubric and the totals are computed in code, not by the model**. A router node splits tutor / grader / clarify. SQLite checkpointing persists a session across restarts; a deterministic offline fake model runs the whole graph with no API key, which also makes it testable in CI. 0 stars — take the control design, not the repo. |
+| AI-Teaching-Agent | https://github.com/littlecookie0722/AI-Teaching-Agent | MIT | 0 | **New this pass.** Compiles one Markdown teaching source into reviewable **Lab and Exam packages** plus short teaching decks, using structured DSLs, sandboxed evaluation and an MCP stdio server (`mcp_server/` with tool adapters, MCP manifest shipped in the wheel). **Nothing publishes automatically:** artifacts are validated, candidate-facing content is protected, and a human decision gates local export — the review-gate shape that `P6` (grading) and any assessment engagement needs. README states further MCP/Agent expansion is **frozen**, so treat it as a fixed reference rather than a growing project. |
 
 ## Copyleft — usable, but the license propagates
 
@@ -87,10 +109,28 @@ Globant can build a client deliverable on.
   confused.** `learnmcp-xapi` gives an agent a read/write path to the
   *learning-activity* record — xAPI statements: what the learner did, practiced
   and mastered. It does **not** reach the *student* record: enrolment,
-  transcript, attendance, demographics, fees. Pattern `P9` (new) needs the LRS
-  and can be built today on permissive licenses; pattern `P8` needs the SIS and
-  is still greenfield. Scoping an advising engagement against the wrong one of
+  transcript, attendance, demographics, fees. Pattern `P9` needs the LRS
+  and can be built today on permissive licenses; pattern `P8` needs the SIS.
+  Scoping an advising engagement against the wrong one of
   these is the most expensive mistake available in this KB.
+- **The SIS gap is narrower than this KB claimed, and the correction is
+  precise (fourth pass).** `edupage-mcp` (MIT, 31 tools, EduPage) and
+  `mcp_hemis_student` (MIT, HEMIS) are real agent-to-SIS servers, so "no SIS has
+  an agent interface" is **withdrawn**. What is still true and still worth
+  selling: **not one open-source SIS** — OpenEduCat, RosarioSIS, Gibbon,
+  openSIS, `frappe/education` — has an agent interface, and both servers that
+  exist target **national proprietary platforms with captive markets**, one of
+  them over **undocumented endpoints** via a community library. `P8` is
+  therefore a selection-and-build pattern with a proven topology rather than a
+  greenfield bet, which lowers its risk and its price.
+- **Student-record *analytics* topology exists but could not be
+  license-verified.** `EdyVision/student-services-mcp` (1 star) exposes 13
+  tools including `fetch_student_dropout_risk`, `fetch_high_risk_students`,
+  `fetch_attrition_statistics` and `fetch_attrition_feature_importance` — the
+  closest thing found to a retention/early-warning tool surface, and a useful
+  shape to copy for `P8`. **The rendered page shows no license field**, and it
+  runs on **synthetic data** with no real SIS connection. Not admitted to the
+  table: read it as a design sketch and do not adopt it without a license.
 - **No pedagogy-specific eval harness at scale.** `AITutor-EvalKit` (MIT, 4
   stars, mathematics only) is still the only one found — unchanged across all
   three passes. Every agent in the table above claims pedagogical effect and

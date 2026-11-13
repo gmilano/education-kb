@@ -4,6 +4,93 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (fourth pass) — **The "no Python LTI library" finding was wrong, and it had an entire architecture built on top of it**
+
+**Window:** foundational education repos, verified 2026-11-13 from the rendered
+repository page. The three earlier passes today worked the **integration** layer
+(LTI 1.3), the **platform** layer and the **data** layer. This pass re-probed the
+integration layer specifically to test a *negative* claim this KB had been
+repeating — and the claim failed. **34 repos now in `repos/foundations.md`, up
+from 33.**
+
+**Channel note, re-tested this pass.** `curl -sI https://github.com/...` returns
+**`403` for every path** through this session's egress policy. Verified directly:
+a real repository returns `403`, a deliberately nonexistent repository returns
+`403`, and `api.github.com` returns `403`. A `curl` probe **cannot distinguish a
+live repo from a 404**. Verification below is by fetching the rendered repository
+page (GitHub's own license field and star count).
+
+### New entry (1) — but it is a correction, not an increment
+
+| Repo | License | Stars | Why it is admitted |
+|---|---|---|---|
+| https://github.com/dmitry-viskov/pylti1.3 | MIT | 138 | **The Python LTI 1.3 Advantage library this KB said did not exist.** Assignments and Grades, Names and Roles **and** Deep Linking, with shipped **Django and Flask** adapters; another framework needs only `OIDCLogin` and `MessageLaunch` reimplemented. A port of the `packbackbooks` PHP library already in the base, so the two are architecturally aligned. 84 forks — second most-forked LTI library here after `ltijs`. |
+
+### Why one row is the biggest change of the day
+
+The previous edition of `compose/patterns.md` carried this as a hard constraint
+on **all eight patterns**:
+
+> every verified LTI 1.3 library is Node, PHP or Elixir — **none is Python**,
+> while nearly every agent here is Python. Assume a two-process shape: Python
+> agent service behind a Node (`ltijs`) or PHP (`packbackbooks`) LTI front door.
+> Budget the seam.
+
+Nearly every agent in this KB is Python, so that constraint forced a
+**two-process architecture, an inter-process seam and a second deployment unit
+into every LTI-shaped estimate**. It was wrong. `pylti1.3` is MIT, Python, and
+implements the full Advantage service set.
+
+**What replaces it** (now written into `compose/patterns.md` as a correction
+note): the two-process shape is **no longer mandatory**, and the choice is an
+engineering decision rather than a constraint. Choose `pylti1.3` for a
+single-language Python deployment — worth roughly **1-2 weeks** off a first LTI
+engagement. Choose `ltijs` (Apache-2.0, 373) where LTI conformance is
+contractual.
+
+**The maintenance caveat, which is the honest half of this finding.**
+`pylti1.3`'s GitHub **Releases page is empty**, the newest PyPI version is
+**2.0.0**, and a third-party scanner reports no publish in roughly **three
+years**. On an **authentication-boundary** component that is a real cost: pin it,
+vendor it, own the patch path. This is the one argument that still favours
+`ltijs` on a long engagement, and it should be stated to a client rather than
+discovered by them.
+
+### The methodological lesson, recorded deliberately
+
+Two of this KB's four passes today have overturned a **negative** claim it had
+previously hardened — "no open-source LTI 1.3 library" (third pass) and now "no
+Python LTI 1.3 library" (fourth), alongside the SIS correction in
+`agents/trending.md`. The pattern is consistent and worth acting on: **this base
+is reliable about what it has found and unreliable about what it claims does not
+exist.** A declared absence here should be read as "not found in the searches
+run," and any absence that an architecture or an estimate depends on should be
+re-probed before it reaches a client. Three architectures in this file were built
+on absences that turned out to be false.
+
+### Verified this pass without change
+
+- `openeducat/openeducat_erp` — **LGPL-3.0, 911 stars, 789 forks**,
+  independently re-verified this pass; the existing row is correct. Worth
+  re-stating because **LGPL-3.0 is weaker copyleft than the GPL/AGPL** carried by
+  every other platform-layer option here, which makes it the most
+  deliverable-friendly SIS in the base.
+- `vishalsachdev/canvas-mcp` — **MIT, 324 stars, 106 forks**, now at **v1.18.0
+  (November 2026)**, whose one breaking change is that the TypeScript sandbox's
+  network guard **fails closed** (`SANDBOX_NETWORK_BLOCKED` for non-allowlisted
+  hosts). A security-positive default change and the right behaviour for an
+  education deployment. The tool-count inconsistency on its own page persists:
+  README says "up to 128", the About sidebar says 102.
+
+### Still open after this pass
+
+- **No permissively licensed LMS at deployment scale except Sakai (ECL-2.0).**
+  Unchanged across four passes.
+- **No MCP server for any open-source SIS.** See `agents/trending.md` for the
+  corrected scope of this gap.
+- **Open edX integration remains the real platform gap**: `openedx-mcp`
+  (AGPL-3.0, 3 stars) is still the only option.
+
 ## `2026-11-13` (third pass) — **"Emit xAPI" is in every pattern in this base and had no implementation behind it. There are two, both permissive, and the leading one is Apache-2.0**
 
 **Window:** foundational education repos, verified 2026-11-13 from the rendered

@@ -102,13 +102,22 @@ MCP server. It does.
   browser SSO vs companion plugin). Canvas, by contrast, has consolidated on
   one 324-star MIT server. **Open edX remains the real gap**: `openedx-mcp`
   (AGPL-3.0, 3 stars) is the only option and it is reference-grade at best.
-- **No MCP server for any SIS — re-probed this pass, still absent.** OpenEduCat,
-  RosarioSIS, Gibbon, openSIS and (new this pass) `frappe/education` all hold the
-  student record — the data an advising or early-warning agent needs — and none
-  has an agent interface. A dedicated search this pass returned the SIS platforms
-  themselves and no MCP server for any of them. **This is now a confirmed
-  absence across two consecutive passes, not an unchecked assumption.** The LMS
-  got all the attention; the student record still got none.
+- **SIS MCP servers exist — but not for any SIS in this table. Corrected
+  2026-11-13 (fourth pass).** The previous three editions of this file said "no
+  MCP server for any SIS" and called it a confirmed absence. That claim was
+  **over-generalized and is now withdrawn.** Two verified MCP servers do reach a
+  student information system: `oliverhruby/edupage-mcp` (MIT, 4 stars, **31
+  tools**) over **EduPage**, the SIS used across Slovakia and Czechia, and
+  `sukhrobyangibaev/mcp_hemis_student` (MIT, 0 stars) over **HEMIS**, the
+  higher-education SIS used by Uzbek universities. **What remains true, and is
+  the sharper statement:** OpenEduCat, RosarioSIS, Gibbon, openSIS and
+  `frappe/education` — every *open-source* SIS in this table — still have **no**
+  agent interface. The integration is happening against **national proprietary
+  SIS products with captive markets**, built by individual developers, not
+  against the open-source platforms a studio would deploy. Two consequences for
+  an engagement: the topology is proven (so `P8` is no longer greenfield), and
+  **EduPage's server reaches the SIS through a community library on undocumented
+  endpoints** — a pattern to learn from, not a dependency to ship.
 - **The learning-record store, by contrast, is now solved and permissive.** New
   this pass: `yetanalytics/lrsql` (Apache-2.0, 144) and `openfun/ralph` (MIT,
   51) as LRS implementations, with `DavidLMS/learnmcp-xapi` (MIT, 16) as the

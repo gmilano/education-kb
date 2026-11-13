@@ -6,7 +6,7 @@ updated: 2026-11-13
 
 # Compose patterns — education
 
-Eight concrete recipes. Each names the actual repos, the license consequence,
+Ten concrete recipes. Each names the actual repos, the license consequence,
 how the pieces wire together, and a rough build estimate. All components were
 license-verified on 2026-11-13 (see `agents/top.md` and `repos/foundations.md`).
 
@@ -14,16 +14,48 @@ license-verified on 2026-11-13 (see `agents/top.md` and `repos/foundations.md`).
 mount it into the copyleft platform over **LTI 1.3** or **MCP**, and emit
 **xAPI** or **Caliper** events. Never fork the LMS.
 
+**Changes in the fourth pass (2026-11-13), in order of how much they move an
+estimate.** (1) The **Python LTI constraint below is withdrawn** — see the
+correction note; single-language Python LTI deployments are available and that
+removes 1-2 weeks from any LTI-shaped engagement. (2) **`P8` is no longer
+greenfield**: two MIT agent-to-SIS servers exist and its estimate drops to 5-7
+weeks. (3) **`P10` is new** — mounting a permissively licensed *skill* rather
+than shipping a service, which is the cheapest education pattern in this file at
+1-2 weeks.
+
 **Two changes from the previous edition.** The LTI front door no longer needs
 writing from scratch — `Cvmcosta/ltijs` (Apache-2.0, 373 stars) implements the
 full LTI Advantage surface. And **P3 is no longer a greenfield build**: seven
 Moodle MCP servers exist, so P3 is now a selection-and-hardening pattern, which
 is cheaper and lands sooner.
 
-**One constraint that shapes every pattern:** every verified LTI 1.3 library is
-Node, PHP or Elixir — **none is Python**, while nearly every agent here is
-Python. Assume a two-process shape: Python agent service behind a Node (`ltijs`)
-or PHP (`packbackbooks`) LTI front door. Budget the seam.
+**CORRECTION 2026-11-13 (fourth pass) — the constraint that shaped every
+pattern below was wrong.** The previous edition stated that every verified LTI
+1.3 library was Node, PHP or Elixir, that **none was Python**, and that every
+pattern therefore had to assume a two-process shape with a Python agent behind a
+Node or PHP LTI front door, with the seam budgeted. **`dmitry-viskov/pylti1.3`
+(MIT, 138 stars, 84 forks) is a Python LTI 1.3 Advantage implementation** with
+Assignments and Grades, Names and Roles, Deep Linking, and shipped Django and
+Flask adapters. A single-language Python deployment is available for every
+pattern in this file.
+
+**What to do with that, concretely.** The two-process shape is no longer
+mandatory, but it is still often right, and the choice is now an engineering
+decision instead of a constraint:
+
+- **Choose `pylti1.3`** when the team is Python, the agent is Python (nearly all
+  of them here are), and one language, one container and one dependency set
+  matter more than library maturity. It removes an inter-process seam, a
+  serialization format and a deployment unit from every estimate below — worth
+  roughly **1-2 weeks** on a first LTI engagement.
+- **Choose `ltijs` (Apache-2.0, 373)** when LTI conformance is contractual or
+  the client's platform integration is unusual. It is the most-used, most
+  exercised implementation and the reference for the full Advantage surface.
+- **Weigh the maintenance risk honestly either way.** `pylti1.3` has an **empty
+  GitHub Releases page**, a newest PyPI version of **2.0.0**, and a third-party
+  report of no publish in roughly three years. Pin it, vendor it, and own the
+  patch path — on an **authentication-boundary** component that is a real cost,
+  and it is the one argument that still favours `ltijs` on a long engagement.
 
 ---
 
@@ -301,13 +333,30 @@ legal and politically survivable in every region in this KB.
 
 ---
 
-## P8 — Agent on the student record (Global, nothing exists)
+## P8 — Agent on the student record (Global, topology now proven, open-source SIS still unserved)
 
 **Problem:** advising, retention and early-warning are the use cases
 institutions ask for most, and they all need the **student information
-system** — not the LMS. Seven Moodle MCP servers exist. **Not one SIS has an
-agent interface.** This is the newest gap this KB has identified and it is
-wide open.
+system** — not the LMS.
+
+**Status changed 2026-11-13 (fourth pass).** This pattern was titled "nothing
+exists" through three passes. It is no longer greenfield: **two MIT MCP servers
+reach a real SIS** — `oliverhruby/edupage-mcp` (4 stars, **31 tools** over
+EduPage, the SIS used across Slovakia and Czechia, including role-aware student
+switching and 2FA) and `sukhrobyangibaev/mcp_hemis_student` (0 stars, over
+HEMIS, used by Uzbek universities). Both are single-developer projects against
+**national proprietary platforms**, and EduPage's runs on **undocumented
+endpoints** through a community library.
+
+**What that changes for the engagement:** the topology is proven, so this is a
+**selection-and-build** pattern rather than a bet — cheaper to sell and faster
+to de-risk, because `edupage-mcp` is a working reference for the tool surface
+(31 tools over timetable, grades, homework, attendance) and
+`zavora-ai/mcp-education` (Apache-2.0) is a working reference for **gating
+writes in the tool contract**: 9 read-only tools plus 3 writes that require
+approval. **What has not changed:** not one *open-source* SIS — OpenEduCat,
+RosarioSIS, Gibbon, openSIS, `frappe/education` — has an agent interface, so the
+build below is still the work. Quote the proven topology, not a solved problem.
 
 **Wiring:**
 1. **Pick the SIS by region.** `openeducat/openeducat_erp` (LGPL-3.0) where
@@ -319,7 +368,20 @@ wide open.
    are GPL-family. The license boundary is the whole architecture here.
 3. **Read-only first**, and probably read-only permanently. The student record
    is the most sensitive data in the institution; `Faixiang/Moodle-MCP`'s
-   read-only design is the precedent to copy.
+   read-only design is the precedent to copy. **If writes are unavoidable**, copy
+   `zavora-ai/mcp-education`'s contract instead of inventing one: declare the
+   read-only and approval-required tools as **separate, labelled sets in the
+   server itself**, so the boundary survives a change of host and shows up in an
+   audit. Leaving write-gating to the agent host is the failure mode.
+3b. **Steal the tool surface rather than designing it.** `edupage-mcp`'s 31
+   tools are a worked answer to "what does an agent need from a school SIS"
+   (timetable, grades, homework, attendance, daily summary, role-aware student
+   switching, 2FA), and `EdyVision/student-services-mcp` — **license
+   unverified, synthetic data, do not adopt** — sketches the retention surface
+   an advising agent needs: `fetch_student_dropout_risk`,
+   `fetch_high_risk_students`, `fetch_attrition_statistics`,
+   `fetch_attrition_feature_importance`. Two free references for the hardest
+   design question in this pattern.
 4. **Longitudinal framing.** `Keitous/EDUKAI-LONGVIEW` (ISC, 0 stars, Guinea)
    is the only project found that models a learner **across academic periods**
    with evidence retrieval and recurring-difficulty detection, under "agent
@@ -345,8 +407,11 @@ wide open.
 **License outcome:** MIT/Apache agent layer; GPL-family SIS untouched behind
 its own API.
 
-**Estimate:** 6–8 weeks for a read-only advising surface on one SIS. **Nothing
-to compete with**, and it is the layer the ask actually requires.
+**Estimate:** **5-7 weeks** for a read-only advising surface on one SIS, revised
+down from 6-8 now that the tool surface and the write-gating contract both have
+working references to copy rather than needing design from scratch. Still
+**nothing to compete with on any open-source SIS**, and it is the layer the ask
+actually requires.
 
 ## P9 — The learner-record spine (Global, buildable today, permissive end to end)
 
@@ -420,3 +485,80 @@ deliverable. This is the only pattern in this file for which that is true.
 governed xAPI statement stream, plus 2 weeks for the pyKT mastery layer and the
 reporting surface. The cheapest credible first engagement in this KB, and the
 right wedge ahead of `P8`.
+
+## P10 — Mount a licensed skill, not a service (Global, cheapest entry in this file)
+
+**New 2026-11-13 (fourth pass).**
+
+**Problem:** a client wants a credible tutoring capability in weeks, not a
+platform in quarters — and the usual answer, "stand up a tutor service," buys
+them a deployment, an inference bill, a security review and a maintenance
+burden before any teaching happens.
+
+**The opening:** `janestreet/agent_skills` (**MIT, 7.9k stars, 510 forks, 2
+commits**) is a *skill*, not software — a `SKILL.md` instruction set that turns
+any SKILL.md-compatible host (Claude Code, Codex, OpenClaw) or even a plain
+chatbot into a strict Socratic tutor: a 3-5 question diagnostic, a 4-10
+sub-skill map rated 0-5, **one question at a time**, spaced review, final
+assessment. It ships no code, so there is **no dependency tree, no CVE surface
+and no container**. It is also the first artifact of its class this KB can
+actually use: `education-agent-skills` (977 stars) is the same shape under **CC
+BY-SA**, which is a content license with share-alike and the wrong instrument
+for a deliverable. This one is MIT.
+
+**Wiring:**
+1. **Start from the skill, fork it in-repo.** Take `socratic-tutor` and adapt
+   the rubric and sub-skill map to the client's curriculum. This is prompt and
+   pedagogy work — subject-matter experts can own it, which is the point.
+2. **Add the guardrails the skill does not enforce.** A `SKILL.md` *asks* the
+   model to behave; it cannot *prevent* it from answering. Port the three
+   controls from `vulinh1704/ai-tutor-agent` (MIT): the **hint ladder** with a
+   configurable escalation cap, the **answer-leak guard** that regenerates a
+   draft which gives away the answer, and **rubric scoring whose totals are
+   computed in code rather than by the model**. Without these, "strict Socratic
+   tutor" is an instruction, not a property.
+3. **Host it where the learner already is.** Mount as an LTI 1.3 tool with
+   `dmitry-viskov/pylti1.3` (MIT) — now a **single-language Python** path, see
+   the correction at the top of this file — or reach into the LMS over
+   `vishalsachdev/canvas-mcp` (MIT, 324) or `Faixiang/Moodle-MCP` (MIT, 206,
+   read-only).
+4. **Make it reportable.** Emit xAPI through `DavidLMS/learnmcp-xapi` (MIT) into
+   `yetanalytics/lrsql` (Apache-2.0), using the skill's own 0-5 levels as the
+   `practiced` / `mastered` progression. The sub-skill map is already the shape
+   an LRS wants, which is why this composes cleanly with `P9`.
+5. **Measure it, with the caveat stated.** `kaushal0494/AITutor-EvalKit` (MIT, 4
+   stars, mathematics only) is still the only pedagogy-specific eval harness in
+   this KB. Use it and tell the client what it does not cover.
+
+**Why this is the cheapest pattern here:** steps 1-2 are the deliverable and
+steps 3-5 are reuse. There is no model to train, no service to scale, and the
+licensing question — normally the longest conversation in an education
+engagement — is settled in one line: **MIT end to end**.
+
+**Regional read:**
+- **North America** — the 85%-of-educators-use-AI / 18%-have-guidance gap is a
+  governance gap, and a reviewable `SKILL.md` plus a code-enforced rubric is an
+  artifact a district can actually approve. Nothing leaves the host if the host
+  is self-hosted.
+- **EMEA** — no grade of record means no Annex III high-risk classification;
+  stay on practice and formative feedback and the EU AI Act high-risk
+  obligations (now dated **2 December 2027** on the Digital Omnibus reading) do
+  not bind. The moment it grades, switch to `P2`.
+- **LATAM** — the lowest-cost route to the governance artifact the UNESCO
+  IESALC 87%/26% gap is asking for; translation and curriculum adaptation are
+  the work, and both are local-team work.
+- **APAC** — a skill file is reviewable text, which is the cheapest way to
+  satisfy Korea's AI Basic Act disclosure duties and India's provenance-marking
+  rules without a compliance build.
+
+**License outcome:** MIT end to end, including the pedagogy artifact itself.
+
+**Estimate:** **1-2 weeks** for an adapted, guardrailed skill mounted in one
+LMS, plus 1 week to wire the xAPI stream. The cheapest credible engagement in
+this KB — and the right thing to sell when the client's real question is "can
+you show us something that teaches by March."
+
+**The trap, stated plainly:** 7.9k stars on **two commits** measures attention,
+not maturity. This is a well-designed prompt from a firm with a strong
+engineering reputation, not a maintained product, and it will not be patched for
+you. Fork it and own it from day one.

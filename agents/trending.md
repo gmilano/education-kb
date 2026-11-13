@@ -4,6 +4,86 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (fourth pass) — **Three passes said no SIS anywhere has an agent interface. Two do. And the most-adopted education AI artifact of the window is a prompt with two commits**
+
+**Window:** education-specific AI agents, verified 2026-11-13 from the rendered
+repository page. The three earlier passes today worked the **LMS** surface and
+then the **learner-record** surface. This pass went at the **student record**,
+which all three had declared empty, and at the **skill** layer, which none had
+treated as an artifact class. **26 agents now admitted, up from 20.**
+
+**Channel note, restated because it is a trap — and re-tested this pass.**
+`curl -sI https://github.com/...` returns **`403` for every path** through this
+session's egress policy. Re-verified directly this pass: a real repository
+(`yetanalytics/lrsql`) returns `403`, a deliberately nonexistent repository
+returns `403`, and `api.github.com` returns `403`. A `curl` probe therefore
+**cannot distinguish a live repo from a 404** and must not be used as the
+verification channel for this KB. Everything below was verified by fetching and
+reading the rendered repository page (GitHub's own license field and star count).
+
+### The correction that matters most this pass
+
+Three consecutive passes concluded that **no student information system anywhere
+had an agent interface**, and the third pass hardened that into "a confirmed
+absence across two consecutive passes, not an unchecked assumption." **That
+conclusion was over-generalized and is withdrawn.** A targeted SIS search found
+two MIT MCP servers that reach a real SIS.
+
+**The statement that survives is sharper than the one it replaces:** no
+*open-source* SIS has an agent interface, while **national proprietary SIS
+products are getting them from individual developers**. That is now `T12` in
+`intel/trends.md`, and it changes `P8` from a greenfield bet into a
+selection-and-build pattern at 5-7 weeks.
+
+### New entries (6)
+
+| Agent | Repo | License | Stars | Why it is admitted |
+|---|---|---|---|---|
+| socratic-tutor (Jane Street `agent_skills`) | https://github.com/janestreet/agent_skills | MIT | 7.9k | **The largest permissively licensed education artifact in this KB, and it is not software.** 3-5 question diagnostic, 4-10 sub-skills rated 0-5, one question per turn, spaced review, final assessment. 510 forks on **2 commits**. A `SKILL.md` instruction set: no dependency tree, no CVE surface, needs an LLM host. Third-largest education agent here after DeepTutor (58.7k) and OpenMAIC (43.4k). |
+| edupage-mcp | https://github.com/oliverhruby/edupage-mcp | MIT | 4 | **First verified agent-to-SIS path in this KB.** 31 tools over **EduPage** (Slovakia, Czechia): timetables, grades, homework, daily summary, meal ordering, multi-school discovery, role-aware student switching, 2FA. PyPI + Docker/GHCR + MCP Registry. **Reaches the SIS via the community `edupage-api` library on undocumented endpoints** — no vendor contract. Python 3.10+, 1 fork, 123 commits. |
+| mcp_hemis_student | https://github.com/sukhrobyangibaev/mcp_hemis_student | MIT | 0 | **Second agent-to-SIS path; first Central Asian project in this KB.** MCP over **HEMIS**, the higher-education MIS used by Uzbek universities. 9 commits, no description, no releases. Admitted for the **SIS topology** only. |
+| mcp-education (zavora-ai) | https://github.com/zavora-ai/mcp-education | Apache-2.0 (per README; sidebar shows a generic "License" link) | 1 | **Only Rust education MCP server found, and the only one at any star count that gates writes in its own tool contract:** 12 tools split **9 read-only + 3 writes requiring approval**. Canvas LMS API. The design to copy for any education server that writes to a gradebook. 1 fork. |
+| ai-tutor-agent | https://github.com/vulinh1704/ai-tutor-agent | MIT | 0 | **Clearest tutoring guardrail implementation found at any star count.** FastAPI + LangGraph: **hint ladder** with configurable escalation cap, **answer-leak guard** that regenerates a revealing draft, **rubric scoring whose totals are computed in code, not by the model**. Router node splits tutor/grader/clarify; SQLite checkpointing; offline fake model runs the full graph with no API key (testable in CI). Take the control design. |
+| AI-Teaching-Agent | https://github.com/littlecookie0722/AI-Teaching-Agent | MIT | 0 | One Markdown source compiles into reviewable **Lab and Exam packages** plus teaching decks, via structured DSLs, sandboxed evaluation and an MCP stdio server. **Nothing publishes automatically** — validated artifacts, protected candidate-facing content, human decision gates export. README states MCP/Agent expansion is **frozen**: a fixed reference for the review-gate shape, not a growing project. |
+
+### Examined and deliberately not tabled (1)
+
+| Candidate | Repo | Why not |
+|---|---|---|
+| student-services-mcp | https://github.com/EdyVision/student-services-mcp | **The rendered page shows no license field**, and it runs on **synthetic data** with no real SIS connection (1 star). Its 13 tools are nonetheless the best retention/early-warning surface sketch found — `fetch_student_dropout_risk`, `fetch_high_risk_students`, `fetch_attrition_statistics`, `fetch_attrition_feature_importance` — and are cited as a **design reference** in `P8`. Not adoptable without a license. |
+
+### The second finding: the skill layer is an artifact class this KB was not tracking
+
+7.9k stars and 510 forks on **two commits**, for a file of instructions. It is
+not an outlier: `GarethManning/education-agent-skills` reached 977 stars as a
+pure skill collection (**CC BY-SA** — rejected on license grounds),
+`JuneYaooo/teacher-to-skills` (Apache-2.0, 475) exists to *compile* a teacher's
+materials into a skill, and `SirhanMacx/Claw-ED` (MIT, 65) is a prompt layer over
+a host agent. **Four of the ten most-starred education artifacts in this base are
+instruction sets rather than services.** Written up as `T11`, with the new `P10`
+as the commercial shape: 1-2 weeks, MIT end to end, cheapest pattern in the file.
+
+Two cautions go with it, both now recorded in `T11`. **A skill asks; it cannot
+enforce** — `SKILL.md` cannot stop a model from handing over the answer, which is
+why `P10` ports the `ai-tutor-agent` guardrails. And **the licence trap is worse
+here than in code**, because a share-alike *content* licence on a pedagogy layer
+does not look like software and gets waved through review.
+
+### Still open after this pass
+
+- **No open-source SIS has an agent interface.** OpenEduCat (LGPL-3.0, 911),
+  RosarioSIS, Gibbon, openSIS, `frappe/education` (GPL-3.0, 707). Unchanged, and
+  now stated at the right scope.
+- **No pedagogy-specific eval harness at scale.** `AITutor-EvalKit` (MIT, 4
+  stars, mathematics only) is still the only one, across four passes. Every
+  agent admitted today claims a pedagogical effect and none can be compared on
+  it. This is the most conspicuous absence in the whole base.
+- **Grading remains nearly empty.** `wwrwbs/AI_AWE` (Apache-2.0, 2 stars) is
+  still the only credible open scoring *system*. `AI-Teaching-Agent` generates
+  exams but marks its grading workflow **frozen**, so it does not close this.
+- **Moodle MCP is still fragmented and unconsolidated** — seven servers, no two
+  agreeing on tool surface or auth model. Unchanged this pass.
+
 ## `2026-11-13` (third pass) — **The agent↔learner-record path exists and is MIT — but it writes to the LRS, not the SIS. The two passes before this one described one gap where there are two**
 
 **Window:** education-specific AI agents, verified 2026-11-13 from the rendered

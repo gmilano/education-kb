@@ -222,3 +222,99 @@ grounds that "Search and AI are deeply integrated."
    with a named owner. That is when budget moves. Watch vendor default changes
    as leading indicators of education AI demand — they move faster than any
    legislature, and unlike legislation they arrive with a deadline attached.
+
+## T11 — The most-adopted education AI artifact of this window is a prompt, not a program
+
+**Added 2026-11-13 (fourth pass).**
+
+**Evidence.** `janestreet/agent_skills` (MIT) holds **7.9k stars and 510 forks
+on two commits**. It contains one skill, `socratic-tutor`: a `SKILL.md`
+instruction set with a diagnostic, a 4-10 sub-skill map rated 0-5, one question
+per turn, spaced review and a final assessment. It ships no executable code. In
+this KB's own table it is now the **third-largest education-specific agent** by
+stars, behind only DeepTutor (58.7k) and OpenMAIC (43.4k) — both of which are
+substantial software projects with years of commits behind them.
+
+It is not an isolated case. `GarethManning/education-agent-skills` reached 977
+stars as a pure skill collection, `JuneYaooo/teacher-to-skills` (Apache-2.0,
+475) exists specifically to *compile a teacher's materials into a skill*, and
+`SirhanMacx/Claw-ED` (MIT, 65) is a prompt-and-template layer over a host agent.
+Four of the ten most-starred education artifacts in this base are instruction
+sets rather than services.
+
+**Why it is happening.** Education's hard part is pedagogy, not inference. A
+skill file is the smallest artifact that encodes pedagogy, and it is reviewable
+by the people who actually hold the expertise — teachers and curriculum leads —
+without a code review. It also inherits the host's model, auth, logging and
+updates, which is most of what an education deployment otherwise has to build.
+
+**Implications, including the uncomfortable one.**
+
+1. **A studio's defensible asset in education may be a prompt library, not a
+   platform.** That is cheaper to build, faster to localize (see `P10`) — and
+   much easier for a client to walk away with. Price and contract accordingly:
+   the durable value is in the guardrails, the evaluation and the integration,
+   not in the skill text.
+2. **Licensing matters more here, not less.** `education-agent-skills` (977,
+   **CC BY-SA**) and Jane Street's (**MIT**) are the same artifact class with
+   opposite consequences. A share-alike content license on the pedagogy layer
+   infects the deliverable in a way most teams will not notice until review,
+   because it does not look like software. Check the license on prompt
+   collections exactly as hard as on code.
+3. **Stars measure attention, not maturity — and the gap has never been
+   wider.** Two commits and no maintenance commitment behind 7.9k stars. A skill
+   cannot be patched for a vulnerability because it has no vulnerability
+   surface, but it also will not be improved for you. Fork and own.
+4. **A skill asks; it cannot enforce.** `SKILL.md` cannot stop a model from
+   handing over the answer. The controls in `vulinh1704/ai-tutor-agent` — hint
+   ladder with an escalation cap, answer-leak regeneration, rubric totals
+   computed in code — are the difference between a tutor that is *instructed* to
+   be Socratic and one that *is*. Expect to supply that layer in every
+   engagement that starts from a skill.
+
+## T12 — Agent-to-SIS integration is arriving through national platforms, not open-source ones
+
+**Added 2026-11-13 (fourth pass). This trend exists because this KB got the
+previous version of it wrong.** Three consecutive passes concluded that **no
+student information system anywhere had an agent interface**, the third calling
+it "a confirmed absence across two consecutive passes." A targeted search this
+pass found two.
+
+**Evidence.** `oliverhruby/edupage-mcp` (MIT, 4 stars, **31 tools**) serves
+**EduPage**, the school information system used across Slovakia and Czechia —
+timetables, grades, homework, daily summary, meal ordering, multi-school
+discovery, role-aware student switching, 2FA — and ships on PyPI, Docker/GHCR
+and the MCP Registry. `sukhrobyangibaev/mcp_hemis_student` (MIT, 0 stars) serves
+**HEMIS**, the higher-education management information system used by Uzbek
+universities. Meanwhile **not one** open-source SIS — OpenEduCat (LGPL-3.0,
+911), RosarioSIS, Gibbon, openSIS, `frappe/education` (GPL-3.0, 707) — has an
+agent interface of any kind.
+
+**The pattern that explains it.** Agent integration is appearing where a
+**single platform holds a captive national market**, built by individual
+developers scratching their own itch. One developer in Slovakia serves every
+EduPage school at once; one developer in Uzbekistan serves every HEMIS
+university. No equivalent incentive exists for an open-source SIS, whose
+installations are independent, individually configured and individually small.
+The consequence is counter-intuitive and worth stating to a client: in the SIS
+layer, **proprietary national platforms are better served by open-source agents
+than open-source platforms are.**
+
+**Implications.**
+
+1. **Market entry is per-country in this layer, and that favours a global
+   studio.** The reusable asset is the *tool surface* — EduPage's 31 tools are a
+   worked answer to "what does an agent need from a school SIS" — while the
+   adapter is per-platform. Build the surface once, adapt per country.
+2. **Both existing servers are fragile in the same way.** EduPage's reaches the
+   SIS through a community library on **undocumented endpoints**: no vendor
+   contract, breakable by any upstream release. That is the normal state of SIS
+   integration and it should be priced as ongoing maintenance, not a one-off
+   build.
+3. **Check the EMEA mid-market for the next instances.** Slovakia and Czechia
+   produced the first one; Italy, Poland, Turkey and the Gulf all have
+   concentrated national school-platform markets and no verified MCP server yet.
+   This is the cheapest regional wedge in the base.
+4. **The open-source SIS gap is a real opportunity, not an oversight.** See
+   `P8`, now a selection-and-build pattern at 5-7 weeks with a proven topology
+   rather than a greenfield bet.
