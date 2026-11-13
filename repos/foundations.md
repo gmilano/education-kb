@@ -47,6 +47,24 @@ should not use this library at this time"**; `stevenweathers/peregrine-lti`
 license-verified on the repository page this pass; treat all three as
 unverified.
 
+## The learner-record layer — xAPI Learning Record Stores (new this pass)
+
+Every compose pattern in this KB instructs the agent to "emit xAPI", and until
+this pass **no repo in this base implemented the thing that receives it**. Both
+options below are **permissive**, which makes this the second fully build-safe
+layer in the education stack after the LTI table — and unlike the LMS layer,
+here the permissive option is also the leading one.
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/yetanalytics/lrsql | Apache-2.0 | 144 | **The default choice.** SQL-based LRS: a persistent store for xAPI statements plus their attachments and documents. Verified DBMS matrix is broad and current — SQLite 3.42, **Postgres 14/15/16/17/18**, MariaDB 10.6–11.8, MySQL 8.0.44/8.4/9.5. **Apache-2.0 means the learner-record store can ship inside a client deliverable with no copyleft reach** — the only data-layer component in this KB for which that is true. 42 forks. |
+| https://github.com/openfun/ralph | MIT | 51 | LRS **plus** a CLI for building learning-analytics pipelines **plus** a Python library for fetching, converting and serializing learning events. Pick it over SQL LRS when the engagement is *analytics*-shaped rather than *storage*-shaped, or when the agent layer is Python and you want one language end to end. Elasticsearch backend in its documented local setup. From **France Université Numérique** — EMEA public-education provenance, which is usable evidence in an EU data-sovereignty conversation. 19 forks. Releases section empty. |
+
+Pair either one with `DavidLMS/learnmcp-xapi` (MIT, 16 stars — see
+`agents/top.md`), the MCP server that lets an agent read and write these records
+directly. That three-repo stack — LRS + MCP server + agent — is written up as
+pattern `P9`.
+
 ## Learning platforms (LMS / MOOC)
 
 | Repo | License | Stars | Notes |
@@ -65,6 +83,7 @@ unverified.
 | Repo | License | Stars | Notes |
 |---|---|---|---|
 | https://github.com/openeducat/openeducat_erp | LGPL-3.0 | 911 | SIS + LMS + finance modules as Odoo apps. The "Odoo for education" answer. |
+| https://github.com/frappe/education | GPL-3.0 | 707 | **New this pass.** Education suite on the Frappe framework: admissions, fees, scheduling, exams, attendance. Shares a stack with `frappe/lms` (AGPL-3.0) and ERPNext, so a Frappe client can run SIS + LMS + ERP on one framework. **License read from `license.txt` ("GNU GPL V3") because GitHub's sidebar shows only a generic License link** — and note it differs from `frappe/lms`, which is AGPL-3.0. Branches version-15.1 / 15.2 / 16 / develop; Releases empty. |
 | https://github.com/francoisjacquet/rosariosis | GPL-2.0 | 654 | RosarioSIS student information system for school management. Widely used in LATAM K-12. |
 | https://github.com/GibbonEdu/core | GPL-3.0 | 638 | Flexible open-source school management platform. |
 | https://github.com/OS4ED/openSIS-Classic | GPL (per README) | 351 | openSIS student information system. Sidebar shows no license badge; GPL claim comes from the README. |
@@ -100,7 +119,11 @@ unverified.
   the LTI table rather than planning a from-scratch build.
 - **xAPI (Experience API)** and **Caliper Analytics** — the two learning-event
   telemetry standards. Emit one of them from any agent you build, or the
-  institution cannot report on it.
+  institution cannot report on it. **As of this pass xAPI has verified open
+  implementations in this KB** (`yetanalytics/lrsql`, `openfun/ralph`, and
+  `DavidLMS/learnmcp-xapi` on the agent side); Caliper still has only its spec
+  repo, so **xAPI is the lower-risk choice wherever the client has no prior
+  contractual commitment**.
 - **QTI** — assessment item interchange. Matters the moment a client wants to
   move an item bank between systems.
 - **SCORM** — legacy but ubiquitous in corporate and vocational training; still
@@ -108,6 +131,12 @@ unverified.
 
 ## Declared gaps
 
+- **Caliper has no verified open implementation here — new gap this pass, opened
+  by closing the xAPI one.** `1edtech/caliper-spec` carries a spec-document
+  license, not a software license. Caliper is the 1EdTech-native option and is
+  most often specified in **North American higher ed**, so an engagement
+  contractually bound to Caliper rather than xAPI has **no open starting point
+  in this base**. That is a build, and it must be priced as one.
 - **No permissively licensed full LMS exists at scale.** Every LMS with real
   deployment is GPL/AGPL except Sakai (ECL-2.0). A client who needs a
   proprietary derived platform cannot start from Moodle, Canvas, or Open edX —

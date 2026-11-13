@@ -6,13 +6,23 @@ updated: 2026-11-13
 
 # Education AI Agents — curated, license-verified
 
-**18 real agents** below, up from 11 last pass. Every row was verified on
+**20 real agents** below, up from 18 at the second pass and 11 at the first. Every row was verified on
 2026-11-13 by fetching the repository page and reading GitHub's own license
 field and star count. Four candidates that circulate on "best open source AI
 agent" lists are **rejected on license grounds** and listed in the exclusions
 section rather than deleted silently — an excluded candidate is information.
 
-**What changed this pass:** the Moodle MCP gap this KB declared open is
+**What changed this third pass (2026-11-13):** the KB's attention so far has
+been on the *LMS* surface — seven Moodle MCP servers, one Canvas server. This
+pass went after the **learner record** instead, and found the layer that was
+missing: `DavidLMS/learnmcp-xapi` (MIT) is an MCP server over any xAPI-compliant
+Learning Record Store, and it is the only verified **agent↔learner-record write
+path** in this base. It is the agent half of a gap closed on the infrastructure
+side in `repos/foundations.md`, where two permissive LRS implementations are
+also new. The **SIS MCP gap stays open and was re-probed, not assumed**. Second
+new entry: `EduAgentic`, the only MCP **+ A2A** education example found.
+
+**What changed at the second pass:** the Moodle MCP gap this KB declared open is
 **closed** — `Faixiang/Moodle-MCP` (MIT, 206 stars) is a real, maintained,
 significant Moodle MCP server, and six more Moodle MCP servers were verified
 behind it. Three new agents entered above 60 stars, including
@@ -41,12 +51,14 @@ come from the rendered repository page (GitHub's own license detection).
 | Tutor MCP | https://github.com/ArnaudGuiovanna/tutor-mcp | MIT | 102 | MCP server that turns any LLM into an Intelligent Tutoring System; persistent, auditable learner state and progression governed outside the model. v0.7.0 adds institutional courses, invitations, enrollment. Small star count, unusually mature design. |
 | Claw-ED | https://github.com/SirhanMacx/Claw-ED | MIT | 65 | **New this pass.** Local-first teaching assistant: starts from the teacher's own lesson plans, slides and assessments and drafts new lessons, student materials and decks. v9.18.2026.1 (Beta). **Explicitly single-teacher, not multi-tenant**, and student-facing features are experimental. README is honest that hosted models still receive the prompt content even though storage is local. 16 forks. |
 | moodle-mcp (Rust) | https://github.com/G36maid/moodle-mcp | MIT | 29 | **New this pass.** Rust MCP server: courses, assignments, forums, grades, and files-as-markdown. Author reports live verification against **Moodle 3.7, 4.5 and 5.2** — the widest version coverage of any Moodle MCP server found. |
+| learnmcp-xapi | https://github.com/DavidLMS/learnmcp-xapi | MIT | 16 | **New this pass — the only agent↔learner-record write path in this KB.** MCP server over any **xAPI 1.0.3**-compliant Learning Record Store. Three tools: record a statement, retrieve progress, manage activity vocabulary. Ships the `practiced` / `mastered` / `experienced` / `achieved` verbs and separates learners by an `ACTOR_UUID`, so one server serves a cohort. **Verified LRS targets: SQL LRS, Ralph, Veracity** (TinCan and xAPI Wrapper are listed as planned, not shipped). Python 3.8+, 4 forks, Releases empty, author states active development. This is what makes an agent's activity *reportable* by the institution instead of invisible. |
 | AITutor-EvalKit | https://github.com/kaushal0494/AITutor-EvalKit | MIT | 4 | Evaluation framework for the *pedagogical* effectiveness of LLMs as tutors (mathematics domain). Tiny, but still the only pedagogy-specific eval harness found. |
 | AI Scoring Platform | https://github.com/wwrwbs/AI_AWE | Apache-2.0 (per README + LICENSE; sidebar shows only a generic "License" link) | 2 | **New this pass — the only credible open grading system found.** Automated argumentative-essay scoring (1–6) with label-aware feedback: fine-tuned Qwen2.5-7B LoRA discourse-move classifier → LightGBM scorer over 31 linguistic/discourse features → feedback generator, with a Gradio UI for single and batch scoring. Locally deployable. **Naming trap: the arXiv paper calls this system "ArguLens"; the repository never uses that name.** Vendored TextComplexityToolkit is MIT. |
 | moodle-mcp (browser-session) | https://github.com/falkenslab/moodle-mcp | MIT | 2 | **New this pass.** Claims **~260 Moodle tools** including grading and quiz building — by far the largest surface found. Authenticates by opening a real browser for the user's own interactive login, so it **supports SSO and 2FA and needs no web-service token, admin rights, or Moodle plugin** ("your login, never your password"). Targets Moodle 4.5 and 5.x. 2 stars: powerful design, unproven. |
 | moodle-mcp (publishing) | https://github.com/MarcosNahuel/moodle-mcp | MIT | 1 | **New this pass.** Aimed at *writing* pedagogical content: 40 high-level tools plus a `ws_raw` escape hatch across courses, sections, content, quizzes, gradebook, messaging, calendar and badges. Writes are **upsert-by-`idnumber`, so republishing is idempotent** — the right primitive for generated course content. Requires companion plugin `local_italiciamcp` for the full set; self-reported ~80% operability at v0.5.2. |
 | Manu (tutor-ai-agent) | https://github.com/Jeanikt/tutor-ai-agent | MIT | 0 | **New this pass — the first LATAM-origin education agent this KB has found.** Voice-first math tutor **in Brazilian Portuguese**, adapting from 1st grade to university; spoken explanations render to an on-screen chalkboard. TypeScript + LiveKit Agents with a Next.js front end. In development, no public deployment. 0 stars — a seed, not a dependency. |
 | EDUKAI LongView | https://github.com/Keitous/EDUKAI-LONGVIEW | ISC | 0 | **New this pass — the first Africa-origin education agent this KB has found.** MCP-powered *longitudinal* learning intelligence: tracks a learner across multiple academic periods rather than single test scores, retrieves supporting evidence, flags sustained strengths and recurring difficulties, and recommends for teacher review ("agent recommends, teacher decides"). Bilingual FR/EN, author based in **Guinea**. Node.js/Express. **Synthetic data only** — a prototype. |
+| EduAgentic (EduMCP) | https://github.com/kamalelafoui/Agentic-AI-EdTech-J33-J34 | MIT | 0 | **New this pass — the only MCP + A2A education example found.** FastMCP server on SSE exposing six tools (`search_courses`, `get_learner_profile`, `recommend_learning_path`, `generate_quiz`, `grade_quiz`, `get_learning_statistics`) **plus an A2A orchestrator** over three named agents (Tutor, Evaluation, Orientation). Every other education agent in this table is single-agent or MCP-only; this is the one place in the set to read an agent-to-agent education topology. **French-language** repo and docs — francophone provenance; the author's country is not stated on the page and is not asserted here. 0 stars, 0 forks, no releases: a course artifact. Take the **topology**, not the code. |
 
 ## Copyleft — usable, but the license propagates
 
@@ -70,6 +82,19 @@ Globant can build a client deliverable on.
 | educational-agents | https://github.com/nifalconi/educational-agents | **No license file** | 1 | **New rejection this pass.** Spanish-language teaching library ("agents in 2 lines") from the *Niñas Pro* applied-AI course for girls in **Chile** — genuinely interesting as LATAM education provenance, and the kind of project worth contributing a LICENSE file to. As published it is all-rights-reserved and cannot be adopted. v0.1.0 prototype, built on the OpenAI Agents SDK via OpenRouter. |
 
 ## Declared gaps
+
+- **The learner-record gap is half closed, and the halves must not be
+  confused.** `learnmcp-xapi` gives an agent a read/write path to the
+  *learning-activity* record — xAPI statements: what the learner did, practiced
+  and mastered. It does **not** reach the *student* record: enrolment,
+  transcript, attendance, demographics, fees. Pattern `P9` (new) needs the LRS
+  and can be built today on permissive licenses; pattern `P8` needs the SIS and
+  is still greenfield. Scoping an advising engagement against the wrong one of
+  these is the most expensive mistake available in this KB.
+- **No pedagogy-specific eval harness at scale.** `AITutor-EvalKit` (MIT, 4
+  stars, mathematics only) is still the only one found — unchanged across all
+  three passes. Every agent in the table above claims pedagogical effect and
+  none of them can be compared on it.
 
 - **Grading is still nearly empty, but no longer absent.** `wwrwbs/AI_AWE`
   (Apache-2.0, **2 stars**) is the only credible open scoring *system* found —

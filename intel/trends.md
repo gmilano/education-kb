@@ -21,6 +21,17 @@ than 10% of institutions have guidelines. Brazil's Cetic.br adds the sharpest
 single pairing: **53% of school administrators use AI, 22% report their school
 has any guideline on its use.**
 
+**Added 2026-11-13:** the United States now has an equally sharp pairing, from
+Google's November 2026 education report (Gallup-based): **85% of educators say
+they use generative AI tools; 18% of US teachers report having received any
+formal AI guidance from administrators.** This replaces "roughly a quarter of
+faculty report a formal institutional policy" as the number to quote for North
+America — it is more recent, it is teacher-side rather than policy-side, and the
+67-point gap is the clearest statement of the thesis in any region. The pattern
+now holds with near-identical shape in **three** regions (US 85/18, Brazil
+53/22, LATAM higher ed 87/26), which makes it a structural feature of the
+market rather than a local failing.
+
 **Implication:** lead with governance, integration and evaluation. "Build us a
 tutor" is a smaller and more crowded ask than "make the AI our people already
 use safe, measurable and policy-compliant."
@@ -153,3 +164,61 @@ that path considerably. What changes is the sourcing posture: there are now real
 regional projects to contribute to, hire from, or co-develop with, rather than a
 blank map. A 0-star repo doing longitudinal learner analytics out of Guinea is a
 lead, not noise.
+
+## T9 — The learner-record layer just became permissive, and it is where the defensible architecture lives
+
+Three passes of this KB produced a uniform picture of the **platform** layer:
+copyleft everywhere. Moodle GPL-3.0, Canvas AGPL-3.0, Open edX AGPL-3.0, with
+Sakai (ECL-2.0) the single permissive exception. The strategic conclusion drawn
+so far — build the agent layer permissively and talk to the platform across its
+API — was right but incomplete, because the **data** layer was unexamined.
+
+It is now examined, and it is permissive:
+
+- `yetanalytics/lrsql` — **Apache-2.0**, 144 stars, SQL-based Learning Record
+  Store, Postgres 14–18 / MySQL / MariaDB / SQLite.
+- `openfun/ralph` — **MIT**, 51 stars, LRS plus analytics pipeline plus Python
+  library, from France Université Numérique.
+- `DavidLMS/learnmcp-xapi` — **MIT**, 16 stars, the MCP server that lets an
+  agent read and write those records.
+
+**Implication, and it is the most actionable one in this file:** the learner
+data is the part of an education engagement a studio can actually own. The LMS
+is the client's and it is copyleft; the model is a vendor's and it is
+substitutable; the **learner record — mastery state, progression, evidence — is
+the asset**, and it can now be built on Apache-2.0 and shipped inside a
+deliverable. Architecture follows: *copyleft platform behind its network API,
+permissive LRS and agent layer inside the product.* Pattern `P9`.
+
+Corollary with teeth: **xAPI won the open-implementation race and Caliper did
+not.** Caliper has only a spec-document repo in this base, and it is the
+1EdTech-native standard most often specified in North American higher ed. Where
+the client is free to choose, choose xAPI. Where a contract names Caliper,
+price an adapter build.
+
+## T10 — Platform defaults are now the fastest-moving education AI regulation
+
+State legislatures and the EU work in sessions and multi-year transition
+periods — the EU's own Annex III high-risk deadline just slipped from
+**2026-08-02 to 2027-12-02** via the Digital Omnibus. A platform vendor changes
+a default and the effect lands on every school at once.
+
+Google is making **Gemini and Search opt-in (off by default) for K-12 student
+accounts**, administrator-enabled, from early 2027 — and is **not** offering
+traditional Search without AI summaries as a fallback, since AI Mode and AI
+Overviews are built in. The backlash was immediate and political (Bernie
+Sanders, NYC Mayor Zohran Mamdani), and Google's education VP defended it on the
+grounds that "Search and AI are deeply integrated."
+
+**Implication:** two things follow, and the second is the commercial one.
+
+1. **The "disable AI" option is disappearing from the platform layer.** A
+   district that wants search without generative AI no longer has a supported
+   configuration. Governance has to be implemented at the institution's own
+   layer — policy, logging, review workflow — which is exactly what this KB's
+   patterns build.
+2. **Forced administrative decisions are procurement triggers.** An
+   opt-in default with a date converts an open-ended debate into a dated task
+   with a named owner. That is when budget moves. Watch vendor default changes
+   as leading indicators of education AI demand — they move faster than any
+   legislature, and unlike legislation they arrive with a deadline attached.

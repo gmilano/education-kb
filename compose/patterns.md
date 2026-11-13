@@ -325,8 +325,15 @@ wide open.
    with evidence retrieval and recurring-difficulty detection, under "agent
    recommends, teacher decides". It is a prototype on synthetic data — take the
    design, not the code.
-5. **Join to learning data.** Mastery estimates from `pykt-toolkit` (MIT) plus
-   xAPI/Caliper events give the agent behavioural signal the SIS does not hold.
+5. **Join to learning data — now with named implementations.** Mastery
+   estimates from `pykt-toolkit` (MIT) plus xAPI events give the agent
+   behavioural signal the SIS does not hold. As of 2026-11-13 the xAPI side is
+   no longer abstract: stand up `yetanalytics/lrsql` (Apache-2.0) or
+   `openfun/ralph` (MIT) as the Learning Record Store and read it through
+   `DavidLMS/learnmcp-xapi` (MIT) — see `P9`, which is the buildable half of
+   this pattern. **Keep the distinction explicit in the SOW: the LRS holds
+   learning activity, the SIS holds the student record.** P9 ships today; this
+   pattern still requires the SIS MCP server to be built.
 6. **Human-in-the-loop, hard.** Chicago's rule — no AI as the sole basis for
    discipline or special-education placement — is the floor, and the EU treats
    access and allocation decisions as high-risk. Every output is a
@@ -340,3 +347,76 @@ its own API.
 
 **Estimate:** 6–8 weeks for a read-only advising surface on one SIS. **Nothing
 to compete with**, and it is the layer the ask actually requires.
+
+## P9 — The learner-record spine (Global, buildable today, permissive end to end)
+
+**New 2026-11-13.** This is `P8`'s buildable half. `P8` needs an SIS MCP server
+that does not exist; **P9 needs nothing that does not exist**, and every
+component is MIT or Apache-2.0.
+
+**Problem:** every other pattern in this file tells the agent to "emit xAPI so
+the institution can report on it", and until this pass no repo in this KB
+implemented the receiver. The practical consequence in delivery is familiar: the
+tutor works in the demo, and the institution cannot answer "what did the cohort
+actually learn?" — so the pilot does not renew. The missing piece was never the
+model. It was the record.
+
+**Wiring:**
+
+1. **Learning Record Store.** `yetanalytics/lrsql` (**Apache-2.0**, 144) by
+   default — Postgres 14–18 in production, SQLite for development. Choose
+   `openfun/ralph` (**MIT**, 51) instead when the engagement is analytics-shaped
+   rather than storage-shaped, when the team wants one Python toolchain end to
+   end, or when **EU provenance matters** (France Université Numérique).
+2. **Agent interface.** `DavidLMS/learnmcp-xapi` (**MIT**, 16) as the MCP
+   server. Three tools — record statement, retrieve progress, manage activity
+   vocabulary — and the `practiced` / `mastered` / `experienced` / `achieved`
+   verbs are built in, so the pedagogical vocabulary is not something you
+   invent. Separate learners by `ACTOR_UUID`; one server serves a cohort.
+   Verified against SQL LRS, Ralph and Veracity. **It is 16 stars: read it,
+   pin the commit, and expect to maintain your own fork.**
+3. **Tutor.** Any agent from `agents/top.md`. `HKUDS/DeepTutor` (Apache-2.0)
+   where a learner model is wanted out of the box; `ArnaudGuiovanna/tutor-mcp`
+   (MIT) where auditable progression state governed outside the model is the
+   priority — it already holds learner state, so the two state stores must be
+   reconciled deliberately rather than both left running.
+4. **Mastery estimation, quantitative.** `pykt-team/pykt-toolkit` (MIT, 461)
+   over the accumulated xAPI statements. This is the step that separates the
+   build from a chat log: the LRS gives you the events, pyKT turns them into
+   knowledge-tracing estimates the institution can defend.
+5. **Platform integration across the network boundary.** LTI 1.3 via
+   `Cvmcosta/ltijs` (Apache-2.0, 373) to launch inside Moodle/Canvas/Open edX,
+   with grade writeback through AGS. **Never fork the LMS.** The copyleft stays
+   on the far side of its own API; everything you ship stays permissive.
+6. **Reporting surface.** The LRS is the source of truth for every
+   institutional question — cohort mastery, time-on-task, evidence per claim.
+   Build the dashboard against the LRS, not against the agent's transcript.
+
+**Why it is defensible:** the LMS belongs to the client and is copyleft; the
+model is a vendor's and is substitutable within a quarter. The **learner
+record** — mastery state, progression, evidence — is the asset, and this is the
+first configuration in this KB where it can be owned, shipped and
+Apache-2.0-licensed inside a deliverable.
+
+**Compliance fit by region, at no extra cost:**
+- **EMEA** — the Commission's May 2026 draft guidelines place tutoring and
+  practice feedback **outside** Annex III high-risk. Keep P9 on practice and
+  formative feedback with no grade of record, and it stays out of scope. Pair
+  with `openfun/ralph` for EU-origin data infrastructure. The moment it writes
+  a grade of record, switch to `P2`.
+- **North America** — answers the 85/18 governance gap directly: the LRS *is*
+  the audit log, so "what did the AI do with my students" has a queryable
+  answer on day one. Self-hosted satisfies FERPA posture.
+- **LATAM** — self-hosted on `lrsql` with no learner data leaving the country
+  is a direct answer to Mexico's "technological sovereignty" framing, and the
+  governance artifact the 87%/26% gap is asking for.
+- **APAC** — emits the record needed for Korea's AI Basic Act disclosure and
+  India's provenance-marking rules without a separate compliance build.
+
+**License outcome:** Apache-2.0 / MIT end to end. No copyleft in the
+deliverable. This is the only pattern in this file for which that is true.
+
+**Estimate:** **3–4 weeks** for LRS + MCP server + one tutor emitting a
+governed xAPI statement stream, plus 2 weeks for the pyKT mastery layer and the
+reporting surface. The cheapest credible first engagement in this KB, and the
+right wedge ahead of `P8`.

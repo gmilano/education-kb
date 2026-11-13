@@ -19,6 +19,27 @@ $32.3B (by 2030) to $57B (by 2033). All trace to secondary vendor sources. Use
 "roughly $10–12B in 2026, growing fast" and do not quote a specific figure to a
 client without a primary report.
 
+**Segment figures added 2026-11-13 (third pass).** The whole-market number is
+the least useful one to carry into a conversation; the segment numbers are
+narrower and better matched to what a studio actually sells:
+
+| Segment | 2026 | Forecast | Source |
+|---|---|---|---|
+| **Agentic AI in education** | **$2.37B** | $11.83B by 2031 | Mordor Intelligence |
+| **AI tutors** | **$2.7B** | $17.7B by 2033 | Grand View Research |
+| AI in education (whole) | $11.4B | 25.9% CAGR 2026–2033 | Grand View Research |
+
+Mordor also puts **Intelligent Tutoring Systems at 26.04% of the agentic
+education segment (2025)** — the largest single share, which is consistent with
+ITS being where the open-source agent supply in this KB is concentrated
+(`DeepTutor`, `OATutor`, `tutor-mcp`, `ai-shifu`).
+
+**Use the agentic figure, not the headline figure.** "$2.37B in 2026 growing to
+$11.83B by 2031" is defensible, segment-correct and roughly 5× growth; "$11.4B
+AI in education" includes hardware, smart classrooms and proctoring that no
+studio engagement touches. Same caveat as above: all of these are secondary
+vendor estimates, cited as such.
+
 ## The structural fact of this market
 
 **Adoption has outrun governance everywhere, and the gap is the commercial
@@ -127,6 +148,44 @@ of absence.**
    means self-hosted or no-train-guarantee inference, and an auditable data
    path. Build it once, sell it in every state that follows.
 
+#### Update 2026-11-13 (third pass) — regulation hardened, and a platform default changed the ground
+
+- **The governance gap now has a number.** Google's November 2026 education
+  report (Gallup-based) finds **85% of educators say they use generative AI**
+  while **only 18% of US teachers report having received any formal AI guidance**
+  from administrators. That 85/18 split is the single most sellable statistic in
+  this KB: the demand is not for AI capability, it is for governance of AI
+  already in use.
+- **A platform default became policy.** Google is making **Gemini and Search
+  opt-in (off by default) for K-12 student accounts**, administrator-enabled,
+  with the change starting early 2027; traditional Search without AI summaries
+  is **not** offered as an option (AI Mode and AI Overviews stay built in).
+  Political backlash followed (Bernie Sanders, NYC Mayor Zohran Mamdani).
+  **Consequence for engagements:** districts now face an explicit
+  enable/disable decision with no middle setting, which converts "should we
+  allow AI" from a philosophical question into a dated administrative task with
+  a deadline. That is a procurement trigger.
+- **Binding state law, not just guidance.** Maryland **SB 720** signed,
+  effective **2026-06-01**. Oklahoma **SB 1734** signed May 2026 (age-appropriate
+  tools, mandatory teacher review of AI output, parent opt-out). Ohio requires
+  every public, community and STEM school to **adopt an AI framework by
+  2026-07-01**. Mississippi embeds AI literacy into general education for all
+  incoming undergraduates from **Fall 2026** and requires institutions to
+  evaluate AI tools for bias. Florida's state board approved AI rules covering
+  K-12 **and all 28 state colleges**.
+- **Federal: still no binding curriculum standard.** The **K-12 AI Literacy and
+  Readiness Act of 2026** was advanced by the House Education and Workforce
+  Committee; status beyond committee unconfirmed. Treat federal action as a
+  watch item, state action as the real driver.
+- **Institution-level mandates are the new unit.** UT Austin requires every
+  course syllabus from **Fall 2026** to carry a **Course AI Policy Statement**
+  classifying generative AI as permitted / partially permitted / prohibited.
+  This is a per-course, per-term artifact at university scale — i.e. a
+  templating and compliance-tracking problem, which is a product.
+- **Source conflict, recorded:** state-guidance counts range from "28+ states
+  plus DC" to "34+ states plus DC/PR" across secondary trackers. Quote the
+  direction, not the count.
+
 ### EMEA
 
 **Adoption/regulation:** The binding regime is the **EU AI Act**, under which
@@ -199,6 +258,48 @@ public systems a studio would sell to.
    Kolibri (MIT, offline-first) plus localized content, with FR/EN bilingual
    handling as a baseline requirement rather than a feature.
 
+#### Update 2026-11-13 (third pass) — the high-risk deadline moved, and that changes the sales motion
+
+- **The Annex III high-risk deadline moved to 2027-12-02.** The **Digital
+  Omnibus** postponed the standalone high-risk obligations under Annex III —
+  the category containing education — from the previously circulated
+  **2026-08-02** to **2 December 2027**. Earlier vendor guides still print the
+  2026 date. **Verify against Regulation (EU) 2024/1689 and the Commission's own
+  pages before quoting either to a client**, and expect the client's incumbent
+  advisor to be working from the old date.
+- **What this does to the pitch:** the compliance deadline is no longer
+  imminent, so "you must be conformant by August" is dead as an urgency lever
+  and repeating it will cost credibility. The live lever is the **two
+  obligations already in force**: the **Article 5(1)(f) ban on emotion
+  inference in education institutions** (applicable since **2025-02-02**,
+  medical/safety exceptions only) and the **AI literacy duty** (same date).
+  Those are enforceable now.
+- **Scope is narrower than most clients assume.** Education AI is high-risk
+  only when it performs one of the four functions in **Annex III point 3**:
+  admissions/access, evaluating learning outcomes, assessing appropriate
+  education level, or monitoring students during tests. The Commission's **May
+  2026 draft guidelines** place **tutoring, practice feedback and information
+  chatbots generally outside** high-risk. **This is a scoping instrument:** a
+  practice tutor that never scores of record stays out; the moment it writes a
+  grade of record it is in.
+- **The obligation sits on the vendor, not the school.** Conformity assessment
+  applies to the **EdTech vendor as provider**; schools are **deployers** (use
+  as instructed, trained human oversight, logging, inform students and
+  parents). A studio building for an institution may become the provider — that
+  allocation must be settled in the contract, not discovered at audit.
+- **EU-level frameworks to cite:** the Commission and **OECD** jointly
+  published the **AILit** AI Literacy Framework ("Empowering Learners for the
+  Age of AI") on **2026-06-17**; further guidance landed **2026-03-05** under
+  the Digital Education Action Plan (ethical use of AI and data in teaching,
+  disinformation and digital literacy, criteria for selecting high-quality
+  digital education content). The **European AI Office** is the institutional
+  counterpart.
+- **Sovereignty angle, with a repo attached:** `openfun/ralph` (MIT) is a
+  Learning Record Store from **France Université Numérique** — an EU
+  public-education-origin, permissively licensed data layer. For an EU client
+  asking where learner data lives, that is a concrete answer rather than a
+  posture.
+
 ### APAC
 
 **Adoption/regulation:** The most fragmented region, and education is usually
@@ -260,6 +361,42 @@ but shallow.
    parent-legible — `teacher-to-skills`-shaped (distil the teacher, keep them
    in the loop) rather than student-facing autonomous tutoring.
 
+#### Update 2026-11-13 (third pass) — four regimes, four different instruments, and a cautionary rollout
+
+- **South Korea — the region's first comprehensive statute.** The **AI Basic
+  Act has been in force since 2026-01-22**. Generative AI users must be told
+  they are interacting with AI, and generated content must be marked. Korea
+  **declined** to add a text-and-data-mining exception to its Copyright Act in
+  February 2026 — relevant to any training-on-course-materials proposal. A PIPA
+  special provision for AI development reportedly passed 2026-08-20 and is
+  **not yet in force** (tracker-sourced; verify).
+- **Korea is also the cautionary tale.** Korea rolled out **AI-powered digital
+  textbooks from 2025**, the first country to attempt it at national scale, and
+  met **parental and teacher backlash over screen time**. Any national-scale
+  pitch should cite this and lead with the mitigation, because the client's
+  ministry will already know it.
+- **China — no general AI law, binding specific rules.** Mandatory regimes
+  cover recommendation algorithms, deepfakes, generative AI services, and
+  **labelling of AI-generated content since 2025-09-01**. Note also that China
+  **banned the private tutoring sector**, which is why **TAL pivoted into AI
+  learning hardware** — the money moved from services to devices.
+- **Japan — light touch.** The **AI Promotion Act (May 2025)** encourages
+  cooperation with government safety measures and carries **no monetary
+  penalties**. Lowest regulatory friction in the region.
+- **India — labelling in force, statute signalled.** Amended IT Rules require
+  AI-generated content to carry **prominent labels and provenance markers from
+  2026-02-20**; in **July 2026** the government signalled it may pursue
+  dedicated AI legislation. **PhysicsWallah** launched its own AI tutor;
+  **BYJU'S** collapse is still the reference failure in the market.
+- **Commercial players to know:** **Mathpresso's QANDA** (Korea, math-solving,
+  global reach), **ByteDance's Gauth** (a top education app **in the US** —
+  APAC-built product winning a North American market), TAL, PhysicsWallah.
+- **Declared gap:** no source found in this pass regulates **AI in the
+  classroom** specifically in any of these four countries — the instruments are
+  economy-wide AI law plus content labelling. Education-specific rules must be
+  verified **directly with each country's education ministry**; do not infer
+  them from the AI statutes.
+
 ### LATAM
 
 **Adoption/regulation:** The widest gap between use and governance of any
@@ -317,6 +454,42 @@ Manu (`Jeanikt/tutor-ai-agent`, MIT, Brazilian Portuguese voice math tutor) and
    published; the Chilean Niñas Pro library is not, for want of a LICENSE file.
    Contributing licensing and engineering to regional projects buys both
    capability and standing.
+
+#### Update 2026-11-13 (third pass) — adoption is high, governance is near-absent, and that is the whole opportunity
+
+- **Teachers are already using it.** TALIS (2024) secondary-teacher AI use in
+  the previous year: **Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52%** —
+  materially level with developed-market rates.
+- **Governance is not there.** Brazilian school administrators: **53% use AI,
+  22% report their school has guidelines on its use**. Higher education
+  (UNESCO IESALC): **87% of regional universities already use AI, 26% have a
+  formal strategy**. A 61-point gap at university level.
+- **Why that specific gap is the product:** the deficit is **policy,
+  procurement rules and teacher guidance** — not models and not infrastructure.
+  That is a 6–8 week productizable engagement (pattern `P4`), repeatable across
+  institutions in one country, and it does not compete with the hyperscalers.
+- **Regulatory status, corrected against the newest source.** **Peru is the
+  only country in the region with an enacted AI statute.** Brazil's framework
+  (EU-influenced, stringent) is **still a pending bill**; Chile's is pending;
+  **Mexico has proposals and none enacted as of early 2026**, with a stated
+  emphasis on **"technological sovereignty"** and reducing reliance on foreign
+  AI models. **Source conflict recorded:** one aggregator describes Brazil as
+  having comprehensive legislation and another describes Chile as having moved
+  to a binding rights-protective framework; the newer CASRAI comparison
+  (updated September 2026) says both are pending. **Go with pending**, and
+  verify before any regulatory claim in a proposal.
+- **Mexico's sovereignty framing is a selling position, not an obstacle:**
+  self-hosted inference on `yetanalytics/lrsql` (Apache-2.0) or `openfun/ralph`
+  (MIT) with no learner data leaving the country is a direct answer to it.
+- **School-level AI education is largely absent.** Chile's **CENIA** found that
+  **13 of the 19** Latin American and Caribbean countries it studied **do not
+  teach early AI adoption in schools**. Commentary notes systems are
+  integrating AI tools into classrooms *without oversight or guidelines* —
+  which is the same finding as the Brazil 53/22 split, from the other direction.
+- **Declared gap:** no 2026 source found covering **edtech vendor or
+  procurement rules** specifically in Brazil, Mexico or Chile. Procurement is
+  where a studio engagement is actually won or lost, so this needs a dedicated
+  search before any LATAM public-sector pursuit.
 
 ### Global / cross-region
 

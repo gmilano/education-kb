@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (third pass) — **The agent↔learner-record path exists and is MIT — but it writes to the LRS, not the SIS. The two passes before this one described one gap where there are two**
+
+**Window:** education-specific AI agents, verified 2026-11-13 from the rendered
+repository page. The two earlier passes today both worked the **LMS** surface
+(seven Moodle MCP servers, one Canvas server, 18 agents). This pass deliberately
+left that surface and probed the **record layer** — where a tutoring agent's
+output has to land before an institution can report on it. **20 agents now
+admitted, up from 18.**
+
+**Channel note, restated because it is a trap.** `curl -sI https://github.com/...`
+returns **`403` for every path** through this session's egress policy — including
+a deliberately nonexistent repository, which also returns `403`. A `curl` probe
+therefore **cannot distinguish a live repo from a 404** and must not be used as
+the verification channel for this KB. Everything below was verified by fetching
+and reading the rendered repository page (GitHub's own license field and star
+count).
+
+### New entries (2)
+
+| Agent | Repo | License | Stars | Why it is admitted |
+|---|---|---|---|---|
+| learnmcp-xapi | https://github.com/DavidLMS/learnmcp-xapi | MIT | 16 | The only **agent↔learner-record write path** found in three passes. MCP server over any xAPI 1.0.3 Learning Record Store; three tools (record statement, retrieve progress, manage activity vocabulary); ships `practiced`/`mastered`/`experienced`/`achieved` verbs; multi-learner via `ACTOR_UUID`. Verified LRS targets: **SQL LRS, Ralph, Veracity**. TinCan and xAPI Wrapper are README-stated *plans*, not shipped. Python 3.8+, 4 forks, Releases empty. |
+| EduAgentic (EduMCP) | https://github.com/kamalelafoui/Agentic-AI-EdTech-J33-J34 | MIT | 0 | The only **MCP + A2A** education example found. FastMCP/SSE server, six tools (`search_courses`, `get_learner_profile`, `recommend_learning_path`, `generate_quiz`, `grade_quiz`, `get_learning_statistics`), plus an A2A orchestrator over three agents (Tutor, Evaluation, Orientation). French-language; country not stated on the page and not asserted here. 0 stars, 0 forks, no releases — admitted for its **topology**, with that caveat on the row. |
+
+### The finding: one gap was two gaps
+
+Both earlier passes today recorded a single gap — "no agent interface to the
+student record". That is now resolved into two gaps with **completely different
+economics**:
+
+- **The learning-activity record (LRS)** — what the learner did, practiced,
+  mastered. **Solved, and permissively licensed**: `learnmcp-xapi` (MIT) on the
+  agent side, `yetanalytics/lrsql` (Apache-2.0, 144) and `openfun/ralph` (MIT,
+  51) on the infrastructure side, all new to this KB today. Buildable now.
+- **The student record (SIS)** — enrolment, transcript, attendance,
+  demographics, fees. **Still empty.** This is what advising, retention and
+  early-warning actually need.
+
+Every compose pattern in this base already said "emit xAPI". None of them could
+name a thing that receives it. That is fixed. The advising gap is not.
+
+### Re-probed, still absent
+
+- **No MCP server for any SIS.** A dedicated search this pass across
+  OpenEduCat, RosarioSIS, Gibbon, openSIS and Frappe Education returned the SIS
+  platforms themselves and **no MCP server for any of them**. Second
+  consecutive pass confirming this — it is now an established absence rather
+  than an unchecked assumption, and it is the single widest opening in this KB.
+- **No pedagogy eval harness at scale.** `AITutor-EvalKit` (MIT, 4 stars,
+  mathematics only) remains the only one, unchanged across all three passes.
+  Twenty agents claim pedagogical effect; none can be compared on it.
+
+### What did not move
+
+`HKUDS/DeepTutor` (Apache-2.0) and `THU-MAIC/OpenMAIC` (MIT) remain the only two
+education agents above 1k stars, at 58.7k and 43.4k — the rest of the admitted
+set runs 475 down to 0. The shape of this field is still two giants and a long
+tail of prototypes, and nothing found this pass changes that.
+
 ## `2026-11-13` (second pass) — **The Moodle MCP gap was never a gap: seven servers exist, one at 206 stars MIT. And education AI has its first LATAM and Africa agents, both at zero stars**
 
 **Window:** education-specific AI agents, verified 2026-11-13 by fetching each

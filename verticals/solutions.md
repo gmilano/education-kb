@@ -53,6 +53,7 @@ MCP server. It does.
 | Platform | Repo | License | Stars | Notes |
 |---|---|---|---|---|
 | OpenEduCat | https://github.com/openeducat/openeducat_erp | LGPL-3.0 | 911 | **SIS + LMS + finance as Odoo modules** — the literal "Odoo for education". If the client already runs Odoo, this is the shortest path. |
+| Frappe Education | https://github.com/frappe/education | GPL-3.0 | 707 | **New this pass.** Admissions, fees, scheduling, exams, attendance on the Frappe framework. **The one-framework play: pair with `frappe/lms` (AGPL-3.0) and ERPNext for SIS + LMS + ERP on a single stack** — but the two halves carry *different* licenses (GPL-3.0 vs AGPL-3.0), which matters the moment anything is network-served. License read from `license.txt`, not GitHub's sidebar. Strong India/SMB footprint. |
 | RosarioSIS | https://github.com/francoisjacquet/rosariosis | GPL-2.0 | 654 | K-12 school management; widely deployed in LATAM, Spanish/French/Portuguese localization in core. |
 | Gibbon | https://github.com/GibbonEdu/core | GPL-3.0 | 638 | Flexible school management; strong in international K-12 schools. |
 | openSIS Classic | https://github.com/OS4ED/openSIS-Classic | GPL (README) | 351 | Student information system; commercial editions available from OS4ED. |
@@ -101,7 +102,16 @@ MCP server. It does.
   browser SSO vs companion plugin). Canvas, by contrast, has consolidated on
   one 324-star MIT server. **Open edX remains the real gap**: `openedx-mcp`
   (AGPL-3.0, 3 stars) is the only option and it is reference-grade at best.
-- **No MCP server for any SIS.** OpenEduCat, RosarioSIS, Gibbon and openSIS all
-  hold the student record — the data an advising or early-warning agent needs —
-  and none has an agent interface. The LMS got all the attention; the student
-  record got none.
+- **No MCP server for any SIS — re-probed this pass, still absent.** OpenEduCat,
+  RosarioSIS, Gibbon, openSIS and (new this pass) `frappe/education` all hold the
+  student record — the data an advising or early-warning agent needs — and none
+  has an agent interface. A dedicated search this pass returned the SIS platforms
+  themselves and no MCP server for any of them. **This is now a confirmed
+  absence across two consecutive passes, not an unchecked assumption.** The LMS
+  got all the attention; the student record still got none.
+- **The learning-record store, by contrast, is now solved and permissive.** New
+  this pass: `yetanalytics/lrsql` (Apache-2.0, 144) and `openfun/ralph` (MIT,
+  51) as LRS implementations, with `DavidLMS/learnmcp-xapi` (MIT, 16) as the
+  agent interface. **An LRS is not an SIS** — it holds learning *activity*, not
+  the student record — so this closes the telemetry gap and leaves the advising
+  gap exactly where it was.

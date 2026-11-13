@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (third pass) — **"Emit xAPI" is in every pattern in this base and had no implementation behind it. There are two, both permissive, and the leading one is Apache-2.0**
+
+**Window:** foundational education repos, verified 2026-11-13 from the rendered
+repository page. The earlier passes today worked the **integration** layer (LTI
+1.3) and the platform layer. This pass worked the **data** layer. **33 repos now
+in `repos/foundations.md`, up from 30.**
+
+**Channel note, restated because it is a trap.** `curl -sI https://github.com/...`
+returns **`403` for every path** through this session's egress policy — including
+a deliberately nonexistent repository, which also returns `403`. A `curl` probe
+therefore **cannot distinguish a live repo from a 404** and must not be used as
+the verification channel for this KB. Everything below was verified by fetching
+and reading the rendered repository page (GitHub's own license field and star
+count).
+
+### New entries (3)
+
+| Repo | License | Stars | Why it is admitted |
+|---|---|---|---|
+| https://github.com/yetanalytics/lrsql | Apache-2.0 | 144 | SQL-based Learning Record Store: persists xAPI statements, attachments and documents. Verified DBMS matrix — SQLite 3.42, **Postgres 14/15/16/17/18**, MariaDB 10.6–11.8, MySQL 8.0.44/8.4/9.5. **The only data-layer component in this KB that can ship inside a client deliverable with no copyleft reach.** 42 forks. |
+| https://github.com/openfun/ralph | MIT | 51 | LRS **plus** analytics-pipeline CLI **plus** Python library for fetching/converting/serializing learning events. Better fit when the engagement is analytics-shaped, or when the agent layer is Python and one language end to end is worth something. Elasticsearch backend in the documented setup. **France Université Numérique** provenance — EMEA public education. 19 forks. |
+| https://github.com/frappe/education | GPL-3.0 | 707 | Education suite on the Frappe framework: admissions, fees, scheduling, exams, attendance. **This KB already had `frappe/lms` (AGPL-3.0) and missed its SIS sibling** — together with ERPNext that is SIS + LMS + ERP on one framework. License read from `license.txt` ("GNU GPL V3"); GitHub's sidebar shows only a generic License link, and **the license differs from `frappe/lms`**. |
+
+### Why this matters more than the star counts suggest
+
+The LMS layer in this KB is uniformly copyleft — Moodle GPL-3.0, Canvas AGPL-3.0,
+Open edX AGPL-3.0 — with Sakai (ECL-2.0) the lone permissive exception. The
+**LTI layer** found at the second pass is permissive. The **LRS layer** found at
+this pass is permissive, and at 144 stars the Apache-2.0 option is also the
+*leading* one rather than a fringe alternative.
+
+That produces a concrete architectural recommendation: **put the learner data in
+an Apache-2.0 LRS you can ship, and talk to the copyleft LMS across its API.**
+The copyleft stays behind the network boundary, the data layer and the agent
+layer stay in the deliverable. Written up as pattern `P9`.
+
+### New gap, opened by closing the old one
+
+**Caliper has no verified open implementation in this base.**
+`1edtech/caliper-spec` (22 stars) carries a spec-document license, not a
+software license. Caliper is the 1EdTech-native telemetry standard and is most
+often specified in **North American higher ed**. So: where the client has a free
+choice, **choose xAPI** — it now has three verified open implementations here.
+Where a contract already names Caliper, there is **no open starting point** and
+the adapter is a build that must be priced as one.
+
 ## `2026-11-13` (second pass) — **The LTI 1.3 "greenfield" this base declared ten hours ago has a 373-star Apache-2.0 reference implementation, and none of the four verified libraries is Python**
 
 **Window:** foundational and trending education repos, verified 2026-11-13 from
