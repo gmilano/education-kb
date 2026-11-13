@@ -12,6 +12,23 @@ of these**, not replacing it. All licenses and star counts verified from the
 repository page (2026-11-13, with the LTI and Moodle-MCP rows verified this
 pass).
 
+### Unresolved this pass (ninth pass, `p804`, 2026-11-13) — an informed gap, not a finding
+
+🔴 **The Open edX stewardship and licence question was raised this pass and could not
+be closed.** The LMS search leg returned vendor comparisons asserting, variously, that
+Open edX is **AGPL**, that it is stewarded by **Axim Collaborative** (a nonprofit
+founded by Harvard and MIT), and — in one case — that Canvas's community edition is
+**ECL-2.0** rather than AGPL-3.0. 🔴 **`openedx.org` does not resolve from this session
+(`getaddrinfo ENOTFOUND`, outside the allowed network domains), so none of it could be
+verified at the source.**
+
+🟢 **Nothing in the table below was changed on the strength of it.** The Open edX and
+Canvas rows retain the grants this file verified from the repository page in earlier
+passes. 🔵 **Recorded here because a vendor blog disagreeing with a verified row is
+exactly the kind of noise that becomes wrong data if a later pass reads it without the
+context that it was checked and rejected.** `ACTION p804-V` tracks re-verification of
+the stewardship claim when the host is reachable.
+
 ## The decision that governs every education engagement
 
 **Do not fork the LMS — but the "no permissive LMS exists" half of that rule is

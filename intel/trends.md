@@ -6,9 +6,10 @@ updated: 2026-11-13
 
 # Education AI — current trends
 
-Seventeen trends, each with the evidence behind it and what it implies for an
+Nineteen trends, each with the evidence behind it and what it implies for an
 engagement. Researched 2026-11-13. 🔴 **The count in this line said "Eight" for
-nine trends past the point it stopped being true; corrected at `p803`.**
+nine trends past the point it stopped being true; corrected at `p803`, and
+re-counted at `p804` when `T18` and `T19` were added.**
 
 ## T1 — The governance gap is the market, not a side issue
 
@@ -655,3 +656,68 @@ split grant — at `0★`, so it is **a template, not a dependency**. See `P15`.
 build-safe, but `0★` / `0` forks does not meet this KB's bar that *"a row implies
 a studio could start from this."* It is recorded here and in `agents/trending.md`
 and nowhere else, which is the same treatment `Manu` and `EDUKAI LongView` got.
+
+## T18 — In US higher education the binding instrument is the system's own policy, with a date on it
+
+This base concluded three passes ago that American higher education is being
+governed "through institutions rather than statute." `p804` found the named
+instance, and it carries a deadline inside this quarter.
+
+**The evidence.** SUNY's Board of Trustees adopted a **systemwide AI policy on
+April 30, 2026**. It covers the system's **64 campuses**. Campuses "shall publish
+AI policies and/or update relevant existing policies **no later than December 31,
+2026**." AI was folded into the **Information Literacy** core competency of the
+general-education framework from **Fall 2026**, adding no extra credits. Support
+runs through the **AI for the Public Good Fellows**: an inaugural cohort of **20**,
+then **11** more focused on discipline-specific integration. Meanwhile the federal
+layer is still empty — the **K-12 AI Literacy and Readiness Act of 2026** advanced
+out of committee without passing, and the only new federal lever is the Department
+of Education's **accreditation rulemaking** touching AI-related research misconduct.
+
+🔴 **Provenance: search-tier.** `suny.edu` is unreachable from the session that ran
+this pass; re-verification is tracked as `ACTION p804-V`. 🔴 **Two contradictions
+kept rather than resolved:** one source dates the Information Literacy revision to
+**December 2024**, and several outlets describe a **standalone AI course
+requirement** that SUNY's own materials do not describe.
+
+**What it implies for an engagement.** 🔵 **A statute creates a market slowly and a
+system policy creates one on a date.** 64 institutions must each produce a published
+AI policy within 48 days of this pass, supported by 31 fellows in total. The work is
+not writing 64 policies — it is giving 64 campuses the same defensible artifact, and
+the part none of them can produce from a template is **an accurate inventory of what
+their campus actually runs**. 🟢 **That is `T16` and `P14` arriving on a calendar.**
+🔴 **Do not pitch the standalone-course reading: it is the contested one and the
+expensive one.** Pitch AI inside an existing competency — cheaper to build, and it
+is what the policy actually says.
+
+## T19 — Three regimes now require AI literacy; no open curriculum exists to teach it
+
+**The evidence, assembled across three regions in one pass.** North America: SUNY
+folds AI into the gen-ed **Information Literacy** competency from Fall 2026. EMEA:
+**EU AI Act Article 4** binds **providers and deployers** to support AI literacy
+among staff — in force now, and 🔴 **specifying no required level for any person**,
+which makes it the one AI Act duty with no objective compliance test. APAC:
+Australia's **national AI-literacy curriculum** is rolling out through public,
+independent and Catholic schools (Code for Schools, AWS support), targeting
+**1 million students within three years**.
+
+🔴 **And the supply side is empty where it counts.** The largest permissively
+licensed curricula found anywhere this pass are
+[`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch)
+(**MIT**, `78.6k★`, `14.0k` forks) and
+[`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub)
+(**MIT**, `41.8k★`, **93+ projects graded `22`/`48`/`23` across three difficulty
+tiers**). 🔵 **Both are larger than every education-specific repository in this base
+— only `DeepTutor` at `58.7k` is in range — and neither teaches AI literacy to a
+student. They teach AI engineering to a developer.** National programme materials
+are not published under an open grant, and vendor courseware is not redistributable.
+
+**What it implies for an engagement.** 🟢 **This is the clearest unserved content gap
+in this base, and unusually it has three dated mandates pointing at it rather than a
+forecast.** The buildable move is not to write a curriculum from nothing: it is to
+**re-level** the MIT corpora — take `ai-engineering-hub`'s difficulty grading as the
+sequence, cut the developer assumptions, and emit the result through the layers this
+base already verified (`qti3` for items, `pylti1.3`/`ltijs` to mount it,
+`learnmcp-xapi` to make completion reportable). 🔴 **The grant is what makes this
+viable: MIT permits redistribution and modification of the content itself, which no
+vendor courseware does.** Tracked as `Gap 804-C` in `repos/foundations.md`.

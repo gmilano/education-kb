@@ -6,7 +6,7 @@ updated: 2026-11-13
 
 # Foundational open-source repos for education
 
-The platforms and libraries an education engagement actually builds on. **47
+The platforms and libraries an education engagement actually builds on. **49
 repos**, all verified from the rendered repository page (license field + star
 count) — 34 across the four earlier passes on 2026-11-13, plus **the six-repo
 Caliper Analytics layer and the seven-repo QTI assessment layer verified this
@@ -22,6 +22,17 @@ anything**.
 License matters more here than anywhere else in this KB: the big three LMSs are
 **AGPL-3.0 or GPL-3.0**, which governs what a studio can hand a client as a
 derived product. The MIT/Apache/BSD/ECL rows are the ones that compose freely.
+
+**What changed this pass (ninth pass, `p804`, 2026-11-13):** **49 repos**, up
+from 47. A new **curriculum-corpus layer** was opened at the end of this file
+with two MIT rows — and the reason it is a *layer* rather than two more entries
+is that it answers a demand this base only measured this pass: **three dated
+AI-literacy mandates, and no open education-licensed curriculum to meet any of
+them.** 🔴 **Provenance warning for both rows: `curl` to `github.com` is denied
+by this session's egress proxy (`403`), so the prescribed URL check could not be
+run.** Grants and sizes were read from the rendered page via `WebFetch`, which
+means **sidebar-verified, not payload-verified** — strictly weaker than the
+standard the Caliper and QTI rows were held to.
 
 **What changed this pass (fifth pass, 2026-11-13):** **40 repos**, up from 34.
 The analytics edge — the one interoperability edge this file declared had no
@@ -250,6 +261,39 @@ tool, not a delivery component.
   move an item bank between systems.
 - **SCORM** — legacy but ubiquitous in corporate and vocational training; still
   the delivery format many EMEA/APAC clients require.
+
+## The curriculum-corpus layer (new, ninth pass)
+
+**Why this layer exists as of `p804`:** three regimes now impose an AI-literacy
+duty — SUNY folds AI into the gen-ed **Information Literacy** competency from
+Fall 2026, the **EU AI Act Article 4** duty binds providers and deployers, and
+Australia is rolling a national AI-literacy curriculum at **1M students over
+three years**. 🔴 **No education-licensed open curriculum was found to satisfy
+any of them.** What exists at scale is permissive **developer** curriculum, and
+it is larger than every education-specific repo in this base. Both rows below
+were read from the rendered repository page on `2026-11-13`.
+
+| Repo | License | Stars | What it is, and what it is not |
+|---|---|---|---|
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | MIT | 78.6k | "Learn AI Engineering! Learn it. Build it. Ship it for others." Model foundations → LLM systems → agent development, plus a retrieval-evaluation lab. `14.0k` forks, `2,703` commits. 🔴 **Not an education product, not a tutoring base, and not undergraduate-level.** Its value is that **MIT permits redistribution and modification of the content itself**, so it can be cut down and re-sequenced into a client's AI-literacy module without a licence negotiation. Largest permissive education-adjacent artifact in this base |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | MIT | 41.8k | "In-depth tutorials on LLMs, RAGs and real-world AI agent applications." README states **"93+ Production-Ready Projects"**, graded **`22` Beginner / `48` Intermediate / `23` Advanced**. `6.7k` forks. 🟢 **The difficulty grading is the reusable asset** — it is the only thing in either corpus that maps directly onto a curriculum sequence with prerequisites. 🔴 Same caveat: developer-level, project-based, no learner model, no LMS surface |
+
+🔵 **How to use this layer.** Neither repo is a dependency; both are **source
+material**. The engagement shape is: take the sequence and the difficulty
+grading, re-level the content for the client's cohort, emit it as packaged
+course content through the layers this file already covers — `qti3` for
+assessment items, `pylti1.3`/`ltijs` to mount it, `learnmcp-xapi` to make
+completion reportable. 🔴 **Do not propose either corpus as the curriculum
+itself; propose it as the thing that stops the client paying to write Module 1
+from scratch.**
+
+🔴 **Declared gap, raised this pass (`Gap 804-C`): there is still no permissively
+licensed *AI-literacy* curriculum aimed at school or undergraduate learners.**
+Searched: the global agent/trending/platform legs and all four regional legs.
+What came back was developer curriculum (above), vendor courseware, and national
+programmes whose materials are not published under an open grant. **This is the
+clearest unserved content gap in this base, and it has three dated mandates
+pointing at it.**
 
 ## Declared gaps
 

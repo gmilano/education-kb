@@ -3,6 +3,40 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+## `2026-11-13` (ninth pass) — **The trending leg returned two MIT repos larger than anything in this base, and neither of them is an education project — which is the finding**
+
+**Pass `p804`.** 🔵 **`0` education-specific repositories from the trending leg, for the second
+consecutive pass.** `github trending education AI 2026` returned `OpenMAIC`, `DeepTutor`,
+`ai-engineering-hub`, `ai-engineering-from-scratch` and the `education-ai` / `ai-for-education`
+GitHub topic pages. The first two are shelved. 🟢 **The last two are new to this base, both MIT,
+and both an order of magnitude larger than the education repos this KB tracks — because they are
+not education repos.** They are AI-engineering curricula.
+
+**Grants and sizes read from the rendered repository page** (`2026-11-13`). 🔴 **The prescribed
+`curl -sI` verification could not be run: `curl` to `github.com` returns `403` from the session's
+egress proxy — a policy denial, not a GitHub limit.** Where this log previously said
+"payload-verified," this pass says **"sidebar-verified via `WebFetch`"** and means strictly less.
+
+| Repo | Grant (how established) | Size | Verdict |
+|---|---|---|---|
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | **MIT** — sidebar string read as `"MIT license"` via `WebFetch` | **`78.6k★`** / `14.0k` forks / `2,703` commits | 🟢 **Shelved** in `repos/foundations.md` as a curriculum corpus. "Learn AI Engineering! Learn it. Build it. Ship it for others." Model foundations → LLM systems → agent development, with a retrieval-evaluation lab. 🔴 **Not an education product and not a tutoring base — developer-level self-study material.** Largest permissive education-adjacent artifact this base has measured |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | **MIT** — sidebar string read as `"MIT license"` via `WebFetch` | **`41.8k★`** / `6.7k` forks | 🟢 **Shelved** in `repos/foundations.md`. "In-depth tutorials on LLMs, RAGs and real-world AI agent applications." README states **"93+ Production-Ready Projects"**, broken out as `22` Beginner / `48` Intermediate / `23` Advanced — **the difficulty grading is the reusable asset**, because it is the one thing in either corpus that maps onto a curriculum sequence |
+| `mattpocock/skills` | — | — | 🔴 **Not education.** Same exclusion as `p803`; recorded so the next pass does not re-assess it |
+| `dotLRN` | — | — | 🔴 **Not pursued.** Surfaced by the LMS leg from a **2016 arXiv paper** citing version `2.5.0`. An MIT-origin LMS of historical interest; no current repository or release evidence surfaced, and the session cannot reach non-`github.com` hosts to check. 🔵 Logged so the name stops costing a future pass a search |
+
+🔴 **Aggregator star counts disagreed with the rendered pages again**, reproducing `p802` and `p803`:
+roundups quoted `ai-engineering-hub` at "about `40K`" against a sidebar `41.8k`, `DeepTutor` at
+"about `45K`" against this base's verified `58.7k`, and `OpenMAIC` at "about `42K`" against `43.4k`.
+🔵 **Three passes, same lesson: an aggregator's star count is a timestamp nobody wrote down.**
+
+🔵 **Why these two went to `repos/foundations.md` and not to `agents/top.md`.** A row in `agents/top.md`
+asserts that a studio could *start from* the artifact. Neither corpus is startable — they have no
+runtime, no learner model and no integration surface. What they have is **content under a grant that
+permits redistribution and modification**, which is exactly what the AI-literacy mandates found this
+pass (`T973`/`T19`) create demand for, and exactly what no education-licensed corpus supplies.
+
+---
+
 ## `2026-11-13` (eighth pass) — **The trending leg found no new education repository; the probe that paid was aimed at a gap, not at a feed**
 
 **Pass `p803`.** 🔵 **`0` new repositories from the trending leg.** `github trending education AI 2026`

@@ -3,6 +3,32 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+## `2026-11-13` (ninth pass) — **The battery is saturated for a second consecutive pass, and the pass that confirmed it found the deadline this base had never written down: 64 campuses, 48 days**
+
+**Pass `p804`.** 🔵 **Zero agent rows added; `p803`'s saturation finding reproduces exactly.** All eight
+prescribed legs were run again — four global, four regional — and the global legs returned
+`OpenMAIC`, `DeepTutor`, `ai-engineering-hub`, `ai-engineering-from-scratch`, `learnharness`,
+`OpenEduCat`, `RosarioSIS`, `Gibbon`, `Moodle`, `OpenOLAT`, `Open edX`, `Sakai`, `dotLRN`. 🟢 **Every
+education-specific name was already curated here.** `p803` predicted the battery "now confirms
+coverage; it no longer discovers." 🟢 **That prediction held on its first test, and this pass acted on
+it: the budget went to a propagation audit of the regional shelves, which is where the value was.**
+
+| | |
+|---|---|
+| 🔴 **`T972`: the most actionable instrument in North American higher education was absent from this base, and it expires in 48 days** | **SUNY's systemwide AI policy.** Board of Trustees resolution **April 30, 2026**; applies across the system's **64 campuses**; campuses "shall publish AI policies and/or update relevant existing policies **no later than December 31, 2026**." 🔴 **`grep -ril "SUNY"` across all six curated shelves returned nothing.** This base had already concluded (sixth pass, NA) that US higher ed "is moving through institutions rather than statute" — **SUNY is that conclusion with a name, a scope and a date on it, and the date is 48 days from this pass.** Promoted to `intel/market.md` (NA), `intel/trends.md` (`T18`) and `compose/patterns.md` (`P16`) |
+| 🔵 **`T973`: the AI-literacy duty is now written in three regimes and open curriculum exists for none of them** | SUNY folds AI into the **Information Literacy** core competency of the gen-ed framework from **Fall 2026**; the **EU AI Act Article 4** literacy duty binds providers *and* deployers with **no required per-person level**; Australia's **national AI literacy curriculum** is rolling out through public, independent and Catholic schools (Code for Schools, AWS support, **1M students / 3 years**). 🔴 **The two largest MIT-licensed open curricula found anywhere this pass teach *AI engineering to developers*, not AI literacy to undergraduates or Year 7s.** That mismatch is the finding, and it is `T19` |
+| 🟢 **`T974`: two MIT curriculum corpora verified, and they are the largest permissive education-adjacent artifacts this base has measured** | [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) — **MIT**, **`78.6k★`** / `14.0k` forks / `2,703` commits. [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) — **MIT**, **`41.8k★`** / `6.7k` forks, **"93+ Production-Ready Projects"** (`22` Beginner / `48` Intermediate / `23` Advanced). Both exceed `DeepTutor` (`58.7k`) and `OpenMAIC` (`43.4k`) on reach — **and neither is an education product.** Shelved in `repos/foundations.md` as a new **curriculum-corpus layer**, explicitly *not* in `agents/top.md`: a row there would imply a studio could start a tutoring build from them, and it cannot |
+| 🔴 **`T975`: this pass could not byte-verify a single non-GitHub source, and that limit is now a standing constraint on this base** | `curl -sI` to `github.com` returns **`403` from the session's egress proxy** (policy denial, not a GitHub rate limit) — the prescribed URL check **cannot be run in this environment**, so repository facts above were read from the rendered page via `WebFetch`, which does reach `github.com`. 🔴 **`unesco.org`, `coe.int`, `openedx.org` and `suny.edu` all fail DNS resolution** (`getaddrinfo ENOTFOUND`): they are outside the session's allowed network domains. **Every regional fact in this pass is therefore search-tier, not payload-verified**, and is labelled as such on the shelves. 🟢 **`ACTION p804-V`: re-verify `T972`'s date and scope against `suny.edu/sunypp/documents.cfm?doc_id=933` and the Observatory partner list against `unesco.org` once those hosts are allowed** |
+| 🔵 **`T976`: four regional facts promoted from search to shelf, and one contradiction preserved rather than averaged** | **NA** — SUNY (above) + **AI for the Public Good Fellows**, cohorts of `20` then `11`. **EMEA** — the Commission's **AI Act Service Desk** and its draft high-risk classification guidelines are the interpretation channel schools actually have; **Sweden: nearly 8 in 10 teachers** surveyed had used AI services in some part of their work. **APAC** — Australia's **National AI Plan (2 December 2025)** declines mandatory high-risk guardrails and routes schools through the existing **Australian Framework for Generative AI in Schools**, which **has not been revised in 2026**. **LATAM** — the UNESCO Observatory's partner list is wider than this base recorded: **CAF, ECLAC and ProFuturo** were missing; **Uruguay is the first LATAM signatory of the Council of Europe Framework Convention on AI**. 🔴 **Contradiction kept, not resolved: one source dates SUNY's Information Literacy revision to a December 2024 Board action, and several outlets describe a standalone "AI course requirement" that SUNY's own materials do not describe.** Recorded both ways in `intel/market.md` |
+
+🔵 **Method note for the next pass.** `p803` introduced the propagation audit (`grep -c` each logged
+figure against the curated shelves). 🟢 **This pass ran it in the opposite direction — grep the
+*search results* against the shelves before reading any of them — and it is strictly cheaper: it
+turned eight saturated search legs into a ranked list of five shelf gaps in one command.** Make it
+the first step of every pass, ahead of the battery.
+
+---
+
 ## `2026-11-13` (eighth pass) — **The prescribed search battery returned nothing this base did not already hold, and the pass that found no agent found a defect instead: two verified regional facts had never reached the shelf a studio reads**
 
 **Pass `p803`.** 🔵 **Zero agent rows added, and for the first time the reason is saturation rather than

@@ -1038,3 +1038,67 @@ and a term, so it is sold as a follow-on, not bundled.
 in this file besides `P14` with no adoptable upstream, and for the same reason:
 the artifact that is needed is the one the field publishes as a paper and
 forgets to license.
+
+## P16 — The 64-campus policy pack (North America, deadline-driven, and the only pattern here with a date already set)
+
+**Why this pattern exists.** `T18`: SUNY's systemwide AI policy requires each of
+**64 campuses** to publish or update an AI policy **no later than 2026-12-31** —
+**48 days from the pass that found it** — supported by a total of **31** AI for
+the Public Good Fellows. 🔵 **Every other pattern in this file sells against a
+trend. This one sells against a calendar**, and the same shape recurs wherever a
+system or ministry sets a campus-level deadline (Ohio's July 2026 district
+mandate is the K-12 analogue already recorded in `intel/market.md`).
+
+🔴 **Provenance: the SUNY facts are search-tier** (`suny.edu` unreachable from the
+pass that recorded them; `ACTION p804-V`). **Confirm the date and scope with the
+client before pricing against it** — the pattern holds regardless, the deadline is
+what must be checked.
+
+**The insight that makes it a product rather than 64 consulting engagements.** A
+campus can write policy prose from a template in an afternoon. 🔴 **What no campus
+can produce from a template is an accurate statement of what it actually runs** —
+and a published AI policy that cannot name the systems it governs fails on first
+audit. 🟢 **So the deliverable is one policy template plus one inventory instrument,
+and the inventory is the part that is worth money and the part that is reusable.**
+
+### What to build
+
+| Layer | Use | Grant |
+|---|---|---|
+| Deployment registry | **`P14`'s registry, unchanged** — the schema already satisfies four regimes at once; here it also becomes the evidence annex to the published policy | Per `P14` |
+| LMS discovery (Canvas) | [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — read the courses, external tools and LTI placements actually installed, rather than asking the registrar | MIT |
+| LMS discovery (Moodle) | [`Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) — **read-only by construction**, which is the right property for a discovery pass across campuses that have not yet agreed a policy | MIT |
+| Mount point for the literacy module | [`ltijs`](https://github.com/Cvmcosta/ltijs) (Node) or [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (Python) — LTI 1.3, so the module mounts into Canvas, Moodle, Blackboard and D2L without per-LMS work | Apache-2.0 / MIT |
+| Literacy content | Re-levelled from [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) — take the **`22`/`48`/`23` difficulty grading as the prerequisite sequence**, discard the developer framing (`T19`) | MIT |
+| Assessment items | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) to author and score; pair with `qti3-item-player` for certified delivery — 🔴 **still a pairing exercise, per `repos/foundations.md`** | Per that file |
+| Completion reporting | [`learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) against SQL LRS, Ralph or Veracity — so "the campus delivered AI literacy" becomes an institutional record, not an assertion | MIT |
+
+### Sequence
+
+1. **Week 1 — one campus, end to end.** Run the registry (`P14`) plus `canvas-mcp` /
+   `Moodle-MCP` discovery against a single willing campus. Output: a populated
+   inventory and a policy draft whose every claim cites a registry row.
+2. **Weeks 2–3 — make it a kit.** Freeze the registry schema, the policy template
+   and the discovery scripts. 🟢 **Hand it to the Fellows, not to the campuses** —
+   31 people are the distribution channel, and training them is a smaller, better
+   engagement than selling 64 times.
+3. **Weeks 4–6 — the literacy module.** Re-level the corpus, emit items as QTI,
+   mount over LTI 1.3, wire xAPI. 🔵 **This half is not deadline-bound and should be
+   priced separately** — the policy must ship by December 31; the curriculum serves
+   Fall-entry cohorts and can land after.
+4. **Ongoing — the registry is the renewable.** It is what `T16` says every regime
+   will ask for next, and it is already built.
+
+### Scope and risk
+
+- **Effort:** 2–3 weeks to the first campus artifact and the kit; 4–6 further weeks
+  for the literacy module. 🔴 **Do not propose a 64-campus rollout inside the
+  deadline** — propose the kit plus the Fellows' enablement, which is deliverable.
+- 🔴 **Pitch AI *inside* the existing Information Literacy competency, not a
+  standalone AI course.** The standalone reading is the contested one (`T18`) and
+  the expensive one.
+- 🔴 **Do not let the discovery pass acquire write access.** `Moodle-MCP` is
+  read-only by design; keep `canvas-mcp` to read scopes. A governance engagement that
+  writes to a gradebook before the policy exists is the one failure that ends it.
+- 🟢 **Everything in the table is MIT or Apache-2.0** — the kit is deliverable to the
+  client as a derived product with no copyleft propagation.

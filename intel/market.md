@@ -354,6 +354,56 @@ consistent with `T8`, which puts the agent centre of gravity in APAC.
   `ACTOR_UUID` separation for opt-out scoping, and `AI-Teaching-Agent`'s human review gate.
 
 
+#### Update 2026-11-13 (ninth pass) — 🔴 the most actionable instrument in US higher education was missing from this file, and it expires in 48 days
+
+🔴 **Provenance, stated before the content.** `suny.edu` does not resolve from this
+session (`getaddrinfo ENOTFOUND` — outside the allowed network domains), so **every
+figure below is search-tier, read from indexed reporting and from SUNY's own cited
+documents, not from the primary PDF.** 🟢 **`ACTION p804-V`: re-verify against
+`suny.edu/sunypp/documents.cfm?doc_id=933` and the Board resolution
+`Reso_SUNYSystemwideAIPolicy_April2026.pdf` when that host is reachable.**
+
+**The SUNY systemwide AI policy — the named, dated instance of this file's own
+standing conclusion.** The sixth-pass note here said US higher education "is moving
+through institutions rather than statute." 🟢 **SUNY is that sentence with a scope and
+a deadline attached:**
+
+- **Adopted by the Board of Trustees, April 30, 2026**, as a systemwide policy.
+- **Scope: the system's 64 campuses** — the largest single governed population of
+  US higher-education institutions this file has identified.
+- 🔴 **Hard deadline: campuses "shall publish AI policies and/or update relevant
+  existing policies **no later than December 31, 2026**."** 🔴 **That is 48 days from
+  this pass.**
+- **Curricular effect:** AI was folded into the **Information Literacy** core
+  competency of the general-education framework, reported as applying to students
+  entering **Fall 2026**, adding no extra credits.
+- **Support mechanism:** the **AI for the Public Good Fellows** — an inaugural cohort
+  of **20** faculty and staff, and a second cohort of **11** focused on
+  discipline-specific integration. 🔵 **Note the shape: 31 people to move 64 campuses.
+  That ratio is the opportunity, not a criticism of the programme.**
+
+🔴 **Two contradictions preserved rather than averaged.** (1) One policy write-up dates
+the Information Literacy revision to a **December 2024** Board action, not 2026; the
+2026 materials are the ones that carry the AI language. (2) Several outlets describe a
+**standalone "AI course requirement"**; SUNY's own framing is **AI content inside an
+existing competency**. 🔵 **Pitch the second version — it is the defensible one, and it
+is also the cheaper build.**
+
+**Also new to this file, and still federal-empty.** The **K-12 AI Literacy and Readiness
+Act of 2026** advanced out of House committee and has not passed Congress; the
+Department of Education's **accreditation rulemaking** would have accreditors examine
+AI-related research misconduct — 🔵 **the first time accreditation, rather than statute,
+appears as an AI lever in US higher education.** Both consistent with this file's
+standing read: **no binding federal curriculum standard exists.**
+
+🟢 **What this changes for a studio.** The NA opportunity in this file was previously
+framed as state-level K-12 mandates. **It now has a second, sharper shape: a single
+procurement relationship covering 64 institutions, all of which must produce a
+published AI policy inside 48 days, and 31 fellows to help them.** The deliverable is
+`P16`, and the reusable half of it is `P14`'s deployment registry — a published policy
+that cannot name what the campus actually runs is the failure mode every one of these
+64 campuses is about to hit.
+
 ### EMEA
 
 **Adoption/regulation:** The binding regime is the **EU AI Act**, under which
@@ -681,6 +731,44 @@ closed from two directions — a funded national programme and a measured teache
   figure in this update is secondary-sourced and says so here.**
 
 
+#### Update 2026-11-13 (ninth pass) — the interpretation channel has a name, and the first national teacher-adoption figure lands
+
+🔴 **Provenance: search-tier.** `coe.int` and the Commission's own domains do not
+resolve from this session; nothing below was read from a primary text. The AI Act
+dates themselves are unchanged from the sixth and seventh passes and remain this
+file's verified baseline.
+
+**New to this file: the channel through which the high-risk question actually gets
+answered.** The Commission operates an **AI Act Service Desk** and has published
+**draft guidelines on high-risk classification**. 🔵 **This matters more than it
+sounds.** This file has repeatedly recorded that education uses — automated marking,
+admissions triage, proctoring, AI-detection used in assessment, personalised learning
+— *may* be caught as high-risk. 🟢 **The draft guidelines are the instrument that will
+narrow or widen that list, and the Service Desk is where a deployer's specific
+question gets a position.** For an engagement, that converts "we think this is
+high-risk" into a citable process. 🔴 **It is guidance, not law — it does not move the
+`2027-12-02` date set by Regulation (EU) 2026/1744.**
+
+**Article 4 as the live duty, re-stated precisely.** The AI-literacy obligation binds
+**both providers and deployers**, and 🔵 **requires measures to support literacy
+without specifying any level per person.** That is the one AI Act duty that is in force
+now, applies to every school and university in the Union, and has **no objective
+compliance test** — which is why it is sellable today and why `T19`'s curriculum gap
+bites here as well as in North America.
+
+**First national teacher-adoption figure in this file's EMEA section.** 🟢 **Sweden:
+nearly 8 in 10 teachers surveyed had used AI services in some part of their work.**
+Until this pass, EMEA adoption here was institutional and deployment-side (the
+seventh pass's national deployment figures). 🔵 **This is the individual-practitioner
+layer, and it reproduces the pattern this file measures in LATAM and NA: practitioner
+use far ahead of institutional governance.** The regional difference is only that
+EMEA has a statute arriving to meet it.
+
+🔴 **Declared gap, unchanged and now explicit: this file still has no EMEA figure for
+what share of institutions have published an AI policy.** Searched this pass across
+the EMEA leg; the results returned compliance advice, not measurement. **An informed
+absence: the denominator for the AI Act's deployer duties is not publicly measured.**
+
 ### APAC
 
 **Adoption/regulation:** The most fragmented region, and education is usually
@@ -944,6 +1032,48 @@ framework. **Stated as a confirmed non-change, not as unchecked.**
   has made AI compulsory for school students from age six. 🔴 **No named APAC edtech vendor emerged
   at any point in this leg.**
 
+
+#### Update 2026-11-13 (ninth pass) — Australia's plan is now on the shelf, and it is the region's clearest example of deliberate non-regulation
+
+🔴 **Provenance: search-tier**, from indexed commentary and secondary trackers. No
+Australian government domain is reachable from this session.
+
+**Australia's National AI Plan, released 2 December 2025 — new to this file.** It
+builds on the 2021 AI Action Plan and consolidates commitments made since 2022.
+🔵 **The decision that matters is what it declined to do: no mandatory guardrails for
+high-risk AI.** The Plan relies on **existing laws and sector regulators**, so schools
+are governed through education systems and national guidance rather than an AI
+statute. 🟢 **That places Australia precisely opposite Korea (AI Basic Act, in force
+January 2026) and Vietnam (AI Law, 1 March 2026, with education named in its
+high-risk scope and an 18-month transition) inside the same region** — which is the
+sharpest illustration this file has of `P5`'s premise that APAC is not one compliance
+surface.
+
+- The Plan **explicitly references the Australian Framework for Generative AI in
+  Schools** as the national reference point.
+- 🔴 **The Framework has not been revised in 2026.** Work continues inside **AI
+  Taskforce working groups**, which are developing **national product expectations for
+  edtech AI tools**. 🔵 **Watch that workstream: "national product expectations" is a
+  procurement specification in everything but name, and it is the thing an edtech
+  vendor selling into Australia will have to answer to.**
+- A free **national AI-literacy curriculum** is reported rolling out in 2026 across
+  public, independent and Catholic schools, developed by **Code for Schools** with
+  **AWS** support, targeting **1 million students within three years**. 🔴 **Some
+  sources describe it as binding; that could not be confirmed from a primary
+  government source and is not asserted here.**
+
+**Institutional actors added to this file:** **SEAMEO INNOTECH** as the Southeast Asian
+regional body, **NCERT** in India, and the **Philippines' MATATAG** curriculum rollout
+— 🔵 **the last of which reinforces the seventh pass's Philippines finding: AI guidance
+in this region has to track curricula that are themselves still being phased in.**
+**Indonesia's** national AI rules remained in draft, with a Presidential Regulation
+expected in the first half of the year.
+
+🔵 **Engagement read, unchanged in direction and sharper in detail: APAC's binding
+constraint is that a multi-country client needs one architecture that can be governed
+four different ways.** Australia now supplies the "no statute, strong guidance,
+procurement-led" corner of that matrix, which `P5` did not previously have a named
+example of.
 
 ### LATAM
 
@@ -1217,6 +1347,48 @@ from the first and the write protocol from the second.**
   sources are inconsistent on dates and sample sizes. `T906` holds.
 
 
+#### Update 2026-11-13 (ninth pass) — the Observatory's backers are wider than this file recorded, and Uruguay has done something no other LATAM country has
+
+🔴 **Provenance: search-tier.** `unesco.org` and `coe.int` do not resolve from this
+session, so the partner list and the treaty status below were read from indexed
+reporting rather than from the institutions' own pages. 🟢 **`ACTION p804-V` covers
+both.**
+
+**The UNESCO Observatory on AI in Education for LAC — partner list corrected upward.**
+This file recorded the Observatory (launched **April 2026**) and named CENIA,
+Fundación Ceibal and Tecnológico de Monterrey. 🔴 **Three backers were missing, and
+they are the ones that change what the Observatory *is*: CAF (the regional development
+bank), ECLAC (the UN regional commission) and ProFuturo**, alongside Fundación
+Santillana. 🔵 **A regional observatory backed by a development bank and a UN economic
+commission is not a research project — it is the body that will shape what regional
+governments fund.** For a studio, that is the difference between a citation and a
+route to procurement.
+
+**Uruguay: the first LATAM country to sign the Council of Europe's Framework Convention
+on Artificial Intelligence (2025)** — new to this file. 🔵 **Why it matters beyond the
+symbolism: the Framework Convention is the one instrument that lets a non-European
+state adopt a recognisable, exportable AI-governance posture without writing an AI
+Act.** This file already records Uruguay in the regional top tier on readiness; this is
+the governance counterpart to that, and it gives a LATAM engagement a reference regime
+to design against that is neither the EU AI Act nor Brazil's Marco Legal.
+
+**The regional split is now three-way, not two-way.** 🟢 **Uruguay: treaty-aligned.**
+**Brazil: regulating, and signed an AI and tech-regulation agreement with the EU in
+June 2026.** **Colombia: programme-led via CONPES 4144, budgeted through 2030, no
+immediate horizontal obligations.** 🔴 **Argentina: a bill before the legislature
+carrying "a commitment to keep AI unregulated."** 🔵 **Four countries, four postures —
+and the 716-instrument fragmentation figure this file already carries is what that
+looks like in aggregate.**
+
+**Adoption figures re-confirmed at this pass, all consistent with what this file holds:**
+UNESCO IESALC — **87%** of 200 institutions across 19 countries use AI somewhere,
+**26%** have a formal strategy; Digital Education Council LATAM 2026 — **92% of
+students and 79% of faculty** actively engaging; Brazil — **53%** of school
+administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in ten**
+15-year-olds across 13 regional countries have used AI chatbots for schoolwork.
+🟢 **Four independent instruments, one finding, unmoved across five passes: use is
+near-universal, governance is the gap, and the gap is the product.**
+
 ### Global
 
 **Opportunities not tied to one region:**
@@ -1318,3 +1490,37 @@ it.**
   file previously recorded "no permissive LMS exists at scale" as a hard
   constraint on every engagement. **It is withdrawn.** See
   `repos/foundations.md` and `compose/patterns.md` `P13`.
+
+#### Update 2026-11-13 (ninth pass) — the AI-literacy duty is now global, and the open-curriculum supply to meet it is developer-level or nothing
+
+**The cross-region finding of this pass.** Three regimes now carry an AI-literacy
+obligation, written in three different instruments, landing within the same window:
+
+| Regime | Instrument | Who is bound | Compliance test |
+|---|---|---|---|
+| North America | SUNY gen-ed framework — AI folded into the **Information Literacy** competency, Fall 2026 | 64 campuses' undergraduates | Curricular, assessed by the institution |
+| EMEA | **EU AI Act Article 4** | Providers **and** deployers, Union-wide, in force now | 🔴 **None specified — no required level per person** |
+| APAC | Australia's national AI-literacy curriculum (Code for Schools / AWS) | Schools, **1M students / 3 years** | 🔴 Binding status unconfirmed |
+
+🔴 **And the supply side is empty.** The largest permissively licensed curricula found
+anywhere this pass are [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch)
+(**MIT**, `78.6k★`) and [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub)
+(**MIT**, `41.8k★`, **93+ projects graded across three difficulty tiers**). 🔵 **Both are
+larger than every education-specific repository this base tracks — `DeepTutor` at
+`58.7k` is the only one in range — and neither teaches AI literacy to a student. They
+teach AI engineering to a developer.**
+
+🟢 **That mismatch is the single clearest unserved opening in this entire file:** three
+dated mandates, no open education-licensed curriculum, and two MIT corpora whose grant
+permits exactly the re-levelling that would close it. See `T19` and `Gap 804-C`.
+
+🔴 **Methodological limit on this entire pass, stated plainly.** The prescribed
+`curl -sI` URL check **cannot be executed in this session** — `curl` to `github.com`
+returns `403` from the egress proxy (a policy denial, not a GitHub rate limit) — and
+`unesco.org`, `coe.int`, `openedx.org` and `suny.edu` fail DNS resolution entirely.
+**GitHub facts this pass were read from the rendered page via `WebFetch` (sidebar-verified).
+Every non-GitHub fact is search-tier.** 🟢 **No figure in this pass is presented as
+payload-verified, and `ACTION p804-V` lists what must be re-checked when those hosts
+are reachable.** 🔵 **This base's credibility rests on the distinction between what it
+read and what it was told; a pass that cannot verify must say so rather than inherit
+the previous pass's confidence.**

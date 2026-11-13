@@ -7,7 +7,23 @@ updated: 2026-11-13
 # Education AI Agents — curated, license-verified
 
 **34 real agents** below — **29 build-safe** (MIT / Apache-2.0 / BSD / ISC) plus
-**5 copyleft** — **unchanged through the eighth pass (`p803`, 2026-11-13)**.
+**5 copyleft** — **unchanged through the ninth pass (`p804`, 2026-11-13)**.
+
+🔵 **`p804` added zero rows, and `p803`'s saturation finding reproduced exactly.** All
+eight prescribed legs ran again; every education-specific name they returned was
+already curated here. 🟢 **The two genuinely new repositories found this pass —
+`rohitg00/ai-engineering-from-scratch` (MIT, `78.6k★`) and `patchy631/ai-engineering-hub`
+(MIT, `41.8k★`) — are deliberately NOT in this table**, although both are larger than
+every agent in it. They are **AI-engineering curricula**: no runtime, no learner model,
+no integration surface. A row here asserts a studio could start a build from the
+artifact, and it could not. They are shelved instead in `repos/foundations.md` under a
+new **curriculum-corpus layer**, which exists because `T19` measured the demand:
+**three dated AI-literacy mandates and no open education-licensed curriculum to meet
+any of them.** 🔴 **Provenance caveat for this pass: `curl` to `github.com` is denied
+by the session's egress proxy (`403`), so grants and sizes were read from the rendered
+page via `WebFetch` — sidebar-verified, not payload-verified.** The pass's substantive
+output is in `intel/market.md` (all five regions), `intel/trends.md` (`T18`, `T19`) and
+`compose/patterns.md` (`P16`).
 
 🔵 **`p803` added zero rows for a new reason: no candidate surfaced to assess.** The
 eighth pass ran all eight prescribed search legs — four global, four regional — and
