@@ -12,7 +12,36 @@ of these**, not replacing it. All licenses and star counts verified from the
 repository page (2026-11-13, with the LTI and Moodle-MCP rows verified this
 pass).
 
-### What changed this pass (twelfth pass, `p807`, 2026-11-13) — a new section, because the saturated vertical leg finally said something
+### What changed this pass (thirteenth pass, `p808`, 2026-11-13) — nothing was added, and one licence was independently re-verified
+
+🔴 **Zero new platforms this pass — the vertical leg returned this shelf's own contents
+for a NINTH consecutive pass.** `open source platform education ERP CRM MIT Apache`
+returned `OpenEduCat`, `Krayin`, `Huly` and `ERPNext`. 🟢 **All four are already held**,
+and `p807`'s structural reading of this nil — *every education ERP/CRM in the open is
+copyleft, every permissive one is general-purpose* — was **reproduced exactly** by this
+window rather than contradicted. `OpenEduCat` `LGPL-3.0`, `ERPNext` `GPL-3.0`,
+against `Krayin` `MIT` and `Huly` `Apache-2.0`, both horizontal. 🔵 **A finding that
+survives a ninth independent reproduction should now be treated as a property of this
+market, not an observation about it.**
+
+🟢 **One licence independently re-verified, and it carries a trap worth recording.**
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) was re-read
+from its rendered repository page this pass: **`LGPL-3.0`**, **`911★`**, *"Comprehensive
+Open Source ERP for Educational Institutes"*. 🟢 **This matches the row below exactly —
+nothing changed.** 🔴 **But the GitHub sidebar renders no SPDX licence name for this
+repository**; the `LGPL-3.0` appears only in the README body and a badge, and the
+search-tier result for it stated **no licence at all**. 🔵 **So an automated licence
+scrape of this repository returns EMPTY, not wrong** — and `OpenEduCat` is the single
+most load-bearing platform on this shelf (it is the only open-source SIS in this base
+with a working agent surface). 🟢 **A future pass that sees a blank licence field here
+must not read it as a regression, a relicensing or grounds for rejection.** The LGPL-3.0
+obligation on a client deliverable is unchanged: dynamic linking and module-level
+separation keep it manageable, modifying its own files does not.
+
+<details>
+<summary>Prior pass (<code>p807</code>, twelfth) — a new section, because the saturated vertical leg finally said something</summary>
+
+### What changed at the twelfth pass (`p807`, 2026-11-13)
 
 🟢 **One new section, three new rows, no changes to any existing row:
 `## Admissions and enrolment CRM`.** The prescribed vertical-platform leg has now
@@ -83,6 +112,8 @@ passes. 🔵 **Recorded here because a vendor blog disagreeing with a verified r
 exactly the kind of noise that becomes wrong data if a later pass reads it without the
 context that it was checked and rejected.** `ACTION p804-V` tracks re-verification of
 the stewardship claim when the host is reachable.
+
+</details>
 
 ## The decision that governs every education engagement
 

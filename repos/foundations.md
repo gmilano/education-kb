@@ -21,6 +21,39 @@ them and must be excluded** — that matrix is the most likely cause of every
 miscount this line has had. 🔵 **Next pass: re-derive with those three commands rather
 than carry this sentence forward.**
 
+🟢 **Thirteenth pass (`p808`, 2026-11-13): count re-derived and it HOLDS at `62`.** Run
+`grep -cE '^\|.*github\.com' repos/foundations.md` → `62`. 🔵 **`p807`'s correction from
+`63` to `62` is confirmed to have landed, and this is the second consecutive pass on
+which this line needed no change** — the first time that has happened in seven passes.
+
+🔴 **Zero foundation repos added at `p808` — a SIXTH consecutive nil on this shelf, and
+unlike the agent shelf the streak did NOT break.** The vertical leg
+(`open source platform education ERP CRM MIT Apache`) returned `OpenEduCat`, `Krayin`,
+`Huly` and `ERPNext` — **all four already held**. The seam-named leg that broke the
+*agent* nil (`...LMS Moodle Canvas integration`) returned seven repositories, but **every
+one of them was an agent or a wrapper, not a foundation**: none is a platform, a library
+or a protocol implementation that something else builds on. 🟢 **That asymmetry is itself
+informative and is why this paragraph is longer than the nil warrants.** Education's
+foundational layer — `Moodle`, `Open edX`, `Canvas`, `Sakai`, `Chamilo`, `OpenEduCat`,
+the xAPI/Caliper implementations — is **mature, consolidated and slow-moving**, and new
+entrants arrive at the *agent* layer above it rather than beside it. 🔵 **A nil here is
+therefore the expected reading, not a research failure**, and future passes should budget
+accordingly: check this shelf for *licence and version drift* on what it already holds,
+not for new arrivals.
+
+🟢 **One licence confirmation this pass, obtained independently rather than carried.**
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) was re-read
+from its rendered page: **`LGPL-3.0`**, **`911★`**, description *"Comprehensive Open
+Source ERP for Educational Institutes"*. 🔴 **The GitHub sidebar renders NO SPDX licence
+name for this repository** — the `LGPL-3.0` is stated only in the README body and a
+badge. 🔵 **Consequence worth recording: any automated licence scrape of `OpenEduCat`
+returns empty, not wrong**, so a future pass that sees a blank licence field here should
+not treat it as a regression or a rejection. This matches what `verticals/solutions.md`
+already carries, so nothing changed — but it is now verified rather than inherited.
+
+<details>
+<summary>🔴 <strong>Prior pass (<code>p807</code>): zero foundation repos — the search tier was nil for a fifth consecutive window.</strong></summary>
+
 🔴 **Zero foundation repos added this pass — the search tier was nil for a fifth
 consecutive window.** The four prescribed global legs plus two differentiated legs
 (adaptive learning / knowledge tracing; AI grading against rubrics) returned nothing
@@ -113,6 +146,8 @@ two-process architecture on it — so the correction propagates there too.
 **That gap is closed and the conclusion was wrong.** Four LTI 1.3 libraries
 verified below, led by `ltijs` (Apache-2.0, 373 stars) implementing the full
 LTI Advantage service set. Do not quote the old greenfield claim to a client.
+
+</details>
 
 ## The integration layer — LTI 1.3 (added third pass, corrected fourth)
 

@@ -6,23 +6,48 @@ updated: 2026-11-13
 
 # Education AI Agents — curated, license-verified
 
-**37 real agents** below — **31 build-safe** (MIT / Apache-2.0 / BSD / ISC) plus
-**6 copyleft** — **three rows added at the eleventh pass (`p806`, 2026-11-13)**.
+**39 real agents** below — **32 build-safe** (MIT / Apache-2.0 / BSD / ISC) plus
+**7 copyleft** — **two rows added at the thirteenth pass (`p808`, 2026-11-13)**.
 
-🟢 **Twelfth pass (`p807`, 2026-11-13) — the count was re-derived, not carried, and it
-HOLDS.** Licence column tallied programmatically across the tables: **MIT `22`,
-Apache-2.0 `6`, ISC `2`, BSD-3-Clause `1` = `31` build-safe**; **AGPL-3.0 `3`, GPL-3.0
-`2`, MPL-2.0 `1` = `6` copyleft**; **total `37`.** 🔵 **This is the first pass on which
-the headline sentence was checked and needed no correction** — `p806`'s fix is confirmed
-to have landed. 🟢 **The next pass should re-derive it the same way rather than trust
-this paragraph.**
+🟢 **Thirteenth pass (`p808`, 2026-11-13) — THE NIL STREAK IS BROKEN.** Two rows added:
+[`geekjourneyx/interactive-learning`](https://github.com/geekjourneyx/interactive-learning)
+(`MIT`, `52★`) to the build-safe table and
+[`X-isdoingreat/canvas-pilot`](https://github.com/X-isdoingreat/canvas-pilot)
+(`AGPL-3.0`, `125★`) to the copyleft table, plus one new rejection
+(`end13s/AI-Grading-Tool`, no licence). 🔵 **Neither came from the prescribed battery,
+which returned its sixth consecutive nil.** Both came from a differentiated leg aimed at
+the *LMS seam* rather than at "education agents": `open source AI tutor grading agent
+github MIT 2026 LMS Moodle Canvas integration`. 🟢 **That query shape is the reusable
+finding and should be run again next pass** — see `T24`.
 
-🔴 **Zero agent rows added this pass — a FIFTH consecutive nil on supply.** All four
-global legs plus two differentiated legs (adaptive learning / knowledge tracing, and AI
-grading against rubrics) ran. Everything education-specific they returned was already
-held; everything new was a student project, pre-alpha, or `0`–`6★` with a copyleft or
-absent grant. 🔵 **The one durable finding came from checking a name rather than finding
-a repository** — see the `LearnHarness` row's namesake hazard.
+🟢 **COUNT DERIVATION, recorded as a command because five passes of prose have drifted.**
+Re-derived this pass: **MIT `23`, Apache-2.0 `6`, ISC `2`, BSD-3-Clause `1` = `32`
+build-safe**; **AGPL-3.0 `4`, GPL-3.0 `2`, MPL-2.0 `1` = `7` copyleft**; **total `39`.**
+🔴 **The defect that keeps recurring is now diagnosed: a naive `grep -cE '^\|.*github\.com'`
+over this file returns `45`, not `39`, because it also counts the `6` rows of the
+`## Rejected candidates and why` table.** 🔵 **The rejected rows are real repositories but
+are NOT agents on this shelf, and every past overcount traces to including them.** The
+next pass should run exactly this and trust nothing in this paragraph:
+
+```sh
+awk '/^## Build-safe/,/^## Copyleft/' agents/top.md | grep -cE '^\|.*github\.com'   # 32 build-safe
+awk '/^## Copyleft/,/^## Rejected/'   agents/top.md | grep -cE '^\|.*github\.com'   # 7  copyleft
+awk '/^## Rejected/,0'                agents/top.md | grep -cE '^\|.*github\.com'   # 6  rejected (NOT agents)
+```
+
+🔵 **Note the boundary, because the obvious version of this command is wrong:** the range
+must end at `## Copyleft`, not `## Rejected`. `/^## Build-safe/,/^## Rejected/` spans
+*both* agent tables and returns `39` — the correct total, arrived at by the wrong route,
+which is precisely the kind of coincidence that has kept this defect alive for five
+passes.
+
+🔴 **What the prescribed battery returned, for the record (sixth nil).** `top open source
+AI agents education 2026 github MIT` returned general-purpose agents only — `OpenHands`,
+`MetaGPT`, `browser-use`, `Flowise`, `Langflow`, `Dify`, `OpenClaw` — plus the recurring
+caveat that `OpenClaw`'s licence is reported inconsistently across roundups. 🟢 **Not one
+education-specific agent this base does not already hold.** `github trending education AI
+2026` returned `DeepTutor`, `Claw-ED` and `ChinaTextbook` — the first two already shelved,
+the third a textbook archive rather than an agent.
 
 🔴 **Counting defect, fifth occurrence, fixed again this pass — and this one hid
 itself.** Every edition since `p802` headlined "34 real agents … 29 build-safe plus 5
@@ -185,6 +210,7 @@ come from the rendered repository page (GitHub's own license detection).
 
 | Agent | Repo | License | Stars | What it does |
 |---|---|---|---|---|
+| interactive-learning | https://github.com/geekjourneyx/interactive-learning | MIT | 52 | **New this pass (`p808`) — and it is a *skill package*, not a server or an app, which is why four passes of agent-shaped searching missed it.** Takes arbitrary input — text, a link, a document or a bare question — and turns it into a **verifiable learning path**, optionally emitting an HTML "checkpoint card" that makes each step checkable rather than merely read. 🟢 **The verifiability is the reason it is shelved:** every other content-generation node in this base (`educhain`, `OpenMAIC`) produces material, not a checkable path, and the gap between "generated a lesson" and "can show the learner passed it" is the one a client always asks about. Installs into Claude Code / `opencode`-style harnesses as a skill, so it composes with `canvas-mcp` or `Moodle-MCP` for delivery rather than competing with them — see `P22`. 🔴 **`52★` and `4` commits: this is a seed, not a dependency.** Read it as a design for the checkpoint card and reimplement if it must carry weight. Licence verified from the rendered sidebar (`MIT license`). |
 | DeepTutor | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 58.7k | Lifelong personalized tutoring; learner model persists across sessions and builds learning paths. **v1.7.2 released 2026-11-06**; 7.1k forks. Largest education-specific agent on GitHub. |
 | OpenMAIC | https://github.com/THU-MAIC/OpenMAIC | MIT | 43.4k | Open Multi-Agent Interactive Classroom (Tsinghua MAIC lab). Turns a topic or document into a multi-agent classroom — teacher, peers, assistant — in one click. **README News lists v1.5.0-rc.2 on 2026-11-12; GitHub Releases is empty**, so treat the version as pre-release. Ships pt-BR and es-MX locales. |
 | teacher-to-skills | https://github.com/JuneYaooo/teacher-to-skills | Apache-2.0 | 475 | **New this pass.** Distills a specific teacher's materials (lecture video, notes, marked-up feedback) into a source-backed agent Skill that teaches to that teacher's standard and tapers support as the learner improves. Conclusions are tied to sources; unevidenced material is flagged, not filled in. Learner progress is stored outside the generated Skill. Runs under Claude Code / Codex / OpenClaw. 73 forks. |
@@ -221,6 +247,7 @@ come from the rendered repository page (GitHub's own license detection).
 
 | Agent | Repo | License | Stars | What it does |
 |---|---|---|---|---|
+| canvas-pilot | https://github.com/X-isdoingreat/canvas-pilot | AGPL-3.0 | 125 | **New this pass (`p808`) — the highest-starred NEW education agent found in this window, and the only one of six LMS-seam candidates with meaningful traction.** Local-first Canvas LMS agent that **learns each course's recurring assignment workflow and replays it** through an explicit `scan -> approval -> execute` cycle with a student review step before anything is submitted. 🟢 **The workflow-learning loop is the genuinely new idea in this base:** every other Canvas agent here (`canvas-mcp`, `opencode-class-agents`) exposes Canvas as tools and leaves orchestration to the model, whereas this one treats the *recurring shape of a course's work* as the persistent artifact. 🔴 **AGPL-3.0 — the network clause makes it unusable as the base of a hosted or distributed client product**, exactly as with `LearnHarness`. Take the scan/approve/execute topology, not the code. 🔴 **Traction signal is internally odd and must not be quoted without this caveat: `125★` against `1` commit.** A single-commit repository at `125★` is either a squashed initial release or externally promoted; either way the star count does not evidence sustained maintenance. Licence verified from the rendered sidebar (`AGPL-3.0 license`). |
 | mcp-server-odoo | https://github.com/ivnvxd/mcp-server-odoo | MPL-2.0 | 415 | **New this pass — the governed alternative to `erpipe-org/mcp-odoo`, and the better choice where the *institution* must own the policy.** Reaches any Odoo model, so it too reaches OpenEduCat's student record. Access control lives in a **companion Odoo module** carrying a per-model allowlist with separate read / write / create / delete permissions, layered on Odoo's own access rights and record rules — so the client's Odoo administrator decides what an agent may touch, rather than an environment variable inside the agent's container. 17 tools including `create_records`/`update_records` batches, attachments, `aggregate_records`, `post_message` and (double-env-gated) `call_model_method`. Odoo 16.0+ in standard mode; JSON-2 with an API key on Odoo 19+. 190 forks. **Why it is in this table and not the one above: MPL-2.0 is *file-level* weak copyleft** — modifications to its own files must be published, but it combines freely with proprietary code, so unlike AGPL it needs a licence note in the deliverable rather than a redesign. 🔴 **Red flag to raise in every review: "YOLO mode" requires no companion module, bypasses all MCP-level access control and exposes 200+ models; full YOLO mode permits delete.** Its own README restricts it to development and testing. Never ship it, and grep for it in any inherited deployment. |
 | LearnHarness | https://github.com/amosblomqvist/learnharness | AGPL-3.0 (**payload-verified this pass**: root `LICENSE`, `34,523 B`, `sha256:0d96a4ff68ad6d4b…`, affero×`16`, title line `GNU AFFERO GENERAL PUBLIC LICENSE`; sidebar agrees) | 9.1k | **New this pass — the largest NEW education repository found in this window, and the fastest-growing artifact this base has tracked.** Desktop agent *harness* for learning hard material: agents plan and teach a lesson from the learner's current understanding toward a stated goal, and a **local knowledge graph stores ideas and the links between them rather than ability ratings** — a different persistence model from `DeepTutor`'s learner model and from `OATutor`'s Bayesian Knowledge Tracing, and the reason it is worth reading even though it cannot be shipped. Bring-your-own API keys; ships for macOS, Windows and Linux. `1,202` commits, `1.2k` forks. 🔴 **AGPL-3.0 is the whole adoption story: the network clause makes this unusable as the base of a distributed or hosted client product.** Take the knowledge-graph design, not the code. 🔵 Indexed write-ups are badly stale on size — one says `1.5k★`, another `5.7k★`; the rendered page said `9.1k★` this pass. 🔴 **NAMESAKE HAZARD, added at the twelfth pass (`p807`): "LearnHarness" does not uniquely identify this repository.** A `2026-11-13` adaptive-learning search returned [`h4ksclaw/learnharness`](https://github.com/h4ksclaw/learnharness) — **a different project, not a fork**: `3★`, `1` fork, `52` commits, described as *"Open-source adaptive learning harness with FSRS, BKT, and LLM-powered knowledge graphs. Domain-agnostic."* against this row's *"Agent harness for learning difficult things."* 🔴 **Its README states its licence as the bare word `MIT` under a `## License` heading, and there is NO `LICENSE` file at all** — `raw.githubusercontent.com` returns `404` for `LICENSE` and `LICENSE.md` on **both** `main` and `master`, which is why GitHub's sidebar shows no licence. 🔵 **A prose "MIT" with no grant file is not a grant; the default is all-rights-reserved.** 🟢 **Always resolve this row by the full slug `amosblomqvist/learnharness`, never by name** — the two differ in owner, size, purpose *and* licence, and the cheap mistake (`MIT`, `3★`) is the one that looks build-safe. 🔴 This is distinct from `T966`'s two `0★` byte-identical AGPL-3.0 forks; `h4ksclaw` is a third repository and shares no bytes with either. |
 | tutor-gpt | https://github.com/plastic-labs/tutor-gpt | GPL-3.0 | 933 | AI tutor driven by Theory-of-Mind reasoning about the learner. GPL-3.0: fine for internal or hosted use, a problem for a distributed client product. |
@@ -240,6 +267,7 @@ Globant can build a client deliverable on.
 | education-agent-skills | https://github.com/GarethManning/education-agent-skills | CC BY-SA 4.0 | 977 | 165 evidence-grounded education skills for Claude/Codex-style agents. CC BY-SA is a **content** license with share-alike — usable as pedagogy reference material, wrong instrument for shipped software. |
 | AITutor-EvalKit | https://github.com/kaushal0494/AITutor-EvalKit | **No licence file — re-verified at `HEAD` `a71078456a90` this pass** | 4 | 🔴 **Moved out of the build-safe table this pass, and the move is a correction of this base against itself.** `p801` (`T961`) established that this repository serves **no licence anywhere**, while its `EACL 2026` paper calls it *"MIT-licensed"*. The row in the build-safe table went on publishing `MIT` for a further pass. `p802` re-probed the clone channel and reproduced `T961` exactly — **same `HEAD`, still a `7`-entry tree, still no `LICENSE`, `COPYING` or equivalent in the root tree** — so the grant does not exist and the default is all-rights-reserved. Still the only pedagogy-specific eval harness found, so it remains worth reading and worth an upstream licence request; it cannot be adopted. 🔴 **This base has now carried a licence it had itself refuted for one full pass — see `ACTION p802-A`.** |
 | educational-agents | https://github.com/nifalconi/educational-agents | **No license file** | 1 | **New rejection this pass.** Spanish-language teaching library ("agents in 2 lines") from the *Niñas Pro* applied-AI course for girls in **Chile** — genuinely interesting as LATAM education provenance, and the kind of project worth contributing a LICENSE file to. As published it is all-rights-reserved and cannot be adopted. v0.1.0 prototype, built on the OpenAI Agents SDK via OpenRouter. |
+| AI-Grading-Tool | https://github.com/end13s/AI-Grading-Tool | **No licence file — sidebar shows none** | 0 | **New rejection this pass (`p808`).** The only *Moodle*-targeted grader found in the LMS-seam leg, and functionally the closest fit to a real client ask: imports a Moodle roster and submissions, has an LLM check each one against the instructor's rubric, routes every result through human review, then exports grades back to Moodle. 🔴 **`134` commits and no grant of any kind — the default is all-rights-reserved.** 🔵 **This is the fourth education repository in this base to be substantial and unlicensed** (`llamatutor` `2.1k★`, `AITutor-EvalKit`, `educational-agents`, now this), which is itself the finding recorded as `T24`. Worth an upstream licence request; cannot be adopted as published. |
 
 ## Declared gaps
 

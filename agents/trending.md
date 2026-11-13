@@ -3,6 +3,82 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+
+## `2026-11-13` (thirteenth pass) — **The five-pass nil is broken, and what broke it was changing the SEAM the query aimed at, not the words in it**
+
+**Pass `p808`.** 🟢 **Two agent rows added, one rejection, after five consecutive passes
+of nil.** The prescribed battery returned its **sixth** nil; the rows came from a single
+differentiated leg, and the shape of that leg is the durable finding.
+
+### What worked, stated so it can be rerun
+
+🔵 **The query that broke the streak was**
+`open source AI tutor grading agent github MIT 2026 LMS Moodle Canvas integration`.
+🟢 **It differs from the prescribed legs in one way that matters: it names the SEAM
+(`Canvas`, `Moodle`, `LMS`) rather than the DOMAIN (`education`).** Five passes of
+`...agents education...` returned general-purpose frameworks, because "education" as a
+search token is dominated by *courses teaching AI*, not *agents doing education work*.
+🟢 **Naming the system an agent must plug into is what surfaced education-specific
+repositories.** The same transform is worth trying on the other saturated legs: name
+`SIS`, `LRS`, `xAPI`, `SCORM`, `Banner`, `PowerSchool`, `Blackboard` instead of
+`education`.
+
+### The six candidates, and why only two were shelved
+
+| Repo | Licence | Stars | Disposition |
+|---|---|---|---|
+| [`X-isdoingreat/canvas-pilot`](https://github.com/X-isdoingreat/canvas-pilot) | AGPL-3.0 | 125 | 🟢 **SHELVED** → `agents/top.md` copyleft table |
+| [`geekjourneyx/interactive-learning`](https://github.com/geekjourneyx/interactive-learning) | MIT | 52 | 🟢 **SHELVED** → `agents/top.md` build-safe table |
+| [`end13s/AI-Grading-Tool`](https://github.com/end13s/AI-Grading-Tool) | **none** | 0 | 🔴 **REJECTED** — no grant, `134` commits |
+| [`chaoyuhao/mini-homework-agent`](https://github.com/chaoyuhao/mini-homework-agent) | MIT | 0 | 🔵 Recorded, not shelved |
+| [`jans-johnson/canvas-ai-agent`](https://github.com/jans-johnson/canvas-ai-agent) | MIT | 0 | 🔵 Recorded, not shelved |
+| [`DTA-Projects/opencode-class-agents`](https://github.com/DTA-Projects/opencode-class-agents) | MIT | 0 | 🔵 Recorded, not shelved |
+| [`jlouisbru/Canvas-grading-with-AI`](https://github.com/jlouisbru/Canvas-grading-with-AI) | MIT | 0 | 🔵 Recorded, not shelved |
+
+🔴 **Four of the seven are MIT-licensed and sit at exactly `0★`.** Every licence and star
+figure above was read from the rendered repository sidebar on `2026-11-13`, not from a
+roundup.
+
+🟢 **The four `0★` MIT repositories were deliberately NOT added to `agents/top.md`, and
+the reason is a judgement this file should keep making.** They satisfy the letter of the
+quality bar — real URL, real licence, real description — and shelving them would have
+turned a two-row pass into a six-row pass. 🔵 **But a `0★`, single-author, few-commit
+wrapper is not a starting point a studio can defend to a client**, and six of them would
+have diluted a shelf whose whole value is that every row has been judged. 🔴 **Padding a
+count is the failure mode this base has already suffered from on the counting side; it
+should not acquire it on the supply side.** They are recorded here, with their slugs, so
+a future pass can re-check them for traction rather than rediscover them.
+
+### `mini-homework-agent` is the one to re-check first
+
+🔵 Of the four held back, [`chaoyuhao/mini-homework-agent`](https://github.com/chaoyuhao/mini-homework-agent)
+(`MIT`, `0★`, `10` commits) is the most interesting, because its design decision is the
+one that makes AI grading saleable: **instructors write requirements in Markdown, the
+agent produces scores and feedback, and nothing reaches the gradebook until a human
+explicitly publishes the approved set.** 🟢 **Review-before-publish is not a feature here,
+it is the architecture** — the same shape as `canvas-pilot`'s `scan -> approval ->
+execute` and `waseda-moodle-mcp`'s `prepare_* -> confirm_action`. 🔵 It targets Canvas LMS
+and Fudan eLearning, which also makes it the second China-origin education agent in this
+base after `OpenMAIC`.
+
+### The structural reading — recorded as `T24` in `intel/trends.md`
+
+🟢 **Five passes of "nil on supply" were never a supply shortage. They were a
+*granularity* mismatch.** This window found **seven** education-specific agents in a
+single leg. 🔴 **Their median star count is `0`, three of the seven carry no usable grant
+or a network-copyleft one, and none has more than one contributor.** The education agent
+long tail is **numerous and atomised**: dozens of single-author LMS wrappers, each
+solving one instructor's grading problem, none accumulating users.
+
+🔵 **What that means for an engagement, which is the only reason it is written down:**
+the build-vs-adopt calculation in education is **not** the usual one. In most verticals
+the question is which mature project to fork. 🟢 **Here the answer is almost always
+"adopt the *connector*, build the *workflow*"** — take `canvas-mcp` (`MIT`, `324★`) or
+`Moodle-MCP` (`MIT`, `206★`), which do have traction, and write the grading or tutoring
+loop yourself, because every available implementation of that loop is a `0★` personal
+project. 🟢 **`P22` in `compose/patterns.md` is that recipe made concrete.**
+
+---
 ## `2026-11-13` (twelfth pass) — **A fifth nil on supply, and the one durable finding came from checking a NAME rather than finding a repository: "LearnHarness" resolves to three different repositories with three different licence positions**
 
 **Pass `p807`.** 🔴 **Zero agent rows from the search tier — the fifth consecutive nil.**

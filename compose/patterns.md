@@ -6,7 +6,7 @@ updated: 2026-11-13
 
 # Compose patterns — education
 
-**Twenty-one** concrete recipes. Each names the actual repos, the license
+**Twenty-two** concrete recipes. Each names the actual repos, the license
 consequence, how the pieces wire together, and a rough build estimate. All
 components were license-verified on 2026-11-13 (see `agents/top.md` and
 `repos/foundations.md`). 🔴 **Count defect, third occurrence, fixed again at
@@ -14,6 +14,12 @@ components were license-verified on 2026-11-13 (see `agents/top.md` and
 sixteen `## P` headings. It is now "Eighteen" and it matches
 `grep -c '^## P'`.** 🔵 **A count written in prose drifts every time a pattern is
 appended; until it is generated, this line will keep going stale.**
+
+🟢 **New at `p808` (thirteenth pass): `P22` — Canvas-native grading assistant with
+human-in-the-loop publication.** 🔵 **It is the first pattern in this file written
+*because* no adoptable implementation exists** — `T24` established that the education
+agent workflow layer is a population of `0★` single-author projects, so `P22` adopts the
+connector and builds the loop. Like `P21` it has **no copyleft anywhere in the tree**.
 
 🟢 **New at `p807` (twelfth pass): `P21` — admissions and enrolment agent on a
 permissive CRM.** 🔵 **It is the first pattern in this file with NO copyleft anywhere in
@@ -1431,3 +1437,102 @@ simpler to patch OpenEduCat than to call it.
   build one. **If the client is comparing against OpenEduCat's admissions module on
   features, they will not like the first demo** — sell the licence position and the
   product ceiling, or do not sell this.
+
+## P22 — Canvas-native grading assistant with human-in-the-loop publication
+
+🟢 **Why this pattern exists.** `T24` established that education's agent supply is
+atomised: this base found **seven** Canvas/Moodle grading agents in one window with a
+**median of `0★`**, three of them unlicensed or AGPL. 🔴 **There is no mature grading
+agent to fork.** 🟢 **But the connector layer is mature and permissive**, so the right
+move is to adopt the connector and write the loop. This is the most-requested education
+engagement shape and the one where a studio most often wastes a sprint looking for a base
+to fork.
+
+### Components — all MIT, no copyleft anywhere in the tree
+
+| Role | Component | Licence | Stars | Why this one |
+|---|---|---|---|---|
+| LMS connector | [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | MIT | 324 | The only Canvas agent surface in this base with real traction. Includes a bulk-grading skill. 🔴 Tool count is inconsistent on its own page (README `128`, sidebar `102`) — pin the profile you enable. |
+| Moodle variant | [`Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) | MIT | 206 | Swap in for Moodle estates. 🟢 **Read-only (10 tools)** — so for Moodle the write path must be built separately, which is a scoping fact, not a defect. |
+| Orchestration | [`LangGraph`](https://github.com/langchain-ai/langgraph) | MIT | 44.9k | Explicit state machine. The approval gate must be a *graph node*, not a prompt instruction. |
+| Content / rubric generation | [`educhain`](https://github.com/satvik314/educhain) | MIT | 388 | Generates questions, rubrics and feedback scaffolds as a library node. |
+| Learner-path checkpoints | [`interactive-learning`](https://github.com/geekjourneyx/interactive-learning) | MIT | 52 | 🔵 **Optional, and read it as a design not a dependency (`52★`, `4` commits).** Supplies the verifiable-checkpoint card for returning remediation to a student who failed a rubric line. |
+| Learning-activity record | [`learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | MIT | (held) | Writes what was practised and mastered to an LRS, so grading produces evidence rather than only a number. |
+
+🔴 **Explicitly NOT in this tree, and each exclusion is deliberate:**
+`canvas-pilot` (`AGPL-3.0` — network clause kills a hosted deliverable),
+`AI-Grading-Tool` (**no grant at all**), `tutor-gpt` (`GPL-3.0`),
+`PageLM` (source-available, not OSI).
+
+### Wiring
+
+```
+      instructor rubric (Markdown, version-controlled)
+                        │
+                        ▼
+   canvas-mcp ──► fetch submissions + roster  ──► LangGraph state
+                        │
+                        ▼
+              grade node (LLM + educhain rubric scaffold)
+                        │
+                        ▼
+        ┌───── PROPOSED grades + per-line feedback ─────┐
+        │        (written to a staging store,            │
+        │         NEVER to the Canvas gradebook)         │
+        └────────────────────┬───────────────────────────┘
+                             ▼
+                  instructor review UI  ◄── the gate
+                             │  approve / amend / reject
+                             ▼
+   canvas-mcp ──► publish approved set only ──► Canvas gradebook
+                             │
+                             ▼
+              learnmcp-xapi ──► xAPI statements to the LRS
+```
+
+🟢 **The architectural rule, and it is the whole pattern:** the agent writes to a
+**staging store**, never to the gradebook. Publication is a separate, explicitly
+authorised action over an approved set. 🔵 **This is not a preference — it is the
+convergent design of every credible implementation found.** `mini-homework-agent`
+(review-then-publish), `canvas-pilot` (`scan -> approval -> execute`),
+`waseda-moodle-mcp` (`prepare_* -> confirm_action`) and `mcp-odoo`
+(`preview_write -> validate_write -> execute_approved_write`) all independently arrived
+at it. 🔴 **Four unrelated projects converging on the same gate is the strongest design
+evidence in this base.**
+
+### Why the gate is also the compliance artefact
+
+🟢 **The review step is what makes this sellable under every regime in `T25`
+simultaneously.** EU AI Act Annex III treats evaluation of learners as high-risk and
+requires **human oversight** (duties from `2027-12-02`); Korea's AI Basic Act requires
+human oversight and a pre-deployment impact assessment for in-scope K-9 assessment; US
+state and district policies increasingly bar AI from being the **sole basis** for a
+high-stakes decision, and D.C.'s `2026-27` guidance bars AI from grading outright.
+🔵 **A human-approval gate that is logged satisfies the common core of all of them**, and
+the staging store is where the audit trail lives. 🟢 **Build the log as a first-class
+output, not a debug artefact:** proposed grade, model version, rubric version, reviewer
+identity, decision, timestamp.
+
+🔴 **Scope check before selling this anywhere:** if the learners are K-9 in Korea it is
+high-impact and needs the impact assessment; if the institution is a US district, check
+whether local policy bars AI grading entirely — in which case this pattern is sold as
+**feedback drafting**, with no grade path at all, which is still most of the value.
+
+### Build estimate
+
+🟢 **`5`–`7` weeks** for a single-course pilot on Canvas with a real instructor:
+`1` week connector + rubric schema, `2` weeks grading loop and staging store,
+`1`–`2` weeks review UI, `1` week xAPI/logging, `1` week hardening.
+🔴 **Add `2`–`3` weeks for Moodle**, because `Moodle-MCP` is read-only and the write path
+is yours to build. 🔵 **Add `2` weeks if the client needs the conformity pack**
+(impact assessment, oversight design, model/data documentation) — and per `T25`, build it
+once and reuse it across jurisdictions.
+
+🔴 **The risk that actually kills these pilots is not technical.** It is that instructors
+do not trust the proposed grades and review every line by hand, at which point the agent
+has saved nothing. 🟢 **Mitigate by measuring agreement rate from week one** — proposed
+vs. published grade, per rubric line — and by shipping the highest-agreement rubric lines
+first. 🔵 **That metric is also the client's ROI story**, and per the LATAM finding that
+there are roughly ten times more institutions using AI than measuring it, it is the thing
+almost nobody builds.
+

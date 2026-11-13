@@ -6,9 +6,15 @@ updated: 2026-11-13
 
 # Education AI — current trends
 
-**Twenty-three** trends, each with the evidence behind it and what it implies for an
-engagement. 🟢 **Twelfth pass (`p807`, 2026-11-13): `T22` and `T23` added.** The count
+**Twenty-five** trends, each with the evidence behind it and what it implies for an
+engagement. 🟢 **Thirteenth pass (`p808`, 2026-11-13): `T24` and `T25` added.** The count
 above was produced by `grep -c '^## T'` before being written, not carried forward.
+🔵 **`T24` (the education agent long tail is numerous, atomised and unlicensed) came from
+the first search leg in six passes to break the supply nil; `T25` (the same product
+changes regulatory category by learner age, not by function) came from narrowing a claim
+this file already carried about Korea.** 🔴 **The prescribed battery returned nil on
+supply for a sixth pass and nil on regional facts for a third** — both new trends came
+from differentiated legs, as every trend since `T19` now has.
 🔵 **`T22` (a repository name is not an identifier) came from verifying a name this base
 already carried, not from a search; `T23` (assessment is splitting into institutional
 and workforce) came from the one genuine market event of the window — Pearson/Workera.**
@@ -958,3 +964,95 @@ touching a school at all.
 
 🟡 **Dating caveat.** One outlet dates the announcement `2026-10-05`; the Pearson release
 and the majority of coverage give `2026-09-29`, which is what is asserted.
+
+## T24 — Education's agent supply is numerous, atomised and frequently unlicensed; the adopt-vs-build calculus is therefore inverted
+
+🟢 **Evidence, gathered in one window (`p808`, 2026-11-13).** A single search leg aimed at
+the *LMS seam* rather than at the *education domain* returned **seven** education-specific
+agents that five prior passes had missed:
+[`canvas-pilot`](https://github.com/X-isdoingreat/canvas-pilot) (`AGPL-3.0`, `125★`),
+[`interactive-learning`](https://github.com/geekjourneyx/interactive-learning) (`MIT`, `52★`),
+[`AI-Grading-Tool`](https://github.com/end13s/AI-Grading-Tool) (**no licence**, `0★`),
+[`mini-homework-agent`](https://github.com/chaoyuhao/mini-homework-agent) (`MIT`, `0★`),
+[`canvas-ai-agent`](https://github.com/jans-johnson/canvas-ai-agent) (`MIT`, `0★`),
+[`opencode-class-agents`](https://github.com/DTA-Projects/opencode-class-agents) (`MIT`, `0★`),
+[`Canvas-grading-with-AI`](https://github.com/jlouisbru/Canvas-grading-with-AI) (`MIT`, `0★`).
+🔴 **Median star count: `0`. Modal contributor count: `1`. Three of the seven carry no
+usable grant or a network-copyleft one.** All figures read from rendered repository
+sidebars, not roundups.
+
+🔵 **The finding is not "there are few education agents" — it is the opposite.** There
+are many; they are simply invisible to every ranking mechanism, because GitHub Trending
+and "top repos" roundups both sort by star velocity and a population with a median of
+zero generates none. 🟢 **Five consecutive passes of "nil on supply" in this base were a
+measurement artefact, not a market fact.**
+
+🟢 **Why it is this way.** An education agent is usually written by one instructor to
+solve one course's grading or tutoring problem against one institution's LMS. It works,
+it is published, and it stops — because its author's need is met. 🔵 **There is no
+user base to accumulate**, since the next instructor's rubric, LMS tenant and
+institutional policy differ enough that forking is as much work as rewriting. This also
+explains the licence pattern: **a researcher publishing a course tool does not think
+about grants**, which is how this base has accumulated four substantial unlicensed
+education repositories (`llamatutor` at `2.1k★`, `AITutor-EvalKit`, `educational-agents`,
+`AI-Grading-Tool`).
+
+🟢 **What it implies for an engagement — the operative part.** In most verticals the
+adopt-vs-build question is *which mature project do we fork*. 🔴 **In education that
+question has no good answer at the workflow layer, and a studio that goes looking for one
+will burn a sprint discovering it.** 🟢 **The correct shape is: adopt the CONNECTOR,
+build the WORKFLOW.** The connector layer genuinely has traction and permissive
+licences — `canvas-mcp` (`MIT`, `324★`), `Moodle-MCP` (`MIT`, `206★`),
+`mcp-odoo` (`MIT`, `433★`), `learnmcp-xapi` — because a connector's value *does*
+accumulate across institutions. 🔵 **The grading or tutoring loop on top should be
+written, not adopted**, and the `0★` repositories above should be read as **design
+references** for that loop rather than as dependencies. `P22` is this recipe made
+concrete.
+
+🟢 **A second, cheaper implication: always check the grant before the stars.** The most
+functionally complete Moodle grader found this window (`AI-Grading-Tool`, `134` commits)
+is unusable, and the highest-starred new agent (`canvas-pilot`, `125★`) is AGPL-3.0 with
+`1` commit. 🔴 **Neither fact is visible from a search result snippet** — both required
+reading the repository page.
+
+## T25 — The same education product changes regulatory category by the LEARNER'S AGE, not by what the software does
+
+🟢 **Evidence (`p808`, 2026-11-13).** South Korea's **AI Basic Act** (in force
+`2026-01-22`) reaches education through a clause covering **student assessment in
+early-childhood, primary and lower-secondary education**. 🔴 **It does not reach higher
+education or corporate training.** The EU AI Act's **Annex III**, by contrast, covers
+admissions, examination and evaluation across education *and vocational training* — all
+levels — with those duties applying from **`2027-12-02`** after the Digital/AI Omnibus
+delay. 🔵 **Vietnam** (binding law, commencement `2026-03-01`) places education in its
+high-risk category with pre-deployment registration; **Taiwan's** framework AI Basic Act
+names education but imposes no education-specific duties at all.
+
+🟢 **So four jurisdictions take four different cuts at the same vertical**, and the axis
+that separates them is **not function**. An automated essay grader is: high-impact in
+Korea if the learners are `9` and out of scope if they are `19`; high-risk in the EU in
+both cases; registrable in Vietnam; unregulated in Taiwan.
+
+🔵 **Why this is a trend and not merely a compliance note.** Through 2025 the working
+assumption across this base was that AI regulation would converge on a risk-based model
+with education as a named high-risk sector — the EU template. 🔴 **2026's instruments
+have diverged instead**, and they diverge on *scope definitions* rather than on duties:
+the duties (risk management, human oversight, notification, impact assessment) are
+strikingly similar everywhere, while **who is covered** is drawn differently in each
+statute.
+
+🟢 **Engagement consequence.** A multi-region education product needs **one control set
+and several scope memos**, not several control sets. 🔵 **Build the conformity artefacts
+once** — impact assessment, human-oversight design, notification surface, model and data
+documentation — because every regime wants roughly the same evidence. 🔴 **Then decide
+per jurisdiction whether they are mandatory**, and record that decision, because in Korea
+classification is an operator **self-assessment** (MSIT confirmation is optional) and the
+exposure for getting it wrong sits with the client. 🟢 **A proposal that says "education
+is high-risk, here is our compliance package" is wrong in Korea for higher ed, wrong in
+Taiwan everywhere, and over-priced in both.**
+
+🔴 **Status: search-tier.** Primary statutory texts could not be reached this window —
+`cset.georgetown.edu`, `digital-strategy.ec.europa.eu` and the other issuing hosts do not
+resolve under this session's network policy. The Korean scope clause is corroborated
+across several independent translations that agree on substance; `ACTION p808-A` tracks
+confirmation against the statute.
+

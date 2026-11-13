@@ -6,12 +6,14 @@ updated: 2026-11-13
 
 # Education AI — market map and opportunities by region
 
-Researched 2026-11-13, across **twelve** passes; each region's updates are
-ordered **newest first** directly under its heading. 🔴 **This line said "four
-passes" through the twelfth pass (`p807`) while the file held twelve** — the same
-prose-count drift that `agents/top.md` and `compose/patterns.md` have each had to
-correct. It was produced by counting `#### Update` blocks, and the next pass should
-count them rather than carry this sentence forward. Where sources disagree, the disagreement is shown rather
+Researched 2026-11-13, across **thirteen** passes; each region's updates are
+ordered **newest first** directly under its heading. 🟢 **Thirteenth pass (`p808`):
+`44` `#### Update` blocks across five regions — North America `10`, EMEA `10`,
+APAC `10`, LATAM `10`, Global `4`.** 🔴 **This line said "four passes" through the
+twelfth pass (`p807`) while the file held twelve** — the same prose-count drift that
+`agents/top.md` and `compose/patterns.md` have each had to correct. 🔵 **Re-derive with
+`grep -c '^#### ' intel/market.md` rather than carrying this sentence forward**; the
+pass number is the per-region block count, not the total. Where sources disagree, the disagreement is shown rather
 than averaged away. Market-size figures for AI in education come largely from
 vendor blogs citing differing research firms and should be treated as
 order-of-magnitude only.
@@ -89,6 +91,46 @@ across EMEA.
 ## Opportunities by region
 
 ### North America
+
+#### Update 2026-11-13 (thirteenth pass, `p808`) — 🔴 NIL. Every instrument the leg returned is already held; the leg is now saturated for a third consecutive window
+
+🔴 **Zero new North American facts this pass.** The leg
+`AI education North America 2026 adoption regulation players` ran and returned a
+substantial result set — **and every single item in it was already carried in this
+file.** Recorded item by item, because "nil" is only trustworthy if it is auditable:
+
+| Returned by the leg | Status in this file |
+|---|---|
+| `134` AI-in-education bills across `31` states, 2026 session | 🟢 Already held (three times — lines ~`174`, ~`197`, ~`300`) |
+| California `AB 1159` — bars student data training AI models | 🟢 Already held |
+| Idaho `SB 1227` — privacy protections for school AI tools | 🟢 Already held |
+| New York `A 9190` — restricts classroom AI to grade 9+ | 🟢 Already held |
+| North Carolina `Session Law 2026-41` — AI-literacy standards, model policy by `2026-12-31`, local policies by `2027-06-30`, teacher training by `2028-06-30` | 🟢 Already held |
+| `K-12 AI Literacy and Readiness Act of 2026` — advanced in House committee | 🟢 Already held |
+| April 2025 executive order on AI education for American youth | 🟢 Already held, and given its citation at `p807` |
+| CA ballot initiative *"Parents & Kids Safe AI Act"* (OpenAI / Common Sense Media) | 🟢 Already held |
+| D.C. non-mandatory `2026-27` guidance barring AI from grading and discipline | 🟢 Already held |
+
+🟢 **This is the third consecutive pass on which the North American leg has returned
+nothing new, and the second on which it returned nothing new *at all* rather than merely
+nothing material.** 🔵 **The reading is that US state-level AI-in-education legislation
+has reached a stable, well-indexed corpus** — the trackers that cover it
+(`FutureEd`, `MultiState`, `ExcelinEd`) are comprehensive and this file now mirrors them.
+🔴 **A nil here should not be read as "nothing is happening"**: the `2027` compliance
+deadlines in the NC law and the pending CA ballot initiative are both live and both
+already documented below. 🟢 **Recommended for future passes: stop re-running the general
+NA leg and instead track the three dated deadlines this file already holds.**
+
+🔴 **Methodological caveat that applies to this whole pass and is NOT a property of the
+region.** Primary-source verification was **unavailable** this window: the session's
+network policy resolves `github.com` but **not** `multistate.us`, `future-ed.org`,
+`holoniq.com`, `digital-strategy.ec.europa.eu` or `iesalc.unesco.org` — all returned
+`ENOTFOUND` at the DNS layer. 🔵 **Every regional fact in this pass is therefore
+search-tier, and none of the figures above were re-confirmed against the issuing body.**
+🟢 **They were not changed either** — nothing was overwritten on weaker evidence than it
+was originally written with. `ACTION p808-N`: re-verify the NC and CA instruments against
+primary sources in a session whose network policy allows those hosts.
+
 
 #### Update 2026-11-13 (twelfth pass, `p807`) — 🟢 the federal instrument this file has described in prose for five passes now has a NUMBER, a CITATION and an EFFECTIVE DATE — and it is not a "rule"
 
@@ -512,6 +554,41 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-13 (thirteenth pass, `p808`) — 🔴 NIL on instruments. The EU AI Act high-risk delay, the UK standards and the Gulf guidance were all returned and all already held
+
+🔴 **Zero new EMEA facts this pass.** The leg
+`AI education EMEA 2026 adoption regulation players` returned:
+
+| Returned by the leg | Status in this file |
+|---|---|
+| EU AI Act Annex III high-risk duties for education **postponed `2026-08-02` → `2027-12-02`** via the Digital/AI Omnibus | 🟢 Already held (`Regulation (EU) 2026/1744`, carried `5×`) |
+| Omnibus amendments adopted June 2026, in force `2026-07-27` | 🟢 Already held |
+| Education AI for admissions, grading and cheating-detection classified high-risk | 🟢 Already held |
+| UK DfE generative-AI product safety standards, January 2026 | 🟢 Already held |
+| Ofqual material on AI and coursework integrity | 🟢 Already held |
+| Dubai `KHDA` guidance to private schools; UAE national AI strategy | 🟢 Already held |
+| OpenAI EMEA education report; partnerships in Estonia, Slovakia, Greece, Italy | 🟢 Already held |
+| EU Education and Skills Package | 🟢 Already held |
+
+🟢 **The one thing worth re-stating, because it is the single most commercially decisive
+date in this file and the sources returned it inconsistently.** Several guides in the
+result set **still quote `2 August 2026`** for high-risk obligations — the pre-Omnibus
+date. 🔴 **That date is superseded.** The operative date carried here is
+**`2 December 2027`**. 🔵 **The European Commission's own milestone page was described by
+one source as internally inconsistent**, which is consistent with what `p805` recorded
+when it first established the delay. 🟢 **Practical consequence for scoping, unchanged
+but worth repeating: an EMEA education engagement started today has roughly two years
+before Annex III conformity duties bite, which is a reason to build the conformity
+artefacts in from the start rather than a reason to defer them.**
+
+🔴 **Could not be verified against the primary source this window.**
+`digital-strategy.ec.europa.eu` does not resolve under this session's network policy
+(`ENOTFOUND`). 🔵 **The `2027-12-02` date therefore rests on the search tier plus five
+prior passes of this file, not on a reading of the Official Journal this window.**
+`ACTION p808-E`: confirm `Regulation (EU) 2026/1744`'s Article on Annex III commencement
+against EUR-Lex when a session can reach it.
+
 
 #### Update 2026-11-13 (twelfth pass, `p807`) — 🔴 regulatory nil for a THIRD consecutive pass, and the only EMEA movement is a corporate one recorded under Global
 
@@ -956,6 +1033,67 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-13 (thirteenth pass, `p808`) — 🟢 THE ONE GENUINE REGIONAL GAIN THIS PASS: Korea's education high-impact scope is NARROWER than this file has implied, and the narrowing decides whether a Korean university engagement is regulated at all
+
+🟢 **This is the only region that returned something new this pass, and it is a
+narrowing, not an addition.** The leg
+`Korea AI Basic Act January 2026 education high-impact AI obligations` was run as a
+differentiated follow-on after the general APAC leg came back fully saturated.
+
+🔴 **What this file has carried:** *South Korea's AI Basic Act entered into force
+`2026-01-22`; education is a high-impact category.* 🟢 **That is true but too coarse to
+scope against.** The statutory definition of high-impact AI reaches education through a
+**specific clause**, and the clause is about **student assessment in early-childhood,
+primary and lower-secondary education**. 🔵 **Multiple English renderings agree on the
+shape** (one gives *"early childhood education, elementary education, and secondary
+education"*, another *"early childhood, primary, and lower secondary"*), **and none of
+them reaches higher education or corporate training.**
+
+🟢 **Why this matters commercially, which is the whole reason it is recorded:**
+
+- 🟢 **A Korean *university* engagement — admissions analytics, an LMS tutor, a
+  higher-ed advising agent — is most likely NOT high-impact under this Act.** That is the
+  opposite of the EU AI Act, whose Annex III explicitly covers admissions and
+  examination at *all* levels including vocational.
+- 🔴 **A K-9 assessment or grading product IS squarely in scope**, and the duties are
+  real: risk management, documented human oversight, user notification, and a
+  **pre-deployment AI impact assessment**.
+- 🔵 **So the same product crossing from the EU to Korea changes category depending on
+  the age of the learner, not the function of the software.** A proposal that assumes
+  "education = high-risk everywhere" will over-scope a Korean higher-ed deal and
+  under-scope a Korean K-9 one.
+
+🟢 **Two further mechanics this file did not carry:**
+
+1. 🔵 **Classification is by operator SELF-ASSESSMENT**, with an **optional** confirmation
+   request to **MSIT** (the Ministry of Science and ICT). 🟢 **There is no mandatory
+   regulator pre-clearance** — which makes the classification memo a deliverable the
+   studio can own, and makes getting it wrong the client's exposure.
+2. 🔵 **Administrative fines under Article 43 — up to `30 million KRW` per violation —
+   are DEFERRED to `2027-01-22`.** 🟢 **The grace period through 2026 is guidance-led:**
+   other high-impact duties carry no direct monetary penalty and escalate only through
+   guidance and corrective orders. 🔴 **"In force" and "enforceable by fine" are a year
+   apart for this statute**, and this file previously carried only the first.
+
+🔴 **Nil on everything else in the region, listed so the nil is auditable.** The general
+APAC leg returned Vietnam's binding law (education high-risk, commencement `2026-03-01`,
+pre-deployment registration, conformity assessment, human oversight), Australia's
+**TEQSA** requirement that **all** higher-education providers file institutional
+generative-AI action plans, China's algorithm/deepfake/generative rules with penalties to
+`¥50M`, Singapore's **AI Verify**, Japan's voluntary light-touch model, Hong Kong's AI
+R&D institute, and the EU AI Act's extraterritorial reach onto APAC ed-tech selling into
+the EU. 🟢 **All already held.**
+
+🔴 **Verification caveat:** the Korean statutory text could not be read directly this
+window — `cset.georgetown.edu` and the other primary hosts do not resolve under this
+session's network policy. 🔵 **The scope narrowing above is corroborated across several
+independent secondary renderings that agree on substance while differing on translation,
+which is why it is recorded as a gain rather than held back** — but it is search-tier.
+🟢 `ACTION p808-A`: confirm the high-impact education clause and the Article 43 deferral
+against the official statute or the CSET translation when a session can reach them.
+**Until then, do not quote the `30 million KRW` figure to a client without the caveat.**
+
+
 #### Update 2026-11-13 (twelfth pass, `p807`) — 🟡 near-nil, with one date this file was missing and one regional posture it had never characterised
 
 🔴 **Near-complete nil on instruments.** The APAC leg returned Korea's **AI Basic Act**,
@@ -1367,6 +1505,47 @@ procurement-led" corner of that matrix, which `P5` did not previously have a nam
 example of.
 
 ### LATAM
+
+#### Update 2026-11-13 (thirteenth pass, `p808`) — 🔴 NIL. The UNESCO IESALC and DEC figures were returned again and are already held; the region's governance-gap thesis reproduced unchanged
+
+🔴 **Zero new LATAM facts this pass.** The leg
+`AI education LATAM 2026 adoption regulation players` returned:
+
+| Returned by the leg | Status in this file |
+|---|---|
+| UNESCO IESALC: `87%` of institutions using AI in at least one area; only `26%` with a formal framework | 🟢 Already held |
+| UNESCO: fewer than `10%` of institutions have formal classroom AI guidelines | 🟢 Already held |
+| Digital Education Council LATAM survey: `92%` of students, `79%` of faculty actively engaging with AI | 🟢 Already held |
+| Uruguay (`Ceibal`, 2026): `75%` of public-school teachers using AI tools | 🟢 Already held |
+| Brazil (`Cetic.br`, 2026): `65%` of internet users aged 9–17 using AI; only `22%` report school guidelines | 🟢 Already held |
+| Universidad de los Andes: `716` AI regulatory instruments across `23` countries and territories | 🟢 Already held |
+| Brazil `PL 2.338/2023` — risk-based, Senate-approved, pending in the Chamber | 🟢 Already held |
+| Colombia `CONPES 4144` (February 2025) national AI policy | 🟢 Already held |
+| UNESCO Observatory on AI in Education for LAC, launched Santiago, April 2026 | 🟢 Already held |
+| WEF *Latin America in the Intelligent Age* white paper | 🟢 Already held |
+| `7` countries formally adopting the OECD AI Principles | 🟢 Already held |
+
+🟢 **The region's central thesis in this file — adoption far ahead of governance —
+reproduced exactly, from independent sources, for a third consecutive window.** 🔵 **The
+sharpest single framing returned this pass is worth quoting because it compresses the
+whole opportunity:** *there are roughly ten times more universities using AI than
+universities measuring what it delivers.* 🟢 **That gap is the LATAM engagement thesis
+and it is now triple-sourced** (IESALC `87%`-vs-`26%`, DEC `92%`/`79%`, and the
+measurement framing above).
+
+🔴 **The nil is NOT evidence the region is quiet.** It is evidence that this file's LATAM
+coverage has caught up with the available secondary literature, which is dominated by a
+small number of heavily-recirculated studies (IESALC, DEC, Cetic.br, Ceibal). 🔵 **The
+consequence is that further general-leg searching here has low expected yield**, and a
+future pass is better spent on the measurement gap itself — **what instruments, if any,
+LATAM institutions use to evaluate AI outcomes** — which is where this file is genuinely
+thin and where the `10:1` framing says the demand is.
+
+🔴 **Verification caveat:** `iesalc.unesco.org` does not resolve under this session's
+network policy (`ENOTFOUND`), so the `87%` / `26%` figures were not re-confirmed at
+source this window. 🟢 **They were not altered either.** `ACTION p808-L`: re-confirm the
+IESALC sample size and publication date against the issuing body when reachable.
+
 
 #### Update 2026-11-13 (twelfth pass, `p807`) — 🔴 a second consecutive complete nil, and that is now a finding about the CHANNEL rather than the region
 

@@ -3,6 +3,64 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+
+## `2026-11-13` (thirteenth pass) — **The trending channel nils for a sixth time, but the LMS-seam leg returned seven repositories; the trending channel is simply the wrong instrument for this vertical**
+
+**Pass `p808`.** 🔴 **`0` education-specific repositories from the GitHub trending leg —
+sixth consecutive pass.** `github trending education AI 2026` returned `HKUDS/DeepTutor`,
+`SirhanMacx/Claw-ED` and `ChinaTextbook`. 🟢 **The first two are already shelved**
+(`DeepTutor` in `agents/top.md` at `58.7k★`; `Claw-ED` likewise). 🔵 **`ChinaTextbook` is
+not an agent or a library at all** — it is a free-access archive of Chinese textbooks, so
+it is a *content corpus*, not a repository this base shelves. Recorded so a future pass
+does not re-evaluate it.
+
+🔵 **Provenance caution, repeated for the sixth pass because it keeps mattering.** The
+star figures in that leg trace to `coddykit.com` / `aitoolly.com` style roundups and to
+`trendshift.io` rank pages, which are promotional and whose numbers move in both
+directions between windows. 🔴 **No figure from those sources has ever been adopted onto a
+shelf without a rendered-page read, and none was this pass either.** `geekjourneyx/interactive-learning`
+appeared in that same leg via a Trendshift rank page quoting no description and no
+licence; it was shelved only after the GitHub sidebar was read directly (`MIT`, `52★`).
+
+### The conclusion this leg has now earned, after six nils
+
+🟢 **GitHub Trending is structurally incapable of surfacing this vertical, and the base
+should stop expecting it to.** Trending ranks by *velocity of stars*, and the education
+agent population — as this pass established across seven repositories — has a **median of
+`0★`**. 🔴 **A population whose median is zero cannot produce velocity.** The only
+education repositories that ever trend are the two or three outliers already shelved
+(`DeepTutor`, `OpenMAIC`, `LearnHarness`), and they trend repeatedly, which is why this
+leg returns the same three names every window.
+
+🔵 **Recommended change to the prescribed battery, for whoever maintains it:** the
+trending leg's budget is better spent on a **seam-named** query
+(`...agent github MIT LMS Moodle Canvas integration`), which returned **seven** repositories
+this pass against trending's **zero**. 🟢 **Keep the trending leg — it is cheap and it
+confirms the outliers — but stop scoring it as a supply channel.**
+
+### Repositories surfaced this window (all licence/star figures sidebar-verified `2026-11-13`)
+
+| Repo | Licence | Stars | Note |
+|---|---|---|---|
+| [`geekjourneyx/interactive-learning`](https://github.com/geekjourneyx/interactive-learning) | MIT | 52 | 🟢 Shelved to `agents/top.md`. Skill package producing a **verifiable** learning path + HTML checkpoint card. `4` commits. |
+| [`X-isdoingreat/canvas-pilot`](https://github.com/X-isdoingreat/canvas-pilot) | AGPL-3.0 | 125 | 🟢 Shelved to `agents/top.md` copyleft. 🔴 `125★` against `1` commit — do not quote the star count as evidence of maintenance. |
+| [`end13s/AI-Grading-Tool`](https://github.com/end13s/AI-Grading-Tool) | **none** | 0 | 🔴 Rejected — no grant. Only *Moodle*-targeted grader found. `134` commits. |
+| [`chaoyuhao/mini-homework-agent`](https://github.com/chaoyuhao/mini-homework-agent) | MIT | 0 | 🔵 Recorded. Review-before-publish grading; Canvas + Fudan eLearning. |
+| [`jans-johnson/canvas-ai-agent`](https://github.com/jans-johnson/canvas-ai-agent) | MIT | 0 | 🔵 Recorded. Conversational Canvas agent, `17` commits. |
+| [`DTA-Projects/opencode-class-agents`](https://github.com/DTA-Projects/opencode-class-agents) | MIT | 0 | 🔵 Recorded. Per-class tutor agents for `opencode` over a zero-dependency Canvas API helper. |
+| [`jlouisbru/Canvas-grading-with-AI`](https://github.com/jlouisbru/Canvas-grading-with-AI) | MIT | 0 | 🔵 Recorded. Google Apps Script; rubric/answer-key essay grading with a FERPA-framed workflow. `80` commits. |
+
+🔴 **No new *foundational* repository was found this pass.** The vertical leg
+(`open source platform education ERP CRM MIT Apache`) returned `OpenEduCat`, `Krayin`,
+`Huly` and `ERPNext` — **all four already held**, and the eighth-to-ninth consecutive nil
+on that leg. 🟢 **One useful confirmation came out of it:** `OpenEduCat`'s licence was
+independently re-read this pass and is **`LGPL-3.0`** (`911★`), matching what
+`verticals/solutions.md` already carries. 🔵 **The search result itself did not state the
+licence** — it had to be read from the repository's README badge, because the GitHub
+sidebar renders no SPDX name for it. That is worth knowing: any future automated licence
+scrape of `OpenEduCat` will come back empty, not wrong.
+
+---
 ## `2026-11-13` (twelfth pass) — **A fifth nil from the trending channel, and the vertical leg's repeated nil finally yielded a structural reading: every education ERP/CRM in the open is copyleft, every permissive one is general-purpose**
 
 **Pass `p807`.** 🔴 **`0` education-specific repositories from the GitHub trending leg,
