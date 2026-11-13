@@ -3,6 +3,130 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+## `2026-11-13` (fifth pass) — **`Gap 284` CLOSED: Caliper has exactly one permissive implementation, and no amount of slug-guessing could ever have found it**
+
+**Window:** foundational education repos, specifically the **analytics /
+telemetry edge** — the one interoperability edge this KB had declared had no
+permissive implementation. Verified 2026-11-13 from rendered repository pages
+and, where the sidebar shows only a generic "License" link, from the `LICENSE`
+file itself. **40 repos now in `repos/foundations.md`, up from 34.**
+
+**Channel note, unchanged and re-tested.** `curl -sI https://github.com/...`
+returns **`403` for every path**; a `curl` probe cannot distinguish a live
+repository from a 404. Verification is by rendered page plus payload read.
+
+### `Gap 284` — CLOSED, and the method is the transferable part
+
+`Gap 284` was declared as **"Caliper Analytics has no reachable permissive
+implementation."** Its bounded remedy was recorded as: *"resolve the 1EdTech
+GitHub org name from a registry `repository` field (`P780`) rather than guessing
+slugs."* The previous pass had tried four spellings of `caliper-python`, two of
+`caliper-java`, and five npm names, and got nothing.
+
+🟢 **What worked was simpler and should become the default: list the
+organisation's repositories with GitHub's own filter —
+`github.com/orgs/<ORG>/repositories?q=caliper` — instead of guessing slugs
+inside it.** One request per org returned a complete, licensed inventory.
+
+🔴 **And it immediately explained the four passes of failure.** The 1EdTech org
+contains **exactly five** `caliper` repositories, and **the canonical JavaScript
+sensor is not one of them**: both
+[`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) and
+[`IMSGlobal/caliper-js`](https://github.com/IMSGlobal/caliper-js) return **404**.
+1EdTech's own Best Practice Guide advertises Sensor API reference code in Java,
+JavaScript, PHP, Python, Ruby and .NET, and states that *Contributing Members
+and Affiliates can request GitHub access* — **the reference sensors are
+member-gated, so the slug this KB kept guessing has no public repository at
+all.** That is the root cause, and it is a licensing-adjacent fact worth
+carrying: **Caliper's reference layer is behind consortium membership in a way
+xAPI's is not.**
+
+🟢 **And it is documented, not inferred — this is the strongest single piece of
+evidence in the pass.** `tl-its-umich-edu/caliper-php-public`'s own repository
+description reads, verbatim: *"This fork of IMS Global's public release of
+caliper-php includes additional features needed at Univ. of Michigan. … **This
+had been archived, but has been unarchived following 1EdTech making its
+caliper-php private.**"* 🔴 **So the upstream was not merely unindexed — it was
+made private, which means no spelling of the slug could ever have resolved it.**
+The University of Michigan un-archived a dormant fork specifically to keep the
+library reachable. The chain is **1EdTech → Unizin → Michigan**
+(`caliper-php-public` is itself forked from `UnizinAnalytics/caliper-php-public`).
+🔵 **Generalise it: for any member-gated standard, the reachable code is in the
+university and consortium forks, and a fork's *description* may tell you why.**
+
+🟢 **The permissive implementation exists, and it is outside both orgs.**
+[`CarnegieLearningWeb/caliper-ts`](https://github.com/CarnegieLearningWeb/caliper-ts)
+is **MIT** — and the sidebar does **not** say so. It shows a bare "License"
+link; the grant is in the `LICENSE` file, reading `MIT License` /
+`Copyright (c) 2021 Imagine Learning`. **A pass that reads only the sidebar
+records this repo as unlicensed and the gap as still open**, which is very
+likely part of why it stayed open. 225 commits on `main`, TypeScript port of the
+unpublished `caliper-js`, default `dataVersion`
+`http://purl.imsglobal.org/ctx/caliper/v1p1`.
+
+### New entries (6) — the whole Caliper implementation layer, with its licence split
+
+| Repo | License | Stars | Why it is admitted |
+|---|---|---|---|
+| https://github.com/CarnegieLearningWeb/caliper-ts | **MIT** (read from `LICENSE`; sidebar shows only a generic "License" link) | 0 | **The row that closes `Gap 284`: the only permissively licensed Caliper sensor found anywhere.** TypeScript implementation of the Caliper Sensor API, a port of the never-published `caliper-js`. Entity factories for Assessment, AssessmentItem, Person, Session, SoftwareApplication and Membership; `createSessionEvent` / `createAssessmentEvent` in its examples. 225 commits, 1 fork, Releases empty. **Three adoption caveats, all of which must be in the estimate:** (1) it publishes to the **GitHub Package Registry** as `@imaginelearning/caliper-ts`, **not public npm**, so a build needs an `.npmrc` scoped to `@imaginelearning`; (2) **0 stars** — a real library with no community, so budget to carry it; (3) its events and entities are generated by `caliper-code-generator` **from `caliper-net`, which is LGPL-3.0** — the generated output here carries an MIT grant, but read the generator's terms before regenerating anything yourself. |
+| https://github.com/open-lms-open-source/moodle-logstore_caliper | GPL-3.0 | 1 | **The only Caliper emitter for a real LMS found at any licence.** Moodle logstore plugin, contributed by the Moodlerooms product team: a three-stage **Expander → Translator → Emitter** pipeline that pushes Moodle log events to an event store through the Caliper Sensor API, with **immediate or batched** delivery configured by Event Store URL, API key, send-immediately flag and batch size. Installs onto **Moodle 2.7+**. 66 commits, 7 forks, 7 open issues, Releases empty. 🟢 **GPL-3.0 is the correct and harmless licence here, and this needs saying because this KB's own rule is "do not fork the LMS":** a Moodle plugin lives inside a GPL-3.0 host and is expected to be GPL-3.0. It does not reach the separately-deployed MIT/Apache AI layer. [`1EdTech/moodle-logstore_caliper`](https://github.com/1EdTech/moodle-logstore_caliper) is a 13-commit fork of this repo — **use this upstream, not the fork.** |
+| https://github.com/tl-its-umich-edu/caliper-php-public | LGPL-3.0 | 3 | **The reachable copy of the member-gated PHP reference sensor.** Its own description: a fork of *IMS Global's public release of `caliper-php`* with additional features needed at the University of Michigan. **This is how to get at the reference lineage without consortium membership** — the public releases were forked by universities, and the forks are indexed where the originals are not. Matters because Moodle and Chamilo are PHP shops. Sibling in the same org: `umich-caliper-php` (LGPL-3.0, "caliper-php with extensions"). 🔴 **LGPL-3.0 propagates on modification**, so extend by composition and keep changes to the library itself publishable. |
+| https://github.com/UnizinAnalytics/caliper-net-public | LGPL-3.0 | 0 | **The .NET reference sensor, and the most complete profile coverage found.** Implements the Caliper Sensor API across **nine Metric Profiles — Base, Session, Reading, Annotation, Assignable, Assessment, Assessment Item, Outcome and Media**, which is the broadest profile list of any Caliper repo in this table and the reason to read it even on a non-.NET engagement: it is the de facto specification of what a complete sensor covers. No description, no releases, 0 stars. From **Unizin**, the US higher-education consortium — **North American provenance, which is exactly where Caliper gets specified.** It is also the source of the `caliper-code-generator` that generates `caliper-ts`. |
+| https://github.com/tl-its-umich-edu/caliper-event-analysis | **Apache-2.0** | 1 | **The analytics half, permissively licensed.** Jupyter notebooks for analysing and visualising collected Caliper events, from a collaboration between University of Michigan Teaching & Learning and **U-M CSCAR** (its statistics consulting group). Not a sensor and not a store — it is the layer that makes emitted events answer a question, which is the part a client actually buys. Apache-2.0 means the notebooks can seed a client deliverable directly. |
+| https://github.com/open-ent/caliper | 🔴 **No license field shown** | 0 | **The only Caliper _event store_ found, and it cannot be adopted.** Open ENT module implementing **Caliper Analytics 1.2** — the newest version in this table — as **both** an event store (`POST`/`GET /ims/caliper/v1p2/events`, bearer-token auth) **and** a sensor that forwards Open ENT access and login events onward, mapped to `ToolUseEvent`/`Used` and `SessionEvent`/`LoggedIn`. Vert.x, SQL schema `caliper`, port 8174, **33 unit tests**. From **Open ENT**, the French regional *espace numérique de travail* platform — **EMEA public-education provenance, usable in an EU data-sovereignty conversation.** 🔴 **Admitted as a design reference only:** no licence on the page, so it is all-rights-reserved, and the README states Assessment, Grading, Forum and Media profiles are **not implemented** because the ENT does not record those events. Worth a licence request. |
+
+### What the closure actually changes, stated precisely
+
+`Gap 284` said the shelf had **four of five interoperability edges with a
+permissive implementation — launch, roster, content, learning record — and that
+the missing fifth was analytics.** 🟢 **All five edges now have one.** But the
+fifth is **not** equivalent to the other four, and an engagement must be priced
+on the difference:
+
+| | xAPI (learning record) | Caliper (analytics) |
+|---|---|---|
+| Permissive **store** | 🟢 `yetanalytics/lrsql`, **Apache-2.0, 144★**, Postgres 14–18 / MariaDB / MySQL / SQLite matrix | 🔴 **None.** The only store found (`open-ent/caliper`) is **unlicensed** |
+| Permissive **sensor/client** | 🟢 `openfun/ralph` (MIT, 51★) + `DavidLMS/learnmcp-xapi` (MIT, 16★) | 🟡 `caliper-ts` (MIT, **0★**, GitHub Package Registry only) |
+| **LMS** emitter | 🟡 via plugins and xAPI wrappers | 🟢 `moodle-logstore_caliper` (GPL-3.0, Moodle 2.7+) |
+| Reference layer | 🟢 public | 🔴 **member-gated** (1EdTech Contributing Members/Affiliates) |
+
+🟢 **Revised recommendation, replacing "Caliper is greenfield":** where the
+client is free to choose, **still choose xAPI** — `T9`'s reasoning is unchanged
+and the store asymmetry above is the reason. Where a contract **names Caliper**
+(and in North American higher ed it often does), the honest answer is no longer
+"that is a build with no open starting point." It is: **an MIT sensor, a
+GPL-3.0 Moodle emitter, an Apache-2.0 analysis layer and a complete nine-profile
+reference to work from — but you write the event store.** That is a materially
+smaller and differently-shaped project than this KB has been quoting.
+
+### Defect fixed in this base this pass
+
+🔴 **`repos/foundations.md` contradicted itself.** Its header and its LTI section
+both recorded the fourth pass's correction — `dmitry-viskov/pylti1.3` (MIT, 138★)
+is a Python LTI 1.3 Advantage library — while its **Declared gaps** section still
+carried the bullet **"No LTI 1.3 library in Python … A Python LTI 1.3
+tool-provider library remains genuinely greenfield."** 🟢 **Removed and replaced
+this pass.** Noted here rather than fixed silently, because a stale gap bullet is
+worse than no gap bullet: the gap list is what gets read into a proposal, and
+this one would have sold a client a library that already exists.
+
+### Informed negatives from this pass
+
+- 🔴 **No permissive Caliper event store exists.** Searched the 1EdTech,
+  Unizin and U-M Michigan orgs by repository listing, not by slug guess. The
+  only store found is unlicensed (`open-ent/caliper`). **This is the one Caliper
+  component that is still genuinely a build**, and it is now `Gap 287`.
+- 🔴 **No Caliper Python or Ruby implementation is publicly reachable.** The
+  Best Practice Guide names both; neither appears in any public org listing
+  checked. Consistent with the member-gating finding rather than an additional
+  mystery.
+- 🔴 **No Caliper 1.2 permissive implementation.** `caliper-ts` defaults to
+  **v1.1**; the only **1.2** implementation found is the unlicensed
+  `open-ent/caliper`. A client specifying Caliper **1.2** is further from the
+  shelf than one specifying 1.1 — ask which version the contract names.
+
+---
+
 
 ## `2026-11-13` (fourth pass) — **The "no Python LTI library" finding was wrong, and it had an entire architecture built on top of it**
 

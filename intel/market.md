@@ -246,6 +246,56 @@ primary source and is therefore not asserted above**. For anything that will
 appear in a proposal, verify against the state legislature or department of
 education directly.
 
+#### Update 2026-11-13 (fifth pass) — the one telemetry standard North America specifies now has a priced path, and two new restriction instruments surfaced
+
+🟢 **The opportunity that is specific to this region, and it is new.** **Caliper
+Analytics is the 1EdTech-native learning-analytics standard and is the one most
+often written into North American higher-ed procurement** — xAPI dominates
+everywhere else. Until this pass this KB told a Caliper-bound client it had "no
+open starting point; that is a build, and it must be priced as one." **That is
+withdrawn.** Six implementations are now verified (`repos/foundations.md`), and
+the regional detail matters: the most complete one,
+`UnizinAnalytics/caliper-net-public` (LGPL-3.0, **nine Metric Profiles** — Base,
+Session, Reading, Annotation, Assignable, Assessment, Assessment Item, Outcome,
+Media) comes from **Unizin, the US higher-education consortium**, and the
+permissively licensed analysis layer,
+`tl-its-umich-edu/caliper-event-analysis` (**Apache-2.0**), comes from the
+**University of Michigan** with its statistics consulting group CSCAR.
+🔵 **Both are North American institutional provenance, which is usable evidence
+in a US higher-ed procurement conversation in a way an EU or APAC repo is not.**
+
+🔴 **The one Caliper component that is still a build: the event store.** The only
+one found (`open-ent/caliper`, Caliper 1.2) carries **no licence**. **So the
+revised North American pitch is: an MIT sensor, a GPL-3.0 Moodle emitter, an
+Apache-2.0 analysis layer and a nine-profile reference to scope against — you
+write the store and nothing else.** That is a line item, not a project
+(pattern `P11`). 🔴 **Ask which Caliper *version* the contract names in week
+one:** the only verified sensor defaults to **v1.1** and the only **v1.2**
+implementation is the unlicensed one.
+
+🟡 **Two further regulatory instruments surfaced this pass, both recorded with
+their uncertainty rather than asserted.**
+
+- **Texas HB2400** — reported as **banning AI from providing direct classroom
+  instruction**. 🔴 **One secondary source calls it enacted; this pass could not
+  confirm it against official legislative records, so it is logged as
+  unverified.** If real it is the most restrictive instruction-level instrument
+  in the region and it would make `P1` (compliance-safe practice tutor, the
+  pattern written for restrictive states) directly applicable in the largest
+  US K-12 market. **Verify against the Texas Legislature before quoting it.**
+- **California "Parents & Kids Safe AI Act"** — a proposed **ballot
+  initiative**, with **OpenAI and Common Sense Media** reported as joining it.
+  🔵 **Why it matters out of proportion to its stage: a California ballot
+  measure sets de facto national standards for edtech AI**, as this file's `T10`
+  (platform defaults as the fastest-moving regulation) already argues for
+  vendor-side changes. A ballot initiative is slower than a platform default and
+  harder to reverse than a statute. **Track it; do not price against it yet.**
+
+🔴 **Agent-side negative for this region, stated because silence would read as
+coverage: no new North America-origin education agent was found this pass.**
+The region's contribution to this pass is telemetry and regulation, not agents —
+consistent with `T8`, which puts the agent centre of gravity in APAC.
+
 ### EMEA
 
 **Adoption/regulation:** The binding regime is the **EU AI Act**, under which
@@ -433,6 +483,57 @@ information system used across **Slovakia and Czechia**. See `T12` — the
 concentrated national school-platform markets in Italy, Poland, Turkey and the
 Gulf are the obvious next instances, and none has a verified MCP server yet.
 
+#### Update 2026-11-13 (fifth pass) — this file's own regional prediction landed in Türkiye, and France supplies the only Caliper event store in existence
+
+🟢 **A named prediction resolved in one pass, and it was this region's.** `T12`
+implication 3 named *"Italy, Poland, Turkey and the Gulf"* as the concentrated
+national school-platform markets where the next agent-to-SIS server would
+appear. **Türkiye produced it.** `hanifisenturk/sabis-mcp-server` (**ISC**, 2
+stars) serves **SABIS**, the student information system of **Sakarya
+University**: one tool, `get-grades`, returning course codes and names,
+assessment types and weights, final letter grades and academic term.
+**This is EMEA's first agent-to-SIS path in this base.**
+
+🔴 **And it is the most fragile of the three, which is the commercially useful
+part.** It reaches the SIS by **Puppeteer web scraping, not an API**, and reads
+the student's own `USERNAME` and `PASSWORD` from environment variables. Its
+README states it is unofficial and unaffiliated with the university. Together
+with `edupage-mcp` (Slovakia/Czechia, undocumented endpoints via a community
+library) and `mcp_hemis_student` (Uzbekistan), **every agent-to-proprietary-SIS
+path in this base is unsanctioned — three for three.** 🔵 **The EMEA sales
+motion that follows: institutions in this region are getting agent access to
+their own student data through credential-replay scrapers built by students.
+The engagement is to replace that with a sanctioned, contracted integration** —
+a governance sale, which `T1` identifies as this market's actual product.
+**Italy, Poland and the Gulf remain unprobed and are still the cheapest
+regional wedge in the base.**
+
+🟢 **France supplies something no other region does: the only Caliper event
+store that exists.** `open-ent/caliper` implements **Caliper Analytics 1.2** —
+the newest version found anywhere — as **both** an event store
+(`POST`/`GET /ims/caliper/v1p2/events`, bearer-token auth) **and** a sensor
+forwarding Open ENT access and login events, mapped to `ToolUseEvent`/`Used` and
+`SessionEvent`/`LoggedIn`. Vert.x, 33 unit tests. It comes from **Open ENT**, the
+French regional *espace numérique de travail* platform. 🔵 **This is directly
+usable in an EU data-sovereignty conversation: a French public-education
+platform's own learning-analytics module, deployable on EU infrastructure**,
+alongside `openfun/ralph` (MIT) from **France Université Numérique**, which this
+file already carries. 🔴 **But it cannot be adopted as code: no licence on the
+page, so all-rights-reserved, and its README states the Assessment, Grading,
+Forum and Media profiles are not implemented.** Read it as a design reference
+and **send a licence request** — it is the single highest-value licence request
+on this board, because it is the only event store in the Caliper column.
+
+🟡 **EMEA regulatory items re-confirmed rather than newly found this pass:** the
+UK DfE generative-AI product safety standards for education (January 2026) and
+Ofqual's AI-and-coursework-integrity material (March 2026); Dubai **KHDA**
+guidance to private schools; and the contested EU high-risk date, where the
+political agreement of **2026-05-07** postponing stand-alone high-risk
+obligations from **2026-08-02** to **2027-12-02** continues to be reported
+inconsistently against guides still citing August 2026. 🔴 **This file's
+standing instruction holds: confirm the high-risk date against the Official
+Journal before it goes in a proposal.**
+
 ### APAC
 
 **Adoption/regulation:** The most fragmented region, and education is usually
@@ -587,6 +688,48 @@ law-firm regulatory analysis; the in-force dates should still be checked against
 official texts, and the Vietnamese grace period is unresolved between two
 secondary readings.
 
+#### Update 2026-11-13 (fifth pass) — the region keeps the agent centre of gravity, and the first tool ecosystem around an education agent appears here
+
+🟢 **APAC produced the pass's only new agent-adjacent artifact, and it is a new
+*kind*.** `Suyutao/DeepTutor-MCP` (**Apache-2.0**, 1 star, **60 tools**) is the
+first MCP server in this base built over **another education agent's data**
+rather than over a platform: it exposes a self-hosted **DeepTutor** install
+(HKUDS, Hong Kong — Apache-2.0, **58.7k stars**, 7.1k forks) to any MCP client,
+covering Mastery Paths with outlines and evidence, Question Bank and practice
+queues with analytics, generated books and reading material with notes and
+highlights, knowledge-base metadata with file search and vector passage
+retrieval, historical sessions and memory documents.
+
+🔵 **Why this matters more than its 1 star suggests.** Every other education
+agent in this KB is a leaf: it talks to an LLM and a platform. **A tool
+ecosystem forming *around* an open education agent is the first sign that one of
+them is becoming infrastructure** — the thing Moodle is for LMSs. DeepTutor is
+the only candidate at that scale, it is Apache-2.0, and it is APAC-origin.
+**Watch this specific signal: more third-party servers over DeepTutor means a
+studio can build on DeepTutor rather than beside it.** 🔴 **Not yet adoptable:**
+it needs a reachable self-hosted DeepTutor HTTP API, and its Mastery tutor tools
+depend on upstream PR **`HKUDS/DeepTutor#1785`, still open and unmerged**.
+
+🟢 **DeepTutor's own release cadence, as this window's APAC adoption signal:**
+**v1.7.1 on 2026-11-01** and **v1.7.2 on 2026-11-06** — two releases in six
+days, adding complete desktop downloads, speech for selected text, simpler model
+setup, a **Korean interface preview**, NVIDIA NIM embeddings, broader
+localization, Anki and calendar exports and more model providers. 🔵 **The
+localization direction is the regional tell: Korean UI, with pt-BR and es-MX
+already shipping in OpenMAIC — APAC-origin education agents are localizing
+outward into LATAM and Europe, not waiting to be localized.** That is the
+practical basis for `T8`'s recommendation to localize permissive APAC agents
+rather than build regional ones from scratch.
+
+🔴 **No new APAC regulatory instrument surfaced this pass.** The region's
+position in this file is unchanged: South Korea's AI Basic Act in force
+**2026-01-22** with enforcement decrees still being finalised; **Vietnam's** AI
+law with **education named in its high-risk category** and pre-deployment
+registration in the National AI Database; Australia's **TEQSA** requirement that
+every higher-education provider file a generative-AI institutional action plan;
+Singapore's AI Verify toolkits; Japan's voluntary model; China's comprehensive
+framework. **Stated as a confirmed non-change, not as unchecked.**
+
 ### LATAM
 
 **Adoption/regulation:** The widest gap between use and governance of any
@@ -737,6 +880,50 @@ IESALC and the Digital Education Council measure different populations. Use them
 as a consistent *direction*, which they unambiguously are, rather than as
 arithmetic.
 
+#### Update 2026-11-13 (fifth pass) — the region's incumbent SIS is now the named unserved case, and that is a sharper opportunity than "governance is absent"
+
+🔴 **Two consecutive passes have added nothing to LATAM's agent column.** The
+region's only entry remains `Jeanikt/tutor-ai-agent` ("Manu", Brazil, MIT, **0
+stars**, voice-first Brazilian-Portuguese maths tutor) from the fourth pass.
+**Stated explicitly because silence would read as coverage:** this pass searched
+globally and per region and found no new LATAM-origin education agent.
+`T8`'s recommendation is unchanged and is still the right one — **localize a
+permissively licensed APAC or North American agent rather than build from
+scratch** — and this pass gives it fresh support: DeepTutor now ships broader
+localization and OpenMAIC already ships **pt-BR and es-MX** locales.
+
+🟢 **But the pass produced a genuinely new, LATAM-specific opportunity, and it is
+more concrete than anything in this section.** The open-source SIS agent gap
+**closed for OpenEduCat** this pass — it is Odoo addons, reachable by a generic
+Odoo MCP server (`erpipe-org/mcp-odoo`, MIT, 433★). 🔴 **It did not close for
+RosarioSIS** (GPL-2.0, **654 stars**, PHP/Postgres), which is **the most widely
+deployed open-source SIS in LATAM K-12**, with Spanish, French and Portuguese
+localization in core. RosarioSIS has **no agent interface and no general-purpose
+platform beneath it to inherit one from** — searched by project name this pass,
+nothing returned.
+
+🔵 **Why this is the strongest LATAM line in this file.** It converts the
+region's standing pitch from a negative ("adoption is high, governance is
+near-absent, sell governance") into a **named, scoped, reusable build**: an MCP
+server over RosarioSIS, serving a platform that LATAM K-12 ministries and
+districts already run, in a market where **87% of surveyed higher-education
+institutions use AI in at least one area while only 26% have any formal
+framework** and **55% have no AI budget** (UNESCO IESALC, 200 institutions
+across 19 countries). The governance sale and the integration build are the same
+engagement. **And unlike the three proprietary-SIS servers in this base — all of
+which reach the SIS unofficially, one by replaying the student's own credentials
+— a RosarioSIS server would be built against an open schema the client controls,
+so it can be sanctioned, contracted and maintained.** That is the difference
+between a demo and a deliverable.
+
+🟡 **Reusable asset to build it from, so this is not greenfield:** EduPage's
+**31-tool** surface is a worked answer to "what does an agent need from a school
+SIS", and `erpipe-org/mcp-odoo`'s three-call write gate
+(`preview_write` → `validate_write` → `execute_approved_write`, single-use
+same-process expiring token, `confirm=true`, env-var kill switch) is a worked
+answer to "how does it write to a student record safely." **Copy the surface
+from the first and the write protocol from the second.**
+
 ### Global / cross-region
 
 **Opportunities not tied to one region:**
@@ -769,3 +956,42 @@ arithmetic.
    under-resourced, and the one intervention every policy framework mandates —
    now with APAC public opinion (Ipsos 2026) making the teacher-augmenting
    framing commercially safer than student-facing autonomy.
+
+#### Update 2026-11-13 (fifth pass) — the OECD gave this market a measurable acceptance test, and the SIS layer got a cross-region connector
+
+🟢 **The most sellable sentence added to this KB today, and it is global.** The
+OECD's **2026 Digital Education Outlook** (*Exploring Effective Uses of
+Generative AI in Education*) separates **task performance** from **learning**
+and finds that students with access to general-purpose GenAI **produce
+higher-quality output, but that the advantage disappears, and sometimes
+reverses, in exams once access is removed.** Purpose-built educational AI shows
+**sustained** gains. 🔵 **This converts "buy a purpose-built tutor, not a
+chatbot licence" from a vendor preference into an OECD evidence claim, and it
+hands an institution a measurable acceptance test for any pilot: measure under
+withdrawal, not under access.** No procurement document this KB has seen
+specifies that test, and a studio that writes it into a pilot design
+differentiates on evidence rather than features. The report also recommends
+systems co-created with educators and learners in which **teachers set
+acceptable error levels and monitor interactions** — the same human-review-gate
+shape `P6`, `P7` and this base's `AI-Teaching-Agent` row already converge on.
+
+🟢 **Cross-region structural finding: the SIS layer has a general-purpose
+connector, and it is the largest build-safe agent in this KB that touches
+education.** `erpipe-org/mcp-odoo` (**MIT, 433 stars**, 198 forks, 41 tools,
+Odoo 16–19) and `ivnvxd/mcp-server-odoo` (**MPL-2.0, 415 stars**) reach any Odoo
+model by name, and **OpenEduCat** (LGPL-3.0, 911 stars, 789 forks) is Odoo
+addons. Odoo's education footprint is heaviest in **India, LATAM and EMEA
+SMB/private education**; the connectors themselves are region-neutral, so this
+is one asset serving three regions. 🔴 **Architecturally verified, not run
+(`Gap 286`)** — quote it as a verified architecture, never as a delivered
+integration. Full reasoning in `T13`, recipe in `P12`.
+
+🟡 **Adoption figures re-confirmed this pass, unchanged and still inconsistent
+across sources** — treat as a range, not a number: **86%** of higher-education
+students globally report using AI in their studies (Digital Education Council);
+roughly **a quarter** of faculty say their institution has a formal AI policy;
+global AI-in-education market estimates for 2026 still span **$10.4B** to
+**$12.3B** depending on the house. 🔴 **This file's standing caution holds: the
+market-size spread is wider than most of the growth rates being quoted on top of
+it.**
+

@@ -6,13 +6,31 @@ updated: 2026-11-13
 
 # Compose patterns — education
 
-Ten concrete recipes. Each names the actual repos, the license consequence,
-how the pieces wire together, and a rough build estimate. All components were
-license-verified on 2026-11-13 (see `agents/top.md` and `repos/foundations.md`).
+**Twelve** concrete recipes. Each names the actual repos, the license
+consequence, how the pieces wire together, and a rough build estimate. All
+components were license-verified on 2026-11-13 (see `agents/top.md` and
+`repos/foundations.md`). 🔴 **Count defect fixed this pass: the intro said "Ten
+concrete recipes" and then "the rule all eight follow" in the next paragraph.**
 
-**The rule all eight follow:** keep the AI layer permissive (MIT/Apache/BSD),
+**The rule all twelve follow:** keep the AI layer permissive (MIT/Apache/BSD),
 mount it into the copyleft platform over **LTI 1.3** or **MCP**, and emit
 **xAPI** or **Caliper** events. Never fork the LMS.
+
+**Changes in the fifth pass (2026-11-13), in order of how much they move an
+estimate.** (1) **`P12` is new and it is the cheapest SIS engagement in this
+file at 2-3 weeks**: if the client's SIS is **OpenEduCat or any Odoo-based
+education ERP**, the connector already exists at **433 stars under MIT**
+(`erpipe-org/mcp-odoo`, with a three-call write gate) because OpenEduCat is Odoo
+addons and the server addresses models by name. **Check what the SIS is built on
+before quoting `P8` at 5-7 weeks.** (2) **`P11` is new**: a Caliper-bound North
+American engagement is **no longer greenfield** — five of six components exist,
+you write only the event store, so **5-7 weeks instead of an unpriceable
+build**. (3) **`P8`'s scope narrows**: "not one open-source SIS has an agent
+interface" is withdrawn; `P8` now applies to **RosarioSIS and Gibbon**, the two
+that genuinely have no connector and no platform beneath them. 🔵 **The
+methodological lesson behind (1) and (3), now `T13`: when a vertical system
+appears to have no agent surface, check the general-purpose platform it is built
+on.**
 
 **Changes in the fourth pass (2026-11-13), in order of how much they move an
 estimate.** (1) The **Python LTI constraint below is withdrawn** — see the
@@ -333,7 +351,7 @@ legal and politically survivable in every region in this KB.
 
 ---
 
-## P8 — Agent on the student record (Global, topology now proven, open-source SIS still unserved)
+## P8 — Agent on the student record (Global, topology proven; now scoped to RosarioSIS and Gibbon — check `P12` first)
 
 **Problem:** advising, retention and early-warning are the use cases
 institutions ask for most, and they all need the **student information
@@ -348,15 +366,33 @@ HEMIS, used by Uzbek universities). Both are single-developer projects against
 **national proprietary platforms**, and EduPage's runs on **undocumented
 endpoints** through a community library.
 
+**Status changed again 2026-11-13 (fifth pass) — read this before the paragraph
+below it.** The sentence *"not one open-source SIS has an agent interface"* is
+**withdrawn**. **OpenEduCat (LGPL-3.0, 911 stars, 789 forks) is reachable
+today** by a generic Odoo MCP server, because it is Odoo addons and those
+servers address models by name. **If the client runs OpenEduCat — or any
+Odoo-based education ERP — do not use this pattern; use `P12`, which is a
+configuration exercise rather than a build.** `P8` below remains the right
+pattern for the two cases that are still genuinely unserved: **RosarioSIS**
+(GPL-2.0, 654, PHP/Postgres, LATAM K-12) and **Gibbon** (GPL-3.0, 638,
+PHP/MySQL, international K-12), neither of which has a general-purpose platform
+underneath to inherit a connector from. 🔴 **`frappe/education` is unresolved —
+check for a generic Frappe MCP server before quoting this pattern for it.**
+
 **What that changes for the engagement:** the topology is proven, so this is a
 **selection-and-build** pattern rather than a bet — cheaper to sell and faster
 to de-risk, because `edupage-mcp` is a working reference for the tool surface
 (31 tools over timetable, grades, homework, attendance) and
 `zavora-ai/mcp-education` (Apache-2.0) is a working reference for **gating
 writes in the tool contract**: 9 read-only tools plus 3 writes that require
-approval. **What has not changed:** not one *open-source* SIS — OpenEduCat,
-RosarioSIS, Gibbon, openSIS, `frappe/education` — has an agent interface, so the
-build below is still the work. Quote the proven topology, not a solved problem.
+approval. 🔴 **Superseded sentence, kept visible rather than deleted so the
+correction is auditable:** this pattern used to continue *"What has not changed:
+not one open-source SIS — OpenEduCat, RosarioSIS, Gibbon, openSIS,
+`frappe/education` — has an agent interface."* **OpenEduCat has one** (see the
+fifth-pass note above and `P12`), so the unserved list is now **RosarioSIS,
+Gibbon, openSIS**, with `frappe/education` **unresolved pending one search for a
+generic Frappe connector**. For those, the build below is still the work —
+**quote the proven topology, not a solved problem.**
 
 **Wiring:**
 1. **Pick the SIS by region.** `openeducat/openeducat_erp` (LGPL-3.0) where
@@ -562,3 +598,181 @@ you show us something that teaches by March."
 not maturity. This is a well-designed prompt from a firm with a strong
 engineering reputation, not a maintained product, and it will not be patched for
 you. Fork it and own it from day one.
+
+## P11 — Caliper-bound analytics layer (North America, newly priceable)
+
+**Problem:** a North American higher-ed client's procurement document names
+**Caliper Analytics**, not xAPI, as the learning-analytics standard. Through
+four passes this KB answered that with "no open starting point in this base —
+that is a build, and it must be priced as one." **That answer was wrong and cost
+money.** Five of the six components now exist.
+
+**When to use this instead of `P9`.** `P9` (the learner-record spine) is the
+default and is permissive end to end on xAPI. **Use `P11` only when a contract
+names Caliper.** Where the client is free to choose, choose xAPI — the reason is
+the single asymmetry in the table below, and it is decisive.
+
+**Step 0 — ask which Caliper *version* the contract names. Do this in week one.**
+The only verified permissive sensor defaults to **v1.1**
+(`http://purl.imsglobal.org/ctx/caliper/v1p1`). The only **v1.2** implementation
+found anywhere is **unlicensed**. A 1.2 client is materially further from this
+shelf than a 1.1 client, and no procurement document this KB has seen
+distinguishes them. **If the answer is 1.2, the sensor is also a build and this
+estimate doubles.**
+
+**The stack, with what you get and what you write:**
+
+| Layer | Repo | License | You |
+|---|---|---|---|
+| Sensor / client | `CarnegieLearningWeb/caliper-ts` | **MIT** | **Adopt.** TypeScript Sensor API, 225 commits. Entity factories for Assessment, AssessmentItem, Person, Session, SoftwareApplication, Membership |
+| LMS emitter (Moodle) | `open-lms-open-source/moodle-logstore_caliper` | GPL-3.0 | **Install.** Expander → Translator → Emitter, immediate or batched, Moodle 2.7+ |
+| Event store | 🔴 **nothing permissive exists** | — | **BUILD. This is the line item.** |
+| Analysis / dashboards | `tl-its-umich-edu/caliper-event-analysis` | **Apache-2.0** | **Adopt and extend.** U-M + CSCAR notebooks |
+| Profile reference | `UnizinAnalytics/caliper-net-public` | LGPL-3.0 | **Read, do not link.** Nine Metric Profiles = the scope definition for your store |
+| PHP reference | `tl-its-umich-edu/caliper-php-public` | LGPL-3.0 | **Read** if the client is a PHP shop (Moodle, Chamilo) |
+
+**Wiring, concretely.**
+
+1. **Install the Moodle logstore plugin** and point it at your store: it needs
+   an Event Store URL, an API key, a send-immediately flag and a batch size.
+   Start batched; switch to immediate only if a dashboard needs sub-minute
+   latency. 🟢 **GPL-3.0 here is correct and harmless — a Moodle plugin lives
+   inside a GPL-3.0 host and does not reach your separately deployed agent
+   layer.** Say this to any client who has internalised "do not fork the LMS":
+   the rule is about forking the platform, not installing a plugin.
+2. **Build the event store against the nine-profile list** from
+   `caliper-net-public` — Base, Session, Reading, Annotation, Assignable,
+   Assessment, Assessment Item, Outcome, Media. Accept
+   `POST /ims/caliper/v1p1/events` with bearer-token auth and persist the
+   envelope whole. **`open-ent/caliper` is the shape to copy** (it implements
+   exactly this as an event store **and** a sensor, with 33 unit tests) — 🔴
+   **read it, do not vendor it: no licence on the page.**
+3. **Emit from the agent layer with `caliper-ts`**, so the agent's tutoring and
+   assessment activity lands in the same store as the LMS's. 🔴 **Build caveat
+   that will surprise a dev team: `caliper-ts` publishes to the GitHub Package
+   Registry as `@imaginelearning/caliper-ts`, not public npm** — the build needs
+   an `.npmrc` scoped to `@imaginelearning`. Budget an hour of CI plumbing and
+   **vendor it**: 0 stars means no community will patch it for you.
+4. **Stand up dashboards from `caliper-event-analysis`.** Apache-2.0, so the
+   notebooks can seed the client deliverable directly. **This is the layer the
+   client actually buys** — events nobody reads are a cost centre.
+5. **Keep the agent layer MIT/Apache and separately deployed**, per this KB's
+   standing rule. Nothing in the GPL-3.0 or LGPL-3.0 rows above is linked into
+   it: the plugin runs inside Moodle, and the LGPL-3.0 repos are read, not
+   imported.
+
+**Regional fit.** 🟢 **North America is the reason this pattern exists** — and
+the provenance helps in procurement: the nine-profile reference comes from
+**Unizin**, the US higher-education consortium, and the analysis layer from the
+**University of Michigan**. 🟡 **EMEA** gets one bonus: `open-ent/caliper` is a
+French public-education platform's module, usable as design evidence in an EU
+data-sovereignty conversation (and the highest-value licence request on this
+board). 🔴 **APAC and LATAM: do not sell this pattern.** Nothing in those
+regions' procurement specifies Caliper; `P9` on xAPI is strictly better there.
+
+**License outcome:** MIT/Apache in everything you ship. GPL-3.0 confined to the
+Moodle plugin inside Moodle; LGPL-3.0 read-only.
+
+**Estimate:** **5-7 weeks** — 1 week plugin + sensor wiring, **3-4 weeks event
+store** (the whole variable), 1-2 weeks dashboards. 🔵 **Compare honestly in the
+proposal: `P9` on xAPI is 3-4 weeks because `yetanalytics/lrsql` (Apache-2.0,
+144★, Postgres 14–18 / MariaDB / MySQL / SQLite) *is* the store.** The entire
+Caliper premium is one missing component. **A client free to choose should see
+that number.**
+
+**The trap:** quoting the old "Caliper is greenfield" line. It overprices the
+work by a factor and loses the deal to someone who has read the shelf.
+**The second trap:** reading licences off GitHub's sidebar. `caliper-ts` shows a
+bare "License" link and **is MIT** — the grant is in the `LICENSE` file
+(`MIT License / Copyright (c) 2021 Imagine Learning`). A sidebar-only check
+records this whole pattern as impossible.
+
+## P12 — Agent on an Odoo-based education ERP (Global, configuration not build, cheapest SIS engagement in this KB)
+
+**Problem:** the client wants advising, retention or early-warning on the
+**student record**, and runs **OpenEduCat** or another Odoo-based education ERP.
+
+**Why this is separate from `P8`, and why it is the first thing to check.**
+`P8` is a 5-7 week build. **This is a configuration exercise, because the
+connector already exists at 433 stars and the SIS is just Odoo addons.**
+OpenEduCat (LGPL-3.0, **911 stars, 789 forks**, branch `19.0`) ships
+`openeducat_core`, `_admission`, `_exam`, `_fees`, `_attendance`, `_timetable`,
+`_parent`, `_library` — and the Odoo MCP servers address models **by name**, so
+`op.student`, `op.admission`, `op.exam.attendees` and `op.fees` need no new code.
+🔵 **Ask "what is your SIS built on" before "does your SIS have an API."**
+
+**Step 1 — choose the connector by who must own the write policy.** This is the
+only real decision in the pattern.
+
+| | `erpipe-org/mcp-odoo` | `ivnvxd/mcp-server-odoo` |
+|---|---|---|
+| License | **MIT** | MPL-2.0 (file-level weak copyleft) |
+| Stars / forks | **433** / 198 | 415 / 190 |
+| Tools | 41 | 17 |
+| Odoo | 16–19 (smoke-tested 16.0/17.0/18.0/19.0) | 16.0+ standard mode; JSON-2 + API key on 19+ |
+| Write gate lives in | **the agent** | **the institution** |
+| Mechanism | `preview_write` → `validate_write` → `execute_approved_write`; single-use, same-process, expiring token; `confirm=true`; `ODOO_MCP_ENABLE_WRITES=1`; `ODOO_MCP_ELICIT_WRITES=1` adds a native prompt; direct `create`/`write`/`unlink` **blocked**; `execute_method` allowlisted only | Companion Odoo module: per-model allowlist with separate read / write / create / delete, layered on Odoo's own access rights and record rules |
+| Pick it when | the studio operates the deployment | the client's Odoo admin must hold the control — **most institutional engagements** |
+
+🔴 **Never ship `ivnvxd`'s "YOLO mode".** It requires no companion module,
+bypasses **all** MCP-level access control, exposes 200+ models, and in full form
+permits delete; its own README restricts it to development and testing. **Grep
+for it in any deployment you inherit.**
+
+**Step 2 — scope the model allowlist to the education models and nothing else.**
+This is the whole security posture of the engagement, and it is the reason to
+prefer `ivnvxd` + companion module in an institutional setting: an Odoo instance
+running OpenEduCat is usually **also** running finance and HR. An agent that can
+read `op.student` must not be able to read `hr.employee` or `account.move`.
+🟢 **Inherited governance is the selling point: "your agent inherits Odoo's
+access rights and record rules" is a stronger story than anything a bespoke
+education MCP server offers** — of the three proprietary-SIS servers in this KB,
+none gates writes and one replays the student's own credentials.
+
+**Step 3 — read-only first, always.** Ship advising and early-warning on reads
+(`search_records`, `read_record`, `aggregate_records`, `get_model_fields`) and
+leave writes disabled. `aggregate_records` is what makes cohort-level retention
+questions answerable without exporting student rows.
+
+**Step 4 — add writes only behind the gate, and only for one model.** Typical
+first write is an advising note or a flag on the student record, never grades or
+fees. On `erpipe-org`, writes stay off until `ODOO_MCP_ENABLE_WRITES=1`; on
+`ivnvxd`, until the companion module grants write on that one model.
+
+**Step 5 — emit xAPI so the institution can report on the agent.** Pair with
+`P9`: `DavidLMS/learnmcp-xapi` (MIT) into `yetanalytics/lrsql` (Apache-2.0).
+The SIS holds the student record; the LRS holds what the agent did. 🔴 **Keep
+them separate** — this KB's most expensive available mistake is scoping an
+advising engagement against the wrong one of the two.
+
+**Regional fit.** Odoo's education footprint is heaviest in **India, LATAM and
+EMEA SMB/private education**, so this is one asset serving three regions.
+🟢 **LATAM and APAC private-education groups are the best first targets**:
+Odoo is common in both and the connector is free. 🔴 **It does not help a LATAM
+K-12 public engagement on RosarioSIS, or an international-school engagement on
+Gibbon** — those are `P8`, and that distinction is worth getting right in the
+first call because it is the difference between 2 weeks and 7.
+
+**License outcome:** MIT end to end with `erpipe-org`. With `ivnvxd`, MPL-2.0 is
+**file-level** weak copyleft — publish changes to its own files, combine freely
+with proprietary code; it needs a licence note in the deliverable, not a
+redesign. OpenEduCat itself stays LGPL-3.0 and **is not forked** — you connect
+to it, which is this KB's standing rule applied to the SIS layer.
+
+**Estimate:** **2-3 weeks** for read-only advising on an existing OpenEduCat
+instance, plus 1 week for the gated first write, plus 1 week for the xAPI
+stream. **The cheapest SIS engagement in this KB by a wide margin**, and the
+right answer when a client with Odoo asks for the thing `P8` prices at 5-7
+weeks.
+
+🔴 **The trap, and it must be in the proposal, not just here.** This path is
+**architecturally verified and has not been run** (`Gap 286`): the connectors'
+tools are model-generic and OpenEduCat is Odoo addons — both read off the
+repository pages — but **no Odoo instance has been stood up, OpenEduCat
+installed, and a tool called against `op.student`.** Say *"the connector is
+generic and the SIS is Odoo addons"*, never *"we have run it."* 🟢 **Do that run
+first: it is a day of work and it converts this pattern's entire estimate from
+inferred to demonstrated.** **Second trap:** `erpipe-org/mcp-odoo` was formerly
+`tuanle96/mcp-odoo`, which is still what search results return — and its
+maintainer sells a hosted product (ERPipe) built on it. The MIT grant is real;
+the roadmap has a commercial owner. Pin a commit.

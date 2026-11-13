@@ -55,7 +55,21 @@ with the restrictive statutes; a general instruction-delivering tutor does not.
 ## T3 — Purpose-built educational AI is beating general-purpose chat
 
 The OECD's 2026 Digital Education Outlook favours purpose-built educational AI
-over general-purpose tools. Industry predictions converge on AI being embedded
+over general-purpose tools. **Updated 2026-11-13 (fifth pass) with the specific
+finding, because it is far more useful to a client than the preference was.**
+The report — subtitled *Exploring Effective Uses of Generative AI in Education*
+— separates **task performance** from **learning**, and finds that students with
+access to general-purpose GenAI **produce higher-quality output, but that the
+advantage disappears, and sometimes reverses, in exams once access is removed.**
+Purpose-built educational AI, by contrast, shows **sustained** gains. 🔵 **This
+is the single most sellable sentence in this KB**: it converts "buy a
+purpose-built tutor instead of a chatbot licence" from a vendor preference into
+an evidence claim from an OECD report, and it gives an institution a measurable
+acceptance test — **measure under withdrawal, not under access.** The report
+also recommends systems co-created with educators and learners in which
+**teachers set acceptable error levels and monitor interactions**, which is the
+same human-review-gate shape this KB's `P6`, `P7` and `AI-Teaching-Agent` row
+already converge on. Industry predictions converge on AI being embedded
 into admissions, advising and administration rather than run as standalone
 pilots — one roundup's framing is that AI "has moved from experiment to
 infrastructure." HolonIQ expects selective investment focused on proven
@@ -191,10 +205,20 @@ deliverable. Architecture follows: *copyleft platform behind its network API,
 permissive LRS and agent layer inside the product.* Pattern `P9`.
 
 Corollary with teeth: **xAPI won the open-implementation race and Caliper did
-not.** Caliper has only a spec-document repo in this base, and it is the
-1EdTech-native standard most often specified in North American higher ed. Where
-the client is free to choose, choose xAPI. Where a contract names Caliper,
-price an adapter build.
+not** — but **the reason is narrower than this trend originally stated, and the
+original wording is corrected here (fifth pass).** This paragraph used to read
+"Caliper has only a spec-document repo in this base." **That is withdrawn:
+Caliper has six verified implementations** (`repos/foundations.md`), including
+an **MIT** sensor and an **Apache-2.0** analysis layer. 🔴 **What xAPI has and
+Caliper does not is the _store_:** `yetanalytics/lrsql` is **Apache-2.0** with a
+Postgres 14–18 / MariaDB / MySQL / SQLite matrix, while the only Caliper event
+store found anywhere is **unlicensed**. Caliper's reference layer is also
+**private** — 1EdTech made `caliper-php` private, which is documented in a
+university fork's own description. **Where the client is free to choose, choose
+xAPI — the store row is the whole reason.** Where a contract names Caliper,
+**do not price "an adapter build"**: price the **event store only**, and adopt
+the sensor, the Moodle emitter and the analysis layer. Full table and reasoning
+in `T14`; recipe in `P11`.
 
 ## T10 — Platform defaults are now the fastest-moving education AI regulation
 
@@ -300,6 +324,34 @@ The consequence is counter-intuitive and worth stating to a client: in the SIS
 layer, **proprietary national platforms are better served by open-source agents
 than open-source platforms are.**
 
+**Updated 2026-11-13 (fifth pass) — this trend's own prediction landed, and half
+of its premise broke.**
+
+🟢 **The prediction landed.** Implication 3 below named *"Italy, Poland, Turkey
+and the Gulf"* as the concentrated national school-platform markets to check for
+the next instance. **Türkiye produced it.**
+`hanifisenturk/sabis-mcp-server` (**ISC**, 2 stars) serves **SABIS**, the
+student information system of Sakarya University — one tool, `get-grades`,
+returning course codes, assessment types and weights, final letter grades and
+term. It is **Puppeteer web scraping with the student's own credentials in
+environment variables**, which makes it the third instance of the fragility in
+implication 2 and the most fragile of the three. **Three-for-three: every
+agent-to-proprietary-SIS path in this base is unofficial.** 🔵 **A named
+prediction that resolves in one pass is worth more than the finding itself —
+keep naming them.**
+
+🔴 **The premise broke on the other side.** This trend asserted that **"not one**
+open-source SIS has an agent interface," naming OpenEduCat first.
+**OpenEduCat has one.** It is a set of **Odoo addons**, and Odoo has two mature
+MCP servers whose tools take the model name as a parameter —
+`erpipe-org/mcp-odoo` (**MIT, 433 stars**) and `ivnvxd/mcp-server-odoo`
+(**MPL-2.0, 415 stars**). The error was not in the data but in the search: four
+passes looked for an *education-specific* server. **The corrected trend is
+therefore two-sided, and the two sides have opposite shapes** — proprietary
+national SIS products get **bespoke, unofficial, fragile** agent paths, while
+open-source SIS products inherit **generic, sanctioned, maintained** ones from
+the platform underneath. That second half is now `T13`.
+
 **Implications.**
 
 1. **Market entry is per-country in this layer, and that favours a global
@@ -318,3 +370,135 @@ than open-source platforms are.**
 4. **The open-source SIS gap is a real opportunity, not an oversight.** See
    `P8`, now a selection-and-build pattern at 5-7 weeks with a proven topology
    rather than a greenfield bet.
+
+## T13 — The agent surface for a vertical system often already exists one layer down, as a general-purpose platform connector
+
+**Added 2026-11-13 (fifth pass).** This is the methodological trend of the pass
+and the one with the widest reach beyond education.
+
+**Evidence.** Four consecutive passes of this KB searched for an education SIS
+agent interface and concluded, with increasing confidence, that open-source SIS
+products had none. The conclusion was wrong, and the reason was the search
+frame: **every query asked for an *education* server.** OpenEduCat (LGPL-3.0,
+**911 stars, 789 forks**) is a set of **Odoo addons**, and Odoo has two mature
+MCP servers that address models by name:
+
+| Connector | License | Stars | Governance model |
+|---|---|---|---|
+| `erpipe-org/mcp-odoo` | **MIT** | 433 | Writes gated in the **agent**: direct `create`/`write`/`unlink` blocked; `preview_write` → `validate_write` → `execute_approved_write` with a single-use, same-process, expiring token, `confirm=true` and `ODOO_MCP_ENABLE_WRITES=1` |
+| `ivnvxd/mcp-server-odoo` | MPL-2.0 | 415 | Writes gated in the **institution**: companion Odoo module with a per-model allowlist and separate read/write/create/delete permissions, over Odoo's own record rules |
+
+`search_records`, `read_record`, `get_model_fields` and `list_models` take the
+model name as a parameter, so `op.student`, `op.admission`, `op.exam.attendees`
+and `op.fees` are reachable with no education-specific code. **At 433 stars the
+MIT connector is larger than every education-specific agent this KB has ever
+admitted except DeepTutor, OpenMAIC and `janestreet/agent_skills`.**
+
+**Why this generalises past education.** The economics are the same in every
+vertical: a general-purpose platform (Odoo, Frappe, Salesforce, SAP, ServiceNow)
+amortises connector maintenance across **every** industry that runs on it, while
+a vertical-specific connector is paid for by one industry's installed base. **So
+the vertical connector is built only where no general platform sits underneath.**
+That predicts exactly what this base observes — Moodle, Canvas and Open edX
+(purpose-built, no general platform below) each grew bespoke MCP servers, while
+OpenEduCat (Odoo below) never needed one and never got one.
+
+**Implications.**
+
+1. **Search the substrate before declaring a vertical gap.** The question is not
+   "is there an education MCP server for X" but "what general-purpose platform
+   is X built on, and does *that* have one." 🔵 **The test is cheap and this
+   base should run it on every remaining unserved row.**
+2. **The next instance to check is Frappe.** `frappe/education` (GPL-3.0, 707)
+   and `frappe/lms` (AGPL-3.0, 3.4k) sit on the Frappe framework, which is a
+   general-purpose platform with its own ecosystem. **Nobody in this KB has
+   checked whether a generic Frappe MCP server exists.** That single search
+   could close the SIS gap for a second open-source product.
+3. **Genuinely unserved means "purpose-built and small".** RosarioSIS (GPL-2.0,
+   654, PHP/Postgres) and Gibbon (GPL-3.0, 638, PHP/MySQL) have no general
+   platform beneath them and no connector — **and they are the LATAM K-12 and
+   international K-12 incumbents.** The unserved set is now small, named, and
+   regionally specific, which makes it sellable rather than embarrassing.
+4. **Inherited governance is better governance, and it is a selling point.**
+   Both Odoo connectors gate writes — one in the agent, one in the institution's
+   own Odoo permissions — because a general-purpose ERP connector *must* survive
+   finance and HR data. An education-specific server written by one developer
+   rarely does: of the three proprietary-SIS servers in this base, none gates
+   writes, and one replays the student's own credentials. 🔵 **"Your agent
+   inherits Odoo's access rights and record rules" is a stronger governance
+   story than anything a bespoke education server offers**, and `T1` says
+   governance is the market.
+5. **Pick the connector by who must own the policy.** MIT + agent-side gating
+   (`erpipe-org`) where the studio operates the deployment; MPL-2.0 +
+   institution-side allowlist (`ivnvxd`) where the client's administrator must
+   hold the control. 🔴 **Never ship `ivnvxd`'s "YOLO mode"** — it needs no
+   companion module, bypasses all MCP-level access control, exposes 200+ models,
+   and in full form permits delete. Its own README restricts it to development.
+
+🔴 **Stated limit, because this trend is new and load-bearing.** The path is
+**architecturally verified** — model-generic tools, Odoo addons, both read off
+the repository pages — and **has not been run**: no Odoo instance was stood up,
+OpenEduCat installed, and a tool called against `op.student` (`Gap 286`). Quote
+it as a verified architecture, never as a delivered integration.
+
+## T14 — All five interoperability edges are now permissively implemented, but the two telemetry standards are not interchangeable
+
+**Added 2026-11-13 (fifth pass), and it closes the question `T9` opened.**
+
+`T9` established that the learner-record layer became permissive and said
+plainly that **"xAPI won the open-implementation race and Caliper did not"** —
+Caliper having only a spec-document repo in this base. **The second half of that
+is now withdrawn: Caliper has six verified implementations.** But the race was
+won on a component xAPI has and Caliper does not, and that is the durable
+finding.
+
+| | xAPI (learning record) | Caliper (analytics) |
+|---|---|---|
+| Permissive **store** | 🟢 `yetanalytics/lrsql` — **Apache-2.0, 144★**, Postgres 14–18 / MariaDB / MySQL / SQLite | 🔴 **None.** The only store found, `open-ent/caliper` (Caliper **1.2**, Vert.x, 33 unit tests, Open ENT / France), carries **no licence** |
+| Permissive **sensor / client** | 🟢 `openfun/ralph` (MIT, 51★), `DavidLMS/learnmcp-xapi` (MIT, 16★) | 🟡 `CarnegieLearningWeb/caliper-ts` — **MIT, 0★**, GitHub Package Registry only |
+| **LMS** emitter | 🟡 via plugins and xAPI wrappers | 🟢 `open-lms-open-source/moodle-logstore_caliper` (GPL-3.0, Moodle 2.7+) |
+| **Analysis** layer | 🟡 `ralph`'s pipeline CLI | 🟢 `tl-its-umich-edu/caliper-event-analysis` (**Apache-2.0**, U-M + CSCAR notebooks) |
+| Reference layer | 🟢 public | 🔴 **member-gated** — 1EdTech's Best Practice Guide advertises Java/JS/PHP/Python/Ruby/.NET sensors and states that Contributing Members and Affiliates request GitHub access; `1EdTech/caliper-js` and `IMSGlobal/caliper-js` both **404** |
+
+**The asymmetry is structural, not incidental.** xAPI's open stack grew from
+public reference code; Caliper's reference lineage sits behind consortium
+membership, and the implementations that *are* reachable are **university and
+consortium forks of 1EdTech's public releases** — `tl-its-umich-edu/caliper-php-public`,
+`umich-caliper-php`, `UnizinAnalytics/caliper-net-public`. 🟢 **One of those
+forks documents the withdrawal in its own description, which turns this from
+inference into evidence:** *"This had been archived, but has been unarchived
+following **1EdTech making its caliper-php private**."* **The University of
+Michigan un-archived a dormant fork because the upstream disappeared.** The
+chain is 1EdTech → Unizin → Michigan. 🔵 **That fork pattern is the general
+workaround for any member-gated standard, and it is why slug-guessing failed
+here for four passes while one org-listing request succeeded** — the originals
+are not merely unindexed, they are **private**, so no spelling of the slug could
+ever have resolved.
+
+**Implications.**
+
+1. **Where the client is free to choose, still choose xAPI.** `T9`'s
+   recommendation is unchanged and the store row above is the entire reason.
+2. **Where a contract names Caliper, the price changed and the pitch should.**
+   The old line — "no open starting point; that is a build" — is wrong. The
+   accurate line: **an MIT sensor, a GPL-3.0 Moodle emitter, an Apache-2.0
+   analysis layer and a complete nine-profile reference to scope against; you
+   write the event store and nothing else.** That is a line item, not a project.
+   Written up as `P11`.
+3. **Ask which Caliper *version* the contract names, in week one.**
+   `caliper-ts` defaults to **v1.1**. The only **v1.2** implementation found is
+   unlicensed. A 1.2 client is materially further from this shelf than a 1.1
+   client, and no procurement document this KB has seen distinguishes them.
+4. **Read the `LICENSE` file, not the sidebar.** `caliper-ts` is the row that
+   closed this gap and **GitHub's sidebar does not name its licence** — it shows
+   a bare "License" link, with `MIT License / Copyright (c) 2021 Imagine
+   Learning` inside the file. 🔴 **A pass that reads only the sidebar records it
+   as unlicensed and leaves the gap open, which is very likely what happened
+   here.** This is the second instance in this base (with `wwrwbs/AI_AWE`) of a
+   real permissive grant invisible to the sidebar.
+5. **Moodle is the one platform with a sanctioned Caliper path, and GPL-3.0 is
+   not a problem there.** A Moodle plugin lives inside a GPL-3.0 host and is
+   expected to be GPL-3.0; it does not reach a separately deployed MIT/Apache
+   agent layer. 🔵 **Say this explicitly in any engagement that has internalised
+   this KB's "do not fork the LMS" rule** — the rule is about forking the
+   platform, not about installing a plugin.

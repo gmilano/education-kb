@@ -3,6 +3,105 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+## `2026-11-13` (fifth pass) — **The open-source SIS gap closes from a direction nobody searched: OpenEduCat is Odoo addons, and Odoo has a 433-star MIT MCP server with gated writes**
+
+**Window:** education-specific AI agents plus, for the first time in this base,
+**general-purpose connectors that reach education systems**. Verified
+2026-11-13 from the rendered repository page. **30 agents now admitted, up from
+26 at the fourth pass.**
+
+**Channel note, re-tested this pass and unchanged.** `curl -sI
+https://github.com/...` returns **`403` for every path** through this session's
+egress policy, so a `curl` probe cannot distinguish a live repository from a
+404. Everything below was verified by fetching and reading the rendered
+repository page (GitHub's own license field and star count), and where the
+sidebar shows only a generic "License" link, by reading the `LICENSE` file
+itself. One finding this pass turns entirely on that second step.
+
+### The correction that matters most this pass
+
+The fourth pass withdrew "no SIS has an agent interface" and replaced it with
+what it called a sharper statement: **"not one *open-source* SIS has an agent
+interface"**, naming OpenEduCat, RosarioSIS, Gibbon, openSIS and
+`frappe/education` as the unserved set. **That statement is also wrong, and it
+was wrong for a structural reason this KB should not repeat: every SIS search
+in four passes looked for an _education-specific_ server.**
+
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) —
+LGPL-3.0, **911★, 789 forks**, branch and tag `19.0`, modules
+`openeducat_core`, `_admission`, `_exam`, `_fees`, `_attendance`, `_timetable`,
+`_parent`, `_library` — is a set of **Odoo addons**. It does not need its own
+MCP server, because **Odoo has two mature ones, and both address models by
+name**:
+
+- [`erpipe-org/mcp-odoo`](https://github.com/erpipe-org/mcp-odoo) — **MIT,
+  433★**, 198 forks, 118 commits, **41 tools**, Odoo 16–19 smoke-tested.
+- [`ivnvxd/mcp-server-odoo`](https://github.com/ivnvxd/mcp-server-odoo) —
+  **MPL-2.0, 415★**, 190 forks, per-model allowlist in a companion Odoo module.
+
+`search_records`, `read_record`, `get_model_fields` and `list_models` take the
+model name as a **parameter**, so `op.student`, `op.admission` and
+`op.exam.attendees` are reachable the moment OpenEduCat is installed.
+**At 433★ the MIT one is, by star count, the fourth-largest agent in this
+entire KB** — behind DeepTutor (58.7k), OpenMAIC (43.4k) and `janestreet/agent_skills`
+(7.9k), and ahead of every education-specific agent ever admitted here.
+
+🔵 **The honest boundary on this finding.** This is an **architecturally
+verified** path, not an empirically tested one: the connectors' tools are
+model-generic and OpenEduCat is Odoo addons, and those two facts were each read
+off the repository pages. **This pass did not stand up an Odoo instance, install
+OpenEduCat and call a tool against `op.student`.** That run is the single
+cheapest high-value experiment on this board and it is now `Gap 286`. Until it
+is done, quote the path to a client as *"the connector is generic and the SIS is
+Odoo addons"* — not as *"we have run it."*
+
+### New entries (4)
+
+| Agent | Repo | License | Stars | Why it is admitted |
+|---|---|---|---|---|
+| mcp-odoo (ERPipe) | https://github.com/erpipe-org/mcp-odoo | MIT | 433 | **The largest build-safe agent that reaches an open-source SIS, and it was never searched for because it is not an education project.** 41 tools over Odoo 16–19 (`search_records`, `read_record`, `aggregate_records`, `get_model_fields`, `list_models`, plus module helpers, diagnostics, migration, audit and cross-instance fan-out). **Writes are gated by construction and this is the row's real value:** direct `create`/`write`/`unlink` are **blocked**, and an approved write must pass `preview_write` → `validate_write` → `execute_approved_write` with a **same-process approval token**, `confirm=true`, live non-empty `fields_get` metadata, an unexpired single-use token, and `ODOO_MCP_ENABLE_WRITES=1`; `ODOO_MCP_ELICIT_WRITES=1` adds a native confirmation prompt. `execute_method` runs allowlisted methods only. **Formerly `tuanle96/mcp-odoo`** — the old slug is what circulates in search results, so record the new one. XML-RPC default, JSON-2 on Odoo 19. **Caveat to state in any proposal: the maintainer sells a hosted product (ERPipe) built on this repo** — the MIT grant is real, the roadmap has a commercial owner. |
+| mcp-server-odoo | https://github.com/ivnvxd/mcp-server-odoo | MPL-2.0 | 415 | **The governed alternative, and the better one where the institution must own the policy.** Access control lives in a **companion Odoo module** with a per-model allowlist and separate read / write / create / delete permissions, layered on Odoo's own access rights and record rules — so the *institution's* Odoo admin decides what an agent may touch, not an environment variable in the agent's container. 17 tools including `create_records`/`update_records` batches, attachments and `post_message`. **MPL-2.0 is file-level weak copyleft:** modifications to its own files must be published, but it can be combined with proprietary code — usable in a client deliverable, unlike AGPL, and it needs a one-line license note rather than a redesign. 🔴 **Red flag to name in review: "YOLO mode" needs no companion module, bypasses all MCP-level controls and exposes 200+ models; its own README restricts it to development and testing.** Full YOLO mode permits delete. Never ship it. |
+| sabis-mcp-server | https://github.com/hanifisenturk/sabis-mcp-server | ISC | 2 | **Third agent-to-SIS path in this KB and the first from Türkiye — EMEA's first.** MCP server over **SABIS**, the student information system of **Sakarya University**: one tool, `get-grades`, returning course codes and names, assessment types and weights, final letter grades, and academic year/semester. **It reaches the SIS by Puppeteer web scraping, not an API, and takes the student's own `USERNAME`/`PASSWORD` from environment variables** — a credential-replay design this KB should not reproduce. README states it is unofficial, unaffiliated with the university, and for personal/educational use. 0 forks. Admitted for the **regional and topological** record: with `edupage-mcp` (Slovakia/Czechia, undocumented endpoints) and `mcp_hemis_student` (Uzbekistan), the pattern is now three-for-three — **individual developers reaching captive national or institutional SIS products by unofficial means.** |
+| DeepTutor-MCP | https://github.com/Suyutao/DeepTutor-MCP | Apache-2.0 | 1 | **First instance in this KB of an MCP server built over another education agent's data rather than over a platform.** 60 tools exposing a self-hosted DeepTutor install to any MCP client: status, courses, syllabus, Mastery Paths with outlines and evidence, Question Bank and practice queues with answer checks and analytics, generated books and reading material with notes/highlights/bookmarks, notebooks, knowledge-base metadata with file search and vector passage retrieval, historical sessions and memory documents, plus an opt-in tool that posts into a DeepTutor conversation. 15 commits, no releases. **Two hard dependencies before it runs:** a reachable self-hosted DeepTutor HTTP API, and — for the Mastery tutor tools — upstream PR **`HKUDS/DeepTutor#1785`, which its README says is still open**. Not a dependency yet; it is evidence that DeepTutor at 58.7k stars is starting to grow a tool ecosystem, which is the thing to watch. |
+
+### Regional placement of this pass's findings
+
+- 🟢 **Global** — `erpipe-org/mcp-odoo` (MIT, 433★) and `ivnvxd/mcp-server-odoo`
+  (MPL-2.0, 415★). Odoo's education footprint is heaviest in **India, LATAM and
+  EMEA SMB/private education**, which is where OpenEduCat is deployed; the
+  connectors themselves are region-neutral.
+- 🟢 **EMEA** — `hanifisenturk/sabis-mcp-server` (Türkiye). First EMEA-origin
+  agent-to-SIS path in this base.
+- 🟢 **APAC** — `Suyutao/DeepTutor-MCP`, built against HKUDS's DeepTutor
+  (Hong Kong). Consistent with `T8`: the agent centre of gravity stays APAC.
+- 🔴 **North America** — **no new agent found this pass.** Stated explicitly:
+  the one North-America-shaped finding of this pass is a *telemetry* one
+  (Caliper, in `repos/trending.md`), not an agent.
+- 🔴 **LATAM** — **no new agent found this pass.** The LATAM row in this base is
+  still `Manu`/`tutor-ai-agent` (Brazil, MIT, 0★) from the fourth pass. Two
+  consecutive passes have now added nothing to LATAM's agent column; the
+  localize-a-permissive-agent reading in `T8` is unchanged and is still the
+  recommendation.
+
+### Informed negatives from this pass
+
+- 🔴 **No education-specific OpenEduCat, RosarioSIS or Gibbon MCP server
+  exists.** Searched directly by project name this pass; the results returned
+  only generic Odoo servers for the first and nothing at all for the other two.
+  **This is why the generic-connector finding matters: the gap was never going to
+  close from the education side.** RosarioSIS (PHP/Postgres) and Gibbon
+  (PHP/MySQL) have **no equivalent generic connector** and remain genuinely
+  unserved.
+- 🔴 **No open-source education tutor released in November 2026** — the fourth
+  pass's informed negative **holds for a second consecutive pass**. This window's
+  activity is still releases on existing repositories (DeepTutor v1.7.1 on
+  `2026-11-01` and v1.7.2 on `2026-11-06`; `tutor-mcp` v0.7.0 on `2026-10-26`),
+  not new entrants.
+- 🔴 **`Gap 286` opened:** the Odoo→OpenEduCat path is architecturally verified
+  and **not** empirically run. See the boundary note above.
+
+---
+
 
 ## `2026-11-13` (fourth pass) — **Three passes said no SIS anywhere has an agent interface. Two do. And the most-adopted education AI artifact of the window is a prompt with two commits**
 
