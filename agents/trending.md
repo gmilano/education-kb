@@ -4,6 +4,96 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (fifteenth pass) — **The field this base triages licences with is wrong in BOTH directions, proven twice in one hour; and a standards body shipped the agent**
+
+**Pass `p810`.** 🟢 **Twenty-two agent rows added — the largest single-pass addition this
+base has recorded — plus two rejections, one new foundation layer, and one instrument defect
+caught before publication.**
+
+### The headline: `NOASSERTION` is not a classification
+
+Two candidates arrived with GitHub's `license.spdx_id` = `NOASSERTION`. Both were byte-read
+on the blobless-clone channel. **They resolved in opposite directions.**
+
+| Repo | ★ | GitHub API | LICENSE bytes | Verdict |
+|---|---|---|---|---|
+| [`webworn/openfoam-mcp-server`](https://github.com/webworn/openfoam-mcp-server) | `129` | `NOASSERTION` | **Apache-2.0**, unmodified — blob `be1f2caa61c7`, `10,708 B`, `APPENDIX` present, no added clause | 🟢 **SHELVED, build-safe** |
+| [`affromero/Sotto`](https://github.com/affromero/Sotto) | `35` | `NOASSERTION` | **PolyForm Noncommercial 1.0.0** — blob `1a71cb643975`, `4,563 B`, *"Any noncommercial purpose is a permitted purpose"* | 🔴 **REJECTED, commercially prohibited** |
+
+🔴 **Had this pass trusted the API field, it would have rejected a usable `129★` repository
+and shipped an unusable `35★` one, in the same hour.** 🔴 **`Sotto` describes itself as
+"Self-hosted, open source AI language learning" — the description is wrong and the bytes are
+right.** 🟢 **New rule, `T969`: `NOASSERTION` is an instruction to read the bytes, never a
+reason to shelve and never a reason to reject.**
+
+🔵 **Why the two differ is itself informative:** `openfoam`'s Apache file is `10,708 B` against
+the Ed-Fi Apache's `11,558 B` — a **formatting** divergence (leading whitespace) that defeats
+GitHub's classifier while changing no term. 🔵 **A licence classifier is a string matcher, and
+whitespace is a string.**
+
+### A standards body published an education agent — a first for this base
+
+🟢 **[`Ed-Fi-Exchange-OSS/Prototype-Semantic-Layer-with-MCP`](https://github.com/Ed-Fi-Exchange-OSS/Prototype-Semantic-Layer-with-MCP)**
+(`Apache-2.0`, `0★`, created `2026-11-05`, pushed `2026-11-12` — **one day before this pass**).
+Every education agent this base has shelved across fifteen passes came from a vendor, a lab or
+a student. **This one comes from the Ed-Fi Alliance, which authors the K-12 data standard
+itself.**
+
+🟢 **And it ships the control stack `p792-D` has been asking for since the eighth pass:**
+
+| Layer | Control |
+|---|---|
+| Identity | **Keycloak OAuth**; the server takes the user from the token's **verified email** |
+| Authorisation | **`get_my_scope`** — the agent can state what the signed-in educator may see (schools, sections, student count) **before** it answers anything |
+| Data | Postgres role `mcp_reader` with **`ALTER ROLE ... SET default_transaction_read_only = on`**, `REVOKE ALL ON SCHEMA public`, `GRANT SELECT ON ALL TABLES IN SCHEMA analytics` only |
+| Provenance | Every tool returns compact JSON **naming the data-mart tables it used** |
+
+🔵 **Read-only is enforced at the DATABASE ROLE, not in the agent's prompt and not in the tool
+definitions.** 🟢 **That is the difference between a control and a convention**, and it is the
+single most transferable thing found this pass. 🔴 **The README says "demonstration purposes
+only; not intended to be a robust production solution"** — so `P810-1` ships the pattern.
+
+### Three platform gaps closed, two left open and NAMED
+
+🟢 **Closed:** **Sakai** (`3,937` mentions in this base, `0` agents → `2`:
+[`jtayped/sakai-mcp`](https://github.com/jtayped/sakai-mcp) `MIT` and
+[`sayt25606-rgb/sakai-tasks-mcp`](https://github.com/sayt25606-rgb/sakai-tasks-mcp) `Apache-2.0`);
+**SCORM** (`3,434` → two producing servers plus a standalone validator); **Schoology /
+Infinite Campus** (`168` → three). 🟢 **Canvas** — the LMS this base has named since its third
+pass — gains its first agent at `119★`
+([`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp), `MIT` byte-verified).
+
+🔴 **Open and named:** **OneRoster** (`3,043` mentions) returned an **EMPTY result set** for
+agents — not a weak set, an empty one — while its non-agent tooling exists and is now shelved.
+🔴 **PowerSchool** (`382`) has **three** servers and **none** with a usable grant (`NONE`,
+`NONE`, `GPL-3.0`). 🔵 **One is a build opportunity; the other is a licence request.**
+
+### The Sakai pair is the first time this base can offer one platform at two risk levels
+
+🔴 [`jtayped/sakai-mcp`](https://github.com/jtayped/sakai-mcp) includes **submission** — it
+writes on the student's behalf. 🟢 [`sayt25606-rgb/sakai-tasks-mcp`](https://github.com/sayt25606-rgb/sakai-tasks-mcp)
+is **read-only and local**. 🔵 **Same platform, same week, opposite risk postures** — quote the
+second to a cautious district and the first only behind a gate.
+
+### `T974` — the dominant new supply shape is a pupil building for their own school
+
+🔵 Of the twenty-two rows, **six are single-institution clients**: FCPS (Fairfax County, one of
+the largest US districts), PAUSD, NTU, UPC/UPN. 🔵 They sit at `1`–`3★`, are built against one
+tenant's auth, and are **not products**. 🟢 **Their value to a studio is as a WIRING REFERENCE
+for a platform whose API docs are thin** — and as evidence that the integration is reachable at
+all without vendor cooperation. 🔴 **Never quote one as a deliverable.**
+
+### Channel note — the scheduler's prescribed method still does not work here, and a better one is now controlled
+
+🔴 **`curl -sI` returns `403` for live AND invented addresses in this session (`T923`), so it
+cannot verify existence.** 🟢 **`gh api search/repositories -f q="repo:OWNER/NAME"` CAN, and it
+was controlled this pass: `29/29` live addresses returned `total_count=1` with licence, stars,
+forks and push date; `2/2` invented addresses returned HTTP `422` *"the listed users and
+repositories cannot be searched either because the resources do not exist"*.** 🔵 **A `422` and
+a `1` are distinguishable; two `403`s are not.** `T970`.
+
+---
+
 ## `2026-11-13` (fourteenth pass) — **Two LMS platforms this base named 330 times between them, and shelved zero agents for, both turn out to be served — one at `67★`. The gap was on the shelf, not in the market**
 
 **Pass `p809`.** 🟢 **Five agent rows added, one rejection, one published star figure

@@ -1,0 +1,17 @@
+p810 gate control — `make hooks`, run three times.
+
+1. HEAD + p810 changes (first run):   48/72 green. RED included gate-author-key.
+2. Changes STASHED, pristine HEAD:    49/72 green. gate-author-key ABSENT from RED.
+3. Changes restored + 1-token fix:    49/72 green. RED set IDENTICAL to run 2.
+
+=> Run 1 was a REAL regression introduced by this pass, caught by the control and
+   NOT by the author's reading. Cause: compose/patterns.md P25 pipeline step was
+   labelled "1. Author" (the verb). gate-author-key (p349-keyed-authors) reads
+   "Author" as the noun and requires an identity key (%ae / %an) on the line.
+   Fix: the step is now "1. Write". Gate re-run alone: 0 findings.
+
+=> The 22 inherited failures are NOT this pass's. They are identical in runs 2 and 3.
+
+NOTE: p802 recorded the pristine baseline as 48/72. Today's pristine baseline is
+49/72, so one gate was repaired between p802 and p810. The delta that matters is
+run-to-run within this pass, not against p802's figure.

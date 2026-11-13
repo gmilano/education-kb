@@ -1,0 +1,32 @@
+slug	total_count	full_name	stars	forks	license_spdx	pushed	created	is_fork	description
+boyuchengz/canvas-mcp	1	boyuchengz/canvas-mcp	119	36	MIT	2026-10-27	2026-10-25	-	Read-only MCP server that connects Claude, ChatGPT and other AI assistants to Canvas LMS.
+OpenStudy-dev/OpenStudy	1	OpenStudy-dev/OpenStudy	80	14	MIT	2026-10-24	2026-04-17	-	Self-hostable study dashboard with a built-in MCP server, so that your Claude/ChatGPT subscription becomes x10 more effe
+taybenlor/runno	1	taybenlor/runno	775	48	MIT	2026-10-31	2021-06-05	-	Sandboxed runtime for programming languages and WASI binaries. Works in the browser, on your server, or via MCP.
+kemalyy/edumints-scorm-mcp	1	kemalyy/edumints-scorm-mcp	9	5	MIT	2026-10-14	2026-06-05	-	Open-source MCP server that assembles interactive, SCORM-compliant e-learning courses. Self-hostable. By edumints.com.
+giacomomaria81/scorm-mcp-server	1	giacomomaria81/scorm-mcp-server	6	0	MIT	2026-09-03	2026-07-23	-	Turn HTML, Claude Design bundles or mobile-learning exports into LMS-ready SCORM 2004/1.2 packages — and validate any SC
+Ed-Fi-Exchange-OSS/Prototype-Semantic-Layer-with-MCP	1	Ed-Fi-Exchange-OSS/Prototype-Semantic-Layer-with-MCP	0	0	Apache-2.0	2026-11-12	2026-11-05	-	Prototype application creating a semantic layer on Ed-Fi API data, with an MCP server interface. For demonstration purpo
+jtayped/sakai-mcp	1	jtayped/sakai-mcp	2	0	MIT	2026-11-01	2026-10-14	-	mcp server for a student's sakai lms account: courses, assignments, files, grades, notifications, tasks and submission
+sayt25606-rgb/sakai-tasks-mcp	1	sayt25606-rgb/sakai-tasks-mcp	1	0	Apache-2.0	2026-10-22	2026-08-29	-	Unofficial local MCP server for Sakai LMS: ask AI about assignment deadlines, quizzes, announcements and course material
+riripatate/schoology-mcp	1	riripatate/schoology-mcp	3	1	MIT	2026-04-22	2026-04-15	-	🎓 TypeScript client + Claude MCP skill for Schoology — no admin API keys needed
+jibberswrld/fcps-school-mcp	1	jibberswrld/fcps-school-mcp	2	1	MIT	2026-11-06	2026-09-12	-	Local MCP server for FCPS Schoology and StudentVUE — one-command setup.
+dajun666/schoology-mcp	1	dajun666/schoology-mcp	1	0	MIT	2026-10-08	2026-10-08	-	MCP server for PAUSD Schoology and the Infinite Campus student portal
+amirtds/cubite-mcp	1	amirtds/cubite-mcp	0	0	MIT	2026-09-23	2026-09-23	-	MCP server for Cubite LMS, a hosted learning management system (SCORM, xAPI, certificates, cohorts). Run your LMS from C
+erictrainnlpinxihu/Grader-agent	1	erictrainnlpinxihu/Grader-agent	94	0	MIT	2026-09-28	2026-09-21	-	Grader 的 agent 采用五阶段主循环：perceive→plan→act→observe→respond，由 harness 驱动。模型只决定意图与置信度，路由、工具集、风险等级由代码钉死。act 分只读 ReAct、RAG、人工
+baney75/myelinate	1	baney75/myelinate	7	1	MIT	2026-11-08	2026-10-03	-	Open-source Claude Code plugin and agent skill suite that makes Claude a Socratic tutor: 14 skills for course tutoring, 
+InferHaven/agent-skills	1	InferHaven/agent-skills	4	1	Apache-2.0	2026-10-31	2026-06-23	-	CodeTrain: an open-source Socratic coding tutor that runs as an Agent Skill in your coding agent. Tested in Claude Code 
+VIABLE-Learning-Lab/viable	1	VIABLE-Learning-Lab/viable	1	0	MIT	2026-11-11	2026-11-05	-	Open tools for AI that teaches the way a teacher wants: a Harness that goes around any agent, and an Engine that runs cl
+googleworkspace/oneroster-integration-conformance-tests	1	googleworkspace/oneroster-integration-conformance-tests	7	1	Apache-2.0	2026-07-30	2023-08-25	-	
+oat-sa/oneroster-import	1	oat-sa/oneroster-import	8	7	GPL-2.0	2026-07-16	2018-06-20	-	
+StudentSuite/awesome-skills-plugins-for-students	1	StudentSuite/awesome-skills-plugins-for-students	33	23	MIT	2026-11-06	2026-06-28	-	A curated list of Claude Code, Cursor, and Copilot skills and plugins built for students: IB, IGCSE, college-bound, and 
+weishao2/tizhuang-agent-skills	1	weishao2/tizhuang-agent-skills	39	7	MIT	2026-11-11	2026-08-11	-	2000万+中小学K12真题题库 Skill：免费注册、免费抽题、教材/章节/知识点检索、练习测验与AI智能组卷。
+joeseesun/qiaomu-learning	1	joeseesun/qiaomu-learning	72	7	MIT	2026-10-13	2026-08-10	-	用苏格拉底式逐问学习把教材、截图、PDF、笔记、题目或一个主题变成主动推导对话。Use when the learner明确要求“苏格拉底式学习”“逐问带我学”“一次只问一个问题”“先别告诉我答案”“边问边引导我推出来”、interacti
+XAIHT/Tlamatini	1	XAIHT/Tlamatini	15	1	MIT	2026-11-13	2026-03-06	-	Speak an idea. Build the real thing. Tlamatini brings AI to code, 3D worlds and hardware: voice, live editor tutoring, 8
+piyushh62/ashashala	1	piyushh62/ashashala	2	1	MIT	2026-07-16	2026-07-01	-	A multi-tenant, role-based, agentic AI tutoring platform for real schools. Built 100% open source. Zero paid APIs. Zero 
+OmarZen/scholarship-navigator	1	OmarZen/scholarship-navigator	14	3	MIT	2026-11-11	2026-10-25	-	Find scholarships you can actually win: eligibility checks, fit scores, missing papers and a dated plan. 35 scholarships
+johnnyrobot/qtimaker	1	johnnyrobot/qtimaker	0	0	BSD-3-Clause	2026-07-18	2026-06-13	-	Create QTI quizzes for Canvas from Markdown — with a local web interface, Docling document parsing, and AI question gene
+FenixEdu/fenixedu-academic	1	FenixEdu/fenixedu-academic	175	111	LGPL-3.0	2023-06-14	2013-05-20	-	FenixEdu Academic is open source Student Information System
+shastripranav/mcp-learning-server	1	shastripranav/mcp-learning-server	0	0	MIT	2026-06-30	2026-04-06	-	Model Context Protocol server for learning analytics and SCORM/xAPI integration
+webworn/openfoam-mcp-server	1	webworn/openfoam-mcp-server	129	24	NOASSERTION	2026-01-18	2025-07-06	-	LLM-powered OpenFOAM MCP server for intelligent CFD education with Socratic questioning and expert error resolution
+affromero/Sotto	1	affromero/Sotto	35	10	NOASSERTION	2026-11-13	2026-02-08	-	Self-hosted, open source AI language learning. CEFR courses, adaptive listening, and speaking practice built from your n
+thisrepodoesnotexist9988/invented-control-repo	{"message":"Validation Failed","errors":[{"message":"The listed users and repositories cannot be searched either because the resources do not exist or you do not have permission to view them.","resource":"Search","field":"q","code":"invalid"}],"documentation_url":"https://docs.github.com/v3/search/","status":"422"}gh: Validation Failed (HTTP 422)
+gmilano/totally-fake-education-kb-control	{"message":"Validation Failed","errors":[{"message":"The listed users and repositories cannot be searched either because the resources do not exist or you do not have permission to view them.","resource":"Search","field":"q","code":"invalid"}],"documentation_url":"https://docs.github.com/v3/search/","status":"422"}gh: Validation Failed (HTTP 422)

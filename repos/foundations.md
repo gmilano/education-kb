@@ -6,9 +6,29 @@ updated: 2026-11-13
 
 # Foundational open-source repos for education
 
-The platforms and libraries an education engagement actually builds on. **62
-repos**, all verified from the rendered repository page (license field + star
-count).
+The platforms and libraries an education engagement actually builds on. **69
+repos**, all verified on the `gh api search/repositories` `repo:` channel
+(license field + star count + push date), which this pass CONTROLLED against two
+invented addresses (`T970`).
+
+🟢 **Fifteenth pass (`p810`, 2026-11-13): six repos added and the six-pass nil on this
+shelf is BROKEN.** A new **rostering layer** (OneRoster — `3` repos), the sandboxed-execution
+substrate [`taybenlor/runno`](https://github.com/taybenlor/runno) (`MIT`, `775★`), the
+largest dedicated open-source SIS in this base ([`FenixEdu/fenixedu-academic`](https://github.com/FenixEdu/fenixedu-academic),
+`LGPL-3.0`, `175★`), and a Markdown→QTI authoring path
+([`johnnyrobot/qtimaker`](https://github.com/johnnyrobot/qtimaker), `BSD-3-Clause`).
+🔵 **Count re-derived by the three commands `p807` prescribed rather than carried forward:**
+table rows matching `^\|.*github\.com` = `69`; unique repo slugs **within those rows** =
+`69`. 🟢 **The mapping is `1:1` and no row carries two repositories.**
+
+🔴 **`D810-1` — this pass's own instrument defect, caught before publication, and it is the
+SEVENTH occurrence of the defect this header exists to prevent.** The first derivation counted
+unique slugs **file-wide** (`73`) against rows (`69`) and would have published a `4`-slug
+discrepancy as if rows had gone missing. 🟢 **The `4` are PROSE links** — `runno`,
+`fenixedu-academic` and `qtimaker` cited in this very header, plus four older narrative
+mentions. 🔵 **`p807` named the cause correctly (non-row `|` content) and still prescribed a
+command that does not restrict to rows.** The prescription is corrected here: **restrict the
+slug extraction to rows, or it is not measuring the table.**
 
 🔴 **Count defect, SIXTH occurrence, corrected at the twelfth pass (`p807`,
 2026-11-13): the header said `63` while the tables hold `62`.** 🔵 **`p806` corrected
@@ -169,6 +189,23 @@ builder, SCORM + cmi5) could **not** be verified: its host `oeltkit.bcltraining.
 not resolve under this session's network policy and no repository address was recovered.
 It is a lead, not a finding, and is deliberately not tabled.
 
+## The rostering layer — OneRoster (new, fifteenth pass `p810`)
+
+🟢 **New to this file, and it closes a six-pass absence.** `OneRoster` is named **`3,043`**
+times across this base — it is the IMS Global / 1EdTech standard by which a SIS hands class
+rosters to an LMS, and every pattern here that says "sync the roster" means this. 🔴 **This
+file carried not one repository for it until now.**
+
+🔴 **Read the agent gap next to it:** `agents/top.md` records a dedicated, empty leg for
+`oneroster mcp`. **The standard has tooling; it has no agent.** That asymmetry is the
+contribution target, and it is the best-evidenced one in this base.
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/googleworkspace/oneroster-integration-conformance-tests | Apache-2.0 | 7 | **New this pass (`p810`).** Google Workspace's **conformance test suite for OneRoster integrations** — the only vendor-neutral way in this base to prove a roster integration actually conforms before a district signs off. `1` fork, pushed `2026-07-30`, created `2023-08-25`. 🟢 **Apache-2.0 and published by a party with no LMS to sell** — it tests the integration, it does not implement one. 🔵 Use it as an acceptance gate in a delivery contract |
+| https://github.com/oat-sa/oneroster-import | GPL-2.0 | 8 | **New this pass (`p810`).** A OneRoster **importer** from Open Assessment Technologies (OAT), the TAO assessment-platform authors. `7` forks — 🔵 **a high fork-to-star ratio (`0.88`), which in this base has consistently indicated a repo that is deployed and adapted rather than starred.** 🔴 **GPL-2.0: copyleft, so it propagates into a derived deliverable.** Run it as a separate process, do not link it |
+| https://github.com/bgwdotdev/go-oneroster | MIT | 8 | **New this pass (`p810`).** A OneRoster **API implementation in Go**. 🟢 **The only permissive OneRoster server-side implementation found on the leg.** 🔴 **Last pushed `2020-07-30` — six years stale, and shelved on that basis as a REFERENCE for the wire format, not as a dependency.** 🔵 The spec has moved since; verify against 1EdTech before reusing a line of it |
+
 ## The integration layer — LTI 1.3 (added third pass, corrected fourth)
 
 Build the AI tool once as an LTI 1.3 tool provider and it mounts in Moodle,
@@ -286,6 +323,7 @@ so the shape is always a pair.
 
 | Repo | License | Stars | Notes |
 |---|---|---|---|
+| https://github.com/johnnyrobot/qtimaker | BSD-3-Clause | 0 | **New this pass (`p810`).** Creates **QTI quizzes for Canvas from Markdown**, with a local web interface, Docling document parsing and AI question generation. 🟢 **BSD-3-Clause — the first BSD row in this layer**, and permissive enough for a client deliverable. 🟢 **The useful shape is the direction of travel: Markdown → QTI → LMS**, which makes an item bank reviewable in a pull request before it is a quiz. 🔴 `0★`, `0` forks, pushed `2026-07-18` — shelved for the pipeline shape, not for traction |
 | https://github.com/oat-sa/tao-core | GPL-2.0 | 64 | **The only full assessment *platform* here — TAO, the long-standing open e-testing system, with real item banking.** Highest star count in this table and the one a client may already run. 37 forks, Releases empty, no QTI version stated on this repo. 🔴 **Two constraints that decide whether it fits:** the open-source edition is **QTI 2.2-based, not QTI 3**, and it ships **no Results Management** — so a QTI 3 contract or a reporting requirement both land outside it. GPL-2.0, so it is a host to extend, not a base to embed. |
 | https://github.com/amp-up-io/qti3-item-player | **MIT** | 30 | **The delivery half, and the only repo in this table claiming conformance certification.** 100% JavaScript QTI 3 item player aligned to the 1EdTech QTI v3 Best Practices guide, with stated **QTI 3 Basic *and* Advanced "Delivery" conformance** plus some elective capabilities. Item state via `endAttempt` / `suspendAttempt` / `scoreAttempt`; catalog/glossary events with dynamic rebinding; 14 colour themes. 596 commits, 6 forks, Releases empty. 🔴 **Built on Vue 2.6, which is end-of-life** — the integration cost is a Vue 2 island in a modern front end, and that belongs in the estimate. |
 | https://github.com/LongsightGroup/qti3 | **MIT** (© 2026 Longsight, Inc.) | 6 | **The authoring, scoring and migration half — the broadest QTI toolkit found, and the one this KB has already contributed work toward.** 12 npm packages: core parsing and scoring, browser player, React and Preact adapters, CLI, fixtures, conformance, accessibility, PNP, **writer (with an item-bank package writer)**, **migrator** (QTI 1.2 and 2.x → 3) and **transcoder** (QTI 3 → 1.2 / 2.1 / 2.2 / Canvas / Moodle). Tracks the **QTI 3.0.1 ASI item profile**, 19 interaction types. 3 forks, Releases empty, changelog at 0.13.0. 🔴 **Known limit, measured by this KB and not by its README:** `packages/writer` **cannot emit `qti-template-declaration` / `qti-template-processing`**, so *parametric* item variants cannot be authored on it even though `packages/core` fully executes them (real `randomInteger` draw over `min`/`max`/`step`, answer keys derived from the draw, constraint retry up to 100 restarts). 🟢 **The fix already exists in this repository** — `compose/code/p533-qti3-template-emitter/` regenerates two upstream fixtures node-for-node, and `writer-contribution.ts` is written in the host project's idiom. It is **MIT, so this is a contribution, not a procurement** — and it has **not been sent upstream** (`Gap 240`). Deliberately not opened unprompted: it is an outward action. |
@@ -326,6 +364,7 @@ tool, not a delivery component.
 
 | Repo | License | Stars | Notes |
 |---|---|---|---|
+| https://github.com/FenixEdu/fenixedu-academic | LGPL-3.0 | 175 | **New this pass (`p810`) — the largest dedicated open-source SIS in this base by stars, and a European one (Instituto Superior Técnico, Lisbon 🇵🇹).** Full academic SIS: curricular plans, enrolment, degrees, grading, theses. `111` forks — 🔵 **a `0.63` fork ratio, the signature of an SIS that institutions actually fork and run.** 🔴 **Last pushed `2023-06-14` — three years dormant, so this is an ARCHITECTURE reference and a migration source, not a live platform.** 🔴 LGPL-3.0: weak copyleft, so linking is permitted but modifications to the library itself must be released. 🟢 **It is also the only named EMEA-origin institutional system in this file**, which matters because `intel/market.md` has recorded a European supply gap for five consecutive passes |
 | https://github.com/openeducat/openeducat_erp | LGPL-3.0 | 911 | SIS + LMS + finance modules as Odoo apps. The "Odoo for education" answer. |
 | https://github.com/frappe/education | GPL-3.0 | 707 | **New this pass.** Education suite on the Frappe framework: admissions, fees, scheduling, exams, attendance. Shares a stack with `frappe/lms` (AGPL-3.0) and ERPNext, so a Frappe client can run SIS + LMS + ERP on one framework. **License read from `license.txt` ("GNU GPL V3") because GitHub's sidebar shows only a generic License link** — and note it differs from `frappe/lms`, which is AGPL-3.0. Branches version-15.1 / 15.2 / 16 / develop; Releases empty. |
 | https://github.com/francoisjacquet/rosariosis | GPL-2.0 | 654 | RosarioSIS student information system for school management. Widely used in LATAM K-12. |
@@ -370,6 +409,7 @@ implementation, three MIT write-gating designs to copy from `agents/top.md`) exi
 
 | Repo | License | Stars | Notes |
 |---|---|---|---|
+| https://github.com/taybenlor/runno | MIT | 775 | **New this pass (`p810`) — the highest-starred repo added to this file since `p806`, and the missing substrate under every "grade the student's code" pattern in this base.** Sandboxed runtime for programming languages and WASI binaries that runs **in the browser, on a server, or via MCP**. `48` forks, pushed `2026-10-31`, created `2021-06-05` — 🟢 **five years of history, which makes it the most maintained new row of this pass.** 🟢 Licence byte-verified: `LICENSE` blob `35ff1e95e8bf`, `1,106 B`, MIT, Benjamin Taylor. 🟢 **Why it is a foundation and not an agent: it is the untrusted-code boundary.** Any tutor that executes learner-submitted code needs exactly this and the education repos in this base all assume it without naming it. 🔵 Browser-side execution also removes per-learner compute from the hosting bill |
 | https://github.com/ankitects/anki | AGPL-3.0 | 32.8k | Spaced-repetition engine. License read from the `LICENSE` file — GitHub's sidebar does not name it. The scheduling algorithm is the reusable asset. |
 | https://github.com/bigbluebutton/bigbluebutton | LGPL-3.0 | 9.3k | Web conferencing built for virtual classes; LTI into Moodle/Canvas. |
 | https://github.com/oppia/oppia | Apache-2.0 | 7.0k | Free online learning platform with interactive explorations. **Apache-2.0 — permissive and substantial.** |

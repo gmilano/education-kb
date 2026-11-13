@@ -6,6 +6,54 @@ updated: 2026-11-13
 
 # Education vertical platforms — real systems to customize AI on top of
 
+
+## 🟢 Fifteenth pass (`p810`, 2026-11-13) — three platforms institutions actually run gain an agent surface, and one gains a SECOND at a different risk level
+
+🔵 **This file's premise is that an AI engagement means adding an agent layer to a system the
+institution already runs.** 🟢 **`p810` added that layer for three such systems, and for the
+first time can offer one platform at two risk postures.**
+
+| Platform | What institutions run it | Agent surface added this pass | License | Risk posture |
+|---|---|---|---|---|
+| **Sakai** | Higher ed, heavily US/consortium; named `3,937` times in this base — more than any other LMS — and carried **zero** agents until now | [`jtayped/sakai-mcp`](https://github.com/jtayped/sakai-mcp) | `MIT` | 🔴 **WRITE — includes submission on the student's behalf. Gate it** |
+| **Sakai** | " | [`sayt25606-rgb/sakai-tasks-mcp`](https://github.com/sayt25606-rgb/sakai-tasks-mcp) | `Apache-2.0` | 🟢 **READ-ONLY and local** |
+| **Canvas** | The largest higher-ed LMS in North America | [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) `119★` | `MIT` (byte-verified, blob `5ba93171ff8f`) | 🟢 **Read-only by construction — no write path exists** |
+| **Schoology** | US K-12 districts | [`riripatate/schoology-mcp`](https://github.com/riripatate/schoology-mcp) | `MIT` | 🟡 Student-session scope; **no admin API key needed** |
+| **Schoology + StudentVUE** | FCPS (one of the largest US districts) | [`jibberswrld/fcps-school-mcp`](https://github.com/jibberswrld/fcps-school-mcp) | `MIT` | 🟡 Single-district |
+| **Schoology + Infinite Campus** | PAUSD | [`dajun666/schoology-mcp`](https://github.com/dajun666/schoology-mcp) | `MIT` | 🟡 🟢 **First Infinite Campus surface in this base** |
+| **Cubite LMS** | Vendor-hosted LMS (SCORM, xAPI, certificates, cohorts) | [`amirtds/cubite-mcp`](https://github.com/amirtds/cubite-mcp) | `MIT` | 🔴 **`137` tools at the signed-in user's permission level** |
+
+🟢 **The Sakai pair is the genuinely new capability.** 🔵 **Same platform, same week, opposite
+postures** — quote the read-only local server to a cautious district and the submission-capable
+one only behind a write gate. 🔴 **This base has never before been able to offer that choice on
+any LMS**, and it is the single most common objection in an education pilot conversation.
+
+🔴 **`137` tools is a governance object, not a feature.** [`amirtds/cubite-mcp`](https://github.com/amirtds/cubite-mcp)
+runs at the teacher's own permission level — the same unclaimed risk `p792-D` raised over
+[`jeffercbs/chispa-mcp`](https://github.com/jeffercbs/chispa-mcp)'s `77` tools, **at nearly
+twice the surface.** 🟢 **The counter-example now exists and it is in this base:** the Ed-Fi
+prototype exposes **six** tools behind a read-only database role (`T28`). 🔵 **Tool count is a
+design choice, and the standards body chose six.**
+
+## 🟢 Student information systems — the layer this file has been thinnest on
+
+🟢 **New this pass:** [`FenixEdu/fenixedu-academic`](https://github.com/FenixEdu/fenixedu-academic)
+(`LGPL-3.0`, `175★`, `111` forks) — a full academic SIS from **Instituto Superior Técnico,
+Lisbon 🇵🇹**: curricular plans, enrolment, degrees, grading, theses. 🟢 **The largest dedicated
+open-source SIS in this base, and the only named EMEA-origin institutional system in it.**
+🔴 **Dormant since `2023-06-14`** — an architecture reference and a migration source, not a
+platform to deploy. 🔴 **LGPL-3.0 is weak copyleft: linking is fine, modifications to the
+library itself must be released.**
+
+🔵 **Rostering is the layer BETWEEN the SIS and the LMS, and `p810` added it to
+[`repos/foundations.md`](../repos/foundations.md):** OneRoster now has a conformance suite
+([`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests),
+`Apache-2.0`), an importer ([`oat-sa/oneroster-import`](https://github.com/oat-sa/oneroster-import),
+🔴 `GPL-2.0`) and a Go server ([`bgwdotdev/go-oneroster`](https://github.com/bgwdotdev/go-oneroster),
+`MIT`, 🔴 stale since `2020`). 🔴 **And no agent at all** — a dedicated leg returned an empty
+result set. 🟢 **Use the conformance suite as a contractual acceptance gate on any roster
+integration**, whoever builds it.
+
 The education equivalent of "Odoo for ERP". These are the systems institutions
 already run; an AI engagement almost always means **adding an agent layer to one
 of these**, not replacing it. All licenses and star counts verified from the

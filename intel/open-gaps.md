@@ -1,7 +1,63 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-12
+updated: 2026-11-13
+---
+
+## 🆕 `p810` — **`3` new actions, and one standing gap SUBSTANTIALLY answered from an unexpected direction**
+
+🟢 Machine output: [`repo-verification-channel`](../evidence/repo-verification-channel.2026-11-13-p810.tsv) · [`licence-byte-reads`](../evidence/licence-byte-reads.2026-11-13-p810.tsv) · [`gate-baseline-control`](../evidence/gate-baseline-control.2026-11-13-p810.txt)
+
+### 🟢 `p792-D` — SUBSTANTIALLY ANSWERED, by the standards body rather than by a security researcher
+
+🔴 **The gap as stated since the eighth pass:** no independent security or data-governance
+evaluation of any education MCP server exists. 🟢 **What landed:**
+[`Ed-Fi-Exchange-OSS/Prototype-Semantic-Layer-with-MCP`](https://github.com/Ed-Fi-Exchange-OSS/Prototype-Semantic-Layer-with-MCP)
+(`Apache-2.0`) ships a **published reference control stack** with an OpenSSF Scorecard badge:
+Keycloak OAuth identity from a verified email, a `get_my_scope` authorisation tool, a Postgres
+role pinned `default_transaction_read_only = on` with `GRANT SELECT` on one schema, and
+table-level provenance in every response.
+
+🔵 **It is not an evaluation OF the existing servers — it is a reference TO evaluate them
+against, which is the more useful artifact.** 🔴 **The gap narrows rather than closes:**
+[`amirtds/cubite-mcp`](https://github.com/amirtds/cubite-mcp) (`137` tools) and
+[`jeffercbs/chispa-mcp`](https://github.com/jeffercbs/chispa-mcp) (`77` tools) still run at the
+teacher's own permission level with nothing equivalent published. 🟢 **Restated: "no one has
+done this" → "one organisation has, and it is the one with no product to sell."**
+
+### 🔴 `ACTION p810-A` — re-probe every row this base rejected on a BLANK or `NOASSERTION` licence signal alone
+
+🔴 **`T27` proved the signal is non-informative in both directions.** 🔴 **Prior passes used it
+as presumptive grounds for the REJECTED table** — `p809` rejected
+[`bencered/d2l-mcp-server`](https://github.com/bencered/d2l-mcp-server) on exactly that basis,
+and `p802`'s `T966` observed the blank sidebar "carries no information" without drawing the
+symmetric conclusion. 🟢 **`T966` is completed by `T27`.** 🔵 **The probe is cheap: a blobless
+clone plus `git cat-file` on the root `LICENSE`, which is `~2s` per address.** 🔴 **Until it is
+run, this base may be holding a usable repository in its rejection table.**
+
+### 🔴 `ACTION p810-B` — build the OneRoster agent, or state why not
+
+🟢 **The best-evidenced contribution target this base has produced.** OneRoster is named
+`3,043` times here; a dedicated leg returned an **empty result set** for agents; and the
+**Apache-2.0 conformance suite to prove a new implementation correct already exists**
+([`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests)).
+🔵 **Supply gap, not a licence gap** — nothing blocks it.
+
+### 🔴 `ACTION p810-C` — file a licence request for a PowerSchool MCP server
+
+🔴 **Three servers, licences `NONE`, `NONE`, `GPL-3.0`, on the largest US K-12 SIS.** 🔵 **This
+is the opposite response to `p810-B` and the transform in `T29` told them apart.**
+🟢 [`intel/licence-requests/`](licence-requests/) is where it belongs. 🔴 **Same standing
+limit as `p801-D`: this session's GitHub scope is the `gmilano` bases, so the request can be
+DRAFTED here and not SENT.**
+
+### 🔴 `ACTION p802-B` — CARRIED, failed a second time, re-shaped
+
+🔴 Germany, France and the Nordics returned regulators and **zero classroom deployment
+figures** on a second dedicated leg. 🟢 **Re-shaped rather than repeated: these are federal and
+municipal school systems, so any figures sit in Länder, académie and kommune publications.**
+🔴 **Two failed legs on the same query shape is an instrument problem, not a scarcity finding.**
+
 ---
 
 ## 🆕 `p801` — **`3` of `p800`'s `4` actions discharged, `1` carried. 🔴 And the discharge of `p800-A` shows `p800` wrote the correction NOTE next to the row it did not correct — which is the propagation gap recurring one level up.**

@@ -6,8 +6,10 @@ updated: 2026-11-13
 
 # Education AI — current trends
 
-**Twenty-five** trends, each with the evidence behind it and what it implies for an
-engagement. 🟢 **Thirteenth pass (`p808`, 2026-11-13): `T24` and `T25` added.** The count
+**Thirty** trends, each with the evidence behind it and what it implies for an
+engagement. 🟢 **Fifteenth pass (`p810`, 2026-11-13): `T27`–`T30` added.** 🔴 **This line said
+"Twenty-five" while the file held `26` — the drift this very sentence warns about, uncorrected
+through `p809`.** 🟢 **Re-derived here: `grep -c '^## T' intel/trends.md` = `30`.** The count
 above was produced by `grep -c '^## T'` before being written, not carried forward.
 🔵 **`T24` (the education agent long tail is numerous, atomised and unlicensed) came from
 the first search leg in six passes to break the supply nil; `T25` (the same product
@@ -1124,3 +1126,113 @@ findings. The same pass that closed Brightspace and Blackboard ran the identical
 transform on **Ellucian Banner, Ellucian Colleague and Workday Student** and returned
 **nothing** — those gaps are real (see `agents/top.md` → Declared gaps). 🟢 **The rule
 tells you which gaps have not been tested, not which gaps are false.**
+
+## T27 — A licence field that is wrong in BOTH directions is not a weak signal, it is a non-signal: `NOASSERTION` obliges a byte read before shelving AND before rejecting
+
+**Evidence, `p810`, two repositories, same hour, opposite outcomes.** Both carried GitHub
+`license.spdx_id` = `NOASSERTION`:
+
+| Repo | ★ | LICENSE bytes | Truth |
+|---|---|---|---|
+| [`webworn/openfoam-mcp-server`](https://github.com/webworn/openfoam-mcp-server) | `129` | blob `be1f2caa61c7`, `10,708 B`, `APPENDIX` present, no added clause, `shall not` hits are stock Apache §1/§9 | 🟢 **Unmodified Apache-2.0 — BUILD-SAFE** |
+| [`affromero/Sotto`](https://github.com/affromero/Sotto) | `35` | blob `1a71cb643975`, `4,563 B`, *"Any noncommercial purpose is a permitted purpose"* | 🔴 **PolyForm Noncommercial 1.0.0 — COMMERCIALLY PROHIBITED** |
+
+🔴 **Trusting the field would have rejected a usable `129★` repository and shipped an
+unusable `35★` one, in the same pass.** 🔴 **`Sotto` calls itself "open source" in its own
+repository description** — the self-description was wrong and the bytes were right.
+
+🔵 **Why `openfoam` defeats the classifier is the mechanism, and it generalises:** its Apache
+text is `10,708 B` against the Ed-Fi Apache's `11,558 B` — a **whitespace/formatting**
+divergence that changes no term. 🔵 **A licence classifier is a string matcher, and whitespace
+is a string.**
+
+🟢 **What this corrects in this base's own practice.** Prior passes treated a blank or absent
+licence signal as presumptive grounds for the REJECTED table (`p809` rejected
+`bencered/d2l-mcp-server` on exactly that basis, and `p802`'s `T966` observed that a blank
+sidebar "carries no information" without drawing the symmetric conclusion). 🟢 **`T966` is now
+completed: the blank field carries no information in EITHER direction.** 🔴 **Re-probe any
+row this base rejected on a blank or `NOASSERTION` signal alone** — `ACTION p810-A`.
+
+**Implication for an engagement.** 🔴 **An automated licence gate in a client's CI that keys on
+GitHub's API field will both block safe dependencies and admit prohibited ones.** 🟢 **Gate on
+the LICENSE bytes with a normalised comparison** — this base's
+[`p135`](../compose/code/p135-licence-sha-identity/) copyright-stripped hash is the instrument,
+and it is immune to exactly the whitespace divergence that produced `NOASSERTION` here.
+
+## T28 — The standards bodies have started shipping agents themselves, and they ship the CONTROLS the vendors do not
+
+**Evidence, `p810`.** [`Ed-Fi-Exchange-OSS/Prototype-Semantic-Layer-with-MCP`](https://github.com/Ed-Fi-Exchange-OSS/Prototype-Semantic-Layer-with-MCP)
+(`Apache-2.0`, pushed `2026-11-12`) is published by the **Ed-Fi Alliance**, author of the US
+K-12 data standard. 🟢 **Across fifteen passes, every other education agent in this base came
+from a vendor, a lab or a student.**
+
+🟢 **What arrives with it is not the code, it is the control stack** — identity (Keycloak
+OAuth, user taken from the token's **verified email**), authorisation (**`get_my_scope`**, so
+the agent can state what the educator may see before answering), data (**Postgres role pinned
+`default_transaction_read_only = on`**, `REVOKE ALL ON SCHEMA public`, `GRANT SELECT` on the
+analytics schema only), and provenance (every tool returns **the data-mart tables it used**).
+
+🔵 **The generalisable principle: read-only is enforced at the DATABASE ROLE, not in the
+prompt and not in the tool definitions.** 🟢 **That is the difference between a control and a
+convention** — a prompt-level restriction is defeated by the next jailbreak; a
+`default_transaction_read_only` role is defeated by nothing the model can emit.
+
+🟢 **This substantially answers `p792-D`** (no independent security or data-governance
+evaluation of any education MCP server): there is now a reference implementation from the
+standards body, carrying an **OpenSSF Scorecard** badge. 🔴 **It does not answer it for the
+`137`-tool [`amirtds/cubite-mcp`](https://github.com/amirtds/cubite-mcp) or the `77`-tool
+[`jeffercbs/chispa-mcp`](https://github.com/jeffercbs/chispa-mcp), both of which run at the
+teacher's own permission level with no equivalent published.** 🔵 **The gap narrows from "no
+one has done this" to "one organisation has, and it is the one with no product to sell."**
+
+## T29 — `T26`'s transform is an INSTRUMENT, because this pass made it fail cleanly twice
+
+`T26` (`p809`) held that when this base names a platform often and shelves nothing for it,
+that is a search instruction. 🟢 **`p810` ran it against six platforms. It succeeded four
+times and failed twice — and the failures are what promote it from slogan to instrument.**
+
+| Platform | Mentions | Result |
+|---|---|---|
+| Sakai | `3,937` | 🟢 **2 agents** |
+| SCORM | `3,434` | 🟢 **2 producers + a validator** |
+| Schoology / Infinite Campus | `168` | 🟢 **3 agents** |
+| Canvas | (platform layer since `p3`) | 🟢 **1 agent, `119★`** |
+| **OneRoster** | `3,043` | 🔴 **EMPTY result set — zero repositories** |
+| **PowerSchool** | `382` | 🔴 **3 servers, NONE with a usable grant** |
+
+🟢 **A transform that always returns something is a confirmation bias generator.** 🔵 **This
+one returns nothing when there is nothing, and it distinguishes two different kinds of
+nothing:** OneRoster is a **supply** gap (nobody has built it) and PowerSchool is a **licence**
+gap (three exist, none is permissive). 🟢 **Those take opposite responses — build one, or ask
+for a grant** — and the transform told them apart.
+
+🔵 **`p798-G` satisfied:** this is a rate measured somewhere it should not hold, and it did not
+hold, twice.
+
+## T30 — Regulators across four jurisdictions converged on the same control point, and England states it as a RULE rather than a principle
+
+**Evidence.** 🟢 **Ofqual: AI may not be the SOLE marker in regulated qualifications, and its
+guide for schools extends that to non-exam assessment.** Its January 2026 position: AI is
+promising for **quality assurance and marker training**, not ready for **high-stakes marking**,
+with research finding wide context-dependence and **no general case for AI marking**.
+
+🔵 **Set beside what this base already holds:** 🇻🇳 Vietnam's **sole-basis** test, 🇪🇺 the EU's
+Art. `27` **FRIA** for public deployers, 🇺🇸 Oklahoma's **teacher-review and parent opt-out**,
+🇵🇭 the Philippines' **AI registry** (DepEd Order `003`, s. `2026`), and the **OECD 2026
+Digital Education Outlook**'s finding that AI helps learning only where pedagogy stays in
+control.
+
+🟢 **Four jurisdictions, a multilateral and an exam board, with no shared method, arriving at
+one architecture: AI proposes, a named human decides, the system proves it.**
+
+🟢 **Why Ofqual's phrasing is the commercially useful one: it is a bright line that names the
+OPEN territory, not just the closed.** 🔵 **Closed: sole-decider marking. Open — and
+explicitly endorsed: quality assurance, marker training, moderation, second-marking.** 🟢 **A
+proposal that sells QA and moderation is selling into a regulator-endorsed category**, which
+is a materially easier sale than a tutoring pilot. 🔴 **`compose/patterns.md` `P810-3` is built
+to this line; `P22`'s human-in-the-loop publication gate already satisfies it.**
+
+🔴 **One claim NOT carried:** a reported 2026 DfE standard requiring "progressive disclosure"
+(hints rather than answers) and usage limits could not be confirmed against a government
+source. 🔵 **It is newsletter-grade and it is left out of the pattern it would have supported.**
+

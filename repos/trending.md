@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (fifteenth pass) — **The six-pass nil on the foundations shelf breaks: a whole rostering layer, the sandbox substrate, and the largest open SIS in this base**
+
+**Pass `p810`.** 🟢 **Six repos added to `repos/foundations.md`, ending a SIX-consecutive-pass
+nil on that shelf** — the longest drought this base has recorded on any shelf.
+
+### What moved
+
+| Repo | License | ★ | Forks | Pushed | Why it is here |
+|---|---|---|---|---|---|
+| [`taybenlor/runno`](https://github.com/taybenlor/runno) | `MIT` **(byte-verified, blob `35ff1e95e8bf`, `1,106 B`)** | `775` | `48` | `2026-10-31` | 🟢 **The untrusted-code boundary every "grade the student's code" pattern in this base assumed and none named.** Sandboxed WASI runtime that runs in the browser, on a server **or via MCP**. Created `2021-06-05` — `5` years of history, the most maintained row of this pass |
+| [`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests) | `Apache-2.0` | `7` | `1` | `2026-07-30` | 🟢 Vendor-neutral **conformance suite** for OneRoster integrations, from a party with no LMS to sell. Use as a contractual acceptance gate |
+| [`oat-sa/oneroster-import`](https://github.com/oat-sa/oneroster-import) | 🔴 `GPL-2.0` | `8` | `7` | `2026-07-16` | OneRoster importer from the TAO authors. 🔵 **Fork ratio `0.88`** — in this base a reliable signature of a repo that is deployed and adapted rather than starred |
+| [`bgwdotdev/go-oneroster`](https://github.com/bgwdotdev/go-oneroster) | `MIT` | `8` | `1` | 🔴 `2020-07-30` | The only permissive OneRoster **server implementation** found. 🔴 **Six years stale — shelved as a wire-format REFERENCE, not a dependency** |
+| [`FenixEdu/fenixedu-academic`](https://github.com/FenixEdu/fenixedu-academic) | 🔴 `LGPL-3.0` | `175` | `111` | 🔴 `2023-06-14` | 🟢 **Largest dedicated open-source SIS in this base, and EMEA-origin** (Instituto Superior Técnico, Lisbon 🇵🇹). Fork ratio `0.63`. 🔴 Three years dormant — architecture reference and migration source |
+| [`johnnyrobot/qtimaker`](https://github.com/johnnyrobot/qtimaker) | `BSD-3-Clause` | `0` | `0` | `2026-07-18` | 🟢 **First BSD row in the QTI layer.** Markdown → QTI → Canvas, so an item bank is reviewable in a pull request before it is a quiz |
+
+### The new layer, and why it was missing
+
+🟢 **`## The rostering layer — OneRoster` is new to `repos/foundations.md` this pass.**
+OneRoster is named **`3,043`** times across this base — it is how a SIS hands class rosters to
+an LMS, and every pattern here that says *"sync the roster"* means it. 🔴 **This base carried
+zero repositories for it through fourteen passes.**
+
+🔴 **The asymmetry is the finding, and it is sharp:** the standard has a **conformance suite**,
+an **importer** and a **server implementation** — and **no agent whatsoever**. A dedicated leg
+for `oneroster mcp` returned an **empty result set**. 🟢 **That is the narrowest, best-evidenced
+contribution target this base has produced**: not "build an education agent", but "nothing can
+read or reconcile a OneRoster roster conversationally, and the conformance tests to prove a new
+one correct already exist and are Apache-2.0."
+
+### 🔴 `D810-1` — the foundations count defect recurs for a SEVENTH time, caught pre-publication
+
+🔴 **The first derivation of this pass's repo count compared table rows (`69`) against unique
+slugs extracted FILE-WIDE (`73`) and would have published a `4`-row discrepancy as if rows had
+gone missing.** 🟢 **The `4` are prose links** — including three in the very header sentence
+that was reporting the count. 🔵 **`p807` diagnosed the cause correctly (non-row content) and
+still prescribed a command that does not restrict to rows.** 🟢 **Prescription corrected:
+extract slugs from rows only.** Re-derived: rows `69`, unique-in-rows `69`, mapping `1:1`.
+
+🔵 **This is the second consecutive pass to catch its own instrument defect before publishing
+it** (`p802`'s `D1` counted lines where it meant occurrences). 🟢 **Both were caught by
+computing the measure two ways before writing it down** — which is now the cheapest reliable
+habit in this base.
+
+---
+
 ## `2026-11-13` (fourteenth pass) — **The LMS connector tier is far deeper than this base recorded, and the authoring tier gained its first no-backend SCORM/cmi5 exporter**
 
 **Pass `p809`.** 🟢 **Six repositories verified by licence payload this pass; one

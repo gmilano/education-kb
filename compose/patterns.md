@@ -6,10 +6,13 @@ updated: 2026-11-13
 
 # Compose patterns — education
 
-**Twenty-two** concrete recipes. Each names the actual repos, the license
+**Twenty-six** concrete recipes. Each names the actual repos, the license
 consequence, how the pieces wire together, and a rough build estimate. All
 components were license-verified on 2026-11-13 (see `agents/top.md` and
-`repos/foundations.md`). 🔴 **Count defect, third occurrence, fixed again at
+`repos/foundations.md`). 🟢 **Fifteenth pass (`p810`): `P24`–`P26` added** — a FRIA-survivable
+district early-warning agent, a Markdown→SCORM pipeline with a conformance gate, and
+assessment work shaped to Ofqual's open categories. 🔴 **This line said "Twenty-two" while the
+file held `23`.** 🟢 **Re-derived: `grep -c '^## P' compose/patterns.md` = `26`.** 🔴 **Count defect, third occurrence, fixed again at
 `p805`: `p804` corrected "Ten" to "Thirteen" while the file already carried
 sixteen `## P` headings. It is now "Eighteen" and it matches
 `grep -c '^## P'`.** 🔵 **A count written in prose drifts every time a pattern is
@@ -1601,4 +1604,125 @@ weeks**, most of it governance rather than code.
   user's browser. Excellent reference, unacceptable dependency.
 - 🔴 **`Mattlo0546/blackboard-mcp` has `4` commits.** If the client is on Blackboard
   Ultra and wants a supported path, budget to maintain a fork rather than to adopt.
+
+## P24 — District early-warning agent that survives a FRIA (North America first, EMEA-portable)
+
+**The ask this serves.** *"Which of my students are at risk, and why?"* — asked by a teacher,
+answered from the SIS, in a form a data-protection officer will sign off.
+
+**Why it is now buildable.** The reference implementation exists and comes from the standards
+body: [`Ed-Fi-Exchange-OSS/Prototype-Semantic-Layer-with-MCP`](https://github.com/Ed-Fi-Exchange-OSS/Prototype-Semantic-Layer-with-MCP)
+(`Apache-2.0`). 🔴 **Its own README says "demonstration purposes only; not intended to be a
+robust production solution" — so this pattern ships the ARCHITECTURE and re-implements the
+code.**
+
+**Wiring.**
+
+| Layer | Component | License | Role |
+|---|---|---|---|
+| Source of record | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | `Apache-2.0` | The district's existing Ed-Fi ODS/API |
+| Semantic layer | `datamart/` from the prototype | `Apache-2.0` | PostgreSQL data mart; descriptor mapping; time-travel views. **Agents query the mart, never the ODS** |
+| Access control | `datamart/sql/mcp-reader.sql` | `Apache-2.0` | `CREATE ROLE mcp_reader LOGIN`; `ALTER ROLE mcp_reader SET default_transaction_read_only = on`; `REVOKE ALL ON SCHEMA public`; `GRANT SELECT ON ALL TABLES IN SCHEMA analytics` |
+| Identity | **Keycloak** (OAuth) | Apache-2.0 | Educator signs in; server takes the user from the token's **verified email** |
+| Agent surface | `mcp-server/` — `get_my_scope`, `list_my_sections`, `find_students`, `list_students_at_risk`, `get_student_summary`, `get_attendance_trend` | `Apache-2.0` | Streamable HTTP on `:3000/mcp`; every tool read-only, returning compact JSON **naming the tables used** |
+| Evidence trail | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | `MIT` | Records what the agent surfaced and what the human then did — the FRIA artifact |
+
+**The three controls, and why each is where it is.**
+1. 🟢 **Read-only at the DATABASE ROLE**, not in the prompt. A prompt restriction is defeated
+   by the next jailbreak; `default_transaction_read_only` is defeated by nothing the model emits.
+2. 🟢 **`get_my_scope` makes authorisation ANSWERABLE.** The agent can state what this educator
+   may see before it answers — which is what turns "it only shows your students" from a claim
+   into a demonstrable property.
+3. 🟢 **Table-level provenance in every response** gives the FRIA its data-flow section
+   for free.
+
+**Regulatory fit.** 🟢 EU **Art. `27` FRIA** for public deployers (education is Annex III
+high-risk, standalone deadline `2027-12-02`); 🟢 **Oklahoma's teacher-review requirement** and
+🟢 the **Philippines' DepEd AI registry** are all satisfied by the scope tool plus the xAPI
+trail. 🔴 **The agent must never rank, score or flag as the sole basis of a decision** — it
+surfaces, a named teacher decides (`T30`).
+
+**Estimate.** `8`–`10` weeks against an existing Ed-Fi ODS; `14`+ if the district's SIS is not
+Ed-Fi-conformant and the mart must be built from a vendor export.
+
+🔴 **Do not attempt on PowerSchool.** The three PowerSchool MCP servers found at `p810` carry
+`NONE`, `NONE` and `GPL-3.0` — there is no permissive client to build on (`agents/top.md`,
+Declared gaps).
+
+## P25 — Markdown-to-SCORM course pipeline with a conformance gate before delivery (Global; APAC-sized)
+
+**The ask this serves.** A training programme that must land in an LMS the client already runs,
+at volume, with content reviewable before it ships. 🔵 **India's CBSE mandate — `10`M+ teachers
+to train through NISHTHA against a fixed curriculum and a dated academic year — is this pattern
+at national scale** (`intel/market.md`, APAC).
+
+**Wiring — all permissive, no copyleft anywhere in the chain.**
+
+| Step | Component | License | Role |
+|---|---|---|---|
+| 1. Write | Markdown in the client's own repo | — | 🟢 **Content reviewable in a pull request before it is a course** |
+| 2. Assemble | [`kemalyy/edumints-scorm-mcp`](https://github.com/kemalyy/edumints-scorm-mcp) | `MIT` | Agent-driven assembly of interactive SCORM-compliant courses |
+| 3. Package | [`giacomomaria81/scorm-mcp-server`](https://github.com/giacomomaria81/scorm-mcp-server) | `MIT` | HTML / design bundles → **SCORM 2004 / 1.2**, offline |
+| 4. **Gate** | the same repo's **zip validator** | `MIT` | 🟢 **Validates ANY SCORM zip without an LMS** — a pre-delivery gate rather than a post-upload surprise |
+| 5. Assess | [`johnnyrobot/qtimaker`](https://github.com/johnnyrobot/qtimaker) | `BSD-3-Clause` | Markdown → **QTI** item bank, same review path |
+| 6. Code exercises | [`taybenlor/runno`](https://github.com/taybenlor/runno) | `MIT` | 🟢 **Sandboxed WASI execution in the browser** — the untrusted-code boundary, and it moves per-learner compute off the hosting bill |
+| 7. Deliver | [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) (`MIT`) · [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) (`MIT`) · [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | permissive | Into the LMS the client already runs |
+| 8. Record | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | `MIT` | xAPI completion records |
+
+🟢 **Step 4 is the one that earns its place.** Every other SCORM pipeline in the wild discovers
+conformance failures on upload, per-LMS. 🔵 **A validator that runs without an LMS turns a
+delivery risk into a CI check.**
+
+🔴 **Licence trap, and it is the one that actually bites at this scale.** If an item bank is
+retrieved rather than authored — e.g. [`weishao2/tizhuang-agent-skills`](https://github.com/weishao2/tizhuang-agent-skills)
+(`MIT`, `39★`, 20M+ K-12 items) — 🔴 **the MIT grant covers the SKILL CODE and grants nothing
+in the QUESTION BANK behind it.** 🟢 **Clear the corpus separately from the tooling** — the
+same split as `P800-3`.
+
+🔴 **`boyuchengz/canvas-mcp` is read-only by construction**, so step 7 into Canvas needs a
+separate authenticated write path; do not assume the agent can publish.
+
+**Estimate.** `6`–`8` weeks for the pipeline; content volume is the cost driver, not the code.
+
+## P26 — Assessment assistance that is regulator-shaped: QA and moderation, never the sole marker (EMEA first)
+
+**The ask this serves.** An awarding body or university wants AI in marking and has been told
+it cannot have it. 🟢 **Ofqual's rule names the open territory as precisely as the closed one**
+(`T30`): **closed** — AI as sole marker in regulated qualifications, extended to non-exam
+assessment; **open and explicitly endorsed** — **quality assurance, marker training,
+moderation, second-marking.**
+
+🔵 **So do not sell marking. Sell the four open categories, and build so that the closed one is
+structurally unreachable.**
+
+**Wiring.**
+
+| Component | License | Role |
+|---|---|---|
+| [`erictrainnlpinxihu/Grader-agent`](https://github.com/erictrainnlpinxihu/Grader-agent) | `MIT`, `94★` | Five-phase loop `perceive→plan→act→observe→respond`. 🟢 **The model decides only intent and confidence; routing, tool set and risk level are pinned in CODE** — which is the auditable separation a regulator asks to see |
+| [`johnnyrobot/qtimaker`](https://github.com/johnnyrobot/qtimaker) | `BSD-3-Clause` | QTI item bank from Markdown, reviewable before use |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🔴 `GPL-2.0` | Full assessment platform **only if** the client can carry GPL; otherwise keep it out of the deliverable and integrate at the process boundary |
+| [`VIABLE-Learning-Lab/viable`](https://github.com/VIABLE-Learning-Lab/viable) | `MIT` | A harness that wraps any agent to keep teaching policy outside the model — same control shape, arrived at independently |
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | `MIT` | The audit record: what the agent proposed, which human decided, when |
+
+**The four sellable products, in order of regulatory ease.**
+1. 🟢 **Marker training** — generate calibration scripts with known marks from the item bank.
+2. 🟢 **Quality assurance** — agent re-marks a sample; **disagreement with the human marker is
+   the output**, not a grade. 🔵 **The deliverable is a flag for human review, which is the
+   regulator's own stated use.**
+3. 🟢 **Moderation** — surface cross-marker drift across a cohort.
+4. 🟡 **Second-marking** — agent as one of two markers, human reconciles. 🔴 **Only where the
+   human reconciliation is recorded and binding.**
+
+🔴 **The structural guarantee matters more than the policy.** 🟢 **Build so no agent output
+reaches a candidate record without a named human write** — `Grader-agent`'s code-pinned
+routing plus `P22`'s human-in-the-loop publication gate already give this; the xAPI trail
+proves it after the fact. 🔵 **Then "AI is not the sole marker" is a property of the system,
+not a promise in the contract.**
+
+🔴 **Do not cite the reported DfE "progressive disclosure" standard in a bid** — `p810` could
+not confirm it against any government source (`T30`).
+
+**Estimate.** `6`–`8` weeks for QA and moderation on an existing item bank; second-marking adds
+a reconciliation UI and a conversation with the regulator.
 

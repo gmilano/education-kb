@@ -1,0 +1,6 @@
+slug	head	licence_blob	bytes	github_api_field	bytes_verdict	build_safe
+webworn/openfoam-mcp-server	8d14e20	be1f2caa61c7	10708	NOASSERTION	Apache-2.0 unmodified (APPENDIX present, no added clause)	YES
+affromero/Sotto	fc301bf	1a71cb643975	4563	NOASSERTION	PolyForm Noncommercial 1.0.0 ("Any noncommercial purpose is a permitted purpose")	NO
+boyuchengz/canvas-mcp	55aa401	5ba93171ff8f	1072	MIT	MIT License, Copyright (c) 2026 Boyucheng Zhang	YES
+taybenlor/runno	af05728	35ff1e95e8bf	1106	MIT	MIT License, Benjamin Taylor	YES
+Ed-Fi-Exchange-OSS/Prototype-Semantic-Layer-with-MCP	7c51eb6	29f81d812f3e	11558	Apache-2.0	Apache-2.0 unmodified	YES
