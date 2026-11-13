@@ -3,6 +3,105 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+## `2026-11-13` (sixth pass) — **`OpenOLAT` is Apache-2.0, and four passes of sidebar-reading could never have found it**
+
+**Window:** foundational education repos, specifically **the LMS layer** — the
+one layer this KB had declared closed ("no permissive LMS exists at scale").
+**That gap is withdrawn.** `repos/foundations.md` now carries **41 repos, up
+from 40.**
+
+**Channel note, re-tested this pass — one limit lifted, two new ones found.**
+`curl -sI https://github.com/...` still returns **`403` for every path**, so a
+`curl` probe still cannot distinguish a live repository from a 404; verification
+remains by rendered page plus payload read. 🟢 **New and useful: `gh api -X GET
+search/code -f q='repo:OWNER/REPO <term>'` works through this session's egress
+and returns real file paths inside a public repository.** That is how this
+pass found OpenOLAT's AI layer — a rendered-page read of a repository root can
+never show you `src/main/java/.../ai/spi/`, and no amount of star-count reading
+would have surfaced it. **Add code search to this KB's standard method: read the
+sidebar for the license, open `LICENSE` when the sidebar is vague, then code-search
+the repo for the capability you are actually asking about.** 🔴 **Two hosts do
+not resolve in this session: `docs.openolat.org` and `en.wikipedia.org`.** Every
+release-note detail below is therefore **search-summary sourced, not
+primary-verified**, and is marked as such; everything read from the repository
+itself is primary.
+
+### The finding
+
+[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) — **Apache-2.0**,
+**451 stars**, 165 forks, Java, **32,338 commits**, "Learning Management System
+OpenOlat". Origin: the OLAT system at the **University of Zurich**; maintained by
+**frentix GmbH** (Switzerland) and the OpenOlat community. Both attributions are
+written into the `LICENSE` file after the Apache text.
+
+**The license was invisible to this KB's method.** GitHub's sidebar for this
+repository **names no license** — it renders a bare "License" link, and
+`github.com/orgs/OpenOLAT/repositories` shows the license column as **"Other"**.
+Every previous pass read the sidebar license field and moved on. **Opening
+`LICENSE` returns, verbatim: *"Apache License / Version 2.0, January 2004"*.**
+
+🟢 **The transferable rule, and it is the second time this KB has learned it:**
+a sidebar reading **"Other"**, or a bare "License" link, is **not** a copyleft
+signal and **not** an answer — it is an instruction to open the `LICENSE` file.
+The fifth pass adopted exactly this step for `frappe/education` and
+`ankitects/anki` and then **did not apply it to the LMS table**, which is the
+one table where the license decides the engagement shape. *An inherited method
+is only as good as the places you remember to apply it.*
+
+### What makes it more than a licensing footnote
+
+Code search — not the README, not the release notes — shows a **first-party,
+provider-pluggable AI layer in the tree** at
+`src/main/java/org/olat/core/commons/services/ai/`:
+
+| Element | Verified contents |
+|---|---|
+| Package | 8 directories (`content`, `essay`, `event`, `manager`, `model`, `service`, `spi`, `ui`), 17 files |
+| SPI contracts | `AiSPI.java`, `AiEmbeddingSPI.java`, `AiApiKeySPI.java` |
+| **Providers** | `spi/anthropic`, **`spi/generic`**, **`spi/localonnx`**, `spi/openAI` |
+| Local runtime | `spi/localonnx/LocalOnnxSPI.java`, `spi/localonnx/QwenOnnxEmbeddingModel.java` |
+| Features (`AiFeature`) | `mc-question-generator` · `image-description-generator` · `essay-generation` · `essay-grading` · `taxonomy-matching` |
+| Services | `AiEssayGenerationService`, `AiEssayGradingService`, `AiImageDescriptionService`, `AiMCQuestionService` |
+| Governance | `AiUsageLog`, `AiUsageLogStatus`, `AiUsageLogSearchParams`, `AiUserPreference`, `AiUserPreferenceService` |
+
+🔴 **The limit, stated precisely so nobody oversells it.** The only model class
+under `localonnx` is `QwenOnnxEmbeddingModel` — an **embedding** model. The
+fully-local path covers embeddings and taxonomy matching; **essay grading and
+question generation still call a provider.** The sovereign configuration is
+therefore **`generic` pointed at a self-hosted OpenAI-compatible endpoint, with
+`localonnx` serving embeddings in-process** — not "it all runs locally."
+
+**Secondary, flagged as such** (`docs.openolat.org` does not resolve here, so
+these come from search summaries of the release notes and are *not*
+primary-verified): **20.3** (25 March 2026) rebuilt the AI module for multiple
+providers with provider and model selectable **per function**; **21.0** (July
+2026) added AI-graded free-text questions with grading kits, formative AI
+feedback, quiz generation from Word/Markdown import, and an AI usage log;
+**21.1** (September 2026) added personal AI settings. The per-function provider
+selection and the usage log are **independently corroborated by the code** above
+(`AiFeature`, `AiUsageLog`); the rest is not.
+
+### Also surfaced in the same organisation, and not yet admitted
+
+`github.com/orgs/OpenOLAT/repositories` lists 12 repos. Four carry an explicit
+**Apache-2.0** field — `manifest` (IMS manifest XML schemas, 0), `viterows`
+(Vitero virtual-classroom integration, 2), `openmeetingsws` (OpenMeetings
+classroom integration, 4), `OpenOLAT-gatling` (performance tests, 2) — and
+`jcodec` is **BSD-2-Clause** (1). **None is admitted to `foundations.md`: all are
+single-digit-star satellites of the main repo, and a KB row implies "a studio
+could start from this."**
+
+🔵 **One is worth a look next pass and is recorded rather than dropped:**
+[`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) — "IMS QTI 2.1
+assessment delivery engine and Java development library (JQTI+)", 3 stars, 2
+forks, **2,087 commits**, README claiming "a large subset of the IMS QTI 2.1
+specification". Its license renders as **"Other"** and the sidebar names none —
+**the exact signature that hid OpenOLAT's Apache-2.0 grant**, so the bounded
+remedy is identical: open its `LICENSE`. If it is permissive it joins the QTI
+table in `foundations.md`, where this KB's standing finding is that **no repo
+joins certified delivery to authoring and scoring**, and where the only Java
+option so far is GPL-2.0 TAO.
+
 ## `2026-11-13` (fifth pass) — **`Gap 284` CLOSED: Caliper has exactly one permissive implementation, and no amount of slug-guessing could ever have found it**
 
 **Window:** foundational education repos, specifically the **analytics /

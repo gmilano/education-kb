@@ -139,8 +139,13 @@ closed by projects that already existed.
 
 ## T7 — The permissive layer is the AI layer; the platform layer is copyleft
 
-Seven of eight significant open-source LMSs are GPL-3.0/AGPL-3.0 (only Sakai,
-ECL-2.0, is permissive). Permissive licensing in education clusters in content,
+🔴 **Revised, sixth pass (2026-11-13): this trend was overstated and the
+correction is in `T15`.** **Six** of eight significant open-source LMSs are
+GPL-3.0/AGPL-3.0; **two are permissive** — Sakai (ECL-2.0) and **OpenOLAT
+(Apache-2.0)**. The "platform layer is copyleft" half of this trend is therefore
+a strong tendency, not a law, and `T15` describes the exception and why it
+matters more than its star count suggests. Permissive licensing in education
+otherwise clusters in content,
 modelling and now integration: Perseus (MIT), Kolibri (MIT), pyKT (MIT), Oppia
 (Apache-2.0), nbgrader and JupyterHub (BSD-3-Clause), ODK Collect
 (Apache-2.0), **ltijs (Apache-2.0)**, and the three largest agents — DeepTutor
@@ -502,3 +507,54 @@ ever have resolved.
    agent layer. 🔵 **Say this explicitly in any engagement that has internalised
    this KB's "do not fork the LMS" rule** — the rule is about forking the
    platform, not about installing a plugin.
+
+## T15 — The sovereign-AI path in education is an LMS feature, not an agent — and it is Apache-2.0
+
+**This is the correction to `T7`, and the most consequential finding of the
+sixth pass.** Every pattern in this KB before now assumed the same shape: a
+permissive AI layer mounted into a copyleft platform over LTI 1.3 or MCP,
+because the platform itself could never be permissive and never shipped AI worth
+using. **OpenOLAT is a counterexample on both counts**, and it was missed for
+four passes for a mechanical reason worth naming (see `repos/foundations.md`):
+its GitHub sidebar names no license, so every license-field read classified it
+as unknown rather than opening the `LICENSE` file, which says *"Apache License /
+Version 2.0, January 2004"*.
+
+**What is actually in the tree** — verified by reading the repository, not the
+release notes:
+
+| Layer | Path / symbol | What it means |
+|---|---|---|
+| Provider SPI | `AiSPI`, `AiEmbeddingSPI`, `AiApiKeySPI` | AI providers are pluggable by contract, not hard-wired |
+| Providers | `spi/anthropic`, `spi/generic`, `spi/localonnx`, `spi/openAI` | `generic` = **any OpenAI-compatible endpoint**, i.e. a self-hosted vLLM or Ollama |
+| Local inference | `spi/localonnx/LocalOnnxSPI.java`, `QwenOnnxEmbeddingModel.java` | **In-process ONNX runtime** — some AI runs with no outbound call at all |
+| Features | `AiFeature`: `mc-question-generator`, `image-description-generator`, `essay-generation`, `essay-grading`, `taxonomy-matching` | Five declared features, not a chatbot bolt-on |
+| Learner control | `AiFeature.isUserControlled()` — *"a person can switch this feature on or off in the user settings, on top of the system default of the administrator"* | Per-learner opt-out **in the data model** |
+| Cost/audit | `AiUsageLog`, `AiUsageLogStatus`, `AiUsageLogSearchParams` | Per-call accounting — the artifact an EMEA procurement asks for |
+
+**The precise claim, and its limit.** 🔴 **Do not oversell `localonnx`.** The
+only model class under it is `QwenOnnxEmbeddingModel` — an **embedding** model.
+So the fully-local path today covers embeddings and the retrieval/taxonomy side,
+while `essay-grading` and `mc-question-generator` still call out through a
+provider. **The sovereign answer is therefore `generic` pointed at a
+self-hosted OpenAI-compatible endpoint, with `localonnx` handling embeddings
+in-process** — not "it all runs locally." That distinction is the difference
+between a proposal that survives a data-protection review and one that does not.
+
+**Why this matters more than 451 stars suggests.** Star count measures developer
+attention; this KB's job is to measure *what a studio can hand a client*. An
+Apache-2.0 LMS with per-learner AI opt-out in the data model, per-call cost
+logging, and a provider slot that accepts a self-hosted endpoint is a direct
+answer to the EU AI Act deployer obligations in `intel/market.md` (Article 50
+transparency, applying 2 August 2026; human oversight and logging; Article 27
+FRIA for public bodies). Nothing else in this KB answers all of those from
+inside the platform.
+
+**What this does not change.** For Moodle, Canvas and Open edX incumbents —
+which is most of the installed base — the LTI/MCP mounting rule in `T7` is
+unchanged and remains the default. `T15` applies when the platform is
+greenfield, the client is in German-speaking EMEA, or sovereignty is a stated
+requirement. 🔵 **The open question for the next pass:** whether OpenOLAT's AI
+features are reachable over an API for an external agent, or only from the
+platform UI. Nothing in the paths read this pass settles it, and it decides
+whether `P13` can be combined with the agent patterns in this file.

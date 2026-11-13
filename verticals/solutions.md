@@ -14,8 +14,19 @@ pass).
 
 ## The decision that governs every education engagement
 
-**Do not fork the LMS.** Seven of the eight significant open-source LMS
-platforms are GPL-3.0 or AGPL-3.0 (only Sakai is permissive, ECL-2.0). A fork
+**Do not fork the LMS — but the "no permissive LMS exists" half of that rule is
+withdrawn this pass.** 🔴 **Correction (sixth pass, 2026-11-13):** every earlier
+edition of this file said *"only Sakai is permissive, ECL-2.0."* That is wrong.
+**OpenOLAT is Apache-2.0** — read verbatim from the repository's `LICENSE` file,
+which opens *"Apache License / Version 2.0, January 2004"* — and it is a mature
+platform (32,338 commits, 451 stars, 165 forks, Java), not a toy. GitHub's
+sidebar shows only a generic "License" link and the org listing renders it as
+**"Other"**, which is exactly why four passes of license-field reads missed it.
+**There are two permissive LMS platforms, not one**, and the second one is the
+more interesting of the pair because of what it ships natively (below).
+
+The rest of the rule stands: six of the eight significant open-source LMS
+platforms are GPL-3.0 or AGPL-3.0. A fork
 makes the client's derived platform copyleft. Instead mount the AI layer as an
 **LTI 1.3 tool** or an **MCP server** against the platform's API, keep that
 layer MIT/Apache, and emit **xAPI** or **Caliper** events so the institution can
@@ -45,7 +56,8 @@ MCP server. It does.
 | Open edX | https://github.com/openedx/openedx-platform | AGPL-3.0 | 8.2k | MOOCs, corporate academies, national platforms | **`openedx-ai-extensions`** is the official AI plugin point; XBlocks; deploy via `tutor`. MCP only via `openedx-mcp` (AGPL-3.0, 3 stars) |
 | Canvas LMS | https://github.com/instructure/canvas-lms | AGPL-3.0 | 6.9k | North American higher ed (dominant) | Rich REST API + LTI 1.3; **`canvas-mcp` (MIT, 324) — README claims up to 128 tools, sidebar says 102** |
 | Frappe LMS | https://github.com/frappe/lms | AGPL-3.0 | 3.4k | SMB/corporate training, India | Frappe framework hooks; shares a stack with ERPNext |
-| Sakai | https://github.com/sakaiproject/sakai | ECL-2.0 | 1.2k | Research universities | **Permissive license** — the one platform a studio can extend without copyleft reaching the product. `Simon-Initiative/lti_1p3` (MIT, Elixir) comes from adjacent higher-ed work |
+| Sakai | https://github.com/sakaiproject/sakai | ECL-2.0 | 1.2k | Research universities | **Permissive license** — a platform a studio can extend without copyleft reaching the product. `Simon-Initiative/lti_1p3` (MIT, Elixir) comes from adjacent higher-ed work |
+| **OpenOLAT** | https://github.com/OpenOLAT/OpenOLAT | **Apache-2.0** | 451 | **German-speaking EMEA** — Swiss and German universities, vocational and public sector. Origin: OLAT at the University of Zurich; maintained by **frentix GmbH** (Switzerland) and the community | 🟢 **New this pass, and it changes the EMEA answer. The only LMS in this table that ships a first-party, provider-pluggable AI layer in-tree** — you do not have to mount an agent to get AI into it. `org/olat/core/commons/services/ai/` defines an SPI (`AiSPI`, `AiEmbeddingSPI`, `AiApiKeySPI`) with **four provider implementations: `anthropic`, `generic` (any OpenAI-compatible endpoint), `localonnx`, `openAI`**. Five features are declared in the `AiFeature` enum — `mc-question-generator`, `image-description-generator`, `essay-generation`, `essay-grading`, `taxonomy-matching` — of which two are user-controlled (a learner can switch them off over the admin default). Ships `AiUsageLog` (per-call token/cost accounting) and `AiUserPreference`. **Apache-2.0 + `generic` provider = point the whole thing at a self-hosted vLLM and nothing leaves the institution.** See `compose/patterns.md` `P13` |
 | Chamilo | https://github.com/chamilo/chamilo-lms | GPL-3.0 | 1.0k | LATAM, francophone Africa, Spain | Web services API; accessibility-first. PHP — pair with `packbackbooks/lti-1-3-php-library` (Apache-2.0) |
 | ILIAS | https://github.com/ILIAS-eLearning/ILIAS | GPL-3.0 | 510 | German-speaking EMEA, vocational and public sector | Plugin slots; SCORM/xAPI |
 

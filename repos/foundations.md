@@ -194,7 +194,8 @@ tool, not a delivery component.
 | https://github.com/instructure/canvas-lms | AGPL-3.0 | 6.9k | The open LMS by Instructure; dominant in North American higher ed. Pair with `canvas-mcp` for agent access. |
 | https://github.com/frappe/lms | AGPL-3.0 | 3.4k | Modern, lightweight LMS on the Frappe framework. Fastest to stand up of the group. |
 | https://github.com/overhangio/tutor | AGPL-3.0 | 1.1k | Docker-based Open edX distribution. In practice this is *how* you deploy Open edX. |
-| https://github.com/sakaiproject/sakai | ECL-2.0 | 1.2k | Higher-ed teaching/research/collaboration suite. **ECL-2.0 is Apache-2.0 with a patent clause tuned for universities** — permissive, and the friendliest license in this table. |
+| https://github.com/sakaiproject/sakai | ECL-2.0 | 1.2k | Higher-ed teaching/research/collaboration suite. **ECL-2.0 is Apache-2.0 with a patent clause tuned for universities** — permissive, and one of the two friendliest licenses in this table. |
+| **https://github.com/OpenOLAT/OpenOLAT** | **Apache-2.0** | **451** | 🟢 **New this pass, and it overturns this file's standing "no permissive LMS" gap.** Java LMS, 32,338 commits, 165 forks; origin OLAT at the University of Zurich, maintained by frentix GmbH (Switzerland). **License read verbatim from the `LICENSE` file** — *"Apache License / Version 2.0, January 2004"*, followed by two attribution notices (olat.org / University of Zurich, openolat.org / frentix GmbH and community). **GitHub's sidebar names no license and the org listing renders it as "Other"** — the reason four passes of sidebar reads missed it. Uniquely in this table it carries a **first-party AI layer in-tree**: `org/olat/core/commons/services/ai/` with provider SPIs for `anthropic`, `generic` (OpenAI-compatible), `localonnx` and `openAI`. |
 | https://github.com/chamilo/chamilo-lms | GPL-3.0 | 1.0k | LMS focused on ease of use and accessibility; strong LATAM and francophone footprint. |
 | https://github.com/ILIAS-eLearning/ILIAS | GPL-3.0 | 510 | Long-lived German LMS; heavy use in EMEA public sector and military/vocational training. |
 
@@ -285,10 +286,20 @@ tool, not a delivery component.
   the **unlicensed** `open-ent/caliper`. A client whose contract names Caliper
   **1.2** is further from this shelf than one naming 1.1 — establish which
   version the contract specifies before estimating.
-- **No permissively licensed full LMS exists at scale.** Every LMS with real
-  deployment is GPL/AGPL except Sakai (ECL-2.0). A client who needs a
-  proprietary derived platform cannot start from Moodle, Canvas, or Open edX —
-  that constraint should be surfaced in week one, not month three.
+- 🔴 **GAP WITHDRAWN (sixth pass): "No permissively licensed full LMS exists at
+  scale" was wrong, and the method that produced the error is the transferable
+  part.** Every LMS with real deployment is GPL/AGPL except **two**: Sakai
+  (ECL-2.0) and **OpenOLAT (Apache-2.0, 451 stars, 32,338 commits)**. A client
+  who needs a proprietary derived platform still cannot start from Moodle,
+  Canvas or Open edX — but they **can** start from either of those two, and in
+  EMEA OpenOLAT is the better of the pair because its AI layer is already in the
+  tree. **Why four passes missed it:** every pass read GitHub's sidebar license
+  field, and OpenOLAT's sidebar names no license (the org listing renders it
+  "Other"). 🟢 **The rule this KB should carry forward: a sidebar reading
+  "Other" or showing a bare "License" link is not a copyleft signal and is not a
+  licensing answer — it is an instruction to open the `LICENSE` file.** This KB
+  already adopted that step for `frappe/education` and `ankitects/anki`; it was
+  never applied to the LMS table, which is where it mattered most.
 - 🔴 **DEFECT FIXED (fifth pass): this gap list previously still carried "No LTI
   1.3 library in Python … A Python LTI 1.3 tool-provider library remains
   genuinely greenfield", while the header and the LTI section of this same file

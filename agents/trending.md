@@ -3,6 +3,73 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+## `2026-11-13` (sixth pass) — **The decisive education-AI finding this window is not an agent: an Apache-2.0 LMS ships a pluggable AI provider layer in-tree, with per-learner opt-out and token accounting**
+
+**Window:** education-specific AI agents, plus — new this pass — **AI capability
+shipped inside the host platforms themselves**, which no earlier pass searched
+for. **No new agent clears this KB's bar this window; the significant finding is
+a platform, and it is recorded in `repos/trending.md`, `verticals/solutions.md`
+and `intel/trends.md` `T15`.** Agent count in `agents/top.md` is **unchanged at
+34** (29 build-safe + 5 copyleft).
+
+**Channel note, re-tested this pass — one limit lifted, two new ones found.**
+`curl -sI https://github.com/...` still returns **`403` for every path**, so a
+`curl` probe still cannot distinguish a live repository from a 404; verification
+remains by rendered page plus payload read. 🟢 **New and useful: `gh api -X GET
+search/code -f q='repo:OWNER/REPO <term>'` works through this session's egress
+and returns real file paths inside a public repository.** That is how this
+pass found OpenOLAT's AI layer — a rendered-page read of a repository root can
+never show you `src/main/java/.../ai/spi/`, and no amount of star-count reading
+would have surfaced it. **Add code search to this KB's standard method: read the
+sidebar for the license, open `LICENSE` when the sidebar is vague, then code-search
+the repo for the capability you are actually asking about.** 🔴 **Two hosts do
+not resolve in this session: `docs.openolat.org` and `en.wikipedia.org`.** Every
+release-note detail below is therefore **search-summary sourced, not
+primary-verified**, and is marked as such; everything read from the repository
+itself is primary.
+
+### Why no agent row is added this pass
+
+Four candidates surfaced and **all four are rejected**, which is worth recording
+because three of them circulate on "best education AI agent" lists:
+
+| Candidate | Stars | Why rejected |
+|---|---|---|
+| [tutornew/OpenTutor](https://github.com/tutornew/OpenTutor) | **8** | **No license of any kind** shown on the repository, and **5 commits total**. "Open-source platform for orchestrating and automating AI-powered teachers" is an accurate description of the README and not of the code. Un-licensed means un-usable, regardless of intent. |
+| [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | — | Already assessed in the fifth pass; unchanged. Its own README states automatic grading productization is frozen. |
+| [GarethManning/education-agent-skills](https://github.com/garethmanning/education-agent-skills) | — | Already in this KB as a **skills library, not an agent** (see `P10`). CC BY-SA 4.0 — a share-alike content license, not a code license. |
+| Learning Commons "open-source Agent Skills" | — | Same shape as the above: a skills pack, not a runnable agent. No distinct repository surfaced. |
+
+🟢 **A pass that adds zero rows is a result, not a failure.** This KB's standing
+defect is padding; the fifth pass's own header records "26 real agents" having
+been miscounted four editions running. **The honest statement for this window is
+that education agent supply did not move, and platform-native AI did.**
+
+### One license claim corrected — and the correction runs the other way for once
+
+A 2026 LMS roundup circulating this window states that **Frappe Learning is
+"100% MIT-licensed"**. **It is not.** `github.com/frappe/lms` shows
+**`AGPL-3.0 license`** in GitHub's own sidebar (3.4k stars, 1.6k forks,
+"Easy to Use, 100% Open Source Learning Management System"). **This KB's
+existing row was already correct**, and the secondary source was wrong — the
+inverse of the usual failure mode, and a direct instance of `T6` ("open source"
+claims in education AI are frequently wrong). **The AGPL row stands; no change.**
+
+### Declared gaps for the next pass
+
+- 🔵 **Unresolved and it gates `P13`:** are OpenOLAT's AI features reachable
+  over an API by an *external* agent, or only from the platform UI? The paths
+  read this pass (`AiEssayGradingService`, `AiMCQuestionService`,
+  `AiImageDescriptionService`) are Java service interfaces, which says nothing
+  about HTTP exposure. **Bounded remedy: code-search the repo for a REST
+  controller or web-service binding referencing those services** — the same
+  method that found the AI layer at all.
+- 🔵 **No MCP server for OpenOLAT surfaced.** Given Moodle has three and Canvas
+  two, this is a genuine hole in an otherwise well-served platform, and it is
+  the most clearly shaped contribution opportunity in this KB.
+- 🔴 **Still unserved, unchanged from the fifth pass:** no open-source *advising*
+  agent on the student record.
+
 ## `2026-11-13` (fifth pass) — **The open-source SIS gap closes from a direction nobody searched: OpenEduCat is Odoo addons, and Odoo has a 433-star MIT MCP server with gated writes**
 
 **Window:** education-specific AI agents plus, for the first time in this base,

@@ -7,7 +7,15 @@ updated: 2026-11-13
 # Education AI Agents — curated, license-verified
 
 **34 real agents** below — **29 build-safe** (MIT / Apache-2.0 / BSD / ISC) plus
-**5 copyleft** — up from 30 at the fourth pass. 🔴 **Counting defect fixed this
+**5 copyleft** — **unchanged at the sixth pass (2026-11-13)**. 🟢 **Zero rows
+added this pass, deliberately.** Four candidates were assessed and all four
+rejected (the reasons are in `agents/trending.md`; the headline one,
+`tutornew/OpenTutor`, has **8 stars, 5 commits and no license at all**).
+**Education agent supply did not move this window — platform-native AI did**,
+and that finding is recorded in `verticals/solutions.md`, `repos/foundations.md`
+and `intel/trends.md` `T15` rather than being forced into this table. Given this
+file's documented history of miscounting its own rows across four editions, **a
+pass that adds nothing and says so is the correct output.** 🔴 **Counting defect fixed this
 pass:** every earlier edition of this file headlined a single figure ("26 real
 agents", "20", "18", "11") that counted **only the build-safe table** while the
 sentence said "agents below", which also covers the copyleft table. The two

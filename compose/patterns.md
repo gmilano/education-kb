@@ -6,15 +6,20 @@ updated: 2026-11-13
 
 # Compose patterns — education
 
-**Twelve** concrete recipes. Each names the actual repos, the license
+**Thirteen** concrete recipes. Each names the actual repos, the license
 consequence, how the pieces wire together, and a rough build estimate. All
 components were license-verified on 2026-11-13 (see `agents/top.md` and
 `repos/foundations.md`). 🔴 **Count defect fixed this pass: the intro said "Ten
 concrete recipes" and then "the rule all eight follow" in the next paragraph.**
 
-**The rule all twelve follow:** keep the AI layer permissive (MIT/Apache/BSD),
-mount it into the copyleft platform over **LTI 1.3** or **MCP**, and emit
-**xAPI** or **Caliper** events. Never fork the LMS.
+**The rule twelve of the thirteen follow:** keep the AI layer permissive
+(MIT/Apache/BSD), mount it into the copyleft platform over **LTI 1.3** or
+**MCP**, and emit **xAPI** or **Caliper** events. Never fork the LMS.
+
+🔴 **`P13`, new in the sixth pass, is the one exception — and the exception is
+the point.** Where the platform itself is **Apache-2.0 and already ships a
+pluggable AI provider layer**, there is no copyleft to mount around and no agent
+to build: you configure. See `intel/trends.md` `T15`.
 
 **Changes in the fifth pass (2026-11-13), in order of how much they move an
 estimate.** (1) **`P12` is new and it is the cheapest SIS engagement in this
@@ -776,3 +781,112 @@ inferred to demonstrated.** **Second trap:** `erpipe-org/mcp-odoo` was formerly
 `tuanle96/mcp-odoo`, which is still what search results return — and its
 maintainer sells a hosted product (ERPipe) built on it. The MIT grant is real;
 the roadmap has a commercial owner. Pin a commit.
+
+## P13 — Sovereign LMS-native AI on OpenOLAT (EMEA, configuration not build — and the only pattern here with no agent in it)
+
+**When to use.** Greenfield or German-speaking-EMEA platform choice, where the
+client has a **stated data-sovereignty or EU AI Act requirement** and the usual
+answer ("mount a permissive agent into a copyleft LMS over LTI") either cannot
+clear data protection or cannot be licensed the way the client needs the derived
+product licensed. **This is the cheapest pattern in this file when it fits, and
+it fits rarely — check the three disqualifiers below before pricing it.**
+
+**Why it exists.** Every other pattern here assumes the platform is copyleft and
+AI-less. [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) is
+**Apache-2.0** (451 stars, 165 forks, 32,338 commits, Java; University of Zurich
+origin, maintained by frentix GmbH, Switzerland) **and carries a first-party
+pluggable AI layer in-tree**. So the derived product can be licensed however the
+client wants, and the AI work is configuration plus a provider, not a build.
+
+### The components — all verified in-repo this pass
+
+| Piece | Where | License |
+|---|---|---|
+| The platform | `github.com/OpenOLAT/OpenOLAT` | **Apache-2.0** (read from `LICENSE`, not the sidebar) |
+| Provider SPI | `org/olat/core/commons/services/ai/` — `AiSPI`, `AiEmbeddingSPI`, `AiApiKeySPI` | Apache-2.0 |
+| The provider slot you use | `spi/generic` — **any OpenAI-compatible endpoint** | Apache-2.0 |
+| In-process embeddings | `spi/localonnx` — `LocalOnnxSPI`, `QwenOnnxEmbeddingModel` | Apache-2.0 |
+| Self-hosted inference | `vllm-project/vllm` (Apache-2.0) or `ollama/ollama` (MIT) — from `repos/foundations.md` | Apache-2.0 / MIT |
+| Telemetry out | `yetanalytics/lrsql` (Apache-2.0) or `openfun/ralph` (MIT) over **xAPI** | Apache-2.0 / MIT |
+
+### How it wires together
+
+1. **Deploy OpenOLAT** as the LMS. No fork, no plugin, no LTI tool — but also
+   **no copyleft reaching the derived product**, which is the whole reason to be
+   here rather than on Moodle.
+2. **Stand up a self-hosted OpenAI-compatible endpoint** — vLLM for throughput,
+   Ollama for a small install — **inside the institution's own network
+   boundary.**
+3. **Configure the `generic` provider** to point at that endpoint. Per-function
+   provider and model selection means `essay-grading` and
+   `mc-question-generator` can run on different models, and a function can be
+   left switched off entirely.
+4. **Leave `localonnx` serving embeddings in-process** — these never leave the
+   JVM, so the retrieval and `taxonomy-matching` side needs no network boundary
+   argument at all.
+5. **Turn on the features you can defend, one at a time**, from the five in
+   `AiFeature`: `mc-question-generator`, `image-description-generator`,
+   `essay-generation`, `essay-grading`, `taxonomy-matching`.
+   `image-description-generator` is the easiest first win — it is an
+   **accessibility** feature, which changes the conversation from "AI in the
+   classroom" to "WCAG compliance", and it is user-controlled.
+6. **Emit xAPI to an LRS** (`lrsql` or `ralph`) so the institution can report on
+   learning activity independently of the LMS — the spine from `P9`, unchanged
+   and fully compatible with this pattern.
+
+### Why it survives an EU AI Act review
+
+Mapped against the deployer obligations in `intel/market.md` → EMEA:
+
+- **Article 50 transparency (applies 2 August 2026, *not* postponed by the
+  Digital Omnibus):** learners must be told they are dealing with an AI system.
+  `AiFeature` carries a **learner-facing name and a one-sentence description per
+  feature** (`getI18nUserNameKey`, `getI18nDescriptionKey`) as part of the data
+  model — the disclosure surface is built in, not bolted on.
+- **Human oversight and per-learner control:** `AiFeature.isUserControlled()` —
+  *"a person can switch this feature on or off in the user settings, on top of
+  the system default of the administrator"*. **Opt-out is a platform primitive.**
+- **Logging:** `AiUsageLog` / `AiUsageLogStatus` / `AiUsageLogSearchParams`
+  record every AI call with token/cost attribution — this is simultaneously the
+  audit artifact and the FinOps artifact.
+- **Article 27 FRIA** (public bodies deploying high-risk systems) and the
+  **2 December 2027** high-risk deadline for stand-alone education systems:
+  running inference inside the institution's boundary removes the third-country
+  transfer question from the assessment entirely.
+- **Emotion recognition in education has been prohibited since 2 February 2025.**
+  Nothing in `AiFeature` goes near it — confirm no custom provider adds it.
+
+### Estimate
+
+**3–5 weeks**, and it is mostly not AI work: deployment and SSO (1–2 weeks),
+self-hosted endpoint plus `generic` provider configuration and model selection
+(1 week), feature-by-feature enablement with the data-protection sign-off that
+each one needs (1–2 weeks). **Compare with 8–12 weeks for the equivalent
+mount-an-agent-into-Moodle shape, which then still owes the client a
+data-protection story for the inference hop.**
+
+### Three disqualifiers — check these first
+
+1. 🔴 **An existing Moodle / Canvas / Open edX estate.** This pattern is a
+   platform choice, not a migration plan. With an incumbent LMS, use `P3`, `P6`
+   or `P9`. The installed base is overwhelmingly on the copyleft three.
+2. 🔴 **"It all runs locally" is not true and must not be proposed.** The only
+   local model class is `QwenOnnxEmbeddingModel` — **embeddings**. Essay grading
+   and question generation call a provider. The defensible claim is *"inference
+   runs on infrastructure you control"*, which the `generic` provider delivers
+   and which is what a data-protection reviewer actually asks for.
+3. 🔵 **An external agent may not be able to reach these features.** The AI
+   services are Java interfaces; **nothing read this pass shows HTTP exposure**,
+   and no MCP server for OpenOLAT exists. If the engagement needs an *external*
+   agent orchestrating across systems, this pattern does not yet reach it —
+   resolve that open question (`agents/trending.md`, sixth pass) before
+   committing. **As scoped above, P13 is LMS-native AI, not agentic AI.**
+
+### The contribution opportunity, stated because it is unusually well shaped
+
+**There is no MCP server for OpenOLAT**, while Moodle has three and Canvas two.
+The platform is **Apache-2.0**, so a `openolat-mcp` is a contribution rather
+than a procurement, and it is the missing piece that would make this pattern
+composable with every agent pattern in this file. 🔴 **Not opened unprompted —
+it is an outward action**, and this KB's standing rule (see `Gap 240`) is that
+outward actions are proposed, not taken.
