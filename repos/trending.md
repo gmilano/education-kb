@@ -3,6 +3,47 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+## `2026-11-13` (eighth pass) — **The trending leg found no new education repository; the probe that paid was aimed at a gap, not at a feed**
+
+**Pass `p803`.** 🔵 **`0` new repositories from the trending leg.** `github trending education AI 2026`
+returned `OpenMAIC`, `ai-engineering-hub`, `DeepTutor`, `learnharness` and `mattpocock/skills` — the
+first four already shelved, the fifth not education. 🔴 **The aggregator figures disagreed with this
+base again and with each other** (`DeepTutor` quoted at `45,224★`, `OpenMAIC` at "about `42K`"), which
+is `p802`'s lesson reproduced: **an aggregator's star count is a timestamp nobody wrote down.**
+
+The useful output came from re-aiming the budget at the **evaluation gap** this base declared at
+`p694`. Three repositories probed, all three grants read **as bytes**.
+
+| Repo | Grant (how it was established) | Size | Verdict |
+|---|---|---|---|
+| [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | 🔴 **No licence file in the root tree** (`13` entries, `HEAD` `6faed173ec2b`). README asserts a grant **twice, inconsistently**: **CC BY 4.0** badge (line `3`) vs **CC BY-SA 4.0** statement (line `199`) | `48★` / `14` forks | 🔴 **Cite, do not vendor.** EMNLP 2025 Oral; ETH Zürich / TU Darmstadt. 🔵 Carried `46★` refreshed to `48★`. **The task decomposition is the transferable asset** |
+| [`kixlab/TutorCaseBench`](https://github.com/kixlab/TutorCaseBench) | 🔴 **No licence file** (`11` root entries, `HEAD` `6b9ac34262c7`) **and no licence line in the README** | `0★` / `0` forks | 🔴 **Ungranted.** KAIST KIXLAB, arXiv `2610.30828`, `923` dialogues. 🟢 The **rubric structure for challenging-behaviour cases** is the readable contribution |
+| [`Kobby-Adjei/ai-tutor-benchmark`](https://github.com/Kobby-Adjei/ai-tutor-benchmark) | 🟢 **MIT, payload-verified** — root `LICENSE`, `1,351 B`, `sha256:f32797392bf180dc…`, `affero×0`, title `MIT License`, `HEAD` `23fc97462c8f` | `0★` / `0` forks | 🟢 **NEW to this base, and the only granted member of the cluster.** 🔴 `0★` keeps it off the shelves. **Adopt the shape, not the code** — see `P15` |
+
+### 🔴 The finding worth carrying: traction and grant are inversely correlated in this cluster
+
+| Repo | Stars | Grant |
+|---|---|---|
+| `bigdata-ustc/Agent4Edu` | `101★` | 🔴 none (`p694`) |
+| `eth-lre/mathtutorbench` | `48★` | 🔴 none in tree; **two contradictory CC claims in README** (`p803`) |
+| `kaushal0494/UnifyingAITutorEvaluation` | `34★` | 🔴 none (`p694`) |
+| `kaushal0494/AITutor-EvalKit` | `4★` | 🔴 none — paper's MIT claim refuted on bytes (`p801`, `p802`) |
+| `kixlab/TutorCaseBench` | `0★` | 🔴 none (`p803`) |
+| `Kobby-Adjei/ai-tutor-benchmark` | `0★` | 🟢 **MIT, split correctly from the data grant** (`p803`) |
+
+🔵 **The mechanism is not carelessness, it is incentive:** the five ungranted repos are *paper
+deliverables*, where the code is incidental to the author and load-bearing for everyone else. The
+granted one is a solo product-shaped project. 🔴 **For a studio this means the education-evaluation
+layer is `build`, not `adopt`** — published as `T17` in `intel/trends.md` and as `P15` in
+`compose/patterns.md`.
+
+### 🟢 `T958`'s licence discriminator, sixth confirmation
+
+`affero×0` on a `1,351 B` payload titled `MIT License`. 🔵 **Occurrence count continues to identify
+the family where byte size does not** — `T965`, unchallenged across three more reads.
+
+---
+
 ## `2026-11-13` (seventh pass) — **A `9.1k★` education repo appeared that no prior pass had seen, and the channel that found it is the one `p800` nearly wrote off**
 
 **Pass `p802`.** The trending leg returned exactly one repository worth shelving, and the useful part

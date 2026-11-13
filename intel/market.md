@@ -790,6 +790,12 @@ but shallow.
 | **Australia** | Existing law plus voluntary guidance | — | No dedicated instrument |
 | **India** | Governance guidelines plus **labelling rules for AI-generated content** | — | Provenance marking |
 
+**Vietnam legislates the curriculum as well as the risk.** Beside the AI Law, **MOET
+Decision `2422`** sets **12 periods per class per year** of AI content for **grades 1-12** —
+a national teacher-enablement and courseware demand signal with a fixed hourly budget, which is
+a far more concrete procurement hook than an adoption percentage. 🔵 Recorded in this base's
+trending log since `p787`; promoted to this shelf at `p803`.
+
 **Vietnam is the sharpest opportunity in the region and the date needs care.**
 Education is on the high-risk list, and **automated assessment and behavioural
 monitoring** are named — which is precisely what an assessment or proctoring
@@ -1050,6 +1056,7 @@ classroom:
 | **National (Brazil)** | **53%** of school administrators use AI; **22%** report their school has any guideline | Cetic.br 2026 |
 | **National (Uruguay)** | **75%** of public-school teachers report using these tools | Ceibal 2026 |
 | **Regional (teachers)** | **More than 50%** of teachers in Chile and Brazil already use AI tools | UNESCO |
+| **Learner (secondary)** | **Nine in ten 15-year-olds** have already used AI chatbots for schoolwork, across the **13** regional countries assessed | PISA 2025 |
 
 The Brazil pairing (53/22) and the institutional pairing (87/26) are the two to
 carry into a room: both are a single source, a single year, and the same

@@ -960,3 +960,81 @@ by producing the inventory they need.
    an assessment-**design** engagement, not a registry.
 3. 🔴 **The client expects the registry to be bought.** No open-source implementation exists (`T16`).
    If procurement requires an off-the-shelf product, this pattern does not apply this quarter.
+
+---
+
+## P15 — The tutor-efficacy gate (Global, build-not-adopt, and the answer to the question every regulator is about to ask)
+
+**The question.** A client deploys a tutoring agent. A ministry, an accreditor
+or a procurement officer asks: *does it teach, and how do you know?* 🔴 **As of
+`p803` there is no open-source instrument a studio can ship to answer this** —
+`T17` establishes that the four credible education benchmarks are ungranted,
+contradictorily granted, or `0★`. This pattern builds the gate instead, from
+components whose grants this base has read **at the byte level**.
+
+### The components — every grant payload-verified
+
+| Component | Repo | Grant (how established) | Role |
+|---|---|---|---|
+| Harness shape | [`Kobby-Adjei/ai-tutor-benchmark`](https://github.com/Kobby-Adjei/ai-tutor-benchmark) | 🟢 **MIT** — `LICENSE`, `1,351 B`, `affero×0`, title `MIT License`, `HEAD` `23fc97462c8f` | **Template, not dependency** (`0★`). Three-stage structure + simulated-learner cards + the split code/data grant to copy |
+| Mastery model | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **Verified on this base's shelf** | Bayesian Knowledge Tracing — the ground truth the gate scores *against*. Mastery movement, not answer accuracy |
+| Learning-record store | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0**, `144★` | Holds the xAPI statements the gate reads. **Already the spine in `P9`** |
+| Agent → record edge | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 **MIT**, `16★` | Lets the tutor under test write its own activity, so the gate needs no bespoke instrumentation |
+| Methodology (read, do not vendor) | [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) · [`kixlab/TutorCaseBench`](https://github.com/kixlab/TutorCaseBench) | 🔴 **Ungranted / contradictory — cite, never copy** | Task decomposition and rubric structure. **Papers are citable; the repos are not shippable** |
+
+### How it wires together
+
+1. **The tutor under test writes to the LRS, not to a log.** Mount
+   `learnmcp-xapi` against `lrsql`. Every hint, every attempt, every scaffold
+   becomes an xAPI statement with a learner and a timestamp. 🔵 **This is the
+   step that makes the gate reusable across clients** — it measures the record,
+   not the product.
+2. **OATutor's BKT supplies the outcome variable.** A tutor "teaches" when
+   posterior mastery rises on *subsequent unaided* items. Scoring the tutored
+   turn itself measures compliance, not learning.
+3. **Three stages, after `ai-tutor-benchmark`'s shape.** (a) Static rubric pass
+   over held-out dialogues; (b) simulated learners with declared personas —
+   including the struggling and the disengaged, which is `TutorCaseBench`'s
+   contribution; (c) live A/B against an unaided control arm.
+4. **Split the grant at the repository level, on day one.** MIT on the harness,
+   CC BY 4.0 on the learner cards and the dialogue data. 🔴 **This is the single
+   thing four institutional benchmarks got wrong**; it costs one `LICENSE` file
+   and one README section to get right.
+5. **Emit the result into the deployment registry from `P14`.** The registry row
+   for the tutor gains an efficacy field with a date and a method. That is the
+   artifact the regulator actually wants.
+
+### Why it survives review
+
+- **EU AI Act, Annex III.** Assessment and admissions AI is high-risk, and
+  Article 27's Fundamental Rights Impact Assessment presupposes evidence about
+  the deployed system. A dated efficacy measurement **is** that evidence.
+- **Vietnam.** Automated assessment is named high-risk and status turns on
+  whether output is *the sole basis for a decision* — a per-deployment property
+  the gate records per deployment.
+- **Oklahoma, DC, Texas `HB2400`.** Each restricts what AI may decide unaided.
+  🟢 A control arm is the only way to show a human-in-the-loop design did not
+  degrade learning — which is the argument that wins the exemption.
+
+### Estimate
+
+**6–8 weeks** for the first client, **2–3 weeks** for each one after. Stage (a)
+is a week. Stage (b) is most of the cost — persona design is the skilled part
+and is **the reusable asset across the whole studio**. Stage (c) needs a cohort
+and a term, so it is sold as a follow-on, not bundled.
+
+### Three disqualifiers — check these first
+
+1. 🔴 **No unaided post-test is possible.** If the client will not hold out items
+   or a control arm, stages (a) and (b) are all you can deliver — sell those, and
+   say plainly that they measure dialogue quality, not learning.
+2. 🔴 **The tutor is a closed third-party product with no record egress.** Without
+   xAPI out, step 1 fails and the gate becomes bespoke per vendor.
+3. 🔴 **The client wants a benchmark *number* for marketing.** This produces a
+   dated, scoped, method-bound finding. It is evidence for a regulator, not a
+   league-table score, and promising the latter will end badly.
+
+🔵 **Why this is `build`, not `adopt` — stated plainly.** It is the only pattern
+in this file besides `P14` with no adoptable upstream, and for the same reason:
+the artifact that is needed is the one the field publishes as a paper and
+forgets to license.

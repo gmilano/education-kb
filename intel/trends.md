@@ -6,8 +6,9 @@ updated: 2026-11-13
 
 # Education AI — current trends
 
-Eight trends, each with the evidence behind it and what it implies for an
-engagement. Researched 2026-11-13.
+Seventeen trends, each with the evidence behind it and what it implies for an
+engagement. Researched 2026-11-13. 🔴 **The count in this line said "Eight" for
+nine trends past the point it stopped being true; corrected at `p803`.**
 
 ## T1 — The governance gap is the market, not a side issue
 
@@ -590,3 +591,67 @@ produces exactly the inventory that every later pattern in `compose/patterns.md`
 🔴 **The honest limit:** no open-source implementation of an education AI deployment registry was
 found in this pass. It is a **build**, not an adoption — which is unusual for this KB and is stated
 plainly rather than filled with a near-match. See `P14`.
+
+
+## T17 — Education AI now has benchmarks for whether a tutor teaches, and almost none of them carry a software grant
+
+**This is the gap that has survived the longest in this KB, and `p803` is the
+pass that establishes it is structural rather than accidental.** The field has
+answered the measurement question — there are now credible, peer-reviewed
+instruments for *pedagogical* quality, not just answer accuracy. It has not
+answered the licensing question, and a studio cannot ship an instrument it has
+no grant to.
+
+**The evidence, every row payload-verified on the clone channel:**
+
+| Repo | Size | Grant, established on bytes | Shippable |
+|---|---|---|---|
+| [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | `48★` / `14` forks · `HEAD` `6faed173ec2b` | 🔴 **No licence file anywhere in the root tree (13 entries).** The README asserts a grant **twice and inconsistently**: a badge reading **CC BY 4.0** (line 3) and a footer reading **CC BY-SA 4.0** (line 199) | 🔴 **No** |
+| [`kixlab/TutorCaseBench`](https://github.com/kixlab/TutorCaseBench) | `0★` / `0` forks · `HEAD` `6b9ac34262c7` | 🔴 **No licence file (11 root entries) and no licence line in the README at all.** KAIST KIXLAB; `923` dialogues; arXiv `2610.30828` | 🔴 **No** |
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | `4★` | 🔴 **No grant in the root tree**, reproduced at `HEAD` `a71078456a90` across `p801`, `p802` and carried here. The `EACL 2026` paper's "MIT-licensed" claim is refuted on bytes | 🔴 **No** |
+| [`Kobby-Adjei/ai-tutor-benchmark`](https://github.com/Kobby-Adjei/ai-tutor-benchmark) | `0★` / `0` forks · `HEAD` `23fc97462c8f` | 🟢 **MIT, payload-verified** — root `LICENSE`, `1,351 B`, `sha256:f32797392bf180dc…`, `affero×0`, title `MIT License`. README §Licence **splits the grant correctly**: MIT for code, CC BY 4.0 for paper, learner cards and data | 🟢 **Yes — and it is the only one** |
+
+Add `p694`'s earlier sweep (four of five in the cluster ungranted, including
+`kaushal0494/UnifyingAITutorEvaluation` at `34★` and `bigdata-ustc/Agent4Edu` at
+`101★`, **AAAI**) and the shape is unambiguous.
+
+**🔵 `mathtutorbench` is the important correction, and it sharpens `p694` rather
+than repeating it.** This base previously recorded it as *"ships no licence at
+all."* That is true of the **tree** and false of the **repository**: it asserts a
+grant twice, and the two assertions **disagree on ShareAlike** — the single
+clause that decides whether derived evaluation code must be published. A studio
+reading the badge concludes it has no reciprocal obligation; a studio reading the
+footer concludes it does. 🔴 **An ambiguous grant is worse than an absent one,
+because an absent one cannot be misread as permission.** Both readings are also
+**Creative Commons licences applied to software**, which CC itself advises
+against.
+
+**Why this is a trend and not a complaint.** Three forces are converging and
+they explain the pattern:
+
+- 🔵 **These artifacts are paper deliverables, not products.** The grant follows
+  academic convention — CC, for a *dataset* — because the repository exists to
+  make a paper reproducible. The code is incidental to the author and load-bearing
+  for anyone else.
+- 🔴 **Meanwhile the regimes are starting to require exactly this evidence.** The
+  EU AI Act puts assessment AI in Annex III; Vietnam names automated assessment
+  high-risk; Oklahoma requires teacher review of AI output. Each presupposes a
+  defensible answer to *does this system teach, and how do you know*. **The
+  instrument that answers it is the one nobody can ship.**
+- 🟢 **The correct pattern exists and costs nothing to copy.**
+  `Kobby-Adjei/ai-tutor-benchmark` — a `0★` solo project — does what four
+  institutional repositories do not: **separate the code grant from the data
+  grant and state both.** MIT on the harness, CC BY 4.0 on the learner cards.
+
+**What this means for an engagement.** 🔴 **Do not plan on adopting a published
+education benchmark**; plan on **building the harness and borrowing the
+methodology**, which carries no licence at all and is free to read.
+`mathtutorbench`'s task decomposition and `TutorCaseBench`'s rubric structure are
+both readable and both describable in a paper citation. 🟢 The one adoptable
+asset is the `ai-tutor-benchmark` *shape* — three stages, simulated learners,
+split grant — at `0★`, so it is **a template, not a dependency**. See `P15`.
+
+🔴 **Deliberately not promoted to a shelf row.** `ai-tutor-benchmark` is MIT and
+build-safe, but `0★` / `0` forks does not meet this KB's bar that *"a row implies
+a studio could start from this."* It is recorded here and in `agents/trending.md`
+and nowhere else, which is the same treatment `Manu` and `EDUKAI LongView` got.

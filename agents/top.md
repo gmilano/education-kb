@@ -7,8 +7,23 @@ updated: 2026-11-13
 # Education AI Agents — curated, license-verified
 
 **34 real agents** below — **29 build-safe** (MIT / Apache-2.0 / BSD / ISC) plus
-**5 copyleft** — **unchanged at the sixth pass (2026-11-13)**. 🟢 **Zero rows
-added this pass, deliberately.** Four candidates were assessed and all four
+**5 copyleft** — **unchanged through the eighth pass (`p803`, 2026-11-13)**.
+
+🔵 **`p803` added zero rows for a new reason: no candidate surfaced to assess.** The
+eighth pass ran all eight prescribed search legs — four global, four regional — and
+**every finding they returned was already curated here.** That is saturation, not
+rejection, and it is distinct from `p802`, which assessed four candidates and
+rejected all four. The pass's output is therefore recorded in `intel/trends.md`
+(`T17`), `compose/patterns.md` (`P15`) and the two trending logs: **the education
+tutor-*evaluation* cluster was probed at the byte level and five of its six members
+carry no usable software grant.** The one that does — `Kobby-Adjei/ai-tutor-benchmark`,
+MIT, payload-verified — is held off this table at `0★` / `0` forks, because a row here
+implies a studio could start from it. 🟢 **Two regional facts verified in earlier
+passes but never propagated to `intel/market.md` (PISA 2025; Vietnam's MOET Decision
+`2422`) were found by audit and promoted.**
+
+🟢 **Zero rows
+added at the sixth pass, deliberately.** Four candidates were assessed and all four
 rejected (the reasons are in `agents/trending.md`; the headline one,
 `tutornew/OpenTutor`, has **8 stars, 5 commits and no license at all**).
 **Education agent supply did not move this window — platform-native AI did**,

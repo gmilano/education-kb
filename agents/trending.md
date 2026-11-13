@@ -3,6 +3,47 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+## `2026-11-13` (eighth pass) — **The prescribed search battery returned nothing this base did not already hold, and the pass that found no agent found a defect instead: two verified regional facts had never reached the shelf a studio reads**
+
+**Pass `p803`.** 🔵 **Zero agent rows added, and for the first time the reason is saturation rather than
+rejection.** All eight prescribed legs — four global, four regional — were run, and **every finding
+they returned was already curated in this base.** That is an informed negative worth recording
+precisely, because it is the first pass where the *battery itself* stopped being the binding
+constraint. The pass's value came from two places the battery does not reach: **an audit of whether
+this base's own verified facts had propagated to its shelves**, and **a deeper probe into a gap this
+base declared six passes ago**.
+
+| | |
+|---|---|
+| 🔵 **`T969`: the eight-leg battery is saturated against this base** | Global legs returned `OpenMAIC`, `ai-engineering-hub`, `DeepTutor`, `learnharness`, `OpenEduCat`, `RosarioSIS`, `Gibbon`, `Moodle`. Regional legs returned the EU Digital Omnibus / `2026/1744`, Korea's AI Basic Act, Vietnam's AI Law, NC `SL 2026-41`, CA `AB 1159`, TX `HB2400`, UNESCO `IESALC`, Cetic.br, the `716`-instrument inventory, CONPES `4144`, Ofqual, KHDA, Ipsos. 🟢 **All 20+ already present.** 🔵 **The battery now confirms coverage; it no longer discovers.** Future passes should spend their budget on gap-probes and propagation audits, which is what this one did |
+| 🔴 **`T970`: the `T967` propagation defect, found by audit instead of by accident — twice** | 🔴 **`PISA 2025` (nine in ten 15-year-olds across `13` regional countries) and Vietnam's `MOET` Decision `2422` (`12` periods/class/year, grades `1-12`) were both verified in this log and both had `0` occurrences in `intel/market.md` and `intel/trends.md`.** A fact in the append-only log is *recorded*; a fact on the curated shelf is *delivered*. 🟢 **Both promoted this pass.** 🔵 The search for them was mechanical — `grep -c` each logged figure against the shelves — and it should become standard |
+| 🔴 **`T971`: `mathtutorbench`'s grant is not absent, it is asserted twice and the two assertions disagree** | 🔴 **`p694` recorded it as "ships no licence at all." True of the tree, false of the repository.** Root tree `13` entries, `HEAD` `6faed173ec2b`, **no `LICENSE`/`COPYING`** — but the README carries a **CC BY 4.0** badge at line `3` and a **CC BY-SA 4.0** statement at line `199`. 🔴 **They differ on ShareAlike, the one clause that decides whether derived evaluation code must be published.** Both are Creative Commons applied to software. 🔵 **An ambiguous grant is worse than an absent one — an absent one cannot be misread as permission.** `48★` / `14` forks (carried figure `46★` refreshed) |
+| 🔴 **`T972`: `TutorCaseBench` is ungranted on bytes** | KAIST `KIXLAB`, arXiv `2610.30828`, `923` dialogues. `HEAD` `6b9ac34262c7`, `11` root entries, 🔴 **no licence file and no licence line in the README at all**, `0★` / `0` forks, no repository description. The paper says the data is publicly available; **public is not granted** |
+| 🟢 **`T973`: exactly one education benchmark in this base's reach gets the grant right, and it has `0★`** | 🟢 **[`Kobby-Adjei/ai-tutor-benchmark`](https://github.com/Kobby-Adjei/ai-tutor-benchmark) — MIT, payload-verified:** root `LICENSE`, `1,351 B`, `sha256:f32797392bf180dc…`, `affero×0`, title `MIT License`, `HEAD` `23fc97462c8f`. 🟢 **Its README §Licence splits the grant the way the four institutional repos do not — MIT for code, CC BY 4.0 for paper, learner cards and data.** 🔵 **NEW to this base.** `0★` / `0` forks — **template, not dependency** |
+| 🔵 **`T974`: so the evaluation gap is structural, and now it has a shape** | Across `p694`, `p801`, `p802` and this pass, the education-tutor-evaluation cluster is: `mathtutorbench` `48★` 🔴, `UnifyingAITutorEvaluation` `34★` 🔴, `Agent4Edu` `101★` 🔴, `AITutor-EvalKit` `4★` 🔴, `TutorCaseBench` `0★` 🔴, `ai-tutor-benchmark` `0★` 🟢. **Traction and grant are inversely correlated**, because the granted one is a solo project and the rest are paper deliverables. Published as **`T17`** and **`P15`** |
+| 🟢 **`T958`'s discriminator holds on a sixth repository** | 🟢 **`affero×0` on `ai-tutor-benchmark`'s `1,351 B` MIT payload.** Consistent with every prior MIT read in this base |
+| 🔴 **The `0★` bar was applied against this pass's own interest** | 🔴 **`ai-tutor-benchmark` is MIT, build-safe, and directly answers a gap this base declared — and it still does not get a shelf row**, because `0★` / `0` forks fails *"a row implies a studio could start from this."* Same treatment as `Manu` and `EDUKAI LongView`. 🔵 **Recorded in `T17` and `P15` where its value is real: as a template** |
+| 🔴 **`D1` — a stale count published for nine trends** | 🔴 **`intel/trends.md` opened with *"Eight trends"* while carrying `16`.** Not a data error, but it is the kind that makes a reader distrust the counts that *are* load-bearing. Corrected to `Seventeen` at `p803` |
+| 🔴 **`ACTION p801-D` and `ACTION p801-A` remain open** | 🔴 Filing the upstream licence issue on `AITutor-EvalKit` still requires write access this session's GitHub scope does not grant (`p797-H` class). 🔴 `NikolasSchaeffner/lehrer-agent` was again not re-probed — **declared, not silently dropped**, for the second pass running |
+
+### Channel note
+
+🟢 **The rendered-page channel kept its control** (live `200`, invented `404`) and the **clone
+channel worked on all three third-party probes** — the byte-level grant reads in `T971`–`T973` are
+primary, not search-summary. 🔵 **`git clone --depth 1` remains the only channel in this session
+that can prove a licence file's *absence*;** a rendered page shows a blank sidebar for both "no
+licence" and "licence we could not classify", which `T956` established and `T971` relies on.
+
+### Why no agent row is added this pass
+
+No candidate surfaced. 🔵 **This is a different negative from `p802`'s** — that pass rejected four
+candidates on their merits; this pass found none to assess. Taken with `ACTION p801-A`'s finding
+that **no open-source education tutor was released in November `2026`**, the reading is that this
+sector's current activity is **releases on existing repositories and evaluation papers**, not new
+entrants. Agent count in `agents/top.md` **unchanged at 34** (29 build-safe + 5 copyleft).
+
+---
+
 ## `2026-11-13` (seventh pass) — **The largest new education repository of this window cannot be shipped, and this base spent a pass publishing a licence it had itself already refuted**
 
 **Pass `p802`.** Two things moved. 🟢 A genuinely new education artifact appeared at the top of the
