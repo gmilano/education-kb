@@ -6,8 +6,13 @@ updated: 2026-11-13
 
 # Education AI — current trends
 
-Nineteen trends, each with the evidence behind it and what it implies for an
-engagement. Researched 2026-11-13. 🔴 **Tenth pass (`p805`, 2026-11-13):
+**Twenty-one** trends, each with the evidence behind it and what it implies for an
+engagement. 🟢 **Eleventh pass (`p806`, 2026-11-13): `T20` and `T21` added, and `T19`'s
+headline claim narrowed** — the first open-licensed education AI-literacy curriculum
+surfaced, but at `3★` it is a seed rather than a corpus. 🔵 **Neither new trend came
+from the prescribed search battery, which returned nil on supply for a fourth pass and
+nil on regional facts for the first time.** Both came from auditing this base's own
+append-only trending logs against its shelves. Researched 2026-11-13. 🔴 **Tenth pass (`p805`, 2026-11-13):
 no trend was added and none was retired — the four global and four regional legs
 returned facts already carried here, the third consecutive nil.** 🟢 **One trend was
 amended on new shelf evidence: `T7`, where two permissive student-information systems
@@ -720,7 +725,36 @@ their campus actually runs**. 🟢 **That is `T16` and `P14` arriving on a calen
 expensive one.** Pitch AI inside an existing competency — cheaper to build, and it
 is what the policy actually says.
 
-## T19 — Three regimes now require AI literacy; no open curriculum exists to teach it
+## T19 — Three regimes now require AI literacy; the open curriculum to teach it is a seed, not a corpus
+
+🟡 **Status changed at the eleventh pass (`p806`): this trend's headline claim — "no
+open curriculum exists" — is NARROWED and the title above is rewritten accordingly.**
+The first *education* AI-literacy curriculum under an open grant did surface:
+[`Emerging-Rule/community`](https://github.com/Emerging-Rule/community), **CC BY 4.0**,
+bilingual **English / Spanish**, grades K-2 through 9-12, across Math, ELA, Science,
+SEL/Digital Citizenship and CS/AI Literacy. 🟢 **CC BY 4.0 is attribution-only — no
+share-alike — so unlike `GarethManning/education-agent-skills` (CC BY-SA 4.0, rejected
+at `p802`) its lessons can be cut down and shipped inside a client deliverable.**
+
+🔴 **But the trend survives, because the gap was never "does any open lesson exist"; it
+was "can open material meet a national mandate."** At **`3★`, `1` fork, `20` commits**,
+a badge claiming `13` lessons against a README table listing `6`, three showcase packs
+still marked draft-and-not-piloted, **no licence field on the GitHub sidebar at all**
+(the grant is README-and-badge provenance only) and **no Portuguese**, this does not
+meet Australia's million-student rollout, SUNY's gen-ed competency or Article 4. 🔵
+**Read it as proof the category has started, and as a contribution target: a studio that
+adds a graded, piloted K-12 sequence to a CC BY 4.0 repository with `20` commits owns
+the reference corpus in a field that has three dated mandates and no incumbent.**
+
+🔴 **Two stronger candidates could not be verified and are therefore NOT shelved:**
+**Day of AI** (MIT RAISE, K-12, advertises Creative Commons licensing) and the **OER
+Commons** AI-literacy collections (licences vary per item; at least one is CC BY-NC-SA,
+which would be unusable commercially). 🔴 **`dayofai.org`, `www.dayofai.net` and
+`oercommons.org` were all refused by this session's egress proxy.** An informed gap:
+the next pass has named targets rather than a query.
+
+### The original finding, which still holds on the scale question
+
 
 **The evidence, assembled across three regions in one pass.** North America: SUNY
 folds AI into the gen-ed **Information Literacy** competency from Fall 2026. EMEA:
@@ -751,3 +785,81 @@ base already verified (`qti3` for items, `pylti1.3`/`ltijs` to mount it,
 `learnmcp-xapi` to make completion reportable). 🔴 **The grant is what makes this
 viable: MIT permits redistribution and modification of the content itself, which no
 vendor courseware does.** Tracked as `Gap 804-C` in `repos/foundations.md`.
+
+
+## T20 — Student-facing LMS agents have converged on preview-then-confirm writes, independently, in three jurisdictions
+
+**The evidence, and the reason it counts: nobody coordinated it.** Three MCP servers
+verified this pass were written by unrelated authors, against three different host
+platforms, in three regulatory regimes — and all three solve the write problem the same
+way or refuse it outright.
+
+| Repo | Jurisdiction | Host system | How writes are handled |
+|---|---|---|---|
+| [`PsychQuant/che-ntucool-mcp`](https://github.com/PsychQuant/che-ntucool-mcp) (MIT) | 🇹🇼 Taiwan | NTU COOL (Canvas) | 🟢 **Two layers:** an MCP **elicitation dialog** *plus* a **single-use token bound to the previewed payload**. `preview_grade_change` → `post_grades`; `preview_announcement` → `post_announcement` |
+| [`12dora/waseda-moodle-mcp`](https://github.com/12dora/waseda-moodle-mcp) (MIT) | 🇯🇵 Japan | Waseda Moodle | 🟢 **Nine `prepare_*` verbs, one `confirm_action`, one `cancel_action`.** `20` read tools, `11` write tools, every mutation split |
+| [`maurodruwel/Smartschool-MCP`](https://github.com/maurodruwel/Smartschool-MCP) (MIT) | 🇧🇪 Belgium | Smartschool | 🟢 **Refuses the problem: `15` tools, all of them `get_` or `download_`, no write path at all** |
+
+🔵 **Convergent design across unrelated authors is a much stronger signal than any one
+repository's star count**, and it is why three repos with `1`, `0` and `6` stars earn
+rows in `agents/top.md`. It says the constraint is real and intrinsic to the domain:
+**an agent that can silently change a grade is not deployable in a school**, and
+everyone who builds one discovers this.
+
+🟢 **It also supersedes a claim this base made two passes ago.** `p802` recorded
+`zavora-ai/mcp-education` as "the only server that gates writes in its own tool
+contract." **That is withdrawn: it is now one of at least four, and `che-ntucool-mcp`'s
+gate is stronger than it.**
+
+**What it implies for an engagement.** 🟢 **The human-oversight argument for an LMS
+agent no longer has to be invented or defended from first principles.** EU AI Act Art.
+`14` requires that high-risk systems be effectively overseen by natural persons; a
+studio can now point at **three independent MIT implementations of a preview-then-confirm
+protocol** and adopt one rather than design one. 🔵 **Make the posture an explicit
+deliverable and price it as three tiers** — read-only (cheapest, and the easiest thing
+to put in front of a European DPO), preview-then-confirm (the default), and
+token-bound-to-payload (where grades or records are at stake). 🔴 **The tier is a
+procurement decision, not an engineering detail: pick it in week one, because retrofitting
+a write gate onto a deployed agent means rewriting its entire tool surface.**
+
+## T21 — In North America the integration surface is the state data standard, not the LMS — and this base scoped eleven passes at the wrong altitude
+
+**The evidence.** US K-12 student data does not move school-by-school. It moves through
+**Ed-Fi**, the interoperability model that state education agencies run their reporting
+on, with two **Apache-2.0** reference implementations:
+[`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS)
+(v7.x, `28★` / **`48` forks**) and
+[`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service)
+(v8, `12★` / **`17` forks**).
+
+🔵 **Read the fork-to-star ratio, not the star count.** Both repositories are forked
+substantially more often than they are starred — the inverse of a trending repository's
+shape. 🟢 **A repo forked more than starred is being deployed rather than admired**, and
+judging Ed-Fi's `28★` against a `40k★` tutorial corpus is a category error that this
+base made by omission for eleven passes.
+
+🔴 **The omission is the trend's second half, and it is about method.** Every pattern in
+this KB that touches a student record reaches it through an **LMS** (Moodle, Canvas,
+Open edX) or through **one institution's SIS** (RosarioSIS, Gibbon, OpenEduCat, EduPage,
+HEMIS, Smartschool). **Ed-Fi was mentioned `249` times in this base's own append-only
+trending logs and `0` times in any file a studio reads.** The search battery never
+surfaced it because the battery asks for *agents*, *trending repos* and *platforms* —
+and a data standard with `28★` is none of those.
+
+**What it implies for an engagement.** 🟢 **It is a change of altitude with a direct
+revenue consequence. An agent that speaks one SIS sells to one district; an agent that
+speaks Ed-Fi sells to a state education agency.** The dated district-policy deadlines
+this base already tracks — North Carolina's `2027-06-30`, Ohio's `2026-07-01` — are
+**state-level procurement events**, and a state-level integration is positioned for them
+while a district-level one is not. 🔴 **No Ed-Fi agent interface exists anywhere
+(`Gap 806-A`): it is a build and must be priced as one** — but every ingredient is on a
+shelf, including three write-gating designs from `T20`, and a write path into a **state
+longitudinal data system** is the highest-consequence write surface in this entire
+knowledge base.
+
+🔵 **The generalisable method, which is the part worth carrying to other industries:
+when a vertical has a mandatory reporting standard, the standard is the integration
+surface, and it will never appear in a "trending AI repos" search.** This base learned
+the adjacent lesson at `T13` — *when a vertical system has no agent surface, check the
+general-purpose platform underneath it.* **`T21` is the same move one layer further
+down: check the regulator's data model.**

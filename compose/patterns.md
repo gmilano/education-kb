@@ -6,7 +6,7 @@ updated: 2026-11-13
 
 # Compose patterns — education
 
-**Eighteen** concrete recipes. Each names the actual repos, the license
+**Twenty** concrete recipes. Each names the actual repos, the license
 consequence, how the pieces wire together, and a rough build estimate. All
 components were license-verified on 2026-11-13 (see `agents/top.md` and
 `repos/foundations.md`). 🔴 **Count defect, third occurrence, fixed again at
@@ -14,6 +14,11 @@ components were license-verified on 2026-11-13 (see `agents/top.md` and
 sixteen `## P` headings. It is now "Eighteen" and it matches
 `grep -c '^## P'`.** 🔵 **A count written in prose drifts every time a pattern is
 appended; until it is generated, this line will keep going stale.**
+
+🟢 **New at `p806`: `P19` (agent on the state data standard) and `P20`
+(AI-literacy programme from an open corpus).** 🔵 **The count above was checked with
+`grep -c '^## P'` before being written, not carried forward from the previous edition
+— which is how the three earlier defects happened.**
 
 🟢 **New at `p805`: `P17` (defensible tutor audit trail) and `P18`
 (skills-and-credentials advising).** Neither uses a component discovered this
@@ -1214,3 +1219,124 @@ and there is no equivalent permissive stack in this base for those regions
 the index says `NOASSERTION`. All four repos are under 70 stars: adopt the
 vocabulary and the licence with confidence, read the code before promising the
 pipeline.
+
+
+## P19 — Agent on the state data standard (North America, the highest-ceiling pattern in this file)
+
+🔵 **Why this pattern exists and why it is new at `p806`:** every other student-record
+pattern here — `P8`, `P9`, `P12` — reaches the record through **one institution's**
+system. This one reaches it through **Ed-Fi**, the interoperability model US **state
+education agencies** run K-12 reporting on. 🟢 **Same engineering, one altitude up, and
+the buyer changes from a district to a state.**
+
+### The components — all Apache-2.0 or MIT, all verified at `p806`
+
+| Component | Repo | Licence | Role |
+|---|---|---|---|
+| Data platform | [`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) | **Apache-2.0** | **Ed-Fi API v8.** Data Management Service (Resources, Descriptors, Discovery) + Configuration Service (Management API). 🔴 **Build here, not against the v7 ODS** — the ODS README says v8.0+ lives in this repo |
+| Legacy target | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | **Apache-2.0** | v7.x ODS/API — what the client is probably **actually running today**. Plan for it; do not design new work onto it |
+| Write-gate design | [`PsychQuant/che-ntucool-mcp`](https://github.com/PsychQuant/che-ntucool-mcp) | **MIT** | 🟢 **Copy the protocol, not the code** (it is Swift / macOS): elicitation dialog **plus a single-use token bound to the previewed payload** |
+| Write-gate alternative | [`12dora/waseda-moodle-mcp`](https://github.com/12dora/waseda-moodle-mcp) | **MIT** | `prepare_*` → `confirm_action` / `cancel_action`. Simpler; the right choice where there is no grade-write path |
+| Telemetry | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** | Emit xAPI for anything the agent does, so the activity is reportable |
+| Governance | `P14` deployment registry | — | 🟢 **Mandatory here, not optional** — see below |
+
+### How it wires together
+
+1. **Stand up the Ed-Fi API** (v8 DMS) against a copy of the client's data, or point at
+   their existing v7 ODS/API. Both speak a published REST specification.
+2. **Write an MCP server over it.** 🔴 **This does not exist and is the build** — see
+   `Gap 806-A`. Scope it by Ed-Fi **resource**: enrollment, attendance, assessment
+   results, discipline. Start **read-only**.
+3. **Gate every write before you ship one.** Adopt `che-ntucool-mcp`'s two-layer design:
+   a `preview_*` call returns the exact payload and a single-use token; the `post_*` call
+   refuses anything whose token does not match the previewed payload byte-for-byte.
+4. **Emit xAPI** through `learnmcp-xapi` for every agent action.
+5. **Register the deployment** (`P14`) before go-live.
+
+### Why the write gate is not negotiable here
+
+🔴 **A state longitudinal data system is the highest-consequence write surface in this
+entire knowledge base.** An attendance or discipline record that an agent changed
+silently is a legal problem for the agency, not a bug report. 🟢 **Ship read-only first
+and sell the write path as phase two** — it is also an easier procurement conversation.
+
+### Estimate
+
+🟢 **Read-only MCP server over Ed-Fi v8, four resource families, xAPI emission,
+deployment registry: 6–8 weeks.** Add **3–4 weeks** for the gated write path. 🔵 **The
+discovery cost is the variable** — which Ed-Fi version the agency runs, and which
+optional Ed-Fi extensions their state profile adds, decides more of the timeline than
+the agent work does. **Scope a 1-week assessment first.**
+
+### Three disqualifiers — check these first
+
+- 🔴 **The client is a district, not a state or a regional service agency.** Then this is
+  over-engineered: use `P8` or `P12` and sell a SIS-level integration.
+- 🔴 **The agency is not on Ed-Fi.** Not every state is. Confirm before proposing —
+  **this is a one-question disqualifier and it is free to ask.**
+- 🔴 **The engagement needs writes in phase one.** Then the timeline and the compliance
+  surface both roughly double; re-scope or re-price.
+
+## P20 — AI-literacy programme from an open corpus (Global, and the only pattern here with three dated mandates pointing at it)
+
+🔵 **Why this pattern exists:** `T19` records three regimes imposing a dated AI-literacy
+duty — SUNY's gen-ed Information Literacy competency from Fall 2026, **EU AI Act Art.
+`4`**, and Australia's national rollout at **1M students over three years** — against a
+supply side that was empty. 🟡 **`p806` narrowed that: the first open-licensed education
+curriculum exists, and it is a seed a studio can grow rather than a product that
+competes with one.**
+
+### The components
+
+| Component | Repo / standard | Licence | Role |
+|---|---|---|---|
+| Curriculum seed | [`Emerging-Rule/community`](https://github.com/Emerging-Rule/community) | 🟡 **CC BY 4.0 (README + badge; no sidebar licence field)** | Bilingual **EN / ES** K-12 lessons, K-2 → 9-12. 🟢 **Attribution-only, no share-alike — shippable inside a client deliverable** |
+| Difficulty sequence | [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | **MIT** | 🟢 **Take the `22`/`48`/`23` three-tier grading as the prerequisite spine**, then cut the developer assumptions. Content for the upper secondary / tertiary end |
+| Framework alignment | [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | **MIT** | 🟢 **The piece that makes this saleable to a ministry.** Publishes the AI-literacy competency framework as machine-readable **1EdTech CASE® 1.1**, so every lesson is aligned to a stated competency rather than asserted to be |
+| Credential | [`CredentialEngine/osmt`](https://github.com/CredentialEngine/osmt) | **Apache-2.0** | Rich Skill Descriptors against CTDL — for the North American workforce-outcome claim |
+| Delivery | `pylti1.3` / `ltijs` + Moodle / Canvas / Open edX | MIT / copyleft host | Mount the sequence as an LTI tool so it runs inside whatever LMS the client already has |
+| Assessment | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | **MIT** | QTI 3 items, so the item bank is portable off the project |
+| Reporting | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** | Completion and mastery as xAPI — 🟢 **this is what turns "we ran training" into evidence of discharging the duty** |
+
+### How it wires together
+
+1. **Model the duty as a competency framework in `opensalt`** — Art. `4`, the SUNY
+   competency or the Australian curriculum, whichever binds the client. 🔵 **Do this
+   first:** it is what the auditor reads and it decides everything downstream.
+2. **Map the seed lessons onto it.** `Emerging-Rule/community` for K-12,
+   `ai-engineering-hub`'s tiers for upper secondary and tertiary.
+3. 🔴 **Write the lessons that do not exist.** At six to thirteen lessons the seed covers
+   a fraction of any mandate. **This is the actual work and the actual line item.**
+4. **Author assessment as QTI 3 items**, delivered through the item player.
+5. **Mount via LTI 1.3**; emit **xAPI** on completion and mastery.
+6. **Contribute the new lessons back upstream.** 🟢 **Not altruism:** CC BY 4.0 lets the
+   studio keep and ship them, and a studio that authors the reference corpus in a field
+   with three mandates and no incumbent owns the category.
+
+### Why the licence chain holds
+
+🟢 **CC BY 4.0 (content) + MIT (sequence, player, telemetry) + Apache-2.0 (skills) is
+attribution-only end to end.** Nothing here is share-alike, so the client's derived
+curriculum stays theirs. 🔴 **The one weak link is provenance, not terms:**
+`Emerging-Rule/community` shows **no licence field on its GitHub sidebar** — CC BY 4.0
+is from the README and a badge. 🔵 **Confirm the grant in writing with the maintainer
+before building a priced deliverable on it.** `20` commits and `3` stars means there is
+a person who will answer an email.
+
+### Estimate
+
+🟢 **Framework modelling in `opensalt`, mapping the existing seed, LTI mount, QTI
+assessment and xAPI reporting: 5–7 weeks.** 🔴 **Curriculum authoring is separate and
+dominates the budget** — price per unit, not per project, and scope it against the
+specific mandate.
+
+### Three disqualifiers — check these first
+
+- 🔴 **The client needs Portuguese.** The seed is English and Spanish only. **For Brazil,
+  the largest education market in LATAM, the corpus does not exist** — that is an
+  authoring project from zero, and it must be priced as one.
+- 🔴 **The client wants accredited or certified courseware.** None of these components
+  carries accreditation; it is a separate, slow, jurisdiction-specific process.
+- 🔴 **The mandate is already met by a national programme.** Australia's rollout has
+  materials and a funder (Code for Schools, AWS support). 🔵 **Check what the ministry
+  already bought before proposing to build it.**

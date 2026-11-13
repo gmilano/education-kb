@@ -3,6 +3,87 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+## `2026-11-13` (eleventh pass) — **A fourth nil from the trending channel, and four infrastructure repositories promoted off the back of a scripted audit — led by the US K-12 data standard this base had discussed 249 times without ever shelving it**
+
+**Pass `p806`.** 🔵 **`0` education-specific repositories from the GitHub trending leg,
+fourth consecutive pass.** `github trending education AI 2026` returned `HKUDS/DeepTutor`
+(reported ~`52.8k★`), `THU-MAIC/OpenMAIC` (~`42k★`) and `patchy631/ai-engineering-hub`
+(~`40k★`) — 🔴 **all three already shelved.** The vertical-platform leg returned
+`Moodle`, `Canvas CE`, `Open edX`, `Sakai`, `Chamilo`, `OpenEduCat`, `RosarioSIS`,
+`Odoo eLearning` and **Frappe Education** — 🔴 **a seventh consecutive pass returning
+this shelf's own contents.**
+
+🟢 **`p804`'s characterisation of this channel now holds for a fourth window and should be
+treated as settled:** GitHub's education-AI trending surface returns **repositories for
+learning about AI**, not **repositories that apply AI to learning**.
+
+🔵 **One licence observation from the vertical leg is worth recording because it keeps
+reproducing:** every general-purpose comparison of open-source education platforms
+returns **GPL, LGPL and AGPL and nothing else** — Moodle (GPL), Canvas CE (AGPL-3.0),
+Open edX (AGPL-3.0), Chamilo (GPL-3.0), Sakai (ECL-2.0), OpenEduCat (LGPL-3.0), RosarioSIS
+(GPL-2.0). 🟢 **`T7` predicted exactly this split and it has not moved in eleven passes:
+the platform layer is copyleft, the permissive layer is the AI layer on top of it.** The
+four promotions below are the interesting exception — **three of the four are permissive
+infrastructure, and two are Apache-2.0 standards implementations.**
+
+### The audit that produced this pass's promotions
+
+🟢 **The manual diff `p805` ran is now a script:**
+[`scratchpad/p806/propagation-audit.sh`](../scratchpad/p806/propagation-audit.sh). It extracts every
+`github.com` slug from the two append-only logs, extracts every slug from the nine files a
+studio actually reads, and prints the set difference. Full numbers are in `agents/trending.md`
+under `p806`. The single number that matters here:
+
+🔴 **`Ed-Fi` — the data-interoperability standard that US state education agencies run K-12
+reporting on — appears `249` times across these two logs and `0` times in any shelf file.**
+`Numbas` `39`/`0`. `OpenSALT` `20`/`0`.
+
+### The four repositories promoted — all re-verified live this pass
+
+🔴 **Provenance:** `curl -sI` to `github.com` returns **`403`** from the session's egress
+proxy. All figures below were read from the rendered repository page via `WebFetch` —
+**sidebar-verified, not payload-verified.**
+
+| Repo | Licence | Stars / forks | Why it belongs on a shelf |
+|---|---|---|---|
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | 🟢 **Apache-2.0** | `28` / `48` | *"This repository hosts the core code for the Ed-Fi Operational Data Store (ODS) and Ed-Fi ODS API."* The **v7.x** platform. 🔵 **Note the shape: `48` forks against `28` stars.** A repository forked more than it is starred is being *deployed*, not admired — this is the institutional-adoption signature, and it is why star count is the wrong instrument for judging this row |
+| [`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) | 🟢 **Apache-2.0** | `12` / `17` | *"Code and design documentation for the Ed-Fi API Platform, successor to the Ed-Fi ODS/API Platform."* **Ed-Fi API v8.** Two applications: the **Data Management Service** (Resources, Descriptors and Discovery APIs) and the **Configuration Service** (Management API). 🔴 **Build against this, not the ODS, for anything new** — the README states v8.0+ work lives here |
+| [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** | `217` / `130` | *"A completely browser-based e-assessment/e-learning system, with an emphasis on mathematics."* Standalone Python 3 compiler; the authoring editor is `numbas/editor` in the same org. Built by **Newcastle University's School of Mathematics, Statistics and Physics**. 🟢 **This is the largest permissively licensed education *platform* of EMEA origin this base has found** |
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | 🟢 **MIT** | `47` / `27` | *"Standards Alignment Tool."* Implements **1EdTech CASE® 1.1** content structures and states alignment against **IEEE 1484.2 (LER)**, **Open Badges 3.0**, **CLR**, **Credential Engine CTDL**, **CEDS-LER** profiles, **W3C Verifiable Credentials** and **DIDs**. 🔵 **Treat the long list as alignment targets the project names, not as six implemented standards** |
+
+### One repository promoted from the search tier, and it is the only genuinely new name this pass
+
+| Repo | Licence | Stars / forks | Notes |
+|---|---|---|---|
+| [`Emerging-Rule/community`](https://github.com/Emerging-Rule/community) | 🟡 **CC BY 4.0 — README and badge only** | `3` / `1` | *"Open knowledge base for K-12 educators, researchers, and builders — by Emerging Rule."* Bilingual **English / Spanish** K-12 AI-literacy lesson library. Folders: `lessons`, `skill-taxonomy`, `research`, `showcases`, plus `lesson-template.md` and `CONTRIBUTING.md`. `20` commits on `main`. Grades K-2 through 9-12; Math, ELA, Science, SEL/Digital Citizenship, CS/AI Literacy |
+
+🟢 **Why this one matters out of all proportion to `3★`:** `T19` has stated since `p804`
+that **three regimes impose a dated AI-literacy duty and no open education-licensed
+curriculum exists to meet any of them.** This is the first candidate that is *education*
+curriculum rather than *developer* curriculum, and **CC BY 4.0 is attribution-only — no
+share-alike**, so unlike `GarethManning/education-agent-skills` (CC BY-SA 4.0, rejected at
+`p802` as contaminating) **it can be cut down and shipped inside a client deliverable.**
+
+🔴 **Three caveats, all of which must travel with the row:** the GitHub sidebar shows **no
+licence field at all** — CC BY 4.0 was read from the README text and badge, the same
+weaker provenance this base flags on `CredentialEngine/osmt`. The README's badge claims
+**13 lessons** while the README's own table lists **6**. And at `3★` / `1` fork with three
+lesson packs still marked "draft, for community review, not yet piloted", **this is a
+seed, not a corpus** — `T19` is *narrowed*, not closed.
+
+### Declared limits — named so the next pass starts ahead of this one
+
+- 🔴 **`dayofai.org`, `www.dayofai.net` and `oercommons.org`: refused by the session's
+  egress proxy (`connect_rejected`); `www.dayofai.org` did not resolve.** **Day of AI**
+  (MIT RAISE, advertises Creative Commons licensing, K-12) and **OER Commons'** two curated
+  AI-literacy collections are the two strongest remaining candidates for `T19` and
+  **neither could be verified, so neither is shelved.**
+- 🔴 **`MIT Impact.AI`** (`media.mit.edu`, Creative Commons middle-school AI curriculum) —
+  same status: identified, unverified, unshelved.
+- 🔵 **The `2,030`-slug upper bound from the audit is not a worklist.** The next pass should
+  narrow the filter to table rows carrying a licence *column* rather than any line where a
+  green mark and a licence token co-occur, then work the education-specific remainder.
+
 ## `2026-11-13` (tenth pass) — **The trending leg nils for a third pass, and the repositories worth shelving this week were already in this file**
 
 **Pass `p805`.** 🔵 **`0` education-specific repositories from the trending leg, third

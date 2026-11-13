@@ -6,8 +6,42 @@ updated: 2026-11-13
 
 # Education AI Agents — curated, license-verified
 
-**34 real agents** below — **29 build-safe** (MIT / Apache-2.0 / BSD / ISC) plus
-**5 copyleft** — **unchanged through the tenth pass (`p805`, 2026-11-13)**.
+**37 real agents** below — **31 build-safe** (MIT / Apache-2.0 / BSD / ISC) plus
+**6 copyleft** — **three rows added at the eleventh pass (`p806`, 2026-11-13)**.
+
+🔴 **Counting defect, fifth occurrence, fixed again this pass — and this one hid
+itself.** Every edition since `p802` headlined "34 real agents … 29 build-safe plus 5
+copyleft". The tables actually held **28 build-safe and 6 copyleft**. 🔵 **The total of
+34 was right only because the two errors cancelled**, which is precisely why nobody
+caught it for four passes. The counts above were produced by counting the rows
+programmatically rather than by carrying the previous edition's sentence forward, and
+the next pass should do the same instead of trusting this sentence.
+
+🟢 **`p806` added three rows — and not one of them came from a search.** The fourth
+consecutive pass of the prescribed battery returned nil on new agent supply, and this
+time the *regional* legs were nil on new facts too: every instrument they surfaced
+(`Regulation (EU) 2026/1744`, NC `Session Law 2026-41`, CA `AB 1159`, NY `A 9190`,
+Ipsos `2026`, IESALC `87%`/`26%`, DEC LATAM `92%`/`79%`, Council `ST-14902-2026`) is
+already carried in `intel/market.md`. 🔵 **Search saturation now covers both supply and
+regional intelligence, so this pass spent its budget on the propagation defect `p805`
+declared and left unfixed** — and made the audit a script,
+`scratchpad/p806/propagation-audit.sh`, rather than a manual diff anyone has to re-derive.
+🔴 **The measurement is worse than `p805` reported: `5,220` distinct repository slugs
+appear in the two trending logs against `730` on any shelf, and `Ed-Fi` — the data
+standard US state education agencies run K-12 reporting on — appears `249` times in the
+logs and `0` times in any file a studio reads.** Three of the repositories that audit
+surfaced are agents and are tabled below; four are infrastructure and went to
+`repos/foundations.md` and `verticals/solutions.md`.
+
+🟢 **The three new rows share a property worth more than any of them individually.**
+Written by unrelated authors in **Taiwan**, **Belgium** and **Japan**, against three
+different host platforms, all three converge on the same answer to the write problem:
+`che-ntucool-mcp` gates writes behind an elicitation dialog *plus* a single-use token
+bound to the previewed payload; `waseda-moodle-mcp` splits every mutation into
+`prepare_*` → `confirm_action` / `cancel_action`; `Smartschool-MCP` ships no write tool
+at all. 🔵 **A studio arguing EU AI Act Art. 14 human oversight for an LMS agent no
+longer has to invent the protocol — there are now three independent MIT implementations
+of it to point at.** See `T20` in `intel/trends.md`.
 
 🔵 **`p805` added zero rows. That is the third consecutive nil on agent supply, and
 this pass stopped treating it as a result to re-derive and started treating it as a
@@ -164,6 +198,9 @@ come from the rendered repository page (GitHub's own license detection).
 | mcp-education (zavora-ai) | https://github.com/zavora-ai/mcp-education | Apache-2.0 (per README; sidebar shows only a generic "License" link) | 1 | **New this pass — the only Rust education MCP server found, and the only server at any star count that gates writes in its tool contract.** Canvas LMS API: courses, assignments, grades, students, announcements. **12 tools split 9 read-only + 3 write operations that require approval** — the read/write boundary is declared by the server rather than left to the host's discretion, which is the design to copy for any education MCP server that writes to a gradebook. Built for "ADK-Rust Enterprise"; Rust 1.94.1, 1 fork. |
 | ai-tutor-agent | https://github.com/vulinh1704/ai-tutor-agent | MIT | 0 | **New this pass — the clearest tutoring *guardrail* implementation found at any star count.** FastAPI + LangGraph, with three controls this KB has not found written down elsewhere: a **Socratic hint ladder** that escalates one level per turn up to a configurable cap; an **answer-leak guard** that regenerates a draft which reveals the final answer and substitutes a safe hint if it still leaks; and **rubric grading in which per-criterion scores are validated against the rubric and the totals are computed in code, not by the model**. A router node splits tutor / grader / clarify. SQLite checkpointing persists a session across restarts; a deterministic offline fake model runs the whole graph with no API key, which also makes it testable in CI. 0 stars — take the control design, not the repo. |
 | AI-Teaching-Agent | https://github.com/littlecookie0722/AI-Teaching-Agent | MIT | 0 | **New this pass.** Compiles one Markdown teaching source into reviewable **Lab and Exam packages** plus short teaching decks, using structured DSLs, sandboxed evaluation and an MCP stdio server (`mcp_server/` with tool adapters, MCP manifest shipped in the wheel). **Nothing publishes automatically:** artifacts are validated, candidate-facing content is protected, and a human decision gates local export — the review-gate shape that `P6` (grading) and any assessment engagement needs. README states further MCP/Agent expansion is **frozen**, so treat it as a fixed reference rather than a growing project. |
+| che-ntucool-mcp | https://github.com/PsychQuant/che-ntucool-mcp | MIT | 1 | **New this pass (`p806`) — the strongest write gate in this base, and the first Taiwan-origin agent in it.** MCP server over **NTU COOL**, National Taiwan University's Canvas deployment (`cool.ntu.edu.tw`), in **Swift**, Developer ID signed, Canvas token in the macOS keychain with a logged-in Safari tab as fallback auth. 10 tools: 6 read (`list_courses`, `list_assignments`, `list_announcements`, `list_submissions`, `list_files`, `list_enrollments`) and 2 write pairs. 🟢 **`post_grades` and `post_announcement` are gated twice over — an MCP elicitation dialog *plus* a single-use token bound to the previewed payload.** That is a stronger contract than `zavora-ai/mcp-education`, which this base previously called the only server gating writes in its own tool contract. 🔴 Found by audit of this base's own trending logs, not by search; `ntucool` appeared there 12 times and on no shelf. |
+| Smartschool-MCP | https://github.com/maurodruwel/Smartschool-MCP | MIT | 6 | **New this pass (`p806`) — the fourth agent-to-SIS path in this KB and the second from EMEA.** 15 tools over **Smartschool**, the dominant school platform in Flemish Belgium: results, schedule, periods, reports, planned elements, student support links, student notes, **absences**, attachments and homepage blocks. Python 3.10+, 7 forks against 6 stars. 🟢 **Read-only by construction — there is no write tool at all**, which makes it the lowest-risk row in this table to put in front of a school's data-protection officer. 🔴 **Belgium is inferred** from `school.smartschool.be` and Dutch field names (`Leerlingvolgsysteem`), not stated by the repo. |
+| waseda-moodle-mcp | https://github.com/12dora/waseda-moodle-mcp | MIT | 0 | **New this pass (`p806`) — the first Japan-origin education agent in this base.** MCP server over **Waseda University's Moodle** (`wsdmoodle.waseda.jp`), authenticating with the same web-service token the official Moodle mobile app uses. **20 read tools and 11 write tools**, plus prompts (`daily_briefing`, `weekly_plan`, `exam_prep`) and `moodle://course/{id}` resources. 🟢 **Every mutation is split `prepare_*` → `confirm_action` / `cancel_action`** — nine `prepare_` verbs, one confirm, one cancel. Deploys to Cloudflare Workers or local stdio. 🔴 **Self-declared unofficial and unaffiliated with Waseda** — a reference design, not a vendor relationship. |
 
 ## Copyleft — usable, but the license propagates
 

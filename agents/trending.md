@@ -3,6 +3,112 @@ industry: education
 region: Global
 updated: 2026-11-13
 ---
+## `2026-11-13` (eleventh pass) — **The search legs nil for a fourth pass, so the audit was made repeatable instead of manual — and it found the US K-12 data standard mentioned 249 times in these logs and zero times on any shelf**
+
+**Pass `p806`.** 🔵 **Zero agent rows from the search tier — the fourth consecutive nil
+on supply.** All eight prescribed legs ran, four global and four regional. The global
+legs returned `DeepTutor`, `OpenMAIC`, `ai-engineering-hub`, `OpenEduCat`, `RosarioSIS`,
+`Moodle`, `Canvas` and `Open edX`; 🟢 **every education-specific name was already held.**
+🔴 **The regional legs were nil on *facts* too, which is new.** Every regional instrument
+they returned — `Regulation (EU) 2026/1744`, NC `Session Law 2026-41`, CA `AB 1159`,
+NY `A 9190`, the Ipsos Education Monitor `2026`, UNESCO IESALC `87%`/`26%`, the Digital
+Education Council LATAM `92%`/`79%`, Council document `ST-14902-2026`, the `716`
+instruments across `23` countries — **is already carried in `intel/market.md`.** Four
+passes of search saturation on supply is a pattern; the first pass of saturation on
+*regional facts* as well is a signal that the prescribed battery has been exhausted as
+a channel.
+
+🟢 **So this pass added three agent rows anyway — and none of them came from a search.
+All three came from auditing these logs against the shelf.**
+
+### The propagation defect is now measured, and it is an order of magnitude worse than `p805` reported
+
+`p805` found **11** byte-verified repositories that had reached no shelf file, called the
+cause "structural and not fixed," and diffed by hand. 🟢 **This pass wrote the diff as a
+script — [`scratchpad/p806/propagation-audit.sh`](../scratchpad/p806/propagation-audit.sh) — so it
+is repeatable by the next pass instead of being re-derived.** What it measures:
+
+| Measure | Count |
+|---|---|
+| Distinct `github.com` slugs appearing in `agents/trending.md` + `repos/trending.md` | **5,220** |
+| Distinct slugs appearing in any file a studio reads | **730** |
+| Slugs carrying a 🟢 mark *and* a verification or licence token in the log | **2,358** |
+| 🔴 **Verified-in-log slugs that reach no shelf file** | **2,030** |
+
+🔵 **The `2,030` figure is an upper bound, not a worklist** — the filter matches any line
+where a green mark and a licence token co-occur, which catches rejections and controls as
+well as findings. 🔴 **The headline number is the one that needs no interpretation:**
+
+| Slug | Mentions across the two logs | Shelf files mentioning it |
+|---|---|---|
+| **`Ed-Fi`** (the US K-12 data-interoperability standard) | **249** | 🔴 **0** |
+| `Numbas` | 39 | 🔴 **0** |
+| `OpenSALT` | 20 | 🔴 **0** |
+| `ntucool` | 12 | 🔴 **0** |
+| `smartschool` | 5 | 🔴 **0** |
+| `waseda` | 2 | 🔴 **0** |
+
+**Ed-Fi is the data standard most US state education agencies run their K-12 reporting
+on.** This base discussed it two hundred and forty-nine times and never once put it where
+an engagement team would find it. 🔵 **That is the cost of append-only stated as a
+number**, and it is the second pass in a row to say so.
+
+### The three agents promoted this pass — all re-verified live, all write-gated
+
+🔴 **Provenance caveat, unchanged from `p805` and now a standing property of this base:**
+`curl -sI https://github.com/…` returns **`403`** from the session's egress proxy (policy
+denial, not rate-limiting). Every figure below was read from the rendered repository page
+via `WebFetch` — **sidebar-verified, not payload-verified.**
+
+| Agent | Repo | Licence | Stars / forks | What it is |
+|---|---|---|---|---|
+| **che-ntucool-mcp** | [`PsychQuant/che-ntucool-mcp`](https://github.com/PsychQuant/che-ntucool-mcp) | 🟢 **MIT** (sidebar) | `1` / `0` | MCP server over **NTU COOL** — National Taiwan University's Canvas deployment (`cool.ntu.edu.tw`). `10` tools. Swift, Developer ID signed, token in the macOS keychain, with a logged-in Safari tab as fallback auth |
+| **Smartschool-MCP** | [`maurodruwel/Smartschool-MCP`](https://github.com/maurodruwel/Smartschool-MCP) | 🟢 **MIT** (sidebar + badge) | `6` / `7` | `15` tools over **Smartschool**, the dominant school platform in Flemish Belgium. 🟢 **Read-only by construction** — every tool is a `get_` or a `download_`. Country inferred from `school.smartschool.be` and Dutch field names (`Leerlingvolgsysteem`), **not stated by the repo** |
+| **waseda-moodle-mcp** | [`12dora/waseda-moodle-mcp`](https://github.com/12dora/waseda-moodle-mcp) | 🟢 **MIT** (sidebar) | `0` / `0` | MCP server over **Waseda University's Moodle** (`wsdmoodle.waseda.jp`). `20` read tools, `11` write tools, plus prompts (`daily_briefing`, `weekly_plan`, `exam_prep`). Runs on Cloudflare Workers or local stdio. 🔴 **Self-declared unofficial and unaffiliated with Waseda** |
+
+### 🟢 The finding that makes these three worth a row: write-gating converged independently in three jurisdictions
+
+These three repositories were written by unrelated authors in **Taiwan**, **Belgium** and
+**Japan**, against three different host platforms, and **all three solve the write problem
+the same way or refuse it outright**:
+
+- `che-ntucool-mcp` gates `post_grades` and `post_announcement` behind **two layers** — an
+  MCP **elicitation dialog** *plus* a **single-use token bound to the previewed payload**.
+  🟢 **That is the strongest write gate in this entire base**, stronger than
+  `zavora-ai/mcp-education`, which `p802` recorded as "the only server that gates writes in
+  its own tool contract."
+- `waseda-moodle-mcp` splits every mutation into `prepare_*` → `confirm_action` /
+  `cancel_action`. Nine `prepare_` verbs, one confirm, one cancel.
+- `Smartschool-MCP` declines the problem: **no write tool exists.**
+
+🔵 **Read `T20` in `intel/trends.md` for why this matters commercially.** The short form: a
+studio proposing an LMS agent in a regulated system no longer has to invent the human-in-the-loop
+protocol or argue for it — **three independent MIT implementations of it now exist to point at**,
+and the EU AI Act Art. 14 human-oversight argument writes itself from them.
+
+### Rejected / not promoted this pass
+
+- 🔴 **`Emerging-Rule/community` is NOT an agent and gets no row here.** CC BY 4.0,
+  bilingual K-12 AI-literacy lesson library. It is shelved in `repos/foundations.md` under
+  the curriculum-corpus layer, where it partially closes `T19`. Same reasoning `p804`
+  applied to `ai-engineering-hub`: a row in this table asserts a studio could start a build
+  from the artifact, and a lesson library is not a build.
+- 🔴 **`Ed-Fi-ODS`, `Data-Management-Service`, `Numbas` and `opensalt` are not agents
+  either** — they are platform and standards infrastructure and went to
+  `repos/foundations.md` and `verticals/solutions.md`.
+
+### Declared limits of this pass — an informed gap is information
+
+- 🔴 **`curl` to `github.com`: `403`.** Standing constraint, fourth pass running.
+- 🔴 **`dayofai.org`, `www.dayofai.net` and `oercommons.org` were refused by the session's
+  egress proxy (`connect_rejected`), and `www.dayofai.org` did not resolve.** Both are
+  credible open-licensed answers to `T19` — **Day of AI** is MIT RAISE's K-12 curriculum and
+  advertises itself as Creative Commons; **OER Commons** hosts two curated AI-literacy
+  collections. 🔴 **Neither could be verified this pass and neither is shelved.** They are
+  recorded here so the next pass starts from a named target rather than re-running the query.
+- 🔴 **LATAM returned nothing new at all this pass** — no new repository, no new instrument,
+  no new figure. That is an explicit nil, not an untried leg.
+
 ## `2026-11-13` (tenth pass) — **Three passes of nil supply, so this one audited the base against itself: 11 byte-verified repositories had reached no shelf a studio reads, and one of them the log claimed was already there**
 
 **Pass `p805`.** 🔵 **Zero agent rows added — the third consecutive nil on supply.**

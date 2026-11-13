@@ -86,6 +86,32 @@ across EMEA.
 
 ### North America
 
+#### Update 2026-11-13 (eleventh pass, `p806`) — 🔵 the regional leg returned NOTHING this file did not already hold, and the thing that moved is an architecture decision, not an instrument
+
+🔴 **Explicit nil, stated rather than smoothed.** The North America leg returned NC
+`Session Law 2026-41`, CA `AB 1159`, NY `A 9190`, the `134`-bills-across-`31`-states
+count, the federal K-12 AI Literacy and Readiness Act, and the Common Sense Media /
+OpenAI California ballot initiative. 🟢 **Every one of those is already recorded below.**
+That is the **first pass on which the North American *regulatory* leg produced no new
+instrument at all**, and it should be read as the state-legislative wave having reached
+its plateau for this session rather than as a search failure.
+
+🟢 **What did change for North America is in `repos/foundations.md` and
+`verticals/solutions.md`, not here: Ed-Fi.** This base has been scoping North American
+student-record work at the **institution** level — RosarioSIS, Gibbon, one district's
+SIS — when US K-12 data actually moves through **Ed-Fi**, the interoperability standard
+state education agencies run their reporting on. 🔴 **Ed-Fi was mentioned `249` times in
+this base's trending logs and `0` times on any shelf.** Both reference implementations
+are **Apache-2.0** (`Ed-Fi-ODS` v7.x, `Data-Management-Service` v8).
+
+🔵 **The commercial consequence is a change of altitude.** An agent that speaks one SIS
+sells to one district. An agent that speaks Ed-Fi sells to a **state education agency**,
+and the dated district-policy deadlines already in this file — NC's `2027-06-30`, Ohio's
+`2026-07-01` — are **state-level procurement events** that a state-level integration is
+positioned for and a district-level one is not. 🔴 **No Ed-Fi agent interface exists
+anywhere (`Gap 806-A`); it is a build and must be priced as one.**
+
+
 #### Update 2026-11-13 (tenth pass, `p805`) — the regional leg returned nothing new, and the opportunity that moved is a stack this base had already verified
 
 🔴 **`AI education North America 2026 adoption regulation players` returned only facts
@@ -430,6 +456,35 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-13 (eleventh pass, `p806`) — 🔵 regulatory nil for a second consecutive pass, and the EMEA movement this window is SOFTWARE
+
+🔴 **Explicit nil on regulation.** The EMEA leg returned `Regulation (EU) 2026/1744`
+(the Digital Omnibus), the `2027-12-02` Annex III date, the Art. `50` transparency
+duties live since August 2026, the Feb-2025 emotion-recognition ban, the softened Art.
+`4` AI-literacy duty, Council document `ST-14902-2026` on digital sovereignty, and the
+Digital Education Action Plan / European Education Area / Erasmus+ / Horizon Europe
+funding frame. 🟢 **All of it is already carried below, four-source corroborated.**
+**Nothing was added and nothing was withdrawn.**
+
+🟢 **What moved is the supply side, and it moves against this file's standing EMEA
+complaint.** This file has said for several passes that EMEA has **one** European-origin
+open-source education agent at scale (`tutor-mcp`, 🇫🇷, `102★`) and that "supply is
+appearing, adoption is not." **Two rows added this pass change the shape of that
+sentence:**
+
+| Addition | Origin | Licence | Why it matters to the EMEA motion |
+|---|---|---|---|
+| [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🇬🇧 **Newcastle University, UK** | 🟢 **Apache-2.0**, `217★` / `130` forks | 🟢 **The largest permissively licensed education *platform* of EMEA origin this base has found** — larger than every European education agent in it. Browser-based e-assessment with a maths emphasis. 🔵 **Apache-2.0 against a copyleft field** (TAO GPL-2.0, Moodle GPL, Canvas CE and Open edX AGPL-3.0) is the commercial point |
+| [`maurodruwel/Smartschool-MCP`](https://github.com/maurodruwel/Smartschool-MCP) | 🇧🇪 **Belgium (inferred from `school.smartschool.be` and Dutch field names, not stated)** | 🟢 **MIT**, `6★` / `7` forks | The **fourth agent-to-SIS path in this base and the second from EMEA**, after Türkiye's `sabis-mcp-server`. `15` tools over the dominant Flemish school platform, 🟢 **read-only by construction — no write tool exists**, which is the easiest posture to put in front of a European DPO |
+
+🔵 **Both land on the sovereignty argument Council doc `ST-14902-2026` makes** — reduce
+dependence on AI tooling developed outside Europe. 🟢 **A UK-built Apache-2.0 assessment
+platform and a Belgian MIT SIS connector are literally the artifacts that argument asks
+for**, and a studio can now name them instead of gesturing at the principle. 🔴 **The
+adoption half of the complaint stands unchanged: neither is deployed at scale, and
+`217★` is not scale.**
+
 
 #### Update 2026-11-13 (tenth pass, `p805`) — regulatory position unchanged and re-confirmed; one permissive public-sector SIS reaches the shelf
 
@@ -822,6 +877,53 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-13 (eleventh pass, `p806`) — 🟢 `p805`'s "regulation-only" verdict is DISCHARGED: APAC now has a named, dated, institution-wide deployment — and the region's fourth AI statute was missing from this file entirely
+
+🔴 **Taiwan had `0` mentions in every shelf file of this knowledge base before this
+pass.** It is the fourth APAC jurisdiction to bring an AI statute into force and the
+table below had three.
+
+| Instrument | Status | What it does — and does not do |
+|---|---|---|
+| **Taiwan — AI Basic Act** 🆕 | 🟢 **Passed by the Legislative Yuan `2025-12-23`; promulgated and in force on `2026-01-14`** | 🔵 **A framework law, and the distinction is commercially decisive: multiple legal readings agree it imposes essentially no obligations on the private sector and lacks mandatory legal force.** It sets high-level principles and defers implementation to sector regulators. **Education is named among the sectors** (alongside finance and public administration) 🔴 **but there are no education-specific provisions, no school rules and no education-sector deadlines.** Two dated follow-ons: the Ministry of Digital Affairs issued an **AI risk framework on `2026-07-07`** that sector regulators are expected to follow, and the government must **review and align existing laws within two years of January 2026** — i.e. **by January 2028** |
+
+🔵 **How to sell against Taiwan, stated precisely because the instrument is weak:**
+do **not** pitch AI Act-style conformity work there — there is nothing to conform to
+yet. 🟢 **Pitch against the `2028` alignment deadline and the MODA risk framework
+instead**, which is where education-sector rules will actually originate. **An
+institution that builds a deployment inventory now (`P14`) satisfies whatever MODA's
+sector guidance turns out to require, and satisfies nothing it does not.**
+
+🟢 **The deployment figure `p805` said the region could not produce.** `p805` recorded
+that "the APAC regional leg is regulation-only again, and that is itself the finding."
+**That is now discharged:**
+
+| Institution | What was deployed | Date | Scale |
+|---|---|---|---|
+| **Nanyang Technological University (NTU), Singapore** | **Gemini Enterprise, Google AI Studio and Vertex AI**, plus compute credits for building agents | 🟢 **Announced April 2026; live since August 2026** | 🟢 **All undergraduates, regardless of discipline** |
+
+🔵 **Three details make this more useful than a vendor press release.** First, the
+access was negotiated **in consultation with the NTU Students' Union** — student
+governance was a party to an AI procurement, which is a precedent an institutional
+buyer will recognise. Second, **the teaching was folded into a core course** —
+*"Science and Technology for Humanity"*, taken by every first-year — rather than left
+as an opt-in tool, having previously been restricted to computing students. Third, NTU
+has a **stated target of embedding AI into 40% of undergraduate courses by 2030**,
+which is a multi-year programme with a number attached.
+
+🔴 **Read the competitive implication honestly rather than as an opportunity.** This is
+a **hyperscaler land-grab, not a services engagement**: Google supplied the stack to an
+entire university at no cost to students. 🟢 **The work that survives it is the work
+Google did not do** — curriculum redesign for `40%` of courses, faculty capability,
+assessment integrity under universally available frontier models, and the deployment
+inventory every APAC regime will eventually ask for. **Sell the 2030 target, not the
+tooling.**
+
+🔵 **Public opinion, unchanged and already carried below:** the Ipsos Education Monitor
+2026 figures and the Vietnam/Korea/India instruments were returned again by this pass's
+regional leg and are **already in this file** — no change.
+
+
 #### Update 2026-11-13 (tenth pass, `p805`) — the regional leg is regulation-only again, and that is itself the finding
 
 🔴 **`AI education APAC 2026 adoption regulation players` returned regulation and no
@@ -1155,6 +1257,37 @@ procurement-led" corner of that matrix, which `P5` did not previously have a nam
 example of.
 
 ### LATAM
+
+#### Update 2026-11-13 (eleventh pass, `p806`) — 🔴 a complete nil, declared: no new instrument, no new figure, no new repository
+
+🔴 **This is the honest result and it is being written down rather than padded.** The
+LATAM leg ran and returned the UNESCO IESALC study (`87%` of `200` institutions using
+AI, `26%` with a formal strategy), the Digital Education Council LATAM survey (`92%` of
+students, `79%` of faculty), the Universidad de los Andes count of `716` regulatory
+instruments across `23` countries, Ceibal's `75%` of Uruguayan public-school teachers,
+Cetic.br's `53%`/`22%` Brazilian split, and the UNESCO Observatory launched at ECLAC in
+April 2026. 🟢 **Every single one is already recorded below, in most cases for several
+passes.**
+
+🔴 **No new LATAM-origin repository was found either**, by search or by the propagation
+audit. This base still holds exactly one LATAM-origin education agent
+([`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent), MIT, `0★`,
+Brazilian-Portuguese voice-first maths tutor).
+
+🔵 **One row added this pass does serve LATAM without being from LATAM**, and it is
+worth naming because the region's gap is *delivery capability*, not policy:
+[`Emerging-Rule/community`](https://github.com/Emerging-Rule/community) (CC BY 4.0) is
+**bilingual English / Spanish** K-12 AI-literacy curriculum. 🟢 **CC BY 4.0 is
+attribution-only, so its Spanish lessons can be localised per-country and shipped inside
+a ministry deliverable without a licence negotiation.** 🔴 At `3★` and six to thirteen
+lessons it is a seed, not a programme — and **there is no Portuguese.** For Brazil, the
+largest education market in the region, **the corpus does not exist.**
+
+🔵 **The standing LATAM finding is unmoved and remains the most sellable line in this
+file:** adoption is near-universal and governance is near-absent, measured at four
+independent levels by four independent sources. **Eleven passes have not found a
+counter-example.**
+
 
 #### Update 2026-11-13 (tenth pass, `p805`) — the region's largest school-management system was never on any shelf
 

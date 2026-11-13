@@ -6,11 +6,17 @@ updated: 2026-11-13
 
 # Foundational open-source repos for education
 
-The platforms and libraries an education engagement actually builds on. **57
+The platforms and libraries an education engagement actually builds on. **63
 repos**, all verified from the rendered repository page (license field + star
-count) — 34 across the four earlier passes on 2026-11-13, plus **the six-repo
-Caliper Analytics layer and the seven-repo QTI assessment layer verified this
-pass**. 🔴 **Where GitHub's
+count). 🔴 **Count corrected at the eleventh pass (`p806`): the header said "57
+repos" while the tables held 59.** The figure above was produced by counting rows
+programmatically, and the next pass should do that rather than carry this sentence
+forward. 🟢 **Four rows added this pass — a new two-repo K-12 data-standard layer
+(Ed-Fi), one row into the skills-and-credentials layer, and the row that narrows
+`T19`.** 🔵 **None of the four came from a search.** Three came from auditing this
+base's own append-only trending logs against its shelves, where `Ed-Fi` had been
+mentioned **249 times without ever reaching a file a studio reads**; the audit is a
+script now, at `scratchpad/p806/propagation-audit.sh`. 🔴 **Where GitHub's
 sidebar shows only a generic "License" link, the grant was read from the
 `LICENSE` file itself. One row this pass turns entirely on that step**, and it is
 the row that closes this file's standing Caliper gap.
@@ -122,7 +128,6 @@ here the permissive option is also the leading one.
 |---|---|---|---|
 | https://github.com/yetanalytics/lrsql | Apache-2.0 | 144 | **The default choice.** SQL-based LRS: a persistent store for xAPI statements plus their attachments and documents. Verified DBMS matrix is broad and current — SQLite 3.42, **Postgres 14/15/16/17/18**, MariaDB 10.6–11.8, MySQL 8.0.44/8.4/9.5. **Apache-2.0 means the learner-record store can ship inside a client deliverable with no copyleft reach** — the only data-layer component in this KB for which that is true. 42 forks. |
 | https://github.com/openfun/ralph | MIT | 51 | LRS **plus** a CLI for building learning-analytics pipelines **plus** a Python library for fetching, converting and serializing learning events. Pick it over SQL LRS when the engagement is *analytics*-shaped rather than *storage*-shaped, or when the agent layer is Python and you want one language end to end. Elasticsearch backend in its documented local setup. From **France Université Numérique** — EMEA public-education provenance, which is usable evidence in an EU data-sovereignty conversation. 19 forks. Releases section empty. |
-
 | https://github.com/LearningLocker/xapi-service | **MIT** | 42 | **New this pass (tenth, `p805`) — promoted off the trending log, where it has sat verified and unshelved.** "A service for the xAPI": the Learning Locker project's standalone statement service, Node/TypeScript, 1,329 commits. Topics `nodejs`, `tincan`, `typescript`, `xapi`. 🟢 **MIT on the sidebar, confirmed this pass by direct read.** Matters because Learning Locker itself is the LRS most institutions have heard of, and its commercial editions are **not** permissive — this component is. Pick it over `lrsql` when the stack is already Node and you want the statement endpoint as a service rather than a database product. 🔴 No release dates visible on the page; treat maintenance as unverified and pin a commit. |
 | https://github.com/LearningLocker/xapi-validation | **MIT** | 12 | **New this pass (tenth, `p805`).** "A package for validating xAPI statements" — the companion that checks a statement is well-formed *before* it reaches the store. 🟢 **This is the piece that makes an audit trail defensible rather than merely present:** every compose pattern in this KB tells an agent to emit xAPI, and none of them, until now, named anything that rejects a malformed emission. MIT, TypeScript. Use it in the agent process, not only at the LRS edge. |
 | https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW | **ECL-2.0** | 62 | **New this pass (tenth, `p805`).** "Standards-based learning record warehouse built for a scalable learning analytics environment" — Java, from Apereo's Learning Analytics Initiative. 🔵 **A warehouse, not a store: it is the layer above an LRS**, where statements from several sources are consolidated for analysis. **ECL-2.0 is OSI-approved and Apache-derived**, so it composes with the permissive rows here; it is the same licence as Sakai, which is not a coincidence — this is the Apereo/educational-middleware cluster running on the sector's own licence. Pick it when the engagement is multi-system analytics rather than one platform's telemetry. |
@@ -241,6 +246,40 @@ tool, not a delivery component.
 | https://github.com/GibbonEdu/core | GPL-3.0 | 638 | Flexible open-source school management platform. |
 | https://github.com/OS4ED/openSIS-Classic | GPL (per README) | 351 | openSIS student information system. Sidebar shows no license badge; GPL claim comes from the README. |
 
+## The K-12 data-standard layer (new, eleventh pass)
+
+**Why this layer exists as of `p806`:** every pattern in this base that touches a
+student record has so far reached it through an **LMS** (Moodle, Canvas, Open edX) or
+through a **single institution's SIS** (RosarioSIS, Gibbon, OpenEduCat, EduPage,
+HEMIS, Smartschool). 🔴 **That is the wrong altitude for North America.** US K-12 data
+does not move institution-by-institution; it moves through **Ed-Fi**, the
+interoperability standard that state education agencies run their reporting on. An
+agent that speaks Ed-Fi reaches a *state*, not a school.
+
+🔴 **This base discussed Ed-Fi `249` times across its two trending logs and never once
+put it on a shelf.** It is promoted here by audit, not discovered here — see `p806` in
+`repos/trending.md`.
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS | **Apache-2.0** | 28 | *"This repository hosts the core code for the Ed-Fi Operational Data Store (ODS) and Ed-Fi ODS API."* The **v7.x** platform — the deployed one. 🔵 **Read the ratio, not the star count: `48` forks against `28` stars.** A repository forked nearly twice as often as it is starred is being *run*, not admired, and that is the institutional-deployment signature. Judging this row by stars against a `40k★` tutorial corpus is a category error. Region: **North America**. |
+| https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service | **Apache-2.0** | 12 | *"Code and design documentation for the Ed-Fi API Platform, successor to the Ed-Fi ODS/API Platform."* **Ed-Fi API v8**, two applications: the **Data Management Service** (Resources, Descriptors, Discovery) and the **Configuration Service** (Management API). 🟢 **Build anything new against this, not the ODS** — the ODS README itself states that v8.0+ lives here. `17` forks against `12` stars, same signature. Region: **North America**. |
+
+### What this layer does and does not change
+
+🟢 **What it changes:** it gives a North American engagement a **permissive, standards-
+backed route to the student record** that does not depend on which SIS a district
+bought. `P8` in `compose/patterns.md` was scoped to RosarioSIS and Gibbon because those
+were the open SIS products this base had verified; Ed-Fi sits one layer *above* that
+choice.
+
+🔴 **What it does not change:** **there is no Ed-Fi MCP server in this base, and none
+was found.** The agent edge is unbuilt. Ed-Fi exposes a conventional REST API with a
+published specification, so the work is ordinary — but it is **a build, and it must be
+priced as one.** That is `Gap 806-A`, and it is the clearest-shaped contribution
+opportunity in this file: every ingredient (the spec, the Apache-2.0 reference
+implementation, three MIT write-gating designs to copy from `agents/top.md`) exists.
+
 ## Content, authoring and delivery
 
 | Repo | License | Stars | Notes |
@@ -289,13 +328,21 @@ tool, not a delivery component.
 duty — SUNY folds AI into the gen-ed **Information Literacy** competency from
 Fall 2026, the **EU AI Act Article 4** duty binds providers and deployers, and
 Australia is rolling a national AI-literacy curriculum at **1M students over
-three years**. 🔴 **No education-licensed open curriculum was found to satisfy
-any of them.** What exists at scale is permissive **developer** curriculum, and
-it is larger than every education-specific repo in this base. Both rows below
+three years**. 🟡 **Status changed at `p806`: that gap is NARROWED, not closed.** The first
+education-licensed open curriculum did surface — `Emerging-Rule/community`, CC BY 4.0,
+bilingual K-12 — **but at `3★` with six to thirteen lessons it cannot by itself meet a
+national mandate.** 🔴 **What still does not exist is open education curriculum at the
+scale these duties assume.** What exists at scale remains permissive **developer**
+curriculum, larger than every education-specific repo in this base. 🔴 **Two further
+candidates were identified and could NOT be verified: `Day of AI` (MIT RAISE,
+advertises Creative Commons) and the `OER Commons` AI-literacy collections — both hosts
+were refused by this session's egress proxy.** Named here so the next pass starts from a
+target rather than a query. Both rows below
 were read from the rendered repository page on `2026-11-13`.
 
 | Repo | License | Stars | What it is, and what it is not |
 |---|---|---|---|
+| [`Emerging-Rule/community`](https://github.com/Emerging-Rule/community) | 🟡 **CC BY 4.0 — README and badge only; the GitHub sidebar shows no licence field at all** | 3 | *"Open knowledge base for K-12 educators, researchers, and builders."* 🟢 **The first *education* AI-literacy curriculum this base has found, as opposed to developer curriculum — and the row that narrows `T19`.** Bilingual **English / Spanish**, grades K-2 through 9-12, across Math, ELA, Science, SEL/Digital Citizenship and CS/AI Literacy. Folders: `lessons`, `skill-taxonomy`, `research`, `showcases`, plus `lesson-template.md` and `CONTRIBUTING.md`; `20` commits on `main`. 🟢 **CC BY 4.0 is attribution-only — no share-alike** — so unlike `GarethManning/education-agent-skills` (CC BY-SA 4.0, rejected at `p802` as contaminating) **its lessons can be cut down and shipped inside a client deliverable.** 🔴 **Three caveats travel with this row: the licence has README-grade provenance only; the badge claims `13` lessons while the README table lists `6`; and three of the showcase packs are marked draft and not yet piloted.** At `3★` / `1` fork this is a seed, not a corpus. |
 | [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | MIT | 78.6k | "Learn AI Engineering! Learn it. Build it. Ship it for others." Model foundations → LLM systems → agent development, plus a retrieval-evaluation lab. `14.0k` forks, `2,703` commits. 🔴 **Not an education product, not a tutoring base, and not undergraduate-level.** Its value is that **MIT permits redistribution and modification of the content itself**, so it can be cut down and re-sequenced into a client's AI-literacy module without a licence negotiation. Largest permissive education-adjacent artifact in this base |
 | [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | MIT | 41.8k | "In-depth tutorials on LLMs, RAGs and real-world AI agent applications." README states **"93+ Production-Ready Projects"**, graded **`22` Beginner / `48` Intermediate / `23` Advanced**. `6.7k` forks. 🟢 **The difficulty grading is the reusable asset** — it is the only thing in either corpus that maps directly onto a curriculum sequence with prerequisites. 🔴 Same caveat: developer-level, project-based, no learner model, no LMS surface |
 
@@ -326,13 +373,17 @@ are permissive**.
 
 🟢 **All four were verified in earlier passes and never reached this file.**
 They are promoted here, not discovered here; the audit that found them is
-written up in `repos/trending.md` under `p805`.
+written up in `repos/trending.md` under `p805`. 🟢 **A fifth row,
+`opensalt/opensalt`, was added the same way at `p806`** — and it is the one that makes
+the layer coherent, because it holds the framework a learner is measured *against*
+rather than the record of what they did.
 
 | Repo | License | Stars | Notes |
 |---|---|---|---|
 | https://github.com/CredentialEngine/osmt | **Apache-2.0** | 67 | **Open Skills Management Tool.** Kotlin + Spring Boot + Angular, 1,647 commits on `develop`. Authoring and publishing of **Rich Skill Descriptors (RSD)** against the **CTDL** vocabulary — the US credential-transparency data model. 🔴 **The GitHub sidebar links a `LICENSE` without naming the grant and the index reads `NOASSERTION`; Apache-2.0 was read from the file itself.** Region: **North America** — CTDL/RSD is a US ecosystem, and that placement is the point of the row, not a caveat. |
 | https://github.com/CredentialEngine/CredentialRegistry | **Apache-2.0** | 15 | The registry the skill descriptors are published *into* — Ruby, "Repository for development of the Credential Registry". 🟢 **Apache-2.0 named directly on the sidebar this pass.** Pair with `osmt`: `osmt` authors, `CredentialRegistry` stores and serves. Region: **North America**. |
 | https://github.com/CredentialEngine/transcript-ctid-matcher | **Apache-2.0** | — | Matches transcript line items to **CTIDs** (Credential Transparency Identifiers). 🟢 **This is the hard, boring, valuable part** — mapping a registrar's course rows onto a public credential vocabulary is exactly the work a studio is hired for, and a permissive reference implementation removes the worst of it. Region: **North America**. |
+| https://github.com/opensalt/opensalt | **MIT** | 47 | *"Standards Alignment Tool."* Implements **1EdTech CASE® 1.1** content structures — the standard for publishing and aligning *competency frameworks and academic standards* as machine-readable objects. States alignment against **IEEE 1484.2 (LER)**, **Open Badges 3.0**, **CLR**, **Credential Engine CTDL**, **CEDS-LER** and **W3C Verifiable Credentials / DIDs**. 🔵 **Treat that list as alignment targets the project names, not as six implemented standards.** 🟢 **MIT, and it is the missing upstream half of this layer:** `opensalt` holds the framework a learner is being measured *against*, `osmt` authors the skill descriptors, `CredentialRegistry` publishes them. `27` forks. 🔴 Promoted by the `p806` audit — mentioned `20` times in the trending logs, never shelved. Region: **North America** (CASE and CTDL are US ecosystems), with CASE itself in international use. |
 | https://github.com/tabiya-tech/compass | **MIT** | 14 | "An AI chatbot designed to assist job-seekers in exploring and discovering their skills" — Python backend, TS frontend. 🟢 **The only agent in this base that works on *lived-experience* skills elicitation rather than coursework**, which is the shape of the problem in informal and youth-employment programmes. MIT, so it composes into a client deliverable. Companion repos `tabiya-livelihoods-classifier` and `taxonomy-model-application` carry the taxonomy side. 🔴 Small and young — adopt the approach and the licence, read the code before promising the model. |
 
 ## Declared gaps

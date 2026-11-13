@@ -12,6 +12,32 @@ of these**, not replacing it. All licenses and star counts verified from the
 repository page (2026-11-13, with the LTI and Moodle-MCP rows verified this
 pass).
 
+### What changed this pass (eleventh pass, `p806`, 2026-11-13) — two rows, and the second one changes the altitude of every North American engagement
+
+🟢 **`numbas/Numbas` (Apache-2.0, `217★`/`130` forks) is the largest permissively
+licensed education platform of EMEA origin this base has found.** Browser-based
+e-assessment with an emphasis on mathematics, built by **Newcastle University's School
+of Mathematics, Statistics and Physics**. It matters because this file's `T7`-shaped
+problem — *the platform layer is copyleft, so the client's host system constrains
+everything* — **does not apply to it.** TAO is GPL-2.0; Moodle is GPL; Canvas CE and
+Open edX are AGPL-3.0. Numbas is Apache-2.0, which means a studio can fork it, embed it
+and ship it.
+
+🔴 **`Ed-Fi` is the bigger finding, and it is an indictment of this base rather than a
+discovery.** US K-12 student data does not move school-by-school; it moves through the
+**Ed-Fi** standard, which state education agencies run their reporting on. Every pattern
+in this KB that touches a student record reaches it through an LMS or through one
+institution's SIS — **the wrong altitude for North America.** 🔴 **This base mentioned
+Ed-Fi `249` times in its append-only trending logs and `0` times in any file a studio
+reads.** It is now shelved in `repos/foundations.md` under a new K-12 data-standard
+layer, and summarised in the standards table below.
+
+🔵 **Neither row came from a search.** Both came from a scripted audit of this base
+against itself (`scratchpad/p806/propagation-audit.sh`), because the prescribed search
+battery returned nil on new platforms for a **seventh consecutive pass** — every
+vertical leg returns Moodle, Canvas, Open edX, Sakai, Chamilo, OpenEduCat and RosarioSIS,
+which is this file's own contents.
+
 ### What changed this pass (tenth pass, `p805`, 2026-11-13) — three SIS rows, none of them new
 
 🔴 **The prescribed search battery returned nil on supply for the third consecutive
@@ -160,6 +186,7 @@ maintenance before committing a client to either.**
 | pyKT | https://github.com/pykt-team/pykt-toolkit | **MIT** | 461 | Deep knowledge-tracing benchmarks — real mastery estimation to pair with an LLM tutor. |
 | ODK Collect | https://github.com/getodk/collect | Apache-2.0 | 805 | Offline Android form collection; used for education field assessment at national scale. |
 | AI Scoring Platform | https://github.com/wwrwbs/AI_AWE | Apache-2.0 (README) | 2 | Essay scoring + label-aware feedback, locally deployable. Prototype scale, but the only open grading *system* found. |
+| Numbas | https://github.com/numbas/Numbas | **Apache-2.0** | 217 | **New this pass (`p806`) — the largest permissively licensed education platform of EMEA origin in this base.** *"A completely browser-based e-assessment/e-learning system, with an emphasis on mathematics."* Built by **Newcastle University** (UK). This repo is the standalone **Python 3 compiler**; the authoring editor is `numbas/editor` in the same org. `130` forks. 🟢 **Apache-2.0 is the whole point of the row:** TAO is GPL-2.0 and every LMS in the table above is GPL or AGPL, so Numbas is the only assessment platform here a studio can fork, embed and ship inside a proprietary client deliverable. 🔵 Strongest fit is STEM formative assessment, where its maths-expression engine and randomised question generation are the differentiator — **not** a general item bank; pair with the QTI 3 player for interchange. 🔴 Promoted by audit — `39` mentions in the trending logs, never shelved. |
 | TAO | https://github.com/oat-sa/tao-core | GPL-2.0 | 64 | **New this pass — the one assessment *platform* with real item banking that a client may already be running.** Long-standing open e-testing system. 🔴 **Two constraints decide whether it fits: the open-source edition is QTI 2.2-based, not QTI 3, and it ships no Results Management** — a QTI 3 contract or a reporting requirement lands outside it. GPL-2.0: a host to extend, not a base to embed. |
 | QTI 3 item player | https://github.com/amp-up-io/qti3-item-player | **MIT** | 30 | **New this pass — the delivery surface for assessment, and the only QTI repo claiming conformance certification** (QTI 3 Basic *and* Advanced "Delivery"). 🔴 Vue 2.6, which is end-of-life. Pair with `LongsightGroup/qti3` (MIT) for authoring, scoring and migration — **no single repo does both**. |
 | Caliper spec | https://github.com/1edtech/caliper-spec | IMS spec-document license | 22 | Learning analytics event spec. Implement it; do not vendor the repo. **Implementations now exist — see the two rows below and `repos/foundations.md`.** |
@@ -171,12 +198,24 @@ maintenance before committing a client to either.**
 | Standard | Why it decides the architecture |
 |---|---|
 | **LTI 1.3 / LTI Advantage** | Build the AI tool once as an LTI tool provider and it mounts in Moodle, Canvas, Open edX, Sakai, and ILIAS. Highest-leverage single investment in an education engagement — and `ltijs` means you do not write it from scratch. |
+| **Ed-Fi** 🆕 | 🔴 **The standard this base missed for eleven passes.** The US K-12 data-interoperability model that **state education agencies** run their reporting on. It decides the architecture of any North American K-12 engagement, because an agent that speaks Ed-Fi reaches a *state*, not a school — while an agent that speaks one SIS reaches one district. 🟢 **Permissively implemented and deployable today:** `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` (Apache-2.0, v7.x) and `Ed-Fi-Alliance-OSS/Data-Management-Service` (Apache-2.0, **v8 — build against this one**). 🔴 **There is no Ed-Fi MCP server anywhere in this base and none was found: the agent edge is unbuilt (`Gap 806-A`), and it is a build that must be priced as one.** Region: **North America**. |
 | **xAPI** | Learner-activity telemetry; what an agent should emit so the institution can report on it. |
 | **Caliper Analytics** | The 1EdTech-native alternative to xAPI; common in North American higher ed. **Updated fifth pass: six implementations now verified — an MIT sensor, a GPL-3.0 Moodle emitter, an Apache-2.0 analysis layer and LGPL-3.0 reference sensors — but NO permissively licensed event store, and 1EdTech's reference code is member-gated.** Free choice → still xAPI. Contract names Caliper → you write the store and nothing else. Ask which Caliper **version**: the only 1.2 implementation found is unlicensed. |
 | **QTI** | Assessment item interchange — matters as soon as item banks must move between systems. **Updated fifth pass: seven implementations verified, five of them MIT — but scoring, item banking and *certified delivery* live in different repos, so every QTI engagement is a pairing exercise.** `qti3-item-player` (MIT) is certified delivery-only; `LongsightGroup/qti3` (MIT) authors, scores and migrates but claims no certification. 🔴 Confirm which **branch** a QTI licence was read from: `Learnosity/learnosity-qti` is MIT on `master` and GPL-2.0 on its default `develop`. |
 | **SCORM** | Legacy but ubiquitous in corporate and vocational training; still the delivery format many EMEA/APAC clients require. |
 
 ## Declared gaps
+
+- 🔴 **`Gap 806-A` — no Ed-Fi agent interface exists, and this is the best-shaped
+  contribution opportunity in this file.** Ed-Fi is Apache-2.0, exposes a conventional
+  REST API with a published specification, and reaches US state education agencies
+  rather than single districts. Every ingredient for an MCP server over it is already
+  on a shelf in this KB: the spec, the Apache-2.0 reference implementation, and **three
+  independent MIT write-gating designs** to copy from `agents/top.md`
+  (`che-ntucool-mcp`'s elicitation-plus-single-use-token, `waseda-moodle-mcp`'s
+  `prepare_*`/`confirm_action` split, `Smartschool-MCP`'s read-only posture). 🔵 **The
+  gating design is not optional here** — a write path into a state longitudinal data
+  system is the highest-consequence write surface in this entire knowledge base.
 
 - **No permissively licensed LMS at deployment scale** except Sakai. Surface
   this constraint in week one of any engagement that needs a proprietary
