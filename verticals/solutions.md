@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p801` — **🟢 A PERMISSIVE LMS exists. `OpenOLAT` is byte-verified Apache-2.0, and five passes of this shelf missed it because its licence sidebar is blank. 🔴 And the one roundup-nominated "MIT LMS" is AGPL-3.0 on both channels.**
+
+🟢 Machine output: [`grant-bytes`](../evidence/grant-bytes.2026-11-12-p801.tsv) · [`propagation-diff`](../evidence/propagation-diff.2026-11-12-p801.tsv).
+
+🟢 **Every grant below is a PAYLOAD read at `HEAD`** on the git byte channel (`T954`), with size, title line and `affero` count — 🔴 **not a sidebar classification, which is what this shelf has been built on until now.**
+
+### 🟢 The platform layer is no longer uniformly copyleft — `T960`
+
+🔴 **This shelf has carried a clean dichotomy for several passes: *"the platform layer is copyleft and the agent layer is permissive."*** 🟢 **`p801` breaks the first half with a payload.**
+
+| Platform | Grant, byte-verified | Bytes | ★ | Network-disclosure exposure |
+|---|---|---|---|---|
+| 🟢 **[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)** | 🟢 **Apache-2.0** · affero×`0` | `10,982 B` | `451` | 🟢 **NONE.** Permissive: modify and host without source disclosure, with an explicit patent grant |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 GPL-3.0 · affero×`3` | `35,147 B` | `7.6k` | 🟡 Copyleft on distribution; 🟢 **no network clause** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 GPL-3.0 · affero×`3` | `35,147 B` | — | 🟡 as `moodle` — **byte-identical licence file** |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 **AGPL-3.0** · affero×`16` | `35,136 B` | `8.2k` | 🔴 **Serving it over a network triggers source disclosure** |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** · affero×`16` | `33,893 B` | `3.4k` | 🔴 **Same network clause** — 🔴 **and an indexed roundup calls this one MIT** (`T959`) |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 GPL-2.0 · affero×`0` | `15,214 B` | `654` | 🟡 Copyleft on distribution; 🔴 **no explicit patent grant** (GPL-2.0, `Version 2, June 1991`) |
+
+🔵 **How to read this, because the dichotomy was useful and is only now qualified:** the copyleft platforms still hold essentially the whole installed base, so most engagements remain AGPL/GPL conversations. 🟢 **But *"there is no permissive LMS to build on"* is now FALSE, and for a client who cannot accept the AGPL network clause `OpenOLAT` is the single most valuable row on this shelf.** 🔴 **Price `451★` as a staffing and continuity risk** — it is a small community, and that is a different risk from a licensing one, not a smaller one.
+
+🔴 **The reason this took so long to find is the finding underneath it (`T956`): `OpenOLAT`'s GitHub sidebar names NO licence.** Its README carries an `Apache 2.0` badge and the payload confirms it, but on a classifying channel it looks like an unlicensed repository. 🔵 **Any shelf built on classification will keep missing permissive projects that never filled that field in.**
+
+### 🔴 The agent→LMS write path, with its grant now certain
+
+🔴 **[`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) is byte-verified AGPL-3.0** — `34,524 B`, affero×`16`, `HEAD` `1c5424da9de3`. 🔴 **So the write path into the LMS is copyleft with a network clause**, which `p800` recorded as a classification and `p801` confirms as a payload. 🔴 **Deploy it across a service boundary, never linked into client code.** 🔴 **`p792-D`, TENTH pass: still no independent security or data-governance evaluation**, and its `27` LMS tools reach `deactivate_user`, `request_retirement`, `invalidate_certificate` and `bulk_enroll`.
+
+🟢 **The permissive attachment path, byte-verified this pass:** [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) — **Apache-2.0**, `10,273 B`, affero×`0`. 🔵 **LTI across a service boundary is how a permissively licensed agent attaches to a copyleft LMS without taking the copyleft with it.** 🔴 [`overhangio/tutor`](https://github.com/overhangio/tutor), the Open edX deployment path, is **AGPL-3.0** on bytes (`34,523 B`) — this shelf had not stated that beside it.
+
+### 🔴 Addresses corrected on this shelf — `ACTION p800-A`
+
+🟢 **Open edX** rows now write the canonical [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform). 🔵 **The grant bytes were never wrong** — the old slug is a transparent rename redirect to the same `HEAD` (`32e2f7d8ec6a`) and the same `35,136 B` payload, so the defect was findability, not data.
+
+🟢 **Fedena** row now writes the canonical [`projectfedena/fedena`](https://github.com/projectfedena/fedena) (`547★`) instead of the `4★` fork. 🔴 **These two ARE different repositories** (`68a84ac4` vs `333477b0`), and 🔴 **`p801` confirms on bytes that NEITHER serves a root licence blob** — the `Apache-2.0` claim in OpenEduCat's comparison table remains refuted, now on a second channel.
+
+🔴 **Left unchanged ON PURPOSE:** the lines in this file that record what a *past* pass measured still read `openedx/edx-platform`. 🔵 **A current shelf row gets corrected; a historical measurement does not get rewritten.**
+
+🔴 **Unresolved, and recorded as unresolved rather than absent:** `OpenEduCat`'s repository failed to resolve on three address spellings this pass (`OpenEduCat/openeducat`, `openeducat/openeducat`, `openeducat/openeducat-erp`). 🔴 **The byte channel's negative control cannot separate a wrong address from a private or deleted one** (`T954`), so this shelf's existing `openeducat/openeducat_erp` **LGPL-3.0** row stands on its earlier evidence and is **not** re-verified. 🟢 **`ACTION p801-B`: resolve the OpenEduCat address on the rendered channel, which returns `404` for an invented address and therefore CAN discriminate.**
+
 ## 🆕 `p800` — **The agent→LMS WRITE path exists, it is `3` stars and AGPL-3.0, and its design is the deliverable. 🟢 `p800` names the pattern: INSTITUTION-ISSUED AGENT AUTHORITY — and the alternative, a browser agent wearing a student's session, is what the LMS vendor has declined to block.**
 
 🟢 Machine output: [`cross-channel-remeasure`](../evidence/cross-channel-remeasure.2026-11-12-p800.tsv) · [`search-absence-mechanism`](../evidence/search-absence-mechanism.2026-11-12-p800.tsv).
@@ -370,7 +409,7 @@ Each row below was read on the byte channel instead.
 | **Odoo** (the ERP underneath) | [`odoo/odoo`](https://github.com/odoo/odoo) | 🔴 **`ANTHOLOGY[LGPL, GPL-3.0]`** · `43,529 B` · `3ce3a7dc8ecb` | `55,739` | 🔴 **`T875` lands on the most-cited vertical platform in the sector on its first application.** Odoo's single `LICENSE` carries **two** copyleft families; reporting it as "LGPL" — as the education-ERP tables do — states one of the two. 🟡 Build **modules**, not a fork, and read which family governs the part you touch |
 | **Frappe Education** | [`frappe/education`](https://github.com/frappe/education) | 🔴 **GPL-3.0 — BY REFERENCE, in `19` bytes** · `1fcecf395312` · `61408d3da518` | `705` | 🔴 **The shortest grant this base has ever measured, and it is a real one.** The entire file reads `License: GNU GPL V3` — no operative text. 🟢 `T845` at its extreme: **`19` bytes is a grant and `39,890` was not proprietary.** 🔴 Copyleft; and note it is **GPL-3.0**, *not* the AGPL-3.0 this base records for its sibling `frappe/lms` — the two Frappe education products differ in family |
 | **openSIS Classic** | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **NO GRANT SERVED** · `8348cd069aa2` | `351` | 🔴 **Re-confirmed, and it reproduced an unplanned 11th control** — this base already records this address at this exact sha as grant-less. 🔵 The vendor tables list it `GPL-2.0`; the repository serves nothing |
-| **Fedena** | [`foradian/fedena`](https://github.com/foradian/fedena) | 🔴 **NO GRANT SERVED** · `333477b06f1d` | — | 🔴 **CLAIM REFUTED.** OpenEduCat's own comparison table lists Fedena as **Apache-2.0**. The repository serves **no licence on `10` paths**. 🔵 A competitor's table is not a licence |
+| **Fedena** | [`projectfedena/fedena`](https://github.com/projectfedena/fedena) `547★` 🔵 *(this shelf wrote the `4★` fork [`foradian/fedena`](https://github.com/foradian/fedena) until `p801`)* | 🔴 **NO GRANT SERVED** · canonical `HEAD` `68a84ac445bf` · fork `HEAD` `333477b06f1d` | — | 🔴 **CLAIM REFUTED, and now on bytes.** OpenEduCat's comparison table lists Fedena as **Apache-2.0**; 🔴 **`p801` read the root tree of BOTH addresses on the byte channel and NEITHER serves a licence blob.** 🔵 A competitor's table is not a licence. 🟢 The two addresses are genuinely different repositories (distinct `HEAD`s), so this correction moves the row to the `547★` original |
 | **GegoK12** | `gegok12/gegok12` | 🔴 **ADDRESS DOES NOT EXIST** (`git ls-remote` `rc=128`) | — | 🔴 **CLAIM REFUTED, and this is the sharpest one.** The vendor site states an **MIT** licence and that *"modification, rebranding, and resale are permitted"* — the most permissive claim in the entire education-ERP market. 🔴 **A GitHub-wide search for `gegok12` returns `13` results and none is this product.** There is no locatable source. 🟢 **An MIT claim with no repository is not a finding** |
 
 🟢 **The sentence to carry into an engagement.** In education ERP/SIS the permissive layer is not
@@ -391,7 +430,7 @@ architecture**, not a convenience.
 | Platform | Address | Grant, on the bytes | Deps | Region | Where an AI layer attaches |
 |---|---|---|---|---|---|
 | **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 GPL-3.0 · `35,147 B` · blob `94a9ed024d38` · 🔴 **brand: `TRADEMARK.txt` `3,367 B` — *"the GNU GPL does not include an implied right or licence to use Moodle's trade marks"* (`p797`)** | — | Global | The sector default — if a client has an LMS, assume this. 🔴 A plugin is a derivative work and must be GPL-3.0. 🟢 **Attach through LTI via Tsugi, or Moodle's web services API, and your code stays yours** |
-| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 · `35,136 B` · `d3a86602dcf7` | — | Global | MOOC-scale delivery; deploy with `overhangio/tutor`. 🔴 AGPL network clause — attach as an **XBlock across a service boundary**, never by linking |
+| **Open edX** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 AGPL-3.0 · `35,136 B` · blob `1eb391f38837` · affero×`16` | — | Global | MOOC-scale delivery; deploy with [`overhangio/tutor`](https://github.com/overhangio/tutor) (🔴 **AGPL-3.0 too** — `34,523 B`, byte-verified `p801`). 🔴 AGPL network clause — attach as an **XBlock across a service boundary**, never by linking. 🟢 **`p801`:** canonical address, grant re-read on bytes and unchanged |
 | **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 AGPL-3.0 · `34,520 B` · `1c9f0bb8013e` | — | North America | Dominant in US higher ed. 🟢 Strong LTI 1.3 support — the sanctioned attachment point |
 | **D2L Brightspace** | proprietary SaaS — [`anonymousonyx22/brightspace-d2l-mcp`](https://github.com/anonymousonyx22/brightspace-d2l-mcp) | 🟢 **MIT** · `1,200 B` · `a873478a6b4e` | — | North America | 🟢 **New this pass.** The third major North American LMS, and until now the only one with no attachment point in this base. The platform is proprietary; **the MCP server over it is MIT**, which is the whole point — attach, never replace |
 | **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** · `11,120 B` · `593c74e1c7a5` | — | North America | 🟢 **Permissive and mature.** When a client wants a customised LMS they can own outright, this is the one that does not force disclosure |

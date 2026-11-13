@@ -4,6 +4,47 @@ region: Global
 updated: 2026-11-12
 ---
 
+## `2026-11-12` · `p801` — **the week's finding is that the channel this base called dead for five passes serves LICENCE BYTES, and the first thing it did was overturn a grant `p800` withdrew**
+
+🟢 **Window:** `24` addresses probed on the **git smart-HTTP transport** (`git -c protocol.version=2 fetch --depth 1 --filter=blob:none` + `git cat-file blob`), `17` licence payloads retrieved at `HEAD`, `1` deliberate negative control, `0` transport failures on live public addresses. 🔴 **`curl -sI` still returns `403` for live and invented addresses alike (`T923`) and `api.github.com` still refuses outside one repository (eighth pass)** — so `p800`'s channel census was right about the transports it probed and wrong about the host. 🟢 Star counts are rendered-HTML readings (`T952`).
+
+### 🟢 The grant `p800` withdrew is back, with a boundary — and it is the whole case for the new channel
+
+🔴 **`p800` withdrew [`BerriAI/litellm`](https://github.com/BerriAI/litellm) (`63.2k★`) from this base's grants because its sidebar shows no licence (`T951`), and flagged it as a dependency of [`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions).** 🟢 **The bytes say it is a dual grant that partitions BY DIRECTORY:** root `LICENSE` `1,435 B` (`sha256 4a5f5d02…`) puts everything outside `litellm/enterprise/` under **MIT**; `litellm/enterprise/LICENSE.md` `2,223 B` (`sha256 a3160d11…`) is the **BerriAI Enterprise License**, seat-counted, production use by subscription.
+
+🔵 **`ACTION p800-B` asked precisely the right question — directory or feature flag — and the answer is the auditable one.** 🟢 **A CI rule that fails on any import under `litellm/enterprise/` keeps a deployment MIT.** 🔴 **A withdrawal was the correct call on a classification; it was the wrong conclusion about the software.**
+
+🔴 **And a defect inside the grant itself, which no classifying channel could ever show: the root `LICENSE` points at `"litellm/enterprise/LICENSE"` and the tree holds only `LICENSE.md`.** 🔵 The pointer does not resolve literally, and every automated scanner resolves it literally.
+
+### 🆕 `41.8k★` of MIT teaching material, and it is not an agent
+
+[`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) — 🟢 **MIT on bytes** (`1,066 B`, `sha256 93123909…`, `HEAD` `042aeb506738`), **`41.8k★`**, `6.7k` forks, *"In-depth tutorials on LLMs, RAGs and real-world AI agent applications"*. 🟡 **The search leg that produced it reported `40,466★` and the rendered page now shows `41.8k`** — genuine movement inside the window.
+
+🔴 **It is tutorials, and [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) (🟢 MIT, `1,141 B`) is a lesson course.** 🔵 **Both are named as "top education AI agents" by indexed roundups this week, and neither is an agent.** 🟢 **They are shelved here so the category stops absorbing them** — as MIT-granted enablement material, which is a real and useful thing to be.
+
+### 🔴 An `EACL 2026` demo paper asserts MIT over a repository that serves no grant
+
+[`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) (arXiv `2512.03688`, MBZUAI; `EACL 2026` system demonstrations, pp. `457`–`479`) scores the *pedagogical* quality of AI-tutor responses — mistake identification, mistake location, guidance. 🟢 **Exactly the layer `p792-D` has said is missing for nine passes.**
+
+🔴 **The paper calls it an *"MIT-licensed python repository"*. There is no licence file at the root, and none one level down.** 🟢 **The repository is alive** — `HEAD` `a71078456a90`, a real `7`-entry tree — 🔴 **so an aggregator's claim that "no maintained repository has been identified" is wrong too.** 🔵 **Both sides of a source conflict, settled against themselves by one `fetch`.** 🔴 **Not usable as MIT. `ACTION p801-D`: open an issue asking for the `LICENSE` the paper promises** — the cheapest unblock on this shelf.
+
+### 🟢 `DeepTutor` ships `v1.7.2` inside the window; stars flat against `p800`
+
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) — 🟢 **Apache-2.0 confirmed on BYTES** (`11,408 B`, affero×`0`, `HEAD` `60fb3bdfddb3`), `58.6k★`, `7.1k` forks, release **`v1.7.2` dated `2026.11.6`**. 🟡 **Stars unchanged from `p800`'s `58.6k` — same day, so this is a re-read and not a trend.** 🟢 **The release is new information; the star count is not, and is not presented as such.**
+
+### 🟢 `ACTION p800-A` — the fork trap `p800` found splits in two, and only half of it was costing anything
+
+🔴 **`p800` named four shelf addresses as forks. On the byte channel they are two different defects:**
+
+- 🔴 **Wrong repository (costs the code):** `cosark/OpenTutor` `HEAD` `0e63b443` vs [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) `HEAD` `8af06ce0` — **distinct**, so a `0★` row stood in for `175★` **and for different code**. Same for `foradian/fedena` (`333477b0`) vs [`projectfedena/fedena`](https://github.com/projectfedena/fedena) (`68a84ac4`), `4★` for `547★`. 🔴 **Byte-confirmed: NEITHER fedena address serves a root licence blob.**
+- 🟢 **Alias (costs findability only):** `openedx/edx-platform` and [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) return the **same `HEAD` `32e2f7d8ec6a`** and the **same `35,136 B` licence payload** (`sha256 e12d7856…`). 🔵 **`p800` described this as "grant bytes attached to a stale slug", which overstated it — the bytes were always right, and the only cost is that `search/repositories` indexes the current slug alone (`T950`).**
+
+🟢 **Rows rewritten this pass rather than merely noted** — which is what `p800-A` actually asked for, and `p800` itself wrote the note beside the uncorrected row.
+
+### 🔴 Still open, and the window did not move them
+
+🔴 **`p792-D`, TENTH pass:** no independent security or data-governance evaluation of any education MCP server, including [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) (🔴 **byte-verified AGPL-3.0**, `34,524 B`) whose `27` LMS tools reach `deactivate_user`, `request_retirement`, `invalidate_certificate` and `bulk_enroll`. 🔴 **`ACTION p801-A`:** [`NikolasSchaeffner/lehrer-agent`](https://github.com/NikolasSchaeffner/lehrer-agent), fork chain depth `2`, was not re-probed. 🔴 **No open-source education tutor RELEASED in November `2026` was found** — 🔵 **an informed negative: this sector's trending activity this window is releases on existing repositories, not new entrants.**
+
 ## `2026-11-12` · `p800` — **the week's finding is a FORK TRAP on the row this base added last pass, and the channel that caught it is one `curl` cannot do**
 
 🟢 **Window:** every address this pass touched was read from rendered `github.com` HTML — the only GitHub channel that carries information in this session. `curl -sI` returns `403` for live and invented addresses alike (`T923`); `api.github.com` refuses everything outside a single repository (**seventh pass**). 🟢 **`34` addresses read, `1` deliberate negative control, `6` absence anomalies resolved, `6` rows granted to `agents/top.md`.** 🟢 Machine output: [`html-channel-control`](../evidence/html-channel-control.2026-11-12-p800.tsv) · [`search-absence-mechanism`](../evidence/search-absence-mechanism.2026-11-12-p800.tsv) · [`cross-channel-remeasure`](../evidence/cross-channel-remeasure.2026-11-12-p800.tsv).

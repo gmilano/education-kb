@@ -4,6 +4,66 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p801` — `P801-1` … `P801-3`
+
+🟢 **Every grant named below is a PAYLOAD read at `HEAD` this pass (`T954`), with byte size and title line — not a classification.** 🔵 **That is the difference from `p800`, which had to tell you to re-read every grant before shipping.** 🔴 **Still re-read them at YOUR `HEAD`: a grant is a fact about a commit, and all three recipes pin commits for that reason.** 🔴 **Root licence files only — no dependency-tree audit, so vendored code under other terms is out of scope.**
+
+## `P801-1` — The sovereign permissive education stack (EMEA 🇪🇺 · first time this base can name one)
+**The problem it solves:** an EMEA public-sector or university client is told by Council text `ST-14902/26` to reduce dependence on non-European AI tools, and is simultaneously unable to accept the AGPL network clause that every LMS on this base's shelf carried until today.
+
+🟢 **Why this pattern exists now and not at `p800`:** `T960`. [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) is a **byte-verified Apache-2.0** LMS (`10,982 B`, title line `Apache License · Version 2.0, January 2004`, affero×`0`, `HEAD` `7a30c692b249`). 🔴 **Its GitHub sidebar names no licence, which is why classification-based shelves never surfaced it.**
+
+**The wiring:**
+1. **Platform** — [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT), 🟢 **Apache-2.0**, self-hosted in an EU/CH region. 🟢 **No source-disclosure trigger on network serving, and an explicit patent grant.**
+2. **Attachment layer** — [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi), 🟢 **Apache-2.0** (`10,273 B`, affero×`0`, `HEAD` `5f19a322c39b`). LTI across a service boundary.
+3. **Agent runtime** — [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework), 🟢 **MIT** (`1,141 B`, `HEAD` `c7e50ccd9037`). 🔴 **Not `microsoft/autogen`: ARCHIVED at `61.8k★`** (`p800`), and still named as a live option by indexed roundups.
+4. **Model gateway** — [`BerriAI/litellm`](https://github.com/BerriAI/litellm) at `HEAD` `f0021859a71f`, 🟢 **MIT outside `litellm/enterprise/`** (`T955`). 🔴 **Add a CI gate that FAILS the build if anything under `litellm/enterprise/` is imported or packaged** — that one check is what keeps this stack MIT, and it is checkable precisely because the grant partitions by directory and not by feature flag.
+5. **Learning measurement** — [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit), 🟢 **MIT** (`1,066 B`), for knowledge-tracing so the tutoring claim is testable.
+
+🟢 **Grant posture of the whole stack: Apache-2.0 + MIT, no copyleft, no network clause, EU-hostable.** 🔵 **That sentence is the deliverable** — it is the one thing no prior pass of this base could write.
+
+🔴 **Price the risk honestly:** `OpenOLAT` is `451★` with `165` forks. 🔴 **Thin community, Java, no release listed on the rendered page.** 🔵 **Budget for in-house platform capability, and say so in the proposal** — the licensing risk is gone, the continuity risk is not.
+🟡 **Plan to the EARLIER AI Act date (August `2026`), not the Digital Omnibus deferral to `2027-12-02`** — the obligations are identical work and the earlier date is compliant under both readings.
+🔵 **Effort: `10`–`12` weeks** to a governed pilot: platform deploy `3`, LTI agent boundary `3`, gateway + CI licence gate `1`, measurement `2`, AI Act deployer documentation `2`.
+
+## `P801-2` — The licence-truth gate (Global · a `3`-hour build that this pass proves pays for itself)
+**The problem it solves:** a studio starts an engagement on a dependency list whose licences came from GitHub's sidebar, a roundup article or a paper. 🔴 **All three were wrong somewhere in this pass.**
+
+🔴 **The three failure modes, each measured this pass, not hypothesised:**
+
+| Failure | Instance | What the bytes said |
+|---|---|---|
+| 🔴 **A roundup asserts a permissive grant** | `frappe/lms` named MIT by an indexed "best LMS `2026`" list | 🔴 **AGPL-3.0**, `33,893 B`, affero×`16` (`T959`) |
+| 🔴 **A PAPER asserts a grant its repo does not serve** | `kaushal0494/AITutor-EvalKit`, `EACL 2026` demo, *"MIT-licensed"* | 🔴 **No licence blob anywhere in the tree** (`T961`) |
+| 🔴 **A blank sidebar is read as "no licence"** | `litellm`, `OpenOLAT`, `fedena` — all three blank | 🟡 **dual-by-directory** · 🟢 **clean Apache-2.0** · 🔴 **genuinely nothing** (`T956`) |
+
+**The wiring** — the instrument is in this repo at [`ingest/grant-bytes-p801.sh`](../ingest/grant-bytes-p801.sh), and it is `40` lines:
+1. For each dependency: `git init` · `git remote add origin https://github.com/OWNER/NAME` · `git -c protocol.version=2 fetch --depth 1 --filter=blob:none origin HEAD`. 🟢 **Trees only — no checkout, no full clone.**
+2. Read the root tree, pick the licence blob **case-insensitively** (`LICENSE`, `LICENCE`, `COPYING`, with `.md`/`.txt`/`.rst`). 🔴 **Defect `D1` this pass: `awk BEGIN{IGNORECASE=1}` is a gawk extension and is IGNORED by some `awk`s, so a lowercase `license.txt` reports as "no licence". That nearly published `frappe/lms` as ungranted.** Fold case in `grep -iE`.
+3. `git cat-file blob <sha>` — 🟢 the partial clone fetches that ONE blob lazily.
+4. Classify on the **title line** plus the `Version` line. 🔴 **Defect `D2`: a whole-file grep for `GNU AFFERO` classifies GPL-3.0 as AGPL-3.0, because GPLv3 §`13` is titled *"Use with the GNU Affero General Public License"*.** 🟢 **Discriminator: affero×`3` = GPL-3.0, affero×`16` = AGPL-3.0.**
+5. Record size, raw `sha256`, and a normalised clause hash with copyright lines stripped. 🔴 **Never fingerprint a grant by SIZE across repositories** — one AGPL-3.0 appeared at `35,136` / `34,523` / `34,524` / `33,893 B` this pass.
+6. **Fail the build** on: `NO_ROOT_LICENCE_BLOB`, a copyleft family where the architecture assumes permissive, or a payload hash that CHANGED since the last pinned commit.
+
+🟢 **Run it in CI against pinned commits, so a grant that changes under you breaks a build instead of a contract.** 🔵 **Effort: `3` hours. It found a mislicensed LMS, an ungranted EACL toolkit and a dual-grant boundary in one afternoon.**
+
+## `P801-3` — Institution-issued agent authority on a copyleft LMS, with the grant boundary drawn (NA 🇺🇸 · Global)
+**The problem it solves:** the client runs Moodle or Open edX — 🔴 **copyleft, and the installed base is essentially all copyleft** — and wants agents doing registrarial and course work. 🔴 **`P800-1` established the authority model; `P801-3` adds the licensing boundary that makes it shippable.**
+
+🔵 **`P800-1` still governs the integrity framing and is not superseded:** `T953` — the LMS cannot distinguish an agent from a student, and Instructure marked a block-agent-logins request *"Will not consider"*. 🟢 **So integrity is assessment DESIGN, never detection.**
+
+**The wiring, with every boundary byte-justified:**
+1. **System of record** — [`moodle/moodle`](https://github.com/moodle/moodle) 🔴 **GPL-3.0** (`35,147 B`, affero×`3`) or [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) 🔴 **AGPL-3.0** (`35,136 B`, affero×`16`). 🟢 **Use the canonical Open edX slug** — `ACTION p800-A`; the old `openedx/edx-platform` is a transparent redirect but is invisible to `search/repositories` (`T950`).
+2. 🔴 **The boundary.** Moodle is GPL-3.0 — copyleft on **distribution**, 🟢 **no network clause**, so hosting a modified Moodle is not itself a disclosure trigger. Open edX is AGPL-3.0 — 🔴 **serving it over a network IS a trigger.** 🔵 **The two are not interchangeable and this base's shelves have repeatedly written them as if they were.**
+3. **Write path** — [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp), 🔴 **byte-verified AGPL-3.0** (`34,524 B`, affero×`16`, `HEAD` `1c5424da9de3`). 🔴 **Deploy as a separate network service. Never link it into client code**, or the client's code takes the AGPL with it.
+4. **Deployment** — [`overhangio/tutor`](https://github.com/overhangio/tutor), 🔴 **AGPL-3.0 too** (`34,523 B`). 🔵 **Byte-level aside that validates the method: `tutor` and `openedx-mcp` differ by exactly `1` raw byte and share the normalised clause hash `3e6500ef9d88…`.**
+5. **Agent side, kept permissive** — [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) **MIT** + [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) **Apache-2.0** across the LTI boundary. 🟢 **Permissive agent, copyleft platform, service boundary between them — the copyleft does not cross.**
+6. **Authority controls** — scopes, confirmation tokens and an audit trail per `P800-1`, because `openedx-mcp`'s `27` LMS tools reach `deactivate_user`, `request_retirement`, `invalidate_certificate` and `bulk_enroll`.
+7. **Evaluation** — 🔴 **you cannot take [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) as MIT** (`T961`: no grant served, whatever the paper says). 🟢 **Use [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) (MIT, `1,066 B`) for knowledge tracing, and file an issue asking `AITutor-EvalKit` for the `LICENSE` its paper promises** (`ACTION p801-D`).
+
+🔴 **`p792-D`, TENTH pass: no independent security or data-governance evaluation of ANY education MCP server exists.** 🔵 **With registrarial reach, that gap is the client's risk to accept explicitly, in writing, before go-live** — not a footnote.
+🔵 **Effort: `8`–`10` weeks.** 🟢 **In North America, lead with the dated statutory deadline** — NC Session Law `2026-41` requires district policies by `2027-06-30` — rather than with the agent capability.
+
 ## 🆕 `p800` — `P800-1` … `P800-3`
 
 🔵 **Each pattern names the repositories, the grant under which each may be used, and the wiring.** 🔴 **Every grant below is a GitHub sidebar CLASSIFICATION or a README assertion, not a byte-verified payload** — the clone channel was unavailable this pass (`T952`). 🔴 **Before any of these ships, re-read the grants on the clone channel.** 🔴 **`P800-1` supersedes nothing, but it REPLACES the detection framing that any assessment-integrity conversation defaults to, because `T953` shows the LMS cannot tell an agent from a student and its vendor has declined to try.**

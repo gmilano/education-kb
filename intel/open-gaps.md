@@ -4,6 +4,73 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p801` — **`3` of `p800`'s `4` actions discharged, `1` carried. 🔴 And the discharge of `p800-A` shows `p800` wrote the correction NOTE next to the row it did not correct — which is the propagation gap recurring one level up.**
+
+🟢 Machine output: [`propagation-diff`](../evidence/propagation-diff.2026-11-12-p801.tsv) · [`grant-bytes`](../evidence/grant-bytes.2026-11-12-p801.tsv) · [`channel-control`](../evidence/channel-control.2026-11-12-p801.tsv) · [`instrument-defects`](../evidence/instrument-defects.2026-11-12-p801.tsv).
+
+### 🟢 `p800-A` — DISCHARGED by correction, and the gap recurred inside the pass that declared it
+
+| | |
+|---|---|
+| Declared | **`2026-11-12`**, `p800`, [`intel/open-gaps.md`](open-gaps.md) — *"pick the `5` oldest settled address facts and diff each against every shelf that writes that address"* |
+| 🟢 **Disposition** | 🟢 **DISCHARGED.** `5` addresses swept across `6` shelves; `3` current shelf rows rewritten ([`repos/foundations.md`](../repos/foundations.md) Open edX · [`verticals/solutions.md`](../verticals/solutions.md) Open edX + Fedena · [`agents/top.md`](../agents/top.md) OpenTutor) |
+| 🔴 **The uncomfortable half** | 🔴 **`p800` wrote its correction NOTE at `repos/foundations.md:37` and `verticals/solutions.md:54` and left the DATA ROWS at `:481`, `:394` and `:373` writing the old address.** 🔵 **So the pass that found "ledgers advance faster than shelves" reproduced it: a note beside an uncorrected row is still a ledger entry, not a shelf correction** |
+| 🟢 **What the diff ALSO settled** | 🟢 **`p800`'s four "wrong addresses" are two different defects.** 🟢 **Alias** (`openedx/edx-platform` → `openedx/openedx-platform`): same `HEAD` `32e2f7d8ec6a`, same `35,136 B` payload — 🔵 **the grant bytes were never wrong, so `p800`'s *"grant bytes attached to a stale slug"* overstated the cost; it is findability only.** 🔴 **Wrong repository** (`cosark/OpenTutor`, `foradian/fedena`): distinct `HEAD`s, genuinely different trees |
+| 🔵 **Rule adopted, because `p800-A` specified none** | 🔵 **A CURRENT shelf row gets corrected; prose recording what a PAST pass measured is left exactly as it stands.** 🔴 Rewriting the second kind falsifies the history this base is built on — so `verticals/solutions.md:201` and `:274` still read the old slug **on purpose** |
+
+### 🟢 `p800-B` — DISCHARGED on bytes, and the answer is the auditable one
+
+| | |
+|---|---|
+| The question | *"Read `LICENSE` at `HEAD`, size it, hash the clause, and establish whether the OSS and commercial grants partition by DIRECTORY or by FEATURE FLAG"* |
+| 🟢 **Disposition** | 🟢 **DISCHARGED — `T955`. BY DIRECTORY.** Root `LICENSE` `1,435 B` (`sha256 4a5f5d02…`) → MIT outside `litellm/enterprise/`; `litellm/enterprise/LICENSE.md` `2,223 B` (`sha256 a3160d11…`) → BerriAI Enterprise License, seat-counted, production by subscription. `HEAD` `f0021859a71f` |
+| 🟢 **What it means commercially** | 🟢 **`p800-B` named the stake correctly: directory is auditable at build time, feature flag is not.** 🟢 **A CI rule failing on any import under `litellm/enterprise/` keeps a gateway deployment MIT** — so the Open edX AI path is fenced, not blocked |
+| 🔴 **And a defect in the grant itself** | 🔴 **The root grant points at `"litellm/enterprise/LICENSE"`; the tree holds only `LICENSE.md`.** 🔵 Immaterial to intent, material to any scanner that resolves the pointer literally |
+| 🔴 **Correction to `T951`** | 🔴 **The withdrawal was right about the classification and wrong about the software.** 🟢 Restored to [`repos/foundations.md`](../repos/foundations.md) **with its boundary stated** |
+
+### 🟢 `p800-C` — DISCHARGED, and it found the transport `p800` had not probed
+
+| | |
+|---|---|
+| The standing rule | *"When a host refuses, enumerate its transports and probe each separately, with a negative control"* |
+| 🟢 **Disposition** | 🟢 **DISCHARGED — `T954`.** `p800` enumerated three transports (`curl -sI`, `api.github.com`, rendered HTML) and concluded. 🟢 **The fourth — `git` smart-HTTP — serves `HEAD`, trees and blobs, and is the only one that carries LICENCE BYTES.** `17` payloads read |
+| 🔴 **The limit, declared** | 🔴 **Its negative control is weaker than the HTML channel's:** `FETCH_REFUSED` means *"does not resolve for this session"* and cannot separate a wrong address from a private or deleted one. 🔴 **`OpenEduCat` recorded UNRESOLVED on three spellings, not absent** |
+| 🔵 **Generalised** | 🔵 **A host does not have a reachability state. Each TRANSPORT does** — and an enumeration is only complete when it names the transports it did NOT probe |
+
+### 🟢 `p801-A` — DISCHARGED, and it completed the taxonomy
+
+🟢 **[`NikolasSchaeffner/lehrer-agent`](https://github.com/NikolasSchaeffner/lehrer-agent) and [`lehrer-tools/lehrer-agent`](https://github.com/lehrer-tools/lehrer-agent) return the IDENTICAL `HEAD` `3ddcfbbabc56`, and neither serves a root licence blob.** 🔵 **Declared carried mid-pass and then probed while verifying carried URLs — recorded here in the order it happened.**
+
+🟢 **With it, all `4` of `p800`'s "wrong addresses" are resolved, and they are THREE cost classes, not one:**
+
+| Class | `HEAD` comparison | What it costs | Instances |
+|---|---|---|---|
+| 🟢 **Alias** | identical — one repository, two names | 🟢 **findability only** (`search/repositories` indexes the current slug, `T950`) | `openedx/edx-platform` |
+| 🟡 **Fork, not diverged** | identical — two repositories, same content | 🟡 **attribution only** — stars and credit misplaced, code identical | `lehrer-agent` chain |
+| 🔴 **Fork, diverged** | DISTINCT | 🔴 **the code** — `0★` for `175★`, `4★` for `547★`, different trees | `OpenTutor` · `fedena` |
+
+🔵 **So *"this shelf address is a fork"* is not a defect report. It is a prompt to compare `HEAD`s** — and that comparison is one `fetch` per address on the channel `T954` opened.
+
+### 🟢 `p801-B` — resolve the `OpenEduCat` address on the discriminating channel
+
+🔴 **Three spellings failed to resolve on the byte channel** (`OpenEduCat/openeducat`, `openeducat/openeducat`, `openeducat/openeducat-erp`). 🔴 **Because that channel's refusal is ambiguous, this base must NOT record OpenEduCat as absent** — and [`verticals/solutions.md`](../verticals/solutions.md)'s existing `openeducat/openeducat_erp` **LGPL-3.0** row therefore stands on its earlier evidence, **unverified this pass**. 🟢 **Use the rendered channel: it returns `404` for an invented address and can discriminate.**
+
+### 🔴 `p801-C` — a hash on a shelf with no stated basis cannot be re-derived
+
+🔴 **The Open edX rows carried the provenance token `d3a86602dcf7` for five passes.** 🔴 **It matches nothing measurable this pass: not the git blob `sha` (`1eb391f38837`), not the raw `sha256` (`e12d7856…`), not the normalised clause hash (`71cb9b0b…`).** 🟢 **The `35,136 B` beside it re-measured exactly, so the row is sound and the token is orphaned.** 🔵 **Standing rule from here: every published hash states its basis — `blob`, `sha256_raw` or `sha256_norm` — or it is not published.** 🔵 Cost of ignoring this: a figure that looks like evidence and cannot be checked, which is worse than no figure.
+
+### 🔴 `p801-D` — ask `AITutor-EvalKit` for the licence its paper already promises
+
+🔴 **`T961`: [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) (`EACL 2026` demo, arXiv `2512.03688`, MBZUAI) resolves at `HEAD` `a71078456a90` with a real `7`-entry tree and serves NO licence anywhere in it, while the paper describes it as an *"MIT-licensed python repository"*.** 🔵 **It is the pedagogical-evaluation layer `p792-D` has wanted for nine passes, and it is unusable as published.** 🟢 **Cost: one issue. Highest value-per-effort item in this ledger.**
+
+### 🔴 `p801-E` — EMEA has regulation and no deployment figures, and that is now a declared gap
+
+🔴 **The EMEA regional leg returned a strong regulatory frame and NOT ONE reliable school- or university-level deployment rate** — no European equivalent of LATAM's `87%`/`26%` or the APAC survey series. 🔴 **So any adoption percentage quoted for Europe in a client deck this quarter is unsourced**, and EMEA sizing currently rests on regulation plus one national programme (Estonia's AI Leap, `154`/`156` schools). 🟢 **Find the European Commission / Eurostat digital-education survey series on a reachable channel.** 🔵 **Declared rather than smoothed over: an informed gap is information, and silence here would have looked exactly like coverage.**
+
+### 🔴 Carried, unchanged
+
+🔴 **`p792-D`, TENTH pass:** no independent security or data-governance evaluation of any education MCP server — and `T961` sharpens it, since the one evaluation toolkit that exists for tutoring quality serves no grant. 🔴 **`T906`** (government domains refuse at `CONNECT`) holds for a ninth pass, so **every regulatory instrument in [`intel/market.md`](market.md) is secondary-sourced and says so at the row.** 🔴 **`Gap 251`** (Opetushallitus, `~167` unread repositories) and **`Gap 252`** (EUPL misclassification) remain OPEN and untouched — 🔵 **`Gap 252` is now cheap to close, because `T954` reads payloads and EUPL misclassification is exactly a classification-versus-payload problem.** 🟡 **Brazil `PL 2.338/2023` narrows to *passed Senate Dec `2024`, still in the Chamber of Deputies*, still secondary.** 🔴 **`T953`** (the LMS cannot distinguish an agent from a student; Instructure declined to try) holds and continues to govern the integrity pitch.
+
 ## 🆕 `p800` — **`Gap 253` is CLOSED with a mechanism, and it was declared `134` passes ago. 🔴 Two of this pass's four findings are facts this base already held in its ledger and never propagated to its shelves.**
 
 🟢 Machine output: [`search-absence-mechanism`](../evidence/search-absence-mechanism.2026-11-12-p800.tsv) · [`html-channel-control`](../evidence/html-channel-control.2026-11-12-p800.tsv) · [`cross-channel-remeasure`](../evidence/cross-channel-remeasure.2026-11-12-p800.tsv).

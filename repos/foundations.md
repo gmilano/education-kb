@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p801` — **`5` rows added and `1` grant RESTORED. 🟢 The restoration is the important half: `litellm` is not ungranted, it is a dual grant that partitions BY DIRECTORY — which is the auditable case, and it discharges `ACTION p800-B`.**
+
+🟢 Machine output: [`grant-bytes`](../evidence/grant-bytes.2026-11-12-p801.tsv) · [`channel-control`](../evidence/channel-control.2026-11-12-p801.tsv) · [`instrument-defects`](../evidence/instrument-defects.2026-11-12-p801.tsv).
+
+🟢 **Scope statement, and it REVERSES `p800`'s:** every grant below is a **payload read at `HEAD`** on the git byte channel (`T954`), recorded with size, licence **title line** and `affero` count. 🔴 **Not a sidebar classification.** 🔴 **Still not a dependency-tree audit** — these are root licence files, so vendored third-party code under other terms is out of scope.
+
+### 🟢 `ACTION p800-B` DISCHARGED — `litellm`'s grant, restored with a boundary
+
+🔴 **`T951` withdrew [`BerriAI/litellm`](https://github.com/BerriAI/litellm) (`63.2k★`) from this shelf because its sidebar displays no licence, and it is a declared dependency of [`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions).** 🟢 **The bytes restore it, with the exact distinction `p800-B` asked for:**
+
+| Path at `HEAD` `f0021859a71f` | Bytes | `sha256_raw` | Grant |
+|---|---|---|---|
+| `LICENSE` | `1,435 B` | `4a5f5d029fb0fa64…` | 🟢 **MIT** (© 2023 Berri AI) — everything **outside** `litellm/enterprise/` |
+| `litellm/enterprise/LICENSE.md` | `2,223 B` | `a3160d1176cb5564…` | 🔴 **BerriAI Enterprise License** — production use requires a seat-counted subscription |
+
+🟢 **It partitions BY DIRECTORY, not by feature flag.** 🔵 **`p800-B` specified what turns on this and the answer is the good one: a build that excludes `litellm/enterprise/` is MIT, and that exclusion is checkable in CI.** 🔴 **A gateway deployment becomes a commercial-terms conversation only when an enterprise-directory feature is switched on** — so the Open edX AI path is not blocked, it is *fenced*.
+
+🔴 **One defect only bytes could reveal: the root grant points at `"litellm/enterprise/LICENSE"`, and the tree at that path holds only `LICENSE.md`.** 🔵 Immaterial to intent, material to any scanner that resolves the pointer literally.
+
+### 🟢 Rows added — `p801`
+
+| Repo | Grant (title line) | Bytes · `sha256` prefix | `HEAD` | Region | Why it is a foundation |
+|---|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · affero×`0` | `10,982 B` · `6dbc5b605ed0` | `7a30c692b249` | EMEA 🇨🇭 | 🆕 🟢 **The permissive LMS this base has said does not exist** (`T960`). Java, university/corporate, `451★`, `165` forks. 🔴 **Its sidebar names NO licence and only the payload settles it** — which is why five passes of classification-based shelves missed it. 🔴 `451★` is a staffing risk, not a licensing one |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** · affero×`16` | `33,893 B` (`license.txt`) · — | `45edbff87486` | APAC 🇮🇳 | 🆕 🔴 **Shelved as a REFUTATION** (`T959`): an indexed roundup names it MIT. Both channels say AGPL-3.0 — sidebar `AGPL-3.0`, payload title `GNU AFFERO GENERAL PUBLIC LICENSE`. `3.4k★`, `1.6k` forks, *"Easy to Use, 100% Open Source LMS"* |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** · affero×`0` | `15,214 B` · `d954e14e5c75` | `3fe91161f782` | Global | 🆕 **A school SIS with a served grant**, `654★`. 🔴 **GPL-2.0, not 3.0** — `Version 2, June 1991` on the title page. 🔵 Matters because GPL-2.0 has no AGPL-style network clause **and** no explicit patent grant |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 **AGPL-3.0** · affero×`16` | `34,523 B` (`LICENSE.txt`) · `0d96a4ff68ad` | `bca91d56136f` | Global | 🟢 **Grant upgraded from classification to payload.** The Open edX deployment path — 🔴 **AGPL like the platform it deploys**, which this shelf had not stated beside it |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 **Apache-2.0** · affero×`0` | `10,273 B` · `73ba74dfaa52` | `5f19a322c39b` | Global | 🟢 **Grant upgraded to payload.** LTI tool framework — 🟢 **the permissive way to attach an agent to a copyleft LMS across a service boundary** |
+
+### 🟢 The copyleft/permissive map, now closed on both sides (`T958`)
+
+| Grant | Title line | Version line | affero | Byte sizes measured this pass |
+|---|---|---|---|---|
+| 🔴 **AGPL-3.0** | `GNU AFFERO GENERAL PUBLIC LICENSE` | `Version 3, 19 November 2007` | **×`16`** | `35,136` (`openedx`) · `34,523` (`tutor`) · `34,524` (`openedx-mcp`) · `33,893` (`frappe/lms`) |
+| 🔴 **GPL-3.0** | `GNU GENERAL PUBLIC LICENSE` | `Version 3, 29 June 2007` | **×`3`** | `35,147` — [`moodle/moodle`](https://github.com/moodle/moodle) and [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms), **identical bytes and identical normalised hash** |
+| 🔴 **GPL-2.0** | `GNU GENERAL PUBLIC LICENSE` | `Version 2, June 1991` | ×`0` | `15,214` |
+| 🟢 **Apache-2.0** | `Apache License` | `Version 2.0, January 2004` | ×`0` | `11,408` · `10,982` · `10,273` |
+| 🟢 **MIT** | `MIT License` | — | ×`0` | `1,066` · `1,067` · `1,068` · `1,141` |
+
+🔴 **Do NOT use size as a grant fingerprint across repositories** — one AGPL-3.0 appears at four sizes above. 🟢 **Discriminate on the title line and the `affero` count; use size only to notice that two payloads are not the same file.** 🟢 `tutor` and `openedx-mcp` differ by exactly `1` raw byte and share a normalised clause hash (`3e6500ef9d88…`), which is the normalisation working.
+
+🔴 **Declared, because it was nearly published as a finding:** this pass's instrument misclassified `moodle` and `chamilo` as AGPL-3.0 on a whole-file grep, since **GPLv3 §`13` is titled *"Use with the GNU Affero General Public License"*** — the trap `T894` already recorded. 🟢 **It was caught by `verticals/solutions.md:274`, a settled shelf row, contradicting the instrument.** Both defects are published in [`instrument-defects`](../evidence/instrument-defects.2026-11-12-p801.tsv).
+
 ## 🆕 `p800` — **`4` rows added and `1` carried grant withdrawn. 🔴 The withdrawal is the important half: `litellm` displays NO licence, and it sits inside the Open edX AI path.**
 
 🟢 Machine output: [`cross-channel-remeasure`](../evidence/cross-channel-remeasure.2026-11-12-p800.tsv) · [`search-absence-mechanism`](../evidence/search-absence-mechanism.2026-11-12-p800.tsv).
@@ -478,7 +521,7 @@ MPL-2.0 and LGPL-2.1 at layer 2, both weak copyleft, neither triggered by the wa
 | Repo | Address | Grant, on the bytes | Region | What the grant costs you |
 |---|---|---|---|---|
 | **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** · `35,147 B` · `afbcc55fa1bd` | Global | The sector's default LMS. 🔴 Plugins are derivative works — a Moodle plugin must ship GPL-3.0. Keep proprietary logic behind LTI (`Tsugi`) or a web API |
-| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** · `35,136 B` · `d3a86602dcf7` | Global | 🔴 **AGPL: serving it over a network triggers source disclosure.** Community release line *Verawood* (June 2026, 22nd release) |
+| **Open edX** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 **AGPL-3.0** · `35,136 B` · blob `1eb391f38837` · affero×`16` | Global | 🔴 **AGPL: serving it over a network triggers source disclosure.** Community release line *Verawood* (June 2026, 22nd release). 🟢 **`p801` discharges `ACTION p800-A` on this row:** address moved to the canonical slug `p606-K` settled, and the grant re-read on the BYTE channel (`T954`) is UNCHANGED at `35,136 B`. 🔵 The old slug is a transparent rename redirect — same `HEAD` `32e2f7d8ec6a`, same licence blob — so the bytes were never wrong, only the address |
 | **Tutor** | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 **AGPL-3.0** · `34,523 B` · `bca91d56136f` | Global | The standard Open edX Docker distribution. Canonical owner is `overhangio`; `openedx/tutor` is DEAD |
 | **Open Response Assessment** | [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🔴 **AGPL-3.0** · `35,135 B` · `0d60a779e29d` | Global | Peer/self/staff assessment for Open edX. Correct address is `edx-ora2`; `openedx/openassessment` is DEAD |
 | **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0** · `34,520 B` · `1c9f0bb8013e` | North America | Clause-verified AGPL-3.0, settling a search-channel conflict that also claimed ECL-2.0. The dominant North American higher-ed LMS |

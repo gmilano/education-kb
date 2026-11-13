@@ -4,6 +4,55 @@ region: Global
 updated: 2026-11-12
 ---
 
+## `2026-11-12` · `p801` — **a fourth GitHub transport exists, it serves BLOBS, and the shelf caught the instrument before the instrument could publish**
+
+🟢 **Method, so the numbers can be re-derived:** `git init` → `git remote add origin https://github.com/OWNER/NAME` → `git -c protocol.version=2 fetch --depth 1 --filter=blob:none origin HEAD` → read the root tree → `git cat-file blob <sha>` (the partial clone fetches that one blob lazily). 🟢 **`24` addresses, `17` payloads, `1` deliberate negative control.** 🔴 **No full clones, no checkouts** — trees and one blob each. 🔴 **`curl` and `api.github.com` refuse exactly as `p800` recorded; the census was incomplete, not wrong.**
+
+### 🟢 The channel census, extended by one row — and the new row is the only one that carries bytes
+
+| Channel | Live address | Invented address | Grant bytes? |
+|---|---|---|---|
+| `curl -sI` | 🔴 `403` | 🔴 `403` | 🔴 no — `T923` |
+| `api.github.com` | 🔴 `403` | 🔴 `403` | 🔴 no — **eighth pass** |
+| rendered `github.com` HTML | 🟢 `200` + stars/licence/forks | 🟢 `404` | 🔴 no — `T952` |
+| 🟢 **`git` smart-HTTP** | 🟢 **`HEAD` + trees + blobs** | 🟢 **auth challenge** | 🟢 **YES — `T954`** |
+
+🔴 **The new channel's negative control is WEAKER than the HTML channel's, and this matters for how its results may be used:** a `FETCH_REFUSED` means *"does not resolve for this session"* and does **not** separate a wrong address from a private or deleted one. 🔴 **`OpenEduCat` failed on three spellings and is recorded UNRESOLVED, not absent.** 🟢 **`ACTION p801-B`: resolve it on the rendered channel, which returns `404` for an invented address and therefore can discriminate.**
+
+### 🟢 The grant map, measured on bytes — and `T894`'s discriminator now closed on both sides
+
+| Grant | Title line | Version line | affero | Sizes measured |
+|---|---|---|---|---|
+| 🔴 **AGPL-3.0** | `GNU AFFERO GENERAL PUBLIC LICENSE` | `Version 3, 19 November 2007` | **×`16`** | `35,136` · `34,524` · `34,523` · `33,893` |
+| 🔴 **GPL-3.0** | `GNU GENERAL PUBLIC LICENSE` | `Version 3, 29 June 2007` | **×`3`** | `35,147` ×`2`, **byte-identical** |
+| 🔴 **GPL-2.0** | `GNU GENERAL PUBLIC LICENSE` | `Version 2, June 1991` | ×`0` | `15,214` |
+| 🟢 **Apache-2.0** | `Apache License` | `Version 2.0, January 2004` | ×`0` | `11,408` · `10,982` · `10,273` |
+| 🟢 **MIT** | `MIT License` | — | ×`0` | `1,066` · `1,067` · `1,068` · `1,141` |
+
+🟢 **[`moodle/moodle`](https://github.com/moodle/moodle) and [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) serve byte-identical licence files** (`35,147 B`, same normalised hash) — 🟢 **`p799`'s chamilo reading reproduced exactly, on a channel it did not have.** 🟢 **[`overhangio/tutor`](https://github.com/overhangio/tutor) and [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) differ by exactly `1` raw byte and share the normalised clause hash `3e6500ef9d88…`** — the normalisation absorbing trailing whitespace, which is what it is for.
+
+🔴 **The shortcut this pass refutes with its own data: byte SIZE is not a grant fingerprint across repositories.** One AGPL-3.0 at four sizes above. 🟢 **Discriminate on the title line and the affero count; use size only to notice two payloads are not the same file.**
+
+### 🔴 Two instrument defects, both caught before publication, both published as evidence
+
+🔴 **`D1` — `awk BEGIN{IGNORECASE=1}` is a gawk extension and is IGNORED by this `awk`.** A lowercase `license.txt` therefore reported as `NO_ROOT_LICENCE_BLOB`. 🔴 **It would have published *"[`frappe/lms`](https://github.com/frappe/lms) serves no grant"*, which is false — it serves AGPL-3.0 at `33,893 B`.** 🟢 Caught by re-reading the root tree by hand. Fixed by folding case in `grep -iE`.
+
+🔴 **`D2` — a whole-file grep for `GNU AFFERO` classified [`moodle/moodle`](https://github.com/moodle/moodle) and [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) as AGPL-3.0, because GPLv3 §`13` is titled *"Use with the GNU Affero General Public License"* — the exact trap `T894` already records.** 🟢 **Caught by the SHELF: `verticals/solutions.md:274` already held chamilo as GPL-3.0 at `35,147 B` with affero×`3`, and contradicted the instrument.** 🔵 **First time in this base that a settled shelf row has caught a defect in a new instrument** — and the argument for writing byte figures onto shelves rather than only into ledgers.
+
+🟢 Both are published in [`instrument-defects`](../evidence/instrument-defects.2026-11-12-p801.tsv) with symptom, root cause, what they would have published, and fix. 🔴 **Both were in the same `40`-line script. A new channel's first output should be assumed defective until a settled fact contradicts it.**
+
+### 🟢 Repos added to the foundations shelf this window
+
+| Repo | Grant (bytes) | ★ | Why |
+|---|---|---|---|
+| 🟢 **[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)** | 🟢 **Apache-2.0** · `10,982 B` | `451` | 🟢 **The permissive LMS this base said did not exist** (`T960`). 🔴 **Blank sidebar — invisible to every classification-based sweep this base has run** |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** · `33,893 B` | `3.4k` | 🔴 **A roundup names it MIT. Both channels say AGPL-3.0** (`T959`) |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** · `15,214 B` | `654` | A school SIS with a served grant. 🔴 **GPL-2.0: no network clause, and no explicit patent grant** |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 **Apache-2.0** · `10,273 B` | — | 🟢 **The permissive LTI boundary** — how a permissive agent attaches to a copyleft LMS |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 **AGPL-3.0** · `34,523 B` | — | 🔴 **The Open edX deployment path is AGPL too**, which this shelf had not stated beside it |
+
+🔵 **Every one of these was already reachable last pass.** 🔴 **What was missing was not the addresses — it was a channel that reads the file the grant is written in.**
+
 ## `2026-11-12` · `p800` — **a channel this base had written off as dead is informative after all, and it is the one that closed `p799`'s absence anomaly**
 
 🟢 **Method, so the numbers can be re-derived:** rendered `github.com` HTML pages, read one address at a time. `34` addresses probed, `1` deliberate negative control, `0` transport failures. 🔴 **No `gh api` and no clone** — both refuse in this session. 🟢 Machine output: [`html-channel-control`](../evidence/html-channel-control.2026-11-12-p800.tsv) · [`search-absence-mechanism`](../evidence/search-absence-mechanism.2026-11-12-p800.tsv) · [`cross-channel-remeasure`](../evidence/cross-channel-remeasure.2026-11-12-p800.tsv).

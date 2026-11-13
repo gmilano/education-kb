@@ -1,0 +1,10 @@
+transport	probe_address	address_class	observed	grant_bytes_yielded	note
+curl -sI https://github.com/	BerriAI/litellm	live	403 Forbidden	no	T923 reproduced, eighth pass
+curl -sI https://github.com/	gmilano/zzz-not-a-real-repo-p801	invented	403 Forbidden	no	does not discriminate: same code for live and invented
+api.github.com	any outside one repository	live	403 Forbidden	no	eighth pass, session-scoped
+github.com rendered HTML	OpenOLAT/OpenOLAT	live	200 + stars/licence/forks/description	no	T952 reproduced
+github.com rendered HTML	invented address	invented	404	no	T952 negative control reproduced
+git fetch --depth 1 --filter=blob:none	BerriAI/litellm	live	FETCH_HEAD f0021859a71f2178abe51b540762148c8823b41c	YES	T954 NEW: trees and blobs served
+git fetch --depth 1 --filter=blob:none	gmilano/zzz-invented-negative-control-p801	invented	fatal: could not read Username (auth challenge)	no	discriminates, but cannot separate wrong-address from private/deleted
+git fetch --depth 1 --filter=blob:none	OpenEduCat/openeducat	unresolved	FETCH_REFUSED	no	three spellings tried; recorded unresolved, NOT absent
+git ls-remote	BerriAI/litellm	live	f0021859a71f2178abe51b540762148c8823b41c HEAD	no	refs only

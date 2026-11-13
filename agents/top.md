@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p801` — **Every grant on this table is now a PAYLOAD, not a classification. 🟢 The byte channel `p800` declared unavailable is open (`T954`), and `17` licence files were read on it at `HEAD`. 🔴 One addition serves no grant at all, and its paper says MIT.**
+
+🟢 Machine output: [`grant-bytes`](../evidence/grant-bytes.2026-11-12-p801.tsv) · [`channel-control`](../evidence/channel-control.2026-11-12-p801.tsv) · [`propagation-diff`](../evidence/propagation-diff.2026-11-12-p801.tsv).
+
+🟢 **Scope statement, and it is the opposite of `p800`'s:** every grant in the table below was read as **bytes** — `git -c protocol.version=2 fetch --depth 1 --filter=blob:none` then `git cat-file blob` — and is recorded with its payload size, its licence **title line** and its `affero` count. 🔴 **Star counts remain RENDERED figures** from the HTML channel (`T952`), not API values. 🔴 **Licence family is the title line of the root licence payload; it is not a scan of headers inside source files**, so a repository that vendors third-party code under other terms will not show that here.
+
+### 🟢 Byte-verified grants — `p801`
+
+| Agent / repo | Grant (title line of the payload) | Bytes · `sha256` prefix | `HEAD` | ★ (rendered) | Why it is on this shelf |
+|---|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** · affero×`0` | `11,408 B` · `cd2f54e1e506` | `60fb3bdfddb3` | `58.6k` | 🟢 **The top of this shelf, and its grant is now a payload.** Release **`v1.7.2`**, dated `2026.11.6` on the rendered page — 🟢 **new since `p800`**. Lifelong personalised tutoring; three-layer memory, mastery-gated learning paths |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | 🟢 **MIT** · affero×`0` | `1,066 B` · `93123909818c` | `042aeb506738` | 🟢 **`41.8k`** | 🆕 **NEW.** *"In-depth tutorials on LLMs, RAGs and real-world AI agent applications"*, `6.7k` forks. 🟢 **The teaching-material layer, MIT on bytes** — reusable as engagement enablement without a grant conversation. 🔴 Tutorials, not a deployable agent: do not shelve it as one |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT** · affero×`0` | `1,141 B` · `c2cfccb812fe` | `4bcf574c06d3` | — | 🆕 **NEW.** The lesson course the indexed roundups name as an "education AI agent" — 🔵 **it is a CURRICULUM, and this row exists so the shelf stops mistaking it for a tutor.** 🟢 Byte-identical MIT to `microsoft/agent-framework` (same `1,141 B`, same `sha256`) |
+| [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) | 🟢 **MIT** · affero×`0` | `1,141 B` · `c2cfccb812fe` | `c7e50ccd9037` | `14.7k`¹ | 🟢 **Grant upgraded from classification to payload.** The successor to the ARCHIVED `microsoft/autogen` (`61.8k★`, `p800`) |
+| [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | 🟢 **MIT** · affero×`0` | `1,067 B` · — | `HEAD` read | `492`¹ | 🟢 **Grant upgraded to payload.** The `EACL 2026` fork `p800` resolved — the fork holds the traction, the upstream the provenance |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** · affero×`0` | `1,068 B` · `5352b4967982` | `8af06ce07605` | `175`¹ | 🟢 **`ACTION p800-A` discharged on this row: the shelf's `cosark/OpenTutor` is a `0★` FORK and this is the original.** 🔴 **Distinct `HEAD`s (`0e63b443` vs `8af06ce0`) — genuinely different repositories, not an alias**, so the old row pointed at different code |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** · affero×`0` | `1,066 B` · `f5f955194636` | `ccbaf37b07e3` | — | 🟢 **Grant upgraded to payload.** Knowledge-tracing measurement layer — the thing that makes a tutoring claim testable |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause** · affero×`0` | `1,531 B` · `57c341d09920` | `196c547291da` | — | 🟢 **Grant upgraded to payload** and `p800`'s BSD-3 classification CONFIRMED on bytes |
+| [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | 🔴 **AGPL-3.0** · affero×`16` | `34,524 B` · `8d56b405468a` | `1c5424da9de3` | `102`¹ | 🔴 **The agent→LMS WRITE path, and its grant is now byte-certain AGPL.** `27` LMS + `8` CMS tools reaching `deactivate_user`, `request_retirement`, `invalidate_certificate`, `bulk_enroll`. 🔴 **`p792-D` still applies: no independent security evaluation exists, TENTH pass** |
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | 🔴 **NO GRANT SERVED** — no licence blob at the root **or one level down** | — | `a71078456a90` | — | 🆕 **NEW, and shelved as a HAZARD.** `EACL 2026` demo (arXiv `2512.03688`, MBZUAI); scores *pedagogical* quality of tutor responses on four dimensions. 🔴 **The paper says "MIT-licensed python repository"; the repository serves nothing** (`T961`). 🔵 The repo IS live — `7`-entry tree — so the aggregator claiming no repository exists is also wrong. 🔴 **Do not build on this as MIT** |
+
+¹ star figure carried from `p800`'s rendered reading, not re-measured this pass.
+
+### 🔴 `ACTION p800-A` — discharged, and the shelf's four "wrong addresses" split into two different problems
+
+🔴 **`p800` named four shelf addresses as forks. `p801` probed them on the byte channel and they are not one defect, they are two:**
+
+| | 🟢 **Alias** — costs FINDABILITY | 🟡 **Fork, NOT diverged** — costs ATTRIBUTION | 🔴 **Fork, DIVERGED** — costs the CODE |
+|---|---|---|---|
+| **Addresses** | `openedx/edx-platform` → `openedx/openedx-platform` | `NikolasSchaeffner/lehrer-agent` → `lehrer-tools/lehrer-agent` | `cosark/OpenTutor` → `zijinz456/OpenTutor` · `foradian/fedena` → `projectfedena/fedena` |
+| **`HEAD`** | 🟢 **IDENTICAL** (`32e2f7d8ec6a`) — one repository behind two names | 🟢 **IDENTICAL** (`3ddcfbbabc56`) — two repositories, same content | 🔴 **DISTINCT** (`0e63b443`≠`8af06ce0` · `333477b0`≠`68a84ac4`) |
+| **Licence payload** | 🟢 **IDENTICAL** — `35,136 B`, `sha256 e12d7856…` | 🔴 **NEITHER serves a root licence blob** | 🟡 same MIT text on `OpenTutor`; 🔴 **NO grant on either `fedena`** |
+| **So the defect is** | 🟢 **the address, not the data** — `p800`'s *"grant bytes attached to a stale slug"* overstated it; the bytes were right all along, and a clone follows the redirect while `search/repositories` does not (`T950`) | 🟡 **provenance only** — the code is identical, so stars and credit are misattributed and nothing else is | 🔴 **the data** — a `0★` row stood in for `175★`, a `4★` row for `547★`, pointing at different trees |
+
+🔵 **The taxonomy is the finding, not the three instances: "this address is a fork" does NOT tell you whether anything is wrong.** 🟢 **Compare `HEAD`s. Identical means the cost is attribution; distinct means the cost is the code you shipped.** 🔴 **`p800` reported four forks as one defect class and `p801` measured three different costs.**
+
+🟢 **Rows rewritten this pass:** [`repos/foundations.md`](../repos/foundations.md) Open edX · [`verticals/solutions.md`](../verticals/solutions.md) Open edX and Fedena · this table's `OpenTutor` row.
+
+🔵 **And the rule `p801` adopts for the rest of the discharge, because `p800-A` did not state one: a CURRENT shelf row gets corrected; prose that records what a PAST pass measured is left exactly as it stands.** 🔴 **Rewriting the second kind would falsify the history this base is built on** — so `verticals/solutions.md:201` and `:274` still read `openedx/edx-platform` **on purpose**, as the record of what those passes measured.
+
+🟢 **`ACTION p801-A` DISCHARGED before publication:** [`NikolasSchaeffner/lehrer-agent`](https://github.com/NikolasSchaeffner/lehrer-agent) and [`lehrer-tools/lehrer-agent`](https://github.com/lehrer-tools/lehrer-agent) return the **identical `HEAD` `3ddcfbbabc56`** on the byte channel, and 🔴 **neither serves a root licence blob.** 🟢 **This independently reproduces what [`agents/top.md`](top.md) already recorded** — and it is the case that produced the middle column above: a fork that has not diverged. 🔵 **Fourth of `p800`'s four addresses resolved.**
+
+🔴 **`ACTION p801-C` — a hash on this base's shelves with no stated basis cannot be re-derived.** The Open edX rows carried the provenance token `d3a86602dcf7` for five passes. 🔴 **It is not the git blob `sha` (`1eb391f38837`), not the raw `sha256` (`e12d7856…`) and not the normalised clause hash (`71cb9b0b…`).** 🟢 **The `35,136 B` size it sits beside re-measured exactly**, so the row is sound and the token is orphaned. 🔵 **Every hash published from here states its basis — `blob`, `sha256_raw` or `sha256_norm` — or it does not get published.**
+
 ## 🆕 `p800` — **Six addresses this base recorded as "absent from `search/repositories` but clonable" are now EXPLAINED, and the explanation is not a channel defect. 🔴 `4` of the `6` are FORKS and `2` are RENAME REDIRECTS — and because they are forks, four shelf addresses point at the wrong repository.**
 
 🟢 **A channel that `curl` and `gh api` cannot replace in this session was introduced and controlled: the rendered `github.com` HTML page.** `curl -sI` returns `403` for live and invented addresses alike (`T923`, carried), and `api.github.com` refuses everything outside one repository (`403`, **seventh pass**). 🟢 **The HTML channel discriminates: `404` for an invented address, a full page with stars, licence, release and fork-state for a live one.** The negative control is published, not asserted.

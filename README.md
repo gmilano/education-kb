@@ -6,6 +6,40 @@ updated: 2026-11-12
 
 # Globant AI Studios — Education KB
 
+**Pass `p801` · `2026-11-12`** — `p800` attached one sentence to every licence it published: *"no grant
+bytes, no blob shas, no dependency trees this pass."* 🟢 **`p801` removes it. A fourth GitHub transport
+exists — `git` smart-HTTP — and it serves `HEAD`, trees and blobs while `curl -sI` returns `403` and
+`api.github.com` refuses for an eighth pass.** 🟢 **`17` licence payloads were read at `HEAD`, with size,
+raw `sha256`, normalised clause hash and the licence TITLE line.** 🔴 **The first thing the channel did
+was overturn the grant `p800` withdrew: [`BerriAI/litellm`](https://github.com/BerriAI/litellm) is not
+ungranted, it is a dual grant that partitions BY DIRECTORY — which is the auditable case `ACTION p800-B`
+asked about, so a CI rule on `litellm/enterprise/` keeps a deployment MIT.** 🟢 **A permissive LMS also
+turns out to exist** — [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT), Apache-2.0 on bytes — and five
+passes of classification-based shelves missed it **because its licence sidebar is blank.** 🔴 **Two
+instrument defects were produced and both were caught before publication; one was caught by a settled
+shelf row contradicting the instrument, which has not happened in this base before.** The two trending
+ledgers and the gap ledger are appended to, never rewritten.
+
+## What this pass established
+
+| | |
+|---|---|
+| 🟢 **`T954`: the clone channel is OPEN, and `p800` generalised a refusal it had not probed** | 🟢 **`git -c protocol.version=2 fetch --depth 1 --filter=blob:none` + `git cat-file blob` yields LICENCE BYTES for arbitrary public repositories. `24` addresses, `17` payloads, `1` negative control.** 🔴 **Its control is weaker than the HTML channel's: a refusal cannot separate a wrong address from a private one** |
+| 🟢 **`ACTION p800-B` DISCHARGED, and the answer is the good one** | 🟢 **`T955`: `litellm` partitions BY DIRECTORY, not by feature flag.** Root `LICENSE` `1,435 B` → MIT outside `litellm/enterprise/`; `enterprise/LICENSE.md` `2,223 B` → seat-counted commercial. 🔴 **The root grant points at `enterprise/LICENSE`; the tree holds only `LICENSE.md`** |
+| 🔴 **`T956`: an EMPTY licence sidebar carries no information in either direction** | 🔴 **Three different realities behind one blank field this pass: a dual MIT/commercial partition (`litellm`), a clean Apache-2.0 (`OpenOLAT`), and no grant at all (`fedena`, both addresses).** 🔴 This base has now twice drawn a conclusion from that field |
+| 🟢 **`T957`: where the classifier SPEAKS, it agrees with the bytes — `17` of `17`** | 🟢 **The reassuring half, and worth as much as the warning: no divergence was reproduced on any populated field.** 🔵 **GitHub's classification is reliable when non-empty and worthless when empty** — a far cheaper problem than general unreliability |
+| 🟢 **`T958`: `T894`'s discriminator closes on BOTH sides** | 🟢 **GPL-3.0 = affero×`3`, `35,147 B` (`moodle` and `chamilo`, byte-identical). AGPL-3.0 = affero×`16`, `35,136 B` (`openedx`).** 🔴 **But size is NOT a fingerprint across repos — one AGPL-3.0 appeared at `35,136`/`34,523`/`34,524`/`33,893 B`** |
+| 🟢 **`T960`: a PERMISSIVE LMS exists, so the copyleft/permissive dichotomy gains an exception** | 🟢 **[`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) Apache-2.0, `10,982 B`, affero×`0`, `451★`.** 🔵 **"There is no permissive LMS to build on" is now FALSE** — the single most useful row for a client who cannot accept the AGPL network clause. 🔴 Price `451★` as a staffing risk |
+| 🔴 **`T959`: the one MIT LMS the search channel offered is AGPL-3.0 on both channels** | 🔴 **[`frappe/lms`](https://github.com/frappe/lms) — an indexed "best LMS `2026`" roundup calls it MIT. Payload: `GNU AFFERO GENERAL PUBLIC LICENSE`, `33,893 B`, affero×`16`. Sidebar: `AGPL-3.0`** |
+| 🔴 **`T961`: an `EACL 2026` paper asserts MIT over a repository that serves nothing** | 🔴 **[`AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) resolves at `HEAD` `a71078456a90` with a real `7`-entry tree and NO licence anywhere.** 🔴 The paper says *"MIT-licensed"*; an aggregator says no repository exists. **Both wrong.** 🟢 `ACTION p801-D`: one issue |
+| 🟢 **`ACTION p800-A` DISCHARGED — and the propagation gap recurred inside `p800` itself** | 🔴 **`p800` wrote its correction NOTE beside the rows it did not correct.** 🟢 **`p801` rewrote `3` current shelf rows.** 🟢 **All `4` of `p800`'s "wrong addresses" resolved, into THREE cost classes: an ALIAS (`openedx`, same `HEAD` and payload — findability only), a fork that has NOT diverged (`lehrer-agent`, identical `HEAD` `3ddcfbbabc56` — attribution only), and forks that HAVE (`OpenTutor`, `fedena` — the code). 🔵 "It is a fork" is not a defect report; compare `HEAD`s** |
+| 🔴 **The pass's own instrument produced `2` defects, both caught, both published** | 🔴 **`D1`: `awk IGNORECASE` is a gawk extension — a lowercase `license.txt` nearly published `frappe/lms` as ungranted. `D2`: a whole-file grep for `GNU AFFERO` classified `moodle` as AGPL, because GPLv3 §`13` names the Affero licence — `T894`'s own trap.** 🟢 **`D2` was caught by a settled SHELF ROW contradicting the instrument — a first for this base** |
+| 🟢 **All four regional legs ran; EMEA's gap is DECLARED, not smoothed** | 🟢 **NA: NC Session Law `2026-41` (district policies by `2027-06-30`) — a dated procurement event. APAC: Vietnam's AI law in force `2026-03-01` with an `18`-month EDUCATION transition. LATAM: UNESCO Observatory launched April `2026`; `716` instruments across `23` countries.** 🔴 **EMEA returned regulation and NOT ONE deployment figure — `ACTION p801-E`** |
+| 🔴 **Two regional date/status conflicts declared and left OPEN** | 🔴 **EU AI Act education high-risk: August `2026` vs `2027-12-02` under the Digital Omnibus (Reg (EU) `2026/1744`).** 🟢 **Plan to the earlier date — identical work, compliant under both.** 🔴 **NA enacted-bill counts disagree across trackers. `T906` holds: every instrument is secondary-sourced and says so at its row** |
+| 🟢 **`3` compose patterns, every grant byte-justified** | 🟢 **`P801-1` sovereign permissive EMEA stack (`OpenOLAT`+`tsugi`+`agent-framework`+MIT-fenced `litellm`, `10`–`12` wk) · `P801-2` the licence-truth gate (`3` hours, and it caught three real failures this pass) · `P801-3` institution-issued agent authority with the copyleft boundary drawn (`8`–`10` wk)** |
+
+## `p800` · `2026-11-12` — the preceding pass
+
 **Pass `p800` · `2026-11-12`** — `p799` left `6` of `170` addresses unexplained: absent from
 `search/repositories`, yet cloning and serving refs. 🟢 **`p800` closes it with a mechanism rather than
 a screen, and the mechanism is not a channel defect — `4` of the `6` are FORKS and `2` are RENAME

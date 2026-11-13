@@ -4,6 +4,104 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🆕 `p801` — **`T954`–`T961`. 🟢 The channel `p800` declared unavailable is OPEN: `git` smart-HTTP serves LICENCE BYTES for arbitrary public repositories, and `17` payloads were read on it. 🔴 Which makes the headline finding a withdrawal that is really a correction — `litellm`'s grant partitions by DIRECTORY, so it is auditable at build time after all.**
+
+🟢 Machine output: [`grant-bytes`](../evidence/grant-bytes.2026-11-12-p801.tsv) · [`channel-control`](../evidence/channel-control.2026-11-12-p801.tsv) · [`propagation-diff`](../evidence/propagation-diff.2026-11-12-p801.tsv) · [`instrument-defects`](../evidence/instrument-defects.2026-11-12-p801.tsv).
+
+🔴 **Declared up front: this pass's instrument produced TWO defects, both caught before publication, both in the same `40`-line script, and one of them was the trap `T894` already recorded.** They are published as evidence, not buried — see `T958` and the defect ledger.
+
+### 🟢 `T954` — the clone channel is OPEN, and `p800` generalised a refusal it had not probed
+
+🔴 **Five passes recorded GitHub's byte channel as unavailable; `p800` restated it (*"no grant bytes, no blob shas, no dependency trees this pass"*) and attached that limit to every licence it published.** 🟢 **It is not true of the `git` transport.** Measured this pass, same session, same proxy:
+
+| Transport | Live address | Invented address | Grant bytes? |
+|---|---|---|---|
+| `curl -sI https://github.com/…` | 🔴 `403` | 🔴 `403` | 🔴 no — `T923` holds |
+| `api.github.com` | 🔴 `403` outside one repository | 🔴 `403` | 🔴 no — **eighth pass** |
+| rendered `github.com` HTML | 🟢 `200` + stars/licence/release | 🟢 `404` | 🔴 no — `T952` holds |
+| 🟢 **`git -c protocol.version=2 fetch --depth 1 --filter=blob:none` + `git cat-file blob`** | 🟢 **resolves, `HEAD` + trees + blobs** | 🟢 **auth challenge, never a silent empty success** | 🟢 **YES** |
+
+🟢 **`24` addresses probed, `17` licence payloads retrieved with size, raw `sha256` and normalised clause hash.** 🔴 **The negative control discriminates but it is WEAKER than the HTML channel's: a `FETCH_REFUSED` means *"does not resolve for this session"*, and it does NOT separate a wrong address from a private or deleted one.** 🟢 `OpenEduCat`'s address failed on three spellings this pass and is recorded as unresolved, **not** as absent.
+
+🔵 **The rule, and it generalises `ACTION p800-C` rather than restating it: a host does not have a reachability state. Each TRANSPORT does.** 🔴 **`p800` enumerated three transports and concluded; the fourth was the one that carried the payload.**
+
+### 🟢 `T955` — `litellm` partitions by DIRECTORY, and that is the answer `ACTION p800-B` asked for
+
+🟢 **`ACTION p800-B` DISCHARGED on bytes.** [`BerriAI/litellm`](https://github.com/BerriAI/litellm) at `HEAD` `f0021859a71f`:
+
+| | Bytes | `sha256` | Grant |
+|---|---|---|---|
+| root `LICENSE` | `1,435 B` | `4a5f5d029fb0fa6410cc3d416093d1f41571f0911f04b518088a54ea335bab30` | 🟢 **MIT** (Copyright © 2023 Berri AI) for everything **outside** `litellm/enterprise/` |
+| `litellm/enterprise/LICENSE.md` | `2,223 B` | `a3160d1176cb556447255ca8652855486d681f8025550291828796a439e1b2f9` | 🔴 **BerriAI Enterprise License** — production use requires a seat-counted subscription |
+
+🟢 **It partitions BY DIRECTORY, which is the auditable case `p800-B` named: a build can exclude `litellm/enterprise/` and the remainder is MIT.** 🔴 **So `T951`'s withdrawal was right to fire and wrong in its implication — `litellm` is not "no licence", it is a dual grant whose boundary is a path.** 🟢 **A gateway deployment is therefore NOT automatically a commercial-terms conversation; it becomes one the moment an enterprise-directory feature is built in.**
+
+🔴 **And a defect in the grant itself, which only bytes could show: the root `LICENSE` points at `"litellm/enterprise/LICENSE"`, and the tree at that path holds only `LICENSE.md`.** 🔵 **The referenced filename does not exist.** 🟢 Immaterial to intent, material to an automated licence audit that resolves the pointer literally — and every scanner does.
+
+### 🔴 `T956` — an EMPTY licence sidebar carries no information at all, and this pass found three different realities behind it
+
+🔴 **`T951` read a blank sidebar as a withdrawal. That was one reading of a field that supports at least three:**
+
+| Blank sidebar | What the BYTES say |
+|---|---|
+| [`BerriAI/litellm`](https://github.com/BerriAI/litellm) | 🟡 **A dual MIT / commercial grant partitioned by directory** (`T955`) |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) `451★` | 🟢 **A clean Apache-2.0**, `10,982 B`, title line `Apache License · Version 2.0, January 2004`, affero×`0` |
+| [`foradian/fedena`](https://github.com/foradian/fedena) · [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | 🔴 **No grant at all** — no licence blob at the root of EITHER address |
+
+🔵 **So a blank sidebar is not evidence of anything, in either direction.** 🔴 **It is the one field on which this base has twice drawn a conclusion.** 🟢 **The remedy is cheap now that `T954` exists: read the payload.**
+
+### 🟢 `T957` — where the classifier SPEAKS it agrees with the bytes, on `17` of `17`
+
+🟢 **The reassuring half of `T956`, and it is worth as much as the warning: on every address where GitHub's sidebar named a licence, the payload's title line agreed with it — `17` of `17`, across MIT, Apache-2.0, AGPL-3.0, GPL-3.0, GPL-2.0 and BSD-3-Clause.** Two-channel agreement was re-confirmed by name on [`frappe/lms`](https://github.com/frappe/lms) (AGPL-3.0 · `3.4k★`), [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) (MIT · `41.8k★`), [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (Apache-2.0 · `58.6k★`) and [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) (GPL-2.0 · `654★`).
+
+🔵 **`T956` and `T957` together give the operating rule: GitHub's classification is reliable when it is non-empty and worthless when it is empty.** 🔴 **`T937` showed classification can diverge from payload; this pass did not reproduce a single divergence where the field was populated.** 🟢 So the cost of the classifier is concentrated entirely in its silences, which is a much cheaper problem than a general unreliability.
+
+### 🟢 `T958` — `T894`'s discriminator closes on BOTH sides, and byte size is NOT a grant fingerprint
+
+🟢 **The GPL-vs-AGPL discriminator this base has carried on the GPL side only is now measured on both:**
+
+| Grant | Title line | Version line | affero count | Bytes in this corpus |
+|---|---|---|---|---|
+| 🔴 **GPL-3.0** | `GNU GENERAL PUBLIC LICENSE` | `Version 3, 29 June 2007` | 🟢 **×`3`** | `35,147 B` — [`moodle/moodle`](https://github.com/moodle/moodle) and [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms), **identical bytes AND identical normalised hash** |
+| 🔴 **AGPL-3.0** | `GNU AFFERO GENERAL PUBLIC LICENSE` | `Version 3, 19 November 2007` | 🔴 **×`16`** | `35,136 B` — [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) |
+
+🟢 **affero×`3` vs affero×`16` is a hard, reproducible separator, and `p799`'s `moodle`/`chamilo` reading is independently reproduced here to the byte on a channel it did not have.**
+
+🔴 **But the tempting shortcut is wrong, and this pass refutes it with its own data: byte SIZE does not identify a grant across repositories.** The same AGPL-3.0 appears at `35,136 B` (`openedx`), `34,523 B` ([`overhangio/tutor`](https://github.com/overhangio/tutor)), `34,524 B` ([`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp)) and `33,893 B` ([`frappe/lms`](https://github.com/frappe/lms)) — four sizes, one grant, reflow and trailing-whitespace variants. 🟢 **`tutor` and `openedx-mcp` differ by exactly `1` raw byte and share a normalised clause hash (`3e6500ef9d88…`), which is the normalisation doing its job.** 🔵 **Discriminate on the title line and the affero count. Use size only to notice that two payloads are NOT the same file.**
+
+🔴 **This is also where defect `D2` came from, and it is `T894`'s own trap: a whole-file grep for `"GNU AFFERO"` classifies GPL-3.0 as AGPL-3.0, because GPLv3 §`13` is titled *"Use with the GNU Affero General Public License"*.** 🟢 Caught because `moodle` and `chamilo` contradicted a settled shelf row — **the shelf caught the instrument, which is the first time that has happened in this base.**
+
+### 🔴 `T959` — the one MIT LMS the search channel offered is AGPL-3.0, on both channels
+
+🔴 **An indexed "best open-source LMS `2026`" roundup names [`frappe/lms`](https://github.com/frappe/lms) as MIT-licensed. It is AGPL-3.0.** 🟢 Byte channel: `license.txt`, `33,893 B`, title line `GNU AFFERO GENERAL PUBLIC LICENSE`, affero×`16`. 🟢 Rendered channel: sidebar `AGPL-3.0 license`, `3.4k★`, `1.6k` forks, description *"Easy to Use, 100% Open Source Learning Management System"*. 🔵 **Two independent channels, one answer, against the secondary source.**
+
+🔴 **The consequence for the shelf is the whole point: the search leg for a permissively licensed LMS returned exactly one candidate and it does not survive contact with the payload.** 🟢 **`T960` is where that search actually succeeds.**
+
+### 🟢 `T960` — a permissive LMS DOES exist, so the "copyleft platform / permissive agent" split is now a generalisation with an exception
+
+🔴 **This base has carried a clean dichotomy: *"the platform layer is still copyleft and the agent layer is still permissive."*** 🟢 **[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) is a byte-verified Apache-2.0 learning management system** — `10,982 B`, title line `Apache License · Version 2.0, January 2004`, affero×`0`, `451★`, `165` forks, description *"Learning Management System OpenOlat"*, Java, aimed at universities.
+
+🔴 **And it is exactly the case `T956` warns about: its sidebar names NO licence, its README carries an `Apache 2.0` badge, and only the payload settles it.** 🔵 **Which is why five passes of shelves built on classification never found it: on the classifying channel it looks like an unlicensed repository.**
+
+🟡 **The dichotomy is not refuted — `moodle`, `chamilo`, `openedx`, `frappe/lms` and `rosariosis` are all copyleft, and the copyleft platforms hold essentially all of the installed base.** 🟢 **But "there is no permissive LMS to build on" is now false, and for a client who cannot accept AGPL network-disclosure it is the single most useful row this pass produced.** 🔴 **`451★` is a small community; that is a staffing risk, not a licensing one, and it should be priced as one.**
+
+### 🔴 `T961` — an `EACL 2026` paper asserts MIT over a repository that serves no grant, and the aggregator that doubted it was also wrong
+
+🔴 **[`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit)** — the toolkit for scoring the *pedagogical* quality of AI-tutor responses (four dimensions after Kochmar et al.; arXiv `2512.03688`; accepted to the **`EACL 2026`** system-demonstrations track, pp. `457`–`479`; MBZUAI). Two secondary sources disagreed and the byte channel settles both against themselves:
+
+| Claim | Source | 🟢 Measured |
+|---|---|---|
+| *"MIT-licensed python repository"* | the paper itself | 🔴 **UNSUPPORTED — no licence blob at the root, and none one level down either** |
+| *"no maintained repository has been identified"* | an indexing aggregator | 🔴 **REFUTED — it resolves at `HEAD` `a71078456a90` with a real `7`-entry tree** (`src/`, `app_src/`, `assets/`, `README.md`, `CHANGELOG.md`, `requirements.txt`, `environment.yml`) |
+
+🔵 **So the repository is live and ungranted.** 🔴 **Globant cannot build on it as MIT on this evidence**, whatever the paper says — and this is the most citable instance yet of the pattern `p792-D` has carried for nine passes: **the education-evaluation layer is published as papers, and the papers' licensing claims are not maintained in the repositories.** 🟢 **`ACTION p801-D`: ask the authors to add the `LICENSE` file the paper already promises.** 🔵 Cost: one issue. It is the cheapest unblock on this shelf.
+
+🟢 **Byte-confirmed alongside it:** [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) — **MIT**, `1,067 B`, the `EACL 2026` fork `p800` resolved. 🟢 Its grant now rests on a payload rather than a classification.
+
+### 🔴 Carried, unchanged
+
+🔴 **`p792-D`, TENTH pass: still no independent security or data-governance evaluation of any education MCP server** — and `T961` sharpens it, because the evaluation toolkit that does exist for *tutoring quality* serves no grant. 🔴 **`T906`** (government domains refuse at `CONNECT`) holds, so every regulatory instrument in this pass's regional legs is read through secondary channels — **stated at each row in [`intel/market.md`](market.md)**. 🔴 **`Gap 251`** (Opetushallitus, `~167` unread repositories) and **`Gap 252`** (EUPL misclassification) remain OPEN and untouched. 🟡 **Brazil's `PL 2.338/2023` acquires a specific secondary status this pass** — passed the Senate December `2024`, still in the Chamber of Deputies — 🔴 **which narrows the conflict `p800` left open but does not close it, because the primary source refuses.**
+
 ## 🆕 `p800` — **`T950`–`T953`. 🟢 One open anomaly closed with a mechanism rather than a screen, one carried grant withdrawn, and one refusal this base had generalised from a transport to a whole host — wrongly, for five passes.**
 
 🟢 Machine output: [`search-absence-mechanism`](../evidence/search-absence-mechanism.2026-11-12-p800.tsv) · [`html-channel-control`](../evidence/html-channel-control.2026-11-12-p800.tsv) · [`cross-channel-remeasure`](../evidence/cross-channel-remeasure.2026-11-12-p800.tsv).
