@@ -6,17 +6,36 @@ updated: 2026-11-13
 
 # Globant AI Studios — Education KB
 
-**Pass `p810` · `2026-11-13`** — `p809` closed with a transform worth keeping (*"when this base
-names a platform often and shelves nothing for it, that is a search instruction"*) and a shelf
-that had returned six consecutive nils on foundations. 🟢 **`p810` ran that transform against
-six platforms and broke the nil.** 🟢 **Twenty-two agents added — the largest single-pass
-addition this base has recorded — six foundation repos, a whole new rostering layer, three
-compose patterns and four trends.** 🔴 **And the finding that outranks all of it: the field
-this base triages licences with is wrong in BOTH directions, and this pass proved it twice in
-one hour.** 🔴 **One real regression was introduced, caught by a control rather than by
-reading, and fixed before push.**
+**Pass `p811` · `2026-11-13`** — `p810` closed with a transform worth keeping (*"when this base
+names a platform often and shelves nothing for it, that is a search instruction"*) and three
+shelf gates reporting `RED — the table cannot be located`. 🟢 **`p811` pointed the prescribed
+GitHub supply leg at the SYSTEM layer instead of the agent layer and the leg broke open: EMEA's
+education agent supply exists, and it is attached to NATIONAL AND REGIONAL SCHOOL PORTALS rather
+than to the LMS.** 🟢 **Eight agents added, one foundation, one vertical system of record, two
+compose patterns, three trends, five regional market updates — and two long-standing gates taken
+from RED to GREEN.** 🔴 **One phantom repository killed before it reached a shelf, and one probe
+deliberately NOT run.**
 
 ## What this pass established
+
+| | |
+|---|---|
+| 🟢 **`T31`: EMEA's agent supply arrived — at the LÄNDER, REGIÓN and MINISTRY layer** | 🟢 **Five national or regional school portals gained an MCP surface within five days, all MIT:** [`udondan/lanis`](https://github.com/udondan/lanis) (Schulportal Hessen 🇩🇪), [`udondan/dsbmobile`](https://github.com/udondan/dsbmobile) (DSBmobile 🇩🇪), [`andyswe/admentum-mcp`](https://github.com/andyswe/admentum-mcp) (Admentum 🇸🇪), [`boraita/ipasen_mcp`](https://github.com/boraita/ipasen_mcp) (iPasen/Séneca, Junta de Andalucía 🇪🇸), [`weirdapps/sch-mail`](https://github.com/weirdapps/sch-mail) (Greek School Network 🇬🇷) — plus `edu.by` 🇧🇾 and PRONOTE 🇫🇷 under copyleft. 🔵 **Four of the seven systems are operated by a STATE BODY, so the buyer is a ministry, the route is public tender, and the Art. 27 FRIA duty falls on the deployer because the deployer is public.** 🔴 **All are `0–2★` and single-maintainer: supply, not adoption** |
+| 🟢 **`ACTION p802-B` half-discharged from the SUPPLY side** | 🔴 **This base has twice failed to find German classroom deployment STATISTICS.** 🟢 **`p811` found German classroom INTEGRATION CODE instead, at exactly the altitude `p810` predicted — the level of the Land.** 🔵 **Re-shaped once more, and now concretely: ask Hessen's Kultusministerium and an Andalusian *delegación territorial*, because the bodies that operate the portals are the bodies that publish the numbers** |
+| 🟢 **Two gates taken from RED to GREEN, one of them blind since `p718`** | 🟢 **`agents/top.md` now carries the column-header signature `ingest/derive-counts.py` has been looking for and reports `derived=65 claimed=65 ragged=0 nolink=0 dupes=0 · GREEN`.** 🔴 **That gate reported `RED — the table cannot be located` on this file for EVERY pass since `p718`, so no pass in the interval could prove its own row count.** 🟢 **`compose/patterns.md` now carries the marked claim `derived recipes: **28**` and is machine-graded too.** 🔴 **`repos/foundations.md` and `verticals/solutions.md` stay RED BY STRUCTURE — they hold 14 and 10 tables respectively and the gate assumes one canonical shelf per file; that is published as a prescription, not fixed by force** |
+| 🟢 **The shelf is now REGION-AWARE, by a stated rule (`T32`)** | 🟢 **A row is placed by the region in which the SYSTEM IT INTEGRATES WITH is operated**, read from the repository's own description. 🔴 **Never by the author's nationality.** **`Global` `49` · `EMEA` `9` · `North America` `4` · `APAC` `3` · 🔴 `LATAM` `0`** |
+| 🔴 **The LATAM zero is the hardest number this base has produced about the region** | 🔴 **`0` of `65` build-safe agents integrate with a system operated in Latin America** — in the region where this base records `92%` student and `79%` faculty AI use, and `87%` institutional use against `9%` evaluation. 🟢 **EMEA's equivalent gap closed itself this window with seven single-maintainer repos. The LATAM one has not, and the first mover owns the seam** |
+| 🟢 **A probe that works, and was deliberately NOT run** | 🟢 **`gh api -X GET search/users -f q='user:LOGIN location:"PLACE"'` resolves a declared location without the blocked `users/{login}` endpoint** — positive control `user:torvalds location:Portland` → `1`. 🔴 **And it has a SILENT defect: an unquoted multi-word place parses as `location:Hong` plus a free-text term, so `location:Hong Kong` returns `0` for an account whose location IS Hong Kong.** 🔴 **Sweeping ~45 individual maintainers' locations is person-level data collection and was declined. Author origin stays unresolved BY CHOICE, and no later pass should "fix" it by running the sweep** |
+| 🔴 **`T33`: copyleft in education agents is increasingly INHERITED, so "ask them to relicense" is not a remedy** | 🟢 [`sairo-cyber/pronoteConnect`](https://github.com/sairo-cyber/pronoteConnect) reads `NOASSERTION`; its `LICENSE` opens `SPDX-License-Identifier: GPL-3.0-or-later` **and states why**: *"compatible with the declared GPL-3.0-or-later license of the `@blockshub/pawnote-lts` dependency"*. 🔴 **PRONOTE is the dominant French secondary-school SIS and `pawnote` is the practical way to speak its protocol, so the agent's licence was decided one layer down.** 🟢 **A permissive French deployment needs a clean-room client — scoped and funded as its own deliverable, and a durable asset for whoever builds it** |
+| 🔴 **A phantom repository, and the rule it produced** | 🔴 **`fffnite/go-oneroster` has a live `pkg.go.dev` page and does not exist**: the verification channel returns HTTP `422` — `T970`'s invented-address code — while `bgwdotdev/go-oneroster` returns `total_count=1`. 🟢 **A package registry can outlive its repository; a registry page is evidence that a module was PUBLISHED, never that the source still exists** |
+| 🟢 **The OneRoster nil re-TESTED rather than restated, and `P27` built to it** | 🟢 **`gh search repositories "oneroster mcp"` → zero items (`2026-11-13`); a vendor connector page dated October 2026 independently states that neither 1EdTech nor ClassLink ships one.** 🔵 **Two channels, same answer.** 🟢 **And the gap is now buildable: [`LongsightGroup/oneroster`](https://github.com/LongsightGroup/oneroster) (`MIT`) covers REST *and* CSV — and US districts hand over CSV far more often than they stand up a REST endpoint** |
+| 🟢 **`T30` goes from four jurisdictions to SIX, and `T20` from three implementations to FIVE** | 🟢 **🇺🇸 Florida (State Board, adopted `2026-09-16`, Rule `6A-14.0719`): default-deny on AI in graded work unless the instructor permits, no AI as *"a decision maker, absent human review"*, districts and charter boards to adopt policies by `2027-07-01`.** 🟢 **🇵🇭 CHED Memorandum Order No. `21` s.`2026`: no autonomous determination of academic outcomes without meaningful human review, across `2,366` HEIs / `188,261` faculty / `5.8M` students, `12` months extendable to `18`–`24`.** 🔵 **And the implementers agree without coordination: Andalusia and Belarus both state preview-then-confirm writes in their one-line descriptions** |
+| 🟢 **A control worth copying, from Sweden** | 🟢 [`andyswe/admentum-mcp`](https://github.com/andyswe/admentum-mcp) serves a child's messages **ONE ITEM PER CALL** — a quantitative bound on how much of a minor's correspondence can enter a model context in a single tool call. 🔵 **A limit, not a prompt instruction. No other row in this base has it** |
+| 🔴 **The capital turned, and it turned AWAY from education toward workforce** | 🔴 **Q1 `2026`: `$512M` across `63` deals, `-24%` in value, with `>70%` going to WORKFORCE TRAINING** (largest round Preply `$150M`). 🟢 **`116` education M&A transactions in Q1 alone.** 🔴 **Coursera–Udemy closed `2026-05-11` and Coursera announced a ~`10%` global workforce cut on `2026-11-09`, four days before this pass** — next to Chegg's `45%`. 🟢 **AI compressed the answer-delivery and catalogue businesses first; the proposal that survives sells governance, evaluation and integration.** 🔴 **All HolonIQ figures are `CITED, NOT READ` — `www.holoniq.com` does not resolve here** |
+| 🔵 **A poisoned search token, recorded so it is not re-run** | 🔴 **`xapi mcp server` returns only X (Twitter) API and Xapian repositories.** 🟢 **On this channel `xapi` is not a usable token; use `experience api` or `learning record store`** |
+
+### The p810 table, kept for the record
+
 
 | | |
 |---|---|
@@ -39,6 +58,16 @@ reading, and fixed before push.**
 
 ## Regional summary
 
+🟢 **`p811` delta by region, before the `p810` table below:** **North America** — Florida becomes
+the fourth dated state obligation (Rule `6A-14.0719`, districts by `2027-07-01`) and the
+consolidation reached headcount (Coursera `-10%`, `2026-11-09`). **EMEA** — the region's agent
+supply appeared at the portal layer, five systems in five days, four of them state-operated.
+**APAC** — CHED Memorandum Order No. `21` s.`2026` (`2,366` HEIs, `12`-month window) and
+Australia's automated-decision transparency duty from `2026-12-10`. **LATAM** — the nil is now
+measured: `0` of `65` agents attach to a system operated in the region. **Global** — Q1 `2026`
+funding `$512M`, `>70%` to workforce training, `116` M&A transactions.
+
+
 | Region | The opening | The named gap |
 |---|---|---|
 | **North America** | 🔴 **The densest legislative calendar in the world and still a pipeline rather than a market.** 🟡 **Three trackers, three counts, three definitions: `134` bills across `31` states (`p797`), *"nearly `100`"* state bills touching student AI use, `15`+ states having introduced or passed legislation — 🔵 quote the STATE and the bill number, never the national total.** 🟢 Dated obligations to sell against: NC `SL 2026-41` (`2026-12-31` → `2027-06-30` → `2028-06-30`), 🔴 **Ohio's districts must adopt an AI framework by `2026-07-01`**, 🟢 Mississippi embeds AI literacy for all incoming undergraduates from Fall `2026`. 🆕 🟡 **A California ballot initiative on AI and MINORS would bind education deployments through child-safety law rather than education law** | 🔴 **No spend figure for Canada or Mexico, FIFTH pass, because the mandated query says "North America" and returns US-only results.** 🟢 Specific enough to fix: name the countries. 🆕 🔵 **Chegg cut `45%` of staff (`388` roles) — the first thing AI destroyed here was the answer-delivery business, which is what "a chatbot that answers student questions" asks to become** |
@@ -57,9 +86,10 @@ reading, and fixed before push.**
 | [`repos/trending.md`](repos/trending.md) | Repo movement per window · 🔴 the `D810-1` count defect and its corrected prescription | 🟢 **append-only** |
 | [`verticals/solutions.md`](verticals/solutions.md) | 🟢 **Sakai, Canvas, Schoology/Infinite Campus and Cubite gain agent surfaces** · 🟢 **one platform at TWO risk postures** · `FenixEdu` as the EMEA SIS | prepended each pass |
 | [`intel/market.md`](intel/market.md) | 🟢 **`53` `#### Update` blocks — NA `12`, EMEA `12`, APAC `12`, LATAM `12`, Global `5`.** Every region gained one | rewritten each pass |
-| [`intel/trends.md`](intel/trends.md) | 🟢 **`30` trends · `T27`–`T30` added** (licence field · standards bodies · the transform as instrument · the sole-decider convergence) | prepended each pass |
-| [`compose/patterns.md`](compose/patterns.md) | 🟢 **`26` patterns · `P24`–`P26` added** — FRIA-survivable early warning · Markdown→SCORM with a conformance gate · assessment shaped to Ofqual's OPEN categories | prepended each pass |
+| [`intel/trends.md`](intel/trends.md) | 🟢 **`33` trends · `T31`–`T33` added** (EMEA's portal-layer supply · region-by-target-system · inherited copyleft) · 🟢 **`T30` extended to six jurisdictions**. Superseded: 🟢 **`30` trends · `T27`–`T30` added** (licence field · standards bodies · the transform as instrument · the sole-decider convergence) | prepended each pass |
+| [`compose/patterns.md`](compose/patterns.md) | 🟢 **`28` patterns · `P27`–`P28` added** — the OneRoster agent nobody has built · the national-school-portal family agent · 🟢 **count now machine-graded**. Superseded: 🟢 **`26` patterns · `P24`–`P26` added** — FRIA-survivable early warning · Markdown→SCORM with a conformance gate · assessment shaped to Ofqual's OPEN categories | prepended each pass |
 | [`intel/open-gaps.md`](intel/open-gaps.md) | Action ledger · `ACTION p810-A` (re-probe rows rejected on a blank licence signal alone) | 🟢 **append-only** |
+| [`evidence/*2026-11-13-p811*`](evidence/) | 🟢 **The three machine outputs behind this pass** — [`repo-verification`](evidence/repo-verification.2026-11-13-p811.tsv) (14 addresses, 2 negative controls), [`origin-location-channel`](evidence/origin-location-channel.2026-11-13-p811.tsv) (the probe, its silent defect, and the declaration that it was not run at scale), [`websearch-legs`](evidence/websearch-legs.2026-11-13-p811.tsv) (every prescribed leg with its yield) | — |
 | [`evidence/*2026-11-13-p810*`](evidence/) | 🟢 **The three machine outputs behind this pass** — the verification channel with its negative control, the licence byte reads, and the **three-run gate control that caught this pass's own regression** | — |
 
 ## 🔴 Channel discipline — read before quoting anything here
@@ -76,7 +106,7 @@ reading, and fixed before push.**
 | Licence **restrictions** | 🔴 **Still the direction instruments fail in, and the LOCATION keeps moving:** a second licence file (`T914`), a different repository (`T925`), two grants in one file (`T915`), 🆕 **and the README under an unmodified MIT** (`T937`) |
 | **Region placement** | 🔴 **A query LANGUAGE is not a region** (`T935`). 🔴 **The `es` leg returns Spain; the APAC leg returned the UAE.** 🟢 **Rows placed on language alone are published as `LATAM?`, and the closed vocabulary is never given a guess** |
 | Star counts | 🟢 **Re-measured on `search/repositories`.** 🔴 A secondary source was off by `-23%` on this base's largest row at `p797` |
-| 🆕 **Running this repository's own code** | 🔴 **REFUSED in this session.** An attempt to run one instrument's test suite was declined by the command classifier. 🔴 **So `make hooks`, `make commit-gates` and `ACTION p797-H` are undischargeable from here, and [`p135`](compose/code/p135-licence-sha-identity/) is cited from its README and source rather than from a run.** 🟢 **No claim in this pass depends on executing committed code** |
+| 🆕 🟢 **Running this repository's own code — CORRECTED at `p811`** | 🟢 **It runs HERE. `make hooks` completed and `python3 -I ingest/derive-counts.py .` was used as a working control before and after every edit this pass.** 🔵 **So the claim below was true of `p800`'s session and is NOT a property of this repository.** 🔴 **Baseline failing-gate set at `HEAD` before this pass: `gate-absence`, `gate-dates`, `gate-derived-counts`, `gate-enumeration`, `gate-evidence-store`, `gate-offline`, `gate-shelf-consistency`, `recount` — carried pre-existing, and re-checked after this pass's edits.** Superseded text: 🔴 **REFUSED in this session.** An attempt to run one instrument's test suite was declined by the command classifier. 🔴 **So `make hooks`, `make commit-gates` and `ACTION p797-H` are undischargeable from here, and [`p135`](compose/code/p135-licence-sha-identity/) is cited from its README and source rather than from a run.** 🟢 **No claim in this pass depends on executing committed code** |
 | Every market, adoption and regulatory figure | 🔴 **Search-channel testimony.** 🔴 **`T906` now names TEN domains that fail at `CONNECT`:** `eur-lex.europa.eu`, `oecd.org`, `unesco.org`, `op.europa.eu`, `iesalc.unesco.org`, `digital-strategy.ec.europa.eu`, `www.gov.br`, and 🆕 **`www.moe.go.kr`, `moe.go.kr`, `english.moe.go.kr`.** 🔵 **Every one is a government or multilateral publisher and no commercial domain has ever failed this way — a network POLICY, not an outage** |
 | 🟢 **A numbered instrument** | 🟢 **Now tested rather than asserted: `Regulation (EU) 2026/1744` was challenged by this pass's own EMEA leg and held across four independent legal readings** (`T939`). 🔵 **`CITED, NOT READ` is usable because anyone can check a number in one lookup** |
 

@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (sixteenth pass) — **One repo added, one phantom killed, and the OneRoster nil re-tested instead of restated**
+
+**Pass `p811`.** 🟢 **A deliberately small movement on this shelf, because the window's
+movement was on the AGENT shelf** (see [`agents/trending.md`](../agents/trending.md)).
+
+### What moved
+
+| Repo | Licence | ★ | Forks | Pushed | Why it is here |
+|---|---|---|---|---|---|
+| [`LongsightGroup/oneroster`](https://github.com/LongsightGroup/oneroster) | MIT | `0` | `0` | `2026-07-15` | **New.** TypeScript OneRoster 1.2 client covering **both** bindings — REST *and* CSV. 🟢 **CSV matters more than it sounds: US districts hand over a CSV export far more often than they stand up a REST endpoint.** Same publisher as `LongsightGroup/qti3`, already on the shelf. Shelved on payload + npm release (`@longsightgroup/oneroster` `0.3.0`), not on traction |
+| [`usechalk/chalk`](https://github.com/usechalk/chalk) | 🔴 AGPL-3.0 | `2` | — | `2026-11-09` | **New, filed to `verticals/solutions.md` rather than here.** K-12 IT stack in one Rust binary: device fleet (ChromeOS/Intune/Jamf), help desk, 1:1 lifecycle, **rostering, SSO**, Google/AD/Entra provisioning. 🟢 The only artifact in this base that puts rostering and device lifecycle in one system. 🔴 AGPL + hosted offering: integrate, never derive |
+
+### 🔴 `fffnite/go-oneroster` does not exist — and a package index said it did
+
+| Address | `pkg.go.dev` | `gh api search/repositories repo:…` | Verdict |
+|---|---|---|---|
+| `fffnite/go-oneroster` | page present, `v0.3.0` | **HTTP `422`** | 🔴 **PHANTOM — not shelved** |
+| `bgwdotdev/go-oneroster` | — | `total_count=1`, `MIT`, `8★`, pushed `2020-07-30` | 🟢 real (already shelved at `p810`) |
+
+🔵 **`422` is the code `T970`'s control established for an INVENTED address, so this is the
+instrument working as designed rather than a network failure.** 🟢 **Rule added: a
+package-registry page is evidence that a module was PUBLISHED, never that the repository
+behind it still exists.** A module proxy keeps serving a cached copy indefinitely after the
+source is deleted or renamed.
+
+### The OneRoster agent nil, re-tested
+
+🟢 `gh api -X GET search/repositories -f q="oneroster mcp"` → **zero items**, `2026-11-13`.
+🟢 A vendor connector page (ibl.ai, dated October 2026) states independently that neither
+1EdTech nor ClassLink publishes an MCP server for the standard; its own "OneRoster agent
+skill" is a `SKILL.md` that assumes **you** host the server. 🔵 **Two channels, same answer.**
+🔴 **The asymmetry is unchanged and is this base's best-evidenced contribution target: the
+standard has libraries, a conformance suite and an importer — and no agent.** `P27` is built
+to it.
+
+### Methodology note carried forward
+
+🔴 **`curl -sI` remains useless here** (`T923`: `403` for live *and* invented addresses).
+🔴 **`gh api repos/{owner}/{repo}` and `gh api users/{login}` are refused** — this session is
+bound to its configured repositories (`T941`). 🟢 **What works: `gh api -X GET
+search/repositories -f q="repo:OWNER/NAME"` for existence, licence, stars, forks and push
+date; and `raw.githubusercontent.com` via fetch for reading `LICENSE` bytes.** Both were used
+on every row above.
+
 ## `2026-11-13` (fifteenth pass) — **The six-pass nil on the foundations shelf breaks: a whole rostering layer, the sandbox substrate, and the largest open SIS in this base**
 
 **Pass `p810`.** 🟢 **Six repos added to `repos/foundations.md`, ending a SIX-consecutive-pass

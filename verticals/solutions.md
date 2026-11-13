@@ -7,6 +7,45 @@ updated: 2026-11-13
 # Education vertical platforms — real systems to customize AI on top of
 
 
+## 🟢 Sixteenth pass (`p811`, 2026-11-13) — a whole PLATFORM LAYER this file had never named: the national and regional school portal
+
+🔴 **Every section below this one assumes the institution's system of record is an LMS or an
+SIS.** 🟢 **In European state school systems it very often is neither.** What a parent and a
+pupil actually log into is a portal operated by a ministry, a federal state or a regional
+authority — and `p811` found an agent surface for five of them, all published within five
+days of each other, all permissive, all tiny.
+
+| Platform | Operated by | Country | Agent surface found this pass | Licence | Stars |
+|---|---|---|---|---|---|
+| **Schulportal Hessen (Lanis)** | the federal state of Hesse | 🇩🇪 Germany | [`udondan/lanis`](https://github.com/udondan/lanis) — SDK + CLI + MCP server | MIT | 2 |
+| **DSBmobile** | schools via the DSB substitution-plan service | 🇩🇪 Germany | [`udondan/dsbmobile`](https://github.com/udondan/dsbmobile) — SDK + CLI + MCP server | MIT | 0 |
+| **Admentum** | the Swedish school-platform vendor | 🇸🇪 Sweden | [`andyswe/admentum-mcp`](https://github.com/andyswe/admentum-mcp) — **read-only**, one item per call | MIT | 0 |
+| **iPasen / Séneca** | Junta de Andalucía (regional education authority) | 🇪🇸 Spain | [`boraita/ipasen_mcp`](https://github.com/boraita/ipasen_mcp) — grades, absences, messages, **confirmed actions** | MIT | 0 |
+| **Greek School Network (`sch.gr`)** | the Greek Ministry of Education | 🇬🇷 Greece | [`weirdapps/sch-mail`](https://github.com/weirdapps/sch-mail) — IMAP/SMTP MCP server | MIT | 0 |
+| **edu.by site constructor** | the Belarusian national school-web service | 🇧🇾 Belarus | [`Severnbli/edu-by-agent`](https://github.com/Severnbli/edu-by-agent) — CLI + MCP + skills, **preview and confirmation before every write** | 🔴 GPL-3.0 | 0 |
+| **PRONOTE** (with EduConnect) | Index Éducation; EduConnect is the state identity provider | 🇫🇷 France | [`sairo-cyber/pronoteConnect`](https://github.com/sairo-cyber/pronoteConnect) — self-hosted MCP connector | 🔴 GPL-3.0-or-later (byte-verified against `NOASSERTION`) | 2 |
+
+🔵 **Why this is a market fact and not a curiosity.** Four of these are operated by a STATE
+BODY. That changes who the buyer is (a ministry or a Land, not a university CIO), what the
+procurement looks like (public tender), and which regulation binds first (for the EU ones,
+Art. 27 FRIA duties fall on PUBLIC deployers). 🟢 **It also answers `ACTION p802-B` from the
+supply side:** this base has twice failed to find German classroom deployment STATISTICS,
+and has now found German classroom INTEGRATION CODE instead — at the Land level, which is
+where `p810` predicted the evidence would sit.
+
+🔴 **Do not mistake any of these for a product.** Every one is `0–2★`, single-maintainer,
+self-declared unofficial, and built against an undocumented or semi-documented portal API.
+🟢 **What they are worth is the seam**: they prove the integration is possible and they show
+which verbs the portal actually exposes, which is normally the expensive unknown in a
+public-sector education bid.
+
+🟢 **And one genuinely new system of record, from the same window:**
+
+| Platform | Repo | Licence | Stars | What it is |
+|---|---|---|---|---|
+| **Chalk** | [`usechalk/chalk`](https://github.com/usechalk/chalk) | 🔴 AGPL-3.0 | 2 | **New this pass (`p811`).** *"The open-source **K-12 IT stack**: mixed-fleet device tracking (ChromeOS, Intune, Jamf), help desk, 1:1 lifecycle, **rostering, SSO**, and Google/AD/Entra provisioning **in one Rust binary**. Self-host free, or we host it."* Pushed `2026-11-09`. 🟢 **It is the only artifact in this base that puts rostering and device lifecycle in the same system** — which is what a district IT director actually buys. 🔴 **AGPL-3.0 with a hosted commercial offering: the classic open-core posture, and the network clause rules it out as the base of a hosted deliverable.** 🔵 Read it for the data model of a district IT stack; propose integration, never derivation |
+
+
 ## 🟢 Fifteenth pass (`p810`, 2026-11-13) — three platforms institutions actually run gain an agent surface, and one gains a SECOND at a different risk level
 
 🔵 **This file's premise is that an AI engagement means adding an agent layer to a system the

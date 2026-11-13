@@ -6,10 +6,15 @@ updated: 2026-11-13
 
 # Compose patterns — education
 
-**Twenty-six** concrete recipes. Each names the actual repos, the license
-consequence, how the pieces wire together, and a rough build estimate. All
-components were license-verified on 2026-11-13 (see `agents/top.md` and
-`repos/foundations.md`). 🟢 **Fifteenth pass (`p810`): `P24`–`P26` added** — a FRIA-survivable
+**Twenty-eight** concrete recipes — **derived recipes: **28****. Each names the actual
+repos, the license consequence, how the pieces wire together, and a rough build estimate.
+All components were license-verified on 2026-11-13 (see `agents/top.md` and
+`repos/foundations.md`). 🟢 **Sixteenth pass (`p811`): `P27`–`P28` added** — the OneRoster
+agent nobody has built, and the European national-school-portal family agent. 🔵 **The count
+on this line is now MACHINE-GRADED: `ingest/derive-counts.py` reads the marked claim
+`derived recipes: **N**` and compares it with `^## P` headings on this page, so the drift
+this paragraph has had to confess four times is now caught by `make hooks` instead.**
+🟢 **Fifteenth pass (`p810`): `P24`–`P26` added** — a FRIA-survivable
 district early-warning agent, a Markdown→SCORM pipeline with a conformance gate, and
 assessment work shaped to Ofqual's open categories. 🔴 **This line said "Twenty-two" while the
 file held `23`.** 🟢 **Re-derived: `grep -c '^## P' compose/patterns.md` = `26`.** 🔴 **Count defect, third occurrence, fixed again at
@@ -1726,3 +1731,142 @@ not confirm it against any government source (`T30`).
 **Estimate.** `6`–`8` weeks for QA and moderation on an existing item bank; second-marking adds
 a reconciliation UI and a conversation with the regulator.
 
+---
+
+## P27 — The OneRoster agent nobody has built (North America first, Global-portable)
+
+🟢 **This is the best-evidenced contribution target in this base, and `p811` re-tested the
+evidence rather than restating it.** `OneRoster` — the 1EdTech standard by which a student
+information system hands class rosters, enrolments and gradebook data to everything else —
+is named over `3,000` times across this KB. 🔴 **And there is no agent for it.**
+
+### Why the gap is real, with the evidence
+
+| Check | Result (`2026-11-13`) |
+|---|---|
+| `gh api -X GET search/repositories -f q="oneroster mcp"` | 🔴 **zero items** |
+| Vendor connector documentation (ibl.ai, dated October 2026) | 🔴 States that neither **1EdTech** nor **ClassLink** publishes an MCP server; its own "OneRoster agent skill" is a `SKILL.md` that assumes **you** host the server |
+| Tooling that DOES exist | 🟢 a conformance suite, an importer, two server implementations and a client library — see below |
+
+🔵 **Two independent channels, one answer. The standard has libraries and no agent.**
+
+### The components — every one verified on the `repo:` channel this pass
+
+| Component | Repo | Licence | State |
+|---|---|---|---|
+| **OneRoster client (REST + CSV)** | [`LongsightGroup/oneroster`](https://github.com/LongsightGroup/oneroster) | 🟢 MIT | pushed `2026-07-15`, `0★`, npm `@longsightgroup/oneroster` `0.3.0` — **new to this base at `p811`** |
+| **Conformance gate** | [`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests) | 🟢 Apache-2.0 | `7★`; vendor-neutral, published by a party with no LMS to sell |
+| **Reference server (wire format only)** | [`bgwdotdev/go-oneroster`](https://github.com/bgwdotdev/go-oneroster) | 🟢 MIT | 🔴 stale since `2020-07-30` — read it, do not depend on it |
+| **Importer (separate process)** | [`oat-sa/oneroster-import`](https://github.com/oat-sa/oneroster-import) | 🔴 GPL-2.0 | run as its own process; never link it |
+| **The control topology to copy** | [`Ed-Fi-Exchange-OSS/Prototype-Semantic-Layer-with-MCP`](https://github.com/Ed-Fi-Exchange-OSS/Prototype-Semantic-Layer-with-MCP) | 🟢 Apache-2.0 | read-only enforced at the **database role**, six tools, OAuth scope check |
+
+### How it wires together
+
+1. **Ingest.** Point `LongsightGroup/oneroster` at the district's OneRoster endpoint *or* its
+   CSV export. 🔵 **Support the CSV binding first** — US districts hand over a CSV far more
+   often than they stand up a REST service, and the MIT client covers both bindings, which is
+   the specific reason it is the base of this pattern.
+2. **Land it read-only.** Load into Postgres under a role pinned
+   `default_transaction_read_only = on` with `GRANT SELECT` on the roster schema only.
+   🟢 **Copy this from the Ed-Fi prototype: the read-only property is enforced by the database
+   role, not asked for in a prompt.** That is the difference between a control and a convention.
+3. **Expose few tools.** Six, after Ed-Fi's example — `get_my_scope`, `list_my_sections`,
+   `find_students`, `get_section_roster`, `get_enrolment_changes`, `get_sync_health` — each
+   returning the tables it read. 🔴 **Do not build a 77- or 137-tool surface; this base has
+   two of those already and both are governance objects rather than features.**
+4. **Gate the identity.** The agent's scope is the signed-in educator's scope, resolved
+   server-side at every call. Never a shared service account.
+5. **Prove conformance before delivery.** Run the Google conformance suite against the
+   district's endpoint and **attach its output to the acceptance criteria**. 🟢 **This is the
+   commercially clever part: the suite turns "the integration works" from an opinion into a
+   contractual artifact, and it is Apache-2.0 so it can ship with the deliverable.**
+
+### Why it survives review
+
+🔵 **It reads rosters and writes nothing**, so in the EU it is outside Annex III's assessment
+category, and in the US it is a FERPA *scope* question rather than a decision-making one.
+🟢 **Every component is MIT or Apache-2.0 except the GPL importer, which runs as a separate
+process by design.**
+
+### Estimate
+
+**5–7 weeks** for the ingest + read-only store + six-tool server + conformance run, assuming
+the district can produce either a OneRoster endpoint or a conformant CSV export.
+🔴 **Add 2–3 weeks if the "OneRoster export" turns out to be a bespoke CSV**, which is the
+most common surprise on this seam.
+
+### Three disqualifiers — check these first
+
+1. 🔴 **The district's SIS is PowerSchool and they want the agent to talk to it directly.**
+   PowerSchool has three MCP servers in this base and none with a usable grant (`NONE`,
+   `NONE`, `GPL-3.0`). Go through OneRoster, or the pattern changes into a licence negotiation.
+2. 🔴 **They want write-back of grades.** That is the gradebook service, it is a decision
+   surface, and it moves the engagement into `P24`'s FRIA territory. Scope it separately.
+3. 🔴 **They have no OneRoster export at all.** Then the first deliverable is the export, not
+   the agent, and `oat-sa/oneroster-import` (GPL-2.0, run standalone) is where to start.
+
+---
+
+## P28 — The national school portal family agent (EMEA first, and the only pattern here whose buyer is a ministry)
+
+🟢 **`p811` found that European education agent supply is attached to state-operated portals
+rather than to LMS platforms (`T31`).** 🔵 **This pattern is what to do with that: one agent,
+one portal, a family as the user, and a public body as the buyer.**
+
+### The seam, with the reference implementations found in one five-day window
+
+| Portal | Operator | Country | Reference implementation | Licence |
+|---|---|---|---|---|
+| Schulportal Hessen (Lanis) | the federal state of Hesse | 🇩🇪 | [`udondan/lanis`](https://github.com/udondan/lanis) | 🟢 MIT |
+| DSBmobile (timetables, substitutions) | the DSB service | 🇩🇪 | [`udondan/dsbmobile`](https://github.com/udondan/dsbmobile) | 🟢 MIT |
+| Admentum | Swedish platform vendor | 🇸🇪 | [`andyswe/admentum-mcp`](https://github.com/andyswe/admentum-mcp) | 🟢 MIT |
+| iPasen / Séneca | Junta de Andalucía | 🇪🇸 | [`boraita/ipasen_mcp`](https://github.com/boraita/ipasen_mcp) | 🟢 MIT |
+| Greek School Network (`sch.gr`) | Greek Ministry of Education | 🇬🇷 | [`weirdapps/sch-mail`](https://github.com/weirdapps/sch-mail) | 🟢 MIT |
+| `edu.by` constructor | Belarusian national school-web service | 🇧🇾 | [`Severnbli/edu-by-agent`](https://github.com/Severnbli/edu-by-agent) | 🔴 GPL-3.0 |
+| PRONOTE + EduConnect | Index Éducation + French state IdP | 🇫🇷 | [`sairo-cyber/pronoteConnect`](https://github.com/sairo-cyber/pronoteConnect) | 🔴 GPL-3.0-or-later (`T33`) |
+
+### How it wires together
+
+1. **Pick the portal, not the LMS.** The system a family logs into daily is the one worth an
+   agent. 🔴 **A proposal offering "an agent for your Moodle" is answering a question the Land
+   did not ask.**
+2. **Read the reference implementation for the SEAM, then write your own client.** Every row
+   above is `0–2★`, single-maintainer and self-declared unofficial. 🟢 **What they give you is
+   which verbs the portal exposes and which auth path works** — normally the most expensive
+   unknown in a public-sector bid. 🔴 **For France, `T33` applies: the GPL comes from the
+   `@blockshub/pawnote-lts` client, so a permissive deployment needs a clean-room PRONOTE
+   client as its own funded deliverable.**
+3. **Adopt the two controls the field converged on without coordination.**
+   🟢 **Preview-then-confirm on every write** — stated independently by
+   [`boraita/ipasen_mcp`](https://github.com/boraita/ipasen_mcp) 🇪🇸,
+   [`Severnbli/edu-by-agent`](https://github.com/Severnbli/edu-by-agent) 🇧🇾 and three earlier
+   jurisdictions in this base (`T20`, now five).
+   🟢 **Rate-shape the context** — [`andyswe/admentum-mcp`](https://github.com/andyswe/admentum-mcp) 🇸🇪
+   serves messages **one item per call**, which bounds how much of a minor's correspondence
+   can enter a model context in a single tool call. 🔵 **That is a quantitative limit rather
+   than a prompt instruction, and it is the single most copyable idea in this pass.**
+4. **Default to read-only for anything touching a minor's record**, and keep writes to the
+   family's own actions (absence notes, meeting confirmations) behind the confirm step.
+5. **Ship the FRIA with it.** 🟢 **Four of these seven portals are operated by a public body,
+   so the EU AI Act Art. `27` fundamental-rights impact assessment falls on the DEPLOYER
+   because the deployer is public.** 🔵 **Pair this pattern with `P14`'s deployment registry
+   and `P2`'s conformance layer: the integration and the compliance artifact arrive in the
+   same proposal, which is what actually unblocks a ministry purchase.**
+
+### Estimate
+
+**8–11 weeks** per portal for a read-mostly family agent with a confirm-gated write path, the
+one-item-per-call context limit, and an Art. 27 FRIA pack. 🔵 **The second portal is roughly
+`60%` of the first** — the controls, the FRIA template and the confirm gate are portable; only
+the client changes.
+
+### Three disqualifiers — check these first
+
+1. 🔴 **The portal has no documented API and its terms forbid automated access.** Every
+   reference above is "unofficial"; a ministry engagement needs the operator's written
+   permission, and that conversation comes before any code.
+2. 🔴 **The buyer wants it to speak to pupils directly.** Then the learner's AGE changes the
+   regulatory category (`T25`) and child-safety law binds before education law does.
+3. 🔴 **France, without funding for a clean-room PRONOTE client.** The permissive position
+   cannot be reached by relicensing (`T33`), so a fixed-price permissive deliverable is not
+   available on the French seam this quarter.

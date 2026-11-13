@@ -6,8 +6,16 @@ updated: 2026-11-13
 
 # Education AI — current trends
 
-**Thirty** trends, each with the evidence behind it and what it implies for an
-engagement. 🟢 **Fifteenth pass (`p810`, 2026-11-13): `T27`–`T30` added.** 🔴 **This line said
+**Thirty-three** trends, each with the evidence behind it and what it implies for an
+engagement. 🟢 **Sixteenth pass (`p811`, 2026-11-13): `T31`–`T33` added, and `T30` extended
+to five jurisdictions.** 🔵 **Re-derived before writing: `grep -c '^## T' intel/trends.md` =
+`33`.** 🟢 **`T31` (EMEA's agent supply is attached to national and regional school portals,
+not to the LMS) is the first trend in nine passes to come from the prescribed GitHub supply
+leg rather than from auditing this base's own files** — the leg broke because the query was
+pointed at the SYSTEM layer (`mcp server school pushed:>2026-11-05`) instead of at the agent
+layer. 🔵 **`T32` (region is resolvable from the target system, not from the author) came
+from a refusal: the probe that would resolve author origin at scale is person-level data and
+was deliberately not run.** 🟢 **Fifteenth pass (`p810`, 2026-11-13): `T27`–`T30` added.** 🔴 **This line said
 "Twenty-five" while the file held `26` — the drift this very sentence warns about, uncorrected
 through `p809`.** 🟢 **Re-derived here: `grep -c '^## T' intel/trends.md` = `30`.** The count
 above was produced by `grep -c '^## T'` before being written, not carried forward.
@@ -35,6 +43,125 @@ the second time.** 🔵 **The amendment uses no component discovered this pass**
 three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
+
+## T31 — EMEA's education agent supply has arrived, and it is attached to NATIONAL AND REGIONAL SCHOOL PORTALS rather than to the LMS
+
+🔴 **Through `p810` this base recorded exactly one European-origin education agent at scale**
+([`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp), `102★`) and
+described European supply as "appearing, adoption not". 🟢 **`p811` found seven more in a
+single five-day window, and every one of them integrates with a portal operated by a
+ministry, a federal state or a regional education authority.**
+
+| Target system | Operator | Country | Repo | Licence | ★ |
+|---|---|---|---|---|---|
+| Schulportal Hessen (Lanis) | the federal state of Hesse | 🇩🇪 | [`udondan/lanis`](https://github.com/udondan/lanis) | MIT | `2` |
+| DSBmobile | substitution-plan service used by schools | 🇩🇪 | [`udondan/dsbmobile`](https://github.com/udondan/dsbmobile) | MIT | `0` |
+| Admentum | Swedish school-platform vendor | 🇸🇪 | [`andyswe/admentum-mcp`](https://github.com/andyswe/admentum-mcp) | MIT | `0` |
+| iPasen / Séneca | Junta de Andalucía | 🇪🇸 | [`boraita/ipasen_mcp`](https://github.com/boraita/ipasen_mcp) | MIT | `0` |
+| Greek School Network (`sch.gr`) | Greek Ministry of Education | 🇬🇷 | [`weirdapps/sch-mail`](https://github.com/weirdapps/sch-mail) | MIT | `0` |
+| `edu.by` site constructor | Belarusian national school-web service | 🇧🇾 | [`Severnbli/edu-by-agent`](https://github.com/Severnbli/edu-by-agent) | 🔴 GPL-3.0 | `0` |
+| PRONOTE + EduConnect | Index Éducation + the French state IdP | 🇫🇷 | [`sairo-cyber/pronoteConnect`](https://github.com/sairo-cyber/pronoteConnect) | 🔴 GPL-3.0-or-later | `2` |
+
+**What it implies for an engagement.**
+
+🔵 **The integration surface in European state school systems is the portal, not the LMS.**
+A proposal that offers "an agent for your Moodle" is answering a question a German Land or
+an Andalusian *delegación* did not ask: the system their families log into every day is
+Lanis or Séneca. 🟢 **Scope discovery against the portal first; treat the LMS as one of its
+sources.**
+
+🔵 **The buyer changes with it.** Four of the seven systems are operated by a state body, so
+the counterparty is a ministry or a regional authority, the route is public procurement, and
+for the EU ones the Art. 27 FRIA duty falls on the deployer **because the deployer is
+public**. That is a compliance obligation this studio can price and the incumbent EdTech
+vendor usually cannot discharge for them.
+
+🔴 **None of these is a dependency.** `0–2★`, single-maintainer, self-declared unofficial,
+built against undocumented portal APIs. 🟢 **Their value is that they map the seam** — which
+verbs the portal exposes, which auth path works, where the writes are — and that is normally
+the most expensive unknown in a public-sector education bid.
+
+🔵 **Shape of the supply, stated honestly: numerous, atomised, tiny, and now PLACED.** This
+is `T24`'s long tail one region up, with the difference that these rows are not
+interchangeable — each one is the only agent in this base for the system it targets.
+
+---
+
+## T32 — A row's REGION is resolvable from the system it integrates with; its AUTHOR's region is not, and the difference is a privacy boundary
+
+🔴 **This base has tried three times to place rows by ORIGIN and failed each time:** `T935`
+(`es` ≠ LATAM), `T940` (grant hygiene is not a regional property), `T941` (`gh api
+users/{login}` refused — this session is bound to its configured repositories). 🟢 **`p811`
+found a channel that does work, and then did not use it at scale, on purpose.**
+
+🔵 **The channel.** `gh api -X GET search/users -f q='user:LOGIN location:"PLACE"'` returns
+`total_count=1` when the account's declared location matches, `0` otherwise. Controls run
+`2026-11-13`: `user:torvalds location:Portland` → `1` (positive);
+`user:HKUDS location:"Hong Kong"` → `1`; `user:zzzz-not-a-real-account-p811` → `0`.
+🔴 **And a real defect in it, worth recording because it fails SILENTLY:** an unquoted
+multi-word place is parsed as `location:Hong` plus a free-text term, so
+`location:Hong Kong` returns `0` for an account whose location IS Hong Kong. 🔵 **A `0`
+from this probe is ambiguous in three ways — different location, empty location, or a
+quoting mistake — so only a `1` is evidence.**
+
+🔴 **Why it was not run across the shelf.** Sweeping the declared locations of ~45 individual
+maintainers is the collection of person-level data about private individuals, at scale, for
+a commercial file. 🟢 **It was declined, and the declining is the finding**: author origin
+stays unresolved in this base by choice, not by incapacity, and no later pass should "fix"
+it by running the sweep.
+
+🟢 **The rule adopted instead, now implemented in `agents/top.md`'s `Region` column:** place
+a row by **the region in which the system it integrates with is operated**, read from the
+repository's own description. Schulportal Hessen places a row in EMEA; Waseda and NTULearn
+place rows in APAC; Ed-Fi and FCPS place rows in North America; Moodle, Canvas, Odoo and
+SCORM are multi-region, so their rows are `Global`.
+
+**What it implies for an engagement.**
+
+🔵 **It is the commercially correct question anyway.** For a bid, what matters is where the
+system runs, which regulator binds it and who procures it — not where its author lives.
+🔴 **It also produces an uncomfortable, useful number: `LATAM 0`.** Of `65` build-safe rows,
+none integrates with a system operated in Latin America, in the region where this base's own
+market file records `92%` student and `79%` faculty AI use. 🟢 **That gap is a
+service-line proposal, not a research failure: the agent surface for LATAM's school systems
+does not exist yet, and the first mover builds it.**
+
+---
+
+## T33 — Copyleft in education agents is increasingly INHERITED from the only available client library, not chosen — so "ask them to relicense" is not a remedy
+
+🟢 [`sairo-cyber/pronoteConnect`](https://github.com/sairo-cyber/pronoteConnect) reads
+`NOASSERTION` on GitHub's licence field. Its `LICENSE`, read first-hand on
+`raw.githubusercontent.com` on `2026-11-13`, opens with
+`SPDX-License-Identifier: GPL-3.0-or-later` — and then states the reason:
+
+> *"This license choice is compatible with the declared GPL-3.0-or-later license of the
+> `@blockshub/pawnote-lts` dependency used by this prototype."*
+
+🔵 **PRONOTE is the dominant French secondary-school information system; `pawnote` is the
+practical way to speak its protocol.** 🔴 **So the licence of the agent was decided by the
+licence of the protocol client, one layer down and before the author started.**
+
+🔵 **This is a third failure mode for `NOASSERTION` (`T27`), and the most expensive one.**
+`p810` proved the field can mask a permissive grant and can mask a prohibited one. Here it
+masks a copyleft grant whose cause is structural: relicensing the repository would not help,
+because the obligation comes from its dependency.
+
+**What it implies for an engagement.**
+
+🟢 **The remedy is a clean-room client, and it should be scoped and priced as such** — a
+protocol client for PRONOTE (or any portal whose only client library is GPL), published
+permissively, with the agent built on top. That is a funded piece of work, not a weekend,
+and it is also a durable asset: whoever owns the permissive client owns the seam for every
+French school deployment after it.
+
+🔴 **Check the DEPENDENCY licence, not only the repository licence, before quoting a
+permissive position to a client.** A repository can be MIT and still be unshippable because
+the only library that talks to the target system is not. 🔵 **Add it to intake: for every
+candidate agent, resolve the licence of the client library it uses to reach the system of
+record.**
+
+---
 
 ## T1 — The governance gap is the market, not a side issue
 
@@ -1209,7 +1336,41 @@ for a grant** — and the transform told them apart.
 🔵 **`p798-G` satisfied:** this is a rate measured somewhere it should not hold, and it did not
 hold, twice.
 
-## T30 — Regulators across four jurisdictions converged on the same control point, and England states it as a RULE rather than a principle
+## T30 — Regulators across SIX jurisdictions converged on the same control point, and England states it as a RULE rather than a principle
+
+### 🆕 Extended at the sixteenth pass (`p811`, `2026-11-13`) — two more, and one of them binds a US state's colleges
+
+🔴 **Both are `CITED, NOT READ`: `www.cbsnews.com`, `www.pna.gov.ph` and `www.holoniq.com`
+do not resolve under this session's network policy, so these rest on search-result summaries
+of named primary issuances and must be re-read before they are quoted to a client.**
+
+🟢 **🇺🇸 Florida — State Board of Education, adopted `2026-09-16`.** Reported as
+**Rule `6A-14.0719`** for the Florida College System, with a companion K-12 rule. Two
+provisions matter here. 🔵 **For students: AI may NOT be used on graded work unless the
+instructor explicitly permits it** — a default-deny on assistance, the inverse of the
+default-allow every consumer tutor assumes. 🟢 **For staff: teachers are reported to be
+prohibited from using AI as *"a decision maker, absent human review"* for grading,
+evaluations and referrals** — which is `T30`'s control point, written into a US state rule.
+🔴 **Districts and charter boards must adopt policies by `2027-07-01`** — a dated obligation,
+and the fourth one this base can sell against in North America after NC, Ohio and Mississippi.
+🔴 **An effective date could not be confirmed in the Florida Administrative Register.**
+
+🟢 **🇵🇭 Philippines — CHED, reported as Memorandum Order No. `21`, series of `2026`.**
+A national framework for higher education, quoted as saying **no AI system should
+autonomously determine academic outcomes without meaningful human review**, with stronger
+oversight named for grading, admissions, scholarships, progression and faculty evaluation.
+🔵 **Scale, as reported: `2,366` higher education institutions, `188,261` faculty, over
+`5.8 million` students.** 🔴 **Implementation period `12` months, extendable to `18` or `24`
+by institutional readiness** — so the compliance window opens around `2027-09` and the
+readiness assessment is itself billable work.
+
+🔵 **The count is now six: Ofqual 🇬🇧, Vietnam 🇻🇳, the EU 🇪🇺, Oklahoma 🇺🇸, Florida 🇺🇸,
+CHED 🇵🇭.** 🟢 **And the convergence is no longer only regulatory — `T20` records FIVE
+independent open-source implementations in five countries that gate writes behind a human
+confirm.** 🔵 **When the regulators and the implementers agree on the control point, it
+stops being a design preference and becomes the acceptance criterion: AI proposes, a named
+human decides, the system proves it.**
+
 
 **Evidence.** 🟢 **Ofqual: AI may not be the SOLE marker in regulated qualifications, and its
 guide for schools extends that to non-exam assessment.** Its January 2026 position: AI is

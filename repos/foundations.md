@@ -6,10 +6,20 @@ updated: 2026-11-13
 
 # Foundational open-source repos for education
 
-The platforms and libraries an education engagement actually builds on. **69
+The platforms and libraries an education engagement actually builds on. **70
 repos**, all verified on the `gh api search/repositories` `repo:` channel
 (license field + star count + push date), which this pass CONTROLLED against two
 invented addresses (`T970`).
+
+🟢 **Sixteenth pass (`p811`, 2026-11-13): one repo added, one phantom killed, and the
+OneRoster nil re-tested rather than restated.** The addition is
+[`LongsightGroup/oneroster`](https://github.com/LongsightGroup/oneroster) (`MIT`, REST *and*
+CSV bindings, pushed `2026-07-15`), which means the permissive OneRoster option on this
+shelf is no longer a 2020 artifact. 🔴 **The phantom is `fffnite/go-oneroster`: a live
+`pkg.go.dev` page for a repository that returns HTTP `422` on the verification channel** —
+see the rostering section for the rule that came out of it. 🔵 **Count re-derived, not
+carried:** `grep -cE '^\| .*github\.com' repos/foundations.md` = `70`, unique slugs
+extracted FROM ROWS = `70`, mapping `1:1`, zero duplicates.
 
 🟢 **Fifteenth pass (`p810`, 2026-11-13): six repos added and the six-pass nil on this
 shelf is BROKEN.** A new **rostering layer** (OneRoster — `3` repos), the sandboxed-execution
@@ -196,6 +206,20 @@ times across this base — it is the IMS Global / 1EdTech standard by which a SI
 rosters to an LMS, and every pattern here that says "sync the roster" means this. 🔴 **This
 file carried not one repository for it until now.**
 
+🟢 **`p811` re-ran the agent leg first-hand and the nil HELD:**
+`gh api -X GET search/repositories -f q="oneroster mcp"` returned **zero items** on
+`2026-11-13`, and a vendor connector page (ibl.ai, dated October 2026) states independently
+that neither 1EdTech nor ClassLink publishes an MCP server for the standard. 🔵 **Two
+channels, same answer — this is now a corroborated absence rather than a failed search.**
+
+🔴 **`p811` also killed a phantom before it reached this table.** A web result named
+`fffnite/go-oneroster` as a Go OneRoster implementation with a live `pkg.go.dev` page.
+`gh api -X GET search/repositories -f q="repo:fffnite/go-oneroster"` returns **HTTP `422`**
+— the same code this base's `T970` channel returns for an INVENTED address — while
+`bgwdotdev/go-oneroster` returns `total_count=1`. 🟢 **A package index can outlive the
+repository it indexes; the module proxy keeps serving a cached copy after the source is
+gone.** 🔵 **Rule: a package-registry page is not evidence that a repository exists.**
+
 🔴 **Read the agent gap next to it:** `agents/top.md` records a dedicated, empty leg for
 `oneroster mcp`. **The standard has tooling; it has no agent.** That asymmetry is the
 contribution target, and it is the best-evidenced one in this base.
@@ -205,6 +229,7 @@ contribution target, and it is the best-evidenced one in this base.
 | https://github.com/googleworkspace/oneroster-integration-conformance-tests | Apache-2.0 | 7 | **New this pass (`p810`).** Google Workspace's **conformance test suite for OneRoster integrations** — the only vendor-neutral way in this base to prove a roster integration actually conforms before a district signs off. `1` fork, pushed `2026-07-30`, created `2023-08-25`. 🟢 **Apache-2.0 and published by a party with no LMS to sell** — it tests the integration, it does not implement one. 🔵 Use it as an acceptance gate in a delivery contract |
 | https://github.com/oat-sa/oneroster-import | GPL-2.0 | 8 | **New this pass (`p810`).** A OneRoster **importer** from Open Assessment Technologies (OAT), the TAO assessment-platform authors. `7` forks — 🔵 **a high fork-to-star ratio (`0.88`), which in this base has consistently indicated a repo that is deployed and adapted rather than starred.** 🔴 **GPL-2.0: copyleft, so it propagates into a derived deliverable.** Run it as a separate process, do not link it |
 | https://github.com/bgwdotdev/go-oneroster | MIT | 8 | **New this pass (`p810`).** A OneRoster **API implementation in Go**. 🟢 **The only permissive OneRoster server-side implementation found on the leg.** 🔴 **Last pushed `2020-07-30` — six years stale, and shelved on that basis as a REFERENCE for the wire format, not as a dependency.** 🔵 The spec has moved since; verify against 1EdTech before reusing a line of it |
+| https://github.com/LongsightGroup/oneroster | MIT | 0 | **New this pass (`p811`), and it is the row that makes `P27` buildable.** A **TypeScript OneRoster 1.2 client** from Longsight, the higher-education open-source services firm already on this shelf for `LongsightGroup/qti3`. 🟢 **Covers BOTH bindings the standard defines — REST *and* CSV — which matters because US districts hand over CSV far more often than they stand up a REST endpoint.** Published to npm as `@longsightgroup/oneroster`; `0.3.0`. Pushed `2026-07-15`, `0★`, `0` forks. 🟢 **MIT, and six years newer than `bgwdotdev/go-oneroster`** — so the permissive OneRoster option is no longer a 2020 artifact. 🔴 `0★` and no repository description: shelved on its payload and its npm release, not on traction |
 
 ## The integration layer — LTI 1.3 (added third pass, corrected fourth)
 

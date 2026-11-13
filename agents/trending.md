@@ -4,6 +4,86 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (sixteenth pass) — **EMEA's education agent supply arrives, and it is attached to NATIONAL SCHOOL PORTALS, not to the LMS**
+
+**Pass `p811`.** 🟢 **Eight agent rows added (six build-safe, two copyleft), the shelf made
+machine-readable for the first time since `p718`, and a `Region` column added with a stated
+rule.** 🔴 **One phantom repository killed before it reached a shelf.**
+
+### The headline: five national or regional school platforms gained an agent surface in five days
+
+Every row below targets a portal operated by a ministry, a federal state or a regional
+authority — not Moodle, not Canvas, not an SIS vendor. All were pushed between `2026-11-09`
+and `2026-11-13`. All are `0–2★`.
+
+| Repo | Target system | Country | Licence | ★ | Pushed | The control it states |
+|---|---|---|---|---|---|---|
+| [`udondan/lanis`](https://github.com/udondan/lanis) | Schulportal Hessen (Lanis) | 🇩🇪 | MIT | `2` | `2026-11-09` | — (SDK + CLI + MCP) |
+| [`udondan/dsbmobile`](https://github.com/udondan/dsbmobile) | DSBmobile substitution plans | 🇩🇪 | MIT | `0` | `2026-11-12` | — |
+| [`andyswe/admentum-mcp`](https://github.com/andyswe/admentum-mcp) | Admentum | 🇸🇪 | MIT | `0` | `2026-11-11` | 🟢 **read-only, and serves messages ONE ITEM AT A TIME** |
+| [`boraita/ipasen_mcp`](https://github.com/boraita/ipasen_mcp) | iPasen / Séneca (Junta de Andalucía) | 🇪🇸 | MIT | `0` | `2026-11-10` | 🟢 **"confirmed actions"** |
+| [`weirdapps/sch-mail`](https://github.com/weirdapps/sch-mail) | Greek School Network `sch.gr` | 🇬🇷 | MIT | `0` | `2026-11-12` | — (IMAP/SMTP) |
+| [`Severnbli/edu-by-agent`](https://github.com/Severnbli/edu-by-agent) | `edu.by` site constructor | 🇧🇾 | 🔴 GPL-3.0 | `0` | `2026-11-13` | 🟢 **"preview and confirmation before EVERY write"** |
+| [`sairo-cyber/pronoteConnect`](https://github.com/sairo-cyber/pronoteConnect) | PRONOTE + EduConnect | 🇫🇷 | 🔴 GPL-3.0-or-later | `2` | `2026-09-08` | self-hosted |
+
+🟢 **`T20` moves from three jurisdictions to five.** Andalusia states a confirm step and
+Belarus states preview-and-confirm on *every* write, both in their one-line descriptions,
+neither having read the other. 🔵 **A control that independent authors in five jurisdictions
+converge on without coordination is a de-facto standard, and it should be written into the
+acceptance criteria of any student-facing agent this studio ships.**
+
+🟢 **Sweden contributes a control this base had not seen: rate-shaping the CONTEXT.**
+`admentum-mcp` serves a child's messages **one item per call**. That bounds how much of a
+minor's correspondence can enter a model context in a single tool call — a quantitative
+limit, not a prompt instruction. 🔵 **Copy it.**
+
+### The licence story: `NOASSERTION` fails in a THIRD direction
+
+`p810` proved `NOASSERTION` can mask a permissive grant (`openfoam-mcp-server`) and a
+prohibited one (`Sotto`). 🟢 **`p811` adds the third case: it can mask INHERITED copyleft.**
+
+[`sairo-cyber/pronoteConnect`](https://github.com/sairo-cyber/pronoteConnect) reads
+`NOASSERTION` on the API. Its `LICENSE`, read first-hand on `raw.githubusercontent.com`,
+opens `SPDX-License-Identifier: GPL-3.0-or-later` — and then explains itself:
+
+> *"This license choice is compatible with the declared GPL-3.0-or-later license of the
+> `@blockshub/pawnote-lts` dependency used by this prototype."*
+
+🔴 **The copyleft is not a preference, it is inherited from the only available PRONOTE client
+library.** 🔵 **Commercial consequence, stated plainly: a permissive French PRONOTE agent
+cannot be produced by asking this author to relicense. It requires a clean-room client for
+the PRONOTE protocol, and that is a funded piece of work, not a weekend.** See `T33`.
+
+### The nil that held, and the phantom that did not
+
+🟢 **`oneroster mcp` returned ZERO items** on `gh api -X GET search/repositories` on
+`2026-11-13`, and a vendor connector page dated October 2026 independently states that
+neither 1EdTech nor ClassLink ships one. 🔵 **Two channels, one answer: the OneRoster agent
+gap is corroborated, not merely unfound.**
+
+🔴 **`fffnite/go-oneroster` does not exist.** A search result and a live `pkg.go.dev` page
+named it; the verification channel returns HTTP `422` — the code this base's `T970` control
+established for an INVENTED address — while `bgwdotdev/go-oneroster` returns `total_count=1`.
+🟢 **A package registry can outlive its repository. A registry page is not existence
+evidence.**
+
+### What changed on the shelf itself
+
+🟢 **`agents/top.md` now satisfies `ingest/derive-counts.py`'s column-header signature and
+reports `derived=65 claimed=65 ragged=0 nolink=0 dupes=0 · GREEN`.** 🔴 **That gate has
+reported `RED — the table cannot be located` on this file since `p718`, so no pass in the
+interval could prove its own row count.** 🔵 `dupes=0` is a first-hand result: no slug is
+shelved twice.
+
+🟢 **The new `Region` column is filled by a stated rule (`T32`): a row is placed by the
+region in which the SYSTEM IT INTEGRATES WITH is operated**, read from the repository's own
+description. 🔴 **Not by the author's nationality** — that is person-level data, the probe
+that would resolve it at scale was deliberately not run, and `T941`'s block stands.
+
+**Shelf by region: `Global` `49` · `EMEA` `9` · `North America` `4` · `APAC` `3` ·
+🔴 `LATAM` `0`** — a published nil. No agent on this shelf integrates with a system operated
+in Latin America.
+
 ## `2026-11-13` (fifteenth pass) — **The field this base triages licences with is wrong in BOTH directions, proven twice in one hour; and a standards body shipped the agent**
 
 **Pass `p810`.** 🟢 **Twenty-two agent rows added — the largest single-pass addition this

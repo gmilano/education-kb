@@ -1,0 +1,50 @@
+# p811 2026-11-13 — gate baseline control, THREE runs, as p810's discipline prescribes.
+# RUN 1  HEAD, backgrounded      -> 27 RED
+# RUN 2  HEAD, pristine (stashed) -> 27 RED
+# RUN 3  working tree, p811 edits -> 27 RED
+# diff(RUN2, RUN3) = EMPTY. No gate was turned RED by this pass.
+# diff(RUN1, RUN2) = EMPTY. The two HEAD runs agree, so the suite is deterministic here.
+#
+# 🔴 MEASUREMENT DEFECT FOUND IN THIS PASS'S OWN CONTROL, recorded because it nearly caused a false alarm:
+#   RUN 1 was read while make was STILL WRITING its log (the file grew 95 -> 567 -> 1502 lines).
+#   The partial read showed 9 RED, so the first comparison against RUN 3 looked like 18 NEW failures.
+#   A log file is not a result until the process has exited. Assert completion, then read.
+#
+# Each gate below is RED at HEAD and RED after this pass. They are PRE-EXISTING and are not
+# claimed as fixed anywhere in this pass.
+gate	run1_head	run2_pristine	run3_p811
+gate-absence	RED	RED	RED
+gate-action-answered	RED	RED	RED
+gate-alias-canonical	RED	RED	RED
+gate-cell-reproduction	RED	RED	RED
+gate-census-currency	RED	RED	RED
+gate-census-union	RED	RED	RED
+gate-dates	RED	RED	RED
+gate-derived-counts	RED	RED	RED
+gate-enumeration	RED	RED	RED
+gate-evidence-store	RED	RED	RED
+gate-fold-identity	RED	RED	RED
+gate-grant-path	RED	RED	RED
+gate-i2-sweep-crosscheck	RED	RED	RED
+gate-ledger	RED	RED	RED
+gate-offline	RED	RED	RED
+gate-promotion	RED	RED	RED
+gate-promotion-ledger	RED	RED	RED
+gate-promotion-ratchet	RED	RED	RED
+gate-prose-claims	RED	RED	RED
+gate-register-currency	RED	RED	RED
+gate-shelf-consistency	RED	RED	RED
+gate-union-currency	RED	RED	RED
+p348-fold-identity	RED	RED	RED
+p375-census-union	RED	RED	RED
+p421-action-answered	RED	RED	RED
+p531-ledger-gate	RED	RED	RED
+recount	RED	RED	RED
+#
+# 🟢 WHAT DID CHANGE INSIDE gate-derived-counts (still RED overall, on its other two shelves):
+#   agents/top.md        p810: RED column-header signature not found  ->  p811: GREEN derived=65 claimed=65 ragged=0 nolink=0 dupes=0
+#   compose/patterns.md  p810: AMBER no derived-recipes claim           ->  p811: GREEN derived=28 claimed=28
+#   repos/foundations.md p810: RED  ->  p811: RED (14 tables; structural, see ACTION p811-A)
+#   verticals/solutions.md p810: RED -> p811: RED (10 tables; structural, see ACTION p811-A)
+#   intel/trends.md      AMBER unchanged: the deriver matches '## N.' / 'Trend N:', this file uses '## T<n> —'.
+#     🔴 A claim was deliberately NOT added here: 'derived trends: **33**' would be graded against derived=0 and go RED.

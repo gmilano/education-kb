@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-13
 ---
 
+## 🆕 `p811` — **`4` new actions, one standing gap half-discharged from the SUPPLY side, and one action CLOSED as a refusal**
+
+🟢 Machine output: [`repo-verification`](../evidence/repo-verification.2026-11-13-p811.tsv) · [`origin-location-channel`](../evidence/origin-location-channel.2026-11-13-p811.tsv) · [`websearch-legs`](../evidence/websearch-legs.2026-11-13-p811.tsv)
+
+### 🟢 `ACTION p802-B` — HALF-DISCHARGED, and re-shaped for the third time
+
+🔴 **As stated:** Germany, France and the Nordics return regulatory machinery and zero
+classroom deployment figures. 🟢 **What landed:** not statistics — **integration code**, at the
+level of the Land and the región (`T31`). Schulportal Hessen, DSBmobile, Admentum,
+iPasen/Séneca and `sch.gr` all gained permissive MCP surfaces inside five days.
+🟢 **Re-shaped, concretely this time:** the bodies that OPERATE those portals are the bodies
+that PUBLISH the usage figures. Ask Hessen's Kultusministerium for Schulportal numbers and an
+Andalusian *delegación territorial* for iPasen numbers. 🔴 **Do not re-run a national-level
+query; it has failed three times.**
+
+### 🔴 `ACTION p811-A` — the two structurally RED shelf gates
+
+🟢 **`agents/top.md` is now GREEN on `ingest/derive-counts.py` (`derived=65 claimed=65
+ragged=0 nolink=0 dupes=0`), after being blind since `p718`.** 🔴 **`repos/foundations.md`
+(14 tables) and `verticals/solutions.md` (10 tables) remain RED, and the cause is structural,
+not neglect: the gate's `SHELVES` list assumes ONE canonical table per file with a fixed
+column signature, and both files are deliberately sectioned by architectural layer.
+🔵 **Two options, and the choice should be made explicitly rather than by the next pass's
+convenience:** (a) teach the gate to accept a LIST of signatures per file and sum the rows,
+or (b) give each file one canonical roll-up table and demote the layer tables to prose.
+🟢 **(a) is correct — the layering is the value of those files.**
+
+### 🔴 `ACTION p811-B` — the LATAM agent-surface nil, now measured
+
+🔴 **`0` of `65` build-safe agents integrate with a system operated in Latin America**, against
+`92%` student and `79%` faculty AI use in the same region. 🟢 **The action is not "search
+harder": EMEA's equivalent gap closed itself this window from the portal direction, so the
+query shape that worked is `gh search repositories` pointed at the SYSTEM layer.**
+🔵 **Named targets for the next LATAM leg: SIGED (MX), SIE, SIMAT (CO), Ceibal's platforms
+(UY), SIGA, and `gob` school portals generally** — with the proviso that an `es` query returns
+Spain (`T935`), so each query must name the system, never the language.
+
+### 🔴 `ACTION p811-C` — check the DEPENDENCY licence at intake, not only the repository licence
+
+🟢 **`T33`: `pronoteConnect` is GPL-3.0-or-later because `@blockshub/pawnote-lts` is.**
+🔴 **A repository can read MIT and still be unshippable because the only library that talks to
+the target system is not.** 🟢 **Intake rule to add to the licence gate: for every candidate
+agent, resolve the licence of the client library it uses to reach the system of record.**
+🔵 **And the commercial consequence is a product idea, not just a caveat: a permissively
+licensed clean-room client for a dominant national portal is a durable asset.**
+
+### 🟢 `ACTION p811-D` — CLOSED AS A REFUSAL: do not resolve author origin by sweeping accounts
+
+🟢 **A working channel exists** — `gh api -X GET search/users -f q='user:LOGIN
+location:"PLACE"'`, positive control `user:torvalds location:Portland` → `1`, and a silent
+quoting defect documented in the evidence file. 🔴 **It was not run across the shelf, and the
+reason is not technical: sweeping ~45 individual maintainers' declared locations is
+person-level data collection about private individuals for a commercial file.** 🟢 **This
+action is recorded CLOSED so that no later pass re-opens it as an unfinished task.**
+🔵 **`T32` is the replacement and it is the better question anyway: place a row by the region
+in which the system it integrates with is operated.**
+
+---
+
 ## 🆕 `p810` — **`3` new actions, and one standing gap SUBSTANTIALLY answered from an unexpected direction**
 
 🟢 Machine output: [`repo-verification-channel`](../evidence/repo-verification-channel.2026-11-13-p810.tsv) · [`licence-byte-reads`](../evidence/licence-byte-reads.2026-11-13-p810.tsv) · [`gate-baseline-control`](../evidence/gate-baseline-control.2026-11-13-p810.txt)

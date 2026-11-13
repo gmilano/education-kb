@@ -6,10 +6,10 @@ updated: 2026-11-13
 
 # Education AI — market map and opportunities by region
 
-Researched 2026-11-13, across **fifteen** passes; each region's updates are
-ordered **newest first** directly under its heading. 🟢 **Fifteenth pass (`p810`):
-`53` `#### Update` blocks across five regions — North America `12`, EMEA `12`,
-APAC `12`, LATAM `12`, Global `5`.** 🔵 **Re-derived this pass with
+Researched 2026-11-13, across **sixteen** passes; each region's updates are
+ordered **newest first** directly under its heading. 🟢 **Sixteenth pass (`p811`):
+`58` `#### Update` blocks across five regions — North America `13`, EMEA `13`,
+APAC `13`, LATAM `13`, Global `6`. Every region gained one.** 🔵 **Re-derived this pass with
 `grep -c '^#### '` per region section, not carried forward.** 🟢 **Every region gained a
 block this pass, which is the point of the rotation — a North America or EMEA engagement is
 served as well as a LATAM one.** 🔴 **This line said "four passes" through the
@@ -94,6 +94,45 @@ across EMEA.
 ## Opportunities by region
 
 ### North America
+
+#### Update 2026-11-13 (sixteenth pass, `p811`) — 🟢 A fourth dated state obligation, and the consolidation this base predicted is now visible in HEADCOUNT
+
+🔴 **Network note, stated once and applying to every figure in this block: `www.cbsnews.com`,
+`www.pna.gov.ph` and `www.holoniq.com` do not resolve under this session's network policy.
+These are `CITED, NOT READ` — named primary issuances read through search summaries. Re-read
+them before quoting to a client.**
+
+🟢 **🇺🇸 Florida is the fourth dated obligation in this region, after NC, Ohio and
+Mississippi.** The State Board of Education adopted AI rules on **`2026-09-16`**, reported as
+**Rule `6A-14.0719`** for the Florida College System with a companion K-12 rule.
+🔵 **Districts and charter boards must adopt AI policies by `2027-07-01`.** Two provisions
+are commercially load-bearing: **students may not use AI on graded work unless the
+instructor explicitly permits it** (default-deny, the inverse of what every consumer tutor
+assumes), and **teachers are reported to be barred from using AI as "a decision maker,
+absent human review" for grading, evaluations and referrals** (`T30`). 🔴 **No effective date
+could be confirmed in the Florida Administrative Register.**
+
+🔵 **Why Florida is worth more to a studio than its size suggests:** a default-deny rule on
+graded work makes the *instructor's permission* a configuration setting that every
+courseware deployment in the state now needs, per course, with an audit trail. That is a
+small, specifiable, deadline-bound piece of work — and `P16`'s 64-campus policy pack is
+already the shape of the answer.
+
+🟢 **The consolidation has reached headcount, which is the part a client feels.** Coursera
+completed its all-stock combination with **Udemy on `2026-05-11`** (`0.800` Coursera shares
+per Udemy share; former Coursera holders ≈`59%`, Udemy ≈`41%`; a reported `$115M` cost-synergy
+target). 🔴 **On `2026-11-09` — four days before this pass — Coursera announced it would cut
+approximately `10%` of its global workforce.** 🔵 **Set beside Chegg's `45%` reduction already
+in this file, the pattern is explicit: the first businesses AI compressed in this sector are
+the ones whose product was *delivering an answer or a course catalogue*.** 🟢 **The proposal
+that survives this is the one selling governance, evaluation and integration — not content
+delivery.**
+
+🔴 **Still open, sixth pass: no education-AI spend figure for Canada or Mexico.** `p810`
+named the countries and got policy instruments; `p811` got market-wide AI figures and no
+education split. 🟢 **Re-shaped for the next pass: the number is unlikely to exist as
+"education AI spend" and should be sought as PROCUREMENT — provincial ministry tenders in
+Canada, SEP and state-level contracts in Mexico.**
 
 #### Update 2026-11-13 (fifteenth pass, `p810`) — 🟢 Canada and Mexico finally have NAMED policy instruments; 🔴 the spend figure is still missing, and faculty intent has FALLEN
 
@@ -626,6 +665,46 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-13 (sixteenth pass, `p811`) — 🟢 `ACTION p802-B` is half-discharged from the SUPPLY side: German classroom integration CODE exists at Land level, even though the statistics still do not
+
+🟢 **This region's standing gap has been "Germany, France and the Nordics return regulatory
+machinery and ZERO classroom deployment figures", failed twice.** 🔵 **`p811` did not find
+the statistics. It found the integration code, which is arguably the better artifact for a
+bid, and it found it exactly where `p810` predicted — at the level of the Land, the región
+and the ministry.**
+
+| System | Operated by | Country | Open agent surface | Licence |
+|---|---|---|---|---|
+| **Schulportal Hessen (Lanis)** | the federal state of Hesse | 🇩🇪 | [`udondan/lanis`](https://github.com/udondan/lanis) | MIT |
+| **DSBmobile** | substitution-plan service used by schools | 🇩🇪 | [`udondan/dsbmobile`](https://github.com/udondan/dsbmobile) | MIT |
+| **Admentum** | Swedish school-platform vendor | 🇸🇪 | [`andyswe/admentum-mcp`](https://github.com/andyswe/admentum-mcp) | MIT |
+| **iPasen / Séneca** | Junta de Andalucía | 🇪🇸 | [`boraita/ipasen_mcp`](https://github.com/boraita/ipasen_mcp) | MIT |
+| **Greek School Network (`sch.gr`)** | Greek Ministry of Education | 🇬🇷 | [`weirdapps/sch-mail`](https://github.com/weirdapps/sch-mail) | MIT |
+| **PRONOTE + EduConnect** | Index Éducation + the French state IdP | 🇫🇷 | [`sairo-cyber/pronoteConnect`](https://github.com/sairo-cyber/pronoteConnect) | 🔴 GPL-3.0-or-later |
+
+🟢 **All six were pushed within a five-day window ending `2026-11-13`.** 🔴 **All are `0–2★`
+and single-maintainer — supply, not adoption.** 🔵 **But it reverses this file's standing
+EMEA sentence:** European education agent supply is no longer "one project at scale and
+nothing else"; it is a dispersed, permissive, portal-attached layer that nobody has
+consolidated. 🟢 **Consolidating it is a service line.**
+
+🔵 **The buyer implication is the real content of this update.** Four of these systems are
+operated by a public body, so: the counterparty is a ministry or a federal state, the route
+is public tender, and the **Art. `27` FRIA duty falls on the deployer because the deployer is
+public**. 🟢 **A studio that arrives with the FRIA and the portal integration in the same
+proposal is answering the two questions that actually block the purchase.**
+
+🔴 **France is the cautionary one (`T33`).** The only open PRONOTE connector is
+GPL-3.0-**or-later**, and its `LICENSE` says why: the `@blockshub/pawnote-lts` client it
+depends on is GPL. 🔵 **The copyleft is inherited from the protocol client, so relicensing
+the connector is not a remedy — a permissive French deployment needs a clean-room PRONOTE
+client, scoped and funded as its own deliverable.**
+
+🔴 **Still open: the deployment statistics, third consecutive failure.** 🟢 **Re-shaped
+again, and more concretely: ask the Land, not the country — Hessen's Kultusministerium
+publishes Schulportal usage, and an Andalusian *delegación territorial* publishes iPasen
+figures. The portals that now have agents are the same bodies that publish the numbers.**
 
 #### Update 2026-11-13 (fifteenth pass, `p810`) — 🟢 England supplies a HARD assessment rule; 🔴 `ACTION p802-B` FAILS A SECOND TIME — Germany, France and the Nordics return regulators and still no classroom deployment
 
@@ -1177,6 +1256,42 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-13 (sixteenth pass, `p811`) — 🟢 A fifth national instrument with a dated window and a NAMED population, plus a dated Australian obligation
+
+🔴 **`CITED, NOT READ`: `www.pna.gov.ph` does not resolve under this session's network
+policy. The issuance is named; re-read it before quoting.**
+
+🟢 **🇵🇭 Philippines — CHED Memorandum Order No. `21`, series of `2026`.** A national
+framework for responsible AI across higher education, reported to require that **no AI
+system autonomously determine academic outcomes without meaningful human review**, with
+oversight named specifically for grading, admissions, scholarships, progression and faculty
+evaluation. 🔵 **The population is stated and it is large: `2,366` higher education
+institutions, `188,261` faculty, over `5.8 million` students.** 🟢 **Implementation period
+`12` months, extendable to `18` or `24` depending on institutional readiness** — so the
+window opens around `2027-09`, and **the readiness assessment that decides an institution's
+extension is itself a billable engagement**, available now.
+
+🟢 **🇦🇺 Australia has a dated, binding obligation that this file did not carry: the Privacy
+Act's automated-decision-making transparency requirement takes effect `2026-12-10`.** 🔵 **It
+is not education law, which is precisely why it bites** — a university using an automated
+system in a decision that significantly affects an individual must disclose it in its privacy
+policy. 🟢 **Pair it with TEQSA's institutional generative-AI action plan, already in this
+file, and Australia becomes the APAC market with two independent, dated compliance hooks.**
+
+🔵 **🇸🇬 Singapore published a Model AI Governance Framework for *Agentic* AI in January
+2026**, extending the 2020 framework. 🔴 **Voluntary, and not education-specific** — but it
+is the first governance text in this base aimed at agents rather than models, which is the
+exact artifact class this KB ships.
+
+🔵 **🇻🇳 Vietnam's July 2026 decision is reported to list education — automated assessment
+specifically — among its high-risk AI sectors**, consistent with the Law on AI
+(`2026-03-01`) already held here, which requires pre-deployment registration.
+
+🔴 **Still open, sixth pass: `0` procurement documents for India, Singapore or Australia.**
+🟢 **Diagnosis unchanged and now more confident — this is a TENDER-ACCESS gap, not a
+discovery gap** (AusTender, GeBIZ and CPPP are portals a search engine does not index well).
+🔵 **It will not be closed by another web search; it needs a portal account.**
+
 #### Update 2026-11-13 (fifteenth pass, `p810`) — 🟢 India turns the region's largest curriculum mandate into a DATED teacher-training problem, which is a services market
 
 🟢 **India is now the most concrete education-AI opportunity in APAC, and it is a TRAINING
@@ -1726,6 +1841,40 @@ example of.
 
 ### LATAM
 
+#### Update 2026-11-13 (sixteenth pass, `p811`) — 🔴 The agent-supply nil is now MEASURED: `0` of `65` build-safe agents integrate with a system operated in this region
+
+🔴 **This is the hardest number this file has produced about LATAM, and it comes from this
+base's own shelf rather than from a vendor report.** `agents/top.md` now carries a `Region`
+column filled by a stated rule (`T32`: place a row by the region in which the system it
+integrates with is operated). **Of `65` build-safe rows: `Global` `49`, `EMEA` `9`,
+`North America` `4`, `APAC` `3`, `LATAM` `0`.**
+
+🔵 **Read it next to the adoption figures this file already holds** — `92%` of students and
+`79%` of faculty using AI (Digital Education Council LATAM `2026` with Tecnológico de
+Monterrey), `87%` of institutions using AI against `9%` evaluating it (UNESCO IESALC, `200`
+institutions / `19` countries), Brazil at `56%` of secondary teachers using AI against an
+OECD average of `36%` and Chile at `55%`. 🔴 **The highest adoption in this base, and zero
+agent surface for the systems those institutions actually run.**
+
+🟢 **That asymmetry is the proposal.** EMEA's supply appeared this window as seven
+single-maintainer agents attached to national and regional school portals (`T31`). 🔴 **The
+equivalent for LATAM — an agent for SIGED, SIE, SIMAT, Ceibal's platforms, or any state
+education portal — does not exist in this base at all.** 🔵 **First mover owns the seam, and
+the seam is where the margin is.**
+
+🔵 **Governance evidence, unchanged in direction and now better dated:** Brazil's
+`Parecer CNE/CP nº 15/2026` (homologated `2026-11-10`) starts a `12`-month clock on policies,
+governance instruments and **contracts**; only `22%` of Brazilian schools are reported to have
+AI guidelines while `53%` of school administrators use AI. 🔴 **Brazil's `PL 2338` has
+slipped again — a vote expected in December 2025 is now discussed for December 2026** — and
+🔵 **Chile's bill is in second reading in the Senate, tied to its new data-protection
+institutions.** 🟢 **Mexico still has no AI statute**, which keeps `P4`'s institutional
+governance package the right first sale there.
+
+🔴 **Unchanged and still correct: `es` ≠ LATAM (`T935`).** 🟢 **`T32` now explains what to do
+instead — stop trying to place a row by its author and place it by the system it targets.
+That rule is what produced the `0`, and the `0` is trustworthy because of it.**
+
 #### Update 2026-11-13 (fifteenth pass, `p810`) — 🟢 The UNESCO Observatory is now a DATED institution with named partners, and the teacher-adoption / institutional-readiness gap is confirmed from a third instrument
 
 🟢 **The Observatory on Artificial Intelligence in Education for Latin America and the
@@ -2258,6 +2407,36 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-13 (sixteenth pass, `p811`) — 🔴 The capital has turned, and it turned AWAY from education toward workforce
+
+🔴 **`CITED, NOT READ`: `www.holoniq.com` does not resolve under this session's network
+policy. Every figure here is from search-result summaries of HolonIQ's own notes and must be
+re-read before it is quoted.**
+
+🔵 **The funding picture, as reported.** Q1 `2026` education venture funding **`$512M`
+across `63` deals** — down `24%` in value and `10%` in volume year on year, with the decline
+attributed to fewer large rounds rather than falling interest. 🔴 **More than `70%` of that
+quarter's capital went to WORKFORCE TRAINING**, the largest round being Preply at `$150M`.
+🔵 Annual context: `$2.6B` in `2025` against `$2.3B` in `2024` (other sources say `$2.4B` for
+`2025` — methodology differs, so quote the direction, not the decimal).
+
+🟢 **And the M&A number is the one that matters for positioning: `116` education transactions
+in Q1 `2026` alone**, the largest being Coursera–Udemy. 🔵 **A market with falling venture
+volume and rising transaction count is consolidating, and consolidating markets buy
+integration and migration work.**
+
+🟢 **The demand-side counterpart, also HolonIQ: AI and data accounted for `12%` of higher
+education partnerships in `2026`, against `2.1%` in `2021`.** 🔵 **That is a
+roughly six-fold rise in five years in the share of institutional partnerships that are
+AI-shaped — the clearest single indicator in this file that the buying has moved from pilots
+to partnership structures.**
+
+🔵 **What this base takes from it, stated as positioning rather than as data.** `T23` already
+recorded assessment splitting into institutional and workforce halves; the Q1 split
+(`>70%` to workforce) is the capital confirming it. 🟢 **A studio proposal aimed at
+credentials, skills and job-aligned assessment is pointed at where the money is going;
+one aimed at content delivery is pointed at where Chegg and Coursera just cut headcount.**
 
 #### Update 2026-11-13 (fifteenth pass, `p810`) — 🟢 A fourth independent instrument lands on the same conclusion, and the evidence bar is now a NUMBER
 

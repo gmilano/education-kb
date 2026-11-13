@@ -1,0 +1,18 @@
+# p811 2026-11-13 — a channel that resolves a GitHub account's DECLARED location without the blocked users/{login} endpoint.
+# CHANNEL: gh api -X GET search/repositories ... is for repos; for accounts: gh api -X GET search/users -f q='user:LOGIN location:"PLACE"'
+# READING: total_count=1 CONFIRMS the declared location contains PLACE. A 0 is AMBIGUOUS three ways:
+#   (a) a different location, (b) an empty location field, (c) an UNQUOTED multi-word place.
+# DEFECT FOUND: 'location:Hong Kong' (unquoted) parses as location:Hong + free-text 'Kong' and returns 0
+#   for an account whose location IS Hong Kong. The same query quoted returns 1. The failure is SILENT.
+# NOT RUN AT SCALE, DELIBERATELY: sweeping ~45 individual maintainers' declared locations is person-level
+#   data collection about private individuals for a commercial file. Declined. Author origin therefore stays
+#   unresolved in this base BY CHOICE. No later pass should "fix" this by running the sweep.
+# WHAT WAS USED INSTEAD: T32 — place a row by the region in which the SYSTEM IT INTEGRATES WITH is operated,
+#   read from the repository's own description.
+query	total_count	verdict	role
+user:torvalds	1	exists	baseline
+user:torvalds location:Portland	1	CONFIRMED	POSITIVE CONTROL (public figure, well-known declared location)
+user:zzzz-not-a-real-account-p811 location:"Portland"	0	-	NEGATIVE CONTROL
+user:HKUDS location:Hong Kong	0	misleading 0	DEFECT DEMONSTRATION — unquoted multi-word place
+user:HKUDS location:"Hong Kong"	1	CONFIRMED	organisation account (HKU Data Intelligence Lab); quoting fix
+location:France followers:>1000	134	-	sanity check that the qualifier filters at all

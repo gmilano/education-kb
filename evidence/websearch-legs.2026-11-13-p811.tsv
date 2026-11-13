@@ -1,0 +1,19 @@
+# p811 2026-11-13 — the scheduler's prescribed search battery, leg by leg, with YIELD recorded.
+# Year computed at run time = 2026. Each leg run globally, then once per region.
+# NETWORK: www.holoniq.com, www.pna.gov.ph, www.cbsnews.com, www.gov.br do NOT resolve under this
+#   session's network policy. Facts from them are marked CITED, NOT READ. raw.githubusercontent.com DOES resolve.
+leg	query	yield	what it produced
+global-agents	top open source AI agents education 2026 github MIT	NIL	general-purpose agent listicles; every education item returned (DeepTutor, Claw-ED, interactive-learning) already shelved
+global-trending	github trending education AI 2026	NIL	same three repos, via aggregators; no new education repo
+global-verticals	open source platform education ERP CRM MIT Apache student information system 2026	NIL	ERPNext/OpenEduCat/Odoo/OpenSIS/Gibbon/RosarioSIS/Moodle — all already in verticals/solutions.md; note that EVERY result was GPL-family
+global-trends	AI education industry trends 2026 HolonIQ market funding	HIT	HolonIQ Q1-2026 $512M/63 deals/-24% value, >70% to workforce training, Preply $150M, 116 M&A transactions, 2025 $2.6B vs 2024 $2.3B; Q3-2026 AI+data = 12% of HE partnerships vs 2.1% in 2021. CITED, NOT READ
+region-NA	AI education North America 2026 adoption regulation players Canada Mexico	PARTIAL	Canada "AI for All" + Mexico National AI Plan already held; faculty intent 76%->67% already held; NO education spend figure for CA/MX (sixth consecutive nil)
+region-EMEA	AI education EMEA 2026 adoption regulation players	PARTIAL	EU AI Act dates already held; UK DfE product safety standards Jan-2026 and Ofqual Mar-2026 already held; OpenAI EMEA partnerships (Estonia, Slovakia, Greece, Italy) reported by a secondary source only -> NOT carried
+region-APAC	AI education APAC 2026 adoption regulation players India Singapore Australia	HIT	Australia Privacy Act automated-decision transparency effective 2026-12-10; Singapore Model AI Governance Framework for Agentic AI Jan-2026; Vietnam Jul-2026 decision listing education/automated assessment high-risk
+region-LATAM	AI education LATAM 2026 adoption regulation players Brasil Mexico Chile	PARTIAL	Brazil 56% of secondary teachers using AI vs OECD 36%, Chile 55%; 22% of Brazilian schools have guidelines vs 53% of administrators using AI; PL 2338 vote slipped to Dec-2026; Chile bill in Senate second reading
+targeted-1	Florida rule AI graded work + Philippines CHED national AI framework	HIT	Florida SBE adopted 2026-09-16, Rule 6A-14.0719, districts by 2027-07-01, default-deny on graded work, no AI as sole decision maker; CHED Memorandum Order No. 21 s.2026 — 2,366 HEIs / 188,261 faculty / 5.8M students, 12 months extendable to 18-24
+targeted-2	Coursera Udemy merger 2026 edtech M&A	HIT	closed 2026-05-11, all-stock 0.800, ~59%/41%, $115M synergy target; Coursera announced ~10% global workforce cut 2026-11-09
+targeted-3	OneRoster MCP server github open source roster API agent	HIT (as a NIL)	no OneRoster MCP server exists; ibl.ai (Oct-2026) states neither 1EdTech nor ClassLink ships one; surfaced LongsightGroup/oneroster (MIT) and usechalk/chalk (AGPL-3.0)
+gh-supply-1	gh search repositories: "oneroster mcp"	NIL (corroborated)	zero items — the agent gap is now two-channel corroborated rather than merely unfound
+gh-supply-2	gh search repositories: "mcp server school pushed:>2026-11-05"	HIT — the pass's finding	five national/regional school-portal MCP servers (DE Hessen, DE DSBmobile, SE, ES Andalucia, GR) + edu.by (GPL). T31
+gh-supply-3	gh search repositories: "xapi mcp server"	POISONED TOKEN	every result was X (Twitter) API or Xapian. "xapi" is not a usable search token on this channel; use "experience api" or "learning record store"

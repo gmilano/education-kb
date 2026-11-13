@@ -1,0 +1,20 @@
+# p811 2026-11-13 — repo existence/licence verification.
+# CHANNEL: gh api -X GET search/repositories -f q="repo:OWNER/NAME"
+# WHY NOT curl -sI: T923 — returns 403 for live AND invented addresses, so it cannot verify existence.
+# WHY NOT gh api repos/{owner}/{repo}: refused, session bound to its configured repositories (T941).
+# CONTROL: an invented address returns HTTP 422; a live one returns total_count=1. A 422 and a 1 are distinguishable.
+slug	total_count	licence_spdx	stars	forks	pushed	created	default_branch	disposition
+udondan/lanis	1	MIT	2	0	2026-11-09	2026-03-22	main	SHELVED build-safe (EMEA)
+udondan/dsbmobile	1	MIT	0	0	2026-11-12	2026-03-22	main	SHELVED build-safe (EMEA)
+andyswe/admentum-mcp	1	MIT	0	0	2026-11-11	2026-10-25	main	SHELVED build-safe (EMEA)
+boraita/ipasen_mcp	1	MIT	0	0	2026-11-10	2026-10-30	main	SHELVED build-safe (EMEA)
+weirdapps/sch-mail	1	MIT	0	0	2026-11-12	2026-10-01	master	SHELVED build-safe (EMEA)
+underconnor/alms-server	1	MIT	0	0	2026-11-10	2026-10-22	main	SHELVED build-safe (Global — no country-bound target named)
+Severnbli/edu-by-agent	1	GPL-3.0	0	0	2026-11-13	2026-11-09	main	SHELVED copyleft
+sairo-cyber/pronoteConnect	1	NOASSERTION	2	0	2026-09-08	2026-09-08	main	SHELVED copyleft — LICENSE byte-read = GPL-3.0-or-later (T33)
+LongsightGroup/oneroster	1	MIT	0	0	2026-07-15	-	-	SHELVED foundation (OneRoster client, REST+CSV)
+usechalk/chalk	1	AGPL-3.0	2	-	2026-11-09	-	-	SHELVED vertical (AGPL — integrate, never derive)
+bgwdotdev/go-oneroster	1	MIT	8	-	2020-07-30	-	-	already shelved p810; re-verified live
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS	1	Apache-2.0	28	-	2026-11-13	-	-	already shelved; re-verified live
+fffnite/go-oneroster	HTTP 422	-	-	-	-	-	-	REJECTED — PHANTOM. pkg.go.dev page exists, repository does not.
+zzzz-invented-repo-p811/nope	HTTP 422	-	-	-	-	-	-	NEGATIVE CONTROL — invented address, as designed
