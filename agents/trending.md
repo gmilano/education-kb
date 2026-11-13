@@ -4,6 +4,138 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (fourteenth pass) — **Two LMS platforms this base named 330 times between them, and shelved zero agents for, both turn out to be served — one at `67★`. The gap was on the shelf, not in the market**
+
+**Pass `p809`.** 🟢 **Five agent rows added, one rejection, one published star figure
+corrected downward by `183★`.** The prescribed battery returned its **seventh**
+consecutive nil. Every one of the five came from the SEAM transform `p808` prescribed,
+run against the seams `p808` listed and did not reach.
+
+### The headline defect, and it is the second instance of a shape that is now a pattern
+
+🔴 **This base has written `Brightspace` `171` times and `Blackboard` `159` times across
+its own files. It carried an agent for neither.** The only shelf mention of either was a
+passing note in `compose/patterns.md` that LTI 1.3 libraries mount into them.
+
+🟢 **Both are served, and not thinly:**
+
+| Platform | Agents found | Best row |
+|---|---|---|
+| **D2L Brightspace** | `2` independent MIT servers (plus `1` rejected) | [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) — `MIT`, `67★`, `492` commits |
+| **Blackboard Learn** | `3` servers, `2` MIT + `1` ISC | [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) — `ISC`, `13★`, `851` commits |
+
+🔵 **The eleventh pass found the same shape**: the US state data standard, mentioned
+`249` times in these logs and shelved `0` times. 🟢 **Two instances make it a rule, and
+it is cheap to act on: when this base names a platform repeatedly and shelves nothing
+for it, that is a standing search instruction, not a market finding.** The remaining
+names with high prose counts and zero shelf rows should be swept the same way next pass:
+`PowerSchool` (`53` mentions), `Schoology`, `Infinite Campus`, `Skyward`.
+
+### The five rows, measured first-hand
+
+| Repo | Licence (payload) | ★ | Commits | Write posture | Origin |
+|---|---|---|---|---|---|
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | 🟢 `MIT` `1,068 B` `047079fbd491` | `67` | `492` | 🔴 **Read-only by declaration** | 🇺🇸 Purdue (NA) |
+| [`JhostinAleck/brightspace-mcp`](https://github.com/JhostinAleck/brightspace-mcp) | 🟢 `MIT` `1,070 B` `008ec594c78e` | `16` | `452` | 🟢 **`3` writes behind a two-opt-in gate** | 🇨🇴 `es-419` / `America/Bogota` (LATAM) |
+| [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | 🟢 `ISC` `748 B` `4ca1bd2e969c` | `13` | `851` | 🔴 Read-only vs Blackboard | 🇵🇪 UPC/UPN, topic `peru` (LATAM) |
+| [`kingdonkatsu/ntulearn-mcp`](https://github.com/kingdonkatsu/ntulearn-mcp) | 🟢 `MIT` `1,055 B` `e6bd1450153a` | `4` | `28` | 🔴 Read-only; cookie-scraped session | 🇸🇬 NTU (APAC) |
+| [`Mattlo0546/blackboard-mcp`](https://github.com/Mattlo0546/blackboard-mcp) | 🟢 `MIT` `1,067 B` `13c8ad755224` | `1` | `4` | 🔴 Read-only by declaration | Global (vendor-neutral Ultra) |
+
+🟢 **Every licence above was fetched as bytes over `raw.githubusercontent.com` and sized
+and hashed**, because that is the only channel in this session that can tell a real grant
+from a README sentence — and this pass it caught one.
+
+### 🔴 The rejection, and the contamination channel behind it
+
+[`bencered/d2l-mcp-server`](https://github.com/bencered/d2l-mcp-server) (`12★`) carries a
+README section reading `License: MIT`. **There is no licence payload: `404` at both
+`main` and `master` roots, and GitHub's own detector shows nothing in the sidebar.**
+Default all-rights-reserved. **REJECTED.**
+
+🔵 **The channel is the finding.** The aggregator `glama.ai` published *"License MIT"*
+for it, read off the README. 🔴 **The same aggregator layer reported
+`RohanMuppa/brightspace-mcp-server` as `AGPL-3.0`** — its payload is a byte-verified
+`MIT`, `1,068 B`. 🟢 **So the aggregator was wrong in BOTH directions in a single pass,
+on two repositories in the same category.** Aggregator licence fields are not evidence
+for admission or for rejection. Only the payload is.
+
+### 🔴 A published star count in this base is wrong by `183★`
+
+`iblai/os` appears in these files at **`821★`** (three places) and at `654★` (one).
+**Read from the rendered page on 2026-11-13: `638★`.** 🔵 Stars do not fall by `183`;
+the `821` was never correct. 🟢 **`agents/top.md` now carries `638`**, and the standing
+rule is restated: no row keeps a star figure it did not read this pass.
+
+### 🔴 The "open-source Agentic SIS" is a front end — and this base nearly published the vendor's framing
+
+The SIS seam returned a vendor, `ibl.ai`, marketing an **MIT, self-hostable Agentic SIS**,
+with the code at [`iblai/sis`](https://github.com/iblai/sis). 🟢 **The grant is real**:
+`1,089 B`, `sha256:969b7073d1c42ac2…`, affero×`0`. 🔴 **The README is equally plain:**
+
+> *"ibl.ai/sis is a front end for the ibl.ai platform."*
+> *"If you need the full backend, reach out at ibl.ai/contact for an enterprise license."*
+
+It writes **no backend endpoints of its own**; sign-in goes to `login.iblai.app`; the
+listed backends — ibl.ai Data Manager, Open edX with ibl plugins, Studio — are **not
+included**. 🔵 **Same shape as `iblai/lms`** (`MIT`, `95★`, `1,071` commits: *"you need
+access to an ibl.ai backend instance"*) **and `iblai/os`** (`MIT`, `638★`: *"requires the
+ibl.ai backend platform … not included in this repository"*). 🟢 **This base had already
+caught the pattern on `os`; the value of this pass is confirming it holds across the
+whole estate, including the two repositories (`sis`, `lms`) that look most like the SIS
+gap closing.** **The SIS gap does not close here.** All three are recorded in
+`verticals/solutions.md` under an explicit open-core flag, not on the agent shelf.
+
+### 🟢 Two 29-tool Brightspace servers took opposite governance decisions — and that is the reusable artefact
+
+Both expose exactly `29` tools. They diverge completely on writes:
+
+- **`RohanMuppa`** refuses them: *"It only reads your courses. It never submits, edits,
+  or deletes anything."* Auth through the school's own SSO + 2FA, password in the OS
+  keychain, session state **AES-256-GCM**.
+- **`JhostinAleck`** allows three (`submit_assignment`, `post_discussion_reply`,
+  `mark_announcement_read`) behind **two independent opt-ins** (`writes.enabled: true`
+  *and* `--enable-writes`), a **`dry_run`** preview, a **client-supplied idempotency key**
+  per write, and a **warning-level audit-log entry** per write.
+
+🔴 **`submit_assignment` is the live wire**: an agent that can submit coursework is an
+academic-integrity decision shipped as a config flag. 🟢 **The pairing is the artefact to
+reuse** — it is the clearest statement in this base that in education the write gate *is*
+the product decision, and `T20` is extended accordingly. 🔵 `JhostinAleck`'s gate is now
+the strongest in this base, ahead of `che-ntucool-mcp`'s `prepare_* → confirm_action`,
+because it adds idempotency and an audit trail rather than only a confirmation step.
+
+### 🔴 Declared gap, stated so it is not mistaken for silence: the higher-ed SIS/ERP tier
+
+**Ellucian Banner**, **Ellucian Colleague** and **Workday Student** returned **no
+open-source MCP server or agent of any kind**, from two independent query angles. What
+exists: Ellucian documents **Ethos** (Data Model APIs, Business Process APIs, GraphQL)
+and publishes no MCP server; Workday ships proprietary *Agent-Ready Tools*; the rest are
+vendor connector pages. 🟢 **This is now the sharpest supply gap in the base** — these
+are the systems of record for most of North American higher education, and the
+OpenEduCat lesson (wrap the *platform*, not the vertical) says the move is a thin server
+over Ethos. **Nobody has built it.**
+
+### 🔴 Channels that did not resolve, recorded so the leads are not lost
+
+`glama.ai` and `oeltkit.bcltraining.com` **do not resolve under this session's network
+policy**. Two reported finds therefore could **not** be verified and are deliberately
+**not** shelved: **`mcp-powerschool`** (reported `MIT`, FastMCP, PowerSchool grades /
+assignments / attendance, OAuth2) and **`OELTKit`** (reported `Apache-2.0`, AI-first
+course builder, SCORM + cmi5). 🟢 **Both are first-page leads for the next pass via a
+channel that does resolve** — `raw.githubusercontent.com` works if the owner/name can be
+recovered.
+
+### Also shelved off the agent table
+
+[`dmmat/Scormly`](https://github.com/dmmat/Scormly) — `MIT` (`1,071 B`,
+`sha256:68e4711e4e5fb60b…`), `5★`, `93` commits. Browser-only course builder, **no
+backend**, exports **SCORM 1.2/2004** (verified on SCORM Cloud per its README) and
+**cmi5/xAPI** (implemented, *not* yet verified against a live LRS). Not an agent → filed
+in `repos/foundations.md`. 🔵 It generates an `AGENTS.md` per project, which is a small
+signal of where authoring tools now expect agents to arrive.
+
+---
+
 ## `2026-11-13` (thirteenth pass) — **The five-pass nil is broken, and what broke it was changing the SEAM the query aimed at, not the words in it**
 
 **Pass `p808`.** 🟢 **Two agent rows added, one rejection, after five consecutive passes

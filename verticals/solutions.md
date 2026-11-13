@@ -214,6 +214,46 @@ LATAM, OpenEduCat → APAC/LATAM SMB, RosarioSIS → LATAM, Canvas/Open edX →
 North America.** 🔴 **Both permissive rows are under 60 stars; verify
 maintenance before committing a client to either.**
 
+## Open-core platforms — a real MIT grant over a commercial system of record (new, `p809`)
+
+🔴 **Read this section before quoting any ibl.ai repository to a client.** The estate is
+genuinely `MIT` — every payload below was fetched and hashed this pass — **and every
+application in it is a front-end client whose backend is not in the repository and is
+sold under an enterprise licence.** Both halves of that sentence are true at once, and
+this base has twice come close to publishing only the first half.
+
+| Platform | Repo | License (payload-verified) | Stars | What you actually get | What you do NOT get |
+|---|---|---|---|---|---|
+| ibl.ai SIS | https://github.com/iblai/sis | MIT (`1,089 B`, `969b7073d1c42ac2`) | 1 | Next.js 16 + Tauri 2 student information **front end**: students/staff directory, enrolment, grades & GPA, credentials, guardians, course runs, rosters, gradebook, terms/periods/rooms, reports, messaging, ⌘K palette. **4 languages** (en/es/fr/zh), native shells for macOS/Windows/Linux/iOS/Android. | 🔴 The system of record. README: *"a front end for the ibl.ai platform"*; *"If you need the full backend, reach out at ibl.ai/contact for an enterprise license."* Writes **no backend endpoints of its own**; sign-in goes to `login.iblai.app`; requires ibl.ai Data Manager + Open edX with ibl plugins + Studio. |
+| ibl.ai LMS | https://github.com/iblai/lms | MIT (`1,063 B`, `f1269b7b2313456a`) | 95 | Skills-intelligence learning platform: course discovery, **skill-growth tracking, digital credentials, learning paths**, admin analytics, multi-tenant branding. `1,071` commits. 🟢 The closest open artefact in this base to the skills-first direction `T23` describes. | 🔴 README: *"To use this app, you need access to an ibl.ai backend instance"* — skills/course API, EdX delivery, auth, data platform, optional AI-mentor API. |
+| ibl.ai OS | https://github.com/iblai/os | MIT (`1,070 B`, `13029f084e13d864`) | **638** | Agent platform: institution-defined agents bound to their own documents, multi-provider routing, voice, analytics, SSO, embeddable widgets. | 🔴 README: *"requires the ibl.ai backend platform for authentication, AI agent APIs, and data services"*, *"not included in this repository"*. |
+| ibl.ai Ontology | https://github.com/iblai/ontology | MIT (`1,063 B`, `f1269b7b2313456a`) | 12 | 🟢 **The one piece of the estate that stands alone.** On-premise knowledge layer making **PeopleSoft, Snowflake, Canvas and Salesforce** queryable by agents **over MCP** — *"no data extraction, your data stays in your network"*. `97` commits. | — |
+
+🔴 **Star correction carried into this file: `iblai/os` is `638★`. This base published
+`821★`.** Measured from the rendered page, 2026-11-13.
+
+🟢 **How to use this honestly in an engagement.** These are high-quality front ends under
+a permissive grant — forking and white-labelling `sis` or `lms` is legitimate and fast.
+🔴 **But the SIS gap in this base does not close here**, because the record these clients
+display lives in a proprietary backend. If the client needs to own the system of record,
+the open paths remain OpenEduCat-on-Odoo (LGPL-3.0 addons + `MIT`/`MPL-2.0` Odoo MCP
+servers), or building on Frappe. Say which one you mean.
+
+## Brightspace and Blackboard — the two incumbents this file had no agent surface for (new, `p809`)
+
+🔴 **Both platforms were named repeatedly across this KB and carried zero connector
+rows.** Corrected this pass. Neither vendor publishes an MCP server of its own (checked
+2026-11-13), so **every path below is unofficial** — REST API, SSO session, or scraped
+cookie — which is a contract question before it is an architecture one.
+
+| Platform | Incumbent where | Open agent surface found | License | Stars |
+|---|---|---|---|---|
+| **D2L Brightspace** | Canadian & US higher ed, Dutch, Singaporean, Colombian institutions | https://github.com/RohanMuppa/brightspace-mcp-server — `29` tools, **read-only by declaration**, SSO + 2FA, OS keychain, AES-256-GCM session state | MIT | 67 |
+| **D2L Brightspace** | — | https://github.com/JhostinAleck/brightspace-mcp — `29` tools (`26` read / `3` write), **two-opt-in write gate + `dry_run` + idempotency key + audit log**, 4 auth strategies, `es-419` locale | MIT | 16 |
+| **Blackboard Learn** | LATAM private universities (UPC, UPN — Peru) | https://github.com/alejooroncoy/campus-cli — CLI **and** MCP server, `851` commits. 🔴 **Tools are brokered by a remote relay (`mcp.campuscli.com`)**: credentials cross a third party | ISC | 13 |
+| **Blackboard Learn** | APAC (NTU Singapore) | https://github.com/kingdonkatsu/ntulearn-mcp — `8` tools. 🔴 Auth is a **`BbRouter` session cookie auto-read from the browser** | MIT | 4 |
+| **Blackboard Learn (Ultra)** | Vendor-neutral | https://github.com/Mattlo0546/blackboard-mcp — read-only, university SSO, Python. 🔴 **`4` commits — reference only** | MIT | 1 |
+
 ## Admissions and enrolment CRM — where the permissive option is general-purpose, not educational
 
 🟢 **New section at the twelfth pass (`p807`, 2026-11-13).** The prescribed

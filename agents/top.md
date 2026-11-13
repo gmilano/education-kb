@@ -6,210 +6,78 @@ updated: 2026-11-13
 
 # Education AI Agents — curated, license-verified
 
-**39 real agents** below — **32 build-safe** (MIT / Apache-2.0 / BSD / ISC) plus
-**7 copyleft** — **two rows added at the thirteenth pass (`p808`, 2026-11-13)**.
+**44 real agents** below — **37 build-safe** (MIT / Apache-2.0 / BSD / ISC) plus
+**7 copyleft** — **five rows added at the fourteenth pass (`p809`, 2026-11-13)**,
+the largest single-pass addition since `p806`.
 
-🟢 **Thirteenth pass (`p808`, 2026-11-13) — THE NIL STREAK IS BROKEN.** Two rows added:
-[`geekjourneyx/interactive-learning`](https://github.com/geekjourneyx/interactive-learning)
-(`MIT`, `52★`) to the build-safe table and
-[`X-isdoingreat/canvas-pilot`](https://github.com/X-isdoingreat/canvas-pilot)
-(`AGPL-3.0`, `125★`) to the copyleft table, plus one new rejection
-(`end13s/AI-Grading-Tool`, no licence). 🔵 **Neither came from the prescribed battery,
-which returned its sixth consecutive nil.** Both came from a differentiated leg aimed at
-the *LMS seam* rather than at "education agents": `open source AI tutor grading agent
-github MIT 2026 LMS Moodle Canvas integration`. 🟢 **That query shape is the reusable
-finding and should be run again next pass** — see `T24`.
+🟢 **Fourteenth pass (`p809`, 2026-11-13) — the SEAM transform `p808` prescribed was
+run against the remaining LMS seams, and it returned five shelf-ready agents while the
+prescribed domain battery returned its SEVENTH consecutive nil.** Added:
+[`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server)
+(`MIT`, `67★`), [`JhostinAleck/brightspace-mcp`](https://github.com/JhostinAleck/brightspace-mcp)
+(`MIT`, `16★`), [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli)
+(`ISC`, `13★`), [`kingdonkatsu/ntulearn-mcp`](https://github.com/kingdonkatsu/ntulearn-mcp)
+(`MIT`, `4★`) and [`Mattlo0546/blackboard-mcp`](https://github.com/Mattlo0546/blackboard-mcp)
+(`MIT`, `1★`), plus one new rejection ([`bencered/d2l-mcp-server`](https://github.com/bencered/d2l-mcp-server)).
 
-🟢 **COUNT DERIVATION, recorded as a command because five passes of prose have drifted.**
-Re-derived this pass: **MIT `23`, Apache-2.0 `6`, ISC `2`, BSD-3-Clause `1` = `32`
-build-safe**; **AGPL-3.0 `4`, GPL-3.0 `2`, MPL-2.0 `1` = `7` copyleft**; **total `39`.**
-🔴 **The defect that keeps recurring is now diagnosed: a naive `grep -cE '^\|.*github\.com'`
-over this file returns `45`, not `39`, because it also counts the `6` rows of the
-`## Rejected candidates and why` table.** 🔵 **The rejected rows are real repositories but
-are NOT agents on this shelf, and every past overcount traces to including them.** The
-next pass should run exactly this and trust nothing in this paragraph:
+🔴 **The finding that matters more than the rows: this base has named Brightspace `171`
+times and Blackboard `159` times in its own prose, and had never once carried an agent
+for either.** Both are served — Brightspace by two independent MIT servers, the larger at
+`67★`; Blackboard by three, one of them `ISC` with `851` commits. 🟢 **The gap was never
+in the market. It was on the shelf.** This is the same defect shape the eleventh pass
+found with the US state data standard (mentioned `249` times, shelved `0` times), and it
+is now the *second* confirmed instance, which makes it a pattern rather than an accident:
+**when this base names a platform often and shelves nothing for it, that is a search
+instruction, not a market fact.**
+
+🔵 **The reusable query shape, confirmed for a second pass.** Name the SEAM, not the
+DOMAIN. `open source MCP server github MIT Blackboard Brightspace D2L LMS agent 2026`
+and `"Blackboard Learn" MCP server open source github AI agent 2026` each returned
+education-specific repositories on the first page; `top open source AI agents education
+2026 github MIT` returned `OpenHands`, `MetaGPT`, `browser-use`, `Flowise`, `Langflow`,
+`Dify` and `OpenClaw` for the seventh pass running. Seams still unqueried: `SCORM`
+partially (one row found), `LRS`/`xAPI` (held), `PowerSchool`, `Schoology`,
+`Infinite Campus`, `Skyward`.
+
+🔴 **A headline star figure in this base is wrong by `183★` and is corrected here.**
+`iblai/os` has been published in these files at **`821★`** (and at `654★` elsewhere).
+**Measured first-hand from the rendered page on 2026-11-13: `638★`.** Stars do not fall
+by that much; the `821` was never right. Nothing in this base should carry a star count
+it did not read this pass.
+
+🟢 **COUNT DERIVATION — run these, trust nothing in the prose above.** Re-derived this
+pass after insertion: **MIT `27`, Apache-2.0 `6`, ISC `3`, BSD-3-Clause `1` = `37`
+build-safe**; **AGPL-3.0 `4`, GPL-3.0 `2`, MPL-2.0 `1` = `7` copyleft**; **total `44`.**
+🔴 **The recurring defect is that a naive `grep -cE '^\|.*github\.com'` over this file
+also counts the `7` rows of `## Rejected candidates and why`, which are real
+repositories but are NOT agents on this shelf.** Note the boundary: the first range must
+end at `## Copyleft`, not `## Rejected`.
 
 ```sh
-awk '/^## Build-safe/,/^## Copyleft/' agents/top.md | grep -cE '^\|.*github\.com'   # 32 build-safe
+awk '/^## Build-safe/,/^## Copyleft/' agents/top.md | grep -cE '^\|.*github\.com'   # 37 build-safe
 awk '/^## Copyleft/,/^## Rejected/'   agents/top.md | grep -cE '^\|.*github\.com'   # 7  copyleft
-awk '/^## Rejected/,0'                agents/top.md | grep -cE '^\|.*github\.com'   # 6  rejected (NOT agents)
+awk '/^## Rejected/,0'                agents/top.md | grep -cE '^\|.*github\.com'   # 7  rejected (NOT agents)
 ```
 
-🔵 **Note the boundary, because the obvious version of this command is wrong:** the range
-must end at `## Copyleft`, not `## Rejected`. `/^## Build-safe/,/^## Rejected/` spans
-*both* agent tables and returns `39` — the correct total, arrived at by the wrong route,
-which is precisely the kind of coincidence that has kept this defect alive for five
-passes.
-
-🔴 **What the prescribed battery returned, for the record (sixth nil).** `top open source
-AI agents education 2026 github MIT` returned general-purpose agents only — `OpenHands`,
-`MetaGPT`, `browser-use`, `Flowise`, `Langflow`, `Dify`, `OpenClaw` — plus the recurring
-caveat that `OpenClaw`'s licence is reported inconsistently across roundups. 🟢 **Not one
-education-specific agent this base does not already hold.** `github trending education AI
-2026` returned `DeepTutor`, `Claw-ED` and `ChinaTextbook` — the first two already shelved,
-the third a textbook archive rather than an agent.
-
-🔴 **Counting defect, fifth occurrence, fixed again this pass — and this one hid
-itself.** Every edition since `p802` headlined "34 real agents … 29 build-safe plus 5
-copyleft". The tables actually held **28 build-safe and 6 copyleft**. 🔵 **The total of
-34 was right only because the two errors cancelled**, which is precisely why nobody
-caught it for four passes. The counts above were produced by counting the rows
-programmatically rather than by carrying the previous edition's sentence forward, and
-the next pass should do the same instead of trusting this sentence.
-
-🟢 **`p806` added three rows — and not one of them came from a search.** The fourth
-consecutive pass of the prescribed battery returned nil on new agent supply, and this
-time the *regional* legs were nil on new facts too: every instrument they surfaced
-(`Regulation (EU) 2026/1744`, NC `Session Law 2026-41`, CA `AB 1159`, NY `A 9190`,
-Ipsos `2026`, IESALC `87%`/`26%`, DEC LATAM `92%`/`79%`, Council `ST-14902-2026`) is
-already carried in `intel/market.md`. 🔵 **Search saturation now covers both supply and
-regional intelligence, so this pass spent its budget on the propagation defect `p805`
-declared and left unfixed** — and made the audit a script,
-`scratchpad/p806/propagation-audit.sh`, rather than a manual diff anyone has to re-derive.
-🔴 **The measurement is worse than `p805` reported: `5,220` distinct repository slugs
-appear in the two trending logs against `730` on any shelf, and `Ed-Fi` — the data
-standard US state education agencies run K-12 reporting on — appears `249` times in the
-logs and `0` times in any file a studio reads.** Three of the repositories that audit
-surfaced are agents and are tabled below; four are infrastructure and went to
-`repos/foundations.md` and `verticals/solutions.md`.
-
-🟢 **The three new rows share a property worth more than any of them individually.**
-Written by unrelated authors in **Taiwan**, **Belgium** and **Japan**, against three
-different host platforms, all three converge on the same answer to the write problem:
-`che-ntucool-mcp` gates writes behind an elicitation dialog *plus* a single-use token
-bound to the previewed payload; `waseda-moodle-mcp` splits every mutation into
-`prepare_*` → `confirm_action` / `cancel_action`; `Smartschool-MCP` ships no write tool
-at all. 🔵 **A studio arguing EU AI Act Art. 14 human oversight for an LMS agent no
-longer has to invent the protocol — there are now three independent MIT implementations
-of it to point at.** See `T20` in `intel/trends.md`.
-
-🔵 **`p805` added zero rows. That is the third consecutive nil on agent supply, and
-this pass stopped treating it as a result to re-derive and started treating it as a
-budget to spend elsewhere.** All eight prescribed legs ran again. The global legs
-returned `DeepTutor`, `OpenMAIC`, `ai-engineering-hub`, `ai-engineering-from-scratch`,
-`OpenEduCat`, `RosarioSIS`, `OpenOLAT`, `Open edX`, `Moodle` and `Canvas` — 🟢 **every
-education-specific name already curated here or in `repos/foundations.md`.** The only
-non-generic candidate the battery produced that was *not* obviously held —
-**GegoK12** — turned out to be verified by this base at `p802` already.
-
-🔴 **So this pass audited the base against itself instead, and found a propagation
-defect.** A diff of byte-verified, green-marked repository slugs in the two append-only
-trending logs against the four files a studio actually reads returned **11 verified
-repositories that had reached no shelf file at all** — including one,
-`portabilis/i-educar`, that the log has claimed since `p667` was already shelved.
-🟢 **All 11 were re-verified live this pass and the adoptable ones promoted**: three to
-the xAPI layer, four to a new skills-and-credentials layer, one to the LMS table, three
-to the SIS table in `verticals/solutions.md`. 🔵 **None belongs in *this* table** —
-none is an agent. 🔴 **The underlying cause is structural and is not fixed:
-`agents/trending.md` is 79,190 lines and `repos/trending.md` is 62,315. Append-only
-preserves the trend and buries the finding.**
-
-🔵 **`p804` added zero rows, and `p803`'s saturation finding reproduced exactly.** All
-eight prescribed legs ran again; every education-specific name they returned was
-already curated here. 🟢 **The two genuinely new repositories found this pass —
-`rohitg00/ai-engineering-from-scratch` (MIT, `78.6k★`) and `patchy631/ai-engineering-hub`
-(MIT, `41.8k★`) — are deliberately NOT in this table**, although both are larger than
-every agent in it. They are **AI-engineering curricula**: no runtime, no learner model,
-no integration surface. A row here asserts a studio could start a build from the
-artifact, and it could not. They are shelved instead in `repos/foundations.md` under a
-new **curriculum-corpus layer**, which exists because `T19` measured the demand:
-**three dated AI-literacy mandates and no open education-licensed curriculum to meet
-any of them.** 🔴 **Provenance caveat for this pass: `curl` to `github.com` is denied
-by the session's egress proxy (`403`), so grants and sizes were read from the rendered
-page via `WebFetch` — sidebar-verified, not payload-verified.** The pass's substantive
-output is in `intel/market.md` (all five regions), `intel/trends.md` (`T18`, `T19`) and
-`compose/patterns.md` (`P16`).
-
-🔵 **`p803` added zero rows for a new reason: no candidate surfaced to assess.** The
-eighth pass ran all eight prescribed search legs — four global, four regional — and
-**every finding they returned was already curated here.** That is saturation, not
-rejection, and it is distinct from `p802`, which assessed four candidates and
-rejected all four. The pass's output is therefore recorded in `intel/trends.md`
-(`T17`), `compose/patterns.md` (`P15`) and the two trending logs: **the education
-tutor-*evaluation* cluster was probed at the byte level and five of its six members
-carry no usable software grant.** The one that does — `Kobby-Adjei/ai-tutor-benchmark`,
-MIT, payload-verified — is held off this table at `0★` / `0` forks, because a row here
-implies a studio could start from it. 🟢 **Two regional facts verified in earlier
-passes but never propagated to `intel/market.md` (PISA 2025; Vietnam's MOET Decision
-`2422`) were found by audit and promoted.**
-
-🟢 **Zero rows
-added at the sixth pass, deliberately.** Four candidates were assessed and all four
-rejected (the reasons are in `agents/trending.md`; the headline one,
-`tutornew/OpenTutor`, has **8 stars, 5 commits and no license at all**).
-**Education agent supply did not move this window — platform-native AI did**,
-and that finding is recorded in `verticals/solutions.md`, `repos/foundations.md`
-and `intel/trends.md` `T15` rather than being forced into this table. Given this
-file's documented history of miscounting its own rows across four editions, **a
-pass that adds nothing and says so is the correct output.** 🔴 **Counting defect fixed this
-pass:** every earlier edition of this file headlined a single figure ("26 real
-agents", "20", "18", "11") that counted **only the build-safe table** while the
-sentence said "agents below", which also covers the copyleft table. The two
-numbers are now stated separately so a proposal cannot quote the wrong one.
-Every row was verified on
-2026-11-13 by fetching the repository page and reading GitHub's own license
-field and star count. Four candidates that circulate on "best open source AI
-agent" lists are **rejected on license grounds** and listed in the exclusions
-section rather than deleted silently — an excluded candidate is information.
-
-**What changed this fifth pass (2026-11-13):** the fourth pass replaced "no SIS
-has an agent interface" with what it called a sharper claim — **"not one
-*open-source* SIS has an agent interface."** That claim is **also withdrawn**,
-and the reason is structural: every SIS search in four passes looked for an
-*education-specific* server. **OpenEduCat (LGPL-3.0, 911 stars, 789 forks) is a
-set of Odoo addons, and Odoo has two mature MCP servers whose tools take the
-model name as a parameter** — `erpipe-org/mcp-odoo` (**MIT, 433 stars**, writes
-gated behind a three-call approval protocol) and `ivnvxd/mcp-server-odoo`
-(**MPL-2.0, 415 stars**, per-model allowlist in a companion Odoo module). At 433
-stars the MIT one is the **fourth-largest agent in this KB** and larger than
-every education-specific agent ever admitted here. The path is **architecturally
-verified, not empirically run** — see the gap note. Two further entries:
-`sabis-mcp-server` (ISC, Türkiye — EMEA's first agent-to-SIS path) and
-`DeepTutor-MCP` (Apache-2.0 — the first MCP server in this base built over
-another *agent's* data rather than a platform's).
-
-**What changed at the fourth pass (2026-11-13):** the three earlier passes today
-worked the LMS surface and then the learner-record surface, and all three
-concluded that **no SIS anywhere has an agent interface** — the third pass
-called it "a confirmed absence across two consecutive passes." **That conclusion
-was over-generalized and is corrected here.** Two MIT MCP servers do reach a
-student information system: `edupage-mcp` (31 tools, EduPage — Slovakia and
-Czechia) and `mcp_hemis_student` (HEMIS — Uzbek universities). The precise
-finding that survives: **no *open-source* SIS has an agent interface, while
-national proprietary SIS products are getting them from individual developers.**
-Four further entries: `janestreet/agent_skills` (MIT, **7.9k**) — the largest
-permissively licensed education artifact in this base, and not a program at all;
-`zavora-ai/mcp-education`, the only server that gates writes in its own tool
-contract; and two 0-star repos admitted purely for design — `ai-tutor-agent`
-for tutoring guardrails and `AI-Teaching-Agent` for its human review gate.
-
-**What changed at the third pass:** the KB's attention so far has
-been on the *LMS* surface — seven Moodle MCP servers, one Canvas server. This
-pass went after the **learner record** instead, and found the layer that was
-missing: `DavidLMS/learnmcp-xapi` (MIT) is an MCP server over any xAPI-compliant
-Learning Record Store, and it is the only verified **agent↔learner-record write
-path** in this base. It is the agent half of a gap closed on the infrastructure
-side in `repos/foundations.md`, where two permissive LRS implementations are
-also new. The **SIS MCP gap stays open and was re-probed, not assumed**. Second
-new entry: `EduAgentic`, the only MCP **+ A2A** education example found.
-
-**What changed at the second pass:** the Moodle MCP gap this KB declared open is
-**closed** — `Faixiang/Moodle-MCP` (MIT, 206 stars) is a real, maintained,
-significant Moodle MCP server, and six more Moodle MCP servers were verified
-behind it. Three new agents entered above 60 stars, including
-`teacher-to-skills` (Apache-2.0, 475) which is now the third-largest
-education-specific agent on GitHub. The first LATAM-origin and Africa-origin
-education agents were found — at 0 stars each, which is itself the finding.
-
-Verification channel note: `curl -sI https://github.com/...` returns `403`
-through this session's egress policy for repositories not attached to the
-session, and `api.github.com` refuses the same way, so licenses and stars below
-come from the rendered repository page (GitHub's own license detection).
+🔵 **Method, unchanged and load-bearing.** `api.github.com` refuses for repositories not
+attached to this session, so every star count and licence below was read from the
+**rendered repository page** (GitHub's own detector). Where a row says *byte-verified*,
+the root `LICENSE` was additionally fetched over `raw.githubusercontent.com` and its
+size, `sha256` prefix and title line recorded — that channel does resolve, and it is the
+only way to catch a README-only grant. 🔴 **`glama.ai` and `oeltkit.bcltraining.com` do
+not resolve under this session's network policy**, so `mcp-powerschool` (reported MIT,
+FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
+are deliberately NOT shelved. They are leads for the next pass, not findings.
 
 ## Build-safe agents (MIT / Apache-2.0 / BSD / ISC)
 
 | Agent | Repo | License | Stars | What it does |
 |---|---|---|---|---|
+| brightspace-mcp-server | https://github.com/RohanMuppa/brightspace-mcp-server | MIT | 67 | **New this pass (`p809`) — the highest-starred new education agent of this window, and the first D2L Brightspace agent on this shelf.** `29` tools in seven groups (courses/grades, assignments/rubrics, announcements/discussions, content, people/groups, instructor Dropbox, account). 🔴 **Strictly read-only by design** — README: *"It only reads your courses. It never submits, edits, or deletes anything."* Auth is the school's own SSO page plus the account's 2FA; the password goes to the OS keychain (Keychain/Credential Manager) and saved session state is **AES-256-GCM** encrypted. Author: ECE @ Purdue. README lists working instances in 🇺🇸 🇨🇦 🇳🇱 🇨🇴 🇸🇬. `492` commits. 🟢 `MIT` byte-verified: root `LICENSE`, `1,068 B`, `sha256:047079fbd49120ed…`, affero×`0`. |
+| brightspace-mcp | https://github.com/JhostinAleck/brightspace-mcp | MIT | 16 | **New this pass (`p809`) — the strongest write gate in this base, and the first LATAM-origin education agent found with a real, byte-verified grant.** `29` tools: **`26` read, `3` write** (`submit_assignment`, `post_discussion_reply`, `mark_announcement_read`). 🟢 **Writes require TWO independent opt-ins** — `writes.enabled: true` in config **and** `--enable-writes` passed to `serve` — plus a `dry_run` preview mode, a client-supplied **idempotency key** on every write, and a warning-level **audit-log** entry per write. Four auth strategies (API token; headless user+password with MFA via TOTP/Duo Push/manual; Playwright browser automation; session cookie). 🔵 Ships an `es-419` locale and an `America/Bogota` sample timezone. `452` commits. 🟢 `MIT` byte-verified: `1,070 B`, `sha256:008ec594c78e9fd5…`, affero×`0`. |
+| campus-cli | https://github.com/alejooroncoy/campus-cli | ISC | 13 | **New this pass (`p809`) — a Peru-origin agent and the most-developed Blackboard client found anywhere (`851` commits, `v3.1.0`).** TypeScript CLI **and** MCP server (`campus mcp`, stdio) over **UPC Aula Virtual** (Blackboard Learn); UPN also supported, Canvas and Moodle on the roadmap; repo topics include `peru`. 🔴 **Read-only against Blackboard** — the README states it does not submit assignments or change anything; submissions stay in Aula Virtual. Local writes are downloaded files and the stored authorisation only. 🔴 **Governance flag, and it is the reason this row is not a drop-in for an institution: the tool catalogue is brokered by a remote relay (`mcp.campuscli.com`) that decides which tools to offer per university**, so student credentials and traffic cross a third party. Fine for a student; a contract question for a client. 🟢 `ISC` byte-verified: `748 B`, `sha256:4ca1bd2e969c…`. |
+| ntulearn-mcp | https://github.com/kingdonkatsu/ntulearn-mcp | MIT | 4 | **New this pass (`p809`) — the first Singapore-origin agent in this base.** `8` tools over **NTULearn**, Nanyang Technological University's Blackboard Learn: courses, announcements, calendar items, grades, plus course-file download into local folder structures. Python 3.12+, `28` commits. 🔴 **Auth is the `BbRouter` session cookie, auto-read out of Edge/Chrome/Firefox/Brave via `browser-cookie3`**, falling back to `NTULEARN_COOKIE` and then an OS-keychain cache, with one clear-and-retry on `401`. 🔴 **Scraping a live session cookie is unsanctioned access** — same contract risk as the three proprietary-SIS paths in this base, and it should be priced as such, not as an integration. 🟢 `MIT` byte-verified: `1,055 B`, `sha256:e6bd1450153a…`, affero×`0` (sidebar shows only a generic "License" link; the payload is the evidence). |
+| blackboard-mcp | https://github.com/Mattlo0546/blackboard-mcp | MIT | 1 | **New this pass (`p809`) — the only vendor-neutral Blackboard Ultra server found; the other two Blackboard rows are each bound to one university.** Python 3.10+ MCP server: reads courses, deadlines and announcements and downloads lecture slides for Claude Desktop, Cursor and Codex. Signs in through the university's SSO rather than an API key. 🔴 **Read-only on Blackboard** — README: it *"can't submit work, post or change anything on Blackboard"*; the only writes are to a local folder. 🔴 **`4` commits — the earliest-stage row on this shelf. Read it as a reference implementation, never as a dependency.** 🟢 `MIT` byte-verified: `1,067 B`, `sha256:13c8ad755224…`, affero×`0`. |
 | interactive-learning | https://github.com/geekjourneyx/interactive-learning | MIT | 52 | **New this pass (`p808`) — and it is a *skill package*, not a server or an app, which is why four passes of agent-shaped searching missed it.** Takes arbitrary input — text, a link, a document or a bare question — and turns it into a **verifiable learning path**, optionally emitting an HTML "checkpoint card" that makes each step checkable rather than merely read. 🟢 **The verifiability is the reason it is shelved:** every other content-generation node in this base (`educhain`, `OpenMAIC`) produces material, not a checkable path, and the gap between "generated a lesson" and "can show the learner passed it" is the one a client always asks about. Installs into Claude Code / `opencode`-style harnesses as a skill, so it composes with `canvas-mcp` or `Moodle-MCP` for delivery rather than competing with them — see `P22`. 🔴 **`52★` and `4` commits: this is a seed, not a dependency.** Read it as a design for the checkpoint card and reimplement if it must carry weight. Licence verified from the rendered sidebar (`MIT license`). |
 | DeepTutor | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 58.7k | Lifelong personalized tutoring; learner model persists across sessions and builds learning paths. **v1.7.2 released 2026-11-06**; 7.1k forks. Largest education-specific agent on GitHub. |
 | OpenMAIC | https://github.com/THU-MAIC/OpenMAIC | MIT | 43.4k | Open Multi-Agent Interactive Classroom (Tsinghua MAIC lab). Turns a topic or document into a multi-agent classroom — teacher, peers, assistant — in one click. **README News lists v1.5.0-rc.2 on 2026-11-12; GitHub Releases is empty**, so treat the version as pre-release. Ships pt-BR and es-MX locales. |
@@ -262,6 +130,7 @@ Globant can build a client deliverable on.
 
 | Candidate | Repo | Actual license | Stars | Why rejected |
 |---|---|---|---|---|
+| d2l-mcp-server | https://github.com/bencered/d2l-mcp-server | **No LICENSE file — `404` at `main` AND `master` root; GitHub sidebar shows none** | 12 | **New rejection this pass (`p809`).** The README carries a `License` section reading `MIT`, but **no licence payload exists at either branch root** and GitHub's own detector reports nothing, so on its face the repository is default all-rights-reserved. 🔵 **This is the T6 pattern in its most deniable form, and the transmission path was identified:** an aggregator (`glama.ai`) published *"License MIT"* read off the README, and that is where the claim entered circulation — the same channel that mis-reported `RohanMuppa/brightspace-mcp-server` as `AGPL-3.0` when its payload is a byte-verified `MIT`. 🔴 **Aggregator licence fields are not evidence in either direction.** `3` commits. Re-test the payload before any future admission. |
 | PageLM | https://github.com/CaviraOSS/PageLM | CaviraOSS / "PageLM Community License" — **not OSI** | 2.1k | README requires prior written permission for commercial use or resale. Marketed as "open source"; it is source-available. Do not put it in a client stack. |
 | llamatutor | https://github.com/Nutlope/llamatutor | **No license file** | 2.1k | Default all-rights-reserved. Good reference implementation of an AI personal tutor on Llama 3.1; not reusable without an explicit grant. |
 | education-agent-skills | https://github.com/GarethManning/education-agent-skills | CC BY-SA 4.0 | 977 | 165 evidence-grounded education skills for Claude/Codex-style agents. CC BY-SA is a **content** license with share-alike — usable as pedagogy reference material, wrong instrument for shipped software. |
@@ -270,6 +139,40 @@ Globant can build a client deliverable on.
 | AI-Grading-Tool | https://github.com/end13s/AI-Grading-Tool | **No licence file — sidebar shows none** | 0 | **New rejection this pass (`p808`).** The only *Moodle*-targeted grader found in the LMS-seam leg, and functionally the closest fit to a real client ask: imports a Moodle roster and submissions, has an LLM check each one against the instructor's rubric, routes every result through human review, then exports grades back to Moodle. 🔴 **`134` commits and no grant of any kind — the default is all-rights-reserved.** 🔵 **This is the fourth education repository in this base to be substantial and unlicensed** (`llamatutor` `2.1k★`, `AITutor-EvalKit`, `educational-agents`, now this), which is itself the finding recorded as `T24`. Worth an upstream licence request; cannot be adopted as published. |
 
 ## Declared gaps
+
+- **🟢 CLOSED this pass (`p809`): the Brightspace gap and the Blackboard gap.** Both
+  were gaps in this file, not in the world. **Brightspace/D2L** now has two shelf rows,
+  `RohanMuppa/brightspace-mcp-server` (`MIT`, `67★`) and `JhostinAleck/brightspace-mcp`
+  (`MIT`, `16★`). **Blackboard** has three, `alejooroncoy/campus-cli` (`ISC`, `13★`),
+  `kingdonkatsu/ntulearn-mcp` (`MIT`, `4★`) and `Mattlo0546/blackboard-mcp` (`MIT`, `1★`).
+  🔴 **Read the shape before quoting them: four of the five are read-only and two are
+  hard-bound to a single university's tenant** (UPC/UPN, NTU). Exactly **one** agent in
+  this base can write to Brightspace, and it is `JhostinAleck/brightspace-mcp` behind a
+  two-opt-in gate. **Neither Blackboard nor D2L publishes an MCP server of its own**
+  (checked 2026-11-13); every path above is unofficial, built on the REST API, the SSO
+  session or a scraped cookie.
+- **🔴 OPEN, and now the sharpest supply gap in this base: the higher-education SIS/ERP
+  tier.** **Ellucian Banner**, **Ellucian Colleague** and **Workday Student** — the
+  systems of record for most of North American higher education — have **no open-source
+  MCP server or agent of any kind**, searched from two independent angles this pass and
+  returning nothing but vendor connector pages. Ellucian documents **Ethos** (Data Model
+  APIs, Business Process APIs, Ethos GraphQL) and publishes no MCP server; Workday ships
+  its own proprietary *Agent-Ready Tools*. 🔵 **The only generic lead is the one that
+  worked for OpenEduCat: wrap the platform API, not the vertical.** For Banner that means
+  a thin server over Ethos. **Nothing in this base implements it, and an engagement that
+  assumes otherwise will be wrong.**
+- **🔴 The "open-source Agentic SIS" is a FRONT END, and this base came within one row of
+  publishing the vendor's framing.** `iblai/sis` carries a genuine, byte-verified `MIT`
+  payload (`1,089 B`, `sha256:969b7073d1c42ac2…`) — **and the README states plainly:**
+  *"ibl.ai/sis is a front end for the ibl.ai platform"*, *"If you need the full backend,
+  reach out at ibl.ai/contact for an enterprise license."* It writes **no backend
+  endpoints of its own**; sign-in goes to `login.iblai.app`. 🟢 **The grant is real and
+  it covers a Next.js client.** 🔴 **The system of record is proprietary.** Same shape as
+  `iblai/lms` (`MIT`, `95★`: *"you need access to an ibl.ai backend instance"*) and
+  `iblai/os` (`MIT`, `638★`: *"requires the ibl.ai backend platform … not included in
+  this repository"*). **The SIS gap is NOT closed by these.** They are shelved under
+  `verticals/solutions.md`, where a platform with a commercial core belongs, not here.
+
 
 - **The learner-record gap is half closed, and the halves must not be
   confused.** `learnmcp-xapi` gives an agent a read/write path to the

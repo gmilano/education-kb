@@ -1536,3 +1536,69 @@ first. 🔵 **That metric is also the client's ROI story**, and per the LATAM fi
 there are roughly ten times more institutions using AI than measuring it, it is the thing
 almost nobody builds.
 
+
+## P23 — Brightspace/Blackboard study agent with an auditable write gate (Global; the first pattern here that serves D2L and Blackboard institutions)
+
+🟢 **Why this pattern exists.** Until `p809` this KB could not serve a Brightspace or
+Blackboard client at all — both are incumbents, neither had a connector on any shelf.
+Five verified agents now exist, and they split cleanly into a **read tier** and a
+**single gated write tier**, which is exactly the shape a safe engagement wants.
+
+**Who it is for:** a university on D2L Brightspace or Blackboard Learn that wants a
+student-facing study assistant (deadlines, course material, grade context) and, later, a
+*narrow* ability to act — without handing an agent the power to submit coursework by
+accident.
+
+### The stack, by named repository
+
+| Role | Repo | Licence | ★ | Why this one |
+|---|---|---|---|---|
+| **Brightspace read plane** | [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | MIT | 67 | `29` tools, **read-only by declaration**; SSO + 2FA, password in OS keychain, session state AES-256-GCM. The most-starred and best-secured of the five. |
+| **Brightspace write plane** *(optional, phase 2)* | [`JhostinAleck/brightspace-mcp`](https://github.com/JhostinAleck/brightspace-mcp) | MIT | 16 | The only agent in this base that can write to Brightspace, behind **two opt-ins + `dry_run` + idempotency key + audit log**. |
+| **Blackboard read plane** | [`Mattlo0546/blackboard-mcp`](https://github.com/Mattlo0546/blackboard-mcp) (vendor-neutral Ultra) or [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) (ISC, far more mature) | MIT / ISC | 1 / 13 | Pick by tenant: `campus-cli` has `851` commits but is UPC/UPN-shaped; `blackboard-mcp` is generic but `4` commits. |
+| **Learner-record write path** | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | MIT | 16 | Writes what the learner **did** to any xAPI 1.0.3 LRS. 🟢 **This is where progress belongs — not in the LMS.** |
+| **Orchestration + policy nodes** | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | MIT | — | Explicit graph: the write gate is a node you can show an auditor. |
+| **Content packaging** *(if the agent generates material)* | [`dmmat/Scormly`](https://github.com/dmmat/Scormly) | MIT | 5 | Browser-only, no backend; exports SCORM 1.2/2004 so output mounts in either LMS. 🔴 cmi5 leg unverified upstream. |
+
+### How to wire it
+
+1. **Phase 1 is read-only, and ships on its own.** Stand up the Brightspace or Blackboard
+   read plane. Every tool is a retrieval; there is nothing to gate. 🟢 **Most of the
+   perceived value — "what is due, what did I miss, what does this rubric mean" — is
+   entirely in this phase**, which is why it is worth shipping before any write exists.
+2. **Put progress in the LRS, not the LMS.** Route every "learner practised / mastered /
+   attempted" signal through `learnmcp-xapi` into the institution's LRS. 🔵 The LMS stays
+   the system of record for *grades*; the LRS becomes the system of record for
+   *learning*, and only the second one is safe for an agent to write.
+3. **Phase 2 adds writes only if the client asks, and only through the gate.** Swap in
+   `JhostinAleck/brightspace-mcp` with `writes.enabled: false` **and** no
+   `--enable-writes` flag. Turn on `dry_run` first and run a full week in preview,
+   diffing proposed writes against what staff would have approved.
+4. 🔴 **Decide `submit_assignment` explicitly, in writing, with the registrar — not in
+   config review.** It is the one tool in this stack that can commit academic work on a
+   student's behalf. The default in this pattern is **off, permanently**, and the other
+   two write tools (`post_discussion_reply`, `mark_announcement_read`) are the ones
+   actually enabled.
+5. **Keep the audit trail from day one.** `JhostinAleck` emits a warning-level log entry
+   and requires an idempotency key per write. Ship those into the client's SIEM in phase
+   2, and feed the same artefacts into `P17`'s EU AI Act Article 50 evidence pack.
+
+### Effort and the honest caveats
+
+🟢 **Phase 1: 3–4 weeks.** Phase 2 (gated writes + audit plumbing): **a further 4–6
+weeks**, most of it governance rather than code.
+
+🔴 **Four things to price, not discover:**
+- **No vendor publishes an MCP server.** Every path here is unofficial — REST API, SSO
+  session, or a scraped cookie. Confirm with the institution's IT that API access is
+  sanctioned **before** quoting, or the integration is a policy violation wearing an
+  architecture diagram.
+- 🔴 **`campus-cli` brokers its tools through a remote relay (`mcp.campuscli.com`).** For
+  an institution, **fork it and terminate the relay in-tenant** — the `ISC` grant allows
+  exactly that. Do not deploy it as-is.
+- 🔴 **`kingdonkatsu/ntulearn-mcp` is deliberately NOT in this stack** despite being
+  verified `MIT`: it authenticates by auto-reading the `BbRouter` cookie out of the
+  user's browser. Excellent reference, unacceptable dependency.
+- 🔴 **`Mattlo0546/blackboard-mcp` has `4` commits.** If the client is on Blackboard
+  Ultra and wants a supported path, budget to maintain a fork rather than to adopt.
+

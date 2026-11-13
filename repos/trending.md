@@ -4,6 +4,62 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (fourteenth pass) — **The LMS connector tier is far deeper than this base recorded, and the authoring tier gained its first no-backend SCORM/cmi5 exporter**
+
+**Pass `p809`.** 🟢 **Six repositories verified by licence payload this pass; one
+rejected for having none.**
+
+### New to `repos/foundations.md`
+
+| Repo | Licence (payload-verified) | ★ | Commits | Why it is a foundation |
+|---|---|---|---|---|
+| [`dmmat/Scormly`](https://github.com/dmmat/Scormly) | 🟢 `MIT` `1,071 B` `68e4711e4e5fb60b` | `5` | `93` | **Browser-only course builder with NO backend**, exporting **SCORM 1.2/2004** and **cmi5 (xAPI)**. The first packaging-tier repo in this base that a studio can ship without standing up a service. 🔴 SCORM export verified on SCORM Cloud per README; **cmi5 implemented but NOT verified on a live LRS** — treat that leg as untested. |
+
+### The connector tier, re-measured
+
+🔴 **This base's `repos/` shelves recorded Canvas, Moodle, Open edX and Odoo connectors
+and nothing for Brightspace or Blackboard.** Both are served; the five agent rows are in
+`agents/trending.md` for this pass. 🟢 **The structural point for `repos/`: the
+education-connector population is roughly double what this base had counted**, and it is
+concentrated in single-author repositories bound to one institution's tenant.
+
+### 🔴 Rejected on payload
+
+[`bencered/d2l-mcp-server`](https://github.com/bencered/d2l-mcp-server) — `12★`, README
+says `MIT`, **no `LICENSE` at `main` or `master`, sidebar shows none**. Default
+all-rights-reserved. 🔵 Aggregator `glama.ai` is the source of the circulating `MIT`
+claim; the same layer mislabelled `RohanMuppa/brightspace-mcp-server` as `AGPL-3.0`
+(payload: `MIT`). **Wrong in both directions, same pass, same category.**
+
+### 🟢 The `iblai` estate, re-counted — and the open-core line drawn through it
+
+This base last recorded **`org:iblai`, `9` repos**. 🔴 **It now has `50`.** Education-
+relevant additions not previously shelved: [`iblai/sis`](https://github.com/iblai/sis)
+(`MIT`, `1★`), [`iblai/lms`](https://github.com/iblai/lms) (`MIT`, `95★`, `1,071`
+commits), [`iblai/wallet`](https://github.com/iblai/wallet) (`MIT`, verifiable skills
+credentials), [`iblai/course`](https://github.com/iblai/course) (`MIT`, AI course
+authoring), [`iblai/crm`](https://github.com/iblai/crm) (`MIT`).
+
+🟢 **Every licence payload checked this pass is genuinely `MIT`** — `sis` `1,089 B`
+`969b7073d1c42ac2`, `lms`/`vibe`/`higher-education-agents`/`k-12-agents` all `1,063 B`
+`f1269b7b2313456a`, `os` `1,070 B` `13029f084e13d864`, `course` `1,079 B`
+`9373e45e08a4cc99`, `crm`/`wallet` `1,089 B` `969b7073d1c42ac2`.
+
+🔴 **And every one of the application repos is a CLIENT requiring a backend that is not
+in the repository and is sold under an enterprise licence.** `os`: *"requires the ibl.ai
+backend platform … not included in this repository."* `lms`: *"you need access to an
+ibl.ai backend instance."* `sis`: *"a front end for the ibl.ai platform."* 🟢 **The
+grants are real and they are worth having — these are high-quality Next.js/Tauri
+front ends a studio can legitimately fork and white-label.** 🔴 **They are not an
+open-source education stack, and nothing in this base should describe them as one.**
+🔵 The exception is [`iblai/ontology`](https://github.com/iblai/ontology) (`MIT`, `12★`,
+`97` commits), which is an on-premise MCP layer over PeopleSoft/Canvas/Salesforce and is
+the piece of the estate that stands on its own.
+
+🔴 **Star correction: `iblai/os` is `638★`, not the `821★` this base published.**
+
+---
+
 ## `2026-11-13` (thirteenth pass) — **The trending channel nils for a sixth time, but the LMS-seam leg returned seven repositories; the trending channel is simply the wrong instrument for this vertical**
 
 **Pass `p808`.** 🔴 **`0` education-specific repositories from the GitHub trending leg —

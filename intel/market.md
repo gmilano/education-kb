@@ -92,6 +92,45 @@ across EMEA.
 
 ### North America
 
+#### Update 2026-11-13 (fourteenth pass, `p809`) — 🟢 The region's higher-ed LMS tier gained its first open agent, and the SIS tier is confirmed empty
+
+🟢 **New, and placed here because Brightspace is a North American higher-ed incumbent:**
+[`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server)
+(`MIT`, `67★`, `492` commits) is authored at **ECE @ Purdue** and names working instances
+in 🇺🇸 and 🇨🇦. `29` tools, **read-only by declaration**, school SSO + 2FA, password in the
+OS keychain, session state AES-256-GCM. 🟢 **It is the highest-starred new education agent
+this base has found in this window and the first credible D2L path for a US/Canadian
+engagement.**
+
+🔴 **The sharpest unserved gap in the whole base sits in this region.** **Ellucian
+Banner**, **Ellucian Colleague** and **Workday Student** — the systems of record for most
+North American higher education — have **no open-source MCP server or agent of any kind**,
+searched from two independent angles on 2026-11-13. Ellucian documents **Ethos** (Data
+Model APIs, Business Process APIs, GraphQL) and publishes no MCP server of its own;
+Workday ships proprietary *Agent-Ready Tools*. 🔵 **The OpenEduCat lesson applies: wrap
+the platform API, not the vertical.** A thin, governed server over Ethos is the highest-
+ceiling unbuilt artefact this base has identified.
+
+🟡 **Policy, re-read this pass — and the trackers still disagree, which is itself the
+finding.** `AI education North America 2026 adoption regulation players state legislation`
+returned four incompatible counts of 2026 state activity: **TNTP** ≥`11` states enacted
+across `27` tracked; **ExcelinEd** (May 2026) `8` states enacted; **CDT via AAAS** `16`
+states passed bills (naming Alabama, Georgia, Idaho, Illinois, Utah); **MultiState**
+`134` bills across `31` states as of March 2026. 🔴 **Do not quote a single number.** The
+trackers define "enacted" and "AI in education" differently and refresh on different
+cycles; quote the range and name the tracker.
+
+🟢 **Dated federal instruments worth carrying:** the **US Department of Education
+finalised its AI in Education grant priority on 2026-04-13**, directing discretionary
+funding at AI literacy, personalised learning and educator professional development, and
+released **$169M in FIPSE awards** including responsible-AI-use provisions. 🔵 Roughly
+**35 state education agencies** have issued AI guidance. 🟡 Two California bills to watch:
+**AB 1159** (bar use of student data to train AI models) and a separate bill that would
+**prohibit most classroom AI below ninth grade** — the latter is the clearest instance of
+`T25` (category set by learner age, not by what the software does). 🔴 A federal
+**preemption** push could override the state layer; unresolved.
+
+
 #### Update 2026-11-13 (thirteenth pass, `p808`) — 🔴 NIL. Every instrument the leg returned is already held; the leg is now saturated for a third consecutive window
 
 🔴 **Zero new North American facts this pass.** The leg
@@ -554,6 +593,35 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-13 (fourteenth pass, `p809`) — 🟡 The Act's education duties slipped to 2027, and adoption is running far ahead of governance
+
+🟡 **Regulatory state, re-read.** Education is **high-risk under Annex III** where a
+system determines access or admission, or evaluates learning outcomes. 🔴 **The timeline
+moved:** a **provisional deal on the Digital Omnibus package landed 2026-05-07**, the
+original **August 2026** deadline has slipped, and Annex III duties now bite from
+**2027-12-02** (consistent with `T25`). **Draft Article 6 guidelines published
+2026-05-19**, consultation open to **2026-06-23**. 🔵 **For an EMEA engagement this is
+good news and a trap: there is more runway than the 2026 headlines imply, and a system
+built now will be assessed against guidance that is still being drafted.** Build the
+Article 50 transparency artefacts (`P17`) regardless — they are the stable part.
+
+🔴 **Adoption is ahead of readiness, and the numbers are consistent across independent
+surveys.** An **Erasmus+** adult-education study across several countries finds educators
+have adopted AI *"largely autonomously and without a clear regulatory framework"*, with
+**over 90% of respondents in Spain** using AI in their work. An **Epson** survey reports
+**80% of teachers** worry AI is entering classrooms faster than schools can manage, and
+**76% of students** expect to use AI in learning. 🟢 **That gap — high use, absent
+governance — is the EMEA engagement**, and it is the regional instance of `T1`.
+
+🟢 **Connector note placed here:** `RohanMuppa/brightspace-mcp-server` (`MIT`, `67★`)
+explicitly lists working **🇳🇱 Netherlands** instances, so the new Brightspace path is
+immediately usable in EMEA, not only North America.
+
+🔴 **Still fragmented.** Education policy remains national; teacher readiness varies
+widely across member states, and most compliance guidance in circulation is produced by
+vendors and consultancies rather than regulators. Treat vendor webinars as marketing.
+
 
 #### Update 2026-11-13 (thirteenth pass, `p808`) — 🔴 NIL on instruments. The EU AI Act high-risk delay, the UK standards and the Gulf guidance were all returned and all already held
 
@@ -1033,6 +1101,42 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-13 (fourteenth pass, `p809`) — 🟢 Two national curriculum mandates commence in the 2026–27 school year, and the base gains its first Singapore agent
+
+🟢 **Dated mandates, both commencing in the current school year — these are the firmest
+facts in this region and they are procurement triggers:**
+
+| Jurisdiction | Instrument | Commences | Scope |
+|---|---|---|---|
+| 🇨🇳 China | Ministry of Education formalises **"Artificial Intelligence and Technology"** as a school subject | **2026–2027 school year** | Compulsory schooling; tied to the **15th Five-Year Plan (2026–2030)**, which targets a leading position in AI industry applications |
+| 🇮🇳 India | **AI and Computational Thinking** enters all schools **from Grade 3** | **2026–27 academic year** | Aligned to **NEP 2020** |
+
+🔵 **China additionally issued an "AI+Education" action plan in April 2026 from five
+government departments**, stressing appropriate use, critical thinking and problem-
+solving rather than tool deployment — the posture matters, because it means Chinese
+procurement is pedagogy-led on paper. 🔴 Oversight is still described as fragmented
+relative to the speed of adoption.
+
+🟡 **Japan takes the third posture:** general AI/data literacy for **all** students
+regardless of field, governed by human-centred principles (fairness, transparency, social
+responsibility), and — unlike China — **device access first, AI tools second**. 🟢 Three
+large APAC systems, three different theories of the same mandate; `T19` holds.
+
+🟢 **New agent placed in region:** [`kingdonkatsu/ntulearn-mcp`](https://github.com/kingdonkatsu/ntulearn-mcp)
+(`MIT`, `4★`) — **the first 🇸🇬 Singapore-origin agent in this base** — `8` tools over
+**NTULearn**, Nanyang Technological University's Blackboard Learn. 🔴 **It authenticates
+by auto-reading the `BbRouter` session cookie out of the user's browser.** That is
+unsanctioned access; it is a fine reference and a bad dependency.
+
+🟡 **Regional unevenness is the planning constraint.** The **ASEAN Foundation**'s *AI
+Ready ASEAN* research finds Southeast Asian education systems at *"deeply uneven stages
+of AI readiness"*; **Vietnam** shows widespread usage alongside persistent literacy gaps.
+A **Clarivate** report covers AI policy and AI-ethics education across seven systems
+(Mainland China, India, Japan, Malaysia, Singapore, South Korea, Taiwan). 🔴 Independent
+adoption statistics for China and India remain scarce — most circulating figures are
+commentary or preprints, not official.
+
+
 #### Update 2026-11-13 (thirteenth pass, `p808`) — 🟢 THE ONE GENUINE REGIONAL GAIN THIS PASS: Korea's education high-impact scope is NARROWER than this file has implied, and the narrowing decides whether a Korean university engagement is regulated at all
 
 🟢 **This is the only region that returned something new this pass, and it is a
@@ -1505,6 +1609,55 @@ procurement-led" corner of that matrix, which `P5` did not previously have a nam
 example of.
 
 ### LATAM
+
+#### Update 2026-11-13 (fourteenth pass, `p809`) — 🟢 THE BASE'S OWN LATAM FINDING IS OVERTURNED: the region's education agents are no longer unlicensed
+
+🟢 **This is a correction to a conclusion this base published and has carried since
+`p797`.** That pass found `5` LATAM-origin education agents and reported **`5` of `5`
+serving no grant at all** — "not missing, UNLICENSED". 🔴 **That no longer holds.** This
+pass found **two LATAM-origin education agents with real, byte-verified permissive
+grants**, both with substantial commit histories:
+
+| Repo | Licence (payload-verified) | ★ | Commits | Origin signal |
+|---|---|---|---|---|
+| [`JhostinAleck/brightspace-mcp`](https://github.com/JhostinAleck/brightspace-mcp) | 🟢 `MIT` `1,070 B` `008ec594c78e9fd5` | `16` | `452` | `es-419` locale, `America/Bogota` sample timezone → 🇨🇴 |
+| [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) | 🟢 `ISC` `748 B` `4ca1bd2e969c` | `13` | `851` | **UPC Aula Virtual** + UPN, repo topic `peru` → 🇵🇪 |
+
+🟢 **And the Colombian one carries the strongest write gate in this entire base** — two
+independent opt-ins (`writes.enabled: true` **and** `--enable-writes`), `dry_run`
+preview, per-write idempotency key, per-write audit-log entry. 🔵 **The engagement point:
+LATAM is no longer a region this KB can describe as consuming education AI without
+producing it.** The supply is small and single-author, but it is granted, maintained and
+in some respects better governed than the North American equivalent.
+
+🔴 **The governance flag on `campus-cli` must travel with the row:** its tool catalogue is
+brokered by a **remote relay (`mcp.campuscli.com`)** that decides which tools to offer per
+university, so student credentials and traffic cross a third party. Acceptable for an
+individual student; a procurement blocker for an institution. 🟢 **For a client, fork it
+and terminate the relay in-tenant** — the `ISC` grant permits exactly that, and that is
+the shape of the engagement.
+
+🟡 **Regulatory state, re-read this pass.** A **Universidad de los Andes** public-policy
+report (August 2026) counts **716 AI instruments** across the region, with **🇧🇷 Brazil at
+212 records and 🇲🇽 Mexico at 126**, and **~85% concentrated in five countries** — note the
+base also includes norms where AI appears only marginally, so the count overstates
+depth. **Forbes (Feb 2026)** reports **fewer than a quarter of Ibero-American countries
+have AI-specific regulation**, naming 🇧🇷 Brazil, 🇨🇱 Chile and 🇪🇸 Spain as the regional
+referents with coherent frameworks and placing 🇲🇽 Mexico at an early stage. 🟡 **Chile's
+AI bill (Boletín N° 16.821-19)** was still advancing in the Senate through March–April
+2026.
+
+🔴 **Education-sector specifics remain thin, and that is the honest finding.** A
+Universidad Autónoma de Madrid review reports that **Latin America has no unified
+regulatory framework for AI in higher education**: 🇨🇱 Chile leads on the strength of its
+national AI policy (since 2021); 🇧🇷 Brazil and 🇨🇴 Colombia have national strategies with
+**no education-sector regulation**; 🇲🇽 Mexico has rising university use with **no national
+law or binding guidelines**. A regional study places Mexico in a second tier with
+Argentina, Brazil and Colombia on actual school-level use, flagging equity and teacher-
+training deficits. 🟡 **UNESCO is reported to have launched an AI-in-Education Observatory
+for Latin America and the Caribbean** at the 2026 ALC Forum on Sustainable Development —
+🔴 **sourced to a LinkedIn post only; treat as unconfirmed until the UNESCO page is read.**
+
 
 #### Update 2026-11-13 (thirteenth pass, `p808`) — 🔴 NIL. The UNESCO IESALC and DEC figures were returned again and are already held; the region's governance-gap thesis reproduced unchanged
 

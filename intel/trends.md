@@ -834,6 +834,33 @@ token-bound-to-payload (where grades or records are at stake). 🔴 **The tier i
 procurement decision, not an engineering detail: pick it in week one, because retrofitting
 a write gate onto a deployed agent means rewriting its entire tool surface.**
 
+🟢 **Extension (`p809`, 2026-11-13) — the cleanest natural experiment this base has found
+for `T20`, because the two implementations are otherwise identical.**
+[`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server)
+(`MIT`, `67★`) and [`JhostinAleck/brightspace-mcp`](https://github.com/JhostinAleck/brightspace-mcp)
+(`MIT`, `16★`) target **the same LMS** and expose **exactly `29` tools each** — and they
+take opposite decisions on writes:
+
+- 🔴 **`RohanMuppa` refuses writes outright**: *"It only reads your courses. It never
+  submits, edits, or deletes anything."*
+- 🟢 **`JhostinAleck` permits three** (`submit_assignment`, `post_discussion_reply`,
+  `mark_announcement_read`) behind **two independent opt-ins** (`writes.enabled: true`
+  in config **and** `--enable-writes` on `serve`), plus a **`dry_run`** preview, a
+  **client-supplied idempotency key** per write, and a **warning-level audit-log entry**
+  per write.
+
+🔵 **`JhostinAleck`'s gate is now the strongest in this base**, ahead of
+`che-ntucool-mcp`'s `prepare_* → confirm_action`, because it adds *idempotency* and an
+*audit trail* rather than only a confirmation step — i.e. it is designed for a system
+that will be asked what happened, not just whether the user agreed.
+
+🔴 **`submit_assignment` is the live wire.** An agent that can submit coursework turns
+academic integrity into a config flag. 🟢 **The reusable conclusion: in education the
+write gate is not an implementation detail, it is the product decision**, and the fact
+that two independent authors on the same platform landed on opposite sides of it in the
+same window is the evidence. Convergence on *preview-then-confirm* is real; convergence
+on *what may be written at all* is not.
+
 ## T21 — In North America the integration surface is the state data standard, not the LMS — and this base scoped eleven passes at the wrong altitude
 
 **The evidence.** US K-12 student data does not move school-by-school. It moves through
@@ -1056,3 +1083,44 @@ resolve under this session's network policy. The Korean scope clause is corrobor
 across several independent translations that agree on substance; `ACTION p808-A` tracks
 confirmation against the statute.
 
+## T26 — When this base names a platform often and shelves nothing for it, that is a search instruction, not a market fact
+
+🟢 **Evidence (`p809`, 2026-11-13).** This KB had written **`Brightspace` `171` times**
+and **`Blackboard` `159` times** across its own files, and carried **zero** agent rows
+for either — the only shelf mention was a note that LTI 1.3 libraries mount into them.
+🔴 **Both are served.** One pass of seam-named queries returned **five** shelf-ready
+agents: two independent `MIT` Brightspace servers (the larger at `67★`, `492` commits)
+and three Blackboard clients (`ISC` `13★` with `851` commits; `MIT` `4★`; `MIT` `1★`).
+
+🔵 **This is the second confirmed instance of the shape, which is what promotes it from
+accident to rule.** The eleventh pass (`p806`-era) found the **US state data standard**
+mentioned `249` times in these logs and shelved `0` times. Same signature: heavy prose
+presence, zero shelf presence, supply available on the first page of a correctly aimed
+query.
+
+🟢 **The mechanism.** A platform earns prose mentions because it is an *incumbent* — it
+keeps appearing in market and regulatory analysis. It earns zero shelf rows because the
+discovery legs are aimed at the **domain** (`education`), and domain queries return
+general-purpose frameworks. **Incumbency and discoverability are driven by different
+things, so they drift apart, and the drift is invisible from inside either file.**
+
+🟢 **The operational rule, cheap to run every pass:**
+
+```sh
+for name in Brightspace Blackboard PowerSchool Schoology "Infinite Campus" Skyward Banner Workday; do
+  prose=$(grep -rioc "$name" intel/ compose/ | awk -F: '{s+=$2} END{print s}')
+  shelf=$(grep -ric "$name" agents/top.md repos/foundations.md verticals/solutions.md | awk -F: '{s+=$2} END{print s}')
+  echo "$name prose=$prose shelf=$shelf"
+done
+```
+
+🔴 **Any name with a high `prose` and a `shelf` of `0` is an unrun search, and should be
+queried by SEAM before the next pass claims a gap.** Remaining candidates with that
+signature right now: `PowerSchool` (`53` prose mentions, `0` shelf rows), `Schoology`,
+`Infinite Campus`, `Skyward`.
+
+🔵 **The limit of the rule, stated so it is not over-applied.** It generates leads, not
+findings. The same pass that closed Brightspace and Blackboard ran the identical
+transform on **Ellucian Banner, Ellucian Colleague and Workday Student** and returned
+**nothing** — those gaps are real (see `agents/top.md` → Declared gaps). 🟢 **The rule
+tells you which gaps have not been tested, not which gaps are false.**

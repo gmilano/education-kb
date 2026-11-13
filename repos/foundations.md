@@ -149,6 +149,26 @@ LTI Advantage service set. Do not quote the old greenfield claim to a client.
 
 </details>
 
+## The authoring and packaging layer — SCORM / cmi5 (new, fourteenth pass `p809`)
+
+🟢 **New to this file.** Every other layer below assumes content already exists. This is
+the first repo in this base that *produces* standards-compliant packages, and it does so
+with no server to run.
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/dmmat/Scormly | MIT | 5 | Browser-only course builder — **no backend, no database**, runs entirely client-side (React 18 + TypeScript). Exports **SCORM 1.2 and SCORM 2004** and **cmi5 (xAPI)**, so output mounts in Moodle, Canvas, Open edX, Brightspace and Blackboard alike. 🟢 `MIT` byte-verified: root `LICENSE`, `1,071 B`, `sha256:68e4711e4e5fb60b…`. `93` commits. 🔴 **README states SCORM export is verified against SCORM Cloud but cmi5 is "implemented, not yet verified on a live LRS" — do not quote the cmi5 leg as working until it is run against `Ralph` or `LRS SQL`.** 🔵 Generates an `AGENTS.md` per project. |
+
+🔵 **Why it belongs on a foundation shelf rather than the agent shelf:** it is the
+cheapest way to get agent-generated lesson content *out* of a pipeline and *into* any LMS
+without writing a per-LMS integration — the packaging counterpart to the LTI mount point
+below.
+
+🔴 **Declared gap at this layer.** `OELTKit` (reported `Apache-2.0`, AI-first course
+builder, SCORM + cmi5) could **not** be verified: its host `oeltkit.bcltraining.com` does
+not resolve under this session's network policy and no repository address was recovered.
+It is a lead, not a finding, and is deliberately not tabled.
+
 ## The integration layer — LTI 1.3 (added third pass, corrected fourth)
 
 Build the AI tool once as an LTI 1.3 tool provider and it mounts in Moodle,
