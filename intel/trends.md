@@ -6,8 +6,14 @@ updated: 2026-11-13
 
 # Education AI — current trends
 
-**Thirty-five** trends — derived trends: **35** — each with the evidence behind it and
-what it implies for an engagement. 🟢 **Seventeenth pass (`p812`, 2026-11-13): `T34`–`T35` added,
+**Thirty-eight** trends — derived trends: **38** — each with the evidence behind it and
+what it implies for an engagement. 🟢 **Eighteenth pass (`p813`, 2026-11-13): `T36`–`T38` added,
+`T31`/`T34` generalised into a single stated rule, and `T22` given a mechanical instrument.**
+🟢 **And `ingest/derive-counts.py` now returns `EXIT=0` on ALL FIVE graded files for the first
+time** — `repos/foundations.md` and `verticals/solutions.md` had been RED since `p718`, which
+`ACTION p811-A` diagnosed as structural rather than stale. `p813` implemented p811's chosen
+option (a) and added uncounted-table detection, so a new layer table can be added freely but
+never silently. 🟢 **Seventeenth pass (`p812`, 2026-11-13): `T34`–`T35` added,
 `T20` extended to a sixth jurisdiction, `T26` inverted, and `T27` given a fourth and fifth
 direction.** 🔵 **Re-derived before writing: `grep -cE '^## T[0-9]+ —' intel/trends.md` = `35`.**
 🟢 **`ingest/derive-counts.py` now GRADES this file instead of abstaining on it.** 🔴 **It had
@@ -479,6 +485,111 @@ that path considerably. What changes is the sourcing posture: there are now real
 regional projects to contribute to, hire from, or co-develop with, rather than a
 blank map. A 0-star repo doing longitudinal learner analytics out of Guinea is a
 lead, not noise.
+
+## T36 — Credential hygiene and ACADEMIC-INTEGRITY risk are independent axes, and the best-engineered education agent in a region can be the one a studio must refuse
+
+🔴 **Sixteen passes of `agents/top.md` graded candidate agents on ONE axis: what the code does
+with the learner's password.** That axis produced this base's sharpest rows — `p812` crowned
+`nialvape/utn-mcp` because it never stores a password, hashes its token and refuses campuses
+without valid HTTPS. 🟢 **`p813` found the case that breaks the single axis.**
+
+🟢 **The evidence.** [`DeliciousBuding/chaoxing`](https://github.com/DeliciousBuding/chaoxing)
+(**Apache-2.0**, byte-read `11,324 B`) is better engineered than anything else in this base:
+
+- three separated surfaces — browser console, remote `POST /mcp`, loopback-only `POST /call`;
+- OAuth scopes that *"can narrow but never widen"*, and **no generic `write` scope by design**;
+- PBKDF2 owner password, AES-GCM credential and cookie vault with a separately stored key;
+- CSRF protection, `__Host-` session cookies, HTTPS-only publication;
+- a tool contract that never returns raw upstream credentials, cookies, tokens or captcha secrets;
+- per-account isolation of credentials, caches, OAuth state and notification destinations.
+
+🔴 **And its OAuth scope list includes `chaoxing.sign` — *"normal, location, and operator-coded
+password/gesture sign-in"* — with an optional watcher that polls selected classes during their
+course times and submits attendance automatically. The README's own one-line description includes
+"class sign-in, rapid answers, answer generation and coursework submission."**
+
+🔵 **So the security engineering is excellent and the product is attendance fraud.** Grading only
+the credential axis would have ranked it FIRST in APAC.
+
+🟢 **The contrast inside the same cluster makes the point unarguable.**
+[`DanMo661/xuexitong-cli`](https://github.com/DanMo661/xuexitong-cli) (**MIT**, `24★`) has weaker
+machinery — env-var credentials, local cookie file — and **turns the abuse case away in its own
+README**: *"自动签到/刷课/答题类需求请绕行"* (auto sign-in, class-farming and auto-answering
+requests should go elsewhere), alongside *"所有工具均为 GET/查询语义，不提交任何表单"*. 🟢 **It is
+the adoptable one.**
+
+**What it implies for an engagement.** 🟢 **Grade every candidate on two independent axes and
+record both in the shelf: (a) what it does with the credential, (b) what the tool does once
+authenticated.** 🔴 **An agent can be licence-safe, security-exemplary and still un-shippable —
+and the client's academic-integrity office, not its security team, is the one that will say so.**
+🔵 **A Chinese higher-education bid should carry the integrity boundary as a written deliverable
+(which tool calls are permitted, and the refusal behaviour for the rest), because the dominant
+open-source implementation in that market crosses it by default.**
+
+## T37 — A licence BYTE-HASH is a de-duplication instrument, and an existence control makes "unlicensed" distinguishable from "absent"
+
+🟢 **`T22` established that a repository name is not an identifier. `T27` established that
+`NOASSERTION` obliges a byte read. `p813` ran the byte read over `38` addresses and found that the
+HASHES answer a third question neither trend could.**
+
+🔴 **The de-duplication case.**
+[`Kfjie-MCP/xuexitong-cli`](https://github.com/Kfjie-MCP/xuexitong-cli) and
+[`DanMo661/xuexitong-cli`](https://github.com/DanMo661/xuexitong-cli) return **byte-identical**
+licence files — `1,065 B`, `sha256:3486ae61…` — carrying the **same copyright holder, `Wu
+Jiale`**. Different owners, different READMEs (`1,580 B` against `24,943 B`), creation dates
+`2026-11-13` against `2026-09-11`. 🟢 **Two addresses, one artefact.** Shelving both would have
+inflated APAC supply by a row and overstated the cluster's momentum in the same stroke.
+🔵 **Grouping `sha256(LICENSE)` across DISTINCT owners is cheap, needs no extra network call
+because the gate already fetched the bytes, and it is the only check in this base that catches a
+re-publication under a new name.** 🔵 **It is deliberately a weak signal alone — two unrelated
+MIT files differ only in the copyright line — so the rule is: identical hash AND distinct owner
+raises the question; the copyright line and creation dates answer it.**
+
+🟢 **The existence-control case, which matters more.** `p812`'s gate recorded
+`NO-LICENCE-FILE-AT-EITHER-ROOT` and could not distinguish *"this repository has no licence"* from
+*"this repository does not exist"* — so a typo and a real finding looked identical.
+🟢 **`p813` added a positive control: probe `README.md` at both branch roots.**
+
+| Subject | `LICENSE` (4 names × 2 branches) | `README.md` | Verdict |
+|---|---|---|---|
+| `5` TronClass repositories 🇹🇼 | 🔴 `404` on every path | 🟢 `200` | **Exists, unlicensed — a HARD nil** |
+| [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) (`57★`, `17` forks) | 🔴 `404` on every path | 🟢 `200` | **Exists, unlicensed — the most-starred Moodle MCP server in the world, and unusable** |
+| `2` invented control addresses | 🔴 `404` | 🔴 `404` | **Absent — the control fires** |
+
+**What it implies for an engagement.** 🟢 **A regional or per-platform zero is now a reportable
+MEASUREMENT rather than a possible search failure, which is exactly the standard `p812` demanded
+after publishing `LATAM 0` as an informed nil when it was not one.** 🔵 **And the
+unlicensed-but-popular case is the cheapest unblock in this base: `loyaniu/moodle-mcp` becomes a
+build-safe row the day its author commits a `LICENSE` file, and asking costs one issue.**
+
+## T38 — APAC now has TWO binding national AI laws that name education, and they demand DIFFERENT compliance artifacts
+
+🔴 **This base has tracked education AI regulation as a disclosure-and-governance question —
+`T16` (deployment inventories nobody has built), `T25` (category by learner age), `T30` (six
+jurisdictions converging on human review). 🟢 **APAC in 2026 breaks that frame, because one of its
+two binding laws demands a filing BEFORE deployment rather than a policy after it.**
+
+| Jurisdiction | Instrument | In force | What it demands of an education deployment |
+|---|---|---|---|
+| 🇰🇷 **South Korea** | AI Basic Act | **2026-01-22** | Education is a named **high-impact** sector. MSIT has signalled `2026` as an effective pilot year with enforcement decrees still being finalised and a guidance-first grace period |
+| 🇻🇳 **Vietnam** | national AI law | **2026-03-01** | 🔴 **High-risk systems, education included, require PRE-DEPLOYMENT REGISTRATION in a national database and a conformity assessment** |
+| 🇦🇺 **Australia** | TEQSA (sectoral, not a statute) | in effect | 🔴 **Every higher-education provider must submit an institutional action plan addressing generative-AI risk** — a named artifact, per provider |
+| 🇨🇳 **China** | algorithmic recommendation, deepfake and generative-AI rules | in effect | Targeted rules rather than one horizontal statute; the most comprehensive framework in the region |
+| 🇸🇬 **Singapore** / 🇯🇵 **Japan** | AI Verify toolkits / voluntary governance | — | 🟢 No binding statute: posture is demonstrated, not filed |
+
+🔵 **And the EU's reach into APAC moved the other way this window.** The Annex III high-risk
+obligations that cover admissions, student evaluation and exam scoring were **delayed to
+`2027-12-02`** under the 2026 AI Omnibus, while the Commission began enforcing the Act from
+`2026-08-02`. 🔴 **Sources conflict on these dates and this base has NOT read the Official Journal
+text — `eur-lex` and `www.gov.br` remain unreachable under this session's network policy, so every
+date in this trend is CITED, NOT READ** (`T906`).
+
+**What it implies for an engagement.** 🔴 **"Which APAC country" changes the deliverable, not just
+the risk register.** 🟢 **Vietnam needs a registration dossier and a conformity assessment built
+into the project plan before go-live; Australia needs a per-provider action plan; Korea needs
+high-impact classification work with the grace period as the window to do it in; Singapore and
+Japan need neither.** 🔵 **A regional APAC proposal that offers one compliance workstream is
+mispriced in at least two directions at once.**
 
 ## T9 — The learner-record layer just became permissive, and it is where the defensible architecture lives
 

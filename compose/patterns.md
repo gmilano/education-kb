@@ -6,7 +6,7 @@ updated: 2026-11-13
 
 # Compose patterns — education
 
-**Thirty** concrete recipes — derived recipes: **30**. 🟢 **Seventeenth pass (`p812`): `P29`–`P30` added** — the Frappe-based education ERP agent, and the LATAM university self-management agent. Each names the actual
+**Thirty-three** concrete recipes — derived recipes: **33**. 🟢 **Eighteenth pass (`p813`): `P31`–`P33` added** — the Chinese university study agent with a written integrity boundary, the North American multi-system family agent, and the clean-room client library that every cluster in this base needs and none of them has. All components licence-verified by byte-read on 2026-11-13. 🟢 **Seventeenth pass (`p812`): `P29`–`P30` added** — the Frappe-based education ERP agent, and the LATAM university self-management agent. Each names the actual
 repos, the license consequence, how the pieces wire together, and a rough build estimate.
 All components were license-verified on 2026-11-13 (see `agents/top.md` and
 `repos/foundations.md`). 🟢 **Sixteenth pass (`p811`): `P27`–`P28` added** — the OneRoster
@@ -1870,6 +1870,150 @@ the client changes.
 3. 🔴 **France, without funding for a clean-room PRONOTE client.** The permissive position
    cannot be reached by relicensing (`T33`), so a fixed-price permissive deliverable is not
    available on the French seam this quarter.
+
+## P31 — Chinese university study agent on Chaoxing / 学习通 (APAC first, and the only pattern here whose core deliverable is a REFUSAL)
+
+**Who it is for.** A Chinese higher-education institution, or an ed-tech serving one, that wants a
+study agent over the LMS students actually use: timetable, deadlines, chapter progress, lecture
+materials and replay transcripts.
+
+**Why it exists as a separate pattern.** 🔴 **Because the dominant open-source implementation in
+this market crosses the academic-integrity line by default (`T36`), a Chaoxing engagement cannot
+be scoped as "adopt the best repo".** 🟢 **The selection criterion is not capability — it is which
+tools the server declines to implement.**
+
+### The components — all verified at `p813`, licences byte-read
+
+| Component | Repo | Licence | Role |
+|---|---|---|---|
+| LMS surface (the anchor) | [`DanMo661/xuexitong-cli`](https://github.com/DanMo661/xuexitong-cli) | **MIT** (`1,065 B`, `sha256:3486ae61…`) | 🟢 **Read-only by declaration — *"所有工具均为 GET/查询语义，不提交任何表单"*.** Timetable (+`.ics`), deadlines, exams, chapter task-points, notices, materials, cloud disk. `24★` |
+| Lecture transcripts | [`ILLENIUM-25/chaoxing-subtitles`](https://github.com/ILLENIUM-25/chaoxing-subtitles) | **MIT** (`1,068 B`, `sha256:4b8fa2fc…`) | Exports course-replay subtitles — 🟢 **the retrieval corpus; without it the agent has metadata and no content** |
+| Session-holding variant (optional) | [`Cyoung-Van/chaoxing-mcp`](https://github.com/Cyoung-Van/chaoxing-mcp) | **MIT** (`1,067 B`, `sha256:6aa62f5f…`) | 🟢 Reaches Chaoxing **through Chrome CDP**, so the browser holds the session and no password is handled at all |
+| Vector store | [`qdrant/qdrant`](https://github.com/qdrant/qdrant) | **Apache-2.0** | Transcript + material index, self-hosted |
+| Model gateway | [`BerriAI/litellm`](https://github.com/BerriAI/litellm) | **MIT** | 🔴 **Required, not optional: route to a domestically hosted model.** Data residency is the gating constraint, not a preference |
+| Audit spine | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** | Records what the agent did, per `P17` |
+
+🔴 **Explicitly NOT in the build:**
+[`DeliciousBuding/chaoxing`](https://github.com/DeliciousBuding/chaoxing) (Apache-2.0). Its
+architecture is the best in this base and its scopes include automated attendance sign-in and
+coursework submission. 🟢 **Cite its security design in the proposal; do not take the dependency.**
+🟡 **And read `xiny8127-glitch/xuexitong-plus`'s tool list before adopting it — "question text
+extraction" sits one step from the same line.**
+
+### How it wires together
+
+1. **Pin the tool surface to reads, and write the refusal down.** 🟢 **The deliverable's first
+   artifact is a tool allowlist: timetable, deadlines, materials, transcripts, notices.**
+   🔴 **Sign-in, answer generation and submission are not unimplemented — they are DECLINED, in
+   writing, with the refusal behaviour specified** (the agent states it cannot do this and why).
+   🔵 **`DanMo661/xuexitong-cli`'s README already does exactly this; the engagement inherits its
+   posture rather than inventing one.**
+2. **Prefer CDP for credential handling.** Use `Cyoung-Van/chaoxing-mcp`'s Chrome-CDP route, or
+   the anchor's env-var path (`凭据不落盘` — credentials never hit disk). 🔴 **Do NOT take
+   `Han-maker-wp/chaoxing-mcp`'s reverse-engineered AES login into a client deliverable: it is
+   lifted from Chaoxing's own JavaScript and legal review will ask about the provenance.**
+3. **Build the corpus before the agent.** Export replay subtitles, chunk by chapter, index in
+   Qdrant alongside the material files. 🟢 **The agent's value is "explain week 7 from the lecture",
+   which needs content, and every other repo in the cluster returns only metadata.**
+4. **Gate the model.** Route through LiteLLM to a domestically hosted endpoint; no transcript
+   leaves the deployment.
+5. **Ship the integrity boundary as a signed document**, not a config comment — the institution's
+   academic-integrity office is the approver, and it is a different approver from IT.
+
+**Rough estimate.** `6–8 weeks` for a faculty pilot. 🔵 **Two of those weeks are the integrity
+boundary and its approval, and that is not padding: it is the part of this engagement that cannot
+be bought from the open-source cluster.**
+
+**Risks.** 🔴 **Chaoxing publishes no API; every component scrapes or replays an undocumented
+login, so a platform change breaks the pilot.** 🔴 **`17` of the cluster's `19` repositories were
+created since `2026-09-11` and none has an institutional owner — maintenance is yours from day
+one.** 🟡 Star counts are low; this is a BUILD-with-components pattern, not an adopt pattern.
+
+## P32 — The multi-system family agent (North America first, and the only pattern here whose user is a PARENT)
+
+**Who it is for.** A US district, or a consumer product serving its families, where one household
+tracks several children across **different systems that do not talk to each other** — an SIS
+portal, an LMS, and often a different SIS per district after a boundary change or a move.
+
+**Why it exists as a separate pattern from `P27`.** `P27` builds on the **state data standard**
+(OneRoster/Ed-Fi) and its buyer is a district IT office. 🟢 **`P32`'s buyer is the family, the
+integration point is the parent portal login, and the whole supply in this tier was written by
+parents and students** (`T31`'s North American instance).
+
+### The components — all verified at `p813`, licences byte-read
+
+| Component | Repo | Licence | Role |
+|---|---|---|---|
+| SIS portal, **multi-district** | [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) | **MIT** (`1,067 B`, `sha256:17dd0009…`) | 🟢 **The spine. `20` tools; linked districts AUTO-DISCOVERED via CUPS SSO from a single account** — the only repo in the tier that handles more than one district. Exactly one write/IO-gated tool (`ic_download_document`) |
+| LMS, parent role | [`chrischall/canvas-parent-mcp`](https://github.com/chrischall/canvas-parent-mcp) | **MIT** (same author) | The Canvas observer surface |
+| Second SIS (Edupoint districts) | [`coolcrazycid/studentvue-mcp`](https://github.com/coolcrazycid/studentvue-mcp) | **MIT** (`1,069 B`, `sha256:60fe23fd…`) | 🟢 Read-only; headless browser against the student site, so it survives districts that disabled the legacy app API |
+| Schoology, **no credential at all** | [`obfuscated-tm/dewey`](https://github.com/obfuscated-tm/dewey) | **MIT** (byte-read `900 B`, vs GitHub `NOASSERTION`) | 🟢 **Reuses the Schoology session Chrome already holds — *"no account · no passwords · nothing leaves your computer"*.** The posture to copy |
+| Client library (if you build) | [`leftathome/schoology-go`](https://github.com/leftathome/schoology-go) | **MIT** (`1,091 B`, `sha256:7a2044fc…`) | The only shared client under the whole tier |
+| Orchestration | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | **MIT** | Fan-out across systems, one answer per child |
+
+### How it wires together
+
+1. **Model the household, not the account.** 🔴 **Every repo in this tier assumes one student and
+   one district.** 🟢 **`infinitecampus-mcp` is the exception and its `student: "<name> (<district>)"`
+   addressing is the convention to adopt across the other connectors.**
+2. **Copy `dewey`'s credential posture wherever the system allows it.** 🟢 **Browser-session reuse
+   removes the stored password entirely** — and the stored-password defect is the single most
+   repeated finding across every cluster this base has measured, in four regions.
+3. **Keep it read-only and say so.** Every component here is read-only by design; 🟢 **preserve
+   that as a product property rather than quietly adding writes later** (`T20`).
+4. **Fan out, then summarise per child.** One LangGraph node per system; the answer a parent wants
+   ("what is due this week, for both kids") never exists in any single portal.
+
+**Rough estimate.** `5–7 weeks` for a two-system, multi-district pilot.
+
+**Risks.** 🔴 **No component has an institutional owner and most have `0–5★`;** treat all of them
+as reference implementations you will fork and maintain. 🔴 **Portal terms of service frequently
+restrict automated access — this is a district-permission conversation before it is a build**, and
+`coolcrazycid/studentvue-mcp` says so in its own README. 🔴 **PowerSchool, the largest SIS in the
+tier, has exactly ONE agent and it is unlicensed** — if the district runs PowerSchool, this pattern
+starts with a build, not an adopt.
+
+## P33 — The clean-room client library as the durable asset (Global method, APAC/North America first)
+
+**Who it is for.** A studio that expects more than one engagement against the same education
+system — Chaoxing in China, StudentVUE or Infinite Campus in the United States — and wants the
+second engagement to be cheaper than the first.
+
+**Why it exists.** 🟢 **`p813` shelved `29` agents and then asked what they build on. The answer
+was nothing:** `studentvue python client library` → `0`, `infinite campus api client` → `0`,
+`chaoxing api library` → `0`, `schoology api client library` → `1` (at `1★`),
+`moodle webservice client python` → `1` (unmaintained since `2024-08-13`). 🔵 **`19` Chaoxing
+agents each reverse-engineer the same AES login, separately.** 🟢 **`T33` warned that an agent's
+client library can make it unshippable; the stronger finding is that for the systems that dominate
+agent supply, the library does not exist at all.**
+
+### The recipe
+
+| Step | What you build | Why it is defensible |
+|---|---|---|
+| 1 | **Pick the system by cluster density, not by star count.** Chaoxing (`19` agents), Schoology (`11`), StudentVUE (`7`) | Density measures demand that already exists |
+| 2 | **Write the client clean-room, from observed HTTP** — authentication, session persistence, ~`12` read endpoints | 🔴 **Not from `Han-maker-wp/chaoxing-mcp`'s lifted JavaScript: provenance is the first thing a client's legal review asks about** |
+| 3 | **Grant it MIT or 0BSD** | 🟢 **`kristoffervp/vigilo-mcp` shows the 0BSD option: no attribution obligation at all, so a client can vendor it without a notice file** |
+| 4 | **Publish it, then build the agent on top** | The agent is the engagement; the library is the asset that makes the next one cheaper |
+| 5 | **Instrument it** with [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) (**MIT**) | Per `P17` |
+
+🟢 **The cheapest variant of this pattern is not a build at all.** 🔴
+[`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) is the most-starred Moodle MCP server
+in existence (`57★`, `17` forks) and carries **no licence file at either branch root**, while
+`README.md` returns `200` — so it exists and is simply ungranted (`T37`). 🟢 **One issue asking the
+author to add a `LICENSE` converts the tier's anchor into a build-safe dependency.** 🔵 **Ask
+before you build; the same question is owed to the `5` TronClass repositories 🇹🇼, which are a
+complete unlicensed tier.**
+
+🔵 **And where the system's operator is a ministry, there is a third option that beats both.**
+🇰🇷 **`arapodcho/mcp_server_neis_api` needs no scraping, no reverse-engineered login and no learner
+credential — because NEIS publishes an open-data API.** 🟢 **It is the only row in this pass's
+harvest with that property, and it is what every other row would look like if the system published
+one. "Ask the ministry to publish the API" is a real engagement option** (`P28`'s buyer is the same
+ministry).
+
+**Rough estimate.** `4–6 weeks` for the library plus `4` weeks for the first agent on it.
+🟢 **The second engagement on the same system is then a `2–3 week` build.**
 
 ## P29 — Agent on a Frappe-based education ERP (Global, configuration not build, and the first pattern here whose connector is FIRST-PARTY)
 

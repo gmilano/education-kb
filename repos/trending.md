@@ -4,6 +4,57 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (eighteenth pass) — **The layer under the agents does not exist, and that is the most commercially useful thing this pass found**
+
+**Pass `p813`.** 🟢 **This pass shelved `29` agents across four regions. It then asked what they
+all build ON — and the answer is: nothing. Each one reimplements the login.**
+
+### The measurement
+
+| Query | `total_count` | Consequence |
+|---|---|---|
+| `studentvue python client library` | 🔴 **`0`** | `7` StudentVUE agents, **no shared client** |
+| `infinite campus api client` | 🔴 **`0`** | Every Infinite Campus agent re-derives CUPS SSO itself |
+| `chaoxing api library` | 🔴 **`0`** | 🔴 **`19` Chaoxing agents, and the AES login is reverse-engineered SEPARATELY in each one** |
+| `schoology api client library` | 🟡 **`1`** | [`leftathome/schoology-go`](https://github.com/leftathome/schoology-go), **MIT** (byte-read `1,091 B`), `1★` |
+| `moodle webservice client python` | 🟡 **`1`** | [`vlaszdunov/pymoodleclient`](https://github.com/vlaszdunov/pymoodleclient), **Apache-2.0** (`11,357 B`), 🔴 **last pushed `2024-08-13` — unmaintained through the entire agent wave that would have used it** |
+| `oneroster python library` | 🔴 **`1`, unlicensed** | `smulic/OneRoster-python-library`, no grant |
+
+🔵 **This is `T33` turned from a caveat into a product thesis.** `p811`'s `T33` observed that an
+agent can read MIT and still be unshippable because its client library is not permissive.
+🟢 **`p813` finds the stronger case: for the systems that DOMINATE agent supply, the library does
+not exist at all.** 🟢 **The recipe is now `P33`** — pick by cluster density, write clean-room from
+observed HTTP (🔴 **not from `Han-maker-wp/chaoxing-mcp`'s lifted JavaScript**), grant MIT or 0BSD,
+publish, then build the agent on top. `4–6` weeks for the library; the second engagement on the
+same system drops to `2–3`.
+
+### The trending repos themselves
+
+🔴 **GitHub's own `/trending` page is not reachable under this session's network policy**, so what
+follows is `gh api search/repositories` ordered by creation date within this window, which is a
+different and narrower instrument — stated rather than glossed.
+
+| Repo | Licence | ★ | Created | Why it is the signal |
+|---|---|---|---|---|
+| [`DanMo661/xuexitong-cli`](https://github.com/DanMo661/xuexitong-cli) | **MIT** | `24` | `2026-09-11` | Anchor of a `19`-repo cluster, `17` of which were created in the last six weeks |
+| [`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp) | **MIT** | `28` | `2026-08-31` | 🔴 **Displaces `utn-mcp` as LATAM's most-starred education agent one pass after it was crowned.** Pushed today |
+| [`kad-xyz/spbstu-mcp`](https://github.com/kad-xyz/spbstu-mcp) | **MIT** | `20` | `2026-10-19` | Most-starred EMEA education agent in this base; spans three systems |
+| [`Han-maker-wp/chaoxing-mcp`](https://github.com/Han-maker-wp/chaoxing-mcp) | **MIT** | `15` | `2026-09-19` | 🟡 Second in the cluster; the reverse-engineered-login tier |
+| [`EdmundD28/moodle-codex`](https://github.com/EdmundD28/moodle-codex) | **MIT** | `10` | `2026-09-22` | 🟢 "Bounded file parsing" — the only row in this harvest naming a resource limit |
+| [`matheussilvano/moodle-mcp`](https://github.com/matheussilvano/moodle-mcp) | **MIT** | `5` | `2026-11-04` | `3` forks in nine days — fastest fork accumulation in this harvest |
+| [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) | 🔴 **NONE** | `57` | — | 🔴 **The most-starred Moodle MCP server in existence, `17` forks, and no licence file at either branch root** |
+
+### The instrument note
+
+🟢 **The licence gate gained a positive control and a de-duplication check this pass (`T37`).**
+Probing `README.md` at both branch roots distinguishes *"exists, unlicensed"* (the `5` TronClass
+repos; `loyaniu/moodle-mcp`) from *"does not exist"* (two invented control addresses, `404` on
+both). 🟢 **And `sha256(LICENSE)` grouped across distinct owners caught
+[`Kfjie-MCP/xuexitong-cli`](https://github.com/Kfjie-MCP/xuexitong-cli) republishing
+`DanMo661/xuexitong-cli` under a new owner, same copyright holder, created today.**
+
+---
+
 ## `2026-11-13` (seventeenth pass) — **The generic platform connector went FIRST-PARTY, and it arrived with the controls the third-party ones lacked**
 
 **Pass `p812`.** 🟢 **The lead this base wrote down at `p808` and never ran — *"`frappe/education`

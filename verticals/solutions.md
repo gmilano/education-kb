@@ -7,6 +7,73 @@ updated: 2026-11-13
 # Education vertical platforms — real systems to customize AI on top of
 
 
+## Education vertical platforms — 81 rows
+
+🟢 **Eighteenth pass (`p813`, 2026-11-13): this file is gradeable for the first time since
+`p718`,** for the reason set out in `repos/foundations.md` — `ACTION p811-A` option (a),
+implemented with uncounted-table detection. Gate output:
+`tables=15 rows=83 distinct=81 graded=81 claimed=81 ragged=0 nolink=0`.
+
+🔵 **And it earned its keep inside the hour it was written.** The first draft of this heading
+claimed `70` — the pre-insertion figure — and the gate rejected it: *"RED heading claims 70, the
+file holds 81."* 🟢 **That is precisely the drift `compose/patterns.md` has had to confess four
+times in prose. It is now caught by a program instead of by the next pass's reader.**
+
+## 🟢 Eighteenth pass (`p813`, 2026-11-13) — the two platform tiers this file had never named: 🇨🇳 China's university LMS, and 🇺🇸 the North American K-12 parent portal
+
+🔴 **Every section of this file written before `p813` assumes Moodle, Canvas, an SIS vendor, a
+European school portal or a LATAM self-management system.** 🟢 **Two whole incumbent tiers were
+missing, and both were found with the same instrument that closed EMEA at `p811` and LATAM at
+`p812`: name the system, never the language or the region.**
+
+### 🇨🇳 The Chinese university LMS tier — the densest agent cluster this base has measured
+
+| Platform | Incumbent where | Open agent surface found | License | Stars |
+|---|---|---|---|---|
+| **Chaoxing / 学习通** (Xuexitong) | 🇨🇳 Chinese higher education, very widely deployed | [`DanMo661/xuexitong-cli`](https://github.com/DanMo661/xuexitong-cli) is the anchor; `19` repositories on one query, `12` build-safe, `17` of `19` created since `2026-09-11` | **MIT** ×10, **Apache-2.0** ×1 | `24`, `15`, `3`, `1` … |
+| **雨课堂** (Rain Classroom / Yuketang, Tsinghua) | 🇨🇳 lecture delivery and in-class interaction | [`ahdaolma/yuketang-mcp`](https://github.com/ahdaolma/yuketang-mcp) — course + courseware, auto key-point capture, annotation, Q&A | **MIT** | `0` |
+| **TronClass** (WisdomGarden) | 🇹🇼 Taiwanese universities (NTOU, FJU observed) | `5` repositories — [`cantpr09ram`](https://github.com/cantpr09ram/TronClass-MCP), [`markbee66`](https://github.com/markbee66/tronclass-mcp), [`RX5950XT`](https://github.com/RX5950XT/FJU-TronClass-MCP), [`JasonWu55`](https://github.com/JasonWu55/tronclass-mcp), [`rlongdragon`](https://github.com/rlongdragon/tronclass-mcp) | 🔴 **NONE — `0` of `5` carry any licence**, while all `5` return `200` on `README.md` | `3`, `1`, `1`, `1`, `0` |
+| **SIAKAD** (*Sistem Informasi Akademik*) | 🇮🇩 Indonesian universities, per-institution | [`alfa-yohannis/siakad-mcp`](https://github.com/alfa-yohannis/siakad-mcp) (Universitas Pradita) — **`1` repository on the whole query** | **MIT** | `0` |
+| **NEIS** (나이스) | 🇰🇷 Korean national education information system | [`arapodcho/mcp_server_neis_api`](https://github.com/arapodcho/mcp_server_neis_api) over the `open.neis.go.kr` open-data portal | **MIT** | `0` |
+
+🔵 **The decision rule this tier forces, and it is new.** 🔴 **The best-engineered agent in the
+Chaoxing cluster is the one a studio must refuse** — see `T36` and the `DeliciousBuding/chaoxing`
+row in `agents/top.md`. Its scope list includes automated attendance sign-in and coursework
+submission. 🟢 **Scope a Chinese higher-ed engagement on the Tier-1 read-only anchor
+(`DanMo661/xuexitong-cli`, which declines the abuse case in its own README) and treat the
+integrity boundary as a written deliverable, not an implementation detail.**
+
+🟢 **And NEIS is the counter-example that sets the target.** It is the only platform in this
+pass's entire harvest that **publishes an official API**, and its agent correspondingly needs no
+scraping, no reverse-engineered login and no learner credential at all. 🔵 **Where a ministry
+operates the system, "ask them to publish the API" is a real engagement option and a far cheaper
+one than maintaining a scraper** (`P32`).
+
+### 🇺🇸 The North American K-12 parent/student portal tier — built by families, not vendors
+
+🔴 **A US K-12 engagement does not start at the LMS either. It starts at the SIS portal the parent
+logs into** — and that tier had `0` mentions in this file before `p813`.
+
+| Platform | Incumbent where | Open agent surface found | License | Stars |
+|---|---|---|---|---|
+| **Infinite Campus** (Campus Parent) | 🇺🇸 large US districts | [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) — `20` tools, **multi-district via CUPS SSO auto-discovery**, exactly one write/IO-gated tool | **MIT** | `5` |
+| **StudentVUE** (Edupoint Synergy) | 🇺🇸 very widely deployed K-12 SIS | [`coolcrazycid/studentvue-mcp`](https://github.com/coolcrazycid/studentvue-mcp) (headless browser against the student site) and [`meowgoober/studentvue-mcp`](https://github.com/meowgoober/studentvue-mcp) (mobile-app API) — **opposite routes to the same system** | **MIT** ×2 | `0`, `0` |
+| **Schoology** (PowerSchool) | 🇺🇸 K-12 LMS | `11` repositories; [`coolcrazycid/schoology-mcp`](https://github.com/coolcrazycid/schoology-mcp), [`obfuscated-tm/dewey`](https://github.com/obfuscated-tm/dewey), [`riripatate/schoology-mcp`](https://github.com/riripatate/schoology-mcp) | **MIT** (several); `dewey` MIT under a GitHub `NOASSERTION` | `2`, `3` |
+| **Skyward** | 🇺🇸 K-12 SIS, strong in the Midwest | [`caleb-media-studio/skyward-mcp`](https://github.com/caleb-media-studio/skyward-mcp) — user-hosted, OAuth 2.1 + PKCE, **"the first release is deliberately read only"** | **MIT** | `0` |
+| **Blackbaud Financial Edge NXT** | 🇺🇸 independent schools and non-profits | [`CDataSoftware/blackbaud-fe-nxt-mcp-server-by-cdata`](https://github.com/CDataSoftware/blackbaud-fe-nxt-mcp-server-by-cdata) — **the only VENDOR-published connector in the tier** | **MIT** | `0` |
+| **PowerSchool SIS** | 🇺🇸 the largest US K-12 SIS | [`zuvy/ps-mcp-server`](https://github.com/zuvy/ps-mcp-server) — **`1` repository, unlicensed** | 🔴 **NONE** | `1` |
+
+🔵 **Two scoping consequences a bid depends on.**
+🟢 **(1) The supply is FAMILY-BUILT, and it shows in the architecture.** The strongest credential
+posture in this pass comes from this tier and from an unpaid author:
+[`obfuscated-tm/dewey`](https://github.com/obfuscated-tm/dewey) needs **no password at all** — it
+reuses the Schoology session Chrome already holds. 🔴 **But family-built also means
+single-district, single-child and unmaintained by default; only `chrischall/infinitecampus-mcp`
+handles multiple districts, and no repository in the tier has an institutional owner.**
+🔴 **(2) PowerSchool — the largest SIS in the tier by installed base — has exactly one agent and
+it carries no licence.** 🟢 **That is the widest open slot `p813` found in North America**, and it
+is the same shape as the SIAGIE nil `p812` found in Peru.
+
 ## 🟢 Seventeenth pass (`p812`, 2026-11-13) — the second open-source education ERP gains an agent surface, and LATAM's university systems gain one for the first time
 
 ### Frappe Education — reachable with no education-specific code, on a FIRST-PARTY MIT connector

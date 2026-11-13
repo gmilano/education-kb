@@ -6,15 +6,72 @@ updated: 2026-11-13
 
 # Foundational open-source repos for education
 
-The platforms and libraries an education engagement actually builds on. **70
-repos**, all verified on the `gh api search/repositories` `repo:` channel
-(license field + star count + push date), which this pass CONTROLLED against two
-invented addresses (`T970`).
+The platforms and libraries an education engagement actually builds on, all verified on the
+`gh api search/repositories` `repo:` channel (license field + star count + push date) and
+licence-verified by BYTE-READ over `raw.githubusercontent.com`, controlled in both directions
+against two invented addresses (`T970`, `T37`).
+
+## Foundational repos — 76 rows
+
+🟢 **Eighteenth pass (`p813`, 2026-11-13): the gate that could not read this file for ninety-five
+passes now reads it, and the number above is its output rather than a `grep` written by hand.**
+🔴 **`repos/foundations.md` had been RED on `ingest/derive-counts.py` since `p718` — not stale,
+STRUCTURALLY ungradeable: the gate assumed one canonical table per file with a fixed column
+signature, and this file is deliberately sectioned into `15` architectural layers.** `ACTION
+p811-A` posed the choice and chose option (a) — teach the gate a LIST of signatures and sum the
+rows. 🟢 **`p813` implemented (a), and added what (a) alone would not have given: UNCOUNTED-TABLE
+DETECTION.** Any table carrying `github.com` rows whose header is not declared is now a RED naming
+the line, so a new layer can be added freely but never silently. 🟢 **Gate output for this file:
+`tables=15 rows=78 distinct=76 graded=76 claimed=76 ragged=0 nolink=0 dupes=0`** — two repos
+appear in two layers each, which is the point of layering, so the claim is graded on DISTINCT
+subjects and the repeat is reported `INFO`, not `RED`.
+
+```sh
+python3 -I ingest/derive-counts.py        # the gate, now green on all five files
+```
 
 🟢 **Seventeenth pass (`p812`, 2026-11-13): six repos added, and the lead this shelf has
 carried unrun since `p808` is CLOSED — `frappe/education` has an agent surface, and it is
 first-party.** 🔵 **Count re-derived, not carried:** `grep -cE '^\| .*github\.com'
-repos/foundations.md` = `76` after insertion (`70` before).
+repos/foundations.md` = `76` after insertion (`70` before). 🔵 **Superseded at `p813` by the machine count above.**
+
+## The client-library layer — 🔴 **it does not exist, and that is this pass's most commercially useful finding** (new, eighteenth pass `p813`)
+
+🟢 **`p813` shelved `29` agents across four regions. It then asked the obvious follow-up question
+— what do they all build ON? — and the answer is: nothing. Each one reimplements the login.**
+
+🔴 **Measured, not asserted.** `gh api search/repositories` on the client-library layer beneath
+this pass's four clusters:
+
+| Query | `total_count` | What that means |
+|---|---|---|
+| `studentvue python client library` | 🔴 **`0`** | `7` StudentVUE agents exist; **not one shared client** |
+| `infinite campus api client` | 🔴 **`0`** | Every Infinite Campus agent re-derives CUPS SSO itself |
+| `chaoxing api library` | 🔴 **`0`** | `19` Chaoxing agents, and the AES login is reverse-engineered **separately in each one** |
+| `schoology api client library` | 🟡 **`1`** | one Go client, `1★` |
+| `moodle webservice client python` | 🟡 **`1`** | one Apache-2.0 client, `1★`, last pushed `2024-08-13` |
+| `oneroster python library` | 🔴 **`1`, unlicensed** | `smulic/OneRoster-python-library`, no grant |
+
+🔵 **This is `T33` (`p811`) turned from a caveat into a product thesis.** `T33` observed that an
+agent can read MIT and still be unshippable because its *client library* is not permissively
+licensed. 🟢 **`p813` finds the stronger case: for the four systems that dominate agent supply in
+APAC and North America, there is no client library AT ALL — permissive or otherwise.**
+
+🟢 **The two that do exist, byte-verified:**
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/leftathome/schoology-go | **MIT** (byte-read, `1,091 B`, `sha256:7a2044fc…`) | 1 | **New (`p813`).** Go client library for the Schoology API, pushed `2026-10-11`. 🔵 **The only shared client under the entire North American K-12 portal tier** — against `11` Schoology agents, each of which does its own HTTP |
+| https://github.com/vlaszdunov/pymoodleclient | **Apache-2.0** (byte-read, `11,357 B`, `sha256:c71d239d…`) | 1 | **New (`p813`).** Python client for the Moodle webservices REST API. 🔴 **Last pushed `2024-08-13` — unmaintained through the entire agent wave that would have used it.** 🔵 Shelved as the honest state of the layer, not as a recommendation |
+
+🟢 **The engagement consequence, and it is a BUILD recommendation rather than an adopt one.**
+A studio that writes one clean-room, permissively licensed client for a dominant system — Chaoxing
+in China, StudentVUE or Infinite Campus in the United States — owns the layer every agent in that
+cluster needs and none of them has. 🔵 **The work is bounded (authentication, session persistence,
+a dozen read endpoints), the demand is demonstrated (`19` + `7` + `3` independent
+reimplementations), and `DanMo661/xuexitong-cli` has already done the hardest part in public under
+MIT.** 🔴 **Clean-room matters: `Han-maker-wp/chaoxing-mcp`'s AES login is lifted from Chaoxing's
+own JavaScript, which is a provenance a client's legal review will ask about.**
 
 ## The Frappe layer — the generic platform connector, now FIRST-PARTY (new, seventeenth pass `p812`)
 

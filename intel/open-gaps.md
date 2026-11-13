@@ -4,6 +4,138 @@ region: Global
 updated: 2026-11-13
 ---
 
+## 🆕 `p813` — **Disposition of `ACTION p811-A`…`p811-D` (`p812` wrote no gap section), and the actions for the next pass**
+
+🔴 **First, a process defect worth naming: `p812` added ten rows and wrote NO disposition.** Its
+actions were inherited from `p811` and simply went unanswered for a pass. 🟢 **`p813` answers
+them.**
+
+### 🟢 `ACTION p811-A` — **CLOSED. Both structurally-RED gates are now GREEN, and the defect CLASS is closed with them**
+
+🔴 **As stated:** `repos/foundations.md` (14 tables) and `verticals/solutions.md` (10) had been
+RED on `ingest/derive-counts.py` since `p718` — not stale, **structurally ungradeable**, because
+the gate assumed ONE canonical table per file with a fixed column signature while both files are
+deliberately sectioned by architectural layer. 🟢 **`p811` posed the choice and chose option (a) —
+teach the gate a LIST of signatures per file and sum the rows — "because the layering is the value
+of those files."**
+
+🟢 **Implemented at `p813`, and the declared signatures were additionally WRONG on their face:**
+the gate expected `| Repo | Licence | Stars | Default branch | …` where the file writes
+`| Repo | License | Stars | Notes |`. Columns named `Default branch` and `Branch | Stack` have
+never existed in either file. 🔵 **So the gate was not merely mis-shaped; it was looking for
+tables nobody had ever written.**
+
+🟢 **Three things were added beyond option (a), because (a) alone would have left the gate able to
+go blind the next time these pages change shape — which is what happened at `p543`, `p568`,
+`p718` and `p812`:**
+
+1. 🟢 **UNCOUNTED-TABLE DETECTION.** Any table carrying `github.com` rows whose header is not a
+   declared signature is a RED naming the line and the row count. **A new layer table can be added
+   freely; it cannot be added silently.**
+2. 🟢 **DECLARED EXCLUSIONS.** `agents/top.md`'s copyleft and rejected tables are listed as
+   deliberately not-counted. 🔵 **Declaring them is what makes (1) meaningful: an undeclared table
+   is an omission, a declared one is a decision.**
+3. 🟢 **DISTINCT-SUBJECT GRADING on multi-table files.** `frappe/education` legitimately appears in
+   two layers, so a repeat is a duplicate ROW, not a duplicate SUBJECT; the claim is graded on
+   distinct subjects and the repeat is reported `INFO`. **On a single-table shelf a repeat is
+   still RED.**
+
+🟢 **Result — `python3 -I ingest/derive-counts.py` → `EXIT=0`, all five files, first time ever:**
+
+```
+compose/patterns.md    recipes: derived=33 families=33 range=P-1..P-33 claimed=33   GREEN
+intel/trends.md        trends:  derived=38 claimed=38                               GREEN
+agents/top.md          shelf: tables=1  rows=103 distinct=103 graded=103 claimed=103 GREEN
+repos/foundations.md   shelf: tables=15 rows=78  distinct=76  graded=76  claimed=76  GREEN
+verticals/solutions.md shelf: tables=15 rows=83  distinct=81  graded=81  claimed=81  GREEN
+```
+
+🔵 **And it earned its keep inside the hour.** The first draft of `verticals/solutions.md`'s new
+count heading claimed `70` — the pre-insertion figure — and the gate rejected it: *"RED heading
+claims 70, the file holds 81."* 🟢 **That is the drift `compose/patterns.md` has confessed in prose
+four times, now caught by a program.**
+
+🟢 **Bonus disposition — `ACTION p781-A` / `p775-A` / the `make hooks` escalation, PARTIALLY
+DISCHARGED and re-scoped.** 🔴 The escalation says running a committed instrument is refused by the
+command classifier (`0` for `6` sessions, `17` undeclared red gates unrunnable). 🟢 **Under this
+session `python3 -I ingest/derive-counts.py` RAN, directly and repeatedly.** 🔵 **So the refusal is
+narrower than six passes recorded: it attaches to `make hooks` as a target, not to executing
+repository code as such.** 🔴 **`make hooks` itself was still not run.** 🟢 **The useful
+reformulation for the next pass: invoke the gate scripts DIRECTLY rather than through `make`, and
+stop recording the whole class as unrunnable.**
+
+### 🟢 `ACTION p811-B` — **CLOSED for APAC and North America; the LATAM residue is carried with a reason**
+
+🟢 **The instruction was right and it worked twice more.** `p811` closed EMEA by naming national
+school portals, `p812` closed LATAM by naming university self-management systems, and `p813`
+pointed the same instrument at the two remaining thin regions: **`APAC 3 → 17`,
+`North America 4 → 12`.** 🟢 **Every region is now double digits.**
+
+🔴 **The LATAM residue is NOT discharged.** `p811-B` named SIGED (🇲🇽), Ceibal's platforms (🇺🇾)
+and SIE as targets. 🔴 **None was run** — the LATAM budget went instead to
+[`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp) (`28★`), which **displaces
+`utn-mcp` as the region's most-starred education agent one pass after `p812` crowned it**, because
+`p812` named SIGAA, SUAP and Guaraní but never USP's own systems. 🟢 **Carried to `p813-B`
+explicitly. 🇲🇽 Mexico remains the largest LATAM system with zero measured agent supply.**
+
+### 🟡 `ACTION p811-C` — **HALF-DISCHARGED, and the dependency rule now has a second instance**
+
+🟢 **The rule stands: resolve the licence of the client library an agent uses to reach the system
+of record, not only the repository licence.** 🔴 **`p813` could not apply it to most of this
+pass's harvest — because the libraries DO NOT EXIST** (`0` results for StudentVUE, Infinite Campus
+and Chaoxing client libraries; see `repos/foundations.md`). 🟢 **That is a stronger result than the
+check it replaces, and it became `P33`.** 🔴 **The provenance question survives in a new form:
+`Han-maker-wp/chaoxing-mcp`'s AES login is lifted from Chaoxing's own JavaScript — a clean licence
+over code of uncertain provenance.** 🔵 **Add to the intake rule: ask where the authentication
+code CAME FROM, not just what grant covers it.**
+
+### 🟢 `ACTION p811-D` — remains CLOSED AS A REFUSAL
+
+🟢 **Not reopened.** Sweeping individual maintainers' declared locations is person-level data
+collection about private individuals for a commercial file. 🟢 **`p813` resolved region from the
+TARGET SYSTEM throughout (`T32`)** — which is why four generic-Moodle rows are shelved `Global`
+although their authors write in Portuguese and Chinese.
+
+### ACTION `p813-A`…`p813-F` for the next pass
+
+🟢 **`p813-A` — run `python3 -I ingest/derive-counts.py` FIRST and report the line. Do NOT route
+it through `make hooks`.** 🔵 The gate is green on all five files; the next pass's job is to keep
+it green while adding rows, which means writing the count claim AFTER insertion, from the gate's
+own output. 🔴 **Do not rebuild the gate — it was rebuilt this pass and the uncounted-table
+detector is new and unproven over a full pass.**
+
+🔴 **`p813-B` — the LATAM residue, now owed a THIRD time: SIGED (🇲🇽), Ceibal (🇺🇾), SIE.**
+🟢 Query shape is settled: name the system, never the language (`T935`). 🔴 **If `p814` cannot run
+it, RETIRE it rather than carry it a fourth time** — the `p773-E` rule.
+
+🟢 **`p813-C` — run the system-layer instrument at 🇮🇳 INDIA, which is this pass's largest declared
+nil.** `diksha mcp server`, `samarth university mcp` and `academia erp mcp college` all returned
+`0`. 🔵 **The region's largest education system with zero measured agent supply is either a real
+market fact or a query defect, and `T26`/`T29` say the only way to tell is to name more systems:
+try `ERP` vendors by name (Academia, Camu, MasterSoft), `APAAR`, `ABC`, `Shaala Darpan`, and
+state-level portals rather than national ones.**
+
+🟢 **`p813-D` — ASK, do not build: open a licence issue on
+[`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) (`57★`, `17` forks, no grant) and on
+the `5` 🇹🇼 TronClass repositories.** 🔵 **One `LICENSE` commit converts the most-starred Moodle MCP
+server in existence into a build-safe row — the cheapest unblock in this base.** 🔴 **This requires
+a human decision: it is outward-facing contact on behalf of the studio and `p813` did NOT do it.**
+
+🟢 **`p813-E` — grade the EXISTING shelf on `T36`'s second axis.** `103` build-safe rows were
+graded on credential handling; **only this pass's `29` carry an integrity grade.** 🔵 **Sweep the
+older rows for tools that sign in, submit, or generate answers, and mark them** — the defect `T36`
+describes is invisible until someone looks for it, and `DeliciousBuding/chaoxing` sat at the top of
+a licence-clean search result.
+
+🔵 **`p813-F` — the specific prediction, so it can fail.** `T37`'s hash instrument found `1`
+cross-owner duplicate in `38` addresses. 🟢 **Run `sha256(LICENSE)` across the WHOLE `103`-row
+shelf: the prediction is that at least `2` more cross-owner collisions exist, and that at least one
+is a genuine re-publication rather than a sibling repo by the same author.** 🔴 **If it returns
+zero, `T37`'s instrument is weaker than this pass claimed and the trend should be narrowed to say
+so.**
+
+---
+
 ## 🆕 `p811` — **`4` new actions, one standing gap half-discharged from the SUPPLY side, and one action CLOSED as a refusal**
 
 🟢 Machine output: [`repo-verification`](../evidence/repo-verification.2026-11-13-p811.tsv) · [`origin-location-channel`](../evidence/origin-location-channel.2026-11-13-p811.tsv) · [`websearch-legs`](../evidence/websearch-legs.2026-11-13-p811.tsv)

@@ -115,34 +115,106 @@ if os.path.exists(tre):
 # which a rewrite of the surrounding sentence cannot touch. The count claim is then read from
 # the nearest PRECEDING '## ' heading. Reword the heading however you like; the gate still
 # finds the table and still grades the number in it.
+# --- p813: ACTION p811-A, discharged with option (a) --------------------------------------
+# 🔴 p811 recorded the defect: this list assumed ONE canonical table per file with a fixed
+# column signature, while repos/foundations.md (14 tables) and verticals/solutions.md (10)
+# are deliberately SECTIONED BY ARCHITECTURAL LAYER. Both files had been RED since p718 --
+# not stale, not neglected, structurally ungradeable -- and the expected signatures below
+# were additionally wrong on their face ('Licence' where both files write 'License',
+# 'Default branch' and 'Branch | Stack' columns that have never existed).
+#
+# 🟢 p811 chose between (a) teach the gate a LIST of signatures per file and sum the rows,
+# and (b) give each file one roll-up table and demote the layer tables to prose -- and chose
+# (a), because the layering IS the value of those files. This is (a).
+#
+# 🟢 And it closes the defect CLASS, not just the instance. Every previous repair here
+# (p543, p568, p718, p812) widened a predicate and left the gate able to go blind again the
+# next time the pages changed shape. So the sum is now accompanied by UNCOUNTED-TABLE
+# DETECTION: any table in the file whose body carries github.com addresses but whose header
+# is not in the list below is a RED naming the line. A new layer table can be added freely;
+# it cannot be added SILENTLY.
 SHELVES = [
-    ("agents/top.md",
-     "| Name | Repo | Licence | Stars | Region | Description |", 6),
-    ("repos/foundations.md",
-     "| Repo | Licence | Stars | Default branch | Why it is a foundation |", 5),
-    ("verticals/solutions.md",
-     "| Platform | Repo | Licence | Branch | Stack | Use case |", 6),
+    ("agents/top.md", [
+        "| Name | Repo | Licence | Stars | Region | Description |",
+    ], [
+        # 🟢 Declared NOT-counted, deliberately: the shelf figure is the build-safe table.
+        # Declaring them is what makes the detector below meaningful -- an undeclared table
+        # is an omission, a declared one is a decision.
+        "| Agent | Repo | License | Stars | What it does |",            # copyleft
+        "| Candidate | Repo | Actual license | Stars | Why rejected |",  # rejected
+    ]),
+    ("repos/foundations.md", [
+        "| Repo | License | Stars | Notes |",
+        "| Repo | License | Stars | What it is, and what it is not |",
+    ], []),
+    ("verticals/solutions.md", [
+        "| Platform | Repo | License | Stars | Notes |",
+        "| Platform | Repo | Licence | Stars | What it is |",
+        "| Platform | Repo | License | Stars | Why it is the right base for education admissions |",
+        "| Platform | Repo | License | Stars | Where it is the incumbent | AI customization surface |",
+        "| Platform | Repo | License (payload-verified) | Stars | What you actually get | What you do NOT get |",
+        "| Platform | What institutions run it | Agent surface found this pass | License | Risk posture |",
+        "| Platform | What institutions run it | Agent surface added this pass | License | Risk posture |",
+        "| Platform | Operated by | Country | Agent surface found this pass | Licence | Stars |",
+        "| Platform | Incumbent where | Open agent surface found | License | Stars |",
+        "| Library | Repo | License | Stars | Use when |",
+    ], []),
 ]
 
-for rel, signature, ncol in SHELVES:
+
+def _tables(lines):
+    """Yield (header_index, header_text, [body rows]) for every markdown table."""
+    i = 0
+    while i < len(lines) - 1:
+        h = lines[i].strip()
+        sep = lines[i + 1].strip()
+        if h.startswith("|") and re.match(r"^\|[\s:|-]+\|$", sep) and "-" in sep:
+            j = i + 2
+            body = []
+            while j < len(lines) and lines[j].strip().startswith("|"):
+                body.append(lines[j])
+                j += 1
+            yield i, h, body
+            i = j
+        else:
+            i += 1
+
+
+for rel, signatures, excluded in SHELVES:
+
     path = os.path.join(root, rel)
     if not os.path.exists(path):
         print("%-22s ABSTAIN file absent." % rel)
         continue
     lines = open(path, encoding="utf-8").read().split("\n")
-    hi = next((i for i, l in enumerate(lines) if l.strip() == signature), None)
-    if hi is None:
-        # Not a silent abstain: a shelf whose column header has changed is a RED, because
-        # that is exactly the condition under which this gate used to go blind.
-        print("%-22s RED  column-header signature not found; the table cannot be located." % rel)
-        print("                       expected: %s" % signature)
+
+    sigset = set(signatures)
+    rows, ragged, uncounted, matched = [], 0, [], 0
+    for hi, header, body in _tables(lines):
+        linked = [r for r in body if "github.com/" in r]
+        if header in sigset:
+            matched += 1
+            ncol = len(header.strip().strip("|").split("|"))
+            rows.extend(linked)
+            ragged += sum(1 for r in linked
+                          if len(r.strip().strip("|").split("|")) != ncol)
+        elif linked and header not in set(excluded):
+            uncounted.append((hi + 1, header, len(linked)))
+
+    if matched == 0:
+        print("%-22s RED  none of the %d declared column-header signatures was found; "
+              "no table can be located." % (rel, len(signatures)))
+        for sig in signatures:
+            print("                       expected: %s" % sig)
         rc = 1
         continue
-    i = hi + 2                      # skip the |---|---| separator
-    rows = []
-    while i < len(lines) and lines[i].strip().startswith("|"):
-        rows.append(lines[i])
-        i += 1
+
+    if uncounted:
+        print("%-22s RED  %d table(s) carry github.com rows but no declared signature; "
+              "they are NOT counted." % (rel, len(uncounted)))
+        for ln, header, n in uncounted:
+            print("                       line %d (%d rows): %s" % (ln, n, header))
+        rc = 1
     # p718: the count claim is NOT in the nearest preceding '## ' -- every shelf carries pass
     # narrative between its count heading and its table. It lives in the file's UNIQUE
     # canonical count heading, of the shape '## <name> -- N rows'. Graded as a SINGLETON
@@ -161,7 +233,6 @@ for rel, signature, ncol in SHELVES:
         print("  RED  %d canonical count headings; the shelf's figure is ambiguous: lines %s."
               % (len(claims), ", ".join(str(j + 1) for j, _ in claims)))
         rc = 1
-    ragged = sum(1 for r in rows if len(r.strip().strip("|").split("|")) != ncol)
     subj = []
     for r in rows:
         m = re.search(r"github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)", r)
@@ -173,22 +244,34 @@ for rel, signature, ncol in SHELVES:
             dupes += 1
         elif s:
             seen.add(s)
-    print("%-22s shelf: derived=%d claimed=%s ragged=%d nolink=%d dupes=%d"
-          % (rel, len(rows), claimed, ragged, nolink, dupes))
+    # 🟢 p813: on a file summed across LAYER tables, one repository legitimately appears in
+    # two layers (frappe/education sits in the Frappe layer and in the ERP layer, and that
+    # repetition is the point of the layering). So a repeat is a duplicate ROW, not a
+    # duplicate SUBJECT, and the claim is graded against DISTINCT subjects. On a
+    # single-table shelf a repeat is still a defect and still RED.
+    multi = len(signatures) > 1
+    distinct = len(seen)
+    graded = distinct if multi else len(rows)
+    print("%-22s shelf: tables=%d rows=%d distinct=%d graded=%d claimed=%s "
+          "ragged=%d nolink=%d dupes=%d"
+          % (rel, matched, len(rows), distinct, graded, claimed, ragged, nolink, dupes))
     if claimed is None:
         print("  AMBER no 'N rows' claim in the heading above the table; nothing to compare.")
-    elif claimed != len(rows):
-        print("  RED  heading claims %d, table holds %d." % (claimed, len(rows)))
+    elif claimed != graded:
+        print("  RED  heading claims %d, the file holds %d." % (claimed, graded))
         rc = 1
     else:
-        print("  GREEN heading agrees with its table.")
+        print("  GREEN heading agrees with its page.")
     if ragged:
-        print("  RED  %d row(s) disagree with the header's %d columns (the p674 L55 class)." % (ragged, ncol))
+        print("  RED  %d row(s) disagree with their header's column count (the p674 L55 class)." % ragged)
         rc = 1
     if nolink:
         print("  RED  %d row(s) carry no repository link." % nolink)
         rc = 1
-    if dupes:
+    if dupes and multi:
+        print("  INFO %d repository/ies appear in more than one layer table; counted once."
+              % dupes)
+    elif dupes:
         print("  RED  %d duplicate subject(s)." % dupes)
         rc = 1
 

@@ -1,0 +1,41 @@
+### QUERY: studentvue mcp  total=7
+plyght/studentvue	NONE	3	0	2025-10-30	StudentVUE API/MCP
+jibberswrld/fcps-school-mcp	MIT	2	1	2026-11-06	Local MCP server for FCPS Schoology and StudentVUE — one-command setup.
+coolcrazycid/studentvue-mcp	MIT	0	0	2026-11-08	MCP server that lets AI assistants (Claude, etc.) read your StudentVue grades, assignments, attendance and schedule. Read-only, works through the student website.
+meowgoober/studentvue-mcp	MIT	0	0	2026-10-15	MCP Server for StudentVue based off the new mobile app documentation.
+shubhambhatnag/StudentVue-Code	NONE	1	0	2021-03-09	A grade checker for the StudentVue MCPS database. Not completely finished as of 3/8/2021, but is able to view student info, refresh data, and view indepth grades for each subject the student has.
+shengdynasty/school-mcp	NONE	0	0	2026-05-07	MCP server connecting Claude to StudentVue. 19 tools for grades, GPA, attendance, assignments, schedule, and grade calculations. Ask Claude natural questions about your grades.
+jo-jo-home/ojjyMelon	MIT	0	1	2026-10-16	🫐 Stay in control of your grades — a blue-themed GradeMelon-style StudentVUE client for MCPS students (static PWA, GitHub Pages)
+### QUERY: aeries mcp school  total=0
+### QUERY: skyward student mcp  total=1
+caleb-media-studio/skyward-mcp	MIT	0	0	2026-10-05	Unofficial Self-hosted Skyward MCP for students and educators.
+### QUERY: canvas parent mcp  total=2
+robertdyates-dotcom/canvas-mcp-aws-	NONE	0	0	2026-07-25	Gemini Spark Parent Agent
+chrischall/canvas-parent-mcp	MIT	1	0	2026-11-11	-
+### QUERY: zhihuishu mcp  total=0
+### QUERY: rain classroom mcp yuketang  total=1
+ahdaolma/yuketang-mcp	MIT	0	0	2026-10-28	雨课伴学｜雨课堂 AI 实时课堂笔记 Android App：连接课程与课件，上课模式自动整理重点，支持阅读、批注与课程问答。Open-source Yuketang / Rain Classroom AI notes app.
+### QUERY: tronclass mcp  total=5
+markbee66/tronclass-mcp	NONE	1	2	2026-11-01	-
+cantpr09ram/TronClass-MCP	NONE	3	1	2025-04-12	TronClass-MCP connects TronClass to Claude AI through the Model Context Protocol (MCP), allowing Claude to directly interact with TronClass
+rlongdragon/tronclass-mcp	NONE	0	0	2026-10-20	Unofficial MCP server for NTOU TronClass, built on tronclass-api
+JasonWu55/tronclass-mcp	NONE	1	1	2026-09-24	-
+RX5950XT/FJU-TronClass-MCP	NONE	1	0	2026-09-22	輔仁大學 TronClass 的 CLI 與 MCP Server：查課程、待辦、公告、成績，批次下載教材、標記影片進度。｜CLI + MCP server for Fu Jen Catholic University's TronClass: courses, to-dos, announcements, grades, bulk material downloads and video progress marking.
+### QUERY: classi mcp school japan  total=0
+### QUERY: manabi pocket mcp  total=0
+### QUERY: academia erp mcp college  total=0
+### QUERY: samarth university mcp  total=0
+### QUERY: moodle mcp pushed:>2026-11-01  total=70
+loyaniu/moodle-mcp	NONE	57	17	2026-11-06	A Model Context Protocol (MCP) server implementation that provides capabilities to interact with Moodle LMS
+nialvape/utn-mcp	ISC	12	8	2026-11-13	Servidor MCP no oficial de la UTN: conectá tu agente (Claude, ChatGPT, etc.) al aula virtual para consultar cursos, leer apuntes, usar los foros y entregar tareas.
+matheussilvano/moodle-mcp	MIT	5	3	2026-11-11	Community MCP server connecting a student's own Moodle account to Claude Code, Codex and ChatGPT (independent, not affiliated with any institution)
+kad-xyz/spbstu-mcp	MIT	20	2	2026-11-10	MCP server for SPbPU (Polytech) students: dl.spbstu.ru Moodle, university mail and openedu.ru for Claude
+IsaacAnwar/moodle-mcp	MIT	9	0	2026-11-03	Give Claude (or any MCP agent) read-only access to your Moodle: courses, materials, deadlines, grades. Claude Code plugin with guided setup.
+CaioCastro1/usp-mcp	MIT	28	0	2026-11-13	Pergunte em português sobre a USP pelo seu assistente: cardápio dos bandejões, prazos e material do e-Disciplinas, catálogo de disciplinas do JupiterWeb. Servidores MCP não-oficiais.
+EdmundD28/moodle-codex	MIT	10	0	2026-11-11	Local-first, read-only Moodle plugin for Codex with reproducible setup, bounded file parsing, and course change tracking.
+MarkyMarkMa/unnc-moodle-mcp	MIT	4	1	2026-11-10	非官方 UNNC Moodle 课件同步工具：macOS + Chrome，包含首次设置向导与 Codex skill。
+Nasus20202/MoodleMCP	NONE	2	0	2026-11-13	Remote Model Context Protocol server for Moodle running on Cloudflare Workers
+ImArjunJ/moocp	MIT	5	0	2026-11-04	Moodle for your AI CLI.
+### QUERY: mcp school portal pushed:>2026-11-05  total=2
+kristoffervp/vigilo-mcp	NOASSERTION	2	1	2026-11-09	Read-only local MCP server for Vigilo’s parent portal, with access to messages, news, attachments, and after-school check-in status.
+TrygveAasheim/familybot-portal	NONE	1	1	2026-11-12	AI-driven, iPad-first family planner for Norwegian homes with school, chores, Spond, EnTur, Yr, Oda grocery planning and HelloFresh weekly boxes.

@@ -4,6 +4,107 @@ region: Global
 updated: 2026-11-13
 ---
 
+## `2026-11-13` (eighteenth pass) — **The two thin regions close in one hour, APAC turns out to hold the densest agent cluster on earth, and the best-engineered agent in it is the one to refuse**
+
+**Pass `p813`.** 🟢 **Twenty-nine rows added, all build-safe, all licences byte-read; seven
+rejected.** 🟢 **`APAC 3 → 17` and `North America 4 → 12`. Every region is now double digits for
+the first time in eighteen passes:** `Global 53 · APAC 17 · EMEA 12 · North America 12 · LATAM 9`.
+
+### The headline: 🇨🇳 Chaoxing / 学习通 is a six-week burst of `19` repositories, and it sorts into three tiers
+
+Measured on `agents/top.md` **before** this pass: `Chaoxing` `0` mentions, `学习通` `0`,
+`StudentVUE` `0`, `Infinite Campus` `0`, `Skyward` `0`, `SIAKAD` `0`, `NEIS` `0`, `TronClass` `0`.
+🟢 **`17` of the cluster's `19` repositories were created since `2026-09-11`.**
+
+| Tier | Repo | Licence (byte-read) | ★ | Created | What decides the tier |
+|---|---|---|---|---|---|
+| 🟢 **1 — adopt** | [`DanMo661/xuexitong-cli`](https://github.com/DanMo661/xuexitong-cli) | **MIT** `1,065 B` | `24` | `2026-09-11` | 🟢 **Read-only by declaration; credentials never hit disk; and it REFUSES the abuse case in its own README: *"自动签到/刷课/答题类需求请绕行"*** |
+| 🟡 **2 — read-only, weak credentials** | [`Han-maker-wp/chaoxing-mcp`](https://github.com/Han-maker-wp/chaoxing-mcp) | **MIT** `1,069 B` | `15` | `2026-09-19` | 🔴 Reverse-engineered AES login lifted from Chaoxing's JS; `XT_PASSWORD` plaintext in client config |
+| 🟢 **1 — adopt (no credential at all)** | [`Cyoung-Van/chaoxing-mcp`](https://github.com/Cyoung-Van/chaoxing-mcp) | **MIT** `1,067 B` | `0` | `2026-10-21` | 🟢 Chrome CDP — the browser holds the session |
+| 🔴 **3 — DO NOT ADOPT** | [`DeliciousBuding/chaoxing`](https://github.com/DeliciousBuding/chaoxing) | **Apache-2.0** `11,324 B` | `0` | `2026-10-12` | 🟢 OAuth scopes that *"narrow but never widen"*, PBKDF2, AES-GCM vault, CSRF, `__Host-` cookies 🔴 **and `chaoxing.sign` + automated coursework submission** |
+
+🔴 **`T36`, and it is the finding of the pass: credential hygiene and academic-integrity risk are
+INDEPENDENT axes.** Sixteen passes of this shelf graded only the first — and on that axis alone,
+Tier 3 ranks first in APAC.
+
+### The rest of the APAC harvest
+
+🟢 Also shelved: [`ahdaolma/yuketang-mcp`](https://github.com/ahdaolma/yuketang-mcp) (雨课堂 /
+Rain Classroom, **MIT**), [`ILLENIUM-25/chaoxing-subtitles`](https://github.com/ILLENIUM-25/chaoxing-subtitles)
+(**MIT** — lecture-replay transcripts, the retrieval corpus `P31` needs),
+[`shu-silc-osc/canvas-chaoxing-silc-mcp`](https://github.com/shu-silc-osc/canvas-chaoxing-silc-mcp)
+(**MIT**, the cluster's only institutional account, and it states *"Chaoxing not implemented
+yet"* rather than claiming the integration),
+[`MarkyMarkMa/unnc-moodle-mcp`](https://github.com/MarkyMarkMa/unnc-moodle-mcp) (**MIT**),
+[`Zhf0826/xuexitong-connector`](https://github.com/Zhf0826/xuexitong-connector),
+[`xiny8127-glitch/xuexitong-plus`](https://github.com/xiny8127-glitch/xuexitong-plus),
+[`Erich1566/chaoxing-studyai-mcp`](https://github.com/Erich1566/chaoxing-studyai-mcp) and
+[`XueQian17654/ChaoXingMessageMCP`](https://github.com/XueQian17654/ChaoXingMessageMCP).
+
+🟢 **Two firsts outside China.** [`alfa-yohannis/siakad-mcp`](https://github.com/alfa-yohannis/siakad-mcp)
+(**MIT**) is 🇮🇩 **the first Indonesia-origin education agent in this base** — SIAKAD at
+Universitas Pradita, and `1` repository on the whole query.
+[`arapodcho/mcp_server_neis_api`](https://github.com/arapodcho/mcp_server_neis_api) (**MIT**) is
+🇰🇷 **the only row in this entire harvest that targets an OFFICIAL, PUBLISHED API** — Korea's NEIS
+open-data portal. 🟢 **No scraping, no reverse-engineered login, no learner credential.**
+
+### 🇺🇸 North America: the supply exists, and families wrote it
+
+| Repo | System | Licence | ★ | What it states |
+|---|---|---|---|---|
+| [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) | Infinite Campus | **MIT** | `5` | 🟢 **`20` tools; linked districts AUTO-DISCOVERED via CUPS SSO — the only multi-district repo in the tier.** One write/IO-gated tool |
+| [`obfuscated-tm/dewey`](https://github.com/obfuscated-tm/dewey) | Schoology | **MIT** `900 B` (vs `NOASSERTION`) | `2` | 🟢 **No password at all — it reuses the Schoology session Chrome already holds** |
+| [`coolcrazycid/studentvue-mcp`](https://github.com/coolcrazycid/studentvue-mcp) | StudentVUE | **MIT** | `0` | 🟢 *"Your password … is only sent to your district's StudentVue site, and never to the AI"* |
+| [`meowgoober/studentvue-mcp`](https://github.com/meowgoober/studentvue-mcp) | StudentVUE | **MIT** | `0` | 🔵 The OPPOSITE route — mobile-app API where the other uses a headless browser |
+| [`caleb-media-studio/skyward-mcp`](https://github.com/caleb-media-studio/skyward-mcp) | Skyward | **MIT** | `0` | 🟢 OAuth 2.1 + PKCE; *"the first release is deliberately read only"*; unsupported features named as *"extension points rather than fake claims of support"* |
+| [`CDataSoftware/blackbaud-fe-nxt-mcp-server-by-cdata`](https://github.com/CDataSoftware/blackbaud-fe-nxt-mcp-server-by-cdata) | Blackbaud FE NXT | **MIT** | `0` | 🔵 **The only VENDOR-published connector in the tier** |
+
+Plus [`chrischall/canvas-parent-mcp`](https://github.com/chrischall/canvas-parent-mcp) and
+[`coolcrazycid/schoology-mcp`](https://github.com/coolcrazycid/schoology-mcp) (both **MIT**).
+
+### Elsewhere
+
+🟢 **🇳🇴 [`kristoffervp/vigilo-mcp`](https://github.com/kristoffervp/vigilo-mcp) is 0BSD** —
+byte-read `640 B`, against GitHub's `NOASSERTION`. **The most permissive grant on this shelf: no
+attribution obligation at all.**
+🟢 **🇷🇺 [`kad-xyz/spbstu-mcp`](https://github.com/kad-xyz/spbstu-mcp) (`20★`) is the most-starred
+EMEA education agent in this base** — SPbPU Moodle + mail + `openedu.ru`. 🔴 Sanctions and
+data-residency review precede any commercial use.
+🔴 **🇧🇷 [`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp) (`28★`) DISPLACES
+`utn-mcp` (`12★`) as the most-starred LATAM education agent — one pass after `p812` crowned it.**
+`p812` named SIGAA, SUAP and Guaraní but never USP's own systems.
+🟢 Four generic-Moodle rows shelved `Global` per `T32` (region resolves from the TARGET SYSTEM):
+[`EdmundD28/moodle-codex`](https://github.com/EdmundD28/moodle-codex) (`10★`, bounded file
+parsing), [`IsaacAnwar/moodle-mcp`](https://github.com/IsaacAnwar/moodle-mcp) (`9★`),
+[`ImArjunJ/moocp`](https://github.com/ImArjunJ/moocp) (`5★`),
+[`matheussilvano/moodle-mcp`](https://github.com/matheussilvano/moodle-mcp) (`3` forks on a repo
+created `2026-11-04`).
+
+### Seven rejections, and two are new KINDS of rejection
+
+🔴 **[`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) — `57★`, `17` forks, THE
+most-starred Moodle MCP server in existence, and NO licence file at either branch root** while
+`README.md` returns `200`. 🟢 **The positive control fires: it exists and is simply ungranted.**
+🔵 **Exactly the row a future pass shelves by reflex.**
+
+🔴 **The 🇹🇼 TronClass tier is a HARD NIL: `5` repositories, all reachable, `0` licences.**
+
+🔴 **[`Kfjie-MCP/xuexitong-cli`](https://github.com/Kfjie-MCP/xuexitong-cli) is rejected as a
+DUPLICATE, not for its licence** — byte-identical licence file to `DanMo661/xuexitong-cli`
+(`sha256:3486ae61…`, same copyright holder `Wu Jiale`), created today against the original's
+`2026-09-11`. 🟢 **`T37`: grouping `sha256(LICENSE)` across distinct owners is this base's first
+mechanical instrument for `T22`.**
+
+### Gate
+
+🟢 **`python3 -I ingest/derive-counts.py` returns `EXIT=0` on ALL FIVE graded files for the first
+time.** `repos/foundations.md` and `verticals/solutions.md` had been RED since `p718`;
+`ACTION p811-A` diagnosed it as structural and chose option (a), which `p813` implemented —
+plus uncounted-table detection, so a new layer table can be added freely but never silently.
+🔵 **It caught a stale count in this pass's own draft within the hour.**
+
+---
+
 ## `2026-11-13` (seventeenth pass) — **LATAM's education agent supply arrives, it is attached to UNIVERSITY SELF-MANAGEMENT systems, and it brings the best credential hygiene in this base**
 
 **Pass `p812`.** 🟢 **Ten rows added (nine build-safe, one copyleft), six rejected, and the
