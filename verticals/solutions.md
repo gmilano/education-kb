@@ -4,6 +4,35 @@ region: Global
 updated: 2026-11-15
 ---
 
+## 🟢 `2026-11-15` (forty-first pass, `p836`) — **the ACCESSIBILITY-CONFORMANCE vertical enters this file with `0` prior rows, and the TIMETABLING system a school runs every term**
+
+🟢 **`2` rows added (`145` → `147`), both **MIT**, both byte-read `2026-11-15` on the default
+branch.** The three engine-layer rows from the same sweep went to `repos/foundations.md`.
+
+🔴 **Measured state of this file before this pass: `0` mentions of ADA Title II, `0` of WCAG, `1`
+of "accessib-" across `145` rows.** 🟢 **That is now corrected, and it matters because accessibility
+is the one education-AI obligation that is already binding with named dates and a named enforcer
+in two of this base's four regions** — see `intel/market.md` this pass for the dates and the
+correction they carry.
+
+🔵 **Why these two rows and not more.** The sweep returned eleven accessibility-adjacent and
+timetabling-adjacent candidates; **nine were already filed by slug or had no locatable grant** (see
+the probe ledger in `repos/foundations.md` this pass). 🟢 **Two survived. Two rows are written.**
+
+| Platform | What institutions run it | Agent surface added this pass | License | Risk posture |
+|---|---|---|---|---|
+| **Ace by DAISY (desktop)** — https://github.com/daisy/ace-gui | **Publishers, university disability-services and accessible-media units, and ministry textbook programmes** — the desktop application a non-engineer on staff actually opens to check a digital textbook. Ships for **Windows, macOS and Linux**; latest version stated in the README as **`v1.4.6`**; default branch `master`. 🟢 **This is the human end of the same engine `repos/foundations.md` filed as a library this pass** (`daisy/ace`), which is why a studio can hand the checking back to the client's own staff instead of owning it forever. | 🟢 **The reviewer's console in `P76`.** Automated EPUB conformance is decidable for the machine-testable subset only; **alt-text adequacy, reading order and image-description quality are not.** The agent surface is: a VLM proposes alt text and long descriptions at catalogue scale, **this GUI is where a human accepts, edits or rejects each one**, and the accepted text is written back to the package. 🔴 **Do not automate the accept step** — a wrong description that passes an automated check is worse than a flagged gap, because it reports conformance while misinforming the student who depends on it. | 🟢 **MIT — byte-read `2026-11-15`** (`master/LICENSE`, **`1,073 B`**, `sha256:4c8aeea93ee9…`, title line `MIT License`, `Copyright (c) 2018 DAISY Consortium`; rendered sidebar states `MIT License`) | 🟢 **Build-safe, and re-brandable.** MIT permits a studio to fork, re-skin and ship this as part of a client-facing remediation console. 🔵 **`25★`** — 🔴 **traction is low and says nothing about fitness here:** this is the DAISY Consortium's own reference GUI for a W3C-recommended standard, and `T109`'s inversion (traction concentrated in copyleft, build-safe rows sitting near zero) applies to the whole accessible-publishing tier. 🟡 **No release date was visible on the rendered page; version taken from the README.** |
+| **Timetabler** — https://github.com/sukrutrao/Timetabler | **Schools, colleges and university departments building a term timetable** — described by the project as "a customizable timetabling software for educational institutions". It encodes timetabling constraints as a **SAT formula** and solves them with a **MaxSAT solver**; default branch `master`, `345` commits. 🔵 **The institutional job it does is the one every term starts with and no LMS, SIS or MOOC row on these `147` shelves touches.** | 🟢 **A solver, not a chatbot, and that is the point.** The agent surface is **constraint ELICITATION, not constraint solving**: an LLM turns a department's prose rules — "no two courses sharing a cohort in one slot", "lab blocks stay contiguous", "this teacher is part-time on Fridays" — into the solver's declared constraint format, and the **MaxSAT solver** decides. 🔴 **Never let the model produce the timetable itself.** A solver returns a certificate: either the hard constraints are satisfiable or they are not. A model returns a plausible grid with a double-booked cohort inside it, and the failure surfaces in week one. See `P77`. | 🟢 **MIT — byte-read `2026-11-15`** (`master/LICENSE`, **`1,087 B`**, title line `MIT License`, `Copyright (c) 2017-2018 Sukrut Rao, Prateek Kumar`) | 🟢 **Build-safe.** 🔴 **Maintenance posture is the real risk, and it is stated plainly: `43★`, copyright line ends `2018`, and this is a two-author academic project** — treat it as a **reference model and constraint vocabulary** to lift, not as a dependency to pin a delivery to. 🟢 **The production-grade alternatives on these shelves are already filed and permissive:** `google/or-tools` (**Apache-2.0**, CP-SAT, stable `v9.15`, `2026-01-12`), `timefoldai/timefold-solver` (Apache-2.0 core), and `UniTime/cpsolver` with its examination-timetabling extension. 🔵 **`P77` wires `Timetabler` as the model and OR-Tools CP-SAT as the engine for anything that must survive a term.** |
+
+🔴 **Declared nil, so silence is not read as coverage:** the timetabling sweep
+(`open source exam timetabling constraint solver school scheduling github Apache 2026`) returned
+**no mature, maintained, education-specific timetabling PLATFORM under a permissive licence.**
+What exists is **general-purpose Apache-2.0 solvers** (OR-Tools, Timefold) plus **student and
+academic projects** (`pl-sch/its-exam-timetabling`, `budrus123/GraduationProject`,
+`HeerRana/Exam-timetabling-GeneticAlgorithm`, `CarolinaBianchi/ETPsolver` — licences not located).
+🟢 **That gap is itself the commercial opening, and `P77` is written against it.**
+
+
 ## 🟢 `2026-11-15` (thirty-ninth pass, `p834`) — **the EXAMINATION-PLATFORM vertical enters this file, `38` passes late, and it was always there**
 
 🟢 **`5` rows added (`140` → `145`): `3` build-safe (MIT ×2, Apache-2.0 ×1) and `2` AGPL-3.0 filed

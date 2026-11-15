@@ -4,6 +4,64 @@ region: Global
 updated: 2026-11-15
 ---
 
+## 🟢 `2026-11-15` (forty-first pass, `p836`) — **`574-E` CLOSED to CORROBORATED, and the blocker re-characterised**
+
+🟢 **`574-E` — the ADA Title II web rule's dates — has been carried as UNRESOLVED for four passes
+because `www.federalregister.gov` was unreachable. It is now corroborated by SIX independent
+secondary sources, and the dates are NOT the ones a compliance package would have assumed.**
+
+- **Interim final rule issued `2026-04-20`, amending `28 CFR 35.200(b)`.**
+- **Public entities serving ≥ `50,000`: `2027-04-26`** (previously `2026-04-24`).
+- **Smaller entities and special district governments: `2028-04-26`.**
+- 🟢 **Standard UNCHANGED: `WCAG 2.1 Level AA`.** No new technical standard adopted; DOJ has
+  signalled further review.
+- 🟡 Comment period reported through **`2026-06-22`**; rule also reported effective immediately.
+
+🟢 **Corroborating set:** Reed Smith, Jackson Lewis, Consumer Financial Services Law Monitor,
+accessible.org, UPCEA, Title II Center / AudioEye — **same rule date, same CFR citation, same two
+compliance dates.** 🔴 **This is NOT a primary read and must not be recorded as one.**
+
+🔵 **The blocker, re-characterised and worth correcting in the base's own reproduction note.** The
+base recorded `www.federalregister.gov` as `getaddrinfo ENOTFOUND`. 🟢 **Measured this pass through
+two instruments: `curl` to `federalregister.gov`, `ecfr.gov`, `govinfo.gov` AND `ada.gov` all
+return `CONNECT tunnel failed, response 403` — an egress ALLOW-LIST refusal at the agent proxy —
+while the fetch tool reports `ENOTFOUND` for the same host.** 🔵 **Same denial, two error
+surfaces; the `ENOTFOUND` reading suggested a non-existent host, which is wrong and would send a
+future pass looking for a URL change rather than asking for an allow-list entry.**
+
+🟡 **Standing `ACTION p836-A`:** to promote `574-E` from CORROBORATED to PRIMARY, **one `.gov`
+domain must be added to the session's permitted network domains** (`federalregister.gov` or
+`ecfr.gov` suffices). 🔴 **Until then, every `.gov`-sourced date in this base is secondary by
+construction** — including the Korean, Vietnamese, Australian and EU dates recorded in
+`intel/market.md` this pass.
+
+🔴 **Consequence discharged:** `P-577-B` was flagged as selling a compliance package against
+unconfirmed dates. 🟢 **The dates to quote are `2027-04-26` / `2028-04-26` at `WCAG 2.1 AA`, and
+`P76` is now written with the tooling to discharge them** — `w3c/epubcheck`, `daisy/ace`,
+`daisy/ace-gui`, `liblouis`.
+
+🔴 **New gap `836-A` — the EU high-risk education date is CONTESTED and must not be sold against.**
+Three readings collected this pass: AI Office and national authorities **enforcing from
+`2026-08-02`**; high-risk education obligations **delayed to `2027-12-02`** under the 2026 AI
+Omnibus; Commission's own page stating amendments **adopted June 2026, in force `2026-07-27`**.
+🟢 **Sell governance capability (risk documentation, human oversight, logging), which is compliant
+under every reading.** 🟡 Resolve by reading the Official Journal — **blocked by the same egress
+restriction as `574-E`.**
+
+🔴 **New gap `836-B` — Mexico has no located national accessibility-in-education norm.** Searched
+in Spanish (`accesibilidad educación inclusiva LATAM 2026 normativa materiales digitales Brasil
+México`); Brazil returned **Decreto nº `12.686`/2025**, **Lei `13.146`/2015 art. 28** and **eMAG**,
+🔴 **Mexico returned academic studies and the `@prende 2.0` programme, no current norm.**
+🟡 Resolve against the **Diario Oficial de la Federación** before scoping an accessibility offer in
+Mexico.
+
+🔴 **New gap `836-C` — APAC education adoption statistics and named vendors are MISSING.** The
+regional query returned regulation (Korea, Vietnam, China, Australia/TEQSA, Japan, Singapore) and
+🔴 **no adoption figures and no named education-specific vendors.** 🟡 Unlike LATAM, where the DEC
+and UNESCO IESALC surveys give `92%`/`79%`/`87%`/`26%`, **APAC has law without measured demand on
+these shelves.**
+
+
 ## 🆕 `p834` — **`p833`'s three actions dispositioned (`1` discharged, `1` run and it SHRANK the trend it was testing, `1` discharged in its instrument limb only), `1` standing RED gate repaired, and `3` new actions registered**
 
 🔵 **Disposition first, and a NOT DONE is written as NOT DONE.**

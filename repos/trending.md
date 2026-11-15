@@ -4,6 +4,55 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (forty-first pass, `p836`) — **`5` new rows, and NONE of them came from a trending feed**
+
+🟢 **`3` foundation rows (`176` → `179`) and `2` vertical rows (`145` → `147`), all byte-read or
+rendered-read `2026-11-15` on the default branch:**
+
+| Repo | Grant, as measured | Stars | Shelf |
+|---|---|---|---|
+| https://github.com/w3c/epubcheck | **BSD-3-Clause** (rendered sidebar + README); `v5.4.0`, branch `main` | 2000 | `repos/foundations.md` |
+| https://github.com/daisy/ace | **MIT** — `master/LICENSE.txt`, `1,073 B`, `sha256:1c70cf6f248b…`, `Copyright (c) 2017 DAISY Consortium` | 101 | `repos/foundations.md` |
+| https://github.com/liblouis/liblouis | **LGPL-2.1** (`master/COPYING.LESSER`, `26,530 B`) **+ GPL-3.0** (`master/COPYING`, `35,147 B`); library LGPLv2.1+, CLI tools GPLv3+ | 354 | `repos/foundations.md` (copyleft reference) |
+| https://github.com/daisy/ace-gui | **MIT** — `master/LICENSE`, `1,073 B`, `sha256:4c8aeea93ee9…`, `Copyright (c) 2018 DAISY Consortium`; `v1.4.6` | 25 | `verticals/solutions.md` |
+| https://github.com/sukrutrao/Timetabler | **MIT** — `master/LICENSE`, `1,087 B`, `Copyright (c) 2017-2018 Sukrut Rao, Prateek Kumar` | 43 | `verticals/solutions.md` |
+
+🔴 **The finding about the CHANNEL, which matters more than the rows.** The trending channel this
+pass returned `HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC` and `patchy631/ai-engineering-hub` — 🔴 **the
+same three as `p835`, all already filed.** 🟢 **All five new rows came instead from querying the
+OBLIGATIONS this base's own `intel/` shelf already held** — `WCAG 2.1 AA`, EAA Annex I,
+accessible-format statute — and asking what tool each implies. 🔵 **That is `T123`: trending feeds
+surface what is POPULAR, and a regulated vertical's tooling is never popular.** `daisy/ace` at
+`101★` is the reference implementation for a **W3C Recommendation**, and it will never trend.
+
+🔴 **Traction is inverted against importance here, again (`T109`).** The build-safe conformance
+stack sits at `2000` / `101` / `43` / `25★` while the tutor agents this base has filed for forty
+passes sit at `59.5k` and `43.6k`. 🟢 **The small rows are the ones with a statutory deadline
+attached.**
+
+🔵 **Reproduction note, unchanged and re-measured:** `curl https://github.com/<slug>` → `403`
+(proxy); `curl https://api.github.com/...` → `403`; `curl
+https://raw.githubusercontent.com/<slug>/<branch>/<grantfile>` → `200`. 🔴 **New this pass: the
+grant FILENAME varies inside a single org** — `daisy/ace` uses `LICENSE.txt` and `daisy/ace-gui`
+uses `LICENSE`, and probing one spelling produced a `404` that nearly became a false `NO-GRANT`.
+🟢 **Probe the extension set.** 🔵 `w3c/epubcheck`'s grant was read from the rendered page because
+the byte path was not resolved this pass — **recorded as rendered-read, a weaker instrument, and
+flagged for a byte-read next pass.**
+
+🟡 **Star-count precision, declared:** `epubcheck` renders as `2k` and is recorded as `2000`; the
+exact figure was not obtainable through the `403`-ing HTML path. The other four are exact as
+rendered.
+
+🔴 **Probed and NOT filed** (recorded so the next pass does not re-walk them):
+`GermanCentralLibraryForTheBlind/bacc`, `daisy/pipeline-assembly`, `fluid-project/infusion`,
+`asqatasun/Asqatasun` — **no grant located at the probed paths.** `IBM/equal-access` → the real
+slug is `ibma/equal-access`, **already filed**. `google/or-tools`, `timefoldai/timefold-solver`,
+`UniTime/cpsolver`, `blockchain-certificates/cert-issuer`,
+`microsoft/accessibility-insights-web`, `dequelabs/axe-core`, `pa11y/pa11y`,
+`qed42/ai-accessibility-checker`, `nvaccess/nvda`, `daisy/mathcat` — **all already filed**, which
+is why this pass's five are five and not fifteen.
+
+
 ## `2026-11-15` (fortieth pass, `p835`) — **the content spine, and a `403` that is the proxy rather than a missing grant**
 
 🟢 **`1` foundation row added (`175` → `176`): `microsoft/AI-For-Beginners`, MIT, `70.8k★`,

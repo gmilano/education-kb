@@ -4,6 +4,229 @@ region: Global
 updated: 2026-11-15
 ---
 
+## 🟢 Forty-first pass (`p836`, 2026-11-15) — **`4` regions queried, `1` four-pass-old gap RESOLVED by corroboration, `1` date this base must stop selling against**
+
+🟢 **The four regional queries were re-run and, unlike `p835`, this pass is not a null: the ADA
+Title II dates that `intel/open-gaps.md` has carried as UNRESOLVED for four passes are now
+corroborated, and they are NOT the dates a compliance package would have assumed.**
+
+### 🟢 RESOLVED — `574-E`: the ADA Title II web rule was EXTENDED BY ONE YEAR
+
+🔴 **The finding: the deadline this base and the wider market have been planning against moved,
+and it moved in April 2026.**
+
+- **Interim final rule issued `2026-04-20`** by the US Department of Justice, **amending
+  `28 CFR 35.200(b)`.**
+- **Public entities serving ≥ `50,000` people: `2027-04-26`** (previously `2026-04-24`).
+- **Smaller entities and special district governments: `2028-04-26`** (previously `2027-04-26`).
+- 🟢 **The technical standard did NOT change: `WCAG 2.1 Level AA` stands**, and the standing Title
+  II duty to make services accessible applies regardless of the dated web rule.
+- 🟡 Comment period reported as running through **`2026-06-22`**; the rule is also reported as
+  effective immediately. 🔵 **Those are compatible (an interim final rule takes effect while
+  comments run), but the exact effective date is unconfirmed here.**
+- 🔵 DOJ's stated rationale, reported consistently: it **overestimated entities' staffing and
+  technology capacity.** Commentators note DOJ has signalled further review of the digital
+  accessibility requirements, with **no new technical standard adopted.**
+
+🟢 **Evidence posture, stated honestly: this is SIX independent secondary corroborations, not a
+primary read.** Reed Smith, Jackson Lewis, the Consumer Financial Services Law Monitor,
+accessible.org, UPCEA and the Title II Center / AudioEye all report the same rule date, the same
+CFR citation and the same two dates. 🔴 **The primary remains unreachable from this session, and
+the blocker is now better characterised than the base recorded it:** `federalregister.gov`,
+`ecfr.gov`, `govinfo.gov` and `ada.gov` all return **`CONNECT tunnel failed, response 403`** via
+`curl` (an egress ALLOW-LIST refusal at the agent proxy) and **`getaddrinfo ENOTFOUND`** via the
+fetch tool. 🔵 **The base had recorded only the `ENOTFOUND` surface; both are the same egress
+denial seen through two different instruments.** 🟡 **`574-E` moves from UNRESOLVED to
+CORROBORATED-NOT-PRIMARY**, and it should stay that way until a `.gov` domain is allowed.
+
+🔴 **Consequence for `P-577-B`, which `intel/open-gaps.md` flagged as "selling a compliance package
+against dates no primary confirms":** 🟢 **the dates it should quote are `2027-04-26` and
+`2028-04-26`, with the standard unchanged at `WCAG 2.1 AA`.** 🔴 **A proposal quoting April 2026 is
+now wrong by a year — and the commercial read is the opposite of relief: the extension buys a
+remediation programme time to be done properly, and it removes the excuse for a
+checkbox-and-overlay deliverable.**
+
+🔵 **One conflation to refuse explicitly.** A secondary source read this pass gives the original
+large-entity date as **`2026-04-22`**. 🔴 **This base's `2026-04-22` is the updated **COPPA**
+compliance date — a different rule entirely** — and the 2024 Title II rule's own date was
+`2026-04-24`. 🟢 **Two adjacent April 2026 dates for two different statutes; they are not the same
+obligation and must not be merged in a client deck.** 🟡 One source also notes an **HHS deadline in
+May 2026 that the DOJ extension does NOT move**; its scope for education was not established this
+pass and is **not** recorded as an education obligation.
+
+### 🔵 Regional verification — what was re-read, and what changed
+
+- **North America.** 🟢 **State activity re-measured, and the apparent disagreement is a
+  measurement difference rather than a contradiction:** this pass reads **`134` AI-in-education
+  bills introduced across `31` states** (a BILL count) and **`35+` states with official AI guidance
+  from their education departments** (a GUIDANCE count). 🔵 **The base's standing `28+`/`34+`/`35`
+  spread is the guidance count at different dates; the bill count is a new and separate
+  instrument.** New and dated: **North Carolina's staged timeline — state model policy by
+  `2026-12-31`, local school-unit policies by `2027-06-30`, specified teacher professional
+  development by `2028-06-30`.** **Maryland** bills would have the state education department issue
+  guidance and require district AI policies plus certified tools; **New York** has a bill limiting
+  classroom AI use to **grade 9 and above**, with exceptions for **diagnostics and special
+  education**; **NYC** guidance uses a **traffic-light** permitted/cautioned/prohibited framework.
+  Federal: the **Department of Education finalised its AI grant-priority rule on `2026-04-13`**,
+  favouring projects advancing understanding of AI or its ethical use. 🔵 **Stakeholder signal:**
+  the student-drafted **"STUDENTS FIRST Act of 2026"**, out of a July 2026 youth AI festival, which
+  rejects both an outright ban and unrestricted adoption, and which **AASA is circulating to school
+  leaders.** 🔴 **Legislative posture stays research-transparency-guardrails, not adoption
+  mandates.**
+- **EMEA.** 🔴 **The EU high-risk date is CONTESTED, and the disagreement is the finding — do not
+  sell against a single date.** Education uses named high-risk under the AI Act are **admissions,
+  grading and exam monitoring**. One source has the **AI Office and national authorities beginning
+  enforcement `2026-08-02`**; another has **high-risk education obligations delayed to
+  `2027-12-02`** under the **2026 AI Omnibus**; the Commission's own page states the amendments were
+  **adopted June 2026 and entered into force `2026-07-27`**. 🟡 **Unresolved here; primary OJ text
+  not reachable this session.** 🟢 **What IS settled and dated: the European Accessibility Act
+  (Directive (EU) 2019/882) has applied since `2025-06-28`** and covers **e-books and dedicated
+  reading software**, with **e-readers** as covered products. Annex I duties read this pass:
+  **navigable and reflowable content, assistive-technology compatibility, accessibility metadata,
+  and DRM that cannot switch accessibility features off.** 🔵 **`EPUB Accessibility 1.1` became a
+  W3C Recommendation in October 2024 and is the practical route, because PDF has no equivalent
+  clause mapping** — which is exactly why this pass filed `w3c/epubcheck`, `daisy/ace` and
+  `daisy/ace-gui`. 🔴 **The Act does not name textbooks or LMS platforms directly; the
+  "e-learning content is an e-book" reading is an INTERPRETATION, not settled law** — the firm
+  effect is indirect: public universities and libraries must make what they provide accessible, so
+  **they push the duty onto suppliers in procurement.** UK: **DfE generative-AI product safety
+  standards for education, January 2026**; **Ofqual, March 2026**, on AI and coursework integrity.
+  Gulf: **Dubai's KHDA** has issued explicit responsible-AI guidance to private schools. Vendors:
+  **OpenAI reports government/education-system partnerships including Estonia, Slovakia, Greece and
+  Italy**; Microsoft ships 2026 administrative controls for Copilot in education. The Commission
+  has presented an **Education and Skills Package** covering AI and teacher shortages.
+- **APAC.** 🟢 **This is now the region with the most BINDING education-AI law, and two dates are
+  firm.** **South Korea's AI Basic Act entered force `2026-01-22`**, with **education a named
+  high-impact area**; 🔵 **MSIT has signalled `2026` as effectively a pilot year — enforcement
+  decrees still being finalised, a grace period oriented to guidance rather than penalties.**
+  **Vietnam's Law on Artificial Intelligence took effect `2026-03-01`**, treats education-related
+  systems as **high-risk**, and a **July 2026 decision lists education — automated assessment and
+  behavioural systems — among six sectors.** **China** has the most detailed regime: mandatory
+  registration, strict content-labelling duties, penalties **up to CNY `50M`**. **Australia**
+  released a proposal paper on mandatory **AI guardrails** for high-risk applications including
+  education, and the higher-education regulator **TEQSA has required ALL providers to submit
+  institutional action plans addressing generative-AI risk** — 🟢 **a procurement trigger with a
+  named deliverable, which is rare.** **Japan** and **Singapore** stay voluntary (Singapore via
+  **AI Verify**). 🔵 **Cross-border: APAC edtech selling proctoring or admissions tooling into the
+  EU inherits the EU high-risk education obligations.** 🔴 **Adoption statistics and named
+  education-specific vendors did NOT come back for this region; that is a gap, not coverage.**
+- **LATAM.** 🟢 **The strongest NEW numbers of this pass, and they are education-specific.** The
+  **Digital Education Council's 2026 LATAM survey**, run with **Tecnológico de Monterrey**, reports
+  **`92%` of students and `79%` of faculty actively engaging with AI**, from **`30,000+` responses
+  across `29` institutions**; faculty teaching use is **`+18%` on the 2025 global figure**, and 🔴
+  **the LOWEST adoption is in assessment-related use — cheating detection and feedback
+  generation.** **UNESCO IESALC** finds the governance gap directly: **`87%` of surveyed
+  institutions already use AI in some capacity, and only `26%` have a formal AI strategy**, with
+  adoption driven by individual academics, researchers and students rather than institution-wide
+  strategy. **Universidad de los Andes (2026)** counts **`716` AI-related regulatory instruments,
+  rules and legislative proposals across `23` countries and territories, `>80%` initiated since
+  2023.** 🟢 **Accessibility law, placed:** **Brazil's Decreto nº `12.686`/2025** institutes the
+  **Política Nacional de Educação Especial Inclusiva**, and **Lei `13.146`/2015 art. 28** already
+  requires didactic material in **accessible formats**; **eMAG** (2014) is the e-government
+  accessibility model; a 2026 study of Brazilian secondary education finds **official digital
+  platforms technically deficient** (captioning among them) alongside teacher-training barriers.
+  🔴 **Mexico: no current national 2026 accessibility-in-education norm was located in these
+  results — declared as a gap, not as absence of obligation**; `@prende 2.0` appears as the
+  digital-inclusion programme, with teacher-training challenges. 🔴 **Discarded source: the
+  Nivelics LATAM enterprise report carries unfilled `[VERIFY]` placeholders in its statistics and
+  was not used.**
+- **Global.** 🔴 **Market sizing remains a RANGE, not a figure, and the definitions differ:**
+  **`$11.4B` (2026) → `$57B` by 2033** from one source, against **`$12.3B` (2026)** attributed to
+  **HolonIQ**. 🟢 **Quote the range and the definitional caveat; a single point estimate here is
+  false precision.** **OECD's 2026 Digital Education Outlook** recommends moving **beyond
+  general-purpose AI tools toward purpose-built educational AI** designed for durable learning
+  gains. **1EdTech** frames 2026 as the shift **from experimentation to governance** — policies,
+  data boundaries, oversight. One source reports **`86%` of students across `16` countries** already
+  using AI in their studies. 🔵 **Campus Technology's 2026 prediction set expects AI embedded in
+  admissions, advising and student services rather than standalone pilots.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The lead offer is a `WCAG 2.1 AA` remediation programme for digital course materials, sized to
+the NEW dates: `2027-04-26` for public entities serving ≥ `50,000`, `2028-04-26` below that.**
+🔵 **The extension is a selling point, not a reason to wait:** it converts a panic procurement into
+a budgetable two-cycle programme, and it is long enough to do catalogue-scale remediation properly.
+Wire it with `P76` (`w3c/epubcheck` + `daisy/ace` + `daisy/ace-gui` + human review) — 🟢 **all
+MIT/BSD, so the remediation pipeline itself can be a client-owned asset rather than a per-seat
+subscription.** 🔴 **Qualify on entity population: the ≥/< `50,000` split decides which year the
+work must land in, and it is the first question to ask.** Second offer: **district and state AI
+policy enablement** against **North Carolina's `2026-12-31` / `2027-06-30` / `2028-06-30` ladder**
+and the **Maryland** certified-tools model — the deliverable is a policy-plus-tooling pairing, not
+a document. 🔵 **The federal ED grant-priority rule (`2026-04-13`) favours projects advancing
+ethical AI use, so grant-funded pilots have a stated lens to be written against.** 🔴 **Design to
+the NY-style constraint — classroom AI restricted to grade 9+ with diagnostics and special-education
+carve-outs — because a product assuming K-12-wide student-facing AI is unsellable in those
+districts.**
+
+### EMEA
+
+🟢 **The firm, dated obligation is the European Accessibility Act, in force since `2025-06-28`,
+covering e-books and dedicated reading software — and the EPUB conformance stack filed this pass is
+the direct answer.** 🔵 **The strongest entry point is PROCUREMENT-SIDE: publishers and suppliers
+to public universities and libraries are being asked for accessible content, with Annex I duties
+(reflowable navigation, AT compatibility, accessibility metadata, non-disabling DRM) that
+`epubcheck` + `ace` test mechanically.** 🟢 **Build the supplier's conformance pipeline and its
+evidence pack — the conformance report is the artefact that closes the procurement.** 🔴 **On the
+AI Act, sell GOVERNANCE CAPABILITY, not a date:** admissions, grading and exam monitoring are
+high-risk, while the application date is genuinely contested between `2026-08-02` enforcement
+start and a `2027-12-02` delay. 🟢 **A client who can produce risk documentation, human-oversight
+design and logging for a grading system is compliant under either reading; a client who bought a
+date is exposed under both.** Also live: **UK DfE product safety standards (Jan 2026)** and
+**Ofqual coursework-integrity guidance (Mar 2026)** — an **assessment-integrity redesign** offer,
+not a detector. 🔴 **Gulf: KHDA guidance exists and the Arabic-language open-source supply does
+NOT — see `T124`. Expect to import and localise this base's shelves there.**
+
+### APAC
+
+🟢 **Two named, dated regulatory triggers and one named deliverable make this the most
+procurement-ready region of the four.** **Australia/TEQSA requires every higher-education provider
+to file an institutional generative-AI action plan** — 🟢 **that is a scoped engagement with a
+regulator-defined output, and the shortest path to a first reference client.** **Korea (AI Basic
+Act, `2026-01-22`, education high-impact) is in a guidance-oriented grace year** — 🟢 **the window
+to build high-impact classification and documentation BEFORE decrees bite, which is cheaper than
+retrofitting.** **Vietnam (`2026-03-01`, education high-risk, automated assessment and behavioural
+systems named)** is the sharpest mismatch on this base: 🔴 **binding high-risk duties over
+automated assessment, and a local-language open-source supply made of unlicensed personal school
+builds.** 🟢 **The offer there is a build-safe replacement of those homegrown systems with
+governed, licence-clean components plus the high-risk documentation the law now demands.**
+🔴 **China is a compliance-first market — registration, content labelling, CNY `50M` penalties — and
+nothing on these shelves should be proposed there without local counsel.** 🔵 **Any APAC edtech
+selling proctoring or admissions tooling into the EU should be scoped for EU high-risk duties at
+the same time; that dual-compliance framing is a differentiator.**
+
+### LATAM
+
+🟢 **The numbers say the demand is already inside the institutions and the governance is not:
+`92%` of students and `79%` of faculty using AI, against `26%` of institutions holding a formal AI
+strategy.** 🔵 **So the sellable unit is not adoption — it is INSTITUTIONALISATION: turning
+individual-academic use into a governed capability (policy, data boundaries, approved-tool
+routing, logging, AI-literacy for faculty).** 🟢 **The sharpest wedge is the one place adoption is
+measurably LOWEST — assessment: cheating detection and feedback generation.** 🔴 **Do not sell
+detection; faculty are already declining it.** 🟢 **Sell assessment REDESIGN plus
+rubric-anchored feedback with human sign-off** — and the rubric and marking rows already on these
+shelves (`michael-borck/assessment-rubrics-for-ai`, `laurauguc/grading_assistant`,
+`michael-borck/mark-mate`, all filed) are the components. Second offer, newly supported by this
+pass: **accessible-materials compliance in Brazil**, against **Decreto nº `12.686`/2025** and
+**Lei `13.146`/2015 art. 28**, with the 2026 finding that official platforms are technically
+deficient — 🟢 **`P76` ships here with `liblouis` added for braille, which statutory
+accessible-format duties require and no other row on this base can produce.** 🔴 **Mexico needs a
+regulatory read before an accessibility offer is scoped: no current national norm was located this
+pass.** 🔵 **Regional reusability is real: `716` instruments across `23` countries means a
+governance framework built once can be re-fitted per country, which is a margin story.**
+
+### Global
+
+🟢 **Cross-region, the repeatable asset is a licence-clean, client-owned conformance and governance
+pipeline, because it survives every date disagreement recorded above.** 🔵 **OECD's push toward
+purpose-built educational AI over general-purpose tools, and 1EdTech's experimentation-to-governance
+framing, both point at the same deliverable: narrow, measured, documented systems.** 🔴 **Quote the
+market as a range (`$11.4B`–`$12.3B` for 2026, one projection reaching `$57B` by 2033) and name the
+definitional disagreement; precision here is not credibility.** 🟢 **Anti-pattern to state in every
+proposal: the first-generation campus chatbot is what clients already have and already regret.**
+
+
 ## 🟢 Fortieth pass (`p835`, 2026-11-15) — regional re-verification: `4` regions queried, `0` corrections needed, `1` standing figure contested
 
 🟢 **The four regional queries were re-run this pass and the material they returned was checked

@@ -4,6 +4,120 @@ region: Global
 updated: 2026-11-15
 ---
 
+## 🟢 `P76` — the ACCESSIBLE-MATERIALS programme that produces EVIDENCE, not an overlay (forty-first pass, `p836`)
+
+🔵 **The engagement this answers.** A ministry, university system, publisher or district must make
+its digital course materials conform — **`WCAG 2.1 AA` under ADA Title II by `2027-04-26`
+(entities serving ≥ `50,000`) or `2028-04-26` (below that)**; **Annex I of the European
+Accessibility Act, in force since `2025-06-28`, for e-books and reading software**; or
+**accessible-format duties under Brazil's Lei `13.146`/2015 art. 28 and Decreto nº `12.686`/2025**.
+🔴 **What they are usually sold is an overlay widget and a dashboard. What a regulator, a
+procurement office or a plaintiff asks for is a conformance report per artefact.** 🟢 **`P76`
+produces the report.**
+
+**The wiring, concretely — every component a row on this base with a verified grant:**
+
+1. **Structural gate — `w3c/epubcheck`** (**BSD-3-Clause**, `2k★`, `v5.4.0`,
+   `github.com/w3c/epubcheck`). Run FIRST, over the whole catalogue. 🔴 **An invalid EPUB fails
+   before any accessibility criterion can be evaluated**, and a remediation programme that skips
+   this step reports accessibility failures that are really packaging failures. Output: pass/fail
+   plus error class per file.
+2. **Accessibility conformance — `daisy/ace`** (**MIT**, `101★`,
+   `github.com/daisy/ace`). Run as the **Node module or behind its HTTP API**, not the CLI
+   one-file-at-a-time, so it scales to a catalogue. 🔵 **It runs the `axe` engine internally, and
+   `dequelabs/axe-core` is already a row here** — so the HTML-level checks are the same engine the
+   studio's web practice already uses. Output: machine-testable `EPUB Accessibility 1.1` findings
+   plus the **accessibility metadata** state Annex I asks for.
+3. **The human stage, and it is NOT optional — `daisy/ace-gui`** (**MIT**, `25★`, `v1.4.6`,
+   `github.com/daisy/ace-gui`, Windows/macOS/Linux). 🔴 **Alt-text adequacy, reading-order sanity
+   and described-image quality are not machine-decidable.** A VLM drafts alt text and long
+   descriptions at catalogue scale; **a human accepts, edits or rejects each one in this GUI**; the
+   accepted text is written back to the package. 🔴 **Do not automate the accept step — a fluent,
+   wrong description passes every automated check while misinforming the student who depends on
+   it.** 🟢 **MIT means this console can be forked and re-skinned as the client's own tool, so the
+   capability stays with them when the engagement ends.**
+4. **STEM content — `daisy/mathcat`** (already a row here). Equations are where EPUB remediation
+   programmes stall; MathCAT turns MathML into speech and braille so a maths textbook is not
+   silently excluded from scope.
+5. **Accessible formats — `liblouis/liblouis`** (`354★`, **LGPL-2.1 library / GPL-3.0
+   command-line tools**, both grant files byte-read). Required where statute asks for braille
+   rather than screen-reader compatibility (**Brazil art. 28**). 🔴 **Licence wiring is specified,
+   not left to implementation: DYNAMIC-LINK the LGPL-2.1 library, or run the GPL-3.0 CLI as a
+   separate service the deliverable calls over a boundary.** 🟢 **Both keep a proprietary
+   deliverable's own source closed; statically linking the CLI's code into the product does not.**
+6. **Web surfaces of the LMS — `dequelabs/axe-core`, `pa11y/pa11y`, `ibma/equal-access`,
+   `microsoft/accessibility-insights-web`** (all already rows here). 🔵 **Course FILES and the
+   PLATFORM that serves them are two separate audits** and both are in scope; the EPUB stack does
+   not cover Moodle's or Open edX's own pages.
+7. **Delivery estate — Moodle, `frappe/lms`, or Open edX** (rows here). 🔴 **Open edX is
+   `AGPL-3.0`** (settled by byte-read in `p833`): **a hosted client-facing fork must offer source
+   to its users** — a proposal-time conversation, not a delivery-time surprise.
+8. **The deliverable that closes the sale — the evidence pack.** Per artefact: `epubcheck` result,
+   `ace` report, the human-review decision log from step 3, and the resulting **conformance
+   statement**. 🟢 **This is what a procurement office accepts and what an overlay vendor cannot
+   produce.**
+
+**Shape of the engagement:** `6`–`10` weeks for pipeline build plus a pilot slice of the catalogue
+(structural gate, automated conformance, review console, evidence template); then a
+throughput-priced remediation programme. 🟢 **Licence posture: MIT + BSD-3-Clause for everything
+the client keeps, copyleft isolated behind a service boundary at step 5 and declared at step 7.**
+🔵 **Sell against the extended dates (`2027-04-26` / `2028-04-26`), which is time to do the
+catalogue properly rather than a reason to defer** — and qualify the ≥/< `50,000` population split
+in the first meeting, because it decides the delivery year. 🔴 **Anti-pattern to name explicitly:
+an accessibility overlay. It is the thing clients buy, and it does not produce evidence.**
+
+## 🟢 `P77` — TIMETABLING where the model elicits and the SOLVER decides (forty-first pass, `p836`)
+
+🔵 **The engagement this answers.** Every school, faculty and university department rebuilds a
+timetable each term: cohorts that must not collide, contiguous lab blocks, part-time staff
+availability, room capacities, exam spacing per student. 🔴 **It is the most universal operational
+problem in education and the one no LMS, SIS or MOOC row on these `147` vertical shelves touches.**
+🔴 **It is also where an LLM-first design fails most expensively:** a language model returns a
+plausible grid, and the double-booked cohort surfaces in week one in front of students.
+
+**The wiring, concretely:**
+
+1. **Constraint ELICITATION — the agent layer.** An LLM (any row from this base's agent shelves)
+   turns the department's prose rules into a **declared, reviewable constraint set**: hard
+   constraints (no cohort collision, room capacity, staff availability windows) versus soft ones
+   (teacher preference, minimised gaps, balanced load). 🟢 **This is the part a model is good at:
+   reading institutional prose and typing it.** 🔴 **It must emit CONSTRAINTS as data for human
+   sign-off, never a schedule.**
+2. **The model to lift — `sukrutrao/Timetabler`** (**MIT**, `43★`,
+   `github.com/sukrutrao/Timetabler`). 🟢 **It encodes educational-institution timetabling as a
+   SAT formula solved with a MaxSAT solver** — so it supplies the **constraint vocabulary and the
+   hard/soft encoding** worked out for exactly this domain, which is the expensive part to invent.
+   🔴 **Maintenance posture, stated: copyright line ends `2018`, two academic authors. Lift the
+   model; do not pin a delivery to the dependency.**
+3. **The engine that must survive a term — `google/or-tools` CP-SAT** (**Apache-2.0**, stable
+   `v9.15`, `2026-01-12`, already a row here), or **`timefoldai/timefold-solver`** (Apache-2.0
+   core, already a row), or **`UniTime/cpsolver`** with its **examination-timetabling extension**
+   (already a row, and the only one of the three written for this domain natively). 🟢 **All
+   permissive; all production-grade.**
+4. **The guarantee, which is the reason to use a solver at all.** 🟢 **A solver returns a
+   certificate: the hard constraints are satisfiable and here is a witness, or they are UNSAT and
+   here is the conflicting core.** 🔵 **That UNSAT core is a deliverable in its own right** — it
+   tells a dean *which* rules cannot coexist, which is the conversation that actually resolves a
+   term's timetable. 🔴 **A model cannot produce it and cannot be asked to.**
+5. **Explanation back to humans — the agent layer again.** The LLM renders the solver's output and
+   its UNSAT core into departmental language ("your part-time Friday constraint and the contiguous
+   lab block for cohort B cannot both hold"). 🟢 **Model at both ends, solver in the middle.**
+6. **Integration surface.** Publish the solved timetable into the existing estate — SIS/LMS rows
+   already on these shelves (`frappe/education`, `openeducat/openeducat_erp`,
+   `francoisjacquet/rosariosis`, `GibbonEdu/core`, Moodle) — and keep the constraint set in version
+   control, because 🟢 **the reusable asset across terms is the CONSTRAINTS, not the grid.**
+
+**Shape of the engagement:** `4`–`6` weeks to a working term timetable for one faculty (elicitation
+layer, constraint set under review, CP-SAT model, UNSAT explanation), then per-faculty rollout.
+🟢 **Licence posture: MIT + Apache-2.0 throughout — no copyleft anywhere in this pattern.**
+🔵 **Why it is a credible first engagement: the outcome is verifiable on day one** (the timetable
+either satisfies the declared hard constraints or it provably cannot), 🔴 **which is the opposite
+of every tutor-chatbot pilot, where the client cannot tell whether it worked for a semester.**
+🔴 **Declared supply gap this pattern is built against: no mature, maintained, education-specific
+timetabling PLATFORM under a permissive licence exists** — what exists is general solvers plus
+student projects. 🟢 **That is why this is a BUILD offer and not an integration offer.**
+
+
 ## 🟢 `P75` — the AI-LITERACY programme that does not license curriculum (fortieth pass, `p835`)
 
 🔵 **The engagement this answers.** A ministry, university system or corporate academy wants an

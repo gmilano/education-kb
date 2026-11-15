@@ -4,6 +4,96 @@ region: Global
 updated: 2026-11-15
 ---
 
+## Forty-first pass (`p836`, 2026-11-15) — **`0` agent rows added for a SECOND pass, and this time the reason is a different one**
+
+🔴 **No new build-safe education AGENT was filed this pass. `388` → `388`.** 🟢 **The reason is
+recorded instead of padded, and it is NOT the reason `p835` recorded.** `p835` found the agent
+shelf saturated against its query set. 🔴 **This pass widened the query set into two languages
+this base had never run — Vietnamese and Arabic — and the supply that came back was real,
+numerous and UNLICENSABLE.** That is a different failure, and it is the finding.
+
+🔵 **What was searched** (global, then once per region, per the standing rotation brief): `top open
+source AI agents education 2026 github MIT`; `github trending education AI 2026`; `open source
+platform education ERP CRM MIT Apache`; `AI education industry trends 2026`; the four regional
+queries for **North America**, **EMEA**, **APAC** and **LATAM**; plus six probes beyond the brief —
+`open source AI teaching assistant grading agent released November 2026 github`; `IA educación
+código abierto github licencia MIT 2026 tutor agente escuela`; `오픈소스 AI 교육 플랫폼 github 2026`;
+`phần mềm quản lý trường học AI mã nguồn mở github 2026`; `منصة تعليمية مفتوحة المصدر ذكاء اصطناعي
+github 2026`; and `open source exam timetabling constraint solver school scheduling github Apache
+2026`.
+
+🔴 **Every agent-shaped candidate returned was already filed by slug.** Checked against the
+`5,655` distinct `github.com/owner/repo` slugs this base now holds: `littlecookie0722/AI-Teaching-Agent`
+(filed), `laurauguc/grading_assistant` (filed), `michael-borck/mark-mate` (filed),
+`Osarodion843/EduGrade-AI` (filed), `tutor-mcp` (filed twice, `arnaudguiovanna/` and `kvnloo/`),
+`HKUDS/DeepTutor` (filed), `THU-MAIC/OpenMAIC` (filed), `patchy631/ai-engineering-hub` (filed),
+`microsoft/AI-For-Beginners` (filed last pass), `ibma/equal-access` (filed),
+`microsoft/accessibility-insights-web` (filed), `google/or-tools` (filed),
+`blockchain-certificates/cert-issuer` (filed — and this is why `blockcerts/*` read as a gap and is
+not one: **the Blockcerts issuer lives under the `blockchain-certificates` org, not `blockcerts`**).
+🟢 **The slug check is the instrument that kept this pass honest; it is what turned eight
+"discoveries" into eight re-reads.**
+
+### 🔴 `D836` — the mother-tongue layer INVERTS where 2026 regulation landed
+
+🟢 **`T119`/`T121` established that querying in a national language finds education supply that
+English misses. This pass ran that instrument at the two jurisdictions where education-AI
+regulation actually became binding in 2026, and it returned the opposite of supply.**
+
+- 🔴 **Vietnam** (`phần mềm quản lý trường học AI mã nguồn mở github 2026`). Returned
+  `MARIOSLIDE123/oneschoolai`, `tungzuizer/school-management`, `thiebithocsovn/hesinhthai4.0`,
+  `Giaduc8289/school-management-system`, `hiiinguyennn92-blip/quanlylophoctonytran`,
+  `xuyen2210/quanlylop`, `hcmtranle/truonghoc5.0`. 🔴 **Not one carries an OSI grant.** One states
+  its source is for internal educational administration only; one restricts the open flow to
+  locally-run instances and requires registration for hosted use; one ships a `clone` command
+  pointing at an unrelated repository. 🔴 **These are school-specific personal builds, several
+  bound to one named primary school's live data.** `0` rows filed.
+- 🔴 **Gulf / MENA** (`منصة تعليمية مفتوحة المصدر ذكاء اصطناعي github 2026`). Returned
+  `781991937/TOFAN-AI-2026`, `lojainlll9820-ops/my-education-platform`, `lojainlll9820-ops/-`,
+  `adoomy23-cpu/ai-students-platform`, `matsuolab/lecture-ai-engineering-2026-ar`. 🔴 **Same
+  shape: early personal repositories, licences not stated.** `0` rows filed.
+- 🟡 **Korea** (`오픈소스 AI 교육 플랫폼 github 2026`). Returned only curricula this base already
+  holds (`microsoft/AI-For-Beginners`, `microsoft/generative-ai-for-beginners`,
+  `mlabonne/llm-course`, `DataTalksClub/llm-zoomcamp`) plus personal study tools. `0` rows filed.
+
+🔵 **Why this matters commercially and not just bibliographically:** **Vietnam's Law on AI took
+effect `2026-03-01` and treats education systems as high-risk; Korea's AI Basic Act entered force
+`2026-01-22` with education named a high-impact area; the Gulf has KHDA guidance to private
+schools.** 🔴 **So in three jurisdictions that now REQUIRE governed education AI, the local-language
+open-source supply is personal projects with no grant.** 🟢 **An engagement in those markets must
+IMPORT build-safe supply from this base's shelves and localise it — it cannot source it locally.**
+See `T124`.
+
+### 🟢 Anchor re-verification (`2` anchors, `1` licence misattribution caught in the wild)
+
+- 🟢 **`HKUDS/DeepTutor` — `Apache-2.0`, byte-read `2026-11-15`** (`main/LICENSE`, **`11,408 B`**,
+  `sha256:cd2f54e1e506…`, opening block `Apache License / Version 2.0, January 2004`). **`59.5k★`**
+  measured on the rendered page, **exactly** the figure `p835` corrected to. Rendered sidebar
+  states `Apache-2.0`; latest release shown as **`v1.7.3`, dated `2026.11.16`** on the page — 🔵
+  **recorded as rendered, one day ahead of this pass's run date, not adjusted.**
+  🔴 **Two secondary sources read this pass call DeepTutor "MIT licensed"** (a CoddyKit profile and
+  a Spanish-language round-up). **They are wrong, and this base is right** — `Apache-2.0` is in the
+  bytes. 🟢 **This is `T109`/`T120`'s rule earning its keep in the opposite direction from usual:
+  the aggregator understated the obligation, not the traction.**
+  🔴 **In-file staleness, declared not rewritten:** an older pass section in this file still carries
+  `58.7k★` for `DeepTutor`. These files are append-only; history stays as written, and the head row
+  is the current one.
+
+🔵 **Instrument note, unchanged and re-measured this pass:** `curl` to `github.com` HTML and
+`api.github.com` returns `403` through the session's agent proxy; `raw.githubusercontent.com`
+returns `200`. 🟢 **The byte-read-plus-`sha256` instrument remains available and remains correct.**
+🔴 **New this pass: the `404` is also a real signal and must not be read as "no grant."**
+`daisy/ace/master/LICENSE` → `404`, while `daisy/ace/master/LICENSE.txt` → `200` with MIT in the
+bytes. **The grant was there; the filename was not what the probe assumed.** Both `daisy/ace-gui`
+(`LICENSE`, no extension) and `daisy/ace` (`LICENSE.txt`) exist in the same org with DIFFERENT
+filenames. 🟢 **Probe the extension set, not one path.**
+
+🟢 **Where this pass's `5` new rows went, since none are agents:** `w3c/epubcheck`, `daisy/ace` and
+`liblouis/liblouis` to `repos/foundations.md`; `daisy/ace-gui` and `sukrutrao/Timetabler` to
+`verticals/solutions.md`. See `T123` for why an entire regulated vertical was missing from this
+base, and `P76`/`P77` for the recipes.
+
+
 ## Fortieth pass (`p835`, 2026-11-15) — **`0` agent rows added, and the reason is recorded rather than padded**
 
 🔴 **No new build-safe education AGENT was filed this pass. The supply this base queries is

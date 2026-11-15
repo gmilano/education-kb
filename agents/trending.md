@@ -4,6 +4,58 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (forty-first pass, `p836`) — **`0` new agents for a second pass, `5` rows from a REGULATION-first query, and an aggregator caught understating a licence**
+
+🟢 **`0` new build-safe agent rows (`388` → `388`), `3` foundation rows (`176` → `179`), `2`
+vertical rows (`145` → `147`), `2` trends (`T123`, `T124`), `2` recipes (`P76`, `P77`), `1`
+four-pass-old open gap resolved to corroborated. `2` anchors re-verified. `0` star corrections
+needed on the head rows.**
+
+🔴 **The agent shelf did not grow, and this pass's reason differs from `p835`'s.** `p835` reported
+saturation against its query set. 🔴 **`p836` widened into Vietnamese, Arabic and Korean — three
+languages this base had never queried — and found real supply with `0` locatable OSI grants across
+`12` repositories.** 🟢 **That is `T124`, and it is a planning input rather than a null: in
+Vietnam, Korea and the Gulf — the three jurisdictions where education AI became binding in 2026 —
+an engagement must IMPORT build-safe supply from these shelves, not source it locally.**
+
+🔵 **Every agent-shaped candidate returned was already filed.** `littlecookie0722/AI-Teaching-Agent`,
+`laurauguc/grading_assistant`, `michael-borck/mark-mate`, `Osarodion843/EduGrade-AI`, `tutor-mcp`
+(twice), `HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC`, `patchy631/ai-engineering-hub`,
+`microsoft/AI-For-Beginners`. 🟢 **Checked by slug against the `5,655` distinct
+`github.com/owner/repo` slugs this base holds — the check is what turned eight "finds" into eight
+re-reads.** 🔵 **One near-miss worth recording so it is not re-walked: `blockcerts/*` reads as a
+gap and is not one — the Blockcerts issuer is filed under `blockchain-certificates/cert-issuer`.**
+
+### 🟢 `HKUDS/DeepTutor` re-verified, and TWO SECONDARY SOURCES HAVE ITS LICENCE WRONG
+
+🟢 **`Apache-2.0`, byte-read `2026-11-15`** (`main/LICENSE`, **`11,408 B`**,
+`sha256:cd2f54e1e506…`); **`59.5k★`**, exactly the figure `p835` corrected to; rendered sidebar
+agrees; latest release shown as **`v1.7.3`, dated `2026.11.16`** on the page, recorded as rendered.
+🔴 **A CoddyKit profile and a Spanish-language round-up both describe DeepTutor as "MIT
+licensed." Both are wrong.** 🟢 **This base is right, and has been right for `21` mentions.**
+🔵 **Note the DIRECTION of this error: the usual aggregator failure overstates traction; this one
+UNDERSTATES an obligation** — and understating a licence is the more dangerous of the two, because
+`Apache-2.0`'s patent and notice terms are what a deliverable has to honour.
+
+### 🔵 Instrument note — a `404` on `LICENSE` is a probe miss, NOT an absent grant
+
+🔴 **This pass nearly filed a false negative.** `daisy/ace/master/LICENSE` → `404`;
+`daisy/ace/master/LICENSE.txt` → `200`, MIT in the bytes. 🔴 **And its sibling repo in the SAME org
+uses the other spelling:** `daisy/ace-gui/master/LICENSE` → `200`, `daisy/ace-gui/master/LICENSE.txt`
+→ `404`. 🟢 **Rule for subsequent passes: probe the extension set (`LICENSE`, `LICENSE.txt`,
+`LICENSE.md`, `COPYING`, `COPYING.LESSER`) before recording `NO-GRANT`.** 🔵 `liblouis` needed the
+`COPYING`/`COPYING.LESSER` pair to show its split grant at all. 🟡 **Five probes remain genuinely
+unresolved** (`GermanCentralLibraryForTheBlind/bacc`, `daisy/pipeline-assembly`,
+`fluid-project/infusion`, `asqatasun/Asqatasun`, plus `w3c/epubcheck`'s grant read from the
+rendered page rather than bytes) — **recorded as unresolved, not as absent.**
+
+🔴 **Declared regional gaps this pass, so silence is not read as coverage:** **no** new permissively
+licensed education AGENT surfaced in any of the four regions; **no** adoption statistics or named
+education-specific vendors came back for **APAC**; **no** current national
+accessibility-in-education norm was located for **Mexico**; the **Nivelics** LATAM enterprise
+report was discarded for carrying unfilled `[VERIFY]` placeholders.
+
+
 ## `2026-11-15` (fortieth pass, `p835`) — **a saturated agent shelf, and the biggest MIT education repo arriving from the plainest query**
 
 🟢 **`0` new build-safe agent rows (`388` → `388`), `1` foundation row (`175` → `176`), `0` vertical

@@ -4,6 +4,89 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `T123` — the base tracked the REGULATION and never filed the TOOLING, and the gap was measurable in its own files (forty-first pass, `p836`)
+
+🟢 **Stated as a caused rule, not an observation.** `T122` established that a discovery rule tuned
+for agent shapes is blind to content. 🔴 **`T123` is the sibling failure and the more expensive
+one: a discovery rule tuned for SUPPLY is blind to its own base's DEMAND signals.**
+
+🔵 **The measurement, taken from this base's files rather than argued:** ADA **Title II** appears
+**`5`** times in `intel/market.md`, **`4`** in `intel/open-gaps.md`, **`2`** in `intel/trends.md`.
+**WCAG** appears **`5` / `9` / `5`** in the same three. 🔴 **In `verticals/solutions.md`:
+`0` mentions of Title II, `0` of WCAG, `1` of "accessib-" across `145` rows. In
+`repos/foundations.md`: `2`.** 🟢 **So the intel shelf had been carrying, for multiple passes, the
+single education-AI obligation in the world with a hard date, a named standard and a named
+enforcer — and the supply shelves had nothing that discharges it.**
+
+🔵 **The mechanism, and it is not laziness.** Every discovery query this base runs is shaped like
+supply: *agents*, *trending*, *platforms*, *MIT*, *github*. 🔴 **A compliance obligation never
+appears in a supply query, because a statute does not have a repository.** The intel file learns it
+from news and policy sources; the supply files learn nothing, because nothing asked them to.
+🟢 **The two halves of the base were never joined by an instrument.**
+
+🟢 **The fix, concrete and cheap, and it is what found this pass's `5` rows:** **read the
+obligations the intel shelves already hold, and query for the TOOL each one implies.** `WCAG 2.1
+AA` on course content → accessibility checkers. Accessible-format duties → braille and EPUB
+toolchains. **Exam monitoring named high-risk** → logging and human-oversight components.
+**Automated assessment named high-risk in Vietnam** → rubric and audit-trail components. 🔵 **The
+query that produced three of this pass's rows was built from a date in this base's own
+`market.md`, not from a trend feed.**
+
+🔴 **The cost of the omission, priced:** `intel/open-gaps.md` already flagged that `P-577-B` was
+"selling a compliance package against dates no primary in this base confirms" — 🔴 **a pattern
+proposing accessibility compliance while NO row on the base could check an EPUB, validate a
+package, or produce an accessible format.** 🟢 **That is now `P76`, with `w3c/epubcheck`
+(BSD-3-Clause), `daisy/ace` (MIT), `daisy/ace-gui` (MIT) and `liblouis` (LGPL-2.1 library /
+GPL-3.0 tools) underneath it.**
+
+🔵 **Generalisation for the other eleven industry bases on this rotation:** 🟢 **any base whose
+`intel/` shelf names a dated regulatory obligation its `repos/` and `verticals/` shelves cannot
+discharge has a `T123` gap, and it can be found by grep rather than by research.** 🔴 **An intel
+file and a supply file that never cite each other are two unconnected bases wearing one name.**
+
+## `T124` — where education-AI regulation BECAME BINDING in 2026, the mother-tongue open-source supply is personal and UNLICENSED (forty-first pass, `p836`)
+
+🟢 **Stated as a caused rule and measured in two languages this base had never queried.** `T119`
+and `T121` established that national-language queries surface education supply English misses.
+🔴 **`T124` bounds that rule: it finds artefacts, and in newly regulated markets those artefacts
+are not licensable.**
+
+🔵 **The measurement.** `phần mềm quản lý trường học AI mã nguồn mở github 2026` returned **`7`**
+Vietnamese school-management and classroom-AI repositories. `منصة تعليمية مفتوحة المصدر ذكاء
+اصطناعي github 2026` returned **`5`** Arabic education-platform repositories.
+🔴 **Across all `12`: `0` OSI grants located.** Instead: a notice restricting source to internal
+educational administration; a notice limiting the open flow to locally-run instances and requiring
+registration for hosted use; a `clone` command pointing at an unrelated repository; and several
+repositories bound to one named school's live data and roll. 🟡 Korean (`오픈소스 AI 교육 플랫폼
+github 2026`) returned only curricula already filed here.
+
+🔴 **The inversion that makes this a trend rather than a null result.** These are precisely the
+jurisdictions where education AI became BINDING in 2026: **Vietnam's Law on AI (`2026-03-01`,
+education high-risk, automated assessment named), Korea's AI Basic Act (`2026-01-22`, education
+high-impact), and Gulf states with KHDA-style guidance to schools.** 🟢 **Demand arrived by statute;
+build-safe local supply did not arrive at all.**
+
+🔵 **The mechanism.** A school builds the tool it needs, publishes it to GitHub as a portfolio or
+backup artefact, and never licenses it — because **publication and licensing are different acts,
+and only one of them is habitual.** 🔴 **A repository is public, so a sweep counts it as supply; it
+carries no grant, so a studio cannot ship it.** 🟢 **Public ≠ open, and in these regions the gap
+between the two is the whole population.**
+
+🟢 **The consequence for engagements, which is the usable part.** 🔴 **Do NOT plan a Vietnam, Korea
+or Gulf engagement on locally-sourced open components.** 🟢 **Plan to IMPORT build-safe supply from
+this base's `388` agent and `179` foundation rows and localise it** — translation, curriculum
+alignment, and the high-risk documentation the local statute demands. 🔵 **And read the inverse as
+an opportunity: in a market where every school has built its own ungoverned tool and the law now
+calls that tool high-risk, the offer is REPLACEMENT with a licence-clean, documented system** — a
+cleaner proposition than displacing an incumbent vendor, because there is no incumbent contract to
+unwind.
+
+🟡 **Standing caution against over-reading:** `0` grants across `12` repositories in `3` languages
+is a strong signal at a small sample, found through a web-search instrument rather than a GitHub
+licence-facet query (`api.github.com` returns `403` through this proxy). 🟢 **Treat `T124` as
+established for engagement PLANNING and as provisional as a population statistic.**
+
+
 ## `T122` — the discovery rule tuned for agents is BLIND TO CONTENT, and the cost is measured at `70.8k★` (fortieth pass, `p835`)
 
 🟢 **Stated as a caused rule, not an observation.** `T115` established that education supply is

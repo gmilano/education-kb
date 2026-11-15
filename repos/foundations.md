@@ -4,6 +4,43 @@ region: Global
 updated: 2026-11-15
 ---
 
+## 🟢 Forty-first pass (`p836`, 2026-11-15) — **`3` rows: the ACCESSIBILITY-CONFORMANCE substrate, which `40` passes never filed while this base's own intel tracked the law**
+
+🟢 **Foundations `176` → `179`. Every row byte-read `2026-11-15` on the DEFAULT branch, with the
+`sha256` prefix of the grant payload recorded.**
+
+🔴 **The admission this pass owes, and it is measurable rather than rhetorical.**
+`intel/market.md` carries **`5`** mentions of ADA **Title II**, `intel/open-gaps.md` **`4`**, and
+`intel/trends.md` **`2`**; WCAG appears **`5` / `9` / `5`** times across the same three files. 🔴
+**`verticals/solutions.md` carried `0` mentions of Title II, `0` of WCAG, and exactly `1` of
+"accessib-" anything, and this file carried `2`.** 🟢 **So the base has tracked the only education
+AI mandate in the world with a hard date and an enforcement body for multiple passes, and never
+once filed the open-source tooling that discharges it.** See `T123`.
+
+🔵 **Why these three and not the general web-accessibility set.** `dequelabs/axe-core`,
+`pa11y/pa11y`, `ibma/equal-access`, `microsoft/accessibility-insights-web` and
+`qed42/ai-accessibility-checker` were all ALREADY on these shelves — 🔴 **and all five check web
+pages.** 🟢 **Education's regulated artefact is not only the page: it is the digital TEXTBOOK and
+the course file.** The EU's European Accessibility Act names **e-books and dedicated reading
+software**; `EPUB Accessibility 1.1` became a **W3C Recommendation in October 2024** and is the
+practical conformance route because, as read this pass, **PDF has no equivalent clause mapping**.
+🔴 **No row on this base validated an EPUB.** These three do.
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/w3c/epubcheck | 🟢 **BSD-3-Clause** (rendered sidebar + README, read `2026-11-15`; "3-Clause BSD License") | 2000 | **Region: Global.** 🟢 **New this pass (`p836`), and the highest-traction row in the conformance tier at a rendered `2k★`.** "The conformance checker for EPUB publications", default branch `main`, latest production release **`v5.4.0`**. 🔵 **It answers the STRUCTURAL question — is this file a valid EPUB at all** — which is the gate every accessibility check runs behind: an invalid package fails before any WCAG criterion is evaluated. 🟢 **BSD-3-Clause is build-safe: a studio can embed it in a client pipeline and in a proprietary deliverable with attribution only.** 🔴 **It is NOT an accessibility checker** — validity and accessibility are different questions, and conflating them is how a remediation programme reports green on files no screen reader can read. Pair with `daisy/ace` below; see `P76`. 🔵 **Rendered count read as `2k`, recorded as `2000`; a byte-exact figure was not available through the `403`-ing HTML path.** |
+| https://github.com/daisy/ace | 🟢 **MIT — byte-read `2026-11-15`** (`master/LICENSE.txt`, **`1,073 B`**, `sha256:1c70cf6f248b…`, title line `MIT License`, `Copyright (c) 2017 DAISY Consortium`; rendered sidebar states `MIT license`) | 101 | **Region: Global.** 🟢 **New this pass (`p836`). "Ace by DAISY, an Accessibility Checker for EPUB", default branch `master`, `550` commits.** 🟢 **This is the row that makes the vertical shippable, because it is not a GUI-only product: it runs as a command-line tool, as a JavaScript Node module, AND behind an HTTP API** — three integration surfaces, so it drops into a batch pipeline over a whole catalogue rather than being driven one file at a time. 🔵 **Engine note, and it is why this row COMPOSES with what is already here:** Ace runs the **axe** engine for its automated HTML checks, and `dequelabs/axe-core` is already a row on this base. 🟢 **So the base already owned the engine and was missing the education-shaped harness around it.** 🔴 **Limit, stated: automated EPUB checking covers the machine-testable subset of `EPUB Accessibility 1.1` only** — alt-text QUALITY, reading-order sanity and described-image adequacy are not decidable by Ace and need the human-review stage `P76` budgets for. 🔵 **Probe lesson: `master/LICENSE` returns `404` here and `master/LICENSE.txt` returns `200`** — see `D836`. |
+| https://github.com/liblouis/liblouis | 🔴 **COPYLEFT, split by component — both grant files byte-read `2026-11-15`:** `master/COPYING.LESSER` = **LGPL-2.1** (**`26,530 B`**, opening `GNU LESSER GENERAL PUBLIC LICENSE / Version 2.1, February 1999`) and `master/COPYING` = **GPL-3.0** (**`35,147 B`**). Rendered sidebar: `"LGPL-2.1 and 2 other licenses found"`. The README states the **library is LGPLv2.1+** and the **command-line tools are GPLv3+**. | 354 | **Region: Global.** 🟢 **New this pass (`p836`) and filed as a REFERENCE row, not a build-safe one.** "Open-source braille translator and back-translator", default branch `master`. 🟢 **Why a braille library belongs in an education foundation shelf:** statutory accessible-format duties are not satisfied by a screen-reader-compatible file alone — **Brazil's Lei 13.146/2015 art. 28 requires didactic material in accessible formats**, and braille is one of them. 🔴 **Nothing else on these `179` rows can produce it.** 🔴 **The licence posture is the whole decision and must be read at PROPOSAL time:** linking the **LGPL-2.1 library** dynamically keeps a proprietary deliverable's own source closed; invoking the **GPL-3.0 command-line tools** inside a shipped product pulls the stronger obligation. 🟢 **The safe wiring is: dynamic-link the library, or run the CLI as a separate service the deliverable calls** — and `P76` specifies it that way rather than leaving it to implementation. 🔵 **`liblouis` is also the translator under `nvaccess/nvda`, which is already a row here, so the base was one hop from it for `40` passes.** |
+
+🔵 **Probed and NOT filed, recorded so the next pass does not re-walk it:**
+`GermanCentralLibraryForTheBlind/bacc` — `main/LICENSE` returns `404` on the extension set probed,
+**no grant located, `0` rows**; `daisy/pipeline-assembly` — `LICENSE` returns `404` on both
+`master` and `main`, **unresolved, not filed**; `fluid-project/infusion`, `asqatasun/Asqatasun`,
+`IBM/equal-access` (the real slug is **`ibma/equal-access`**, already filed) — **no grant located
+at the probed paths.** 🟢 **Five `404`s are not five absences of licence; they are five
+unresolved probes, and `D836` is why the distinction now has a rule.**
+
+
 ## 🟢 Fortieth pass (`p835`, 2026-11-15) — **`1` row: the largest permissively-licensed education artifact on GitHub, which thirty-nine passes never filed**
 
 🟢 **One row, byte-read, and it outranks every agent on this base's own shelves.**
