@@ -6,7 +6,68 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
-**Seventy** concrete recipes — derived recipes: **70**. 🟢 **Thirty-fifth pass (`p830`): `P70` added** — the inclusive-delivery pipeline, and the first recipe in this file aimed at the SEN / inclusive-learner population rather than at a mainstream cohort. 🔵 **Premise is `T107`: inclusion COMPLIANCE is funded, deadlined and granted (MIT/Apache across the whole WCAG / Section 508 / EN 301 549 tier) while inclusion PEDAGOGY has a GitHub maximum of `1★` — so the recipe sells the compliance obligation and delivers the pedagogy inside it.** 🔴 **The EU AI Act boundary is drawn before the first node and it is the sharpest one in this file: the pipeline PRODUCES artefacts and evidence and NEVER scores a learner, because Annex III point 3 makes "assess learning outcomes" high-risk by construction and a SEN learner's needs record is special-category data on top of that.** 🟢 **All nine components byte-read on `2026-11-15`; every regulatory date is `CITED, NOT READ`.**
+**Seventy-one** concrete recipes — derived recipes: **71**. 🟢 **Thirty-sixth pass (`p831`): `P71` added** — the mother-tongue foundational-literacy pipeline, and the first recipe in this file aimed at children aged `5`–`9` learning to read and count at all. 🔵 **Premise is `T108`: this is the only tier in this base where the open-source assets carry real outcome evidence and the newest code is the least usable, so the recipe INHERITS the maintained content and measurement pipelines (Bloom, libpalaso, Kolibri Studio, Tangerine — all pushed this week) and treats the field-trialled XPRIZE apps as a CURRICULUM SPECIFICATION to read rather than a dependency to adopt.** 🔴 **The EU AI Act boundary is drawn before node `1`: Annex III point `3` makes assessing learning outcomes high-risk by construction and the subject is a child, so the pipeline authors, delivers and TRANSCRIBES, and the score stays with a human enumerator inside Tangerine.** 🟢 **All ten components byte-read on `2026-11-15`; every market and regulatory item is `CITED, NOT READ`.** 🟢 **Thirty-fifth pass (`p830`): `P70` added** — the inclusive-delivery pipeline, and the first recipe in this file aimed at the SEN / inclusive-learner population rather than at a mainstream cohort. 🔵 **Premise is `T107`: inclusion COMPLIANCE is funded, deadlined and granted (MIT/Apache across the whole WCAG / Section 508 / EN 301 549 tier) while inclusion PEDAGOGY has a GitHub maximum of `1★` — so the recipe sells the compliance obligation and delivers the pedagogy inside it.** 🔴 **The EU AI Act boundary is drawn before the first node and it is the sharpest one in this file: the pipeline PRODUCES artefacts and evidence and NEVER scores a learner, because Annex III point 3 makes "assess learning outcomes" high-risk by construction and a SEN learner's needs record is special-category data on top of that.** 🟢 **All nine components byte-read on `2026-11-15`; every regulatory date is `CITED, NOT READ`.**
+
+## P71 — The mother-tongue foundational-literacy pipeline: author the book, run the practice, measure the gain, and never let the model touch the score (EMEA anchor, APAC and LATAM language swap, North America as the evidence buyer)
+
+🔵 **Premise is `T108`.** This is the only tier in this base where the open-source assets carry real
+outcome evidence and the newest code is the least usable. The recipe therefore does the opposite of
+every other recipe in this file: **it inherits the maintained pipelines and treats the famous,
+field-trialled apps as a curriculum specification rather than as a dependency.**
+
+🔴 **Node `0` — the boundary, drawn before anything is built.** Early-grade assessment IS the
+high-risk case: EU AI Act **Annex III point 3** makes "assess learning outcomes" high-risk by
+construction, and the subject is a child aged `5`–`9`, so the data is both special-category-adjacent
+and collected under parental consent regimes that differ in every jurisdiction below. 🟢 **The
+pipeline PRODUCES content, DELIVERS practice and TRANSCRIBES evidence. It does not score a child, it
+does not place a child, and it does not predict a child.** The score stays inside Tangerine, where a
+trained enumerator owns it. 🔵 **This is not caution for its own sake — it is what makes the build
+sellable to the only buyers in this tier, which are ministries and donors.**
+
+### 🟢 The ten components, all byte-read `2026-11-15`
+
+| Node | Component | Grant | Why this one |
+|---|---|---|---|
+| 1. Authoring | [`BloomBooks/BloomDesktop`](https://github.com/BloomBooks/BloomDesktop) | 🟢 **MIT**, `1,072 B`, `sha256:858e015fbf93…` | 🟢 **Pushed `2026-11-15`.** Non-programmers in the target community make the books. The alternative — a studio writing the content — is the failure mode this whole tier was built to avoid |
+| 2. Writing system | [`sillsdev/libpalaso`](https://github.com/sillsdev/libpalaso) | 🟢 **MIT**, `1,082 B`, `sha256:b716617149f3…` | 🟢 Keyboarding, fonts, language tags, collation. 🔴 **Node `1` silently assumes Latin script without it**; `2007-2026` on one holder line means it is not going away |
+| 3. Lexicon | [`sillsdev/web-languageforge`](https://github.com/sillsdev/web-languageforge) | 🟢 **MIT**, `1,074 B`, `sha256:8ec4b3ea3d77…` | 🟢 A phonics sequence needs a frequency-ordered word list in the target language, and for most languages in this tier it does not exist yet. **Build the lexicon before the model** |
+| 4. Bubble/comic layer | [`BloomBooks/comical-js`](https://github.com/BloomBooks/comical-js) | 🟢 **MIT**, `1,085 B`, `sha256:04c31ce345c2…` | 🟢 The one granted implementation of the single most reused primitive in early-reader content |
+| 5. Practice runtime | [`curiouslearning/FeedTheMonsterJS`](https://github.com/curiouslearning/FeedTheMonsterJS) | 🟢 **MIT**, `1,073 B`, `sha256:9baf70ec9a4a…` | 🟢 **The live practice surface (`2026-09-03`), HTML canvas, no install, no store** — the deployable shape on a shared low-end device. 🔵 Its curriculum sequence comes from node `6` |
+| 6. Curriculum specification | [`XPRIZE/GLEXP-Team-onebillion`](https://github.com/XPRIZE/GLEXP-Team-onebillion) + [`XPRIZE/GLEXP-Team-KitkitSchool`](https://github.com/XPRIZE/GLEXP-Team-KitkitSchool) | 🟢 **Apache-2.0**, `11,357 B` / `11,340 B` | 🔴 **READ, NOT RUN.** Two XPRIZE co-winners, unpushed since `2019`. 🟢 **Their value is the sequence — what a child does on day `1` versus day `40`, validated against a `15`-month Tanzanian field trial — and the sequence does not rot.** `onecourse` is also the only asset in this base that names NUMERACY in its own description |
+| 7. Localisation data | [`curiouslearning/ftm-languagepacks`](https://github.com/curiouslearning/ftm-languagepacks) | 🟢 **BSD-2-Clause**, `1,326 B`, `sha256:ee43c06a4362…` | 🟢 **Granted SEPARATELY from the game it feeds — copy that separation.** A new language then arrives from people who never open the runtime repo |
+| 8. Per-language packaging | [`sillsdev/appbuilder-portal`](https://github.com/sillsdev/appbuilder-portal) | 🟢 **MIT**, `1,074 B`, `sha256:1ca03af82bfb…` | 🟢 Turns a content project into a per-language app and ships it. 🔵 `CRContainer-Hindi` is this pattern done by hand once; this is the factory |
+| 9. Offline delivery | [`learningequality/studio`](https://github.com/learningequality/studio) + [`learningequality/ricecooker`](https://github.com/learningequality/ricecooker) → Kolibri | 🟢 **MIT**, `1,115 B` / `1,087 B` | 🟢 Channel assembly and ingest into the offline player this base already shelved. 🔴 **Kolibri without Studio is a player with nothing to play** — which is why these two were promoted this pass |
+| 10. Measurement | [`Tangerine-Community/Tangerine`](https://github.com/Tangerine-Community/Tangerine) + [`XPRIZE/glexp-data-standardization`](https://github.com/XPRIZE/glexp-data-standardization) | 🔴 **GPL-3.0**, `35,147 B` · 🟢 **Apache-2.0**, `11,357 B` | 🟢 **EGRA/EGMA administered on the instrument ministries and donors already report against, offline, pushed `2026-11-12`** — plus a published, already-field-tested telemetry schema for unsupervised child tablet use, so the programme does not invent one badly. 🔴 **Deploy-and-configure only: a redistributed fork triggers GPL-3.0** |
+
+### 🟢 Where the AI actually goes — three places, and only three
+
+1. 🟢 **Content drafting at node `1`.** An LLM drafts decodable-text candidates against the node-`3`
+   lexicon and the node-`6` sequence; a community author accepts, edits or rejects every one in Bloom.
+   🔵 **The constraint is the product: decodable text must only use graphemes already taught, which is
+   a hard, checkable rule and therefore a good one to hand a model.**
+2. 🟢 **Oral-reading transcription at node `10`.** Whisper-class ASR turns an enumerator's recording
+   into a transcript and a word-level timing track. 🔴 **It emits a TRANSCRIPT, never a fluency score.**
+   The enumerator scores; the model removes the typing.
+3. 🟢 **Translation and adaptation at node `7`.** New language packs are machine-drafted and
+   human-confirmed, with `libpalaso`'s language tags carried through so the result is addressable.
+
+🔴 **Where it does NOT go, stated because every client will ask**: no placement, no streaming/levelling
+of children, no "at-risk" prediction, no automated score. 🔵 **Each is Annex III point `3` territory
+and none of them is what the buyer is actually funding.**
+
+### 🟢 Regional fit — one pipeline, four engagements
+
+| Region | The engagement | What swaps |
+|---|---|---|
+| **EMEA** | 🟢 **The anchor.** The corpus was BUILT here: `Antura` from TH Köln (`128★`, BSD-2-Clause), `Antura_arabic` as the `EduApp4Syria` winner, the XPRIZE field trial in Tanzania, `FeedTheMonster` for Syrian refugee children. 🔵 Buyer is a ministry or a donor programme; Art. 27 FRIA duty falls on the deployer where the deployer is public | Nothing — this is the reference build |
+| **APAC** | 🟢 **India's `NIPUN Bharat` mission targets Grade-`3` foundational literacy and numeracy mastery by `2026-27`, and the Ministry's `Bharat Bodhan` AI conclave (February `2026`) put AI-for-FLN and multilingual inclusion on the agenda explicitly** (`CITED, NOT READ`). 🔵 `CRContainer-Hindi` already proves the per-language container pattern here | Node `7` language packs; node `3` lexicon per state language |
+| **LATAM** | 🟢 **Learning poverty rose from `52%` to `79%` through the pandemic — the largest increase of any region alongside South Asia — and `PISA 2025` is cited as showing persistent foundational gaps holding back returns to education** (`CITED, NOT READ`). 🔵 **The regional capability already exists**: Fundación Ceibal + EdTech Hub partnered in September `2026` on exactly this question | Node `7` for Spanish and Portuguese variants; node `10` reported into the national assessment rather than EGRA |
+| **North America** | 🟡 **Not the deployment buyer — the EVIDENCE buyer.** `45%` of the most-used education tools have published research meeting an ESSA evidence tier, and US federal AI-in-education funding is routed through discretionary grants with evidence requirements attached (`CITED, NOT READ`). 🔵 **Node `6` plus node `10` is the only asset combination in this base that comes with an RCT already attached** — sell the evidence trail, not the tablet | Node `10` reported to an ESSA tier; nodes `1`–`9` unchanged |
+
+🔵 **Time to first deployable: `8`–`10` weeks for one language** (nodes `1`–`5`, `7`, `9`), **`+4`
+weeks** to add node `10` measurement with a trained enumerator cohort, **`+2` weeks per additional
+language** once node `3` exists. 🔴 **The `8`–`10` is a PLANNING figure from the component set, not a
+measured delivery — this base has not run it.**
 
 ## P70 — The inclusive-delivery pipeline: course material made usable AND auditable, with the scoring boundary drawn first (North America anchor, EMEA control, LATAM/APAC renderer swap)
 

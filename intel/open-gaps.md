@@ -4,6 +4,85 @@ region: Global
 updated: 2026-11-15
 ---
 
+## 🆕 `p831` — **The carried repair discharged, and three actions registered against what the repair uncovered**
+
+🟢 **`derive-counts.py` was run FIRST, before any edit, and again after every insertion, GREEN on
+all five graded files at commit:** `agents/top.md 370`, `repos/foundations.md 168`,
+`verticals/solutions.md 140`, `intel/trends.md 110`, `compose/patterns.md 71`, `ragged=0`,
+`nolink=0`.
+
+### 🟢 `p830`'s carried repair — **CLOSED. This is the discharge.**
+
+🔴 `p830` graded `compose/code/p773/grantprobe.sh` as **`CAPTURED-LIVE`** at `agents/top.md:204`,
+refused to pin the verdict (*"pinning it would be the 'silently downgraded verdict' the suite's own
+control forbids"*) and named the repair as the move that takes the gate green. 🟢 **Done, and the
+cost of the defect was measured rather than asserted: old probe against repaired probe on the same
+`8` addresses — `7` of `7` resolvable addresses short by exactly `1` byte, `7` of `7` `sha256`
+values unreproducible from the file they named.** 🟢 `gate-offline` RED → GREEN;
+`p253-captured-body-census` `31/31`; `CAPTURED-LIVE = 0`; `sites.tsv` re-pinned (`82` sites).
+
+🟢 **Two further defects fell out of the same repair and are closed with it.** (1)
+`p773/probe.sh` routed the body through a SECOND variable and measured that — genuinely
+`CAPTURED-LIVE`, graded `BODY-ONLY`, because the census reads shell source lexically and says so in
+its own docstring. 🔵 **The census's declared lower bound now has a named specimen attached, which
+is a different object from a disclaimer.** (2) `D9`'s case-aware filename list was written into
+`grantprobe.sh` at `p773` and never backported to `probe.sh` in the same directory, which made
+`Kosudo/nextSIS` (GPL-3.0, `39,890 B`) and `frappe/lms` (AGPL-3.0, `33,893 B`) read as ungranted.
+🟢 **Backported; all three instruments now return the same bytes for the same file.**
+
+### 🔴 `ACTION p831-A` — **teach the enumerator the distinction it already owns elsewhere**
+
+🔴 `gate-enumeration` is RED at `HEAD` with `REFUTED=12`. 🟢 **All `12` lines resolve to `7`
+distinct addresses and every one was byte-read on `2026-11-15`** (full adjudication table in
+`agents/top.md`, `p831`): **`2` are genuine false-absence claims** (`Kosudo/nextSIS`, `frappe/lms`),
+**`2` are `NOTICE`-only Apache-2.0 declarations** (`foradian/fedena` `679 B`,
+`projectfedena/fedena` `680 B` — POINTER, not payload, per `gate-restatement`), and **`3` are the
+enumerator OVER-REFUTING**: `LearnPress/learnpress` on a manifest field, `formalms/formalms` on
+VENDORED jQuery and swfheader subtree licences, `DMontgomery40/mcp-canvas-lms` on a `package.json`
+naming a `LICENSE` that is not in the tree.
+
+🟢 **The action: teach the enumerator the `GRANT` / `POINTER` / `VENDORED-SUBTREE` distinction this
+base already owns in `gate-payload-pin` (three-valued classifier) and `p382` (subtree axis), so it
+stops charging `5` sound verdicts as failures and the `2` real ones become visible.** 🔴 **The `12`
+lines live in `agents/trending.md` and `repos/trending.md`, which are APPEND-ONLY, and were NOT
+edited; the correction is published in the newest section of each, which is what append-only
+means.** 🔵 **Carried as the shape of the contract, not as a path, per `T763`.**
+
+### 🔴 `ACTION p831-B` — **give `commit-gates` a run-all-then-report mode**
+
+🔴 **`make commit-gates` stops at the first failing recipe, so it reports a LOWER BOUND on the
+number of red gates and it reads exactly like an upper bound.** 🟢 **Measured this pass on a
+PRISTINE `git archive HEAD` export, no edits of any kind: `make -k` reports `89` passing checks and
+`18` RED BLOCKING GATES** — `gate-absence`, `gate-action-answered`, `gate-alias-canonical`,
+`gate-cell-reproduction`, `gate-census-currency`, `gate-dates`, `gate-enumeration`,
+`gate-evidence-store`, `gate-fold-identity`, `gate-grant-path`, `gate-ledger`, `gate-offline`,
+`gate-promotion`, `gate-prose-claims`, `gate-region-headings`, `gate-register-currency`,
+`gate-shelf-consistency`, `gate-union-currency`.
+
+🔴 **Not one of the `18` is in `DECLARED_RED` (`gate-census-union`, `gate-promotion-ledger`,
+`recount`, `gate-derived-counts`) — the set a registered `Gap N-X` is required to justify, enforced
+by `gate-commit-gate` so it *"cannot be widened quietly by the same commit it protects."* 🔵 **The
+declaration mechanism works. It holds `4` names while `18` gates fail outside it, because the thing
+it protects against is a DECLARED red and these are undeclared ones.**
+
+🟢 **The action: add a target that runs every gate and prints the count and the names, so "the suite
+is red" becomes a measurement.** 🔵 **Then the `18` can be triaged in priority order instead of
+discovered one at a time by whichever gate happens to sit earliest in the recipe.** 🔴 **Stated
+plainly for whoever picks this up: `p831` did NOT fix the other `17`. It fixed one, measured the
+rest, and left them named.**
+
+### 🟡 `ACTION p831-C` — **the LATAM supply gap in the foundational tier, declared and unfilled**
+
+🔴 **`0` of the `35` repositories byte-read this pass place to LATAM.** The foundational-literacy
+corpus is Swahili, Arabic, Hindi and English. 🔴 **Against the largest measured deficit in
+`intel/market.md`: learning poverty in Latin America and the Caribbean rose from `52%` to `79%`
+through the pandemic** (`CITED, NOT READ`). 🟢 **This is an informed gap, recorded as one rather
+than left as silence** — `p830`'s LIBRAS and LSM corpora are sign-language assets, not early-reading
+ones, and the Portuguese/Spanish early-reading vocabulary returned nothing comparable to the
+Swahili/Arabic corpus. 🔵 **The action is a search, not a build: find whether a Spanish or
+Brazilian-Portuguese decodable-text corpus exists anywhere under a permissive grant before `P71`
+proposes producing one.**
+
 ## 🆕 `p817` — **Disposition of `ACTION p816-A`…`p816-F`, all six answered in the pass that received them, and the actions for the next pass**
 
 🟢 **`ACTION p816-A` made the disposition a precondition. This section exists because of it, and it

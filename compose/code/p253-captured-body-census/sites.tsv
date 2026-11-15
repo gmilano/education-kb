@@ -5,7 +5,7 @@ grant-ladder-v4/ladder.sh	BODY-ONLY	2	0	1	0
 grant-ladder-v4/test_ladder.sh	BODY-ONLY	4	0	0	0
 grant-ladder/grant_ladder.sh	BODY-ONLY	1	0	1	0
 jp-cos-curriculum-gate/measure_dumps.sh	BODY-ONLY	1	0	0	0
-lib/payload_measure.sh	CAPTURED-CONTROL	3	0	0	0
+lib/payload_measure.sh	CAPTURED-CONTROL	4	0	0	0
 p1040-ecl-corpus-census/holder.sh	BODY-ONLY	2	0	2	0
 p107-git-lane-census/parse_refs.sh	BODY-ONLY	1	0	0	0
 p108-release-identity/pick_latest.sh	BODY-ONLY	1	0	0	0
@@ -77,6 +77,7 @@ p550-duplicate-definition-sweep/sweep_dupdefs.sh	PIPED	0	1	0	0
 p560-epl-mpl-version-read/sweep_versions.sh	BODY-ONLY	1	0	0	0
 p725-readme-payload-sweep/readme_vs_payload.sh	BODY-ONLY	1	0	1	0
 p759-four-layer-grant-probe/probe.sh	BODY-ONLY	1	0	6	0
+p779/ecl_decide.sh	BODY-ONLY	1	0	0	0
 p784-licence-scope-map/probe.sh	BODY-ONLY	1	0	0	0
 registry-license-remeasure/measure_candidate.sh	BODY-ONLY	2	0	0	0
 registry-license-remeasure/remeasure.sh	BODY-ONLY	1	0	0	0

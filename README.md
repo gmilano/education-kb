@@ -6,6 +6,30 @@ updated: 2026-11-15
 
 # Globant AI Studios — Education KB
 
+**Pass `p831` · `2026-11-15`** — `p830` opened the SEN / inclusive-learner tier and closed by naming
+its successor's job: repair `p773/grantprobe.sh`, which it had graded `CAPTURED-LIVE` and refused to
+pin. 🟢 **`p831` did that repair, then found the hole the repair was sitting in, then opened the
+tier the base had never touched.**
+
+## What this pass established
+
+| | |
+|---|---|
+| 🟢 **The FOUNDATIONAL-LEARNING tier exists and this base had `0` rows in it** | `grep -ric` over the six curated pages, run before anything was filed: `literacy` **`132`**, `STEM` **`592`**, `credential` **`196`** — against **`numeracy 0`**, **`phonics 0`**, **`preschool 0`**, **`kindergarten 0`**, **`early years 0`**, **`decoding 0`**. 🔴 **Thirty-five passes, and not one row for the years in which a child learns to read and count at all** |
+| 🟢 **The productive search name is the FUNDING PROGRAMME, not the sector or the statute** | 🔴 The mandated star-ranked battery nilled a **`42`nd** consecutive time. 🟢 `Global Learning XPRIZE` and `EduApp4Syria` returned an entire field-trialled corpus under two GitHub organisations no sector sweep had ever reached — **a prize publishes its finalists' source as a condition of entry**, which is why the permissive supply here is clustered and dated (`T108`) |
+| 🔴 **The tier is FIELD-TRIALLED AND FROZEN, and the layer beneath it is alive** | The whole `XPRIZE/GLEXP-*` tree carries a `15`-month Tanzanian RCT and has not been pushed since `2019`; `BloomDesktop` and `libpalaso` were pushed **`2026-11-15`**, `Tangerine` `2026-11-12`, Kolibri `studio` `2026-11-09`. 🟢 **Engagement rule: INHERIT the content and measurement pipelines, FORK the practice apps** (`T108`, `P71`) |
+| 🔴 **The licence INDEX disagrees with the licence BYTES on the tier's `128★` leader** | `gh api` says `NOASSERTION` for `vgwb/Antura`, `Antura_arabic`, `Antura_assets` and `curiouslearning/FeedTheMonster`; all four are clean byte-read permissive grants. 🟢 **And one game ships THREE grants — BSD-2-Clause code, CC-BY-4.0 art, CC0-1.0 language data — so reading only the root `LICENSE.md` ships a client build whose ART is unattributed** (`T109`) |
+| 🟢 **A promotion failure corrected** | `learningequality/studio` had been named `19` times in this base's trending pages and never shelved; `Tangerine` `6` times; `ricecooker` `4`; `BloomDesktop` `1`. 🔴 **Kolibri — the DELIVERY layer — was shelved and the CONTENT and MEASUREMENT layers under it were not.** All five are shelved now |
+| 🔴 **The blocking gate suite reported `1` red. It has `18`** | 🟢 `make -k` on a pristine `git archive HEAD` export: `89` passing checks, **`18` RED BLOCKING GATES**, none of them in `DECLARED_RED`. 🔴 **A fail-fast suite reports a LOWER bound that reads like an upper bound, and here the bound was `1` and the quantity was `18`** (`T110`, `ACTION p831-B`) |
+| 🟢 **Three instrument defects repaired, measured rather than asserted** | `p773/grantprobe.sh` measured grant payloads through a captured body: **`7` of `7` resolvable addresses were `1` byte short and `7` of `7` `sha256` values unreproducible.** `p773/probe.sh` was a genuine `CAPTURED-LIVE` that the census graded `BODY-ONLY`, because the body reached the measurement through a SECOND variable — **the lower bound the census documents, now with a named specimen.** And `D9`'s case-aware filename list had never been backported from `grantprobe.sh` to its sibling, which made `Kosudo/nextSIS` and `frappe/lms` read as ungranted |
+
+🟢 **Net effect on the gates: `18` red at `HEAD` → `17` after this pass. `gate-offline` RED → GREEN.
+The set difference in the other direction is EMPTY — no gate that was green at `HEAD` is red now.**
+
+🟢 **Counts after this pass**: agents `370`, foundations `168`, verticals `140`, trends `110`,
+recipes `71`, market `#### Update` blocks `154`. 🔵 All gate-confirmed with
+`python3 ingest/derive-counts.py`; `ragged=0`, `nolink=0`.
+
 **Pass `p811` · `2026-11-13`** — `p810` closed with a transform worth keeping (*"when this base
 names a platform often and shelves nothing for it, that is a search instruction"*) and three
 shelf gates reporting `RED — the table cannot be located`. 🟢 **`p811` pointed the prescribed

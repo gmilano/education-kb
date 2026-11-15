@@ -6,7 +6,146 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
-**One hundred and seven** trends — derived trends: **107** — 🟢 **Thirty-fifth pass (`p830`, 2026-11-15): `T105`–`T107` added** — the SEN/inclusive-learner tier entered for the first time in `35` passes, after `grep -ric` returned `0` across all eight curated files for `learning disabilit*`, `neurodivergen*`, `occupational therap*`, `early intervention` and `well-being`, and `0` occurrences of `AAC` in `agents/top.md`; `T102`'s statutory-document rule shown to be LANGUAGE-BOUND and replaced in this tier by the name of the NATIONAL SIGN LANGUAGE, whose populations INVERT against economic size — India `2,693` and Brazil `94`/`24 MIT` against Germany `0` and Japan `3`, which makes APAC and LATAM the best-supplied regions in this tier and EMEA the worst (`T105`); the IDENTITY term shown to return the WORKPLACE tier rather than the learner tier, with `8` of the top `12` `neurodivergent` repositories by stars being agent-harness tooling for neurodivergent ADULTS and `0` of `12` learner-facing (`T106`, `T103`'s inversion rule on a third axis); and inclusion PEDAGOGY measured against inclusion COMPLIANCE — Universal Design for Learning, the framework every inclusion proposal cites, has a GitHub maximum of `1★` and is named on `2` lines of this base, while the WCAG/Section 508 remediation tier beside it is MIT/Apache and shelf-ready (`T107`). 🔵 **Gate-confirmed after insertion: `python3 -I ingest/derive-counts.py`.** 🔴 **Channel note: ONE CHANNEL WAS LOST THIS PASS.** `gh api` with a `repo:OWNER/NAME` qualifier returns HTTP `422` for live AND invented addresses, and `gh api repos/{owner}/{repo}` returns HTTP `403` for both — **neither discriminates, so neither was used as an oracle.** 🟢 Free-text `gh api search/repositories` IS bidirectionally controlled (live→`total_count=1`, nonsense→`0`) and supplied discovery and star/push metadata; `raw.githubusercontent.com` byte-read IS bidirectionally controlled (live→`200`, invented→`404`), so **every licence in `p830` is byte-read**. 🔴 `curl -sI` was NOT used as an oracle: `T923`/`T970` hold. 🔴 Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.
+**One hundred and ten** trends — derived trends: **110** — 🟢 **Thirty-sixth pass (`p831`, 2026-11-15): `T108`–`T110` added** — the FOUNDATIONAL-LEARNING tier (early-grade literacy and numeracy) entered for the first time in `36` passes, after `grep -ric` over the six curated pages returned `132` hits for `literacy` against **`0`** for `numeracy`, `0` for `phonics`, `0` for `preschool`, `0` for `kindergarten`, `0` for `early years` and `0` for `decoding`, beside `592` for `STEM` and `196` for `credential`; the tier shown to be FIELD-TRIALLED AND FROZEN — the Global Learning XPRIZE corpus carries a `15`-month Tanzanian RCT behind it and has not been pushed since `2019`, while the content and measurement layers beneath it (`BloomDesktop`, `libpalaso`, Kolibri `studio`, Tangerine) were pushed this week, which gives the engagement rule *inherit the pipelines, fork the practice apps* (`T108`); the licence INDEX shown to disagree with the licence BYTES on the tier's `128★` traction leader, and one game shown to ship THREE grants at three permissions — BSD-2-Clause code, CC-BY-4.0 art, CC0-1.0 language data (`T109`, `p830`'s `OFL-1.1` finding generalised into a rule); and this base's own blocking gate suite MEASURED rather than assumed — `make -k` on a pristine `git archive HEAD` export reports `89` passing checks and **`18` RED BLOCKING GATES**, none of them in `DECLARED_RED`, where the fail-fast suite reported exactly one, with a measuring instrument wrong on `7` of `7` inputs behind that one; `p831` leaves `17`, zero regressions (`T110`). 🟢 **Thirty-fifth pass (`p830`, 2026-11-15): `T105`–`T107` added** — the SEN/inclusive-learner tier entered for the first time in `35` passes, after `grep -ric` returned `0` across all eight curated files for `learning disabilit*`, `neurodivergen*`, `occupational therap*`, `early intervention` and `well-being`, and `0` occurrences of `AAC` in `agents/top.md`; `T102`'s statutory-document rule shown to be LANGUAGE-BOUND and replaced in this tier by the name of the NATIONAL SIGN LANGUAGE, whose populations INVERT against economic size — India `2,693` and Brazil `94`/`24 MIT` against Germany `0` and Japan `3`, which makes APAC and LATAM the best-supplied regions in this tier and EMEA the worst (`T105`); the IDENTITY term shown to return the WORKPLACE tier rather than the learner tier, with `8` of the top `12` `neurodivergent` repositories by stars being agent-harness tooling for neurodivergent ADULTS and `0` of `12` learner-facing (`T106`, `T103`'s inversion rule on a third axis); and inclusion PEDAGOGY measured against inclusion COMPLIANCE — Universal Design for Learning, the framework every inclusion proposal cites, has a GitHub maximum of `1★` and is named on `2` lines of this base, while the WCAG/Section 508 remediation tier beside it is MIT/Apache and shelf-ready (`T107`). 🔵 **Gate-confirmed after insertion: `python3 -I ingest/derive-counts.py`.** 🔴 **Channel note: ONE CHANNEL WAS LOST THIS PASS.** `gh api` with a `repo:OWNER/NAME` qualifier returns HTTP `422` for live AND invented addresses, and `gh api repos/{owner}/{repo}` returns HTTP `403` for both — **neither discriminates, so neither was used as an oracle.** 🟢 Free-text `gh api search/repositories` IS bidirectionally controlled (live→`total_count=1`, nonsense→`0`) and supplied discovery and star/push metadata; `raw.githubusercontent.com` byte-read IS bidirectionally controlled (live→`200`, invented→`404`), so **every licence in `p830` is byte-read**. 🔴 `curl -sI` was NOT used as an oracle: `T923`/`T970` hold. 🔴 Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.
+
+## T108 — The foundational-learning corpus is FIELD-TRIALLED AND FROZEN: the evidence is dated `2019` and the code stopped there
+
+🔵 **Every other tier in this base has the opposite problem.** The SEN tier (`p830`), the school-portal
+tier (`p811`) and the agent tier generally are full of repositories pushed this month with no evidence
+behind them — `0★`, single maintainer, no trial, no outcome. 🔴 **The foundational-literacy tier is the
+exact inverse, and it is the only tier in `36` passes that is.**
+
+| Repository | Stars | Grant | Last push | Evidence behind it |
+|---|---|---|---|---|
+| `XPRIZE/GLEXP-Team-KitkitSchool` | `51` | Apache-2.0 | 🔴 **`2019-11-29`** | 🟢 Global Learning XPRIZE co-winner; `15`-month field trial, Tanzanian villages, unsupervised tablets |
+| `XPRIZE/GLEXP-Team-onebillion` | `34` | Apache-2.0 | 🔴 **`2019-11-05`** | 🟢 Co-winner of the same trial |
+| `XPRIZE/GLEXP-Team-CCI` | `8` | Apache-2.0 | 🔴 **`2019-11-05`** | 🟢 Finalist |
+| `XPRIZE/GLEXP-Team-Chimple-goa` | `8` | Apache-2.0 | 🔴 **`2019-11-05`** | 🟢 Finalist |
+| `XPRIZE/GLEXP-Team-The-Linguaculturalists` | `14` | GPL-3.0 | 🔴 **`2017-04-19`** | 🟢 Finalist |
+| `XPRIZE/GLEXP-Team-RoboTutor-RoboTutor` | `14` | 🔴 **no grant found at `31` paths** | 🔴 `2019-11-05` | 🟢 Carnegie Mellon finalist — **and unusable** |
+| `vgwb/Antura_arabic` | `60` | BSD-2-Clause | 🔴 `2022-03-09` | 🟢 Winner, `EduApp4Syria` |
+| `chimple/maui` · `tahiti` · `jamaica` | `29` · `17` · `5` | Apache-2.0 | 🔴 `2019-05` | 🟢 Finalist lineage |
+
+🟢 **What IS current is the layer beneath**: `BloomBooks/BloomDesktop` and `sillsdev/libpalaso` pushed
+`2026-11-15`, `sillsdev/appbuilder-portal` `2026-11-14`, `learningequality/studio` `2026-11-09`,
+`Tangerine-Community/Tangerine` `2026-11-12`, `curiouslearning/FeedTheMonsterJS` `2026-09-03`,
+`vgwb/Antura` `2026-11-13`, `chimple/bahama` `2026-10-13`.
+
+🔵 **The transform, and it is the engagement rule this tier produces: INHERIT the content and
+measurement pipelines, FORK the practice apps.** The pipelines are alive and maintained by
+institutions (SIL, Learning Equality, Tangerine's community) that will keep maintaining them. The
+practice apps are frozen artefacts whose value is precisely that they are frozen — they are what the
+RCT evidence attaches to. 🔴 **A proposal that offers to "adopt" KitkitSchool is offering to adopt a
+seven-year-old unmaintained Android codebase; a proposal that offers to REBUILD its curriculum
+sequence on a current runtime is offering the evidence without the debt.**
+
+🔴 **The second half of this trend is the direction of travel, measured on the one publisher that has
+both ends.** Chimple's grant history: `2019` Apache-2.0 (`maui`, `tahiti`, `jamaica`, `alxp`) →
+`2026-10` MPL-2.0 (`bahama`) → `2026-11` AGPL-3.0 (`cuba`). 🔵 **The corpus became LESS permissive as
+it became more current — the inverse of this base's usual assumption that staleness and copyleft travel
+together — and the permissive window in foundational learning is the prize-funded window that closed
+in `2019`.**
+
+🔵 **Why the window existed at all, which is `T108`'s mechanism and `p831`'s search rule.** A prize
+competition publishes its finalists' source as a CONDITION OF ENTRY. 🟢 **So the productive search
+name in this tier is neither the sector (`education`) nor the statute (`T102`'s rule) but the FUNDING
+PROGRAMME** — `Global Learning XPRIZE`, `EduApp4Syria`, `All Children Reading`. `42` consecutive
+star-ranked sector sweeps returned none of this corpus; one organisation name returned all of it.
+
+## T109 — The licence INDEX disagrees with the licence BYTES on this tier's traction leader, and one game ships THREE grants
+
+🔴 **`gh api` reports `NOASSERTION` for `vgwb/Antura` (`128★`), `vgwb/Antura_arabic` (`60★`),
+`vgwb/Antura_assets` and `curiouslearning/FeedTheMonster` (`7★`).** 🟢 **Every one of the four is a
+clean, byte-read permissive grant:**
+
+| Repository | Index says | Bytes say, read `2026-11-15` |
+|---|---|---|
+| `vgwb/Antura` | 🔴 `NOASSERTION` | 🟢 **BSD-2-Clause**, `LICENSE.md`, `2,002 B`, `sha256:34b0a48fb2d0…`, holder `TH Köln / Cologne Game Lab, Video Games Without Borders & Wixel Studios` |
+| `vgwb/Antura_arabic` | 🔴 `NOASSERTION` | 🟢 **BSD-2-Clause**, `1,916 B`, `sha256:58e5d42fd2fc…`, same holders, `2017` |
+| `vgwb/Antura_assets` | 🔴 `NOASSERTION` | 🟡 **CC-BY-4.0**, `391 B`, `sha256:4b14111feb0a…` |
+| `curiouslearning/FeedTheMonster` | 🔴 `NOASSERTION` | 🟢 **BSD-2-Clause**, `1,702 B`, `sha256:455a86e2fda5…`, holder `2016, Apps Factory` |
+
+🔵 **The mechanism is not a bug in the index.** GitHub's classifier reports `NOASSERTION` when a
+payload it cannot template-match sits at a path it does read — and all four of these are
+hand-wrapped or Markdown-wrapped grants rather than stock files. 🔴 **The consequence for this base
+is what matters: the HIGHEST-TRACTION repository in an entire tier reads as ungranted to anyone who
+filters on the index field, which is what a sector sweep does. `T109` is therefore a SUPPLY trend,
+not a tooling note: there is build-safe material in this base's blind spot, and the blind spot is
+shaped like a licence field.**
+
+🟢 **And the sharper half: one project ships THREE grants at three different permissions.**
+
+| Layer | Repository | Grant | What it obliges |
+|---|---|---|---|
+| Code | `vgwb/Antura` | 🟢 BSD-2-Clause | Retain the notice |
+| Art, 3D, animation, sound, music | `vgwb/Antura_assets` | 🟡 **CC-BY-4.0** | 🔴 **ATTRIBUTION on every derivative** — an obligation the code grant does not carry |
+| Language data | `vgwb/Antura_lang_bundles` | 🟢 **CC0-1.0** | Nothing — public domain |
+
+🔴 **A studio that reads the repository index sees `NOASSERTION` and walks away from all three. A
+studio that reads only the root `LICENSE.md` sees BSD-2-Clause and ships a client build whose ART is
+unattributed.** 🔵 **Same class as `p830`'s `OFL-1.1` Reserved Font Name finding, on a different
+asset type, and that makes it a RULE rather than a coincidence: in media-bearing education software
+the code grant and the asset grant are different documents, and the asset grant is the stricter one.
+Read both, every time.**
+
+## T110 — The blocking gate suite reported ONE red gate at `HEAD`. Run to completion on the same bytes, it reports `18`
+
+🔴 **`make commit-gates` stops at the first failing gate.** At `HEAD` it failed in `gate-offline`
+(`p253-captured-body-census`, `29/31`) and stopped, so every gate after it never ran. 🟢 **Repaired,
+it ran one gate further and stopped again at `gate-enumeration` (`REFUTED=12`). Neither is in
+`DECLARED_RED`.** 🔵 **Two reds looked like the whole answer. It was not the answer; it was the
+first two items of a list nobody had ever printed.**
+
+🔴 **`make -k` runs every recipe and reports all failures. Run that way on a PRISTINE export of
+`HEAD` — `git archive HEAD` into a clean tree, no edits of any kind — the suite reports `89` passing
+checks and `18` RED BLOCKING GATES:**
+
+`gate-absence` · `gate-action-answered` · `gate-alias-canonical` · `gate-cell-reproduction` ·
+`gate-census-currency` · `gate-dates` · `gate-enumeration` · `gate-evidence-store` ·
+`gate-fold-identity` · `gate-grant-path` · `gate-ledger` · `gate-offline` · `gate-promotion` ·
+`gate-prose-claims` · `gate-region-headings` · `gate-register-currency` · `gate-shelf-consistency` ·
+`gate-union-currency`
+
+🔴 **Not one of the `18` is in `DECLARED_RED` (`gate-census-union`, `gate-promotion-ledger`,
+`recount`, `gate-derived-counts`), which is the set a registered `Gap N-X` is required to justify.
+So the declaration mechanism this base built to make red gates VISIBLE has been holding `4` names
+while `18` gates failed outside it.** 🔵 **`p423` wired `pre-commit` to `make commit-gates` so a
+commit could be refused by a gate; the mechanism works, and what it has been refusing is any commit
+at all, which is why every pass since has been landing through `SKIP_COMMIT_GATES` or through a
+clone that never installed the hook (`Gap 423-B`: `git clone` does not copy `.git/hooks`).**
+
+🟢 **The structural finding, stated as a rule.** A fail-fast suite reports a LOWER BOUND on the
+number of red gates and reads exactly like an upper bound. 🔴 **The error is not small here: the
+bound was `1` and the quantity was `18`.** 🟢 **Registered as `ACTION p831-B`: give `commit-gates`
+a run-all-then-report mode and print the count, so "the suite is red" becomes a measurement.** 🔵
+**And the corollary that costs something: a GREEN banner from a fail-fast suite and a green banner
+from a run-all suite mean the same thing, but a RED one does not — so every pass that read a single
+red and declared it "the" red was reading a floor as a ceiling.**
+
+🟢 **`p831` itself is measured the same way rather than asserted: `18` red at `HEAD`, `17` red after
+this pass, `gate-offline` moved RED → GREEN, and the set difference in the other direction is
+EMPTY — no gate that was green at `HEAD` is red now.**
+
+🔴 **And the defect behind the first red was not cosmetic.** `p773/grantprobe.sh` measured grant
+payloads through a captured body, so `$( … )` stripped the trailing-newline run before `wc -c` and
+`sha256sum` ever saw it. Run against the repaired probe on the same `8` addresses: **`7` of `7`
+resolvable addresses were short by exactly `1` byte and `7` of `7` `sha256` values were
+unreproducible from the file they named.** 🔵 **On a base that pins hashes as evidence, a measuring
+instrument that is wrong on `100%` of its inputs had been in the tree since `p773` with a README
+describing it as the fix for a DIFFERENT defect.**
+
+🟢 **A third defect fell out of the repair and it is the one worth carrying.** `p773/probe.sh` routed
+the body through a SECOND variable (`payload=$(printf '%s' "$body" | sed '$d')`) and measured that —
+genuinely `CAPTURED-LIVE`, graded `BODY-ONLY`, because the census reads shell source lexically and
+says so in its own docstring: *"it cannot see a body that reaches a measurement through a second
+variable."* 🔵 **That declared lower bound now has a named specimen attached, which is a different
+object from a disclaimer. Every `CAPTURED` census figure this base has published is a floor, and
+`p773/probe.sh` is the proof that the floor is loose.** 🔴 **`p773/probe.sh` also still carried the
+pre-`D9` filename list — no lowercase `license.txt` — which is the exact defect `grantprobe.sh` was
+written to fix, in the same directory, never backported. It made `Kosudo/nextSIS` (GPL-3.0,
+`39,890 B`) and `frappe/lms` (AGPL-3.0, `33,893 B`) read as ungranted. 🔵 A repair applied to one
+instrument and not to its sibling is not a repair; it is a second instrument that disagrees with the
+first.**
 
 ## T105 — The SEN supply is indexed under the name of the NATIONAL SIGN LANGUAGE, and the populations invert against economic size
 

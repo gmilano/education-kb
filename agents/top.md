@@ -4,6 +4,170 @@ region: Global
 updated: 2026-11-15
 ---
 
+## Thirty-sixth pass (`p831`, 2026-11-15) — the FOUNDATIONAL-LEARNING tier, and the pass that repaired the base's own red gate instead of committing over it
+
+🟢 **`15` build-safe agent rows filed (`355` → `370`), `15` foundation rows (`153` → `168`), `5`
+vertical platforms (`135` → `140`), `3` trends (`T108`–`T110`), `1` recipe (`P71`). Every licence
+BYTE-READ on `2026-11-15`. Two instruments in `compose/code/p773/` REPAIRED, one blocking gate
+taken from RED to GREEN, and a SECOND red — which the first was hiding — found, measured and
+adjudicated address by address.**
+
+🔴 **`p830` ended by naming its own successor's job, and this is it.** Line `204` of this page,
+written yesterday, graded `p773/grantprobe.sh` as **`CAPTURED-LIVE`** and said in terms:
+*"Pinning it would be the 'silently downgraded verdict' the suite's own control forbids; the fix
+is to make the script measure the payload directly."* 🟢 **That repair is done, and it was worth
+more than the prose predicted.**
+
+### 🔴 What the defect actually cost, measured old-probe against new-probe on the same addresses
+
+`P834` is this base's oldest live defect class: `b=$(curl …)` strips the **entire run of trailing
+newlines**, so `printf '%s' "$b" | wc -c` reads short and `sha256sum` reads a hash that cannot be
+reproduced from the file it names. 🔴 **On a base whose shelves PIN SHAs, that is not a style
+issue.** Both probes were run against the same eight addresses on `2026-11-15`:
+
+| Address | File | OLD bytes / sha | NEW bytes / sha | Delta |
+|---|---|---|---|---|
+| `openedx/edx-platform` | `LICENSE` | `35,135` / `106a1b4b8b71` | 🟢 `35,136` / `e12d78569742` | **`+1`** |
+| `XPRIZE/GLEXP-Team-KitkitSchool` | `LICENSE` | `11,339` / `6d4c12deba60` | 🟢 `11,340` / `638af047fe71` | **`+1`** |
+| `chimple/maui` | `LICENSE.txt` | `11,356` / `43070e2d4e53` | 🟢 `11,357` / `c71d239df917` | **`+1`** |
+| `vgwb/Antura` | `LICENSE.md` | `2,001` / `9e70b4664b10` | 🟢 `2,002` / `34b0a48fb2d0` | **`+1`** |
+| `sillsdev/libpalaso` | `LICENSE` | `1,081` / `2d9f225638e0` | 🟢 `1,082` / `b716617149f3` | **`+1`** |
+| `BloomBooks/BloomDesktop` | `LICENSE.txt` | `1,071` / `e92b61d89c9a` | 🟢 `1,072` / `858e015fbf93` | **`+1`** |
+| `curiouslearning/FeedTheMonsterJS` | `LICENSE` | `1,072` / `216e43362531` | 🟢 `1,073` / `9baf70ec9a4a` | **`+1`** |
+| `learningequality/kolibri` | — | `NO-GRANT-AT-ROOT` | `NO-GRANT-AT-ROOT` | n/a |
+
+🔴 **Seven of seven resolvable addresses were measured one byte short, and seven of seven `sha256`
+values were unreproducible from the file they named.** 🔵 **The defect rate is not "some": it is
+every grant payload that ends in a newline, which is every grant payload. A `1`-byte error sounds
+cosmetic and is not — it is the difference between a hash that re-derives and a hash that never
+will, and this base pins hashes as evidence.** 🟢 The repaired probe's figure for
+`openedx/edx-platform` (`35,136 B`) now AGREES with `p830`'s independently byte-read figure for the
+same file, and with this pass's third, separately written instrument. Three instruments, one answer.
+
+### 🔴 A second `CAPTURED-LIVE` site the census could not see — the instrument's own lower bound, with a named specimen
+
+🔵 **`p253-captured-body-census` documents its own limit honestly**: *"It reads shell source
+lexically. It cannot see a body that reaches a measurement through a second variable, an array, or
+a function argument. Every verdict is therefore a LOWER bound on the defect."* 🔴 **`p773/probe.sh`
+is that bound made concrete.** It captured the body into `body`, sliced it into a SECOND variable
+with `payload=$(printf '%s' "$body" | sed '$d')`, and measured `$payload` — so it was genuinely
+`CAPTURED-LIVE`, lost the trailing-newline run **twice**, and the census graded it `BODY-ONLY`. 🟢
+**Repaired the same way: the payload goes to a file and the file is measured.** 🔵 **This is the
+first time the census's declared lower bound has been demonstrated rather than merely stated, and a
+limit with a specimen attached is a different object from a limit in a docstring.**
+
+### 🔴 And a third finding in the same directory: the `D9` repair was never backported to its own sibling
+
+🔵 `grantprobe.sh` exists because of `p773`'s `D9`: *"A missing lowercase `license.txt` produced a
+false `NO-GRANT-AT-ROOT` on ERPNext."* 🔴 **The `31`-name case-aware list was written into
+`grantprobe.sh` and left out of `probe.sh`, in the same folder, which carried `license` and
+`license.md` but not `license.txt` — and `probe.sh` is the one with the ref channel on it.** Two
+addresses this pass were invisible to it for exactly that reason and resolve now: `Kosudo/nextSIS`
+(`license.txt`, 🟢 **byte-read `39,890 B`, `sha256:cd7a49230f22…`**, GPL-3.0 with CodeIgniter and
+Bootstrap notices inside it) and `frappe/lms` (`license.txt`, 🟢 **byte-read `33,893 B`,
+`sha256:db1a87ba81e8…`**, title line `GNU AFFERO GENERAL PUBLIC LICENSE`). 🟢 **List backported.**
+
+### 🔴 The suite reported ONE red gate. Run to completion on the same bytes, it reports `18`
+
+🟢 **`make commit-gates` at `HEAD` failed at `gate-offline` and STOPPED, so every gate after it in
+the suite never ran at all.** With `gate-offline` repaired it ran one further and stopped again at
+**`gate-enumeration` — `REFUTED=12`, `VERIFIED-ABSENT=133`, `QUEUE-UNENUMERATED=213`.** 🔵 **Two
+reds looked like the whole answer, so this pass stopped assuming and measured it: `make -k` on a
+PRISTINE `git archive HEAD` export, no edits of any kind, reports `89` passing checks and `18` RED
+BLOCKING GATES** — `gate-absence`, `gate-action-answered`, `gate-alias-canonical`,
+`gate-cell-reproduction`, `gate-census-currency`, `gate-dates`, `gate-enumeration`,
+`gate-evidence-store`, `gate-fold-identity`, `gate-grant-path`, `gate-ledger`, `gate-offline`,
+`gate-promotion`, `gate-prose-claims`, `gate-region-headings`, `gate-register-currency`,
+`gate-shelf-consistency`, `gate-union-currency`. 🔴 **Not one of the `18` is in `DECLARED_RED`
+(`gate-census-union`, `gate-promotion-ledger`, `recount`, `gate-derived-counts`) — the set a
+registered `Gap N-X` is required to justify. The mechanism built to make red gates VISIBLE holds
+`4` names while `18` gates fail outside it.** 🔵 **Filed as `T110`.** 🟢 **And this pass is measured
+the same way rather than asserted: `18` red at `HEAD`, `17` after it, `gate-offline` RED → GREEN,
+and the set difference in the other direction is EMPTY — nothing that was green is red now.**
+
+🟢 **All `12` refuted lines resolve to `7` distinct addresses, and every one was byte-read today
+rather than argued about:**
+
+| Address | The base's claim | Byte-read `2026-11-15` | Verdict on the claim |
+|---|---|---|---|
+| `Kosudo/nextSIS` | no grant | 🔴 `license.txt`, **`39,890 B`**, `sha256:cd7a49230f22…`, GPL-3.0 | 🔴 **WRONG — a real grant payload** |
+| `frappe/lms` | no grant | 🔴 `license.txt`, **`33,893 B`**, `sha256:db1a87ba81e8…`, AGPL-3.0 | 🔴 **WRONG — a real grant payload** |
+| `foradian/fedena` | no grant | 🟡 `NOTICE`, **`679 B`**, `sha256:386aef9c0b40…` — *"Copyright 2011 Foradian Technologies Private Limited … Licensed under the Apache License, Version 2.0"* | 🟡 **POINTER, not payload.** The holder DECLARES Apache-2.0 and ships no licence text, so `gate-restatement`'s doctrine applies: a restatement of an off-repository authority is not a verified grant. The absence claim is wrong in substance and right in form |
+| `projectfedena/fedena` | no grant | 🟡 `NOTICE`, **`680 B`**, `sha256:38af3b29e417…` | 🟡 Same verdict, `1` byte apart from the row above — the two are the same notice under different ownership |
+| `LearnPress/learnpress` | no grant | 🟢 **No grant file at root on `develop`.** The enumerator cited `readme.txt` *"License: GPLv3"* and `composer.json` `"license": "GPL-3.0-or-later"` | 🟢 **The base was RIGHT; the ENUMERATOR over-refuted.** A manifest field is a `POINTER` under this base's own three-valued classifier (`gate-payload-pin`), never a `GRANT` |
+| `formalms/formalms` | no grant | 🟢 **No grant at root.** The enumerator cited `html/addons/jquery/malihu-custom-scrollbar-plugin/LICENSE.txt` and `html/appCore/addons/swfheader/LICENSE.txt` | 🟢 **The base was RIGHT.** Those are VENDORED third-party grants in a subtree — `p382`'s subtree axis. A bundled jQuery plugin's licence is not the repository's grant |
+| `DMontgomery40/mcp-canvas-lms` | no grant | 🟢 **No grant in the tree.** `package.json` says `"license": "MIT"` **and its `"files"` block names a `LICENSE` that is not there** | 🟢 **The base was RIGHT**, and this is the sharpest specimen of the three: a manifest pointing at a payload the repository does not ship |
+
+🔵 **So `gate-enumeration`'s red is `2` real defects and `5` over-refutations, and that ratio is the
+useful number.** 🔴 **Those `12` lines live in `agents/trending.md` and `repos/trending.md`, which
+are APPEND-ONLY by this base's rule, so they are NOT edited.** 🟢 **The correction is published
+here, in the newest section, which is what append-only means. Registered as `ACTION p831-A`: teach
+the enumerator the `GRANT` / `POINTER` / `VENDORED-SUBTREE` distinction it already owns in
+`gate-payload-pin` and `p382`, so it stops charging `5` sound verdicts as failures.**
+
+### 🔴 The mandated star-ranked battery nilled a `42`nd consecutive time
+
+`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`,
+`open source platform education ERP CRM MIT Apache` and `AI education industry trends 2026` returned
+DeepTutor, OpenEduCat/Odoo, OpenHands, Langflow and `microsoft/ai-agents-for-beginners` — **every
+one already shelved or already adjudicated here** — plus two undescribed Trendshift entries
+(`geekjourneyx/interactive-learning`, `SirhanMacx/Claw-ED`) with no licence and no description in
+the result set. 🔵 **The one item in the battery that was new was again not a repository:
+`45%` of the most-used education tools have published research meeting an ESSA evidence tier. That
+number is the premise of `T108` and it is `CITED, NOT READ`.**
+
+### 🟢 What produced supply instead: measure the ABSENCE first, then search the FUNDER's vocabulary
+
+🔵 **`p830` found its tier by running `grep -ric` for clinical terms and getting `0`. The same
+instrument, pointed at the age axis, found a bigger hole.** Run over the six curated pages before
+anything was filed:
+
+| Term | Shelf hits | Term | Shelf hits |
+|---|---|---|---|
+| `literacy` | `132` | 🔴 **`numeracy`** | **`0`** |
+| `reading` (in `agents/top.md`) | `34` | 🔴 **`phonics`** | **`0`** |
+| `STEM` | `592` | 🔴 **`preschool`** | **`0`** |
+| `credential` | `196` | 🔴 **`kindergarten`** | **`0`** |
+| `proctor` | `72` | 🔴 **`early years`** | **`0`** |
+| `xAPI` | `155` | 🔴 **`decoding`** | **`0`** |
+
+🔴 **Thirty-five passes built a base with `592` mentions of STEM, `196` of credentialling and `0`
+rows for the years in which a child learns to read and count at all** — the phase that the World
+Bank, UNICEF, NIPUN Bharat and every regional ministry in `intel/market.md` spend their money on.
+🔵 **`T102`'s rule (search the name of the statutory instrument, not the sector) is extended here
+and the extension is `T108`'s mechanism: in this tier the productive name is neither the sector nor
+the statute but the FUNDING PROGRAMME — `Global Learning XPRIZE`, `EduApp4Syria`, `All Children
+Reading`. A prize competition publishes its finalists' source as a condition of entry, which is why
+an entire field-trialled corpus is sitting under one GitHub organisation that no sector search
+returns.**
+
+### 🟢 The `15` rows, byte-read `2026-11-15`
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| Antura and the Letters | https://github.com/vgwb/Antura | 🟢 **BSD-2-Clause — byte-read** (`LICENSE.md`, `2,002 B`, `sha256:34b0a48fb2d0…`, holder `TH Köln / Cologne Game Lab, Video Games Without Borders & Wixel Studios`) | 128 | EMEA | 🟢 **The traction leader of the whole foundational tier and the one row in it with a current push date (`2026-11-13`).** Unity literacy game for children learning to read. 🔴 **The index is WRONG about it: `gh api` reports `NOASSERTION` and the bytes are a clean BSD-2-Clause grant** — the discrepancy that `T109` is built on. 🔵 **Region placed on the holder line's own evidence: `TH Köln` is a German public university, a jurisdictional fact inside the grant bytes, which is this base's `622-K` placement rule rather than an inference from a name** |
+| Antura and the Letters (Arabic) | https://github.com/vgwb/Antura_arabic | 🟢 **BSD-2-Clause — byte-read** (`LICENSE.md`, `1,916 B`, `sha256:58e5d42fd2fc…`, holder `2017, TH Köln / Cologne Game Lab, Video Games Without Borders & Wixel Studios`) | 60 | EMEA | 🟢 **Winner of the `EduApp4Syria` international initiative** — teaches Arabic-speaking children to read and write, complete Unity project. 🔴 Index says `NOASSERTION`; bytes say BSD-2-Clause, same family as its parent. 🔴 **Unpushed since `2022-03-09`: a field-proven asset, not a maintained product** |
+| Kitkit School | https://github.com/XPRIZE/GLEXP-Team-KitkitSchool | 🟢 **Apache-2.0 — byte-read** (`11,340 B`, `sha256:638af047fe71…`, stock text, no holder) | 51 | EMEA | 🟢 **Co-winner of the Global Learning XPRIZE** (Enuma). A `13`-app suite — launcher, lock screen, library, read-aloud book viewer, curriculum app, writing board — built to run **unsupervised on a tablet with no teacher and no network**. 🔵 Region placed on the repository's own evidence: the curriculum it ships is Swahili, for the Tanzanian field trial. 🔴 Unpushed since `2019-11-29` |
+| onecourse | https://github.com/XPRIZE/GLEXP-Team-onebillion | 🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:b40930bbcf80…`, stock text, no holder) | 34 | EMEA | 🟢 **The other co-winner, and the only row in this tier that names NUMERACY in its own description**: *"one app that delivers reading, writing and numeracy."* 🔵 Its README states the placement outright — *"the onecourse material as children in Tanzania would experience it."* 🔴 Unpushed since `2019-11-05` |
+| maui | https://github.com/chimple/maui | 🟢 **Apache-2.0 — byte-read** (`LICENSE.txt`, `11,357 B`, `sha256:c71d239df917…`, stock text, no holder) | 29 | Global | 🟢 Flutter literacy application for children, from the Chimple project. 🔵 **Region `Global` DECLARED, not assumed: the stock Apache text carries no holder line and the README names no country or language, so there is nothing in the bytes to place it on.** Chimple's own operations are Indian; this base does not place a region on an operator's address |
+| tahiti | https://github.com/chimple/tahiti | 🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:c71d239df917…`, stock text, no holder) | 17 | Global | 🟢 Flutter painting application — the EXPRESSION leg beside `maui`'s decoding leg. 🔵 Filed because a pre-literate child's first output is a drawing, and this is the only granted drawing surface in the tier |
+| Pubbly | https://github.com/XPRIZE/GLEXP-Team-CCI | 🟢 **Apache-2.0 — byte-read** (`11,372 B`, `sha256:fc1de75500c0…`, stock text, no holder) | 8 | EMEA | 🟢 **The AUTHORING leg of the XPRIZE corpus, and the most reusable thing in it**: a cross-platform desktop tool for designing interactive eBooks, plus a JS engine that turns its XML and assets into HTML5. 🔵 A studio that needs new mother-tongue content rather than new code starts here |
+| Chimple (goa) | https://github.com/XPRIZE/GLEXP-Team-Chimple-goa | 🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:c71d239df917…`, stock text, no holder) | 8 | Global | 🟢 The Chimple XPRIZE submission. 🔵 Byte-identical grant to `chimple/maui` and `XPRIZE/glexp-data-standardization` (`sha256:c71d239df917…`), which is `T41`'s bound showing again: an identical stock payload is evidence of a TEMPLATE, never of lineage |
+| Feed the Monster | https://github.com/curiouslearning/FeedTheMonster | 🟢 **BSD-2-Clause — byte-read** (`1,702 B`, `sha256:455a86e2fda5…`, holder `2016, Apps Factory`) | 7 | EMEA | 🟢 Core Unity repo of the literacy game built for Syrian refugee children and now localised far beyond it. 🔴 **Index says `NOASSERTION`; bytes say BSD-2-Clause** — the second index/bytes disagreement in this tier, on a different publisher |
+| FeedTheMonsterJS | https://github.com/curiouslearning/FeedTheMonsterJS | 🟢 **MIT — byte-read** (`1,073 B`, `sha256:9baf70ec9a4a…`, holder `2022 Curious Learning`) | 5 | EMEA | 🟢 **The web rebuild, and the ACTIVE one — pushed `2026-09-03` while the Unity original has not moved since `2025-11-04`.** HTML-canvas, no install, no store. 🔵 **For a ministry engagement this is the deliverable shape: a phonics game that runs in a browser on a shared device** |
+| jamaica | https://github.com/chimple/jamaica | 🟢 **Apache-2.0 — byte-read** (`11,323 B`, `sha256:283ea6cc2997…`, stock text, no holder) | 5 | Global | 🟢 Chimple component repo. 🔵 Filed for the grant, not the traction: `11,323 B` is a DISTINCT Apache payload from the `11,357 B` that four of its siblings ship, which is a `p779` band case and is recorded as one |
+| Chimple (maui, XPRIZE build) | https://github.com/XPRIZE/GLEXP-Team-Chimple-maui | 🟢 **Apache-2.0 — byte-read** (`LICENSE.txt`, `11,357 B`, `sha256:c71d239df917…`, stock text, no holder) | 4 | Global | 🟢 The competition build of `maui`, frozen at submission. 🔵 Useful precisely BECAUSE it is frozen: it is the artefact the RCT evidence attaches to, and the live `chimple/*` tree is not |
+| Curious Reader (RCC) | https://github.com/curiouslearning/CuriousReaderRCC | 🟢 **MIT — byte-read** (`1,073 B`, `sha256:0275a073eb5a…`, holder `2021 Curious Learning`) | 4 | Global | 🟢 Unity implementation of the Curious Reader authoring tool — the second authoring surface in the tier after Pubbly |
+| CRContainer (Hindi) | https://github.com/curiouslearning/CRContainer-Hindi | 🟢 **MIT — byte-read** (`1,073 B`, `sha256:9baf70ec9a4a…`, holder `2022 Curious Learning`) | 2 | APAC | 🟢 Standalone Curious Reader container for **Hindi**. 🔵 **Region placed on the LANGUAGE the repository itself ships, which is a jurisdictional fact in its bytes** — the same `622-K` placement `p830` used for `bol-sakhi-communication-board`. 🔵 Pushed `2026-03-24`, so the per-language container pattern is live, not archival |
+| onecourse Phrase Analytics | https://github.com/XPRIZE/GLEXP-Team-onebillion-PhraseAnal | 🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:b40930bbcf80…`, stock text, no holder) | 0 | EMEA | 🟢 **`0★`, and filed deliberately.** The phrase-analytics companion to `onecourse` — the piece that looks at what the child actually produced. 🔵 Byte-identical grant to its parent (`sha256:b40930bbcf80…`), which is how the pair is tied together on evidence rather than on a name |
+
+### 🔴 `4` rejections, with the reason each one was refused
+
+1. 🔴 **`XPRIZE/GLEXP-Team-RoboTutor-RoboTutor`** (`14★`, Carnegie Mellon's XPRIZE finalist) — the probe returned **`NOGRANT`** across both `main` and `master` at every one of `31` filename paths. 🔵 **Recorded as UNRESOLVED, not as ungranted**, per `p830`'s own correction: the invented control returns `NOGRANT` too, so `NOGRANT` means *"no grant found at the probed paths"* and is not an existence oracle. The index agrees it is `NOASSERTION`. **A whole university's XPRIZE finalist is unusable until someone resolves this.**
+2. 🔴 **`Tangerine-Community/Tangerine`** (`119★`) — **`GPL-3.0`, byte-read `35,147 B`, `sha256:8ceb4b9ee5ad…`**. Copyleft; shelved on `verticals/solutions.md` with its risk posture, not here. 🔵 **And it is the most consequential rejection in the tier**: it is the instrument the EGRA/EGMA field data is collected on, it was pushed `2026-11-12`, and this base has named it `6` times in `repos/trending.md` across `35` passes without ever shelving it.
+3. 🔴 **`XPRIZE/GLEXP-Team-The-Linguaculturalists`** (`14★`) — **`GPL-3.0`, byte-read `COPYING`, `35,147 B`, `sha256:8ceb4b9ee5ad…`**. Byte-identical grant to Tangerine's, same destination.
+4. 🔴 **`chimple/cuba`** (`4★`, pushed `2026-11-13` — the live Chimple line) — **`AGPL-3.0`, byte-read `LICENSE.md`, `34,522 B`, `sha256:20b067f86de3…`**. 🔵 **The direction of travel is the finding: Chimple's `2019` repos are Apache-2.0 and its `2026` repos are MPL-2.0 and AGPL-3.0. The corpus is getting LESS permissive as it gets more current, which is `T108`'s second half.**
+
 ## Thirty-fifth pass (`p830`, 2026-11-15) — the SEN / INCLUSIVE-LEARNER tier: `34` passes, `335` agents, and `0` rows for the learners every one of those passes legislated about
 
 🟢 **`20` build-safe agent rows filed (`335` → `355`), `4` foundation rows (`149` → `153`), `3`
@@ -1414,7 +1578,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 355 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 370 rows
 
 ### Filed by `p829` (2026-11-15) — `11` rows: the VOCATIONAL tier (`3`, EMEA) and the language-and-study tier (`8`), every licence byte-read
 

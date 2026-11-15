@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirty-sixth pass, `p831`) — **`15` foundation rows and `5` vertical platforms: the mother-tongue CONTENT pipeline and the EGRA/EGMA instrument, both named here for passes and never shelved**
+
+🟢 **Foundations `153` → `168`. Verticals `135` → `140`. Every licence byte-read on `2026-11-15`;
+both invented controls → `404` / `NOGRANT`.** 🔴 **`gh api` with a `repo:` qualifier and
+`gh api repos/{owner}/{repo}` remain DEAD (`422` / `403` for live and invented alike) and were not
+used as oracles. Free-text `gh api search/repositories` stayed bidirectionally controlled and
+carried discovery plus star and push metadata.**
+
+### 🔴 The promotion failure this pass corrects
+
+🔵 **This base shelved Kolibri — the DELIVERY layer — and never shelved the layer underneath it.**
+Counted before anything was filed: `learningequality/studio` named **`19`** times across these
+trending pages and never promoted; `learningequality/ricecooker` **`4`** times;
+`BloomBooks/BloomDesktop` **`1`**; `Tangerine-Community/Tangerine` **`6`**; `vgwb/Antura` **`3`**.
+🔴 **`Kolibri` alone appears `385` times in this base and is the only one of the six on a shelf.**
+🟢 **All five are shelved this pass.**
+
+### New foundation rows — the MOTHER-TONGUE CONTENT & WRITING-SYSTEM layer
+
+🟢 `learningequality/studio` **MIT** `1,115 B` `212★` (PROMOTED) · `sillsdev/web-languageforge`
+**MIT** `1,074 B` `47★` · `sillsdev/libpalaso` **MIT** `1,082 B` `46★` (pushed **today**) ·
+`BloomBooks/BloomDesktop` **MIT** `1,072 B` `43★` (PROMOTED, pushed **today**) ·
+`BloomBooks/comical-js` **MIT** `1,085 B` `31★` · `sillsdev/appbuilder-portal` **MIT** `1,074 B`
+`31★` · `learningequality/ricecooker` **MIT** `1,087 B` `32★` (PROMOTED) · `BloomBooks/BloomReader`
+**MIT** `1,072 B` `19★` · `GlobalDigitalLibraryio/gdl-frontend` **Apache-2.0** `11,357 B` `8★` ·
+`vgwb/Antura_assets` **CC-BY-4.0** `391 B` `4★` · `curiouslearning/ftm-languagepacks`
+**BSD-2-Clause** `1,326 B` `2★` · `XPRIZE/glexp-data-standardization` **Apache-2.0** `11,357 B` `2★`
+· `BloomBooks/bloom-player` **MIT** `1,079 B` `2★` · `vgwb/Antura_lang_bundles` **CC0-1.0**
+`7,048 B` `0★` · `BloomBooks/BloomReader-Lite` **MIT** `1,062 B` `0★`.
+
+### New vertical platforms — the FOUNDATIONAL-MEASUREMENT tier, and it is copyleft end to end
+
+🔴 `Tangerine-Community/Tangerine` **GPL-3.0** `35,147 B` `119★` (EGRA/EGMA, offline, pushed
+`2026-11-12`) · `Tangerine-Community/tangy-form` **GPL-3.0** `35,147 B` `16★` · `chimple/bahama`
+**MPL-2.0** `16,725 B` `8★` · `chimple/cuba` **AGPL-3.0** `34,522 B` `4★` ·
+`XPRIZE/GLEXP-Team-The-Linguaculturalists` **GPL-3.0** `35,147 B` `14★`.
+
+🔵 **The tier's defining fact, and it inverts the usual posture: the child-facing PRACTICE layer is
+Apache-2.0 and BSD-2-Clause throughout, and the MEASUREMENT layer is GPL-3.0, AGPL-3.0 and MPL-2.0
+throughout.** 🔴 **A studio can fork the game. It cannot quietly fork the gradebook.** 🔵 **Three
+repositories from three unrelated publishers ship one byte-identical GPL-3.0 payload
+(`sha256:8ceb4b9ee5ad…`) — `T41`'s bound again, evidence of a TEMPLATE and never of lineage.**
+
+### 🟢 Staleness, measured, because it decides buy-versus-build
+
+🔴 The field-trialled corpus is FROZEN: the entire `XPRIZE/GLEXP-*` tree unpushed since `2019`,
+`Antura_arabic` since `2022-03-09`, `gdl-frontend` since `2022-12-22`. 🟢 The pipeline beneath it is
+ALIVE: `BloomDesktop` and `libpalaso` pushed `2026-11-15`, `appbuilder-portal` `2026-11-14`,
+`Tangerine` `2026-11-12`, `bloom-player` `2026-11-12`, `studio` `2026-11-09`, `ricecooker`
+`2026-11-02`. 🔵 **Filed as `T108` with the engagement rule it produces: INHERIT the content and
+measurement pipelines, FORK the practice apps — the frozen apps are what the RCT evidence attaches
+to, and a seven-year-old Android codebase is a liability to adopt and an asset to read.**
+
+### 🔴 `gate-enumeration` is red at `HEAD`, and `7` of its `12` refuted lines name addresses on THESE pages
+
+Byte-read `2026-11-15`: `Kosudo/nextSIS` ships `license.txt` (**`39,890 B`**, GPL-3.0) and
+`frappe/lms` ships `license.txt` (**`33,893 B`**, AGPL-3.0) — **two genuine false-absence claims on
+this page.** `foradian/fedena` and `projectfedena/fedena` ship a `NOTICE` (`679 B` / `680 B`)
+DECLARING Apache-2.0 without shipping its text — POINTER, not payload. `LearnPress/learnpress`,
+`formalms/formalms` and `DMontgomery40/mcp-canvas-lms` are **the enumerator over-refuting** on a
+manifest field, a vendored subtree and a dangling manifest pointer respectively. 🔵 **These pages are
+APPEND-ONLY and were NOT edited; the correction is published here, in the newest section.**
+
 ## `2026-11-15` (thirty-fifth pass, `p830`) — **`4` foundation rows and `3` vertical platforms: the ASSET layer under the SEN tier, where the licences are older and stranger than the agents'**
 
 🟢 **Foundations `149` → `153`. Verticals `132` → `135`. Every licence byte-read on

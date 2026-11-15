@@ -6,6 +6,29 @@ updated: 2026-11-15
 
 # Education vertical platforms — real systems to customize AI on top of
 
+## 🟢 The FOUNDATIONAL-MEASUREMENT tier — **the instrument the early-grade evidence is actually collected on** (new, thirty-sixth pass `p831`) (5 rows)
+
+🔴 **The gap this tier closes is the oldest kind in this base: a name repeated and never shelved.**
+`Tangerine-Community/Tangerine` is named `6` times in `repos/trending.md` across `35` passes. It
+was never filed anywhere. It is the platform EGRA and EGMA — the Early Grade Reading and Early
+Grade Mathematics Assessments, the two instruments every ministry and every donor in
+`intel/market.md` reports against — are administered on, it works **offline by design**, and it was
+pushed `2026-11-12`.
+
+🔵 **Why these five are here and not on `agents/top.md`: every one is copyleft.** 🟢 **That is the
+tier's defining fact, and it inverts the usual posture.** The child-facing PRACTICE layer
+(`agents/top.md`, `p831`) is Apache-2.0 and BSD-2-Clause throughout; the MEASUREMENT layer is
+GPL-3.0, AGPL-3.0 and MPL-2.0 throughout. 🔴 **A studio can fork the game. It cannot quietly fork
+the gradebook.**
+
+| Platform | What institutions run it | Agent surface added this pass | License | Risk posture |
+|---|---|---|---|---|
+| **Tangerine** — https://github.com/Tangerine-Community/Tangerine | Ministries, USAID/FCDO-funded programmes and research teams running **EGRA / EGMA** and other early-grade assessments in low-resource settings; offline-first on shared Android tablets | 🟢 **`119★`, pushed `2026-11-12` — the live instrument of the whole foundational tier.** An AI surface attaches at the SCORING-AID boundary (transcribing an oral reading fluency recording, flagging an enumerator's inconsistent entries) and must stop short of the score itself | 🔴 **`GPL-3.0` — byte-read `LICENSE.txt`, `35,147 B`, `sha256:8ceb4b9ee5ad…`** | 🔴 **Strong copyleft on a SERVER-SIDE platform.** Modifications that are distributed must be published under GPL-3.0. 🟢 **Deploy-and-configure is clean; a forked, redistributed Tangerine is not.** 🔴 **And the sharper constraint is not the licence**: under the EU AI Act Annex III point `3`, assessing learning outcomes is high-risk by construction, so an engagement builds the TRANSCRIPTION and leaves the SCORE to the instrument |
+| **tangy-form** — https://github.com/Tangerine-Community/tangy-form | The form runtime inside every Tangerine deployment — the component an integrator actually touches | 🟢 **`16★`, pushed `2026-11-10`.** Web-component form engine with offline storage; the natural insertion point for an authoring assistant that DRAFTS an assessment form for human approval | 🔴 **`GPL-3.0` — byte-read `LICENSE.txt`, `35,147 B`, `sha256:8ceb4b9ee5ad…`** | 🔴 Same posture as its parent, byte-identical grant. 🔵 **Filed separately because it is separable**: a programme that wants Tangerine's form model without Tangerine's server takes this and inherits the same obligation |
+| **Chimple (bahama)** — https://github.com/chimple/bahama | The current Chimple Learning App — the maintained successor to the `2019` Apache-2.0 XPRIZE build shelved in `agents/top.md` | 🟢 **`8★`, pushed `2026-10-13`.** The live line of a field-trialled early-grade curriculum | 🟡 **`MPL-2.0` — byte-read `16,725 B`, `sha256:1f256ecad192…`** | 🟡 **Weak, FILE-LEVEL copyleft.** Modified MPL files must stay MPL and be published; new files beside them need not be. 🟢 **The most workable copyleft posture in this tier** — a studio can add proprietary modules and must publish its changes to Chimple's own files |
+| **Chimple (cuba)** — https://github.com/chimple/cuba | Chimple's current web/app delivery surface, pushed `2026-11-13` | 🟢 The newest code in the Chimple line, and the one an integration would actually meet | 🔴 **`AGPL-3.0` — byte-read `LICENSE.md`, `34,522 B`, `sha256:20b067f86de3…`** | 🔴 **Network copyleft: serving it over a network is distribution.** A hosted deployment for a client triggers the source obligation even with nothing shipped. 🔵 **This row and the one above it are the evidence for `T108`'s second half — the Chimple corpus moved Apache-2.0 → MPL-2.0 → AGPL-3.0 as it moved `2019` → `2026`** |
+| **Linguaculturalists (Phoenicia)** — https://github.com/XPRIZE/GLEXP-Team-The-Linguaculturalists | A Global Learning XPRIZE finalist stack; the mirror `mhall119/Phoenicia` carries the same lineage | 🟡 **`14★`, unpushed since `2017-04-19` — filed as an ARCHIVE, not a platform.** Its value is the curriculum model and the field data shape, not the code | 🔴 **`GPL-3.0` — byte-read `COPYING`, `35,147 B`, `sha256:8ceb4b9ee5ad…`** | 🔴 Strong copyleft, and byte-identical to Tangerine's grant — **three repositories from three unrelated publishers shipping one `sha256`, which is `T41`'s bound and not a lineage claim** |
+
 ## 🟢 The ASSISTIVE-TECHNOLOGY PLATFORM tier — **the AAC systems institutions already run** (new, thirty-fifth pass `p830`) (3 rows)
 
 🔴 **This shelf held `0` rows for assistive technology across `34` passes.** `grep -ci` for
@@ -117,7 +140,7 @@ platform.** 🟡 **Treat it as competitive intelligence that happens to be MIT-l
 | **AGENTIC STAR** (SoftBank, 🇯🇵) | 🔴 **Not institution-run — a hosted commercial agent platform**, developer docs at `developers.fd.agenticstar.tm.softbank.jp`, homepage `agenticstar.io`. 🟢 Its runtime SDKs `agenticstar-agentcore` (`1.0.3`) and `agenticstar-platform` (`3.3.0`, `80` releases) are public on PyPI and MIT by their wheel metadata | 🟢 **`74` MIT education agent templates, `54` catalogue ids `EDU-C2-004`…`EDU-C2-173`** — reference row [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent), `EDU-C2-028`, byte-read MIT (`1,074 B`, HEAD `71c442ebd88e`) | 🟢 **MIT** (templates and both SDKs, all byte- or metadata-verified) | 🟡 **Adopt the SPECS, not the runtime.** 🔴 Templates raise `PlatformRequired` at graph compile without a SoftBank deployment; all `74` are `0★`, unmaintained since October; the framework's advertised source repo has **zero commits** (`T89`); hard `==` pins on `langgraph`/`langchain`/`fastapi`. 🟢 **Tests run without the platform — harvest per `P61`** |
 | **AgentCore graph scaffold** (the catalogue's shared architecture) | 🔵 Not a product — the uniform structure under all `74` templates: `config/agent.yaml` manifest (`required_trust_level`, declared secrets), `src/graph/`, `src/nodes/`, `src/schemas/state.py`, `docs/02_design.md`, `docs/03_test_spec.md`, `tests/proof_of_boundary/` | 🟢 Domain nodes differ completely between ids — byte-compared across three repositories this pass: `iep_section_generator`/`regulatory_compliance` vs `affected_material_analysis`/`stakeholder_mapping` vs `bloom_level`/`difficulty_score`. Reference row [`haidang024/agentic-star-education-curriculum-change-impact-briefing-agent`](https://github.com/haidang024/agentic-star-education-curriculum-change-impact-briefing-agent) (`EDU-C2-046`, `45` files) | 🟢 **MIT** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ae3eea9ac056`) | 🟢 **This is the reusable asset.** 🔵 One scaffold, `54` real domain implementations — so a studio gets a uniform, inspectable architecture across `54` education workflows instead of `54` unrelated codebases. 🔴 The scaffold's base class ships only in the binary wheel; re-implement on LangGraph (now on `repos/foundations.md`) |
 
-## Education vertical platforms — 135 rows
+## Education vertical platforms — 140 rows
 
 ### Filed by `p828` (2026-11-15) — `1` row, and it is the only PERMISSIVE LMS on this shelf
 

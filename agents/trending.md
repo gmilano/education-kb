@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirty-sixth pass, `p831`) — **the FOUNDATIONAL-LEARNING tier, found by searching the FUNDING PROGRAMME's name; and the pass that repaired this base's own red gate instead of committing over it**
+
+🟢 **`15` build-safe agent rows added (`355` → `370`), `15` foundation rows (`153` → `168`), `5`
+vertical platforms (`135` → `140`), `3` trends (`T108`–`T110`), `1` recipe (`P71`), `5` regional
+market blocks, `4` rejections. Every licence BYTE-READ on `2026-11-15`. Two instruments repaired,
+one blocking gate taken RED → GREEN, and a second red found behind it.**
+
+### What moved
+
+🟢 **Both research channels LIVE and bidirectionally controlled this pass**, re-run before anything
+was filed: free-text `gh api search/repositories` (`moodle plugin ai stars:>50` → `total_count=1`;
+`zzqqwwxyz9notarealthing stars:>5` → `0`) and `raw.githubusercontent.com` byte-read
+(`openedx/edx-platform` `LICENSE` → `200`, `35,136 B`; `zzqqww/not-a-real-repo-xyz9` → `404`). 🔴
+`repo:OWNER/NAME` and `gh api repos/{owner}/{repo}` remain DEAD (`422`/`403` for live and invented
+alike) exactly as `p830` recorded; `curl -sI` was not used as an oracle (`T923`/`T970`).
+
+🔴 **The mandated star-ranked battery nilled a `42`nd consecutive time** — DeepTutor, OpenEduCat,
+OpenHands, Langflow, `microsoft/ai-agents-for-beginners`, all already adjudicated here, plus two
+undescribed Trendshift entries with no licence (`geekjourneyx/interactive-learning`,
+`SirhanMacx/Claw-ED`). 🟢 **What produced supply instead was the name of the FUNDING PROGRAMME**:
+`Global Learning XPRIZE` and `EduApp4Syria` returned an entire field-trialled corpus under two
+GitHub organisations that `42` sector sweeps never touched. 🔵 **`T102`'s rule extended: search the
+statute, and where there is no statute search the PRIZE — a competition publishes its finalists'
+source as a condition of entry.**
+
+### The absence that organised the pass, measured before anything was filed
+
+`grep -ric` over the six curated pages: `literacy` **`132`**, `STEM` **`592`**, `credential`
+**`196`**, `xAPI` **`155`**, `proctor` **`72`** — against **`numeracy 0`**, **`phonics 0`**,
+**`preschool 0`**, **`kindergarten 0`**, **`early years 0`**, **`decoding 0`**. 🔴 **Thirty-five
+passes and not one row for the years in which a child learns to read and count at all.**
+
+### New agent rows this pass — the practice layer
+
+🟢 `vgwb/Antura` **BSD-2-Clause** `2,002 B` `128★` EMEA · `vgwb/Antura_arabic` **BSD-2-Clause**
+`1,916 B` `60★` EMEA · `XPRIZE/GLEXP-Team-KitkitSchool` **Apache-2.0** `11,340 B` `51★` EMEA ·
+`XPRIZE/GLEXP-Team-onebillion` **Apache-2.0** `11,357 B` `34★` EMEA · `chimple/maui` **Apache-2.0**
+`29★` · `chimple/tahiti` **Apache-2.0** `17★` · `XPRIZE/GLEXP-Team-CCI` **Apache-2.0** `11,372 B`
+`8★` EMEA · `XPRIZE/GLEXP-Team-Chimple-goa` **Apache-2.0** `8★` · `curiouslearning/FeedTheMonster`
+**BSD-2-Clause** `1,702 B` `7★` EMEA · `curiouslearning/FeedTheMonsterJS` **MIT** `1,073 B` `5★`
+EMEA · `chimple/jamaica` **Apache-2.0** `11,323 B` `5★` · `XPRIZE/GLEXP-Team-Chimple-maui`
+**Apache-2.0** `4★` · `curiouslearning/CuriousReaderRCC` **MIT** `1,073 B` `4★` ·
+`curiouslearning/CRContainer-Hindi` **MIT** `1,073 B` `2★` APAC ·
+`XPRIZE/GLEXP-Team-onebillion-PhraseAnal` **Apache-2.0** `0★` EMEA.
+
+🔴 **`4` rejections**: `XPRIZE/GLEXP-Team-RoboTutor-RoboTutor` (`14★`, Carnegie Mellon — **no grant
+found at `31` paths on either branch; recorded UNRESOLVED, not ungranted**),
+`Tangerine-Community/Tangerine` (`119★`, GPL-3.0 → verticals),
+`XPRIZE/GLEXP-Team-The-Linguaculturalists` (GPL-3.0 → verticals), `chimple/cuba` (AGPL-3.0).
+
+### 🔴 The index disagrees with the bytes on this tier's traction leader
+
+`gh api` reports **`NOASSERTION`** for `vgwb/Antura` (`128★`), `vgwb/Antura_arabic` (`60★`),
+`vgwb/Antura_assets` and `curiouslearning/FeedTheMonster` — and **all four are clean byte-read
+permissive grants** (three BSD-2-Clause, one CC-BY-4.0). 🔵 **Filed as `T109`, as a SUPPLY trend
+rather than a tooling note: the highest-traction repository in an entire tier reads as ungranted to
+anyone filtering on the index field, which is what a sector sweep does.** 🟢 **And one project ships
+THREE grants at three permissions — BSD-2-Clause code, CC-BY-4.0 art (attribution on every
+derivative), CC0-1.0 language data — so reading only the root `LICENSE.md` ships a client build
+whose ART is unattributed.**
+
+### 🟢 Instrument work: two repairs, one gate RED → GREEN, and a second red found behind it
+
+🔴 **`p830` graded `p773/grantprobe.sh` `CAPTURED-LIVE` and left the repair to its successor. Done.**
+Old probe against repaired probe on the same `8` addresses: **`7` of `7` resolvable addresses were
+short by exactly `1` byte and `7` of `7` `sha256` values were unreproducible from the file they
+named.** 🟢 **`p773/probe.sh` repaired too — a genuine `CAPTURED-LIVE` the census graded `BODY-ONLY`
+because the body reached the measurement through a SECOND variable, which is the lower bound the
+census documents and had never demonstrated.** 🟢 **And `D9`'s case-aware filename list, written into
+`grantprobe.sh` at `p773` and never backported to its sibling, backported — it had made
+`Kosudo/nextSIS` (GPL-3.0, `39,890 B`) and `frappe/lms` (AGPL-3.0, `33,893 B`) read as ungranted.**
+
+🔴 **`gate-offline` green revealed `gate-enumeration` red — `REFUTED=12`, not in `DECLARED_RED`,
+blocking, and invisible because the suite fails fast. 🔵 So the suite was MEASURED instead of
+assumed: `make -k` on a pristine `git archive HEAD` export reports `89` passing checks and `18` RED
+BLOCKING GATES, none of them in `DECLARED_RED`. `p831` leaves `17` — `gate-offline` RED → GREEN,
+zero regressions (`T110`).** All `12` lines resolve to `7` addresses, each
+byte-read today: **`2` are genuine false-absence claims** (`Kosudo/nextSIS`, `frappe/lms`), **`2` are
+`NOTICE`-only Apache declarations** (`foradian/fedena` `679 B`, `projectfedena/fedena` `680 B` —
+POINTER, not payload), and **`3` are the enumerator OVER-REFUTING** (`LearnPress/learnpress` cites a
+manifest field; `formalms/formalms` cites VENDORED jQuery and swfheader subtree licences;
+`DMontgomery40/mcp-canvas-lms` cites a `package.json` naming a `LICENSE` that is not in the tree).
+🔵 **Those `12` lines are in APPEND-ONLY pages and were NOT edited — the correction is published in
+the newest section, which is what append-only means.** 🟢 **`ACTION p831-A`** registered: teach the
+enumerator the `GRANT` / `POINTER` / `VENDORED-SUBTREE` distinction it already owns elsewhere.
+🟢 **`ACTION p831-B`** registered: give `commit-gates` a run-all-then-report mode, because a
+fail-fast suite's red count is a floor that reads like a ceiling (`T110`).
+
+🟢 **Gate-confirmed after every insertion**: `python3 ingest/derive-counts.py` →
+agents `370/370`, foundations `168/168`, verticals `140/140`, trends `110/110`, recipes `71/71`,
+`ragged=0 nolink=0`. `p253-captured-body-census` `31/31`, `CAPTURED-LIVE = 0`.
+
 ## `2026-11-15` (thirty-fifth pass, `p830`) — **the SEN / inclusive-learner tier, found by the name of the NATIONAL SIGN LANGUAGE after the identity term led to the wrong market**
 
 🟢 **`20` build-safe agent rows added (`335` → `355`), `4` foundation rows (`149` → `153`), `3`

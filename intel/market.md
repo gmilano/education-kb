@@ -6,6 +6,42 @@ updated: 2026-11-15
 
 # Education AI — market map and opportunities by region
 
+🟢 **Thirty-sixth pass (`p831`, 2026-11-15): `5` `#### Update` blocks, one per region, opening the
+FOUNDATIONAL-LEARNING segment — early-grade literacy and numeracy, ages `5`-`9` — in this file for
+the first time.** 🔴 **Before this pass the file held `0` occurrences of `numeracy`, `phonics`,
+`preschool`, `kindergarten` or `early years`, across `35` passes that cited the World Bank, UNICEF
+and national ministries repeatedly.**
+
+🔴 **The prescribed derivation and the published figure DISAGREE, and the cause is in this file's own
+headings.** `p830` prescribed the walk in terms — *"track the last `^### ` heading that is one of the
+five region names, and count `^#### Update` lines under it"* — and published `North America 31`,
+`EMEA 31`, `APAC 31`, `LATAM 32`, `Global 24`, `149`. 🔵 **Run literally on this file's bytes after
+this pass's five insertions, that walk returns `North America 32`, `EMEA 32`, `APAC 32`, **`LATAM 15`**,
+`Global 25` — `136`.** 🟢 **The `LATAM` cell is the whole discrepancy: the section contains a
+NON-REGION `### ` heading (`### 🟢 ACTION p816-F's declared blank — country-level AI-in-education
+regulation, ANSWERED with named instruments`), and a walk that resets on any `### ` stops counting
+there.** 🟢 **A walk that changes region only on a REGION heading returns `LATAM 33` and `154` in
+total — which is `p830`'s `149` plus this pass's `5`, so that is the rule `p830` actually ran and did
+not write down.**
+
+🟢 **The figure of record is therefore: North America `32`, EMEA `32`, APAC `32`, LATAM `33`,
+Global `25` — `154`.** 🔵 **Corrected derivation, so the next pass can repeat it rather than trust
+it: walk the file and change the current region ONLY when a `^### ` heading exactly equals one of the
+five region names; leave the current region unchanged on any other `^### ` heading; count
+`^#### Update` lines under whichever region is current.** 🔴 **This is the same defect class as the
+`114`-versus-`144` correction below it — a figure derived once by a procedure nobody re-ran — except
+that this time the PROCEDURE was the thing that was wrong, not the number.**
+
+🔵 **Regional balance this pass, stated because an unplaced finding is worth less than a placed one:**
+every region received a block, and the placements DISAGREE with one another in a way worth reading —
+🟢 **EMEA is the SOURCE of this tier** (the grant bytes themselves name `TH Köln`, Tanzania and
+`EduApp4Syria`), 🟢 **APAC is the only region with a dated national PROGRAMME** (`NIPUN Bharat`,
+Grade-`3` mastery by `2026-27`), 🟡 **North America is the EVIDENCE buyer rather than the deployment
+buyer** (`45` per cent of most-used tools meet an ESSA evidence tier), and 🔴 **LATAM carries the
+largest measured deficit in the file — learning poverty up from `52` to `79` per cent through the
+pandemic — against `0` rows of placed supply, declared here as an informed gap rather than left as
+silence.**
+
 🟢 **Thirty-fifth pass (`p830`, 2026-11-15): `5` `#### Update` blocks, one per region, opening the
 SEN / inclusive-learner segment in this file for the first time.** Before this pass the file held
 **`0`** occurrences of `learning disabilit*`, `neurodivergen*`, `occupational therap*` or
@@ -131,6 +167,38 @@ across EMEA.
 ## Opportunities by region
 
 ### North America
+
+#### Update 2026-11-15 (thirty-sixth pass, `p831`) — North America is not the deployment buyer for foundational learning; it is the EVIDENCE buyer, and that is a different sale
+
+🔵 **This file has `32` `#### Update` blocks under this heading and none of them concerned a child
+under nine.** The foundational tier entering this base today (`agents/top.md`, `p831`) is built for
+Tanzania, Syria, India and Brazil — not for this region. 🟢 **The North American opportunity is
+therefore the one thing the tier has that nothing else in this base has: an EVIDENCE TRAIL.**
+
+🔵 **The dated instruments (all `CITED, NOT READ` from WebSearch summaries, `2026-11-15`):**
+
+- 🔴 **`45%`** of the most-used education tools have published research meeting an **ESSA evidence
+  tier** — a figure reported alongside a market shift *"from rising revenue and falling investment,
+  which favors products that can prove results."*
+- 🟢 The US Department of Education **finalised an AI-in-Education discretionary-grant priority**
+  (AI literacy, personalized learning, educator professional development), with **first competitions
+  expected in the `2026-27` cycle**; `$169M` in **FIPSE** awards include responsible-AI-use support.
+- 🟡 Policy is guidance, not hard rules: **at least `15` states** have introduced or passed
+  AI-in-education legislation and the PIE Network tracked **nearly `100` state bills** this year;
+  **Illinois** must publish district guidance by **`2026-07-01`**, **Ohio** has a **July `2026`**
+  mandate districts are adopting policy ahead of, **Virginia S.B. `394`** directs teacher-training
+  guidance. 🔴 **`4` in `5` students use AI for schoolwork while roughly half their schools have no
+  policy at all, and only `6%` of teachers call their school's AI policy clear** (Stanford AI Index
+  `2026`).
+
+🟢 **The opportunity, stated as a sale rather than a theme.** `XPRIZE/GLEXP-Team-onebillion` and
+`XPRIZE/GLEXP-Team-KitkitSchool` (Apache-2.0, byte-read `2026-11-15`) are the **only assets in this
+entire base with a randomised field trial behind them**, and `XPRIZE/glexp-data-standardization`
+(Apache-2.0) is a published, already-field-tested telemetry schema for unsupervised child tablet
+use. 🔵 **In a market that has just started paying for proof, a bid that arrives with an RCT-backed
+curriculum sequence and a pre-existing measurement schema is answering the `45%` number directly.**
+🔴 **What is NOT the sale here: deploying the apps. They have not been pushed since `2019` and they
+were built for a device and a connectivity profile this region does not have.**
 
 #### Update 2026-11-15 (thirty-fifth pass, `p830`) — the SEN segment enters this file, and in North America it is the one place where a DEADLINE, not a strategy, is the buyer
 
@@ -1356,6 +1424,37 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-15 (thirty-sixth pass, `p831`) — EMEA BUILT this tier, and for once the region's supply problem is the opposite of its usual one
+
+🟢 **Reverse of `p830`.** Yesterday's SEN pass recorded EMEA as having *"the strongest SEN LAW and
+the weakest SEN SUPPLY"*. 🟢 **In the foundational-literacy tier EMEA is the SOURCE**, and the
+evidence is in the grant bytes rather than in a roundup:
+
+| Asset | Grant, byte-read `2026-11-15` | The EMEA fact inside it |
+|---|---|---|
+| [`vgwb/Antura`](https://github.com/vgwb/Antura) `128★` | 🟢 BSD-2-Clause, `2,002 B`, `sha256:34b0a48fb2d0…` | 🟢 Holder line reads **`TH Köln / Cologne Game Lab`** — a German public university, a jurisdiction inside the grant itself |
+| [`vgwb/Antura_arabic`](https://github.com/vgwb/Antura_arabic) `60★` | 🟢 BSD-2-Clause, `1,916 B` | 🟢 Winner of **`EduApp4Syria`**, a Norwegian-funded international initiative |
+| [`XPRIZE/GLEXP-Team-onebillion`](https://github.com/XPRIZE/GLEXP-Team-onebillion) `34★` | 🟢 Apache-2.0, `11,357 B` | 🟢 README: *"the onecourse material as children in **Tanzania** would experience it"* |
+| [`XPRIZE/GLEXP-Team-KitkitSchool`](https://github.com/XPRIZE/GLEXP-Team-KitkitSchool) `51★` | 🟢 Apache-2.0, `11,340 B` | 🟢 Swahili curriculum; the `15`-month field trial was Tanzanian |
+| [`curiouslearning/FeedTheMonster`](https://github.com/curiouslearning/FeedTheMonster) `7★` | 🟢 BSD-2-Clause, `1,702 B` | 🟢 Built for Syrian refugee children; the live web rebuild `FeedTheMonsterJS` (MIT) was pushed `2026-09-03` |
+
+🔵 **`T822`'s standing caveat holds and is restated rather than quietly dropped: the research
+channel's "EMEA" is the EU, and this pass's EMEA SUPPLY is again almost entirely African and Middle
+Eastern.** 🔴 **A regional sweep that reads only EU-sourced coverage will report this tier as empty
+in EMEA. It is the opposite of empty — it is where the tier came from.**
+
+🟡 **The EU-side regulatory picture, `CITED, NOT READ` (`2026-11-15`):** the **EU AI Act** treats
+education as high-risk; a **May `2026` political deal on the Digital Omnibus** is reported to move
+the high-risk education obligations to **`2027-12-02`** from August `2026` — **unconfirmed against a
+Commission source and flagged as such**. **Eurydice's *Digital education at school in Europe 2026***
+and the **OECD Digital Education Outlook 2026** are the two reference documents; **Futuresource**
+puts teacher AI use at **`67%`** and a six-country **Epson** survey (UK, FR, IT, DE, ES, PL) reports
+**`80%`** of teachers worried AI is arriving faster than schools can manage.
+
+🟢 **The opportunity: EMEA is where the tier is both the source and the buyer.** The buyer is a
+ministry or a donor programme, procurement is public tender, and under Art. `27` the FRIA duty falls
+on the deployer because the deployer is public. 🔵 **`P71` is written against exactly this shape.**
 
 #### Update 2026-11-15 (thirty-fifth pass, `p830`) — EMEA has the strongest SEN LAW and the weakest SEN SUPPLY, and the gap is measured rather than asserted
 
@@ -2623,6 +2722,38 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-15 (thirty-sixth pass, `p831`) — APAC has the only NAMED NATIONAL PROGRAMME in this tier with a date on it, and the date is next year
+
+🟢 **India's `NIPUN Bharat` mission** — launched July `2021` under Samagra Shiksha — targets
+universal foundational literacy and numeracy with **Grade-`3` mastery by `2026-27`** (a target
+revised from `2025`), with state-wise allocations published across `2023-24` to `2026-27`
+(`CITED, NOT READ`, `2026-11-15`). 🟢 **The Ministry of Education's `Bharat Bodhan` AI Conclave
+(February `2026`) put AI for foundational literacy and numeracy, teacher effectiveness and
+multilingual inclusion on the agenda explicitly**, and **CBSE began rolling out a computational
+thinking and AI curriculum for Classes `3`–`8` on `2026-04-01`**.
+
+🔴 **This is the sharpest buyer signal in the whole tier and it is the one a sector sweep misses
+entirely.** `42` consecutive star-ranked `AI education` sweeps returned nothing from this corpus;
+the programme name returns a dated national mission with a budget line and a deadline inside the
+next twelve months.
+
+🟢 **The supply is already placed here.**
+[`curiouslearning/CRContainer-Hindi`](https://github.com/curiouslearning/CRContainer-Hindi) 🟢 **MIT,
+byte-read `1,073 B`, `sha256:9baf70ec9a4a…`, pushed `2026-03-24`** — a standalone per-language
+reading container for **Hindi**, region placed on the language the repository itself ships. 🔵 **It
+is the existence proof for `P71`'s node `8`: the per-language container pattern is live in this
+region, done by hand, and `sillsdev/appbuilder-portal` (MIT) is the factory that industrialises it.**
+
+🟡 **Regional context, `CITED, NOT READ`:** uptake of advanced AI across APAC is uneven with
+connectivity named as a probable barrier (Times Higher Education, April `2026`); virtual-tutor
+adoption is reported at **`30%`** across the cohort; the **Ipsos Education Monitor 2026** finds
+weaker support for banning AI in schools across Asian markets than elsewhere; the **World Bank's
+Global EdTech Policy Academy on AI** runs in **Seoul, `2026-08-31` to `09-04`**; the **EdTech Hub**
+has launched AI-in-education briefs covering Southeast Asia. 🔴 **A country-by-country APAC
+regulatory map for foundational learning was searched for and NOT found — no ministry-level primary
+source surfaced for China, Australia, Singapore or Japan on this specific question. Declared as a
+gap, not papered over.**
+
 #### Update 2026-11-15 (thirty-fifth pass, `p830`) — APAC is the BEST-SUPPLIED region in the SEN tier, and it is the first tier in `35` passes where that is true
 
 🟢 **The finding, measured on the free-text search channel this pass.** `"Indian Sign Language"` as
@@ -3866,6 +3997,40 @@ procurement-led" corner of that matrix, which `P5` did not previously have a nam
 example of.
 
 ### LATAM
+
+#### Update 2026-11-15 (thirty-sixth pass, `p831`) — LATAM has the largest measured foundational DEFICIT of any region in this file, and the least supply placed against it
+
+🔴 **The number that frames the region, `CITED, NOT READ` (`2026-11-15`): learning poverty in Latin
+America and the Caribbean is estimated to have risen from `52%` to `79%` during the pandemic — the
+largest increase of any region alongside South Asia, driven by the longest school closures.** The
+global headline is that **`70%` of children in low- and middle-income countries cannot read and
+understand an age-appropriate passage by age `10`** (World Bank brief, January `2026`; the figure is
+unchanged from the `2022` update). A World Bank regional update (October `2026`) names **persistent
+foundational learning gaps, as shown in `PISA 2025`, as holding back returns to education** in LATAM.
+
+🔴 **And the supply measured against it, this pass: `0` rows.** Not one repository in the entire
+foundational-literacy corpus byte-read today places to LATAM. The corpus is Swahili, Arabic, Hindi
+and English. 🔵 **This is an informed gap and it is recorded as one rather than left as silence:
+`grep -ric` on the Portuguese and Spanish early-reading vocabulary returns nothing comparable to the
+Swahili/Arabic corpus, and the LIBRAS and LSM corpora `p830` measured are sign-language assets, not
+early-reading ones.**
+
+🟢 **What DOES exist here is institutional capacity, and it is the route in.**
+**`Fundación Ceibal` (Uruguay) and the `EdTech Hub` announced a partnership in September `2026`** to
+help education systems across Latin America and the Caribbean respond to AI; the **IDB** has
+documented **`193`** real AI initiatives across the region; **UNESCO IESALC with UNU-IAS** published
+a September `2026` working paper mapping AI across LAC universities. 🟡 **Adoption is high and
+governance is not**: the Digital Education Council's `2026` LATAM survey (with Tecnológico de
+Monterrey, **`30,000`+ responses, `29` institutions**) reports **`92%` of students and `79%` of
+faculty** actively using AI while **only `30%`** believe their institution has responded effectively;
+a `2025` UNESCO survey of `200` institutions in `19` countries found the adoption-versus-governance
+gap particularly pronounced here.
+
+🟢 **The opportunity, and it is a BUILD rather than an adoption.** `P71`'s pipeline is
+language-agnostic by construction — node `3` is a lexicon, node `7` is a language pack, both granted
+separately from the runtime. 🔵 **Producing the first Spanish and Brazilian-Portuguese decodable-text
+corpora on `BloomDesktop` + `libpalaso` (both MIT, both pushed `2026-11-15`) is the piece of this
+tier that does not exist anywhere and that the region's own institutions are funded to want.**
 
 #### Update 2026-11-15 (thirty-fifth pass, `p830`) — LATAM holds the region's only large permissive SEN corpus (LIBRAS) and, beside it, a completely UNGRANTED Spanish-language AAC tier
 
@@ -5254,6 +5419,35 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-15 (thirty-sixth pass, `p831`) — the market numbers this base keeps citing are for a segment that excludes the children this pass is about
+
+🟡 **The AI-in-education headline figures, restated with their spread rather than averaged
+(`CITED, NOT READ`, `2026-11-15`):** `$10.6B` in `2026` → `$42.48B` by `2030` at a `41.5%` CAGR in
+one source; `$9.58B` growing at `>30%` a year in another; a broader EdTech figure of `$238.4B` for
+`2026`. 🔴 **The spread is `>10%` on the base year alone and this base has cited the `$10.6B`
+→ `$42.48B` pair for `35` passes without restating the disagreement. It is restated here.**
+
+🔴 **The structural point is that none of those figures is measuring this pass's tier.** They
+measure institutional software budgets — LMS, tutoring, assessment, credentialling — in markets
+where institutions have budgets. **Foundational literacy for a `6`-year-old in a village with one
+shared tablet is funded by donors and ministries, not by a software line item**, which is why the
+supply in that tier arrived through prize competitions (`Global Learning XPRIZE`, `EduApp4Syria`) and
+stopped when the prizes did (`T108`).
+
+🟢 **Two global reference documents are worth naming because every regional block above cites
+something downstream of them:** the **OECD Digital Education Outlook 2026** (whose finding, as
+reported, is that AI helps learning *only when pedagogy stays in control*) and the World Bank's
+**learning-poverty** series, whose `70%` headline is the denominator for this entire tier.
+
+🟢 **And one global SUPPLY fact that is not a market number.** The maintained layer of this tier is
+institutional and it is alive: `BloomBooks/BloomDesktop` and `sillsdev/libpalaso` pushed
+`2026-11-15`, `sillsdev/appbuilder-portal` `2026-11-14`, `Tangerine-Community/Tangerine`
+`2026-11-12`, `learningequality/studio` `2026-11-09`. 🔵 **Four organisations — SIL, Learning
+Equality, the Tangerine community, Curious Learning — are maintaining the content and measurement
+infrastructure for a market with no software budget, under MIT and Apache-2.0. That is the single
+most reusable fact in this file for a foundational-learning bid: the pipeline is free, maintained,
+and someone else's responsibility to keep alive.**
 
 #### Update 2026-11-15 (thirty-fifth pass, `p830`) — the SEN tier is ungranted at scale, and the identity vocabulary points at the wrong market entirely
 
