@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
+**Sixty-three** concrete recipes — derived recipes: **63**. 🟢 **Thirtieth pass (`p825`): `P61`–`P63` added** — the catalogue harvest, which takes `T86`'s `54` MIT education workflows as a REQUIREMENTS and TEST-SPEC corpus and re-implements them on the LangGraph these shelves already hold, instead of deploying `0★` unmaintained templates (`P61`, APAC origin, Global application); the platform-brand discovery protocol that makes `T86`'s catalogue findable by instrument rather than by luck, closing the third and last indexing axis after `T82`'s system-of-record and `T84`/`T87`'s language (`P62`, Global); and the special-education evidence pipeline assembled from `EDU-C2-028`, `EDU-C2-173` and `EDU-C2-098` with the decision boundary drawn before the first node (`P63`, EMEA anchor under the EU AI Act Annex III education classification, portable to any jurisdiction with a statutory accommodation process). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=63 claimed=63 · GREEN`.** All components byte-read on `2026-11-15`.
+
 **Sixty** concrete recipes — derived recipes: **60**. 🟢 **Twenty-ninth pass (`p824`): `P58`–`P60` added** — the ASSEMBLED open proctoring stack with the EU AI Act Annex III boundary drawn before the first line of code (`P58`, EMEA anchor with an APAC port, and the recipe `T83` makes possible by correcting `p815`'s nil); the registry-first LATAM discovery protocol that turns `T82`'s `709`-against-`4` into a repeatable sourcing step for an engagement (`P59`, LATAM anchor, portable to any market where the institution rather than the vendor owns the system of record); and the teacher-approval publication gate, which is EU AI Act Article 14 human oversight shipped as a product default rather than as a policy document (`P60`, Global, with a named reference implementation). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=60 claimed=60 · GREEN`.**
 
 **Fifty-seven** concrete recipes — derived recipes: **57**. 🟢 **Twenty-eighth pass (`p823`): `P55`–`P57` added** — the multi-tenant campus LMS connector that turns `T77`'s `20`+ unfunded per-campus adapters into one supported product, with named reference implementations in four regions and a qualifying question whose answer is public (`P55`); the verified LMS write protocol — commit, invalidate, re-read, diff against both what changed and what must NOT have — generalised from the first write-capable LATAM agent on these shelves and portable to every LMS here (`P56`); and the two-licence pre-shelf gate that refuses a non-commercial curriculum in four `curl`s, catching `T78` in both directions (`P57`). 🟢 **Zero copyleft in all three delivered trees; the GPL-3.0 and WTFPL traps adjacent to `P55` are named, and the AGPL/NC traps are named where they sit.** 🟢 **Count gate-confirmed, not inline: `ingest/derive-counts.py` returned `derived=57 claimed=57`.** All components byte-read on `2026-11-15`.
@@ -131,6 +133,65 @@ decision instead of a constraint:
   and it is the one argument that still favours `ltijs` on a long engagement.
 
 ---
+
+## P61 — Harvest the catalogue as REQUIREMENTS, not as a codebase: `54` specified education workflows into your own LangGraph tree (APAC origin, Global application)
+
+🔴 **The mistake this recipe exists to prevent.** `T86` found `74` MIT education agents. The obvious move is to fork and deploy them. 🔴 **Do not:** all `74` are `0★`, none pushed since October, each refuses to start without a SoftBank AGENTIC STAR deployment (`PlatformRequired` at graph compile), and the framework under them is a single-release binary wheel whose source repository has zero commits (`T89`).
+
+🟢 **What they are actually worth, and it is more than the code.** Every repository ships, under MIT:
+
+| Asset | File | Why it is the valuable part |
+|---|---|---|
+| A specification | `docs/02_design.md` (`7`–`16 KB`) | A named education workflow decomposed into graph nodes by someone who had the domain in front of them |
+| 🟢 A test specification | `docs/03_test_spec.md` (`5`–`8 KB`) | **The acceptance criteria, written before you own the problem** |
+| 🟢 Boundary proofs | `tests/proof_of_boundary/` | `test_import_isolation`, `test_pb_invoke_order`, `test_state_safety`, `test_pb7_hitl_interrupt_propagation`, `test_pb_s1_s2_gates`, `test_pb_s3_s4_gates` |
+| A deployment contract | `config/agent.yaml` | Declares `required_trust_level`, every secret used, and the generation mode |
+| A catalogue id | `EDU-C2-NNN` in the README `H1` | Lets you tell a client *which* of `173` numbered workflows you are quoting for |
+
+🟢 **And the READMEs state the decisive fact: `python -m pytest tests/ -v` runs WITHOUT a platform connection.** 🔵 **So the tests are executable the moment you clone, while the agent is not — which is precisely the asymmetry that makes this a spec corpus rather than a product.**
+
+**The recipe, concretely:**
+
+1. 🟢 **Enumerate.** `gh api -X GET search/repositories -f q='"agentic star" education' -f sort=updated -f per_page=100`, repeated for `university school student curriculum academic teacher exam training learning`; union and de-duplicate by `full_name`. Expect `~74`.
+2. 🟢 **Extract the id map.** `curl -sS https://raw.githubusercontent.com/<addr>/main/README.md | grep -m1 '^# '` → `EDU-C2-NNN — <Workflow name>`. This is your catalogue. Sort by id and the gaps tell you what the vendor specified but did not publish.
+3. 🟡 **Gate the licence on BYTES, per `P57` as extended by `T88`.** `curl -sS https://raw.githubusercontent.com/<addr>/main/LICENSE` → expect `~1,07x B`, title `MIT License`, and record the `sha256` — `T90` shows the hash clusters by AUTHOR, so it also gives you your counterparty list for free.
+4. 🟢 **Clone blobless and take only the four assets.** `git clone --filter=blob:none --no-checkout --depth 1 https://github.com/<addr> d && git -C d ls-tree -r HEAD`, then `git -C d show HEAD:docs/03_test_spec.md`. 🔵 **Never `pip install -e .` — that is what pulls the pinned framework in.**
+5. 🟢 **Re-implement on the stack you already hold.** The graphs are LangGraph (`langchain-ai/langgraph`, MIT, `44,985★`, now on `repos/foundations.md`). The node decomposition transfers verbatim; only `AgentBaseGraph` and the platform client are replaced.
+6. 🟢 **Keep the boundary tests.** They are MIT, framework-light, and they encode the HITL-interrupt and state-safety properties that an education deliverable has to demonstrate anyway.
+
+🔵 **What a client buys.** Not "we found some open source". **"Here are `54` specified education workflows with acceptance criteria, we have mapped your `6` against them, and the test spec predates our estimate."** 🟢 **Zero copyleft in the delivered tree: templates MIT, LangGraph MIT, LangChain MIT.**
+
+## P62 — The platform-brand discovery protocol: close the third indexing axis (Global)
+
+🟢 **`P59` enumerates SYSTEMS OF RECORD (SIGAA, SIU Guaraní, Moodle) because `T82` showed LATAM supply is named after the registry.** 🔴 **`T86` showed a second, independent naming law that `P59` does not cover: supply is also named after the PLATFORM BRAND that commissioned it — `agentic-star-*` — and `29` passes of star-ranked and pedagogy-ranked search never touched it.** This recipe closes that axis.
+
+**Run it at the start of any education engagement, in this order:**
+
+1. 🟢 **Harvest brand tokens from prose, not from your own vocabulary.** Take the `20` most recent repositories in the vertical via `sort=updated` with NO star floor (`T70`), and extract every capitalised multi-word proper noun from their descriptions and README `H1`s. 🔵 **The tell is the phrase *"built with X"* — in this catalogue, *"built with Agentic Star"* appears in all `74` descriptions and is the single highest-yield string in the entire sweep.**
+2. 🟢 **Re-query each token as a quoted phrase, crossed with the vertical's nouns.** `q='"<brand>" education'`, `"<brand>" university`, `"<brand>" school`, … 🔴 **Quote it: unquoted, `agentic star` tokenises to `agentic` + `star` and returns `2,660` unrelated repositories — this pass made that exact error first and the brand was invisible in the noise.**
+3. 🟡 **Expect `0★` and do not filter it out.** A vendor-programme cohort is published once, by developers who never promote it. 🔴 **Any star floor ≥ `1` deletes `100%` of this catalogue.**
+4. 🟢 **Look for a catalogue id in the README `H1`.** An id scheme (`EDU-C2-NNN`) means you have found a SPECIFICATION SET, not a scatter — and the id range tells you the true size against the published fraction (`54` of `173` here, `~31%`).
+5. 🟡 **Author-census it before you price it** (`T90`): `cut -d/ -f1` over the addresses. One author with `40` repositories is one person's weekend; `13` authors with `74` is a programme, and the two have different survival odds.
+6. 🔴 **Then, and only then, read a nil.** 🟢 **The rule `T87` cost this base a published error to learn: a nil is a property of the QUERY until at least two orthogonal axes — pedagogy, jurisdiction/language, system of record, platform brand — have been run.**
+
+🔵 **Portable across this estate.** The channel is `1,430` repositories across all verticals, of which `74` are education. 🟢 **Financial, healthcare, legal and retail KBs in this estate can run step `2` with their own nouns against the same brand token today.**
+
+## P63 — The special-education evidence pipeline, with the decision boundary drawn before the first node (EMEA anchor, portable)
+
+🟢 **Now buildable for the first time on these shelves, because `p825` ended the IEP nil.** Three catalogue workflows compose into the pipeline a special-education office actually runs, and each one stops short of the decision:
+
+| Stage | Component | Licence | What it does — and what it refuses |
+|---|---|---|---|
+| 1. Intake audit | [`EDU-C2-098`](https://github.com/tvcuong1802/agentic-star-learning-resource-accessibility-gap-brief-agent) | 🟢 MIT (`1,068 B`) | Finds which learning resources cannot answer an accessibility question. 🔵 Reports MISSING METADATA, never "inaccessible" |
+| 2. Package validation | [`EDU-C2-173`](https://github.com/KaitoYokomizo/agentic-star-student-accommodation-review-agent) | 🟢 MIT (`1,070 B`) | Validates the evidence in an accommodation review package. 🔴 **Explicitly pre-decision: establishes whether the package is DECIDABLE, does not grant or deny** |
+| 3. Drafting | [`EDU-C2-028`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent) | 🟢 MIT (`1,074 B`) | Drafts the four statutory IEP sections from assessment input. 🟢 Ships `regulatory_compliance_node` and `review_flag_node` as SEPARATE nodes from the generator |
+| 4. Human decision | — | — | 🔴 **Not automated. Not automatable here** |
+
+🔴 **Why the boundary is drawn at stage `4` and not negotiated afterwards.** Under the EU AI Act, education is an Annex III high-risk category, and this base carries the Omnibus date (`Regulation (EU) 2026/1744`, stand-alone Annex III duties from `2027-12-02`, `CITED, NOT READ`, now confirmed a third time at `p825`). 🟢 **An agent that DRAFTS a statutory document and an agent that DECIDES a child's entitlement are on opposite sides of that line.** 🔵 **The three components above were each written, independently, to stop on the safe side — `EDU-C2-173` says so in its own description. Build on that property rather than removing it.**
+
+**Wiring:** stages `1`–`3` are LangGraph graphs with compatible `src/schemas/state.py` shapes, so compose them as sub-graphs behind one supervisor; harvest per `P61` rather than deploying the templates. 🟡 **Add a durable audit record at every stage boundary** — `EDU-C2-028`'s `review_flag_node` emits the flag, but the pipeline must persist WHO saw it and WHEN, which is the half the templates do not ship and the half an appeal turns on (`P37`'s argument, and `p824`'s `AI-Smart-Proctoring-System` row made the same point for integrity evidence).
+
+🟢 **Where it ports.** Any jurisdiction with a statutory individualised-support process and an appeal right: 🇺🇸 IDEA/IEP (North America — note the US instrument is what `EDU-C2-028` is literally named for), 🇬🇧 EHC plans (EMEA), 🇯🇵 個別の教育支援計画 (APAC). 🔴 **LATAM: this base has found no open supply at this layer in any pass — an explicit, still-open gap, and `P62` step `2` is the first thing to run against it.**
 
 ## P58 — The assembled open proctoring stack, with the Annex III boundary drawn BEFORE the first line of code (EMEA anchor, APAC port, and the first recipe here whose main deliverable is a documented REFUSAL to build three features)
 

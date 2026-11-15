@@ -7,7 +7,28 @@ updated: 2026-11-15
 # Education vertical platforms — real systems to customize AI on top of
 
 
-## Education vertical platforms — 120 rows
+## The vendor-platform tier with an OPEN template catalogue — added `p825` (2 rows)
+
+🟢 **Thirtieth pass (`p825`, 2026-11-15): `2` rows added (`120` → `122`), and they are a platform
+SHAPE this page has not carried.** 🔵 **Every platform above is open-source software an institution
+runs. These two are the inverse: a CLOSED, hosted vendor platform whose agent templates are
+published openly under MIT — so the customisation surface is public while the runtime is not.**
+
+🔴 **Why that shape matters commercially, and why it belongs on this page rather than in
+`agents/top.md` alone.** `T86` found `74` MIT education agents under one vendor brand; `T89`
+established that the framework beneath them is MIT and installable but wheel-only with an empty
+source repository. 🟢 **The consequence for an engagement: the catalogue is a free, detailed map of
+what a well-resourced vendor believes the `173` buyable education workflows ARE — written as
+specifications with acceptance tests — and reading it costs nothing even if you never touch the
+platform.** 🟡 **Treat it as competitive intelligence that happens to be MIT-licensed, which is
+`P61`'s whole argument.**
+
+| Platform | What institutions run it | Agent surface found this pass | License | Risk posture |
+|---|---|---|---|---|
+| **AGENTIC STAR** (SoftBank, 🇯🇵) | 🔴 **Not institution-run — a hosted commercial agent platform**, developer docs at `developers.fd.agenticstar.tm.softbank.jp`, homepage `agenticstar.io`. 🟢 Its runtime SDKs `agenticstar-agentcore` (`1.0.3`) and `agenticstar-platform` (`3.3.0`, `80` releases) are public on PyPI and MIT by their wheel metadata | 🟢 **`74` MIT education agent templates, `54` catalogue ids `EDU-C2-004`…`EDU-C2-173`** — reference row [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent), `EDU-C2-028`, byte-read MIT (`1,074 B`, HEAD `71c442ebd88e`) | 🟢 **MIT** (templates and both SDKs, all byte- or metadata-verified) | 🟡 **Adopt the SPECS, not the runtime.** 🔴 Templates raise `PlatformRequired` at graph compile without a SoftBank deployment; all `74` are `0★`, unmaintained since October; the framework's advertised source repo has **zero commits** (`T89`); hard `==` pins on `langgraph`/`langchain`/`fastapi`. 🟢 **Tests run without the platform — harvest per `P61`** |
+| **AgentCore graph scaffold** (the catalogue's shared architecture) | 🔵 Not a product — the uniform structure under all `74` templates: `config/agent.yaml` manifest (`required_trust_level`, declared secrets), `src/graph/`, `src/nodes/`, `src/schemas/state.py`, `docs/02_design.md`, `docs/03_test_spec.md`, `tests/proof_of_boundary/` | 🟢 Domain nodes differ completely between ids — byte-compared across three repositories this pass: `iep_section_generator`/`regulatory_compliance` vs `affected_material_analysis`/`stakeholder_mapping` vs `bloom_level`/`difficulty_score`. Reference row [`haidang024/agentic-star-education-curriculum-change-impact-briefing-agent`](https://github.com/haidang024/agentic-star-education-curriculum-change-impact-briefing-agent) (`EDU-C2-046`, `45` files) | 🟢 **MIT** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ae3eea9ac056`) | 🟢 **This is the reusable asset.** 🔵 One scaffold, `54` real domain implementations — so a studio gets a uniform, inspectable architecture across `54` education workflows instead of `54` unrelated codebases. 🔴 The scaffold's base class ships only in the binary wheel; re-implement on LangGraph (now on `repos/foundations.md`) |
+
+## Education vertical platforms — 122 rows
 
 🟢 **Twenty-sixth pass (`p821`, 2026-11-15): `1` row added — `111` → `112`.** 🔴 **NOT gate-confirmed:
 `make hooks` was refused by the sandbox classifier for a **FOURTH** consecutive pass, so the figure

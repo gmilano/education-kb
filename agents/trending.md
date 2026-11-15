@@ -4,6 +4,106 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirtieth pass, `p825`) — **a `74`-repository MIT education catalogue that `29` passes never saw, and the retraction of this base's own Vietnam finding**
+
+🟢 **`22` build-safe agent rows added (`227` → `249`), `0` copyleft, `3` foundation rows
+(`136` → `139`), `2` platform rows (`120` → `122`), `5` trends (`T86`–`T90`), `3` recipes
+(`P61`–`P63`), and a dated block in all five regional sections of `intel/market.md`.**
+🟢 **Every count gate-confirmed: `python3 ingest/derive-counts.py` returns GREEN on all five
+shelves, for a third consecutive pass.**
+
+### The channel result, stated before the findings — and a distinction `39` previous nil notices blurred
+
+🔴 **The mandated star-ranked WebSearch battery nilled a `40`th consecutive time on its REPOSITORY
+legs.** All four global legs ran. 🔵 **Agent leg: `OpenHands`, `browser-use`, `AutoGPT`, `LangChain`,
+`Langflow`, `Hermes Agent` — the general shelf, no education-specific list, plus one directory page
+naming no repositories.** 🔵 **Trending leg: `DeepTutor`, `ChinaTextbook`, `interactive-learning`,
+`microsoft/ai-agents-for-beginners` — four for four already held.** 🔵 **ERP/SIS leg: `OpenEduCat`
+(LGPL-3.0), `openSIS Classic` (GPL-3.0), `RosarioSIS` — the copyleft platform answer this base has
+recorded since `p805`.**
+
+🟢 **But the four REGIONAL legs all produced, substantively, and that is a real asymmetry rather than
+noise: the battery's repository legs are exhausted; its market legs are not.** 🔵 **`intel/market.md`
+gained survey-backed figures this pass that this base did not previously hold — `92%` LATAM student
+engagement against `~30%` of universities with a published AI policy, `67%` EMEA teacher use against
+`80%` of EMEA teachers reporting AI is arriving faster than schools can manage, and a `45%` staff cut
+at Chegg.** 🟢 **Recording "the battery nilled" without that split has under-stated the market legs
+for `39` passes and is corrected here.**
+
+### The productive channel, and the error that nearly hid it
+
+🟢 **`search/repositories` with `sort=updated` and no star floor (`T70`) — pointed, for the first
+time, at a PLATFORM BRAND harvested from other repositories' prose rather than at a vocabulary of
+this base's own choosing.**
+
+🔴 **The first attempt failed and the failure is instructive.** `q='agentic-star'` and
+`q='agentic-star in:name'` both tokenise to `agentic` + `star` and return `~2,660` and `~1,929`
+unrelated repositories — star-ranking dashboards, Star Trek jokes, starter kits. 🟢 **Quoting it —
+`q='"agentic star" education'` — returns the catalogue immediately.** 🔵 **`P62` step `2` now carries
+that as an explicit instruction, because the unquoted form looks like a thorough search and is noise.**
+
+### What was found
+
+🟢 **`74` distinct repositories, `73` MIT and `1` unlicensed, created `2026-09-22` → `2026-10-29` by
+`13` authors, carrying catalogue ids `EDU-C2-004` … `EDU-C2-173` (`54` distinct ids observed).**
+🔴 **Collision check against all `477` addresses on these shelves: ZERO. Twenty-nine passes, none of
+them held a single row of it.**
+
+🔴 **`43` of the `74` are by 🇻🇳 Vietnamese authors — `58%`.** 🟢 **`p824` published *"Vietnam …
+exactly zero build-safe open supply … the sharpest BUILD slot"* on the strength of
+Vietnamese-language queries. `T87` retracts that: the queries were sound, the conclusion was not,
+and the corrected reading is PARTNER-or-HIRE rather than build-because-empty.**
+
+### The verification, and one hypothesis this pass got wrong and discarded
+
+🔴 **First reading, recorded because the error is the useful part:** the templates' READMEs say they
+*"do not run standalone"* and need a framework *"supplied by the hosting environment rather than
+resolved from the default package index"* — which reads as MIT code over a captive proprietary
+runtime, i.e. reject all `74`. 🟢 **Probed, it is false:** `agenticstar-agentcore` is on PyPI and MIT
+by its wheel metadata, as is `agenticstar-platform` (`80` releases). 🔵 **A pass that stopped at the
+prose would have discarded a `54`-workflow specification catalogue on a misreading.**
+
+🟡 **What IS deficient is narrower and now recorded as `T89`:** the framework is wheel-only,
+single-release, and its advertised source repository
+(`github.com/teppei-miyashita/agenticstar-agentcore`) 🔴 **returns ZERO REFS to `git ls-remote` — no
+commits at all.** 🟢 **Licence question: yes. Reviewability question: no. This base had graded `136`
+foundations rows on the first alone.**
+
+🟢 **And `T88`: PyPI's legacy `info.license` reports `None` for BOTH MIT packages, because modern
+packaging writes PEP 639 `License-Expression` instead.** 🔵 **`T52`/`T81`'s field-versus-bytes defect
+is a property of REGISTRIES, not of GitHub — a dependency scanner reading `info.license` blocks an
+MIT framework.**
+
+### Two nils ended, one shelf-wide
+
+🟢 **The IEP nil** (`q="individualized education program IEP ai"` → `1` repository, written off since
+`p805`) **ends with `EDU-C2-028`, a byte-read MIT K-12 special-education IEP section drafter.**
+🟢 **The safeguarding nil ends with `EDU-C2-050`.** 🟢 **The British Sign Language nil ends with
+`Signlytic AI` — BSL, not ASL, which is the distinction a UK engagement turns on.**
+
+### Rows added this pass — `22`, all build-safe
+
+🟢 **`17` from the catalogue (all MIT, all byte-read, all APAC):** `EDU-C2-012` curriculum-standards
+Q&A, `EDU-C2-015` parent Q&A, `EDU-C2-016` research-ethics/IRB, `EDU-C2-024` MEXT-compliant
+misconduct reports, `EDU-C2-028` IEP drafting, `EDU-C2-029` 共通テスト question classification,
+`EDU-C2-030` METI DSS L&D curriculum, `EDU-C2-042` metadata-exchange validator, `EDU-C2-046`
+curriculum-change impact, `EDU-C2-050` safeguarding, `EDU-C2-051` teacher PD evidence, `EDU-C2-053`
+meal-allergen deficiency router, `EDU-C2-056` transfer-credit equivalency, `EDU-C2-075` statistics
+comparability, `EDU-C2-085` accreditation evidence, `EDU-C2-098` accessibility-gap brief,
+`EDU-C2-173` accommodation evidence.
+🟢 **`5` independent of the catalogue:** `ReadEase` (MIT, dyslexia + gaze tracking + phonemic TTS,
+`12.5 MB`), `Signlytic AI` (MIT, BSL, EMEA), `DuoSigna` (MIT, ASL, `369 MB`), `Smart Tutor`
+(Apache-2.0, agent-native workspace with a Python SDK), `Dyslexia Detection using Games` (MIT).
+
+### Carried forward
+
+🟡 **`ACTION p825-E`:** resolve the EU AI Act Article `50` transparency date (`2026-08-02` vs
+`2026-12-02`) against the Official Journal; this base has carried the ambiguity four passes.
+🔴 **Standing gap, unchanged:** LATAM has no open supply at the special-education / accommodation
+layer in any pass. 🟢 **`P62` step `2` is the instrument to run against it next.**
+
+---
+
 ## `2026-11-15` (twenty-ninth pass, `p824`) — **two layers this base had written off, re-opened by changing the WORDS rather than the channel**
 
 🟢 **`19` build-safe agent rows added (`208` → `227`), `1` copyleft row, `6` rejections, `2`

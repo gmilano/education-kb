@@ -4,6 +4,64 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirtieth pass, `p825`) — **the graph runtime under `249` shelved agents was never on the foundations shelf, and a `74`-repository catalogue made that visible**
+
+🟢 **`3` foundation rows added (`136` → `139`) and `2` platform rows added (`120` → `122`).**
+🟢 **Gate-confirmed: `repos/foundations.md shelf: tables=21 rows=141 distinct=139 graded=139
+claimed=139 ragged=0 nolink=0 dupes=2` and `verticals/solutions.md shelf: tables=24 rows=124
+distinct=122 graded=122 claimed=122 ragged=0 nolink=0 dupes=2`.**
+
+### The omission this pass found in its own shelves
+
+🔴 **This base has shelved `249` agents across `30` passes. Almost all of them compile a LangGraph
+`StateGraph`. Neither `langgraph` nor `langchain` has ever been on `repos/foundations.md`.**
+🟢 **`T86`'s catalogue exposed it: all `74` templates pin `langgraph==1.1.10` and
+`langchain==1.2.18` in their manifests, and checking whether this base held them returned NOT HELD.**
+
+| Repo | Licence, byte-read | Stars | Why it is a FOUNDATION and not an agent |
+|---|---|---|---|
+| `langchain-ai/langgraph` | 🟢 MIT, `1,072 B`, `sha256:d9bb52f2e354…`, HEAD `08a201695378` | `44,985` | You build on it, you do not customise it — this file's own test |
+| `langchain-ai/langchain` | 🟢 MIT, `1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43` | `149,546` | Model/tool abstraction beneath the above |
+
+🔴 **A live defect in this base's own byte-read gate, found while verifying the second row:**
+`langchain`'s `LICENSE` is on **`master`**, not `main`. 🟢 **A `main`-only probe returns `404` and
+records a false `NO_LICENCE_FILE` on a `149,546★` MIT repository.** 🔵 **Any sweep that assumes the
+default branch is `main` will mis-grade the older half of the ecosystem.**
+
+### The third row is a WARNING row, and the first on this shelf graded `EMPTY`
+
+🔴 **`teppei-miyashita/agenticstar-agentcore`** — the source repository that PyPI's
+`agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository` — 🔴 **`git ls-remote`
+returns zero refs. No commits. `0 KB`. Created and last touched `2026-08-12`.**
+
+🟢 **The package itself is real and MIT** (`License-Expression: MIT`, `dist-info/licenses/LICENSE`,
+`1,078 B`, `sha256:2afbb5fc…`, holder *The AgentCore Authors*) **and installs from PyPI.**
+🔴 **It is wheel-only, single-release (`2026-09-17`), and hard-pins `langgraph==1.1.10`,
+`langchain==1.2.18`, `fastapi==0.136.0`, `pydantic==2.12.5`, `agenticstar-platform==0.5.32`.**
+🟡 **Shelved so the next pass asking *is the AGENTIC STAR stack adoptable?* finds it already
+measured: licensed yes, auditable no (`T89`).**
+
+### Platform tier — `2` rows, a shape this page had not carried
+
+🟢 **AGENTIC STAR (SoftBank, 🇯🇵)** and **the AgentCore graph scaffold** go to
+`verticals/solutions.md` as the inverse of every other platform there: a CLOSED hosted runtime whose
+agent TEMPLATES are open and MIT. 🔵 **The catalogue is a free, specification-level map of what a
+well-resourced vendor believes the `173` buyable education workflows are — competitive intelligence
+that happens to carry a permissive licence.** 🟢 **Payload diversity byte-checked across three
+repositories: one shared scaffold, completely different domain nodes
+(`iep_section_generator`/`regulatory_compliance` vs `affected_material_analysis`/`stakeholder_mapping`
+vs `bloom_level`/`difficulty_score`), `39`–`48` files each.** 🟢 **The READMEs confirm the tests run
+WITHOUT the platform, which is what makes the catalogue harvestable (`P61`).**
+
+### The leg denominators this pass
+
+🔴 **Mandated ERP/SIS platform leg: `OpenEduCat` (LGPL-3.0), `openSIS Classic` (GPL-3.0),
+`RosarioSIS` — a `37`th consecutive nil, all copyleft or already held.**
+🟢 **Productive: `"agentic star" <term>` × `10` education terms, `sort=updated`, no star floor.**
+🔴 **Unquoted the same query returns `~2,660` unrelated repositories — the quoting is load-bearing.**
+
+---
+
 ## `2026-11-15` (twenty-ninth pass, `p824`) — **the platform nil ends, and it ends by looking ONE RANK below every star ceiling this file has ever read**
 
 🟢 **`2` foundation rows added (`134` → `136`) and `4` platform rows added (`116` → `120`) — the

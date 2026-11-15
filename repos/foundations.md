@@ -28,7 +28,26 @@ synchronised within `48` hours, each carrying `650`–`680` stars and a Dropbox 
 🟢 **Nothing on this shelf is affected — every row here was byte-read — but a star-ranked refresh of
 this file without the `P52` payload gate would not be safe.**
 
-## Foundational repos — 136 rows
+## The agent-runtime layer — added `p825` (3 rows)
+
+🟢 **Thirtieth pass (`p825`, 2026-11-15): `3` rows added (`136` → `139`), opening a layer this file
+has never carried.** 🔴 **The omission was real and `T86` exposed it: this base has shelved `249`
+agents across `30` passes without once shelving the GRAPH RUNTIME almost all of them are built on.**
+🟢 **`T86`'s `74`-repository education catalogue pins `langgraph==1.1.10` and `langchain==1.2.18`
+in every one of its `74` manifests, which is what made the gap visible.**
+
+🟡 **The third row is shelved as a WARNING, not as a dependency, and it is the first row on this
+shelf whose grade is `EMPTY`.** 🔵 **`T89`'s distinction — a licence gap and a reviewability gap are
+different questions — needs a worked example on this page, because every one of the `136` rows
+above was graded on the licence question alone.**
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/langchain-ai/langgraph | 🟢 **MIT — byte-read** (`1,072 B`, `sha256:d9bb52f2e354…`, HEAD `08a201695378`) | 44985 | **Region: Global.** The graph runtime under the education agent layer. 🟢 **Every one of `T86`'s `74` MIT education templates compiles a `langgraph` `StateGraph`, and so do the LMS and tutor agents this base has shelved since `p790` — it is the single most load-bearing unshelved dependency this file had.** 🔵 **Why it belongs on a FOUNDATIONS page and not an agents page: you do not customise it, you build on it, which is this file's own test.** 🔴 **The catalogue pins `==1.1.10`; current is far ahead, so a harvest per `P61` re-targets rather than inherits the pin.** Pushed `2026-11-15` |
+| https://github.com/langchain-ai/langchain | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`) | 149546 | **Region: Global.** The model and tool abstraction layer beneath the above. 🟡 **Shelved with a deliberate caution: this base's compose recipes should depend on `langgraph` for control flow and on `langchain-core` for interfaces, not on the `langchain` meta-package, whose surface moves faster than an education deliverable's support window.** 🔵 **Note for the byte-read gate: its `LICENSE` is on `master`, not `main` — a `main`-only probe returns `404` and would record a false `NO_LICENCE_FILE`, which is a live defect in any sweep that assumes the default branch name** |
+| https://github.com/teppei-miyashita/agenticstar-agentcore | 🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last touched `2026-08-12` | 0 | 🔴 **Region: APAC. Shelved as a WARNING row — the worked example for `T89`.** This is the source repository that the PyPI package `agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository`, and it holds no commits at all. 🟢 **The package itself is genuinely MIT** (`License-Expression: MIT` in the wheel, `dist-info/licenses/LICENSE`, `1,078 B`, `sha256:2afbb5fc…`) **and genuinely installable** — 🔴 **but it is wheel-only, single-release (`2026-09-17`), and unreadable at its stated address, while hard-pinning `langgraph==1.1.10`, `langchain==1.2.18`, `fastapi==0.136.0` and `agenticstar-platform==0.5.32`.** 🔵 **Do NOT add it to a delivery tree. It is here so that the next pass asking "is the AGENTIC STAR stack adoptable?" finds the answer already measured: licensed yes, auditable no** |
+
+## Foundational repos — 139 rows
 
 🟢 **Twenty-ninth pass (`p824`, 2026-11-15): `2` rows added (`134` → `136`), both into the
 curriculum-corpus layer, and they are the layer's first two rows since `p806`.** 🔵 **The layer

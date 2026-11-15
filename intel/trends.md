@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
+**Ninety** trends — derived trends: **90** — 🟢 **Thirtieth pass (`p825`, 2026-11-15): `T86`–`T90` added** — a `74`-repository, `54`-id, MIT-licensed education agent catalogue found on GitHub that `29` previous passes held ZERO rows of, because it is indexed under a PLATFORM BRAND rather than under pedagogy, jurisdiction or stars (`T86`, which generalises `T82` to a third indexing axis); `p824`'s own `T84` — *"Vietnam … build-safe open supply of ZERO"* — measured FALSE, with `43` of the `74` repositories written by Vietnamese authors, the largest national group of education-agent authors this base has recorded (`T87`); the licence FIELD-versus-BYTES defect class shown to be a property of REGISTRIES rather than of GitHub, with PyPI's `info.license` reporting `None` for two MIT packages whose wheels declare `License-Expression: MIT` (`T88`, which extends `T52`/`T81` to a second registry); the distinction between a LICENCE gap and a REVIEWABILITY gap, drawn on a framework that is MIT and installable but wheel-only with an advertised source repository holding zero commits (`T89`); and the copyright in a vendor-channel cohort proved by licence-byte-hash to sit with `13` individual developers rather than with the platform vendor (`T90`). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=90 claimed=90 · GREEN`.**
+
 **Eighty-five** trends — derived trends: **85** — 🟢 **Twenty-ninth pass (`p824`, 2026-11-15): `T81`–`T85` added** — the repository licence FIELD shown to diverge from the licence BYTES in three named ways and to err in BOTH directions (`T81`), LATAM's supply shown to be indexed under the SYSTEM NAME at `709` against `4` for the pedagogy (`T82`), `p815`'s proctoring nil corrected to a `~100`-repository population whose star mass is unlicensed (`T83`), Vietnam measured as the newest binding high-risk education-AI jurisdiction with a build-safe supply of ZERO (`T84`), and the permissive PLATFORM tier found one rank below every star ceiling this file has ever read (`T85`, which is the third and strongest weakening of `T7`). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=85 claimed=85 · GREEN`.**
 
 **Eighty** trends — derived trends: **80** — 🟢 **Twenty-eighth pass (`p823`, 2026-11-15): `T77`–`T80` added** — the institution-integration tier shown to be a POPULATION rather than a scatter, `20`+ university-pinned LMS agents across `14` jurisdictions converging on the same four read tools, with the constraint that produced them named verbatim by one of them — *"students cannot connect an assistant to their learning platform themselves"* (`T77`); the SPLIT LICENCE trap, byte-confirmed in both directions in one pass — Apache-2.0 code over CC BY-NC-SA **content** where the content IS the product, and CC BY-4.0 applied to software where it was never drafted to go (`T78`); LATAM's institution-integration zero closed by a WRITE-capable Brazilian agent that ships a two-phase commit-and-re-read protocol better than the EMEA write agent shelved beside it (`T79`); and the tool-count governance thread gaining `83` at the institution tier, landing exactly between the vendor servers' `137`/`77` and the standards body's `6` (`T80`). 🟢 **`21` build-safe agent rows added (`187` → `208`), `1` copyleft row, `5` rejections — the largest discovery pass in this base's recorded history, and the THIRD consecutive non-nil.** 🔴 **The scheduler's mandated star-ranked WebSearch battery nilled a `38`th consecutive time: every repository it surfaced globally (`DeepTutor`, `OpenMAIC`, `ai-engineering-hub`, `frappe/lms`, `OpenOlat`) was ALREADY on these shelves.** 🟢 **The productive channel was `T70`'s again — recency-ranked, no star floor — pointed at the LMS seam.** 🟢 **Count gate-confirmed, not inline: `ingest/derive-counts.py` ran in this environment and returned `derived=80 claimed=80`.** 🔴 **Egress resolved GitHub and WebSearch only: every repository below is byte-read first-hand, while every market and regulatory item is `CITED, NOT READ` and says so.**
@@ -88,6 +90,74 @@ the second time.** 🔵 **The amendment uses no component discovered this pass**
 three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
+
+## T86 — A `74`-repository, `54`-id MIT education agent catalogue existed on GitHub for seven weeks and `29` passes of this base held ZERO rows of it
+
+🟢 **Measured this pass.** Ten `search/repositories` queries of the form `"agentic star" <education term>` (education, university, school, student, curriculum, academic, teacher, exam, training, learning), unioned and de-duplicated by full name: **`74` distinct repositories, `73` MIT and `1` unlicensed**, created `2026-09-22` → `2026-10-29`, by `13` authors. 🔴 **Collision check against the `477` addresses on this base's three shelves: ZERO.**
+
+🟢 **They are a numbered catalogue, not a scatter.** Every README opens with an id of the form `EDU-C2-NNN`: `54` distinct ids observed, spanning `EDU-C2-004` to `EDU-C2-173`. 🔵 **So the catalogue is numbered to at least `173`, roughly `31%` of it is public, and the ids are sparse — meaning the rest exists and is not published, which is itself a thing to know before pitching a client on "the open supply".**
+
+🔴 **Why every instrument this base owns missed them, item by item:**
+
+| Instrument | Why it missed |
+|---|---|
+| Pedagogical vocabulary (`tutor`, `grading`, `lesson plan`) | 🔴 The repositories are named `agentic-star-<workflow>-agent` — the workflows are ADMINISTRATIVE (accreditation, transfer credit, IRB, safeguarding), not pedagogical |
+| Jurisdictional vocabulary (`T82`, `T84`: Spanish, Portuguese, Vietnamese) | 🔴 Every README is in English even where the regulator named in it is Japanese |
+| Topic tags | 🔴 None of the `74` carries an `education` topic |
+| Any star floor | 🔴 **All `74` are at `0★`.** A floor of `1` removes the entire catalogue |
+| `sort=updated` with no star floor (`T70`, this base's own productive channel) | 🟡 Would have found them — but only if pointed at a query that contains the brand |
+
+🟢 **The rule, and it is the third axis of the same law.** `T82`: LATAM supply is indexed under the SYSTEM OF RECORD (SIGAA), not the pedagogy. `T84`/`T87`: supply is not indexed under the jurisdiction's LANGUAGE. `T86`: supply is indexed under the PLATFORM BRAND that commissioned it. 🔵 **In all three the repository is named after the thing the developer was paid to integrate with, and never after the educational outcome. A discovery protocol must therefore enumerate NAMES OF SYSTEMS AND PLATFORMS, not descriptions of teaching.** `P62` is that protocol.
+
+## T87 — `p824`'s Vietnam-zero is false: Vietnamese authors wrote `58%` of the largest MIT education catalogue on these shelves
+
+🔴 **The published claim, `p824`, `T84`:** *"A jurisdiction that regulates automated assessment as high-risk, with exactly zero build-safe open supply in its own language. That is the sharpest BUILD slot `p824` found, and it is in APAC."*
+
+🟢 **The measurement that corrects it.** Author census of `T86`'s `74` repositories: `haidang024` `14`, `trantienit2015` `12`, `tvcuong1802` `6`, `TienXuanLam` `4`, `DuongNT98` `4`, `hungnguyenai` `3` — 🟢 **`43` repositories, `58%` of the catalogue, by 🇻🇳 Vietnamese authors**; `TAKUYA0608-dev` `11`, `genkidesu7` `7`, `sbdnakashima` `6`, `KaitoYokomizo` `1` — `25` by 🇯🇵 Japanese authors; `6` unattributed.
+
+🔵 **What `p824` actually measured was right.** Its queries were `q="giao duc viet nam ai"` → `7`, all unlicensed, ceiling `4★`; `q="vietnam education platform"` → `5`, all unlicensed, ceiling `1★`. 🔴 **Those are sound measurements of Vietnamese-LANGUAGE education supply. The error was reporting them as a measurement of Vietnamese-AUTHORED supply, and then converting a supply nil into an engagement recommendation ("the sharpest BUILD slot").**
+
+🟢 **The corrected reading, which is commercially the opposite of the one it replaces.** Vietnam does have the binding high-risk rule — its AI law took effect `2026-03-01` and names education including automated assessment (carried from `p824`, `CITED, NOT READ`). 🟢 **And it has a large, recent, MIT-licensed, English-language education-agent developer base. So the slot is not BUILD-because-nothing-exists; it is PARTNER-or-HIRE, because the capacity is already there and is already publishing under a permissive licence.** 🔵 **For a studio with LATAM delivery centres, a Vietnamese education-agent talent pool that publishes MIT is a sourcing fact, not a curiosity.**
+
+🔴 **The methodological lesson, which is the durable half.** A nil measured in ONE indexing axis was published as a nil in the DOMAIN. 🟢 **This base now has three instances of the same mistake (`p815`'s proctoring nil, corrected by `T83`; `p805`'s IEP nil, corrected this pass by `EDU-C2-028`; `p824`'s Vietnam nil, corrected here). The rule: a nil is reportable as a property of the QUERY, never of the WORLD, unless at least two orthogonal indexing axes were run.**
+
+## T88 — The licence FIELD-versus-BYTES defect is a property of REGISTRIES, not of GitHub: PyPI reports `None` for two MIT packages
+
+🟢 **`T52` (NOASSERTION means the matcher failed) and `T81` (the field errs in both directions) were both measured on GitHub. This pass measured the same class on PyPI, first-hand.**
+
+| Package | PyPI JSON `info.license` | PyPI `license_expression` | Wheel METADATA | Verdict |
+|---|---|---|---|---|
+| `agenticstar-agentcore` `1.0.3` | 🔴 `None` | 🔴 `None` | 🟢 `License-Expression: MIT`, `dist-info/licenses/LICENSE` present, `1,078 B`, `sha256:2afbb5fc…`, holder *The AgentCore Authors* | 🔴 **Field wrong** |
+| `agenticstar-platform` `3.3.0` (`80` releases) | 🔴 `None` | 🟢 `MIT` | — | 🔴 **Legacy field wrong** |
+
+🔵 **The mechanism is the same one `T81` named for GitHub: the field is populated by a matcher, and a packaging convention it does not understand makes the matcher abstain.** Here the convention is PEP 639 `License-Expression`, which modern build backends write INSTEAD of the classic `License:` field; the legacy JSON `info.license` key then reports `None`. 🔴 **A dependency scanner that reads `info.license` — which is the obvious thing to read — classifies an MIT framework as unlicensed and blocks it.** 🟢 **The gate in `P57` is extended in `compose/patterns.md` to read the wheel's own `METADATA` and `dist-info/licenses/`, not the registry's summary field, for exactly the reason `P57` already reads `LICENSE-DATA` rather than `LICENSE` on GitHub.**
+
+## T89 — A LICENCE gap and a REVIEWABILITY gap are different questions, and this pass nearly collapsed them
+
+🔴 **The first reading of the `T86` catalogue, recorded because it was wrong and because the error is the instructive part.** Every README states: *"This template does not run standalone … The framework is designed to run only on AGENTIC STAR. There is no fallback or degraded mode … raises `PlatformRequired` during graph compile"*, and describes `agenticstar-agentcore` as *"supplied by the hosting environment rather than resolved from the default package index"*. 🔴 **Read alone, that is MIT source over a captive proprietary runtime — grounds for rejecting all `74` rows.**
+
+🟢 **Probed, it is not that.** `agenticstar-agentcore` is on PyPI (`HTTP 200`), MIT by its wheel metadata, and it depends on `agenticstar-platform`, also on PyPI, also MIT, with `80` releases and an sdist. 🔵 **The chain is permissive end to end. The README's "supplied by the hosting environment" describes a deployment convention, not a licence restriction, and a pass that stopped at the prose would have discarded a `54`-workflow catalogue on a misreading.**
+
+🟡 **What IS deficient is separable and smaller.** The framework ships **wheel-only**, in a **single release** (`1.0.3`, `2026-09-17`), and the source repository its own PyPI metadata advertises — `github.com/teppei-miyashita/agenticstar-agentcore` — 🔴 **returns ZERO REFS to `git ls-remote`: it has no commits at all, `0 KB`, created and last touched `2026-08-12`.** 🟢 **So: you may use it, and you cannot read it at its stated address.**
+
+🔵 **The transferable distinction.** *May we ship this?* is a licence question and here the answer is yes. *Can we audit, patch and fork this if the vendor stops?* is a reviewability question and here the answer is no. 🔴 **This base has graded `136` foundations rows on the first question alone. A binary wheel with an empty source repository passes that grade and fails the one a client actually asks in year two.** 🟢 **Additionally a hard upgrade constraint: `==` pins on `langgraph 1.1.10`, `langchain 1.2.18`, `fastapi 0.136.0`, `pydantic 2.12.5` and `agenticstar-platform 0.5.32`.**
+
+## T90 — In a vendor-channel cohort the copyright sits with the individual developers, and licence-byte-hash proves it in one sweep
+
+🟢 **`T37`'s instrument — hash the licence bytes to resolve relationships between repositories — applied to `T86`'s catalogue, answers the ownership question without reading a single contract.**
+
+| Author | Licence `sha256` prefix | Repos sharing it | Holder line in the bytes |
+|---|---|---|---|
+| `sbdnakashima` | `134983626184…` | `3` | `Copyright (c) 2026 Daisuke Nakashima` |
+| `haidang024` | `b22b7ca45c04…` | `3` | `Copyright (c) 2026 haidang024` |
+| `TAKUYA0608-dev` | `888cc5f61f9c…` | `2` | `Copyright (c) 2026 TAKUYA` |
+| `trantienit2015` | `a953ad384437…` | `2` | `Copyright (c) 2026 Tien Tran (trantienit2015)` |
+| `genkidesu7` | `e74683d915ae…` | `2` | `Copyright (c) 2026 dat_genki_desu` |
+| `TienXuanLam` | `342465e77207…` | `2` | `Copyright (c) 2026 TienXuanLam` |
+
+🟢 **The hash is constant WITHIN an author and distinct BETWEEN authors — because the only varying bytes are the holder line.** 🔴 **Not one of the `74` names SoftBank, AGENTIC STAR, or any corporate entity as copyright holder.**
+
+🔵 **Three consequences a studio should price.** 🟢 **(1) Counterparty count:** adopting `17` of these rows means `13` separate natural persons granted the licence, not one company — a provenance review will ask, and the answer is in the bytes. 🟡 **(2) Maintenance:** a developer-programme output has no maintenance commitment behind it; all `74` are `0★` and none has been pushed since October. 🟢 **(3) It identifies the artefact class correctly** — these are programme submissions against a published specification catalogue, which is exactly why their DESIGN DOCS and TEST SPECS are uniform and worth harvesting while their running code is not worth deploying.
 
 ## T81 — The repository licence FIELD and the licence BYTES diverge in three mechanical ways, and the field errs in BOTH directions
 
