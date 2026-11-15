@@ -4,6 +4,58 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-sixth pass, `p821`) — **`0` foundation rows for a third consecutive pass, and this time the nil was tested against a channel the base had never run**
+
+🔴 **`0` foundation rows. `1` platform row (`111` → `112`). A MEASUREMENT, not an unrun leg.**
+
+### The legs, with their denominators
+
+All nine ran on `gh api search/repositories` (`sort=updated`, `order=desc`, `per_page` 30–40).
+🟢 **Four of them used a setting this base had never used in twenty-five passes: a `created:`
+recency window with NO `stars:` floor at all.**
+
+| Query | `total_count` | New to this base | Outcome |
+|---|---|---|---|
+| `topic:ai-tutor pushed:>2026-10-15` | `385` | `olele114/teach-to-learn`, `fotedev/Masar-x-next`, `tomasfossatti/educa-educai` | 2 shelved, 1 copyleft-flagged |
+| `topic:education-ai pushed:>2026-10-15` | `7` | none | 🔴 nil |
+| `topic:edtech pushed:>2026-10-15 stars:>20` | `64` | `mohanvd/edutraceapp` | 1 platform row |
+| `education agent created:>2026-10-25` | `290` | `AI-Native-Ventures/jemma`, `OpenRaiser/EduGraph` | 1 shelved, 1 deferred |
+| `school teacher AI created:>2026-10-25` | `42` | `amaru-one/mawta`, `wisdom-km/k12-qbank` | 1 shelved, 1 rejected |
+| `knowledge tracing created:>2025-01-01 stars:>20` | — | none | 🔴 nil — `pyedmine`, `EduStudio`, `pykt-toolkit`, `pyBKT` all held |
+| `spaced repetition AI stars:>100 pushed:>2026-08-01` | — | none | 🔴 nil — all eight results held |
+| `accessibility WCAG course remediation stars:>20` | **`0`** | — | 🔴 **real absence** |
+| `IEP individualized education program stars:>5` | **`0`** | — | 🔴 **real absence, CONFIRMS `T61`** |
+
+🔵 **Two `total_count: 0` results on query shapes this base had not used before are the strongest
+form of absence evidence available on this channel** — an empty result set, not an empty
+intersection with the shelves.
+
+### 🟢 Why `0` FOUNDATION rows is the right answer and not a shortfall
+
+The recency channel produced five real repositories. **None of them is foundational.** Each is an
+application — a gradebook, a learner profile, an Agent Skill, a tutor, a curriculum viewer.
+🔵 **A foundation row has to be something other projects already build on, and nothing three weeks
+old can be that.** 🟢 **The distinction is this file's whole purpose, and `p821` spends a
+paragraph on it rather than padding the shelf with young applications.**
+
+### Deferred, with the reason
+
+| Repository | Licence | ★ | Why not shelved |
+|---|---|---|---|
+| [`OpenRaiser/EduGraph`](https://github.com/OpenRaiser/EduGraph) | Apache-2.0 (field) | 1 | Created `2026-11-09`. *"Data infrastructure connecting curriculum knowledge and learner evidence"* — on its face the exact shape `T70` describes, and therefore worth a real look. 🔴 **Not byte-read this pass and not shelved on a field value.** Carried to `p822`. |
+| [`wisdom-km/k12-qbank`](https://github.com/wisdom-km/k12-qbank) | 🟢 MIT, byte-read `1,066 B` · `03e6e9395082` | 0 | 🔴 Its own README: no web surface, no database; `scripts/status.py` prints status only. Rejection row filed in `agents/top.md`; taxonomy cited as a specification in `P51`. |
+| [`BUPT-GAMMA/iGraph`](https://github.com/BUPT-GAMMA/iGraph) | **NONE** | 118 | No grant of any kind, and it is a graph-data agent rather than an education system. Named so it is not re-surfaced. |
+
+### 🔴 Channel state
+
+- `make hooks` refused by the sandbox classifier for a **FOURTH** consecutive pass. Counts in this
+  file are **carried**, not re-confirmed. `ACTION p821-B`.
+- Outbound HTTPS resolved **GitHub only** (`indicelatam.cl`, `oecd.org`,
+  `data.consilium.europa.eu` all failed to resolve). 🟢 **Licence payloads were byte-read over
+  `raw.githubusercontent.com` and controlled against two invented addresses, both `404`.**
+
+---
+
 ## `2026-11-15` (twenty-fifth pass, `p820`) — **A second consecutive measured ZERO, and this time the saturation was tested against a named candidate list**
 
 🔴 **`0` foundation rows and `0` platform rows added. A MEASUREMENT, not an unrun leg.**

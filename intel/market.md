@@ -6,10 +6,17 @@ updated: 2026-11-15
 
 # Education AI — market map and opportunities by region
 
-Researched 2026-11-13, across **eighteen** passes; each region's updates are
-ordered **newest first** directly under its heading. 🟢 **Eighteenth pass (`p813`):
-`68` `#### Update` blocks across five regions — North America `15`, EMEA `15`,
-APAC `15`, LATAM `15`, Global `8`. Every region gained one, as every pass must.**
+Researched through 2026-11-15, across **twenty-six** passes; each region's updates are
+ordered **newest first** directly under its heading. 🟢 **Twenty-sixth pass (`p821`):
+`105` `#### Update` blocks across five regions — North America `22`, EMEA `22`, APAC `22`,
+LATAM `23`, Global `16`. Every region gained one, as every pass must.**
+🔴 **Derivation note, because the naive tally is wrong and has been for several passes:** an
+`awk` tally keyed on the nearest preceding `### ` attributes `18` of LATAM's blocks to the
+nested `### 🟢 ACTION p816-F` subsection that lives INSIDE the LATAM section, and reports LATAM
+as `5`. 🟢 **LATAM's real figure is `5 + 18 = 23`; the nested heading is a sub-section, not a
+sixth region.** 🔵 **Re-derive with `awk '/^### /{sec=$0} /^#### Update/{c[sec]++}'` and then
+FOLD the `ACTION p816-F` bucket into LATAM — or the count under-reports the best-covered
+region in the file.**
 🟢 **And for the first time every region's SUPPLY side is measured as well as its policy side:
 `agents/top.md` now reads `Global 53 · APAC 17 · EMEA 12 · North America 12 · LATAM 9`,
 with no region in single digits.**
@@ -99,6 +106,34 @@ across EMEA.
 ## Opportunities by region
 
 ### North America
+
+#### Update 2026-11-15 (twenty-sixth pass, `p821`) — 🟢 The platform default escalates to the Senate with a DATE, and a new state instrument lands at the board rather than the legislature
+
+- 🟢 **The Google K-12 default now has a deadline attached to it (`T72`).** This file already holds
+  the change itself — **Gemini and Search opt-in, off by default, on school-managed K-12 student
+  accounts**, with no traditional-Search-without-AI option — and the political backlash around it.
+  🟢 **What is new in the `2026-11-13`/`2026-11-14` window is a US Senate demand that the policy be
+  reversed, with a response requested by `2026-11-30`.** 🔵 **Consequence for an engagement: the
+  configuration a district plans around may move before it ships, so the deliverable is a
+  configuration decision with a named owner and a dated review — not a policy document.**
+- 🟢 **A new state instrument, and its shape is the notable part.** **Kansas's State Board of
+  Education** approved a requirement that **every district and every accredited non-public school
+  adopt an instructional-technology policy and an implementation plan**, covering AI use by
+  teachers and by students, with statewide minimum requirements and local discretion over how they
+  are met. 🔵 **This is a BOARD instrument, not a statute** — it arrives outside the legislative
+  tracker this file has been counting, which means the `134`-bills-in-`31`-states figure this file
+  carries is a FLOOR on regulatory activity, not a measure of it.
+- 🟡 **District-level churn, recorded as texture rather than as an instrument.** The Martinsville,
+  Virginia board tabled its proposed AI policy to December. 🔵 **The pattern worth selling against
+  is that local boards are now deferring for want of a template, which is a productisable gap.**
+- 🔴 **Evidence grade for all three: `CITED, NOT READ`.** Egress on this pass resolved GitHub only,
+  so no primary text was byte-read; the items rest on news coverage dated `2026-11-13`/`2026-11-14`
+  and on a Cambridge-report release dated `2026-11-04`. 🔵 **`ACTION p821-D` re-checks the Senate
+  item after `2026-11-30`.**
+- 🟢 **Supply side, measured: NIL for this region this pass.** Nine discovery legs — four of them
+  recency-ranked with no star floor — returned no new build-safe North America row. 🔵 **The
+  region's supply in this base remains the largest and the oldest; what `p821` added came from
+  LATAM, EMEA and APAC (`T70`).**
 
 #### Update 2026-11-15 (twenty-fourth pass, `p819`) — 🟡 A third, later count of the state wave, and the federal instrument finally has a CYCLE even though it still has no date
 
@@ -1004,6 +1039,41 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-15 (twenty-sixth pass, `p821`) — 🟢 The region's four-pass instrument NIL is unchanged, and the movement is on the SUPPLY side instead — including this base's first Africa-origin row
+
+- 🔴 **Instruments: NIL for a fifth consecutive window.** The mandated EMEA leg returned the same
+  bodies this file already holds — the EU AI Act as amended by the **Digital Omnibus**, the Council
+  document **ST-14902-2026** of `2026-10-29`, the European Parliament briefing **PE 784.574**, the
+  UK **DfE** generative-AI product safety standards and **Ofqual**, Dubai's **KHDA** guidance.
+  🔵 **The high-risk clock still shows the same unresolved spread this file has flagged since
+  `p819`: an August 2026 reading against `2027-12-02` for stand-alone Annex III systems and
+  `2028-08-02` for AI embedded in regulated products. Unchanged, and still not resolved on a
+  secondary channel.**
+- 🟡 **One new non-binding item, dated and named.** **Cambridge University Press & Assessment**
+  published a report on `2026-11-04` recommending that policymakers give **teachers a stronger
+  voice** in school AI policy. 🔵 **It is not an instrument and this file does not promote it to
+  one** — it is cited because it is the same argument the Council document makes from the supply
+  side, and because a named assessment body saying it changes who can be quoted in a proposal.
+  🔴 **`CITED, NOT READ`.**
+- 🟢 **SUPPLY, and this is the region's real movement this pass — two rows, both byte-read,
+  neither European.**
+  - 🇪🇬 **Egypt**: [`mohanvd/edutraceapp`](https://github.com/mohanvd/edutraceapp) (MIT, `28★`) —
+    the national **STEM Grades 10–11 Learning Outcomes** encoded with a stable short code per
+    outcome. 🔵 **First Egypt-placed platform in this base, and placement rests on the repository's
+    own `egypt` topic string.** Shelved in `verticals/solutions.md`.
+  - 🌍 **Africa**: [`AI-Native-Ventures/jemma`](https://github.com/AI-Native-Ventures/jemma) (MIT,
+    `0★`) — **the first Africa-origin row in this base** (`T71`), a longitudinal learner profile
+    with a consent gate, from the **African Agentic AI Design Challenge**, Education track.
+  - 🔴 **One Arabic-first platform measured and licence-flagged:**
+    [`fotedev/Masar-x-next`](https://github.com/fotedev/Masar-x-next) is **AGPL-3.0** (byte-read,
+    `34,523 B`) — §13 reaches network users, so it is reference material, not adoptable into a
+    hosted client product.
+- 🔵 **The structural point for an EMEA engagement (`T70`): both new rows bind to a national
+  instrument or to a named programme, not to a subject.** The Council's push to reduce dependence
+  on non-European AI tools argues for the same architecture from the other direction — the
+  curriculum adapter is the sovereign part, and it is the part a European or African ministry
+  already owns.
 
 #### Update 2026-11-15 (twenty-fourth pass, `p819`) — 🔴 NIL on instruments for a fourth consecutive window, and the high-risk clock still shows three different dates
 
@@ -1926,6 +1996,45 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-15 (twenty-sixth pass, `p821`) — 🟢 The region's movement is DELIVERY, not regulation: a named `28`-partner training build-out, a city-level curriculum rollout with its gaps stated, and a new APAC supply row
+
+- 🟢 **The AI Opportunity Fund: Asia-Pacific has a Phase Three and it has NAMES.** This file
+  already holds the fund as a **`$35M` AVPN initiative with Google.org and the ADB**. 🟢 **What
+  `p821` adds, dated `2026-11-11`: `28` local implementing partners named for Phase Three, plus a
+  learning platform delivering training in `16` languages.** 🔵 **Among them, **Pratham Education
+  Foundation** (🇮🇳 India), whose stated brief includes training teachers to understand **when not
+  to rely on AI tools** — which is the governance half of the adoption/readiness gap this file has
+  been selling against since `p816`.**
+- 🟢 **Teacher-training capacity, which is the constraint every APAC rollout hits.** Google's **AI
+  Educator Series** expanded to four new regions in November 2026, with a 🇰🇷 Korea rollout run
+  with **Seoul National University of Education**; **JA Korea** reports **`11,000` teachers trained
+  over six years** and will pair the training with formal certification for public-school
+  educators. 🇮🇳 India delivery is in English plus **six local languages** (Hindi, Marathi, Telugu,
+  Assamese, Odia, Punjabi), aligned to **NEP 2020**; the 🇵🇭 Philippine **DepEd** has endorsed the
+  training nationwide for teaching and non-teaching staff.
+- 🟢 **Vietnam moves from statute to classroom, and the gap is stated by the implementers.**
+  🇻🇳 **Ho Chi Minh City** is rolling AI education out to general secondary students from the
+  **2026–2027 school year** under a **MOET** framework. 🔴 **The reported blockers are teacher
+  capacity, infrastructure and guidelines — not policy.** 🔵 **That is the shape of an APAC
+  engagement right now: the mandate exists, the delivery capacity does not, and the sellable unit
+  is teacher-facing enablement rather than a learner-facing tutor.**
+- 🟡 **Event marker:** EDUtech Asia 2026 ran `2026-11-04`–`05` in Singapore, reported at ~`8,000`
+  educators.
+- 🟢 **SUPPLY: one new APAC row, byte-read.**
+  [`olele114/teach-to-learn`](https://github.com/olele114/teach-to-learn) (MIT, `4★`, created
+  `2026-11-14`) — a zero-dependency Agent Skill whose whole design attacks the mastery illusion:
+  *"Stop mistaking 'I understood the AI's explanation' for actual mastery."* 🔵 **Region from the
+  authorship statement (`SKILL.md` and `references/` in Chinese, `README_CN.md` published), not
+  from an account location that does not exist.**
+- 🔴 **One APAC candidate measured and REFUSED on implementation, not licence:**
+  [`wisdom-km/k12-qbank`](https://github.com/wisdom-km/k12-qbank) (MIT, 🇨🇳 Heilongjiang, 人教版
+  七年級 maths) — its own README states there is no web surface and no database yet. 🟢 **Named so
+  a later pass can promote it; its knowledge-point taxonomy is cited in `P51` as a specification.**
+- 🔴 **Country-level policy detail for 🇨🇳 China and 🇯🇵 Japan did not resolve on this channel
+  AGAIN.** 🟢 **That is now four consecutive passes on the same declared blank, and this file
+  states it rather than filling it.** 🔵 **Evidence grade for everything above: `CITED, NOT READ`
+  — egress resolved GitHub only this pass.**
+
 #### Update 2026-11-15 (twenty-fourth pass, `p819`) — 🔴 Near-nil on instruments; the curriculum mandates this file holds were re-confirmed and nothing new dated
 
 🔴 **Near-complete nil, stated with what was run.** The APAC leg returned China's Ministry of
@@ -2835,6 +2944,42 @@ procurement-led" corner of that matrix, which `P5` did not previously have a nam
 example of.
 
 ### LATAM
+
+#### Update 2026-11-15 (twenty-sixth pass, `p821`) — 🟢 The region's curriculum nil ENDS as a measurement, and this base's own CENIA-sourced line is shown to be stale
+
+- 🟢 **The number, and it is the most important LATAM datum this file has recorded (`T69`).** The
+  **Índice Latinoamericano de Inteligencia Artificial (ILIA) 2026**, published in October 2026 by
+  **CENIA** with **CEPAL**, reports **`11` of the `20` countries covered now include AI content in
+  their school curricula, against `2` in `2024`**. 🟢 **All `20` have AI-related master's
+  programmes and `14` have doctoral programmes.** 🟢 **The index's own recommendation is to extend
+  AI content in **secondary** education beyond those eleven.** 🇨🇱 Chile places first for the
+  fourth consecutive year.
+- 🔴 **This supersedes a line in this file.** The LATAM section carries *"School-level AI education
+  is largely absent"*, attributed to **CENIA** — the same body, an older vintage. 🟢 **The older
+  line stays where it is, with this block cited against it, because the vintage failure is itself
+  the lesson (`T64`).** 🔵 **The indicator measures inclusion in national programmes, NOT a
+  standalone school subject in every school — the press coverage says so explicitly and this file
+  repeats the qualification rather than rounding it up.**
+- 🔴 **The eleven countries are NOT named in anything reachable on this pass's GitHub-only egress,
+  and `indicelatam.cl` and `repositorio.cepal.org` both failed to resolve.** 🟢 **`ACTION p821-C`:
+  name the eleven and place each one, from the index itself, on the first pass with general
+  egress.** 🔵 **Evidence grade: `CITED, NOT READ`, corroborated on two independent secondary
+  routes carrying the same two figures.**
+- 🟢 **SUPPLY: the region produced the single best row of the pass, and it is bound to a NATIONAL
+  INSTRUMENT.** [`amaru-one/mawta`](https://github.com/amaru-one/mawta) (MIT, byte-read, `2★`,
+  created `2026-11-07`) — *"An open-source gradebook for Peruvian schools, where AI drafts and the
+  teacher decides."* 🔵 **It encodes 🇵🇪 Peru's `CNEB`: competency assessment, the achievement
+  levels `AD/A/B/C`, and the descriptive conclusion a teacher must write for each.** Python 3.14 +
+  PostgreSQL 16 + LangGraph, one service per school. 🟢 **Its design rule — *"AI that proposes,
+  never decides"* — is the sentence to put in front of a ministry, and `P51` turns the whole thing
+  into a costed recipe with EMEA and APAC ports.**
+- 🔴 **One Spanish-language repository was NOT placed here, deliberately.**
+  [`tomasfossatti/educa-educai`](https://github.com/tomasfossatti/educa-educai) (MIT, `0★`) is
+  Spanish throughout and names no country, institution or curriculum, so it is shelved **Global**.
+  🟢 **A language is not a location, and this base has published that rule before.**
+- 🔵 **What it changes for an engagement.** The opening is no longer *"AI is not in the curriculum
+  yet"*. It is **which of the eleven, at what stage, against which assessment instrument** — and
+  `P51` is the answer to the third of those.
 
 #### Update 2026-11-15 (twenty-fifth pass, `p820`) — 🟢 `ACTION p819-C` DISCHARGED: the "unverified age floor" was an instrument this file has carried since `p790`, and the real boundary is `6º ano`, not age five
 
@@ -3855,6 +4000,39 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-15 (twenty-sixth pass, `p821`) — 🟢 The first non-nil discovery pass in `36`, and the reason is a QUERY SETTING rather than a new market
+
+- 🟢 **`4` build-safe agent rows and `1` platform row added — `168` → `172` agents, `111` → `112`
+  platforms — after thirty-five consecutive measured nils.** 🔴 **The mandated star-ranked legs
+  nilled a `36`th time** (`DeepTutor`, `tutor-gpt`, `ChatTutor`, `Claw-ED`, `OpenTutor`, `mathua`,
+  `Papermorph`, `freelingo`, `anki-mcp-server`, `Study-Mate`, `teacher-to-skills`, `tsugi`,
+  `mentingo`, `classroomio`, `advisingapp`, `cn-math-taxonomy`, `StudyOnTV` — all already held).
+  🟢 **The rows came from a recency-ranked channel with NO star floor, which this base had never
+  run (`T70`).** 🔵 **Standing method change: every future pass runs at least one leg with no star
+  floor.**
+- 🟢 **The cross-regional finding is `T70`, and it is the one to carry into a proposal:** the new
+  supply binds to a **national curriculum instrument**, not to a subject — Peru's `CNEB`, Egypt's
+  learning-outcome short codes, China's 人教版 knowledge points. 🔵 **The model is the replaceable
+  part; the curriculum adapter is the asset, and the client already owns the ground truth it
+  encodes.**
+- 🟢 **Market framing unchanged and re-confirmed, not re-sourced.** The **OECD Digital Education
+  Outlook 2026**'s recommendation that systems incentivise **purpose-built** educational AI over
+  general-purpose assistants is already held in this file, and `T70` is the supply-side evidence
+  for it: what is actually being built is narrower and more instrument-bound than a chatbot.
+- 🔴 **Two measurement channels were degraded this pass and both are stated rather than smoothed.**
+  (1) `make hooks` was refused by the sandbox classifier for a **FOURTH** consecutive pass, so
+  every count in this base is re-derived inline and flagged (`ACTION p821-B`). (2) Outbound HTTPS
+  resolved **GitHub only** — `indicelatam.cl`, `oecd.org` and `data.consilium.europa.eu` all failed
+  to resolve — so every repository this pass is **byte-read and first-hand** while every
+  regulatory and market item is **`CITED, NOT READ`** and says so in place.
+- 🔵 **The byte-read channel was controlled in BOTH directions this pass:**
+  `amaru-one/mawta-nonexistent-p821` and `fotedev/not-a-real-repo-p821` both returned `404` on the
+  same `raw.githubusercontent.com` path that served the seven real licence payloads.
+- 🔴 **Two legs returned `total_count: 0` and the absences are real, re-measured on a new query
+  shape:** WCAG/accessibility course remediation, and IEP/individualised-education-program
+  tooling. 🟢 **`T61`'s IEP gap is CONFIRMED for a second consecutive pass and remains the clearest
+  unserved build target this base holds.**
 
 #### Update 2026-11-15 (twenty-fifth pass, `p820`) — 🔴 The measurement channel is refused a THIRD time; the mandated battery nils a `35`th; and the pass's finding was sitting in this base's own files
 

@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
+**Seventy-two** trends — derived trends: **72** — 🟢 **Twenty-sixth pass (`p821`, 2026-11-15): `T69`–`T72` added** — LATAM's school-curriculum nil ended as a MEASUREMENT by `ILIA 2026` (CENIA/CEPAL), `11` of `20` countries against `2` in 2024, which makes this base's own CENIA-sourced *"school-level AI education is largely absent"* line stale (`T69`); the new supply shown to bind to a NATIONAL CURRICULUM INSTRUMENT rather than to a subject, three repositories in three regions in one pass, with the curriculum adapter — not the model — named as the asset (`T70`); Africa's first entry into this base's supply side, arriving through a DESIGN CHALLENGE and carrying a category this base held nowhere, the longitudinal learner profile with a consent gate enforced in code (`T71`); and the K-12 platform default escalated into a legislative object with a dated deadline of `2026-11-30` (`T72`). 🟢 **`4` build-safe agent rows and `1` platform row added — the FIRST non-nil discovery pass in `36`, and `T70` names why: the productive channel was recency-ranked with NO star floor.** 🔴 **Count re-derived INLINE (`grep -c '^## T'` → `72`), not by `ingest/derive-counts.py`: the sandbox classifier refused the repository's own Python for a FOURTH consecutive pass. Degraded channel, flagged, `ACTION p821-B`.** 🔴 **Egress on this pass resolved GitHub ONLY, so every repository below is first-hand and byte-read while every regulatory item is `CITED, NOT READ` and says so.**
+
 **Sixty-eight** trends — derived trends: **68** — 🟢 **Twenty-fifth pass (`p820`, 2026-11-15): `T66`–`T68` added** — `ACTION p819-C` DISCHARGED, and not by finding a new source: the "unverified November age-floor lead" was `Parecer CNE/CP nº 15/2026`, an instrument this base has carried in three files since `p790`, so the failure was CROSS-FILE LINKAGE and not sourcing (`T66`); Brazil's rule shown to be STAGE-GATED rather than age-gated, with the generative-AI threshold at `6º ano` and a full four-rung ladder, which is why an age-framed query could never return an instrument (`T67`); and the parecer's ASSESSMENT rules recovered — detector-only sanction prohibited outright, AI pre-correction admitted only as a preparatory step — which confirms `T876`'s note that the `2026-09-01` text was a superseded draft and prices the difference (`T68`). 🔴 **The mandated eight-leg battery nilled a `35`th consecutive time, measured with its denominator: `0` new repositories, `0` new regional instruments across four regions — recorded in `agents/trending.md`, not promoted to a trend, because `T63` already states it.** 🔴 **Count re-derived after insertion by a SECOND and independently written reimplementation of `ingest/derive-counts.py`: the sandbox classifier refused the repository's own Python for a THIRD consecutive pass. It returned `derived=68 claimed=68` and reproduced `p819`'s other four figures exactly — `168`, `132`, `111`, `50`. See `ACTION p820-B`.**
 
 **Sixty-five** trends — derived trends: **65** — 🟢 **Twenty-fourth pass (`p819`, 2026-11-15): `T62`–`T65` added** — a degraded measurement channel shown to fail by measuring the WRONG POPULATION rather than by drifting, which is why `p818`'s `183` was self-consistent and still wrong (`T62`); the star-ranked GitHub channel measured SATURATED for this base, `52` of `54` results already held and both new arrivals under five days old (`T63`); this base's most-quoted LATAM pair dated to its FIELDING WINDOW and found to be thirteen months old at the point of quotation, with `ACTION p818-A` partially discharged (`T64`); and whiteboard tutoring shown to be a TRANSPORT PROTOCOL rather than a model capability, with a `~15×` cost spread across adjacent quality measured on `288` lessons (`T65`). 🟢 **Count re-derived after insertion by an INDEPENDENT reimplementation of `ingest/derive-counts.py` — the repository's own gate is still refused by the sandbox classifier — which returned `derived=65 claimed=65 GREEN`, and which reproduced `p818`'s other four figures exactly. See `agents/top.md` and `ACTION p819-B`.**
@@ -80,6 +82,108 @@ the second time.** 🔵 **The amendment uses no component discovered this pass**
 three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
+
+## T69 — LATAM's school-curriculum nil is OVER as a measurement: `11` of `20` countries now carry AI content in the national curriculum against `2` in `2024`, and this base's own standing line is stale
+
+🟢 **The finding.** The **Índice Latinoamericano de Inteligencia Artificial (ILIA) 2026**, published
+in October 2026 by **CENIA** with **CEPAL**, reports that **`11` of the `20` Latin American
+countries it covers now include AI content in their school curricula, against `2` in `2024`**.
+It also reports that **all `20`** have AI-related master's programmes and **`14`** have doctoral
+programmes, and it recommends extending AI content in **secondary** education beyond the current
+eleven. Chile places first for the fourth consecutive year.
+
+🔴 **This base holds a line that the figure makes stale.** `intel/market.md` carries
+*"School-level AI education is largely absent"* attributed to **CENIA** — the same body. 🟢 **The
+attribution was right and the vintage was not**, which is exactly the failure `T64` named for this
+base's most-quoted LATAM pair. 🔵 **The correction is registered rather than silently overwritten,
+and the older line keeps its place in the file with this trend cited against it.**
+
+🔴 **Evidence grade: `CITED, NOT READ`, and the reason is this pass's channel, not a judgement
+about the source.** Outbound HTTPS in the `p821` environment resolves GitHub only —
+`indicelatam.cl` and `repositorio.cepal.org` both failed to resolve — so the index itself was not
+byte-read. 🟢 **Two independent secondary routes carry the same two numbers** (`11 of 20`, and `2`
+in 2024), together with the press framing that the indicator measures **inclusion in national
+programmes, not a standalone school subject**. 🔴 **The eleven countries are NOT named in anything
+reachable this pass. That is an informed gap, and `ACTION p821-C` registers it.**
+
+🟢 **What it changes for an engagement.** A LATAM ministry conversation can no longer be opened on
+"AI is not in the curriculum yet". The live question is **which** of the eleven, at what stage, and
+against which assessment instrument — which is the join `T70` is about.
+
+## T70 — The new education supply binds to a NATIONAL CURRICULUM INSTRUMENT, not to a subject — three repositories, three regions, one pass
+
+🟢 **The finding, and it is the most portable thing in `p821`.** Every repository this pass shelved
+that is bound to a *place* is bound to it through a **named national instrument**, not through a
+subject or a language:
+
+| Repository | Region | The instrument it encodes | What the agent does against it |
+|---|---|---|---|
+| [`amaru-one/mawta`](https://github.com/amaru-one/mawta) | LATAM | 🇵🇪 Peru's **CNEB**, competency assessment, achievement levels `AD/A/B/C` | drafts the descriptive conclusion a teacher must write per level |
+| [`mohanvd/edutraceapp`](https://github.com/mohanvd/edutraceapp) | EMEA | 🇪🇬 Egypt STEM Grades 10–11 **Learning Outcomes**, with a short code per outcome (`/PH.1.01`) | resolves a curriculum-native address to its lesson content |
+| [`wisdom-km/k12-qbank`](https://github.com/wisdom-km/k12-qbank) | APAC | 🇨🇳 人教版 七年级上册 有理数运算, knowledge-point taxonomy | selects items by knowledge point, chapter, type and difficulty |
+
+🔵 **The structural claim.** In each case the LLM is the cheap, replaceable part and the
+**curriculum adapter is the asset** — the mapping from a national instrument to addressable units
+a model can be held to. 🟢 **That adapter is also the part a client already owns the ground truth
+for and cannot buy from a US vendor**, which is why it prices well and why it survives a model
+swap.
+
+🔴 **The counterpart, and it is a warning about how this base has been looking.** All three were
+invisible to the star-ranked channel: `2★`, `28★` and `0★`. They surfaced only once the query was
+recency-ranked (`sort=updated`, a `created:` window) with **no star floor**. 🟢 **`T63` measured
+that the star-ranked channel is saturated; `T70` names the reason — stars are a LAGGING measure,
+so a base that filters on them is structurally blind to supply younger than its own cadence.**
+🔵 **Standing change to the method: every future pass runs at least one leg with no star floor.**
+
+## T71 — Africa enters this base's supply side, and it arrives through a DESIGN CHALLENGE — carrying a category this base did not hold
+
+🟢 **The finding.** [`AI-Native-Ventures/jemma`](https://github.com/AI-Native-Ventures/jemma)
+(MIT, byte-read, `0★`) is the first Africa-origin row in this base, and its README places it
+itself: *"Built for the African Agentic AI Design Challenge, Education track (The Long View),
+sub-theme Longitudinal strength tracking."*
+
+🔵 **The channel is the first half of the finding.** This base's EMEA supply has come from
+universities, national ministries and vendors. **A design challenge is a fourth pipeline**, it
+produces MIT-licensed work on a published deadline, and it is cheap to watch. 🟢 **Registered as a
+standing leg: challenge and hackathon tracks are a supply channel, not noise.**
+
+🟢 **The category is the second half, and it is the more valuable one.** `jemma` is a
+**longitudinal learner profile with a consent gate** — a shape this base held nowhere across `172`
+agent rows:
+
+- **It follows one learner across years, not one term**, and surfaces a pattern only once it has
+  held for **three terms or more**.
+- **"A profile, not a label."** There is no screen or tool that assigns a track, a subject path or
+  a career, and the save tool **drops** a pattern worded as a label or a ranking. 🔵 **A refusal
+  enforced in code, not in a policy document.**
+- **Parent access is teacher-gated.** Marks and gaps reach a family only after the teacher taps
+  *Share with parents*; a Long-view pattern only after the teacher has spoken to the family.
+- It ships **its own MCP server**.
+
+🔴 **What it is not: evidence of adoption.** `0★`, organisation-owned, created `2026-11-10`, a
+challenge submission. 🟢 **It is shelved for the DESIGN, and the row says so** — the three rules
+above are directly reusable in any jurisdiction where profiling a minor is regulated, which is
+most of them.
+
+## T72 — The K-12 platform DEFAULT has become a legislative object, and it now carries a date
+
+🟢 **The finding.** This base already holds Google's change making **Gemini and Search opt-in (off
+by default) for K-12 student accounts** from early 2027, with no traditional-Search-without-AI
+option. 🟢 **What `p821` adds is escalation with a calendar:** a **US Senate demand that the policy
+be reversed, with a response requested by `2026-11-30`**, alongside the earlier political backlash
+this base recorded.
+
+🔵 **Why a vendor setting belongs in a trends file.** The setting is now the object of federal
+correspondence, which means it can **move** before it ships — and a district that has planned
+around either state of the toggle is exposed to the other. 🟢 **The sellable consequence is
+unchanged in direction and sharper in urgency:** the deliverable is not "an AI policy", it is a
+**configuration decision with a named owner and a dated review**, built to survive the toggle
+flipping.
+
+🔴 **Evidence grade: `CITED, NOT READ`.** The correspondence itself was not reachable on this
+pass's GitHub-only egress; the date and the demand come from news coverage dated `2026-11-13`
+and `2026-11-14`. 🔵 **`ACTION p821-D`: re-check the outcome after `2026-11-30` — this is one of
+the few items in this base with a resolution date, and it either moves or it does not.**
 
 ## T66 — `ACTION p819-C` is discharged WITHOUT a new source: the unverified "age floor" lead was an instrument this base had already held in three files for thirty passes
 

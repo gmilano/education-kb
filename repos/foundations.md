@@ -13,6 +13,37 @@ against two invented addresses (`T970`, `T37`).
 
 ## Foundational repos — 132 rows
 
+🔴 **Twenty-sixth pass (`p821`, 2026-11-15): `0` foundation rows added, and `132` is CARRIED, not
+re-confirmed.** `make hooks` was refused by the sandbox classifier for a **FOURTH** consecutive
+pass, so there is no gate output for this file this pass and the figure is the carried one.
+🔵 **`ACTION p821-B`.**
+
+🔴 **`0` is a MEASUREMENT and here is its denominator.** Nine discovery legs ran on the
+`gh api search/repositories` channel, four of them at settings this base had never used —
+recency-ranked (`sort=updated`) with **no star floor**:
+`topic:ai-tutor pushed:>2026-10-15` (`total_count 385`),
+`topic:education-ai pushed:>2026-10-15` (`7`),
+`topic:edtech pushed:>2026-10-15 stars:>20` (`64`),
+`education agent created:>2026-10-25` (`290`),
+`school teacher AI created:>2026-10-25` (`42`),
+`knowledge tracing created:>2025-01-01 stars:>20`,
+`spaced repetition AI stars:>100 pushed:>2026-08-01`,
+`accessibility WCAG course remediation stars:>20` (`total_count 0`) and
+`IEP individualized education program stars:>5` (`total_count 0`).
+
+🟢 **That channel DID produce supply — four agent rows and one platform row, the first non-nil in
+`36` passes — but none of it is FOUNDATIONAL.** Everything it returned is an application: a
+gradebook, a learner profile, an Agent Skill, a tutor, a curriculum viewer. 🔵 **The distinction
+is the point of this file and it is worth stating plainly: a `2★` application can be shelved in
+`agents/top.md` on its merits, while a foundation row has to be something other projects already
+build on — and nothing younger than three weeks can be that.**
+
+🔴 **Two legs returned `total_count: 0` and both are real absences, re-measured this pass:**
+WCAG/accessibility course remediation and IEP/individualised-education-program tooling.
+🟢 **This CONFIRMS `T61` for a second consecutive pass on an independent query shape** — the IEP
+gap is not a sampling artefact of one phrasing. 🔵 **It is the clearest unserved build target this
+base holds.**
+
 🟢 **Twenty-fifth pass (`p820`, 2026-11-15): `0` rows added, and `132` is CONFIRMED again — this
 time by a SECOND, independently written reimplementation of the gate.** Gate output for this file:
 `tables=20 rows=134 distinct=132 graded=132 claimed=132 ragged=0 nolink=0 dupes=2` → **GREEN**.

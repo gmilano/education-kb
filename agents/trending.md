@@ -4,6 +4,106 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-sixth pass, `p821`) — **The nil streak ends at `35`, and what ended it was a QUERY SETTING, not a new market**
+
+🟢 **`4` build-safe agent rows added (`168` → `172`), `1` copyleft row, `1` rejection, `1` platform
+row in `verticals/solutions.md` (`111` → `112`).** 🔴 **`0` foundation rows — a measurement, with
+its denominator in `repos/trending.md`.**
+
+### 🔴 The mandated star-ranked legs nilled a `36`th consecutive time — named, so the nil has a denominator
+
+`top open source AI agents education 2026 github MIT` · `github trending education AI 2026` ·
+`open source platform education LMS SIS MIT Apache 2026` · `AI education industry trends 2026` ·
+and the four regional legs. **Everything substantive they returned was already held:**
+
+| Returned by a mandated leg | Disposition |
+|---|---|
+| `HKUDS/DeepTutor`, `plastic-labs/tutor-gpt`, `HugeCatLab/ChatTutor`, `SirhanMacx/Claw-ED` | held |
+| `zijinz456/OpenTutor`, `chuma-beep/mathua`, `molly554/whiteboard-ai-tutor` | held |
+| `DozenTwelve/Papermorph`, `artcc/freelingo`, `ankimcp/anki-mcp-server`, `ankimcp/anki-mcp-server-addon` | held |
+| `Miaotofu01/Study-Mate`, `JuneYaooo/teacher-to-skills`, `Li-Evan/Bloom`, `ArnaudGuiovanna/tutor-mcp` | held |
+| `tsugiproject/tsugi`, `Selleo/mentingo`, `pacewisdomhq/TutorLoom`, `classroomio/classroomio` | held |
+| `canyongbs/advisingapp`, `xiaoyang111222/cn-math-taxonomy`, `chadyi/StudyOnTV`, `haxtheweb/haxcms-php` | held |
+| `kirill-markin/flashcards-open-source-app`, `ctrlaltwill/LearnKit`, `zuhairhalawa/studyai`, `hluaguo/learn-faster-kit` | held |
+| `ZhijieXiong/pyedmine`, `HFUT-LEC/EduStudio`, `pykt-team/pykt-toolkit`, `CAHLR/pyBKT` | held |
+| `sitor-ai/frametell`, `bayshores/godspeed`, `luumlabs/aula`, `langx/langx`, `munitkala/selfsemester`, `ANFAIA/SkillNet` | held |
+| `moodle`, `edx-platform`, `OpenEduCat`, `frappe/lms`, `OpenOLAT`, `rosariosis`, `openSIS-Classic`, `chamilo-lms` | held |
+| `AlijonovMukhammaddiyor/*` (Hermes University), `particify/arsnova-server`, `ictinnovations/ICTSchool`, `learning-commons-org/evaluators` | held |
+
+🔵 **`T63` predicted exactly this and `T70` now explains it: stars are a LAGGING measure, so a
+star-ranked channel cannot see supply younger than this base's own cadence.**
+
+### 🟢 What DID produce rows: recency-ranked, no star floor
+
+`sort=updated&order=desc` with a `created:` window and **no `stars:` qualifier at all** — a
+setting this base had never used in twenty-five passes.
+
+| New row | Licence (byte-read `2026-11-15`) | ★ | Region | Basis for the placement |
+|---|---|---|---|---|
+| [`amaru-one/mawta`](https://github.com/amaru-one/mawta) | 🟢 MIT · `1,074 B` · `34142d0775e4` | 2 | LATAM | README names 🇵🇪 Peru's `CNEB` and the `AD/A/B/C` levels |
+| [`AI-Native-Ventures/jemma`](https://github.com/AI-Native-Ventures/jemma) | 🟢 MIT · `1,075 B` · `888e10dd44de` (on `master`; default branch is `develop`) | 0 | EMEA | README: *"Built for the African Agentic AI Design Challenge, Education track"* |
+| [`olele114/teach-to-learn`](https://github.com/olele114/teach-to-learn) | 🟢 MIT · `1,096 B` · `b43a17a66e43` | 4 | APAC | `SKILL.md`/`references/` authored in Chinese; `README_CN.md` published |
+| [`tomasfossatti/educa-educai`](https://github.com/tomasfossatti/educa-educai) | 🟢 MIT · `1,072 B` · `85e0337d16ac` | 0 | Global | 🔴 Spanish throughout, **no locative string** — a language is not a location |
+| [`mohanvd/edutraceapp`](https://github.com/mohanvd/edutraceapp) → `verticals/solutions.md` | 🟢 MIT · `1,065 B` · `88765a78ee52` | 28 | EMEA | repository topic `egypt`; *"Egyptian high school students"* |
+| [`fotedev/Masar-x-next`](https://github.com/fotedev/Masar-x-next) → copyleft table | 🔴 AGPL-3.0 · `34,523 B` · `0d96a4ff68ad` | 9 | EMEA | bilingual English / العربية product surface |
+| [`wisdom-km/k12-qbank`](https://github.com/wisdom-km/k12-qbank) → **rejected** | 🟢 MIT · `1,066 B` · `03e6e9395082` | 0 | APAC | 🔴 its own README: 还没有网页, 没有数据库 — design, not implementation |
+
+🔵 **Negative control on the same channel, both directions:**
+`amaru-one/mawta-nonexistent-p821` → `404`, `fotedev/not-a-real-repo-p821` → `404`, on the exact
+`raw.githubusercontent.com` path that served the seven payloads above.
+
+### 🔴 Channel degradation, stated twice because it bounds everything above
+
+1. **`make hooks` refused by the sandbox classifier for a FOURTH consecutive pass.** Counts
+   re-derived inline (`grep`/`awk`); `ACTION p821-B` carries the real-gate run forward.
+2. **Outbound HTTPS resolved GitHub ONLY.** `indicelatam.cl`, `oecd.org` and
+   `data.consilium.europa.eu` all failed to resolve. 🟢 **Every repository above is first-hand;
+   every regulatory item below is `CITED, NOT READ`.**
+
+### 🟡 Non-repository items seen this pass — named here so the next pass does not re-pay for them
+
+- 🇺🇸 **US Senate demand that Google reverse the K-12 Search/AI default-off change, response
+  requested by `2026-11-30`** (new; the change itself was already held). → `T72`, NA block.
+- 🇺🇸 **Kansas State Board of Education**: every district and accredited non-public school must
+  adopt an instructional-technology policy and implementation plan covering AI use. → NA block.
+  🔵 **A board instrument, outside the legislative tracker this base counts.**
+- 🇺🇸 Martinsville, Virginia board tabled its AI policy to December — local texture, not an
+  instrument.
+- 🇬🇧 **Cambridge University Press & Assessment report, `2026-11-04`**, recommending a stronger
+  teacher voice in school AI policy. → EMEA block.
+- 🌎 **ILIA 2026 (CENIA + CEPAL, October 2026): `11` of `20` countries with AI content in school
+  curricula against `2` in 2024; `20/20` master's, `14` doctorates.** → `T69`, LATAM block.
+  🔴 **The eleven are not named in anything reachable this pass — `ACTION p821-C`.**
+- 🌏 **AVPN AI Opportunity Fund Phase Three, `2026-11-11`: `28` named local implementing partners,
+  training platform in `16` languages, Pratham Education Foundation among them.** → APAC block.
+- 🌏 Google **AI Educator Series** expanded to four new regions; 🇰🇷 Korea with Seoul National
+  University of Education; **JA Korea `11,000` teachers over six years**; 🇮🇳 India in English plus
+  six local languages aligned to NEP 2020; 🇵🇭 DepEd nationwide endorsement. → APAC block.
+- 🇻🇳 **Ho Chi Minh City** rolling AI education to general secondary from the **2026–2027** school
+  year under a MOET framework, with teacher capacity, infrastructure and guidelines named as the
+  blockers. → APAC block.
+- 🇸🇬 EDUtech Asia 2026, `2026-11-04`–`05`, ~`8,000` educators — event marker only.
+
+### 🔴 Two legs returned `total_count: 0`, and both absences are real
+
+`accessibility WCAG course remediation stars:>20` → `0`.
+`IEP individualized education program stars:>5` → `0`.
+🟢 **`T61`'s IEP gap CONFIRMED on a second, independent query shape. It remains the clearest
+unserved build target this base holds.**
+
+### Actions opened by this pass
+
+- **`ACTION p821-B`** — run the repository's own gate. Four consecutive classifier refusals; the
+  open question is whether a reimplementation should be committed to `ingest/`.
+- **`ACTION p821-C`** — name the eleven ILIA countries and place each, from the index itself, on
+  the first pass with general egress.
+- **`ACTION p821-D`** — re-check the Google/Senate item after `2026-11-30`. One of the few items
+  in this base with a resolution date.
+- **`ACTION p821-E`** — standing method change: every future pass runs at least one discovery leg
+  with **no star floor** (`T70`).
+
+---
+
 ## `2026-11-15` (twenty-fifth pass, `p820`) — **The pass's finding was already in this base's own files, the discovery legs nilled a `35`th time, and the gate was refused a third**
 
 **Pass `p820`.** 🔴 **`0` build-safe agent rows added, `0` copyleft, `0` foundation rows, `0`

@@ -7,7 +7,26 @@ updated: 2026-11-15
 # Education vertical platforms — real systems to customize AI on top of
 
 
-## Education vertical platforms — 111 rows
+## Education vertical platforms — 112 rows
+
+🟢 **Twenty-sixth pass (`p821`, 2026-11-15): `1` row added — `111` → `112`.** 🔴 **NOT gate-confirmed:
+`make hooks` was refused by the sandbox classifier for a **FOURTH** consecutive pass, so the figure
+is the carried `111` plus one row, stated as a DELTA rather than as a fresh absolute recount.**
+🔵 **`ACTION p821-B` carries the real-gate run forward.**
+
+🟢 **The mandated vertical leg ran in full and returned the same eight platforms as `p820` —
+`moodle`, `edx-platform`, `OpenEduCat`, `frappe/lms`, `OpenOLAT`, `rosariosis`, `openSIS-Classic`,
+`chamilo-lms` — all `8` already on this page, a `36`th consecutive nil on that leg.** 🟢 **The row
+below came from a different channel entirely: recency-ranked (`sort=updated`, `created:` window,
+**no star floor**), which is the setting this base had never run (`T70`).**
+
+🔵 **Why this row belongs in `verticals/` and not in `agents/`:** it ships no agent. It ships the
+thing an agent in this vertical is always missing — a **national curriculum encoded as addressable
+content**, with a stable short code per learning outcome. That is the substrate, not the product.
+
+| Platform | Repo | Licence | Stars | What it is |
+|---|---|---|---|---|
+| EduTrace (curriculum layer) | https://github.com/mohanvd/edutraceapp | 🟢 **MIT** (`raw.githubusercontent.com/mohanvd/edutraceapp/main/LICENSE`, `1,065 B`, `sha256:88765a78…`, first line `MIT License`) | 28 | **Region: EMEA.** 🟢 **New this pass (`p821`) — the first 🇪🇬 Egypt-placed platform in this file, and placement rests on the repository's OWN topic string `egypt` plus the README's *"Open-source STEM curriculum viewer for Egyptian high school students"*, not on an inference.** The open-source curriculum layer of the EduTrace platform for Egyptian **STEM Grades 10–11**: every Learning Outcome, the MDX lesson content, and an **LO short-code routing system** that resolves a path like `/PH.1.01` to the outcome it names. 🔵 **The short code is the reusable asset.** It gives an agent a stable, curriculum-native address for *"what is this student supposed to be able to do"* — the same join `mawta` makes against Peru's `CNEB` and `k12-qbank` makes against 人教版 (`T70`). Full MDX rendering with KaTeX and highlighted code, plus iframe-friendly `/embed/[code]` lesson views, which is how it mounts inside an LMS without the LMS adopting it. Next.js 15 + TypeScript 5.9, created `2026-05-23`, pushed `2026-11-12`. ⚠️ `28★`, single maintainer; the content is Grades 10–11 only. |
 
 🟢 **Twenty-fifth pass (`p820`, 2026-11-15): `0` rows added, and `111` is CONFIRMED again — this
 time by a SECOND, independently written reimplementation of the gate.** Gate output for this file:

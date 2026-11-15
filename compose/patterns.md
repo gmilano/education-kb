@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
+**Fifty-one** concrete recipes — derived recipes: **51**. 🟢 **Twenty-sixth pass (`p821`): `P51` added** — the competency gradebook agent built against a NATIONAL curriculum instrument, and the first recipe in this base whose reusable asset is the CURRICULUM ADAPTER rather than the model or the prompt (from `T70`). 🟢 **It is also the first recipe here with its ports PRICED rather than promised:** one reference implementation (🇵🇪 `mawta`, `CNEB`) and two adapter targets already encoded (🇪🇬 `edutraceapp`'s learning-outcome short codes, 🇨🇳 `k12-qbank`'s 人教版 knowledge points), with the second country costed at `3`–`4` weeks against the first at `8`–`10`. 🔴 **Its central constraint is a refusal taken verbatim from the reference implementation — *"AI that proposes, never decides"* — expressed as a schema in which no code path writes a grade.** 🟢 **Zero copyleft in the delivered tree; the one adjacent AGPL-3.0 trap is named.** 🔴 **Count re-derived INLINE (`grep -c '^## P'` → `51`): the sandbox classifier refused the repository's own Python gates for a FOURTH consecutive pass (`ACTION p821-B`).** All components byte-read on `2026-11-15`.
+
 **Fifty** concrete recipes — derived recipes: **50**. 🟢 **Twenty-fifth pass (`p820`): `P50` added** — the stage-gated basic-education tutor for Brazil, and the first recipe in this base whose core deliverable is a REFUSAL BOUNDARY inside the product rather than a capability: on two of `Parecer CNE/CP nº 15/2026`'s four rungs the compliant behaviour is to not generate at all, so the STAGE ROUTER is the primary architectural element and it fails closed (from `T67`). 🔴 **It is also the first recipe here written against an instrument this base holds as `CITED, NOT READ`** — every clause is SECONDARY, corroborated by two independent Brazilian legal sources, and the recipe says so rather than lending the parecer a precision it has not earned on this channel. 🟢 **Its second half replaces the thing `T68` makes unlawful: a sanction founded exclusively on an AI detector becomes an ADJUDICATION PACKAGE a teacher signs.** 🔵 **Count re-derived after insertion by an independently written reimplementation of `ingest/derive-counts.py` (`derived=50 claimed=50`); the repository's own gate was refused by the sandbox classifier for a THIRD consecutive pass — `ACTION p820-B`.**
 
 **Forty-nine** concrete recipes — derived recipes: **49**. 🟢 **Twenty-fourth pass (`p819`): `P49` added** — the vendor-neutral tutoring stack, the first recipe in this base whose ACCEPTANCE GATE is a published open-source benchmark the client can re-run themselves, and the first built on a mastery engine rather than on a chat loop (from `T63`/`T65`). 🔴 **It also carries this base's first explicitly priced NON-permissive dependency: `sympy` is BSD-3 and fine, but ~`32%` of the engine's concepts do not grade without a Python runtime, so "pure Go" is not the deployable configuration and the estimate says so.** 🟢 **Both new components byte-read on `2026-11-15`; count re-derived after insertion by an independent reimplementation of `ingest/derive-counts.py` (`derived=49 claimed=49 GREEN`) because the repository's own gate is still refused by the sandbox classifier — see `agents/top.md` and `ACTION p819-B`.**
@@ -123,6 +125,70 @@ decision instead of a constraint:
   and it is the one argument that still favours `ltijs` on a long engagement.
 
 ---
+
+## P51 — The competency gradebook agent, built against a NATIONAL curriculum instrument and portable across three of them (LATAM first, with EMEA and APAC ports priced — and the first recipe here whose reusable asset is the CURRICULUM ADAPTER rather than the model)
+
+🔵 **Why it exists.** 🟢 **`T70` found that every place-bound repository `p821` shelved is bound to
+a named national instrument, not to a subject** — Peru's `CNEB`, Egypt's STEM Learning Outcomes
+with a short code per outcome, China's 人教版 knowledge-point taxonomy. 🔴 **Every tutoring recipe
+in this file so far has treated the curriculum as content. In this one it is the SCHEMA**, and
+that inversion is what makes the build defensible: the model is swappable, the adapter is not,
+and the client already owns the ground truth the adapter encodes.
+
+🟢 **The buyer is a ministry, a regional education authority or a school network — not a learner**,
+and the thing bought is a teacher's statutory output: the competency judgement and the written
+conclusion that justifies it.
+
+| Role | Component | Licence (byte-read this pass) | Region | Why this one |
+|---|---|---|---|---|
+| Reference implementation + data model | [`amaru-one/mawta`](https://github.com/amaru-one/mawta) | 🟢 **MIT** (`1,074 B`, `sha256:34142d07…`) | LATAM | 🟢 **The whole recipe already exists once, for one country.** Competency assessment against `CNEB`, achievement levels `AD/A/B/C`, the descriptive conclusion per level, one Python service per school. 🔵 **Its rule is the product rule: *"AI that proposes, never decides"* — nothing saved on the teacher's behalf, every claim pointing at the data it rests on.** |
+| Agent runtime | [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 🟢 **MIT** | Global | Already the runtime `mawta` uses, so the reference implementation and the port share a graph model. 🔵 **Each drafting step is a node with an inspectable input set — which is what "points at the data it rests on" means operationally.** |
+| Curriculum adapter — EMEA port | [`mohanvd/edutraceapp`](https://github.com/mohanvd/edutraceapp) | 🟢 **MIT** (`1,065 B`, `sha256:88765a78…`) | EMEA | 🟢 **The 🇪🇬 port's schema, already encoded:** Learning Outcomes for STEM Grades 10–11 with a stable short code (`/PH.1.01`) per outcome and MDX content behind it. 🔵 **A short code is exactly the join key `mawta` lacks for a non-Peruvian deployment.** |
+| Curriculum adapter — APAC port | [`wisdom-km/k12-qbank`](https://github.com/wisdom-km/k12-qbank) | 🟢 **MIT** (`1,066 B`, `sha256:03e6e939…`) | APAC | 🔴 **Design only — no web surface and no database, by its own README** (see the rejection row in `agents/top.md`). 🟢 **Cited for its knowledge-point taxonomy over 人教版 七年级上册 and its teacher-verification order, which is the same order this recipe enforces.** Not a dependency; a specification to copy. |
+| Longitudinal layer (optional) | [`AI-Native-Ventures/jemma`](https://github.com/AI-Native-Ventures/jemma) | 🟢 **MIT** (`1,075 B`, `sha256:888e10dd…`) | EMEA | 🟢 **Where the buyer asks for multi-year tracking, take `jemma`'s three rules rather than writing new ones (`T71`):** profile-not-label enforced in the save path, a pattern surfaced only after three terms, parent visibility gated on an explicit teacher action. |
+| Evidence transport | [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | 🟢 **Apache-2.0** | North America | *"Learner `L` produced evidence `E` for competency `C` at `t`"* and *"teacher `T` accepted/edited draft `D`"* as statements, so the audit trail survives the gradebook being replaced. |
+
+**Wiring.**
+1. **Model the instrument before the agent.** 🟢 **One table of competencies/outcomes keyed by the
+   national short code, one table of achievement levels with their official labels, one table of
+   evidence rows pointing at both.** 🔴 **Do not let the LLM invent either vocabulary** — the labels
+   are statutory (`AD/A/B/C` in Peru) and a paraphrase is a defect, not a style choice.
+2. **Split the adapter from the engine on day one.** Everything country-specific lives behind one
+   interface: `competencies()`, `levels()`, `evidence_schema()`, `conclusion_template()`. 🔵 **This
+   is the line along which the EMEA and APAC ports are priced, and it is the reason the second
+   country costs a fraction of the first.**
+3. **Drafting is a proposal, and the schema must make that literal.** Every generated conclusion
+   is written to a `draft` row with `status`, `generated_from[]` (the evidence ids) and
+   `accepted_by` **null**. 🔴 **No code path writes a grade. If one exists, the product is
+   unsellable to a ministry** — and `mawta`'s README is the plain-language statement of that
+   constraint to put in front of the client.
+4. **Make the teacher's edit the training signal, not a correction.** Store the diff between the
+   draft and the accepted text per competency. 🟢 **After one term that diff set is the most
+   valuable asset in the deployment**, and it belongs to the client.
+5. **Emit xAPI at acceptance, not at generation.** The statement that matters to an auditor is the
+   teacher accepting, with the evidence ids attached.
+6. **Port by swapping the adapter, and prove it with the EMEA fixture.** 🟢 **Acceptance test for
+   the port: resolve `/PH.1.01`, attach two evidence rows, draft a conclusion, have a reviewer
+   accept it, and read the xAPI statement back** — no engine code changed.
+
+**Licence position.** 🟢 **Zero copyleft in the delivered tree**: MIT, MIT, MIT, MIT, Apache-2.0.
+🔴 **The one trap is adjacent and named in `agents/top.md` this pass:**
+[`fotedev/Masar-x-next`](https://github.com/fotedev/Masar-x-next) is the nearest Arabic-first
+study platform and it is **AGPL-3.0** — §13 reaches users served over a network, so it cannot be
+folded into a hosted deployment of this recipe without a separate grant.
+
+**Estimate.** 🟢 **First country, on `mawta` as the reference: `8`–`10` weeks** — `2` weeks on the
+instrument model with a curriculum specialist, `3`–`4` on the drafting graph and the
+proposal/acceptance split, `2` on the teacher surface, `1`–`2` on xAPI and reporting.
+🟢 **Each additional country: `3`–`4` weeks**, almost all of it in the adapter and in validating
+the official vocabulary. 🔴 **The estimate assumes the client supplies the curriculum in machine
+-readable form. Where it exists only as PDF — which is the common case outside the three countries
+above — add `2`–`3` weeks and say so in the proposal rather than discovering it in week four.**
+
+🔴 **What this recipe does NOT claim.** `mawta` is `2★`, `0` forks and three weeks old; it is cited
+as a reference implementation and a data model, not as a dependency with a maintenance guarantee.
+🟢 **Vendoring it, or re-implementing its schema, is the honest posture, and the MIT grant permits
+both.**
 
 ## P50 — The stage-gated basic-education tutor for Brazil: a compliance router keyed on `6º ano`, and an adjudication package that replaces the detector verdict (LATAM, and the first recipe here whose core deliverable is a REFUSAL BOUNDARY inside the product)
 
