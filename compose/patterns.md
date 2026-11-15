@@ -6,7 +6,7 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
-**Forty-two** concrete recipes — derived recipes: **42**. 🟢 **Twenty-first pass (`p816`): `P40`–`P42` added** — the retention engine a studio OWNS (the first recipe here that replaces a copyleft incumbent with an ALGORITHM rather than forking it), the Anki-native agent whose deliverable includes a written refusal of the upstream's own recommended path, and retention evidence for compliance recurrency — the one recipe in this layer with an institutional buyer. 🔵 **All three exist because `T49` found the retention layer's permissive value is an algorithm with five MIT implementations, so none of them carries copyleft in its tree and `P40` carries none even transitively.** All components licence-verified by byte-read on 2026-11-15. 🟢 **Twentieth pass (`p815`): `P37`–`P39` added** — the appeal-survivable academic-integrity service (the first recipe here whose deliverable is EVIDENCE rather than a decision), the only fully permissive assessment stack this layer offers, and natural-language timetabling on a real Apache-2.0 solver. 🔵 **All three exist because `T44` found that the assessment layer's star mass is COPYLEFT, so each one names the permissive substitute explicitly and carries no copyleft in its tree.** All components licence-verified by byte-read on 2026-11-15. 🟢 **Nineteenth pass (`p814`): `P34`–`P36` added** — the citation-integrity service (the first integrity-POSITIVE recipe in this base), the sovereign institutional-repository agent on the only permissively licensed platform in the education stack, and the Brazilian norm-compliance pipeline. All components licence-verified by byte-read on 2026-11-13. 🟢 **Eighteenth pass (`p813`): `P31`–`P33` added** — the Chinese university study agent with a written integrity boundary, the North American multi-system family agent, and the clean-room client library that every cluster in this base needs and none of them has. All components licence-verified by byte-read on 2026-11-13. 🟢 **Seventeenth pass (`p812`): `P29`–`P30` added** — the Frappe-based education ERP agent, and the LATAM university self-management agent. Each names the actual
+**Forty-five** concrete recipes — derived recipes: **45**. 🟢 **Twenty-second pass (`p817`): `P43`–`P45` added** — shipping courseware INTO an LMS without adopting or licensing it, which is the first recipe here that makes the copyleft problem in `verticals/solutions.md` stop applying (`P43`); the verifiable-credential issuing service with its NA and EMEA paths stated separately because they differ (`P44`); and the guardian-facing agent, the one recipe where the credential belongs to an adult and the data to a child (`P45`). 🟢 **Twenty-first pass (`p816`): `P40`–`P42` added** — the retention engine a studio OWNS (the first recipe here that replaces a copyleft incumbent with an ALGORITHM rather than forking it), the Anki-native agent whose deliverable includes a written refusal of the upstream's own recommended path, and retention evidence for compliance recurrency — the one recipe in this layer with an institutional buyer. 🔵 **All three exist because `T49` found the retention layer's permissive value is an algorithm with five MIT implementations, so none of them carries copyleft in its tree and `P40` carries none even transitively.** All components licence-verified by byte-read on 2026-11-15. 🟢 **Twentieth pass (`p815`): `P37`–`P39` added** — the appeal-survivable academic-integrity service (the first recipe here whose deliverable is EVIDENCE rather than a decision), the only fully permissive assessment stack this layer offers, and natural-language timetabling on a real Apache-2.0 solver. 🔵 **All three exist because `T44` found that the assessment layer's star mass is COPYLEFT, so each one names the permissive substitute explicitly and carries no copyleft in its tree.** All components licence-verified by byte-read on 2026-11-15. 🟢 **Nineteenth pass (`p814`): `P34`–`P36` added** — the citation-integrity service (the first integrity-POSITIVE recipe in this base), the sovereign institutional-repository agent on the only permissively licensed platform in the education stack, and the Brazilian norm-compliance pipeline. All components licence-verified by byte-read on 2026-11-13. 🟢 **Eighteenth pass (`p813`): `P31`–`P33` added** — the Chinese university study agent with a written integrity boundary, the North American multi-system family agent, and the clean-room client library that every cluster in this base needs and none of them has. All components licence-verified by byte-read on 2026-11-13. 🟢 **Seventeenth pass (`p812`): `P29`–`P30` added** — the Frappe-based education ERP agent, and the LATAM university self-management agent. Each names the actual
 repos, the license consequence, how the pieces wire together, and a rough build estimate.
 All components were license-verified on 2026-11-13 (see `agents/top.md` and
 `repos/foundations.md`). 🟢 **Sixteenth pass (`p811`): `P27`–`P28` added** — the OneRoster
@@ -117,6 +117,152 @@ decision instead of a constraint:
   and it is the one argument that still favours `ltijs` on a long engagement.
 
 ---
+
+## P43 — Ship courseware INTO the client's LMS without adopting, forking or licensing it (Global, and the recipe that makes `verticals/solutions.md`'s copyleft problem stop applying)
+
+🔵 **Why it exists.** `T54` found four independent `2026` projects that author courseware as SOURCE
+IN A REPOSITORY and treat SCORM 1.2 / SCORM 2004 / cmi5 / LTI as COMPILE TARGETS. 🔴 **Every
+LMS-customisation engagement in this base inherits a licence: Moodle is GPL-3.0, Open edX is
+AGPL-3.0, Sakai is ECL-2.0.** 🟢 **Compiling to an interchange format means no LMS code enters the
+deliverable at all — the client's LMS becomes a render target the studio never touches, and the same
+artefact runs on every LMS in the estate.**
+
+| Role | Component | Licence (byte-read `2026-11-15`) | Why this one |
+|---|---|---|---|
+| Authoring framework (agent-driven) | [`course-code-framework/coursecode`](https://github.com/course-code-framework/coursecode) | 🟢 **MIT** (`1,069 B`, `sha256:055ad2b2…`) | 🟢 **The only one that names the agent surface explicitly — *“for Claude Code, Codex, and MCP-capable AI tools”* — and already emits all four targets** |
+| Non-developer authoring surface | [`course-code-framework/coursecode-desktop`](https://github.com/course-code-framework/coursecode-desktop) | 🟢 **MIT** (`1,069 B`, `sha256:055ad2b2…`) | 🔵 **What an instructional designer opens. Without it this is an engineering tool and faculty development cannot buy it** |
+| Source format + validator + compiler | [`aureliendossantos/elabora-core`](https://github.com/aureliendossantos/elabora-core) | 🟢 **Apache-2.0** (`11,358 B`, `sha256:cfc7749b…`) | 🟢 **The most complete statement of the shape — read it for the FORMAT design.** 🔴 One month old, `2★`: take the design, pin nothing |
+| Interactive course runtime | [`redmodd/tessera`](https://github.com/redmodd/tessera) | 🟢 **MIT** (`1,078 B`, `sha256:a7b3b71f…`) | Where the deliverable is interactive rather than page-based. Pushed `2026-11-15` |
+| Package player + record capture | [`scormflow/scorm-engine`](https://github.com/scormflow/scorm-engine) | 🟢 **MIT** (`1,079 B`, `sha256:7cdfc153…`) | 🟢 **Bundles its own LRS — collapses player+store into one dependency for small engagements** |
+| Learning record store (production) | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | 🔴 **Use this, not `scorm-engine`'s built-in, wherever the record must survive an audit.** `144★`, pushed `2026-11-14` |
+| Conformance baseline you cite | [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | 🟢 **Apache-2.0** (`11,357 B`, `sha256:58d1e17f…`) | 🔵 **ADL WROTE xAPI. Citing the spec authors' own implementation as the conformance target is a different argument in procurement than citing a popular project** |
+| cmi5 into Moodle, if the client insists | [`adlnet/Moodle-mod_cmi5launch`](https://github.com/adlnet/Moodle-mod_cmi5launch) | 🟢 **Apache-2.0** | 🟢 **Apache-2.0 plugin, so the bridge itself is clean even though Moodle is not** |
+| LTI 1.3 mount | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** | `373★`, pushed `2026-11-11` — the established choice, already in `repos/foundations.md` |
+| Agent write-back of activity | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 **MIT** | The agent's own actions become reportable institutional records rather than invisible ones |
+| Identity | [`apereo/cas`](https://github.com/apereo/cas) | 🟢 **Apache-2.0** | 🟢 **`11,399★`. The answer to “how does the agent act as the user without holding their password”** |
+
+**Wiring.**
+1. 🟢 **Define the SOURCE FORMAT first and put it under the client's version control.** Read
+   `elabora-core` for the design. 🔵 **This is the load-bearing decision: the source format is the
+   asset the client keeps, and SCORM/cmi5/LTI are disposable build outputs regenerated on demand.**
+2. 🟢 **Put the agent behind the authoring framework, not behind the LMS.** `coursecode` already
+   defines the tool surface; the agent drafts, restructures and localises SOURCE FILES, and every
+   change is a reviewable diff.
+3. 🔴 **Gate the build with a conformance check before export, not after.** `elabora-core` ships a
+   validator; `P26`'s conformance gate is the same control and should be reused rather than rebuilt.
+4. 🟢 **Compile to the target the client's LMS actually ingests.** SCORM 1.2 for the oldest estates,
+   cmi5 or xAPI where the client wants records beyond completion, LTI 1.3 where the content must stay
+   hosted by the studio.
+5. 🟢 **Point every build at one LRS.** `lrsql` in production; cite `ADL_LRS` as the conformance
+   baseline in the statement of work.
+6. 🔵 **Only then discuss the LMS.** By this point the LMS is a render target and its licence is the
+   client's problem, not the deliverable's.
+
+**Licence consequence.** 🟢 **Clean: every component above is MIT or Apache-2.0, and NO GPL/AGPL code
+enters the tree.** 🔵 **That is the entire commercial point of the pattern — compare with any recipe
+in this file that customises Moodle or Open edX directly.**
+
+🔴 **Honest limit.** The four authoring projects total `16★` and the most complete is one month old.
+🟢 **Carry the SHAPE into the studio's own repository and read these as reference implementations.
+Do not pin them as dependencies and do not present them to a client as mature supply.**
+
+**Estimate.** 6–8 weeks for a first course family with a conformance gate and an LRS;
+add 3–4 weeks if the source format has to cover interactive assessment rather than pages.
+
+
+## P44 — The verifiable-credential issuing service a university can actually put into procurement (North America anchor, with the EMEA path stated because it is DIFFERENT)
+
+🔵 **Why it exists.** `T53` found interoperability and credential portability becoming buying
+criteria in 2026; `T56` found the supply split sharply by region. 🟢 **North America has a complete,
+live, MIT-licensed reference stack. EMEA has a specification whose repository is archived.** 🔴 **A
+studio that quotes the same stack to both clients will be wrong in one of them.**
+
+| Role | Component | Licence (byte-read `2026-11-15`) | Why this one |
+|---|---|---|---|
+| Registrar-facing issuing surface | [`digitalcredentials/dcc-admin-dashboard`](https://github.com/digitalcredentials/dcc-admin-dashboard) | 🟢 **MIT** (`1,094 B`, `sha256:0f6a5db4…`, holder `Massachusetts Institute of Technology`) | 🟢 **Upload, manage, issue, collect, notify — the workflow a registrar already has, rather than an API a registrar cannot use** |
+| Holder wallet | [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) | 🟢 **MIT** (`1,092 B`, `sha256:1032f65d…`) | 🔴 **Cite THIS address, not the `91★` mirror the search index returns — see `T55`** |
+| Verification / relying party | [`digitalcredentials/verifier-plus`](https://github.com/digitalcredentials/verifier-plus) | 🟢 **MIT** (`1,087 B`, `sha256:85569d7e…`) | 🟢 **The half engagements under-budget. Issuing is an afternoon; being TRUSTED is the project** |
+| OBv3 vocabulary | [`digitalcredentials/open-badges-context`](https://github.com/digitalcredentials/open-badges-context) | 🟢 **MIT** (`1,087 B`, `sha256:85569d7e…`) | 🔵 **Pin the context or offline verification silently fails — the exact gap a demo hides** |
+| Trust registry | [`digitalcredentials/dcc-known-registries`](https://github.com/digitalcredentials/dcc-known-registries) | 🟢 **MIT** (`1,060 B`, `sha256:abbc361f…`, holder `DCC`) | Which DIDs the wallet and verifier will trust. 🔴 **Decide this in week one; it is governance, not code** |
+| Student-record source | [`Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) | 🟢 **Apache-2.0** (`10,173 B`, `sha256:a6cba85b…`) | 🔴 **Default branch is `v6.2.0`, not `main` (`T57`)** — K-12; for higher ed the SIS is the source |
+| Roster bridge | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **Apache-2.0** | Serves OneRoster 1.2 from an Ed-Fi ODS — the join between the record system and the credential |
+| Agent surface over the record | [`Ed-Fi-Exchange-OSS/Ed-Fi-SDK-for-AI-Assistants`](https://github.com/Ed-Fi-Exchange-OSS/Ed-Fi-SDK-for-AI-Assistants) | 🟢 **Apache-2.0** | 🔵 **`1★`. Use as a SANCTIONING SIGNAL in procurement, not as a dependency (`T53`)** |
+| Identity | [`apereo/cas`](https://github.com/apereo/cas) | 🟢 **Apache-2.0** | The institution almost certainly already runs it |
+| 🇪🇺 **EMEA conformance target** | [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | 🔴 **EUPL-1.2 — reciprocal, and ARCHIVED** | 🔴 **Conform to the MODEL; implement with the MIT stack above. Do NOT fork this tree (`T56`)** |
+
+**Wiring.**
+1. 🟢 **Start at the relying party, not the issuer.** Name the employers, registries or institutions
+   that must accept the credential, and confirm what they verify today. 🔴 **An engagement that issues
+   first produces credentials nobody checks.**
+2. 🟢 **Fix the trust registry and the signing key custody before any code.** `dcc-known-registries`
+   is the artefact; key custody is an institutional decision with a legal owner.
+3. 🟢 **Wire the record source.** Ed-Fi ODS → `edfi-oneroster` → issuing dashboard for K-12; the SIS
+   directly for higher ed.
+4. 🟢 **Issue into the wallet, verify through VerifierPlus, pin the OBv3 context, and test OFFLINE** —
+   the failure mode that only appears away from the demo network.
+5. 🔵 **Where an agent belongs, and where it does not.** 🟢 **Agent: assembling evidence, drafting
+   competence descriptions, mapping outcomes to a framework.** 🔴 **Never: deciding whether a credential
+   is awarded, or holding the signing key. The award is a registrar's act with an audit trail.**
+6. 🔴 **EMEA divergence.** Conform the payload to ELM/Europass and say in writing that the EU reference
+   repository is archived at `2024-02-14`, so the specification is stable and the codebase is not
+   maintained. 🔵 **Clients hear this as diligence; discovering it in month three is a different conversation.**
+
+**Licence consequence.** 🟢 **The buildable stack is wholly MIT/Apache-2.0.** 🔴 **The single
+reciprocal component, ELM, is used as a SPECIFICATION and never vendored — keep it that way and the
+deliverable stays permissive.**
+
+🔴 **Regional honesty, carried from `T56`.** 🟢 **Quote this pattern for North America today and for
+EMEA with the archived-reference caveat.** 🔴 **Do NOT quote it for APAC or LATAM as an adoption
+play: `q="academic bank of credits india"` → `1` unlicensed `0★` repo, and
+`q="credencial digital educacion verificable"` → `0`. In those regions this is a BUILD, and the
+estimate roughly doubles.**
+
+**Estimate.** 10–12 weeks North America for issuing + verification + one record-system integration;
+14–16 weeks EMEA with ELM conformance; a build in APAC/LATAM, not an adoption.
+
+
+## P45 — The guardian-facing agent, and the one place in this base where the credential belongs to an adult and the data belongs to a child (North America + EMEA)
+
+🔵 **Why it exists.** `ACTION p816-F` asked what system someone OTHER than the learner logs into about
+the learner. 🟢 **The answer is the parent portal, and this base had already shelved two of the six
+repositories that exist without naming the layer** — which is why this recipe is written now rather
+than another harvest being run.
+
+| Role | Component | Licence (byte-read) | Region | Why this one |
+|---|---|---|---|---|
+| 🇺🇸 Portal access | [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) | 🟢 **MIT** (`1,067 B`, `sha256:17dd0009…`) | North America | 🟢 **`Multi-district` by design — the tenancy problem solved in the architecture rather than by the integrator** |
+| 🇳🇴 Portal access | [`kristoffervp/vigilo-mcp`](https://github.com/kristoffervp/vigilo-mcp) | 🟢 **0BSD** (`640 B`, `sha256:b5eaf2ff…`) | EMEA | 🟢 **No attribution obligation at all — the only grant on this shelf a studio can vendor with no notice. `T52`** |
+| 🇳🇱 Portal access | [`barzoj/somtoday-mcp`](https://github.com/barzoj/somtoday-mcp) | 🟢 **MIT** (`1,082 B`, `sha256:47056e02…`) | EMEA | 🟢 **Read-only declared in the repository's own description** |
+| Identity | [`apereo/cas`](https://github.com/apereo/cas) | 🟢 **Apache-2.0** | Global | Delegated auth instead of storing a guardian's portal password |
+| Activity record | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | Global | 🔵 **Record what the AGENT did, not what the child did — see wiring step 4** |
+
+**Wiring.**
+1. 🔴 **Settle the data question before the architecture one.** The credential is a guardian's; the
+   data is a minor's. 🟢 **Both US (FERPA, COPPA where applicable) and EU (GDPR, and Annex III of the
+   AI Act where the system touches access or evaluation) treat that asymmetry as the regulated fact.**
+2. 🟢 **Read-only by construction for v1.** All three servers above are read-only or read-dominant;
+   keep it that way. 🔴 **A write path into a child's school record is a different product with a
+   different approval chain.**
+3. 🟢 **Keep the portal credential LOCAL.** `vigilo-mcp` is explicitly a local server. 🔵 **Design so
+   the guardian's credential never reaches studio or client infrastructure — this is the single
+   control that makes the data-protection conversation short.**
+4. 🟢 **Log the AGENT's actions to the LRS, not the child's behaviour.** 🔵 **The institution needs to
+   know what the assistant read and when; it does not need a new surveillance surface over a minor,
+   and building one converts a useful product into an Annex III problem.**
+5. 🔵 **Summarise, do not advise.** 🔴 **A guardian-facing agent that interprets grades, predicts
+   outcomes or recommends interventions is evaluating a learner — which is the high-risk use.
+   Summarising messages, deadlines and attendance is not.**
+
+**Licence consequence.** 🟢 **Entirely clean — 0BSD, MIT and Apache-2.0, with the 0BSD row carrying no
+obligation whatsoever.**
+
+🔴 **Honest limit.** `6` repositories exist on this channel in total, ceiling `5★`, and two of the six
+carry no licence. 🟢 **This is a pattern for ADAPTING a known-good shape to the client's own portal,
+not a shelf to assemble from — the portal is different in every country and usually in every district.**
+
+**Estimate.** 4–6 weeks per portal for a read-only guardian assistant with local credential custody;
+the second portal is roughly half the first.
+
 
 ## P40 — The retention engine the studio OWNS (Global, and the only recipe in this base that replaces a copyleft incumbent with an algorithm instead of a fork)
 

@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
+**Fifty-seven** trends — derived trends: **57** — 🟢 **Twenty-second pass (`p817`, 2026-11-15): `T52`–`T57` added** — 🔴 **`T50` CORRECTED as published, on counter-evidence this base already held** (`T52`); interoperability as a 2026 PROCUREMENT requirement with the standards bodies shipping the agent tooling (`T53`); the authoring tier gone agent-native with the interchange standards as COMPILE TARGETS (`T54`); the search index shown to have HOLES, with the first cross-owner licence-hash collision discharging `ACTION p816-E` (`T55`); the credential layer's regional asymmetry — NA live, EMEA archived, APAC/LATAM nil under active mandates (`T56`); and `ACTION p815-A` CLOSED with the branch axis fixed (`T57`). 🔵 **Re-derived after insertion by `ingest/derive-counts.py`: `57`.**
+
 **Fifty-one** trends — derived trends: **51** — 🟢 **Twenty-first pass (`p816`, 2026-11-15): `T48`–`T51` added** — the licence set by DEPLOYMENT TOPOLOGY rather than authorship, with the upstream recommending the copyleft path (`T48`); the first layer in this base whose permissive value is an ALGORITHM and is therefore separable from its copyleft application (`T49`); `NOASSERTION` shown to lean copyleft rather than neutral, `3` of `3` (`T50`); and India's nil confirmed REAL across five prescribed shapes, discharging `ACTION p813-C` (`T51`). 🔵 **Re-derived after insertion by `ingest/derive-counts.py`: `51`.**
 
 **Forty-seven** trends as of `p815` — each with the evidence behind it and
@@ -148,6 +150,8 @@ the engagement's value is, and it carries no licence exposure at all.** See `P40
 
 ## T50 — GitHub's `NOASSERTION` is not neutral: on this channel every one of them resolved to COPYLEFT, so treating it as "unknown, probably fine" imports exactly what it hides
 
+🔴 **SUPERSEDED IN PART BY `T52` (`p817`). The operational rule below — `NOASSERTION` is RED-until-read, never a skip — STANDS. The PRIOR stated in this heading does not: two `NOASSERTION` rows already on this base's own shelves resolve PERMISSIVE (`vigilo-mcp` → 0BSD, graded `p813`; `OpenLRW` → ECL-2.0, graded `p805`), taking the population to `3` copyleft / `2` build-safe. Read `T52` before acting on the sentence “it leans copyleft”.**
+
 🔴 **Three `NOASSERTION` rows were byte-read this pass. All three are copyleft, and two of them
 are load-bearing dependencies of permissive agents on this base's own shelf.**
 
@@ -209,6 +213,218 @@ vendors is where this code would most plausibly live.** 🟢 **`T26`/`T29`'s rul
 tell a market fact from a query defect is to name more systems — has now been applied to the limit
 of what this channel can see, so per `p773-E` the action is RETIRED rather than carried a fourth
 time.**
+
+
+## T52 — 🔴 `T50` is WRONG as published, and this base's own shelf already held the counter-evidence: `NOASSERTION` does not lean copyleft, it means the MATCHER FAILED
+
+🔴 **`p816` published `T50` as an operational prior: *“on this channel every one of them resolved to
+COPYLEFT … `0` of this pass's `3` resolved permissive.”* The sample was three rows, all drawn from one
+layer, and the generalisation was not checked against this base's own index.**
+
+🟢 **Checked this pass. Two `NOASSERTION` rows that THIS BASE HAD ALREADY BYTE-READ ITSELF resolve
+permissive, and both were on the shelves before `T50` was written:**
+
+| Repo | ★ | GitHub field | Byte-read verdict | Payload | Graded at |
+|---|---|---|---|---|---|
+| [`kristoffervp/vigilo-mcp`](https://github.com/kristoffervp/vigilo-mcp) | 2 | 🔴 `NOASSERTION` | 🟢 **0BSD (Zero-Clause BSD)** | `640 B`, `sha256:b5eaf2ff…` | `p813` |
+| [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 62 | 🔴 `NOASSERTION` | 🟢 **ECL-2.0** (Educational Community License) | `9,878 B`, `sha256:f339063d…` | `p805` |
+
+🔴 **So the full population of `NOASSERTION` rows this base has byte-read is `5`, not `3`, and it splits
+`3` copyleft / `2` build-safe.** 🟢 **And the `0BSD` row is not a marginal counter-example — `agents/top.md`
+calls it *“the MOST PERMISSIVE GRANT ON THIS SHELF”*, a grant requiring not even attribution.**
+
+### The mechanism, corrected
+
+🟢 **`T50`'s explanation of WHY `licensee` fails is right and is worth keeping:** it matches payloads
+against stock licence TEXTS, and a SHORT REFERENCE NOTICE does not match. 🔴 **What is wrong is the claim
+that the failure is *correlated with copyleft*. The two specimens above fail for two further reasons that
+carry no copyleft signal at all:**
+
+- 🔵 **Decorated stock text.** `vigilo-mcp`'s payload is the full 0BSD text under an `===============`
+  underline rule. The licence is complete; the decoration defeats the match.
+- 🔵 **A sector-specific licence at FULL LENGTH.** `OpenLRW` ships `9,878 B` of Educational Community
+  License — the opposite of a short notice. 🔴 **And the sector that uses ECL is *this* sector: it is the
+  licence of the Apereo/Sakai higher-education ecosystem.** 🟢 *(GitHub does classify ECL-2.0 correctly
+  elsewhere — [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) reads `ECL-2.0` at `1,238★`
+  on an `11,120 B` payload — so this is a per-payload matcher failure, not blindness to the licence.)*
+
+🟢 **The operational rule from `T50` is UNCHANGED and in fact strengthened: `NOASSERTION` is RED-until-read,
+never a skip.** 🔴 **What changes is the reason. `p816` said skipping imports copyleft you did not see.
+It also DISCARDS build-safe supply you could have shipped — including, in this base's own index, the
+freest row it owns.** 🔵 **Stated as a prior a pass can act on: `NOASSERTION` carries NO licence
+information in either direction. Read the bytes, and do not let either expectation do the reading.**
+
+🔵 **And the process lesson, which is the transferable half: `T50` was derived from a three-row sample
+inside one pass's harvest when the base's own shelves already contained the refutation. Before publishing
+a rule ABOUT the channel, grep the index for rows the rule would have mis-predicted.**
+
+
+## T53 — Interoperability stopped being an engineering preference and became a PROCUREMENT REQUIREMENT in 2026 — while the agent surface over it is still being built by the standards bodies themselves
+
+🟢 **Two independent channels agree this pass, which is rare enough in this base to state plainly.**
+
+🔵 **Channel 1 — the market.** 1EdTech's 2026 trends note that interoperability is moving from *a best
+practice; something institutions should aspire to if time, budget, and technical capacity allowed* to a
+baseline expectation, citing France's national interoperability decree; a parallel trends piece lists
+*interoperability becomes a buying criterion*. The European Digital Education Hub's Higher Education
+Interoperability Framework covers the learner journey including credentials and digital identity, tied to
+the EU Digital Identity Wallet. 🟡 **`SECONDARY` — these are advocacy and consultancy publications, not
+independent market research, and they should be cited as positions rather than as measurements.**
+
+🔵 **Channel 2 — the repositories, `FIRST-HAND` this pass.** The standards bodies are shipping agent
+tooling under their own names:
+
+| Repo | Body | Licence | ★ | Pushed |
+|---|---|---|---|---|
+| [`Ed-Fi-SDK-for-AI-Assistants`](https://github.com/Ed-Fi-Exchange-OSS/Ed-Fi-SDK-for-AI-Assistants) | Ed-Fi Alliance 🇺🇸 | 🟢 Apache-2.0 | 1 | `2026-11-12` |
+| [`Prototype-Semantic-Layer-with-MCP`](https://github.com/Ed-Fi-Exchange-OSS/Prototype-Semantic-Layer-with-MCP) | Ed-Fi Alliance 🇺🇸 | 🟢 Apache-2.0 | 0 | `2026-11-12` |
+| [`edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | Ed-Fi Alliance 🇺🇸 | 🟢 Apache-2.0 | 6 | `2026-11-13` |
+| [`Moodle-mod_cmi5launch`](https://github.com/adlnet/Moodle-mod_cmi5launch) | ADL (US DoD) 🇺🇸 | 🟢 Apache-2.0 | 9 | `2026-03-18` |
+
+🔴 **Every one of them is under `10★`.** 🟢 **Which is exactly the point, and the commercial reading of
+this trend: star count measures developer attention, and these repositories are not competing for it —
+they are the sanctioning body's statement of direction.** 🔵 **On an engagement that is worth more than
+`10,000★` of community project, because the objection that kills agent projects in education is not
+*“can it be built”* but *“will the data owner permit it”*, and here the data standard's own custodian has
+answered in public.**
+
+🔴 **The gap this opens, stated as the pass's widest build slot: the requirement is arriving on a
+procurement timetable and the supply above is prototype-grade.** 🟢 **A studio that can show a working
+Ed-Fi-to-agent path in `2026` is early against a buying criterion rather than late against a trend.**
+
+
+## T54 — The authoring tier flipped AGENT-NATIVE in nine months, and the 1999–2016 interchange standards became the OUTPUT FORMAT rather than the platform
+
+🟢 **Four independent projects, four different authors, no shared org, all created in `2026`, all
+permissive, all describing the same architecture:**
+
+| Repo | Created | Licence | ★ | Self-description |
+|---|---|---|---|---|
+| [`coursecode`](https://github.com/course-code-framework/coursecode) | `2026-02-12` | 🟢 MIT | 7 | *“course authoring framework for Claude Code, Codex, and MCP-capable AI tools”* |
+| [`tessera`](https://github.com/redmodd/tessera) | `2026-05-03` | 🟢 MIT | 5 | *“designed for AI-assisted authoring”* |
+| [`scorm-engine`](https://github.com/scormflow/scorm-engine) | `2026-05-24` | 🟢 MIT | 2 | *“SCORM, xAPI, and cmi5 — with built-in LRS … and AI analytics”* |
+| [`elabora-core`](https://github.com/aureliendossantos/elabora-core) | `2026-10-20` | 🟢 Apache-2.0 | 2 | *“source format, validator, SCORM compiler, player, editing engine and agent tooling”* |
+
+🔵 **The inversion, stated precisely.** For twenty years the LMS was the system and SCORM was how content
+got INTO it. 🟢 **In these four the course is authored as SOURCE IN A REPOSITORY by an agent, and SCORM
+1.2 / SCORM 2004 / cmi5 / LTI are COMPILE TARGETS** — the same relationship a web build has to a browser.
+
+🟢 **Why that is the most commercially useful thing in this pass.** `verticals/solutions.md` is dominated
+by a licence problem: Moodle is GPL-3.0, Open edX is AGPL-3.0, and every engagement that customises one
+inherits it. 🔵 **Compiling to an interchange format makes the licence question disappear, because no LMS
+code enters the deliverable — the client's existing LMS becomes a render target the studio never touches.**
+🟢 **It also makes the work PORTABLE across the client's own estate**, which in a university is never one LMS.
+
+🔴 **The honest limit, and it is severe: `16★` across all four, and the most architecturally complete one
+is one month old.** 🟢 **So the recommendation is the SHAPE, carried into a studio's own repository, with
+these read as reference implementations — not a dependency to pin.** See `P43`.
+
+
+## T55 — The search index has HOLES, and the licence byte-hash is the instrument that catches them — with the first CROSS-OWNER collision this base has measured
+
+🔴 **Measured this pass, `FIRST-HAND`:**
+`gh api -X GET search/repositories -f q="repo:digitalcredentials/learner-credential-wallet"` → **`total_count=0`**.
+🟢 **The repository is LIVE:** `raw.githubusercontent.com/digitalcredentials/learner-credential-wallet/main/LICENSE`
+returns HTTP `200`, `1,092 B`, MIT, holder *“Digital Credentials Consortium”*, year range `2021-2026`.
+🟢 **And the index is not blind to the org** — `repo:digitalcredentials/verifier-plus` returns `1`.
+
+🔴 **What the index returns INSTEAD, for `q="learner credential wallet"`, is
+[`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) at `91★`,
+reporting `fork: false`.** 🟢 **Its `LICENSE` is byte-identical to the DCC original — `1,092 B`,
+`sha256:1032f65d…`, the same holder line naming the Digital Credentials Consortium.**
+
+🔵 **Three things follow, in order of weight.**
+
+1. 🔴 **A search-only harvest publishes a mirror as canonical.** This base's entire measurement channel is
+   `search/repositories`, because per-repository API reads are blocked in this environment. 🟢 **The
+   licence byte-hash is the only instrument that caught it, and it caught it through the HOLDER LINE —
+   exactly the population `T41` bounded the instrument to.**
+2. 🟢 **`ACTION p816-E`, limb 2, is DISCHARGED — and in the direction `p816` said was unsupported.**
+   `p816` sampled `24` reads, found `14` holder-embedding MIT payloads, `14` distinct holders and **`0`
+   cross-owner collisions**, and recorded that *“at least one is a genuine re-publication rather than a
+   sibling repo by the same author”* was NOT supported. 🟢 **This pass adds `13` holder-embedding reads
+   for a running sample of `37`, and finds the first cross-owner collision: `ryjones` ≠
+   `digitalcredentials`, payload identical, holder naming the latter.** 🔵 **Limb 2 is now supported by
+   one specimen. The instrument does detect re-publication across owners, and GitHub's `fork` field —
+   `false` here — does not.**
+3. 🔵 **A star count is a property of the CHANNEL, not of the repository.** The canonical wallet is shelved
+   `n/a` in `repos/foundations.md` because the field this base reads stars from does not exist for it.
+   🔴 **Any ranking this base produces is a ranking of what the index returned.**
+
+🟡 **What would settle the cause — index lag, a rename, or a deliberate exclusion — needs per-repository
+API reads, which are blocked here. Registered rather than guessed.**
+
+
+## T56 — The credential layer's regional asymmetry is the sharpest in this base: North America permissive and LIVE, EMEA official and ARCHIVED, APAC and LATAM measured nil under active national mandates
+
+🟢 **Placed per `T42` — region follows the target system's catalogue, not the author's address.**
+
+| Region | Reference implementation | Licence | Liveness | Verdict |
+|---|---|---|---|---|
+| 🇺🇸 **North America** | DCC stack (`learner-credential-wallet`, `verifier-plus`, `dcc-admin-dashboard`, `open-badges-context`) + Ed-Fi | 🟢 **MIT / Apache-2.0** | 🟢 pushed `2026-10-15` → `2026-11-13` | 🟢 **Adoptable today** |
+| 🇪🇺 **EMEA** | [`European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) (Europass Digital Credentials) | 🔴 **EUPL-1.2 — reciprocal** | 🔴 **ARCHIVED**, last push `2024-02-14` | 🔴 **Specification yes, codebase no** |
+| 🌏 **APAC** | — | — | — | 🔴 **Measured nil** |
+| 🌎 **LATAM** | — | — | — | 🔴 **Measured nil** |
+
+🔴 **The EMEA finding is the one to carry into a conversation, because it is counter-intuitive.** Europe
+has the most developed credential POLICY in the world — European Digital Credentials for Learning, the
+EQF, the EU Digital Identity Wallet — 🔴 **and the reference data model's repository is archived and nearly
+two years stale, under a reciprocal licence that is not interchangeable with the MIT stack a studio would
+otherwise reach for.** 🟢 **The correct engagement posture: treat ELM as a SPECIFICATION to conform to and
+implement against the DCC/MIT stack. Do not fork the EU tree.**
+
+🔴 **The APAC and LATAM nils, measured this pass and stated with their queries so they can be re-run:**
+`q="academic bank of credits india"` → `1` (`0★`, no licence);
+`q="diksha ndear education india"` → **`0`**;
+`q="gigaschool japan education data"` → **`0`**;
+`q="singapore student learning space api"` → **`0`**;
+`q="australia unique student identifier"` → `2`, ceiling `3★`, both unlicensed;
+`q="credencial digital educacion verificable"` → **`0`**;
+`q="certificado digital universidad blockchain"` → `4`, every row `0★`, one author, nothing pushed since `2022`;
+`q="interoperabilidad educativa estandar"` → **`0`**; `q="registro academico nacional api"` → **`0`**.
+
+🔵 **And the reason these nils are commercially loud rather than quiet.** 🔴 **India's Ministry of Education
+has made AI and Computational Thinking mandatory from Class 3 beginning the `2026-27` academic year, and
+NEP-era reform makes the Academic Bank of Credits a national credit-portability obligation — against `1`
+unlicensed `0★` repository.** 🔴 **LATAM reports the highest AI ENGAGEMENT in this base — a 2026 survey
+puts `92%` of students and `79%` of faculty actively using AI — against `30%` of universities having
+published any AI policy, and zero open credential infrastructure.** 🟡 **Both figures `SECONDARY`; the
+repository counts are `FIRST-HAND`.** 🟢 **Mandate without infrastructure is the cleanest engagement
+opening this base records: the obligation is already someone's problem and the open-source answer does
+not exist in either region.**
+
+
+## T57 — `ACTION p815-A` CLOSED: the licence probe's branch axis is resolved from the search response, and the first repository it rescued was the anchor of the North American K-12 data standard
+
+🔴 **`p815` left the probe with one degree of freedom unfixed.** `T43` fixed the FILENAME axis; the BRANCH
+was still guessed by iterating `main` then `master`, and `pressbooks/pressbooks` (`462★`) had read as
+unlicensed purely because its default branch is `dev`. 🔴 **`p815` recorded that until this was fixed
+*“every `NO_PAYLOAD` verdict in this base carries an unquantified false-positive rate.”*
+
+🟢 **Implemented this pass.** The probe now takes `default_branch` from the SAME `search/repositories`
+response that supplies stars and licence, so the branch is never guessed, and the filename list gained
+`LICENCE` (British spelling, as `p815` prescribed), `LICENCE.md`, `COPYING.txt` and lower-case `license`.
+
+🟢 **It paid for itself on the first run, twice:**
+
+- 🔴 **[`Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard)
+  publishes from default branch `v6.2.0`.** 🟢 **A `main`/`master` probe returns `NO_PAYLOAD` for the
+  foundation of US K-12 data interoperability.** It is Apache-2.0, `10,173 B`, `sha256:a6cba85b…`.
+  🔵 **Second confirmed specimen of the class after `pressbooks`, and the first where the false negative
+  would have landed on a layer anchor rather than a leaf.**
+- 🔴 **[`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model)
+  names its licence file `license`, lower case.** 🟢 **Caught only by the widened filename list; the EUPL-1.2
+  reading in `T56` does not exist without it.**
+
+🟢 **A second, unplanned result — a de-duplication control, free.** The Ed-Fi ALLIANCE repositories carry a
+`10,173 B` Apache text (`a6cba85b…`) while the Ed-Fi EXCHANGE repositories carry the stock `11,357 B` one
+(`c71d239d…`). 🔵 **Same programme, two packaging pipelines, separable by hash — which is `T41`'s
+instrument doing the one thing stock Apache text CAN support: distinguishing publishers, not owners.**
+
+🔴 **What is still NOT closed, and is now quantified rather than asserted: the false-positive rate of
+historical `NO_PAYLOAD` verdicts.** 🟢 **Every verdict recorded before this pass used a guessed branch.
+Carried as `ACTION p817-B`: re-probe the recorded `NO_PAYLOAD` rows with the fixed probe and count how
+many were artefacts.**
 
 
 ## T44 — The assessment layer inverts education's licence profile: everywhere else the star mass is MIT, here the star mass IS the copyleft

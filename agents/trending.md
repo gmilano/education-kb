@@ -4,6 +4,121 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-second pass) — **The layer that MOVES and PROVES a learner's record — and a published rule of this base's own, refuted by evidence this base already held**
+
+**Pass `p817`.** 🟢 **Seven build-safe agent rows added and one copyleft row; `10` foundation rows
+and `7` platform rows; `3` rejections filed; `T52`–`T57` and `P43`–`P45` written.**
+🟢 **`ingest/derive-counts.py` → `EXIT=0`, all five graded files GREEN: shelf `149`, foundations
+`120`, verticals `102`, trends `57`, recipes `45`.**
+
+### The headline is a CORRECTION, not a harvest
+
+🔴 **`p816` published `T50`: *“on this channel every `NOASSERTION` resolved to COPYLEFT … `0` of this
+pass's `3` resolved permissive.”* It was generalised from three rows inside one layer's harvest and
+was not checked against this base's own index.** 🟢 **Two counter-examples were already on these
+shelves, byte-read by this base, before `T50` was written:**
+
+| Repo | GitHub field | Byte-read | Graded at |
+|---|---|---|---|
+| [`kristoffervp/vigilo-mcp`](https://github.com/kristoffervp/vigilo-mcp) | 🔴 `NOASSERTION` | 🟢 **0BSD** — *“the MOST PERMISSIVE GRANT ON THIS SHELF”*, in this base's own words | `p813` |
+| [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🔴 `NOASSERTION` | 🟢 **ECL-2.0** (Educational Community License) | `p805` |
+
+🔴 **Population `5`, split `3` copyleft / `2` build-safe.** 🟢 **`T50`'s operational rule —
+`NOASSERTION` is RED-until-read, never a skip — STANDS and is strengthened: skipping loses build-safe
+supply as well as hiding copyleft.** 🔵 **`T50` is banner-marked superseded-in-part; `T52` carries
+the corrected prior and the corrected mechanism (`licensee` also fails on DECORATED stock text and on
+sector-specific licences at FULL length, neither of which correlates with copyleft).**
+
+🔵 **The transferable lesson, and the reason this is the headline: before publishing a rule ABOUT the
+channel, grep the index for rows the rule would have mis-predicted.**
+
+### The layer: what MOVES a record between systems, and what PROVES it outside them
+
+🔵 **The sequence is now five questions.** `p813` what a learner logs into; `p814` what else
+(the research library); `p815` what assesses them; `p816` what they open voluntarily; 🟢 **`p817`
+what happens to the RECORD afterwards — how it moves between systems and how it is proven outside them.**
+
+| Query | `total_count` | Top row | ★ | Licence (byte-read) |
+|---|---|---|---|---|
+| `xapi learning record store` | **39** | `LearningLocker/learninglocker` | **587** | 🔴 GPL-3.0 |
+| `lti 1.3 tool provider` | **11** | `Cvmcosta/ltijs` | **373** | 🟢 Apache-2.0 |
+| `oneroster api` | **38** | `Apereo…/OpenLRW` | 62 | 🟢 **ECL-2.0** (field says `NOASSERTION`) |
+| `cmi5 course` | **19** | `ByLightSDC/rapidcmi5` | 13 | 🔴 AGPL-3.0 |
+| `qti assessment item` | **11** | `amp-up-io/qti3-item-player` | 30 | 🟢 MIT |
+| `ed-fi data standard` | **3** | `Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard` | 47 | 🟢 Apache-2.0 |
+| `learner credential wallet` | **11** | 🔴 a MIRROR — see `T55` | 91 | 🟢 MIT |
+| `open badges verifiable credential` | **6** | `TanimowoObaloluwaDavid/credential-lens` | 1 | 🟢 MIT |
+| `xapi mcp server` | **10** | `DavidLMS/learnmcp-xapi` | 16 | 🟢 MIT |
+| `ed-fi mcp` | **12** | 🔴 `10` of `12` unrelated | — | — |
+| `scorm player open source` | **3** | `scormflow/scorm-engine` | 2 | 🟢 MIT |
+| `ebsi verifiable diploma` 🇪🇺 | **1** | `KDiamantidis/ebsi-vc-poc` | 0 | 🔴 declared nil — no licence |
+
+🔴 **The shape of the layer, and it is the inverse of `p814`'s.** The research library gave `348`
+repositories and a `38,407★` ceiling. 🔴 **Here the ENGINES are mature and institution-grade while the
+AGENT surface over them is two rows, one of which is unlicensed.** 🟢 **That asymmetry is the
+commercial finding: the plumbing is solved, the agent layer over it is not, and 2026 procurement has
+started naming the plumbing (`T53`).**
+
+### The four other findings, in order of commercial weight
+
+🟢 **1. `T54` — the authoring tier went AGENT-NATIVE and the interchange standards became COMPILE
+TARGETS.** Four independent permissive projects, four authors, no shared org, all created in `2026`:
+[`coursecode`](https://github.com/course-code-framework/coursecode) (MIT, `7★`),
+[`tessera`](https://github.com/redmodd/tessera) (MIT, `5★`, pushed the day of this pass),
+[`scorm-engine`](https://github.com/scormflow/scorm-engine) (MIT, `2★`),
+[`elabora-core`](https://github.com/aureliendossantos/elabora-core) (Apache-2.0, `2★`, one month old).
+🟢 **The course is authored as source in a repository; SCORM 1.2/2004, cmi5 and LTI are build outputs.**
+🔵 **Which means the licence problem that dominates `verticals/solutions.md` — Moodle GPL-3.0, Open edX
+AGPL-3.0 — stops applying, because no LMS code enters the deliverable. `P43` is the recipe and it is
+this pass's highest-leverage output.** 🔴 **Honest limit: `16★` across all four. Ship the SHAPE.**
+
+🟢 **2. `T53` — interoperability became a BUYING CRITERION, and the standards bodies are shipping the
+agent tooling.** 🟡 `SECONDARY`: 1EdTech's 2026 trends describe interoperability moving from
+aspiration to baseline, citing France's national interoperability decree; ETS argues the asset is the
+learning DATA, not the model. 🟢 `FIRST-HAND`: the Ed-Fi Alliance now publishes
+[`Ed-Fi-SDK-for-AI-Assistants`](https://github.com/Ed-Fi-Exchange-OSS/Ed-Fi-SDK-for-AI-Assistants)
+(Apache-2.0) with no demonstration caveat, alongside `p810`'s MCP prototype. 🔵 **At `1★` it is
+worthless as supply and valuable as SANCTION — the data standard's custodian endorsing agent access
+in public is the objection-killer in district procurement.**
+
+🔴 **3. `T55` — the search index has HOLES, and this base reads the world through it.**
+`q="repo:digitalcredentials/learner-credential-wallet"` → **`total_count=0`**, while the repository
+serves HTTP `200` on raw with an MIT payload naming the Digital Credentials Consortium. 🔴 **The index
+returns a `91★` mirror instead, reporting `fork: false`, whose `LICENSE` is byte-identical
+(`1,092 B`, `sha256:1032f65d…`) holder line and all.** 🟢 **`ACTION p816-E` limb 2 DISCHARGED: this is
+the first CROSS-OWNER collision this base has measured (`p816` reported `0` in `24` reads; the running
+sample is now `37`), and it is a genuine re-publication the `fork` field missed.** 🔵 **Every star
+figure in this base is a property of the index, not of the world.**
+
+🔴 **4. `T56` — the credential layer's regional asymmetry, and EMEA is the surprise.** North America:
+MIT/Apache-2.0 and live (DCC stack pushed `2026-10-15`, Ed-Fi `2026-11-13`). 🔴 **EMEA: the Europass
+data model [`European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model)
+is EUPL-1.2 — reciprocal — and its repository is ARCHIVED, last pushed `2024-02-14`.** 🔴 **APAC and
+LATAM: measured nils under active national mandates** — India's AI curriculum is mandatory from Class 3
+from `2026-27` and the Academic Bank of Credits is a national obligation, against `1` unlicensed `0★`
+repository; `q="credencial digital educacion verificable"` → `0`. 🟢 **Mandate without infrastructure
+is the cleanest opening this base records.**
+
+🟢 **And `T57` — `ACTION p815-A` CLOSED.** The probe now resolves `default_branch` from the search
+response instead of guessing `main`/`master`, and the filename list gained `LICENCE`, `LICENCE.md`,
+`COPYING.txt` and lower-case `license`. 🟢 **It paid for itself immediately:
+[`Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) publishes from
+branch `v6.2.0` — a `main`-only probe reports `NO_PAYLOAD` for the anchor of US K-12 data
+interoperability — and the European Learning Model's EUPL payload sits in a lower-case `license` file.**
+
+### What this pass did NOT do, stated so silence is not read as coverage
+
+- 🔴 **No regional nil was closed.** EMEA gained one agent row (`somtoday-mcp`); APAC and LATAM gained none.
+- 🔴 **`ACTION p816-F`'s parent-portal question was already `67%` answered before it was asked** —
+  `q="parent portal mcp"` returns `6` repositories and `p813` had already shelved two of them. 🟢 **One
+  genuinely new row resulted. The layer is written up as `P45` rather than re-harvested.**
+- 🔴 **`ACTION p816-C` is retired as pending work.** It requires contacting maintainers on behalf of the
+  studio; this pass ran unattended with no human in the loop, sought no such decision and contacted
+  nobody. 🟢 **Recorded as BLOCKED ON A HUMAN DECISION per `p816-C`'s own instruction.**
+- 🔴 **A query defect of this pass's own is recorded rather than buried:** `q="caliper analytics sensor"`
+  → `0` nearly became a published claim that Caliper has no open implementations. 🟢 **This base's own
+  `repos/foundations.md` refutes it — the Caliper table has been populated since `p805`.**
+
 ## `2026-11-15` (twenty-first pass) — **The layer a learner opens when NOBODY is making them — and the first layer in twenty-one passes whose star mass is PERMISSIVE and whose copyleft risk arrives through convenience rather than ignorance**
 
 **Pass `p816`.** 🟢 **Ten agent rows added, all build-safe, every licence byte-read; one copyleft

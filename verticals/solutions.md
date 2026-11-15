@@ -7,7 +7,7 @@ updated: 2026-11-15
 # Education vertical platforms — real systems to customize AI on top of
 
 
-## Education vertical platforms — 95 rows
+## Education vertical platforms — 102 rows
 
 🟢 **Twentieth pass (`p815`, 2026-11-15): six platform rows added under a new tier — the
 ASSESSMENT ENGINE — and the figure above is the gate's output.** 🔵 **The gate caught the draft
@@ -25,6 +25,23 @@ implemented with uncounted-table detection. Gate output:
 claimed `70` — the pre-insertion figure — and the gate rejected it: *"RED heading claims 70, the
 file holds 81."* 🟢 **That is precisely the drift `compose/patterns.md` has had to confess four
 times in prose. It is now caught by a program instead of by the next pass's reader.**
+
+## 🟢 Twenty-second pass (`p817`, 2026-11-15) — the platform tier that issues a record the learner CARRIES AWAY, and the identity layer every other tier in this file authenticates through
+
+🔵 **Two tiers, and the second is an omission rather than a discovery.** 🟢 **The credential tier
+issues something a third party can verify without calling the institution back — the only tier in
+this file whose output outlives enrolment.** 🔴 **The identity tier is the one twenty-one passes
+walked past: every LMS, SIS, LRS and portal already named in this file authenticates through it.**
+
+| Platform | Repo | Licence | Stars | What it is |
+|---|---|---|---|---|
+| Apereo CAS | https://github.com/apereo/cas | 🟢 **Apache-2.0** (`11,358 B`, `sha256:cfc7749b…`) | 11399 | **Region: Global.** 🟢 **New this pass (`p817`) — the most-starred repository in this entire knowledge base, education or otherwise.** Enterprise SSO for higher education. 🔴 **That twenty-one passes never shelved it is the finding: this base harvested what agents TALK TO and skipped what every one of those systems TRUSTS.** 🔵 **On an engagement it answers the question that otherwise stalls agent projects — *how does the agent act as the user without holding the user's password* — and the institution is usually already running it** |
+| uPortal | https://github.com/uPortal-Project/uPortal | 🟢 **Apache-2.0** (`11,359 B`, `sha256:5d7a4884…`) | 287 | **Region: Global.** 🟢 **New this pass (`p817`).** *“Enterprise open source portal built by and for the higher education community.”* Pushed `2026-11-14`. 🔵 **The surface a university puts in front of its systems — and the place staff and students will expect an agent to appear, rather than in a separate chat product** |
+| DCC Admin Dashboard | https://github.com/digitalcredentials/dcc-admin-dashboard | 🟢 **MIT** (`1,094 B`, `sha256:0f6a5db4…`, holder `Massachusetts Institute of Technology`) | 12 | **Region: North America.** 🟢 **New this pass (`p817`) — the registrar's surface for verifiable credentials.** Upload, manage, issue, collect, notify. 🔵 **The piece that makes `P44` a procurement item rather than a demo: it matches a workflow a registrar already performs** |
+| DCC VerifierPlus | https://github.com/digitalcredentials/verifier-plus | 🟢 **MIT** (`1,087 B`, `sha256:85569d7e…`) | 19 | **Region: North America.** 🟢 **New this pass (`p817`).** The relying-party surface — where an employer or institution checks a credential. 🔴 **Routinely under-budgeted: issuing is an afternoon, being trusted is the project** |
+| Learner Credential Wallet | https://github.com/digitalcredentials/learner-credential-wallet | 🟢 **MIT** (`1,092 B`, `sha256:1032f65d…`, holder `Digital Credentials Consortium`) | n/a | **Region: North America.** 🟢 **New this pass (`p817`).** Cross-platform iOS/Android holder wallet. 🔴 **Stars `n/a` because the repository is ABSENT from the search index while live on raw — see `T55`. Cite this address, never the `91★` mirror the index returns** |
+| Europass / European Learning Model | https://github.com/european-commission-empl/European-Learning-Model | 🔴 **EUPL-1.2 — reciprocal** (`13,865 B`, `sha256:6e5399ad…`) | 54 | **Region: EMEA.** 🔴 **New this pass (`p817`), filed as a WARNING.** The data model behind Europass Digital Credentials, from DG EMPL. 🔴 **ARCHIVED; last pushed `2024-02-14`.** 🟢 **Use as a conformance SPECIFICATION and implement with the MIT rows above — do not fork it (`T56`, `P44`)** |
+| Learning Locker | https://github.com/LearningLocker/learninglocker | 🔴 **GPL-3.0** (`35,141 B`, `sha256:589ed823…`) | 587 | **Region: Global.** 🔴 **New this pass (`p817`), filed as a FLAG.** The most-starred LRS on this channel, last pushed `2024-05-30`. 🔴 **This base had shelved two of the same org's small MIT satellites at `p805` and skipped its flagship — because the flagship is where the copyleft is.** 🟢 **Do not propose it; it is here so a client already running it meets a correct licence reading** |
 
 ## 🟢 Twenty-first pass (`p816`, 2026-11-15) — the platform tier a learner opens WITHOUT being told to, and the first tier in this file where the permissive platform is a real alternative rather than a consolation
 

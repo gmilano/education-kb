@@ -4,6 +4,193 @@ region: Global
 updated: 2026-11-15
 ---
 
+## 🆕 `p817` — **Disposition of `ACTION p816-A`…`p816-F`, all six answered in the pass that received them, and the actions for the next pass**
+
+🟢 **`ACTION p816-A` made the disposition a precondition. This section exists because of it, and it
+is being written in the same pass that did the harvesting rather than two passes later.**
+
+🟢 **`derive-counts.py` was run FIRST, before any edit, per `p813-A`, and returned `EXIT=0` on all
+five graded files:** `compose/patterns.md 42`, `intel/trends.md 51`, `agents/top.md 142`,
+`repos/foundations.md 110`, `verticals/solutions.md 95`. 🟢 **Re-run after every insertion and GREEN
+on all five at commit:** `patterns 45`, `trends 57`, `shelf 149`, `foundations 120`, `verticals 102`.
+
+### 🟢 `ACTION p816-A` — **CLOSED. This section is the discharge.**
+
+🟢 **Rows added and a disposition written in the same pass.** 🔵 **The rule stated mechanically by
+`p816` — *a pass that adds rows and writes no `## 🆕 pXXX` section has not finished* — held, and cost
+nothing. Keep it.**
+
+### 🟡 `ACTION p816-B` — **NOT DONE, and recorded as not done rather than silently dropped**
+
+🔴 **The `T36` integrity sweep (`~82` of `142` build-safe rows carry no integrity grade) was not run
+this pass.** 🔴 **It is now owed five times.** 🟢 **The honest reason, stated so the next pass can
+judge the trade: this pass spent its budget on `T52` — a published rule of this base's own found to
+be wrong — and on the layer harvest, and a partial sweep tacked onto the end would have been
+unreviewed work on a shelf that has grown to `149`.** 🔵 **`p816` already reshaped this action to be
+completable (grep for three verbs only: *signs in*, *submits*, *generates answers*). 🟢 **That
+reshaping is still right and is carried unchanged as `ACTION p817-A`. It should be the FIRST thing
+the next pass does, before any harvest, because it is the only action here that five passes have
+deferred.**
+
+### 🔴 `ACTION p816-C` — **RETIRED as pending work, exactly as `p816` instructed**
+
+🔴 **`p816-C` asked for outward-facing contact with three maintainers on behalf of the studio
+(`srs-benchmark` `287★`, `nailuoGG/anki-mcp-server` `254★`, `loyaniu/moodle-mcp` `57★`) and noted it
+*“requires a human decision and `p816` did NOT do it.”*** 🔴 **`p817` ran unattended on a schedule
+with no human in the loop. It did not seek that decision, could not have obtained it, and contacted
+nobody.** 🟢 **Per `p816-C`'s own closing instruction — *“if `p817` cannot get that decision, say so
+plainly and stop re-listing it as though it were pending work”* — this is now recorded as **BLOCKED
+ON A HUMAN DECISION** and removed from the action list.** 🔵 **It is also mirrored in
+`agents/top.md`'s declared gaps so it is visible where the affected rows are. It returns to the
+action list only when a person authorises outward contact; no future pass should re-list it as work
+an unattended run can do.**
+
+### 🟢 `ACTION p816-D` — **CLOSED, and it resolves to LIMB 2**
+
+🔴 **The question: is `FooSoft/anki-connect` (`2,083★`, GPL-3.0-or-later, pushed `2025-11-04`) a
+single point of failure with no successor?** 🟢 **Both prescribed probes were run:**
+
+| Query | `total_count` | Notable rows |
+|---|---|---|
+| `anki connect fork` | **5** | `Soki-Team/Anki-Connect-Plus` (`20★`, 🔴 `NOASSERTION`); `JSchoreels/anki-connect` (`6★`, 🔴 `NOASSERTION`, pushed `2026-10-26`); `Madoshakalaka/anki_bridge` (🟢 MIT, `1★`) |
+| `ankiconnect replacement` | **2** | 🟢 [`Macro002/anki-cli`](https://github.com/Macro002/anki-cli) (🔴 **AGPL-3.0**, pushed `2026-11-13`); `davidgut1982/anki-collection-server` (🔴 AGPL-3.0) |
+
+🟢 **A maintained replacement DOES exist and it is architecturally better than what `p816` hoped
+for:** `anki-cli` is *“Anki's own engine as a fast headless server and CLI: a drop-in AnkiConnect
+replacement (legacy + v1 API) without Anki Desktop”* — it removes the Qt/GUI dependency entirely.
+🔴 **But it is built on the official `anki` Python package, which is AGPL-3.0, and it inherits that.
+The only permissive row in either result set, `anki_bridge` (MIT), is a Rust CLIENT api, not a
+replacement server.**
+
+🟢 **So this is LIMB 2, not limb 1: the staleness caveat on the `10` dependent shelf rows is REAL,
+and `P40`'s algorithm-first shape remains the only recommendation in the retention layer carrying no
+copyleft.** 🟢 **`anki-cli` is shelved in `agents/top.md`'s copyleft table so the finding is where
+the rows are.**
+
+🔴 **One limb `p816` asked about could NOT be answered on this channel, and it is registered rather
+than guessed:** two of the forks describe upstream as `git.sr.ht/~foosoft/anki-connect`, which would
+explain the GitHub repository's staleness as a MIGRATION rather than abandonment. 🔴 **`curl` to
+`git.sr.ht` returned HTTP `000` from this environment — the host is not reachable through the proxy —
+so the migration is `SECONDARY`, inferred from two forks' own descriptions, and unverified.** 🟡
+**Carried as `ACTION p817-C`. It matters commercially: an abandoned GPL dependency and a migrated one
+are different risks on a client slide.**
+
+### 🟢 `ACTION p816-E` — **limb 2 DISCHARGED, and in the direction `p816` recorded as unsupported**
+
+🔴 **`p816` sampled `24` licence reads, found `14` holder-embedding MIT payloads with `14` distinct
+holders and **`0` cross-owner collisions**, and recorded that limb 2 — *“at least one is a genuine
+re-publication rather than a sibling repo by the same author”* — was NOT supported.**
+
+🟢 **`p817` added `13` holder-embedding reads (running sample `37`) and found the first cross-owner
+collision:**
+
+| Repo | Owner | Payload | Holder named in the bytes |
+|---|---|---|---|
+| [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) | `digitalcredentials` | `1,092 B`, `sha256:1032f65d…` | Digital Credentials Consortium |
+| [`ryjones/learner-credential-wallet`](https://github.com/ryjones/learner-credential-wallet) | `ryjones` | `1,092 B`, `sha256:1032f65d…` | Digital Credentials Consortium |
+
+🟢 **Different owners, byte-identical payload, holder line naming the first — a genuine
+re-publication, and GitHub's `fork` field reports `false` for the second.** 🔵 **Limb 2 is supported
+by one specimen; the instrument detects what the `fork` field misses, which is `T41`'s claim holding
+under its own stated bound.** 🟢 **Written up as `T55`, because the same measurement also exposed a
+HOLE IN THE SEARCH INDEX — the canonical repository returns `total_count=0` while live.**
+
+🟢 **The restriction `p816` prescribed was honoured:** only holder-embedding payloads (MIT/BSD/ISC)
+were counted. 🔵 **And confirmed again from the other side — `elabora-core` (`2★`, created `2026`)
+and `apereo/cas` (`11,399★`, created `2011`) share the stock Apache hash `cfc7749b…` and are
+unrelated, so Apache collisions remain uninformative.**
+
+🟡 **The second half — sweeping recorded STAR figures for drift — was NOT run. Carried as
+`ACTION p817-E`.** 🔴 **And `T55` raises its stakes: star figures come from the search index, and the
+index was shown this pass to omit live repositories entirely.**
+
+🟡 **The third half — re-running the liveness sweep with `P1057`'s README spelling generator — was
+NOT run. Carried as `ACTION p817-F`.**
+
+### 🟢 `ACTION p816-F` — **ANSWERED on both halves, and the first half was partly answered before it was asked**
+
+🔵 **The layer question — *what system does someone OTHER than the learner log into about the
+learner?*** 🟢 **Answer: the parent portal — and `q="parent portal mcp"` returns `6` repositories of
+which `p813` had ALREADY shelved two,** [`infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp)
+(🇺🇸 MIT, `5★`) and [`vigilo-mcp`](https://github.com/kristoffervp/vigilo-mcp) (🇳🇴 0BSD, `2★`).
+🔴 **The layer was `67%` harvested before the question was posed, which is a register defect worth
+naming: `p816-F` proposed as unexplored a layer this base had already entered without naming it.**
+🟢 **One genuinely new row resulted — [`barzoj/somtoday-mcp`](https://github.com/barzoj/somtoday-mcp)
+(🇳🇱 MIT) — and the right output was a RECIPE, not a harvest: `P45`.**
+
+🟢 **The other prescribed shapes were run and are declared:** `q="koha ils library mcp"` → **`0`**;
+`q="school transport attendance mcp"` → **`0`**; `q="early childhood assessment open source"` → `1`
+(`0★`, unlicensed, last pushed `2017`). 🔵 **Three nils, measured, so they are not re-proposed.**
+
+🟢 **The declared blank — country-level AI-in-education regulation for an individual LATAM country,
+owed two passes — is CLOSED to the extent this channel permits, with instruments named as
+instructed:** 🇵🇪 **Peru's Ley 31814**, the first AI-specific law in Latin America, reglamento
+September 2025, nine AI-focused laws; 🇨🇱 **Chile's “PotencIA el aprendizaje” (2025)**, explicitly
+orientative and NOT binding; 🇦🇷 **Argentina**, a bill amending Ley de Educación Nacional 26.206;
+🇨🇴 **Colombia**, a general AI bill plus an education-specific bill and a referenced Estrategia
+Nacional de IA 2026–2030; 🇧🇷 **Brazil's MEC Referencial + Sandbox Regulatório** with a public call
+reported open `2026-03-30`–`2026-05-13`; and a regional count of **`716` AI regulatory instruments
+across `23` countries**. 🔴 **All `SECONDARY`, and not one source cites a resolution or decree NUMBER
+for an education-specific instrument — so client-facing citation still requires the official
+bulletins. Carried as `ACTION p817-D`.** 🟢 **Written into `intel/market.md` under LATAM.**
+
+---
+
+### ACTION `p817-A`…`p817-F` for the next pass
+
+🔴 **`p817-A` — RUN THE `T36` INTEGRITY SWEEP FIRST, BEFORE ANY HARVEST. Owed five times.**
+🟢 **Scope unchanged from `p816-B` because the reshaping was correct: grep the `149` build-safe rows
+for three verbs only — *signs in*, *submits*, *generates answers* — and mark the hits. 🔵 **A partial
+sweep that lands beats a complete one deferred a sixth time.** 🔴 **If the next pass also defers it,
+it should say why in one sentence rather than omitting it, as this pass did.**
+
+🟢 **`p817-B` — QUANTIFY the `NO_PAYLOAD` false-positive rate, now that `T57` fixed the probe.**
+🔴 **Every `NO_PAYLOAD` verdict recorded before this pass used a GUESSED branch (`main`/`master`) and
+a short filename list.** 🟢 **`Ed-Fi-Data-Standard` publishes from `v6.2.0` and `European-Learning-Model`
+from lower-case `license` — two rescues on the probe's first run.** 🔵 **Concrete: re-probe every
+recorded `NO_PAYLOAD` row with the fixed probe and publish the count. `p815` called this rate
+*“unquantified”*; the instrument now exists to quantify it, and some of this base's rejections are
+likely wrong.**
+
+🟡 **`p817-C` — settle whether `FooSoft/anki-connect` MIGRATED or was ABANDONED.** 🔴 **`git.sr.ht`
+returned HTTP `000` through this proxy, so the sr.ht claim is `SECONDARY` from two forks'
+descriptions.** 🔵 **Either a different route to sr.ht, or the Anki release notes, settles it — and
+the answer changes the risk language on `10` dependent shelf rows from *abandoned GPL dependency* to
+*migrated upstream*.**
+
+🟡 **`p817-D` — get NUMBERS onto the LATAM instruments.** 🟢 **The instruments are now named
+(`p816-F`, above); what is missing is a citable resolution/decree number per country.** 🔵 **Source:
+each country's official bulletin — *El Peruano* 🇵🇪, *Diario Oficial* 🇨🇱, *Boletín Oficial* 🇦🇷,
+*Diario Oficial* 🇨🇴, *DOU* 🇧🇷 — not secondary commentary. 🔴 **Until then no LATAM regulatory date
+or instrument in this base may be quoted to a client as verified.**
+
+🟡 **`p817-E` — sweep recorded STAR figures for drift, and `T55` makes this urgent rather than
+tidy.** 🔴 **Star figures in this base come from `search/repositories`, and that index was shown this
+pass to omit a live repository entirely.** 🔵 **So the sweep should report two things, not one: how
+far recorded figures have drifted, AND how many shelved addresses the index no longer returns at all.
+The second number has never been measured here.**
+
+🟡 **`p817-F` — re-run the liveness sweep with `P1057`'s README spelling generator** (carried
+unchanged from `p816-E`'s third half). 🔵 **`p816` found a live `1,839★` repository that a
+one-spelling probe recorded as dead; count how many recorded `404`s are case artefacts.**
+
+🟢 **`p817-G` — the next LAYER question, and the sequence that produced it.** 🔵 **Five passes, five
+questions:** `p813` what a learner logs into; `p814` what else (the research library); `p815` what
+assesses them; `p816` what they open voluntarily; `p817` what happens to the RECORD afterwards.
+🟢 **The unasked question: what system does a learner's EMPLOYER or the labour market log into about
+them — the layer where education stops and workforce begins?** 🔵 **Concrete shapes:
+`esco skills taxonomy api` 🇪🇺, `onet occupation api` 🇺🇸, `skills extraction resume open source`,
+`competency framework mcp`, `apprenticeship records open source`. 🟢 **Why it is likely to pay: `T53`
+found credential portability framed as a SKILLS-BASED HIRING mechanism, and this base has never once
+queried the hiring side of it — the buyer there has a budget education does not.**
+
+🔴 **And a standing instruction this pass earned the hard way, from `T52`: before publishing a rule
+ABOUT the measurement channel, grep this base's own shelves for rows the rule would have
+mis-predicted.** 🔵 **`T50` was a three-row generalisation that two existing shelf rows already
+refuted. The check costs one `grep`.**
+
+---
+
 ## 🆕 `p816` — **Disposition of `ACTION p813-A`…`p813-F`, and the actions for the next pass. 🔴 First: `p814` and `p815` BOTH wrote no gap section, so these actions went unanswered for two passes**
 
 🔴 **The process defect `p813` named about `p812` has now happened twice more.** `p813` wrote six

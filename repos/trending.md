@@ -4,6 +4,56 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-second pass, `p817`) — **The interoperability and credential engines: mature plumbing, near-empty agent layer, and two flagships this base had skipped**
+
+🟢 **`10` foundation rows added across two tables — a new credential/identity layer and two additions
+to the xAPI LRS layer that had been missing for nineteen passes.**
+
+### The two flagships this base had skipped, and why it skipped them
+
+| Repo | ★ | Licence (byte-read) | Why it was missing |
+|---|---|---|---|
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | **335** | 🟢 **Apache-2.0** (`11,357 B`, `sha256:58d1e17f…`) | 🔴 **The most-starred permissive LRS in existence, by ADL — the US DoD body that WROTE xAPI.** Never queried |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | **587** | 🔴 **GPL-3.0** (`35,141 B`, `sha256:589ed823…`) | 🔴 **`p805` shelved two of the SAME ORG's small MIT satellites (`xapi-service` `42★`, `xapi-validation` `12★`) and skipped its `587★` product** |
+
+🔵 **The pattern worth naming, because it will recur in every industry KB: harvesting an organisation
+by licence filter picks up its satellites and drops its product, because the product is where the
+copyleft lives.** 🟢 **Both are now shelved — `ADL_LRS` as the conformance baseline to cite in a
+statement of work, `learninglocker` as a FLAG so a client already running it meets a correct licence
+reading rather than a blank.**
+
+### The credential and identity layer (new table)
+
+🟢 **Digital Credentials Consortium stack, every row MIT, byte-read:**
+[`learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet)
+(`1,092 B`, `1032f65d…`, 🔴 **absent from the search index — `T55`**),
+[`verifier-plus`](https://github.com/digitalcredentials/verifier-plus) (`19★`),
+[`dcc-admin-dashboard`](https://github.com/digitalcredentials/dcc-admin-dashboard) (`12★`, holder
+**Massachusetts Institute of Technology**), [`open-badges-context`](https://github.com/digitalcredentials/open-badges-context) (`6★`).
+
+🟢 **Ed-Fi, Apache-2.0:** [`Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard)
+(`47★`, 🔴 **default branch `v6.2.0`**), [`edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) (`6★`),
+[`Moodle-mod_cmi5launch`](https://github.com/adlnet/Moodle-mod_cmi5launch) (`9★`).
+
+🟢 **Identity, and the largest omission of the twenty-one previous passes:**
+[`apereo/cas`](https://github.com/apereo/cas) — **`11,399★`, Apache-2.0, pushed `2026-11-15`** — plus
+[`uPortal-Project/uPortal`](https://github.com/uPortal-Project/uPortal) (`287★`, Apache-2.0).
+🔴 **CAS is the most-starred repository in this knowledge base and twenty-one passes walked past it,
+because this base harvested what an agent TALKS TO and skipped what every one of those systems TRUSTS.**
+
+🔴 **The EMEA warning row:** [`European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model)
+— EUPL-1.2, **ARCHIVED**, last pushed `2024-02-14`. 🟢 **Conform to it; do not fork it (`T56`).**
+
+### A de-duplication control, free
+
+🟢 **Ed-Fi ALLIANCE repositories carry a `10,173 B` Apache text (`a6cba85b…`); Ed-Fi EXCHANGE
+repositories carry the stock `11,357 B` one (`c71d239d…`).** 🔵 **Same programme, two packaging
+pipelines, separable by hash — the one lineage question stock Apache text CAN answer, since it embeds
+no holder.** 🔴 **Confirming `T41`'s bound from the other direction:
+[`elabora-core`](https://github.com/aureliendossantos/elabora-core) (`2★`, created `2026-10-20`) and
+[`apereo/cas`](https://github.com/apereo/cas) (`11,399★`, created `2011`) share `sha256:cfc7749b…` and
+are wholly unrelated.**
+
 ## `2026-11-15` (twenty-first pass) — **The FSRS algorithm family: `6,329★` of MIT-licensed scheduling arithmetic that twenty passes of this file never named, under an AGPL application this base shelved at pass one**
 
 **Pass `p816`.** 🟢 **Eight rows filed to `repos/foundations.md` under a new architectural layer

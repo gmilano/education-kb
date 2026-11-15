@@ -100,6 +100,49 @@ across EMEA.
 
 ### North America
 
+#### Update 2026-11-15 (twenty-second pass, `p817`) — 🟢 **The credential and interoperability layer lands here, it is PERMISSIVE and LIVE, and the standards bodies are shipping the agent tooling themselves**
+
+🟢 **Regional supply this pass: `+1` agent row and `+8` foundation/credential rows place North
+America — the largest regional gain since `p813`.**
+[`Ed-Fi-SDK-for-AI-Assistants`](https://github.com/Ed-Fi-Exchange-OSS/Ed-Fi-SDK-for-AI-Assistants)
+(🟢 Apache-2.0, `1★`, pushed `2026-11-12`) joins the shelf, and the Digital Credentials Consortium
+stack — [`learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet),
+[`verifier-plus`](https://github.com/digitalcredentials/verifier-plus) (`19★`),
+[`dcc-admin-dashboard`](https://github.com/digitalcredentials/dcc-admin-dashboard) (`12★`),
+[`open-badges-context`](https://github.com/digitalcredentials/open-badges-context) — lands in
+`repos/foundations.md`, 🟢 **every row MIT, holder lines naming the Consortium and MIT the
+university.**
+
+🟢 **Why this region is the strong one on this layer, stated as the engagement fact:** the reference
+implementations are permissive AND live. Ed-Fi pushed `2026-11-12`/`2026-11-13`, the DCC wallet
+`2026-10-15`, [`apereo/cas`](https://github.com/apereo/cas) (`11,399★`, Apache-2.0) `2026-11-15`.
+🔴 **Compare EMEA below, where the official reference is archived.** See `T56`.
+
+🔵 **The procurement signal, and it is the one to lead with.** 🟢 **The Ed-Fi Alliance — custodian of
+the US K-12 data standard — now publishes agent-integration scaffolding under its own name
+(`T53`).** 🔴 **At `1★` and `0★` these repositories carry no community, so they are worth nothing as
+supply and a great deal as SANCTION:** the objection that stops district agent projects is *“will the
+data owner permit this”*, and the data standard's custodian has answered in public.
+
+🟢 **Policy, this window (🟡 all `SECONDARY` unless marked):**
+- 🟡 PIE Network tracked close to `100` state bills this year that could directly affect students'
+  use of AI in K-12; a state tracker current to May 2026 separates enacted law from guidance.
+- 🟡 Federal executive orders issued `2025`–early `2026` produced a national framework for AI in
+  education and a K-12 AI instruction task force.
+- 🟡 A Stanford review of `800+` studies found only `20` high-quality causal studies of learning
+  outcomes — 🔵 **the evidence gap is the commercial risk in this region: buyers are mandated to act
+  and have little to cite, which is why `P44`'s relying-party-first sequencing sells.**
+- 🟡 Frontline Education: just over half of districts report supporting AI use, roughly flat
+  year-on-year.
+
+🔴 **Declared limit on this leg.** `q="ed-fi mcp"` returns `12` repositories of which `10` are
+unrelated, and the two that are relevant are the Ed-Fi Exchange's own prototypes plus
+[`cdweaver1992/edfi-mcp-server`](https://github.com/cdweaver1992/edfi-mcp-server) (`1★`, **no
+licence**, rejected). 🟢 **So the agent surface over the US K-12 data standard is, in total, two
+sanctioned prototypes and one unlicensed hobby repository. That is the widest build slot this pass
+found in this region.**
+
+
 #### Update 2026-11-15 (twenty-first pass, `p816`) — 🔴 SUPPLY NIL for this region, stated rather than left silent; the policy picture moved on two concrete instruments
 
 🔴 **Regional supply this pass: NIL, and it is a real nil rather than an unrun leg.** 🟢 **`p816`
@@ -881,6 +924,45 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-15 (twenty-second pass, `p817`) — 🔴 **Europe has the world's most developed credential POLICY and an ARCHIVED reference codebase; the gap between the two is the opportunity**
+
+🟢 **Regional supply this pass: `+1` agent row** —
+[`barzoj/somtoday-mcp`](https://github.com/barzoj/somtoday-mcp) (🟢 MIT, `1★`, pushed `2026-11-13`),
+read-only MCP over Somtoday, a dominant Dutch 🇳🇱 secondary-school parent portal. 🔵 **Placed EMEA
+under `T42` by the system's catalogue, not the author's address.**
+
+🔴 **The finding for this region, and it is counter-intuitive enough to lead a conversation with.**
+[`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model)
+— the data model behind Europass Digital Credentials, published by DG EMPL — is 🔴 **ARCHIVED, last
+pushed `2024-02-14`, and licensed EUPL-1.2, a RECIPROCAL licence that is not interchangeable with the
+MIT stack a studio would otherwise use.** 🟢 **Meanwhile the policy layer accelerated:** European
+Digital Credentials for Learning, the EQF, the EU Digital Identity Wallet, and the European Digital
+Education Hub's Higher Education Interoperability Framework spanning the learner journey including
+credentials and digital identity. 🔵 **Policy moving, reference code frozen — see `T56` and `P44`.**
+
+🟢 **The engagement posture that follows, stated so it can be quoted:** conform to ELM as a
+SPECIFICATION, implement against the MIT DCC stack, and say in writing that the EU reference
+repository is archived. 🔵 **Clients hear that as diligence in month one and as a problem in month three.**
+
+🟢 **Regulation, this window (🟡 `SECONDARY` — verify against the Official Journal before quoting a
+date to a client):**
+- 🟡 The AI Omnibus, **Regulation (EU) 2026/1744**, reported in force `2026-07-27`, moving Annex III
+  high-risk obligations to **`2027-12-02`**. 🟢 **This independently corroborates the date `p815`
+  recorded as unverified `SECONDARY` — two channels now agree, and it remains `SECONDARY`.**
+- 🟡 Education AI is high-risk where it determines access or admission or evaluates learning outcomes.
+- 🟡 Article 4 AI-literacy duties reported supervised by national market surveillance authorities from
+  `2026-08-02`, with the Omnibus softening the standard to *“measures … taken”*.
+- 🟡 Council conclusions on teachers in the era of AI approved `2026-05-11`; ethical guidelines for AI
+  and data in education last updated `2026-06-09`.
+- 🟡 1EdTech cites **France's national interoperability decree** as the leading example of
+  interoperability becoming mandatory rather than aspirational (`T53`).
+
+🔴 **Measured nil this pass, stated with its query:** `q="ebsi verifiable diploma"` →
+`total_count=1`, and it is [`KDiamantidis/ebsi-vc-poc`](https://github.com/KDiamantidis/ebsi-vc-poc),
+`0★`, **no licence**, a proof of concept. 🟢 **So EBSI — the EU's own blockchain credential
+infrastructure — has no adoptable open implementation on this channel in any licence.**
+
 
 #### Update 2026-11-15 (twenty-first pass, `p816`) — 🔴 SUPPLY NIL, and the AI Act's education clock is now the only thing in this file with THREE different dates
 
@@ -1682,6 +1764,38 @@ the EMEA leg; the results returned compliance advice, not measurement. **An info
 absence: the denominator for the AI Act's deployer duties is not publicly measured.**
 
 ### APAC
+
+#### Update 2026-11-15 (twenty-second pass, `p817`) — 🔴 **A national MANDATE with no open infrastructure underneath it: India's credit bank and AI curriculum against `1` unlicensed `0★` repository**
+
+🔴 **Regional supply this pass: NIL, and it is a measured nil rather than an unrun leg.** 🟢 **Every
+query is recorded below so it can be re-run and refuted.**
+
+| Query | `total_count` | Ceiling | Licence |
+|---|---|---|---|
+| `academic bank of credits india` 🇮🇳 | **1** | `0★` | 🔴 NONE |
+| `diksha ndear education india` 🇮🇳 | **0** | — | — |
+| `gigaschool japan education data` 🇯🇵 | **0** | — | — |
+| `singapore student learning space api` 🇸🇬 | **0** | — | — |
+| `australia unique student identifier` 🇦🇺 | **2** | `3★` | 🔴 both NONE |
+| `china smart education platform open source` 🇨🇳 | **1** | — | 🔴 unrelated noise |
+| `lti moodle plugin japan korea` | **0** | — | — |
+
+🔵 **Why this nil is commercially loud rather than quiet.** 🟡 **India's Ministry of Education has
+made AI and Computational Thinking mandatory from Class 3 beginning the `2026-27` academic year
+(`SECONDARY`), and NEP-era reform makes the Academic Bank of Credits a national credit-portability
+obligation.** 🔴 **Against that: one `0★` unlicensed repository.** 🟢 **A mandate whose
+infrastructure does not exist in open source is the cleanest engagement opening this base records —
+the obligation already has an owner and a deadline, and there is nothing to adopt.**
+
+🟡 **Policy, this window (`SECONDARY`):** a Clarivate review covers AI education policy across seven
+APAC markets (Mainland China, India, Japan, Malaysia, Singapore, South Korea, Taiwan); Japan has
+completed one-device-per-student at compulsory level; a 2026 Indian annual report describes a
+two-track picture — rapid top-down curriculum push, slow ground-level adoption.
+
+🔴 **Declared blank, carried forward:** no `2026` regulatory text for Japan or China was located on
+this channel. 🔵 **`T51`'s rule applies — this is recorded as *not found by these queries*, not as
+*does not exist*.**
+
 
 #### Update 2026-11-15 (twenty-first pass, `p816`) — 🟢 The region supplies this pass's one POSITIVE absence finding: India's nil is confirmed REAL, and it is the only unbuilt first-connector market in this base
 
@@ -2487,6 +2601,55 @@ example of.
 
 ### LATAM
 
+#### Update 2026-11-15 (twenty-second pass, `p817`) — 🔴 **The widest usage-to-governance gap in this base: `92%` of students using AI, `30%` of universities with a policy, and ZERO open credential infrastructure**
+
+🔴 **Regional supply this pass: NIL, measured.** `q="credencial digital educacion verificable"` →
+**`total_count=0`**. `q="certificado digital universidad blockchain"` → `4`, 🔴 **every row `0★`, all
+four by a single author, nothing pushed since `2022`.** `q="interoperabilidad educativa estandar"` →
+**`0`**. `q="registro academico nacional api"` → **`0`**.
+
+🔵 **The market fact this sits against, and the contrast is the opportunity (🟡 `SECONDARY`):**
+🟡 a 2026 Digital Education Council LATAM survey reports **`92%` of students and `79%` of faculty
+actively engaging with AI**; 🟡 **only `30%` of universities in the region have published any AI-use
+policy**; 🟡 the IDB counts `193` real AI initiatives across the region; 🟡 ProFuturo/OEI report
+that many public schools lack the technical resources to implement AI at all.
+🟢 **Highest engagement, lowest governance, no credential infrastructure — see `T56`.**
+
+### 🟢 `ACTION p816-F`'s declared blank — country-level AI-in-education regulation, ANSWERED with named instruments
+
+🔴 **`p816-F` recorded that two passes running had failed to name a single LATAM regulatory
+instrument, and prescribed searching for `resolución inteligencia artificial educación` and
+`decreto IA educación`. Run this pass.** 🟡 **All `SECONDARY`; none of the sources cite an official
+number, so verify in each country's official bulletin before quoting:**
+
+- 🇵🇪 **Peru — the only country with binding AI law in force.** **Ley 31814** (reported the first
+  AI-specific law in Latin America), **regulated by reglamento in September 2025**; Peru is reported
+  to hold nine approved AI-focused laws. 🔵 **Peru is therefore the region's regulatory anchor —
+  and `p812` already measured that its national K-12 system SIAGIE has `25` repositories and zero
+  licensed agents. Binding law, active developer community, no grants: the sharpest slot in LATAM.**
+- 🇨🇱 **Chile — guidance, NOT a norm.** MINEDUC published **“PotencIA el aprendizaje” (2025)**,
+  explicitly orientative; the Política Nacional de IA dates to 2021 and the AI bill remains in
+  discussion. 🔴 **A studio must not present Chilean guidance as a compliance obligation.**
+- 🇦🇷 **Argentina — a BILL, not law:** a proposal to amend the Ley de Educación Nacional N.º 26.206
+  to integrate AI into the education system; in October 2026 the CIN advanced a responsible-use
+  recommendation to its teaching commission.
+- 🇨🇴 **Colombia — a general AI framework bill and an education-specific bill; an Estrategia Nacional
+  de Inteligencia Artificial 2026–2030 is referenced without a confirmed status.**
+- 🌎 **Regional:** a 2026 study records **`716` AI regulatory instruments across `23` countries and
+  territories**, 🔴 **without specifying how many are educational** — and concludes the region lacks
+  a unified framework for AI in higher education.
+
+🟢 **The blank is now CLOSED to the extent this channel permits: four countries with named
+instruments and one regional count.** 🔴 **What remains open and is registered rather than guessed:
+not one of these sources cites a resolution or decree NUMBER for an education-specific AI instrument,
+so a client-facing citation still requires the official bulletins. Carried as `ACTION p817-D`.**
+
+🟡 **Brazil 🇧🇷, from this pass's trend leg:** MEC published a *Referencial para o uso responsável de
+IA* and launched a **Sandbox Regulatório** for educational technologies, with a public call reported
+open `2026-03-30` to `2026-05-13`. 🔵 **A regulatory sandbox is an unusually concrete engagement
+entry point: it is a named programme with a named deadline rather than a policy position.**
+
+
 #### Update 2026-11-15 (twenty-first pass, `p816`) — 🔴 SUPPLY NIL; the region's adoption/governance gap is now measured twice by two independent bodies, and the regulation leg is a DECLARED BLANK
 
 🔴 **Regional supply this pass: NIL. `10` rows, unchanged.** 🟢 **The retention layer placed
@@ -3274,6 +3437,35 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-15 (twenty-second pass, `p817`) — Interoperability becomes a BUYING CRITERION, and this base's own measurement channel is shown to have holes
+
+🟢 **The market movement, corroborated across two independent channels (`T53`).** 🟡 **`SECONDARY`:**
+1EdTech's 2026 trends describe interoperability shifting from *“a best practice; something
+institutions should aspire to if time, budget, and technical capacity allowed”* to a baseline
+expectation; a parallel trends piece lists *interoperability becomes a buying criterion*; ETS argues
+the most valuable asset in AI-powered education is **the learning data, not the model**. 🟢
+**`FIRST-HAND`, this pass: the standards bodies are shipping agent tooling under their own names** —
+Ed-Fi Alliance and ADL, all Apache-2.0, all pushed within the last eight months.
+
+🔵 **The architectural movement (`T54`), and it is the one with the clearest commercial consequence.**
+Four independent permissive projects created in `2026` — [`coursecode`](https://github.com/course-code-framework/coursecode),
+[`tessera`](https://github.com/redmodd/tessera), [`scorm-engine`](https://github.com/scormflow/scorm-engine),
+[`elabora-core`](https://github.com/aureliendossantos/elabora-core) — author courseware as source in a
+repository and treat SCORM/cmi5/LTI as COMPILE TARGETS. 🟢 **That makes the LMS a render target and
+removes the GPL/AGPL question from the deliverable entirely. See `P43` — it is the highest-leverage
+recipe this pass produced, because it changes the licence economics of every LMS engagement in
+`verticals/solutions.md`.**
+
+🔴 **And a measurement finding about this base itself, which belongs in the market map because it
+bounds every ranking in it (`T55`).** `search/repositories` — the ONLY channel available in this
+environment, since per-repository API reads are blocked — **omits live repositories**. The canonical
+[`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet)
+returns `total_count=0` while serving HTTP `200` on raw; the index instead returns a `91★` mirror
+reporting `fork: false` whose licence payload is byte-identical. 🔵 **So every star figure and every
+“top row” in this file is a property of the index, not of the world. Stated once, here, rather than
+repeated per claim.**
+
 
 #### Update 2026-11-15 (twenty-first pass, `p816`) — 🟢 A whole product category this file never named, and the one layer in education whose adoption needs no institutional buyer
 
