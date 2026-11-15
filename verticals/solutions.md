@@ -7,7 +7,7 @@ updated: 2026-11-15
 # Education vertical platforms — real systems to customize AI on top of
 
 
-## Education vertical platforms — 102 rows
+## Education vertical platforms — 111 rows
 
 🟢 **Twentieth pass (`p815`, 2026-11-15): six platform rows added under a new tier — the
 ASSESSMENT ENGINE — and the figure above is the gate's output.** 🔵 **The gate caught the draft
@@ -25,6 +25,41 @@ implemented with uncounted-table detection. Gate output:
 claimed `70` — the pre-insertion figure — and the gate rejected it: *"RED heading claims 70, the
 file holds 81."* 🟢 **That is precisely the drift `compose/patterns.md` has had to confess four
 times in prose. It is now caught by a program instead of by the next pass's reader.**
+
+## 🟢 Twenty-third pass (`p818`, 2026-11-15) — the RESEARCH side of the institution, and the first tier in this file where the permissive option is the BETTER product rather than the fallback
+
+🔴 **Twenty-two passes of this file named the systems an institution runs to TEACH. Not one named
+a system it runs to do RESEARCH** — and in a university the library services platform, the
+institutional repository and the journal platform carry budgets comparable to the LMS.
+
+🟢 **The tier's licence profile is the finding (`T59`), and it is the most useful one this file has
+produced for a procurement conversation.** 🔴 **Every platform in this tier built between 1999 and
+2007 is GPL: Koha, OJS, VuFind, Omeka S, EPrints.** 🟢 **Every platform built from 2013 onward is
+permissive: FOLIO (Apache-2.0), InvenioRDM (MIT, CERN), Samvera Hyrax (Apache-2.0), DOAJ
+(Apache-2.0), ROR (MIT), SciELO (BSD-2).** 🔵 **In every other tier in this file the permissive row
+was a consolation — a smaller, younger, less-deployed alternative to the copyleft incumbent. Here
+the permissive rows are FOLIO and InvenioRDM, which are the modern products, and the copyleft rows
+are the ones being migrated away from.**
+
+🔴 **Count note: `ingest/derive-counts.py` could not be executed this pass — the sandbox classifier
+refused the repository's Python gates — so the heading figure was re-derived inline**
+(`rows=113 distinct=111` after insertion; `104`/`102` before, the two repeats being this file's
+deliberate cross-tier entries — `frappe/education` and `frappe/lms`). 🔴 **Degraded channel,
+flagged.** 🟢 **And the inline derivation earned its keep exactly as the gate does: this heading's
+first draft read `110` because the pass counted its own new rows as eight when it had written
+nine. Re-derived before commit, not after.**
+
+| Platform | Repo | Licence | Stars | What it is |
+|---|---|---|---|---|
+| FOLIO (platform-complete) | https://github.com/folio-org/platform-complete | 🟢 **Apache-2.0** (`11,356 B`, `sha256:43070e2d…`) | 15 | **Region: Global.** 🟢 **New this pass (`p818`) — the permissive library services platform, and the answer to the Koha licence problem this file has carried since `p814`.** Built by a consortium of academic libraries with EBSCO and Index Data expressly to end LSP lock-in. 🔵 **Microservice architecture behind the `okapi` gateway, so an AI module is a FOLIO module rather than a fork — the cleanest extension story of any platform in this file** |
+| InvenioRDM | https://github.com/inveniosoftware/invenio-app-rdm | 🟢 **MIT** (`1,243 B`, `sha256:ccb5c2a3…`, holder `CERN`) | 187 | **Region: EMEA.** 🟢 **New this pass (`p818`) — the row that should change what this base recommends for an institutional repository.** The platform CERN runs **Zenodo** on. 🔵 **MIT, maintained, turnkey, with DOI minting and research-data management built in. Propose this where a client would otherwise fork DSpace or keep EPrints alive** 🟢 Pushed `2026-11-13` |
+| Samvera Hyrax | https://github.com/samvera/hyrax | 🟢 **Apache-2.0** (`11,564 B`, `sha256:40c35ac3…`) | 201 | **Region: North America.** 🟢 **New this pass (`p818`).** Repository front-end for the Samvera community, deployed at large North American research libraries. 🔴 **Rails plus Fedora: the highest integration cost in this tier.** 🟢 **Shelved because the institutions running it are exactly the ones with research-office AI budgets** |
+| SciELO OPAC | https://github.com/scieloorg/opac | 🟢 **BSD-2-Clause** (`1,292 B`, `sha256:493da013…`, holder `SciELO ORG`) | 10 | **Region: LATAM.** 🟢 **New this pass (`p818`) — the first LATAM-OPERATED platform in this file, and it is permissive (`T58`).** The public catalogue of the SciELO network: Brazil, Chile, Colombia, Mexico, Argentina, Peru, Cuba, Uruguay, Bolivia, Costa Rica, Paraguay, Ecuador, Venezuela, plus Portugal, Spain and South Africa. 🔴 **Operated centrally by BIREME/FAPESP rather than installed per-institution, so the buyer is the NETWORK — a different sale from every other row in this file, and a far larger one** |
+| SciELO Manager | https://github.com/scieloorg/scielo-manager | 🟢 **BSD-2-Clause** (`1,328 B`, `sha256:c0182a8e…`, holder `SciELO`) | 16 | **Region: LATAM.** 🟢 **New this pass (`p818`).** Journal and article cataloguing for the network, offered in a SaaS model. 🔵 **The editorial workflow surface — where an AI assist for metadata, language and standards conformance would actually sit** 🔴 Pushed `2026-03-03` |
+| DOAJ | https://github.com/DOAJ/doaj | 🟢 **Apache-2.0** (`11,323 B`, `sha256:6dc0e068…`) | 67 | **Region: Global.** 🟢 **New this pass (`p818`).** The Directory of Open Access Journals application. 🔵 **A research office uses DOAJ membership to decide whether a publication counts toward an evaluation — so an agent reading it is answering a policy question, which is a different and better-funded job than search** 🟢 Pushed `2026-11-13` |
+| VuFind | https://github.com/vufind-org/vufind | 🔴 **GPL-2.0** (`15,045 B`, `sha256:8f4b368d…`) | 307 | **Region: Global.** 🔴 **New this pass (`p818`), filed as a FLAG.** The most-deployed open-source discovery layer. 🔴 **GPL-2.0 — the one licence in this tier that is also incompatible with GPL-3.0-only code, which matters if it sits next to Koha extensions.** 🟢 **Do not propose it; it is here so a client already running it meets a correct reading** 🟢 Pushed `2026-11-13` |
+| Omeka S | https://github.com/omeka/Omeka-S | 🔴 **GPL-3.0** (`35,146 B`, `sha256:c53a65c2…`) | 530 | **Region: Global.** 🔴 **New this pass (`p818`), filed as a FLAG.** Digital collections and exhibit publishing, heavily used in digital-humanities teaching. 🔵 **The platform most likely to be already running in a humanities faculty when an AI engagement begins** 🟢 Pushed `2026-11-13` |
+| EPrints | https://github.com/eprints/eprints | 🔴 **GPL-3.0** (`32,421 B`, `sha256:37d3866d…`, `COPYING`) | 67 | **Region: EMEA.** 🔴 **New this pass (`p818`), filed as a WARNING.** The original institutional-repository platform (Southampton, 2000), still in production at UK and European institutions. 🔴 **Last pushed `2023-07-31` — unmaintained for over two years.** 🟢 **The migration proposal writes itself: EPrints → InvenioRDM, GPL-3.0 → MIT, abandoned → CERN-maintained, same job** |
 
 ## 🟢 Twenty-second pass (`p817`, 2026-11-15) — the platform tier that issues a record the learner CARRIES AWAY, and the identity layer every other tier in this file authenticates through
 

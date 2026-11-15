@@ -100,6 +100,52 @@ across EMEA.
 
 ### North America
 
+#### Update 2026-11-15 (twenty-third pass, `p818`) — 🟢 The research-library half of the region appears, permissive and institutional; and the state calendar gains four named instruments while the FEDERAL one cannot be dated
+
+🟢 **Supply, and it is the institutional tier rather than the single-maintainer tier this region
+usually yields.** [`samvera/hyrax`](https://github.com/samvera/hyrax) (🟢 **Apache-2.0**,
+`201★`, pushed `2026-11-13`) is the repository front-end deployed at large North American research
+libraries — a consortium-maintained platform, not a side project. 🔵 **That matters for the sale:
+the buyer is a research library with its own budget line, which is a different and better-funded
+buyer than the LMS office this base has been selling to for twenty-two passes.**
+
+🟢 **The accessibility opening is this region's most compellable one, and it is now staffed with a
+permissive row.** [`Maximilian741/508-Agent`](https://github.com/Maximilian741/508-Agent) (MIT,
+`1★`) does **document** remediation against Section 508 and WCAG 2.1 AA. 🔵 **Course materials are
+PDFs and slide decks, so document remediation — not page remediation — is the education-shaped
+half of a Section 508 obligation.** 🔴 **`1★`: the capability is real, the maturity is not, and the
+most capable alternative in the layer is proprietary (`T60`).**
+
+🟢 **Four newly named state instruments, bringing the dated-obligation list to a usable length.**
+🟢 **Maryland** — requires AI guidance, local district AI policies, designated **AI coordinators**,
+and university-supported **certification of compliant AI tools**. 🔵 **The certification duty is the
+commercially interesting one: it creates a named, recurring evaluation service with a public buyer.**
+🟢 **New York `A 9190`** — would restrict classroom AI use to **ninth grade and above**, with
+exceptions for diagnostics and special education. 🟢 **Alabama `H.B. 1227`** — a generative-AI
+framework. 🟢 **Virginia `S.B. 394`** — guidance covering teacher training.
+
+🔵 **The `134` bills across `31` states figure this base has carried since `p797` is now
+corroborated from a second, independent tracker** — same count, same denominator. 🟢 **`p797`'s
+number survives a second source; continue to quote the STATE and bill number rather than the
+national total.**
+
+🔴 **A date this pass could NOT establish, recorded as a conflict rather than resolved.** Two
+secondary sources place 2026 U.S. Department of Education AI guidance differently: one as an Office
+of Educational Technology framework in **March 2026**, the other as K-12 guidance dated
+**2026-04-08**. 🔴 **No primary `ed.gov` source was read. Do not cite a federal date from this base
+until one is.**
+
+🟡 **California stays the regulator to watch, and the route is child-safety law rather than
+education law.** The **"Parents & Kids Safe AI Act"** ballot initiative — proposed by OpenAI with
+Common Sense Media — would reach any AI product used by minors, which includes edtech. 🔵 **An
+education deployment in California should be scoped against a minors standard, not an education
+standard.**
+
+🔴 **Still unanswered, SIXTH pass: no AI-in-education spend figure for Canada or Mexico.** 🟢 **The
+cause remains the prescribed query shape — "North America" returns US-only results — and the fix
+remains naming the countries. This pass named them and still got nothing: the gap is now a SOURCE
+gap, not a query gap.**
+
 #### Update 2026-11-15 (twenty-second pass, `p817`) — 🟢 **The credential and interoperability layer lands here, it is PERMISSIVE and LIVE, and the standards bodies are shipping the agent tooling themselves**
 
 🟢 **Regional supply this pass: `+1` agent row and `+8` foundation/credential rows place North
@@ -924,6 +970,61 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-15 (twenty-third pass, `p818`) — 🟢 A STATE ARCHIVE ships its own agent surface, two national research platforms gain MIT connectors, and the region's abandoned repository platform becomes a migration proposal
+
+🟢 **The strongest supply signal this region has produced, and it is the `p810` Ed-Fi pattern for
+the third time: the body that OPERATES the record is the body shipping the agent.**
+[`AI-Riksarkivet/ra-mcp`](https://github.com/AI-Riksarkivet/ra-mcp) (🟢 **Apache-2.0**, `27★`,
+pushed `2026-11-14`) exposes the **Swedish National Archives'** open APIs, under the archive's own
+GitHub organisation. 🔵 **The entry route for a Nordic public-sector engagement is therefore to
+CONTRIBUTE to the operator's repository, not to pitch a competing connector — and that is a
+procurement-friendly posture a tender can actually reward.**
+
+🟢 **Two national research platforms gained MIT connectors this window.**
+[`muctebadikmen/dergipark-mcp`](https://github.com/muctebadikmen/dergipark-mcp) covers **DergiPark**,
+the Turkish national journal platform operated by **TÜBİTAK ULAKBİM**, and its own description names
+the control that makes it defensible: *official OAI-PMH, keyless, no CAPTCHA* — a published protocol
+endpoint rather than scraping. 🟢
+[`malkreide/swiss-academic-libraries-mcp`](https://github.com/malkreide/swiss-academic-libraries-mcp)
+covers **swisscovery**, the shared catalogue of roughly `490` Swiss libraries, plus e-rara,
+e-periodica and e-manuscripta — the CONSORTIUM layer rather than one institution. 🔴 **Both `1★`,
+both single-maintainer: supply, exactly as the `p811` portal layer was.**
+
+🟢 **And the generic row that makes this whole tier cheap to enter is European and MIT:**
+[`mpasternak/oai-pmh-mcp`](https://github.com/mpasternak/oai-pmh-mcp) speaks OAI-PMH to *any*
+repository — dLibra, DSpace, EPrints. 🔵 **One server reaches the entire institutional-repository
+tier without a per-platform connector, because OAI-PMH is a 2002 protocol every one of them already
+implements.**
+
+🟢 **The region's platform story improves sharply, and the proposal writes itself.**
+[`inveniosoftware/invenio-app-rdm`](https://github.com/inveniosoftware/invenio-app-rdm) is 🟢 **MIT,
+holder CERN**, `187★`, pushed `2026-11-13` — the platform **Zenodo** runs on. 🔴 **Against it,
+[`eprints/eprints`](https://github.com/eprints/eprints) — the original institutional repository,
+still in production at UK and European institutions — is GPL-3.0 and has not been pushed since
+`2023-07-31`.** 🟢 **EPrints → InvenioRDM: abandoned to CERN-maintained, GPL-3.0 to MIT, same job.
+That is a scoped, dateable engagement with a named incumbent, which is rarer in this base than any
+agent row.**
+
+🔴 **A regulatory date conflict, recorded and NOT averaged.** One source places EU AI Act high-risk
+obligations as applying **from August 2026**; others place Annex III standalone high-risk —
+education — at **2027-12-02** under the 2026 AI Omnibus. 🟢 **This base's four-source reading
+(`T939`) and the Commission's own amendment timeline both support `2027-12-02` for education, and
+Art. `50` transparency remains live since `2026-08-02`.** 🔵 **The August 2026 claim is most likely
+a conflation of the transparency date with the high-risk date — which is the single most common
+error in EU AI Act commentary, and worth correcting in front of a client.**
+
+🟢 **New named instruments and movements this window.** The Commission presents an **Education and
+Skills Package** aimed at helping schools use AI. 🟢 **UK: the DfE published generative-AI product
+SAFETY STANDARDS for education in January 2026** — 🔵 **note this is a product standard, which makes
+it a procurement gate a vendor can be measured against, unlike guidance** — and **Ofqual issued
+coursework-integrity resources in March 2026**, consistent with the `T30` reading that
+sole-decider marking is closed while QA and moderation are open. 🟢 **Gulf: Dubai's KHDA has issued
+explicit responsible-AI guidance to private schools** — the operator-level instrument this base has
+lacked for the Gulf. 🟢 **Vendor movement: OpenAI reports government and education-system
+partnerships in Estonia, Slovakia, Greece and Italy; Pearson is acquiring Workera to verify AI
+skills.** 🔴 **All vendor-partnership claims are CITED, NOT READ — the source is a secondary
+aggregator.**
 
 #### Update 2026-11-15 (twenty-second pass, `p817`) — 🔴 **Europe has the world's most developed credential POLICY and an ARCHIVED reference codebase; the gap between the two is the opportunity**
 
@@ -1765,6 +1866,52 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-15 (twenty-third pass, `p818`) — 🟢 Korea's national citation index gains TWO independent MIT connectors in ten weeks, and the region's binding instruments gain a grace period and a disputed legal basis
+
+🟢 **The supply finding, and the convergence is the signal rather than the stars.** The **Korea
+Citation Index (KCI)** — operated by the **National Research Foundation of Korea**, and the index a
+Korean academic career is measured against — gained two independent MCP servers within ten weeks:
+[`rubatoyd/KCI_openAPI`](https://github.com/rubatoyd/KCI_openAPI) (🟢 MIT, `4★`, REST Open API plus
+OAI-PMH, pushed `2026-11-14`) and
+[`ckgerteis/korea-scholarship-mcp`](https://github.com/ckgerteis/korea-scholarship-mcp) (🟢 MIT,
+`1★`, KCI plus Open Access Korea, pushed `2026-11-01`). 🔵 **Two unrelated maintainers choosing the
+same national research index in the same quarter is the same pattern that preceded EMEA's portal
+layer — and KCI is the APAC analogue of Brazil's CAPES/Qualis in `T58`: a state-operated register
+that a career depends on.**
+
+🟢 **Korea's AI Basic Act enforcement picture is now dated and softer than this base recorded.**
+In force **`2026-01-22`**, covering "high-impact AI" in education among other sectors — 🟢 **but
+enforcement decrees are still being finalised and a GRACE PERIOD focused on guidance rather than
+penalties runs through 2026.** 🔵 **Commercially that is the most favourable window in the region:
+the obligation is nameable and citable in a proposal, while the penalty is not yet live — so a
+readiness engagement sells now and a remediation engagement sells later.**
+
+🔴 **Vietnam's legal basis is DISPUTED across sources and must not be stated flatly.** This base
+carried *"education high-risk under the Law on AI, `2026-03-01`, requiring pre-deployment
+registration in the National AI Database."* 🔴 **A second source attributes the same duties to a
+Digital Technology Industry Law instead.** 🟢 **The DUTY is corroborated — education is high-risk
+and pre-deployment registration is required. 🔴 The INSTRUMENT is not. Cite the obligation, not the
+statute, until a primary text is read.**
+
+🟢 **The rest of the regional map, re-corroborated this window:** 🇨🇳 China maintains the most
+comprehensive AI framework in APAC, by targeted rules rather than one omnibus law; 🇯🇵 Japan stays
+guidance-led with voluntary internal governance; 🇸🇬 Singapore relies on toolkits and frameworks and
+has **no binding AI statute** — 🔵 which makes Singapore the region's lowest-friction pilot
+jurisdiction and the hardest in which to sell compliance; 🇦🇺 Australia's proposed mandatory
+guardrails cover education as high-risk, and **TEQSA compels a generative-AI action plan from every
+higher-education provider**.
+
+🟢 **A second-order opening worth naming: the EU AI Act reaches APAC vendors.** APAC firms selling
+proctoring or admissions tools into EU institutions fall inside the Act's education category.
+🔵 **That is an export-compliance engagement with an APAC buyer and an EMEA obligation — a shape
+this base has not previously named, and one a global studio is better placed to serve than a local
+consultancy.**
+
+🔴 **Unchanged and still open, SIXTH pass: `0` procurement documents for India, Singapore or
+Australia.** 🟢 **Confirmed again as a TENDER-ACCESS gap, not a discovery gap.** 🔴 **And no
+adoption or market-size figures for AI in education across APAC were obtainable from the prescribed
+regional query this pass — stated here rather than left silent.**
+
 #### Update 2026-11-15 (twenty-second pass, `p817`) — 🔴 **A national MANDATE with no open infrastructure underneath it: India's credit bank and AI curriculum against `1` unlicensed `0★` repository**
 
 🔴 **Regional supply this pass: NIL, and it is a measured nil rather than an unrun leg.** 🟢 **Every
@@ -2600,6 +2747,71 @@ procurement-led" corner of that matrix, which `P5` did not previously have a nam
 example of.
 
 ### LATAM
+
+#### Update 2026-11-15 (twenty-third pass, `p818`) — 🟢 The region's nil is OVER: the system of record exists, it is operated from São Paulo for sixteen countries, and its licence is BSD-2
+
+🟢 **This is the most consequential LATAM entry this base has published, and it retires a claim the
+base itself made seven passes ago.** 🔴 **Since `p811` the published position has been that `0` of
+`65` build-safe agents attach to a system operated in Latin America, with the diagnosis that no
+regionally governed system of record exists to attach to.** 🟢 **`q="org:scieloorg"` returns `158`
+repositories and the core is BSD-2-Clause, byte-read: [`scieloorg/opac`](https://github.com/scieloorg/opac)
+(`1,292 B`, `sha256:493da013…`, holder `SciELO ORG`),
+[`scieloorg/packtools`](https://github.com/scieloorg/packtools) (`1,288 B`, `sha256:8a810c6a…`,
+pushed `2026-11-09`), [`scieloorg/scielo-manager`](https://github.com/scieloorg/scielo-manager)
+(`1,328 B`, `sha256:c0182a8e…`).**
+
+🔵 **SciELO is the scholarly publishing backbone of Brazil, Chile, Colombia, Mexico, Argentina,
+Peru, Cuba, Uruguay, Bolivia, Costa Rica, Paraguay, Ecuador and Venezuela, plus Portugal, Spain and
+South Africa.** 🟢 **It is the largest regionally governed research infrastructure in this entire
+knowledge base, in any industry — and it is permissively licensed.** 🔴 **Why seven passes missed
+it: SciELO is operated centrally by BIREME/FAPESP, so nobody self-hosts one, so it generates no
+stars, so every star-ranked sweep this base ran was structurally blind to it.** 🔵 **The defect was
+in the instrument, not in the region — and that correction should be carried into the other eleven
+industries in this rotation.**
+
+🟢 **The buyer is unusual and better than the usual one: the NETWORK, not the institution.** 🔵 **An
+engagement with SciELO or BIREME reaches sixteen countries from one contract, which is the inverse
+of the per-university sale every previous LATAM recipe here assumed.**
+
+🟢 **The Brazilian federal research record already has an MIT agent surface.**
+[`damarals/periodicos-capes-mcp`](https://github.com/damarals/periodicos-capes-mcp) (`12★`) speaks
+to the **Portal de Periódicos CAPES**, licensed centrally by the **Ministério da Educação** for
+every federal university; [`DevAlissu/pesquisador-br-skill`](https://github.com/DevAlissu/pesquisador-br-skill)
+(`7★`) composes **ABNT, Qualis CAPES, Lattes, SciELO and BDTD** in one surface. 🔴 **Both
+single-maintainer, both under `15★` — supply, not adoption.**
+
+🔴 **The widest single build slot this base has ever recorded in Latin America, stated precisely:**
+`q="lattes mcp"` → `total_count=1`, and that one repository
+([`lf-bf/Lattes-MCP`](https://github.com/lf-bf/Lattes-MCP), `0★`) carries **no licence at all**.
+🟢 **Plataforma Lattes is the researcher CV every CNPq grant and every CAPES programme evaluation
+is assessed from. There is no granted agent for it. First mover owns it.**
+
+🔴 **A figure CONFLICT inside the same UNESCO IESALC study, recorded and NOT averaged.** This base
+carries *"`87%` use · `9%` evaluation · `8%` any AI budget, `4%` among PUBLIC universities"* from
+IESALC (`200` institutions, `19` countries). 🔴 **A second reading of the same study reports `26%`
+with a formal AI strategy and `55%` with no dedicated AI budget — which implies roughly `45%` DO
+have one, against this base's `8%`.** 🔵 **A `5×` discrepancy almost certainly reflects two
+different questions ("any AI budget" vs "a dedicated AI budget line"), and possibly two different
+denominators.** 🔴 **Do NOT quote either figure as the region's budget position until the primary
+IESALC instrument is read. `ACTION p818-A` below.**
+
+🟢 **A new and stronger regulatory denominator for the region.** A **2026 Universidad de los Andes**
+study counts **`716` AI-related regulatory instruments across `23` countries and territories**, most
+dated 2023 or later. 🔵 **That reframes the standing "LATAM has a governance gap" line: the region
+does not lack instruments, it lacks HARMONISATION — which the WEF reading corroborates and which
+sells a mapping-and-conformance engagement rather than a policy-writing one.**
+
+🟢 **Dated national instruments, re-corroborated:** 🇧🇷 **`PL 2.338/2023`** passed the Senate in
+December 2024 and **remains in the Chamber of Deputies** — 🔵 still not law, so `Parecer CNE/CP nº
+15/2026` (homologated `2026-11-10`, `12`-month clock) stays the operative Brazilian education
+instrument; 🇨🇴 **CONPES `4144`** (February 2025) is a national policy with budget through 2030
+rather than binding rules; 🟢 Argentina, Brazil, Chile, Colombia, Costa Rica, Mexico and Peru have
+adopted the OECD AI Principles.
+
+🟢 **A sharper school-level number than this base held.** **Cetic.br:** `53%` of Brazilian school
+administrators use AI while only `22%` say their school has guidelines. 🔵 **A `31`-point gap at
+the ADMINISTRATOR level, in the country with a `12`-month policy clock running — which is the
+single best-timed governance sale in this base.**
 
 #### Update 2026-11-15 (twenty-second pass, `p817`) — 🔴 **The widest usage-to-governance gap in this base: `92%` of students using AI, `30%` of universities with a policy, and ZERO open credential infrastructure**
 
@@ -3437,6 +3649,66 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-15 (twenty-third pass, `p818`) — 🟢 The three open registries that make a research-record project possible, and a sixth converging source on the control point
+
+🟢 **A whole category of free, permissive, no-procurement infrastructure that this base had never
+shelved: the three REGISTRIES a research record is assembled from.**
+
+| Registry | What it identifies | Licence (byte-read) |
+|---|---|---|
+| [OpenAlex](https://github.com/oksure/openalex-research-mcp) via MIT connectors | 🟢 **the WORK** — `240M+` scholarly works | 🟢 MIT (`1,075 B`, `sha256:2c73121a…`) |
+| [ROR](https://github.com/ror-community/ror-api) | 🟢 **the ORGANISATION** | 🟢 MIT (`1,078 B`, `sha256:48634ddf…`, holder Crossref) |
+| [ORCID](https://github.com/cyanheads/orcid-mcp-server) | 🟢 **the PERSON** | 🟢 Apache-2.0 (`11,317 B`, `sha256:7915fc5b…`) |
+
+🔵 **Why that table is worth more than its three rows.** OpenAlex is the open replacement for
+Microsoft Academic Graph, with no subscription and no per-seat licence; ROR fixes the problem every
+research-data project discovers late, that one university appears in its data forty different ways;
+ORCID is how the world knows whose work it is. 🟢 **All three are queryable without a procurement,
+which means a research-record proof of concept can be built and demonstrated before a contract
+exists** — and
+[`QuentinCody/scholarly-graph-mcp-server`](https://github.com/QuentinCody/scholarly-graph-mcp-server)
+(Apache-2.0) already joins all three plus Crossref and OpenAIRE behind one interface.
+
+🟢 **Citation integrity is now a staffed layer rather than an aspiration, and it is the highest-star
+material added this pass.** [`Aryan-Pardeshi/CiteProof-AI-MCP`](https://github.com/Aryan-Pardeshi/CiteProof-AI-MCP)
+(MIT, `112★`, pushed `2026-11-13`) is an **audit** toolkit for systematic reviews, and
+[`Hylouis233/bibverify`](https://github.com/Hylouis233/bibverify) (MIT, `98★`) verifies that a
+BibTeX citation **exists**. 🔵 **Fabricated citations are the single highest-frequency failure of
+generative AI in education, and verifying existence is the cheapest control that addresses it. An
+AUDIT deliverable also matches what every regulator in this file endorses: evidence, not a
+decision.**
+
+🟢 **A sixth independent source converges on this base's control point.** The **OECD's 2026 Digital
+Education Outlook** is now joined by **1EdTech**, whose stated 2026 position is that the question is
+no longer *whether* to use AI but *how and under what conditions* — policies, data boundaries,
+oversight — and by the OECD's further recommendation to move beyond general-purpose tools toward
+**purpose-built educational AI**. 🔵 **Six sources — the trials, the regulators, the OECD, the
+standards body — agree that pedagogy must stay in control. That stops being a design preference and
+becomes the thing a proposal must EVIDENCE: AI proposes, a named human decides, the system proves it.**
+
+🟢 **1EdTech also names the second 2026 theme: verified digital credentials aligned to workforce
+need** — which corroborates `T56` and `P44` from the standards side rather than the vendor side.
+
+🔴 **Market-size figures for AI in education remain UNUSABLE and are recorded as such.** Two
+secondary sources give **`$11.4B`** and **`$12.3B`** for 2026; this base already carries
+`$9.58B`→`$42.48B` (2030, CAGR `41.5%`) and `$10.6B`→`$42.48B` from earlier passes. 🔴 **Four
+figures, four methodologies, all from vendor blogs or aggregators, none read from a primary
+instrument.** 🟢 **Quote the ADOPTION numbers instead — education's `86%` gen-AI adoption, the
+`45%` ESSA-evidence ceiling, Cetic.br's `53%`/`22%` administrator gap. Those have named
+instruments behind them; the market sizes do not.**
+
+🔴 **`ACTION p818-A`** — read the primary UNESCO IESALC instrument (`200` institutions, `19`
+countries) and resolve the `8%`-vs-`45%` AI-budget discrepancy recorded under LATAM this pass. 🔵 **Until then this base holds no quotable LATAM budget figure.**
+
+🔴 **`ACTION p818-B`** — `ingest/derive-counts.py` and the other repository Python gates could NOT
+be executed in the `p818` environment; the sandbox classifier refused them. 🟢 **All five graded
+counts were re-derived INLINE and the method is published in each file so the next pass can
+reproduce or refute it.** 🔴 **A later pass must re-run the real gate against `p818`'s insertions
+and confirm or correct: shelf `183`, foundations `132`, verticals `111`, trends `61`, recipes `48`.**
+
+🔴 **`ACTION p818-C`** — the `-public` / `-oss` / `-community` naming rule from `T60` should be added
+to the intake checklist as a byte-read TRIGGER, alongside `NOASSERTION`.
 
 #### Update 2026-11-15 (twenty-second pass, `p817`) — Interoperability becomes a BUYING CRITERION, and this base's own measurement channel is shown to have holes
 

@@ -4,6 +4,64 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-third pass) — **The system a researcher is JUDGED BY — and the end of this base's LATAM story as a nil**
+
+**Pass `p818`.** 🟢 **`17` build-safe agent rows added and `0` copyleft; `12` foundation rows and
+`9` platform rows; `5` rejections filed; `T58`–`T61` and `P46`–`P48` written; `5` regional update
+blocks, one per region.**
+🔴 **`ingest/derive-counts.py` could NOT BE RUN: the sandbox classifier refused to execute the
+repository's Python gates in this environment. All five counts were re-derived INLINE and the
+method published in each file — shelf `183`/`183` distinct, foundations `134`/`132`, verticals
+`113`/`111`, trends `61`, recipes `48`. 🔴 Degraded channel; `ACTION p818-B` asks the next pass to
+re-run the real gate against these insertions.**
+
+### The headline retires a claim this base made seven passes ago
+
+🔴 **Since `p811` this base has published that `0` of its build-safe agents attach to a system
+operated in Latin America, and diagnosed it as the region having no regionally governed system of
+record.** 🟢 **`q="org:scieloorg"` → `158` repositories, core BSD-2-Clause, byte-read.** SciELO is
+operated from São Paulo by BIREME/FAPESP for sixteen countries. 🔴 **Seven passes missed it because
+nobody self-hosts a SciELO, so it has no stars, so every star-ranked sweep this base ran was
+structurally blind to it.** 🔵 **The defect was in the instrument, not the region — and that
+correction belongs in the other eleven industries of this rotation, not only here.**
+
+| Row | ★ | Licence (byte-read) | Region | Why it is new |
+|---|---|---|---|---|
+| [`damarals/periodicos-capes-mcp`](https://github.com/damarals/periodicos-capes-mcp) | **12** | 🟢 MIT (`1,064 B`, `sha256:d7d8972d…`) | LATAM | 🟢 **Portal de Periódicos CAPES — licensed centrally by the Brazilian MEC for every federal university. One integration, ~`400` institutions** |
+| [`DevAlissu/pesquisador-br-skill`](https://github.com/DevAlissu/pesquisador-br-skill) | **7** | 🟢 MIT (`1,080 B`, `sha256:589081fc…`) | LATAM | 🟢 **ABNT + Qualis CAPES + Lattes + SciELO + BDTD in one surface — five Brazilian systems, one row** |
+| [`AI-Riksarkivet/ra-mcp`](https://github.com/AI-Riksarkivet/ra-mcp) | **27** | 🟢 Apache-2.0 (`11,356 B`, `sha256:43070e2d…`) | EMEA | 🟢 **The Swedish National Archives shipping their own agent surface — the `p810` Ed-Fi pattern for the third time** |
+| [`Aryan-Pardeshi/CiteProof-AI-MCP`](https://github.com/Aryan-Pardeshi/CiteProof-AI-MCP) | **112** | 🟢 MIT (`1,070 B`, `sha256:60ee20fe…`) | Global | 🟢 **Highest-starred row added this pass — an AUDIT toolkit, not a writing tool** |
+| [`Hylouis233/bibverify`](https://github.com/Hylouis233/bibverify) | **98** | 🟢 MIT (`1,064 B`, `sha256:ae682216…`) | Global | 🟢 **Verifies a citation EXISTS — the cheapest control for education's highest-frequency AI failure** |
+| [`oksure/openalex-research-mcp`](https://github.com/oksure/openalex-research-mcp) | **60** | 🟢 MIT (`1,075 B`, `sha256:2c73121a…`) | Global | OpenAlex `240M+` works, no subscription, no procurement |
+| [`drAbreu/alex-mcp`](https://github.com/drAbreu/alex-mcp) | **57** | 🟢 MIT (`1,088 B`, `sha256:50f067fd…`) | Global | 🔴 **Stale (`2025-08-11`) — shelved for the capability, flagged for the date** |
+| [`lstudlo/ScholarMCP`](https://github.com/lstudlo/ScholarMCP) | **33** | 🟢 MIT (`1,079 B`, `sha256:560fed48…`) | Global | Literature search with PDF ingestion |
+| [`cyanheads/orcid-mcp-server`](https://github.com/cyanheads/orcid-mcp-server) | **6** | 🟢 Apache-2.0 (`11,317 B`, `sha256:7915fc5b…`) | Global | 🟢 **The PERSON registry — `p817` shelved who logs in, this is whose work it is** |
+| [`rubatoyd/KCI_openAPI`](https://github.com/rubatoyd/KCI_openAPI) | **4** | 🟢 MIT (`1,069 B`, `sha256:9782fbfd…`) | APAC | 🟢 **Korea Citation Index, operated by the NRF — the APAC analogue of CAPES/Qualis** |
+| [`malkreide/swiss-academic-libraries-mcp`](https://github.com/malkreide/swiss-academic-libraries-mcp) | **1** | 🟢 MIT (`1,068 B`, `sha256:65090998…`) | EMEA | swisscovery — the shared catalogue of ~`490` Swiss libraries |
+| [`muctebadikmen/dergipark-mcp`](https://github.com/muctebadikmen/dergipark-mcp) | **1** | 🟢 MIT (`1,104 B`, `sha256:36c5dea8…`) | EMEA | 🟢 **DergiPark (TÜBİTAK ULAKBİM) — and its own description names the control: *official OAI-PMH, keyless, no CAPTCHA*** |
+| [`ckgerteis/korea-scholarship-mcp`](https://github.com/ckgerteis/korea-scholarship-mcp) | **1** | 🟢 MIT (`1,075 B`, `sha256:f3db8678…`) | APAC | Second independent KCI server in ten weeks — convergence, not stars, is the signal |
+| [`Maximilian741/508-Agent`](https://github.com/Maximilian741/508-Agent) | **1** | 🟢 MIT (`1,067 B`, `sha256:b48cc408…`) | Global | 🟢 **Section 508 DOCUMENT remediation — one of the two rows that correct `p815`'s accessibility nil** |
+| [`mpasternak/oai-pmh-mcp`](https://github.com/mpasternak/oai-pmh-mcp) | **0** | 🟢 MIT (`1,073 B`, `sha256:900b820e…`) | EMEA | 🟢 **One server for dLibra, DSpace AND EPrints — the generic row that makes the whole tier cheap** |
+| [`QuentinCody/scholarly-graph-mcp-server`](https://github.com/QuentinCody/scholarly-graph-mcp-server) | **0** | 🟢 Apache-2.0 (`10,758 B`, `sha256:7d304102…`) | Global | Joins OpenAlex + Crossref + ORCID + ROR + OpenAIRE |
+| [`jesseslone/wcag-guide`](https://github.com/jesseslone/wcag-guide) | **0** | 🟢 MIT (`1,067 B`, `sha256:9ddae494…`) | Global | 🟢 **The remediation TRACKER — a regulator asks what you fixed, not what you scanned** |
+
+### 🔴 The rejection that matters most this week
+
+🔴 **[`dequelabs/axe-mcp-server-public`](https://github.com/dequelabs/axe-mcp-server-public)
+(`10★`): licence field `NOASSERTION`, publisher is the author of the `axe` standard, repository
+name ends in `-public` — and the bytes (`1,049 B`, `sha256:05cf369f…`) open `Proprietary License`
+and state *"No license is granted to use, modify, or distribute."*** 🟢 **`T60`. Three signals said
+usable; only the bytes said otherwise. New intake rule: `-public`, `-oss`, `-community` and `-free`
+in a repository name are MARKETING STRINGS and trigger a byte-read exactly as `NOASSERTION` does.**
+
+### Region delta after this pass
+
+🟢 **`Global` `98` · `EMEA` `21` (+4) · `APAC` `20` (+2) · `North America` `15` · `LATAM` `12`
+(+2) · unplaced `17`.** 🔴 **LATAM is still the smallest placed bucket — but it is no longer the
+one without a substrate, and `T58` names what it attaches to.**
+
+---
+
 ## `2026-11-15` (twenty-second pass) — **The layer that MOVES and PROVES a learner's record — and a published rule of this base's own, refuted by evidence this base already held**
 
 **Pass `p817`.** 🟢 **Seven build-safe agent rows added and one copyleft row; `10` foundation rows

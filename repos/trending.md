@@ -4,6 +4,71 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-third pass, `p818`) — **The research and library platform tier: a licence line that runs by VINTAGE, and the first LATAM-operated substrate in this base**
+
+🟢 **`12` foundation rows and `9` platform rows added under one new architectural layer — the
+research-record and library-infrastructure layer — the systems an institution runs to do RESEARCH
+rather than to TEACH.** 🔴 **Twenty-two passes never queried it once.**
+
+### The licence line, and it does not run where this base said it did
+
+🔴 **"The platform layer is copyleft" has been published here five times, and `p814` sharpened it
+to *"DSpace is the only permissively licensed platform in the education stack."*** 🟢 **Across this
+tier the line runs by VINTAGE instead, `11` of `11`, no exception in either direction:**
+
+| Repo | ★ | Licence (byte-read `2026-11-15`) | Cohort |
+|---|---|---|---|
+| [`pkp/ojs`](https://github.com/pkp/ojs) | **1055** | 🔴 GPL-3.0 | 🔴 1999–2007 |
+| [`Koha-Community/Koha`](https://github.com/Koha-Community/Koha) | **601** | 🔴 GPL-3.0 | 🔴 1999–2007 |
+| [`omeka/Omeka-S`](https://github.com/omeka/Omeka-S) | **530** | 🔴 GPL-3.0 (`35,146 B`, `sha256:c53a65c2…`) | 🔴 1999–2007 |
+| [`vufind-org/vufind`](https://github.com/vufind-org/vufind) | **307** | 🔴 GPL-2.0 (`15,045 B`, `sha256:8f4b368d…`) | 🔴 1999–2007 |
+| [`eprints/eprints`](https://github.com/eprints/eprints) | **67** | 🔴 GPL-3.0 (`32,421 B`, `sha256:37d3866d…`) 🔴 **stale since `2023-07-31`** | 🔴 1999–2007 |
+| [`samvera/hyrax`](https://github.com/samvera/hyrax) | **201** | 🟢 Apache-2.0 (`11,564 B`, `sha256:40c35ac3…`) | 🟢 2013+ |
+| [`inveniosoftware/invenio-app-rdm`](https://github.com/inveniosoftware/invenio-app-rdm) | **187** | 🟢 **MIT** (`1,243 B`, `sha256:ccb5c2a3…`, holder **CERN**) | 🟢 2013+ |
+| [`folio-org/okapi`](https://github.com/folio-org/okapi) | **133** | 🟢 Apache-2.0 (`11,356 B`, `sha256:43070e2d…`) | 🟢 2013+ |
+| [`DOAJ/doaj`](https://github.com/DOAJ/doaj) | **67** | 🟢 Apache-2.0 (`11,323 B`, `sha256:6dc0e068…`) | 🟢 2013+ |
+| [`ror-community/ror-api`](https://github.com/ror-community/ror-api) | **67** | 🟢 **MIT** (`1,078 B`, `sha256:48634ddf…`, holder **Crossref**) | 🟢 2013+ |
+| [`scieloorg/opac`](https://github.com/scieloorg/opac) | **10** | 🟢 **BSD-2-Clause** (`1,292 B`, `sha256:493da013…`, holder `SciELO ORG`) | 🟢 2013+ |
+
+🔵 **Why that inverts the advice.** In every other tier in this base the permissive option was the
+consolation prize — younger, smaller, less deployed. 🟢 **Here the permissive options are FOLIO and
+InvenioRDM, which are the MODERN products, and the copyleft rows are the ones institutions are
+migrating OFF.** 🟢 **The licence-clean recommendation and the technically better recommendation
+are the same recommendation, which is rare enough to lead a proposal with — see `P48`.**
+
+### 🟢 The LATAM substrate, and why a star-ranked sweep could never have found it
+
+🟢 **`q="org:scieloorg"` → `158` repositories.** Three shelved this pass, all BSD-2-Clause and all
+byte-read: [`scieloorg/scielo-manager`](https://github.com/scieloorg/scielo-manager) (`16★`,
+`1,328 B`, `sha256:c0182a8e…`), [`scieloorg/opac`](https://github.com/scieloorg/opac) (`10★`), and
+[`scieloorg/packtools`](https://github.com/scieloorg/packtools) (`10★`, 🟢 pushed `2026-11-09`).
+
+🔴 **SciELO is operated centrally by BIREME/FAPESP for sixteen countries, so there is no
+fork-and-self-host constituency and therefore no stars.** 🔵 **Reading `10★` as "small" is the
+specific error that hid the largest regionally governed research infrastructure in this entire
+knowledge base for twenty-two passes.**
+
+### 🟢 FOLIO, filed in two pieces on purpose
+
+[`folio-org/okapi`](https://github.com/folio-org/okapi) (`133★`) is the API gateway and module
+registry; [`folio-org/platform-complete`](https://github.com/folio-org/platform-complete) (`15★`)
+is the deployable distribution. 🔵 **Identical Apache-2.0 blob (`sha256:43070e2d…`) on both. Cite
+`platform-complete` when scoping a deployment and `okapi` when scoping an extension — they are
+different conversations with different buyers.**
+
+### 🔴 Verification channel, degraded and flagged
+
+🔴 **`ingest/derive-counts.py` could not be executed this pass; the sandbox classifier refused the
+repository's Python gates.** 🟢 **Counts re-derived inline with the method published in each file:
+`repos/foundations.md` `rows=134 distinct=132` (`frappe/education` and `frappe/lms` are the two
+deliberate cross-layer repeats); `verticals/solutions.md` `rows=113 distinct=111`.** 🟢 **The
+inline derivation earned its keep immediately: the verticals heading's first draft read `110`
+because the pass counted its own new rows as eight when it had written nine, and that was caught
+before the commit rather than by the next pass's reader.** 🔴 **`ACTION p818-B` asks the next pass
+to re-run the real gate against these insertions.**
+
+---
+
 ## `2026-11-15` (twenty-second pass, `p817`) — **The interoperability and credential engines: mature plumbing, near-empty agent layer, and two flagships this base had skipped**
 
 🟢 **`10` foundation rows added across two tables — a new credential/identity layer and two additions

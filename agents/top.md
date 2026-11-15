@@ -6,6 +6,129 @@ updated: 2026-11-15
 
 # Education AI Agents — curated, license-verified
 
+🟢 **183 real agents on this shelf — 183 distinct addresses, 0 duplicates, derived this pass, not
+carried.** 🔴 **CORRECTION: the heading below this one has claimed `147` since `p815` and the
+shelf held `166` before this pass's insertions — a `19`-row drift across three passes.**
+🔴 **`ingest/derive-counts.py` could NOT BE EXECUTED in the `p818` environment: the sandbox
+classifier refused to run the repository's Python gates.** 🟢 **The count was therefore re-derived
+inline and the method is published so the next pass can reproduce or refute it** — rows matching
+`^\| .*github\.com` in every table except the rejection tables, de-duplicated on the
+`owner/name` slug: `rows=183 distinct=183 dupes=0` after insertion (`166`/`166` before).
+🔴 **This is a DEGRADED verification channel and is flagged as such; it agrees with the gate's
+structure but was not produced by the gate.**
+
+## 🟢 Twenty-third pass (`p818`, 2026-11-15) — the system a researcher is JUDGED BY, and the end of this base's LATAM story as a nil
+
+🔵 **Nineteen passes asked what system a learner LOGS INTO. `p814` widened that to what a learner
+READS — the reference manager and the catalogue. 🟢 `p818` asks what system a learner is JUDGED BY
+once they stop being a learner: the national research record — the journal portal, the citation
+index, the researcher identifier, the postgraduate-programme evaluation.** 🔴 **That is a different
+layer from `p814`'s: Zotero is a tool a person chooses, while CAPES, KCI, Lattes and ORCID are
+registries a STATE or a consortium operates and a career depends on.**
+
+### 🟢 The finding (`T58`): LATAM's missing system-of-record is not missing. It is SciELO, it is operated from São Paulo, and its code is BSD
+
+🔴 **Since `p811` this base has published a structural claim about Latin America: `0` of `65`
+build-safe agents attached to a system operated in the region, and the diagnosis offered each pass
+was that LATAM has no regionally operated system of record for an agent to attach to.** 🟢 **That
+diagnosis is now refuted by measurement.** `gh api search/repositories q="org:scieloorg"` returns
+**`158` repositories**, and the core of them are **BSD-2-Clause, byte-read**:
+[`scieloorg/opac`](https://github.com/scieloorg/opac) (`1,292 B`, `sha256:493da013…`, holder
+`SciELO ORG`, 2015) and [`scieloorg/packtools`](https://github.com/scieloorg/packtools)
+(`1,288 B`, `sha256:8a810c6a…`, holder `SciELO`, 2013, pushed `2026-11-09`).
+
+🔵 **Why that matters commercially and not just bibliographically.** SciELO is the scholarly
+publishing backbone for Brazil, Chile, Colombia, Mexico, Argentina, Peru, Cuba, Uruguay, Bolivia,
+Costa Rica, Paraguay, Venezuela, Ecuador, plus Portugal, Spain and South Africa. 🟢 **It is the
+largest regionally governed research infrastructure in this entire knowledge base, in any
+industry, and it is permissively licensed.** 🔴 **Every LATAM recipe this base has written so far
+proposed building AGAINST a foreign platform and localising it. `P46` proposes the opposite, and
+it is the first LATAM recipe here whose substrate is regionally operated.**
+
+🟢 **And the agent layer over the Brazilian federal research record already exists, under MIT.**
+[`damarals/periodicos-capes-mcp`](https://github.com/damarals/periodicos-capes-mcp) speaks to the
+Portal de Periódicos CAPES — the subscription portal the Ministério da Educação licenses on behalf
+of every Brazilian federal university — and
+[`DevAlissu/pesquisador-br-skill`](https://github.com/DevAlissu/pesquisador-br-skill) composes
+ABNT, Qualis CAPES, Lattes, SciELO and BDTD in one skill. 🔴 **Both are single-maintainer and
+under `15★`: this is SUPPLY, not adoption, exactly as EMEA's portal layer was at `p811`.**
+
+### 🟢 The second finding (`T59`): the library platform tier splits by GENERATION, not by geography — and this base's standing "the platform layer is copyleft" rule is FALSE here
+
+🔴 **This base has repeated in five passes that the platform layer is copyleft while the agent
+layer is permissive, and `p814` went further and called DSpace *"the only permissively licensed
+platform in the education stack."*** 🟢 **Measured across the library and scholarly-publishing
+tier this pass, that is wrong by at least six platforms, and the split is clean by VINTAGE:**
+
+| Cohort | Platforms | Licence (byte-read) |
+|---|---|---|
+| 🔴 **The 1999–2007 generation** | Koha `601★`, OJS `1,055★`, Omeka S `530★` (`35,146 B`, `sha256:c53a65c2…`), VuFind `307★` (`15,045 B`, `sha256:8f4b368d…`), EPrints `67★` (`32,421 B`, `sha256:37d3866d…`, 🔴 stale since `2023-07-31`) | 🔴 **GPL-2.0 / GPL-3.0 without exception** |
+| 🟢 **The 2013+ generation** | FOLIO `133★` (`11,356 B`, `sha256:43070e2d…`), InvenioRDM `187★` (`1,243 B`, `sha256:ccb5c2a3…`, holder **CERN**), Samvera Hyrax `201★` (`11,564 B`, `sha256:40c35ac3…`), DOAJ `67★` (`11,323 B`, `sha256:6dc0e068…`), ROR `67★` (`1,078 B`, `sha256:48634ddf…`, holder **Crossref**), SciELO `10★` BSD-2 | 🟢 **Apache-2.0 / MIT / BSD-2, without exception** |
+
+🔵 **So in this one layer the copyleft problem is a CHOICE OF VINTAGE rather than a constraint.**
+🟢 **An engagement that would have forked Koha can deploy FOLIO; one that would have forked
+EPrints can deploy InvenioRDM, which is the platform CERN runs Zenodo on.** 🔴 **The exception is
+OJS at `1,055★` — the dominant journal platform in Latin America and GPL-3.0 — so the SciELO route
+in `P46` matters precisely because it is the permissive path through a copyleft-dominated
+publishing tier.**
+
+### 🔴 The third finding (`T60`): `NOASSERTION` + a repository named `-public` + a vendor that authored the standard — and the bytes say PROPRIETARY
+
+🔴 **[`dequelabs/axe-mcp-server-public`](https://github.com/dequelabs/axe-mcp-server-public)
+(`10★`, pushed `2026-11-11`) reads `NOASSERTION` on the licence field, is published by Deque — who
+author `axe`, the accessibility engine most of the web tests against — and carries `public` in its
+own name.** 🟢 **Byte-read (`1,049 B`, `sha256:05cf369f…`, holder `Deque Systems, Inc.`): the file
+opens `Proprietary License` and states *"No license is granted to use, modify, or distribute the
+axe MCP Server software itself"*, with use conditioned on a paid Axe DevTools for Web
+subscription.** 🔵 **`T27` fires for a fourth time, and this is its most expensive instance: it
+would have entered a proposal in the one area of education where the obligation is statutory
+(EAA, Section 508), where a licence surprise is discovered at procurement rather than at review.**
+
+### 🟢 The fourth finding (`T61`): `p815`'s accessibility nil is CORRECTED; its IEP nil is CONFIRMED
+
+🔴 **`p815` published accessibility remediation as `total_count=0`.** 🟢 **Re-tested this pass with
+two query shapes: `"accessibility remediation mcp"` → `7`, `"wcag remediation agent"` → `15`.** The
+layer is **thin, not empty**, and two rows are build-safe and shelved below. 🔴 **The usable
+ceiling is `1★`, the most capable row is proprietary (`T60`), and the one repo that does exactly
+the education job — PDF/UA remediation of course materials,
+[`AIScientists-Dev/AI-Powered-PDF-Accessibility`](https://github.com/AIScientists-Dev/AI-Powered-PDF-Accessibility),
+`10★` — has NO licence file reachable at all.** 🟢 **IEP, by contrast, holds: `"iep special
+education mcp"` → `3` repositories, ceiling `3★`, best candidate AGPL-3.0. `p815`'s reading of
+that layer stands on re-test.**
+
+### The rows — 17 added this pass, all 17 build-safe, 0 copyleft
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| periodicos-capes-mcp | https://github.com/damarals/periodicos-capes-mcp | 🟢 **MIT — byte-read** (`1,064 B`, `sha256:d7d8972d…`, holder `damarals`) | 12 | LATAM | 🟢 **New this pass (`p818`) — the anchor of `T58` and the highest-starred LATAM-attached agent in this base.** *“MCP server para consulta de periódicos científicos do Portal de Periódicos CAPES.”* 🔵 **CAPES is a foundation of the Brazilian Ministério da Educação and the Portal is licensed centrally for every federal university, so the integration point is NATIONAL rather than institutional — one agent, one buyer, `~400` institutions** 🔴 Pushed `2025-10-17`; single maintainer |
+| pesquisador-br-skill | https://github.com/DevAlissu/pesquisador-br-skill | 🟢 **MIT — byte-read** (`1,080 B`, `sha256:589081fc…`, holder `Aliso…`, 2026) | 7 | LATAM | 🟢 **New this pass (`p818`).** *“Skill brasileira de pesquisa academica para Claude Code — ABNT, Qualis CAPES, Lattes, SciELO, BDTD.”* 🔵 **The only row in this base that composes FIVE Brazilian research systems in one surface, and the clearest statement of what the LATAM research stack actually is** 🔴 Pushed `2026-04-25` |
+| ra-mcp | https://github.com/AI-Riksarkivet/ra-mcp | 🟢 **Apache-2.0 — byte-read** (`11,356 B`, `sha256:43070e2d…`, stock text) | 27 | EMEA | 🟢 **New this pass (`p818`) — a STATE ARCHIVE shipping its own agent surface, under its own org.** *“MCPs for Riksarkivet open APIs. This covers both agents and mcps.”* 🔵 **Third instance of the `p810` Ed-Fi pattern: the body that OPERATES the record is the body that ships the agent. That is the entry route for a public-sector education engagement in the Nordics — contribute, do not compete** 🟢 Pushed `2026-11-14`, one day before this pass |
+| swiss-academic-libraries-mcp | https://github.com/malkreide/swiss-academic-libraries-mcp | 🟢 **MIT — byte-read** (`1,068 B`, `sha256:65090998…`, holder `Hayal Oezka…`, 2026) | 1 | EMEA | 🟢 **New this pass (`p818`).** swisscovery, e-rara, e-periodica, e-manuscripta — the Swiss national academic discovery stack in one server. 🔵 **swisscovery is the shared catalogue of ~`490` Swiss libraries, so this is the consortium layer rather than one institution** 🔴 Pushed `2026-11-01`; `1★` |
+| dergipark-mcp | https://github.com/muctebadikmen/dergipark-mcp | 🟢 **MIT — byte-read** (`1,104 B`, `sha256:36c5dea8…`, 2026) | 1 | EMEA | 🟢 **New this pass (`p818`).** DergiPark — the national Turkish academic journal platform operated by TÜBİTAK ULAKBİM. 🟢 **Its own description names the control: *“resmî OAI-PMH, anahtarsız, CAPTCHA'sız”* — official protocol endpoint, keyless, no CAPTCHA.** 🔵 **An agent built on a published protocol rather than on scraping is the version that survives a procurement review** 🔴 Pushed `2026-06-18` |
+| oai-pmh-mcp | https://github.com/mpasternak/oai-pmh-mcp | 🟢 **MIT — byte-read** (`1,073 B`, `sha256:900b820e…`, holder `Michał Paster…`, 2026) | 0 | EMEA | 🟢 **New this pass (`p818`) — the GENERIC row of the layer, and the reason the layer is cheap to enter.** *“Uniwersalny serwer MCP dla protokołu OAI-PMH — odpytuj dowolne repozytorium (dLibra, DSpace, EPrints…).”* 🔵 **OAI-PMH is a 2002 protocol that every institutional repository in this file already speaks, so ONE server reaches the whole tier without a per-platform connector.** 🔴 `0★`, pushed `2026-07-24` — supply, and the cheapest thing in this layer to harden |
+| KCI_openAPI | https://github.com/rubatoyd/KCI_openAPI | 🟢 **MIT — byte-read** (`1,069 B`, `sha256:9782fbfd…`, 2026) | 4 | APAC | 🟢 **New this pass (`p818`).** Korea Citation Index REST Open API + OAI-PMH, MCP server and CLI. 🔵 **KCI is operated by the National Research Foundation of Korea — the citation index a Korean academic career is measured against, which makes it the APAC analogue of CAPES/Qualis** 🟢 Pushed `2026-11-14` |
+| korea-scholarship-mcp | https://github.com/ckgerteis/korea-scholarship-mcp | 🟢 **MIT — byte-read** (`1,075 B`, `sha256:f3db8678…`, holder `Christopher Gerteis`, 2026) | 1 | APAC | 🟢 **New this pass (`p818`).** KCI plus OAK (Open Access Korea) — Korean-language scholarship. 🔵 **Two independent maintainers built against the same national index within ten weeks; that convergence is the supply signal, not either repo's star count** 🔴 Pushed `2026-11-01` |
+| CiteProof-AI-MCP | https://github.com/Aryan-Pardeshi/CiteProof-AI-MCP | 🟢 **MIT — byte-read** (`1,070 B`, `sha256:60ee20fe…`, 2026) | 112 | Global | 🟢 **New this pass (`p818`) — the highest-starred row added this pass and the strongest piece of `P47`.** *“Open-source research assistant and MCP audit toolkit for systematic reviews: cited research reports.”* 🔵 **An AUDIT toolkit, not a writing tool — the deliverable is a checkable trail, which is the posture Ofqual, the OECD and every regulator in `intel/market.md` endorse** 🟢 Pushed `2026-11-13` |
+| bibverify | https://github.com/Hylouis233/bibverify | 🟢 **MIT — byte-read** (`1,064 B`, `sha256:ae682216…`, 2025) | 98 | Global | 🟢 **New this pass (`p818`).** *“Cross-platform BibTeX verification for researchers and AI assistants — CLI, Python API, MCP server.”* 🔵 **It verifies that a citation EXISTS. That is the single highest-frequency failure of generative AI in education and the cheapest control to add to any coursework pipeline** 🟢 Pushed `2026-11-12` |
+| openalex-research-mcp | https://github.com/oksure/openalex-research-mcp | 🟢 **MIT — byte-read** (`1,075 B`, `sha256:2c73121a…`, 2025) | 60 | Global | 🟢 **New this pass (`p818`).** OpenAlex API — `240M+` scholarly works, citation analysis, trend tracking. 🔵 **OpenAlex is the fully open replacement for Microsoft Academic Graph, with no subscription and no per-seat licence — the only scholarly graph in this layer an institution can query without a procurement** 🟢 Pushed `2026-11-12` |
+| alex-mcp | https://github.com/drAbreu/alex-mcp | 🟢 **MIT — byte-read** (`1,088 B`, `sha256:50f067fd…`, holder `Author Disambiguatio…`, 2025) | 57 | Global | 🟢 **New this pass (`p818`).** OpenAlex author disambiguation. 🔵 **Disambiguation is the unglamorous half of any research-record project and the half that fails in production** 🔴 **Pushed `2025-08-11` — the only STALE row added this pass; shelved for the capability, flagged for the date** |
+| ScholarMCP | https://github.com/lstudlo/ScholarMCP | 🟢 **MIT — byte-read** (`1,079 B`, `sha256:560fed48…`, holder `Light Che…`, 2026) | 33 | Global | 🟢 **New this pass (`p818`).** Literature search with PDF ingestion across multiple indexes. 🔴 Pushed `2026-09-23` |
+| orcid-mcp-server | https://github.com/cyanheads/orcid-mcp-server | 🟢 **Apache-2.0 — byte-read** (`11,317 B`, `sha256:7915fc5b…`) | 6 | Global | 🟢 **New this pass (`p818`) — the IDENTITY row of the research layer, and the counterpart to `p817`'s Apereo CAS.** Researcher profiles, works, affiliations, funding, peer-review records. 🔵 **`p817` shelved how an institution knows WHO IS LOGGING IN; ORCID is how the world knows WHOSE WORK IT IS. An agent that writes to a research record without an ORCID is unattributable** 🟢 Pushed `2026-11-13` |
+| scholarly-graph-mcp-server | https://github.com/QuentinCody/scholarly-graph-mcp-server | 🟢 **Apache-2.0 — byte-read** (`10,758 B`, `sha256:7d304102…`) 🔵 shorter than the `11,356 B` stock text — Apache body confirmed present by clause grep, appendix trimmed | 0 | Global | 🟢 **New this pass (`p818`).** OpenAlex + Crossref + ORCID + ROR + OpenAIRE behind one graph interface. 🔵 **The only row in this layer that joins the WORK registry, the ORGANISATION registry and the PERSON registry — which is exactly the join a research-office dashboard needs** 🔴 `0★`, pushed `2026-11-13` |
+| 508-Agent | https://github.com/Maximilian741/508-Agent | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:b48cc408…`, holder `Max Casteel`, 2026) | 1 | Global | 🟢 **New this pass (`p818`) — one of the two rows that correct `p815`'s accessibility nil (`T61`).** *“Automated Section 508 & WCAG 2.1 AA document remediation platform. Parses, analyzes, remediates.”* 🔵 **DOCUMENT remediation, not page remediation — which is the education-shaped half of the problem, because course materials are PDFs and slide decks** 🔴 `1★`, pushed `2026-09-22`: the capability is real, the maturity is not |
+| wcag-guide | https://github.com/jesseslone/wcag-guide | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:9ddae494…`, holder `Jesse Slo…`, 2025) | 0 | Global | 🟢 **New this pass (`p818`) — the second `T61` row.** Self-hosted WCAG 2.1 compliance scanner and remediation TRACKER with MCP integration. 🔵 **The tracker is the part that matters for an accessibility obligation: a regulator asks what you found and what you fixed, not what you scanned** 🔴 `0★`, pushed `2026-03-17` |
+
+### 🔴 Rejected this pass — named, with the reason
+
+| Candidate | Repo | Actual license | Stars | Why rejected |
+|---|---|---|---|---|
+| axe MCP Server | https://github.com/dequelabs/axe-mcp-server-public | 🔴 **PROPRIETARY** — field reads `NOASSERTION`, bytes read `Proprietary License` (`1,049 B`, `sha256:05cf369f…`, holder `Deque Systems, Inc.`) | 10 | 🔴 **`T60`.** *“No license is granted to use, modify, or distribute the axe MCP Server software itself”*; requires a paid Axe DevTools for Web subscription and an API key. 🔵 **Named here so a client already running Axe gets a correct reading rather than a surprise** |
+| AI-Powered PDF Accessibility | https://github.com/AIScientists-Dev/AI-Powered-PDF-Accessibility | 🔴 **NONE** — no LICENSE/COPYING file reachable on `main` or `master` | 10 | 🔴 **Does precisely the education job — PDF/UA remediation of course materials — and carries no grant at all.** 🟢 **This is a LICENCE-REQUEST candidate, not a build gap: the code exists and only the grant is missing** |
+| iep-challenge | https://github.com/adam-s/iep-challenge | 🔴 **AGPL-3.0** | 0 | 🔴 Network copyleft; the most capable IEP candidate found, which is why the IEP nil is reported as a LICENCE outcome and not only a supply one |
+| Lattes-MCP | https://github.com/lf-bf/Lattes-MCP | 🔴 **NONE** | 0 | 🔴 **The only MCP server for Plataforma Lattes in existence (`q="lattes mcp"` → `total_count=1`) and it is ungranted.** 🟢 **Lattes is the Brazilian researcher CV every CNPq grant is assessed from — the widest single build slot `T58` exposes** |
+| academic-search-mcp-server | https://github.com/afrise/academic-search-mcp-server | 🔴 **AGPL-3.0** | 119 | 🔴 The second-most-starred row in the `crossref mcp` channel and unusable; the MIT alternatives above cover the same ground |
+
+
 🟢 **Twentieth pass (`p815`, 2026-11-15) — four rows added, all build-safe, all licences
 byte-read. This pass did not close a regional nil and did not find a bigger layer than `p814`'s.
 It found the layer with the WORST LICENCE PROFILE in education, and that is a commercial finding

@@ -11,7 +11,7 @@ The platforms and libraries an education engagement actually builds on, all veri
 licence-verified by BYTE-READ over `raw.githubusercontent.com`, controlled in both directions
 against two invented addresses (`T970`, `T37`).
 
-## Foundational repos — 120 rows
+## Foundational repos — 132 rows
 
 🟢 **Twentieth pass (`p815`, 2026-11-15): `19` rows added under a new architectural layer — the
 ASSESSMENT ENGINE — and the count above is the gate's output, not a hand count.** 🔵 **The gate
@@ -42,6 +42,44 @@ python3 -I ingest/derive-counts.py        # the gate, now green on all five file
 carried unrun since `p808` is CLOSED — `frappe/education` has an agent surface, and it is
 first-party.** 🔵 **Count re-derived, not carried:** `grep -cE '^\| .*github\.com'
 repos/foundations.md` = `76` after insertion (`70` before). 🔵 **Superseded at `p813` by the machine count above.**
+
+## 🟢 The research-record and library-infrastructure layer — **the layer whose licence profile splits by VINTAGE, and the first layer in this base with a LATAM-OPERATED permissive substrate** (new, twenty-third pass `p818`)
+
+🔴 **Twenty-two passes catalogued the systems an institution runs for TEACHING — LMS, SIS, ERP,
+rostering, LTI, xAPI, SCORM, QTI, assessment engines, credentials, identity.** 🟢 **`p818` shelves
+the systems an institution runs for RESEARCH: the institutional repository, the library services
+platform, the discovery layer, the journal platform and the three registries (work, organisation,
+person) that the research record is assembled from.**
+
+🟢 **The licence finding (`T59`) is the reason this layer is worth a section of its own, and it
+contradicts a claim this base has published five times.** 🔴 **"The platform layer is copyleft" is
+TRUE for the 1999–2007 cohort and FALSE for the 2013+ cohort, without exception in either
+direction.** 🔵 **So where this base has previously advised living with GPL at the platform tier,
+the correct advice in this layer is to choose the newer platform.** All twelve rows below were
+byte-read over `raw.githubusercontent.com` on `2026-11-15` and verified live on the
+`gh api search/repositories` `repo:` channel.
+
+🔴 **Verification channel note: `ingest/derive-counts.py` could not be executed this pass (the
+sandbox classifier refused the repository's Python gates), so the count in this file's heading was
+re-derived inline** — rows matching `^\| .*github\.com` outside rejection tables, de-duplicated on
+the `owner/name` slug: **`rows=134 distinct=132`** after insertion (`122`/`120` before), the two
+repeats being the cross-layer entries this file documents deliberately. 🔴 **Degraded channel,
+flagged as such.**
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/scieloorg/opac | 🟢 **BSD-2-Clause — byte-read** (`1,292 B`, `sha256:493da013…`, holder `SciELO ORG`, 2015) | 10 | **Region: LATAM.** 🟢 **New this pass (`p818`) — the anchor of `T58` and the most consequential row added to this file in this base's history.** SciELO's On-line Public Access Catalog: the portal code behind the scholarly publishing infrastructure of Brazil, Chile, Colombia, Mexico, Argentina, Peru, Cuba, Uruguay, Bolivia, Costa Rica, Paraguay, Ecuador, Venezuela, plus Portugal, Spain and South Africa. 🔵 **The largest regionally governed research infrastructure in this knowledge base, in any industry — and permissive.** 🔴 `10★` is NOT a measure of adoption here: SciELO is operated centrally by BIREME/FAPESP, so there is no fork-and-run constituency to generate stars |
+| https://github.com/scieloorg/packtools | 🟢 **BSD-2-Clause — byte-read** (`1,288 B`, `sha256:8a810c6a…`, holder `SciELO`, 2013) | 10 | **Region: LATAM.** 🟢 **New this pass (`p818`).** Python library and CLI for SciELO PS XML — the article-packaging format the whole network ingests through. 🟢 **Pushed `2026-11-09`, six days before this pass: this is maintained infrastructure, not an archive.** 🔵 **The practical entry point: a studio that can validate and transform SciELO PS has the skill the network actually needs** |
+| https://github.com/scieloorg/scielo-manager | 🟢 **BSD-2-Clause — byte-read** (`1,328 B`, `sha256:c0182a8e…`, holder `SciELO <scielo-dev@googlegroups.com>`, 2012) | 16 | **Region: LATAM.** 🟢 **New this pass (`p818`) — the highest-starred repository in the `scieloorg` org.** Journal and article cataloguing, offered in a SaaS model. 🔴 Pushed `2026-03-03`. 🔵 **`q="org:scieloorg"` returns `158` repositories: the three shelved here are the entry points, and the org is a standing lead for later passes** |
+| https://github.com/inveniosoftware/invenio-app-rdm | 🟢 **MIT — byte-read** (`1,243 B`, `sha256:ccb5c2a3…`, holder **`CERN`**, 2019–2021) | 187 | **Region: EMEA.** 🟢 **New this pass (`p818`) — the strongest refutation of `p814`'s "DSpace is the only permissively licensed platform in the education stack."** InvenioRDM is the research-data-management platform **CERN runs Zenodo on**. 🔵 **An MIT institutional repository, maintained by a major research organisation, with a turnkey distribution — the default recommendation for a greenfield repository engagement, ahead of DSpace and far ahead of EPrints** 🟢 Pushed `2026-11-13` |
+| https://github.com/samvera/hyrax | 🟢 **Apache-2.0 — byte-read** (`11,564 B`, `sha256:40c35ac3…`) | 201 | **Region: North America.** 🟢 **New this pass (`p818`).** The Samvera community's repository front-end, used by large North American research libraries. 🔵 **Ruby/Rails and Fedora-backed, so the integration cost is real — but the grant is clean and the community is institutional rather than vendor-led** 🟢 Pushed `2026-11-13` |
+| https://github.com/folio-org/okapi | 🟢 **Apache-2.0 — byte-read** (`11,356 B`, `sha256:43070e2d…`, stock text) | 133 | **Region: Global.** 🟢 **New this pass (`p818`) — the permissive ANSWER to Koha.** Okapi is FOLIO's API gateway and module registry: the piece that makes FOLIO a platform rather than an application. 🔵 **FOLIO is the library services platform built by a consortium of academic libraries, EBSCO and Index Data specifically to break vendor lock-in — and it is the only modern LSP whose core is Apache-2.0.** 🟢 **On an engagement this is the row that makes `T59` actionable: a client who would have forked GPL-3.0 Koha can deploy FOLIO instead** 🟢 Pushed `2026-11-13` |
+| https://github.com/folio-org/platform-complete | 🟢 **Apache-2.0 — byte-read** (`11,356 B`, `sha256:43070e2d…`, identical blob to `okapi`) | 15 | **Region: Global.** 🟢 **New this pass (`p818`).** The complete FOLIO module set — the deployable distribution rather than a component. 🔵 **Cite this address when scoping a FOLIO deployment and `okapi` when scoping an extension; they are different jobs** 🟢 Pushed `2026-11-13` |
+| https://github.com/DOAJ/doaj | 🟢 **Apache-2.0 — byte-read** (`11,323 B`, `sha256:6dc0e068…`) | 67 | **Region: Global.** 🟢 **New this pass (`p818`).** The Directory of Open Access Journals' own application code. 🔵 **DOAJ membership is the quality signal a research office uses to decide whether a journal counts — so this is a POLICY registry, not just a catalogue, and the agent that reads it is answering a compliance question** 🟢 Pushed `2026-11-13` |
+| https://github.com/ror-community/ror-api | 🟢 **MIT — byte-read** (`1,078 B`, `sha256:48634ddf…`, holder **`Crossref`**, 2017–2019) | 67 | **Region: Global.** 🟢 **New this pass (`p818`) — the ORGANISATION registry, and the join key nobody budgets for.** The Research Organization Registry API. 🔵 **Every research-record project discovers late that "the University of São Paulo" appears in its data forty ways. ROR is the open, free identifier that fixes it, and it is MIT** 🔴 Pushed `2026-10-28` |
+| https://github.com/vufind-org/vufind | 🔴 **GPL-2.0 — byte-read** (`15,045 B`, `sha256:8f4b368d…`) | 307 | **Region: Global.** 🔴 **New this pass (`p818`), filed as a FLAG.** The most-deployed open-source library discovery layer. 🔴 **GPL-2.0, which is the one licence in this layer that is also incompatible with GPL-3.0-only code — a real constraint if it is combined with Koha extensions.** 🟢 **Actively maintained (pushed `2026-11-13`); here so a client already running it gets a correct reading, not because it should be proposed** |
+| https://github.com/omeka/Omeka-S | 🔴 **GPL-3.0 — byte-read** (`35,146 B`, `sha256:c53a65c2…`, FSF 2007 text) | 530 | **Region: Global.** 🔴 **New this pass (`p818`), filed as a FLAG.** Digital-collections and exhibits publishing, widely used in digital humanities teaching. 🔵 **Named because it is the platform most likely to be ALREADY RUNNING in a humanities faculty when an AI engagement starts** 🟢 Pushed `2026-11-13` |
+| https://github.com/eprints/eprints | 🔴 **GPL-3.0 — byte-read** (`32,421 B`, `sha256:37d3866d…`, `COPYING`, FSF 2007 text) | 67 | **Region: EMEA.** 🔴 **New this pass (`p818`), filed as a WARNING on two counts.** The original institutional-repository platform (University of Southampton, 2000). 🔴 **GPL-3.0 AND last pushed `2023-07-31` — abandoned for over two years while institutions still run it.** 🟢 **The migration target is InvenioRDM above: MIT, maintained, and the same job. That sentence is a proposal** |
 
 ## The retention layer — 🟢 **the only layer in this base whose STAR MASS IS PERMISSIVE, and the first one whose permissive value is an ALGORITHM rather than an application** (new, twenty-first pass `p816`)
 

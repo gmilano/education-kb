@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
+**Sixty-one** trends — derived trends: **61** — 🟢 **Twenty-third pass (`p818`, 2026-11-15): `T58`–`T61` added** — Latin America's missing system of record found, named and byte-read: it is SciELO, `158` repositories, BSD-2, operated from São Paulo for sixteen countries, and seven passes of this base's LATAM nil rested on a star-ranked sweep that was structurally blind to it (`T58`); the research and library platform tier shown to split by VINTAGE rather than geography, `11` of `11`, which refutes `p814`'s *"the only permissively licensed platform in the education stack"* and makes the licence-clean choice the technically better choice for the first time in this base (`T59`); a vendor `NOASSERTION` repository named `-public` whose bytes read `Proprietary License`, with the rule that a repository name is a marketing string and never a grant (`T60`); and `p815`'s accessibility nil CORRECTED while its IEP nil is CONFIRMED, with the two separated into a licence-request target and a real build gap (`T61`). 🔴 **Count re-derived INLINE, not by `ingest/derive-counts.py`: the sandbox classifier refused to execute the repository's Python gates this pass. `grep -c '^## T'` → `61`. Degraded channel, flagged.**
+
 **Fifty-seven** trends — derived trends: **57** — 🟢 **Twenty-second pass (`p817`, 2026-11-15): `T52`–`T57` added** — 🔴 **`T50` CORRECTED as published, on counter-evidence this base already held** (`T52`); interoperability as a 2026 PROCUREMENT requirement with the standards bodies shipping the agent tooling (`T53`); the authoring tier gone agent-native with the interchange standards as COMPILE TARGETS (`T54`); the search index shown to have HOLES, with the first cross-owner licence-hash collision discharging `ACTION p816-E` (`T55`); the credential layer's regional asymmetry — NA live, EMEA archived, APAC/LATAM nil under active mandates (`T56`); and `ACTION p815-A` CLOSED with the branch axis fixed (`T57`). 🔵 **Re-derived after insertion by `ingest/derive-counts.py`: `57`.**
 
 **Fifty-one** trends — derived trends: **51** — 🟢 **Twenty-first pass (`p816`, 2026-11-15): `T48`–`T51` added** — the licence set by DEPLOYMENT TOPOLOGY rather than authorship, with the upstream recommending the copyleft path (`T48`); the first layer in this base whose permissive value is an ALGORITHM and is therefore separable from its copyleft application (`T49`); `NOASSERTION` shown to lean copyleft rather than neutral, `3` of `3` (`T50`); and India's nil confirmed REAL across five prescribed shapes, discharging `ACTION p813-C` (`T51`). 🔵 **Re-derived after insertion by `ingest/derive-counts.py`: `51`.**
@@ -426,6 +428,145 @@ historical `NO_PAYLOAD` verdicts.** 🟢 **Every verdict recorded before this pa
 Carried as `ACTION p817-B`: re-probe the recorded `NO_PAYLOAD` rows with the fixed probe and count how
 many were artefacts.**
 
+
+## T58 — Latin America's missing system of record was never missing: it is SciELO, it is operated from São Paulo for sixteen countries, and its code is BSD-2
+
+🔴 **This base published a structural claim about LATAM at `p811` and repeated it for seven passes:
+`0` of `65` build-safe agents attached to a system operated in the region, with the diagnosis that
+the region has no regionally governed system of record for an agent to bind to.** 🟢 **The
+diagnosis was wrong, and the instrument that refutes it is the same `gh api` channel the base
+already trusted.**
+
+**The measurement.** `q="org:scieloorg"` → **`158` repositories**. The core three, byte-read on
+`2026-11-15`:
+
+| Repo | ★ | Licence (byte-read) | Pushed |
+|---|---|---|---|
+| [`scieloorg/scielo-manager`](https://github.com/scieloorg/scielo-manager) | 16 | 🟢 **BSD-2-Clause** (`1,328 B`, `sha256:c0182a8e…`, holder `SciELO`, 2012) | `2026-03-03` |
+| [`scieloorg/opac`](https://github.com/scieloorg/opac) | 10 | 🟢 **BSD-2-Clause** (`1,292 B`, `sha256:493da013…`, holder `SciELO ORG`, 2015) | `2026-01-26` |
+| [`scieloorg/packtools`](https://github.com/scieloorg/packtools) | 10 | 🟢 **BSD-2-Clause** (`1,288 B`, `sha256:8a810c6a…`, holder `SciELO`, 2013) | 🟢 `2026-11-09` |
+
+🔵 **Why the star counts do not matter here, and why reading them as adoption is the error that
+hid this layer.** SciELO is operated centrally by BIREME and FAPESP for a network spanning Brazil,
+Chile, Colombia, Mexico, Argentina, Peru, Cuba, Uruguay, Bolivia, Costa Rica, Paraguay, Ecuador
+and Venezuela, plus Portugal, Spain and South Africa. 🔴 **There is no fork-and-self-host
+constituency to generate stars, because nobody installs their own SciELO.** 🟢 **Every star-ranked
+sweep this base has run was therefore structurally blind to it — which is a defect in the
+instrument, not in the region.**
+
+**And the agent layer over the Brazilian federal research record already exists, permissively.**
+🟢 [`damarals/periodicos-capes-mcp`](https://github.com/damarals/periodicos-capes-mcp) (`MIT`,
+`12★`) speaks to the Portal de Periódicos CAPES — licensed centrally by the Ministério da Educação
+for every Brazilian federal university — and
+[`DevAlissu/pesquisador-br-skill`](https://github.com/DevAlissu/pesquisador-br-skill) (`MIT`, `7★`)
+composes ABNT, Qualis CAPES, Lattes, SciELO and BDTD in one surface. 🔴 **Both single-maintainer
+and under `15★`: supply, not adoption — the same shape EMEA's portal layer had at `p811`, one
+quarter before it became the region's story.**
+
+🔴 **The build slot this exposes, stated precisely:** `q="lattes mcp"` → `total_count=1`, and that
+one repository ([`lf-bf/Lattes-MCP`](https://github.com/lf-bf/Lattes-MCP), `0★`) carries **no
+licence at all**. 🟢 **Plataforma Lattes is the CV every CNPq grant and every CAPES programme
+evaluation is assessed from. There is no granted agent for it. That is the widest single opening
+this base has recorded in Latin America.**
+
+**What it changes for an engagement.** 🔴 Every LATAM recipe here before `P46` proposed building
+against a foreign platform and localising it. 🟢 **`P46` proposes the inverse — build on the
+regionally operated, permissively licensed substrate — and it is the first LATAM recipe in this
+base whose substrate is not an import.**
+
+## T59 — The library and research platform tier splits by VINTAGE, not geography: 1999–2007 is GPL without exception, 2013-onward is permissive without exception
+
+🔴 **This base has published "the platform layer is copyleft while the agent layer is permissive"
+in five passes, and `p814` sharpened it to a superlative: DSpace is *"the only permissively
+licensed platform in the education stack."*** 🟢 **Measured across the research and library tier
+this pass, that superlative is wrong by at least six platforms — and the error has a structure
+worth more than the correction.**
+
+| Cohort | Platform | ★ | Licence (byte-read `2026-11-15`) |
+|---|---|---|---|
+| 🔴 1999–2007 | [OJS](https://github.com/pkp/ojs) | 1055 | 🔴 GPL-3.0 |
+| 🔴 1999–2007 | [Koha](https://github.com/Koha-Community/Koha) | 601 | 🔴 GPL-3.0 |
+| 🔴 1999–2007 | [Omeka S](https://github.com/omeka/Omeka-S) | 530 | 🔴 GPL-3.0 (`35,146 B`, `sha256:c53a65c2…`) |
+| 🔴 1999–2007 | [VuFind](https://github.com/vufind-org/vufind) | 307 | 🔴 GPL-2.0 (`15,045 B`, `sha256:8f4b368d…`) |
+| 🔴 1999–2007 | [EPrints](https://github.com/eprints/eprints) | 67 | 🔴 GPL-3.0 (`32,421 B`, `sha256:37d3866d…`), 🔴 stale since `2023-07-31` |
+| 🟢 2013+ | [Samvera Hyrax](https://github.com/samvera/hyrax) | 201 | 🟢 Apache-2.0 (`11,564 B`, `sha256:40c35ac3…`) |
+| 🟢 2013+ | [InvenioRDM](https://github.com/inveniosoftware/invenio-app-rdm) | 187 | 🟢 **MIT** (`1,243 B`, `sha256:ccb5c2a3…`, holder **CERN**) |
+| 🟢 2013+ | [FOLIO okapi](https://github.com/folio-org/okapi) | 133 | 🟢 Apache-2.0 (`11,356 B`, `sha256:43070e2d…`) |
+| 🟢 2013+ | [DOAJ](https://github.com/DOAJ/doaj) | 67 | 🟢 Apache-2.0 (`11,323 B`, `sha256:6dc0e068…`) |
+| 🟢 2013+ | [ROR](https://github.com/ror-community/ror-api) | 67 | 🟢 **MIT** (`1,078 B`, `sha256:48634ddf…`, holder **Crossref**) |
+| 🟢 2013+ | [SciELO OPAC](https://github.com/scieloorg/opac) | 10 | 🟢 **BSD-2-Clause** |
+
+🟢 **`11` of `11` fall on the right side of their cohort line. No exception in either direction.**
+
+🔵 **The commercial consequence, and it inverts the advice this base has been giving.** In every
+other tier here, the permissive option was a consolation prize — younger, smaller, less deployed
+than the copyleft incumbent, so the honest recommendation was to live with the GPL. 🟢 **In this
+tier the permissive options are FOLIO and InvenioRDM, which are the MODERN products, and the
+copyleft options are the ones institutions are migrating off.** 🟢 **So the licence-clean
+recommendation and the technically better recommendation are the same recommendation — which is
+rare enough to lead a proposal with.**
+
+🔴 **The one real exception is OJS at `1,055★` and GPL-3.0 — the dominant journal platform in
+Latin America.** 🟢 **Which is exactly why `T58` matters: the SciELO route is the permissive path
+through a publishing tier whose incumbent is copyleft.**
+
+## T60 — A vendor-published `NOASSERTION` repository named `-public` whose bytes read "Proprietary License": `T27` fires a fourth time, in the one education area where the obligation is statutory
+
+🔴 **[`dequelabs/axe-mcp-server-public`](https://github.com/dequelabs/axe-mcp-server-public)
+(`10★`, pushed `2026-11-11`) carries three independent signals that it is usable, and is not.**
+
+1. 🔴 GitHub's licence field reads `NOASSERTION` — the value `T27` and `T52` both warn resolves in
+   either direction.
+2. 🔴 The publisher is **Deque Systems**, who author `axe`, the accessibility engine most of the
+   web is tested against — an authority signal.
+3. 🔴 The repository's own name ends in **`-public`**.
+
+🟢 **Byte-read (`1,049 B`, `sha256:05cf369f…`, holder `Deque Systems, Inc.`, 2026): the file's first
+line is `Proprietary License`, and it states *"No license is granted to use, modify, or distribute
+the axe MCP Server software itself."*** Use requires a paid Axe DevTools for Web subscription,
+acceptance of Deque's ToS and an API key from the Axe account portal.
+
+🔵 **Why this is the most expensive instance of `T27` so far.** Accessibility in education is not
+a preference — it is the EAA in Europe and Section 508 in the United States. 🔴 **A proposal that
+reached procurement with a proprietary, per-seat-gated dependency in the accessibility component
+fails at the one review that cannot be waived.** 🟢 **And no single signal caught it: the field
+said unknown, the publisher said authority, the name said public. Only the bytes said proprietary.**
+
+🟢 **The rule, stated so it is reusable: a repository name is not a licence, and a standards author
+is not a grant.** 🔵 **`-public`, `-oss`, `-community` and `-free` in a repository name are
+MARKETING STRINGS and must be treated exactly like `NOASSERTION` — as a prompt to byte-read, never
+as a result.**
+
+## T61 — `p815`'s accessibility nil is CORRECTED to thin-but-real; its IEP nil is CONFIRMED on re-test — and the difference between the two is a licence, not a supply
+
+🟢 **An informed nil is this base's most-used instrument, which makes re-testing the published ones
+a duty rather than a courtesy.** Two of `p815`'s three declared-empty layers were re-run on
+`2026-11-15`:
+
+| Layer | `p815` published | `p818` re-test | Verdict |
+|---|---|---|---|
+| Accessibility remediation | 🔴 `total_count=0` | 🟢 `"accessibility remediation mcp"` → **`7`**; `"wcag remediation agent"` → **`15`** | 🔴 **CORRECTED — thin, not empty** |
+| IEP / special education | 🔴 `11` repos, ceiling `3★` | 🔴 `"iep special education mcp"` → **`3`**, ceiling `3★`, best candidate AGPL-3.0 | 🟢 **CONFIRMED** |
+
+🔵 **The correction is probably a query-shape artefact rather than three days of new supply — which
+is itself the lesson: `p815`'s nil was published on one query shape, and `T51` had already
+established that a nil needs several.** 🟢 **The standard this base set for India was not applied
+to accessibility. It is now.**
+
+🔴 **But the corrected layer is barely better than the nil, and the reason is licensing rather than
+absence.** The two build-safe rows are
+[`Maximilian741/508-Agent`](https://github.com/Maximilian741/508-Agent) (MIT, `1★`) and
+[`jesseslone/wcag-guide`](https://github.com/jesseslone/wcag-guide) (MIT, `0★`). 🔴 **The most
+capable row is proprietary (`T60`). The row that does exactly the education job — PDF/UA
+remediation of course materials,
+[`AIScientists-Dev/AI-Powered-PDF-Accessibility`](https://github.com/AIScientists-Dev/AI-Powered-PDF-Accessibility)
+at `10★` — has no licence file reachable on either branch.**
+
+🟢 **So the action differs by layer, and naming which is which is the useful part:** accessibility
+is a **LICENCE-REQUEST** target — the code exists, the grant is missing, and one email could
+unblock it. 🔴 **IEP is a genuine BUILD gap: three repositories, ceiling `3★`, and the only
+capable one is AGPL-3.0.** 🔵 **Both sit under obligations that are already in force, which is why
+neither should be left as a silent gap.**
 
 ## T44 — The assessment layer inverts education's licence profile: everywhere else the star mass is MIT, here the star mass IS the copyleft
 

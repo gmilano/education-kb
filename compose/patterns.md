@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
+**Forty-eight** concrete recipes — derived recipes: **48**. 🟢 **Twenty-third pass (`p818`): `P46`–`P48` added** — the Brazilian research-record agent, which is the first recipe in this base whose platform substrate is LATAM-operated rather than imported (`P46`, from `T58`); accessibility remediation for course materials, the only recipe here whose obligation is statutory and the first whose proposal value lies partly in a named EXCLUSION (`P47`, from `T60`/`T61`); and the EPrints→InvenioRDM migration — a named incumbent, GPL-3.0 and abandoned since `2023-07-31`, displaced by an MIT platform CERN maintains, with the agent layer that makes the swap fundable (`P48`, from `T59`). 🔵 **All three carry ZERO copyleft in the delivered tree and every component was byte-read on `2026-11-15`.** 🔴 **Count re-derived INLINE, not by `ingest/derive-counts.py`: the sandbox classifier refused to execute the repository's Python gates this pass. `grep -c '^## P'` → `48`. Degraded channel, flagged.**
+
 **Forty-five** concrete recipes — derived recipes: **45**. 🟢 **Twenty-second pass (`p817`): `P43`–`P45` added** — shipping courseware INTO an LMS without adopting or licensing it, which is the first recipe here that makes the copyleft problem in `verticals/solutions.md` stop applying (`P43`); the verifiable-credential issuing service with its NA and EMEA paths stated separately because they differ (`P44`); and the guardian-facing agent, the one recipe where the credential belongs to an adult and the data to a child (`P45`). 🟢 **Twenty-first pass (`p816`): `P40`–`P42` added** — the retention engine a studio OWNS (the first recipe here that replaces a copyleft incumbent with an ALGORITHM rather than forking it), the Anki-native agent whose deliverable includes a written refusal of the upstream's own recommended path, and retention evidence for compliance recurrency — the one recipe in this layer with an institutional buyer. 🔵 **All three exist because `T49` found the retention layer's permissive value is an algorithm with five MIT implementations, so none of them carries copyleft in its tree and `P40` carries none even transitively.** All components licence-verified by byte-read on 2026-11-15. 🟢 **Twentieth pass (`p815`): `P37`–`P39` added** — the appeal-survivable academic-integrity service (the first recipe here whose deliverable is EVIDENCE rather than a decision), the only fully permissive assessment stack this layer offers, and natural-language timetabling on a real Apache-2.0 solver. 🔵 **All three exist because `T44` found that the assessment layer's star mass is COPYLEFT, so each one names the permissive substitute explicitly and carries no copyleft in its tree.** All components licence-verified by byte-read on 2026-11-15. 🟢 **Nineteenth pass (`p814`): `P34`–`P36` added** — the citation-integrity service (the first integrity-POSITIVE recipe in this base), the sovereign institutional-repository agent on the only permissively licensed platform in the education stack, and the Brazilian norm-compliance pipeline. All components licence-verified by byte-read on 2026-11-13. 🟢 **Eighteenth pass (`p813`): `P31`–`P33` added** — the Chinese university study agent with a written integrity boundary, the North American multi-system family agent, and the clean-room client library that every cluster in this base needs and none of them has. All components licence-verified by byte-read on 2026-11-13. 🟢 **Seventeenth pass (`p812`): `P29`–`P30` added** — the Frappe-based education ERP agent, and the LATAM university self-management agent. Each names the actual
 repos, the license consequence, how the pieces wire together, and a rough build estimate.
 All components were license-verified on 2026-11-13 (see `agents/top.md` and
@@ -117,6 +119,142 @@ decision instead of a constraint:
   and it is the one argument that still favours `ltijs` on a long engagement.
 
 ---
+
+## P46 — The Brazilian research-record agent, built on a LATAM-OPERATED and permissively licensed substrate (LATAM, and the first recipe in this base whose platform is not an import)
+
+🔵 **Why it exists.** 🔴 **Every LATAM recipe in this base before this one — `P29`, `P30` — proposed
+building against a foreign platform and localising it, because this base believed the region had no
+system of record of its own.** 🟢 **`T58` refuted that: SciELO is operated from São Paulo for sixteen
+countries, ships `158` repositories, and its core is BSD-2-Clause. This recipe is the inverse of
+every previous one — the substrate is regional, and the localisation is not the work.**
+
+| Role | Component | Licence (byte-read) | Region | Why this one |
+|---|---|---|---|---|
+| Publishing substrate | [`scieloorg/opac`](https://github.com/scieloorg/opac) | 🟢 **BSD-2-Clause** (`1,292 B`, `sha256:493da013…`, holder `SciELO ORG`) | LATAM | 🟢 **The network's own catalogue code, permissive, operated centrally — no fork needed to integrate** |
+| Article packaging | [`scieloorg/packtools`](https://github.com/scieloorg/packtools) | 🟢 **BSD-2-Clause** (`1,288 B`, `sha256:8a810c6a…`) | LATAM | 🟢 **SciELO PS XML validation and transformation. Pushed `2026-11-09` — this is the maintained skill the network actually needs** |
+| Federal journal portal | [`damarals/periodicos-capes-mcp`](https://github.com/damarals/periodicos-capes-mcp) | 🟢 **MIT** (`1,064 B`, `sha256:d7d8972d…`) | LATAM | 🟢 **CAPES is licensed centrally by the MEC for every federal university — one integration, ~`400` institutions** |
+| Brazilian research stack | [`DevAlissu/pesquisador-br-skill`](https://github.com/DevAlissu/pesquisador-br-skill) | 🟢 **MIT** (`1,080 B`, `sha256:589081fc…`) | LATAM | 🟢 **ABNT + Qualis CAPES + Lattes + SciELO + BDTD in one surface — the only row in this base that composes five Brazilian systems** |
+| Organisation identity | [`ror-community/ror-api`](https://github.com/ror-community/ror-api) | 🟢 **MIT** (`1,078 B`, `sha256:48634ddf…`, holder Crossref) | Global | 🔴 **Non-optional: "Universidade de São Paulo" appears in Brazilian research data dozens of ways. ROR is the join key** |
+| Person identity | [`cyanheads/orcid-mcp-server`](https://github.com/cyanheads/orcid-mcp-server) | 🟢 **Apache-2.0** (`11,317 B`, `sha256:7915fc5b…`) | Global | An agent that writes to a research record without an ORCID produces unattributable output |
+| Citation existence | [`Hylouis233/bibverify`](https://github.com/Hylouis233/bibverify) | 🟢 **MIT** (`1,064 B`, `sha256:ae682216…`) | Global | 🟢 **Verifies a citation EXISTS before it reaches a Qualis submission** |
+
+**Wiring.**
+1. **Resolve identity first, not last.** Every record is keyed `ROR` (institution) × `ORCID`
+   (person) before any content is read. 🔴 **Skipping this is the failure mode of every research-data
+   project; it is cheap at the start and unaffordable at month four.**
+2. **Read through published protocols only.** CAPES via `periodicos-capes-mcp`; SciELO content via
+   `packtools` against SciELO PS XML. 🔴 **No scraping — a public-sector Brazilian buyer will ask,
+   and `dergipark-mcp`'s *"official OAI-PMH, keyless"* is the posture that survives the question.**
+3. **Normalise to SciELO PS, not to an internal schema.** 🟢 **The network's format is the
+   interoperability target; inventing an internal one re-creates the lock-in the client is paying to
+   avoid.**
+4. **Gate every generated citation through `bibverify` before it is persisted.** 🔴 **A fabricated
+   reference in a Qualis-assessed submission is a research-integrity incident, not a bug.**
+5. **Deliver the evidence trail, not the judgement.** Which registry answered, which identifier
+   matched, which citation verified. 🔵 **`Parecer CNE/CP nº 15/2026` gives Brazilian institutions a
+   `12`-month clock on governance instruments and CONTRACTS — the trail is the deliverable that
+   satisfies it.**
+
+🔴 **The adjacent build this recipe does NOT include, and should be quoted separately.**
+`q="lattes mcp"` → `total_count=1`, ungranted. 🟢 **A clean-room MIT Lattes client is the single
+widest opening in Latin America in this base** — Lattes is the CV every CNPq grant and CAPES
+programme evaluation is assessed from. 🔵 **Scope it as its own deliverable and a durable asset,
+exactly as `P33` scoped the PRONOTE clean-room client.**
+
+**Estimate.** 🟢 `8`–`10` weeks for the CAPES + SciELO + registry read path with the evidence trail.
+🔴 **Plus `4`–`6` weeks if the Lattes client is in scope.** 🟢 **Zero copyleft anywhere in the tree —
+BSD-2, MIT and Apache-2.0 only, all seven components byte-read on `2026-11-15`.**
+
+## P47 — Accessibility remediation for course materials, with the proprietary trap named and avoided (Global, and the only recipe here whose obligation is statutory rather than contractual)
+
+🔵 **Why it exists.** 🔴 **`p815` published this layer as `total_count=0`. `T61` corrected it to
+thin-but-real, and `T60` found that its most capable component is proprietary while reading
+`NOASSERTION` and carrying `-public` in its name.** 🟢 **So the recipe's value is as much in what it
+refuses as in what it assembles — and the obligation behind it (EAA in Europe, Section 508 in the
+United States) is the one review in education that cannot be waived.**
+
+| Role | Component | Licence (byte-read) | Region | Why this one |
+|---|---|---|---|---|
+| Document remediation | [`Maximilian741/508-Agent`](https://github.com/Maximilian741/508-Agent) | 🟢 **MIT** (`1,067 B`, `sha256:b48cc408…`) | Global | 🟢 **Section 508 + WCAG 2.1 AA on DOCUMENTS — course materials are PDFs and decks, so this is the education-shaped half** 🔴 `1★`: expect to harden it |
+| Scan + remediation tracking | [`jesseslone/wcag-guide`](https://github.com/jesseslone/wcag-guide) | 🟢 **MIT** (`1,067 B`, `sha256:9ddae494…`) | Global | 🟢 **The TRACKER is the point: a regulator asks what you found and what you FIXED, not what you scanned** |
+| Authoring target | [`coursecode`](https://github.com/course-code-framework/coursecode) | 🟢 **MIT** | Global | 🔵 **Remediate at the SOURCE and recompile to SCORM/cmi5/LTI, instead of patching exported artefacts forever** |
+| Content platform | [`inveniosoftware/invenio-app-rdm`](https://github.com/inveniosoftware/invenio-app-rdm) | 🟢 **MIT** (`1,243 B`, `sha256:ccb5c2a3…`, holder CERN) | EMEA | Where remediated materials are deposited with a persistent identifier |
+| Evidence store | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | Global | Records the remediation events as a dated, queryable trail |
+
+🔴 **Explicitly EXCLUDED, and say so in the proposal.**
+[`dequelabs/axe-mcp-server-public`](https://github.com/dequelabs/axe-mcp-server-public) — licence
+field `NOASSERTION`, bytes read `Proprietary License`, *"No license is granted to use, modify, or
+distribute"*, use conditioned on a paid Axe DevTools subscription. 🟢 **Naming the exclusion is
+worth more than the component would have been: it demonstrates the licence discipline the rest of
+the engagement is being bought for.** 🔴 **Also excluded:
+[`AIScientists-Dev/AI-Powered-PDF-Accessibility`](https://github.com/AIScientists-Dev/AI-Powered-PDF-Accessibility)
+(`10★`) — it does exactly this job and has no licence file at all.** 🟢 **That one is a LICENCE
+REQUEST, not a rewrite: one email could unblock the best-fitting component in the layer, and the
+request should be sent before the build is scoped.**
+
+**Wiring.**
+1. **Inventory before remediation.** `wcag-guide` scans the live estate and opens a tracked finding
+   per artefact. 🔵 **The inventory is itself a billable deliverable and usually the first thing a
+   compliance officer has ever been given.**
+2. **Remediate documents with `508-Agent`, source with `coursecode`.** 🔴 **Two different jobs:
+   the first clears the backlog, the second stops it regenerating.**
+3. 🔴 **Never let the agent close its own finding.** A named human accepts each remediation; the
+   agent proposes and evidences. 🔵 **Six independent sources in `intel/market.md` converge on this
+   control point, so it is the defensible posture rather than a cautious one.**
+4. **Write every event to `lrsql`** — found, proposed, accepted by whom, when.
+5. **Deposit the remediated artefact in InvenioRDM** with a persistent identifier, so the compliant
+   version is the citable one.
+
+**Estimate.** 🟢 `6`–`8` weeks for inventory + document remediation + the evidence trail on a
+single faculty's estate. 🔴 **Both remediation components are `0`–`1★`: budget hardening explicitly
+and do not present them as products.** 🟢 **Zero copyleft, all five components byte-read
+`2026-11-15`.**
+
+## P48 — EPrints → InvenioRDM: the migration with a named incumbent, a named date and an agent layer that pays for it (EMEA anchor, Global applicable)
+
+🔵 **Why it exists.** 🟢 **`T59` found that the research platform tier splits by vintage, and this is
+the sharpest instance: the incumbent is GPL-3.0 and ABANDONED, and the replacement is MIT and
+maintained by CERN.** 🔴 **This base has `47` recipes and almost none of them names an incumbent
+being displaced on a dateable fact. This one does.**
+
+| Role | Component | Licence (byte-read) | Region | Why this one |
+|---|---|---|---|---|
+| 🔴 Incumbent (to leave) | [`eprints/eprints`](https://github.com/eprints/eprints) | 🔴 **GPL-3.0** (`32,421 B`, `sha256:37d3866d…`, `COPYING`) | EMEA | 🔴 **Last pushed `2023-07-31` — unmaintained for over two years while institutions run it in production** |
+| 🟢 Target platform | [`inveniosoftware/invenio-app-rdm`](https://github.com/inveniosoftware/invenio-app-rdm) | 🟢 **MIT** (`1,243 B`, `sha256:ccb5c2a3…`, holder **CERN**) | EMEA | 🟢 **The platform Zenodo runs on: MIT, maintained, DOI minting and RDM built in** 🟢 Pushed `2026-11-13` |
+| Content extraction | [`mpasternak/oai-pmh-mcp`](https://github.com/mpasternak/oai-pmh-mcp) | 🟢 **MIT** (`1,073 B`, `sha256:900b820e…`) | EMEA | 🟢 **Speaks OAI-PMH to dLibra, DSpace AND EPrints — so the migration reads the incumbent through a published 2002 protocol rather than its database** |
+| Library services platform | [`folio-org/platform-complete`](https://github.com/folio-org/platform-complete) | 🟢 **Apache-2.0** (`11,356 B`, `sha256:43070e2d…`) | Global | 🟢 **If the same client is also leaving GPL-3.0 Koha, this is the permissive LSP — one licence conversation, two systems** |
+| Organisation identity | [`ror-community/ror-api`](https://github.com/ror-community/ror-api) | 🟢 **MIT** | Global | Affiliations normalised during migration, not after |
+| Person identity | [`cyanheads/orcid-mcp-server`](https://github.com/cyanheads/orcid-mcp-server) | 🟢 **Apache-2.0** | Global | Authors reconciled to ORCID as records move |
+| Author disambiguation | [`drAbreu/alex-mcp`](https://github.com/drAbreu/alex-mcp) | 🟢 **MIT** (`1,088 B`, `sha256:50f067fd…`) | Global | 🔴 **Pushed `2025-08-11` — stale. Use it, pin it, and own the fork; disambiguation is the half that fails in production** |
+| Quality/policy registry | [`DOAJ/doaj`](https://github.com/DOAJ/doaj) | 🟢 **Apache-2.0** (`11,323 B`, `sha256:6dc0e068…`) | Global | 🔵 **Lets the migrated record answer a POLICY question — does this venue count — not just a search one** |
+
+**Wiring.**
+1. **Harvest the incumbent over OAI-PMH, never over its database.** 🟢 **`oai-pmh-mcp` reads EPrints
+   through the protocol it already publishes, so the migration never depends on a schema the
+   abandoned codebase might change — and the same connector later reads any DSpace or dLibra
+   instance the client also runs.**
+2. **Reconcile identity in flight.** Each record gets a ROR for its institution and an ORCID for its
+   authors as it moves; `alex-mcp` proposes disambiguations and 🔴 **a librarian accepts them.**
+3. **Load into InvenioRDM and mint persistent identifiers.** 🟢 **The licence changes from GPL-3.0 to
+   MIT at this step, which is the line to put in the proposal: the client's platform stops being a
+   copyleft obligation.**
+4. **Enrich against DOAJ** so the repository can report which deposits sit in indexed open-access
+   venues. 🔵 **That is the report a research office asks for and the incumbent cannot produce.**
+5. **Agent layer last, on the migrated record** — deposit assistance, metadata completion,
+   affiliation correction, each one proposing and a named human accepting. 🔵 **The agent layer is
+   what makes the migration fundable: a platform swap alone is a cost line, while a platform swap
+   that arrives with a working assistant is a capability.**
+
+🔴 **The honest caveat to state up front.** 🟢 **InvenioRDM is MIT and maintained, but it is a
+different stack from EPrints' Perl — this is a migration, not an upgrade, and the content model
+mapping is the real work.** 🔵 **Quote the harvest-and-reconcile phase separately from the platform
+stand-up, because the first is predictable and the second depends on how much the institution
+customised EPrints over twenty years.**
+
+**Estimate.** 🟢 `10`–`14` weeks for harvest, identity reconciliation and InvenioRDM stand-up on a
+single institutional repository; 🟢 `+4` weeks for the agent layer; 🔴 `+6`–`8` weeks if FOLIO is in
+scope alongside. 🟢 **Zero copyleft in the DELIVERED tree — the GPL-3.0 row is the system being
+left, and it is read over a protocol rather than linked against.**
 
 ## P43 — Ship courseware INTO the client's LMS without adopting, forking or licensing it (Global, and the recipe that makes `verticals/solutions.md`'s copyleft problem stop applying)
 
