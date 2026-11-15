@@ -4,6 +4,87 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-seventh pass, `p822`) — **`15` rows, two productive channels, and the discovery of a `775`-repository clone farm that out-stars the project it impersonates**
+
+🟢 **`15` build-safe agent rows added (`172` → `187`), `1` copyleft row, `2` rejections, `4` platform
+rows in `verticals/solutions.md` (`112` → `116`), `4` trends (`T73`–`T76`), `3` recipes
+(`P52`–`P54`).** 🔴 **`0` foundation rows — a measurement, with its denominator in
+`repos/trending.md`.** 🟢 **Every count in this pass is GATE-confirmed: `ingest/derive-counts.py`
+ran, after four consecutive passes of being refused by the sandbox classifier (`T76`).**
+
+### 🔴 The mandated legs nilled a `37`th consecutive time — named, so the nil has a denominator
+
+`top open source AI agents education 2026 github MIT` · `github trending education AI 2026` ·
+`open source platform education LMS SIS ERP MIT Apache 2026` · `AI education industry trends 2026`
+· and the four regional legs, all run through web search this pass.
+
+| Returned by a mandated leg | Disposition |
+|---|---|
+| `HKUDS/DeepTutor` (reported trending `2026-10-30`), `SirhanMacx/Claw-ED`, `HugeCatLab/ChatTutor`, `plastic-labs/tutor-gpt` | held |
+| `moodle`, `edx-platform`, `Sakai`, `ILIAS`, `Chamilo`, `Canvas LMS`, `OpenEduCat` | held |
+| `microsoft/generative-ai-for-beginners`, `microsoft/ai-agents-for-beginners`, `geekjourneyx/interactive-learning` | held / out of scope |
+| `OpenHands`, `browser-use`, `AutoGPT`, `LangChain`, Hermes Agent | general-purpose, technology KB, not education supply |
+
+🔵 **The regional legs were productive for `intel/market.md` and unproductive for supply — the
+split this base has recorded since `T63`. Market findings are filed there and marked
+`CITED, NOT READ`, because egress in this environment resolved GitHub only.**
+
+### 🟢 What produced rows: two channels, one of them new
+
+1. **Recency with no star floor** (`p821`'s `T70`): `created:>2026-10-15`, `sort=updated`, no star
+   qualifier. `11` of `15` rows are under `5★`.
+2. 🟢 **Challenge-origin, NEW this pass and BOUNDED (`T74`):** the exact phrase
+   `"African Agentic AI Design Challenge"` returns `8` repositories, `4` in the Education track →
+   `meska-brain` (shelved), `DIRA` (copyleft, shelved), `jemma` (already held), and
+   `contextbridge-long-view` (rejected: no licence, `README.md` `404` at both branch roots, size
+   `0`). 🔵 **The same challenge produced procurement and health agents, so the query is an
+   instrument for every KB in this estate.**
+
+### 🔴 The integrity finding, measured: `775` codeless clones carrying `650`–`680★` each
+
+Against the genuine `Simpleyyt/ai-manus` (MIT, `22,029 KB`, `2025-04-26`, `75` open issues,
+`1,647★`), each sibling: created `2026-11-13`/`14`; `118 KB`; **Apache-2.0 where the original is
+MIT**; `0` open issues; README `sha256` identical across siblings; no `package.json`,
+`requirements.txt`, `setup.py` or `install.sh`; and a Dropbox `.rar` download badge as its only
+call to action. 🟢 **Not followed. Exemplar filed in the rejection table; the class is `T73` and
+the runnable gate is `P52`.**
+
+### 🟢 `make hooks` ran too — `49/72` gates green, and the red list is INHERITED
+
+🟢 **The full suite executed for the first time in five passes: `72` gates, `49` GREEN, `23` RED.**
+🟢 **Baseline-controlled rather than asserted — the same suite was run against a pristine copy of
+`HEAD` before any `p822` edit and returned `49/72` with the identical red list**, so this pass
+introduced no gate regression and cleared none. 🔵 **`ACTION p822-A` registers the red list as
+standing debt with `gate-dates`, `gate-region-headings` and `gate-shelf-consistency` named as the
+first three to take. See `T76`.**
+
+### The `15` rows, by region
+
+🟢 **APAC `2`** — `Stardust Agent` (`165★`, 中国 quoted), `简析智评` (`3★`, national-round entry).
+🟢 **EMEA `3`** — `Meska Brain` (design challenge), `Sautika` (*"across East Africa"*), `EthioLearn`
+(Ethiopia, `EUEE`). 🟢 **Global `10`** — `tutorizr`, `文渊`, `校慧伴`, `interruptible-ai-tutor`,
+`lf-skill`, `ai-learning-skills`, `tuttor-kit`, `Blinky`, `EduAdapt`, `olymmath-agent`.
+🔴 **North America `0` on the agent shelf this pass** — the two North America rows landed in
+`verticals/solutions.md` (`csm_web`, `schoolz`), which is where this pass's NA supply actually was.
+
+🔴 **Two placements REFUSED on this base's own rule, stated so the rule stays visible:**
+`tutorizr` is not EMEA (its German signal is the lesson LANGUAGE) and `tuttor-kit` is not LATAM
+(its Brazil signal is a `README.pt-BR.md` locale label). 🔵 **A language is not a location.**
+
+### 🟢 Three gaps CLOSED or narrowed this pass
+
+- 🟢 **Accessibility, partly corrected:** `EduAdapt` (MIT) is an on-device Gemini Nano reshaping of
+  web pages for ADHD, dyslexia and autism — 🔴 **but last pushed `2025-10-30`, so the gap narrows
+  on PATTERN and not on a maintained dependency.**
+- 🟢 **The practical/lab tier, previously absent from `verticals/solutions.md` entirely:**
+  `MyDocker`, MIT, authored by CentraleSupélec, Software Heritage archived.
+- 🟢 **A category that did not exist here: the learning-scaffold agent (`T75`), three independent
+  implementations in one pass.**
+
+🔴 **Still open and re-registered:** `p817`'s learner-record gap — the only licensed xAPI agent
+surface remains `DavidLMS/learnmcp-xapi` (MIT, `16★`, last pushed `2025-08-29`), and `P53` names
+`course-state.md` as the honest fallback rather than implying an integration.
+
 ## `2026-11-15` (twenty-sixth pass, `p821`) — **The nil streak ends at `35`, and what ended it was a QUERY SETTING, not a new market**
 
 🟢 **`4` build-safe agent rows added (`168` → `172`), `1` copyleft row, `1` rejection, `1` platform

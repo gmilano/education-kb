@@ -7,7 +7,7 @@ updated: 2026-11-15
 # Education vertical platforms — real systems to customize AI on top of
 
 
-## Education vertical platforms — 112 rows
+## Education vertical platforms — 116 rows
 
 🟢 **Twenty-sixth pass (`p821`, 2026-11-15): `1` row added — `111` → `112`.** 🔴 **NOT gate-confirmed:
 `make hooks` was refused by the sandbox classifier for a **FOURTH** consecutive pass, so the figure
@@ -85,6 +85,43 @@ implemented with uncounted-table detection. Gate output:
 claimed `70` — the pre-insertion figure — and the gate rejected it: *"RED heading claims 70, the
 file holds 81."* 🟢 **That is precisely the drift `compose/patterns.md` has had to confess four
 times in prose. It is now caught by a program instead of by the next pass's reader.**
+
+## 🟢 Twenty-seventh pass (`p822`, 2026-11-15) — the platform tier that provisions the LAB, and the first institution-authored platform in this file archived by Software Heritage
+
+🔵 **Twenty-six passes have asked what system a learner logs into, reads in, is graded by and is
+judged by. `p822` asks what system RUNS THE EXERCISE** — the sandbox a student is given when the
+course is practical rather than discursive. 🔴 **This file had no row for that tier at all**, which
+is a gap with a cost: every vocational, IT and engineering engagement needs it, and the default
+answer in procurement is a per-seat cloud lab product.
+
+🟢 **The answer found is `MyDocker`, and three things make it unusual on this shelf.** It is
+authored by an INSTITUTION rather than a vendor or an individual — CentraleSupélec, whose own
+README calls it *"CentraleSupélec's virtual lab platform"*. It is **MIT**, where this file's
+platform tier is overwhelmingly copyleft (`Moodle` GPL-3.0, `Open edX` AGPL-3.0, `OpenEduCat`
+LGPL-3.0). And it is archived in **Software Heritage** with a `swh:1:dir:` identifier in its README
+badge — the first row in this file carrying an independent archival guarantee, which is a real
+procurement argument when the client asks what happens if the upstream disappears.
+
+🟢 **Three further platform rows, each placed on a quoted locative rather than an inferred one.**
+`csm_web` is UC Berkeley's Computer Science Mentors running their own section signup and attendance
+— the North American instance of the university-self-management pattern `T34` found in LATAM, and
+evidence it is a SHAPE rather than a regional workaround. `schoolz` is a US district parent portal
+naming its district in prose (*"Cherry Hill Public Schools"*). `Plan ₿ Network` is a community LMS
+whose interesting property is architectural, not topical: **the platform and the educational
+CONTENT live in two separate repositories**, which is exactly the split `P43` tells a studio to
+impose on a client who wants courseware without forking an LMS.
+
+🔵 **Licence byte-hash, used as `T37` intends.** `schoolz`'s Apache-2.0 payload hashes to
+`sha256:c71d239df917…` — byte-identical to the payload already recorded on this base's
+`Ed-Fi-SDK-for-AI-Assistants` row. Same stock text, no holder line, two unrelated projects:
+the hash de-duplicates a licence, it does not imply a lineage.
+
+| Platform | Repo | Licence | Stars | What it is |
+|---|---|---|---|---|
+| MyDocker | https://github.com/CentraleSupelec/mydocker | 🟢 **MIT — byte-read** (`LICENSE.md`, `1,081 B`, `sha256:394ccfb071f6…`, stock text, holder `2023-prese…`) | 16 | 🟢 **New this pass (`p822`), and the first VIRTUAL LAB row in this file.** *"A scalable virtual labs provider based on Docker with simple integration to your LMS"* — hundreds of Docker-based lab environments launched directly from Moodle, scheduled on cloud resources, with lecturers updating lab images without an IT ticket and student data kept off third-party infrastructure. `37,653 KB` of TypeScript, pushed `2026-11-10`, Software Heritage archived. 🔵 **EMEA, placed on the author: CentraleSupélec. This is the component an AI skills-training offer needs and the one studios usually buy** |
+| CSM Scheduler (`csm_web`) | https://github.com/csmberkeley/csm_web | 🟢 **MIT — byte-read** (`1,081 B`, `sha256:53e957827340…`, stock text, holder `2019 Computer Scie…`) | 20 | 🟢 **New this pass (`p822`).** Section signup and attendance for UC Berkeley's Computer Science Mentors — Django + Python `3.9`, React front end, Postgres, Docker compose, pushed `2026-11-10` after seven years. 🔵 **North America, placed on a quoted locative (*"Berkeley"*).** 🔵 **Its value here is comparative: `T34` found LATAM universities building their own self-management systems and read it as a regional adaptation. The same shape at Berkeley says it is a UNIVERSITY shape, and a studio can reuse the LATAM patterns on a North American campus** |
+| Plan ₿ Network | https://github.com/PlanB-Network/bitcoin-learning-management-system | 🟢 **MIT — byte-read** (`1,076 B`, `sha256:0f6ce0948634…`, stock text, holder `2023-2026 Pla…`) | 28 | 🟢 **New this pass (`p822`) — a permissively licensed, running LMS, which this tier is short of.** A Turbo monorepo with Docker development, community-driven, *"free, open-source"*. 🟢 **The architecture is the transferable part: the PLATFORM is this repository and the educational CONTENT is a separate one (`bitcoin-educational-content`), so courseware is versioned and governed apart from the system that serves it — the separation `P43` prescribes, already implemented.** 🔵 **Placed Global: no locative statement in the README, and the subject matter is not a location** |
+| schoolz | https://github.com/sitenaut/schoolz | 🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:c71d239df917…`, stock text, no holder) | 1 | 🟢 **New this pass (`p822`).** *"One public, bookmarkable page per school"* — it consolidates the school-day information a district scatters across sites, needs no account for almost everything, and is explicitly *"built to be handed to a district"*, data model, scans and tests included. 🔵 **North America, placed on a quoted locative: Cherry Hill Public Schools.** 🔴 **`1★` and unproven as a product — carried for the DELIVERY POSTURE, which is the one most civic-edtech pilots get wrong: public by default, login only for personalisation** |
 
 ## 🟢 Twenty-third pass (`p818`, 2026-11-15) — the RESEARCH side of the institution, and the first tier in this file where the permissive option is the BETTER product rather than the fallback
 

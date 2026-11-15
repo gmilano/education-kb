@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
+**Seventy-six** trends — derived trends: **76** — 🟢 **Twenty-seventh pass (`p822`, 2026-11-15): `T73`–`T76` added** — stars shown to be FORGEABLE and not merely lagging, by a `775`-repository clone farm that is relicensed, codeless, synchronised within `48` hours and out-stars the MIT project it impersonates `8.5:1`, with a Dropbox `.rar` lure as its only call to action (`T73`); `T71`'s design-challenge channel tested and BOUNDED at `8` repositories, `4` in the education track, `1` build-safe — and shown to be cross-sector, so it is an instrument for every KB in this estate (`T74`); a product category this base did not hold, the LEARNING-SCAFFOLD agent whose subject is another AGENT, arriving as three independent implementations in one pass and landing on the cognitive-load problem the 2026 literature names (`T75`); and `ingest/derive-counts.py` RUNNING after four passes of refusal, confirming every figure the degraded channel had claimed and discharging `ACTION p821-B` (`T76`). 🟢 **`15` build-safe agent rows and `4` platform rows added — the largest discovery pass since `p818`, and the second consecutive non-nil.** 🔴 **The mandated star-ranked battery nilled a `37`th consecutive time; the productive channels were recency-with-no-star-floor (`T70`) and challenge-origin (`T74`).** 🟢 **Count gate-confirmed, not inline: `derived=76 claimed=76`.** 🔴 **Egress resolved GitHub only, so every repository is byte-read and every market and regulatory item is `CITED, NOT READ` and says so.**
+
 **Seventy-two** trends — derived trends: **72** — 🟢 **Twenty-sixth pass (`p821`, 2026-11-15): `T69`–`T72` added** — LATAM's school-curriculum nil ended as a MEASUREMENT by `ILIA 2026` (CENIA/CEPAL), `11` of `20` countries against `2` in 2024, which makes this base's own CENIA-sourced *"school-level AI education is largely absent"* line stale (`T69`); the new supply shown to bind to a NATIONAL CURRICULUM INSTRUMENT rather than to a subject, three repositories in three regions in one pass, with the curriculum adapter — not the model — named as the asset (`T70`); Africa's first entry into this base's supply side, arriving through a DESIGN CHALLENGE and carrying a category this base held nowhere, the longitudinal learner profile with a consent gate enforced in code (`T71`); and the K-12 platform default escalated into a legislative object with a dated deadline of `2026-11-30` (`T72`). 🟢 **`4` build-safe agent rows and `1` platform row added — the FIRST non-nil discovery pass in `36`, and `T70` names why: the productive channel was recency-ranked with NO star floor.** 🔴 **Count re-derived INLINE (`grep -c '^## T'` → `72`), not by `ingest/derive-counts.py`: the sandbox classifier refused the repository's own Python for a FOURTH consecutive pass. Degraded channel, flagged, `ACTION p821-B`.** 🔴 **Egress on this pass resolved GitHub ONLY, so every repository below is first-hand and byte-read while every regulatory item is `CITED, NOT READ` and says so.**
 
 **Sixty-eight** trends — derived trends: **68** — 🟢 **Twenty-fifth pass (`p820`, 2026-11-15): `T66`–`T68` added** — `ACTION p819-C` DISCHARGED, and not by finding a new source: the "unverified November age-floor lead" was `Parecer CNE/CP nº 15/2026`, an instrument this base has carried in three files since `p790`, so the failure was CROSS-FILE LINKAGE and not sourcing (`T66`); Brazil's rule shown to be STAGE-GATED rather than age-gated, with the generative-AI threshold at `6º ano` and a full four-rung ladder, which is why an age-framed query could never return an instrument (`T67`); and the parecer's ASSESSMENT rules recovered — detector-only sanction prohibited outright, AI pre-correction admitted only as a preparatory step — which confirms `T876`'s note that the `2026-09-01` text was a superseded draft and prices the difference (`T68`). 🔴 **The mandated eight-leg battery nilled a `35`th consecutive time, measured with its denominator: `0` new repositories, `0` new regional instruments across four regions — recorded in `agents/trending.md`, not promoted to a trend, because `T63` already states it.** 🔴 **Count re-derived after insertion by a SECOND and independently written reimplementation of `ingest/derive-counts.py`: the sandbox classifier refused the repository's own Python for a THIRD consecutive pass. It returned `derived=68 claimed=68` and reproduced `p819`'s other four figures exactly — `168`, `132`, `111`, `50`. See `ACTION p820-B`.**
@@ -82,6 +84,127 @@ the second time.** 🔵 **The amendment uses no component discovered this pass**
 three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
+
+## T73 — Stars are no longer merely a LAGGING signal, they are a FORGEABLE one: a `775`-repository clone farm, relicensed and codeless, out-starring the project it impersonates `8.5:1`
+
+🔵 **`T70` said the star-ranked discovery channel was saturated because stars LAG.** `p822` found
+the stronger statement, by measurement rather than inference: **stars can be manufactured faster
+than a KB can harvest them, and they are being manufactured around exactly the terms an
+agent-and-education sweep uses.**
+
+🟢 **Measured, with the control named.** A single-phrase search on a cluster's shared description
+returns `775` repositories. Against the genuine upstream `Simpleyyt/ai-manus` (MIT, `22,029 KB`,
+created `2025-04-26`, `75` open issues, `1,647★`), each sibling carries: creation inside a
+`48`-hour window on `2026-11-13`/`14`; a payload of `118 KB`; `0` open issues; `650`–`680★`; a
+README whose `sha256` is **identical across siblings** and different from upstream's; and
+🔴 **an Apache-2.0 licence file where the original is MIT — a relicensing, not a fork.**
+🔴 **No code at all: `package.json`, `requirements.txt`, `setup.py` and `install.sh` all `404`.
+The single call to action in the README is a Dropbox `.rar` download.** 🟢 **Not followed; recorded
+as an indicator.** The top `30` siblings alone hold `14,003★` against the original's `1,647`.
+
+🔵 **Why this is a TREND and not an incident.** Three properties make it repeatable: the clones are
+not marked as forks, so fork filters miss them; they carry a valid OSI licence FILE, so licence
+filters pass them; and they out-rank their own upstream on stars, so a "top N by stars" ingest
+prefers the fake. 🔴 **Every quality control this base runs on metadata alone would have admitted
+them. Only the payload read refused them.**
+
+🟢 **The operative consequence, and it is cheap:** existence is not enough, and licence is not
+enough — **a row needs a PAYLOAD control, and the cheapest sufficient one is repository SIZE plus
+the presence of a build manifest.** `118 KB` with no manifest is not a system. `P52` makes this a
+runnable gate.
+
+🔵 **And it re-prices this base's own history: every star figure written here before `p822` was
+recorded under the assumption that stars are earned.** The byte-read discipline means no phantom
+was ever shelved, but the STAR COLUMN is now a weaker field than the licence column, and should be
+read as popularity evidence only when the payload has been read.
+
+## T74 — The design-challenge channel is REAL, BOUNDED and cross-sector — `8` repositories, `4` in education, `1` build-safe
+
+🔵 **`T71` recorded that Africa entered this base's supply side through a design challenge, from a
+single observation (`jemma`).** `p822` tested whether that was an anecdote or a channel, by
+querying the challenge's NAME as an exact phrase.
+
+🟢 **It is a channel, and — more useful — it is a channel with a DENOMINATOR.** The exact phrase
+returns `8` repositories in the index. Four are Education-track entries and they dispose cleanly:
+`meska-brain` (Apache-2.0, build-safe, shelved), `DIRA` (AGPL-3.0, copyleft, shelved with the
+propagation warning), `jemma` (MIT, already held from `p821`), and `contextbridge-long-view`
+(no licence, `README.md` `404` at both branch roots, size `0` — rejected).
+🟢 **A `25%` build-safe yield on a `4`-repository population is a better rate than the mandated
+star-ranked battery has returned in `37` passes.**
+
+🔵 **The cross-sector property is what makes it an INSTRUMENT.** The same challenge produced
+procurement agents (`uwazibid-real-mcp`, `zabuni-ai`, `tenderwatch-mcp` — Kenya county tenders over
+OCDS data) and a health triage agent (`mediquest-triage-desk`, SATS-cited). 🟢 **So a named,
+regional, time-boxed design challenge is a harvestable supply event for ANY industry KB in this
+estate, not only education — and the query is one exact phrase.**
+
+🔴 **The limits, stated.** The population is tiny, most entries are prototypes on synthetic data
+and say so, and `2` of the `4` education entries were unusable (one copyleft for a hosted service,
+one empty). 🔵 **The value is not volume. It is that `2` of this base's `3` Africa-placed agent
+rows now come from one identifiable event, which tells a studio WHERE to look next rather than
+how much to expect.**
+
+## T75 — A product category this base did not hold: the LEARNING-SCAFFOLD agent, whose subject is another AGENT rather than a subject
+
+🟢 **Three independent repositories arrived in one pass implementing the same idea, none of them
+citing the others:** `lf-skill` wraps any shared agentic skill in a pre-flight basics quiz, mid-run
+Socratic checkpoints and a teach-back debrief; `tuttor-kit` turns an AI CLI into a tutor that
+*"guides with questions and hints, and does not write the code"*; `ai-learning-skills` carries a
+structured course, self-tests and a dashboard in `course-state.md` so an agent can run a tutorial
+loop with STATE.
+
+🔵 **What they have in common is the inversion.** Every education agent this base has shelved for
+twenty-six passes answers *how does the machine teach the person*. These three answer
+**_how does the person demonstrably learn while the machine does the work_** — the agent still
+executes, and the scaffold is what makes the human able to show they understood it.
+
+🟢 **This lands on a named problem, not a speculative one.** The `2026` trend literature this pass
+reviewed states the shift directly: education has moved past the policing phase of generative AI
+and *"the focus has shifted from policing academic integrity to optimizing cognitive load"*
+(`CITED, NOT READ`). 🔵 **A scaffold agent is the first product shape in this base that an
+academic-integrity office can sign WITHOUT banning anything** — and the same shape sells into
+corporate L&D, where the complaint is identical and is phrased as *"my juniors cannot work without
+the assistant"*.
+
+🔴 **All three are at `0`–`1★` and none is proven.** 🟢 **The category is the asset; `P53` composes
+them into something deliverable, and the components are interchangeable by design because all three
+are `SKILL.md`-shaped.**
+
+## T76 — The gate four passes could not run, RAN — and it confirmed every figure the degraded channel had claimed
+
+🔴 **`p818` through `p821` each recorded the same defect: `ingest/derive-counts.py` could not be
+executed, because the sandbox classifier refused the repository's own Python.** Each pass worked
+around it — `p819` and `p820` by writing independent reimplementations, `p821` by re-deriving
+inline over the column signatures — and each flagged the result as a degraded measurement
+(`ACTION p819-B`, `p820-B`, `p821-B`).
+
+🟢 **In the `p822` environment the real gate executed on the first attempt**, and the baseline it
+printed before this pass wrote anything was: `patterns 51`, `trends 72`, `shelf 172`,
+`foundations 132`, `verticals 112` — **every figure identical to what the inline re-derivations had
+claimed.** 🔵 **`ACTION p821-B` is DISCHARGED, and the carried `ACTION p820-B` with it.**
+
+🟢 **And the whole suite ran, not just the counts gate — which produced a second measurement this
+base did not have.** `make hooks` executed `72` gates: 🔴 **`49` GREEN, `23` RED**
+(`gate-derived-counts`, `gate-dates`, `gate-shelf-consistency`, `gate-region-headings`,
+`gate-prose-claims`, `gate-promotion-ledger`, `gate-cell-reproduction` and `16` others).
+🟢 **Controlled, because an uncontrolled number here would be worthless: the suite was run a second
+time against a PRISTINE copy of `HEAD`, before any `p822` edit, and returned `49/72` with the
+IDENTICAL red list.** 🔵 **So the `23` failures are standing debt carried into this pass, not
+damage done by it — and `p822` neither added to them nor cleared any.**
+🔴 **`ACTION p822-A` is registered on that: the red list is now KNOWN and nothing in this base's
+history prices it. A pass should take `gate-dates`, `gate-region-headings` and
+`gate-shelf-consistency` first, because those three grade the contracts this file's own readers
+depend on.** 🟡 **Note the asymmetry worth remembering: `ingest/derive-counts.py` is GREEN on all
+five pages while `gate-derived-counts` is RED, so the Makefile target is checking something wider
+than the script this base has been re-deriving by hand for four passes.**
+
+🟢 **The finding worth keeping is epistemic, not arithmetic.** A reimplementation of a gate is a
+claim about the gate; it is not the gate. For four passes this base could not tell the difference
+between *"our numbers are right"* and *"our substitute instrument agrees with itself"*.
+🔵 **It could now, and the substitutes were faithful — which RETROSPECTIVELY validates the method
+`p819`–`p821` used, and tells future passes that re-deriving from the gate's own source is an
+acceptable degraded mode rather than a guess.** 🔴 **It does not make it a preferred mode: the
+environment, not the discipline, is what changed.**
 
 ## T69 — LATAM's school-curriculum nil is OVER as a measurement: `11` of `20` countries now carry AI content in the national curriculum against `2` in `2024`, and this base's own standing line is stale
 

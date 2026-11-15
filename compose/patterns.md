@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
+**Fifty-four** concrete recipes — derived recipes: **54**. 🟢 **Twenty-seventh pass (`p822`): `P52`–`P54` added** — the pre-ingest PAYLOAD gate that refuses `T73`'s `775`-repository clone farm in four `curl`s, and the first recipe here whose deliverable protects the other recipes (`P52`); the learning-scaffold wrapper that lets an agent do the work while the person can still be shown to have learned it, composed from the three independent `SKILL.md` implementations `T75` found in one pass (`P53`); and the East Africa voice-first deployment in which the FINANCING rail is part of the architecture — an MCP entitlement tool the tutor reads — built on the Africa-placed components `T71` and `T74` put on these shelves (`P54`). 🟢 **Zero copyleft in all three delivered trees; the AGPL-3.0 trap adjacent to `P54` is named.** 🟢 **Count gate-confirmed, not inline: `ingest/derive-counts.py` ran in this environment after four passes of refusal (`T76`), returning `derived=54 claimed=54`.** All components byte-read on `2026-11-15`.
+
 **Fifty-one** concrete recipes — derived recipes: **51**. 🟢 **Twenty-sixth pass (`p821`): `P51` added** — the competency gradebook agent built against a NATIONAL curriculum instrument, and the first recipe in this base whose reusable asset is the CURRICULUM ADAPTER rather than the model or the prompt (from `T70`). 🟢 **It is also the first recipe here with its ports PRICED rather than promised:** one reference implementation (🇵🇪 `mawta`, `CNEB`) and two adapter targets already encoded (🇪🇬 `edutraceapp`'s learning-outcome short codes, 🇨🇳 `k12-qbank`'s 人教版 knowledge points), with the second country costed at `3`–`4` weeks against the first at `8`–`10`. 🔴 **Its central constraint is a refusal taken verbatim from the reference implementation — *"AI that proposes, never decides"* — expressed as a schema in which no code path writes a grade.** 🟢 **Zero copyleft in the delivered tree; the one adjacent AGPL-3.0 trap is named.** 🔴 **Count re-derived INLINE (`grep -c '^## P'` → `51`): the sandbox classifier refused the repository's own Python gates for a FOURTH consecutive pass (`ACTION p821-B`).** All components byte-read on `2026-11-15`.
 
 **Fifty** concrete recipes — derived recipes: **50**. 🟢 **Twenty-fifth pass (`p820`): `P50` added** — the stage-gated basic-education tutor for Brazil, and the first recipe in this base whose core deliverable is a REFUSAL BOUNDARY inside the product rather than a capability: on two of `Parecer CNE/CP nº 15/2026`'s four rungs the compliant behaviour is to not generate at all, so the STAGE ROUTER is the primary architectural element and it fails closed (from `T67`). 🔴 **It is also the first recipe here written against an instrument this base holds as `CITED, NOT READ`** — every clause is SECONDARY, corroborated by two independent Brazilian legal sources, and the recipe says so rather than lending the parecer a precision it has not earned on this channel. 🟢 **Its second half replaces the thing `T68` makes unlawful: a sanction founded exclusively on an AI detector becomes an ADJUDICATION PACKAGE a teacher signs.** 🔵 **Count re-derived after insertion by an independently written reimplementation of `ingest/derive-counts.py` (`derived=50 claimed=50`); the repository's own gate was refused by the sandbox classifier for a THIRD consecutive pass — `ACTION p820-B`.**
@@ -125,6 +127,130 @@ decision instead of a constraint:
   and it is the one argument that still favours `ltijs` on a long engagement.
 
 ---
+
+## P52 — The pre-ingest payload gate: four controls that refuse a `775`-repository clone farm, and the one that actually does the work (Global, and the first recipe here whose deliverable protects the OTHER recipes)
+
+🔵 **Why this recipe exists.** Every other recipe in this file starts *"clone these repositories"*.
+`T73` measured what that instruction now costs: GitHub's search index returns `775` repositories
+that are relicensed, codeless copies of one real MIT project, created inside `48` hours, each
+carrying `650`–`680` stars and a Dropbox `.rar` download as its only call to action.
+🔴 **They are not marked as forks, so fork filters miss them. They carry a valid Apache-2.0 FILE,
+so licence filters pass them. They out-star their own upstream `8.5:1`, so a "top N by stars"
+ingest PREFERS them.** 🟢 **This recipe is the gate that refuses them, and it is four `curl`s.**
+
+**The controls, in the order that fails fastest and cheapest:**
+
+1. 🟢 **EXISTENCE, two-directional.** `GET raw.githubusercontent.com/{repo}/{main,master}/README.md`
+   must return `200` on at least one branch, AND a deliberately fabricated sibling path must return
+   `404` in the same run. This base has run the negative control since `p812`; without it a
+   uniformly broken channel reads exactly like a uniformly absent one.
+2. 🟢 **PAYLOAD.** From `search/repositories`, read `size` and `language`. 🔴 **Refuse anything under
+   `~500 KB` that carries no build manifest** — probe `package.json`, `requirements.txt`,
+   `pyproject.toml`, `setup.py`, `go.mod`, `Cargo.toml`, `composer.json`, `pom.xml`. The clone farm
+   dies here: `118 KB`, zero manifests, against the original's `22,029 KB`.
+   🔵 **Do NOT probe guessed subdirectory paths as the control — `p822` probed `backend/`,
+   `frontend/` and `charts/` on four REAL repositories and got `404` on all of them while
+   `size` + `language` correctly reported `13,633 KB` of Python and `37,653 KB` of TypeScript. The
+   metadata is the control; the path guess is a false negative generator.**
+3. 🟢 **LICENCE LINEAGE, by byte-hash (`T37`).** `sha256` the licence payload. A stock MIT body is
+   `~1,060`–`1,130 B`; a stock Apache-2.0 body is `~11,340`–`11,360 B`; AGPL-3.0 is `~34,520 B`.
+   🔴 **Compare the SPDX id against the upstream the project resembles: a copy whose licence
+   differs from its original is a relicensing, and a relicensing without a holder line is the
+   clone-farm signature.**
+4. 🟢 **LURE SCAN.** Grep the README for `dropbox|mediafire|mega\.nz|\.rar|bit\.ly` plus a
+   download-badge shape. 🔴 **A hit is a REFUSAL, never a follow.** `p822` ran this over all `20`
+   education candidates it verified: zero hits, which is what makes the clone farm's hit meaningful.
+
+🟢 **Wiring.** The repository already ships the parts: `ingest/p645-existence-oracle.sh` for (1),
+`ingest/p765-licence-byteread.sh` and `ingest/p612-grade-title-line.py` for (3). (2) and (4) are new
+and are ~`40` lines of `bash` + `jq`. Run them as a pre-ingest filter over the `search/repositories`
+result set BEFORE any row is drafted, and emit a TSV of `repo, verdict, reason` so a refusal is
+recorded rather than silently dropped — `agents/top.md`'s rejection table is the publication
+surface, and `p822` filed the farm's exemplar there.
+
+🔵 **Effort: `1`–`2` days to wire, and it runs in the time one sweep already takes.**
+🟢 **Licence posture: everything here is this base's own code plus `curl`/`jq`; nothing copyleft
+enters the delivered tree.**
+🔵 **Sell it as this:** any client building an internal catalogue of open-source AI components has
+this exposure today, their ranking is almost certainly stars-first, and the control is a day's work.
+
+## P53 — The learning-scaffold wrapper: let the agent do the work and still be able to PROVE the person learned it (Global, and the first recipe here whose buyer is the academic-integrity office or corporate L&D)
+
+🔵 **The problem, in the client's words rather than ours.** Universities have stopped trying to ban
+assistants and cannot evidence learning; employers say juniors cannot work without the assistant.
+`T75` found three independent repositories implementing the same answer in one pass, and this
+recipe composes them.
+
+**The stack, all MIT, all `SKILL.md`-shaped so the pieces are interchangeable:**
+
+- 🟢 [`cheahhl814/lf-skill`](https://github.com/cheahhl814/lf-skill) — the wrapper. Pre-flight basics
+  quiz before the agent runs, Socratic checkpoints DURING the run where a defensible learner
+  parameter choice is the one actually used, and a teach-back debrief after.
+- 🟢 [`Hang-GaoZu/ai-learning-skills`](https://github.com/Hang-GaoZu/ai-learning-skills) — the state.
+  `course-state.md` carries the progression, self-tests and dashboard; the HTML variant emits a
+  self-contained OFFLINE learning site, which is the artefact to hand a learner who loses access.
+- 🟢 [`decolla/tuttor-kit`](https://github.com/decolla/tuttor-kit) — the refusal. For the coding case,
+  it guides with questions and hints and does NOT write the code.
+- 🟢 [`fcedf/interruptible-ai-tutor`](https://github.com/fcedf/interruptible-ai-tutor) — the delivery
+  loop, when the scaffold needs to EXPLAIN rather than quiz: segmented explanation with barge-in,
+  live code execution and incremental charts, reachable over CLI, REST + SSE or `SKILL.md`.
+- 🟡 [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) (MIT, `16★`) — the
+  institutional record, IF the client has an LRS. 🔴 **This base's `p817` gap stands: it is the only
+  licensed xAPI agent surface and it is stale. When it is out of scope, `course-state.md` is the
+  fallback record and the engagement should say so in writing rather than imply an integration.**
+
+🟢 **Wiring.** The scaffold is a skill that wraps the client's EXISTING agent, so nothing about
+their assistant changes: `lf-skill` gates entry, the work runs, checkpoints fire mid-run, the
+teach-back writes to `course-state.md`, and a nightly job maps completed states to xAPI statements
+if an LRS exists. 🔵 **The acceptance test is the one the buyer cares about and it is cheap to
+state: for a sampled task, the learner can reproduce the REASONING without the agent in the room.**
+
+🔴 **Risks, stated.** All three scaffolds are `0`–`1★` and unproven; treat them as reference
+implementations to be re-written in the client's own skill format if they go stale.
+🔵 **Effort: `4`–`6` weeks for one faculty or one engineering function, most of it in writing the
+checkpoint content, not in code.** 🟢 **Zero copyleft in the delivered tree.**
+
+## P54 — The East Africa voice-first learning deployment, with the FINANCING rail treated as part of the architecture (EMEA anchor, and the first recipe here whose blocking constraint is payment rather than pedagogy)
+
+🔵 **`T71` and `T74` put three Africa-placed, permissively licensed components on this base's
+shelves in two passes. This recipe is what they build when composed, and it is shaped by a
+constraint the other `53` recipes never face: the learner cannot pay, and the person who CAN pay is
+on another continent.**
+
+**The stack:**
+
+- 🟢 [`marthanp/sautika`](https://github.com/marthanp/sautika) (MIT) — the learner surface.
+  Voice-first, native-language (Swahili), dyslexia-inclusive, *"designed for learners across East
+  Africa"*. 🔵 **Voice-first is not an accessibility nicety here; it is what works at low literacy
+  and low bandwidth.**
+- 🟢 [`OmarAxis/meska-brain`](https://github.com/OmarAxis/meska-brain) (Apache-2.0) — the learner
+  model. An MCP server plus a LangGraph agent holding a longitudinal map that shows a teacher where
+  a struggle STARTED, not just where it is. 🔴 **Prototype on synthetic data by its own statement:
+  take the schema and the consent gate, re-implement the service.**
+- 🟡 [`nafkunasefa1-hub/EthioLearn`](https://github.com/nafkunasefa1-hub/EthioLearn) (MIT) — the
+  financing rail, as a REFERENCE not a dependency: a PayPal MCP server through which a diaspora
+  sponsor funds a NAMED learner's access, against a named national exam (`EUEE`).
+  🔴 **It is a hackathon submission; what transfers is the architecture — an MCP payments tool
+  invoked by the same agent that holds the learner record, so sponsorship is an entitlement the
+  tutor can read, not a separate billing system.**
+- 🟢 [`CentraleSupelec/mydocker`](https://github.com/CentraleSupelec/mydocker) (MIT) — the practical
+  tier, when the programme is vocational: Docker lab environments launched from Moodle, scheduled
+  on cloud resources, with student data kept off third-party infrastructure.
+- 🔴 **Avoid in the delivered tree:** [`DIRA-HUB-LTD/DIRA`](https://github.com/DIRA-HUB-LTD/DIRA)
+  solves the same learner-profile problem from the same design challenge but is **AGPL-3.0**, which
+  propagates over a hosted service. Read it for the data model; ship `meska-brain`'s tree.
+
+🟢 **Wiring.** `sautika` is the channel; `meska-brain`'s MCP server is the record every component
+reads and writes; the sponsorship tool is a third MCP server exposing `entitlement(learner_id)` so
+the tutor degrades gracefully to offline content when funding lapses rather than failing closed;
+`MyDocker` is attached only for practical modules. 🔵 **Build the consent gate FIRST — a
+longitudinal record about a minor is the part that will be audited.**
+
+🔵 **Effort: `10`–`12` weeks for a single-region pilot**, of which the payments rail and its
+compliance review are `3`–`4` and are the schedule risk.
+🔴 **Known gaps to state in the proposal rather than discover later:** none of the three
+Africa-placed components is proven in production, the sponsorship rail's provider terms vary by
+corridor and are not this base's finding, and the `p817` learner-record gap applies here too.
 
 ## P51 — The competency gradebook agent, built against a NATIONAL curriculum instrument and portable across three of them (LATAM first, with EMEA and APAC ports priced — and the first recipe here whose reusable asset is the CURRICULUM ADAPTER rather than the model)
 

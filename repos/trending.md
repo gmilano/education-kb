@@ -4,6 +4,55 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-seventh pass, `p822`) — **`0` foundation rows for a FOURTH consecutive pass, and this pass can say precisely what the channel returned instead**
+
+🔴 **`0` foundation rows (`132` unchanged). `4` platform rows (`112` → `116`). A MEASUREMENT, not an
+unrun leg.** 🟢 **Gate-confirmed: `ingest/derive-counts.py` ran this pass and printed
+`foundations: tables=20 rows=134 distinct=132 graded=132 claimed=132` before and after.**
+
+### The legs, with their denominators
+
+Fourteen `gh api search/repositories` legs ran (`sort` ∈ {`updated`, `stars`}, `per_page=30`),
+plus eight web-search legs. 🟢 **Three license-and-topic axes this base had not run before:**
+`topic:edtech license:mit pushed:>2026-10-01`, `topic:education-technology license:apache-2.0`,
+and `topic:education topic:ai-agent`.
+
+| Leg | Returned | Foundation-grade after payload read |
+|---|---|---|
+| `topic:education topic:ai-agent` (`sort=updated`) | 30 | `0` |
+| `topic:edtech license:mit pushed:>2026-10-01` | 30 | `0` |
+| `learning management system pushed:>2026-10-01` | 30 | `0` new — `Plan ₿ Network`, `Django--LMS`, `BDC LMS` are PLATFORMS, filed in `verticals/` |
+| `student information system open source pushed:>2026-09-01` | 30 | `0` |
+| `powerschool OR blackboard OR brightspace OR clever OR oneroster agent` | 30 | `0` — the `p817` learner-record gap is UNCHANGED |
+| `knowledge tracing adaptive learning` (`sort=stars`) | 30 | `0` — `pyBKT`, `pykt-toolkit`, `EduStudio`, `pyedmine` all held |
+| `proctoring OR plagiarism AI open source` | 30 | `0` |
+| the other seven legs | ~200 | `0` |
+
+🔵 **The honest reading, and it is the same one `T63` gives: the FOUNDATION layer of education is
+not where new supply is arriving.** The libraries an education engagement builds on — knowledge
+tracing, retrieval, orchestration, the LMS itself — were built between `2014` and `2024` and are
+all already on this shelf. 🟢 **New supply arrives as AGENTS and as thin PLATFORMS, which is why
+`p822`'s `19` new rows split `15`/`4` between those two files and `0` here.**
+
+### 🔴 The channel is now actively adversarial, and this is the file where that has to be said
+
+🟢 **`repos/trending.md` exists to record what GitHub's trending and star-ranked surfaces show.**
+`p822` measured those surfaces returning `775` repositories that are codeless, relicensed copies of
+one real MIT project, created inside a `48`-hour window, each carrying `650`–`680` stars — together
+out-starring the genuine upstream `8.5:1` — whose READMEs carry a Dropbox `.rar` download badge and
+nothing else. 🔴 **A "GitHub trending, ranked by stars" ingest is no longer a safe instrument for
+this file.** 🟢 **`T73` states the class, `P52` is the four-`curl` gate, and the exemplar
+(`Topkiflare74/ai--manus2.0`, `678★`) is filed in `agents/top.md`'s rejection table so the shape is
+recognisable: relicensed text, no build manifest, synchronised creation, uniform star counts.**
+
+### 🟢 What the legs DID yield, filed elsewhere
+
+`MyDocker` (CentraleSupélec, MIT, `16★`, Software Heritage archived) — the virtual-lab tier this
+estate had no row for; `csm_web` (UC Berkeley CSM, MIT, `20★`); `Plan ₿ Network`
+(MIT, `28★`, platform/content split); `schoolz` (Apache-2.0, `1★`, named US district).
+🔵 **All four are platforms, so all four are in `verticals/solutions.md` and none inflates this
+file's figure.**
+
 ## `2026-11-15` (twenty-sixth pass, `p821`) — **`0` foundation rows for a third consecutive pass, and this time the nil was tested against a channel the base had never run**
 
 🔴 **`0` foundation rows. `1` platform row (`111` → `112`). A MEASUREMENT, not an unrun leg.**

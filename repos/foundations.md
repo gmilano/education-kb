@@ -11,6 +11,23 @@ The platforms and libraries an education engagement actually builds on, all veri
 licence-verified by BYTE-READ over `raw.githubusercontent.com`, controlled in both directions
 against two invented addresses (`T970`, `T37`).
 
+🟢 **`p822` (2026-11-15) — `0` rows added, and the figure is GATE-confirmed rather than re-derived
+inline:** `python3 ingest/derive-counts.py` ran in this environment after four consecutive passes
+of being refused by the sandbox classifier, printing `tables=20 rows=134 distinct=132 graded=132
+claimed=132` (`T76`). 🔴 **Twenty-two legs returned `0` foundation-grade repositories** — the full
+denominator, leg by leg, is in `repos/trending.md`, including three licence-and-topic axes this
+base had never run (`topic:education topic:ai-agent`, `topic:edtech license:mit`,
+`topic:education-technology license:apache-2.0`). 🔵 **The reading is `T63`'s: the education
+FOUNDATION layer was built between `2014` and `2024` and is already shelved here; new supply
+arrives as agents and as thin platforms, which is why `p822`'s `19` new rows went `15` to
+`agents/top.md` and `4` to `verticals/solutions.md` and none here.**
+
+🔴 **One standing warning now applies to this file's sourcing channel.** `T73` measured `775`
+repositories in GitHub's search index that are codeless, relicensed copies of one real MIT project,
+synchronised within `48` hours, each carrying `650`–`680` stars and a Dropbox `.rar` lure.
+🟢 **Nothing on this shelf is affected — every row here was byte-read — but a star-ranked refresh of
+this file without the `P52` payload gate would not be safe.**
+
 ## Foundational repos — 132 rows
 
 🔴 **Twenty-sixth pass (`p821`, 2026-11-15): `0` foundation rows added, and `132` is CARRIED, not
