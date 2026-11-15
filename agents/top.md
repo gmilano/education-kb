@@ -6,6 +6,70 @@ updated: 2026-11-15
 
 # Education AI Agents — curated, license-verified
 
+## Thirty-second pass (`p827`, 2026-11-15) — the grading gap is re-tested and CONFIRMED with named negative evidence; two anchors re-measured; one EMEA row
+
+**`1` build-safe agent row added (`269` → `270`), `2` rejections recorded, `2` anchor corrections,
+`3` trends (`T96`–`T98`), `1` recipe (`P67`), and a dated `p827` block in all five regional
+sections of `intel/market.md`.**
+
+The full mandated battery ran this pass: four global legs and four regional legs.
+
+### Anchor re-measurement — both re-read from the rendered sidebar on `2026-11-15`
+
+| Row | Held at `p826` | Measured `p827` | Disposition |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | Apache-2.0, `58.7k★` | Apache-2.0, **`59.4k★`**, `7.1k` forks, `3,806` commits | `v1.7.2` (`2026-11-06`) still current. Star figure updated in the shelf row. |
+| `THU-MAIC/OpenMAIC` | MIT, `43.4k★`, *"GitHub Releases is empty"* | MIT, **`43.6k★`**, `6.7k` forks | **Correction.** Releases is no longer empty: **`v1.4.2` (`2026-11-09`) is a full release**, with `v1.5.0-rc.2` (`2026-11-12`) as the pre-release above it. `p826` saw only the rc and concluded the project had never cut a release. It has. |
+
+### 🔴 Count-integrity note — the `270` in the shelf heading could NOT be reproduced this pass
+
+🔴 **`p827` could not execute `ingest/derive-counts.py`** — the runner declined to execute
+repository-provided code — so every count in this pass is a direct `grep`/`awk` heading tally.
+🟢 **The `p827` DELTA is verified and is exactly `+1`:** the `## Build-safe agents` table held
+`191` data rows at `p826` and holds `192` now, matching the single row added below.
+
+🔴 **But the heading's claim does not match that table, and did not at `p826` either:** the heading
+read `269 rows` over a table of `191`, and now reads `270` over a table of `192` — **a standing
+gap of `78`.** 🔵 **The most likely explanation is that the gate sums build-safe rows across ALL
+tables in the file, not just the main shelf** — `repos/trending.md` records the gate reporting
+`tables=22` for `repos/foundations.md`, so a multi-table tally is clearly its definition. Under
+that definition `270` may well be correct.
+
+🟢 **The increment is therefore carried forward as correct relative to the prior claim, and the
+discrepancy is recorded rather than silently re-asserted.** 🔴 **ACTION for the next pass that can
+run the gate: print the gate's per-table breakdown for `agents/top.md` and either confirm `270` or
+correct the heading.** 🔵 Do not "fix" the heading to `192` without running the gate first — that
+would discard `78` rows that very probably exist in the tier tables above.
+
+### `T96` — the grading gap stands, and this pass is the first to test it instead of carrying it forward
+
+This base has asserted since `p815` that *"nothing in grading is to grading what DeepTutor is to
+tutoring."* That sentence has been copied forward through several passes without being re-run.
+`p827` ran it as a query and the claim survives — but the useful output is the **named negative
+evidence**, which the assertion never carried.
+
+`q="open source automated grading assessment AI agent github 2026 rubric essay scoring"` returned
+nine repositories. **Every one is a student project, a course submission or a hobby app.** The two
+closest to an agent architecture were both byte-checked and both rejected (see the rejected table):
+`Dmoayad/essay-grader-llm` carries a **sidebar/README licence conflict** (`GPL-3.0` in the sidebar,
+`MIT` claimed in the README) on `1★` and `12` commits; `shafaq2019/Rubric_Agent` has **no licence
+file at all** on `0★` and `6` commits, and its own description names it a `DATA722` mid-term.
+
+**The commercial reading is unchanged but now defensible: in grading there is nothing to adopt, so
+grading is a BUILD.** `P67` ships that build — and note that the two rejected repositories still
+contain the two correct design ideas (deterministic arithmetic outside the model; a rubric learned
+from a small human-scored sample and self-tested on held-out items), which is why `P67`
+reimplements them rather than citing them as dependencies.
+
+### `T97` — EMEA gains its first French-curriculum-aligned build-safe tutoring agent
+
+`braiinz94/braiinz-education` (Apache-2.0, `0★`, `37` commits, Python 3.12+) is shelved below. It is
+small and unproven and is admitted as such. It matters because of **where it points**: Socratic
+tutoring plus spaced repetition plus **PISA-aligned diagnostics**, explicitly aligned to the French
+curriculum. Every other tutoring row on this shelf is curriculum-neutral, and an EMEA engagement is
+almost always sold against a *national* curriculum. Read it as a worked example of curriculum
+alignment, not as a dependency at `0★`.
+
 ## 🟢 Thirty-first pass (`p826`, 2026-11-15) — two mass-publication events in the same ten days, and the star-ranked channel can only see the empty one
 
 🟢 **`269` build-safe agents on this shelf — `249` carried, `20` added by `p826`.** 🟢 **Every one of the `20` byte-read on `2026-11-15`, every one of the `20` a working integration against a system a real institution runs, and `19` of the `20` reachable from a region this base can name.**
@@ -1047,7 +1111,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 269 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 270 rows
 
 | Name | Repo | Licence | Stars | Region | Description |
 |---|---|---|---|---|---|
@@ -1190,8 +1254,9 @@ are deliberately NOT shelved. They are leads for the next pass, not findings.
 | ntulearn-mcp | https://github.com/kingdonkatsu/ntulearn-mcp | MIT | 4 | APAC | **New this pass (`p809`) — the first Singapore-origin agent in this base.** `8` tools over **NTULearn**, Nanyang Technological University's Blackboard Learn: courses, announcements, calendar items, grades, plus course-file download into local folder structures. Python 3.12+, `28` commits. 🔴 **Auth is the `BbRouter` session cookie, auto-read out of Edge/Chrome/Firefox/Brave via `browser-cookie3`**, falling back to `NTULEARN_COOKIE` and then an OS-keychain cache, with one clear-and-retry on `401`. 🔴 **Scraping a live session cookie is unsanctioned access** — same contract risk as the three proprietary-SIS paths in this base, and it should be priced as such, not as an integration. 🟢 `MIT` byte-verified: `1,055 B`, `sha256:e6bd1450153a…`, affero×`0` (sidebar shows only a generic "License" link; the payload is the evidence). |
 | blackboard-mcp | https://github.com/Mattlo0546/blackboard-mcp | MIT | 1 | Global | **New this pass (`p809`) — the only vendor-neutral Blackboard Ultra server found; the other two Blackboard rows are each bound to one university.** Python 3.10+ MCP server: reads courses, deadlines and announcements and downloads lecture slides for Claude Desktop, Cursor and Codex. Signs in through the university's SSO rather than an API key. 🔴 **Read-only on Blackboard** — README: it *"can't submit work, post or change anything on Blackboard"*; the only writes are to a local folder. 🔴 **`4` commits — the earliest-stage row on this shelf. Read it as a reference implementation, never as a dependency.** 🟢 `MIT` byte-verified: `1,067 B`, `sha256:13c8ad755224…`, affero×`0`. |
 | interactive-learning | https://github.com/geekjourneyx/interactive-learning | MIT | 52 | Global | **New this pass (`p808`) — and it is a *skill package*, not a server or an app, which is why four passes of agent-shaped searching missed it.** Takes arbitrary input — text, a link, a document or a bare question — and turns it into a **verifiable learning path**, optionally emitting an HTML "checkpoint card" that makes each step checkable rather than merely read. 🟢 **The verifiability is the reason it is shelved:** every other content-generation node in this base (`educhain`, `OpenMAIC`) produces material, not a checkable path, and the gap between "generated a lesson" and "can show the learner passed it" is the one a client always asks about. Installs into Claude Code / `opencode`-style harnesses as a skill, so it composes with `canvas-mcp` or `Moodle-MCP` for delivery rather than competing with them — see `P22`. 🔴 **`52★` and `4` commits: this is a seed, not a dependency.** Read it as a design for the checkpoint card and reimplement if it must carry weight. Licence verified from the rendered sidebar (`MIT license`). |
-| DeepTutor | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 58.7k | Global | Lifelong personalized tutoring; learner model persists across sessions and builds learning paths. **v1.7.2 released 2026-11-06**; 7.1k forks. Largest education-specific agent on GitHub. |
-| OpenMAIC | https://github.com/THU-MAIC/OpenMAIC | MIT | 43.4k | Global | Open Multi-Agent Interactive Classroom (Tsinghua MAIC lab). Turns a topic or document into a multi-agent classroom — teacher, peers, assistant — in one click. **README News lists v1.5.0-rc.2 on 2026-11-12; GitHub Releases is empty**, so treat the version as pre-release. Ships pt-BR and es-MX locales. |
+| braiinz-education | https://github.com/braiinz94/braiinz-education | Apache-2.0 (sidebar: `Apache-2.0 license`) | 0 | EMEA | **New this pass (`p827`), and the first row on this shelf aligned to a NATIONAL CURRICULUM rather than to a subject.** Socratic tutoring, spaced repetition and **PISA-aligned diagnostics**, explicitly built against the French curriculum; Python 3.12+, `37` commits, delivered through Telegram, built on the Anthropic Claude API. 🔴 **`0★` and `37` commits — this is a seed, not a dependency, and it must not be proposed as one.** 🟢 **Shelved for the alignment pattern:** every other tutoring row here is curriculum-neutral, while an EMEA schools engagement is sold against a named national curriculum and a named diagnostic instrument. Read the diagnostic mapping and reimplement. See `T97`. |
+| DeepTutor | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 59.4k | Global | Lifelong personalized tutoring; learner model persists across sessions and builds learning paths. **v1.7.2 released 2026-11-06**; 7.1k forks. Largest education-specific agent on GitHub. |
+| OpenMAIC | https://github.com/THU-MAIC/OpenMAIC | MIT | 43.6k | Global | Open Multi-Agent Interactive Classroom (Tsinghua MAIC lab). Turns a topic or document into a multi-agent classroom — teacher, peers, assistant — in one click. `6.7k` forks. **Release channel corrected at `p827` (`T97`): `v1.4.2` (`2026-11-09`) is a FULL release and `v1.5.0-rc.2` (`2026-11-12`) is the pre-release above it.** `p826` recorded Releases as empty and treated the project as never having cut one; that was wrong, and a client-facing "pre-release only" caveat should no longer be attached to this row. Ships pt-BR and es-MX locales. |
 | teacher-to-skills | https://github.com/JuneYaooo/teacher-to-skills | Apache-2.0 | 475 | Global | **New this pass.** Distills a specific teacher's materials (lecture video, notes, marked-up feedback) into a source-backed agent Skill that teaches to that teacher's standard and tapers support as the learner improves. Conclusions are tied to sources; unevidenced material is flagged, not filled in. Learner progress is stored outside the generated Skill. Runs under Claude Code / Codex / OpenClaw. 73 forks. |
 | mcp-odoo (ERPipe) | https://github.com/erpipe-org/mcp-odoo | MIT | 433 | Global | **New this pass — the largest build-safe agent in this KB that reaches an open-source SIS, and it is not an education project, which is why four passes of SIS searching missed it.** 41 tools over **Odoo 16-19** (smoke-tested against 16.0/17.0/18.0/19.0): `search_records`, `read_record`, `aggregate_records`, `get_model_fields`, `list_models`, plus module helpers, diagnostics, migration, audit and cross-instance fan-out. Because the tools take the **model name as a parameter**, OpenEduCat's `op.student`, `op.admission`, `op.exam.attendees` and `op.fees` are reachable with no education-specific code. **Writes are gated by construction — this is the row's real value:** direct `create`/`write`/`unlink` are blocked, and an approved write must pass `preview_write` -> `validate_write` -> `execute_approved_write` carrying a **single-use, same-process, expiring approval token**, with `confirm=true`, live non-empty `fields_get` metadata, and `ODOO_MCP_ENABLE_WRITES=1`; `ODOO_MCP_ELICIT_WRITES=1` adds a native confirmation prompt, and `execute_method` runs allowlisted methods only. XML-RPC default, JSON-2 on Odoo 19. 198 forks, 118 commits, Releases empty. **Formerly `tuanle96/mcp-odoo`** — the old slug is what search results still return, so record the new one. **Caveat for any proposal: the maintainer sells a hosted product (ERPipe) built on this repo** — the MIT grant is real; the roadmap has a commercial owner. |
 | sabis-mcp-server | https://github.com/hanifisenturk/sabis-mcp-server | ISC | 2 | EMEA | **New this pass — the third agent-to-SIS path in this KB and the first from EMEA (Türkiye).** MCP server over **SABIS**, the student information system of **Sakarya University**. One tool, `get-grades`: course codes and names, assessment types and weights, final letter grades, academic year and semester. 🔴 **Reaches the SIS by Puppeteer web scraping, not an API, and reads the student's own `USERNAME`/`PASSWORD` from environment variables** — a credential-replay design to read and *not* reproduce. README states it is unofficial, unaffiliated with the university, and for personal/educational use. 0 forks. Admitted for the regional and topological record: with `edupage-mcp` (Slovakia/Czechia, undocumented endpoints) and `mcp_hemis_student` (Uzbekistan), the pattern is three-for-three — **individual developers reaching captive national or institutional SIS products by unofficial means.** |
@@ -1276,6 +1341,8 @@ Globant can build a client deliverable on.
 
 | Candidate | Repo | Actual license | Stars | Why rejected |
 |---|---|---|---|---|
+| essay-grader-llm | https://github.com/Dmoayad/essay-grader-llm | 🔴 **LICENCE CONFLICT — sidebar says `GPL-3.0 license`, README's licence section claims MIT** | 1 | **New rejection (`p827`, `T96`).** LangChain + Gradio rubric grader with structured feedback and a plagiarism check. `12` commits, `1` fork. 🔴 **Rejected on two independent grounds.** First, the licence is self-contradictory, and on GitHub the sidebar reflects the actual `LICENSE` file while the README is prose — so the governing grant is `GPL-3.0`, which is copyleft and unusable as the base of a hosted client deliverable. Second, at `1★`/`12` commits it is a course-scale artifact regardless of licence. 🔵 Cited in `P67` for its rubric-feedback shape only. |
+| Rubric_Agent | https://github.com/shafaq2019/Rubric_Agent | 🔴 **NO LICENCE FILE — sidebar carries no licence entry** | 0 | **New rejection (`p827`, `T96`).** FastAPI agent that learns scoring rules from a human reviewer's sample, then scores the remainder: reviewer scores a random `15%` sample, the agent drafts Do's & Don'ts from it, self-tests on held-out samples, then scores the rest, **running each item three times to flag unstable scores**. Handles typed and scanned answers; Gemini or Claude. `6` commits, `0` forks, and its own description names it a `DATA722` mid-term. 🔴 **No grant file means all rights reserved — not shelvable at any quality.** 🟢 **But the DESIGN is the best in the grading search and is reimplemented in `P67`:** the small-sample rubric induction, the held-out self-test, and the triple-run instability flag are all correct, and all three are cheap to rebuild from this description. |
 | ntulearn-mcp (NTU Singapore Blackboard) | https://github.com/gangula-karthik/ntulearn-mcp | 🔴 **MODIFIED MIT — byte-read and DIFFED** (`1,055 B`, `sha256:9783f2a651e2…`, holder `kingdonkatsu`); GitHub's field reports `NOASSERTION` | 6 | 🔴 **Rejected `p826`, and it is `T93`'s worked example — this base's own header-only byte-read would have shelved it as MIT.** The file opens `MIT License` and reads as stock text until the permission clause, which is rewritten from *"to permit persons to whom the Software is furnished to do so"* to *"to furnish it to whom it is furnished to do so"* — i.e. the ONE sentence that grants onward distribution has been altered into something that does not parse as a grant. 🔵 **The `NOASSERTION` field is CORRECT here and the licence header is misleading; GitHub's matcher refused it for exactly the right reason.** 🟢 **Not a verdict on the code, which is a legitimate read-only MCP server over NTULearn and would be a wanted APAC row: this is a licence-text defect its author can fix in one commit by restoring the canonical sentence, and that request is the right next action** |
 | courses-mcp | https://github.com/mahmutmft/courses-mcp | 🔴 **No grant file — byte-probed at 4 paths on `master`, all HTTP `404`** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`); GitHub licence field reads `NOASSERTION` | 1 | **New rejection this pass (`p823`).** Read-only MCP server for **FINKI Moodle** — the Faculty of Computer Science and Engineering, Ss. Cyril and Methodius University, Skopje 🇲🇰 — browsing enrolled courses and resources. 🔵 **It is a real member of the `T77` population and it is the one that cannot be shelved**, which is why it is filed by name: a later pass that re-finds it should not re-pay for the licence probe. 🔴 **`NOASSERTION` with NO bytes behind it is the OTHER failure direction of `T27`:** the field is equally uninformative when the grant is absent as when it is present, and only the probe distinguishes them. 🟢 Worth an upstream licence request — a single `LICENSE` file would move it to the build-safe table. Pushed `2026-11-15`. |
 | Mothusi | https://github.com/TD-Mosoma/Mothusi | 🔴 **No grant file — byte-probed at 4 paths on `main`, all HTTP `404`**; GitHub licence field `NONE` | 0 | **New rejection this pass (`p823`), and the one this base most wanted to shelve.** *"An AI classroom colleague for Grade 1–4 teachers in South Africa"* 🇿🇦 — a team of LangGraph agents that plan lessons. 🔵 **Africa-placed foundation-phase supply, the category `T71` opened and that this base holds almost nothing in**, and it arrives all-rights-reserved. 🔴 **This is now the FIFTH substantial unlicensed education repository recorded here** (`llamatutor`, `AITutor-EvalKit`, `educational-agents`, `AI-Grading-Tool`, now `Mothusi`) — the pattern `T24` names. 🟢 **Concrete action available: an upstream licence request costs one issue and would place an Africa foundation-phase agent on this shelf.** Pushed `2026-11-14`. |

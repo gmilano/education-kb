@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirty-second pass, `p827`) — **zero new foundation rows, and the reason is a finding rather than a quiet gap**
+
+🔴 **`0` foundation rows added (`142` → `142`) and `0` platform rows added (`131` → `131`) this
+pass. That is deliberate and is recorded here rather than papered over with filler.**
+
+### Why nothing was added
+
+🟢 **The ERP/platform leg ran and returned exactly the set this base has held since `p805`**, with
+nothing new and no licence change:
+
+| Platform | Licence | Status on these shelves |
+|---|---|---|
+| `OpenEduCat` | LGPL-3.0 | Held. Copyleft; the Odoo-based education ERP answer |
+| `openSIS` | GPL-2.0/3.0 | Held |
+| `RosarioSIS` | GPL-2.0 | Held |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 GPL-3.0 (byte-read at `p824`, `license.txt`) | Held. Re-measured `711★` this pass against `709★` held — drift only |
+| `ERPNext` / `frappe/lms` | GPL-3.0 / AGPL-3.0 | Held |
+
+🔴 **The education platform tier is still overwhelmingly copyleft, and `p827` found no new
+permissive entrant.** 🔵 Two candidates surfaced in the search and neither survived: **GegoK12**,
+described as MIT on its own vendor page with a free/paid module split that the page does not
+itemise, and **Fedena**, listed as Apache-2.0 only in a *competitor's* comparison table. 🔴 **Both
+licence claims come from marketing pages rather than from a repository, and neither resolved to a
+verifiable `LICENSE` on the channel available this pass.** 🟢 **Not shelved. A vendor page is not a
+grant** — the same rule that produced `T93` and `T96`.
+
+### The one re-measurement worth recording
+
+🟢 [`frappe/education`](https://github.com/frappe/education) — `711★`, `1,097` commits, *"Open
+source education / school management system."* 🔴 **Its licence is NOT visible on the rendered
+repository page**; this base's GPL-3.0 classification rests on `p824`'s byte-read of `license.txt`
+(`19 B`), which could not be repeated this pass because `curl` to `github.com` returned `403`
+throughout. 🔵 **The classification stands on the earlier byte-read and is flagged as not
+re-verified**, which is the honest disposition rather than silently re-asserting it.
+
+### Channel note
+
+🔴 **No byte-reads were possible this pass** — `curl` to `github.com` returned `403` on every
+attempt, so every licence cited in `p827` is read from the rendered GitHub sidebar via `WebFetch`.
+🔴 **`ingest/derive-counts.py` could not be executed**, so counts are direct `grep` heading tallies,
+marked as such rather than claimed GREEN.
+
+🟢 **Foundation and platform shelves are unchanged at `142` and `131` rows. Fewer real rows beat
+padding, and a pass that adds nothing and says why is more useful than one that adds two vendor
+claims.**
+
+---
+
 ## `2026-11-15` (thirty-first pass, `p826`) — **a layer this file had never named: the public education-DATA substrate, and the platform tier a European family actually logs into**
 
 🟢 **`3` foundation rows added (`139` → `142`) and `9` platform rows added (`122` → `131`).**

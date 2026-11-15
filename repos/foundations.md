@@ -28,6 +28,34 @@ synchronised within `48` hours, each carrying `650`–`680` stars and a Dropbox 
 🟢 **Nothing on this shelf is affected — every row here was byte-read — but a star-ranked refresh of
 this file without the `P52` payload gate would not be safe.**
 
+## Thirty-second pass (`p827`, 2026-11-15) — `0` rows added, and the reason is recorded rather than padded
+
+🔴 **`p827` added NO rows to this shelf.** The mandated ERP/platform leg ran and returned the set
+this base has held since `p805` — `OpenEduCat` (LGPL-3.0), `openSIS` (GPL-2.0/3.0), `RosarioSIS`
+(GPL-2.0), `frappe/education` (GPL-3.0), `ERPNext` (GPL-3.0) — with no new entrant and no licence
+change. 🟢 **The education platform tier remains overwhelmingly copyleft and `p827` found no new
+permissive alternative.**
+
+🔵 **Two candidates surfaced and BOTH were refused, which is the useful part.** **GegoK12** is
+described as MIT on its own vendor page, with a free/paid module split the page does not itemise;
+**Fedena** is listed as Apache-2.0 only inside a *competitor's* comparison table. 🔴 **Both licence
+claims originate in marketing pages rather than in a repository, and neither resolved to a
+verifiable `LICENSE` file on the channel available this pass.** 🟢 **A vendor page is not a grant.**
+Shelving either would have grown the row count and put an unverified permissive claim in front of a
+client — the exact failure `T93` and `T96` describe.
+
+🔴 **Channel limit, which is why no re-verification was possible either:** `curl` to `github.com`
+returned `403` on every attempt this pass, so **no byte-read over `raw.githubusercontent.com` ran in
+`p827`**. Every licence cited this pass is read from the rendered GitHub sidebar via `WebFetch` on
+`2026-11-15`. 🔴 **`ingest/derive-counts.py` could not be executed** (the runner declined to run
+repository-provided code), so counts in this pass are direct `grep` heading tallies and are marked
+as such rather than claimed GREEN.
+
+🟢 **One re-measurement:** [`frappe/education`](https://github.com/frappe/education) reads `711★` /
+`1,097` commits against `709★` held — drift only. 🔴 **Its licence is not visible on the rendered
+page; the GPL-3.0 classification rests on `p824`'s byte-read of `license.txt` and was NOT
+re-verified this pass.**
+
 ## 🟢 The public education-DATA layer — **the substrate under an agent that can be AUDITED** (new, thirty-first pass `p826`) (3 rows)
 
 🔵 **A layer this file had never named, and `p826` found three rows of it in one pass.** Everything else on these shelves is a model, a framework or a connector to a system a client already owns. 🟢 **This layer is neither: it is a deterministic wrapper over data that is already public and already authoritative, carrying its own provenance envelope — and it is what makes an education agent's output defensible to an accreditor, an examinations board or a data-protection officer.**

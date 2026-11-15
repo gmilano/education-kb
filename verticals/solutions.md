@@ -7,6 +7,34 @@ updated: 2026-11-15
 # Education vertical platforms — real systems to customize AI on top of
 
 
+## Thirty-second pass (`p827`, 2026-11-15) — `0` rows added, and the reason is recorded rather than padded
+
+🔴 **`p827` added NO rows to this shelf.** The mandated ERP/platform leg ran and returned the set
+this base has held since `p805` — `OpenEduCat` (LGPL-3.0), `openSIS` (GPL-2.0/3.0), `RosarioSIS`
+(GPL-2.0), `frappe/education` (GPL-3.0), `ERPNext` (GPL-3.0) — with no new entrant and no licence
+change. 🟢 **The education platform tier remains overwhelmingly copyleft and `p827` found no new
+permissive alternative.**
+
+🔵 **Two candidates surfaced and BOTH were refused, which is the useful part.** **GegoK12** is
+described as MIT on its own vendor page, with a free/paid module split the page does not itemise;
+**Fedena** is listed as Apache-2.0 only inside a *competitor's* comparison table. 🔴 **Both licence
+claims originate in marketing pages rather than in a repository, and neither resolved to a
+verifiable `LICENSE` file on the channel available this pass.** 🟢 **A vendor page is not a grant.**
+Shelving either would have grown the row count and put an unverified permissive claim in front of a
+client — the exact failure `T93` and `T96` describe.
+
+🔴 **Channel limit, which is why no re-verification was possible either:** `curl` to `github.com`
+returned `403` on every attempt this pass, so **no byte-read over `raw.githubusercontent.com` ran in
+`p827`**. Every licence cited this pass is read from the rendered GitHub sidebar via `WebFetch` on
+`2026-11-15`. 🔴 **`ingest/derive-counts.py` could not be executed** (the runner declined to run
+repository-provided code), so counts in this pass are direct `grep` heading tallies and are marked
+as such rather than claimed GREEN.
+
+🟢 **One re-measurement:** [`frappe/education`](https://github.com/frappe/education) reads `711★` /
+`1,097` commits against `709★` held — drift only. 🔴 **Its licence is not visible on the rendered
+page; the GPL-3.0 classification rests on `p824`'s byte-read of `license.txt` and was NOT
+re-verified this pass.**
+
 ## 🟢 The NATIONAL SCHOOL SYSTEM-OF-RECORD tier — **the platform layer a European family actually logs into, and the one no query containing the word "education" can find** — added `p826` (9 rows)
 
 🟢 **`T95`, as a platform table.** These are not education platforms a studio would propose: they are the systems a ministry or a school board already bought, which every parent in the country already has an account on, and which have no public API. 🔵 **The open agent surface over them is being written by individual parents and students, one country at a time, and `p826` is the first pass of this base to enumerate it.**

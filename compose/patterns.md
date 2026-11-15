@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
+**Sixty-seven** concrete recipes — derived recipes: **67**. 🟢 **Thirty-second pass (`p827`): `P67` added** — the rubric-grading build, which is the first recipe in this file whose premise is that NOTHING CAN BE ADOPTED: `T96` established that the entire open grading supply is student projects and licence conflicts, so `P67` reimplements the two correct ideas found inside the rejected repositories (deterministic arithmetic outside the model; a rubric induced from a `15%` human-scored sample and self-tested on held-out items) on components these shelves already hold, and draws the EU AI Act Annex III boundary before the first node because *"assess learning outcomes"* makes the system high-risk by construction (`P67`, Global build with an EMEA compliance anchor). 🔴 **Count derived with `grep -c '^## P'`, NOT with `ingest/derive-counts.py`** — the gate script could not be executed in this pass's environment, so the count is a direct heading tally and is marked as such rather than claimed GREEN. 🔴 **No component in `P67` was byte-read this pass: `curl` to `github.com` returned `403` throughout, so all licences cited here are READ FROM THE RENDERED SIDEBAR via `WebFetch` on `2026-11-15`.**
+
 **Sixty-six** concrete recipes — derived recipes: **66**. 🟢 **Thirty-first pass (`p826`): `P64`–`P66` added** — the multi-national school-portal connector, which turns `T95`'s `12` scattered single-country connectors into one domain model with four national adapters and makes the first task a LICENCE REQUEST rather than a rewrite (`P64`, EMEA anchor, ported to LATAM with no architectural change); the canonical-diff licence gate, four controls that catch a rewritten MIT grant clause, a republished copy that GitHub reports as `fork=false`, and a liveness probe calibrated against a channel that `403`s every `github.com` URL (`P65`, Global, and it protects every other recipe in this file); and the channel-integrity gate, which rejects a `1,524`-repository star farm from a shortlist on a five-signal conjunction while deliberately NOT rejecting the honest `1,241`-repository cohort published in the same window (`P66`, Global, and the recipe that retires the star floor as a quality filter in this domain). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=66 claimed=66 · GREEN`.** All components byte-read on `2026-11-15`.
 
 **Sixty-three** concrete recipes — derived recipes: **63**. 🟢 **Thirtieth pass (`p825`): `P61`–`P63` added** — the catalogue harvest, which takes `T86`'s `54` MIT education workflows as a REQUIREMENTS and TEST-SPEC corpus and re-implements them on the LangGraph these shelves already hold, instead of deploying `0★` unmaintained templates (`P61`, APAC origin, Global application); the platform-brand discovery protocol that makes `T86`'s catalogue findable by instrument rather than by luck, closing the third and last indexing axis after `T82`'s system-of-record and `T84`/`T87`'s language (`P62`, Global); and the special-education evidence pipeline assembled from `EDU-C2-028`, `EDU-C2-173` and `EDU-C2-098` with the decision boundary drawn before the first node (`P63`, EMEA anchor under the EU AI Act Annex III education classification, portable to any jurisdiction with a statutory accommodation process). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=63 claimed=63 · GREEN`.** All components byte-read on `2026-11-15`.
@@ -135,6 +137,83 @@ decision instead of a constraint:
   and it is the one argument that still favours `ltijs` on a long engagement.
 
 ---
+
+## P67 — The rubric-grading build: the recipe for a capability with NO adoptable base (Global build, EMEA compliance anchor)
+
+🔴 **Premise, and it is the opposite of every other recipe in this file.** `P55`–`P66` all start
+from something you can adopt. `T96` established that grading does not have one: nine repositories
+searched, all student- or course-scale, the two with real architecture rejected on a licence
+conflict (`GPL-3.0` vs a README claiming MIT) and on no licence file at all. 🟢 **So this recipe
+BUILDS, and its value is that it does not build blind — the rejected repositories contain two
+correct design decisions, and both are cheap to reimplement from their descriptions.**
+
+### What to take from the rejected work (ideas, not code — neither repository is usable)
+
+1. 🟢 **Keep the arithmetic OUT of the model.** `timothyheeeee/Autonomous-Grading-Engine` routes
+   rubric interpretation through a multimodal model but hands every calculation to a deterministic
+   Python stage. 🔵 An LLM that sums weighted criteria will occasionally sum them wrong, and a
+   grading system that is wrong about addition is unshippable regardless of how good its judgement
+   is. **Model produces per-criterion judgements; code produces the score.**
+2. 🟢 **Induce the rubric from a small human-scored sample, then self-test.** `shafaq2019/Rubric_Agent`
+   has a reviewer score a random **`15%`** sample, drafts explicit *Do's & Don'ts* from that
+   scoring, **self-tests on held-out samples**, and only then scores the remainder. 🔵 This converts
+   *"does the model agree with our rubric?"* from an assumption into a measured, per-engagement
+   number — which is the question an academic board actually asks.
+3. 🟢 **Run each item three times and flag instability.** Same source. 🔵 Divergence across runs is
+   the cheapest available proxy for *"this item needs a human"*, and it costs two extra inferences
+   on a task where inference is not the expensive part.
+
+### The build, on components already on these shelves
+
+| Stage | Component | Licence | Role |
+|---|---|---|---|
+| Orchestration | [`LangGraph`](https://github.com/langchain-ai/langgraph) | MIT | The graph: induct → self-test → score ×3 → stability check → route |
+| Rubric induction | your own node | — | `15%` human-scored sample → explicit Do's & Don'ts, held-out self-test, **agreement number reported to the board** |
+| Scoring | your own node, model-agnostic | — | Per-criterion judgement + evidence span. 🔴 **No arithmetic in this node** |
+| Calculation | plain Python | — | Weighted roll-up. Deterministic, unit-tested, auditable |
+| Stability gate | your own node | — | 3 runs; divergence → route to human, never to a score |
+| Human oversight | **`P60`'s teacher-approval publication gate** | — | 🟢 Already specified in this file; no grade publishes without an approving human |
+| Delivery | `Moodle-MCP` / `canvas-mcp` connector tier | MIT | Grades land in the system of record the institution already runs |
+| Provenance | 🇮🇳 see below | — | Labels and provenance markers on generated feedback |
+
+### 🔴 Draw the compliance boundary BEFORE the first node, not after the demo
+
+🔴 **Under the EU AI Act, Annex III covers education systems that *"determine access, ASSESS
+LEARNING OUTCOMES, or influence educational paths."*** 🟢 **A rubric grader is high-risk by
+construction in EMEA — there is no configuration of it that is not.** Consequences, all of them
+design inputs rather than paperwork:
+
+- 🟢 **`P60`'s approval gate is NOT optional here.** Article 14 human oversight is the product
+  default: the system proposes a grade, a human publishes it. 🔵 Build it that way from the first
+  commit; retrofitting an approval step into a pipeline that already auto-publishes is a rewrite.
+- 🔴 **Do not add emotion recognition to the marking of a recorded or proctored assessment.**
+  Banned in education since February 2025, and the ban is settled where the Annex III start date is
+  not.
+- 🔴 **The Annex III start date is CONTESTED in secondary sources** — `2027-12-02` in one guide,
+  August 2026 in others (see `intel/market.md`, EMEA). 🟢 **Design to the obligation and do not quote
+  the date to a client until the consolidated text is read.** The obligation is certain; the
+  calendar is not.
+- 🇮🇳 **APAC provenance requirement, and it is a BUILD item.** From **`2026-02-20`** India requires
+  AI-generated content to carry prominent labels and provenance markers. 🔵 Generated feedback is
+  AI-generated content. Emit provenance from the feedback node by default rather than adding it for
+  one market.
+- 🇺🇸 **North America:** the obligation lands on the school board (Virginia) or on a state model
+  policy (North Carolina Session Law `2026-41`, model policy due `2026-12-31`). 🟢 **The deliverable
+  that sells is an audit trail the board can show** — per-criterion evidence spans, the induction
+  agreement number, and the approval log from `P60`.
+
+### Sequencing
+
+🟢 **`6`–`8` weeks to a defensible pilot on one course.** Weeks 1–2: rubric induction node and the
+`15%` sampling protocol with a named academic owner. Weeks 3–4: scoring node, deterministic
+calculator, unit tests on the arithmetic. Week 5: stability gate and `P60` approval gate. Weeks 6–7:
+connector into Moodle or Canvas. Week 8: the agreement number, the audit trail and the Annex III
+classification memo — 🔵 **which is the actual deliverable to the board, and the reason the pilot
+converts.**
+
+🔴 **The one thing not to do:** do not propose any of the nine repositories from `T96` as a starting
+point. Two are licence-blocked and all nine are course-scale. 🟢 **Cite them as evidence that the
+category is open, which is a selling point, not as a shortcut through the build.**
 
 ## P64 — The multi-national school-portal connector: one domain model, four national back ends, and a licence conversation instead of four rewrites (EMEA anchor, portable to LATAM)
 

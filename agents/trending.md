@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirty-second pass, `p827`) — **the grading gap TESTED rather than quoted, and the second-largest agent on these shelves had its release channel misread**
+
+🟢 **`1` build-safe agent row added (`269` → `270`), `2` rejections, `2` anchor corrections,
+`3` trends (`T96`–`T98`), `1` recipe (`P67`), and a dated `p827` block in all five regional
+sections of `intel/market.md`.**
+
+### What moved this week
+
+🟢 **The two education anchors are both still growing, and both were re-read from the rendered
+sidebar on `2026-11-15`:**
+
+| Repository | Licence | `p826` | `p827` | Forks |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | `58.7k★` | 🟢 **`59.4k★`** | `7.1k` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | MIT | `43.4k★` | 🟢 **`43.6k★`** | `6.7k` |
+
+🔵 **`+0.9k` stars between them in roughly three days.** `DeepTutor` remains on `v1.7.2`
+(`2026-11-06`) with `3,806` commits.
+
+🔴 **`OpenMAIC`'s release channel was recorded WRONG at `p826` and is corrected here (`T97`).**
+`p826` read the README News banner, saw `v1.5.0-rc.2` and concluded *"GitHub Releases is empty …
+treat the version as pre-release."* 🟢 **The Releases page shows `v1.4.2` (`2026-11-09`) as a FULL
+release, with the rc above it.** The *"pre-release only"* caveat is removed from the row — it was a
+material misstatement attached to the second-largest education agent in this base.
+
+### New this week
+
+🟢 **One new build-safe row, and it is an EMEA row:**
+[`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) — Apache-2.0, `0★`,
+`37` commits, Python 3.12+. Socratic tutoring, spaced repetition and **PISA-aligned diagnostics**,
+explicitly aligned to the **French curriculum**, delivered through Telegram on the Anthropic Claude
+API. 🔴 **`0★` — a seed, not a dependency, and it is shelved as such.** 🟢 **It is the first row on
+this shelf aligned to a NATIONAL CURRICULUM rather than to a subject**, which is the shape an EMEA
+schools engagement is actually sold in (`T97`).
+
+### The grading gap, tested for the first time instead of carried forward (`T96`)
+
+🟢 **This base has repeated since `p815` that *"nothing in grading is to grading what DeepTutor is
+to tutoring."* `p827` ran it as a query.** Nine repositories returned; **every one a student
+project, a course submission or a hobby app.** The two with real agent architecture were read and
+both rejected:
+
+- 🔴 [`Dmoayad/essay-grader-llm`](https://github.com/Dmoayad/essay-grader-llm) — **licence conflict:
+  `GPL-3.0` in the sidebar, MIT claimed in the README.** `1★`, `12` commits. A third variant of the
+  licence-divergence class after `T81` (field vs bytes) and `T93` (edited grant): here the README
+  and the `LICENSE` file simply disagree, and the README is the one a hurried reader believes.
+- 🔴 [`shafaq2019/Rubric_Agent`](https://github.com/shafaq2019/Rubric_Agent) — **no licence file at
+  all.** `0★`, `6` commits, self-described `DATA722` mid-term. 🟢 **But the best design in the whole
+  result set**, and `P67` reimplements it: `15%` human-scored sample → induced Do's & Don'ts →
+  held-out self-test → score, with **each item run three times to flag unstable scores**.
+
+🟢 **Conclusion, now defensible rather than inherited: grading is a BUILD, and `P67` ships it** —
+with the EU AI Act Annex III boundary drawn before the first node, because *"assess learning
+outcomes"* makes a rubric grader high-risk by construction in EMEA.
+
+🔴 **Scope limit, stated so a later pass does not over-read it:** one search, in English, one
+phrasing. Strong evidence that no *prominent* build-safe grading agent exists; not proof that none
+exists.
+
+### Channel note
+
+🔴 **`curl` to `github.com` returned `403` on every attempt this pass**, so **no licence in `p827`
+is byte-read** — every licence here is read from the rendered GitHub sidebar via `WebFetch` on
+`2026-11-15`, and says so. 🔴 **`ingest/derive-counts.py` could not be executed** (the runner
+declined to run repository-provided code), so every count in this pass is a direct `grep` heading
+tally and is marked as such rather than claimed GREEN.
+
+🟢 **The four REGIONAL legs produced substantively again, for a third consecutive pass** — see
+`intel/market.md`, where all five sections gained a dated `p827` block. 🔵 The repository legs
+returned the held set (`DeepTutor`, `OpenMAIC`, `ai-engineering-hub`, `microsoft/ai-agents-for-beginners`)
+plus general roundups, consistent with `T91`.
+
+---
+
 ## `2026-11-15` (thirty-first pass, `p826`) — **two ~`1,200`-repository mass-publication events in the same ten days, and the star-ranked channel can only see the empty one**
 
 🟢 **`20` build-safe agent rows added (`249` → `269`), `1` rejection, `3` foundation rows

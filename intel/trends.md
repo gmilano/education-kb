@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
+**Ninety-eight** trends — derived trends: **98** — 🟢 **Thirty-second pass (`p827`, 2026-11-15): `T96`–`T98` added** — the grading gap re-tested as a query rather than carried forward as an assertion, and CONFIRMED with named negative evidence, so grading is established as a BUILD rather than an adoption (`T96`); `p826`'s *"OpenMAIC has never cut a release"* corrected against the rendered Releases page, where `v1.4.2` is a full release (`T97`, and a reminder that a pre-release banner in a README is not the release channel); and the OECD's 2026 Digital Education Outlook recorded as the first SUPRANATIONAL argument against the wrapped general-purpose chatbot and in favour of purpose-built educational AI (`T98`, which hands a studio the opening argument of an education proposal). 🔴 **Count derived this pass with `grep -c '^## T'`, NOT with `ingest/derive-counts.py`:** the gate script could not be executed in this pass's environment (the runner declined to execute repository-provided code), so the count is asserted on a direct heading tally and is marked as such rather than claimed GREEN. 🔴 **Channel note, unchanged from `p826`: every repository claim below is `WebFetch`-read from the rendered GitHub page on `2026-11-15`; `curl` to `github.com` returned `403` on every attempt this pass, so no byte-read over `raw.githubusercontent.com` was possible and NO licence in `p827` is byte-read.** Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.
+
 **Ninety-five** trends — derived trends: **95** — 🟢 **Thirty-first pass (`p826`, 2026-11-15): `T91`–`T95` added** — two ~`1,200`-repository mass-publication events measured in the same ten days, one all-MIT at `0★` and one all-`NOASSERTION` at `~102,000` stars, with the star-ranked channel structurally able to see only the second (`T91`, which explains the `41`-pass nil as CORRECT RANKING over a synthetic top rather than as saturation or breakage); `p825`'s *"`74`-repository MIT education catalogue"* re-measured by author enumeration as an education-filtered projection of a `1,241`-repository, TWELVE-INDUSTRY catalogue that is already closed (`T92`, a `16.8×` undercount, and a cross-sector asset for every KB in this estate); the licence byte-read shown to be insufficient at the HEADER, with a repository whose grant clause is rewritten and whose `NOASSERTION` field is therefore CORRECT (`T93`, supplying the half `T52` left out); licence-byte identity shown to carry TWO opposite dispositions — declared port versus silent republish — separable only by the README, with GitHub's fork flag reporting `false` on the republish (`T94`, which cut this pass's own Magister count from `2` to `1`); and the EMEA national-school-system MCP tier enumerated for the first time at `4` systems, `12` repositories, `10` independent implementations and `4` build-safe (`T95`, `T82`'s rule run against EMEA via `P59`). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=95 claimed=95 · GREEN`.** 🔴 **Channel note: `WebFetch` resolved NO external host this pass, so every repository is first-hand and byte-read on `raw.githubusercontent.com`, while every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.**
 
 **Ninety** trends — derived trends: **90** — 🟢 **Thirtieth pass (`p825`, 2026-11-15): `T86`–`T90` added** — a `74`-repository, `54`-id, MIT-licensed education agent catalogue found on GitHub that `29` previous passes held ZERO rows of, because it is indexed under a PLATFORM BRAND rather than under pedagogy, jurisdiction or stars (`T86`, which generalises `T82` to a third indexing axis); `p824`'s own `T84` — *"Vietnam … build-safe open supply of ZERO"* — measured FALSE, with `43` of the `74` repositories written by Vietnamese authors, the largest national group of education-agent authors this base has recorded (`T87`); the licence FIELD-versus-BYTES defect class shown to be a property of REGISTRIES rather than of GitHub, with PyPI's `info.license` reporting `None` for two MIT packages whose wheels declare `License-Expression: MIT` (`T88`, which extends `T52`/`T81` to a second registry); the distinction between a LICENCE gap and a REVIEWABILITY gap, drawn on a framework that is MIT and installable but wheel-only with an advertised source repository holding zero commits (`T89`); and the copyright in a vendor-channel cohort proved by licence-byte-hash to sit with `13` individual developers rather than with the platform vendor (`T90`). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=90 claimed=90 · GREEN`.**
@@ -92,6 +94,85 @@ the second time.** 🔵 **The amendment uses no component discovered this pass**
 three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
+
+## T96 — The grading gap is real, and this pass is the first to TEST it rather than copy it forward
+
+🟢 **The assertion.** Since `p815` this base has carried the sentence *"nothing in grading is to
+grading what DeepTutor is to tutoring."* It has been repeated through several passes without being
+re-run, which is the failure mode `T92` named in a different context: a conclusion that stops being
+a measurement and becomes a quotation.
+
+🟢 **The test.** `q="open source automated grading assessment AI agent github 2026 rubric essay
+scoring"` returned nine repositories. **Every one is a student project, a course submission or a
+hobby application.** The two with genuine agent architecture were both read and both rejected:
+
+| Repository | Licence | Size | Why it fails |
+|---|---|---|---|
+| [`Dmoayad/essay-grader-llm`](https://github.com/Dmoayad/essay-grader-llm) | 🔴 **CONFLICT: `GPL-3.0` in sidebar, MIT claimed in README** | `1★`, `12` commits | Copyleft on the governing file, and course-scale regardless |
+| [`shafaq2019/Rubric_Agent`](https://github.com/shafaq2019/Rubric_Agent) | 🔴 **NO LICENCE FILE** | `0★`, `6` commits | All rights reserved; self-described `DATA722` mid-term |
+
+🔵 **The licence conflict in the first row is a new instance of a class this base already tracks.**
+`T81` established that the licence FIELD can diverge from the licence BYTES; `T93` established that
+the bytes themselves can be edited. 🟢 **This is the third variant: the README and the `LICENSE`
+file disagree, and the README is the one a hurried reader believes.** On GitHub the sidebar
+reflects the actual file, so the governing grant is `GPL-3.0` and the MIT claim is prose.
+
+🟢 **The commercial conclusion, now defensible rather than inherited: in grading there is nothing to
+adopt, therefore grading is a BUILD.** 🔵 And the two rejected repositories are still worth reading,
+because between them they contain the two correct design decisions in the whole result set —
+deterministic arithmetic kept OUTSIDE the model, and a rubric induced from a small human-scored
+sample then self-tested on held-out items. `P67` reimplements both.
+
+🔴 **Scope limit, stated so a later pass does not over-read this.** One search ran, in English, on
+one phrasing. It is strong evidence that no *prominent* build-safe grading agent exists; it is not
+proof that none exists. The honest claim is *"none findable on the standard channel."*
+
+## T97 — A README pre-release banner is not the release channel, and `p826` read the wrong one
+
+🔴 **`p826` recorded of `THU-MAIC/OpenMAIC`: *"README News lists v1.5.0-rc.2 on 2026-11-12; GitHub
+Releases is empty, so treat the version as pre-release."*** 🟢 **Re-read on `2026-11-15`, the
+Releases page is NOT empty: `v1.4.2` (`2026-11-09`) is a FULL release, with `v1.5.0-rc.2`
+(`2026-11-12`) sitting above it as the pre-release.**
+
+🔵 **What went wrong is worth generalising, because it is cheap to repeat.** The README News section
+lists the NEWEST item, which was a release candidate. Reading News alone and then failing to open
+Releases produces exactly the inverted conclusion recorded above — that a `43.6k★`, `6.7k`-fork
+project with `1,000`+ commits had never shipped a release. 🟢 **The correct instrument is the
+Releases page, and the README is a supplement to it, never a substitute.**
+
+🔴 **The client-facing consequence is the reason this is a trend and not an erratum.** A
+*"pre-release only, not production-ready"* caveat attached to the second-largest education agent on
+these shelves is a material misstatement in a proposal, and it was one pass away from being
+repeated. 🟢 **That caveat is removed from the `OpenMAIC` row.**
+
+## T98 — The OECD argues against the wrapped chatbot, and a studio no longer has to make that argument alone
+
+🟢 **The OECD's 2026 Digital Education Outlook is reported to recommend moving beyond
+general-purpose AI tools toward PURPOSE-BUILT educational AI designed to produce durable learning
+gains.** 🔵 **This is the first supranational statement this base has recorded that argues directly
+for what a studio builds and against the thing it most often loses to.**
+
+🔴 **The objection it answers is the most common one in an education pitch:** *"we already have
+Copilot / Gemini for Education / ChatGPT Edu — why would we commission anything?"* 🟢 Until this
+pass, the answer was a vendor's own argument. Now it is an OECD recommendation, and it can open a
+proposal rather than be defended halfway through one.
+
+🟢 **Three independent sources frame 2026 the same way, which strengthens it:** 1EdTech describes
+the year as the shift **from experimentation to GOVERNANCE** — policies, data boundaries, oversight;
+HolonIQ expects **selective, deliberate acceleration** rather than broad adoption; and the
+operational description across several sources is institutions **running agents inside advising,
+enrollment and assessment operations** rather than running chatbots.
+
+🔵 **Note how precisely that last framing matches this base's own supply measurements.** Advising,
+enrolment and assessment are back-office, measurable and attached to a system of record — and the
+usable open supply these shelves have found over `32` passes is overwhelmingly *connectors to
+systems of record* (`T82`, `T95`, `P59`), not pedagogy. 🟢 **The market is moving toward the part of
+the problem where the open supply actually is.**
+
+🔴 **Sourcing caveat, recorded rather than hidden:** the OECD recommendation is `CITED, NOT READ` —
+it reached this pass through a WebSearch summary, not through the Outlook itself. 🔵 **Before it
+opens a client proposal, read the primary document.** The claim is directionally safe and the exact
+wording is not established.
 
 ## T91 — Two ~`1,200`-repository mass-publication events landed in the same ten days, and the star-ranked channel can only see the one with no code in it
 
