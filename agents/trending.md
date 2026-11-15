@@ -4,6 +4,129 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirty-fifth pass, `p830`) — **the SEN / inclusive-learner tier, found by the name of the NATIONAL SIGN LANGUAGE after the identity term led to the wrong market**
+
+🟢 **`20` build-safe agent rows added (`335` → `355`), `4` foundation rows (`149` → `153`), `3`
+vertical platforms (`132` → `135`), `3` trends (`T105`–`T107`), `1` recipe (`P70`), `5` regional
+market blocks, `7` rejections, and one of this base's own `sha256` records found to have CHANGED.
+Every licence BYTE-READ.**
+
+### What moved
+
+🔴 **One channel was LOST and the loss is recorded rather than worked around.** `gh api` with a
+`repo:OWNER/NAME` qualifier now returns HTTP **`422`** for live and invented addresses alike, and
+`gh api repos/{owner}/{repo}` returns **`403`** for both — this session's GitHub token is
+repository-scoped. 🔵 **Neither discriminates, so neither was used as an oracle**, exactly as
+`T923`/`T970` require of `curl -sI`. 🟢 **Free-text `gh api search/repositories` IS bidirectionally
+controlled** (`moodle plugin ai stars:>50` → `total_count=1`; `zzqqwwxyz9notarealthing stars:>5` →
+`0`) and carried discovery plus star and push metadata. 🟢 **`raw.githubusercontent.com` byte-read
+IS bidirectionally controlled** (`openedx/edx-platform` `LICENSE` → `200`, `35,136 B`; invented →
+`404`), so every licence below is byte-read.
+
+🔴 **The absence that organised the pass, measured before anything was filed.** `grep -ric` over all
+eight curated files: `learning disabilit*` **`0`**, `neurodivergen*` **`0`**, `occupational therap*`
+**`0`**, `early intervention` **`0`**, `well-being` **`0`**. `agents/top.md`: `AAC` **`0`**,
+`autism` **`1`**, `ADHD` **`1`** — and one of two `autis` hits was the login
+`BautistaAlosMartorell`, a false friend. 🔵 **`p621` and `p634` had already MEASURED the AAC and
+IEP tiers in this very file and never promoted a row to the shelf.
+[`inclusive-design/adaptive-palette`](https://github.com/inclusive-design/adaptive-palette) was
+byte-read at `p634` and sat here for `196` passes; it was pushed again TODAY. `p830` promotes it.**
+
+### 🟢 The discovery instrument: the national sign language's own name
+
+🔴 **`T102`'s statutory-document rule is LANGUAGE-BOUND.** `EHCP` → `0`, `SEND code of practice` →
+`0`, `adaptación curricular individualizada` → `0`, `atendimento educacional especializado AEE` →
+`0`, `Förderplan sonderpädagogisch` → `0`, `NCCD adjustments` → `0`. Colombia's `PIAR` → **`1`**.
+Only the English `IEP` returns a population (`116` in education context, `p634`).
+
+🟢 **The replacement instrument returns supply in every region, and the populations INVERT against
+economic size** (`T105`): `"Indian Sign Language"` **`2,693`** · `libras` `94` (`24` MIT, `3`
+Apache-2.0) · `BSL` `60` · `Chinese Sign Language` `53` · `LSM` `49` · `LSF` `22` · `Auslan` `9` ·
+`LSE` `8` · `JSL` `3` · **`DGS` `0`**. 🔵 **APAC and LATAM are better supplied than EMEA in this
+tier — the first time in `35` passes that the regional gradient has run backwards.**
+
+### 🔴 The vocabulary trap, filed as `T106`
+
+The top `12` `neurodivergent` repositories by stars on GitHub in `2026` are **`8` agent-harness
+tools for neurodivergent ADULTS at work** — Claude Code skills, MCP memory servers, ADHD output
+formatters, a self-hosted CRM — and **`0` learner-facing projects**. 🔵 **A market scan on the
+identity term reports a healthy sector and finds the wrong one.** The learner supply answers to the
+clinical term, the product name or the compliance standard, and to nothing else.
+
+### 🟢 This week's new agent-shaped supply (`20` rows, all byte-read `2026-11-15`)
+
+| Repo | Licence | ★ | Pushed | Region |
+|---|---|---|---|---|
+| [`OpenDyslexic/extension`](https://github.com/OpenDyslexic/extension) | 🟢 `MIT`, `1,073 B`, `sha256:2aeeff85b59b…` | `117` | `2026-10-31` | Global |
+| [`raucvr/Paper2Manga-Prism`](https://github.com/raucvr/Paper2Manga-Prism) | 🟢 `Apache-2.0`, `11,357 B` | `91` | `2026-11-06` | Global |
+| [`nazarli-shabnam/ReadAble`](https://github.com/nazarli-shabnam/ReadAble) | 🟢 `Apache-2.0`, `11,357 B` | `44` | `2026-10-07` | Global |
+| [`developer-diganta/Dino`](https://github.com/developer-diganta/Dino) | 🟢 `MIT`, `1,073 B`, `sha256:8d3abe465a2a…` | `43` | `2026-03-11` | Global |
+| [`ContentSquare/readapt`](https://github.com/ContentSquare/readapt) | 🟢 `Apache-2.0`, `11,357 B` | `39` | `2026-04-22` | EMEA |
+| [`Karthikeyu/Indian-sign-language-recognition`](https://github.com/Karthikeyu/Indian-sign-language-recognition) | 🟢 `MIT`, `1,087 B`, `sha256:ec369ab6ab13…` | `96` | `2020` | APAC |
+| [`Mishra-Shreya/Sanket`](https://github.com/Mishra-Shreya/Sanket) | 🟢 `MIT`, `1,070 B`, `sha256:3fa8899a1502…` | `28` | `2022` | APAC |
+| [`moonlitrevery/LibrasLive`](https://github.com/moonlitrevery/LibrasLive) | 🟢 `MIT`, `1,068 B`, `sha256:68bb80786ddb…` | `10` | `2025-11-21` | LATAM |
+| [`ClassNeuralNetwork/reconhecimento_libras`](https://github.com/ClassNeuralNetwork/reconhecimento_libras) | 🟢 `MIT`, `1,103 B`, `sha256:3474bb218933…` | `6` | `2024-04-10` | LATAM |
+| [`PedroCBrito/Video-to-Animation-LIBRAS`](https://github.com/PedroCBrito/Video-to-Animation-LIBRAS) | 🟢 `MIT`, `1,095 B`, `sha256:7d6ed8a626e0…` | `1` | `2026-10-12` | LATAM |
+| [`adamopoulosa1980/pdf_accessibility`](https://github.com/adamopoulosa1980/pdf_accessibility) | 🟢 `Apache-2.0`, `11,358 B`, `sha256:cfc7749b96f6…` | `9` | `2026-05-26` | Global |
+| [`21stdigital/statamic-aida`](https://github.com/21stdigital/statamic-aida) | 🟢 `MIT`, `1,074 B`, holder `21st digital GmbH` | `5` | `2026-11-09` | EMEA |
+| [`natashkasemenova/a11y-ai-auditor`](https://github.com/natashkasemenova/a11y-ai-auditor) | 🟢 `MIT`, `1,074 B`, `sha256:6583114b7a51…` | `1` | `2026-10-18` | EMEA |
+| [`hannahmoutran/alt-text-pipeline`](https://github.com/hannahmoutran/alt-text-pipeline) | 🟢 `MIT`, `1,071 B`, `sha256:dbe551d1bccb…` | `1` | `2026-09-01` | Global |
+| [`inclusive-design/baby-bliss-bot`](https://github.com/inclusive-design/baby-bliss-bot) | 🟢 `BSD-3-Clause`, `1,518 B`, holder `Inclusive Design Institute` | `7` | `2026-09-18` | North America |
+| [`inclusive-design/adaptive-palette`](https://github.com/inclusive-design/adaptive-palette) | 🟢 `BSD-3-Clause`, `1,562 B`, holder `IDRC, OCAD University` | `2` | **`2026-11-15`** | North America |
+| [`revolutionarybukhari/ocula`](https://github.com/revolutionarybukhari/ocula) | 🟢 `MIT`, `1,072 B`, `sha256:e76df35fc768…` | `2` | `2026` | Global |
+| [`roshnrf/StoryWeaver`](https://github.com/roshnrf/StoryWeaver) | 🟢 `MIT`, `1,107 B`, `sha256:5fca87f338e3…` | `2` | `2026-10-10` | Global |
+| [`SubchiBeats/bol-sakhi-communication-board`](https://github.com/SubchiBeats/bol-sakhi-communication-board) | 🟢 `MIT`, `1,068 B`, `sha256:9ceb4131aeb8…` | `1` | `2026-06-11` | APAC |
+| [`harryt04/voice-bridge`](https://github.com/harryt04/voice-bridge) | 🟢 `MIT`, `1,072 B`, `sha256:7a81e8e6736e…` | `1` | `2026-11-10` | Global |
+
+### 🔴 The rejections, and the sweep denominators behind them
+
+🔴 **`32` repositories across three sweeps, `3` usable grants.** `special education teacher AI`
+(`2026` push filter, star-ranked): `10` results, **`10` with no licence**, including
+`100205ivan/EyeEP`, `JeabtiE/iep-gen-assistant`, `Maya1807/co_teacher` and `acblacksimt/iepdraft`.
+`autism children app`: `12` results, `2` granted. `speech therapy children`: `10` results,
+**`9` with no licence**, the lone grant being `roshnrf/StoryWeaver` at `2★`.
+
+🔴 Named individually: **`Jojobeans1981/Ember-Campfire-Edition`** (`24★`, dyslexia intervention) —
+no licence. **`satyam9090/Automatic-Indian-Sign-Language-Translator-ISL`** (`140★`) — no licence,
+and it is the traction leader of the largest corpus measured this pass.
+**`cboard-org/cboard`** — `GPL-3.0`, byte-read `35,141 B`. **`asterics/AsTeRICS-Grid`** —
+`AGPL-3.0`, byte-read `34,523 B`. **`JoseStud/piar-digital-app`** — `GPL-3.0`, byte-read
+`35,149 B`, and the ONLY repository on GitHub for Colombia's statutory `PIAR`.
+**`tlennon-ie/neurodock`** / **`ICUnit/Tokai`** — wrong market (see `T106`).
+**`itsmealli/inclusive-ed-tools`** — `1★`, `NOASSERTION`, and the UDL maximum (`T107`).
+
+### 🔴 A `sha256` in this base had CHANGED, and only a re-read found it
+
+🔴 [`Maximilian741/508-Agent`](https://github.com/Maximilian741/508-Agent) was drafted as a `21`st
+row before `ingest/derive-counts.py` reported `dupes=1`: it had been shelved at `p818`. 🔵 **But the
+two byte-reads do not agree.** `p818`: `1,067 B`, `sha256:b48cc408…`. `p830`, same address:
+**`1,068 B`, `sha256:c9db00bdf8ad…`** — one byte more, a different hash, the same MIT text, the same
+holder. 🟢 **The row was withdrawn and the `p818` record corrected in place.** 🔵 `T104` recorded
+licence drift in the CLOSING direction; this is drift with no licence change at all. **A `sha256`
+written into this base is a measurement with a date on it, not a fact.**
+
+### 🔴 An instrument limit, declared rather than discovered later
+
+`ingest/p830-licence-byteread.sh` prints `NOGRANT` when nine licence paths on `main` and `master`
+all miss — **and both invented controls print `NOGRANT` too.** It is therefore NOT an existence
+oracle. `antijingoist/opendyslexic`, `juanda99/arasaac-api` and `AraSuite/arasaac-api` returned
+`NOGRANT` and are recorded as **UNRESOLVED**, not as ungranted.
+
+### 🔴 A brand-integrity warning for the assistive tier
+
+The free-text channel returns `astericsfree/AsTeRICS-Grid`,
+`astericsgridfree/AAC-Grid-Let-Me-Talk-Asterics-LogoRemakeFour` and
+`logoremakefour8/Asterics-Grid-AAC-LRF-LogoRemakeFour` — low-star look-alikes — while the canonical
+`asterics/AsTeRICS-Grid` does not appear at all, although its `LICENSE` byte-reads `200`.
+🔴 **Resolve an assistive-tech brand by byte-read, never from a search ranking.**
+
+### 🔴 The mandated star-ranked battery nilled a `41`st consecutive time
+
+All four global legs returned repositories already shelved or already adjudicated here (DeepTutor,
+OpenMAIC, `patchy631/ai-engineering-hub`, OpenEduCat, Frappe Education, RosarioSIS, GegoK12), with
+DeepTutor quoted at `45,224★` and `52,800★` by two posts nine days apart. 🔵 The one genuinely new
+item was a regulatory date — **ADA Title II, `April 2026`** — which is what `P70` is sold against.
+
 ## `2026-11-15` (thirty-fourth pass, `p829`) — **the WORKFORCE tier, found by searching the name of a statutory document**
 
 🟢 **`11` build-safe agent rows added (`324` → `335`), `1` foundation row, `3` trends

@@ -6,6 +6,129 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
+**One hundred and seven** trends — derived trends: **107** — 🟢 **Thirty-fifth pass (`p830`, 2026-11-15): `T105`–`T107` added** — the SEN/inclusive-learner tier entered for the first time in `35` passes, after `grep -ric` returned `0` across all eight curated files for `learning disabilit*`, `neurodivergen*`, `occupational therap*`, `early intervention` and `well-being`, and `0` occurrences of `AAC` in `agents/top.md`; `T102`'s statutory-document rule shown to be LANGUAGE-BOUND and replaced in this tier by the name of the NATIONAL SIGN LANGUAGE, whose populations INVERT against economic size — India `2,693` and Brazil `94`/`24 MIT` against Germany `0` and Japan `3`, which makes APAC and LATAM the best-supplied regions in this tier and EMEA the worst (`T105`); the IDENTITY term shown to return the WORKPLACE tier rather than the learner tier, with `8` of the top `12` `neurodivergent` repositories by stars being agent-harness tooling for neurodivergent ADULTS and `0` of `12` learner-facing (`T106`, `T103`'s inversion rule on a third axis); and inclusion PEDAGOGY measured against inclusion COMPLIANCE — Universal Design for Learning, the framework every inclusion proposal cites, has a GitHub maximum of `1★` and is named on `2` lines of this base, while the WCAG/Section 508 remediation tier beside it is MIT/Apache and shelf-ready (`T107`). 🔵 **Gate-confirmed after insertion: `python3 -I ingest/derive-counts.py`.** 🔴 **Channel note: ONE CHANNEL WAS LOST THIS PASS.** `gh api` with a `repo:OWNER/NAME` qualifier returns HTTP `422` for live AND invented addresses, and `gh api repos/{owner}/{repo}` returns HTTP `403` for both — **neither discriminates, so neither was used as an oracle.** 🟢 Free-text `gh api search/repositories` IS bidirectionally controlled (live→`total_count=1`, nonsense→`0`) and supplied discovery and star/push metadata; `raw.githubusercontent.com` byte-read IS bidirectionally controlled (live→`200`, invented→`404`), so **every licence in `p830` is byte-read**. 🔴 `curl -sI` was NOT used as an oracle: `T923`/`T970` hold. 🔴 Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.
+
+## T105 — The SEN supply is indexed under the name of the NATIONAL SIGN LANGUAGE, and the populations invert against economic size
+
+🔵 **`T102` established the rule: search the name of the statutory document, not the sector. `p830`
+found where that rule BREAKS, and what replaces it.**
+
+🔴 **The statutory-document instrument is language-bound.** It returns supply in English and almost
+nothing anywhere else:
+
+| Statutory instrument | Jurisdiction | Repositories |
+|---|---|---|
+| `IEP` (in education context, `p634`) | 🇺🇸 United States | `116` |
+| `PIAR plan individual ajustes razonables` | 🇨🇴 Colombia | **`1`** (`GPL-3.0`, `0★`) |
+| `EHCP special educational needs` | 🇬🇧 England | **`0`** |
+| `SEND code of practice school` | 🇬🇧 England | **`0`** |
+| `adaptación curricular individualizada` | 🇪🇸🇲🇽 Spain / Mexico | **`0`** |
+| `atendimento educacional especializado AEE` | 🇧🇷 Brazil | **`0`** |
+| `Förderplan sonderpädagogisch` | 🇩🇪 Germany | **`0`** |
+| `NCCD adjustments disability school` | 🇦🇺 Australia | **`0`** |
+
+🟢 **What returns supply in every region instead is the name of the national sign language itself:**
+
+| Instrument | Region | Repositories | `MIT` | `Apache-2.0` | Best GRANTED row |
+|---|---|---|---|---|---|
+| `"Indian Sign Language"` (exact phrase) | APAC | **`2,693`** | — | — | `96★` `Karthikeyu/Indian-sign-language-recognition` (MIT) |
+| `libras lingua brasileira de sinais` | LATAM | `94` | **`24`** | `3` | `51★` `maritsbarbosa/awesome-libras` (MIT) |
+| `British Sign Language BSL` | EMEA | `60` | `8` | `1` | — |
+| `Chinese Sign Language` | APAC | `53` | `9` | `1` | — |
+| `lengua de señas mexicana LSM` | LATAM | `49` | `8` | `1` | — |
+| `langue des signes française LSF` | EMEA | `22` | `5` | `2` | — |
+| `Auslan Australian sign language` | APAC | `9` | — | — | — |
+| `lengua de signos española LSE` | EMEA | `8` | — | — | — |
+| `Japanese Sign Language JSL` | APAC | `3` | — | — | — |
+| `Deutsche Gebärdensprache DGS` | EMEA | **`0`** | — | — | — |
+
+🔵 **Why this is a trend and not a table.** Every other tier this base has measured runs the usual
+gradient: North America and EMEA deep, APAC mid, LATAM thin. **This one runs backwards.** India and
+Brazil hold the two largest corpora; Germany holds none and Japan holds three. The reason is
+structural rather than accidental — a national sign language is a national asset with no commercial
+owner, so the work lands in university projects and public repositories instead of inside products,
+and it lands where the student population is largest.
+
+🔴 **The trap the rule carries with it.** The bare acronym is a false-friend magnet, exactly as
+`p633`/`p634` found for `IEP`: `Indian Sign Language ISL` as loose terms returns `1,099`, the exact
+phrase returns `2,693`, and the loose leg is contaminated by `ISL` as *island*, *Islamic* and
+*isolation*. **Quote the phrase or do not cite the number.**
+
+🟢 **What a studio does with it.** An APAC or LATAM inclusion engagement starts from a larger open
+corpus than an EMEA one, and should: the ISL and LIBRAS corpora are the raw material, the grants are
+MIT in both, and the gap is maintenance rather than existence — LIBRAS's `51★` maximum has not been
+pushed since `2022`, and the best granted ISL row was last pushed in `2020`. **These are ASSETS to
+be revived, not products to be adopted.**
+
+## T106 — The identity term returns the WORKPLACE tier; the learner tier answers only to the clinical term
+
+🔴 **`neurodivergent` is not an education query on GitHub in 2026.** The top `12` repositories by
+stars, all pushed in `2026`:
+
+| Repository | Stars | What it actually is |
+|---|---|---|
+| `JackReis/neurodivergent-visual-org` | `78` | 🔴 Claude Code skill — visual organisation for adults |
+| `szymonwilczek/au-themes` | `60` | 🔴 Low-glare Emacs themes |
+| `ICUnit/Tokai` | `40` | 🔴 BCI/EEG productivity suite |
+| `jmeyer1980/neurodivergent-memory` | `26` | 🔴 MCP memory server |
+| `nextor2k/hyperfocus` | `22` | 🔴 ADHD-friendly output formatting for an agent harness |
+| `tlennon-ie/neurodock` | `20` | 🔴 Local-first cognitive substrate for professionals |
+| `assafkip/audhd-executive-function` | `20` | 🔴 Executive-function system **for founders** |
+| `assafkip/founder-skills` | `16` | 🔴 Two agent skills for founders |
+| `jmaslak/neurodivergence` | `14` | 🟡 Information pages |
+| `ock666/Kin-CRM` | `14` | 🔴 Self-hosted relationship manager |
+| `eskokoivula/neurodivergent-mode` | `12` | 🔴 Agent reasoning mode |
+| `SudheerNaraharisetty/CLAWrity` | `12` | 🔴 Agent skill for ADHD/autism support |
+
+🔴 **`0` of `12` are learner-facing. `8` of `12` are tooling for an AI harness used by a
+neurodivergent ADULT at work.** The identity vocabulary has been captured by the agent-tooling
+ecosystem, and a studio searching it for education material will conclude the sector is well served
+and be completely wrong.
+
+🟢 **The learner supply answers to three other vocabularies, and only to those:**
+
+- **the clinical term** — `dyslexia` (`21` repositories with a `2026` push; maximum `117★`),
+  `speech therapy children` (`10`; maximum `5★`), `autism children app` (`12`; maximum `9★`);
+- **the typographic/product name** — `OpenDyslexic` alone surfaces the tier's traction leader;
+- **the compliance standard** — `WCAG`, `Section 508`, `EN 301 549`, which return MIT and
+  Apache-2.0 tooling where the identity term returns none.
+
+🔵 **This is `T103`'s inversion on a third axis.** `T103` showed the institution-brand instrument
+surfacing integration agents at the university tier and student coursework at the vocational tier.
+`T106` shows the IDENTITY instrument surfacing workplace tooling where the sector expects learner
+tooling. 🟢 **The generalisation now has three confirmations and can be stated as a protocol: an
+instrument that worked in one tier must be RE-CONTROLLED in the next, because the same words index
+different populations in different tiers.**
+
+## T107 — Inclusion COMPLIANCE is built; inclusion PEDAGOGY is not. UDL's GitHub maximum is `1★`
+
+🔴 **Universal Design for Learning is the framework an inclusion proposal cites, and it has
+essentially no software.** `universal design for learning UDL` returns a population whose
+star-ranked maximum is **`1★`** (`itsmealli/inclusive-ed-tools`, `NOASSERTION`, unpushed since
+`2025-10-31`); the next entries are `0★`, two of them unpushed since `2018`. 🔵 **This base names
+`UDL` on `2` lines in `34` passes** — and that under-coverage turns out to be an accurate
+reflection of the supply rather than a gap in the research.
+
+🟢 **Immediately beside it, the compliance tier is real, granted and shelf-ready.** From the same
+window: `adamopoulosa1980/pdf_accessibility` (Apache-2.0, `9★`, `WCAG 2.2` + `Section 508` +
+`EN 301 549`), `Maximilian741/508-Agent` (MIT), `natashkasemenova/a11y-ai-auditor` (MIT,
+`DSTU EN 301 549`), `rayraycodes/rails-accessibility-testing` (MIT), `rlakamraju/accessible-ai`
+(MIT), `hannahmoutran/alt-text-pipeline` (MIT), `21stdigital/statamic-aida` (MIT).
+
+🔵 **The asymmetry has one cause and it is a budget.** A compliance obligation has a DEADLINE and a
+LIABILITY attached — ADA Title II for large public entities from `April 2026`, the European
+Accessibility Act and `EN 301 549` live now, `Section 508` long-standing (all `CITED, NOT READ`).
+A pedagogical framework has neither. **Software accumulates where the deadline is.**
+
+🟢 **What a studio should take from it, and it is not cynical.** Sell the compliance work, because
+that is what is funded and what has tooling; **deliver the pedagogy inside it**, because the
+remediation pipeline is exactly where UDL's multiple-means-of-representation principle gets
+implemented in practice — alt text, captions, reading-level variants, symbol support. `P70` is
+built on precisely that move. 🔴 **And state the boundary out loud in the proposal:** an
+accessibility pipeline PRODUCES artefacts and evidence; the moment it scores a learner it becomes
+EU AI Act Annex III point 3 high-risk, and the project changes shape entirely.
+
+
 **One hundred and four** trends — derived trends: **104** — 🟢 **Thirty-fourth pass (`p829`, 2026-11-15): `T102`–`T104` added** — the WORKFORCE/vocational tier entered for the first time in `34` passes, after `grep` returned `0` occurrences of `upskilling`, `reskilling`, `apprenticeship`, `Ausbildung`, `Berichtsheft`, `KSB`, `TVET` and `Workforce Pell` across every curated file in this base, and found by searching the name of the STATUTORY DOCUMENT rather than the sector, the institution or the pedagogy — `T82`'s rule on a FOURTH indexing axis (`T102`); the institution-brand instrument shown to INVERT between tiers, surfacing integration agents at the university tier (`SIGAA`, `Brightspace`) and student COURSEWORK at the vocational tier (`SENA`, `SENAI`, `CONALEP` — ~`30` repositories, `0` licensed agents), which makes the brand axis a correct instrument in one tier and a trap in the next (`T103`); and licence drift measured in the CLOSING direction for the first time here — `affromero/Sotto` relicensed `AGPL-3.0` → `PolyForm Noncommercial 1.0.0` between two of this base's own passes, invisible to GitHub's licence FIELD, which reads `NOASSERTION` in both states (`T104`). 🔵 **Gate-confirmed after insertion: `python3 -I ingest/derive-counts.py`.** 🟢 **Channel note: BOTH channels live and bidirectionally controlled this pass** — `gh api search/repositories` (live→`total_count=1`, invented→HTTP `422`) and `raw.githubusercontent.com` byte-read (live→`200`, invented→`404`), so EVERY licence in `p829` is byte-read. 🔴 **`curl -sI` was NOT used as an oracle: `T923`/`T970` hold.** 🔴 Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.
 
 **One hundred and one** trends — derived trends: **101** — 🟢 **Thirty-third pass (`p828`, 2026-11-15): `T99`–`T101` added** — the LMS agent tier measured on the VENDOR-BRAND axis and found to be Brightspace, D2L and Blackboard at `147` repositories against roughly `5` previously shelved here, while this base names those three brands `1,100` times in its own prose (`T99`, `T86`/`T82` confirmed on a third indexing axis); the institution-bound agent established as the DOMINANT FORM, with `30` of this pass's `61` rows naming one named institution or its system in the repository name, which converts `T82` from an observation into a discovery protocol (`T100`); and the WRITE PATH shown to be already common in that tier while the controls on it remain the exception — five rows that submit or author, against three independently-invented controls: out-of-band phone approval, server-side RBAC, and credential non-possession (`T101`, and it lands as the EMEA calendar makes the write path the regulated one). 🔵 **Gate-confirmed after insertion: `python3 -I ingest/derive-counts.py`.** 🟢 **Channel note: BOTH channels live this pass — `gh api search/repositories` bidirectionally controlled (live→`total_count=1`, invented→HTTP `422`) and `raw.githubusercontent.com` byte-read restored after `p827`'s `403`s, so EVERY licence in `p828` is byte-read.** 🔴 **`curl -sI` re-confirmed structurally useless here: it returns `200 Connection Established` — the proxy's `CONNECT` line — for live AND invented addresses alike.** 🔴 Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.

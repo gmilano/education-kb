@@ -6,6 +6,23 @@ updated: 2026-11-15
 
 # Foundational open-source repos for education
 
+## 🟢 The ASSISTIVE-ASSET layer — **the typeface, the symbol set and the index a SEN build consumes rather than writes** (new, thirty-fifth pass `p830`) (4 rows)
+
+🔵 **Why this is a layer and not four loose rows.** Every row in `p830`'s agent shelf consumes an
+asset it does not own: a typeface, a pictogram set, a corpus index, a device bridge. `p826` opened
+the public education-DATA layer on exactly this argument — a deterministic wrapper over something
+already authoritative is what makes an agent's output defensible. **The assistive tier's equivalent
+assets are older, more licence-encumbered and more legally specific than its agents**, and the
+`OFL-1.1` Reserved Font Name below is the sharpest delivery constraint this base has filed.
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/th30d0re/opendyslexic-fonts | 🟡 **`OFL-1.1` — byte-read** (`4,406 B`, `sha256:2edc18617160…`, holder `2019, Abelardo Gonzalez (https://opendyslexic.org)`, **with Reserved Font Name**) | 1 | **Region: Global.** 🟢 **New this pass (`p830`) — the ASSET under `p830`'s highest-traction agent row.** `OpenDyslexic/extension` (`117★`, MIT) ships this typeface, and the two grants are NOT the same grant. 🔴 **The delivery constraint, stated once so it is never missed: `OFL-1.1` with a Reserved Font Name means a MODIFIED build must be renamed.** A studio that re-hints, subsets or re-spaces the face for a client cannot keep calling the result OpenDyslexic. 🔵 `OFL-1.1` is OSI-approved and free to embed and redistribute unmodified — it is not a copyleft risk to the surrounding application, only a NAMING obligation on the font binary itself |
+| https://github.com/maritsbarbosa/awesome-libras | 🟢 **MIT — byte-read** (`1,072 B`, `sha256:aba3315d28e9…`, holder `2021 Mariana Barbosa`) | 51 | **Region: LATAM.** 🟢 **New this pass (`p830`) — the INDEX of the one national-sign-language corpus that is both large and permissively granted.** `51★` is the traction maximum of the entire LIBRAS population (`94` repositories, `24` MIT, `3` Apache-2.0) and it is a curation, not a tool. 🔴 **Unpushed since `2022-09-15`** — filed as a starting index for a Brazilian engagement, explicitly NOT as a maintained dependency |
+| https://github.com/kitsteam/pictosearch | 🟢 **MIT — byte-read** (`1,065 B`, `sha256:6b18f5c25cd5…`, holder `2021 kitsTeam`) | 4 | **Region: EMEA.** 🟢 **New this pass (`p830`) — the retrieval layer over ARASAAC**, the pictogram set published by the Gobierno de Aragón (see `verticals/solutions.md`, `p830`). A search-and-configuration dialog for pictograms, packaged as a CMS plugin. 🔵 **This is the piece that makes the ARASAAC asset usable from an application instead of from a website**, and it is the leg `P70` wires into `adaptive-palette`. Pushed `2026-10-22` |
+| https://github.com/fjrodl/astericsgrid_ros | 🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:c71d239df917…`, stock text, no holder) | 2 | **Region: Global.** 🟢 **New this pass (`p830`) — an HTTP-to-`ROS 2` bridge for AsTeRICS Grid**, i.e. an AAC surface driving physical devices. 🔵 **It matters for a reason unrelated to robotics: the bridge is `Apache-2.0` while AsTeRICS Grid itself is `AGPL-3.0`** (byte-read `34,523 B`, `sha256:8486a10c4393…`). A permissive ADAPTER onto a copyleft platform is the pattern that lets a studio integrate without taking the copyleft into its own product — the same shape `p828`'s vendor-adapter recipe uses for LMS brands. Pushed `2026-03-04` |
+
+
 The platforms and libraries an education engagement actually builds on, all verified on the
 `gh api search/repositories` `repo:` channel (license field + star count + push date) and
 licence-verified by BYTE-READ over `raw.githubusercontent.com`, controlled in both directions
@@ -87,7 +104,7 @@ above was graded on the licence question alone.**
 | https://github.com/langchain-ai/langchain | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`) | 149546 | **Region: Global.** The model and tool abstraction layer beneath the above. 🟡 **Shelved with a deliberate caution: this base's compose recipes should depend on `langgraph` for control flow and on `langchain-core` for interfaces, not on the `langchain` meta-package, whose surface moves faster than an education deliverable's support window.** 🔵 **Note for the byte-read gate: its `LICENSE` is on `master`, not `main` — a `main`-only probe returns `404` and would record a false `NO_LICENCE_FILE`, which is a live defect in any sweep that assumes the default branch name** |
 | https://github.com/teppei-miyashita/agenticstar-agentcore | 🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last touched `2026-08-12` | 0 | 🔴 **Region: APAC. Shelved as a WARNING row — the worked example for `T89`.** This is the source repository that the PyPI package `agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository`, and it holds no commits at all. 🟢 **The package itself is genuinely MIT** (`License-Expression: MIT` in the wheel, `dist-info/licenses/LICENSE`, `1,078 B`, `sha256:2afbb5fc…`) **and genuinely installable** — 🔴 **but it is wheel-only, single-release (`2026-09-17`), and unreadable at its stated address, while hard-pinning `langgraph==1.1.10`, `langchain==1.2.18`, `fastapi==0.136.0` and `agenticstar-platform==0.5.32`.** 🔵 **Do NOT add it to a delivery tree. It is here so that the next pass asking "is the AGENTIC STAR stack adoptable?" finds the answer already measured: licensed yes, auditable no** |
 
-## Foundational repos — 149 rows
+## Foundational repos — 153 rows
 
 ### Filed by `p829` (2026-11-15) — `1` row, and `1` is the honest figure
 

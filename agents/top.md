@@ -4,6 +4,135 @@ region: Global
 updated: 2026-11-15
 ---
 
+## Thirty-fifth pass (`p830`, 2026-11-15) — the SEN / INCLUSIVE-LEARNER tier: `34` passes, `335` agents, and `0` rows for the learners every one of those passes legislated about
+
+🟢 **`20` build-safe agent rows filed (`335` → `355`), `4` foundation rows (`149` → `153`), `3`
+vertical platforms (`132` → `135`), `3` trends (`T105`–`T107`), `1` recipe (`P70`), and `7`
+rejections recorded with their reasons. Every licence BYTE-READ on `2026-11-15`.**
+
+🔴 **The finding that organised this pass is an ABSENCE, measured before anything was filed.**
+`grep -ric` across all eight curated files returned **`0`** for `learning disabilit*`, **`0`** for
+`neurodivergen*`, **`0`** for `occupational therap*`, **`0`** for `early intervention` and **`0`**
+for `well-being`. `agents/top.md` held **`0`** occurrences of `AAC`, **`1`** of `autism` and **`1`**
+of `ADHD` — and one of the two `autis` hits was a FALSE FRIEND inside the GitHub login
+`BautistaAlosMartorell`. 🔵 **Thirty-four passes catalogued tutors, LMS connectors, proctoring,
+grading and vocational training, and shelved not one row for the learner population that every
+regulation those passes cite — IDEA, Section 508, ADA Title II, the European Accessibility Act,
+EN 301 549, EU AI Act Annex III — exists to protect.**
+
+🔵 **This is not the same gap `p621`/`p634` opened.** Those passes measured `AAC` and `IEP` in
+`agents/trending.md` and left the shelf untouched: `inclusive-design/adaptive-palette` was
+byte-read at `p634` and **never promoted**, and it was pushed again TODAY. `p830` promotes it and
+enters the tier properly.
+
+### 🟢 Channel conditions — one channel lost, one channel live and bidirectionally controlled
+
+| Channel | `p829` | `p830` | Control run this pass |
+|---|---|---|---|
+| `gh api search/repositories` with a `repo:OWNER/NAME` qualifier | 🟢 LIVE | 🔴 **DEAD** | 🔴 `repo:openedx/edx-platform` → HTTP **`422`**, and the invented `repo:zzqqww/not-a-real-repo-xyz9` → HTTP **`422`**. **Identical answers, so it discriminates NOTHING and was not used as an oracle.** This session's token is repository-scoped |
+| `gh api repos/{owner}/{repo}` (direct, not search) | — | 🔴 **DEAD** | 🔴 HTTP **`403`** for the live address AND the invented one. Same verdict, same reason |
+| `gh api search/repositories`, **free-text** | — | 🟢 **LIVE** | 🟢 **Bidirectional:** `moodle plugin ai stars:>50` → `total_count=1` with a licence field, star count and push date; `zzqqwwxyz9notarealthing stars:>5` → `total_count=0`. Used for DISCOVERY and for star/push metadata only |
+| `raw.githubusercontent.com` byte-read | 🟢 LIVE | 🟢 **LIVE** | 🟢 **Bidirectional:** `openedx/edx-platform` `LICENSE` → `200`, `35,136 B`, AGPL-3.0 text; `zzqqww/not-a-real-repo-xyz9` → **`404`**. **Every licence below is byte-read** |
+| `curl -sI` on a `github.com` repository address | 🔴 useless | 🔴 **not used** | 🔴 `T923`/`T970` hold unchanged |
+| `ingest/derive-counts.py` | 🟢 ran | 🟢 **ran, BEFORE and AFTER** | 🟢 Baseline `335`/`149`/`104`/`69`/`132` all GREEN before the first edit |
+
+🔴 **A limit of this pass's own instrument, stated rather than hidden.** `ingest/p830-licence-byteread.sh`
+prints `NOGRANT` when nine licence paths on `main` and `master` all miss. **Both invented controls
+also print `NOGRANT`** — so `NOGRANT` means *"no grant found at the probed paths"* and is **NOT an
+existence oracle**. Three addresses in this pass (`antijingoist/opendyslexic`, `juanda99/arasaac-api`,
+`AraSuite/arasaac-api`) returned `NOGRANT` and are therefore recorded as UNRESOLVED, not as ungranted.
+
+### 🔴 The mandated star-ranked battery nilled a `41`st consecutive time
+
+`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`,
+`open source platform education ERP CRM MIT Apache` and `AI education industry trends 2026` returned
+DeepTutor, OpenMAIC, `patchy631/ai-engineering-hub`, OpenEduCat, Frappe Education, RosarioSIS and
+GegoK12 — **every repository among them already shelved or already adjudicated here** — plus
+secondary roundups whose star counts contradict each other inside a single result set (DeepTutor at
+`45,224★` and `52,800★` in two posts dated nine days apart). 🔵 **The one item in the battery that
+was new was again a REGULATORY date and not a repository: the `April 2026` ADA Title II compliance
+deadline for large public entities, which is the live accessibility budget driver in North America
+and which this pass's `P70` is built against.**
+
+### 🟢 What produced supply instead: the national sign language's OWN NAME, and the clinical term
+
+🔵 **`T102`'s rule — search the name of the statutory document, not the sector — holds, but it is
+LANGUAGE-BOUND, and this pass found where it breaks.** The English-language statutory instrument
+returns supply (`IEP`: `116` in education context, `p634`); its translations return almost nothing
+(`EHCP` → `0`, `SEND code of practice` → `0`, `adaptación curricular individualizada` → `0`,
+`atendimento educacional especializado AEE` → `0`, `Förderplan sonderpädagogisch` → `0`,
+`PIAR plan individual ajustes razonables` → **`1`**, GPL-3.0, `0★`).
+
+🟢 **What DOES return supply in every region is the name of the NATIONAL SIGN LANGUAGE** — and it is
+the finding of this pass, filed as `T105`:
+
+| Instrument | Repositories | `MIT` | `Apache-2.0` | Maximum traction | Region |
+|---|---|---|---|---|---|
+| `"Indian Sign Language"` (exact phrase) | **`2,693`** | — | — | `140★` (`satyam9090`, ungranted); best granted `96★` MIT | APAC |
+| `libras lingua brasileira de sinais` | `94` | **`24`** | `3` | `51★` MIT | LATAM |
+| `British Sign Language BSL` | `60` | `8` | `1` | — | EMEA |
+| `Chinese Sign Language` | `53` | `9` | `1` | — | APAC |
+| `lengua de señas mexicana LSM` | `49` | `8` | `1` | — | LATAM |
+| `langue des signes française LSF` | `22` | `5` | `2` | — | EMEA |
+| `Auslan Australian sign language` | `9` | — | — | — | APAC |
+| `lengua de signos española LSE` | `8` | — | — | — | EMEA |
+| `Japanese Sign Language JSL` | `3` | — | — | — | APAC |
+| `Deutsche Gebärdensprache DGS` | **`0`** | — | — | — | EMEA |
+
+🔵 **The population inverts against economic size.** India and Brazil carry the two largest
+national-sign-language corpora on GitHub; Germany and Japan carry `0` and `3`. **An APAC or LATAM
+inclusion engagement starts with more open raw material than an EMEA one** — the inverse of this
+base's usual regional gradient, and the first tier where that has been true in `35` passes.
+
+### 🟢 The `20` rows, byte-read `2026-11-15`
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| OpenDyslexic extension | https://github.com/OpenDyslexic/extension | 🟢 **MIT — byte-read** (`1,073 B`, `sha256:2aeeff85b59b…`, holder `2024 opendyslexic.com`) | 117 | Global | 🟢 **The traction leader of the whole SEN tier and the only row in it above `100★`.** Official browser extension that forces the OpenDyslexic typeface onto any page. 🔵 **Delivery note: the extension is MIT but the TYPEFACE it ships is `OFL-1.1` with a RESERVED FONT NAME** (see `repos/foundations.md`, `p830`) — a modified build must be renamed. Pushed `2026-10-31` |
+| Paper2Manga-Prism | https://github.com/raucvr/Paper2Manga-Prism | 🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:c71d239df917…`, stock text, no holder) | 91 | Global | 🟢 Reading-comprehension reshaper aimed explicitly at **ADHD and dyslexia**: turns a dense paper into sequential panelled narrative. 🔵 The second-highest traction in the tier and the clearest evidence that the DEMAND is for reading ACCESS, not for a tutor. Pushed `2026-11-06` |
+| ReadAble | https://github.com/nazarli-shabnam/ReadAble | 🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:c71d239df917…`, stock text, no holder) | 44 | Global | 🟢 Mobile assistive reader: **on-device** OCR → summarisation → TTS over printed text. 🔵 On-device matters here — a SEN learner's reading material is special-category-adjacent data in several of this base's jurisdictions, and a local pipeline removes the transfer question. Pushed `2026-10-07` |
+| Dino | https://github.com/developer-diganta/Dino | 🟢 **MIT — byte-read** (`LICENSE.md`, `1,073 B`, `sha256:8d3abe465a2a…`, holder `2022 Diganta Kr Banik`) | 43 | Global | 🟢 Chrome extension covering **dyslexia AND colour blindness** in one surface — the only row in the tier that addresses two access needs at once. 🔴 Region `Global`: the holder line names a person and no jurisdiction, and this base places region on the GRANT (`622-K`), not on a name. Pushed `2026-03-11` |
+| readapt | https://github.com/ContentSquare/readapt | 🟢 **Apache-2.0 — byte-read** (`master`, `11,357 B`, `sha256:c71d239df917…`, stock text, no holder) | 39 | EMEA | 🟢 **The only CORPORATE grant in the entire tier.** Reading-difficulty adaptation engine published by Contentsquare. 🔵 Region placed on the repository's own README, which is bilingual and names French twice — declared explicitly because the stock Apache text carries no holder line to place it on. Pushed `2026-04-22` |
+| adaptive-palette | https://github.com/inclusive-design/adaptive-palette | 🟢 **BSD-3-Clause — byte-read** (`1,562 B`, `sha256:b8f3da69a07f…`, holder `2023-2026, Inclusive Design Research Centre, OCAD University`) | 2 | North America | 🟢 **PROMOTED, not discovered: byte-read at `p634` and left in `agents/trending.md` for `196` passes.** Adaptive AAC palette from the IDRC at OCAD University, Toronto. 🔵 **Pushed `2026-11-15` — today.** The one institutionally-published, actively-developed, permissively-granted AAC runtime this base has found |
+| baby-bliss-bot | https://github.com/inclusive-design/baby-bliss-bot | 🟢 **BSD-3-Clause — byte-read** (`1,518 B`, `sha256:f12eecff2dfd…`, holder `2023-2024, Inclusive Design Institute`) | 7 | North America | 🟢 Generative models for **Bliss-symbol** communication, same publisher. 🔵 Bliss is a symbol language with a formal grammar, which makes it the one AAC vocabulary a model can be evaluated against rather than merely demonstrated on. Pushed `2026-09-18` |
+| ocula | https://github.com/revolutionarybukhari/ocula | 🟢 **MIT — byte-read** (`1,072 B`, `sha256:e76df35fc768…`, holder `2026 Husnain Bukhari`) | 2 | Global | 🟢 Webcam **eye-controlled cursor** — browser-only assistive input on MediaPipe Face Mesh with dwell-click. 🔵 The access LAYER below AAC: a learner who cannot use a mouse cannot reach any of the other rows here. No install, no hardware |
+| bol-sakhi-communication-board | https://github.com/SubchiBeats/bol-sakhi-communication-board | 🟢 **MIT — byte-read** (`1,068 B`, `sha256:9ceb4131aeb8…`, holder `2026 Sahib Singh`) | 1 | APAC | 🟢 Picture communication board, **bilingual English + Punjabi**, with instant text-to-speech. 🔵 Region placed on the LANGUAGE the repository itself ships, which is a jurisdictional fact in its bytes rather than an inference from a name |
+| voice-bridge | https://github.com/harryt04/voice-bridge | 🟢 **MIT — byte-read** (`master`, `1,072 B`, `sha256:7a81e8e6736e…`, holder `2025 Harrison Thomas`) | 1 | Global | 🟢 Free AAC web app for children with autism. 🔵 Filed because it is one of only **two** MIT-granted rows in a `12`-repository autism sweep in which **ten carried no licence at all** |
+| pdf_accessibility | https://github.com/adamopoulosa1980/pdf_accessibility | 🟢 **Apache-2.0 — byte-read** (`11,358 B`, `sha256:cfc7749b96f6…`, stock text, no holder) | 9 | Global | 🟢 **PDF remediation engine** — AI structural tagging plus a rules layer. 🔵 Region `Global` on the repository's own evidence: its README names `WCAG 2.2` (`6×`), `Section 508` (`5×`) and `EN 301 549` (`2×`), i.e. it targets three jurisdictions at once. The highest-traction row in the compliance tier. Pushed `2026-05-26` |
+| a11y-ai-auditor | https://github.com/natashkasemenova/a11y-ai-auditor | 🟢 **MIT — byte-read** (`1,074 B`, `sha256:6583114b7a51…`, holder `2026 Nataliia Semenova`) | 1 | EMEA | 🟢 Automated web-accessibility audit pipeline against **WCAG 2.2 / DSTU EN 301 549**. 🔵 `DSTU` is Ukraine's national standards prefix — the region is placed on a named national standard in the repository's own description, not on the author's name. Pushed `2026-10-18` |
+| alt-text-pipeline | https://github.com/hannahmoutran/alt-text-pipeline | 🟢 **MIT — byte-read** (`1,071 B`, `sha256:dbe551d1bccb…`, holder `2026 Hannah Moutran`) | 1 | Global | 🟢 **Calibrate on a sample, then generate at scale** — alt text for image collections with an explicit human-calibration step before bulk generation. 🔵 That shape is the reusable idea: it is the only row in the tier that treats accessibility output as something to be CALIBRATED rather than trusted. Pushed `2026-09-01` |
+| statamic-aida | https://github.com/21stdigital/statamic-aida | 🟢 **MIT — byte-read** (`1,074 B`, `sha256:1c09a6578ca0…`, holder `2024 21st digital GmbH`) | 5 | EMEA | 🟢 CMS addon that generates image alt texts automatically. 🔵 **Region placed on the LEGAL FORM in the holder line** — `GmbH` is a German company form, which is a jurisdictional fact inside the grant bytes themselves and the cleanest `622-K` placement in this pass. Pushed `2026-11-09` |
+| LibrasLive | https://github.com/moonlitrevery/LibrasLive | 🟢 **MIT — byte-read** (`1,068 B`, `sha256:68bb80786ddb…`, holder `2025 João Vitor`) | 10 | LATAM | 🟢 **Real-time translation to LIBRAS**, Brazilian Sign Language. 🔵 The highest-traction ACTIVE row in the LATAM sign-language tier and the natural renderer leg of `P70` for a Brazilian engagement. Pushed `2025-11-21` |
+| Video-to-Animation-LIBRAS | https://github.com/PedroCBrito/Video-to-Animation-LIBRAS | 🟢 **MIT — byte-read** (`master`, `1,095 B`, `sha256:7d6ed8a626e0…`, holder `2026 Video-to-Animation LIBRAS Contributors`) | 1 | LATAM | 🟢 Video → LIBRAS animation. 🔵 Filed for its push date — `2026-10-12` — because the LIBRAS tier's problem is not supply but STALENESS: its `51★` maximum has not been pushed since `2022` |
+| reconhecimento_libras | https://github.com/ClassNeuralNetwork/reconhecimento_libras | 🟢 **MIT — byte-read** (`1,103 B`, `sha256:3474bb218933…`, holder `2024 Artificial Neural Network`) | 6 | LATAM | 🟢 CNN-based LIBRAS recognition from a named research group. 🔵 The model leg to `LibrasLive`'s interface leg |
+| Indian-sign-language-recognition | https://github.com/Karthikeyu/Indian-sign-language-recognition | 🟢 **MIT — byte-read** (`master`, `1,087 B`, `sha256:ec369ab6ab13…`, holder `2020 Karthikeyu Busa, ShravaniKatte`) | 96 | APAC | 🟢 **The highest-traction GRANTED row in any national-sign-language corpus found this pass.** The corpus leader at `140★` (`satyam9090`) carries **no licence**, so this is the one an engagement can actually build on. Pushed `2020` — a STALE asset, filed as an asset, not as a product |
+| Sanket | https://github.com/Mishra-Shreya/Sanket | 🟢 **MIT — byte-read** (`master`, `1,070 B`, `sha256:3fa8899a1502…`, holder `2022 Shreya Mishra`) | 28 | APAC | 🟢 Android ISL mediator app — the second granted ISL row above `25★`. 🔵 Two independent MIT lineages in one national corpus is what makes APAC the best-supplied region in this tier |
+| StoryWeaver | https://github.com/roshnrf/StoryWeaver | 🟢 **MIT — byte-read** (`LICENSE.md`, `1,107 B`, `sha256:5fca87f338e3…`, holder `2025 Roshan A Rauof, Reem Fariha`) | 2 | Global | 🟢 **The ONLY granted row in the entire speech-therapy sweep.** Whisper-based speech-therapy platform for ages 4–6. 🔴 Context, because the row's `2★` is the point: a `10`-result speech-therapy sweep returned **`9` repositories with no licence at all**. Pushed `2026-10-10` |
+
+### 🔴 `7` rejections, with the reason each one was refused
+
+1. 🔴 **`Jojobeans1981/Ember-Campfire-Edition`** (`24★`, "AI-powered dyslexia intervention platform") — **no licence**. The third-highest-traction dyslexia repository on GitHub and it cannot be used.
+2. 🔴 **`satyam9090/Automatic-Indian-Sign-Language-Translator-ISL`** (`140★`) — **no licence**. The traction leader of the largest national-sign-language corpus measured this pass.
+3. 🔴 **`cboard-org/cboard`** (`768★`, UNICEF-backed) — **`GPL-3.0`, byte-read `35,141 B`, `sha256:589ed823e9a8…`**. Copyleft; shelved on `verticals/solutions.md` with its risk posture, not here.
+4. 🔴 **`asterics/AsTeRICS-Grid`** — **`AGPL-3.0`, byte-read `34,523 B`, `sha256:8486a10c4393…`**. Same verdict, same destination. 🔵 **And a name-integrity warning worth more than the row:** the free-text channel surfaces `astericsfree/AsTeRICS-Grid`, `astericsgridfree/AAC-Grid-Let-Me-Talk-Asterics-LogoRemakeFour` and `logoremakefour8/Asterics-Grid-AAC-LRF-LogoRemakeFour` ABOVE the canonical repository, which the channel does not return at all. **An assistive-tech brand name is being squatted; never resolve one of these from a search result without a byte-read.**
+5. 🔴 **`JoseStud/piar-digital-app`** — Colombia's statutory `PIAR` form, and the **only** repository on GitHub for it: **`GPL-3.0`, byte-read `35,149 B`, `sha256:3972dc9744f6…`**, `0★`. Copyleft, so not build-safe — recorded in `intel/market.md` under LATAM as a measured national gap rather than shelved.
+6. 🔴 **`tlennon-ie/neurodock`** (`20★`) and **`ICUnit/Tokai`** (`40★`) — `AGPL-3.0` and `NOASSERTION`, and in any case **not education**: both are productivity tooling for neurodivergent ADULTS (see `T106`).
+7. 🔴 **`itsmealli/inclusive-ed-tools`** — the single highest-ranked **Universal Design for Learning** repository on GitHub at **`1★`**, `NOASSERTION`, unpushed since `2025-10-31`. Recorded as the evidence for `T107`.
+
+### 🔴 Three dated records re-measured against today's bytes — and one of them had CHANGED
+
+- 🔴 **`Maximilian741/508-Agent`: the GRANT FILE ITSELF moved between two passes of this base.** `p818`
+  (`2026-11-15`) byte-read `1,067 B`, `sha256:b48cc408…`; `p830` re-read the same address on the same
+  day and got **`1,068 B`, `sha256:c9db00bdf8ad…`** — one byte more, a different hash, the same MIT
+  text and the same holder `2026 Max Casteel`. 🔵 **It is also the reason this pass files `20` rows and
+  not `21`:** `508-Agent` was drafted as a new row before `ingest/derive-counts.py` reported
+  `dupes=1` and showed it had been shelved at `p818`. The row was withdrawn and the `p818` record
+  CORRECTED in place instead. 🔵 **The lesson generalises: a `sha256` written into this base is a
+  measurement with a DATE on it, not a fact.** `T104` recorded licence drift in the closing
+  direction; this is drift with no licence change at all, and only a re-read finds it.
+- 🟢 **`cboard-org/cboard`: `759★` at `p621` (`2026-11-02`) → `768★` today.** `+9` in `13` days, `1.2 %`. No drift finding; the figure is refreshed, not corrected.
+- 🟢 **`juanda99/arasaac-frontend`: `16★` at `p622` → `16★` today, but pushed `2026-10-24` → `2026-11-14`.** Flat traction, active development — the pattern this base associates with a publicly-funded asset rather than a product.
+
 ## Thirty-fourth pass (`p829`, 2026-11-15) — the WORKFORCE tier: `33` passes, `324` agents, `101` trends, `68` recipes, and `0` rows about the segment next door
 
 🟢 **`11` build-safe agent rows filed (`324` → `335`), `1` foundation row (`148` → `149`), `3`
@@ -823,7 +952,7 @@ that layer stands on re-test.**
 | ScholarMCP | https://github.com/lstudlo/ScholarMCP | 🟢 **MIT — byte-read** (`1,079 B`, `sha256:560fed48…`, holder `Light Che…`, 2026) | 33 | Global | 🟢 **New this pass (`p818`).** Literature search with PDF ingestion across multiple indexes. 🔴 Pushed `2026-09-23` |
 | orcid-mcp-server | https://github.com/cyanheads/orcid-mcp-server | 🟢 **Apache-2.0 — byte-read** (`11,317 B`, `sha256:7915fc5b…`) | 6 | Global | 🟢 **New this pass (`p818`) — the IDENTITY row of the research layer, and the counterpart to `p817`'s Apereo CAS.** Researcher profiles, works, affiliations, funding, peer-review records. 🔵 **`p817` shelved how an institution knows WHO IS LOGGING IN; ORCID is how the world knows WHOSE WORK IT IS. An agent that writes to a research record without an ORCID is unattributable** 🟢 Pushed `2026-11-13` |
 | scholarly-graph-mcp-server | https://github.com/QuentinCody/scholarly-graph-mcp-server | 🟢 **Apache-2.0 — byte-read** (`10,758 B`, `sha256:7d304102…`) 🔵 shorter than the `11,356 B` stock text — Apache body confirmed present by clause grep, appendix trimmed | 0 | Global | 🟢 **New this pass (`p818`).** OpenAlex + Crossref + ORCID + ROR + OpenAIRE behind one graph interface. 🔵 **The only row in this layer that joins the WORK registry, the ORGANISATION registry and the PERSON registry — which is exactly the join a research-office dashboard needs** 🔴 `0★`, pushed `2026-11-13` |
-| 508-Agent | https://github.com/Maximilian741/508-Agent | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:b48cc408…`, holder `Max Casteel`, 2026) | 1 | Global | 🟢 **New this pass (`p818`) — one of the two rows that correct `p815`'s accessibility nil (`T61`).** *“Automated Section 508 & WCAG 2.1 AA document remediation platform. Parses, analyzes, remediates.”* 🔵 **DOCUMENT remediation, not page remediation — which is the education-shaped half of the problem, because course materials are PDFs and slide decks** 🔴 `1★`, pushed `2026-09-22`: the capability is real, the maturity is not |
+| 508-Agent | https://github.com/Maximilian741/508-Agent | 🟢 **MIT — byte-read** (`p818`: `1,067 B`, `sha256:b48cc408…`; 🔴 **RE-READ `p830` `2026-11-15`: `1,068 B`, `sha256:c9db00bdf8ad…`** — the grant file CHANGED between two passes of this base, holder still `2026 Max Casteel`) | 1 | Global | 🟢 **New this pass (`p818`) — one of the two rows that correct `p815`'s accessibility nil (`T61`).** *“Automated Section 508 & WCAG 2.1 AA document remediation platform. Parses, analyzes, remediates.”* 🔵 **DOCUMENT remediation, not page remediation — which is the education-shaped half of the problem, because course materials are PDFs and slide decks** 🔴 `1★`, pushed `2026-09-22`: the capability is real, the maturity is not |
 | wcag-guide | https://github.com/jesseslone/wcag-guide | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:9ddae494…`, holder `Jesse Slo…`, 2025) | 0 | Global | 🟢 **New this pass (`p818`) — the second `T61` row.** Self-hosted WCAG 2.1 compliance scanner and remediation TRACKER with MCP integration. 🔵 **The tracker is the part that matters for an accessibility obligation: a regulator asks what you found and what you fixed, not what you scanned** 🔴 `0★`, pushed `2026-03-17` |
 
 ### 🔴 Rejected this pass — named, with the reason
@@ -1285,7 +1414,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 335 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 355 rows
 
 ### Filed by `p829` (2026-11-15) — `11` rows: the VOCATIONAL tier (`3`, EMEA) and the language-and-study tier (`8`), every licence byte-read
 

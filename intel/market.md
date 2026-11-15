@@ -6,6 +6,30 @@ updated: 2026-11-15
 
 # Education AI — market map and opportunities by region
 
+🟢 **Thirty-fifth pass (`p830`, 2026-11-15): `5` `#### Update` blocks, one per region, opening the
+SEN / inclusive-learner segment in this file for the first time.** Before this pass the file held
+**`0`** occurrences of `learning disabilit*`, `neurodivergen*`, `occupational therap*` or
+`early intervention`.
+
+🔴 **A stale count CORRECTED, and it is the same defect class `ingest/derive-counts.py` exists to
+catch — in one of the three files that gate does not grade.** The paragraph below claims
+**`114`** `#### Update` blocks (`North America 24`, `EMEA 24`, `APAC 24`, `LATAM 25`, `Global 17`),
+a figure derived at `p823`. 🟢 **Derived again this pass, on this file's own bytes, BEFORE the five
+new blocks were inserted: `North America 30`, `EMEA 30`, `APAC 30`, `LATAM 31`, `Global 23` —
+`144`, not `114`.** Seven passes filed blocks and left the sentence alone.
+
+🟢 **After `p830`'s insertions the derived figures are: North America `31`, EMEA `31`, APAC `31`,
+LATAM `32`, Global `24` — `149` in total.** 🔵 Derivation, so the next pass can repeat it rather
+than trust it: walk the file, track the last `^### ` heading that is one of the five region names,
+and count `^#### Update` lines under it. 🔴 **Everything in the paragraphs below is left exactly as
+earlier passes wrote it; only this note is new.**
+
+🔵 **Regional balance this pass, stated because an unplaced finding is worth less than a placed
+one:** every region received a block, and **three of the five record a measured ABSENCE rather than
+an opportunity** — `DGS` at `0` repositories in EMEA, the Spanish-language `CAA` tier at `8`
+repositories and `0` licences in LATAM, and `10 of 10` ungranted practitioner tools in North
+America. 🔴 **Those absences were measured, not inferred from silence.**
+
 Researched through 2026-11-15, across **twenty-eight** passes; each region's updates are
 ordered **newest first** directly under its heading. 🟢 **Twenty-eighth pass (`p823`):
 `114` `#### Update` blocks across five regions — North America `24`, EMEA `24`, APAC `24`,
@@ -107,6 +131,45 @@ across EMEA.
 ## Opportunities by region
 
 ### North America
+
+#### Update 2026-11-15 (thirty-fifth pass, `p830`) — the SEN segment enters this file, and in North America it is the one place where a DEADLINE, not a strategy, is the buyer
+
+🔴 **This file had `0` occurrences of `learning disabilit*`, `neurodivergen*` or `early intervention`
+before this block**, across `34` passes that cited IDEA, Section 508 and ADA Title II repeatedly.
+
+🔵 **The dated instrument that makes this a budget rather than a theme** (all `CITED, NOT READ` from
+WebSearch summaries, `2026-11-15`):
+• 🔴 **ADA Title II: an `April 2026` compliance deadline for large public entities**, updating the
+accessibility standard institutions are measured against. This is the live driver — it has passed,
+which means remediation backlogs are being worked NOW rather than planned.
+• `Section 508` continues to govern federal and federally-funded material.
+• The US Department of Education's Office of Educational Technology published a *Framework for
+Responsible Use and Development of Artificial Intelligence in Education* in `March 2026`, with K-12
+guidance following in `April 2026`.
+
+🟢 **The state layer contains a SEN-specific asymmetry worth putting in front of a client.**
+`134` AI-in-education bills were introduced across `31` states this session. 🔵 **New York's
+`NY A 9190` would restrict classroom AI to ninth grade and above — and explicitly EXCEPTS
+diagnostics and special education.** Other states' model-policy deadlines are dated: North Carolina
+`Session Law 2026-41` (state model policy `2026-12-31`, local policies `2027-06-30`, teacher
+training `2028-06-30`); California's CDE model policy published `2026-06-25` under `SB 1288`;
+Maryland `SB 720` / `HB 1057` requiring local AI policies and AI coordinators.
+🔴 **The pattern: where legislatures restrict AI in the classroom, SEN is the carve-out.** A studio
+pitching an inclusion build is pitching into the one lane the restrictions deliberately leave open.
+
+🟢 **The supply side, measured this pass rather than asserted.** North America holds the only
+INSTITUTIONAL permissive publisher in the tier: the **Inclusive Design Research Centre at OCAD
+University, Toronto** — `81` repositories, `28` `BSD-3-Clause`, with
+[`adaptive-palette`](https://github.com/inclusive-design/adaptive-palette) pushed `2026-11-15`
+(today) and [`baby-bliss-bot`](https://github.com/inclusive-design/baby-bliss-bot) at `7★`.
+🔴 **Against that, the practitioner tier is ungranted:** a star-ranked
+`special education teacher AI` sweep returned `10` repositories and **`10` of `10` carried no
+licence at all** — including IEP generators, multi-agent co-teacher systems and transition-planning
+tools. **The demand is visible, the supply is unusable, and that gap is the engagement.**
+
+🔵 **Opportunity, concretely:** accessibility remediation at catalogue scale against a deadline that
+has already passed, delivered as `P70` (`compose/patterns.md`, `p830`) with its two-grader gate —
+and the pedagogy delivered inside it, because `T107` shows nobody is funding the pedagogy directly.
 
 #### Update 2026-11-15 (thirty-fourth pass, `p829`) — the WORKFORCE segment enters this file, with a dated federal funding change and `0` build-safe supply behind it
 
@@ -1293,6 +1356,45 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-15 (thirty-fifth pass, `p830`) — EMEA has the strongest SEN LAW and the weakest SEN SUPPLY, and the gap is measured rather than asserted
+
+🔵 **The regulatory picture, unchanged in substance from `p828`/`p829` and re-stated here only
+because it determines which half of an inclusion build is sellable today** (all `CITED, NOT READ`):
+• Reg. (EU) `2026/1744` (the Digital Omnibus) defers the AI Act's **stand-alone Annex III high-risk
+duties for education to `2027-12-02`**; embedded high-risk to `2028-08-02`.
+• **Article 50 transparency, including chatbot disclosure, has applied since `2026-08-02`.**
+• The **ban on emotion recognition in education** and the AI-literacy duty have applied since
+`2025-02-02`; Article 4 was softened by the Omnibus to *measures supporting* AI literacy, enforced
+by national market-surveillance authorities rather than the AI Office.
+• Watermarking of AI-generated content: grace period to `2026-12-02` for systems already on market.
+• 🟢 **The European Accessibility Act and `EN 301 549` are the obligations that bite NOW** — which
+is why `P70`'s EMEA variant sells against them and not against the AI Act.
+
+🔴 **The supply gap, and it is the sharpest regional finding of this pass.** `T105` measured the
+national-sign-language corpora on GitHub: **`Deutsche Gebärdensprache DGS` returns `0`
+repositories.** `lengua de signos española LSE` returns `8`. `langue des signes française LSF`
+returns `22`. 🔵 **Europe's largest economy has no open sign-language corpus at all, while India has
+`2,693` and Brazil `94`.** The statutory-document route is no better: `EHCP` → `0`,
+`SEND code of practice` → `0`, `Förderplan sonderpädagogisch` → `0`.
+
+🟢 **What EMEA does have is PUBLIC ASSETS, and they are MIT.**
+[`juanda99/arasaac-frontend`](https://github.com/juanda99/arasaac-frontend) — the Aragonese Portal
+of Augmentative and Alternative Communication — byte-reads **MIT with holder
+`2016 Gobierno de Aragón`**, `16★`, pushed `2026-11-14`. 🔵 **A regional government publishing a
+symbol vocabulary under MIT is a build asset for the entire Spanish-speaking world, LATAM included.**
+Alongside it: [`kitsteam/pictosearch`](https://github.com/kitsteam/pictosearch) (MIT, retrieval
+layer), [`ContentSquare/readapt`](https://github.com/ContentSquare/readapt) (Apache-2.0 — the only
+corporate grant in the tier, French), [`21stdigital/statamic-aida`](https://github.com/21stdigital/statamic-aida)
+(MIT, holder `21st digital GmbH`), and
+[`natashkasemenova/a11y-ai-auditor`](https://github.com/natashkasemenova/a11y-ai-auditor)
+(MIT, `DSTU EN 301 549` — Ukraine's national standard).
+🔴 **The AAC RUNTIMES, by contrast, are copyleft**: AsTeRICS Grid `AGPL-3.0`, cboard `GPL-3.0`.
+
+🔵 **Opportunity, concretely:** build on the public ASSET and adapt onto the copyleft RUNTIME —
+the pattern [`fjrodl/astericsgrid_ros`](https://github.com/fjrodl/astericsgrid_ros) (Apache-2.0
+bridge onto an AGPL platform) already demonstrates. 🔴 **And a named gap a German or Austrian
+engagement must budget for rather than discover: there is no DGS corpus to start from.**
 
 #### Update 2026-11-15 (thirty-fourth pass, `p829`) — vocational training is INSIDE Annex III point 3, and EMEA is the only region with build-safe supply for it
 
@@ -2521,6 +2623,41 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-15 (thirty-fifth pass, `p830`) — APAC is the BEST-SUPPLIED region in the SEN tier, and it is the first tier in `35` passes where that is true
+
+🟢 **The finding, measured on the free-text search channel this pass.** `"Indian Sign Language"` as
+an exact phrase returns **`2,693` repositories** — the largest national-sign-language corpus on
+GitHub by a wide margin, with real traction and real grants:
+[`Karthikeyu/Indian-sign-language-recognition`](https://github.com/Karthikeyu/Indian-sign-language-recognition)
+(**MIT, `96★`**) and [`Mishra-Shreya/Sanket`](https://github.com/Mishra-Shreya/Sanket)
+(**MIT, `28★`**) are two INDEPENDENT granted lineages. `Chinese Sign Language` returns `53`
+(`9` MIT), `Auslan` `9`, `Japanese Sign Language JSL` **`3`**.
+
+🔴 **Two caveats that must travel with the number.** (1) The corpus LEADER,
+`satyam9090/Automatic-Indian-Sign-Language-Translator-ISL` at `140★`, carries **no licence** and
+cannot be used. (2) The granted rows are STALE — `2020` and `2022` push dates. **This is an asset
+to revive, not a product to adopt**, and a proposal that says so is more credible than one that
+does not.
+
+🔵 **The regulatory layer, all `CITED, NOT READ` from WebSearch summaries, `2026-11-15`:**
+• **South Korea's `AI Basic Act` in force `2026-01-22`** — the region's first comprehensive AI statute.
+• **Vietnam's Law on Artificial Intelligence, effective `2026-03-01`, lists EDUCATION in its
+high-risk category** (automated assessment and behavioural systems), with transition periods of
+`12` months generally and **`18` months for education**, health care and finance; education-specific
+rules also set `12` periods of AI content per class per year for grades `1`–`12`.
+• India's amended IT Rules require **labelling of AI-generated content from `2026-02-20`**.
+• Australia's **National AI Plan (`December 2025`)** relies on existing law plus voluntary guidance;
+Japan is similarly betting on guidelines and self-regulation.
+• Ipsos Education Monitor `2026`: support for BANNING AI in schools rose in Japan (`21 %`→`29 %`),
+Australia (`47 %`→`52 %`) and South Korea (`27 %`→`31 %`), and fell in Indonesia.
+• NTU Singapore: from `August 2026` every undergraduate gets Gemini Enterprise, AI Studio and Vertex AI.
+
+🔵 **Opportunity, concretely:** an inclusion engagement in India or China starts from a larger open
+corpus than one in Germany — the inverse of this base's usual regional gradient (`T105`). The work
+is corpus revival plus the `P70` pipeline with the ISL renderer leg attached. 🔴 **In Vietnam the
+boundary in `P70` node `0` is not optional: an assessment or behavioural system is high-risk by
+national statute, on a shorter clock than the EU's.**
+
 #### Update 2026-11-15 (thirty-fourth pass, `p829`) — the fastest-growing region, and a vocational supply of ZERO measured in two national systems
 
 🔵 **Demand, `CITED, NOT READ` (WebSearch summaries, `2026-11-15`):** APAC is repeatedly placed as
@@ -3729,6 +3866,52 @@ procurement-led" corner of that matrix, which `P5` did not previously have a nam
 example of.
 
 ### LATAM
+
+#### Update 2026-11-15 (thirty-fifth pass, `p830`) — LATAM holds the region's only large permissive SEN corpus (LIBRAS) and, beside it, a completely UNGRANTED Spanish-language AAC tier
+
+🟢 **The asset.** `libras lingua brasileira de sinais` returns **`94` repositories, `24` MIT and
+`3` Apache-2.0** — the second-largest national-sign-language corpus measured this pass and the only
+one in the region with permissive grants at volume. Byte-read and shelved this pass:
+[`moonlitrevery/LibrasLive`](https://github.com/moonlitrevery/LibrasLive) (MIT, `10★`, real-time
+translation), [`ClassNeuralNetwork/reconhecimento_libras`](https://github.com/ClassNeuralNetwork/reconhecimento_libras)
+(MIT, `6★`, CNN recognition), [`PedroCBrito/Video-to-Animation-LIBRAS`](https://github.com/PedroCBrito/Video-to-Animation-LIBRAS)
+(MIT, pushed `2026-10-12`) and [`maritsbarbosa/awesome-libras`](https://github.com/maritsbarbosa/awesome-libras)
+(MIT, `51★`, the corpus index). `lengua de señas mexicana LSM` adds `49` repositories (`8` MIT).
+
+🔴 **The hole, measured and named.** The Spanish-language AAC tier —
+`comunicación aumentativa y alternativa (CAA)` — returns **`8` repositories, every one at `0★` and
+every one with NO LICENCE**, from Peru, Mexico, Chile and Spain alike. 🔵 **The demand is plainly
+there and none of it is usable.** The build-safe substitute is EMEA's: ARASAAC, MIT, held by the
+**Gobierno de Aragón** (see the EMEA block above) — a Spanish-language symbol vocabulary a LATAM
+engagement can adopt outright instead of commissioning.
+
+🔴 **And the statutory route is a one-repository desert.** Colombia's **`PIAR`** — the
+*Plan Individual de Ajustes Razonables*, the legally mandated individual-adjustment plan — returns
+**exactly ONE repository on all of GitHub**:
+[`JoseStud/piar-digital-app`](https://github.com/JoseStud/piar-digital-app), byte-read
+**`GPL-3.0`** (`35,149 B`, `sha256:3972dc9744f6…`), `0★`, pushed `2026-04-14`. Brazil's `AEE`
+returns `0`. 🔵 **A national statutory instrument with one `0★` copyleft implementation is not a
+market that has been served badly; it is a market that has not been entered.**
+
+🔵 **The demand context, all `CITED, NOT READ` from WebSearch summaries, `2026-11-15`:**
+• UNESCO IESALC, `200` institutions across `19` countries: **`87 %` use AI in at least one area;
+only `26 %` have a formal AI strategy.**
+• Digital Education Council LATAM survey `2026`: **`92 %` of students and `79 %` of faculty**
+actively engage with AI.
+• Brazil: **`53 %` of school administrators use AI; `22 %` say their school has guidelines.**
+• PISA `2025`: nine in ten `15`-year-olds across the region's `13` participating countries have used
+AI chatbots for schoolwork.
+• Universidad de los Andes (`2026`): **`716` AI-related regulatory instruments and proposals across
+`23` countries** — fragmented, mostly recent. Brazil's draft framework borrows from the EU;
+Argentina's bill commits to NON-regulation; Colombia runs CONPES `4144` as policy rather than
+binding rules; **Uruguay is the first in the region to sign the Council of Europe AI Convention.**
+• UNESCO's **Observatory on AI in Education for LAC** launched in Santiago, `April 2026`
+(with CAF, CENIA, Cetic.br, ECLAC, Fundación Ceibal, Tec de Monterrey, ProFuturo, IRCAI).
+• CENIA (Chile): **`13` of `19` countries studied do not teach early AI adoption in schools.**
+
+🔵 **Opportunity, concretely:** `P70` with the LIBRAS renderer leg for Brazil and ARASAAC symbols
+for Spanish-language markets, sold against institutional policy rather than statute — because
+`87 %` adoption against `26 %` strategy is a governance engagement wearing an accessibility hat.
 
 #### Update 2026-11-15 (thirty-fourth pass, `p829`) — the national vocational systems are the right target and the open supply behind them is `0` agents against `30` pieces of coursework
 
@@ -5071,6 +5254,36 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-15 (thirty-fifth pass, `p830`) — the SEN tier is ungranted at scale, and the identity vocabulary points at the wrong market entirely
+
+🔴 **One number carries this block.** A star-ranked sweep for `special education teacher AI` with a
+`2026` push filter returned `10` repositories — IEP generators, a multi-agent co-teacher, lesson
+differentiation, transition planning, writing-growth tracking — and **`10` of `10` carried no
+licence at all.** The autism sweep returned `12` with `2` granted. The speech-therapy sweep returned
+`10` with `1` granted. 🔵 **Across the three sweeps: `32` repositories, `3` usable grants.** That is
+not a thin market; it is an unlicensed one, and a client cannot buy any of it.
+
+🔴 **The second trap is a vocabulary trap, and it is expensive.** `T106`: the top `12`
+`neurodivergent` repositories by stars on GitHub in `2026` are **`8` agent-harness tools for
+neurodivergent ADULTS at work** (Claude Code skills, MCP memory servers, ADHD output formatters)
+and **`0` learner-facing projects**. **A market scan run on the identity term will report a healthy
+sector and be wrong about which sector it found.** The learner supply answers only to the clinical
+term (`dyslexia`, `speech therapy`), the product name (`OpenDyslexic`) or the compliance standard
+(`WCAG`, `Section 508`, `EN 301 549`).
+
+🔴 **The third finding is where the money is NOT.** `T107`: Universal Design for Learning — the
+framework every inclusion proposal cites — has a GitHub star maximum of **`1★`**, while the
+compliance tier beside it is MIT and Apache-2.0 throughout. **Software accumulates where the
+deadline and the liability are.** Inclusion pedagogy has neither; accessibility compliance has both.
+
+🟢 **What this means for a studio, stated as a position rather than a lament.** The buyable
+engagement in this tier is a COMPLIANCE engagement (`P70`), anchored on whichever instrument the
+client's jurisdiction makes binding — ADA Title II in North America, EN 301 549 and the European
+Accessibility Act in EMEA, national statute in Vietnam and Korea, institutional policy in LATAM.
+🔵 **The pedagogy is delivered inside it, and the SEN RECORD system is deliberately out of scope**
+(`P70`'s closing note): `IEP` tops out at `5★`, `EHCP` and `AEE` return `0`, and `PIAR` returns one
+`GPL-3.0` repository. 🔴 **That is a build, and it should be priced as one.**
 
 #### Update 2026-11-15 (thirty-fourth pass, `p829`) — a whole segment was missing from this base, and a licence left the commons
 

@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirty-fifth pass, `p830`) — **`4` foundation rows and `3` vertical platforms: the ASSET layer under the SEN tier, where the licences are older and stranger than the agents'**
+
+🟢 **Foundations `149` → `153`. Verticals `132` → `135`. Every licence byte-read on
+`2026-11-15`; both invented controls → `404`.** 🔴 **`gh api` with a `repo:` qualifier and
+`gh api repos/{owner}/{repo}` both DIED this pass — HTTP `422` and `403` for live and invented
+addresses alike — so neither was used as an oracle. Free-text `gh api search/repositories` remains
+bidirectionally controlled and carried discovery plus star and push metadata.**
+
+🔴 **The gap this closes.** `verticals/solutions.md` held **`0`** occurrences of `cboard`,
+`arasaac`, `pictogram` or `assistive` across `34` passes, while `agents/trending.md` had discussed
+`AAC` on `24` lines since `p621`. **The platforms were known to this base and never placed where a
+delivery team looks for them.**
+
+### 🟢 Foundations — the ASSISTIVE-ASSET layer (`4` rows)
+
+| Repo | Licence | ★ | Pushed | Why it is a foundation and not an agent |
+|---|---|---|---|---|
+| [`th30d0re/opendyslexic-fonts`](https://github.com/th30d0re/opendyslexic-fonts) | 🟡 **`OFL-1.1` — byte-read**, `4,406 B`, `sha256:2edc18617160…`, holder `2019, Abelardo Gonzalez`, **Reserved Font Name** | `1` | `2026-06-29` | 🟢 **The asset under this pass's highest-traction agent row.** `OpenDyslexic/extension` is MIT; the TYPEFACE it ships is not, and the two grants are separate. 🔴 **A modified build must be RENAMED** — the only licence condition in `p830` that bites at packaging time rather than integration time |
+| [`maritsbarbosa/awesome-libras`](https://github.com/maritsbarbosa/awesome-libras) | 🟢 **`MIT` — byte-read**, `1,072 B`, `sha256:aba3315d28e9…`, holder `2021 Mariana Barbosa` | `51` | `2022-09-15` | 🇧🇷 **The INDEX of the one national-sign-language corpus that is both large and permissive** (`94` repositories, `24` MIT). A curation, not a tool. 🔴 Unpushed since `2022` — a starting index, explicitly not a dependency |
+| [`kitsteam/pictosearch`](https://github.com/kitsteam/pictosearch) | 🟢 **`MIT` — byte-read**, `1,065 B`, `sha256:6b18f5c25cd5…`, holder `2021 kitsTeam` | `4` | `2026-10-22` | 🇩🇪 **The retrieval layer over ARASAAC** — what makes a government-published pictogram set reachable from an application instead of from a website. The leg `P70` wires into `adaptive-palette` |
+| [`fjrodl/astericsgrid_ros`](https://github.com/fjrodl/astericsgrid_ros) | 🟢 **`Apache-2.0` — byte-read**, `11,357 B`, `sha256:c71d239df917…` | `2` | `2026-03-04` | 🟢 **A PERMISSIVE adapter onto a COPYLEFT platform** — HTTP-to-`ROS 2` bridge for AsTeRICS Grid (`AGPL-3.0`). The shape that lets a studio integrate an AGPL runtime without taking the copyleft into its own product, and the same move `p828` used for LMS vendor adapters |
+
+### 🟢 Verticals — the ASSISTIVE-TECHNOLOGY PLATFORM tier (`3` rows)
+
+| Platform | Licence | ★ | Posture |
+|---|---|---|---|
+| **ARASAAC** — [`juanda99/arasaac-frontend`](https://github.com/juanda99/arasaac-frontend) | 🟢 **`MIT` — byte-read**, `1,084 B`, `sha256:1db6216968f9…`, holder **`2016 Gobierno de Aragón`** | `16` | 🟢 **BUILD-SAFE, and the only government-granted asset in the tier.** Region EMEA placed on a government holder line; **its reach is Spanish-language worldwide, which makes it a LATAM asset too.** 🔵 Re-measured: `16★` at `p622` → `16★` today, pushed `2026-10-24` → **`2026-11-14`**. Flat traction, live development — a funded public asset, not a product |
+| **cboard** — [`cboard-org/cboard`](https://github.com/cboard-org/cboard) | 🔴 **`GPL-3.0` — byte-read**, `35,141 B`, `sha256:589ed823e9a8…` | `768` | 🔴 **INTEGRATE, do not fork.** The most-deployed open AAC communicator, UNICEF-backed, `5,531` commits. Deploy and configure freely; do not fold into a proprietary product. 🔵 Re-measured: `759★` at `p621` (`2026-11-02`) → **`768★`**, `+1.2 %` in `13` days |
+| **AsTeRICS Grid** — [`asterics/AsTeRICS-Grid`](https://github.com/asterics/AsTeRICS-Grid) | 🔴 **`AGPL-3.0` — byte-read**, `34,523 B`, `sha256:8486a10c4393…` | *not retrieved* | 🔴 **Stricter case: network use counts as distribution**, so hosting it for a client triggers the source obligation. The permissive way in is `fjrodl/astericsgrid_ros` above. 🔴 **Star count left as NOT RETRIEVED rather than guessed** — the search channel does not return this repository at all, though its `LICENSE` byte-reads `200` |
+
+### 🔴 A brand-integrity finding that belongs on this page more than on the agent page
+
+The free-text channel ranks `astericsfree/AsTeRICS-Grid` (`2★`),
+`astericsgridfree/AAC-Grid-Let-Me-Talk-Asterics-LogoRemakeFour` (`1★`) and
+`logoremakefour8/Asterics-Grid-AAC-LRF-LogoRemakeFour` (`1★`) ABOVE the canonical project, which it
+omits entirely. 🔵 **An assistive-technology brand with a vulnerable user base is being squatted on
+the discovery channel this base uses.** 🔴 **Resolve this tier by byte-read only — a search ranking
+is not an identity.**
+
+### 🔴 Three addresses UNRESOLVED, and why that is not the same as ungranted
+
+`antijingoist/opendyslexic`, `juanda99/arasaac-api` and `AraSuite/arasaac-api` returned `NOGRANT`
+from `ingest/p830-licence-byteread.sh`. 🔴 **Both invented controls returned `NOGRANT` too**, so the
+script's negative is not an existence oracle: these three are recorded as **UNRESOLVED**, and a
+later pass with a working `repo:` channel should re-probe them rather than inherit a verdict.
+
 ## `2026-11-15` (thirty-fourth pass, `p829`) — **`1` foundation row, and the full denominator of a `22`-leg vocational sweep**
 
 🟢 **Foundations `148` → `149`. One row, byte-read, and `1` is the honest figure rather than a

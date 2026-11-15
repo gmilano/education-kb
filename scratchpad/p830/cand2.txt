@@ -1,0 +1,10 @@
+moonlitrevery/LibrasLive
+PedroCBrito/Video-to-Animation-LIBRAS
+ClassNeuralNetwork/reconhecimento_libras
+Karthikeyu/Indian-sign-language-recognition
+Mishra-Shreya/Sanket
+maritsbarbosa/awesome-libras
+juanda99/arasaac-frontend
+cboard-org/cboard
+JoseStud/piar-digital-app
+Franx245/Mentes-Brillantes

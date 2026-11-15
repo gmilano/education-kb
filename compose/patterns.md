@@ -6,6 +6,99 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
+**Seventy** concrete recipes — derived recipes: **70**. 🟢 **Thirty-fifth pass (`p830`): `P70` added** — the inclusive-delivery pipeline, and the first recipe in this file aimed at the SEN / inclusive-learner population rather than at a mainstream cohort. 🔵 **Premise is `T107`: inclusion COMPLIANCE is funded, deadlined and granted (MIT/Apache across the whole WCAG / Section 508 / EN 301 549 tier) while inclusion PEDAGOGY has a GitHub maximum of `1★` — so the recipe sells the compliance obligation and delivers the pedagogy inside it.** 🔴 **The EU AI Act boundary is drawn before the first node and it is the sharpest one in this file: the pipeline PRODUCES artefacts and evidence and NEVER scores a learner, because Annex III point 3 makes "assess learning outcomes" high-risk by construction and a SEN learner's needs record is special-category data on top of that.** 🟢 **All nine components byte-read on `2026-11-15`; every regulatory date is `CITED, NOT READ`.**
+
+## P70 — The inclusive-delivery pipeline: course material made usable AND auditable, with the scoring boundary drawn first (North America anchor, EMEA control, LATAM/APAC renderer swap)
+
+🔵 **The engagement this answers.** An institution has a decade of course material — PDFs, slide
+decks, images, video — and a compliance obligation with a date on it. It also has SEN learners who
+cannot use that material. **These are the same project and are almost always scoped as two.**
+`T107` is why: the compliance half has a budget and the pedagogy half does not, so the pedagogy
+gets delivered INSIDE the remediation pipeline or it does not get delivered.
+
+### 🔴 Node `0` — the boundary, drawn before anything is built
+
+| The pipeline MAY | The pipeline MUST NOT |
+|---|---|
+| 🟢 Tag, caption, describe, simplify and re-render existing material | 🔴 Produce or influence a grade, a score or a placement |
+| 🟢 Emit per-artefact conformance evidence against a named standard | 🔴 Write to an `IEP` / `EHCP` / `PIAR` / `Förderplan` record |
+| 🟢 Let a learner choose a representation (font, colour, symbol, sign, audio) | 🔴 Infer a diagnosis, a disability or an emotional state from learner behaviour |
+| 🟢 Log which representation was served, for accessibility reporting | 🔴 Use that log as an input to assessment or monitoring |
+
+🔴 **Three independent reasons this boundary is load-bearing, not boilerplate.** (1) EU AI Act
+Annex III point 3 names admission, assessment and the monitoring of prohibited behaviour — stand-alone
+duties deferred to `2027-12-02` by Reg. (EU) `2026/1744`, which is a runway and not a reprieve.
+(2) Emotion recognition in education has been PROHIBITED since `2025-02-02`, with no deferral — and
+a pipeline that watches a learner read is one design decision away from it. (3) A SEN record is
+special-category personal data in every jurisdiction in this recipe. 🔴 All three `CITED, NOT READ`.
+
+### 🟢 The nine components, all byte-read `2026-11-15`
+
+| Leg | Component | Licence | Why this one |
+|---|---|---|---|
+| 1. Document remediation | [`adamopoulosa1980/pdf_accessibility`](https://github.com/adamopoulosa1980/pdf_accessibility) | 🟢 `Apache-2.0` (`11,358 B`, `sha256:cfc7749b96f6…`) | Structural tagging of course PDFs. The only component in the tier whose README targets `WCAG 2.2`, `Section 508` AND `EN 301 549`, so one engine serves all three regional anchors |
+| 2. Image description | [`hannahmoutran/alt-text-pipeline`](https://github.com/hannahmoutran/alt-text-pipeline) | 🟢 `MIT` (`1,071 B`, `sha256:dbe551d1bccb…`) | **Calibrate on a human-reviewed sample, then generate at scale.** The calibration step is the component's actual contribution and it is what makes the output defensible |
+| 3. CMS-side alt text | [`21stdigital/statamic-aida`](https://github.com/21stdigital/statamic-aida) | 🟢 `MIT` (`1,074 B`, `sha256:1c09a6578ca0…`) | The same job at the authoring end, so new material does not re-create the backlog. Holder `21st digital GmbH` |
+| 4. Audit gate A | [`natashkasemenova/a11y-ai-auditor`](https://github.com/natashkasemenova/a11y-ai-auditor) | 🟢 `MIT` (`1,074 B`, `sha256:6583114b7a51…`) | `WCAG 2.2` / `DSTU EN 301 549` |
+| 5. Audit gate B | [`Maximilian741/508-Agent`](https://github.com/Maximilian741/508-Agent) | 🟢 `MIT` (`p818`: `1,067 B`; **re-read `p830`: `1,068 B`, `sha256:c9db00bdf8ad…`**) | `Section 508` / `WCAG 2.1 AA`. 🔵 **Two INDEPENDENT graders, and the pipeline fails CLOSED on disagreement** — an artefact both pass ships, an artefact they split on goes to a human. One grader is a claim; two are evidence |
+| 6. Learner renderer | [`ContentSquare/readapt`](https://github.com/ContentSquare/readapt) + [`OpenDyslexic/extension`](https://github.com/OpenDyslexic/extension) | 🟢 `Apache-2.0` (`11,357 B`) + 🟢 `MIT` (`1,073 B`, `sha256:2aeeff85b59b…`) | Reading-difficulty adaptation and typeface substitution at the point of use |
+| 7. Typeface asset | [`th30d0re/opendyslexic-fonts`](https://github.com/th30d0re/opendyslexic-fonts) | 🟡 `OFL-1.1` **with Reserved Font Name** (`4,406 B`, `sha256:2edc18617160…`) | 🔴 **Ship it unmodified or RENAME your build.** This is the one licence condition in `P70` that bites at packaging time rather than at integration time |
+| 8. Non-verbal access | [`inclusive-design/adaptive-palette`](https://github.com/inclusive-design/adaptive-palette) + [`kitsteam/pictosearch`](https://github.com/kitsteam/pictosearch) | 🟢 `BSD-3-Clause` (`1,562 B`, IDRC/OCAD University) + 🟢 `MIT` (`1,065 B`) | AAC palette plus ARASAAC pictogram retrieval. 🔵 The ARASAAC set is MIT and held by the **Gobierno de Aragón** — a public symbol vocabulary nobody has to commission |
+| 9. Input layer | [`revolutionarybukhari/ocula`](https://github.com/revolutionarybukhari/ocula) | 🟢 `MIT` (`1,072 B`, `sha256:e76df35fc768…`) | Webcam dwell-click. 🔵 **Put it in the architecture even when nobody has asked for it:** every leg above assumes the learner can operate a pointer, and this is the only shelved row that removes the assumption |
+
+🔵 **Orchestration:** reuse [`labsai/EDDI`](https://github.com/labsai/EDDI) (`Apache-2.0`), already
+held by this base and already the orchestrator in `P68` — this recipe adds no new runtime.
+
+### 🟢 Wiring
+
+```
+source material ─► [1] structural tagging ─► [2] alt-text calibration ──┐
+    (PDF/PPT/img)                             (human-reviewed sample)   │
+                                                                        ▼
+[3] authoring-side alt text ───────────────────────────────► artefact store
+                                                                        │
+                                                      ┌─────────────────┴─────────────────┐
+                                                      ▼                                   ▼
+                                           [4] auditor A (EN 301 549)         [5] auditor B (Section 508)
+                                                      └──────────────┬────────────────────┘
+                                                   agree ──► ship    │    disagree ──► human queue
+                                                                     ▼
+                                       learner-chosen representation: [6]+[7] text  ·  [8] symbols  ·  regional sign-language leg
+                                                                     ▲
+                                                                [9] input layer
+```
+
+🔴 **One arrow is deliberately absent:** nothing runs from the artefact store or the representation
+log into a gradebook, a learner model or a needs record. **That missing arrow is the compliance
+argument of the whole build** — and it is what keeps the system out of Annex III.
+
+### 🟢 The regional swap — one pipeline, four anchors
+
+| Region | Compliance anchor the client is actually buying | Renderer leg added |
+|---|---|---|
+| 🌎 **North America** | 🔴 **ADA Title II, `April 2026` deadline for large public entities** + `Section 508`. The live budget driver and the reason this recipe is NA-anchored | — (legs 6–7 as written) |
+| 🌍 **EMEA** | European Accessibility Act + `EN 301 549` apply **now**; EU AI Act Annex III stand-alone duties `2027-12-02`; Article 50 transparency live since `2026-08-02` | — ; add `BSL`/`LSF` from `T105`'s corpora, noting both are thin and `DGS` returns **`0`** |
+| 🌎 **LATAM** | No single binding instrument — `716` regulatory instruments across `23` countries (`CITED, NOT READ`), so the anchor is institutional policy, not statute | 🟢 **LIBRAS: [`moonlitrevery/LibrasLive`](https://github.com/moonlitrevery/LibrasLive)** (MIT) + [`ClassNeuralNetwork/reconhecimento_libras`](https://github.com/ClassNeuralNetwork/reconhecimento_libras) (MIT). Symbol leg already serves Spanish via ARASAAC |
+| 🌏 **APAC** | Korea `AI Basic Act` (in force `2026-01-22`), Vietnam's AI law listing education as high-risk with `12`/`18`-month transitions, India's IT Rules labelling from `2026-02-20` | 🟢 **ISL: [`Karthikeyu/Indian-sign-language-recognition`](https://github.com/Karthikeyu/Indian-sign-language-recognition)** (MIT, `96★`) + [`Mishra-Shreya/Sanket`](https://github.com/Mishra-Shreya/Sanket) (MIT). 🔴 Both stale — budget revival, not adoption |
+
+### 🔴 Acceptance gates — the build is not done until all five pass
+
+1. 🟢 **Two-grader agreement rate published**, not just the pass rate. A pipeline whose graders agree `100 %` of the time has one grader, not two.
+2. 🟢 **Calibration sample re-run at release.** Leg `2`'s sample is re-scored by a human each release; drift in the alt-text model shows up here or nowhere.
+3. 🔴 **Scoring-boundary test in CI.** An automated check that no artefact-store or representation-log field is reachable from any assessment surface. **Write it as a failing test first.**
+4. 🟡 **Font packaging check.** If the build modifies the typeface, the binary must not be named OpenDyslexic (`OFL-1.1` Reserved Font Name).
+5. 🔴 **Copyleft separation check.** If `cboard` (`GPL-3.0`) or AsTeRICS Grid (`AGPL-3.0`) is integrated for board interchange, the check proves the link is an adapter over a documented format and not a combined work.
+
+🟢 **Estimate: `6`–`8` weeks** for one institution's active catalogue with legs `1`–`7`;
+**`+2`–`3` weeks** for leg `8`; **`+3`–`4` weeks** for a regional sign-language leg, where the
+work is reviving a stale MIT corpus rather than writing a model.
+
+🔴 **What this recipe does NOT solve, stated so a proposal does not over-promise.** There is no
+adoptable open base for the SEN record itself: Colombia's `PIAR` has exactly **one** repository
+(`GPL-3.0`, `0★`), England's `EHCP` has **none**, and the US `IEP` tier is `7` `MIT` repositories
+whose maximum is `5★` and unpushed since `2016` (`p634`). **A needs-record system is a build, not
+an integration — and `P70` is deliberately scoped to stop at its door.**
+
 **Sixty-nine** concrete recipes — derived recipes: **69**. 🟢 **Thirty-fourth pass (`p829`): `P69` added** — the apprenticeship evidence-and-readiness pipeline, and the first recipe in this file aimed at VOCATIONAL education and training rather than at a school or a university. 🔵 **Premise is `T102`: the supply for this tier exists, is MIT, and is indexed under the name of the statutory document the learner must file (`Ausbildungsnachweis`, `KSB`) rather than under the sector — so the components were found, byte-read and assembled in one pass, while `T103` explains why the obvious institution-brand search returns `30` pieces of student coursework instead.** 🔴 **The EU AI Act boundary is drawn before the first node, because Annex III point 3 names vocational education and training in the same breath as schools, and because the difference between an ADVISORY readiness score and a GRADING input is the difference between a low-risk build and a high-risk one.** 🟢 **All five permissive components byte-read on `2026-11-15`; the regulatory calendar is `CITED, NOT READ`.**
 
 **Sixty-eight** concrete recipes — derived recipes: **68**. 🟢 **Thirty-third pass (`p828`): `P68` added** — the heterogeneous-LMS student-record connector: one domain model with vendor adapters for Blackboard, D2L/Brightspace and Moodle, built from byte-read permissive servers rather than rediscovered protocol knowledge, orchestrated on `labsai/EDDI` (Apache-2.0), with the write path gated by two controls lifted from the cohort itself — `merlin-mcp`'s out-of-band phone approval and `bb-mcp`'s server-side RBAC — and scoped against the Digital Omnibus split this base already holds (Article 50 and AI-literacy live now, stand-alone Annex III duties at `2027-12-02`). 🔵 **Premise is `T99`/`T100`: no multi-campus client runs one LMS, and the institution-bound repositories carry the authentication and pagination knowledge that is the expensive part.** 🟢 **All components byte-read on `2026-11-15`.**

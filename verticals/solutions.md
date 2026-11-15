@@ -6,6 +6,25 @@ updated: 2026-11-15
 
 # Education vertical platforms — real systems to customize AI on top of
 
+## 🟢 The ASSISTIVE-TECHNOLOGY PLATFORM tier — **the AAC systems institutions already run** (new, thirty-fifth pass `p830`) (3 rows)
+
+🔴 **This shelf held `0` rows for assistive technology across `34` passes.** `grep -ci` for
+`cboard`, `arasaac`, `pictogram` and `assistive` over `verticals/solutions.md` returned **`0`**,
+while `agents/trending.md` had discussed `AAC` on `24` lines since `p621`. The platforms were
+known to this base and never placed where a delivery team looks for them.
+
+🔴 **Read the licence column before the star column.** This is the first tier on this shelf where
+**the two most-deployed platforms are both copyleft** — which does not make them unusable, it makes
+them INTEGRATION targets rather than fork targets. The build-safe asset in the tier is the
+government-granted PICTOGRAM SET, not the runtime.
+
+| Platform | Repo | Licence | Stars | What it is |
+|---|---|---|---|---|
+| **ARASAAC** (Gobierno de Aragón) | https://github.com/juanda99/arasaac-frontend | 🟢 **MIT — byte-read** (`LICENSE.md`, `1,084 B`, `sha256:1db6216968f9…`, holder **`2016 Gobierno de Aragón`**) | 16 | **Region: EMEA — placed on a GOVERNMENT holder line, the strongest placement this base accepts.** 🟢 The Aragonese Portal of Augmentative and Alternative Communication: the pictogram set and front-end that most Spanish-language AAC software in BOTH hemispheres draws on. 🔵 **Its reach is the point for a LATAM engagement** — an EMEA public body publishing under MIT is what gives a Colombian or Mexican build a symbol vocabulary it does not have to commission. 🔵 **Re-measured this pass: `16★` at `p622` → `16★` today, but pushed `2026-10-24` → `2026-11-14`** — flat traction, live development, the signature of a funded public asset rather than a product. Consume it through `kitsteam/pictosearch` (MIT, `repos/foundations.md` `p830`) |
+| **cboard** (UNICEF-backed) | https://github.com/cboard-org/cboard | 🔴 **`GPL-3.0` — byte-read** (`LICENSE.txt`, `35,141 B`, `sha256:589ed823e9a8…`) | 768 | **Region: Global.** 🟢 **The most-deployed open AAC communicator there is**, browser-based with text-to-speech, UNICEF support and `5,531` commits. 🔴 **`GPL-3.0`: the licence propagates.** A studio may deploy, host and configure it for a client and may contribute back; it may NOT fold it into a proprietary product. 🔵 **The build-safe pattern is an ADAPTER, not a fork** — talk to it, import/export its board format, keep your own code out of the combined work. 🔵 Re-measured this pass: `759★` at `p621` (`2026-11-02`) → **`768★`** today, `+1.2 %` in `13` days |
+| **AsTeRICS Grid** | https://github.com/asterics/AsTeRICS-Grid | 🔴 **`AGPL-3.0` — byte-read** (`34,523 B`, `sha256:8486a10c4393…`) | *not retrieved* | **Region: EMEA** (AsTeRICS is an EU-funded Austrian lineage). 🟢 Offline-capable AAC grid system with device control. 🔴 **`AGPL-3.0` is the stricter case: network use counts as distribution.** Hosting it for a client triggers the source obligation. 🔵 **The permissive way in is `fjrodl/astericsgrid_ros` (Apache-2.0)** — a bridge, shelved this pass in `repos/foundations.md`. 🔴 **Star count deliberately left as `not retrieved` rather than guessed: the free-text search channel does not return this repository at all**, although its `LICENSE` byte-reads `200`. 🔴 **And a name-integrity warning: the channel DOES return `astericsfree/AsTeRICS-Grid`, `astericsgridfree/AAC-Grid-Let-Me-Talk-Asterics-LogoRemakeFour` and `logoremakefour8/Asterics-Grid-AAC-LRF-LogoRemakeFour` — low-star look-alikes outranking the canonical project. Resolve this brand by byte-read only** |
+
+
 
 ## Thirty-fourth pass (`p829`, 2026-11-15) — `0` rows added, and the vocational PLATFORM tier is declared a measured gap
 
@@ -98,7 +117,7 @@ platform.** 🟡 **Treat it as competitive intelligence that happens to be MIT-l
 | **AGENTIC STAR** (SoftBank, 🇯🇵) | 🔴 **Not institution-run — a hosted commercial agent platform**, developer docs at `developers.fd.agenticstar.tm.softbank.jp`, homepage `agenticstar.io`. 🟢 Its runtime SDKs `agenticstar-agentcore` (`1.0.3`) and `agenticstar-platform` (`3.3.0`, `80` releases) are public on PyPI and MIT by their wheel metadata | 🟢 **`74` MIT education agent templates, `54` catalogue ids `EDU-C2-004`…`EDU-C2-173`** — reference row [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent), `EDU-C2-028`, byte-read MIT (`1,074 B`, HEAD `71c442ebd88e`) | 🟢 **MIT** (templates and both SDKs, all byte- or metadata-verified) | 🟡 **Adopt the SPECS, not the runtime.** 🔴 Templates raise `PlatformRequired` at graph compile without a SoftBank deployment; all `74` are `0★`, unmaintained since October; the framework's advertised source repo has **zero commits** (`T89`); hard `==` pins on `langgraph`/`langchain`/`fastapi`. 🟢 **Tests run without the platform — harvest per `P61`** |
 | **AgentCore graph scaffold** (the catalogue's shared architecture) | 🔵 Not a product — the uniform structure under all `74` templates: `config/agent.yaml` manifest (`required_trust_level`, declared secrets), `src/graph/`, `src/nodes/`, `src/schemas/state.py`, `docs/02_design.md`, `docs/03_test_spec.md`, `tests/proof_of_boundary/` | 🟢 Domain nodes differ completely between ids — byte-compared across three repositories this pass: `iep_section_generator`/`regulatory_compliance` vs `affected_material_analysis`/`stakeholder_mapping` vs `bloom_level`/`difficulty_score`. Reference row [`haidang024/agentic-star-education-curriculum-change-impact-briefing-agent`](https://github.com/haidang024/agentic-star-education-curriculum-change-impact-briefing-agent) (`EDU-C2-046`, `45` files) | 🟢 **MIT** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ae3eea9ac056`) | 🟢 **This is the reusable asset.** 🔵 One scaffold, `54` real domain implementations — so a studio gets a uniform, inspectable architecture across `54` education workflows instead of `54` unrelated codebases. 🔴 The scaffold's base class ships only in the binary wheel; re-implement on LangGraph (now on `repos/foundations.md`) |
 
-## Education vertical platforms — 132 rows
+## Education vertical platforms — 135 rows
 
 ### Filed by `p828` (2026-11-15) — `1` row, and it is the only PERMISSIVE LMS on this shelf
 
