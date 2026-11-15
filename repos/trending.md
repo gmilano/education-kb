@@ -4,6 +4,99 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-ninth pass, `p824`) — **the platform nil ends, and it ends by looking ONE RANK below every star ceiling this file has ever read**
+
+🟢 **`2` foundation rows added (`134` → `136`) and `4` platform rows added (`116` → `120`) — the
+first non-nil on the platform tier in two passes.** 🟢 **Gate-confirmed:
+`repos/foundations.md shelf: tables=20 rows=138 distinct=136 graded=136 claimed=136 ragged=0
+nolink=0 dupes=2` and `verticals/solutions.md shelf: tables=23 rows=122 distinct=120 graded=120
+claimed=120 ragged=0 nolink=0 dupes=2`.**
+
+### The setting that ended it, with the denominators
+
+🔴 **`p823` reported `0` platform rows and explained it as a closed-system problem.** 🟢 **`p824`
+re-ran the tier at `sort=stars` with a `pushed:` recency floor and NO star floor, and read PAST the
+ceiling — which is where the permissive tier turned out to live:**
+
+| Query | Total | The ceiling (what every previous leg saw) | One rank below (what `p824` read) |
+|---|---|---|---|
+| `school management system pushed:>2026-09-01` | **`4,840`** | 🔴 `frappe/education` `711★` `NOASSERTION`; `rosariosis` `654★` GPL-2.0; `Django-School-Management` `599★` NONE; `openSIS-Classic` `351★` NONE | 🟢 **`yungifez/skuul` `481★` MIT**, multi-tenant, Laravel |
+| `student information system pushed:>2026-06-01` | **`4,137`** | 🔴 `rosariosis`; `openSIS-Classic` | 🟢 **`nomadicjosh/etsis` `46★` MIT** (higher-ed, running since 2015); 🟢 **`bcgov/SIMS` `29★` Apache-2.0** |
+| `open source learning management system pushed:>2026-09-01` | `37` | 🔴 `frappe/lms` `3,423★` AGPL-3.0; `tadreeblms` `35★` AGPL-3.0 | 🟢 **`tutors-sdk/tutors-mono-repo` `5★` MIT** |
+
+🔵 **That is `T85`, and it is the third weakening of `T7`'s "the platform layer is copyleft" — the
+first two were single rows, this one is four rows and a mechanism: the claim was a STAR-RANK
+artefact.**
+
+### The four platform rows
+
+🟢 **[`yungifez/skuul`](https://github.com/yungifez/skuul)** — MIT (byte-read `1,068 B`,
+`sha256:91e9aaa8…`), `481★`, `20 MB`, pushed the day of this pass. **Multi-school by design**,
+which is the property `P55`'s multi-tenant connector needs and which no copyleft incumbent in this
+file has. 🔵 **Also this page's first African-authored platform.** 🔴 No OneRoster/LTI/Ed-Fi
+surface — standards work is a build here, not a configuration.
+
+🟢 **[`nomadicjosh/etsis`](https://github.com/nomadicjosh/etsis)** — MIT (byte-read `LICENSE.md`,
+`1,113 B`, `sha256:8d66d7d7…`), `46★`, created `2015-08-01`, pushed the day of this pass.
+🔵 **The only permissively licensed HIGHER-EDUCATION student information system this base has found
+in twenty-nine passes.** Eleven years of continuous development is the signal, not the star count.
+🟢 **`P8` has a permissive host for the first time.**
+
+🟢 **[`bcgov/SIMS`](https://github.com/bcgov/SIMS)** — Apache-2.0 (byte-read `11,357 B`,
+`sha256:58d1e17f…`), `29★`, `54 MB`. **Post-secondary student financial aid, operated by the
+Government of British Columbia 🇨🇦.** 🔵 **Fourth instance of the `p810` Ed-Fi / `p818` Riksarkivet
+pattern — the body that operates the record ships the code — and the first North American one that
+is an operational system rather than a standard.** 🔴 **Financial aid is the one education workflow
+where an agent's error is a money error: `P14` registry discipline and a human decision gate, never
+an advisory chatbot.**
+
+🟢 **[`tutors-sdk/tutors-mono-repo`](https://github.com/tutors-sdk/tutors-mono-repo)** — MIT
+(byte-read `1,082 B`, `sha256:f4cbe9e7…`), `5★`, Svelte 5 + SvelteKit + TypeScript, created
+`2026-07-27`. **A course READER rather than an administrative system**, so its content is
+addressable markdown instead of rows behind an institutional login — which is the exact constraint
+`T77` found on the Moodle/Canvas tier. 🔴 Four months old; a technology bet, not an incumbent
+replacement.
+
+### The two foundation rows — both into the curriculum-corpus layer, its first since `p806`
+
+🟢 **[`hanhuark/machine-learning-for-engineers`](https://github.com/hanhuark/machine-learning-for-engineers)**
+— BSD-3-Clause (byte-read `1,492 B`, `sha256:92d7c53c…`), `55★`, `88 MB`. The originating
+implementation is **MEEG 54403 at the University of Arkansas 🇺🇸**, and the repository ships an
+`INSTRUCTOR_QUICKSTART.md`, an `ADOPTION_GUIDE.md` and an `IMPLEMENTATIONS.md` recording adoptions
+elsewhere. 🔵 **Built for reuse by other programmes, which is what makes it a corpus rather than a
+course dump — and it is the only North American row `p824` produced.** 🔴 Upper-level engineering,
+not K-12.
+
+🟢 **[`OpenRaiser/EduGraph`](https://github.com/OpenRaiser/EduGraph)** — 🔴 **SPLIT: `LICENSE` is
+Apache-2.0 (byte-read `11,357 B`, `sha256:58d1e17f…`), `LICENSE-DATA` is CC BY-SA 4.0, and GitHub
+reports only the first.** `7,062` concepts across `18` subjects joining curriculum standards,
+**prerequisite relations**, textbooks, explanations and exercises under shared `Concept` ids.
+🔵 **It is the join `P9` has wanted: "what must the learner already know" answerable in one
+traversal.** 🔴 **The graph is the product and the graph is share-alike — shelved for the
+architecture, flagged for the data grant. Anchor of `T81`'s two-file split.**
+
+### 🔴 Named and NOT shelved
+
+[`frappe/education`](https://github.com/frappe/education) (`711★`) and
+[`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) (`57★`) both report `NOASSERTION`; per
+`T52` the bytes must decide and per `T81` the bytes can say three different things. Neither was
+byte-read this pass, so neither is shelved on the field alone.
+[`TareqMonwer/Django-School-Management`](https://github.com/TareqMonwer/Django-School-Management)
+(`599★`) carries no licence field at all. [`JudgePeach/math-question-bank`](https://github.com/JudgePeach/math-question-bank)
+(`406★`, AGPL-3.0, 🇨🇳 localised high-school maths question bank with LaTeX rendering, LLM parsing
+and OCR) is real, active and copyleft — a reference architecture for `P38`, not a fork candidate.
+
+### 🔴 The standards tier, re-tested and unchanged
+
+`q="oneroster"` → `124`, and the only row pushed inside a week is
+[`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster)
+(Apache-2.0, `6★`, serves a OneRoster 1.2 API from an Ed-Fi ODS) — already held.
+`q="lti 1.3 tool mcp"` → **`1`**, and it is `course-code-framework/coursecode`, already held.
+🔵 **The standards tier is stable, shelved and North American, which is the inverse of where this
+pass's supply came from.**
+
+
+
 ## `2026-11-15` (twenty-eighth pass, `p823`) — **the foundation nil ENDS at four passes, and it ended in the STANDARDS tier rather than the application tier**
 
 🟢 **`2` foundation rows added (`132` → `134`) — the first non-nil on this file in five passes.**

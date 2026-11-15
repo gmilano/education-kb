@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
+**Sixty** concrete recipes — derived recipes: **60**. 🟢 **Twenty-ninth pass (`p824`): `P58`–`P60` added** — the ASSEMBLED open proctoring stack with the EU AI Act Annex III boundary drawn before the first line of code (`P58`, EMEA anchor with an APAC port, and the recipe `T83` makes possible by correcting `p815`'s nil); the registry-first LATAM discovery protocol that turns `T82`'s `709`-against-`4` into a repeatable sourcing step for an engagement (`P59`, LATAM anchor, portable to any market where the institution rather than the vendor owns the system of record); and the teacher-approval publication gate, which is EU AI Act Article 14 human oversight shipped as a product default rather than as a policy document (`P60`, Global, with a named reference implementation). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=60 claimed=60 · GREEN`.**
+
 **Fifty-seven** concrete recipes — derived recipes: **57**. 🟢 **Twenty-eighth pass (`p823`): `P55`–`P57` added** — the multi-tenant campus LMS connector that turns `T77`'s `20`+ unfunded per-campus adapters into one supported product, with named reference implementations in four regions and a qualifying question whose answer is public (`P55`); the verified LMS write protocol — commit, invalidate, re-read, diff against both what changed and what must NOT have — generalised from the first write-capable LATAM agent on these shelves and portable to every LMS here (`P56`); and the two-licence pre-shelf gate that refuses a non-commercial curriculum in four `curl`s, catching `T78` in both directions (`P57`). 🟢 **Zero copyleft in all three delivered trees; the GPL-3.0 and WTFPL traps adjacent to `P55` are named, and the AGPL/NC traps are named where they sit.** 🟢 **Count gate-confirmed, not inline: `ingest/derive-counts.py` returned `derived=57 claimed=57`.** All components byte-read on `2026-11-15`.
 
 **Fifty-four** concrete recipes — derived recipes: **54**. 🟢 **Twenty-seventh pass (`p822`): `P52`–`P54` added** — the pre-ingest PAYLOAD gate that refuses `T73`'s `775`-repository clone farm in four `curl`s, and the first recipe here whose deliverable protects the other recipes (`P52`); the learning-scaffold wrapper that lets an agent do the work while the person can still be shown to have learned it, composed from the three independent `SKILL.md` implementations `T75` found in one pass (`P53`); and the East Africa voice-first deployment in which the FINANCING rail is part of the architecture — an MCP entitlement tool the tutor reads — built on the Africa-placed components `T71` and `T74` put on these shelves (`P54`). 🟢 **Zero copyleft in all three delivered trees; the AGPL-3.0 trap adjacent to `P54` is named.** 🟢 **Count gate-confirmed, not inline: `ingest/derive-counts.py` ran in this environment after four passes of refusal (`T76`), returning `derived=54 claimed=54`.** All components byte-read on `2026-11-15`.
@@ -129,6 +131,194 @@ decision instead of a constraint:
   and it is the one argument that still favours `ltijs` on a long engagement.
 
 ---
+
+## P58 — The assembled open proctoring stack, with the Annex III boundary drawn BEFORE the first line of code (EMEA anchor, APAC port, and the first recipe here whose main deliverable is a documented REFUSAL to build three features)
+
+🟢 **Why this recipe exists now and could not exist at `p815`.** `p815` measured the proctoring
+layer at `12` repositories and concluded *"build, or decline"*. `T83` re-measured it at `101` and
+`63` on two different queries and found **six permissive components and no permissive product**.
+🔵 **That is precisely the shape an assembly engagement is for: the client is not buying code that
+exists, they are buying the integration, the evidence trail and the regulatory boundary.**
+
+### The components — every grant byte-read at `p824`
+
+| Component | Repo | Licence | What it contributes |
+|---|---|---|---|
+| Browser exam environment | [`amaanwarsi/Proctora`](https://github.com/amaanwarsi/Proctora) | 🟢 MIT (`1,055 B`, `sha256:26e0d192…`) | Flask + OpenCV + **MediaPipe** fullscreen browser session. MediaPipe matters: the gaze and pose primitives are Apache-2.0 upstream, so the stack stays build-safe to the bottom |
+| Evidence layer | [`ENGABHAY/AI-Smart-Proctoring-System`](https://github.com/ENGABHAY/AI-Smart-Proctoring-System) | 🟢 MIT (`1,075 B`, `sha256:4e2a4004…`) | YOLO prohibited-object detection with **evidence logging and integrity reports** — the only open implementation of the evidence side in the layer |
+| Lockdown | `SEB` `seb-win-refactoring` (already shelved, `p815`) | 🟡 MPL-2.0 (Windows only; macOS/iOS payload absent) | Kiosk/lockdown browser from ETH Zürich 🇨🇭. Not an AI proctor and must not be sold as one |
+| Physical-device check | [`epoko77-ai/examguard`](https://github.com/epoko77-ai/examguard) | 🟢 MIT (`1,078 B`, `sha256:963f8f22…`) | BLE and advertising-packet screening for smart glasses in a physical hall, plus a device catalogue. **The APAC port's anchor** |
+| Appeal package | `P37` (this file) | — | The adjudication artefact. A detection without an appeal-survivable record is a liability, not a control |
+| Deployment registry | `P14` (this file) | — | The Article 49/registry obligation, already built in this base |
+
+### The three features this recipe REFUSES to build, and why that is the deliverable
+
+🔴 **1. Emotion or affect recognition. Banned.** The EU AI Act's prohibition on emotion recognition
+in education has applied since `2025-02-02` — not postponed, not risk-managed, prohibited.
+🔴 **2. Biometric categorisation of candidates.** Same prohibition family; and it adds a GDPR
+Article 9 special-category processing problem that no proctoring business case survives.
+🔴 **3. Automated sanction.** The decision stays with a human examiner. 🔵 **`T68` already records
+that Brazil's parecer prohibits detector-only sanction outright; the EMEA and LATAM rules converge
+here, so one product posture serves both.**
+
+🟢 **Write these three refusals into the SOW as scope exclusions on day one.** They are the cheapest
+differentiator available: every proprietary incumbent in this category sells at least one of them.
+
+### How it wires together
+
+1. **Lockdown** (`SEB`, Windows) or plain fullscreen (`Proctora`) establishes the session.
+2. **`Proctora`'s** MediaPipe pipeline emits *behavioural events* — gaze off-screen, second face in
+   frame, window blur. 🔴 **Events, never scores, and never an affect label.**
+3. **`ENGABHAY`'s** YOLO pass emits *object events* — phone, second screen, paper — each with the
+   frame reference that will become the evidence.
+4. Both streams land in the **`P37` evidence store**: timestamped, hash-chained, candidate-visible.
+5. 🔴 **No automated verdict.** A human examiner opens the `P37` package and decides.
+6. The deployment is registered in the **`P14` registry** with its Annex III classification, its
+   conformity artefacts and its retention period.
+7. **APAC port:** add `examguard` as a pre-session physical check of the hall. 🟢 **It watches the
+   room and the devices and never the candidate — the one proctoring shape the Article 5 ban
+   cannot reach, and the shape a 🇰🇷 or 🇻🇳 invigilated-hall client actually needs.**
+
+### Why it survives review
+
+🟢 **Annex III**: the deployment is classified, registered and human-decided, so the conformity
+question is answerable rather than argued. 🟢 **Article 5**: the three banned feature families are
+absent by design and documented as absent. 🟢 **Article 14**: the human examiner is the decision
+point, not a reviewer of an automated decision. 🔵 **🇻🇳 Vietnam**: the same architecture answers a
+law in force since `2026-03-01` that names automated assessment as high-risk — and per `T84` there
+is no in-country permissive base, so this is the import.
+
+### Estimate
+
+`10`–`14` weeks. Session + lockdown `2`; event pipelines `3`; `P37` evidence store `3`; `P14`
+registry `1`; conformity documentation and the refusal memo `2`; APAC physical-check port `+2`.
+
+### Three disqualifiers — check these first
+
+1. 🔴 **The client wants a score, a flag or an automatic fail.** Decline, or re-scope to `P37` alone.
+2. 🔴 **The exam is in a jurisdiction that mandates a specific accredited proctoring vendor.** Several
+   professional-certification regimes do; the assembly cannot be accredited retrospectively.
+3. 🔴 **The client expects an incumbent's detection accuracy.** The permissive ceiling in this layer is
+   `6★` of single-developer code (`T83`). This is an engineering build, and the honest pitch is the
+   evidence trail and the boundary, not the model.
+
+## P59 — The registry-first discovery protocol: find a market's real agent supply by enumerating the systems of record, not the pedagogy (LATAM anchor, portable to every institution-owned market)
+
+🟢 **Why this is a recipe and not a note.** `T82` measured `4` results for Spanish and Portuguese
+pedagogical vocabulary against `709` for one registry name, on the same channel on the same day.
+🔵 **A studio starting a LATAM engagement with the obvious queries will conclude the market is
+empty, and will be wrong by two orders of magnitude.** This is the protocol that stops that, and
+its deliverable is a sourcing artefact the engagement keeps.
+
+### Step 1 — Enumerate the registries, not the concepts
+
+For the target country, list the systems an institution actually logs into. For 🇧🇷 Brazil that is
+**SIGAA** (federal universities), **Moodle**, **CAPES Periódicos** (national journal licence),
+**SciELO**, **Lattes**, **BDTD**; for 🇦🇷 Argentina **SIU Guaraní** and Moodle; and so on.
+🟢 **Every one of these is already named on this base's shelves** — `agents/top.md` carries
+`periodicos-capes-mcp`, `pesquisador-br-skill`, `sigaa-agente`, `Sigaa-UFRPE-MCP`, `utn-mcp`,
+`UniMCP`, `ufsc-moodle-mcp`, and `p824` added `ufc-mcp`, `2026-2-Followw` and `sigaa-faltas`.
+
+### Step 2 — Query the registry name on the recency channel, with no star floor
+
+```
+gh api -X GET search/repositories -f q='sigaa' -f sort=updated -f order=desc
+gh api -X GET search/repositories -f q='moodle agente' -f sort=updated -f order=desc
+```
+
+🔴 **No star floor.** `T70`/`T82`'s rows sit at `0`–`15★` and a floor of `10` removes most of them.
+🟢 **`sort=updated`** is what surfaces the live ones: four of `p824`'s LATAM rows were pushed inside
+`48` hours.
+
+### Step 3 — Classify each hit by WHO it is pinned to
+
+🔵 **This tier is single-host by construction** (`T77`): the institution's hostname is in the code.
+Sort hits into **(a)** one-campus adapters, **(b)** national-system agents — CAPES, SciELO, KCI —
+which have one buyer and hundreds of institutions, and **(c)** university-course orgs such as
+`unb-mds`, which ship a **new cohort every semester**. 🟢 **(c) changes the staleness arithmetic for
+the whole tier and is the channel most worth subscribing to.**
+
+### Step 4 — Byte-read before shelving anything
+
+Run `P52`'s payload gate and `P57`'s two-asset gate as extended by `T81`. 🔴 **On `p824`'s LATAM
+sweep the pedagogical-vocabulary hits were `4`-for-`4` unlicensed; the registry-name hits were
+mostly MIT. The grant distribution differs by CHANNEL, so neither channel's licence profile may be
+assumed from the other.**
+
+### Step 5 — Ship the enumeration as a deliverable
+
+🟢 **The registry list, the queries, the dated counts and the classified hits are a market map the
+client can re-run.** It is the cheapest credible first artefact of a LATAM engagement and it dates
+itself, which is what makes it re-runnable.
+
+### Where it ports
+
+🔵 **Any market where the INSTITUTION rather than a vendor owns the system of record.** `T31`
+already found EMEA's supply attached to ministry and *Länder* portals; `p824` added 🇩🇪
+`ferien-mcp` (school holidays per *Land*) and 🇵🇭 `ph-data-mcp-server` (national scholarships and
+schools) through exactly this shape. 🔴 **It does NOT port to North America, where the registries
+are vendor-owned and closed: `p824` measured `q="powerschool clever district mcp"` → `0`,
+`q="infinite campus schoology skyward"` → `0`. There the equivalent protocol enumerates STANDARDS
+bodies — Ed-Fi, OneRoster, Caliper, 1EdTech — and that is `P19`.**
+
+### Estimate
+
+`1`–`2` weeks as a standalone market map; `3`–`5` days when folded into the discovery phase of a
+larger engagement.
+
+## P60 — The teacher-approval publication gate: Article 14 human oversight shipped as a product default (Global, with a named reference implementation)
+
+🟢 **Why it is separate from `P56`.** `P56` makes a WRITE auditable after the fact — commit,
+invalidate, re-read, diff. 🔵 **`P60` is the control BEFORE the write: nothing an agent generates
+reaches a learner until a named human approves it.** The two compose; neither replaces the other.
+
+### The reference implementation, byte-read at `p824`
+
+🟢 **[`balejosg/tiza`](https://github.com/balejosg/tiza)** — MIT (`1,064 B`, `sha256:7a3a02ea…`),
+pushed `2026-11-15`. A Spanish-language CLI and agent skill that drives Claude Code, Codex,
+opencode or GitHub Copilot to prepare Moodle pages, labels, assignments, auto-marking quizzes and
+**H5P** activities. 🟢 **Its stated contract is the pattern:** *"el agente prepara… tú los revisas
+y decides qué llega a tu alumnado"* — the agent drafts, the **teacher** approves, and only then is
+anything published. 🟢 **It also ships its own boundary notice: independent, unofficial, "use it
+respecting your centre's rules."**
+
+### The gate, generalised
+
+1. **Draft into a staging namespace**, never into the live course. In Moodle that is a hidden
+   section; in Canvas an unpublished module; in any LMS, content whose visibility flag is `false`.
+2. **Render a diff a teacher can read** — not JSON. What will appear, where, to whom, and when.
+3. **Require a named approval**, recorded with the approver's institutional identity (`P9`'s
+   learner-record spine already carries the identity layer; `p817`'s Apereo CAS row is the EMEA
+   instance).
+4. **Publish only on approval**, then run `P56`'s verified write — commit, cache-invalidate,
+   re-read, diff — so the approved artefact is proven to be the published one.
+5. **Log the pair**: what was approved and what was published, hash-linked. 🔵 **That pair is the
+   whole evidentiary content of "a human was in the loop".**
+
+### Why it survives review
+
+🟢 **EU AI Act Article 14** asks for human oversight that is *effective*, which means the human
+must be able to understand and to refuse. A readable diff plus a blocking approval is the minimum
+implementation of both; an "AI suggestion" banner is not. 🟢 **Article 50 transparency** (applying
+from `2026-08-02`) is satisfied at the same point: the approval record names the generated
+artefact, so marking it is a lookup rather than a classification problem (`P17`, and the
+`aiact-50-2-*` instruments already in `compose/code/`). 🔵 **🇧🇷 Brazil**: `T68` records that AI
+pre-correction is admitted only as a *preparatory* step — which is this gate, stated by a
+regulator.
+
+### Estimate
+
+`3`–`5` weeks on an LMS this base already holds a connector for (`P3`, `P55`); `2` weeks if the
+client is adopting `tiza` and the work is hardening plus the approval log.
+
+### Three disqualifiers — check these first
+
+1. 🔴 **The client's goal is throughput — "the agent publishes, the teacher spot-checks".** That is
+   the inverse of this gate and it fails Article 14. Say so before the SOW.
+2. 🔴 **No institutional identity to bind the approval to.** An unauthenticated approval is not a
+   human-oversight record. Solve identity first (`p817`).
+3. 🔴 **The LMS has no staging state.** Some hosted configurations publish on write; without a
+   hidden/unpublished state the gate has nowhere to stand.
 
 ## P55 — The multi-tenant campus LMS connector: turn `20`+ unfunded per-campus adapters into one supported product (Global, with named reference implementations in four regions)
 

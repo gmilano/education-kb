@@ -28,7 +28,27 @@ synchronised within `48` hours, each carrying `650`–`680` stars and a Dropbox 
 🟢 **Nothing on this shelf is affected — every row here was byte-read — but a star-ranked refresh of
 this file without the `P52` payload gate would not be safe.**
 
-## Foundational repos — 134 rows
+## Foundational repos — 136 rows
+
+🟢 **Twenty-ninth pass (`p824`, 2026-11-15): `2` rows added (`134` → `136`), both into the
+curriculum-corpus layer, and they are the layer's first two rows since `p806`.** 🔵 **The layer
+existed to hold an AI-literacy gap open; `p824` partly fills it and measures the rest.**
+🔴 **The AI-literacy supply, measured first-hand this pass:** `q="ai literacy curriculum"` → **`51`**
+repositories, star ceiling **`55★`** (the BSD-3 row below); `q="ai literacy teacher training"` →
+**`1`**, and it is a 2022 Maltese robotics grant page; `q="unesco ai competency framework"` → **`3`**,
+of which one is licensed. 🔴 **`q="alfabetizacion inteligencia artificial educacion"` → `0`
+and `q="ki kompetenz schule"` → `1`** — so the duty that binds every school in the EU under
+**Article 4 since `2025-02-02`** has, in its two largest classroom languages, one licensed artefact
+between them ([`malkreide/critical-ai-literacy-skill`](https://github.com/malkreide/critical-ai-literacy-skill),
+MIT, shelved in `agents/top.md`). 🔵 **The honest statement for an EMEA engagement: the AI-literacy
+obligation is live, the open supply under it is English-language and higher-education-shaped, and
+the translation-and-localisation slot is open in every other language.**
+
+🟡 **And the layer's licence profile is now the file's clearest case of `T81`.** Of the `51`
+AI-literacy repositories, the modal licence is **NONE**, the next is **CC BY 4.0** — a CONTENT
+licence on a CONTENT asset, which is correct — and the one row that states both grants properly
+([`bster/ai-future`](https://github.com/bster/ai-future), MIT code + CC BY 4.0 content in one file)
+is reported by GitHub as unlicensed for doing so.
 
 🔴 **Twenty-sixth pass (`p821`, 2026-11-15): `0` foundation rows added, and `132` is CARRIED, not
 re-confirmed.** `make hooks` was refused by the sandbox classifier for a **FOURTH** consecutive
@@ -842,6 +862,8 @@ were read from the rendered repository page on `2026-11-13`.
 
 | Repo | License | Stars | What it is, and what it is not |
 |---|---|---|---|
+| [`hanhuark/machine-learning-for-engineers`](https://github.com/hanhuark/machine-learning-for-engineers) | 🟢 **BSD-3-Clause — byte-read** (`1,492 B`, `sha256:92d7c53c…`, holder `Han Hu`, 2024) | 55 | 🟢 **New this pass (`p824`) — the first curriculum in this layer built at COURSE scale and explicitly for ADOPTION BY OTHERS, and the only North American row `p824` produced.** The originating implementation is `MEEG 54403: Machine Learning for Mechanical Engineers` at the **University of Arkansas** 🇺🇸, and the repository ships an `INSTRUCTOR_QUICKSTART.md`, an `ADOPTION_GUIDE.md` and an `IMPLEMENTATIONS.md` that records confirmed adoptions elsewhere. 🟢 **What it IS: a project-based AI/ML and AI-literacy curriculum with Python as the reproducible pathway, an engineering-evidence checklist, a method selector, and a module on designing and auditing bounded AI-agent harnesses.** 🔵 **Its stated priorities are physical variables, units, baselines, independent evaluation and failure boundaries over algorithm novelty — which is the posture `P15`'s efficacy gate and `T47`'s regulators both ask for.** 🔴 **What it is NOT: K-12, and not a drop-in for a national AI-literacy duty.** It is upper-level undergraduate and graduate engineering, and MATLAB paths remain where supplied though new development assumes no proprietary software. `88 MB`, pushed `2026-10-18` |
+| [`OpenRaiser/EduGraph`](https://github.com/OpenRaiser/EduGraph) | 🔴 **SPLIT — `LICENSE` is Apache-2.0 (byte-read `11,357 B`, `sha256:58d1e17f…`) and `LICENSE-DATA` is CC BY-SA 4.0. GitHub's licence field reports ONLY the Apache one** | 1 | 🟢 **New this pass (`p824`) — the layer's first KNOWLEDGE GRAPH rather than a course, and the anchor of `T81`'s two-file split.** *"面向教育 Agent 的开放知识图谱与数据基础设施"* — an open knowledge graph and data infrastructure for education agents, connecting curriculum standards, knowledge points, **prerequisite relations**, textbooks, explanations and exercises under shared `Concept` identifiers. **`7,062` concepts across `18` subjects**, data `v0.26.0` public preview, `172 MB`. 🟢 **What it IS: the join this base has wanted since `P9` — curriculum requirement ↔ prerequisite ↔ teaching resource ↔ practice item, traversable in one retrieval, which is what a teaching agent needs to answer "what must the learner already know".** 🔴 **What it is NOT: build-safe on the asset that matters.** The CODE is Apache-2.0; the GRAPH is **CC BY-SA 4.0 share-alike**, and the graph is the product — so a derived curriculum map ships back under CC BY-SA. 🔵 **Shelved for the architecture and the schema, flagged for the data grant: run `P57`'s extended gate before any client derivation.** Pushed `2026-11-15` |
 | [`Emerging-Rule/community`](https://github.com/Emerging-Rule/community) | 🟡 **CC BY 4.0 — README and badge only; the GitHub sidebar shows no licence field at all** | 3 | *"Open knowledge base for K-12 educators, researchers, and builders."* 🟢 **The first *education* AI-literacy curriculum this base has found, as opposed to developer curriculum — and the row that narrows `T19`.** Bilingual **English / Spanish**, grades K-2 through 9-12, across Math, ELA, Science, SEL/Digital Citizenship and CS/AI Literacy. Folders: `lessons`, `skill-taxonomy`, `research`, `showcases`, plus `lesson-template.md` and `CONTRIBUTING.md`; `20` commits on `main`. 🟢 **CC BY 4.0 is attribution-only — no share-alike** — so unlike `GarethManning/education-agent-skills` (CC BY-SA 4.0, rejected at `p802` as contaminating) **its lessons can be cut down and shipped inside a client deliverable.** 🔴 **Three caveats travel with this row: the licence has README-grade provenance only; the badge claims `13` lessons while the README table lists `6`; and three of the showcase packs are marked draft and not yet piloted.** At `3★` / `1` fork this is a seed, not a corpus. |
 | [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | MIT | 78.6k | "Learn AI Engineering! Learn it. Build it. Ship it for others." Model foundations → LLM systems → agent development, plus a retrieval-evaluation lab. `14.0k` forks, `2,703` commits. 🔴 **Not an education product, not a tutoring base, and not undergraduate-level.** Its value is that **MIT permits redistribution and modification of the content itself**, so it can be cut down and re-sequenced into a client's AI-literacy module without a licence negotiation. Largest permissive education-adjacent artifact in this base |
 | [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | MIT | 41.8k | "In-depth tutorials on LLMs, RAGs and real-world AI agent applications." README states **"93+ Production-Ready Projects"**, graded **`22` Beginner / `48` Intermediate / `23` Advanced**. `6.7k` forks. 🟢 **The difficulty grading is the reusable asset** — it is the only thing in either corpus that maps directly onto a curriculum sequence with prerequisites. 🔴 Same caveat: developer-level, project-based, no learner model, no LMS surface |

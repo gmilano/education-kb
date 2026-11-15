@@ -7,7 +7,7 @@ updated: 2026-11-15
 # Education vertical platforms — real systems to customize AI on top of
 
 
-## Education vertical platforms — 116 rows
+## Education vertical platforms — 120 rows
 
 🟢 **Twenty-sixth pass (`p821`, 2026-11-15): `1` row added — `111` → `112`.** 🔴 **NOT gate-confirmed:
 `make hooks` was refused by the sandbox classifier for a **FOURTH** consecutive pass, so the figure
@@ -85,6 +85,56 @@ implemented with uncounted-table detection. Gate output:
 claimed `70` — the pre-insertion figure — and the gate rejected it: *"RED heading claims 70, the
 file holds 81."* 🟢 **That is precisely the drift `compose/patterns.md` has had to confess four
 times in prose. It is now caught by a program instead of by the next pass's reader.**
+
+## 🟢 Twenty-ninth pass (`p824`, 2026-11-15) — `4` new rows, and they END this file's standing claim that the education platform tier is copyleft
+
+🟢 **`4` platform rows added (`116` → `120`) — the first non-nil on this file in two passes, and
+gate-confirmed: `python3 ingest/derive-counts.py` returns GREEN.**
+
+🔴 **The mandated vertical leg nilled for a `37`th consecutive time.** Run in full
+(`open source platform education ERP CRM MIT Apache student information system`): it returned
+`OpenEduCat` (LGPL, built on Odoo) and `eduTrac SIS` (GPL-3.0) and nothing else — both already on
+this page, both copyleft, and the search summary itself concluded *"the results didn't cover MIT-
+or Apache-licensed education ERP or CRM options."* 🟢 **That conclusion is FALSE, and this pass
+disproves it from the index rather than from an opinion.**
+
+### 🟢 The finding (`T85`): the permissive platform tier EXISTS — it is simply not where the star mass is
+
+🟢 **One query, run at `sort=stars` with a `pushed:>2026-09-01` recency floor and no star floor:**
+
+| Query | Total | What the top of the list is | What is underneath it |
+|---|---|---|---|
+| `school management system pushed:>2026-09-01` | **`4,840`** | 🔴 `frappe/education` `711★` `NOASSERTION`, `rosariosis` `654★` GPL-2.0, `Django-School-Management` `599★` NONE, `openSIS-Classic` `351★` NONE | 🟢 **`skuul` `481★` MIT — fourth by stars, first by grant** |
+| `student information system pushed:>2026-06-01` | **`4,137`** | 🔴 `rosariosis` GPL-2.0, `openSIS-Classic` NONE | 🟢 **`etsis` `46★` MIT, `SIMS` `29★` Apache-2.0** |
+| `open source learning management system pushed:>2026-09-01` | `37` | 🔴 `frappe/lms` `3,423★` AGPL-3.0, `tadreeblms` `35★` AGPL-3.0 | 🟢 **`tutors-mono-repo` `5★` MIT** |
+
+🔵 **The copyleft reading was a STAR-RANK artefact.** Every incumbent this file has named since
+`p805` is copyleft or unlicensed and sits in the top four of its query; the permissive tier sits
+immediately below it, is actively maintained — three of the four rows below were pushed on the day
+of this pass — and had never been read because no leg ever looked past the ceiling.
+
+🟢 **And `T59`'s vintage rule GENERALISES beyond the library tier where it was published.** `T59`
+found research-library platforms splitting `1999–2007` GPL / `2013-onward` permissive. The four
+rows below were created `2015`, `2020`, `2021` and `2026` — **all post-2013, all permissive** —
+while the copyleft incumbents above them were created `2013` (`rosariosis`), `2018`
+(`openSIS-Classic`), `2019` (`Django-School-Management`) and `2021–2022` (`frappe/*`, AGPL by house
+policy rather than by vintage). 🔵 **So the rule is: outside a vendor with a house licence policy,
+an education platform's grant is predicted better by its birth year than by its category.**
+
+| Platform | Repo | Licence | Stars | What it is |
+|---|---|---|---|---|
+| skuul | https://github.com/yungifez/skuul | 🟢 **MIT — byte-read** (`1,068 B`, `sha256:91e9aaa8…`, holder `Ebuka Ifezue`, 2022) | 481 | 🟢 **New this pass (`p824`) — the highest-starred PERMISSIVE education platform in this file, and the row that ends the copyleft claim.** *"A multi school management system"* — multi-tenant by design, Laravel, `20 MB`, created `2021-11-03`, pushed `2026-11-15`. 🔵 **Multi-tenancy is the property that matters commercially: `P55`'s multi-tenant campus connector needs a host that already models "many schools, one deployment", and every copyleft incumbent above it models one institution per install.** 🔵 **It is also the first African-authored platform on this page.** 🔴 **What it is NOT: a standards client** — no OneRoster, no LTI, no Ed-Fi surface found; integration work is a build, not a configuration |
+| etSIS | https://github.com/nomadicjosh/etsis | 🟢 **MIT — byte-read** (`LICENSE.md`, `1,113 B`, `sha256:8d66d7d7…`, holder `Joshua Parker`, 2022) | 46 | 🟢 **New this pass (`p824`) — the only permissively licensed HIGHER-EDUCATION SIS this base has found in twenty-nine passes.** Self-described as *"the most advanced open source student information system for higher education"*; `37 MB`, created `2015-08-01`, pushed `2026-11-15`. 🔵 **Eleven years of continuous development is the signal, not the `46★`: this file's higher-ed SIS tier has been `RosarioSIS` (GPL-2.0, K-12-shaped) and `openSIS` (no licence) for twenty-nine passes, and `P8` had to be scoped around both.** 🟢 **`P8` now has a permissive host for the first time** 🔴 PHP; verify the upgrade path before quoting a migration |
+| SIMS (Student Information Management System) | https://github.com/bcgov/SIMS | 🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:58d1e17f…`, stock text) | 29 | 🟢 **New this pass (`p824`) — a GOVERNMENT-OPERATED platform under a patent-granting licence, and the only North American platform row `p824` produced.** Post-secondary **student financial aid** for the Government of British Columbia 🇨🇦, `54 MB`, pushed `2026-11-13`. 🔵 **Fourth instance of the `p810` Ed-Fi / `p818` Riksarkivet pattern — the body that OPERATES the record ships the code — and the first one in North America that is an operational system rather than a standard.** 🔵 **Financial aid is a tier no other row in this file covers, and it is the one education workflow where an agent's error is a money error: treat it as `P14`-registry work with a human decision gate, never as an advisory chatbot** |
+| Tutors | https://github.com/tutors-sdk/tutors-mono-repo | 🟢 **MIT — byte-read** (`1,082 B`, `sha256:f4cbe9e7…`, holder `Tutors Open Source Project`, 2022) | 5 | 🟢 **New this pass (`p824`) — the newest-generation LMS on this page and the only one built as a COURSE READER rather than as an administrative system.** Svelte 5 + SvelteKit + TypeScript, `19 MB`, created `2026-07-27`, pushed `2026-11-15`. 🔵 **The course-reader shape is the one an agent composes with most cheaply: content is addressable markdown rather than rows behind an institutional login, which is the whole constraint `T77` found on the Moodle/Canvas tier.** 🔴 `5★` and four months old — a technology bet, not an incumbent replacement |
+
+🔴 **Named and NOT shelved, with the reason.** [`frappe/education`](https://github.com/frappe/education)
+(`711★`) and [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) (`57★`) both report
+`NOASSERTION`; per `T52` that means the matcher failed and the bytes must decide, and per `T81` the
+bytes can say three different things. Neither was byte-read this pass and neither is shelved on the
+field alone. 🔴 [`TareqMonwer/Django-School-Management`](https://github.com/TareqMonwer/Django-School-Management)
+(`599★`) and [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (`351★`) carry no
+licence field at all — `openSIS` is already recorded on this page as the unlicensed incumbent.
 
 ## 🔴 Twenty-eighth pass (`p823`, 2026-11-15) — `0` new platform rows, and the measurement that explains why: the integration population targets CLOSED systems
 

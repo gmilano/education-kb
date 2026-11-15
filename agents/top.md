@@ -6,6 +6,155 @@ updated: 2026-11-15
 
 # Education AI Agents — curated, license-verified
 
+## 🟢 Twenty-ninth pass (`p824`, 2026-11-15) — the licence FIELD is wrong in BOTH directions, and the proctoring nil was never a nil
+
+🟢 **`227` build-safe agents on this shelf — `208` carried, `19` added by `p824`.** 🟢 **Gate-confirmed:**
+`python3 ingest/derive-counts.py` ran in this environment and returns GREEN on all five shelves,
+for a second consecutive pass.
+
+🔴 **The scheduler's mandated star-ranked WebSearch battery nilled for a `39`th consecutive pass.**
+Run in full — global legs (`top open source AI agents education 2026 github MIT`,
+`github trending education AI 2026`,
+`open source platform education ERP CRM MIT Apache student information system`,
+`AI education industry trends 2026`) and all four regional legs. 🔵 **The global agent leg returned
+no education-specific list at all** — it surfaced `OpenHands`, `browser-use`, `AutoGPT`, `LangChain`,
+`Langflow`, i.e. the general agent shelf, and one aggregator page that names no repositories.
+🔵 **The trending leg returned `DeepTutor`, `Claw-ED`, `interactive-learning`, `ChinaTextbook` and
+`microsoft/ai-agents-for-beginners` — all five already held.** 🔵 **The ERP leg returned `OpenEduCat`
+(LGPL) and `eduTrac SIS` (GPL-3.0), both already on `verticals/solutions.md` and both copyleft, which
+is the answer this base has recorded for the platform tier since `p805`.** 🟢 **Recorded as coverage
+confirmation. The market legs DID produce — see `intel/market.md`, where every regional subsection
+gained a dated `p824` block.**
+
+🟢 **What produced rows was, for a fourth pass running, `search/repositories` with `sort=updated` and
+NO star floor — pointed this pass at two layers this base had written off, and at one it had never
+queried in the right language.**
+
+### 🟢 The finding (`T81`): the repository licence FIELD and the licence BYTES diverge in three named ways, and the field errs in BOTH directions
+
+🔴 **`20` repositories byte-read this pass; `4` diverge from the field GitHub reports — `20%`.** And
+the divergence is not noise, it has three mechanical causes, each one measured:
+
+| Form | Repository | Field says | Bytes say | Why the matcher failed |
+|---|---|---|---|---|
+| **Truncated** | `determinate/octoeye` | `NOASSERTION` | AGPL-3.0 title + preamble, **`2,567 B`** against a stock `34,522 B` | 🔴 The file stops before the operative terms. It NAMES a licence and GRANTS nothing |
+| **Dual-headed** | `bster/ai-future` | `NOASSERTION` | 🟢 `MIT License (Code)` **and** `Creative Commons Attribution 4.0 International (Content)` in ONE file, each with its directories named | Two grants, one file — no single stock text to match |
+| **Carved-out** | `FabianJun/PresentTogether` | `NOASSERTION` | 🟢 Stock MIT **plus** *"Third-party material is excluded from this grant"* and *"Software permissions do not override academic rules or rights to institutional content"* | Stock text + appended boundary ⇒ hash miss |
+| **Two-file split** | `OpenRaiser/EduGraph` | 🟢 `Apache-2.0` | Apache-2.0 in `LICENSE`, 🔴 **CC BY-SA 4.0 in `LICENSE-DATA`** — and the DATA (`7,062` concepts, `18` subjects) IS the product | The field reports the file called `LICENSE`, which here governs the smaller asset |
+
+🔴 **So the field is wrong in both directions at once.** It **under-reports** safety on `ai-future` and
+`PresentTogether` — two repositories whose grants are the clearest in this pass, written out in prose
+with the governed directories named, and both show as unlicensed. It **over-reports** safety on
+`EduGraph` — `Apache-2.0`, build-safe by the field, share-alike on the asset a studio would actually
+ship. 🔵 **A stars-plus-licence-field ingest therefore rejects the best-documented repositories and
+admits the share-alike one, in the same sweep.** 🟢 **This sharpens `T52` (`NOASSERTION` means the
+matcher failed) with the three reasons it fails, and `T78` (the split licence) with the finding that
+the split has a PHYSICAL FORM which determines what the field reports.** 🔵 **`P57`'s gate is extended
+in `compose/patterns.md` to probe `LICENSE-DATA`, `LICENSE-CONTENT` and `*_NOTICES.md` before the code
+grant decides anything.**
+
+### 🟢 The second finding (`T83`): `p815`'s proctoring nil was a VOCABULARY artefact — the layer is a `~100`-repository population
+
+🔴 **`p815` published: *"an EMEA client facing an Annex III conformity question has no adoptable
+AI-proctoring base in any licence. Build, or decline."*** 🟢 **That is now measured as FALSE on the
+supply axis and TRUE on the maturity axis, and the two must be stated separately:**
+
+| Query | Total | Star ceiling | Licence of the ceiling |
+|---|---|---|---|
+| `proctoring exam open source` (`p815`'s query, re-run) | `12` | `4★` | `NOASSERTION` |
+| 🟢 `remote proctoring ai` | **`101`** | `17★` | 🔴 NONE |
+| 🟢 `exam integrity ai detection` | **`63`** | **`88★`** (`braviaprime/proctorai`) | 🔴 **NONE — byte-probed, `NO_PAYLOAD` on `main`** |
+
+🔵 **`p815` asked the layer for the word "open source" and got `12`; asking it for what it DOES returns
+`101`.** 🟢 **Six permissive rows exist and five are shelved below** (`Proctora`, `examguard`,
+`AI-Smart-Proctoring-System`, `AI-Proctor-Exam-Monitor`, `AI-Driven-Remote-proctoring-System`).
+🔴 **Every one of them is a single-developer build at `≤6★`, and the layer's star mass — `88★`, `17★` —
+carries no licence payload at all.** 🔵 **So the honest sentence is not "build or decline", it is
+"ASSEMBLE": the components exist permissively, the product does not, and `P58` is that assembly with
+the Annex III boundary drawn first.**
+
+### 🔴 The third finding (`T84`): Vietnam has the world's newest binding high-risk rule for educational AI, and a measured permissive-supply ZERO underneath it
+
+🔴 **Vietnam's AI law took effect `2026-03-01` and its high-risk category names education, including
+automated assessment; MOET has scheduled AI content into every grade `1`–`12`** (`SECONDARY` —
+web-search summary, see `intel/market.md`; `oecd.org` was refused at this session's proxy, so no
+multilateral source could be read first-hand). 🔴 **Supply underneath it, measured first-hand:**
+`q="giao duc viet nam ai"` → `7` repositories, **every one unlicensed**, ceiling `4★`;
+`q="vietnam education platform"` → `5`, **every one unlicensed**, ceiling `1★`. 🔴 **The ONLY licensed
+Vietnamese education artefact this pass found is
+[`NukeGeng/VietAIS-Sentinel`](https://github.com/NukeGeng/VietAIS-Sentinel) — and it is AGPL-3.0**
+(byte-read, `34,522 B`, stock text), i.e. it lands in the copyleft table below, not on this shelf.
+🔵 **A jurisdiction that regulates automated assessment as high-risk, with exactly zero build-safe
+open supply in its own language. That is the sharpest BUILD slot `p824` found, and it is in APAC.**
+
+### 🟢 The fourth finding (`T82`): LATAM's supply is indexed under the SYSTEM NAME, not the pedagogy — `4` against `709` on this pass's own queries
+
+🔴 **Pedagogical vocabulary, run in Spanish and Portuguese:** `q="agente educativo inteligencia
+artificial"` → **`4`**, *all four unlicensed*, ceiling `0★`; `q="professor agente ia educacao"` →
+**`0`**; `q="mcp universidad estudiantes"` → **`0`**; `q="escuela mcp agente"` → **`0`**.
+🟢 **The same region, queried by the name of the system of record:** `q="sigaa"` → **`709`**, with
+build-safe rows pushed inside `48` hours — [`unb-mds/2026-2-Followw`](https://github.com/unb-mds/2026-2-Followw)
+(MIT, `9★`), [`kalebhenrique/sarue-unb`](https://github.com/kalebhenrique/sarue-unb) (Apache-2.0, `15★`),
+[`vintatri/ufc-mcp`](https://github.com/vintatri/ufc-mcp) (MIT), [`erickmsms/sigaa-faltas`](https://github.com/erickmsms/sigaa-faltas) (MIT);
+`q="moodle agente"` → **`20`**, including [`balejosg/tiza`](https://github.com/balejosg/tiza) (MIT) and
+[`nialvape/utn-mcp`](https://github.com/nialvape/utn-mcp) (ISC, `12★`).
+🔵 **`177:1` between the two framings of the same region.** 🟢 **The transferable rule, and it is now a
+sourcing instrument rather than an observation: in LATAM the agent is named after the REGISTRY it
+reads — SIGAA, SIU Guaraní, Moodle, CAPES, SciELO — never after the teaching it supports. `P59` turns
+this into a runnable discovery protocol for an engagement.**
+
+### The rows — `19` added this pass, all `19` build-safe, `0` copyleft
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| examguard | https://github.com/epoko77-ai/examguard | 🟢 **MIT — byte-read** (`1,078 B`, `sha256:963f8f22…`, holder `ExamGuard contributors`, 2026) | 3 | APAC | 🟢 **New this pass (`p824`) — and a category no shelf in this base held: PHYSICAL invigilation, not biometric surveillance.** Smart-glasses screening for the Korean 수능 exam hall — BLE cues, composite advertising-packet filters, optical read from the proctor's desk, and a physical catalogue of known devices. 🔵 **It watches the ROOM and the DEVICES, never the candidate's face or affect — which is the one proctoring shape the EU AI Act's February 2025 emotion-recognition ban in education cannot touch.** 🟢 Created `2026-11-07`, pushed `2026-11-09`; `562 KB` of real payload |
+| AI-Smart-Proctoring-System | https://github.com/ENGABHAY/AI-Smart-Proctoring-System | 🟢 **MIT — byte-read** (`1,075 B`, `sha256:4e2a4004…`, holder `Abhay Rambhau Kadam`, 2026) | 1 | APAC | 🟢 **New this pass (`p824`) — the EVIDENCE half of `T83`, and the only permissive row in the layer that ships it.** YOLO + OpenCV suspicious-activity and prohibited-object detection with **evidence logging and integrity reports**, 🇮🇳 India. 🔵 **An integrity decision that cannot produce its evidence does not survive an appeal — `P37`'s whole argument — and this is the layer's only open implementation of the evidence side** 🔴 `1★`, pushed `2026-10-02`, `20 MB` |
+| Proctora | https://github.com/amaanwarsi/Proctora | 🟢 **MIT — byte-read** (`1,055 B`, `sha256:26e0d192…`, 2026) | 3 | Global | 🟢 **New this pass (`p824`) — the cleanest permissive SKELETON in `T83`'s layer.** Flask + OpenCV + MediaPipe, browser-based fullscreen exam environment. 🔵 **MediaPipe rather than a bespoke model is what makes it portable: the gaze and pose primitives are Apache-2.0 upstream, so the whole stack stays build-safe** 🔴 Pushed `2026-04-07` — seven months stale, and described by its own author as a demo |
+| AI-Proctor-Exam-Monitor | https://github.com/Gorav22/AI-Proctor-Exam-Monitor | 🟢 **MIT — byte-read** (`1,068 B`, `sha256:0532d9d7…`, holder `Gorav Jindal`, 2025) | 6 | Global | 🟢 **New this pass (`p824`) — the highest-starred PERMISSIVE row in `T83`'s layer, and `6★` is the whole point.** Computer-vision exam-integrity monitor, `39 MB`. 🔵 **The layer's star ceiling is `88★` and unlicensed; its permissive ceiling is this row at `6★`. That `14:1` gap IS the finding** 🔴 Pushed `2025-07-02` |
+| AI-Driven-Remote-proctoring-System | https://github.com/yuvaraj-06/AI-Driven-Remote-proctoring-System | 🟢 **Apache-2.0 — byte-read** (`11,356 B`, `sha256:43070e2d…`, stock text) | 3 | Global | 🟢 **New this pass (`p824`) — the only Apache-2.0 row in the proctoring layer, which matters because Apache's patent grant is the one a procurement lawyer asks about for a surveillance-adjacent deliverable.** `67 MB`. 🔴 **Pushed `2022-11-21` — four years stale; shelved for the GRANT and the architecture, not as a starting codebase** |
+| lesson2hw-physics | https://github.com/Laura-LLU/lesson2hw-physics | 🟢 **MIT — byte-read** (`1,080 B`, `sha256:69ee15c8…`, holder `LauraPhysics / Laura-LLU`, 2026) | 0 | APAC | 🟢 **New this pass (`p824`), and a fifth instance of `T70`: the skill binds to a CURRICULUM INSTRUMENT, not a subject.** Blackboard photo, slide deck, PDF or one sentence → homework against **CAIE `9702`/`0625`** physics. 🔵 **Naming the syllabus codes is what makes it sellable: `9702` is A-Level Physics and `0625` is IGCSE Physics, so the output is gradeable against a published mark scheme rather than against a model's taste** 🟢 Created `2026-11-14`, pushed `2026-11-15`; runs under Codex, Claude Code and WorkBuddy |
+| ph-data-mcp-server | https://github.com/CharlieJamesGwapo/ph-data-mcp-server | 🟢 **MIT — byte-read** (`1,075 B`, `sha256:bbc77148…`, holder `Charlie James Abejo`, 2026) | 0 | APAC | 🟢 **New this pass (`p824`) — the first 🇵🇭 Philippine national-data row in this base.** Scholarships, schools, regions, holidays, peso rates and weather behind one MCP server, **no API key**. 🔵 **The keyless property is the procurement property: the `p818` DergiPark finding restated in a second jurisdiction — an agent on a published, unauthenticated endpoint survives a review that a scraper does not** 🔴 `0★`, pushed `2026-11-09` |
+| V2 (DigiLab) | https://github.com/Asvix-04/V2 | 🟢 **MIT — byte-read** (`1,063 B`, `sha256:cab64cbe…`, holder `Digilab`, 2025) | 6 | Global | 🟢 **New this pass (`p824`) — the most complete build in `p824`'s AI-literacy sweep, at `76 MB`.** Academic RAG assistant for **Media and Information Literacy** with an explicit **Teacher Mode and Student Mode**, hybrid open LLMs + RAG + a **Neo4j knowledge graph**. 🔵 **Teacher mode answers in named sections — Methodology, Conceptual Understanding — which is the shape a lesson-planning buyer asks for and almost no tutor repo produces** 🔴 Pushed `2026-10-16` |
+| ferien-mcp | https://github.com/mohammad-abbasi-sh/ferien-mcp | 🟢 **MIT — byte-read** (`1,071 B`, `sha256:17a9ced1…`, holder `Mohammad Abbasi`, 2026) | 0 | EMEA | 🟢 **New this pass (`p824`).** German school holidays (*Schulferien*) by year and *Land* via `ferien-api.de` — is-it-a-holiday, next-holiday, read-only and unofficial. 🔵 **The smallest useful row on this shelf and a deliberate one: every scheduling, timetabling and parent-facing agent in `compose/patterns.md` needs a term calendar, and in 🇩🇪 Germany that calendar is `16` different *Länder* calendars** 🔴 `0★`, created and pushed `2026-11-14` |
+| critical-ai-literacy-skill | https://github.com/malkreide/critical-ai-literacy-skill | 🟢 **MIT — byte-read** (`1,068 B`, `sha256:65090998…`, holder `Hayal Oezkan`, 2026) | 0 | EMEA | 🟢 **New this pass (`p824`) — and it arrives with a LINEAGE PROOF rather than a claim.** 🔵 **Its licence `sha256` is byte-identical to [`malkreide/swiss-academic-libraries-mcp`](https://github.com/malkreide/swiss-academic-libraries-mcp), shelved at `p818` — the same `65090998…`, the same holder line. `T37`'s byte-hash de-duplication instrument resolving a same-author relationship across two repositories, which is the use it was built for.** German-language skill for critical theoretical analysis of AI systems, calibrated on Frankfurt School critical theory. 🔵 **Article 4 of the EU AI Act has obliged every organisation using AI — every school included — to ensure AI literacy since `2025-02-02`, and this is one of two German-language artefacts this pass could find under it** 🔴 `0★`, pushed `2026-02-20` |
+| ai-on-campus (PRISMA) | https://github.com/LucaTamSapienza/ai-on-campus | 🟢 **MIT — byte-read** (`1,064 B`, `sha256:9394f62b…`, holder `Luca Tam`, 2026) | 0 | EMEA | 🟢 **New this pass (`p824`) — the third CHALLENGE-ORIGIN row in this base and the second channel of its kind, after `T74`'s African Agentic AI Design Challenge.** *"Every exam question, tested from three sides before the exam"* — a multi-agent web app for university teachers, built in one day for **Reply's "AI on Campus"** 🇮🇹. 🔵 **Pre-publication question review is the formative counterpart to `T83`'s surveillance layer: it reduces the cheating opportunity instead of detecting the cheat** 🔴 **`0 KB` reported by the API on the day of creation — shelved for the grant and the design, with the payload explicitly NOT yet verified as non-empty** |
+| PresentTogether | https://github.com/FabianJun/PresentTogether | 🟢 **MIT — byte-read** (`1,340 B`, `sha256:fe728274…`, holder `FabianJun and the Singularity seminar contributors`, 2026) 🔴 field reports `NOASSERTION` — see `T81` | 0 | Global | 🟢 **New this pass (`p824`) — one of the two rows that prove the field errs AGAINST good practice.** Competence-enhancing guide and agent skill for co-designing interactive presentations. 🔵 **Its licence is `276 B` longer than stock MIT because it adds two boundaries this base has asked for repeatedly: third-party material excluded from the grant, and an explicit statement that software permissions do not override academic rules or institutional content rights (`docs/ACADEMIC_USE.md`).** 🔴 **Doing that correctly is what made GitHub report it as unlicensed** 🟢 Created and pushed `2026-11-15`, `57 MB` |
+| tiza | https://github.com/balejosg/tiza | 🟢 **MIT — byte-read** (`1,064 B`, `sha256:7a3a02ea…`, holder `balejosg`, 2026) | 1 | EMEA | 🟢 **New this pass (`p824`) — and the clearest HUMAN-OVERSIGHT write gate on any shelf in this base.** Spanish-language CLI and agent skill that publishes pages, labels, assignments, auto-marking quizzes and **H5P** activities into a Moodle *aula virtual* from Claude Code, Codex, opencode or GitHub Copilot. 🟢 **Its stated contract is the control: *"el agente prepara… tú los revisas y decides qué llega a tu alumnado"* — the agent drafts, the TEACHER approves before anything reaches a learner.** 🔵 **That is EU AI Act Article 14 human oversight shipped as a default rather than bolted on, and `P60` generalises it.** 🟢 **It also ships its own boundary notice — independent, unofficial, "use it respecting your centre's rules"** 🟢 Pushed `2026-11-15`, `7.8 MB` |
+| ufc-mcp | https://github.com/vintatri/ufc-mcp | 🟢 **MIT — byte-read** (`1,070 B`, `sha256:14b73fb8…`, holder `Equipe UFC-MCP`, 2026) | 0 | LATAM | 🟢 **New this pass (`p824`) — `T77`'s institution-integration population gaining a `15`th jurisdiction and 🇧🇷 Brazil's third campus.** Read-only MCP for Universidade Federal do Ceará students: SIGAA, Turma Virtual, the **RU** (university restaurant) menu, academic calendar and news. 🔵 **The RU menu is not a joke entry — it is the highest-frequency query a Brazilian undergraduate makes, and bundling it with the registry read is how this tier gets daily use rather than registration-week use** 🔴 `0★`, created and pushed `2026-11-13` |
+| 2026-2-Followw | https://github.com/unb-mds/2026-2-Followw | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:aec18ce5…`, holder `Followw UnB`, 2026) | 9 | LATAM | 🟢 **New this pass (`p824`) — the highest-starred LATAM row added this pass, and the first in this base published by a UNIVERSITY COURSE ORG.** *"Uma nova forma de usar o SIGAA UnB"* — Universidade de Brasília. 🔵 **The owner `unb-mds` is UnB's Métodos de Desenvolvimento de Software course, and the repository is named for its semester (`2026-2`). That is a renewable supply channel, not a lone maintainer: the same org ships a new cohort of SIGAA tooling every term, which changes the staleness arithmetic for this whole tier** 🟢 `9★`, pushed `2026-11-15` |
+| sigaa-faltas | https://github.com/erickmsms/sigaa-faltas | 🟢 **MIT — byte-read** (`1,065 B`, `sha256:a638443b…`, holder `erickmsms`, 2026) | 0 | LATAM | 🟢 **New this pass (`p824`).** *"Descubra quantas faltas você ainda pode ter em cada disciplina da UFPE (SIGAA), com o Claude"* — Universidade Federal de Pernambuco 🇧🇷, absence-allowance calculation against the `75%` attendance rule. 🔵 **One rule, computed correctly, from the registry of record. It is the smallest shape this tier takes and the one most likely to be right** 🔴 `0★`, pushed `2026-11-13` |
+| Neuro-CanvasLMS | https://github.com/BloodyReginaa/Neuro-CanvasLMS | 🟢 **MIT — byte-read** (`1,069 B`, `sha256:903078f6…`, 2026) | 0 | Global | 🟢 **New this pass (`p824`) — `T77`'s tier again, on the OTHER dominant LMS.** Canvas LMS MCP server for Claude and ChatGPT: deadlines, grades, lecture files, announcements, **read-only, deployed to the student's own frontend**. 🔵 **Canvas is the tier's second system after Moodle, and `19.5 MB` of payload with a declared read-only posture is the version of it a university's IT office can say yes to** 🔴 `0★`, pushed `2026-11-09` |
+| course-engine-skills | https://github.com/SolutionLabsIO/course-engine-skills | 🟢 **MIT — byte-read** (`1,105 B`, `sha256:95897ad9…`, holder `Laboratoires de Solutions Web Inc.`, 2026) | 0 | Global | 🟢 **New this pass (`p824`) — and the shape is the finding, not the size.** A `6 KB` MIT agent skill that drives a **commercial** course platform (`mcp.course-engine.com`) from Claude. 🔵 **`P10`'s thesis with a vendor on the other end: the SKILL is permissively licensed and the SERVICE is not, so a studio can read, fork and adapt the agent-facing half of a proprietary product without touching its licence. Expect more of this shape as SaaS vendors race to be agent-addressable** 🔴 `0★`, created and pushed `2026-11-09` |
+| ai-future | https://github.com/bster/ai-future | 🟢 **MIT (code) — byte-read** (`1,827 B`, `sha256:2b95011a…`, holder `Ben Stern`, 2026) 🟢 **+ CC BY-4.0 (content), same file** 🔴 field reports `NOASSERTION` — see `T81` | 3 | Global | 🟢 **New this pass (`p824`) — the second row proving the field errs against good practice, and the better-written of the two.** Open, forkable liberal-arts AI curriculum: AI literacy, ethics, philosophy of mind, seven futures, and what AI means for education. 🟢 **Its single `LICENSE` file names the governed directories for each grant — React components and build tooling under MIT, the text, arguments, framing and discussion questions under CC BY 4.0, adaptation and commercial use explicitly permitted with credit.** 🔵 **That is exactly the two-asset disclosure `P57` demands of a courseware repository, written voluntarily — and it is reported as unlicensed** 🔴 Pushed `2026-06-30` |
+
+### 🔴 Rejected this pass — named, with the reason
+
+| Candidate | Repo | Actual license | Stars | Why rejected |
+|---|---|---|---|---|
+| proctorai | https://github.com/braviaprime/proctorai | 🔴 **NONE — byte-probed `NO_PAYLOAD`** on `main` across `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING` | 88 | 🔴 **The star ceiling of `T83`'s entire layer, and it carries no grant.** `148 MB` of real code — face recognition, webcam, browser and audio checks — that a studio cannot touch |
+| octoeye | https://github.com/determinate/octoeye | 🔴 **TRUNCATED AGPL-3.0 — byte-read** (`2,567 B`, `sha256:2b91b198…`, against a stock `34,522 B`); field reports `NOASSERTION` | 0 | 🔴 **`T81`'s truncation case.** On-premise proctoring with dual webcam, screen recording and WebRTC; the `LICENSE` prints the AGPL title and preamble then stops before the operative terms. **No terms means no grant — and the stated intent is network copyleft regardless** |
+| openproct | https://github.com/OpenProct/openproct | 🟢 MIT — byte-read (`1,065 B`, `sha256:b97fd4be…`, holder `OpenProct`, 2025) | 2 | 🔴 **Licence is real; the repository is `3 KB` in total — README plus LICENSE, no implementation.** 🔵 **A licence is not a codebase. Recorded so the next pass does not re-discover the name and assume otherwise** |
+| waypoint-challenge | https://github.com/igoldstein19/waypoint-challenge | 🔴 **NONE — byte-probed `NO_PAYLOAD`** on `main` | 3 | 🔴 **It is a CHALLENGE BRIEF, not an implementation:** *"The Special Education Challenge: build an MCP server that helps teachers differentiate instruction for students with Individualized Education Programs."* 🔵 **The clearest evidence this pass found that the IEP gap (`T61`) is known, is being advertised, and is still unfilled** |
+| mentor-univesp-com170 | https://github.com/josemardp/mentor-univesp-com170 | 🔴 **NONE — byte-probed `NO_PAYLOAD`** on `main` | 0 | 🔴 **Unlicensed, and disqualified on a second axis.** *"Agente que acompanha um curso EAD no lugar do aluno"* — an agent that takes the course IN THE STUDENT'S PLACE. 🔵 **`T40`'s third risk axis applied to PURPOSE rather than to data source: a studio cannot ship substitution-of-the-learner, whatever the licence said** |
+| EyeEP | https://github.com/100205ivan/EyeEP | 🔴 **NONE** (sibling [`100205ivan/IEP`](https://github.com/100205ivan/IEP) likewise NONE) | 1 | 🔴 **Two further IEP-management repositories from one author inside five weeks, both unlicensed.** 🔵 **Supply pressure on the gap, zero adoptable output — which is `T61`'s IEP confirmation holding for a third consecutive measurement** |
+
+### 🔴 The region this pass did NOT produce, stated rather than smoothed
+
+🔴 **`0` of the `19` rows above are North American.** 🟢 **It is a measurement, not an absence of effort:**
+`q="powerschool clever district mcp"` → **`0`**; `q="k12 district data agent"` → **`0`**;
+`q="infinite campus schoology skyward"` → **`0`** — the three largest US K-12 SIS vendors, zero agent
+surface of any licence. 🔵 **North America's supply in this base reaches it through STANDARDS bodies
+instead (`Ed-Fi-Exchange-OSS`, `CarnegieLearningWeb/caliper-ts`, `googleworkspace/oneroster-…`), which is
+`T58`/`T14`'s standing finding and it held again this pass.** 🟢 **The one North American row `p824` DID
+produce is a curriculum and it is filed in `repos/foundations.md`: `hanhuark/machine-learning-for-engineers`,
+BSD-3-Clause, University of Arkansas.**
+
+🟡 **Channel note.** `gh api search/repositories` and `raw.githubusercontent.com` both answered, so every
+repository above is **byte-read and first-hand**. 🔴 **`gh api repos/{owner}/{repo}` is refused for
+unattached repositories in this environment** — default branches were resolved from the search response
+instead, which is `T57`'s instrument, and it held on all `20` probes. 🔴 **`oecd.org` was refused at the
+proxy**, as at `p822`; every market and regulatory item added this pass is marked `CITED, NOT READ`. 🔴 **And the HTML channel the scheduler prescribes for URL verification (`curl -sI https://github.com/<owner>/<repo>`) is REFUSED in this environment — controlled in both directions at `p824`: `torvalds/linux` returns `403` and the invented `zzz-not-a-real-owner-p824/zzz-not-a-real-repo` ALSO returns `403`, so the channel cannot distinguish a real repository from an imaginary one and no verdict may be read from it.** 🟢 **Existence was established instead on the two channels that ARE informative and that pass the same control: `gh api search/repositories -f q='repo:<owner>/<repo>'` returns `1` for the real repository and HTTP `422 Validation Failed` for the invented one, and `raw.githubusercontent.com` returned licence bytes for every shelved row.**
+
 🟢 **`187` build-safe agents on this shelf — `172` carried, `15` added by `p822`.** 🟢 **And the
 figure IS gate-confirmed this pass, for the first time in five:** `python3 ingest/derive-counts.py`
 RAN in the `p822` environment, where `p818`–`p821` were each refused by the sandbox classifier.
@@ -729,7 +878,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 208 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 227 rows
 
 | Name | Repo | Licence | Stars | Region | Description |
 |---|---|---|---|---|---|
@@ -929,6 +1078,7 @@ are deliberately NOT shelved. They are leads for the next pass, not findings.
 
 | Agent | Repo | License | Stars | What it does |
 |---|---|---|---|---|
+| VietAIS-Sentinel | https://github.com/NukeGeng/VietAIS-Sentinel | 🔴 **AGPL-3.0 — byte-read** (`34,522 B`, `sha256:4df3c306…`, stock text, title line `GNU AFFERO GENERAL PUBLIC LICENSE`) | 0 | 🟢 **New this pass (`p824`) — and the anchor of `T84`.** *"Open-source AI engine for explainable exam proctoring, combining object detection, gaze and head-pose estimation, and temporal behavior analysis."* 🔴 **It is the ONLY licensed education repository this pass could find in 🇻🇳 Vietnam, the jurisdiction whose AI law has named education and automated assessment as high-risk since `2026-03-01`** — `q="giao duc viet nam ai"` → `7`, all unlicensed; `q="vietnam education platform"` → `5`, all unlicensed. 🔵 **EXPLAINABLE is the right word for that law and the reason to read it: object, gaze, head-pose and temporal behaviour are inspectable signals, not an affect score.** 🔴 **AGPL-3.0 over a system an institution would HOST means network copyleft reaches the deployment, so this is the reference architecture for `P58`, not a fork candidate.** Created and pushed `2026-10-14`, `56 KB` |
 | bupt-anything | https://github.com/Sun-sunshine06/bupt-anything | 🔴 **GPL-3.0 — byte-read** (`35,149 B`, `sha256:3972dc97…`, title line `GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007`) | 2 | 🟢 **New this pass (`p823`).** 北邮 **BUPT** 🇨🇳 campus MCP server and CLI: timetable, grades, free classrooms, 教学云 assignments and materials — *"unofficial read-only campus tools"*. 🔵 **The APAC member of the `T77` institution-integration population, and the one that cannot be adopted:** GPL-3.0 propagates to any deliverable it is linked into, so a client engagement would have to reimplement the campus adapters rather than vendor this one. 🟢 **Read-only by design, which is the right default for a student-facing campus agent** and worth copying even though the code is not. Pushed `2026-11-13`. |
 | anki-cli | https://github.com/Macro002/anki-cli | 🔴 **AGPL-3.0 — byte-read** (`34,523 B`, `sha256:0d96a4ff…`, title line `GNU AFFERO GENERAL PUBLIC LICENSE Version 3`) | 1 | 🟢 **New this pass (`p817`), and it DISCHARGES `ACTION p816-D` — the AnkiConnect single-point-of-failure now has a successor, and it is not build-safe.** *“Anki's own engine as a fast headless server and CLI: a drop-in AnkiConnect replacement (legacy + v1 API) without Anki Desktop.”* Created `2026-10-26`, pushed `2026-11-13`. 🟢 **Architecturally it is what `p816` asked for: it removes the Qt desktop dependency, so an agent stack no longer needs a GUI application running to reach a collection.** 🔴 **But it is built on the official `anki` Python package, which is AGPL-3.0, and it inherits that — so it is limb 2 of `p816-D`, not limb 1.** 🔵 **Consequence for this base, stated plainly: `P40`'s algorithm-first shape remains the only recommendation in the retention layer that carries no copyleft. The replacement exists; it is not a replacement a studio can ship inside a deliverable.** 🔴 **Its AGPL payload is byte-identical (`34,523 B`, `0d96a4ff…`) to `frametell`'s and `learnharness`'s, recorded at `T817` — stock text, no lineage information** |
 | anki-mcp-server-addon | https://github.com/ankimcp/anki-mcp-server-addon | 🔴 **AGPL-3.0-or-later — byte-read** (`227 B`, `sha256:34b58d89…`, holder `Anatoly Tarnavsky`, title line `GNU Affero General Public License, version 3 or later`) — 🔴 **GitHub's licence field says `NOASSERTION`** | 102 | 🟢 **New this pass (`p816`), and the specimen for `T48` and `T50` both.** *"An Anki addon that implements an MCP server, enabling AI assistants to interact with Anki."* 🔴 **It is the SAME ORGANISATION and the SAME FUNCTION as the `558★` MIT row above — and it is AGPL-3.0, because it runs IN-PROCESS inside Anki, which is AGPL-3.0.** 🔴 **And the upstream RECOMMENDS this one:** *“Prefer the AnkiMCP addon for most setups … the addon is the simpler and better-supported path.”* 🟢 **So the choice is explicit and must be made out loud on an engagement: take the maintainer's recommended path and the deliverable is AGPL, or take the MIT path and own the integration friction the maintainer is warning you about. `P41` takes the second and says why** |

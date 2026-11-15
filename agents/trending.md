@@ -4,6 +4,116 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-ninth pass, `p824`) — **two layers this base had written off, re-opened by changing the WORDS rather than the channel**
+
+🟢 **`19` build-safe agent rows added (`208` → `227`), `1` copyleft row, `6` rejections, `2`
+foundation rows (`134` → `136`), `4` platform rows (`116` → `120`), `5` trends (`T81`–`T85`),
+`3` recipes (`P58`–`P60`), and a dated block in all five regional sections of `intel/market.md`.**
+🟢 **Every count gate-confirmed: `python3 ingest/derive-counts.py` returns GREEN on all five
+shelves, for a second consecutive pass.**
+
+### The channel result, stated before the findings
+
+🔴 **The scheduler's mandated star-ranked WebSearch battery nilled for a `39`th consecutive pass.**
+All four global legs and all four regional legs ran. 🔵 **The agent leg returned no education list
+at all** — `OpenHands`, `browser-use`, `AutoGPT`, `LangChain`, `Langflow`, plus one directory page
+that names no repositories. 🔵 **The trending leg returned `DeepTutor`, `Claw-ED`,
+`interactive-learning`, `ChinaTextbook`, `microsoft/ai-agents-for-beginners` — five for five already
+held.** 🔵 **The platform leg returned `OpenEduCat` (LGPL) and `eduTrac SIS` (GPL-3.0), both held,
+both copyleft, and concluded in its own words that *"the results didn't cover MIT- or
+Apache-licensed education ERP or CRM options"* — a conclusion `T85` disproves from the index four
+rows over.** 🟢 **The four MARKET legs did produce, and every regional section of `intel/market.md`
+gained a dated block.**
+
+### What produced rows: the same channel, different vocabulary
+
+🟢 **`search/repositories`, `sort=updated`, no star floor — `T70`'s setting, for a fourth pass
+running.** 🔵 **The new move at `p824` was not the channel, it was the WORDS, and it worked twice:**
+
+| Re-asked layer | `p815`'s query | `p824`'s query | Result |
+|---|---|---|---|
+| Proctoring | `proctoring exam open source` → `12` | `remote proctoring ai` / `exam integrity ai detection` | 🟢 **`101` / `63`** — `T83` |
+| LATAM supply | `agente educativo inteligencia artificial` → `4` | `sigaa` / `moodle agente` | 🟢 **`709` / `20`** — `T82` |
+
+🔵 **Both nils were vocabulary artefacts, in two different languages, found on the same day.**
+🟢 **Standing instruction for the next pass: before publishing a nil, re-ask it in the words the
+BUILDERS would use — what the software does, or what system it reads — not the words the market
+uses.**
+
+### `T81` — the licence field errs in BOTH directions, and it took `20` byte-reads to see it
+
+🔴 **`4` of `20` repositories byte-read diverge from GitHub's licence field, with three mechanical
+causes:** a **truncated** AGPL (`determinate/octoeye`, `2,567 B` against a stock `34,522 B` — the
+preamble with no operative terms), a **dual-headed** single file (`bster/ai-future`, MIT for code
+and CC BY 4.0 for content, each with its directories named), and a **carved-out** stock licence
+(`FabianJun/PresentTogether`, MIT plus a third-party exclusion and an academic-use boundary).
+🔴 **All three report `NOASSERTION`, and two of the three are the best-documented grants in the
+sample.** 🔴 **In the other direction, `OpenRaiser/EduGraph` reports a clean `Apache-2.0` while its
+`LICENSE-DATA` is CC BY-SA 4.0 over the `7,062`-concept graph that IS the product.**
+🟢 **`P57`'s gate is extended accordingly.**
+
+### `T83` — the proctoring layer, and the row nobody would have predicted
+
+🟢 **Five permissive rows shelved, star ceiling `6★`, against a layer ceiling of `88★` that carries
+no licence at all.** 🟢 **The row worth naming here is
+[`epoko77-ai/examguard`](https://github.com/epoko77-ai/examguard) (MIT, 🇰🇷): smart-glasses
+screening for the 수능 exam hall — BLE cues, composite advertising-packet filters, optical read from
+the proctor's desk, and a physical catalogue of known devices.** 🔵 **It watches the ROOM and the
+DEVICES and never the candidate's face or affect, which makes it the one proctoring shape the EU's
+February 2025 emotion-recognition ban cannot reach. `P58` is built around that property.**
+
+### `T82` — and the row that shows where LATAM supply actually comes from
+
+🟢 **[`unb-mds/2026-2-Followw`](https://github.com/unb-mds/2026-2-Followw) (MIT, `9★`)** is owned by
+**UnB's Métodos de Desenvolvimento de Software course** and named for its semester. 🔵 **That is a
+renewable supply channel rather than a lone maintainer: the same org ships a new cohort of SIGAA
+tooling every term, which changes the staleness arithmetic for the whole institution-integration
+tier (`T77`).** 🟢 **Worth subscribing to; worth looking for its equivalent in every other country.**
+
+### `P60`'s reference implementation, found rather than designed
+
+🟢 **[`balejosg/tiza`](https://github.com/balejosg/tiza) (MIT, 🇪🇸)** publishes pages, labels,
+assignments, auto-marking quizzes and H5P into a Moodle *aula virtual* from Claude Code, Codex,
+opencode or Copilot — and its stated contract is *"el agente prepara… tú los revisas y decides qué
+llega a tu alumnado"*. 🔵 **The agent drafts, the teacher approves, nothing reaches a learner
+without a named human. That is EU AI Act Article 14 shipped as a default, and `P60` generalises it
+rather than inventing it.**
+
+### 🔴 Rejected, named
+
+[`braviaprime/proctorai`](https://github.com/braviaprime/proctorai) (`88★`, no payload — the
+layer's ceiling); [`determinate/octoeye`](https://github.com/determinate/octoeye) (truncated AGPL);
+[`OpenProct/openproct`](https://github.com/OpenProct/openproct) (MIT and `3 KB` — a licence with no
+implementation); [`igoldstein19/waypoint-challenge`](https://github.com/igoldstein19/waypoint-challenge)
+(unlicensed, and it is a challenge BRIEF for the IEP gap rather than a solution to it);
+[`josemardp/mentor-univesp-com170`](https://github.com/josemardp/mentor-univesp-com170) (unlicensed,
+and it takes the course *in the student's place*); [`100205ivan/EyeEP`](https://github.com/100205ivan/EyeEP)
+and its sibling (both unlicensed IEP managers from one author in five weeks).
+
+### 🔴 Gaps re-tested this pass and NOT closed
+
+- **IEP / special education:** `q="iep individualized education program"` → `11`, unchanged from
+  `p815`, and still **one** licensed row ([`dg13788/iep-system`](https://github.com/dg13788/iep-system),
+  MIT, `1★`). 🔴 **Three new unlicensed entrants in ten weeks. `T61`'s confirmation holds for a
+  third measurement.**
+- **xAPI / learner record:** `q="xapi mcp server"` → `10`, and
+  [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) (MIT, `16★`) is **still last
+  pushed `2025-08-29`** — fifteen months. 🟡 **One new adjacent candidate appeared,
+  [`shastripranav/mcp-learning-server`](https://github.com/shastripranav/mcp-learning-server) (MIT,
+  `0★`, SCORM/xAPI), already held.** 🔴 **`P9`'s spine still rests on one stale repository.**
+- **Admissions:** `q="ucas admissions mcp"` → **`0`** (🇬🇧) and `q="enem vestibular agente"` →
+  **`0`** (🇧🇷). 🔴 **Re-measured at `p824`, still zero in both hemispheres.**
+- **North American K-12 vendor systems:** `q="powerschool clever district mcp"` → **`0`**;
+  `q="infinite campus schoology skyward"` → **`0`**.
+
+🟡 **Channel note.** `gh api search/repositories` and `raw.githubusercontent.com` both answered —
+every repository above is byte-read and first-hand. 🔴 **`gh api repos/{owner}/{repo}` is refused
+for unattached repositories here**, so default branches came from the search response (`T57`'s
+instrument, `20`/`20`). 🔴 **`oecd.org` refused at the proxy**; every market item this pass is
+`CITED, NOT READ`. 🔴 **And the HTML channel the scheduler prescribes for URL verification (`curl -sI https://github.com/<owner>/<repo>`) is REFUSED in this environment — controlled in both directions at `p824`: `torvalds/linux` returns `403` and the invented `zzz-not-a-real-owner-p824/zzz-not-a-real-repo` ALSO returns `403`, so the channel cannot distinguish a real repository from an imaginary one and no verdict may be read from it.** 🟢 **Existence was established instead on the two channels that ARE informative and that pass the same control: `gh api search/repositories -f q='repo:<owner>/<repo>'` returns `1` for the real repository and HTTP `422 Validation Failed` for the invented one, and `raw.githubusercontent.com` returned licence bytes for every shelved row.**
+
+
+
 ## `2026-11-15` (twenty-eighth pass, `p823`) — **the largest discovery pass in this base's history: `21` build-safe rows, and the institution-integration tier revealed as a POPULATION**
 
 🟢 **`21` build-safe agent rows added (`187` → `208`), `1` copyleft row, `5` rejections, `2`

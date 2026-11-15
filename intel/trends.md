@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
+**Eighty-five** trends — derived trends: **85** — 🟢 **Twenty-ninth pass (`p824`, 2026-11-15): `T81`–`T85` added** — the repository licence FIELD shown to diverge from the licence BYTES in three named ways and to err in BOTH directions (`T81`), LATAM's supply shown to be indexed under the SYSTEM NAME at `709` against `4` for the pedagogy (`T82`), `p815`'s proctoring nil corrected to a `~100`-repository population whose star mass is unlicensed (`T83`), Vietnam measured as the newest binding high-risk education-AI jurisdiction with a build-safe supply of ZERO (`T84`), and the permissive PLATFORM tier found one rank below every star ceiling this file has ever read (`T85`, which is the third and strongest weakening of `T7`). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=85 claimed=85 · GREEN`.**
+
 **Eighty** trends — derived trends: **80** — 🟢 **Twenty-eighth pass (`p823`, 2026-11-15): `T77`–`T80` added** — the institution-integration tier shown to be a POPULATION rather than a scatter, `20`+ university-pinned LMS agents across `14` jurisdictions converging on the same four read tools, with the constraint that produced them named verbatim by one of them — *"students cannot connect an assistant to their learning platform themselves"* (`T77`); the SPLIT LICENCE trap, byte-confirmed in both directions in one pass — Apache-2.0 code over CC BY-NC-SA **content** where the content IS the product, and CC BY-4.0 applied to software where it was never drafted to go (`T78`); LATAM's institution-integration zero closed by a WRITE-capable Brazilian agent that ships a two-phase commit-and-re-read protocol better than the EMEA write agent shelved beside it (`T79`); and the tool-count governance thread gaining `83` at the institution tier, landing exactly between the vendor servers' `137`/`77` and the standards body's `6` (`T80`). 🟢 **`21` build-safe agent rows added (`187` → `208`), `1` copyleft row, `5` rejections — the largest discovery pass in this base's recorded history, and the THIRD consecutive non-nil.** 🔴 **The scheduler's mandated star-ranked WebSearch battery nilled a `38`th consecutive time: every repository it surfaced globally (`DeepTutor`, `OpenMAIC`, `ai-engineering-hub`, `frappe/lms`, `OpenOlat`) was ALREADY on these shelves.** 🟢 **The productive channel was `T70`'s again — recency-ranked, no star floor — pointed at the LMS seam.** 🟢 **Count gate-confirmed, not inline: `ingest/derive-counts.py` ran in this environment and returned `derived=80 claimed=80`.** 🔴 **Egress resolved GitHub and WebSearch only: every repository below is byte-read first-hand, while every market and regulatory item is `CITED, NOT READ` and says so.**
 
 **Seventy-six** trends — derived trends: **76** — 🟢 **Twenty-seventh pass (`p822`, 2026-11-15): `T73`–`T76` added** — stars shown to be FORGEABLE and not merely lagging, by a `775`-repository clone farm that is relicensed, codeless, synchronised within `48` hours and out-stars the MIT project it impersonates `8.5:1`, with a Dropbox `.rar` lure as its only call to action (`T73`); `T71`'s design-challenge channel tested and BOUNDED at `8` repositories, `4` in the education track, `1` build-safe — and shown to be cross-sector, so it is an instrument for every KB in this estate (`T74`); a product category this base did not hold, the LEARNING-SCAFFOLD agent whose subject is another AGENT, arriving as three independent implementations in one pass and landing on the cognitive-load problem the 2026 literature names (`T75`); and `ingest/derive-counts.py` RUNNING after four passes of refusal, confirming every figure the degraded channel had claimed and discharging `ACTION p821-B` (`T76`). 🟢 **`15` build-safe agent rows and `4` platform rows added — the largest discovery pass since `p818`, and the second consecutive non-nil.** 🔴 **The mandated star-ranked battery nilled a `37`th consecutive time; the productive channels were recency-with-no-star-floor (`T70`) and challenge-origin (`T74`).** 🟢 **Count gate-confirmed, not inline: `derived=76 claimed=76`.** 🔴 **Egress resolved GitHub only, so every repository is byte-read and every market and regulatory item is `CITED, NOT READ` and says so.**
@@ -86,6 +88,176 @@ the second time.** 🔵 **The amendment uses no component discovered this pass**
 three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
+
+## T81 — The repository licence FIELD and the licence BYTES diverge in three mechanical ways, and the field errs in BOTH directions
+
+🔴 **`20` repositories byte-read at `p824`; `4` diverge from the field GitHub reports — `20%`.**
+Every previous finding in this base treated the field as a LAGGING or NOISY signal (`T43`: it
+measures a filename; `T50`/`T52`: `NOASSERTION` means the matcher failed; `T57`: it reads the
+wrong branch). 🟢 **`p824` measures the three mechanical causes and, for the first time, the
+DIRECTION of the error.**
+
+**Form 1 — TRUNCATED.** [`determinate/octoeye`](https://github.com/determinate/octoeye) ships a
+`LICENSE` that prints `GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007` and the
+FSF copyright line, then stops at **`2,567 B`** against a stock `34,522 B`. It contains the
+preamble and none of the operative terms. 🔴 **The file names a licence and grants nothing.**
+Field: `NOASSERTION`.
+
+**Form 2 — DUAL-HEADED.** [`bster/ai-future`](https://github.com/bster/ai-future) ships ONE
+`LICENSE` of `1,827 B` carrying two grants with their directories named: `MIT License (Code)`
+over React components, build tooling and JavaScript; `Creative Commons Attribution 4.0
+International (Content)` over the text, arguments, framing and discussion questions in
+`understanding-ai/src/pages/` and `understanding-ai/src/data/`, with adaptation and commercial
+use explicitly permitted on credit. Field: `NOASSERTION`.
+
+**Form 3 — CARVED-OUT.** [`FabianJun/PresentTogether`](https://github.com/FabianJun/PresentTogether)
+ships stock MIT plus `276 B` of appended boundary: *"Third-party material is excluded from this
+grant; see `THIRD_PARTY_NOTICES.md`"* and *"Software permissions do not override academic rules or
+rights to institutional content; see `docs/ACADEMIC_USE.md`"*. Field: `NOASSERTION`.
+
+**Form 4 — TWO-FILE SPLIT.** [`OpenRaiser/EduGraph`](https://github.com/OpenRaiser/EduGraph) ships
+`LICENSE` (Apache-2.0, byte-read `11,357 B`) and `LICENSE-DATA` (CC BY-SA 4.0) for a repository
+whose product is a graph of `7,062` concepts across `18` subjects. Field: 🔴 **`Apache-2.0`** —
+the file literally called `LICENSE`, which here governs the smaller asset.
+
+### The direction of the error, which is the part that is new
+
+🔴 **Forms 1–3 make the field UNDER-report:** two of those three repositories carry a clean
+permissive grant, and both are better documented than the median row on any shelf in this base.
+🔴 **Form 4 makes it OVER-report:** `Apache-2.0` reads as build-safe, and the asset a studio would
+actually ship back is share-alike.
+🔵 **So a stars-plus-licence-field ingest rejects the two best-documented repositories in the
+sample and admits the share-alike one, in a single sweep — and no amount of raising the star floor
+corrects either error.** 🟢 **The only control that separates them is reading the bytes of EVERY
+licence-shaped file in the repository root, not just the one named `LICENSE`.**
+
+**What to do with it.** `P57`'s pre-shelf gate is extended at `p824` to probe `LICENSE-DATA`,
+`LICENSE-CONTENT`, `LICENSE-DOCS` and `*_NOTICES.md` alongside `LICENSE`, to flag any payload
+shorter than `60%` of its declared licence's stock length as `TRUNCATED — NO GRANT`, and to treat
+a payload containing two licence title lines as `SPLIT — classify by deliverable`.
+
+**Caveat, stated.** The `20%` is `20` repositories on one pass, not a population estimate. What is
+established is that all four forms EXIST and that the direction of error runs both ways; the rate
+is not.
+
+## T82 — LATAM's education-agent supply is indexed under the SYSTEM NAME, never the pedagogy — `709` against `4` on one pass's queries
+
+🔴 **Pedagogical vocabulary, run in Spanish and Portuguese at `p824`:**
+`q="agente educativo inteligencia artificial"` → **`4`**, all four unlicensed, star ceiling `0★`;
+`q="professor agente ia educacao"` → **`0`**; `q="mcp universidad estudiantes"` → **`0`**;
+`q="escuela mcp agente"` → **`0`**. 🔵 **Four legs, one of them non-empty, nothing adoptable.**
+
+🟢 **The same region, same channel, same day, queried by the name of the system of record:**
+
+| Query | Total | Build-safe rows pushed within 48 hours |
+|---|---|---|
+| `sigaa` | **`709`** | `unb-mds/2026-2-Followw` (MIT, `9★`), `kalebhenrique/sarue-unb` (Apache-2.0, `15★`), `vintatri/ufc-mcp` (MIT), `erickmsms/sigaa-faltas` (MIT) |
+| `moodle agente` | `20` | `balejosg/tiza` (MIT), `nialvape/utn-mcp` (ISC, `12★`) |
+
+🔵 **`177:1` between two framings of the same region on the same day.**
+
+**Why it happens.** A LATAM education agent is built by a student or a lecturer against the
+registry their institution already runs — SIGAA, SIU Guaraní, Moodle, CAPES, SciELO — and it is
+named, described and tagged after that registry, because that is what makes it findable to the
+only audience it has: the other students on that campus. 🔵 **Nobody describes it as "an
+educational agent", because within the campus that is not the distinguishing fact.**
+
+**What it changes.** 🔴 **Every LATAM nil this base has published from a pedagogical query is
+suspect**, and `p815`'s three-language assessment-engine nils are first in line for re-test.
+🟢 **And it is a sourcing instrument, not just a caution: `P59` turns it into a runnable discovery
+protocol — enumerate the registries a country's institutions actually run, then query those
+names.** 🔵 **The rule is expected to transfer wherever the institution rather than the vendor
+owns the system of record; it is MEASURED only for LATAM.**
+
+## T83 — `p815`'s proctoring nil was a vocabulary artefact: the layer is a `~100`-repository population whose star mass is unlicensed and whose every permissive row is a one-developer demo
+
+🔴 **`p815` published: *"an EMEA client facing an Annex III conformity question has no adoptable
+AI-proctoring base in any licence. Build, or decline."*** 🟢 **`p824` re-measured it and the
+statement splits in two — false on supply, true on maturity.**
+
+| Query | Total | Star ceiling | Licence of the ceiling |
+|---|---|---|---|
+| `proctoring exam open source` (`p815`'s own query) | `12` | `4★` | `NOASSERTION` |
+| 🟢 `remote proctoring ai` | **`101`** | `17★` | 🔴 NONE |
+| 🟢 `exam integrity ai detection` | **`63`** | **`88★`** (`braviaprime/proctorai`) | 🔴 **NONE — byte-probed `NO_PAYLOAD`** |
+
+🔵 **`p815` asked the layer for the words "open source" and got `12`; asking it for what the
+software DOES returns `101`.** 🟢 **This is `T63`'s saturation finding inverted: the channel was
+not exhausted, the VOCABULARY was wrong — and it is the same defect `T82` measures in another
+language.**
+
+**The maturity half, which `p815` got right.** Six permissive rows exist and five are shelved at
+`p824`: `Proctora` (MIT, `3★`, Flask/OpenCV/MediaPipe), `examguard` (MIT, `3★`, physical
+smart-glasses screening for the Korean 수능 hall), `AI-Smart-Proctoring-System` (MIT, `1★`, YOLO
+with **evidence logging and integrity reports**), `AI-Proctor-Exam-Monitor` (MIT, `6★`) and
+`AI-Driven-Remote-proctoring-System` (Apache-2.0, `3★`, four years stale).
+🔴 **The permissive ceiling is `6★`; the layer's ceiling is `88★` and carries no grant — `14:1`.**
+🔴 **`OpenProct/openproct` is MIT, byte-read, and `3 KB` in total: a licence and a README with no
+implementation.**
+
+**Why it is expensive.** 🔴 **EU AI Act Annex III lists education as high-risk and names
+exam-cheating detection among the listed uses; emotion recognition in education has been banned
+since `2025-02-02`; standalone Annex III obligations are reported moved to `2027-12-02` under the
+2026 Digital Omnibus** (`SECONDARY` — verify against the official text before quoting a date).
+🔵 **So the components are permissive, the product is not, and the regulated boundary is knowable
+in advance. That is an ASSEMBLY, which is what `P58` specifies — and the one shape that survives
+the ban is `examguard`'s: watch the ROOM and the DEVICES, never the candidate's face or affect.**
+
+## T84 — Vietnam is the world's newest binding high-risk jurisdiction for educational AI, and its build-safe open supply is measured ZERO
+
+🔴 **Vietnam's AI law took effect `2026-03-01`; its high-risk category names education, including
+automated assessment, and MOET has scheduled AI content into every grade `1`–`12`** (`SECONDARY` —
+web-search summary; `oecd.org` was refused at this session's proxy, so no multilateral source
+could be read first-hand).
+
+🔴 **Supply underneath it, measured first-hand on `gh api search/repositories`:**
+`q="giao duc viet nam ai"` → **`7`**, **every one unlicensed**, ceiling `4★`;
+`q="vietnam education platform"` → **`5`**, **every one unlicensed**, ceiling `1★`.
+🔴 **The only licensed Vietnamese education artefact found is
+[`NukeGeng/VietAIS-Sentinel`](https://github.com/NukeGeng/VietAIS-Sentinel) — AGPL-3.0, byte-read
+`34,522 B` stock text, `0★` — explainable exam proctoring with object detection, gaze and
+head-pose estimation and temporal behaviour analysis.** 🔵 **It is the right product for the law
+and the wrong licence for a studio: network copyleft over a system an institution would host.**
+
+🟢 **This is `T56`'s asymmetry finding extended to a fifth jurisdiction, and it is the sharpest
+instance yet:** a national mandate with a date, naming the exact use case, over a supply of zero
+permissive rows in the country's own language. 🔵 **In Vietnam `P58` is a BUILD and not an
+adoption — and the AGPL row is the reference architecture to read, not the codebase to fork.**
+
+🟡 **Stated as a limit:** these are two queries in Vietnamese transliteration plus one in English.
+A Vietnamese-language sweep with diacritics was not run and could change the count.
+
+## T85 — The permissive PLATFORM tier exists one rank below every star ceiling this base has read, and `T59`'s vintage rule predicts it
+
+🔴 **This base has carried "the education platform layer is copyleft" since `p805`, and `T7` has
+been weakened twice before on single rows.** 🟢 **`p824` weakens it a third time, on four rows, from
+the index rather than from an opinion — and the mechanism is now named: it was a STAR-RANK
+artefact.**
+
+| Query (`pushed:` recency floor, no star floor) | Total | Top of list | One rank below |
+|---|---|---|---|
+| `school management system` | **`4,840`** | 🔴 `frappe/education` `711★` `NOASSERTION`; `rosariosis` `654★` GPL-2.0; `Django-School-Management` `599★` NONE; `openSIS-Classic` `351★` NONE | 🟢 `yungifez/skuul` **`481★` MIT**, multi-tenant |
+| `student information system` | **`4,137`** | 🔴 `rosariosis` GPL-2.0; `openSIS-Classic` NONE | 🟢 `nomadicjosh/etsis` `46★` MIT (higher-ed); `bcgov/SIMS` `29★` Apache-2.0 (🇨🇦 government-operated) |
+| `open source learning management system` | `37` | 🔴 `frappe/lms` `3,423★` AGPL-3.0 | 🟢 `tutors-sdk/tutors-mono-repo` `5★` MIT |
+
+🔵 **Every incumbent this base has named sits in the top four of its own query and is copyleft or
+unlicensed; the permissive tier sits immediately beneath it, is actively maintained — three of the
+four rows were pushed on the day of the pass — and had never been read, because no leg ever looked
+past the ceiling.**
+
+🟢 **And `T59`'s vintage rule, published for the research-library tier, generalises here.** The
+four permissive rows were created `2015`, `2020`, `2021`, `2026`; the copyleft incumbents above
+them `2013`, `2018`, `2019` and `2021–2022`. 🔵 **The refined rule: absent a vendor with a house
+licence policy — Frappe is AGPL by policy, not by vintage — an education platform's grant is
+predicted better by its birth year than by its category.**
+
+**What it changes commercially.** 🟢 **`P8` (agent on the student record) has had to be scoped
+around `RosarioSIS` GPL-2.0 and an unlicensed `openSIS` for twenty-nine passes; it now has a
+permissive higher-education host (`etsis`) and a permissive multi-tenant K-12 host (`skuul`).**
+🔴 **The trade is real and must be quoted: the permissive tier carries no OneRoster, LTI or Ed-Fi
+surface, so standards integration moves from configuration to build.** 🔵 **The copyleft
+incumbents remain the right answer whenever the client is adopting rather than reselling — `P43`
+is unaffected.**
 
 ## T77 — The institution-integration tier is a POPULATION, not a scatter: `20`+ university-pinned LMS agents in one window, converging on the same four read tools — and one of them names the constraint that produced them
 
