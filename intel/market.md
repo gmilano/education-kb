@@ -2836,6 +2836,66 @@ example of.
 
 ### LATAM
 
+#### Update 2026-11-15 (twenty-fifth pass, `p820`) — 🟢 `ACTION p819-C` DISCHARGED: the "unverified age floor" was an instrument this file has carried since `p790`, and the real boundary is `6º ano`, not age five
+
+🟢 **`ACTION p819-C` is discharged, and not by a new source.** 🔴 **`p819` filed a November press
+report — MEC barring AI for children aged `0`–`5` *"even with teacher mediation"* — as an
+unverified lead with no portaria number, no date and no primary, and asked the next pass to resolve
+it against the *Diário Oficial da União*.** 🟢 **There was nothing to resolve: the instrument is
+`Parecer CNE/CP nº 15/2026`, homologated `2026-11-10`, which THIS FILE, `README.md` and
+`intel/open-gaps.md` have carried since `p790` as the anchor of the LATAM regional summary.**
+🔵 **The press report described the instrument's content and never its number; this base's register
+is keyed on the number; so a pass holding both halves searched for a third thing that does not
+exist.** 🔴 **`p819` also searched for the wrong ORGAN — a *portaria*, where the instrument is a
+*parecer* homologated by the minister.** 🟢 **Written up as `T66`, with the register-matching rule
+that prevents the recurrence.**
+
+🔴 **And the correction matters commercially, because the press framing UNDERSTATED the scope.**
+The reported restriction covered ages `0`–`5`. 🟢 **The instrument is STAGE-GATED, and generative or
+conversational AI is barred through `5º ano` — the whole of primary — and admitted from `6º ano`
+only in teacher-mediated activities (`T67`).**
+
+| Stage | Student may use | Note |
+|---|---|---|
+| Educação infantil (`0`–`5`) | 🔴 **Nothing, even mediated** | Teacher may use for planning, management, accessibility |
+| Anos iniciais (`1º`–`5º`) | 🔴 **No generative/conversational AI even with supervision** | Teacher-planned, teacher-mediated activities only; *"IA desplugada"* is the sanctioned route |
+| Anos finais (`6º`–`9º`) | 🟢 **Generative AI, teacher-mediated** | Autonomous use prohibited |
+| Ensino superior / pós-graduação | 🟢 **AI as content and as teaching/research support** | Institutions must set their own policies |
+
+🟢 **Two assessment rules recovered this pass, and they are the sharper half (`T68`).** 🔴 **Academic
+or disciplinary sanction founded EXCLUSIVELY on an AI-content-detection tool is prohibited.**
+🟢 **AI pre-correction of redações and dissertative exams is admitted only as a PREPARATORY STEP,
+with the mark reserved to the teacher** — which confirms `T876`'s record that the `2026-09-01`
+text, the one that banned AI essay correction outright, was a superseded draft. 🔵 **Scope: public
+AND private, all levels, stages and modalities. Adoption is NOT mandatory.**
+
+🔴 **Sourcing, graded.** 🟡 **SECONDARY throughout.** `www.gov.br` has refused at `CONNECT` since
+`p796` and the parecer remains `CITED, NOT READ`. 🟢 **Two independent Brazilian legal sources agree
+on the ladder and on both assessment rules; `abmes.org.br` is recorded as a non-government host
+carrying the parecer, its súmula and a dated PDF, and is the cheapest primary route for the first
+pass with egress** — `ACTION p820-A`.
+
+🟢 **Opportunity, and it is now a named deliverable rather than a posture.** Brazil sits at `53%`
+AI use against `22%` of school administrators reporting any guidelines (Cetic.br), under a
+`12`-month clock that runs on policies, governance instruments and **CONTRACTS**. 🔵 **`P50` is the
+build: a stage router that fails closed, a no-generative-model deployment for `1º`–`5º`, mediation
+binding on `6º`–`9º`, the mark reserved in code, and an adjudication package that replaces the
+detector verdict `T68` makes unlawful.**
+
+🔴 **Regional supply this pass: NIL, measured.** The mandated LATAM leg returned `0` new
+repositories and `0` instruments this base does not already hold. 🟢 **`p818`'s SciELO substrate
+(`T58`) and `p819`'s figure-dating correction (`T64`) both stand unchanged.**
+
+🔴 **`ACTION p819-A` is NOT discharged, and this pass narrowed it rather than closing it.** A
+targeted re-probe of the UNESCO IESALC study surfaced `87%` adoption, `74%` in teaching and
+learning, `57%` in research, `26%` with a formal strategy and `9%` evaluating implementation — **and
+no budget percentage of any kind.** 🟢 **What the report carries instead is a RECOMMENDATION that
+governments provide dedicated funding, plus an unquantified "resource gap" for public
+institutions.** 🔴 **So the `8%` / `4%` pair this base prints is still unattributable to this
+instrument, and `T64`'s suspicion is strengthened: the figures are probably from a different study
+entirely.** 🔵 **Until the UNESDOC full text is reachable, this file holds NO quotable LATAM budget
+figure — unchanged from `p818` and `p819`.**
+
 #### Update 2026-11-15 (twenty-fourth pass, `p819`) — 🔴 The region's most-quoted number is thirteen months old, and the study it comes from has no budget line at all
 
 🟢 **`ACTION p818-A`, PARTIALLY DISCHARGED — and the result changes how this file must quote its
@@ -3795,6 +3855,62 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-15 (twenty-fifth pass, `p820`) — 🔴 The measurement channel is refused a THIRD time; the mandated battery nils a `35`th; and the pass's finding was sitting in this base's own files
+
+🔴 **Channel state, now THREE passes old and no longer a blip.** The sandbox classifier refused
+`python3 -I ingest/derive-counts.py` again, as it did for `p818` and `p819`. 🟢 **`p820` did what
+`p819` did and wrote its own reimplementation from the gate's source in a session scratchpad** —
+same column-header signatures, same excluded copyleft and rejection tables, same singleton
+`'## <name> — N rows'` claim rule, same distinct-subject grading for multi-signature files.
+🟢 **It is a SECOND, independently written substitute, and it reproduced `p819`'s five figures
+exactly before this pass touched anything: `168`, `132`, `111`, `65`, `49`.** 🔵 **Two independent
+reimplementations agreeing on five figures is materially stronger evidence than one — it is the
+cheapest available substitute for the gate, and it is still not the gate.** 🟢 **After insertion:
+shelf `168`, foundations `132`, verticals `111`, trends `68`, recipes `50`, exit `0`.**
+
+🔴 **The mandated eight-leg battery nilled a `35`th consecutive time, measured with its
+denominator.** Four global legs and four regional legs returned `0` repositories this base does not
+hold and `0` instruments it does not hold. 🔵 **Candidates checked individually rather than
+asserted: `OpenMAIC`, `DeepTutor`, `Claw-ED`, `ai-engineering-hub`, `ChatTutor`, `OpenOlat`,
+`RosarioSIS`, `Frappe`/`frappe-lms`; and on the demand side Regulation (EU) `2026/1744` with its
+`2027-12-02` Annex III date, Korea's AI Basic Act, Vietnam's AI Law and MOET Decision `2422`, NC
+`SL 2026-41`, NY `A 9190`, Virginia `SB 394`, the Parents & Kids Safe AI Act, UNESCO IESALC, the
+UNESCO LAC Observatory, CONPES `4144`, Cetic.br and the Ipsos Education Monitor.** 🟢 **Two items
+were NOT already held — California `SB 1288` and Alabama `HB 1227` — and both are state
+instruments of a class this file already tracks by count rather than individually, so neither is
+promoted.** 🔴 **`T63` already states this saturation; it is recorded here and deliberately NOT
+promoted to a new trend.**
+
+🟢 **The pass's actual finding came from an audit, not from a search** — `ACTION p819-C` resolved
+against this base's own instrument register rather than against the *Diário Oficial* (`T66`), which
+is the second consecutive pass where the productive channel was internal. 🔵 **Budget the next pass
+the same way `T63` recommends: gap-probes and propagation audits, not discovery legs.**
+
+🟢 **`ACTION p818-C` — DISCHARGED.** The `-public` / `-oss` / `-community` / `-free` naming rule
+from `T60` is now written into the intake checklist in `README.md` as a byte-read TRIGGER alongside
+`NOASSERTION`, rather than living only in `p818`'s pass narrative.
+
+🔴 **`ACTION p820-A`** — `Parecer CNE/CP nº 15/2026` is the most consequential LATAM instrument this
+base holds and it is STILL `CITED, NOT READ`; every clause in `T67`, `T68` and `P50` is SECONDARY.
+🟢 **A pass with egress should try `abmes.org.br` FIRST** — it is a non-government host carrying the
+parecer, its súmula and a dated PDF, and `www.gov.br` has refused at `CONNECT` since `p796`.
+🔵 **Read the clause numbering before any client deliverable quotes one.**
+
+🔴 **`ACTION p820-B`** — the counts in this pass come from a second independent reimplementation of
+`ingest/derive-counts.py`, not from the repository's gate, which has now been refused three passes
+running. 🟢 **Two independent substitutes agree on all five pre-insertion figures.** 🔴 **A pass in
+an environment that can execute the repository's Python must still run the real gate and confirm
+or correct: shelf `168`, foundations `132`, verticals `111`, trends `68`, recipes `50`.**
+🔵 **If the refusal is structural rather than incidental, the honest fix is to stop carrying this
+`ACTION` forward every pass and instead commit the reimplementation to `ingest/` under its own
+name, where it can be reviewed.**
+
+🔴 **`ACTION p820-C`** — `ACTION p819-A` is carried forward, now NARROWED. The UNESCO IESALC study
+carries `87%` / `74%` / `57%` / `26%` / `9%` and **no budget figure at all**; its funding content is
+a recommendation plus an unquantified public-institution resource gap. 🔴 **So the `8%` / `4%` pair
+this base prints is attributable to SOME OTHER study, and the next pass should hunt the figures
+rather than the report.** 🔵 **Until then, no quotable LATAM budget figure.**
 
 #### Update 2026-11-15 (twenty-fourth pass, `p819`) — 🔴 This base published a wrong number with a published method, and the correction is the pass
 

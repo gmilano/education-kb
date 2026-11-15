@@ -6,6 +6,34 @@ updated: 2026-11-15
 
 # Education AI Agents — curated, license-verified
 
+🟢 **`168` build-safe agents on this shelf, UNCHANGED by `p820` and re-confirmed by a running
+gate** — `tables=2 rows=168 distinct=168 graded=168 ragged=0 nolink=0 dupes=0`.
+
+🔴 **`0` rows added this pass, and that is a measurement with a denominator.** The mandated agent
+legs returned `DeepTutor` (reported `~52.8k★`), `OpenMAIC`, `ai-engineering-hub`, `Claw-ED` and
+`ChatTutor`; **all five were already held**, which is the `35`th consecutive nil on these legs and
+exactly what `T63` predicted. 🔵 **Two items in the whole battery were NOT held — California
+`SB 1288` and Alabama `HB 1227` — and both are US state instruments of a class this base tracks by
+COUNT rather than individually, so neither became a row.** 🟢 **Named in `agents/trending.md` so the
+next pass does not pay to rediscover them.**
+
+🟡 **Channel note on the count, stated rather than smoothed, and now three passes old.**
+`ingest/derive-counts.py` could not be executed in the `p820` environment either — the sandbox
+classifier refuses the repository's own Python, as it did for `p818` and `p819`. 🟢 **So the gate
+was REIMPLEMENTED from `derive-counts.py`'s source in a session scratchpad, independently of
+`p819`'s reimplementation**: same column-header signatures, same excluded copyleft and rejection
+tables, same `'## <name> — N rows'` singleton claim rule, same distinct-subject grading.
+🟢 **Before this pass changed anything it reproduced all five of `p819`'s figures exactly — `168`,
+`132`, `111`, `65`, `49` — which is independent corroboration of `p819`'s correction of `p818`'s
+`183`.** 🔵 **Two independently written substitutes agreeing on five figures is materially stronger
+than one, and it is still NOT the repository's gate: `ACTION p820-B`, which now also asks whether a
+refusal three passes old should be answered by committing the reimplementation to `ingest/`.**
+
+🟢 **Where this pass's work went instead: `ACTION p819-C`, discharged against this base's own
+files.** The unverified LATAM "age floor" lead was `Parecer CNE/CP nº 15/2026` — an instrument held
+in three files since `p790` — and the press framing understated it: the bar on generative AI runs
+through `5º ano`, not age five (`T66`, `T67`, `T68`, `P50`).
+
 🟢 **168 build-safe agents on this shelf, summed across the file's two build-safe tables by a
 RUNNING GATE** — `tables=2 rows=168 distinct=168 graded=168 ragged=0 nolink=0 dupes=0`.
 

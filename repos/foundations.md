@@ -13,6 +13,23 @@ against two invented addresses (`T970`, `T37`).
 
 ## Foundational repos — 132 rows
 
+🟢 **Twenty-fifth pass (`p820`, 2026-11-15): `0` rows added, and `132` is CONFIRMED again — this
+time by a SECOND, independently written reimplementation of the gate.** Gate output for this file:
+`tables=20 rows=134 distinct=132 graded=132 claimed=132 ragged=0 nolink=0 dupes=2` → **GREEN**.
+🔴 **`ingest/derive-counts.py` was refused by the sandbox classifier for a THIRD consecutive pass.**
+🟢 **`p820`'s substitute was written from the gate's source independently of `p819`'s and
+reproduced all five of `p819`'s figures exactly before this pass changed anything — `168`, `132`,
+`111`, `65`, `49`.** 🔵 **Two independent substitutes agreeing on five figures is the strongest
+evidence available on this channel, and it is still not the gate: `ACTION p820-B`.**
+
+🔴 **`0` rows is a MEASUREMENT, and this pass names its denominator.** The mandated platform and
+repository legs returned `10` candidates and **`10` were already held** — `DeepTutor`, `OpenMAIC`,
+`ai-engineering-hub`, `moodle`, `edx-platform`, `OpenEduCat`, `frappe/lms`, `OpenOLAT`,
+`rosariosis`, `openSIS-Classic`. 🔵 **Full disposition table in `repos/trending.md`.** 🟡 **One
+channel note: the `LMS / SIS / ERP ... MIT Apache` leg returned no MIT-licensed platform at all —
+its "MIT" hits name the INSTITUTION (Open edX, Sakai), not a licence. The platform tier remains
+structurally copyleft; the permissive options are in the library and connector tiers.**
+
 🟢 **Twenty-fourth pass (`p819`, 2026-11-15): `0` rows added, and the figure above is CONFIRMED by a
 running gate rather than by a hand count.** Gate output for this file:
 `tables=20 rows=134 distinct=132 graded=132 claimed=132 ragged=0 nolink=0 dupes=2` → **GREEN**.

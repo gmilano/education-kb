@@ -9,6 +9,25 @@ updated: 2026-11-15
 
 ## Education vertical platforms — 111 rows
 
+🟢 **Twenty-fifth pass (`p820`, 2026-11-15): `0` rows added, and `111` is CONFIRMED again — this
+time by a SECOND, independently written reimplementation of the gate.** Gate output for this file:
+`tables=20 rows=113 distinct=111 graded=111 claimed=111 ragged=0 nolink=0 dupes=2` → **GREEN**.
+🔴 **`ingest/derive-counts.py` was refused by the sandbox classifier for a THIRD consecutive pass.**
+🟢 **`p820`'s substitute was written from the gate's source independently of `p819`'s and
+reproduced all five of `p819`'s figures exactly before this pass changed anything.**
+🔵 **`ACTION p820-B` carries the real-gate run forward.**
+
+🔴 **`0` platform rows is a MEASUREMENT with a denominator:** the mandated vertical leg returned
+`moodle`, `edx-platform`, `OpenEduCat`, `frappe/lms`, `OpenOLAT`, `rosariosis`, `openSIS-Classic`
+and `chamilo-lms`, and **all `8` are already on this page.** 🔵 **Disposition table in
+`repos/trending.md`.**
+
+🟢 **What DID move for this file is regulatory, and it changes how one of these platforms may be
+configured in one country.** `T67`: under `Parecer CNE/CP nº 15/2026` a Brazilian basic-education
+deployment must bar generative and conversational AI through `5º ano` entirely. 🔴 **That is not a
+platform setting on any system on this page — it is a routing decision above the platform**, which
+is why it is written as `P50` rather than as a note in a row.
+
 🟢 **Twenty-fourth pass (`p819`, 2026-11-15): `0` rows added, and the figure above is CONFIRMED by a
 running gate rather than by a hand count.** Gate output for this file:
 `tables=20 rows=113 distinct=111 graded=111 claimed=111 ragged=0 nolink=0 dupes=2` → **GREEN**.

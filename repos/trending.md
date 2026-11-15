@@ -4,6 +4,55 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-fifth pass, `p820`) — **A second consecutive measured ZERO, and this time the saturation was tested against a named candidate list**
+
+🔴 **`0` foundation rows and `0` platform rows added. A MEASUREMENT, not an unrun leg.**
+
+🟢 **What was run.** The mandated repository legs in full — `top open source AI agents education
+2026 github MIT`, `github trending education AI 2026`, `open source platform education LMS SIS ERP
+MIT Apache 2026` — plus the four regional legs.
+
+🔴 **What came back, and what happened to it.** Every repository-shaped result was checked
+individually against `repos/foundations.md` and `verticals/solutions.md` rather than dismissed in
+aggregate:
+
+| Candidate returned | Disposition |
+|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Held — the single most-returned name on this channel |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 Held |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | 🟢 Held — and a tutorial collection, not education software |
+| [`moodle/moodle`](https://github.com/moodle/moodle) · [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🟢 Held |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) · [`frappe/lms`](https://github.com/frappe/lms) | 🟢 Held |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) · [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟢 Held |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) · [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟢 Held |
+
+🔵 **`10 / 10` held, which is the `35`th consecutive nil on these legs.** 🟢 **Recorded with the
+candidate names rather than as a bare "nothing new", because a nil without its denominator is
+indistinguishable from a leg that was never run — and because naming them stops the next pass
+paying to rediscover the same ten.**
+
+🔴 **An address-discipline catch worth recording, because this pass nearly shipped the defect it
+exists to prevent.** The disposition table above was first drafted with `OpenEduCat-Inc/OpenEduCat`
+and `openedx/edx-platform`. 🟢 **Neither survived the check against this base's own holdings: the
+canonical addresses are [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp)
+and [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform), the latter settled
+at `p606-K`.** 🔴 **`OpenEduCat-Inc/OpenEduCat` appeared in `0` files before this pass wrote it —
+an address recalled from a search summary, not read from a repository.** 🔵 **The rule that caught
+it is cheap and should be standing: before writing ANY address, grep the base for it; an address
+that is new to a nil pass is a contradiction and should be treated as a typo until byte-read.**
+
+🔴 **One channel observation worth carrying.** The `LMS / SIS / ERP` leg returned **no MIT-licensed
+platform at all** — the recurring "MIT" hits in that result set are references to the INSTITUTION
+(MIT's role in Open edX and Sakai), not to a licence. 🟢 **That matches what this file already
+holds: the platform tier is structurally copyleft, and the permissive options live in the library
+and connector tiers, not the platform tier.** 🔵 **The query shape itself is misleading and should
+be read as a licence-trap, not a licence-filter.**
+
+🟢 **Counts unchanged and re-derived after the pass's other insertions: foundations `132`,
+verticals `111`.** 🔴 **By an independent reimplementation of `ingest/derive-counts.py` — the
+repository's own gate was refused by the sandbox classifier for a third consecutive pass
+(`ACTION p820-B`).**
+
 ## `2026-11-15` (twenty-fourth pass, `p819`) — **A measured ZERO on this file, and the channel that produced it is the finding**
 
 🔴 **`0` foundation rows and `0` platform rows added this pass. That is a MEASUREMENT, not an

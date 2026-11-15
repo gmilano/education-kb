@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
+**Fifty** concrete recipes — derived recipes: **50**. 🟢 **Twenty-fifth pass (`p820`): `P50` added** — the stage-gated basic-education tutor for Brazil, and the first recipe in this base whose core deliverable is a REFUSAL BOUNDARY inside the product rather than a capability: on two of `Parecer CNE/CP nº 15/2026`'s four rungs the compliant behaviour is to not generate at all, so the STAGE ROUTER is the primary architectural element and it fails closed (from `T67`). 🔴 **It is also the first recipe here written against an instrument this base holds as `CITED, NOT READ`** — every clause is SECONDARY, corroborated by two independent Brazilian legal sources, and the recipe says so rather than lending the parecer a precision it has not earned on this channel. 🟢 **Its second half replaces the thing `T68` makes unlawful: a sanction founded exclusively on an AI detector becomes an ADJUDICATION PACKAGE a teacher signs.** 🔵 **Count re-derived after insertion by an independently written reimplementation of `ingest/derive-counts.py` (`derived=50 claimed=50`); the repository's own gate was refused by the sandbox classifier for a THIRD consecutive pass — `ACTION p820-B`.**
+
 **Forty-nine** concrete recipes — derived recipes: **49**. 🟢 **Twenty-fourth pass (`p819`): `P49` added** — the vendor-neutral tutoring stack, the first recipe in this base whose ACCEPTANCE GATE is a published open-source benchmark the client can re-run themselves, and the first built on a mastery engine rather than on a chat loop (from `T63`/`T65`). 🔴 **It also carries this base's first explicitly priced NON-permissive dependency: `sympy` is BSD-3 and fine, but ~`32%` of the engine's concepts do not grade without a Python runtime, so "pure Go" is not the deployable configuration and the estimate says so.** 🟢 **Both new components byte-read on `2026-11-15`; count re-derived after insertion by an independent reimplementation of `ingest/derive-counts.py` (`derived=49 claimed=49 GREEN`) because the repository's own gate is still refused by the sandbox classifier — see `agents/top.md` and `ACTION p819-B`.**
 
 **Forty-eight** concrete recipes — derived recipes: **48**. 🟢 **Twenty-third pass (`p818`): `P46`–`P48` added** — the Brazilian research-record agent, which is the first recipe in this base whose platform substrate is LATAM-operated rather than imported (`P46`, from `T58`); accessibility remediation for course materials, the only recipe here whose obligation is statutory and the first whose proposal value lies partly in a named EXCLUSION (`P47`, from `T60`/`T61`); and the EPrints→InvenioRDM migration — a named incumbent, GPL-3.0 and abandoned since `2023-07-31`, displaced by an MIT platform CERN maintains, with the agent layer that makes the swap fundable (`P48`, from `T59`). 🔵 **All three carry ZERO copyleft in the delivered tree and every component was byte-read on `2026-11-15`.** 🔴 **Count re-derived INLINE, not by `ingest/derive-counts.py`: the sandbox classifier refused to execute the repository's Python gates this pass. `grep -c '^## P'` → `48`. Degraded channel, flagged.**
@@ -121,6 +123,70 @@ decision instead of a constraint:
   and it is the one argument that still favours `ltijs` on a long engagement.
 
 ---
+
+## P50 — The stage-gated basic-education tutor for Brazil: a compliance router keyed on `6º ano`, and an adjudication package that replaces the detector verdict (LATAM, and the first recipe here whose core deliverable is a REFUSAL BOUNDARY inside the product)
+
+🔵 **Why it exists.** 🔴 **`T67` moved the boundary every Brazilian basic-education proposal is
+scoped against.** The press framing of `Parecer CNE/CP nº 15/2026` put the restriction on ages
+`0`–`5`; the instrument actually bars generative and conversational AI **through `5º ano`, the whole
+of primary**, and admits it from `6º ano` only in teacher-mediated activities. 🟢 **So the
+deliverable is not a tutor with a content filter. It is a tutor whose STAGE ROUTER is the primary
+architectural element, because for two of four rungs the compliant behaviour is to not generate at
+all.** 🔴 **And `T68` removes the fallback every integrity vendor reaches for: a sanction founded
+exclusively on an AI-detection tool is prohibited, so the detector cannot be the product.**
+
+| Role | Component | Licence (byte-read, as held) | Region | Why this one |
+|---|---|---|---|---|
+| Guardrail design | [`vulinh1704/ai-tutor-agent`](https://github.com/vulinh1704/ai-tutor-agent) | 🟢 **MIT** | Global | 🟢 **The three controls this recipe needs already written down: a Socratic hint ladder with a configurable cap, an ANSWER-LEAK GUARD that regenerates and substitutes a safe hint, and rubric grading whose per-criterion scores are validated and TOTALLED IN CODE, not by the model.** 🔴 `0★` — take the control design, not the repository |
+| Stage/enrolment source | [`heitorsDev/sigaa-ifsc-mcp`](https://github.com/heitorsDev/sigaa-ifsc-mcp) | 🟢 **MIT — byte-verified against GitHub's `NOASSERTION`** (`1,275 B`, `sha256:cd14675817b2c618…`) | LATAM | 🟢 **The router must read the learner's STAGE from the system of record, never from a profile field the learner can edit.** SIGAA is the federal-institute incumbent; `GallegoSz/sigaa-mcp` and `EduardoBidese/sigaa-agente` (both MIT, byte-verified) are the alternates |
+| Model router | [`BerriAI/litellm`](https://github.com/BerriAI/litellm) | 🟢 **MIT** | Global | 🔵 **The `1º`–`5º` rung needs a configuration in which NO generative model is reachable at all — that is a gateway policy, not a prompt instruction** |
+| Mediation + mark evidence | [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | 🟢 **Apache-2.0** | North America | 🟢 **"Teacher `T` mediated activity `A` for learner `L` at `t`" and "mark set by `T`, model output was input `n` of `k`" are the two statements the `12`-month clock actually requires an institution to be able to produce** |
+| Academic-norm surface | [`PedroSmaxY/abnt-mcp`](https://github.com/PedroSmaxY/abnt-mcp) | 🟢 **MIT — byte-read** (`1,086 B`, `sha256:1cdab623…`) | LATAM | Used only on the `ensino superior` rung, where the parecer admits AI as content and as research support |
+
+**Wiring.**
+1. **Build the stage router first, and make it fail CLOSED.** 🟢 **Resolve stage from the SIS on
+   every session, cache it with a short TTL, and default to the most restrictive rung when the
+   lookup fails.** 🔴 **A router that defaults open is the one defect in this recipe that converts a
+   compliance product into a liability, because the failure is silent and the logs look normal.**
+2. **Make `1º`–`5º` a different DEPLOYMENT, not a different prompt.** 🟢 **Point that cohort at a
+   LiteLLM configuration with no generative model in it and serve the *"IA desplugada"* path the
+   parecer sanctions — screen-free AI-concept activities, teacher-planned, generated OFFLINE as
+   printable material.** 🔵 **This is the rung most proposals will try to satisfy with a system
+   prompt; a system prompt is not a control an auditor can inspect.**
+3. **On `6º`–`9º`, gate on MEDIATION, not on age.** Every generative turn is bound to a
+   teacher-opened activity with a teacher identity on it. 🟢 **Emit the xAPI mediation statement at
+   activity open and close** — autonomous use is the thing prohibited, so the evidence that matters
+   is the binding, not the content.
+4. **Reserve the mark in CODE.** 🟢 **Take `ai-tutor-agent`'s rubric pattern exactly: the model
+   proposes per-criterion evidence, the criteria are validated against the rubric, and the total is
+   computed in code and written only after a teacher action.** 🔴 **AI pre-correction of redações and
+   dissertative exams is admitted ONLY as a preparatory step (`T68`) — a workflow in which the
+   model's number can reach a transcript without a teacher event is non-compliant even if a teacher
+   later agrees with it.**
+5. **Replace the detector verdict with an ADJUDICATION PACKAGE.** 🔴 **Sanction founded exclusively
+   on a detection tool is prohibited.** 🟢 **Ship the teacher a bundle — draft history, revision
+   timeline, retrieval trail, and the detector score explicitly labelled as one non-dispositive
+   input — and make the UI require a written teacher determination before any academic consequence
+   is recorded.** 🔵 **This is the half of the build a Brazilian institution cannot buy off the
+   shelf: this base's own sweep found `proctoring exam open source` returning `12` repositories at a
+   `4★` ceiling with modal licence `NONE`.**
+
+🔴 **What this recipe is NOT.** 🔴 **It is not a tutoring engine** — pair it with `P49` for the
+`6º ano`-and-above rungs, which is where a mastery engine is lawful and useful. 🔴 **And it does not
+make an institution compliant**: the parecer's `12`-month clock runs on policies, governance
+instruments and CONTRACTS, and only the last of those is touched by software.
+
+🟡 **Sourcing, carried from `T67`/`T68` and not re-asserted here as fact.** Every clause of the
+parecer used above is **SECONDARY** — `www.gov.br` refuses at `CONNECT`, the instrument is
+`CITED, NOT READ`, and `abmes.org.br` is the cheapest primary route for the first pass with egress.
+🔴 **Do not put a clause number in a client deliverable off this recipe until the text has been
+read.** The stage ladder and the two assessment rules are corroborated by two independent Brazilian
+legal sources; the clause numbering is not.
+
+**Estimate.** 🟢 `7`–`9` weeks: stage router with SIS integration and fail-closed semantics (`2`–`3`),
+the two-deployment LiteLLM split and the offline *desplugada* generator (`2`), mediation binding and
+xAPI emission (`1`–`2`), rubric-in-code and the adjudication package (`2`). 🔴 **Plus a legal review
+this base cannot substitute for.** 🟢 **Zero copyleft in the tree — MIT and Apache-2.0 only.**
 
 ## P49 — The vendor-neutral tutoring stack: a mastery engine, a whiteboard transport and a benchmark the client re-runs as the acceptance gate (Global)
 

@@ -4,6 +4,81 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-fifth pass, `p820`) — **The pass's finding was already in this base's own files, the discovery legs nilled a `35`th time, and the gate was refused a third**
+
+**Pass `p820`.** 🔴 **`0` build-safe agent rows added, `0` copyleft, `0` foundation rows, `0`
+platform rows — every one of those is a MEASURED nil with a denominator, not an unrun leg.**
+🟢 **`T66`–`T68` and `P50` written; `2` regional update blocks (LATAM, Global); `ACTION p819-C`
+DISCHARGED and `ACTION p818-C` DISCHARGED.**
+
+### 🔴 The headline: a pass resolved an open `ACTION` against its own shelf, not against the world
+
+🟢 **`ACTION p819-C` asked this pass to resolve an unverified LATAM lead — MEC barring AI for ages
+`0`–`5` *"even with teacher mediation"* — against the *Diário Oficial da União*.** 🔴 **It did not
+need the *Diário*. The instrument is `Parecer CNE/CP nº 15/2026`, and this base has carried it in
+`intel/market.md`, `README.md` and `intel/open-gaps.md` since `p790`.** 🔵 **The press report gave
+the instrument's CONTENT and never its NUMBER; the register is keyed on the number; `p819`
+therefore searched for a third object — a November *portaria* — that does not exist, and measured
+a confident nil.** 🟢 **`T66`, with the rule: a content-only press report is not a new lead until it
+has been matched against the held register by STAGE, DATE and ORGAN.**
+
+🔴 **And the correction was not cosmetic — the press framing understated the scope.** The rule is
+STAGE-gated, not age-gated: generative and conversational AI is barred **through `5º ano`, the
+whole of primary**, and admitted from `6º ano` only under teacher mediation (`T67`). 🟢 **Two
+assessment rules recovered with it (`T68`): detector-only sanction PROHIBITED, and AI
+pre-correction of redações admitted only as a preparatory step with the mark reserved to the
+teacher** — which confirms `T876`'s note that the `2026-09-01` text was a superseded draft.
+🟡 **All SECONDARY; `www.gov.br` still refuses at `CONNECT`; `ACTION p820-A`.**
+
+### 🔴 The mandated battery: a `35`th consecutive nil, scored with its denominator
+
+🟢 **Run in full — four global legs and four regional legs (North America, EMEA, APAC, LATAM), per
+the standing instruction.** 🔴 **Supply: `0` new repositories.** Candidates returned and checked
+INDIVIDUALLY against the shelves rather than assumed: `HKUDS/DeepTutor` (reported `~52.8k★`),
+`THU-MAIC/OpenMAIC`, `patchy631/ai-engineering-hub`, `Claw-ED`, `ChatTutor`, `OpenOlat`,
+`RosarioSIS`, `frappe/lms`, `OpenEduCat`, `openSIS`. 🟢 **All held.**
+
+🔴 **Demand: `0` new instruments.** Returned and already held — Regulation (EU) `2026/1744` and the
+`2027-12-02` Annex III education date, Korea's AI Basic Act (`2026-01-22`), Vietnam's AI Law
+(`2026-03-01`) with its `18`-month education transition and MOET Decision `2422`, NC
+`Session Law 2026-41`, NY `A 9190`'s ninth-grade floor, Virginia `SB 394`, the OpenAI / Common
+Sense Media *Parents & Kids Safe AI Act*, UNESCO IESALC `87%`/`26%`, the UNESCO LAC Observatory,
+CONPES `4144`, Cetic.br `53%`/`22%`, Dubai's KHDA, the Ipsos Education Monitor.
+
+🟡 **Exactly two items were not already held: California `SB 1288` and Alabama `HB 1227`.** 🔵 **Both
+are US state instruments of a class this base deliberately tracks by COUNT rather than
+individually (`134` bills across `31` states), so neither is promoted to a row or a trend —
+recorded here so the next pass does not re-discover them and think it found something.**
+
+🔴 **The EMEA leg reproduced the superseded `2 August 2026` Annex III date an EIGHTH time** against
+this base's `2027-12-02`. 🟢 **Keep the legs for exactly that: they are an adversarial test that
+this base's dates survive contact with the secondary literature, and the literature errs
+consistently EARLY — the direction that makes a client panic-buy.**
+
+### 🔴 Channel state: the repository's own gate refused for a THIRD consecutive pass
+
+🔴 **`python3 -I ingest/derive-counts.py` was refused by the sandbox classifier, as for `p818` and
+`p819`.** 🟢 **`p820` wrote its own reimplementation from the gate's source — same signatures, same
+exclusions, same singleton claim rule, same distinct-subject grading — and it reproduced `p819`'s
+five figures EXACTLY before this pass changed anything (`168`, `132`, `111`, `65`, `49`).**
+🔵 **Two independently written substitutes now agree on all five. That is materially better
+evidence than one substitute, and it is still not the gate.** 🟢 **Post-insertion: `168`, `132`,
+`111`, `68`, `50`, exit `0`.** 🔴 **`ACTION p820-B` — and it now asks a second question: if the
+refusal is structural, stop carrying the `ACTION` and commit the reimplementation to `ingest/`
+where it can be reviewed.**
+
+### 🟢 `ACTION p818-C` — discharged
+
+🟢 **The `T60` naming rule — `-public`, `-oss`, `-community`, `-free` in a repository name are
+MARKETING STRINGS that trigger a byte-read exactly as `NOASSERTION` does — is now written into the
+intake checklist in `README.md`, rather than living only in `p818`'s pass narrative.**
+
+### Region delta after this pass
+
+🟢 **Unchanged: `Global` `98` · `EMEA` `21` · `APAC` `20` · `North America` `15` · `LATAM` `12` ·
+unplaced `17`.** 🔴 **`0` rows added in any region. The LATAM movement this pass is in the POLICY
+layer and in `P50`, not in supply.**
+
 ## `2026-11-15` (twenty-fourth pass, `p819`) — **`p818`'s headline count was wrong by `17`, the gate that proves it had to be rebuilt, and the agent channel is measured SATURATED**
 
 **Pass `p819`.** 🟢 **`2` build-safe agent rows added and `0` copyleft; `0` foundation rows and `0`

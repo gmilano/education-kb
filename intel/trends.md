@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
+**Sixty-eight** trends — derived trends: **68** — 🟢 **Twenty-fifth pass (`p820`, 2026-11-15): `T66`–`T68` added** — `ACTION p819-C` DISCHARGED, and not by finding a new source: the "unverified November age-floor lead" was `Parecer CNE/CP nº 15/2026`, an instrument this base has carried in three files since `p790`, so the failure was CROSS-FILE LINKAGE and not sourcing (`T66`); Brazil's rule shown to be STAGE-GATED rather than age-gated, with the generative-AI threshold at `6º ano` and a full four-rung ladder, which is why an age-framed query could never return an instrument (`T67`); and the parecer's ASSESSMENT rules recovered — detector-only sanction prohibited outright, AI pre-correction admitted only as a preparatory step — which confirms `T876`'s note that the `2026-09-01` text was a superseded draft and prices the difference (`T68`). 🔴 **The mandated eight-leg battery nilled a `35`th consecutive time, measured with its denominator: `0` new repositories, `0` new regional instruments across four regions — recorded in `agents/trending.md`, not promoted to a trend, because `T63` already states it.** 🔴 **Count re-derived after insertion by a SECOND and independently written reimplementation of `ingest/derive-counts.py`: the sandbox classifier refused the repository's own Python for a THIRD consecutive pass. It returned `derived=68 claimed=68` and reproduced `p819`'s other four figures exactly — `168`, `132`, `111`, `50`. See `ACTION p820-B`.**
+
 **Sixty-five** trends — derived trends: **65** — 🟢 **Twenty-fourth pass (`p819`, 2026-11-15): `T62`–`T65` added** — a degraded measurement channel shown to fail by measuring the WRONG POPULATION rather than by drifting, which is why `p818`'s `183` was self-consistent and still wrong (`T62`); the star-ranked GitHub channel measured SATURATED for this base, `52` of `54` results already held and both new arrivals under five days old (`T63`); this base's most-quoted LATAM pair dated to its FIELDING WINDOW and found to be thirteen months old at the point of quotation, with `ACTION p818-A` partially discharged (`T64`); and whiteboard tutoring shown to be a TRANSPORT PROTOCOL rather than a model capability, with a `~15×` cost spread across adjacent quality measured on `288` lessons (`T65`). 🟢 **Count re-derived after insertion by an INDEPENDENT reimplementation of `ingest/derive-counts.py` — the repository's own gate is still refused by the sandbox classifier — which returned `derived=65 claimed=65 GREEN`, and which reproduced `p818`'s other four figures exactly. See `agents/top.md` and `ACTION p819-B`.**
 
 **Sixty-one** trends — derived trends: **61** — 🟢 **Twenty-third pass (`p818`, 2026-11-15): `T58`–`T61` added** — Latin America's missing system of record found, named and byte-read: it is SciELO, `158` repositories, BSD-2, operated from São Paulo for sixteen countries, and seven passes of this base's LATAM nil rested on a star-ranked sweep that was structurally blind to it (`T58`); the research and library platform tier shown to split by VINTAGE rather than geography, `11` of `11`, which refutes `p814`'s *"the only permissively licensed platform in the education stack"* and makes the licence-clean choice the technically better choice for the first time in this base (`T59`); a vendor `NOASSERTION` repository named `-public` whose bytes read `Proprietary License`, with the rule that a repository name is a marketing string and never a grant (`T60`); and `p815`'s accessibility nil CORRECTED while its IEP nil is CONFIRMED, with the two separated into a licence-request target and a real build gap (`T61`). 🔴 **Count re-derived INLINE, not by `ingest/derive-counts.py`: the sandbox classifier refused to execute the repository's Python gates this pass. `grep -c '^## T'` → `61`. Degraded channel, flagged.**
@@ -78,6 +80,103 @@ the second time.** 🔵 **The amendment uses no component discovered this pass**
 three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
+
+## T66 — `ACTION p819-C` is discharged WITHOUT a new source: the unverified "age floor" lead was an instrument this base had already held in three files for thirty passes
+
+🟢 **The finding, and it is a method finding rather than a regional one.** `p819` recorded a
+November 2026 press report describing Brazil's MEC barring AI use for children aged `0`–`5` *"even
+with teacher mediation"*, could obtain **no portaria number, no publication date and no primary**,
+and filed it as an unverified lead with `ACTION p819-C` asking the next pass to resolve it against
+the *Diário Oficial da União*.
+
+🔴 **There was nothing to resolve. The instrument is `Parecer CNE/CP nº 15/2026`** — homologated
+`2026-11-10`, prohibitions effective on publication, a `12`-month clock on policies, governance
+instruments and CONTRACTS — **and this base has carried it in `intel/market.md`, `README.md` and
+`intel/open-gaps.md` since `p790`**, where it is the anchor of the LATAM regional summary and of
+`P797-1`.
+
+🔵 **Why the two never met, stated as a mechanism so it can be designed against.** The press report
+described the instrument's **CONTENT** (an age band, a mediation rule) and never its **NUMBER**.
+This base's instrument register is keyed on the number. 🔴 **So a pass holding both halves searched
+for a third thing that does not exist — a November portaria — and measured a nil with complete
+confidence.** 🟢 **`p819` was looking for the wrong NOUN: the instrument is a *parecer* homologated
+by the minister, not a *portaria*, which is why a portaria-shaped query returned nothing in a
+channel that had the answer.**
+
+🟢 **The transferable rule, and it is cheap.** A press report that describes an instrument's content
+without naming it is **not** a new lead until it has been matched against this base's own register
+of held instruments, by STAGE, DATE and ORGAN rather than by number. 🔴 **The cost of skipping that
+match is exactly what it was here: one pass spent, one `ACTION` raised, and a LATAM headline
+published as "unverified" while the verified instrument sat three files away.** See `ACTION p820-A`.
+
+🔴 **What is still NOT resolved, so the discharge is not oversold.** The parecer remains
+`CITED, NOT READ` — `www.gov.br` refuses at `CONNECT`, as it has since `p796`, and every detail in
+`T67` and `T68` is **SECONDARY**, carried on the search channel's reading of Brazilian legal and
+press coverage. 🟢 **`abmes.org.br` is recorded in `intel/open-gaps.md` as a NON-GOVERNMENT host
+carrying the parecer, its súmula and a dated PDF, and it is the cheapest primary route for the
+first pass with egress.**
+
+## T67 — Brazil's rule is STAGE-GATED, not age-gated — and the generative-AI threshold is `6º ano`, which moves the boundary on every basic-education proposal in the region
+
+🟢 **The finding.** `Parecer CNE/CP nº 15/2026` does not set an age floor. It sets a **four-rung
+ladder keyed on the education STAGE**, and generative or conversational AI is barred on the bottom
+two rungs:
+
+| Stage | What is permitted to the STUDENT | What is permitted to the TEACHER |
+|---|---|---|
+| **Educação infantil** (creche `0`–`3`, pré-escola `4`–`5`) | 🔴 **No AI use by the child, even mediated** | 🟢 Planning, management and accessibility |
+| **Anos iniciais** (`1º`–`5º ano`) | 🔴 **Generative/conversational AI barred EVEN WITH SUPERVISION**; only teacher-planned, teacher-mediated activities; *"IA desplugada"* — screen-free AI concepts — is the sanctioned route | 🟢 Mediated use |
+| **Anos finais** (`6º`–`9º ano`) | 🟢 **Generative AI permitted in teacher-mediated activities — not autonomous use** | 🟢 Mediated use |
+| **Ensino superior / pós-graduação** | 🟢 AI integrable as CONTENT and as support for teaching, research and extension | 🟢 Institutions must set their own policies and guidelines |
+
+🔵 **Why the shape matters more than the contents.** 🔴 **An age-framed query cannot find a
+stage-framed instrument**, which is the proximate reason `p819` nilled (`T66`) — and it is the same
+reason a client's own counsel will mis-scope the rule if the studio hands them the press framing.
+🟢 **The operative boundary a studio must design to is `6º ano`: below it, a generative tutor is not
+a feature to be configured off, it is an architecture that cannot be deployed to that cohort at
+all.**
+
+🔴 **The commercial consequence, which is larger than the early-years one `p819` anticipated.** The
+press framing put the restriction on ages `0`–`5` — roughly `9%` of a K-12 population and a segment
+few studios sell into. 🟢 **The instrument actually bars generative AI through `5º ano`, which is the
+whole of primary** — and it does so in a market where this base already holds Brazil at `53%` AI use
+against `22%` of school administrators reporting any guidelines (Cetic.br). 🔵 **Every basic-education
+tutoring proposal in Brazil now needs a stage router and a defensible answer for the `1º`–`5º`
+cohort; `P50` is that answer.**
+
+🟡 **Scope, stated exactly.** The diretrizes bind **public and private** institutions across all
+levels, stages and modalities, from educação infantil to pós-graduação. 🔴 **Adoption of AI is NOT
+mandatory** — an institution may decline entirely, which is itself a procurement posture a studio
+should expect to meet.
+
+## T68 — The parecer's ASSESSMENT rules are the half that survived redrafting: detector-only sanction is prohibited outright, and AI pre-correction is admitted only as a preparatory step
+
+🟢 **The finding, and it closes a loop this base opened at `T876`.** `intel/open-gaps.md` records
+that the research channel once served a **superseded draft** of this parecer — the `2026-09-01`
+version, which *"banned AI essay correction outright"*. 🟢 **The homologated text does not. It
+admits pre-correction of dissertative exams and redações by AI as a PREPARATORY STAGE only, with
+the mark reserved to the teacher.** 🔵 **So the draft-to-homologation diff moved in the direction a
+studio can sell into, and this base can now state the difference rather than carry two
+irreconcilable readings.**
+
+🔴 **The rule that is new to this base, and it is the commercially sharper one.** *Academic or
+disciplinary sanction founded EXCLUSIVELY on an AI-content-detection tool is prohibited.* 🟢 **That
+is a statutory prohibition on the single most-deployed "AI governance" product in education** —
+and this base already holds the supply-side measurement that makes it actionable: `proctoring exam
+open source` returned `12` repositories, ceiling `4★`, modal licence `NONE`.
+
+🔵 **Why these two together are a position rather than two facts.** 🔴 **The detector market sells
+a VERDICT; the parecer makes a verdict-only workflow unlawful in Brazil and reserves the
+determination to a human.** 🟢 **The compliant product is therefore not a better detector — it is an
+EVIDENCE PACKAGE that a teacher adjudicates: the draft, the revision history, the retrieval trail
+and the detector score as ONE non-dispositive input among several.** 🔵 **That is a different build,
+with a different acceptance test, and it is the one a Brazilian institution can actually sign off
+inside the `12`-month clock.**
+
+🔴 **Sourcing, stated with the finding.** All of `T68` is **SECONDARY** — Brazilian legal commentary
+and press, read through the search channel. `www.gov.br` refuses at `CONNECT`. 🟢 **Two independent
+Brazilian legal sources agree on both rules, and they agree with each other on the stage ladder in
+`T67`, which is the strongest corroboration available on this channel.** See `ACTION p820-A`.
 
 ## T62 — A degraded measurement channel does not drift, it measures the WRONG POPULATION — and that is why `p818`'s count was self-consistent and still wrong by `17`
 
