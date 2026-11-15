@@ -4,6 +4,62 @@ region: Global
 updated: 2026-11-15
 ---
 
+## 🟢 Fortieth pass (`p835`, 2026-11-15) — regional re-verification: `4` regions queried, `0` corrections needed, `1` standing figure contested
+
+🟢 **The four regional queries were re-run this pass and the material they returned was checked
+against what this file already holds. The result is a null: no regional claim in this file needed
+correcting.** That is recorded because an unchanged file and an unchecked file look identical.
+
+- **North America.** Re-confirmed and already held: state-level K-12 AI guidance is widespread
+  while binding rules stay rare (sources disagree at **`28+`, `34+` and `35` states plus DC/PR —
+  the disagreement itself is the finding**); **Ohio** district AI frameworks due **`2026-07-01`**;
+  **Idaho SB 1227** statewide framework with a no-AI-replacing-teachers clause; **NYC's one-year
+  pause on student-facing generative AI for 2-K–grade 8** in `2026-27` with teacher planning use
+  still permitted; **SUNY**'s systemwide policy (`2026-05-04`) embedding AI literacy across **`64`
+  campuses**; updated **COPPA** compliance due **`2026-04-22`**. 🔵 **Procurement signal: districts
+  have moved from blocking tools to routing pupils through controlled AI environments** — that is
+  the shape of the engagement, and it is a gateway/governance build, not a tutor build.
+- **EMEA.** 🟢 **Already held, and held correctly — no correction.** `Regulation (EU) 2026/1744`
+  (the Digital Omnibus) defers stand-alone **Annex III** high-risk education obligations to
+  **`2027-12-02`** (embedded systems `2028-08-02`), a postponement and explicitly **not** a repeal;
+  **transparency duties for chatbots and synthetic content were NOT deferred and apply from
+  `2026-08-02`**; the **emotion-recognition ban in education has applied since `2025-02-02`**;
+  Article 4 AI-literacy duty softened to *measures supporting* literacy. 🔴 **Sources still in
+  circulation quote `2026-08-02` for high-risk; those are pre-Omnibus and stale.** This file's
+  existing `42` references to the Omnibus are consistent with the current reading.
+- **APAC.** Re-confirmed: **China** carries the region's only binding stack — security assessment
+  and algorithm filing before public launch, content labelling in force since **`2025-09-01`**, and
+  **measures on anthropomorphic AI services effective `2026-07-15`** (directly relevant to a tutor
+  or AI-companion product). **India** governs through amended IT Rules — synthetic content must
+  carry prominent labels and provenance markers from **`2026-02-20`** — with dedicated AI
+  legislation only *signalled* as of July 2026. **Japan**'s AI Promotion Act remains
+  promotion-first with no direct penalties; a second AI Basic Plan was approved in July.
+- **LATAM.** Re-confirmed: **Brazil's PL 2338/2023** remains the region's first comprehensive,
+  risk-based AI bill and is **still not enacted** — education is a covered use case, so this stays
+  a watch item and must not be quoted as law. **Mexico** has **no enacted AI statute**, with an
+  explicit *technological sovereignty* framing. 🟢 **Market structure: HolonIQ's `2026` LATAM
+  EdTech 100 puts Brazil at nearly half the cohort** and most deal activity; named AI-native
+  players include **Teachy** (BR, AI lesson preparation, now expanding into Asia), **Vetto** (BR)
+  and **Ginia** (MX) on employability, with **Mattilda** (MX) in school billing and **Talisis**
+  (MX) in post-secondary. 🔵 **Education *financing* is now among the region's largest categories
+  while learning platforms lost the most ground** — the buyer is increasingly the bursar, not the
+  pedagogy office. An **IDB** review of **`193`** initiatives found **`59%`** used generative AI,
+  **`27%`** language models and **~`48%`** combined modalities, concluding the region builds
+  hybrid, context-sensitive systems rather than importing them.
+
+🔴 **Contested figure, flagged not resolved.** `2026` AI-in-education market size spreads across
+**`$6.4B`–`$11.4B`** depending on the firm, with onward projections to **`$42.48B` by 2030
+(`41.5%` CAGR)** or **`$32.27B` by 2030 (`31.2%` CAGR)**. 🔵 **A separate and more decision-relevant
+signal points the other way: venture funding fell to `~$1B` in H1 `2026`, down `26%` YoY** — usage
+is rising while investor appetite cools, which is the condition in which open-source substitution
+wins budget. 🔴 **No single market figure should be quoted as settled in a proposal.**
+
+🔴 **Declared regional gap, explicitly:** the regional queries returned **policy and market**
+intelligence and **no new regionally placed open-source software** in this window. `p835` therefore
+adds **`0`** regional agent or vertical rows. Silence here would be indistinguishable from coverage,
+so it is written down.
+
+
 # Education AI — market map and opportunities by region
 
 🟢 **Thirty-sixth pass (`p831`, 2026-11-15): `5` `#### Update` blocks, one per region, opening the

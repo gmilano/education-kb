@@ -4,6 +4,23 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (fortieth pass, `p835`) — **the content spine, and a `403` that is the proxy rather than a missing grant**
+
+🟢 **`1` foundation row added (`175` → `176`): `microsoft/AI-For-Beginners`, MIT, `70.8k★`,
+byte-read (`1,141 B`, `sha256:c2cfccb812fe…`).** A 24-lesson / 12-week AI curriculum in notebooks
+and labs — the vetted, permissively licensed **syllabus** that none of this base's tutor agents
+ship, and the direct alternative to licensing commercial curriculum in an AI-literacy engagement.
+
+🔴 **No new trending education *repository* beyond it.** The trending channel this pass returned
+`HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC` and `patchy631/ai-engineering-hub` — all three already
+filed. Aggregator star figures disagreed with the rendered pages (one report put `DeepTutor` at
+`46k` against a measured `59.5k`); **the rendered page was taken and the aggregator discarded.**
+
+🔵 **Reproduction note:** `curl https://github.com/<slug>` → `403` (proxy), `curl
+https://raw.githubusercontent.com/<slug>/<branch>/LICENSE` → `200`. Licence payloads remain
+byte-readable; star counts must be read from the rendered page.
+
+
 ## `2026-11-15` (thirty-ninth pass, `p834`) — **the SUBSTRATE under two passes of marking agents, and the examination vertical this base never had**
 
 🟢 **Foundations `171` → `175`. Verticals `140` → `145`.**

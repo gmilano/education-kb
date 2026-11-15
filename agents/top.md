@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-15
 ---
 
+## Fortieth pass (`p835`, 2026-11-15) — **`0` agent rows added, and the reason is recorded rather than padded**
+
+🔴 **No new build-safe education AGENT was filed this pass. The supply this base queries is
+saturated, and the honest number is zero.**
+
+🔵 **What was searched** (global, then once per region, per the standing rotation brief): `top open
+source AI agents education 2026 github MIT`; `github trending education AI 2026 open source
+repositories`; `open source education platform LMS student information system MIT Apache
+self-hosted 2026`; `AI education industry trends 2026 market adoption`; and the four regional
+queries for **North America**, **EMEA**, **APAC** and **LATAM**.
+
+🔴 **What came back was already on these shelves.** Every agent-shaped candidate returned was
+checked against the base by slug before being considered new, and all were present:
+`HKUDS/DeepTutor` (**`5` existing mentions**), `THU-MAIC/OpenMAIC` (`3`),
+`patchy631/ai-engineering-hub` (already in `repos/foundations.md`), `frappe/lms` (**`8` mentions in
+`verticals/solutions.md`**), `francoisjacquet/rosariosis`, `GibbonEdu/core` and
+`rohitg00/ai-engineering-from-scratch` (all already filed). 🟢 **One candidate was genuinely
+absent — `microsoft/AI-For-Beginners` — and it is a curriculum, so it was filed to
+`repos/foundations.md`, not here.**
+
+🟢 **Two anchors re-verified rather than re-asserted.** `HKUDS/DeepTutor` — **Apache-2.0**
+(`main/LICENSE`, `11,408 B`, `sha256:cd2f54e1e506…`; rendered sidebar agrees), **`59.5k★`** against
+the `59.4k` this base published, so the row is CURRENT and was corrected upward by `0.1k`.
+`THU-MAIC/OpenMAIC` — **MIT**, **`43.6k★`**, **exactly** the published figure. 🟢 **Neither anchor
+has drifted; the `388` rows are not stale.**
+
+🔵 **Instrument note, measured this pass and correcting a premature conclusion drawn mid-pass:**
+`curl` to **`github.com` HTML and `api.github.com` both return `403`** through the session's agent
+proxy, so star counts and sidebar licences must come from rendered-page reads.
+🟢 **`raw.githubusercontent.com` returns `200` and is UNAFFECTED**, so the payload byte-read with
+`sha256` that `p824`–`p834` rely on remains available and remains the correct instrument. A pass
+that reports `NO-GRANT` on the strength of a `403` would be recording the proxy, not the grant.
+
+🔴 **Declared gap, unchanged by this pass:** across all four regions, **no new permissively licensed
+education agent** surfaced in this window. The regional queries returned **policy and market**
+intelligence (recorded in `intel/market.md`) and **no new software** — an informed nil, and the
+fourth consecutive pass in which the agent population has not grown from Western-language queries.
+
+
 ## Thirty-ninth pass (`p834`, 2026-11-15) — the probe that fixed false ABSENCE created false PRESENCE, and one of this base's three declared nils flipped in Chinese while the other two held
 
 🟢 **Three things were measured this pass and all three are reproducible from the commands in

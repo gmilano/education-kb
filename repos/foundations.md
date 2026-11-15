@@ -4,6 +4,24 @@ region: Global
 updated: 2026-11-15
 ---
 
+## 🟢 Fortieth pass (`p835`, 2026-11-15) — **`1` row: the largest permissively-licensed education artifact on GitHub, which thirty-nine passes never filed**
+
+🟢 **One row, byte-read, and it outranks every agent on this base's own shelves.**
+`microsoft/AI-For-Beginners` carries **MIT** and **`70.8k★`** — larger than `DeepTutor` (`59.5k`)
+and `OpenMAIC` (`43.6k`), the two repositories this base has repeatedly called its biggest.
+
+🔵 **Why thirty-nine passes missed it, stated rather than guessed:** it is a **curriculum**, not an
+agent or a platform, so it answers none of the agent-shaped queries (`作业批改`, proctoring, marking,
+tutor) that the recent passes have been built around. It is reachable from the plainest query this
+base runs — `top open source AI agents education 2026 github MIT` — and was returned by it on the
+first attempt this pass. 🔴 **That is an instrument gap, not a supply gap: the discovery rule tuned
+for agents in `T115` is blind to content.**
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/microsoft/AI-For-Beginners | 🟢 **MIT — byte-read `2026-11-15`** (`main/LICENSE`, `1,141 B`, `sha256:c2cfccb812fe…`, title line `MIT License`; rendered sidebar agrees) | 70800 | **Region: Global.** 🟢 **New this pass (`p835`), and the LARGEST build-safe education artifact in this base.** A **24-lesson, 12-week** AI curriculum from Microsoft: symbolic AI, neural networks, NLP, reinforcement learning and AI ethics, shipped as **notebooks and labs** rather than prose, on default branch `main`. 🟢 **Why it is a foundation and not an agent:** it is the content spine a tutor agent can be pointed AT — every tutor row on these shelves (`DeepTutor`, `OpenMAIC`, `socratic-tutor`) generates or delivers material, and none of them ship a vetted, permissively licensed syllabus with runnable assessments. 🔵 **MIT means a client deliverable can fork, re-sequence and localise the lessons** — the practical alternative to licensing commercial curriculum, which is the first cost question in an AI-literacy engagement. See `P75`. 🔴 **It is a curriculum for teaching AI, not a general subject corpus:** it fits AI-literacy, teacher-upskilling and CS programmes, and does NOT answer K-12 mother-tongue or national-curriculum needs — those remain the `p831`/`p833` layers. |
+
+
 ## 🟢 Thirty-ninth pass (`p834`, 2026-11-15) — **`4` rows: the SUBSTRATE under the marking tier, and the correction `T107` needed**
 
 🟢 **Foundations `171` → `175`. Verticals `140` → `145`. Agents `379` → `388`.**
@@ -175,7 +193,7 @@ above was graded on the licence question alone.**
 | https://github.com/langchain-ai/langchain | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`) | 149546 | **Region: Global.** The model and tool abstraction layer beneath the above. 🟡 **Shelved with a deliberate caution: this base's compose recipes should depend on `langgraph` for control flow and on `langchain-core` for interfaces, not on the `langchain` meta-package, whose surface moves faster than an education deliverable's support window.** 🔵 **Note for the byte-read gate: its `LICENSE` is on `master`, not `main` — a `main`-only probe returns `404` and would record a false `NO_LICENCE_FILE`, which is a live defect in any sweep that assumes the default branch name** |
 | https://github.com/teppei-miyashita/agenticstar-agentcore | 🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last touched `2026-08-12` | 0 | 🔴 **Region: APAC. Shelved as a WARNING row — the worked example for `T89`.** This is the source repository that the PyPI package `agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository`, and it holds no commits at all. 🟢 **The package itself is genuinely MIT** (`License-Expression: MIT` in the wheel, `dist-info/licenses/LICENSE`, `1,078 B`, `sha256:2afbb5fc…`) **and genuinely installable** — 🔴 **but it is wheel-only, single-release (`2026-09-17`), and unreadable at its stated address, while hard-pinning `langgraph==1.1.10`, `langchain==1.2.18`, `fastapi==0.136.0` and `agenticstar-platform==0.5.32`.** 🔵 **Do NOT add it to a delivery tree. It is here so that the next pass asking "is the AGENTIC STAR stack adoptable?" finds the answer already measured: licensed yes, auditable no** |
 
-## Foundational repos — 175 rows
+## Foundational repos — 176 rows
 
 ## 🟢 The ASSESSMENT-PLATFORM BASE layer — **what a marking agent is built ON rather than beside** (new, thirty-ninth pass `p834`) (4 rows)
 

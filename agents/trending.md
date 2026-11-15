@@ -4,6 +4,28 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (fortieth pass, `p835`) — **a saturated agent shelf, and the biggest MIT education repo arriving from the plainest query**
+
+🟢 **`0` new build-safe agent rows (`388` → `388`), `1` foundation row (`175` → `176`), `0` vertical
+rows, `1` trend (`T122`), `1` recipe (`P75`), `1` regional verification block. `2` anchors
+re-verified; `1` upward star correction.**
+
+🔴 **The agent population did not grow, and that is this pass's finding.** Seven of the eight
+candidates returned by the global and the four regional searches were already filed by slug —
+`DeepTutor`, `OpenMAIC`, `ai-engineering-hub`, `frappe/lms`, `rosariosis`, `GibbonEdu/core`,
+`ai-engineering-from-scratch`. 🟢 **The eighth, `microsoft/AI-For-Beginners` (MIT, `70.8k★`), was
+absent from all `388` agent and `175` foundation rows and is now the LARGEST build-safe education
+artifact here** — bigger than `DeepTutor` (`59.5k`) and `OpenMAIC` (`43.6k`).
+
+🔵 **It was found by the simplest query in the brief, not a clever one.** The recent passes' tuning
+toward agent-shaped and CJK queries (`T115`) buys depth in marking and proctoring and goes **blind
+to content** — see `T122`.
+
+🔵 **Instrument, for anyone reproducing this pass:** `github.com` and `api.github.com` are `403`
+through the proxy; `raw.githubusercontent.com` is `200`. Byte-reads still work; API star counts do
+not. Rendered-page reads supplied the `★` figures above.
+
+
 ## `2026-11-15` (thirty-ninth pass, `p834`) — **the same four queries as `p833`, a different sort key, and twenty times the supply**
 
 🟢 **`9` build-safe agent rows added (`379` → `388`), `4` foundation rows (`171` → `175`), `5`
