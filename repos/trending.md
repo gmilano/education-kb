@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirty-ninth pass, `p834`) — **the SUBSTRATE under two passes of marking agents, and the examination vertical this base never had**
+
+🟢 **Foundations `171` → `175`. Verticals `140` → `145`.**
+
+🔴 **The admission first: `p833` and `p834` have now shelved `10` marking agents, and until this
+pass not one row existed for the thing every one of them sits on** — a question bank, a paper, a
+submission, a roster, a score store.
+
+### Foundations added (`4`)
+
+| Repo | Licence | Stars | Why it is a foundation |
+|---|---|---|---|
+| [`lsgwr/spring-boot-online-exam`](https://github.com/lsgwr/spring-boot-online-exam) | 🟢 MIT (`1,072 B`, `sha256:4653947f9792…`, `master` [DEFAULT]) | **1695** | The highest-traction MIT artefact in this base's entire assessment tier, and it was not on these shelves. Spring Boot + Vue, full exam lifecycle, live public demo. 🔴 Maintained on `cursor/*` agent branches — relevant to how a fork rebases |
+| [`jiajia-jun/catcher`](https://github.com/jiajia-jun/catcher) | 🟢 MIT (`1,066 B`, `sha256:03ccaf326c9a…`) | 9 | 捕手 — one granted client across **four** closed incumbents (雨课堂, 学习通, 学在重邮, 批改网), local-first, 无三方. The integration surface for the whole marking tier (`T120`) |
+| [`Flow-Ciotter/Study`](https://github.com/Flow-Ciotter/Study) | 🟢 MIT (`1,069 B`, `sha256:ec1d2ffa8221…`) | 1 | The only row bundling tutor **and** marker in one self-hostable deployment — the shape a small ministry pilot procures. Filed as an architecture to read |
+| [`neuronova-apps/DUA-3.0`](https://github.com/neuronova-apps/DUA-3.0) | 🟢 MIT (`1,070 B`, `sha256:b62c51270285…`) | 0 | **LATAM.** A Spanish Diseño Universal para el Aprendizaje `3.0` strategy corpus under MIT — content, not a tool, which is why it is a foundation. Corrects `T107`'s conclusion without touching its measurement |
+
+### Verticals added (`5`) — the EXAMINATION-PLATFORM tier, `38` passes late
+
+🔴 **This shelf has carried LMS, SIS, MOOC, AAC and early-grade measurement platforms and never an
+EXAMINATION platform** — the system a school runs whenever it assesses anyone. 🟢 **`在线考试系统`
+returns `1,766` repositories.**
+
+- 🟢 [`xhgzs1314/mokexamsys`](https://github.com/xhgzs1314/mokexamsys) — **MIT**, authoring →
+  sitting → **live invigilation** → automatic and manual marking → certificate issue, one PHP/MySQL
+  deployment. **The row that flips this base's proctoring nil.**
+- 🟢 [`Quanda666/smart-exam-system`](https://github.com/Quanda666/smart-exam-system) — **MIT**, with
+  an append-only 防作弊日志: evidence a human adjudicates, never an automatic verdict.
+- 🟢 [`deceiver-djw/ExamOnline`](https://github.com/deceiver-djw/ExamOnline) — **Apache-2.0**, the
+  only HarmonyOS-native education artefact in this base. The device axis for a China K-12 estate.
+- 🔴 [`mindskip/xzs`](https://github.com/mindskip/xzs) — **AGPL-3.0**, `3,915★`. The vertical's
+  traction leader by two orders of magnitude, and unshippable. Reference only.
+- 🔴 [`youufis/SmartKBS`](https://github.com/youufis/SmartKBS) — **AGPL-3.0**, `91★`, with a real
+  release train (`release/7.4`…`8.1`). Read for its whole-class interaction modes (闯关 / 抢答 /
+  抽问), which no build-safe row in this base implements. Reference only.
+
+🔵 **The licence/traction inversion again (`T109`): the leaders are AGPL at `3,915★` and `91★`;
+the three rows a studio can ship sit at `0`, `0` and `1★`.**
+
+🟢 **`ingest/p834-grantprobe.sh` is committed with this pass** — default-branch resolution plus the
+restored `31`-name list, both controls passing.
+
+
 ## `2026-11-15` (thirty-eighth pass, `p833`) — **the NATIONAL-CURRICULUM ACCESS layer: `3` rows, and a `1,000:1` traction ratio over the agents that need them**
 
 🟢 **Foundations `168` → `171`. Verticals `140` → `140`.**

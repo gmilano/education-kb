@@ -168,6 +168,59 @@ across EMEA.
 
 ### North America
 
+#### Update 2026-11-15 (thirty-ninth pass, `p834`) — 🟢 **The CANADA and MEXICO blank is CLOSED at the policy layer, and in Canada the instrument is PROCUREMENT rather than legislation**
+
+🔴 **`p833` named this blank and `p810` opened it: two countries inside a region this base places
+engagements in, returning only US material pass after pass.** 🟢 **This pass ran the leg as a
+Canada/Mexico query rather than a North America one, and both legs returned named instruments.**
+
+🇨🇦 **CANADA — the finding is that there is no AI statute and that this does not mean there is no
+rule.**
+- 🔴 **Federal AI legislation is paused, not dead.** `AIDA` — which this base already names — fell
+  with prorogation; sources describing it as "pending" are stale.
+- 🟢 **NEW to this base: the Treasury Board `Directive on Automated Decision-Making`.** It binds
+  federal institutions only, **but it has become procurement-relevant**, and public-sector
+  procurement is described as emerging as a **de facto standard-setting mechanism** in the absence
+  of a statute.
+- 🟡 **NEW: `Bill C-34`, the Safe Social Media Act**, which would classify some AI systems used by
+  children for learning as **regulated online services**. 🔴 **Its status could not be confirmed
+  from the sources returned and is NOT carried as law.**
+- 🔴 **The national AI-literacy initiative barely acknowledges K-12**, per a policy analysis
+  arguing that a digital-safety regulator or the Privacy Commissioner should set national EdTech
+  **procurement** standards.
+
+🇲🇽 **MEXICO — no statute, and explicitly no procurement standard either.**
+- 🔴 **No federal AI law.** AI is regulated indirectly through general law. The federal
+  `Ley Nahui` bill remains in discussion (already held in `agents/trending.md`).
+- 🔴 **NEW and load-bearing: Mexico has enacted NO AI-specific procurement or contracting
+  standards.** 🔵 **That is the opposite of the Canadian position and it changes the sale: in
+  Canada the conformance pack is the wedge, in Mexico there is nothing to conform to and the wedge
+  is the institution's own policy.**
+- 🟢 Already held and re-confirmed: the Estado de México reform of Article `61` of its education
+  law (April `2026`, responsible and gradual AI use in upper-secondary and higher education), and
+  the SEP's `ENIAG` survey with **more than `1.5M` student responses** — which this base had only
+  in `intel/open-gaps.md` and which belongs here as the region's largest primary demand dataset.
+
+🇺🇸 **UNITED STATES — mostly already held; recorded so the leg is not silent.** The `134`-bills /
+`31`-states count, Maryland, Ohio's `2026-07-01` district deadline and the `K-12 AI Literacy and
+Readiness Act of 2026` (`H.R. 8747`) are all on these shelves. 🟢 **NEW this pass: North
+Carolina's dated cascade — a state model policy by `2026-12-31` and local policies by
+`2027-06-30`; Utah `HB 218`'s required grade `7`/`8` digital-skills course including AI literacy;
+the Department of Labor's `AI Literacy Framework` (February `2026`, voluntary); and AI literacy
+made a priority across the Department of Education's discretionary grants.**
+
+🔵 **The opportunity, and it is the same shape `p832` found in the US one layer down:** in North
+America the buyer's obligation arrives as a **procurement clause or a dated policy deadline**, not
+as a product requirement. 🟢 **`P74`'s override log is the artefact that satisfies both** — it is
+evidence of human review, which is what a Directive-on-ADM clause, a North Carolina local policy
+and a Maryland district policy each separately ask a vendor to demonstrate.
+
+🔴 **Still missing for this region: a dollar figure.** No source this pass priced Canadian or
+Mexican AI-in-education procurement, and the US market-size spread remains contested (see
+**Market size — contested**). 🔴 **All items in this block are `CITED, NOT READ` from WebSearch
+summaries; the Canadian and Mexican practice-guide sources are secondary.**
+
+
 #### Update 2026-11-15 (thirty-eighth pass, `p833`) — **`0` new items. The leg ran and returned only material this base already holds.**
 
 🟢 **Searched** (`AI education North America 2026 adoption regulation players K-12 higher ed`):
@@ -1453,6 +1506,64 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-15 (thirty-ninth pass, `p834`) — 🟡 **The AI Act's education calendar is CONTESTED across three sources on the same day, and the region's procurement channel is named but could not be read from this session**
+
+🔴 **This block records a DISAGREEMENT rather than resolving it, because resolving it from
+secondary sources is how a wrong date enters a contract.** On `2026-11-15` the sources returned by
+one query gave three different pictures of the same instrument:
+
+| Claim | Source posture |
+|---|---|
+| Emotion-recognition AI banned in education since `2025-02-02` | consistent across sources |
+| Transparency obligations from `2026-08-02`; **high-risk education obligations from `2027-12-02`**, attributed to `Regulation (EU) 2026/1744` | one school-focused guide |
+| AI used for admission, student evaluation and exam scoring is high-risk | second source, no dates |
+| The **Digital Omnibus on AI defers** the high-risk obligations, easing pressure on national implementation | third source |
+
+🔴 **The emotion-recognition ban is the only limb all three agree on.** 🟢 **It is also the only
+limb that is operationally sharp today, and it bites directly on the proctoring supply `T118`
+just uncovered: an invigilation product that infers a learner's emotional state is prohibited in
+EU education, irrespective of where the high-risk deadline lands.** 🔵 **`xhgzs1314/mokexamsys`
+and `Quanda666/smart-exam-system` are filed in `verticals/solutions.md` as EVENT-LOG systems rather
+than inference systems for exactly this reason.**
+
+🟢 **NEW this pass — the EU-level literacy instrument:** the European Commission, with the OECD and
+with G7 endorsement, has introduced a **draft AI Literacy Framework for primary and secondary
+education**, intended to align national approaches. 🔵 **A draft framework with G7 endorsement is
+the kind of instrument a ministry cites in a tender before it is binding on anyone.**
+
+🇩🇪 **GERMANY — NEW:** the `2018` national AI strategy is treated as outdated; the `KMK` education
+ministers' conference issued national guidelines in `2024` that the Länder are using to build their
+own plans; AI policy now sits in the `2025` **Hightech Agenda**, with an **AI Roadmap (May `2026`)**
+whose measures are **"subject to available budgetary funds"**. 🔴 **No envelope is stated. A roadmap
+with no budget line is a demand signal a studio should not resource against.**
+
+🇫🇷 **FRANCE:** the education ministry's **June `2025` usage framework** for AI in education — a
+framework for use, with no national strategy, no defined timeline and no funding attached,
+according to a rating source.
+
+🌍 **GULF (UAE, SAUDI ARABIA):** AI curriculum mandates tied directly to long-term economic
+diversification programmes, with nationwide initiatives aimed at millions of students. 🔵 **The
+only part of EMEA where the mandate carries its own money.**
+
+🟡 **The procurement channel — NAMED, NOT READ.** A cited analysis of **`390` public tenders for AI
+in education and training across the UK and Europe** reports that **central government ran `124` of
+the `390`**, with schools themselves running few. 🔴 **The host could not be fetched from this
+session — it is outside this session's permitted network domains — so the figure is recorded as
+`CITED, NOT READ` and is flagged as UNREADABLE-HERE rather than unread-by-choice.** 🟢 **It is
+nevertheless the single most actionable procurement datum this base has for any region: if the
+buyer is central government rather than the school, the sale is one framework agreement, not
+`20,000` schools.**
+
+🔵 **The opportunity:** EMEA remains the only region where this base holds **a dated compliance
+calendar and a named tender channel at the same time.** 🟢 **`P74` ships here as Annex III
+conformance with the override log as the evidence instrument** — and `T119` means the same build
+needs no re-architecture for the regions where Annex III does not apply.
+
+🔴 **Fewer than `20` countries worldwide have issued national AI-in-education policy guidelines at
+all, and comparable adoption statistics are scarce. Every item in this block is `CITED, NOT
+READ`.**
+
 
 #### Update 2026-11-15 (thirty-eighth pass, `p833`) — **`0` new items, and the one thing worth re-stating is a DATE this base already carries**
 
@@ -2779,6 +2890,41 @@ the EMEA leg; the results returned compliance advice, not measurement. **An info
 absence: the denominator for the AI Act's deployer duties is not publicly measured.**
 
 ### APAC
+
+#### Update 2026-11-15 (thirty-ninth pass, `p834`) — 🟢 **The region produced ALL of this pass's supply; 🔴 and the PROCUREMENT gap `p833` declared is re-run, re-searched and STILL NIL**
+
+🟢 **Supply, first, because it is the largest single-pass yield this base has taken from one
+region:** `9` of `9` new agent rows, `3` of `4` new foundation rows and `5` of `5` new vertical
+rows are APAC, and every one of them is Chinese-language. 🔵 **See `T118`, `T119`, `T120` — the
+examination-platform vertical, the marking tier and the closed-portal integration layer all entered
+this base this pass, out of queries `p833` had already run and sorted differently.**
+
+🟢 **The demand instrument is unchanged and already held:** China's `AI+Education` Action Plan
+(April `2026`), AI across every stage of education, AI as a basic public course in higher
+education.
+
+🔴 **PROCUREMENT — the gap is re-declared, and this time with the search named so the next pass does
+not repeat it.** 🔵 **Searched:** `AI {education} APAC 2026 government procurement framework schools
+China Malaysia Indonesia vendor`. 🔴 **Returned: US state bills, UK/EU tender analysis, and
+vendor-marketing blogs. ZERO material on any APAC procurement vehicle.** 🔴 **So after two passes,
+China, Malaysia and Indonesia have named policy instruments in this file and **no evidence
+whatsoever** on who buys, through what vehicle, or whether a foreign studio can be a counterparty.
+
+🟡 **What a mandate without a procurement path is worth, stated plainly:** it is a demand signal a
+studio **cannot act on**. 🟢 **The channels to probe are named here so `ACTION p834-C` is
+executable rather than aspirational:** China's Ministry of Education guidance, Malaysia's
+`MyProcurement` portal and `MOSTI`, Indonesia's `LKPP` and Kemendikbudristek. 🔴 **And `T118` is the
+reason the last two passes failed: these portals publish in Bahasa Malaysia, Bahasa Indonesia and
+Chinese, and every APAC procurement query this base has run has been in English.**
+
+🔵 **The commercial read for an APAC engagement today:** the build is nearly free — the substrate,
+the portal clients and the marking core are all granted and shelved (`P74`) — and the buying path
+is undocumented. 🟢 **That is the opposite of this base's LATAM position, where the path is known
+and the supply is absent, and the two are worth reading side by side.**
+
+🔴 **Every market and regulatory item in this block is `CITED, NOT READ`. The supply items are
+byte-read and pinned.**
+
 
 #### Update 2026-11-15 (thirty-eighth pass, `p833`) — **three NAMED national instruments this base had never filed, and the one it had half-filed was WRONG**
 
@@ -4125,6 +4271,53 @@ example of.
 
 ### LATAM
 
+#### Update 2026-11-15 (thirty-ninth pass, `p834`) — 🟢 **The governance gap is now a MEASURED number — `>50%` of teachers using AI against `<10%` of institutions with any guideline — and `T118` says the regional build is LOCALISATION, not translation**
+
+🟢 **The demand figures, from the regional leg run in Spanish:**
+
+| Figure | Scope |
+|---|---|
+| **`>50%`** of teachers already using AI tools | Chile and Brazil |
+| **`<10%`** of institutions with formal guidelines | the region |
+| `52%`–`56%` teacher adoption | Brazil, Chile, Colombia, Costa Rica |
+| A **higher** share of schools banning or limiting AI than the OECD average | the region |
+
+🔴 **That pair — majority teacher use, almost no institutional guideline — is the clearest
+governance gap in this base's four-region picture, and it is a sale rather than a risk note:** the
+artefact a LATAM institution needs is a policy plus the evidence to show it is being followed.
+🟢 **`P74`'s override log produces exactly that evidence as a by-product of marking.**
+
+🟢 **Institutional instruments, re-confirmed and extended:** UNESCO's regional **AI-in-education
+Observatory for Latin America and the Caribbean, launched in Chile in April `2026`** (already
+held); Chile's `PotencIA el aprendizaje` (`2025`, held) over a National AI Policy dating to `2021`
+with a bill in discussion; Brazil's `PL 2338/2023` in the Senate with **no education-sector-specific
+regulation**; Mexico as recorded in the North America block.
+
+🟡 **A governance datum worth carrying:** São Paulo state's `2024` deployment of ChatGPT for
+digital lesson development was publicly criticised by `Derechos Digitales` for proceeding **without
+prior consultation of teachers**. 🔵 **In a region where institutions have no guidelines, the
+consultation step is the differentiator a studio can actually commit to in a proposal.**
+
+🔴 **And the supply finding that constrains all of the above — `T118`.** This pass re-ran this
+base's declared nils in Spanish and Portuguese across proctoring, UDL and vocational education.
+🔴 **Proctoring: `0` granted artefacts in either language. Vocational: `0` of substance. UDL: a
+real population of `13`, but almost entirely teacher-authored RESOURCES, with exactly two granted
+software artefacts — `neuronova-apps/DUA-3.0` (MIT, corpus) and `KiaraPrecopio/booktor-tpi-unsam`
+(MIT, Argentina/UNSAM).** 🟢 **Both are now shelved.**
+
+🔵 **So the LATAM delivery of `P74` is a LOCALISATION BUILD, not a translation pass**, and that is
+the honest scoping line: every marking, proctoring and examination component this pass found is
+APAC-authored with a Chinese-language interface, and no Spanish or Portuguese equivalent exists
+under a grant. 🔴 **Pricing a LATAM engagement off the APAC component list would understate it.**
+
+🟢 **The inverse of the APAC position: here the buying institutions and their gaps are legible, and
+the supply is not. There, the supply is abundant and the buying path is undocumented.**
+
+🔴 **Every market and regulatory item in this block is `CITED, NOT READ`; the adoption percentages
+disagree between sources (`50%` vs `52`–`56%`) and one blog figure of `79%` was discarded for
+having no stated origin.**
+
+
 #### Update 2026-11-15 (thirty-eighth pass, `p833`) — **`0` new items. The leg returned this base's own LATAM story back to it.**
 
 🟢 **Searched** (`AI education LATAM Latin America 2026 adoption regulation edtech players`):
@@ -4755,7 +4948,7 @@ policy**; 🟡 the IDB counts `193` real AI initiatives across the region; 🟡 
 that many public schools lack the technical resources to implement AI at all.
 🟢 **Highest engagement, lowest governance, no credential infrastructure — see `T56`.**
 
-### 🟢 `ACTION p816-F`'s declared blank — country-level AI-in-education regulation, ANSWERED with named instruments
+#### 🟢 `ACTION p816-F`'s declared blank — country-level AI-in-education regulation, ANSWERED with named instruments
 
 🔴 **`p816-F` recorded that two passes running had failed to name a single LATAM regulatory
 instrument, and prescribed searching for `resolución inteligencia artificial educación` and
@@ -5577,6 +5770,32 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-15 (thirty-ninth pass, `p834`) — 🔵 **`0` new market items. The global finding this pass is a METHOD finding, and it belongs to every region**
+
+🔴 **No new global market instrument, size figure or player movement was found, and the
+`2026` market-size spread remains contested** (`$9.58B` / `$11.4B` / `$12.3B`, CAGRs
+`17.5%`–`49.5%`) — **carried forward as contested, not restated as fact.**
+
+🟢 **What this pass produced globally is a correction to how this base MEASURES any region**, and
+it is recorded here because it applies to all five:
+
+1. 🔴 **A declared nil is a claim about a SEARCH until it has been run in the language the supply
+   is written in** (`T118`) — and this pass proved the rule is narrower than `p833` stated it:
+   re-running three nils in five languages flipped one, half-flipped one and confirmed one.
+2. 🔴 **On a CJK corpus, star-ranking is actively misleading and the `in:name,description`
+   qualifier does nothing about it** (`T121`). The sort key is `pushed_at`.
+3. 🟢 **A licence is read on the DEFAULT branch or it is not read** (`D834`) — proved on a
+   `193★` project shipping two different licences on two branches.
+
+🔵 **Why this sits in the market file and not only in `intel/trends.md`:** each of the three
+changes what a REGIONAL nil in this file is worth. 🔴 **Every "the leg returned nothing" block in
+this file that was written from an English-language, star-sorted sweep is now a weaker claim than
+it reads** — and this base has written many of them.
+
+🟢 **No global player movement is asserted this pass. Silence from this leg is recorded as silence,
+per the standing rule that an unstated nil reads exactly like coverage.**
+
 
 #### Update 2026-11-15 (thirty-sixth pass, `p831`) — the market numbers this base keeps citing are for a segment that excludes the children this pass is about
 

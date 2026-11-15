@@ -4,6 +4,44 @@ region: Global
 updated: 2026-11-15
 ---
 
+## Thirty-ninth pass (`p834`, 2026-11-15) — the probe that fixed false ABSENCE created false PRESENCE, and one of this base's three declared nils flipped in Chinese while the other two held
+
+🟢 **Three things were measured this pass and all three are reproducible from the commands in
+`ingest/p834-grantprobe.sh` and in `intel/trends.md`.**
+
+🔴 **`D834` — the instrument.** `T112` hardened the branch axis against false ABSENCE, and `p833`
+built the probe that did it. 🔴 **That probe orders `main` / `master` / `dev` by a hardcoded
+preference and takes the FIRST `200`, which need not be the branch the project ships.** 🟢 **Proved,
+not supposed:** `yinuoguan/nengdou-ai-review-helper-web` carries Apache-2.0 on a stale `main`
+(`11,357 B`, `sha256:c71d239df917…`) and **MulanPSL-2.0 on its default `master`** (`9,247 B`,
+`sha256:f0dade5c9337…`, and `develop` and `feature` agree with `master`). 🔵 **Blast radius MEASURED
+rather than asserted: `20` published addresses sampled, branch-pick disagreement on `2`
+(`DOAJ/doaj` default `develop`, `ILIAS-eLearning/ILIAS` default `release_11`), licence-byte
+divergence on `0` of `20`.** 🟢 **So the defect is real, it is rare in the existing corpus, and it
+is NOT a reason to re-open `442` pinned figures — which is said here rather than left for a reader
+to infer.** 🟢 **Fixed in `ingest/p834-grantprobe.sh`, with the `31`-name list restored
+(`ACTION p833-C`, instrument limb) and both controls passing.**
+
+🟢 **`ACTION p833-B` — DISCHARGED, and the answer is the cheap one.** The `in:name,description`
+qualifier is **INERT** on CJK queries: `智慧教育` (`399`), `作业批改` (`435`), `AI素养` (`100`) and
+`智能备课` (`221`) return **identical totals and byte-identical top-`10`s** with and without it.
+🔵 **So `T115`'s inversion is a RANKING property, not a substring-over-README property, and the
+discovery rule is now caused rather than asserted: read the full set, sort by `pushed_at`.**
+
+🟡 **`ACTION p833-A` — run, and it refutes its own premise in two of three cases.** `T114` said a
+nil is only a nil in the language the supply is written in. 🟢 **Re-run across Chinese, Spanish,
+Portuguese, German and French: the PROCTORING nil FLIPPED (Chinese only — `36` + `11`
+repositories, three of them granted); the UDL nil flipped as a POPULATION but not as a build-safe
+supply (`10` Spanish, `3` Portuguese, `0` German, Chinese INCONCLUSIVE); the VOCATIONAL nil HELD in
+all five languages.** 🔴 **One of three. `T114`'s rule survives but shrinks: it is a CHINESE-supply
+rule, not a general multilingual one** (`T118`).
+
+🟢 **`9` build-safe agent rows added (`379` → `388`), `4` foundation rows (`171` → `175`), `5`
+vertical rows (`140` → `145`), `4` trends (`T118`–`T121`), `1` recipe (`P74`) and `5` regional
+market blocks — including CANADA and MEXICO, the two-country blank this base has carried since
+`p810`.** 🔴 **`3` candidates found and NOT filed, each with its reason stated.**
+
+
 ## Thirty-eighth pass (`p833`, 2026-11-15) — China's `AI+Education` Action Plan has a BUILD-SAFE SUPPLY, and it answers the grading gap this base has carried since `T96`
 
 🟢 **The organising finding.** `T96` established the grading gap by TEST rather than by copy-forward:
@@ -1782,7 +1820,42 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 379 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 388 rows
+
+### Filed by `p834` (2026-11-15) — `9` rows: the MARKING population enumerated BY `pushed_at` instead of by stars, and every licence byte-read on the DEFAULT branch
+
+🟢 **`p833` filed `1` marking agent and called the grading gap closed. It was closed; it was also
+under-measured.** 🔵 **Re-running `作业批改` sorted by `pushed_at` over three pages — never by
+stars, per `T115` — returns a dense, ACTIVE, overwhelmingly MIT population: `20+` granted marking
+projects pushed inside the last three weeks.** 🔴 **The gap was not one repository wide. It was a
+whole shelf this base could not see.**
+
+🟢 **The architectural finding is in `T119` and it is worth more than the rows: at least `8` of
+these converge INDEPENDENTLY on `AI 预批 → 教师复核 → 系统记录` (AI pre-marks, the teacher
+reviews, only then is a mark recorded)** — the exact scoring boundary `P67`/`P73` derived from EU
+AI Act Annex III point `3`, arrived at in a jurisdiction where Annex III does not apply.
+
+🔴 **Every row below was probed with `ingest/p834-grantprobe.sh`, which resolves the DEFAULT branch
+before the filename loop (`D834`). `p833`'s probe ordered `main` first and would have mis-filed
+row `1` of this table.**
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| 能豆 AI 批改助手 (nengdou) | https://github.com/yinuoguan/nengdou-ai-review-helper-web | 🟡 **MulanPSL-2.0 — byte-read on the DEFAULT branch** (`9,247 B`, `sha256:f0dade5c9337…`, `master/LICENSE`, 木兰宽松许可证第2版, refs=[`master` `main` `develop` `feature`]) | 193 | APAC | 🟢 **New this pass (`p834`), and it is the highest-traction MARKING agent on these shelves by a factor of `27`** (`193★` against `teach_agent`'s `7★`). Vue 3 + Nest.js + MongoDB + DeepSeek; automatic marking across 语文 / 英语 / 数学 with per-subject rubrics. `20` forks, `12.3 MB`, pushed `2026-04-29`. 🔴 **This row is also `D834`'s proof case and the reason the probe was rebuilt: the stale `main` branch carries an Apache-2.0 payload (`11,357 B`, `sha256:c71d239df917…`) while `master`, `develop` and `feature` all carry Mulan.** 🔵 **`p833`'s probe tried `main` first, so it would have filed this project under a licence it does not ship — and the Apache limb is stock text, byte-identical to `sumo1/AI-GAME-COOL` on this same shelf, so no header read could have caught it.** 🟡 **MulanPSL-2.0 is OSI-approved and permissive, so the row IS build-safe — but it is a THIRD permissive family beside MIT and Apache, and this base's `gate-mit-tier` and `gate-permissive-arm` have no fixture for it (`ACTION p834-B`)** |
+| MES-Homework | https://github.com/turtlelnc/MES-Homework | 🟢 **MIT — byte-read** (`1,066 B`, `sha256:784395278685…`, `main/LICENSE` [DEFAULT], refs=[`main` `261024DSH` `audit/pre-release-rc4` …]) | 4 | APAC | 🟢 **New as a ROW this pass — the address was named in `agents/trending.md` at `p720` as a convergence example and never shelved; PROMOTED here.** Upload homework → AI recognises and pre-marks → **teacher reviews** → class-level attainment, per-knowledge-point mastery, error-cause statistics and a remedial lesson plan generated from the reviewed set. 🔵 **Its README states the discipline this whole tier shares and states it as a guarantee: 所有数字由已复核数据确定性计算 — every number is computed deterministically from REVIEWED data, never from the model's own output.** 🟢 **That is the cleanest statement of the `P67` boundary this base has found in any language, and it is a product claim rather than a compliance note.** Pushed `2026-11-15` |
+| all-in-one AI 教学助手 | https://github.com/yosemdawn/all-in-one-AI_edu_system | 🟢 **MIT — byte-read** (`1,062 B`, `sha256:f830ef372ec4…`, `main/LICENSE` [DEFAULT], refs=[`main` `codex/ai-config-and-upload-fixes`]) | 8 | APAC | 🟢 **New this pass (`p834`) — the widest K-12 surface in the tier**: class management, assignment publishing, submission, AI marking in BATCH, and teacher/student split roles in one deployment. 🔵 **Filed for the batch path specifically: every other row in this table marks one script at a time, and a class of `40` is the unit a real teacher actually has.** 🔴 `8★`, pushed `2026-11-02`. 🔴 **Its README claims it beats `99%` of commercial AI education products; that is marketing and is not carried as a finding** |
+| chaoxing-grader-universal | https://github.com/Unke-cc/chaoxing-grader-universal | 🟢 **MIT — byte-read** (`1,066 B`, `sha256:c08a161f53f1…`, `main/LICENSE` [DEFAULT], refs=[`main`]) | 1 | APAC | 🟢 **New this pass (`p834`) — the INTEGRATION shape, and the reason `T120` exists.** Teacher-side batch marking of assignments and lab reports inside 超星学习通 (Chaoxing/Xuexitong), driven over the Chrome CDP protocol, cross-platform Windows / Linux / macOS. 🔵 **It does not ask the incumbent LMS for an API it does not expose — it drives the teacher's own authenticated browser session.** 🔴 **That is a pattern a studio can reuse against any closed portal, and this base has shelved it before for `p823`'s closed-portal integration; this is the second independent instance.** Pushed `2026-10-26` |
+| ykt-grader | https://github.com/mc-dl/ykt-grader | 🟢 **MIT — byte-read** (`1,062 B`, `sha256:b429f339f75d…`, `main/LICENSE` [DEFAULT], refs=[`main`]) | 3 | APAC | 🟢 **New this pass (`p834`) — the same integration shape against a DIFFERENT incumbent**, 雨课堂 (Rain Classroom): an agent knowledge pack plus Playwright/CDP automation, attachment capture, comment and score write-back, **save verification** and anonymised statistics. 🔵 **The write-back verification step is the part worth copying: it re-reads what the platform stored rather than trusting its own POST.** 🟢 **Two unrelated authors against two unrelated closed platforms is what makes this a layer and not a one-off (`T102`'s test).** Pushed `2026-11-02` |
+| math-work | https://github.com/shiyalun1126/math-work | 🟢 **MIT — byte-read** (`1,069 B`, `sha256:972de94494bf…`, `main/LICENSE` [DEFAULT], refs=[`main`]) | 0 | APAC | 🟢 **New this pass (`p834`) — the only row in this tier that marks STEP BY STEP rather than answer-by-answer.** Photographed handwritten maths in; per-line adjudication out: which step is wrong and why it is wrong, on two separate chains for algebra and geometry. 🔵 **Its README draws its own competence boundary — 限定域内可信, trustworthy only inside the bounded domain — which is a more honest scope statement than most commercial equivalents publish.** 🔴 `0★`, pushed `2026-11-12`. **Filed on function, not traction, per `T115`** |
+| linear-algebra-grading-desk | https://github.com/Benhuangsuan/linear-algebra-grading-desk | 🟢 **MIT — byte-read** (`1,069 B`, `sha256:5ff801bd0f9b…`, `main/LICENSE` [DEFAULT], refs=[`main`]) | 5 | APAC | 🟢 **New this pass (`p834`) — the COST-CONTROL row.** A local Windows marking desk for linear algebra with three explicit modes — Mock, human scoring, and optional vision AI — plus human review and **spend caps on the vision calls**. 🔵 **Filed because the mode switch is the architecture: the same desk runs with no model at all, which is the only configuration a school with no budget and a data-residency rule can actually deploy.** 🔵 **`P74` inherits this directly.** Pushed `2026-11-11` |
+| homework-ai-grading-lab (作业智评) | https://github.com/ShuyaoGao/homework-ai-grading-lab | 🟢 **MIT — byte-read** (`1,088 B`, `sha256:b0f6c0eff210…`, `main/LICENSE` [DEFAULT], refs=[`main`]) | 1 | APAC | 🟢 **New this pass (`p834`) — the TEACHING artefact of the tier**: handwriting recognition → rubric scoring → teacher review, shipped as a static online demonstration on **synthetic data**. 🔵 **Filed deliberately as a demo and labelled as one: it is the cheapest way to show a ministry or a school board the review boundary working end to end without touching a real pupil's work**, which is the first meeting `P74` has to survive. 🔴 **Synthetic data means it carries NO efficacy evidence and must never be cited as such.** Pushed `2026-11-10` |
+| booktor (UNSAM) | https://github.com/KiaraPrecopio/booktor-tpi-unsam | 🟢 **MIT — byte-read on the DEFAULT branch** (`1,070 B`, `sha256:adc0be6971f6…`, `develop/LICENSE` [DEFAULT], refs=[`develop` `main` `feature/27-login` `test/31-mockmvc-jacoco`]) | 0 | LATAM | 🟢 **New this pass (`p834`) — Argentina (Universidad Nacional de San Martín), and the ONLY granted software artefact the Spanish-language DUA re-run produced.** An academic-tutoring scheduling backend built explicitly to Diseño Universal para el Aprendizaje principles. 🔵 **Filed as evidence for `T118` rather than for its traction: the Spanish UDL population is real (`10` repositories) but is almost entirely teacher-authored RESOURCES, and this is the one piece of it that is software under a grant.** 🔴 **Second default-branch case in this table — the default here is `develop`, not `main`; the bytes happened to agree, which is exactly why the defect is invisible without the check.** Pushed `2026-11-15` |
+
+🔴 **Found and NOT filed, with the reason** — fewer real rows beats padding:
+
+1. 🔴 **`sixiaopangai/2026-AI-Literacy-Exam-Helper`** (`25★`) — **CC-BY-NC-SA-4.0, byte-read** (`2,427 B`, `sha256:4268253f2531…`, `main/LICENSE`). 🔴 **NON-COMMERCIAL: not build-safe, excluded on licence.** 🔵 **And it is an index-vs-bytes case in the DANGEROUS direction: GitHub's index says `NOASSERTION`, which a studio reads as "ask the author", while the bytes say "you may not sell this".**
+2. 🔴 **`yangfeng005/online_exam`** (`18★`) — **AGPL-3.0, byte-read** (`35,184 B`, `sha256:6f1e622c82a3…`, `master/LICENSE`). Copyleft; filed in `verticals/solutions.md` with the affero flag instead.
+3. 🔴 **`throwOctober/zhixun-cloud-showcase`** — **`NO-GRANT-AT-ROOT`**, probed `31` filenames × `1` ref (`main`). 🔵 **A vocational cloud-lab platform and the best artefact the vocational re-run produced in any language — and it carries no grant at all.** See `T121`.
 
 ### Filed by `p833` (2026-11-15) — `4` rows: the CHINESE NATIONAL-PLAN tier, every licence byte-read with branch resolution
 

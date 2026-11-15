@@ -6,7 +6,143 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
-**One hundred and seventeen** trends — derived trends: **117** — 🟢 **Thirty-eighth pass (`p833`, 2026-11-15): `T114`–`T117` added** — the grading gap `T96` opened and `p832` re-confirmed shown to have been a LANGUAGE gap rather than a supply gap, closed on one query in Chinese (`教育 大模型 agent`) returning an MIT multimodal marking agent with an error-type taxonomy and a three-tier remediation generator, which puts `T82`'s statutory-vocabulary rule on a fifth axis and for the first time on a WRITING SYSTEM rather than a vocabulary, and makes every nil this base has declared from an English-language sweep suspect in the same way (`T114`); star-ranking shown to INVERT rather than degrade on a CJK corpus — `智慧教育` (`TOTAL=399`), `作业批改` (`435`), `AI素养` (`100`) and `智能备课` (`221`) all return the same unrelated high-traction repositories at the top (a book list at `26,122★`, an x86 tutorial at `5,450★`, a propaganda corpus at `3,351★`) while the real education projects sit at `2`–`7★`, so the rule is read the full set and sort by `pushed_at`, never by stars (`T115`); the national-mandate pattern observed end to end in one jurisdiction for the first time — China's `AI+Education` Action Plan mandates AI across every stage, the state already publishes the curriculum corpus at `basic.smartedu.cn`, and the traction sits roughly `1,000:1` with the ACCESS clients (`7,811★` and `568★`, both MIT, two independent implementations) over the agents that need them, which gives the rule *find what the state has published and whether a granted client exists BEFORE scoping an agent* (`T116`); and the sector's own `2026` consensus recorded as pilots→infrastructure and novelty→governance with the OECD arguing for purpose-built educational AI, set against edtech venture funding at roughly `$2.4B` (`2024` vintage, a decade low, ~`89%` below the `2021` peak), so the buyer is a ministry or a procurement office with a compliance deadline rather than a venture-funded startup (`T117`). 🔵 **Gate-confirmed after insertion: `python3 -I ingest/derive-counts.py`.** 🟢 **Channel note: three channels live and controlled in both directions — search (`repo:` live→1, invented→`422`), byte-read (calibrated on this base's own repaired `sillsdev/libpalaso` figure, reproduced EXACTLY), and `git ls-remote --heads` (invented→`EMPTY-REF-SET`).** 🔴 `gh api repos/{owner}/{repo}` remains `403` session-scoped. 🔴 Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so. — 🟢 **Thirty-seventh pass (`p832`, 2026-11-15): `T111`–`T113` added** — the `P834` repair shown to have reached the INSTRUMENT and `8` addresses but NOT the published corpus, measured on a reproducible `1`-in-`7` sample of all `442` pinned `(address, bytes, sha256)` triples: `38` EXACT, `24` SHORT-BY-EXACTLY-`1`, residue `24/62` resolvable = **`38.7%`**, ~`171` extrapolated, and the `SHORT-BY-1` class TESTED rather than assumed — stripping the trailing-newline run from today’s bytes returned the pinned sha on `12` of `12`, while an address `p831` re-measured by hand returned EXACT, so the discriminator is whether a pass re-ran the address, not whether the probe is fixed (`T111`); the grant probe’s BRANCH axis shown to have no resolution step at all — `p773` widened the FILENAME list to `31` case-aware names and `p831` repaired the capture defect, but the branch is still the caller’s second positional argument, so one wrong guess `404`s all `31` paths and prints a verdict byte-identical to a true absence; swept over all `38` standing absence claims it yielded `3` false absences including Carnegie Mellon’s XPRIZE finalist (Apache-2.0, `p831` had it UNRESOLVED), Kolibri (MIT, and the base contradicted ITSELF about it on the same day) and a PowerSchool agent that is GPL-3.0 rather than ungranted (`T112`); and `ACTION p831-C`’s LATAM early-reading gap discharged in both directions — the CORPUS is a measured nil on three vocabularies while the APPLICATION layer is a `~110`-repository population, because LATAM’s literacy supply is written by SCHOOLS and the funder channel `p831` won with does not exist here: Ceibal, CENIA, ProFuturo and Fundación Santillana have no GitHub organisation, and `latam-gpt` ships `0` grants on `3` of `3` (`T113`). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py`.** 🟢 **Channel note: the channel `p830` recorded as LOST is RESTORED** — `gh api search/repositories -f q="repo:OWNER/NAME"` now discriminates (live→`total_count=1`, invented→`HTTP 422`). 🔴 `gh api repos/{owner}/{repo}` remains `403` session-scoped, so metadata is SEARCH-ONLY. 🟢 **A third channel was opened: `git ls-remote --heads`, the ref set.** 🔴 Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so. — 🟢 **Thirty-sixth pass (`p831`, 2026-11-15): `T108`–`T110` added** — the FOUNDATIONAL-LEARNING tier (early-grade literacy and numeracy) entered for the first time in `36` passes, after `grep -ric` over the six curated pages returned `132` hits for `literacy` against **`0`** for `numeracy`, `0` for `phonics`, `0` for `preschool`, `0` for `kindergarten`, `0` for `early years` and `0` for `decoding`, beside `592` for `STEM` and `196` for `credential`; the tier shown to be FIELD-TRIALLED AND FROZEN — the Global Learning XPRIZE corpus carries a `15`-month Tanzanian RCT behind it and has not been pushed since `2019`, while the content and measurement layers beneath it (`BloomDesktop`, `libpalaso`, Kolibri `studio`, Tangerine) were pushed this week, which gives the engagement rule *inherit the pipelines, fork the practice apps* (`T108`); the licence INDEX shown to disagree with the licence BYTES on the tier's `128★` traction leader, and one game shown to ship THREE grants at three permissions — BSD-2-Clause code, CC-BY-4.0 art, CC0-1.0 language data (`T109`, `p830`'s `OFL-1.1` finding generalised into a rule); and this base's own blocking gate suite MEASURED rather than assumed — `make -k` on a pristine `git archive HEAD` export reports `89` passing checks and **`18` RED BLOCKING GATES**, none of them in `DECLARED_RED`, where the fail-fast suite reported exactly one, with a measuring instrument wrong on `7` of `7` inputs behind that one; `p831` leaves `17`, zero regressions (`T110`). 🟢 **Thirty-fifth pass (`p830`, 2026-11-15): `T105`–`T107` added** — the SEN/inclusive-learner tier entered for the first time in `35` passes, after `grep -ric` returned `0` across all eight curated files for `learning disabilit*`, `neurodivergen*`, `occupational therap*`, `early intervention` and `well-being`, and `0` occurrences of `AAC` in `agents/top.md`; `T102`'s statutory-document rule shown to be LANGUAGE-BOUND and replaced in this tier by the name of the NATIONAL SIGN LANGUAGE, whose populations INVERT against economic size — India `2,693` and Brazil `94`/`24 MIT` against Germany `0` and Japan `3`, which makes APAC and LATAM the best-supplied regions in this tier and EMEA the worst (`T105`); the IDENTITY term shown to return the WORKPLACE tier rather than the learner tier, with `8` of the top `12` `neurodivergent` repositories by stars being agent-harness tooling for neurodivergent ADULTS and `0` of `12` learner-facing (`T106`, `T103`'s inversion rule on a third axis); and inclusion PEDAGOGY measured against inclusion COMPLIANCE — Universal Design for Learning, the framework every inclusion proposal cites, has a GitHub maximum of `1★` and is named on `2` lines of this base, while the WCAG/Section 508 remediation tier beside it is MIT/Apache and shelf-ready (`T107`). 🔵 **Gate-confirmed after insertion: `python3 -I ingest/derive-counts.py`.** 🔴 **Channel note: ONE CHANNEL WAS LOST THIS PASS.** `gh api` with a `repo:OWNER/NAME` qualifier returns HTTP `422` for live AND invented addresses, and `gh api repos/{owner}/{repo}` returns HTTP `403` for both — **neither discriminates, so neither was used as an oracle.** 🟢 Free-text `gh api search/repositories` IS bidirectionally controlled (live→`total_count=1`, nonsense→`0`) and supplied discovery and star/push metadata; `raw.githubusercontent.com` byte-read IS bidirectionally controlled (live→`200`, invented→`404`), so **every licence in `p830` is byte-read**. 🔴 `curl -sI` was NOT used as an oracle: `T923`/`T970` hold. 🔴 Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.
+**One hundred and twenty-one** trends — derived trends: **121** — 🟢 **Thirty-ninth pass (`p834`, 2026-11-15): `T118`–`T121` added** — `T114`'s language rule RE-RUN rather than copied forward and found to be narrower than it was stated: of three declared nils re-probed across Chinese, Spanish, Portuguese, German and French, the PROCTORING nil flipped (Chinese only, `36`+`11` repositories, three granted, one of them a complete MIT invigilation-to-certificate platform), the UDL nil flipped as a POPULATION but not as a build-safe supply (`10` Spanish, `3` Portuguese, `0` German, Chinese inconclusive on a noise-dominated query) and the VOCATIONAL nil HELD in all five languages with its best artefact ungranted — so the rule is a CHINESE-supply rule, not a general multilingual one, and a declared nil must now name its language AND its jurisdiction (`T118`); the marking population enumerated properly for the first time by sorting `作业批改` on `pushed_at` over three pages, returning `20+` granted projects pushed inside three weeks, of which at least `8` converge INDEPENDENTLY on `AI 预批 → 教师复核 → 系统记录` — the same scoring boundary `P67`/`P73` derived from EU AI Act Annex III point `3`, reached in a jurisdiction where Annex III does not apply, which makes the boundary a PEDAGOGICAL convention a studio can sell as practice rather than only as compliance (`T119`); the Chinese marking supply shown to attach to the INCUMBENT teaching platforms rather than to replace them — 超星学习通, 雨课堂, 批改网 and 学在重邮 all have granted MIT clients already written, two of them driving the teacher's own authenticated browser over CDP because the incumbent exposes no API, which is `T116`'s access-before-agent rule on a commercial rather than a state endpoint (`T120`); and `ACTION p833-B` discharged with the cheap answer — `in:name,description` is INERT on CJK queries (identical totals and byte-identical top-`10`s on all four), so `T115`'s inversion is a RANKING property and the discovery rule is now caused rather than asserted (`T121`). 🔵 **Gate-confirmed after insertion: `python3 -I ingest/derive-counts.py`.** 🟢 **Channel note: all three channels live and controlled in BOTH directions this pass** — search (`repo:` live→`1`, invented→`422`), byte-read (`sillsdev/libpalaso` reproduced EXACTLY at `1,082 B` / `sha256:b716617149f3…`), `git ls-remote --heads` (invented→`EMPTY-REF-SET`). 🔴 **And a FOURTH axis was added to the byte-read channel and immediately caught a defect in this base's own instrument: `D834`, the probe returning a grant from a NON-DEFAULT branch.** 🔴 `gh api repos/{owner}/{repo}` remains `403` session-scoped. 🔴 Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so. — 🟢 **Thirty-eighth pass (`p833`, 2026-11-15): `T114`–`T117` added** — the grading gap `T96` opened and `p832` re-confirmed shown to have been a LANGUAGE gap rather than a supply gap, closed on one query in Chinese (`教育 大模型 agent`) returning an MIT multimodal marking agent with an error-type taxonomy and a three-tier remediation generator, which puts `T82`'s statutory-vocabulary rule on a fifth axis and for the first time on a WRITING SYSTEM rather than a vocabulary, and makes every nil this base has declared from an English-language sweep suspect in the same way (`T114`); star-ranking shown to INVERT rather than degrade on a CJK corpus — `智慧教育` (`TOTAL=399`), `作业批改` (`435`), `AI素养` (`100`) and `智能备课` (`221`) all return the same unrelated high-traction repositories at the top (a book list at `26,122★`, an x86 tutorial at `5,450★`, a propaganda corpus at `3,351★`) while the real education projects sit at `2`–`7★`, so the rule is read the full set and sort by `pushed_at`, never by stars (`T115`); the national-mandate pattern observed end to end in one jurisdiction for the first time — China's `AI+Education` Action Plan mandates AI across every stage, the state already publishes the curriculum corpus at `basic.smartedu.cn`, and the traction sits roughly `1,000:1` with the ACCESS clients (`7,811★` and `568★`, both MIT, two independent implementations) over the agents that need them, which gives the rule *find what the state has published and whether a granted client exists BEFORE scoping an agent* (`T116`); and the sector's own `2026` consensus recorded as pilots→infrastructure and novelty→governance with the OECD arguing for purpose-built educational AI, set against edtech venture funding at roughly `$2.4B` (`2024` vintage, a decade low, ~`89%` below the `2021` peak), so the buyer is a ministry or a procurement office with a compliance deadline rather than a venture-funded startup (`T117`). 🔵 **Gate-confirmed after insertion: `python3 -I ingest/derive-counts.py`.** 🟢 **Channel note: three channels live and controlled in both directions — search (`repo:` live→1, invented→`422`), byte-read (calibrated on this base's own repaired `sillsdev/libpalaso` figure, reproduced EXACTLY), and `git ls-remote --heads` (invented→`EMPTY-REF-SET`).** 🔴 `gh api repos/{owner}/{repo}` remains `403` session-scoped. 🔴 Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so. — 🟢 **Thirty-seventh pass (`p832`, 2026-11-15): `T111`–`T113` added** — the `P834` repair shown to have reached the INSTRUMENT and `8` addresses but NOT the published corpus, measured on a reproducible `1`-in-`7` sample of all `442` pinned `(address, bytes, sha256)` triples: `38` EXACT, `24` SHORT-BY-EXACTLY-`1`, residue `24/62` resolvable = **`38.7%`**, ~`171` extrapolated, and the `SHORT-BY-1` class TESTED rather than assumed — stripping the trailing-newline run from today’s bytes returned the pinned sha on `12` of `12`, while an address `p831` re-measured by hand returned EXACT, so the discriminator is whether a pass re-ran the address, not whether the probe is fixed (`T111`); the grant probe’s BRANCH axis shown to have no resolution step at all — `p773` widened the FILENAME list to `31` case-aware names and `p831` repaired the capture defect, but the branch is still the caller’s second positional argument, so one wrong guess `404`s all `31` paths and prints a verdict byte-identical to a true absence; swept over all `38` standing absence claims it yielded `3` false absences including Carnegie Mellon’s XPRIZE finalist (Apache-2.0, `p831` had it UNRESOLVED), Kolibri (MIT, and the base contradicted ITSELF about it on the same day) and a PowerSchool agent that is GPL-3.0 rather than ungranted (`T112`); and `ACTION p831-C`’s LATAM early-reading gap discharged in both directions — the CORPUS is a measured nil on three vocabularies while the APPLICATION layer is a `~110`-repository population, because LATAM’s literacy supply is written by SCHOOLS and the funder channel `p831` won with does not exist here: Ceibal, CENIA, ProFuturo and Fundación Santillana have no GitHub organisation, and `latam-gpt` ships `0` grants on `3` of `3` (`T113`). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py`.** 🟢 **Channel note: the channel `p830` recorded as LOST is RESTORED** — `gh api search/repositories -f q="repo:OWNER/NAME"` now discriminates (live→`total_count=1`, invented→`HTTP 422`). 🔴 `gh api repos/{owner}/{repo}` remains `403` session-scoped, so metadata is SEARCH-ONLY. 🟢 **A third channel was opened: `git ls-remote --heads`, the ref set.** 🔴 Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so. — 🟢 **Thirty-sixth pass (`p831`, 2026-11-15): `T108`–`T110` added** — the FOUNDATIONAL-LEARNING tier (early-grade literacy and numeracy) entered for the first time in `36` passes, after `grep -ric` over the six curated pages returned `132` hits for `literacy` against **`0`** for `numeracy`, `0` for `phonics`, `0` for `preschool`, `0` for `kindergarten`, `0` for `early years` and `0` for `decoding`, beside `592` for `STEM` and `196` for `credential`; the tier shown to be FIELD-TRIALLED AND FROZEN — the Global Learning XPRIZE corpus carries a `15`-month Tanzanian RCT behind it and has not been pushed since `2019`, while the content and measurement layers beneath it (`BloomDesktop`, `libpalaso`, Kolibri `studio`, Tangerine) were pushed this week, which gives the engagement rule *inherit the pipelines, fork the practice apps* (`T108`); the licence INDEX shown to disagree with the licence BYTES on the tier's `128★` traction leader, and one game shown to ship THREE grants at three permissions — BSD-2-Clause code, CC-BY-4.0 art, CC0-1.0 language data (`T109`, `p830`'s `OFL-1.1` finding generalised into a rule); and this base's own blocking gate suite MEASURED rather than assumed — `make -k` on a pristine `git archive HEAD` export reports `89` passing checks and **`18` RED BLOCKING GATES**, none of them in `DECLARED_RED`, where the fail-fast suite reported exactly one, with a measuring instrument wrong on `7` of `7` inputs behind that one; `p831` leaves `17`, zero regressions (`T110`). 🟢 **Thirty-fifth pass (`p830`, 2026-11-15): `T105`–`T107` added** — the SEN/inclusive-learner tier entered for the first time in `35` passes, after `grep -ric` returned `0` across all eight curated files for `learning disabilit*`, `neurodivergen*`, `occupational therap*`, `early intervention` and `well-being`, and `0` occurrences of `AAC` in `agents/top.md`; `T102`'s statutory-document rule shown to be LANGUAGE-BOUND and replaced in this tier by the name of the NATIONAL SIGN LANGUAGE, whose populations INVERT against economic size — India `2,693` and Brazil `94`/`24 MIT` against Germany `0` and Japan `3`, which makes APAC and LATAM the best-supplied regions in this tier and EMEA the worst (`T105`); the IDENTITY term shown to return the WORKPLACE tier rather than the learner tier, with `8` of the top `12` `neurodivergent` repositories by stars being agent-harness tooling for neurodivergent ADULTS and `0` of `12` learner-facing (`T106`, `T103`'s inversion rule on a third axis); and inclusion PEDAGOGY measured against inclusion COMPLIANCE — Universal Design for Learning, the framework every inclusion proposal cites, has a GitHub maximum of `1★` and is named on `2` lines of this base, while the WCAG/Section 508 remediation tier beside it is MIT/Apache and shelf-ready (`T107`). 🔵 **Gate-confirmed after insertion: `python3 -I ingest/derive-counts.py`.** 🔴 **Channel note: ONE CHANNEL WAS LOST THIS PASS.** `gh api` with a `repo:OWNER/NAME` qualifier returns HTTP `422` for live AND invented addresses, and `gh api repos/{owner}/{repo}` returns HTTP `403` for both — **neither discriminates, so neither was used as an oracle.** 🟢 Free-text `gh api search/repositories` IS bidirectionally controlled (live→`total_count=1`, nonsense→`0`) and supplied discovery and star/push metadata; `raw.githubusercontent.com` byte-read IS bidirectionally controlled (live→`200`, invented→`404`), so **every licence in `p830` is byte-read**. 🔴 `curl -sI` was NOT used as an oracle: `T923`/`T970` hold. 🔴 Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.
+
+## T118 — `T114`'s language rule survives being tested and SHRINKS: it is a Chinese-supply rule, not a general multilingual one
+
+🔴 **`T114` was the most consequential finding of `p833` and it was stated at full width:** *a nil
+is only a nil in the language the supply is written in.* 🟢 **`ACTION p833-A` existed to test it
+rather than cite it, and the test was run on three of this base's standing declared nils across
+five languages.** 🔵 **Two of the three did not behave the way `T114` predicts.**
+
+**The PROCTORING nil — FLIPPED, in Chinese, and only in Chinese.**
+
+| Language | Query | Result |
+|---|---|---|
+| Chinese | `监考 考试` | `36` repositories |
+| Chinese | `在线考试 防作弊` | `11` repositories |
+| Spanish | `supervisión exámenes en línea` / `proctoring examenes` / `vigilancia examen remoto` | `0` / `3` / `0` — the `3` are student course prototypes, **`0` granted** |
+| German | `Online-Prüfung Aufsicht` / `Fernklausur Überwachung` / `Prüfungssystem Hochschule` | `0` / `0` / `0` |
+| Portuguese | `prova online antifraude` / `fiscalização prova online` | `1` (ungranted) / `0` |
+
+🟢 **The Chinese set yields three granted platforms, byte-read and filed in
+`verticals/solutions.md`:** `xhgzs1314/mokexamsys` (MIT — authoring, sitting, **live invigilation**,
+marking and certificate issue in one deployment), `Quanda666/smart-exam-system` (MIT, with an
+append-only anti-cheat log) and `deceiver-djw/ExamOnline` (Apache-2.0, HarmonyOS-native).
+
+**The UDL nil — flipped as a POPULATION, NOT as a build-safe supply.** Spanish *Diseño Universal
+para el Aprendizaje* → `10`; Portuguese *Desenho Universal para a Aprendizagem* → `3`; German
+*Universelles Design Lernen* → `0`. 🔴 **Every one of the `13` sits at `0`–`1★`, and almost all of
+them are teacher-authored RESOURCE repositories — lesson objects, interactive games, strategy
+collections — not software.** 🟢 **The build-safe yield is exactly two rows:
+`neuronova-apps/DUA-3.0` (MIT, a Spanish DUA 3.0 strategy corpus, filed as a FOUNDATION because a
+corpus is what it is) and `KiaraPrecopio/booktor-tpi-unsam` (MIT, Argentina/UNSAM, a tutoring
+scheduler built to DUA principles).** 🔵 **So `T107`'s measurement stands — inclusion pedagogy has
+almost no code — and only its CONCLUSION needed correcting: the pedagogy exists, in Spanish, as
+content.** 🔴 **The Chinese leg of this nil is recorded as INCONCLUSIVE, not as a nil: `通用学习设计`
+returns `573` repositories and the full set is the `T115` noise class, so the probe could not
+discriminate and says so.**
+
+**The VOCATIONAL nil — HELD, in all five languages.** `职业教育 实训` → `9`;
+`Berufsbildung Ausbildung Plattform` → `0`; `formación profesional dual` → `1`;
+`educação profissional técnica` → `10`; `formation professionnelle apprentissage` → `12`.
+🔴 **The two largest populations are almost entirely personal portfolios and course-marketing
+sites, and the single best artefact in any of them — `throwOctober/zhixun-cloud-showcase`, a
+container-based vocational cloud-lab platform — carries NO GRANT** (probed `31` filenames × `1`
+ref). 🟢 **`p829` declared this nil and `p834` could not break it in five languages. It is a real
+gap in the sector, not an artefact of English.**
+
+🔵 **The revised rule, and it is narrower than the one it replaces:** a declared nil must name the
+LANGUAGE and the JURISDICTION it was declared for, and re-running it in a second language refutes
+it **only where the supply is actually written in that language.** 🟢 **For this sector that means
+Chinese refutes and Spanish, Portuguese, German and French do not.** 🔴 **`T114` is not withdrawn —
+it is bounded. One nil of three flipped, and the two that held are now stronger claims than they
+were before they were tested.**
+
+## T119 — The human-review boundary this base derived from EU law is the DE-FACTO architecture of the Chinese marking supply, which makes it practice rather than compliance
+
+🟢 **`P67` drew the scoring boundary from EU AI Act Annex III point `3` — assessing learning
+outcomes is high-risk by construction, so the model PROPOSES a mark and never RECORDS one — and
+`P73` inherited it wholesale.** 🔴 **It was a regulatory derivation, and a regulatory derivation is
+only as persuasive as the regulator in the room.**
+
+🟢 **Enumerating `作业批改` by `pushed_at` rather than by stars returns `20+` granted projects pushed
+within three weeks, and at least `8` of them state the SAME three-stage loop in their own
+descriptions, unprompted and independently:** `AI 预批 → 教师复核 → 系统记录`.
+
+- `turtlelnc/MES-Homework` — 教师复核后 … 所有数字由已复核数据确定性计算 (*every figure computed
+  deterministically from REVIEWED data*)
+- `ShuyaoGao/homework-ai-grading-lab` — 手写识别 + 量规评分 + 教师复核
+- `leipengo/homework-grader` — 视觉模型预批 → 老师复核 → 带红笔批注的 A4 PDF
+- `AaRonZcH01/AutoReview` — 批改与教师复核工作台 … 原图复核
+- `WDMoonMoonBird/exam-deep-seek` — 教师审核发布
+- `nohookcarey/Autochaoxing` — 教师确认后提交
+- `Benhuangsuan/linear-algebra-grading-desk` — 人工评分与可选视觉 AI，支持人工复核
+- `Scudlen7/ruiping-ai` — AI 批改 → 错题归因 → 学情报告
+
+🔴 **Annex III does not apply in any of these jurisdictions. Not one of these authors was
+complying with anything.** 🟢 **They converged on the boundary because a teacher who is
+accountable for a mark will not ship a mark she did not see** — which is a pedagogical and
+professional constraint, not a legal one.
+
+🔵 **What this changes commercially:** the review boundary stops being the thing a studio concedes
+to the compliance officer and becomes the thing it demonstrates to the teacher. 🟢 **Same
+architecture, two independent justifications, and the second one survives in jurisdictions where
+the first does not exist** — which is precisely what a global studio needs from a pattern it
+intends to sell in four regions. 🔴 **`P74` is written on this basis and says so in its first
+paragraph.**
+
+## T120 — The marking supply ATTACHES to the incumbent teaching platform rather than replacing it, and the granted clients already exist
+
+🟢 **`T116` established the access-before-agent rule against a STATE endpoint
+(`basic.smartedu.cn`). 🔵 This pass observes the same shape against COMMERCIAL endpoints, which is
+where most of the world's teachers actually work.**
+
+🟢 **Four closed Chinese teaching platforms — 超星学习通 (Chaoxing/Xuexitong), 雨课堂 (Rain
+Classroom), 批改网 (Pigai) and 学在重邮 — each already have granted MIT clients written against
+them:**
+
+| Client | Target | Mechanism |
+|---|---|---|
+| https://github.com/jiajia-jun/catcher | all four at once | local-first aggregation into one window, **no third party in the path** |
+| https://github.com/Unke-cc/chaoxing-grader-universal | 超星学习通 | Chrome CDP against the teacher's own authenticated session |
+| https://github.com/mc-dl/ykt-grader | 雨课堂 | Playwright/CDP, with score write-back **and save verification** |
+| https://github.com/meanpeng/hermes-skill-chaoxing-grading | 超星学习通 | packaged as an agent skill |
+| https://github.com/kxiaoxiao111/pigai-essay | 批改网 | fetches the prompt, drafts, submits, reads the score back |
+
+🔴 **None of these asks the incumbent for an API, because the incumbent does not expose one.**
+🟢 **They drive the browser the teacher is already signed into** — which is why they work, and also
+exactly where the engagement risk sits: the client holds a teacher's live session.
+
+🔵 **The rule for a studio:** in a marking engagement, **the integration layer is already written
+and granted — inherit it; the differentiator is the rubric, the error taxonomy and the evidence
+trail, never the scraper.** 🔴 **And the session-handling has to be scoped and consented in the
+contract, because `catcher`'s own pitch — 无三方, no third party — is the feature a school is
+actually buying.**
+
+## T121 — `ACTION p833-B` settled: the CJK star-inversion is a RANKING property, not a substring-matching one
+
+🟢 **`p833` asserted the read-the-full-set rule without separating its two possible causes and
+registered the measurement as an action rather than letting the trend harden. The measurement is
+cheap and it was run.**
+
+| Query | Unqualified TOTAL | `in:name,description` TOTAL | Top-`10` identical? |
+|---|---|---|---|
+| `智慧教育` | `399` | `399` | **yes, byte-identical** |
+| `作业批改` | `435` | `435` | **yes, byte-identical** |
+| `AI素养` | `100` | `100` | **yes, byte-identical** |
+| `智能备课` | `221` | `221` | **yes, byte-identical** |
+
+🔴 **The qualifier is INERT. It changes neither the result set nor its order.** 🟢 **So the
+inversion is not substring matching over long READMEs — it is ranking: a book list at `26,122★`,
+an x86 tutorial at `5,450★` and a political-propaganda corpus at `3,351★` outrank every real
+education project in the set, which sit at `0`–`7★`.**
+
+🔵 **The discovery protocol is therefore unchanged but now CAUSED rather than asserted: on a CJK
+corpus, read the full set and sort by `pushed_at`.** 🟢 **`p834` did exactly that and it is what
+produced nine agent rows, four foundations and five verticals out of queries `p833` had already
+run.** 🔴 **The same four queries, the same day, the same session — the difference is entirely in
+the sort key.**
 
 ## T114 — The grading gap was never a SUPPLY gap. It was a LANGUAGE gap, and `T82`'s rule now holds on a fifth axis and in a non-Latin script
 

@@ -4,6 +4,22 @@ region: Global
 updated: 2026-11-15
 ---
 
+## 🟢 `2026-11-15` (thirty-ninth pass, `p834`) — **the EXAMINATION-PLATFORM vertical enters this file, `38` passes late, and it was always there**
+
+🟢 **`5` rows added (`140` → `145`): `3` build-safe (MIT ×2, Apache-2.0 ×1) and `2` AGPL-3.0 filed
+as reference platforms with the posture stated per row.**
+
+🔴 **The admission this pass owes: this shelf has carried LMS, SIS, MOOC, AAC and early-grade
+measurement platforms, and never once an EXAMINATION platform — the system a school runs whenever
+it assesses anyone.** 🟢 **`在线考试系统` returns `1,766` repositories.** 🔵 **The vertical was
+invisible for the same reason the grading gap was (`T114`, `T118`): every sweep that would have
+found it ran in English.**
+
+🔴 **And the traction is inverted against the licence, again (`T109`): the leaders are
+AGPL-3.0 at `3,915★` and `91★`, while the three rows a studio can actually ship sit at
+`0`, `0` and `1★`.**
+
+
 ## 🟢 `2026-11-15` (thirty-eighth pass, `p833`) — **`ACTION p832-C` DISCHARGED: both carried licence conflicts settled by bytes, and one of them had no answer at all**
 
 🟢 **`p832` registered two conflicts rather than guessing at them and asked for byte-reads with
@@ -213,7 +229,26 @@ platform.** 🟡 **Treat it as competitive intelligence that happens to be MIT-l
 | **AGENTIC STAR** (SoftBank, 🇯🇵) | 🔴 **Not institution-run — a hosted commercial agent platform**, developer docs at `developers.fd.agenticstar.tm.softbank.jp`, homepage `agenticstar.io`. 🟢 Its runtime SDKs `agenticstar-agentcore` (`1.0.3`) and `agenticstar-platform` (`3.3.0`, `80` releases) are public on PyPI and MIT by their wheel metadata | 🟢 **`74` MIT education agent templates, `54` catalogue ids `EDU-C2-004`…`EDU-C2-173`** — reference row [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent), `EDU-C2-028`, byte-read MIT (`1,074 B`, HEAD `71c442ebd88e`) | 🟢 **MIT** (templates and both SDKs, all byte- or metadata-verified) | 🟡 **Adopt the SPECS, not the runtime.** 🔴 Templates raise `PlatformRequired` at graph compile without a SoftBank deployment; all `74` are `0★`, unmaintained since October; the framework's advertised source repo has **zero commits** (`T89`); hard `==` pins on `langgraph`/`langchain`/`fastapi`. 🟢 **Tests run without the platform — harvest per `P61`** |
 | **AgentCore graph scaffold** (the catalogue's shared architecture) | 🔵 Not a product — the uniform structure under all `74` templates: `config/agent.yaml` manifest (`required_trust_level`, declared secrets), `src/graph/`, `src/nodes/`, `src/schemas/state.py`, `docs/02_design.md`, `docs/03_test_spec.md`, `tests/proof_of_boundary/` | 🟢 Domain nodes differ completely between ids — byte-compared across three repositories this pass: `iep_section_generator`/`regulatory_compliance` vs `affected_material_analysis`/`stakeholder_mapping` vs `bloom_level`/`difficulty_score`. Reference row [`haidang024/agentic-star-education-curriculum-change-impact-briefing-agent`](https://github.com/haidang024/agentic-star-education-curriculum-change-impact-briefing-agent) (`EDU-C2-046`, `45` files) | 🟢 **MIT** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ae3eea9ac056`) | 🟢 **This is the reusable asset.** 🔵 One scaffold, `54` real domain implementations — so a studio gets a uniform, inspectable architecture across `54` education workflows instead of `54` unrelated codebases. 🔴 The scaffold's base class ships only in the binary wheel; re-implement on LangGraph (now on `repos/foundations.md`) |
 
-## Education vertical platforms — 140 rows
+## Education vertical platforms — 145 rows
+
+### Filed by `p834` (2026-11-15) — `5` rows: the EXAMINATION-PLATFORM vertical, and the two AGPL rows are the traction leaders
+
+🔴 **This shelf has carried LMS, SIS, AAC, MOOC and measurement platforms for thirty-eight passes
+and has never carried an EXAMINATION platform**, which is the system a school actually runs when it
+assesses anybody. 🟢 **The vertical exists, it is large (`在线考试系统` → `1,766` repositories), and
+its traction leaders are copyleft.**
+
+🔵 **Risk posture stated per row rather than once: `3` rows are build-safe (MIT / Apache-2.0),
+`2` are AGPL-3.0 and are filed as REFERENCE platforms a studio reads and never links against.**
+🟢 **All five byte-read `2026-11-15` on the DEFAULT branch.**
+
+| Platform | Repo | Licence | Stars | What it is |
+|---|---|---|---|---|
+| 魔课考试系统 (mokexamsys) | https://github.com/xhgzs1314/mokexamsys | 🟢 **MIT — byte-read** (`1,072 B`, `sha256:876b0fd6f66a…`, `master/LICENSE` [DEFAULT], refs=[`master`]) | 0 | **Region: APAC.** 🟢 **New this pass (`p834`) — the most COMPLETE build-safe examination platform found in any language, and the row that flips this base's PROCTORING nil.** One self-hosted PHP + MySQL deployment covering the whole loop: teacher authoring → student sitting → **live invigilation** → automatic AND manual marking → result publication → electronic certificate issue. `24.8 MB`, pushed `2026-11-07`. 🔴 **`0★`.** 🔵 **`T118` is the point: this base declared proctoring a nil and held that nil for passes, because the nil was declared in English. The supply was always there, written in Chinese, under MIT.** |
+| smart-exam-system (智慧在线考试) | https://github.com/Quanda666/smart-exam-system | 🟢 **MIT — byte-read** (`1,114 B`, `sha256:4a4252b5f68b…`, `main/LICENSE` [DEFAULT], refs=[`main`]) | 1 | **Region: APAC.** 🟢 **New this pass (`p834`) — the ANTI-CHEAT AUDIT-LOG row.** Vue 3 + Spring Boot + MySQL across three consoles, with question bank, paper, sitting, marking and result analysis — and a 防作弊日志, an append-only anti-cheat event log. 🔵 **Filed for the log rather than the detection: an evidence trail a human can adjudicate is defensible under every assessment regime in this base's policy matrix, whereas an automatic cheating VERDICT is a high-risk decision about a learner under EU AI Act Annex III point `3`.** 🔴 **That distinction is the whole sellable difference and `P74` carries it.** Pushed `2026-06-24` |
+| ExamOnline (HarmonyOS) | https://github.com/deceiver-djw/ExamOnline | 🟢 **Apache-2.0 — byte-read** (`11,356 B`, `sha256:c5accbbd8546…`, `master/LICENSE` [DEFAULT], refs=[`master`]) | 0 | **Region: APAC.** 🟢 **New this pass (`p834`) — the only HarmonyOS-native education artefact on these shelves.** ArkTS/ArkUI front end over a Spring Boot back end: question bank, automatic paper assembly, sitting, anti-cheat monitoring, AI marking, publication. `30.5 MB`, pushed `2026-09-16`. 🔵 **Filed for the DEVICE axis: a China K-12 engagement increasingly means a domestic tablet estate, and this is the one row in the base that already targets that runtime.** 🔴 **`0★` — filed on platform coverage, not traction.** |
+| xzs (学之思开源考试系统) | https://github.com/mindskip/xzs | 🔴 **AGPL-3.0 — byte-read** (`34,520 B`, `sha256:76a97c878c9c…`, `master/LICENSE` [DEFAULT], refs=[`master`]) | 3915 | **Region: APAC.** 🟢 **New this pass (`p834`) — the TRACTION LEADER of the Chinese examination vertical by two orders of magnitude** (`3,915★` against the MIT rows' `0`–`1★`). Spring Boot + Vue, student and admin consoles, question bank, exams, practice, wrong-answer book. Pushed `2026-11-12`. 🔴 **AGPL-3.0: a hosted derivative must publish its source. NOT build-safe for a proprietary delivery and it is filed as a REFERENCE platform only.** 🔵 **The pattern `T109` keeps producing: the most-starred thing in a vertical is the thing a studio may not ship, and the shippable rows are the unstarred ones beside it.** |
+| SmartKBS | https://github.com/youufis/SmartKBS | 🔴 **AGPL-3.0 — byte-read** (`34,834 B`, `sha256:2086e7eae183…`, `master/LICENSE` [DEFAULT], refs=[`master` `release/7.4` … `release/8.1`]) | 91 | **Region: APAC.** 🟢 **New this pass (`p834`) — the most COMPLETE teaching platform found this pass, and the one with a real release train** (`master` plus `release/7.4` through `release/8.1`). General-subject AI teaching platform for primary, junior and senior secondary: question bank and intelligent paper assembly, examinations, practice, homework, **automatic marking**, and live classroom modes (闯关 / 抢答 / 抽问). `91★`, pushed `2026-11-15`. 🔴 **AGPL-3.0 — reference only, same posture as `xzs`.** 🔵 **Read for the classroom-interaction model: no build-safe row in this base implements timed whole-class question modes at all.** |
 
 ### Filed by `p828` (2026-11-15) — `1` row, and it is the only PERMISSIVE LMS on this shelf
 

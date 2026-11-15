@@ -4,6 +4,94 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirty-ninth pass, `p834`) — **the same four queries as `p833`, a different sort key, and twenty times the supply**
+
+🟢 **`9` build-safe agent rows added (`379` → `388`), `4` foundation rows (`171` → `175`), `5`
+vertical rows (`140` → `145`), `4` trends (`T118`–`T121`), `1` recipe (`P74`), `5` regional market
+blocks (`4` substantive including CANADA and MEXICO, `1` declared nil) and `1` standing RED gate
+repaired. Every licence byte-read on `2026-11-15` on the DEFAULT branch.**
+
+🔵 **The gate suite was MEASURED on both sides of this pass rather than claimed: `make -k hooks`
+run on a stashed baseline and again on the commit — **`26` RED before, `25` after, `110` passing
+checks, ZERO regressions, one repair** (`gate-region-headings`). 🟢 **`python3 -I
+ingest/derive-counts.py` GREEN on all five graded files at commit:** `agents/top.md 388`,
+`repos/foundations.md 175`, `verticals/solutions.md 145`, `intel/trends.md 121`,
+`compose/patterns.md 74`, `ragged=0`, `nolink=0`.
+
+### What moved
+
+🔴 **`p833` ran `作业批改` and filed one marking agent. `p834` ran the same query sorted by
+`pushed_at` instead of by stars and found `20+` granted projects pushed within three weeks.** 🟢 **The
+difference between the two passes is entirely the sort key** (`T121`).
+
+**Filed as agents** — all MIT unless noted, all byte-read today:
+
+- [`yinuoguan/nengdou-ai-review-helper-web`](https://github.com/yinuoguan/nengdou-ai-review-helper-web)
+  — **MulanPSL-2.0**, `193★`, `20` forks. The highest-traction marking agent on these shelves by
+  `27×`. Vue 3 + Nest.js + MongoDB + DeepSeek, multi-subject rubric marking. 🔴 **Also `D834`'s
+  proof case — see below.**
+- [`turtlelnc/MES-Homework`](https://github.com/turtlelnc/MES-Homework) — `4★`, PROMOTED from this
+  file (named at `p720`, never shelved). Upload → AI pre-mark → **teacher review** → class
+  attainment, mastery by knowledge point, error-cause statistics, remedial plan. **Every figure
+  computed deterministically from reviewed data only.**
+- [`yosemdawn/all-in-one-AI_edu_system`](https://github.com/yosemdawn/all-in-one-AI_edu_system) —
+  `8★`, K-12, **batch** marking for a whole class.
+- [`Unke-cc/chaoxing-grader-universal`](https://github.com/Unke-cc/chaoxing-grader-universal) —
+  `1★`, 超星学习通 teacher-side batch marking over Chrome CDP.
+- [`mc-dl/ykt-grader`](https://github.com/mc-dl/ykt-grader) — `3★`, 雨课堂, score write-back **with
+  save verification**.
+- [`shiyalun1126/math-work`](https://github.com/shiyalun1126/math-work) — `0★`, **step-level**
+  adjudication of handwritten maths; states its own competence boundary.
+- [`Benhuangsuan/linear-algebra-grading-desk`](https://github.com/Benhuangsuan/linear-algebra-grading-desk)
+  — `5★`, three modes (Mock / human / vision AI) with **spend caps**.
+- [`ShuyaoGao/homework-ai-grading-lab`](https://github.com/ShuyaoGao/homework-ai-grading-lab) —
+  `1★`, static demo on **synthetic** data; carries no efficacy evidence and is labelled as such.
+- [`KiaraPrecopio/booktor-tpi-unsam`](https://github.com/KiaraPrecopio/booktor-tpi-unsam) — `0★`,
+  **LATAM** (Argentina / UNSAM), DUA-principled tutoring scheduler; default branch is `develop`.
+
+### 🔴 `D834` — the probe `p833` built to stop false ABSENCE started producing false PRESENCE
+
+🔴 **`p833`'s probe orders `main` / `master` / `dev` by a hardcoded preference and takes the first
+`200`.** 🟢 **`yinuoguan/nengdou-ai-review-helper-web` carries Apache-2.0 on a stale `main`
+(`11,357 B`, `sha256:c71d239df917…`) and MulanPSL-2.0 on its DEFAULT `master` (`9,247 B`,
+`sha256:f0dade5c9337…`); `develop` and `feature` agree with `master`.** 🔴 **`p833`'s probe would
+have filed a licence the project does not ship — and the Apache limb is stock text, byte-identical
+to `sumo1/AI-GAME-COOL` already on these shelves, so no header read could have caught it.**
+
+🔵 **Blast radius MEASURED, not assumed:** `20` published addresses sampled → branch-pick
+disagreement on `2` (`DOAJ/doaj` default `develop`; `ILIAS-eLearning/ILIAS` default `release_11`),
+licence-byte divergence on **`0` of `20`**. 🟢 **Real, rare, and NOT a reason to re-open `442`
+pinned figures.** 🟢 **Fixed in `ingest/p834-grantprobe.sh`, which resolves the default branch
+first and restores the `31`-name list (`ACTION p833-C`, instrument limb); both controls pass and
+`sillsdev/libpalaso` reproduces exactly.**
+
+### 🟡 `ACTION p833-A` — the nils re-run, and `T114` comes back SMALLER than it went in
+
+| Nil | Chinese | Spanish | Portuguese | German | French | Verdict |
+|---|---|---|---|---|---|---|
+| Proctoring | `36` + `11`, **3 granted** | `0`/`3`/`0`, none granted | `1`, ungranted | `0`/`0`/`0` | — | 🔴 **FLIPPED — Chinese only** |
+| UDL | inconclusive (noise) | `10`, **1 granted** | `3`, none granted | `0` | — | 🟡 **population yes, supply no** |
+| Vocational | `9`, best one UNGRANTED | `1` | `10`, portfolios | `0` | `12`, portfolios | 🟢 **HELD in all five** |
+
+🔵 **So `T114` is bounded rather than withdrawn: it is a Chinese-supply rule.** 🟢 **The two nils
+that survived the test are stronger claims now than before it.**
+
+### 🟢 `ACTION p833-B` — discharged, cheap answer
+
+🔴 **`in:name,description` is INERT on CJK queries** — identical totals (`399`/`435`/`100`/`221`)
+and byte-identical top-`10`s with and without it. 🟢 **The inversion is RANKING, not substring
+matching** (`T121`).
+
+### Found and NOT filed, with reasons
+
+- 🔴 `sixiaopangai/2026-AI-Literacy-Exam-Helper` (`25★`) — **CC-BY-NC-SA-4.0 byte-read** while the
+  GitHub index says `NOASSERTION`. **Non-commercial: excluded.** The index hid a restriction.
+- 🔴 `yangfeng005/online_exam` (`18★`) — AGPL-3.0; filed in `verticals/solutions.md` with the
+  affero flag instead.
+- 🔴 `throwOctober/zhixun-cloud-showcase` — **`NO-GRANT-AT-ROOT`** (`31` filenames × `1` ref). The
+  best vocational artefact found in any language, and ungranted.
+
+
 ## `2026-11-15` (thirty-eighth pass, `p833`) — **the grading gap closed in Chinese, and the star-ranked channel could not see any of it**
 
 🟢 **`4` build-safe agent rows added (`375` → `379`), `3` foundation rows added (`168` → `171`),

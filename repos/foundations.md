@@ -4,6 +4,17 @@ region: Global
 updated: 2026-11-15
 ---
 
+## 🟢 Thirty-ninth pass (`p834`, 2026-11-15) — **`4` rows: the SUBSTRATE under the marking tier, and the correction `T107` needed**
+
+🟢 **Foundations `171` → `175`. Verticals `140` → `145`. Agents `379` → `388`.**
+
+🔴 **The organising observation: this base has spent two passes filing marking AGENTS and never
+once filed the thing they all sit on.** 🟢 **`lsgwr/spring-boot-online-exam` at `1,695★` MIT is the
+highest-traction artefact in the assessment tier and it was not on these shelves.** 🔵 **Every row
+byte-read `2026-11-15` on the DEFAULT branch with the rebuilt probe — see `D834` in
+`agents/top.md` for why the branch now matters.**
+
+
 # Foundational open-source repos for education
 
 ## 🟢 The NATIONAL-CURRICULUM ACCESS layer — **what a China engagement reads INSTEAD of licensing content** (new, thirty-eighth pass `p833`) (3 rows)
@@ -164,7 +175,28 @@ above was graded on the licence question alone.**
 | https://github.com/langchain-ai/langchain | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`) | 149546 | **Region: Global.** The model and tool abstraction layer beneath the above. 🟡 **Shelved with a deliberate caution: this base's compose recipes should depend on `langgraph` for control flow and on `langchain-core` for interfaces, not on the `langchain` meta-package, whose surface moves faster than an education deliverable's support window.** 🔵 **Note for the byte-read gate: its `LICENSE` is on `master`, not `main` — a `main`-only probe returns `404` and would record a false `NO_LICENCE_FILE`, which is a live defect in any sweep that assumes the default branch name** |
 | https://github.com/teppei-miyashita/agenticstar-agentcore | 🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last touched `2026-08-12` | 0 | 🔴 **Region: APAC. Shelved as a WARNING row — the worked example for `T89`.** This is the source repository that the PyPI package `agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository`, and it holds no commits at all. 🟢 **The package itself is genuinely MIT** (`License-Expression: MIT` in the wheel, `dist-info/licenses/LICENSE`, `1,078 B`, `sha256:2afbb5fc…`) **and genuinely installable** — 🔴 **but it is wheel-only, single-release (`2026-09-17`), and unreadable at its stated address, while hard-pinning `langgraph==1.1.10`, `langchain==1.2.18`, `fastapi==0.136.0` and `agenticstar-platform==0.5.32`.** 🔵 **Do NOT add it to a delivery tree. It is here so that the next pass asking "is the AGENTIC STAR stack adoptable?" finds the answer already measured: licensed yes, auditable no** |
 
-## Foundational repos — 171 rows
+## Foundational repos — 175 rows
+
+## 🟢 The ASSESSMENT-PLATFORM BASE layer — **what a marking agent is built ON rather than beside** (new, thirty-ninth pass `p834`) (4 rows)
+
+🟢 **Why this is a foundations layer and not an agents one.** `p833` and `p834` have now shelved
+`10` marking agents between them, and every single one of them assumes something underneath it:
+a question bank, a paper, a submission, a roster, a score store. 🔴 **This base shelved the agents
+first and the substrate never.** 🔵 **The four rows below are the substrate, all MIT, all byte-read
+today on the DEFAULT branch with `ingest/p834-grantprobe.sh`.**
+
+🔴 **The traction asymmetry is the finding and it is the reverse of `p833`'s.** `p833` found a
+`1,000:1` ratio of ACCESS clients over the agents that need them. 🟢 **Here the ratio is
+`1,695★` for the assessment BASE against `0`–`8★` for every agent that would sit on it** — the
+substrate is mature, well-starred and years old, while the AI layer above it is three weeks old.
+🔵 **A studio inherits the bottom and writes only the top.**
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/lsgwr/spring-boot-online-exam | 🟢 **MIT — byte-read** (`1,072 B`, `sha256:4653947f9792…`, `master/LICENSE` [DEFAULT], refs=[`master` `cursor/modernize-exam-stack-410f` …]) | 1695 | **Region: APAC.** 🟢 **New this pass (`p834`), and it is the highest-traction MIT artefact in this base's entire assessment tier.** A complete Spring Boot + Vue online examination system — question bank, paper assembly, sitting, auto-scoring, roles for admin / teacher / student — with a LIVE public demo instance named in its README. 🔵 **Filed as the BASE rather than as a product: `P74` writes a marking service against this schema instead of inventing one, which is the `12`→`6` week saving `P73` could only half-claim.** 🔴 **Its active branches are `cursor/*` agent branches, so the project is itself being maintained by an agent harness — recorded because it affects how a fork should be rebased, not as a quality judgement.** Pushed `2026-10-10` |
+| https://github.com/jiajia-jun/catcher | 🟢 **MIT — byte-read** (`1,066 B`, `sha256:03ccaf326c9a…`, `main/LICENSE` [DEFAULT], refs=[`main` `feat-Email` `feat-android`]) | 9 | **Region: APAC.** 🟢 **New this pass (`p834`) — the AGGREGATION layer, and the row that makes `T120` a layer rather than two anecdotes.** 捕手 pulls a teacher's or student's assignments out of 雨课堂, 学习通, 学在重邮 **and 批改网** into one local window; open-source, local-first, no third party in the path. 🔵 **This is the integration surface for the whole Chinese marking tier: four closed incumbents, one granted client, already written.** 🔴 **`9★` — and it is the highest-leverage `9★` on these shelves, because every agent in `p834`'s agents table has to solve this problem before it can do anything at all.** Pushed `2026-11-14` |
+| https://github.com/Flow-Ciotter/Study | 🟢 **MIT — byte-read** (`1,069 B`, `sha256:ec1d2ffa8221…`, `main/LICENSE` [DEFAULT], refs=[`main`]) | 1 | **Region: APAC.** 🟢 **New this pass (`p834`) — the one-deployment reference**: course planning, AI tutor explanation, a knowledge graph, a question bank with quizzes, homework marking, flashcards and a research assistant, with **one-click self-hosting**. 🔵 **Filed for the self-host claim specifically — it is the only row in this layer that bundles the tutor and the marker in a single deployable, which is the shape a small ministry pilot actually procures.** 🔴 **`1★` and young; filed as a reference ARCHITECTURE to read, not as a dependency to adopt (`T108`'s rule).** Pushed `2026-11-05` |
+| https://github.com/neuronova-apps/DUA-3.0 | 🟢 **MIT — byte-read** (`1,070 B`, `sha256:b62c51270285…`, `main/LICENSE` [DEFAULT], refs=[`main`]) | 0 | **Region: LATAM.** 🟢 **New this pass (`p834`) — a CORPUS, not a tool, and it is filed here for exactly that reason.** Resources, guidance and teaching strategies under Diseño Universal para el Aprendizaje `3.0`, in Spanish, under MIT. 🔴 **`T107` measured UDL's GitHub maximum at `1★` and concluded inclusion pedagogy has no code. `T118` corrects the conclusion without overturning the measurement: the pedagogy is there, in Spanish, as CONTENT.** 🔵 **An MIT-granted DUA strategy corpus is the retrieval base a LATAM inclusion agent needs and `P70` had to assume; `130 KB`, so it is small enough to read in full before trusting it.** 🔴 **A second copy exists at `crebeucayali/DUA-3.0` carrying `NOASSERTION`; the granted copy is the one filed.** Pushed `2026-09-21` |
 
 ### Filed by `p829` (2026-11-15) — `1` row, and `1` is the honest figure
 

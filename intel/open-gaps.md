@@ -4,6 +4,122 @@ region: Global
 updated: 2026-11-15
 ---
 
+## 🆕 `p834` — **`p833`'s three actions dispositioned (`1` discharged, `1` run and it SHRANK the trend it was testing, `1` discharged in its instrument limb only), `1` standing RED gate repaired, and `3` new actions registered**
+
+🔵 **Disposition first, and a NOT DONE is written as NOT DONE.**
+
+### 🟢 `ACTION p833-B` — **DISCHARGED. The answer is the cheap one and it was always available**
+
+🟢 **`in:name,description` is INERT on CJK queries.** `智慧教育` (`399`), `作业批改` (`435`),
+`AI素养` (`100`), `智能备课` (`221`) — **identical totals and byte-identical top-`10`s with and
+without the qualifier.** 🔵 **So `T115`'s inversion is a RANKING property, not a substring-matching
+one, and the discovery rule (read the full set, sort by `pushed_at`) is now CAUSED rather than
+asserted.** 🟢 **Filed as `T121`.** 🔴 **`p833` was right to refuse to harden this without the
+measurement: the two causes have different fixes and only one of them is a query qualifier.**
+
+### 🟡 `ACTION p833-A` — **RUN, and it came back SMALLER than the trend that prescribed it**
+
+🟢 **Three standing nils re-probed across five languages. One flipped, one half-flipped, one
+held.** 🔴 **Proctoring FLIPPED — in Chinese only (`36` + `11` repositories, `3` granted, one of
+them a complete MIT invigilation-to-certificate platform). UDL flipped as a POPULATION
+(`10` Spanish, `3` Portuguese) but not as a build-safe supply — `2` granted artefacts out of `13`,
+the rest teacher-authored resources; the Chinese leg is recorded INCONCLUSIVE because
+`通用学习设计` returns the `T115` noise class and the probe could not discriminate. Vocational HELD
+in all five languages, with its best artefact (`throwOctober/zhixun-cloud-showcase`) carrying no
+grant at all.**
+
+🔵 **`T114` is bounded rather than withdrawn: it is a CHINESE-supply rule, not a general
+multilingual one** (`T118`). 🟢 **Recorded as a narrowing of this base's own most-cited recent
+finding, on the pass immediately after it was made.**
+
+🔴 **One limb NOT run: the LATAM foundational nil was not re-probed this pass** — `p831` and `p832`
+had already run it on three vocabularies and the marginal value was judged low against the three
+nils that had never been tested. 🟡 **Said here rather than left as an implied completion.**
+
+### 🟡 `ACTION p833-C` — **DISCHARGED in its INSTRUMENT limb only. The archive limb is NOT done**
+
+🟢 **`ingest/p834-grantprobe.sh` is committed: the `31`-name filename list is RESTORED (`p833` ran
+at `10`) and the DEFAULT BRANCH is now resolved before the filename loop.** 🟢 **Both controls
+pass; `sillsdev/libpalaso` reproduces this base's own repaired figure exactly (`1,082 B`,
+`sha256:b716617149f3…`).**
+
+🔴 **The `38` standing absence claims were NOT re-run against it.** 🟡 **Carried as
+`ACTION p834-A`. This is the second pass it has been owed.**
+
+### 🔴 `D834` — **a DEFECT this base introduced one pass ago, found and fixed in the same pass that used it**
+
+🔴 **`p833`'s probe orders `main` / `master` / `dev` by a hardcoded preference and takes the first
+`200`, which need not be the branch the project ships.** 🟢 **Proved on
+`yinuoguan/nengdou-ai-review-helper-web`: Apache-2.0 on a stale `main` (`11,357 B`,
+`sha256:c71d239df917…`) against **MulanPSL-2.0 on the default `master`** (`9,247 B`,
+`sha256:f0dade5c9337…`).** 🔵 **`T112` hardened the branch axis against false ABSENCE; this is
+false PRESENCE on the wrong branch — the same axis, the opposite error, one pass apart.**
+
+🟢 **Blast radius MEASURED: `20` published addresses sampled, branch-pick disagreement on `2`,
+licence-byte divergence on `0`.** 🔵 **Real, rare, and explicitly NOT a reason to re-open `442`
+pinned figures.**
+
+### 🟢 A standing RED gate REPAIRED rather than committed over
+
+🟢 **`make gate-region-headings` was RED before this pass and is GREEN after it.** One `###`
+heading inside `### LATAM` (`ACTION p816-F`'s block) was out of the closed region vocabulary while
+every sibling was `####`; demoted to `####`. 🔵 **One line, a gate this base built at `p338` and
+wired at `p383`, red on the real commits since.**
+
+### 🔴 `ACTION p832-A` and `ACTION p832-D` — **STILL NOT DONE. Third owing**
+
+🔴 **`p832-A`** — the `~171` stale pinned figures are still not re-measured and the CURRENCY gate
+over published figures is still not built. 🔴 **`p834` added `18` more pinned triples to that
+corpus; all `18` were measured today and are current, which does not discharge the residue.**
+🔴 **Per the `p773-E` rule this is now at the limit: `p835` RETIRES it or EXECUTES it.**
+
+🔴 **`p832-D`** — the upstream licence requests (`latam-gpt/llm-data-eval`,
+`latam-gpt/toxicity-classifier`, `latam-gpt/language_identifier`, `aydenait2025/GradeTrainer` and
+the unlicensed LATAM literacy remainder) were **not sent**. 🟢 **`p834` adds a fifth address with
+the same shape: `throwOctober/zhixun-cloud-showcase`, the best vocational artefact found in five
+languages, `NO-GRANT-AT-ROOT`.** 🔴 **Sixth recording of the substantial-and-unlicensed class
+(`T24`) without one action taken. It is still the cheapest unexecuted item on this list.**
+
+### ACTION `p834-A`…`p834-C` for the next pass
+
+🔴 **`ACTION p834-A` — re-run the `38` standing absence claims against `p834-grantprobe.sh`.**
+🔵 **Inherited from `p833-C` and now cheaper than it was: the probe is built, both axes are
+hardened (31 filenames, default branch resolved) and both controls pass.** 🟢 **`T112` already
+found `3` false absences in `38` on the branch axis alone, before the default-branch defect was
+known.** 🔴 **Nothing is blocking this except that it has not been run.**
+
+🟡 **`ACTION p834-B` — give `MulanPSL-2.0` a fixture before a third permissive family enters a
+deliverable unchecked.** 🔵 **`p834` filed a `193★` row under it. It is OSI-approved and
+permissive, so the row IS build-safe — but `gate-mit-tier`, `gate-permissive-arm` and
+`gate-template-identity` have no Mulan fixture, which means this base now publishes a grant family
+its own instruments cannot grade.** 🟢 **The payload is pinned (`9,247 B`,
+`sha256:f0dade5c9337…`) so the fixture is a copy, not a hunt.** 🔴 **And the bilingual point
+matters: the Mulan text ships Chinese and English side by side, so a byte-band or title-line
+classifier calibrated on English stock texts will misread it.**
+
+🟡 **`ACTION p834-C` — probe APAC PROCUREMENT in the procuring jurisdiction's own language.**
+🔴 **Two passes have now declared this gap in English and returned US and UK material both times.**
+🟢 **The channels are named so this is executable: China's Ministry of Education guidance,
+Malaysia's `MyProcurement` portal and `MOSTI`, Indonesia's `LKPP` and Kemendikbudristek.**
+🔵 **`T118` is the reason the English attempts failed, and this is the first chance to test whether
+the language rule extends from SUPPLY to DEMAND — which would be a materially bigger finding than
+the supply version.**
+
+### 🔴 Declared gaps this pass did NOT close
+
+- 🔴 **APAC PROCUREMENT.** Searched explicitly (`AI education APAC 2026 government procurement
+  framework schools China Malaysia Indonesia vendor`) and returned **zero** APAC procurement
+  material. Named rather than left silent; carried as `ACTION p834-C`.
+- 🟡 **The EMEA tender channel is NAMED but UNREAD.** The `390`-tender analysis (central
+  government ran `124` of `390`) could not be fetched: the host is outside this session's permitted
+  network domains. 🔵 **Recorded as UNREADABLE-HERE, not as unread-by-choice** — it is the most
+  actionable procurement datum this base has for any region and it is still second-hand.
+- 🔴 **No price for Canada or Mexico.** Both now have named policy instruments; neither has a
+  spend figure, and the `2026` market-size spread remains contested.
+- 🔴 **The Chinese UDL probe is INCONCLUSIVE, not nil.** `通用学习设计` → `573`, full set
+  noise-dominated. It needs a better term before any verdict is recorded for that jurisdiction.
+
+
 ## 🆕 `p833` — **`p832`'s four actions dispositioned (`2` discharged, `1` carried in full, `1` carried and re-shaped), and `3` new actions registered — two of them against findings rather than against instruments**
 
 🔵 **Disposition stated before the new actions, and a NOT DONE is written as NOT DONE.**
