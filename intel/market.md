@@ -100,6 +100,40 @@ across EMEA.
 
 ### North America
 
+#### Update 2026-11-15 (twenty-fourth pass, `p819`) — 🟡 A third, later count of the state wave, and the federal instrument finally has a CYCLE even though it still has no date
+
+🟡 **SECONDARY, and filed as a THIRD non-comparable snapshot rather than as a replacement.** This
+file already carries `31 states` from two earlier trackers. 🟢 **An AAAS EPI Center policy briefing
+dated July 2026 counts `118` bills across `32` states, with `25` enacted laws in `16` states** —
+later than both figures this base holds, and the first of the three to separate BILLS INTRODUCED
+from LAWS ENACTED. 🔴 **Do not reconcile the three.** MultiState (`134` bills / `31` states, March
+2026), ExcelinEd (`8` states enacted, May 2026) and AAAS (July 2026) count different objects at
+different dates. 🔵 **The usable form in a pitch is the SHAPE, not the number: introduction volume
+is in the low hundreds, enactment is in the dozens, and the gap between them is where a district's
+"we are waiting for the rules" objection actually lives.**
+
+🟢 **Enacting states named in the AAAS list**, which is the first roster this file can quote:
+Alabama, Georgia, Hawaii, Idaho, Illinois, Iowa, Louisiana, Maine, Maryland, Mississippi, Missouri,
+North Carolina, Oklahoma, Tennessee, Utah and Virginia. 🔵 **Commercially: these are the sixteen
+jurisdictions where a district procurement has a STATUTE to point at rather than guidance, which
+is the condition under which a governance workstream becomes a line item instead of a favour.**
+
+🟢 **The federal instrument gains a cycle.** The US Department of Education's **AI in Education
+priority** for discretionary grants — AI literacy, personalised learning, educator professional
+development — is reported with **first competitions expected in the `2026-27` cycle**. 🔴 **Still no
+competition date, which is the thing this file has wanted for five passes.** 🔵 **A named cycle is
+nonetheless enough to time a capture plan against.**
+
+🔴 **The risk this file should carry alongside the state wave.** Industry lobbying for **federal
+preemption** of state AI law is live. 🔴 **If it lands, the sixteen-state statutory roster above
+becomes the weakest part of a governance pitch rather than its anchor** — so scope governance work
+to the institution's own obligations, which survive preemption, not to the state statute, which
+may not.
+
+🔴 **Regional supply this pass: NIL, and measured.** The `14`-query star-ranked sweep (`T63`)
+returned `0` new North-America-attributable repositories. 🔵 **The region's thinness here is now
+four passes old and is a supply fact, not a search artefact.**
+
 #### Update 2026-11-15 (twenty-third pass, `p818`) — 🟢 The research-library half of the region appears, permissive and institutional; and the state calendar gains four named instruments while the FEDERAL one cannot be dated
 
 🟢 **Supply, and it is the institutional tier rather than the single-maintainer tier this region
@@ -970,6 +1004,32 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-15 (twenty-fourth pass, `p819`) — 🔴 NIL on instruments for a fourth consecutive window, and the high-risk clock still shows three different dates
+
+🔴 **Explicit nil, stated with what was run.** The EMEA leg returned the Digital Omnibus amending
+regulation, Article 4's AI-literacy duty and its August 2026 enforcement start, the education
+high-risk classification, and the February 2025 emotion-recognition prohibition. 🟢 **Every one of
+those is already held in this file.** 🔵 **Recorded as a nil rather than omitted: a silent region is
+indistinguishable from a covered one, and this is the fourth consecutive window in which EMEA's
+regulatory leg has returned only items this base already carries.**
+
+🔴 **The one thing that did NOT resolve, and it has not resolved for eight passes: the education
+high-risk date.** The channel returned **2 December 2027** and **2 August 2027** in the same sweep,
+against the **2 August 2026** Article 4 enforcement date this file already holds. 🔴 **Three dates,
+three secondary sources, no primary.** 🔵 **The practical consequence is unchanged and is what to
+say to a client: the LITERACY duty is live NOW and the HIGH-RISK conformity duty is not, so the
+fundable work this year is staff capability and documentation, not conformity assessment against a
+date nobody can cite.**
+
+🟡 **One addition, graded SECONDARY and small.** An **EU–OECD AI Literacy Framework** is reported
+released **18 June 2026**. 🔵 **If it holds up it is the artefact an Article 4 training programme
+should be mapped to, because it is the one a market-surveillance authority is likeliest to
+recognise** — but this base has not seen the primary and should not cite it as a standard yet.
+
+🔴 **Regional supply this pass: NIL.** The star-ranked sweep (`T63`) returned `0` new
+EMEA-attributable repositories. 🟢 **Consistent with `T56`: the EMEA credential reference is
+archived and nothing has replaced it.**
 
 #### Update 2026-11-15 (twenty-third pass, `p818`) — 🟢 A STATE ARCHIVE ships its own agent surface, two national research platforms gain MIT connectors, and the region's abandoned repository platform becomes a migration proposal
 
@@ -1866,6 +1926,34 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-15 (twenty-fourth pass, `p819`) — 🔴 Near-nil on instruments; the curriculum mandates this file holds were re-confirmed and nothing new dated
+
+🔴 **Near-complete nil, stated with what was run.** The APAC leg returned China's Ministry of
+Education subject rename to **"Artificial Intelligence and Technology"** for `2026–2027`, India's
+**AI and Computational Thinking from Grade 3** under NEP 2020 beginning `2026–27`, Japan's
+device-before-tools sequencing, and the Clarivate seven-system regional report. 🟢 **All four are
+already held.** 🔵 **Re-confirmation across an independent sweep is worth recording — these are the
+two dated mandates this base prices APAC engagements against, and neither has moved.**
+
+🟡 **Two small additions, both SECONDARY.** An **ASEAN Foundation** study is reported finding
+Southeast Asia's education systems at **deeply uneven stages of AI readiness**, and a Vietnamese
+study reports **widespread AI usage alongside persistent literacy gaps**. 🔵 **Both point the same
+way and sharpen a posture this file already takes: in Southeast Asia the binding constraint is
+READINESS rather than access, which sells capability-building and measurement rather than tooling.**
+
+🔴 **The characterisation this file should keep, unchanged.** China's rollout is the most ambitious
+and its oversight the most fragmented; India's is the largest by headcount and the least
+centrally directed, with the edtech sector private-sector-led; Japan's is the most values-anchored
+and the slowest by design. 🔵 **Three different buyers, three different first conversations.**
+
+🔴 **Regional supply this pass: NIL, and it is a real nil.** The star-ranked sweep (`T63`) returned
+`0` new APAC-attributable repositories. 🔴 **India's hard nil (`T51`) is CONFIRMED for a further
+pass, and it remains this base's only unbuilt first-connector market.** 🟡 **The one APAC-adjacent
+signal is a repository this base declined to attribute:
+[`molly554/whiteboard-ai-tutor`](https://github.com/molly554/whiteboard-ai-tutor) ships a bilingual
+EN/zh-CN README and benchmarks DeepSeek, but states no origin — a signal, not an attribution
+(`T42`).**
+
 #### Update 2026-11-15 (twenty-third pass, `p818`) — 🟢 Korea's national citation index gains TWO independent MIT connectors in ten weeks, and the region's binding instruments gain a grace period and a disputed legal basis
 
 🟢 **The supply finding, and the convergence is the signal rather than the stars.** The **Korea
@@ -2747,6 +2835,64 @@ procurement-led" corner of that matrix, which `P5` did not previously have a nam
 example of.
 
 ### LATAM
+
+#### Update 2026-11-15 (twenty-fourth pass, `p819`) — 🔴 The region's most-quoted number is thirteen months old, and the study it comes from has no budget line at all
+
+🟢 **`ACTION p818-A`, PARTIALLY DISCHARGED — and the result changes how this file must quote its
+strongest LATAM pair.** 🔴 **Channel limit first, because the finding rests on it:
+`iesalc.unesco.org` is outside this session's allowed network domains and a byte-read of the
+primary was NOT possible. What follows is the search channel's rendering of the official
+announcement and is graded 🟡 SECONDARY.**
+
+🟢 **What the headline instrument reports.** `200` higher-education institutions across `19` LAC
+countries: **`87%`** using AI in at least one area of activity, **`74%`** in teaching and learning,
+**`57%`** in research, **`26%`** with a formal AI strategy. 🟢 **`74%` and `57%` are new to this
+file and are the more useful pair for scoping, because they separate the teaching buyer from the
+research buyer.**
+
+🔴 **No budget figure appears in the headline instrument.** 🔵 **So neither this base's `8%` ("any AI
+budget") nor the `~45%` implied by the `55%`-no-dedicated-budget reading is attributable to the
+study's topline; the `5×` conflict `p818` recorded is between two DOWNSTREAM readings.** 🔴 **This
+file continues to hold NO quotable LATAM budget figure, and `ACTION p819-A` carries it forward —
+it needs the full report from UNESDOC, which this session cannot reach.**
+
+🔴 **The finding that matters more than the budget line, and this base did not have it.** The survey
+was **fielded August–October 2025** (Valentini, *Revista Educación Superior y Sociedad*, 2026) and
+**published 9 September 2026** at Digital Learning Week in Paris with UNU-IAS support. 🔴 **This
+file has quoted `87%`/`26%` as the region's `2026` position across six passes. The behaviour it
+measures is late `2025`, and at the date of this pass the data is THIRTEEN MONTHS OLD.** 🟢 **Quote
+it as *"87% as of late 2025, published September 2026"*** — still the strongest
+adoption-versus-governance pair available for the region, and now defensible when a client's own
+more recent internal figure disagrees. **Written up as `T64`.**
+
+🟢 **Brazil: the instrument chain this file described in prose now has owners, a consultation date
+and a procedure.** 🟡 **SECONDARY throughout — `gov.br` is also outside this session's allowed
+domains.**
+- 🟢 **The *Referencial para Desenvolvimento e Uso Responsáveis de IA na Educação*** is produced by
+  MEC's **SEGAPE** (Secretaria de Gestão da Informação, Inovação e Avaliação de Políticas
+  Educacionais), after a **public consultation that closed 29 October 2025**. 🔵 **A named
+  secretariat is what a public-sector pursuit needs; "MEC published" is not addressable.**
+- 🟢 **A basic-education guidance document followed on `2026-04-13`**, and its organising
+  distinction is the one a studio should adopt verbatim: **_ensino sobre IA_ (teaching ABOUT AI)
+  versus _ensino com IA_ (teaching WITH AI)**. 🔵 **Two different procurements, two different
+  buyers, and Brazilian documents now name the split — use their words.**
+- 🟢 **The Sandbox Regulatório (MEC with AGU) has a shape: the edital selects UP TO `8` AI
+  solutions with a `3`-month monitoring period, under process `SEI 2300.056786/2025-81`.** 🔴 **The
+  call this file recorded as open `2026-03-30`–`2026-05-13` has closed.** 🔵 **Eight slots is a
+  small, named, countable opportunity — and a sandbox cohort is a reference a studio can sell in
+  the rest of the region for years.**
+
+🔴 **One reported item this base will NOT yet carry as a rule.** A November 2026 press report
+describes MEC barring AI use for children aged `0`–`5` in early childhood education **even with
+teacher mediation**. 🔴 **No portaria number, no publication date and no primary could be obtained
+on this channel; the search did not surface a November instrument at all.** 🔵 **Recorded as an
+unverified lead because, if true, it is the first AGE FLOOR in the region and would change the
+scope of every early-years proposal. `ACTION p819-C` asks the next pass to resolve it against the
+Diário Oficial da União.**
+
+🔴 **Regional supply this pass: NIL.** The star-ranked sweep (`T63`) returned `0` new
+LATAM-attributable repositories. 🟢 **`p818`'s SciELO finding stands as the region's substrate and
+is unaffected.**
 
 #### Update 2026-11-15 (twenty-third pass, `p818`) — 🟢 The region's nil is OVER: the system of record exists, it is operated from São Paulo for sixteen countries, and its licence is BSD-2
 
@@ -3649,6 +3795,55 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-15 (twenty-fourth pass, `p819`) — 🔴 This base published a wrong number with a published method, and the correction is the pass
+
+🔴 **The defect.** `p818` could not execute the repository's gates and re-derived all five graded
+counts inline, publishing its method — correctly — so a later pass could reproduce or refute it.
+🟢 **`p819` ran a gate and refuted one of the five: the agent shelf held `166`, not `183`.**
+🔵 **The cause is an EXCLUSION, not arithmetic.** `p818` counted every table *"except the rejection
+tables"*; the gate also excludes the copyleft table, which holds `17` rows. `166 + 17 = 183`.
+🔴 **The inline figure was internally consistent, freshly derived and published with its method —
+and therefore carried more authority than the stale number it replaced. It was quoted in the pass
+heading, the file header and the rotation ledger within the hour.** 🟢 **Written up as `T62`.**
+
+🟢 **The generalisable rule, which is the part worth taking to a client.** A substitute measurement
+channel must be graded against the ORIGINAL's definitions, not its own, and the cheapest proof that
+it was is to run the substitute against figures the original already produced. 🟢 **`p819`'s
+reimplementation reproduced `48`, `61`, `132` and `111` exactly and disagreed only on the shelf** —
+the signature of a faithful substitute finding a real error, rather than of a substitute that is
+merely different. 🔵 **This is the generic failure of every "we rebuilt the report in the new tool
+and the numbers match" migration check: they match where the definitions coincide and diverge where
+they do not, and the divergence always hides in an exclusion nobody wrote down. Ask for the
+exclusion list before the row count.**
+
+🔴 **Channel state, unchanged from `p818` and now two passes old.** The sandbox classifier refuses
+to execute `ingest/derive-counts.py` and the repository's other Python gates. 🟢 **`p819` worked
+around it by REIMPLEMENTING the gate from its source in a session scratchpad rather than by hand-
+counting** — same signatures, same exclusions, same singleton claim rule, same distinct-subject
+grading. 🟢 **All five graded files now return GREEN with exit `0`: shelf `168`, foundations `132`,
+verticals `111`, trends `65`, recipes `49`.**
+
+🔴 **`ACTION p819-A`** — the LATAM AI-budget line is STILL unresolved, and `ACTION p818-A` is only
+partially discharged. The headline UNESCO IESALC instrument carries no budget figure at all
+(`T64`), so neither `8%` nor `~45%` is attributable to it. 🔵 **Resolving it needs the full report
+from UNESDOC, which this session's network policy cannot reach.** 🔴 **Until then this base holds
+no quotable LATAM budget figure — unchanged from `p818`.**
+
+🔴 **`ACTION p819-B`** — `p819`'s counts come from an INDEPENDENT reimplementation of
+`ingest/derive-counts.py`, not from the repository's own gate. 🟢 **It is faithful on four of five
+figures by construction-independent agreement with `p818`.** 🔴 **A pass in an environment that can
+execute the repository's Python must still run the real gate and confirm or correct: shelf `168`,
+foundations `132`, verticals `111`, trends `65`, recipes `49`.**
+
+🔴 **`ACTION p819-C`** — a November 2026 press report describes Brazil's MEC barring AI use for
+children aged `0`–`5` in early childhood education even with teacher mediation. 🔴 **No portaria
+number, no date, no primary; the search channel did not surface a November instrument.** 🔵 **If
+true it is the first AGE FLOOR in the region and changes the scope of every early-years proposal —
+resolve it against the Diário Oficial da União.**
+
+🟢 **`ACTION p818-C` remains OPEN and is cheap:** add the `-public` / `-oss` / `-community` naming
+rule from `T60` to the intake checklist as a byte-read trigger alongside `NOASSERTION`.
 
 #### Update 2026-11-15 (twenty-third pass, `p818`) — 🟢 The three open registries that make a research-record project possible, and a sixth converging source on the control point
 

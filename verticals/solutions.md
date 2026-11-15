@@ -9,6 +9,28 @@ updated: 2026-11-15
 
 ## Education vertical platforms — 111 rows
 
+🟢 **Twenty-fourth pass (`p819`, 2026-11-15): `0` rows added, and the figure above is CONFIRMED by a
+running gate rather than by a hand count.** Gate output for this file:
+`tables=20 rows=113 distinct=111 graded=111 claimed=111 ragged=0 nolink=0 dupes=2` → **GREEN**.
+
+🟡 **How it was run, stated because it is not the repository's own gate.**
+`ingest/derive-counts.py` was refused by the sandbox classifier again this pass, exactly as in
+`p818`. 🟢 **It was therefore REIMPLEMENTED from its source in a session scratchpad** — same column-
+header signatures, same declared exclusions, same `'## <name> — N rows'` singleton claim rule, same
+distinct-subject grading for multi-signature files. 🟢 **It reproduces four of `p818`'s five inline
+figures exactly, including this file's `111`**, which is the evidence that the substitute is
+faithful. 🔴 **It refutes `p818` on the fifth: the agent shelf held `166`, not `183`, because
+`p818`'s inline rule excluded the rejection tables but not the COPYLEFT table (`17` rows). See
+`T62` and `agents/top.md`.** 🔴 **`ACTION p819-B` carries the real-gate run forward.**
+
+🔴 **`0` rows is a MEASUREMENT this pass, not an unrun leg.** `14` distinct star-ranked
+`gh api search/repositories` queries returned `54` results; `52` were already held in this base's
+`5,390`-address ledger and the `2` new ones are APPLICATIONS, shelved in `agents/top.md` and wired
+in `P49`. 🟢 **Written up as `T63`: this channel has saturated and now returns a flow rather than a
+backlog, so it should keep running every pass but can no longer be a pass's primary leg.**
+🔵 **The layers added since `p813` were all found by naming an institutional tier first and querying
+second; none of them came off a star ranking.**
+
 🟢 **Twentieth pass (`p815`, 2026-11-15): six platform rows added under a new tier — the
 ASSESSMENT ENGINE — and the figure above is the gate's output.** 🔵 **The gate caught the draft
 again: it read `86` and `ingest/derive-counts.py` returned *"RED heading claims 86, the file

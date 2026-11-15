@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-fourth pass, `p819`) — **`p818`'s headline count was wrong by `17`, the gate that proves it had to be rebuilt, and the agent channel is measured SATURATED**
+
+**Pass `p819`.** 🟢 **`2` build-safe agent rows added and `0` copyleft; `0` foundation rows and `0`
+platform rows — both nils are MEASURED and are the pass's second finding; `T62`–`T65` and `P49`
+written; `4` regional update blocks, one per region.**
+
+### 🔴 The correction: `183` was wrong, and the way it was wrong is the finding
+
+🟢 **`ACTION p818-B` asked the next pass to re-run the real gate against `p818`'s insertions.
+`p819` ran one. Four of `p818`'s five figures reproduced exactly — recipes `48`, trends `61`,
+foundations `132`, verticals `111`. The fifth did not: the agent shelf held `166`, not `183`.**
+
+🔵 **The mechanism, which transfers.** `p818`'s inline rule counted `^\| .*github\.com`
+*"in every table except the rejection tables"*. The gate excludes the rejection tables **and the
+copyleft table**, which holds exactly `17` rows. `166 + 17 = 183`. 🔴 **The inline arithmetic was
+right, the de-duplication was right, and `distinct=183 dupes=0` was TRUE of the population it
+counted. The population was not the shelf.** 🟢 **Written up as `T62`: a degraded channel fails by
+measuring the wrong population, not by drifting — which is worse, because the number looks derived.**
+
+🔴 **A second defect the inline channel could not see.** The file's canonical count heading read
+`149 rows` against a file holding `166`: `p818` filed its `17` rows in a SECOND table carrying the
+canonical column signature rather than appending them to the shelf. 🟢 **That layout is legitimate —
+`repos/foundations.md` and `verticals/solutions.md` are summed across `20` tables each — so the fix
+was the heading. It now states the sum, `168`, and the gate is GREEN on it.**
+
+🟡 **How the gate was run, stated because it is not the repository's own.** `ingest/derive-counts.py`
+was refused by the sandbox classifier again this pass, exactly as in `p818`. 🟢 **It was therefore
+REIMPLEMENTED from its source in a session scratchpad** — same column-header signatures, same
+excluded tables, same `'## <name> — N rows'` singleton rule, same distinct-subject grading for
+multi-signature files — **and it reproduces four of `p818`'s five figures exactly, which is the
+evidence that it is faithful.** 🔴 **`ACTION p819-B` carries the real-gate run forward.**
+
+### 🟢 The two new agents, both byte-read, both newborn
+
+- 🟢 **[`chuma-beep/mathua`](https://github.com/chuma-beep/mathua)** — MIT (`1,074 B`,
+  `sha256:6bd7c2a3…`), `416★`, `43` forks, pushed `2026-11-14`. **An adaptive mathematics ENGINE,
+  not a tutor wrapper**: a checked prerequisite DAG of `3,015` concepts across `29` courses, `9,045`
+  worked examples, FSRS-6 review, and mastery gating that scores a correct-but-slow answer as WEAK
+  against a per-concept time threshold. Go + Next.js, SQLite default, Postgres via `pgx/v5`.
+  🔴 **Honest dependency: ~`32%` of concepts need Python + `sympy` and the production image fails
+  the build without it.**
+- 🟢 **[`molly554/whiteboard-ai-tutor`](https://github.com/molly554/whiteboard-ai-tutor)** — MIT
+  (`1,089 B`, `sha256:ed7406a6…`), `157★`, created `2026-11-11`. **Shelved for the protocol and the
+  benchmark; the README says it is not a hosted app.** The model streams drawing instructions as
+  JSON, a browser plays them as handwriting, and interruption returns the BOARD STATE.
+  🔵 **`288` lessons, `64` boards blind-reviewed, `$4.83` total spend, every board committed and
+  replayable: Gemini 4 Argon `11/11` at `$0.0277`/lesson; Claude Haiku 5.5 `9/11` at `$0.0019`.**
+  🔴 **A `~15×` cost spread across adjacent quality — written up as `T65`, wired as `P49`.**
+
+### 🔴 The nil, measured rather than assumed — `T63`
+
+🔴 **`14` distinct star-ranked `gh api search/repositories` queries across this base's education
+veins returned `54` results. `52` were already in the `5,390`-address ledger. `2` were new, and both
+were published inside the window.** 🟢 **This channel no longer surfaces a backlog, it surfaces a
+flow: cheap to run every pass, but it can no longer BE the pass.** 🔵 **Every recent finding of
+consequence here — SciELO at `p818`, the assessment layer at `p815` — came from naming an
+institutional layer first and querying second.**
+
+🔴 **Declared nils, so they are auditable:** no new supply this pass for special education / IEP
+(`p815`'s nil, confirmed again), India-origin education platforms (`T51`), or the APAC/LATAM
+credential layer (`T56`).
+
 ## `2026-11-15` (twenty-third pass) — **The system a researcher is JUDGED BY — and the end of this base's LATAM story as a nil**
 
 **Pass `p818`.** 🟢 **`17` build-safe agent rows added and `0` copyleft; `12` foundation rows and

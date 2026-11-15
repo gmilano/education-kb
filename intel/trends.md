@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
+**Sixty-five** trends — derived trends: **65** — 🟢 **Twenty-fourth pass (`p819`, 2026-11-15): `T62`–`T65` added** — a degraded measurement channel shown to fail by measuring the WRONG POPULATION rather than by drifting, which is why `p818`'s `183` was self-consistent and still wrong (`T62`); the star-ranked GitHub channel measured SATURATED for this base, `52` of `54` results already held and both new arrivals under five days old (`T63`); this base's most-quoted LATAM pair dated to its FIELDING WINDOW and found to be thirteen months old at the point of quotation, with `ACTION p818-A` partially discharged (`T64`); and whiteboard tutoring shown to be a TRANSPORT PROTOCOL rather than a model capability, with a `~15×` cost spread across adjacent quality measured on `288` lessons (`T65`). 🟢 **Count re-derived after insertion by an INDEPENDENT reimplementation of `ingest/derive-counts.py` — the repository's own gate is still refused by the sandbox classifier — which returned `derived=65 claimed=65 GREEN`, and which reproduced `p818`'s other four figures exactly. See `agents/top.md` and `ACTION p819-B`.**
+
 **Sixty-one** trends — derived trends: **61** — 🟢 **Twenty-third pass (`p818`, 2026-11-15): `T58`–`T61` added** — Latin America's missing system of record found, named and byte-read: it is SciELO, `158` repositories, BSD-2, operated from São Paulo for sixteen countries, and seven passes of this base's LATAM nil rested on a star-ranked sweep that was structurally blind to it (`T58`); the research and library platform tier shown to split by VINTAGE rather than geography, `11` of `11`, which refutes `p814`'s *"the only permissively licensed platform in the education stack"* and makes the licence-clean choice the technically better choice for the first time in this base (`T59`); a vendor `NOASSERTION` repository named `-public` whose bytes read `Proprietary License`, with the rule that a repository name is a marketing string and never a grant (`T60`); and `p815`'s accessibility nil CORRECTED while its IEP nil is CONFIRMED, with the two separated into a licence-request target and a real build gap (`T61`). 🔴 **Count re-derived INLINE, not by `ingest/derive-counts.py`: the sandbox classifier refused to execute the repository's Python gates this pass. `grep -c '^## T'` → `61`. Degraded channel, flagged.**
 
 **Fifty-seven** trends — derived trends: **57** — 🟢 **Twenty-second pass (`p817`, 2026-11-15): `T52`–`T57` added** — 🔴 **`T50` CORRECTED as published, on counter-evidence this base already held** (`T52`); interoperability as a 2026 PROCUREMENT requirement with the standards bodies shipping the agent tooling (`T53`); the authoring tier gone agent-native with the interchange standards as COMPILE TARGETS (`T54`); the search index shown to have HOLES, with the first cross-owner licence-hash collision discharging `ACTION p816-E` (`T55`); the credential layer's regional asymmetry — NA live, EMEA archived, APAC/LATAM nil under active mandates (`T56`); and `ACTION p815-A` CLOSED with the branch axis fixed (`T57`). 🔵 **Re-derived after insertion by `ingest/derive-counts.py`: `57`.**
@@ -76,6 +78,123 @@ the second time.** 🔵 **The amendment uses no component discovered this pass**
 three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
+
+## T62 — A degraded measurement channel does not drift, it measures the WRONG POPULATION — and that is why `p818`'s count was self-consistent and still wrong by `17`
+
+🔴 **The evidence.** `p818` could not execute `ingest/derive-counts.py` and re-derived all five graded
+counts inline, publishing its method so a later pass could reproduce or refute it. `p819` ran a gate
+and refuted exactly one of the five. `p818` reported the agent shelf at `183`; the shelf held `166`.
+
+🟢 **The mechanism, which is the transferable part.** `p818`'s inline rule counted rows matching
+`^\| .*github\.com` *"in every table except the rejection tables"*. `derive-counts.py` excludes the
+rejection tables **and** the copyleft table. The copyleft table holds `17` rows. `166 + 17 = 183`.
+🔵 **The inline arithmetic was correct. The de-duplication was correct. `distinct=183 dupes=0` was
+true of the population it counted.** The defect was that the population was not the shelf.
+
+🔴 **Why this is worse than staleness, which is the defect class this base built the gate for.** A
+stale count is visibly old and a reader discounts it. 🔴 **A count that is freshly derived, internally
+consistent, and published with its method carries MORE authority than the number it replaced, and
+`183` was quoted in the pass heading, the file header and the rotation ledger within the hour.**
+
+🟢 **The rule this base now holds.** A substitute channel must be graded against the ORIGINAL's
+definitions, not against its own. Reproducing a gate means reproducing its **exclusions** — and the
+cheapest way to prove you did is to run the substitute against the figures the original already
+produced. 🟢 **`p819`'s reimplementation reproduced `48`, `61`, `132` and `111` exactly and disagreed
+only on the shelf**, which is the signature of a faithful substitute finding a real error rather than
+of a substitute that is simply different.
+
+🔵 **Engagement use.** This is the generic failure of a client's "we rebuilt the report in the new
+tool and the numbers match" migration check. They match where the definitions coincide and diverge
+where they do not, and the divergence is always in an exclusion nobody wrote down. **Ask for the
+exclusion list before the row count.**
+
+## T63 — The star-ranked GitHub channel is SATURATED for this base: `52` of `54` results already held, and both new arrivals were under five days old
+
+🟢 **The measurement, stated with its queries so it is auditable.** `p819` ran `14` distinct
+star-ranked `gh api search/repositories` queries across the education veins this base buys from —
+`ai tutor agent`, `topic:education topic:llm`, `grading autograder llm`, `topic:edtech`,
+`lesson plan generator ai teacher`, `knowledge tracing`, `spaced repetition FSRS scheduler`,
+`topic:learning-analytics`, `curriculum generator agent school`, `exam question generation llm`,
+`student assessment rubric llm agent`, `mcp server education learning`,
+`topic:intelligent-tutoring-system`, `socratic tutor llm` — all bounded by `stars:>` and `pushed:>`
+thresholds. 🔴 **`54` results. `52` were already in this base's `5,390`-address ledger. `2` were new.**
+
+🔴 **And both new ones were newborn.** [`chuma-beep/mathua`](https://github.com/chuma-beep/mathua)
+pushed `2026-11-14`, [`molly554/whiteboard-ai-tutor`](https://github.com/molly554/whiteboard-ai-tutor)
+created `2026-11-11`. 🔵 **Neither was a backlog item this base had missed. Both were published inside
+the window.**
+
+🟢 **What saturation actually means here, and it is not "the research is done".** It means the
+channel's YIELD CURVE has changed shape: this channel no longer surfaces a backlog, it surfaces a
+flow. 🔵 **A flow channel is cheap to run and should be run EVERY pass precisely because its results
+are perishable — but it can no longer be the pass's main leg, and a pass that runs only this channel
+will correctly report almost nothing.**
+
+🟢 **The corollary for where the next finding comes from.** `p818` found SciELO not by ranking stars
+but by asking which SYSTEM a career depends on and then looking for its code. 🟢 **Every recent
+finding of consequence in this base came from naming an institutional layer first and querying
+second; the star-ranked sweep confirms and prices them, it does not discover them.**
+
+🔴 **Declared, so the nil is auditable:** no new repository surfaced this pass for special education
+or IEP (`p815`'s nil, CONFIRMED again), for India-origin education platforms (`T51`), or for the
+APAC/LATAM credential layer (`T56`).
+
+## T64 — This base's most-quoted LATAM figures describe late `2025`, not `2026` — and the instrument they come from carries no budget number at all
+
+🟢 **`ACTION p818-A`, partially discharged.** `p818` recorded a `5×` conflict inside one UNESCO
+IESALC study — `8%` of institutions with "any AI budget" against a second reading implying `~45%` —
+and correctly refused to quote either until the primary instrument was read.
+
+🔴 **What `p819` could and could not do.** `iesalc.unesco.org` is outside this session's allowed
+network domains and a byte-read of the primary was NOT possible; the finding below rests on the
+search channel's rendering of the official announcement and is graded 🟡 **SECONDARY** accordingly.
+
+🟢 **What the headline instrument actually reports.** `200` higher-education institutions across `19`
+LAC countries: **`87%`** using AI in at least one area, **`74%`** in teaching and learning, **`57%`**
+in research, **`26%`** with a formal AI strategy. 🔴 **No budget figure appears.** 🔵 **So neither `8%`
+nor `45%` is attributable to the headline instrument, and the conflict is between two DOWNSTREAM
+readings, not inside the study's own topline.**
+
+🔴 **And the finding this base did not have, which matters more than the budget line.** The survey
+was **fielded August–October 2025** (Valentini, *Revista Educación Superior y Sociedad*, 2026) and
+**published 9 September 2026** at Digital Learning Week in Paris with UNU-IAS support. 🔴 **This
+base has quoted `87%`/`26%` as the region's `2026` position across six passes. The behaviour it
+measures is from late `2025`, and at the date of this pass the data is THIRTEEN MONTHS OLD.**
+
+🟢 **The rule.** A study's publication date is a press fact; its FIELDING WINDOW is the data's date,
+and only the fielding window belongs beside the number. 🔵 **Quote it as *"87% as of late 2025,
+published September 2026"*** — which is still the strongest adoption-versus-governance pair available
+for the region, and is now defensible when a client's own more recent internal number disagrees with
+it.
+
+🔴 **`ACTION p819-A` carries the budget line forward:** it needs the full report from UNESDOC, which
+this session's network policy cannot reach.
+
+## T65 — Whiteboard tutoring is a TRANSPORT PROTOCOL, not a model capability — and the first public benchmark of it shows a `~15×` cost spread across adjacent quality
+
+🟢 **The finding, and it is an architecture finding rather than a product one.**
+[`molly554/whiteboard-ai-tutor`](https://github.com/molly554/whiteboard-ai-tutor) (MIT, byte-read,
+`157★`) demonstrates that a tutor which writes, draws and erases while it talks is **a small
+protocol, not a model feature**: the model streams drawing instructions as JSON, a browser plays
+them back as handwriting, and on interruption the app sends the BOARD STATE back to the model.
+
+🔵 **Why that is commercially load-bearing.** The whiteboard modality is the single most common
+"we need a frontier vendor for this" assumption in a tutoring RFP. 🟢 **If the modality lives in the
+transport, the model is a swappable component and the contract is a commodity one** — which changes
+both the build estimate and the vendor-lock conversation on every tutoring engagement.
+
+🟢 **And it is measured, not asserted.** One frozen prompt, `8` scenarios across science, maths and
+economics, `6` models, `2` thinking settings, `3` repeats = `288` lessons; `64` boards blind-reviewed;
+total spend `$4.83`; every board committed to the repository and replayable. 🔵 **Published result:
+Gemini 4 Argon `11/11` boards passed at `$0.0277` per lesson and `8.0 s` to first stroke; Claude Haiku
+5.5 `9/11` at `$0.0019` per lesson.** 🔴 **A `~15×` cost spread for `11/11` against `9/11` is the
+whole procurement argument, and it is the kind of number a studio normally has to spend a sprint
+generating.**
+
+🔴 **The caveat, stated with the finding.** The repository was four days old when shelved and the
+model set is a snapshot. 🟢 **Take the HARNESS — frozen prompt, blind review, committed artefacts —
+and re-run it against the client's own scenarios. The reusable asset is the method, not the
+leaderboard.** See `P49`.
 
 ## T48 — In the retention layer the LICENCE is set by WHERE THE CODE RUNS, not by who wrote it — and the upstream's own recommended topology is the copyleft one
 

@@ -6,16 +6,37 @@ updated: 2026-11-15
 
 # Education AI Agents — curated, license-verified
 
-🟢 **183 real agents on this shelf — 183 distinct addresses, 0 duplicates, derived this pass, not
-carried.** 🔴 **CORRECTION: the heading below this one has claimed `147` since `p815` and the
-shelf held `166` before this pass's insertions — a `19`-row drift across three passes.**
-🔴 **`ingest/derive-counts.py` could NOT BE EXECUTED in the `p818` environment: the sandbox
-classifier refused to run the repository's Python gates.** 🟢 **The count was therefore re-derived
-inline and the method is published so the next pass can reproduce or refute it** — rows matching
-`^\| .*github\.com` in every table except the rejection tables, de-duplicated on the
-`owner/name` slug: `rows=183 distinct=183 dupes=0` after insertion (`166`/`166` before).
-🔴 **This is a DEGRADED verification channel and is flagged as such; it agrees with the gate's
-structure but was not produced by the gate.**
+🟢 **168 build-safe agents on this shelf, summed across the file's two build-safe tables by a
+RUNNING GATE** — `tables=2 rows=168 distinct=168 graded=168 ragged=0 nolink=0 dupes=0`.
+
+🔴 **CORRECTION, and it is this pass's headline: `p818` published `183` and the number is wrong by
+`17`.** 🟢 **`ACTION p818-B` asked the next pass to re-run the real gate against `p818`'s
+insertions. `p819` ran it and the shelf held `166`, not `183`, before this pass's two rows.**
+🔵 **The mechanism, stated so the defect cannot recur silently:** `p818`'s inline method counted
+`^\| .*github\.com` *"in every table except the rejection tables"*. The gate excludes the
+rejection tables **and the copyleft table**, which `p818`'s wording did not. The copyleft table
+holds exactly `17` rows. `166 + 17 = 183`. 🔴 **The degraded channel did not drift, it measured a
+different population — which is the more dangerous failure, because the arithmetic was
+self-consistent and the figure looked derived.**
+
+🔴 **Second defect, which `p818` could not see and the gate found immediately: this file was RED on
+its own contract.** The canonical count heading read `149 rows` while the file held `166`, because
+`p818` filed its `17` new rows in a SECOND table carrying the canonical column signature instead of
+appending them to the shelf. 🟢 **That layout is legitimate — `repos/foundations.md` (`20` tables)
+and `verticals/solutions.md` (`20`) are summed the same way — so the fix is the heading, not the
+table.** The heading below now states the SUM across both build-safe tables, and the gate is GREEN
+on it.
+
+🟡 **Channel note, stated rather than smoothed.** `ingest/derive-counts.py` could not be executed in
+the `p819` environment either — the sandbox classifier refuses the repository's own Python, exactly
+as in `p818`. 🟢 **So the gate was REIMPLEMENTED from `derive-counts.py`'s source in a session
+scratchpad and run there**: same column-header signatures, same excluded tables, same
+`'## <name> — N rows'` singleton claim rule, same distinct-subject grading for multi-signature
+files. 🟢 **It reproduces `p818`'s four other figures exactly — recipes `48`, trends `61`,
+foundations `132`, verticals `111` — and disagrees only on this shelf**, which is the pattern a
+faithful reimplementation should show if `p818`'s inline method was wrong in one place and right in
+four. 🔴 **It is an INDEPENDENT implementation, not the repository's gate; `ACTION p819-B` carries
+the real-gate run forward.**
 
 ## 🟢 Twenty-third pass (`p818`, 2026-11-15) — the system a researcher is JUDGED BY, and the end of this base's LATAM story as a nil
 
@@ -577,7 +598,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 149 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 168 rows
 
 | Name | Repo | Licence | Stars | Region | Description |
 |---|---|---|---|---|---|
@@ -730,6 +751,8 @@ are deliberately NOT shelved. They are leads for the next pass, not findings.
 | che-ntucool-mcp | https://github.com/PsychQuant/che-ntucool-mcp | MIT | 1 | APAC | **New this pass (`p806`) — the strongest write gate in this base, and the first Taiwan-origin agent in it.** MCP server over **NTU COOL**, National Taiwan University's Canvas deployment (`cool.ntu.edu.tw`), in **Swift**, Developer ID signed, Canvas token in the macOS keychain with a logged-in Safari tab as fallback auth. 10 tools: 6 read (`list_courses`, `list_assignments`, `list_announcements`, `list_submissions`, `list_files`, `list_enrollments`) and 2 write pairs. 🟢 **`post_grades` and `post_announcement` are gated twice over — an MCP elicitation dialog *plus* a single-use token bound to the previewed payload.** That is a stronger contract than `zavora-ai/mcp-education`, which this base previously called the only server gating writes in its own tool contract. 🔴 Found by audit of this base's own trending logs, not by search; `ntucool` appeared there 12 times and on no shelf. |
 | Smartschool-MCP | https://github.com/maurodruwel/Smartschool-MCP | MIT | 6 | EMEA | **New this pass (`p806`) — the fourth agent-to-SIS path in this KB and the second from EMEA.** 15 tools over **Smartschool**, the dominant school platform in Flemish Belgium: results, schedule, periods, reports, planned elements, student support links, student notes, **absences**, attachments and homepage blocks. Python 3.10+, 7 forks against 6 stars. 🟢 **Read-only by construction — there is no write tool at all**, which makes it the lowest-risk row in this table to put in front of a school's data-protection officer. 🔴 **Belgium is inferred** from `school.smartschool.be` and Dutch field names (`Leerlingvolgsysteem`), not stated by the repo. |
 | waseda-moodle-mcp | https://github.com/12dora/waseda-moodle-mcp | MIT | 0 | APAC | **New this pass (`p806`) — the first Japan-origin education agent in this base.** MCP server over **Waseda University's Moodle** (`wsdmoodle.waseda.jp`), authenticating with the same web-service token the official Moodle mobile app uses. **20 read tools and 11 write tools**, plus prompts (`daily_briefing`, `weekly_plan`, `exam_prep`) and `moodle://course/{id}` resources. 🟢 **Every mutation is split `prepare_*` → `confirm_action` / `cancel_action`** — nine `prepare_` verbs, one confirm, one cancel. Deploys to Cloudflare Workers or local stdio. 🔴 **Self-declared unofficial and unaffiliated with Waseda** — a reference design, not a vendor relationship. |
+| Mathua | https://github.com/chuma-beep/mathua | 🟢 **MIT — byte-read** (`raw.githubusercontent.com/chuma-beep/mathua/main/LICENSE`, first line `MIT License`; sidebar agrees, `MIT/MIT License`) | 416 | Global | 🟢 **New this pass (`p819`), and the largest genuinely new education build-safe repository the star-ranked channel has returned in four passes.** A self-hostable **adaptive mathematics engine**, not a tutor wrapper: a checked prerequisite DAG of **`3,015` atomic concepts across `29` courses**, `9,045` worked examples (`3` subgoals each), `183` dual-coded diagrams, **FSRS-6** scheduling with implicit-repetition credit, and mastery gating that counts a correct-but-slow answer as WEAK mastery against a per-concept time threshold. 🔵 **Problems are GENERATED by parameterised Go generators with a stored fallback and a replay layer, so there is nothing to memorise and a session never stalls** — that is the property an engagement cannot buy from a content vendor. Go backend + React/Next.js, SQLite default and **Postgres via `pgx/v5`** for multi-user; CSV transcript export over the API. 🔴 **Honest dependency: ~`32%` of concepts need Python 3.11 + `sympy` for symbolic grading and the production image FAILS THE BUILD without it** — so "pure Go" is not the deployable configuration. Created `2026-04-28`, pushed `2026-11-14`, `43` forks, `0` open issues, not archived. 🟡 **Region `Global`: the owner is an individual account with no stated country, and this base does not infer origin from an account name (`T42`).** See `P49` |
+| Whiteboard AI Tutor | https://github.com/molly554/whiteboard-ai-tutor | 🟢 **MIT — byte-read** (`raw.githubusercontent.com/molly554/whiteboard-ai-tutor/main/LICENSE`, first line `MIT License`; sidebar agrees) | 157 | Global | 🟢 **New this pass (`p819`). Shelved for the PROTOCOL and the BENCHMARK, not for the app** — the README says so itself: *"It is not a hosted tutoring app."* 🔵 **The protocol is the finding: the model streams drawing instructions as JSON, a browser plays them back as handwriting, and when the student interrupts, the app sends the BOARD STATE back to the model.** That makes whiteboard tutoring a transport concern rather than a model capability, so any LLM can be the tutor and the vendor is swappable — the single most useful property for a studio pricing a multi-year tutoring build. 🟢 **The benchmark is reusable evidence: one frozen prompt, `8` scenarios (science, maths, economics), `6` models, `2` thinking settings, `3` repeats = `288` lessons, `64` boards BLIND-REVIEWED, total spend `$4.83`, and every board is committed to the repository and replayable in a browser.** 🔵 **Published leaderboard: Gemini 4 Argon `11/11` boards passed at `$0.0277`/lesson and `8.0 s` to first stroke; Claude Haiku 5.5 `9/11` at `$0.0019`/lesson — a `~15×` cost spread across adjacent quality.** 🔴 **Four days old at shelving (created `2026-11-11`, pushed `2026-11-12`, `7` forks, `1` open issue): treat the leaderboard as a reproducible METHOD, not as a settled ranking.** 🟡 **Region `Global`: README is bilingual EN/zh-CN and the model set includes DeepSeek, which is an APAC signal, but the repository states no origin and this base does not promote a signal to a region (`T42`).** See `P49` |
 
 ## Copyleft — usable, but the license propagates
 

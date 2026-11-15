@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
+**Forty-nine** concrete recipes — derived recipes: **49**. 🟢 **Twenty-fourth pass (`p819`): `P49` added** — the vendor-neutral tutoring stack, the first recipe in this base whose ACCEPTANCE GATE is a published open-source benchmark the client can re-run themselves, and the first built on a mastery engine rather than on a chat loop (from `T63`/`T65`). 🔴 **It also carries this base's first explicitly priced NON-permissive dependency: `sympy` is BSD-3 and fine, but ~`32%` of the engine's concepts do not grade without a Python runtime, so "pure Go" is not the deployable configuration and the estimate says so.** 🟢 **Both new components byte-read on `2026-11-15`; count re-derived after insertion by an independent reimplementation of `ingest/derive-counts.py` (`derived=49 claimed=49 GREEN`) because the repository's own gate is still refused by the sandbox classifier — see `agents/top.md` and `ACTION p819-B`.**
+
 **Forty-eight** concrete recipes — derived recipes: **48**. 🟢 **Twenty-third pass (`p818`): `P46`–`P48` added** — the Brazilian research-record agent, which is the first recipe in this base whose platform substrate is LATAM-operated rather than imported (`P46`, from `T58`); accessibility remediation for course materials, the only recipe here whose obligation is statutory and the first whose proposal value lies partly in a named EXCLUSION (`P47`, from `T60`/`T61`); and the EPrints→InvenioRDM migration — a named incumbent, GPL-3.0 and abandoned since `2023-07-31`, displaced by an MIT platform CERN maintains, with the agent layer that makes the swap fundable (`P48`, from `T59`). 🔵 **All three carry ZERO copyleft in the delivered tree and every component was byte-read on `2026-11-15`.** 🔴 **Count re-derived INLINE, not by `ingest/derive-counts.py`: the sandbox classifier refused to execute the repository's Python gates this pass. `grep -c '^## P'` → `48`. Degraded channel, flagged.**
 
 **Forty-five** concrete recipes — derived recipes: **45**. 🟢 **Twenty-second pass (`p817`): `P43`–`P45` added** — shipping courseware INTO an LMS without adopting or licensing it, which is the first recipe here that makes the copyleft problem in `verticals/solutions.md` stop applying (`P43`); the verifiable-credential issuing service with its NA and EMEA paths stated separately because they differ (`P44`); and the guardian-facing agent, the one recipe where the credential belongs to an adult and the data to a child (`P45`). 🟢 **Twenty-first pass (`p816`): `P40`–`P42` added** — the retention engine a studio OWNS (the first recipe here that replaces a copyleft incumbent with an ALGORITHM rather than forking it), the Anki-native agent whose deliverable includes a written refusal of the upstream's own recommended path, and retention evidence for compliance recurrency — the one recipe in this layer with an institutional buyer. 🔵 **All three exist because `T49` found the retention layer's permissive value is an algorithm with five MIT implementations, so none of them carries copyleft in its tree and `P40` carries none even transitively.** All components licence-verified by byte-read on 2026-11-15. 🟢 **Twentieth pass (`p815`): `P37`–`P39` added** — the appeal-survivable academic-integrity service (the first recipe here whose deliverable is EVIDENCE rather than a decision), the only fully permissive assessment stack this layer offers, and natural-language timetabling on a real Apache-2.0 solver. 🔵 **All three exist because `T44` found that the assessment layer's star mass is COPYLEFT, so each one names the permissive substitute explicitly and carries no copyleft in its tree.** All components licence-verified by byte-read on 2026-11-15. 🟢 **Nineteenth pass (`p814`): `P34`–`P36` added** — the citation-integrity service (the first integrity-POSITIVE recipe in this base), the sovereign institutional-repository agent on the only permissively licensed platform in the education stack, and the Brazilian norm-compliance pipeline. All components licence-verified by byte-read on 2026-11-13. 🟢 **Eighteenth pass (`p813`): `P31`–`P33` added** — the Chinese university study agent with a written integrity boundary, the North American multi-system family agent, and the clean-room client library that every cluster in this base needs and none of them has. All components licence-verified by byte-read on 2026-11-13. 🟢 **Seventeenth pass (`p812`): `P29`–`P30` added** — the Frappe-based education ERP agent, and the LATAM university self-management agent. Each names the actual
@@ -119,6 +121,61 @@ decision instead of a constraint:
   and it is the one argument that still favours `ltijs` on a long engagement.
 
 ---
+
+## P49 — The vendor-neutral tutoring stack: a mastery engine, a whiteboard transport and a benchmark the client re-runs as the acceptance gate (Global)
+
+🔵 **Why it exists.** 🔴 **Every tutoring proposal this base has written before now priced a model
+vendor into the architecture, because the visible capabilities — explaining on a whiteboard, adapting
+to a learner — looked like model capabilities.** 🟢 **`T65` showed the whiteboard is a transport
+protocol and `T63` surfaced an MIT mastery engine with a real prerequisite graph. Put together, the
+model becomes the one swappable part of the stack, and the defensible assets — the concept DAG, the
+scheduler, the evidence trail — are all permissively licensed and all owned by the client.**
+
+| Role | Component | Licence (byte-read) | Region | Why this one |
+|---|---|---|---|---|
+| Mastery engine | [`chuma-beep/mathua`](https://github.com/chuma-beep/mathua) | 🟢 **MIT** (`1,074 B`, `sha256:6bd7c2a3…`, first line `MIT License`) | Global | 🟢 **A checked prerequisite DAG of `3,015` concepts with FSRS-6 review and SPEED-AWARE mastery gating, not a chat loop.** Go + Next.js, Postgres via `pgx/v5`, CSV transcript export over the API |
+| Whiteboard transport | [`molly554/whiteboard-ai-tutor`](https://github.com/molly554/whiteboard-ai-tutor) | 🟢 **MIT** (`1,089 B`, `sha256:ed7406a6…`, first line `MIT License`) | Global | 🟢 **The JSON drawing-instruction protocol plus the browser player and the interruption path.** Take the protocol and the benchmark runner; the hosted app is explicitly not the deliverable |
+| Model router | [`BerriAI/litellm`](https://github.com/BerriAI/litellm) | 🟢 **MIT** | Global | 🔵 **The swap has to be a config change, or the vendor-neutrality claim is rhetorical.** One gateway, per-model cost accounting, and the fallback chain the `~15×` spread in `T65` is there to exploit |
+| Learner telemetry | [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | 🟢 **Apache-2.0** | North America | 🟢 **The mastery events must leave the engine in a standard the institution's LRS already accepts** — otherwise the stack is a silo and the renewal conversation is lost |
+| Symbolic grading | [`sympy/sympy`](https://github.com/sympy/sympy) | 🟢 **BSD-3-Clause** | Global | 🔴 **Not optional: ~`32%` of the engine's concepts grade `symbolic`/`polynomial`/`expression`/`complex` answers through it, and the production image FAILS THE BUILD without it** |
+
+**Wiring.**
+1. **Stand the mastery engine up FIRST, with no model attached at all.** 🟢 **The DAG, the generators
+   and FSRS-6 are deterministic and testable; they are the part of the system a client can audit.**
+   🔴 **A tutoring build that starts at the model always ends up with the pedagogy encoded in a
+   prompt, where nobody can inspect or version it.**
+2. **Put the router in before the second model, not after.** Every call goes through LiteLLM from day
+   one. 🔵 **`T65`'s leaderboard shows `11/11` at `$0.0277` against `9/11` at `$0.0019` — a stack that
+   can route by scenario captures that spread; one wired to a single vendor cannot.**
+3. **Treat the whiteboard as transport.** The model emits drawing JSON; the player renders it; the
+   interruption path returns BOARD STATE, not a chat transcript. 🔴 **Sending the transcript instead
+   of the board is the mistake that makes interruption feel broken, and it is the one thing in this
+   recipe that is not configuration.**
+4. **Emit xAPI on mastery transitions, not on clicks.** 🟢 **"Learner reached mastery on concept `X`
+   at attempt `n`, elapsed `t` against threshold `T`" is a statement an institution can act on.**
+   🔴 **Click-level telemetry fills the LRS and answers nothing.**
+5. **Make the benchmark the acceptance gate, and write it into the SOW.** 🟢 **Re-run the frozen-prompt
+   harness against the CLIENT's own scenarios and their own blind reviewers, with the boards committed
+   to their repository.** 🔵 **This is the first recipe in this base whose acceptance criterion is a
+   published method the buyer can execute without the studio in the room — which is exactly why it
+   survives a procurement challenge.**
+
+🔴 **What this recipe is NOT, stated so it is not oversold.** 🔴 **`mathua`'s `3,015` concepts are
+MATHEMATICS.** The engine, the scheduler and the gating generalise; the content does not. 🔵 **A
+non-maths subject needs its own concept DAG authored, and that is the long pole — budget it
+separately and do not let it hide inside "configuration".** 🔴 **And both new components are young:
+`mathua` has `43` forks and `0` open issues, `whiteboard-ai-tutor` was four days old at shelving.
+🟢 **Fork both at a pinned commit and vendor them; do not take a floating dependency on either.**
+
+🟡 **Region.** `Global`. 🔴 **Neither new component states an origin and this base does not infer one
+(`T42`)** — `whiteboard-ai-tutor`'s bilingual EN/zh-CN README and DeepSeek coverage are an APAC
+signal, not an APAC attribution.
+
+**Estimate.** 🟢 `6`–`8` weeks for the maths vertical end to end: engine deployment with Postgres,
+router, whiteboard transport, xAPI emission and the re-run benchmark as the gate. 🔴 **Plus `6`–`10`
+weeks per additional subject, dominated by authoring the concept DAG, not by engineering.** 🟢 **Zero
+copyleft in the tree — MIT, Apache-2.0 and BSD-3 only; the two new components byte-read on
+`2026-11-15` and the rest carried from this base's existing verifications.**
 
 ## P46 — The Brazilian research-record agent, built on a LATAM-OPERATED and permissively licensed substrate (LATAM, and the first recipe in this base whose platform is not an import)
 

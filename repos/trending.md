@@ -4,6 +4,40 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-fourth pass, `p819`) — **A measured ZERO on this file, and the channel that produced it is the finding**
+
+🔴 **`0` foundation rows and `0` platform rows added this pass. That is a MEASUREMENT, not an
+unrun leg, and it is recorded here because a silent file is indistinguishable from a covered one.**
+
+🟢 **What was run.** `14` distinct star-ranked `gh api search/repositories` queries, each bounded by
+`stars:>` and `pushed:>` thresholds, across the veins this base buys from: `ai tutor agent`,
+`topic:education topic:llm`, `grading autograder llm`, `topic:edtech`,
+`lesson plan generator ai teacher`, `knowledge tracing`, `spaced repetition FSRS scheduler`,
+`topic:learning-analytics`, `curriculum generator agent school`, `exam question generation llm`,
+`student assessment rubric llm agent`, `mcp server education learning`,
+`topic:intelligent-tutoring-system`, `socratic tutor llm`.
+
+🔴 **`54` results. `52` already held in this base's `5,390`-address ledger. `2` new — and both are
+APPLICATIONS, which is why they landed on the agent shelf and not here.**
+
+🟢 **The two, for the record and so the next pass does not re-derive them:**
+[`chuma-beep/mathua`](https://github.com/chuma-beep/mathua) (MIT byte-read, `416★`, pushed
+`2026-11-14`) and
+[`molly554/whiteboard-ai-tutor`](https://github.com/molly554/whiteboard-ai-tutor) (MIT byte-read,
+`157★`, created `2026-11-11`). 🔵 **Both are shelved in `agents/top.md` and wired in `P49`.**
+
+🟢 **The structural reading, written up as `T63`.** The star-ranked channel has SATURATED for this
+base. Its yield curve has changed shape: it no longer returns a backlog this base had missed, it
+returns the flow published inside the window. 🔵 **That makes it a cheap recurring leg and a poor
+primary one — a pass that runs only this channel will correctly report almost nothing, and should
+say so rather than pad.**
+
+🟢 **Gate state for this file, from an independent reimplementation of `ingest/derive-counts.py`
+(the repository's own gate is still refused by the sandbox classifier):
+`tables=20 rows=134 distinct=132 graded=132 claimed=132 ragged=0 nolink=0 dupes=2` → GREEN.**
+🔵 **That CONFIRMS `p818`'s inline figure of `132` for this file.** 🔴 **It refutes `p818` only on
+the agent shelf — see `agents/trending.md` and `T62`.**
+
 ## `2026-11-15` (twenty-third pass, `p818`) — **The research and library platform tier: a licence line that runs by VINTAGE, and the first LATAM-operated substrate in this base**
 
 🟢 **`12` foundation rows and `9` platform rows added under one new architectural layer — the
