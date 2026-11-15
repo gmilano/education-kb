@@ -4,6 +4,90 @@ region: Global
 updated: 2026-11-15
 ---
 
+## 🆕 `p833` — **`p832`'s four actions dispositioned (`2` discharged, `1` carried in full, `1` carried and re-shaped), and `3` new actions registered — two of them against findings rather than against instruments**
+
+🔵 **Disposition stated before the new actions, and a NOT DONE is written as NOT DONE.**
+
+### 🟢 `ACTION p832-B` — **DISCHARGED in working form**
+
+🟢 `grantprobe833.sh` resolves heads from `git ls-remote --heads` BEFORE the filename loop,
+orders `main`/`master`/`dev` first, and prints `refs=[…]` inside **every** verdict, so an absence is
+falsifiable without re-running it. 🟢 **`EMPTY-REF-SET` is its own verdict**, which is the
+distinction `p832` asked for: a dead address is not an ungranted one. 🔵 **Both controls pass** —
+invented slug → `EMPTY-REF-SET`; `sillsdev/libpalaso` → `GRANT at master/LICENSE`, `1,082 B`,
+`sha256:b716617149f3…`, reproducing this base's own repaired figure exactly.
+
+🔴 **Two limbs NOT claimed.** (1) The filename list was narrowed from `31` to `10` for this pass's
+throughput — **a narrower probe than the one `p773`'s `D9` argued for, and the narrowing is recorded
+here rather than buried.** (2) The `38` standing absence claims were NOT re-run against the new
+probe. 🟡 **Carried as `ACTION p833-C`.**
+
+### 🟢 `ACTION p832-C` — **DISCHARGED. Both conflicts settled by bytes, and one of them had no answer at all**
+
+🟢 **Open edX → `AGPL-3.0`** (`35,136 B`, `sha256:e12d78569742…`, `master/LICENSE`). 🔴 **The
+`MIT` limb is FALSE and its likely origin is an institution name read as a licence name.** 🔵 **The
+lesson is internal: this base's other sections already had `AGPL-3.0` right in three places, and an
+inbound search summary was allowed to open a conflict against a shelf that was correct.**
+
+🟢 **Forma LMS → `NO-GRANT-AT-ROOT`** (`10` filenames × `2` heads, `composer.json` `404`, README
+`6,198 B` with no `licen` string, GitHub field `NOASSERTION`). 🔴 **NEITHER `LGPL` nor `GPL` is in
+the repository — both limbs were project-website prose.** 🔵 **Recorded as unverifiable-at-source
+rather than resolved to the likelier answer, which is what `p832` explicitly asked for.**
+
+### 🔴 `ACTION p832-A` — **NOT DONE. Carried in full, and this is the second pass it has been owed**
+
+🔴 The `~171` stale pinned figures were **not** re-measured and the CURRENCY gate over published
+figures was **not** built. 🔵 **`gate-offline` is still green over a corpus `p832` measured as
+`38.7%` unreproducible, and this pass added `7` more pinned triples to that corpus.** 🟢 **The
+`7` added this pass were measured today and are current; that does not discharge the residue.**
+🔴 **Recorded as not done rather than silently dropped, per the `p773-E` rule — one more owing and
+it is RETIRED or it is executed.**
+
+### 🟡 `ACTION p832-D` — **NOT DONE, carried, and now RE-SHAPED with a fourth address**
+
+🔴 The upstream licence requests — `latam-gpt/llm-data-eval`, `latam-gpt/toxicity-classifier`,
+`latam-gpt/language_identifier` and the unlicensed LATAM literacy remainder — were not sent.
+🟢 **`p833` adds a fourth and more acute instance: `aydenait2025/GradeTrainer`, a teacher-facing
+platform for fine-tuning an open model on a school's own historical marking data, `NOASSERTION`.**
+🔵 **That is precisely the capability `P73` wants and cannot use.** 🔴 **This base has now recorded
+the substantial-and-unlicensed class five times (`T24`) without once acting on it. It remains the
+cheapest unexecuted item on this list.**
+
+### ACTION `p833-A`…`p833-C` for the next pass
+
+🔴 **`ACTION p833-A` — re-run this base's declared NILS in a second language.** 🔵 **`T114` is
+the most consequential finding of this pass and its blast radius is not one row: the grading gap
+survived `37` passes because every sweep ran in English.** 🟢 **The action: take this base's
+standing declared nils — the proctoring nil, the UDL nil, the vocational nil, the LATAM
+foundational nil — and re-run each in the language of the jurisdiction it was declared for
+(Spanish, Portuguese, German, Chinese).** 🔴 **A nil is only a nil in the language the supply is
+written in. Until this is run, every nil in this base is a claim about a search, not about a
+sector.**
+
+🟡 **`ACTION p833-B` — settle whether `T115`'s star-inversion is a CJK property or a
+SUBSTRING property.** 🔵 **The measurement is cheap and the answer changes the discovery
+protocol:** re-run the four CJK queries with `in:name,description` and compare the top `10` against
+the unqualified run. 🟢 **If the inversion disappears, the defect is substring matching over long
+READMEs and the fix is a qualifier that every `P66`-style sweep should carry; if it persists, it is
+a ranking property and the only fix is to read the full set.** 🔴 **`p833` asserted the rule
+without separating these two causes, and says so here rather than letting the trend harden.**
+
+🟡 **`ACTION p833-C` — re-run the `38` standing absence claims against the branch-resolving
+probe.** 🔵 **`T112` found `3` of them FALSE on the branch axis alone, and `p832` fixed the
+instrument without re-running the archive — the same split `ACTION p832-A` names for pinned
+figures.** 🟢 **Restore the full `31`-name list first; `p833` ran at `10`.**
+
+### 🔴 Declared gaps this pass did NOT close
+
+- 🔴 **PROCUREMENT, in all three APAC jurisdictions this pass filed policy for.** China, Malaysia
+  and Indonesia now have named instruments in `intel/market.md` and **zero** evidence on who buys,
+  through what vehicle, or whether a foreign studio can be a counterparty. 🔵 **A mandate without a
+  procurement path is a demand signal a studio cannot act on.**
+- 🔴 **CANADA and MEXICO.** Both North America legs this pass returned US-only material. 🔵 **A
+  two-country blank inside a region this base places engagements in.**
+- 🟡 **The `2026` market-size spread** (`$9.58B` / `$11.4B` / `$12.3B`, CAGRs `17.5%`–`49.5%`)
+  is recorded as contested and **not** carried as fact.
+
 ## 🆕 `p832` — **`p831`'s three actions dispositioned (`1` discharged, `2` carried and named as not done), and `4` new actions registered against two defects in this base's own measuring chain**
 
 🟢 **`derive-counts.py` was run FIRST, before any edit, and again after every insertion. GREEN on

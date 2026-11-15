@@ -6,7 +6,81 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
-**Seventy-two** concrete recipes — derived recipes: **72**. 🟢 **Thirty-seventh pass (`p832`): `P72` added** — the GRANT-CURRENCY harness, and the first recipe in this file whose subject is the knowledge base itself rather than a learner. 🔵 **Premise is `T111`/`T112`: a repaired measuring instrument does not propagate to measurements already published (`38.7%` of this base’s `442` pinned grant figures are unreproducible, mechanism proved `12`/`12`), and an absence verdict that hardened only its FILENAME axis is still wrong on every filename at once when the BRANCH is guessed (`3` false absences found in `38`, one of them a `GPL-3.0` obligation recorded as "no licence").** 🔴 **This is sold, not just used: any client inheriting an open-source stack has the same two defects, and a licence claim nobody can reproduce from the file it names is a procurement finding.** 🟢 **Every component is in this repository or is a standard tool; all figures byte-read `2026-11-15`.** 🟢 **Thirty-sixth pass (`p831`): `P71` added** — the mother-tongue foundational-literacy pipeline, and the first recipe in this file aimed at children aged `5`–`9` learning to read and count at all. 🔵 **Premise is `T108`: this is the only tier in this base where the open-source assets carry real outcome evidence and the newest code is the least usable, so the recipe INHERITS the maintained content and measurement pipelines (Bloom, libpalaso, Kolibri Studio, Tangerine — all pushed this week) and treats the field-trialled XPRIZE apps as a CURRICULUM SPECIFICATION to read rather than a dependency to adopt.** 🔴 **The EU AI Act boundary is drawn before node `1`: Annex III point `3` makes assessing learning outcomes high-risk by construction and the subject is a child, so the pipeline authors, delivers and TRANSCRIBES, and the score stays with a human enumerator inside Tangerine.** 🟢 **All ten components byte-read on `2026-11-15`; every market and regulatory item is `CITED, NOT READ`.** 🟢 **Thirty-fifth pass (`p830`): `P70` added** — the inclusive-delivery pipeline, and the first recipe in this file aimed at the SEN / inclusive-learner population rather than at a mainstream cohort. 🔵 **Premise is `T107`: inclusion COMPLIANCE is funded, deadlined and granted (MIT/Apache across the whole WCAG / Section 508 / EN 301 549 tier) while inclusion PEDAGOGY has a GitHub maximum of `1★` — so the recipe sells the compliance obligation and delivers the pedagogy inside it.** 🔴 **The EU AI Act boundary is drawn before the first node and it is the sharpest one in this file: the pipeline PRODUCES artefacts and evidence and NEVER scores a learner, because Annex III point 3 makes "assess learning outcomes" high-risk by construction and a SEN learner's needs record is special-category data on top of that.** 🟢 **All nine components byte-read on `2026-11-15`; every regulatory date is `CITED, NOT READ`.**
+**Seventy-three** concrete recipes — derived recipes: **73**. 🟢 **Thirty-eighth pass (`p833`, 2026-11-15): `P73` added** — the marking loop WITH an adoptable base, and the first recipe in this file that AMENDS another: `P67` was written as *the recipe for a capability with NO adoptable base*, and `T114` closed that gap, so `P67`'s from-scratch rubric engine becomes the fallback while its scoring boundary is inherited wholesale — the model PROPOSES a mark and never RECORDS one. 🔵 **`6`–`8` weeks against `P67`'s `12`–`16`, the saving being the error-type taxonomy and the remediation generator.** 🔴 **And it carries `D833-2`'s correction as a build constraint: NOT Open edX unless the client accepts AGPL.** 🟢 **Thirty-seventh pass (`p832`): `P72` added** — the GRANT-CURRENCY harness, and the first recipe in this file whose subject is the knowledge base itself rather than a learner. 🔵 **Premise is `T111`/`T112`: a repaired measuring instrument does not propagate to measurements already published (`38.7%` of this base’s `442` pinned grant figures are unreproducible, mechanism proved `12`/`12`), and an absence verdict that hardened only its FILENAME axis is still wrong on every filename at once when the BRANCH is guessed (`3` false absences found in `38`, one of them a `GPL-3.0` obligation recorded as "no licence").** 🔴 **This is sold, not just used: any client inheriting an open-source stack has the same two defects, and a licence claim nobody can reproduce from the file it names is a procurement finding.** 🟢 **Every component is in this repository or is a standard tool; all figures byte-read `2026-11-15`.** 🟢 **Thirty-sixth pass (`p831`): `P71` added** — the mother-tongue foundational-literacy pipeline, and the first recipe in this file aimed at children aged `5`–`9` learning to read and count at all. 🔵 **Premise is `T108`: this is the only tier in this base where the open-source assets carry real outcome evidence and the newest code is the least usable, so the recipe INHERITS the maintained content and measurement pipelines (Bloom, libpalaso, Kolibri Studio, Tangerine — all pushed this week) and treats the field-trialled XPRIZE apps as a CURRICULUM SPECIFICATION to read rather than a dependency to adopt.** 🔴 **The EU AI Act boundary is drawn before node `1`: Annex III point `3` makes assessing learning outcomes high-risk by construction and the subject is a child, so the pipeline authors, delivers and TRANSCRIBES, and the score stays with a human enumerator inside Tangerine.** 🟢 **All ten components byte-read on `2026-11-15`; every market and regulatory item is `CITED, NOT READ`.** 🟢 **Thirty-fifth pass (`p830`): `P70` added** — the inclusive-delivery pipeline, and the first recipe in this file aimed at the SEN / inclusive-learner population rather than at a mainstream cohort. 🔵 **Premise is `T107`: inclusion COMPLIANCE is funded, deadlined and granted (MIT/Apache across the whole WCAG / Section 508 / EN 301 549 tier) while inclusion PEDAGOGY has a GitHub maximum of `1★` — so the recipe sells the compliance obligation and delivers the pedagogy inside it.** 🔴 **The EU AI Act boundary is drawn before the first node and it is the sharpest one in this file: the pipeline PRODUCES artefacts and evidence and NEVER scores a learner, because Annex III point 3 makes "assess learning outcomes" high-risk by construction and a SEN learner's needs record is special-category data on top of that.** 🟢 **All nine components byte-read on `2026-11-15`; every regulatory date is `CITED, NOT READ`.**
+
+## P73 — The marking loop, with an adoptable base: what `P67` can STOP building from scratch (APAC anchor, portable to any jurisdiction with a human-review requirement)
+
+🔴 **This pattern amends `P67`.** `P67` is titled *"the recipe for a capability with NO adoptable
+base"* and was written because `T96` measured the grading gap and found nothing to fork. 🟢 **`T114`
+closed that gap: the base exists, it is MIT, and `P67`'s from-scratch rubric engine is now the
+FALLBACK rather than the default.** 🔵 **`P67` is not retired — its scoring-boundary discipline is
+inherited wholesale below, and it remains the recipe wherever the fork point does not fit.**
+
+### The fork point
+
+🟢 **[`Zhangming0304/teach_agent`](https://github.com/Zhangming0304/teach_agent)** — MIT,
+byte-read `1,070 B` / `sha256:7e705a8728f7…`. 🔵 **What you inherit, and it is the expensive half:**
+multimodal intake (photographed handwriting, PDF, Word, plain text) → per-question marking →
+automatic wrong-answer extraction **classified by knowledge point AND error type** → a per-student
+profile (score trend, weak-knowledge-point distribution, error-type share) → a three-tier
+remediation sheet (基础巩固 / 能力提升 / 拓展挑战) generated from that student's own error set →
+printable PDF.
+
+🔴 **What you must replace, named so nobody discovers it in week three:** the model layer is bound
+to Chinese domestic providers (DeepSeek / 通义千问 / 智谱清言) and the rubric vocabulary, prompts and
+remediation tiers are Chinese-curriculum-shaped. 🟢 **Outside China this is a `2`–`3` week
+substitution against the inherited pipeline, not a rewrite of it.**
+
+### The wiring
+
+1. **Content in** — **China:** [`happycola233/tchMaterial-parser`](https://github.com/happycola233/tchMaterial-parser)
+   (MIT, `7,811★`) or [`alterem/knowledge-grab`](https://github.com/alterem/knowledge-grab) (MIT,
+   `568★`) against `basic.smartedu.cn`. **Elsewhere:** `learningequality/ricecooker` →
+   `learningequality/studio` → Kolibri, already shelved in `repos/foundations.md`. 🔴 **`T78`: the
+   client's grant is not the content's grant — settle redistribution separately, in writing.**
+2. **Orchestration** — **LangGraph** (MIT). 🟢 **Not a new choice:
+   [`quiet-sys/AInoAgentAcademy`](https://github.com/quiet-sys/AInoAgentAcademy) (MIT) already runs
+   its multi-agent classroom on it, so the two forks share a runtime.**
+3. **Code and maths work** — lift `AInoAgentAcademy`'s **Docker judging engine** and its
+   **six-dimension learner-profile schema** (knowledge base, cognitive style, learning preference,
+   error-prone points, interest direction, goal). 🔵 **A sandboxed deterministic judge is what keeps
+   the model out of the scoring path for everything that can be executed.**
+4. **Exact arithmetic** — `Hypatia's Hoard`'s exact-math engine (MIT, already shelved), or
+   `P67`'s own. 🔴 **Deterministic arithmetic stays OUTSIDE the model. Unchanged from `P67`.**
+5. **Delivery** — `Selleo/mentingo` (MIT) when the deliverable must stay closed, or Moodle
+   (GPL-3.0) when a plugin is acceptable. 🔴 **NOT Open edX unless the client accepts AGPL: `p833`
+   byte-read it at `35,136 B` / `sha256:e12d78569742…` and it is `AGPL-3.0`, whose network clause
+   reaches a hosted derivative** (`verticals/solutions.md`, `D833-2`).
+
+### The boundary, inherited from `P67` and non-negotiable
+
+🔴 **The model PROPOSES a mark. It never RECORDS one.** Every mark that reaches a record of
+achievement passes a deterministic rubric check and a named human confirmation. 🟢 **`teach_agent`
+makes this cheaper than it was for `P67`, because it already renders the agent's chain of thought
+during marking** — 🔵 **which is not a demo feature in this context but the human-review surface
+the regimes in `intel/market.md` require.**
+
+🔵 **Why that surface is the commercial point, not a compliance tax.** EMEA: learning-outcome
+evaluation is a high-risk category under the AI Act, with the deadline now **December `2027`**
+(Regulation (EU) `2026/1744`) and Article `50` transparency live since `2026-08-02`; public
+institutions owe an Article `27` FRIA. Vietnam lists automated assessment as high-risk with a dated
+grace period. North America: Oklahoma `S.B. 1734` requires teacher review of AI output. 🟢 **Four
+jurisdictions, one artefact: a decision log with a human in it.**
+
+### Scope
+
+🟢 **`6`–`8` weeks** to a marking loop on one subject and one year group with the review surface
+wired, against **`12`–`16`** for `P67`'s from-scratch route. 🔴 **The saving is the taxonomy and the
+remediation generator, which is where `P67` spent most of its estimate.**
+
+### Controls before you start
+
+🔴 **Re-probe both fork points with `D833-1`'s branch-resolving grant probe at intake, not at
+delivery.** 🔵 **`T112` found `3` of this base's standing absence claims FALSE because a probe was
+handed a branch that did not exist; `T104` found licence drift running in both directions.** 🟢
+**`teach_agent` last moved `2026-04-20` and `AInoAgentAcademy` `2026-07-29` — both are small
+single-author projects at `7★` and `2★`. Fork them, vendor them, and do not take a dependency on
+upstream staying alive.**
 
 ## P72 — The grant-currency harness: resolve the ref set before the filename loop, re-measure what you already published, and separate the gate on the TOOL from the gate on the ARCHIVE (Global; the deliverable is evidence, so it ships in every region)
 

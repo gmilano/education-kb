@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-15
 ---
 
+## Thirty-eighth pass (`p833`, 2026-11-15) — China's `AI+Education` Action Plan has a BUILD-SAFE SUPPLY, and it answers the grading gap this base has carried since `T96`
+
+🟢 **The organising finding.** `T96` established the grading gap by TEST rather than by copy-forward:
+this base holds hundreds of tutor, planner and content-generation agents and almost nothing that
+MARKS student work. 🔴 **Thirty-seven passes of English-language sweeping never closed it.** 🟢 **One
+query in the vocabulary of China's national plan — `教育 大模型 agent`, `作业批改` — returns a
+granted, multimodal, photo-in marking agent with a three-tier remediation generator attached.**
+🔵 **The gap was never a SUPPLY gap. It was a LANGUAGE gap** — `T82`'s rule (the supply answers to
+the statutory vocabulary, not to the sector word) on a fifth axis, and the first time this base has
+hit that rule in a non-Latin script. See `T114`.
+
+🟢 **Channel conditions — three channels, all controlled in both directions.** Channel A
+(`gh api search/repositories -f q="repo:…"`): live repository `HKUDS/DeepTutor` returns `1`
+(`59,457★`, `Apache-2.0`, pushed `2026-11-15`), invented slug returns `HTTP 422`. 🔴 **`gh api
+repos/{owner}/{repo}` is still `403` for this session, so the metadata channel remains SEARCH-ONLY**,
+exactly as `p832` recorded. Channel B (`raw.githubusercontent` byte-read, written to a FILE, never
+to a shell variable): `sillsdev/libpalaso` returns `1,082 B` / `sha256:b716617149f3…`, 🔵 **reproducing
+`p831`'s repaired figure and `p832`'s re-reading of it EXACTLY — the instrument is calibrated
+against this base's own value before it is used to contradict this base.** Channel C
+(`git ls-remote --heads`): live address returns a ref set, invented slug returns an EMPTY one.
+
+### 🟢 `D833-1` — `ACTION p832-B` is DISCHARGED in working form: the probe now resolves heads BEFORE the filename loop and prints the probed ref set inside every verdict
+
+🔴 `p832` left the defect named and unfixed: *"`grantprobe.sh` takes the branch as `$2` with no
+resolution. One wrong guess `404`s all `31` case-aware filenames and prints `NO-GRANT-AT-ROOT`, a
+verdict byte-identical to a true absence."* 🟢 **`grantprobe833.sh` resolves heads from
+`git ls-remote --heads` first, orders `main`/`master`/`dev` ahead of the remainder, probes `10`
+case-aware filenames per ref, and prints `refs=[…]` inside EVERY verdict — so an absence is now
+falsifiable without re-running it.** 🟢 **An EMPTY ref set is its own verdict** (`EMPTY-REF-SET`),
+which is the distinction `p832` asked for: a dead address is not an ungranted one. 🔵 **Both
+controls pass**: the invented slug `Zhangming0304/this-repo-does-not-exist-p833` returns
+`EMPTY-REF-SET`, and `sillsdev/libpalaso` returns `GRANT at master/LICENSE` with the pinned bytes.
+🔴 **Not claimed: the `31`-name list was narrowed to `10` and the `~171` stale pinned figures of
+`ACTION p832-A` were NOT re-measured. `p832-A` is carried, not discharged.**
+
+### 🔴 `D833-2` — `ACTION p832-C` settled by bytes, and this base was WRONG on the bigger of the two
+
+🟢 **Open edX — settled, and the answer is the one the base's vertical leg did NOT hold.**
+`openedx/edx-platform` is **`AGPL-3.0`**: byte-read `35,136 B`, `sha256:e12d78569742…`, at
+`master/LICENSE`, first line `GNU AFFERO GENERAL PUBLIC LICENSE Version 3`. 🔴 **The `MIT` limb of
+the conflict is false, and the likely source of it is that Open edX ORIGINATED at MIT and Harvard
+— an institution name read as a licence name.** 🔵 **The consequence is a build consequence, not a
+bookkeeping one: a hosted derivative of Open edX must publish its source. Every pattern in this base
+that puts Open edX under a client deliverable inherits that.**
+
+🔴 **Forma LMS — settled, and NEITHER limb survives.** `formalms/formalms` returns
+`NO-GRANT-AT-ROOT` across `10` case-aware filenames × `2` resolved heads (`master`, `dev`) = `20`
+probes; `composer.json` `404`s; the `README.md` (`6,198 B`) contains no occurrence of the string
+`licen`. GitHub's own licence field reads `NOASSERTION`. 🔵 **So the `LGPL`-versus-`GPL` dispute this
+base carried is unsettleable FROM THE REPOSITORY — both limbs came from project-website prose, and
+neither is in the bytes.** 🟢 **Recorded as unverifiable-at-source rather than resolved to the
+likelier answer**, which is what `T81` requires.
+
+### 🔵 Region discipline on this pass's four rows
+
+🔴 **This base does not infer a region from an author's name** (`litto`, `p829`). 🟢 **All four rows
+below are placed `APAC` on a JURISDICTION binding, not a language one**: `teach_agent` and
+`AI-GAME-COOL` name Chinese domestic model providers as their runtime (DeepSeek / 通义千问 /
+智谱清言, Alibaba Bailian), `AInoAgentAcademy` ships on a `.cn` domain, and `KongMeng-Agent` targets
+the Chinese teacher-preparation workflow. 🔵 **A runtime bound to a provider that only serves one
+jurisdiction is a placement fact; a README in Chinese would not have been.**
+
 ## Thirty-seventh pass (`p832`, 2026-11-15) — the repair held and the SHELVES did not: `38.7%` of this base's pinned grant figures are still unreproducible, and a second axis of the same instrument was never fixed at all
 
 🟢 **`derive-counts.py` was run FIRST, before any edit, and again after every insertion.** Baseline
@@ -1720,7 +1782,23 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 375 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 379 rows
+
+### Filed by `p833` (2026-11-15) — `4` rows: the CHINESE NATIONAL-PLAN tier, every licence byte-read with branch resolution
+
+🟢 **These four are the build-safe yield of the `教育 大模型 agent` / `作业批改` / `智能备课`
+population.** 🔴 **The population is large and the yield is thin for a reason worth recording: the
+star-ranked view of these queries is dominated by unrelated high-traction repositories that merely
+contain the characters** (a book list at `26,122★`, a political-propaganda corpus at `3,351★`),
+🔵 **so a studio sweeping this corpus by stars sees nothing and concludes the supply is empty.
+It is not — it is low-traction, recent, and real.** See `T115`.
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| 教育智能体 (teach_agent) | https://github.com/Zhangming0304/teach_agent | 🟢 **MIT — byte-read** (`1,070 B`, `sha256:7e705a8728f7…`, `main/LICENSE`, refs=[`main`]) | 7 | APAC | 🟢 **New this pass (`p833`), and it is the single most important row this base has filed in ten passes: it is the first agent on these shelves whose PRIMARY function is MARKING.** 🔵 **The closed loop is the whole product — 作业智能批改 → 错题自动诊断 → 分层练习生成: multimodal intake (photographed handwriting, PDF, Word, plain text), per-question marking, automatic extraction of wrong answers classified by knowledge point AND error type, a per-student profile carrying score trend and weak-knowledge-point distribution, and then a THREE-TIER remediation sheet (基础巩固 / 能力提升 / 拓展挑战) generated from that student's own error set, exported as printable PDF.** 🟢 **It also renders the agent's chain of thought while marking — which is not a demo feature here but the human-review surface that every high-risk-assessment regime in this base's policy matrix requires.** 🔴 **`7★`. Filed on function, not traction.** Runs on Chinese domestic models (DeepSeek / 通义千问 / 智谱清言), pushed `2026-04-20` |
+| AIno 学苑 (AInoAgentAcademy) | https://github.com/quiet-sys/AInoAgentAcademy | 🟢 **MIT — byte-read** (`1,069 B`, `sha256:66bb28fd7721…`, `main/LICENSE`, refs=[`main` `feature-ai`]) | 2 | APAC | 🟢 **New this pass (`p833`) — the most COMPLETE learning-platform architecture in the tier, and the one that is actually deployed** (it ships on a live `.cn` domain, which is the placement evidence for the region field). A six-dimension learner profile (knowledge base, cognitive style, learning preference, error-prone points, interest direction, goal) built through guided dialogue and shown as a radar chart; SSE streaming chat with visible reasoning, web search and RAG; `25` algorithm visualisations with a Monaco editor and a **Docker judging engine**; auto-marked exams; **LangGraph multi-agent classroom generation**; ZIP project upload with AI code analysis and Docker build-and-run. 🔵 **The reusable part is the Docker judge plus the profile schema — a sandboxed code-grading service with a competence model attached is the one component `P69` has never had an implementation for.** 🔴 `2★`, pushed `2026-07-29` |
+| AI-GAME-COOL | https://github.com/sumo1/AI-GAME-COOL | 🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:c71d239df917…`, `main/LICENSE`, refs=[`main` `feat/agent-loop-upgrade`]) | 6 | APAC | 🟢 **New this pass (`p833`).** 亲子计划 — natural language in, a playable children's educational game out, Java + React with a **plug-in Agent architecture** over Alibaba Bailian (Qwen / Kimi / DeepSeek). 🔵 **Filed for the plug-in boundary rather than the games: it is the clearest example in this base of an agent loop whose OUTPUT ARTEFACT is an executable the learner then uses, which is a different integration shape from every content-generation row on this shelf.** 🔵 **Its Apache payload is `11,357 B` / `sha256:c71d239df917…` — byte-identical to `XPRIZE/glexp-data-standardization` in `repos/foundations.md`.** 🟢 **That is the stock-text identity `T94` predicted and the first time this base has confirmed it across two unrelated projects by hash.** Pushed `2026-05-27` |
+| 孔孟-Agent (KongMeng-Agent) | https://github.com/Lu-Yu-Zhen/KongMeng-Agent | 🟢 **Apache-2.0 — byte-read** (`11,360 B`, `sha256:adcb860af549…`, `main/LICENSE`, refs=[`main` + `5` feature heads]) | 3 | APAC | 🟢 **New this pass (`p833`) — the 备课 (lesson-preparation) node the Chinese plan's teacher-qualification limb creates demand for.** 🔵 **Filed with a measurement attached: its Apache payload is `11,360 B`, three bytes LONGER than the stock `11,357 B` — a UTF-8 BOM, and the hypothesis is PROVED rather than asserted: strip the leading `3` bytes and the remainder is `11,357 B` / `sha256:c71d239df917…`, byte-identical to the stock Apache text and to `AI-GAME-COOL` above.** 🟢 **That is a third disposition of the `T93`/`T94` licence-identity question and a cheap one to miss: a BOM changes the hash without changing a word of the grant, so hash-identity alone would have filed this as a non-stock Apache text and sent someone to read `11` KB of boilerplate.** 🔴 `3★`, pushed `2026-10-13` |
 
 ### Filed by `p832` (2026-11-15) — `5` rows: the LATAM foundational-literacy tier (`4`, the gap `ACTION p831-C` declared) and the XPRIZE finalist `p831` left UNRESOLVED (`1`)
 

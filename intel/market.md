@@ -168,6 +168,21 @@ across EMEA.
 
 ### North America
 
+#### Update 2026-11-15 (thirty-eighth pass, `p833`) — **`0` new items. The leg ran and returned only material this base already holds.**
+
+🟢 **Searched** (`AI education North America 2026 adoption regulation players K-12 higher ed`):
+returned Oklahoma `S.B. 1734`, New York `A 9190`, Ohio's `2026-07-01` district-framework deadline,
+Maryland, the `134`-bills-across-`31`-states count, the student-authored `STUDENTS FIRST Act of
+2026` and the House's `K-12 AI Literacy and Readiness Act of 2026`. 🔴 **Every one of these is
+already on these shelves** (`SB 1734` and `A 9190` both appear in this file and in
+`intel/open-gaps.md`). 🔵 **Recorded as a measured nil rather than left silent, because silence
+from this leg reads exactly like coverage.**
+
+🔴 **The standing North America blank is unchanged and is named again here: CANADA and MEXICO.**
+🟢 **Both legs this pass returned US-only material; no Canadian provincial or Mexican federal
+instrument surfaced at all.** 🔵 **For a region this base places engagements in, a two-country
+blank inside the region's own field is a real gap, not a rounding error.**
+
 #### Update 2026-11-15 (thirty-seventh pass, `p832`) — the regulation arrived as `134` BILLS IN `31` STATES, not as one federal rule, so the sellable artefact is a POLICY-CONFORMANCE layer, not a product feature
 
 🔵 **All items `CITED, NOT READ` from WebSearch summaries, `2026-11-15`.**
@@ -1438,6 +1453,21 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-15 (thirty-eighth pass, `p833`) — **`0` new items, and the one thing worth re-stating is a DATE this base already carries**
+
+🟢 **Searched** (`AI education EMEA Europe 2026 adoption regulation AI Act schools
+universities`): returned the Digital Omnibus on AI (Regulation (EU) `2026/1744`) moving the
+high-risk education deadline from August `2026` to **December `2027`**; Article `50` transparency
+duties NOT postponed and applying from `2026-08-02`; the emotion-recognition ban and the staff
+AI-literacy duty in force since `2025-02-02`; admissions screening, learning-outcome evaluation and
+exam proctoring as the high-risk categories; and the Article `27` Fundamental Rights Impact
+Assessment falling on public educational bodies. 🔴 **All of it already held** — `2026/1744`,
+`December 2027`, `Article 50` and the emotion-recognition ban each appear in this file already.
+
+🔵 **The one unconfirmed item is recorded as unconfirmed rather than filed: a claim that the
+`2026` amendments add a ban on non-consensual sexually explicit AI images effective December `2026`
+could not be matched to an official source and is NOT carried as fact.**
 
 #### Update 2026-11-15 (thirty-seventh pass, `p832`) — the high-risk date MOVED, and a studio that quoted August `2026` is now quoting a superseded schedule
 
@@ -2750,6 +2780,63 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-15 (thirty-eighth pass, `p833`) — **three NAMED national instruments this base had never filed, and the one it had half-filed was WRONG**
+
+🔵 **All policy items below are `CITED, NOT READ` from WebSearch summaries, `2026-11-15`, and
+the conflicts between sources are reported rather than averaged away.**
+
+🟢 **1. China — the `AI+Education` Action Plan, and it is the largest demand signal in this
+file.** Five central departments jointly issued a national action plan in April `2026`. 🔴 **The
+sources conflict on the date and on one of the five agencies, and the conflict is recorded rather
+than resolved**: one gives `2026-04-02`, another `2026-04-28`; the Ministry of Education, the
+National Development and Reform Commission, the Ministry of Science and Technology and the Ministry
+of Industry and Information Technology appear in every list, while the fifth is given as either the
+**National Data Administration** or the **Office of the Central Cyberspace Affairs Commission**.
+🟢 **The contents are consistent across sources:** a framework for deep AI-education integration
+to be *basically in place by `2030`*; an AI education system spanning every stage from kindergarten
+to lifelong learning; 🔵 **universities required to make AI a BASIC PUBLIC COURSE and to develop
+subject-specific textbooks**; and AI proficiency reported as entering the **teacher qualification**
+requirements. 🔴 **The `$3.3B` funding figure that circulates with this plan appears only in
+marketing-style secondary blogs and is NOT carried here.**
+
+🟢 **2. Malaysia — `RPM 2026–2035`, a ten-year blueprint with AI named as its reason.** The
+Malaysia Education Blueprint (**RPM**) `2026–2035` for schools, and the higher-education plan
+(**PPTM/RPTM**) `2026–2035` launched in January, are both described by the Prime Minister as
+designed to keep the system in step with AI. 🔵 **Pillars include high-speed digital
+infrastructure and AI-based smart learning tools in schools; the higher-education plan treats AI as
+central to curriculum design, research direction and local talent development, with `1,500`
+additional electives taking the total to `3,000` in `2026`.** 🔴 **Reported implementation fact
+worth pricing in: all `20` Malaysian public universities adopted Google's Gemini for Education in
+`2026`** — 🔵 **a studio arriving in Malaysian higher education is arriving into an incumbent
+vendor stack, not an empty field.** 🟡 **Naming note: sources use `RPM`/`PPTM`, not the older
+`PPPM` label; the plans are described as *living documents*.**
+
+🔴 **3. Indonesia — and this one is a CORRECTION of a claim that was circulating in this
+rotation's own research notes.** The loose claim is that *"Indonesia's Government Regulation 71
+imposes data residency requirements that affect how EdTech platforms operate."* 🟢 **As stated,
+that is wrong for private edtech.** PP `71/2019` splits operators in two: **public-scope** operators
+must generally keep systems and data in Indonesia; 🔵 **private-scope operators — which is where a
+commercial edtech platform sits — MAY host inside or outside Indonesia**, conditional on Article
+`21(3)`'s commitment to provide access for supervision and law enforcement. 🟢 **And the PDP Law
+(Law `27/2022`) does NOT impose general localisation**; it requires equivalent protection wherever
+data goes. 🔴 **What DOES bind, and is the part a delivery plan must carry: mandatory operator
+registration before users are onboarded, and an audit trail of all electronic-system activity
+(Article `22`).** 🔵 **Enforcement is live — Komdigi notified `25` private-scope providers
+(`15` foreign, `10` domestic, `57` websites and apps) on `2026-06-26` that they must register.**
+🟡 **The PDP regulator still does not exist: the draft presidential regulation was submitted
+`2026-05-20` and was reported unsigned as of `2026-08-19`.**
+
+🟢 **The opportunity, and it is a different one from `p832`'s.** `p832` priced APAC's
+consumer-side resistance and concluded the defensible sale is the administrative and
+assessment-integrity surface. 🔵 **This pass adds the supply-side half of that: China's plan
+creates demand for exactly the two artefacts `agents/top.md` just shelved — a MARKING agent with a
+visible review surface, and a 备课 node — and `repos/foundations.md` now holds the national
+curriculum ACCESS layer underneath them.** 🔴 **The thing that is still missing, declared rather
+than glossed: this base holds no evidence on PROCUREMENT — who buys, through what vehicle, and
+whether a foreign studio can be the counterparty in any of these three jurisdictions.** 🔵 **For
+Indonesia specifically, the binding question for a delivery plan is registration and audit-trail
+design, NOT server location, and that is a cheaper constraint than the residency framing implied.**
+
 #### Update 2026-11-15 (thirty-seventh pass, `p832`) — the region has a BINDING statute, a dated grace period, and a public that is moving AGAINST classroom AI
 
 🔵 **All items `CITED, NOT READ` from WebSearch summaries, `2026-11-15`.**
@@ -4037,6 +4124,22 @@ procurement-led" corner of that matrix, which `P5` did not previously have a nam
 example of.
 
 ### LATAM
+
+#### Update 2026-11-15 (thirty-eighth pass, `p833`) — **`0` new items. The leg returned this base's own LATAM story back to it.**
+
+🟢 **Searched** (`AI education LATAM Latin America 2026 adoption regulation edtech players`):
+returned UNESCO IESALC's finding that `87%` of regional universities use AI while `26%` have a
+formal strategy and `9%` evaluate it; the UNESCO **Observatory on AI in Education for LAC** launched
+at ECLAC in Santiago; the Universidad de los Andes count of `716` AI regulatory instruments across
+`23` countries and territories, `80%`+ initiated since `2023`; PISA `2025`'s nine-in-ten
+`15`-year-olds already using AI chatbots for schoolwork; and the Efekta–UNESCO and Tec de Monterrey
+agreements. 🔴 **All already held.**
+
+🔵 **The supply-side nil `p832`/`p833` carry is unchanged and is NOT closed by this pass:** the
+LATAM literacy population remains `~106` repositories largely without grants, and
+`latam-gpt/llm-data-eval`, `latam-gpt/toxicity-classifier` and `latam-gpt/language_identifier` are
+still `NOGRANT` on `3` of `3`. 🟡 **`ACTION p832-D` — the upstream licence requests — remains the
+cheapest unexecuted item on this base's list and was NOT executed this pass either.**
 
 #### Update 2026-11-15 (thirty-seventh pass, `p832`) — adoption is near-universal and governance is near-absent, and the gap between the two numbers IS the engagement
 

@@ -6,6 +6,32 @@ updated: 2026-11-15
 
 # Foundational open-source repos for education
 
+## 🟢 The NATIONAL-CURRICULUM ACCESS layer — **what a China engagement reads INSTEAD of licensing content** (new, thirty-eighth pass `p833`) (3 rows)
+
+🟢 **Why this is a foundations layer and not an agents one.** China's `AI+Education` Action Plan
+(April `2026`) puts AI across every stage of education and makes AI a basic public course in higher
+education — see `intel/market.md` 🔴 **but a plan does not ship a curriculum corpus, and a studio
+building into it has to get the TEXTBOOKS from somewhere.** 🟢 **They are already public: the
+国家中小学智慧教育平台 (`basic.smartedu.cn`) is the state platform that carries them, and there are
+granted, maintained clients for reading it.**
+
+🔵 **This is the same shape as the mother-tongue layer `p831` filed, with the ownership inverted:
+there, the corpus had to be AUTHORED because none existed; here, the corpus exists, is national, and
+the build problem is ACCESS.** 🔴 **Both are layers this base kept treating as someone else's
+problem and then wrote tutor agents with nothing to teach from.**
+
+🔴 **The delivery caveat, stated before the rows and not after them.** These clients read a state
+platform's published material. 🔵 **The grant on the CLIENT is not a grant on the CONTENT** — the
+same `T78` split this base has now recorded five times. 🟢 **A client engagement must settle the
+redistribution terms of the textbooks separately; what is inherited here is the access path, the
+file naming and the bookmarking, not the right to republish.**
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/happycola233/tchMaterial-parser | 🟢 **MIT — byte-read** (`1,072 B`, `sha256:4c91bf6766ca…`, `main/LICENSE`, refs=[`main`]) | 7811 | **Region: APAC.** 🟢 **New this pass (`p833`), and it is the highest-traction education repository this base has shelved that is not a framework or a course.** Parses and batch-downloads the electronic textbooks published on the 国家中小学智慧教育平台, with automatic naming and automatic PDF bookmarking; Python `3.10+`, tagged releases, Windows/Linux/macOS builds. 🔵 **Its README records that it reached `#3` on GitHub's global Trending board in May `2025` — so this is not an obscure find, it is a well-known tool this base simply never held.** 🔴 **Named in `agents/trending.md` and left there; PROMOTED here.** Pushed `2026-10-16` |
+| https://github.com/alterem/knowledge-grab | 🟢 **MIT — byte-read** (`1,063 B`, `sha256:1161158266f2…`, `main/LICENSE`, refs=[`main`]) | 568 | **Region: APAC.** 🟢 **New this pass (`p833`) — the SECOND independent implementation against the same state platform**, which is what makes this a layer rather than a lucky find (the `T102` test). A Tauri + Vue 3 desktop client for the same `basic.smartedu.cn` resources. 🔵 **Filed alongside `tchMaterial-parser` rather than instead of it: two unrelated authors maintaining clients against one government endpoint is the strongest available evidence that the endpoint is stable enough to build on.** 🔴 **Named in `repos/trending.md` and left there; PROMOTED.** Pushed `2026-10-21` |
+| https://github.com/finch04/online-mooc | 🟡 **Apache-2.0 — byte-read, and the payload is NON-STOCK** (`9,110 B`, `sha256:285936aa4ba4…`, `main/LICENSE`, refs=[`main` `jdk17`]) | 349 | **Region: APAC.** 🟢 **New this pass (`p833`) — the PLATFORM leg: a MOOC system on JDK17 + Spring Boot 3 with AI assistance, course trading, analytics, live sessions, Q&A and recommendation.** 🟡 **The licence was read past the header, and the measurement is the row's value: all nine Apache sections are present and complete through `END OF TERMS AND CONDITIONS`, but the text is re-flowed (`68` lines, no hard wrapping) and the APPENDIX is stripped — which is where the copyright-holder line lives.** 🟢 **So the grant is substantively Apache-2.0 and NO HOLDER IS NAMED ANYWHERE in it.** 🔵 **That is a NOTICE-attribution problem, not a permission problem: the terms permit the build, and there is no one to attribute.** 🔴 **Exactly the case `T93` warns about in the opposite direction — reading only the header would have filed this as stock Apache and missed it.** Pushed `2026-05-10` |
+
 ## 🟢 The MOTHER-TONGUE CONTENT & WRITING-SYSTEM layer — **what a foundational-literacy build CONSUMES instead of writing** (new, thirty-sixth pass `p831`) (15 rows)
 
 🔵 **The shape of this layer is the pass's organising finding.** `agents/top.md` just filed `15`
@@ -138,7 +164,7 @@ above was graded on the licence question alone.**
 | https://github.com/langchain-ai/langchain | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`) | 149546 | **Region: Global.** The model and tool abstraction layer beneath the above. 🟡 **Shelved with a deliberate caution: this base's compose recipes should depend on `langgraph` for control flow and on `langchain-core` for interfaces, not on the `langchain` meta-package, whose surface moves faster than an education deliverable's support window.** 🔵 **Note for the byte-read gate: its `LICENSE` is on `master`, not `main` — a `main`-only probe returns `404` and would record a false `NO_LICENCE_FILE`, which is a live defect in any sweep that assumes the default branch name** |
 | https://github.com/teppei-miyashita/agenticstar-agentcore | 🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last touched `2026-08-12` | 0 | 🔴 **Region: APAC. Shelved as a WARNING row — the worked example for `T89`.** This is the source repository that the PyPI package `agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository`, and it holds no commits at all. 🟢 **The package itself is genuinely MIT** (`License-Expression: MIT` in the wheel, `dist-info/licenses/LICENSE`, `1,078 B`, `sha256:2afbb5fc…`) **and genuinely installable** — 🔴 **but it is wheel-only, single-release (`2026-09-17`), and unreadable at its stated address, while hard-pinning `langgraph==1.1.10`, `langchain==1.2.18`, `fastapi==0.136.0` and `agenticstar-platform==0.5.32`.** 🔵 **Do NOT add it to a delivery tree. It is here so that the next pass asking "is the AGENTIC STAR stack adoptable?" finds the answer already measured: licensed yes, auditable no** |
 
-## Foundational repos — 168 rows
+## Foundational repos — 171 rows
 
 ### Filed by `p829` (2026-11-15) — `1` row, and `1` is the honest figure
 

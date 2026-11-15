@@ -4,6 +4,59 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirty-eighth pass, `p833`) — **the grading gap closed in Chinese, and the star-ranked channel could not see any of it**
+
+🟢 **`4` build-safe agent rows added (`375` → `379`), `3` foundation rows added (`168` → `171`),
+`4` trends (`T114`–`T117`), `1` recipe (`P73`, which AMENDS `P67`), `4` regional market blocks
+(`1` substantive, `3` declared nils) and `2` carried licence conflicts SETTLED by byte-read. Every
+licence byte-read on `2026-11-15` with branch resolution.**
+
+### What moved
+
+🟢 **The headline is a capability this base has lacked since `T96`: a MARKING agent.**
+[`Zhangming0304/teach_agent`](https://github.com/Zhangming0304/teach_agent) (MIT, `1,070 B`,
+`sha256:7e705a8728f7…`, `7★`) — photographed handwriting in, per-question marking out, wrong
+answers classified by knowledge point and error type, a per-student weakness profile, and a
+three-tier remediation sheet generated from that student's own errors. 🔵 **It renders the agent's
+reasoning while marking, which is the human-review surface four of this base's jurisdictions
+require.**
+
+🔴 **And the reason `37` passes missed it is `T114`: the gap was a LANGUAGE gap, not a supply
+gap.** The query that found it was `教育 大模型 agent`. 🔵 **Every nil this base has declared from
+an English-language sweep is now suspect in the same way.**
+
+🔴 **`T115` — star-ranking INVERTS on a CJK corpus.** `智慧教育` (`TOTAL=399`), `作业批改`
+(`435`), `AI素养` (`100`) and `智能备课` (`221`) all return the same unrelated high-traction
+repositories at the top — a book list at `26,122★`, an x86 tutorial at `5,450★`, a propaganda
+corpus at `3,351★` — while the real education projects sit at `2`–`7★`. 🟢 **Read the full set,
+sort by `pushed_at`, never by stars.**
+
+### Rows filed
+
+| Row | Licence (byte-read) | Stars | Region |
+|---|---|---|---|
+| [`Zhangming0304/teach_agent`](https://github.com/Zhangming0304/teach_agent) | MIT `1,070 B` `sha256:7e705a8728f7…` | 7 | APAC |
+| [`quiet-sys/AInoAgentAcademy`](https://github.com/quiet-sys/AInoAgentAcademy) | MIT `1,069 B` `sha256:66bb28fd7721…` | 2 | APAC |
+| [`sumo1/AI-GAME-COOL`](https://github.com/sumo1/AI-GAME-COOL) | Apache-2.0 `11,357 B` `sha256:c71d239df917…` | 6 | APAC |
+| [`Lu-Yu-Zhen/KongMeng-Agent`](https://github.com/Lu-Yu-Zhen/KongMeng-Agent) | Apache-2.0 `11,360 B` `sha256:adcb860af549…` (BOM) | 3 | APAC |
+
+### Rejected, with the reason
+
+🔴 `AUVdidao/A12-multimodal-ai-teaching-agent` (`6★`), `chenxi1934/yunyun-ai-tutor`,
+`RedMoonnn/math_agent`, `aydenait2025/GradeTrainer`, `jih106211-spec/multi_agent_teacher_assistant`
+— **all `NOASSERTION`.** 🔵 **`GradeTrainer` is the painful one: a teacher-facing platform for
+fine-tuning an open model on a school's own historical marking data, which is precisely the
+capability `P73` wants, and it is unusable as published.** 🟡 **Filed to `ACTION p833-A` as a
+licence request rather than discarded.**
+
+### Controls
+
+🟢 Search channel: `repo:HKUDS/DeepTutor` → `1` (`59,457★`, Apache-2.0, pushed `2026-11-15`);
+invented slug → `HTTP 422`. 🟢 Byte channel calibrated on this base's own repaired figure:
+`sillsdev/libpalaso` → `1,082 B` / `sha256:b716617149f3…`, reproducing `p831`/`p832` EXACTLY.
+🟢 Ref channel: `git ls-remote --heads`; invented slug → `EMPTY-REF-SET`. 🔴
+`gh api repos/{owner}/{repo}` remains `403` for this session.
+
 ## `2026-11-15` (thirty-seventh pass, `p832`) — **the LATAM literacy tier found in the LEARNERS' OWN LANGUAGE after the funder channel returned `422`; and the pass that re-measured this base's published figures instead of trusting the repair that produced them**
 
 🟢 **`5` build-safe agent rows added (`370` → `375`), `3` trends (`T111`–`T113`), `1` recipe

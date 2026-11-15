@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-15
 ---
 
+## 🟢 `2026-11-15` (thirty-eighth pass, `p833`) — **`ACTION p832-C` DISCHARGED: both carried licence conflicts settled by bytes, and one of them had no answer at all**
+
+🟢 **`p832` registered two conflicts rather than guessing at them and asked for byte-reads with
+branch resolution. Both were run. Both are settled. The result is one correction and one honest
+nil.**
+
+### 🟢 Open edX — **`AGPL-3.0`. The `MIT` limb is FALSE.**
+
+`openedx/edx-platform` → **`GRANT at master/LICENSE`**, byte-read `35,136 B`,
+`sha256:e12d78569742…`, opening line `GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November
+2007`. Ref set probed: [`master` `2u/project-theseus` `2u/release` + `3` more].
+
+🔴 **The likely origin of the `MIT` limb is an institution name read as a licence name** — Open edX
+came out of MIT and Harvard, and a search summary carried `MIT` into the licence column. 🔵 **This
+base's other sections already had it right** (`AGPL-3.0` at three separate places in this file), 🔴
+**which is the actual lesson: the conflict was INTERNAL, and an inbound summary was allowed to
+contradict a shelf that was already correct.**
+
+🔵 **Build consequence, and it is the reason this mattered.** AGPL's network clause reaches a
+HOSTED derivative: a client-facing Open edX fork delivered as a service must offer its source to its
+users. 🟢 **Every pattern in `compose/patterns.md` that puts Open edX under a deliverable inherits
+that obligation, and it is a conversation to have at proposal time rather than at delivery.**
+
+### 🔴 Forma LMS — **NEITHER `LGPL` NOR `GPL` is in the repository. Recorded as unverifiable-at-source.**
+
+`formalms/formalms` → **`NO-GRANT-AT-ROOT`**, probed `10` case-aware filenames × `2` resolved heads
+(`master`, `dev`) = `20` probes, all `404`. `composer.json` `404`s. The `README.md` (`6,198 B`,
+byte-read) contains **no occurrence of the string `licen`**. GitHub's own licence field:
+`NOASSERTION`.
+
+🟢 **So the dispute this base carried was between two claims that are both OUTSIDE the
+repository** — project-website prose on one side, a comparison article on the other. 🔵 **`T81`
+says only the bytes settle it; here the bytes say nothing, and *that* is the finding.** 🔴 **Forma
+LMS is therefore recorded on the same footing as `OS4ED/openSIS-Classic`: a deploy-and-configure
+platform, nothing to fork or redistribute, until someone obtains a grant in writing.** 🔵 **Not
+resolved to the likelier answer, which is what `p832` explicitly asked for.**
+
+🟡 **Method note, and it is the reusable part.** This is the probe described in `D833-1` — heads
+resolved from `git ls-remote --heads` BEFORE the filename loop, and the probed ref set printed
+inside the verdict. 🔴 **`p832` showed that one wrong branch argument nils every filename at once
+and produces a verdict byte-identical to a true absence; `3` of this base's standing absence claims
+were false for exactly that reason.** 🟢 **The two verdicts above are falsifiable without re-running
+them, because the refs they probed are in the verdict.**
+
 ## 🔴 `2026-11-15` (thirty-seventh pass, `p832`) — **`0` platform rows added, and the nil is the measurement: the LMS/SIS vertical leg returned nothing this base does not already hold**
 
 🟢 **The mandated vertical leg ran (`open source platform education LMS SIS MIT Apache

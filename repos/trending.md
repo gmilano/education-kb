@@ -4,6 +4,41 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirty-eighth pass, `p833`) — **the NATIONAL-CURRICULUM ACCESS layer: `3` rows, and a `1,000:1` traction ratio over the agents that need them**
+
+🟢 **Foundations `168` → `171`. Verticals `140` → `140`.**
+
+🟢 **`T116` is the reason these three are foundations rather than tools.** China's `AI+Education`
+Action Plan mandates AI across every stage of education; the state already publishes the curriculum
+corpus at `basic.smartedu.cn`; 🔵 **and the thing with actual traction on GitHub is neither the
+plan nor a tutor — it is the CLIENTS that read the corpus.**
+
+| Repo | Licence (byte-read) | Stars | Region | Why |
+|---|---|---|---|---|
+| [`happycola233/tchMaterial-parser`](https://github.com/happycola233/tchMaterial-parser) | MIT `1,072 B` `sha256:4c91bf6766ca…` | 7811 | APAC | Batch textbook download from the 国家中小学智慧教育平台, auto-naming, auto-bookmarking. **GitHub Trending `#3` globally, May `2025`.** PROMOTED from this file |
+| [`alterem/knowledge-grab`](https://github.com/alterem/knowledge-grab) | MIT `1,063 B` `sha256:1161158266f2…` | 568 | APAC | Tauri + Vue 3 desktop client against the same state endpoint — **the second independent implementation, which is what makes it a layer** (`T102` test). PROMOTED from this file |
+| [`finch04/online-mooc`](https://github.com/finch04/online-mooc) | 🟡 Apache-2.0 **non-stock** `9,110 B` `sha256:285936aa4ba4…` | 349 | APAC | JDK17 + Spring Boot 3 MOOC platform with AI assist. **All `9` Apache sections present and complete; text re-flowed and the APPENDIX stripped, so NO copyright holder is named anywhere** — a NOTICE-attribution problem, not a permission one |
+
+### The two licence conflicts `p832` carried, both settled
+
+🔴 **Open edX — `AGPL-3.0`, byte-read `35,136 B` / `sha256:e12d78569742…` at `master/LICENSE`.
+The `MIT` limb is FALSE** (institution name read as licence name). 🔵 Hosted derivatives owe source.
+🔴 **Forma LMS — `NO-GRANT-AT-ROOT`: `10` filenames × `2` heads = `20` probes, `composer.json`
+`404`, README carries no `licen` string, GitHub field `NOASSERTION`. NEITHER `LGPL` nor `GPL` is in
+the repository**; recorded as unverifiable-at-source rather than resolved to the likelier answer.
+
+### The mandated star-ranked battery
+
+🔴 **Nilled a `44`th consecutive time.** The global legs named `HKUDS/DeepTutor` (`59,457★`),
+`THU-MAIC/OpenMAIC` (`43,640★`), `patchy631/ai-engineering-hub` (`41,899★`),
+`ashishpatel26/500-AI-Agents-Projects` (`39,918★`), `satvik314/educhain` (`387★`),
+`CAHLR/OATutor` (`281★`), `learningequality/kolibri` (`1,174★`), `moodle/moodle` (`7,615★`),
+`sakaiproject/sakai` (`1,238★` ECL-2.0), `OpenOLAT/OpenOLAT` (`451★`),
+`openeducat/openeducat_erp` (`913★`), `francoisjacquet/RosarioSIS` (`654★` GPL-2.0) and
+`rasbt/LLMs-from-scratch` (`108,456★`). 🟢 **All `13` already held.** 🔵 **The three rows filed
+above came from the CJK legs, not from this battery** — which is `T115` stated as a measurement
+rather than as an opinion.
+
 ## `2026-11-15` (thirty-seventh pass, `p832`) — **no new foundation or vertical rows, and that is the result: `1` row PROMOTED from a field claim to a byte-read, and `38.7%` of this base's published grant figures shown to be unreproducible**
 
 🔴 **Foundations `168` → `168`. Verticals `140` → `140`.** 🟢 **The mandated star-ranked battery
