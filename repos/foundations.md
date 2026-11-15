@@ -11,7 +11,7 @@ The platforms and libraries an education engagement actually builds on, all veri
 licence-verified by BYTE-READ over `raw.githubusercontent.com`, controlled in both directions
 against two invented addresses (`T970`, `T37`).
 
-## Foundational repos — 102 rows
+## Foundational repos — 110 rows
 
 🟢 **Twentieth pass (`p815`, 2026-11-15): `19` rows added under a new architectural layer — the
 ASSESSMENT ENGINE — and the count above is the gate's output, not a hand count.** 🔵 **The gate
@@ -42,6 +42,36 @@ python3 -I ingest/derive-counts.py        # the gate, now green on all five file
 carried unrun since `p808` is CLOSED — `frappe/education` has an agent surface, and it is
 first-party.** 🔵 **Count re-derived, not carried:** `grep -cE '^\| .*github\.com'
 repos/foundations.md` = `76` after insertion (`70` before). 🔵 **Superseded at `p813` by the machine count above.**
+
+## The retention layer — 🟢 **the only layer in this base whose STAR MASS IS PERMISSIVE, and the first one whose permissive value is an ALGORITHM rather than an application** (new, twenty-first pass `p816`)
+
+🔴 **Twenty passes of this file catalogued `16` architectural layers — LMS, SIS, ERP, rostering,
+LTI, xAPI, SCORM, Caliper, QTI, the research library, the assessment engine — and every one of
+them is a system an INSTITUTION runs.** 🟢 **`p816` asked what system a learner opens when
+nobody is making them, and the answer is a spaced-repetition scheduler.**
+
+🟢 **The licence headline, and it is the exact INVERSE of `p815`'s.** In the assessment layer
+six of the ten highest-star rows were copyleft and held `9,233★` of `10,604★`. 🟢 **Here the
+five `open-spaced-repetition` implementations of the FSRS algorithm are MIT and hold `6,329★`
+between them, and every one was byte-read this pass.**
+
+🔴 **But the APPLICATION tier of the same layer is copyleft without exception** — `ankitects/anki`
+(`32,804★`, AGPL-3.0-or-later, already shelved) and `FooSoft/anki-connect` (`2,083★`, GPL-3.0-or-later,
+below). 🟢 **So the layer splits cleanly along a line this base has not had to draw before: the
+ALGORITHM is free to build on, the APPLICATION is not, and they are separable because the algorithm
+is published as a specification with five independent implementations. That is `T49`, and `P40` is
+the build.**
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/open-spaced-repetition/fsrs4anki | 🟢 **MIT — byte-read** (`1,079 B`, `sha256:2ec9e6e6…`, holder `open-spaced-repetition`) | 4137 | 🟢 **New this pass (`p816`), and the most-starred permissive repository in the layer.** *"A modern Anki custom scheduling based on Free Spaced Repetition Scheduler algorithm."* `166` forks, pushed `2026-08-14`. 🔵 **It is a SCHEDULER SHIPPED AS CONFIGURATION — the algorithm is delivered into AGPL Anki as a JavaScript snippet the user pastes into deck options, which is why an MIT grant over it is coherent even though its host is AGPL.** 🟢 **For a studio the useful part is that FSRS is now Anki's own default, so “use FSRS” is the incumbent choice rather than a novel one** |
+| https://github.com/open-spaced-repetition/ts-fsrs | 🟢 **MIT — byte-read** (`1,079 B`, `sha256:8b83a73d…`, holder `Open Spaced Repetition`) | 872 | 🟢 **New this pass (`p816`), and the row `P40` is actually built on.** *"ts-fsrs is a versatile package written in TypeScript."* Pushed `2026-11-13`. 🟢 **TypeScript means it runs in the browser and in the same runtime as most education front ends, so the retention engine can live inside the client's product with no service to operate and no copyleft anywhere in the tree.** 🔵 **This is the single most reusable row this pass found** |
+| https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler | 🟢 **MIT — byte-read** (`1,089 B`, `sha256:c0e0a71c…`, holder `open-spaced-repetition-scheduler`) | 736 | 🟢 **New this pass (`p816`) — the ALGORITHM itself, as distinct from any implementation.** *"A spaced repetition algorithm based on DSR model."* 🔵 **It is the specification and the wiki, which is what makes the other four rows substitutable for one another and what makes the layer safe to build on: a studio is adopting a documented algorithm with multiple implementations, not a single maintainer's library.** 🟢 **Cite this row, not a library, when an engagement needs to justify the approach** |
+| https://github.com/open-spaced-repetition/py-fsrs | 🟢 **MIT — byte-read** (`1,079 B`, `sha256:021bff58…`, holder `Open Spaced Repetition`) | 531 | 🟢 **New this pass (`p816`).** *"Python Package for FSRS Spaced Repetition."* Pushed `2026-11-13`. 🔵 **The server-side counterpart to `ts-fsrs`, and the one to use where the review history lives in a data warehouse rather than a browser.** 🟢 **`T41` CORROBORATION, unprompted: this payload is byte-identical to the `1,079 B` `021bff58…` object this base recorded at `p683` for `fsrs4anki-helper`. Two repositories, one grant object, and the instrument agreed with its own earlier reading across `133` passes** |
+| https://github.com/open-spaced-repetition/rs-fsrs | 🟢 **MIT — byte-read** (`1,079 B`, `sha256:0f7be8cb…`, holder `Open Spaced Repetition`) | 53 | 🟢 **New this pass (`p816`).** *"Rust-based Scheduler for FSRS."* 🔵 **Listed for completeness and for one specific reason: it is the implementation that makes the algorithm embeddable in a mobile client or a WASM bundle, which is where a consumer-facing education product will want the scheduling to run.** Pushed `2026-07-20` |
+| https://github.com/st3v3nmw/obsidian-spaced-repetition | 🟢 **MIT — byte-read** (`1,078 B`, `sha256:0a84e8f3…`, holder `Stephen Mwangi`) | 2619 | 🟢 **New this pass (`p816`), and the second-most-starred permissive row in the layer.** *"Fight the forgetting curve by reviewing flashcards and entire notes on Obsidian."* `321` forks — the highest fork count in this pass. 🔵 **Architecturally it matters because it reviews NOTES, not only cards: the corpus is the learner's existing Markdown, so there is no authoring step to sell and no migration to run.** 🟢 **Pushed `2026-11-01`; `T42` places it `Global` on its target system (Obsidian), not on its author** |
+| https://github.com/reuseman/flashcards-obsidian | 🟢 **MIT — byte-read** (`1,069 B`, `sha256:99f1ba49…`, holder `Alex Colucci`) | 1116 | 🟢 **New this pass (`p816`).** *"An Anki plugin for Obsidian.md."* `110` forks, pushed `2026-10-31`. 🔵 **The MIT bridge between a Markdown corpus the institution owns and the AGPL application the learner already uses — the same inversion `kitschpatrol/yanki-obsidian` performs on the agent shelf, and the reason `P40` can treat Anki as an optional export target rather than a dependency** |
+| https://github.com/FooSoft/anki-connect | 🔴 **GPL-3.0-or-later — byte-read** (`646 B`, `sha256:ddf0a4b0…`, holder `Alex Yatskov`, title line `GNU General Public License … either version 3 of the License, or (at your option) any later version`) — 🔴 **GitHub's licence field says `NOASSERTION`** | 2083 | 🔴 **New this pass (`p816`), and the most consequential licence correction in it — `T50`'s primary specimen.** *"Anki plugin to expose a remote API for creating flash cards."* 🔴 **EVERY out-of-process Anki agent on the shelf above depends on this, and it is GPL-3.0-or-later while GitHub reports no licence at all.** 🟢 **The posture is nonetheless workable and should be stated to a client explicitly rather than discovered later: AnkiConnect runs as a plugin inside the user's own Anki and answers HTTP on `127.0.0.1:8765`, so a deliverable that CALLS it over the network neither links it nor distributes it. Call it; never vendor it, never bundle it, never fork it into a product.** 🔴 **Pushed `2025-11-04` — a year stale, and it is the single point of failure for the whole out-of-process half of this layer (`ACTION p816-D`)** |
 
 ## The assessment-engine layer — 🔴 **the highest star mass in education outside the research library, and the worst licence profile in this base** (new, twentieth pass `p815`)
 

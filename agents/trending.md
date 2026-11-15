@@ -4,6 +4,121 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-first pass) — **The layer a learner opens when NOBODY is making them — and the first layer in twenty-one passes whose star mass is PERMISSIVE and whose copyleft risk arrives through convenience rather than ignorance**
+
+**Pass `p816`.** 🟢 **Ten agent rows added, all build-safe, every licence byte-read; one copyleft
+row and one rejection filed; `8` library rows to `repos/foundations.md` and `3` platform rows to
+`verticals/solutions.md`.** 🟢 **`Global 84 · APAC 18 · EMEA 16 · North America 14 · LATAM 10`
+= `142` build-safe, re-derived on the file by `ingest/derive-counts.py`.**
+
+🔴 **This pass did NOT close a regional nil, and all three thin regions are unchanged.** 🔵
+**That is a property of the layer rather than a failed leg: under `T42` region follows the target
+system's CATALOGUE, and Anki, Obsidian and the FSRS specification have no national catalogue, so
+all `21` new rows place `Global`. Stated here because a silent region is indistinguishable from a
+covered one.**
+
+### The headline: twenty passes asked what system an INSTITUTION runs. This one asked what a learner opens voluntarily
+
+🔵 **The progression is now four steps long and each step was a different question.** `p813`
+answered *what system does a learner LOG INTO* with the LMS and the SIS. `p814` widened it to the
+research library (`348` repos, `38,407★` ceiling). `p815` asked what system a learner is ASSESSED
+BY. 🟢 **`p816` asked what a learner opens when nobody is making them — and the answer is a
+spaced-repetition scheduler.**
+
+| Query | `total_count` | Top row | ★ | Licence (byte-read) |
+|---|---|---|---|---|
+| `spaced repetition` | **9,265** | `ankitects/anki` | **32,804** | 🔴 AGPL-3.0-or-later |
+| `anki mcp` | **246** | `ankimcp/anki-mcp-server` | **558** | 🟢 **MIT** |
+| `flashcard mcp` | **163** | `ankimcp/anki-mcp-server` | **558** | 🟢 **MIT** |
+| `spaced repetition scheduler fsrs` | **131** | `open-spaced-repetition/fsrs4anki` | **4,137** | 🟢 **MIT** |
+| `obsidian flashcards plugin` | **105** | `reuseman/flashcards-obsidian` | **1,116** | 🟢 **MIT** |
+| `flashcard generator ai` | **834** | `x-cod3r/Ai-Anki-Generator` | **20** | 🔴 GPL-3.0 |
+| `anki connect addon api` | **0** | — | — | 🔴 declared nil |
+| `srs language learning app open source` | **0** | — | — | 🔴 declared nil |
+| `memory retention learning algorithm open source` | **0** | — | — | 🔴 declared nil |
+
+🔴 **COUNTED AGAINST THIS BASE'S OWN INDEX: of the `314` GitHub addresses published across the
+live shelves before this pass, exactly ONE was in this layer** — `ankitects/anki`, the AGPL
+application. 🟢 **The entire permissive half of the layer, `6,329★` of MIT-licensed scheduling
+algorithm, was absent.**
+
+### The three findings, in order of commercial weight
+
+🟢 **1. `T49` — the permissive value is an ALGORITHM, not an application, and the two are
+separable.** Five MIT implementations of FSRS (`fsrs4anki` `4,137★`, `ts-fsrs` `872★`,
+`free-spaced-repetition-scheduler` `736★`, `py-fsrs` `531★`, `rs-fsrs` `53★`) against a copyleft
+application tier of `34,887★`. 🔵 **Everywhere else in this base the copyleft artefact is
+load-bearing — Moodle, Canvas, Judge0, Zotero. Here it is replaceable, because the algorithm is a
+published specification with a public benchmark. `P40` is the build and carries no copyleft even
+transitively.**
+
+🔴 **2. `T48` — the licence is set by WHERE THE CODE RUNS, and the upstream recommends the
+copyleft path.** Same organisation, same function, two licences:
+[`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) is **MIT** (`558★`,
+out-of-process) and [`ankimcp/anki-mcp-server-addon`](https://github.com/ankimcp/anki-mcp-server-addon)
+is **AGPL-3.0-or-later** (`102★`, in-process inside AGPL Anki). 🔴 **And the README says
+*“Prefer the AnkiMCP addon for most setups … the addon is the simpler and better-supported
+path.”*** 🔵 **First finding in this base where copyleft arrives through CONVENIENCE: the
+licence-correct path is the harder one to support, and a developer will reach for the one-click
+install. `P41` makes the refusal a written deliverable.**
+
+🔴 **3. `T50` — `NOASSERTION` leans copyleft, `3` of `3`.** Byte-read this pass:
+`FooSoft/anki-connect` (`2,083★`) → **GPL-3.0-or-later**; `ankimcp/anki-mcp-server-addon`
+(`102★`) → **AGPL-3.0-or-later**; `andymatuschak/orbit` (`1,839★`) → **split Apache-2.0 /
+AGPL-or-BUSL-1.1**. 🔵 **The mechanism is not random: GitHub's `licensee` matches stock licence
+TEXT, and GPL-family projects conventionally ship a short reference NOTICE while MIT and Apache
+projects ship the full text. So the failure mode is correlated with copyleft.** 🟢 **`18` of this
+pass's `20` candidates had an accurate field; `0` of the `3` empty ones resolved permissive.
+Operational rule adopted: `NOASSERTION` is RED-until-read, never a skip.**
+
+### 🟢 `ACTION p813-C` discharged: India's nil is REAL
+
+🔴 **Five prescribed shapes, all run: `academia erp mcp` `0`, `camu mcp college` `0`,
+`shaala darpan` `0`, `apaar abc academic bank credits` `1` (`0★`), `samarth university` `6`
+(`0★`).** 🟢 **Seven repositories, star ceiling `0`. The largest education system on earth runs
+named commercial ERPs with no open agent surface over any of them — the only
+first-connector market in this base. `T51`; retired per `p773-E` rather than carried a fourth
+time.**
+
+### 🔴 The three mandated layers `p815` measured empty are STILL empty, re-probed this pass
+
+| Layer | Query | `total_count` | Star ceiling | Verdict |
+|---|---|---|---|---|
+| Proctoring | `proctoring mcp` | **4** | **0★** | 🔴 Confirmed empty |
+| Accessibility remediation | `accessibility remediation agent wcag` | **13** | **4★** | 🟡 **CORRECTION: `p815` recorded `total_count=0`; on this query shape it is `13` with a `4★` ceiling. Still unbuildable, but not absent** |
+| IEP | `iep individualized education program` | **11** | **3★** | 🔴 Confirmed empty |
+
+🔵 **The accessibility cell is a measurement correction rather than a market change: `p815`'s
+query returned zero and a differently-shaped query returns thirteen — which is `T26`/`T29`'s rule
+(an absence is only as strong as the number of shapes tried) applied to this base's own prior
+claim.**
+
+### Rows added this pass
+
+🟢 **Build-safe (`10`):** `ankimcp/anki-mcp-server` (`558★`, MIT) ·
+`nailuoGG/anki-mcp-server` (`254★`, 🟡 MIT by MANIFEST ONLY, no grant payload) ·
+`kitschpatrol/yanki-obsidian` (`201★`, MIT) · `scorzeth/anki-mcp-server` (`185★`, MIT, 🔴 stale
+`2025-01-08`) · `CamdenClark/anki-mcp-server` (`81★`, MIT, 🔴 stale `2025-03-19`) ·
+`pieralukasz/true-recall` (`67★`, MIT) · `HumphreySun98/Smart-Study-Agent` (`60★`, MIT) ·
+`kaorii-ako/Shiori-v1` (`48★`, MIT) · `jasperket/clanki` (`45★`, MIT) · `nietus/anki-mcp`
+(`44★`, MIT).
+
+🔴 **Copyleft (`1`):** `ankimcp/anki-mcp-server-addon` (`102★`, AGPL-3.0-or-later).
+
+🔴 **Rejected (`1`):** `open-spaced-repetition/srs-benchmark` (`287★`) — no grant at `32`
+licence paths or `16` manifests. 🔵 **Narrow rejection: cite it and reproduce its method, do not
+vendor its code. It is the layer's evidence base.**
+
+### 🔵 Consolidation signal, worth watching
+
+🔴 **Of the five Anki MCP servers above `40★`, THREE are stale** (`scorzeth` `2025-01`,
+`CamdenClark` `2025-03`, and `nailuoGG` is maintained but ungranted) **and two are maintained.**
+🔵 **In a layer barely two years old that is early consolidation around `ankimcp.ai`, which is
+also the project pushing the AGPL addon — so the consolidation and the licence risk are the same
+event. `ACTION p816-D`.**
+
+---
+
 ## `2026-11-15` (twentieth pass) — **The layer a learner is ASSESSED by, which carries the highest star mass in education outside the research library — and the first layer in twenty passes whose blocker is the LICENCE rather than the credential**
 
 **Pass `p815`.** 🟢 **Four agent rows added, all build-safe (MIT ×4), every licence byte-read;

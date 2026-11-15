@@ -1,7 +1,189 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-13
+updated: 2026-11-15
+---
+
+## 🆕 `p816` — **Disposition of `ACTION p813-A`…`p813-F`, and the actions for the next pass. 🔴 First: `p814` and `p815` BOTH wrote no gap section, so these actions went unanswered for two passes**
+
+🔴 **The process defect `p813` named about `p812` has now happened twice more.** `p813` wrote six
+actions; `p814` added `30` rows and wrote no disposition; `p815` added `29` rows and wrote no
+disposition. 🔵 **So two passes of work were done without anyone answering the questions the
+previous pass had paid to formulate — which is the exact failure mode this register exists to
+prevent, and it is now the most frequently repeated defect in this base's own process.** 🟢
+**`p816` answers all six, and `ACTION p816-A` makes the disposition a precondition rather than a
+courtesy.**
+
+### 🟢 `ACTION p813-A` — **CLOSED, and the reformulation holds**
+
+🟢 **As instructed, `python3 -I ingest/derive-counts.py` was run FIRST, before any edit, and
+NOT routed through `make hooks`. It ran, directly, and returned `EXIT=0` on all five files:**
+
+```
+compose/patterns.md    recipes: derived=39 families=39 range=P-1..P-39 claimed=39   GREEN
+intel/trends.md        trends:  derived=47 claimed=47                               GREEN
+agents/top.md          shelf: tables=1  rows=132 distinct=132 graded=132 claimed=132 GREEN
+repos/foundations.md   shelf: tables=17 rows=104 distinct=102 graded=102 claimed=102 GREEN
+verticals/solutions.md shelf: tables=17 rows=94  distinct=92  graded=92  claimed=92  GREEN
+```
+
+🟢 **And it was run again after EVERY insertion, so each count claim on this pass was written
+from the gate's output rather than by hand. Final state, all five GREEN:**
+
+```
+compose/patterns.md    recipes: derived=42 claimed=42                               GREEN
+intel/trends.md        trends:  derived=51 claimed=51                               GREEN
+agents/top.md          shelf: tables=1  rows=142 distinct=142 graded=142 claimed=142 GREEN
+repos/foundations.md   shelf: tables=18 rows=112 distinct=110 graded=110 claimed=110 GREEN
+verticals/solutions.md shelf: tables=18 rows=97  distinct=95  graded=95  claimed=95  GREEN
+```
+
+🟢 **The uncounted-table detector earned its keep on its first real test.** `p813` built it
+unproven and warned not to rebuild it. 🔵 **This pass added THREE new layer tables — one to
+`repos/foundations.md`, one to `verticals/solutions.md` — using declared signatures, and the gate
+counted them automatically with no change to the script. 🟢 The detector was not rebuilt, not
+widened, and not needed as a repair. That is the first pass in this base's history where a new
+architectural layer was added and the count gate required no work at all.**
+
+### 🔴 `ACTION p813-B` — **RETIRED, per the `p773-E` rule, after being owed FOUR times**
+
+🔴 **Stated at `p811`, carried at `p813` with the explicit instruction: *“If `p814` cannot run
+it, RETIRE it rather than carry it a fourth time.”* `p814` did not run it. `p815` did not run it.
+`p816` did not run it — the budget went to the retention layer.** 🟢 **So it is retired, not
+carried: SIGED (🇲🇽), Ceibal (🇺🇾) and SIE are no longer standing supply targets.**
+
+🟢 **But one half of it survives in a better form, and this is why retirement is not deletion.**
+🔵 **The Ceibal lead reappeared this pass as a MARKET fact rather than a supply target: EdTech
+Hub and Fundación Ceibal launched a formal partnership in September 2026 to help LAC education
+systems respond to AI (recorded in `intel/market.md` under LATAM).** 🟢 **Ceibal is therefore the
+most likely regional CHANNEL for anything a studio builds for LATAM, which is a more useful fact
+than the repository count the retired action was chasing.**
+
+### 🟢 `ACTION p813-C` — **DISCHARGED, and the answer is the one the action was written to disprove**
+
+🟢 **Run in full, all five prescribed shapes, exactly as specified — ERP vendors by name, the
+national identifiers, the state systems:**
+
+| Query (verbatim) | `total_count` | Star ceiling |
+|---|---|---|
+| `academia erp mcp` | **0** | — |
+| `camu mcp college` | **0** | — |
+| `shaala darpan` | **0** | — |
+| `apaar abc academic bank credits` | **1** | **0★** |
+| `samarth university` | **6** | **0★** |
+
+🔴 **Seven repositories, star ceiling `0`. 🇮🇳 India's nil is a REAL MARKET FACT.** 🟢 **Written
+up as `T51` with its limits attached — it measures public repositories discoverable by
+English-language system names, and in an ERP-vendor market private integration work is where this
+code would live. Per `p773-E`, RETIRED rather than carried a fourth time: this channel has now been
+asked everything it can answer.**
+
+### 🔴 `ACTION p813-D` — **NOT DONE, third pass. Carried, and it now has a THIRD instance**
+
+🔴 **Unchanged in substance: opening a licence issue on another project's repository is
+outward-facing contact on behalf of the studio, and `p816` did not do it either.** 🟢 **The
+instances, now three and all the same shape — a highly-starred repository whose only blocker is one
+missing `LICENSE` commit:**
+
+| Repo | ★ | Blocker |
+|---|---|---|
+| [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) | **57** | No grant; `17` forks. The most-starred Moodle MCP server in existence |
+| 🆕 [`nailuoGG/anki-mcp-server`](https://github.com/nailuoGG/anki-mcp-server) | **254** | 🟡 **MIT declared in `package.json` only; no licence text anywhere in the tree.** `38` forks |
+| 🆕 [`open-spaced-repetition/srs-benchmark`](https://github.com/open-spaced-repetition/srs-benchmark) | **287** | 🔴 No grant at `32` paths or `16` manifests — **and the same organisation grants MIT on five sibling repositories, so this is near-certainly an oversight** |
+
+🔵 **The `srs-benchmark` instance is the strongest case this register has held for actually
+doing it: the asking party would be pointing out an inconsistency within the maintainer's own
+organisation, not requesting a favour.** 🔴 **Still requires a human decision. `ACTION p816-C`.**
+
+### 🔴 `ACTION p813-E` — **NOT DONE, third pass. Carried with the backlog re-counted**
+
+🔴 **As stated: `103` build-safe rows were graded on credential handling but only `p813`'s `29`
+carried an integrity grade.** 🔴 **`p814`, `p815` and `p816` each added rows without sweeping the
+older ones, so the ungraded backlog has GROWN rather than shrunk — `142` build-safe rows now, of
+which roughly `~60` carry a `T36` integrity grade.** 🟢 **`p816`'s own ten rows are graded where
+the axis applies (`kaorii-ako/Shiori-v1` is flagged for its Google Classroom scope grant).** 🔵
+**Carried as `ACTION p816-B`, and reshaped to be completable: sweep the `~82` ungraded rows for the
+three verbs only — signs in, submits, generates answers — rather than re-reading every row.**
+
+### 🟡 `ACTION p813-F` — **PARTIALLY ADJUDICATED, and the early evidence runs AGAINST the prediction's second limb**
+
+🔴 **The full-shelf `sha256(LICENSE)` sweep was NOT run.** 🟢 **But this pass byte-read `24`
+payloads and the prediction can be partially tested on them, which is better than carrying it
+untouched. Three collisions were found, unprompted:**
+
+| Collision | Cross-owner? | Genuine re-publication? |
+|---|---|---|
+| `py-fsrs` ≡ `fsrs4anki-helper` (`1,079 B` `021bff58…`) | 🔴 **No** — both `open-spaced-repetition` | 🔴 No — sibling repos, one org |
+| `yanki-obsidian` ≡ `yanki-connect` (`1,071 B` `1d5701eb…`) | 🔴 **No** — both `kitschpatrol` | 🔴 No — sibling repos, one author |
+| `hashcards` ≡ `eagle-aig` ≡ `openedx/XBlock` (`11,358 B` `cfc7749b…`) | 🟢 **Yes** | 🔴 **No — and this is the informative one: it is the verbatim stock Apache-2.0 text, which embeds NO holder** |
+
+🔵 **The third row is `T41`'s own caveat confirming itself: a byte-hash establishes lineage only
+where the stock text embeds a HOLDER. Apache-2.0's does not, so a collision there carries no
+lineage information at all — it means two projects used the same unmodified file.** 🟢 **Restricting
+to holder-EMBEDDING payloads, which is the only population where the prediction is meaningful: `14`
+MIT payloads read this pass, `14` distinct holders, **`0` cross-owner collisions**.**
+
+🔴 **So on a sample of `24`, limb 2 of the prediction — *“at least one is a genuine
+re-publication rather than a sibling repo by the same author”* — is NOT supported.** 🟢 **The
+prediction is not yet refuted, because the sample is small and not the `142`-row shelf it
+specified. Carried as `ACTION p816-E` with the sample recorded so the next pass starts from `24`
+reads rather than from zero.**
+
+---
+
+### ACTION `p816-A`…`p816-F` for the next pass
+
+🟢 **`p816-A` — WRITE A DISPOSITION SECTION. This is now the highest-priority action in this
+register, ahead of any harvest.** 🔴 **Three of the last four passes (`p812`, `p814`, `p815`) added
+rows and answered nothing, and `p816` had to adjudicate six actions across two passes of silence.**
+🔵 **The rule, stated so it can be checked mechanically: a pass that adds rows and writes no
+`## 🆕 pXXX` section in this file has not finished, regardless of how many rows it filed.** 🟢
+**Run `python3 -I ingest/derive-counts.py` first and report its line, as `p813-A` established —
+that instruction worked three passes running and needs no change.**
+
+🟢 **`p816-B` — the `T36` integrity sweep, RESHAPED to be completable** (was `p813-E`, now owed
+four times). 🔴 **`~82` of `142` build-safe rows carry no integrity grade, and the backlog grows
+every pass.** 🔵 **Do not re-read every row. Grep the shelf for the three verbs only — signs in,
+submits, generates answers — and mark the hits. A partial sweep that lands beats a complete one
+that is deferred for a fifth pass.**
+
+🔴 **`p816-C` — ASK, do not build: the licence-issue backlog is now THREE repositories**
+(`srs-benchmark` `287★`, `nailuoGG/anki-mcp-server` `254★`, `loyaniu/moodle-mcp` `57★`). 🟢
+**Start with `srs-benchmark`, where the ask is an inconsistency inside the maintainer's own
+organisation rather than a favour.** 🔴 **Outward-facing contact on behalf of the studio — requires
+a human decision and `p816` did NOT do it. If `p817` cannot get that decision, say so plainly and
+stop re-listing it as though it were pending work.**
+
+🔴 **`p816-D` — `FooSoft/anki-connect` is a SINGLE POINT OF FAILURE and it is a year stale.**
+`2,083★`, GPL-3.0-or-later, pushed `2025-11-04`, and every out-of-process Anki agent on this
+base's shelf depends on it. 🟢 **Concrete probe: `q="anki connect fork"`, `q="ankiconnect
+replacement"`, and check whether recent Anki releases expose a first-party local API that removes
+the dependency.** 🔵 **Limb 1: a maintained fork or a first-party API exists → `P41` gains a
+supported path and the staleness caveat is removed from `10` shelf rows. Limb 2: nothing → the
+caveat is real and `P40`'s algorithm-first shape is the only safe recommendation in this layer.**
+
+🟡 **`p816-E` — finish `p813-F`'s hash sweep, starting from this pass's `24` reads** (`0`
+cross-owner collisions among `14` holder-embedding payloads). 🔵 **And the restriction that makes
+the test meaningful: run it ONLY over holder-embedding payloads (MIT, BSD, ISC), because
+Apache-2.0's stock text carries no holder and its collisions are uninformative — `T41`'s caveat,
+confirmed by measurement this pass.** 🟢 **Second, cheaper half: sweep the shelf's recorded STAR
+figures for drift. `HKUDS/DeepTutor` measured `59,256★` this pass against a figure recorded several
+passes ago, and the sibling technology KB found its own star counts had been pipeline-inflated.**
+
+🔵 **And a THIRD half, which this pass stumbled into and which is cheap: `P1057`'s case lesson applies to the LIVENESS channel too, not only the licence channel.** 🔴 **This pass's liveness sweep returned `404` on `andymatuschak/orbit`'s `README.md@master` and `200` on **`Readme.md`** — a live `1,839★` repository that a one-spelling probe would have recorded as dead.** 🟢 **Re-run the liveness sweep over the shelves with the `P1057` generator supplying README spellings, and count how many recorded `404`s in this base are case artefacts rather than dead addresses.**
+
+🟢 **`p816-F` — the next LAYER question, and the sequence that generated it.** 🔵 **Four passes
+have each asked a different question and each found a layer: `p813` what a learner logs into (LMS /
+SIS), `p814` what else they log into (the research library, `348` repos), `p815` what assesses them
+(the assessment engine), `p816` what they open voluntarily (retention, `9,265` repos).** 🟢 **The
+unasked question: what system does someone OTHER than the learner log into about the learner?**
+Concrete shapes: `koha ils library mcp`, `open badges verifiable credentials`, `parent portal
+mcp`, `school transport attendance mcp`, `early childhood assessment open source`. 🔴 **And the
+declared blank this pass could not fill: country-level AI-in-education REGULATION for any
+individual LATAM country — two passes running now. Name instruments, not countries: search for
+`resolución inteligencia artificial educación`, `decreto IA educación`, and the Ceibal/EdTech Hub
+partnership's own published outputs.**
+
 ---
 
 ## 🆕 `p813` — **Disposition of `ACTION p811-A`…`p811-D` (`p812` wrote no gap section), and the actions for the next pass**

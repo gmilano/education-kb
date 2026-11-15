@@ -6,7 +6,7 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
-**Thirty-nine** concrete recipes — derived recipes: **39**. 🟢 **Twentieth pass (`p815`): `P37`–`P39` added** — the appeal-survivable academic-integrity service (the first recipe here whose deliverable is EVIDENCE rather than a decision), the only fully permissive assessment stack this layer offers, and natural-language timetabling on a real Apache-2.0 solver. 🔵 **All three exist because `T44` found that the assessment layer's star mass is COPYLEFT, so each one names the permissive substitute explicitly and carries no copyleft in its tree.** All components licence-verified by byte-read on 2026-11-15. 🟢 **Nineteenth pass (`p814`): `P34`–`P36` added** — the citation-integrity service (the first integrity-POSITIVE recipe in this base), the sovereign institutional-repository agent on the only permissively licensed platform in the education stack, and the Brazilian norm-compliance pipeline. All components licence-verified by byte-read on 2026-11-13. 🟢 **Eighteenth pass (`p813`): `P31`–`P33` added** — the Chinese university study agent with a written integrity boundary, the North American multi-system family agent, and the clean-room client library that every cluster in this base needs and none of them has. All components licence-verified by byte-read on 2026-11-13. 🟢 **Seventeenth pass (`p812`): `P29`–`P30` added** — the Frappe-based education ERP agent, and the LATAM university self-management agent. Each names the actual
+**Forty-two** concrete recipes — derived recipes: **42**. 🟢 **Twenty-first pass (`p816`): `P40`–`P42` added** — the retention engine a studio OWNS (the first recipe here that replaces a copyleft incumbent with an ALGORITHM rather than forking it), the Anki-native agent whose deliverable includes a written refusal of the upstream's own recommended path, and retention evidence for compliance recurrency — the one recipe in this layer with an institutional buyer. 🔵 **All three exist because `T49` found the retention layer's permissive value is an algorithm with five MIT implementations, so none of them carries copyleft in its tree and `P40` carries none even transitively.** All components licence-verified by byte-read on 2026-11-15. 🟢 **Twentieth pass (`p815`): `P37`–`P39` added** — the appeal-survivable academic-integrity service (the first recipe here whose deliverable is EVIDENCE rather than a decision), the only fully permissive assessment stack this layer offers, and natural-language timetabling on a real Apache-2.0 solver. 🔵 **All three exist because `T44` found that the assessment layer's star mass is COPYLEFT, so each one names the permissive substitute explicitly and carries no copyleft in its tree.** All components licence-verified by byte-read on 2026-11-15. 🟢 **Nineteenth pass (`p814`): `P34`–`P36` added** — the citation-integrity service (the first integrity-POSITIVE recipe in this base), the sovereign institutional-repository agent on the only permissively licensed platform in the education stack, and the Brazilian norm-compliance pipeline. All components licence-verified by byte-read on 2026-11-13. 🟢 **Eighteenth pass (`p813`): `P31`–`P33` added** — the Chinese university study agent with a written integrity boundary, the North American multi-system family agent, and the clean-room client library that every cluster in this base needs and none of them has. All components licence-verified by byte-read on 2026-11-13. 🟢 **Seventeenth pass (`p812`): `P29`–`P30` added** — the Frappe-based education ERP agent, and the LATAM university self-management agent. Each names the actual
 repos, the license consequence, how the pieces wire together, and a rough build estimate.
 All components were license-verified on 2026-11-13 (see `agents/top.md` and
 `repos/foundations.md`). 🟢 **Sixteenth pass (`p811`): `P27`–`P28` added** — the OneRoster
@@ -117,6 +117,134 @@ decision instead of a constraint:
   and it is the one argument that still favours `ltijs` on a long engagement.
 
 ---
+
+## P40 — The retention engine the studio OWNS (Global, and the only recipe in this base that replaces a copyleft incumbent with an algorithm instead of a fork)
+
+🔵 **Why it exists.** `T49` found that the retention layer splits into a copyleft APPLICATION
+tier (`34,887★`) and a permissive ALGORITHM tier (`6,329★`), and that they are separable because
+FSRS is a published specification with five independent MIT implementations. 🟢 **This recipe is
+the consequence: when a client asks for spaced repetition, you do not integrate Anki — you
+implement the scheduler and own it.**
+
+| Role | Component | Licence (byte-read `2026-11-15`) | Why this one |
+|---|---|---|---|
+| Scheduling core (browser / Node) | [`open-spaced-repetition/ts-fsrs`](https://github.com/open-spaced-repetition/ts-fsrs) | 🟢 **MIT** (`1,079 B`, `sha256:8b83a73d…`) | 🟢 **`872★`, pushed `2026-11-13`. TypeScript, so it runs in the same runtime as the client's front end — no service to operate, no copyleft, no network hop for a scheduling decision** |
+| Scheduling core (server / analytics) | [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | 🟢 **MIT** (`1,079 B`, `sha256:021bff58…`) | 🟢 **`531★`. Use where review history lives in a warehouse and the scheduling is recomputed in batch rather than per-click** |
+| Scheduling core (mobile / WASM) | [`open-spaced-repetition/rs-fsrs`](https://github.com/open-spaced-repetition/rs-fsrs) | 🟢 **MIT** (`1,079 B`, `sha256:0f7be8cb…`) | Only if the deliverable is a native or WASM client |
+| The SPECIFICATION you cite | [`open-spaced-repetition/free-spaced-repetition-scheduler`](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler) | 🟢 **MIT** (`1,089 B`, `sha256:c0e0a71c…`) | 🔵 **Cite THIS in the SOW, not a library. It is what makes the three rows above substitutable and the approach defensible as a documented algorithm rather than a dependency on one maintainer** |
+| The EVIDENCE you cite | [`open-spaced-repetition/srs-benchmark`](https://github.com/open-spaced-repetition/srs-benchmark) | 🔴 **NO GRANT — `32` paths + `16` manifests, measured** | 🔵 **Cite it, link it, reproduce its method; 🔴 do NOT vendor its code.** It is the published comparison that turns “use FSRS” into an evidence-based recommendation |
+| Card authoring surface | Plain Markdown in the client's own repository, per [`kitschpatrol/yanki-obsidian`](https://github.com/kitschpatrol/yanki-obsidian) | 🟢 **MIT** (`1,071 B`, `sha256:1d5701eb…`) | 🟢 **The inversion that makes the whole recipe work: the corpus is diffable text the institution owns, so Anki is an optional EXPORT TARGET rather than the system of record** |
+| Optional Anki export | [`reuseman/flashcards-obsidian`](https://github.com/reuseman/flashcards-obsidian) | 🟢 **MIT** (`1,069 B`, `sha256:99f1ba49…`) | For learners who already live in Anki. 🔴 Export only — see `P41` before any read/write integration |
+| Generation | Any LLM, behind the client's existing gateway | — | 🔵 **`T49`: the model picks WHAT to show and may be approximate; FSRS picks WHEN and must be right. Only the second is a correctness claim, and it is already solved** |
+| Mount into the LMS | **LTI 1.3** + **xAPI** events | — | The standing rule of this file: permissive AI layer, mounted over a standard, never a fork |
+
+**Wiring.**
+1. 🟢 **Model the review log first, not the cards.** `card_id`, `user_id`, `reviewed_at`,
+   `rating`, `state`, `stability`, `difficulty`, `due`. 🔵 **FSRS is a pure function over that
+   row — given a card's state and a rating it returns the next interval — so the schema IS the
+   integration and everything else is replaceable.**
+2. 🟢 **Call `ts-fsrs` in the client on each rating** and persist the returned state. No
+   scheduling service, no queue, no cron.
+3. 🟢 **Generate candidate cards from the course corpus with an LLM, and gate them.** Cards are
+   content, so a wrong one is a content defect, not a grading defect — 🔵 **which is why this
+   recipe is far lower risk than anything in the assessment layer: nothing here writes to an
+   academic record, so neither `T36`'s integrity axis nor the EU AI Act's high-risk grading trigger
+   is engaged.**
+4. 🟢 **Author in Markdown in the client's repository.** Subject-matter experts review cards in
+   the pull-request flow they already use.
+5. 🟢 **Emit `xAPI` statements** on each review so the retention data lands in the institution's
+   Learning Record Store rather than in a product silo. That is what makes `P42` possible later.
+6. 🔴 **Do not integrate Anki to get started.** It is `32,804★` of AGPL-3.0 and it solves a
+   problem — the scheduling arithmetic — that `ts-fsrs` solves in the client under MIT.
+
+🟢 **No copyleft anywhere in the tree, and no GPL dependency even transitively — the only recipe
+in this base that can say that about a layer whose incumbent is AGPL.**
+**Estimate: 4–6 weeks** for the review loop and schema; **+3 weeks** for LLM card generation with
+the review gate; **+2 weeks** for the LTI 1.3 mount.
+
+
+## P41 — Anki-native study agent with a DOCUMENTED process boundary (Global, and the first recipe here whose main deliverable includes a written refusal)
+
+🔵 **Why it exists.** Some clients already have the cohort inside Anki — language schools,
+medical exam preparation, professional certification — and `P40`'s “implement it yourself” does not
+apply, because the decks and the review history already exist. 🔴 **`T48` is then the whole
+engagement risk: the path the upstream RECOMMENDS is AGPL-3.0, installs in one click, and a
+developer setting up a laptop will reach for it.**
+
+| Role | Component | Licence (byte-read `2026-11-15`) | Posture |
+|---|---|---|---|
+| Agent surface | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 **MIT** (`1,074 B`, `sha256:0ef87fdb…`) | 🟢 **`558★`, pushed `2026-11-07`. Adopt. Runs OUT of process** |
+| 🔴 The refusal | [`ankimcp/anki-mcp-server-addon`](https://github.com/ankimcp/anki-mcp-server-addon) | 🔴 **AGPL-3.0-or-later** (`227 B`, `sha256:34b58d89…`) | 🔴 **REFUSE, in writing, and say why.** Same org, same function, `102★`; AGPL because it runs INSIDE Anki |
+| The bridge | [`FooSoft/anki-connect`](https://github.com/FooSoft/anki-connect) | 🔴 **GPL-3.0-or-later** (`646 B`, `sha256:ddf0a4b0…`) — 🔴 GitHub says `NOASSERTION` | 🟡 **CALL, never vendor.** The user's own Anki runs it and answers HTTP on `127.0.0.1:8765`; a deliverable that calls it neither links nor distributes it |
+| Measurement verbs | [`nietus/anki-mcp`](https://github.com/nietus/anki-mcp) | 🟢 **MIT** (`1,063 B`, `sha256:58f1e901…`) | 🔵 Topology reference for *"track retention, find leeches"* — the reporting half, which is what an institution pays for |
+| Scheduling, if you change it | [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 **MIT** (`1,079 B`, `sha256:2ec9e6e6…`) | 🟢 **`4,137★`. Delivered as deck-options CONFIGURATION, not code — so tuning the schedule touches no licence at all** |
+
+**Wiring.**
+1. 🟢 **Write the boundary into the SOW before any code.** *"The agent runs as a separate
+   process and reaches Anki over AnkiConnect's local HTTP API. We do not install the vendor's
+   recommended MCP addon, because it is AGPL-3.0 and would reach your deliverable."* 🔵 **This is
+   the deliverable clients remember, and `T48` is the argument for it.**
+2. 🟢 **Pin the topology in the dev environment, not in a README.** The AGPL addon is one click
+   in Anki's add-on browser. 🔴 **A convenience risk is only controlled by making the correct path
+   the one already set up** — ship the `ankimcp` server in the project's own toolchain.
+3. 🟢 **Build the reporting half, not the card half.** Retention curves, leech identification and
+   cohort comparison over the review log. 🔵 **The cards already exist; the reporting does not,
+   and `nietus/anki-mcp` shows it is only a few queries away.**
+4. 🟢 **Tune scheduling with `fsrs4anki` configuration**, which is pasted into deck options and
+   is therefore a settings change rather than a code dependency.
+5. 🔴 **Second-order check, and it is not hypothetical:** AnkiConnect was last pushed
+   `2025-11-04`, a year stale, and the entire out-of-process half of this layer depends on it. 🟢
+   **Budget for the possibility that the client's Anki version outruns it, and keep `P40`'s
+   schema as the exit — the review log is portable even when the application is not.**
+
+🟡 **Copyleft in the tree: NONE. Copyleft called over a local HTTP boundary: one (`anki-connect`,
+GPL-3.0-or-later), deliberately, documented.**
+**Estimate: 3–4 weeks** for the agent and the reporting loop; **1 week** for the licence
+documentation and environment pinning, which is not optional here.
+
+
+## P42 — Retention EVIDENCE for mandatory training and certification recurrency (Global, the workforce half of `T23`, and the one recipe in this layer with an institutional buyer)
+
+🔵 **Why it exists.** `T23` found assessment splitting into institutional and workforce halves,
+and the retention tier (`verticals/solutions.md`, `p816`) found that every platform in it is
+adopted by LEARNERS and bought by NOBODY. 🟢 **The gap is the opportunity: a regulated employer
+must prove its people still know something they were certified on months ago, and no system it
+operates can tell it that. Retention is the measurement it is missing, and compliance is a budget
+line that already exists.**
+
+| Role | Component | Licence (byte-read `2026-11-15`) | Why this one |
+|---|---|---|---|
+| Scheduling core | [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | 🟢 **MIT** (`1,079 B`, `sha256:021bff58…`) | 🟢 Server-side: recurrency is computed per cohort in batch, not per click |
+| Front-end scheduling | [`open-spaced-repetition/ts-fsrs`](https://github.com/open-spaced-repetition/ts-fsrs) | 🟢 **MIT** (`1,079 B`, `sha256:8b83a73d…`) | For the review widget itself |
+| Telemetry of record | **xAPI** into the employer's Learning Record Store | — | 🔵 **The whole deliverable is an auditable record, so it must land in the system the auditor already reads** |
+| Internal review UI | [`appsmith/appsmith`](https://github.com/appsmith/appsmith) | 🟢 Apache-2.0 — already on this base's shelves | Compliance officers need a dashboard, not an app |
+| Corpus authoring | Plain Markdown in the employer's repository, per `P40` | 🟢 **MIT** tooling | Training content is already controlled documentation; keep it there |
+| Topology reference | [`nietus/anki-mcp`](https://github.com/nietus/anki-mcp) | 🟢 **MIT** (`1,063 B`, `sha256:58f1e901…`) | 🔵 Its *"track retention, find leeches"* verbs are exactly the compliance report, written for an individual learner |
+
+**Wiring.**
+1. 🟢 **Define the claim the artefact supports, first.** *"As of this date, `N%` of certified
+   staff demonstrated retention of control `X` within the last `M` days."* 🔵 **Everything else
+   follows from that sentence, and without it this is a flashcard app with a compliance label.**
+2. 🟢 **Derive the card corpus from the controls**, one prompt per testable assertion in the
+   existing training material — which is where an LLM earns its place, since the material is long
+   and the assertions are buried in it.
+3. 🟢 **Schedule with `py-fsrs` per learner per control**, and treat a lapsed interval as a
+   RECURRENCY TRIGGER rather than a failure. 🔵 **That reframing is the sale: the employer stops
+   retraining everyone annually and retrains the people whose retention actually decayed.**
+4. 🟢 **Emit `xAPI` on every review and every lapse**, so the record is the auditor's, not the
+   vendor's.
+5. 🔴 **State the limit in the report itself.** Retention of a prompt is evidence about that
+   prompt, not about competence. 🔵 **`P37`'s lesson, carried: an evidence deliverable survives
+   challenge only where it does not overclaim — and an over-claimed compliance artefact is worse
+   than none, because someone will rely on it.**
+6. 🟢 **No copyleft, and no Anki.** The employer will not install a consumer flashcard
+   application on managed devices, which is another reason `P40`'s algorithm-first shape is the
+   only viable one here.
+
+🟢 **No copyleft anywhere in the tree.**
+**Estimate: 6–8 weeks** for one control family end to end including the xAPI record and the
+compliance dashboard; **+2 weeks** per additional family.
+
 
 ## P37 — The appeal-survivable academic-integrity service (Global, and the first recipe in this base whose deliverable is EVIDENCE rather than a decision)
 

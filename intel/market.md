@@ -100,6 +100,51 @@ across EMEA.
 
 ### North America
 
+#### Update 2026-11-15 (twenty-first pass, `p816`) — 🔴 SUPPLY NIL for this region, stated rather than left silent; the policy picture moved on two concrete instruments
+
+🔴 **Regional supply this pass: NIL, and it is a real nil rather than an unrun leg.** 🟢 **`p816`
+harvested the RETENTION layer — `10` build-safe agent rows, `8` foundation rows, `3` platform rows
+— and under `T42` (region is the region of the target system's CATALOGUE, not of the author) every
+single one places `Global`, because Anki, Obsidian and the FSRS specification have no national
+catalogue.** 🔵 **So this region's shelf is unchanged at `14`, and the reason is the layer's
+nature, not a failed query. Recording that distinction is the point of `ACTION RE`.**
+
+🟢 **Policy, this window (all figures secondary-sourced unless marked):**
+
+- 🟢 **Federal framework exists but is executive, not statutory.** Executive orders issued
+  between 2025 and early 2026 produced a national framework for AI in education, agency action
+  plans and a task force supporting K–12 AI instruction. 🔴 **No federal statute; the binding
+  instruments remain state-level.**
+- 🟢 **State volume keeps climbing, and the two counts still disagree — as they have for six
+  passes.** At least `15` states have introduced or passed legislation specifically addressing AI
+  in education; separately the PIE Network tracked **nearly `100` state bills this year** that could
+  affect K–12 student AI use. 🔵 **The gap between “15 states” and “100 bills” is a
+  bills-versus-jurisdictions artefact, not a contradiction — do not cite them side by side as if
+  one corrected the other.**
+- 🟢 **Virginia `S.B. 394`** directs the state education agency to issue guidance, including on
+  teacher training — a named instrument with a named duty-holder, which is this file's standard
+  for a citable state obligation.
+- 🟢 **Two NEW scrutiny instruments this window, both outside education statute:** a
+  **California ballot initiative on AI and minors, announced January 2026**, and an **NTIA
+  initiative scrutinising edtech**. 🔵 **Both are consumer-protection and telecommunications
+  channels rather than education ones, which is a widening of the regulatory surface this file has
+  tracked only through education agencies.**
+- 🔴 **The demand-side casualty is now quantified: Chegg cut `45%` of staff (`388` roles)** as
+  generative AI and Google AI Overviews reduced homework-help traffic. 🔵 **This file predicted
+  consolidation at `p811` and recorded it in headcount then; this is the same mechanism one notch
+  further along, and it is the clearest commercial evidence that the incumbent study-support
+  business is the one being disrupted — which is exactly the slot the retention layer sits in.**
+
+🔵 **Adoption figures remain CONTESTED and are published here with that attached:** `86%` of
+education organisations adopting generative AI (Microsoft-cited, 2025) against `66%`
+institution-wide implementation from another report; student use `66%` (2024) → `92%` (2025).
+🔴 **Market size: USD `3,280 M` (2025) → USD `15,250 M` by 2031 for the US, with the region given
+`38%` share in one report and `41.7%` of global growth 2026–2030 in another. All secondary.**
+
+🔵 **Named players this window, unchanged in composition:** Blackboard, Pearson, Cengage,
+Instructure, Coursera, Chegg.
+
+
 #### Update 2026-11-15 (twentieth pass, `p815`) — 🟢 The region BUILT the permissive half of the assessment layer, and holds this base's single largest unserved mandate
 
 🔵 **Source confidence.** Repository measurements are `FIRST-HAND` — run `2026-11-15` against
@@ -836,6 +881,50 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-15 (twenty-first pass, `p816`) — 🔴 SUPPLY NIL, and the AI Act's education clock is now the only thing in this file with THREE different dates
+
+🔴 **Regional supply this pass: NIL, for the same structural reason as North America** — the
+retention layer has no national catalogue, so `T42` places all `21` new rows `Global`. 🔵 **One row
+would have been placed EMEA by author origin (`pieralukasz/true-recall`), and under `ACTION p811-D`
+this base refuses author-origin placement: the shelf keeps it `Global` on its target system
+(Obsidian). That refusal is now costing this region a visible row, which is the honest price of the
+rule and is recorded rather than quietly evaded.**
+
+🟢 **The regulatory picture, which is where this region's value in this file actually sits
+(secondary-sourced; the primary texts remain unreachable from this session per `ACTION PD`):**
+
+| Instrument | Date | Status |
+|---|---|---|
+| Emotion-recognition ban (education and workplace) | **in force since 2026-02-02** | 🟢 Binding now |
+| Chatbot / AI transparency duties | **from 2026-08-02** | 🟢 Binding now — this window |
+| High-risk duties for EDUCATION | 🔴 **moved to 2027-12-02** | 🟡 Deferred by the 2026 Digital Omnibus |
+| Commission draft guidelines under **Article 6** | published **2026-05** | Interpretation channel |
+
+🔵 **The sales consequence has not changed and is worth repeating because the delay invites the
+wrong read:** the transparency duty binds NOW and the high-risk grading duty does not bind until
+December 2027. 🟢 **So a chatbot or tutoring surface shipped in EMEA today has live obligations,
+while an automated-grading product has an `~13`-month runway — and `P40`'s retention loop engages
+NEITHER, because it writes no academic record and makes no evaluative determination about a person.
+That is the cleanest regulatory position any recipe in this file holds in this region.**
+
+🟢 **Soft-law and institutional movement this window:**
+- **Commission ethics guidance for education UPDATED in 2026**, prepared by the European Digital
+  Education Hub's Working Group on the Ethical Use of AI and Data in Education.
+- **Council ministers approved conclusions on teachers and AI, May 2026**, pressing AI literacy and
+  education-specific tools.
+- **Council of Europe “Compass for AI and education”**, from its October 2025 conference.
+- **Eurydice report, September 2026: access to advanced AI technologies at school level remains
+  UNEVEN** — 🔵 the first EMEA-wide official statement in this file that the constraint is
+  distributional rather than regulatory.
+
+🔴 **And the gap that keeps widening: adoption is running ahead of governance, autonomously.** In
+adult education, teachers and adult educators are reported adopting AI *"to a large extent,
+autonomously and without a clear regulatory framework"*, with **Spain over `90%`** of respondents
+using AI at work. 🔵 **An uneven-access finding plus an autonomous-adoption finding is a
+governance engagement, not a tooling one — which is the EMEA motion this file has recommended since
+`p809`.**
+
 
 #### Update 2026-11-15 (twentieth pass, `p815`) — 🟢 EMEA BUILT the assessment layer, and EMEA regulation is what makes it sellable — the tightest supply/demand fit in this base
 
@@ -1594,6 +1683,61 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-15 (twenty-first pass, `p816`) — 🟢 The region supplies this pass's one POSITIVE absence finding: India's nil is confirmed REAL, and it is the only unbuilt first-connector market in this base
+
+🟢 **`ACTION p813-C` is DISCHARGED, three passes after it was written, and the answer is the one
+the action was designed to disprove.** 🔴 **Five prescribed query shapes, all run:**
+
+| Query (verbatim) | `total_count` | Star ceiling |
+|---|---|---|
+| `academia erp mcp` | **0** | — |
+| `camu mcp college` | **0** | — |
+| `shaala darpan` | **0** | — |
+| `apaar abc academic bank credits` | **1** | **0★** |
+| `samarth university` | **6** | **0★** |
+
+🔵 **Seven repositories, star ceiling `0`. See `T51` for the full argument and its limits.**
+🟢 **The commercial reading, and it is this file's sharpest regional claim:** India runs the
+largest education system on earth on named commercial ERPs — Academia, Camu, MasterSoft, Samarth —
+and there is no open-source agent surface over any of them. 🔴 **Every other region in this base
+closed its supply gap by adopting somebody else's open-source connector. India's cannot be closed
+that way, because the connector does not exist.** 🔵 **That makes it the only market in this file
+where a studio would be building the FIRST integration rather than the tenth — higher cost, and a
+position no competitor can adopt around.**
+
+🔴 **The honest limit, repeated from `T51` because a regional claim gets quoted without its
+caveat:** this measures public GitHub repositories discoverable by English-language system names.
+In a market served by commercial ERP vendors, private integration work is exactly where this code
+would live. 🟢 **Per `p773-E` the action is now RETIRED rather than carried a fourth time.**
+
+🟢 **Regional supply otherwise: `18` rows, unchanged** — the retention layer placed `Global`
+under `T42`. 🔵 **Note for the record that the region still holds this base's largest single
+repository: [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) measured **`59,256★`** this pass
+(Apache-2.0, byte-read `11,408 B` `sha256:cd2f54e1…`, pushed `2026-11-07`), Hong Kong 🇭🇰.**
+🟢 **It was already shelved, so this is a re-measurement rather than a find — but it is now
+larger than every repository in the retention layer combined, and `ACTION p816-E` asks whether its
+recorded figure on the shelf has drifted.**
+
+🟢 **Policy and market, this window (secondary-sourced):**
+- 🟢 **The Philippines is the region's most concrete instrument: DepEd launched **`AGAP.AI` in
+  January 2026**, described as the country's first nationwide responsible-AI programme in basic
+  education, with a **National Education Plan 2026–2035** embedding AI and digital literacy.**
+  🔵 A named national programme with a date is this file's standard for citability, and ASEAN has
+  not previously supplied one.
+- 🔴 **Regulation is FRAGMENTED BY DESIGN:** each ministry integrates AI into its own sector, so
+  there is no single education AI regulator to sell compliance against — the inverse of EMEA.
+- 🔴 **Confidence gap: fewer than half of educators report strong confidence in existing
+  institutional policies or government regulation.**
+- 🟡 **Market size CONTESTED: MarketsAndMarkets gives APAC `20.9%` CAGR 2024–2029 (USD `591.6 M`
+  → `1,848.1 M`); a vendor blog claims `35.3%`.** 🔴 **The two cannot both be right and this file
+  carries the sourced one; the blog figure is recorded only so it is not re-bought as new.**
+- 🟡 **`~86%` of teachers in Southeast Asia reported using AI tools (EdTech Hub, relayed
+  second-hand).** 🔴 **Not confirmed against the original report — do not put this in a SOW.**
+- 🟢 **Institutional actors: Clarivate's comparative study of AI policy and ethics education
+  across `7` APAC countries; Cambridge English's April 2026 leadership summit (`200`+ senior
+  leaders including ministries); EtonHouse's enterprise AI workspace in Singapore.**
+
+
 #### Update 2026-11-15 (twentieth pass, `p815`) — 🟢 The layer's oldest component is APAC-origin, and 🇮🇳 India is a measured HARD NIL on it
 
 🔵 **Source confidence.** Repository measurements are `FIRST-HAND` — run `2026-11-15` against
@@ -2343,6 +2487,48 @@ example of.
 
 ### LATAM
 
+#### Update 2026-11-15 (twenty-first pass, `p816`) — 🔴 SUPPLY NIL; the region's adoption/governance gap is now measured twice by two independent bodies, and the regulation leg is a DECLARED BLANK
+
+🔴 **Regional supply this pass: NIL. `10` rows, unchanged.** 🟢 **The retention layer placed
+`Global` under `T42`; no LATAM-catalogued system appeared in any of the `12` queries run this
+pass.** 🔵 **Recorded explicitly, with the queries, per `ACTION RE` — a silent region is
+indistinguishable from a covered one.**
+
+🟢 **The adoption figures are now the strongest in this file for any region, and they come from
+a survey with a stated sample — which is rare enough here to say out loud:**
+
+- 🟢 **Digital Education Council LATAM survey 2026: `92%` of students and `79%` of faculty
+  actively engaging with AI**, from a faculty sample of **`7,319` across `29` higher-education
+  institutions**. 🔵 **A named sample size is this file's threshold for a citable adoption
+  figure; most numbers in this document do not meet it.**
+- 🟢 **UNESCO IESALC: a 2025 survey of `200` institutions across `19` countries finds the gap
+  between adoption and institutional governance *“particularly pronounced”* in LAC**, with a
+  September 2026 working paper mapping adoption across five dimensions including governance.
+- 🟢 **Tecnológico de Monterrey-linked analysis: a *“lack of formal policies for the use of AI
+  in universities in Latin America.”***
+
+🔵 **Two independent bodies measuring the same gap is the finding.** High adoption plus absent
+institutional governance is a **policy-and-controls engagement with an existing budget holder**, and
+it is the same shape this file recommended for EMEA on different evidence — 🟢 **but here the
+adoption number is higher and the governance vacuum is wider, so the LATAM version is the easier
+sale and the faster start.**
+
+🟢 **Programme-level actors, this window:**
+- **IDB: `193` real AI initiatives catalogued across the region**, with an April 2026 post framing
+  the need for clear rules alongside pedagogical purpose.
+- 🟢 **NEW: EdTech Hub and Fundación Ceibal launched a partnership in September 2026** to help
+  LAC education systems respond to AI. 🔵 **Ceibal is the one LATAM delivery vehicle this base has
+  named repeatedly (and `p813-B` named its platforms as an unrun supply target); a formal
+  partnership with EdTech Hub makes it the most likely regional channel for anything a studio
+  builds here.**
+
+🔴 **DECLARED BLANK, and it is the second pass running: country-level AI-in-education REGULATION.**
+🟢 **The leg returned institutional and programme actors only — no AI-in-education statute,
+decree or binding guidance for any individual LATAM country.** 🔵 **This file already holds
+Brazil's Marco Legal da IA and `P36`'s norm-compliance work, so the blank is specifically about
+EDUCATION-SECTOR instruments. Treated as an open gap, not as an absence of law — `ACTION p816-F`.**
+
+
 #### Update 2026-11-15 (twentieth pass, `p815`) — 🔴 The assessment layer is a HARD NIL here in two languages, and the region's own dominant judge is not open source
 
 🔵 **Source confidence.** Repository measurements are `FIRST-HAND` — run `2026-11-15` against
@@ -3088,6 +3274,70 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-15 (twenty-first pass, `p816`) — 🟢 A whole product category this file never named, and the one layer in education whose adoption needs no institutional buyer
+
+🟢 **This pass's supply finding is entirely Global, and it is a CATEGORY rather than a
+connector: the retention layer — spaced repetition.** `10` build-safe agent rows, `8` foundation
+rows, `3` platform rows, every licence byte-read on `2026-11-15`.
+
+🔵 **Why it belongs in a market file and not only in a repo shelf.** Every other education
+system this base has catalogued is PROCURED — an LMS, an SIS, an ERP, an exam lockdown client, a
+national portal — so every opportunity has had an institutional buyer and a procurement cycle.
+🟢 **The retention layer has neither: `ankitects/anki` reached `32,804★` with no buyer at all,
+and it is the only education system in this base with DAILY VOLUNTARY engagement.**
+
+🟢 **The commercial consequences, in order of how actionable they are:**
+
+1. 🟢 **The permissive value is an ALGORITHM, so there is nothing to negotiate.** Five MIT
+   implementations of FSRS totalling `6,329★` against a copyleft application tier of `34,887★`,
+   and they are separable because the algorithm is a published specification with a public
+   benchmark. 🔵 **`T49`; the build is `P40`. This is the only layer in this base where a studio
+   can ship without a licence conversation.**
+2. 🟢 **The institutional gap is the product.** An institution that wants retention evidence
+   about its own cohort cannot get it from a system it does not run. 🔵 **`P42` sells that
+   evidence into an existing compliance budget rather than an edtech one — the workforce half of
+   `T23`'s split.**
+3. 🔴 **The licence risk here arrives through CONVENIENCE, which is new.** `T48`: the upstream
+   recommends the AGPL in-process addon over its own MIT out-of-process server and calls it *"the
+   simpler and better-supported path."* 🔵 **A developer setting up a laptop will reach for the
+   copyleft one. `P41` makes the refusal a written deliverable.**
+4. 🔴 **And the instrument finding that should change how every future pass harvests:** `3` of `3`
+   `NOASSERTION` rows byte-read this pass resolved to COPYLEFT, including `FooSoft/anki-connect`
+   (`2,083★`, GPL-3.0-or-later) on which every out-of-process Anki agent depends. 🟢 **`T50`:
+   `NOASSERTION` is RED-until-read, never a skip.**
+
+🟢 **Market context this window (secondary-sourced, and the spread is wide enough to be worth
+stating as a spread rather than a number):**
+
+| Figure | Source type | Value |
+|---|---|---|
+| AI-in-education market, 2026 base | vendor-relayed research | **USD `~10.6 B`** → `42.5 B` by 2030 @ `41.5%` CAGR |
+| AI-in-education market, 2026 base | second vendor-relayed research | **USD `~9.58 B`**, growing `>30%`/yr |
+| Generative-AI adoption, education organisations | Microsoft-cited, 2025 | **`86%` — highest of any industry measured** |
+| UK undergraduates using GenAI for ASSESSED work | survey series | **`53%` (2024) → `88%` (2025) → `94%` (2026)** |
+| Most-used tools with published ESSA-tier evidence | edtech analysis | 🔴 **`45%`** |
+
+🔵 **The two market bases differ by `~10%` and the growth rates by `~11` points; cite the range,
+never a point estimate.** 🟢 **The `94%` assessed-work figure is the one that actually sells
+work: at `94%` penetration, academic-integrity enforcement has failed as a strategy, which is why
+the sector's own commentary is moving from policing AI use to reducing cognitive load — and a
+retention loop is a cognitive-load instrument, not an enforcement one.**
+
+🔴 **The evidence bar is the live constraint on buying, and it is the most useful single number
+here: only `45%` of the most-used tools have published research meeting an ESSA evidence tier.**
+🔵 **`P40` and `P42` are unusually well placed against it, because FSRS arrives with
+[`srs-benchmark`](https://github.com/open-spaced-repetition/srs-benchmark) — a published comparison
+on real review logs. An engagement here can cite evidence for its scheduling claim, which almost
+nothing else in this file can.**
+
+🟢 **Other movement:** US Department of Education released **USD `169 M` in FIPSE awards**
+including support for responsible AI use; the **OECD Digital Education Outlook 2026** warns AI helps
+learning only where pedagogy stays in control. 🔴 **Reported as FADING: blockchain credentialing
+and full-classroom VR.** 🟢 **Reported as gaining: AI tutoring and adaptive learning, AI-assisted
+teaching and grading, and skills-based microcredentials** — the last of which is `T23`'s workforce
+half and `P42`'s buyer.
+
 
 #### Update 2026-11-15 (twentieth pass, `p815`) — 🔴 The one layer whose supply is region-NEUTRAL and whose obligation is region-DETERMINED
 

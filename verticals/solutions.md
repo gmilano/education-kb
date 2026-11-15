@@ -7,7 +7,7 @@ updated: 2026-11-15
 # Education vertical platforms — real systems to customize AI on top of
 
 
-## Education vertical platforms — 92 rows
+## Education vertical platforms — 95 rows
 
 🟢 **Twentieth pass (`p815`, 2026-11-15): six platform rows added under a new tier — the
 ASSESSMENT ENGINE — and the figure above is the gate's output.** 🔵 **The gate caught the draft
@@ -25,6 +25,31 @@ implemented with uncounted-table detection. Gate output:
 claimed `70` — the pre-insertion figure — and the gate rejected it: *"RED heading claims 70, the
 file holds 81."* 🟢 **That is precisely the drift `compose/patterns.md` has had to confess four
 times in prose. It is now caught by a program instead of by the next pass's reader.**
+
+## 🟢 Twenty-first pass (`p816`, 2026-11-15) — the platform tier a learner opens WITHOUT being told to, and the first tier in this file where the permissive platform is a real alternative rather than a consolation
+
+🔴 **This file has named `92` platforms across twenty passes and every one of them is procured —
+an LMS, an SIS, an ERP, a parent portal, an exam lockdown client, a national school portal. A
+procurement decision is made by an institution, so every row so far has had an institutional buyer.**
+🟢 **The retention tier has no buyer. A learner installs it, and that is the whole adoption
+funnel.**
+
+🔵 **Why that is a commercial observation and not a curiosity:** the retention platform is the
+only education system in this base with DAILY voluntary engagement, and an institution that wants
+retention evidence about its own cohort cannot get it from a system it does not run. 🟢 **That gap
+is `P42`, and it is the reason this tier is worth naming even though no institution buys any row in it.**
+
+🔴 **The incumbent is `ankitects/anki` (`32,804★`, AGPL-3.0-or-later with per-file exceptions —
+already shelved in this file, and six licences rather than two per `ACTION AH`).** 🟢 **The three
+rows below are the alternatives, and unlike `p815`'s assessment tier — where the permissive option
+sat at a fifth of the incumbent's attention — two of these are permissive and in the same order of
+magnitude as each other.**
+
+| Platform | Repo | License | Stars | Notes |
+|---|---|---|---|---|
+| **Memo** — programming-oriented spaced-repetition app (Flutter, iOS + Android) | https://github.com/olmps/memo | 🟢 **BSD-3-Clause — byte-read** (`1,515 B`, `sha256:ae042264…`, holder `Olympus`) | 1869 | 🟢 **New this pass (`p816`), and the most permissively licensed complete APPLICATION in the education stack this base has measured — BSD-3-Clause, which is more permissive than any LMS, SIS or assessment platform in this file.** `163` forks. 🔵 **Flutter, so one codebase ships iOS and Android, which is the delivery shape a consumer-facing education engagement actually needs and which none of the copyleft rows offer.** 🔴 **STALE AND THAT IS THE DECIDING FACT: pushed `2024-07-29`, over two years before this reading. Treat it as a FORK BASE, not a dependency — the grant permits exactly that, and `P40` assumes the studio owns the fork** |
+| **Orbit** — spaced-repetition platform for embedding review INSIDE prose | https://github.com/andymatuschak/orbit | 🟡 **SPLIT GRANT — byte-read** (`457 B`, `sha256:86b93fd1…`): 🟢 **Apache-2.0 for all sources and compiled binaries, EXCEPT** 🔴 **`packages/app` and `packages/backend`, which are AGPL-3.0-or-later OR BUSL-1.1 at the licensee's choice** — 🔴 **GitHub's licence field says `NOASSERTION`** | 1839 | 🟢 **New this pass (`p816`), and the most interesting licence structure in this base.** *"Experimental spaced repetition platform for exploring ideas in memory augmentation."* Andy Matuschak; pushed `2026-10-20`. 🔵 **The idea is genuinely distinct from every other row: review prompts are embedded in the TEXT a learner is already reading, so there is no separate app to open and no deck to maintain — which is the right shape for an OER textbook or a corporate course.** 🔴 **But the split falls in the worst possible place for a product: the libraries are Apache-2.0 and the APP and BACKEND — the parts that constitute a deployable system — are AGPL-or-BUSL, and BUSL-1.1 is NOT an open-source licence at all.** 🟢 **Usable posture: take the Apache-2.0 libraries and the interaction design, implement the app and backend yourself. 🔴 Do NOT deploy `packages/backend` for a client without a licence decision made in writing** 🔵 **`P1057` NOW HAS AN INSTANCE ON THE LIVENESS CHANNEL, not just the licence one: this pass's liveness sweep returned `404` for `README.md@master` and `200` for **`Readme.md`** — the repo is live and its own grant text points at that spelling. `raw.githubusercontent.com` is case-sensitive, so a liveness probe with one spelling of a filename has not checked liveness; it has checked a spelling. `ACTION p816-E` carries the generalisation** |
+| **Hashcards** — plain-text spaced-repetition system | https://github.com/eudoxia0/hashcards | 🟢 **Apache-2.0 — byte-read** (`11,358 B`, `sha256:cfc7749b…`) | 1193 | 🟢 **New this pass (`p816`), and the cleanest row in the tier: a complete SRS whose entire corpus format is plain text under Apache-2.0.** `74` forks, pushed `2026-11-09` — maintained, unlike `memo`. 🔵 **Plain text is the property that matters commercially: the cards are diffable, reviewable and version-controlled, so a client's subject-matter experts can author them in the same pipeline they already use for documentation, and there is no proprietary deck format to migrate out of later.** 🟢 **The `11,358 B` payload is the same verbatim Apache-2.0 object this base byte-read at `LIST-LUXEMBOURG/eagle-aig` and `openedx/XBlock` — `T41`'s instrument, third independent agreement** |
 
 ## 🟢 Twentieth pass (`p815`, 2026-11-15) — the platform tier that produces the GRADE, and the one place in this file where the permissive option is the SECOND-most-starred rather than the first
 

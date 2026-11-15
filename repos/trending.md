@@ -4,6 +4,64 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-first pass) — **The FSRS algorithm family: `6,329★` of MIT-licensed scheduling arithmetic that twenty passes of this file never named, under an AGPL application this base shelved at pass one**
+
+**Pass `p816`.** 🟢 **Eight rows filed to `repos/foundations.md` under a new architectural layer
+— the RETENTION LAYER — of which `7` are build-safe and `1` copyleft. Three platform rows filed to
+`verticals/solutions.md`.** Every licence byte-read over `raw.githubusercontent.com` this pass.
+
+### The measurement
+
+🔴 **Before this pass `repos/foundations.md` catalogued `16` architectural layers — LMS, SIS,
+ERP, rostering, LTI, xAPI, SCORM, Caliper, QTI, the research library, the assessment engine — and
+every one is a system an INSTITUTION runs and procures.**
+
+| Repo | ★ | Licence (byte-read) | Payload | Layer role |
+|---|---|---|---|---|
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | **4,137** | 🟢 **MIT** | `1,079 B` `sha256:2ec9e6e6…` | The scheduler shipped as CONFIGURATION into AGPL Anki — which is why an MIT grant over it is coherent |
+| [`FooSoft/anki-connect`](https://github.com/FooSoft/anki-connect) | **2,083** | 🔴 **GPL-3.0-or-later** — 🔴 GitHub says `NOASSERTION` | `646 B` `sha256:ddf0a4b0…` | The local HTTP bridge every out-of-process Anki agent depends on. Call it; never vendor it |
+| [`st3v3nmw/obsidian-spaced-repetition`](https://github.com/st3v3nmw/obsidian-spaced-repetition) | **2,619** | 🟢 **MIT** | `1,078 B` `sha256:0a84e8f3…` | Reviews NOTES, not only cards — no authoring step, no migration |
+| [`reuseman/flashcards-obsidian`](https://github.com/reuseman/flashcards-obsidian) | **1,116** | 🟢 **MIT** | `1,069 B` `sha256:99f1ba49…` | MIT bridge from an owned Markdown corpus to the AGPL application |
+| [`open-spaced-repetition/ts-fsrs`](https://github.com/open-spaced-repetition/ts-fsrs) | **872** | 🟢 **MIT** | `1,079 B` `sha256:8b83a73d…` | 🟢 **The single most reusable row this pass found — TypeScript, runs in the client, no service to operate** |
+| [`open-spaced-repetition/free-spaced-repetition-scheduler`](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler) | **736** | 🟢 **MIT** | `1,089 B` `sha256:c0e0a71c…` | The SPECIFICATION — cite this, not a library |
+| [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | **531** | 🟢 **MIT** | `1,079 B` `sha256:021bff58…` | Server-side / batch recomputation |
+| [`open-spaced-repetition/rs-fsrs`](https://github.com/open-spaced-repetition/rs-fsrs) | **53** | 🟢 **MIT** | `1,079 B` `sha256:0f7be8cb…` | Mobile / WASM embedding |
+
+🟢 **Platform tier, filed to `verticals/solutions.md`:** `olmps/memo` (`1,869★`,
+**BSD-3-Clause**, `1,515 B` `ae042264…` — the most permissive complete APPLICATION in the education
+stack, 🔴 but stale since `2024-07-29`, so a fork base rather than a dependency) ·
+`andymatuschak/orbit` (`1,839★`, 🟡 **split: Apache-2.0 except `packages/app` and
+`packages/backend` which are AGPL-3.0-or-later OR BUSL-1.1**, `457 B` `86b93fd1…`) ·
+`eudoxia0/hashcards` (`1,193★`, **Apache-2.0**, `11,358 B` `cfc7749b…` — plain-text corpus,
+maintained, the cleanest row in the tier).
+
+### 🟢 `T41`'s byte-hash instrument agreed with itself three times, unprompted
+
+🔵 **Three independent corroborations fell out of this pass without being sought:**
+
+1. 🟢 **`py-fsrs`'s grant is the byte-identical `1,079 B` `021bff58…` object this base recorded
+   at `p683` for `fsrs4anki-helper`** — same organisation, one grant object, and the instrument
+   reproduced its own reading across `133` passes.
+2. 🟢 **`kitschpatrol/yanki-obsidian`'s `1,071 B` `1d5701eb…` is the same object this base read
+   at `kitschpatrol/yanki-connect`** — same author, two repositories.
+3. 🟢 **`hashcards`' `11,358 B` `cfc7749b…` Apache-2.0 payload matches the objects read at
+   `LIST-LUXEMBOURG/eagle-aig` and `openedx/XBlock`.**
+
+🔵 **And one near-miss that shows the instrument has resolution: `fsrs4anki` and `py-fsrs` are
+both `1,079 B` MIT payloads with DIFFERENT hashes — the holder lines read
+`open-spaced-repetition` and `Open Spaced Repetition`. Same length, same licence, different bytes.**
+
+### 🔴 The licence correction that matters most
+
+🔴 **`FooSoft/anki-connect` reads `NOASSERTION` on GitHub and is GPL-3.0-or-later in its bytes
+— and EVERY out-of-process Anki agent on the shelf depends on it.** 🟢 **Workable posture, to be
+stated to a client rather than discovered: it runs as a plugin inside the user's own Anki and
+answers HTTP on `127.0.0.1:8765`, so calling it neither links nor distributes it. Call it; never
+vendor, bundle or fork it.** 🔴 **It was last pushed `2025-11-04` — a year stale, and a single
+point of failure for half this layer (`ACTION p816-D`).** See `T50`.
+
+---
+
 ## `2026-11-15` (twentieth pass) — **`Judge0` is the most-starred repository in education that is not a tutor, not a library and not an LMS — and nineteen passes of this file never wrote its name**
 
 **Pass `p815`.** 🟢 **Nineteen rows filed to `repos/foundations.md` under a new architectural

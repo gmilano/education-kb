@@ -1,8 +1,45 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-12
+updated: 2026-11-15
 ---
+
+## 🆕 `p816` — `2026-11-15` — **One row newly barred, and three rows whose licence CLASS was corrected in the dangerous direction: `NOASSERTION` → copyleft, `3` of `3`**
+
+🔵 **This file has recorded `NOASSERTION` corrections before, and they have almost all run the
+same way: a repository this base called ungranted turned out to be granted, because the probe
+improved (`p788` removed `11` rows that way).** 🔴 **`p816` records the first batch that runs the
+OTHER way — three repositories GitHub reports as having no licence, every one of which is
+copyleft in its bytes.**
+
+### 🔴 Newly BARRED — no grant, measured
+
+| Address | ★ | What was probed | Verdict |
+|---|---|---|---|
+| 🔴 [`open-spaced-repetition/srs-benchmark`](https://github.com/open-spaced-repetition/srs-benchmark) | **287** | 🔴 **`32` licence paths + `16` manifests, no payload at any of them**; GitHub's licence field reads `NONE` and agrees | 🔴 **NO GRANT.** 🔵 **Narrow bar, and the narrowness is the point: this is the layer's EVIDENCE BASE — the published comparison of spaced-repetition schedulers on real review logs — so cite it, link it and reproduce its method. Do not vendor its code.** 🟢 **Same organisation as five MIT rows now on `repos/foundations.md`, which makes this an oversight rather than a policy — `ACTION p816-C` asks upstream rather than assuming** |
+
+### 🔴 Licence CLASS corrected — the field said nothing, the bytes said copyleft
+
+| Address | ★ | GitHub's field | What the bytes say | Consequence |
+|---|---|---|---|---|
+| 🔴 [`FooSoft/anki-connect`](https://github.com/FooSoft/anki-connect) | **2,083** | 🔴 `NOASSERTION` | 🔴 **GPL-3.0-or-later** — `LICENSE` · `646 B` · `ddf0a4b004d7` | 🔴 **EVERY out-of-process Anki agent on this base's shelf depends on it.** 🟢 **Not barred — it runs inside the user's own Anki and answers HTTP on `127.0.0.1:8765`, so CALLING it neither links nor distributes it. Call only: never vendor, bundle or fork** |
+| 🔴 [`ankimcp/anki-mcp-server-addon`](https://github.com/ankimcp/anki-mcp-server-addon) | **102** | 🔴 `NOASSERTION` | 🔴 **AGPL-3.0-or-later** — `LICENSE` · `227 B` · `34b58d896fdb` | 🔴 **Filed to `agents/top.md`'s copyleft table. The same organisation's MIT server does the same job out-of-process — and the upstream README recommends THIS one. `T48`** |
+| 🟡 [`andymatuschak/orbit`](https://github.com/andymatuschak/orbit) | **1,839** | 🔴 `NOASSERTION` | 🟡 **SPLIT** — `LICENSE` · `457 B` · `86b93fd1d19a`: 🟢 Apache-2.0 for all sources and binaries **except** 🔴 `packages/app` and `packages/backend`, which are AGPL-3.0-or-later **OR BUSL-1.1** at the licensee's choice | 🟡 **Shelved in `verticals/solutions.md` with the split published.** 🔴 **BUSL-1.1 is not an OSI licence at all, and the split falls on the deployable parts. Take the Apache-2.0 libraries; implement app and backend yourself** |
+
+🔵 **The mechanism, because it predicts where the next batch will come from.** GitHub's field is
+populated by `licensee`, which matches a payload against stock licence TEXTS. A verbatim MIT or
+Apache-2.0 file matches; a SHORT REFERENCE NOTICE does not. 🔴 **AnkiConnect ships the `646 B` GPL
+header paragraph, the addon ships a `227 B` sentence pointing at `gnu.org`, and Orbit ships a
+`457 B` prose paragraph carving the tree into three licences — and it is GPL-family projects that
+conventionally ship the reference notice while MIT and Apache projects ship the full text.** 🟢
+**So the bias is structural, not noise. `18` of this pass's `20` candidates had an accurate field;
+`0` of the `3` empty ones resolved permissive. `T50`, and the rule it adopts: `NOASSERTION` is
+RED-until-read, never a skip.**
+
+🔵 **Note on `p788`'s direction, which this does NOT contradict.** `p788` found this base
+over-barring because its probe was too narrow; `p816` finds GitHub's own field under-reporting
+copyleft. 🟢 **Both say the same thing: the only licence verdict worth publishing is one read from
+the bytes.**
 
 ## 🆕 `p788` — `2026-11-12` — **`11` rows REMOVED from the unusable class, `2` rows' published REASON corrected, `3` rows newly barred — and the class shrinks because the PROBE improved, not because the repositories changed.**
 

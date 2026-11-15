@@ -6,7 +6,9 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
-**Forty-seven** trends — derived trends: **47** — each with the evidence behind it and
+**Fifty-one** trends — derived trends: **51** — 🟢 **Twenty-first pass (`p816`, 2026-11-15): `T48`–`T51` added** — the licence set by DEPLOYMENT TOPOLOGY rather than authorship, with the upstream recommending the copyleft path (`T48`); the first layer in this base whose permissive value is an ALGORITHM and is therefore separable from its copyleft application (`T49`); `NOASSERTION` shown to lean copyleft rather than neutral, `3` of `3` (`T50`); and India's nil confirmed REAL across five prescribed shapes, discharging `ACTION p813-C` (`T51`). 🔵 **Re-derived after insertion by `ingest/derive-counts.py`: `51`.**
+
+**Forty-seven** trends as of `p815` — each with the evidence behind it and
 what it implies for an engagement. 🟢 **Twentieth pass (`p815`, 2026-11-15):
 `T44`–`T47` added — the assessment layer's INVERTED licence profile (`T44`), an integrity tool's
 licence choice shown to determine where its circumvention fork lands (`T45`), the licence probe's
@@ -70,6 +72,144 @@ the second time.** 🔵 **The amendment uses no component discovered this pass**
 three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
+
+## T48 — In the retention layer the LICENCE is set by WHERE THE CODE RUNS, not by who wrote it — and the upstream's own recommended topology is the copyleft one
+
+🟢 **The specimen is a matched pair from a single organisation, measured this pass:**
+
+| Repo | Topology | Licence (byte-read) | ★ | Upstream's own words |
+|---|---|---|---|---|
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | OUT of process, over AnkiConnect HTTP | 🟢 **MIT** (`1,074 B`, `sha256:0ef87fdb…`) | **558** | *"For HTTP, tunnel, or web-based clients, the addon is the simpler and better-supported path"* |
+| [`ankimcp/anki-mcp-server-addon`](https://github.com/ankimcp/anki-mcp-server-addon) | IN process, inside Anki | 🔴 **AGPL-3.0-or-later** (`227 B`, `sha256:34b58d89…`) | **102** | *"Prefer the AnkiMCP addon for most setups"* |
+
+🔵 **Same author (`Anatoly Tarnavsky`), same project (`ankimcp.ai`), same function, two licences.**
+🟢 **The mechanism is not mysterious and that is the point: Anki is AGPL-3.0, so code loaded
+into its process must be AGPL, while code in a separate process talking HTTP need not be. The
+licence is a function of the DEPLOYMENT TOPOLOGY.**
+
+🔴 **The commercially important half is the second column of that table.** The maintainer
+recommends the AGPL path, calls it *"the simpler and better-supported path"*, and ships it as a
+one-click install; the MIT path requires Node.js, a separate AnkiConnect plugin and a process to
+keep running. 🔴 **So the licence-correct choice is also the harder-to-support choice, and a studio
+that picks it is accepting integration friction the upstream is explicitly warning about.**
+
+🟢 **What to do with it on an engagement — and this is a rule, not a preference:**
+
+1. 🟢 **Say it out loud in the SOW.** *"We use the out-of-process MCP server under MIT; we do not
+   install the vendor-recommended addon, because it is AGPL and would reach your deliverable."*
+2. 🔴 **Never let the choice be made by whoever is setting up a dev machine.** The AGPL path is the
+   one a developer will reach for, because it is the one the README recommends and the one that
+   installs in a single click. 🔵 **This is the first finding in this base where the copyleft risk
+   arrives through CONVENIENCE rather than through ignorance.**
+3. 🟢 **Generalise the test, because this layer is not special.** Ask of any agent over any
+   copyleft platform: *does this run inside the platform's process?* 🔵 **`T15` found platforms
+   with pluggable AI provider layers where you configure rather than build; `T48` is the inverse
+   case — where the plug-in point exists but using it is what makes your code copyleft.**
+
+🟢 **`P41` is the recipe that takes the MIT path deliberately and documents the refusal.**
+
+
+## T49 — The retention layer's permissive value is an ALGORITHM, not an application — and that is why it is the one layer in this base a studio can build on without a licence conversation
+
+🔴 **`T44` found the assessment layer's star mass was copyleft: six of ten top rows, `9,233★` of
+`10,604★`.** 🟢 **The retention layer inverts it, and the inversion is structural rather than
+lucky.**
+
+| Tier | Repos | Licence | ★ total |
+|---|---|---|---|
+| 🟢 **ALGORITHM** | `fsrs4anki`, `ts-fsrs`, `free-spaced-repetition-scheduler`, `py-fsrs`, `rs-fsrs` | 🟢 **MIT — all five, all byte-read** | **6,329** |
+| 🔴 **APPLICATION** | `ankitects/anki`, `FooSoft/anki-connect` | 🔴 **AGPL-3.0-or-later / GPL-3.0-or-later** | **34,887** |
+
+🔵 **The application tier is five times the algorithm tier by attention, and it is entirely
+copyleft. The algorithm tier is entirely permissive. And they are SEPARABLE — which is the whole
+finding.**
+
+🟢 **They are separable because FSRS is published as a SPECIFICATION with five independent
+implementations in five languages, plus a benchmark
+([`srs-benchmark`](https://github.com/open-spaced-repetition/srs-benchmark), `287★`) that compares
+schedulers on real review logs.** 🔵 **So “use spaced repetition” does not have to mean “integrate
+Anki.” It can mean: take `ts-fsrs` (MIT, `872★`, TypeScript, runs in the browser), put it behind
+the client's own review UI, and store review history in the client's own database.**
+
+🔴 **Contrast with every other layer this base has measured.** The LMS layer: you mount into
+Moodle (GPL) or Canvas (AGPL). The assessment layer: `Judge0` (GPL-3.0) is the component you want
+INSIDE the product. The research library: Zotero is AGPL. 🟢 **In all three the copyleft artefact
+is load-bearing. In the retention layer it is replaceable in an afternoon, because what you
+actually need is `~200` lines of scheduling arithmetic with a published spec and an MIT grant over
+five implementations of it.**
+
+🔵 **The division of labour the layer's own agents already state, and the best one-line summary
+of why this is buildable — from [`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent)'s
+tagline:** *"RL picks the action, FSRS picks the timing."* 🟢 **The LLM chooses WHAT to show and is
+allowed to be approximate; a measured algorithm chooses WHEN and has to be right. Only the second
+one is a correctness claim, and only the second one is already solved — so the LLM half is where
+the engagement's value is, and it carries no licence exposure at all.** See `P40`.
+
+
+## T50 — GitHub's `NOASSERTION` is not neutral: on this channel every one of them resolved to COPYLEFT, so treating it as "unknown, probably fine" imports exactly what it hides
+
+🔴 **Three `NOASSERTION` rows were byte-read this pass. All three are copyleft, and two of them
+are load-bearing dependencies of permissive agents on this base's own shelf.**
+
+| Repo | ★ | GitHub's licence field | Byte-read verdict |
+|---|---|---|---|
+| [`FooSoft/anki-connect`](https://github.com/FooSoft/anki-connect) | **2,083** | 🔴 `NOASSERTION` | 🔴 **GPL-3.0-or-later** (`646 B`, `sha256:ddf0a4b0…`) |
+| [`ankimcp/anki-mcp-server-addon`](https://github.com/ankimcp/anki-mcp-server-addon) | **102** | 🔴 `NOASSERTION` | 🔴 **AGPL-3.0-or-later** (`227 B`, `sha256:34b58d89…`) |
+| [`andymatuschak/orbit`](https://github.com/andymatuschak/orbit) | **1,839** | 🔴 `NOASSERTION` | 🟡 **SPLIT: Apache-2.0, except `packages/app` and `packages/backend` which are AGPL-3.0-or-later OR BUSL-1.1** (`457 B`, `sha256:86b93fd1…`) |
+
+🔵 **Why the mechanism produces this bias rather than a random one.** GitHub's licence field is
+populated by `licensee`, which matches a payload against stock licence TEXTS. 🟢 **A verbatim MIT
+or Apache-2.0 file matches and is reported correctly — which is why `18` of this pass's `20`
+candidates had an accurate field.** 🔴 **A SHORT REFERENCE NOTICE does not match.** AnkiConnect's
+grant is the `646 B` GPL header paragraph, the addon's is a `227 B` sentence pointing at
+`gnu.org/licenses/agpl-3.0.txt`, and Orbit's is a `457 B` prose paragraph carving the tree into
+three licences. 🔴 **And it is GPL-family projects that conventionally ship the reference notice
+rather than the full text, while MIT and Apache projects ship the whole thing. So the failure mode
+is not noise — it is correlated with copyleft.**
+
+🔴 **The consequence for this base, stated plainly: a pass that harvests on GitHub's licence
+field and skips `NOASSERTION` rows as “unclear” will build a shelf that looks permissive and has
+GPL-3.0 underneath it.** 🟢 **`T43` found that the licence field measures a FILENAME. `T50`
+sharpens it: when the field is empty the prior is not neutral, it leans copyleft, and the only
+cure is to read the bytes.**
+
+🟢 **Operational rule, adopted: `NOASSERTION` is a RED-until-read, never a skip. `0` of this
+pass's `3` resolved permissive.**
+
+
+## T51 — 🔴 India's education-agent nil is a REAL MARKET FACT, not a query defect — five prescribed query shapes, run and recorded
+
+🟢 **`ACTION p813-C` asked for this directly and it had gone unrun for three passes. It is now
+run, and the answer is the one the action was written to disprove.**
+
+| Query (verbatim) | `total_count` | Star ceiling |
+|---|---|---|
+| `academia erp mcp` | **0** | — |
+| `camu mcp college` | **0** | — |
+| `shaala darpan` | **0** | — |
+| `apaar abc academic bank credits` | **1** | **0★** |
+| `samarth university` | **6** | **0★** |
+
+🔴 **Seven repositories across five shapes, star ceiling `0`.** 🔵 **`p813-C` named the
+hypothesis to test — *"either a real market fact or a query defect"* — and prescribed the cure:
+name the ERP VENDORS (Academia, Camu, MasterSoft), the national identifiers (`APAAR`, `ABC`) and
+the state portals rather than the national ones. 🟢 **All of it was run. The nil held.**
+
+🟢 **So the finding is now positive rather than absent, and it is sellable:** India runs the
+largest education system on earth, its institutions run named commercial ERPs (Academia, Camu,
+MasterSoft, Samarth), and there is NO open-source agent surface over any of them. 🔵 **Every other
+region in this base closed its supply gap by someone else's open-source work. India's cannot be
+closed that way, because the work does not exist — which makes it the only region where a studio
+would be building the first connector rather than the tenth.**
+
+🔴 **Honest limits on the claim, because the claim is an absence:** this measures PUBLIC GitHub
+repositories discoverable by English-language system names on the `search/repositories` channel.
+🔵 **It does not measure private integration work, which in a market served by commercial ERP
+vendors is where this code would most plausibly live.** 🟢 **`T26`/`T29`'s rule — the only way to
+tell a market fact from a query defect is to name more systems — has now been applied to the limit
+of what this channel can see, so per `p773-E` the action is RETIRED rather than carried a fourth
+time.**
+
 
 ## T44 — The assessment layer inverts education's licence profile: everywhere else the star mass is MIT, here the star mass IS the copyleft
 
