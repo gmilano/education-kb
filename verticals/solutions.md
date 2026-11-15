@@ -86,6 +86,49 @@ claimed `70` — the pre-insertion figure — and the gate rejected it: *"RED he
 file holds 81."* 🟢 **That is precisely the drift `compose/patterns.md` has had to confess four
 times in prose. It is now caught by a program instead of by the next pass's reader.**
 
+## 🔴 Twenty-eighth pass (`p823`, 2026-11-15) — `0` new platform rows, and the measurement that explains why: the integration population targets CLOSED systems
+
+🔴 **`0` platform rows added this pass. `116` unchanged, gate-confirmed
+(`verticals/solutions.md shelf: tables=22 rows=118 distinct=116 graded=116 claimed=116`).**
+🟢 **This is a MEASUREMENT with its denominator published, not an unrun leg.**
+
+🟢 **`p823`'s discovery leg was the richest in this base's history — `21` build-safe agent rows —
+and almost none of it landed here. The reason is the finding.** `T77` identified a population of
+`20`+ institution-pinned LMS agents. This file asks a different question of each one: *what system
+does it integrate with, and is that system open-source and shelvable?*
+
+**The systems named by the `p823` population, graded for this file:**
+
+| System | Institution / region | Open source? | Already shelved? |
+|---|---|---|---|
+| Moodle | many, all regions | 🟢 yes (GPL-3.0) | 🟢 yes — the host-systems tier |
+| Canvas | many, North America | 🟢 yes (AGPL-3.0 open edition) | 🟢 yes |
+| Artemis | TUM 🇩🇪 | 🟢 **yes — MIT, `832★`, pushed `2026-11-15`** | 🟢 **yes, already on this shelf** |
+| 🔴 Omnivox | Québec CEGEPs 🇨🇦 | 🔴 **no — proprietary (Skytech)** | ❌ no repo to shelf |
+| 🔴 Brightspace / Valence | many, North America + APAC | 🔴 **no — proprietary (D2L)** | ❌ no repo to shelf |
+| 🔴 Ed | Monash 🇦🇺 and AU/US universities | 🔴 **no — proprietary** | ❌ no repo to shelf |
+| 🔴 CIS | NORDAKADEMIE 🇩🇪 | 🔴 **no — in-house campus system** | ❌ no repo to shelf |
+| 🔴 БРС / СДО / Пульс | RTU MIREA 🇷🇺 | 🔴 **no — in-house** | ❌ no repo to shelf |
+| 🔴 教学云 | BUPT 🇨🇳 | 🔴 **no — in-house** | ❌ no repo to shelf |
+| 🔴 ENT/CAS | Université de Montpellier 🇫🇷 | 🟡 CAS protocol is open; the ENT deployment is not a product | ❌ nothing distinct to shelf |
+
+🔵 **So the platform tier did not grow because `6` of the `10` systems driving this pass's agent
+supply have no source to shelve at all, and the `3` that do were already here.**
+
+🟢 **And that is commercially the most useful thing this file can say this pass.** This base's
+standing advice is to build on the open platform tier. **`T77` shows where that advice stops:** the
+moment an engagement reaches a real campus, the integration surface is a mix of one open LMS and
+several closed in-house or vendor portals, and **no amount of open-source platform selection
+removes the closed half.** The connector fleet in `P55` is priced accordingly — it is adapter
+maintenance against systems whose owners can restyle them without notice, which is exactly why the
+per-campus volunteer repos in `T77` cannot be the long-term answer.
+
+🔴 **Open gap, carried forward:** this file still has **no row for a Québec/CEGEP-tier or Nordic
+in-house campus portal**, because open equivalents were searched for and not found. 🟢 **An informed
+nil, re-testable: the `p824` query is `student portal` / `campus portal` with no star floor, ranked
+by recency, restricted to the SYSTEM layer rather than the agent layer** — the setting that broke
+`T31` and `T77` open.
+
 ## 🟢 Twenty-seventh pass (`p822`, 2026-11-15) — the platform tier that provisions the LAB, and the first institution-authored platform in this file archived by Software Heritage
 
 🔵 **Twenty-six passes have asked what system a learner logs into, reads in, is graded by and is

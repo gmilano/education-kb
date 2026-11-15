@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
+**Fifty-seven** concrete recipes — derived recipes: **57**. 🟢 **Twenty-eighth pass (`p823`): `P55`–`P57` added** — the multi-tenant campus LMS connector that turns `T77`'s `20`+ unfunded per-campus adapters into one supported product, with named reference implementations in four regions and a qualifying question whose answer is public (`P55`); the verified LMS write protocol — commit, invalidate, re-read, diff against both what changed and what must NOT have — generalised from the first write-capable LATAM agent on these shelves and portable to every LMS here (`P56`); and the two-licence pre-shelf gate that refuses a non-commercial curriculum in four `curl`s, catching `T78` in both directions (`P57`). 🟢 **Zero copyleft in all three delivered trees; the GPL-3.0 and WTFPL traps adjacent to `P55` are named, and the AGPL/NC traps are named where they sit.** 🟢 **Count gate-confirmed, not inline: `ingest/derive-counts.py` returned `derived=57 claimed=57`.** All components byte-read on `2026-11-15`.
+
 **Fifty-four** concrete recipes — derived recipes: **54**. 🟢 **Twenty-seventh pass (`p822`): `P52`–`P54` added** — the pre-ingest PAYLOAD gate that refuses `T73`'s `775`-repository clone farm in four `curl`s, and the first recipe here whose deliverable protects the other recipes (`P52`); the learning-scaffold wrapper that lets an agent do the work while the person can still be shown to have learned it, composed from the three independent `SKILL.md` implementations `T75` found in one pass (`P53`); and the East Africa voice-first deployment in which the FINANCING rail is part of the architecture — an MCP entitlement tool the tutor reads — built on the Africa-placed components `T71` and `T74` put on these shelves (`P54`). 🟢 **Zero copyleft in all three delivered trees; the AGPL-3.0 trap adjacent to `P54` is named.** 🟢 **Count gate-confirmed, not inline: `ingest/derive-counts.py` ran in this environment after four passes of refusal (`T76`), returning `derived=54 claimed=54`.** All components byte-read on `2026-11-15`.
 
 **Fifty-one** concrete recipes — derived recipes: **51**. 🟢 **Twenty-sixth pass (`p821`): `P51` added** — the competency gradebook agent built against a NATIONAL curriculum instrument, and the first recipe in this base whose reusable asset is the CURRICULUM ADAPTER rather than the model or the prompt (from `T70`). 🟢 **It is also the first recipe here with its ports PRICED rather than promised:** one reference implementation (🇵🇪 `mawta`, `CNEB`) and two adapter targets already encoded (🇪🇬 `edutraceapp`'s learning-outcome short codes, 🇨🇳 `k12-qbank`'s 人教版 knowledge points), with the second country costed at `3`–`4` weeks against the first at `8`–`10`. 🔴 **Its central constraint is a refusal taken verbatim from the reference implementation — *"AI that proposes, never decides"* — expressed as a schema in which no code path writes a grade.** 🟢 **Zero copyleft in the delivered tree; the one adjacent AGPL-3.0 trap is named.** 🔴 **Count re-derived INLINE (`grep -c '^## P'` → `51`): the sandbox classifier refused the repository's own Python gates for a FOURTH consecutive pass (`ACTION p821-B`).** All components byte-read on `2026-11-15`.
@@ -127,6 +129,179 @@ decision instead of a constraint:
   and it is the one argument that still favours `ltijs` on a long engagement.
 
 ---
+
+## P55 — The multi-tenant campus LMS connector: turn `20`+ unfunded per-campus adapters into one supported product (Global, with named reference implementations in four regions)
+
+🔵 **`T77` found a population: university-pinned LMS agents across `14` jurisdictions, each one a
+student or staff member routing around an integration their institution never built. Every one is
+single-maintainer, `0–2★`, and pinned to one hostname. This recipe is the product that population
+is asking for, and the engagement sells it to the institution rather than to the learner.**
+
+**The stack:**
+
+- 🟢 [`jpss2004-bot/neyvu-connectors`](https://github.com/jpss2004-bot/neyvu-connectors) (MIT) —
+  **the architecture, and the only component here that already generalises.** One read-only
+  `LmsConnector` interface with **four methods**, three implementations — Canvas (REST API v1),
+  Brightspace (Valence API), Moodle (page capture) — behind a single MCP server exposing
+  `list_courses`, `list_assignments`, `list_documents`, `get_document` for all three. 🔴 Self-described
+  prototype: **take the interface and the provenance model, re-implement the adapters.**
+- 🟢 [`CloudDown/student-mcp`](https://github.com/CloudDown/student-mcp) (MIT) — **the auth and
+  consent tier.** Real-browser sign-in with MFA, **only a token or private browser profile stored,
+  never the password**, per-account assistant-access switches, multiple accounts per platform.
+  🔵 **This is the piece institutions will test hardest and the piece most adapters get wrong.**
+- 🟢 **Host adapters to read before writing your own**, each pinned to a live production system:
+  [`do-2k25-28/moodle-um`](https://github.com/do-2k25-28/moodle-um) 🇫🇷 (MIT) for **ENT/CAS SSO**,
+  [`Raindancer118/nak-api`](https://github.com/Raindancer118/nak-api) 🇩🇪 for a **two-system join**
+  (CIS + Moodle in one answer), [`Waldo0926/monash-study-kit`](https://github.com/Waldo0926/monash-study-kit) 🇦🇺 (MIT)
+  for **LMS + forum (Ed)**, [`jeanmartina/ufsc-moodle-mcp`](https://github.com/jeanmartina/ufsc-moodle-mcp) 🇧🇷 (MIT)
+  for **writes** (see `P56`).
+- 🟢 **Generic Moodle base to fork:** [`rahul069/moodle-mcp`](https://github.com/rahul069/moodle-mcp) (MIT),
+  read-only and not host-pinned.
+- 🔴 **Do NOT vendor:** [`Sun-sunshine06/bupt-anything`](https://github.com/Sun-sunshine06/bupt-anything)
+  (**GPL-3.0**, propagates) and [`mahmutmft/courses-mcp`](https://github.com/mahmutmft/courses-mcp),
+  [`corixien/Website-MCP`](https://github.com/corixien/Website-MCP),
+  [`daniilnikhaev534-art/moodle-mcp-server`](https://github.com/daniilnikhaev534-art/moodle-mcp-server)
+  (**no grant file at all — all-rights-reserved**). Read them; ship none of them.
+  🔴 [`Raindancer118/nak-api`](https://github.com/Raindancer118/nak-api) is **WTFPL** — permissive in
+  effect, but not OSI-approved and with no warranty or patent language. **Legal sign-off before it
+  enters a tendered deliverable.**
+
+🟢 **Wiring.** `neyvu-connectors`' `LmsConnector` is the only interface the agent sees. Each campus
+is a **tenant record**, not a build: `{host, platform, auth_method, adapter_version}`. Auth follows
+`student-mcp` — browser-based institutional SSO, token or profile at rest, never a credential in the
+model context. Every record returned carries `neyvu`'s provenance triple (source URL, API path or
+capture, provider version), which is what lets the institution answer *"where did this number come
+from"* without re-running the agent.
+
+🔵 **The tenancy decision that makes or breaks it:** capture-based adapters break when the
+institution restyles its Moodle. 🟢 **So ship adapter health as a product feature** — a nightly
+contract test per tenant against the four read methods, and a per-tenant RED that routes to support
+rather than to the student. **That recurring obligation is the reason this is a service and not a
+one-off integration, and it is what the unfunded per-campus repos structurally cannot offer.**
+
+🔴 **What this recipe REFUSES to do: start with writes.** `T77`'s population is overwhelmingly
+read-only, the institutional objection is always about writes, and `P56` is a separate, later,
+separately-governed phase.
+
+**Scope:** `8`–`10` weeks for the interface, the auth tier and **three** host adapters against live
+systems; `2`–`3` weeks per additional campus thereafter. 🔵 **Price the adapter fleet as
+maintenance, not as delivery.**
+
+**Buyer:** the university CIO or digital-learning director. 🟢 **The qualifying question has a
+public answer: search GitHub for the institution's own LMS hostname. If a student has already built
+and published an adapter for it, demand is demonstrated and the procurement conversation starts from
+evidence rather than from a pitch.**
+
+## P56 — The verified LMS write: commit, invalidate, re-read, diff — the protocol that makes an agent writing to a system of record auditable (LATAM anchor, portable to every LMS on these shelves)
+
+🔵 **Every LMS write agent this base has shelved fires and reports success. `T79` found the one that
+does not, and this recipe generalises its protocol — because the protocol, not the repository, is
+the asset.**
+
+**The reference implementation:**
+🟢 [`jeanmartina/ufsc-moodle-mcp`](https://github.com/jeanmartina/ufsc-moodle-mcp) (MIT, byte-read
+`1,064 B`), against **UFSC** 🇧🇷 Moodle in production.
+
+**The protocol, as four obligations:**
+
+1. 🟢 **Commit through the system's OWN form, not a side channel.** The reference drives Moodle's
+   `/course/modedit.php` with a resilient `<select>` parser and an explicitly mapped submit button
+   (`submitbutton2`, *"Salvar e voltar ao curso"*). 🔵 **Mapping the right button is not a detail: the
+   wrong one silently discards the edit.**
+2. 🟢 **Invalidate before you verify.** The reference clears `assignmentIndexCache` *before* the
+   post-commit re-read. 🔴 **A read-back that can be served from the writer's own cache verifies
+   nothing** — this is the step to copy even if you copy nothing else.
+3. 🟢 **Diff against BOTH `expectedChanges` and `expectedPreserved`.** Assert what you meant to
+   change *and* what you meant to leave alone. 🔵 **The second list is where silent collateral edits
+   are caught** — the reference publishes `dueDate` never moving `cutoffDate` as a guarantee, which
+   is the most common silent deadline bug in LMS automation.
+4. 🟢 **Return a failure TAXONOMY, not a boolean.** `form_rejected` (validation) is distinguished
+   from an expired session. 🔵 **That distinction decides whether a retry is safe**; collapsing both
+   into "failed" produces either duplicate writes or abandoned ones.
+
+**Compose it with:**
+
+- 🟢 **Human authorship of the standard:** [`lby749/smart-marking`](https://github.com/lby749/smart-marking) (MIT)
+  takes the **teacher's own rubric** as input rather than inventing one. 🔵 **Keep that ordering** —
+  it is the side of the line Ofqual and Florida Rule `6A-14.0719` leave open (`T30`): the human
+  authors the standard, the agent applies it, the human confirms.
+- 🟢 **Batch with an overview:** the reference's `commit_grading_batch` +
+  `get_assignment_grading_overview` make a batch inspectable before and after.
+- 🟢 **Privacy posture when the artefacts are minors' work:**
+  [`Bhuvantejakomera/Agentic-Assignment-Evaluator.`](https://github.com/Bhuvantejakomera/Agentic-Assignment-Evaluator.) (MIT)
+  scores with **local LLMs** — nothing leaves the institution. 🔴 **Note the literal full stop at the
+  end of that address; it resolves, and naive link-stripping breaks it.**
+- 🔴 **The contrast case, shelved in this same pass:**
+  [`do-2k25-28/moodle-um`](https://github.com/do-2k25-28/moodle-um) submits assignments on the
+  learner's behalf and publishes **no equivalent read-back**. Same tier, same window, opposite
+  assurance posture — exactly the comparison to put in front of a committee that is nervous about
+  writes.
+
+🟢 **The governance payoff.** Across `T30`'s six jurisdictions the rule is consistent: AI may not be
+the sole decider of an academic outcome. **A two-phase commit with a stored diff is how you evidence
+that a human decided** — the diff is the audit record, per assignment, per grade, per batch.
+
+🔴 **What this recipe REFUSES: no code path writes a grade the human has not confirmed.** Inherited
+verbatim from `P51`'s constraint — *"AI that proposes, never decides"* — and expressed here as a
+schema in which the commit tool requires a confirmation token the review step issues.
+
+**Scope:** `4`–`6` weeks against one LMS, including the contract tests. 🔵 **Port cost to a second
+LMS is in the form driver, not the protocol: budget `2`–`3` weeks.**
+
+**Buyer:** the registrar, the academic-integrity office, or the pro-vice-chancellor who has to sign
+that the institution's AI use is compliant.
+
+## P57 — The two-licence pre-shelf gate for courseware: probe the CONTENT grant before the code grant decides anything (Global, and the cheapest refusal in this base)
+
+🔵 **`T78` is four `curl`s' worth of prevention against shipping a client a curriculum nobody is
+allowed to sell. This recipe is those four `curl`s, plus the rule that fires them.**
+
+**The trigger.** The candidate repository's description or README names any of: *course, classes,
+curriculum, curso, clases, currículo, lesson, syllabus, rubric, rúbrica, assessment, question bank,
+教学设计, 课程标准*. 🟢 **If it does, the deliverable is PROSE and the code licence is not the
+governing grant.**
+
+**The probe, after the ordinary `LICENSE` byte-read succeeds:**
+
+```bash
+REPO=owner/name; BRANCH=main
+for p in LICENSE-CONTENT.md LICENSE-CONTENT CONTENT-LICENSE.md LICENSE-DOCS.md LICENSE-CC.md \
+         content/LICENSE docs/LICENSE COPYRIGHT-CONTENT.md; do
+  code=$(curl -sL --max-time 20 -o "/tmp/$$.$p" -w "%{http_code}" \
+    "https://raw.githubusercontent.com/$REPO/$BRANCH/$p" 2>/dev/null)
+  [ "$code" = 200 ] && echo "=== $p ($(wc -c <"/tmp/$$.$p") B, sha256:$(sha256sum <"/tmp/$$.$p" | cut -c1-8))" \
+    && head -c 400 "/tmp/$$.$p" | tr -d '\r' | tr '\n' ' '
+done
+```
+
+🟢 **Grade what comes back, and the grading is binary for a commercial deliverable:**
+
+| Content grant | Verdict |
+|---|---|
+| none found | 🟢 the code licence governs; proceed |
+| CC BY / CC BY-SA / CC0 | 🟢 usable; **SA propagates to derivative content** — track it |
+| 🔴 **CC BY-NC / CC BY-NC-SA / any NC** | 🔴 **REFUSE for a paid engagement.** Not negotiable by attribution |
+| 🔴 CC BY-ND | 🔴 refuse — you cannot adapt it to the client's curriculum |
+
+🔴 **The worked example, byte-confirmed this pass:**
+[`modern-software-engineering-program`](https://github.com/vladimiracunadev-create/modern-software-engineering-program)
+— `LICENSE` is Apache-2.0 (`11,345 B`), GitHub's field says `Apache-2.0`, and
+`LICENSE-CONTENT.md` (`3,523 B`, `sha256:fd781b0e…`) puts all `540` classes under **CC BY-NC-SA
+4.0**. 🟢 **The gate costs four `curl`s and refuses it before it reaches a proposal.**
+
+🟢 **Run the mirror check too, and it is one line:** if the repository's *only* grant is a Creative
+Commons or other content licence and the deliverable is **software**, refuse on instrument —
+[`birkanyavuz/educational-tools`](https://github.com/birkanyavuz/educational-tools) ships an
+A2A + MCP classroom-tool server under **CC BY-4.0**, which grants no patent rights and makes no
+source provision. 🔵 **Both failure directions, one gate.**
+
+🟢 **Where it belongs:** in front of the existing pre-ingest payload gate (`P52`), because it is
+cheaper — a licence refusal needs no clone. 🔵 **And the upstream action is usually trivial:** in
+both cases this pass found, a single corrected licence file would move the repository onto the
+build-safe shelf, so **file the issue rather than only recording the rejection.**
+
+**Scope:** `2`–`3` days to wire into an existing ingest, as a pre-commit hook over any row whose
+description matches the trigger vocabulary.
 
 ## P52 — The pre-ingest payload gate: four controls that refuse a `775`-repository clone farm, and the one that actually does the work (Global, and the first recipe here whose deliverable protects the OTHER recipes)
 

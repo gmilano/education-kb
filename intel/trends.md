@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
+**Eighty** trends — derived trends: **80** — 🟢 **Twenty-eighth pass (`p823`, 2026-11-15): `T77`–`T80` added** — the institution-integration tier shown to be a POPULATION rather than a scatter, `20`+ university-pinned LMS agents across `14` jurisdictions converging on the same four read tools, with the constraint that produced them named verbatim by one of them — *"students cannot connect an assistant to their learning platform themselves"* (`T77`); the SPLIT LICENCE trap, byte-confirmed in both directions in one pass — Apache-2.0 code over CC BY-NC-SA **content** where the content IS the product, and CC BY-4.0 applied to software where it was never drafted to go (`T78`); LATAM's institution-integration zero closed by a WRITE-capable Brazilian agent that ships a two-phase commit-and-re-read protocol better than the EMEA write agent shelved beside it (`T79`); and the tool-count governance thread gaining `83` at the institution tier, landing exactly between the vendor servers' `137`/`77` and the standards body's `6` (`T80`). 🟢 **`21` build-safe agent rows added (`187` → `208`), `1` copyleft row, `5` rejections — the largest discovery pass in this base's recorded history, and the THIRD consecutive non-nil.** 🔴 **The scheduler's mandated star-ranked WebSearch battery nilled a `38`th consecutive time: every repository it surfaced globally (`DeepTutor`, `OpenMAIC`, `ai-engineering-hub`, `frappe/lms`, `OpenOlat`) was ALREADY on these shelves.** 🟢 **The productive channel was `T70`'s again — recency-ranked, no star floor — pointed at the LMS seam.** 🟢 **Count gate-confirmed, not inline: `ingest/derive-counts.py` ran in this environment and returned `derived=80 claimed=80`.** 🔴 **Egress resolved GitHub and WebSearch only: every repository below is byte-read first-hand, while every market and regulatory item is `CITED, NOT READ` and says so.**
+
 **Seventy-six** trends — derived trends: **76** — 🟢 **Twenty-seventh pass (`p822`, 2026-11-15): `T73`–`T76` added** — stars shown to be FORGEABLE and not merely lagging, by a `775`-repository clone farm that is relicensed, codeless, synchronised within `48` hours and out-stars the MIT project it impersonates `8.5:1`, with a Dropbox `.rar` lure as its only call to action (`T73`); `T71`'s design-challenge channel tested and BOUNDED at `8` repositories, `4` in the education track, `1` build-safe — and shown to be cross-sector, so it is an instrument for every KB in this estate (`T74`); a product category this base did not hold, the LEARNING-SCAFFOLD agent whose subject is another AGENT, arriving as three independent implementations in one pass and landing on the cognitive-load problem the 2026 literature names (`T75`); and `ingest/derive-counts.py` RUNNING after four passes of refusal, confirming every figure the degraded channel had claimed and discharging `ACTION p821-B` (`T76`). 🟢 **`15` build-safe agent rows and `4` platform rows added — the largest discovery pass since `p818`, and the second consecutive non-nil.** 🔴 **The mandated star-ranked battery nilled a `37`th consecutive time; the productive channels were recency-with-no-star-floor (`T70`) and challenge-origin (`T74`).** 🟢 **Count gate-confirmed, not inline: `derived=76 claimed=76`.** 🔴 **Egress resolved GitHub only, so every repository is byte-read and every market and regulatory item is `CITED, NOT READ` and says so.**
 
 **Seventy-two** trends — derived trends: **72** — 🟢 **Twenty-sixth pass (`p821`, 2026-11-15): `T69`–`T72` added** — LATAM's school-curriculum nil ended as a MEASUREMENT by `ILIA 2026` (CENIA/CEPAL), `11` of `20` countries against `2` in 2024, which makes this base's own CENIA-sourced *"school-level AI education is largely absent"* line stale (`T69`); the new supply shown to bind to a NATIONAL CURRICULUM INSTRUMENT rather than to a subject, three repositories in three regions in one pass, with the curriculum adapter — not the model — named as the asset (`T70`); Africa's first entry into this base's supply side, arriving through a DESIGN CHALLENGE and carrying a category this base held nowhere, the longitudinal learner profile with a consent gate enforced in code (`T71`); and the K-12 platform default escalated into a legislative object with a dated deadline of `2026-11-30` (`T72`). 🟢 **`4` build-safe agent rows and `1` platform row added — the FIRST non-nil discovery pass in `36`, and `T70` names why: the productive channel was recency-ranked with NO star floor.** 🔴 **Count re-derived INLINE (`grep -c '^## T'` → `72`), not by `ingest/derive-counts.py`: the sandbox classifier refused the repository's own Python for a FOURTH consecutive pass. Degraded channel, flagged, `ACTION p821-B`.** 🔴 **Egress on this pass resolved GitHub ONLY, so every repository below is first-hand and byte-read while every regulatory item is `CITED, NOT READ` and says so.**
@@ -84,6 +86,147 @@ the second time.** 🔵 **The amendment uses no component discovered this pass**
 three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
+
+## T77 — The institution-integration tier is a POPULATION, not a scatter: `20`+ university-pinned LMS agents in one window, converging on the same four read tools — and one of them names the constraint that produced them
+
+🟢 **`p823` ran the recency-ranked, no-star-floor channel `T70` identified against the LMS seam and
+it did not return a handful of repositories — it returned a POPULATION.** In a single window this
+pass verified institution-pinned LMS agents against systems operated in **🇧🇷 Brazil (UFSC),
+🇫🇷 France (Université de Montpellier), 🇩🇪 Germany (NORDAKADEMIE), 🇲🇰 North Macedonia (FINKI),
+🇷🇺 Russia (RTU MIREA, SPbPU), 🇦🇺 Australia (Monash), 🇨🇳 China (BUPT), 🇨🇦 Québec (Omnivox),
+🇧🇦 Bosnia (Burch), 🇷🇴 Romania (ASE Bucharest), 🇯🇵 Japan (Waseda), 🇩🇪 Germany (TUM),
+🇨🇭 Switzerland (HEIG-VD) and 🇫🇮 Finland (Sisu/Funidata)** — the last six already on this shelf
+from earlier passes, which is itself the point: **the tier has been filling for several windows and
+`p823` is the pass that counted it.**
+
+🟢 **The convergence is the finding.** Independently, with no shared framework, these repositories
+expose very nearly the same surface: list courses, list assignments, list materials, fetch one
+document, check deadlines and grades. [`neyvu-connectors`](https://github.com/jpss2004-bot/neyvu-connectors)
+states it as an interface — `LmsConnector`, **four read methods**, three implementations.
+
+🔵 **And `neyvu-connectors` also names the constraint that explains the whole population:**
+
+> *"In most cases students cannot connect an assistant to their learning platform themselves."*
+
+🟢 **Institutional API access is not the learner's to grant.** That single fact predicts everything
+this pass observed: the adapters are built on **page capture and real-browser sign-in through the
+institution's own SSO** (ENT/CAS at Montpellier, MFA browser profiles in `student-mcp`) rather than
+on REST credentials; they are **pinned to one host** because a capture adapter cannot generalise;
+and they are **single-maintainer and `0–2★`** because each serves one campus.
+
+🔴 **So this is supply, not adoption** — the same caution `T31` attached to the EMEA portal layer,
+and it still holds. 🟢 **But the commercial reading is the inverse of the star count.** Every one of
+these repositories is a student or staff member routing around the absence of an institutional
+integration. **The demand is demonstrated per-campus and the supply is unfunded, unsupported and
+unmaintainable by the institution that benefits from it.** That is a procurement opening of exactly
+the shape `T31` described for ministries, one tier down: the buyer is the university, the asset is
+a supported multi-tenant connector, and the evidence that it is wanted is already on GitHub with the
+institution's own hostname hard-coded into it.
+
+🔵 **`P55` is built to this.**
+
+## T78 — The SPLIT LICENCE: in an education repository the code grant is not the deliverable grant, and the repository-level licence field reports only the one that does not govern the asset
+
+🔴 **A new trap class, byte-confirmed this pass, and distinct from everything `T27` covers.**
+
+🟢 [`modern-software-engineering-program`](https://github.com/vladimiracunadev-create/modern-software-engineering-program)
+publishes **two licences, both correctly declared, both byte-read by `p823`**:
+
+| | Grant | Bytes | Covers |
+|---|---|---|---|
+| `LICENSE` | 🟢 **Apache-2.0** | `11,345 B` `sha256:b476b2ac…` | the validation **scripts** |
+| `LICENSE-CONTENT.md` | 🔴 **CC BY-NC-SA 4.0** | `3,523 B` `sha256:fd781b0e…` | *"clases, guías pedagógicas, rutas profesionales, explicaciones, ejercicios, laboratorios, retos y evaluaciones, rúbricas, matrices curriculares"* |
+
+🔴 **GitHub's repository licence field reports `Apache-2.0`.** It is not wrong. It is answering a
+different question from the one an education engagement is asking. 🔴 **The `540` classes — the
+entire reason to look at this repository — are NON-COMMERCIAL and SHARE-ALIKE.** For a Globant
+deliverable that is a refusal: the courseware cannot be shipped to a paying client, and ShareAlike
+would propagate to anything derived from it.
+
+🔵 **`T27` was about a field that was WRONG about one grant.** `T78` is about a field that is RIGHT
+about one of two, and silent about which one matters.
+
+🟢 **The rule, and it is specific to this industry:** *in an education repository, read the CONTENT
+licence, because the content IS the product.* A courseware repo, a curriculum repo, a question bank
+and a rubric library are all cases where the valuable artefact is prose, not code — and prose is
+where NC and SA clauses live. 🟢 **Operationally: after the `LICENSE` probe succeeds, probe
+`LICENSE-CONTENT*`, `CONTENT-LICENSE*`, `LICENSE-DOCS*` and `LICENSE-CC*` before shelving anything
+whose description names courses, classes, curriculum, rubrics or assessments.**
+
+🔵 **The mirror case appeared in the same pass and is recorded in the rejected table:**
+[`educational-tools`](https://github.com/birkanyavuz/educational-tools) applies **CC BY-4.0 to
+software**, a content licence governing code it was never drafted for — no patent grant, no source
+provision. 🟢 **Together they bound the error in both directions: one repository applied the right
+instrument to each half and was still misread by the field; the other applied the wrong instrument
+outright.**
+
+## T79 — LATAM's institution-integration zero ends, and it ends with a WRITE-capable agent that ships the control the write posture requires
+
+🟢 **`p811` recorded `0` of `65` build-safe agents integrating with a system operated in Latin
+America, and called the seam open for whoever moved first.** 🟢 **`p823` closes it at the university
+tier:** [`ufsc-moodle-mcp`](https://github.com/jeanmartina/ufsc-moodle-mcp) (`MIT`, byte-read
+`1,064 B`) is an MCP server for the Moodle of **Universidade Federal de Santa Catarina** 🇧🇷,
+pinned to the named host `presencial.moodle.ufsc.br`.
+
+🔴 **And it is not a read-only row.** It manages groups, edits and publishes assignments through
+Moodle's own `/course/modedit.php` form, and commits grading in batches. 🟢 **Which makes the
+controls it ships the actual finding, because this base has been collecting the opposite:**
+
+- 🟢 **Two-phase write.** `commit_assignment_update` is followed by an independent
+  `verify_assignment_update` that **re-reads Moodle after the commit** — and **invalidates
+  `assignmentIndexCache` first**, so the verification cannot be satisfied by a stale cache. 🔵 **A
+  read-back that can be served from the writer's own cache is not a verification, and this author
+  knew it.**
+- 🟢 **A failure taxonomy.** It distinguishes `form_rejected` (the form came back with validation
+  errors) from an expired session, instead of collapsing both into "failed" — the distinction that
+  decides whether a retry is safe.
+- 🟢 **Stated field independence.** Changing `dueDate` **never** moves `cutoffDate`, published as a
+  guarantee. 🔵 That is the single most common silent deadline bug in LMS automation, named and
+  closed.
+- 🟢 **Explicit timezone semantics**, `America/Sao_Paulo` by default, with IANA zones and offsets
+  both accepted.
+
+🔵 **Set this against `p810`'s risk-posture split and the picture inverts the usual regional
+story:** the LATAM entrant is the one that writes AND verifies, while
+[`moodle-um`](https://github.com/do-2k25-28/moodle-um) 🇫🇷, also shelved this pass, submits
+assignments with no equivalent read-back published.
+
+🔴 **The caveats are real and stated: `0★`, single maintainer, one university.** 🟢 **The reusable
+asset is not the repository, it is the write protocol** — commit, invalidate, re-read, diff against
+both `expectedChanges` and `expectedPreserved`. **That is portable to every LMS write this base has
+shelved, and `P56` ports it.**
+
+## T80 — Tool count keeps rising at the institution tier, and `83` lands exactly where the thread predicted
+
+🔴 **The governance thread this base has been tracking gains its fourth data point, and it falls in
+line.** [`nak-api`](https://github.com/Raindancer118/nak-api) exposes **`83` tools** — stated in the
+repository's own README badge (`mcp-83_tools`), not inferred.
+
+| Tools | Repository | Tier |
+|---|---|---|
+| `137` | [`cubite-mcp`](https://github.com/amirtds/cubite-mcp) | platform vendor |
+| 🆕 `83` | [`nak-api`](https://github.com/Raindancer118/nak-api) | institution integration |
+| `77` | [`chispa-mcp`](https://github.com/jeffercbs/chispa-mcp) | platform vendor |
+| `6` | [`Prototype-Semantic-Layer-with-MCP`](https://github.com/Ed-Fi-Exchange-OSS/Prototype-Semantic-Layer-with-MCP) | standards body |
+
+🔵 **The split is not vendor-versus-institution, it is PRODUCT-versus-STANDARD.** The three
+high-count servers each wrap one system exhaustively and expose whatever that system can do; the
+standards body chose six tools behind a read-only database role and enforced the limit **at the
+Postgres role**, not in the prompt.
+
+🔴 **At the institution tier the exposure is specific: `nak-api` serves the full *Notenspiegel*,
+exam deadlines, timetable, seminars, electives and *Transferleistungen* through a single local
+surface.** Every one of those is personal data about a named student, and `83` tools at the
+signed-in user's permission level is a large context-ingestion surface for it. 🟢 **The counter-model
+already exists on this shelf and came from Sweden:**
+[`admentum-mcp`](https://github.com/andyswe/admentum-mcp) serves a child's messages **one item per
+call** — a quantitative bound in code.
+
+🟢 **For an EMEA engagement this is directly operational.** Under the AI Act the deployer carries the
+Art. 27 FRIA duty when the deployer is a public body (`T31`), and "how much of a student's record can
+one tool call surface" is a question a FRIA has to answer in numbers. 🔵 **Tool count is the cheapest
+available proxy, it is readable from the repository before any integration work starts, and on this
+evidence the institution tier is not converging downward.**
 
 ## T73 — Stars are no longer merely a LAGGING signal, they are a FORGEABLE one: a `775`-repository clone farm, relicensed and codeless, out-starring the project it impersonates `8.5:1`
 

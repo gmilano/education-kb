@@ -4,6 +4,82 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-eighth pass, `p823`) — **the foundation nil ENDS at four passes, and it ended in the STANDARDS tier rather than the application tier**
+
+🟢 **`2` foundation rows added (`132` → `134`) — the first non-nil on this file in five passes.**
+🔴 **`0` platform rows (`116` unchanged), measured and explained in `verticals/solutions.md`.**
+🟢 **Gate-confirmed both before and after: `repos/foundations.md shelf: tables=20 rows=136
+distinct=134 graded=134 claimed=134 ragged=0 nolink=0 dupes=2`.**
+
+### What ended the nil, and the setting that did it
+
+🔴 **`p819`–`p822` each returned `0` foundation rows.** 🟢 **`p823` stopped querying the application
+tier and queried the STANDARDS tier by name** — the layers this file already has headings for —
+with `pushed:>2026-01-01` and **no star floor**:
+
+| Query | Result |
+|---|---|
+| `LTI 1.3 advantage library pushed:>2026-01-01` | 🟢 **`1` row — and it is institution-authored** |
+| `QTI assessment library pushed:>2026-01-01` | 🟢 **`1` new + `1` already shelved** |
+| 🔴 `learning record store xapi library pushed:>2026-01-01` | 🔴 **ZERO items. A clean nil** |
+| 🔴 `caliper analytics OR "learning analytics" library pushed:>2026-06-01` | 🔴 **POISONED TOKEN — see below** |
+
+### The two rows
+
+🟢 **[`GSU-CETLOE/lti1p3Library-python`](https://github.com/GSU-CETLOE/lti1p3Library-python)** —
+MIT (byte-read `1,083 B`, `sha256:712361aa…`), **the tool side of LTI 1.3 Advantage including the
+OIDC login flow**, published by **Georgia State University's Center for Excellence in Teaching,
+Learning and Online Education**. 🔵 **Institution-authored integration substrate — the same
+provenance class as Ed-Fi and Apereo, and a stronger signal than `0★` suggests.**
+🔴 **Shelved WITH a stated defect: the MIT holder line is the unfilled template
+`Copyright (c) 2026 [Your Name / Organization]`** — a grant naming no grantor. One commit to fix,
+and it is an upstream request rather than a rejection.
+
+🟢 **[`melissapula/qti-delivery`](https://github.com/melissapula/qti-delivery)** — MIT (byte-read
+`1,081 B`, `sha256:5c15e3ab…`), **an assessment delivery API in Go using the standard library
+only**, implementing a subset of IMS QTI. 🔵 **The zero-dependency choice is the reason it is
+shelved.** This file records the assessment-engine tier as having *"the worst licence profile in
+this base"*, and the usual escape — adopt a large assessment framework — imports that profile with
+the code. **A stdlib-only Go service has no transitive licence surface to audit at all.**
+🔴 A **subset** of QTI by its own statement, `0★`, created `2026-10-15`. 🟢 **Pairs with
+[`agencyenterprise/qti-3-player`](https://github.com/agencyenterprise/qti-3-player) (MIT), already
+shelved: delivery plus rendering, both permissive.**
+
+### 🔴 A poisoned token, recorded so it is not re-run
+
+🔴 **`caliper analytics` / `"learning analytics" library` is NOT a usable token on this channel.**
+It returns [`google/caliper`](https://github.com/google/caliper) (*deprecated Java
+micro-benchmarking*, `819★`), [`llnl/Caliper`](https://github.com/llnl/Caliper) (*performance
+profiling*, `424★`), a React component library and a JS element-measuring library — **zero education
+results across `12` items.** 🔵 **The word is owned by performance tooling.** 🟢 **Use
+`IMS Caliper`, `caliper sensor` or `caliper event store` instead** — and this base already carries
+the same lesson for `xapi`, which returns X/Twitter and Xapian repositories and must be queried as
+`experience api` or `learning record store`. **Two of this file's named layers are addressed by
+tokens that mean something else to GitHub.**
+
+### 🔴 A clean nil, distinct from a poisoned one
+
+🔴 **`learning record store xapi library pushed:>2026-01-01` returned an EMPTY result set** — not
+noise, not off-target: zero items. 🔵 **That is a different measurement from the Caliper case and
+should not be merged with it.** The LRS layer has been on this shelf since the third pass; what this
+says is that **no new permissively licensed LRS client library was pushed to a public repository in
+2026 that this query can see**, which is consistent with the layer being mature and vendor-served
+rather than absent.
+
+### Why the application tier produced nothing for this file again
+
+🟢 **`p823`'s `21`-row discovery pass landed almost entirely in `agents/top.md`, not here, and the
+distinction is the point.** The `T77` population is **integration clients** — per-campus adapters
+pinned to one hostname. 🔴 **A host-pinned capture adapter is not a foundation**; it is not
+something another engagement builds on, because its value is exhausted by the single institution it
+targets. 🟢 **The foundation in that population is the INTERFACE, not the adapters** — which is why
+`P55` names [`neyvu-connectors`](https://github.com/jpss2004-bot/neyvu-connectors)' four-method
+`LmsConnector` as the architecture to take and the adapters as the thing to re-implement, and why
+that repository is shelved as an agent with its interface quoted rather than promoted here while it
+remains a self-described prototype.
+
+---
+
 ## `2026-11-15` (twenty-seventh pass, `p822`) — **`0` foundation rows for a FOURTH consecutive pass, and this pass can say precisely what the channel returned instead**
 
 🔴 **`0` foundation rows (`132` unchanged). `4` platform rows (`112` → `116`). A MEASUREMENT, not an

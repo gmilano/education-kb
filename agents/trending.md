@@ -4,6 +4,115 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (twenty-eighth pass, `p823`) — **the largest discovery pass in this base's history: `21` build-safe rows, and the institution-integration tier revealed as a POPULATION**
+
+🟢 **`21` build-safe agent rows added (`187` → `208`), `1` copyleft row, `5` rejections, `2`
+foundation rows (`132` → `134`), `4` trends (`T77`–`T80`), `3` recipes (`P55`–`P57`).**
+🔴 **`0` platform rows (`116` unchanged) — a MEASUREMENT, with its denominator published in
+`verticals/solutions.md`.** 🟢 **Every count gate-confirmed: `ingest/derive-counts.py` ran in this
+environment and returns GREEN on all five shelves.**
+
+### The channel result, stated before the findings
+
+🔴 **The scheduler's mandated star-ranked WebSearch battery nilled for a `38`th consecutive pass.**
+It was run in full — global legs (`top open source AI agents education 2026 github MIT`,
+`github trending education AI 2026`, `open source platform education LMS SIS MIT Apache 2026`,
+`AI education industry trends 2026`) plus all four regional legs. **Every repository it surfaced
+was ALREADY on these shelves:** `HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC` (`43,605★`, MIT),
+`patchy631/ai-engineering-hub`, `ashishpatel26/500-AI-Agents-Projects`, `frappe/lms`,
+`OpenOlat/OpenOlat`. 🔵 **A `0`-yield leg that confirms shelf coverage is worth recording as
+coverage, not as failure — but it is `38` passes since that channel last produced a row.**
+
+🟢 **The productive channel was `T70`'s, for the third pass running: GitHub `search/repositories`,
+`sort=updated`, NO star floor — pointed this time at the LMS integration seam.** Query family:
+`moodle mcp server pushed:>…`, `education agent mcp pushed:>…`, `student information system mcp`,
+`grading rubric agent`, `lesson plan agent teacher`.
+
+### `T77` — the institution-integration tier is a population, and one repo names the constraint
+
+🟢 **`20`+ university-pinned LMS agents verified across `14` jurisdictions**, converging without
+coordination on the same four read tools. 🔵 **The explanation is quoted from
+[`neyvu-connectors`](https://github.com/jpss2004-bot/neyvu-connectors) itself:** *"in most cases
+students cannot connect an assistant to their learning platform themselves."* Institutional API
+access is not the learner's to grant — which is why this tier is built on **page capture and
+real-browser institutional SSO**, pinned to single hosts, single-maintainer and `0–2★`.
+🟢 **Supply, not adoption — but demand demonstrated per campus, with the institution's own hostname
+hard-coded into it. `P55` is the product that answers it.**
+
+### `T79` — LATAM's institution-integration zero closes, with the best write protocol on these shelves
+
+🟢 **[`jeanmartina/ufsc-moodle-mcp`](https://github.com/jeanmartina/ufsc-moodle-mcp)** (MIT,
+byte-read `1,064 B`) — **Universidade Federal de Santa Catarina 🇧🇷**, `presencial.moodle.ufsc.br`.
+🔴 **Write-capable**, and it ships what that requires: `commit_assignment_update` →
+**`assignmentIndexCache` invalidated** → `verify_assignment_update` re-reads → diff against **both**
+`expectedChanges` **and** `expectedPreserved`; `form_rejected` distinguished from session expiry;
+`dueDate` guaranteed never to move `cutoffDate`. 🔵 **`p811` recorded `0` of `65` build-safe agents
+integrating with a LATAM-operated system and called the seam open. It is open no longer, and the
+first mover arrived with better controls than the EMEA write agent shelved in the same pass**
+([`do-2k25-28/moodle-um`](https://github.com/do-2k25-28/moodle-um) 🇫🇷, which submits with no
+published read-back). **Protocol generalised as `P56`.**
+
+### `T78` — the SPLIT LICENCE, caught in both directions in one pass
+
+🔴 **[`modern-software-engineering-program`](https://github.com/vladimiracunadev-create/modern-software-engineering-program)**:
+`LICENSE` = **Apache-2.0** (`11,345 B`, byte-read), GitHub's field = `Apache-2.0`, and
+`LICENSE-CONTENT.md` (`3,523 B`, `sha256:fd781b0e…`, byte-read) = **CC BY-NC-SA 4.0 over all `540`
+classes** — the deliverable. 🔵 **Both grants correctly declared; the repository-level field reports
+only the one that does not govern the asset.** 🔴 **Mirror case, same pass:**
+[`birkanyavuz/educational-tools`](https://github.com/birkanyavuz/educational-tools) applies
+**CC BY-4.0 to software**. 🟢 **Rule: in an education repository, read the CONTENT licence, because
+the content IS the product. Gate published as `P57` — four `curl`s.**
+
+### `T80` — `83` tools at the institution tier
+
+🔴 [`Raindancer118/nak-api`](https://github.com/Raindancer118/nak-api) exposes **`83` tools**
+(README badge `mcp-83_tools`), joining `137` (`cubite-mcp`) and `77` (`chispa-mcp`) against **`6`**
+at the Ed-Fi standards body. 🔵 **Product-versus-standard, not vendor-versus-institution.**
+🟡 **Licence flag: WTFPL** — permissive in effect, **not OSI-approved**, no warranty disclaimer, no
+patent grant. **Technically build-safe, procurement-safe only after legal sign-off** — which matters
+because EMEA institution work runs through public tender.
+
+### A third licence-hygiene failure mode
+
+🔴 [`GSU-CETLOE/lti1p3Library-python`](https://github.com/GSU-CETLOE/lti1p3Library-python) (MIT,
+byte-read `1,083 B`) carries the **unfilled template holder line `Copyright (c) 2026 [Your Name /
+Organization]`** — an MIT grant naming no grantor, from a **university centre** (Georgia State
+CETLOE). 🟢 **Shelved with the defect stated; the fix is one commit upstream.** 🔵 **Three distinct
+failure modes now recorded: the field is WRONG (`T27`), the grant is SPLIT (`T78`), the grant is
+UNATTRIBUTED (this).**
+
+### Rejections, filed by name so the next pass does not re-pay for them
+
+🔴 [`mahmutmft/courses-mcp`](https://github.com/mahmutmft/courses-mcp) (FINKI Moodle 🇲🇰) —
+`NOASSERTION` with **no grant file at 4 paths on `master`, all HTTP `404`**. 🔵 **The other direction
+of `T27`: the field is equally uninformative when the grant is ABSENT.**
+🔴 [`TD-Mosoma/Mothusi`](https://github.com/TD-Mosoma/Mothusi) — *"AI classroom colleague for Grade
+1–4 teachers in South Africa"* 🇿🇦, **no grant file**. 🔴 **The FIFTH substantial unlicensed
+education repository recorded here (`T24`), and the one most worth an upstream licence request:
+Africa-placed foundation-phase supply is a category this base holds almost nothing in.**
+🔴 [`corixien/Website-MCP`](https://github.com/corixien/Website-MCP) and
+[`daniilnikhaev534-art/moodle-mcp-server`](https://github.com/daniilnikhaev534-art/moodle-mcp-server)
+— no grant. 🔴 [`birkanyavuz/educational-tools`](https://github.com/birkanyavuz/educational-tools) —
+CC BY-4.0 on software.
+
+### Address caveat worth carrying
+
+🔴 **[`Bhuvantejakomera/Agentic-Assignment-Evaluator.`](https://github.com/Bhuvantejakomera/Agentic-Assignment-Evaluator.)
+ends in a literal full stop.** It resolves (`total_count=1`), but it breaks naive trailing-punctuation
+stripping — **including this base's own `grep -oE` address sweeps.** 🟢 **Filed with the stop intact
+so a later pass does not "correct" it into a 404.**
+
+### Method notes
+
+🟢 **Verification channel re-confirmed before use**, per `T970`: live address
+(`repo:bgwdotdev/go-oneroster`) → `total_count=1`; invented address → HTTP `422`. 🔴 **The
+scheduler's prescribed `curl -sI` was NOT used for existence — it returns `403` for live and
+invented addresses alike here (`T923`) and cannot distinguish them.** 🟢 **Every licence above is
+byte-read over `raw.githubusercontent.com` with size and `sha256` recorded.** 🔴 **Every market and
+regulatory item in `intel/market.md` this pass is `CITED, NOT READ`.**
+
+---
+
 ## `2026-11-15` (twenty-seventh pass, `p822`) — **`15` rows, two productive channels, and the discovery of a `775`-repository clone farm that out-stars the project it impersonates**
 
 🟢 **`15` build-safe agent rows added (`172` → `187`), `1` copyleft row, `2` rejections, `4` platform
