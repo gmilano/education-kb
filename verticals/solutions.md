@@ -4,6 +4,35 @@ region: Global
 updated: 2026-11-15
 ---
 
+## 🔴 `2026-11-15` (thirty-seventh pass, `p832`) — **`0` platform rows added, and the nil is the measurement: the LMS/SIS vertical leg returned nothing this base does not already hold**
+
+🟢 **The mandated vertical leg ran (`open source platform education LMS SIS MIT Apache
+self-hosted`) and every platform it named was checked against this base's `7,125`-slug known set:**
+`frappe/lms`, `OpenOLAT/OpenOLAT`, `openeducat/openeducat_erp`, `francoisjacquet/rosariosis`,
+`openedx/edx-platform`, `instructure/canvas-lms`, `moodle/moodle`, `apereo/opencast`, `oppia/oppia`,
+`h5p/h5p-php-library`. 🔴 **All ten already held.** 🔵 **`T99`'s LMS-tier finding and `T63`'s
+saturation finding both hold; the vertical shelf is at `140` rows and this leg has stopped
+producing.**
+
+🔴 **The eleventh name was not a repository at all.** The search summary named **openSIS** as a K-12
+SIS option; the obvious address `OpenSIS-Classic/OpenSIS-Classic` returns **`HTTP 422` — it does not
+exist**. 🟢 **The real address is `OS4ED/openSIS-Classic` (`351★`, pushed `2026-10-26`), already
+held.** 🔵 **Recorded because inferring a slug from prose is precisely how an invented row enters a
+base, and this base has a gate class for exactly that.**
+
+🔴 **And it is ungranted, confirmed rather than assumed.** `OS4ED/openSIS-Classic` was re-probed
+this pass **with branch resolution** (`D832-1`) across `6` resolved heads including `master` and
+`Version_8.0`, against the full `31`-name case-aware filename list: **`NO-GRANT-AT-ROOT` on every
+one.** 🟢 **A CONFIRMED true absence** — which matters, because the same sweep found `3` of this
+base's standing absence claims to be FALSE (`T112`). 🔵 **A `351★` SIS with no grant of any kind is
+a deploy-and-configure platform only; nothing may be forked or redistributed from it.**
+
+🟡 **One licence conflict carried forward from the global leg and NOT resolved this pass:** the
+search summaries disagree about **Open edX**, listing it as both `AGPL` and `MIT`, and about
+**Forma LMS** (`LGPL` vs `GPL`). 🔵 **Both are `CITED, NOT READ`. This base's `T81` rule says the
+FIELD errs in both directions and only the bytes settle it** — registered as `ACTION p832-C` rather
+than guessed at here.
+
 # Education vertical platforms — real systems to customize AI on top of
 
 ## 🟢 The FOUNDATIONAL-MEASUREMENT tier — **the instrument the early-grade evidence is actually collected on** (new, thirty-sixth pass `p831`) (5 rows)

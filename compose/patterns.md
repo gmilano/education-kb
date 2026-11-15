@@ -6,7 +6,47 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
-**Seventy-one** concrete recipes — derived recipes: **71**. 🟢 **Thirty-sixth pass (`p831`): `P71` added** — the mother-tongue foundational-literacy pipeline, and the first recipe in this file aimed at children aged `5`–`9` learning to read and count at all. 🔵 **Premise is `T108`: this is the only tier in this base where the open-source assets carry real outcome evidence and the newest code is the least usable, so the recipe INHERITS the maintained content and measurement pipelines (Bloom, libpalaso, Kolibri Studio, Tangerine — all pushed this week) and treats the field-trialled XPRIZE apps as a CURRICULUM SPECIFICATION to read rather than a dependency to adopt.** 🔴 **The EU AI Act boundary is drawn before node `1`: Annex III point `3` makes assessing learning outcomes high-risk by construction and the subject is a child, so the pipeline authors, delivers and TRANSCRIBES, and the score stays with a human enumerator inside Tangerine.** 🟢 **All ten components byte-read on `2026-11-15`; every market and regulatory item is `CITED, NOT READ`.** 🟢 **Thirty-fifth pass (`p830`): `P70` added** — the inclusive-delivery pipeline, and the first recipe in this file aimed at the SEN / inclusive-learner population rather than at a mainstream cohort. 🔵 **Premise is `T107`: inclusion COMPLIANCE is funded, deadlined and granted (MIT/Apache across the whole WCAG / Section 508 / EN 301 549 tier) while inclusion PEDAGOGY has a GitHub maximum of `1★` — so the recipe sells the compliance obligation and delivers the pedagogy inside it.** 🔴 **The EU AI Act boundary is drawn before the first node and it is the sharpest one in this file: the pipeline PRODUCES artefacts and evidence and NEVER scores a learner, because Annex III point 3 makes "assess learning outcomes" high-risk by construction and a SEN learner's needs record is special-category data on top of that.** 🟢 **All nine components byte-read on `2026-11-15`; every regulatory date is `CITED, NOT READ`.**
+**Seventy-two** concrete recipes — derived recipes: **72**. 🟢 **Thirty-seventh pass (`p832`): `P72` added** — the GRANT-CURRENCY harness, and the first recipe in this file whose subject is the knowledge base itself rather than a learner. 🔵 **Premise is `T111`/`T112`: a repaired measuring instrument does not propagate to measurements already published (`38.7%` of this base’s `442` pinned grant figures are unreproducible, mechanism proved `12`/`12`), and an absence verdict that hardened only its FILENAME axis is still wrong on every filename at once when the BRANCH is guessed (`3` false absences found in `38`, one of them a `GPL-3.0` obligation recorded as "no licence").** 🔴 **This is sold, not just used: any client inheriting an open-source stack has the same two defects, and a licence claim nobody can reproduce from the file it names is a procurement finding.** 🟢 **Every component is in this repository or is a standard tool; all figures byte-read `2026-11-15`.** 🟢 **Thirty-sixth pass (`p831`): `P71` added** — the mother-tongue foundational-literacy pipeline, and the first recipe in this file aimed at children aged `5`–`9` learning to read and count at all. 🔵 **Premise is `T108`: this is the only tier in this base where the open-source assets carry real outcome evidence and the newest code is the least usable, so the recipe INHERITS the maintained content and measurement pipelines (Bloom, libpalaso, Kolibri Studio, Tangerine — all pushed this week) and treats the field-trialled XPRIZE apps as a CURRICULUM SPECIFICATION to read rather than a dependency to adopt.** 🔴 **The EU AI Act boundary is drawn before node `1`: Annex III point `3` makes assessing learning outcomes high-risk by construction and the subject is a child, so the pipeline authors, delivers and TRANSCRIBES, and the score stays with a human enumerator inside Tangerine.** 🟢 **All ten components byte-read on `2026-11-15`; every market and regulatory item is `CITED, NOT READ`.** 🟢 **Thirty-fifth pass (`p830`): `P70` added** — the inclusive-delivery pipeline, and the first recipe in this file aimed at the SEN / inclusive-learner population rather than at a mainstream cohort. 🔵 **Premise is `T107`: inclusion COMPLIANCE is funded, deadlined and granted (MIT/Apache across the whole WCAG / Section 508 / EN 301 549 tier) while inclusion PEDAGOGY has a GitHub maximum of `1★` — so the recipe sells the compliance obligation and delivers the pedagogy inside it.** 🔴 **The EU AI Act boundary is drawn before the first node and it is the sharpest one in this file: the pipeline PRODUCES artefacts and evidence and NEVER scores a learner, because Annex III point 3 makes "assess learning outcomes" high-risk by construction and a SEN learner's needs record is special-category data on top of that.** 🟢 **All nine components byte-read on `2026-11-15`; every regulatory date is `CITED, NOT READ`.**
+
+## P72 — The grant-currency harness: resolve the ref set before the filename loop, re-measure what you already published, and separate the gate on the TOOL from the gate on the ARCHIVE (Global; the deliverable is evidence, so it ships in every region)
+
+🔵 **The problem this recipe solves is not hypothetical and was measured in this base this pass.**
+`p831` repaired the `P834` capture defect in `compose/code/p773/grantprobe.sh`, re-measured `8`
+addresses and took `gate-offline` green. 🔴 **`p832` then measured the SHELVES: of a reproducible
+`1`-in-`7` sample (`n=64`) of all `442` pinned `(address, bytes, sha256)` triples, `24` were short
+by exactly one byte, and stripping the trailing-newline run from today's bytes returned the pinned
+sha on `12` of `12` tested.** 🔴 **Residue `38.7%`, ~`171` figures.** 🟢 **Meanwhile an address
+`p831` re-ran by hand came back EXACT — so the predictor is re-measurement, not repair.**
+
+**The wiring, five nodes, each one a thing that already exists:**
+
+1. 🟢 **Ref resolution (`git ls-remote --heads`)** — the node this base did not have before `p832`. Never pass a branch as a guess. 🔴 **`grantprobe.sh` takes the branch as `$2` and has no resolution step; `learningequality/kolibri` returns `NO-GRANT-AT-ROOT` on `main` and `MIT` / `1,097 B` on `master`, and it has no `main`.** 🟢 An EMPTY ref set is a distinct verdict (`AraSuite/arasaac-api`) — a dead address, not an ungranted one.
+2. 🟢 **Filename sweep — `compose/code/p773/grantprobe.sh` unmodified**, `31` case-aware names (`p773` `D9`), measuring a FILE and never a shell variable (`p831` `P834`). 🔵 Both existing repairs are kept; this recipe adds the axis neither covered.
+3. 🟢 **Family classification by TEMPLATE, not by byte band** — the base's own `gate-template-identity` (`p312`) and `gate-presentation-fold` (`p378`). 🔵 **`XPRIZE/GLEXP-Team-RoboTutor-RoboTutor` is why: one `1,319 B` `LICENCE.md` carrying Apache-2.0 for code AND CC BY 4.0 for content, which is `T78`'s split and which is exactly why the licence FIELD reads `NOASSERTION`.**
+4. 🔴 **The CURRENCY gate — the new instrument, and the point of the recipe.** Re-measure every published triple on a schedule and fail on any figure that does not reproduce. 🟢 **Cheap, because it is a sample with a denominator, not a full sweep: `awk 'NR%7==1'` over the extracted triples gives `n=64` from `442` and a rate with a confidence story.** 🔵 **Keep it SEPARATE from the gate that grades the probe** — `T111`'s whole content is that a green instrument gate certifies a stale archive.
+5. 🟢 **Disposition, three-valued, never two** — `GRANT` / `POINTER` / `VENDORED-SUBTREE` from `gate-payload-pin` and `p382`, plus `UNRESOLVED-THIS-PASS` as a first-class verdict distinct from `NOGRANT`. 🔴 **`p830`'s standing rule applies: the invented control also returns `NOGRANT`, so `NOGRANT` is not an existence oracle.**
+
+**What it costs and what it returns.** 🟢 **Build: `1`–`2` weeks** — nodes `1`–`3` and `5` are
+assembly of instruments this repository already holds; only node `4` is new. 🟢 **Run: minutes per
+sweep.** 🔴 **Returns, measured this pass on `38` standing absence claims: `3` corrections —
+`RoboTutor` (Apache-2.0, a Carnegie Mellon XPRIZE finalist `p831` had recorded UNRESOLVED and
+unusable), `kolibri` (MIT, where this base contradicted itself on the same day), and
+`thesupersupersigma/powerschoolMCP` (**`GPL-3.0`, `35,149 B`**, published as *"no licence in the
+repository"*).**
+
+🔴 **The asymmetry is the sales argument.** Two of the three errors cost supply the base already
+owned and could have adopted. 🔴 **The third ran the other way and is the one that matters in a
+client engagement: a strong-copyleft obligation recorded as a mere absence.** 🟢 **An absence
+verdict is a claim about the whole address space — refs AND filenames — and almost nobody hardens
+both.**
+
+🔵 **Where it ships.** Everywhere, but the regional hook differs: in **EMEA** it is the evidence a
+sovereignty-minded buyer wants for a self-hosted stack; in **North America** it attaches to the
+`2026-12-31` North Carolina model-policy date and the April `2026` ADA obligation as part of a
+vendor-app inventory; in **APAC** it is the provenance record Vietnam's high-risk regime makes
+mandatory; in **LATAM** it is the first thing to run against the `~135`-repository literacy
+population `T113` enumerated, where the grant rate is low and the licence requests have to be filed
+before anything can be adopted.
 
 ## P71 — The mother-tongue foundational-literacy pipeline: author the book, run the practice, measure the gain, and never let the model touch the score (EMEA anchor, APAC and LATAM language swap, North America as the evidence buyer)
 

@@ -4,6 +4,79 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirty-seventh pass, `p832`) — **the LATAM literacy tier found in the LEARNERS' OWN LANGUAGE after the funder channel returned `422`; and the pass that re-measured this base's published figures instead of trusting the repair that produced them**
+
+🟢 **`5` build-safe agent rows added (`370` → `375`), `3` trends (`T111`–`T113`), `1` recipe
+(`P72`), `4` regional market blocks, `4` rejections, `3` ABSENCE CORRECTIONS and `1` foundation row
+promoted from a field claim to a byte-read. Every licence BYTE-READ on `2026-11-15`.**
+
+### What moved
+
+🟢 **Channel conditions — the best in several passes, and a third channel opened.** The
+`repo:OWNER/NAME` qualifier that `p830` and `p831` both recorded as DEAD is **RESTORED and
+bidirectionally controlled** (live → `total_count=1`, invented → `HTTP 422`). 🔴
+`gh api repos/{owner}/{repo}` remains `403` session-scoped, so metadata is SEARCH-ONLY. 🟢
+`raw.githubusercontent` byte-read reproduced `p831`'s repaired figure for `sillsdev/libpalaso`
+exactly (`1,082 B` / `b716617149f3…`) before being used to contradict anything. 🟢 **New:
+`git ls-remote --heads` — the ref set, which is what `D832-1` turns on.**
+
+🔴 **`ACTION p831-A` (teach the enumerator `GRANT`/`POINTER`/`VENDORED-SUBTREE`) — NOT DONE.
+Carried, and stated as not done rather than quietly dropped.** 🟢 **`ACTION p831-B` (a
+run-all-then-report mode for `commit-gates`) — DISCHARGED: `make gate-report` added, and its first
+run reproduces `p831`'s `18` from a committed target (`green: 50  RED: 18`, zero regressions on this
+pass's tree).** 🟢 **`ACTION p831-C` —
+DISCHARGED, in both directions, as `T113`.**
+
+🟢 **The `5` new rows, byte-read `2026-11-15`.** Four are the entire build-safe yield of LATAM's
+early-literacy population — `Illumi-Etec/litera` (MIT, `1,097 B`, `6★`, an ETEC state technical
+school in São Paulo), `karla08C/alfabetizacao-divertida` (MIT, `1,069 B`, consciência fonológica as
+the organising principle), `chicoritov/palavra-a-bordo` (MIT, `1,067 B`, the first row in this base
+that is BOTH early-reading and AAC) and `yegor77/minigame-fonetico` (MIT, `1,063 B`, two minimal
+pairs and nothing else). 🟢 **The fifth is a correction, not a discovery:
+`XPRIZE/GLEXP-Team-RoboTutor-RoboTutor` — Apache-2.0 on the code plus CC BY 4.0 on the content,
+`LICENCE.md`, `1,319 B`, `sha256:d2e11a0122c0…` on `master`.**
+
+### 🔴 The correction `p831` is owed, and it is published here because the trending pages are append-only
+
+🔴 **`p831` recorded RoboTutor as `NOGRANT` at all `31` filename paths and left it UNRESOLVED with
+the words *"a whole university's XPRIZE finalist is unusable until someone resolves this."* It was
+never ungranted.** 🔴 **`p831` passed the probe a branch this repository does not have — `master`
+is its ONLY head — and `grantprobe.sh` has no branch-resolution step, so one wrong argument `404`s
+all `31` paths and prints a verdict byte-identical to a true absence.** 🟢 **`D832-1` / `T112`.**
+
+🔴 **The same defect produced two more false absences in a sweep of all `38` standing absence
+claims:** `learningequality/kolibri` is **MIT** (`1,097 B`, `sha256:3c056b34a476…`, `master` and
+`develop`) — and `repos/foundations.md` had been publishing `MIT` for that address on the same day
+`p831`'s census table published `NO-GRANT-AT-ROOT`, so **this base disagreed with itself about its
+most-shelved platform**. 🔴 And `thesupersupersigma/powerschoolMCP`, published as *"no licence —
+GitHub reports `NONE`, no `LICENSE` in the repository"*, is **`GPL-3.0`** (`35,149 B`,
+`sha256:3972dc9744f6…`, `master`) — **an absence error that understates a copyleft obligation,
+which is the direction that costs a client rather than this base.**
+
+🔵 **The other `35` reproduce as stated. `OS4ED/openSIS-Classic` (`351★`) was re-probed across `6`
+resolved heads including `master` and `Version_8.0` and is a CONFIRMED true absence.** 🔵
+`Nordup/askaboard` and `nailuoGG/anki-mcp-server` did not resolve this pass and are
+`UNRESOLVED-THIS-PASS`, not ungranted. 🔵 `AraSuite/arasaac-api` serves an EMPTY ref set — a dead
+address, which is a different object again.
+
+### 🔴 And the bigger of the two findings: the repair reached the instrument, not the archive
+
+🟢 **`442` pinned `(address, bytes, sha256)` triples extracted from the three graded shelves; a
+reproducible `1`-in-`7` sample (`n=64`) re-measured.** 🔴 **`38` EXACT, `24` SHORT-BY-EXACTLY-`1`,
+`2` unresolved — residue `24/62` = `38.7%`, ~`171` extrapolated.** 🟢 **The `SHORT-BY-1` class was
+TESTED rather than assumed: strip the trailing-newline run from today's bytes and hash the
+remainder — `12` of `12` returned the pinned sha, so the files never changed and the figures are
+capture artefacts.** 🟢 **Control in the other direction: `nialvape/utn-mcp`, one of the `8`
+addresses `p831` re-measured by hand, is EXACT.** 🔵 **`T111`. Registered as `ACTION p832-A`;
+`p832` did not re-measure the other ~`171` and says so.**
+
+### 🔴 `4` rejections
+
+1. 🔴 **`latam-gpt/llm-data-eval`, `latam-gpt/toxicity-classifier`, `latam-gpt/language_identifier`** — the region's flagship model programme, **`NOGRANT` on all three, every branch, byte-read `2026-11-15`**. Worth an upstream licence request.
+2. 🔴 **The `~106`-repository `alfabetização` / `conciencia fonologica` residue** — no licence file. Population recorded in `T113`; yield was the four rows above.
+3. 🔴 **The `CC0-1.0` Spanish cohort** (`mariajo79/Detective-de-Sonidos-MJCL` and siblings) — a CONTENT dedication, wrong instrument for shipped software (`T78`).
+4. 🔴 **`OpenSIS-Classic/OpenSIS-Classic`** — **the address does not exist** (`HTTP 422`); it was inferred from a WebSearch summary that named a PRODUCT, not a repository. 🔵 The real address is `OS4ED/openSIS-Classic`, already held and ungranted. **Recorded because inferring a slug from prose is exactly how an invented row enters a base.**
+
 ## `2026-11-15` (thirty-sixth pass, `p831`) — **the FOUNDATIONAL-LEARNING tier, found by searching the FUNDING PROGRAMME's name; and the pass that repaired this base's own red gate instead of committing over it**
 
 🟢 **`15` build-safe agent rows added (`355` → `370`), `15` foundation rows (`153` → `168`), `5`

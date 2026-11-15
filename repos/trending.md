@@ -4,6 +4,53 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirty-seventh pass, `p832`) — **no new foundation or vertical rows, and that is the result: `1` row PROMOTED from a field claim to a byte-read, and `38.7%` of this base's published grant figures shown to be unreproducible**
+
+🔴 **Foundations `168` → `168`. Verticals `140` → `140`.** 🟢 **The mandated star-ranked battery
+ran in full — four global legs and four regional legs — and nilled a `43`rd consecutive time:
+`13` of the `14` repositories the global legs named (`HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC`,
+`frappe/lms`, `OpenOLAT/OpenOLAT`, `openeducat/openeducat_erp`, `francoisjacquet/rosariosis`,
+`openedx/edx-platform`, `instructure/canvas-lms`, `moodle/moodle`, `apereo/opencast`, `oppia/oppia`,
+`h5p/h5p-php-library`, `ashishpatel26/500-AI-Agents-Projects`, `patchy631/ai-engineering-hub`) were
+already in this base's `7,125`-slug known set.** 🔴 **The fourteenth,
+`OpenSIS-Classic/OpenSIS-Classic`, does not exist — it was a product name in a search summary, and
+the real address `OS4ED/openSIS-Classic` was already held.** 🔵 `T63` is now `43` passes old.
+
+🟢 **Channel conditions: `repo:OWNER/NAME` RESTORED and bidirectionally controlled (live → `1`,
+invented → `422`) after two passes dead. `gh api repos/{owner}/{repo}` still `403`. Byte-read
+channel calibrated against `p831`'s own repaired figure for `sillsdev/libpalaso` (`1,082 B` /
+`b716617149f3…`) before use. New third channel: `git ls-remote --heads`.**
+
+### 🟢 The one row that moved, and why it moved
+
+🟢 **`learningequality/kolibri` — PROMOTED from `| MIT | 1.2k |` (a field claim) to a byte-read:
+`1,097 B`, `sha256:3c056b34a476…`, `master` and `develop`, holder `2021 Learning Equality and other
+contributors`, `1174★`, `1,041` forks, pushed `2026-11-11`.** 🔴 **The promotion was forced by a
+contradiction inside this base: `p831`'s census table published `NO-GRANT-AT-ROOT` for this exact
+address on the same day this shelf published `MIT`.** 🟢 **The shelf was right. The census was
+wrong, and the cause is `D832-1` — it probed `main`, and this repository has no `main`.**
+
+### 🔴 What the re-measurement found, with a denominator
+
+🟢 **`442` pinned `(address, bytes, sha256)` triples across `agents/top.md`,
+`repos/foundations.md` and `verticals/solutions.md`; reproducible `1`-in-`7` sample, `n=64`.**
+
+| Verdict | Count | Share |
+|---|---|---|
+| 🟢 `EXACT` | `38` | `59.4%` |
+| 🔴 `SHORT-BY-1` (`P834` capture artefact) | `24` | `37.5%` |
+| 🔵 `UNRESOLVED-THIS-PASS` | `2` | `3.1%` |
+
+🔴 **Residue `24/62` resolvable = `38.7%`; ~`171` of `442` extrapolated.** 🟢 **Mechanism proved,
+not assumed: stripping the trailing-newline run from today's bytes returned the pinned sha on `12`
+of `12` tested — so the upstream files never changed.** 🟢 **And the reverse control holds:
+`nialvape/utn-mcp`, re-measured by hand at `p831`, is EXACT.** 🔵 **`T111` — the discriminator is
+whether a pass re-ran the address, not whether the probe is fixed. `ACTION p832-A`.**
+
+🔵 **For the next pass, stated plainly: these shelves' figures are `~61%` reproducible and `100%`
+presented as if measured. The instrument has been correct since `p831`; the corpus has not been
+re-run through it.**
+
 ## `2026-11-15` (thirty-sixth pass, `p831`) — **`15` foundation rows and `5` vertical platforms: the mother-tongue CONTENT pipeline and the EGRA/EGMA instrument, both named here for passes and never shelved**
 
 🟢 **Foundations `153` → `168`. Verticals `135` → `140`. Every licence byte-read on `2026-11-15`;

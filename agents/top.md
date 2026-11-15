@@ -4,6 +4,148 @@ region: Global
 updated: 2026-11-15
 ---
 
+## Thirty-seventh pass (`p832`, 2026-11-15) — the repair held and the SHELVES did not: `38.7%` of this base's pinned grant figures are still unreproducible, and a second axis of the same instrument was never fixed at all
+
+🟢 **`derive-counts.py` was run FIRST, before any edit, and again after every insertion.** Baseline
+at `HEAD`: `agents/top.md 370`, `repos/foundations.md 168`, `verticals/solutions.md 140`,
+`intel/trends.md 110`, `compose/patterns.md 71`, `ragged=0`, `nolink=0`.
+
+🟢 **Channel conditions — both channels live, both controlled in both directions.** Channel A
+(`gh api search/repositories -f q="repo:…"`): live repository returns `1`, invented slug returns
+`HTTP 422`. 🔴 **`gh api repos/{owner}/{repo}` is NOT available — it returns `403 GitHub access to
+this repository is not enabled for this session`, so the metadata channel is SEARCH-ONLY this
+pass**; every star count, push date and licence field below comes from the search endpoint.
+Channel B (`raw.githubusercontent` byte-read, written to a FILE and never to a shell variable):
+`sillsdev/libpalaso` returns `1,082 B` / `sha256:b716617149f3…`, **reproducing `p831`'s repaired
+figure exactly**, and the invented slug `404`s. 🔵 **That exact reproduction is what licensed every
+other measurement in this pass: the instrument is calibrated against this base's own repaired
+value before it is used to contradict this base.** 🟢 **A THIRD channel was opened this pass:
+`git ls-remote --heads`, the ref set — see `D832-1`.**
+
+### 🔴 `D832-1` — `p831` fixed the FILENAME axis of the grant probe. The BRANCH axis was never fixed, and one wrong argument nils all `31` filenames at once
+
+🔵 `p773`'s `D9` widened `grantprobe.sh` to a `31`-name, case-aware filename list because *"a
+missing lowercase `license.txt` produced a false `NO-GRANT-AT-ROOT` on ERPNext."* `p831` then
+repaired the same script's `P834` capture defect. 🔴 **Neither touched the branch: the script takes
+the branch as its SECOND POSITIONAL ARGUMENT (`s="$1"; br="$2"`) and has no resolution step of any
+kind.** 🔴 **If the caller guesses a branch the repository does not have, all `31` filename paths
+`404` and the script prints `NO-GRANT-AT-ROOT` — a verdict byte-identical to a true absence.**
+
+🟢 **Demonstrated on the committed instrument, unmodified, against one address:**
+
+| Invocation | Result |
+|---|---|
+| `grantprobe.sh learningequality/kolibri main` | 🔴 `NO-GRANT-AT-ROOT` |
+| `grantprobe.sh learningequality/kolibri master` | 🟢 `LICENSE` / `1,097` / `3c056b34a476` |
+| `grantprobe.sh learningequality/kolibri develop` | 🟢 `LICENSE` / `1,097` / `3c056b34a476` |
+
+🔴 **`git ls-remote --heads learningequality/kolibri` lists `develop` and `release-v0.19.x` and
+twelve more. There is no `main`.** 🟢 **The repair is one line of discipline, not a rewrite:
+resolve the branch from the ref set before probing filenames.** 🔵 **The ref channel is cheap,
+independent of `raw.githubusercontent`, and this base did not have it until now.**
+
+### 🟢 What `D832-1` cost, swept over every absence claim standing in the live shelves
+
+🟢 **All `38` addresses adjacent to a `NO-GRANT-AT-ROOT` / `NOGRANT` / "no licence file" claim in
+`agents/top.md`, `repos/foundations.md` and `verticals/solutions.md` were re-probed with branch
+resolution.** 🔴 **Three were false absences, and each is corrected below. The other `35` reproduce
+as stated, which is the control: this is a targeted defect, not a collapse.**
+
+| Address | What the base published | Byte-read `2026-11-15`, branch resolved | Disposition |
+|---|---|---|---|
+| `XPRIZE/GLEXP-Team-RoboTutor-RoboTutor` | 🔴 `NOGRANT` at `31` paths; recorded **UNRESOLVED** — *"a whole university's XPRIZE finalist is unusable until someone resolves this"* | 🟢 `LICENCE.md` / `1,319 B` / `sha256:d2e11a0122c0…` on `master` — **Apache-2.0 (code) + CC BY 4.0 (content)** | 🟢 **RESOLVED and FILED build-safe.** `master` is this repository's ONLY head; `p831` reported probing *"both `main` and `master`"* and the `master` leg cannot have run, because path `LICENCE.md` is in the committed `31`-name list |
+| `learningequality/kolibri` | 🔴 `NO-GRANT-AT-ROOT` in `p831`'s census table — **while `repos/foundations.md` published `MIT` for the same address on the same day** | 🟢 `LICENSE` / `1,097 B` / `sha256:3c056b34a476…` on `master` and `develop` — **MIT** | 🟢 **CORRECTED, and the base was INTERNALLY INCONSISTENT about its own most-shelved platform.** The foundations row was right; the census row was the probe's branch guess |
+| `thesupersupersigma/powerschoolMCP` | 🔴 *"No licence — GitHub reports `NONE`, no `LICENSE` in the repository"* | 🔴 `LICENSE` / `35,149 B` / `sha256:3972dc9744f6…` on `master` — **`GNU GENERAL PUBLIC LICENSE` Version 3** | 🔴 **CORRECTED, and this is the dangerous direction.** The field reads `GPL-3.0`, so BOTH channels were misreported. A row believed merely ungranted is in fact under strong copyleft — an absence error that understates obligation is worse than one that overstates it |
+
+🔵 **Two addresses in the sweep (`Nordup/askaboard`, `nailuoGG/anki-mcp-server`) did not resolve on
+`main`, `master` or `develop` this pass. Recorded as UNRESOLVED-THIS-PASS, not as ungranted**, per
+`p830`'s standing rule that `NOGRANT` is not an existence oracle. 🔵 `AraSuite/arasaac-api` returns
+an EMPTY ref set — the address no longer serves refs at all, which is a different finding from an
+absent grant and is filed as one.
+
+### 🔴 `D832-2` — the `P834` repair reached the INSTRUMENT and `8` addresses. It did not reach the shelves, and `38.7%` of the pinned figures are still unreproducible
+
+🔴 **`p831` closed `P834` with eight addresses re-measured and the gate green. This pass tested
+whether the SHELVES agree, and they do not.** 🟢 **Method: every `(address, bytes, sha256)` triple
+pinned in the three graded shelves was extracted — `442` of them — and a reproducible `1`-in-`7`
+sample (`n=64`) was re-measured with the file-based probe.**
+
+| Verdict | Count | Share of sample |
+|---|---|---|
+| 🟢 `EXACT` — today's bytes reproduce the pinned figure | `38` | `59.4%` |
+| 🔴 `SHORT-BY-1` — pinned figure is exactly `1` byte under today's | `24` | `37.5%` |
+| 🔵 `UNRESOLVED-THIS-PASS` | `2` | `3.1%` |
+
+🔴 **Residue rate `24/62` resolvable = `38.7%`. Extrapolated over all `442` pinned triples: ~`171`
+published byte/sha figures that cannot be reproduced from the file they name.**
+
+🟢 **And the `SHORT-BY-1` class was not assumed to be `P834` — it was TESTED, because a `+1` byte
+delta is equally consistent with an ordinary upstream edit.** 🟢 **The discriminator: strip the
+trailing-newline run from today's bytes, exactly as `$( … )` would, and hash the remainder. If the
+pinned sha returns, the figure is a capture artefact and the file never changed.** 🔴 **Run on `12`
+of the `24`: `12` of `12` REPRODUCED.**
+
+| Address | Pinned | Today's bytes, trailing newlines stripped | |
+|---|---|---|---|
+| `toughIQ/webuntis-mcp` | `1,063` / `2c0b8069fc10` | `1,063` / `2c0b8069fc10` | 🔴 reproduced |
+| `bsayres/heronhex-highered` | `1,082` / `aa0df3165b5d` | `1,082` / `aa0df3165b5d` | 🔴 reproduced |
+| `liangxiao777/TeachMeCoding` | `11,357` / `58d1e17ffe51` | `11,357` / `58d1e17ffe51` | 🔴 reproduced |
+| `JesseTho/lamaku-mcp` | `1,166` / `ce95c0d64e0c` | `1,166` / `ce95c0d64e0c` | 🔴 reproduced |
+| `chapmanwm/moodlectl` | `1,065` / `2ff4b5ffb33f` | `1,065` / `2ff4b5ffb33f` | 🔴 reproduced |
+| `Akramjon-koder/faroz-mcp` | `1,084` / `99b8d19e6a31` | `1,084` / `99b8d19e6a31` | 🔴 reproduced |
+| `AnonymousOnyx22/brightspace-d2l-mcp` | `1,199` / `3f0e907830ac` | `1,199` / `3f0e907830ac` | 🔴 reproduced |
+| `alanwtom/blackboard-mcp` | `1,064` / `6cd5ef811418` | `1,064` / `6cd5ef811418` | 🔴 reproduced |
+
+🟢 **The control runs the other way too, and it is the sharpest part of this result: `nialvape/utn-mcp`
+— one of the `8` addresses `p831` re-measured by hand — returns `748 B` / `2ad14eb14513…`, EXACT.**
+🔵 **So the discriminator is not whether the probe is fixed. It is whether a pass re-measured that
+address.** 🔴 **The instrument has been correct since `p831`; the published corpus has not been
+re-run through it.** 🔵 **This is `T111`, and it generalises past this base: a repair to a
+measuring instrument does not propagate to measurements already published, and a gate that grades
+the instrument will stay green over a shelf full of stale figures.**
+
+🔴 **Stated plainly, as `p831` stated its own: `p832` did NOT re-measure the other ~`171`. It sized
+the residue, proved the mechanism, corrected the `3` absence errors it found, and left the rest
+named and counted** — see `ACTION p832-A`.
+
+### 🟢 `ACTION p831-B` discharged — the suite's redness is now a MEASUREMENT, and it reports `18` from a committed target
+
+🟢 **`make gate-report` added: it runs all `68` blocking gates to completion and prints the green
+count, the red count and the red NAMES.** 🔵 `commit-gates` stops at the first failing recipe, so
+it has always reported a lower bound that reads like an upper bound.
+
+| Run | Result |
+|---|---|
+| Pristine `git archive HEAD` export (the `p831` state) | `green: 50` **`RED: 18`** |
+| This pass's working tree, at commit | `green: 50` **`RED: 18`**, the same `18` names |
+
+🔵 **Zero regressions — `p832` introduced no new red gate.** 🟢 **And the run corrects `p831`'s own
+list in `p831`'s favour: `gate-offline` is GREEN here, though `p831` printed it among its `18`, so
+that repair was real and the list it printed was stale.** 🔴 **The eighteenth red is
+`gate-i2-sweep-crosscheck`, which appears in no `p831` list at all.** 🔴 **`p832` did not fix any
+of the `18`; it built the instrument that counts them.**
+
+### 🔴 The mandated star-ranked battery nilled a `43`rd consecutive time
+
+🟢 **Run in full: four global legs and four regional legs** (`top open source AI agents education
+2026 github MIT`, `github trending education AI 2026`, `open source platform education LMS SIS MIT
+Apache self-hosted`, `AI education industry trends 2026`, then North America / EMEA / APAC / LATAM).
+🔴 **Zero new build-safe agent rows came from any of the eight.** Every named repository the global
+legs returned — `HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC`, `frappe/lms`, `OpenOLAT/OpenOLAT`,
+`openeducat/openeducat_erp`, `francoisjacquet/rosariosis`, `openedx/edx-platform`,
+`instructure/canvas-lms`, `moodle/moodle`, `apereo/opencast`, `oppia/oppia`, `h5p/h5p-php-library`,
+`ashishpatel26/500-AI-Agents-Projects`, `patchy631/ai-engineering-hub` — was checked against this
+base's `7,125`-slug known set and **`13` of `14` were already held**. 🔵 `T63`'s saturation finding
+is now `43` passes old and has never once been refuted. 🟢 **The five rows this pass filed came
+from the LATAM-language legs instead, which is `T82`'s rule holding on a fifth axis.**
+
+### 🔴 `4` rejections, with the reason each one was refused
+
+1. 🔴 **`OpenSIS-Classic/OpenSIS-Classic`** — the one slug of the fourteen NOT already held. Refused on scope, not on licence: a K-12 SIS with no agent surface, and the vertical shelf already carries this layer. Named here so the next pass does not re-pay for the discovery.
+2. 🔴 **`latam-gpt/llm-data-eval`, `latam-gpt/toxicity-classifier`, `latam-gpt/language_identifier`** — the three most-starred repositories of the region's flagship model programme, named by CENIA and by the UNESCO LAC Observatory. **Byte-read `2026-11-15`: `NOGRANT` on all three, on every probed branch.** 🔵 The region's flagship AI asset ships no grant of any kind — recorded as `T113`'s hardest single data point, and worth an upstream licence request.
+3. 🔴 **`ProfCleuson/Sistema-de-Consci-ncia-Fonol-gica`, `rjcv/ilha-dos-sons`, `giovannaimperioo-ux/F-ou-V`** and the rest of the `~106`-repository literacy population — **no licence file.** The population is real and is recorded as one in `T113`; its build-safe yield is the four rows filed above.
+4. 🔴 **`mariajo79/Detective-de-Sonidos-MJCL` and the `CC0-1.0` Spanish cohort** — `CC0` is a CONTENT dedication. 🟢 Usable as pedagogy material; wrong instrument for shipped software, per this base's standing `T78` split-licence rule.
+
 ## Thirty-sixth pass (`p831`, 2026-11-15) — the FOUNDATIONAL-LEARNING tier, and the pass that repaired the base's own red gate instead of committing over it
 
 🟢 **`15` build-safe agent rows filed (`355` → `370`), `15` foundation rows (`153` → `168`), `5`
@@ -1578,7 +1720,28 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 370 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 375 rows
+
+### Filed by `p832` (2026-11-15) — `5` rows: the LATAM foundational-literacy tier (`4`, the gap `ACTION p831-C` declared) and the XPRIZE finalist `p831` left UNRESOLVED (`1`)
+
+🔴 **`ACTION p831-C` asked for a SEARCH, not a build: *"find whether a Spanish or Brazilian-Portuguese
+decodable-text corpus exists anywhere under a permissive grant before `P71` proposes producing
+one."* 🟢 **Run, and answered in both halves.** The CORPUS is a measured nil — `textos
+decodificables` returns `TOTAL=0`, `Política Nacional de Alfabetização` (Brazil's own national
+literacy instrument) returns `TOTAL=0`, `corpus portugues infantil leitura` returns `TOTAL=0`. 🟢
+**But the APPLICATION layer the gap assumed was empty is not: it is a ~`110`-repository population
+under `alfabetização infantil` (`70`), `conciencia fonologica` (`27`) and `consciência fonológica`
+(`12`).** 🔵 **The four rows below are its entire build-safe yield, byte-read `2026-11-15`** — see
+`T113` for why the yield is this thin, and `T111`/`T112` for the two instrument defects this pass
+measured on the way.
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| litera | https://github.com/Illumi-Etec/litera | 🟢 **MIT — byte-read** (`1,097 B`, `sha256:13ccd2947bfa…`, `main/LICENSE`) | 6 | LATAM | 🟢 **New this pass (`p832`), and the traction leader of the entire LATAM literacy population — at `6★`.** 🇧🇷 *"Uma suíte de jogos educacionais desenvolvida para auxiliar no processo de alfabetização de crianças brasileiras"* — a games suite explicitly scoped to Brazilian children rather than translated into Portuguese. 🔵 **Published by an ETEC (São Paulo state technical school) team, which is the provenance `T113` names: the LATAM supply is produced by SCHOOLS, not by funders.** 🔴 Pushed `2025-10-12` — the only row here older than this year, and the only one with a fork. Created `2024-03-21` |
+| alfabetizacao-divertida | https://github.com/karla08C/alfabetizacao-divertida | 🟢 **MIT — byte-read** (`1,069 B`, `sha256:e4dc38f80923…`, `main/LICENSE`) | 0 | LATAM | 🟢 **New this pass (`p832`) — the most complete design in the tier and the newest.** 🇧🇷 Gamified platform for early literacy built on **consciência fonológica**, with voice narration and a generative-AI surface. 🔵 **It is the only row in this tier that names phonological awareness as its ORGANISING principle rather than as a feature** — which is the pedagogy the Swahili/Arabic corpus is built on and the thing `ACTION p831-C` was looking for. 🔴 **`0★`, `0` forks, created `2026-10-17`, pushed `2026-11-09` — six days old at filing. Filed as a SEED, not as a dependency** |
+| palavra-a-bordo | https://github.com/chicoritov/palavra-a-bordo | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:bdb10f35e5af…`, `main/LICENSE`) | 0 | LATAM | 🟢 **New this pass (`p832`), and the one row here that crosses into the SEN tier `p830` built.** 🇧🇷 Phonological-awareness and rhyme game that ships **CAA (Comunicação Aumentativa e Alternativa — AAC)** support and audio alongside the literacy mechanic. 🔵 **`p830` filed the LIBRAS/AAC corpus and `p831` filed the early-reading corpus as separate tiers; this is the first repository this base has found that is BOTH**, and it is LATAM — the region `p831-C` recorded as a zero on both counts. 🔴 `0★`, created and last pushed `2026-10-04` |
+| minigame-fonetico | https://github.com/yegor77/minigame-fonetico | 🟢 **MIT — byte-read** (`1,063 B`, `sha256:03474c4df5fc…`, `main/LICENSE`) | 0 | LATAM | 🟢 **New this pass (`p832`) — the narrowest and most honest row in the tier.** 🇧🇷 A phonological-awareness minigame on exactly two minimal pairs — **D/T and M/N**. 🔵 **Filed because the SCOPE is the finding: a minimal-pair drill is the smallest reusable unit of a phonics curriculum, and this is the only one in the population published as such.** 🔴 `0★`, created `2026-01-04`, pushed `2026-09-27` |
+| RoboTutor (XPRIZE, Carnegie Mellon) | https://github.com/XPRIZE/GLEXP-Team-RoboTutor-RoboTutor | 🟢 **Apache-2.0 on the CODE + CC BY 4.0 on the CONTENT — byte-read** (`LICENCE.md`, `1,319 B`, `sha256:d2e11a0122c0…`, `master`, holder `2015-2018 Carnegie Mellon University and RoboTutor LLC`) | 14 | Global | 🟢 **New this pass (`p832`), and it is a CORRECTION of this base against itself, not a discovery.** 🔴 **`p831` probed this address, got `NOGRANT` at all `31` filename paths, and recorded it UNRESOLVED with the words *"a whole university's XPRIZE finalist is unusable until someone resolves this."*** 🟢 **Resolved: the grant was never missing. `p831` passed the probe a branch this repository does not have — `master` is its ONLY head — and one wrong branch argument nils all `31` paths at once (`D832-1`, `T112`).** 🟢 **Apache-2.0 makes it build-safe; the split with CC BY 4.0 on the content is a textbook `T78` instance** (*the code grant is not the deliverable grant*), and it is why the licence FIELD reads `NOASSERTION`. 🔴 **Frozen since `2019-11-05`, and the README states sound and image assets are NOT included** — so it is a curriculum-and-architecture inheritance, not a runnable app |
 
 ### Filed by `p829` (2026-11-15) — `11` rows: the VOCATIONAL tier (`3`, EMEA) and the language-and-study tier (`8`), every licence byte-read
 

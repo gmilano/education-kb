@@ -4,6 +4,104 @@ region: Global
 updated: 2026-11-15
 ---
 
+## 🆕 `p832` — **`p831`'s three actions dispositioned (`1` discharged, `2` carried and named as not done), and `4` new actions registered against two defects in this base's own measuring chain**
+
+🟢 **`derive-counts.py` was run FIRST, before any edit, and again after every insertion. GREEN on
+all five graded files at commit:** `agents/top.md 375`, `repos/foundations.md 168`,
+`verticals/solutions.md 140`, `intel/trends.md 113`, `compose/patterns.md 72`, `ragged=0`,
+`nolink=0`.
+
+### 🟢 `ACTION p831-C` — **DISCHARGED, and the answer is more informative than the question**
+
+🔵 The action: *"find whether a Spanish or Brazilian-Portuguese decodable-text corpus exists
+anywhere under a permissive grant before `P71` proposes producing one."* 🟢 **Run on three
+vocabularies and answered in both directions.**
+
+🔴 **The CORPUS is a measured nil:** `textos decodificables` → `0`, `Política Nacional de
+Alfabetização` (Brazil's own national literacy instrument) → `0`, `corpus portugues infantil
+leitura` → `0`. 🔵 **And the English term cannot probe it at all — `decodable text reader` returns
+`35` repositories, every one a QR, NFC or Morse byte-decoder.**
+
+🟢 **The APPLICATION layer the action assumed was empty is a `~135`-repository population**
+(`alfabetização infantil` `70`, `conciencia fonologica` `27`, `consciência fonológica` `12`,
+`fluencia leitora` `26`), **whose build-safe yield is the `4` rows filed in `agents/top.md` this
+pass.** 🔴 **The mechanism is `T113`: `p831` filed `15` rows by searching the FUNDER's vocabulary,
+and that move cannot work in LATAM, because the funders are not on GitHub — `Ceibal`, `ceibal-uy`,
+`CENIA-Chile`, `ProFuturo`, `profuturo-ed` and `FundacionSantillana` all return `HTTP 422`, and
+`latam-gpt` ships `NOGRANT` on `3` of `3`.** 🟢 **`P71` is re-shaped before it proposed the wrong
+thing: producing the corpus IS the regional asset, and the licence requests come first.**
+
+### 🔴 `ACTION p831-A` — **NOT DONE. Carried, and recorded as not done rather than silently dropped**
+
+🔴 Teaching `gate-enumeration` the `GRANT` / `POINTER` / `VENDORED-SUBTREE` distinction was not
+attempted this pass. 🔵 **It is now owed once.** 🟢 **`p832` did add evidence that bears on it:
+`XPRIZE/GLEXP-Team-RoboTutor-RoboTutor` is a single payload carrying TWO grants at two permissions
+(Apache-2.0 code, CC BY 4.0 content), which is a fourth disposition the three-valued classifier in
+`ACTION p831-A` does not yet have a cell for.**
+
+### 🟢 `ACTION p831-B` — **CLOSED. This section is the discharge.**
+
+🟢 **`make gate-report` added to the Makefile: it runs every one of the `68` blocking gates to
+completion and prints the green count, the red count and the RED NAMES.** 🔵 `commit-gates` stops
+at the first failing recipe, so it reports a lower bound that reads exactly like an upper bound;
+`gate-report` makes *"the suite is red"* a measurement that can be triaged in priority order.
+
+🟢 **First run, on a pristine `git archive HEAD` export: `green: 50  RED: 18`** — which reproduces
+`p831`'s hand measurement of `18` exactly, from a committed target rather than from an ad-hoc
+`make -k`. 🔵 **One difference worth recording, and it runs in `p831`'s favour: `gate-offline` is
+GREEN in this run and `p831` listed it among its own `18`.** 🟢 **`p831` repaired `gate-offline`
+and then included it in the red list it printed — the repair was real and the list was stale.**
+🔴 **The eighteenth red is `gate-i2-sweep-crosscheck`, which appears in no `p831` list at all.**
+
+🟢 **Run again on this pass's working tree at commit: `green: 50  RED: 18`, the same `18` names.**
+🔵 **Zero regressions: `p832` introduced no new red gate.** 🔴 **And stated as plainly as `p831`
+stated it: `p832` did NOT fix any of the `18`. It built the instrument that counts them.**
+
+### 🔴 `ACTION p832-A` — **re-measure the ~`171` stale pinned figures, and build the CURRENCY gate that would have caught them**
+
+🔴 **`38.7%` of this base's `442` pinned `(address, bytes, sha256)` triples do not reproduce from
+the file they name** (`n=64` reproducible `1`-in-`7` sample: `38` EXACT, `24` SHORT-BY-`1`, `2`
+unresolved). 🟢 **Mechanism proved `12`/`12` by stripping the trailing-newline run and recovering
+the pinned sha; reverse control holds on an address `p831` re-measured by hand.** 🔵 **`T111`.**
+
+🟢 **The action has two limbs and they are separable.** (1) **Re-measure and correct the residue** —
+mechanical, and the sample harness in `scratchpad/p832/` already extracts the triples. (2) **Add a
+CURRENCY gate over PUBLISHED figures, kept separate from the correctness gate over the probe** —
+🔴 **this is the limb that matters, because `gate-offline` was GREEN over a `38.7%`-stale corpus
+and would be green again tomorrow.** 🔵 **An instrument gate cannot grade the archive the
+instrument produced while it was broken.**
+
+### 🔴 `ACTION p832-B` — **give `grantprobe.sh` a branch-resolution step, and make `NOGRANT` say which refs it probed**
+
+🔴 **`grantprobe.sh` takes the branch as `$2` with no resolution. One wrong guess `404`s all `31`
+case-aware filenames and prints `NO-GRANT-AT-ROOT`, a verdict byte-identical to a true absence**
+(`D832-1`, `T112`). 🔴 **Cost measured over the `38` standing absence claims: `3` false — RoboTutor
+(Apache-2.0, `p831` had it UNRESOLVED and called it unusable), Kolibri (MIT, where this base
+contradicted itself on the same day), and `thesupersupersigma/powerschoolMCP` (`GPL-3.0`, published
+as "no licence").**
+
+🟢 **The action: resolve heads from `git ls-remote --heads` before the filename loop, and print the
+probed ref set INSIDE the `NO-GRANT-AT-ROOT` verdict so an absence is falsifiable without re-running
+it.** 🟢 **An EMPTY ref set must be its own verdict** (`AraSuite/arasaac-api`) — a dead address is
+not an ungranted one. 🔵 **The ref channel is independent of `raw.githubusercontent`, which is why
+it also detects that case.**
+
+### 🟡 `ACTION p832-C` — **settle the two licence conflicts this pass carried and did not resolve**
+
+🟡 The vertical leg's summaries disagree about **Open edX** (`AGPL` vs `MIT`) and **Forma LMS**
+(`LGPL` vs `GPL`). 🔵 Both are `CITED, NOT READ`. 🟢 **`T81` says the FIELD errs in both directions
+and only the bytes settle it — so byte-read both, with branch resolution, rather than picking the
+likelier answer.** 🔴 Registered rather than guessed at.
+
+### 🔵 `ACTION p832-D` — **file the licence requests this pass's measurements justify**
+
+🔵 Four addresses are substantial, directly useful and unusable as published:
+**`latam-gpt/llm-data-eval`, `latam-gpt/toxicity-classifier`, `latam-gpt/language_identifier`**
+(the region's flagship model programme, `NOGRANT` on `3` of `3`) and the unlicensed remainder of
+the `~106`-repository LATAM literacy population. 🟢 **This base has now recorded the
+substantial-and-unlicensed class four times (`T24`) without ever acting on it.** 🔵 **The action is
+an upstream request, not a build, and it is the cheapest thing on this list.**
+
 ## 🆕 `p831` — **The carried repair discharged, and three actions registered against what the repair uncovered**
 
 🟢 **`derive-counts.py` was run FIRST, before any edit, and again after every insertion, GREEN on

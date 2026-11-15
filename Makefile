@@ -1430,6 +1430,17 @@ commit-gates: ## p423 — the BLOCKING suite: every hook gate except the declare
 	@$(MAKE) --no-print-directory $(COMMIT_GATES)
 	@echo "🟢 commit-gates — $(words $(COMMIT_GATES)) blocking gates green (declared red, not blocking: $(DECLARED_RED))"
 
+gate-report: ## p832 — ACTION p831-B: run EVERY blocking gate and REPORT the count and the names.  `commit-gates` stops at the first failing recipe, so it reports a LOWER BOUND that reads exactly like an upper bound.  This makes "the suite is red" a measurement that can be triaged in priority order instead of discovered one gate at a time.
+	@echo "-- gate-report: running $(words $(COMMIT_GATES)) blocking gates to completion --"
+	@red=""; n=0; \
+	for g in $(COMMIT_GATES); do \
+	  if $(MAKE) --no-print-directory $$g >/dev/null 2>&1; then :; else red="$$red $$g"; n=`expr $$n + 1`; fi; \
+	done; \
+	total=$(words $(COMMIT_GATES)); \
+	echo "green: `expr $$total - $$n`   RED: $$n"; \
+	if [ $$n -gt 0 ]; then echo "red gates:"; for g in $$red; do echo "     $$g"; done; fi; \
+	echo "declared red (not blocking): $(DECLARED_RED)"
+
 install-hooks: ## p423 — install `ingest/pre-commit` into .git/hooks.  Per working copy: git clone does NOT carry it (Gap 423-B).
 	@install -m 0755 ingest/pre-commit .git/hooks/pre-commit && echo "🟢 .git/hooks/pre-commit installed — a red blocking gate now refuses the commit"
 
