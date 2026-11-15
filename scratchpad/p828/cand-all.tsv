@@ -1,0 +1,135 @@
+12dora/waseda-moodle-mcp	MIT	0	2026-11-13	2026-10-14	MCP server for Waseda University Moodle (wsdmoodle): assignments & deadlines, timetable, syllabus and grades in Claude, 
+17tuanphamanh/AIP_FA26_G8	MIT	0	2026-11-15	2026-09-15	AITHA: human-in-the-loop AI agent for Level-1 IT service desks (LangGraph, FastAPI, hybrid RAG). Graduation project, AI 
+AI-Native-Ventures/jemma	MIT	0	2026-11-15	2026-11-10	Jemma: a learner profile agent for teachers, parents and learners, with its own MCP server. Entry for the African Agenti
+Aashisho1o1/geoassist-mcp	MIT	0	2026-11-13	2026-10-08	MCP server: find US hospitals and schools near active hazards (NASA EONET + Esri Living Atlas)
+Akramjon-koder/faroz-mcp	MIT	0	2026-11-01	2026-10-16	Faroz MCP server — remote MCP (OAuth) that connects Claude, ChatGPT, Gemini & Cursor to a kids' education platform: cour
+Alejandro-Valadez/canvas-mcp	MIT	1	2026-11-08	2026-08-28	MCP server that connects Claude to Canvas LMS: courses, assignments, rubrics, feedback, and submissions through conversa
+AlgazinovAleksandr/LLM-Agents-Course	MIT	10	2026-11-14	2026-09-07	The course on developing AI agents and multi-agent systems that I teach at HSE University
+AndresGuido9820/trabajo2-agente-tutor	MIT	0	2026-11-01	2026-07-20	Profe Bit: tutor de programación con LLMs. Pides el curso conversando; clases socráticas con retos de código en el naveg
+Ankitchopradk/Automated_educational_video_generator	MIT	0	2026-10-26	2026-10-26	AI agent that turns a text request into a narrated educational video. It writes the script and storyboard with free Open
+AnonymousOnyx22/brightspace-d2l-mcp	NOASSERTION	10	2026-11-12	2026-09-16	Brightspace D2L MCP server for Claude, ChatGPT, Cursor and Copilot. Knows what you already handed in, so it only tells y
+AnonymousOnyx22/canvas-lms-student-mcp	MIT	0	2026-11-01	2026-10-14	Free read only Canvas LMS server for AI apps. Due dates, grades, missing work and announcements.
+AnubisRooster/adaptive-tutor-ios	MIT	0	2026-11-09	2026-06-16	Native iOS port of adaptive-tutor-agent - on-device SQLite + OpenRouter LLM, built with Expo / React Native
+Ashen00001/canvas-remote-mcp	MIT	0	2026-11-04	2026-11-04	Canvas LMS as a remote MCP server on Render, behind GitHub OAuth and a username allowlist
+Astribus/thread-memory	MIT	0	2026-11-13	2026-11-05	A memory any AI can read and write, kept as plain Markdown you own. MCP server for Claude, ChatGPT and Cursor, with an O
+Benhouse01/tradoshi-mcp	MIT	0	2026-11-14	2026-11-14	Read-only MCP server for the Tradoshi 2027 rankings of trading schools and prop firms, every criterion sourced
+BloodyReginaa/Neuro-CanvasLMS	MIT	0	2026-11-09	2026-11-05	Canvas LMS MCP server for Claude and ChatGPT. Ask your AI about deadlines, grades, lecture files and announcements. Read
+CorvidLabs/augur	MIT	3	2026-11-15	2026-06-09	🔮 Graded trust for code changes. Deterministic risk scoring (proceed, review, block) for humans and agents. No API key, 
+DTA-Projects/opencode-class-agents	MIT	0	2026-09-21	2026-09-21	Per-class AI tutor agents for opencode backed by a zero-dependency Canvas LMS API helper
+Deeptanshuu/mydy-lms-helper	MIT	7	2026-11-01	2025-05-20	A terminal UI application and MCP server for interacting with the MyDy (Moodle-based) LMS at D.Y. Patil institutions. Vi
+Feynman520/d01-p01-hwp-form-automation-mcp	MIT	0	2026-11-14	2026-07-07	MCP server that fills Korean government/school HWP forms end-to-end via Hancom Office COM automation: convert, extract, 
+Fireiscoolsolo/canvas-lms-mcp-local	MIT	2	2026-11-15	2026-10-13	Canvas LMS MCP server for students: 237 tools for grades, deadlines and assignments in Claude Desktop and other AI apps.
+Fireiscoolsolo/canvas-lms-mcp-server	MIT	2	2026-11-15	2026-10-13	Self-hosted Canvas LMS MCP server for students: 237 tools in Claude on the web, desktop and phone, with an OAuth-protect
+Garad9901/agentic-linear-algebra-tutor	MIT	0	2026-11-08	2026-10-24	Verification-guided agentic tutor for linear algebra: SymPy verifier, misconception taxonomy, LLM-baseline benchmark.
+HUG-thefuture/llm-tutor-agent	MIT	0	2026-10-26	2026-10-26	LLM 学习助手 Agent — FastAPI + 混合检索 RAG（手写 BM25+Ollama 向量，hit@3 81.0%→95.2%）+ AST 沙箱判题 + 多 provider 降级 + 20 门中文课程
+Haris0059/ibu-mcp	MIT	1	2026-09-22	2026-05-11	MCP server for International Burch University (IBU) student information system — query grades, attendance, exams, tuitio
+Hug0x0/mcp-french-school-map	MIT	0	2026-11-06	2026-08-21	MCP server for French education data: schools, IPS, Parcoursup and school-map discovery.
+JSv4/Docxodus	MIT	115	2026-11-15	2025-11-25	Swiss-army toolkit for .docx — faithful DOCX→HTML rendering, an in-browser block editor, Word-grade redlines with native
+Kimmahone/edu-workspace-mcp	MIT	1	2026-11-15	2026-09-02	Google Workspace for Education MCP server for Docs, Sheets, Slides, Forms, Drive, and Classroom
+LucaTamSapienza/ai-on-campus	MIT	1	2026-11-15	2026-11-15	PRISMA: every exam question, tested from three sides before the exam. Multi-agent web app for university teachers, built
+Luckyji6/CanvasM	MIT	1	2026-11-12	2026-11-09	Read-only Canvas LMS → MCP gateway for any AI agent. Tokens encrypted with user-held keys, no database, no logs.
+MattFor/moodle-mcp	MIT	0	2026-11-15	2026-11-15	MCP server that lets AI agents use a Moodle account: courses, deadlines, grades, files and homework submissions.
+MedAmine-SUDO/learnhub-mcp-server	MIT	0	2026-11-14	2026-11-14	Multi-tenant MCP server that gives AI assistants (Claude, Cursor) safe, rate-limited access to an LMS API. Runs locally 
+MegaGimen/CollegeAgent	MIT	0	2026-11-11	2026-11-11	An autonomous campus life management agent for UC Berkeley students: native Canvas LMS integration and an AI infra pipel
+MohibShaikh/overruled	MIT	0	2026-11-14	2026-08-21	The verdict auditor for AI SOC agents. Ground-truth case replay, fabrication detection, consistency checks. No LLM in th
+MrEug3n1o/spanish-tutor-ai	MIT	0	2026-11-05	2026-11-05	A Spanish tutor on local open-source LLMs that checks its own work: a tool-calling study-coach agent, RAG with reranking
+Navitallabs/navital-gym	Apache-2.0	3	2026-11-15	2026-10-27	Deterministic, auto-graded environments for AI agents on Indian-reality tasks: UPI, GST, trip planning, forms, Hindi/Hin
+OxDurgeshxO/fitness-platform-architecture	MIT	1	2026-11-15	2026-07-26	Production-grade AI-powered Gym & Fitness ecosystem — Pose Detection, Exercise Recognition, Diet Planning, AI Coach, Wea
+Poetrynan/Muster	NOASSERTION	38	2026-11-15	2026-08-14	Desktop app that aggregates your Monash Moodle data — courses, deadlines, quizzes, announcements and resources in one be
+QuentinCody/patient-education-mcp-server	Apache-2.0	0	2026-11-13	2026-03-14	MCP server for patient-education
+R-Hruthvik/meridian-llmops	MIT	0	2026-11-15	2026-08-17	Production-grade Enterprise LLMOps Platform: Self-Healing Agentic RAG, AI Gateway Guardrails, & Continuous CI/CD Evaluat
+RohanMuppa/Brightspace-API	MIT	2	2026-11-15	2026-09-26	Get your Brightspace (D2L) info without opening Brightspace. Log in once, then pull your courses, grades, due dates, ass
+RohanMuppa/brightspace-mcp-server	MIT	67	2026-11-15	2026-02-06	MCP server for Brightspace (D2L). Works with any school.
+Ryfter/canvas-toolchain	MIT	1	2026-11-13	2026-05-20	AI-assisted course design toolchain for Canvas LMS - Curriculum Intelligence, Canvas Design Studio, and Command & Contro
+Selleo/mentingo	MIT	109	2026-11-13	2024-08-01	Open-source AI-native LMS with AI Mentor & role-play. Self-hosted alternative to Moodle, Docebo, TalentLMS, Thinkific, T
+SidneyBissoli/uis-mcp-server	MIT	1	2026-11-14	2026-08-08	Provenance-first MCP server for UNESCO UIS statistics (education, science, culture) — remote, Cloudflare Workers
+Une-education/une-sino-mcp	NOASSERTION	0	2026-10-15	2026-09-26	Deterministic Model Context Protocol (MCP) server for Sino-Occidental trade disputes (PRC Civil Code & CISG)
+VasiniDevi/conscious-practices	NOASSERTION	0	2026-10-27	2026-10-27	7 conscious-LLM-use practices as agent-first skills and prompts: Socratic reappraisal, anti-sycophancy, journaling, tuto
+Waldo0926/monash-study-kit	MIT	1	2026-11-15	2026-09-26	把 Monash 的 Moodle 和 Ed 接进 Claude、Codex、Cursor 等 AI 软件（本地 MCP + 命令行，macOS / Windows / Linux）
+abdul27c/ai-agent-security-proxy	MIT	1	2026-11-14	2026-11-14	Production-grade runtime security middleware gateway and tool-firewall for LLMs and AI agents (aligned with OWASP LLM To
+abhijeet-maharana/voice-agent-eval	MIT	1	2026-11-15	2026-11-14	A real-time multimodal voice agent with live tool execution and an automated LLM evaluation grading engine.
+adekola/holiplan	MIT	0	2026-11-13	2026-09-30	MCP server for planning a family's year around school holidays and a limited leave allowance
+adog0822/loxe-agent	MIT	3	2026-11-14	2026-11-04	Security tests for AI agents: 40 deterministic probes (prompt injection, data leaks, tool abuse), an A-F grade, and a si
+amanpriygautam-collab78/classroom-agent	MIT	0	2026-11-04	2026-11-04	A local AI agent for Google Classroom. Reads every post and attached PDF/Doc, finds tasks and deadlines, and shows them 
+amichne/kast	NOASSERTION	5	2026-11-15	2026-03-30	IDE-grade Kotlin code intelligence for your terminal, CI, and LLM agents. Resolve symbols, trace call graphs, find refer
+andyswe/admentum-mcp	MIT	0	2026-11-11	2026-10-25	A read-only MCP server that syncs your messages from Admentum, the Swedish school platform, to local storage, and serves
+anton-abyzov/specwithcode-classroom	MIT	0	2026-11-08	2026-11-08	Free AI study help that never runs out: pools a school's AI subscriptions with automatic failover. OpenAI Agents SDK.
+arthurcuri/mcp-instructure-canvas	MIT	2	2026-11-06	2026-10-13	Canvas LMS MCP server with REST and GraphQL, file transfers, Telegram reminders, and optional local Codex/Claude agents.
+bagusardin25/lms-mcp	MIT	1	2026-11-12	2026-11-06	MCP server untuk Learning Management System
+banday72/classroom-ai-agent	MIT	0	2026-11-07	2026-10-05	
+boyuchengz/canvas-mcp	MIT	119	2026-10-27	2026-10-25	Read-only MCP server that connects Claude, ChatGPT and other AI assistants to Canvas LMS.
+bruchris/canvas-lms-mcp	MIT	10	2026-11-03	2026-04-12	Canvas LMS MCP server — read courses, assignments, submissions, rubrics, quizzes; grade and comment from any AI agent
+bsayres/heronhex-highered	MIT	0	2026-11-14	2026-11-10	Read-only MCP servers and skills for free public U.S. higher-education data. By Heron & Hex Solutions.
+chaoyuhao/mini-homework-agent	MIT	0	2026-10-19	2026-10-11	A tiny AI homework grading agent for Canvas LMS and Fudan eLearning. Markdown requirements, reviewed scores and feedback
+chow-stack/ai-agents-activity	MIT	0	2026-11-03	2026-11-03	A live classroom game where teams write strategy cards for Gemini-powered AI agents that negotiate share-or-steal agains
+chrischall/maxpreps-mcp	MIT	0	2026-11-14	2026-08-01	MCP server for MaxPreps — high school team schedules, scores, records, rosters, stat leaders and athlete careers. Reads 
+chrischall/pickuppatrol-mcp	MIT	0	2026-11-15	2026-08-16	MCP server for PickUp Patrol school dismissal: reads and changes a parent's students, weekly default plans and day-by-da
+chrisncm17/solidworks-mcp	MIT	2	2026-11-01	2026-10-23	MCP server for SOLIDWORKS Student/Education (parts, assemblies, drawings - no Simulation/PDM). Lets Claude, Codex or any
+claude-fw/cuore	MIT	0	2026-11-15	2026-11-15	CUORE: a self-hosted school + money dashboard (PWA) with a finance engine, ClasseViva/Classroom sync, bank sync via Enab
+cmkhoa/canvas-mcp	Apache-2.0	0	2026-11-13	2026-11-11	Canvas LMS MCP server in Rust: read your deadlines, grades and course content
+cotlet-connect/skool-mcp	NOASSERTION	0	2026-11-13	2026-11-13	Connect Skool to ChatGPT, Claude, Cursor, Codex or any AI agent: members, posts, Classroom, Calendar and stats.
+cotletdev/skool-api-mcp-server	NOASSERTION	8	2026-11-10	2026-10-12	Connect Skool to ChatGPT, Claude, Cursor, Codex or any AI agent: members, membership requests, posts, comments, Classroo
+ctala/skool-api-docs	NOASSERTION	8	2026-11-11	2026-05-06	Docs, recipes & examples for the Skool All-in-One API — the most complete unofficial Skool API on Apify. Read AND write:
+cyancloudyang/bit-yanhekt-sync	MIT	0	2026-11-07	2026-11-07	Sync course materials, homework & exam info from the BIT LMS (Yanhe Classroom / zy-eclass) into your folder tree — CLI +
+cyanheads/oecd-mcp-server	Apache-2.0	5	2026-11-13	2026-06-05	Search, explore, and query 1,500+ OECD statistical datasets (national accounts, employment, trade, education, health) fr
+cyanheads/pentest-mcp-server	Apache-2.0	1	2026-10-30	2026-05-30	Offline methodology engine and payload workshop for authorized penetration testing, CTF, security research, and educatio
+cyanprot/brightspace-mcp	MIT	3	2026-10-31	2026-03-18	MCP server for D2L Brightspace LMS — access courses, assignments, grades, and content from Claude Code
+cyberElar/xiaobao-mcp	MIT	1	2026-10-16	2026-10-16	Self-hosted MCP server for Xiaobao Schoolis, Microsoft Teams education assignments, and Outlook.
+developerscompany/lmstudio-mcp	MIT	0	2026-11-14	2026-11-11	Claude Code plugin and MCP server for LM Studio: server, models and context length, sessions, background tasks, download
+dhiaalhaq7979/ai-lab-02-intelligent-agents-peas	MIT	0	2026-11-03	2026-11-03	AI Lab 02: PEAS modelling and a smart-classroom agent - reflex vs model-based vs hysteresis (Python)
+duck-5/moodle-mcp	MIT	0	2026-11-05	2026-10-20	Model Context Protocol (MCP) server & OpenAPI bridge connecting AI assistants to Moodle LMS
+gabrielmahia/elimu-mcp	MIT	0	2026-11-10	2026-06-11	MCP server for Kenya education — school registry, KCSE/KCPE guidance, HELB loans, TVET programs. 5 tools.
+gjlmotea/blockhand-mcp	MIT	5	2026-11-02	2026-08-25	BlockHand: MCP server for Minecraft Education Edition over the official /connect (/wsserver) WebSocket. No add-on or beh
+hhe48203-ctrl/canvas-cli	MIT	1	2026-11-09	2026-07-12	Canvas LMS CLI for university courses, students, instructors, teaching staff, and AI agents
+ilhanskywalker/math-skill	MIT	0	2026-11-14	2026-11-14	A modular suite of AI agent skills for university-level mathematics: problem solving, proof coaching, exam prep, and con
+infinitimeless/LMStudio-MCP	MIT	173	2026-11-09	2025-03-22	A Model Control Protocol (MCP) server that allows Claude to communicate with locally running LLM models via LM Studio.
+janthoXO/AetioECG	MIT	0	2026-11-13	2026-11-13	12-lead ECG provider for medical education: real PTB-XL ECGs by SCP-ECG statement, rendered as SVG. MCP server + CLI wit
+jiangzengyuang-jisoo/moodle-study-assistant	MIT	0	2026-11-14	2026-09-21	面向 AI 新手的本地 Moodle 学习助手：按作业定位章节、课程讨论采集、FSRS 复习与数学核验。Windows / HKU 实践。
+jishnuvenugopal/neuralforge	MIT	1	2026-11-15	2026-03-07	LLM agent that turns neural-network requests into SkyWater 130 nm Verilog with trained INT8 weights, then synthesizes it
+jpss2004-bot/neyvu-connectors	MIT	0	2026-11-12	2026-11-12	Neyvu connector layer: read-only LMS adapters (Moodle, Canvas, Brightspace) and an MCP server, over synthetic fixtures
+kadmalcun/moodle-mcp	MIT	0	2026-11-15	2026-10-30	東京工科大学の Moodle を AI から読むためのローカル MCP サーバー
+kokogo100/kalshi-screener-mcp	MIT	0	2026-11-03	2026-10-26	Chrome extension and read-only MCP server for screening Kalshi prediction markets with your AI. For research and educati
+kurtulusyuksel/yzm301-gpower-teardown	NOASSERTION	0	2026-10-18	2026-10-18	YZM301 Sprint: G*Power t-paired cleanroom reimplementation with CLI, MCP Server & AI Agent for Education
+kyan9400/proofbench	MIT	0	2026-11-15	2026-11-13	An evaluation platform for tool-using LLM agents: deterministic graders first, a measured judge second. Measured, not as
+labsai/EDDI	Apache-2.0	394	2026-11-15	2016-10-13	Config-driven engine that turns JSON into production-grade AI agents. Multi-agent orchestration, 19+ LLM providers, MCP/
+lindun1979/ChiChat	MIT	0	2026-11-02	2026-06-26	Spoken Mandarin  Coaching Agent: features: task-driven speaking scenario, LLM tutor, Personalized Practice, easy and sta
+liukai97/Japanese_tutor	MIT	0	2026-11-06	2026-09-12	personal Japanese tutor using LLM agent
+llm-health-agent-tutorial/llm-health-agent-tutorial.github.io	MIT	1	2026-10-27	2026-05-20	Hands-on UbiComp/ISWC 2026 tutorial: prototype a personal LLM health agent over multimodal sensing data.
+lmscloud-io/moodle-tool_aiagent-docs	NOASSERTION	1	2026-11-15	2026-07-01	
+lmshostingservices/moodle-block_aiplugin_nav	NOASSERTION	0	2026-11-14	2026-08-04	Moodle plugin: block_aiplugin_nav
+lmshostingservices/moodle-local_chirpvoice	NOASSERTION	0	2026-11-14	2026-07-31	AI voiceover injection for SCORM packages without source file access
+lmshostingservices/moodle-mod_aiknowledgecheck	NOASSERTION	0	2026-11-13	2026-07-31	AI-generated knowledge check activities with instant adaptive feedback
+longhornteacher/canvasexpert	MIT	0	2026-10-07	2026-06-13	A local, teacher-controlled bridge between Canvas LMS and your desktop AI agent (Claude Desktop, ChatGPT). Student data 
+losseeer/codebase-teaching-agent	MIT	0	2026-11-15	2026-09-09	Codebase Tutor – 本地优先的代码库教学 Agent。构建课程地图、教学会话、练习复习一体化的学习环境，支持多 LLM Provider、成本监控与 SM-2 复习调度。
+mahdi-salmanzade/MCP-Dubai	MIT	6	2026-11-09	2026-04-12	MCP Server for Dubai & UAE public APIs real estate, transport, statistics, education, health, business & more. Connect A
+mahmutmft/courses-mcp	NOASSERTION	1	2026-11-15	2026-11-03	Read-only MCP server for FINKI Moodle. Connect AI agents to your enrolled courses, browse resources, and search course m
+malkreide/meteoswiss-mcp	MIT	0	2026-11-14	2026-03-31	MCP Server for Swiss weather & climate data – MeteoSwiss SwissMetNet, ICON forecasts, school planning
+malkreide/zh-education-mcp	MIT	0	2026-11-03	2026-04-01	MCP server for education statistics of Canton and City of Zurich (BISTA)
+mashrur5/fridgemate	MIT	0	2026-11-15	2026-10-03	AI agent for shared-household food management: tracks fridge, freezer, and pantry items by owner, estimates expiry, impo
+meghana-anupoju/EduBridge	MIT	0	2026-11-04	2026-11-04	A multilingual AI-powered learning platform using the Strands Agents SDK and Amazon Bedrock to provide personalized Telu
+meghana-anupoju/EduBridge-AI	MIT	0	2026-11-04	2026-11-04	A multilingual AI-powered learning platform using the Strands Agents SDK and Amazon Bedrock to provide personalized Telu
+mindwear-capitian/local-austin-mcp	Apache-2.0	6	2026-11-15	2026-05-06	Free, open-source MCP server (Apache-2.0) giving Claude plain-English access to official Austin & Travis County data — p
+mindwear-capitian/local-dallas-mcp	Apache-2.0	1	2026-11-15	2026-07-19	Your AI's local guide to Dallas: official, public, no-key civic + schools data via MCP.
+mindwear-capitian/local-houston-mcp	Apache-2.0	1	2026-11-15	2026-07-19	Your AI's local guide to Houston: official, public, no-key civic + schools data via MCP.
+mindwear-capitian/local-san-antonio-mcp	Apache-2.0	1	2026-11-15	2026-07-19	Your AI's local guide to San Antonio: official, public, no-key civic + schools data via MCP.
+mlbala/arie	MIT	0	2026-11-15	2026-11-01	ARIE - Agentic Research Intelligence Engine : is an enterprise-grade, local-first academic research intelligence platfor
+mohammad-abbasi-sh/ferien-mcp	MIT	0	2026-11-15	2026-11-14	Unofficial read-only MCP server for German school holidays (Schulferien) via ferien-api.de — by year & state, is-it-a-ho
+mokelu/free-ai-agents-moodle	NOASSERTION	0	2026-11-15	2026-11-08	
+mozartdiniz/vouch-lab	MIT	0	2026-11-14	2026-11-14	Eval battery for LLM agents that call vouch nodes: 1,418 cases graded correct, safe or unsafe, with results for local mo
+ngwes/skill-be	Apache-2.0	0	2026-11-15	2026-10-31	A CLI that benchmarks Agent Skills: baseline versus with-skill, LLM-graded and gated, on any harness.
+old-school-gamers/dice	Apache-2.0	0	2026-11-13	2026-05-17	Tabletop RPG dice roller for Go: library, roll CLI, and dice-mcp server for Claude Code or any MCP client.
+onderwijsin/onderwijsloket-assistent	MIT	0	2026-10-24	2026-10-19	An experimental MCP server to connect AI assistants to Onderwijsloket’s knowledge about working in education.
+regolo-ai/tutorials	MIT	7	2026-11-13	2025-12-30	Runnable AI tutorials by Regolo.ai: AI agents, RAG, MCP tools, context engineering, LLM evaluation with Langfuse, and op
+rrymsaidani-maker/teacher_platform	MIT	0	2026-11-14	2026-11-11	Open-source multi-tenant LMS for creators and schools: sell courses on your own subdomain. Next.js 16 + React 19 + Supab
+semyonfox/canvas-mcp	MIT	1	2026-11-08	2026-04-16	MCP server for Canvas LMS. Read-only by default, for students using their own access token.
+simplybion13/sre-agent-evals	MIT	0	2026-11-15	2026-11-15	An evaluation-driven SRE support agent built with the OpenAI Agents SDK. Includes 50 labeled incidents, tool-call grader
+starknight24/Astro-AI	MIT	0	2026-11-08	2026-06-26	AI tutor for space physics: LLM agent, deterministic physics engine, code-verified RAG citations
+sweetatyagiaz/Ollama-Tutorial	NOASSERTION	0	2026-10-30	2026-10-29	A hands-on tutorial for local LLMs using Ollama, Python, RAG, and AI agents.
+udacity/cd14764-aws-agentic-c3-classroom	NOASSERTION	19	2026-11-03	2026-02-24	This repo contains the classroom material for the C3 from AWS Agentic AI Nanodegee.
+vishalsachdev/canvas-mcp	MIT	327	2026-11-15	2025-02-28	Canvas LMS MCP server — up to 102 tools and 8 agent skills for students & educators. Works with Claude, Cursor, Codex, a
+weirdapps/sch-mail	MIT	0	2026-11-14	2026-10-01	IMAP/SMTP MCP server for Greek School Network (sch.gr) mailboxes
+wongcyrus/Google-AI-Classroom	MIT	1	2026-11-14	2025-09-14	Edge-to-cloud multimodal AI agent for smart classrooms and exam invigilation. Combines client-side MediaPipe, LiteRT Whi
+wwilliamx07/canvasbuddy	MIT	2	2026-10-05	2026-03-14	AI Agent for Canvas LMS
+yashpandey2409/Multimodal-RAG-AI-Tutor-Agent	MIT	0	2026-11-06	2026-11-06	Multimodal RAG AI Tutor Agent is an intelligent AI-powered learning assistant that leverages Retrieval-Augmented Generat
+yasserhegazy/lab-grader-skill	MIT	0	2026-11-13	2026-10-31	Agent skill for TAs: grade lab submissions with Claude Code or Codex. Rubric, parallel cheap graders, AI & copy detectio
+zhuyansen/awesome-llm-wiki	NOASSERTION	0	2026-11-15	2026-10-03	Open-source tools where an LLM or agent builds and maintains a knowledge base: LLM wikis, RAG platforms, MCP servers, do

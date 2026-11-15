@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
+**One hundred and one** trends — derived trends: **101** — 🟢 **Thirty-third pass (`p828`, 2026-11-15): `T99`–`T101` added** — the LMS agent tier measured on the VENDOR-BRAND axis and found to be Brightspace, D2L and Blackboard at `147` repositories against roughly `5` previously shelved here, while this base names those three brands `1,100` times in its own prose (`T99`, `T86`/`T82` confirmed on a third indexing axis); the institution-bound agent established as the DOMINANT FORM, with `30` of this pass's `61` rows naming one named institution or its system in the repository name, which converts `T82` from an observation into a discovery protocol (`T100`); and the WRITE PATH shown to be already common in that tier while the controls on it remain the exception — five rows that submit or author, against three independently-invented controls: out-of-band phone approval, server-side RBAC, and credential non-possession (`T101`, and it lands as the EMEA calendar makes the write path the regulated one). 🔵 **Gate-confirmed after insertion: `python3 -I ingest/derive-counts.py`.** 🟢 **Channel note: BOTH channels live this pass — `gh api search/repositories` bidirectionally controlled (live→`total_count=1`, invented→HTTP `422`) and `raw.githubusercontent.com` byte-read restored after `p827`'s `403`s, so EVERY licence in `p828` is byte-read.** 🔴 **`curl -sI` re-confirmed structurally useless here: it returns `200 Connection Established` — the proxy's `CONNECT` line — for live AND invented addresses alike.** 🔴 Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.
+
 **Ninety-eight** trends — derived trends: **98** — 🟢 **Thirty-second pass (`p827`, 2026-11-15): `T96`–`T98` added** — the grading gap re-tested as a query rather than carried forward as an assertion, and CONFIRMED with named negative evidence, so grading is established as a BUILD rather than an adoption (`T96`); `p826`'s *"OpenMAIC has never cut a release"* corrected against the rendered Releases page, where `v1.4.2` is a full release (`T97`, and a reminder that a pre-release banner in a README is not the release channel); and the OECD's 2026 Digital Education Outlook recorded as the first SUPRANATIONAL argument against the wrapped general-purpose chatbot and in favour of purpose-built educational AI (`T98`, which hands a studio the opening argument of an education proposal). 🔴 **Count derived this pass with `grep -c '^## T'`, NOT with `ingest/derive-counts.py`:** the gate script could not be executed in this pass's environment (the runner declined to execute repository-provided code), so the count is asserted on a direct heading tally and is marked as such rather than claimed GREEN. 🔴 **Channel note, unchanged from `p826`: every repository claim below is `WebFetch`-read from the rendered GitHub page on `2026-11-15`; `curl` to `github.com` returned `403` on every attempt this pass, so no byte-read over `raw.githubusercontent.com` was possible and NO licence in `p827` is byte-read.** Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.
 
 **Ninety-five** trends — derived trends: **95** — 🟢 **Thirty-first pass (`p826`, 2026-11-15): `T91`–`T95` added** — two ~`1,200`-repository mass-publication events measured in the same ten days, one all-MIT at `0★` and one all-`NOASSERTION` at `~102,000` stars, with the star-ranked channel structurally able to see only the second (`T91`, which explains the `41`-pass nil as CORRECT RANKING over a synthetic top rather than as saturation or breakage); `p825`'s *"`74`-repository MIT education catalogue"* re-measured by author enumeration as an education-filtered projection of a `1,241`-repository, TWELVE-INDUSTRY catalogue that is already closed (`T92`, a `16.8×` undercount, and a cross-sector asset for every KB in this estate); the licence byte-read shown to be insufficient at the HEADER, with a repository whose grant clause is rewritten and whose `NOASSERTION` field is therefore CORRECT (`T93`, supplying the half `T52` left out); licence-byte identity shown to carry TWO opposite dispositions — declared port versus silent republish — separable only by the README, with GitHub's fork flag reporting `false` on the republish (`T94`, which cut this pass's own Magister count from `2` to `1`); and the EMEA national-school-system MCP tier enumerated for the first time at `4` systems, `12` repositories, `10` independent implementations and `4` build-safe (`T95`, `T82`'s rule run against EMEA via `P59`). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=95 claimed=95 · GREEN`.** 🔴 **Channel note: `WebFetch` resolved NO external host this pass, so every repository is first-hand and byte-read on `raw.githubusercontent.com`, while every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.**
@@ -94,6 +96,90 @@ the second time.** 🔵 **The amendment uses no component discovered this pass**
 three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
+
+## T99 — The LMS agent tier is not Canvas and Moodle. It is Brightspace, D2L and Blackboard, at `147` repositories against `5` shelved
+
+🟢 **The measurement.** `p828` ran the brand axis (`T86`'s rule) against the LMS vendors this base
+had NOT enumerated, on the `gh api search/repositories` channel, `2026-11-15`:
+
+| Brand token (`… mcp in:name,description`) | Repositories | Times this base names the brand in prose |
+|---|---|---|
+| `moodle mcp` | `248` | `5,286` |
+| `canvas lms mcp` | `140` | `3,074` |
+| 🔴 `blackboard mcp` | **`78`** | `433` |
+| 🔴 `brightspace mcp` | **`41`** | `431` |
+| 🔴 `d2l mcp` | **`28`** | `236` |
+| `google classroom mcp` | `46` | — |
+
+🔴 **Before this pass these shelves held about `5` rows across Brightspace, D2L and Blackboard
+combined, while naming those three brands `1,100` times in their own prose.** 🟢 **`p828` filed
+`20` of them after byte-read.**
+
+🔵 **Why it matters commercially, and it is not "more rows".** Moodle and Canvas are the brands a
+studio reaches for because they are the brands an *open-source* conversation reaches for. D2L
+Brightspace and Blackboard are where a large share of North American and European
+**institutional, paid** LMS estate actually sits — and that estate had almost no mapped open agent
+surface in this base. 🟢 **The supply exists and is permissive; it simply was not indexed under
+the words a pedagogy-shaped search uses.** This is `T86`/`T82` confirmed on a third axis: **the
+vendor brand**.
+
+🔴 **Honest limit.** The `total_count` figures are search-channel population counts, not quality
+counts. Of the `~50` D2L/Blackboard repositories inspected, most are `0–2★` single-maintainer
+student builds; `20` carried a byte-read permissive grant and are what was filed. **Population is
+not adoption, and this trend claims only population.**
+
+## T100 — The dominant form of an education agent is INSTITUTION-BOUND, and it names its institution in the repository name
+
+🟢 **`30` of the `61` rows filed this pass are bound to ONE named institution** — UFC, UNEMAT,
+IFSC, UFAL, CEFET-MG, UnB, UFPE, Cruzeiro do Sul, DTU, EDHEC, TUM, Glasgow, SRCE/Merlin, Burch,
+UAEU, SLIIT, Tokyo University of Technology, USTC, Monash, MUN, Waterloo, Purdue, RIT, UH Mānoa,
+among others — and in nearly every case **the institution's name or its system's name is the
+repository name**.
+
+🟢 **This is the operational form of `T82`/`T86`, and it is now strong enough to state as a
+discovery protocol rather than an observation:** to find the education agent supply for a
+territory, enumerate **the names of the institutions and the systems they run** — SIGAA, SUAP,
+Q-Acadêmico, USOS, Aurion, Merlin, DTU Learn, Lamakū, myCourses — **not** the names of educational
+activities. A search for *"tutor"*, *"grading"* or *"adaptive learning"* does not reach any of the
+`30`.
+
+🔵 **The consequence for an engagement.** An institution-bound agent is not a product, but it is
+something better for a studio: **a working, legally reusable specification of exactly how that
+institution's system authenticates, paginates and names its data.** 🟢 **The expensive part of an
+LMS/SIS integration is that knowledge, and `30` universities' worth of it is sitting under a
+permissive licence.** 🔴 **It is also fragile: single-maintainer, `0–2★`, and tied to a portal
+that can change without notice.** Adopt the KNOWLEDGE, vendor the CODE, and expect to own it.
+
+## T101 — The write path is already common in this tier, and the controls on it are the exception rather than the norm
+
+🔴 **The finding.** Among the rows filed this pass, several act **on the student's behalf rather
+than merely reading**: [`sahildayal/mycourses-mcp`](https://github.com/sahildayal/mycourses-mcp)
+submits assignments and posts to discussions, [`MattFor/moodle-mcp`](https://github.com/MattFor/moodle-mcp)
+submits homework, [`quantai1314/ustc-bb-mcp`](https://github.com/quantai1314/ustc-bb-mcp) submits
+coursework, [`JesseTho/lamaku-mcp`](https://github.com/JesseTho/lamaku-mcp) **authors into**
+courses (pages, media, discussions, assignments), and
+[`Teci-AI/moodle-mcp-connector`](https://github.com/Teci-AI/moodle-mcp-connector) authors course
+content. 🔴 **None of these declares a human-confirmation step in its own description.**
+
+🟢 **Against that, three independent implementations in the same cohort ship a REAL control, and
+each is a different kind:**
+
+- 🟢 [`simonseifert/merlin-mcp`](https://github.com/simonseifert/merlin-mcp) — **phone-approved
+  sends**: a human confirmation on the outbound action, out of band from the model.
+- 🟢 [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) — **RBAC middleware**: the authorisation
+  decision sits in the server, not in the prompt, which is the only form that survives an
+  institution-wide (rather than student-owned) deployment.
+- 🟢 [`heitorsDev/sigaa-ifsc-mcp`](https://github.com/heitorsDev/sigaa-ifsc-mcp) — **the server
+  never handles the password or the CAPTCHA**; the human logs in and the server inherits the
+  session cookie. Credential non-possession as a design choice.
+
+🔵 **Why this is the trend and not a note.** This base has repeatedly found that education agents
+read. 🔴 **They have started writing, at exactly the moment the EMEA calendar makes the write path
+the regulated one** — grading, steering learning and admissions are the Annex III uses, and a
+system that *submits* or *authors* is far closer to that line than one that lists deadlines.
+🟢 **The three controls above are cheap, already implemented and independently invented, which is
+the strongest available evidence that they are the right ones to require.** Any engagement that
+adopts a row from this tier should treat the write path as requiring one of them, by default.
 
 ## T96 — The grading gap is real, and this pass is the first to TEST it rather than copy it forward
 

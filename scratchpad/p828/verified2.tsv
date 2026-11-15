@@ -1,0 +1,24 @@
+slug	exists	field_lic	stars	forks	pushed	created	fork	bytes_lic	sha	size	desc
+alejooroncoy/campus-cli	1	ISC	13	1	2026-11-15	2026-03-30	false	CLI no oficial para UPC Aula Virtual (Blackboard Learn) — terminal + MCP para Claude	UNRECOGNISED	61cbe601797a	747
+Eduardozsw/cds-tools	1	MIT	0	0	2026-11-05	2026-11-05	false	CLI e servidor MCP (somente leitura) para o Blackboard Ultra da Cruzeiro do Sul / Unipê. Projeto não oficial.	MIT	bb5cba819b2c	1070
+alanwtom/blackboard-mcp	1	MIT	9	1	2026-11-03	2026-08-30	false	Local-first, read-only Blackboard MCP server. Reads the signed-in student's own Blackboard (Ultra) data through their normal browser session. No admin	MIT	6cd5ef811418	1064
+nitsuah/bb-mcp	1	MIT	3	0	2026-11-15	2026-03-24	false	MCP server exposing the Blackboard Learn REST API to LLM clients via HTTP or stdio. RBAC middleware for role-based access control. Built for education	MIT	e024d09e682a	1063
+gangula-karthik/ntulearn-mcp	1	NOASSERTION	6	1	2026-11-15	2026-09-02	false	MCP server for NTULearn (NTU Blackboard): read-only course/announcement/calendar/grade tools + course file download. Fast: HTTP/2, caching, 21 tools.	MIT	9783f2a651e2	1054
+AhmTb/uaeu-blackboard-mcp	1	MIT	0	0	2026-11-14	2026-11-13	false	UAEU Blackboard MCP server for students and instructors: local SSO, read/write tools, and setup for Codex and other MCP clients.	MIT	a471b2b18310	1061
+quantai1314/ustc-bb-mcp	1	MIT	0	1	2026-11-11	2026-11-11	false	中科大 Blackboard 本地 MCP 服务：课程、作业、公告、课件下载与作业提交	MIT	d25c64b5fb88	1080
+BxnIceLemon/minerva-mcp	1	ISC	0	0	2026-11-12	2026-10-16	false	Unofficial read-only MCP server for University of Leeds Minerva (Blackboard Learn Ultra)	UNRECOGNISED	3649afbeb603	740
+Sillvs/edhec-mcp	1	MIT	0	0	2026-11-03	2026-11-01	false	Unofficial MCP server for EDHEC students: Blackboard, Aurion, ePrinting and campus food in Claude, with your own SSO login.	MIT	092e336c00f7	1078
+NiccoloSalvini/mcp-blackboard-ucsc	1	MIT	0	0	2026-11-06	2026-09-16	false	MCP server for Blackboard Learn Ultra over the public REST API	MIT	b5155850ba0e	1072
+Mattlo0546/blackboard-mcp	1	MIT	1	1	2026-10-20	2026-10-17	false	Blackboard Learn (Ultra) MCP server for Claude, Codex & Cursor: courses, deadlines, announcements and lecture-slide download. SSO sign-in, no API key.	MIT	6bb7530c06a1	1066
+Lucasdoreac/blackboard-mcp	1	MIT	0	0	2026-10-25	2026-09-05	false	Local Blackboard Ultra access for any MCP client (Claude, Codex…): reads courses, materials, deadlines and announcements; login stays on your machine.	MIT	96c1802bfcee	1067
+UKplus8HRS/bb-mcp	1	MIT	1	0	2026-10-30	2026-10-21	false	Local Playwright MCP for Blackboard Learn with configurable institutions, SSO and academic calendars	MIT	afa8162d956e	1066
+unb-mds/2026-2-Followw	1	MIT	9	5	2026-11-15	2026-08-18	false	O Followw é uma nova forma de usar o SIGAA UnB.	MIT	aec18ce568d4	1067
+PucaVaz/sigaa-tools	1	MIT	34	5	2026-11-09	2026-06-07	false		MIT	dda770330e98	1064
+erickmsms/sigaa-faltas	1	MIT	0	0	2026-11-13	2026-10-07	false	Descubra quantas faltas você ainda pode ter em cada disciplina da UFPE (SIGAA), com o Claude	MIT	a638443b07bc	1065
+suap-ava-suite/djangoapp-integrador_ava	1	MIT	1	1	2026-11-10	2024-04-04	false	O Integrador AVA é um middleware que conecta Sistemas de Gestão Acadêmica (SGA) ao Moodle. Suporta o Suap como padrão principal — pronto de fábrica pa	MIT	ea2720106f33	1074
+adiel-calixto/IFAcademico	1	Apache-2.0	6	1	2026-10-20	2025-05-06	false	IFAcademico é um aplicativo Android de código aberto desenvolvido para facilitar o acesso de estudantes ao sistema acadêmico Q-Acadêmico.	Apache-2.0	58d1e17ffe51	11357
+hgiulliano/sigaa-cefetmg-modoescuro	1	MIT	10	0	2026-11-12	2026-05-09	false	Extensão para Chrome que aplica temas no portal SIGAA do CEFET-MG.	MIT	dfa646f12f31	1074
+brunomateus/SIGAA-Mais-Mais	1	MIT	3	0	2026-11-12	2026-10-23	false		MIT	d8bdc1a01ddf	1068
+felipdsa21/ufal-schedule-ics	1	MIT	0	0	2026-11-13	2026-10-02	false	Gera um calendário .ics das aulas a partir do atestado de matrícula do SIGAA (UFAL)	MIT	00d38482ad8e	1070
+GeovaneSchmitz/sigaa-api	1	MIT	61	22	2024-04-10	2019-04-02	false	Unofficial high performance API for SIGAA (Sistema Integrado de Gestão de Atividades Acadêmicas) using web scraping.	MIT	ecb193695a94	1108
+kkauaon/qaluno	1	NONE	4	0	2026-01-13	2024-02-04	false	Aplicativo não oficial do Q-Acadêmico para IFCE	-	-	-

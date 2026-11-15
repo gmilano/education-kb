@@ -108,6 +108,34 @@ across EMEA.
 
 ### North America
 
+#### Update 2026-11-15 (thirty-third pass, `p828`) — the SUPPLY side of the North American LMS estate is mapped for the first time, and the vendor itself ships permissive components
+
+🟢 **First-hand this pass (`gh api search/repositories` + `raw.githubusercontent.com` byte-read,
+`2026-11-15`).** `T99` measured the Brightspace/D2L/Blackboard agent population at `147`
+repositories against roughly `5` rows previously shelved here. 🟢 **That tier is
+disproportionately North American at the institution layer** — servers bound to **Purdue**
+(`Yokiwa/dueboard`), **RIT** (`sahildayal/mycourses-mcp`), **UH Mānoa**
+(`JesseTho/lamaku-mcp`), **Waterloo** (`WayneWei228/brightspace-hub-mcp`) and **Memorial
+University** (`yasharisherenow/mun-d2l-mcp`) were all filed this pass under byte-read permissive
+grants.
+
+- 🟢 **The vendor is itself a build surface.** [`BrightspaceUI/core`](https://github.com/BrightspaceUI/core)
+  is **D2L's own** accessible web-component library (🇨🇦 Kitchener), **Apache-2.0**, `81★`,
+  `32` forks, byte-read this pass. 🔵 **That is the supported route to putting a studio-built
+  surface INSIDE the LMS rather than beside it** — and it is a materially different procurement
+  conversation from a browser extension.
+- 🔵 **`Yokiwa/dueboard` names the real system of record.** It aggregates deadlines from Purdue
+  Brightspace **and** Gradescope, Pearson MyLab, WileyPLUS and ALEKS. 🟢 **For a US
+  undergraduate the courseware vendors — not the LMS — hold the work.** An integration scoped to
+  "the LMS" will miss most of a student's actual obligations.
+
+🔴 **Regulatory surface unchanged from `p827` and not re-measured this pass:** the instrument is
+still the STATE, with a tracker counting `134` AI-in-education bills across `31` states, and North
+Carolina's `2026-41` calendar (`2026-12-31` / `2027-06-30` / `2028-06-30`) remains the most
+actionable North American item this base holds. 🔴 **`CITED, NOT READ`** — from WebSearch
+summaries; the California **"Parents & Kids Safe AI Act"** ballot initiative (backed by OpenAI and
+Common Sense Media) is also already held here and was not independently re-verified in `p828`.
+
 #### Update 2026-11-15 (thirty-second pass, `p827`) — the state layer gains two instruments with DATED compliance calendars, and a non-AI accessibility deadline lands on the same LMS surface
 
 **The regulatory surface is still the STATE, and the posture is still guardrails rather than adoption mandates.** One tracker counts **`134` AI-in-education bills introduced across `31` states** this session.
@@ -1222,6 +1250,44 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-15 (thirty-third pass, `p828`) — a Council of Europe AI-LITERACY recommendation enters this base, and four NATIONAL higher-ed system brands are recorded for the first time
+
+- 🟢 **NEW instrument: the Council of Europe adopted `Recommendation CM/Rec(2026)12` on
+  Artificial Intelligence Literacy**, placing education at the centre of Europe's AI response.
+  🔴 **`CITED, NOT READ`** — from a Council of Europe page summary via WebSearch; not fetched in
+  full this pass. 🔵 **Why it is worth holding: it is a `46`-state Council of Europe instrument,
+  NOT an EU one, so its reach includes the UK, Switzerland, Türkiye, Ukraine and the Western
+  Balkans — jurisdictions the AI Act does not cover.** Paired with the EU AI-literacy duty this
+  base already records as the obligation with live demand, it widens the same offer across the
+  whole continent.
+- 🔵 **Omnibus position unchanged and NOT re-litigated:** this base already holds
+  `Regulation (EU) 2026/1744` moving stand-alone Annex III duties to `2027-12-02`, with Article 50
+  transparency and the AI-literacy duty live now. `p828` adds no new reading of it; `P68` is built
+  to that split.
+
+🟢 **First-hand supply, byte-read `2026-11-15` — and the finding is that EMEA's university tier is
+indexed under NATIONAL SYSTEM BRANDS this base had never recorded:**
+
+| System | Country | Agent filed this pass | Note |
+|---|---|---|---|
+| **USOS** | 🇵🇱 Poland | [`Carlosito606/ai-personal-assistant`](https://github.com/Carlosito606/ai-personal-assistant) | USOS is shared across most Polish HEIs — a **national-scale** system, new to this base |
+| **Aurion** | 🇫🇷 France | [`Sillvs/edhec-mcp`](https://github.com/Sillvs/edhec-mcp) | French higher-ed scheduling/SIS brand, new to this base; here joined to Blackboard in one server |
+| **Merlin (SRCE)** | 🇭🇷 Croatia | [`simonseifert/merlin-mcp`](https://github.com/simonseifert/merlin-mcp) | The national academic computing centre's Moodle. 🟢 Ships **phone-approved sends** — an out-of-band human confirmation control |
+| **DTU Learn** | 🇩🇰 Denmark | [`CarlSvejstrup/dtu-learn-mcp`](https://github.com/CarlSvejstrup/dtu-learn-mcp) | Brightspace **plus Panopto lecture transcripts** — reaches where the course content actually lives |
+| **Artemis / TUMonline** | 🇩🇪 Germany | [`jamestesting0/tum-mcp`](https://github.com/jamestesting0/tum-mcp) | 🟢 **Artemis is itself open source** — a build target, not merely a data source |
+
+🟢 **Also filed:** [`Haris0059/ibu-mcp`](https://github.com/Haris0059/ibu-mcp) (🇧🇦 Burch,
+Sarajevo — and the first row here whose scope crosses from academic into **tuition/bursar**
+records), [`AhmTb/uaeu-blackboard-mcp`](https://github.com/AhmTb/uaeu-blackboard-mcp) (🇦🇪, with
+**instructor-side** tools), [`chapmanwm/moodlectl`](https://github.com/chapmanwm/moodlectl)
+(🇬🇧 Glasgow) and [`yasserhegazy/lab-grader-skill`](https://github.com/yasserhegazy/lab-grader-skill)
+(**Arabic** rubric grading with Moodle CSV export — the named counter-instance to `T96`).
+
+🔴 **Declared gap, unchanged:** this base still has NO verified EMEA classroom-deployment
+statistics. The only adoption figure surfaced this pass (*"68% of European universities had
+deployed an AI teaching tool by early 2026"*) traces to a single unsourced blog citing the EUA
+without a link and is **NOT carried**.
 
 #### Update 2026-11-15 (thirty-second pass, `p827`) — the Act is being ENFORCED, the Annex III education date is still contested in secondary sources, and the region gains its first curriculum-aligned build-safe agent
 
@@ -2375,6 +2441,44 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-15 (thirty-third pass, `p828`) — supply recorded across six APAC jurisdictions, including a FORMS dependency no foreign toolchain can satisfy
+
+🟢 **First-hand, byte-read `2026-11-15`:**
+
+- 🇰🇷 **[`Feynman520/d01-p01-hwp-form-automation-mcp`](https://github.com/Feynman520/d01-p01-hwp-form-automation-mcp)** (MIT)
+  fills Korean government and school **HWP** (Hancom) forms end-to-end. 🔵 **HWP is the mandatory
+  document format for Korean public-sector paperwork and no non-Korean toolchain speaks it. A
+  Korean education engagement inherits this dependency whether or not it plans for it** — and this
+  is the only build-safe artefact on these shelves that addresses it.
+- 🇭🇰 **[`wongcyrus/Google-AI-Classroom`](https://github.com/wongcyrus/Google-AI-Classroom)** (MIT) —
+  edge-to-cloud multimodal classroom agent **and exam invigilation** (MediaPipe + LiteRT Whisper +
+  Gemma, with Gemini). 🔴 **Invigilation is proctoring: in EMEA the emotion-inference leg is
+  banned outright and the rest is Annex III. A row to study for architecture, not to port into a
+  European engagement.**
+- 🇮🇳 **[`Navitallabs/navital-gym`](https://github.com/Navitallabs/navital-gym)** (Apache-2.0) —
+  deterministic, **rule-based auto-graded** environments on Indian-reality tasks (UPI, GST, forms,
+  Hindi/Hinglish). 🟢 **Rule-based rather than model-graded is precisely the
+  arithmetic-outside-the-model principle `P67` prescribes — already implemented, already
+  permissive.**
+- 🇱🇰 [`kesaruhasun/mcp-sliit-courseweb`](https://github.com/kesaruhasun/mcp-sliit-courseweb),
+  🇯🇵 [`kadmalcun/moodle-mcp`](https://github.com/kadmalcun/moodle-mcp) (Tokyo University of
+  Technology), 🇨🇳 [`quantai1314/ustc-bb-mcp`](https://github.com/quantai1314/ustc-bb-mcp) (USTC
+  Blackboard, **submits coursework**) — all byte-read MIT.
+
+🔴 **Regulatory, `CITED, NOT READ`** (WebSearch summaries, `2026-11-15`; none fetched in full):
+
+- 🇻🇳 **Vietnam's high-risk designation lists education among six sectors, naming automated
+  assessment** — consistent with what this base already holds, and still the clearest
+  education-specific rule in the region.
+- 🇰🇷🇹🇼🇻🇳 **Korea, Taiwan and Vietnam have AI-specific statutes in force in 2026**; 🇨🇳 China
+  regulates through binding rules with **content labelling since `2025-09-01`**; 🇯🇵 Japan's AI
+  Promotion Act (May 2025) remains **non-binding**; 🇮🇳 India has **no dedicated AI law**, with
+  amended IT Rules requiring synthetic-content labelling **from `2026-02-20`**.
+
+🔴 **Declared gap:** no verified classroom-adoption rate for China, Japan or India was found this
+pass. One market figure (India AI-edtech *"USD `108.34M` in 2023"*) is vendor-style and **NOT
+carried**.
+
 #### Update 2026-11-15 (thirty-second pass, `p827`) — the region's ATTITUDE data arrives with per-country numbers and directions of travel, and it does not point the way the regulation does
 
 🟢 **This is the first pass to carry per-country public-opinion data for AI in schools across APAC, from the Ipsos Education Monitor 2026.** Support for **banning AI in schools**:
@@ -3513,6 +3617,59 @@ procurement-led" corner of that matrix, which `P5` did not previously have a nam
 example of.
 
 ### LATAM
+
+#### Update 2026-11-15 (thirty-third pass, `p828`) — the PRIVATE half of the Brazilian market gains its first row, the Q-Acadêmico and SUAP legs are filed, and the cluster's upstream is found UNMAINTAINED
+
+🟢 **First-hand, byte-read `2026-11-15`. Four structural additions to a tier this base opened at
+`p812`:**
+
+- 🟢 **The private-sector half, for the first time.** Every LATAM row before this pass sat on a
+  PUBLIC federal or state institution running SIGAA.
+  [`Eduardozsw/cds-tools`](https://github.com/Eduardozsw/cds-tools) (MIT) is a read-only CLI and
+  MCP for **Blackboard Ultra at Cruzeiro do Sul / Unipê** — one of Brazil's largest *private*
+  university groups. 🔵 **Different buyer, different procurement, different LMS: the public tier's
+  findings do not transfer to it unexamined.**
+- 🟢 **The Q-Acadêmico leg, named here many times and never shelved.**
+  [`adiel-calixto/IFAcademico`](https://github.com/adiel-calixto/IFAcademico) (Apache-2.0, `6★`) —
+  Android client for the academic system used across the **Institutos Federais**.
+- 🟢 **The SGA↔Moodle seam.**
+  [`suap-ava-suite/djangoapp-integrador_ava`](https://github.com/suap-ava-suite/djangoapp-integrador_ava)
+  (MIT, 🇧🇷 IFRN) is middleware joining **SUAP** natively — plus a generic profile for **SIGAA**
+  and **Q-Acadêmico** — to **Moodle**. 🔴 **Its README declares it development-use-only at IFRN,
+  so it is a SPECIFICATION, not a deployable.** 🟢 **It is nonetheless the only artefact on these
+  shelves that joins the Brazilian system of record to the LMS — the exact seam a Brazilian
+  engagement sits on.**
+- 🔴 **And the risk under all of it.** [`GeovaneSchmitz/sigaa-api`](https://github.com/GeovaneSchmitz/sigaa-api)
+  — MIT, `61★`, `22` forks — is the **upstream** of the cluster (`heitorsDev/sigaa-ifsc-mcp`
+  states it ported navigation and extraction from it). 🔴 **Last push `2024-04-10`: roughly `19`
+  months stale.** 🟢 **The whole Brazilian SIGAA tier's lineage traces to one unmaintained MIT
+  library. Adopting the tier means inheriting it — and maintaining it is a small, cheap,
+  nameable deliverable that would make a studio the de facto steward of the layer.**
+
+🔴 **Regulatory and market, `CITED, NOT READ`** (WebSearch summaries, `2026-11-15`):
+
+- 🇧🇷 **`PL 2338/2023`** — already held here — **classifies educational evaluation as HIGH-RISK and
+  would require a prior algorithmic impact assessment**; passed the Senate (Dec 2024), still
+  awaiting the Chamber of Deputies. 🔵 **Same direction of travel as Annex III, so a connector
+  built to `P68`'s gated write path is being built to BOTH regimes at once.**
+- 🇲🇽 **NEW to this base — the `Chapultepec Principles`**, a ten-point ethical framework for AI use
+  and development presented by **SECIHTI and the ATDT on `2026-01-29`**. 🔴 Mexico still has **no
+  enacted AI statute**; a bill introduced `2026-02-11` would create a specialised regulator able to
+  classify systems by risk and impose sanctions. 🔴 **Sources conflict on whether 2026 amendments
+  already create binding obligations — recorded as CONTESTED and not resolved this pass.**
+- 🇲🇽 **NEW — capacity, not regulation: the Public AI Training Center** operated by **INFOTEC and
+  TecNM** with `14` technology partners, targeting **`10,000` specialists graduated in 2026**.
+  🔵 **This base has repeatedly recorded a LATAM talent deficit as the binding constraint; this is
+  the first named state-run instrument aimed squarely at it, and it is a partnership surface.**
+- 🇵🇪 **Peru remains the only country in the region with an enacted AI law**; UNESCO operates an
+  AI-in-education observatory for Latin America and the Caribbean.
+
+🔴 **The Spanish-speaking gap, re-measured and NOT closed.** Spanish-language LATAM supply exists
+but is **unlicensed**: `sebassg/sia-unal-mcp` (🇨🇴 SIA UNAL),
+`Anggelie/mcp-local-server-uvg` (🇬🇹 UVG), `JuancitoCozzeti24/santa-rita-escolar`
+(🇵🇪 Google Classroom + **SieWeb**) and `KaioBorgesDev/siga-mcp` (🇧🇷 Centro Paula Souza) all carry
+**NO licence file** and are therefore **not build-safe**. 🟢 **The remedy is not a rewrite — it is
+a licence request to four named maintainers**, which is a far cheaper first task than it looks.
 
 #### Update 2026-11-15 (thirty-second pass, `p827`) — a NAMED, DATED state-level education-AI mandate, and three headline figures quarantined as unverified
 
@@ -4765,6 +4922,31 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-15 (thirty-third pass, `p828`) — the market-size estimates diverge further, and the spread is now wide enough to be the finding
+
+🔴 **`CITED, NOT READ`** — all figures below are from WebSearch summaries of vendor and
+market-research pages on `2026-11-15`; none was fetched in full, and none should be quoted to a
+client without its primary source.
+
+| Source | 2026 base | Horizon |
+|---|---|---|
+| Coherent Market Insights | `USD 11.40B` | → `USD 57.25B` by 2033 |
+| Markwide Research | `USD 8.7B` | → `USD 100.21B` by 2035 |
+| Grand View Research (AI **tutors** segment only) | `USD 3.6B` | → `USD 17.7B` by 2033 |
+
+🔴 **The 2026 base alone spans `8.7`–`11.4B`, a `31%` spread, and the 2035-ish horizons differ by
+roughly `1.75×` on overlapping definitions.** 🟢 **This base's standing practice applies: carry the
+RANGE and the disagreement, never a single headline number.** 🔵 **The spread is itself the useful
+artefact in a proposal — it is evidence that the category boundary ("AI in education") is not yet
+agreed, which is precisely why a client needs a scoped definition before a budget.**
+
+🔵 **Two directional claims worth holding, both unverified.** Tutoring and test-prep are reported
+as the fastest-growing deployers of education agents, and agents are reported moving beyond
+chatbots into **admissions, credit-transfer evaluation and exam operations** — the Annex III-shaped
+uses. 🔴 **Efficacy claims CONFLICT in the same window** (one source: `0.3`–`0.5` SD, *"comparable
+to human one-on-one tutoring"*; another: *"approximately half the effect size"*), and neither
+underlying study could be reached. **Not carried as a figure.**
 
 #### Update 2026-11-15 (thirty-second pass, `p827`) — a supranational body argues AGAINST the wrapped chatbot, governance replaces experimentation as the framing, and the market numbers still will not reconcile
 

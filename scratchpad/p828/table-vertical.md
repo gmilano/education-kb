@@ -1,0 +1,3 @@
+| Platform | Repo | Licence | Stars | What it is |
+|---|---|---|---|---|
+| mentingo | https://github.com/Selleo/mentingo | 🟢 **MIT — byte-read** (`1,062 B`, `sha256:ceb97717de1f…`) | 109 | **Global.** 🟢 **New this pass (`p828`) — an AI-NATIVE LMS, MIT, `109★` / `30` forks** (🇵🇱 Selleo). Self-hosted, positioned against Moodle, Docebo, TalentLMS, Thinkific, Teachable and Open edX, with an AI Mentor and role-play built in. 🔵 **Every other LMS on this shelf is GPL/AGPL. A permissively-licensed, AI-native LMS is rare enough to be a strategic option on its own: it can be forked and shipped commercially, which Moodle and Open edX cannot.** |

@@ -1,0 +1,67 @@
+slug	exists	field_lic	stars	forks	pushed	created	fork	bytes_lic	sha	size	desc
+vintatri/ufc-mcp	1	MIT	0	0	2026-11-13	2026-11-13	false	Servidor MCP somente leitura para estudantes da UFC. Consulta SIGAA, Turma Virtual, RU, calendário e notícias no seu computador.	MIT	14b73fb820b1	1070
+GallegoSz/sigaa-mcp	1	MIT	0	0	2026-11-02	2026-11-02	false		MIT	ffd6c671e025	1075
+Pedromaia0/sigaa-mcp	1	MIT	0	0	2026-10-28	2026-10-28	false		MIT	e124e155458b	1066
+heitorsDev/sigaa-ifsc-mcp	1	NOASSERTION	0	0	2026-11-03	2026-10-26	false	Servidor MCP para consultar o portal do discente do SIGAA do IFSC	MIT	933e7596139d	1274
+joaosnet/sigaa-ufpa-mcp	1	NONE	1	0	2026-11-08	2025-09-28	false	Este projeto implementa um servidor MCP (Model Context Protocol) específico para automatizar o acesso ao SIGAA da UFPA usando browser-use com actors p	-	-	-
+DaviPac/Sigaa-UFRPE-MCP	1	NONE	0	0	2026-09-05	2026-09-05	false		-	-	-
+sebassg/sia-unal-mcp	1	NONE	1	0	2026-03-13	2026-02-21	false	MCP server for SIA UNAL (Sistema de Información Académica - Universidad Nacional de Colombia, Sede Medellín)	-	-	-
+KaioBorgesDev/siga-mcp	1	NONE	0	0	2026-04-27	2026-04-26	false	MCP Server para o SIGA do Centro Paula Souza / Fatec. Expõe dados acadêmicos (faltas, notas, aulas) como tools para agentes de IA.	-	-	-
+Anggelie/mcp-local-server-uvg	1	NONE	0	0	2026-08-24	2026-08-23	false	Servidor MCP local desarrollado para el curso CC3067 de la Universidad del Valle de Guatemala.	-	-	-
+JuancitoCozzeti24/santa-rita-escolar	1	NONE	0	0	2026-11-11	2026-08-13	false	Servidor MCP para integrar ChatGPT con Google Classroom y SieWeb	-	-	-
+vTanco/google-classroom-mcp	1	MIT	1	0	2026-11-14	2026-10-22	false	Servidor MCP de Google Classroom para docentes: crea tareas, materiales, temas y anuncios desde Claude. Guía de instalación en español.	MIT	67133cbc05f3	1193
+RohanMuppa/brightspace-mcp-server	1	MIT	67	32	2026-11-15	2026-02-06	false	MCP server for Brightspace (D2L). Works with any school.	MIT	46f09377c1dd	1067
+JhostinAleck/brightspace-mcp	1	MIT	16	1	2026-11-09	2026-04-23	false	MCP server for D2L Brightspace with multi-strategy authentication (TOTP, OAuth, browser, etc.), retry/circuit breaker/cache tiers, and opt-in write op	MIT	7e8f7eca10f0	1069
+AnonymousOnyx22/brightspace-d2l-mcp	1	NOASSERTION	10	0	2026-11-12	2026-09-16	false	Brightspace D2L MCP server for Claude, ChatGPT, Cursor and Copilot. Knows what you already handed in, so it only tells you what is actually left. Due 	MIT	3f0e907830ac	1199
+cyanprot/brightspace-mcp	1	MIT	3	1	2026-10-31	2026-03-18	false	MCP server for D2L Brightspace LMS — access courses, assignments, grades, and content from Claude Code	MIT	13555788e65e	1067
+hamzakammar/mcp-workspace	1	MIT	7	2	2026-10-25	2025-12-31	false	AI-powered access to your D2L courses via MCP	MIT	2c8195bde63e	1067
+CarlSvejstrup/dtu-learn-mcp	1	MIT	0	0	2026-10-07	2026-10-03	false	DTU Learn MCP server and API client: use your DTU Learn (Brightspace/D2L) courses, deadlines, slides and Panopto lecture transcripts with Claude and o	MIT	8b9edfdb3e7b	1078
+yasharisherenow/mun-d2l-mcp	1	Apache-2.0	0	0	2026-10-02	2026-09-13	false	Private read-only MCP server for MUN Brightspace	Apache-2.0	032df62a0e36	11343
+micho911/brightspace-mcp	1	MIT	1	1	2026-10-07	2026-09-30	false	MCP server for D2L Brightspace, written in Go	MIT	1265b22d02bf	1071
+JesseTho/lamaku-mcp	1	MIT	0	0	2026-08-27	2026-08-20	false	MCP server for Lamakū (UH Mānoa D2L Brightspace). Reads courses and authors into them: pages, media, discussions, assignments, course packages. FERPA 	MIT	ce95c0d64e0c	1166
+sahildayal/mycourses-mcp	1	MIT	0	0	2026-08-22	2026-08-15	false	MCP server for D2L Brightspace (built for RIT myCourses) - check deadlines, read course material, submit assignments and post to discussions from any 	MIT	33b654addd10	1067
+WayneWei228/brightspace-hub-mcp	1	MIT	0	0	2026-07-03	2026-07-03	false	MCP server for Waterloo / D2L Brightspace students: deadlines, announcements, grades, Piazza — ask your AI what's due	MIT	a319b64a887c	1065
+CloudDown/student-mcp	1	MIT	1	0	2026-11-12	2026-09-29	false	Local MCP server that brings Moodle, Omnivox and Brightspace into your AI assistant. Rust, one-click installers for Windows, macOS and Linux.	MIT	f66d7cba9916	1065
+RobertLMcCrary/D2L-MCP	1	NOASSERTION	6	1	2026-10-16	2026-09-21	false	MCP for D2L and Canvas	MIT	e3fdd2a6e7ff	2180
+u-hashmi/desire2learn-mcp	1	NONE	0	0	2026-09-03	2026-08-31	false	MCP server for D2L Brightspace (Valence API) - bring courses, assignments, content, and discussions into Claude, ChatGPT, or any MCP client.	-	-	-
+HasNate618/Campus	1	MIT	1	0	2026-11-13	2026-08-01	false	Campus syncs Brightspace into local SQLite and files so you can search, chat, and verify answers against your actual course material.	MIT	8635fa05380e	1074
+Yokiwa/dueboard	1	MIT	2	0	2026-11-15	2026-11-05	false	Every deadline from Purdue Brightspace and the homework platforms your courses use (Gradescope, Pearson MyLab, WileyPLUS, ALEKS and more) on one page.	MIT	8ffdc80a2fb5	1070
+webswe/d2l-student-cli	1	MIT	0	0	2026-11-15	2026-11-14	false	Unofficial read-only Brightspace command-line client	MIT	12ec826fc5cb	1062
+BrightspaceUI/core	1	Apache-2.0	81	32	2026-11-13	2019-03-06	false	A collection of accessible, free, open-source web components for building Brightspace applications.	Apache-2.0	452791837ece	10420
+Kimmahone/edu-workspace-mcp	1	MIT	1	0	2026-11-15	2026-09-02	false	Google Workspace for Education MCP server for Docs, Sheets, Slides, Forms, Drive, and Classroom	MIT	f1112f62a389	1086
+Fawzankhan-404/Classroom-Desk	1	Apache-2.0	1	0	2026-11-14	2026-10-17	false	Open-source integration that brings authorized Google Classroom course and coursework context to ChatGPT through MCP.	Apache-2.0	440ed275da0c	10796
+adriasantacreu/google-classroom-mcp	1	MIT	2	1	2026-11-01	2026-03-19	false		MIT	ff80e29676f1	1072
+Mattlo0546/classroom-mcp	1	MIT	0	0	2026-10-20	2026-10-09	false	Google Classroom MCP server for Claude, Codex & Cursor: courses, assignments, announcements and class-slide download. Read-only, single Python file, n	MIT	6bb7530c06a1	1066
+AnonymousOnyx22/google-classroom-student-mcp	1	MIT	0	0	2026-11-01	2026-10-14	false	Free read only Google Classroom server for AI apps. To-do, due dates, missing work, grades and announcements.	MIT	dc4d909e25a2	1071
+alanmagno1/google-classroom-mcp	1	MIT	0	0	2026-09-22	2026-09-10	false	MCP server for Google Classroom: courses, pending assignments, submissions and materials from Claude, with several Google accounts	MIT	18e77745fac0	1066
+pengusto/google-classroom-mcp	1	NOASSERTION	1	0	2026-10-23	2026-09-08	false	Local Google Classroom MCP for teachers: validated tools, scheduled drafts, file attachments and paginated course access.	UNRECOGNISED	d4c75ff24ed9	3052
+OmarNiazi/classroom-mcp	1	MIT	0	0	2026-10-06	2026-09-20	false	Google Classroom MCP server for students: let your AI assistant see your classes, what's due, and announcements. Read-only.	MIT	338410dba9d6	1066
+G36maid/moodle-mcp	1	MIT	29	0	2026-10-20	2026-10-12	false	MCP server that lets AI agents operate Moodle: courses, assignments, forums, grades and files-as-markdown.	MIT	08a6d8b965cc	1063
+kesaruhasun/mcp-sliit-courseweb	1	MIT	7	3	2026-10-18	2026-04-29	false	A Model Context Protocol (MCP) server to automate SLIIT Courseweb (Moodle). List modules, track academic deadlines, check assignment status, and bulk-	MIT	58d603d92c0c	1068
+dawidlinek/eportal-moodle-skill	1	MIT	4	0	2026-11-08	2026-11-06	false	Your E-portal, for your AI agent: deadlines, assignments, materials and grades from any Moodle site. 	MIT	7e84866e9e31	1067
+simonseifert/merlin-mcp	1	MIT	1	0	2026-11-15	2026-10-24	false	Read-only MCP server for Merlin (SRCE Moodle): grades, deadlines, files and messages for AI agents, with phone-approved sends. Cloudflare Worker or No	MIT	73861d7bb1e2	1069
+do-2k25-28/moodle-um	1	MIT	0	0	2026-11-11	2026-11-10	false	MCP server + CLI for Moodle UM (ENT/CAS): courses, assignments, submissions, quizzes and files for AI agents.	MIT	7264a4d40c5d	1083
+chapmanwm/moodlectl	1	MIT	0	0	2026-10-26	2026-10-26	false	Unofficial CLI for University of Glasgow Moodle — mirror your courses (files, briefs, announcements, deadlines, grades) into local files you or an AI 	MIT	2ff4b5ffb33f	1065
+kadmalcun/moodle-mcp	1	MIT	0	0	2026-11-15	2026-10-30	false	東京工科大学の Moodle を AI から読むためのローカル MCP サーバー	MIT	385fc6657118	1065
+Waldo0926/monash-study-kit	1	MIT	1	0	2026-11-15	2026-09-26	false	把 Monash 的 Moodle 和 Ed 接进 Claude、Codex、Cursor 等 AI 软件（本地 MCP + 命令行，macOS / Windows / Linux）	MIT	1fad4bbd4b56	1065
+jamestesting0/tum-mcp	1	MIT	0	0	2026-11-15	2026-10-20	false	An unofficial, unified study platform integrating Moodle, Artemis, TUM Live, and TUMonline to streamline academic workflows.	MIT	879840521d30	1091
+Carlosito606/ai-personal-assistant	1	MIT	1	0	2026-10-17	2026-10-17	false	Self-hosted AI agent on Claude Code that plans my university week: USOS/Moodle sync, OR-Tools weekly planner, job queue with verification, Discord bot	MIT	62dd7775799c	1070
+MattFor/moodle-mcp	1	MIT	0	0	2026-11-15	2026-11-15	false	MCP server that lets AI agents use a Moodle account: courses, deadlines, grades, files and homework submissions.	MIT	edd5981ce14c	1063
+DenizCiger/moodle-mcp	1	MIT	0	0	2026-10-19	2026-10-19	false	MCP server for Moodle: courses, materials, assignments, deadlines, grades, quizzes and forums for AI agents	MIT	04314fb25dd9	1067
+Teci-AI/moodle-mcp-connector	1	MIT	0	0	2026-11-05	2026-10-21	false	MCP server that connects AI agents to Moodle for reading and authoring course content. Maintained by Teci	MIT	c8bcb50d415c	1103
+arnoutvree/moodle-plugin-scaffold	1	MIT	0	0	2026-10-31	2026-09-14	false	AI coding agent skill that scaffolds a new Moodle plugin project: CLAUDE.md context layer + code skeleton, from a bundled template.	MIT	0da73281889e	1067
+arnoutvree/moodle-plugin-vibe-review	1	MIT	1	0	2026-10-23	2026-09-02	false	AI coding agent skill that reviews Moodle plugin changes against Moodle's coding, security and API conventions before you commit.	MIT	0da73281889e	1067
+falkenslab/moodle-sandbox	1	NONE	0	0	2026-10-25	2026-09-25	false	A real Moodle in Docker with seeded courses and a campus's plugins, to test programs and AI agents that work with Moodle	-	-	-
+andynur/moodlens	1	MIT	0	0	2026-10-20	2026-10-16	false	All-in-one Moodle AI agent for students. Free, local-first Chrome side panel extension. Read-only, integrity-safe, no backend, no telemetry.	MIT	225bebd8c6eb	1090
+csmediapro/moodle-mcp-server	1	AGPL-3.0	2	0	2026-11-07	2026-05-15	false	Open-source MCP server that connects AI agents to Moodle LMS data through Moodle Web Services.	AGPL-3.0	4df3c306ddda	34522
+yasserhegazy/lab-grader-skill	1	MIT	0	0	2026-11-13	2026-10-31	false	Agent skill for TAs: grade lab submissions with Claude Code or Codex. Rubric, parallel cheap graders, AI & copy detection, Arabic feedback, Moodle CSV	MIT	d19e060e122a	1069
+Navitallabs/navital-gym	1	Apache-2.0	3	0	2026-11-15	2026-10-27	false	Deterministic, auto-graded environments for AI agents on Indian-reality tasks: UPI, GST, trip planning, forms, Hindi/Hinglish support. Rule-based grad	Apache-2.0	58d1e17ffe51	11357
+Selleo/mentingo	1	MIT	109	30	2026-11-13	2024-08-01	false	Open-source AI-native LMS with AI Mentor & role-play. Self-hosted alternative to Moodle, Docebo, TalentLMS, Thinkific, Teachable and Open edX.	MIT	ceb97717de1f	1062
+labsai/EDDI	1	Apache-2.0	394	132	2026-11-15	2016-10-13	false	Config-driven engine that turns JSON into production-grade AI agents. Multi-agent orchestration, 19+ LLM providers, MCP/A2A protocols, RAG, persistent	Apache-2.0	87879dc0f164	9152
+wongcyrus/Google-AI-Classroom	1	MIT	1	1	2026-11-14	2025-09-14	false	Edge-to-cloud multimodal AI agent for smart classrooms and exam invigilation. Combines client-side MediaPipe, LiteRT Whisper & Gemma with Gemini(Enter	MIT	5d83f6d388b3	1061
+SidneyBissoli/uis-mcp-server	1	MIT	1	1	2026-11-14	2026-08-08	false	Provenance-first MCP server for UNESCO UIS statistics (education, science, culture) — remote, Cloudflare Workers	MIT	5ad55eed2dbc	1087
+cyanheads/oecd-mcp-server	1	Apache-2.0	5	2	2026-11-13	2026-06-05	false	Search, explore, and query 1,500+ OECD statistical datasets (national accounts, employment, trade, education, health) from the OECD SDMX API via MCP. 	Apache-2.0	7915fc5b0477	11317
+Feynman520/d01-p01-hwp-form-automation-mcp	1	MIT	0	1	2026-11-14	2026-07-07	false	MCP server that fills Korean government/school HWP forms end-to-end via Hancom Office COM automation: convert, extract, field, fill, PDF (한글 양식 자동화)	MIT	d9f635086306	1066
+Haris0059/ibu-mcp	1	MIT	1	0	2026-09-22	2026-05-11	false	MCP server for International Burch University (IBU) student information system — query grades, attendance, exams, tuition, and notifications via Claud	MIT	f61dd7d46379	1072
+Akramjon-koder/faroz-mcp	1	MIT	0	0	2026-11-01	2026-10-16	false	Faroz MCP server — remote MCP (OAuth) that connects Claude, ChatGPT, Gemini & Cursor to a kids' education platform: courses, exercises, games, homewor	MIT	99b8d19e6a31	1084
+gmilano/invented-control-t970-xyz	{"message":"Validation Failed","errors":[{"message":"The listed users and repositories cannot be searched either because the resources do not exist or you do not have permission to view them.","resource":"Search","field":"q","code":"invalid"}],"documentation_url":"https://docs.github.com/v3/search/","status":"422"}	-	-	-
