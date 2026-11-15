@@ -108,6 +108,49 @@ across EMEA.
 
 ### North America
 
+#### Update 2026-11-15 (thirty-fourth pass, `p829`) — the WORKFORCE segment enters this file, with a dated federal funding change and `0` build-safe supply behind it
+
+🔴 **This file had `0` occurrences of `upskilling`, `reskilling`, `apprenticeship` or
+`Workforce Pell` before this block.** 🔵 **That is a demand-side blind spot, not a small one: the
+adjacent corporate market is larger than the AI-in-education market this file has been tracking.**
+
+🔵 **The money, all `CITED, NOT READ` from WebSearch summaries, `2026-11-15`, and the spread is
+wide enough that only the DIRECTION is reliable:**
+• Global corporate upskilling & reskilling at **`$400B` (2026) → `$800B` (2034)** (Stratistics MRC).
+• AI-powered corporate training at **`$7.49B` (2026)** (Mordor Intelligence) — the narrower,
+AI-specific cut of the same segment.
+• The US corporate education market for AI and data science cited at **`$15B`**.
+• The Josh Bersin Company characterises AI as disrupting a **`$400B`** corporate training market *"at
+a quickening pace"*.
+🔴 **The two `$400B` figures are the same segment measured by different houses, not two markets —
+do not add them.**
+
+🟢 **The dated instrument, and it is the most actionable item in this block: Workforce Pell.**
+From **`2026-07-01`**, eligible SHORT-TERM training programmes — primarily non-degree offerings tied
+to workforce outcomes — can receive federal Pell dollars (`CITED, NOT READ`). 🔵 **A federal funding
+rail opening for short-cycle vocational programmes is a demand event with a date on it, and it lands
+on exactly the tier `T102` found has almost no open supply.**
+
+🔵 **Vendor movement on the same seam:** Instructure launched **Canvas Career**, a skills-first AI
+LMS for workforce learning; Accenture launched an enterprise-wide reskilling platform with AI-driven
+skill assessments and role-based pathways in **April 2026** (`CITED, NOT READ`). 🔴 **The second is a
+direct competitive signal for a studio: the integrator-built reskilling platform is already a
+product category.**
+
+🔴 **The adoption/planning gap, which is where an engagement actually starts:** `87%` of L&D teams
+report using AI in some form, while Gallup data cited alongside it finds only `25%` of US employees
+say their organisation has communicated a clear plan for integrating AI (`CITED, NOT READ`). 🔵 **The
+same embed-versus-produce gap `T3` named for engineering, measured in the training function.**
+
+🔴 **Supply side, measured first-hand this pass and it is a nil:** the `apprenticeship standards`
+leg returned ~`10` North American repositories and **`0` build-safe**. The one real artefact,
+[`ApprenticeshipStandardsDotOrg`](https://github.com/ApprenticeshipStandardsDotOrg/ApprenticeshipStandardsDotOrg)
+(`4★`), is **`CC0-1.0` over a Rails application** — byte-read, `7,048 B`, `sha256:a2010f343487…` — and
+is refused as software under `T78` while remaining usable as DATA. 🟢 **The opportunity is explicit:
+a one-line relicence request would turn it into `P69`'s North America adapter, which is a cheaper
+opening move than a rewrite.**
+
+
 #### Update 2026-11-15 (thirty-third pass, `p828`) — the SUPPLY side of the North American LMS estate is mapped for the first time, and the vendor itself ships permissive components
 
 🟢 **First-hand this pass (`gh api search/repositories` + `raw.githubusercontent.com` byte-read,
@@ -1250,6 +1293,43 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-15 (thirty-fourth pass, `p829`) — vocational training is INSIDE Annex III point 3, and EMEA is the only region with build-safe supply for it
+
+🟢 **The regulatory fact this base had not written down: EU AI Act Annex III point 3 names
+vocational education and training — and adult education — alongside schools and universities**
+(`CITED, NOT READ`, WebSearch summaries, `2026-11-15`). 🔵 **So every compliance position this file
+holds for the school and university tier transfers to the vocational tier unchanged, and a studio
+does not get to treat a corporate academy or a training provider as unregulated.**
+
+🔵 **The four captured functions, which are the whole test** — a system is high-risk only if it
+performs one of them: determining access, admission or assignment to institutions; **evaluating
+learning outcomes**; assessing the appropriate level of education a person will receive; and
+monitoring/detecting prohibited behaviour during tests. 🟢 **One source additionally notes the scope
+EXCLUDES systems whose impact falls on educators and training staff rather than on learners** — which,
+if it holds, is the cleanest low-risk design corridor available for a teacher-facing build
+(`CITED, NOT READ`; verify against the Official Journal before relying on it).
+
+🔴 **Calendar, unchanged from this file's existing holding and re-confirmed:** Annex III high-risk
+obligations deferred to **`2027-12-02`** by Regulation (EU) 2026/1744 (in force `2026-07-27`), with
+Annex I product-embedded systems moving to `2028-08-02`; Commission draft Article 6 classification
+guidelines published **May 2026**. 🔵 Article 50 transparency and the AI-literacy duty apply NOW.
+🔴 **Sources still differ on whether the deferral is final or provisional (Digital Omnibus
+provisional agreement, `2026-05-07`) — recorded as a disagreement rather than resolved.**
+
+🟢 **Supply side, and EMEA is the ONLY region that has any.** `T102`'s statutory-document channel
+returned **`4` build-safe, byte-read, MIT artefacts, all EMEA**: 🇩🇪 three tools around the
+*Ausbildungsnachweis*/*Berichtsheft* — the statutory German IHK apprenticeship record — and 🇬🇧
+`ksb-diff`, which holds England's apprenticeship standards as per-version structured data.
+🔵 **Two independent German authors implementing the same statutory record is the signature `T77`
+used to establish the institution-integration tier: it marks a POPULATION, not a find.**
+
+🔴 **And the gap beside it:** there is **no open-source apprenticeship-management PLATFORM** in
+either market. The German IHK and English EPAO tiers are served by closed vendors, which is why
+`P69` is written as an assembly rather than as a customisation. 🔵 **For a studio this is the better
+position of the two: the integration points are documented statutory artefacts rather than a
+vendor's private API.**
+
 
 #### Update 2026-11-15 (thirty-third pass, `p828`) — a Council of Europe AI-LITERACY recommendation enters this base, and four NATIONAL higher-ed system brands are recorded for the first time
 
@@ -2441,6 +2521,38 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-15 (thirty-fourth pass, `p829`) — the fastest-growing region, and a vocational supply of ZERO measured in two national systems
+
+🔵 **Demand, `CITED, NOT READ` (WebSearch summaries, `2026-11-15`):** APAC is repeatedly placed as
+the fastest-growing region for AI in education — one house cites **`20.9%` CAGR for 2024–2029**
+against a North America that still leads on revenue. 🔴 **One commentator's caveat is worth carrying
+verbatim, because this file cites a lot of CAGRs: *growth rates measure investment, not impact.***
+
+🔵 **Policy instruments added this pass:** Clarivate published a comparative study of AI policy and
+AI ETHICS EDUCATION across **seven** Asia-Pacific jurisdictions — 🟢 **the first cross-jurisdiction
+comparative this file can point an APAC engagement at instead of assembling seven country positions
+by hand.** Cambridge English convened **200+** senior leaders including ministry officials at a Kuala
+Lumpur summit in **April 2026**; EtonHouse rolled out an enterprise AI workspace across its network
+aligned to Singapore's responsible-AI posture. 🔴 **Educator confidence lags adoption: fewer than
+half of educators report strong confidence in their institution's policies or in government
+regulation** — the APAC form of the governance-is-the-barrier reading this file holds globally.
+
+🔴 **Supply side, measured first-hand this pass, and it is a nil in both systems probed.**
+`T102`'s channel was run against the two largest national vocational systems in the region:
+• 🇮🇳 **`NSDC` / Skill India** — ~`7` repositories, **`0` build-safe**; the leg returned personal
+certificate collections and training-institute marketing, not software.
+• 🇮🇩 **`SMK` / Dapodik** — ~`9` repositories, **`0` build-safe**; mostly school profile sites. The
+single MIT candidate, `hrz0n/sisinfosmk` (`2★`), **last pushed `2023-10-01`** — recorded as STALE and
+not filed.
+🔵 **An informed nil, not silence: the queries, the counts and the one near-miss are named so a
+later pass can re-run them rather than re-discover them.**
+
+🟢 **The reading for an APAC engagement:** the region has the fastest demand growth, a usable
+seven-jurisdiction policy comparative, and **no open vocational supply to start from** — so `P69`'s
+standard-first opening (does the national body publish its competency standards as structured data,
+or only as PDFs?) is the qualifying question here too, and step 1 is likely to BE the deliverable.
+
+
 #### Update 2026-11-15 (thirty-third pass, `p828`) — supply recorded across six APAC jurisdictions, including a FORMS dependency no foreign toolchain can satisfy
 
 🟢 **First-hand, byte-read `2026-11-15`:**
@@ -3617,6 +3729,43 @@ procurement-led" corner of that matrix, which `P5` did not previously have a nam
 example of.
 
 ### LATAM
+
+#### Update 2026-11-15 (thirty-fourth pass, `p829`) — the national vocational systems are the right target and the open supply behind them is `0` agents against `30` pieces of coursework
+
+🔴 **The correction this block exists to make.** `T82`/`P59` taught this base to find LATAM supply
+by searching the SYSTEM OF RECORD by brand, and it worked — `SIGAA` produced the entire Brazilian
+cluster. 🔴 **Run the identical instrument against the region's VOCATIONAL institutions and it
+returns a different object class entirely:**
+
+| Brand leg | Repositories | Licensed agents | What the rows are |
+|---|---|---|---|
+| 🇨🇴 `SENA sofia plus` | `10`+ | 🔴 **`0`** | attendance exercises, portal clones, `sena_sofia_plus` ×`3` identically named |
+| 🇧🇷 `senai` | `10`+ | 🔴 **`0`** | *situações de aprendizagem*, semester assignments, course repos |
+| 🇲🇽 `conalep` | `10`+ | 🔴 **`0`** | a campus library, a cafeteria app, an inventory system |
+
+🔵 **All three are national vocational systems at enormous scale, and their GitHub footprint is
+student homework named after the school that set it (`T103`).** 🔴 **A LATAM vocational engagement
+scoped from a repository search would report a `30`-repository open ecosystem that does not exist.**
+🟢 **The correct finding is an informed gap, and the correct opening is `P69`'s: start from the
+published competency standard, not from a repository.**
+
+🔵 **The qualifying question is public and cheap to answer per country:** does the national body
+publish its *competencias laborales* / *normas de competência* as STRUCTURED DATA, or only as PDFs?
+🟢 **If only as PDFs, `ksb-diff`'s one-file-per-published-version layout is the specification to
+copy, and building that register is itself the first deliverable** — the same move `P64` makes when
+it opens with a licence request rather than a rewrite.
+
+🔵 **Demand context carried forward from this file's existing LATAM holdings, re-confirmed this
+pass (`CITED, NOT READ`):** the Digital Education Council's LATAM survey reports `92%` of students and
+`79%` of faculty actively engaging with AI across `7,319` faculty responses at `29` institutions;
+UNESCO IESALC (September 2026) finds adoption *"neither uniform nor evenly distributed"*, with a
+marked public/private university gap; coverage of the readiness gap reports only `~30%` believing
+their institution has responded effectively; the IDB reviews `193` regional initiatives and
+characterises the pattern as hybrid, context-sensitive systems rather than imported models; EdTech
+Hub and Fundación Ceibal announced a partnership in September 2026. 🔴 **The adoption-versus-
+governance gap is the regional constant, and it is sharper in vocational training than in higher
+education because the governance layer there is thinner.**
+
 
 #### Update 2026-11-15 (thirty-third pass, `p828`) — the PRIVATE half of the Brazilian market gains its first row, the Q-Acadêmico and SUAP legs are filed, and the cluster's upstream is found UNMAINTAINED
 
@@ -4922,6 +5071,32 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-15 (thirty-fourth pass, `p829`) — a whole segment was missing from this base, and a licence left the commons
+
+🔴 **Measured absence, before anything was filed.** `grep -ric` over every curated file returned
+`0` for `upskilling`, `0` for `reskilling`, `0` for `apprenticeship`, `0` for `Ausbildung`, `0` for
+`Berichtsheft`, `0` for `KSB`, `0` for `TVET` and `0` for `Workforce Pell`. 🔵 **Thirty-three passes,
+`324` agents, `101` trends and `68` recipes, all of them about schools and universities — while the
+adjacent vocational and corporate-training segment carries the larger budget and sits inside the same
+Annex III point.** 🟢 `p829` opens it: `T102`–`T104`, `11` agent rows, `1` foundation row, `P69`.
+
+🟢 **The transferable method, and it is the most reusable thing in this pass for the other KBs in
+this estate.** When a sector returns a nil, stop searching the SECTOR and find out **what document
+its participants are legally obliged to file**. That document has a name; the name appears in
+repository names; and the people automating it understand the domain. 🔵 **`tvet`,
+`vocational training ai agent` and `apprenticeship mcp` returned `0` build-safe rows across five
+legs; `Ausbildungsnachweis` and `apprenticeship standards` returned `4` in two.**
+
+🔴 **And a warning that applies to every shelf in this estate: supply can LEAVE.**
+[`affromero/Sotto`](https://github.com/affromero/Sotto) — `35★`, `4,109` commits, self-described as
+*"self-hosted, open source AI language learning"* — **relicensed from `AGPL-3.0` to `PolyForm
+Noncommercial License 1.0.0`** between this base's `2026-10-20` and `2026-11-13` readings, confirmed
+by byte-read today (`4,563 B`, `sha256:ffcca38841ad…`). 🔴 **GitHub's licence field reads
+`NOASSERTION` both before and after, so field-based triage cannot see the move at all.** 🔵 **A
+licence is a fact with a DATE. `P65`'s canonical-diff gate must run on a schedule against shipped
+dependencies, not once at shortlist time** (`T104`).
+
 
 #### Update 2026-11-15 (thirty-third pass, `p828`) — the market-size estimates diverge further, and the spread is now wide enough to be the finding
 

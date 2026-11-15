@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
+**One hundred and four** trends — derived trends: **104** — 🟢 **Thirty-fourth pass (`p829`, 2026-11-15): `T102`–`T104` added** — the WORKFORCE/vocational tier entered for the first time in `34` passes, after `grep` returned `0` occurrences of `upskilling`, `reskilling`, `apprenticeship`, `Ausbildung`, `Berichtsheft`, `KSB`, `TVET` and `Workforce Pell` across every curated file in this base, and found by searching the name of the STATUTORY DOCUMENT rather than the sector, the institution or the pedagogy — `T82`'s rule on a FOURTH indexing axis (`T102`); the institution-brand instrument shown to INVERT between tiers, surfacing integration agents at the university tier (`SIGAA`, `Brightspace`) and student COURSEWORK at the vocational tier (`SENA`, `SENAI`, `CONALEP` — ~`30` repositories, `0` licensed agents), which makes the brand axis a correct instrument in one tier and a trap in the next (`T103`); and licence drift measured in the CLOSING direction for the first time here — `affromero/Sotto` relicensed `AGPL-3.0` → `PolyForm Noncommercial 1.0.0` between two of this base's own passes, invisible to GitHub's licence FIELD, which reads `NOASSERTION` in both states (`T104`). 🔵 **Gate-confirmed after insertion: `python3 -I ingest/derive-counts.py`.** 🟢 **Channel note: BOTH channels live and bidirectionally controlled this pass** — `gh api search/repositories` (live→`total_count=1`, invented→HTTP `422`) and `raw.githubusercontent.com` byte-read (live→`200`, invented→`404`), so EVERY licence in `p829` is byte-read. 🔴 **`curl -sI` was NOT used as an oracle: `T923`/`T970` hold.** 🔴 Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.
+
 **One hundred and one** trends — derived trends: **101** — 🟢 **Thirty-third pass (`p828`, 2026-11-15): `T99`–`T101` added** — the LMS agent tier measured on the VENDOR-BRAND axis and found to be Brightspace, D2L and Blackboard at `147` repositories against roughly `5` previously shelved here, while this base names those three brands `1,100` times in its own prose (`T99`, `T86`/`T82` confirmed on a third indexing axis); the institution-bound agent established as the DOMINANT FORM, with `30` of this pass's `61` rows naming one named institution or its system in the repository name, which converts `T82` from an observation into a discovery protocol (`T100`); and the WRITE PATH shown to be already common in that tier while the controls on it remain the exception — five rows that submit or author, against three independently-invented controls: out-of-band phone approval, server-side RBAC, and credential non-possession (`T101`, and it lands as the EMEA calendar makes the write path the regulated one). 🔵 **Gate-confirmed after insertion: `python3 -I ingest/derive-counts.py`.** 🟢 **Channel note: BOTH channels live this pass — `gh api search/repositories` bidirectionally controlled (live→`total_count=1`, invented→HTTP `422`) and `raw.githubusercontent.com` byte-read restored after `p827`'s `403`s, so EVERY licence in `p828` is byte-read.** 🔴 **`curl -sI` re-confirmed structurally useless here: it returns `200 Connection Established` — the proxy's `CONNECT` line — for live AND invented addresses alike.** 🔴 Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.
 
 **Ninety-eight** trends — derived trends: **98** — 🟢 **Thirty-second pass (`p827`, 2026-11-15): `T96`–`T98` added** — the grading gap re-tested as a query rather than carried forward as an assertion, and CONFIRMED with named negative evidence, so grading is established as a BUILD rather than an adoption (`T96`); `p826`'s *"OpenMAIC has never cut a release"* corrected against the rendered Releases page, where `v1.4.2` is a full release (`T97`, and a reminder that a pre-release banner in a README is not the release channel); and the OECD's 2026 Digital Education Outlook recorded as the first SUPRANATIONAL argument against the wrapped general-purpose chatbot and in favour of purpose-built educational AI (`T98`, which hands a studio the opening argument of an education proposal). 🔴 **Count derived this pass with `grep -c '^## T'`, NOT with `ingest/derive-counts.py`:** the gate script could not be executed in this pass's environment (the runner declined to execute repository-provided code), so the count is asserted on a direct heading tally and is marked as such rather than claimed GREEN. 🔴 **Channel note, unchanged from `p826`: every repository claim below is `WebFetch`-read from the rendered GitHub page on `2026-11-15`; `curl` to `github.com` returned `403` on every attempt this pass, so no byte-read over `raw.githubusercontent.com` was possible and NO licence in `p827` is byte-read.** Every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.
@@ -96,6 +98,133 @@ the second time.** 🔵 **The amendment uses no component discovered this pass**
 three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
+
+## T102 — The vocational supply is a NIL under its own vocabulary and a POPULATION under the statutory document. `T82`'s rule, on a fourth axis
+
+🔴 **The absence, measured first.** Before any search was run, `grep -ric` over every curated file
+in this base returned, on `2026-11-15`:
+
+| Token | `agents/top.md` | `repos/foundations.md` | `verticals/solutions.md` | `intel/market.md` | `intel/trends.md` |
+|---|---|---|---|---|---|
+| `upskilling` | `0` | `0` | `0` | `0` | `0` |
+| `reskilling` | `0` | `0` | `0` | `0` | `0` |
+| `apprenticeship` | `0` | `0` | `0` | `0` | `0` |
+| `Ausbildung` | `0` | `0` | `0` | `0` | `0` |
+| `Berichtsheft` | `0` | `0` | `0` | `0` | `0` |
+| `KSB` | `0` | `0` | `0` | `0` | `0` |
+| `TVET` | `0` | `0` | `0` | `0` | `0` |
+| `Workforce Pell` | `0` | `0` | `0` | `0` | `0` |
+
+🔵 **Thirty-three passes, `324` agents, `101` trends and `68` recipes had been built without one
+row about vocational education and training** — a segment the EU AI Act names in the SAME Annex III
+point 3 as schools and universities, and whose adjacent corporate market is cited at `$400B` for
+2026 (`CITED, NOT READ`).
+
+🔴 **Searching the SECTOR returns nothing usable.** Five legs on the `gh api search/repositories`
+channel, recency-ranked with no star floor, `2026-11-15`:
+
+| Leg | Returned | Build-safe education rows |
+|---|---|---|
+| `tvet in:name,description` | school-management systems, personal portfolios | 🔴 **`0`** |
+| `vocational training ai agent` | profile READMEs, a French payroll MCP, a public-API index | 🔴 **`0`** |
+| `apprenticeship mcp` | job boards (`zapplyjobs/*`, `veritahire/*`), internship lists | 🔴 **`0`** |
+| `skills training agent` | coding-agent skill packs, a reverse-engineering tool | 🔴 **`0`** |
+| `competency framework mcp` | an ITSM tool, an RDF context framework | 🔴 **`0`** |
+
+🟢 **Searching the STATUTORY DOCUMENT returns a tier.** The artefact a German apprentice is legally
+required to keep is the *Ausbildungsnachweis* (the *Berichtsheft*); the artefact an English
+apprenticeship standard is written in is the *KSB* (knowledge, skills and behaviours). Both are
+document names, not sector names — and both are productive:
+
+| Leg | Build-safe, byte-read | Filed |
+|---|---|---|
+| `Ausbildung IHK in:name,description` | 🟢 **`3`** — `SergeyZakh/Ausbildungs-Berichtsheft` (MIT), `marre868/Ausbildungsnachweis` (MIT), `dimitrex93-cyber/lernpfad-python-cpp` (MIT) | `agents/top.md` |
+| `apprenticeship standards in:name,description` | 🟢 **`1`** — `GRobertsDuyile/ksb-diff` (MIT) | `repos/foundations.md` |
+
+🔵 **This is `T82`'s rule on a FOURTH indexing axis.** The supply was never missing; it was indexed
+under a name no query containing the word *education*, *vocational* or *training* will ever reach.
+After the SYSTEM OF RECORD (`T82`, SIGAA), the LANGUAGE (`T84`/`T87`, Vietnamese), and the PLATFORM
+BRAND (`T86`, `T99`), the fourth axis is **the regulated artefact the learner must produce**.
+
+🟢 **The operational form, for any later pass or any other KB in this estate:** when a sector
+returns a nil, stop searching the sector and find out **what document its participants are legally
+obliged to file**. That document has a name, the name is used in repository names, and the people
+automating it are the people who understand the domain.
+
+🔴 **Regional denominator, stated because a nil that is not placed looks like coverage:**
+
+| Region | Legs run | Repositories seen | Build-safe |
+|---|---|---|---|
+| 🟢 EMEA | `Ausbildung IHK`, `apprenticeship standards` | ~`20` | 🟢 **`4`** (3 🇩🇪, 1 🇬🇧) |
+| 🔴 North America | `apprenticeship standards` | ~`10` | 🔴 **`0` build-safe** — one real artefact (`ApprenticeshipStandardsDotOrg`) refused on `CC0-1.0` over software (`T78`) |
+| 🔴 LATAM | `SENA sofia plus`, `senai`, `conalep` | ~`30` | 🔴 **`0`** — see `T103` |
+| 🔴 APAC | `NSDC skill india`, `SMK dapodik` | ~`16` | 🔴 **`0`** — the Indian legs returned certificates and institute marketing, not software; the Indonesian legs returned school profile sites and one 2023 MIT SMK information system (`hrz0n/sisinfosmk`, `2★`, last push `2023-10-01`, carried as stale rather than filed) |
+
+## T103 — The institution-brand instrument INVERTS between tiers: integration agents at the university, student coursework at the vocational school
+
+🔴 **`T82` and `P59` tell a studio to search the system of record by brand, and at the university
+tier that is correct and repeatedly productive** — `SIGAA` produced this base's entire Brazilian
+cluster, `Brightspace`/`D2L`/`Blackboard` produced `T99`'s `147` repositories and `p828`'s `54` rows.
+🔵 **`p829` ran the identical query shape against the vocational tier's institution brands and it
+returned a different KIND of object.**
+
+| Brand leg | Repositories returned | Licensed agents | What the rows actually are |
+|---|---|---|---|
+| `SENA sofia plus` 🇨🇴 | `10`+ | 🔴 **`0`** | `proyectosenasoftplus`, `Control-de-Inasistencia-SENA-Sofia-Plus`, `sena_sofia_plus` ×`3` identically named — attendance exercises and portal clones, all `0★`, all unlicensed |
+| `senai` 🇧🇷 | `10`+ | 🔴 **`0`** | `CodePlay-SENAI`, `Curso_senai`, `Projeto-Senai-3-4`, `Atividades-Programacao-de-Aplicativos-SENAI` — explicitly *situações de aprendizagem* and semester assignments |
+| `conalep` 🇲🇽 | `10`+ | 🔴 **`0`** | `Biblioteca-CONALEP`, `cafeteria-conalep`, `Portal-CONALEP`, an inventory system for one campus |
+
+🔴 **The inversion has a cause, and the cause is what makes it predictable rather than bad luck.**
+At the university tier the institution runs a system the student wants to automate from OUTSIDE, so
+the brand name attaches to an INTEGRATION. At the vocational tier the institution teaches software
+construction, so the brand name attaches to the student's SUBMITTED WORK. 🔵 **Same instrument,
+same query shape, opposite object class — and the vocational result is ~`30` repositories of noise
+that a star floor would not filter, because coursework and a `0★` genuine agent are
+indistinguishable by stars (`T85`, `T91`).**
+
+🟢 **The disambiguator is the one `T102` supplies:** at the vocational tier, search the statutory
+DOCUMENT, not the institution. `Ausbildungsnachweis` returned `3` build-safe rows from the same
+channel in the same minutes that `SENAI` returned `0`.
+
+🔴 **The cost of not knowing this is concrete and regional.** A LATAM vocational engagement run on
+`T82`'s rule would conclude that SENA, SENAI and CONALEP have an open ecosystem of `30`+
+repositories. 🔵 **They have an open ecosystem of `0` agents and `30` pieces of homework**, and the
+correct LATAM finding is an informed gap, not a shortlist.
+
+## T104 — Licence drift runs in the CLOSING direction too, and GitHub's licence field is blind to it in both states
+
+🔴 **`affromero/Sotto` is recorded TWICE in this base, with two different licences, and both
+records were correct when they were taken.**
+
+| Record | Date | Licence recorded | Bytes |
+|---|---|---|---|
+| `repos/trending.md:31080` (pass `334`) | `2026-10-20` | 🔴 `AGPL-3.0` | `34,523 B` |
+| `agents/trending.md:1652` (fifteenth pass) | `2026-11-13` | 🔴 `PolyForm Noncommercial 1.0.0` | — |
+| 🟢 **`p829` byte-read, this pass** | **`2026-11-15`** | 🔴 **`PolyForm Noncommercial License 1.0.0`** | **`4,563 B`, `sha256:ffcca38841ad…`** |
+
+🔵 **`Sotto` relicensed from an OSI-approved copyleft licence to a source-available non-commercial
+one between `2026-10-20` and `2026-11-13`** — a `35★` project with `4,109` commits in eight months,
+describing itself as *"self-hosted, open source AI language learning"*. 🔴 **It is no longer open
+source under the OSI definition, and its own description has not caught up.**
+
+🔴 **GitHub's licence FIELD reported `NOASSERTION` BEFORE the change and reports `NOASSERTION`
+AFTER it.** The field was uninformative in both states, so no field-based triage — the one most
+pipelines use — could have detected the move. 🔵 **This extends `T81`/`T88`/`T93`: the field is not
+merely wrong in both directions, it is INSENSITIVE TO CHANGE, which is a worse property for a
+dependency you intend to ship.**
+
+🟢 **Three operational consequences.**
+🔵 **(1)** A licence is a FACT WITH A DATE, not an attribute. Every shelved licence in this base is
+a claim about the day it was read, and `p829` is the first pass to prove a shelved licence can go
+stale while the repository stays live and popular.
+🔵 **(2)** Only an APPEND-ONLY history can detect this. The drift was visible solely because
+`repos/trending.md` still holds the `2026-10-20` reading; a file rewritten each pass would have
+shown `PolyForm` with no contradiction and no finding.
+🔵 **(3)** The direction matters commercially. This base has repeatedly recorded permissive supply
+arriving; `T104` is the first recorded instance of supply LEAVING — and the mechanism (a single
+maintainer swapping `LICENSE`) is available to every `0★`–`35★` row on these shelves.
+🟢 **`P65`'s canonical-diff licence gate already has the control; `T104` is the evidence that it
+must be run on a SCHEDULE against shipped dependencies, not once at shortlist time.**
 
 ## T99 — The LMS agent tier is not Canvas and Moodle. It is Brightspace, D2L and Blackboard, at `147` repositories against `5` shelved
 

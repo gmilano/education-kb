@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
+**Sixty-nine** concrete recipes — derived recipes: **69**. 🟢 **Thirty-fourth pass (`p829`): `P69` added** — the apprenticeship evidence-and-readiness pipeline, and the first recipe in this file aimed at VOCATIONAL education and training rather than at a school or a university. 🔵 **Premise is `T102`: the supply for this tier exists, is MIT, and is indexed under the name of the statutory document the learner must file (`Ausbildungsnachweis`, `KSB`) rather than under the sector — so the components were found, byte-read and assembled in one pass, while `T103` explains why the obvious institution-brand search returns `30` pieces of student coursework instead.** 🔴 **The EU AI Act boundary is drawn before the first node, because Annex III point 3 names vocational education and training in the same breath as schools, and because the difference between an ADVISORY readiness score and a GRADING input is the difference between a low-risk build and a high-risk one.** 🟢 **All five permissive components byte-read on `2026-11-15`; the regulatory calendar is `CITED, NOT READ`.**
+
 **Sixty-eight** concrete recipes — derived recipes: **68**. 🟢 **Thirty-third pass (`p828`): `P68` added** — the heterogeneous-LMS student-record connector: one domain model with vendor adapters for Blackboard, D2L/Brightspace and Moodle, built from byte-read permissive servers rather than rediscovered protocol knowledge, orchestrated on `labsai/EDDI` (Apache-2.0), with the write path gated by two controls lifted from the cohort itself — `merlin-mcp`'s out-of-band phone approval and `bb-mcp`'s server-side RBAC — and scoped against the Digital Omnibus split this base already holds (Article 50 and AI-literacy live now, stand-alone Annex III duties at `2027-12-02`). 🔵 **Premise is `T99`/`T100`: no multi-campus client runs one LMS, and the institution-bound repositories carry the authentication and pagination knowledge that is the expensive part.** 🟢 **All components byte-read on `2026-11-15`.**
 
 **Sixty-seven** concrete recipes — derived recipes: **67**. 🟢 **Thirty-second pass (`p827`): `P67` added** — the rubric-grading build, which is the first recipe in this file whose premise is that NOTHING CAN BE ADOPTED: `T96` established that the entire open grading supply is student projects and licence conflicts, so `P67` reimplements the two correct ideas found inside the rejected repositories (deterministic arithmetic outside the model; a rubric induced from a `15%` human-scored sample and self-tested on held-out items) on components these shelves already hold, and draws the EU AI Act Annex III boundary before the first node because *"assess learning outcomes"* makes the system high-risk by construction (`P67`, Global build with an EMEA compliance anchor). 🔴 **Count derived with `grep -c '^## P'`, NOT with `ingest/derive-counts.py`** — the gate script could not be executed in this pass's environment, so the count is a direct heading tally and is marked as such rather than claimed GREEN. 🔴 **No component in `P67` was byte-read this pass: `curl` to `github.com` returned `403` throughout, so all licences cited here are READ FROM THE RENDERED SIDEBAR via `WebFetch` on `2026-11-15`.**
@@ -139,6 +141,107 @@ decision instead of a constraint:
   and it is the one argument that still favours `ltijs` on a long engagement.
 
 ---
+
+## P69 — The apprenticeship evidence-and-readiness pipeline: standard → evidence → readiness, assembled from permissive parts (EMEA anchor, portable to North America and LATAM)
+
+🟢 **The premise, and it is measured.** `T102` established that the vocational tier's open supply
+is real, MIT-licensed and actively maintained, but is indexed under the STATUTORY DOCUMENT rather
+than under the sector — which is why `34` passes of this base held `0` rows of it. `T103` established
+that the obvious institution-brand search (`SENAI`, `SENA`, `CONALEP`) returns student coursework,
+not agents. 🔴 **And `verticals/solutions.md` records the consequence: there is NO open-source
+apprenticeship-management PLATFORM to adopt.** 🔵 **So this is a BUILD, like `P67` — but unlike
+`P67` the parts exist and three of them are already in production use by the people who need them.**
+
+🔵 **The client shape.** A training provider, a chamber of commerce, a corporate academy or a
+national skills agency running apprenticeships or vocational certification. The recurring problem is
+not teaching — it is that **the standard, the evidence and the assessment live in three unconnected
+places**: a PDF standard that is revised without a diff, a paper or spreadsheet logbook the learner
+fills in weekly, and an assessment the learner meets unprepared.
+
+### 🟢 The components, every licence byte-read on `2026-11-15`
+
+| Layer | Component | Licence (byte-read) | Role in this build |
+|---|---|---|---|
+| **Standard / competency spec** | [`GRobertsDuyile/ksb-diff`](https://github.com/GRobertsDuyile/ksb-diff) | 🟢 MIT (`1,071 B`, `sha256:f1331c0a2569…`) | 🇬🇧 Holds each published version of an apprenticeship standard as DATA, one file per version. **Supplies the competency map and, critically, the DIFF when the standard is revised** |
+| **Curriculum binding** | [`dimitrex93-cyber/lernpfad-python-cpp`](https://github.com/dimitrex93-cyber/lernpfad-python-cpp) | 🟢 MIT (`1,094 B`, `sha256:d525e491d703…`) | 🇩🇪 The worked example of a curriculum pinned to a named statutory syllabus (*Ausbildungsrahmenplan für Fachinformatiker*). **Copy the BINDING, not the content** |
+| **Evidence capture** | [`SergeyZakh/Ausbildungs-Berichtsheft`](https://github.com/SergeyZakh/Ausbildungs-Berichtsheft) | 🟢 MIT (`1,072 B`, `sha256:04bf792574d5…`) | 🇩🇪 Turns a timesheet export (Clockify, Harvest, Jira+Tempo, Kimai, Toggl) into the statutory IHK record as Word/PDF. **The learner files no new document; the system reads one they already produce** |
+| **Learning engine** | [`Agono0/learning-hub`](https://github.com/Agono0/learning-hub) | 🟢 MIT (`1,082 B`, `sha256:7704bac11c1e…`) | Spaced repetition, retrieval practice, interleaving and a curriculum engine, **driveable end-to-end over MCP** — the engine, not a tutor |
+| **Readiness / assessment prep** | [`gn02ash/cert-coach`](https://github.com/gn02ash/cert-coach) | 🟢 MIT (`1,064 B`, `sha256:0a649bce619f…`) | Domain-weighted plan that reschedules on a missed day; **RAG with a page citation per claim and an explicit refusal when the documents do not cover the question**; readiness score per domain |
+| **Orchestration** | [`labsai/EDDI`](https://github.com/labsai/EDDI) | 🟢 Apache-2.0 (`9,152 B`, byte-read `p828`) | 🇩🇪 Config-driven multi-agent runtime (JSON → running service, MCP/A2A, RAG, persistent state). **Already carried by `P68`; reuse the same runtime rather than standing up a second one** |
+| **Feedback contract** | [`JohnBilousov/vocabit-mcp`](https://github.com/JohnBilousov/vocabit-mcp) | 🟢 MIT (`1,070 B`, `sha256:ed0657fb89fe…`) | 🔵 **Copy the SHAPE, not necessarily the component: `create_study_set` writes, `get_set_results` reads back what the learner found hard.** A loop that does not read performance back is an open loop |
+
+🔴 **Zero copyleft in the delivered tree.** 🔴 **The traps adjacent to this recipe, named so nobody
+walks into them:** `ApprenticeshipStandardsDotOrg` is `CC0-1.0` over a Rails application (`T78`) — its
+DATA is usable, its code is not clean to vendor; `elevate-for-humanity/Elevate-lms` is `NOASSERTION`;
+and `polendol/AgenticTeacher`, if used for level-matching, is MIT code over `CC BY-NC-SA 4.0` MODEL
+WEIGHTS that must be retrained for a commercial deliverable.
+
+### 🔴 Draw the regulatory boundary BEFORE the first node
+
+🔴 **EU AI Act Annex III point 3 covers vocational education and training explicitly** — not only
+schools and universities — and captures a system performing one of four functions: determining
+access or admission; **evaluating learning outcomes**; assessing the appropriate level of education a
+person will receive; and monitoring prohibited behaviour during tests. (`CITED, NOT READ`, from
+WebSearch summaries, `2026-11-15`.)
+
+🔵 **The boundary runs straight through the readiness score, and the design must choose a side:**
+
+| Design | Who reads the score | Annex III point 3 | Verdict |
+|---|---|---|---|
+| 🟢 **Advisory** — the readiness score is shown to the LEARNER and to nobody else; the assessor never sees it | learner | Not *evaluating learning outcomes* by the provider | 🟢 **Build it this way first** |
+| 🔴 **Gating** — the score decides who is entered for assessment, or is shown to the EPAO/assessor | provider, assessor | 🔴 **Yes — high-risk** | 🔴 Full Annex III duties; do not slide into this by adding one dashboard |
+
+🔴 **The calendar (`CITED, NOT READ`):** Annex III high-risk obligations were deferred to
+**`2027-12-02`** by Regulation (EU) 2026/1744 / the Digital Omnibus, in force since `2026-07-27`;
+**Article 50 transparency and the AI-literacy duty apply NOW.** 🔵 **So the advisory build ships
+today with disclosure and literacy obligations only — and the gating build has a dated deadline to
+design against rather than a vague future.**
+
+### 🟢 The wiring
+
+1. 🟢 **Ingest the standard as data.** `ksb-diff`'s per-version files become the competency
+   map. **Pin the engagement to a VERSION.** When the standard is revised, the diff — which KSBs were
+   added, removed or reworded, which grading descriptors moved — is a tool output, not two PDFs and
+   an afternoon.
+2. 🟢 **Bind the curriculum to the map.** Follow `lernpfad-python-cpp`'s binding: every unit cites
+   the KSB it serves. **Coverage then becomes a query** — which KSBs no unit teaches.
+3. 🟢 **Capture evidence from what the learner already produces.** `Ausbildungs-Berichtsheft`'s
+   route — timesheet export in, statutory record out — is the whole trick. 🔵 **Keep its privacy
+   posture as a product property: it runs without an account and the data stays in the browser.**
+4. 🟢 **Map each evidence entry to a KSB.** This is the only node that needs a model, and it is a
+   CLASSIFICATION with a closed label set (the KSB list from step 1) — which makes it testable against
+   a human-labelled sample, exactly as `P67` induces a rubric from a `15%` sample.
+5. 🟢 **Run the learning engine on the gaps.** `learning-hub` over MCP, scheduled against the KSBs
+   with no evidence behind them.
+6. 🟢 **Score readiness per KSB domain, advisory only.** `cert-coach`'s two controls are the ones
+   worth keeping verbatim: **a page citation for every claim, and an explicit refusal when the
+   documents do not cover the question.** 🔵 A readiness score that cannot cite the evidence behind
+   it is exactly what an EPAO will reject.
+7. 🟢 **Close the loop.** `vocabit-mcp`'s `get_set_results` shape: what the learner found hard
+   feeds step 5's next schedule. 🔴 **Without this the pipeline is a report generator.**
+8. 🔴 **Gate the write path.** The moment anything in this pipeline WRITES to the provider's system
+   of record, apply the two controls `p828`'s cohort supplied and `P68` already carries:
+   **out-of-band approval** (`merlin-mcp`) and **server-side RBAC** (`bb-mcp`). 🔵 The statutory record
+   is a legal document; an agent must not be the last writer before submission.
+
+### 🔵 Porting it
+
+🟢 **EMEA is the anchor** because that is where the components are: 🇬🇧 `ksb-diff` for England's
+standards and 🇩🇪 three German IHK tools. 🔵 **The architecture is jurisdiction-shaped, not
+country-shaped: it needs (a) a published competency standard, (b) a mandated learner evidence record
+and (c) a terminal assessment.**
+🔴 **North America:** the standards data exists (`ApprenticeshipStandardsDotOrg`) but is `CC0-1.0`
+over software — **the first task is a licence request, not a rewrite**, exactly as `P64` begins. The
+funding tailwind is dated: Workforce Pell for short-term, workforce-outcome programmes from
+**`2026-07-01`** (`CITED, NOT READ`).
+🔴 **LATAM:** SENA 🇨🇴, SENAI 🇧🇷 and CONALEP 🇲🇽 run exactly this shape at national scale and the
+open supply is **`0` agents against ~`30` pieces of student coursework (`T103`)**. 🔵 **The LATAM
+engagement therefore starts from the standard document, not from a repository search** — and the
+qualifying question is public: does the national body publish its *competencias laborales* as
+structured data, or only as PDFs? 🟢 **If only as PDFs, step 1 IS the deliverable and `ksb-diff`'s
+one-file-per-version layout is the specification to copy.**
+🔴 **APAC:** `NSDC`/Skill India 🇮🇳 and SMK/Dapodik 🇮🇩 returned `0` build-safe supply this pass; the
+same standard-first opening applies.
 
 ## P68 — The heterogeneous-LMS student-record connector: one domain model, four vendor adapters (Global build, EMEA control anchor)
 

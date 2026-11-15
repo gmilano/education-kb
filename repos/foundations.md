@@ -87,7 +87,22 @@ above was graded on the licence question alone.**
 | https://github.com/langchain-ai/langchain | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`) | 149546 | **Region: Global.** The model and tool abstraction layer beneath the above. 🟡 **Shelved with a deliberate caution: this base's compose recipes should depend on `langgraph` for control flow and on `langchain-core` for interfaces, not on the `langchain` meta-package, whose surface moves faster than an education deliverable's support window.** 🔵 **Note for the byte-read gate: its `LICENSE` is on `master`, not `main` — a `main`-only probe returns `404` and would record a false `NO_LICENCE_FILE`, which is a live defect in any sweep that assumes the default branch name** |
 | https://github.com/teppei-miyashita/agenticstar-agentcore | 🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last touched `2026-08-12` | 0 | 🔴 **Region: APAC. Shelved as a WARNING row — the worked example for `T89`.** This is the source repository that the PyPI package `agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository`, and it holds no commits at all. 🟢 **The package itself is genuinely MIT** (`License-Expression: MIT` in the wheel, `dist-info/licenses/LICENSE`, `1,078 B`, `sha256:2afbb5fc…`) **and genuinely installable** — 🔴 **but it is wheel-only, single-release (`2026-09-17`), and unreadable at its stated address, while hard-pinning `langgraph==1.1.10`, `langchain==1.2.18`, `fastapi==0.136.0` and `agenticstar-platform==0.5.32`.** 🔵 **Do NOT add it to a delivery tree. It is here so that the next pass asking "is the AGENTIC STAR stack adoptable?" finds the answer already measured: licensed yes, auditable no** |
 
-## Foundational repos — 148 rows
+## Foundational repos — 149 rows
+
+### Filed by `p829` (2026-11-15) — `1` row, and `1` is the honest figure
+
+🟢 **The vocational leg (`T102`) produced exactly ONE foundation-grade artefact, and it is filed
+here rather than on the agent shelf because it is not an agent: it is versioned REFERENCE DATA over a
+statutory instrument.** 🔴 **The other three vocational finds are tools and are on `agents/top.md`;
+the US counterpart was REFUSED on licence (`CC0-1.0` over software, `T78`) and is recorded in that
+file's rejection table.** 🔵 **`1` row is what the leg yielded and `1` is what is filed — `T63`'s
+reading holds, that the education FOUNDATION layer was built between `2014` and `2024` and new supply
+arrives as agents and as thin data wrappers.**
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| [`GRobertsDuyile/ksb-diff`](https://github.com/GRobertsDuyile/ksb-diff) | 🟢 **MIT — byte-read** (`1,071 B`, `sha256:f1331c0a2569…`, holder `2026 GRobertsDuyile`) | 0 | **Region: EMEA.** 🟢 **New this pass (`p829`) — the first APPRENTICESHIP row in this base and the anchor of `T102`.** 🇬🇧 England's apprenticeship standards and their assessment plans held as structured data, **one file per published version**, so that a revision can be diffed by a tool rather than by reading two PDFs side by side: which knowledge, skills and behaviours (KSBs) were added, removed or reworded, and which grading descriptors moved. 🔵 **It belongs in the public education-DATA layer `p826` opened: a deterministic wrapper over data that is already public and already authoritative, which is what makes an agent's output defensible to an end-point assessment organisation.** 🟢 Validated in CI (`validate.yml`); its README names the exact users this base has never served — curriculum developers, training providers and EPAOs. Pushed `2026-11-07` |
+
 
 ### Filed by `p828` (2026-11-15) — `6` rows: the orchestration engine, the LMS vendor's own
 components, the Brazilian system-of-record lineage, and two supranational statistics sources

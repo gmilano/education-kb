@@ -4,6 +4,51 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirty-fourth pass, `p829`) — **`1` foundation row, and the full denominator of a `22`-leg vocational sweep**
+
+🟢 **Foundations `148` → `149`. One row, byte-read, and `1` is the honest figure rather than a
+padded one.**
+
+| Repo | Licence | Why it is a foundation and not an agent |
+|---|---|---|
+| [`GRobertsDuyile/ksb-diff`](https://github.com/GRobertsDuyile/ksb-diff) | 🟢 **MIT — byte-read**, `1,071 B`, `sha256:f1331c0a2569…`, `0★`, pushed `2026-11-07` | 🇬🇧 **Versioned REFERENCE DATA over a statutory instrument, not a tool.** England's apprenticeship standards and assessment plans, one file per published version, CI-validated (`validate.yml`), so a revision is diffed by a tool rather than by reading two PDFs. 🔵 Belongs in the public education-DATA layer `p826` opened: a deterministic wrapper over data that is already public and already authoritative — which is what makes an agent's output defensible to an end-point assessment organisation |
+
+### 🔴 The denominator — every leg run this pass, including the ones that returned nothing
+
+🔵 **Recorded in full because an unrecorded nil is indistinguishable from coverage, and because
+`T103` means a later pass would otherwise re-run the losing legs.**
+
+| # | Leg (`gh api search/repositories`, recency-ranked, no star floor) | Repos seen | Build-safe |
+|---|---|---|---|
+| 1 | `tvet in:name,description` | `12` | 🔴 `0` |
+| 2 | `vocational training ai agent in:name,description` | `12` | 🔴 `0` |
+| 3 | `apprenticeship mcp in:name,description` | `12` | 🔴 `0` |
+| 4 | `skills training agent in:name,description` | `12` | 🔴 `0` |
+| 5 | `competency framework mcp in:name,description` | `12` | 🔴 `0` |
+| 6 | 🇨🇴 `SENA sofia plus` | `10` | 🔴 `0` — coursework (`T103`) |
+| 7 | 🇧🇷 `senai` | `10` | 🔴 `0` — coursework (`T103`) |
+| 8 | 🇲🇽 `conalep` | `10` | 🔴 `0` — coursework (`T103`) |
+| 9 | 🇮🇳 `NSDC skill india` | `7` | 🔴 `0` — certificates and institute marketing |
+| 10 | 🇮🇩 `SMK dapodik` | `6` | 🔴 `0` — one MIT near-miss, `hrz0n/sisinfosmk` (`2★`), **last push `2023-10-01`, STALE, not filed** |
+| 11 | 🇩🇪 `Ausbildung IHK` | `10` | 🟢 **`3`** → `agents/top.md` |
+| 12 | 🇬🇧 `apprenticeship standards` | `10` | 🟢 **`1`** → this file |
+| 13–16 | `language learning mcp`, `language tutor agent`, `spaced repetition mcp`, `CEFR agent` | `40` | 🟢 **`8`** → `agents/top.md` |
+| 17–22 | The mandated star-ranked battery (4 global legs) + `Sotto` and `ed-donner/agents` re-probes | — | 🔴 **`0` new** — `40`th consecutive nil |
+
+🟢 **Yield by channel, which is the number worth carrying forward:** the SECTOR vocabulary returned
+`0` build-safe rows from `60` repositories across five legs; the STATUTORY DOCUMENT name returned `4`
+from `20` across two. 🔵 **That ratio is `T102`.**
+
+### 🔴 A record in THIS file is superseded by today's bytes
+
+🔴 **Line ~`31080` of this file (pass `334`, `2026-10-20`) records
+[`affromero/Sotto`](https://github.com/affromero/Sotto) as `AGPL-3.0`, `34,523 B`.** 🟢 **Byte-read
+`2026-11-15`: `PolyForm Noncommercial License 1.0.0`, `4,563 B`, `sha256:ffcca38841ad…`.** 🔵 **The
+earlier record is NOT corrected in place — this file is append-only and the old reading is the
+evidence.** Both were right when taken: `Sotto` relicensed out of open source between the two passes.
+🔴 **The disposition is unchanged (refused either way); the licence NAME changed, and GitHub's
+field reads `NOASSERTION` in both states.** See `T104`.
+
 ## `2026-11-15` (thirty-third pass, `p828`) — **`6` foundation rows and `1` vertical platform, and the Brazilian cluster's upstream is found UNMAINTAINED**
 
 🟢 **Foundations `142` → `148`; verticals `131` → `132`. Every licence byte-read on

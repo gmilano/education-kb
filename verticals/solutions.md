@@ -7,6 +7,30 @@ updated: 2026-11-15
 # Education vertical platforms — real systems to customize AI on top of
 
 
+## Thirty-fourth pass (`p829`, 2026-11-15) — `0` rows added, and the vocational PLATFORM tier is declared a measured gap
+
+🔴 **`p829` added NO rows to this shelf, and the gap it looked for is now measured rather than
+assumed.** The pass went looking for the vocational/TVET equivalent of Moodle — a training-provider
+or apprenticeship-management platform a studio could customise AI on top of — and the mandated
+platform leg (`open source platform education ERP CRM MIT Apache vocational training`) returned
+**`OpenEduCat` and nothing else**, on its own vendor pages, declared `LGPL-3.0` Community Edition.
+🔵 **`OpenEduCat` is already on this shelf and its marketing page does list vocational training
+institutes among its targets — but a vendor page is not a grant and a general school ERP is not an
+apprenticeship-management system.**
+
+🔴 **The declared gap, stated so a later pass does not mistake silence for coverage:** this base
+holds **`0` open-source platforms for apprenticeship or vocational-training ADMINISTRATION** —
+no training-provider system, no end-point-assessment platform, no competency-record system. 🟢 **What
+`p829` did find at that tier is NOT a platform but four single-purpose tools and one reference
+dataset (`T102`), filed to `agents/top.md` and `repos/foundations.md`.** 🔵 **The reading is that the
+vocational platform layer is proprietary (the German IHK and English EPAO markets are served by
+closed vendors) and that `P69` therefore ASSEMBLES one from permissive parts rather than adopting
+one — which is why `P69` is written as a build.**
+
+🔵 **Named candidates refused, so they are not re-probed:** `elevate-for-humanity/Elevate-lms`
+(`NOASSERTION`, `1★`) and `ApprenticeshipStandardsDotOrg` (`CC0-1.0` over a Rails application,
+`T78`) — the second with regret, since it is the only North American artefact in the tier.
+
 ## Thirty-second pass (`p827`, 2026-11-15) — `0` rows added, and the reason is recorded rather than padded
 
 🔴 **`p827` added NO rows to this shelf.** The mandated ERP/platform leg ran and returned the set

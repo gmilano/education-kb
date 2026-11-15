@@ -4,6 +4,78 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirty-fourth pass, `p829`) — **the WORKFORCE tier, found by searching the name of a statutory document**
+
+🟢 **`11` build-safe agent rows added (`324` → `335`), `1` foundation row, `3` trends
+(`T102`–`T104`), `1` recipe (`P69`), `6` rejections, and one record inside this repository corrected
+against today's bytes. Every licence BYTE-READ.**
+
+### What moved
+
+🔴 **`T102`: this base had `0` rows about vocational education and training after `33` passes.**
+Measured before anything was filed — `grep -ric` returned `0` for `upskilling`, `reskilling`,
+`apprenticeship`, `Ausbildung`, `Berichtsheft`, `KSB`, `TVET` and `Workforce Pell` across every
+curated file. 🔵 **The segment sits inside the SAME EU AI Act Annex III point 3 as schools and
+carries a larger adjacent budget (`$400B` corporate upskilling, 2026, `CITED, NOT READ`).**
+
+🟢 **And the supply was there all along, indexed under the STATUTORY DOCUMENT.** Five legs on the
+sector vocabulary (`tvet`, `vocational training ai agent`, `apprenticeship mcp`,
+`skills training agent`, `competency framework mcp`) returned **`0` build-safe education rows** — job
+boards, profile READMEs and one reverse-engineering tool. Two legs on the name of the regulated
+artefact returned **`4`**: `Ausbildungsnachweis`/`Berichtsheft` (the statutory German IHK
+apprenticeship record) and `KSB`/`apprenticeship standards` (England). 🔵 **`T82`'s rule on a FOURTH
+indexing axis, after the system of record, the language and the platform brand.**
+
+🔴 **`T103`: the institution-brand instrument INVERTS between tiers.** `SENA sofia plus` 🇨🇴,
+`senai` 🇧🇷 and `conalep` 🇲🇽 returned ~`30` repositories and **`0` licensed agents** — attendance
+exercises, a campus cafeteria app, `sena_sofia_plus` ×`3` identically named. 🔵 **At the university
+tier the institution brand surfaces integration agents; at the vocational tier the identical query
+surfaces student coursework, because that tier TEACHES software construction.** 🔴 **A LATAM
+vocational engagement scoped from a repository search would report an open ecosystem that does not
+exist.**
+
+🔴 **`T104`: supply can LEAVE, and the licence field cannot see it go.** `affromero/Sotto` is
+recorded in this base as `AGPL-3.0` on `2026-10-20` and as `PolyForm Noncommercial 1.0.0` on
+`2026-11-13`; today's byte-read confirms PolyForm (`4,563 B`, `sha256:ffcca38841ad…`). 🔵 **Both
+records were right when taken — a `35★`, `4,109`-commit project left open source for source-available
+between two passes.** 🔴 **GitHub's field reads `NOASSERTION` in BOTH states.** 🟢 **Only the
+append-only rule made this visible: a file rewritten each pass would show PolyForm with no
+contradiction and no finding.**
+
+### 🟢 Filed this pass — the vocational tier (EMEA)
+
+| Repo | Licence (byte-read) | ★ | Region | Why it is new |
+|---|---|---|---|---|
+| [`SergeyZakh/Ausbildungs-Berichtsheft`](https://github.com/SergeyZakh/Ausbildungs-Berichtsheft) | 🟢 MIT, `1,072 B`, `04bf792574d5…` | 1 | EMEA | 🇩🇪 The statutory IHK apprenticeship record generated from a timesheet export (Clockify, Harvest, Jira+Tempo, Kimai, Toggl). 🔵 **No account, data stays in the browser** |
+| [`marre868/Ausbildungsnachweis`](https://github.com/marre868/Ausbildungsnachweis) | 🟢 MIT, `1,086 B`, `2cfc27ba0606…` | 1 | EMEA | 🇩🇪 **Second independent implementation of the same statutory record** — what makes this a tier and not a find |
+| [`dimitrex93-cyber/lernpfad-python-cpp`](https://github.com/dimitrex93-cyber/lernpfad-python-cpp) | 🟢 MIT, `1,094 B`, `d525e491d703…` | 0 | EMEA | 🇩🇪 Curriculum bound to the **Ausbildungsrahmenplan für Fachinformatiker** — a named statutory syllabus, reusable as a competency map |
+| [`GRobertsDuyile/ksb-diff`](https://github.com/GRobertsDuyile/ksb-diff) → `repos/foundations.md` | 🟢 MIT, `1,071 B`, `f1331c0a2569…` | 0 | EMEA | 🇬🇧 England's apprenticeship standards as **one file per published version**, so a revision is a tool diff rather than two PDFs |
+
+### 🟢 Filed this pass — the language-and-study tier (Global)
+
+| Repo | Licence (byte-read) | ★ | Why it is new |
+|---|---|---|---|
+| [`NiravRVaghasiya/Polyglot-Swarm`](https://github.com/NiravRVaghasiya/Polyglot-Swarm) | 🟢 MIT, `1,072 B`, `c76f2bf915da…` | 1 | LangGraph multi-agent tutor with a **per-skill competence model** that plans the next lesson; runs `100%` local |
+| [`JohnBilousov/vocabit-mcp`](https://github.com/JohnBilousov/vocabit-mcp) | 🟢 MIT, `1,070 B`, `ed0657fb89fe…` | 0 | 🔵 **The closed loop:** writes a study set to a real iOS app, then `get_set_results` reads back which cards were hard and which were never reached |
+| [`gn02ash/cert-coach`](https://github.com/gn02ash/cert-coach) | 🟢 MIT, `1,064 B`, `0a649bce619f…` | 0 | 🔵 **The bridge to `T102`:** domain-weighted plan that reschedules on a missed day, **a page citation per claim and an explicit refusal when the documents do not cover the question** |
+| [`Agono0/learning-hub`](https://github.com/Agono0/learning-hub) | 🟢 MIT, `1,082 B`, `7704bac11c1e…` | 0 | The learning ENGINE rather than a tutor — high-effect methods from the literature, driveable over MCP |
+| [`polendol/AgenticTeacher`](https://github.com/polendol/AgenticTeacher) | 🔴 **SPLIT: code MIT / model `CC BY-NC-SA 4.0`**, `1,056 B`, `1126322e2cc8…` | 0 | YouTube → CEFR-matched exercises (DeBERTa-v3 + LoRA, Qwen3-4B/Ollama). 🔴 **Weights must be retrained for a commercial deliverable — `T78`, a fourth time** |
+| [`JesusPaz/litto`](https://github.com/JesusPaz/litto) | 🟢 MIT, `1,066 B`, `8e132fefdc0e…` | 0 | FSRS-6 SwiftUI flashcards + MCP. 🔴 **Region `Global`, not `LATAM`: a bilingual ES/EN surface is not a jurisdiction** |
+| [`Luissalet/HypatiaHoard`](https://github.com/Luissalet/HypatiaHoard) | 🟢 MIT, `1,066 B`, `fff33d08b8ee…` | 0 | Local study app with an **exact-math engine** — `P67`'s control (deterministic arithmetic outside the model) reinvented independently |
+| [`chdominguez/questlog`](https://github.com/chdominguez/questlog) | 🟢 MIT, `1,068 B`, `3319b49a25a9…` | 0 | 🔵 **Courses are plain files in git validated by one schema** — a course as a reviewable artefact instead of vendor rows |
+
+### 🔴 Refused this pass, with reasons, so they are not re-probed
+
+| Repo | Reason |
+|---|---|
+| [`TruptiLone/multi-framework-agent-orchestrator`](https://github.com/TruptiLone/multi-framework-agent-orchestrator) | 🔴 **Silent republish, upstream NAMED BY HASH for the first time.** Its `LICENSE` is byte-identical to [`ed-donner/agents`](https://github.com/ed-donner/agents) (`6,628★`) — same `1,066 B`, same `sha256:ab6328fe6d4d…`, holder `Copyright (c) 2025 Ed Donner` — while GitHub reports `fork=false`. 🔵 **Not a licence breach (MIT permits it, notice intact); a SUPPLY-COUNTING defect** |
+| [`ApprenticeshipStandardsDotOrg`](https://github.com/ApprenticeshipStandardsDotOrg/ApprenticeshipStandardsDotOrg) | 🔴 `CC0-1.0` over a Rails application (`7,048 B`, `a2010f343487…`) — `T78`. 🔵 **Data usable, software refused.** Licence-request candidate: it is `P69`'s missing North America adapter |
+| `el-abid/english-teacher-agent` · `nickderobertis/spanish-language-tutor` · `GothHeit/PRADA` · `luharry2821/pingo-voice-backend` | 🔴 **No licence file — each byte-probed at `10` addresses, all HTTP `404`.** Includes a LiveKit Spanish tutor and an OFFLINE local-model tutor, both of which this base would have shelved on sight had either carried a grant |
+
+🔴 **The mandated star-ranked battery nilled a `40`th consecutive time** — DeepTutor, OpenEduCat,
+Langflow, `microsoft/ai-agents-for-beginners`, `frappe`, all already shelved. 🟢 **The productive
+channel was `T102`'s: the statutory document name, recency-ranked, no star floor.**
+
 ## `2026-11-15` (thirty-third pass, `p828`) — **the LMS tier this base named `1,100` times and had shelved five rows of**
 
 🟢 **`54` build-safe agent rows added (`270` → `324`), all licences BYTE-READ; `6` foundations,

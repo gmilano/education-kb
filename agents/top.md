@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-15
 ---
 
+## Thirty-fourth pass (`p829`, 2026-11-15) — the WORKFORCE tier: `33` passes, `324` agents, `101` trends, `68` recipes, and `0` rows about the segment next door
+
+🟢 **`11` build-safe agent rows filed (`324` → `335`), `1` foundation row (`148` → `149`), `3`
+trends (`T102`–`T104`), `1` recipe (`P69`), `6` rejections recorded with their reasons, and one dated
+record inside this repository CORRECTED against today's bytes.**
+
+🔴 **The finding that organised this pass is an ABSENCE, and it was measured before anything was
+filed.** `grep -ric` across every curated file in this base returned **`0`** for `upskilling`, `0` for
+`reskilling`, `0` for `apprenticeship`, `0` for `Ausbildung`, `0` for `Berichtsheft`, `0` for `KSB`,
+`0` for `TVET` and `0` for `Workforce Pell`. 🔵 **Thirty-three passes built a university-and-school
+knowledge base and never crossed into vocational education and training — the adjacent segment the
+EU AI Act names in the SAME Annex III point as schools, and the one carrying the larger adjacent
+budget (corporate upskilling and reskilling at `$400B` in 2026, `CITED, NOT READ`).**
+
+### 🟢 Channel conditions — both channels live, both controlled in both directions
+
+| Channel | `p828` | `p829` | Control run this pass |
+|---|---|---|---|
+| `gh api search/repositories -f q="repo:OWNER/NAME"` | 🟢 LIVE | 🟢 **LIVE** | 🟢 **Bidirectional:** `repo:moodle/moodle` → `total_count=1`, `GPL-3.0`, `7,615★`; `repo:gmilano/invented-control-p829-zzz` → **HTTP `422`** |
+| `raw.githubusercontent.com` byte-read | 🟢 LIVE | 🟢 **LIVE** | 🟢 **Bidirectional:** `moodle/moodle` `COPYING.txt` → `200`; the invented address → **`404`**. Every licence below is byte-read |
+| `curl -sI` on a `github.com` repository address | 🔴 useless | 🔴 **not used** | 🔴 `T923`/`T970` hold — the proxy answers `200 Connection Established` for live and invented addresses alike, so it was not run as an oracle this pass |
+| `ingest/derive-counts.py` | 🟢 ran | 🟢 **ran, BEFORE and AFTER** | 🟢 Baseline `324`/`148`/`101`/`68`/`132` all GREEN before the first edit |
+
+### 🔴 The mandated star-ranked battery nilled a `40`th consecutive time
+
+`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`,
+`open source platform education ERP CRM MIT Apache` and `AI education industry trends 2026` returned
+**DeepTutor, OpenEduCat, Langflow, `microsoft/ai-agents-for-beginners` and `frappe` — every one of
+them already on these shelves** — plus a tier of SEO aggregators whose star counts and licence fields
+contradict each other within the same result set. 🔵 **The one item in the entire battery that was
+NOT already shelved was a market item rather than a repository: Instructure's `Canvas Career`, a
+skills-first LMS for WORKFORCE learning — the same seam this pass went on to measure.**
+
+### 🟢 What produced supply instead: the statutory DOCUMENT as the discovery instrument
+
+🔴 **The obvious vocabulary returns nothing usable.** `tvet`, `vocational training ai agent`,
+`apprenticeship mcp`, `skills training agent` and `competency framework mcp`, recency-ranked with no
+star floor, returned job boards (`zapplyjobs/*`, `veritahire/*`), personal profile READMEs and one
+reverse-engineering tool — **`0` build-safe education rows across five legs**.
+
+🔴 **`T82`'s institution-brand rule, which works at the university tier, INVERTS here.** `SENA
+sofia plus`, `senai` and `conalep` returned ~`30` repositories between them and **not one licensed
+agent**: `proyectosenasoftplus`, `Curso_senai`, `Biblioteca-CONALEP`, `cafeteria-conalep` — nearly all
+`0★`, nearly all unlicensed, and nearly all STUDENT COURSEWORK named after the school it was
+submitted to. 🔵 **At the university tier the institution brand surfaces integration agents
+(`SIGAA`, `Brightspace`, `Moodle`); at the vocational tier the identical query shape surfaces
+homework.** That is `T103`.
+
+🟢 **What worked was the name of the STATUTORY DOCUMENT the system runs on.**
+`Ausbildungsnachweis` / `Berichtsheft` (the German IHK apprenticeship record), `KSB` (England's
+knowledge-skills-behaviours standard) and `apprenticeship standards` returned a live, MIT-licensed,
+actively-pushed cluster — **`4` build-safe artefacts, all EMEA, all pushed within the last `6`
+weeks**. That is `T102`, and it is `T82`'s rule on a FOURTH axis: after the system of record, the
+language and the platform brand, the instrument is **the regulated artefact the learner must
+produce**.
+
+### 🔴 The blocking commit gate is RED, it was red BEFORE this pass, and `p829` did not fix it
+
+🔴 **`make commit-gates` exits `2` on `gate-offline` → `p253-captured-body-census`, and `p829`
+confirmed by `git stash` that it fails IDENTICALLY on pristine `HEAD`** — so `p828` committed over a
+red blocking gate, and so did this pass. 🔵 **Recorded here because `ingest/pre-commit` requires a
+skip to be stated in the pass write-up, and because an undiagnosed red gate decays into a gate
+nobody reads.**
+
+🔵 **The exact failure, so the next pass does not re-derive it** (`29/31` checks pass; `2` fail):
+
+| Site | Census verdict | Status |
+|---|---|---|
+| `p773/grantprobe.sh` | 🔴 **`CAPTURED-LIVE`** | **A genuine instance of the defect class `ACTION XY` exists to catch** — an instrument measuring a payload through a captured body. 🔴 **Pinning it would be the "silently downgraded verdict" the suite's own control forbids; the fix is to make the script measure the payload directly** |
+| `p773/probe.sh` | `BODY-ONLY` | 🟢 Unpinned only — safe to add to `sites.tsv` |
+| `p779/ecl_decide.sh` | `BODY-ONLY` | 🟢 Unpinned only — safe to add to `sites.tsv` |
+
+🔴 **`p829` deliberately did NOT fix it.** Two of the three are a one-line pin, but the third needs
+a behavioural change to another pass's probe script, and a partial fix would leave the gate red while
+removing the signal that says why. 🔵 **Filed whole, as `ACTION p829-A`: pin the two `BODY-ONLY`
+sites and repair `p773/grantprobe.sh`'s capture, in one pass, so the gate goes green in one move.**
+🟢 **Every gate `p829` is accountable for DID run and IS green:** `ingest/derive-counts.py`
+(`335`/`149`/`104`/`69`/`132`) and `ingest/validate-pages.py`, whose findings were diffed against
+pristine `HEAD` and are byte-for-byte the pre-existing set with only line numbers shifted.
+
+### 🔴 One record inside THIS repository corrected, and the correction is itself a trend
+
+🔴 **`repos/trending.md:31080` (pass `334`, `2026-10-20`) records `affromero/Sotto` as
+`AGPL-3.0`, `34,523 B`.** 🟢 **Byte-read today: `PolyForm Noncommercial License 1.0.0`,
+`4,563 B`, `sha256:ffcca38841ad…`** — agreeing with `agents/trending.md:1652` (`2026-11-13`) and with
+this file's own line `1520`. 🔵 **Both readings were correct when taken: `Sotto` RELICENSED from an
+OSI copyleft licence to a source-available non-commercial one between `2026-10-20` and `2026-11-13`.**
+🔴 **GitHub's licence FIELD reads `NOASSERTION` in BOTH states, so the field cannot see the move at
+all** — only a byte-read repeated across passes can, and only an append-only file keeps the earlier
+reading to compare it against. That is `T104`, and it is this base's append-only rule paying for
+itself.
+
 ## Thirty-third pass (`p828`, 2026-11-15) — the LMS tier this base had named `1,100` times and shelved five rows of, and a README that contradicts its own shelves
 
 🟢 **`61` build-safe rows filed (`54` agents `270` → `324`, `6` foundations `142` → `148`,
@@ -1193,7 +1285,24 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 324 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 335 rows
+
+### Filed by `p829` (2026-11-15) — `11` rows: the VOCATIONAL tier (`3`, EMEA) and the language-and-study tier (`8`), every licence byte-read
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| Ausbildungs-Berichtsheft | https://github.com/SergeyZakh/Ausbildungs-Berichtsheft | 🟢 **MIT — byte-read** (`1,072 B`, `sha256:04bf792574d5…`, holder `2026 Sergey Zakharov`) | 1 | EMEA | 🟢 **New this pass (`p829`) — the first APPRENTICESHIP agent on these shelves and the anchor of `T102`.** 🇩🇪 Generates the **IHK-Ausbildungsnachweis** — the statutory German apprenticeship record — from a timesheet export (Clockify, Harvest, Jira+Tempo, Kimai, Toggl Track or Excel), rendered to Word or PDF on the IHK template. 🔵 **The strongest privacy posture in this cohort, and it is a product decision rather than a policy page: no account, data stays in the browser.** Tagged releases, CI. 🟢 The cheapest real integration shape at the vocational tier — it reads a document the learner already has to produce |
+| Ausbildungsnachweis | https://github.com/marre868/Ausbildungsnachweis | 🟢 **MIT — byte-read** (`1,086 B`, `sha256:2cfc27ba0606…`, holder `2026 marre868`) | 1 | EMEA | 🟢 **New this pass (`p829`) — the SECOND independent implementation of the same statutory record**, which is what makes `T102` a tier rather than a lucky find. 🇩🇪 Flask + CLI, ships as a Windows `.exe`, and states explicitly that it targets people **without programming experience**. 🔵 Two unrelated authors solving one regulated artefact is the same signature `T77` used to establish the institution-integration tier |
+| lernpfad-python-cpp | https://github.com/dimitrex93-cyber/lernpfad-python-cpp | 🟢 **MIT — byte-read** (`1,094 B`, `sha256:d525e491d703…`, holder `2026 Lernpfad Python & C++ – Mitwirkende`) | 0 | EMEA | 🟢 **New this pass (`p829`) — the CURRICULUM half of the vocational tier.** 🇩🇪 A structured self-study course explicitly bound to the **Ausbildungsrahmenplan für Fachinformatiker (Anwendungsentwicklung)** — the federal training framework plan — teaching every topic in Python and C/C++ in parallel. 🔵 **A curriculum pinned to a named statutory syllabus is directly reusable as a competency map: the other rows produce the EVIDENCE, this one holds the SPEC** |
+| Polyglot Swarm | https://github.com/NiravRVaghasiya/Polyglot-Swarm | 🟢 **MIT — byte-read** (`1,072 B`, `sha256:c76f2bf915da…`, holder `2026 Nirav Vaghasiya`) | 1 | Global | 🟢 **New this pass (`p829`) — the most complete LANGUAGE-tutor architecture this base holds.** A LangGraph multi-agent tutor that maintains a per-skill competence model of grammar and vocabulary and PLANS the next lesson from it. 🔵 **Runs `100%` local by design (documented local path, not just a badge), which is the posture a sovereign build needs.** CI, Docker, Python 3.12+. Pushed `2026-11-11` |
+| vocabit-mcp | https://github.com/JohnBilousov/vocabit-mcp | 🟢 **MIT — byte-read** (`1,070 B`, `sha256:ed0657fb89fe…`, holder `2026 Ivan Bilousov`) | 0 | Global | 🟢 **New this pass (`p829`), and it is the CLOSED-LOOP shape this base has described repeatedly without holding a reference implementation.** An MCP server for a shipping iOS flashcard app: `create_study_set` writes a set onto a real phone, and **`get_set_results` reads back which cards the learner marked hard, which they never reached, and how many reviews each took**. 🔵 **Its own README names the point: anything can generate flashcards; the tool that matters is the one returning the learner's performance so the next set is built from it.** Published to npm |
+| AgenticTeacher | https://github.com/polendol/AgenticTeacher | 🔴 **SPLIT LICENCE — code MIT, MODEL `CC BY-NC-SA 4.0`** (byte-read `LICENSE.txt@master`, `1,056 B`, `sha256:1126322e2cc8…`) | 0 | Global | 🟢 **New this pass (`p829`) — build-safe ONLY if the split is respected, and it is `T78` caught a fourth time.** Turns an English YouTube video into CEFR-level-matched exercises: a fine-tuned DeBERTa-v3 + LoRA CEFR classifier plus a LangGraph agent on Qwen3-4B via Ollama. 🔴 **The classifier WEIGHTS are non-commercial — a client deliverable must retrain them; the pipeline around them is MIT and reusable as-is.** 🔵 The repository declares the split in its own badges, which is better disclosure than most of this shelf manages |
+| Learning HUB | https://github.com/Agono0/learning-hub | 🟢 **MIT — byte-read** (`1,082 B`, `sha256:7704bac11c1e…`, holder `2026 Learning HUB contributors`) | 0 | Global | 🟢 **New this pass (`p829`).** A local-first TypeScript learning system implementing the high-effect methods from the literature — spaced repetition, retrieval practice, interleaving, elaboration, teach-back — plus a curriculum engine, **driveable end-to-end by any agent over MCP**. 🔵 **The one component in this cohort an orchestrator can treat as the learning ENGINE rather than as a tutor**, which is the role `P69` gives it. CI, Node ≥24 |
+| cert-coach | https://github.com/gn02ash/cert-coach | 🟢 **MIT — byte-read** (`1,064 B`, `sha256:0a649bce619f…`, holder `2026 Gnash02`) | 0 | Global | 🟢 **New this pass (`p829`) — the BRIDGE row between this base's study tier and `T102`'s workforce tier.** Takes an exam's official skills outline, a date and weekly hours and produces domain-weighted daily sessions that **reschedule themselves when a day is missed**; RAG over the learner's own PDFs with **a page citation for every claim and an explicit refusal when the documents do not cover the question**; mock exams drawn by domain weight and a readiness score per domain. 🔵 **Certification IS vocational training with a different funder — this is the component `P69` grades readiness with** |
+| litto | https://github.com/JesusPaz/litto | 🟢 **MIT — byte-read** (`1,066 B`, `sha256:8e132fefdc0e…`, holder `2026 Jesus Paz`) | 0 | Global | 🟢 **New this pass (`p829`).** Native SwiftUI iPhone/Mac spaced-repetition app on **FSRS-6** (`open-spaced-repetition/swift-fsrs`) with iCloud sync and an MCP server letting an assistant build decks, fix cards and **see which words the learner keeps forgetting**. 🔵 Interface ships in Spanish and English and follows the system language. 🔴 **Region recorded as `Global`, NOT `LATAM`: a bilingual surface is evidence of a Spanish-language audience and not of a jurisdiction, and this base does not infer a region from an author's name** |
+| Hypatia's Hoard | https://github.com/Luissalet/HypatiaHoard | 🟢 **MIT — byte-read** (`1,066 B`, `sha256:fff33d08b8ee…`, holder `2026 Luissalet`) | 0 | Global | 🟢 **New this pass (`p829`).** A local study app — spaced repetition, a notebook over the learner's own sources, an **exact-math engine** and a `Profesor` teacher role — driven by an assistant over MCP on a local Python server with SQLite↔IndexedDB sync and local models. 🔵 **The exact-math engine is the same control `P67` reimplemented from first principles: deterministic arithmetic OUTSIDE the model.** Ships `README.es.md`; region recorded as `Global` on the same rule as `litto` |
+| Questlog | https://github.com/chdominguez/questlog | 🟢 **MIT — byte-read** (`1,068 B`, `sha256:3319b49a25a9…`, holder `2026 chdominguez`) | 0 | Global | 🟢 **New this pass (`p829`).** Courses as quests: theory cards, quizzes, put-in-order, find-the-bug, coding katas running in the browser, written answers graded by an assistant, spaced repetition over what was missed. 🔵 **The reusable part is the CONTENT CONTRACT: courses are plain files in git validated by one schema, so a course is a reviewable artefact rather than rows in a vendor database** — the property `P61` wanted from `T86`'s catalogue |
+
 
 ### Filed by `p828` (2026-11-15) — `54` rows, every licence byte-read
 
@@ -1483,6 +1592,12 @@ Globant can build a client deliverable on.
 
 | Candidate | Repo | Actual license | Stars | Why rejected |
 |---|---|---|---|---|
+| multi-framework-agent-orchestrator | https://github.com/TruptiLone/multi-framework-agent-orchestrator | 🔴 **MIT bytes, but the grant is NOT this author's — `sha256:ab6328fe6d4d…`, `1,066 B`, holder `Copyright (c) 2025 Ed Donner`** | 0 | **New rejection (`p829`), and it is `T94`'s silent-republish class with the upstream NAMED BY HASH for the first time.** The identical `1,066 B` / `ab6328fe6d4d…` blob is served by [`ed-donner/agents`](https://github.com/ed-donner/agents) (`6,628★`), whose course these notebooks solve. 🔴 **GitHub reports `fork=false`.** 🔵 **Not a licence violation — MIT permits redistribution with the notice intact, and the notice IS intact. It is a SUPPLY-COUNTING defect: shelving this as an independent language-learning agent would count one upstream twice.** 🟢 The method generalises: a licence-byte hash collision against a larger repository is a republish detector needing no README reading |
+| ApprenticeshipStandardsDotOrg | https://github.com/ApprenticeshipStandardsDotOrg/ApprenticeshipStandardsDotOrg | 🔴 **`CC0-1.0` — byte-read** (`7,048 B`, `sha256:a2010f343487…`, title line `Creative Commons Legal Code`) | 4 | **New rejection (`p829`), on `T78`'s rule and with real regret.** 🇺🇸 The US counterpart to `ksb-diff` and the only North American artefact the apprenticeship leg produced. 🔴 **CC0 is a public-domain dedication drafted for CONTENT, not software: no patent grant, no warranty disclaimer — which is exactly why `T78` exists.** 🔵 **Disposition is REFUSE-AS-SOFTWARE, not refuse-as-data: the STANDARDS DATA it publishes is usable, the Rails application around it is not clean to vendor.** 🟢 Filed as a licence-request candidate — a one-line relicence to MIT would make it `P69`'s North America adapter |
+| english-teacher-agent | https://github.com/el-abid/english-teacher-agent | 🔴 **NO LICENCE FILE — byte-probed at `10` addresses (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE` × `main`/`master`), all HTTP `404`**; field `NONE` | 0 | **New rejection (`p829`).** CEFR English tutor for high-school students: LangGraph agent, FastAPI UI, local TTS. 🔵 Recorded so the next pass does not re-probe it |
+| spanish-language-tutor | https://github.com/nickderobertis/spanish-language-tutor | 🔴 **NO LICENCE FILE — byte-probed at `10` addresses, all HTTP `404`**; field `NONE` | 0 | **New rejection (`p829`).** A LiveKit agent for teaching Spanish — the closest the language leg came to a real-time voice tutor, and unusable without a grant |
+| PRADA | https://github.com/GothHeit/PRADA | 🔴 **NO LICENCE FILE — byte-probed at `10` addresses, all HTTP `404`**; field `NONE` | 1 | **New rejection (`p829`).** A distributed personal agent running an OFFLINE conversational language tutor on a local model — the offline posture this base keeps looking for, behind no grant |
+| pingo-voice-backend | https://github.com/luharry2821/pingo-voice-backend | 🔴 **NO LICENCE FILE — byte-probed at `10` addresses, all HTTP `404`**; field `NONE` | 0 | **New rejection (`p829`).** Real-time voice language-learning agent on AssemblyAI Universal-Streaming |
 | essay-grader-llm | https://github.com/Dmoayad/essay-grader-llm | 🔴 **LICENCE CONFLICT — sidebar says `GPL-3.0 license`, README's licence section claims MIT** | 1 | **New rejection (`p827`, `T96`).** LangChain + Gradio rubric grader with structured feedback and a plagiarism check. `12` commits, `1` fork. 🔴 **Rejected on two independent grounds.** First, the licence is self-contradictory, and on GitHub the sidebar reflects the actual `LICENSE` file while the README is prose — so the governing grant is `GPL-3.0`, which is copyleft and unusable as the base of a hosted client deliverable. Second, at `1★`/`12` commits it is a course-scale artifact regardless of licence. 🔵 Cited in `P67` for its rubric-feedback shape only. |
 | Rubric_Agent | https://github.com/shafaq2019/Rubric_Agent | 🔴 **NO LICENCE FILE — sidebar carries no licence entry** | 0 | **New rejection (`p827`, `T96`).** FastAPI agent that learns scoring rules from a human reviewer's sample, then scores the remainder: reviewer scores a random `15%` sample, the agent drafts Do's & Don'ts from it, self-tests on held-out samples, then scores the rest, **running each item three times to flag unstable scores**. Handles typed and scanned answers; Gemini or Claude. `6` commits, `0` forks, and its own description names it a `DATA722` mid-term. 🔴 **No grant file means all rights reserved — not shelvable at any quality.** 🟢 **But the DESIGN is the best in the grading search and is reimplemented in `P67`:** the small-sample rubric induction, the held-out self-test, and the triple-run instability flag are all correct, and all three are cheap to rebuild from this description. |
 | ntulearn-mcp (NTU Singapore Blackboard) | https://github.com/gangula-karthik/ntulearn-mcp | 🔴 **MODIFIED MIT — byte-read and DIFFED** (`1,055 B`, `sha256:9783f2a651e2…`, holder `kingdonkatsu`); GitHub's field reports `NOASSERTION` | 6 | 🔴 **Rejected `p826`, and it is `T93`'s worked example — this base's own header-only byte-read would have shelved it as MIT.** The file opens `MIT License` and reads as stock text until the permission clause, which is rewritten from *"to permit persons to whom the Software is furnished to do so"* to *"to furnish it to whom it is furnished to do so"* — i.e. the ONE sentence that grants onward distribution has been altered into something that does not parse as a grant. 🔵 **The `NOASSERTION` field is CORRECT here and the licence header is misleading; GitHub's matcher refused it for exactly the right reason.** 🟢 **Not a verdict on the code, which is a legitimate read-only MCP server over NTULearn and would be a wanted APAC row: this is a licence-text defect its author can fix in one commit by restoring the canonical sentence, and that request is the right next action** |
