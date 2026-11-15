@@ -1,13 +1,17 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-13
+updated: 2026-11-15
 ---
 
 # Education AI — current trends
 
-**Forty-three** trends — derived trends: **43** — each with the evidence behind it and
-what it implies for an engagement. 🟢 **Nineteenth pass (`p814`, 2026-11-13): `T39`–`T43` added —
+**Forty-seven** trends — derived trends: **47** — each with the evidence behind it and
+what it implies for an engagement. 🟢 **Twentieth pass (`p815`, 2026-11-15):
+`T44`–`T47` added — the assessment layer's INVERTED licence profile (`T44`), an integrity tool's
+licence choice shown to determine where its circumvention fork lands (`T45`), the licence probe's
+second degree of freedom (`T46`), and three mandated layers measured EMPTY (`T47`).** 🔵
+**Re-derived after insertion by `ingest/derive-counts.py`: `47`.** 🟢 **Nineteenth pass (`p814`, 2026-11-13): `T39`–`T43` added —
 a whole system layer this base had never queried (`T39`), a THIRD risk axis (`T40`), the
 byte-hash instrument bounded and shown to beat GitHub's own `fork` field (`T41`), the region rule
 corrected to follow the CATALOGUE (`T42`), and the licence field shown to measure a filename
@@ -66,6 +70,145 @@ the second time.** 🔵 **The amendment uses no component discovered this pass**
 three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
+
+## T44 — The assessment layer inverts education's licence profile: everywhere else the star mass is MIT, here the star mass IS the copyleft
+
+🟢 **Evidence, `FIRST-HAND`, run `2026-11-15` against `gh api -X GET search/repositories` with
+every licence byte-read over `raw.githubusercontent.com`.**
+
+| Repo | ★ | Licence (byte-read) |
+|---|---|---|
+| `judge0/judge0` | 4,519 | 🔴 GPL-3.0 (`34,525 B`, `sha256:aafb5908…`) |
+| `jplag/JPlag` | 2,012 | 🔴 GPL-3.0 (`35,140 B`, `sha256:b98fbb37…`) |
+| `DOMjudge/domjudge` | 925 | 🔴 GPL-2.0 (`18,000 B`, `sha256:beb286d6…`) |
+| `autolab/Autolab` | 808 | 🟢 Apache-2.0 (`11,323 B`, `sha256:6dc0e068…`) |
+| `pressbooks/pressbooks` | 462 | 🔴 GPL-3.0 (`35,146 B`, `sha256:c53a65c2…`) |
+| `nxvvvv/safe-exam-browser-bypass` | 400 | 🔴 AGPL-3.0 (`34,487 B`, `sha256:bb06ad92…`) |
+| `SafeExamBrowser/seb-win-refactoring` | 369 | 🟡 MPL-2.0 (`16,725 B`, `sha256:c76f740d…`) |
+| `UniTime/unitime` | 358 | 🟢 Apache-2.0 (`11,357 B`, `sha256:58d1e17f…`) |
+| `dodona-edu/dolos` | 357 | 🟢 MIT (`1,083 B`, `sha256:9e2ceeed…`) |
+| `trampgeek/moodle-qtype_coderunner` | 248 | 🔴 GPL-2.0 (`18,091 B`, `sha256:f9c375a1…`) |
+
+🔴 **Six of ten are copyleft and they hold `9,233★` of the `10,604★` total.**
+
+🔵 **Why it is structural and not an accident.** `T39`/`T43` explained the research library's
+MIT density: Zotero is AGPL, so every agent above it integrates over a protocol and none derive.
+🟢 **The assessment layer has the opposite topology. An autograder is not a client of the
+execution sandbox over a public protocol — it EMBEDS it, or reimplements it.** `himanshuuem/lab-autograder`
+hand-rolls a Docker sandbox for exactly the job `Judge0` does properly. 🔴 **So the integration
+posture that neutralised copyleft in `p814`'s layer does not neutralise it here, because the
+natural architecture is linkage rather than protocol.**
+
+🟢 **What it implies for an engagement.** 🔵 **The recommendation DIVERGES FROM THE STAR ORDER,
+and that has to be said out loud rather than quietly engineered around:**
+- For anything shipped inside a client deliverable: 🟢 **`Autolab` (Apache-2.0) over `Judge0`,
+  and `Dolos` (MIT, `357★`) over `JPlag` (GPL-3.0, `2,012★`).** The capability is equivalent; the
+  attention is not; the licence decides.
+- Where `Judge0` is genuinely the right engine: 🟢 **deploy it as a separate service behind an
+  HTTP boundary, never link it.** Its own API-first design makes that the natural shape, which is
+  why this is a workable recommendation rather than a reluctant one.
+- Where the deliverable IS a Moodle instance: 🟢 **`CodeRunner` or `VPL`, and the GPL is
+  irrelevant** — every Moodle plugin inherits Moodle's GPL anyway.
+
+🟡 **The one place the permissive option does not exist: `Pressbooks` (GPL-3.0) has no permissive
+equivalent in the OER authoring tier. Deploy and extend by plugin; do not plan to fork it.**
+
+## T45 — An integrity tool's LICENCE CHOICE determines where its circumvention fork lands, and this is the first adversarial use of the byte-hash instrument
+
+🔴 **On `q="safe exam browser"` (`total_count=181`) the top row by stars is the BYPASS, not the
+browser:** [`nxvvvv/safe-exam-browser-bypass`](https://github.com/nxvvvv/safe-exam-browser-bypass)
+(`400★`, AGPL-3.0, *"A VM and display detection bypass for SEB"*) **outstars**
+[`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring)
+(`369★`), the Windows client it defeats.
+
+🟢 **And the licence bytes place the second one precisely.**
+
+| Repo | ★ | Payload | Reading |
+|---|---|---|---|
+| `SafeExamBrowser/seb-win-refactoring` | 369 | MPL-2.0, `16,725 B`, `sha256:c76f740d1521` | The Windows client |
+| `school-cheating/SEBPatch` | 210 | MPL-2.0, `16,725 B`, `sha256:c76f740d1521` | 🔴 **Byte-identical — *"Patch for Safe Exam Browser to bypass restrictions"*** |
+| `SafeExamBrowser/seb-server` | 98 | MPL-2.0, `16,724 B`, `sha256:4b89d4518bd1` | 🔵 **One byte different, inside the same organisation** |
+| `SafeExamBrowser/seb-mac` | 150 | 🔴 **No payload at 11 probed paths; API `NONE`** | 🔴 README: *"not for building own versions of SEB"* |
+
+🔵 **The hash corroborates a lineage the repository already declares rather than discovering a
+hidden one — but what it LOCALISES is which of the two SEB components was forked, and MPL-2.0's
+file-level copyleft is what makes that fork publishable rather than furtive.**
+
+🟢 **The control is what turns this from an observation into a rule.** The same organisation
+ships a permissively licensed, forkable Windows client and a source-available-only Apple client
+whose README explicitly disclaims derivative builds. 🔴 **The permissive client got the fork. No
+circumvention fork of the macOS/iOS client appeared anywhere in this harvest.**
+
+🔵 **`T41`'s bound moves as a side effect.** `p814` ruled the byte-hash a lineage instrument only
+where the stock text embeds a holder line — MIT and BSD yes, AGPL/GPL no. 🟢 **MPL-2.0 embeds no
+holder line either, and the hash still discriminated — because `seb-win` and `seb-server` differ
+by one byte.** **So the bound is not "a holder line is present" but "payload variance exists in
+the corpus": wherever two stock payloads of the same licence differ at all, the hash localises.**
+
+🟢 **What it implies for a client conversation.** 🔵 **Do not sell better lockdown.** The lockdown
+client is mature, free, and its circumvention is better-starred than itself — that is an arms
+race a studio cannot win and should not price. 🟢 **Sell the EVIDENCE layer instead: an
+appeal-survivable record of what was detected, when, on what basis and with what human review.
+That is what an institution is actually exposed on, and it is what `P37` builds.** 🔴 **And
+always qualify SEB coverage by platform: a cohort on iPads cannot be given the Windows licence
+answer.**
+
+## T46 — The licence probe has TWO degrees of freedom, branch and filename, and `T43` fixed only one of them
+
+🔴 **`p814` established `T43` — GitHub's licence field measures a FILENAME — and added `COPYING`
+to the probe list. The BRANCH was left guessed as `main` then `master`.**
+
+🟢 **The specimen: [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks) (`462★`),
+which the search API reports as `GPL-3.0`, returns `404` for `LICENSE` at BOTH `main` and
+`master`.** 🔴 **Its default branch is `dev`, and the payload sits at `dev/LICENSE.md`
+(`35,146 B`, `sha256:c53a65c2fd56`).** 🔵 **Guessing the branch produced a false "no licence
+payload" verdict on a `462★` anchor — exactly the defect `T43` was written to prevent, one axis
+over.**
+
+🟢 **Second specimen, on the filename axis: [`athina-edu/athina`](https://github.com/athina-edu/athina)
+spells it `LICENCE` — British spelling, and NOT in `p814`'s list** (`LICENSE`, `LICENSE.txt`,
+`license.txt`, `COPYING`, `COPYING.txt`). Byte-read `1,098 B`, `sha256:dd7ad2470281`, holder
+`Michail Tsikerdekis`.
+
+🔵 **`ACTION p815-A`.** The probe must RESOLVE the default branch from the search API's own
+response rather than iterate `main`/`master`, and `LICENCE` joins the filename list. 🔴 **Until
+it does, every `NO_PAYLOAD` verdict in this base carries an unquantified false-positive rate —
+and this base REJECTS rows on that verdict.**
+
+🟢 **A third independent confirmation of `T41`'s bound came free:** pressbooks' `dev/LICENSE.md`
+(`35,146 B`, `sha256:c53a65c2fd56`) is byte-identical to `jcrodriguez-dis/moodle-mod_vpl`'s
+`LICENSE.txt` — a 🇨🇦 Canadian publishing platform and a 🇪🇸 Spanish Moodle module, unrelated,
+stock GPL-3.0. 🔵 **`RagnarGrootKoerkamp/BAPCtools` (`35,148 B`, `sha256:8b1ba204bb69`) matches
+`pkp/ojs`, `pkp/pkp-lib` and `lc-vocabularies-mcp` — a fourth.**
+
+## T47 — The three education layers that regulation is about to make MANDATORY are the three emptiest on this channel, and that inverts this base's usual finding
+
+🟢 **Everywhere else in this base, regulation created supply.** `T23` traced the EU AI Act into a
+conformity market; `p811` found national school portals with agent surfaces because the state
+operates them. 🔴 **`p815` found the opposite: obligation with no supply at all.**
+
+| Obligation | Where it binds | OSS supply, `FIRST-HAND` `2026-11-15` |
+|---|---|---|
+| EU AI Act Annex III names education high-risk and **exam-cheating detection** among the listed uses | EMEA | 🔴 `q="proctoring exam open source"` → `total_count=12`, ceiling `4★`, modal licence `NONE` |
+| Web-accessibility obligations for public education (ADA Title II web rule; European Accessibility Act) | North America + EMEA | 🔴 `q="accessibility remediation alt text education"` → **`total_count=0`** |
+| IDEA-mandated individualised education programmes | North America | 🔴 `q="IEP individualized education program"` → `total_count=11`, ceiling `3★`, one MIT row at `1★` |
+
+🟡 **Source discipline.** The `total_count` figures are `FIRST-HAND`. 🔴 **The regulatory dates
+are `SECONDARY`** — web-search summaries report Annex III high-risk obligations postponed from
+`2026-08-02` to `2027-12-02` under a 2026 Digital Omnibus agreement, and the sources conflict on
+whether it is formally adopted. 🔵 **Verify against the official text before putting a date in
+front of a client; the emptiness of the supply does not depend on the date.**
+
+🟢 **What it implies for an engagement, and it is a different recommendation from every other
+trend in this file.** 🔵 **These are BUILD slots, not compose slots.** The honest answer to
+*"what open base do we start from for AI proctoring, accessibility remediation or IEP support?"*
+is **nothing adoptable exists in any licence** — the first time this base has had to say that
+about three layers at once.
+
+🔵 **And the ranking between them is clear.** 🟢 **Accessibility remediation is the strongest
+slot:** `total_count=0`, the obligation binds in two regions at once, and every institution on
+every platform in `verticals/solutions.md` is in scope — whereas proctoring is an arms race
+against a bypass that outstars the tool (`T45`) and IEP is single-jurisdiction.
 
 ## T39 — The education agent market has TWO system layers, not one, and the one the industry talks about is the smaller by two orders of magnitude
 

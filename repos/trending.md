@@ -1,7 +1,65 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-13
+updated: 2026-11-15
+---
+
+## `2026-11-15` (twentieth pass) — **`Judge0` is the most-starred repository in education that is not a tutor, not a library and not an LMS — and nineteen passes of this file never wrote its name**
+
+**Pass `p815`.** 🟢 **Nineteen rows filed to `repos/foundations.md` under a new architectural
+layer — the ASSESSMENT ENGINE — of which `8` are build-safe and `11` copyleft or unlicensed.
+Six platform rows filed to `verticals/solutions.md`.** Every licence byte-read over
+`raw.githubusercontent.com` this pass.
+
+### The measurement
+
+🔴 **Before this pass, `repos/foundations.md` catalogued `15` architectural layers — LMS, SIS,
+ERP, rostering, LTI, xAPI, SCORM, Caliper, QTI, the research library — and not one of them was
+the thing that produces a GRADE.**
+
+| Repo | ★ | Licence (byte-read) | Payload | Layer role |
+|---|---|---|---|---|
+| [`judge0/judge0`](https://github.com/judge0/judge0) | **4,519** | 🔴 GPL-3.0 | `34,525 B` `sha256:aafb59085213` | The sandboxed code-execution service every autograder wraps or reimplements |
+| [`jplag/JPlag`](https://github.com/jplag/JPlag) | **2,012** | 🔴 GPL-3.0 | `35,140 B` `sha256:b98fbb37db5b` | Source-code plagiarism and collusion detection (KIT 🇩🇪) |
+| [`DOMjudge/domjudge`](https://github.com/DOMjudge/domjudge) | **925** | 🔴 GPL-2.0 at **`COPYING`** | `18,000 B` `sha256:beb286d6091b` | Contest jury system — the hardened multi-tenant grader |
+| [`autolab/Autolab`](https://github.com/autolab/Autolab) | **808** | 🟢 **Apache-2.0** | `11,323 B` `sha256:6dc0e068dcf3` | 🟢 **The permissive answer to `Judge0`** — course management + autograding (CMU 🇺🇸) |
+| [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks) | **462** | 🔴 GPL-3.0 at **`dev/LICENSE.md`** | `35,146 B` `sha256:c53a65c2fd56` | OER authoring and publishing — `T46`'s specimen |
+| [`nxvvvv/safe-exam-browser-bypass`](https://github.com/nxvvvv/safe-exam-browser-bypass) | **400** | 🔴 AGPL-3.0 | `34,487 B` `sha256:bb06ad92ee30` | 🔴 **The counter-supply, and the top row of its own query** |
+| [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) | 369 | 🟡 MPL-2.0 | `16,725 B` `sha256:c76f740d1521` | Exam lockdown client, Windows (ETH Zürich 🇨🇭) |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 358 | 🟢 **Apache-2.0** | `11,357 B` `sha256:58d1e17ffe51` | 🟢 University course/exam timetabling and student scheduling |
+| [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 357 | 🟢 **MIT** | `1,083 B` `sha256:9e2ceeedb426` | 🟢 **The permissive answer to `JPlag`** (Ghent 🇧🇪) |
+| [`trampgeek/moodle-qtype_coderunner`](https://github.com/trampgeek/moodle-qtype_coderunner) | 248 | 🔴 GPL-2.0 | `18,091 B` `sha256:f9c375a1be4a` | Moodle quiz question type that runs student code (U. Canterbury 🇳🇿) |
+| [`school-cheating/SEBPatch`](https://github.com/school-cheating/SEBPatch) | 210 | 🟡 MPL-2.0 | `16,725 B` `sha256:c76f740d1521` | 🔴 **Byte-identical licence payload to `seb-win-refactoring` — see `T45`** |
+| [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 162 | 🟢 **BSD-3-Clause** | `1,559 B` `sha256:4c5ec0311ad1` | 🟢 Python/R notebook autograding (UC Berkeley 🇺🇸) |
+| [`SafeExamBrowser/seb-mac`](https://github.com/SafeExamBrowser/seb-mac) | 150 | 🔴 **NO payload at 11 probed paths** | — | 🔴 README: *"not for building own versions of SEB"* |
+| [`jcrodriguez-dis/moodle-mod_vpl`](https://github.com/jcrodriguez-dis/moodle-mod_vpl) | 130 | 🔴 GPL-3.0 | `35,146 B` `sha256:c53a65c2fd56` | Virtual Programming Lab for Moodle (ULPGC 🇪🇸) |
+| [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 98 | 🟡 MPL-2.0 | `16,724 B` `sha256:4b89d4518bd1` | Central SEB configuration and exam monitoring |
+| [`RagnarGrootKoerkamp/BAPCtools`](https://github.com/RagnarGrootKoerkamp/BAPCtools) | 75 | 🔴 GPL-3.0 | `35,148 B` `sha256:8b1ba204bb69` | ICPC-style problem authoring and validation |
+| [`infomark-org/infomark`](https://github.com/infomark-org/infomark) | 36 | 🔴 GPL-3.0 | — | Self-hosted course/exercise system, pushed `2026-11-14` |
+| [`jorge-martinez-gil/codesim`](https://github.com/jorge-martinez-gil/codesim) | 28 | 🟢 **MIT** | `1,074 B` `sha256:159250958410` | 🟢 Unsupervised code-clone similarity measures (🇦🇹) |
+| [`GEOSOFT-GLOBAL/timetablely`](https://github.com/GEOSOFT-GLOBAL/timetablely) | 27 | 🟢 **MIT** | `1,070 B` `sha256:b4be7f0dca63` | 🟢 Automated timetable generator, the permissive small-scale `UniTime` |
+| [`AnubisLMS/Mayat`](https://github.com/AnubisLMS/Mayat) | 24 | 🟢 **MIT** at `LICENSE.txt` | `1,074 B` `sha256:eb0df6e4c4d8` | 🟡 AST-based code similarity; experimental, last pushed `2024-04-10` |
+
+### Freshness — this is not a dormant layer
+
+🟢 **Eleven of the nineteen engine rows were pushed within four days of this pass:** `Dolos`
+`2026-11-14`, `otter-grader` `2026-11-14`, `DOMjudge` `2026-11-14`, `VPL` `2026-11-14`,
+`infomark` `2026-11-14`, `JPlag` `2026-11-13`, `CodeRunner` `2026-11-13`, `UniTime`
+`2026-11-13`, `seb-server` `2026-11-12`, `Autolab` `2026-11-11`, `seb-win-refactoring`
+`2026-11-11`, and `pressbooks` `2026-11-15` — **the day of this pass.** 🔵 **`Autolab` has been
+maintained since `2014-10-25` and `CodeRunner` since `2012-12-02`: this is the oldest
+continuously maintained layer in this base, and it was the last one found.**
+
+### 🟢 The corpus sub-finding: `exercism` is `4,960` repositories of MIT-licensed exercise content
+
+`q="exercism exercises"` → `total_count=4,960`, and the per-language tracks are individually
+substantial and individually MIT: `exercism/python` `2,547★`, `exercism/rust` `1,804★`,
+`exercism/go` `1,197★`, `exercism/java` `839★`, `exercism/elixir` `665★`,
+`exercism/javascript` `658★` — 🟢 **`rust`, `go`, `java` and `javascript` all pushed
+`2026-11-15`, the day of this pass.** 🔵 **This is the practice-content corpus that every
+pattern in `compose/patterns.md` touching formative assessment has had to assume and never
+had: graded exercises with test suites, in `70`+ languages, under MIT.**
+
 ---
 
 ## `2026-11-13` (nineteenth pass) — **The layer under THIS layer does exist, it is BSD-3-Clause, and that is the opposite of what `p813` found one layer down**

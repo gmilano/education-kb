@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-13
+updated: 2026-11-15
 ---
 
 # Education AI — market map and opportunities by region
@@ -99,6 +99,58 @@ across EMEA.
 ## Opportunities by region
 
 ### North America
+
+#### Update 2026-11-15 (twentieth pass, `p815`) — 🟢 The region BUILT the permissive half of the assessment layer, and holds this base's single largest unserved mandate
+
+🔵 **Source confidence.** Repository measurements are `FIRST-HAND` — run `2026-11-15` against
+`gh api -X GET search/repositories`, licences byte-read over `raw.githubusercontent.com`. Policy
+and market figures are `SECONDARY` (web-search summaries of trackers, briefings and vendor blogs)
+and are labelled as such; verify any date before putting it in front of a client.
+
+🟢 **The supply finding, and it is flattering to the region.** `p815` named the assessment-engine
+layer, and 🟢 **both of its permissively licensed anchors are North American university
+projects**: [`autolab/Autolab`](https://github.com/autolab/Autolab) (Apache-2.0, `808★`,
+*"initially developed by a team of students at Carnegie Mellon University"*) and
+[`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) (BSD-3-Clause, `162★`,
+*"developed by the Data Science Education Program at UC Berkeley"*). 🔵 **Against `Judge0`
+(GPL-3.0, `4,519★`, 🇭🇷) and `JPlag` (GPL-3.0, `2,012★`, 🇩🇪), the region's contribution is the one
+a studio can actually ship — see `T44`.** 🟢 **With `jupyter/nbgrader` and `jupyterhub` already on
+this shelf, a complete, fully permissive, zero-copyleft assessment stack is available today:
+that is `P38`.**
+
+🔴 **The mandate finding, and it is the largest unserved slot in this base.** IDEA makes the
+individualised education programme a federal obligation for every US district. 🔴 **`q="IEP
+individualized education program"` → `total_count=11`, star ceiling `3★`, and the only licensed
+row is [`dg13788/iep-system`](https://github.com/dg13788/iep-system) (MIT, `1★`, created
+`2026-09-06`); `q="special education management"` → `47` and every row is unrelated noise.** 🔵
+**So the honest answer to "what open base do we start from" is: there is none. This is a BUILD
+engagement, and the only one in this base where that is true of a federally mandated workflow.**
+
+🔴 **Second mandate, and it binds in two regions at once:** web-accessibility obligations for
+public education bodies (ADA Title II web rule in the US, the European Accessibility Act in
+EMEA — both `SECONDARY`, verify the compliance dates). 🔴 **`q="accessibility remediation alt
+text education"` → `total_count=0`.** Not thin — empty. 🟢 **Every institution on every platform
+in `verticals/solutions.md` is in scope, which makes it the widest-population build slot `p815`
+found. See `T47`.**
+
+🟡 **Policy picture, `SECONDARY`, and consistent with where `p813`/`p814` left it.** Trackers
+report `134` AI-in-education bills across `31` states in 2026, with states converging on student
+data privacy, human oversight and parental consent rather than mandating classroom adoption.
+🔵 **The one hard-dated instrument worth quoting is North Carolina's Session Law 2026-41: a state
+model policy by `2026-12-31`, local district policies by `2027-06-30`, teacher training by
+`2028-06-30`** — a three-step deadline a district can be sold a programme against. Federal
+activity is lighter (US Dept of Education K-12 guidance reported April 2026; an Office of
+Educational Technology *"Framework for Responsible Use and Development of Artificial Intelligence
+in Education"* reported March 2026). 🟡 California's proposed *"Parents & Kids Safe AI Act"*,
+reported as backed by OpenAI and Common Sense Media, would set standards for any AI product used
+by minors — worth tracking because it reaches product design, not just district policy. 🔴
+Canadian K-12 AI policy did not appear in any result this pass: an informed gap, not a finding.
+
+🟢 **Where to lead in this region:** `P37` (integrity evidence) at universities, `P38` (permissive
+formative assessment) in CS and data-science programmes, and `P39` (timetabling) wherever a
+proprietary scheduler is up for renewal. 🔵 **And price the IEP and accessibility slots as
+product builds, not integrations.**
+
 
 #### Update 2026-11-13 (nineteenth pass, `p814`) — 🟢 The region's research-agent supply binds to a federal AGENCY API, not to a cultural institution, and the policy picture stayed where `p813` left it
 
@@ -784,6 +836,56 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-15 (twentieth pass, `p815`) — 🟢 EMEA BUILT the assessment layer, and EMEA regulation is what makes it sellable — the tightest supply/demand fit in this base
+
+🔵 **Source confidence.** Repository measurements are `FIRST-HAND` — run `2026-11-15` against
+`gh api -X GET search/repositories`, licences byte-read over `raw.githubusercontent.com`. Policy
+and market figures are `SECONDARY` (web-search summaries of trackers, briefings and vendor blogs)
+and are labelled as such; verify any date before putting it in front of a client.
+
+🟢 **The supply finding is unusually clean: the assessment-engine layer is substantially a
+European artefact.** Of the nineteen engine rows filed this pass, the provenance concentrates
+here:
+
+| Component | ★ | Licence | Origin |
+|---|---|---|---|
+| [`judge0/judge0`](https://github.com/judge0/judge0) | 4,519 | 🔴 GPL-3.0 | 🇭🇷 Croatia |
+| [`jplag/JPlag`](https://github.com/jplag/JPlag) | 2,012 | 🔴 GPL-3.0 | 🇩🇪 Karlsruhe Institute of Technology |
+| [`DOMjudge/domjudge`](https://github.com/DOMjudge/domjudge) | 925 | 🔴 GPL-2.0 | 🇳🇱 Netherlands |
+| [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) | 369 | 🟡 MPL-2.0 | 🇨🇭 ETH Zürich |
+| [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 357 | 🟢 **MIT** | 🇧🇪 Ghent University (`dolos@ugent.be`) |
+| [`jcrodriguez-dis/moodle-mod_vpl`](https://github.com/jcrodriguez-dis/moodle-mod_vpl) | 130 | 🔴 GPL-3.0 | 🇪🇸 Univ. de Las Palmas de Gran Canaria |
+| [`jorge-martinez-gil/codesim`](https://github.com/jorge-martinez-gil/codesim) | 28 | 🟢 **MIT** | 🇦🇹 Austria |
+
+🔴 **And the regional licence problem: the European rows are the copyleft ones.** `Judge0`,
+`JPlag`, `DOMjudge` and `VPL` are GPL; the one MIT row is `Dolos`. 🟢 **Which makes `Dolos`
+(Ghent) the most commercially important European row in this layer — it does `JPlag`'s job under
+a licence that ships. See `T44`.**
+
+🟢 **The demand side closes on the same spot.** 🔴 **EU AI Act Annex III names education as
+high-risk and names exam-cheating detection among the listed uses** (`SECONDARY`: obligations
+reported postponed from `2026-08-02` to `2027-12-02` under a 2026 Digital Omnibus agreement, which
+sources describe as provisional and which other sources still date to August 2026 — 🔴 **verify
+against the official text; the conflict is real and a wrong date in a proposal is costly**).
+🟡 Also reported: UK DfE generative-AI product safety standards for education, and **Ofqual
+guidance on AI and coursework integrity** — 🔵 **that second one is the most directly sellable
+policy instrument in any region this pass, because it asks for exactly what `P37` produces: a
+defensible record of how an integrity judgement was reached.** 🟡 Dubai's KHDA has issued
+responsible-AI guidance to private schools.
+
+🟡 **Players, `SECONDARY`:** OpenAI reports government and education-system partnerships across
+Estonia, Slovakia, Greece and Italy focused on access, AI literacy and evaluation; Instructure is
+building an AI study coach into Canvas; Pearson agreed to acquire Workera. 🔵 **The most
+authoritative source in this window is a March 2026 European Parliament briefing on AI in
+classrooms (`IUST_BRI(2026)784574`) — prefer it over the vendor guides.**
+
+🟢 **Where to lead in this region:** 🟢 **`P37` first and explicitly as Annex III compliance work
+— human oversight and record-keeping — not as surveillance.** `P2` (Annex III conformity layer)
+chains directly in front of it. 🔵 **And check for `VPL` before proposing anything new at an
+Iberian university: its Spanish origin and Moodle base make it the likely incumbent, which turns
+an engagement into configuration rather than build.**
+
 
 #### Update 2026-11-13 (nineteenth pass, `p814`) — 🟢 The region holds the best-engineered research-library agents in the world, and they are MIT
 
@@ -1492,6 +1594,55 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-15 (twentieth pass, `p815`) — 🟢 The layer's oldest component is APAC-origin, and 🇮🇳 India is a measured HARD NIL on it
+
+🔵 **Source confidence.** Repository measurements are `FIRST-HAND` — run `2026-11-15` against
+`gh api -X GET search/repositories`, licences byte-read over `raw.githubusercontent.com`. Policy
+and market figures are `SECONDARY` (web-search summaries of trackers, briefings and vendor blogs)
+and are labelled as such; verify any date before putting it in front of a client.
+
+🟢 **The supply finding.** [`trampgeek/moodle-qtype_coderunner`](https://github.com/trampgeek/moodle-qtype_coderunner)
+(`248★`, GPL-2.0) is 🇳🇿 **the oldest continuously maintained component in the whole assessment
+layer — created `2012-12-02`, pushed `2026-11-13`.** Its README names the authors: *"Richard Lobb,
+University of Canterbury, New Zealand. Paul McKeown, University of Canterbury, New Zealand. Tim
+Hunt, The Open University, UK."* 🔵 **🇳🇿 APAC-origin with 🇬🇧 EMEA co-maintenance — the broadest
+authorship of any row in the layer.** 🔴 **GPL-2.0 and unavoidably so: every Moodle plugin
+inherits Moodle's GPL — which makes it the right choice exactly when the deliverable IS a Moodle
+instance rather than a product.**
+
+🔴 **The nil, and it is measured rather than assumed.** 🇮🇳 India is this base's densest APAC
+market by institution count, and on the assessment-engine channel it returns nothing:
+`q="autograder assignments india college"` → **`total_count=0`**;
+`q="swayam nptel course platform"` → `4`, every one a student's notebook dump. 🔵 **Yet
+`himanshuuem/lab-autograder` (MIT, the sole result on `q="autograder mcp"`) is India-origin.** 🟢
+**The transferable reading, and it generalises `p812`'s search-defect rule: the supply exists and
+does not answer to REGION-NAMED queries, because an autograder is named after its function, not
+its country.** 🔴 **A nil on a region-named query in this layer reports the query, not the
+market** — the inverse of the LMS/SIS layers, where naming the region's own system was exactly
+what closed the nil.
+
+🟡 **Policy, `SECONDARY` and genuinely divergent across the region** — there is no single APAC
+posture to design against:
+- 🇰🇷 **South Korea's AI Basic Act entered into force `2026-01-22`**, enforcement decrees still
+  being finalised, with a guidance-focused grace period through 2026.
+- 🇻🇳 **Vietnam** — a Law on Artificial Intelligence reported effective `2026-03-01` **treating
+  education as a high-risk area**; 🔴 other sources describe a Digital Technology Industry Law
+  with a risk-based framework starting 2026, so the instruments may be conflated. Verify.
+- 🇦🇺 **Australia has no AI statute, but TEQSA has required ALL higher-education providers to
+  submit institutional action plans addressing generative-AI risk** — 🔵 **the most directly
+  actionable instrument in the region, and it is an integrity-and-assessment obligation, which is
+  `P37`'s exact shape.**
+- 🇨🇳 China holds the region's most comprehensive AI framework; 🇯🇵 Japan is light-touch and
+  voluntary; 🇸🇬 Singapore has no binding statute and relies on AI Verify.
+- 🔵 **Spillover worth pricing: Annex III reaches APAC vendors selling proctoring or admissions
+  tools into the EU**, so an APAC ed-tech client with European customers inherits `P2`.
+
+🟢 **Where to lead in this region:** 🟢 **`P37` into Australian higher education against the TEQSA
+action-plan requirement** — the deadline is institutional and already felt. `P5`
+(multi-jurisdiction compliance) remains the right frame for anyone operating across more than two
+of these regimes, because as the list above shows they do not converge.
+
+
 #### Update 2026-11-13 (nineteenth pass, `p814`) — 🟡 The region's research-agent supply is placed by LANGUAGE, and its highest-starred row is the one that cannot be shipped
 
 🔵 **Source confidence.** Repository figures `FIRST-HAND`; adoption figures `SECONDARY`.
@@ -2192,6 +2343,60 @@ example of.
 
 ### LATAM
 
+#### Update 2026-11-15 (twentieth pass, `p815`) — 🔴 The assessment layer is a HARD NIL here in two languages, and the region's own dominant judge is not open source
+
+🔵 **Source confidence.** Repository measurements are `FIRST-HAND` — run `2026-11-15` against
+`gh api -X GET search/repositories`, licences byte-read over `raw.githubusercontent.com`. Policy
+and market figures are `SECONDARY` (web-search summaries of trackers, briefings and vendor blogs)
+and are labelled as such; verify any date before putting it in front of a client.
+
+🔴 **The nil, measured in three languages and written down rather than left silent:**
+- `q="evaluacion automatica estudiantes plataforma"` → **`total_count=0`**.
+- `q="juez automatico programacion"` → `5`, every row `0★`.
+- `q="correcao automatica exercicios programacao"` → `5`, star ceiling `1★`. 🟡 **The one actively
+  developed specimen, [`felipelageduarte/runcodes`](https://github.com/felipelageduarte/runcodes),
+  was pushed `2026-11-11` and carries NO licence — a live Brazilian project a studio cannot
+  touch.**
+
+🔴 **And the `beecrowd` finding, which is the `p814` shape repeating.** `beecrowd` (formerly URI
+Online Judge) is the dominant online judge in Latin American programming education.
+`q="beecrowd online judge"` → **`290` repositories, and every single one is a student's solutions
+dump** — the top row is `eduardo-mior/URI-Online-Judge-Solutions` at `346★`. 🔵 **The judge itself
+is not open source. A `290`-repository query with zero platform rows in it, which is exactly the
+measurement trap `p814` named: a large `total_count` can be entirely downstream of the thing you
+are looking for.**
+
+🟢 **The practical consequence, and it is good news.** 🔵 **Because there is no regional incumbent
+to displace, the engine choice in LATAM is unconstrained — so take the permissive one by default:
+`Autolab` (Apache-2.0) and `Dolos` (MIT), i.e. `P38` and `P37` unmodified.** 🟡 **One check
+first: [`jcrodriguez-dis/moodle-mod_vpl`](https://github.com/jcrodriguez-dis/moodle-mod_vpl) is
+🇪🇸 Spanish-origin and Moodle-based, which makes it the single most likely assessment component
+already running at a LATAM or Iberian university.** 🔵 **If it is there, the engagement is
+configuration rather than build — the cheapest possible entry, and `P3`'s shape.**
+
+🟡 **Adoption and governance, `SECONDARY` but unusually well sourced this pass — UNESCO rather
+than vendors.** A UNESCO IESALC study of `200` institutions across `19` countries reports **`87%`
+of institutions using AI in at least one area of activity, while only `26%` have a formal
+framework and `55%` have no specific AI budget**; fewer than `10%` of school-level institutions
+have formal guidelines. A Digital Education Council LATAM survey (with Tecnológico de Monterrey
+and its Institute for the Future of Education) reports `92%` of students and `79%` of faculty
+actively engaging with AI. UNESCO reports more than `50%` of teachers in 🇨🇱 Chile and 🇧🇷 Brazil
+already using these tools. 🔵 **`87%` adoption against `26%` governance is the most quotable
+asymmetry in any region this pass, and it sells `P4` (institutional AI governance package)
+directly — the client already has the problem and knows it.**
+
+🟡 **Regulation, `SECONDARY`:** a 2026 Universidad de los Andes study counts `716` AI-related
+regulatory instruments and proposals across `23` countries and territories; 🇧🇷 Brazil's
+PL 2.338/2023 is risk-based; 🇨🇴 Colombia adopted CONPES 4144 in February 2025 with a
+government-wide programme budgeted through 2030. UNESCO launched an **Observatory on AI in
+Education for Latin America and the Caribbean in April 2026**; 🇺🇾 Ceibal and 🇧🇷 Cetic.br supply
+national usage data. 🔴 **`716` instruments across `23` jurisdictions means there is no single
+LATAM compliance posture — `P5`'s multi-jurisdiction frame applies here as much as in APAC.**
+
+🟢 **Where to lead in this region:** 🟢 **`P4` first, against the `87%`/`26%` gap — governance is
+the acknowledged problem.** Then `P38` on the permissive stack, since nothing has to be displaced.
+
+
 #### Update 2026-11-13 (nineteenth pass, `p814`) — 🟢 The region's new row binds to a national STANDARDS BODY, which is a binding type nothing else in this base has
 
 🔵 **Source confidence.** Repository and norm figures `FIRST-HAND` (README read this pass);
@@ -2883,6 +3088,59 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-15 (twentieth pass, `p815`) — 🔴 The one layer whose supply is region-NEUTRAL and whose obligation is region-DETERMINED
+
+🔵 **Source confidence.** Repository measurements are `FIRST-HAND` — run `2026-11-15` against
+`gh api -X GET search/repositories`, licences byte-read over `raw.githubusercontent.com`. Policy
+and market figures are `SECONDARY` (web-search summaries of trackers, briefings and vendor blogs)
+and are labelled as such; verify any date before putting it in front of a client.
+
+🟢 **Why this pass's findings sit here rather than under a region.** Per `T32`/`T42`, region
+resolves from the TARGET SYSTEM, and a code sandbox, a similarity detector and a timetabling
+solver are system-agnostic by construction. 🔴 **So almost every row `p815` added shelves
+`Global` — the first layer in twenty passes where that is true by nature rather than by
+default.** 🔵 **The regional facts live in the OBLIGATION, not the supply: the same `Dolos` build
+is an Ofqual coursework-integrity answer in 🇬🇧, a TEQSA action-plan answer in 🇦🇺, an Annex III
+record-keeping answer across the 🇪🇺, and an unregulated efficiency play in most of LATAM.**
+
+🔴 **The licence inversion (`T44`).** Of the ten highest-star rows in the assessment layer, six
+are copyleft and they hold `9,233★` of the `10,604★` total. 🔵 **Everywhere else in this base the
+star mass was MIT; here the recommendation DIVERGES FROM THE STAR ORDER — `Autolab` (Apache-2.0,
+`808★`) over `Judge0` (GPL-3.0, `4,519★`), `Dolos` (MIT, `357★`) over `JPlag` (GPL-3.0,
+`2,012★`) — and that has to be said to a client out loud rather than quietly engineered around.**
+
+🔴 **The integrity arms race (`T45`), and the one thing NOT to sell.** On `q="safe exam browser"`
+the top row by stars is the bypass: `nxvvvv/safe-exam-browser-bypass` (`400★`, AGPL-3.0) outstars
+`SafeExamBrowser/seb-win-refactoring` (`369★`), the client it defeats; and
+`school-cheating/SEBPatch` (`210★`) is a licence-compliant MPL fork of that client with a
+byte-identical licence payload (`16,725 B`, `sha256:c76f740d1521`). 🟢 **Sell the evidence layer,
+not better lockdown. `P37`.**
+
+🔴 **Three mandated layers measured EMPTY (`T47`), ranked for a studio:**
+1. 🟢 **Accessibility remediation — the strongest slot.** `total_count=0`, obligation binds in
+   North America and EMEA simultaneously, and every institution on every platform in
+   `verticals/solutions.md` is in scope.
+2. 🟡 **IEP / special education** — `11` repos, ceiling `3★`; federally mandated but
+   single-jurisdiction (🇺🇸 IDEA).
+3. 🔴 **AI proctoring — last, and arguably decline.** `12` repos, ceiling `4★`, modal licence
+   `NONE`, EU AI Act Annex III names it explicitly, and `T45` shows the circumvention is
+   better-starred than the tool.
+
+🟢 **The corpus unlock.** `q="exercism exercises"` → `total_count=4,960`, MIT, with `exercism/rust`,
+`go`, `java` and `javascript` all pushed `2026-11-15`. 🔵 **Graded exercises with test suites in
+`70`+ languages under MIT removes content authoring from the critical path of any
+programming-education engagement — `P38` consumes it directly.**
+
+🟡 **Market size, unchanged and still contested** (see the section above): `SECONDARY` sources this
+pass put AI-in-education at `$11.4B` (Grand View via Eklavvya) and `$12.3B` (HolonIQ via x-pilot)
+for 2026 at `25.9%` CAGR, with one projecting `$136.79B` by 2035. 🔴 **Two of three headline
+figures still disagree by more than the growth rate they claim; quote the range, never a point.**
+🔵 **The qualitative consensus is more useful and is consistent across sources: 2026 is the year
+AI in education moves from pilots to governed infrastructure, with 1EdTech framing it as a shift
+*"from experimentation to governance"* — which is the altitude every pattern in this base is
+already written at.**
+
 
 #### Update 2026-11-13 (nineteenth pass, `p814`) — 🟢 `17` of `25` new rows are Global, and that is the finding rather than a placement failure
 

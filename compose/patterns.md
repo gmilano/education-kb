@@ -1,12 +1,12 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-13
+updated: 2026-11-15
 ---
 
 # Compose patterns — education
 
-**Thirty-six** concrete recipes — derived recipes: **36**. 🟢 **Nineteenth pass (`p814`): `P34`–`P36` added** — the citation-integrity service (the first integrity-POSITIVE recipe in this base), the sovereign institutional-repository agent on the only permissively licensed platform in the education stack, and the Brazilian norm-compliance pipeline. All components licence-verified by byte-read on 2026-11-13. 🟢 **Eighteenth pass (`p813`): `P31`–`P33` added** — the Chinese university study agent with a written integrity boundary, the North American multi-system family agent, and the clean-room client library that every cluster in this base needs and none of them has. All components licence-verified by byte-read on 2026-11-13. 🟢 **Seventeenth pass (`p812`): `P29`–`P30` added** — the Frappe-based education ERP agent, and the LATAM university self-management agent. Each names the actual
+**Thirty-nine** concrete recipes — derived recipes: **39**. 🟢 **Twentieth pass (`p815`): `P37`–`P39` added** — the appeal-survivable academic-integrity service (the first recipe here whose deliverable is EVIDENCE rather than a decision), the only fully permissive assessment stack this layer offers, and natural-language timetabling on a real Apache-2.0 solver. 🔵 **All three exist because `T44` found that the assessment layer's star mass is COPYLEFT, so each one names the permissive substitute explicitly and carries no copyleft in its tree.** All components licence-verified by byte-read on 2026-11-15. 🟢 **Nineteenth pass (`p814`): `P34`–`P36` added** — the citation-integrity service (the first integrity-POSITIVE recipe in this base), the sovereign institutional-repository agent on the only permissively licensed platform in the education stack, and the Brazilian norm-compliance pipeline. All components licence-verified by byte-read on 2026-11-13. 🟢 **Eighteenth pass (`p813`): `P31`–`P33` added** — the Chinese university study agent with a written integrity boundary, the North American multi-system family agent, and the clean-room client library that every cluster in this base needs and none of them has. All components licence-verified by byte-read on 2026-11-13. 🟢 **Seventeenth pass (`p812`): `P29`–`P30` added** — the Frappe-based education ERP agent, and the LATAM university self-management agent. Each names the actual
 repos, the license consequence, how the pieces wire together, and a rough build estimate.
 All components were license-verified on 2026-11-13 (see `agents/top.md` and
 `repos/foundations.md`). 🟢 **Sixteenth pass (`p811`): `P27`–`P28` added** — the OneRoster
@@ -117,6 +117,126 @@ decision instead of a constraint:
   and it is the one argument that still favours `ltijs` on a long engagement.
 
 ---
+
+## P37 — The appeal-survivable academic-integrity service (Global, and the first recipe in this base whose deliverable is EVIDENCE rather than a decision)
+
+🔵 **Why this and not better detection.** `T45` measured the arms race and a studio cannot win
+it: on `q="safe exam browser"` the bypass (`nxvvvv/safe-exam-browser-bypass`, `400★`) outstars
+the client it defeats (`SafeExamBrowser/seb-win-refactoring`, `369★`), and
+`school-cheating/SEBPatch` (`210★`) is a licence-compliant MPL fork of that client with a
+byte-identical licence payload. 🟢 **What an institution is actually exposed on is not detection
+rate — it is whether a finding survives a student appeal.** That is a record-keeping and
+human-review problem, and it is buildable today, permissively, end to end.
+
+| Role | Component | Licence (byte-read `2026-11-15`) | Why this one |
+|---|---|---|---|
+| Similarity measurement | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **MIT** (`1,083 B`, `sha256:9e2ceeed…`) | 🟢 **MIT, so it ships inside the deliverable. Structural token comparison, NOT an LLM judge — the property that survives an appeal.** `jplag/JPlag` does the same at `2,012★` and is GPL-3.0 (`T44`) |
+| Second-opinion method | [`AnubisLMS/Mayat`](https://github.com/AnubisLMS/Mayat) | 🟢 **MIT** (`1,074 B`, `sha256:eb0df6e4…`) | 🔵 AST-level rather than token-level: the two approaches fail on different evasions, so agreement between them is a far stronger finding than either alone. 🟡 Experimental, unpushed since `2024-04-10` — vendor the method, not the dependency |
+| Method defensibility | [`jorge-martinez-gil/codesim`](https://github.com/jorge-martinez-gil/codesim) | 🟢 **MIT** (`1,074 B`, `sha256:15925095…`) | 🔵 The reference for explaining to a university committee WHY a similarity score means what it claims |
+| Submission source | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 **MIT** (`1,069 B`, `sha256:187d52a3…`) | 🟢 The only Canvas surface in this base that reaches **rubrics** as well as submissions. 🔴 **It also grades and comments — see step 4** |
+| Evidence spine | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 | 🟢 Already on this shelf via `P9`. An xAPI LRS is an append-only, timestamped, standards-shaped record — exactly what an appeal needs, and the institution can read it without the studio |
+| Review UI | [`appsmith`](https://github.com/appsmithorg/appsmith) or the institution's own | 🟢 Apache-2.0 | The human-review queue; the point is that a human decides |
+
+**Wiring.**
+1. 🟢 **Submissions in, via `canvas-lms-mcp`'s read tools only.** Pull the assignment, the
+   submission set and the rubric.
+2. 🟢 **Measure twice — `Dolos` (token) and `Mayat`'s AST method — and record BOTH scores plus
+   the pair-level evidence.** Agreement and disagreement are each informative; never collapse
+   them to one number.
+3. 🟢 **Write every step to the LRS as xAPI statements**: what was compared, with what version of
+   what detector, at what time, against what cohort. 🔵 **Version the detector in the statement.
+   A finding from a build nobody can identify is not evidence.**
+4. 🔴 **NOTHING is written back to Canvas automatically.** `canvas-lms-mcp` can grade and comment,
+   and that is precisely the capability to gate: a human reviewer opens the queue, reads the
+   evidence pack, and decides. 🔵 **This is `P6`/`P22`'s publication gate, and `expeditto`'s
+   `rascunho` principle, applied to the highest-stakes write in education.**
+5. 🟢 **The deliverable is the evidence pack**: side-by-side extracts, both scores, the cohort
+   distribution, the reviewer's identity and the decision, exportable as a single document.
+
+🔴 **What NOT to sell.** Better lockdown, AI-based behavioural proctoring, or any claim of
+detection accuracy. 🔴 **`q="proctoring exam open source"` → `total_count=12`, ceiling `4★`,
+modal licence `NONE` (`T47`): there is no adoptable base, and the category is also the one the EU
+AI Act names explicitly under Annex III.** 🟢 **An evidence-and-review layer, by contrast, is what
+Annex III's human-oversight and record-keeping obligations actually ask for — so this pattern
+reads as compliance work rather than as surveillance.**
+
+🟢 **No copyleft anywhere in the tree.** Licence posture: shippable.
+**Estimate: 6–8 weeks**, of which roughly two are the evidence schema and the appeal export.
+
+## P38 — Permissive notebook-and-code assessment stack with a formative loop (Global, and the only fully permissive assessment stack this layer offers)
+
+🔵 **Why it exists.** `T44` found that the assessment layer's star mass is copyleft and that the
+component a studio most wants inside a product — `Judge0`, `4,519★` — is GPL-3.0. 🟢 **This recipe
+is the proof that a complete assessment stack can be assembled with NO copyleft at all, which is
+the thing to be able to say in a procurement conversation.**
+
+| Role | Component | Licence (byte-read `2026-11-15`) | Why this one |
+|---|---|---|---|
+| Notebook autograding | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** (`1,559 B`, `sha256:4c5ec031…`) | 🟢 The most permissive grant in the layer. Python **and R** — the formats data-science and statistics teaching actually uses. UC Berkeley 🇺🇸, pushed `2026-11-14` |
+| Alternative / incumbent | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 BSD-3-Clause | Already on this shelf. Check which the institution runs before proposing either |
+| Notebook hosting | [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 🟢 BSD-3-Clause | Already on this shelf; the cohort-scale execution environment |
+| Formative feedback loop | [`athina-edu/athina`](https://github.com/athina-edu/athina) | 🟢 **MIT, byte-read at `LICENCE`** (`1,098 B`, `sha256:dd7ad247…`) | 🟢 **Explicitly *"a formative assessment microservice for programming assignments"* — repeated feedback DURING the work, no record written.** 🔵 Maintained since `2019`, pushed `2026-11-13` |
+| Exercise corpus | [`exercism/python`](https://github.com/exercism/python) + sibling tracks | 🟢 **MIT** | 🟢 **`q="exercism exercises"` → `total_count=4,960`. Graded exercises WITH test suites in `70`+ languages under MIT — `rust`, `go`, `java`, `javascript` all pushed `2026-11-15`.** 🔵 Removes content authoring from the critical path entirely |
+| Integrity check | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **MIT** | Chain `P37` behind this rather than duplicating it |
+| Platform, if one is needed | [`autolab/Autolab`](https://github.com/autolab/Autolab) | 🟢 **Apache-2.0** (`11,323 B`, `sha256:6dc0e068…`) | 🟢 **The permissive answer to `Judge0`: roster, submissions, autograding and scoreboards in one.** 🔴 It competes with the LMS for the assessment job — a procurement conversation, not a technical one |
+
+**Wiring.**
+1. 🟢 **Start FORMATIVE, not summative.** `athina` gives feedback while the student works; no
+   grade is written. 🔵 **This is the lowest-risk shape in the entire assessment layer: with no
+   record written, neither `T36`'s integrity axis nor the EU AI Act's high-risk grading trigger
+   is engaged** — which makes it the right first phase of any engagement here.
+2. 🟢 **Source the exercises from `exercism` tracks** rather than authoring them. They arrive with
+   test suites, which is what the autograder consumes.
+3. 🟢 **Grade with `otter-grader` on JupyterHub** for notebook work; add `Autolab` only if the
+   institution needs roster, submission handling and scoreboards it does not already have.
+4. 🟡 **Put an agent in front, not inside.** `himanshuuem/lab-autograder` (MIT, `1★`) is the only
+   result on `q="autograder mcp"` (`total_count=1`) and hand-rolls its own Docker sandbox — 🔵
+   **take its topology as the reference and point it at `otter-grader`, which already solved the
+   execution problem properly.**
+5. 🔴 **Phase 2 only, and explicitly: summative grading writes to a record.** Gate it with
+   `P37`'s human-review step. Do not let phase 1's low risk posture carry over by default.
+
+🟢 **No copyleft anywhere in the tree, and no GPL dependency even transitively.**
+**Estimate: 4–6 weeks** for the formative phase; **+4 weeks** for summative with the review gate.
+
+## P39 — Natural-language timetabling on a real solver (Global, cheapest credible "AI" engagement in this file because the hard part is already Apache-2.0)
+
+🔵 **Why it is a good engagement and an easy sell.** Course and exam timetabling is a genuine
+constraint-satisfaction problem with a hard deadline every single term, the incumbents are
+expensive proprietary schedulers, and 🔴 **an LLM is the WRONG tool for the solve** — it will
+produce a plausible timetable that violates constraints. 🟢 **`UniTime` already solves it, is
+Apache-2.0, and is deployed at *"universities in North America and Europe"* per its own README.
+The value a studio adds sits strictly ON TOP of the solver.**
+
+| Role | Component | Licence (byte-read `2026-11-15`) | Why this one |
+|---|---|---|---|
+| The solver | [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 **Apache-2.0** (`11,357 B`, `sha256:58d1e17f…`) | 🟢 **The only constraint-solver platform in this base, forkable and shippable. `358★`, pushed `2026-11-13`.** Course, exam and student scheduling with multiple departmental managers |
+| Schools-scale alternative | [`GEOSOFT-GLOBAL/timetablely`](https://github.com/GEOSOFT-GLOBAL/timetablely) | 🟢 **MIT** (`1,070 B`, `sha256:b4be7f0d…`) | 🟡 `27★`. For a school rather than a university — the choice is scale, not licence |
+| Roster / enrolment in | [`oat-sa/oneroster-import`](https://github.com/oat-sa/oneroster-import) or Ed-Fi `Data-Management-Service` | 🟢 Apache-2.0 | Already on this shelf via `P27`/`P11`. Courses, sections, staff and enrolments are the solver's input |
+| Constraint capture + explanation | 🔵 **Build** — `pydantic-ai` or `LangGraph` over the solver's API | 🟢 MIT | 🔵 **This is the whole deliverable; see wiring** |
+| Audit record | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 | Who asked for what, what the solver said, what was overridden |
+
+**Wiring, and the division of labour is the point.**
+1. 🟢 **The LLM NEVER places a class.** It translates a human request — *"Dr Okafor cannot teach
+   Friday afternoons and the two first-year labs must not clash"* — into `UniTime` constraint
+   objects, and validates them against the schema before submitting.
+2. 🟢 **`UniTime` solves.** Deterministic, explainable, and the same answer twice for the same
+   input — none of which an LLM provides.
+3. 🟢 **The LLM explains the REFUSAL, which is where the actual human pain is.** When a request
+   cannot be satisfied, the solver reports an infeasibility; the agent turns that into *"your
+   request conflicts with the Tuesday lab because room B210 is the only one with the equipment,
+   and moving it would break three other sections"* — and proposes the two or three relaxations
+   that would make it feasible.
+4. 🟢 **Every request, solve and override goes to the LRS**, because timetable disputes are
+   political and the record is what settles them.
+5. 🔵 **Phase it to the academic calendar.** The engagement has a natural deadline the client
+   already feels, which is the easiest kind of engagement to scope and the easiest to renew.
+
+🟢 **No copyleft anywhere in the tree.** 🔵 **And an unusually honest pitch: the studio is not
+claiming to have invented the scheduler. It is claiming that a twenty-year-old Apache-2.0 solver
+plus a language layer beats a proprietary licence renewal — which is checkable, and therefore
+credible.**
+**Estimate: 6–8 weeks**, dominated by constraint-schema mapping, not by the language layer.
 
 ## P34 — Citation-integrity service for a university (Global, and the first integrity-POSITIVE recipe in this base)
 

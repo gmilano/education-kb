@@ -1,13 +1,20 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-13
+updated: 2026-11-15
 ---
 
 # Education vertical platforms — real systems to customize AI on top of
 
 
-## Education vertical platforms — 86 rows
+## Education vertical platforms — 92 rows
+
+🟢 **Twentieth pass (`p815`, 2026-11-15): six platform rows added under a new tier — the
+ASSESSMENT ENGINE — and the figure above is the gate's output.** 🔵 **The gate caught the draft
+again: it read `86` and `ingest/derive-counts.py` returned *"RED heading claims 86, the file
+holds 92"* before the commit. Gate output after insertion:
+`tables=17 rows=94 distinct=92 graded=92 claimed=92 ragged=0 nolink=0 dupes=2`.**
+
 
 🟢 **Eighteenth pass (`p813`, 2026-11-13): this file is gradeable for the first time since
 `p718`,** for the reason set out in `repos/foundations.md` — `ACTION p811-A` option (a),
@@ -18,6 +25,33 @@ implemented with uncounted-table detection. Gate output:
 claimed `70` — the pre-insertion figure — and the gate rejected it: *"RED heading claims 70, the
 file holds 81."* 🟢 **That is precisely the drift `compose/patterns.md` has had to confess four
 times in prose. It is now caught by a program instead of by the next pass's reader.**
+
+## 🟢 Twentieth pass (`p815`, 2026-11-15) — the platform tier that produces the GRADE, and the one place in this file where the permissive option is the SECOND-most-starred rather than the first
+
+🔴 **This file has named `86` platforms across nineteen passes — LMS, SIS, ERP, parent portals,
+national school portals, university self-management, the research library — and not one of them
+is the system that runs a student's code, compares it against the cohort, locks down the exam, or
+places the timetable.**
+
+🟢 **The licence headline, and it is the inverse of `p814`'s.** With the research library, the
+permissive platform (`DSpace`, BSD-3-Clause) was also the structurally central one. 🔴 **Here the
+central platform is `Judge0` (`4,519★`) and it is GPL-3.0, while the permissive platform is
+`Autolab` (`808★`, Apache-2.0) at a fifth of the attention.** 🔵 **So for the first time in this
+file the recommendation diverges from the star order — and `T44` is the argument for saying so to
+a client out loud, rather than quietly shipping the popular one.**
+
+🟢 **Every platform below is a system institutions ALREADY RUN and already staff.** 🔴 **What
+they do NOT have, measured this pass, is an agent layer: `q="autograder mcp"` returns
+`total_count=1`.**
+
+| Platform | Repo | License | Stars | Notes |
+|---|---|---|---|---|
+| **Autolab** — course management + autograded programming assignments | https://github.com/autolab/Autolab | 🟢 **Apache-2.0 — byte-read** (`11,323 B`, `sha256:6dc0e068…`) | 808 | 🟢 **New this pass (`p815`), and the one assessment platform here a studio can fork, embed and ship with no source obligation.** Carnegie Mellon 🇺🇸 origin, maintained since `2014-10-25`, pushed `2026-11-11`. 🔵 **It is a PLATFORM and not a plugin — roster, submissions, autograding and scoreboards in one — so it competes with the LMS for the assessment job rather than extending it. That is a procurement conversation, not a technical one: propose it where the LMS is weak at programming assessment, not as an LMS replacement.** 🔵 **Customisation slot: it has no agent surface at all, which with `bruchris/canvas-lms-mcp` as the topology reference is `P37`'s build.** 🟡 **Prerequisite the studio does NOT own: an autograding execution host (containers, resource limits), which is an infrastructure line item on every engagement using it** |
+| **Judge0** — sandboxed code-execution service | https://github.com/judge0/judge0 | 🔴 **GPL-3.0 — byte-read** (`34,525 B`, `sha256:aafb5908…`) | 4519 | 🟢 **New this pass (`p815`) — the most-starred education platform in this base after Zotero, and nineteen passes never wrote its name.** *"Robust, fast, scalable, and sandboxed online code execution system for humans and AI."* 🔴 **GPL-3.0, and it is exactly the component a studio wants inside a product — the squeeze `T44` names.** 🟢 **The only clean posture: deploy it as a separate service behind an HTTP boundary alongside the deliverable, never link it in. Its own API-first design makes that the natural shape anyway, which is why this is a workable recommendation rather than a reluctant one.** 🔵 **Note the *"and AI"* in its own positioning: it is already the de-facto sandbox for agent tool-use, so an engagement can justify it twice over** |
+| **Safe Exam Browser** — exam lockdown client + central configuration server | https://github.com/SafeExamBrowser/seb-win-refactoring | 🟡 **MPL-2.0 — byte-read** (`16,725 B`, `sha256:c76f740d…`); 🔴 **the macOS/iOS client `seb-mac` (`150★`) has NO licence payload** | 369 | 🟢 **New this pass (`p815`).** ETH Zürich 🇨🇭; the de-facto exam-lockdown client in European higher education and the one Moodle's quiz integration expects. Pair with `SafeExamBrowser/seb-server` (`98★`, MPL-2.0) for cohort-wide configuration and monitoring. 🟡 **MPL-2.0 is file-level copyleft — shippable beside proprietary code, with changes to MPL files published. Materially better than GPL for a packaged deliverable.** 🔴 **`T45`: `school-cheating/SEBPatch` (`210★`) is a licence-compliant MPL fork of this client with a BYTE-IDENTICAL payload, and the AGPL bypass `nxvvvv/safe-exam-browser-bypass` (`400★`) OUTSTARS the client itself.** 🔴 **And coverage is not platform-uniform: a cohort on iPads cannot be given the same licence answer as one on Windows laptops — `seb-mac`'s README says *"not for building own versions of SEB."*** 🔵 **Customisation slot: integrity EVIDENCE and audit trail around it, which is `P37`'s appeal-survivable record — not better lockdown** |
+| **UniTime** — university course, exam and student timetabling | https://github.com/UniTime/unitime | 🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:58d1e17f…`) | 358 | 🟢 **New this pass (`p815`), and the only constraint-solver platform in this base.** *"A distributed system that allows multiple university and departmental schedule managers"*; README states deployment at *"universities in North America and Europe."* 🟢 **Apache-2.0 — forkable and shippable.** 🔵 **The commercial read: timetabling is a real optimisation problem with a hard deadline every single term, the incumbents are expensive proprietary schedulers, and an LLM is the WRONG tool for the solve. The value a studio adds sits ON TOP of the solver — natural-language constraint capture and explanation of why a request could not be met. That is `P39`, and it is the cheapest credible "AI" engagement in this file because the hard part is already solved and Apache-licensed.** 🟡 **For schools rather than universities, `GEOSOFT-GLOBAL/timetablely` (`27★`, MIT) is the smaller permissive option** |
+| **Dolos** — source-code plagiarism and collusion detection | https://github.com/dodona-edu/dolos | 🟢 **MIT — byte-read** (`1,083 B`, `sha256:9e2ceeed…`, holder `Team Dolos <dolos@ugent.be>`) | 357 | 🟢 **New this pass (`p815`), and the single most useful row in the layer for a product build.** Ghent University 🇧🇪, pushed `2026-11-14`. 🟢 **It does `jplag/JPlag`'s job — structural token-based similarity across a cohort with a visual report — under MIT instead of GPL-3.0.** 🔵 **It is a MEASUREMENT instrument, not an LLM judge, which is the property that lets an integrity finding survive a student appeal. `omerfarooq223/AutoGrader-Agent` LLM-judges plagiarism; replace that step with this before anyone's academic record depends on it.** 🔵 **Customisation slot: the cohort-level review workflow and the evidence pack — the detector is done** |
+| **Pressbooks** — OER authoring and publishing | https://github.com/pressbooks/pressbooks | 🔴 **GPL-3.0 — byte-read at `dev/LICENSE.md`** (`35,146 B`, `sha256:c53a65c2…`); 🔴 **`LICENSE` `404`s at both `main` and `master` — default branch is `dev`** | 462 | 🟢 **New this pass (`p815`) — the OER production platform this file had never named, and `T46`'s specimen.** WordPress-based; turns a manuscript into EPUB, PDF and web at once; `BCcampus` 🇨🇦 runs `pressbooks-textbook` on it for a provincial open-textbook programme. 🔵 **Customisation slot, and it is the strongest AI fit in this section: open textbooks are the one corpus an institution owns outright, so retrieval, summarisation, question generation and translation over them carry NO `T40` source-legality exposure at all.** 🔴 **GPL-3.0 and it is a WordPress platform — deploy and extend via plugins, do not fork into a product** |
 
 ## 🟢 Nineteenth pass (`p814`, 2026-11-13) — the platform tier this file had never named: the RESEARCH LIBRARY, and the only permissively licensed platform in the education stack
 

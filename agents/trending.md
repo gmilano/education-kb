@@ -1,7 +1,158 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-13
+updated: 2026-11-15
+---
+
+## `2026-11-15` (twentieth pass) — **The layer a learner is ASSESSED by, which carries the highest star mass in education outside the research library — and the first layer in twenty passes whose blocker is the LICENCE rather than the credential**
+
+**Pass `p815`.** 🟢 **Four agent rows added, all build-safe (MIT ×4), every licence byte-read;
+nineteen engine/platform rows filed to `repos/foundations.md` and six to
+`verticals/solutions.md`.** 🟢 **`Global 74 · APAC 18 · EMEA 16 · North America 14 · LATAM 10`
+= `132` build-safe, re-derived on the file by `ingest/derive-counts.py`.**
+
+### The headline: nineteen passes asked what system a learner LOGS INTO. This one asked what system a learner is ASSESSED BY
+
+🔵 **`p813` stated the rule — supply is attached to the system a learner logs into — and `p814`
+widened it from the LMS to the research library, finding `348` repositories and a `38,407★`
+ceiling.** 🟢 **`p815` asked a different question: not what the learner logs into, but what
+grades them.** The assessment engine — the sandbox that runs submitted code, the detector that
+compares it against the cohort, the browser that locks the exam down, the solver that places the
+timetable.
+
+| Query | `total_count` | Top row | ★ | Licence (byte-read) |
+|---|---|---|---|---|
+| `judge0 online judge` | `42` | `judge0/judge0` | **4,519** | 🔴 GPL-3.0 |
+| `plagiarism detection education` | `20` | `jplag/JPlag` | **2,012** | 🔴 GPL-3.0 |
+| `domjudge contest` | `39` | `DOMjudge/domjudge` | **925** | 🔴 GPL-2.0 |
+| `autograding programming assignments` | `21` | `autolab/Autolab` | **808** | 🟢 Apache-2.0 |
+| `pressbooks` | `242` | `pressbooks/pressbooks` | **462** | 🔴 GPL-3.0 |
+| `safe exam browser` | `181` | 🔴 **`nxvvvv/safe-exam-browser-bypass`** | **400** | 🔴 AGPL-3.0 |
+| `safe exam browser` | — | `SafeExamBrowser/seb-win-refactoring` | 369 | 🟡 MPL-2.0 |
+| `unitime university timetabling` | `19` | `UniTime/unitime` | **358** | 🟢 Apache-2.0 |
+| `plagiarism detection education` | — | `dodona-edu/dolos` | 357 | 🟢 MIT |
+| `moodle coderunner question type` | `10` | `trampgeek/moodle-qtype_coderunner` | 248 | 🔴 GPL-2.0 |
+| `otter grader jupyter autograding` | `1` | `ucbds-infra/otter-grader` | 162 | 🟢 BSD-3-Clause |
+| `virtual programming lab moodle` | `9` | `jcrodriguez-dis/moodle-mod_vpl` | 130 | 🔴 GPL-3.0 |
+| `autograder mcp` | 🔴 **`1`** | `himanshuuem/lab-autograder` | 1 | 🟢 MIT |
+| `proctoring exam open source` | `12` | `Chakrix-com/Swaya.me` | 4 | 🔴 NOASSERTION |
+| `IEP individualized education program` | `11` | `dg13788/iep-system` | 1 | 🟢 MIT |
+| `accessibility remediation alt text education` | 🔴 **`0`** | — | — | hard nil |
+| `autograder assignments india college` | 🔴 **`0`** | — | — | hard nil |
+| `evaluacion automatica estudiantes plataforma` | 🔴 **`0`** | — | — | hard nil |
+| `juez automatico programacion` | `5` | `LaBoa99/juez-miau` | 0 | 🟢 MIT |
+| `correcao automatica exercicios programacao` | `5` | `Kyutz/langgraph-correcao-poc` | 1 | 🟢 MIT |
+
+🔴 **Counted against this base's own index: of the `855`+ GitHub addresses published across the
+live shelves before this pass, ZERO were in this layer.** `Judge0`, `JPlag`, `DOMjudge`,
+`Autolab`, `CodeRunner`, `UniTime`, `otter-grader`, `Dolos`, `Pressbooks` and `Safe Exam Browser`
+had never been written on any shelf of this base.
+
+### `T44` — this layer INVERTS the base's licence profile, and that is the finding to carry forward
+
+🟢 **Every prior layer in this base was MIT-dense on a copyleft base** — `p814` explained why:
+Zotero is AGPL, so the `348` agents above it integrate over a protocol and none derive. 🔴 **The
+assessment layer is the opposite: the star mass IS the copyleft.** Of the ten highest-star rows
+found this pass, **six are copyleft and they hold `9,233★` of the `10,604★` total.** The engine a
+studio most wants — `Judge0`, the sandboxed code-execution service that every autograder in this
+layer either wraps or reimplements — is the single most-starred row and is GPL-3.0.
+
+🔵 **The remedy is architectural and this base already knows it** (separate process behind an
+API, never a library). 🟢 **What changes is that here it is not an edge case to flag, it is the
+DEFAULT POSTURE of the layer** — and the permissive alternatives exist and are named:
+`Autolab` (Apache-2.0, `808★`) against `Judge0`, and `Dolos` (MIT, `357★`) against `JPlag`.
+
+### `T45` — an integrity tool's LICENCE CHOICE determines where its circumvention fork lands, and the byte-hash proves it
+
+🔴 **This is the sharpest finding of the pass.** On the `safe exam browser` query the
+**top row by stars is the BYPASS, not the browser**: `nxvvvv/safe-exam-browser-bypass`
+(`400★`, AGPL-3.0) outstars `SafeExamBrowser/seb-win-refactoring` (`369★`), the Windows client it
+defeats.
+
+🟢 **And `school-cheating/SEBPatch` (`210★`) returns a licence payload BYTE-IDENTICAL to
+`seb-win-refactoring`'s — `16,725 B`, `sha256:c76f740d1521` — while `SafeExamBrowser/seb-server`'s
+MPL payload is `16,724 B`, `sha256:4b89d4518bd1`.** 🔵 **One byte apart inside one organisation,
+and the adversarial fork matches the Windows client exactly.** The repository's own description
+declares it (*"Patch for Safe Exam Browser to bypass restrictions"*), so the hash corroborates a
+stated lineage rather than discovering a hidden one — 🟢 **but what it localises is WHICH of the
+two SEB components was forked, and MPL-2.0's file-level copyleft is what makes that fork
+publishable rather than furtive.**
+
+🟢 **Now the control, and it is what turns an observation into a rule.**
+[`SafeExamBrowser/seb-mac`](https://github.com/SafeExamBrowser/seb-mac) (`150★`) carries **no
+licence payload at eleven probed paths**, the API reports `NONE`, and its README states:
+🔴 ***"Binary security modules and Zoom integration (with proprietary licenses) are not included…
+The open source code is available mainly for educational purposes and not for building own
+versions of SEB."*** 🟢 **No circumvention fork of the macOS/iOS client appeared anywhere in this
+harvest.** 🔵 **The permissively licensed client got the fork; the source-available-only client
+did not.**
+
+🔵 **`T41`'s bound moves.** `p814` ruled the hash a lineage instrument *only where the stock text
+embeds a holder line* — MIT and BSD yes, AGPL/GPL no. 🟢 **MPL-2.0 embeds no holder line either,
+and the hash still discriminated here** — because `seb-win` and `seb-server` differ by one byte.
+**So the real bound is not "a holder line is present" but "payload variance exists in the
+corpus": wherever two stock payloads of the same licence differ at all, the hash localises.**
+
+### `T46` — the probe has TWO degrees of freedom, and `p814` fixed only one of them
+
+🔴 **`p814` established `T43` — GitHub's licence field measures a FILENAME — and added `COPYING`
+to the probe list. The branch was left guessed.** 🟢 **`pressbooks/pressbooks` (`462★`, API
+reports `GPL-3.0`) returns `404` for `LICENSE` at BOTH `main` and `master`: its default branch is
+**`dev`**, and the payload sits at `dev/LICENSE.md` (`35,146 B`, `sha256:c53a65c2fd56`).** 🔴
+**Guessing `main`/`master` produced a false "no licence payload" on a `462★` anchor — exactly the
+defect `T43` was written to prevent, one axis over.**
+
+🟢 **Second specimen, filename axis: `athina-edu/athina` spells it `LICENCE` — British
+spelling, and NOT in `p814`'s probe list** (`LICENSE`, `LICENSE.txt`, `license.txt`, `COPYING`,
+`COPYING.txt`). Byte-read `1,098 B`, `sha256:dd7ad2470281`, holder `Michail Tsikerdekis`.
+
+🔵 **`ACTION p815-A`: the probe must RESOLVE the default branch from the search API's own
+response rather than iterate `main`/`master`, and `LICENCE` joins the filename list.**
+
+🟢 **And a third independent confirmation of `T41`'s bound, free of charge:** pressbooks'
+`dev/LICENSE.md` (`35,146 B`, `sha256:c53a65c2fd56`) is **byte-identical** to
+`jcrodriguez-dis/moodle-mod_vpl`'s `LICENSE.txt` — a 🇨🇦 Canadian publishing platform and a 🇪🇸
+Spanish Moodle module, unrelated, stock GPL-3.0.
+
+### `T47` — the three layers that regulation is about to make MANDATORY are the three emptiest on this channel
+
+🟢 **Everywhere else in this base, regulation created supply.** 🔴 **Here it has created
+obligation with no supply at all:**
+
+| Obligation | Where it binds | OSS supply measured this pass |
+|---|---|---|
+| EU AI Act Annex III names education high-risk and **exam-cheating detection** explicitly | EMEA (obligations postponed to `2027-12-02` under the 2026 Digital Omnibus — `SECONDARY`, verify against the official text) | 🔴 `proctoring exam open source` → `12` repos, ceiling `4★`, modal licence `NONE` |
+| Web-accessibility obligations for public education (ADA Title II rule; European Accessibility Act) | North America + EMEA | 🔴 `accessibility remediation alt text education` → **`total_count=0`** |
+| IDEA-mandated individualised programmes | North America | 🔴 `IEP individualized education program` → `11` repos, ceiling `3★`, one MIT row at `1★` |
+
+🔵 **This is a BUILD slot, not a compose slot** — the first this base has recorded where the
+honest recommendation is that nothing adoptable exists in any licence.
+
+### The regional reading: the first layer in twenty passes that is region-NEUTRAL in supply and region-DETERMINED in obligation
+
+🟢 **Per `T32`/`T42` (region resolves from the TARGET SYSTEM, not the author), almost every row
+here shelves `Global`** — a code sandbox, a similarity detector and a timetabling solver are
+system-agnostic by construction. 🔵 **Provenance is still worth recording and it is broad:**
+`Judge0` 🇭🇷, `JPlag` 🇩🇪 (KIT), `Dolos` 🇧🇪 (*"Team Dolos <dolos@ugent.be>"*, Ghent),
+`DOMjudge` 🇳🇱, `VPL` 🇪🇸 (ULPGC), `Safe Exam Browser` 🇨🇭 (ETH Zürich), `Autolab` 🇺🇸 (Carnegie
+Mellon), `otter-grader` 🇺🇸 (UC Berkeley Data Science), `CodeRunner` 🇳🇿 (University of
+Canterbury, with The Open University 🇬🇧), `codesim` 🇦🇹.
+
+🔴 **And the regional nils in the ENGINE layer are real, measured, and written down rather than
+left silent:**
+- 🔴 **APAC/🇮🇳 India — hard nil.** `q="autograder assignments india college"` → `total_count=0`;
+  `q="swayam nptel course platform"` → `4`, every one a student's notebook dump.
+- 🔴 **LATAM — hard nil in Spanish, near-nil in Portuguese.**
+  `q="evaluacion automatica estudiantes plataforma"` → **`0`**;
+  `q="juez automatico programacion"` → `5`, all `0★`;
+  `q="correcao automatica exercicios programacao"` → `5`, ceiling `1★`. 🟡 **The one actively
+  developed Brazilian specimen, [`felipelageduarte/runcodes`](https://github.com/felipelageduarte/runcodes)
+  (`0★`, pushed `2026-11-11`), carries NO licence — a live project a studio cannot touch.**
+- 🔴 **And `beecrowd` (🇧🇷, the dominant Latin American online judge) is the `p814` shape again:**
+  `q="beecrowd online judge"` → `290` repositories and **every one is a student's solutions
+  dump** — `eduardo-mior/URI-Online-Judge-Solutions` at `346★` is the top row. 🔵 **The judge
+  itself is not open source. A `290`-repository query with zero platform rows in it.**
+
 ---
 
 ## `2026-11-13` (nineteenth pass) — **An entire system layer that eighteen passes never queried, `348` repositories deep, with a star ceiling 390× higher than the layer we were harvesting**

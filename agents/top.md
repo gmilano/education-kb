@@ -1,12 +1,39 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-13
+updated: 2026-11-15
 ---
 
 # Education AI Agents — curated, license-verified
 
-**143 real agents** below — **128 build-safe** (MIT / Apache-2.0 / BSD / ISC / 0BSD) plus
+🟢 **Twentieth pass (`p815`, 2026-11-15) — four rows added, all build-safe, all licences
+byte-read. This pass did not close a regional nil and did not find a bigger layer than `p814`'s.
+It found the layer with the WORST LICENCE PROFILE in education, and that is a commercial finding
+rather than a volume one.**
+
+🔵 **Nineteen passes asked what system a learner LOGS INTO.** `p813` answered "the LMS and the
+SIS" and `p814` widened it to "the research library", which was the largest supply this base has
+measured. 🟢 **`p815` asked what system a learner is ASSESSED BY — the sandbox that runs
+submitted code, the detector that compares it against the cohort, the browser that locks the exam
+down — and found `Judge0` at `4,519★` (GPL-3.0), `JPlag` at `2,012★` (GPL-3.0), `DOMjudge` at
+`925★` (GPL-2.0) and `Autolab` at `808★` (Apache-2.0).** 🔴 **Of the ten highest-star rows in the
+layer, six are copyleft and they hold `9,233★` of the `10,604★` total — the inverse of every
+other layer in this base, where the star mass was MIT.** See `T44`.
+
+🔴 **The engine rows are NOT on this shelf.** `Judge0`, `JPlag`, `DOMjudge`, `Autolab`,
+`CodeRunner`, `UniTime`, `otter-grader`, `Dolos`, `Pressbooks` and `Safe Exam Browser` are
+platforms and libraries, not agents, and are filed to `repos/foundations.md` and
+`verticals/solutions.md`. 🟢 **What IS on this shelf is the agentic surface over them, and it is
+four rows — because `q="autograder mcp"` returns `total_count=1`.** 🔵 **That ratio is the
+pass's second finding: the richest engine layer in education has almost no agent layer above it,
+which is the widest build slot this base has recorded.**
+
+🔴 **And three layers that regulation is about to make mandatory are measured EMPTY this pass —
+proctoring (`12` repos, ceiling `4★`), accessibility remediation (`total_count=0`) and IEP
+(`11` repos, ceiling `3★`).** See `T47` and the declared gaps below.
+
+
+**147 real agents** below — **132 build-safe** (MIT / Apache-2.0 / BSD / ISC / 0BSD) plus
 **15 copyleft** — **thirty rows added at the nineteenth pass (`p814`, 2026-11-13): 25 build-safe
 and 5 copyleft**, with **9 newly rejected**. The eighteenth pass (`p813`) added twenty-nine.
 
@@ -427,10 +454,14 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 128 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 132 rows
 
 | Name | Repo | Licence | Stars | Region | Description |
 |---|---|---|---|---|---|
+| canvas-lms-mcp | https://github.com/bruchris/canvas-lms-mcp | **MIT — byte-read** (`1,069 B`, `sha256:187d52a3…`, holder `Christian Bru`) | 10 | Global | **New this pass (`p815`), and the first row in this base whose stated purpose is to WRITE A GRADE.** *"Canvas LMS MCP server — read courses, assignments, submissions, rubrics, quizzes; grade and comment from any AI agent."* 🔴 **Grading is a write to a system of record, and unlike `expeditto` (which prepares a `rascunho` and lets a human file it) this one's headline verb is the write itself.** 🔵 **So it is shelved build-safe on licence and flagged on posture: adopt the connector, put `P6`/`P22`'s human-in-the-loop publication gate in front of the grading tools, and never expose them unattended.** 🟢 **It is also the fifth distinct Canvas surface in this base and the only one that reaches RUBRICS**, which is what makes `P37` possible. Pushed `2026-11-03` |
+| AutoGrader-Agent | https://github.com/omerfarooq223/AutoGrader-Agent | **MIT — byte-read** (`1,076 B`, `sha256:c6210dbf…`, holder `Muhammad Omer Farooq`) | 3 | Global | **New this pass (`p815`) — the only row found that does the WHOLE assessment loop in one agent.** *"AI agent that grades student assignments from a ZIP file using LLMs — generates rubrics, detects plagiarism, and outputs…"* 🟡 **`3★`, single author: this is a topology reference, not an adoption candidate** — and the topology is the useful part, because it is exactly `T44`'s argument in miniature. 🔴 **Its plagiarism step is LLM-judged rather than measured; replace it with `dodona-edu/dolos` (MIT, `357★`) before anyone's academic record depends on it.** Pushed `2026-11-02` |
+| athina | https://github.com/athina-edu/athina | **MIT — byte-read at `LICENCE`** (`1,098 B`, `sha256:dd7ad247…`, holder `Michail Tsikerdekis`) | 3 | Global | **New this pass (`p815`), and `T46`'s filename specimen — it spells the file `LICENCE`, which was NOT in `p814`'s probe list.** *"A formative assessment microservice for programming assignments."* 🟢 **FORMATIVE is the word that matters: it is built to give repeated feedback during the work rather than one grade at the end, which is the lowest-risk shape in the whole assessment layer** — no record is written, so neither `T36` nor the EU AI Act's high-risk grading trigger is engaged. 🔵 **Maintained since `2019-02-22` and pushed `2026-11-13`: seven years of continuity at `3★`.** `ACTION`: if adopted, open the `LICENCE`/`LICENSE` alias upstream so the API field stops reading it correctly by luck |
+| lab-autograder | https://github.com/himanshuuem/lab-autograder | **MIT — byte-read** (`1,064 B`, `sha256:d20d8c5e…`, holder `Himanshu`) | 1 | Global | **New this pass (`p815`), and the entire agentic surface of this layer: `q="autograder mcp"` returns `total_count=1` and this is it.** *"Auto-grades lab assignments from Google Classroom: extracts code from PDFs, runs it in a Docker sandbox, checks outputs."* 🟢 **The Docker-sandbox step is the right instinct and it is the `Judge0` problem restated: this row reimplements in-house what the `4,519★` GPL-3.0 engine does properly, which is precisely why `T44` matters commercially.** 🔵 **And a 🇮🇳 India-origin specimen on a channel where `q="autograder assignments india college"` returns `0` — the supply exists and does not answer to regional queries.** 🟡 **`1★`, created `2026-10-10`: the measurement, not the build.** Pushed `2026-10-22` |
 | claude-scholar | https://github.com/Galaxy-Dawn/claude-scholar | **MIT — byte-read** (`1,068 B`, `sha256:0458c162…`, holder `Gaorui Zhang`) | 6046 | Global | **New this pass (`p814`) — and the single most-starred education agent this base has ever shelved, by a factor of 250 over `p813`'s anchor.** Semi-automated research assistant for academic research and software-literature work. 🟢 **`T39`: this row is the measurement. Eighteen passes harvested the LMS/attendance layer and its ceiling was `98★`; the research-library layer opens at `6,046★` and nobody had looked.** Pushed `2026-10-19` |
 | zotero-mcp (54yyyu) | https://github.com/54yyyu/zotero-mcp | **MIT — byte-read** (`1,079 B`, `sha256:f0c6d358…`, holder `Zotero MCP Contributors`) | 5908 | Global | **New this pass (`p814`) — the canonical Zotero MCP server and the layer's reference implementation.** Connects a local or cloud Zotero library to Claude and other MCP clients. Pushed `2026-11-13` (the day of this pass). 🔵 **Name-collision group with `cookjohn/zotero-mcp` below, separated by licence bytes, NOT by name — see `T41`** |
 | paper-search-mcp | https://github.com/openags/paper-search-mcp | **MIT — byte-read** (`1,063 B`, `sha256:f159d578…`, holder `OPENAGS`) | 3085 | Global | **New this pass (`p814`) — and the specimen that makes axis (c) THREE-valued, not binary (`T40`).** Search and download across arXiv, PubMed, bioRxiv, medRxiv, Google Scholar, Semantic Scholar, Crossref, OpenAlex, PMC, CORE, Europe PMC, dblp, OpenAIRE, CiteSeerX, DOAJ, BASE, Zenodo, HAL, SSRN, OpenReview, Unpaywall. 🟡 **Its `download_with_fallback` chain is OA-FIRST and Sci-Hub LAST and optional: *"source-native download → OpenAIRE/CORE/Europe PMC/PMC discovery → Unpaywall DOI resolution → optional Sci-Hub"*, and it carries a dedicated `Sci-Hub Notice` section.** 🟡 **So this is not a rejection and not a clean row — it is a CONFIGURATION OBLIGATION: shippable with the optional Sci-Hub path disabled, and an engagement must record that it was.** Contrast `0jsDanny/academic-research-mcp` in the rejected table, where the same source is the headline feature |
@@ -620,6 +651,52 @@ Globant can build a client deliverable on.
 | AI-Grading-Tool | https://github.com/end13s/AI-Grading-Tool | **No licence file — sidebar shows none** | 0 | **New rejection this pass (`p808`).** The only *Moodle*-targeted grader found in the LMS-seam leg, and functionally the closest fit to a real client ask: imports a Moodle roster and submissions, has an LLM check each one against the instructor's rubric, routes every result through human review, then exports grades back to Moodle. 🔴 **`134` commits and no grant of any kind — the default is all-rights-reserved.** 🔵 **This is the fourth education repository in this base to be substantial and unlicensed** (`llamatutor` `2.1k★`, `AITutor-EvalKit`, `educational-agents`, now this), which is itself the finding recorded as `T24`. Worth an upstream licence request; cannot be adopted as published. |
 
 ## Declared gaps
+
+- 🔴 **`p815` — the PROCTORING layer is a measured near-nil, and the EU AI Act names it
+  explicitly.** `q="proctoring exam open source"` → `total_count=12`, star ceiling `4★`
+  ([`Chakrix-com/Swaya.me`](https://github.com/Chakrix-com/Swaya.me), `NOASSERTION`), modal
+  licence `NONE`. 🔴 **Annex III lists education as high-risk and names exam-cheating detection
+  among the listed uses** (`SECONDARY`: obligations reported postponed to `2027-12-02` under the
+  2026 Digital Omnibus — verify against the official text before quoting a date to a client).
+  🟢 **Meanwhile the only credible open implementation is `Safe Exam Browser` (ETH Zürich 🇨🇭),
+  and it is not an AI proctor at all — it is a lockdown browser, MPL-2.0 on Windows
+  (`seb-win-refactoring`, `369★`) and with NO licence payload on macOS/iOS (`seb-mac`, `150★`,
+  README: *"not for building own versions of SEB"*).** 🔵 **So an EMEA client facing an Annex III
+  conformity question has no adoptable AI-proctoring base in any licence. Build, or decline.**
+
+- 🔴 **`p815` — ACCESSIBILITY REMEDIATION is a HARD NIL on this channel.**
+  `q="accessibility remediation alt text education"` → **`total_count=0`**. Not thin — empty.
+  🔵 **And it is the gap with the nearest deadline and the widest population: web-accessibility
+  obligations for public education bodies bind in both North America (ADA Title II web rule) and
+  EMEA (European Accessibility Act), and every institution on every platform in
+  `verticals/solutions.md` is in scope.** 🟡 **Treat the regulatory dates as `SECONDARY` until
+  verified; the `0` is `FIRST-HAND`.**
+
+- 🔴 **`p815` — the IEP / special-education layer: `11` repositories, ceiling `3★`, and the
+  honest reading is that it does not exist.** `q="IEP individualized education program"` → `11`,
+  of which the only licensed row is [`dg13788/iep-system`](https://github.com/dg13788/iep-system)
+  (MIT, `1★`, created `2026-09-06`); `q="special education management"` → `47` and every row is
+  unrelated noise. 🔵 **IDEA makes the individualised programme a federal obligation for every US
+  district, which makes this the highest-value North American build slot in this base — and the
+  one where "adopt an open base" is simply not an available recommendation.**
+
+- 🔴 **`p815` — the assessment ENGINE layer's regional nils, measured in three languages.**
+  🇮🇳 `q="autograder assignments india college"` → **`0`**;
+  🌎 `q="evaluacion automatica estudiantes plataforma"` → **`0`**;
+  🇧🇷 `q="correcao automatica exercicios programacao"` → `5`, ceiling `1★`. 🟡 **The one actively
+  developed LATAM specimen, [`felipelageduarte/runcodes`](https://github.com/felipelageduarte/runcodes),
+  was pushed `2026-11-11` and carries NO licence — a live project a studio cannot touch.** 🔴
+  **And `q="beecrowd online judge"` → `290` repositories of which every single one is a student's
+  solutions dump (top row `eduardo-mior/URI-Online-Judge-Solutions`, `346★`): Latin America's
+  dominant online judge is not open source, and the query that finds it finds only its users.**
+
+- 🟡 **`p815` — `ACTION p815-A`, the probe's SECOND degree of freedom.** `T43` fixed the filename
+  axis and left the branch guessed, and `pressbooks/pressbooks` (`462★`) read as unlicensed
+  because its default branch is `dev`. 🔵 **The probe must resolve the default branch from the
+  search API's own response rather than iterate `main`/`master`, and `LICENCE` (British spelling,
+  found on `athina-edu/athina`) joins the filename list.** Until then, every `NO_PAYLOAD` verdict
+  in this base carries an unquantified false-positive rate.
+
 
 - 🔴 **`p814` — the lineage of the `ScienceClaw` name-collision group is UNRESOLVED, and it is
   registered rather than guessed.** [`beita6969/ScienceClaw`](https://github.com/beita6969/ScienceClaw)
