@@ -4,6 +4,67 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirty-first pass, `p826`) — **a layer this file had never named: the public education-DATA substrate, and the platform tier a European family actually logs into**
+
+🟢 **`3` foundation rows added (`139` → `142`) and `9` platform rows added (`122` → `131`).**
+🟢 **Gate-confirmed: `repos/foundations.md shelf: tables=22 rows=144 distinct=142 graded=142
+claimed=142 ragged=0 nolink=0` and `verticals/solutions.md shelf: tables=25 rows=133 distinct=131
+graded=131 claimed=131 ragged=0 nolink=0` — both GREEN.**
+
+### The new foundations layer — the public education-DATA substrate
+
+🔵 **Everything else on these shelves is a model, a framework, or a connector to a system a client
+already owns. This layer is none of those: it is a deterministic wrapper over data that is already
+public and already authoritative, carrying its own provenance envelope.** 🟢 **It is what makes an
+education agent's output defensible to an accreditor, an examinations board or a
+data-protection officer.**
+
+- 🟢 **`bsayres/heronhex-highered`** (MIT, byte-read `1,082 B`) — five MCP servers plus six skills
+  over free US public data: institutions and enrolment with peer comparison, Title IV/FSA risk and
+  audit findings, federal and state funding, program-to-labor-market alignment, live accreditation
+  status. All five on PyPI. 🔵 **Adopt the envelope even if you never run the servers: `source` +
+  `source_url` + `as_of` + `retrieved_at` on every response, missing data as an explicit `null`
+  WITH A REASON and never estimated, fuzzy name matches labelled and refused when ambiguous,
+  egress allow-listed in code, upstream free text treated as untrusted with a written threat
+  model.**
+- 🟢 **`theluckystrike/ap-score-distributions-mcp`** (MIT, `1,070 B`) — College Board AP
+  distributions through **May 2026**, i.e. reference data that post-dates the model. 🔵 **Two
+  controls worth copying: an arithmetic self-check per year, and a hard refusal — the
+  composite-to-score estimator serves only the `7` exams with a published conversion chart and
+  declines every other rather than invent a cut score.**
+- 🟢 **`morrowdock/martygraphics`** (Apache-2.0, `11,357 B`) — the deterministic checker under
+  `agents/top.md`'s `Marty`. 🔵 **The engine validates a model-written lesson and refuses a wrong
+  one with an exact machine-readable reason, which the model then repairs: generative step
+  unconstrained, acceptance step external and inspectable. The only architecture in this file that
+  can assert physical correctness rather than plausibility.** 🔴 Author-declared early preview.
+
+### The new platform tier — national school systems of record (`T95`)
+
+🟢 **`9` rows: WebUntis (×2 lineages), Pronote/ÉcoleDirecte/Skolengo, Librus Synergia, Magister,
+Blackboard Learn Classic at CUHK-Shenzhen, the FAM portal (🇧🇷), SIGA (🇧🇷) and Ellucian Banner
+SSB.** 🔵 **These are not platforms a studio would propose — they are what a ministry or school
+board already bought, what every parent in the country already has an account on, and they have no
+public API.** 🔴 **The last two rows carry NO licence file and are shelved as evidence of a probed
+seam rather than as components; SIGA is the largest institutional footprint in the table (São
+Paulo state's Fatec/Etec network) and its only open surface cannot be used.**
+
+🟢 **The one genuinely portable asset in the tier is `ljarochowski/librus-mcp`'s architecture:**
+`domain/models` (`Child`, `Grade`, `Homework`, `CalendarEvent`), `domain/services`, `ports/`,
+`adapters/` — a hexagonal layout in which the Polish scraper is a swappable adapter and nothing in
+the domain layer is Polish. 🔵 **`jujukingg/edu-mcp` independently proves the multi-back-end shape
+across three French platforms. Together they are `P64`'s blueprint.**
+
+🟢 **The best credential posture found anywhere in this file belongs to
+`heiko-schabert/webuntis-cli`:** it authenticates through the Untis Mobile app's internal JSON-RPC
+with a **per-request TOTP and therefore stores no password.** 🔵 **A school connector that stores
+parent passwords is unsellable in EMEA; adopt this before anything else.**
+
+### Carried forward unchanged
+
+🟡 **The copyleft platform answer stands:** `OpenEduCat` (LGPL-3.0) on Odoo, `openSIS` (GPL-3.0),
+`RosarioSIS`, `ERPNext` (GPL-3.0) remain what the ERP/SIS leg returns, and `P43` remains the way
+around it — ship courseware INTO the client's LMS without adopting, forking or licensing it.
+
 ## `2026-11-15` (thirtieth pass, `p825`) — **the graph runtime under `249` shelved agents was never on the foundations shelf, and a `74`-repository catalogue made that visible**
 
 🟢 **`3` foundation rows added (`136` → `139`) and `2` platform rows added (`120` → `122`).**

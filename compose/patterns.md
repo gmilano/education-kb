@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Compose patterns — education
 
+**Sixty-six** concrete recipes — derived recipes: **66**. 🟢 **Thirty-first pass (`p826`): `P64`–`P66` added** — the multi-national school-portal connector, which turns `T95`'s `12` scattered single-country connectors into one domain model with four national adapters and makes the first task a LICENCE REQUEST rather than a rewrite (`P64`, EMEA anchor, ported to LATAM with no architectural change); the canonical-diff licence gate, four controls that catch a rewritten MIT grant clause, a republished copy that GitHub reports as `fork=false`, and a liveness probe calibrated against a channel that `403`s every `github.com` URL (`P65`, Global, and it protects every other recipe in this file); and the channel-integrity gate, which rejects a `1,524`-repository star farm from a shortlist on a five-signal conjunction while deliberately NOT rejecting the honest `1,241`-repository cohort published in the same window (`P66`, Global, and the recipe that retires the star floor as a quality filter in this domain). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=66 claimed=66 · GREEN`.** All components byte-read on `2026-11-15`.
+
 **Sixty-three** concrete recipes — derived recipes: **63**. 🟢 **Thirtieth pass (`p825`): `P61`–`P63` added** — the catalogue harvest, which takes `T86`'s `54` MIT education workflows as a REQUIREMENTS and TEST-SPEC corpus and re-implements them on the LangGraph these shelves already hold, instead of deploying `0★` unmaintained templates (`P61`, APAC origin, Global application); the platform-brand discovery protocol that makes `T86`'s catalogue findable by instrument rather than by luck, closing the third and last indexing axis after `T82`'s system-of-record and `T84`/`T87`'s language (`P62`, Global); and the special-education evidence pipeline assembled from `EDU-C2-028`, `EDU-C2-173` and `EDU-C2-098` with the decision boundary drawn before the first node (`P63`, EMEA anchor under the EU AI Act Annex III education classification, portable to any jurisdiction with a statutory accommodation process). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=63 claimed=63 · GREEN`.** All components byte-read on `2026-11-15`.
 
 **Sixty** concrete recipes — derived recipes: **60**. 🟢 **Twenty-ninth pass (`p824`): `P58`–`P60` added** — the ASSEMBLED open proctoring stack with the EU AI Act Annex III boundary drawn before the first line of code (`P58`, EMEA anchor with an APAC port, and the recipe `T83` makes possible by correcting `p815`'s nil); the registry-first LATAM discovery protocol that turns `T82`'s `709`-against-`4` into a repeatable sourcing step for an engagement (`P59`, LATAM anchor, portable to any market where the institution rather than the vendor owns the system of record); and the teacher-approval publication gate, which is EU AI Act Article 14 human oversight shipped as a product default rather than as a policy document (`P60`, Global, with a named reference implementation). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=60 claimed=60 · GREEN`.**
@@ -133,6 +135,111 @@ decision instead of a constraint:
   and it is the one argument that still favours `ltijs` on a long engagement.
 
 ---
+
+## P64 — The multi-national school-portal connector: one domain model, four national back ends, and a licence conversation instead of four rewrites (EMEA anchor, portable to LATAM)
+
+🟢 **`T95` as a product.** Four European countries run four incumbent school systems with no public API; `12` open connectors exist across them; `10` are independent; **`4` are build-safe.** 🔵 **Nobody has built the one thing a studio can sell: a single connector with a single domain model, deployed per country, per school board or per white-label client.**
+
+### The components — every grant byte-read on `2026-11-15`
+
+| Role | Component | Grant | Why this one |
+|---|---|---|---|
+| 🟢 **Domain model + architecture** | https://github.com/ljarochowski/librus-mcp | 🟢 MIT (`1,079 B`, `sha256:be00e61b6328…`) | Ports-and-adapters already: `domain/models` (`Child`, `Grade`, `Homework`, `CalendarEvent`), `domain/services` (`GradeAnalyzer`, `HomeworkTracker`, `CalendarAnalyzer`), `ports/`, `adapters/`. **Take the domain layer; the Librus scraper is already a swappable adapter** |
+| 🟢 **Multi-back-end proof** | https://github.com/jujukingg/edu-mcp | 🟢 MIT (`1,080 B`, `sha256:2ede3d997023…`) | Already runs Pronote (+ENT), ÉcoleDirecte and Skolengo behind one server. **The shape is proven; it is proven in one country** |
+| 🟢 **DACH adapter** | https://github.com/toughIQ/webuntis-mcp + https://github.com/DenizCiger/untis-mcp | 🟢 MIT both | Two independent lineages — one Python/parent-facing, one Rust with output schemas on every tool. Port the Rust tool contracts, take either client |
+| 🟢 **Credential pattern** | https://github.com/heiko-schabert/webuntis-cli | 🟢 MIT (`sha256:2c0b8069fc10…`) | 🔵 **The only no-password design in the tier**: the Untis Mobile JSON-RPC endpoint with a per-request TOTP. **Adopt this before anything else — a school connector that stores parent passwords is unsellable in EMEA** |
+| 🟢 **NL adapter** | https://github.com/israelroldan/unofficial-magister-mcp | 🟢 MIT (`1,069 B`) | The tier's only Magister implementation (`T94`) |
+| 🟢 **Provenance envelope** | https://github.com/bsayres/heronhex-highered | 🟢 MIT | `source` + `source_url` + `as_of` + `retrieved_at` on every response; missing data as explicit `null` with a reason |
+
+### How it wires together
+
+1. **Lift the domain layer from `librus-mcp`** — `Child`, `Grade`, `Homework`, `CalendarEvent`, plus the three analyzer services. These names are already country-neutral; nothing in them is Polish.
+2. **Define one `SchoolPortalPort`** with the read operations every one of the four systems supports: timetable for a date range, changes/cancellations, homework due, grades, absences with the allowed maximum, messages. 🔴 **Nothing else. The intersection is the product; a union forces per-country branching into the domain layer, which is the mistake this recipe exists to avoid.**
+3. **Write one adapter per back end**, each lifted from the shelved implementation above rather than from scratch. `edu-mcp` already gives you three.
+4. **Make credentials a port too**, and implement the TOTP pattern from `webuntis-cli` first. 🔵 Password-storing adapters are a separate, clearly labelled tier that a client opts into.
+5. **Wrap every response in the `heronhex` envelope.** For a school portal `as_of` is not decoration: a timetable read at `07:40` and a cancellation posted at `07:55` are a support incident unless the answer carries its own retrieval time.
+6. **Expose it as MCP, and as a REST surface behind it.** Every shelved implementation here is MCP-first, which is correct for the parent-with-an-assistant case and insufficient for the school-board case.
+
+### The licence step, which is the actual first task
+
+🔴 **`7` of the `12` connectors found carry no `LICENSE` file.** 🟢 **Before writing an adapter for a country, open an issue asking the author to add one.** Two of the unlicensed WebUntis servers are school-specific (`leo-hhg`, `Ida-Untis`) and one is a WebUntis+Moodle toolbox — all three are a licence away from being usable, and a licence request costs an hour against a connector's weeks.
+
+### Why it survives review
+
+🟢 Every adapter is unofficial, so **each one names its non-affiliation in its own documentation, as `unofficial-magister-mcp` already does.** 🟢 Read-only by default, with writes a separately-scoped, separately-priced tier governed by `P56`. 🔴 **The data is children's data in every one of these countries. The guardian-credential boundary of `P45` is not optional here, and GDPR applies to all four jurisdictions.**
+
+### Estimate
+
+🟢 **`6`–`8` weeks** for the domain layer, the port, two adapters (DACH + France, the two largest markets) and the envelope. **`1`–`2` weeks per further country**, because the domain layer does not move. 🔵 **Port to LATAM with no architectural change:** `Petri-Hub/fam-mcp` (🇧🇷, MIT) is already the same shape, and `KaioBorgesDev/siga-mcp` covers São Paulo's state technical network — 🔴 but SIGA carries no licence, so that adapter starts with the same licence request.
+
+### Three disqualifiers — check these first
+
+🔴 **The client wants writes in v1.** Submission and enrolment writes against a scraped portal need `P56`'s commit-and-re-read protocol and a different risk conversation; do not fold them into the connector milestone.
+🔴 **The client wants one country only.** Then buy or fork the single national connector and skip this recipe entirely — the domain layer only pays back across borders.
+🔴 **The incumbent vendor offers an official API under contract.** Take it. Every component here exists because no such API is available.
+
+## P65 — The canonical-diff licence gate: four controls that catch a rewritten grant, a silent republish and a hash that lies (Global, and it protects every other recipe in this file)
+
+🔴 **`p826` nearly shelved a repository whose MIT permission clause had been rewritten, and nearly published a two-implementation population that is one implementation at two addresses.** 🟢 **Both were caught by controls that this base did not previously run. This recipe is those controls.**
+
+### Control 1 — Diff against canonical, do not read the header (`T93`)
+
+🔴 A `LICENSE` that opens `MIT License` and carries a plausible copyright line can still have its **grant clause** rewritten. `gangula-karthik/ntulearn-mcp` replaces *"to permit persons to whom the Software is furnished to do so"* with *"to furnish it to whom it is furnished to do so"* — the only sentence that grants onward distribution, altered into something that does not grant anything.
+
+🟢 **The control:** keep canonical SPDX texts locally; normalise whitespace and strip the copyright line; `diff` the candidate against the canonical of the licence it claims. 🟢 **Zero diff → shelve. Any diff in the grant, conditions or warranty clauses → reject and route to a human.** 🔵 **Byte LENGTH is a usable pre-filter — canonical MIT bodies on this shelf run `1,062`–`1,085 B`, and the rewritten one is `1,055 B` — but length alone is noise, because the copyright line's length varies by holder name.**
+
+### Control 2 — Treat `NOASSERTION` as a QUESTION, never as an answer (`T50` → `T52` → `T93`)
+
+🔴 This base has now held three positions on `NOASSERTION`: *leans copyleft* (`T50`, retracted), *the matcher failed* (`T52`, true but incomplete), and now **the matcher failed, and one of the reasons it fails is that the grant was edited** (`T93`). 🟢 **So `NOASSERTION` routes to Control 1, and Control 1 decides. It is never shelved on the field, and never rejected on the field either** — `ntulearn-mcp` is genuinely good code whose licence is one commit away from correct.
+
+### Control 3 — De-duplicate a population by licence hash AND README hash before counting it (`T94`)
+
+🔴 **GitHub's `fork` flag reported `false` on a repository carrying another developer's `LICENSE` bytes and 2024 copyright line.** 🟢 **The control:** hash `LICENSE` and `README.md` for every member of a population. On a licence-hash collision, **read the README**:
+
+| Signal | Disposition |
+|---|---|
+| README declares the port and links upstream, holder retained | 🟢 Honest port — count as ONE lineage, both usable |
+| README near-identical, no attribution, later creation date, `fork=false` | 🔴 Silent republish — count as ONE implementation, shelve only the original |
+| Different READMEs, different licence hashes | 🟢 Independent implementations — count each |
+
+🔵 **This matters wherever a count becomes an argument** — `T77`'s per-campus population, `P55`'s consolidation case, `T95`'s regional yield. A supply figure inflated by republished copies makes a market look better served than it is.
+
+### Control 4 — Byte-read on the branch that exists, and record the probe
+
+🔴 A `main`-only probe records a false `NO_LICENCE_FILE` on any repository whose default branch is `master` — this base already lost a row to it (`langchain`). 🟢 Probe `main` then `master`, and `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`. 🔴 **And record the CHANNEL: this pass could not use `curl` against `github.com` at all — the proxy returned `403` for every URL including `torvalds/linux`, so a naive liveness check would have reported the entire shelf dead.** 🟢 `raw.githubusercontent.com` worked; `search/repositories` with a `repo:` qualifier worked; `repos/{owner}/{repo}` and `users/{u}/repos` were refused. **Calibrate a liveness instrument against a known-good URL before trusting a single `404`.**
+
+### What it costs, and what it is worth
+
+🟢 **Half a day to implement, and it runs in the ingest path.** 🔵 **Its value is not caught defects per pass — it is that every row on these shelves becomes a statement a procurement lawyer can rely on. One rewritten grant shipped into a client tree costs more than every run of this gate combined.**
+
+## P66 — The channel-integrity gate: reject a mass-publication farm before it reaches a shortlist (Global, and the recipe that makes star-ranked discovery usable again)
+
+🔴 **`p826` measured a `1,524`-repository farm carrying `~102,000` stars that took `45%` of the first page of this base's own prescribed `tutor` query.** 🟢 **Its signature is mechanical and cheap to detect. This is the detector.**
+
+### The measured signature — five signals, any three of which convict
+
+| Signal | Farm (`apimart`, `1,524` repos) | Honest cohort (`AGENTIC STAR`, `1,241` repos) |
+|---|---|---|
+| **Owner clustering** | 🔴 `580` accounts, all one prefix + random suffix, `~2.6` repos each | 🟢 `13` named individuals |
+| **Stars without forks** | 🔴 mean `67.3★`, `0` forks on `99` of `100` | 🟢 `0★`, consistent with age |
+| **Identical payload sizes** | 🔴 four buckets (`174`/`1,292`/`1,329`/`6,096 KB`) repeated across the corpus | 🟢 sizes vary with content |
+| **Licence** | 🔴 `1,000` of `1,000` `NOASSERTION` | 🟢 `1,211` of `1,241` MIT |
+| **Publication window** | 🔴 `1,524` in `6` days | 🟡 `1,210` in `10` days — **a burst is NOT by itself a farm signal** |
+
+🔵 **The last row is the point: both populations were mass-published within days. Burst detection alone would have rejected the MIT cohort too.** 🟢 **It is the conjunction — throwaway owners + stars without forks + repeated payload sizes + blanket `NOASSERTION` — that separates them.**
+
+### How to run it
+
+1. **Before shortlisting from any star-ranked query**, pull `owner.login`, `size`, `stargazers_count`, `forks_count`, `license.spdx_id` and `created_at` for every result. All of it comes back from `search/repositories` in the same call; no extra requests.
+2. **Cluster owners by longest common prefix.** Three or more results sharing a prefix of ≥`6` characters with random suffixes is signal one.
+3. **Compute stars ÷ (forks + 1).** On this farm it is `67`; on real repositories on these shelves it is in single digits. 🔵 **Stars are purchasable and forks are not, so their RATIO is the cheapest forgery detector available.**
+4. **Histogram `size`.** Exact repeats across unrelated owners are signal three.
+5. **Quarantine, do not delete.** A quarantined cluster is a finding worth recording — `T73`'s clone farm and `T91`'s relay farm are both intelligence about the channel.
+6. **Re-run the query with no star floor** and rank by `pushed_at`. 🟢 **This is `T70`'s channel, and it is the one that has produced every non-nil discovery pass this base has had.**
+
+### The standing instruction this replaces
+
+🔴 **Stop treating a star floor as a quality filter in this domain.** 🟢 **On these shelves the genuinely new education supply sits at `0`–`50★` — `untis-mcp` `0★`, `edu-mcp` `0★`, `heronhex-highered` `0★`, `TeachMeCoding` `50★` — while the farm sits at `~67★` per repository.** 🔵 **Any floor that excludes the farm excludes the entire shelf. Use the licence byte-read of `P65` as the quality filter and recency as the ranking; stars are a popularity signal about the past and, as `T73` and `T91` both show, a forgeable one.**
 
 ## P61 — Harvest the catalogue as REQUIREMENTS, not as a codebase: `54` specified education workflows into your own LangGraph tree (APAC origin, Global application)
 

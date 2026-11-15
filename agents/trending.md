@@ -4,6 +4,89 @@ region: Global
 updated: 2026-11-15
 ---
 
+## `2026-11-15` (thirty-first pass, `p826`) — **two ~`1,200`-repository mass-publication events in the same ten days, and the star-ranked channel can only see the empty one**
+
+🟢 **`20` build-safe agent rows added (`249` → `269`), `1` rejection, `3` foundation rows
+(`139` → `142`), `9` platform rows (`122` → `131`), `5` trends (`T91`–`T95`), `3` recipes
+(`P64`–`P66`), and a dated `p826` block in all five regional sections of `intel/market.md`.**
+🟢 **Every count gate-confirmed: `python3 ingest/derive-counts.py` returns GREEN on all five
+shelves, for a fourth consecutive pass.**
+
+### The channel result, and this pass finally measured the MECHANISM rather than the symptom
+
+🔴 **The mandated star-ranked WebSearch battery nilled a `41`st consecutive time on its REPOSITORY
+legs.** 🔵 **Agent leg: general roundups naming `OpenHands`, `browser-use`, `Langflow`, `Hermes
+Agent` — the general shelf again, plus one directory page naming no repositories. Trending leg:
+`DeepTutor`, `interactive-learning`, `microsoft/ai-agents-for-beginners`, `Claw-ED` — held or
+irrelevant. ERP leg: `OpenEduCat` (LGPL-3.0) on `Odoo`, the copyleft platform answer this base has
+recorded since `p805`.** 🟢 **All four REGIONAL legs produced substantively, for a second
+consecutive pass — the asymmetry `p825` first recorded now holds twice.**
+
+🔴 **And `p826` measured WHY the repository legs fail, which `41` previous nil notices did not.**
+A `1,524`-repository star farm — `580` throwaway `apimart*` owner accounts, `1,000` of `1,000`
+`NOASSERTION`, `67,255` stars over the enumerable `1,000` (mean `67.3`, est. `~102,000` total),
+`0` forks on `99` of `100` sampled, four repeated payload sizes, all published in six days —
+**took `13` of the `29` results (`45%`) on this base's own prescribed
+`q="tutor LLM pushed:>2026-10-15 stars:>30"`.** 🔵 **The farm sells an API relay; its SEO
+vocabulary is *tutorial*, *guide*, *course*, *learn*, and `145` of its first `1,000` names carry
+one of those words. It is not targeting education and it does not need to.** 🟢 **The channel is
+not saturated and not broken — it is ranking correctly over a population whose top is synthetic
+(`T91`). `P66` is the rejection gate.**
+
+### What produced instead — the registry-name channel, pointed at EMEA
+
+🟢 **`T82`'s rule run as `P59` prescribes, against EMEA rather than LATAM, produced the largest
+regional yield since `p818` (`T95`): `4` national school systems, `12` repositories, `10`
+independent implementations, `4` build-safe — WebUntis (🇦🇹🇩🇪🇨🇭 `6`), Librus Synergia (🇵🇱 `3`),
+Pronote/ÉcoleDirecte/Skolengo (🇫🇷 `2`), Magister (🇳🇱 `2`).** 🔵 **Not one is findable by any query
+containing the word "education". They are parent-facing, read-only by declaration, written by
+individuals against systems with no public API.** 🔴 **`7` of the `12` carry no `LICENSE` file —
+a `58%` unlicensed rate, the highest of any tier this base has measured.**
+
+### Two instrument corrections, both of which changed a number in this pass
+
+🔴 **`T93` — a header-level byte-read is not enough.** `gangula-karthik/ntulearn-mcp` opens
+`MIT License`, reads as stock text for eight lines, and has its **grant clause rewritten**: *"to
+permit persons to whom the Software is furnished to do so"* → *"to furnish it to whom it is
+furnished to do so"*. 🟢 **GitHub's `NOASSERTION` is CORRECT on this row and this base's own gate
+was wrong. Filed as a rejection, not a row. The control is a diff against canonical SPDX text
+(`P65`), not a hash compared to a sibling.**
+
+🟡 **`T94` — licence-byte identity has two opposite readings.** `toughIQ/webuntis-mcp` and
+`heiko-schabert/webuntis-cli` share `sha256:2c0b8069fc10…` and the README **declares the port** —
+honest, one lineage, both usable. `israelroldan/unofficial-magister-mcp` and
+`NanoBotAgent/magister-mcp` share `sha256:bd7dc91514e6…` **and the 2024 holder line**, with no
+attribution and `fork=false` — a silent republish. 🟢 **This cut this pass's own Magister count
+from `2` to `1` before publication; only the original is shelved.**
+
+### The correction to `p825`'s own headline (`T92`)
+
+🔴 **`p825` published a *"`74`-repository MIT education catalogue"*. Enumerated by author rather
+than by query, it is `1,241` repositories, `1,211` MIT — a `16.8×` undercount — and it is NOT an
+education catalogue.** 🟢 **Domain spread: `retail` `81`, `insurance` `41`, `manufacturing` `28`,
+`telecom` `24`, `logistics` `20`, `services` `19`, `education` `19`, `financial` `17`,
+`healthcare` `16`, `energy` `13` — very nearly this estate's own twelve-industry rotation.**
+🔵 **It is a cross-sector asset and the other eleven KBs have the same blind spot.** 🟢 **It is
+also CLOSED: `1,210` of `1,241` created in ten days, only `2` since `2026-10-29`.** 🔴 **Of the
+`76` education-slice repositories, `58` are unheld and `p826` shelves NONE of them — deliberately.
+They are `0★`, unmaintained, and refuse to start without a vendor deployment; `P61` already
+specifies the correct use, which is a requirements harvest. Twenty more dead rows would have
+raised a count and taught nothing.**
+
+### Declared gaps this pass
+
+🔴 **Canada:** the North America leg returned workplace AI rules and **nothing** on classroom
+policy. An informed gap, not coverage. Query provincial ministries by name next pass.
+🔴 **APAC adoption rates:** the leg returned regulation in detail and **no** school/university
+adoption data, for a second consecutive pass. Query MEXT, MOE Singapore and UGC India by name.
+🔴 **Primary sources:** `WebFetch` resolved **no external host** this pass. Every market and
+regulatory figure is a WebSearch summary and is marked `CITED, NOT READ`; repository claims are
+unaffected and byte-read on `raw.githubusercontent.com`.
+🔴 **`curl` against `github.com` returned `403` for every URL including `torvalds/linux`**, so the
+proxy — not the repositories — is what a naive liveness probe would have reported as dead. The
+working channels this pass were `raw.githubusercontent.com` and `search/repositories`; both
+`repos/{owner}/{repo}` and `users/{u}/repos` were refused.
+
 ## `2026-11-15` (thirtieth pass, `p825`) — **a `74`-repository MIT education catalogue that `29` passes never saw, and the retraction of this base's own Vietnam finding**
 
 🟢 **`22` build-safe agent rows added (`227` → `249`), `0` copyleft, `3` foundation rows

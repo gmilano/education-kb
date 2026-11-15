@@ -6,6 +6,8 @@ updated: 2026-11-15
 
 # Education AI — current trends
 
+**Ninety-five** trends — derived trends: **95** — 🟢 **Thirty-first pass (`p826`, 2026-11-15): `T91`–`T95` added** — two ~`1,200`-repository mass-publication events measured in the same ten days, one all-MIT at `0★` and one all-`NOASSERTION` at `~102,000` stars, with the star-ranked channel structurally able to see only the second (`T91`, which explains the `41`-pass nil as CORRECT RANKING over a synthetic top rather than as saturation or breakage); `p825`'s *"`74`-repository MIT education catalogue"* re-measured by author enumeration as an education-filtered projection of a `1,241`-repository, TWELVE-INDUSTRY catalogue that is already closed (`T92`, a `16.8×` undercount, and a cross-sector asset for every KB in this estate); the licence byte-read shown to be insufficient at the HEADER, with a repository whose grant clause is rewritten and whose `NOASSERTION` field is therefore CORRECT (`T93`, supplying the half `T52` left out); licence-byte identity shown to carry TWO opposite dispositions — declared port versus silent republish — separable only by the README, with GitHub's fork flag reporting `false` on the republish (`T94`, which cut this pass's own Magister count from `2` to `1`); and the EMEA national-school-system MCP tier enumerated for the first time at `4` systems, `12` repositories, `10` independent implementations and `4` build-safe (`T95`, `T82`'s rule run against EMEA via `P59`). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=95 claimed=95 · GREEN`.** 🔴 **Channel note: `WebFetch` resolved NO external host this pass, so every repository is first-hand and byte-read on `raw.githubusercontent.com`, while every market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.**
+
 **Ninety** trends — derived trends: **90** — 🟢 **Thirtieth pass (`p825`, 2026-11-15): `T86`–`T90` added** — a `74`-repository, `54`-id, MIT-licensed education agent catalogue found on GitHub that `29` previous passes held ZERO rows of, because it is indexed under a PLATFORM BRAND rather than under pedagogy, jurisdiction or stars (`T86`, which generalises `T82` to a third indexing axis); `p824`'s own `T84` — *"Vietnam … build-safe open supply of ZERO"* — measured FALSE, with `43` of the `74` repositories written by Vietnamese authors, the largest national group of education-agent authors this base has recorded (`T87`); the licence FIELD-versus-BYTES defect class shown to be a property of REGISTRIES rather than of GitHub, with PyPI's `info.license` reporting `None` for two MIT packages whose wheels declare `License-Expression: MIT` (`T88`, which extends `T52`/`T81` to a second registry); the distinction between a LICENCE gap and a REVIEWABILITY gap, drawn on a framework that is MIT and installable but wheel-only with an advertised source repository holding zero commits (`T89`); and the copyright in a vendor-channel cohort proved by licence-byte-hash to sit with `13` individual developers rather than with the platform vendor (`T90`). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=90 claimed=90 · GREEN`.**
 
 **Eighty-five** trends — derived trends: **85** — 🟢 **Twenty-ninth pass (`p824`, 2026-11-15): `T81`–`T85` added** — the repository licence FIELD shown to diverge from the licence BYTES in three named ways and to err in BOTH directions (`T81`), LATAM's supply shown to be indexed under the SYSTEM NAME at `709` against `4` for the pedagogy (`T82`), `p815`'s proctoring nil corrected to a `~100`-repository population whose star mass is unlicensed (`T83`), Vietnam measured as the newest binding high-risk education-AI jurisdiction with a build-safe supply of ZERO (`T84`), and the permissive PLATFORM tier found one rank below every star ceiling this file has ever read (`T85`, which is the third and strongest weakening of `T7`). 🔵 **Gate-confirmed after insertion: `python3 ingest/derive-counts.py` returns `derived=85 claimed=85 · GREEN`.**
@@ -90,6 +92,81 @@ the second time.** 🔵 **The amendment uses no component discovered this pass**
 three were license-verified in earlier passes and had never reached a shelf file. 🔴 **The count in this line said "Eight" for
 nine trends past the point it stopped being true; corrected at `p803`, and
 re-counted at `p804` when `T18` and `T19` were added.**
+
+## T91 — Two ~`1,200`-repository mass-publication events landed in the same ten days, and the star-ranked channel can only see the one with no code in it
+
+🔴 **This is the mechanism behind a symptom this base has recorded `41` times without explaining it.** Both populations were enumerated this pass by instrument, not sampled.
+
+| | `AGENTIC STAR` cohort | `apimart` farm |
+|---|---|---|
+| Repository count | 🟢 `1,241` | 🔴 `1,524` |
+| Publishing accounts | `13` named individuals | 🔴 `580` throwaway accounts (`apimart`+random suffix) |
+| Licence profile | 🟢 `1,211` MIT / `30` none | 🔴 `1,000` of `1,000` `NOASSERTION` |
+| Star mass | 🔴 `1,226` of `1,241` at `0★` | 🔴 `67,255` over the enumerable `1,000`; mean `67.3` → `~102,000` total |
+| Fork count | — | 🔴 `0` on `99` of `100` sampled |
+| Payload shape | 🟢 Design docs, test specs, `tests/proof_of_boundary/`, `config/agent.yaml` | 🔴 Four repeated size buckets (`174`/`1,292`/`1,329`/`6,096 KB`) |
+| Publication window | `2026-09-21` → `2026-09-30` | `2026-09-28` → `2026-10-03` |
+
+🔴 **Measured on this base's own prescribed query.** `q="tutor LLM pushed:>2026-10-15 stars:>30"` returned `29` distinct repositories; **`13` of them — `45%` — are farm rows.** None concerns education. The farm sells an API relay and its SEO vocabulary is *tutorial*, *guide*, *course*, *learn* (`145` of the first `1,000` names carry one).
+
+🟢 **The conclusion, which corrects how this base has described its own channel.** The star-ranked channel is not saturated (`T63`) and it is not broken. **It is ranking correctly over a population whose top is synthetic.** 🔵 **Any star floor high enough to exclude noise also excludes every genuinely new education repository on these shelves, which sit at `0`–`50★`, while admitting a farm at `~67★` per repository.** 🟢 **`T73` established that stars are forgeable at the scale of one impersonated project; `T91` establishes that they are forgeable at the scale of a whole query's first page.** `P66` ships the rejection gate.
+
+🔵 **Cross-estate note: neither population is education-specific. Every other KB in this rotation is reading the same poisoned channel.**
+
+## T92 — `p825`'s "`74`-repository MIT education catalogue" is an education-filtered projection of a `1,241`-repository, twelve-industry catalogue — and the catalogue is already closed
+
+🔴 **A `16.8×` undercount, and the cause is `p825`'s own query shape.** `p825` unioned ten `"agentic star" <education term>` queries and reported `74` repositories by `13` authors. 🟢 **`p826` enumerated by author instead — `q="user:<author>"` for all `13` — and measured `1,241` repositories, `1,211` MIT and `30` unlicensed.**
+
+🟢 **Domain-prefix distribution of the `1,210` `agentic-star-*` repositories:** `retail` `81`, `insurance` `41`, `manufacturing` `28`, `telecom` `24`, `logistics` `20`, `services` `19`, **`education` `19`**, `financial` `17`, `healthcare` `16`, `energy` `13`, `municipal` `12`, `government` `11`, `travel` `5`. 🔵 **That is very nearly this estate's own twelve-industry rotation, which makes the cohort a CROSS-SECTOR asset rather than an education find — and means the other eleven knowledge bases have the same blind spot for the same reason.**
+
+🟢 **The education slice, measured honestly: `76` repositories, `18` already shelved, `58` not.** 🔴 **`p826` shelves none of the `58`, deliberately** — `p825` established they are `0★`, unmaintained and refuse to start without a vendor deployment, and `P61` already specifies the correct use. 🔵 **Adding `58` dead rows would have raised a count and taught nothing.**
+
+🟢 **It is also FINISHED, which is the operationally useful half.** `1,210` of `1,241` were created inside ten days — peak `402` on `2026-09-25`, `331` on `2026-09-28` — and **only `2` repositories have been created since `2026-10-29`.** 🔵 **A one-shot developer-programme output, not a channel. No later pass should re-enumerate it expecting growth.**
+
+🟡 **`1,207` distinct workflow names across `1,210` repositories.** The catalogue is a near-exhaustive partition rather than a set of duplicates, which is what makes it worth harvesting as a TAXONOMY: a studio scoping any of these twelve industries now has a `1,207`-row named-workflow inventory to check its own scope against.
+
+## T93 — Byte-reading the licence HEADER is not enough: a rewritten grant clause reads as MIT for the first eight lines, and `NOASSERTION` is then CORRECT
+
+🔴 **This base's own gate would have mis-shelved `gangula-karthik/ntulearn-mcp`.** Its `LICENSE` is `1,055 B`, opens `MIT License` and `Copyright (c) 2026 kingdonkatsu`, and matches stock text until the permission clause.
+
+| | Text |
+|---|---|
+| Canonical MIT | *"…copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:"* |
+| 🔴 `ntulearn-mcp` | *"…copies of the Software, and to **furnish it to whom it is furnished to do so**, subject to the following conditions:"* |
+
+🔴 **The altered sentence is precisely the one that grants onward distribution, and the replacement does not parse as a grant at all.** GitHub's licence field reports `NOASSERTION`; on this row **the field is right and a header-level byte-read is wrong.**
+
+🟢 **The correction to this base's instrument chain, stated exactly.** `T50` claimed `NOASSERTION` leans copyleft and was retracted. `T52` replaced it with *"`NOASSERTION` means the matcher failed"* — true, and incomplete. 🔵 **`T93` supplies the missing half: the matcher sometimes fails BECAUSE THE GRANT WAS EDITED. Those two causes are indistinguishable from the field, from the header, and from a byte-hash compared to a sibling repository — and only one of them is safe to shelve.** 🟢 **The control is a DIFF AGAINST CANONICAL SPDX TEXT. `P65` ships it. `p825`'s licence-hash table recorded hashes but compared them only across authors, so this class was invisible to it.**
+
+## T94 — Licence-byte identity has two opposite dispositions, the README is the only thing that separates them, and GitHub's fork flag catches neither
+
+🟢 **Two byte-hash collisions in one pass, with opposite readings.**
+
+| Collision | Repositories | Holder line | README | Reading |
+|---|---|---|---|---|
+| `sha256:2c0b8069fc10…` | `toughIQ/webuntis-mcp` + `heiko-schabert/webuntis-cli` | `toughIQ` in both | 🟢 Declares *"Go port of webuntis-mcp"* and links upstream | 🟢 **Honest port — one lineage, two usable implementations** |
+| `sha256:bd7dc91514e6…` | `israelroldan/unofficial-magister-mcp` + `NanoBotAgent/magister-mcp` | 🔴 `Copyright (c) 2024 Israel Roldan` in BOTH | 🔴 Near-identical prose and disclaimer, no attribution, created `2026-09-11` — seven months after the original | 🔴 **Silent republish — ONE implementation at two addresses** |
+
+🔴 **GitHub reports `fork=false` on the republish.** So the fork graph — the field a population count naturally leans on — does not mark it, and `search/repositories` returns it as an independent repository.
+
+🟢 **This changed a number in this pass rather than decorating one.** The Magister tier was about to be published as a population of `2`; it is a population of `1`, and only the original is shelved. 🔵 **The general rule for `T77`-style per-campus populations and for `P55`'s consolidation argument: de-duplicate by LICENCE-BYTE HASH **and** README HASH before counting, and when hashes collide, read the README — it is the only artefact that distinguishes an attributed port from an unattributed copy.** 🟡 **Note that the MIT licence is satisfied in both cases: the copyright notice travelled. What did not travel is the signal a counter needs, which is a measurement problem rather than a legal one.**
+
+## T95 — The EMEA national-school-system MCP tier, enumerated: `4` national systems, `12` repositories, `10` independent implementations, `4` build-safe — and none of it is findable by the word "education"
+
+🟢 **`T82`'s rule — supply is indexed under the SYSTEM NAME, never the pedagogy — run as `P59` prescribes, against EMEA instead of LATAM. It produced the largest regional yield of any pass since `p818`.**
+
+| National system | Incumbent where | Repos | Independent | 🟢 Build-safe |
+|---|---|---|---|---|
+| **WebUntis** | 🇦🇹🇩🇪🇨🇭 DACH K-12 timetabling and absence | `6` | `4` | 🟢 `3` |
+| **Librus Synergia** | 🇵🇱 Poland K-12 register | `3` | `3` | 🟢 `1` |
+| **Pronote / ÉcoleDirecte / Skolengo** | 🇫🇷 France K-12 portals | `2` | `2` | 🟢 `1` |
+| **Magister** | 🇳🇱 Netherlands K-12 portal | `2` | 🔴 `1` (`T94`) | 🟢 `1` |
+
+🔴 **`7` of the `12` carry no `LICENSE` file at all — a `58%` unlicensed rate, higher than any tier this base has measured.**
+
+🟢 **Four properties the tier shares, and they are the transferable part.** 🔵 **(1) It is PARENT-FACING.** The upstream WebUntis server's own example questions are *"What's on the schedule tomorrow?"* and *"Does my child have homework due?"* — this is the guardian seam of `P45`, not a teaching tool. 🔵 **(2) It is READ-ONLY BY DECLARATION**, usually in the first paragraph, and the tools are annotated read-only rather than merely documented as such. 🔵 **(3) It is written by individuals against systems with no public API**, so every one is a scraper or an undocumented mobile endpoint — `fam-mcp` states the constraint verbatim (*"The portal has no API"*), which is `T77`'s sentence from a new continent. 🔵 **(4) The best credential posture in the tier belongs to the Go port**, which authenticates through the Untis Mobile app's JSON-RPC with a per-request TOTP and therefore stores no password.
+
+🟢 **The commercial reading for an EMEA engagement.** The tier exists, it is active, and most of it cannot legally be built on. 🔵 **So the cheapest route to European coverage is not to write four connectors — it is to ask four named developers for a licence, and to build the one product none of them has: a multi-tenant connector across national systems behind a single domain model.** `ljarochowski/librus-mcp` already ships that domain model (`Child`, `Grade`, `Homework`, `CalendarEvent`) behind a ports-and-adapters layout, and `jujukingg/edu-mcp` already proves the multi-back-end shape across three French platforms. `P64` is the recipe.
 
 ## T86 — A `74`-repository, `54`-id MIT education agent catalogue existed on GitHub for seven weeks and `29` passes of this base held ZERO rows of it
 
