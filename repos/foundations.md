@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Forty-ninth pass (`p844`, 2026-11-16) — **`3` rows: the LATAM NATIONAL EDUCATION DATA layer opens, Brazil's spine is `MIT` and `433★`, and the licences across five countries are NOT the same licence**
+
+🔵 **`839-G1` named this as "the highest-value unfinished work" `p839` left:
+licence-clean education data was verified for CHILE and no other LATAM country.**
+🟢 **`p844` takes it from one country to five — and the headline is that four of
+the five are attribution-only and the fifth is SHARE-ALIKE.**
+
+### 🟢 What moved onto the foundation shelf
+
+| Repo | Licence (byte-read `2026-11-16`) | ★ | Pushed | Region | Why it is here |
+|---|---|---|---|---|---|
+| [`basedosdados/sdk`](https://github.com/basedosdados/sdk) | 🟢 **MIT** — `master/LICENSE`, `1,070 B`, `sha256₁₂ ae8976e97616` | **433** | `2026-07-24` | LATAM | 🟢 **The only production-grade LATAM education-data asset this sweep found, and the Brazil spine for `P96`.** A public datalake on BigQuery with Brazilian government data already cleaned and keyed; Python, R (CRAN) and a Stata package in development. 🔵 **INEP presence confirmed from the repo's own README example — `br_inep_ideb.municipio`.** 🔴 **The SDK is MIT; the DATASETS carry the publisher's licence, not the SDK's — see the licence table below. Do not infer one from the other** |
+| [`sidneisj/censo-escolar-bi-analytics`](https://github.com/sidneisj/censo-escolar-bi-analytics) | 🟢 **MIT** — `main/LICENSE`, `1,079 B`, `sha256₁₂ d9aa42b83225` | 2 | `2026-10-08` | LATAM | 🟡 **A worked Censo Escolar BI pipeline.** Low stars and single-maintainer, filed as a reference implementation rather than a dependency — it shows the INEP table shapes without a client paying to rediscover them |
+| [`triverao/saber11-brechas-educativas`](https://github.com/triverao/saber11-brechas-educativas) | 🟢 **MIT** — `main/LICENSE`, `1,064 B`, `sha256₁₂ dc9a631f24f7` | 0 | `2026-10-07` | LATAM | 🟡 **Colombia's ICFES Saber 11 equity-gap analysis.** 🔴 **The CODE is MIT; the DATA it reads is `CC BY-SA 4.0` — this row is the specimen for the share-alike trap below** |
+
+### 🔴 The licence table — five countries, and they do NOT agree
+
+🔴 **All five are `CITED, NOT READ`, and this pass measured exactly why: every one
+of the national portals that would settle them fails at `CONNECT` from this
+session** (see `T148`).
+
+| Country | Publisher / channel | Licence as catalogued | 🔵 Build consequence |
+|---|---|---|---|
+| 🇨🇱 Chile | MINEDUC (`chile-hub`, carried since `p839`) | `CC BY 3.0 CL` | 🟢 Attribution only |
+| 🇧🇷 Brazil | INEP — Censo Escolar, ENEM, via `dados.gov.br` | `CC BY` (Atribuição) | 🟢 Attribution only. Censo Escolar catalogued `1995–2024` |
+| 🇲🇽 Mexico | `datos.gob.mx` | **Términos de Libre Uso MX** | 🟢 Any lawful purpose, cite the source. 🔴 Corroborating texts are `2014–2015` implementation guides; the current wording was not read |
+| 🇦🇷 Argentina | Ministerio de Educación / `data.educacion.gob.ar` | `CC BY 2.5 AR` 🔴 **site-level footer, NOT per-dataset** | 🔴 **UNRESOLVED.** The footer licenses the *site*; each `datos.gob.ar` dataset carries its own licence field and none was read |
+| 🇨🇴 Colombia | ICFES Saber 11 / Saber Pro via `datos.gov.co` | 🔴 **`CC BY-SA 4.0`** (one set — Saber 11° `2019-2` — is `CC0 1.0`) | 🔴 **SHARE-ALIKE. A derived or enriched dataset INHERITS `CC BY-SA 4.0`** |
+
+🔴 **Colombia is the outlier, and it is the one that changes a build.** 🟢 **Four of
+five are attribution-only — a client ships a derivative and credits the ministry.
+ICFES is not: a dataset derived from Saber 11 must be released under `CC BY-SA 4.0`,
+so it cannot sit inside a closed data product.** 🔵 **The code around it can still be
+proprietary; the DERIVED DATA cannot.** That distinction has to be stated before a
+Colombian engagement is scoped, not after. → `T148`, `P96`.
+
+🟡 **And the ICFES terms add a second constraint the licence field does not carry:**
+ICFES states that use of its **marks and certain materials requires express
+authorisation** where confusion is possible. 🔵 Licence-clean data, trademark-encumbered
+branding — two different permissions.
+
+### 🔴 What was searched and what was missing
+
+🟢 **Searched** (`gh api search/repositories`, `2026-11-16`): `inep microdados`,
+`censo escolar python`, `icfes saber colombia`, `enem microdados`,
+`educacion datos abiertos`, `basedosdados`, `base dos dados brasil`,
+`aprender argentina educacion`, `ceibal uruguay`.
+
+🔴 **The wrapper layer is coursework, and this CORROBORATES `839-W2` one layer
+down.** Outside `basedosdados/sdk` the whole return was `0–30★`, mostly
+unlicensed or copyleft: [`filipedeschamps/api_enem_microdados`](https://github.com/filipedeschamps/api_enem_microdados)
+(`GPL-3.0`, `30★`, 🔴 stale since `2022-08-12`),
+[`HenriqueLindemann/analise-enem`](https://github.com/HenriqueLindemann/analise-enem)
+(`AGPL-3.0`, `9★`, 🟢 pushed `2026-11-14` — active but network-copyleft),
+[`datauy/ElijoEstudiar`](https://github.com/datauy/ElijoEstudiar) (`GPL-3.0`, `5★`, 🇺🇾),
+[`mecpy/mec-opendata`](https://github.com/mecpy/mec-opendata) (🔴 `NONE`, `11★`, 🇵🇾, stale `2016`).
+🔴 **`aprender argentina educacion` returned ZERO repositories** — Argentina's
+Aprender assessment has no open-source wrapper at all on this channel.
+
+🔵 **`basedosdados/mais` — the address this base would have guessed — returns `422`.
+It is a RENAME to `basedosdados/sdk`, not a death** (`T950`'s rule, applied
+prospectively for once rather than after a false alarm).
+
 ## 🟢 Forty-eighth pass (`p843`, 2026-11-16) — **`0` new foundation rows, and instead the first FIRST-PARTY measurement of the whole foundations shelf: `206` of `207` repositories measured against GitHub's own API, `0` are dead, `6` are ARCHIVED, `39` have not been pushed to in six months**
 
 🔵 **The ERP/CRM leg was run verbatim again and returned what it has returned

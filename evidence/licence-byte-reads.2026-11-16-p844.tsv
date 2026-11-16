@@ -1,0 +1,5 @@
+# p844  2026-11-16  channel: raw.githubusercontent.com (reachable: 301 in the same loop that refused 4 gov hosts)
+repo	branch/file	bytes	sha256_12	title_line	verdict
+basedosdados/sdk	master/LICENSE	1070	ae8976e97616	MIT License	MIT - build-safe
+sidneisj/censo-escolar-bi-analytics	main/LICENSE	1079	d9aa42b83225	MIT License	MIT - build-safe
+triverao/saber11-brechas-educativas	main/LICENSE	1064	dc9a631f24f7	MIT License	MIT - build-safe (DATA is CC BY-SA 4.0, see T148)

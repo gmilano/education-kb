@@ -4,6 +4,27 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — forty-ninth pass (`p844`)
+
+🔴 **The week's movement in education agents is a correction, not an addition.**
+
+- 🔴 **A build-safe row was wrongly declared dead yesterday and is restored.**
+  `Bhuvantejakomera/Agentic-Assignment-Evaluator.` — note the trailing full stop —
+  measures `total_count=1`, `MIT`, `0★`, pushed `2026-11-10`. `p843`'s sweep
+  queried the dot-stripped, lower-cased form and got `422`. → `T146`.
+- 🟢 **A death confirmed properly.** `Nordup/askaboard` is gone: `422` on the
+  address, and `user:Nordup` returns `19` live repositories with no `askaboard`
+  among them. 🔵 **The owner sweep is the control that separates a deleted
+  repository from a mistyped address**, and it is now required before any row is
+  moved to *Rejected*.
+- 🟡 **`LearnHarness` re-measured:** [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness),
+  `AGPL-3.0`, **`9,634★`**, pushed `2026-11-12`. 🔴 **Network copyleft — a market
+  signal about demand for agent-shaped learning harnesses, not a build input for a
+  client deliverable.**
+- 🔴 **The mandated star-ranked agent battery nilled for the FIFTH consecutive
+  pass** (`p840`, `p841`, `p842`, `p844`). Global legs returned only `DeepTutor`
+  and `LearnHarness`, both already held. 🟢 Declared, not padded.
+
 ## 🆕 `2026-11-16` (forty-eighth pass, `p843`) — 🟢 **NIL `38` on new rows, but the first pass that VERIFIED the trending numbers instead of quoting them. All three headline star counts were understated by third parties.**
 
 🔴 **What `p842` had to write one hour ago:** *"This pass did NOT independently

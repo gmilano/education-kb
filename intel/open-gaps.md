@@ -4,6 +4,64 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` (forty-ninth pass, `p844`) — **`1` gap CLOSED, `1` substantially advanced, `1` prior-pass finding WITHDRAWN, and this ledger's own four-pass silence recorded**
+
+### 🔴 `844-D1` — this ledger went un-appended for FOUR passes
+
+🔴 **`intel/open-gaps.md` is declared append-only and is the base's action ledger.
+Its last entry before this one is `p839`. `p840`, `p841`, `p842` and `p843` added
+nothing** — including `p843`, which produced two live ACTIONs (sweep the shelf every
+pass; move two rows) and recorded them only in `agents/top.md`. 🔵 **An action
+recorded in a shelf file is not in the ledger, so the next pass does not see it as
+owed.** 🟢 **`p844` found `p843`'s prescribed row-moves only by reading the shelf.**
+🟡 **Prescription: a pass that creates an ACTION appends it HERE in the same pass,
+even when the finding lives elsewhere.**
+
+### 🔴 `844-W1` — WITHDRAWN: "`Bhuvantejakomera/Agentic-Assignment-Evaluator` no longer resolves" (`p843`)
+
+🔴 **It resolves.** `repo:Bhuvantejakomera/Agentic-Assignment-Evaluator.` — **with
+the trailing full stop** — returns `total_count=1`, `MIT`, `0★`, pushed `2026-11-10`.
+🔴 **`p843` queried a dot-stripped, lower-cased form and took the `422` as a death.**
+🟢 **The row had warned, at `p823`, that this exact normalisation would produce a
+false 404.** → `T146`. 🟢 **Row restored to build-safe, measurement refreshed.**
+
+🟢 **The other half of `p843`'s finding HOLDS:** `Nordup/askaboard` is genuinely
+gone — `422` on the address **and** `user:Nordup` returning `19` live repositories
+with no `askaboard` among them. 🟢 **Moved to *Rejected candidates*.**
+
+### 🟢 `839-G2` — CLOSED to CORROBORATED
+
+🟢 **EU AI Act Annex III stand-alone high-risk, which is where education sits:
+`2027-12-02`**, under `Regulation (EU) 2026/1744` (OJ `2026-07-24`, in force
+`2026-07-27`). Annex I → `2028-08-02`. 🔴 **Art. `50` transparency NOT deferred,
+live since `2026-08-02`.** Twelve independent secondary readings this pass.
+🔴 **NOT primary — `eur-lex.europa.eu` still CONNECT-fails.** 🔴 **The base held
+this at `T939`/`p811` while three passes called it unresolved** — `ACTION p800-A`'s
+defect class, recurring. → `T147`.
+
+### 🟡 `839-G1` — ADVANCED from one country to five; the remainder is RE-CHARACTERISED
+
+🟢 **Chile, Brazil, Mexico, Colombia and Argentina now have a licence determination.**
+🔴 **They are not the same licence: four attribution-only, Colombia `CC BY-SA 4.0`
+(share-alike).** → `T148`, `P96`, and three new `MIT` foundation rows.
+🔴 **The remainder is NOT a research task.** `dados.gov.br`, `www.datos.gov.co` and
+`datos.gob.mx` all fail at `CONNECT`, so no further searching promotes these to
+PRIMARY. 🟢 **Re-filed as `ACTION p844-A`.**
+
+### 🔴 Gaps and actions declared open at the end of this pass
+
+| Id | Gap / action | Why it is stated rather than left silent |
+|---|---|---|
+| **`ACTION p844-A`** | 🔴 **One allow-list entry would promote four LATAM licence determinations from CITED to PRIMARY** — `dados.gov.br`, `datos.gov.co` or `datos.gob.mx`. Same shape as standing `ACTION p836-A` (`federalregister.gov`). | 🟢 **Cheapest unclaimed value in this base: a configuration change converts a standing caveat into evidence, for four countries at once.** |
+| **`ACTION p844-B`** | 🟢 **Amend `P95` stage 1: a suspect address is re-queried AS THE ROW SPELLS IT, then confirmed with `user:OWNER` before any row is moved to *Rejected*.** | 🔴 **Without it the sweep manufactures deaths.** `1` of `2` on its first run. Cost is one call per suspect, not per row. |
+| **`844-G1`** | 🔴 **Argentina's education data licence is UNRESOLVED at dataset level.** The `CC BY 2.5 AR` reading is a site footer; each `datos.gob.ar` dataset carries its own field and none was read. | 🟡 **Argentina is greenfield in both senses — it also has no open-source wrapper at all** (`aprender argentina educacion` → zero repos). Scope it as a licence read before engineering. |
+| **`844-G2`** | 🟡 **The Art. `50` content-marking grace period is contested** — `2026-12-02` in one source against Art. `50` applying from `2026-08-02` in others. | 🔵 **Quote Art. `50` as live and the marking grace as contested. Do not collapse them into one date for a client.** |
+| **`839-G3`** | 🔴 **Carried forward UNTOUCHED** — the `ai-infra-curriculum` senior/architect tracks are still unread. | 🟡 Three passes have now left it; either read the content or stop re-declaring it. |
+
+🔵 **Carried forward unchanged:** `oak-mcp-server`'s production endpoint
+(`mcp.thenational.academy`) remains unconfirmed — egress refusal, an INSTRUMENT
+limit and not evidence against the endpoint (`T136`).
+
 ## 🟢 `2026-11-16` (forty-fourth pass, `p839`) — **`1` structural defect FIXED in this base's own files, `2` prior-pass claims WITHDRAWN, `3` gaps declared**
 
 ### 🔴 `839-FIX` — `intel/market.md` carried TWO canonical `## Opportunities by region` headings, so every region was double-bucketed

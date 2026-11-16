@@ -1447,6 +1447,23 @@ across EMEA.
 
 ### North America
 
+#### Update 2026-11-16 (forty-ninth pass, `p844`) — 🔴 **NIL on instruments, and the fifth consecutive failure of the same query shape is now a prescription rather than a complaint**
+
+🟢 **Leg run `2026-11-16`: `AI education North America 2026 adoption regulation players K-12 higher education`.**
+🔴 **`0` new instruments.** Re-confirmed and already held: `134` bills across `31`
+states; Maryland's AI-literacy requirement for incoming undergraduates from Fall
+`2026`; Ohio's district AI framework deadline `2026-07-01`; NY `A 9190`; Florida's
+State Board rule with districts to adopt by `2027-07-01`; the House `K-12 AI
+Literacy and Readiness Act of 2026`; the student-drafted `STUDENTS FIRST Act of 2026`.
+
+🔴 **The named gap recurs for a SIXTH pass and the cause is the query, not the
+market: the leg returns US-only results and no Canadian or Mexican spend figure.**
+🟢 **This pass confirms the diagnosis by observation — every returned source was
+US.** 🔵 **Prescription, unchanged and still not executed: name the countries.
+Run `AI education Canada 2026 adoption spending` and `AI education México 2026
+adopción gasto` as SEPARATE legs.** 🔴 **Until one of them runs, this base should
+stop reporting a "North America" figure at all, because what it holds is a US figure.**
+
 #### Update 2026-11-16 (forty-sixth pass, `p841`) — 🔴 **NIL, measured with its denominator: `10` of `10` North American instruments surfaced by a cold-run leg were ALREADY HELD**
 
 🟢 **Leg run `2026-11-16`: `AI education North America 2026 adoption regulation players`, by an
@@ -2826,6 +2843,28 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-16 (forty-ninth pass, `p844`) — 🟢 **`839-G2` CLOSED: the high-risk education date is `2027-12-02`, corroborated twelve ways, and this base had held it since `p811`**
+
+🟢 **`Regulation (EU) 2026/1744` (Digital Omnibus on AI): OJ `2026-07-24`, in force
+`2026-07-27`.** 🟢 **Annex III stand-alone high-risk — education — deferred from
+`2026-08-02` to `2027-12-02`.** 🟢 **Annex I product-embedded → `2028-08-02`.**
+🔴 **Article `50` transparency NOT deferred; applies since `2026-08-02`.**
+
+🟢 **Corroborated this pass by twelve independent secondary readings** — Cloud
+Security Alliance (×2), Gibson Dunn, DLA Piper, `alpacax`, `compliancehub.wiki`,
+`aiacto.eu`, `verifywise.ai`, `regulation-ai.eu`, `uniwise.eu`, `gradr.se`,
+`winssolutions.org`. 🔴 **Still `CITED, NOT READ`: `eur-lex.europa.eu` re-tested
+`2026-11-16` and still fails at `CONNECT`.**
+
+🔴 **`p837`–`p839` each declared this UNRESOLVED and told the reader to quote a
+range. `T939` at `p811` already had it.** 🔵 **The correction matters commercially:
+the conformity work has until `2027-12-02`, and the Art. `50` transparency work was
+due `2026-08-02` and is therefore ALREADY LATE in every live deployment.** → `T147`.
+
+🟡 **Residual, carried not resolved:** the content-marking grace for systems already
+on the market is reported as `2026-12-02` in one source against Art. `50` from
+`2026-08-02` in others. Quote Art. `50` as live; quote the marking grace as contested.
 
 #### Update 2026-11-16 (forty-sixth pass, `p841`) — 🔴 **NIL: every EMEA instrument the cold-run leg returned was already held, including the Digital Omnibus date this file corrected earlier**
 
@@ -4262,6 +4301,26 @@ the EMEA leg; the results returned compliance advice, not measurement. **An info
 absence: the denominator for the AI Act's deployer duties is not publicly measured.**
 
 ### APAC
+
+#### Update 2026-11-16 (forty-ninth pass, `p844`) — 🔴 **NIL on new instruments; the leg returned only material this base already holds**
+
+🟢 **Leg run `2026-11-16`: `AI education APAC Asia Pacific 2026 adoption regulation China India Japan Korea players`.**
+🔴 **`0` new instruments.** Re-confirmed: India's compulsory AI and computational
+thinking from Class `3` in `2026-27` under the IndiaAI Mission; Korea's `$960M`
+commitment through `2030`; China, Japan, Korea and Singapore as the four school
+systems with AI curricula and teacher training already built; Ipsos `2026` showing
+low support for banning AI in schools across Asian markets (Indonesia `23%` →
+Korea `31%`), with Singapore falling year-on-year while Japan and Korea rose.
+
+🔵 **One structural observation worth carrying, consistent with `839-W1`:** the
+market-research figures returned for APAC disagree so widely — a `29.0%` regional
+share claim in `2026` against a `US$18.2B`-by-`2033` total, with one source
+returning placeholder table values — that **no APAC market size should be quoted
+from this channel.** 🟢 **Quote the POLICY instruments, which are nameable, dated and
+checkable; refuse the market totals, which are not.**
+
+🔴 **The procurement-document gap stands for a sixth pass:** `0` tender documents
+for India, Singapore or Australia. It is an access gap, not a discovery gap.
 
 #### Update 2026-11-16 (forty-sixth pass, `p841`) — 🔴 **NIL, and a FALSE GAP in this base's own audit practice caught in the process**
 
@@ -5703,6 +5762,36 @@ procurement-led" corner of that matrix, which `P5` did not previously have a nam
 example of.
 
 ### LATAM
+
+#### Update 2026-11-16 (forty-ninth pass, `p844`) — 🟢 **`839-G1` advanced from ONE country to FIVE, and the finding is that the licences DISAGREE**
+
+🟢 **The highest-value gap `p839` left is now substantially discharged on the
+licence side.** National education data licence posture, five countries:
+
+| Country | Licence | 🔵 Derived dataset may ship closed? |
+|---|---|---|
+| 🇨🇱 Chile — MINEDUC | `CC BY 3.0 CL` | 🟢 Yes, with credit |
+| 🇧🇷 Brazil — INEP (Censo Escolar `1995–2024`, ENEM) | `CC BY` | 🟢 Yes, with credit |
+| 🇲🇽 Mexico — `datos.gob.mx` | Términos de Libre Uso MX | 🟢 Yes, cite the source |
+| 🇦🇷 Argentina — Ministerio de Educación | 🔴 `CC BY 2.5 AR` **site-level only** | 🔴 Unresolved — read the dataset field |
+| 🇨🇴 Colombia — ICFES Saber 11 / Saber Pro | 🔴 **`CC BY-SA 4.0`** (one set `CC0 1.0`) | 🔴 **NO — share-alike inherits** |
+
+🔴 **Colombia is the outlier and it is the one that changes a build**: a dataset
+derived from Saber 11 must itself be released `CC BY-SA 4.0`. 🔵 The application
+code around it can stay proprietary; the derived DATA cannot. 🟡 **ICFES separately
+requires express authorisation for use of its MARKS** — licence-clean data,
+trademark-encumbered branding.
+
+🟢 **Brazil has the region's only production-grade asset:**
+[`basedosdados/sdk`](https://github.com/basedosdados/sdk) (`MIT`, `433★`), a
+BigQuery datalake with INEP tables already cleaned. 🔴 **Everything else is
+coursework** — `0–30★`, mostly unlicensed or copyleft — which corroborates
+`839-W2` one layer down. 🔴 **`aprender argentina educacion` returned ZERO repos.**
+
+🔴 **And the method limit, which should stop the next pass re-attempting this as
+research:** `dados.gov.br`, `www.datos.gov.co` and `datos.gob.mx` ALL fail at
+`CONNECT` from this session, exactly as `eur-lex.europa.eu` does. 🟢 **`839-G1`'s
+remainder is an ALLOW-LIST REQUEST, not a search.** → `T148`, `P96`.
 
 #### Update 2026-11-16 (forty-sixth pass, `p841`) — 🔴 **NIL: `9` of `9` LATAM instruments already held, and the adoption-governance gap re-measured from the primary study**
 
@@ -7270,6 +7359,28 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-16 (forty-ninth pass, `p844`) — 🟡 **The market-size channel is incoherent by a factor of five, and this pass declines to pick a number**
+
+🟢 **Leg run `2026-11-16`: `AI education industry trends 2026 market size agentic`.**
+🔴 **The returns do not reconcile:** AI-in-education `2026` given as
+**`$9.58B`**, **`$10.6B`** and **`~$12.3B`** depending on publisher and definition;
+`2035` terminal values from **`$136.79B`** against CAGRs quoted as **`41.5%`
+through 2030** and **`16.8%` 2026–2033** in the same result set. 🟢 **The agentic
+sub-segment is the one figure with a single attributable source and a stated
+definition:** Mordor Intelligence, **`$2.37B` (2026) → `$11.83B` (2031), `37.92%`
+CAGR**. 🟡 AI tutoring given separately as `$3.6B` (2026) → `$17.7B` (2033).
+
+🔵 **Standing guidance, reinforced rather than new: quote the agentic segment with
+its publisher named, or quote nothing.** 🔴 **A `$9.58B`–`$12.3B` spread on the same
+year is a definitional disagreement, not a measurement range, and averaging it
+produces a number no publisher would defend.**
+
+🔵 **The durable global finding this pass adds is not a market size — it is that
+the government-publisher egress refusal is GLOBAL** (`T148`): European and LATAM
+state publishers fail identically while commercial hosts in the same loop answer.
+🟢 **Every regulatory and statistical figure in this base is therefore secondary by
+construction, and that limitation is a property of the instrument, not of the sources.**
 
 #### Update 2026-11-16 (forty-fourth pass, `p839`) — 🟢 **The market is buying AI LITERACY as courseware, and this pass found the two estates that supply it without a content-licence problem**
 

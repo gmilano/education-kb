@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Forty-ninth pass (`p844`, 2026-11-16) — **`0` new agent rows. `p843`'s decay sweep is HALF WRONG: `1` of its `2` "dead" rows is alive, killed by the base's own address normalisation — and the row had PREDICTED this exact failure at `p823`**
+
+🔵 **Why this pass re-measured yesterday's measurement.** `p843` ran the first
+first-party sweep of the build-safe table and reported **`2` of `275` addresses
+gone**. 🟢 **`p844` re-ran both, and one of the two is a FALSE POSITIVE.**
+
+### 🔴 Finding 1 — `Agentic-Assignment-Evaluator.` is ALIVE, and the trailing full stop is why
+
+| Address as queried | Result `2026-11-16` |
+|---|---|
+| `repo:Bhuvantejakomera/Agentic-Assignment-Evaluator.` **(with the stop)** | 🟢 **`total_count=1`** — `MIT`, `0★`, pushed `2026-11-10`, not archived |
+| `repo:Bhuvantejakomera/Agentic-Assignment-Evaluator` (stop removed) | 🔴 `422` |
+| `repo:bhuvantejakomera/agentic-assignment-evaluator` (`p843`'s form) | 🔴 `422` |
+
+🔴 **`p843` queried the third form.** 🟢 **And the row it was testing carries, in
+its own cell, the warning that this would happen** — filed at `p823`:
+*"the repository name ends in a literal full stop … it will break naive
+link-extraction and trailing-punctuation stripping, including this base's own
+`grep -oE` address sweeps. Filed with the stop intact so a later pass does not
+'correct' it into a 404."* 🔵 **Twenty-one passes later, a later pass corrected
+it into a 404.** → `T146`.
+
+🟢 **The row is NOT moved. It stays build-safe, with the measurement refreshed.**
+
+### 🟢 Finding 2 — `Nordup/askaboard` IS genuinely gone, and an owner sweep is what proves it
+
+🔴 `repo:Nordup/askaboard` → `422`. 🟢 **And this time the negative is real:
+`user:Nordup` returns `19` repositories, pushed as recently as `2026-06-30`, and
+NONE of them is `askaboard`.** 🔵 **The owner is alive and active; the
+repository is not.** That separates *repository deleted* from *account gone* and
+from *address mistyped* — which the single `422` that `p843` relied on cannot do.
+
+🟢 **`askaboard` is moved to *Rejected candidates*, reason `address no longer
+resolves`, confirmed by two methods on two consecutive days.** 🔵 The grant was
+real when read (`MIT`, `1,063 B`, `sha256₁₂ e0407aae`); this is decay, not a
+licence failure.
+
+### 🔵 The rule this produces, for every future sweep
+
+🟢 **A `422` is evidence about the ADDRESS AS WRITTEN, never about the asset.**
+Before a row is declared dead: **re-query the address exactly as the row spells
+it** (punctuation and all), then **run `user:OWNER`** and look for the name.
+🔴 **Only an owner sweep that comes back without it is a death.** 🔵 Cost: one
+extra API call per suspect row — against a shelf of `275`, that is `2` calls this
+pass, because only suspects get swept. → `T146`, and `P95` stage 1 is amended.
+
+### 🟡 The mandated battery, run and nilled a FIFTH consecutive time
+
+🔴 `p840`, `p841`, `p842` and now `p844` ran the prescribed star-ranked education
+agent legs and returned no new build-safe agent row. 🟢 **The global legs
+returned only assets this base already holds** — `DeepTutor` (`32` mentions in
+this file) and `LearnHarness` (`4`), the latter re-measured this pass at
+**`amosblomqvist/learnharness`, `AGPL-3.0`, `9,634★`, pushed `2026-11-12`** —
+🔴 copyleft, so its growth is a market signal and not a build input. 🔵 **An
+informed nil, declared rather than padded. This pass's yield went to the
+foundations and data layer instead** — see `repos/foundations.md`.
+
+### 🔴 Rejected this pass — named, with the reason
+
+| Candidate | Repo | Actual license | Stars | Why rejected |
+|---|---|---|---|---|
+| askaboard | https://github.com/Nordup/askaboard | 🟢 **MIT — byte-read** (`1,063 B`, `sha256:e0407aae…`, holder `Nordup`) — **the grant was real when read** | 4 | 🔴 **ADDRESS NO LONGER RESOLVES — decay, not a licence failure.** Confirmed on two consecutive days by two methods: `repo:Nordup/askaboard` → `422` (`p843`, `p844`), **and `user:Nordup` → `19` live repositories, newest push `2026-06-30`, with no `askaboard` among them** (`p844`). 🔵 **The owner sweep is what makes this a death rather than a typo** (`T146`). Was shelved `p823`: *"A shared canvas for learning with your AI"* — the agent explains on a board it draws on. 🟢 **Re-file if the address returns.** |
+
 ## 🟢 Forty-eighth pass (`p843`, 2026-11-16) — **`0` new agent rows, but the first FIRST-PARTY sweep of the whole build-safe table: `275` rows measured against GitHub's own API, `2` are GONE, `3` unevidenced licence claims are now byte-read**
 
 🔵 **Why this pass did something other than re-run the battery.** `p840`–`p842`
@@ -2523,13 +2586,12 @@ measured on the way.
 | monash-study-kit | https://github.com/Waldo0926/monash-study-kit | 🟢 **MIT — byte-read** (`1,066 B`, `sha256:74903ec0…`, holder `Waldo0926`) | 1 | APAC | 🟢 **New this pass (`p823`).** Connects **Monash University** 🇦🇺 Moodle **and Ed** (the discussion platform Australian universities run alongside the LMS) into Claude, Codex and Cursor, as a local MCP server plus CLI, macOS and Windows. 🔵 **Ed is the second system here, and it matters: the forum is where an Australian student's course questions actually live**, so a Moodle-only adapter would miss the higher-value corpus. 🟢 Chinese-language README against an Australian institution — a configuration this base should expect more of, given APAC international-student flows, and a reminder that `T32` places this row by **Monash**, not by the README's language. Pushed `2026-11-14`. |
 | master-teacher (名师问问) | https://github.com/liqinling1994-cloud/master-teacher | 🟢 **MIT — byte-read** (`1,063 B`, `sha256:b31a3eaf…`, holder `秦岭`) | 5 | APAC | 🟢 **New this pass (`p823`).** A teaching-design **Agent Skill** for 🇨🇳 teachers: `152` master-teacher methodology profiles, `26` deep cards and **`15` 课程标准 (national curriculum standards)**, producing a lesson design, a 说课稿 or a full public-lesson package in Markdown or Word. 🔵 **It is another instance of `T70`'s finding — the asset is the CURRICULUM ADAPTER**: it connects 核心素养 (core competencies), 内容要求 and 学业质量 to classroom tasks and assessment evidence, which is the same national-instrument join `mawta` makes against Peru's `CNEB` and `edutraceapp` against Egypt's LO short codes. 🟢 **Source grading is built in** — it separates deep cards, standards index, public material and generic strategy, so a teacher can see which part of a plan is evidenced and which is filler. 🟢 **Distributed via `npx skills add`**, the Agent Skills channel rather than an MCP server. v5.4, pushed `2026-11-11`. |
 | smart-marking | https://github.com/lby749/smart-marking | 🟢 **MIT — byte-read** (`1,063 B`, `sha256:29323b8f…`, holder `lby749`) | 0 | Global | 🟢 **New this pass (`p823`).** A *teacher-rubric-driven* agent grading Skill: the rubric the teacher already wrote is the input, rather than a rubric the model invents. 🔵 **That ordering is the governance-relevant part** and it is the side of the line Ofqual and Florida Rule `6A-14.0719` leave open (`T30`) — the human authors the standard, the agent applies it. 🔴 `0★`, single maintainer, early. Shelved for the pattern and the licence, not for maturity. Pushed `2026-11-12`. |
-| Agentic-Assignment-Evaluator | https://github.com/Bhuvantejakomera/Agentic-Assignment-Evaluator | 🔴 **ADDRESS NO LONGER RESOLVES — re-measured `2026-11-16` (`p843`), three methods agree. Moved out of build-safe.** Was: 🟢 **MIT — byte-read** (`1,089 B`, `sha256:d21ead64…`, holder `Bhuvan Teja K`) | 0 | Global | 🟢 **New this pass (`p823`).** Grading assistant for **Google Classroom** that extracts student code and scores it **using local LLMs** — the privacy posture that matters when the artefacts are minors' work, because nothing leaves the institution. 🔴 **Address caveat recorded deliberately: the repository name ends in a literal full stop** (`Agentic-Assignment-Evaluator.`). It resolves — `gh api search/repositories -f q='repo:…'` returns `total_count=1` — but it will break naive link-extraction and trailing-punctuation stripping, including this base's own `grep -oE` address sweeps. 🔵 **Filed with the stop intact so a later pass does not "correct" it into a 404.** Pushed `2026-11-10`. |
+| Agentic-Assignment-Evaluator | https://github.com/Bhuvantejakomera/Agentic-Assignment-Evaluator | 🟢 **ALIVE — `p843`'s death notice WITHDRAWN at `p844`.** Re-measured `2026-11-16` with the address spelled AS THIS ROW SPELLS IT, trailing full stop included: `repo:Bhuvantejakomera/Agentic-Assignment-Evaluator.` → `total_count=1`, `MIT`, `0★`, pushed `2026-11-10`, not archived. 🔴 **`p843` queried the dot-stripped, lower-cased form and took the `422` as a death — the exact normalisation this row warned about at `p823`** (`T146`). 🟢 **MIT — byte-read** (`1,089 B`, `sha256:d21ead64…`, holder `Bhuvan Teja K`) | 0 | Global | 🟢 **New this pass (`p823`).** Grading assistant for **Google Classroom** that extracts student code and scores it **using local LLMs** — the privacy posture that matters when the artefacts are minors' work, because nothing leaves the institution. 🔴 **Address caveat recorded deliberately: the repository name ends in a literal full stop** (`Agentic-Assignment-Evaluator.`). It resolves — `gh api search/repositories -f q='repo:…'` returns `total_count=1` — but it will break naive link-extraction and trailing-punctuation stripping, including this base's own `grep -oE` address sweeps. 🔵 **Filed with the stop intact so a later pass does not "correct" it into a 404.** Pushed `2026-11-10`. |
 | edu-agents | https://github.com/dh2211/edu-agents | 🟢 **MIT — byte-read** (`1,082 B`, `sha256:7eb4eb73…`, holder `EduAgentsKit contributors`) | 0 | Global | 🟢 **New this pass (`p823`).** Agent Skills for **K-12 teachers**: lesson objectives, unit plans and teaching materials. 🔵 Sits in the same Skills-distribution channel as `master-teacher`, without a national curriculum instrument behind it — which is precisely the difference `T70` says determines whether this kind of tool is a demo or an asset. Shelved as a permissive baseline to fork against a real curriculum. Pushed `2026-10-23`. |
 | moodle-mcp (rahul069) | https://github.com/rahul069/moodle-mcp | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:031c0fd8…`, holder `Rahul Garg`) | 0 | Global | 🟢 **New this pass (`p823`).** **Read-only** Moodle MCP server — courses, slides, deadlines, forums. 🔵 Generic rather than institution-pinned, which makes it the cleanest starting fork in the `T77` population for a deployment that must serve more than one Moodle host. Pushed `2026-11-13`. |
 | moodle-mcp (edouaz) | https://github.com/edouaz/moodle-mcp | 🟢 **MIT — byte-read** (`1,116 B`, `sha256:99f3ba95…`, DUAL holder: `thntx` + `edouaz and Moodle MCP contributors`) | 0 | Global | 🟢 **New this pass (`p823`).** Private Moodle MCP server with a guided CLI setup and local storage. 🔵 **Second instance this pass of a fork that preserved the upstream copyright line and appended its own** (with `MIREA-Toolkit-MCP`) — two independent authors in one window getting MIT attribution right, which is worth recording because this base more often finds the opposite. Pushed `2026-11-08`. |
 | moodle-mcp (felixx-dbm) | https://github.com/felixx-dbm/moodle-mcp | 🟢 **MIT — byte-read** (`1,072 B`, `sha256:edac1583…`, holder `Felix Dobelmann`) | 0 | Global | 🟢 **New this pass (`p823`).** Moodle MCP server giving assistants access to courses and files. 🔵 Shelved as part of the `T77` population census rather than for distinguishing features — the finding is the POPULATION, and a census that silently drops its ordinary members overstates how differentiated the tier is. Pushed `2026-11-08`. |
 | nutslms-mcp | https://github.com/deeznust42/nutslms-mcp | 🟢 **MIT — byte-read** (`1,068 B`, `sha256:1a9b92a9…`, holder `Zain Ikhlaq`) | 0 | Global | 🟢 **New this pass (`p823`).** LMS MCP connector for Claude and Codex clients. 🔵 Same census note as above: an ordinary member of the `T77` population, filed so the denominator is honest. Pushed `2026-11-13`. |
-| askaboard | https://github.com/Nordup/askaboard | 🔴 **ADDRESS NO LONGER RESOLVES — re-measured `2026-11-16` (`p843`) by three methods: search API `422`, `git ls-remote` falls through to a credential prompt, `raw` `404`. Moved out of build-safe; the grant below was real when read and the repository is simply gone.** Was: 🟢 **MIT — byte-read** (`1,063 B`, `sha256:e0407aae…`, holder `Nordup`) | 4 | Global | 🟢 **New this pass (`p823`).** *"A shared canvas for learning with your AI"* — the agent explains a topic **on a board it draws on**, rather than in a transcript. 🔵 **A different output modality from everything else on this shelf**, and the one that maps onto how a teacher actually explains: spatial, persistent, revisable. Pairs naturally with `T75`'s learning-scaffold category, where the problem is cognitive load rather than answer quality. Pushed `2026-11-12`. |
 | Codemm | https://github.com/iignaite/Codemm | 🟢 **MIT — byte-read** (`1,071 B`, `sha256:fd1dae60…`, holder `Gaille Amolong`) | 19 | Global | 🟢 **New this pass (`p823`), and the highest-starred new row in it.** *"Supercharge your learning journey with agents."* 🔵 Sits in `T75`'s scaffold category — the agent's subject is the learner's progress, not the task. `19★` and single-maintainer: supply with early traction, not adoption. Pushed `2026-11-13`. |
 | physix-lab | https://github.com/albertoglvn/physix-lab | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4a21c9c6…`, holder `Alberto G…`) | 0 | Global | 🟢 **New this pass (`p823`).** *"A physics lab for your agent"*: 3D mechanics and 2D plane stress in the browser, driven by an agent. 🔵 **The category is a SIMULATION the agent can act in and read results from** — not a tutor that talks about physics. 🟢 That makes it checkable: the simulation, not the model, decides what is true, which is the cheapest available defence against a confidently wrong explanation in a STEM subject. Pushed `2026-11-15`, the day of this pass. |
 | protoboard-iso | https://github.com/ccamilobedoya/protoboard-iso | 🟢 **MIT — byte-read** (`1,084 B`, `sha256:2841256a…`, holder `protoboard-iso contributors`) | 0 | Global | 🟢 **New this pass (`p823`).** Breadboard circuits drawn in **isometric SVG with real parts in real holes**, simulated live. 🔵 Same class as `physix-lab` — a grounded artefact an agent manipulates and a student can check — applied to electronics lab work, where the gap between a diagram and a working board is exactly what students get wrong. 🔴 **Placed `Global`, NOT LATAM:** `T32` places a row by the system it integrates with, and this one integrates with no regional system. Pushed `2026-11-15`. |

@@ -1,0 +1,8 @@
+# p844  2026-11-16  one curl loop, five hosts, commercial control included
+# extends T906 from EU/multilateral publishers to LATAM national open-data portals
+host	http_code	publisher_type	verdict
+https://eur-lex.europa.eu	000	EU institution	CONNECT fails (as T906)
+https://dados.gov.br	000	BR government	CONNECT fails - NEW
+https://www.datos.gov.co	000	CO government	CONNECT fails - NEW
+https://datos.gob.mx	000	MX government	CONNECT fails - NEW
+https://raw.githubusercontent.com	301	commercial	REACHABLE - positive control, same loop

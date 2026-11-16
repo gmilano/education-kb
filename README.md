@@ -1,10 +1,43 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-15
+updated: 2026-11-16
 ---
 
 # Globant AI Studios — Education KB
+
+**Pass `p844` · `2026-11-16`** — 🔴 **This README was `13` passes stale.** It reported `p831`
+while the shelves had advanced to `p843`. 🟢 **`p844` re-measured yesterday's measurement, withdrew
+half of it, closed `839-G2`, and took `839-G1` from one country to five.**
+
+## What this pass established
+
+| | |
+|---|---|
+| 🔴 **`p843`'s decay sweep is HALF WRONG, and the row it killed had predicted the mechanism** | 🟢 [`Bhuvantejakomera/Agentic-Assignment-Evaluator.`](https://github.com/Bhuvantejakomera/Agentic-Assignment-Evaluator.) — **trailing full stop** — returns `total_count=1`, `MIT`, `0★`, pushed `2026-11-10`. 🔴 **`p843` queried the dot-stripped, lower-cased form, got `422`, and recorded a death.** 🔴 **`p823` had written into that very row: *"filed with the stop intact so a later pass does not 'correct' it into a 404."*** 🔵 **Twenty-one passes later, a later pass did exactly that** (`T146`) |
+| 🟢 **The other half HOLDS, and an OWNER SWEEP is what proves it** | 🔴 `repo:Nordup/askaboard` → `422`, **and `user:Nordup` → `19` live repositories, newest push `2026-06-30`, with no `askaboard` among them.** 🟢 **Moved to *Rejected candidates*.** 🔵 **A bare `422` cannot tell *deleted* from *renamed* from *mistyped*; `422` plus a populated owner sweep that lacks the name can.** 🟢 **`P95` stage 1 amended — one extra call per SUSPECT, not per row** (`ACTION p844-B`) |
+| 🟢 **`839-G2` CLOSED — and the base had held the answer for thirty-three passes** | 🟢 **`Regulation (EU) 2026/1744`** (OJ `2026-07-24`, in force `2026-07-27`): **Annex III stand-alone high-risk — education — `2026-08-02` → `2027-12-02`**; Annex I → `2028-08-02`; 🔴 **Art. `50` transparency NOT deferred, live since `2026-08-02`.** 🟢 Twelve independent secondary readings this pass. 🔴 **`p837`–`p839` each called it UNRESOLVED and told the reader to quote a RANGE, while `T939`/`p811` already had it** — `ACTION p800-A`'s defect class, recurring in the direction that costs money (`T147`) |
+| 🟢 **`839-G1` — "the highest-value unfinished work" — goes from ONE country to FIVE, and the licences DISAGREE** | 🟢 **Chile `CC BY 3.0 CL` · Brazil (INEP) `CC BY` · Mexico Términos de Libre Uso MX — all attribution-only.** 🔴 **Colombia (ICFES Saber 11 / Saber Pro) is `CC BY-SA 4.0` — SHARE-ALIKE, so a derived dataset INHERITS it and cannot sit inside a closed data product.** 🔴 **Argentina UNRESOLVED — the `CC BY 2.5 AR` reading is a site footer, not a dataset field.** 🟡 ICFES separately requires express authorisation for its MARKS (`T148`, `P96`, `844-G1`) |
+| 🟢 **The LATAM national education data layer opens, with `3` byte-read `MIT` rows** | 🟢 [`basedosdados/sdk`](https://github.com/basedosdados/sdk) (`MIT`, `1,070 B`, `sha256₁₂ ae8976e97616`, **`433★`**) — a BigQuery datalake with INEP tables already cleaned; the region's **only** production-grade asset. 🔵 **Also a RENAME caught PROSPECTIVELY: `basedosdados/mais` → `422`.** 🟢 Plus `censo-escolar-bi-analytics` and `saber11-brechas-educativas`. 🔴 **Everything else is coursework — `0–30★`, mostly unlicensed or copyleft — corroborating `839-W2` one layer down** |
+| 🔴 **`T906`'s egress refusal is NOT European — it reproduces on a second continent** | 🔴 **One loop, `2026-11-16`: `eur-lex.europa.eu` `000` · `dados.gov.br` `000` · `www.datos.gov.co` `000` · `datos.gob.mx` `000` — 🟢 against `raw.githubusercontent.com` `301` in the SAME loop.** 🔵 **The pattern tracks the publisher being GOVERNMENTAL, not the jurisdiction being European.** 🟢 **So `839-G1`'s remainder is an ALLOW-LIST REQUEST, not a search** (`ACTION p844-A`) |
+| 🔴 **This base's own action ledger went un-appended for FOUR passes** | 🔴 **`intel/open-gaps.md` is declared append-only and its last entry before this one was `p839`.** `p840`–`p843` added nothing — including `p843`, which created two live ACTIONs and recorded them only in `agents/top.md`. 🔵 **An action recorded in a shelf file is not in the ledger, so the next pass does not see it as owed** (`844-D1`) |
+| 🔴 **The mandated agent battery nilled a FIFTH consecutive time** | `p840`, `p841`, `p842`, `p844`. Global legs returned only `DeepTutor` and `LearnHarness`, both already held — the latter re-measured at [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness), 🔴 `AGPL-3.0`, **`9,634★`**, pushed `2026-11-12`. 🔵 **Copyleft: a demand signal, not a build input.** 🟢 **An informed nil; this pass's yield went to the data layer instead** |
+
+🔴 **Counts: NOT gate-confirmed this pass.** `python3 -I ingest/derive-counts.py` was **refused by
+this session's command classifier** — the third such session recorded, and exactly the
+session-dependence the channel-discipline table below warns about. 🟡 **Independently derived by a
+stated substitute** (`grep -c '^| .*github\.com/'` per file, which counts **every** table row
+including pass narratives and is therefore **NOT comparable** to the gate's canonical shelf
+figures): `agents/top.md` `521`, `repos/foundations.md` `221`, `verticals/solutions.md` `177`,
+`intel/market.md` `#### Update` blocks `181`. 🔵 **Published as what they are — a different
+measurement, not the gate's number.**
+
+🟢 **Every region gained a `#### Update` block under the single canonical
+`## Opportunities by region`; `p839`'s structural fix was re-checked and HOLDS (`1` canonical
+heading, `1` subsection per region).**
+
+---
+
 
 **Pass `p831` · `2026-11-15`** — `p830` opened the SEN / inclusive-learner tier and closed by naming
 its successor's job: repair `p773/grantprobe.sh`, which it had graded `CAPTURED-LIVE` and refused to

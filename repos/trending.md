@@ -4,6 +4,23 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — forty-ninth pass (`p844`)
+
+🟢 **The LATAM national education data layer appears on this base for the first
+time, and the movement is in the DATA tier rather than the agent tier.**
+
+| Repo | Licence | ★ | Pushed | Movement |
+|---|---|---|---|---|
+| [`basedosdados/sdk`](https://github.com/basedosdados/sdk) | 🟢 `MIT` (byte-read, `1,070 B`, `sha256₁₂ ae8976e97616`) | **433** | `2026-07-24` | 🟢 **New to this base.** 🔵 **Also a RENAME caught prospectively: `basedosdados/mais` returns `422` — the address this base would otherwise have guessed and then reported as dead** |
+| [`HenriqueLindemann/analise-enem`](https://github.com/HenriqueLindemann/analise-enem) | 🔴 `AGPL-3.0` | 9 | `2026-11-14` | 🟡 Active two days before this pass — the most recently pushed LATAM education-data repo found, and copyleft |
+| [`sidneisj/censo-escolar-bi-analytics`](https://github.com/sidneisj/censo-escolar-bi-analytics) | 🟢 `MIT` (byte-read, `1,079 B`) | 2 | `2026-10-08` | 🟢 New — reference implementation |
+| [`triverao/saber11-brechas-educativas`](https://github.com/triverao/saber11-brechas-educativas) | 🟢 `MIT` (byte-read, `1,064 B`) | 0 | `2026-10-07` | 🟢 New — 🔴 MIT code over `CC BY-SA 4.0` data |
+| [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | 🔴 `AGPL-3.0` | **9,634** | `2026-11-12` | 🟡 Re-measured; this base previously carried it at ~`1.5k★` |
+
+🔴 **The nil worth recording:** `aprender argentina educacion` returned **zero**
+repositories. Argentina's national assessment has no open-source wrapper on this
+channel.
+
 ## 🆕 `2026-11-16` (forty-eighth pass, `p843`) — 🟢 **`0` new repo rows, and the first dated section on this file whose numbers are NOT third-party. Every star count below was read from GitHub's own API today.**
 
 🔴 **`p842` opened this file with a provenance warning**: the GitHub-trending

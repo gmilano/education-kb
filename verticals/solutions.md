@@ -4,6 +4,26 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Forty-ninth pass (`p844`, 2026-11-16) — **`1` row: the LATAM national education data portal filed as a SYSTEM OF RECORD, because that is what it is in a ministry engagement**
+
+🔵 **Why this belongs on the vertical shelf and not only in foundations.** This
+base files LMS, SIS and ERP as systems of record. 🟢 **In a LATAM ministry
+engagement the system of record that decides the work is neither of those — it is
+the national statistical portal**, because enrolment, outcomes and equity
+reporting are produced from it and every evidence claim in the bid is traced to it.
+
+| System | Operator | Region | Access | Licence posture | Note |
+|---|---|---|---|---|---|
+| **National education data portals — LATAM** (INEP/`dados.gov.br` 🇧🇷 · `datos.gov.co`/ICFES 🇨🇴 · `datos.gob.mx` 🇲🇽 · `datos.gob.ar`/`data.educacion.gob.ar` 🇦🇷 · MINEDUC 🇨🇱) | State statistical and assessment bodies | **LATAM** | 🟢 Bulk download + catalogue APIs; 🟢 Brazil additionally via [`basedosdados/sdk`](https://github.com/basedosdados/sdk) (`MIT`, `433★`) | 🔴 **NOT uniform — four attribution-only, Colombia `CC BY-SA 4.0`** | 🔴 **No agent surface exists for any of them.** The buyer is a ministry, the route is public tender, and the integration target is a download, not an API with an auth story |
+
+🔴 **The seam, stated plainly.** 🟢 Every other system-of-record family on this
+shelf has acquired an agent surface in the last six passes — Moodle, Sakai,
+Canvas, Schoology, Ed-Fi, the EMEA national school portals. 🔴 **This family has
+none, in any of the five countries.** 🔵 **And unlike the PowerSchool case, the
+blocker is not a licence** — four of the five publishers grant attribution-only
+reuse. 🔵 **Unlike the OneRoster case, the data is not missing either.** 🟢 **It
+is simply unbuilt**, and `P96` is the build.
+
 ## 🟢 Forty-eighth pass (`p843`, 2026-11-16) — **`0` new platform rows. The ERP/CRM leg is vendor-captured for the forty-eighth time, and this pass found the first ARCHIVED agent seam into the administrative core.**
 
 🟢 **Leg run verbatim:** `open source platform education ERP CRM MIT Apache`.

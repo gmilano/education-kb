@@ -1,0 +1,19 @@
+# p844  2026-11-16  channel: gh api -X GET search/repositories -f q="repo:OWNER/NAME"
+# controls: live address -> total_count=1 + metadata ; invented address -> HTTP 422
+address	total_count	license_spdx	stars	pushed_at	note
+learningequality/kolibri	1	MIT	1174	2026-11-11	positive control
+gmilano/this-repo-does-not-exist-xyz123	422	-	-	-	negative control (invented)
+Bhuvantejakomera/Agentic-Assignment-Evaluator.	1	MIT	0	2026-11-10	ALIVE - trailing full stop significant; p843 death notice WITHDRAWN
+Bhuvantejakomera/Agentic-Assignment-Evaluator	422	-	-	-	same repo, stop removed -> false negative
+bhuvantejakomera/agentic-assignment-evaluator	422	-	-	-	p843's query form -> false negative
+Nordup/askaboard	422	-	-	-	genuine death; confirmed by owner sweep below
+user:Nordup (owner sweep)	19	-	-	2026-06-30	19 live repos, NO askaboard -> death confirmed
+user:Bhuvantejakomera (owner sweep)	17	-	-	2026-10-23	owner alive and active
+basedosdados/sdk	1	MIT	433	2026-07-24	NEW foundation row
+basedosdados/mais	422	-	-	-	RENAME to sdk, caught prospectively (T950)
+sidneisj/censo-escolar-bi-analytics	1	MIT	2	2026-10-08	NEW foundation row
+triverao/saber11-brechas-educativas	1	MIT	0	2026-10-07	NEW foundation row; MIT code over CC BY-SA 4.0 data
+HenriqueLindemann/analise-enem	1	AGPL-3.0	9	2026-11-14	copyleft, not shelved as build-safe
+filipedeschamps/api_enem_microdados	1	GPL-3.0	30	2022-08-12	copyleft + stale
+datauy/ElijoEstudiar	1	GPL-3.0	5	2024-11-14	copyleft, Uruguay
+amosblomqvist/learnharness	1	AGPL-3.0	9634	2026-11-12	re-measured; copyleft

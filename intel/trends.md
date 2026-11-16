@@ -4,6 +4,107 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Forty-ninth pass (`p844`, 2026-11-16) — `3` trends (`T146`–`T148`)
+
+## `T146` — a `422` is evidence about the ADDRESS, not about the asset: the first-party sweep acquired a false-positive mode on its second day, and the row it killed had predicted the mechanism twenty-one passes earlier (forty-ninth pass, `p844`, Global)
+
+🟢 **`P95`'s first-party sweep is the best instrument this base has built, and
+`p844` found its failure mode by re-running it.** 🔴 **`p843` reported `2` of
+`275` build-safe addresses gone. One of the two is alive.**
+
+| Address as queried | `2026-11-16` |
+|---|---|
+| `Bhuvantejakomera/Agentic-Assignment-Evaluator.` | 🟢 `total_count=1` · `MIT` · `0★` · pushed `2026-11-10` |
+| `Bhuvantejakomera/Agentic-Assignment-Evaluator` | 🔴 `422` |
+| `bhuvantejakomera/agentic-assignment-evaluator` | 🔴 `422` |
+
+🔴 **The repository's name ends in a literal full stop, and `p823` filed it that
+way ON PURPOSE**, writing into the row: *"it will break naive link-extraction and
+trailing-punctuation stripping, including this base's own `grep -oE` address
+sweeps … filed with the stop intact so a later pass does not 'correct' it into a
+404."* 🔵 **A later pass corrected it into a 404.** The warning survived; the
+practice that would have honoured it did not.
+
+🟢 **The discriminating control is an OWNER SWEEP, and it is one extra call.**
+`user:Nordup` → `19` repositories, newest push `2026-06-30`, **no `askaboard`** —
+so that row's death is real, and it is real *because the owner is demonstrably
+alive and the name is absent from their list*. 🔵 **A bare `422` cannot tell
+*deleted* from *renamed* from *mistyped*; `422` + a populated owner sweep that
+lacks the name can.**
+
+🔵 **Generalisation worth more than the incident:** this base's standing rules say
+to byte-read a licence rather than trust a field, and to distinguish a fork or
+rename from a death (`T950`). 🟢 **`T146` adds the symmetric rule for the
+NEGATIVE result: a negative from a string-keyed API is a statement about the
+string.** Normalising an identifier — lower-casing it, stripping its punctuation,
+tidying it for a Markdown link — **manufactures negatives**, and the tidier the
+pipeline, the more it manufactures.
+
+## `T147` — `839-G2` is CLOSED, and the base had already held the answer for thirty-three passes while three consecutive passes told clients to quote a range (forty-ninth pass, `p844`, EMEA)
+
+🟢 **The EU AI Act high-risk education date is settled, to `CORROBORATED`.**
+
+- **`Regulation (EU) 2026/1744`** (the Digital Omnibus on AI) — published in the
+  Official Journal **`2026-07-24`**, in force **`2026-07-27`**.
+- 🟢 **Annex III stand-alone high-risk — which is where EDUCATION sits — moves from
+  `2026-08-02` to `2027-12-02`**, a deferral of sixteen months.
+- 🟢 **Annex I product-embedded high-risk moves to `2028-08-02`.**
+- 🔴 **Article `50` transparency was NOT deferred and has applied since
+  `2026-08-02`.**
+
+🟢 **Corroborating set gathered THIS pass, independent of the base's own prior
+reading:** Cloud Security Alliance (two research notes), Gibson Dunn, DLA Piper,
+`alpacax`, `compliancehub.wiki`, `aiacto.eu`, `verifywise.ai`,
+`regulation-ai.eu` — and, from the regional leg, `uniwise.eu`, `gradr.se`,
+`agentpmt.com`, `winssolutions.org`. 🔴 **NOT primary: `eur-lex.europa.eu` was
+re-tested this pass and still fails at `CONNECT` (`T148`).**
+
+🔴 **The part that matters for how this base operates.** `p811` recorded exactly
+this instrument as **four-source corroborated (`T939`)**, naming
+`Regulation (EU) 2026/1744` and the `2027-12-02` education date. 🔴 **`p837`,
+`p838` and `p839` each then declared the date UNRESOLVED and instructed that a
+RANGE be quoted to clients.** 🔵 **This is `ACTION p800-A`'s defect class
+recurring — a settled fact that never reached the shelf that needed it — and it
+recurred in the direction that costs money: a client was to be told "August 2026
+or December 2027, we cannot say", when this base could say.**
+
+🟡 **One residual disagreement, carried rather than resolved:** the content-marking
+grace period for systems already on the market is reported as `2026-12-02` by one
+source against Art. `50` applying from `2026-08-02` in others. 🔵 **Quote Art. `50`
+as live; quote the marking grace as contested.**
+
+🔵 **The commercial shape is unchanged and now dated with confidence: the expensive
+conformity work has until `2027-12-02`, and the cheap transparency work was due
+`2026-08-02` and is therefore already late.**
+
+## `T148` — the government-publisher egress refusal is not a European phenomenon: it reproduces exactly on LATAM national open-data portals, which makes `839-G1` an ALLOW-LIST REQUEST rather than a research task (forty-ninth pass, `p844`, LATAM)
+
+🔴 **`T906` named ten domains that fail at `CONNECT`, every one a government or
+multilateral publisher, and no commercial domain had ever failed that way.**
+🟢 **`p844` tested the proposition on a second continent, in one loop, with a
+positive control in the same loop.**
+
+| Host | Result `2026-11-16` |
+|---|---|
+| `eur-lex.europa.eu` | 🔴 `000` — CONNECT fails |
+| `dados.gov.br` 🇧🇷 | 🔴 `000` |
+| `www.datos.gov.co` 🇨🇴 | 🔴 `000` |
+| `datos.gob.mx` 🇲🇽 | 🔴 `000` |
+| `raw.githubusercontent.com` | 🟢 `301` — same loop, same session |
+
+🟢 **Five hosts, one command, one control: the three LATAM national open-data
+portals fail identically to the European instrument, while a commercial host in
+the same loop answers.** 🔵 **So the pattern generalises: it tracks the PUBLISHER
+being governmental, not the jurisdiction being European.**
+
+🔴 **The consequence for `839-G1` is structural, and it should stop the next pass
+from re-attempting it as research.** Every LATAM education-data licence in this
+base — Brazil, Mexico, Colombia, Argentina — is reachable only through secondary
+catalogues and search testimony. 🟢 **No amount of further searching promotes them
+to PRIMARY. One allow-list entry would promote all four**, which is the same shape
+as standing `ACTION p836-A` for `federalregister.gov`. 🔵 **File it as a request,
+not as a gap.**
+
 ## 🟢 Forty-eighth pass (`p843`, 2026-11-16) — `2` trends (`T144`, `T145`)
 
 ## `T144` — the shelf is GITHUB-SHAPED, and education's most interesting open asset of the last four passes is a set of WEIGHTS: the discovery frontier has moved from repositories to models, and this instrument cannot see it (forty-eighth pass, `p843`)

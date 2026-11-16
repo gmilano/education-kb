@@ -4,6 +4,67 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Forty-ninth pass (`p844`, 2026-11-16) — `1` recipe (`P96`), and it is `P90` taken from one country to four with the licence boundary drawn where it actually falls
+
+## 🟢 `P96` — THE LATAM NATIONAL EDUCATION DATA SPINE: build the evidence layer a ministry engagement is judged on, and know which country's data you may not keep (forty-ninth pass, `p844`, LATAM)
+
+🔵 **The problem.** A LATAM education engagement is won on evidence — enrolment,
+outcomes, equity gaps, school-level trajectories — and every ministry already
+publishes it. 🔴 **`P90` could only do this for Chile.** 🔴 **And the naive move —
+treat "open government data" as one licence — is wrong in a way that surfaces at
+delivery, when a client asks whether the derived dataset can ship inside their
+product.**
+
+### 🟢 The wiring
+
+1. **Ingest — Brazil first, because it is the only layer with a maintained SDK.**
+   [`basedosdados/sdk`](https://github.com/basedosdados/sdk) (`MIT`, `433★`,
+   pushed `2026-07-24`). Python / R / Stata over a BigQuery datalake with INEP
+   tables already cleaned and keyed (`br_inep_ideb.municipio` and siblings).
+   🔵 **You are not writing a Censo Escolar parser; you are writing queries.**
+2. **Shape — steal the table shapes rather than rediscover them.**
+   [`sidneisj/censo-escolar-bi-analytics`](https://github.com/sidneisj/censo-escolar-bi-analytics)
+   (`MIT`) for the Censo Escolar BI model;
+   [`triverao/saber11-brechas-educativas`](https://github.com/triverao/saber11-brechas-educativas)
+   (`MIT`) for the Colombian equity-gap model. 🔵 Both are small and
+   single-maintainer — read them, do not depend on them.
+3. **Gate — the licence check runs ON THE DATA, per country, before ingestion.**
+   🔴 This is the step that does not exist in `P90` and is the whole reason `P96`
+   is a separate recipe.
+
+| Country | Data licence | 🟢 May a DERIVED dataset ship closed? |
+|---|---|---|
+| 🇨🇱 Chile | `CC BY 3.0 CL` | 🟢 **Yes** — credit MINEDUC |
+| 🇧🇷 Brazil | `CC BY` (INEP via `dados.gov.br`) | 🟢 **Yes** — credit INEP |
+| 🇲🇽 Mexico | Términos de Libre Uso MX | 🟢 **Yes** — cite the source |
+| 🇨🇴 Colombia | 🔴 **`CC BY-SA 4.0`** (ICFES Saber 11 / Saber Pro) | 🔴 **NO.** The derived dataset inherits `CC BY-SA 4.0` |
+| 🇦🇷 Argentina | 🔴 `CC BY 2.5 AR` at SITE level only | 🔴 **Unknown — read the dataset's own licence field first** |
+
+4. **Partition on that table.** 🟢 **Keep the Colombian derivation in its own
+   artefact, published `CC BY-SA 4.0`, and join to it at query time** — the
+   proprietary application code stays proprietary, because share-alike here binds
+   the DATA, not the software that reads it. 🔴 **Do not blend ICFES-derived rows
+   into a combined regional table you intend to keep closed: the blend inherits
+   the strongest obligation in it.**
+5. **Trademark, separately from licence.** 🔴 ICFES requires express authorisation
+   for use of its **marks**. 🔵 Licence-clean data can still be brand-encumbered;
+   name the institution in prose, do not put its logo in the product.
+
+### 🔵 How to sell it
+
+🟢 **The deliverable is a ministry-grade evidence layer with its rights position
+written down per country** — which is the artefact a public buyer's legal review
+asks for and which, on the evidence of this base, almost nobody brings.
+🔴 **Scope Argentina as a licence READ before it is scoped as engineering**: the
+Aprender assessment has no open-source wrapper on this channel at all (`p844`
+searched and returned zero), so Argentina is greenfield in both senses.
+
+🔴 **Known limit, stated up front:** all five licence determinations are
+`CITED, NOT READ` — the national portals that would confirm them are unreachable
+from this session (`T148`). 🟢 **Re-read each dataset's licence field from the
+portal before contract, and treat this table as the thing you are verifying, not
+the thing you are relying on.**
+
 ## 🟢 Forty-eighth pass (`p843`, 2026-11-16) — `1` recipe (`P95`), runnable, tested against a 6-repo fixture and then run over `482` real shelf rows this pass
 
 ## 🟢 `P95` — THE FIRST-PARTY METADATA SWEEP: stop quoting the shelf and start measuring it (forty-eighth pass, `p843`, Global)
