@@ -6,6 +6,49 @@ updated: 2026-11-16
 
 # Globant AI Studios — Education KB
 
+## Pass `p855` · `2026-11-16`
+
+🔴 **`854-G1` ended with a rule — *yield is a function of the query's LANGUAGE* — and `p855` tested
+it the only way a rule like that can be tested: by holding language constant and varying the other
+axis. 🔴 It does not survive.** The same non-English channel that returned `17` of `17` new and `8`
+usable yesterday returned 🔴 **`180` of `196` new and `2` usable today.**
+
+🟢 **The pass that failed paid anyway.** Re-running at the altitude the amended rule prescribes
+exposed a whole TIER this base has never held: 🔴 **of `7,086` distinct addresses, `3` belonged to
+the document-PERCEPTION layer — the step that turns a photographed worksheet into something a
+marking agent can read.** 🟢 **`25` permissive rows of it are now filed, every grant byte-read.**
+
+🟢 **`9` agent rows (`425` → `434`), `16` foundation rows (`245` → `261`), `2` platform rows
+(`153` → `155`), `1` recipe (`P85`), `4` trends (`T185`–`T188`), `6` gaps — `37` grants byte-read
+today, `0` licences taken from GitHub's SPDX field.**
+
+## What this pass established
+
+| | |
+|---|---|
+| 🔴 **`T181` is AMENDED: yield is a function of language × ALTITUDE** | Same field, same hour: non-English at the WORKFLOW-noun altitude (`gestión escolar`, `学習管理システム`, `okul yönetim sistemi` — `20` legs, `14` languages) → `196` addresses, `180` NEW (`92%`), 🔴 **`2` usable (`1%`)**. Against `p854`'s artefact-noun legs at `47%` usable. 🔵 **The NEW rate barely moved; the USABLE rate fell `47×`** — a workflow noun indexes student COURSEWORK, because "school management system" is the world's most-assigned exercise → `T185`, `855-G1` |
+| 🔴 **And the language axis is not even monotone** | `手書き数式認識` *(Japanese, artefact noun)* → **`0`**, while `handwritten math recognition` → **`252`**. 🟢 Here the ENGLISH query is the one that finds the field — the exact inverse of `T181`'s founding case |
+| 🟢 **A whole tier was missing, and it is the gate on every paper-based engagement** | `3` of `7,086` addresses covered document perception (`pix2tex`, `Pix2Text`, `JabRef`). 🟢 **`25` permissive rows filed across four layers**: structure (`layout-parser` `5,779★`, `eynollah`, `oar-ocr`, `JiaJiaOCR`, `DocFusion`), mathematics (`TexTeller`, `Image2Katex`, `Pytorch-HMER`, …), handwriting (`indic-htr`, `handwritten-ocr-system`, `HTG_evaluation`), optical music (`Mozart`, `OMR-Datasets`, `moonlight`, …). 🔵 It stayed invisible because every leg this base ran names the PEDAGOGY or the SYSTEM; this tier is named after the ARTEFACT → `T186`, `855-G2` |
+| 🔴 **In that tier the licence polarity INVERTS against this base's standing finding** | `6` of its traction leaders are copyleft: `MixTeX` `1,636★` AGPL-3.0 · `LaTeX_OCR_PRO` `1,313★` GPL-3.0 · `texify` `1,124★` GPL-3.0 · `LaTeXSnipper` `1,115★` GPL-3.0 · `Texo` `919★` AGPL-3.0 · `homr` `483★` AGPL-3.0. 🔴 **Sharpest instance is a name collision: `LaTeX_OCR` (Apache-2.0, `558★`) and `LaTeX_OCR_PRO` (GPL-3.0, `1,313★`) — same author, adjacent names, and the copyleft one ranks higher** → `T187` |
+| 🔴 **LATAM: the estate is ACTIVE and UNGRANTED, which is a different market from an empty one** | The whole `18`-address ENEM/exam-correction set byte-probed at `31` filenames × resolved default ref: 🔴 **`16` `NO-GRANT-AT-ROOT`, `1` dead, `1` `GRANT` — and that grant is `LICENCIA PROPIETARIA — ZARCONT` (`2,088 B`), reported by GitHub as `NOASSERTION`.** 🔴 **`0` of `18` permissive.** 🟢 But a dozen projects have converged on the same five published ENEM competencies, so the SPECIFICATION is free even though no code is adoptable → `T188`, `855-G3`, recipe `P85` |
+| 🟡 **`854-G5` answered, and the answer is worse than the question** | Two Apache-2.0 payloads at **exactly `11,358 B`** with different `sha256`: `tensorflow/moonlight` (`cfc7749b96f6`) and `jiangnanboy/JiaJiaOCR` (`230e34f4f506`). 🟢 `diff` gives four independent edits — leading newline, `33`- vs `13`-space title indent, `http://` vs `https://`, appendix placeholder vs **filled-in** copyright — 🔴 **netting to a byte delta of ZERO.** 🔵 Byte-length is a COLLIDING identifier, and the collision is between a pristine template and a customised instance → `855-G4` |
+| 🔴 **The instrument built to audit this register reports a clean bill from reading nothing** | `ingest/absence-claims.py` (built at `p569` as `568-A`) resolves its root to `dirname(__file__)` = `ingest/`, so run as its own docstring shows it prints 🔴 **`0 pages, 0 shelf rows, 0 absence claims` and exits `0`.** 🟢 With `KB_ROOT` set: `11` pages, `17,354` shelf rows, 🔴 **`855` supply absence claims, `598` of them undated, `333` carrying a region or language token** → `855-G5` |
+| 🟢 **`854-G1`'s prescription is PRICED, and it is not mechanical** | `333` regional absence claims is the re-probe bill. 🔴 **But `855-G1` shows a blanket in-language re-probe at the wrong altitude returns `92%` new and `1%` usable** — it would manufacture false withdrawals faster than it corrected real ones. 🟢 **Re-probe the claims whose noun is an ARTEFACT; leave the workflow-noun claims standing** |
+| 🔴 **The search index serves DEAD addresses** | `jbrito58/Redacao-1000` — returned LIVE by `search/repositories` with stars and a description, 🔴 **`EMPTY-REF-SET` to `git ls-remote --heads`, all `31` licence paths `404`.** 🔵 `854-G6`'s existence problem from the opposite direction: there the CORPUS named something unreal, here the INDEX does → `855-G6` |
+| 🟢 **`D834`'s branch resolution earned its keep twice in one pass** | `xiaofengShi/Image2Katex` ships a clean MIT grant on default ref 🔴 **`updata200412`**; `itsmorninghao/CogniLoop` ships AGPL-3.0 on default ref 🔴 **`v2`**. A probe that guessed `main` would have published two false absences |
+
+🔵 **`1` new recipe.** `P85` — **paper-to-mark**: camera → `eynollah`/`layout-parser` (Apache-2.0) →
+`handwritten-ocr-system`/`indic-htr`/`TexTeller` (MIT, MIT, Apache-2.0) → `HTG_evaluation` (MIT) →
+`P74`'s MIT rubric substrate → 🔴 **`AI 预批 → 教师复核 → 系统记录`: the model proposes a mark and
+never records one.** 🟢 **`0` metered APIs, `0` copyleft in the delivery path, `6`–`8` weeks for
+pt-BR/Latin script**, 🔴 **`12`–`16` where the script is Indic or Arabic — because `indic-htr` is
+`8★` and that phase is corpus collection wearing an integration phase's clothes.**
+
+🔴 **Inherited and NOT introduced by this pass, verified against a clean `HEAD` worktree:**
+`repos/foundations.md` and `verticals/solutions.md` remain RED on undeclared layer tables (`11` and
+`13` respectively), and `make recount` / `make gate-register-currency` fail identically before and
+after `p855`. 🟢 **`p855`'s own tables all use declared signatures, so the pass adds no new RED.**
+
 ## Pass `p854` · `2026-11-16`
 
 🟢 **`853-G6` ended with a prescription — *"a leg written in Japanese, Arabic or Portuguese is a

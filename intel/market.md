@@ -4,6 +4,161 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixtieth pass (`p855`, 2026-11-16) — **the regional picture re-read against a byte-probed census, and the LATAM entry changes from "thin supply" to "active supply, zero grants"**
+
+🔵 **One regional claim this pass can make that it could not make before: the difference between a
+region with NO open supply and a region with UNUSABLE open supply.** 🔴 **They look identical to
+every instrument this base ran before `p854`, and they call for opposite engagements.**
+
+| | |
+|---|---|
+| 🔴 **LATAM's essay/exam estate is large, current, and carries no terms at all** | `18` addresses byte-probed at `31` filenames × resolved default ref: 🔴 **`16` `NO-GRANT-AT-ROOT`, `1` dead, `1` proprietary-in-Spanish, `0` permissive.** 🔵 The ENEM essay is a national examination marked on five published competencies; the open estate around it is a dozen active projects and a studio can use none of them → `855-G3`, `T188` |
+| 🟢 **EMEA publishes the same category under copyleft — which is a RECOVERABLE position** | [`UFV-INGINF/JorGPT`](https://github.com/UFV-INGINF/JorGPT), a Spanish engineering school's own exam-marking tool, GPL-3.0 byte-read `35,149 B`. 🔵 **Copyleft is a negotiation; no licence is a dead end.** The same category, two regions, two different failure modes |
+| 🟢 **APAC's permissive supply is real but SEEDED, not stocked** | `3` of this pass's `9` agent rows are APAC-published and permissive — but at `1★`, `2★` and `0★`. 🔴 The region's traction sits on copyleft (`MixTeX` `1,636★` AGPL-3.0, `CogniLoop` `498★` AGPL-3.0) and on unlicensed coursework |
+| 🟢 **The document-perception tier is the most EVENLY distributed capability this base has filed** | EMEA `eynollah` (Berlin State Library), `OMR-Datasets`, `tf-end-to-end`, `Orchestra` (Ain Shams), `HTG_evaluation` · APAC `oar-ocr`, `JiaJiaOCR`, `LaTeX_OCR`, `indic-htr`, `Polyphonic-TrOMR`, `web-omr` · North America `moonlight` (Google) · Global `layout-parser`, `TexTeller`. 🔵 **No region holds this tier, so no region is behind in it** |
+
+### 🔴 The regional-claim audit `854-G1` prescribed, priced
+
+🟢 **`854-G1` ended: *"every 'no supply in region X' claim older than this pass is UNVERIFIED on
+this axis. The number to recover first is how many such claims exist."* It was recovered.**
+
+| Measurement over the `11` live pages | Count |
+|---|---|
+| absence sentences (broad tier) | **`2,270`** |
+| of which carry a REGION or LANGUAGE token | 🔴 **`333`** (`14.7%`) |
+| SUPPLY absence claims (the class that sends a client to BUILD) | 🔴 **`855`** |
+| of those, UNDATED | 🔴 **`598`** (`69.9%`) |
+
+🔵 **`333` regional absence claims is the re-probe bill, and `p855`'s own result says the re-probe
+must be selective rather than mechanical:** 🔴 **a blanket in-language re-probe at the wrong
+altitude returns `92%` new addresses and `1%` usable ones**, so re-probing all `333` by presence
+alone would manufacture false withdrawals faster than it corrected real ones. 🟢 **Re-probe the
+claims whose noun is an ARTEFACT; leave the workflow-noun claims standing.** → `855-G1`, `855-G5`.
+
+🔴 **And the instrument that produced those numbers was itself defective.**
+[`ingest/absence-claims.py`](../ingest/absence-claims.py) resolves its root to
+`os.path.dirname(__file__)` — the `ingest/` directory — unless `KB_ROOT` is set. 🔴 **Run the way
+its own docstring shows, it reports `0 pages, 0 shelf rows, 0 distinct addresses` and `0 absence
+claims`: a clean bill of health from an instrument that read nothing.** 🟢 **With `KB_ROOT` set it
+reads `11` pages, `17,354` shelf rows and `6,068` distinct addresses.** 🔵 **This is
+`p355-cwd-portability`'s class landing on the one instrument `568-A` built to audit absence
+claims.** → `855-G5`.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The perception tier's only North-American row is a corporate orphan, and that is the
+opportunity.** [`tensorflow/moonlight`](https://github.com/tensorflow/moonlight) — Apache-2.0,
+`330★`, Google-published, 🔴 **pushed `2022-06-02` and unmaintained under a first-party org, which
+means no one will merge a fix.** 🔵 A permissive, maintained OMR fork has a clear owner-shaped hole.
+
+🟢 **Policy context, `CITED, NOT READ`:** ~`134` AI-in-education bills across `31` states; at least
+`15` states have introduced or passed legislation addressing AI in education specifically; North
+Carolina `Session Law 2026-41` sets a model policy due `2026-12-31` and district policies by
+`2027-06-30`; the U.S. Department of Education released `$169M` in FIPSE awards including
+responsible-AI provisions. 🔵 **The district-policy deadline is the commercial trigger: `2027-06-30`
+is inside a normal procurement cycle from now.**
+
+🔴 **The sector signal that should temper any pitch:** only `45%` of the most-used edtech tools have
+published research meeting an ESSA evidence tier, and the market is reported as rising revenue
+against falling investment. 🟢 **A studio that can produce an evidence package alongside the build
+is selling the scarce half.**
+
+### EMEA
+
+🟢 **This region is the best-supplied in the document-perception tier and it is not close.**
+[`qurator-spk/eynollah`](https://github.com/qurator-spk/eynollah) (Apache-2.0, `418★`, Berlin State
+Library, pushed `2026-11-13`) is the ACTIVE layout analyser; `OMR-Datasets`, `tf-end-to-end`
+(`OMR-Research`), `Orchestra` and `Mozart` (both Ain Shams, Egypt) and `HTG_evaluation` are all
+permissive and EMEA-authored. 🔵 **Two independent permissive OMR pipelines out of Egypt is a MEA
+capability worth naming in a region this base has repeatedly had to declare empty.**
+
+🟡 **The region's marking tools are copyleft rather than absent** —
+[`UFV-INGINF/JorGPT`](https://github.com/UFV-INGINF/JorGPT), GPL-3.0, published by a Spanish
+university marking its own exams. 🔵 **That is a negotiable position: a GPL tool can be deployed to
+the institution that owns it, and the institution is the client.**
+
+🟢 **Regulatory context, `CITED, NOT READ`:** the EU AI Act is the binding frame, with high-risk
+obligations covering education reported as applying from **`2027-12-02`** (a date still contested
+across sources — 🔴 **treat as CITED and verify against the Commission's own pages before it is
+priced into a proposal**); a Commission consultation on high-risk classification guidelines closed
+`2026-06-23`; UK DfE genAI product-safety standards (Jan 2026) and Ofqual coursework-integrity rules
+(Mar 2026); Eurydice's *Digital education at school in Europe 2026* (`2026-09-22`). Futuresource
+reports `67%` of teachers now using AI tools and a shift from pilots to structured implementation.
+
+### APAC
+
+🟢 **The clearest single opportunity this pass found anywhere, and it is a script problem.**
+[`Sanny26/indic-htr`](https://github.com/Sanny26/indic-htr) — MIT, 🔴 **`8★` / `4` forks** — is the
+only permissive multi-Indic-script handwriting artefact this base holds. 🔵 **India examines school
+students in a dozen writing systems; every other row in the handwriting layer assumes Latin script.
+This is a seed, not a supply, and the gap is `855-G5`.**
+
+🟡 **Japan's national device estate is addressable through an artefact published the day before this
+pass:** [`GIGAyama/Online-Publisher-pro`](https://github.com/GIGAyama/Online-Publisher-pro), MIT,
+`0★`, built for the **GIGA School** one-device-per-child programme. 🔵 **`T116`'s rule — find what
+the state has already deployed before scoping an agent — applied to a device estate.**
+
+🔴 **APAC's traction is copyleft:** `RQLuo/MixTeX-Latex-OCR` (`1,636★`, AGPL-3.0),
+`itsmorninghao/CogniLoop` (`498★`, AGPL-3.0, the most complete marking loop found anywhere this
+pass). 🟢 **Permissive APAC rows exist — `oar-ocr`, `JiaJiaOCR`, `LaTeX_OCR`, `Polyphonic-TrOMR`,
+`web-omr` — but the thing a client will have already found is the AGPL one.**
+
+🟢 **Regulatory context, `CITED, NOT READ`:** Korea's **AI Basic Act in force `2026-01-22`**
+(education high-impact) and Vietnam's AI law **in force `2026-03-01`** (education high-risk, with
+pre-deployment registration) are the two BINDING instruments; the UAE Ministry of Education issued
+`25` generative-AI prohibitions for schools (Feb 2026); Australia's TEQSA requires institutional
+genAI action plans. Ipsos's Education Monitor 2026 reports lower support for classroom AI bans
+across the Asian markets surveyed.
+
+### LATAM
+
+🔴 **The region's finding this pass is not scarcity. It is an active estate with no terms on it.**
+`18` addresses in the ENEM/exam-correction category, byte-probed at `31` filenames each:
+🔴 **`16` with no licence file at all, `1` dead address served live by the search index, `1` carrying
+a bespoke `LICENCIA PROPIETARIA — ZARCONT`, and `0` permissive.**
+
+🔵 **The engagement consequence is specific and it is the opposite of the usual advice:** there is no
+adoption path here, so the work is a BUILD — but it is a *well-specified* build, because a dozen
+independent projects have already converged on the same five-competency ENEM rubric and that
+convergence is free design input. 🟢 **Costed as `P85` on
+[`compose/patterns.md`](../compose/patterns.md): `6`–`8` weeks on a permissive substrate.**
+
+🔵 **This is `854-G7` — Spanish pronunciation supply with no grants — confirmed in Portuguese and in
+a different tier, which promotes it from an observation to a regional structural property.**
+🟢 **The actionable rule for any LATAM engagement: assume the reference implementations exist, assume
+you may not use them, and budget to rebuild rather than to integrate.**
+
+🟢 **Adoption context, `CITED, NOT READ`:** Digital Education Council LATAM survey 2026 (`29`
+institutions) — `92%` of students and `79%` of faculty engaging with AI, `67%` of students weekly,
+🔴 **but only `30%` believe their institution has responded effectively**; UNESCO IESALC working
+paper (Sep 2026) reports adoption *"neither uniform nor evenly distributed"* with only ~`30%` of
+universities publishing AI-use policies; IDB estimates AI could add **`5.1%`** to regional GDP over a
+decade; Chile's CENIA–UNESCO agreement and Latam-GPT; EdTech Hub and Fundación Ceibal partnered
+Sep 2026. 🔴 **No concrete national AI-in-education regulation surfaced on this pass's LATAM leg —
+recorded as a GAP in the evidence, not as an absence of regulation.**
+
+### Global
+
+🟢 **The document-perception tier is the most region-neutral capability this base has ever filed,
+and that is itself the opportunity.** [`Layout-Parser/layout-parser`](https://github.com/Layout-Parser/layout-parser)
+(Apache-2.0, `5,779★`) and [`OleehyO/TexTeller`](https://github.com/OleehyO/TexTeller)
+(Apache-2.0, `764★`) are not attached to any jurisdiction, any curriculum or any language of
+instruction. 🔵 **A perception spine built once is re-pointed at a new region by swapping the
+handwriting model and the rubric — stages `2b` and `4` of `P85` — and nothing else.**
+
+🔴 **The global constraint that applies everywhere and is easy to miss:** `6` of this tier's
+traction leaders are copyleft and they OUTRANK the permissive ones in search (`T187`). 🟢 **Any
+engagement in any region needs the exclusion list — `texify`, `LaTeX_OCR_PRO`, `MixTeX`, `Texo`,
+`LaTeXSnipper`, `homr` — written into the architecture decision record before a developer reaches
+for the top search hit.**
+
+🔴 **And the global evidence gap, stated rather than left silent:** this pass found `0` open
+artefacts that measure AGREEMENT between a machine mark and a human marker on a client's own
+scripts. 🟢 **`P81` is the recipe that ships an accuracy number and it remains the scarce half of
+every marking proposal** — the supply side of this tier is now well stocked and the validation side
+is empty.
 ## 🟢 Fifty-ninth pass (`p854`, 2026-11-16) — **the market, re-placed by region after the NON-ENGLISH channel changed what each region is known to contain — and two of this base's published regional nils are WITHDRAWN here**
 
 🔴 **The correction comes first, because a withdrawn nil is a change to this base's advice, not a
@@ -39,7 +194,8 @@ was invisible only to an English query.**
 presence instrument (`27` hits, bare-slug form), and the repository DOES NOT EXIST** (first-party
 search `total_count: 0`; `raw` `404`). 🟢 **Caught by measurement before a row was written.** → `854-G6`.
 
-## Opportunities by region
+
+## Opportunities by region — as filed by `p854` (historical, superseded above)
 
 ### North America
 

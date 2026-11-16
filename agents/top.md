@@ -4,6 +4,114 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixtieth pass (`p855`, 2026-11-16) — **`9` agent rows (`425` → `434`): `p854`'s language rule held constant and ALTITUDE varied instead — and it does not survive. 🔴 The same non-English channel that returned `17` of `17` NEW-and-USABLE yesterday returns `180` of `196` NEW and `2` usable today.**
+
+🟢 **`854-G1` left a rule: *yield is a function of the query's LANGUAGE.* `p855` tested it the only
+way a rule like that can be tested — by holding language constant and varying the other axis.**
+
+| Channel, `2026-11-16` | Legs | Addresses | NEW to this corpus | 🔬 **Usable** (permissive grant, byte-read, education-relevant) |
+|---|---|---|---|---|
+| `p854` — non-English at the **ARTEFACT-NOUN** altitude (`発音 評価`, `تلاوة`, `avaliação de pronúncia`…) | `5` | `17` | 🟢 `17` (`100%`) | 🟢 **`8`** |
+| `p855` — non-English at the **WORKFLOW-NOUN** altitude (`gestión escolar`, `学習管理システム`, `okul yönetim sistemi`…) | `20` | `196` | 🟢 `180` (`92%`) | 🔴 **`2`** |
+
+🔴 **The NEW rate barely moved (`100%` → `92%`). The USABLE rate collapsed from `47%` to `1%`.**
+🔵 **The mechanism is not subtle, and it is worth naming because it generalises past this base:
+"school management system" is one of the most-assigned student exercises on earth, in every
+language. A workflow noun indexes coursework. An artefact noun indexes artefacts.** → `T185`, `855-G1`.
+
+🔴 **So `T181` is AMENDED, not withdrawn:** yield is a function of language × altitude, and
+🔴 **`p854`'s `100%` was measured at the one altitude where the language channel works.** 🟢 **The
+corrected rule a studio should carry: *search in the client's language, but only at the altitude of
+the thing you intend to reuse.*
+
+### 🔴 Finding 1 — the measurement that actually paid: a whole TIER of this base is missing, and it is the one that turns paper into data
+
+🔵 **The workflow-noun sweep failed, so the pass re-ran at the altitude the amended rule prescribes
+— and the artefact nouns it reached returned a category this corpus does not hold at all.**
+
+| Leg (English, artefact noun) | Returned | NEW to this corpus |
+|---|---|---|
+| `handwritten math recognition` | `12` | 🟢 **`12`** |
+| `formula recognition image to latex` | `12` | 🟢 **`11`** |
+| `optical music recognition` | `12` | 🟢 **`12`** |
+| `document layout analysis ocr` | `12` | 🟢 **`12`** |
+| `handwriting recognition pytorch` | `12` | 🟢 **`12`** |
+| `latex ocr` | `12` | `9` |
+
+🔴 **This base holds `7,086` distinct addresses and `3` of this tier:** `lukas-blecher/LaTeX-OCR`
+(pix2tex), `breezedeus/Pix2Text` and `JabRef/jabref`. 🔵 **The PERCEPTION LAYER — the step that
+converts a handwritten page of arithmetic, a scanned exam script or a sheet of manuscript music
+into something a marking agent can read — was never queried in `59` passes.** 🟢 **It is also the
+layer that decides whether an engagement in a paper-based school system is possible at all.** → `T186`, `855-G2`.
+
+### 🟢 Finding 2 — `9` agent rows, every grant byte-read today, `0` taken from GitHub's licence field
+
+🟢 **`37` addresses were probed with [`ingest/p834-grantprobe.sh`](../ingest/p834-grantprobe.sh) on
+`2026-11-16`** — `31` filenames × the resolved DEFAULT ref — and every licence below is the payload,
+not the index. 🔴 **`854-G4`'s rule obeyed without exception: no row was shelved or refused on the
+SPDX field.**
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| TexTeller | https://github.com/OleehyO/TexTeller | 🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,333 B`, `sha256₁₂ 229eec032b2c`, title line `Apache License` with no version line — a sixth presentation fold, see Finding 4) | 764 ★ / 76 | Global | 🟢 **The strongest single row this pass and the one to reach for first.** An end-to-end image→LaTeX model trained on `7.5M` samples, shipped with inference, training and a web demo, and explicitly built to recognise **printed and handwritten** formulas in full-page documents rather than cropped single equations. 🔵 **Full-page is the property that matters: a marking pipeline receives a photographed worksheet, not a tidy crop.** 🔴 **Last pushed `2025-08-22` — mature rather than active; treat it as a frozen model you host, not a project you track** |
+| Pytorch-HMER (Attention + Coverage) | https://github.com/whywhs/Pytorch-Handwritten-Mathematical-Expression-Recognition | 🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,068 B`, `sha256₁₂ c0cd45c870ac`) | 238 ★ / 76 | Global | 🟢 **The reference HANDWRITTEN-only implementation, and the most-forked thing in this tier relative to its stars (`76` forks on `238★` — a `1:3` ratio that says people are building on it, not starring it).** Attention with a coverage mechanism over CROHME-style input, so repeated attention to the same stroke region is penalised — the specific failure that makes naïve seq2seq drop or duplicate terms in a long expression. 🔴 **Pushed `2019-08-13`; it is a correct baseline and a teaching artefact, not a 2026 model** |
+| Image2Katex | https://github.com/xiaofengShi/Image2Katex | 🟢 **MIT — byte-read `2026-11-16`** (`updata200412/LICENSE`, `1,069 B`, `sha256₁₂ 5dd8b21cce15`) | 293 ★ / 73 | APAC | 🟡 **Shelved for its coverage — printed AND handwritten in one model — and flagged for its ref.** 🔴 **Its default branch is `updata200412`, not `main` or `master`.** 🔵 **This row is the standing argument for `D834`: a probe that guessed `main` would have returned `NO-GRANT-AT-ROOT` on a repository that carries a clean MIT grant, and this base would have published an absence.** Chinese-authored, pushed `2026-09-08` |
+| math-formula-recognition | https://github.com/jungomi/math-formula-recognition | 🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE.md`, `1,109 B`, `sha256₁₂ 3bf38d19d27c`, title line `The MIT License (MIT)` + rule) | 308 ★ / 64 | Global | 🟢 **The cleanest CODE in the tier to read before writing your own.** A compact, well-documented images→LaTeX implementation with the training loop, checkpointing and evaluation separated properly. 🔵 **Where `Pytorch-HMER` is a paper reproduction, this is an engineering baseline — the one to fork when the client's handwriting distribution is not CROHME's.** 🔴 Pushed `2023-10-03` |
+| img2latex-mathpix | https://github.com/blaisewang/img2latex-mathpix | 🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`, bucket B) | 1400 ★ / 207 | Global | 🟡 **The traction leader of the tier (`1,400★` / `207` forks) and shelved with an explicit warning.** A desktop capture→LaTeX/MathML workflow — snip a region of the screen, get LaTeX. 🔴 **Its own description records WHY it exists: Mathpix withdrew the free monthly API tier. The application is Apache-2.0; the RECOGNITION it was built around is a metered commercial API.** 🔵 **Shelved as the UX reference for the capture→formula interaction, to be wired to `TexTeller` rather than to a vendor. This is `p854`'s `speechteach_back` pattern — permissive shell, rented judgement — in a second tier, which makes it a pattern rather than a coincidence** → `T187` |
+| Mozart (OMR) | https://github.com/aashrafh/Mozart | 🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`, bucket B) | 715 ★ / 106 | EMEA | 🟢 **The traction leader for OPTICAL MUSIC RECOGNITION, and it is deliberately a classical-CV pipeline, not a neural one.** Sheet music → machine-readable score through segmentation, staff-line removal and symbol classification. 🔵 **Shelved because music is the one school subject where the assessable artefact is ALWAYS a specialised notation, and because a classical pipeline is debuggable stage by stage — which is what a conservatoire client will demand when a mark is contested.** Egyptian-authored (Ain Shams). 🔴 Pushed `2022-08-24` |
+| CProgrammingLab | https://github.com/thirakawa/CProgrammingLab | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,073 B`, `sha256₁₂ a3079e0aa4d5`) | 1 ★ / 0 | APAC | 🟡 **A `1★` row shelved on purpose: it is the ONLY permissive autograding PLATFORM the `20`-leg non-English sweep produced, out of `196` addresses.** A Japanese university's C-programming exercise and automatic-marking platform, pushed `2026-10-22`. 🔵 **Its value here is as a DENOMINATOR, not as a dependency — see `855-G1`. When a client asks "what does the open Japanese autograding estate look like", the honest answer is this repository and nothing else permissive** |
+| CodeUnical (UNISMUH) | https://github.com/muhammadrizalharis/UNISMUH-CodeUnical | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,077 B`, `sha256₁₂ 7aab5f53a6b3`) | 2 ★ / 0 | APAC | 🟡 **An Indonesian coding-exam platform whose entire design premise is INTEGRITY, and that premise is the reusable part.** Manual typing enforced (paste disabled), real-time execution, automatic scoring. 🔴 **`2★`, Universitas Muhammadiyah Makassar, pushed `2026-10-26`.** 🔵 **Shelved because it is the only artefact in this sweep that treats "did the student actually write this" as an architectural constraint rather than a post-hoc detector — which is the live question in every 2026 assessment engagement** |
+| Online-Publisher-pro (GIGA) | https://github.com/GIGAyama/Online-Publisher-pro | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,065 B`, `sha256₁₂ 78708d81c28d`) | 0 ★ / 0 | APAC | 🟡 **`0★`, pushed `2026-11-15` — the day before this pass — and shelved for its TARGET, which is a national programme.** A writing application built for Japan's **GIGA School** one-device-per-child estate: a manuscript-paper (原稿用紙) editor with a bookbinding preview for children, plus a teacher-side Gemini-API feedback assistant. 🔵 **`T116`'s rule — find what the state has already published and deployed before scoping an agent — applied to a device estate rather than a curriculum corpus.** 🔴 **The AI half calls a metered commercial API; the editor half is the reusable asset** |
+
+### 🔴 Finding 3 — the LATAM result, and it is the sharpest regional finding this base has produced
+
+🔴 **`18` addresses in the Brazilian/Hispanic essay- and exam-correction estate were byte-probed at
+`31` filenames × the resolved default ref. Not a sample — the whole set both legs returned.**
+
+| Verdict | Count | What it means |
+|---|---|---|
+| 🔴 `NO-GRANT-AT-ROOT` | **`16`** | no licence file anywhere at the root of the default branch |
+| 🔴 `EMPTY-REF-SET` | **`1`** | `jbrito58/Redacao-1000` — 🔴 **returned LIVE by `search/repositories` and DEAD to `git ls-remote`** |
+| 🟡 `GRANT` | **`1`** | 🔴 [`ZarcontPsy/Zarcont-SERUMS`](https://github.com/ZarcontPsy/Zarcont-SERUMS) — GitHub field `NOASSERTION`, bytes `2,088 B`, `sha256₁₂ 777df0a962bf`, title line **`LICENCIA PROPIETARIA — ZARCONT`** |
+| 🟢 **PERMISSIVE** | 🔴 **`0` of `18`** | |
+
+🔵 **Read the third row twice. The single grant in the entire estate is a bespoke PROPRIETARY
+licence written in Spanish — and GitHub reported it as `NOASSERTION`, the same value it reports for
+a BSD-licensed Meta runtime (`854-G4`).** 🟢 **A reader who treated `NOASSERTION` as "probably fine"
+would have shelved the one explicitly proprietary repository in the set.**
+
+🔴 **ENEM is not a niche:** the Brazilian essay is a national examination sat by millions a year, it
+is marked on five published competencies, and 🟢 **the open estate around it is large, active and
+legally unusable.** 🔵 **This is `854-G7` — "supply exists, grants do not" — confirmed in a SECOND
+language and a SECOND tier, which promotes it from a Spanish-pronunciation observation to a LATAM
+STRUCTURAL PROPERTY.** → `T188`, `855-G3`, and `P85` on [`compose/patterns.md`](../compose/patterns.md).
+
+### 🟡 Finding 4 — the Apache presentation fold, measured to a collision
+
+🔴 **`854-G5` said a byte-BAND classifier drops a complete Apache grant. `p855` read `8` Apache-2.0
+payloads and the result is worse than a band problem.**
+
+| Bytes | `sha256₁₂` | Payloads at that length |
+|---|---|---|
+| `11,358` | `cfc7749b96f6` | `tensorflow/moonlight` |
+| `11,358` | 🔴 **`230e34f4f506`** | 🔴 **`jiangnanboy/JiaJiaOCR`** |
+| `11,357` | `c71d239df917` | `Layout-Parser`, `Polyphonic-TrOMR`, `Mozart`, `img2latex-mathpix` |
+| `11,347` | `8a7ec3e5de8c` | `GreatV/oar-ocr` |
+| `11,333` | `229eec032b2c` | `OleehyO/TexTeller` |
+| `10,951` | `771185eb28b4` | `LinXueyuanStdio/LaTeX_OCR` (`LICENSE.txt`) |
+| `10,141` | `cc4d4de0920b` | `qurator-spk/eynollah` |
+
+🔴 **Two DIFFERENT Apache-2.0 payloads occupy exactly `11,358` bytes.** 🟢 **`diff` names four
+independent edits between them** — a leading newline present vs absent, a `33`-space vs `13`-space
+title indent, `http://` vs `https://` on both apache.org references, and the appendix placeholder
+`Copyright [yyyy] [name of copyright owner]` vs a filled-in `Copyright (c) 2026 jiangnanboy` —
+🔴 **which happen to net to a byte delta of ZERO.**
+
+🔵 **So byte-length is not a weak identifier for this grant, it is a COLLIDING one, and the
+collision is between a pristine template and a customised instance — exactly the two cases a
+classifier most needs to tell apart.** 🟢 **`6` distinct payload hashes across `8` repositories in
+one pass, spanning `10,141`–`11,358 B`.** → `855-G4`, which closes `854-G5` harder than it was posed.
+
 ## 🟢 Fifty-ninth pass (`p854`, 2026-11-16) — **`8` agent rows (`417` → `425`): the NON-ENGLISH query channel that `853-G6` prescribed, run in five languages — and it returned `17` of `17` addresses NEW, against `0` of `12` for the same field queried in English on the same day**
 
 🟢 **`853-G6` ended with a prescription, not a complaint:** *"a leg written in Japanese, Arabic or
@@ -3569,7 +3677,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 425 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 434 rows
 
 ### Filed by `p853` (2026-11-16) — `12` rows: the SPOKEN-LANGUAGE ASSESSMENT tier, every grant byte-read today, `0` copyleft, and every row's CORPUS dependency stated beside its licence
 

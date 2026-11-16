@@ -145,6 +145,12 @@ SHELVES = [
         # 🟢 p854: the DECLINES table of the non-English pass -- rows measured and refused,
         # with the probe that refused them.  Not counted: a decline is not a holding.
         "| Repo | \u2605 / forks | What was measured | Why it is NOT shelved |",
+        # 🟢 p855: the LATAM grant CENSUS table -- verdict tallies over the 18-address
+        # ENEM/exam estate, one row per p834-grantprobe verdict class.  Not counted: its
+        # rows are VERDICTS over a population, not holdings, and the two addresses it
+        # names are named precisely because they are NOT shelf rows (one dead, one
+        # proprietary).  Declared rather than left silent -- p811's rule.
+        "| Verdict | Count | What it means |",
     ]),
     ("repos/foundations.md", [
         "| Repo | License | Stars | Notes |",

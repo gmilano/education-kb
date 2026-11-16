@@ -4,6 +4,155 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` (sixtieth pass, `p855`) — **`6` gaps, each with the query, probe or instrument run before it was written (`ACTION p850-B`)**
+
+🔵 **Three of these (`855-G4`, `855-G5`, `855-G6`) are instrument defects rather than market
+absences, and `855-G5` is a defect in the instrument `568-A` built to audit this very register.**
+
+### 🔴 `855-G1` — `854-G1`'s language rule was measured at ONE altitude, and it does not generalise
+
+🔴 **The claim, both channels run in the same hour, `2026-11-16`.** `p854` concluded that yield is a
+function of the query's LANGUAGE, from `5` non-English legs at the artefact-noun altitude returning
+`17` of `17` new and `8` usable. 🔴 **`p855` held language constant and varied ALTITUDE: `20`
+non-English legs at the WORKFLOW-noun altitude returned `196` addresses, `180` new (`92%`) and
+🔴 `2` usable (`1%`).**
+
+🔵 **The NEW rate is essentially unchanged; the USABLE rate falls by `47×`.** 🔴 **A workflow noun
+— `gestión escolar`, `学習管理システム`, `okul yönetim sistemi` — indexes STUDENT COURSEWORK, because
+building a school management system is one of the most commonly assigned exercises in every
+language.** 🟢 **`T181` is amended to: yield is a function of language × altitude.**
+
+🔴 **And `p855`'s own legs contain the inverse case:** `手書き数式認識` → **`0`** against
+`handwritten math recognition` → `252`. 🟢 **In this tier the ENGLISH query is the one that finds
+the field, so the language axis is not even monotone.**
+
+🟡 **How it closes:** it is closed as a RULE and open as a LIABILITY. 🟢 Closed: the amended rule is
+published and the counter-example is recorded. 🔴 **Open: `854-G1` prescribed re-probing this base's
+regional absence claims in-language, and `855-G5` prices that at `333` claims — but a blanket
+re-probe at the wrong altitude would manufacture false withdrawals faster than it corrected real
+ones.** 🟢 **The re-probe must be filtered to claims whose noun is an ARTEFACT.**
+
+### 🔴 `855-G2` — the document-PERCEPTION tier was absent for `59` passes, and it is the gate on every paper-based engagement
+
+🔴 **The claim, measured by `grep` over the non-archive corpus before any row was written.** Of
+`7,086` distinct addresses held, 🔴 **`3` belong to the step that turns a physical page into
+structured data**: `lukas-blecher/LaTeX-OCR`, `breezedeus/Pix2Text`, `JabRef/jabref`.
+
+🟢 **Six artefact-noun legs returned `72` addresses, `68` of them new; `25` carry a permissive grant
+byte-read today and are filed across four layers** (document structure, mathematical notation,
+handwriting, optical music recognition).
+
+🔵 **Why it stayed invisible: every leg this base had run names the PEDAGOGY or the SYSTEM. This
+tier is named after the ARTEFACT, and nobody who builds it calls it education technology.**
+
+🟡 **How it closes:** half-closed. 🟢 The tier now exists on the shelves with `25` graded rows.
+🔴 **Not closed: `grep -ric` over the curated pages still returns `0` for `speech-to-text in
+assessment`, `0` for `scanned exam script`, and the pipeline from `layout-parser` output to a
+marking agent's input is described in `P85` but has not been built or measured by anyone here.**
+
+### 🔴 `855-G3` — LATAM's essay-marking estate is active and carries NO terms, and the one grant in it is proprietary
+
+🔴 **The claim, byte-probed over the WHOLE set rather than a sample.** `18` addresses from
+`correção de redação ENEM` and `corrección automática de exámenes`, each probed at `31` filenames ×
+the resolved default ref:
+
+| Verdict | Count |
+|---|---|
+| 🔴 `NO-GRANT-AT-ROOT` | **`16`** |
+| 🔴 `EMPTY-REF-SET` | **`1`** — `jbrito58/Redacao-1000` |
+| 🟡 `GRANT` | **`1`** — `ZarcontPsy/Zarcont-SERUMS`, `2,088 B`, `sha256₁₂ 777df0a962bf`, **`LICENCIA PROPIETARIA — ZARCONT`** |
+| 🟢 **PERMISSIVE** | 🔴 **`0`** |
+
+🔵 **ENEM is a national examination marked on five published competencies and sat by millions a
+year. The open estate around it is a dozen current projects and not one of them is usable.**
+🔴 **GitHub reported the proprietary one as `NOASSERTION` — `854-G4` in its expensive direction.**
+
+🟡 **How it closes:** not by searching — this is the second language and second tier in which the
+answer has been the same, so further searching is the thing `855-G1` warns against. 🟢 **It closes
+by BUILDING, and `P85` costs that at `6`–`8` weeks on a permissive substrate.** 🔵 **The convergence
+of a dozen independent projects on the same published rubric is free specification and should be
+read as design input before the build starts.**
+
+### 🟡 `855-G4` — `854-G5` answered and made worse: Apache-2.0 byte-LENGTH does not merely band badly, it COLLIDES
+
+🔴 **The claim, measured with `diff` and `od -c` on `8` Apache-2.0 payloads read this pass.**
+🔴 **Two DIFFERENT payloads occupy exactly `11,358` bytes:**
+[`tensorflow/moonlight`](https://github.com/tensorflow/moonlight) (`sha256₁₂ cfc7749b96f6`) and
+[`jiangnanboy/JiaJiaOCR`](https://github.com/jiangnanboy/JiaJiaOCR) (`sha256₁₂ 230e34f4f506`).
+
+🟢 **`diff` names four independent edits between them**, each of which changes the byte count, and
+which happen to net to **zero**:
+
+| Axis | `moonlight` | `JiaJiaOCR` |
+|---|---|---|
+| byte `0` | 🔴 leading `\n` | no leading newline |
+| title indent | `33` spaces | `13` spaces |
+| apache.org references | `http://` | `https://` |
+| appendix | placeholder `Copyright [yyyy] [name of copyright owner]` | 🔴 **filled in: `Copyright (c) 2026 jiangnanboy`** |
+
+🔵 **The collision is between a PRISTINE TEMPLATE and a CUSTOMISED INSTANCE — the two cases a grant
+classifier most needs to separate.** 🟢 **`6` distinct payload hashes across `8` repositories in one
+pass, spanning `10,141`–`11,358 B`** (`eynollah` at `10,141` is `854-G5`'s appendix-stripped class
+confirmed on a second repository).
+
+🟡 **How it closes:** unchanged in direction from `854-G5` and sharper in requirement.
+🔴 **Normalisation cannot be a length band OR an exact length; it must be STRUCTURAL** — strip
+leading whitespace, collapse the title indent, normalise the URL scheme, and excise the appendix
+block — *then* hash. 🟢 **Add both `11,358 B` payloads to `p378`'s fixture suite as a collision
+pair; the existing fixtures exercise re-wrapping and truncation, not collision.**
+
+### 🔴 `855-G5` — the instrument built to audit this register reports a clean bill of health when run the way its own docstring shows
+
+🔴 **The claim, reproduced twice.** [`ingest/absence-claims.py`](../ingest/absence-claims.py) was
+built at `p569` as `568-A`: this base publishes sentences of the form *"no X exists"*, a client is
+told to BUILD on the strength of one, and nothing verified them.
+
+🔴 **Run as `python3 -I ingest/absence-claims.py` it prints:**
+`absence-claims.py -- 0 pages, 0 shelf rows, 0 distinct addresses`, then `absence claims found: 0`
+and `supply absence claims: 0`. 🔵 **Its root defaults to `os.path.dirname(os.path.abspath(__file__))`
+— the `ingest/` directory — which contains none of the `11` pages in its `PAGES` list, so every page
+is skipped by the `os.path.exists` guard and the run terminates GREEN having read nothing.**
+
+🟢 **Run as `KB_ROOT=$PWD python3 -I ingest/absence-claims.py` it reads `11` pages, `17,354` shelf
+rows and `6,068` distinct addresses, and reports:**
+
+| | |
+|---|---|
+| absence sentences (broad) | **`2,326`** |
+| SUPPLY absence claims — the gateable class | 🔴 **`855`** |
+| of those, UNDATED | 🔴 **`598`** (`69.9%`) |
+| FULL-token shelf collisions (published-but-closed candidates) | `38` |
+| carrying a REGION or LANGUAGE token | 🔴 **`333`** |
+
+🔵 **`333` is the number `854-G1` asked for and could not produce.** 🔴 **This is
+`p355-cwd-portability`'s class — a suite that only passes from its own directory — landing on the
+one instrument whose job is to stop this base publishing false absences.**
+
+🟡 **How it closes:** cheaply and in one line. 🟢 **`absence-claims.py` should resolve its root to
+`dirname(dirname(__file__))` — the repository root — exactly as
+[`ingest/derive-counts.py`](../ingest/derive-counts.py) already does, with `KB_ROOT` kept as an
+override.** 🔴 **And the failure mode must be loud: a run that locates `0` of `11` declared pages
+should exit non-zero, not print a zero and succeed.**
+
+### 🔴 `855-G6` — the search index serves DEAD addresses, which is `854-G6`'s problem arriving from the other direction
+
+🔴 **The claim, with both probes.** [`jbrito58/Redacao-1000`](https://github.com/jbrito58/Redacao-1000)
+was returned as a live result by first-party `search/repositories` on the
+`correção de redação ENEM` leg, with a star count and a description. 🔴 **`git ls-remote --heads`
+returns an EMPTY REF SET, and all `31` licence paths `404`.**
+
+🔵 **`854-G6` recorded the corpus naming a string that did not resolve. This is the INDEX doing it,
+and it is worse, because the index is the channel this base treats as first-hand.** 🟢 **`1` dead
+address in `18` on this leg — a `5.6%` rate on a single sample, too small to be a figure but large
+enough that it cannot be assumed to be zero.**
+
+🟡 **How it closes:** `854-G6`'s prescription already covers it and should be widened. 🟢 **The
+`UNRESOLVABLE` verdict `854-G6` asks `presence.py` to gain must be populated from a REF-SET probe,
+not only from `search/repositories`** — because the search index is precisely the thing that failed
+here. 🔵 **`git ls-remote --heads` is the cheap oracle, it is already wired into
+[`ingest/p834-grantprobe.sh`](../ingest/p834-grantprobe.sh), and it is bidirectionally controlled
+(live → refs, invented → `EMPTY-REF-SET`).**
+
 ## 🟢 `2026-11-16` (fifty-ninth pass, `p854`) — **`7` gaps, each with the query, probe or instrument run before it was written (`ACTION p850-B`)**
 
 🔵 **Two of these (`854-G5`, `854-G6`) are instrument defects rather than market absences, and

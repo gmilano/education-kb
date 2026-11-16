@@ -4,6 +4,82 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — sixtieth pass (`p855`) — 🔴 **`p854`'s language rule tested by holding language constant and varying ALTITUDE — and it does not survive. The same channel returns `180` of `196` NEW and `2` usable. 🟢 The pass that failed paid anyway: it exposed a whole TIER this base has never held.**
+
+🟢 **Queries run verbatim this pass.** Mandated English legs (WebSearch):
+`top open source AI agents education 2026 github MIT` · `github trending education AI 2026` ·
+`open source platform education ERP CRM MIT Apache` · `AI education industry trends 2026` ·
+and the four regional legs `AI education {North America|EMEA|APAC|LATAM} 2026 adoption regulation players`.
+
+🟢 **Channel A — non-English at the WORKFLOW-NOUN altitude** (first-party `search/repositories`,
+star-sorted, `20` legs in `14` languages): `gestión escolar` · `calificación automática` ·
+`plataforma educativa` · `gestão escolar` · `correção automática redação` · `自動採点` ·
+`学習管理システム` · `자동 채점` · `إدارة مدرسية` · `نظام تعليمي` · `智能批改` · `错题本` ·
+`penilaian otomatis` · `okul yönetim sistemi` · `gestion scolaire` · `Schulverwaltung` ·
+`quản lý trường học` · `शिक्षा` · `образование нейросеть` · `ระบบโรงเรียน`.
+
+🟢 **Channel B — ARTEFACT-NOUN legs, after Channel A failed:** `作文批改` · `手写公式识别` ·
+`手書き数式認識` · `作文 添削` · `correção de redação ENEM` · `corrección automática de exámenes` ·
+`논술 첨삭` · `تصحيح الإملاء` · `automated essay scoring` · `item response theory` ·
+`computerized adaptive testing` · `handwritten math recognition` · `rubric grading llm` ·
+`latex ocr` · `formula recognition image to latex` · `math expression recognition transformer` ·
+`document layout analysis ocr` · `handwriting recognition pytorch` · `optical music recognition` ·
+`diagram understanding multimodal`.
+
+### 🔴 The measurement, run BEFORE any row was written
+
+| Channel | Legs | Returned | NEW | 🔬 Usable | Usable rate |
+|---|---|---|---|---|---|
+| `p854`, non-English, ARTEFACT nouns | `5` | `17` | `17` | `8` | 🟢 **`47%`** |
+| `p855`, non-English, WORKFLOW nouns | `20` | `196` | `180` | `2` | 🔴 **`1%`** |
+| `p855`, English, ARTEFACT nouns (perception tier) | `6` | `72` | `68` | 🟢 **`25`** | 🟢 **`35%`** |
+
+🔵 **The NEW rate is nearly identical across the first two rows (`100%` vs `92%`) and the usable
+rate differs by `47×`. 🔴 Presence is not relevance, and this base has been reading it as though it
+were** — which is `854-G6`'s category error on a second axis: `presence.py` tells you whether this
+corpus NAMES a string; it does not tell you the address RESOLVES (`854-G6`) and it does not tell
+you the artefact is USABLE (`855-G1`).
+
+🔴 **Why the workflow altitude fails, stated so it can be reused:** *"school management system"*,
+*"学習管理システム"*, *"sistema de gestión escolar"* and *"okul yönetim sistemi"* are among the most
+commonly assigned student projects in every language on earth. 🟢 **A workflow noun indexes
+COURSEWORK; an artefact noun indexes ARTEFACTS.** → `T185`, `855-G1`.
+
+🔴 **True nils recorded so they are not read as coverage:** `手書き数式認識` → `0` ·
+`논술 첨삭` → `0` · `تصحيح الإملاء` → `0` · `ระบบโรงเรียน` → `1` (unrelated) ·
+`образование нейросеть` → `1` (a dog-breed classifier). 🔵 **`手書き数式認識` returning `0` while
+`handwritten math recognition` returns `252` is the cleanest counter-example to a naïve reading of
+`T181` this pass produced: here the ENGLISH query is the one that finds the field.**
+
+🟢 **Shelved this pass (`27` rows, every grant byte-read `2026-11-16`):** `9` to
+[`agents/top.md`](top.md), `16` to [`repos/foundations.md`](../repos/foundations.md), `2` to
+[`verticals/solutions.md`](../verticals/solutions.md) — the document-perception tier
+(`Layout-Parser`, `eynollah`, `oar-ocr`, `JiaJiaOCR`, `DocFusion`), the formula tier (`TexTeller`,
+`Image2Katex`, `math-formula-recognition`, `Pytorch-HMER`, `LaTeX_OCR`, `OlehOnyshchak/OCR`,
+`img2latex-mathpix`), the handwriting tier (`handwritten-ocr-system`, `indic-htr`, `HTG_evaluation`)
+and the optical-music tier (`Mozart`, `OMR-Datasets`, `moonlight`, `tf-end-to-end`, `Orchestra`,
+`Polyphonic-TrOMR`, `web-omr`), plus `CProgrammingLab`, `CodeUnical`, `Online-Publisher-pro`,
+`CogniLoop` and `JorGPT`.
+
+🔴 **Declined with their bytes:** `LaTeX_OCR_PRO` (GPL-3.0, `35,149 B`) · `VikParuchuri/texify`
+(GPL-3.0, `35,091 B`) · `SakuraMathcraft/LaTeXSnipper` (GPL-3.0, `35,188 B`) ·
+`RQLuo/MixTeX-Latex-OCR` (AGPL-3.0, `34,523 B`) · `alephpi/Texo` (AGPL-3.0, `34,522 B`) ·
+`liebharc/homr` (AGPL-3.0, `34,309 B`) · `mcxiaoxiao/openIELTS` (`NO-GRANT-AT-ROOT`, `31` paths).
+🔵 **Six of the tier's highest-traction artefacts are copyleft, including `1,636★`, `1,313★`,
+`1,124★` and `1,115★` — the copyleft entries OUTRANK the permissive ones in this tier**, which is
+the opposite of this base's usual finding and the reason the declines are printed here in full.
+
+### 🔴 The LATAM census — `18` addresses, `0` permissive, and the one grant is proprietary
+
+🔴 **The whole set both LATAM legs returned, byte-probed at `31` filenames × the resolved default
+ref:** `16` `NO-GRANT-AT-ROOT`, `1` `EMPTY-REF-SET`
+(🔴 [`jbrito58/Redacao-1000`](https://github.com/jbrito58/Redacao-1000) — **served LIVE by
+`search/repositories`, DEAD to `git ls-remote`**), and `1` `GRANT` which is
+🔴 [`ZarcontPsy/Zarcont-SERUMS`](https://github.com/ZarcontPsy/Zarcont-SERUMS), field `NOASSERTION`,
+bytes **`LICENCIA PROPIETARIA — ZARCONT`** (`2,088 B`, `sha256₁₂ 777df0a962bf`).
+🟢 **`854-G4` confirmed in the expensive direction: the one `NOASSERTION` in the set was the one
+explicitly proprietary repository in it.** → `T188`, `855-G3`, `855-G6`.
+
 ## `2026-11-16` — fifty-ninth pass (`p854`) — 🟢 **`8` entrants from a channel this base had never used: the NON-ENGLISH query. `17` of `17` addresses it returned were absent from the whole non-archive corpus, against `0` of `12` for the mandated English legs run in the same hour.**
 
 🟢 **Queries run verbatim this pass.** Mandated English legs (WebSearch):

@@ -4,6 +4,109 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — sixtieth pass (`p855`) — **`4` trends (`T185`–`T188`): `T181` amended rather than carried forward, a whole perception tier found missing, the licence polarity of that tier inverted against this base's usual finding, and LATAM's open estate shown to be active-and-ungranted rather than absent**
+
+## 🔴 `T185` — research yield is a function of language × ALTITUDE, and `T181` measured only the altitude where language works
+
+🔴 **The claim, with both channels run in the same hour on `2026-11-16`.**
+
+| Channel | Legs | Addresses | NEW | 🔬 Usable (permissive grant byte-read + education-relevant) |
+|---|---|---|---|---|
+| non-English, ARTEFACT nouns (`p854`) | `5` | `17` | `17` (`100%`) | 🟢 `8` (**`47%`**) |
+| non-English, WORKFLOW nouns (`p855`) | `20` | `196` | `180` (`92%`) | 🔴 `2` (**`1%`**) |
+
+🔵 **The NEW rate moved by `8` points. The USABLE rate moved by a factor of `47`.** 🟢 **So
+`T181`'s rule — *"yield is a function of the query's LANGUAGE"* — is AMENDED: it is a function of
+language × altitude, and `p854` happened to run at the one altitude where the language axis pays.**
+
+🔴 **The mechanism, which is what makes this reusable:** *"school management system"* is among the
+most commonly assigned student exercises in every language on earth, so a workflow noun indexes
+COURSEWORK. An artefact noun — `発音 評価`, `handwritten math recognition` — indexes ARTEFACTS.
+
+🔵 **And the counter-example is in this pass's own legs:** `手書き数式認識` (Japanese, artefact
+noun) → 🔴 **`0`**, while `handwritten math recognition` → `252`. 🟢 **Here the ENGLISH query is the
+one that finds the field, which is the exact inverse of `T181`'s founding case.**
+
+🟢 **The rule a studio carries:** search in the client's language, but only at the altitude of the
+thing you intend to REUSE. → `855-G1`.
+
+## 🟢 `T186` — this base held `3` of the document-PERCEPTION tier against `7,086` addresses, and that tier is what makes a paper-based engagement possible at all
+
+🔴 **The claim, measured by `grep` over the non-archive corpus before any row was written.** Between
+a photographed worksheet and a marking agent sits a step that reads the page: find the regions,
+transcribe the handwriting, parse the notation. 🔴 **This base held
+[`lukas-blecher/LaTeX-OCR`](https://github.com/lukas-blecher/LaTeX-OCR),
+[`breezedeus/Pix2Text`](https://github.com/breezedeus/Pix2Text) and
+[`JabRef/jabref`](https://github.com/JabRef/jabref) — `3` addresses — and had never run a leg at
+this altitude in `59` passes.**
+
+🟢 **Six artefact-noun legs returned `72` addresses of which `68` were new; `25` carry a permissive
+grant byte-read on `2026-11-16` and are now filed** across four layers: document structure
+(`layout-parser`, `eynollah`, `oar-ocr`, `JiaJiaOCR`, `DocFusion`), mathematical notation
+(`TexTeller`, `Image2Katex`, `math-formula-recognition`, `Pytorch-HMER`, `LaTeX_OCR`,
+`OlehOnyshchak/OCR`, `img2latex-mathpix`), handwriting (`handwritten-ocr-system`, `indic-htr`,
+`HTG_evaluation`) and optical music recognition (`Mozart`, `OMR-Datasets`, `moonlight`,
+`tf-end-to-end`, `Orchestra`, `Polyphonic-TrOMR`, `web-omr`).
+
+🔵 **Why it was invisible for `59` passes: every leg this base had ever run names the PEDAGOGY
+(tutoring, grading, assessment) or the SYSTEM (LMS, SIS). The perception tier is named after the
+ARTEFACT (`latex ocr`, `optical music recognition`), and nobody in education calls it an education
+technology.** 🟢 **`T82`'s rule — supply is indexed under the system name, never the pedagogy — on a
+sixth axis, and the axis is the PHYSICAL INPUT.** → `855-G2`.
+
+🔴 **The engagement consequence:** in a paper-based school system — which is most of LATAM, most of
+MEA and a large part of APAC — no marking agent is reachable without this layer, so it is the first
+thing to scope and this base could not previously have named a single row of it.
+
+## 🔴 `T187` — in the perception tier the licence polarity INVERTS: the traction leaders are copyleft
+
+🔴 **The claim, every grant byte-read `2026-11-16`.** This base's standing finding is that
+education's open supply is thin and permissive. 🔴 **In this tier it is thick, and `6` of its
+highest-traction artefacts are copyleft:** `MixTeX-Latex-OCR` `1,636★` AGPL-3.0 ·
+`LaTeX_OCR_PRO` `1,313★` GPL-3.0 · `texify` `1,124★` GPL-3.0 · `LaTeXSnipper` `1,115★` GPL-3.0 ·
+`Texo` `919★` AGPL-3.0 · `homr` `483★` AGPL-3.0.
+
+🔵 **The sharpest instance is a NAME COLLISION, not a judgement call:**
+[`LaTeX_OCR`](https://github.com/LinXueyuanStdio/LaTeX_OCR) (Apache-2.0, `558★`) and
+[`LaTeX_OCR_PRO`](https://github.com/LinXueyuanStdio/LaTeX_OCR_PRO) (GPL-3.0, `1,313★`) — 🔴 **same
+author, same subject, adjacent names, incompatible grants, and the copyleft one ranks HIGHER.**
+🟢 **A studio taking the top hit takes GPL-3.0 into a client deliverable.**
+
+🔵 **The second pattern, now seen in two tiers and therefore a pattern:** the permissive shell
+around a METERED scorer. `p854` found it in `speechteach_back` (MIT app, Azure Speech SDK);
+`p855` finds it in [`img2latex-mathpix`](https://github.com/blaisewang/img2latex-mathpix)
+(Apache-2.0 app, `1,400★`, whose own description records that Mathpix withdrew the free API tier).
+🟢 **Read the shell, replace the judgement** — `TexTeller` is the permissive replacement and it is
+on the shelf.
+
+## 🔴 `T188` — LATAM's open estate is ACTIVE AND UNGRANTED, which is a different market from an empty one and calls for the opposite engagement
+
+🔴 **The claim, byte-probed over the whole set rather than a sample.** `18` addresses returned by
+`correção de redação ENEM` and `corrección automática de exámenes`, each probed at `31` filenames ×
+the resolved default ref: 🔴 **`16` `NO-GRANT-AT-ROOT` · `1` `EMPTY-REF-SET` · `1` `GRANT`, and
+that grant is [`ZarcontPsy/Zarcont-SERUMS`](https://github.com/ZarcontPsy/Zarcont-SERUMS),
+`2,088 B`, `sha256₁₂ 777df0a962bf`, title line **`LICENCIA PROPIETARIA — ZARCONT`**.
+🔴 **`0` of `18` permissive.**
+
+🔵 **Two things follow, and the second is the valuable one.** 🔴 **First: GitHub's field reported
+that single grant as `NOASSERTION` — the same value it reports for a BSD-licensed Meta runtime
+(`854-G4`), so the one repository in the set a studio must NOT touch is the one a
+"`NOASSERTION` is probably fine" reading would have shelved.** 🟢 **Second: an estate that is
+active and ungranted is not a thin market. A dozen independent projects have converged on the same
+five published ENEM competencies, and that convergence is free specification — the build is
+well-specified even though nothing in it is adoptable.**
+
+🟢 **This is `854-G7` (Spanish pronunciation: supply without grants) confirmed in PORTUGUESE and in
+a different tier.** 🔵 **Two languages × two tiers promotes it from an observation to a LATAM
+structural property: assume the reference implementations exist, assume you may not use them, and
+budget to rebuild rather than to integrate.** → `855-G3`, `P85`.
+
+🔴 **A third, smaller finding rides along:**
+[`jbrito58/Redacao-1000`](https://github.com/jbrito58/Redacao-1000) was returned as a LIVE result by
+`search/repositories` and answers `EMPTY-REF-SET` to `git ls-remote --heads`. 🟢 **The search index
+serves dead addresses, which is `854-G6`'s existence problem arriving from the opposite direction:
+there the corpus named something that did not exist; here the INDEX does.** → `855-G6`.
+
 ## 🟢 `2026-11-16` — fifty-ninth pass (`p854`) — **`4` trends (`T181`–`T184`): research yield turns out to be a function of query LANGUAGE, on-device scoring converges as the answer to three regulatory regimes at once, the non-English estate is real but unconsolidated, and APAC's two binding AI laws are now IN FORCE**
 
 ## 🟢 `T181` — yield is a function of the query's LANGUAGE, not only its altitude

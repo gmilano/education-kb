@@ -4,6 +4,60 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixtieth pass (`p855`, 2026-11-16) — **`P85`: the PAPER-TO-MARK pipeline — the first recipe on this page whose first stage is a camera rather than an API, wired entirely from rows byte-read today**
+
+## P85 — the PAPER-TO-MARK pipeline: turn a photographed worksheet into a provisional mark a teacher can overrule (LATAM anchor on the ENEM estate; same build serves any paper-based system in MEA and APAC)
+
+🔵 **The brief this answers, stated as a client would:** *"Our teachers mark by hand. Four million
+candidates sit a national essay examination; our schools photograph scripts because they have no
+scanners. We have seen a dozen GitHub projects that claim to do this — can we just use one?"*
+
+🔴 **The answer to the last question is NO, and that is this recipe's premise.** `855-G3`:
+`18` addresses in that estate byte-probed at `31` filenames each → `16` with no licence file,
+`1` dead, `1` carrying `LICENCIA PROPIETARIA — ZARCONT`, 🔴 **`0` permissive.** 🟢 **But the dozen
+projects have independently converged on the same five published ENEM competencies, so the
+SPECIFICATION is free even though none of the code is adoptable.**
+
+🟢 **Why it is one pattern and not two.** Every marking recipe already on this page (`P67`, `P73`,
+`P74`, `P81`) begins with text that is already digital. 🔴 **In a paper-based system that premise is
+false, and the entire gap is the perception tier `855-G2` shows this base did not hold until today.**
+
+#### The wiring, named repo by repo — every grant byte-read `2026-11-16`
+
+| Stage | Repo, as byte-read | Grant | What it does here |
+|---|---|---|---|
+| 0. Capture | the teacher's phone | — | 🔴 **Assume a photograph, not a scan: skew, shadow, a thumb in the corner.** Budget for it in stage 1, not in a "later" that never comes |
+| 1. Page structure | [`Layout-Parser/layout-parser`](https://github.com/Layout-Parser/layout-parser) | 🟢 Apache-2.0 (`11,357 B`, `sha256₁₂ c71d239df917`) | find the regions BEFORE reading any of them. 🔵 **The decisive step: a worksheet is a form, and the printed question text must not reach the grader as if it were the student's answer** |
+| 1-alt. Degraded scans | [`qurator-spk/eynollah`](https://github.com/qurator-spk/eynollah) | 🟢 Apache-2.0 (`10,141 B`, appendix-stripped) | 🟢 **Prefer this where the input is a photographed or archival page** — built for historical and degraded print, and pushed `2026-11-13` against `layout-parser`'s `2024-08-15` |
+| 2a. Handwritten prose | [`GioiaZheng/handwritten-ocr-system`](https://github.com/GioiaZheng/handwritten-ocr-system) | 🟢 MIT (`1,069 B`) | line-level CNN-RNN-CTC on IAM. 🔵 The correct default; beat it before replacing it |
+| 2b. Non-Latin script | [`Sanny26/indic-htr`](https://github.com/Sanny26/indic-htr) | 🟢 MIT (`1,069 B`) | 🔴 **`8★`. The ONLY permissive multi-Indic-script artefact this base holds — a seed, so budget a data-collection phase, not an integration** |
+| 2c. Mathematics | [`OleehyO/TexTeller`](https://github.com/OleehyO/TexTeller) | 🟢 Apache-2.0 (`11,333 B`) | formulas → LaTeX, printed AND handwritten, FULL-PAGE. 🔴 **Do NOT reach for `texify` (`1,124★`, GPL-3.0), `LaTeX_OCR_PRO` (`1,313★`, GPL-3.0) or `MixTeX` (`1,636★`, AGPL-3.0) — they outrank it in search and all three are copyleft (`T187`)** |
+| 2d. Music | [`aashrafh/Mozart`](https://github.com/aashrafh/Mozart) + [`apacha/OMR-Datasets`](https://github.com/apacha/OMR-Datasets) | 🟢 Apache-2.0 / MIT | where the subject is music. 🔴 **Avoid `liebharc/homr` (`483★`, AGPL-3.0)** |
+| 3. Recognition metric | [`koninik/HTG_evaluation`](https://github.com/koninik/HTG_evaluation) | 🟢 MIT (`1,079 B`) | 🟢 **Wire this at stage 3, not at the end.** A mark that is contested is contested on the TRANSCRIPTION first; a studio that cannot defend its recognition metric cannot defend the grade |
+| 4. Rubric + provisional mark | `P74`'s substrate ([`lsgwr/spring-boot-online-exam`](https://github.com/lsgwr/spring-boot-online-exam), MIT) | 🟢 MIT | the five ENEM competencies as explicit rubric dimensions, each scored separately and shown separately |
+| 5. The boundary | — | — | 🔴 **`AI 预批 → 教师复核 → 系统记录` (`T119`): the model PROPOSES a mark and never RECORDS one.** 🟢 Sold as pedagogy in APAC, as EU AI Act Annex III conformance in EMEA, and in LATAM as the thing that makes the pilot survive its first appeal |
+| 6. Reference only | [`itsmorninghao/CogniLoop`](https://github.com/itsmorninghao/CogniLoop) | 🔴 **AGPL-3.0** (`v2/LICENSE`, `34,554 B`) | 🟢 **Read its data model for the loop design. Do not deploy it** — a marking system is hosted, and AGPL-3.0 reaches a hosted derivative |
+
+#### Cost, and where it actually goes
+
+| Phase | Weeks | Note |
+|---|---|---|
+| Perception spine (stages 1–3) on Latin script + mathematics | `3`–`4` | 🟢 All permissive, all byte-read, no metered API anywhere in the chain |
+| Rubric + boundary + teacher review UI (stages 4–5) | `2`–`3` | inherits `P74`'s substrate |
+| 🔴 **Non-Latin script** | **`+6`–`8`** | 🔴 `indic-htr` is `8★`/`4` forks. This is a corpus-collection phase wearing an integration phase's clothes — price it honestly or lose it later (`855-G5` on `agents/top.md`'s APAC note) |
+| **Total, pt-BR / Latin script** | 🟢 **`6`–`8`** | |
+| **Total, Indic or Arabic script** | 🔴 **`12`–`16`** | |
+
+🔵 **What makes this sellable rather than speculative:** every stage above is a repository whose
+grant was read from `raw.githubusercontent.com` on `2026-11-16`, at the root of its RESOLVED default
+branch, with size and `sha256₁₂` recorded on [`repos/foundations.md`](../repos/foundations.md).
+🟢 **`0` metered APIs, `0` copyleft in the delivery path, and the three copyleft artefacts a client
+will have already found are named above with the reason they are excluded.**
+
+🔴 **The one thing this recipe does NOT solve, stated so it is not sold:** nothing here establishes
+that a provisional mark agrees with a human marker on the client's own scripts. 🟢 **`P81` is the
+recipe that ships an accuracy number, and `P85` should be sold WITH it, never instead of it.**
+
 ## 🟢 Fifty-ninth pass (`p854`, 2026-11-16) — **`P84`: offline-first pronunciation scoring for a REGULATED market, wired from rows this base byte-read today — plus `P83-LATAM` re-costed now that its blank page has an architecture**
 
 ### 🟢 `P84` — on-device speaking assessment, where the audio never leaves the handset

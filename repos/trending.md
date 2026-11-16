@@ -4,6 +4,58 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — sixtieth pass (`p855`) — 🟢 **The DOCUMENT-PERCEPTION tier enters this base for the first time in `60` passes: `16` foundation rows across four layers, every grant byte-read. 🔴 And the tier's traction leaders are copyleft, which inverts this base's usual licence finding.**
+
+🔵 **What the tier is, and why its absence mattered.** Between a photographed worksheet and a
+marking agent there is a step that reads the page: find the regions, transcribe the handwriting,
+parse the notation. 🔴 **This base held `3` addresses of that step —
+[`lukas-blecher/LaTeX-OCR`](https://github.com/lukas-blecher/LaTeX-OCR),
+[`breezedeus/Pix2Text`](https://github.com/breezedeus/Pix2Text) and
+[`JabRef/jabref`](https://github.com/JabRef/jabref) — against `7,086` distinct addresses held in
+total**, and it had never run a leg at this altitude in `59` passes. → `855-G2`.
+
+### 🟢 What entered, by layer
+
+| Layer | Rows | The row to read first |
+|---|---|---|
+| Document structure | `5` | [`Layout-Parser/layout-parser`](https://github.com/Layout-Parser/layout-parser) — Apache-2.0, `5,779★`/`527` |
+| Mathematical notation | `2` foundations + `4` agents | [`OleehyO/TexTeller`](https://github.com/OleehyO/TexTeller) — Apache-2.0, `764★`, printed AND handwritten, FULL-PAGE |
+| Handwriting | `3` | [`Sanny26/indic-htr`](https://github.com/Sanny26/indic-htr) — MIT, `8★`, the only permissive multi-Indic-script artefact this base has found |
+| Optical music recognition | `6` + `1` agent | [`apacha/OMR-Datasets`](https://github.com/apacha/OMR-Datasets) — MIT, `400★`, the DATA before the models |
+
+### 🔴 The licence inversion, measured
+
+🔵 **This base's standing finding is that education's open supply is thin and permissive. In THIS
+tier the supply is thick and the best of it is copyleft.**
+
+| Artefact | ★ | 🔬 Grant, byte-read `2026-11-16` |
+|---|---|---|
+| `RQLuo/MixTeX-Latex-OCR` | `1636` | 🔴 **AGPL-3.0** (`main/LICENSE`, `34,523 B`, `sha256₁₂ 8486a10c4393`) |
+| `LinXueyuanStdio/LaTeX_OCR_PRO` | `1313` | 🔴 **GPL-3.0** (`master/LICENSE`, `35,149 B`, `sha256₁₂ 3972dc9744f6`) |
+| `VikParuchuri/texify` | `1124` | 🔴 **GPL-3.0** (`master/LICENSE`, `35,091 B`, `sha256₁₂ 4b4402403c3f`) |
+| `SakuraMathcraft/LaTeXSnipper` | `1115` | 🔴 **GPL-3.0** (`main/LICENSE`, `35,188 B`, `sha256₁₂ 7f5778ce0ba8`) |
+| `alephpi/Texo` | `919` | 🔴 **AGPL-3.0** (`main/LICENSE`, `34,522 B`, `sha256₁₂ d93c43da4bf2`) |
+| `liebharc/homr` | `483` | 🔴 **AGPL-3.0** (`main/LICENSE`, `34,309 B`, `sha256₁₂ a6de0dc64ada`) |
+| 🟢 **`OleehyO/TexTeller`** | `764` | 🟢 **Apache-2.0** (`main/LICENSE`, `11,333 B`, `sha256₁₂ 229eec032b2c`) |
+| 🟢 **`Layout-Parser/layout-parser`** | `5779` | 🟢 **Apache-2.0** (`main/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`) |
+
+🔴 **`6` of the tier's top artefacts by traction are copyleft; the search result a studio sees
+FIRST for `latex ocr` after `pix2tex` is AGPL-3.0.** 🟢 **The permissive path exists and must be
+chosen deliberately: `TexTeller` for formulas, `layout-parser` or `eynollah` for structure.**
+🔵 **The sharpest instance is a name collision: `LaTeX_OCR` (Apache-2.0, `558★`) and
+`LaTeX_OCR_PRO` (GPL-3.0, `1,313★`) are the same author, same subject, adjacent names — and the
+copyleft one ranks higher.** → `T187`, `855-G2`.
+
+### 🟡 An instrument fixture, recorded here because the tier produced it
+
+🔴 **Two Apache-2.0 payloads at EXACTLY `11,358 B` with different `sha256`:**
+[`tensorflow/moonlight`](https://github.com/tensorflow/moonlight) (`cfc7749b96f6`) and
+[`jiangnanboy/JiaJiaOCR`](https://github.com/jiangnanboy/JiaJiaOCR) (`230e34f4f506`).
+🟢 **`diff` gives four independent edits — leading newline, title indent (`33` vs `13` spaces),
+`http://` vs `https://`, appendix placeholder vs filled-in copyright — netting to a byte delta of
+ZERO.** 🔵 **`854-G5` asked for a byte-BAND fix; the answer is that byte-LENGTH itself collides,
+between a pristine template and a customised instance.** → `855-G4`.
+
 ## `2026-11-16` — fifty-ninth pass (`p854`) — 🟢 **`10` foundation rows: the ON-DEVICE INFERENCE layer — `4` MIT · `2` Apache-2.0 · `1` BSD · `2` GPL-3.0 · `1` composite — of which `3` were new to this corpus and `7` had sat `UNGRADED` since before this pass**
 
 🟢 **The channel, stated so it can be re-run:** the layer was not found by a trending query, it was
