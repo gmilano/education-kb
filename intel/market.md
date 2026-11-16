@@ -4,6 +4,125 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-eighth pass (`p853`, 2026-11-16) — **the SPOKEN-LANGUAGE market, placed by region — and the regional legs' real yield this pass is a measured GAP, not a player list**
+
+🟢 **All four mandated regional legs were run verbatim** (`AI education {North America|EMEA|APAC|LATAM} 2026 adoption regulation players`),
+plus a tier-specific supply leg per region. 🔵 **The demand-side numbers are in
+[`intel/trends.md`](trends.md) (`T179`) so they are stated once; what follows is what a studio can
+SELL, and what this base measured that it cannot.**
+
+### 🔴 The informed gaps, stated before the opportunities — because silence looks exactly like coverage
+
+🔴 **The supply legs below returned real results. These returned nothing usable, and that is a
+finding about the market rather than about the search:**
+
+| Leg run `2026-11-16` | What came back | Reading |
+|---|---|---|
+| `spanish pronunciation learning` (first-party `search/repositories`, star-sorted) | 🔴 **`8` results; the best permissive one is `3★` and `NOASSERTION`; the rest are `0`–`1★` with NO licence file.** The only MIT row returned is a commercial vendor's API samples | 🔴 **There is NO permissive Spanish pronunciation-assessment repository.** The Spanish-language learner estate on GitHub is unlicensed hobby apps. 🟢 **`OpenPronounce` (MIT) supports Spanish EXPERIMENTALLY by its own `README` — the only build-safe option, and its calibration language is English** → `853-G5`, **LATAM** |
+| `portuguese pronunciation speech assessment` | 🔴 **`0` results** | 🔴 **An EMPTY result set from GitHub's own index, not a thin one.** Brazil is the largest education market in LATAM and there is no pt-BR speaking-assessment repository at all → `853-G5`, **LATAM** |
+| `arabic quran recitation pronunciation` | 🔴 **`3` results, `0`–`2★`, every one with NO licence file** | 🔴 **Recitation assessment is a mass-market MEA use case with institutional demand and no open supply.** 🔵 **Named explicitly because the EMEA region in this base is persistently read as Europe; this is the Middle East half returning a measured nil** → `853-G6`, **EMEA** |
+| `japanese pronunciation learning app open source` | 🔴 **`0` results** | 🔴 **Nil for the third-largest edtech market in APAC.** 🟢 **Contrast with Mandarin, where the same leg family returned `g2pW` (Apache-2.0) and `OMPAL-corpus` (CC-BY-4.0): APAC's open speech supply is Chinese-published, not pan-Asian** → `853-G6`, **APAC** |
+| `accent conversion speech learning` | 🔴 **`4` results, `0`–`2★`, all unlicensed student projects** | 🟡 **Accent CONVERSION (making a learner sound native) has no open supply, while accent ASSESSMENT does. Worth knowing before a client asks for the former** |
+
+🟢 **`5` legs, `5` honest nils, each with the query and the result count attached.** 🔵 **The
+pattern across them is one sentence: the open spoken-language estate is ENGLISH-first and
+Mandarin-second, and every other language is a localisation project rather than an adoption.**
+
+## Opportunities by region
+
+🟢 **Each subsection names what this pass SHELVED that the region can be sold on, and refuses to
+name an opportunity this base cannot supply.** 🔵 **The previous pass's block is preserved below
+under its own heading.**
+
+### North America
+
+🟢 **Sell the DEFENSIBLE score.** The regional constraint is evidentiary and legislative —
+`~100` state bills touching student AI use in 2026, `≥15` states with enacted or introduced
+AI-in-education law, Virginia's `S.B. 394` mandating guidance that covers teacher training, an
+NTIA edtech review and a California ballot measure on AI and minors. 🔴 **A speaking score that
+cannot be explained to a parent is a liability in this region, not a feature.**
+🟢 **What this pass shelved for exactly that:**
+[`aalto-speech/interspeech2019_karhila_et_al`](https://github.com/aalto-speech/interspeech2019_karhila_et_al)
+(MIT) scores by **articulatorily weighted phoneme edit distance** — every lost point is a named
+sound substitution, inspectable without a model card — and
+[`TREMA-UNH/rubric-grading-workbench`](https://github.com/TREMA-UNH/rubric-grading-workbench)
+(MIT, `p852`) produces the **human-agreement number** a district will ask for.
+🔵 **The incumbent casualty is on the record and is the opening line of the pitch: Chegg cut
+`45%` of staff as AI took homework-help traffic — the buyers in this region have watched a
+market leader lose to the technology and will fund measurement over automation.**
+🟡 **Placed rows available: `1` of `12` from this pass's tier (North America), plus the
+foundations layer's [`Montreal-Forced-Aligner`](https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner) (MIT).**
+
+### EMEA
+
+🟢 **Sell SOVEREIGNTY, and sell it on the data-residency property rather than on the model.**
+The AI Act's high-risk obligations for education moved to **`2 December 2027`** under the May 2026
+Digital Omnibus agreement, and the gap between **`76%` of students expecting AI** and **`80%` of
+teachers fearing it arrives faster than schools can manage** is the whole opportunity.
+🔴 **Minors' voice recordings are the single artefact a European ministry will not send to a
+third-party endpoint.** 🟢 **[`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce)
+(MIT) is the row that removes the endpoint — self-hosted, no API key, learners' audio never
+leaves the operator's servers — and it ships experimental French, German, Italian, Spanish,
+Portuguese and Dutch.** 🟢 **Two EMEA-placed foundations shelved this pass:**
+[`DigitalPhonetics/IMS-Toucan`](https://github.com/DigitalPhonetics/IMS-Toucan) (Apache-2.0,
+TTS for `7,000+` languages, University of Stuttgart) and
+[`axelspringer/DeepPhonemizer`](https://github.com/axelspringer/DeepPhonemizer) (MIT, g2p from a
+lexicon) — 🔵 **together they stand up a European minority-language speaking course without a
+vendor: Catalan, Basque, Welsh, Irish, Estonian.** 🔴 **The MEA half of this region returned a
+measured nil on recitation assessment (`853-G6`); do not bid it as covered.**
+
+### APAC
+
+🟢 **Sell the SUPPLY, because for once the region publishes it.** The most-starred permissive ASR
+toolkit this pass measured is APAC-published —
+[`modelscope/FunASR`](https://github.com/modelscope/FunASR), **MIT, `21,049★`**, with punctuation
+restoration and diarisation included — and MIT means it can be embedded in a proprietary product
+with no NOTICE obligation at all. 🟢 **The only permissive Mandarin grapheme-to-phoneme found is
+also APAC:** [`GitYCC/g2pW`](https://github.com/GitYCC/g2pW) (Apache-2.0, Bopomofo/Pinyin,
+polyphone disambiguation), with
+[`phantomhsieh/OMPAL-corpus`](https://github.com/phantomhsieh/OMPAL-corpus) (CC-BY-4.0, pushed
+`2026-11-14`) as the only **licensed** evaluation corpus in the tier.
+🟡 **Demand is uneven — `30%` virtual-tutor adoption with connectivity named as the barrier —
+which argues for on-device and streaming designs:** 🟢
+[`wenet-e2e/wenet`](https://github.com/wenet-e2e/wenet) (Apache-2.0) serves streaming recognition
+from a runtime with no Python in the serving path, which is the shape that survives a
+`2`-Mbps school connection. 🔴 **Japanese returned a nil (`853-G6`); the APAC supply is Chinese,
+not pan-Asian, and a Japan or Korea engagement starts from English-language components.**
+
+### LATAM
+
+🔴 **The honest opening: this pass could NOT find a permissive Spanish or Portuguese
+pronunciation-assessment repository, and the Portuguese leg returned an empty result set**
+(`853-G5`). 🟢 **Which is precisely why the region's opportunity is the largest on this page.**
+The Digital Education Council / Tec de Monterrey survey (Feb 2026, `7,319` faculty, `29`
+institutions) reports **`92%` of students and `79%` of faculty using AI with only `30%` of
+universities holding a published policy** — a `62`-point governance gap, and **English-language
+employability is the region's single largest paid-education category.**
+🟢 **What a studio can actually build, from rows shelved this pass:**
+[`OpenPronounce`](https://github.com/Halleck45/OpenPronounce) (MIT) calibrated for English with
+**Spanish and Portuguese declared experimental**, plus
+[`axelspringer/DeepPhonemizer`](https://github.com/axelspringer/DeepPhonemizer) (MIT) to build
+the es-`419` and pt-BR grapheme-to-phoneme the upstream projects do not ship.
+🔵 **That is a 6–10 week localisation project with a named deliverable — the first permissively
+licensed Latin-American Spanish pronunciation scorer — and it is defensible precisely because
+this base measured its absence rather than assuming it.** 🟢 **Institutional counterparties for
+such work are on record: UNESCO IESALC, UNESCO with Chile's CENIA (including Latam-GPT),
+EdTech Hub with Fundación Ceibal, the IDB, and ECLAC's eLAC agenda.**
+
+### Global
+
+🔴 **The global finding is a procurement one and it outranks every regional nuance on this page:
+the code in this tier is permissive and the DATA is not.** `29` of `37` grants byte-read this pass
+are permissive, 🔴 **while `9` of the `10` rows read for corpora depend on `speechocean762`
+(no licence file), `TIMIT` (LDC, paid), `L2-ARCTIC` (request form) or `UASpeech` (signed
+agreement).** 🟢 **The one row with no gated corpus —
+[`crazycloud/mispronunciation-detection-diagnosis-wav2vec2-and-llm`](https://github.com/crazycloud/mispronunciation-detection-diagnosis-wav2vec2-and-llm)
+(Apache-2.0) — is the only end-to-end reproducible pipeline in the tier, and it is not the
+most-starred one.** 🔵 **Sell the data-rights review as a priced work package in every region:
+it is the step that decides whether a speaking-assessment pilot can ever leave the lab, nobody
+budgets for it, and this base can now name the four corpora it turns on** (`853-G1`).
+
+
 ## 🟡 Fifty-seventh pass (`p852`, 2026-11-16) — **the four regional legs run again. The demand side is still saturated; what moved is SUPPLY, and this pass can place it in only TWO regions out of four — which is the honest finding and is recorded as a gap, not smoothed over.**
 
 🟡 **Provenance, stated before the findings, unchanged from `p848`–`p851`.** Every regulatory and
@@ -129,7 +248,7 @@ to be free for companies and public institutions. 🔴 **No GitHub repository fo
 retrievable from these results, so this base still has NO byte-read grant for it and cannot place
 it on a shelf — the fifth consecutive pass in which that is true.** → `852-G7`.
 
-## Opportunities by region
+## Opportunities by region — as filed by `p852` (historical, superseded above)
 
 🟢 **Each subsection names what was SHELVED this pass that the region can be sold on, and refuses
 to name an opportunity this base cannot supply.**

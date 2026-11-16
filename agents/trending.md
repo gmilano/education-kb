@@ -4,6 +4,51 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-eighth pass (`p853`) — 🟢 **`12` entrants, and for the first time in three passes the MAJORITY are genuinely new to this corpus: `34` of `57` measured addresses were absent from the whole non-archive base. The channel that did it is a TIER noun, one level below the artefact nouns `p852` used.**
+
+🟢 **Queries run verbatim this pass** (first-party `search/repositories`, star-sorted, plus
+WebSearch for the mandated legs): `pronunciation assessment` · `mispronunciation detection` ·
+`pronunciation scoring` · `forced alignment speech` · `grapheme to phoneme` ·
+`speech toolkit pytorch` · `montreal forced aligner` · `CEFR assessment language` ·
+`AI language tutor voice conversation open source` · `speech therapy open source app` ·
+`reading fluency assessment children speech` · `accent conversion speech learning` ·
+`spanish pronunciation learning` · `portuguese pronunciation speech assessment` ·
+`arabic quran recitation pronunciation` · `japanese pronunciation learning app open source`.
+
+### 🟢 The presence measurement, run BEFORE any row was written
+
+🟢 **Instrument:** [`compose/code/p853-slug-presence/`](../compose/code/p853-slug-presence/) —
+built this pass to the specification `852-G3` wrote, `35` offline controls, word-boundary matching
+in both URL and bare-slug form.
+
+| Verdict | Count | Addresses |
+|---|---|---|
+| 🟢 **NEW** (absent from the entire non-archive corpus) | **34** | `crazycloud/mispronunciation-detection-diagnosis-wav2vec2-and-llm` · `rhss10/joint-apa-mdd-mtl` · `juice500ml/dysarthria-gop` · `doheejin/SB_loss_PA` · `phantomhsieh/OMPAL-corpus` · `vietspeak/VietSpeakOJ` · `frank613/CTC-based-GOP` · `cageyoko/CTC-Attention-Mispronunciation` · `vocaliodmiku/wav2vec2mdd` · `tuanio/ling-wav2vec2` · `2-3-5-7/SprechMate` · `tbright17/kaldi-dnn-ali-gop` · `aalto-speech/interspeech2019_karhila_et_al` · `warleysr/pronki` · `b-ashford/cacoepy` · `Aditya3107/GOP_logit` · `JazminVidal/ssl-mispron` · `MahmoudAshraf97/ctc-forced-aligner` · `maxrmorrison/pyfoal` · `xinjli/transphone` · `GitYCC/g2pW` · `lifeiteng/Aligner-SUPERB` · `DigitalPhonetics/IMS-Toucan` · `axelspringer/DeepPhonemizer` · `Maximax67/Words-CEFR-Dataset` · `speech-industry/bournemouth-forced-aligner` · `kakaobrain/g2pm` · `Kyubyong/g2pC` · `yl4579/PL-BERT` · `MontrealCorpusTools/mfa-models` · `rwbel/freelingo` · `AreebBaig26/HermesLinguaMind` · `CodeWith-AR/Therapy-Nest` · `benhamlen/open-speech-therapy` |
+| 🟡 **UNGRADED** (in trending or evidence, on no graded shelf) | **18** | `Halleck45/OpenPronounce` · `YuanGongND/gopt` · `doheejin/HiPAMA` · `jimbozhang/speechocean762` · `tzyll/goparrot` · `speechsuper/SpeechSuper-API-Samples` · `TapXWorld/ChinaTextbook` · `byoungd/English-level-up-tips` · `speechbrain/speechbrain` · `espnet/espnet` · `wenet-e2e/wenet` · `modelscope/FunASR` · `Kyubyong/g2p` · `MontrealCorpusTools/Montreal-Forced-Aligner` · `mergeos-bounties/NokaMan` · `readbeyond/aeneas` · `coqui-ai/TTS` · `artcc/freelingo` |
+| 🟢 **SHELVED** (already graded, correctly) | **2** | `SirhanMacx/Claw-ED` · `geekjourneyx/interactive-learning` |
+| 🔵 **FIXTURE-ONLY** (present only in this pass's own instrument) | **3** | `Secondtonumb/IF-MDD` · `Mu-Y/mpl-mdd` · `ai-zahran/E2E-R` — 🔴 **the self-pollution of Finding 1: the instrument's test file names its own fixtures, so a naive scan of `compose/code/` reports a brand-new candidate as PRESENT** |
+
+🔵 **`12` of the permissive ones were promoted to `agents/top.md` the same hour; `14` more went to
+`repos/foundations.md` as the speech-processing layer; `1` went to `verticals/solutions.md`.**
+
+### 🔴 The entrants NOT taken, with the reason, so they are not re-found
+
+🔴 **`5` live repositories with NO grant under `26` case-variant probe paths** (`README.md` serves
+`200` on all five, so these are measured absences, not fetch failures):
+`jimbozhang/speechocean762` (`203★`, the tier's benchmark corpus) ·
+`tzyll/goparrot` (`56★`) · `frank613/CTC-based-GOP` (`44★`) ·
+`2-3-5-7/SprechMate` (`26★`) · `b-ashford/cacoepy` (`4★`).
+🔴 **`1` copyleft trap:** `tbright17/kaldi-dnn-ali-gop` (`237★`) — field `NOASSERTION`, payload
+**GPL-2.0-only**, explicitly *"NOT UNDER THE SAME LICENSE of Kaldi's"*.
+🔴 **`1` GPL-3.0 aligner:** `speech-industry/bournemouth-forced-aligner` (`174★`, pushed
+`2026-11-11`) — permissive substitutes shelved instead.
+🟡 **`1` CC-BY-4.0 corpus:** `phantomhsieh/OMPAL-corpus` — outside the shelf's licence set, and
+nonetheless the only LICENSED evaluation corpus in the tier.
+🟡 **`4` carried to the next pass unmeasured** (returned by the legs, not yet graded):
+`cageyoko/CTC-Attention-Mispronunciation` (`63★`) · `vocaliodmiku/wav2vec2mdd` (`52★`) ·
+`tuanio/ling-wav2vec2` (`15★`) · `Aditya3107/GOP_logit` (`5★`) — 🟢 **named here with their star
+counts so the next pass starts from a list rather than from a query.**
+
 ## `2026-11-16` — fifty-seventh pass (`p852`) — 🟡 **`7` entrants, and NONE of them is new to this corpus. `13` of `17` addresses the legs returned were already written down here and graded nowhere.**
 
 🟡 **The week's entrant list and the week's finding are the same sentence.** The marking tier

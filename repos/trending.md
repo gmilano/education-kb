@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-eighth pass (`p853`) — 🟢 **`14` foundation rows: the SPEECH-PROCESSING stack (toolkits, aligners, grapheme-to-phoneme, benchmarks), `7` Apache-2.0 · `6` MIT · `1` BSD-2-Clause, `0` copyleft — the layer `57` passes of education research never queried**
+
+🟢 **The channel that returned them, stated so it can be re-run:** first-party
+`search/repositories`, star-sorted, on `speech toolkit pytorch` · `forced alignment speech` ·
+`grapheme to phoneme` · `montreal forced aligner` · `phoneme recognition toolkit`.
+🔴 **None of those five nouns appears in this base's graded shelves before today**, which is why
+`13` of the `14` rows were absent from the entire non-archive corpus
+(measured with [`compose/code/p853-slug-presence/`](../compose/code/p853-slug-presence/)).
+
+| Repo | Licence, byte-read `2026-11-16` | ★ | Default ref · pushed | Why it entered |
+|---|---|---|---|---|
+| `modelscope/FunASR` | 🟢 MIT (`1,061 B`, `f382b62dcc61`) | 21049 | `main` · 2026-11-15 | 🟢 **The most-starred row in the layer and the only MIT full ASR toolkit — embeddable with no NOTICE obligation.** APAC-published |
+| `speechbrain/speechbrain` | 🟢 Apache-2.0 (`11,357 B`, `c71d239df917`) | 11940 | 🔴 `develop` · 2026-10-14 | The teachable toolkit; a `main`-only probe reads it as dead |
+| `espnet/espnet` | 🟢 Apache-2.0 (`11,372 B`, `4696c3c9551d`) | 10018 | `master` · **2026-11-16** | Widest published recipe set; pushed on the day of measurement |
+| `wenet-e2e/wenet` | 🟢 Apache-2.0 (`11,357 B`, `c71d239df917`) | 5256 | `main` · 2026-10-26 | Streaming, no Python in the serving path — the APAC-connectivity answer |
+| `DigitalPhonetics/IMS-Toucan` | 🟢 Apache-2.0 (`11,475 B`, `3307e40fba5e`) | 2212 | 🔴 `MassiveScaleToucan` · 2026-01-25 | TTS for `7,000+` languages; EMEA on the `IMS`/Stuttgart account acronym |
+| `MontrealCorpusTools/Montreal-Forced-Aligner` | 🟢 MIT, 🟡 untitled payload (`1,066 B`, `ffaac053ec76`) | 1918 | `main` · 2026-11-15 | The aligner the field uses; North America on the grant holder naming Montreal |
+| `Kyubyong/g2p` | 🟢 Apache-2.0 (`11,357 B`, **`b40930bbcf80`**) | 938 | `master` · 2023-01-05 | English g2p with heteronym disambiguation. 🔵 **Third independent instance of `761-C`: same byte count as the canonical Apache constant, different hash, `diff` = two appendix lines (`{}` vs `[]`)** |
+| `MahmoudAshraf97/ctc-forced-aligner` | 🟢 BSD-2-Clause (`1,303 B`, `05aef0bf69ec`) | 576 | `main` · 2026-09-07 | Alignment with no Kaldi, no dictionary — the most permissive grant in the layer |
+| `axelspringer/DeepPhonemizer` | 🟢 MIT (`1,122 B`, `eac2d6c52686`) | 437 | `main` · 2023-12-08 | g2p learned from a lexicon — the LATAM/EMEA localisation component. EMEA on a named corporate grant holder |
+| `GitYCC/g2pW` | 🟢 Apache-2.0 (`11,356 B`, `43070e2d4e53`), file **`LICENCE`** | 422 | `master` · 2026-10-19 | Only permissive Mandarin g2p found; 🟡 **its British-spelled filename is the live case for `852-G2`'s case-extended probe list** |
+| `xinjli/transphone` | 🟢 MIT (`1,072 B`, `200c02efefc4`) — 🔴 holder `Scott Chacon and others` | 176 | `main` · 2023-06-09 | `8,000` languages of g2p; 🔴 **foreign holder, so a generated notices file attributes it to git's author** (`853-G3`) |
+| `Maximax67/Words-CEFR-Dataset` | 🟢 MIT (`1,070 B`, `1834ca0e6881`) | 111 | `main` · 2024-04-20 | CEFR bands as MIT DATA — rarer than MIT code, and the column every curriculum reports in |
+| `maxrmorrison/pyfoal` | 🟢 MIT (`1,090 B`, `2e856622171f`) | 95 | `main` · 2024-04-12 | One API over several aligners: how you find out whether the score or the alignment is wrong |
+| `lifeiteng/Aligner-SUPERB` | 🟢 Apache-2.0 (`11,357 B`, `c71d239df917`) | 38 | `main` · 2025-05-07 | The benchmark for the aligners above — the only permissive one found |
+
+### 🔴 Measured and NOT entered
+
+🔴 `speech-industry/bournemouth-forced-aligner` (`174★`, pushed `2026-11-11`) — **GPL-3.0**;
+propagates into a delivery, and three permissive aligners are shelved above.
+🔴 `readbeyond/aeneas` (`2,876★`) — **AGPL-3.0**; already in this corpus, graded nowhere, graded
+now as copyleft.
+🔴 `coqui-ai/TTS` (`46,235★`) — **MPL-2.0**, archived upstream (last push `2024-08-16`): file-level
+copyleft plus an unmaintained dependency.
+🟡 `MontrealCorpusTools/mfa-models` (`204★`) — **CC-BY-4.0** pretrained models; usable with
+attribution, outside this shelf's licence set, and the natural companion to the MFA row above.
+🔴 `nyrahealth/nyra-forced-aligner` (`52★`) and `NRC-ILT/g2p` (`204★`) — **`NOASSERTION`**; not
+read this pass, carried as leads.
+
 ## `2026-11-16` — fifty-seventh pass (`p852`) — 🟢 **`6` foundation rows: the STANDARDS SEAM (LTI, QTI, xAPI), `6` of `6` MIT, `0` copyleft — the layer every marking agent on this base has to cross and none of which was ever shelved**
 
 🟢 **Why this layer and not another.** `p851` shelved credentials and content portability. 🔴 **The

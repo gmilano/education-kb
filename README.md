@@ -6,6 +6,47 @@ updated: 2026-11-16
 
 # Globant AI Studios — Education KB
 
+## Pass `p853` · `2026-11-16`
+
+🟢 **The SPOKEN-LANGUAGE ASSESSMENT tier lands, and for the first time in three passes the
+majority of what the legs returned is genuinely new: `34` of `57` measured addresses were absent
+from this entire non-archive corpus.** 🟢 **`12` agent rows (`405` → `417`), `14` foundation rows
+(`212` → `235`, of which `9` were recovered rows this shelf already held and could not count),
+`1` platform row (`150` → `151`), `2` recipes (`P83`, `P84`), `4` trends (`T177`–`T180`), `7` gaps
+— `37` grants byte-read today, `29` permissive, and all three shelves agree with their own
+published figure.**
+
+🔴 **The pass's hardest finding is not a row: the code in this tier is permissive and the DATA is
+not.** `9` of the `10` rows read for corpora depend on `speechocean762` (**no licence file** —
+`26` probes, all `404`, while its `README` grants commercial use in prose), `TIMIT` (LDC, paid),
+`L2-ARCTIC` (request form) or `UASpeech` (signed agreement). 🔵 **The one row with no gated corpus
+is not the most-starred one, and that is now a priced work package** (`P84`).
+
+## What this pass established
+
+| | |
+|---|---|
+| 🟢 **Saturation is a property of the QUERY'S ALTITUDE, not of the field** | Same corpus, same instrument, three consecutive passes: generic legs `0` new of `10` (`p851`), artefact nouns `3` of `17` (`p852`), TIER nouns **`34` of `57`** (`p853`). 🔴 A studio researching with product-level queries concludes the open supply is thin and is wrong by a factor of three → `T177` |
+| 🟢 **`852-G3` discharged: the dedupe instrument exists, is tested and is in `hooks`** | [`compose/code/p853-slug-presence/`](compose/code/p853-slug-presence/), `35` offline controls, `make gate-slug-presence`. 🔴 **It also broke twice before it worked:** the two arms are complementary rather than nested, and it reported three false PRESENTs from its OWN test fixtures in its first hour → `853-G4` |
+| 🔴 **The licence frontier has moved from code to data** | `29` of `37` grants permissive; `9` of `10` models corpus-gated. 🔵 Education hits this first because the training data IS the regulated artefact — children's voices cannot be scraped → `T178`, `853-G1` |
+| 🔴 **A `237★` repository relicenses its upstream MORE restrictively, and the field says `NOASSERTION`** | [`tbright17/kaldi-dnn-ali-gop`](https://github.com/tbright17/kaldi-dnn-ali-gop): `543 B` payload, `sha256₁₂ 531cd080f3e2`, *"NOT UNDER THE SAME LICENSE of Kaldi's"*, then **GPL-2.0-only**. 🔴 Both cheap resolutions of `NOASSERTION` — inherit upstream, or treat as unlicensed — are wrong here, in opposite directions → `853-G2` |
+| 🟡 **A permissive grant can name a famous unrelated holder** | [`xinjli/transphone`](https://github.com/xinjli/transphone)'s MIT names `Scott Chacon and others`; two `doheejin` rows carry `GOPT`'s holder `Yuan Gong`. 🔴 `3` of `12` rows in one tier, so a generated notices file ships wrong attributions → `853-G3` |
+| 🔴 **`9` graded rows sat OUTSIDE this shelf's own figure for fourteen passes** | `repos/foundations.md` published `212` while holding `221`: `p839` and `p840` used a six-column header that was never declared to `ingest/derive-counts.py`, so their rows printed as an uncounted-table RED inside a gate listed in `DECLARED_RED` and read as noise. 🟢 Signature declared, heading corrected to `235` → `853-G7` |
+| 🟢 **`852-G2` fixed in the INSTRUMENT, not in a re-probe** | [`compose/code/p779/verify_row.sh`](compose/code/p779/verify_row.sh) extended from `8` to `26` case-variant grant paths, upper case kept first. 🟢 Regression: `webtech-network/autograder`, `TREMA-UNH/rubric-grading-workbench` and `stichting-cito/QuestifyBuilder` all reproduce `p852`'s byte figures exactly |
+| 🔵 **The first-party licence FIELD did not over-claim once in `37` reads** | `36` of `37` agree with the bytes; the one divergence is toward SILENCE. 🔵 Across two passes and `54` reads: first-party fields under-report, prose summaries over-report (`p852`: `9/9`) → `T179` |
+| 🔴 **Three regional nils, each with its query and result count** | `spanish pronunciation learning` → `8` results, best permissive `3★`/`NOASSERTION`; `portuguese pronunciation speech assessment` → **`0` results**; `arabic quran recitation pronunciation` → `3` results, all unlicensed; `japanese pronunciation learning app open source` → **`0` results**. 🟢 Named so they cannot be read as coverage → `853-G5`, `853-G6` |
+| 🟢 **The regional numbers worth quoting** | **LATAM:** `92%` of students and `79%` of faculty using AI with only `30%` of universities holding a published policy (DEC / Tec de Monterrey, Feb 2026, `7,319` faculty, `29` institutions) — a `62`-point governance gap. **EMEA:** AI Act high-risk education obligations moved to `2 December 2027`; `67%` teacher use; `76%` of students expect AI against `80%` of teachers worried it is outpacing schools. **APAC:** `30%` virtual-tutor adoption, connectivity named as the barrier. **North America:** `~100` state bills, `≥15` states legislating, Chegg `-45%` staff |
+
+🔵 **`2` new recipes.** `P83` — the **sovereign speaking scorer**: `OpenPronounce` (MIT) behind the
+client's own ingress, `ctc-forced-aligner` (BSD-2) for the timeline, `Kyubyong/g2p` +
+`DeepPhonemizer` for the target pronunciation, `IMS-Toucan` for the model utterance, and the Aalto
+**articulatorily weighted edit distance** scored IN PARALLEL so the neural score goes in the
+product and the explainable one goes in the appeal. 🟢 `8`–`10` weeks, `0` copyleft in the shipped
+path, LTI 1.3 into the LMS the client already runs. `P84` — the **data-rights schedule**: the
+two-week review that decides whether any of it can reach production.
+
+---
+
 ## Pass `p852` · `2026-11-16`
 
 🟡 **`13` permissive rows filed, and NOT ONE of them is a new discovery: `13` of the `17`

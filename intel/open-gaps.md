@@ -4,6 +4,177 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` (fifty-eighth pass, `p853`) — **`7` gaps: `3` market absences measured as nils with their query and result count, `2` licence traps read as bytes, `2` instrument defects — each with the probe or the `grep` that was run before it was written (`ACTION p850-B`)**
+
+🔵 **`853-G4` and `853-G7` are instrument defects rather than market absences, and are filed here
+because this ledger is where this base's falsifiable claims live regardless of layer.**
+
+### 🔴 `853-G1` — the spoken-assessment tier has NO permissively licensed training corpus, and its benchmark corpus carries no licence file at all
+
+🔴 **The claim:** every open pronunciation-assessment model this base can shelve depends on a
+corpus a studio cannot put in a data-rights schedule.
+
+🟢 **What was checked, not inferred.** `10` assessment models' `README`s were read for corpus
+names on `2026-11-16`; `9` of `10` name at least one of four corpora.
+🔴 [`jimbozhang/speechocean762`](https://github.com/jimbozhang/speechocean762) (`203★`, the
+tier's benchmark, `6` of the `10` depend on it): **`26` grant paths probed under `main`** — upper,
+mixed and lower case × `LICENSE`/`LICENCE`/`COPYING`/`NOTICE` × `.md`/`.txt`/`.rst` — **every one
+`404`, while `README.md` serves `200`.** 🟡 **Its `README` line `83` reads *"It is available for
+free download for both commercial and non-commercial purposes"***, which under `p288`'s rule is a
+**README-channel grant, not an absence** — 🔴 **but with no payload, no version, no named licensor
+entity and no warranty disclaimer.** 🔴 `TIMIT` (`3` rows) is LDC-licensed and paid;
+`L2-ARCTIC` (`3` rows) is a request form for research use; `UASpeech` (`1` row) requires a signed
+agreement.
+
+🟢 **Shelf `grep` before writing:** `speechocean762` → appears on `agents/top.md` only, in this
+pass's own rows and declines; `0` hits on `repos/foundations.md` and `verticals/solutions.md`.
+
+🟡 **How it closes:** (a) an upstream licence file on `speechocean762`, or a written permission
+quotable in a schedule; (b) a CC-BY or permissive corpus of comparable size — the only licensed
+candidate measured is [`phantomhsieh/OMPAL-corpus`](https://github.com/phantomhsieh/OMPAL-corpus)
+(CC-BY-4.0, **Mandarin**, `82` utterances: an evaluation set, not a training set); or (c) a
+client-owned-audio route, for which [`Mu-Y/mpl-mdd`](https://github.com/Mu-Y/mpl-mdd) (MIT,
+momentum pseudo-labelling on unlabelled speech) is the shelved method. 🔵 **Priced as a work
+package in recipe `P84`.**
+
+### 🔴 `853-G2` — a `237★` repository relicenses its upstream MORE restrictively and GitHub's field says nothing
+
+🔴 **The claim:** [`tbright17/kaldi-dnn-ali-gop`](https://github.com/tbright17/kaldi-dnn-ali-gop)
+is GPL-2.0-only while presenting as a Kaldi derivative (Apache-2.0) with a `NOASSERTION` licence
+field.
+
+🟢 **What was checked, not inferred:** `master/LICENSE` byte-read `2026-11-16` — `543 B`,
+`sha256₁₂ 531cd080f3e2`. Its text: *"This program based on Kaldi … **However, this program is NOT
+UNDER THE SAME LICENSE of Kaldi's.** This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License **version 2**…"*. First-party
+`search/repositories` reports `license.spdx_id = NOASSERTION`, `237★`, default ref `master`.
+
+🔴 **Why it is a gap and not merely a row:** the two cheap resolutions of `NOASSERTION` are both
+wrong here in opposite directions — inheriting the upstream grant lands on Apache-2.0,
+treating the field as "unlicensed" discards a real grant — 🔴 **and this base has no instrument
+that reads a payload for an EXPLICIT DISCLAIMER OF THE UPSTREAM LICENCE.** 🔵 **Related but
+distinct from `T27`/`pronoteConnect`, where `NOASSERTION` masked an INHERITED grant; here it masks
+a DIVERGENT one, which is the harmful direction.**
+
+🟢 **Shelf `grep` before writing:** `kaldi-dnn-ali-gop` → `agents/top.md` only (this pass's
+copyleft row); `0` hits elsewhere.
+
+🟡 **How it closes:** add the payload as a fixture to `compose/code/p341-bespoke-instrument-census`
+and assert that a sentence of the form *"NOT UNDER THE SAME LICENSE of X"* outranks any upstream
+inference. 🔴 **Until then, no `NOASSERTION` row on these shelves may be resolved by inheritance.**
+
+### 🟡 `853-G3` — a permissive grant can name a famous unrelated holder, and this base's notices path would copy it
+
+🔴 **The claim:** [`xinjli/transphone`](https://github.com/xinjli/transphone)'s MIT payload names
+`Copyright (c) 2012-2022 Scott Chacon and others` — git's documentation boilerplate holder — and
+two further rows shelved this pass carry a third party's holder line.
+
+🟢 **What was checked, not inferred:** `main/LICENSE`, `1,072 B`, `sha256₁₂ 200c02efefc4`, holder
+line read in full. 🟢 **Second and third instances in the same tier:**
+[`doheejin/HiPAMA`](https://github.com/doheejin/HiPAMA) and
+[`doheejin/SB_loss_PA`](https://github.com/doheejin/SB_loss_PA) both serve `1,526 B` /
+`sha256₁₂ e8fad537e801` with holder `Copyright (c) 2022, Yuan Gong` — **the author of
+[`YuanGongND/gopt`](https://github.com/YuanGongND/gopt), not of either repository.**
+
+🔵 **Class already known** (`p137-foreign-holder-tree`); 🔴 **what is new is that `3` of `12` rows
+in one tier carry it, and that in one case the foreign holder is a famous name a reviewer's eye
+skips.** 🔴 **Consequence, stated concretely: a third-party-notices file generated by copying
+holder lines ships two wrong attributions into a client deliverable.**
+
+🟢 **Shelf `grep` before writing:** `transphone` → `agents/top.md` and `repos/foundations.md`,
+both this pass.
+
+🟡 **How it closes:** a notices-generation step that reads the holder from the payload AND
+compares it against the repository owner and the project's stated authors, flagging a mismatch
+rather than copying it. 🔵 **Recipe `P84` step `6` is the manual version.**
+
+### 🔴 `853-G4` — an instrument's own FIXTURES are indistinguishable from the corpus it measures
+
+🔴 **The claim:** a presence or absence index that walks this repository's `compose/code/` tree
+counts an instrument's test fixtures as holdings, and therefore reports a never-before-seen
+address as already PRESENT.
+
+🟢 **What was checked, not inferred:** on its first run over the live corpus,
+`p853-slug-presence` reported `Secondtonumb/IF-MDD`, `Mu-Y/mpl-mdd` and `ai-zahran/E2E-R` as
+present. 🟢 **Their only hits were in `compose/code/p853-slug-presence/test_presence.py` — the
+instrument's own suite, written minutes earlier by this pass.** 🔴 **Three false PRESENTs,
+generated by the repair built to stop false PRESENTs, in its first hour.**
+
+🟢 **Half-closed this pass:** hits now carry a TIER (`shelf` / `history` / `instrument`) and a
+verdict (`SHELVED` / `UNGRADED` / `FIXTURE-ONLY` / `NEW`), with `10` controls asserting the
+mapping. 🔴 **Not closed: every OTHER index in this base** — `ingest/address-count.py`,
+`ingest/address-ledger.py`, `ingest/absence-claims.py`, `compose/code/p367-bare-slug-channel/` —
+🔴 **walks the same tree with no fixture tier, so the published address census is inflated by an
+unmeasured number of instrument fixtures.**
+
+🟡 **How it closes:** one shared path-tier helper, used by every index, and a census that reports
+corpus and fixture counts separately. 🔵 **The number to recover first is the denominator
+`p852` published: `5,949` addresses, of which an unknown share are fixtures.**
+
+### 🔴 `853-G5` — there is NO permissive Spanish or Portuguese pronunciation scorer, and the Portuguese leg returns an EMPTY result set
+
+🔴 **The claim, with the queries attached.** First-party `search/repositories`, star-sorted,
+`2026-11-16`: `spanish pronunciation learning` → **`8` results**, best permissive is `3★` and
+`NOASSERTION`, remainder `0`–`1★` with no licence file, and the only MIT row is a commercial
+vendor's API samples. `portuguese pronunciation speech assessment` → **`0` results**.
+
+🔴 **Why it matters more than its size: LATAM's largest paid-education category is
+English-language employability, and Brazil is the region's largest education market.** 🟢 **The
+nearest build-safe option is [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce)
+(MIT), whose own `README` lists Spanish and Portuguese as EXPERIMENTAL with English as the
+calibrated language.**
+
+🟢 **Shelf `grep` before writing:** `pronunciation assessment` → `agents/top.md` only (this
+pass); `0` hits on the other two shelves before today.
+
+🟡 **How it closes:** it does not close by searching — it closes by BUILDING, which is why it is
+written as recipe `P83`'s LATAM variant (`4`–`6` weeks on top of the base build:
+`axelspringer/DeepPhonemizer` for the es-`419`/pt-BR grapheme-to-phoneme, plus native-speaker
+calibration). 🔵 **An informed gap that names its own remedy is a proposal, not a complaint.**
+
+### 🔴 `853-G6` — two further regional nils, named so they are not read as coverage
+
+🔴 **The claim, with queries and counts.** `arabic quran recitation pronunciation` → **`3`
+results, `0`–`2★`, every one with no licence file**; `japanese pronunciation learning app open source`
+→ **`0` results**; `accent conversion speech learning` → **`4` results, `0`–`2★`, all unlicensed.**
+
+🔵 **Both nils are filed against regions this base has a habit of reading optimistically:** the
+MEA half of **EMEA** (recitation assessment is a mass-market use case with institutional demand
+and no open supply) and **APAC** outside China (🟢 contrast: the same leg family returned
+`GitYCC/g2pW`, Apache-2.0, and `phantomhsieh/OMPAL-corpus`, CC-BY-4.0, both Mandarin).
+🟢 **The APAC reading, stated so a later pass does not overclaim: APAC's open speech supply is
+CHINESE-published, not pan-Asian.**
+
+🟡 **How it closes:** a non-English-language query channel. 🔴 **This pass's legs were all
+English-language strings; a leg written in Japanese, Arabic or Portuguese is a different index,
+and this base has evidence it returns different results** (`p834`'s Chinese-language probe flipped
+a declared nil).
+
+### 🔴 `853-G7` — `9` graded foundation rows sat OUTSIDE the shelf's own published figure for fourteen passes, because their table header was never declared
+
+🔴 **The claim:** `repos/foundations.md` published `212 rows` while holding `221` graded rows
+before this pass added anything.
+
+🟢 **What was checked, not inferred.** `ingest/derive-counts.py` locates rows by COLUMN-HEADER
+SIGNATURE and counts only declared signatures. The six-column header
+`| Repo | Licence, as measured | ★ / forks | Default ref · pushed | Region | Why it is a foundation and not a row on another shelf |`
+was used by `p839` TWICE — a `2`-row table and a `7`-row table in the same pass section — and **was never added to the deriver's list**,
+so those `9` rows were reported as *"carry github.com rows but no declared signature; they are NOT
+counted"* — 🔴 **a RED that has been printed on every run since, inside a gate that is listed in
+`DECLARED_RED` and therefore read as expected noise.**
+
+🟢 **Fixed this pass:** the signature is declared (with the reason in a comment at the
+declaration), and the heading is corrected to `235 rows` = `221` recovered + `14` filed today.
+🔴 **The defect CLASS is not fixed: `11` tables on `repos/foundations.md` and `22` on
+`agents/top.md` still carry `github.com` rows under undeclared headers.** 🔵 **Most are narrative
+measurement tables that SHOULD NOT be counted — which is exactly why the RED is uninformative:
+it cannot tell a shelf table from a narrative one, so it names `33` tables and no one reads it.**
+
+🟡 **How it closes:** teach the detector the difference — a table under a `### Filed by` or shelf
+heading is a candidate shelf table and must be declared or excluded explicitly; a table inside a
+pass narrative is neither. 🟢 **Then `gate-derived-counts` can leave `DECLARED_RED` and start
+being read again.**
+
 ## 🟢 `2026-11-16` (fifty-seventh pass, `p852`) — **`7` gaps, each with the `grep` or the probe that was run before it was written (`ACTION p850-B`)**
 
 🔵 **Two of these (`852-G1`, `852-G3`) are instrument defects rather than market absences, and are

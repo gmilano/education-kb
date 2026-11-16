@@ -30,6 +30,7 @@ STORE_LOG ?= /tmp/education-kb-gate-evidence-store.log
 README_LOG := $(shell mktemp)
 REFSET_LOG ?= /tmp/education-kb-gate-refset-register.log
 PROMO_LOG ?= /tmp/education-kb-gate-promotion.log
+PRESENCE_LOG ?= /tmp/education-kb-gate-slug-presence.log
 RESTATED_LOG ?= /tmp/education-kb-gate-restated-presence.log
 RESIDUE_LOG ?= /tmp/education-kb-gate-grant-residue.log
 LEDGER_LOG ?= /tmp/education-kb-gate-promotion-ledger.log
@@ -153,7 +154,8 @@ HOOK_GATES = gate-offline recount gate-derived-counts gate-enumeration gate-tabl
              gate-conjunctive-grant gate-branch-alias \
              gate-promotion gate-recency gate-promotion-ledger \
              gate-grant-presence gate-cell-reproduction \
-             gate-promotion-ratchet gate-evidence-address
+             gate-promotion-ratchet gate-evidence-address \
+             gate-slug-presence
 
 # ---------------------------------------------------------------- p427
 # 🟢 p427: A GRANT MAY CARRY TWO FAMILIES CONJUNCTIVELY, AND THIS BASE HAD NO SCOPE FOR
@@ -415,6 +417,9 @@ hooks: ## the standing check: every licence instrument's OFFLINE controls, T37's
 # defect: os4ed/openSIS-Classic's grant sits at docs/License.txt (GPL-2.0, 17 286 B) and
 # ls1intum/Athena declares MIT in 12 of 14 manifests, while the ladder probed the one
 # manifest that is silent.  Both false negatives were structurally guaranteed.  No network.
+gate-slug-presence: ## p853 — 852-G3/T174: a presence check keyed on URLs under-reports this corpus and one keyed on substrings over-reports it; this is the word-boundary check in BOTH forms, with a FIXTURE tier so an instrument's own suite is not read as a holding
+	@cd compose/code/p853-slug-presence && { $(PY) test_presence.py > $(PRESENCE_LOG) 2>&1 || { echo "🔴 p853-slug-presence FAILED — the suite's own report follows:" ; sed "s/^/   /" $(PRESENCE_LOG) ; false ; } ; } && echo "── p853-slug-presence (35 controls: bare-only, url-only, prefix collapse 772-K31, .git + sub-path terminators, case variance, fixture tier)" && echo "   PASS" || exit 1
+
 gate-enumeration: ## ACTION p275 — no shelf may assert an absent grant that an enumeration refutes
 	@cd compose/code/pass275-grant-enumeration && { $(PY) test_enumeration_gate.py > $(GATE_LOG) 2>&1 || { echo "🔴 pass275-grant-enumeration FAILED — the suite's own report follows (p277: this went to /dev/null for three passes, so no pass could name the failing control):" ; sed "s/^/   /" $(GATE_LOG) ; false ; } ; } && echo "── pass275-grant-enumeration (64 controls incl. the C3 positive control; vendored/icon/source paths, two-subject lines, p285 examples/IDE/html-xml exclusions)" && echo "   PASS" || exit 1
 	@cd compose/code/pass275-grant-enumeration && $(PY) -I enumeration_gate.py --root ../../.. || exit 1

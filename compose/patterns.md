@@ -4,6 +4,128 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-eighth pass (`p853`, 2026-11-16) — `2` recipes (`P83`, `P84`), built only from rows filed or measured this pass
+
+🔵 **Both recipes name components that were byte-read today and carry their grants in the step
+that uses them.** 🔴 **Neither recipe ships a gated corpus, and that constraint is what shapes
+them both** (`853-G1`).
+
+## P83 — the SOVEREIGN SPEAKING SCORER: a self-hosted pronunciation assessment a ministry can run on its own hardware (EMEA anchor on the `2 December 2027` AI Act clock; LATAM variant is the same build with a localisation phase bolted on)
+
+### What it is
+
+🟢 **A speaking-assessment service the client OWNS: audio in, a per-phoneme score and an
+explainable report out, running inside the client's network, with no per-minute vendor price and
+no learner audio leaving the perimeter.** 🔴 **The thing it replaces is Azure Pronunciation
+Assessment / SpeechAce / ELSA — all of which require shipping a minor's voice to a third-party
+endpoint, which is the single most common reason a European or Latin American education pilot is
+refused at procurement rather than at demo.**
+
+### Inputs — every component byte-read `2026-11-16`, `0` copyleft in the shipped path
+
+| Role | Component | Grant, as read | Why this one |
+|---|---|---|---|
+| Scoring service | [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | 🟢 MIT (`1,113 B`, `6f4d9645aa9f`) | The only permissive deployable scorer found: Docker, HTTP API, browser recorder, `0`–`100` score plus the wrong sounds |
+| Phoneme timeline | [`MahmoudAshraf97/ctc-forced-aligner`](https://github.com/MahmoudAshraf97/ctc-forced-aligner) | 🟢 BSD-2-Clause (`1,303 B`, `05aef0bf69ec`) | No Kaldi toolchain, no dictionary, `pip install` — the aligner that survives a locked-down estate |
+| Target pronunciation | [`Kyubyong/g2p`](https://github.com/Kyubyong/g2p) (English) + [`axelspringer/DeepPhonemizer`](https://github.com/axelspringer/DeepPhonemizer) (any other language) | 🟢 Apache-2.0 (`11,357 B`, `b40930bbcf80`) / 🟢 MIT (`1,122 B`, `eac2d6c52686`) | Decides what "correct" means, with heteronym disambiguation; DeepPhonemizer learns a new language from a lexicon |
+| Model utterance | [`DigitalPhonetics/IMS-Toucan`](https://github.com/DigitalPhonetics/IMS-Toucan) | 🟢 Apache-2.0 (`11,475 B`, `3307e40fba5e`) | TTS for `7,000+` languages — the exemplar the learner imitates, generated locally rather than bought per sentence. 🔴 Default ref is `MassiveScaleToucan` |
+| Explainability layer | [`aalto-speech/interspeech2019_karhila_et_al`](https://github.com/aalto-speech/interspeech2019_karhila_et_al) | 🟢 MIT (`1,078 B`, `87af1e319d9b`) | Articulatorily weighted phoneme edit distance: every lost point is a named substitution. This is the component the appeal process runs on |
+| Levelling | [`Maximax67/Words-CEFR-Dataset`](https://github.com/Maximax67/Words-CEFR-Dataset) | 🟢 MIT (`1,070 B`, `1834ca0e6881`) | `A1`–`C2` bands, so a task is level-appropriate before it is scored — and every EMEA/LATAM curriculum reports in CEFR |
+| Classroom seam | [`UOC/java-lti-1.3`](https://github.com/UOC/java-lti-1.3) (`p852`) | 🟢 MIT (`1,060 B`) | Launches from the Moodle / Open edX the client already runs; `P76`'s rule — inherit the LMS, never replace it |
+| Evidence trail | [`yetanalytics/lrs`](https://github.com/yetanalytics/lrs) (`p852`) | 🟢 Apache-2.0 | xAPI statements per attempt: the attempt history is the artefact an inspectorate asks for |
+
+### Steps
+
+1. 🟢 **Stand up `OpenPronounce` behind the client's own ingress** and pin the commit; confirm
+   `OPENPRONOUNCE_DEVICE=cuda` on the client's GPU or accept CPU latency for asynchronous marking.
+2. 🟢 **Replace its implicit target-pronunciation source with the g2p pair** so the reference
+   phoneme sequence is produced by a component you control — and, for any language other than
+   English, train `DeepPhonemizer` on a lexicon the client can license.
+3. 🟢 **Put `ctc-forced-aligner` in front** so the learner's timeline is produced without a Kaldi
+   install, and record the alignment with the score: a score without its alignment cannot be
+   re-examined later.
+4. 🟢 **Run the Aalto edit-distance scorer IN PARALLEL with the neural score** and store both.
+   🔵 **This is the step that makes the whole thing defensible: the neural score goes in the
+   product, the edit distance goes in the appeal, and when they disagree you have found a bug
+   rather than shipped one.**
+5. 🟢 **Gate task selection on CEFR band** from the words dataset; never score a learner on a task
+   above their band and call the result a pronunciation error.
+6. 🟢 **Launch it from the client's LMS over LTI 1.3** and write one xAPI statement per attempt to
+   the LRS. 🔴 **Do not build a gradebook; the client already has one.**
+7. 🔴 **Write the data-rights schedule BEFORE any model is retrained** — `P84` is that step, and
+   skipping it is how a working pilot becomes unshippable.
+
+### What it costs, and the two regional arguments
+
+🟡 **`8`–`10` weeks** for English with one language localised: `2` weeks to stand up and pin,
+`2` for the g2p and target-pronunciation substitution, `2` for the parallel explainable scorer,
+`2` for LTI/xAPI seams, `2` for the data-rights schedule and acceptance.
+🟢 **EMEA argument:** education is Annex-III high-risk under the AI Act, the obligations land
+`2 December 2027`, and this build's audit trail (alignment + both scores + xAPI attempt history)
+is the evidence pack — 🔵 **sold as readiness, not compliance, because nobody can certify
+compliance against guidance that is still being drafted.**
+🟢 **LATAM argument:** the same build plus a localisation phase. 🔴 **This base measured that NO
+permissive Spanish pronunciation scorer exists and that the Portuguese leg returns an empty
+result set** (`853-G5`), so the deliverable — the first build-safe es-`419` or pt-BR pronunciation
+scorer — is genuinely novel rather than a reskin. 🟡 **Add `4`–`6` weeks for the lexicon, the
+g2p training and native-speaker calibration.**
+
+## P84 — the DATA-RIGHTS SCHEDULE: sell the four-corpus review that decides whether a speaking pilot can reach production (Global; the deliverable is a document, so it ships in every region)
+
+### What it is
+
+🟢 **A priced, two-week work package that answers one question in writing: which parts of this
+speaking-assessment system can the client legally operate, retrain and resell?**
+🔴 **It exists because of a measurement, not a hunch: `29` of `37` grants read this pass are
+permissive while `9` of the `10` rows read for corpora depend on a corpus that is not** — and the
+licence column every procurement team reviews does not show it.
+
+### Inputs — the four corpora, measured `2026-11-16`
+
+| Corpus | Grant as measured | What it blocks |
+|---|---|---|
+| `speechocean762` ([`jimbozhang/speechocean762`](https://github.com/jimbozhang/speechocean762), `203★`) | 🔴 **NO licence file** — `26` paths probed under `main`, all `404`, `README.md` `200`. `README` line `83` grants use *"for both commercial and non-commercial purposes"* | 🟡 A README-channel grant (`p288`) with no payload, version, licensor entity or warranty disclaimer. Operable on the author's word; **not** citable in a data-rights schedule |
+| `TIMIT` | 🔴 LDC, paid, per-seat | Retraining or re-benchmarking without a corpus licence |
+| `L2-ARCTIC` | 🔴 Request form, research use | Redistribution with a client deliverable |
+| `UASpeech` | 🔴 Signed agreement | The dysarthric-speech axis — i.e. the inclusion story |
+
+### Steps
+
+1. 🟢 **Enumerate the client's intended model set** and, for each, read its `README` for corpora.
+   🔵 **This pass did exactly that for `10` models and found `9` gated — the method is a `grep`
+   for four names, and it takes an afternoon.**
+2. 🟢 **Classify each dependency by the GRANT CHANNEL, not by the word "open"**: payload licence,
+   README-channel permission, request form, paid licence, or silence. 🔴 **Silence and a README
+   sentence are different states and must not be collapsed.**
+3. 🟢 **Separate the three questions a client conflates**: may we RUN the published weights, may we
+   RETRAIN on this corpus, may we RESELL a model derived from it. 🔴 **For `speechocean762` the
+   answers are probably-yes, probably-yes and ask-the-author — and "ask the author" is a
+   deliverable, not a defect.**
+4. 🟢 **Name the substitutions that remove a dependency.** Measured this pass:
+   [`crazycloud/mispronunciation-detection-diagnosis-wav2vec2-and-llm`](https://github.com/crazycloud/mispronunciation-detection-diagnosis-wav2vec2-and-llm)
+   (Apache-2.0) depends on **none** of the four;
+   [`phantomhsieh/OMPAL-corpus`](https://github.com/phantomhsieh/OMPAL-corpus) (CC-BY-4.0) is a
+   licensed Mandarin evaluation set; and
+   [`doheejin/SB_loss_PA`](https://github.com/doheejin/SB_loss_PA) (BSD-3) is a **loss function**,
+   so it transfers to the client's own audio with no corpus at all.
+5. 🟢 **Price the alternative: the client's own audio.** 🔵 **The reason to recommend
+   [`Mu-Y/mpl-mdd`](https://github.com/Mu-Y/mpl-mdd) (MIT) in this step is that momentum
+   pseudo-labelling converts UNLABELLED classroom recordings into training signal — which is the
+   only corpus a school actually owns outright.**
+6. 🔴 **Write the third-party notices by hand for this tier.** Measured instances:
+   [`xinjli/transphone`](https://github.com/xinjli/transphone)'s MIT names
+   `Scott Chacon and others`, and both `doheejin` rows carry `GOPT`'s holder `Yuan Gong` —
+   🔴 **a notices file generated by copying holder lines verbatim ships two wrong attributions.**
+
+### What it costs and what it is worth
+
+🟡 **`2` weeks, one reviewer, no engineering.** 🟢 **Worth it because it is the cheapest step in
+the programme and the only one that can stop the expensive ones: a `10`-week build on a corpus the
+client may not resell is a write-off discovered at launch.** 🔵 **It also sells on its own in
+regions where the governance gap is the buying signal — LATAM's `92%` use against `30%` published
+policy is a procurement team asking for exactly this document without knowing its name**
+(`intel/market.md`, `p853`).
+
 ## 🟢 Fifty-seventh pass (`p852`, 2026-11-16) — `2` recipes (`P81`, `P82`), built only from rows filed or measured this pass
 
 🔵 **Both are numbered in the bare form this repository's own gate counts** (`## P<n> — …`).

@@ -18,7 +18,16 @@ print(((i.get('license') or {}).get('spdx_id') or 'NONE'), i.get('stargazers_cou
   hd=$(printf '%s' "$sym" | awk '/HEAD$/ && $1 ~ /^[0-9a-f]{40}$/{print substr($1,1,12); exit}')
   [ -z "$br" ] && br="-"
   lf="-"; lb="0"; lh="-"; lt="-"
-  for f in LICENSE LICENCE LICENSE.txt LICENSE.md LICENCE.txt COPYING LICENSE-CODE LICENSE-APACHE; do
+  # p853: the probe list is CASE-EXTENDED.  `852-G2` recorded a false
+  # "no grant file" verdict published by this base an hour after it was
+  # measured, caused by exactly this list: `stichting-cito/QuestifyBuilder`
+  # ships `License.md` and `raw.githubusercontent.com` serves paths
+  # case-sensitively, so five upper-case names returned five 404s and the
+  # pass wrote an absence.  Upper-case names stay FIRST so a row's reported
+  # filename does not change for any repository already measured.
+  for f in LICENSE LICENCE LICENSE.txt LICENSE.md LICENCE.txt COPYING LICENSE-CODE LICENSE-APACHE \
+           License License.md License.txt Licence Licence.md license license.md license.txt \
+           licence licence.md COPYING.md COPYING.txt NOTICE NOTICE.md LICENSE.rst License.rst; do
     tmp=$(mktemp)
     code=$(timeout 30 curl -sS -o "$tmp" -w "%{http_code}" "https://raw.githubusercontent.com/$slug/$br/$f" 2>/dev/null)
     if [ "$code" = "200" ]; then

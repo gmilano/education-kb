@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — fifty-eighth pass (`p853`) — **`4` trends (`T177`–`T180`): the speaking-assessment market splits from the tutoring market, the DATA layer becomes the licence frontier, EMEA's AI Act clock slips again, and LATAM's adoption-to-governance gap is now measured in a number**
+
+## 🟢 `T177` — saturation is a property of the QUERY'S ALTITUDE, not of the field
+
+🟢 **Measured across three consecutive passes with the same instrument and the same corpus:**
+
+| Pass | Channel | Addresses returned | New to this base | Yield |
+|---|---|---|---|---|
+| `p851` | the four mandated GENERIC legs | `10` | `0` | 🔴 `0%` |
+| `p852` | ARTEFACT nouns (`Open Badges`, `CLR`, `CASE`, `Common Cartridge`) | `17` | `3` | 🟡 `18%` |
+| `p853` | TIER nouns (`pronunciation assessment`, `mispronunciation detection`, `forced alignment`, `goodness of pronunciation`) | `57` | `34` | 🟢 `60%` |
+
+🔵 **Read it as a search strategy with a cost attached:** a generic education-AI query after `58`
+passes returns this base's own holdings, and each step DOWN in altitude — product → artefact →
+technical tier — restores yield. 🔴 **The corollary is uncomfortable and should be stated: a
+studio that researches a client's domain with product-level queries will conclude the open-source
+supply is thin, and will be wrong by a factor of three.** 🟢 **The queries are recorded verbatim
+in this pass's sections so the measurement is repeatable.**
+
+## 🔴 `T178` — the licence FRONTIER in applied AI has moved from code to data, and education hits it first
+
+🟢 **Measured, not asserted:** of `37` grants byte-read this pass, `29` are permissive and
+`36` of `37` agree with GitHub's own licence field. 🔴 **And `9` of the `10` rows read for corpora
+depend on a corpus that is NOT permissively licensed** — `speechocean762` (no licence file at all,
+a README-channel permission sentence), `TIMIT` (LDC, paid), `L2-ARCTIC` (request form, research
+use), `UASpeech` (signed agreement).
+
+🔵 **Why education feels this before other industries:** the training data IS the regulated
+artefact. Children's voices, student essays and assessment responses cannot be acquired by
+scraping, so every open model in this field was trained on one of a handful of academic corpora
+whose terms predate commercial AI entirely. 🟢 **The practical consequence for a studio: the code
+licence review that clears an engagement is now the EASY half, and the data-rights schedule is
+the one that decides whether a pilot can go to production.** → `853-G1`.
+
+## 🟡 `T179` — speaking and listening are separating from the rest of edtech as a market
+
+🟢 **Demand-side evidence read this pass:** the AI-based language-learning segment is put at
+**`$10.4B` in 2026 rising to `~$51.8B` by 2035 (`19.5%` CAGR)** by one vendor report
+(nextmsc), while a second (Mordor, via a secondary page) values the broader online
+language-learning market at **`$24.4B` in 2026 at `15.83%` CAGR** — 🔴 **different segments,
+not comparable, and both are vendor research rather than audited data.** 🟢 **The structural
+signal is firmer than the figures:** Duolingo has moved speaking practice into its free tier and
+made speaking the centre of its answer to AI tutors, and standardised testing continuing to move
+online puts high-stakes SPOKEN assessment in reach of software for the first time.
+
+🔵 **Why this matters for a studio with no language-learning client:** the capability is
+horizontal. The same stack grades a nurse's handover, a call-centre agent's script compliance and
+a welder's safety briefing. 🟢 **Every row filed this pass is a vocational-training component
+that happens to have been published as a language-learning one** — which also answers `p829`'s
+vocational tier from a direction it did not look.
+
+## 🔵 `T180` — the regional legs: EMEA's clock slipped, LATAM's gap has a number, APAC's is uneven, North America legislates by state
+
+🟢 **EMEA.** The Digital Omnibus political agreement of **May 2026** moved the AI Act's high-risk
+obligations — education is a high-risk domain under Annex III — to **`2 December 2027`**, from the
+original August 2026 date (secondary sources; this base recorded the same slip at `p852`).
+🟢 **Adoption is past the pilot stage:** Futuresource puts teacher AI use at **`67%`**, and an
+Epson-commissioned survey of ~`3,360` respondents across the UK, France, Italy, Germany, Spain and
+Poland reports **`76%` of students expecting to be allowed to use AI in their learning**, against
+**`80%` of teachers worried AI is arriving faster than schools can manage.** 🔵 **That spread —
+student expectation ahead of institutional readiness — is the sales motion in EMEA for 2027.**
+
+🟢 **LATAM.** The Digital Education Council / Tecnológico de Monterrey survey (Feb 2026, `7,319`
+faculty across `29` institutions) reports **`92%` of students and `79%` of faculty actively using
+AI**, while **only `30%` of universities have published a policy on how to use it.**
+🔴 **A `62`-point gap between use and governance is the largest single regional number this pass
+read, and it is an engagement shape, not a complaint: the billable work in LATAM right now is
+governance, not models.** 🟢 **UNESCO IESALC's September 2026 working paper maps the same gap
+across teaching, research, engagement, administration and governance, and UNESCO's agreement with
+Chile's CENIA integrates **Latam-GPT** into regional ethical-AI work.
+
+🟡 **APAC.** Uneven: a Times Higher Education survey reports **`30%` virtual-tutor adoption**
+with connectivity named as a barrier, while market research claims a **`50%` rise in AI
+learning-platform adoption over two years**. 🟢 **The supply side is where APAC leads in this
+tier specifically — the most-starred permissive ASR toolkit found this pass (`modelscope/FunASR`,
+MIT, `21,049★`) and the only permissive Mandarin g2p (`GitYCC/g2pW`) are both APAC-published.**
+
+🟢 **North America.** Regulation is state-level and accelerating: nearly `100` state bills tracked
+in 2026 touching student AI use, at least `15` states with enacted or introduced AI-in-education
+law, Virginia's `S.B. 394` requiring state guidance that covers teacher training, plus an NTIA
+edtech review and a proposed California ballot measure on AI and minors. 🔴 **The incumbent
+casualty is on the record: Chegg cut `45%` of staff as AI tools took homework-help traffic.**
+🔵 **For a studio, North America is the region where the compliance surface is a MOVING target,
+which favours deliverables whose policy layer is configurable rather than compiled in.**
+
 ## 🟢 Fifty-seventh pass (`p852`, 2026-11-16) — `3` trends (`T174`–`T176`)
 
 ## `T174` — a presence check is a PATTERN, and the pattern fails in both directions: URL-keyed indexes invent new repositories, substring-keyed indexes bury live ones (fifty-seventh pass, `p852`)

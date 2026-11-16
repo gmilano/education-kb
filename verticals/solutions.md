@@ -4,6 +4,30 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟡 Fifty-eighth pass (`p853`, 2026-11-16) — **`1` platform row (`150` → `151`): the thirteenth consecutive nil on the LMS/SIS leg, broken on a DIFFERENT vertical — the self-hosted language-learning platform, which is dual-licensed and says so**
+
+🔴 **The mandated platform leg was run verbatim** (`open source platform education LMS SIS ERP MIT Apache 2026`,
+WebSearch, plus first-party `search/repositories`) 🔴 **and returned the same closed set for the
+thirteenth consecutive pass:** Moodle (GPL-3.0) · Open edX (AGPL-3.0) · Canvas (AGPL-3.0) ·
+Sakai (**ECL-2.0** — Apache-derived but not Apache, `p846`) · OpenEduCat (LGPL-3.0) · ILIAS (GPL) ·
+Chamilo (GPL) · Frappe LMS (AGPL-3.0). 🟢 **All eight already on this shelf. `0` new, `0` permissive,
+and `p851`'s conclusion stands: this is the FIELD's shape, not a blind spot.**
+
+🟢 **What moved the row count was the tier leg, not the platform leg.** The spoken-language
+assessment tier this pass worked (see `agents/top.md`, `p853`) has a PLATFORM layer of its own,
+and this base had never looked at it.
+
+### 🟡 `1` new platform row — and its licence has two halves
+
+| Platform | Repo | Licence | Stars | What it is |
+|---|---|---|---|---|
+| freelingo | https://github.com/artcc/freelingo | 🔴 **AGPL-3.0 — byte-read `2026-11-16`** (`main/LICENSE`, `34,514 B`, `sha256₁₂ ea94d5765c59`, title line `GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007`) 🟡 **PLUS a commercial licence offered by the same project: its `README` states *"Commercial licence: deploy a customised or white-labelled version under separately agreed terms"*** | 282 | 🟢 **New this pass (`p853`), pushed ON the day of measurement, and the most complete open language-learning platform this base has found.** Self-hosted AI language learning: **local or cloud LLMs**, CEFR-banded study plans, saved sessions, conversation practice, and a hosted service at `freelingo.app` as the reference deployment. 🔵 **Why it is the right row for this vertical even though it is copyleft:** the tier's assessment components (see `agents/top.md`, `p853`) are all libraries and papers — none of them is a product a learner can open. This is the only thing in the tier that LOOKS like a product, which makes it the fastest way to show a client the end state before any of the permissive components are assembled. 🔴 **AGPL-3.0 means a hosted derivative must publish its source, so it is NOT a base for a proprietary delivery.** 🟡 **The dual-licence offer is the honest path and it is a NEGOTIATION, not a licence this base can read: the terms are "separately agreed" and therefore unknown until a client asks.** 🔵 **`T109` again, from the other side: the most product-shaped thing in a vertical is the thing a studio may not ship — and here the author has at least priced the exit.** 🔴 **A `0★` same-name copy exists at `rwbel/freelingo`, four days behind upstream; recorded as a name-collision pair on `agents/top.md` so no later pass shelves the fork as the project** (`gate-fork-direction`) |
+
+🔵 **Posture for an engagement, stated so it is not re-derived:** demo on `freelingo` to agree the
+target experience; build the delivery from `OpenPronounce` (MIT) + an aligner + a g2p + the
+scoring model, all shelved this pass; inherit the client's LMS over LTI 1.3 rather than replacing
+it (`P76`). 🟢 **Recipe `P83` writes that out step by step.**
+
 ## 🔴 Fifty-sixth pass (`p851`, 2026-11-16) — **`0` platform rows (`147` → `147`). TWELFTH consecutive nil — and this pass stops asking the question and prices the EXIT instead.**
 
 🔴 **The leg was run verbatim** (`open source platform education LMS SIS MIT Apache`, WebSearch,
@@ -785,7 +809,7 @@ platform.** 🟡 **Treat it as competitive intelligence that happens to be MIT-l
 | **AGENTIC STAR** (SoftBank, 🇯🇵) | 🔴 **Not institution-run — a hosted commercial agent platform**, developer docs at `developers.fd.agenticstar.tm.softbank.jp`, homepage `agenticstar.io`. 🟢 Its runtime SDKs `agenticstar-agentcore` (`1.0.3`) and `agenticstar-platform` (`3.3.0`, `80` releases) are public on PyPI and MIT by their wheel metadata | 🟢 **`74` MIT education agent templates, `54` catalogue ids `EDU-C2-004`…`EDU-C2-173`** — reference row [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent), `EDU-C2-028`, byte-read MIT (`1,074 B`, HEAD `71c442ebd88e`) | 🟢 **MIT** (templates and both SDKs, all byte- or metadata-verified) | 🟡 **Adopt the SPECS, not the runtime.** 🔴 Templates raise `PlatformRequired` at graph compile without a SoftBank deployment; all `74` are `0★`, unmaintained since October; the framework's advertised source repo has **zero commits** (`T89`); hard `==` pins on `langgraph`/`langchain`/`fastapi`. 🟢 **Tests run without the platform — harvest per `P61`** |
 | **AgentCore graph scaffold** (the catalogue's shared architecture) | 🔵 Not a product — the uniform structure under all `74` templates: `config/agent.yaml` manifest (`required_trust_level`, declared secrets), `src/graph/`, `src/nodes/`, `src/schemas/state.py`, `docs/02_design.md`, `docs/03_test_spec.md`, `tests/proof_of_boundary/` | 🟢 Domain nodes differ completely between ids — byte-compared across three repositories this pass: `iep_section_generator`/`regulatory_compliance` vs `affected_material_analysis`/`stakeholder_mapping` vs `bloom_level`/`difficulty_score`. Reference row [`haidang024/agentic-star-education-curriculum-change-impact-briefing-agent`](https://github.com/haidang024/agentic-star-education-curriculum-change-impact-briefing-agent) (`EDU-C2-046`, `45` files) | 🟢 **MIT** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ae3eea9ac056`) | 🟢 **This is the reusable asset.** 🔵 One scaffold, `54` real domain implementations — so a studio gets a uniform, inspectable architecture across `54` education workflows instead of `54` unrelated codebases. 🔴 The scaffold's base class ships only in the binary wheel; re-implement on LangGraph (now on `repos/foundations.md`) |
 
-## Education vertical platforms — 150 rows
+## Education vertical platforms — 151 rows
 
 ## 🟡 The MARKING-ADAPTER layer — **permissive code that reaches INTO an incumbent this shelf already carries** (new, fifty-seventh pass `p852`) (3 rows)
 

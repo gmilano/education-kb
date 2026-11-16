@@ -146,6 +146,12 @@ SHELVES = [
     ("repos/foundations.md", [
         "| Repo | License | Stars | Notes |",
         "| Repo | License | Stars | What it is, and what it is not |",
+        # 🟢 p853 declared this signature rather than adding a layer table silently,
+        # which is the path p811's comment above prescribes.  It is the six-column
+        # shape the agent shelf already uses (grant evidence, traction, resolved ref,
+        # region, posture), carried onto the foundations shelf for the speech layer.
+        "| Repo | Licence, as measured | \u2605 / forks | Default ref \u00b7 pushed | Region | "
+        "Why it is a foundation and not a row on another shelf |",
     ], []),
     ("verticals/solutions.md", [
         "| Platform | Repo | License | Stars | Notes |",
