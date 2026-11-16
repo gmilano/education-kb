@@ -1,7 +1,64 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-15
+updated: 2026-11-16
+---
+
+## 🟢 `2026-11-16` (forty-fourth pass, `p839`) — **`1` structural defect FIXED in this base's own files, `2` prior-pass claims WITHDRAWN, `3` gaps declared**
+
+### 🔴 `839-FIX` — `intel/market.md` carried TWO canonical `## Opportunities by region` headings, so every region was double-bucketed
+
+🔴 **Found while writing this pass, not reported by any tool.** `intel/market.md` held **two**
+`## Opportunities by region` headings — one at the forty-first pass (`p836`) and one much older,
+each with its own full set of `### North America / EMEA / APAC / LATAM / Global` children.
+🔴 **Counted before the fix: `2` of every region subsection. A compiler reading `##`/`###` structure
+would therefore emit each region TWICE, and a region filter would silently return half the content
+or duplicate it.**
+
+🟢 **Fixed surgically, with history preserved.** The older, long-lived block — the one carrying the
+accumulated per-pass `####` updates under each region — was kept as the single canonical
+`## Opportunities by region`. 🔵 **The `p836` block was pass-scoped all along (it sits inside
+`p836`'s own pass section), so its heading was demoted to `###` and its five region children to
+`####`, where they belong.** 🟢 **Counted after the fix: `1` canonical heading, `1` subsection per
+region. Nothing was deleted.**
+
+🔵 **Rule for future passes: a pass's regional analysis belongs INSIDE that pass's section at `###`
+or below. The only `## Opportunities by region` in the file is the canonical archive, and this pass's
+opportunities were added under it as `#### Update 2026-11-16 (forty-fourth pass, p839)` entries, one
+per region.**
+
+### 🔴 `839-W1` — WITHDRAWN: "APAC local supply is still thin" (`p837`, repeated `p838`)
+
+🔴 **Both passes recorded this. It is wrong, and the error was in the instrument.** 🟢 **`p839`
+measured `5` of `9` new agent rows as APAC-origin — China (`1,497★`), Taiwan (NTNU-piloted), Vietnam,
+India (`239` forks), Thailand (`30` forks) — with three of the five at fork-to-star ratios of `1:1`
+or better, meaning deployment and not curiosity.** 🔵 **Cause: an English-keyword leg cannot see a
+project whose README, interface and domain vocabulary are Chinese or Thai.** → `T137`.
+🟢 **Standing rule adopted: never record an APAC or LATAM nil from an English-keyword leg alone.**
+
+### 🔴 `839-W2` — RE-CHARACTERISED: "LATAM open-source supply is coursework, not systems" (`p835`–`p838`)
+
+🟡 **Half true, and the untrue half mattered.** 🟢 **The AGENT nil is confirmed and now precisely
+located** — Spanish/Portuguese keywords × permissive licence × recent push window returns `0`, with
+controls run (bare `educacion` returns results; `educacion license:mit stars:>3` returns `6`; search
+rate limit read at `30/30`). 🔴 **But four passes generalised that nil into "the region has no
+build-safe supply", and it does: licence-clean national education DATA, productionised** —
+`chile-hub`'s MINEDUC establishment register and outcomes layers under `CC BY 3.0 CL`, attribution
+only. → `T139`, `P90`.
+
+### 🔴 Gaps declared open at the end of this pass
+
+| Id | Gap | Why it is stated rather than left silent |
+|---|---|---|
+| **`839-G1`** | 🔴 **Licence-clean education data verified for CHILE and no other LATAM country.** Brazil (INEP), Mexico (SEP), Colombia (ICFES) and Argentina (Ministerio de Educación) all publish national education data; `p839` verified neither their licence terms nor their engineering state. | 🟢 **Highest-value unfinished work this pass leaves.** `P90` is a Chile recipe until one more country is verified; a regional version starts with licence reads, not code. |
+| **`839-G2`** | 🔴 **The EU AI Act high-risk education date is UNRESOLVED for a third consecutive pass** — August 2026 in one source, `2027-12-02` in two others, with a May 2026 postponement agreement reportedly not formally adopted. | 🔴 **The instrument that would settle it (consolidated AI Act text / Commission guidance) was not fetched this pass. Until it is, quote the range and the reason it is a range — never a single date to a client.** |
+| **`839-G3`** | 🟡 **No measured answer to whether the `ai-infra-curriculum` senior/architect tracks are usable.** Stars run `1,887` → `265` → `82` → `16` → … → `0`, and `p839` read the estate's SHAPE, not the content of its low-star tracks. | 🟢 **`P91` prices them as authoring work rather than adoption, which is the safe assumption — but it is an assumption, and a content read would convert it to a fact.** |
+
+🔵 **Carried forward unchanged from `p838`:** `oak-mcp-server`'s production endpoint
+(`mcp.thenational.academy`) remains unconfirmed — the host is not allowed through this session's
+egress proxy (`connect_rejected`), which is an INSTRUMENT limit and not evidence against the
+endpoint (`T136`).
+
 ---
 
 ## 🟢 `2026-11-15` (forty-first pass, `p836`) — **`574-E` CLOSED to CORROBORATED, and the blocker re-characterised**

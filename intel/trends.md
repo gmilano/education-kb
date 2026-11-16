@@ -4,6 +4,147 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `T137` — the ORGANISATION-as-unit rule generalises beyond public bodies, and the English-keyword channel was mislabelling APAC supply as absence (forty-fourth pass, `p839`)
+
+🟢 **Two findings that are the same finding, stated together because separating them is what cost
+this base three passes.**
+
+🔵 **`T133` (`p838`) established that the repository index indexes REPOSITORIES, not ORGANISATIONS,
+and that a public body therefore ships an invisible stack.** 🟢 **`p839` found the same shape in a
+PRIVATE estate, which means the rule is about distribution structure and not about public
+funding.** `ai-infra-curriculum` is `28` MIT repositories: `14` role tracks, each a `-learning`
+repository paired with a `-solutions` repository, with this star distribution —
+
+| Track | `-learning` ★ | `-solutions` ★ |
+|---|---|---|
+| engineer | **`1,887`** | `13` |
+| junior engineer | `265` | `8` |
+| performance | `82` | `1` |
+| ml platform | `16` | `2` |
+| architect | `15` | `5` |
+| mlops | `15` | `0` |
+| senior engineer | `11` | `2` |
+| principal engineer | `5` | `1` |
+| team lead | `2` | `1` |
+| senior architect | `2` | `2` |
+| principal architect | `1` | `0` |
+| sre / inference | `0` | `0` |
+
+🔴 **One repository holds `1,887★` and twelve of its siblings hold under `20`. A keyword leg ranked
+by stars returns the flagship and nothing else, so the estate — the part that is actually valuable,
+because the learning/solutions split is what makes a curriculum teachable by someone other than its
+author — is invisible.** 🟢 **`p839` paid ONE query (`user:ai-infra-curriculum`) for `28`
+addresses.** 🔵 The same query on `user:correctexam` returned `15` repositories around two starred
+ones, including the Rust image-processing service and the install documentation that make the pair
+deployable.
+
+🔴 **The second half, and the one that corrects this base's own text.** `p837` wrote that APAC
+"local supply is still thin"; `p838` repeated it. 🟢 **`p839` measured `5` of `9` new agent rows as
+APAC-origin: China (`inno-agent`, `1,497★` — the largest new row in four passes), Taiwan (NTNU's
+piloted course), Vietnam, India (`239` forks against `96★`) and Thailand (`30` forks against
+`26★`).** 🔴 **The prior statement described the instrument, not the sector: an English-keyword leg
+against an English-indexed description field cannot see a project whose README, interface and domain
+vocabulary are Chinese or Thai.** 🟢 **Three of those five rows have fork-to-star ratios at or above
+`1:1`, which is the deployment signal — so the supply was not only present, it was in USE while this
+base recorded it as absent.**
+
+🔵 **Operational rules for the next pass, both cheap.** 🟢 **(1) When any leg returns a hit whose
+owner is an organisation — a ministry, a university, a national academy, a research group OR a
+curriculum publisher — enumerate `user:<owner>` before moving on.** 🟢 **(2) Never record an APAC or
+LATAM nil from an English-keyword leg alone; the nil is only reportable once a native-language leg
+has run and the search rate limit has been read to prove the instrument was alive.**
+
+---
+
+## `T138` — supply VOLUME is not supply: the lesson-plan channel is saturated with undifferentiated `0★` filler, and the saturation is itself the datum (forty-fourth pass, `p839`)
+
+🟢 **Measured, not impressionistic.** One leg — lesson-plan/teacher keywords, `license:mit`, pushed
+since `2026-09-01` — returned `29` MIT-licensed hits. 🔴 **`22` of them sat at exactly `0★` and `0`
+forks.** Almost all were created inside the preceding `90` days, almost all single-author, and most
+described the same artefact in different words: a generator that turns a prompt into a lesson plan,
+sometimes with a quiz attached.
+
+🔴 **The highest-starred hit in the entire leg was `2★`.** For contrast, the `license:`-qualified
+legs that produced this pass's real rows returned `1,497★`, `1,393★`, `589★`, `265★` and `204★`
+candidates in the same instrument conditions.
+
+🟢 **The caused rule.** 🔵 **Lesson-plan generation is the lowest-barrier artefact in educational AI:
+it needs no learner model, no assessment, no system of record, no data and no evaluation — a prompt
+and a template produce something that LOOKS like the product. 🔴 So the channel fills with supply
+that cannot be differentiated, and a keyword leg through it returns volume that contains no
+information.**
+
+🔴 **Why this matters operationally and not just aesthetically: filing those `22` repositories as
+entity rows would have added `22` indistinguishable "agents" to a base of `423`, and the next pass
+would have had to re-read every one to discover they were interchangeable.** 🟢 **They are refused
+as a CLASS in `agents/top.md`, with the distribution recorded here instead of `22` rows.**
+
+🔵 **Operational rule: treat the lesson-plan channel as spent. Spend the query budget on legs where
+the artefact requires something scarce — a system of record to read (`T137`), a licence-clean data
+layer (`T139`), an institutional owner, or an evaluation instrument.** 🟢 **The one exception is the
+rule from `T137`: if an institutional owner appears in that channel, enumerate it — `p838` found
+England's national curriculum stack behind a `27★` hit.**
+
+---
+
+## `T139` — LATAM's constraint is now LOCATED: the agent nil is real at the licence intersection, and the region's build-safe asset is PUBLIC DATA under attribution-only terms (forty-fourth pass, `p839`)
+
+🔴 **This base has declared a LATAM supply gap in `p835`, `p836`, `p837` and `p838`. 🟢 `p839` is the
+first pass to measure it precisely enough to say WHERE the nil is and what sits next to it.**
+
+🟢 **The nil, and the control that makes it reportable.** Three legs — `educacion estudiantes`,
+`educação escola`, `alumnos profesores plataforma`, each with `license:mit` and a `pushed:` window —
+returned **`0` results each.** 🔴 **A zero from a search instrument is worthless without a control,
+because a throttle and a nil look identical.** 🟢 **Controls run: a bare `educacion` leg returned
+results immediately; `educacion license:mit stars:>3` returned `6` hits; and the search rate limit
+was read directly at **`30/30` remaining**. 🟢 So the instrument was alive and the nil is real — the
+intersection of *two Spanish or Portuguese keywords* × *a permissive licence* × *a recent push
+window* is genuinely empty.**
+
+🔵 **And the shape of what the bare legs DO return is the second half of the finding.** `educacion`
+without a licence filter returns volume — and it is overwhelmingly `0★` and `NONE`/`NOASSERTION`
+licensed: student coursework, personal portfolios, single-semester projects. 🔴 **So the region's
+nil is not an absence of ACTIVITY. It is an absence of LICENSED, MAINTAINED activity in the agent
+category — which is exactly what a studio needs and exactly what coursework never is.**
+
+🟢 **The asset the four previous passes looked past.** 🔵 **LATAM publishes licence-clean national
+education DATA, engineered as infrastructure.**
+[`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) — `139★`, code MIT, `23` curated
+layers — carries `establecimientos_educacionales` and `resultados_educacionales`, both from MINEDUC,
+**both `CC BY 3.0 CL`**, annually refreshed, joined to normalised `CUT` territorial codes, with
+per-layer provenance, drift detection, fail-loud CI and a Zenodo DOI.
+
+🟢 **This extends `T134`, and the extension is the usable part:**
+
+| | `os-taxonomy` (`T134`) | `oak-curriculum-ontology` (`T134`) | **`chile-hub` education layers (`T139`)** |
+|---|---|---|---|
+| Publisher | community project | public body (England) | 🟢 **public body (Chile, MINEDUC), repackaged by a third party** |
+| Data grant | 🔴 **ODbL-1.0** | 🟢 OGL-UK-3.0 | 🟢 **`CC BY 3.0 CL`** |
+| Code grant | — | 🟢 MIT | 🟢 **MIT** |
+| Share-alike on a derivative | 🔴 **REQUIRED** | 🟢 none | 🟢 **none** |
+| Non-commercial clause | 🟢 none | 🟢 none | 🟢 **none** |
+| Obligation | share-alike + attribution | 🟡 attribution | 🟡 **attribution only** |
+| What it contains | curriculum structure | curriculum structure | 🔵 **OUTCOMES and the establishment register** |
+
+🟢 **The caused rule: the three licence-clean education data sources this base has now verified are
+all PUBLIC-BODY in origin, and the one that is unsafe is the community project. For education data,
+provenance predicts licence safety — the opposite of the heuristic that holds for agent code, where
+community projects are reliably permissive and institutional code is reliably encumbered.**
+
+🔵 **Operational consequence for a LATAM engagement, and it inverts the usual sequencing: do not
+open with an agent, because the regional agent supply is genuinely empty. Open with the EVIDENCE
+layer built on national open data — which is also what the region's own buyers are asking for, since
+UNESCO IESALC measured `87%` of institutions using AI against `26%` holding a formal strategy.**
+→ `P90`.
+
+🔴 **The declared residual gap, stated so silence is not read as coverage: this pass found a
+licence-clean education data layer for CHILE and for no other LATAM country. Brazil, Mexico,
+Colombia and Argentina publish national education data (INEP, SEP, ICFES, Ministerio de Educación),
+and `p839` did NOT verify the licence terms or the engineering state of any of them. That is the
+single highest-value piece of unfinished work this pass leaves behind.**
+
+---
+
 ## `T133` — the repository index indexes REPOSITORIES, not ORGANISATIONS, and a public body's stack is therefore invisible to it (forty-third pass, `p838`)
 
 🟢 **Stated as a caused rule.** `T128` (`p837`) found that a `license:` qualifier breaks nils that a

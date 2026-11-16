@@ -4,6 +4,170 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `P90` — THE LATAM EVIDENCE ENGAGEMENT: build on licence-clean national open data, because the regional agent supply is measurably empty (forty-fourth pass, `p839`, LATAM anchor)
+
+🔴 **Why this recipe exists.** Four consecutive passes declared a LATAM supply gap, and `p839`
+proved the agent nil is real at the licence intersection (`T139`). 🟢 **But UNESCO IESALC measured
+`87%` of `200` institutions across `19` countries using AI with only `26%` holding a formal
+strategy — so the regional buyer is not asking for a tutor. They are asking what their AI is doing
+and whether it is working.** 🔵 **That question is answerable TODAY with licence-clean national data,
+and it is the only education deliverable in the region that currently is.**
+
+### The substrate, with the grant that makes it shippable
+
+| Layer | What it supplies | Grant, byte-read `2026-11-16` |
+|---|---|---|
+| [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) `139★` | **`establecimientos_educacionales`** (MINEDUC national establishment register) + **`resultados_educacionales`** (MINEDUC outcomes), annual, joined to normalised `CUT` codes; Parquet for Polars/DuckDB/SQLite, JSON, Excel workbook; per-layer provenance, freshness/coverage badges, drift detection, fail-loud CI, Zenodo DOI `10.5281/zenodo.22968698` | 🟢 Code **MIT** `1,070 B` `sha256:277707dcaa3b…`; 🟢 both education layers **`CC BY 3.0 CL`** — attribution only, **no share-alike, no non-commercial** |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | Knowledge tracing — the model that turns interaction history into a per-learner mastery estimate | 🟢 MIT (already shelved) |
+| [`Premshaw23/Learnova`](https://github.com/Premshaw23/Learnova) `96★`/`239`f | Attendance + engagement capture, where no system of record exists to read | 🟢 MIT `1,092 B` `sha256:535250f49c6a…` 🔴 ref `master` |
+| [`azapg/FAIR`](https://github.com/azapg/FAIR) `6★` | The assessment half: Interpreters → Graders → Artifacts, with **A/B comparison across grading approaches**; docs in **Spanish and English** | 🟢 MIT `1,068 B` `sha256:3aa6498da2b9…` |
+| LangGraph / Grafana / Appsmith | Policy nodes, dashboards, internal tools | 🟢 MIT / AGPL-3.0 (🔴 Grafana AGPL — read `intel/licence-requests`) |
+
+### The wiring
+
+```
+chile-hub (pip install chile-hub)
+  ├── load_polars("establecimientos_educacionales")   # the register: who, where, dependency type
+  └── load_polars("resultados_educacionales")         # the outcomes, annual
+            ↓  join on codigo_comuna (CUT, schema-contracted)
+      [EQUITY BASELINE]  outcomes × territory × establishment type
+            ↓
+      client's own data  ──  attendance/engagement (Learnova) or the incumbent SIS
+            ↓
+      pyKT knowledge tracing  →  per-learner mastery + dropout risk
+            ↓
+      LangGraph policy nodes  →  WHO gets flagged, to WHOM, under what human-review rule
+            ↓
+      Grafana / Appsmith      →  the institutional dashboard
+            ↓
+      FAIR                    →  if assessment enters scope, A/B the graders BEFORE adopting one
+```
+
+### What makes this defensible rather than another dashboard
+
+🟢 **1. The national baseline is free and citable.** The client's own numbers mean nothing until
+they sit beside the national distribution for comparable establishments. 🔵 **`chile-hub` supplies
+that comparison under attribution-only terms with a DOI, so the baseline is both legal to ship and
+citable in an accreditation document.**
+
+🟢 **2. The provenance report IS the audit artefact.** Every layer declares source organism, direct
+URL, retrieval mode and timestamp, with drift detection on the upstream source. 🔵 **When a
+ministry or an accreditor asks where a figure came from, the answer is generated, not reconstructed.**
+
+🟢 **3. The licence posture is the opposite of the usual trap.** `T139`: `CC BY 3.0 CL` carries **no
+share-alike**, so a closed client derivative is permitted; the obligation is attribution. 🔴
+**Contrast `os-taxonomy` (`ODbL-1.0`), whose share-alike propagates into any derived database —
+`T134`.**
+
+🔴 **4. Say the limits out loud, in the proposal.** The education layers refresh **ANNUALLY**: this
+answers structural and equity questions and **never** a real-time one. It is **CHILE only** —
+Brazil, Mexico, Colombia and Argentina publish national education data whose licence terms `p839`
+did NOT verify, so a multi-country version of this recipe starts with that verification, not with
+code. `13` forks means early adopter. 🔴 **And `FAIR` is a `6★` MVP: use it to compare graders in a
+pilot, never as the system of record for a term's marks.**
+
+🔵 **Sequencing, `8`–`10` weeks:** weeks 1–2 stand up `chile-hub` and reproduce the national
+baseline; 3–4 join the client's register and attendance; 5–6 fit `pyKT` and validate against known
+outcomes; 7–8 policy nodes and human-review rules with the institution's own staff; 9–10 dashboard
+and the provenance/audit pack. 🟢 **Deliverable is the evidence layer plus the audit trail — which is
+what `26%`-with-a-strategy institutions are actually missing.**
+
+---
+
+## 🟢 `P91` — THE VOCATIONAL AI-LITERACY PROGRAMME: two MIT estates for the courseware, a university course for the pedagogy you may NOT ship (forty-fourth pass, `p839`, Global; APAC and LATAM delivery notes)
+
+🔴 **Why this recipe exists.** `P86` (`p837`) found the vocational tier had funding rails and **`0`
+build-safe software supply**. 🟢 **`p839` found the supply, and it is shaped as organisation-scale
+curriculum ESTATES that no keyword leg could see (`T137`).** 🔵 **Meanwhile every regional leg this
+pass reported AI literacy becoming a core skill — so the demand and the supply arrived in the same
+measurement window.**
+
+### The parts, and the licence that decides each one's role
+
+| Part | Role in the programme | Grant, byte-read `2026-11-16` |
+|---|---|---|
+| [`ai-infra-curriculum`](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning) — **`28` repos** | 🟢 **THE SPINE.** `14` role tracks (junior → principal engineer, architect → principal architect, team lead, MLOps, ML platform, inference, performance, SRE), **each a `-learning` repo PAIRED with a `-solutions` repo.** Flagship `1,887★`/`324`f; entry track `265★`/`65`f | 🟢 **MIT** `1,081 B` `sha256:67475eade1ef…` |
+| [`WenyuChiou/awesome-agentic-ai-zh`](https://github.com/WenyuChiou/awesome-agentic-ai-zh) **`8,782★`** | 🟢 **THE SEQUENCE.** LLM fundamentals → multi-agent systems, market-validated by `1,086` forks; **繁中 / English / 简中** | 🟢 **MIT** `1,068 B` `sha256:1e034229fd46…` |
+| [`keyuchen21/agentic-engineering-handbook`](https://github.com/keyuchen21/agentic-engineering-handbook) `589★` | 🟡 The production band: harnesses, MCP, evals, production agent systems | 🟢 **MIT** `1,056 B` `sha256:1126322e2cc8…` |
+| [`bigmoumou/AI-Agent-Literacy`](https://github.com/bigmoumou/AI-Agent-Literacy) `55★` | 🔴 **PEDAGOGY REFERENCE ONLY — read it, do not ship it.** NTNU-piloted 2026: weekly microlearning (`39` videos, ~`121` min), browser practice computers, scenario-based Week 6 exam, project homework | 🔴 **SPLIT: code MIT (`1,068 B` `sha256:f8e1c1b97c59…`) / content CC BY-NC-SA 4.0 (`7,877 B` `sha256:8f65175f489e…`)** |
+| [`munitkala/selfsemester`](https://github.com/munitkala/selfsemester) `102★` | 🟢 **THE PER-LEARNER RUNTIME.** Issues a scheduled, deadline-enforced, marked course with a transcript; a **readiness report before the learner commits**; course builder runs with no model at all | 🟢 **MIT** `1,081 B` `sha256:f5fe104e348d…` |
+| [`hhyqhh/inno-agent`](https://github.com/hhyqhh/inno-agent) **`1,497★`** | 🟢 **THE LEARNER MODEL.** `L1` profile / `L2` wiki / `L3` session recall, cron scheduler, IM channels, Practice Lab | 🟢 **MIT** `1,080 B` `sha256:f92c6c6a1cc8…` |
+| `TutorMoments` (`p837`) · `Drop Project` (`p837`) · `CorrectExam` (`p839`) · `FAIR` (`p839`) | 🟢 Evaluation and assessment: does it teach well, and is the grade defensible | 🟢 Apache-2.0 / MIT |
+
+### 🔴 The licence gate, applied before any content is written
+
+```
+AI-Agent-Literacy  ──[READ]──►  pedagogy: microlearning length, practice-machine
+   (CC BY-NC-SA)                 design, scenario-exam format, numbered key points
+        │
+        └──[DO NOT SHIP]──►  ✗ its videos, its site content, any derivative of them
+                                 (NC forbids paid engagement; SA propagates)
+
+ai-infra-curriculum + awesome-agentic-ai-zh + agentic-engineering-handbook
+   (all MIT)       ──[SHIP]──►  ✓ the courseware, the exercises, the answer keys,
+                                   client-branded derivatives, closed deliverables
+```
+
+🟢 **This is the whole reason the programme is buildable: the pedagogy that is proven at a national
+university is licence-encumbered, and the courseware that is permissive is `28` repositories deep.
+Take the shape from one and the substance from the other.**
+
+### The wiring
+
+```
+awesome-agentic-ai-zh          → the SEQUENCE (what, in what order)
+         ↓
+ai-infra-curriculum -learning  → the exercises for the chosen role track(s)
+ai-infra-curriculum -solutions → the answer key, held by the studio NOT the learner
+         ↓
+AI-Agent-Literacy (read only)  → the FORMAT: weekly microlearning, browser practice
+                                  machine, scenario exam, human-reviewed scripts
+         ↓
+selfsemester                   → per-learner delivery: scheduled release, hard
+                                  deadlines, auto-marked quizzes, rubric marking,
+                                  transcript  ── one instance per learner
+   or inno-agent               → where a persistent learner MODEL is wanted instead
+                                  of a fixed course (L1 profile, misconception tracking)
+         ↓
+CorrectExam / Drop Project / FAIR → assessment; TutorMoments → does it teach well
+```
+
+### What to tell the client before they sign
+
+🔴 **1. Maturity is not uniform across the spine.** The estate's stars run `1,887`, `265`, `82`,
+`16`, `15`, `15`, `11`, `5`, `2`, `2`, `1`, `0`… 🟢 **Scope the engagement to the junior and
+engineer tracks, which have real fork counts (`324` and `65`), and treat the senior/architect tracks
+as drafts to be finished as part of the work — priced as authoring, not as adoption.**
+
+🔴 **2. `selfsemester` and `inno-agent` are both SINGLE-LEARNER by design.** `selfsemester` is
+Windows-only and self-described early (`0.7.0`, "little real-world use"); `inno-agent` declares one
+active session, no auth model, no tenant isolation, "run one instance per person". 🟢 **A `200`-seat
+cohort is `200` instances plus an orchestration layer. That is a real line item, and pretending
+otherwise is how this delivery fails.**
+
+🟢 **3. The evaluation is the differentiator, not the content.** Any vendor can produce a syllabus.
+🔵 **`TutorMoments` scores tutoring quality against expert-annotated moments, and `FAIR` A/B tests
+grading approaches on the client's own submissions — so this programme can state its instructional
+claim as a measurement.**
+
+🔵 **Delivery notes by region.** **APAC:** `awesome-agentic-ai-zh` is trilingual and
+`AI-Agent-Literacy`'s site adds Vietnamese, so one programme serves Taipei, Singapore, mainland and
+Hanoi cohorts without a translation project — and Vietnam's high-risk education classification plus
+Korea's high-impact designation make the evaluation evidence a compliance artefact, not a nicety.
+**LATAM:** pair with `P90` — the workforce argument lands where `FAIR`'s Spanish documentation and a
+national evidence baseline already exist. **EMEA:** substitute `CorrectExam` for the assessment leg
+where paper assessment and data residency dominate. **North America:** the vocational funding rails
+in `P86` remain the entry, and North Carolina's `2028-06-30` teacher-training deadline (`p839`) is a
+dated hook.
+
+🔵 **Sequencing, `10`–`12` weeks:** 1–2 choose role tracks and audit the `-solutions` repos for
+completeness; 3–4 fix the sequence against `awesome-agentic-ai-zh` and write the gap material;
+5–6 build the practice environment on the `AI-Agent-Literacy` pattern (MIT half only); 7–8 stand up
+`selfsemester` or `inno-agent` per learner plus orchestration; 9–10 assessment and the
+`TutorMoments` acceptance gate; 11–12 pilot cohort and instrument the outcomes.
+
+---
+
 ## 🟢 `P87` — GROUND THE TUTOR IN A NATIONAL CURRICULUM YOU ARE LICENSED TO SHIP (forty-third pass, `p838`)
 
 🔵 **The engagement this answers.** A ministry, an academy trust, a publisher or an edtech vendor

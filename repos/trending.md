@@ -4,6 +4,90 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🆕 `2026-11-16` (forty-fourth pass, `p839`) — 🟢 **THE LATAM GAP CLOSES ON A DATA LICENCE, AND THE VOCATIONAL GAP CLOSES ON A `28`-REPOSITORY ESTATE: both were invisible to keyword search for the same reason**
+
+🔴 **Two gaps this base has carried for multiple passes closed in the same measurement window, and
+neither closed because new software appeared. 🟢 Both closed because the pass changed CHANNEL —
+owner enumeration instead of keyword ranking (`T137`), and a licence read instead of a star read
+(`T139`).**
+
+### 🟢 The LATAM finding — `chile-hub`, and why `139★` outranks everything else the region returned
+
+| | Measured `2026-11-16` |
+|---|---|
+| Repo | [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) |
+| Stars / forks | `139★` / `13` |
+| Code grant | 🟢 **MIT** — `main/LICENSE`, `1,070 B`, `sha256:277707dcaa3b…` |
+| Education layers | 🟢 **`establecimientos_educacionales`** (MINEDUC national register) · 🟢 **`resultados_educacionales`** (MINEDUC outcomes) |
+| Data grant on those layers | 🟢 **`CC BY 3.0 CL`** — attribution only, 🟢 **no share-alike**, 🟢 **no non-commercial** |
+| Engineering | Parquet / Polars / DuckDB / SQLite, normalised `CUT` codes with schema contracts, per-layer provenance (organism, URL, mode, timestamp), freshness + coverage badges, drift detection, fail-loud CI, Zenodo DOI `10.5281/zenodo.22968698`, `pip install chile-hub` |
+| Refresh | 🔴 **ANNUAL** — structural and equity questions only, never real-time |
+| Coverage | 🔴 **Chile only** |
+
+🔵 **Its own stated doctrine, which is why it is trustworthy as a KB source:** *"Un artefacto, no una
+síntesis"* — every figure from a reproducible run against the official source with hash, date and
+warnings — and *"lo que no se puede verificar, no se publica."*
+
+🔴 **And the nil beside it, measured with controls so it is reportable.** Spanish and Portuguese
+keyword legs × `license:mit` × a recent `pushed:` window returned **`0`**. 🟢 **Controls proving the
+instrument was alive: bare `educacion` returned results immediately; `educacion license:mit
+stars:>3` returned `6`; search rate limit read directly at `30/30` remaining.** 🔵 **What the bare
+legs return is overwhelmingly `0★` and `NONE`/`NOASSERTION` — coursework and portfolios. The gap is
+not absent activity; it is absent LICENSED, MAINTAINED activity in the agent category.** → `T139`.
+
+### 🟢 The vocational finding — a `28`-repository MIT curriculum estate no keyword leg could rank
+
+🔵 **`ai-infra-curriculum` publishes `14` role tracks, each as a `-learning` repository PAIRED with a
+`-solutions` repository.** 🟢 **That pairing is the asset: exercises and answer key are separately
+distributable, which is what makes a curriculum teachable by someone other than its author.**
+
+| Track | `-learning` ★ | `-solutions` ★ |
+|---|---|---|
+| engineer | **`1,887`** (`324` forks) | `13` |
+| junior engineer | `265` (`65` forks) | `8` |
+| performance | `82` | `1` |
+| ml platform | `16` | `2` |
+| architect | `15` | `5` |
+| mlops | `15` | `0` |
+| senior engineer | `11` | `2` |
+| principal engineer | `5` | `1` |
+| team lead · senior architect | `2` · `2` | `1` · `2` |
+| principal architect | `1` | `0` |
+| sre · inference | `0` · `0` | `0` · `0` |
+
+🔴 **One repository holds `1,887★` and twelve siblings hold under `20`, so a star-ranked keyword leg
+returns the flagship and nothing else.** 🟢 **One query — `user:ai-infra-curriculum` — returned `28`
+addresses.** 🔵 Same rule on `user:correctexam` returned `15` repositories around two starred ones,
+including the Rust image-processing service and the install documentation that make the pair
+deployable. → `T137`.
+
+### 🟢 Other repos that moved this pass
+
+| Repo | Grant (byte-read `2026-11-16`) | ★ / forks | Why it is trending here |
+|---|---|---|---|
+| [`WenyuChiou/awesome-agentic-ai-zh`](https://github.com/WenyuChiou/awesome-agentic-ai-zh) | 🟢 MIT `1,068 B` `1e034229fd46` | **`8,782★`** / `1,086` | 🟢 **Highest-starred row added anywhere this pass.** Trilingual (繁中/English/简中) agentic-AI learning path — a market-validated SEQUENCE under MIT, which is the expensive artefact in any literacy programme. 🔴 Reading path, no exercises. |
+| [`keyuchen21/agentic-engineering-handbook`](https://github.com/keyuchen21/agentic-engineering-handbook) | 🟢 MIT `1,056 B` `1126322e2cc8` | `589★` / `75` | 🟡 Production band — harnesses, MCP, evals. Pushed day of measurement. 🔴 Vendor-shaped, so it dates fast; pin a commit. |
+| [`kylemath/EEGEdu`](https://github.com/kylemath/EEGEdu) | 🟢 MIT `1,071 B` `6f69a84cb0f6` | `204★` / `44` | 🟢 First HARDWARE-IN-BROWSER teaching row: WebBluetooth EEG tutorials, `7` years maintained. 🔴 ref `master`; needs a specific commercial headset. |
+| [`microbotsio/ProtoBot`](https://github.com/microbotsio/ProtoBot) | 🟢 Apache-2.0 `11,357 B` `c71d239df917` | `72★` / `21` | 🟢 Palm-sized educational robot, hardware + firmware Apache-2.0. 🟢 **`T131`'s FIFTH byte-identical reproduction** — same stock Apache vintage as Drop Project, Perspicacité-AI and RiceChecks. |
+| [`iamtonmoy0/node-express-school-management-system`](https://github.com/iamtonmoy0/node-express-school-management-system) | 🟢 MIT `1,083 B` `987261cd8b0b` 🔴 payload © *2014-2017* on a `2023` repo — inherited boilerplate | `45★` / `22` | 🟡 Small legible school-management substrate, `2:1` fork ratio. |
+| [`goragodwiriya/sms`](https://github.com/goragodwiriya/sms) | 🟢 MIT `1,071 B` `d5b1933acb07` | `26★` / **`30`** | 🟢 **Fork ratio BELOW `1:1` — the strongest deployment signal added this pass.** Thai school administration, nine years maintained. 🔴 Thai-language throughout; the MODEL ports, the artefact does not. |
+
+### 🔴 Channel notes — where NOT to spend the next pass's query budget
+
+🔴 **The lesson-plan channel is spent.** One leg: `29` MIT hits, **`22` at exactly `0★`/`0` forks**,
+highest-starred hit in the whole leg `2★`. 🟢 **Lesson-plan generation needs no learner model, no
+assessment, no data and no evaluation, so the channel fills with undifferentiated supply and returns
+volume containing no information.** 🔵 **Exception, from `T137`: if an institutional owner appears
+there, enumerate it — `p838` found England's national curriculum stack behind a `27★` hit.** →
+`T138`.
+
+🔴 **Also refused, and named so it is not re-investigated:** `Lapis0x0/obsidian-yolo` (`1,393★`,
+MIT) — a personal-knowledge-management assistant, not an education agent, despite ranking on
+"learning"; and `quant-sentiment-ai/claude-equity-research` (`759★`) — "educational use only" is a
+liability disclaimer on a finance tool.
+
+---
+
 ## 🆕 `2026-11-16` (forty-third pass, `p838`) — 🟢 **THE CURRICULUM-GRAPH GAP CLOSES ON A LICENCE TERM, NOT A STAR COUNT: `os-taxonomy` stays off the shelves after `99` trending mentions, and a national body's OGL-3.0 ontology takes the slot**
 
 🔵 **This file has named [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy)

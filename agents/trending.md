@@ -4,6 +4,72 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` (forty-fourth pass, `p839`) — **`9` agent rows, and `5` of them are APAC-origin: this base's "APAC supply is thin" line was an INSTRUMENT artefact and is now withdrawn**
+
+🟢 **`9` new build-safe agent rows (`414` → `423`), `7` foundation rows (`195` → `202`), `3` vertical
+rows (`164` → `167`), `3` trends (`T137`–`T139`), `2` recipes (`P90`–`P91`), `3` named refusals
+(one of them at `1,393★`), `1` structural defect fixed in `intel/market.md`.**
+
+🔴 **The withdrawal, first.** `p837` wrote that APAC "local supply is still thin" and `p838`
+repeated it. 🟢 **`p839` measured `5` of `9` new agent rows as APAC-origin — China, Taiwan, Vietnam,
+India, Thailand — and the largest new row in four passes is Chinese (`1,497★`). The earlier
+statement described an English-keyword leg against an English-indexed description field, not the
+sector.** 🟢 **Three of those five have fork-to-star ratios at or above `1:1`, so the supply was not
+merely present, it was in USE while this base recorded it as absent.** → `T137`.
+
+### 🟢 What moved onto the agent shelf
+
+| Agent | Repo | Grant (byte-read `2026-11-16`) | ★ / forks | Region | Signal |
+|---|---|---|---|---|---|
+| **Inno Agent** | `hhyqhh/inno-agent` | 🟢 MIT `1,080 B` `f92c6c6a1cc8` | **`1,497★`** / `249` | APAC — China | 🟢 **The first row on these shelves whose design centre is a LEARNER MODEL, not a chat history: `L1` profile / `L2` agent-queryable wiki / `L3` session recall, plus a cron scheduler and a Practice Lab.** 🔴 Declared non-goals: one active session, no auth, no tenancy — a per-learner runtime, not a platform. |
+| **SelfSemester** | `munitkala/selfsemester` | 🟢 MIT `1,081 B` `f5fe104e348d` | `102★` / `8` | Global | 🟢 **Issues a COURSE and enforces it** — scheduled release, hard deadlines, rubric marking of handwritten work, a transcript, and a **readiness report that states its own competence envelope before the learner commits.** 🔴 `0.7.0`, Windows-only, author-declared "little real-world use". |
+| **AI Agent Literacy** | `bigmoumou/AI-Agent-Literacy` | 🔴 **SPLIT: code MIT `1,068 B` `f8e1c1b97c59` / content CC BY-NC-SA `7,877 B` `8f65175f489e`** | `55★` / `0` | APAC — Taiwan | 🟢 NTNU-piloted 2026; `39` videos, browser practice machines, scenario exam. 🔴 **The `NC` term is the finding: read the pedagogy, never ship the content.** |
+| **FAIR** | `azapg/FAIR` | 🟢 MIT `1,068 B` `3aa6498da2b9` | `6★` / `6` | Global (EN + **ES** docs) | 🟢 **Makes grading approaches COMPARABLE — Interpreters/Graders/Artifacts, A/B tests on the client's own submissions.** The assessment counterpart to `p837`'s `TutorMoments`. 🔴 MVP. |
+| **CorrectExam** (front + back) | `correctexam/corrigeExamFront` · `corrigeExamBack` | 🟢 MIT `1,068 B` `44ed794595f6` — **byte-identical across both repos** | `24★`/`13` · `12★`/`10` | EMEA — France | 🟢 **PAPER-exam grading entirely IN-BROWSER** (OpenCV.js WASM, TF.js, ONNX in Web Workers): handwriting never leaves the marker's machine. 🔴 **Back repo's real default ref is `deploy`, not `main`.** |
+| **Learnova** | `Premshaw23/Learnova` | 🟢 MIT `1,092 B` `535250f49c6a` | `96★` / **`239`** | APAC — India | 🟢 **Inverted ratio `2.5:1` — deployed, not read.** Attendance + engagement, the one dataset every institution already holds. 🔴 ref `master`; Firebase/MongoDB hosted dependencies. |
+| **DualSub Replay** | `hoangkien1703/dual-sub-replay` | 🟡 **MIT source; README badge claims GPL-3.0 distribution, notices confine that to `v0.9.7` and earlier** | `63★` / `14` | APAC — Vietnam | 🟢 Language learning from YouTube with **on-device** translation. 🔵 **Filed partly for the licence lesson: badge and notices disagree, and only the notices are authoritative.** |
+| **SchoolOS backend** | `hamidukarimi/SchoolOS-backend` | 🟢 MIT `1,069 B` `a0fd60a8ec49` | `41★` / `12` | Global | 🟡 A clean modern school-management API — a system of record for `P90` to READ. 🔴 Backend only; last push a month before measurement. |
+
+### 🔴 `3` named refusals — recorded so the next pass does not re-pay
+
+- 🔴 **`Lapis0x0/obsidian-yolo` (`1,393★`, MIT) — refused on SCOPE.** Ranks on education legs because
+  its description says "learning", but it is a personal-knowledge-management assistant for Obsidian:
+  **no learner model, no assessment, no curriculum, no instructor surface.** 🟢 Named because
+  `1,393★` will resurface every pass.
+- 🔴 **`quant-sentiment-ai/claude-equity-research` (`759★`) — refused because "educational use only"
+  in a DISCLAIMER is not an education product.** Disclaimer-as-keyword.
+- 🔴 **The `0★` lesson-plan long tail — refused as a CLASS.** One leg returned `29` MIT hits of which
+  **`22` sat at exactly `0★` and `0` forks**, mostly created inside `90` days, mostly single-author,
+  mostly the same artefact. Highest-starred hit in the whole leg: `2★`. 🟢 **Filing them would have
+  added `22` indistinguishable rows to a base of `423`.** → `T138`.
+
+### 🔵 Instrument conditions and controls, `2026-11-16`
+
+🔴 `api.github.com` → `403` through the session proxy (unchanged). 🟢 `raw.githubusercontent.com` →
+`200`, so byte-read + `sha256` is intact. 🟢 `gh api -X GET search/repositories` live. 🔴 **Controls
+both directions:** `repo:HKUDS/DeepTutor` → `59,514★` / `Apache-2.0` / `main` / pushed `2026-11-15`
+(**up `30★` on `p837`'s `59,484`**); invented slug → `HTTP 422`. 🟢 **Search rate limit read directly
+at `30/30` remaining — which is what makes `T139`'s LATAM nil reportable instead of ambiguous.**
+
+🔴 **A verifier substitution, recorded because the curation contract names `curl -sI` as the URL
+check and this pass did NOT use it.** 🟢 **Control run on three slugs: `torvalds/linux` → `403`,
+`HKUDS/DeepTutor` → `403`, and an invented `zzz-definitely-not-real-org-9x/zzz-nope-9x` → `403`.**
+🔴 **A famous repo, a shelved repo and a nonexistent one return the SAME code, so `curl -sI
+github.com` carries ZERO signal in this session and a `403` from it is neither a confirmation nor a
+`404`.** 🟢 **Every URL written this pass was instead verified by three instruments that do
+discriminate: `git ls-remote --symref … HEAD` (all `20` resolved, the invented control
+`UNRESOLVABLE`, and it is what caught `corrigeExamBack`'s `deploy` ref plus `Learnova`'s and
+`EEGEdu`'s `master`); `gh api search/repositories` with `repo:<slug>` (exactly `1` hit each, `422`
+for an invented slug); and a byte-read of the licence payload from `raw.githubusercontent.com` at
+the resolved ref.** 🔵 **Rule for the next pass: prefer `git ls-remote` over `curl -sI` for
+existence, and never record a `curl` `403` against `github.com` as evidence about a repository.**
+
+🟢 **`T131` reproduces a FIFTH time:** `microbotsio/ProtoBot`'s Apache payload is `11,357 B` /
+`sha256:c71d239df917…` — byte-identical to `p837`'s Drop Project and `p838`'s Perspicacité-AI and
+RiceChecks. Five unrelated projects, one stock Apache vintage carrying **no holder in the payload**.
+
+---
+
 ## `2026-11-16` (forty-third pass, `p838`) — **`15` new agent rows, and `9` of the best came from ONE owner account: the index indexes repositories, not organisations**
 
 🟢 **`15` new build-safe agent rows (`399` → `414`), `9` foundation rows (`186` → `195`), `7`
