@@ -4,6 +4,73 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-ninth pass (`p854`, 2026-11-16) — **`P84`: offline-first pronunciation scoring for a REGULATED market, wired from rows this base byte-read today — plus `P83-LATAM` re-costed now that its blank page has an architecture**
+
+### 🟢 `P84` — on-device speaking assessment, where the audio never leaves the handset
+
+🔵 **The brief this answers, stated as a client would:** *"We need speaking practice with real
+feedback. Our ministry treats education AI as high-risk, our schools have a `2`-Mbps link, and
+legal will not approve student voice leaving the device."*
+
+🟢 **Why it is one pattern and not three:** `T182` — Korea's `AI Basic Act` (in force
+`2026-01-22`, education **high-impact**), Vietnam's AI law (in force `2026-03-01`, education
+**high-risk**, pre-deployment registration), the EU's **Annex III** (admissions, grading,
+proctoring) and California's `AB 1159` (no student data for training) all regulate the same thing:
+**the transfer**. 🟢 **Remove the transfer and one architecture answers a bandwidth constraint and
+three compliance regimes at once.**
+
+#### The wiring, named repo by repo
+
+| Stage | Repo, as byte-read | Grant | What it does here |
+|---|---|---|---|
+| 1. Target phonemes | [`xinjli/transphone`](https://github.com/xinjli/transphone) *(`p853`)* | 🟢 MIT | grapheme→phoneme for the EXPECTED sentence; `8,000`-language reach. 🔴 **Do not substitute `espeak-ng` or `bootphon/phonemizer` — both GPL-3.0** (`p854`, `repos/foundations.md`) |
+| 2. Runtime | [`microsoft/onnxruntime`](https://github.com/microsoft/onnxruntime) | 🟢 MIT | executes the quantised model on Android, iOS, desktop or WASM |
+| 3. Acoustic / phoneme model | [`kwmt/nanteiu-pronunciation-model`](https://github.com/kwmt/nanteiu-pronunciation-model) | 🟢 Apache-2.0 | the worked example: wav2vec2 → ONNX → int8, with `vocab.json` mapping CTC ids to eSpeak phoneme labels. 🔵 **Copy the RECIPE; retrain for the target language** |
+| 4. Recognition | [`k2-fsa/sherpa-onnx`](https://github.com/k2-fsa/sherpa-onnx) + [`alphacep/vosk-api`](https://github.com/alphacep/vosk-api) | 🟢 Apache-2.0 | `sherpa-onnx` for the on-device STT/VAD with real mobile bindings; 🔵 **`vosk` where the exercise is SCRIPTED — its grammar-constrained mode and per-word timing beat an open recogniser when the sentence is known in advance** |
+| 5. Scoring | [`DevTae/PronunciationEvaluator`](https://github.com/DevTae/PronunciationEvaluator) | 🟢 MIT | the articulatory-feature distance (`PER`) — `4` consonant features, `3` vowel features. 🟢 **This is the piece `p853`'s whole tier assumed and none of it supplied** |
+| 6. L1 calibration | [`diGit-hub/gato-zen-speech-eval-zh`](https://github.com/diGit-hub/gato-zen-speech-eval-zh) | 🟢 MIT | the phoneme-confusion model and the `correct`/`incorrect`/**`uncertain`** three-way verdict, parameterised by L1 (`pt-br` \| `en` \| `es` \| `other`). 🔵 **Its declared budget — `2 s` on an i3-1215U, no GPU — is the performance contract to copy** |
+| 7. Model answer | [`rhasspy/piper`](https://github.com/rhasspy/piper) | 🟢 MIT | local neural TTS so the learner HEARS the target. 🔴 **This is the stage every pt-BR app in the open rents from a cloud API** (`dapontepinheiro/speechteach_back`) |
+| 8. Levelling | [`Maximax67/Words-CEFR-Dataset`](https://github.com/Maximax67/Words-CEFR-Dataset) *(`p853`)* | 🟢 MIT | CEFR `A1`–`C2` bands so a failure is attributed to the right cause. 🔴 **An `A2` learner failing a `C1` word was handed the wrong sentence, not a pronunciation error** |
+
+🟢 **Licence posture of the whole chain: `4` MIT, `3` Apache-2.0, `0` copyleft, `0` metered API.**
+
+#### 🔴 The three things that will go wrong, named in advance
+
+1. 🔴 **The DATA, not the code, is what blocks production** (`853-G1`, `T178`). Every stage above
+   is permissive; the corpora that train stage `3` are not — `speechocean762` has **no licence
+   file**, `TIMIT` is paid LDC, `L2-ARCTIC` and `UASpeech` are gated. 🟢 **Budget the data-rights
+   schedule as the long pole, and treat `phantomhsieh/OMPAL-corpus` (CC-BY-4.0, Mandarin) as the
+   template for what an acquirable corpus looks like.**
+2. 🔴 **Do not round `uncertain` to a pass.** The three-way verdict exists because a two-way one
+   lies; surface it to the learner and log it, 🔵 **and under a high-risk regime that log IS part
+   of the human-oversight evidence.**
+3. 🔴 **On-device removes the TRANSFER, not the DUTY.** Grading stays high-risk whoever computes
+   it. 🟢 **Transparency, AI-literacy and human-review obligations are unaffected by architecture
+   and must be delivered as documentation, not inferred from the design.**
+
+🔵 **Effort, stated with its assumptions:** `8`–`10` weeks for a single language with an existing
+acoustic model and an acquirable corpus; 🔴 **`+6`–`8` weeks where the corpus must be collected,
+which for any children's-voice product it must.**
+
+### 🟢 `P83-LATAM` — re-costed, because `853-G5`'s remedy no longer starts from a blank page
+
+🔴 **`853-G5` prescribed BUILDING the es-`419`/pt-BR scorer and priced it at `4`–`6` weeks on top
+of a base build, from nothing.** 🟢 **`p854` changes the starting point, and the native-language
+re-probe is why:**
+
+| What `853-G5` assumed | 🔬 What `p854` measured | Effect |
+|---|---|---|
+| no pt-BR supply at all (`0` results) | 🟢 `3` **MIT** repositories, incl. a CPU-only L1-parameterised scorer | 🟢 **architecture no longer needs designing — fork `gato-zen`'s `l1=` parameterisation and swap the target language** |
+| no Spanish supply usable | 🔴 `6` results, **`0` with any licence** | 🔴 **UNCHANGED — es-`419` is still a build** |
+| build from a blank page | 🟢 build from a working three-way scorer with a declared latency contract | 🟡 **`4`–`6` weeks → `3`–`4` weeks for pt-BR; es-`419` stays `4`–`6`** |
+
+🔴 **The one row that would have changed this most cannot be used:**
+[`CarlosFigueroaPicado/Aikukisna`](https://github.com/CarlosFigueroaPicado/Aikukisna) — offline
+Android for RURAL students, dictionary, pronunciation, voice and image recognition, AI tutoring,
+Clean Architecture + Compose + Room + Supabase — 🔴 **ships no licence file (`12` paths probed).**
+🟢 **The correct studio action is not to copy it: it is to ASK. A `0★` author with the right
+product and no `LICENSE` is usually an oversight, and a one-line issue is cheaper than a rebuild.**
+
 ## 🟢 Fifty-eighth pass (`p853`, 2026-11-16) — `2` recipes (`P83`, `P84`), built only from rows filed or measured this pass
 
 🔵 **Both recipes name components that were byte-read today and carry their grants in the step

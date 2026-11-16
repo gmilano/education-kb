@@ -4,6 +4,92 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-ninth pass (`p854`, 2026-11-16) — **`8` agent rows (`417` → `425`): the NON-ENGLISH query channel that `853-G6` prescribed, run in five languages — and it returned `17` of `17` addresses NEW, against `0` of `12` for the same field queried in English on the same day**
+
+🟢 **`853-G6` ended with a prescription, not a complaint:** *"a leg written in Japanese, Arabic or
+Portuguese is a different index, and this base has evidence it returns different results."*
+🟢 **It was run this pass, and the prescription was right by the largest margin this base has measured.**
+
+| Channel, same field, same hour | Addresses returned | NEW to this corpus | Yield |
+|---|---|---|---|
+| the `4` mandated ENGLISH generic legs (`p854`) | `12` | `0` | 🔴 **`0%`** |
+| `5` NON-ENGLISH legs — 日本語 · العربية · português · español · 한국어 | `17` | 🟢 **`17`** | 🟢 **`100%`** |
+
+🔵 **Every one of the `12` English-leg addresses was already held** — `8` `SHELVED`, `4` `UNGRADED` —
+measured with [`compose/code/p853-slug-presence/`](../compose/code/p853-slug-presence/) before a row
+was written. 🔴 **`T177` said yield is a function of query ALTITUDE. This pass shows altitude was
+only half of it: yield is also a function of query LANGUAGE, and this base had never varied that axis.** → `T181`, `854-G1`.
+
+### 🔴 Finding 1 — two of `p853`'s four declared nils were artefacts of the QUERY'S LANGUAGE, and are corrected here
+
+🔴 **A nil this base published yesterday is withdrawn today, with the replacement counts attached.**
+
+| `p853`'s declared nil | Its English query | The same field, queried natively | Verdict |
+|---|---|---|---|
+| APAC / Japanese | `japanese pronunciation learning app open source` → **`0`** | `発音 評価` → 🟢 **`6` results**, `1` Apache-2.0, `1` MIT | 🔴 **FLIPPED — the nil was the query** |
+| LATAM / Portuguese | `portuguese pronunciation speech assessment` → **`0`** | `avaliação de pronúncia` → 🟢 **`5` results**, `3` MIT | 🔴 **FLIPPED — the nil was the query** |
+| EMEA / Arabic | `arabic quran recitation pronunciation` → `3`, all unlicensed | `تلاوة` → 🟡 **`54` results**; but `تقييم التلاوة` *(recitation **assessment**)* → 🔴 **`0`** | 🟡 **REFINED, not flipped** |
+| LATAM / Spanish | — | `evaluación de pronunciación` → `6` results, 🔴 **`0` permissive** | 🟡 **`853-G5` STANDS after native re-probe** |
+
+🔵 **The two refinements are worth more than the two flips, because they are sharper claims:**
+🔴 **the Arabic estate has recitation PLAYERS and no recitation SCORERS** — `54` results for the
+noun, `0` for the assessment phrase — and 🔴 **the Spanish estate has supply but no GRANT**: `6`
+repositories, not one of them carrying a licence file. 🟢 **"There is nothing there" was wrong in
+two regions; "there is nothing a studio can build on" survives in both.** → `854-G2`, `854-G7`.
+
+### 🟢 Finding 2 — `8` permissive rows, every grant byte-read today
+
+🟢 **`16` addresses were byte-read from `raw.githubusercontent.com` on `2026-11-16`** with size,
+`sha256₁₂`, resolved default ref and holder recorded. 🔵 **`8` are shelved below; `8` were measured
+and DECLINED, and the declines are in the table after it — because a decline with its bytes attached
+is the half of this pass a client engagement actually needs.**
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| nanteiu-pronunciation-model | https://github.com/kwmt/nanteiu-pronunciation-model | 🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,358 B`, `sha256₁₂ cfc7749b96f6`, leading-newline variant — see Finding 4) | 0 ★ / 0 | APAC | 🟢 **The only ON-DEVICE Japanese pronunciation artefact this base has measured.** A wav2vec2 phoneme model converted to ONNX and int8-quantised (Conv layers excluded), shipped with `vocab.json` mapping CTC output ids to **eSpeak phoneme labels**. 🔵 **Its `README` is worth more than its `0★` suggests: it documents WHY the distribution repository must be public — a private repo's Release assets `404` without auth, and embedding a read token in an APK grants repo-wide read once the APK is unpacked.** 🔴 **The application itself is closed; this repository is the model-build recipe and its distribution point, not a scorer you can call** |
+| PronunciationEvaluator | https://github.com/DevTae/PronunciationEvaluator | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,069 B`, `sha256₁₂ ee82ebb2fbe1`, holder `Copyright (c) 2023 Kim Taehyeon`) | 6 ★ / 0 | APAC | 🟢 **A METRIC, not an API wrapper — which makes it the most reusable row in this tier.** It proposes `Pronunciation Error Rate (PER)`: rather than scoring an IPA string with `CER`/`WER`, which count a one-character slip as a wholly different token, it vectorises each phoneme by articulatory features — consonants on `4` (place, manner, strength, voicing), vowels on `3` (height, backness, lip shape) — and returns a similarity. 🔵 **This is the piece every row in `p853`'s tier assumed and none of them supplied: a distance function that knows `/b/` is nearer `/p/` than `/ʃ/`.** 🔴 **Korean-published, last pushed `2023-12-05`, and it refutes `853-G6`'s reading that APAC's open speech supply is Chinese-published** |
+| gato-zen-speech-eval-zh | https://github.com/diGit-hub/gato-zen-speech-eval-zh | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,082 B`, `sha256₁₂ 72ec4f3c4c7b`, holder `Copyright (c) 2026 Gato Zen Speech Eval Team`) | 1 ★ / 0 | LATAM | 🟢 **The single most useful row this pass found, and it is a LATAM×APAC crossover no English query could have surfaced.** A Mandarin pronunciation-assessment engine that is **CPU-only, offline, no GPU, no neural fine-tune, no large dataset**, returning a three-way decision (`correct` / `incorrect` / `uncertain`) with per-syllable initial, final and tone scores. 🔵 **Two properties make it a template rather than a curiosity: (a) it is built to a declared hardware target — an Intel i3-1215U, `16 GB` shared with the OS, no GPU, a `2`-second latency budget per evaluation — which is a school laboratory, not a datacentre; (b) its phoneme-confusion model is calibrated for `L1 = pt-BR` and the engine is PARAMETERISED by L1 (`pt-br` / `en` / `es` / `other`).** 🔴 **An `uncertain` verdict is a feature and must be surfaced to the learner, not rounded to a pass** |
+| yomori (読守) | https://github.com/Altria1979/yomori | 🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`) | 1 ★ / 0 | APAC | 🟢 **A local-first READING workspace, which is the half of language learning this base's speech tier does not touch.** Ingests PDF, Office documents, Markdown and web text, renders them readable, then layers sentence-level translation, vocabulary, grammar, nuance and audio, ending in review material. Next.js 16 / React 19 / TypeScript 5. 🔵 **For a studio it is the clearest worked example of "document in, graded study object out" under a permissive grant** |
+| SpeechTeach (backend) | https://github.com/dapontepinheiro/speechteach_back | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,080 B`, `sha256₁₂ 5d66e2dcda8a`, holder `Copyright (c) 2025 Artur Da Ponte Pinheiro`) | 0 ★ / 0 | LATAM | 🟡 **Shelved as the pt-BR REFERENCE SHELL, and its limit is the point.** A Brazilian-authored English-pronunciation practice backend: levelled phrase bank, TTS model pronunciation, accounts, streaks and statistics. 🔴 **The scoring itself is `ms_speech.py` — the Microsoft Azure Speech SDK. The permissive code is the application around a METERED COMMERCIAL SCORER.** 🔵 **This is `853-G5` seen from the supply side: pt-BR speaking practice exists in the open, and every instance of it rents its judgement. Read it for the shell, replace the scorer** |
+| example_of_azure_pronunciation_assessment | https://github.com/YutaroOgawa/example_of_azure_pronunciation_assessment | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,069 B`, `sha256₁₂ 9cbe56bf56a5`, holder `Copyright (c) 2021 Yutaro Ogawa`) | 3 ★ / 0 | APAC | 🟡 **A REFERENCE row, shelved for what it proves rather than what it runs.** The documented minimal path for driving Azure Cognitive Services pronunciation assessment, in Japanese. 🔴 **Last pushed `2021-12-24` — the oldest row filed this pass, and `5` years is several Azure SDK generations.** 🔵 **Its value is as the comparison baseline: it is what the `gato-zen` and `nanteiu` rows above exist to avoid** |
+| english_reading | https://github.com/shutouyusei/english_reading | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,061 B`, `sha256₁₂ d60a49fc83ec`, holder `Copyright (c) 2026 yaai`) | 3 ★ / 0 | APAC | 🟡 **A TOEFL-format reading trainer: click a word, get a Japanese gloss, push the card to Anki in place.** 🟢 **The Anki hand-off is the reusable idea — it ends an exercise in the learner's OWN long-term review system rather than in the vendor's.** 🔴 **Its own `README` declares the material unofficial and AI-GENERATED, so it is a UX pattern to copy and not a content source to ship** |
+| مصحف الشاملة / quran-alshamela | https://github.com/sovereignempirex-ux/quran-alshamela | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,098 B`, `sha256₁₂ 13c5a64ccfa9`, holder `Copyright (c) 2026 عمر (Omar) — مصحف الشاملة`) | 1 ★ / 1 | EMEA | 🟡 **The ONLY permissively licensed Arabic row this pass could find, and it is honestly described.** A serverless Quran application: recitation playback, tafsir, memorisation tracking, a daily `wird` and reading statistics. 🔴 **Playback and tracking — NOT assessment. It does not score a recitation and does not claim to.** 🔵 **Shelved because `854-G3` makes the permissive Arabic denominator a number a studio will ask for, and that number is `1`** |
+
+### 🔴 Finding 3 — the `8` declines, with the bytes that produced them
+
+🔴 **The most-forked repository this pass measured is also the one a studio would most easily
+get wrong.**
+
+| Repo | ★ / forks | What was measured | Why it is NOT shelved |
+|---|---|---|---|
+| https://github.com/IemProg/itqan | 🔴 **11 ★ / 8 forks** — the most-forked artefact in this tier | 🔴 **NO licence payload: `44` paths probed under `main` — `11` spellings (`LICENSE`/`LICENCE`/`License`/`Licence`/`license`/`licence`/`COPYING`/`Copying`/`copying`/`NOTICE`/`notice`) × `4` extensions (none/`.md`/`.txt`/`.rst`) — every one `404`.** 🟢 **`README.md` serves `200` on the same ref, so this is a live repository with no grant, not a fetch failure.** 🔵 **Graded with this base's OWN instrument rather than by eye:** `p1060-readme-vs-payload/readme_claim.py` returns `MIT  0  BADGE  ![License: MIT](https://img.shields.io/badge/License-MIT-gold.svg)` | 🔴 **The badge is a HARDCODED `shields.io` static image — not the dynamic `shields.io/github/license/…` endpoint, which would have rendered the absence — and it links to a relative `LICENSE` that does not exist.** 🔴 **`CONTRIBUTING.md`, linked by the badge row beside it, also `404`s.** 🔵 **`p1052`'s rule was applied, not bypassed: *a badge is a hint to RE-PROBE, not a verdict.* The re-probe was run at `44` paths and returned nothing, so the verdict is `NO-PAYLOAD`** — a stated grant that was never made. 🔴 **An on-device, privacy-preserving tajweed app with `8` forks propagating a grant that does not exist** → `854-G3` |
+| https://github.com/ahmedezz33/compactshakkil | 0 ★ / 0 | 🔴 **GitHub's field says `NOASSERTION`. The bytes say `# PolyForm Noncommercial License 1.0.0`** (`main/LICENSE`, `4,563 B`, `sha256₁₂ ffcca38841ad`) | 🔴 **NONCOMMERCIAL. Arabic diacritisation (`تشكيل`) is a genuine gap-filler for the recitation tier, and this one may not enter a paid delivery at all.** 🔵 **`853-G2`'s class, in the direction that costs money: a `NOASSERTION` read as "unknown, probably fine"** → `854-G4` |
+| https://github.com/4feel/Flashcards | 0 ★ / 0 | 🟡 **MIT — byte-read** (`main/LICENSE`, `1,106 B`, `sha256₁₂ fb3ca4a837f5`) 🔴 **but the holder line reads `Copyright (c) 2015-present 650 Industries, Inc. (aka Expo)`** | 🔴 **`853-G3`'s class with its MECHANISM finally identified: this is not a careless copy-paste, it is SCAFFOLD INHERITANCE — `create-expo-app` writes Expo's own `LICENSE` into the generated project and the author never replaced it.** 🟢 **Confirmed with this base's instrument: `readme_claim.py` returns `README-SILENT`, so the repository makes no claim of its own anywhere.** 🔴 **The grant is real MIT text licensed by a party with no relation to this code; a notices file built by copying holders ships an attribution to Expo** |
+| https://github.com/mohammedjaferalshouha/quran-kareem-android | 1 ★ / 0 | 🔴 **GPL-3.0 — byte-read** (`main/LICENSE`, `35,141 B`, `sha256₁₂ 589ed823e9a8`) | 🔴 Copyleft; outside this shelf's licence set. 🟢 **Pushed `2026-11-14`, two days before measurement — the freshest Arabic artefact found** |
+| https://github.com/xaepudin/lafzi | 0 ★ / 0 | 🔴 **GPL-3.0 — byte-read** (`main/LICENSE`, `35,149 B`, `sha256₁₂ 3972dc9744f6`) | 🔴 Copyleft. 🔵 **Indonesian Qur'an search by LATIN-script Indonesian pronunciation — a transliteration-matching idea worth knowing even though the grant blocks reuse** |
+| https://github.com/CarlosFigueroaPicado/Aikukisna | 0 ★ / 0 | 🔴 **NO licence file** (`12` paths probed, all `404`) | 🔴 **The most painful decline of the pass.** An Android language-learning app explicitly targeting **rural students**, with offline operation, dictionary, pronunciation, voice and image recognition, AI tutoring and cultural content — Clean Architecture, Jetpack Compose, Hilt, Room, Supabase. 🔵 **This is the LATAM brief, built, by a LATAM author — and with no grant it cannot be touched** |
+| https://github.com/emilce-robles/ISPC-Procesamiento-del-Habla-PronuncIA | 0 ★ / 0 | 🔴 **NO licence file** (`12` paths probed, all `404`) | 🔴 **An Argentine institute's Spanish pronunciation-assessment system. Part of why `853-G5` survives its native-language re-probe** |
+| https://github.com/HOJEONGKIMM/ko-pronounce-ai | 0 ★ / 0 | 🔴 **NO licence file** (`12` paths probed, all `404`) | 🔴 Korean pronunciation-assessment API on Wav2Vec2 + FastAPI — the architecture a studio would reach for, with no grant to reach with |
+
+### 🔵 Finding 4 — the smallest presentation fold this base has measured: ONE byte
+
+🟢 **Four Apache-2.0 payloads were byte-read this pass and they fall into `2` sha256 buckets that
+differ by a single character.**
+
+| Bucket | Bytes | `sha256₁₂` | Rows carrying it |
+|---|---|---|---|
+| A | `11,358` | `cfc7749b96f6` | `kwmt/nanteiu-pronunciation-model`, `k2-fsa/sherpa-onnx` |
+| B | `11,357` | `c71d239df917` | `Altria1979/yomori`, and `speechbrain/speechbrain` as filed at `p853` |
+
+🟢 **The delta, measured with `diff` and `od -c`, is a single LEADING NEWLINE at byte `0`** —
+`diff A B` reports exactly `1d0`. 🔵 **Same legal text, same family, same tier, two hashes.**
+🔴 **A fifth payload makes the point harder: `alphacep/vosk-api` serves `COPYING` at `10,173 B`,
+which is Apache-2.0 with the terms complete — it ends at `END OF TERMS AND CONDITIONS` — and the
+`APPENDIX: How to apply the Apache License to your work` removed.** 🔵 **So a byte-band classifier
+keyed near `11.3 kB` silently drops a correct, complete Apache grant.** 🟢 **`p378`'s
+presentation-fold thesis holds, at both ends of the scale: `p378` found it in re-wrapping, this
+pass finds it at `1` byte and at `-1,184` bytes.** → `854-G5`.
+
 ## 🟢 Fifty-eighth pass (`p853`, 2026-11-16) — **`12` agent rows (`405` → `417`): the SPOKEN-LANGUAGE ASSESSMENT tier, `34` of `57` measured addresses genuinely NEW to this base — and the tier's code is permissive while the DATA every row trains on is not**
 
 🟢 **`p851` measured the generic leg at `0` new of `10`. `p852` measured the artefact leg at `3` new
@@ -3483,7 +3569,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 417 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 425 rows
 
 ### Filed by `p853` (2026-11-16) — `12` rows: the SPOKEN-LANGUAGE ASSESSMENT tier, every grant byte-read today, `0` copyleft, and every row's CORPUS dependency stated beside its licence
 

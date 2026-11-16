@@ -4,6 +4,95 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — fifty-ninth pass (`p854`) — **`4` trends (`T181`–`T184`): research yield turns out to be a function of query LANGUAGE, on-device scoring converges as the answer to three regulatory regimes at once, the non-English estate is real but unconsolidated, and APAC's two binding AI laws are now IN FORCE**
+
+## 🟢 `T181` — yield is a function of the query's LANGUAGE, not only its altitude
+
+🟢 **`T177` established that lowering query ALTITUDE restores yield: product → artefact → technical
+tier gave `0%` → `18%` → `60%`. 🔴 This pass holds altitude constant and varies LANGUAGE, and the
+effect is larger than the altitude effect.**
+
+| Pass | Axis varied | Channel | Returned | New | Yield |
+|---|---|---|---|---|---|
+| `p851` | altitude | generic legs, English | `10` | `0` | 🔴 `0%` |
+| `p852` | altitude | artefact nouns, English | `17` | `3` | 🟡 `18%` |
+| `p853` | altitude | tier nouns, English | `57` | `34` | 🟢 `60%` |
+| 🟢 **`p854`** | 🟢 **LANGUAGE** | the `4` mandated generic legs, English | `12` | `0` | 🔴 `0%` |
+| 🟢 **`p854`** | 🟢 **LANGUAGE** | `発音 評価` · `تلاوة` · `avaliação de pronúncia` · `evaluación de pronunciación` · `발음 평가` | `17` | 🟢 **`17`** | 🟢 **`100%`** |
+
+🔵 **The mechanism is mundane and that is what makes it general: GitHub's repository index is
+largely a TEXT index over names and descriptions, and a developer writing a tool for Brazilian
+learners describes it in Portuguese.** 🔴 **An English-only research channel therefore does not
+sample a smaller version of the field — it samples a DIFFERENT field, and the part it misses is
+precisely the part placed in a region.** 🟢 **For a global studio this is the operative correction:
+the regional sections of this base were being populated by an instrument that could not see the
+regions.** → `854-G1`.
+
+## 🟢 `T182` — on-device scoring stops being a bandwidth workaround and becomes a COMPLIANCE architecture
+
+🟢 **Four independent regimes, read this pass, point at the same build:**
+
+| Regime | Status as measured | What it does to audio leaving the device |
+|---|---|---|
+| 🇰🇷 Korea `AI Basic Act` | 🟢 **in force `2026-01-22`**; `2026` reported as a grace/pilot year focused on guidance | education named a **high-impact** domain |
+| 🇻🇳 Vietnam AI law | 🟢 **in force `2026-03-01`** | education in the **high-risk** class ⇒ **pre-deployment registration** in the National AI Database |
+| 🇪🇺 EU AI Act | 🟡 enforcement machinery live from `2026-08-02`; stand-alone high-risk duties reported as slipping to **`2027-12-02`** (political agreement `2026-05-07`, formal adoption pending) | admissions, grading and proctoring are **Annex III high-risk** |
+| 🇺🇸 California `AB 1159` | 🟡 bill | would **bar student data from training AI models** |
+
+🔵 **The architectural consequence is one sentence: a pronunciation pipeline that scores on the
+handset and transmits only a grade removes the transfer each of those regimes regulates.**
+🟢 **And it is not a hypothetical build — `p854` shelved the pieces: `onnxruntime` and
+`sherpa-onnx` to execute, `whisper.cpp` and `vosk-api` to recognise, `piper` to speak,
+`PronunciationEvaluator` to score, `gato-zen-speech-eval-zh` as the worked CPU-only example with
+a `2`-second budget on an i3.** 🔴 **The honest caveat: on-device removes the TRANSFER, not the
+duty. Grading remains high-risk whoever computes it, and the AI-literacy and transparency
+obligations are untouched by architecture.** → recipe `P84`.
+
+## 🟡 `T183` — the non-English estate is REAL and UNCONSOLIDATED, and that is a sharper finding than either a nil or a market
+
+🟢 **Measured, not asserted — the star distribution of the `17` non-English addresses found:**
+🔴 **`11` of `17` sit at `0★`; the maximum in the entire set is `11★`** (`IemProg/itqan`, which
+ships no licence). 🟡 **The most substantial engineering found — `gato-zen-speech-eval-zh`, a
+CPU-only Mandarin scorer with a pt-BR-calibrated confusion model — has `1★`.**
+
+🔵 **Two readings, and this base should hold both:** 🟢 **(a) opportunity — there is no incumbent
+open project in Japanese, Portuguese, Spanish, Korean or Arabic pronunciation assessment, so a
+studio that publishes a competent one becomes the reference implementation at a cost measured in
+weeks;** 🔴 **(b) risk — a `0★` repository has no community, no release discipline and in most
+cases here no licence, so it is a SOURCE OF IDEAS and not a dependency.** 🔴 **`4` of the `8` rows
+this pass declined were declined for having no grant at all, including the two most
+deployment-ready artefacts in the set.**
+
+## 🔴 `T184` — the regional picture hardened this pass, and LATAM's gap is now a pair of numbers rather than an adjective
+
+🟢 **What the four mandated regional legs returned that this base did not already hold:**
+
+🔵 **LATAM** — UNESCO IESALC's `2026` study (`200` institutions, `19` countries): 🔴 **`87%` of
+institutions use AI in at least one area, `26%` have a formal AI strategy, `55%` have no AI budget
+at all.** The Digital Education Council's `2026` LATAM survey: `92%` of students and `79%` of
+faculty actively using AI. Cetic.br, via UNESCO: `53%` of Brazilian school administrators use AI,
+🔴 **`22%` report their school has any guidelines.** 🟢 **A Universidad de los Andes count puts
+`716` AI-related regulatory instruments across `23` countries — fragmentation, not absence.**
+🟢 **The IDB's November `2026` report estimates broad AI adoption could add `5.1%` to regional GDP
+over a decade.** 🔵 **Adoption minus governance is the whole LATAM opportunity in one subtraction:
+`87%` use, `26%` strategy.**
+
+🔵 **North America** — ~`134` AI-in-education bills across `31` states in `2026`; North Carolina's
+`Session Law 2026-41` requires AI-literacy standards, a state model policy by `2026-12-31` and
+local policies by `2027-06-30`; a `K-12 AI Literacy and Readiness Act of 2026` advanced in
+committee. 🔵 **The pattern is literacy-and-guardrails, not adoption mandates — which prices
+teacher-facing enablement above student-facing automation.**
+
+🔵 **EMEA** — UK DfE generative-AI product safety standards (January `2026`) and Ofqual
+coursework-integrity resources (March `2026`) are the concrete procurement gates; the UAE's KHDA
+has issued responsible-AI guidance to Dubai private schools. 🔴 **The EU high-risk date remains
+UNSETTLED across sources and this base continues to carry it as contested.**
+
+🔵 **APAC** — 🟢 **the region now has two BINDING laws, both in force this year** (Korea
+`2026-01-22`, Vietnam `2026-03-01`), against voluntary frameworks in Japan and Singapore and
+TEQSA-mandated institutional action plans in Australia. 🔴 **"APAC" as a single procurement posture
+is no longer defensible.**
+
 ## 🟢 `2026-11-16` — fifty-eighth pass (`p853`) — **`4` trends (`T177`–`T180`): the speaking-assessment market splits from the tutoring market, the DATA layer becomes the licence frontier, EMEA's AI Act clock slips again, and LATAM's adoption-to-governance gap is now measured in a number**
 
 ## 🟢 `T177` — saturation is a property of the QUERY'S ALTITUDE, not of the field

@@ -4,6 +4,132 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-ninth pass (`p854`, 2026-11-16) — **the market, re-placed by region after the NON-ENGLISH channel changed what each region is known to contain — and two of this base's published regional nils are WITHDRAWN here**
+
+🔴 **The correction comes first, because a withdrawn nil is a change to this base's advice, not a
+footnote.** `p853` published four regional nils from English-language queries. `p854` re-ran the
+same fields in the regions' own languages.
+
+| Region | `p853`'s published finding | 🔬 `p854`'s native-language re-probe | Status |
+|---|---|---|---|
+| **APAC** (Japanese) | `japanese pronunciation learning app open source` → 🔴 **`0` results** | `発音 評価` → 🟢 **`6` results**: `kwmt/nanteiu-pronunciation-model` (**Apache-2.0**, on-device ONNX phoneme model), `YutaroOgawa/example_…` (**MIT**), `Altria1979/yomori` (**Apache-2.0**) | 🔴 **WITHDRAWN** |
+| **LATAM** (Portuguese) | `portuguese pronunciation speech assessment` → 🔴 **`0` results** | `avaliação de pronúncia` → 🟢 **`5` results**, `3` **MIT**, incl. `diGit-hub/gato-zen-speech-eval-zh` (CPU-only scorer, pt-BR-calibrated confusion model) and `dapontepinheiro/speechteach_back` | 🔴 **WITHDRAWN** |
+| **EMEA** (Arabic) | `arabic quran recitation pronunciation` → `3`, all unlicensed | `تلاوة` → 🟡 **`54` results**, but `تقييم التلاوة` *(recitation **assessment**)* → 🔴 **`0`** | 🟡 **REFINED** |
+| **LATAM** (Spanish) | no permissive Spanish scorer (`853-G5`) | `evaluación de pronunciación` → `6` results, 🔴 **`0` with any licence file** | 🟢 **UPHELD** |
+| **APAC** (Korean — not previously probed) | — | `발음 평가` → 🟢 **`8` results**, incl. `DevTae/PronunciationEvaluator` (**MIT**, articulatory-feature PER metric) | 🟢 **NEW REGIONAL SUPPLY** |
+
+🔵 **`853-G6` read the Mandarin-only supply as "APAC's open speech supply is Chinese-published, not
+pan-Asian". 🔴 That reading is now withdrawn too: Japanese and Korean permissive supply exists and
+was invisible only to an English query.**
+
+### 🔴 The informed gaps, stated before the opportunities — because silence looks exactly like coverage
+
+| Gap | Measured this pass | Region |
+|---|---|---|
+| 🔴 **No permissive Spanish pronunciation scorer** | `evaluación de pronunciación` → `6` repositories, **`0`** carrying any licence file; `aprendizaje de idiomas inteligencia artificial` → `3`, one MIT and substanceless | **LATAM** |
+| 🔴 **No Arabic recitation ASSESSMENT, permissive or otherwise** | `تقييم التلاوة` → **`0`**; `تجويد قرآن` → **`0`**; `تعلم اللغة العربية ذكاء اصطناعي` → **`0`**. The `54`-result `تلاوة` set is playback, memorisation and mushaf apps | **EMEA** |
+| 🔴 **The most-forked Arabic artefact ships NO grant** | `IemProg/itqan`, `11★`/`8` forks, advertises MIT in a static badge; `44` licence paths probed, all `404` | **EMEA** |
+| 🔴 **The LATAM rural-education app that is exactly the brief ships NO grant** | `CarlosFigueroaPicado/Aikukisna` — offline Android, rural students, dictionary, pronunciation, voice and image recognition, AI tutoring; `12` paths probed, all `404` | **LATAM** |
+| 🟡 **Indonesian supply exists and is unusable** | `pelafalan bahasa` → `6` results, all `0★`, best grant is GPL-3.0 | **APAC** |
+| 🔴 **The Chinese-language channel is NOISE-DOMINATED at this altitude** | `发音评测` → `88` results whose top hits are `funNLP` (`84629★`) and a personal book list (`26166★`) — substring matching across a large CJK index | **APAC** |
+
+### 🔴 And one gap about this base's own instruments, not the market
+
+🔴 **`openeducat/openeducat` — a slug this pass GUESSED from prose — scored `UNGRADED` on the
+presence instrument (`27` hits, bare-slug form), and the repository DOES NOT EXIST** (first-party
+search `total_count: 0`; `raw` `404`). 🟢 **Caught by measurement before a row was written.** → `854-G6`.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The policy shape prices the work: ~`134` AI-in-education bills across `31` states in `2026`,
+and the pattern is literacy, transparency and guardrails rather than adoption mandates.**
+🔵 **North Carolina's `Session Law 2026-41` is the most procurement-relevant single instrument
+found — AI-literacy standards, a state model policy due `2026-12-31`, local district policies due
+`2027-06-30`** — 🟢 **which is a dated, funded compliance deadline with a district-by-district
+delivery shape, and that is a studio engagement.**
+
+🟡 **The opportunity is TEACHER-FACING and EVIDENCE-FACING, not student-facing automation.**
+🔴 **California's `AB 1159` would bar student data from training models and New York's `A 9190`
+would restrict classroom AI below grade `9`** — both push value toward systems that demonstrably
+do not retain or train on student data. 🟢 **Which is the same architecture `T182` names: scoring
+that happens locally and ships a grade.** 🔵 **Pair `krayin/laravel-crm` (MIT) on the admissions
+side with an on-device assessment path, and the data-residency story is the differentiator rather
+than the model.**
+
+### EMEA
+
+🔴 **The region's measured supply gap is the sharpest on this page and it is MEA, not Europe.**
+🟢 **Arabic recitation and tajweed learning is a mass-market category with institutional demand:
+`54` repositories answer `تلاوة`, with a `11★`/`8`-fork flagship.** 🔴 **Not one of them scores a
+recitation, and the flagship ships no licence** (`854-G3`). 🟢 **So the EMEA opportunity is
+unusually well defined: the demand artefacts exist and can be studied, the scoring layer does not
+exist in any language, and the only permissive Arabic row this base holds is a playback app.**
+
+🔵 **Europe's half is a PROCUREMENT-GATE opportunity rather than a supply gap.** 🟢 **The concrete,
+dated gates found this pass are the UK DfE's generative-AI product safety standards (January
+`2026`) and Ofqual's coursework-integrity resources (March `2026`)** — 🔵 **a product that arrives
+already mapped to those documents wins on evaluation time.** 🔴 **The EU AI Act's education
+high-risk date remains contested across sources (`2026-08-02` enforcement machinery vs a reported
+slip of stand-alone high-risk duties to `2027-12-02`); this base does not resolve it and no bid
+should assume the later date.** 🔵 **The UAE's KHDA guidance to Dubai private schools is the
+clearest Gulf entry point.**
+
+### APAC
+
+🔴 **Stop treating APAC as one posture: it now contains two BINDING AI laws in force this year and
+two explicitly voluntary regimes.** 🟢 **Korea's `AI Basic Act` (in force `2026-01-22`) names
+education high-impact, with `2026` reported as a guidance-focused grace period — a `12`-month
+window to arrive compliant before enforcement bites.** 🟢 **Vietnam's AI law (in force
+`2026-03-01`) puts education in its high-risk class and requires PRE-DEPLOYMENT REGISTRATION in a
+National AI Database** — 🔵 **a registration step is a delivery milestone and must be in the plan,
+not discovered at go-live.** 🟡 **Japan and Singapore remain voluntary; Australia's TEQSA requires
+every higher-education provider to file an institutional action plan on generative AI, which is a
+document-production engagement in itself.**
+
+🟢 **The supply news is good and it is new: this region's permissive on-device assessment supply
+exists in Japanese and Korean** — `nanteiu-pronunciation-model` (Apache-2.0), `yomori`
+(Apache-2.0), `PronunciationEvaluator` (MIT) — 🔴 **all at `0`–`6★`, so they are starting points,
+not dependencies.** 🔵 **Korea's combination of a high-impact designation and a permissive local
+scorer is the single best-matched opportunity on this page.**
+
+### LATAM
+
+🟢 **The opportunity is the subtraction: `87%` of surveyed institutions use AI in at least one
+area, `26%` have a formal AI strategy, `55%` have no AI budget** (UNESCO IESALC `2026`, `200`
+institutions across `19` countries). 🔵 **`92%` of students and `79%` of faculty are already using
+AI (Digital Education Council LATAM `2026`), and in Brazil `53%` of school administrators use it
+while `22%` have any guidelines (Cetic.br via UNESCO).** 🔴 **The demand is not the thing to sell.
+The GOVERNANCE is: strategy, guidelines, data-rights schedules and evaluation — work that `55%` of
+these institutions have no budget line for, which is a procurement problem to solve as part of the
+sale.** 🟢 **A Universidad de los Andes count of `716` AI regulatory instruments across `23`
+countries means fragmentation, so a multi-country rollout needs a per-jurisdiction matrix rather
+than one regional policy.** 🟢 **The IDB's November `2026` estimate — AI could add `5.1%` to
+regional GDP over a decade — is the macro argument for the funding conversation.**
+
+🟡 **On supply, LATAM is now better placed than `p853` believed but still the thinnest region.**
+🟢 **pt-BR assessment supply EXISTS** — `3` MIT repositories, including a CPU-only scorer whose
+phoneme-confusion model is calibrated for Brazilian Portuguese L1 — 🔴 **but every Spanish result
+measured carries no licence at all, and the one app built for the actual brief (rural, offline,
+indigenous-language-capable) ships no grant.** 🔵 **So `853-G5`'s remedy stands and is now
+cheaper: the es-`419` scorer still has to be BUILT, but `gato-zen-speech-eval-zh` supplies a
+working L1-parameterised architecture to build it from rather than from a blank page.**
+
+### Global
+
+🟢 **The cross-regional finding of this pass is a research-method finding and it re-prices every
+other region on this page: an English-only query channel does not sample a smaller version of this
+field, it samples a different one** (`T181`, `0%` vs `100%` yield in the same hour).
+🔵 **For a studio the operational consequence is concrete — a client's domain should be searched in
+the client's language before anyone concludes the open-source supply is thin.**
+
+🔴 **The second global finding is a licensing one and it cuts both ways in the same pass:
+GitHub's `NOASSERTION` field hid a BSD grant on a `5180★` Meta project (`pytorch/executorch`) and
+hid a NONCOMMERCIAL grant on an Arabic diacritisation library (`ahmedezz33/compactshakkil`).**
+🟢 **A candidate pipeline that filters on the SPDX field alone is wrong in both directions, and
+only the bytes resolve it** (`854-G4`).
+
 ## 🟢 Fifty-eighth pass (`p853`, 2026-11-16) — **the SPOKEN-LANGUAGE market, placed by region — and the regional legs' real yield this pass is a measured GAP, not a player list**
 
 🟢 **All four mandated regional legs were run verbatim** (`AI education {North America|EMEA|APAC|LATAM} 2026 adoption regulation players`),
@@ -28,7 +154,7 @@ finding about the market rather than about the search:**
 pattern across them is one sentence: the open spoken-language estate is ENGLISH-first and
 Mandarin-second, and every other language is a localisation project rather than an adoption.**
 
-## Opportunities by region
+## Opportunities by region — as filed by `p853` (historical, superseded above)
 
 🟢 **Each subsection names what this pass SHELVED that the region can be sold on, and refuses to
 name an opportunity this base cannot supply.** 🔵 **The previous pass's block is preserved below

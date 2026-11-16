@@ -142,6 +142,9 @@ SHELVES = [
         # is an omission, a declared one is a decision.
         "| Agent | Repo | License | Stars | What it does |",            # copyleft
         "| Candidate | Repo | Actual license | Stars | Why rejected |",  # rejected
+        # 🟢 p854: the DECLINES table of the non-English pass -- rows measured and refused,
+        # with the probe that refused them.  Not counted: a decline is not a holding.
+        "| Repo | \u2605 / forks | What was measured | Why it is NOT shelved |",
     ]),
     ("repos/foundations.md", [
         "| Repo | License | Stars | Notes |",
@@ -164,6 +167,10 @@ SHELVES = [
         "| Platform | Operated by | Country | Agent surface found this pass | Licence | Stars |",
         "| Platform | Incumbent where | Open agent surface found | License | Stars |",
         "| Library | Repo | License | Stars | Use when |",
+        # 🟢 p854: the licence-REFUTATION table -- a secondary source's licence claim set
+        # against the bytes.  Not counted: it grades CLAIMS, and its rows are already
+        # shelved (or refused) in the counted table beneath it.
+        "| Platform | Repo | The source's claim | \U0001f52c **The bytes, `2026-11-16`** | Verdict |",
     ], []),
 ]
 

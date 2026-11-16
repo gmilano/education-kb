@@ -4,6 +4,47 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-ninth pass (`p854`) — 🟢 **`8` entrants from a channel this base had never used: the NON-ENGLISH query. `17` of `17` addresses it returned were absent from the whole non-archive corpus, against `0` of `12` for the mandated English legs run in the same hour.**
+
+🟢 **Queries run verbatim this pass.** Mandated English legs (WebSearch):
+`top open source AI agents education 2026 github MIT` · `github trending education AI 2026` ·
+`open source platform education ERP CRM MIT Apache` · `AI education industry trends 2026` ·
+and the four regional legs `AI education {North America|EMEA|APAC|LATAM} 2026 adoption regulation players`.
+🟢 **Non-English legs (first-party `search/repositories`, star-sorted):**
+`発音 評価` · `日本語 学習 AI` · `تقييم التلاوة` · `تجويد قرآن` · `تلاوة` · `نطق العربية` ·
+`تعلم اللغة العربية ذكاء اصطناعي` · `avaliação de pronúncia` · `pronúncia português aprendizagem` ·
+`evaluación de pronunciación` · `aprendizaje de idiomas inteligencia artificial` · `발음 평가` ·
+`发音评测` · `pelafalan bahasa`.
+
+| Channel | Returned | NEW | Yield |
+|---|---|---|---|
+| `4` mandated English generic legs | `12` | `0` | 🔴 **`0%`** |
+| `5` non-English legs (ja · ar · pt · es · ko) | `17` | 🟢 **`17`** | 🟢 **`100%`** |
+
+🔴 **Three legs returned a TRUE nil even in the native language** and are recorded so they are not
+read as coverage: `تقييم التلاوة` → `0` · `تجويد قرآن` → `0` ·
+`تعلم اللغة العربية ذكاء اصطناعي` → `0` · `pronúncia português aprendizagem` → `0`.
+🔵 **`发音评测` returned `88` results that are NOISE at this altitude** — its top hits are `funNLP`
+(`84629★`) and a personal book list (`26166★`), substring matches across a large CJK index.
+
+🟢 **Shelved to [`agents/top.md`](top.md) this pass (`8`):** `kwmt/nanteiu-pronunciation-model`
+(Apache-2.0, on-device ONNX phoneme model) · `DevTae/PronunciationEvaluator` (MIT, articulatory
+`PER` metric) · `diGit-hub/gato-zen-speech-eval-zh` (MIT, CPU-only Mandarin scorer with a pt-BR
+L1 confusion model) · `Altria1979/yomori` (Apache-2.0) · `dapontepinheiro/speechteach_back` (MIT) ·
+`YutaroOgawa/example_of_azure_pronunciation_assessment` (MIT) · `shutouyusei/english_reading` (MIT) ·
+`sovereignempirex-ux/quran-alshamela` (MIT).
+
+🔴 **Declined with their bytes (`8`):** `IemProg/itqan` (`11★`/`8` forks — MIT BADGE, `44` licence
+paths probed, all `404`) · `ahmedezz33/compactshakkil` (GitHub `NOASSERTION`, bytes =
+**PolyForm Noncommercial 1.0.0**) · `4feel/Flashcards` (MIT text, holder **650 Industries / Expo** —
+scaffold inheritance) · `mohammedjaferalshouha/quran-kareem-android` (GPL-3.0) · `xaepudin/lafzi`
+(GPL-3.0) · `CarlosFigueroaPicado/Aikukisna`, `emilce-robles/ISPC-…-PronuncIA`,
+`HOJEONGKIMM/ko-pronounce-ai` (no licence file).
+
+🔴 **Two of `p853`'s published regional nils are WITHDRAWN by this channel** (Japanese `0`→`6`,
+Portuguese `0`→`5`); 🟢 **two are UPHELD and sharpened** (Arabic: `54` results for `تلاوة`, `0` for
+recitation *assessment*; Spanish: `6` results, `0` with any grant). → `854-G1`, `854-G2`, `854-G7`.
+
 ## `2026-11-16` — fifty-eighth pass (`p853`) — 🟢 **`12` entrants, and for the first time in three passes the MAJORITY are genuinely new to this corpus: `34` of `57` measured addresses were absent from the whole non-archive base. The channel that did it is a TIER noun, one level below the artefact nouns `p852` used.**
 
 🟢 **Queries run verbatim this pass** (first-party `search/repositories`, star-sorted, plus

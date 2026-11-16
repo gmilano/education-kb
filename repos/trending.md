@@ -4,6 +4,38 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-ninth pass (`p854`) — 🟢 **`10` foundation rows: the ON-DEVICE INFERENCE layer — `4` MIT · `2` Apache-2.0 · `1` BSD · `2` GPL-3.0 · `1` composite — of which `3` were new to this corpus and `7` had sat `UNGRADED` since before this pass**
+
+🟢 **The channel, stated so it can be re-run:** the layer was not found by a trending query, it was
+DERIVED — every row `p854` shelved on [`agents/top.md`](../agents/top.md) runs on a handset or a
+GPU-less school PC, so the pass asked what executes them and probed that stack directly, then ran
+`compose/code/p853-slug-presence/` over the candidates before writing anything.
+
+| Verdict from the presence instrument | Count | Rows |
+|---|---|---|
+| 🟢 `NEW` | `3` | `microsoft/onnxruntime` · `pytorch/executorch` · `bootphon/phonemizer` |
+| 🟡 `UNGRADED` → promoted | `7` | `k2-fsa/sherpa-onnx` · `ggml-org/whisper.cpp` · `alphacep/vosk-api` · `openai/whisper` · `rhasspy/piper` · `espeak-ng/espeak-ng` · `kaldi-asr/kaldi` |
+| `SHELVED` | `0` | — |
+
+🔴 **That `microsoft/onnxruntime` (`22327★`, MIT) was absent from this entire corpus after `58`
+passes is the measurement, not an aside** — the base had graded the speech layer at `p853` and
+never asked what RUNS it.
+
+🟢 **Licence findings worth carrying forward:**
+🔴 **`pytorch/executorch` — GitHub `NOASSERTION`, bytes `BSD License` (`1,774 B`,
+`sha256₁₂ c58707ea5d5c`, Meta Platforms)**: new to this corpus only because a metadata field hid it.
+🔴 **`kaldi-asr/kaldi` — `COPYING` is `163` lines of BESPOKE legal notice prepended to canonical
+Apache-2.0, whose title block starts at line `164`**, which is a sufficient explanation for
+`853-G2`'s downstream relicensing confusion.
+🔵 **`alphacep/vosk-api` — Apache-2.0 at `10,173 B`: terms complete, `APPENDIX` removed** → `854-G5`.
+🔴 **`espeak-ng` and `bootphon/phonemizer` are GPL-3.0 and are shelved as DEPENDENCY WARNINGS** —
+`p854`'s own `nanteiu` row uses eSpeak's phoneme INVENTORY as a label set, which is not its code,
+and the two must not be conflated.
+
+🟢 **Wired into recipe `P84`** on [`compose/patterns.md`](../compose/patterns.md): `transphone` →
+`onnxruntime` → `sherpa-onnx`/`vosk` → `PronunciationEvaluator` → `piper`, `4` MIT + `3` Apache-2.0,
+`0` copyleft, `0` metered API.
+
 ## `2026-11-16` — fifty-eighth pass (`p853`) — 🟢 **`14` foundation rows: the SPEECH-PROCESSING stack (toolkits, aligners, grapheme-to-phoneme, benchmarks), `7` Apache-2.0 · `6` MIT · `1` BSD-2-Clause, `0` copyleft — the layer `57` passes of education research never queried**
 
 🟢 **The channel that returned them, stated so it can be re-run:** first-party

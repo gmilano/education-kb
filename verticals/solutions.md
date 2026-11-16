@@ -4,6 +4,41 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Fifty-ninth pass (`p854`, 2026-11-16) — **`2` platform rows (`151` → `153`): the fourteenth consecutive nil on a permissive education LMS/SIS — and this pass measured something worse than a nil, which is that the leg's OWN recommended answers are misreported by the sources recommending them**
+
+🔴 **The mandated platform leg was run verbatim** (`open source platform education ERP CRM MIT Apache`,
+WebSearch) 🔴 **and returned the same closed education set for the fourteenth consecutive pass:**
+Moodle (GPL-3.0) · Open edX (AGPL-3.0) · Canvas (AGPL-3.0) · Sakai (**ECL-2.0**) ·
+OpenEduCat (`openeducat/openeducat_erp`, already shelved) · ILIAS (GPL) · Chamilo (GPL) ·
+Frappe LMS / `frappe/education` (AGPL-3.0 / GPL-3.0). 🟢 **All already on this shelf. `0` new.**
+
+### 🔴 What is new is a MEASUREMENT of the leg's general-purpose half, and it fails in two of three cases
+
+🟡 **The leg's answer to "but what IS permissive here" was a list of general ERP/CRM platforms a
+school could adapt: Krayin (MIT), iDURAR (MIT), Huly (Apache-2.0), Corteza (Apache-2.0), OFBiz
+(Apache-2.0).** 🟢 **Three were byte-read this pass. Two of the three licence claims are WRONG.**
+
+| Platform | Repo | The source's claim | 🔬 **The bytes, `2026-11-16`** | Verdict |
+|---|---|---|---|---|
+| iDURAR ERP/CRM | https://github.com/idurar/idurar-erp-crm | 🔴 *"also under the MIT license"* | 🔴 **AGPL-3.0** — `master/LICENSE`, `34,230 B`, `sha256₁₂ 7800536d5087`, title line `GNU AFFERO GENERAL PUBLIC LICENSE` | 🔴 **REFUTED.** `8959 ★`. AGPL-3.0 is the one grant that reaches a HOSTED derivative — the deployment shape every school SIS takes. A studio that took the blog's word would have built a SaaS on a network-copyleft core |
+| Huly | https://github.com/hcengineering/platform | 🔴 *"licensed under Apache License 2.0"* | 🔴 **EPL-2.0** — `develop/LICENSE`, `14,197 B`, `sha256₁₂ 8c349f80764d`, title line `Eclipse Public License - v 2.0` | 🔴 **REFUTED.** `28132 ★`, default ref 🔴 **`develop`**. EPL-2.0 is a weak file-level copyleft with a patent and litigation clause — workable, but it is not Apache-2.0 and must not be filed as it |
+| Krayin CRM | https://github.com/krayin/laravel-crm | 🟢 *"licensed under MIT"* | 🟢 **MIT** — `2.2/LICENSE`, `1,078 B`, `sha256₁₂ a76aa4a4405c`, holder `Copyright 2010-2025, Webkul Software` | 🟢 **CONFIRMED.** `24168 ★`, pushed on the day of measurement. 🔴 **Default ref is `2.2` — not `main`, not `master`** |
+
+### 🟢 The `2` rows shelved, and why only `2`
+
+| Platform | Repo | Licence | Stars | What it is |
+|---|---|---|---|---|
+| Krayin CRM | https://github.com/krayin/laravel-crm | 🟢 **MIT — byte-read `2026-11-16`** (`2.2/LICENSE`, `1,078 B`, `sha256₁₂ a76aa4a4405c`, holder `Webkul Software`) | 24168 | 🟢 **The only CONFIRMED-permissive platform this leg has produced in fourteen passes, and it is a real answer to a real education problem — the ADMISSIONS pipeline.** A Laravel CRM with leads, contacts, activities, quotes, email and a workflow engine; an applicant funnel is a sales funnel with different nouns. 🔵 **Why it matters beyond its licence: admissions is explicitly Annex III high-risk under the EU AI Act and is named in several US state bills, so the system a studio puts there must be one it can read, audit and modify to the byte — which is exactly what MIT plus self-hosting buys.** 🔴 **It is NOT a student information system: no enrolment, no gradebook, no timetable. Shelved as the front door, not the building** |
+| Huly | https://github.com/hcengineering/platform | 🟡 **EPL-2.0 — byte-read `2026-11-16`** (`develop/LICENSE`, `14,197 B`, `sha256₁₂ 8c349f80764d`) 🔴 **against a widely repeated Apache-2.0 claim** | 28132 | 🟡 **Shelved as a CORRECTED row rather than a recommendation.** An all-in-one team platform — project tracking, documents, HR, virtual office — that is genuinely attractive as a faculty-operations base. 🔵 **EPL-2.0's obligation is per-FILE and triggers on distribution of source, so a modified Huly deployed as a service is far less exposed than the AGPL case above.** 🔴 **Filed chiefly so the Apache-2.0 claim stops propagating through this base** |
+
+🔵 **Why `openeducat/openeducat_erp` is not filed here despite being this leg's one true education ERP:**
+🟢 **it is already `SHELVED` (`1,085` hits).** 🔴 **But it was re-measured this pass and carries a
+trap worth recording: its default ref is **`19.0`** — Odoo version numbering — and its `LICENSE`
+(`8,241 B`, `sha256₁₂ 528f84036800`) is a POINTER, whose first line reads *"For copyright
+information, please see the COPYRIGHT file."* 🔴 **A root probe on `main` returns `404`; `master`
+and `19.0` return `200`.** 🔵 **So this row needs both a ref-set probe and a second hop to be read
+at all — two of this base's declared failure modes meeting in one `913★` repository.**
+
 ## 🟡 Fifty-eighth pass (`p853`, 2026-11-16) — **`1` platform row (`150` → `151`): the thirteenth consecutive nil on the LMS/SIS leg, broken on a DIFFERENT vertical — the self-hosted language-learning platform, which is dual-licensed and says so**
 
 🔴 **The mandated platform leg was run verbatim** (`open source platform education LMS SIS ERP MIT Apache 2026`,
@@ -809,7 +844,7 @@ platform.** 🟡 **Treat it as competitive intelligence that happens to be MIT-l
 | **AGENTIC STAR** (SoftBank, 🇯🇵) | 🔴 **Not institution-run — a hosted commercial agent platform**, developer docs at `developers.fd.agenticstar.tm.softbank.jp`, homepage `agenticstar.io`. 🟢 Its runtime SDKs `agenticstar-agentcore` (`1.0.3`) and `agenticstar-platform` (`3.3.0`, `80` releases) are public on PyPI and MIT by their wheel metadata | 🟢 **`74` MIT education agent templates, `54` catalogue ids `EDU-C2-004`…`EDU-C2-173`** — reference row [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent), `EDU-C2-028`, byte-read MIT (`1,074 B`, HEAD `71c442ebd88e`) | 🟢 **MIT** (templates and both SDKs, all byte- or metadata-verified) | 🟡 **Adopt the SPECS, not the runtime.** 🔴 Templates raise `PlatformRequired` at graph compile without a SoftBank deployment; all `74` are `0★`, unmaintained since October; the framework's advertised source repo has **zero commits** (`T89`); hard `==` pins on `langgraph`/`langchain`/`fastapi`. 🟢 **Tests run without the platform — harvest per `P61`** |
 | **AgentCore graph scaffold** (the catalogue's shared architecture) | 🔵 Not a product — the uniform structure under all `74` templates: `config/agent.yaml` manifest (`required_trust_level`, declared secrets), `src/graph/`, `src/nodes/`, `src/schemas/state.py`, `docs/02_design.md`, `docs/03_test_spec.md`, `tests/proof_of_boundary/` | 🟢 Domain nodes differ completely between ids — byte-compared across three repositories this pass: `iep_section_generator`/`regulatory_compliance` vs `affected_material_analysis`/`stakeholder_mapping` vs `bloom_level`/`difficulty_score`. Reference row [`haidang024/agentic-star-education-curriculum-change-impact-briefing-agent`](https://github.com/haidang024/agentic-star-education-curriculum-change-impact-briefing-agent) (`EDU-C2-046`, `45` files) | 🟢 **MIT** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ae3eea9ac056`) | 🟢 **This is the reusable asset.** 🔵 One scaffold, `54` real domain implementations — so a studio gets a uniform, inspectable architecture across `54` education workflows instead of `54` unrelated codebases. 🔴 The scaffold's base class ships only in the binary wheel; re-implement on LangGraph (now on `repos/foundations.md`) |
 
-## Education vertical platforms — 151 rows
+## Education vertical platforms — 153 rows
 
 ## 🟡 The MARKING-ADAPTER layer — **permissive code that reaches INTO an incumbent this shelf already carries** (new, fifty-seventh pass `p852`) (3 rows)
 

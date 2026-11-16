@@ -6,6 +6,49 @@ updated: 2026-11-16
 
 # Globant AI Studios — Education KB
 
+## Pass `p854` · `2026-11-16`
+
+🟢 **`853-G6` ended with a prescription — *"a leg written in Japanese, Arabic or Portuguese is a
+different index"* — and running it produced the largest yield gap this base has measured.**
+🔴 **Same field, same hour: the `4` mandated ENGLISH generic legs returned `12` addresses of which
+`0` were new. Five NON-ENGLISH legs returned `17` of which `17` were new.**
+🟢 **`8` agent rows (`417` → `425`), `10` foundation rows (`235` → `245`), `2` platform rows
+(`151` → `153`), `1` recipe (`P84`) with `P83-LATAM` re-costed, `4` trends (`T181`–`T184`),
+`7` gaps — `30` grants byte-read today, and all three shelves agree with their own published figure.**
+
+🔴 **Two of this base's published regional nils are WITHDRAWN by this pass**, and that is the
+finding with the longest reach: they were never properties of the field, only of the query's
+language. 🟢 **Two others are UPHELD and sharpened — which is the more useful result, because the
+obvious objection to them has now been eliminated.**
+
+## What this pass established
+
+| | |
+|---|---|
+| 🟢 **Yield is a function of the query's LANGUAGE, not only its altitude** | `T177` varied altitude (`0%` → `18%` → `60%`). `p854` held altitude and varied LANGUAGE: 🔴 **`0%` English vs `100%` non-English, in the same hour, measured with `p853-slug-presence` before any row was written.** 🔵 A client's domain must be searched in the client's language before anyone concludes the open supply is thin → `T181`, `854-G1` |
+| 🔴 **Two published nils were artefacts of the query and are withdrawn** | `japanese pronunciation learning app open source` → `0` became `発音 評価` → **`6`** (`1` Apache-2.0, `1` MIT); `portuguese pronunciation speech assessment` → `0` became `avaliação de pronúncia` → **`5`** (`3` MIT). 🔴 `853-G6`'s reading that APAC's speech supply is *"Chinese-published, not pan-Asian"* is withdrawn with them → `854-G2` |
+| 🟢 **The two UPHELD nils are now stronger than when written** | `evaluación de pronunciación` → `6` repositories, 🔴 **`0` carrying any licence file**; `تقييم التلاوة` *(recitation **assessment**)* → **`0`**, against `54` results for `تلاوة` alone. 🔵 The Arabic estate has recitation PLAYERS and no recitation SCORERS → `854-G7`, `854-G3` |
+| 🔴 **The most-forked Arabic artefact advertises MIT in a badge and ships no grant** | [`IemProg/itqan`](https://github.com/IemProg/itqan), `11★`/`8` forks: 🔴 **`44` licence paths probed, all `404`**, while `README.md` serves `200`. 🟢 Graded by this base's OWN instrument — `p1060/readme_claim.py` → `MIT 0 BADGE` on a **hardcoded** `shields.io` image linking to a `LICENSE` that does not exist. 🟢 `p1052`'s rule obeyed: *a badge is a hint to RE-PROBE*, and the re-probe found nothing → `854-G3` |
+| 🔴 **`NOASSERTION` failed in BOTH directions in one pass** | [`pytorch/executorch`](https://github.com/pytorch/executorch) (`5180★`) — field `NOASSERTION`, bytes **`BSD License`**, Meta: a permissive-SPDX filter DISCARDS it. [`ahmedezz33/compactshakkil`](https://github.com/ahmedezz33/compactshakkil) — field `NOASSERTION`, bytes **PolyForm Noncommercial 1.0.0**: a "probably fine" reading ADMITS it. 🔵 The field is not biased, it is uninformative → `854-G4` |
+| 🔴 **A secondary source's licence claims failed `2` of `3` on the mandated platform leg** | `idurar/idurar-erp-crm` claimed MIT, bytes **AGPL-3.0** (`34,230 B`); `hcengineering/platform` claimed Apache-2.0, bytes **EPL-2.0** (`14,197 B`); only `krayin/laravel-crm` (MIT, `1,078 B`, Webkul) survived. 🔴 The AGPL case is the expensive one: a school SIS is a hosted derivative |
+| 🟡 **The smallest presentation fold is ONE byte** | Four Apache-2.0 payloads, two sha256 buckets, `diff` = `1d0` — a single LEADING NEWLINE (`11,358` vs `11,357 B`). 🔴 And `alphacep/vosk-api` serves a complete Apache-2.0 at `10,173 B` with the APPENDIX removed, which a byte-band classifier drops → `854-G5` |
+| 🔴 **A presence verdict is about this CORPUS, not about REALITY — and this pass nearly shipped the error** | `openeducat/openeducat`, a slug guessed from prose, scored **`UNGRADED`** (`27` hits) and the instrument's contract maps that to *"promote it"*. 🔴 **The repository does not exist** (`total_count: 0`, `raw` `404`). 🟢 `grep -nE "p293\|exist" presence.py` → no match: the base HAS a slug-existence oracle and the presence check is not wired to it → `854-G6` |
+| 🟢 **`853-G7`'s defect class, met on this pass's own rows and closed rather than inherited** | `p854`'s shelf tables first landed under UNDECLARED signatures, so `8` agent and `2` platform rows were held but not counted. 🟢 **Fixed at the source:** the shelf tables now use the files' declared signatures, and the pass's two NARRATIVE tables are declared NOT-counted in `ingest/derive-counts.py` with the reason in a comment. 🟢 All three shelves GREEN, `ragged=0`, `nolink=0` |
+| 🟢 **On-device scoring became a COMPLIANCE architecture, not a bandwidth workaround** | Korea's `AI Basic Act` **in force `2026-01-22`** (education high-impact) · Vietnam's AI law **in force `2026-03-01`** (education high-risk, **pre-deployment registration**) · EU Annex III (admissions, grading, proctoring) · California `AB 1159` (no student data for training). 🔵 A pipeline that scores on the handset removes the transfer each regime regulates — 🔴 **but not the duty: grading stays high-risk whoever computes it** → `T182`, recipe `P84` |
+| 🟢 **The regional numbers worth quoting** | **LATAM:** UNESCO IESALC 2026 (`200` institutions, `19` countries) — `87%` use AI, **`26%`** have a strategy, **`55%`** have no AI budget; Cetic.br — `53%` of Brazilian administrators use AI, `22%` have guidelines; `716` regulatory instruments across `23` countries; IDB Nov 2026: AI could add **`5.1%`** to regional GDP over a decade. **North America:** ~`134` bills across `31` states; NC `Session Law 2026-41` — model policy due `2026-12-31`, district policies `2027-06-30`. **EMEA:** UK DfE genAI product safety standards (Jan 2026), Ofqual coursework integrity (Mar 2026); EU high-risk date still contested. **APAC:** two BINDING laws now in force; Australia's TEQSA requires institutional genAI action plans |
+
+🔵 **`1` new recipe, `1` re-costed.** `P84` — **on-device speaking assessment for a regulated
+market**: `transphone` (MIT) → `onnxruntime` (MIT) → `sherpa-onnx` / `vosk-api` (Apache-2.0) →
+`PronunciationEvaluator` (MIT) → `piper` (MIT) → CEFR levelling, 🟢 **`4` MIT + `3` Apache-2.0,
+`0` copyleft, `0` metered API**, `8`–`10` weeks for one language, `+6`–`8` where the corpus must be
+collected. 🟢 **`P83-LATAM` re-costed `4`–`6` weeks → `3`–`4` for pt-BR**, because
+`gato-zen-speech-eval-zh` supplies a working L1-parameterised architecture that did not exist on
+this base yesterday; 🔴 **es-`419` stays `4`–`6`: its blank page is still blank.**
+
+🔴 **Inherited and NOT introduced by this pass, verified against a clean `HEAD` worktree:**
+`make recount` (`5` of `5` registered claims `NO-ANCHOR`) and `make gate-register-currency`
+(`P418-NO-HEADER` on `6` shelves) fail identically before and after `p854`.
+
 ## Pass `p853` · `2026-11-16`
 
 🟢 **The SPOKEN-LANGUAGE ASSESSMENT tier lands, and for the first time in three passes the

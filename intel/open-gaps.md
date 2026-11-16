@@ -4,6 +4,138 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` (fifty-ninth pass, `p854`) — **`7` gaps, each with the query, probe or instrument run before it was written (`ACTION p850-B`)**
+
+🔵 **Two of these (`854-G5`, `854-G6`) are instrument defects rather than market absences, and
+`854-G6` is a defect this pass committed and caught in the same hour.**
+
+### 🔴 `854-G1` — this base's research channel was LANGUAGE-BOUND, and it had never been measured on that axis
+
+🔴 **The claim, with both denominators.** Same field, same hour, `2026-11-16`: the `4` mandated
+English generic legs returned `12` addresses, of which 🔴 **`0` were new** (`8` `SHELVED`, `4`
+`UNGRADED`, measured with `compose/code/p853-slug-presence/`). Five non-English legs —
+`発音 評価` · `تلاوة` · `avaliação de pronúncia` · `evaluación de pronunciación` · `발음 평가` —
+returned `17` addresses, of which 🟢 **`17` were new.**
+
+🔵 **The mechanism is not exotic: GitHub's repository index is largely a text index over names and
+descriptions, and a developer building for Brazilian learners describes the project in Portuguese.**
+
+🟡 **How it closes:** it is half-closed — the channel now exists and is recorded verbatim. 🔴 **Not
+closed: `58` passes of this base's regional sections were populated by an English-only instrument,
+so every "no supply in region X" claim older than this pass is UNVERIFIED on this axis.**
+🟢 **The number to recover first is how many such claims exist.**
+
+### 🔴 `854-G2` — two published regional nils were artefacts of the query's language and are withdrawn
+
+🔴 **The claim.** `p853` published `japanese pronunciation learning app open source` → `0` and
+`portuguese pronunciation speech assessment` → `0`. 🟢 **Re-probed natively: `発音 評価` → `6`
+results including `1` Apache-2.0 and `1` MIT; `avaliação de pronúncia` → `5` results including
+`3` MIT.** 🔴 **Both nils WITHDRAWN on `agents/top.md` and `intel/market.md`.**
+
+🔵 **`853-G6`'s reading that "APAC's open speech supply is Chinese-published, not pan-Asian" is
+withdrawn with them:** `발음 평가` returned `DevTae/PronunciationEvaluator`, MIT, Korean-published.
+
+🟡 **How it closes:** closed for these two. 🔴 **The CLASS is open — see `854-G1`.**
+
+### 🔴 `854-G3` — the most-forked Arabic recitation artefact advertises MIT in a badge and ships no grant
+
+🔴 **The claim, with the probe.** [`IemProg/itqan`](https://github.com/IemProg/itqan), `11★` /
+`8` forks: 🔴 **`44` licence paths probed under `main` (`11` spellings × `4` extensions), every one
+`404`**, while `README.md` serves `200` on the same ref.
+
+🟢 **Graded with this base's own instrument, not by eye:**
+`p1060-readme-vs-payload/readme_claim.py` → `MIT  0  BADGE`, on the literal string
+`![License: MIT](https://img.shields.io/badge/License-MIT-gold.svg)`. 🔴 **A HARDCODED static
+badge — not `shields.io/github/license/…`, which would have rendered the absence — linking to a
+relative `LICENSE` that does not exist.** 🟢 **`p1052`'s rule was obeyed rather than bypassed —
+*a badge is a hint to RE-PROBE, not a verdict* — and the re-probe at `44` paths returned nothing.**
+🔵 **Verdict `NO-PAYLOAD` in `p1060`'s vocabulary: a grant stated and never made.**
+
+🔴 **Why it is a REGIONAL gap and not just a row:** this is the flagship of the EMEA/MEA recitation
+category, `8` forks are propagating the claim, and it is the artefact a studio would reach for first.
+
+🟡 **How it closes:** by ASKING. 🟢 **A one-line issue to a maintainer who clearly intended MIT is
+cheaper than any alternative, and would convert the region's best-known artefact into a usable one.**
+
+### 🔴 `854-G4` — `NOASSERTION` failed in BOTH directions in the same pass, on the same shelf
+
+🔴 **The claim, with both payloads byte-read `2026-11-16`:**
+
+| Repo | GitHub's field | 🔬 The bytes | Cost of trusting the field |
+|---|---|---|---|
+| [`pytorch/executorch`](https://github.com/pytorch/executorch), `5180★` | `NOASSERTION` | 🟢 **`BSD License`**, `1,774 B`, `sha256₁₂ c58707ea5d5c`, Meta Platforms | 🔴 a permissive-SPDX filter **DISCARDS** a BSD-licensed Meta runtime |
+| [`ahmedezz33/compactshakkil`](https://github.com/ahmedezz33/compactshakkil) | `NOASSERTION` | 🔴 **PolyForm Noncommercial 1.0.0**, `4,563 B`, `sha256₁₂ ffcca38841ad` | 🔴 a "probably fine" reading **ADMITS** a noncommercial grant into a paid delivery |
+
+🔵 **This is `853-G2`'s class with its symmetry finally measured: the field is not biased, it is
+UNINFORMATIVE, and the two cheap repairs — "treat as unlicensed" and "inherit/assume permissive" —
+are each wrong in exactly one of these two rows.** 🟢 **Only the payload resolves it.**
+
+🟡 **How it closes:** it does not close by a rule, it closes by a GATE — no row may be shelved or
+discarded on the SPDX field alone. 🟢 **This base already byte-reads every shelved row; the
+unguarded half is the DISCARD path, which leaves no trace and is therefore unaudited.**
+
+### 🟡 `854-G5` — the smallest presentation fold is ONE byte, and a byte-band classifier drops a complete Apache grant
+
+🔴 **The claim, measured with `diff` and `od -c`.** Four Apache-2.0 payloads read this pass fall
+into two sha256 buckets: `11,358 B` / `cfc7749b96f6` (`k2-fsa/sherpa-onnx`,
+`kwmt/nanteiu-pronunciation-model`) and `11,357 B` / `c71d239df917` (`Altria1979/yomori`,
+and `speechbrain/speechbrain` as filed at `p853`). 🟢 **`diff` reports exactly `1d0`: a single
+LEADING NEWLINE at byte `0`.**
+
+🔴 **And a fifth payload widens it in the other direction:** `alphacep/vosk-api` serves `COPYING`
+at `10,173 B` — Apache-2.0 with the terms COMPLETE, ending at `END OF TERMS AND CONDITIONS`, with
+the `APPENDIX: How to apply…` removed. 🔵 **A classifier keyed on a byte band near `11.3 kB`
+silently drops a correct and complete Apache grant.**
+
+🟡 **How it closes:** `p378`'s presentation-fold normalisation, applied before hashing, 🟢 **and a
+`-1,184`-byte appendix-stripped fixture added to its suite — the existing fixtures exercise
+re-wrapping, not truncation.**
+
+### 🔴 `854-G6` — the presence instrument answers a question about THIS CORPUS, and a pass read it as a question about REALITY
+
+🔴 **The claim, and this pass committed the error before catching it.** `p854` guessed the slug
+`openeducat/openeducat` from prose naming the product. `compose/code/p853-slug-presence/` returned
+🔴 **`UNGRADED`, `27` hits, bare-slug form** — and the instrument's own contract maps `UNGRADED` to
+*"promote it"*. 🔴 **The repository DOES NOT EXIST:** first-party `search/repositories`
+`repo:openeducat/openeducat` → `total_count: 0`; `raw.githubusercontent.com/.../main/README.md` →
+`404`. 🟢 **The real address is `openeducat/openeducat_erp`, which is already `SHELVED` with
+`1,085` hits.**
+
+🔵 **The defect is a category error, not a bug: `presence.py` measures whether this corpus NAMES a
+string, which prose about a product satisfies. It says nothing about whether the address
+RESOLVES.** 🟢 **`grep -nE "p293|exist" presence.py` → no match: this base HAS a calibrated
+slug-existence oracle (`p293`) and the presence instrument is not wired to it.**
+
+🔴 **Cost if unfixed: `UNGRADED` is the verdict this base acts on most eagerly — `p852` promoted
+`13` of `17` rows from it — so an unresolvable address reaches a shelf with no byte-read to stop
+it,** 🟢 **except that a byte-read DOES stop it, which is why this pass caught it. The gate held;
+the instrument did not.**
+
+🟡 **How it closes:** `presence.py` gains a fifth verdict — `UNRESOLVABLE` — populated from
+`p293`'s oracle, 🟢 **and `UNGRADED` stops being actionable until existence is confirmed.**
+
+### 🔴 `854-G7` — `853-G5` UPHELD: there is still no permissive Spanish pronunciation scorer, now confirmed in Spanish
+
+🔴 **The claim, re-probed in the language.** `evaluación de pronunciación` → **`6` results**, and
+🔴 **not one carries a licence file** — including `emilce-robles/ISPC-Procesamiento-del-Habla-PronuncIA`,
+an Argentine institute's pronunciation-assessment system, and `JOANCASANYSALA/tutor-pronunciaci-n`,
+an Azure wrapper. `aprendizaje de idiomas inteligencia artificial` → `3` results, one MIT and
+substanceless.
+
+🔵 **This gap is now STRONGER than when it was written, because the obvious objection has been
+eliminated: it is not an artefact of querying in English** — that objection killed the Japanese
+and Portuguese nils in `854-G2`, and it does not kill this one.
+
+🔴 **The sharpest instance:** [`CarlosFigueroaPicado/Aikukisna`](https://github.com/CarlosFigueroaPicado/Aikukisna) —
+offline Android for rural students with pronunciation, voice and image recognition and AI tutoring,
+🔴 **`12` licence paths probed, all `404`.** 🟢 **The LATAM brief, built by a LATAM author, and
+unusable.**
+
+🟡 **How it closes:** unchanged from `853-G5` — by BUILDING — 🟢 **but `P83-LATAM` is re-costed on
+[`compose/patterns.md`](../compose/patterns.md) from `4`–`6` weeks to `3`–`4` for pt-BR, because
+`gato-zen-speech-eval-zh` supplies an L1-parameterised architecture that did not exist on this base
+yesterday. es-`419` stays `4`–`6`: its blank page is still blank.**
+
 ## 🟢 `2026-11-16` (fifty-eighth pass, `p853`) — **`7` gaps: `3` market absences measured as nils with their query and result count, `2` licence traps read as bytes, `2` instrument defects — each with the probe or the `grep` that was run before it was written (`ACTION p850-B`)**
 
 🔵 **`853-G4` and `853-G7` are instrument defects rather than market absences, and are filed here
