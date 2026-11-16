@@ -4,6 +4,109 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-fifth pass (`p850`, 2026-11-16) — **`1` agent row (`397` → `398`), and the pass's primary output is that ALL THREE of `p848`'s declared gaps are refuted by this base's own shelves, by rows filed `38`–`43` passes before the gap was declared**
+
+🔴 **`848-G1`, `848-G2` and `848-G3` are all still OPEN in `intel/open-gaps.md`, and all three are
+false against `agents/top.md`, `repos/foundations.md` and `verticals/solutions.md` as they stood
+when `p848` wrote them.** 🟢 **Measured address-by-address with `git log -S` against the shelf
+files, so the refutation carries the commit that filed each row.** 🔴 **The instrument built to
+prevent exactly this — `make gate-absence` — has never graded a single claim, because its fatal
+arm looks for `## Pass ` and this `README` has used `**Pass …**` for its whole life.** →
+`T168`, `T169`, `T170`.
+
+### 🔴 Finding 1 — three declared gaps, three refutations, every one of them already on a shelf
+
+| Declared gap (`p848`, still OPEN) | What it asserts | Refuting row already on a shelf | Filed by | Passes before the gap was declared |
+|---|---|---|---|---|
+| `848-G1` | *"No open SIS on these shelves supports OneRoster, Ed-Fi or SIF"* | `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` — on `repos/foundations.md` **and** `verticals/solutions.md` | `p810` | `38` |
+| `848-G1` | as above | `googleworkspace/oneroster-integration-conformance-tests` — on **all three** shelves | `p810` | `38` |
+| `848-G1` | as above | `bgwdotdev/go-oneroster` — `repos/foundations.md`, `verticals/solutions.md` | `p810` | `38` |
+| `848-G1` | as above | `Ed-Fi-Alliance-OSS/Data-Management-Service` — `repos/foundations.md`, `verticals/solutions.md` | `p810` | `38` |
+| `848-G2` | *"accessibility … this base has nothing build-safe to offer against it"* | `13` accessibility addresses already shelved, among them `juanda99/arasaac-frontend`, `th30d0re/opendyslexic-fonts`, `natashkasemenova/a11y-ai-auditor`, `OpenDyslexic/extension` | various | — |
+| `848-G3` | *"no education-specific MCP server … `0` results at `>100★`"* | `Faixiang/Moodle-MCP` `207★` — on `agents/top.md` **and** `verticals/solutions.md` | `p805` | `43` |
+| `848-G3` | as above | `boyuchengz/canvas-mcp` `119★` — on `agents/top.md`, `verticals/solutions.md` | `p810` | `38` |
+| `848-G3` | as above | `RohanMuppa/brightspace-mcp-server` `67★` — on `agents/top.md`, `verticals/solutions.md` | `p809` | `39` |
+
+🟢 **Addresses in full, so the refutation is checkable without the table:**
+https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS ·
+https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service ·
+https://github.com/googleworkspace/oneroster-integration-conformance-tests ·
+https://github.com/bgwdotdev/go-oneroster ·
+https://github.com/Faixiang/Moodle-MCP ·
+https://github.com/boyuchengz/canvas-mcp ·
+https://github.com/RohanMuppa/brightspace-mcp-server ·
+https://github.com/juanda99/arasaac-frontend ·
+https://github.com/th30d0re/opendyslexic-fonts ·
+https://github.com/natashkasemenova/a11y-ai-auditor
+
+🔵 **Method, stated because it is what makes this a refutation and not an opinion.** For each
+address: `grep -l` against the three shelf files for presence, then
+`git log --oneline -S"<slug>" --reverse -- agents/top.md repos/foundations.md verticals/solutions.md`
+for the commit that first introduced it. 🟢 **Every "filed by" figure above is that commit's pass
+number, read from the commit subject, not estimated.**
+
+🔵 **`848-G3` is false even on its own stated threshold.** It declares `0` results at `>100★`;
+`Moodle-MCP` is `207★` and `canvas-mcp` is `119★`, and both were on `agents/top.md` while the
+sentence was being written. 🔴 **This is not a research failure. It is a failure to read the
+shelf before declaring what the shelf lacks** — and it is the defect class this base named at
+`p392` (`gate-capability-absence`: *"an absence whose refutation is in the base's own harvest log
+under different words"*), recurring one layer up, in the ledger itself.
+
+### 🔴 Finding 2 — the gate that exists for this has graded nothing, for its whole life
+
+🟢 **`make gate-absence` was run this pass and it does not fail. It abstains, then errors:**
+
+```
+── p279-absence-claims (Control Zero is p277's real sentence; the quoted and wrapped shapes)
+   PASS
+🔴 p279-absence-claims: README.md has no `## Pass ` section to check
+```
+
+🔴 **`compose/code/p279-absence-claims/absence_claims.py:193` selects sections with
+`l.startswith("## Pass ")`. `grep -c '^## Pass ' README.md` returns `0`; `grep -c '^\*\*Pass '`
+returns `7`.** 🔵 **The offline controls pass, so the suite reports healthy; the live arm reads a
+heading shape this file has never used.** 🟢 **That is `p718`'s finding exactly — a predicate keyed
+on prose, defeated by a rewrite, reporting nothing and looking like a pass — repaired in
+`derive-counts.py` at `p718` and `p813` and still live here.** → `ACTION p850-A`.
+
+🟢 **The census arm, which does read the live corpus, has been reporting the problem all along:**
+`make absence-census` → **`CENSUS-REFUTED=385`** corpus-wide, of which **`156` are in
+`intel/open-gaps.md`** — the ledger that holds the declared gaps. 🟡 **Upper bound, per the
+instrument's own README class: the sentence unit cannot tell an assertion from a citation**, so
+`385` is a ceiling, not a count of defects. 🔵 **A ceiling nobody has looked at for `571` passes
+is still the most informative number this pass produced.**
+
+### 🟢 Finding 3 — `1` new agent row, byte-read, and it lands in a high-risk category
+
+🔴 **The agent legs were thin and the nil is declared below.** 🟢 One row qualifies.
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| Question-Bank-Generator | https://github.com/VishwamPatel-Infynno/Question-Bank-Generator | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,090 B`, `sha256₁₂ 802df034c4f8`, holder `Copyright (c) 2026 Vishwam Patel / Infynno Solutions`) | 0 | EMEA | 🟢 **New this pass (`p850`).** A multi-agent generator for the **UCAT** question bank — the UK and Ireland medical-and-dental admissions test. Pushed `2026-11-16`, `0` forks, not archived. 🔴 **State its weakness plainly: `0★`, one vendor, no release, no independent use.** 🔵 **Why it is filed anyway: admissions testing is Annex III high-risk under the EU AI Act, with obligations landing `2027-12-02`, and this is the first permissively-licensed artefact on these shelves that generates items for a named high-stakes admissions instrument.** 🟡 **Region EMEA is taken from the ARTEFACT — UCAT is a UK/Ireland test, named in the repository's own description — not from the holder, whose company is APAC-based.** 🔴 A studio that ships this into a live admissions pipeline inherits the high-risk duties; it is a starting point for an item bank, not a product. |
+
+### 🔴 Declared nils, with what was actually queried
+
+🔴 **Vertical-platform leg: ELEVENTH consecutive nil.** Same closed set of seven (Open edX, Sakai,
+Moodle, OpenEduCat, ILIAS, Chamilo, Canvas), none permissive; the one new LMS address returned,
+[`eloompty/Eloom-LMS-International`](https://github.com/eloompty/Eloom-LMS-International) (MIT,
+byte-read `1,062 B`, `sha256₁₂ d0ec1660730d`), is `0★` with no deployment evidence and does not
+earn a platform row. 🟢 `verticals/solutions.md` holds at `147`.
+
+🔴 **LATAM supply leg: nil again, and now on artefact nouns.** `tutor agent portugues brasil
+educacao` → **`0` results**. `agente educativo tutor espanol` → **`2` results, both `0`–`1★`, both
+with no `LICENSE` at all** (`aeceballos-pixel/LenguaCastellanaTutor`, `…/Tutor-Lengua-Castellana`).
+🔵 **Three passes running, two query vocabularies, same answer: there is no permissively-licensed
+Spanish- or Portuguese-language education agent to find.**
+
+🔴 **`rostering enrolment agent created:>2026-08-01` → `0`. `autograder assignment grading open
+source` → `0`.** 🟢 **`gradebook agent` → `2`, `question bank generator agent` → `5`, `proctoring
+open source` → `30`** — and of the proctoring set the two MIT rows worth having
+([`amaanwarsi/Proctora`](https://github.com/amaanwarsi/Proctora),
+[`epoko77-ai/examguard`](https://github.com/epoko77-ai/examguard)) **are already on this shelf**,
+which is the pass's own finding happening to the pass.
+
+---
+
 ## 🟢 Fifty-fourth pass (`p849`, 2026-11-16) — **`4` agent rows (`393` → `397`) and `3` foundation rows, but the pass's primary output is a GATE finding: all three shelves had been RED on their own contract for five consecutive passes, `8` rows were off the count, and `2` of them were on no table at all**
 
 🔴 **`ingest/derive-counts.py` — this repository's own gate, the one `p819` rebuilt precisely so a
@@ -3102,7 +3205,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 397 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 398 rows
 ### Filed by `p849` (2026-11-16) — `4` rows: `2` new, and `2` RESTORED from `p848`'s own narrative, where they were announced but never filed
 
 🔴 **`2` of these `4` are not discoveries. They are `p848`'s rows.** `p848` announced them in its

@@ -4,6 +4,40 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-fifth pass (`p850`) — 🟢 **`9` foundation rows from two tiers this base declared empty one pass ago, found by querying the ARTEFACT instead of the product**
+
+🟢 **Accessibility (`6` rows, `0` copyleft).**
+[`guidepup/guidepup`](https://github.com/guidepup/guidepup) (MIT, `599★`, screen-reader automation
+for CI) · [`Muhnad/a11y-checker`](https://github.com/Muhnad/a11y-checker) (MIT, `117★`, default ref
+`master`) · [`bbc/color-contrast-checker`](https://github.com/bbc/color-contrast-checker)
+(Apache-2.0, `106★`, BBC) · [`incluud/color-contrast-checker`](https://github.com/incluud/color-contrast-checker)
+(MIT, `27★`, WCAG 2.2 at token level) · [`GAAD-Foundation/AIMAC`](https://github.com/GAAD-Foundation/AIMAC)
+(MIT, `28★`, checks the MODEL not the UI) · [`RonanOD/OpenAAC`](https://github.com/RonanOD/OpenAAC)
+(Apache-2.0, `34★`, stale `2024-11-22`).
+
+🟢 **SIS interchange (`2` rows).**
+[`Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard)
+(Apache-2.0, `47★`, default ref **`v6.2.0`**) ·
+[`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster)
+(Apache-2.0, `6★`, serves OneRoster 1.2 from an Ed-Fi ODS).
+
+🟢 **Captioning (`1` row).** [`fmadore/Live-translation`](https://github.com/fmadore/Live-translation)
+(MIT, `11★`, pushed today — offline Whisper, separable cloud translation).
+
+🔴 **The AAC field is structurally copyleft, measured not assumed.** The leg's largest result,
+[`cboard-org/cboard`](https://github.com/cboard-org/cboard), is **GPL-3.0** at `769★` and pushed
+`2026-11-15`; `OTTAA-Project/ottaa_project_flutter` is GPL-3.0; `sonicbaume/FreeAAC` is AGPL-3.0.
+🟢 **`OpenAAC` is the only permissive option in the category and that, not its `34★`, is why it is
+filed.**
+
+🟡 **A licence-payload observation worth carrying.** Both Ed-Fi grants are `10,173 B`, not the
+canonical Apache-2.0 `11,357 B` — **the body without the non-operative "APPENDIX: How to apply"**
+(`grep -c APPENDIX` → `0`, against `1` for `OpenAAC`'s canonical payload in the same loop). 🟢 The
+grant is complete; a full-text SPDX matcher may still report `NOASSERTION`. Same class as `p846`'s
+Sakai/`ECL-2.0` finding.
+
+---
+
 ## `2026-11-16` — fifty-fourth pass (`p849`) — 🟢 **`3` foundation rows from a tier that is `2012`-to-`2024` vintage, and the reason it never surfaced is that every previous sweep floored its queries at `2026`**
 
 🟢 **First-party `search/repositories`, `28` queries across three differently-shaped sweeps,

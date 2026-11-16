@@ -6,6 +6,60 @@ updated: 2026-11-16
 
 # Globant AI Studios — Education KB
 
+**Pass `p850` · `2026-11-16`** — 🔴 **All three gaps `p848` declared are REFUTED by this base's
+own shelves, by rows filed `38`–`43` passes earlier — and the gate built to prevent exactly that
+has never graded a single claim.** 🟢 **`1` agent row (`397` → `398`), `9`
+foundation rows (`191` → `200`), `2` recipes, `3` trends, every grant byte-read today, all three
+shelves GREEN on the count gate.**
+
+## What this pass established
+
+| | |
+|---|---|
+| 🔴 **`848-G1`, `848-G2`, `848-G3` — all three refuted by rows already on these shelves** | 🔴 `848-G3` claimed *"no education MCP server, `0` results at `>100★`"* while **`Faixiang/Moodle-MCP` (`207★`, filed `p805`) and `boyuchengz/canvas-mcp` (`119★`, filed `p810`)** sat on `agents/top.md` AND `verticals/solutions.md`. 🔴 `848-G1` claimed no Ed-Fi or OneRoster support while **`Ed-Fi-ODS`, `Data-Management-Service`, `go-oneroster` and the Google conformance suite** had been shelved since `p810`. 🟢 Each refutation carries the `git log -S` commit that filed the row |
+| 🔴 **`make gate-absence` has graded `0` claims, for its whole life** | 🔴 **`absence_claims.py:193` selects on `## Pass `; `grep -c '^## Pass ' README.md` → `0`, `grep -c '^\*\*Pass '` → `7`.** 🔵 Offline controls PASS, so the suite's green says nothing about the corpus. 🟢 **Third instrument in this base with a predicate keyed on prose shape** (`p718`, `p813`, `p812`). 🟡 The census arm was never blind: **`CENSUS-REFUTED=385`, `156` of them in the gap ledger itself** — an upper bound, one command away, unprinted for `571` passes |
+| 🟢 **The accessibility VERIFICATION tier — `6` rows, `0` copyleft** | 🟢 [`guidepup/guidepup`](https://github.com/guidepup/guidepup) (MIT, `599★`) drives **real VoiceOver and NVDA from a test script** · [`Muhnad/a11y-checker`](https://github.com/Muhnad/a11y-checker) (MIT, `117★`) · [`bbc/color-contrast-checker`](https://github.com/bbc/color-contrast-checker) (Apache-2.0, `106★`) · [`incluud/color-contrast-checker`](https://github.com/incluud/color-contrast-checker) (MIT, WCAG 2.2 at token level) · [`GAAD-Foundation/AIMAC`](https://github.com/GAAD-Foundation/AIMAC) (MIT — grades the **model's output**, not the interface) · [`RonanOD/OpenAAC`](https://github.com/RonanOD/OpenAAC) (Apache-2.0) |
+| 🔴 **In AAC the licence correlates with size in the WRONG direction** (`T170`) | 🔴 `cboard-org/cboard` **`769★` GPL-3.0** · `OTTAA-Project` **GPL-3.0** · `FreeAAC` **AGPL-3.0** · `OpenAAC` **`34★` Apache-2.0**. 🔵 **Deliberate, not accidental** — disability funders choose copyleft so a vendor cannot price a non-speaking child out of a communication aid. 🟢 **The checking tier is the inverse and entirely permissive, which is the half procurement actually scores** |
+| 🟢 **The SIS interchange spine completed, and `P77` prices it** | 🟢 [`Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) (Apache-2.0, `47★`, 🔴 default ref **`v6.2.0`**, not `main`) · [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) (Apache-2.0, `6★`) — **serves OneRoster 1.2 out of an Ed-Fi ODS**. 🟢 `P77`: **`2`–`3` weeks instead of `6`–`8`** |
+| 🟡 **Both Ed-Fi grants are `10,173 B`, not Apache-2.0's canonical `11,357 B`** | 🟢 **The body WITHOUT the non-operative "APPENDIX: How to apply"** — `grep -c APPENDIX` → `0`, against `1` for `OpenAAC`'s canonical payload in the same loop. 🟢 **The operative grant is complete.** 🔴 **A full-text SPDX matcher can still report `NOASSERTION`** — same class as `p846`'s Sakai/`ECL-2.0` finding, and a line item in a US higher-education bid |
+| 🔴 **Regional legs: `17` of `18` facts ALREADY HELD, eighth consecutive informed nil** | 🔴 NA `7/8` · EMEA `5/5` · APAC `4/4` · LATAM `4/4`, each confirmed by `grep` against `intel/` rather than recalled. 🟡 The one new item is **New York `A9190`** (an AGE FLOOR below ninth grade rather than a usage policy) — single low-rigour source, `CITED, NOT READ`, a LEAD only. 🟢 **The stability is itself the finding: the next dated change is `2026-12-02`, `16` days out** |
+| 🔴 **ELEVENTH consecutive nil on the vertical-platform leg, now priced rather than re-recorded** | 🔴 Same closed set of seven, none permissive (Sakai is **`ECL-2.0`**). 🟢 **`P76` inherits the LMS over LTI 1.3; `P77` now inherits the SIS over Ed-Fi/OneRoster.** 🔵 **Together they cover the two systems a school will never let a studio replace, and neither needs a permissive platform to exist** |
+| 🔴 **LATAM supply gap re-measured on a NEW vocabulary, still total** | 🔴 `tutor agent portugues brasil educacao` → **`0`**. `agente educativo tutor espanol` → **`2`, both `0`–`1★`, NEITHER with a `LICENSE`**. 🟢 **An informed nil across three passes and two vocabularies.** 🟢 **All `9` rows filed this pass are language-independent, so `P77` and `P78` port to LATAM unchanged** |
+
+🔵 **`2` new recipes:** `P77` (the rostering bridge — inherit the SIS over Ed-Fi and OneRoster,
+conformance-tested in CI from day one) and `P78` (sell the accessibility **pipeline**, not the
+assistive technology — screen-reader regression, token-time and page-time contrast, model-output
+accessibility, and the AAC licence boundary stated in writing before work starts).
+
+🟢 **Counts, gate-confirmed this pass.** `python3 ingest/derive-counts.py .` →
+`agents/top.md` **`398/398`**, `repos/foundations.md` **`200/200`**,
+`verticals/solutions.md` **`147/147`**, `ragged=0`, `nolink=0`, no new duplicate subjects;
+`compose/patterns.md` `78` recipes, `P-1..P-78` contiguous; `intel/trends.md` `162` trends.
+🟢 `make gate-region-headings` → **`0` findings** (`1` canonical `## Opportunities by region`,
+`5` `###` subsections, each with a `#### Update` block).
+
+🟢 **`make hooks` was RUN this pass** — the first recorded full run since `p845`; `p846` recorded
+it as refused by the session's command classifier. 🔴 **It reports `50/72` gates green and `22`
+RED.** 🟢 **Measured against the baseline rather than asserted:** the same suite was run over
+`git archive HEAD` (the pristine `p849` tree) in a scratch directory, and the RED set is
+**identical, gate for gate, in the same order**. 🟢 **`p850` therefore introduced `0` new gate
+failures and closed none of the standing ones.**
+
+🔴 **That `22`-gate standing RED is the state no recent pass has reported.** Among them is
+`gate-absence` itself — this pass's subject. 🟡 **`p850` also added `0` tables to the
+uncounted-table RED** (`21` / `13` / `12`, verified before and after), **but that RED is standing,
+so `derive-counts.py` exits `1` on a corpus whose COUNTS are all green** — which is how `p849`
+could call all three shelves GREEN while the gate exits non-zero. → `ACTION p850-C`,
+`ACTION p850-D`.
+
+🔴 **Largest unverified state in this base, stated as a number:** **`385`** refuted absence claims
+reported by `make absence-census`, **`156` of them inside `intel/open-gaps.md`**. 🟡 **An upper
+bound — the sentence unit cannot tell an assertion from a citation — and nobody has adjudicated
+one of them.** 🟢 `ACTION p850-A` makes the fatal arm capable of grading them; `ACTION p850-B`
+stops new ones being created.
+
+---
+
 **Pass `p849` · `2026-11-16`** — 🔴 **All three shelves had been RED on this repository's own
 count gate for five consecutive passes, `8` rows were off the count and `2` of them were on no
 table at all. Measured commit-by-commit with `ingest/derive-counts.py` itself, repaired, and all

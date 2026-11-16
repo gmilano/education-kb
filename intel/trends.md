@@ -4,6 +4,88 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-fifth pass (`p850`, 2026-11-16) — `3` trends (`T168`–`T170`)
+
+## `T168` — a knowledge base large enough to be useful is large enough to not know what it holds, and the failure mode is DECLARING AN ABSENCE (fifty-fifth pass, `p850`)
+
+🔴 **`p848` declared three gaps. All three are refuted by rows this base had already filed, between
+`38` and `43` passes earlier.** 🔵 **Not approximately refuted — `Faixiang/Moodle-MCP` at `207★`
+sat on `agents/top.md` while a sentence was written saying there were `0` education MCP servers
+above `100★`.**
+
+🔵 **The mechanism is not carelessness, it is SCALE.** Measured this pass: the three shelf files
+mention **`868` distinct repository addresses** and carry **`1,129,823 B`** — `1.1 MB` — of prose,
+of which **`745`** are graded shelf rows (`398` + `200` + `147`). 🔴 **At that size the cheapest way to answer
+"do we have an X?" is to search the web, and the web does not know what is on the shelf.** 🟢 **So
+a research pass reliably discovers the outside world and reliably fails to discover itself**, and
+every such failure is published as an authoritative-sounding absence in a file a client may read.
+
+🟢 **The rule this base should take from it, stated as a sequence and not a sentiment:** before any
+`G`-numbered gap is written, `grep` the three shelves for the artefact noun, and put the result —
+hit or miss — in the gap text. 🔵 **A gap that does not name what was grepped is an opinion.**
+→ `ACTION p850-B`.
+
+🟡 **Generalisable beyond this base.** Any studio running a long-lived curated KB for a client will
+hit this at the same size. 🟢 **It is a reason to sell the INSTRUMENT alongside the content** —
+which is what `P-78` is.
+
+## `T169` — an offline-control suite that passes is not evidence that a gate is grading anything (fifty-fifth pass, `p850`)
+
+🔴 **`make gate-absence` exists precisely to stop a pass publishing an absence the corpus refutes.
+It was run this pass. It passed its controls and graded `0` claims.**
+
+```
+── p279-absence-claims (Control Zero is p277's real sentence; the quoted and wrapped shapes)
+   PASS
+🔴 p279-absence-claims: README.md has no `## Pass ` section to check
+```
+
+🔴 **`absence_claims.py:193` selects sections with `l.startswith("## Pass ")`. The live `README.md`
+has `0` such lines and `7` lines beginning `**Pass `.** 🔵 **The fixture arm and the live arm test
+different things, and only the fixture arm has an assertion attached**, so the suite's green is
+real and completely uninformative about the corpus.
+
+🟢 **This base has now found the same defect in three instruments** — `p543`/`p568`/`p718`/`p813`
+in `derive-counts.py`, `p812` in the trends counter, and this. 🔴 **The common cause is a predicate
+keyed on PROSE SHAPE** — a heading's wording, a marker's punctuation — **in a corpus whose prose is
+rewritten every pass by design.** 🟢 **The repair that held in `derive-counts.py` was to key on
+STRUCTURE instead (a table's column signature). The same repair applies here:** select pass
+sections by the `` `pNNN` `` token, which this base has never stopped using, rather than by the
+heading's markup. → `ACTION p850-A`.
+
+🔵 **And the census arm was never blind.** `make absence-census` reports **`CENSUS-REFUTED=385`**
+corpus-wide, **`156` of them in `intel/open-gaps.md`** itself. 🟡 **An upper bound, not a defect
+count — the sentence unit cannot distinguish an assertion from a citation of one.** 🔴 **But it has
+been printable on demand for `571` passes and no pass has printed it.**
+
+## `T170` — in accessibility the permissive option is the small one, and that inverts how a studio should choose (fifty-fifth pass, `p850`)
+
+🟢 **Measured this pass across five artefact-noun legs** (`AAC`, `WCAG`, `braille`, `captioning`,
+`screen reader`). 🔴 **In the AAC category the licence correlates with size in the wrong
+direction:** `cboard-org/cboard` `769★` **GPL-3.0** · `OTTAA-Project/ottaa_project_flutter`
+**GPL-3.0** · `sonicbaume/FreeAAC` **AGPL-3.0** · `RonanOD/OpenAAC` `34★` **Apache-2.0**.
+
+🔵 **Why the field is built that way, and it is not arbitrary.** AAC software is funded by
+disability charities, health systems and public grants, whose funders deliberately choose copyleft
+so that a vendor cannot take a communication aid proprietary and price a non-speaking child out of
+it. 🟢 **That is a defensible policy and a studio should say so out loud rather than treat the
+licence as an obstacle.**
+
+🔴 **The consequence for an engagement is concrete.** A studio that builds a closed product on
+`cboard` inherits GPL-3.0 on its derivative. 🟢 **The workable shapes are: (a) build on
+`OpenAAC`'s Apache-2.0 base and accept a smaller starting point; (b) integrate `cboard` as a
+separate process over a documented interface and keep the boundary auditable; or (c) contribute
+upstream and sell the deployment, which is what the funders intended.** 🔵 **Note that (c) is the
+only one of the three that is cheaper BECAUSE of the licence, and it is the one nobody proposes.**
+
+🟢 **The checking tier is the opposite and that is the opportunity.** Every accessibility
+*instrument* found this pass is permissive — `guidepup` MIT `599★`, `a11y-checker` MIT `117★`,
+`bbc/color-contrast-checker` Apache-2.0 `106★`, `AIMAC` MIT. 🔵 **So a studio can own the
+compliance pipeline outright even where it cannot own the assistive technology** — which is the
+half that procurement actually scores. → `P-78`.
+
+---
+
 ## 🟢 Fifty-fourth pass (`p849`, 2026-11-16) — `3` trends (`T165`–`T167`)
 
 ## `T165` — the first-party channel is SPLIT across two hosts, and the obvious third one is refused in a way that looks like a missing repository (fifty-fourth pass, `p849`)

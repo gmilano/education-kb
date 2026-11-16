@@ -4,6 +4,126 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 `2026-11-16` (fifty-fifth pass, `p850`) — **all three of `p848`'s declared gaps are REFUTED by this base's own shelves, and the gate built to prevent that has never graded a claim**
+
+### 🔴 `848-G1` — **REFUTED, not closed.** The SIS interchange was never missing
+
+🔴 **The claim:** *"No open SIS on these shelves supports OneRoster, Ed-Fi or SIF."*
+🔴 **Refuted by four rows already on the shelves when it was written**, each verified by
+`grep -l` against the shelf files plus `git log -S` for the commit that filed it:
+
+- `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` — `repos/foundations.md` **and** `verticals/solutions.md`, filed `p810` (`38` passes earlier)
+- `Ed-Fi-Alliance-OSS/Data-Management-Service` — both files, filed `p810`
+- `googleworkspace/oneroster-integration-conformance-tests` — **all three** shelves, filed `p810`
+- `bgwdotdev/go-oneroster` — two shelves, filed `p810`
+
+🟢 **What was genuinely absent, and is now filed (`p850`):** the **Ed-Fi Data Standard** itself
+(Apache-2.0, `47★`) and **`edfi-oneroster`** (Apache-2.0, `6★`), the bridge that serves OneRoster
+1.2 out of an Ed-Fi ODS. 🟢 **Priced as `P77`: `2`–`3` weeks, not the open-ended line item the
+gap described.** 🔴 **SIF genuinely returns `0` results and remains unaddressed.**
+
+### 🔴 `848-G2` — **REFUTED, and now also answered**
+
+🔴 **The claim:** *"this base has nothing build-safe to offer"* on accessibility.
+🔴 **`13` accessibility-related addresses were already on the shelves** — among them
+`juanda99/arasaac-frontend`, `th30d0re/opendyslexic-fonts`, `natashkasemenova/a11y-ai-auditor`,
+`OpenDyslexic/extension`, `Karthikeyu/Indian-sign-language-recognition`,
+`AIScientists-Dev/AI-Powered-PDF-Accessibility`.
+
+🟢 **The gap's PREMISE was nonetheless half right**, which is why it is marked refuted rather than
+simply wrong: what the shelves held was assistive technology and one-off auditors, **not a
+verification pipeline**. 🟢 **`6` rows filed this pass close that properly** (`guidepup`,
+`a11y-checker`, `bbc/color-contrast-checker`, `incluud/color-contrast-checker`, `AIMAC`,
+`OpenAAC`), 🟢 **and `P78` sells it.** 🔵 **`T170` records why the permissive half of this field is
+the verification half.**
+
+### 🔴 `848-G3` — **REFUTED on its own stated threshold**
+
+🔴 **The claim:** *"no education-specific MCP server … `0` results at `>100★`."*
+🔴 **`Faixiang/Moodle-MCP` `207★` and `boyuchengz/canvas-mcp` `119★` were both on `agents/top.md`
+AND `verticals/solutions.md`** when it was written, filed `p805` and `p810`.
+`RohanMuppa/brightspace-mcp-server` (`67★`, pushed `2026-11-16`) sits beside them. 🔵 **The
+LMS-MCP tier is this base's healthiest education-agent category and has been since `p805`.**
+
+### 🔴 `850-D1` — the gate for this class has graded `0` claims, for its whole life
+
+🔴 **`make gate-absence` ran this pass.** Offline controls PASS; the live arm prints
+`README.md has no `## Pass ` section to check` and exits non-zero. 🔴
+**`compose/code/p279-absence-claims/absence_claims.py:193` requires `l.startswith("## Pass ")`;
+`grep -c '^## Pass ' README.md` → `0`, `grep -c '^\*\*Pass '` → `7`.** 🔵 **Third instrument in
+this base found with a predicate keyed on prose shape** (`derive-counts.py` at `p718`/`p813`, the
+trends counter at `p812`). → `T169`.
+
+🟡 **The census arm was never blind:** `make absence-census` → **`CENSUS-REFUTED=385`** corpus-wide,
+**`156` in this file**. 🟡 **An UPPER BOUND — the sentence unit cannot tell an assertion from a
+citation** — but it has been one command away for `571` passes.
+
+### 🟢 `ACTION p850-A` — repair the absence gate's live predicate
+
+🟢 **Select pass sections by the `` `pNNN` `` token, which this base has used without interruption
+for `850` passes, instead of by `## Pass ` markup.** 🔴 **Do not simply change the string to
+`**Pass `** — that repeats the defect with a different literal. 🟢 **Add a control that FAILS when
+the live arm grades `0` sections**, so an abstain can never again be printed next to a `PASS`.
+
+### 🟢 `ACTION p850-B` — no `G`-numbered gap without the grep that supports it
+
+🟢 **Before any gap is written, `grep` the three shelf files for the artefact noun and record the
+result — hit or miss — inside the gap text.** 🔵 **`848-G1`, `848-G2` and `848-G3` would each have
+died at the first command.** 🟢 Cheap, offline, one line per gap.
+
+### 🟢 `ACTION p850-C` — the uncounted-table RED is standing, and should be named as such
+
+🟡 **`ingest/derive-counts.py` currently reports `21` / `13` / `12` tables carrying `github.com`
+rows outside the declared signatures, on `agents/top.md` / `repos/foundations.md` /
+`verticals/solutions.md`.** 🔴 **`p850` added `0` to those figures and verified it.** 🟢 **But the
+script's exit code is therefore `1` on a corpus whose COUNTS are all green**, which is how `p849`
+could describe all three shelves as GREEN while the gate exits non-zero. 🟢 **Separate the two
+verdicts, or declare the narrative tables, so the exit code means something again.**
+
+### 🟢 `ACTION p850-D` — report the suite's STANDING RED, every pass
+
+🟢 **`make hooks` was run this pass** (the first recorded full run since `p845`) and reports
+**`50/72` gates green, `22` RED**: `recount`, `gate-derived-counts`, `gate-enumeration`,
+`gate-absence`, `gate-dates`, `gate-evidence-store`, `gate-shelf-consistency`, `gate-prose-claims`,
+`gate-register-currency`, `gate-fold-identity`, `gate-alias-canonical`, `gate-census-currency`,
+`gate-grant-path`, `gate-census-union`, `gate-ledger`, `gate-i2-sweep-crosscheck`,
+`gate-union-currency`, `gate-action-answered`, `gate-case-collision`, `gate-promotion`,
+`gate-promotion-ledger`, `gate-cell-reproduction`.
+
+🟢 **Attributed, not guessed.** The identical suite was run over `git archive HEAD` — the pristine
+`p849` tree — in a scratch directory, and the RED set came back **identical, gate for gate, in the
+same order**. 🟢 **`p850` introduced `0` new failures and closed `0` standing ones.**
+
+🔴 **The defect this registers is not any one gate; it is that `22` standing REDs have gone
+unreported while passes described the base as GREEN.** 🔵 **`gate-absence` is on that list, and it
+is this pass's subject — the gap ledger's own guard has been failing in plain sight.** 🟢 **Every
+subsequent pass should print the `N/72` figure and the delta against the previous commit**, which
+is two commands and makes a regression impossible to ship silently.
+
+### 🔴 `850-G1` — OPEN: no open rostering standard implementation outside North America
+
+🟢 **Written with the grep that produced it, per `ACTION p850-B`.** 🔴 `grep -rio
+"github\.com/[^ )]*oneroster"` over the three shelves returned `0` before this pass; the four rows
+now present are **Ed-Fi (US K-12) and OneRoster (1EdTech, US-led)**. 🔴 **First-party search for a
+national rostering standard implementation in EMEA, APAC or LATAM returned nothing at any
+threshold.** 🔵 **Consequence, stated for pricing: `P77` is a `2`–`3` week recipe in North America
+and degrades to "model on Ed-Fi, expose OneRoster, write one national adapter" everywhere else.**
+
+### 🔴 `850-G2` — OPEN, carried from `p849`: no permissive Spanish- or Portuguese-language education agent
+
+🔴 **Third consecutive pass, second query vocabulary.** `tutor agent portugues brasil educacao` →
+**`0` results**. `agente educativo tutor espanol` → **`2` results, both `0`–`1★`, both with no
+`LICENSE` at all.** 🟢 **An informed nil: the supply does not exist, rather than the search being
+wrong.** 🔵 **It is the clearest BUILD opportunity on these shelves for a LATAM engagement.**
+
+### 🔴 `850-G3` — OPEN: SIF returns nothing
+
+🔴 `SIF student information framework education` → **`0` results**, first-party. 🟢 Recorded
+separately from `848-G1` because, unlike Ed-Fi and OneRoster, **this one is a genuine absence** and
+should stay visible rather than be absorbed into a gap that was false.
+
+---
+
 ## 🟢 `2026-11-16` (fifty-fourth pass, `p849`) — **the shelf gate's five-pass RED repaired, `6` new actions, and `open-gaps 235` re-measured and still open**
 
 ### 🟢 `844`-era count drift — CLOSED

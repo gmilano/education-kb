@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Fifty-fifth pass (`p850`, 2026-11-16) — **the four regional legs run again; `17` of `18` facts returned were ALREADY HELD. The one new item is a US state bill, and it is `CITED, NOT READ`.**
+
+🟡 **Provenance, stated before the findings, unchanged from `p848` and `p849`.** Every regulatory
+and market fact below is **search-tier**: read from indexed secondary commentary via `WebSearch`,
+**`CITED, NOT READ`** (`P103`). 🔴 **No primary text was retrievable from this environment.** The
+egress allow-list reported at `p848` holds: GitHub resolves, legal trade press and governmental
+publishers do not.
+
+### 🔴 The nil, with its denominator — the honest headline
+
+🟢 **All four regional legs were run** (`AI {industry} {region} 2026 adoption regulation players`,
+one per region), plus the global trends leg. 🔴 **`18` distinct regulatory or market facts came
+back. `17` were already in `intel/` and were confirmed by `grep` against this base rather than
+recalled:**
+
+| Region | Facts returned | Already held in `intel/` | New |
+|---|---|---|---|
+| North America | `8` | `7` — `134` bills across `31` states · Ohio district policy `2026-07-01` · NC model policy `2026-12-31` · Idaho · Maryland · California `AB 1159` · SUNY `64` campuses · Gallup `61%` teacher use | 🟡 `1` — **New York `A9190`** |
+| EMEA | `5` | `5` — Reg. `(EU) 2026/1744` · Annex III education `2027-12-02` · Art. `50` transparency live `2026-08-02` · emotion-recognition ban in schools since Feb `2025` · Art. `27` Fundamental Rights Impact Assessment | `0` |
+| APAC | `4` | `4` — Korea AI Basic Act in force `2026-01-22`, education among six higher-risk sectors · Korea's AI digital-textbook rollback to optional status · Japan AI Promotion Act (June `2025`), school pilots · China generative-AI service filings (`550+` by mid-`2026`) | `0` |
+| LATAM | `4` | `4` — Brazil `PL 2.338/2023` Senate-approved `2024-12-10`, still a bill · Mexico no general AI law, Estado de México education-law reform April `2026` · Colombia `CONPES 4144` · Brazil `76%` / Mexico `70%` digital-user adoption | `0` |
+
+🟡 **The one new item: New York `A9190`**, reported by a secondary tracker as a bill that would
+largely prohibit classroom AI use **before ninth grade**. 🔴 **`CITED, NOT READ`, from a
+low-rigour source, and one source only — it is recorded as a LEAD, not as a fact, and no pattern
+or pricing in this base depends on it.** 🔵 **If it holds it is the first US proposal to set an
+AGE FLOOR rather than a usage policy, which is a different compliance shape from everything else
+in the North America row.**
+
+🔵 **Why an eighth consecutive informed nil is still worth the queries.** 🟢 **It is now evidence
+about the WORLD, not about this base's searching:** the education-AI regulatory map has been
+stable for four passes across all four regions, and the next real movement has a known date —
+**`2026-12-02`, `16` days out**, when the EU AI Act Art. `50(2)` provider-marking grace expires.
+🔴 **A client told "the rules are changing fast" is being sold urgency; the rules changed in July
+and the next change is already on the calendar.**
+
+### 🟢 What DID move this pass is the supply side, and it moves two regional opportunities
+
+🟢 **Nine build-safe foundation rows landed** (`repos/foundations.md`, `p850`) in two tiers that
+map directly onto regional procurement: **accessibility** (North America and EMEA) and **SIS
+interchange** (North America). 🔵 **Both are recorded under their regions below.**
+
+---
+
 ## 🟢 Fifty-fourth pass (`p849`, 2026-11-16) — **the four regional legs run again, and the single most consequential item is an EMEA DATE CHANGE this base has not recorded: education high-risk obligations reported as slipping to `2027-12-02`**
 
 🟡 **Provenance, stated before the findings, unchanged from `p848`.** Every regulatory and market
@@ -74,6 +118,24 @@ search collapsed homework-help traffic. 🔵 **Content-adjacent edtech is being 
 assessment, compliance and infrastructure are not.** Named players: Pearson, Cengage, Instructure,
 Coursera, Udemy. US market ≈ **`$3,280 Mn` in 2025, ≈`29%` CAGR** (vendor figure, low confidence).
 
+
+#### 🟢 Update (`p850`, 2026-11-16) — the accessibility pipeline becomes a sellable line item, and the SIS bridge is priced
+
+🟢 **`6` permissive accessibility instruments filed this pass** (`repos/foundations.md`, `p850`).
+🔵 **Section 508 / ADA conformance is a SCORED gate in US public-sector education bids and is
+normally answered with a stale PDF audit.** 🟢 **`P78` converts it into a CI artefact** using
+`guidepup` (MIT, `599★`, drives real VoiceOver and NVDA), `Muhnad/a11y-checker` (MIT) and
+`GAAD-Foundation/AIMAC` (MIT, grades the MODEL's output, not the interface).
+
+🟢 **SIS rostering is now a `2`–`3` week recipe (`P77`), and this is the region where it fully
+applies** — Ed-Fi encodes US K-12 reporting concepts and the OneRoster bridge
+(`Ed-Fi-Alliance-OSS/edfi-oneroster`, Apache-2.0) is first-party to that ecosystem.
+
+🟡 **Regulatory: `0` new facts; `7` of `8` already held.** 🟡 One lead, `CITED, NOT READ`: New York
+`A9190`, reported as proposing a prohibition on classroom AI below ninth grade — **an AGE FLOOR
+rather than a usage policy**, which is a different compliance shape from Ohio, NC, Idaho or
+Maryland. 🔴 Single low-rigour source; nothing in this base depends on it.
+
 ### EMEA
 
 🟢 **Adoption has crossed from pilot to programme, and the teachers are not comfortable.**
@@ -97,6 +159,27 @@ the **UAE Ministry of Education** reportedly introduced **`25` generative-AI pro
 schools in February `2026`**, covering age suitability, privacy, academic integrity and exams. 🟡
 **One source, unverified, and the only Gulf regulatory item the sweep produced** — but a
 prohibition list is a procurement specification in disguise, and it is worth a primary read.
+
+
+#### 🟢 Update (`p850`, 2026-11-16) — an accessibility answer with institutional provenance, and the `2026-12-02` clock
+
+🟢 **`bbc/color-contrast-checker` (Apache-2.0, `106★`, byte-read `2026-11-16`) is the row to lead
+with here.** 🔵 **In an EMEA public-sector bid the sentence "the contrast check is the BBC's own,
+under Apache-2.0" survives procurement review in a way a `27★` repository does not** — and the BBC
+runs one of the region's largest public-service education estates. 🟢 Pair it with
+`incluud/color-contrast-checker` (MIT, WCAG 2.2 at design-token level): different pipeline stages,
+and EN 301 549 / the European Accessibility Act are scored on evidence, not intent.
+
+🟢 **`fmadore/Live-translation` (MIT) is the GDPR-shaped captioning architecture:** offline Whisper
+for the transcript, cloud only for translation, so minors' speech never leaves the room.
+
+🔴 **The clock, unchanged and `16` days out: Art. `50(2)` provider-marking grace expires
+`2026-12-02`.** 🔴 **Art. `50(4)` deployer disclosure has been live since `2026-08-02` and is
+therefore already late in every running deployment.** 🟢 Annex III education high-risk remains
+`2027-12-02`. 🟡 `0` new EMEA facts this pass; all `5` already held.
+
+🔴 **`850-G1` bites here:** there is no open rostering-standard implementation for any European
+national SIS, so `P77` degrades to one national adapter per market.
 
 ### APAC
 
@@ -122,6 +205,25 @@ recorded as a lead). Acer is pushing AI-driven learning at regional summits.
 at all**, and `iris2hu/L2C-rater` (`33★`), the only Chinese-as-a-second-language scorer found, is
 likewise unlicensed. 🟢 **Assume paper code is unusable until byte-read; assume competition code is
 usable.**
+
+
+#### 🟡 Update (`p850`, 2026-11-16) — `0` new facts, and the one agent row filed is APAC-built for an EMEA market
+
+🟡 **All `4` APAC facts returned were already held**: Korea's AI Basic Act in force `2026-01-22`
+with education among six higher-risk sectors; Korea's AI digital-textbook rollback to optional
+"educational material" status; Japan's AI Promotion Act (June `2025`) plus school pilots; China's
+generative-AI service filings (`550+` by mid-`2026`). 🔴 **Vietnam's `Decision 33/2026/QD-TTg`
+(education deadline `2027-09-01`) stands as recorded at `p848` and remains the EARLIEST enumerated
+education regime anywhere — `92` days before the EU's.**
+
+🟡 **The pass's one agent row has an APAC vendor and an EMEA market**
+(`VishwamPatel-Infynno/Question-Bank-Generator`, MIT, UCAT). 🟢 **Region filed as EMEA from the
+ARTEFACT, with the vendor's APAC base recorded separately** — this base does not file a region
+from an owner name.
+
+🔴 **`850-G1` applies: no open rostering-standard implementation for any APAC national SIS.**
+🔵 **Given Korea's and Vietnam's enumerated high-risk regimes, the conformance-evidence half of
+`P78` transfers here better than the rostering half of `P77` does.**
 
 ### LATAM
 
@@ -149,6 +251,28 @@ scoring metric (`ASAP-AES`, BSD-2) transfers unchanged, because kappa is languag
 (2024)**, a figure too small to be consistent with `92%` student adoption, and it is recorded only
 so a later pass does not re-find it and trust it.
 
+
+#### 🔴 Update (`p850`, 2026-11-16) — the supply gap is re-measured on a NEW query vocabulary and is still total
+
+🔴 **Third consecutive pass, second vocabulary, same answer** (`850-G2`).
+`tutor agent portugues brasil educacao` → **`0` results**.
+`agente educativo tutor espanol` → **`2` results, both `0`–`1★`, and NEITHER carries a `LICENSE`
+file at all.** 🟢 **This is an informed nil, not a failed search:** `p849` ran product nouns,
+`p850` ran artefact and language nouns per `ACTION p848-B`, and both returned nothing build-safe.
+
+🔵 **Stated as an opportunity rather than a complaint: it is the clearest BUILD opening on these
+shelves.** 🟢 **The nine rows filed this pass are language-independent** — contrast ratios, screen
+readers, WCAG tokens, rostering schemas and `quadratic weighted kappa` do not care what language
+the learner speaks — **so `P77` and `P78` port to a LATAM engagement unchanged**, which is exactly
+what a region with no local agent supply needs.
+
+🟡 **Regulatory: `0` new facts; all `4` already held** — Brazil `PL 2.338/2023` Senate-approved
+`2024-12-10` and **still a bill** (🔴 a secondary source claiming it is in force with the ANPD as
+authority is contradicted by the better source and is NOT recorded as fact); Mexico with no
+general AI law and the Estado de México education-law reform of April `2026`; Colombia
+`CONPES 4144`. 🔴 **`850-G1` applies in full: no open rostering standard for any LATAM national
+SIS.**
+
 ### Global
 
 🟢 **The cross-regional constant this pass establishes is EVIDENCE.** The `45%` ESSA figure
@@ -163,6 +287,24 @@ implementation, benchmark or evaluation harness as part of a regulatory or procu
 🔵 **Every named instrument is a policy document or a commercial platform.** 🟢 **That is an opening,
 not an absence: the studio that brings the measurement code to a policy conversation is not
 competing with Pearson, Instructure or Acer.**
+
+
+#### 🔴 Update (`p850`, 2026-11-16) — the cross-region finding is about this base, not about the market
+
+🔴 **Three gaps this base declared one pass ago were refuted by rows it had already filed `38`–`43`
+passes earlier** (`848-G1`, `848-G2`, `848-G3` — see `intel/open-gaps.md`, `p850`). 🔵 **The
+generalisable lesson for any studio running a long-lived curated KB for a client (`T168`): past a
+certain size the cheapest way to answer "do we have an X?" is to search the web, and the web does
+not know what is on the shelf.**
+
+🟢 **The commercial form of that lesson is `P78`'s shape applied to knowledge itself: sell the
+VERIFICATION INSTRUMENT alongside the content.** 🔵 **A KB that can falsify its own claims is worth
+more than a larger one that cannot** — and this base's own `make absence-census`
+(`CENSUS-REFUTED=385`, `156` of them in the gap ledger) is the demonstration.
+
+🟡 **Market sizing unchanged and still search-tier**: AI-in-education estimates for `2026` span
+`$10.4B` to `$12.3B` (HolonIQ) depending on source. 🔴 **The spread is the finding; quote a range
+or quote nothing.**
 
 ## 🟢 Fifty-third pass (`p848`, 2026-11-16) — **`p844`'s open residual is CLOSED: the Article `50` marking grace ends `2026-12-02`, `16` days from this pass — and the sub-paragraph that bites a STUDIO was never deferred at all**
 

@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-fifth pass (`p850`, 2026-11-16) — `2` recipes (`P77`, `P78`), built only from rows filed or measured this pass
+
+🔵 **Both are numbered in the bare form this repository's own gate counts** (`## P<n> — …`), per
+`ACTION p849-D`.
+
+## P77 — the rostering bridge: inherit the SIS instead of replacing it
+
+🔴 **The problem, in the client's words.** *"Your AI tutor needs to know which students are in
+which class, and our SIS is a system we are not replacing."* 🔴 **`848-G1` called this
+*"the single largest unpriced line item"* in every SIS engagement.** 🟢 **It is priced below, and
+every component is on these shelves with a byte-read permissive grant.**
+
+🔵 **The insight that makes it two weeks instead of two months:** do not integrate with the SIS.
+**Integrate with the STANDARD the SIS already speaks**, and let an existing adapter cross between
+the two standards that matter.
+
+🟢 **Wiring, concretely.**
+
+1. **Specification — `Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard`** (Apache-2.0, `47★`). Read the
+   domain model first, and 🔴 **pin the ref explicitly: the default branch is `v6.2.0`, a release
+   tag, so `main` and "the default branch" are different documents.**
+2. **Store — `Ed-Fi-Alliance-OSS/Ed-Fi-ODS`** (Apache-2.0, on this base's shelves since `p810`)
+   or **`Ed-Fi-Alliance-OSS/Data-Management-Service`** for new builds. Stand it up as the
+   integration landing zone; the client's SIS exports into it.
+3. **Bridge — `Ed-Fi-Alliance-OSS/edfi-oneroster`** (Apache-2.0, `6★`, pushed `2026-11-13`).
+   🟢 **Serves a OneRoster 1.2 API straight out of that ODS. This is the component that removes
+   the bespoke work**, and its `6★` is a property of the integrator market, not of its quality.
+4. **Conformance — `googleworkspace/oneroster-integration-conformance-tests`** (Apache-2.0,
+   already on all three shelves). 🟢 **Run it in CI from day one so "we are OneRoster compliant"
+   is a test result, not a claim in a slide.**
+5. **Consumption — the agent layer.** Whatever tutor or analytics agent the engagement is really
+   about reads rosters from the OneRoster endpoint, never from the SIS. 🔵 **Swap the SIS later
+   and nothing above layer 3 changes.**
+
+🟢 **Timeline: `2`–`3` weeks** for a working roster bridge with conformance tests green, against
+`6`–`8` weeks for a bespoke SIS integration.
+
+🔴 **Where it does NOT apply, said before a client hears it elsewhere.** Ed-Fi encodes **US K-12**
+reporting concepts. 🟡 **In EMEA, APAC and LATAM the national SIS is usually neither Ed-Fi nor
+OneRoster, and this recipe degrades to "model the roster domain on Ed-Fi, expose OneRoster, write
+one national adapter" — still useful, no longer two weeks.** 🔴 **This base has no evidence of an
+open rostering standard implementation outside North America, and that absence is `850-G1`,
+written with the grep that produced it.**
+
+## P78 — sell the accessibility pipeline, not the assistive technology
+
+🔴 **The procurement reality.** Accessibility is a **scored gate** in public-sector education
+bids — Section 508 / ADA in North America, EN 301 549 and the European Accessibility Act in EMEA.
+🔴 **It is scored on evidence, and most bids answer it with a PDF audit that is stale the day it
+is signed.**
+
+🟢 **The recipe: make accessibility a CI artefact, and keep the licence boundary on the right side
+of the line** (`T170`).
+
+1. **Screen-reader regression — `guidepup/guidepup`** (MIT, `599★`). 🟢 **Drives real VoiceOver and
+   real NVDA from a test script.** Write the learner's critical path — log in, open an assignment,
+   submit — as a screen-reader test. 🔵 **The deliverable is a passing run on every commit, which
+   is a far stronger procurement answer than any audit document.**
+2. **Token-time contrast — `incluud/color-contrast-checker`** (MIT, `27★`). Validate WCAG 2.2
+   contrast **in the design system**, so a failure is caught once rather than in every component
+   that inherits it.
+3. **Page-time contrast — `bbc/color-contrast-checker`** (Apache-2.0, `106★`). 🟢 **Keep both:
+   different stages, and the BBC provenance is worth saying out loud in an EMEA public-sector
+   bid.**
+4. **Broad scan — `Muhnad/a11y-checker`** (MIT, `117★`, 🔴 default ref `master`). Its own
+   description names AI agents as consumers, so an agent can call it and read the result back.
+5. **Model-output accessibility — `GAAD-Foundation/AIMAC`** (MIT, `28★`). 🔵 **The step everyone
+   skips: layers 1–4 grade the interface the AI is wrapped in; this one asks whether the model's
+   OUTPUT is usable by a disabled learner.** 🔴 Treat it as a reference and a review checklist,
+   not a dependency — `28★`, one fork, last push `2025-12-12`.
+6. **Live captioning — `fmadore/Live-translation`** (MIT, `11★`). 🟢 **Offline Whisper for the
+   transcript, cloud only for translation** — so minors' speech never leaves the room, which is
+   the GDPR answer in EMEA and the student-data answer behind California's `AB 1159`. 🔴 Copy the
+   architecture; do not depend on an `11★` repository.
+7. **The AAC boundary — `RonanOD/OpenAAC`** (Apache-2.0, `34★`). 🔴 **If actual AAC is in scope,
+   state the licence choice in writing before work starts**: build on `OpenAAC` permissively and
+   small, or integrate `cboard-org/cboard` (GPL-3.0, `769★`) across a process boundary, or
+   contribute upstream and sell the deployment (`T170`).
+
+🟢 **Timeline: `3`–`4` weeks** to a green accessibility pipeline on an existing product.
+🔵 **Commercially this is the better half of the accessibility problem:** the assistive technology
+is copyleft and crowded, the verification pipeline is permissive and nobody is selling it.
+
+---
+
 ## 🟢 Fifty-fourth pass (`p849`, 2026-11-16) — `2` recipes (`P75`, `P76`), built only from rows filed or measured this pass
 
 🔵 **Both are numbered in the form this repository's own gate counts** (`## P<n> — …`). 🔴 **`p848`

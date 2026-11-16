@@ -4,6 +4,33 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-fifth pass (`p850`) — 🔴 **`1` MIT entrant, and the week's real movement is that three "gaps" this base declared last pass were already sitting on its own shelves**
+
+🟢 **Entrant.** [`VishwamPatel-Infynno/Question-Bank-Generator`](https://github.com/VishwamPatel-Infynno/Question-Bank-Generator)
+— MIT (byte-read `2026-11-16`, `main/LICENSE`, `1,090 B`, `sha256₁₂ 802df034c4f8`), `0★`, pushed
+`2026-11-16`, a multi-agent item generator for the **UCAT** admissions test (EMEA, from the
+artefact). 🔴 **`0★` and one vendor — filed as a demand signal in an Annex III high-risk category,
+not as a dependency.**
+
+🔴 **No movement to report on the MCP tier, and that is itself the finding.**
+[`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) (`207★`),
+[`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) (`119★`) and
+[`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server)
+(`67★`, pushed **today**) were all on `agents/top.md` already — and `p848` declared *"no
+education-specific MCP server, `0` results at `>100★`"* one pass ago. 🔵 **The LMS-MCP tier is not
+new and it is not absent; it has been the healthiest education-agent category this base holds
+since `p805`.**
+
+🟡 **Watched, not filed.** [`eloompty/Eloom-LMS-International`](https://github.com/eloompty/Eloom-LMS-International)
+(MIT, `1,062 B`, `sha256₁₂ d0ec1660730d`, `0★`) — an open LMS for training providers, too new and
+too unused to earn a platform row; re-check next pass. 🔴
+[`seawolf-seno/omamastery`](https://github.com/seawolf-seno/omamastery) — a mastery gradebook,
+`NOASSERTION`, no row. 🔴 **`aeceballos-pixel/LenguaCastellanaTutor` and
+`aeceballos-pixel/Tutor-Lengua-Castellana` — the ONLY two results from the Spanish-language agent
+leg, and neither carries a `LICENSE` at all.**
+
+---
+
 ## `2026-11-16` — fifty-fourth pass (`p849`) — 🟢 **`2` MIT entrants, `1` AGPL entrant, `2` disqualifications — and the week's real movement is that `8` rows which had already MOVED were not being counted**
 
 🔵 **`p848` moved two rows onto the shelf in prose and onto no table. `p847` and `p846` moved six

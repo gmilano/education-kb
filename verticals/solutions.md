@@ -4,6 +4,32 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Fifty-fifth pass (`p850`, 2026-11-16) — **`0` platform rows (`147` → `147`). ELEVENTH consecutive nil, and this pass stops re-recording it and prices it instead.**
+
+🔴 **The leg was run.** `open source platform education LMS student information system MIT Apache 2026`
+(WebSearch) plus first-party `search/repositories`. 🔴 **Same closed set of seven, same licences:**
+Moodle (GPL-3.0) · Open edX (AGPL-3.0) · Canvas (AGPL-3.0, commercial SaaS in practice) · Sakai
+(**ECL-2.0**, not Apache-2.0 — `p846`) · OpenEduCat (LGPL-3.0) · ILIAS (GPL) · Chamilo (GPL).
+🔵 **Not one is permissive, and eleven passes of looking is enough evidence to stop treating that
+as a gap in this base's coverage.**
+
+🟡 **The one new address, declined.** [`eloompty/Eloom-LMS-International`](https://github.com/eloompty/Eloom-LMS-International)
+— MIT, byte-read `2026-11-16` (`main/LICENSE`, `1,062 B`, `sha256₁₂ d0ec1660730d`), `0★`, pushed
+`2026-10-06`. 🔴 **An open LMS with a permissive grant and no evidence of a single deployment is
+not a platform row on a shelf whose other entries run national education systems.** 🟢 Watched in
+`agents/trending.md`; re-check next pass.
+
+🟢 **What changed this pass is not the shelf, it is the posture.** `p849` answered the nil with
+`P76` — inherit the LMS over **LTI 1.3** rather than replace it. 🟢 **`p850` adds the other half:
+`P-77` in `compose/patterns.md` inherits the SIS the same way, over Ed-Fi and OneRoster, using
+`Ed-Fi-Alliance-OSS/edfi-oneroster` as the bridge.** 🔵 **Between them the two recipes cover the
+two systems a school will never let a studio replace — the LMS and the SIS — and neither recipe
+needs a permissive platform to exist.** 🔴 **`848-G1` called SIS rostering *"the single largest
+unpriced line item"*; it is priced now, and the reason it was unpriced is that nobody read this
+file, where `Ed-Fi-ODS` has sat since `p810`.**
+
+---
+
 ## 🔴 `2026-11-16` — fifty-fourth pass (`p849`): **the TENTH consecutive nil on the vertical-platform leg, and this shelf's own row count was wrong by `2` the whole time**
 
 🔴 **The mandated leg — `open source platform education ERP CRM MIT Apache` — was run again and

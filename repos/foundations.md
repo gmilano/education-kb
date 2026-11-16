@@ -4,6 +4,57 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-fifth pass (`p850`, 2026-11-16) — **`9` foundation rows (`191` → `200`): the accessibility tier `848-G2` said did not exist, and the SIS-interchange spine `848-G1` said was missing — both found by searching the ARTEFACT, both byte-read today**
+
+🟢 **Every grant below was read as bytes from `raw.githubusercontent.com` on `2026-11-16`**, with
+size, `sha256₁₂` and the copyright holder recorded in the cell. 🔵 **Nine rows, `0` copyleft,
+`0` unlabelled: `6` MIT and `3` Apache-2.0.**
+
+🔴 **Read `agents/top.md` (`p850`) first for the uncomfortable half of this pass:** `848-G1` and
+`848-G2` were not open gaps. They were open sentences over shelves that already held part of the
+answer. 🟢 **These nine rows are the part that genuinely was missing** — and the reason they were
+missing is the same one `T166` found for the essay-scoring tier: **the queries named the PRODUCT
+(`SIS`, `accessibility tool`) instead of the ARTEFACT (`OneRoster`, `WCAG`, `AAC`, `braille`,
+`screen reader`, `Ed-Fi`)**, which is `ACTION p848-B`, executed here for the first time.
+
+### 🟢 The accessibility tier — `848-G2`'s "nothing build-safe to offer", answered with six rows
+
+🔵 **Why this is a foundation tier and not a product tier.** Accessibility is a **procurement gate**
+in public-sector education in North America (Section 508 / ADA) and EMEA (EN 301 549, and the
+European Accessibility Act). 🟢 **A studio does not win that line item with a feature; it wins it
+with an auditable test in CI.** 🔴 **Five of these six are testing and checking instruments, not
+end-user assistive technology — that is deliberate, and it is the half this base was missing.**
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/guidepup/guidepup | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,068 B`, `sha256₁₂ b0feed1635af`, holder `Copyright (c) 2023 Craig Morten`) | 599 | 🟢 **New this pass (`p850`), and the most load-bearing row in the tier.** **Screen-reader automation for automated testing** — it drives **VoiceOver** on macOS and **NVDA** on Windows from a test script, so the thing a procurement officer actually asks about ("does it work with a screen reader?") becomes a CI assertion instead of a manual demo. `20` forks, pushed `2026-11-08`, not archived, default ref `main`. 🔵 **This is the one that converts accessibility from an audit into a regression test**, and it is why the tier is filed under foundations rather than verticals. 🟡 Region not established first-party; this base does not file a region from a personal name. |
+| https://github.com/Muhnad/a11y-checker | 🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,076 B`, `sha256₁₂ 1c754b223002`, holder `Copyright (c) 2016 Muhannad Abdelrazek`) | 117 | 🟢 **New this pass (`p850`).** An **accessibility scanner whose own description names AI agents as a consumer** — "accessibility scanner for humans and AI agents" — which is the integration surface this base cares about: a checker an agent can call and read back, rather than a dashboard a person reads. `20` forks, pushed `2026-11-13`, not archived. 🔴 **Default ref is `master`, not `main`** — recorded because this base has twice mis-read a grant by assuming `main` (`gate-branch-alias`, `p428`). 🟡 Region not established first-party. |
+| https://github.com/bbc/color-contrast-checker | 🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/LICENSE`, `11,333 B`, `sha256₁₂ 6b14326de7e0`) | 106 | 🟢 **New this pass (`p850`) — and the only row in the tier with an institutional publisher.** **WCAG colour-contrast validation, published by the BBC**, which runs one of the largest public-service education estates in EMEA (Bitesize). 🔵 **The provenance is the value: in an EMEA public-sector bid, "the contrast check is the BBC's own, under Apache-2.0" is a sentence that survives procurement review.** `23` forks, pushed `2026-10-17`, default ref `master`, not archived. 🟡 **Region EMEA on the artefact's publisher**, a UK public broadcaster — institutional evidence, not a personal name. |
+| https://github.com/incluud/color-contrast-checker | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,069 B`, `sha256₁₂ 4df0cf5c404d`, holder `Copyright (c) 2023 Mark Teekman`) | 27 | 🟢 **New this pass (`p850`).** A **WCAG 2.2** contrast validator **with design-system integration** — it checks tokens, not rendered pages, so it catches a contrast failure at the point a design system defines it rather than after a hundred components inherit it. `0` forks, pushed `2026-01-24`, not archived. 🔵 **Filed beside the BBC row deliberately: the two sit at different points of the pipeline** (token-time vs page-time) and a serious engagement wants both. 🟡 Region not established first-party. |
+| https://github.com/GAAD-Foundation/AIMAC | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,072 B`, `sha256₁₂ 0f756b9e83f3`, holder `Copyright (c) 2025 GAAD Foundation`) | 28 | 🟢 **New this pass (`p850`) — the only artefact on these shelves that checks the MODEL rather than the interface.** **"AI Model Accessibility Checker"**, published by the **GAAD Foundation** (the body behind Global Accessibility Awareness Day). 🔵 **Why that matters for an education engagement: every other row here grades the UI an AI tutor is wrapped in; this one asks whether the model's own outputs are usable by a disabled learner** — which is the question a ministry will ask and which this base previously had nothing to point at. `1` fork, pushed `2025-12-12`. 🔴 **Scope it honestly: `28★`, one fork, a year since the last push — a reference and a conversation-opener, not a dependency.** 🟡 Region not established first-party from the artefact. |
+| https://github.com/RonanOD/OpenAAC | 🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917` — the canonical full payload, appendix included) | 34 | 🟢 **New this pass (`p850`) — the one PERMISSIVE AAC row, and it is why the AAC leg is now answered rather than nil.** **Augmentative and Alternative Communication**, open and Apache-2.0. 🔴 **The AAC field is otherwise copyleft and that is not an accident:** the leg's largest result by an order of magnitude, `cboard-org/cboard` (`769★`, pushed `2026-11-15`), is **GPL-3.0**; `OTTAA-Project` is GPL-3.0 and `sonicbaume/FreeAAC` is AGPL-3.0. 🔴 **Scope this row honestly: pushed `2024-11-22`, two years stale, small.** 🔵 **It is filed as the build-safe REFERENCE in a tier where every larger option imposes copyleft on a studio's derivative** — which is exactly the decision a client needs stated before work starts, not after. 🟡 Region not established first-party. |
+
+### 🟢 The SIS-interchange spine — `848-G1`'s "bespoke work in every engagement", partly already shelved and now completed
+
+🔴 **`848-G1` was false** (see `agents/top.md`, `p850`): `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` and
+`Ed-Fi-Alliance-OSS/Data-Management-Service` have been on this very file since `p810`. 🟢 **What
+was genuinely absent is the pair below — the STANDARD itself, and the bridge from Ed-Fi to
+OneRoster** — without which the two rows already here are an implementation with no specification
+and no interchange.
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard | 🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `10,173 B`, `sha256₁₂ a6cba85bc92e`) | 47 | 🟢 **New this pass (`p850`).** **The Ed-Fi Data Standard itself** — the specification the `Ed-Fi-ODS` row already on this shelf implements. `14` forks, pushed `2026-11-12`, not archived. 🔴 **Default ref is `v6.2.0`, not `main`** — a release tag as the default branch, which means a naive `main`-only reader gets the development head and a naive "default branch" reader gets a pinned version; both exist and they are not the same document. 🟡 **The grant payload is `10,173 B`, not the canonical `11,357 B`: it is the Apache-2.0 BODY with the non-operative "APPENDIX: How to apply the Apache License to your work" removed** (`grep -c APPENDIX` → `0`). 🟢 **The operative grant is complete and unaltered; this is a presentation difference, not a licence difference** — but a full-text SPDX matcher can report `NOASSERTION` on it, which is a line item in a US higher-education bid exactly as `p846`'s Sakai/`ECL-2.0` finding was. 🟡 **Region North America** on the artefact: the Ed-Fi Alliance is a US non-profit and the standard encodes US K-12 reporting concepts. |
+| https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster | 🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `10,173 B`, `sha256₁₂ a6cba85bc92e` — byte-identical to the row above) | 6 | 🟢 **New this pass (`p850`), and small on purpose.** **Serves a OneRoster 1.2 API out of an Ed-Fi ODS database** — it is the BRIDGE between the two rostering standards this base now holds, and it is the single component that makes `P-77` a two-week job instead of a two-month one. `5` forks, pushed `2026-11-13`, default ref `main`, not archived. 🔴 **`6★` — do not mistake low stars for low importance in a standards layer; an interchange adapter has exactly as many users as there are integrators, and that is a small number of large contracts.** 🟢 **Same `sha256₁₂` as the Data Standard row above: one publisher, one payload, which is what a licence-identity check SHOULD look like.** 🟡 **Region North America**, same artefact-level basis. |
+
+### 🟢 One more, filed outside both tiers
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/fmadore/Live-translation | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,075 B`, `sha256₁₂ 710bd5932d24`, holder `Copyright (c) 2026 Frédérick Madore`) | 11 | 🟢 **New this pass (`p850`).** **Offline Whisper captioning plus cloud translation**, explicitly structured so the two halves are separable. 🔵 **That separation is the reason it is here rather than in a general ASR tier: live captioning is an accessibility obligation, and "the transcript never leaves the room, only the translation call does" is the architecture that lets a school meet the obligation without exporting minors' speech to a third-party processor** — which is the GDPR question in EMEA and the student-data question behind California's `AB 1159` in North America. `3` forks, pushed `2026-11-16`, not archived. 🔴 **`11★`, one author, new — a pattern to copy, not a vendor to depend on.** 🟡 Region not established first-party. |
+
+---
+
 ## 🟢 Fifty-fourth pass (`p849`, 2026-11-16) — **`3` rows (`188` → `191`): the AUTOMATED ESSAY SCORING reference tier, absent from these shelves for fifty-three passes, and the reason it was absent is a query-vocabulary defect this base already named**
 
 🔵 **What `p849` ran, and what it changed.** The mandated WebSearch legs plus `28` first-party
@@ -933,7 +984,7 @@ above was graded on the licence question alone.**
 | https://github.com/langchain-ai/langchain | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`) | 149546 | **Region: Global.** The model and tool abstraction layer beneath the above. 🟡 **Shelved with a deliberate caution: this base's compose recipes should depend on `langgraph` for control flow and on `langchain-core` for interfaces, not on the `langchain` meta-package, whose surface moves faster than an education deliverable's support window.** 🔵 **Note for the byte-read gate: its `LICENSE` is on `master`, not `main` — a `main`-only probe returns `404` and would record a false `NO_LICENCE_FILE`, which is a live defect in any sweep that assumes the default branch name** |
 | https://github.com/teppei-miyashita/agenticstar-agentcore | 🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last touched `2026-08-12` | 0 | 🔴 **Region: APAC. Shelved as a WARNING row — the worked example for `T89`.** This is the source repository that the PyPI package `agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository`, and it holds no commits at all. 🟢 **The package itself is genuinely MIT** (`License-Expression: MIT` in the wheel, `dist-info/licenses/LICENSE`, `1,078 B`, `sha256:2afbb5fc…`) **and genuinely installable** — 🔴 **but it is wheel-only, single-release (`2026-09-17`), and unreadable at its stated address, while hard-pinning `langgraph==1.1.10`, `langchain==1.2.18`, `fastapi==0.136.0` and `agenticstar-platform==0.5.32`.** 🔵 **Do NOT add it to a delivery tree. It is here so that the next pass asking "is the AGENTIC STAR stack adoptable?" finds the answer already measured: licensed yes, auditable no** |
 
-## Foundational repos — 191 rows
+## Foundational repos — 200 rows
 
 ## 🟢 The ASSESSMENT-PLATFORM BASE layer — **what a marking agent is built ON rather than beside** (new, thirty-ninth pass `p834`) (4 rows)
 
