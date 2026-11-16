@@ -4,6 +4,77 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fiftieth pass (`p845`, 2026-11-16) — **`0` new agent rows, a SIXTH consecutive informed nil — and a liveness channel that would have killed every row on this shelf, caught BEFORE it was used**
+
+### 🔴 Finding 1 — `github.com` HTML is NOT a liveness channel, and a sweep built on it would have manufactured `817` deaths
+
+🔵 **Why this was tested at all:** `ACTION p844-B` requires a shelf-wide address sweep, and the
+canonical instrument — the GitHub search API — is rate-limited to `10` queries a minute
+unauthenticated, which prices a full `817`-row sweep at over an hour. 🟡 **A cheaper channel was
+therefore looked for before the sweep was run, not after.**
+
+🔴 **`curl -I https://github.com/OWNER/REPO` returns `403` for everything.** Measured in one loop,
+`2026-11-16`:
+
+| Address | Expected | `github.com` HTML |
+|---|---|---|
+| `HKUDS/DeepTutor` — held, live, `52k★` | `200` | 🔴 `403` |
+| `ai-infra-curriculum/ai-infra-sre-learning` — live | `200` | 🔴 `403` |
+| `Nordup/askaboard` — confirmed DEAD at `p844` | `404` | 🔴 `403` |
+| `this-owner-does-not-exist-xyz/nope` — never existed | `404` | 🔴 `403` |
+
+🔴 **Four addresses in four different states, one response.** `20` rapid repeats returned `0`
+successes in `5` seconds, so this is a blanket refusal and not a rate limit that patience would
+clear. 🔵 **The channel has ZERO discriminating power: it cannot separate a live repository from a
+deleted one from an owner that never existed.**
+
+🔴 **The failure mode this base should name:** a sweep written against this channel would not have
+*failed* — it would have returned a clean, plausible, uniform answer declaring **all `817`
+build-safe addresses dead**, in one run, with no error. 🟢 **`p843` manufactured `1` false death
+from a normalisation bug and it took `p844` a full pass to undo. This would have manufactured
+`817`.** 🔵 **`T150`.**
+
+🟢 **Prescription — `P98`: a liveness channel must be CALIBRATED before it is trusted, against four
+known states (live, dead, never-existed, and a known-live control in the same loop), and a channel
+that returns one answer for all four is rejected regardless of how cheap it is.** 🔵 **The same
+control shape already caught `T906`'s egress refusal — the governmental endpoints are declared dead
+by a channel that returns `301` for GitHub in the same loop.**
+
+### 🟢 Finding 2 — `839-G3` is CLOSED, and it WITHDRAWS an instruction this shelf has been giving
+
+🔵 **Full measurement is filed on `repos/foundations.md`, where the estate's rows live.** 🟢 **In
+one line: the `ai-infra-curriculum` senior and architect tracks are NOT drafts — `9` of `13` tracks
+are `100%` learning-complete, including both tracks this base named as drafts, and the `0★`
+`sre` track is the most complete of all.** 🔴 **The standing advice *"treat the estate's senior and
+architect tracks as drafts until measured otherwise"* is WITHDRAWN at `p845`.** → `T149`, `P97`.
+
+### 🟡 Finding 3 — the mandated battery, run and nilled a SIXTH consecutive time, with its denominator stated
+
+🔴 **`p840`, `p841`, `p842`, `p844` and now `p845`.** 🟢 **Run in full: the global agent leg, the
+GitHub-trending leg, the vertical-platform leg, the industry-trends leg, and all four regional legs
+(North America, EMEA, APAC, LATAM).**
+
+🟢 **Every named candidate was ALREADY HELD, and the check was run against the shelves rather than
+from memory:**
+
+| Candidate returned by a leg | Held on | Verdict |
+|---|---|---|
+| `HKUDS/DeepTutor` | `agents/top.md`, `repos/foundations.md` | Held |
+| `THU-MAIC/OpenMAIC` | `agents/top.md`, `repos/foundations.md` | Held |
+| `patchy631/ai-engineering-hub` | `agents/top.md`, `repos/foundations.md` | Held |
+| `withmarbleapp/os-taxonomy` | `repos/foundations.md` | Held |
+| `amosblomqvist/learnharness` | `agents/top.md` — 🔴 `AGPL-3.0` | Held, copyleft |
+| `OpenOLAT`, `frappe/lms`, `RosarioSIS` | `verticals/solutions.md` | Held |
+
+🔵 **The regulatory legs nilled the same way, and that is the more useful nil because it is the one
+a client engagement would pay for:** Vietnam's AI law (`2026-03-01`, education named high-risk),
+Korea's AI Basic Act (`2026-01-22`), Taiwan's `2026` statute, `Regulation (EU) 2026/1744`, North
+Carolina `SL 2026-41`, the `134`-bills / `31`-states tracker figure, UNESCO IESALC `87%` adoption
+against `26%` with a strategy, the `716` instruments across `23` countries, Ceibal, `CONPES 4144`,
+HolonIQ's `$12.3B` and the OECD Digital Education Outlook — 🟢 **all already on `intel/`.**
+
+🟢 **Declared, not padded. `0` rows added here; the pass's yield went to `839-G3` and to `P98`.**
+
 ## 🔴 Forty-ninth pass (`p844`, 2026-11-16) — **`0` new agent rows. `p843`'s decay sweep is HALF WRONG: `1` of its `2` "dead" rows is alive, killed by the base's own address normalisation — and the row had PREDICTED this exact failure at `p823`**
 
 🔵 **Why this pass re-measured yesterday's measurement.** `p843` ran the first

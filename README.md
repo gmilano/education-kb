@@ -6,6 +6,35 @@ updated: 2026-11-16
 
 # Globant AI Studios — Education KB
 
+**Pass `p845` · `2026-11-16`** — 🟢 **`839-G3`, open for six passes, is CLOSED by a content read —
+and it WITHDRAWS an instruction these shelves have been giving.** 🔴 **`ACTION p844-B` was executed
+and its own first full run AMENDED it: `4` of the `6` suspects it raised were false, by the exact
+mechanism it was written to prevent.**
+
+## What this pass established
+
+| | |
+|---|---|
+| 🟢 **`839-G3` CLOSED — and the estate this base called "drafts" is `100%` written** | 🟢 **`9` of `13` `ai-infra-curriculum` tracks are `100%` learning-complete**, measured against the estate's own machine-generated `COMPLETENESS_MATRIX.md` (threshold declared in-file: `≥3,000` words). 🔴 **Including `senior-engineer` (`11★`) and `architect` (`15★`) — the two tracks the shelf named as drafts.** 🔴 **Standing advice *"treat the estate's senior and architect tracks as drafts"* WITHDRAWN** (`T149`) |
+| 🔴 **Stars INVERT completeness here, and so does volume** | 🔴 **`ai-infra-sre-learning` has `0★` and is the most complete track in the estate** (`14/14` modules, `353,078` words, `96%`); the `1,889★` flagship carries `10`. 🔴 **Volume misleads too** — `principal-architect-learning` holds `87,660` words at `0/5` modules complete, because `81,068` sit outside `lessons/`. 🟢 **`2` new `0★` `MIT` foundation rows taken from the close** |
+| 🟢 **The four "incomplete" tracks are a DIFFERENT ARTEFACT, which is the commercially useful half** | 🟢 **`principal-architect`, `team-lead` and `principal-engineer` carry `59k`–`74k` words in `projects/`** — reference architectures, step-by-step walkthroughs, rubrics — against `~6.6k` of skeleton `lessons/`. 🔵 **You do not teach a principal architect with lecture notes.** 🔴 **`senior-architect` (`L55`) is the ONE genuinely thin track (`~21k` across both halves)** |
+| 🔴 **The estate's `Solutions %` counts stubs, so `Overall %` inverts the ranking** | 🔴 **`senior-architect-solutions` reports `50/50 solved`; measured it is `6,170` words across `71` files, `61` under `200` words, `50` of them one repeated `58`-word *"Solution Pointer"* aimed back at modules the same matrix marks never written.** 🔴 **`Overall %` therefore ranks the thinnest track ABOVE three far better-built ones.** 🟢 **`P97`: quote `Learning %`, never `Overall %`** |
+| 🔴 **`ACTION p844-B` executed on `161` rows — and `67%` of its suspects were FALSE** | 🟢 **`56` owners, `161` of `817` addresses (`19.7%`), bounded and declared.** 🔴 **`6` suspects raised, `4` false — every one of them from an owner page-capped at `100` results.** 🟢 **`P99` adds a numeric gate: an owner sweep may raise a suspect only when `total_count ≤ 100`.** 🟢 **`2` genuine absences confirmed by BOTH stages: `digitalcredentials/learner-credential-wallet` (🟡 a `-site` sibling survives — rename signature) and `tl-its-umich-edu/caliper-php-public`** |
+| 🔴 **A liveness channel rejected BEFORE it was used** | 🔴 **`curl -I https://github.com/OWNER/REPO` returns `403` for live, dead and never-existed alike — `4` states, `1` answer.** 🔵 **A sweep built on it would not have errored; it would have declared all `817` build-safe addresses dead in one clean run.** 🟢 **`P98`: calibrate a liveness channel against four known states before trusting it** (`T150`) |
+| 🔴 **`T906`'s governmental egress refusal REPRODUCES on a second day** | 🔴 **One loop, `2026-11-16`: `datos.gob.ar` `000` · `argentina.gob.ar` `000` · `dados.gov.br` `000` · `datos.gov.co` `000` · `datos.gob.mx` `000` — 🟢 against `raw.githubusercontent.com` `301` in the SAME loop.** 🟢 **`ACTION p844-A` carried; `844-G1` is blocked on configuration, not on research** |
+| 🔴 **The mandated battery nilled a SIXTH consecutive time — with its denominator** | All eight legs run (global agents, GitHub trending, verticals, industry trends, and `4` regional). 🟢 **Every candidate returned was already held and the check was made against the shelves**: `DeepTutor`, `OpenMAIC`, `ai-engineering-hub`, `os-taxonomy`, `LearnHarness` (🔴 `AGPL-3.0`), `OpenOLAT`, `frappe/lms`, `RosarioSIS`. 🔵 **Regulatory legs nilled identically** (Vietnam `2026-03-01`, Korea `2026-01-22`, `EU 2026/1744`, NC `SL 2026-41`, `134`/`31` states, IESALC `87%`/`26%`, `716` instruments, `CONPES 4144`, HolonIQ `$12.3B`). 🟢 **An informed nil** |
+
+🟢 **Every region gained a `#### Update` block under the single canonical `## Opportunities by
+region`; the structural fix re-checked and HOLDS (`1` canonical heading, `1` subsection per
+region).** 🟢 **This pass is purely additive: `596` insertions, `0` deletions, append-only files
+appended at the top with history intact.**
+
+🔴 **Largest unverified state in this base, stated as a number:** `845-G1` — **`656` of `817`
+build-safe addresses remain unswept.** 🟢 **`ACTION p845-A`: authenticating the search channel
+converts that hour of wall-clock into minutes.**
+
+---
+
 **Pass `p844` · `2026-11-16`** — 🔴 **This README was `13` passes stale.** It reported `p831`
 while the shelves had advanced to `p843`. 🟢 **`p844` re-measured yesterday's measurement, withdrew
 half of it, closed `839-G2`, and took `839-G1` from one country to five.**

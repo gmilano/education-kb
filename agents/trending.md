@@ -4,6 +4,40 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fiftieth pass (`p845`)
+
+🟢 **The week's movement in education agents is a REVALUATION of stock already held, not an
+addition — and it moves `13` tracks at once.**
+
+- 🟢 **The `ai-infra-curriculum` estate is re-rated from "senior tracks are drafts" to
+  "`9` of `13` tracks are `100%` complete."** Measured against the estate's own
+  machine-generated `COMPLETENESS_MATRIX.md`, which declares its threshold in the file
+  (`≥3,000` words = written, below = skeleton). 🔴 **`senior-engineer` (`11★`) and
+  `architect` (`15★`) — the two this base told readers to treat as drafts — both carry
+  `10/10` written modules.** → `T149`.
+- 🔴 **The trending signal itself is inverted here.** `ai-infra-sre-learning` has
+  **`0★`** and is the most complete track in the estate (`14/14` modules, `96%`,
+  `353,078` words). `ai-infra-inference-engineer-learning` also has `0★` and also carries
+  `14/14`. 🔵 **Both were generated `2026-11-15`, which is why nothing has found them yet.**
+  🟢 **Shelved as foundation rows this pass — the cheapest build-safe `MIT` assets added
+  in several passes, precisely because the trending instrument cannot see them.**
+- 🔴 **A completeness score that closes its own loop.**
+  `ai-infra-senior-architect-solutions` reports `50/50 exercises solved`. Measured:
+  `6,170` words across `71` files, `61` under `200` words, and `50` of them are the same
+  `58`-word *"Solution Pointer"* that refers the reader back to learning modules the same
+  matrix marks as never written. 🟢 **Read `Learning %`; never quote `Overall %`.** → `P97`.
+- 🔴 **An instrument that would have killed this whole shelf, caught before use.**
+  `curl -I https://github.com/OWNER/REPO` returns `403` for a live repo, a dead repo and an
+  owner that never existed alike — `4` states, `1` answer. 🔵 **A sweep built on it returns a
+  clean uniform verdict that all `817` build-safe addresses are dead.** 🟢 **Rejected, and
+  `P98` now requires a liveness channel to be calibrated against four known states before
+  it is trusted.** → `T150`.
+- 🔴 **The mandated star-ranked agent battery nilled for the SIXTH consecutive pass**
+  (`p840`, `p841`, `p842`, `p844`, `p845`). 🟢 **All eight legs run; every candidate returned
+  — `DeepTutor`, `OpenMAIC`, `ai-engineering-hub`, `os-taxonomy`, `LearnHarness`, `OpenOLAT`,
+  `frappe/lms`, `RosarioSIS` — was already held, and the check was run against the shelves.**
+  🟢 **An informed nil with its denominator stated.**
+
 ## `2026-11-16` — forty-ninth pass (`p844`)
 
 🔴 **The week's movement in education agents is a correction, not an addition.**

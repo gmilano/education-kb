@@ -258,6 +258,105 @@ it.** `T134` established that a curriculum graph under a community share-alike d
 deliverable built on these layers must carry the attribution; it does NOT have to be published
 back.** → `T139`.
 
+### 🟢 `839-G3` CLOSED at the fiftieth pass (`p845`, byte-read and content-read `2026-11-16`) — the `ai-infra-curriculum` estate measured TRACK BY TRACK, and this base's standing advice on it is WITHDRAWN
+
+🔴 **What `p839` left open, and `p840`–`p844` each re-declared without touching:** *"No measured
+answer to whether the `ai-infra-curriculum` senior/architect tracks are usable. Stars run `1,887` →
+`265` → `82` → `16` → … → `0`, and `p839` read the estate's SHAPE, not the content of its low-star
+tracks."* 🔴 **The shelf row built an instruction on top of that assumption — *"the estate's senior
+and architect tracks should be treated as drafts until measured otherwise"* — and `P91` priced them
+as authoring work.**
+
+🟢 **They are now measured. The instruction was wrong, and it was wrong in the direction that loses
+revenue: it told a studio to re-author content that already exists.**
+
+🔵 **The instrument is the estate's own `COMPLETENESS_MATRIX.md`, published per repository and
+machine-generated (`aicg org completeness`), which states its own threshold in the file: *"Module
+complete: at least 3,000 words of written content. Below that it's a skeleton (files exist, the
+module was never written)."*** 🟢 **All `13` learning tracks read `2026-11-16`, star counts measured
+the same day against the search API.**
+
+| Track (`ai-infra-…-learning`) | Level | ★ | Learning % | Solutions % | Overall % | Matrix generated |
+|---|---|---|---|---|---|---|
+| `junior-engineer` | `10` | `265` | 🟢 **100%** (`10/10`) | `100%` (`67/67`) | `100%` | `2026-11-15` |
+| `engineer` | `20` | `1,889` | 🟢 **100%** (`10/10`) | `100%` (`119/119`) | `100%` | `2026-11-03` |
+| `senior-engineer` | `30` | `11` | 🟢 **100%** (`10/10`) | `100%` (`50/50`) | `100%` | `2026-11-03` |
+| `mlops` | `30` | `15` | 🟢 **100%** (`10/10`) | `100%` (`50/50`) | `100%` | `2026-11-03` |
+| `ml-platform` | `30` | `16` | 🟢 **100%** (`9/9`) | `100%` (`45/45`) | `100%` | `2026-11-08` |
+| `performance` | `35` | `82` | 🟢 **100%** (`8/8`) | `100%` (`41/41`) | `100%` | `2026-11-08` |
+| `sre` | `35` | 🔴 **`0`** | 🟢 **100%** (`14/14`) | `93%` (`75/81`) | `96%` | `2026-11-15` |
+| `inference-engineer` | `35` | 🔴 **`0`** | 🟢 **100%** (`14/14`) | `84%` (`52/62`) | `92%` | `2026-11-15` |
+| `architect` | `45` | `15` | 🟢 **100%** (`10/10`) | `100%` (`50/50`) | `100%` | `2026-11-03` |
+| `team-lead` | `40` | `2` | 🔴 **0%** (`0/5`) | `100%` (`25/25`) | `50%` | `2026-11-03` |
+| `principal-engineer` | `50` | `5` | 🔴 **0%** (`0/5`) | `100%` (`25/25`) | `50%` | `2026-11-03` |
+| `senior-architect` | `55` | `2` | 🔴 **10%** (`1/10`) | `100%` (`50/50`) | `55%` | `2026-11-03` |
+| `principal-architect` | `60` | `1` | 🔴 **0%** (`0/5`) | `100%` (`25/25`) | `50%` | `2026-11-03` |
+
+#### 🟢 What the measurement establishes
+
+🟢 **`9` of `13` tracks are `100%` learning-complete, and two of them are the exact tracks this base
+told readers to treat as drafts** — `senior-engineer` (`11★`) and `architect` (`15★`). 🔵 **Both carry
+`10/10` written modules and a fully solved exercise set.**
+
+🔴 **Stars predict completeness NOWHERE in this estate, and at the extremes the relationship
+INVERTS.** 🟢 **`ai-infra-sre-learning` has `0★` and is the most complete track measured: `14/14`
+modules, `96%` overall.** `ai-infra-inference-engineer-learning` also has `0★` and also carries
+`14/14`. 🔴 **Meanwhile the `1,889★` flagship carries `10` modules, not `14`.** 🔵 **A studio ranking
+this estate by stars would pick up the smallest curricula first.**
+
+🔴 **Volume does not predict it either, so the cheap proxy this base could have reached for would
+ALSO have misled.** `ai-infra-principal-architect-learning` holds `87,660` words of Markdown across
+`97` files while reading `0/5` modules complete — because **`81,068` of those words sit OUTSIDE
+`lessons/`**.
+
+#### 🔴 The four "incomplete" tracks are not empty — they are a DIFFERENT ARTEFACT, and that is the commercially useful half of this finding
+
+🟢 **Measured inside each repository, `lessons/` against `projects/`:**
+
+| Track | Words in `lessons/` | Words in `projects/` | Projects |
+|---|---|---|---|
+| `principal-architect` (`L60`) | `6,592` | 🟢 **`70,801`** | `5` |
+| `team-lead` (`L40`) | `6,739` | 🟢 **`73,937`** | `5` |
+| `principal-engineer` (`L50`) | `6,577` | 🟢 **`59,344`** | `5` |
+| `senior-architect` (`L55`) | `12,328` | 🔴 **`8,961`** | `6` |
+
+🟢 **Three of the four carry `59k`–`74k` words of capstone material** — per project an
+`architecture.md` (`3.4k`–`4.5k` words), a `STEP_BY_STEP.md` (`3.6k`–`3.8k` words), a
+`requirements.md` and an evaluation rubric. 🔵 **That is the right shape for the level: you do not
+teach a principal architect with lecture notes, you hand them a reference architecture and a
+rubric.** 🟢 **So the estate is usable at EVERY level — but what you receive changes shape with
+seniority: lessons-plus-exercises at IC levels, projects-plus-rubrics at leadership levels.**
+
+🔴 **`senior-architect` (`L55`) is the single genuinely thin track in the estate** — `~21k` words
+across both halves, against `66k`–`81k` for its three neighbours. 🔴 **And the matrix's own
+`Overall %` ranks it HIGHEST of the four (`55%` against `50%`, `50%`, `50%`), which inverts the
+ranking at exactly the point a buyer would use it.**
+
+#### 🔴 A verified defect in the estate's instrument: `Solutions %` counts stubs, so `Overall %` is unsafe in BOTH directions
+
+🟢 **The matrix's `Learning %` column VERIFIES against content.** Read directly: the skeleton
+`senior-architect/mod-402-executive-leadership` holds `650` words across `9` files (its whole
+lecture note is `103` words); the complete `sre/mod-103-slo-engineering-for-model-backed-services`
+holds `27,328` words measured by `wc -w` against `27,773` claimed. 🔵 **Honest on that column.**
+
+🔴 **`Solutions %` does not verify.** `ai-infra-senior-architect-solutions` reads `50/50 exercises
+solved — 100%`. 🔴 **Measured: `71` Markdown files, `6,170` words TOTAL, `61` of `71` under `200`
+words — and `50` of them are the same `58`-word template.** 🔴 **The template is titled
+*"Solution Pointer"* and points the reader back at the matching learning exercise — inside modules
+the same matrix marks as never written.** 🔵 **A completeness score that closes its own loop.**
+🔴 `ai-infra-principal-engineer-solutions` repeats the shape: module `README`s of `12` words.
+
+🟢 **Prescription, and it is one line: read `Learning %` and the `lessons/`-vs-`projects/` split.
+NEVER quote `Overall %`.** 🔴 **`"Overall: 50%"` for `principal-engineer` means `0%` of the teaching
+content exists and `59,344` words of capstone material do.** → `T149`, `P97`.
+
+### 🟢 `2` new foundation rows from the close — byte-read `2026-11-16`
+
+| Repo | Licence, as measured | ★ / forks | Default ref · pushed | Region | Why it is a foundation and not a row on another shelf |
+|---|---|---|---|---|---|
+| https://github.com/ai-infra-curriculum/ai-infra-sre-learning | 🟢 **MIT** — `main/LICENSE`, **`1,085 B`**, `sha256:4ebf9ee24f9f…` (estate grant) | 🔴 **`0★`** / `0` | `main` · `2026-11-15` (measured `2026-11-16`) | Global | 🟢 **The most complete track in the `28`-repository estate, and it has zero stars** — `14/14` modules written, `96%` overall, `244` Markdown files, `353,078` words. 🔵 **Its subject is the one this base has no other foundation for: reliability engineering for model-backed services** — SLO engineering where the classical `2xx` check is blind, observability for LLM and GPU workloads, non-deterministic failure diagnosis, chaos engineering for AI, DR/BCP across regions. 🟢 **Chapter-level evidence of real authorship: `mod-103` runs `27,328` words and derives a six-signal quality-SLI surface (hallucination, toxicity, tool-call success, structured-output conformance, refusal, format drift), cites the Google SRE Workbook and the NIST AI RMF Generative AI Profile, and names its own scope boundary against the eval-engineer role.** 🔴 **`6` of `81` exercise solutions are unsolved — the only real gap.** `P91`, `P97`. |
+| https://github.com/ai-infra-curriculum/ai-infra-inference-engineer-learning | 🟢 **MIT** — `main/LICENSE`, **`1,085 B`**, `sha256:4ebf9ee24f9f…` (estate grant) | 🔴 **`0★`** / `0` | `main` · `2026-11-15` (measured `2026-11-16`) | Global | 🟢 **The second `0★` / `14`-module track, `92%` overall, and the estate's only inference-serving curriculum.** 🔵 **Filed alongside `sre-learning` because the two share the `35` level and were generated by the same pipeline run (`2026-11-15`), which is also why they are the two newest and least-discovered assets in the estate.** 🔴 **`10` of `62` exercise solutions unsolved (`84%`) — a wider gap than `sre`, so scope exercise authoring if the engagement needs the answer key.** 🟡 **Not independently content-sampled this pass; its `Learning %` is matrix-reported and the matrix's `Learning` column verified on two other tracks.** `P91`, `P97`. |
+
 ### 🟢 `7` new foundation rows — byte-read `2026-11-16`
 
 | Repo | Licence, as measured | ★ / forks | Default ref · pushed | Region | Why it is a foundation and not a row on another shelf |

@@ -1,0 +1,14 @@
+channel	address	known_state	observed	discriminating
+github.com-HTML-HEAD	HKUDS/DeepTutor	live	403	no
+github.com-HTML-HEAD	ai-infra-curriculum/ai-infra-sre-learning	live	403	no
+github.com-HTML-HEAD	Nordup/askaboard	dead-confirmed-p844	403	no
+github.com-HTML-HEAD	this-owner-does-not-exist-xyz/nope	never-existed	403	no
+search-api	HKUDS/DeepTutor	live	total_count=1	yes
+search-api	digitalcredentials/learner-credential-wallet	absent	422	yes
+search-api	tl-its-umich-edu/caliper-php-public	absent	total_count=0 HTTP200	yes
+egress	datos.gob.ar	governmental	000	n/a
+egress	argentina.gob.ar/educacion	governmental	000	n/a
+egress	dados.gov.br	governmental	000	n/a
+egress	www.datos.gov.co	governmental	000	n/a
+egress	datos.gob.mx	governmental	000	n/a
+egress	raw.githubusercontent.com	control-same-loop	301	n/a

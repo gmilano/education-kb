@@ -4,6 +4,31 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟡 `2026-11-16` — fiftieth pass (`p845`): **vertical-platform leg run and NILLED, with the denominator stated**
+
+🟢 **The mandated vertical leg was run globally and returned four named platforms. All four are
+already on this shelf, and the check was made against the file rather than from memory:**
+
+| Platform returned by the leg | Licence as the leg reported it | Held here |
+|---|---|---|
+| OpenOLAT | `Apache-2.0` | 🟢 Yes |
+| `frappe/lms` (Frappe Learning) | `MIT` | 🟢 Yes |
+| RosarioSIS | 🔴 `GPL-2.0` — copyleft, demand signal only | 🟢 Yes |
+| Moodle · Open edX · Canvas | `GPL-3.0` / `AGPL-3.0` | 🟢 Yes |
+
+🔴 **One claim from the leg is explicitly NOT adopted:** a secondary source described Open edX as
+*"AGPL v3 (platform), Apache 2.0 (some components)."* 🔴 **This base holds Open edX as `AGPL-3.0`
+and nothing in the leg byte-read a component licence.** 🟡 **Recorded as an unverified
+third-party claim, not promoted to the shelf.** 🔵 **A per-component licence split is exactly the
+shape that `T134` warns about — it must be byte-read per component before a client deliverable
+leans on it.**
+
+🔴 **The permissively licensed SIS tier remains EMPTY, and that is an informed gap rather than a
+silence.** 🟢 **The leg searched for MIT/Apache student-information systems specifically and
+returned exactly one SIS — RosarioSIS, `GPL-2.0`.** 🔵 **So the standing shape holds: the LMS tier
+has permissive options (OpenOLAT, `frappe/lms`), the SIS tier does not, and an engagement needing a
+build-safe SIS still has to budget for one rather than adopt one.**
+
 ## 🟢 Forty-ninth pass (`p844`, 2026-11-16) — **`1` row: the LATAM national education data portal filed as a SYSTEM OF RECORD, because that is what it is in a ministry engagement**
 
 🔵 **Why this belongs on the vertical shelf and not only in foundations.** This

@@ -4,6 +4,77 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Pattern (`p845`, `2026-11-16`) — **"Sequence the upskilling engagement by measured completeness, not by star count"**
+
+🔵 **The problem this solves.** A Globant workforce-upskilling engagement on AI infrastructure
+needs courseware the studio can relicense into a client deliverable. The obvious sourcing move —
+rank the candidate repositories by stars, adopt the top ones, author the rest — 🔴 **is wrong in
+this category, and `p845` measured how wrong.**
+
+### The recipe
+
+**1. Take the estate, not the repository.** One query enumerates it:
+
+```
+https://api.github.com/search/repositories?q=user:ai-infra-curriculum&per_page=100
+```
+
+🟢 **Returns `28` repositories, `26` of them `MIT`** — `14` role tracks each published as a
+`-learning` / `-solutions` PAIR. 🔵 **The pair split is what makes it teachable by someone other
+than its author: hand the learner one, keep the answer key.**
+
+**2. Read each track's published completeness metadata, NOT its stars.**
+
+```
+https://raw.githubusercontent.com/ai-infra-curriculum/ai-infra-<ROLE>-learning/main/COMPLETENESS_MATRIX.md
+```
+
+🟢 **`13` fetches, no authentication, no rate limit.** Parse the `Learning` row.
+🔴 **Ignore `Overall` — it is contaminated by the `Solutions` column (see step 4).**
+
+**3. Sequence the engagement from the measured table.**
+
+| Engagement need | Take | Measured state |
+|---|---|---|
+| IC onboarding, levels `10`–`45` | `junior-engineer` → `engineer` → `senior-engineer` → `architect` | 🟢 `100%` learning, full exercise sets |
+| Specialist tracks | `mlops`, `ml-platform`, `performance` | 🟢 `100%` learning |
+| 🟢 **Reliability for model-backed services** | `sre-learning` | 🟢 `14/14` modules, `353,078` words, `0★` |
+| 🟢 **Inference serving** | `inference-engineer-learning` | 🟢 `14/14` modules, `0★` |
+| Leadership, levels `40`–`60` | `team-lead`, `principal-engineer`, `principal-architect` | 🔴 **Lessons are skeletons** — 🟢 **but take `projects/`: `59k`–`74k` words of reference architectures, step-by-step walkthroughs and rubrics** |
+| 🔴 Level `55` | `senior-architect` | 🔴 **The one genuinely thin track — `~21k` words across both halves. Budget authoring here, and ONLY here.** |
+
+**4. Apply the two corrections `p845` established, or the plan misprices.**
+
+🔴 **Correction A — `Overall %` inverts the ranking at the top of the ladder.** It reports
+`senior-architect` at `55%` and `principal-architect`, `principal-engineer` and `team-lead` at
+`50%`. 🟢 **Measured, the three "`50%`" tracks carry `59k`–`74k` words of capstone material and
+`senior-architect` carries `~21k`.** 🔴 **Sequencing on `Overall %` sends the authoring budget to
+the three tracks that need it least.**
+
+🔴 **Correction B — `Solutions 100%` can mean a `58`-word pointer.** Verify before promising an
+answer key:
+
+```
+git clone --depth 1 https://github.com/ai-infra-curriculum/ai-infra-<ROLE>-solutions
+find . -name '*.md' -exec wc -w {} + | sort -n | head -20
+```
+
+🟢 **A real solution set looks like `ai-infra-sre-solutions`. A stub set looks like
+`ai-infra-senior-architect-solutions`: `71` files, `6,170` words, `61` under `200` words.**
+
+**5. Wire the learning path in front of it.** 🟢 **Pair with
+[`WenyuChiou/awesome-agentic-ai-zh`](https://github.com/WenyuChiou/awesome-agentic-ai-zh) (`MIT`,
+trilingual) for the reading sequence** — it supplies the order, the estate supplies the exercises —
+🟢 **and deliver through the permissive LMS tier (`OpenOLAT`, `frappe/lms`), never through the
+`GPL`/`AGPL` tier, so the client deliverable stays closed.**
+
+### 🟢 Why this composes
+
+🔵 **Licence coherence end to end:** estate `MIT` (`1,085 B` grant, byte-read), reading path `MIT`,
+LMS `Apache-2.0` or `MIT`. 🟢 **No copyleft anywhere on the path, so the assembled curriculum can
+be relicensed into a closed client deliverable with attribution only.** 🔴 **Keep `LearnHarness`
+(`AGPL-3.0`) and `RosarioSIS` (`GPL-2.0`) off it — they are demand signals, not build inputs.**
+
 ## 🟢 Forty-ninth pass (`p844`, 2026-11-16) — `1` recipe (`P96`), and it is `P90` taken from one country to four with the licence boundary drawn where it actually falls
 
 ## 🟢 `P96` — THE LATAM NATIONAL EDUCATION DATA SPINE: build the evidence layer a ministry engagement is judged on, and know which country's data you may not keep (forty-ninth pass, `p844`, LATAM)

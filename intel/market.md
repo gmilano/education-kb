@@ -1447,6 +1447,29 @@ across EMEA.
 
 ### North America
 
+#### Update 2026-11-16 (fiftieth pass, `p845`) — 🔴 **NIL on new instruments for a sixth consecutive pass — and the opportunity moves from "find courseware" to "price the authoring gap", because the courseware was already there**
+
+🔴 **The North American leg returned `10` named instruments and all `10` were already held:**
+North Carolina `SL 2026-41` (state model policy `2026-12-31`, local policies `2027-06-30`,
+🟢 **teacher training `2028-06-30`**), the `134`-bills / `31`-states tracker figure, the
+Maryland / Idaho / Oklahoma / Virginia group mandating both state guidance and district adoption,
+New York `A 9190`, the federal `K-12 AI Literacy and Readiness Act of 2026`, the
+`Parents & Kids Safe AI Act` ballot initiative, and Berkeley Law's exam ban.
+🟢 **Checked against `intel/` rather than from memory.**
+
+🟢 **What `p845` adds here is a priced asset rather than a fact.** North Carolina's
+`2028-06-30` teacher-training deadline and the state-level AI-literacy mandates create a
+procurement window for workforce curriculum, and this base has just measured `9` tracks of
+`MIT`-licensed, `100%`-written AI-infrastructure curriculum it had been describing as drafts.
+🔵 **The sellable position is NOT "we will build you an AI curriculum" — it is "the technical
+curriculum exists under `MIT`; what you are buying is the `senior-architect` track, the exercise
+answer keys, and the mapping to your state's competency framework."**
+
+🔴 **Scope the gap honestly, because `p845` also measured it:** `senior-architect` (`L55`) is the
+one genuinely thin track (`~21k` words against `66k`–`81k` for its neighbours), and
+`senior-architect`'s `50` "solved" exercises are a `58`-word template. 🟢 **Those two items are the
+real authoring line in a North American bid.** → `T149`, `P97`.
+
 #### Update 2026-11-16 (forty-ninth pass, `p844`) — 🔴 **NIL on instruments, and the fifth consecutive failure of the same query shape is now a prescription rather than a complaint**
 
 🟢 **Leg run `2026-11-16`: `AI education North America 2026 adoption regulation players K-12 higher education`.**
@@ -2843,6 +2866,27 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-16 (fiftieth pass, `p845`) — 🟢 **NIL on new instruments, but `Regulation (EU) 2026/1744` is independently reproduced a second time, and the AI-literacy duty is where this pass's asset lands**
+
+🟢 **The EMEA leg independently returned `Regulation (EU) 2026/1744` moving Annex III stand-alone
+high-risk — which is where education sits — to `2027-12-02`, with chatbot transparency live from
+`2026-08-02`.** 🔵 **This is the reading `839-G2` closed to CORROBORATED at `p844`; `p845` is a
+further independent secondary confirmation.** 🔴 **Still NOT primary: `eur-lex.europa.eu`
+CONNECT-fails again this pass (`000`), in the same loop where `raw.githubusercontent.com` returns
+`301`.**
+
+🟢 **The leg also re-returned the Art. `4` AI-literacy obligation, live since `2025-02-02`, with
+the `2026-07` softening to measures that SUPPORT literacy rather than guarantee a competence
+level.** 🟢 **Held already — but `p845` is the first pass that can answer it with a build-safe
+asset.** 🔵 **An Art. `4` programme has to be evidenced, and `MIT`-licensed courseware with a
+published, machine-generated completeness metric is unusually good evidence: it states which
+modules are written, how many words each holds, and when the claim was generated.**
+
+🔴 **The caveat is part of the offer, not a footnote.** The same estate's `Solutions %` counts
+`58`-word pointer stubs as solved work, so an Art. `4` evidence pack built on `Overall %` would
+overstate what was delivered. 🟢 **Quote `Learning %` and the `lessons/`-vs-`projects/` split.**
+→ `T149`, `P97`.
 
 #### Update 2026-11-16 (forty-ninth pass, `p844`) — 🟢 **`839-G2` CLOSED: the high-risk education date is `2027-12-02`, corroborated twelve ways, and this base had held it since `p811`**
 
@@ -4301,6 +4345,30 @@ the EMEA leg; the results returned compliance advice, not measurement. **An info
 absence: the denominator for the AI Act's deployer duties is not publicly measured.**
 
 ### APAC
+
+#### Update 2026-11-16 (fiftieth pass, `p845`) — 🔴 **NIL on new instruments; the region's binding calendar is unchanged and this pass's asset is the one that can be delivered into it without a translation project**
+
+🔴 **All APAC instruments returned by the leg were already held:** Vietnam's AI law
+(`2026-03-01`, 🟢 **education named among six high-risk sectors**, with longer transition for
+existing education systems), Korea's AI Basic Act (`2026-01-22`, `2026` a pilot year with limited
+enforcement), Taiwan's `2026` statute, China's layered algorithm-filing and content-labelling
+rules, India's `2026-02-20` provenance-marking requirement, Japan's voluntary-guideline posture,
+Australia's National AI Plan (`2025-12`), and Vietnam's `12` periods per class per year of AI
+content for grades `1`–`12`. 🟡 **The Ipsos Education Monitor `2026` divergence — support for
+classroom AI bans RISING in Japan, Australia and Korea while falling in Indonesia — is also held.**
+
+🟢 **What `p845` places here:** the `MIT` curriculum estate measured this pass is delivery-ready
+for APAC without a localisation budget when paired with
+[`WenyuChiou/awesome-agentic-ai-zh`](https://github.com/WenyuChiou/awesome-agentic-ai-zh)
+(`MIT`, `8,782★`), which publishes the same learning path in Traditional Chinese, English and
+Simplified Chinese. 🔵 **The reading path localises; the exercises and reference architectures do
+not need to.**
+
+🔴 **Region-specific scoping warning:** Vietnam's longer transition for EXISTING education systems
+is a reason to sequence a Vietnamese engagement around retrofit of deployed systems rather than
+greenfield, and nothing in this pass changes that. 🟡 **The estate is vocational and
+infrastructure-level — it does NOT serve Vietnam's grades `1`–`12` mandate, which needs school
+courseware this base still holds separately.**
 
 #### Update 2026-11-16 (forty-ninth pass, `p844`) — 🔴 **NIL on new instruments; the leg returned only material this base already holds**
 
@@ -5762,6 +5830,31 @@ procurement-led" corner of that matrix, which `P5` did not previously have a nam
 example of.
 
 ### LATAM
+
+#### Update 2026-11-16 (fiftieth pass, `p845`) — 🔴 **The governmental egress refusal REPRODUCES on a second consecutive day, so `844-G1` stays open by instrument rather than by effort — and the adoption/governance gap is where this pass's asset sells**
+
+🔴 **Re-run in a single loop, `2026-11-16`:** `datos.gob.ar` `000` · `argentina.gob.ar/educacion`
+`000` · `dados.gov.br` `000` · `www.datos.gov.co` `000` · `datos.gob.mx` `000` — 🟢 **against
+`raw.githubusercontent.com` `301` in the SAME loop.** 🔵 **Two-day reproduction of `T906`: the
+refusal tracks the publisher being governmental, not the jurisdiction being European.**
+🔴 **Argentina's dataset-level licence therefore remains UNRESOLVED and is NOT a research task**
+(`ACTION p844-A`, carried unchanged).
+
+🔴 **The LATAM leg returned no new instrument:** UNESCO IESALC's `87%` adoption against `26%` with
+a formal AI strategy, the Digital Education Council LATAM survey (`92%` of students, `79%` of
+faculty), Brazil's `53%` of administrators using AI against `22%` with school guidelines, the
+`716` regulatory instruments across `23` countries, `CONPES 4144`, CENIA's Latam-GPT and readiness
+index, Ceibal's `75%`, and Uruguay as first regional signatory of the Council of Europe AI treaty
+— 🟢 **all held.**
+
+🟢 **Where `p845` lands commercially:** the region's defining number is a GOVERNANCE gap, not an
+adoption gap — `87%` using, `26%` with a strategy. 🔵 **A governance engagement needs staff who can
+be shown to have been trained, and this pass established that `MIT` workforce curriculum with a
+published completeness metric exists for `9` of `13` technical tracks.** 🟢 **The licence position
+is clean for LATAM delivery: `MIT` estate (`1,085 B` grant, byte-read) plus the permissive LMS tier
+— no share-alike anywhere on the path**, which matters more here than elsewhere because
+🔴 **Colombia's ICFES education data is `CC BY-SA 4.0`, so a derived DATA product inherits
+share-alike even when the courseware does not** (`T148`, `P96`, carried).
 
 #### Update 2026-11-16 (forty-ninth pass, `p844`) — 🟢 **`839-G1` advanced from ONE country to FIVE, and the finding is that the licences DISAGREE**
 
@@ -7359,6 +7452,32 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-16 (fiftieth pass, `p845`) — 🟢 **The sourcing heuristic itself is the finding: in AI-authored curriculum, popularity and completeness are uncorrelated, and at the extremes they INVERT**
+
+🟢 **Measured across a `13`-track `MIT` estate, `2026-11-16`, against the publisher's own
+machine-generated completeness metric:** the two tracks with `0★` each carry `14/14` written
+modules, while the `1,889★` flagship carries `10`. 🔴 **`9` of `13` tracks are `100%`
+learning-complete, including both tracks this base had told readers to treat as drafts.**
+
+🔵 **The mechanism generalises beyond this estate, which is why it belongs under Global rather
+than under one region.** The publisher states that skeletons are *"queued for the content pipeline
+automatically, entry-level roles first"* — 🟢 **so an automated pipeline publishes complete tracks
+continuously, and every star-ranked discovery instrument lags it by the discovery interval, worst
+for the newest and most complete material.**
+
+🟢 **Operational rule for any engagement sourcing open courseware: fetch the publisher's own
+completeness metadata and sort by push date; do NOT sort by stars.** 🔴 **Then verify the metadata
+— the same estate's `Solutions %` counts `58`-word pointer stubs as solved work, and its
+`Overall %` consequently ranks its thinnest track ABOVE three far better-built ones.**
+🔵 **`Learning %` verified against content on two tracks; `Overall %` is unsafe in both
+directions.** → `T149`, `P97`.
+
+🔴 **A second Global instrument lesson from this pass:** `curl -I https://github.com/OWNER/REPO`
+returns `403` for live, dead and never-existed addresses alike. 🟢 **New `P98` requires a liveness
+channel to be calibrated against four known states before any sweep is built on it** — without
+that calibration this pass would have declared all `817` build-safe addresses dead in one clean
+run. → `T150`.
 
 #### Update 2026-11-16 (forty-ninth pass, `p844`) — 🟡 **The market-size channel is incoherent by a factor of five, and this pass declines to pick a number**
 

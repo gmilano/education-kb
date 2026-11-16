@@ -4,6 +4,44 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — fiftieth pass (`p845`): **the workforce-curriculum supply is deeper than any discovery instrument reports, and the gap is structural rather than accidental**
+
+🔵 **This pass added no new trend from the news legs — the industry-trends leg returned agentic
+advising/enrolment, purpose-built over general-purpose AI (OECD Digital Education Outlook), the
+governance-lag framing and the `$10.4B`/`$11.4B`/`$12.3B` market-size disagreement, all of which
+this base already carries.** 🟢 **What it did produce is a measured trend the news legs cannot
+see, because it lives in repository metadata rather than in coverage.**
+
+### 🔴 Automated curriculum pipelines break the link between popularity and completeness
+
+🟢 **Measured across the `13`-track `ai-infra-curriculum` estate, `2026-11-16`:** stars and written
+completeness are uncorrelated, and at the extremes the relationship inverts. 🔴 **The two tracks
+with `0★` (`sre`, `inference-engineer`) each carry `14/14` written modules; the `1,889★` flagship
+carries `10`.**
+
+🔵 **The mechanism is not mysterious and it generalises.** The estate's own matrix states that
+*"skeletons and stubs are queued for the content pipeline automatically, entry-level roles
+first."* 🟢 **So the pipeline works the ladder upward, publishing complete tracks continuously —
+and a repository published yesterday has had no time to accumulate the discovery signal that
+star-ranking measures.** 🔴 **Every ranking instrument this base uses therefore lags an automated
+publisher by exactly the discovery interval, and the lag is worst for the newest and most complete
+material.**
+
+🟡 **Why this matters beyond one estate:** AI-authored curriculum is now being published faster
+than it is being discovered. 🟢 **For a studio this inverts the usual sourcing heuristic — in this
+category, read the publisher's own completeness metadata and sort by push date; do not sort by
+stars.** 🔴 **But verify the metadata, because the same estate's `Solutions %` counts `58`-word
+pointer stubs as solved work.** → `T149`, `P97`.
+
+### 🔴 Governmental publishers remain unreachable, and the pattern is now a two-day reproduction
+
+🟢 **Re-run `2026-11-16` in a single loop:** `datos.gob.ar` `000` · `argentina.gob.ar/educacion`
+`000` · `dados.gov.br` `000` · `www.datos.gov.co` `000` · `datos.gob.mx` `000` — 🟢 **against
+`raw.githubusercontent.com` `301` in the same loop.** 🔵 **`T906`'s refusal tracks the publisher
+being governmental, not the jurisdiction being European, and it reproduces across two consecutive
+days.** 🔴 **No amount of further searching promotes a LATAM national-education-data licence to
+PRIMARY from inside this environment** — it is an allow-list request (`ACTION p844-A`, carried).
+
 ## 🟢 Forty-ninth pass (`p844`, 2026-11-16) — `3` trends (`T146`–`T148`)
 
 ## `T146` — a `422` is evidence about the ADDRESS, not about the asset: the first-party sweep acquired a false-positive mode on its second day, and the row it killed had predicted the mechanism twenty-one passes earlier (forty-ninth pass, `p844`, Global)

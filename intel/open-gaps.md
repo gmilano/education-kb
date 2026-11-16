@@ -4,6 +4,121 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` (fiftieth pass, `p845`) — **`1` four-pass gap CLOSED with its standing advice WITHDRAWN, `ACTION p844-B` EXECUTED and then AMENDED by its own first full run, `1` new instrument rejected before use**
+
+### 🟢 `839-G3` — CLOSED, and the shelf instruction built on it is WITHDRAWN
+
+🔴 **Declared open at `p839` and re-declared untouched by `p840`, `p841`, `p842`, `p843` and
+`p844`** — *"either read the content or stop re-declaring it."* 🟢 **`p845` read the content.**
+
+🟢 **All `13` `ai-infra-curriculum` learning tracks measured against the estate's own
+machine-generated `COMPLETENESS_MATRIX.md`, which declares its threshold in-file (`≥3,000` words
+written, below that a skeleton). `9` of `13` are `100%` learning-complete — including
+`senior-engineer` (`11★`) and `architect` (`15★`), the two tracks this base explicitly told
+readers to treat as drafts.** 🔴 **The standing instruction *"the estate's senior and architect
+tracks should be treated as drafts until measured otherwise"* is WITHDRAWN.**
+
+🔴 **Stars do not predict completeness here and at the extremes INVERT it:** `sre-learning` has
+`0★` and `14/14` written modules; the `1,889★` flagship has `10`. 🔴 **Raw volume does not predict
+it either** — `principal-architect-learning` holds `87,660` words at `0/5` modules complete,
+because `81,068` of them sit outside `lessons/`. 🟢 **Full measurement, both tables, on
+`repos/foundations.md`.** → `T149`, `P97`. 🟢 **`2` new `MIT` foundation rows taken from the
+close.**
+
+### 🔴 `845-W1` — the estate's `Solutions %` is NOT a completeness measure, so `Overall %` is unsafe in BOTH directions
+
+🟢 **`Learning %` VERIFIES against content** — skeleton `mod-402` reads `650` words across `9`
+files; complete `sre/mod-103` reads `27,328` words against `27,773` claimed.
+🔴 **`Solutions %` does not.** `ai-infra-senior-architect-solutions` reports `50/50 solved`;
+measured it is `71` files, `6,170` words, `61` under `200` words, and `50` of them are one repeated
+`58`-word *"Solution Pointer"* that refers the reader back to learning modules the same matrix
+marks as never written. 🔵 **A completeness claim that closes its own loop.**
+🔴 **Consequence a buyer would feel: `Overall %` ranks the estate's thinnest track
+(`senior-architect`, `~21k` words) ABOVE three tracks carrying `59k`–`74k` words of capstone
+material.** 🟢 **Prescription `P97`: quote `Learning %` and the `lessons/`-vs-`projects/` split;
+never `Overall %`.**
+
+### 🟢 `ACTION p844-B` — EXECUTED on `161` rows, and its own first full run AMENDS it
+
+🟢 **Run as prescribed: owner-batched, `56` owners carrying `≥2` shelf rows, covering `161` of
+`817` build-safe addresses (`19.7%`).** 🟡 **Bounded deliberately and declared as bounded — the
+search API allows `10` queries a minute unauthenticated, which prices a full `817`-row sweep above
+an hour.**
+
+| Outcome | Count |
+|---|---|
+| Owners swept | `56` (`42` fully enumerated, 🔴 **`14` page-capped at `100`**) |
+| Shelf rows covered | `161` |
+| Suspects raised by stage `1` | `6` |
+| 🔴 **False suspects** | 🔴 **`4` of `6` (`67%`)** |
+| 🟢 Genuine absences confirmed | `2` |
+
+🔴 **`ACTION p844-B` as written would have produced four more manufactured deaths, by the exact
+mechanism it was created to prevent.** 🔵 **`user:OWNER` returns at most `100` results per page.
+For an owner above that, the enumeration is page-capped, so a live row that happens to fall outside
+the first `100` is reported MISSING.** 🟢 **All `4` false suspects came from page-capped owners;
+all `4` were re-queried as the row spells them and all `4` are alive:**
+
+| False suspect | Owner `total_count` | Re-query as spelled |
+|---|---|---|
+| `trantienit2015/agentic-star-school-administrative-procedure-parent-qa-agent` | `274` | 🟢 `1` · `MIT` · `0★` · `2026-09-24` |
+| `trantienit2015/agentic-star-university-research-ethics-irb-compliance-check-agent` | `274` | 🟢 `1` · `MIT` · `0★` · `2026-09-24` |
+| `TAKUYA0608-dev/agentic-star-transfer-credit-equivalency-agent` | `150` | 🟢 `1` · `MIT` · `0★` · `2026-09-28` |
+| `QuentinCody/patient-education-mcp-server` | `123` | 🟢 `1` · `Apache-2.0` · `0★` · `2026-11-13` |
+
+🟢 **`P99` — `P95` stage `1` is amended again, and this time with a numeric gate: an owner sweep
+may only raise a suspect when that owner's `total_count ≤ 100`. Above `100` the enumeration is
+page-capped and absence from it carries NO information.** 🔵 **The discriminator was perfect on
+this run: every false suspect came from a page-capped owner, every page-capped owner's suspects
+were false.**
+
+🟢 **The `2` genuine absences, each confirmed by BOTH stages — re-query as spelled AND a fully
+enumerated (not page-capped) owner sweep:**
+
+| Row | Re-query as spelled | Owner sweep | Verdict |
+|---|---|---|---|
+| `digitalcredentials/learner-credential-wallet` | 🔴 `422` | `92` of `92` enumerated, name absent | 🔴 **GONE** — 🟡 but `learner-credential-wallet-site` and `mit-web-wallet-poc` DO survive under the same owner, which is a rename/split signature rather than an abandonment |
+| `tl-its-umich-edu/caliper-php-public` | 🔴 `total_count=0` (HTTP `200`) | `92` of `92` enumerated, name absent | 🔴 **GONE** |
+
+🟡 **Instrument note worth carrying: absence reaches this base through TWO different signatures** —
+`422` (the `repo:` qualifier rejected) and HTTP `200` with `total_count=0`. 🔵 **A sweep that tests
+only for `422` will score the second class as alive.**
+
+### 🔴 `845-G1` (new) — `656` of `817` build-safe addresses are still unswept
+
+🟡 **`p843` swept `275` rows; `p845` swept `161` under the amended method. Neither is the shelf.**
+🔵 **Stated as a number rather than left implied: at `10` queries a minute the remaining sweep is
+roughly an hour of wall-clock, and it is the single largest piece of unverified state in this base.**
+🟢 **The owner-batching is only a `13%` saving (`712` distinct owners for `817` rows), so batching
+does not solve it — authentication would.**
+
+### 🔴 `845-W2` — a liveness channel REJECTED before it was used, under new `P98`
+
+🔴 **`curl -I https://github.com/OWNER/REPO` returns `403` for a live repository, a repository
+confirmed dead at `p844`, and an owner that never existed — `4` states, `1` answer, and `20` rapid
+repeats gave `0` successes in `5` seconds, so it is a blanket refusal rather than a clearable rate
+limit.** 🔵 **A sweep built on it would not have errored: it would have returned a clean, uniform,
+plausible verdict that all `817` build-safe addresses are dead.**
+🟢 **`P98`: a liveness channel is calibrated against four known states — live, dead, never-existed,
+and a known-live control in the same loop — before any sweep is built on it. A channel returning
+one answer for all four is rejected regardless of cost.** → `T150`.
+
+### 🔴 Gaps and actions declared open at the end of this pass
+
+| Id | Gap / action | Why it is stated rather than left silent |
+|---|---|---|
+| **`ACTION p844-A`** | 🔴 **CARRIED, and now a two-day reproduction.** One allow-list entry (`dados.gov.br`, `datos.gov.co`, `datos.gob.mx` or `datos.gob.ar`) promotes four LATAM licence determinations from CITED to PRIMARY. Re-run `2026-11-16`: all five governmental endpoints `000`, `raw.githubusercontent.com` `301` in the same loop. | 🟢 **Still the cheapest unclaimed value in this base, and now twice-measured as a configuration limit rather than a research gap.** |
+| **`844-G1`** | 🔴 **CARRIED UNCHANGED.** Argentina's education-data licence is UNRESOLVED at dataset level and cannot be resolved from inside this environment. | 🟡 Do not re-scope it as a search. It is blocked on `ACTION p844-A`. |
+| **`844-G2`** | 🟡 **CARRIED.** The Art. `50` content-marking grace period is contested (`2026-12-02` against Art. `50` live from `2026-08-02`). | 🔵 Quote Art. `50` as live and the marking grace as contested. |
+| **`845-G1`** | 🔴 **NEW. `656` of `817` build-safe addresses unswept.** | 🟢 Largest unverified state in the base; priced at ~`1` hour unauthenticated. |
+| **`ACTION p845-A`** | 🟢 **NEW. Authenticate the GitHub search channel.** At `10` queries/minute a full sweep is an hour; authenticated it is minutes, and `845-G1` closes in one pass. | 🔵 **Same class as `ACTION p844-A`: a configuration change, not research, converting a standing caveat into evidence.** |
+| **`845-G2`** | 🟡 **NEW. `ai-infra-inference-engineer-learning` was shelved on matrix-reported `Learning %` without an independent content sample.** The matrix's `Learning` column verified on two OTHER tracks. | 🟢 **Stated rather than implied: one of the two new rows is corroborated by instrument reputation, not by its own byte-read content.** |
+| **`839-G3`** | 🟢 **CLOSED.** Removed from the carried list. | — |
+
+🔵 **Carried forward unchanged:** `oak-mcp-server`'s production endpoint
+(`mcp.thenational.academy`) remains unconfirmed — egress refusal, an INSTRUMENT limit and not
+evidence against the endpoint (`T136`).
+
 ## 🟢 `2026-11-16` (forty-ninth pass, `p844`) — **`1` gap CLOSED, `1` substantially advanced, `1` prior-pass finding WITHDRAWN, and this ledger's own four-pass silence recorded**
 
 ### 🔴 `844-D1` — this ledger went un-appended for FOUR passes
