@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Forty-seventh pass (`p842`, 2026-11-16) — `1` trend (`T143`)
+
+## `T143` — a licence badge is a claim about a FILE, not about an asset: at the discovery frontier the failure mode has shifted from "no candidates" to "candidates that cannot be built on", and the three disqualification modes are now distinct and nameable (forty-seventh pass, `p842`)
+
+🔵 **What this trend replaces.** `T138` established that supply *volume* is not supply — the
+lesson-plan channel is saturated with undifferentiated `0★` filler. `T140` established that the
+mandated battery returns nil. `T143` is about what happens **when you do get past both**: `p842`
+ran four angles the battery does not contain and surfaced `3` URLs genuinely absent from a
+`5,720`-URL shelf. 🔴 **All three were live, all three were active, and none could be used.** The
+constraint at the frontier is no longer discovery. It is **grantability and substance.**
+
+🟢 **The three modes, which are not interchangeable and must be tested separately:**
+
+**1. 🔴 Unlicensed-by-omission.** `Ali627miya/gradeguide-ai` (`f6f9238112cb`) and
+`timothyheeeee/Autonomous-Grading-Engine` (`f3518b6c379a`). `LICENSE`, `LICENSE.md` and
+`LICENSE.txt` each return `404` at the real default ref; no `package.json`; no licence statement in
+either README (`13,722` and `5,365` bytes read). 🔵 **This is the common mode and the easy one** —
+but note it is *invisible* to any pipeline that infers a licence from prose or from a topic tag.
+**Absence of a licence is not permissiveness; it is all-rights-reserved.**
+
+**2. 🔴 Licensed-but-proprietary-dependent.** `Autonomous-Grading-Engine` again: even granted, it
+couples to a **closed `GPT-4o` endpoint**. 🔵 A permissive grant over a wrapper around a proprietary
+API does not produce a self-hostable asset, which is what a sovereignty-constrained EMEA or APAC
+engagement actually needs.
+
+**3. 🔴 Real grant, wrong artefact — the mode this base had NOT yet named.**
+`thinkmoon/zhihui-teacher` (`71b5ddaee9a4`) carries a genuine `MIT` `LICENSE` — `1,066` bytes,
+`sha256₁₂` `e936c2bc0ff4`, "Copyright (c) 2026 thinkmoon" — and a real MIT badge, and a
+Chinese-language secondary source accurately called it 以MIT协议开源, *open-sourced under MIT*.
+🔴 **The repository contains zero source files.** Inventory from a full shallow clone: `1`
+`index.html`, `1` `styles.css`, `5` `mp4`, `4` `md`, `4` `jpg`, `3` `png`, `1` `gif`, `1` `xml`,
+`robots.txt`, `.nojekyll` — and `0` files matching `*.py`, `*.ts`, `*.js`, `*.java`, `*.go`. The
+product is closed and hosted behind a login. Its own `NOTICE.md` states it:
+**本仓库没有复制完整产品的前后端代码** — *this repository does not copy the complete product's front-
+or back-end code* — and scopes the brand assets **outside** the MIT grant.
+
+🟢 **Why mode 3 matters more than its single instance.** Every licence-verification discipline this
+base has built — and they are good ones — answers *"is there a grant, and what is it?"*. Mode 3
+passes that test cleanly. 🔴 **It is caught only by asking a second, different question: "does the
+grant cover anything executable?"** A marketing site published under MIT is a correct, honest,
+well-documented repository that would nonetheless have entered this KB as an education agent row
+with licence `MIT`, and been wrong in the most load-bearing field a client decision rests on.
+
+🔵 **The generalisation for AI Studios intake.** Promotion to a usable row requires **three
+independent gates, in order**: 🟢 *liveness* at a real ref (`git ls-remote --symref`) → 🟢 *grant*
+byte-read from the repository at that ref, hashed, never inferred from a badge or an aggregator →
+🟢 *substance*, a file-type inventory that must contain executable source. `p842`'s candidates
+failed gates 2, 2 and 3 respectively — **one failure per gate proves each gate is load-bearing, and
+none is redundant.** Codified as `P94`.
+
+🔴 **Secondary observation on channel health.** The mandated battery's only not-on-shelf hits were
+**rank-tracker repositories** — `yuxiaopeng/Github-Ranking-AI`, `bianzhilong2-ctrl/agents-radar`,
+`HuggerHustle/ai-radar`. 🔵 When a discovery query's novelty consists of *meta-feeds about rankings*
+rather than projects, the channel is exhausted and the query should be retired or re-shaped, not
+re-run. This is the empirical case for `p842`'s decision to add angles instead of repeating the
+battery a fourth time.
+
 ## 🔴 Forty-sixth pass (`p841`, 2026-11-16) — **`0` new trends, and the refusal to add one is deliberate**
 
 🔴 **The mandated eight-leg battery nilled a `36`th consecutive time, measured with its

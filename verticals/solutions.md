@@ -4,6 +4,34 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Forty-seventh pass (`p842`, 2026-11-16) — **`0` new platform rows; the ERP/CRM leg returned ONE platform and `13`-of-`17` hits were its own marketing domain**
+
+🟢 **Leg run verbatim:** `open source platform education ERP CRM MIT Apache`.
+
+🔴 **The leg is now measurably vendor-captured.** Of roughly `17` returned hits, **`13` were
+`openeducat.org` pages** — glossary pages in eight languages (`es`, `fr`, `ar`, `de`, `pt-BR`, `zh`,
+`vi`, plus English), feature pages, and the site's own `llms-full.txt`. 🔵 **A search leg whose
+results are mostly one vendor's SEO surface is not measuring the market**, and that is the finding
+to carry forward rather than any claim from those pages.
+
+🟢 **`OpenEduCat` is already shelved below at `LGPL-3.0` (Community) / commercial (Enterprise), built
+on the `Odoo` framework, and this pass changes nothing about that row.** The leg's own sources
+restate the same licence, so the row is corroborated, not revised.
+
+🔴 **The leg returned no MIT-, Apache- or BSD-licensed education ERP/CRM platform.** This is the
+standing structural fact of this vertical and should be sold as such: 🔵 **the education
+administrative core — SIS, enrolment, fees, HR — is a copyleft estate** (`OpenEduCat` LGPL-3.0,
+`Odoo` LGPL-based, `Moodle` GPL-3.0, `Open edX` AGPL-3.0, `BigBlueButton` LGPL-3.0). The
+permissively-licensed layer that Globant can ship without reciprocity obligations is the
+**agent-facing integration tier** (`vishalsachdev/canvas-mcp` and its fork family,
+`loyaniu/moodle-mcp`, `jtayped/sakai-mcp` — all MIT) and the **content tier** (`Kolibri` MIT,
+`H5P` MIT). 🟢 **That split is the architecture this base keeps recommending, and `p842` re-confirms
+it from a fresh leg.**
+
+🔴 **Nothing from the vendor pages was promoted into a row.** `OpenEduCat`'s marketing claims about
+module coverage and deployment options are unverified by this pass and stay out of the table
+(`T124`-adjacent discipline: a vendor page is not a measurement).
+
 ## 🔴 Forty-sixth pass (`p841`, 2026-11-16) — **`0` new vertical rows (`172` → `172`); one licence-label conflict DECLARED and deliberately not applied**
 
 🔴 **The mandated LMS/SIS leg returned only platforms already on this shelf** — `OpenOlat`,

@@ -4,6 +4,39 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Forty-seventh pass (`p842`, 2026-11-16) — **`0` new foundation rows, and the searched-and-missing list is the deliverable**
+
+🟢 **What was searched.** The mandated foundations leg
+(`open source platform education ERP CRM MIT Apache`) plus three angles the battery does not
+contain: the **LMS/MCP integration** channel, the **grading/rubric** channel, and a
+**Chinese-language** repository query.
+
+🔴 **What was missing — the ERP/CRM leg returned exactly one platform, and its licence is wrong for
+this file's purpose.** The leg's results were dominated by **`OpenEduCat`**'s own marketing domain
+(13 of ~17 hits were `openeducat.org` pages, including its `llms-full.txt`). `OpenEduCat` is
+**LGPL-3.0 (Community)** / commercial (Enterprise), built on the **Odoo** framework, which is itself
+LGPL-based. 🟢 **It is already shelved in `verticals/solutions.md` at that licence and stays there.**
+🔴 **No MIT-, Apache- or BSD-licensed education ERP/CRM platform surfaced on this leg at all** — a
+result this base has now recorded repeatedly and which should be treated as a standing structural
+fact, not a search failure: **the education administrative core is a copyleft estate.**
+
+🔴 **The grading/rubric leg surfaced two live, active, genuinely-new repositories and neither can be
+a foundation row:** `Ali627miya/gradeguide-ai` (`f6f9238112cb`) and
+`timothyheeeee/Autonomous-Grading-Engine` (`f3518b6c379a`) both returned `404` on `LICENSE`,
+`LICENSE.md` **and** `LICENSE.txt` at their real refs, with no `package.json` and no licence
+statement in either README. 🔴 **Unlicensed is not permissive — it is all-rights-reserved.**
+Full detail in `agents/trending.md`; method in `P94`.
+
+🔴 **`OASIS`** (arXiv `2609.09180`) — the most relevant *design* for self-hosted rubric-based
+multimodal assessment found this pass — **has released no code**. Its own report states it includes
+the report and project information, not application source, binaries, installation materials, sample
+data, or a tagged release. **Not a dependency; cite it as prior art only.**
+
+🟢 **`0` rows added, `0` rows invented.** The foundations that an education engagement should still
+start from are unchanged and already on this shelf below: `Moodle` (GPL-3.0), `Open edX` (AGPL-3.0),
+`Kolibri` (MIT), `Sakai` (**`ECL-2.0`**, an Apache-2.0 derivative — *not* Apache-2.0 itself, per this base's verified row), `BigBlueButton` (LGPL-3.0), `H5P` (MIT), with
+`vishalsachdev/canvas-mcp` (and `loyaniu/moodle-mcp`) as the agent-facing integration layer.
+
 ## 🔴 Forty-sixth pass (`p841`, 2026-11-16) — **`0` new foundation rows (`207` → `207`)**
 
 🔴 **Cold-start replication of the mandated battery surfaced no foundational repository this base

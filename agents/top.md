@@ -4,6 +4,43 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Forty-seventh pass (`p842`, 2026-11-16) — **`0` new agent rows (`424` → `424`), and this pass is the one that went LOOKING for the nil's edge — it found `3` novel URLs and disqualified all `3`, each for a different reason**
+
+🟢 **Method, stated first because it is the contribution.** `p841` re-ran the mandated battery cold
+and reproduced the nil candidate-for-candidate. Repeating that again would have measured the same
+thing a third time. So `p842` ran the mandated battery **and then four angles the battery does not
+contain** — the LMS/MCP long tail, the grading-and-rubric channel, a **Chinese-language** query, and
+a **Spanish/Portuguese** query. The point was to find out whether the nil is a property of the
+*battery's query shape* or of the *supply*.
+
+🔴 **Answer: it is the supply, but not in the way the previous three passes recorded it.** The
+differentiated angles DID surface novel URLs — `3` of them, genuinely absent from this shelf's
+`5,720` unique GitHub URLs. **All three were then disqualified on inspection, and none became a
+row.** → `T143`.
+
+| Candidate | HEAD `sha₁₂` measured `2026-11-16` | Why it is NOT a row |
+|---|---|---|
+| `github.com/Ali627miya/gradeguide-ai` | `f6f9238112cb` | 🔴 **No licence anywhere.** `LICENSE`, `LICENSE.md`, `LICENSE.txt` all `404` at the real ref; no `package.json`; no licence statement in a `13,722`-byte README. All-rights-reserved by default — **Globant cannot build on it.** |
+| `github.com/timothyheeeee/Autonomous-Grading-Engine` | `f3518b6c379a` | 🔴 **No licence anywhere** (same three probes, same `404`s, no `package.json`). Additionally couples to a **proprietary** `GPT-4o` endpoint, so even a grant would not make it self-hostable. |
+| `github.com/thinkmoon/zhihui-teacher` | `71b5ddaee9a4` | 🟡 **Licence is REAL and MIT** (`LICENSE`, `1,066` bytes, `sha256₁₂` `e936c2bc0ff4`, "Copyright (c) 2026 thinkmoon") — 🔴 **but it grants a MARKETING PAGE.** Full clone inventory: `1` `index.html`, `1` `styles.css`, `5` `mp4`, `4` `md`, `4` `jpg`, `3` `png`, `1` `gif`, `0` `.py`/`.ts`/`.js`/`.java`/`.go`. **Zero source files.** Its own `NOTICE.md` says so outright: 本仓库没有复制完整产品的前后端代码 — *this repository does not copy the complete product's front- or back-end code*. The product lives behind a login at `exam.thinkmoon.cn`. |
+
+🟢 **`17` of the `20` candidates surfaced across all eight legs were already shelved here**, including
+the entire `canvas-mcp` / `moodle-mcp` long tail that the LMS angle was built to expose
+(`vishalsachdev/canvas-mcp` upstream and its forks `harrywang`, `Harikeshav-R`, `NelsonSpencer`,
+`r-huijts`, `mdweaver`, `bruchris`, `DMontgomery40`, `admin978`, `JohannsenLum`, `loyaniu/moodle-mcp`),
+plus `delip/autorubric`, `macsnoeren/genai-open-assessment`,
+`omerbbbb/ai-graded-assessment-platform`, `xch1986/AI-Tutor`, `Zenglian990/AI_Tutor_Release`,
+`datawhalechina/hello-agents`, `HKUDS/DeepTutor`.
+
+🔴 **The mandated battery's own yield was `0` novel URLs for the third consecutive pass.** Its only
+not-on-shelf hits were three **rank-tracker aggregators** — `yuxiaopeng/Github-Ranking-AI`,
+`bianzhilong2-ctrl/agents-radar`, `HuggerHustle/ai-radar`. These are ranking feeds, **not education
+agents**, and they are not rows here. Recording them as such is precisely the padding this base
+refuses (`T63`, `T140`).
+
+🟢 **`0` rows invented. `424` rows in, `424` rows out.** The useful output of `p842` is the
+disqualification method, now written up as `P94`.
+
 ## 🔴 Forty-sixth pass (`p841`, 2026-11-16) — **`0` new agent rows (`424` → `424`), and the row count is the finding**
 
 🟢 **The mandated battery was re-run cold** — four global legs plus one leg each for North America,

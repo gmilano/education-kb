@@ -4,6 +4,37 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🆕 `2026-11-16` (forty-seventh pass, `p842`) — 🟡 **`0` new repo rows. The trending signal this pass is THIRD-PARTY and this section labels it as such rather than restating it as measured.**
+
+🔴 **Provenance warning, first.** The GitHub-trending leg (`github trending education AI 2026`)
+returned **no result from GitHub's own Trending page**. Every ranking below comes from third-party
+trend blogs and GitHub Topics pages. 🔴 **This pass did NOT independently verify a single star count
+in this section**, and the figures are therefore 🟡 unverified. Prior passes of this base have
+already had to correct pipeline-inflated star counts once; the labelling is deliberate.
+
+| Repo | 🟡 Third-party figure | Source type | Shelf status |
+|---|---|---|---|
+| `github.com/HKUDS/DeepTutor` | `52,783★` claimed, dated `2026-11-01` | trend-report issue feed | 🟢 already shelved |
+| `github.com/THU-MAIC/OpenMAIC` | `~42,000★` claimed, Nov 2026 | trend blog | 🟢 already shelved |
+| `github.com/patchy631/ai-engineering-hub` | `~40,466★` claimed, Nov 2026 | trend blog | 🟢 already shelved |
+
+🟢 **All three were already on this shelf** — so the trending channel added **`0` rows** for the
+third consecutive pass, which is consistent with `p840`/`p841`.
+
+🟡 **One qualitative observation worth keeping,** attributed and unverified: a `2026-11-01`
+third-party trends digest reads the current vertical-agent wave as *finance- and education-heavy*.
+🔵 If that holds it is a **demand** signal for AI Studios, not a supply one — this base's own
+measurements continue to show the education **supply** channel saturated and nil-yielding.
+
+🔴 **Where the battery's novelty is now coming from — and it is not agents.** The only not-on-shelf
+URLs the trending leg produced were **rank-tracker repositories themselves**:
+`yuxiaopeng/Github-Ranking-AI`, `bianzhilong2-ctrl/agents-radar`, `HuggerHustle/ai-radar`. 🔴 **These
+are not education repos and are not rows.** They are recorded as a channel-health datum: the
+education-trending query now surfaces *meta-feeds about rankings* in place of new education projects.
+→ `T143`.
+
+🟢 **`0` rows added. `0` star counts restated as fact.**
+
 ## 🆕 `2026-11-16` (forty-sixth pass, `p841`) — 🔴 **NIL `36` on the repo channel; the LMS/SIS leg returned a LICENCE-LABEL CONFLICT rather than a repository, and that conflict is the pass's only new information**
 
 🔴 **`0` new foundation rows, `0` new vertical rows.** 🟢 **Cold-start replication of the mandated

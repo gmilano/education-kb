@@ -4,6 +4,74 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🆕 `2026-11-16` (forty-seventh pass, `p842`) — 🟡 **NIL `37`, but a DIFFERENT nil: `3` novel URLs were found and all `3` were disqualified on inspection. The licence-and-substance gate is the story.**
+
+🟢 **What changed in method.** `p840` and `p841` ran the mandated battery and returned nil; `p841`
+ran it cold and reproduced that nil candidate-for-candidate. `p842` therefore ran the battery **plus
+four angles it does not contain**: the LMS/MCP long tail, the grading-and-rubric channel, a
+**Chinese-language** query (`中国 开源 教育 智能体`), and a **Spanish/Portuguese** query
+(`código abierto agente IA educación Brasil`). This was a deliberate test of whether the nil belongs
+to the battery's query shape or to the supply.
+
+🔴 **Result: the angles DO reach past the battery — they surfaced `3` URLs genuinely absent from the
+`5,720`-URL shelf — and every one failed inspection.** The battery itself returned `0` novel
+education agents for the third straight pass.
+
+### 🔴 The three disqualifications, with the evidence that produced them
+
+| Candidate | Liveness (`git ls-remote --symref`, `2026-11-16`) | Licence probe at the real ref | Substance | Verdict |
+|---|---|---|---|---|
+| `github.com/Ali627miya/gradeguide-ai` | 🟢 LIVE, `refs/heads/main`, `f6f9238112cb` | 🔴 `LICENSE` `404`, `LICENSE.md` `404`, `LICENSE.txt` `404`, no `package.json`, no licence line in `13,722`-byte README | Rubric pre-submission checker, OpenAI JSON mode | 🔴 **NOT A ROW — unlicensed** |
+| `github.com/timothyheeeee/Autonomous-Grading-Engine` | 🟢 LIVE, `refs/heads/main`, `f3518b6c379a` | 🔴 same three probes `404`, no `package.json`, no licence line in `5,365`-byte README | LangGraph human-in-the-loop interrupts; math held out of the model; **proprietary `GPT-4o` dependency** | 🔴 **NOT A ROW — unlicensed AND not self-hostable** |
+| `github.com/thinkmoon/zhihui-teacher` | 🟢 LIVE, `refs/heads/main`, `71b5ddaee9a4` | 🟢 `LICENSE` `200`, **MIT**, `1,066` bytes, `sha256₁₂` `e936c2bc0ff4`, "Copyright (c) 2026 thinkmoon" | 🔴 **`0` source files.** Clone inventory: `index.html`, `styles.css`, `5`×`mp4`, `4`×`md`, `4`×`jpg`, `3`×`png`, `1`×`gif`, `1`×`xml`, `robots.txt`, `.nojekyll` | 🔴 **NOT A ROW — real MIT grant over a marketing page** |
+
+🟢 **The `zhihui-teacher` case is the one worth keeping.** A secondary Chinese-language source
+described it as 以MIT协议开源 — "open-sourced under MIT" — and that is *literally true*. The badge is
+real, the LICENSE file is real, the MIT text is real. What the grant covers is a **static promo site
+with zero build dependencies** for a **closed, hosted product** behind a login at
+`exam.thinkmoon.cn`. The repository's own `NOTICE.md` is explicit and should be quoted whenever this
+row is argued about:
+
+> `index.html` 和 `styles.css` 为本次独立宣传站编写，适用根目录 MIT 许可证。
+> **本仓库没有复制完整产品的前后端代码**；其许可证不改变完整产品或任何第三方组件原有的许可。
+> `assets/` 中的产品截图、视频 …… 以及「智绘老师」名称和标识，**不在代码的 MIT 授权范围内**。
+
+*(The MIT licence applies to `index.html` and `styles.css`, written for this standalone promo site.
+**This repository does not copy the complete product's front- or back-end code.** The screenshots,
+video and the 智绘老师 name and mark are **outside the scope of the code's MIT grant**.)*
+
+🔴 **A licence badge is a claim about a file, not about an asset.** Three passes of this base's
+discipline would have caught the two unlicensed repos; only a **file inventory** catches this one.
+That is the gap `P94` now closes. → `T143`.
+
+### 🔴 Not rows: rank-tracker aggregators
+
+The mandated battery's only not-on-shelf hits were `yuxiaopeng/Github-Ranking-AI`,
+`bianzhilong2-ctrl/agents-radar` and `HuggerHustle/ai-radar`. They are **star-ranking feeds**, not
+education agents. They are recorded here as *where the battery's novelty now comes from* — tracker
+repos about agents, rather than agents — and deliberately **not** promoted into `agents/top.md`
+(`T63`, `T140`).
+
+### 🟢 Already-shelved, re-confirmed by this pass's angles (`17`)
+
+`vishalsachdev/canvas-mcp` (upstream) and forks `harrywang`, `Harikeshav-R`, `NelsonSpencer`,
+`r-huijts`, `mdweaver`, `bruchris`, `DMontgomery40`, `admin978`, `JohannsenLum/canvas-api-mcp`;
+`loyaniu/moodle-mcp`; `delip/autorubric`; `macsnoeren/genai-open-assessment`;
+`omerbbbb/ai-graded-assessment-platform`; `xch1986/AI-Tutor`; `Zenglian990/AI_Tutor_Release`;
+`datawhalechina/hello-agents`. 🟢 **The LMS/MCP long tail is saturated on this shelf** — the angle
+built specifically to expose it returned nothing it did not already hold.
+
+### 🟡 Declared gaps after `p842`
+
+- 🔴 **The grading/rubric channel has a licence problem, not a supply problem.** Candidates exist and
+  are active; the two newest are unlicensed. An engagement needing autograding must still start from
+  the shelved `delip/autorubric` / `macsnoeren/genai-open-assessment` pair, or build.
+- 🔴 **`OASIS`** (arXiv `2609.09180`, rubric-based multimodal assessment) — **no code released**; the
+  paper states it ships the report and project information only, no source or tagged release. Design
+  reference, not a dependency.
+- 🔴 **No LATAM-origin education agent, still.** The Spanish/Portuguese angle returned regional
+  *infrastructure* (`Latam-GPT`, CENIA) and *observatories* (UNESCO), not an agent. → `T139` holds.
+
 ## 🆕 `2026-11-16` (forty-sixth pass, `p841`) — 🔴 **NIL `36`, and this pass is a COLD-START REPLICATION: the mandated battery was re-run from scratch by an operator holding none of this base's prior conclusions, and it reproduced them candidate-for-candidate**
 
 🔴 **`0` new agent rows. `0` new repo rows. `0` new regional instruments across four regions.**

@@ -4,6 +4,86 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Forty-seventh pass (`p842`, 2026-11-16) — `1` recipe (`P94`), runnable and tested against a `5`-repo fixture corpus this pass measured
+
+## 🟢 `P94` — THE LICENCE-AND-SUBSTANCE INTAKE GATE: reject the candidate that cannot be built on, before it becomes a row (forty-seventh pass, `p842`, Global; EMEA audit note)
+
+🔵 **Why this exists.** `p842` surfaced `3` education repositories genuinely absent from this base's
+`5,720`-URL shelf. All three were live. All three were active. **None could be used, and each failed
+for a different reason** (`T143`). A pass without this gate would have written three rows, two of
+them carrying an **invented** licence — the most load-bearing field a client decision rests on.
+
+🟢 **Code, tested, in this repository:**
+[`compose/code/p94-licence-substance-gate/`](code/p94-licence-substance-gate/) — `intake-gate.sh`
+plus the fixture corpus and expected output. Exit `0` = all pass, exit `1` = at least one reject, so
+it drops into CI unchanged.
+
+```bash
+./intake-gate.sh owner/repo [owner/repo ...]
+```
+
+### 🟢 The wiring — three gates, in order, short-circuiting
+
+**Gate 1 — liveness, and the REAL ref.** `git ls-remote --symref https://github.com/$repo HEAD`.
+🔴 **Do not use `curl -sI`: this session's proxy returns `403` for live repositories** (`T124`), so
+an HTTP status tells you nothing. The symref's second job is the one that actually bites: it yields
+the **true default branch**.
+
+**Gate 2 — the grant, byte-read at that ref.** `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`,
+`COPYING.txt`, `LICENCE` from `raw.githubusercontent.com/$repo/$branch/`, recording **byte count and
+`sha256₁₂`**. 🔴 **Never infer a licence from a badge, a topic tag, an aggregator column or README
+prose.** 🔴 **No licence file is all-rights-reserved, not permissive** — the mode that disqualified
+two of this pass's three candidates.
+
+**Gate 3 — substance.** `git clone --depth 1` and inventory file types; **reject on `0` executable
+source files**. 🔵 This is the gate the base did not have. `thinkmoon/zhihui-teacher` carries a
+genuine `MIT` grant (`1,066` bytes, `sha256₁₂` `e936c2bc0ff4`) over a **static marketing site** for a
+closed hosted product — `index.html`, `styles.css`, five `mp4`s, no code — and its own `NOTICE.md`
+says the product's front- and back-end code is not in the repository. **It passes gates 1 and 2
+cleanly.**
+
+### 🟢 Reproduce this exactly — fixture corpus measured `2026-11-16`
+
+| Candidate | Result | Detail |
+|---|---|---|
+| `Ali627miya/gradeguide-ai` | 🔴 `REJECT gate2-grant` | `main@f6f9238112cb`, no licence file |
+| `timothyheeeee/Autonomous-Grading-Engine` | 🔴 `REJECT gate2-grant` | `main@f3518b6c379a`, no licence file; also closed-`GPT-4o`-dependent |
+| `thinkmoon/zhihui-teacher` | 🔴 `REJECT gate3-substance` | real `MIT` `1066B` `e936c2bc0ff4`, **`0` source files** |
+| `vishalsachdev/canvas-mcp` | 🟢 `PASS` | `MIT` `1071B` `5385a26e2fac` `main@d86ff43925d5`, `212` source files |
+| `learningequality/kolibri` | 🟢 `PASS` | `MIT` `1097B` `3c056b34a476` **`develop`**`@fe298f54494c`, `3145` source files |
+
+🟢 **One failure per gate-outcome is the point: it proves no gate is redundant.**
+
+### 🔴 The Kolibri trap — read this before copying the gate
+
+**`learningequality/kolibri`'s default branch is `develop`, not `main`.** A licence probe with a
+hardcoded `/main/` path gets `404` and rejects **Kolibri — MIT, `3,145` source files, a foundation
+of this entire KB — as "unlicensed".** 🔵 Gate 2 **must** read at the ref gate 1 discovered. This is
+the most likely route by which wrong licence data re-enters this base, and it is why the gates are
+ordered rather than parallel.
+
+### 🔵 Where it sits in an engagement
+
+| Phase | Use |
+|---|---|
+| **Discovery intake** | Every candidate passes the gate before being written anywhere. `REJECT`s go to `agents/trending.md` as *flagged, with the gate name*; they never reach `agents/top.md`. This is `T63`/`T140` discipline made executable. |
+| **Dependency CI** | Pin the engagement's dependency set and run on a schedule. A dependency that relicenses or goes dark fails the build with the gate that caught it. |
+| **Client deliverable (EMEA)** | 🟢 A `PASS` line *is* an audit record — licence family, bytes, content hash, exact ref, source count. Under the EU AI Act, education grading and admissions are high-risk (`intel/market.md`, EMEA), and conformity assessment asks exactly this about third-party components. |
+
+### 🔵 Composing it with what is already on these shelves
+
+🟢 Run the gate over the agent-facing MIT integration tier this base recommends —
+`vishalsachdev/canvas-mcp` (and the fork family `harrywang`, `Harikeshav-R`, `NelsonSpencer`,
+`r-huijts`, `mdweaver`, `bruchris`, `DMontgomery40`, `admin978`, `JohannsenLum/canvas-api-mcp`),
+`loyaniu/moodle-mcp`, `jtayped/sakai-mcp` — **before** picking one. 🔵 Ten near-identical forks are
+a *choice*, and `src=` plus the licence hash is the cheapest objective way to make it: the fork with
+`212` source files and a current ref is not the fork with four.
+🔴 For autograding specifically, the gate rejects both of `p842`'s new candidates, so build from the
+shelved `delip/autorubric` + `macsnoeren/genai-open-assessment` pair and treat **`OASIS`**
+(arXiv `2609.09180`, **no code released**) as prior art only.
+🟢 Upstream of the gate, `P83`'s pedagogical acceptance gate still decides whether a tutor is *good*;
+`P94` only decides whether you are **allowed to ship it at all.** Run `P94` first — it is cheaper.
+
 ## 🔴 Forty-sixth pass (`p841`, 2026-11-16) — **`0` new recipes (`P93` → `P93`), stated with the reason**
 
 🔴 **A compose pattern is only honest if it is built from components measured in the pass that
