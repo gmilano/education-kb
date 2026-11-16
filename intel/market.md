@@ -4,6 +4,174 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-fourth pass (`p859`, 2026-11-16) — **the public buyer placed OUTSIDE Europe: what a state publishes, what it withholds, and the two agencies that turned out to be empty**
+
+🔵 **`p858` measured public-buyer SUPPLY in six European countries and closed by naming its own
+blind spot (`858-G6`): `0` agencies enumerated in North America, APAC or LATAM — "an UNMEASURED
+absence, not a nil."** 🟢 **`p859` enumerated `8` bodies across those three regions: `386`
+repositories, `0` forks, `14` foundation rows and `2` agent rows shelved, every grant byte-read
+today.**
+
+🔴 **The channel comparison repeats `p858`'s result in the opposite hemisphere.** The regional
+WebSearch legs the scheduler prescribes returned `36` links and 🔴 **`0` usable supply rows**;
+🟢 **the `user:` enumerations returned `386` repositories and `16` shelf rows.** 🔵 **State and
+foundation code has no stars, so it is invisible to a ranked search and fully visible to an org
+listing. That holds on four continents now.**
+
+### 🔴 Two agencies that exist and publish NOTHING — measured, not assumed
+
+🟢 **`gh api search/repositories -f q="user:X"` is bidirectionally controlled: a real org with
+public repositories returns a `total_count`; an org with none returns HTTP `422`. So these are
+measurements.**
+
+| Body | Handle | Result | What it means for a studio |
+|---|---|---|---|
+| 🇺🇾 **Plan Ceibal** — Uruguay's national ed-tech agency | `Ceibal` | 🔴 **Org EXISTS, `0` public repositories** | 🔵 **`p858` named Ceibal as the FIRST LATAM target.** The answer is a confirmed nil. `T113` already found Ceibal absent from the funder channel; this closes it from the org channel too |
+| 🇰🇷 **KERIS** — Korea Education & Research Information Service | `KERISdev` | 🔴 **Org EXISTS, `0` public repositories** | 🔴 **And `p858`'s named target `KERIS` is a DIFFERENT ACCOUNT ENTIRELY** — a private individual's ML scratch repos. A studio citing "KERIS on GitHub" would be citing a stranger |
+| 🇯🇵 **MEXT** — Japan | — | 🔴 **No organisation found** by `search/users` on `education ministry japan type:org` (`total_count=0`) | 🔵 Recorded as a SEARCH-LIMITED absence, not a nil: the leg was English-language, and `T114` makes English-only nils suspect by construction |
+| 🇦🇺 **ESA** — Education Services Australia | — | 🔴 **Not found.** `cesaraustralia` is an agricultural-research org; `CEnet` returns `422` | 🔵 Same status: search-limited, not measured |
+
+### Supply measured, by region
+
+| Region | Bodies enumerated | Repos | Licence regime, byte-read | What a studio may do |
+|---|---|---|---|---|
+| 🇺🇸 **North America** | Ed-Fi Alliance | `31` | 🟢 **Apache-2.0, `28` of `31`** | 🟢 **Fork, close, ship** — and the only region outside EMEA with a public-sector AI layer to read |
+| 🇮🇳 **APAC** | `project-sunbird`, `Sunbird-Ed`, `Sunbird-RC` | `182` | 🟢 **MIT, `162` of `182`** | 🟢 **Fork, close, ship.** 🔴 **No AI layer exists; flagship repo `3` years stale** |
+| 🇨🇱 **LATAM** | EOL, Universidad de Chile | `109` | 🔴 **SPLIT: `65` ungranted · `22` MIT · `21` AGPL-3.0** | 🟡 **Beside the platform only.** AGPL on anything in-process |
+| 🇧🇷 **LATAM** | Fundação Lemann | `24` | 🔴 **`23` of `24` UNGRANTED** | 🔴 **Nothing adoptable.** Newest HEAD commit `2021-02` |
+| 🇦🇷 **LATAM** | `decyt-tdf`, Tierra del Fuego | `25` | 🔴 **`18` ungranted · `6` MIT · `1` GPL-3.0** | 🔴 **Dead:** flagship last committed `2019-11` |
+
+## Opportunities by region
+
+🔴 **Every market and adoption figure in this section is `CITED, NOT READ` from WebSearch
+summaries on `2026-11-16`, and several are secondary aggregators that disagree with each other —
+the ranges below are reported as ranges for that reason.** 🟢 **Every SUPPLY figure is byte-read
+or enumerated by this pass.**
+
+### Global
+
+🟡 **Market size, three estimates that do not agree:** ~**`$10.6B`** in `2026` → **`$42.5B`** by
+`2030` at `41.5%` CAGR (Research and Markets); ~**`$10.4B`** → **`$32.27B`** by `2030` at `31.2%`
+(Resourcera); ~**`$12.3B`** for `2026` (HolonIQ-derived). 🔵 **Treat the direction as solid and the
+magnitude as ±20%.**
+
+🔴 **The gap that is the actual opportunity, and it is a governance gap rather than a technology
+gap.** 🟢 Student use is effectively saturated — reported at **`92%`** of students using AI in
+`2025` against `66%` in `2024`, with another source at `86%` and `24%` daily. 🔴 **UNESCO: only
+`10%` of schools and universities have formal AI guidelines, and only ~`25%` of educators report
+adequate training.** 🔵 **Institution-wide adoption in higher education moved `49%` → `66%` in one
+year (Ellucian).** 🟢 **So the buyer's unmet need is policy, provenance and audit — not another
+chatbot**, which is the same conclusion the OECD's `2026` Digital Education Outlook reaches when
+it argues for purpose-built educational AI over wrapped general-purpose tools (`T98`).
+
+🟢 **Globant-shaped offer:** the `P91` liveness-and-grant audit productised as a
+**procurement-grade open-source due-diligence report**. 🔵 **`T204` shows the entire sector grades
+freshness from a field that a bot can forge; every institution inheriting an open-source stack has
+that defect, and a licence claim nobody can reproduce from the file it names is a procurement
+finding.** 🔵 Sells into all five regions and needs no local presence.
+
+### North America
+
+🟢 **The best-supplied region in this pass and the only non-European one with a readable public AI
+layer.** Ed-Fi is **Apache-2.0 across `28` of `31` repositories**, genuinely live (`5` of `5`
+within `6` days of HEAD), and ships both a production RAG agent (`Fiona`) and a `13`-skill agent
+library.
+
+🟡 **Regulation is STATE-led and it is a tailwind, not a barrier** (`CITED, NOT READ`): ~`134`
+AI-in-education bills across `31` states in the `2026` session, weighted to student-data privacy
+and classroom-use limits. 🟢 North Carolina (Session Law `2026-41`) sets AI-literacy standards with
+a **state model policy due `2026-12-31`** and teacher training by **`2028-06-30`**; Idaho approved
+a statewide generative-AI framework in `2026-08`; Maryland, Idaho, Oklahoma and Virginia require
+districts to adopt AI policies; New York's `A 9190` would restrict classroom AI below grade `9`.
+🟢 Federally, the US Department of Education issued a responsible-use framework (`2026-03`) and
+K-12 guidance (`2026-04`). 🔵 **A mandated district policy with a date on it is a funded
+engagement.**
+
+🟢 **Offer:** `P90` — the Ed-Fi-native AI layer, sold to districts and state agencies against the
+model-policy deadlines above, with `P87`'s early-warning build attached and its conformance
+argument re-pointed from Annex III to state statute. 🔵 **Differentiator: a studio that can read
+`Ed-Fi-Data-Standard v6.2.0` and `Fiona` speaks the buyer's data model on day one.**
+
+### EMEA
+
+🟢 **Carried from `p858`, still the strongest region for public-sector supply** — `305`
+repositories, seven agencies, and the only national OER AI fleet in this base (`openeduhub`,
+Apache-2.0). 🔵 **Licence geography decides the commercial shape: Finland EUPL (co-build), Norway
+and the Netherlands MIT/Apache (fork, close, ship), Germany Apache-2.0 apps with CC0 vocabularies.**
+
+🟡 **The regulatory calendar moved, and the movement is the selling point** (`CITED, NOT READ`):
+**Regulation (EU) `2026/1744`, the Digital Omnibus on AI, pushed the Annex III high-risk duties for
+education — admissions, grading, learning-outcome assessment and exam proctoring — from
+`2026-08-02` out to `2027-12-02`.** 🟢 **Article 50 transparency obligations DID start on
+`2026-08-02`** (a classroom chatbot must disclose it is AI; generated content must be
+machine-detectable), the Article 4 AI-literacy duty is live, the education emotion-recognition
+prohibition has applied since `2025-02`, and further prohibitions plus a labelling deadline land
+`2026-12-02`.
+
+🔵 **Read the delay correctly: it is `12` months of runway to build conformance IN, not permission
+to skip it.** 🟢 **Offer:** `P88`'s licence-boundary architecture plus an Annex III conformance
+package timed to `2027-12-02`, with sovereign inference already a config value (`GWDG`,
+`AcademicCloud / KISSKI`) rather than a rewrite.
+
+### APAC
+
+🟢 **The largest permissive supply in this pass and the largest vacuum.** India's Sunbird is
+**MIT across `162` of `182` repositories**, forked `393` / `318` / `128` times — a deployment
+population, not an audience (`T202`) — and 🔴 **ships no AI layer at all.** 🔴 **Its flagship
+`sunbird-devops` last had a human commit on `2023-04-26` while the API reports `2026-03-25`
+(`T204`).**
+
+🟡 **Regulation diverges sharply by jurisdiction** (`CITED, NOT READ`): 🔴 **China is the most
+binding** — public-facing services need security assessment and algorithm filing before launch, and
+the anthropomorphic-AI-services measures issued `2026-04-10` took effect `2026-07-15`, which bears
+directly on a companion-style tutor. 🟡 **India** amended its IT Rules effective `2026-02-20` and
+signalled in `2026-07` that it may pursue dedicated AI legislation. 🟢 **Japan's AI Promotion Act
+stays light-touch**, with a second AI Basic Plan approved `2026-07-14`. 🔴 **Vietnam's Decision
+`33/2026/QD-TTg` names education — including automated assessment — among six high-risk sectors.**
+🔵 Singapore is reported as the regional adoption leader.
+
+🟢 **Offer, and it is the clearest build opportunity in this pass:** an MIT-licensed AI layer over
+Sunbird for a state or national deployment — content tagging, differentiated path generation and a
+teacher-facing assistant — built BESIDE the platform over its APIs. 🔵 **MIT means the studio may
+ship it closed.** 🔴 **Scope the staleness honestly: price a fork-and-maintain of `sunbird-devops`
+into the first phase, because `393` downstream deployments inherit it unmaintained.**
+🔵 **`P91` is the instrument that makes that conversation survivable.**
+
+### LATAM
+
+🔴 **Demand is the highest in this base and adoptable supply is the lowest. That inversion IS the
+market.** 🟡 Demand (`CITED, NOT READ`): a Digital Education Council survey of `30,000+` higher-ed
+responses across `29+` institutions reports **`92%` of LATAM students using AI regularly and `67%`
+weekly**; an IDB review of `193` regional AI initiatives found **`59%` using generative AI**;
+secondary figures put Brazil at `59%` of schools (`2025`) and Mexico at `68%` in higher education
+(`2026`) — 🔴 **thinly sourced, flagged as such.**
+
+🔴 **Supply, byte-measured this pass:** Chile's `109`-repository national Open edX estate is
+`65`-ungranted / `22` MIT / `21` AGPL-3.0; 🔴 **Brazil's Fundação Lemann is `23` of `24` ungranted
+and last committed `2021-02`**; 🔴 **Argentina's `decyt-tdf` is `18` of `25` ungranted and last
+committed `2019-11`**; 🔴 **Uruguay's Plan Ceibal publishes nothing at all.** 🔵 **This confirms
+`T188` from the org channel: the LATAM estate is ungranted rather than absent — and where it is
+granted, as at `eol-uchile`, it is AGPL exactly where it touches the platform (`T205`).**
+
+🟡 **Regulation: a DECLARED GAP.** 🔴 **The prescribed LATAM leg returned nothing on
+AI-in-education regulation in Brazil or Mexico.** 🔵 Brazil's `PL 2338` and Mexico's education
+rules were NOT reached by this pass's searches and are named here as the next step rather than
+summarised from nothing. 🟢 Brazil's `Marco Legal da IA` is carried from earlier passes and is
+`CITED, NOT READ`.
+
+🟢 **Named players (`CITED, NOT READ`):** **Teachy** 🇧🇷 (AI lesson preparation, now expanding into
+Asia), **Ginia** 🇲🇽 (AI employability linking employers, institutions and students), and the Rio de
+Janeiro Education Secretariat automating school-invoice validation. 🟢 **Google.org has committed
+`$4.6M` to AI education across Argentina, Brazil, Chile, Colombia, the Dominican Republic, El
+Salvador, Mexico, Peru and Uruguay, targeting `1.25M` students by `2028`** — 🔵 **a funded,
+multi-country programme with no regional open-source AI layer underneath it, which is the single
+most specific opening in this section.**
+
+🟢 **Offer:** the `P85` paper-to-mark pipeline and `P88`'s beside-the-platform architecture sold
+into the Chilean Open edX estate, where `sence-xblock` shows the buyer already encodes **national
+training-subsidy rules as courseware components** — 🔵 **a state funding rule expressed in code is
+the most legible integration brief a studio can be handed.**
+
 ## 🟢 Sixty-third pass (`p858`, 2026-11-16) — **the PUBLIC BUYER placed by region: where a state publishes its own education code, what it publishes it under, and where it publishes nothing at all**
 
 🔵 **The one regional claim this pass can make that no previous pass could.** Every prior regional

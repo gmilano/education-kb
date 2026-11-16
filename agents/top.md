@@ -4,6 +4,41 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-fourth pass (`p859`, 2026-11-16) — **`2` agent rows (`456` → `458`): the org-enumeration channel is pointed OUTSIDE Europe for the first time, and `386` repositories from eight public education bodies yield exactly TWO agents**
+
+🟢 **`858-G6` is discharged, and the answer is a number rather than a nil.** `p858` ended by naming
+its own instrument's limit: `305` repositories, six countries, **all EMEA**, with `0` agencies
+enumerated in North America, APAC or LATAM — *"an UNMEASURED absence, not a nil."* 🟢 **`p859`
+enumerated `8` non-European bodies by organisation: `386` repositories, `0` GitHub forks, every
+grant below byte-read today.**
+
+🔴 **And the headline is a DEFICIT, reported as one.** EMEA's `openeduhub` yielded `5` Apache-2.0
+education agents in a single org. 🔴 **The same channel, run across three other regions over `386`
+repositories, yields `2` — both from the same North American body, both `0★`.** 🔵 **The
+non-European public buyer publishes INFRASTRUCTURE — data standards, registries, portals — and
+does not publish an AI layer.** 🟢 **That is the single most commercially useful sentence in this
+pass: outside Europe the AI layer over a national education estate is not a thing a studio
+competes with. It does not exist yet** → `T201`.
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| Fiona | [`Ed-Fi-Alliance-OSS/Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona) | 🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917`, `main` | `0` | North America | 🟢 **The highest-value agent row in this pass, and the first production RAG support agent this base has shelved from a national education STANDARDS body.** A Slack assistant for the Ed-Fi community: `240` files, `apps/fiona-slack/src/agent/` carrying `llm-caller` with model validation, `search-caller`, `escalation`, `rate-limiter`, `thread-history`, `ticket-service`, `conversation-capture-store` and Cosmos-backed `feedback-store`/`interaction-store`, with `citation-telemetry` and `idempotent-finalize` under `utils/`. 🔵 **The test suite mirrors it file-for-file (`tests/agent/*.test.js`), which is how you tell a deployed agent from a demo.** 🟢 Ships `.github/agents/{coding-agent,postmortem-synthesis,azure-usage-report}.agent.md` and `.claude/agents/`, deployed by `deploy-fiona-slack-container.yml`. HEAD commit `2026-10-28` |
+| AI-Tools-for-Ed-Fi-SDLC | [`Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC`](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC) | 🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917`, `main` | `0` | North America | 🟢 **An Apache-2.0 AGENT-SKILLS LIBRARY published by a US education standards body — a form this base has not held before.** `30` files: `13` `SKILL.md` files (`initialize-ed-fi-repository`, `review-model-pr`, `team-pr-review`, `reviewing-github-actions`, `update-dependencies-agent`, `jira`, `DS-needs-by-domain`, `nachos-state-analysis`, `nachos-state-report`), an `agents/update-dependencies/` agent definition, and a root `CLAUDE.md`. 🔵 **It encodes how a standards body reviews a change to a national data model — which is exactly the knowledge a studio entering Ed-Fi work has to buy or rebuild.** 🟢 **HEAD commit `2026-11-10`, six days before this pass: the most current artefact in it** |
+
+### 🔴 Examined and NOT filed — the agent-shaped names across the other `384` repositories
+
+🔵 **Declared rather than left silent (`p811`'s rule). Every row here is a name that would survive
+a keyword sweep and does not survive a read.**
+
+| Not filed | Why |
+|---|---|
+| `Sunbird-Ed/teacher-aid-plan-creator`, `Sunbird-Ed/teacher-aid-prep-app` (MIT) | 🔴 **Lesson-plan tooling last pushed `2019-03`. Pre-LLM by construction** — "teacher aid" is the 2019 sense of the phrase. `0★` each |
+| `project-sunbird/ml-core-service`, `ml-projects-service`, `ml-reports-service`, `ml-survey-service`, `Sunbird-Ed/ml-analytics-service` (MIT) | 🔴 **`ml-` here is SURVEY and ANALYTICS plumbing, not machine learning.** Five services whose prefix is the single biggest false-positive generator in this pass's corpus |
+| `project-sunbird/sunbird-ml-workbench` (MIT, `17★`) | 🔴 A genuine ML workbench — 🔴 **HEAD commit `2020-05-05`.** Shelved as a foundation row for provenance, not as an agent |
+| `eol-uchile/tutor-gitops-plugin` | 🔴 **`tutor` is a NAMING COLLISION and a costly one for this base specifically.** In the Open edX ecosystem `Tutor` is the Docker deployment tool. 🔵 This base has shelved `tutor-mcp` 🇫🇷 and `tutor-chatbot` 🇩🇪 as AI tutors; the token means the opposite here → `T205` |
+| `FundacaoLemann/prompt-model-canvas` | 🔴 Name is the only AI content. 🔴 **No grant at root, `0★`** |
+| `Keris/*` — `ml-notes`, `ml_scratch`, `udacity-projects` (`15` repos) | 🔴 **WRONG ORGANISATION ENTIRELY.** `p858` named `KERIS 🇰🇷` as a target. The handle `Keris` is a private individual's ML scratch account — credit scoring, Udacity coursework, 机器学习笔记. 🟢 **Korea's actual agency org is `KERISdev`, and it has `0` public repositories** → `T204` |
+
 ## 🟢 Sixty-third pass (`p858`, 2026-11-16) — **`5` agent rows (`451` → `456`): Germany has a state-funded, Apache-2.0 education agent FLEET, and this base had `0` rows of it after sixty-two passes**
 
 🔴 **The line this pass retires.** Every regional summary since `p798` has said the same thing about

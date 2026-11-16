@@ -4,6 +4,34 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — `p859`: the same channel, three new continents — and the window's finding is that the non-European public buyer ships NO agents
+
+🟢 **What is new this window is not a repository and not a channel. It is the first
+CROSS-REGIONAL comparison this base can make with one instrument held constant.**
+
+| Movement | What moved |
+|---|---|
+| 🟢 **NEW REGION on the shelf: North America gets its first public-sector agents** | 🟢 [`Ed-Fi-Alliance-OSS/Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona) — a **production** Slack RAG agent from the US K-12 data-standards body: `240` files, `escalation`, `rate-limiter`, `citation-telemetry`, `idempotent-finalize`, Cosmos-backed stores, and a `tests/agent/*` suite mirroring the source file-for-file. Apache-2.0, `0★`, HEAD `2026-10-28` |
+| 🟢 **NEW capability class: an Agent-SKILLS library from a standards body** | 🟢 [`Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC`](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC) — `13` `SKILL.md` files encoding how a national data model is reviewed and changed (`review-model-pr`, `initialize-ed-fi-repository`, `team-pr-review`), plus a root `CLAUDE.md`. Apache-2.0, `0★`, HEAD `2026-11-10`. 🔵 **This base has not held this form before** |
+| 🔴 **THE FINDING: `386` repositories, three regions, `2` agents** | 🔴 **APAC `0`. LATAM `0` across four bodies in four countries.** 🟢 EMEA's `openeduhub` alone yielded `5`. 🔵 **Outside Europe the public education buyer publishes infrastructure and buys its AI** → `T201` |
+| 🟢 **`0★` CONFIRMED as the signature of this whole tier, on a second continent** | `p858`: *"they were invisible because they have `0` stars, and a state agency's code never will."* 🟢 **Both North American agents are `0★` too.** 🔵 The rule is now cross-continental, not a German peculiarity |
+| 🔴 **RETIRED: `KERIS` as a target** | 🔴 Named by `p858`. The handle `Keris` is a private individual's ML scratch account. 🟢 The real org `KERISdev` has `0` public repositories → `T204`'s sibling finding |
+| 🔴 **RETIRED: `tutor` as an agent-discovery token** | 🔴 This base shelved `tutor-mcp` 🇫🇷 and `tutor-chatbot` 🇩🇪 as AI tutors. 🔴 **In Open edX — the entire LATAM higher-ed estate — `Tutor` is the Docker DEPLOYMENT tool.** `eol-uchile/tutor-gitops-plugin` is container plumbing → `T205` |
+| 🔴 **RETIRED: `ml-` as an ML signal** | 🔴 Five MIT `ml-*` services at Sunbird — `ml-core-service`, `ml-projects-service`, `ml-reports-service`, `ml-survey-service`, `ml-analytics-service` — are **survey and reporting plumbing** |
+| 🟢 **NEW traction instrument: fork:star ratio** | 🟢 `SunbirdEd-portal` `41★` / **`318` forks** = `7.8:1`; `sunbird-devops` `62★` / **`393` forks** = `6.3:1`. 🔵 **A ministry deploys by forking and never clicks a star** → `T202` |
+
+🔴 **And the warning this window attaches to every agent row this base has ever dated.**
+🟢 `project-sunbird/sunbird-devops` reports `pushed_at = 2026-03-25` and its last human commit is
+🔴 **`2023-04-26`** — the `2026` date belongs to an unmerged **Dependabot** branch. 🟢 Reproduced
+at `decyt-tdf/siep-pwa` (`1,130` days). 🔵 **`P91` is the one-clone check that settles it, and it
+reads the grant in the same command** → `T204`.
+
+🟢 **Channel note:** every grant above byte-read `2026-11-16` by treeless partial clone, sized with
+`git cat-file -s`, hashed with `sha256sum`; `0` licences taken from GitHub's SPDX field.
+🟢 **Both Ed-Fi agent grants: Apache-2.0, `11,357 B`, `sha256₁₂ c71d239df917`** — 🔵 **byte-identical
+to the payload this base pinned at Germany's `openeduhub`, which on a holder-AGNOSTIC licence is
+evidence about the template and nothing else** (`T200`, `T203`).
+
 ## 🟢 `2026-11-16` — `p858`: the state-agency channel, and the window's movement is a RETIREMENT
 
 🟢 **What is new in this window is not a repository that got popular. It is a channel that was never

@@ -4,6 +4,25 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-fourth pass (`p859`, 2026-11-16) — **`3` platform rows: the national platform tier OUTSIDE Europe, and two of its three rows have NO agent surface at all**
+
+🔵 **`p858` shelved the European national-platform tier. `p859` runs the same instrument across
+three other regions and files the result including its nils**, because a platform a state already
+runs and already procures around is a reference architecture and a named prospect at once — and
+*"no agent surface"* is the commercial opening, not a missing cell.
+
+| Platform | Operated by | Country | Agent surface found this pass | Licence | Stars |
+|---|---|---|---|---|---|
+| **Ed-Fi ODS / API + Data Standard** | the Ed-Fi Alliance | 🇺🇸 United States | 🟢 **YES — and it is the only one.** [`Ed-Fi-Alliance-OSS/Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona), a production Slack RAG agent, plus [`AI-Tools-for-Ed-Fi-SDLC`](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC), `13` Agent Skills for maintaining the standard itself | 🟢 Apache-2.0, byte-read `2026-11-16` | 47 |
+| **Sunbird** (Ed · RC · devops) | Sunbird / EkStep, behind India's national school content service | 🇮🇳 India | 🔴 **NONE.** `386` repositories swept; the five `ml-*` services are survey and analytics plumbing and the two `teacher-aid-*` apps were last pushed `2019-03` | 🟢 MIT across `162` of `182` repos in three orgs, byte-read `2026-11-16` | 62 |
+| **Open edX, Chilean national estate** | EOL, Universidad de Chile | 🇨🇱 Chile | 🔴 **NONE.** 🔴 **And the one repository whose name says otherwise — `tutor-gitops-plugin` — is the Open edX DEPLOYMENT tool, not a tutor** | 🔴 **SPLIT: AGPL-3.0 XBlocks, MIT themes, `65` of `109` with no grant at all** — byte-read `2026-11-16` | 4 |
+
+🔴 **Read the middle row as the pass's commercial finding.** 🟢 India's national education platform
+is **MIT**, forked `393` times, and has **no AI layer whatsoever**. 🔵 **A studio does not have to
+displace an incumbent agent there, because there is no incumbent agent — and the licence permits a
+closed, shipped product on top of it.** 🔴 The matching risk is in the same cell: its flagship
+repository's last human commit is `2023-04-26` → `T204`.
+
 ## 🟢 Sixty-third pass (`p858`, 2026-11-16) — **`6` platform rows: the NATIONAL platform tier — systems a state already runs, already publishes and already procures around**
 
 🟢 **The count is RE-DERIVED rather than carried, by running this repository's own gate.**

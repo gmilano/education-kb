@@ -4,6 +4,154 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — sixty-fourth pass (`p859`) — **`5` trends (`T201`–`T205`): the public-buyer instrument pointed outside Europe, forks shown to be the adoption signal stars miss, the licence payload read as provenance AND vintage, `pushed_at` traced to its actual cause, and a token that means the opposite of what this base has shelved**
+
+**One hundred and ninety-seven** trends — derived trends: **197**. 🔴 **Count derived this pass with
+the gate's own regex re-implemented in a scratch script, NOT by executing
+`ingest/derive-counts.py`:** the runner declined to execute repository-provided code in this
+environment, so the figure is a direct heading tally and is marked as such rather than claimed
+GREEN — the `p827` / `p867` convention. 🟢 **Channel note: `gh api search/repositories` with a
+`user:` qualifier is live and BIDIRECTIONALLY controlled this pass** — a real org returns
+`total_count`, an org with no public repositories returns HTTP `422` with
+*"the listed users... cannot be searched"*, which is how two nils below were measured rather than
+assumed. 🔴 **`gh api users/{org}/repos` and `api.github.com/users/{org}` remain `403` session-scoped.**
+🟢 **Every licence in `p859` is byte-read from a treeless partial clone (`--filter=blob:none
+--no-checkout`), sized with `git cat-file -s` and hashed with `sha256sum`; `0` licences are taken
+from GitHub's SPDX field.** 🔴 Every market and regulatory item is `CITED, NOT READ` from WebSearch
+summaries and says so.
+
+## 🔴 `T201` — outside Europe, the public education buyer publishes INFRASTRUCTURE and does not publish an AI layer
+
+🟢 **Measured, and the measurement is a ratio rather than an impression.** `p858` enumerated
+`305` repositories at seven European agencies and found `openeduhub` alone shipping **`5`
+Apache-2.0 education agents**. 🟢 **`p859` enumerated `386` repositories at eight bodies in North
+America, APAC and LATAM and found `2`** — both at one US standards body, both `0★`.
+
+| Region | Body | Repos | Agents found |
+|---|---|---|---|
+| 🇺🇸 North America | Ed-Fi Alliance | `31` | 🟢 **`2`** (`Fiona`, `AI-Tools-for-Ed-Fi-SDLC`) |
+| 🇮🇳 APAC | Sunbird (`project-sunbird`, `Sunbird-Ed`, `Sunbird-RC`) | `182` | 🔴 **`0`** |
+| 🇨🇱 LATAM | EOL, Universidad de Chile | `109` | 🔴 **`0`** |
+| 🇧🇷 LATAM | Fundação Lemann | `24` | 🔴 **`0`** |
+| 🇦🇷 LATAM | `decyt-tdf`, Tierra del Fuego | `25` | 🔴 **`0`** |
+
+🔵 **What a studio does with this.** 🟢 In EMEA the AI layer over a national estate EXISTS and is
+Apache-2.0, so the engagement is *extend and integrate*. 🟢 **In APAC and LATAM it does not exist
+at all, so the engagement is BUILD — against an MIT platform in India's case, with no incumbent
+agent to displace.** 🔴 The corollary is that no non-European reference implementation can be
+cited in a proposal, because there is none to cite.
+
+## 🟢 `T202` — for public-sector infrastructure the adoption signal is the FORK count, and star-ranking is structurally blind to it
+
+🟢 **A state adopts a platform by DEPLOYING it, and deploying means forking.** `Sunbird-Ed/SunbirdEd-portal`
+carries `41★` and 🟢 **`318` forks** — `7.8:1`. `project-sunbird/sunbird-devops`: `62★`,
+🟢 **`393` forks** — `6.3:1`. `SunbirdEd-mobile-app`: `10★`, `92` forks — 🟢 **`9.2:1`**.
+🔵 Against `eol-uchile/eol-conditional-xblock` at `1.5:1` and a typical developer-tool repository
+well below `1:1`.
+
+🔴 **This base has ranked by stars for sixty-three passes.** 🔵 `T115` established that star-ranking
+INVERTS on a CJK corpus; 🟢 **`T202` is the stronger and more general claim: it fails on an entire
+TIER in every language, because the people who adopt a national education stack are ministries,
+and a ministry does not click a star.** 🟢 **Operational rule: on any public-sector or
+infrastructure sweep, sort by forks and read the fork:star ratio; a ratio above `3:1` is a
+deployment population.**
+
+## 🟢 `T203` — the licence PAYLOAD is two independent evidence channels at once: the holder line is provenance, the body is vintage
+
+🟢 **`T200` established the discriminator — a collision on a holder-BEARING licence is evidence
+about the holder, on a holder-AGNOSTIC one only about the template. `p859` runs BOTH halves on one
+corpus and both pay.**
+
+🟢 **Holder channel (MIT, holder-bearing).** Six Sunbird grants byte-read; four distinct holders,
+and together they reconstruct the programme's institutional history with no external source:
+
+| Repo | Bytes · `sha256₁₂` | Copyright holder |
+|---|---|---|
+| `project-sunbird/sunbird-devops` | `1,072 B` · `7dde06716f25` | `© 2018 Project Sunbird` |
+| `Sunbird-Ed/SunbirdEd-portal` | `1,072 B` · `7dde06716f25` | `© 2018 Project Sunbird` |
+| `Sunbird-RC/open-saber` | `1,072 B` · `7dde06716f25` | `© 2018 Project Sunbird` |
+| `project-sunbird/sunbird-ml-workbench` | `1,063 B` · `4ff07e32ea3b` | 🔵 **`© 2018 EkStep`** |
+| `Sunbird-RC/sunbird-rc-core` | `1,182 B` · `8686530ab5c7` | 🔵 **`© 2018 IIIT Bangalore`** |
+| `Sunbird-Ed/SunbirdEd-mobile-app` | `1,078 B` · `bea3458f45df` | 🔵 **`© 2021 Sunbird for Education`** |
+
+🟢 **Three byte-identical payloads span three DIFFERENT GitHub organisations** — which on a
+holder-bearing licence is positive evidence they are one programme. 🔵 **The outliers are the
+information: `EkStep` is the foundation that originated Sunbird, `IIIT Bangalore` is the
+university that built the registry core, and the `2021` rename is legible in a copyright line.**
+
+🟢 **Body channel (Apache-2.0, holder-agnostic).** Seven Ed-Fi grants, 🔴 **three distinct payloads
+in ONE organisation**, and they sort by project vintage:
+
+| Payload | Repos | Appendix |
+|---|---|---|
+| `11,357 B` · `c71d239df917` | `Data-Management-Service`, `Fiona`, `AI-Tools-for-Ed-Fi-SDLC` | 🟢 **present** |
+| `10,173 B` · `a6cba85bc92e` | `Ed-Fi-Data-Standard`, `Ed-Fi-ODS-Implementation`, `edfi-oneroster` | 🔴 stripped |
+| 🔴 **`10,172 B`** · `59899c6091b5` | `Ed-Fi-ODS` | 🔴 stripped |
+
+🟢 **The three NEWEST projects carry the full Apache-2.0 including the appendix; the legacy
+platform carries an appendix-stripped variant.** 🔵 **The licence bytes date the project.** 🔴 **And
+the `10,172`/`10,173` pair differs by EXACTLY ONE BYTE — a trailing newline — yet hashes
+differently**, which is `T111`'s `SHORT-BY-EXACTLY-1` class reappearing as a *live* property of a
+single org rather than as an artefact of this base's own probe.
+
+🟢 **Cross-continental control, free:** `c71d239df917` at `11,357 B` is the payload this base
+already pinned at Germany's `openeduhub`. 🔵 **Same bytes, two continents, unrelated publishers —
+exactly what `T200` predicts for a holder-agnostic grant, and it means that hash can never be used
+as an identity claim.**
+
+## 🔴 `T204` — `pushed_at` is a DEPENDABOT event. `T197` named the symptom; this names the cause, and it is reproducible
+
+🟢 **`T197` measured `pushed_at` as an "organisation event" at one Finnish agency. `p859` finds the
+actual mechanism and reproduces it twice in two regions.**
+
+| Repo | API `pushed_at` | HEAD commit, default ref | Delta | Newest commit on ANY of its refs |
+|---|---|---|---|---|
+| `project-sunbird/sunbird-devops` | `2026-03-25` | 🔴 **`2023-04-26`** | 🔴 **`1,064 d`** | 🔴 **`2026-03-25` — `origin/dependabot/pip/.../requests-2.33.0`** |
+| `decyt-tdf/siep-pwa` | `2022-12-08` | 🔴 **`2019-11-04`** | 🔴 **`1,130 d`** | 🔴 **`2022-12-08` — `origin/dependabot/npm_and_yarn/webpack/express-4.17.3`** |
+
+🟢 **In both cases `pushed_at` matches the Dependabot branch to the day, and the three newest refs
+in each repository are all Dependabot branches.** 🔵 **A bot that opens an unmerged dependency-bump
+branch refreshes `pushed_at` forever**, so an abandoned repository reports as fresh for as long as
+the bot is enabled — here for **two years ten months** and **three years one month** respectively.
+
+🟢 **Clean control, same hour, same instrument:** all five Ed-Fi repositories read within `0`–`6`
+days of their true HEAD, and five of six `eol-uchile` repositories within `0`–`5`.
+🔵 **So the defect is not universal and the field is not useless — it is unsafe without the check.**
+
+🟢 **Operational rule, cheap enough to be standing: never publish a freshness figure from
+`pushed_at`. A treeless `--filter=blob:none` clone returns `git log -1 --format=%cI` for free, and
+`git for-each-ref --sort=-committerdate refs/remotes` names the branch responsible when the two
+disagree.**
+
+## 🔴 `T205` — two tokens that mean the opposite of what this base has shelved, and one licence that splits by component type
+
+🔴 **`tutor` is a naming collision, and it is expensive for THIS base specifically.** 🟢 This base
+has shelved [`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) 🇫🇷 and
+[`tutor-chatbot`](https://github.com/openeduhub/tutor-chatbot) 🇩🇪 as AI tutors. 🔴 **In the Open
+edX ecosystem — which is the whole LATAM higher-education estate — `Tutor` is the official Docker
+DEPLOYMENT tool.** `eol-uchile/tutor-gitops-plugin` is a GitOps plugin for a container harness.
+🔵 **Any sweep for "tutor" across a Spanish-language corpus returns devops.**
+
+🔴 **`ml-` is the second, and it generated five false positives in one org**: `ml-core-service`,
+`ml-projects-service`, `ml-reports-service`, `ml-survey-service`, `ml-analytics-service` — all MIT,
+all Sunbird, 🔴 **all SURVEY and REPORTING plumbing with no machine learning in them.**
+
+🟢 **The licence finding beside it is structural rather than lexical, and it is how a studio prices
+a Chilean engagement.** 🔵 **At `eol-uchile` the grant splits by COMPONENT TYPE, inside one
+organisation, inside one week:**
+
+| Component type | Example | Licence, byte-read `2026-11-16` |
+|---|---|---|
+| XBlock — runs INSIDE the Open edX process | `eol-conditional-xblock`, `sence-xblock` | 🔴 **AGPL-3.0** (`34,523 B` / `34,628 B`) |
+| Theme — styling only | `eol-uchile-theme-2020` | 🟢 **MIT** (`1,097 B`) |
+| Everything else | `argocd-config`, `eol_completion` | 🔴 **NO GRANT AT ROOT** — `65` of `109` |
+
+🟢 **`P88`'s rule — *everything sits BESIDE the platform and speaks to it over an API* — is now
+confirmed from the LATAM side by the licences the estate itself publishes.** 🔴 **And `D834` earns
+its keep a third time: `eol-uchile`'s default refs are `eol-release/lilac` and `eol-release/koa`,
+while Ed-Fi's `Ed-Fi-Data-Standard` defaults to the TAG `v6.2.0`. A probe guessing `main` would
+have published four false absences in this pass alone.**
+
 ## 🟢 `2026-11-16` — sixty-third pass (`p858`) — **`5` trends (`T196`–`T200`): the licence map of public-sector Europe, `pushed_at` shown to be an org event rather than a freshness signal, a fourth place a licence hides, a tier logged for sixty-one passes and never shelved, and the boundary that makes `T193` safe to act on**
 
 ## 🟢 `T196` — the national education agency tier has a LICENCE GEOGRAPHY, and the border decides the commercial shape of the engagement

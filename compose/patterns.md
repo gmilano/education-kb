@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-fourth pass (`p859`, 2026-11-16) — **`P90`–`P91`: the AI layer over a US district data estate, and the one-command liveness check that stops this base shipping a dead repository to a client**
+
+**Ninety-one** concrete recipes — derived recipes: **91**. 🔴 **Count derived with the gate's own
+regex re-implemented in a scratch script, NOT by executing `ingest/derive-counts.py`** — the runner
+declined to execute repository-provided code in this environment (`p827` convention). 🟢 **Every
+component named below was byte-read on `2026-11-16`; `0` licences come from GitHub's SPDX field.**
+
+## P90 — an AI layer over a US school district's data estate, built on the standard the district already procures (North America anchor; the same build serves any Ed-Fi or OneRoster system)
+
+🔵 **What it produces:** for a district, state education agency or edtech vendor already running
+Ed-Fi, a question-answering and early-warning layer over student data that **speaks the district's
+own data model** — and that can be sold, audited or handed over, because every component is
+Apache-2.0 and was byte-read before it was wired.
+
+🟢 **Why this recipe exists now.** `T201` measured it: across `386` repositories from eight
+non-European public education bodies, 🟢 **the Ed-Fi Alliance is the ONLY one that has published
+an AI layer**, and it published it Apache-2.0 with a test suite. 🔵 **So unlike every LATAM and
+APAC recipe in this file, `P90` has a reference implementation to read rather than invent.**
+
+🔴 **The architectural decision that comes first, and it is NOT the model.** 🔴 US student data is
+**FERPA**-governed, and `T201`'s regional reading puts `134` AI-in-education bills across `31`
+states in the `2026` session, mostly on student-data privacy (`CITED, NOT READ`). 🟢 **So the
+layer reads from the ODS and never writes to it, and no student-identifying field leaves the
+district's tenancy.** 🔵 That is a deployment topology, decided before node `1`.
+
+| # | Node | Component | Licence, byte-read `2026-11-16` |
+|---|---|---|---|
+| `1` | The data estate you do NOT build | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) — the district already runs it | 🟢 Apache-2.0 · `10,172 B` |
+| `2` | Build against the SUCCESSOR, not the legacy platform | [`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) — committed `2026-11-16` | 🟢 Apache-2.0 · `11,357 B` |
+| `3` | The semantic layer — what a `StudentSectionAssociation` MEANS | [`Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) at ref 🔴 **`v6.2.0`** | 🟢 Apache-2.0 · `10,173 B` |
+| `4` | Rostering interop, when the client is a vendor rather than a district | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 Apache-2.0 · `10,173 B` |
+| `5` | 🟢 **The agent pattern to COPY, not to rebuild** | [`Ed-Fi-Alliance-OSS/Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona) — `llm-caller` with model validation, `search-caller`, `escalation`, `rate-limiter`, `citation-telemetry`, `idempotent-finalize`, Cosmos-backed feedback/interaction stores, `tests/agent/*` file-for-file | 🟢 Apache-2.0 · `11,357 B` |
+| `6` | The review discipline, as executable skills | [`Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC`](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC) — `13` `SKILL.md`, incl. `review-model-pr`, `initialize-ed-fi-repository` | 🟢 Apache-2.0 · `11,357 B` |
+| `7` | The early-warning half | 🟢 Inherit `P87` wholesale — its Annex III conformance argument becomes a **state-bill** argument here |
+
+🟢 **What `Fiona` hands you for free, and it is the expensive part:** `escalation` (when the agent
+must stop and fetch a human), `citation-telemetry` (proving an answer came from a source),
+`idempotent-finalize` (a Slack retry must not double-post) and `rate-limited-handler`. 🔵 **Those
+four are what separates a demo from a deployed assistant, and they are Apache-2.0 and tested.**
+
+🟢 **Build estimate: `6`–`8` weeks** for the question-answering layer against an existing ODS —
+🔵 **the saving against `P67`'s `12`–`16` is nodes `3` and `5`: the data model is published and the
+agent skeleton is readable.** 🔴 **Add `4`–`6` weeks if the client runs the legacy ODS/API rather
+than `Data-Management-Service`.**
+
+🔴 **The boundary, stated as this file always states it:** the layer ANSWERS and FLAGS; it does not
+grade, does not rank students, and does not write to the ODS. 🔵 `P87`'s reasoning transfers
+intact — and in North America it is argued from state statute rather than from Annex III.
+
+## P91 — grade a public buyer's repository for LIVENESS before you put it in a proposal, in one clone
+
+🔵 **What it produces:** a yes/no on *"is this maintained?"* that survives contact with a client,
+for any repository this base or a studio is about to recommend.
+
+🔴 **Why it exists: this base has been getting it wrong, measurably.** 🟢 `T204` reproduced the
+mechanism twice — `project-sunbird/sunbird-devops` reports `pushed_at` of `2026-03-25` and has not
+had a human commit since 🔴 **`2023-04-26`**, because an unmerged **Dependabot** branch refreshes
+the field forever. 🔵 **`393` forks, `62★`, reads as fresh, is three years dead.** 🔴 **Recommending
+it from the API field alone is a credibility event in front of a ministry.**
+
+```bash
+# p859 — liveness grade. No API, no auth, no blob download.
+slug="$1"                      # e.g. project-sunbird/sunbird-devops
+d=$(mktemp -d)
+git clone -q --filter=blob:none --no-checkout "https://github.com/$slug" "$d"
+
+# 1. the DEFAULT ref, resolved rather than guessed  (D834: it may be a tag, or eol-release/lilac)
+git -C "$d" symbolic-ref --short HEAD
+git -C "$d" log -1 --format='default-ref HEAD commit: %cI  %h'
+
+# 2. the newest commit on ANY ref, and WHICH ref it is  (T204: name the bot)
+git -C "$d" for-each-ref --sort=-committerdate \
+    --format='%(committerdate:short)  %(refname:short)' refs/remotes | head -5
+
+# 3. the grant, byte-read from the tree rather than from a guessed path
+f=$(git -C "$d" ls-tree -r --name-only HEAD \
+    | grep -iE '(^|/)(licen[cs]e|licencia|copying|unlicense)(\.(md|txt|rst))?$' | head -1)
+git -C "$d" cat-file -s "HEAD:$f"                     # exact bytes
+git -C "$d" show "HEAD:$f" | sha256sum | cut -c1-12   # payload identity
+git -C "$d" show "HEAD:$f" | grep -i copyright | head -1   # T203: the holder line
+```
+
+🟢 **How to read the output.** 🔴 **If step `2`'s newest ref is a `dependabot/*` branch and step
+`1`'s date is far older, the repository is ABANDONED and the API's freshness is a bot artefact.**
+🟢 If steps `1` and `2` agree within days, it is genuinely live — that is what all five Ed-Fi
+repositories did this pass. 🔵 **Step `3` is free once the clone exists and settles the licence in
+the same command, including the holder line that `T203` turns into provenance.**
+
+🟢 **Cost: one blobless clone per repository, seconds each, no authentication, no rate limit.**
+🔵 **It is the cheapest instrument in this file and it protects the most expensive moment in an
+engagement — the slide where a studio names the open-source base it intends to build on.**
+
 ## 🟢 Sixty-third pass (`p858`, 2026-11-16) — **`P88`–`P89`: the national-estate AI layer wired entirely from grants byte-read today, and the one-call instrument that finds a ministry's codebase before the first meeting**
 
 ## P88 — an AI layer for a state education estate, where the first architectural decision is WHERE THE LICENCE BOUNDARY FALLS (EMEA anchor; the same build serves any public buyer)

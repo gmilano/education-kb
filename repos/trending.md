@@ -4,6 +4,47 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — `p859`: `386` repositories enumerated from eight NON-European education bodies, and the window's movement is that two of the named targets are EMPTY
+
+🔴 **The movement first, because it is a retirement of a plan rather than a discovery of a
+repository.** 🟢 `p858` closed by naming five non-European targets with no search step behind them:
+**KERIS 🇰🇷, MEXT 🇯🇵, ESA 🇦🇺, Plan Ceibal 🇺🇾 first, Ed-Fi Alliance.** 🟢 **`p859` ran all five.
+Two publish nothing, two could not be located in an English-language org search, and one is the
+richest single find of the pass.**
+
+| Target named by `p858` | Result this window |
+|---|---|
+| 🇺🇸 **Ed-Fi Alliance** → `Ed-Fi-Alliance-OSS` | 🟢 **`31` repositories, `28` Apache-2.0, `5` of `5` genuinely live, and the ONLY non-European public AI layer in this base** — `Fiona` (production Slack RAG agent, `240` files) + `AI-Tools-for-Ed-Fi-SDLC` (`13` Agent Skills) |
+| 🇺🇾 **Plan Ceibal** → `Ceibal` | 🔴 **Org EXISTS · `0` public repositories** (HTTP `422` on `user:Ceibal`, a controlled oracle). The nil `T113` saw from the funder channel, confirmed from the org channel |
+| 🇰🇷 **KERIS** → `Keris` | 🔴 **WRONG ACCOUNT.** `Keris` is a private individual's ML scratch account — `creditscoring`, `yasc`, `udacity-projects`, 机器学习笔记. 🟢 The agency's real org is **`KERISdev`** — 🔴 **also `0` public repositories** |
+| 🇯🇵 **MEXT** | 🔴 **No org located.** `search/users` on `education ministry japan type:org` → `total_count=0`. 🔵 Search-limited, NOT a measured nil — `T114` makes an English-only nil suspect by construction |
+| 🇦🇺 **ESA** | 🔴 **No org located.** `cesaraustralia` is agricultural research; `CEnet` → `422` |
+
+### 🟢 The estates that DO publish — `386` repositories, `0` forks, enumerated `2026-11-16`
+
+| Org | Repos | Licence regime, as GitHub reports it | Movement this window |
+|---|---|---|---|
+| 🇺🇸 [`Ed-Fi-Alliance-OSS`](https://github.com/Ed-Fi-Alliance-OSS) | `31` | 🟢 **Apache-2.0 `28` · NONE `2` · NOASSERTION `1`** | 🟢 **Genuinely live — `Data-Management-Service` and `edfi-oneroster` both committed `2026-11-16`.** 🆕 `Fiona` and `AI-Tools-for-Ed-Fi-SDLC` are both `0★` and both pushed inside the last week |
+| 🇮🇳 [`project-sunbird`](https://github.com/project-sunbird) | `77` | 🟢 **MIT `76` of `77`** — the most uniform permissive regime in this base | 🔴 **Flagship `sunbird-devops` (`62★`, `393` forks) last HUMAN commit `2023-04-26`.** `prometheus-*` exporters frozen since `2018`–`2020` |
+| 🇮🇳 [`Sunbird-Ed`](https://github.com/Sunbird-Ed) | `58` | 🟢 **MIT `48` · Apache-2.0 `6` · NONE `4`** | 🟡 `SunbirdEd-portal` `318` forks, HEAD `2025-12-16`. 🔴 `teacher-aid-*` frozen at `2019-03` |
+| 🇮🇳 [`Sunbird-RC`](https://github.com/Sunbird-RC) | `47` | 🟢 **MIT `38` · Apache-2.0 `3` · NONE `5` · NOASSERTION `1`** | 🟢 **The live half of Sunbird — `sunbird-rc-core` HEAD `2026-09-30`.** 🟡 `open-saber` superseded, HEAD `2021-09-29` |
+| 🇨🇱 [`eol-uchile`](https://github.com/eol-uchile) | `109` | 🔴 **NONE `65` · MIT `22` · AGPL-3.0 `21` · Apache-2.0 `1`** | 🟢 **Live — `argocd-config` committed `2026-11-13`.** 🔴 **Default refs are `eol-release/lilac` and `eol-release/koa`, never `main`** |
+| 🇧🇷 [`FundacaoLemann`](https://github.com/FundacaoLemann) | `24` | 🔴 **NONE `23` of `24`** | 🔴 **Dead and ungranted.** Newest HEAD commit `2021-02-20` (`qedu-hub`, `716` files, no grant at root) |
+| 🇦🇷 [`decyt-tdf`](https://github.com/decyt-tdf) | `25` | 🔴 **NONE `18` · MIT `6` · GPL-3.0 `1`** | 🔴 **Dead.** `siep-pwa` last HUMAN commit `2019-11-04` while the API reports `2022-12-08` |
+| ❌ `Keris` | `15` | MIT `8` · NONE `7` | 🔴 **Not an education body. Enumerated and discarded in full** |
+
+🔴 **The defect this window exposes in the base's own method, and it is bigger than the window.**
+🟢 **`pushed_at` was traced to its cause and the cause is a BOT**: on both extreme cases the newest
+commit on any ref is a `dependabot/*` branch whose date matches `pushed_at` exactly, while the
+default branch is `1,064` and `1,130` days older. 🔵 **`T197` called it an organisation event;
+`T204` names the mechanism and gives the one-clone check (`P91`).**
+
+🟢 **Channel note.** `gh api search/repositories -f q="user:ORG"` is bidirectionally controlled
+(real org → `total_count`; org with no public repos → HTTP `422`), which is what made the Ceibal
+and KERISdev nils MEASUREMENTS. 🔴 `gh api users/{org}/repos` and `api.github.com/users/{org}`
+remain `403` session-scoped. 🟢 All `19` grants byte-read by treeless partial clone, sized with
+`git cat-file -s`.
+
 ## 🟢 `2026-11-16` — `p858`: `305` repositories enumerated from seven state education bodies, and the movement is that this base had shelved NONE of them
 
 🔴 **The defect first, because it is this base's own and it is larger than the window.**

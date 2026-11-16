@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-fourth pass (`p859`, 2026-11-16) — **`14` foundation rows: the non-European public buyer, and the discovery that its adoption signal is the FORK COUNT rather than the star count**
+
+🟢 **`386` repositories enumerated from `8` public education bodies in North America, APAC and
+LATAM — `0` GitHub forks among them, every grant below byte-read on `2026-11-16` by treeless
+partial clone, never from GitHub's SPDX field.**
+
+🔴 **The measurement that reframes every traction figure this base has ever published.** 🔵 A
+national education stack is adopted by being **deployed**, and a state deploys by forking.
+
+| Repo | ★ | Forks | Ratio |
+|---|---|---|---|
+| `project-sunbird/sunbird-devops` | `62` | 🟢 **`393`** | **`6.3:1`** |
+| `Sunbird-Ed/SunbirdEd-portal` | `41` | 🟢 **`318`** | **`7.8:1`** |
+| `Sunbird-RC/sunbird-rc-core` | `28` | 🟢 **`128`** | **`4.6:1`** |
+| `Sunbird-Ed/SunbirdEd-mobile-app` | `10` | 🟢 **`92`** | **`9.2:1`** |
+| `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` | `28` | `48` | `1.7:1` |
+| `eol-uchile/eol-conditional-xblock` | `2` | `3` | `1.5:1` |
+
+🔵 **`T115` told this base to stop sorting by stars on a CJK corpus. `T202` extends it to a whole
+TIER in every language: at `41★`, `SunbirdEd-portal` ranks below a weekend project, and it is the
+web portal of the platform behind India's national school content service.**
+
+| Repo | Licence, as measured | ★ / forks | Default ref · HEAD commit | Region | Why it is a foundation and not a row on another shelf |
+|---|---|---|---|---|---|
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) | 🟢 **Apache-2.0** — `10,173 B`, `sha256₁₂ a6cba85bc92e`, 🔴 **appendix-stripped variant** | `47` / `14` | 🔴 **`v6.2.0`** · `2026-11-11` | North America | 🟢 **The highest-value single row in this pass.** The US K-12 interoperability data model — the third national rostering standard this base now holds beside OneRoster and Sweden's `SS 12000`, and the only one with a live multi-vendor implementer ecosystem. 🔴 **Its default ref is a TAG, not a branch**: a probe guessing `main` publishes a false absence → `D834` earns its keep in a third region |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | 🟢 **Apache-2.0** — 🔴 **`10,172 B`**, `sha256₁₂ 59899c6091b5`, `LICENSE.txt` | `28` / `48` | `main` · `2026-11-13` | North America | 🟢 The Operational Data Store and ODS/API — the database and REST surface a US district actually runs. 🔵 **This is the integration point for any North American student-data engagement.** 🔴 Its grant differs from its three siblings' by **exactly one byte**, a trailing newline → `T203` |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation) | 🟢 **Apache-2.0** — `10,173 B`, `sha256₁₂ a6cba85bc92e`, `LICENSE.txt` | `18` / `40` | `main` · `2026-11-06` | North America | 🟢 The deployable half: end-user applications and extensions over the ODS/API. 🔵 **`40` forks against `18★` is the deployment signal — these are implementers, not admirers** |
+| [`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) | 🟢 **Apache-2.0** — `11,357 B`, `sha256₁₂ c71d239df917`, 🟢 **full payload WITH appendix** | `12` / `18` | `main` · 🟢 **`2026-11-16`** | North America | 🟢 **The SUCCESSOR platform to the ODS/API, and the row a studio should actually build against.** 🔵 **Committed the day of this pass.** 🔴 **Its grant is a different payload from the legacy repositories' — the licence bytes DATE the project** → `T203` |
+| [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **Apache-2.0** — `10,173 B`, `sha256₁₂ a6cba85bc92e` | `6` / `5` | `main` · `2026-11-13` | North America | 🟢 **The bridge between the two North American standards**: serves a OneRoster 1.2 API from an Ed-Fi ODS database. 🔵 **Standards-translation is the unglamorous centre of every district integration, and here it is Apache-2.0 and maintained** |
+| [`Sunbird-RC/sunbird-rc-core`](https://github.com/Sunbird-RC/sunbird-rc-core) | 🟢 **MIT** — `1,182 B`, `sha256₁₂ 8686530ab5c7`, 🔵 **`© 2018 International Institute of Information Technology, Bangalore`** | `28` / `128` | `main` · `2026-09-30` | APAC | 🟢 **Electronic registries and verifiable credentials — the credentialing substrate of India's national stack, and the freshest Sunbird component in this pass.** 🔵 **Its holder line is a UNIVERSITY, not the programme** — the only one of six Sunbird grants that is → `T203` |
+| [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) | 🟢 **MIT** — `1,072 B`, `sha256₁₂ 7dde06716f25`, `© 2018 Project Sunbird` | `41` / 🟢 **`318`** | `master` · 🔴 **`2025-12-16`** | APAC | 🟢 **The web portal of India's national digital education platform — `318` forks, which is state-level deployment.** 🔴 **API `pushed_at` reads `2026-02-21`; the default ref's last commit is `2025-12-16`** → `T204` |
+| [`Sunbird-Ed/SunbirdEd-mobile-app`](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) | 🟢 **MIT** — `1,078 B`, `sha256₁₂ bea3458f45df`, 🔵 **`© 2021 Sunbird for Education`** | `10` / `92` | `main` · `2025-09-19` | APAC | 🟢 The Android client, built for **offline-first** consumption — 🔵 **the single most transferable design constraint in this pass for any LATAM or MEA engagement with intermittent connectivity.** Its holder line dates the programme's rename |
+| [`Sunbird-RC/open-saber`](https://github.com/Sunbird-RC/open-saber) | 🟢 **MIT** — `1,072 B`, `sha256₁₂ 7dde06716f25`, `© 2018 Project Sunbird` | `9` / `44` | `master` · 🔴 **`2021-09-29`** | APAC | 🟡 **Shelved as PROVENANCE, not as a build target.** The registry engine `sunbird-rc-core` superseded. 🔵 **Byte-identical grant to `sunbird-devops` and `SunbirdEd-portal` across three different organisations** — holder-bearing collision, so it is evidence about the holder → `T203` |
+| [`project-sunbird/sunbird-devops`](https://github.com/project-sunbird/sunbird-devops) | 🟢 **MIT** — `1,072 B`, `sha256₁₂ 7dde06716f25`, `© 2018 Project Sunbird` | `62` / 🟢 **`393`** | `master` · 🔴 **`2023-04-26`** | APAC | 🔴 **The sharpest liveness defect this base has measured.** The most-forked repository in the whole Sunbird estate, and its API `pushed_at` of `2026-03-25` is **`1,064` days newer than its last commit on any human branch.** 🟢 **The `2026` date belongs to an unmerged Dependabot branch** → `T204`. Shelved because `393` forks means a studio WILL meet it — flagged because nobody is maintaining it |
+| [`project-sunbird/sunbird-ml-workbench`](https://github.com/project-sunbird/sunbird-ml-workbench) | 🟢 **MIT** — `1,063 B`, `sha256₁₂ 4ff07e32ea3b`, 🔵 **`© 2018 EkStep`** | `17` / `12` | `master` · 🔴 **`2020-05-05`** | APAC | 🟡 **Shelved for its HOLDER LINE, which is the archaeology.** `EkStep` is the foundation that originated Sunbird, and this is the only one of six grants naming it. 🔵 **The provenance chain reads EkStep → Project Sunbird → Sunbird for Education, and it is legible in the copyright lines alone** → `T203` |
+| [`eol-uchile/eol-conditional-xblock`](https://github.com/eol-uchile/eol-conditional-xblock) | 🔴 **AGPL-3.0** — `34,523 B`, `sha256₁₂ 8486a10c4393` | `2` / `3` | 🔴 **`eol-release/lilac`** · `2026-09-24` | LATAM | 🔴 **Shelved as a BOUNDARY MARKER, not as an asset.** An Open edX XBlock from Universidad de Chile's national online-education unit. 🔵 **Code that runs inside the Open edX process inherits AGPL-3.0; the theme beside it does not** → `T205`. 🔴 **Default ref is an Open edX named release, not `main`** |
+| [`eol-uchile/sence-xblock`](https://github.com/eol-uchile/sence-xblock) | 🔴 **AGPL-3.0** — `34,628 B`, `sha256₁₂ 856864c98178` | `1` / `0` | 🔴 **`eol-release/lilac`** · `2026-08-11` | LATAM | 🟡 **The most specific regulatory artefact in this pass.** Gates course units until the learner authenticates against **SENCE**, Chile's national training-subsidy authority. 🔵 **A state funding rule expressed as a courseware component — the shape every LATAM public-training engagement takes.** 🔴 AGPL-3.0, and `105 B` adrift from its sibling's payload |
+| [`eol-uchile/eol-uchile-theme-2020`](https://github.com/eol-uchile/eol-uchile-theme-2020) | 🟢 **MIT** — `1,097 B`, `sha256₁₂ 417032961673` | `1` / `0` | 🔴 **`eol-release/koa`** · `2026-11-05` | LATAM | 🟢 **The permissive half of the same estate, and the proof that the licence split is by COMPONENT TYPE rather than by publisher.** 🔵 **One organisation, one week, two licences: fork the theming freely, treat the XBlocks as reciprocal** → `T205` |
+
 ## 🟢 Sixty-third pass (`p858`, 2026-11-16) — **`20` foundation rows (`274` → `294`): the national education agency tier, read for sixty-one passes and SHELVED for none of them — and its licence changes at every border**
 
 🔴 **Start with the defect, because it is this base's own.** `Opetushallitus` — the Finnish National

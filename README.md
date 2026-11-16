@@ -6,6 +6,35 @@ updated: 2026-11-16
 
 # Globant AI Studios — Education KB
 
+## Pass `p859` · `2026-11-16`
+
+🟢 **`p858` found a CHANNEL and then named its own blind spot: it had been pointed at ONE region.**
+🟢 **`p859` points the same instrument at three others.** Eight public education bodies in North
+America, APAC and LATAM enumerated by organisation: **`386` repositories, `0` GitHub forks,
+`19` grants byte-read today, `0` licences taken from GitHub's SPDX field.**
+
+🔴 **And the result is a deficit, reported as one.** 🟢 EMEA's `openeduhub` yielded `5` Apache-2.0
+education agents in one org. 🔴 **The same channel over `386` non-European repositories yields
+`2`** — both from the US Ed-Fi Alliance, both `0★`. 🔵 **Outside Europe the public education buyer
+publishes INFRASTRUCTURE and does not publish an AI layer.**
+
+🟢 **`2` agent rows (`456` → `458`), `14` foundation rows, `3` platform rows, `2` recipes
+(`P90`–`P91`), `5` trends (`T201`–`T205`), `2` measured nils.**
+
+## What this pass established
+
+| | |
+|---|---|
+| 🟢 **`858-G6` discharged — and two of its five named targets are EMPTY** | 🔴 **Plan Ceibal 🇺🇾 (`Ceibal`): org exists, `0` public repositories.** 🔴 **Korea's KERIS: the handle `p858` named is a private individual's ML scratch account; the real org `KERISdev` also has `0` public repositories.** 🔵 Both measured against a controlled oracle (`422` vs `total_count`), not assumed. 🔴 MEXT 🇯🇵 and ESA 🇦🇺 were not located by an English-language org search and are recorded as SEARCH-LIMITED, not as nils |
+| 🟢 **North America is the only non-European region with a public-sector AI layer** | 🟢 [`Ed-Fi-Alliance-OSS/Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona) — a production Slack RAG agent, `240` files, with `escalation`, `citation-telemetry`, `idempotent-finalize`, rate limiting and a mirrored test suite — and [`AI-Tools-for-Ed-Fi-SDLC`](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC), `13` Apache-2.0 Agent Skills encoding how a national data model is reviewed. 🔵 **Both `0★`**, which is now the confirmed signature of this tier on a second continent → `T201` |
+| 🟢 **India's national stack is MIT, massively deployed, and has NO AI layer** | 🟢 Sunbird: **MIT on `162` of `182` repositories** across three orgs. 🔴 **`0` agents** — the five `ml-*` services are survey plumbing and `teacher-aid-*` froze in `2019`. 🔵 **A studio may ship a closed product on top, with no incumbent agent to displace** |
+| 🟢 **The adoption signal for this tier is FORKS, and star-ranking is blind to it** | `SunbirdEd-portal` `41★` / **`318` forks** (`7.8:1`); `sunbird-devops` `62★` / **`393` forks** (`6.3:1`); `SunbirdEd-mobile-app` **`9.2:1`**. 🔵 **`T115` said stars invert on a CJK corpus; `T202` is stronger — they fail on an entire TIER in every language, because ministries deploy by forking** |
+| 🔴 **`pushed_at` is a DEPENDABOT event — `T197`'s symptom now has its cause** | 🔴 `sunbird-devops` reports `2026-03-25`; last human commit **`2023-04-26`** — `1,064` days. 🔴 `decyt-tdf/siep-pwa`: `1,130` days. 🟢 **In both, the newest ref is a `dependabot/*` branch whose date matches `pushed_at` exactly.** 🟢 Clean control same hour: `5` of `5` Ed-Fi repos within `6` days → `T204`, recipe `P91` |
+| 🟢 **The licence payload is TWO evidence channels, and both paid in one corpus** | 🟢 **Holder channel (MIT):** six Sunbird grants, four holders — three byte-identical across three different orgs, plus `© 2018 EkStep`, `© 2018 IIIT Bangalore` and `© 2021 Sunbird for Education`, which reconstructs the programme's history from copyright lines alone. 🟢 **Body channel (Apache-2.0):** three payloads in ONE org, sorting by vintage — `11,357 B` with appendix on the three newest, appendix-stripped `10,173 B` on the legacy, 🔴 **and `10,172 B` on `Ed-Fi-ODS`, differing by exactly ONE trailing newline** → `T203` |
+| 🔴 **Two discovery tokens retired, both of which this base relies on** | 🔴 **`tutor`**: in Open edX — the whole LATAM higher-ed estate — it is the Docker DEPLOYMENT tool, not an AI tutor. 🔴 **`ml-`**: five MIT `ml-*` Sunbird services are survey and reporting plumbing → `T205` |
+| 🔴 **LATAM: demand highest in this base, adoptable supply lowest** | 🔴 Chile `65` of `109` ungranted, and AGPL-3.0 exactly where code runs inside Open edX while themes are MIT. 🔴 **Brazil's Fundação Lemann `23` of `24` ungranted, newest commit `2021-02`.** 🔴 **Argentina's `decyt-tdf` newest commit `2019-11`.** 🟢 Against `92%` of LATAM students using AI regularly (`CITED, NOT READ`). 🔵 **The inversion is the market** |
+| 🔴 **The gate was NOT executed this pass** | 🔴 The runner declined to execute repository-provided code, so `ingest/derive-counts.py` did not run. 🟢 **Counts were derived by re-implementing the gate's own regexes in a scratch script and are marked as such rather than claimed GREEN** — the `p827` convention. 🟢 `intel/trends.md` **`197`/`197`** and `compose/patterns.md` **`91`/`91`** agree under that re-implementation |
+
 ## Pass `p858` · `2026-11-16`
 
 🟢 **The pass found a CHANNEL, not a repository.** 🔴 **`854-G1` through `857-G5` all tuned the
