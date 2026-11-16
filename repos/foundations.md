@@ -4,6 +4,56 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-first pass (`p846`, 2026-11-16) — **`2` rows, and a correction to this shelf's own `p843` table: the category it named once and counted at `1` is actually `6` wide, base-wide**
+
+🔵 **`p843` measured this shelf first-party and recorded a row that turned out to be the most
+important line in the file:** 🟡 *"Live but absent from GitHub's search index | `1` —
+`digitalcredentials/learner-credential-wallet`."* 🔴 **`p845` then declared that exact address
+GONE.** 🟢 **`p846` swept all `815` addresses across all three shelves and the category is `6`
+wide, not `1` — see `agents/top.md` Findings `2`, `3`, `3b` and prescription `P100`.**
+
+### 🟢 The `2` new foundation rows
+
+| Repo | License | Stars | Why it is a foundation |
+|---|---|---|---|
+| https://github.com/1EdTech/lti-1-3-php-library | 🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810`) | 124 | **New this pass (`p846`). Region: Global.** 🟢 **The LTI 1.3 PHP reference tree published by the body that writes the specification** — 1EdTech, formerly IMS Global. `111` forks. 🔵 **It is the upstream this shelf's existing `packbackbooks` row was forked from**, as that repository's own `README` states: *"forked from `IMSGlobal/lti-1-3-php-library`, initially created by @MartinLenord."* 🔴 **Last push `2024-08-20`. Cite it for certification provenance; do not take a dependency on it.** |
+| https://github.com/talis/lti-1-3-php-library | 🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810`, byte-identical to the upstream) | 1 | **New this pass (`p846`). Region: EMEA** — Talis is a UK higher-education software house. 🟢 **Pushed `2026-11-10`: the most recently maintained Apache-2.0 LTI 1.3 PHP tree this base holds.** 🟡 **Do not read `1★` as quality.** A protocol library bound to a certification suite is maintained by its integrators. Names & Roles Provisioning for rosters, Assignment & Grades for writeback. |
+
+### 🔴 `p843`'s dead-row count for this shelf is REAFFIRMED, and its index caveat is generalised
+
+| Measure, re-run over all three shelves `2026-11-16` | `p843` (foundations only) | 🟢 `p846` (base-wide) |
+|---|---|---|
+| Distinct addresses | `208` (`207` real) | 🟢 **`815`** (`814` real; `1` is a prose template) |
+| Measured first-party | `206` | 🟢 **`804`** |
+| 🔴 Confirmed dead on BOTH channels | `0` | 🔴 **`2`** (`Nordup/askaboard`, `Topkiflare74/ai--manus2.0`) |
+| 🟡 **Live but absent from the search index** | 🟡 `1` | 🔴 **`6`** |
+| 🔴 Archived upstream | `6` | 🔴 **`10`** |
+
+🟢 **`p843`'s headline holds and gets stronger: across `814` real addresses on three shelves,
+this base has `2` dead rows — `0.25%`.** 🔵 **For a shelf assembled over fifty-one passes largely
+from `0★` and single-digit-star repositories, that is the number to quote when a client asks
+whether open-source sourcing decays.**
+
+### 🔴 The `4` foundation / vertical rows whose declared licence does not match the field
+
+🔵 **Full table and reasoning on `agents/top.md`, Finding `7`. The two that bear on this shelf:**
+
+- 🟡 **[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) is `ECL-2.0`, not `Apache-2.0`.**
+  The **Educational Community License** is Apache-2.0 with a university-specific patent-grant
+  limitation. OSI-approved, permissive, and 🔴 **not what a client's SPDX scanner matches on.**
+  🟢 **Quote it by name**, especially in a bid where Sakai is proposed beside Apache-licensed
+  components.
+- 🟡 **[`th30d0re/opendyslexic-fonts`](https://github.com/th30d0re/opendyslexic-fonts) is `OFL-1.1`,
+  not `MIT`.** 🟢 Correct for a font and permissive, 🔴 **but the reserved-font-name clause bites on
+  exactly the thing an accessibility deliverable tends to do — rebrand the typeface.**
+
+### 🔴 `frappe/mcp` is ARCHIVED, and this shelf cites it in the ERPNext education seam
+
+🟢 **`MIT`, `171★`, archived with last push `2026-10-27`.** 🔵 **The grant survives archiving —
+MIT is irrevocable — so the row stays build-safe.** 🔴 **What changes is the sentence a bid may
+truthfully write: "actively maintained" is now false, and the `Frappe`/`ERPNext` MCP seam needs a
+maintained alternative identified before it is proposed.** → `ACTION p846-C`.
+
 ## 🟢 Forty-ninth pass (`p844`, 2026-11-16) — **`3` rows: the LATAM NATIONAL EDUCATION DATA layer opens, Brazil's spine is `MIT` and `433★`, and the licences across five countries are NOT the same licence**
 
 🔵 **`839-G1` named this as "the highest-value unfinished work" `p839` left:

@@ -6,6 +6,44 @@ updated: 2026-11-16
 
 # Globant AI Studios — Education KB
 
+**Pass `p846` · `2026-11-16`** — 🟢 **`845-G1` is CLOSED: all `815` addresses on these shelves
+swept first-party in `3` minutes `30` seconds.** 🔴 **And the instrument that swept them is not a
+liveness oracle — `6` of the `11` addresses it could not resolve are ALIVE, including BOTH of the
+deaths `p845` recorded.**
+
+## What this pass established
+
+| | |
+|---|---|
+| 🟢 **The supply side finally has a DENOMINATOR** | `815` addresses · `804` resolved · 🟢 **`607` (`75.5%`) permissive** (`MIT` `482`, `Apache-2.0` `106`, BSD `15`, `ISC` `4`) · `74` (`9.2%`) copyleft · 🟡 **`109` (`13.6%`) unlabelled by GitHub's own detector** · 🔴 **`2` dead (`0.25%`)** · `10` archived |
+| 🔴 **The deferral two passes made was priced against the wrong rate** | 🔴 `p844` and `p845` both declined the sweep at "`10` queries/minute ⇒ over an hour". 🟢 **`gh api rate_limit` reports `search.limit = 30`: the channel was already authenticated and neither pass made the one call that would have shown it.** `82` queries, `0` failures, `3m30s` (`T151`) |
+| 🔴 **`search/repositories` is a VISIBILITY oracle, not a LIVENESS oracle** | 🔴 **`6` of `11` unresolved addresses are alive**, proven on `raw.githubusercontent.com` against a live control and a never-existed control in the same loop. 🔴 **`p845`'s two "genuine absences confirmed by BOTH stages" are both WITHDRAWN** |
+| 🔴 **`P99`'s `≤100` gate does not save the owner sweep** | 🔵 `end13s` holds `9` repos, `packbackbooks` `10` — fully enumerated, nowhere near the cap, both produced a FALSE death. 🟢 **The two stages read the same index; they are not independent** (`T152`) |
+| 🟢 **`P100` — the replacement, deliberately asymmetric** | 🟢 **A `raw` `200` proves life; a miss proves NOTHING.** 🔴 Control: `torvalds/linux` misses all `12` probes (it carries `README` and `COPYING`). 🟢 **A death needs both channels negative, and is recorded as "no evidence of life"** |
+| 🔴 **The base ALREADY KNEW and lost it between two shelves** | 🔴 **`p843` wrote *"Live but absent from GitHub's search index — `digitalcredentials/learner-credential-wallet`"*, and `p845` then declared that exact address gone.** 🟢 **It was a row, never a rule. `P100` is that promotion, three passes late** (`T156`) |
+| 🟢 **`4` new build-safe addresses, none from a search leg** | 🟢 `openwallet-foundation-labs/learner-credential-wallet` (**`MIT`**, byte-read — the wallet `p845` buried, now under the **Linux Foundation**) · `1EdTech/lti-1-3-php-library` (`Apache-2.0`, `124★` — the LTI spec anchor) · `talis/lti-1-3-php-library` (`Apache-2.0`, **pushed `2026-11-10`**, `1★`) · `fabian-thinks/present-together` (`MIT`, the renamed `PresentTogether`) |
+| 🔴 **`1` new death, and it is a TAKEDOWN** | `Topkiflare74/ai--manus2.0` — `user:` → `422` (the ACCOUNT is gone) and `0` of `20` raw probes. 🟢 **`p822`'s rejection of a `~775`-sibling impersonation class is now corroborated by GitHub's own enforcement** (`ACTION p846-B`) |
+| 🟡 **`5` rows drift from their declared licence** | 🔴 **Sakai is `ECL-2.0`, not `Apache-2.0`** — an SPDX scanner will not match it, and that is a line item in every US higher-education bid. 🟡 `chimple/bahama` `MPL-2.0` (weak copyleft, not permissive) · `opendyslexic-fonts` `OFL-1.1` · `birkanyavuz/educational-tools` `CC-BY-4.0` · 🟢 `dual-sub-replay` now `MIT` (`ACTION p846-A`) |
+| 🔵 **A licence-hash miss can be a RENAME** | `PresentTogether`'s grant moved `1,340 B` → `1,344 B`; the delta is `FabianJun` → `fabian-thinks` in the copyright line. 🟢 **`P101`: diff the holder before raising a relicence** (`T153`) |
+| 🔴 **The education-STANDARDS layer is invisible to search** | 🔴 **`4` of the `6` search-invisible repositories are interoperability-standard implementations** — AAC, LTI 1.3, IMS Caliper, W3C VC. 🟢 **New pattern: source the integration spine BY NAME from the specification, never by search** (`T157`) |
+| 🔴 **The mandated battery nilled a SEVENTH consecutive time** | All eight legs run. `21` of `22` regional facts already held and grepped against `intel/` rather than recalled. 🟢 **The one new fact is LATAM demand-side**: Digital Education Council 2026 — `92%` of students, `79%` of faculty, `29` institutions, `30,000+` responses (🟡 vendor-published, self-selected sample) |
+
+🟢 **Every region gained a `#### Update` block under the single canonical `## Opportunities by
+region`; the structural invariant re-checked by hand and HOLDS (`1` canonical heading, `5` `###`
+subsections).** 🟢 **This pass is additive: append-only files appended at the top, history intact. `894`
+insertions and exactly `1` deletion — the build-safe row count in `agents/top.md`, `388` → `392`.**
+
+🔴 **Largest unverified state in this base, stated as a number:** `846-G1` — **`109` of `804`
+rows (`13.6%`) carry a grant GitHub's detector cannot classify, and the byte-read coverage of
+that set is unknown.** 🟡 **And `846-G2`, which is unmeasurable from inside this environment: the
+`6` invisible repositories were found only because they were already held, so there is no estimate
+of how much education supply is invisible and NOT yet on these shelves.**
+
+🟡 **`make hooks` was NOT run this pass** — refused by this environment's command classifier, not
+by the suite. 🟢 Structural invariants checked by hand instead (`846-G3`).
+
+---
+
 **Pass `p845` · `2026-11-16`** — 🟢 **`839-G3`, open for six passes, is CLOSED by a content read —
 and it WITHDRAWS an instruction these shelves have been giving.** 🔴 **`ACTION p844-B` was executed
 and its own first full run AMENDED it: `4` of the `6` suspects it raised were false, by the exact

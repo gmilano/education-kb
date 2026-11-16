@@ -4,6 +4,85 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 `2026-11-16` — fifty-first pass (`p846`): **the vertical leg nilled an eighth time, and the pass instead CORRECTED two platform licences this shelf has been quoting wrong**
+
+🟢 **The mandated vertical-platform leg was run globally and returned seven named platforms. All
+seven are already on this shelf, checked against the file:**
+
+| Platform returned by the leg | Licence as the leg reported it | Held here |
+|---|---|---|
+| Open edX | `AGPL-3.0` | 🟢 Yes |
+| Sakai | `Apache-2.0` | 🟢 Yes — 🔴 **and the licence is WRONG, see below** |
+| Moodle | `GPL-3.0` | 🟢 Yes |
+| OpenEduCat | `LGPL-3.0` | 🟢 Yes |
+| ILIAS | `GPL-3.0` | 🟢 Yes |
+| Chamilo | `GPL-3.0` | 🟢 Yes |
+| Canvas LMS | `AGPL-3.0` | 🟢 Yes |
+
+🔴 **The leg also reproduced, for an eighth consecutive pass, the standing structural fact: there
+is NO MIT-, Apache- or BSD-licensed integrated education ERP/SIS.** 🟢 **Sakai is the only
+permissive LMS of real scale returned, and this pass establishes that it is not Apache-2.0
+either.** 🔵 **An informed nil on new platforms; the yield went to the licence field.**
+
+### 🔴 Correction 1 — Sakai is `ECL-2.0`, not `Apache-2.0`, and a client scanner will not treat them as the same
+
+| | This shelf said | 🟢 GitHub reports `2026-11-16` |
+|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `Apache-2.0` | 🟡 **`ECL-2.0`** · `1,238★` |
+
+🔵 **`ECL-2.0` is the Educational Community License: Apache-2.0 with a narrowed patent grant
+scoped to the contributor's own institutional contribution rather than the whole work.** 🟢 **It
+is OSI-approved and permissive, so nothing on this shelf becomes unusable.** 🔴 **What changes is
+the bid**: an SPDX scanner matching `Apache-2.0` will flag `ECL-2.0` as an unrecognised licence,
+and a client whose policy enumerates permitted licences by name will have to add it.
+🟢 **Quote `ECL-2.0` explicitly wherever Sakai is proposed, and say why it exists — it is a
+university-sector licence and that is a selling point in a higher-education bid, not a defect.**
+
+### 🟡 Correction 2 — `chimple/bahama` is `MPL-2.0`, not `Apache-2.0` — permissive → weak copyleft
+
+🔴 **The difference is operational, not theoretical. MPL-2.0 is FILE-LEVEL copyleft: a modified
+source file must be published, while the larger proprietary work around it need not be.**
+🟢 **Still shippable inside a client product — but the modified files go back out, and a team that
+believed it held Apache-2.0 will not have planned for that.** 🔵 Chimple's early-literacy tree is
+exactly the kind of asset a LATAM or African foundation-phase engagement forks heavily.
+🔴 **Sibling note from the same sweep: [`chimple/jamaica`](https://github.com/chimple/jamaica) is
+`Apache-2.0` and ARCHIVED since `2019-05-20`.**
+
+### 🟢 Correction 3 — `AsTeRICS Grid` is ALIVE, and this shelf's own caveat predicted the mechanism
+
+🔵 **The row already carried an unusual admission:** 🔴 *"Star count deliberately left as `not
+retrieved` rather than guessed: the free-text search channel does not return this repository at
+all, although its `LICENSE` byte-reads `200`."*
+
+🟢 **`p846` confirms the row was right and names the mechanism.** `repo:asterics/AsTeRICS-Grid`
+returns `422`; the owner `asterics` enumerates fully at `51` of `51` repositories and the name is
+absent; and `raw.githubusercontent.com` serves `LICENSE` (`34,523 B`) and `README.md`
+(`10,862 B`) on `master`. 🔴 **Under `p844`'s and `p845`'s rules this row would have been killed
+this pass. Under `P100` it stands.**
+
+🟢 **The row's name-integrity warning also survives intact and is now better evidenced:**
+`astericsfree/AsTeRICS-Grid` serves the SAME `34,523 B` `AGPL-3.0` blob but a DIFFERENT `README`
+(`10,494 B` against `10,862 B`), pushed `2026-09-25`. 🔵 **Same licence, divergent content — a
+copy, not a redirect.** 🔴 **For an AAC deliverable, cite `asterics/` and treat `astericsfree/` as
+an unverified mirror.** 🟢 The permissive way in is unchanged: `fjrodl/astericsgrid_ros`
+(`Apache-2.0`).
+
+### 🟢 Correction 4 — the LTI 1.3 PHP row gains its upstream and its maintained fork
+
+🔵 **`packbackbooks/lti-1-3-php-library` is ALIVE** (search-invisible; `README.md` `3,397 B` on
+`master`). 🟢 **Two addresses are added beside it rather than replacing it**, because for an LMS
+integration the three play different roles:
+
+| Address | Licence | Pushed | Role in a PHP LMS engagement |
+|---|---|---|---|
+| https://github.com/1EdTech/lti-1-3-php-library | 🟢 `Apache-2.0` (`944c6521f810`) | `2024-08-20` | 🟢 **Certification provenance.** The body that writes LTI 1.3 publishes it; `111` forks. |
+| https://github.com/packbackbooks/lti-1-3-php-library | 🟢 `Apache-2.0` | 🟡 de-indexed | 🟢 **The PHP-FIG-compliant rewrite**, and the tree this shelf has always cited. 🔵 **Composer package is `packbackbooks/lti-1p3-tool` — the package name is NOT the repository name**, which matters when a dependency audit tries to map one to the other. |
+| https://github.com/talis/lti-1-3-php-library | 🟢 `Apache-2.0` (byte-identical) | 🟢 **`2026-11-10`** | 🟢 **Current maintenance.** A UK higher-education software house, `1★`, pushed six days ago. |
+
+🔴 **Why this matters for Moodle and Chamilo clients specifically:** both are PHP, both speak LTI
+1.3, and the tool-provider side is where a Globant deliverable usually sits. 🟢 **Pin `talis`,
+cite `1EdTech` in the compliance annex, and read `packbackbooks` for the implementation.**
+
 ## 🟡 `2026-11-16` — fiftieth pass (`p845`): **vertical-platform leg run and NILLED, with the denominator stated**
 
 🟢 **The mandated vertical leg was run globally and returned four named platforms. All four are

@@ -4,6 +4,120 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-first pass (`p846`, 2026-11-16) — `7` trends (`T151`–`T157`)
+
+## `T151` — the deferral was priced against the wrong rate: the sweep two passes declined as "an hour" is a three-and-a-half-minute run (fifty-first pass, `p846`, Global)
+
+🔴 **`p844` and `p845` both bounded their sweeps and both gave the same reason: the GitHub search
+API allows `10` queries a minute unauthenticated, which prices `817` addresses above an hour.**
+🟢 **Neither pass measured the rate. `gh api rate_limit` reports `search.limit = 30` in this
+environment, because the session's `gh` is authenticated.**
+
+🟢 **Measured, not estimated:** `815` addresses, `10` `repo:` qualifiers per query, `82` queries,
+`2.2 s` inter-query delay — **`3` minutes `30` seconds, `0` batch failures, `804` resolved.**
+
+🔵 **The generalisable lesson is not about GitHub.** 🔴 **Two consecutive passes recorded a cost
+estimate as if it were a measurement, carried it into a formal gap (`845-G1`), and used it to
+justify not doing the work — when the cost of CHECKING the estimate was one API call.**
+🟢 **Prescription: when a cost estimate is about to justify deferring work, measure the rate that
+estimate depends on first. One call beat two passes of deferral.**
+
+## `T152` — an owner sweep cannot reach "deleted": `P99`'s page-cap gate is correct and insufficient (fifty-first pass, `p846`, Global)
+
+🔴 **`p844`'s rule: *"Only an owner sweep that comes back without it is a death."* `p845` refined
+it with `P99`: raise a suspect only when the owner's `total_count ≤ 100`, because above that the
+enumeration is page-capped.** 🟢 **Both are now refuted by measurement.**
+
+🔵 **`end13s` holds `9` repositories. `packbackbooks` holds `10`. `digitalcredentials` and
+`tl-its-umich-edu` hold `92` each. All four enumerate fully, all four clear `P99`'s gate by a wide
+margin, and all four produced a FALSE death** — each repository proven alive on
+`raw.githubusercontent.com` the same day.
+
+🟢 **The reason is structural: a repository absent from the owner enumeration is absent from the
+same INDEX that the `repo:` qualifier reads. The two stages are not independent; they are one
+channel asked twice.** 🔴 **A two-stage test built from one channel measures that channel's
+coverage, not the world.** 🔵 **This is `P98`'s calibration requirement applied to independence
+rather than to discrimination, and it is the stronger form.**
+
+## `T153` — a licence-hash miss can be a RENAME: the pin fires on the copyright line (fifty-first pass, `p846`, Global)
+
+🟡 **`p824` pinned `PresentTogether`'s grant at `1,340 B` / `sha256₁₂ fe728274`. On `2026-11-16`
+the same file reads `1,344 B` / `sha256₁₂ 4f78693ecfd8`.** 🔴 **A pin-check raises a relicence.**
+🟢 **The delta is `4` bytes: holder `FabianJun` → `fabian-thinks`. The owner renamed; the grant is
+identical.**
+
+🟢 **`P101`: on a hash miss, diff the holder line before raising a relicence.**
+🔵 **And the same mechanism inverts into a cheap rename DETECTOR, which is the more valuable
+half** — the old and new addresses serve the byte-identical blob, and the old `README`'s CI badges
+already point at the new owner. 🟢 **Content identity across two addresses is a rename; the badge
+URL names the survivor.**
+
+## `T154` — ARCHIVED is a field this base never read, and `10` rows carry it (fifty-first pass, `p846`, Global)
+
+🟢 **`p843` measured staleness (no push in six months) and could not see `archived`. The full
+sweep returns it: `10` of `804` rows are archived — the owner has declared them read-only.**
+
+🔴 **The one a client would feel is [`frappe/mcp`](https://github.com/frappe/mcp)** — `MIT`,
+`171★`, archived with last push `2026-10-27`, and cited by this base in the Frappe/ERPNext
+education seam. 🟢 **The grant survives archiving; MIT is irrevocable.** 🔴 **What does not
+survive is the sentence "actively maintained", which is what a client hears when a row is silent
+about it.** 🔵 **Archived and stale are different claims and a row must carry the stronger one.**
+
+## `T155` — a batched existence sweep hides its own misses: the third absence signature is SILENCE (fifty-first pass, `p846`, Global)
+
+🟢 **`p845` recorded two absence signatures: HTTP `422`, and HTTP `200` with `total_count=0`.**
+🔴 **Batched, there is a third.** A query carrying `10` `repo:` qualifiers of which one does not
+resolve returns **`200` with the other nine** — no error, no warning, no count mismatch surfaced
+by the tool. 🔵 **Across `82` batches this pass recorded `0` failures while `11` addresses went
+unanswered.**
+
+🟢 **Prescription: a batched sweep must reconcile the REQUEST list against the RESPONSE list by
+name, and treat the difference as the finding.** 🔴 **A sweep that trusts its exit codes reports
+`100%` success and `0` coverage gaps while silently dropping rows.**
+
+## `T156` — the base already knew, and lost it between two shelves two passes apart (fifty-first pass, `p846`, Global)
+
+🔴 **`p843` wrote, in a table still on `repos/foundations.md`:** 🟡 *"Live but absent from GitHub's
+search index | `1` — `digitalcredentials/learner-credential-wallet`."*
+🔴 **`p845` declared that same address GONE, "confirmed by BOTH stages", and filed it in
+`intel/open-gaps.md` as a genuine absence.**
+
+🟢 **`p843` was right. The evidence that would have stopped `p845` was already in this
+repository.** 🔵 **The failure is not measurement. `p843` saw the category, named it precisely,
+counted it at `1` — and left it as a ROW rather than promoting it to a RULE. A row is read by
+whoever is editing that file; a rule is inherited by every pass.**
+
+🟢 **Prescription, and it governs this base's own process rather than its subject matter: when a
+pass observes a NEW FAILURE MODE of an instrument — not a new fact about the world — it must be
+written as a prescription in the instrument's own terms, not only as a cell in the table where it
+happened to be noticed.** 🔵 **`P100` is that promotion, three passes late.**
+
+## `T157` — the education-STANDARDS layer is systematically invisible to star- and index-driven discovery (fifty-first pass, `p846`, Global)
+
+🟢 **`6` repositories on these shelves resolve on `raw.githubusercontent.com` and resolve on NO
+discovery instrument** — not `search/repositories`, not `user:OWNER` enumeration, not topic pages,
+not trending:
+
+`asterics/AsTeRICS-Grid` · `packbackbooks/lti-1-3-php-library` ·
+`digitalcredentials/learner-credential-wallet` · `tl-its-umich-edu/caliper-php-public` ·
+`end13s/AI-Grading-Tool` · `FabianJun/PresentTogether` (renamed)
+
+🔴 **Four of the six are interoperability-standard implementations: AAC (AsTeRICS Grid), LTI 1.3
+(PHP library), IMS Caliper (PHP sensor), W3C Verifiable Credentials / Open Badges 3.0 (learner
+wallet).** 🔵 **This base cannot measure WHY and declines to theorise.**
+
+🟢 **The operational consequence is measurable and is what matters:** a sourcing process built on
+GitHub search, GitHub topics or star rankings will systematically miss the layer that makes an
+education deliverable interoperable. 🔴 **And the pattern compounds with a second measured one** —
+`talis/lti-1-3-php-library` is the most recently maintained Apache-2.0 LTI tree on these shelves
+at `1★`, and `1EdTech/lti-1-3-php-library` is the spec anchor at `124★` with its last push in
+`2024`. 🔵 **Neither star count carries information about a certification-bound protocol library.**
+
+🟢 **Prescription: reach the standards layer BY NAME, from the specification and from the
+standards body's own organisation account — never by search.** 🔵 **This is a sourcing method, and
+it is now the method of record for any LTI, Caliper, xAPI, OneRoster, Open Badges or AAC
+component.**
+
 ## 🟢 `2026-11-16` — fiftieth pass (`p845`): **the workforce-curriculum supply is deeper than any discovery instrument reports, and the gap is structural rather than accidental**
 
 🔵 **This pass added no new trend from the news legs — the industry-trends leg returned agentic

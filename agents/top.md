@@ -4,6 +4,208 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Fifty-first pass (`p846`, 2026-11-16) — **the whole shelf swept at last (`815` addresses, `3.5` minutes), and the instrument that swept it is NOT a liveness oracle: `6` of the `11` addresses it could not resolve are ALIVE, including BOTH of `p845`'s "genuine absences"**
+
+🟢 **`ACTION p845-A` is CARRIED and `845-G1` is CLOSED.** 🔵 **The search channel in this
+environment is already authenticated: `gh api rate_limit` reports `search.limit = 30` per minute,
+not the `10` that `p844` and `p845` priced their deferrals against.** 🟢 **At `30`/min, batched `10`
+`repo:` qualifiers to a query, the full shelf is `82` queries. Measured wall-clock: `3` minutes
+`30` seconds, `0` batch failures.** 🔴 **The hour of work that two consecutive passes declined to do
+was a three-and-a-half-minute run.** → `T151`.
+
+### 🟢 Finding 1 — the whole shelf, measured first-party for the first time
+
+| | |
+|---|---|
+| Distinct `github.com/OWNER/REPO` addresses extracted from `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` | `815` |
+| 🔵 Of which a prose TEMPLATE, not an address (`OWNER/REPO`, from `p845`'s own `Finding 1` table) | `1` |
+| Resolved by `search/repositories` with licence, stars, forks, `pushed_at`, `archived`, `fork` | 🟢 **`804`** |
+| Not resolved | `11` |
+| Batch failures | 🟢 `0` |
+
+🟢 **The number this base has never been able to state, now measured rather than asserted —
+`607` of `804` resolved addresses (`75.5%`) carry `MIT`, `Apache-2.0`, `BSD-3-Clause`,
+`BSD-2-Clause` or `ISC`:**
+
+| Licence (first-party, `2026-11-16`) | Rows | | Licence | Rows |
+|---|---|---|---|---|
+| 🟢 `MIT` | `482` | | 🔴 `GPL-3.0` | `35` |
+| 🟢 `Apache-2.0` | `106` | | 🔴 `AGPL-3.0` | `27` |
+| 🟢 `BSD-3-Clause` | `11` | | 🔴 `GPL-2.0` | `8` |
+| 🟢 `BSD-2-Clause` | `4` | | 🔴 `LGPL-3.0` / `LGPL-2.1` | `3` / `1` |
+| 🟢 `ISC` | `4` | | 🟡 `MPL-2.0` (weak copyleft) | `4` |
+| 🟡 `NULL` (no licence file) | `63` | | 🟡 `ECL-2.0` | `2` |
+| 🟡 `NOASSERTION` (file present, undetected) | `46` | | 🟡 `CC0-1.0` | `2` |
+| 🟡 single rows | `WTFPL`, `CC-BY-4.0`, `EUPL-1.2`, `OFL-1.1`, `ODbL-1.0`, `MulanPSL-2.0` | | | |
+
+🔵 **`109` rows (`13.6%`) are unlabelled by GitHub's own detector — `NULL` or `NOASSERTION`.**
+🟢 **That is the measured size of the gap this base's byte-read method exists to fill**, and it is
+the first time the gap has had a denominator.
+
+### 🔴 Finding 2 — `search/repositories` is a VISIBILITY oracle, not a LIVENESS oracle
+
+🔵 **`P98` (`p845`) requires a liveness channel to be calibrated against known states before a
+sweep is built on it. `p845` applied that test to `github.com` HTML and rejected it. `p846` applied
+the same test to the channel `p845` KEPT — and it fails a weaker form of the same test.**
+
+🟢 **All `11` unresolved addresses were re-probed on `raw.githubusercontent.com`, with two controls
+run in the SAME loop:** 🟢 `HKUDS/DeepTutor` (known live) → `LICENSE` `11,408 B` + `README.md`
+`93,104 B`, and 🔴 `zzz-never-existed-p846/zzz-nope` (never existed) → no `200` on any probe.
+
+| Address | `search/repositories` | Owner sweep | `raw.githubusercontent.com` | Verdict `2026-11-16` |
+|---|---|---|---|---|
+| [`asterics/AsTeRICS-Grid`](https://github.com/asterics/AsTeRICS-Grid) | 🔴 `422` | 🔴 absent from `51` of `51` | 🟢 `LICENSE` `34,523 B`, `README.md` `10,862 B` (`master`) | 🟢 **ALIVE — de-indexed** |
+| [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | 🔴 `total_count=0` | 🔴 absent from `10` of `10` | 🟢 `README.md` `3,397 B` (`master`) | 🟢 **ALIVE — de-indexed** |
+| [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) | 🔴 `422` | 🔴 absent from `92` of `92` | 🟢 `README.md` + `LICENSE` + `package.json`, BOTH branches | 🔴 **ALIVE — `p845`'s death WITHDRAWN** |
+| [`tl-its-umich-edu/caliper-php-public`](https://github.com/tl-its-umich-edu/caliper-php-public) | 🔴 `total_count=0` | 🔴 absent from `92` of `92` | 🟢 `README.md` + `LICENSE` + `composer.json` (`master`) | 🔴 **ALIVE — `p845`'s death WITHDRAWN** |
+| [`end13s/AI-Grading-Tool`](https://github.com/end13s/AI-Grading-Tool) | 🔴 `total_count=0` | 🔴 absent from `9` of `9` | 🟢 `README.md` `5,509 B`, both branches | 🟢 **ALIVE — de-indexed** |
+| [`FabianJun/PresentTogether`](https://github.com/FabianJun/PresentTogether) | 🔴 `422` | 🔴 `user:FabianJun` → `422` | 🟢 `LICENSE` `1,344 B` + `README.md` `12,022 B` | 🟢 **ALIVE — RENAMED**, see Finding 4 |
+| `Topkiflare74/ai--manus2.0` | 🔴 `total_count=0` | 🔴 `user:Topkiflare74` → `422` | 🔴 **`0` of `20` probes** | 🔴 **GONE** — the only new death |
+| `Nordup/askaboard` | 🔴 `422` | 🔴 `p844` | 🔴 **`0` of `12` probes** | 🔴 **GONE — `p844` CORROBORATED** |
+| `Bhuvantejakomera/Agentic-Assignment-Evaluator` **+ trailing stop** | 🟢 `1` · `MIT` · `0★` · `2026-11-10` | — | 🟢 `README.md` + `LICENSE` | 🟢 **ALIVE — `T146` again** |
+| `bhuvantejakomera/agentic-assignment-evaluator` (lowercase, in prose) | 🔴 `422` | — | 🔴 none | 🔵 **not an address — a prose variant of the row above** |
+| `OWNER/REPO` | 🔴 `422` | — | — | 🔵 **not an address — `p845`'s own template, caught by this base's extractor** |
+
+🔴 **`6` of the `11` are alive. The channel's false-negative rate on this shelf is `6` in `815`
+(`0.74%`) — small as a fraction and catastrophic as a verdict, because every one of those six was
+eligible to be written off as dead.**
+
+### 🔴 Finding 3 — `P99`'s `≤100` owner gate does NOT save the method, and `P95` stage `2` is withdrawn as a death test
+
+🟢 **`p845` added `P99`: an owner sweep may raise a suspect only when that owner's `total_count ≤ 100`,
+because above `100` the enumeration is page-capped.** 🔴 **The gate is correct and insufficient.**
+
+🔵 **`end13s` holds `9` repositories. `packbackbooks` holds `10`. `digitalcredentials` and
+`tl-its-umich-edu` hold `92` each. All four are FULLY enumerated, none is anywhere near the cap,
+all four passed `P99` cleanly — and all four produced a FALSE death.** 🟢 **The repositories are
+absent from the owner enumeration for the same reason they are absent from the `repo:` query: they
+are absent from the INDEX, not from GitHub.**
+
+🔴 **`p844`'s rule — *"Only an owner sweep that comes back without it is a death"* — is
+WITHDRAWN.** 🔵 An owner sweep discriminates *mistyped address* from *not indexed*. It does not
+reach *deleted*. → `T152`.
+
+🟢 **`P100` — the replacement, and it is deliberately asymmetric:**
+
+> 🟢 **`raw.githubusercontent.com` is a POSITIVE-ONLY oracle. A `200` on any probed path is
+> conclusive proof of life. A miss is NO information.** 🔴 **Control, run in the same loop:
+> `torvalds/linux` — unambiguously alive — returns NO `200` on any of `12` probes, because it
+> carries `README` and `COPYING`, not `README.md` and `LICENSE`.**
+> 🟢 **A death may be declared only when BOTH channels are negative, and it is then recorded as
+> *no evidence of life*, never as proof of deletion.**
+
+🔵 **Under `P100` this base has exactly `2` supportable deaths in its entire history —
+`Nordup/askaboard` and `Topkiflare74/ai--manus2.0` — and both are negative on both channels.**
+
+### 🔴 Finding 3b — this base ALREADY KNEW, and lost it between two shelves two passes apart
+
+🔴 **`p843` measured the foundations shelf and recorded, in a table that is still on
+`repos/foundations.md`:** 🟡 *"Live but absent from GitHub's search index | `1` —
+`digitalcredentials/learner-credential-wallet`."*
+
+🔴 **Two passes later `p845` declared that same address GONE, "confirmed by BOTH stages", and
+filed it in `intel/open-gaps.md` as a genuine absence.** 🟢 **`p843` was right, `p845` was wrong,
+and the evidence that would have stopped `p845` was already written down in this repository.**
+
+🔵 **The failure is not measurement — it is that the finding lived in a row-level table on one
+shelf and never became a RULE.** `p843` saw the category, named it exactly, counted it at `1`, and
+did not generalise it. 🟢 **`P100` is that generalisation, and it is filed as a prescription
+precisely so the next pass inherits the rule and not just the row.** → `T156`.
+
+### 🟢 Finding 4 — `4` new build-safe addresses, every one produced by the de-indexing investigation rather than by a search leg
+
+| Agent / library | Repo | License | ★ | Why it is a row |
+|---|---|---|---|---|
+| Learner Credential Wallet (OWF Labs) | https://github.com/openwallet-foundation-labs/learner-credential-wallet | 🟢 **MIT — byte-read** (`main/LICENSE`, `1,091 B`, `sha256₁₂ d8c69cd2855b`) | 🟡 *not retrieved — this address is itself search-invisible* | 🟢 **New this pass (`p846`), and it is a GOVERNANCE UPGRADE this base would have recorded as a death.** `p845` declared `digitalcredentials/learner-credential-wallet` GONE; the repository is alive, and its own `README` points at this address under **OpenWallet Foundation Labs (Linux Foundation)**. 🔵 Cross-platform iOS/Android wallet for verifiable learner credentials (`lcw.app`) — the reference client for the W3C VC / Open Badges 3.0 seam. 🟢 **For a client engagement the move matters more than the code: a credential wallet stewarded by a foundation is procurable where a lab repository is not.** 🔴 **Both addresses serve content; prefer this one and keep the old row as the lineage.** |
+| LTI 1.3 PHP library (standards-body upstream) | https://github.com/1EdTech/lti-1-3-php-library | 🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810`) | 124 | 🟢 **New this pass (`p846`).** The upstream of the row this base already carries: `packbackbooks/lti-1-3-php-library`'s own `README` states it was *"forked from `IMSGlobal/lti-1-3-php-library`, initially created by @MartinLenord"*, and `IMSGlobal` is now `1EdTech` — **the body that publishes the LTI 1.3 specification**. `111` forks. 🔴 **Last push `2024-08-20`: this is the SPEC-ANCHOR, not the maintained tree.** |
+| LTI 1.3 PHP library (actively maintained fork) | https://github.com/talis/lti-1-3-php-library | 🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810` — 🔵 **byte-identical to `1EdTech`'s**) | 1 | 🟢 **New this pass (`p846`).** Pushed **`2026-11-10`** — 🔵 **the most recently maintained Apache-2.0 LTI 1.3 PHP tree this base has found**, against `2024-08-20` for the `1EdTech` upstream. 🟡 `1★` is not a quality signal here; a certification-bound protocol library is maintained by its users, not starred. |
+| present-together | https://github.com/fabian-thinks/present-together | 🟢 **MIT + boundary — byte-read** (`main/LICENSE`, `1,344 B`, `sha256₁₂ 4f78693ecfd8`, holder `fabian-thinks and the Singularity seminar contributors`, 2026) 🔴 field reports `NOASSERTION` — `T81` | 0 | 🟢 **New ADDRESS this pass (`p846`) for an asset held since `p824`.** Pushed `2026-11-15`. 🔵 The grant keeps the two appended clauses `p824` shelved it for — *"Third-party material is excluded from this grant"* and *"Software permissions do not override academic rules or rights to institutional content"* — now pointing at `THIRD_PARTY_NOTICES.md` and `docs/ACADEMIC-USE.md`. 🟢 **Use this address; `FabianJun/PresentTogether` is the redirect.** |
+
+### 🔵 Finding 5 — a licence-hash MISS can be a RENAME, and this base nearly recorded one as a relicence
+
+🔴 **`p824` pinned `PresentTogether`'s grant at `1,340 B`, `sha256₁₂ fe728274`. Today the same file
+reads `1,344 B`, `sha256₁₂ 4f78693ecfd8`.** 🟡 **A pin-check sees a changed licence.**
+🟢 **The diff is `4` bytes and it is the copyright holder: `FabianJun` → `fabian-thinks`.**
+🔵 **The owner renamed; the grant did not move.** → `T153`, and `P101`:
+
+> 🟢 **On a licence-hash miss, diff the holder line BEFORE raising a relicence. A rename propagates
+> into the copyright notice and changes the hash without changing the grant.**
+
+🟢 **The same mechanism is the rename DETECTOR, and it is cheap:** the old and new addresses serve
+the **byte-identical** `4f78693ecfd8` blob, and `FabianJun/PresentTogether`'s `README` carries CI
+badges pointing at `github.com/fabian-thinks/present-together/actions`. 🔵 **Content identity across
+two addresses is a rename; the CI badge names the survivor.**
+
+### 🟡 Finding 6 — `10` rows are ARCHIVED upstream, which this base has never recorded
+
+🔵 **Archived is stronger than stale: the owner has declared the repository read-only. `p843`
+measured staleness and could not see this field; the full sweep returns it.**
+
+| Row | Licence | ★ | Last push |
+|---|---|---|---|
+| [`FooSoft/anki-connect`](https://github.com/FooSoft/anki-connect) | 🟡 `NOASSERTION` | `2,083` | `2025-11-04` |
+| [`frappe/mcp`](https://github.com/frappe/mcp) | 🟢 `MIT` | `171` | `2026-10-27` |
+| [`GeovaneSchmitz/sigaa-api`](https://github.com/GeovaneSchmitz/sigaa-api) | 🟢 `MIT` | `61` | `2024-04-10` |
+| [`vgwb/Antura_arabic`](https://github.com/vgwb/Antura_arabic) | 🟡 `NOASSERTION` | `60` | `2022-03-09` |
+| [`gyger/mcp-pyzotero`](https://github.com/gyger/mcp-pyzotero) | 🟢 `MIT` | `56` | `2025-11-20` |
+| [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | 🟡 `EUPL-1.2` | `54` | `2024-02-14` |
+| [`scieloorg/opac`](https://github.com/scieloorg/opac) | 🟢 `BSD-2-Clause` | `10` | `2026-01-26` |
+| [`chimple/jamaica`](https://github.com/chimple/jamaica) | 🟢 `Apache-2.0` | `5` | `2019-05-20` |
+| [`oaknational/oak-dspy-mcq-eval`](https://github.com/oaknational/oak-dspy-mcq-eval) | 🟡 `NOASSERTION` | `1` | `2026-07-13` |
+| [`neuronova-apps/DUA-3.0`](https://github.com/neuronova-apps/DUA-3.0) | 🟢 `MIT` | `0` | `2026-09-21` |
+
+🔴 **`frappe/mcp` is the one a client would feel**: archived `2026-10-27` while this base cites it
+in the Frappe/ERPNext education seam. 🟢 **The grant survives archiving — `MIT` is irrevocable — so
+these stay build-safe. What changes is the maintenance story a bid may truthfully tell.** → `T154`.
+
+### 🟡 Finding 7 — licence DRIFT against the shelf's own claim, `5` rows
+
+🔵 **`728` of the `815` addresses carry a licence claim in their row. Compared cell-by-cell against
+the first-party field, `5` disagree.**
+
+| Row | Shelf claims | GitHub reports `2026-11-16` | Reading |
+|---|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `Apache-2.0` | 🟡 **`ECL-2.0`** (`1,238★`) | 🟢 **The shelf is not wrong so much as imprecise.** ECL-2.0 is the **Educational Community License**, Apache-2.0 plus an explicit university patent-grant limitation. 🔴 **It is NOT Apache-2.0 and a client's licence scanner will not treat it as such.** OSI-approved and permissive; quote it by name. |
+| [`chimple/bahama`](https://github.com/chimple/bahama) | `Apache-2.0` | 🟡 `MPL-2.0` (`8★`) | 🔴 **Permissive → WEAK COPYLEFT.** MPL-2.0 is file-level copyleft: modified files must be published. Still shippable in a larger proprietary product; not the "do anything" the row implied. |
+| [`th30d0re/opendyslexic-fonts`](https://github.com/th30d0re/opendyslexic-fonts) | `MIT` | 🟡 `OFL-1.1` (`1★`) | 🟢 **Correct for the artefact** — SIL Open Font License is the font-sector norm. 🔴 **Its reserved-font-name clause bites on rename/rebrand**, which an accessibility deliverable may well do. |
+| [`birkanyavuz/educational-tools`](https://github.com/birkanyavuz/educational-tools) | `Apache-2.0` | 🔴 `CC-BY-4.0` (`0★`) | 🔴 **`T78`'s class: a CONTENT licence over software** — no patent grant, no warranty disclaimer. Already on the rejection shelf; the field now corroborates it first-party. |
+| [`hoangkien1703/dual-sub-replay`](https://github.com/hoangkien1703/dual-sub-replay) | `GPL-3.0` | 🟢 **`MIT`** (`63★`) | 🟢 **The only drift in the GOOD direction.** A copyleft row this base shelved as unusable now reports `MIT`. 🔴 **Not promoted here: a relicence must be byte-read and its contributor provenance checked before a client builds on it.** → `ACTION p846-A`. |
+
+### 🔵 Finding 8 — batching HIDES the `422`, which is a third absence signature
+
+🟢 **`p845` recorded two absence signatures: `422`, and HTTP `200` with `total_count=0`.**
+🔴 **Batched, there is a third and it is silent.** A query carrying `10` `repo:` qualifiers of which
+one does not resolve returns **`200` with the other nine** — no error, no warning. 🔵 **Across `82`
+batches this base recorded `0` failures while `11` addresses went unanswered.**
+🟢 **A batched sweep must reconcile the request list against the response list by name.** This one
+did, which is the only reason the `11` were seen at all. → `T155`.
+
+### 🔴 Finding 9 — the mandated battery, run and nilled a SEVENTH consecutive time
+
+🔴 **`p840`, `p841`, `p842`, `p844`, `p845` and now `p846`.** 🟢 **All eight legs run: global agents,
+GitHub trending, vertical platforms, industry trends, and North America, EMEA, APAC and LATAM.**
+
+🟢 **Every named candidate was already held, checked against the shelves rather than from memory** —
+`HKUDS/DeepTutor` (🟢 re-measured first-party this pass: `Apache-2.0`, **`59,624★`**, pushed
+`2026-11-15` — up from `52,783★` on `2026-11-01`), `THU-MAIC/OpenMAIC`, `patchy631/ai-engineering-hub`,
+`withmarbleapp/os-taxonomy`, `amosblomqvist/learnharness` (🔴 `AGPL-3.0`), `Open edX`, `Sakai`,
+`Moodle`, `OpenEduCat`, `ILIAS`, `Chamilo`, `Canvas`.
+
+🟢 **The regulatory legs nilled identically, and each was grepped against `intel/` before being
+called held:** the EU Digital Omnibus postponement to `2027-12-02` (`344` prior mentions), Council
+document `ST-14902-2026` (`9`), Korea's AI Basic Act `2026-01-22`, Vietnam's law `2026-03-01`,
+Australia's TEQSA institutional action plans (`66`), UK DfE/Ofqual (`54`), North Carolina
+`SL 2026-41`, California `AB 1159` (`88`), the `K-12 AI Literacy and Readiness Act of 2026` (`32`),
+Berkeley Law's exam ban (`77`), Idaho (`70`), Pearson/Workera (`15`), OpenAI's Estonia partnership
+(`42`), UAE KHDA (`47`), the UNESCO IESALC `87%`/`26%` split, and HolonIQ's `$12.3B`.
+
+🔴 **One LATAM figure was NOT held and is filed on `intel/market.md`:** the Digital Education
+Council's 2026 LATAM survey — **`92%` of students and `79%` of faculty** across `29` institutions
+and `30,000+` responses. 🟡 **Secondary, vendor-published, `CITED NOT READ`.**
+
+🟢 **An informed nil, declared with its denominator. This pass's `4` rows came from the sweep, not
+from the legs.**
+
 ## 🟢 Fiftieth pass (`p845`, 2026-11-16) — **`0` new agent rows, a SIXTH consecutive informed nil — and a liveness channel that would have killed every row on this shelf, caught BEFORE it was used**
 
 ### 🔴 Finding 1 — `github.com` HTML is NOT a liveness channel, and a sweep built on it would have manufactured `817` deaths
@@ -2495,7 +2697,22 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 388 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 392 rows
+
+### Filed by `p846` (2026-11-16) — `4` rows, every one recovered from an address the search index could not see
+
+🔵 **None of these came from a search leg. All four came from re-probing the `11` addresses the
+shelf-wide sweep could not resolve, on a channel calibrated against a live control and a
+never-existed control in the same loop (`P100`).** 🔴 **Two of them replace rows this base had
+declared dead.**
+
+| Agent / library | Repo | License | Stars | Description |
+|---|---|---|---|---|
+| Learner Credential Wallet (OWF Labs) | https://github.com/openwallet-foundation-labs/learner-credential-wallet | 🟢 **MIT — byte-read** (`main/LICENSE`, `1,091 B`, `sha256₁₂ d8c69cd2855b`) | 🟡 *not retrieved — the address is itself absent from the search index; existence and grant are from `raw.githubusercontent.com`* | **New this pass (`p846`). Region: Global.** Cross-platform iOS/Android wallet for verifiable learner credentials (`lcw.app`), now under **OpenWallet Foundation Labs (Linux Foundation)**. 🟢 **The reference client for the W3C VC / Open Badges 3.0 seam, and the procurement story changed with the stewardship**: a foundation-hosted wallet clears institutional review where a lab repository does not. 🔴 **Its grant is a DIFFERENT blob from the Digital Credentials Consortium original** (`1,091 B` / `d8c69cd2855b` here against `1,092 B` / `1032f65d…` at `digitalcredentials/`), so this is a sibling project, not a redirect — keep both rows and cite this one. |
+| lti-1-3-php-library (1EdTech upstream) | https://github.com/1EdTech/lti-1-3-php-library | 🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810`) | 124 | **New this pass (`p846`). Region: Global.** The SPEC-ANCHOR for LTI 1.3 in PHP, published by **1EdTech — the body that writes the LTI specification** (formerly IMS Global). `111` forks. 🔵 Named as the upstream inside `packbackbooks/lti-1-3-php-library`'s own `README`. 🔴 **Last push `2024-08-20` — cite it for provenance and certification lineage, build on the maintained forks.** |
+| lti-1-3-php-library (talis, maintained) | https://github.com/talis/lti-1-3-php-library | 🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810` — byte-identical to the `1EdTech` upstream) | 1 | **New this pass (`p846`). Region: EMEA** (Talis is a UK higher-education software house). 🟢 **Pushed `2026-11-10` — the most recently maintained Apache-2.0 LTI 1.3 PHP tree this base holds**, against `2024-08-20` upstream and a de-indexed `packbackbooks` tree. 🟡 **`1★` carries no information here**: a certification-bound protocol library is maintained by its integrators, not starred. Validates launches, Names & Roles Provisioning for rosters, Assignment & Grades for writeback. |
+| present-together | https://github.com/fabian-thinks/present-together | 🟢 **MIT + appended boundary — byte-read** (`main/LICENSE`, `1,344 B`, `sha256₁₂ 4f78693ecfd8`, holder `fabian-thinks and the Singularity seminar contributors`, 2026) 🔴 GitHub field reports `NOASSERTION` — `T81` | 0 | **New ADDRESS this pass (`p846`) for the asset shelved at `p824` as `FabianJun/PresentTogether`. Region: Global.** Pushed `2026-11-15`. Co-designs interactive presentations with an AI agent and coaches the human on the teaching; the agent does the technical build. 🟢 **The two appended clauses survive the rename** — *"Third-party material is excluded from this grant"* (→ `THIRD_PARTY_NOTICES.md`) and *"Software permissions do not override academic rules or rights to institutional content"* (→ `docs/ACADEMIC-USE.md`). 🔵 **This is the live address; the old one is a GitHub redirect that `raw` follows and the search index does not.** |
+
 
 ### Filed by `p834` (2026-11-15) — `9` rows: the MARKING population enumerated BY `pushed_at` instead of by stars, and every licence byte-read on the DEFAULT branch
 

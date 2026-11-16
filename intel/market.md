@@ -4,6 +4,34 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟡 Fifty-first pass (`p846`, 2026-11-16) — **`4` regions queried plus Global. `1` of `22` distinctive regional facts was NOT already on this shelf, and it is a LATAM demand-side figure.**
+
+🔵 **Provenance discipline, restated because it is load-bearing and because this pass makes the
+split starker than ever:** every demand-side, market-size and regulatory figure below is
+🟡 **secondary** — survey vendors, trackers, law-firm notes and news outlets, marked `CITED NOT
+READ`. Every supply-side figure (licence, stars, forks, last push, archived, liveness) is
+🟢 **first-party**, read from GitHub's own API or from `raw.githubusercontent.com` on `2026-11-16`.
+
+🟢 **This pass can state the supply side as a census for the first time: `815` addresses swept,
+`804` resolved, `607` (`75.5%`) permissively licensed, `2` dead (`0.25%`), `10` archived.**
+🔴 **No demand-side number in this file has an equivalent denominator, and none should be quoted
+as if it did.**
+
+### 🔴 The regional legs, run in full and nilled — with the check made against the file
+
+| Leg | Instruments returned | Already held? |
+|---|---|---|
+| North America | NC `SL 2026-41`, `134` bills / `31` states, CA `AB 1159`, Idaho framework (Aug 2026), DC non-binding policy 2026-27, US DoE framework (Mar 2026) + K-12 guidance (Apr 2026), `K-12 AI Literacy and Readiness Act of 2026`, Berkeley Law exam ban, NEA/AFT/CTA guidance, `Parents & Kids Safe AI Act` ballot initiative | 🟢 **All held** |
+| EMEA | EU AI Act Annex III education high-risk, Digital Omnibus postponement to `2027-12-02`, AI-literacy duty live since Feb 2025, Council doc `ST-14902-2026` (29 Oct 2026), EP briefing `784574`, Digital Education Action Plan, UK DfE GenAI product safety standards (Jan 2026), Ofqual coursework-integrity resources (Mar 2026), UAE/Dubai KHDA private-school guidance, OpenAI partnerships (Estonia, Slovakia, Greece, Italy), Instructure Canvas study coach, Pearson–Workera | 🟢 **All held** |
+| APAC | Korea AI Basic Act in force `2026-01-22` (`2026` a guidance-led grace year), Vietnam AI law `2026-03-01` with education high-risk, Australia TEQSA institutional action plans, China's layered algorithm/deepfake/GenAI rules, Japan AI Promotion Act + AI Basic Plan (Dec 2025) + Business Guidelines v1.2 (Mar 2026), Singapore AI Verify, EU spillover onto APAC vendors | 🟢 **All held** |
+| LATAM | UNESCO IESALC `87%` adoption / `26%` with a strategy, regional AI index (`20` economies, `85%` with a strategy in place or in development, only Brazil and Colombia budgeting it, Brazil/Chile/Uruguay leading), >half of countries with AI in the school curriculum, Tec de Monterrey IFE | 🟢 **Held** — except the row below |
+| LATAM | 🔴 **Digital Education Council LATAM 2026 survey: `92%` of students and `79%` of faculty actively engaging with AI; `29` institutions, `30,000+` responses** | 🔴 **NOT held — new this pass** |
+
+🟡 **`21` of `22` already on the shelf. The seventh consecutive regulatory nil, and the one new
+figure is demand-side, vendor-published and carries a self-selection caveat the vendor does not
+state: `29` institutions that agreed to run a Digital Education Council survey are not a random
+sample of LATAM higher education.**
+
 ## 🟡 Forty-eighth pass (`p843`, 2026-11-16) — **`4` regions queried plus Global. `20` of `21` distinctive regional facts were ALREADY on this shelf; the `1` that was not is a UAE instrument, and it arrived through the APAC leg.**
 
 🔵 **Provenance discipline, restated because it is load-bearing: every
@@ -1447,6 +1475,31 @@ across EMEA.
 
 ### North America
 
+#### Update 2026-11-16 (fifty-first pass, `p846`) — 🔴 **NIL on instruments a seventh time. The opportunity this pass creates is a LICENCE-SCANNER line item, not a new fact.**
+
+🔴 **All `10` North American instruments the leg returned are held** (NC `SL 2026-41`, the `134`
+bills across `31` states, CA `AB 1159`, Idaho's August 2026 framework, DC's non-binding 2026-27
+policy, the US DoE March/April 2026 framework and K-12 guidance, the federal `K-12 AI Literacy and
+Readiness Act of 2026`, the `Parents & Kids Safe AI Act` ballot initiative, NEA/AFT/CTA guidance
+and Berkeley Law's exam ban). 🟢 **Checked against `intel/`, not from memory.**
+
+🟢 **What `p846` adds is a procurement defect this base was carrying into every higher-education
+bid.** 🔴 **Sakai — the one permissive LMS of scale in this market — is `ECL-2.0`, not
+`Apache-2.0`.** A US university's open-source policy and its SPDX scanner enumerate permitted
+licences by NAME. 🔵 **`ECL-2.0` is Apache-2.0 with a narrowed, institution-scoped patent grant;
+it is OSI-approved and it will still be flagged as unrecognised by a scanner configured for
+`Apache-2.0`.**
+
+🟢 **The sellable position:** arrive at a North American higher-education engagement with the
+licence annex already correct — `ECL-2.0` named and explained as a university-sector licence,
+`1EdTech/lti-1-3-php-library` cited for LTI certification provenance, and the OpenWallet Foundation
+stewardship of `learner-credential-wallet` cited for the credentialing layer. 🔵 **This is a
+two-page annex that removes a procurement round-trip, and the measurement behind it is
+first-party.** → `T151`, Finding `7`.
+
+🔴 **Scope it honestly:** this is a licence-hygiene differentiator, not a product. It wins the
+review, it does not win the deal.
+
 #### Update 2026-11-16 (fiftieth pass, `p845`) — 🔴 **NIL on new instruments for a sixth consecutive pass — and the opportunity moves from "find courseware" to "price the authoring gap", because the courseware was already there**
 
 🔴 **The North American leg returned `10` named instruments and all `10` were already held:**
@@ -2866,6 +2919,34 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-16 (fifty-first pass, `p846`) — 🟢 **NIL on instruments, and an ASSISTIVE-TECHNOLOGY row recovered that the base was one pass away from deleting**
+
+🔴 **All `12` EMEA instruments returned by the leg are held**, including the Digital Omnibus
+postponement of stand-alone high-risk obligations to `2027-12-02`, Council document
+`ST-14902-2026` (29 October 2026), the AI-literacy duty live since February 2025, UK DfE GenAI
+product safety standards (January 2026), Ofqual's coursework-integrity resources (March 2026),
+UAE/Dubai KHDA guidance for private schools, OpenAI's Estonia, Slovakia, Greece and Italy
+partnerships, and Pearson–Workera. 🟢 **`844-G2` stands: Art. `50` is live, the content-marking
+grace period is contested.**
+
+🟢 **The supply-side move is the one that matters here.** 🔴 **`asterics/AsTeRICS-Grid` — the
+EU-funded Austrian AAC grid system, this base's reference platform for non-speaking learners —
+resolves on NO discovery instrument: `repo:` returns `422`, the `asterics` owner enumerates fully
+at `51` of `51` with the name absent, and it appears in no topic page or trending list.**
+🟢 **It is alive**: `LICENSE` `34,523 B` and `README.md` `10,862 B` on `master`, read `2026-11-16`.
+
+🔵 **Why an EMEA buyer should care:** under the EU AI Act, systems used in education for steering
+learning sit in the high-risk tier, and an AAC platform is procured by public bodies with
+accessibility duties under the European Accessibility Act. 🔴 **A supplier who sources by GitHub
+search will not find the reference implementation at all** — and will arrive proposing
+`astericsfree/AsTeRICS-Grid`, a mirror serving the same `AGPL-3.0` blob with a divergent `README`.
+🟢 **Globant can arrive knowing which is canonical, and that `AGPL-3.0` §13 makes a hosted fork
+owe source to its users — the permissive bridge being `fjrodl/astericsgrid_ros` (`Apache-2.0`).**
+
+🟢 **A second EMEA row lands the same way:** `talis/lti-1-3-php-library` (UK higher-education
+software house, `Apache-2.0`, pushed `2026-11-10`) is the most recently maintained LTI 1.3 PHP
+tree this base holds — at `1★`, invisible to every star-ranked instrument.
 
 #### Update 2026-11-16 (fiftieth pass, `p845`) — 🟢 **NIL on new instruments, but `Regulation (EU) 2026/1744` is independently reproduced a second time, and the AI-literacy duty is where this pass's asset lands**
 
@@ -4345,6 +4426,28 @@ the EMEA leg; the results returned compliance advice, not measurement. **An info
 absence: the denominator for the AI Act's deployer duties is not publicly measured.**
 
 ### APAC
+
+#### Update 2026-11-16 (fifty-first pass, `p846`) — 🔴 **NIL on instruments, and an honest declaration: APAC gained NOTHING from this pass, and the reason is measurable**
+
+🔴 **All `7` APAC instruments returned are held** — Korea's AI Basic Act in force `2026-01-22`
+with `2026` run as a guidance-led grace year by MSIT, Vietnam's AI law from `2026-03-01` naming
+education high-risk with pre-deployment registration and conformity assessment, Australia's TEQSA
+requirement that higher-education providers file institutional GenAI action plans, China's layered
+algorithm/deepfake/generative rules, Japan's AI Promotion Act plus the December 2025 AI Basic Plan
+and March 2026 Business Guidelines v1.2, Singapore's AI Verify, and the EU spillover onto APAC
+vendors selling into Europe.
+
+🔴 **The supply side gained nothing, and this is the fourth consecutive pass that is true.**
+🟢 **Stated with its measurement rather than left as silence:** of the `4` new addresses this pass
+recovered, `0` are APAC-placed; of the `6` search-invisible repositories found, `0` are
+APAC-placed; and the Japanese-language education-agent gap `p844` measured at `3` total
+repositories is re-declared UNCHANGED, because no instrument run this pass addressed it.
+
+🔵 **The honest reading for an APAC engagement:** this base's APAC strength is regulatory
+(Korea, Vietnam, Australia, Japan, Singapore are all current and specific) and its APAC weakness
+is supply — there is no APAC-origin permissive education agent of scale on these shelves, and the
+Chinese-language marking population `p834` shelved is the single exception. 🟢 **Quote the
+regulatory map; source the build from Global rows.** → `ACTION p846-D`.
 
 #### Update 2026-11-16 (fiftieth pass, `p845`) — 🔴 **NIL on new instruments; the region's binding calendar is unchanged and this pass's asset is the one that can be delivered into it without a translation project**
 
@@ -5830,6 +5933,34 @@ procurement-led" corner of that matrix, which `P5` did not previously have a nam
 example of.
 
 ### LATAM
+
+#### Update 2026-11-16 (fifty-first pass, `p846`) — 🟢 **The ONE new demand-side figure of the pass, with the caveat its publisher omits**
+
+🟢 **New, and the only one of `22` regional facts this pass that was not already held:**
+🟡 **the Digital Education Council's AI in Higher Education LATAM Survey 2026 reports `92%` of
+students and `79%` of faculty actively engaging with AI, across `29` institutions and `30,000+`
+responses, with Tecnológico de Monterrey as a research partner.** 🟡 `CITED NOT READ` — vendor-published.
+
+🔴 **The caveat the publisher does not state, and which a Globant bid must:** `29` institutions
+that agreed to run a Digital Education Council survey are not a random sample of LATAM higher
+education. 🟢 **Read it as a ceiling on engaged institutions, not a regional average.**
+🔵 **It is nonetheless consistent with the two LATAM figures this base already holds and which do
+come from a multilateral:** UNESCO IESALC's `87%` of institutions using AI somewhere against
+`26%` with a formal AI strategy.
+
+🟢 **The three numbers together are the LATAM pitch, and they point the same way:** adoption is
+near-universal and individually driven, strategy is absent in roughly three institutions in four,
+and the regional AI index finds only Brazil and Colombia explicitly budgeting for AI in their
+national instruments. 🔵 **The buyable unit is NOT adoption — it is GOVERNANCE: an AI-use policy,
+an assessment-integrity position and a data-protection posture, delivered institution by
+institution.**
+
+🔴 **`ACTION p844-A` is CARRIED for a third pass and remains the cheapest unclaimed value in this
+base:** one allow-list entry for `dados.gov.br`, `datos.gov.co`, `datos.gob.mx` or `datos.gob.ar`
+promotes four LATAM licence determinations from `CITED` to `PRIMARY`. 🟡 **Not re-tested this pass
+— `p844` and `p845` both measured all five endpoints at `000` against a `raw.githubusercontent.com`
+control in the same loop, and a third identical measurement adds nothing.** 🟢 **It is a
+configuration request, not a research task.**
 
 #### Update 2026-11-16 (fiftieth pass, `p845`) — 🔴 **The governmental egress refusal REPRODUCES on a second consecutive day, so `844-G1` stays open by instrument rather than by effort — and the adoption/governance gap is where this pass's asset sells**
 
@@ -7452,6 +7583,39 @@ administrators use AI, **22%** report school guidelines; PISA 2025 — **nine in
 near-universal, governance is the gap, and the gap is the product.**
 
 ### Global
+
+#### Update 2026-11-16 (fifty-first pass, `p846`) — 🟢 **The supply side of this base now has a DENOMINATOR, and it is the most quotable thing on this shelf**
+
+🟢 **Measured first-party on `2026-11-16`, across `agents/top.md`, `repos/foundations.md` and
+`verticals/solutions.md`:**
+
+| | |
+|---|---|
+| Distinct GitHub addresses held | **`815`** (`814` real; `1` a prose template) |
+| Resolved against GitHub's own API | **`804`** |
+| 🟢 **Permissive** (`MIT`, `Apache-2.0`, `BSD-3`, `BSD-2`, `ISC`) | 🟢 **`607` — `75.5%`** |
+| 🔴 Copyleft (`GPL`, `AGPL`, `LGPL`) | `74` — `9.2%` |
+| 🟡 Unlabelled by GitHub's detector (`NULL` / `NOASSERTION`) | `109` — `13.6%` |
+| 🔴 **Dead** | 🔴 **`2` — `0.25%`** |
+| 🔴 Archived upstream | `10` |
+| 🟡 Live but invisible to every discovery instrument | 🟡 **`6`** |
+
+🔵 **Three sentences a client engagement can use, each backed by the table above rather than by a
+vendor report:**
+
+1. 🟢 **"Three-quarters of the open-source education supply we track is permissively licensed."**
+   Measured, not estimated, over `804` repositories.
+2. 🟢 **"Open-source sourcing decays far more slowly than procurement assumes."** `2` dead
+   addresses in `814`, over a shelf assembled across fifty-one passes and dominated by `0★` and
+   single-digit-star repositories.
+3. 🔴 **"One repository in seven carries a grant GitHub's own detector cannot classify."**
+   `109` of `804`. 🔵 **That `13.6%` is the measured size of the gap a byte-read licence review
+   closes, and it is the clearest justification this base has ever had for doing one.**
+
+🔴 **And the warning that belongs beside them:** `6` live repositories — four of them
+interoperability-standard implementations — are returned by NO search, topic or trending
+instrument. 🟢 **A discovery process built only on GitHub search will systematically miss the
+education-standards layer.** → `T157`.
 
 #### Update 2026-11-16 (fiftieth pass, `p845`) — 🟢 **The sourcing heuristic itself is the finding: in AI-authored curriculum, popularity and completeness are uncorrelated, and at the extremes they INVERT**
 

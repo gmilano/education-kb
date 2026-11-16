@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Pattern (`p846`, `2026-11-16`) — **"Source the interoperability layer by specification, not by search"**
+
+🔵 **The problem this solves.** A Globant education engagement almost always has an integration
+spine: launch from the client's LMS, read the roster, write grades back, emit learning analytics,
+issue a credential. 🔴 **Every one of those is a specification with a reference implementation —
+and `p846` measured that the reference implementations are the repositories GitHub's discovery
+surface cannot return.** A team that sources by searching `lti php`, `caliper sensor` or
+`learner credential wallet` will find mirrors, forks and course projects, and will miss the
+canonical tree. 🟢 **The recipe below reaches them deterministically.**
+
+### The recipe
+
+| Step | Do this | Concretely, with the addresses measured `2026-11-16` |
+|---|---|---|
+| 1 | **Name the specifications before naming any repository.** | LTI 1.3 (launch + NRPS roster + AGS writeback), IMS Caliper (analytics events), Open Badges 3.0 / W3C VC (credentials), plus AAC if the deliverable touches non-speaking learners. |
+| 2 | **Go to the standards body's own GitHub organisation, by name.** Never search. | `1EdTech` → [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) 🟢 `Apache-2.0`, `124★`, `111` forks, pushed `2024-08-20`. 🔵 This is the **spec anchor**: cite it, do not depend on it. |
+| 3 | **Find the maintained fork by `pushed_at`, never by stars.** | [`talis/lti-1-3-php-library`](https://github.com/talis/lti-1-3-php-library) 🟢 `Apache-2.0`, byte-identical grant (`11,342 B`, `sha256₁₂ 944c6521f810`), **pushed `2026-11-10`**, `1★`. 🔴 **A star filter of any kind removes it.** |
+| 4 | **Read the implementation reference even when it is invisible.** | [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) — the PHP-FIG-compliant rewrite, IMS-certified, 🟡 **absent from the search index**, reachable on `raw.githubusercontent.com`. 🔵 **Composer package is `packbackbooks/lti-1p3-tool` — the package name is NOT the repository name**, which breaks a naive dependency audit. |
+| 5 | **Pin the analytics sensor the same way.** | [`tl-its-umich-edu/caliper-php-public`](https://github.com/tl-its-umich-edu/caliper-php-public) 🔴 `LGPL-3.0` — the reachable PHP Caliper sensor, 🟡 search-invisible, alive (`README.md` + `LICENSE` + `composer.json` on `master`, `2026-11-16`). 🔴 **LGPL means dynamic linking only if the client's tree stays closed.** |
+| 6 | **Take credentials from the foundation, not from the lab.** | [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) 🟢 **`MIT`, byte-read `1,091 B` / `d8c69cd2855b`** — the Learner Credential Wallet under **OpenWallet Foundation Labs (Linux Foundation)**. 🔵 The `digitalcredentials/` original serves a DIFFERENT grant blob (`1,092 B` / `1032f65d…`) — sibling, not redirect. 🟢 **Foundation stewardship is what clears institutional review.** |
+| 7 | **If the deliverable touches AAC, cite the canonical tree and price the copyleft.** | [`asterics/AsTeRICS-Grid`](https://github.com/asterics/AsTeRICS-Grid) 🔴 `AGPL-3.0` (`34,523 B`) — 🟡 search-invisible, alive. 🔴 **§13 reaches users served over a network: a hosted fork owes source to its users.** 🟢 The permissive bridge is `fjrodl/astericsgrid_ros` (`Apache-2.0`). 🔴 **`astericsfree/AsTeRICS-Grid` is a mirror with a divergent `README` — do not cite it.** |
+| 8 | **Verify every address on a POSITIVE-ONLY channel before it enters a client document.** | 🟢 `curl -s -o /dev/null -w "%{http_code}" https://raw.githubusercontent.com/OWNER/REPO/BRANCH/FILE` over `{main,master} × {README.md,LICENSE,package.json,composer.json}`. 🟢 **A `200` proves life. A miss proves nothing** — control: `torvalds/linux` misses all `12` probes because it carries `README` and `COPYING`. (`P100`) |
+
+### What this costs and what it returns
+
+🟢 **Cost: roughly half a day.** Steps `1`–`7` are lookups by name; step `8` is a twelve-line
+shell loop. 🔵 **No step requires GitHub search, which is the point.**
+
+🟢 **Returns:** an integration spine where every component is the canonical implementation, every
+grant is byte-read rather than asserted, and the licence annex is already correct — `Apache-2.0`
+for the LTI layer, 🔴 `LGPL-3.0` for the Caliper sensor, `MIT` for the wallet, 🔴 `AGPL-3.0`
+quarantined behind an Apache bridge for AAC. 🔵 **In a North American higher-education bid add the
+`ECL-2.0` line for Sakai** (`T151`, Finding `7`) — it is Apache-2.0 with a narrowed patent grant
+and an SPDX scanner will not match it.
+
+### 🔴 The failure mode this pattern exists to prevent, stated as it actually happened
+
+🔵 **This base applied a search-only sourcing method to its own shelf and, across `p843`–`p845`,
+declared three repositories dead. `p846` proved two of the three alive.** 🔴 **In a client
+engagement the same method does not produce a visible error — it produces a proposal built on a
+mirror, with a licence annex describing a grant that is not the one being shipped.**
+🟢 **Reach the standards layer by name.** → `T157`, `P100`.
+
 ## 🟢 Pattern (`p845`, `2026-11-16`) — **"Sequence the upskilling engagement by measured completeness, not by star count"**
 
 🔵 **The problem this solves.** A Globant workforce-upskilling engagement on AI infrastructure

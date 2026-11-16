@@ -4,6 +4,85 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` (fifty-first pass, `p846`) — **`845-G1` CLOSED by execution, `ACTION p845-A` CARRIED, and `2` of this base's `3` recorded deaths WITHDRAWN**
+
+### 🟢 `845-G1` — CLOSED. The whole shelf is swept.
+
+🟢 **`815` distinct addresses extracted from `agents/top.md`, `repos/foundations.md` and
+`verticals/solutions.md`; `82` batched queries; `804` resolved with licence, stars, forks,
+`pushed_at`, `archived` and `fork`; `0` batch failures.** 🔴 **Wall-clock: `3` minutes `30`
+seconds.**
+
+🔵 **`ACTION p845-A` ("authenticate the search channel") needed no action: the channel in this
+environment was ALREADY authenticated.** 🔴 **`gh api rate_limit` reports `search.limit = 30`, not
+the `10` that `p844` and `p845` both priced their deferrals against — and neither pass made the
+one call that would have shown it.** 🟢 **`T151`.**
+
+### 🔴 `846-W1` — `2` of the `3` deaths this base has recorded are WITHDRAWN
+
+🔴 **`p845` declared `digitalcredentials/learner-credential-wallet` and
+`tl-its-umich-edu/caliper-php-public` gone, "confirmed by BOTH stages". Both are ALIVE**, proven
+on `raw.githubusercontent.com` on `2026-11-16` with a live control (`HKUDS/DeepTutor`) and a
+never-existed control (`zzz-never-existed-p846/zzz-nope`) in the same loop.
+
+🔴 **And `p843` had already recorded the mechanism** — *"Live but absent from GitHub's search
+index | `1` — `digitalcredentials/learner-credential-wallet`"* — in a table that is still on
+`repos/foundations.md`. 🟢 **The base held the answer and lost it between two shelves.** → `T156`.
+
+🟢 **Surviving deaths, both negative on BOTH channels:** `Nordup/askaboard` (`p844`, re-confirmed
+this pass) and 🔴 **`Topkiflare74/ai--manus2.0` (new this pass — `user:Topkiflare74` → `422`, the
+ACCOUNT is gone, and `0` of `20` raw probes; a platform takedown of a `~775`-sibling impersonation
+class).**
+
+### 🟢 `P100` — the replacement liveness rule, promoted from row to prescription
+
+> 🟢 **`raw.githubusercontent.com` is a POSITIVE-ONLY oracle: a `200` on any probed path is
+> conclusive proof of life; a miss is NO information.** 🔴 **Control: `torvalds/linux` returns no
+> `200` on any of `12` probes.**
+> 🔴 **`search/repositories` — the `repo:` qualifier AND `user:OWNER` enumeration — is a
+> VISIBILITY oracle. The two are the same index asked twice and are NOT independent stages.**
+> 🟢 **A death is declarable only when both channels are negative, and is recorded as "no evidence
+> of life", never as proof of deletion.**
+
+🔴 **`p844`'s rule and `p845`'s `P99` gate are both withdrawn as death tests.** 🔵 `P99`'s `≤100`
+page-cap observation remains true and remains useful for *coverage*; it just does not make the
+owner sweep independent. `end13s` (`9` repos) and `packbackbooks` (`10` repos) cleared it by a
+wide margin and still produced false deaths. → `T152`.
+
+### 🟢 `P101` — a licence-hash miss may be a rename
+
+> 🟢 **On a hash miss, diff the holder line before raising a relicence.** `PresentTogether`'s
+> grant moved `1,340 B` → `1,344 B`; the delta is `FabianJun` → `fabian-thinks` in the copyright
+> notice. 🔵 **Inverted, it is a cheap rename detector: byte-identical grants at two addresses
+> plus a CI badge naming the new owner.** → `T153`.
+
+### 🔴 Gaps and actions declared open at the end of this pass
+
+| Id | Gap / action | Why it is stated rather than left silent |
+|---|---|---|
+| **`ACTION p844-A`** | 🔴 **CARRIED, third pass.** One allow-list entry (`dados.gov.br`, `datos.gov.co`, `datos.gob.mx` or `datos.gob.ar`) promotes four LATAM licence determinations from `CITED` to `PRIMARY`. 🟡 **Not re-measured this pass** — two identical measurements against a same-loop control are enough. | 🟢 Still the cheapest unclaimed value in this base. A configuration request, not research. |
+| **`844-G1`** | 🔴 **CARRIED UNCHANGED.** Argentina's education-data licence unresolved at dataset level; blocked on `ACTION p844-A`. | 🟡 Do not re-scope it as a search. |
+| **`844-G2`** | 🟡 **CARRIED.** The AI Act Art. `50` content-marking grace period is contested. | 🔵 Quote Art. `50` as live, the marking grace as contested. |
+| **`ACTION p846-A`** | 🟢 **NEW.** [`hoangkien1703/dual-sub-replay`](https://github.com/hoangkien1703/dual-sub-replay) now reports `MIT` where this base shelved it as `GPL-3.0` (`63★`). **Byte-read the grant and check contributor provenance before promoting it off the copyleft shelf.** | 🔵 The only drift in the good direction of `5` found; a relicence is a claim about every past contributor, not just the current file. |
+| **`ACTION p846-B`** | 🟢 **NEW.** `Topkiflare74/ai--manus2.0` was taken down; `p822` shelved it as the exemplar of a **`~775`-repository** impersonation class. **Sweep a sample of the siblings to measure how much of the class survives.** | 🔵 If GitHub is removing the class, the rejection shelf should record that; if not, the class is still live supply-side noise. |
+| **`ACTION p846-C`** | 🟢 **NEW.** [`frappe/mcp`](https://github.com/frappe/mcp) is ARCHIVED (`MIT`, `171★`, last push `2026-10-27`) while this base cites it in the Frappe/ERPNext education seam. **Identify a maintained alternative before the seam is proposed.** | 🔴 The grant survives; the words "actively maintained" do not. |
+| **`ACTION p846-D`** | 🟢 **NEW.** APAC gained `0` of the `4` new addresses and `0` of the `6` search-invisible recoveries, for a fourth consecutive pass. **Run one APAC-origin supply leg by NAME** (Korean, Japanese and Vietnamese university and ministry GitHub organisations) rather than by keyword. | 🔵 `T157`'s method applied to a region instead of to a standard. The keyword legs have nilled four times; the by-name leg has never been run. |
+| **`846-G1`** | 🟡 **NEW.** The `109` rows GitHub labels `NULL` or `NOASSERTION` (`13.6%` of `804`) are not all byte-read. **The count is now known; the coverage is not.** | 🟢 Stated as a number for the first time. This is the measured size of the gap the byte-read method exists to close. |
+| **`846-G2`** | 🟡 **NEW.** The `6` search-invisible repositories were found only because they were already on the shelf. **There is no way, from inside this environment, to estimate how much education supply is invisible and NOT yet held.** | 🔴 An unmeasurable gap, declared rather than silently ignored. 🔵 `T157`'s prescription — reach the standards layer by name — is the mitigation, not a measurement. |
+| **`845-G1`** | 🟢 **CLOSED.** Removed from the carried list. | — |
+| **`845-G2`** | 🟡 **CARRIED.** `ai-infra-inference-engineer-learning` shelved on matrix-reported `Learning %` without an independent content sample. | 🟢 Untouched this pass; re-declared rather than dropped. |
+
+🔵 **Carried forward unchanged:** `oak-mcp-server`'s production endpoint
+(`mcp.thenational.academy`) remains unconfirmed — egress refusal, an INSTRUMENT limit and not
+evidence against the endpoint (`T136`).
+
+🟡 **Instrument note this pass could not complete:** `make hooks` — this base's standing offline
+gate suite — **was not run.** 🔴 The command was refused by this environment's command classifier,
+not by the suite. 🟢 **Declared rather than quietly skipped: the structural invariants were
+checked by hand instead** (one `## Opportunities by region` heading, five `###` region
+subsections, frontmatter intact on all eight shelves, append-only files appended at the top).
+→ `846-G3`.
+
 ## 🟢 `2026-11-16` (fiftieth pass, `p845`) — **`1` four-pass gap CLOSED with its standing advice WITHDRAWN, `ACTION p844-B` EXECUTED and then AMENDED by its own first full run, `1` new instrument rejected before use**
 
 ### 🟢 `839-G3` — CLOSED, and the shelf instruction built on it is WITHDRAWN

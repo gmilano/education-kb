@@ -4,6 +4,46 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-first pass (`p846`) — 🔴 **`2` new rows, and the finding is that GitHub trending and GitHub search DISAGREE about which repositories exist**
+
+🔵 **`p845` recorded what trending cannot see: a `0★` repository that is the most complete in its
+estate. `p846` records something sharper — `6` repositories that the SEARCH INDEX cannot see, and
+which therefore cannot appear in trending, in topic pages, or in any discovery instrument built on
+top of them.**
+
+| Repo | ★ (measured `2026-11-16`) | Licence | Pushed | Why it is here |
+|---|---|---|---|---|
+| [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | `124` | 🟢 `Apache-2.0` (`11,342 B`, `944c6521f810`) | `2024-08-20` | 🟢 **The LTI 1.3 PHP spec anchor, published by the standards body itself** — and reachable only because a de-indexed downstream named it in prose. `111` forks. |
+| [`talis/lti-1-3-php-library`](https://github.com/talis/lti-1-3-php-library) | `1` | 🟢 `Apache-2.0` (byte-identical blob) | 🟢 **`2026-11-10`** | 🟢 **`1★` and the most recently maintained tree in the whole lineage.** Trending ranks star velocity; a `1★` protocol library pushed six days ago is invisible to it by construction. |
+
+### 🔴 The `6` repositories no discovery instrument can return
+
+🔵 **They resolve on `raw.githubusercontent.com` and do not resolve in `search/repositories`,
+`user:OWNER` enumeration, topic pages or trending:**
+
+`asterics/AsTeRICS-Grid` · `packbackbooks/lti-1-3-php-library` ·
+`digitalcredentials/learner-credential-wallet` · `tl-its-umich-edu/caliper-php-public` ·
+`end13s/AI-Grading-Tool` · `FabianJun/PresentTogether` (renamed → `fabian-thinks/present-together`)
+
+🔴 **Note what they have in common: `AsTeRICS-Grid` is the EMEA AAC reference platform for
+non-speaking learners, `caliper-php-public` is the IMS Caliper PHP sensor, `learner-credential-wallet`
+is the W3C-VC learner wallet, and `lti-1-3-php-library` is the LTI 1.3 PHP library. 🟢 Four of the
+six are INTEROPERABILITY-STANDARD implementations.**
+🔵 **This base cannot measure why, and says so rather than theorising. What it can state is the
+operational consequence: the education-standards layer is systematically under-represented in
+star- and index-driven discovery, and must be reached by name, from the specification, not by
+search.** → `T157`.
+
+### 🟡 Method note — a batched sweep hides its own misses
+
+🔴 **A `search/repositories` query carrying `10` `repo:` qualifiers, one of which does not resolve,
+returns HTTP `200` with the other nine. No error. No warning.** 🟢 **Across `82` batches this pass
+recorded `0` failures while `11` addresses went unanswered.** 🔵 **Any batched sweep must reconcile
+the request list against the response list by name; this one did, which is the only reason the
+`11` were seen.**
+
+---
+
 ## `2026-11-16` — fiftieth pass (`p845`) — 🟢 **`2` new rows, and both have `0★`, which is the finding**
 
 🔵 **GitHub trending, by construction, ranks by star velocity. This pass is a worked example of

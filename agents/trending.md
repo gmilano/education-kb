@@ -4,6 +4,75 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-first pass (`p846`) — 🔴 **the week's real movement is that `6` agents this base could have buried are alive, and `1` of the two deaths it recorded is a TAKEDOWN**
+
+🔵 **Nothing new entered the education-agent market this window that this base does not already
+hold — the seventh consecutive nil on the mandated legs, declared with its denominator on
+`agents/top.md`. What DID move is the shelf's own census, measured end-to-end for the first time.**
+
+### 🟢 Movement 1 — `DeepTutor` added `~6,800★` in fifteen days, measured first-party
+
+| | `2026-11-01` (third-party trend report) | 🟢 `2026-11-16` (GitHub API, this pass) |
+|---|---|---|
+| `HKUDS/DeepTutor` | `~52,783★` | 🟢 **`59,624★`**, `Apache-2.0`, pushed `2026-11-15`, not archived, not a fork |
+
+🔵 **`+6,841★` in `15` days — roughly `456` a day, against the `~1,034`/day the `2026-11-01` report
+measured at its peak.** 🟡 **Still the fastest-growing education agent this base tracks, and now
+decelerating rather than accelerating.** 🔵 Read as a market signal, not a build signal: it was
+already the most-cited row on this shelf.
+
+### 🔴 Movement 2 — `Topkiflare74/ai--manus2.0` has been REMOVED, and it stands for `~775` siblings
+
+🔵 **`p822` rejected it as the exemplar of a `775`-repository impersonation class: an `Apache-2.0`
+file over a repository with no code, relicensing the `MIT` upstream `Simpleyyt/ai-manus`.**
+🟢 **`2026-11-16`: `repo:` → `total_count=0`, `user:Topkiflare74` → `422` (the ACCOUNT is gone),
+and `0` of `20` `raw.githubusercontent.com` probes return `200`.**
+🔴 **Negative on both channels and at the account level — this is the strongest death signature
+this base has ever recorded, and it is a platform takedown rather than an author's deletion.**
+🟢 **The rejection row was right and is now corroborated by GitHub's own enforcement. Keep it
+filed: the class is `~775` wide and the other members have not been swept.** → `ACTION p846-B`.
+
+### 🟢 Movement 3 — `present-together` renamed, and the rename is visible in the LICENCE BYTES
+
+| | `p824` (2026-11-15 window) | 🟢 `p846` (2026-11-16) |
+|---|---|---|
+| Address | `FabianJun/PresentTogether` | 🟢 `fabian-thinks/present-together` |
+| `LICENSE` | `1,340 B`, `sha256₁₂ fe728274` | `1,344 B`, `sha256₁₂ 4f78693ecfd8` |
+| Holder line | `FabianJun and the Singularity seminar contributors` | `fabian-thinks and the Singularity seminar contributors` |
+| Search index | 🔴 `422`; `user:FabianJun` → `422` | 🟢 resolves, `NOASSERTION`, `0★`, pushed `2026-11-15` |
+
+🔴 **A pin-check reading only the hash would have raised a RELICENCE. The delta is `4` bytes and
+it is the owner's name.** 🟢 **`P101`: diff the holder line before raising a relicence.**
+🔵 **And the inverse is the cheap rename detector — the old and new addresses serve the
+byte-identical blob, and the old `README`'s CI badges already point at the new owner.**
+
+### 🟢 Movement 4 — the LTI 1.3 PHP lineage, now held end-to-end
+
+🔵 **One of this base's longest-standing integration rows turned out to be the middle of a chain,
+and the chain was visible only because the middle link went dark in the index.**
+
+```
+IMSGlobal/lti-1-3-php-library  (@MartinLenord, original)
+        └─> 1EdTech/lti-1-3-php-library      Apache-2.0 · 124★ · 111 forks · pushed 2024-08-20   🟢 SPEC ANCHOR
+                 ├─> packbackbooks/lti-1-3-php-library   Apache-2.0 · held on this shelf  🟡 ALIVE, de-indexed
+                 │        └─ composer: packbackbooks/lti-1p3-tool   (🔵 package name ≠ repo name)
+                 └─> talis/lti-1-3-php-library           Apache-2.0 · pushed 2026-11-10  🟢 MOST RECENT
+```
+
+🟢 **All three serve the byte-identical `11,342 B` Apache blob (`sha256₁₂ 944c6521f810`).**
+🔵 **For a Moodle/Chamilo PHP engagement the sequencing advice changes this week:** cite `1EdTech`
+for certification provenance, read `packbackbooks` for the PHP-FIG-compliant rewrite, and track
+`talis` for current maintenance.
+
+### 🟡 What did NOT move, stated so silence is not read as coverage
+
+🔴 **No new permissive agent appeared this window in: school operations (timetabling, attendance,
+safeguarding); African national curricula beyond Kenya's CBC and Morocco's Bac; Japanese-language
+education agents; or OSS agent evaluation/observability for education.** 🟢 **These are the same
+four declared gaps `p844` and `p845` carried — unchanged, and re-declared rather than dropped.**
+
+---
+
 ## `2026-11-16` — fiftieth pass (`p845`)
 
 🟢 **The week's movement in education agents is a REVALUATION of stock already held, not an
