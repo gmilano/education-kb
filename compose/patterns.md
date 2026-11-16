@@ -4,6 +4,77 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-third pass (`p848`, 2026-11-16) — `2` recipes (`P103`, `P104`), built only from rows filed or measured this pass
+
+## 🟢 `P103` — THE ARTICLE 50 MARKING RETROFIT: a two-week, statutory-deadline engagement that ends `2026-12-02` (fifty-third pass, `p848`, EMEA anchor)
+
+🔵 **Why this recipe exists, and why it expires.** `p848` closed `p844`'s open residual: the
+**Art. `50(2)` machine-readable marking grace for generative systems placed on the EU market before
+`2026-08-02` ends `2026-12-02`** — `16` days from this pass. 🟢 **Pre-cutoff content needs no
+retroactive labelling**, which bounds the work to the generation pipeline rather than the content
+archive. 🔴 **And the deployer's Art. `50(4)` disclosure duty was never deferred, so it is already
+late.** 🔵 **Two deliverables, one of them dated, both scopeable in weeks.**
+
+**Who it is for.** Any institution or edtech vendor running a generative education system in the
+EU that predates `2026-08-02` — which, given this market's 2024–2025 build wave, is most of them.
+
+**Wire it together:**
+
+| Step | What you build | Built from |
+|---|---|---|
+| 1 | **Inventory**: every surface that emits model-generated text, audio or image to a learner | The client's estate; the registry pattern this file already carries |
+| 2 | **Provenance at the generation boundary** — mark output as machine-readable synthetic where it leaves the model, not where it reaches the page | A single egress wrapper around the model client, so one change covers every surface |
+| 3 | **Deployer disclosure surfaces** (Art. `50(4)`): the learner is told they are interacting with AI, and AI-generated material is identified as such | Template UI copy + a disclosure component in the LMS theme |
+| 4 | **Cutoff discipline**: mark forward only; do not attempt retroactive labelling | 🟢 The relief is explicitly prospective |
+| 5 | **Evidence pack**: what was marked, where, from when, with the implementation dated | Feeds directly into the `2027-12-02` Annex III work |
+
+🔵 **Where it attaches on these shelves.** The LMS tier is copyleft in every option
+(`verticals/solutions.md`), so put the marking wrapper in the **AI service**, across the process
+boundary — permissive code stays permissive and the Moodle or Open edX deployment is untouched.
+
+🔴 **Scope honesty.** This is a compliance retrofit, not a conformity assessment. It does **not**
+discharge Annex III high-risk obligations due `2027-12-02`. 🟡 **And the underlying dates are
+search-tier (`T162`): have the client's counsel confirm against the Official Journal before the
+statement of work is signed.**
+
+## 🟢 `P104` — THE DECISION-33 REGISTRY: turn Vietnam's enumeration into a deliverable, then design out of two of its three triggers (fifty-third pass, `p848`, APAC anchor; portable to EMEA)
+
+🔵 **Why this recipe exists.** `Decision 33/2026/QD-TTg` enumerates `46` high-risk AI systems, and
+**`3` of them are education**. 🟢 **Almost no other regime in this file enumerates — the EU imposes
+duties on a category, Vietnam publishes a list.** 🔵 **A list is a deliverable: it can be mapped
+against a client's estate in weeks and produces an artefact every other jurisdiction silently
+presupposes.** 🔵 **Deadline for existing education systems: `2027-09-01` — a quarter EARLIER than
+the EU's `2027-12-02`.**
+
+**The three triggers, and what to do about each:**
+
+| Decision 33 education trigger | 🟢 Design response | Residual risk |
+|---|---|---|
+| **Self-learning content from uncontrolled data sources** | 🟢 **Curate the corpus.** Serve generation from a fixed, inventoried content set with provenance per document — retrieval over an approved corpus, not open generation | 🟡 Low. Costs editorial effort, not architecture |
+| **Automatic evaluation and ranking of learners** | 🟢 **Human-in-the-loop grade release.** The model proposes; a teacher releases. Vietnam's regime treats many listed systems as high-risk *only where output is the sole basis for a decision without meaningful human review* | 🟡 Medium. The review must be meaningful and evidenced, not a rubber stamp — log the override rate |
+| 🔴 **Biometric monitoring of learner behaviour** | 🔴 **Decline it.** Do not build it; remove it where it exists | 🔴 **Not designable around.** It is named, and the EU separately bans emotion recognition in education outright (since `2025-02-02`) |
+
+**Wire it together:**
+
+1. **Registry** — enumerate the client's AI systems, one row each, mapped to Decision 33 entries.
+   🔵 This is the billable artefact and it is portable: the same registry feeds the EU's Art. `27`
+   FRIA and the LATAM governance gap (`87%` use / `26%` strategy).
+2. **Corpus gate** — retrieval over an approved document set; provenance recorded per response.
+   Build it with the permissive components already on these shelves rather than inside the LMS.
+3. **Review ledger** — every automated assessment carries a reviewer, a timestamp and an override
+   flag. 🟢 **The override rate is the evidence that the review is meaningful.**
+4. **Feature decline, documented** — record the biometric decision and its reasoning. 🔵 A
+   documented refusal is a compliance asset.
+5. **Reuse for EMEA** — steps 1, 3 and 4 transfer intact to the `2027-12-02` Annex III work.
+
+🟢 **Why run the APAC date first.** 🔵 **The two enumerated regimes are `92` days apart and the
+Vietnamese one is earlier.** 🟢 **A client with both markets who plans on the European calendar
+misses the binding deadline by a quarter.**
+
+🟡 **Provenance.** Decision 33's contents are **search-tier** (`T162`). 🔴 **Sources also differ on
+whether `2027-09-01` anchors to `2026-08-15` or `2026-03-01`, and on the signing date.** 🟢 **The
+`2027-09-01` figure is corroborated from two directions — directly, and via this base's
+independently-carried "`2027-03-01` plus six months" derivation.**
 ## 🟢 Fifty-second pass (`p847`, 2026-11-16) — `1` recipe (`P102`), built only from rows filed or measured this pass
 
 ## 🟢 `P102` — THE OPEN-LICENSING PROGRAMME: turn the education material a region already wrote into a corpus it is allowed to use (fifty-second pass, `p847`, LATAM anchor; portable to EMEA/Africa)

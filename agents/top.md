@@ -4,6 +4,103 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-third pass (`p848`, 2026-11-16) — **`2` agent rows (`426` → `428`), and the pass's hardest-won output is an INSTRUMENT correction: this environment's egress is a GitHub-only allow-list, not the governmental-publisher pattern `T906` named**
+
+🟢 **`2` genuinely new build-safe rows**, both byte-read on their default branch today:
+[`jobic10/student-management-using-django`](https://github.com/jobic10/student-management-using-django)
+(`394★`, MIT) and [`brian901106/japanese-tutor-mugi`](https://github.com/brian901106/japanese-tutor-mugi)
+(`104★`, MIT). 🔴 **`3` candidates disqualified at the grant, two of them at high traction** —
+`809★` and `182★`. 🔵 **`P990` ("a file named `LICENSE` is not necessarily a grant") fired TWICE
+more, on two different continents, one pass after `p847` recorded it firing once.** → `T162`,
+`T163`, `T164`.
+
+### 🟢 Finding 1 — the first MIT-licensed role-based school-administration skeleton this base has filed
+
+| | |
+|---|---|
+| Address | [`jobic10/student-management-using-django`](https://github.com/jobic10/student-management-using-django) |
+| Stars / forks (first-party, `search/repositories`, `2026-11-16`) | `394` / `202` |
+| Created / last push | `2020-09-23` / `2026-11-11` |
+| Grant | 🟢 **MIT — byte-read** (`main/LICENSE`, `1,075 B`, `sha256₁₂ 92be33e226c0`, holder `2020 Owonubi Job Sunday`) |
+| Archived / open issues | `false` / `1` |
+| Stack | Python, Django, AdminLTE front-end template |
+
+🟢 **Why it is a row.** The SIS tier on this base's shelves is licence-poor and has been for
+fifty-two passes: [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (`351★`)
+reports **no grant at all**, [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis)
+(`654★`) is **`GPL-2.0`** and [`hassanhabib/OtripleS`](https://github.com/hassanhabib/OtripleS)
+(`342★`) reports **no grant and has not been pushed since `2024-07-18`**. 🔵 **This is the only
+address found at any threshold this pass that ships role-separated school administration under a
+permissive licence** — admin / staff / student roles, attendance capture, result entry, leave
+approval, course–subject–session modelling and per-role summary dashboards.
+
+🔴 **Scope it honestly, because its own `README` does.** It opens *"This is a Simple Student
+Management System Developed While Learning Django"*. 🔴 **It is a scaffold, not a production SIS:
+no multi-tenancy, no SIS interchange format, a Heroku demo URL, and one open issue is a sign of a
+quiet repository, not a healthy one.** 🟢 **What makes it worth filing anyway is the fork ratio and
+the grant together**: `202` forks on `394★` is **`1:1.95`** — 🔵 **the highest fork-to-star ratio of
+any address on this shelf, against a shelf median nearer `1:20`.** People are not starring this;
+they are taking the skeleton and building a school on it. 🟢 **That is exactly the use a studio
+has for it: a licence-clean starting point for the client's SIS, not a dependency.**
+
+**Region: Global.** 🔴 **The holder's name in the byte-read `LICENSE` suggests a West African
+origin, and this base does NOT file a region from a personal name** — `p847` set that precedent on
+`BloomTutor` and it holds here. Nothing in the repository scopes it to a market. Filed Global,
+origin noted as unverified.
+
+### 🟢 Finding 2 — a conversational language tutor whose notable property is where it refuses to put the API key
+
+| | |
+|---|---|
+| Address | [`brian901106/japanese-tutor-mugi`](https://github.com/brian901106/japanese-tutor-mugi) |
+| Stars / forks (first-party, `2026-11-16`) | `104` / `36` |
+| Created / last push | `2026-10-28` / `2026-11-02` |
+| Grant | 🟢 **MIT — byte-read** (`main/LICENSE`, `1,068 B`, `sha256₁₂ b349f14f3e8e`, holder `2026 brian901106`) |
+| Stack | TypeScript, React, Vite; Claude-driven |
+
+🔵 **A mobile-web one-to-one Japanese conversation tutor** (「むぎ」, a cartoon hamster). The
+learner speaks Japanese or Chinese, the tutor answers in Japanese, and the app extracts vocabulary
+and phrasing from the tutor's own replies to teach from. 🟢 **Two mechanisms make it a row rather
+than another chat wrapper**: a **multi-layer cache** that makes repeated turns cheaper the longer
+the session runs, and an explicit architectural choice that **the API key stays on the local
+development server and never reaches the browser** — stated in the `README` and in `NOTICE.md`.
+🔵 **That second property is the one a studio actually needs from a client-facing tutor demo**, and
+it is the thing most `100★`-tier tutor repos get wrong.
+
+🔴 **Scope it honestly**: `104★`, created `2026-10-28`, last pushed `2026-11-02` — **five days of
+pushes and then silence for two weeks.** Single-language, single-purpose. 🟢 **`36` forks on
+`104★` (`1:2.9`) again says the traffic is builders.**
+
+**Region: APAC** — Traditional Chinese interface and documentation throughout, bilingual
+`README.en.md`; the project is Taiwan-originated on the evidence of its own language choice, which
+is a property of the artifact rather than an inference from a name.
+
+### 🔴 Finding 3 — three disqualifications, two of them at traction a studio would have trusted
+
+| Address | ★ / forks | `search/repositories` says | 🔴 Byte-read says | Verdict |
+|---|---|---|---|---|
+| [`WUBING2023/ExamPass-Assistant`](https://github.com/WUBING2023/ExamPass-Assistant) | `809` / `51` | `NOASSERTION` | 🔴 **`CC BY-NC 4.0`** — `master/LICENSE`, `16,364 B`, `sha256₁₂ 1fd9c1306545` | 🔴 **NON-COMMERCIAL — not build-safe** |
+| [`cyberdaddyleo/workstation-teacher`](https://github.com/cyberdaddyleo/workstation-teacher) | `182` / `70` | `NOASSERTION` | 🔴 **Custom `教师班主任工作台非商业许可协议` v1.0** — `main/LICENSE`, `3,836 B`, `sha256₁₂ 3626d2070053`, holder `2026 赛博老爸` | 🔴 **NON-COMMERCIAL — not build-safe** |
+| [`Neoza99/braillewave-curriculum-engine`](https://github.com/Neoza99/braillewave-curriculum-engine) | `56` / — | `NONE` | 🔴 **No `LICENSE` at all** — `LICENSE`, `LICENSE.md`, `LICENSE.txt` all `404` on `main` AND `master` | 🔴 **NO GRANT** |
+
+🔵 **`ExamPass-Assistant` is the expensive one.** `809★` is the highest-traction education
+repository this base has disqualified since the `4GeeksAcademy` estate one pass ago. It converts
+PPT, Word and PDF courseware into structured revision material — **precisely the mechanism
+`compose/patterns.md` reaches for** — and `CC BY-NC 4.0` forbids the commercial deployment that
+makes it a deliverable. 🔴 **It has also been unpushed since `2026-06-29`.**
+
+🔴 **`workstation-teacher` is the instructive one.** A homeroom-teacher workstation (timetables
+across multiple taught classes), `70` forks on `182★`, and its `LICENSE` is a **bespoke
+non-commercial instrument written in Chinese** — not an SPDX identifier, not a recognisable
+template. 🔵 **`search/repositories` reported `NOASSERTION` for it and for `ExamPass-Assistant`
+alike, and `NOASSERTION` concealed two completely different problems.** 🟢 **Standing rule
+reinforced: on this shelf `NOASSERTION` is not a licence state, it is an instruction to read the
+file.**
+
+🟡 **`braillewave-curriculum-engine` is the one worth regretting.** An ESP32 Braille trainer with
+a progressive curriculum and a web UI — 🔵 **the only accessibility-first education repository that
+surfaced at any threshold this pass** — and there is no grant to build on. **Declared gap, not a
+row.**
 ## 🟢 Fifty-second pass (`p847`, 2026-11-16) — **`2` agent rows (`424` → `426`), and the pass's most valuable output is a NEGATIVE: the largest auto-graded exercise estate on GitHub is not open source, and this base was one search away from shelving it**
 
 🟢 **`1` genuinely new build-safe agent** ([`Li-Evan/BloomTutor`](https://github.com/Li-Evan/BloomTutor),

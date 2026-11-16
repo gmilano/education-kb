@@ -1,0 +1,9 @@
+host	http_code	note
+raw.githubusercontent.com	301	rc=0
+api.github.com	200	rc=0
+compliancehub.wiki	000	rc=56
+www.bakerbotts.com	000	rc=56
+eur-lex.europa.eu	000	rc=56
+www.lexology.com	000	rc=56
+vietnamnews.vn	000	rc=56
+www.unesco.org	000	rc=56

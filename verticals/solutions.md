@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — fifty-third pass (`p848`): **the ninth consecutive nil on the LMS leg, and the SIS tier finally gets a permissively-licensed option**
+
+🔴 **The mandated vertical leg was run again and returned the same seven platforms for the ninth
+consecutive pass** — Open edX (`AGPL-3.0`), Sakai (`ECL-2.0`), Moodle (`GPL-3.0`), OpenEduCat
+(`LGPL-3.0`), ILIAS (`GPL-3.0`), Chamilo (`GPL-3.0`), Canvas LMS (`AGPL-3.0` core, commercial
+cloud). 🟢 **All held, all unchanged, none permissive.** 🔵 **This base should stop treating that
+leg as a discovery instrument: nine passes is enough evidence that the open LMS market is a closed
+set of seven, and the useful question is what sits BESIDE them.**
+
+### 🟢 The SIS tier, re-stated with grants — and the hole in it is now partly filled
+
+🔵 **The Student Information System is the system of record a school will not let a studio
+replace**, which is why the licence on it decides whether an engagement can ship a derivative at
+all. 🔴 **For fifty-two passes every option on this shelf was either copyleft or ungranted:**
+
+| Platform | ★ | Grant | What that means for a studio |
+|---|---|---|---|
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `654` | `GPL-2.0` | 🔴 Mature and actively pushed (`2026-11-13`), but a derivative **inherits `GPL-2.0`** and cannot ship inside a closed product |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `351` | 🔴 **No grant reported** | 🔴 Self-describes as "commercial grade"; the open repository carries no licence this base can verify. **Treat as proprietary until a grant is byte-read** |
+| [`hassanhabib/OtripleS`](https://github.com/hassanhabib/OtripleS) | `342` | 🔴 **No grant reported** | 🔴 Also unpushed since `2024-07-18`. **Stale and ungranted** |
+| 🟢 [`jobic10/student-management-using-django`](https://github.com/jobic10/student-management-using-django) | `394` | 🟢 **MIT — byte-read** (`1,075 B`, `sha256₁₂ 92be33e226c0`) | 🟢 **NEW this pass.** Permissive. A derivative can ship closed |
+
+🟢 **What the new row actually gives you.** Role-separated administration out of the box — admin,
+staff and student surfaces — with attendance capture, result entry, leave request and approval,
+course/subject/session modelling, feedback routing, and per-role summary dashboards, on Django with
+an AdminLTE front end.
+
+🔴 **What it does NOT give you, stated plainly so no engagement is scoped on a misreading.** Its
+own `README` calls it *"a Simple Student Management System Developed While Learning Django"*. There
+is **no multi-tenancy**, **no SIS interchange format** (no OneRoster, no Ed-Fi, no SIF), no
+timetabling engine, no fees or finance module, and no identity integration. 🟡 **`1` open issue on
+`394★` indicates a quiet repository, not a well-maintained one.**
+
+🔵 **So file it correctly: it is a licence-clean SCAFFOLD, not a product.** 🟢 **The honest
+engagement shape is "we build the client's SIS, starting from a permissive skeleton that already
+models the five entities every school has" — which is a materially better starting position than
+either re-implementing role-based school administration from zero or inheriting `GPL-2.0`.**
+🔵 **`202` forks against `394★` (`1:1.95`, the highest ratio on this shelf) is independent evidence
+that this is how other people are already using it.**
+
+### 🟡 Still unfilled on this shelf
+
+- 🔴 **No permissively-licensed LMS.** Nine passes, seven platforms, zero permissive. The
+  compose patterns continue to pair a copyleft LMS with permissive AI services across a process
+  boundary rather than embedding in it — see `compose/patterns.md`.
+- 🔴 **No open SIS with an interchange format.** OneRoster / Ed-Fi support is absent from every
+  open option above, which makes rostering integration bespoke work in every engagement.
+- 🔴 **No education-specific MCP server** above `100★` (`0` results this pass).
 ## 🟢 `2026-11-16` — fifty-second pass (`p847`): **the vertical nil ENDS — not with another LMS, but with the tier beneath every LMS pattern on this shelf: where the learner's code runs**
 
 🔵 **The mandated vertical leg was run globally and returned the same seven platforms as `p846`

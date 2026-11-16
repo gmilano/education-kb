@@ -6,6 +6,31 @@ updated: 2026-11-16
 
 # Globant AI Studios — Education KB
 
+**Pass `p848` · `2026-11-16`** — 🟢 **`p844`'s open Art. `50` residual is CLOSED, and the
+sub-paragraph that binds a STUDIO was never deferred: the deployer disclosure duty has been live
+since `2026-08-02` and the provider marking grace expires `2026-12-02`, `16` days from this pass.**
+🔴 **And `T906`'s standing theory of this environment's egress is WITHDRAWN — it is a GitHub-only
+allow-list, not a governmental-publisher pattern.**
+
+## What this pass established
+
+| | |
+|---|---|
+| 🟢 **`844-residual` CLOSED — and it was a sub-paragraph confusion, not a conflict** | 🟢 **Art. `50(2)` provider marking: grace to `2026-12-02` for systems placed on the EU market before `2026-08-02`; no grace for anything later; pre-cutoff content needs no retroactive labelling.** 🔴 **Art. `50(4)` deployer disclosure: never deferred, live since `2026-08-02`, therefore ALREADY LATE in every running deployment.** 🟡 Eight secondary readings; `CITED, NOT READ` (`P103`) |
+| 🔴 **`T906` WITHDRAWN — the egress refusal is an allow-list** | 🔴 **Eight-host probe, one loop: `raw.githubusercontent.com` `301` · `api.github.com` `200` · `compliancehub.wiki`, `bakerbotts.com`, `lexology.com`, `vietnamnews.vn`, `unesco.org`, `eur-lex.europa.eu` ALL `000` `rc=56`.** 🔵 **Law firms and news outlets fail exactly as governments do.** 🟢 `p844`–`p846` each reasoned from the withdrawn theory (`T162`) |
+| 🟢 **Vietnam's high-risk list is ENUMERATED, and education is `3` of `46`** | 🟢 **`Decision 33/2026/QD-TTg`, effective `2026-08-15`: `46` systems, `6` sectors — transport `31`, ethnic/religious `7`, 🔵 **education `3`**, healthcare `2`, banking `2`, judicial `1`.** The three: uncontrolled-source self-learning content · automatic learner evaluation and ranking · biometric learner-behaviour monitoring. **Education deadline `2027-09-01`** (`P104`) |
+| 🔵 **The two ENUMERATED education regimes are `92` days apart, and the earlier one is not European** | 🔵 **Vietnam `2027-09-01` vs EU Annex III `2027-12-02`.** 🔴 **A client with both markets who plans on the European calendar misses the binding date by a quarter.** 🟢 Build assessment conformity ONCE, as a portable artefact |
+| 🟢 **`2` agent rows (`426` → `428`), both byte-read MIT** | 🟢 [`jobic10/student-management-using-django`](https://github.com/jobic10/student-management-using-django) (`394★`/`202` forks, MIT, `1,075 B`, `sha256₁₂ 92be33e226c0`) — 🔵 **the first permissively-licensed role-based school-administration skeleton on this shelf**, fork ratio `1:1.95`. 🟢 [`brian901106/japanese-tutor-mugi`](https://github.com/brian901106/japanese-tutor-mugi) (`104★`, MIT, APAC) |
+| 🔴 **`1,047★` disqualified at the grant, and `NOASSERTION` hid two unrelated failures** | 🔴 [`WUBING2023/ExamPass-Assistant`](https://github.com/WUBING2023/ExamPass-Assistant) `809★` → **`CC BY-NC 4.0`**; [`cyberdaddyleo/workstation-teacher`](https://github.com/cyberdaddyleo/workstation-teacher) `182★` → **bespoke Chinese non-commercial licence**; [`Neoza99/braillewave-curriculum-engine`](https://github.com/Neoza99/braillewave-curriculum-engine) `56★` → **no `LICENSE` at all** (`T163`) |
+| 🔴 **The repository nils are ATTRIBUTABLE now, not just recorded** | 🔴 **`506` addresses swept, `230` new to this base, `0` foundational rows.** 🔵 **`teacher`, `curriculum` and `exam` collide with machine-learning vocabulary — a star-sorted sweep returns on-policy distillation papers and AWS certification guides before any classroom.** 🟢 Both rows filed this pass came from ARTEFACT nouns and `created:`-bounded slices (`T164`, `ACTION p848-B`) |
+| 🔴 **Ninth consecutive nil on the LMS leg** | 🔴 Same seven platforms (Open edX, Sakai, Moodle, OpenEduCat, ILIAS, Chamilo, Canvas), all held, **none permissive**. 🔵 **Nine passes is enough: the open LMS market is a closed set of seven, and the useful question is what sits BESIDE them** |
+| 🔴 **Declared gaps, measured not assumed** | 🔴 `0` results at stated thresholds for Spanish-language, Portuguese-language, India-edtech, Africa-school-management, education-MCP and general-autograder legs. 🔴 `848-G1` SIS interchange (no OneRoster/Ed-Fi/SIF anywhere) · `848-G2` accessibility (one repo, no grant) · `848-G3` no education MCP server, no open autograder |
+
+🔵 **`2` new recipes:** `P103` (Art. `50` marking retrofit — a dated, two-week EMEA engagement
+expiring `2026-12-02`) and `P104` (the Decision-33 registry — enumerate, then design out of two of
+the three triggers and decline the third).
+
+
 **Pass `p846` · `2026-11-16`** — 🟢 **`845-G1` is CLOSED: all `815` addresses on these shelves
 swept first-party in `3` minutes `30` seconds.** 🔴 **And the instrument that swept them is not a
 liveness oracle — `6` of the `11` addresses it could not resolve are ALIVE, including BOTH of the

@@ -4,6 +4,31 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-third pass (`p848`) — 🔴 **a `506`-address sweep, `230` of them new to this base, and `0` foundational rows: the yield was real and the relevance was not**
+
+🟢 **First-party `search/repositories`, ten queries, `2026-11-16`.** 🔴 **The headline number is a
+trap and is recorded here so the next pass does not re-walk it:** `230` previously-unheld addresses
+is the largest apparent yield in recent passes, and the pile is courseware, certification guides
+and **teacher–student distillation papers**. See `repos/foundations.md` (`p848`) for the breakdown.
+
+### What actually moved
+
+| Repo | ★ / forks | Licence | Pushed | Status |
+|---|---|---|---|---|
+| [`jobic10/student-management-using-django`](https://github.com/jobic10/student-management-using-django) | `394` / `202` | 🟢 `MIT` (byte-read) | `2026-11-11` | 🟢 **NEW** — SIS skeleton, fork ratio `1:1.95` |
+| [`brian901106/japanese-tutor-mugi`](https://github.com/brian901106/japanese-tutor-mugi) | `104` / `36` | 🟢 `MIT` (byte-read) | `2026-11-02` | 🟢 **NEW** — APAC conversational tutor |
+| [`WUBING2023/ExamPass-Assistant`](https://github.com/WUBING2023/ExamPass-Assistant) | `809` / `51` | 🔴 `CC BY-NC 4.0` (byte-read) | `2026-06-29` | 🔴 **REJECTED** — non-commercial |
+| [`cyberdaddyleo/workstation-teacher`](https://github.com/cyberdaddyleo/workstation-teacher) | `182` / `69` | 🔴 custom non-commercial (byte-read) | `2026-11-06` | 🔴 **REJECTED** — non-commercial |
+| [`Neoza99/braillewave-curriculum-engine`](https://github.com/Neoza99/braillewave-curriculum-engine) | `56` / — | 🔴 none | `2026-11-16` | 🔴 **REJECTED** — no grant |
+
+🔵 **Re-confirmed, unchanged, already held:** `Li-Evan/BloomTutor` (`310★`, MIT),
+`HKUDS/DeepTutor`, `GarethManning/education-agent-skills` (`990★`, `NOASSERTION`),
+`ankimcp/anki-mcp-server` (`560★`, MIT), `artcc/freelingo` (`280★`, `AGPL-3.0`),
+`zijinz456/OpenTutor` (`176★`, MIT), `ctrlaltwill/LearnKit` (`185★`, MIT),
+`ZeKaiNie/universal-examprep-skill` (`391★`, MIT), `molly554/whiteboard-ai-tutor` (`208★`, MIT),
+`francoisjacquet/rosariosis` (`654★`, `GPL-2.0`), `OS4ED/openSIS-Classic` (`351★`, no grant).
+🟢 **Every address returned by the first targeted harvest leg was already on these shelves** — a
+`12`-for-`12` hit rate that says the curated agent shelf is, at this point, dense.
 ## `2026-11-16` — fifty-second pass (`p847`) — 🟢 **`8` new rows from a layer `51` passes never filed: where the learner's code RUNS**
 
 🔵 **`p846` found repositories the search index cannot see. `p847` found a LAYER the base's own

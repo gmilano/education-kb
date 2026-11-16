@@ -1,0 +1,7 @@
+query	results	verdict
+educacion IA espanol stars:>20	0	NIL - no Spanish-language education AI repo above threshold
+educacao IA portugues stars:>20	0	NIL - no Portuguese-language education AI repo above threshold
+edtech india stars:>20	0	NIL - no India-origin edtech repo above threshold
+school management africa stars:>15	0	NIL - no Africa-scoped school management repo above threshold
+MCP server education learning stars:>100	0	NIL - no education-specific MCP server above threshold
+assessment engine autograder stars:>100 pushed:>2026-01-01	0	NIL - no general autograder above threshold

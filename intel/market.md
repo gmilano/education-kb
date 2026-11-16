@@ -4,6 +4,182 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-third pass (`p848`, 2026-11-16) — **`p844`'s open residual is CLOSED: the Article `50` marking grace ends `2026-12-02`, `16` days from this pass — and the sub-paragraph that bites a STUDIO was never deferred at all**
+
+🟡 **Provenance, stated before the findings.** Every regulatory fact below is **search-tier**:
+read from indexed secondary commentary via WebSearch, **`CITED, NOT READ`**. 🔴 **No primary text
+was retrievable from this environment, and this pass established why — see `T162`: direct HTTP is
+an allow-list that admits GitHub hosts and nothing else.** `eur-lex.europa.eu`,
+`www.lexology.com`, `vietnamnews.vn`, `www.unesco.org`, `www.bakerbotts.com` and
+`compliancehub.wiki` all fail identically at `rc=56` (`evidence/egress-allowlist-probe.2026-11-16-p848.tsv`).
+🟢 **Do not quote these dates to a client as verified; quote them as the consensus of named
+secondary readings and have counsel confirm against the Official Journal.**
+
+### 🟢 EMEA — the residual `p844` carried is resolved, and it splits in a way that changes who is late
+
+🔴 **`p844` recorded: *"the content-marking grace for systems already on the market is reported as
+`2026-12-02` in one source against Art. `50` from `2026-08-02` in others. Quote Art. `50` as live;
+quote the marking grace as contested."*** 🟢 **It is no longer contested. Both are true, because
+they are different sub-paragraphs.**
+
+| Duty | Who it binds | When it applies | State today (`2026-11-16`) |
+|---|---|---|---|
+| **Art. `50(2)`** — machine-readable marking of synthetic output | 🔵 **Providers** | Systems placed on the EU market **on or after `2026-08-02`**: 🔴 **no grace, marking from day one** | 🔴 **LIVE** |
+| **Art. `50(2)`** — same duty, legacy estate | 🔵 **Providers** | Systems placed on the market **before `2026-08-02`**: 🟢 grace until **`2026-12-02`** | 🔴 **`16` DAYS REMAIN** |
+| **Art. `50(4)`** — disclosure that content is AI-generated / that the learner is interacting with AI | 🔵 **Deployers** | 🔴 **Not deferred at all** | 🔴 **LIVE since `2026-08-02` — already late** |
+| Annex III stand-alone high-risk — education | Providers | Deferred by `Regulation (EU) 2026/1744` | `2027-12-02` |
+| Annex I product-embedded | Providers | | `2028-08-02` |
+
+🟢 **The commercially important line is the third one.** 🔵 **A studio delivering an education AI
+system into a European institution is ordinarily a *deployer* or is building for one, and the
+deployer's Art. `50(4)` disclosure duty was never in any grace period.** 🔴 **It has been live
+since `2026-08-02` and is therefore already late in every running deployment** — which sharpens
+rather than contradicts this file's standing `T147` advice.
+
+🟢 **The second line is the dated one worth acting on.** 🔵 **Any generative education system a
+client placed on the EU market before `2026-08-02` has until `2026-12-02` to retrofit
+machine-readable marking.** 🟢 **Content generated before the cutoff does not need retroactive
+labelling** — the relief is prospective, which bounds the remediation to the pipeline rather than
+the archive. 🔵 **That is a two-week, scopeable engagement with a statutory deadline on it, and it
+is the single most sellable compliance item in this file right now.**
+
+🟡 **Corroboration: eight independent secondary readings** — Baker Botts, `compliancehub.wiki`,
+`reptile.haus`, `intelliconnectq.com`, `highcircl.com`, `complylayer.com`, `regulation-ai.eu`,
+`technology.org`. 🔴 **Residual, carried honestly:** the sources split on whether `2026-12-02` is
+best described as a *grace period* or a *provider deadline*. 🟢 **They agree on the date and on the
+substance**, so the disagreement is vocabulary, not law.
+
+### 🟢 APAC — Vietnam's high-risk list is ENUMERATED, and education is `3` of `46`
+
+🟢 **`Decision No. 33/2026/QD-TTg`, effective `2026-08-15`, lists `46` high-risk AI systems across
+`6` sectors.** 🔵 **This base already held that Vietnam names education high-risk. What it did not
+hold is the enumeration, and the enumeration is the usable part.**
+
+| Sector | Systems named | Share of the `46` |
+|---|---|---|
+| Transport | `31` | `67%` |
+| Ethnic and religious affairs | `7` | `15%` |
+| 🔵 **Education** | 🔵 **`3`** | 🔵 **`7%`** |
+| Healthcare | `2` | `4%` |
+| Banking | `2` | `4%` |
+| Judicial proceedings | `1` | `2%` |
+
+🟢 **The three education systems, as reported:**
+
+1. 🔴 **Self-learning content generated from uncontrolled data sources.**
+2. 🔴 **Systems that automatically evaluate and rank learners.**
+3. 🔴 **Systems that monitor learner behaviour using biometric data.**
+
+🔵 **Read those as a product specification in reverse.** 🟢 **An adaptive tutor that generates its
+own material from an open corpus hits (1); any placement, streaming or leaderboard feature hits
+(2); any webcam-based attention or proctoring feature hits (3).** 🔵 **This base's standing
+architectural lever applies directly and is now sharper: Vietnam's regime treats many listed
+systems as high-risk *only where their output is the sole basis for a decision without meaningful
+human review*** — so **(2) is designable around with a human-in-the-loop grade release**, while
+**(1) is designable around with a curated corpus**, and 🔴 **(3) is not designable around at all —
+it is a feature to decline.**
+
+🟢 **Timetable.** Systems already operating get **`18` months** in medical, education and finance
+and **`12` months** elsewhere. 🔵 **Education deadline: `2027-09-01`. Other listed sectors:
+`2027-03-01`.** 🟢 **During the transition an existing system may keep operating unless a competent
+State agency finds serious risk and orders suspension.** 🔴 **Discrepancy recorded, not resolved:**
+sources differ on whether the `2027-09-01` date anchors to Decision 33's effective date
+(`2026-08-15`) or to the Law's (`2026-03-01`), and on whether Decision 33 was signed `30 June` or
+`2 July 2026`. 🟢 **This base's previously-carried derivation — "compliance by `2027-03-01`,
+education systems operating before `2026-08-15` receive a further six months" — agrees with the
+`2027-09-01` figure, which is independent corroboration of the date from two directions.**
+
+### 🟢 Cross-region — the two ENUMERATED education regimes are `92` days apart, and the earlier one is not the European one
+
+🔵 **A studio selling one adaptive-assessment product into both the EU and Vietnam now has two
+dated conformity deadlines:**
+
+| Regime | Education obligation bites | Gap |
+|---|---|---|
+| 🔵 **Vietnam** — Law on AI `134/2025/QH15` + Decision `33/2026/QD-TTg` | 🔴 **`2027-09-01`** | — |
+| EU — AI Act Annex III as amended by `Regulation (EU) 2026/1744` | `2027-12-02` | 🔵 **`92` days later** |
+
+🟢 **So the binding date is the Vietnamese one.** 🔵 **Most compliance planning in this market
+anchors on the European calendar; a product with APAC distribution is on a clock that runs out a
+quarter earlier.** 🔴 **And the two regimes converge on the same trigger — automated assessment of
+learners — from completely different legal traditions**, which is the strongest argument this file
+has for building assessment conformity ONCE, as a portable artefact, rather than per-jurisdiction.
+
+### 🔴 North America, LATAM, Global — legs run, `0` new facts
+
+🟢 **All four mandated regional legs were run.** 🔴 **Every distinctive fact the North America and
+LATAM legs returned was already on this shelf**, checked with `grep` before being called new:
+North Carolina **Session Law 2026-41** and its `2026-12-31` / `2027-06-30` / `2028-06-30`
+milestones; the `35+` states with departmental AI guidance; the conflicting bill counts (`134`
+bills / `31` states versus `71` / `27`, a counting-method difference); the US Department of
+Education FIPSE awards; Universidad de los Andes' **`716` regulatory instruments across `23`
+countries and territories**; **Uruguay** as the first LATAM signatory of the Council of Europe AI
+treaty; Argentina's deregulatory bill; Colombia's capacity-building national policy to 2030;
+Brazil's EU-modelled framework; UNESCO IESALC's **`87%` adoption against `26%` with a strategy**;
+Brazil's **`53%` of administrators using AI against `22%` with guidelines**; the UNESCO regional
+observatory and `Latam-GPT`. 🟢 **Held, all of it.**
+
+🟡 **One Global figure is worth re-stating because it is the one that survives sales pressure:**
+🔴 **only `45%` of the most-used education tools have published research meeting an ESSA evidence
+tier.** 🔵 **In a market where the OECD's 2026 Digital Education Outlook warns that AI helps
+learning only where pedagogy stays in control, an evidence package is a differentiator, not
+overhead.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **Sell the deadline, not the model.** North Carolina's Session Law 2026-41 requires a **state
+model policy by `2026-12-31`**, **local school-unit policies by `2027-06-30`** and **teacher
+training by `2028-06-30`**, and `35+` states now publish departmental AI guidance. 🔵 **That is a
+three-stage, dated procurement pipeline: policy artefact, then district-level implementation, then
+training delivery at scale.** 🟢 **The studio asset that wins it is a policy-to-implementation
+toolkit — a model policy mapped to concrete system controls — not a tutor.** 🔵 **Pair it with an
+ESSA-tier evidence package, since federal grant priorities now favour projects demonstrating
+appropriate and ethical AI use.**
+
+### EMEA
+
+🔴 **Two dated items, one of them `16` days away.** 🟢 **Offer (a) an Art. `50(2)` marking
+retrofit for any generative education system placed on the EU market before `2026-08-02`, due
+`2026-12-02`, bounded to the generation pipeline because pre-cutoff content needs no retroactive
+labelling; and (b) an Art. `50(4)` deployer-disclosure remediation, which is already late and
+therefore sells without a deadline argument.** 🔵 **Then position the Annex III work for
+`2027-12-02` as the follow-on.** 🟢 **The sovereignty thread — the October 2026 Council text on
+reducing dependence on non-European AI tools and the European Digital Education Hub — makes a
+self-hosted stack (Moodle or Open edX beside locally-run models) the architecture to lead with.**
+
+### APAC
+
+🟢 **Vietnam is the sharpest opportunity in this file because it enumerates.** 🔵 **A registry of
+a client's AI systems mapped against Decision 33's `46` entries is a deliverable that can be
+produced in weeks and that every other regime in this file silently presupposes.** 🟢 **Then sell
+the architectural lever: human-in-the-loop grade release moves automated learner evaluation and
+ranking out of the sole-basis trigger, and a curated corpus moves generated content out of
+"uncontrolled data sources".** 🔴 **Decline biometric behaviour monitoring outright — it is named,
+and it is not designable around.** 🔵 **Deadline `2027-09-01`, a quarter ahead of Europe.**
+🟡 **Note the demand signal is uneven: Ipsos' 2026 Education Monitor shows support for banning AI
+in schools RISING in Australia, Japan and South Korea while falling in Indonesia (`30%` → `23%`).**
+
+### LATAM
+
+🟢 **The gap is governance, and it is measured: `87%` of surveyed institutions use AI, `26%` have a
+strategy; in Brazil `53%` of administrators use AI and `22%` have guidelines.** 🔵 **That ratio is
+the engagement — institutional AI governance as a product, not a policy PDF: an inventory, a risk
+register, an acceptable-use framework and a measurement plan.** 🟢 **UNESCO's regional observatory,
+`Latam-GPT` and the `716`-instrument regulatory map give the work credible anchors.** 🔴 **And this
+pass adds a supply-side caution: Spanish- and Portuguese-language education repositories returned
+`0` results at every threshold tried, so the regional build must assume content is created, not
+adopted** — see `compose/patterns.md` `P102`.
+
+### Global
+
+🔵 **Build the assessment-conformity artefact once.** 🟢 **The EU (`2027-12-02`) and Vietnam
+(`2027-09-01`) converge on automated learner assessment as the regulated object from different
+legal traditions; a portable conformity package — model documentation, human-review design,
+disclosure surfaces, marking implementation — amortises across both and is reusable in every
+jurisdiction that follows.** 🔴 **Carry the `45%` ESSA evidence figure into every pitch: the market
+is tightening on proof, and most incumbents cannot show it.**
 ## 🟡 Fifty-second pass (`p847`, 2026-11-16) — **`4` regions queried plus Global. `4` of `19` distinctive regional facts were NOT already on this shelf, and the most useful one is a LATAM SUPPLY fact rather than a demand figure.**
 
 🔵 **Method, unchanged from `p843`:** every fact the regional legs returned was checked against

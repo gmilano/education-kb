@@ -4,6 +4,60 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` (fifty-third pass, `p848`) — **`p844`'s Art. `50` residual CLOSED, `T906`'s theory WITHDRAWN, `ACTION p844-A` BROADENED**
+
+### 🟢 `844-residual` (Art. `50` marking grace) — CLOSED
+
+🟢 **Resolved: `2026-12-02`, for generative systems placed on the EU market before `2026-08-02`.**
+🔵 **The apparent contradiction was a sub-paragraph confusion**: Art. `50(2)` (provider marking)
+carries the legacy grace; Art. `50(4)` (deployer disclosure) carries none and has been live since
+`2026-08-02`. 🟡 **Search-tier, eight secondary readings.** → `intel/market.md` (`p848`), `P103`.
+
+### 🔴 `T906` — theory WITHDRAWN
+
+🔴 **"The refusal tracks the publisher being GOVERNMENTAL" is false.** An eight-host probe shows
+law-firm, trade-press and news hosts failing identically (`rc=56`) to governmental ones, while
+GitHub hosts succeed. 🟢 **Replaced by `T162`: direct HTTP is a GitHub-only allow-list.**
+🔵 **`p844`, `p845` and `p846` each reasoned from the withdrawn theory.**
+
+### 🟢 `ACTION p848-A` — BROADEN the allow-list request (supersedes the framing of `ACTION p844-A`)
+
+🔵 **`ACTION p844-A` asked for governmental domains.** 🟢 **The request should name the sources
+that actually carry education-AI regulatory analysis**: legal trade press (`lexology.com`),
+law-firm commentary (`bakerbotts.com` and peers), compliance analysis (`compliancehub.wiki`),
+intergovernmental publishers (`unesco.org`, `oecd.org`) and primary law (`eur-lex.europa.eu`),
+alongside national gazettes. 🔴 **Until granted, every non-GitHub fact in this base is
+`CITED, NOT READ` as a matter of environment, and no pass should queue a "read the primary" action.**
+
+### 🟢 `ACTION p848-B` — change the repository query vocabulary
+
+🔴 **`T164`: the terms `teacher`, `curriculum`, `exam` and `tutorial` collide with machine-learning
+vocabulary and return distillation research and certification guides ahead of any classroom.**
+🟢 **Subsequent passes should query ARTEFACT nouns** — `student information system`, `gradebook`,
+`rostering`, `lesson plan`, `enrolment`, `proctoring`, `learning record store`, `question bank` —
+🟢 **and use `created:`-bounded slices to defeat star-sorting.** 🔵 **Both rows filed this pass came
+from that method; `0` came from the mandated keyword legs.**
+
+### 🔴 `848-G1` — OPEN: the SIS interchange gap
+
+🔴 **No open SIS on these shelves supports OneRoster, Ed-Fi or SIF.** 🔵 **That makes rostering
+integration bespoke work in every engagement, and it is the single largest unpriced line item in
+the SIS patterns.** 🟢 **Next pass: search the interchange formats directly as artefact nouns, per
+`ACTION p848-B`, rather than searching for SIS products.**
+
+### 🔴 `848-G2` — OPEN: accessibility returned exactly one repository, and it has no grant
+
+🔴 [`Neoza99/braillewave-curriculum-engine`](https://github.com/Neoza99/braillewave-curriculum-engine)
+(`56★`) was the only accessibility-first education repository to surface at any threshold, and it
+carries **no `LICENSE` on `main` or `master`**. 🔵 **Accessibility is a procurement requirement in
+every public-sector education engagement in North America and EMEA, and this base has nothing
+build-safe to offer against it.** 🟢 **Next pass: query `screen reader`, `WCAG`, `braille`, `AAC`,
+`captioning` as artefact nouns.**
+
+### 🔴 `848-G3` — OPEN, carried: no education-specific MCP server, no open autograder
+
+🔴 **`0` results at `>100★` for both, second pass running.** 🟢 **Recorded as a BUILD opportunity
+rather than a gap in this base's coverage** — see `repos/foundations.md` (`p848`).
 ## 🟢 `2026-11-16` (fifty-first pass, `p846`) — **`845-G1` CLOSED by execution, `ACTION p845-A` CARRIED, and `2` of this base's `3` recorded deaths WITHDRAWN**
 
 ### 🟢 `845-G1` — CLOSED. The whole shelf is swept.

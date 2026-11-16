@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Fifty-third pass (`p848`, 2026-11-16) — **`0` rows (`216` → `216`). The nil is declared, and for the first time it is ATTRIBUTABLE to this base's own query vocabulary rather than to the supply.**
+
+🟢 **What was run.** Ten first-party `search/repositories` harvest queries plus the four mandated
+WebSearch legs. The sweep returned **`506` addresses**, of which **`230` were not held anywhere on
+these shelves** — a large apparent yield. 🔴 **`0` of them qualify as a foundational education
+repository.**
+
+🔵 **Why, precisely.** The `230` new addresses sort into three piles, none of them this industry:
+
+| Pile | What it actually is | Examples returned at the top of the sweep |
+|---|---|---|
+| Courseware and curricula | Programming-learning content, not education *systems* | `charlax/professional-programming` (`51,677★`), `denysdovhan/wtfjs` (`37,693★`), `hemanth/functional-programming-jargon` (`18,744★`) |
+| 🔴 Certification study guides | Matched on the word `exam` | AWS SAA-C03 guides, AZ-104 labs, RHCSA simulators, Claude/GitHub certification guides |
+| 🔴 **Machine-learning distillation research** | Matched on the word `teacher` | `Open-MOPD`, `DN-MOPD`, `D^3-MOPD`, `AC-OPD`, `Vision-OPD`, `tracedistill`, `nv-tlabs/cmd` |
+
+🔴 **That third pile is the finding.** This base's education vocabulary — `teacher`, `curriculum`,
+`exam`, `tutorial` — collides head-on with machine-learning terminology, where *teacher* means a
+model being distilled from and *curriculum* means a training schedule. 🔵 **A star-sorted sweep on
+those words buries real education systems under distillation papers**, and that is a structural
+property of the query, not of the week.
+
+🟢 **The two rows this pass DID file were found by system-noun queries** — `student information
+system`, `school management system` — and by `created:`-bounded slices, not by the keyword legs.
+🟢 **Both are filed on the agents shelf and the SIS one additionally on `verticals/solutions.md`**,
+because a role-separated school-administration application is a platform to customise, not a
+library to depend on. See `agents/top.md` (`p848`, Findings 1–2).
+
+### 🔴 Declared gaps — six legs, zero results each
+
+🟢 Recorded in full at `evidence/repo-harvest-nils.2026-11-16-p848.tsv`. At the stated thresholds,
+**no result at all** was returned for:
+
+- `educacion IA español stars:>20` — 🔴 **`0`**
+- `educação IA português stars:>20` — 🔴 **`0`**
+- `edtech india stars:>20` — 🔴 **`0`**
+- `school management africa stars:>15` — 🔴 **`0`**
+- `MCP server education learning stars:>100` — 🔴 **`0`**
+- `assessment engine autograder stars:>100 pushed:>2026-01-01` — 🔴 **`0`**
+
+🔵 **Two of these are worth a studio's attention as ABSENCES.** There is still **no
+education-specific MCP server** above `100★` — the closest thing on these shelves remains
+[`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) (`560★`, MIT), which is a
+flashcard bridge, not an education-domain server. 🔴 **And there is no general-purpose open
+autograder above `100★` pushed this year**, which is the second pass running that the grading tier
+has come back thin. 🟢 **Both are build opportunities rather than build-on opportunities** — see
+`compose/patterns.md` `P103`.
 ## 🟢 Fifty-second pass (`p847`, 2026-11-16) — **`9` rows (`207` → `216`): the CLASSROOM-COMPUTE layer, which `51` passes legislated about and never filed, plus the auto-grading toolkit that closes part of the standing grading gap**
 
 🔵 **Why this layer was missing.** Every tutoring, lab-grading and data-science pattern in

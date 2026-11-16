@@ -4,6 +4,94 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-third pass (`p848`, 2026-11-16) — `3` trends (`T162`–`T164`)
+
+## `T162` — the egress refusal is an ALLOW-LIST, not a publisher pattern, and three passes have reasoned from the wrong theory (fifty-third pass, `p848`, Global)
+
+🔴 **`T906` concluded that this environment's fetch failures "track the publisher being
+GOVERNMENTAL, not the jurisdiction being European", and `p844`, `p845` and `p846` each carried that
+theory forward** — `p844` going so far as to convert an open question into an allow-list request
+(`ACTION p844-A`) on its strength.
+
+🟢 **`p848` measured it instead of inferring it.** An eight-host probe, one loop, `2026-11-16`
+(`evidence/egress-allowlist-probe.2026-11-16-p848.tsv`):
+
+| Host | Result | Kind |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 `301` | GitHub |
+| `api.github.com` | 🟢 `200` | GitHub |
+| `compliancehub.wiki` | 🔴 `000` `rc=56` | Commercial compliance blog |
+| `www.bakerbotts.com` | 🔴 `000` `rc=56` | 🔵 **International law firm** |
+| `www.lexology.com` | 🔴 `000` `rc=56` | 🔵 **Commercial legal trade press** |
+| `vietnamnews.vn` | 🔴 `000` `rc=56` | 🔵 **News outlet** |
+| `www.unesco.org` | 🔴 `000` `rc=56` | Intergovernmental |
+| `eur-lex.europa.eu` | 🔴 `000` `rc=56` | Governmental |
+
+🔵 **Law firms, trade press and news outlets fail identically to governments.** 🟢 **The variable
+is not the publisher and not the jurisdiction: direct HTTP from this environment reaches GitHub
+hosts and nothing else.** 🔴 **`rc=56` is uniform across all six non-GitHub hosts, which is a
+single mechanism, not six coincidences.**
+
+🟢 **Three consequences, and they are operational.**
+
+1. 🔴 **Every non-GitHub fact in this base is permanently `CITED, NOT READ`, and always was.**
+   The `CITED, NOT READ` marker should be read as a property of the environment, not as a defect of
+   the pass that recorded it.
+2. 🔴 **Stop queueing "read the primary source" actions.** They cannot be executed here, and
+   `p844`–`p846` spent three passes' attention on a question no pass in this environment can close.
+3. 🟢 **`ACTION p844-A` is correct and should be BROADENED**: the request is not "allow the
+   governmental domains", it is "allow the research domains", and it should name trade press and
+   law-firm commentary explicitly, because those are the sources that actually carry education-AI
+   regulatory analysis.
+
+🟢 **What still works, and works well**: `search/repositories` and `raw.githubusercontent.com`.
+🔵 **Which is why this base's licence discipline is byte-read and its market intel is not — that
+asymmetry is environmental, and it is worth stating in any client-facing extract.**
+
+## `T163` — `NOASSERTION` concealed two unrelated failures in one sweep, on two continents (fifty-third pass, `p848`, Global)
+
+🟢 **`p847` recorded `P990` — "a file named `LICENSE` is not necessarily a grant" — firing once.**
+🔴 **`p848` had it fire twice more in a single sweep, and the two cases have nothing in common
+except the string `NOASSERTION`:**
+
+| Address | ★ | What `search/repositories` reported | 🔴 What the bytes said |
+|---|---|---|---|
+| [`WUBING2023/ExamPass-Assistant`](https://github.com/WUBING2023/ExamPass-Assistant) | `809` | `NOASSERTION` | `CC BY-NC 4.0` — a **standard, recognisable** non-commercial instrument, `16,364 B` |
+| [`cyberdaddyleo/workstation-teacher`](https://github.com/cyberdaddyleo/workstation-teacher) | `182` | `NOASSERTION` | 🔵 **A bespoke non-commercial licence hand-written in Chinese**, `3,836 B` |
+
+🔵 **One is a licence GitHub could in principle have classified and did not; the other is a legal
+instrument no classifier could have known.** 🟢 **`NOASSERTION` is therefore not a weak signal to
+be weighted — it carries no information about the licence at all.** 🔴 **Treat it as `UNKNOWN` and
+read the file, every time, with no exception for high star counts.**
+
+🔵 **Scale of what this rule caught this pass: `991★` across the two repositories**, both of them
+tooling a studio would otherwise have reached for — courseware-to-revision conversion and teacher
+workstation management. 🟢 **The cost of the rule is one `curl` per candidate. Keep it.**
+
+## `T164` — this base's education vocabulary collides with machine-learning terminology, and the collision is what the nil legs are made of (fifty-third pass, `p848`, Global)
+
+🔴 **Eight passes have recorded nils on the mandated repository legs and attributed them to
+supply.** 🟢 **`p848` ran a `506`-address sweep and looked at what came back instead: `230`
+addresses new to this base, and the new ones sort almost entirely into three non-education piles.**
+
+🔵 **The third pile is the diagnosis.** The query terms this base uses for education —
+**`teacher`**, **`curriculum`**, **`exam`**, **`tutorial`** — are also core machine-learning
+vocabulary, where *teacher* is the model being distilled from and *curriculum* is a training
+schedule. 🔴 **A star-sorted sweep on `teacher` returns `Open-MOPD`, `DN-MOPD`, `D^3-MOPD`,
+`AC-OPD`, `Vision-OPD`, `tracedistill` and `nv-tlabs/cmd` — on-policy distillation research, every
+one — before it returns a single classroom.** 🔴 **`exam` returns AWS, Azure and RHCSA
+certification guides. `tutorial` returns everything.**
+
+🟢 **The corrective is already demonstrated, not theoretical: both rows filed this pass were found
+by SYSTEM NOUNS** — `student information system`, `school management system` — **and by
+`created:`-bounded slices that defeat star-sorting.** 🔵 **Neither came from the mandated keyword
+legs.**
+
+🟢 **Standing guidance for subsequent passes: query the ARTEFACT, not the ROLE.** Prefer `student
+information system`, `gradebook`, `rostering`, `lesson plan`, `enrolment`, `proctoring`,
+`learning record store`, `question bank` over `teacher`, `curriculum` and `exam`. 🔴 **And when a
+leg returns a large new-address count, check what the words matched before recording a yield** —
+`230` new addresses produced `0` foundational rows this pass.
 ## 🟢 Fifty-second pass (`p847`, 2026-11-16) — `4` trends (`T158`–`T161`)
 
 ## `T158` — the archive differential is NOT an alarm, and three passes have been reading it as one (fifty-second pass, `p847`, Global)

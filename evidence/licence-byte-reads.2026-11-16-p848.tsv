@@ -1,0 +1,6 @@
+repo	stars	forks	spdx_reported	licence_byte_read	bytes	sha256_12	branch_path	verdict
+jobic10/student-management-using-django	394	202	MIT	MIT	1075	92be33e226c0	main/LICENSE	BUILD-SAFE
+brian901106/japanese-tutor-mugi	104	36	MIT	MIT	1068	b349f14f3e8e	main/LICENSE	BUILD-SAFE
+WUBING2023/ExamPass-Assistant	809	51	NOASSERTION	CC-BY-NC-4.0	16364	1fd9c1306545	master/LICENSE	DISQUALIFIED-NONCOMMERCIAL
+cyberdaddyleo/workstation-teacher	182	70	NOASSERTION	custom-zh-noncommercial-v1.0	3836	3626d2070053	main/LICENSE	DISQUALIFIED-NONCOMMERCIAL
+Neoza99/braillewave-curriculum-engine	56	na	NONE	NO-LICENSE-FILE	0	na	main+master/LICENSE,LICENSE.md,LICENSE.txt all 404	DISQUALIFIED-NO-GRANT

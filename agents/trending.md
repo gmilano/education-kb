@@ -4,6 +4,61 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-third pass (`p848`) — 🔴 **the week's three highest-traction education repositories are all unusable, and the instrument that was supposed to check the fourth claim turns out to be fenced**
+
+🔵 **`p847` ended seven nil passes with one MIT tutor. `p848` adds two more MIT rows — and
+disqualifies `1,047★` worth of education tooling across three repositories in a single sweep.**
+
+### 🟢 Movement 1 — two MIT entrants, one of them filling a licence hole fifty-two passes old
+
+| Repo | ★ / forks | Licence (byte-read) | Pushed | Why it moved |
+|---|---|---|---|---|
+| [`jobic10/student-management-using-django`](https://github.com/jobic10/student-management-using-django) | `394` / `202` | 🟢 `MIT`, `1,075 B`, `sha256₁₂ 92be33e226c0` | `2026-11-11` | 🟢 **First permissively-licensed role-based school-administration skeleton on this shelf.** Fork ratio `1:1.95`, the highest here |
+| [`brian901106/japanese-tutor-mugi`](https://github.com/brian901106/japanese-tutor-mugi) | `104` / `36` | 🟢 `MIT`, `1,068 B`, `sha256₁₂ b349f14f3e8e` | `2026-11-02` | 🔵 Conversational tutor that keeps the API key off the browser by design; multi-layer cache. **APAC** |
+
+### 🔴 Movement 2 — `1,047★` disqualified at the grant, and `NOASSERTION` hid two different failures
+
+🔵 **This is the week's real signal.** Three education repositories with genuine traction, all
+unusable, each for a different reason:
+
+- 🔴 [`WUBING2023/ExamPass-Assistant`](https://github.com/WUBING2023/ExamPass-Assistant) — `809★` /
+  `51` forks. Courseware (PPT/Word/PDF) → structured revision material. 🔴 **`CC BY-NC 4.0`**,
+  byte-read `16,364 B`, `sha256₁₂ 1fd9c1306545`. **Non-commercial.** Unpushed since `2026-06-29`.
+- 🔴 [`cyberdaddyleo/workstation-teacher`](https://github.com/cyberdaddyleo/workstation-teacher) —
+  `182★` / `70` forks. 🔴 **A bespoke Chinese non-commercial licence** (`教师班主任工作台非商业许可协议`
+  v1.0), byte-read `3,836 B`, `sha256₁₂ 3626d2070053`.
+- 🔴 [`Neoza99/braillewave-curriculum-engine`](https://github.com/Neoza99/braillewave-curriculum-engine) —
+  `56★`. 🔴 **No `LICENSE` file on `main` or `master`.** 🟡 The only accessibility-first education
+  repository that surfaced this pass.
+
+🟢 **`search/repositories` reported `NOASSERTION` for the first two alike** — one a standard
+Creative Commons non-commercial instrument, one a hand-written licence in another language.
+🔵 **`NOASSERTION` is not a licence state. It is an instruction to read the file.** → `T163`.
+
+### 🔴 Movement 3 — the mandated legs' nil is now ATTRIBUTABLE, not just recorded
+
+🟢 **Ten harvest queries run first-party this pass; the Spanish, Portuguese, India-edtech,
+Africa-school-management, education-MCP and general-autograder legs returned `0` results each at
+the stated thresholds** (`evidence/repo-harvest-nils.2026-11-16-p848.tsv`). 🔴 **The generic
+topic sweep returned `506` addresses, `230` of them new to this base, and essentially all of the
+new ones are courseware, certification study guides, or machine-learning papers matching on the
+words `teacher`, `exam` and `curriculum`** — teacher–student *distillation* research, not teaching.
+
+🔵 **That is a vocabulary problem this base can now name**: its education query terms collide with
+ML training terminology hard enough that a star-sorted sweep buries real education systems under
+distillation papers. 🟢 **The two rows filed this pass were found by `created:`-bounded and
+system-noun queries (`student information system`, `school management`), not by the mandated
+keyword legs.** → `T164`.
+
+### 🔴 Movement 4 — the environment itself: a GitHub-only allow-list
+
+🔴 **Both attempts to READ this pass's regulatory sources failed at DNS.** An eight-host probe
+(`evidence/egress-allowlist-probe.2026-11-16-p848.tsv`) resolves it:
+`raw.githubusercontent.com` `301` · `api.github.com` `200` · **every other host `000`, `rc=56`** —
+`compliancehub.wiki`, `www.bakerbotts.com`, `www.lexology.com`, `vietnamnews.vn`, `www.unesco.org`
+and `eur-lex.europa.eu` alike. 🟢 **Commercial law-firm and trade-press hosts fail exactly as the
+governmental ones do.** 🔴 **So `T906`'s theory — that the refusal "tracks the publisher being
+GOVERNMENTAL" — is WRONG**, and three passes have been reasoning from it. → `T162`.
 ## `2026-11-16` — fifty-second pass (`p847`) — 🟢 **the eighth nil on the mandated legs ENDS: one new build-safe tutor, and the week's sharpest signal is a `~1,300★` estate that turns out to be proprietary**
 
 🔵 **Two of the three things that moved this window are negative, and that is the point of a
