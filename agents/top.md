@@ -4,6 +4,136 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-second pass (`p857`, 2026-11-16) — **`9` agent rows (`442` → `451`): the ACADEMIC-RISK tier, absent for sixty-one passes, filed — and the whole tier trains on ONE dataset of `32,593` UK distance-learning adults from `2013–2014`**
+
+🔵 **How the gap was found, because the method matters more than the rows.** This base holds `442`
+agent rows. 🔴 **`grep -ci "early warning" agents/top.md` returned `0`. `at-risk` returned `0`.**
+🟢 That is the EU AI Act's own high-risk wording for education, and the tier behind it was not on
+this shelf at all.
+
+| | |
+|---|---|
+| 🔴 **What the tier is** | Predicting which student is about to fail or leave, early enough to intervene |
+| 🔴 **Why it is high-risk** | The AI Act names *evaluation of learning outcomes* and *admissions* as high-risk. 🟡 Obligations moved to **`2 December 2027`** by the Digital Omnibus (`Regulation (EU) 2026/1744`) — 🟡 `CITED, NOT READ` |
+| 🟢 **Why it is worth a tier** | UNESCO IESALC `2026`: `87%` of `200` LATAM HEIs use AI somewhere, `26%` have a formal strategy. 🔵 The *governance* gap is this tier's commercial opening |
+
+### 🔴 Finding 1 — the tier's real substrate is a DATASET, not a model, and it is one dataset
+
+🟢 **`4` of the `9` rows filed below train on the same corpus: OULAD, the Open University Learning
+Analytics Dataset.** 🔵 Verified this pass: `22` module-presentations, **`32,593` students**,
+**`2013–2014`**, Open University (UK), **CC BY 4.0**, Kuzilek/Hlosta/Zdrahal, *Sci Data* 4:170171.
+
+🟢 **The licence news is good and it INVERTS `p853`'s rule.** `p853` measured a tier whose code was
+permissive and whose training data was not. 🟢 **Here the code is MIT and the data is CC BY 4.0 —
+commercial use permitted with attribution.** 🔵 Both halves are clean.
+
+🔴 **The risk is TRANSFER VALIDITY, not licence.** Every accuracy number in this tier is earned on
+**UK adult distance learners from twelve years ago**. 🔴 **A studio quoting those numbers for a 2026
+K-12 deployment in LATAM or APAC is quoting a different population, a different age band, a
+different modality and a different decade.** 🔵 The models are reusable; **the evaluation is not** →
+`857-G1`.
+
+### 🟢 Finding 2 — `9` rows, every grant byte-read `2026-11-16`, `0` taken from GitHub's licence field
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| Academic-Instability-EWS | [`AmirhosseinHonardoust/Academic-Instability-Early-Warning-System`](https://github.com/AmirhosseinHonardoust/Academic-Instability-Early-Warning-System) | 🟢 MIT — byte-read `1,060 B`, `sha256₁₂ e23f20db611a` | `19` | Global | 🟢 **The most-starred permissive row in this tier and the only one with a distinct THESIS**: it models *pressure accumulation* rather than predicting a grade, and is built for interpretability. Python, pushed `2025-12-14`. 🔴 See Finding 4 — an undeclared copy of it is also on GitHub |
+| OC2 eLearning datasets | [`Western-OC2-Lab/Student-Performance-and-Engagement-Prediction-eLearning-datasets`](https://github.com/Western-OC2-Lab/Student-Performance-and-Engagement-Prediction-eLearning-datasets) | 🟢 MIT — byte-read `1,071 B`, `sha256₁₂ 1372184f3eea` | `15` | North America | 🟢 **The only NON-OULAD labelled corpus in this tier**, and therefore the only way to test `857-G1` at all. Lab-published (OC2, Western University — basis: account name + README "the OC2 lab's work"). 🟡 Pushed `2021-04-09`, `17` forks |
+| Federated-Learning-Analytics | [`MaxvanHaastrecht/Federated-Learning-Analytics`](https://github.com/MaxvanHaastrecht/Federated-Learning-Analytics) | 🟢 MIT — byte-read `1,072 B`, `sha256₁₂ b4b83f5dedfc` | `3` | Global | 🟢 **The row whose star count most understates it.** Federated learning over OULAD and sibling corpora — 🔵 **the only architecture here that trains across institutions without centralising student records**, which is the EMEA data-protection path and the one APAC residency regimes accept. Jupyter, pushed `2023-09-26` |
+| oulad-early-warning | [`KuznetsovKarazin/oulad-early-warning`](https://github.com/KuznetsovKarazin/oulad-early-warning) | 🟢 MIT — byte-read `1,067 B`, `sha256₁₂ 68e55bfadc62` | `1` | EMEA | 🟢 **Explicitly a Decision Support System that trades accuracy against INSTRUCTOR WORKLOAD**, flagging within the first two weeks — the only row that treats the teacher's attention as a constrained resource. 🟡 Region basis is the **account name** (`Karazin` → V.N. Karazin Kharkiv National Univ.), not a README statement → `857-G2`. Pushed `2025-11-13` |
+| student-dropout-prediction | [`alessandroryo/student-dropout-prediction`](https://github.com/alessandroryo/student-dropout-prediction) | 🟢 MIT — byte-read `1,072 B`, `sha256₁₂ 45508b317643` | `7` | Global | 🟢 **Models socio-economic alongside academic features**, which is what makes it relevant outside the OU population — and 🔴 simultaneously the row with the clearest proxy-discrimination exposure under the AI Act. Jupyter, pushed `2024-09-03` |
+| student-performance-prediction | [`boda137/student-performance-prediction`](https://github.com/boda137/student-performance-prediction) | 🟢 MIT — byte-read `1,072 B`, `sha256₁₂ 108622770ffd` | `4` | Global | 🟢 **The cleanest plain OULAD baseline** — the row to reproduce FIRST, so every later claim has a floor to beat. Python, pushed `2026-08-04`, the most recently maintained OULAD row here |
+| uni-student-risk-dashboard | [`shakilahmedemon/uni-student-risk-prediction-dashboard`](https://github.com/shakilahmedemon/uni-student-risk-prediction-dashboard) | 🟢 MIT — byte-read `1,068 B`, `sha256₁₂ 18d4a9b331db` | `3` | Global | 🟢 **The only row shipping a DASHBOARD rather than a notebook**, and the only one that names *scholarship* risk as a distinct outcome from academic risk. 🔵 That second label is how this tier reaches the bursar's office, not just the tutor's. Python, pushed `2026-01-11` |
+| LodeStone | [`ProttoyDip/LodeStone`](https://github.com/ProttoyDip/LodeStone) | 🟢 MIT — byte-read `1,065 B`, `sha256₁₂ eb8b48620254` | `2` | Global | 🟢 **The only C#/.NET row in this tier**, which matters where the institution's estate is Microsoft and Python is a procurement problem. Frames the output as *wellbeing and disengagement* rather than a risk score — 🔵 a framing that survives a works council. Pushed `2026-09-27` |
+| Student-s-Perform-Prediction | [`Py-Contributors/Student-s-Perform-Prediction`](https://github.com/Py-Contributors/Student-s-Perform-Prediction) | 🟢 MIT — byte-read `1,071 B`, `sha256₁₂ fb6cee869210` | `23` | Global | 🟡 **The most-starred permissive row in the whole field and it is FIVE YEARS STALE** (pushed `2020-09-24`, `15` forks). 🔵 Filed as a FORK BASE and a reference implementation, not as a dependency — the fork count is what it is for |
+
+### 🔴 Finding 3 — the supply in this tier is coursework, measured rather than asserted
+
+🔴 **`6` first-party `search/repositories` legs returned `72` ranked addresses, `65` of them
+distinct. `44` of the `65` carry NO LICENCE in GitHub's own field.** 🔵 That is `T185`'s
+workflow-noun rule reproduced in a fifth tier: *student dropout prediction* is a set assignment, so
+the query indexes **homework**.
+
+| Measured over the `65` DISTINCT addresses the `6` legs returned | Count |
+|---|---|
+| no licence in GitHub's field | 🔴 **`44`** |
+| MIT | 🟢 `20` |
+| GPL-3.0 | `1` |
+| last pushed before `2022` | 🟡 `16` |
+| of the `20` MIT: filed this pass | 🟢 `9` |
+| of the `20` MIT: examined, NOT filed | 🟡 `3` |
+| of the `20` MIT: **not education at all** | 🔴 **`8`** — see the leg nil below |
+
+🔴 **One of the six legs is a nil, and it is nil at a measurable RATE.** The `learning analytics
+dashboard` leg returned `12` addresses of which 🔴 **`10` are not education** — bank-statement
+analysis, an FX analytics pipeline, a carbon-aware ML scheduler, a general data-analytics course.
+🔵 **`learning analytics` as a phrase is losing to `analytics` as a phrase**, which is `p855`'s
+altitude lesson arriving through a different door: the two-word term is not specific enough to
+survive ranking. 🟢 **The legs that worked all name a STUDENT** → `857-G5`.
+
+🟢 **The studio consequence, stated plainly: there is no adoptable early-warning product here.**
+🔵 There is a clean dataset (CC BY 4.0), a clean set of MIT reference implementations, and **no
+maintained system**. 🔴 **This tier is a BUILD, not an ADOPT** — and that is the finding a client
+conversation actually needs.
+
+### 🔴 Finding 4 — an undeclared copy, caught by the licence hash and invisible to GitHub's `fork` field
+
+🔵 **Corroboration, not discovery.** `T37`'s byte-hash de-duplication instrument already exists on
+this base and has already met a `fork: false` case (`p818`). 🟢 **This is a further instance, and
+the first in which the copy is being MAINTAINED while the original is not.**
+
+| | `AmirhosseinHonardoust/…` | `hiopoip7/…` |
+|---|---|---|
+| licence bytes | `1,060 B`, `e23f20db611a` | 🔴 **`1,060 B`, `e23f20db611a` — identical** |
+| copyright line | `Copyright (c) 2025 Amir` | 🔴 **`Copyright (c) 2025 Amir` — identical** |
+| GitHub `fork` | `false` | 🔴 **`false`** |
+| created · pushed | `2025-12-14` · `2025-12-14` | `2026-01-03` · 🔴 **`2026-10-12`** |
+| stars | `19` | `2` |
+
+🔴 **So the maintained copy is the one that does not hold the copyright**, and nothing in GitHub's
+own metadata says so. 🟢 `hiopoip7/Academic-Instability-Early-Warning-System` is **NOT FILED**, and
+is recorded here so a later pass does not file it as an independent row.
+
+### 🟢 Finding 5 — what the collision sweep returned over the whole extractable shelf, and why most of it means nothing
+
+🟢 **A `100`-address sweep** (`79` shelf rows whose `sha256₁₂` this pass could extract mechanically,
+🟡 **a FLOOR — the shelf holds `442` rows and the rest record their grant in forms this extractor
+does not read** → `857-G3`; plus this pass's `21`). **`7` hash groups collided.** 🔴 **`5` of the
+`7` carry no information at all:**
+
+| Collision class | Instances | What it means |
+|---|---|---|
+| 🔴 **No-holder licence text** | `c71d239df917` (×`7`, Apache-2.0 `11,357 B`), `8b1ba204bb69` (×`2`, GPL-3.0 `35,148 B`) | 🔴 **Collision BY DESIGN.** Apache and GPL carry no holder line, so identity is the licence's identity. 🔵 This extends `p854`'s Apache fold to GPL |
+| 🟡 **Same owner** | `doheejin/HiPAMA` + `doheejin/SB_loss_PA` | Trivially the same holder |
+| 🟢 **Cross-owner, holder-bearing** | `1EdTech/lti-1-3-php-library` + `talis/lti-1-3-php-library`; `AmirhosseinHonardoust/…` + `hiopoip7/…` | 🟢 **The only informative class** |
+
+🔵 **And the two informative hits do not mean the same thing.** 🟢 The `1EdTech` / `talis` pair is
+almost certainly a **donation** to the standards body that owns LTI; the `hiopoip7` pair is a copy.
+🔴 **So `T37`'s output must be CLASSIFIED before it is acted on: hash identity establishes a shared
+HOLDER, and a shared holder is as consistent with a transfer as with a theft** → `T193`.
+
+### 🔴 Finding 6 — the instrument note that corrects two earlier passes
+
+🔴 **`p856` recorded `huggingface.co` as failing DNS (`getaddrinfo ENOTFOUND`). It does not.**
+Measured this pass: DNS returns no local entry because **the proxy answers for it**, and the real
+response is **`HTTP/1.1 403 Forbidden` on the `CONNECT` tunnel** — `connect_rejected` at the egress
+allow-list.
+
+🔴 **And `p848`'s "GitHub-only allow-list" is REFUTED by a one-line control:** `pypi.org` returns
+**`HTTP 200`**. 🟢 The allow-list is a list, not a pattern — `github.com`/`raw.githubusercontent.com`
+and `pypi.org` are on it; **`huggingface.co` and `zenodo.org` are refused.**
+
+🟢 **`856-G1` therefore stands but with its cause corrected, and it gains a partial route:** PyPI is
+reachable, so for any model-bearing row distributed as a Python package the **package metadata is a
+licence channel this base has never used** → `857-G4`.
+
+### 🟡 Examined and NOT filed — `3` permissive rows, each with its reason
+
+- 🟡 [`ankitsharma-tech/Student-Performance-Prediction`](https://github.com/ankitsharma-tech/Student-Performance-Prediction) (MIT, `1,068 B`, `885a709b3a32`, `14★`) — its own README calls it "a simple machine learning project … using data from CSV file". 🔵 No early-warning framing, no intervention, no institution.
+- 🟡 [`TheProfessor01/student-success-early-warning-system`](https://github.com/TheProfessor01/student-success-early-warning-system) (MIT, `1,067 B`, `f05af6323547`, `1★`) — correct framing, single notebook, `0` forks. 🔵 Re-examine if it grows.
+- 🔴 [`hiopoip7/Academic-Instability-Early-Warning-System`](https://github.com/hiopoip7/Academic-Instability-Early-Warning-System) — Finding 4.
+
+
 ## 🟢 Sixty-first pass (`p856`, 2026-11-16) — **`8` agent rows (`434` → `442`): the classroom-DISCOURSE tier filed, and the grade on every model-bearing row in this base narrowed from `PERMISSIVE` to `PERMISSIVE (CODE ONLY)`**
 
 🔴 **The finding that governs this pass, and it is retroactive.** This base grades a row by

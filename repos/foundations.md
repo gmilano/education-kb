@@ -4,6 +4,64 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-second pass (`p857`, 2026-11-16) — **`9` foundation rows (`265` → `274`): the learning-analytics PLUMBING beneath the academic-risk agents — and its licence grade is the mirror image of theirs**
+
+🔵 **Why these are foundations and not agents.** Nothing on this shelf predicts anything. Every row
+below moves, stores or standardises **learner event data** — the clickstream, the submission, the
+quiz attempt — into the shape the academic-risk models on
+[`agents/top.md`](../agents/top.md) consume. 🟢 **The agents are worthless without this layer, and
+this layer is where the licence problem actually lives.**
+
+### 🔴 Finding 1 — the rule this shelf exists to state: the MODELS are MIT, the PLUMBING is COPYLEFT
+
+🟢 **Measured across the `9` rows filed here plus the `5` LRS rows this base already held:**
+
+| Where the code sits | Grant, byte-read | Why |
+|---|---|---|
+| 🟢 **Standalone LRS / pipeline** | `lrsql` Apache-2.0 · `ADL_LRS` Apache-2.0 · `ralph` MIT · 🆕 `ol-data-platform` **BSD-3** · 🆕 `laralocker` MIT · 🆕 `xapi-lab` MIT · 🆕 `LearningRecordStore-xapi` MIT | 🟢 **Permissive, because xAPI is a SPEC and these are independent implementations of it** |
+| 🔴 **Anything that lives INSIDE the LMS** | `learninglocker` GPL-3.0 · 🆕 `lxHive` GPL-2.0 · 🆕 `moodle-local_lytix` GPL-3.0 · 🆕 `moodle-block_behaviour` GPL-3.0 · 🆕 `ANALYSE` **AGPL-3.0** · 🆕 `EdOptimize` GPL-3.0 | 🔴 **Copyleft, because Moodle is GPL and a plugin is a derivative.** Open edX is AGPL, and AGPL reaches a HOSTED derivative |
+
+🔴 **So the architectural decision and the licence decision are the same decision, and it is made at
+the integration boundary.** 🟢 **Build the analytics layer OUTSIDE the LMS and talk to it over
+xAPI/LTI, and the estate stays permissive. Build it as a Moodle plugin, and the studio's work is
+GPL.** 🔵 This is the same boundary rule `p856` reached from the discourse side (`P86`), arrived at
+independently from the data side — 🟢 **corroboration, not discovery.**
+
+| Repo | Licence, as measured | ★ / forks | Default ref · pushed | Region | Why it is a foundation and not a row on another shelf |
+|---|---|---|---|---|---|
+| [`mitodl/ol-data-platform`](https://github.com/mitodl/ol-data-platform) | 🟢 **BSD-3-Clause** — byte-read `1,524 B`, `sha256₁₂ 3fb2026fe4a6` | `54★` / `7` | `main` · 🟢 **`2026-11-16`** | North America | 🟢 **The reference implementation of an institution-scale learner-data pipeline, from MIT Open Learning, pushed TODAY.** Not a product — pipeline definitions. 🔵 The only row here that shows what this layer looks like at a real university rather than in a demo |
+| [`g3i/lxHive`](https://github.com/g3i/lxHive) | 🔴 **GPL-2.0** — byte-read `18,091 B`, `sha256₁₂ f9c375a1be4a` | `79★` / `21` | `master` · `2025-04-15` | Global | A lightweight PHP xAPI LRS. 🔴 **GPL-2.0 — filed as a reference and a self-host option, NOT as something to embed.** 🔵 Useful precisely because it is small enough to read end to end |
+| [`adlnet/xapi-lab`](https://github.com/adlnet/xapi-lab) | 🟢 **MIT** — byte-read `1,080 B`, `sha256₁₂ 2541daa1899b` | `38★` / `24` | `master` · 🟡 `2017-04-15` | North America | 🟢 **The statement-authoring workbench from ADL, who wrote xAPI.** 🟡 Nine years stale and it does not matter — 🔵 **it encodes the SPEC, and the spec did not move.** The fastest way to get a team's statement vocabulary right before any pipeline is built |
+| [`ijeffro/laralocker`](https://github.com/ijeffro/laralocker) | 🟢 **MIT** — byte-read `1,071 B`, `sha256₁₂ fea92849578f` | `9★` / `1` | `main` · 🟢 `2026-10-03` | Global | 🟢 **MIT Laravel bindings to a GPL Learning Locker** — the clearest single illustration of Finding 1: the ADAPTER can be permissive while the store it talks to is not. 🔵 Low stars, actively maintained |
+| [`ZanichelliEditore/LearningRecordStore-xapi`](https://github.com/ZanichelliEditore/LearningRecordStore-xapi) | 🟢 **MIT** — byte-read `1,081 B`, `sha256₁₂ ab26049dadc0` | `9★` / `3` | `master` · `2022-06-21` | EMEA | 🟢 **An xAPI statement VALIDATOR that writes to S3** — published by a commercial education publisher (Zanichelli, IT; basis: account name). 🔵 Validate-then-archive is the cheapest compliant shape when statements must be retained but not queried hot |
+| [`PlaypowerLabs/EdOptimize`](https://github.com/PlaypowerLabs/EdOptimize) | 🔴 **GPL-3.0** — byte-read `35,148 B`, `sha256₁₂ 8b1ba204bb69` | `31★` / `8` | `master` · 🟡 `2021-06-05` | Global | 🟢 **The only K-12-specific open learning-analytics platform found**, in R, with curriculum/content/platform dashboards. 🔴 GPL-3.0 and four years stale — 🔵 **read it for the DASHBOARD SPEC, which is the expensive part to design and the cheap part to reimplement** |
+| [`jruiperezv/ANALYSE`](https://github.com/jruiperezv/ANALYSE) | 🔴 **AGPL-3.0** — byte-read `35,135 B`, `sha256₁₂ 106a1b4b8b71` | `18★` / `16` | `master` · 🟡 `2022-10-30` | EMEA | Learning-analytics tool for **Open edX**, from the Gradient lab, Dept. of Telematic Engineering, **Universidad Carlos III de Madrid** (🟢 README-documented, not inferred). 🔴 **AGPL-3.0 reaches a hosted derivative** — the strictest grant on this shelf |
+| [`llttugraz/moodle-local_lytix`](https://github.com/llttugraz/moodle-local_lytix) | 🔴 **GPL-3.0** — byte-read `35,142 B`, `sha256₁₂ 370047dba7ae` | `1★` / `2` | `main` · `2026-05-05` | EMEA | 🟢 **The most actively maintained Moodle learning-analytics plugin found, and it is a UNIVERSITY's** (TU Graz; basis: account name `llttugraz` → `857-G2`). Separate overviews for course creators, teachers and students — 🔵 that three-audience split is a design input worth more than the code |
+| [`Behaviour-Analytics/moodle-block_behaviour`](https://github.com/Behaviour-Analytics/moodle-block_behaviour) | 🔴 **GPL-3.0** — byte-read `35,148 B`, `sha256₁₂ 8b1ba204bb69` | `2★` / `1` | `master` · 🟡 `2023-03-03` | Global | Clustering and visualisation of learner behaviour inside Moodle. 🔵 Filed as the **in-LMS** counter-example to `ol-data-platform`'s out-of-LMS shape — the two together are the whole architectural choice |
+
+### 🔴 Finding 2 — the licence hash is NOT a discriminator here, and this pass proves it inside its own batch
+
+🔴 **`Behaviour-Analytics/moodle-block_behaviour` and `PlaypowerLabs/EdOptimize` returned the SAME
+`35,148 B` / `sha256₁₂ 8b1ba204bb69`.** 🟢 They are unrelated projects in different languages from
+different owners. 🔵 **The GPL-3.0 text carries no holder line** — its `31` copyright mentions are
+the licence's own boilerplate — 🔴 **so for GPL, AGPL and Apache the byte-hash identifies the
+LICENCE, never the PARTY.** 🟢 `T37`'s de-duplication instrument therefore only works on
+holder-bearing grants (MIT/BSD/ISC) → `T193`.
+
+### 🟡 Already held — the LRS core was filed before this pass and is NOT re-filed
+
+🟢 **`5` of the strongest addresses in this layer were already on these shelves and the dedupe
+caught them before any work was spent:** [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql)
+(Apache-2.0, `144★`, pushed `2026-11-14`) · [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS)
+(Apache-2.0, `335★`) · [`openfun/ralph`](https://github.com/openfun/ralph) (MIT, `52★`, 🟢 pushed
+`2026-11-16`, France Université Numérique) · [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW)
+(`62★`) · [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker)
+(GPL-3.0, `587★`, 🟡 stale since `2024-05-30`).
+
+🔵 **That `5`-of-`26` pre-hit rate is the dedupe instrument earning its keep** — and it is why this
+pass's `9` rows are all genuinely new to the base.
+
+
 ## 🟢 Sixty-first pass (`p856`, 2026-11-16) — **`4` foundation rows (`261` → `265`): the AUDIO-PERCEPTION layer beneath the discourse agents, plus a correction to a licence this base would otherwise have taken from a blog**
 
 🔵 **Why these are foundations and not agents.** Nothing on this shelf coaches a teacher or scores a

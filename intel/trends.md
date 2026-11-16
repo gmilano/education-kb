@@ -4,6 +4,86 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — sixty-second pass (`p857`) — **`3` trends (`T193`–`T195`): the de-duplication instrument shown to need CLASSIFYING before it is acted on, the Fedena trap where stars and grant point at different repositories, and GitHub's licence field caught UNDER-claiming for the first time on these shelves**
+
+## 🟡 `T193` — a licence-hash collision establishes a shared HOLDER, and a shared holder is as consistent with a DONATION as with a copy
+
+🔵 **`T37`'s byte-hash de-duplication instrument is not new and this pass did not invent it.** 🟢
+What `p857` adds is a measured reason to **classify its output before acting on it**.
+
+🟢 **The sweep: `100` addresses** — `79` existing shelf rows whose `sha256₁₂` could be extracted
+mechanically (🟡 **a FLOOR; the shelf holds `451` rows and the rest record their grant in forms this
+extractor does not read** → `857-G3`) plus this pass's `21` byte-reads. **`7` hash groups collided.**
+
+| Class | Instances | Information content |
+|---|---|---|
+| 🔴 **No-holder licence text** | `c71d239df917` ×`7` (Apache-2.0, `11,357 B`); `8b1ba204bb69` ×`2` (GPL-3.0, `35,148 B`) | 🔴 **Zero. Collision by design** |
+| 🟡 **Same owner** | `doheejin/HiPAMA` + `doheejin/SB_loss_PA` | 🟡 Trivial |
+| 🟢 **Cross-owner, holder-bearing** | `1EdTech/lti-1-3-php-library` + `talis/lti-1-3-php-library`; `AmirhosseinHonardoust/Academic-Instability-EWS` + `hiopoip7/…` | 🟢 **The only informative class** |
+
+🔴 **`5` of the `7` collisions carry no information at all**, and this pass reproduced the
+no-information case **inside its own batch**: `Behaviour-Analytics/moodle-block_behaviour` and
+`PlaypowerLabs/EdOptimize` — unrelated projects, different languages, different owners — returned
+the identical GPL-3.0 payload. 🔵 **GPL's `31` copyright mentions are the licence's own boilerplate;
+there is no holder line to collide.**
+
+🟢 **And the two informative hits do not mean the same thing.** 🔵 `1EdTech` is the standards body
+that owns LTI and `talis` is a vendor — 🟢 **almost certainly a donation or transfer, which is
+benign.** 🔴 `hiopoip7` is a copy of a `19★` project that carries the original author's copyright
+line, that GitHub reports `fork: false` for, and 🔴 **that is being maintained while the original is
+not** (copy pushed `2026-10-12`; original untouched since `2025-12-14`).
+
+🟢 **The rule: the instrument answers "same holder". It does not answer "same project", and it never
+answers "theft".** 🔵 It applies **only to holder-bearing grants** — MIT, BSD, ISC — and is blind on
+Apache, GPL and AGPL.
+
+## 🔴 `T194` — rank by GRANT first and traction second, because for one project in this tier they point at different repositories
+
+🔴 **The specimen.** [`projectfedena/fedena`](https://github.com/projectfedena/fedena) carries
+**`547★`**, is the repository every "best open source school ERP" listing links, and 🔴 **has no
+licence file at any probed path** (`9` filenames × `{main, master}`).
+🟢 [`projectfedena/project_fedena`](https://github.com/projectfedena/project_fedena) carries
+**`66★`** and 🟢 **is Apache-2.0, byte-read `10,172 B`, `sha256₁₂ 59899c6091b5`.**
+
+🔵 **Same owner, same product, one-eighth the traction, and it is the only one a studio can build
+on.** 🔴 **A selection process that sorts by stars picks the ungranted repository every time.**
+
+🟢 **Corroborating specimen from the same tier:** [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic)
+— `351★`, pushed `2026-10-26`, marketed throughout as an open-source SIS, 🔴 **no grant at any
+probed path.** 🔵 Two of the three most-starred SIS repositories in open education are unlicensed.
+
+## 🟢 `T195` — `NOASSERTION` is evidence of no TEMPLATE MATCH, not evidence of no licence
+
+🔵 **This base has repeatedly caught GitHub's licence field OVER-claiming** — `p853` and `p855` both
+filed rows whose field asserted a grant the bytes did not carry. 🟢 **`p857` catches the field
+failing in the opposite direction for the first time, and the under-claim is the more expensive
+error.**
+
+🟢 **The specimen.** [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) — `57★`, pushed
+`2026-09-23` — is reported by GitHub as `NOASSERTION`. 🟢 **Byte-read, it is MIT: `1,149 B`,
+`sha256₁₂ 843afa76f399`, `Copyright (c) 2025 GegoSoft Technologies and GegoK12 Contributors`.**
+🔴 **The cause is three lines long:**
+
+```
+MIT License
+
+<!-- SPDX-License-Identifier: MIT -->
+```
+
+🔴 **An HTML comment between the title and the body defeats the template match.** 🔵 The irony is
+exact: **the SPDX identifier inserted to make the licence machine-readable is what made it
+machine-unreadable.**
+
+🔴 **Why the under-claim costs more than the over-claim.** 🔵 An over-claim is caught at the byte-read
+every row on these shelves already gets. 🔴 **An under-claim is caught by nothing, because a row
+reading `NOASSERTION` is filtered out before anyone looks at it** — and in this case it filtered out
+🟢 **the only permissive K-12 student information system this base has found.**
+
+🟢 **The instruction, reinforced from the side it had not been tested from: byte-read every grant,
+including the grants GitHub says are absent.** 🔵 Apply it first to `NOASSERTION` rows with traction
+and recent pushes, which is where a missed permissive asset is most likely to be hiding.
+
+
 ## 🟢 `2026-11-16` — sixty-first pass (`p856`) — **`4` trends (`T189`–`T192`): the grade this base publishes shown to cover the CODE and not the CAPABILITY, `855-G2`'s "missing tier" shown to be a PHRASE artefact, the Apache byte-length collision reproduced inside one pass, and a new grant verdict class**
 
 ## 🔴 `T189` — the licence this base byte-reads governs the CODE; for a model-bearing row the capability is the WEIGHTS, and their grant is a different document

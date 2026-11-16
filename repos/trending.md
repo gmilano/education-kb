@@ -4,6 +4,43 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — `p857` — **the learning-analytics plumbing, and a licence rule that runs the opposite way to the models above it**
+
+🟢 **Filed to [`repos/foundations.md`](foundations.md) today, every grant byte-read:**
+[`mitodl/ol-data-platform`](https://github.com/mitodl/ol-data-platform) (🟢 **BSD-3-Clause**,
+`1,524 B`, `sha256₁₂ 3fb2026fe4a6`, `54★`, 🟢 **pushed `2026-11-16`**, MIT Open Learning) ·
+[`g3i/lxHive`](https://github.com/g3i/lxHive) (🔴 GPL-2.0, `18,091 B`, `f9c375a1be4a`, `79★`) ·
+[`adlnet/xapi-lab`](https://github.com/adlnet/xapi-lab) (MIT, `1,080 B`, `2541daa1899b`, `38★`) ·
+[`ijeffro/laralocker`](https://github.com/ijeffro/laralocker) (MIT, `1,071 B`, `fea92849578f`, `9★`) ·
+[`ZanichelliEditore/LearningRecordStore-xapi`](https://github.com/ZanichelliEditore/LearningRecordStore-xapi)
+(MIT, `1,081 B`, `ab26049dadc0`, `9★`) · [`PlaypowerLabs/EdOptimize`](https://github.com/PlaypowerLabs/EdOptimize)
+(🔴 GPL-3.0, `35,148 B`, `8b1ba204bb69`, `31★`) · [`jruiperezv/ANALYSE`](https://github.com/jruiperezv/ANALYSE)
+(🔴 **AGPL-3.0**, `35,135 B`, `106a1b4b8b71`, `18★`, UC3M Madrid) ·
+[`llttugraz/moodle-local_lytix`](https://github.com/llttugraz/moodle-local_lytix) (🔴 GPL-3.0,
+`35,142 B`, `370047dba7ae`, TU Graz) · [`Behaviour-Analytics/moodle-block_behaviour`](https://github.com/Behaviour-Analytics/moodle-block_behaviour)
+(🔴 GPL-3.0, `35,148 B`, `8b1ba204bb69`).
+
+🔴 **The rule, and it is the inverse of the shelf above.** The `12` academic-risk MODEL rows
+byte-read this pass are `12`-of-`12` MIT. 🔴 **The learning-analytics PLUMBING is `6`-of-`14` copyleft** — because anything living inside
+Moodle inherits GPL and anything inside Open edX inherits AGPL. 🟢 **Standalone xAPI implementations
+are permissive, because xAPI is a spec and these are independent implementations of it.**
+🔵 **The architectural boundary and the licence boundary are the same boundary.**
+
+🔴 **Grant corrections against the search channel, all byte-read `2026-11-16`:**
+
+| Repo | GitHub field / blog claim | 🔬 Byte-read verdict |
+|---|---|---|
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🔴 GitHub: `NOASSERTION` | 🟢 **MIT, `1,149 B`, `843afa76f399`** — classifier defeated by an HTML comment in the file → `T195` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 GitHub: `NOASSERTION` | 🔴 **LGPL, `8,240 B`, `8f4ce028f93d`** (at `master`) |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | "open source SIS", `351★` | 🔴 **`NO-GRANT-AT-PROBED-PATHS`**, `9` filenames × `{main, master}` |
+| [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | the `547★` headline repo | 🔴 **`NO-GRANT-AT-PROBED-PATHS`** — 🟡 the grant is on the `66★` sibling (`project_fedena`, Apache-2.0, `10,172 B`) |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 | 🟢 **CONFIRMED GPL, `15,214 B`, `d954e14e5c75`** |
+
+🟡 **Already held, not re-filed** — the dedupe caught `5` of `26` candidates before any work was
+spent: `yetanalytics/lrsql` · `adlnet/ADL_LRS` · `openfun/ralph` (🟢 pushed `2026-11-16`) ·
+`Apereo…/OpenLRW` · `LearningLocker/learninglocker`.
+
+
 ## 🟢 `2026-11-16` — `p856` — **the audio-perception substrate, and three LMS grants corrected at the byte**
 
 🟢 **Filed to [`repos/foundations.md`](foundations.md) today:** [`tyiannak/pyAudioAnalysis`](https://github.com/tyiannak/pyAudioAnalysis)

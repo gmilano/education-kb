@@ -4,6 +4,57 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-second pass (`p857`, 2026-11-16) — **the STUDENT INFORMATION SYSTEM tier, byte-read: the one the blogs call MIT is MIT, and the two biggest are not licensed at all**
+
+🔵 **Why this tier and why now.** The academic-risk agents filed today
+([`agents/top.md`](../agents/top.md)) need one thing before a model: **the roster, the enrolment, the
+grade and the attendance record.** 🟢 That lives in a Student Information System, not an LMS — and
+this base had graded LMSs (`p856`) without ever grading the SIS underneath them.
+
+### 🔴 Finding 1 — `6` SIS/ERP grants byte-read, and GitHub's own licence field is wrong on three
+
+| Platform | GitHub's licence field | 🔬 Byte-read verdict, `2026-11-16` | Verdict for a studio |
+|---|---|---|---|
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🔴 `NOASSERTION` | 🟢 **MIT — `1,149 B`, `sha256₁₂ 843afa76f399`**, `Copyright (c) 2025 GegoSoft Technologies and GegoK12 Contributors` | 🟢 **The ONLY permissive K-12 SIS this base has found.** `57★`, pushed `2026-09-23`. 🔵 **The search channel's claim — "GegoK12 is the MIT-licensed option" — is CORRECT, and GitHub's own field is the thing that is wrong** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 `NOASSERTION` | 🔴 **LGPL — `8,240 B`, `sha256₁₂ 8f4ce028f93d`** (at `master`; `main` does not exist) | 🟡 **The most-starred education ERP here (`913★`, pushed `2026-11-16`).** Built on Odoo's ORM, so it inherits Odoo's shape and Odoo's licensing gravity. 🔵 LGPL is workable at the boundary — link, do not fork |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `GPL-2.0` | 🟢 **CONFIRMED GPL — `15,214 B`, `sha256₁₂ d954e14e5c75`** | `654★`, pushed `2026-11-16` — 🟢 **the most actively maintained SIS in this set.** 🔴 Copyleft: integrate across its API, do not embed |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 `NONE` | 🔴 **`NO-GRANT-AT-PROBED-PATHS`** — `9` filenames × `{main, master}` | 🔴 **`351★`, pushed `2026-10-26`, marketed everywhere as open-source SIS, and there is no licence file at its root.** Do not adopt on the marketing claim |
+| [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | 🔴 `NONE` | 🔴 **`NO-GRANT-AT-PROBED-PATHS`** | 🔴 **The `547★` repo — the one every "best open source school ERP" list links — carries no grant** |
+| [`projectfedena/project_fedena`](https://github.com/projectfedena/project_fedena) | `Apache-2.0` | 🟢 **CONFIRMED Apache-2.0 — `10,172 B`, `sha256₁₂ 59899c6091b5`** (`LICENSE.txt`) | 🟡 **The grant is on the `66★` sibling, not the `547★` headline repo.** Pushed `2019-03-08` — 🔵 **permissive and abandoned, which is a different problem from unlicensed and alive** |
+
+🔴 **The trap this tier contains, stated once.** 🔵 For Fedena, **star count and licence point at
+different repositories.** A studio that picks by popularity picks the ungranted one. 🟢 **Rank by
+GRANT first and traction second, and the trap disappears** → `T194`.
+
+### 🟢 Finding 2 — why `Gego-K12` scores `NOASSERTION`, and what it means for every grade on these shelves
+
+🟢 **The cause is readable in the first three lines of the file:**
+
+```
+MIT License
+
+<!-- SPDX-License-Identifier: MIT -->
+```
+
+🔴 **An HTML comment inserted between the title and the body is enough to stop GitHub's licence
+classifier matching the template**, so a correctly MIT-licensed project is published to the world
+as `NOASSERTION`. 🔵 **This is the INVERSE of the failure mode this base usually guards against.**
+`p853` and `p855` caught repositories whose licence field **over-claimed**. 🟢 **This one
+under-claims — and an under-claim costs a studio a usable permissive asset it never evaluates.**
+
+🟢 **So the standing instruction is reinforced from the other side: byte-read every grant, including
+the ones GitHub says are absent.** 🔴 **`NOASSERTION` is not evidence of no licence; it is evidence
+of no TEMPLATE MATCH** → `T195`.
+
+### 🔵 Where this tier plugs into today's agents
+
+🟢 **The academic-risk models need `student_id`, enrolment, assessment result and attendance — four
+tables every row above exposes.** 🔴 **None of them should be read by the model directly.**
+🔵 The pattern filed today (`P87`) puts the SIS behind the event pipeline, so the risk model sees a
+**derived feature table** and never the student record itself — which is what keeps the build inside
+the AI Act's data-minimisation duty and inside LATAM institutions' thin governance capacity.
+
+
 ## 🟢 Sixty-first pass (`p856`, 2026-11-16) — **where a discourse tool actually lands in an institution, and three LMS grants byte-read rather than cited**
 
 🔵 **A lesson-observation tool is not bought as a product; it is bought as a feature of whatever

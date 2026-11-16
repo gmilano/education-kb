@@ -4,6 +4,71 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-second pass (`p857`, 2026-11-16) — **`P87`: the ACADEMIC-RISK instrument — an early-warning build wired entirely from rows byte-read today, whose first engineering decision is where the boundary with the LMS falls**
+
+## P87 — from an institution's existing event data to a defensible student early-warning service (EMEA anchor on AI Act high-risk conformance; same build serves NA state policy, APAC multi-jurisdiction, LATAM governance-first)
+
+🔵 **What it produces:** for each enrolled student, a weekly risk indicator with **the three features
+that drove it**, routed to a named human who has a defined intervention and a deadline.
+🔴 **What it must never produce: an automated decision about a student, a score shown to the student
+as a label, or an inference about anyone's emotional state.** 🟢 That restraint is the thing that
+makes it lawful in EMEA, fundable in LATAM, and renewable anywhere.
+
+| Stage | Row | Grant (byte-read `2026-11-16`) | Why this one |
+|---|---|---|---|
+| 🔴 **0. The boundary decision, BEFORE the model decision** | — | — | 🔴 **Build the analytics layer OUTSIDE the LMS.** Inside Moodle the work is GPL (`moodle-local_lytix`, `moodle-block_behaviour`); inside Open edX it is AGPL (`ANALYSE`), and **AGPL reaches a hosted derivative**. 🟢 Outside, over xAPI/LTI, the studio's code stays permissive |
+| 1. Event capture | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 | 🟢 **The maintained permissive LRS** (`144★`, pushed `2026-11-14`). SQL-backed, so the feature job is ordinary SQL rather than a bespoke API client |
+| 1-alt. EMEA / public-sector | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 MIT | 🟢 France Université Numérique, pushed `2026-11-16`. 🔵 Pick this where a European public-sector reference matters to procurement |
+| 2. Statement vocabulary | [`adlnet/xapi-lab`](https://github.com/adlnet/xapi-lab) | 🟢 MIT (`1,080 B`) | 🔴 **Do this before writing a pipeline, not after.** From the authors of xAPI. 🟡 Stale since 2017 and it does not matter — it encodes the spec, and the spec did not move |
+| 3. Validate-then-archive | [`ZanichelliEditore/LearningRecordStore-xapi`](https://github.com/ZanichelliEditore/LearningRecordStore-xapi) | 🟢 MIT (`1,081 B`) | 🔵 Validates statements and writes to S3 — the cheapest compliant shape when statements must be **retained** for audit but not queried hot |
+| 4. Roster / enrolment / grades | [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🟢 **MIT (`1,149 B`)** | 🟢 **The only permissive K-12 SIS this base has found** (`T195` — GitHub says `NOASSERTION`; the bytes say MIT). 🔴 For HE, integrate ACROSS `rosariosis` (GPL) or `openeducat_erp` (LGPL) rather than forking |
+| 5. Pipeline shape | [`mitodl/ol-data-platform`](https://github.com/mitodl/ol-data-platform) | 🟢 BSD-3 (`1,524 B`) | 🟢 **Copy the SHAPE, not the code.** MIT Open Learning's own pipeline definitions, pushed `2026-11-16` — a real institution's answer to this exact problem |
+| 6a. Baseline model | [`boda137/student-performance-prediction`](https://github.com/boda137/student-performance-prediction) | 🟢 MIT (`1,072 B`) | 🔴 **Reproduce this FIRST** so every later claim has a floor to beat. Plain OULAD, most recently maintained of the OULAD rows |
+| 6b. The model you ship | [`KuznetsovKarazin/oulad-early-warning`](https://github.com/KuznetsovKarazin/oulad-early-warning) | 🟢 MIT (`1,067 B`) | 🟢 **Interpretable, flags inside two weeks, and explicitly budgets INSTRUCTOR WORKLOAD.** 🔵 Interpretability here is not a nicety — it is the AI Act's human-oversight duty, satisfiable |
+| 6c. Multi-institution | [`MaxvanHaastrecht/Federated-Learning-Analytics`](https://github.com/MaxvanHaastrecht/Federated-Learning-Analytics) | 🟢 MIT (`1,072 B`) | 🟢 **Trains across institutions without centralising student records.** 🔵 The only row here that answers "we cannot send our students' data to your server" with code instead of a promise |
+| 6d. Alternative framing | [`AmirhosseinHonardoust/Academic-Instability-Early-Warning-System`](https://github.com/AmirhosseinHonardoust/Academic-Instability-Early-Warning-System) | 🟢 MIT (`1,060 B`) | 🟢 Models **pressure accumulation** rather than predicting a grade. 🔵 A better story for a works council and a student union than "we predict who fails" |
+| 7. 🔴 **External validation** | [`Western-OC2-Lab/…-eLearning-datasets`](https://github.com/Western-OC2-Lab/Student-Performance-and-Engagement-Prediction-eLearning-datasets) | 🟢 MIT (`1,071 B`) | 🔴 **Non-negotiable, and it is the stage every competitor skips.** The only non-OULAD labelled corpus found — the only way to show the model is not an artefact of `857-G1` |
+| 8. Delivery surface | [`shakilahmedemon/uni-student-risk-prediction-dashboard`](https://github.com/shakilahmedemon/uni-student-risk-prediction-dashboard) | 🟢 MIT (`1,068 B`) | 🔵 Dashboard shape plus a second outcome label — **scholarship risk** — that reaches the bursar, not only the tutor |
+| 8-alt. .NET estates | [`ProttoyDip/LodeStone`](https://github.com/ProttoyDip/LodeStone) | 🟢 MIT (`1,065 B`) | 🔵 C#, and frames output as **wellbeing and disengagement** rather than a risk score |
+| 9. Dashboard spec | [`PlaypowerLabs/EdOptimize`](https://github.com/PlaypowerLabs/EdOptimize) | 🔴 GPL-3.0 | 🔴 **READ ONLY — do not link.** Its K-12 curriculum/content/platform dashboard taxonomy is the expensive design work; reimplement it, do not import it |
+
+### 🔴 The stage that is not optional, and it is stage 7
+
+🔴 **`4` of the `9` models filed today train on the same corpus: OULAD — `22` module-presentations,
+`32,593` students, `2013–2014`, Open University (UK), CC BY 4.0.** 🟢 The licence is clean and
+commercial use is permitted with attribution. 🔴 **The accuracy is not transferable.**
+
+🔵 **Concretely: a K-12 deployment in Brazil or Vietnam built on an OULAD-validated model is running
+a classifier fitted to British adult distance learners from twelve years ago.** 🔴 **Any accuracy
+number quoted from the repository README is, in that engagement, a fabrication.** 🟢 **Stage 7
+re-measures on local data before any number is spoken aloud, and the re-measurement is a billable
+deliverable, not an overhead.**
+
+### 🟢 What makes this build defensible rather than merely working
+
+| Duty | Where it is satisfied in `P87` | 🔵 Note |
+|---|---|---|
+| 🔴 Human oversight | Stage 6b — interpretable by construction, **and the workload budget means the human can actually look** | An explanation nobody has time to read is not oversight |
+| 🔴 Data minimisation | Stage 0 + 5 — the model sees a **derived feature table**, never the student record | 🟢 Also why stage 4's SIS sits behind the pipeline |
+| 🔴 Data residency / sovereignty | Stage 6c — federated, nothing centralises | The EMEA and APAC answer |
+| 🔴 Accuracy claims | Stage 7 — external corpus | 🔴 `857-G1` |
+| 🔴 Prohibited practice | 🟢 **Emotion recognition is BANNED in education in the EU and is not in this pipeline at any stage** | Stage 8 shows behaviour and outcome, never affect |
+| 🟢 Governance artefact | The policy, intervention protocol and evaluation plan | 🔵 **In LATAM this IS the product** — `87%` adoption against `26%` strategy |
+
+### 🔵 How `P87` is sold, by region
+
+- 🟢 **EMEA** — a **conformance package** against a dated obligation (high-risk duties `2027-12-02`,
+  `Regulation (EU) 2026/1744`, 🟡 `CITED, NOT READ`). Lead with 6b + 6c. 🔴 Never ship it as a Moodle plugin.
+- 🟢 **North America** — a **policy-and-training deliverable** against state deadlines
+  (🟡 NC model policy `2026-12-31`, district policies `2027-06-30`). Lead with stage 5 (`ol-data-platform`)
+  and stage 7. 🔴 Check grade-level restrictions — NY restricts classroom AI to grade `9+`.
+- 🟢 **APAC** — **one model, a swappable compliance shell.** Vietnam names education high-risk with an
+  `18`-month transition; Korea's Act is in force from `2026-01-22`. Lead with 6c under residency rules.
+- 🟢 **LATAM** — **governance first, model second.** Free MIT components so the budget funds the
+  framework — `55%` of universities have no AI budget at all. 🔴 Pilot on one faculty, instrument
+  stage 7 from day one.
+
+
 ## 🟢 Sixty-first pass (`p856`, 2026-11-16) — **`P86`: the TEACHER-TALK instrument — a lesson-observation pipeline wired entirely from rows byte-read today, whose first design decision is a LICENCE decision rather than a model decision**
 
 ## P86 — from a lesson recording to a teacher-owned participation report (EMEA anchor on AI Act conformance; same build serves NA consent law and APAC high-risk regimes)

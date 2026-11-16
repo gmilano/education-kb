@@ -4,6 +4,134 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-second pass (`p857`, 2026-11-16) — **the academic-risk tier placed by region, and the regional story is a GOVERNANCE gap, not a technology gap**
+
+🔵 **The one regional claim this pass can make that it could not make before.** `p856` found a
+region whose open supply is excellent and whose law restricts the obvious use of it. 🟢 **`p857`
+finds the opposite shape: a tier where the technology is uniformly available, uniformly cheap and
+uniformly unmaintained — so the differentiator between regions is not what they can BUILD but
+whether they are ALLOWED to deploy it and whether anyone is governing it.**
+
+| | |
+|---|---|
+| 🟢 **Supply is region-neutral here** | The `9` rows filed today are MIT and the corpus is CC BY 4.0. 🔵 **No region has a supply advantage in academic-risk prediction** — unlike the discourse tier, where EMEA supplied the accuracy leaders |
+| 🔴 **Demand is NOT** | This is the AI Act's own high-risk category. 🔵 The same build is a procurement asset in EMEA, a state-by-state patchwork in NA, a jurisdiction-by-jurisdiction problem in APAC, and an ungoverned free-for-all in LATAM |
+| 🔴 **The corpus is EMEA and everyone trains on it** | OULAD is UK, `2013–2014`, `32,593` adult distance learners. 🔴 **Every region deploying this tier is deploying a model validated on a British population from twelve years ago** → `857-G1` |
+| 🟢 **The thing to sell is GOVERNANCE, not the model** | UNESCO IESALC `2026`: `87%` of LATAM HEIs use AI, `26%` have a strategy, `55%` have no AI budget. 🔵 **The model is a weekend; the defensible deployment is the engagement** |
+
+🔴 **Every market, adoption and regulatory figure below is `CITED, NOT READ` from WebSearch
+summaries and says so.** 🟢 Every licence, byte count and `sha256₁₂` on these shelves is byte-read
+`2026-11-16`.
+
+## Opportunities by region
+
+### North America
+
+🟡 **`CITED, NOT READ`.** The 2026 session produced AI-in-education bills at a scale the trackers
+disagree about — one reports **`134` bills across `31` states**, another **`~71` across `27`**.
+🟢 **The disagreement does not change the shape: `35+` states now have official AI guidance from
+their education departments**, and the posture is research-transparency-guardrails rather than
+mandated adoption.
+
+- 🟡 **New York (`NY A 9190`)** restricts classroom AI use to **grade 9 and above**, with exceptions
+  for diagnostics and special education. 🔴 **A K-8 early-warning deployment in New York is a
+  different product from the same build in a neighbouring state.**
+- 🟡 **North Carolina (`Session Law 2026-41`)** sets AI-literacy standards, a **state model policy
+  by `2026-12-31`**, local school-unit policies by **`2027-06-30`**, and teacher training by
+  **June 2028**.
+- 🟡 The federal **Department of Education finalised its AI grant-priority rule on `2026-04-13`**.
+- 🟡 An **April 2026 ADA deadline** for large public institutions is pushing accessibility tooling.
+
+🟢 **The opportunity.** 🔵 **Sell the policy artefact, not the predictor.** Districts have a dated
+obligation to produce a policy and train staff, and no capacity to write either. 🟢
+[`mitodl/ol-data-platform`](https://github.com/mitodl/ol-data-platform) (BSD-3, pushed `2026-11-16`)
+is the credible NA reference for the pipeline underneath, and
+[`Western-OC2-Lab/…-eLearning-datasets`](https://github.com/Western-OC2-Lab/Student-Performance-and-Engagement-Prediction-eLearning-datasets)
+(MIT) is the **only non-OULAD corpus** with which to show a model works on a non-UK population.
+
+### EMEA
+
+🟡 **`CITED, NOT READ`, and the date moved.** The AI Act makes **admissions, evaluation of learning
+outcomes and exam scoring HIGH-RISK**. 🟡 **The Digital Omnibus (`Regulation (EU) 2026/1744`) moved
+the education high-risk obligations to `2027-12-02`** — 🔵 guides still citing **August 2026**
+predate the omnibus and are stale. 🟢 **Already in force since February 2025: the AI-literacy duty,
+and the BAN on emotion recognition in education.** 🟡 Chatbot transparency applies **August 2026**.
+
+- 🟡 The **European Commission and OECD published an AI-literacy framework for primary and secondary
+  education on `2026-06-18`**; the Commission updated its ethical guidelines on AI and data in
+  teaching the same month.
+- 🟡 The **Council of the EU** names the **European Digital Education Hub** and the **European School
+  Education Platform** as delivery channels, with digital sovereignty attached.
+- 🟡 Schools are **deployers**, not providers — a narrower duty, but it does not disappear.
+
+🟢 **The opportunity, and it is the largest in this tier.** 🔴 **A high-risk date in December 2027 is
+an eighteen-month procurement runway that has already started.** 🔵 The deliverable is a conformance
+package — risk management, data governance, logging, human oversight, technical documentation —
+wrapped around a model that is itself free. 🟢 **EMEA also supplies the two rows that make this
+defensible:** [`MaxvanHaastrecht/Federated-Learning-Analytics`](https://github.com/MaxvanHaastrecht/Federated-Learning-Analytics)
+(MIT, trains across institutions **without centralising student records** — the data-minimisation
+story told in code) and [`KuznetsovKarazin/oulad-early-warning`](https://github.com/KuznetsovKarazin/oulad-early-warning)
+(MIT, interpretable, budgets instructor workload — **human oversight that a teacher can actually
+exercise**). 🔴 **Do not deliver this as a Moodle plugin**: `moodle-local_lytix` and `ANALYSE` show
+the layer is GPL/AGPL inside the LMS.
+
+### APAC
+
+🟡 **`CITED, NOT READ`. The region does not have one answer and a single build will not clear it.**
+
+- 🟢 **South Korea's AI Basic Act took effect `2026-01-22`** — described as the region's first
+  comprehensive AI statute. 🟡 **MSIT has said 2026 is a pilot period with limited enforcement.**
+- 🟢 **Vietnam's AI law took effect `2026-03-01`**, naming **education among six high-risk sectors**
+  with **automated assessment** called out, and giving systems already in operation an **18-month
+  transition** in education, health and finance. 🟡 MOET has also set **AI content requirements of
+  `12` periods per class per year for grades 1–12**.
+- 🟡 **Japan** leans to voluntary guidelines and self-regulation; **Australia** relies on existing law
+  plus voluntary guidance; **Hong Kong, Australia and India** apply existing law and sector guidance,
+  with **India adding binding synthetic-content labelling in 2026**.
+- 🟡 **Dubai's KHDA** has issued explicit responsible-AI guidance to private schools.
+- 🟡 **Ipsos Education Monitor 2026**: support for banning AI in schools **rose in Japan, Australia
+  and South Korea** and **fell in Indonesia**; 🔴 **Australia and New Zealand are the outliers with
+  the highest support for a ban.**
+
+🟢 **The opportunity.** 🔵 **Sell the same model with a swappable compliance shell** — Vietnam's
+high-risk classification and Korea's statute demand documentation the Japanese and Australian
+deployments do not. 🔴 **The `18`-month Vietnamese transition is a dated, named window.** 🟢 Prefer
+the **federated** row under residency rules, and note that **public opinion in AU/NZ is the
+commercial risk**, not the law.
+
+### LATAM
+
+🟡 **`CITED, NOT READ`, and this is the sharpest regional contrast in the tier: adoption is ahead of
+every other region and governance is behind all of them.**
+
+- 🔴 **UNESCO IESALC 2026**, `200` higher-education institutions across `19` countries: **`87%` use
+  AI in at least one area; `26%` have a formal strategy; `55%` of universities have no specific AI
+  budget.** 🟡 UNESCO's regional observatory (launched **April 2026**) puts institutions with formal
+  guidelines at **under `10%`**.
+- 🟡 **Digital Education Council LATAM 2026**: **`92%` of students and `79%` of faculty** actively
+  engaging with AI.
+- 🟡 **Brazil**: `53%` of school administrators use AI, **only `22%`** report school guidelines
+  (Cetic.br); `65%` of internet users aged 9–17 use AI tools. 🟡 **Uruguay's Ceibal**: `75%` of
+  public-school teachers use these tools.
+- 🟡 **Regulation**: a 2026 Universidad de los Andes study counts **`716` AI-related instruments and
+  proposals across `23` countries**, most from 2023 onward. **Brazil's `PL 2.338/2023`** passed the
+  Senate in December 2024 and **remains pending in the Chamber of Deputies**; **Colombia** went
+  policy-first with **CONPES 4144 (February 2025)**.
+
+🟢 **The opportunity, and it is not the model.** 🔴 **`87%` adoption against `26%` strategy is a
+governance engagement with a measured denominator.** 🔵 The sellable unit is an institutional AI
+framework — acceptable-use policy, data governance, an early-warning pilot with a defined
+intervention and an evaluation plan — **delivered on free MIT components so the budget goes to the
+governance, which is what `55%`-with-no-budget can actually fund.**
+
+🔴 **The declared regional gap, so silence is not mistaken for coverage.** 🔵 `857` filed **`0` rows
+of LATAM origin in this tier** and **`0` in the plumbing tier.** 🔴 **This is not a claim that none
+exist** — region could not be established first-party for individual-owner rows at all (`857-G2`),
+and the legs were run in English. 🟢 `p854` demonstrated that a non-English channel returned `17` of
+`17` addresses new to this base, so **an ES/PT leg on `deserción estudiantil` / `evasão escolar` is
+the single highest-value unrun query this pass leaves behind** → `857-G6`.
+
+
 ## 🟢 Sixty-first pass (`p856`, 2026-11-16) — **the classroom-DISCOURSE tier placed by region, and the region that SUPPLIES it best is the region that most restricts it**
 
 🔵 **The one regional claim this pass can make that it could not make before.** `p855` separated a
@@ -22,7 +150,7 @@ is the jurisdiction where pointing them at a classroom is most constrained.**
 🔴 **Every market and regulatory item below is `CITED, NOT READ` from WebSearch summaries and says
 so.** 🟢 Every licence, byte count and `sha256₁₂` is byte-read on `2026-11-16`.
 
-## Opportunities by region
+## Opportunities by region — as filed by `p856` (historical, superseded above)
 
 ### North America
 
@@ -144,7 +272,7 @@ reads `11` pages, `17,354` shelf rows and `6,068` distinct addresses.** 🔵 **T
 `p355-cwd-portability`'s class landing on the one instrument `568-A` built to audit absence
 claims.** → `855-G5`.
 
-## Opportunities by region
+## Opportunities by region — as filed by `p855` (historical, superseded above)
 
 ### North America
 

@@ -4,6 +4,48 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — `p857` — **ACADEMIC RISK enters the base, and the tier turns out to be a BUILD rather than an ADOPT**
+
+🟢 **New and permissive, every grant byte-read today:**
+[`AmirhosseinHonardoust/Academic-Instability-Early-Warning-System`](https://github.com/AmirhosseinHonardoust/Academic-Instability-Early-Warning-System)
+(MIT, `1,060 B`, `19★`, 🟢 models *pressure accumulation* rather than grades) ·
+[`Western-OC2-Lab/Student-Performance-and-Engagement-Prediction-eLearning-datasets`](https://github.com/Western-OC2-Lab/Student-Performance-and-Engagement-Prediction-eLearning-datasets)
+(MIT, `1,071 B`, `15★`, 🟢 **the only non-OULAD corpus**) ·
+[`MaxvanHaastrecht/Federated-Learning-Analytics`](https://github.com/MaxvanHaastrecht/Federated-Learning-Analytics)
+(MIT, `1,072 B`, `3★`, 🟢 **federated — trains across institutions without centralising records**) ·
+[`KuznetsovKarazin/oulad-early-warning`](https://github.com/KuznetsovKarazin/oulad-early-warning)
+(MIT, `1,067 B`, `1★`, 🟢 budgets INSTRUCTOR WORKLOAD, flags inside two weeks) ·
+[`alessandroryo/student-dropout-prediction`](https://github.com/alessandroryo/student-dropout-prediction)
+(MIT, `1,072 B`, `7★`) · [`boda137/student-performance-prediction`](https://github.com/boda137/student-performance-prediction)
+(MIT, `1,072 B`, `4★`, 🟢 cleanest OULAD baseline) ·
+[`shakilahmedemon/uni-student-risk-prediction-dashboard`](https://github.com/shakilahmedemon/uni-student-risk-prediction-dashboard)
+(MIT, `1,068 B`, `3★`, 🟢 the only DASHBOARD) · [`ProttoyDip/LodeStone`](https://github.com/ProttoyDip/LodeStone)
+(MIT, `1,065 B`, `2★`, 🟢 the only C#/.NET row) ·
+[`Py-Contributors/Student-s-Perform-Prediction`](https://github.com/Py-Contributors/Student-s-Perform-Prediction)
+(MIT, `1,071 B`, `23★`, 🟡 **five years stale — filed as a fork base**).
+
+🔴 **The headline is the denominator, not the rows.** `6` first-party legs returned `65` distinct
+addresses: 🔴 **`44` carry no licence at all**, `20` are MIT, `1` is GPL-3.0, `16` have not been
+pushed since `2021`. 🟢 **There is no maintained early-warning product in open source. There is a
+clean dataset, a set of MIT reference notebooks, and nothing to adopt.**
+
+🔴 **And the whole tier shares one corpus.** `4` of the `9` train on **OULAD** — `22`
+module-presentations, `32,593` students, **`2013–2014`**, Open University (UK), **CC BY 4.0**.
+🟢 The licence is clean and commercial use is permitted. 🔴 **The accuracy numbers are not
+transferable**: UK adult distance learners, twelve years ago → `857-G1`.
+
+🟡 **Not filed, and why.** [`hiopoip7/Academic-Instability-Early-Warning-System`](https://github.com/hiopoip7/Academic-Instability-Early-Warning-System)
+returns a **byte-identical** licence (`1,060 B`, `e23f20db611a`) with the **same copyright holder
+line** as the `19★` original, while GitHub reports `fork: false` for it — 🔴 **and it is the copy
+that is still being maintained.** 🔵 Corroboration of `T37` (`p818` met the first case), not a new
+instrument.
+
+🔴 **Instrument correction, carried here so the next pass does not re-pay for it.** `p856` recorded
+`huggingface.co` as a DNS failure. It is not: the proxy returns **`HTTP 403` on `CONNECT`**
+(`connect_rejected`). 🔴 **`p848`'s "GitHub-only allow-list" is refuted** — `pypi.org` returns
+`200`. 🟢 **PyPI is therefore an unused licence channel for packaged model rows** → `857-G4`.
+
+
 ## 🟢 `2026-11-16` — `p856` — **classroom DISCOURSE enters; and every model-bearing agent in this base is re-graded `CODE-ONLY`**
 
 🟢 **New and permissive, byte-read today:** [`juanmc2005/diart`](https://github.com/juanmc2005/diart)
