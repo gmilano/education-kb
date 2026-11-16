@@ -6,6 +6,78 @@ updated: 2026-11-16
 
 # Globant AI Studios — Education KB
 
+## Pass `p852` · `2026-11-16`
+
+🟡 **`13` permissive rows filed, and NOT ONE of them is a new discovery: `13` of the `17`
+addresses this pass's research legs returned were already written down in this repository and
+graded on no shelf.** 🟢 **`7` agent rows (`398` → `405`), `6` foundation rows (`206` → `212`),
+`3` adapter rows (`147` → `150`), `2` recipes, `3` trends, `7` gaps — every grant byte-read today,
+and all three shelves agree with their own published figure (`claimed == graded`, `ragged=0`).**
+
+🔵 **This heading is a repair.** `p850` found that `p279-absence-claims` selects on `^## Pass ` and
+that this `README` had used `**Pass …**` for its whole life, so `make gate-absence` has never
+graded a single claim. 🟢 **`p852` changed the heading shape rather than describing the defect
+again; the gate now has a section to read.**
+
+## What this pass established
+
+| | |
+|---|---|
+| 🔴 **`13` of `17` returned addresses were already here and shelved nowhere** | 🟢 Measured by direct slug `grep` over every non-archive `*.md` before a row was written: **`13` UNGRADED** (in a trending file, an instrument `README` or the gap ledger, on no graded shelf), **`3` NEW**, **`1` already correctly shelved**. 🔴 **`76%` of the hour went on re-discovering this base's own holdings** — `T172`/`851-G2` measured on a LIVE yield instead of an archive diff, which is the instrument a client engagement would actually hit |
+| 🔴 **A non-commercial grant wearing MIT's incipit AND MIT's byte band** | 🔴 [`sdrangan/llmgrader`](https://github.com/sdrangan/llmgrader) is **not open source**: a bespoke *"PySilicon Research License"* (`1,224 B`, `sha256₁₂ 4c8368a01cb6`) forbidding commercial use without written permission — 🔴 **opening with MIT's verbatim incipit, at a byte count inside `gate-mit-predictor`'s band.** 🟢 Only the numbered clauses catch it → `852-G1`, `T175` |
+| 🟢 **Secondary licence claims fail in ONE direction, measured** | 🟢 Of `17` addresses, `9` were reported permissive and **`9` of `9` were confirmed permissive by byte-read.** 🔴 Both failures over-reported: `llmgrader` (restrictive payload) and [`weizhenFrank/AutoGrader`](https://github.com/weizhenFrank/AutoGrader) (**no grant file**, `10` probes, while a summary called it MIT). 🔵 **Usable rule: trust "copyleft"/"no licence" provisionally; never trust "MIT" without the payload** |
+| 🟢 **The STANDARDS-SEAM layer — `6` rows, `6` of `6` MIT, `0` copyleft** | 🟢 LTI: [`UOC/java-lti-1.3`](https://github.com/UOC/java-lti-1.3) (`21★`, full Advantage **tool**, 🟢 **EMEA on a payload channel — maintainer at `uoc.edu`**) · [`rolloutit/lti-platform`](https://github.com/rolloutit/lti-platform) (platform side, 🔴 **proof of concept**). QTI: [`Citolab/qti-scoring-engine`](https://github.com/Citolab/qti-scoring-engine) (server-side scoring) · [`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system) (**`COMMENT`-outcome round-trip**, axe a11y tests). xAPI: [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) (**`cmi5`** endpoint). Lint: [`credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens) |
+| 🔴 **A "validator" that never validates** | 🔴 `credential-lens`'s own `README` states **`signatureVerified` is hardcoded `false`** — it answers *"is this credential well-formed?"* and never *"is it genuine?"*, and CLR is unsupported. 🔵 **A CI linter, disqualified as a trust boundary** → `852-G5` |
+| 🟢 **First movement on `verticals/solutions.md` in thirteen passes** | 🔴 The platform leg scored its **thirteenth** consecutive nil and this pass stopped asking. 🟢 Instead it filed the first permissive **adapters** into three incumbents this base could previously only describe — **Canvas** (`jlouisbru/Canvas-grading-with-AI`, the only permissive one; the alternative is GPL-3.0), **Gradescope** (`BridgeSuite/GradeBridge-AI`), **GitHub Classroom / CI** (`webtech-network/autograder`). 🔵 **Integration code does not inherit the platform's grant — so you never needed a permissive LMS** |
+| 🔴 **Pattern-shaped blindness, found THREE times in one pass — including once against this pass's own output** | 🔴 **(i) False NEW:** a URL-keyed index reported `weizhenFrank/AutoGrader` **absent**; a slug `grep` found it in `agents/trending.md` as a bare `owner/repo`. 🔴 **(ii) False KNOWN:** `UOC/java-lti-1.3` is a **substring** of `UOC/java-lti-1.3-provider`, dead at `772-K31` — so a naive check buries a live, permissive `21★` library (measured: live `200` on `master/LICENSE`, dead sibling `404` on both branches). 🔴 **(iii) False ABSENT, self-inflicted:** this pass published *"no grant file, `10` probes"* for `stichting-cito/QuestifyBuilder` — 🔴 **the probe list was CASE-SENSITIVE and the file is `License.md`.** 🟢 **Corrected in-pass: MS-PL, `4,616 B`, `sha256₁₂ da87cc5e5e39`**, and the other two unlicensed verdicts re-confirmed across `22` case variants each. 🔵 **All three produced evidence-shaped confidence that came from the pattern's coverage, which nothing measured** → `T174`, `852-G3`, `852-G2` |
+| 🔴 **`11` of `13` rows carry NO region evidence, and that is the honest coverage number** | 🟢 Placed: `2` (EMEA via `uoc.edu`; North America via the `-UNH` account acronym). 🔴 **Refused rather than guessed: `3`** — `webtech-network/autograder`'s Brazilian-Portuguese reports are a **localisation capability, not an origin**; `EscolaLMS/LRS` and `Citolab/qti-scoring-engine` state no organisation or country. 🔴 **`0` APAC-placed rows this pass** → `852-G6` |
+| 🟡 **Demand side saturated again; the regional legs' value was a CORRECTION** | 🔵 EMEA's quotable fact: the Digital Omnibus agreement of **7 May 2026** moved AI Act high-risk education obligations to **2 December 2027** — a `~13`-month build window, classification unchanged. 🔴 **And one region-hygiene defect in the sources: the APAC leg returned a UK schools standard as an APAC fact. The UK is EMEA; corrected on intake** |
+| 🔴 **A stale shelf claim inherited from `p851`, now fixed** | 🔴 `repos/foundations.md` published **`200 rows`** while holding `206`; the `README` repeated `200/200`. 🟢 **Corrected to `212` and re-derived.** 🔴 **`14` gates were already failing before this pass touched anything** — recorded below rather than implied away |
+
+🔵 **`2` new recipes.** `P81` — the **defensible marking pilot**: author in
+`GradeBridge-Assignment-Maker`, grade with `webtech-network/autograder`, mark a stratified human
+sample, then emit **inter-annotator agreement** with `TREMA-UNH/rubric-grading-workbench` and
+round-trip into QTI via `metyatech/qti-scoring-system`. 🟢 **Step 3 is the artefact every parked
+pilot skipped, and it is what `45%`-ESSA-coverage procurement asks for.** `P82` — the **EMEA
+standards-seam delivery**: launch from Moodle as an LTI 1.3 Advantage tool (`UOC/java-lti-1.3`),
+score server-side (`Citolab/qti-scoring-engine`), mark with accessibility tests
+(`metyatech/qti-scoring-system`), record over `cmi5` (`EscolaLMS/LRS`), lint credentials in CI,
+and certify the process against **ISO/IEC 42001**.
+
+🟢 **Counts, gate-confirmed this pass.** `python3 -I ingest/derive-counts.py` →
+`agents/top.md` **`405/405`**, `repos/foundations.md` **`212/212`**,
+`verticals/solutions.md` **`150/150`**, `ragged=0`, `nolink=0`, no new duplicate subjects;
+`compose/patterns.md` `82` recipes, `P-1..P-82` contiguous; `intel/trends.md` `168` trends.
+🟢 `make gate-region-headings` → **`0` findings** (`1` canonical `## Opportunities by region`,
+`5` `###` subsections).
+
+🔴 **Known-red, measured BEFORE this pass edited anything, so none of it is attributed to it.**
+`make hooks` at `HEAD` `bab8082` reported **`50/72` gates green, `22` RED**. 🟢 **After this pass:
+`51/72` green, `21` RED — the same `21`, with `gate-absence` repaired and nothing regressed.**
+🔵 **The repair was the heading, not the instrument:** `p279-absence-claims` selects on
+`^## Pass ` and now grades a `57`-line live pass section (`ABSENCE-REFUTED=0`,
+`ABSENCE-QUEUED=0`) where it previously printed *"README.md has no `## Pass ` section to check"*
+and failed. 🟢 **First time in this base's life that gate has graded a claim.**
+
+🔴 **Still RED, unchanged by this pass and listed so no reader infers a clean tree:** `recount`,
+`gate-derived-counts`, `gate-enumeration`, `gate-dates`, `gate-evidence-store`,
+`gate-shelf-consistency`, `gate-prose-claims`, `gate-register-currency`, `gate-fold-identity`,
+`gate-alias-canonical`, `gate-census-currency`, `gate-grant-path`, `gate-census-union`,
+`gate-ledger`, `gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`,
+`gate-case-collision`, `gate-promotion`, `gate-promotion-ledger`, `gate-cell-reproduction`.
+🔴 **Two are worth naming.** `gate-derived-counts` is RED on all three shelves not because the
+figures disagree — 🟢 **they agree: `405/405`, `212/212`, `150/150`** — but because
+`22`/`13`/`13` tables carry `github.com` rows under column headers that are not declared
+signatures, so their rows are counted nowhere. 🔴 **`gate-grant-path` reports
+`grant_claims_parsed=0`: its extractor finds no grant paths on the live shelves at all, so the
+`sha`/path cells this base publishes are ungraded by it.** 🔵 **Published here because a `README`
+that says "all shelves GREEN" while twenty-one gates fail is the defect class this base keeps
+finding in its own instruments.**
+
+---
+
+## Pass `p850` · `2026-11-16` — superseded, retained for history
+
 **Pass `p850` · `2026-11-16`** — 🔴 **All three gaps `p848` declared are REFUTED by this base's
 own shelves, by rows filed `38`–`43` passes earlier — and the gate built to prevent exactly that
 has never graded a single claim.** 🟢 **`1` agent row (`397` → `398`), `9`

@@ -4,6 +4,156 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` (fifty-seventh pass, `p852`) — **`7` gaps, each with the `grep` or the probe that was run before it was written (`ACTION p850-B`)**
+
+🔵 **Two of these (`852-G1`, `852-G3`) are instrument defects rather than market absences, and are
+filed here because the ledger is where this base's falsifiable claims live regardless of layer.**
+
+### 🔴 `852-G1` — a non-commercial grant can wear MIT's incipit AND MIT's byte band, and this base has no instrument that would catch it
+
+🔴 **The claim:** [`sdrangan/llmgrader`](https://github.com/sdrangan/llmgrader) carries a bespoke
+**"PySilicon Research License"** that forbids commercial use without written permission, while
+being indistinguishable from MIT on every cheap axis this base uses.
+
+🟢 **What was checked, not inferred:** `main/LICENSE` byte-read `2026-11-16` — `1,224 B`,
+`sha256₁₂ 4c8368a01cb6`, holder `Copyright (c) 2026 Sundeep Rangan`. Clause `2`: the software
+*"may not be used, copied, modified, or distributed for commercial purposes without prior written
+permission from the copyright holder."* 🔴 **Its first sentence is MIT's verbatim incipit, and
+`1,224 B` sits inside the band `gate-mit-predictor` works in.**
+🟢 **Shelf `grep` before writing:** `llmgrader` → `0` hits on all three shelves; present in
+`agents/trending.md` and `intel/open-gaps.md` only.
+
+🟡 **How it closes:** add this payload to `compose/code/p341-bespoke-instrument-census` and
+`gate-template-identity` as a fixture, and assert that a bespoke TITLE outranks an MIT incipit.
+🔴 **Until then, no byte-band or incipit shortcut may be used to grade a grant on these shelves.**
+
+### 🟡 `852-G2` — there is no **MIT/Apache** QTI item bank; the one that exists is MS-PL, and this entry was WRONG when first written an hour ago
+
+🔴 **The claim as first published by this pass:** *"the only genuine QTI item bank carries no grant
+file — `10` probes, all `404`."* 🔴 **That was false, and the cause was the probe, not the
+repository.** 🟢 **Corrected within the same pass:** the probe list was CASE-SENSITIVE
+(`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`) and
+[`stichting-cito/QuestifyBuilder`](https://github.com/stichting-cito/QuestifyBuilder) ships
+**`License.md`** on **`master`** — which `raw.githubusercontent.com` serves case-sensitively.
+
+🟢 **What was checked, not inferred, on re-probe `2026-11-16`:** `master/License.md` →
+`200`, `4,616 B`, `sha256₁₂ da87cc5e5e39`, first line *"Microsoft Public License (MS-PL)"*.
+Default ref `master`, `0★`, root carries `License.md`, `ReadMe.md` and a `licenses/` directory.
+
+🟡 **The corrected claim:** MS-PL is OSI-approved and commercially usable, 🔴 **but it is outside
+the MIT / Apache-2.0 / BSD / ISC / 0BSD set these shelves are defined by, is GPL-incompatible, and
+imposes a reciprocity condition on source-form redistribution.** 🔵 **So the gap is real but
+narrower than first stated: a studio CAN build on the only open QTI item bank, after a deliberate
+licence decision — it cannot treat it as a default-yes permissive dependency.**
+
+🔴 **The unlicensed finding that SURVIVED the re-probe, with case variants:**
+[`open-ent/openbadges`](https://github.com/open-ent/openbadges), the French Open ENT credential
+issuer, and [`weizhenFrank/AutoGrader`](https://github.com/weizhenFrank/AutoGrader). 🟢 **Both
+re-probed across `22` paths each** (`main` and `master` × `License.md`, `license.md`, `License`,
+`LICENSE.md`, `LICENSE.txt`, `License.txt`, `license.txt`, `COPYING.md`, `Licence.md`,
+`LICENCE.md`, `NOTICE.md`) — 🔴 **no grant under any case variant, while both repositories serve
+`README.md` at `200`, so these are live repositories with no licence rather than fetch failures.**
+
+🟢 **Shelf `grep` before writing:** `QuestifyBuilder` → `0` hits on all three shelves.
+
+🟡 **How it closes:** an upstream relicence to MIT or Apache-2.0, or a studio licence decision
+accepting MS-PL. 🔵 **Filed with its own error attached because the failure mode — a case-sensitive
+probe producing a confident "no licence" verdict — is `T174` biting this base's licence
+instrument, one hour after `T174` was written about its dedupe instrument.**
+
+### 🔴 `852-G3` — this base's presence check fails in both directions, and neither failure is gated
+
+🔴 **The claim:** a presence check keyed on URLs under-reports this corpus's holdings, and one
+keyed on substrings over-reports them; `make hooks` grades neither.
+
+🟢 **What was checked, not inferred.** (i) A URL-keyed index over every non-archive `*.md` found
+`5,949` addresses and reported `weizhenFrank/AutoGrader` **absent**; a direct slug `grep` found it
+in `agents/trending.md`, written as a bare `owner/repo` slug with no URL. (ii) The slug
+`UOC/java-lti-1.3` matches `UOC/java-lti-1.3-provider`, recorded dead in
+`intel/measured-unusable.md` as `772-K31`; measured `2026-11-16`,
+`UOC/java-lti-1.3` serves `master/LICENSE` at `200` while `-provider` is `404` on both branches.
+🔵 **Prior art credited: `agents/trending.md:49662` already measured the `UOC/java-lti-1.3*`
+family collapse and bounded its cost as silence.** 🔴 **That bound is too generous: on a presence
+check the collapse transfers a dead sibling's `404` onto a live permissive row.**
+
+🟡 **How it closes:** one instrument that compares `owner/repo` at a word boundary in BOTH the URL
+and bare-slug forms, rejects prefix matches, and is wired into `hooks`. → `T174`.
+
+### 🔴 `852-G4` — no permissive, production-ready LTI PLATFORM exists on these shelves
+
+🔴 **The claim:** this base can build an LTI **tool** permissively and cannot build an LTI
+**platform** at all.
+
+🟢 **What was checked, not inferred:** the leg `open source LTI 1.3 Advantage tool provider library
+github Apache MIT 2026` returned one platform-side implementation,
+[`rolloutit/lti-platform`](https://github.com/rolloutit/lti-platform) — MIT (`master/LICENSE`,
+`1,066 B`, `sha256₁₂ 5f22ee03aa9f`), `1★`, `48` commits. 🟢 **Implemented: OIDC login initiation,
+authorization endpoint, signing keys/JWKS, auto-submit form renderer.** 🔴 **Deep Linking 2.0,
+NRPS, AGS, platform-side Dynamic Registration and the client-credentials token endpoint are all
+listed as PLANNED, and the `README` states "proof of concept" and "not ready for production yet".**
+🟢 **Tool side by contrast is solved and shelved:** `UOC/java-lti-1.3` (MIT, `21★`),
+`Cvmcosta/ltijs` (Apache-2.0), `1EdTech/lti-1-3-php-library` (Apache-2.0).
+🟢 **Shelf `grep` before writing:** `rolloutit/lti-platform` → `0` hits anywhere before this pass.
+
+🟡 **How it closes:** the Advantage services land upstream, or a different permissive platform-side
+implementation appears. 🔴 **Until then, do not propose Globant as the LTI platform.**
+
+### 🔴 `852-G5` — the only permissive Open Badges 3.0 validator on these shelves does not verify signatures
+
+🔴 **The claim:** [`TanimowoObaloluwaDavid/credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens)
+checks credential well-formedness and never authenticity, so this base has **no** permissive path
+to verifying a verifiable credential.
+
+🟢 **What was checked, not inferred:** MIT (`main/LICENSE`, `1,080 B`, `sha256₁₂ f65f32330671`).
+🔴 **Its own `README` states `signatureVerified` is hardcoded `false`** and that the checks are
+structural and heuristic only; Comprehensive Learner Record is unsupported. 🟢 **The AGPL-3.0
+alternative `schroedinger-Hat/certo` does issue and verify — and is copyleft.**
+🟢 **Shelf `grep` before writing:** `credential-lens` → `0` hits on all three shelves; present in
+`agents/trending.md`, `repos/trending.md`, `compose/code/p800-region-provenance/README.md` and
+`intel/open-gaps.md`.
+
+🟡 **How it closes:** signature verification lands upstream, or a permissive VC verifier is found.
+🔴 **Shipping this as a trust boundary would pass forgeries; it is a CI linter.**
+
+### 🔴 `852-G6` — `11` of the `13` rows filed this pass carry no region evidence, and that is this base's real regional coverage
+
+🔴 **The claim:** the supply side of this base is substantially unplaced, and the region field on
+most rows is `Global` by absence of evidence rather than by global scope.
+
+🟢 **What was checked, not inferred:** of `13` permissive rows filed this pass, `2` carry a payload
+or account channel — `UOC/java-lti-1.3` (maintainer at `uoc.edu`, EMEA) and
+`TREMA-UNH/rubric-grading-workbench` (institutional acronym in the account name, North America).
+🔴 **`11` carry none.** 🔵 **Three were explicitly refused a region rather than guessed:**
+`webtech-network/autograder` (Brazilian Portuguese output is a localisation CAPABILITY, not an
+origin), `EscolaLMS/LRS` (personal-name author field), `Citolab/qti-scoring-engine` (account name
+only, no stated organisation or country).
+
+🟡 **How it closes:** a channel that resolves an organisation account to a country without
+`api.github.com`, which answers `403` through this proxy. 🔴 **Until then every regional claim on
+the supply side must state its channel, and `0` APAC-placed rows were filed this pass.**
+
+### 🔴 `852-G7` — Latam-GPT has been launched for nine months and this base still has no repository or grant for it
+
+🔴 **The claim:** the flagship LATAM open model cannot be shelved, cited as a dependency, or
+licence-checked by this base.
+
+🟢 **What was checked, not inferred:** the leg `Latam-GPT CENIA open source education Spanish
+Portuguese LLM github 2026` returned `9` sources, **none carrying a GitHub repository address**.
+Reported facts are search-tier and mutually inconsistent: launched `10 February 2026` by CENIA;
+`70B` parameters on Llama 3.1 (an earlier source says `50B`); cost `~$550K`; institutional counts
+of `30+`/`8 countries` versus `60+`/`15 countries`; stated free for companies and public
+institutions. 🔵 **Corroborating but equally secondary: UNESCO's agreement with CENIA names
+Latam-GPT integration.**
+🟢 **Shelf `grep` before writing:** `Latam-GPT` → present in `intel/market.md` prose across
+several passes, `0` rows on any graded shelf.
+
+🟡 **How it closes:** a resolvable repository with a readable grant. 🔴 **Fifth consecutive pass
+with this gap open. A LATAM proposal that promises a regional model is promising something this
+base has never verified.**
+
+---
+
+
 ## 🟢 `2026-11-16` (fifty-sixth pass, `p851`) — **`4` gaps, and every one carries the `grep` that was run before it was written (`ACTION p850-B`, first pass to comply)**
 
 🔵 **`p850` ruled that a gap which does not name what was grepped is an opinion.** 🟢 **Each gap

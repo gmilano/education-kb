@@ -4,6 +4,70 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-seventh pass (`p852`) — 🟡 **`7` entrants, and NONE of them is new to this corpus. `13` of `17` addresses the legs returned were already written down here and graded nowhere.**
+
+🟡 **The week's entrant list and the week's finding are the same sentence.** The marking tier
+below is `7` rows now sitting on `agents/top.md` for the first time — and every one of the `7` was
+already somewhere in this repository before the hour began.
+
+🟢 **Entrants, with the grant measured today:**
+[`webtech-network/autograder`](https://github.com/webtech-network/autograder)
+(Apache-2.0, `66★`, `6` forks, `1,841` commits — sandboxed execution, tree rubrics, GitHub Action
++ FastAPI, **EN and pt-BR reports**) ·
+[`TREMA-UNH/rubric-grading-workbench`](https://github.com/TREMA-UNH/rubric-grading-workbench)
+(MIT, `15★` — grades the GRADER: `trec_eval` qrels, inter-annotator agreement) ·
+[`BridgeSuite/GradeBridge-Assignment-Maker`](https://github.com/BridgeSuite/GradeBridge-Assignment-Maker)
+(MIT, `6★` — browser-local authoring, QR-registered handwritten sheets, **returned under the
+pre-rename address `VeriQAi/…`**) ·
+[`BridgeSuite/GradeBridge-AI`](https://github.com/BridgeSuite/GradeBridge-AI)
+(MIT, `0★` — Gradescope Docker autograder contract, AES-256-GCM) ·
+[`jlouisbru/Canvas-grading-with-AI`](https://github.com/jlouisbru/Canvas-grading-with-AI)
+(MIT code + CC BY-SA 4.0 docs, `0★`, `v1.1.0` `2026-09-24` — the only permissive Canvas marking
+adapter found) ·
+[`johnswyou/autograder`](https://github.com/johnswyou/autograder)
+(MIT, `0★` — handwritten physics/maths, zero-data-retention routing by default) ·
+[`LiangGou/ai-grader`](https://github.com/LiangGou/ai-grader)
+(MIT, `0★`, `master` ref — photo grading, arithmetic re-checked in Python, **README states the
+codebase was AI-generated**).
+
+🔴 **The nil inside the yield.** The four mandated generic legs ran verbatim and returned `8`
+distinct addresses; this base already held `8` of `8` —
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) ·
+[`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) ·
+[`geekjourneyx/interactive-learning`](https://github.com/geekjourneyx/interactive-learning) ·
+[`TapXWorld/ChinaTextbook`](https://github.com/TapXWorld/ChinaTextbook) ·
+[`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) ·
+[`huggingface/agents-course`](https://github.com/huggingface/agents-course) ·
+[`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) ·
+plus a `NousResearch` Hermes agent whose education relevance is nil. 🟢 **`T171` confirmed a
+second consecutive pass, by a different instrument.**
+
+🔴 **Two false-permissive assertions, both from secondary summaries, both refuted by payload.**
+[`sdrangan/llmgrader`](https://github.com/sdrangan/llmgrader) carries a bespoke **non-commercial**
+"PySilicon Research License" that opens with MIT's exact incipit at `1,224 B`;
+[`weizhenFrank/AutoGrader`](https://github.com/weizhenFrank/AutoGrader) carries **no grant file at
+all** across `10` probes while a summary called it MIT. → `T175`.
+
+🔴 **Declined, with the payload that disqualified each:**
+[`OtterDen-Lab/Autograder`](https://github.com/OtterDen-Lab/Autograder) (GPL-3.0) ·
+[`lepo-project/roster-hub`](https://github.com/lepo-project/roster-hub) (AGPL-3.0, OneRoster
+**1.1**, `4★`) ·
+[`schroedinger-Hat/certo`](https://github.com/schroedinger-Hat/certo) (AGPL-3.0, holder line is an
+unfilled `<year>` template) ·
+[`open-ent/openbadges`](https://github.com/open-ent/openbadges) (no grant file — the most
+interesting EMEA credential finding of the pass and unusable) ·
+[`stichting-cito/QuestifyBuilder`](https://github.com/stichting-cito/QuestifyBuilder)
+(🟡 **MS-PL**, `master/License.md`, `4,616 B` — the ONLY genuine QTI **item bank** the legs
+returned; usable but outside this shelf's MIT/Apache/BSD set. 🔴 **First published this pass as
+"no grant file"; that verdict was produced by a CASE-SENSITIVE probe and is corrected here** —
+`T174`) ·
+[`cmoffatt-1edtech/edfi-oneroster`](https://github.com/cmoffatt-1edtech/edfi-oneroster)
+(Apache-2.0 but a **fork** of the already-shelved upstream; the byte-identical grant sha
+`a6cba85bc92e` predicted it before the banner was read).
+
+---
+
+
 ## `2026-11-16` — fifty-sixth pass (`p851`) — 🔴 **`0` entrants, and the week's finding is that the generic agent leg returned `10` addresses this base already held, `10` out of `10`**
 
 🔴 **No entrant to report, and this is a measured nil rather than a quiet one.** The four mandated

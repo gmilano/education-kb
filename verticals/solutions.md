@@ -785,7 +785,30 @@ platform.** 🟡 **Treat it as competitive intelligence that happens to be MIT-l
 | **AGENTIC STAR** (SoftBank, 🇯🇵) | 🔴 **Not institution-run — a hosted commercial agent platform**, developer docs at `developers.fd.agenticstar.tm.softbank.jp`, homepage `agenticstar.io`. 🟢 Its runtime SDKs `agenticstar-agentcore` (`1.0.3`) and `agenticstar-platform` (`3.3.0`, `80` releases) are public on PyPI and MIT by their wheel metadata | 🟢 **`74` MIT education agent templates, `54` catalogue ids `EDU-C2-004`…`EDU-C2-173`** — reference row [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent), `EDU-C2-028`, byte-read MIT (`1,074 B`, HEAD `71c442ebd88e`) | 🟢 **MIT** (templates and both SDKs, all byte- or metadata-verified) | 🟡 **Adopt the SPECS, not the runtime.** 🔴 Templates raise `PlatformRequired` at graph compile without a SoftBank deployment; all `74` are `0★`, unmaintained since October; the framework's advertised source repo has **zero commits** (`T89`); hard `==` pins on `langgraph`/`langchain`/`fastapi`. 🟢 **Tests run without the platform — harvest per `P61`** |
 | **AgentCore graph scaffold** (the catalogue's shared architecture) | 🔵 Not a product — the uniform structure under all `74` templates: `config/agent.yaml` manifest (`required_trust_level`, declared secrets), `src/graph/`, `src/nodes/`, `src/schemas/state.py`, `docs/02_design.md`, `docs/03_test_spec.md`, `tests/proof_of_boundary/` | 🟢 Domain nodes differ completely between ids — byte-compared across three repositories this pass: `iep_section_generator`/`regulatory_compliance` vs `affected_material_analysis`/`stakeholder_mapping` vs `bloom_level`/`difficulty_score`. Reference row [`haidang024/agentic-star-education-curriculum-change-impact-briefing-agent`](https://github.com/haidang024/agentic-star-education-curriculum-change-impact-briefing-agent) (`EDU-C2-046`, `45` files) | 🟢 **MIT** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ae3eea9ac056`) | 🟢 **This is the reusable asset.** 🔵 One scaffold, `54` real domain implementations — so a studio gets a uniform, inspectable architecture across `54` education workflows instead of `54` unrelated codebases. 🔴 The scaffold's base class ships only in the binary wheel; re-implement on LangGraph (now on `repos/foundations.md`) |
 
-## Education vertical platforms — 147 rows
+## Education vertical platforms — 150 rows
+
+## 🟡 The MARKING-ADAPTER layer — **permissive code that reaches INTO an incumbent this shelf already carries** (new, fifty-seventh pass `p852`) (3 rows)
+
+🔴 **The platform question scored its THIRTEENTH consecutive nil and this pass does not re-ask
+it.** The mandated leg (`open source platform education LMS SIS MIT Apache`) returned the same
+closed, non-permissive set — Moodle (GPL-3.0), Open edX (AGPL-3.0), Canvas (AGPL-3.0), Sakai
+(ECL-2.0), OpenEduCat (LGPL-3.0), ILIAS, Chamilo, Frappe LMS — every one already on this shelf
+before the leg ran. 🟢 **`p851` priced that exit and this pass accepts its verdict: stop asking
+for a permissive PLATFORM.**
+
+🟢 **What changed is one layer up, and it is the first movement on this file in thirteen passes.**
+🔵 **The marking tier filed on `agents/top.md` this pass gives this base, for the first time,
+PERMISSIVE adapters into three platforms it has only ever been able to describe: Canvas,
+Gradescope and GitHub Classroom.** 🟢 **That is the commercially useful shape — you do not need a
+permissive LMS if you have permissive code that integrates with the AGPL one the client already
+runs, because integration does not inherit the platform's grant.**
+
+| Library | Repo | License | Stars | Use when |
+|---|---|---|---|---|
+| Canvas-grading-with-AI | https://github.com/jlouisbru/Canvas-grading-with-AI | 🟡 **MIT (code) + CC BY-SA 4.0 (docs)** — byte-read `2026-11-16` (`main/LICENSE`, `1,071 B`, `sha256₁₂ 72f0ea5266d9`) | 0 | 🟢 **The client runs Canvas and will not stand up a server.** Ships as a Google Apps Script with Sheets as the whole UI: pulls questions and submissions from Canvas, grades, writes grades and comments back. 🔴 **The ONLY permissive Canvas marking adapter found — the functional alternative, `OtterDen-Lab/Autograder`, is GPL-3.0.** 🔴 **Its "FERPA-compliant" claim is unaudited and student answer text does reach the model API; use it as a de-identification pattern, not a compliance statement** (full reading on `agents/top.md`, `p852`). |
+| GradeBridge AI | https://github.com/BridgeSuite/GradeBridge-AI | 🟢 **MIT** — byte-read `2026-11-16` (`main/LICENSE`, `1,064 B`, `sha256₁₂ 2bdd760d7375`, holder `2026 VeriQAi`) | 0 | 🟢 **The client marks on Gradescope.** A working contract for a Gradescope autograder: Python scorer running inside Gradescope's own Docker image, decrypting the submission, scoring against an encrypted spec baked into the image, returning `results.json` with per-question feedback; plus a lab-manual-to-assignment path and submitter-identity mismatch flagging. 🔴 **`0★`, `8` commits — read `AUTOGRADER_ZIP_SPEC.md` and the Docker contract, then write your own.** |
+| autograder (webtech-network) | https://github.com/webtech-network/autograder | 🟢 **Apache-2.0** — byte-read `2026-11-16` (`main/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`) | 66 | 🟢 **The course is assessed from a Git repository, or the client wants marking in CI.** Ships a GitHub Action that grades a checkout and uploads a versioned outcome artefact, plus a FastAPI REST service its `README` offers for LMS integration. Sandboxed execution with no network and bounded memory; tree-structured weighted rubrics; **English and Brazilian Portuguese report rendering**, which is what makes it the LATAM-facing default in this layer. 🔵 **The most-starred row in the marking tier (`66★`) and the only one with a submission sandbox.** |
+
 
 ### Filed by `p834` (2026-11-15) — `5` rows: the EXAMINATION-PLATFORM vertical, and the two AGPL rows are the traction leaders
 

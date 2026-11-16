@@ -4,6 +4,122 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-seventh pass (`p852`, 2026-11-16) — `2` recipes (`P81`, `P82`), built only from rows filed or measured this pass
+
+🔵 **Both are numbered in the bare form this repository's own gate counts** (`## P<n> — …`).
+🟢 **Every component below carries a grant byte-read on `2026-11-16` and a row on
+`agents/top.md`, `repos/foundations.md` or `verticals/solutions.md` filed this pass.**
+
+## P81 — the DEFENSIBLE marking pilot: an AI grader that ships its own accuracy number (North America and LATAM anchors; same build, different argument)
+
+🔴 **The problem, in the client's words.** *"We ran an AI grading pilot. Faculty senate asked how
+accurate it is and we had nothing to show them. It is parked."*
+
+🟢 **Why this is now buildable and was not before this pass.** The marking tier has existed on
+these shelves for several passes; 🔴 **the measurement harness for it had never been shelved.**
+`TREMA-UNH/rubric-grading-workbench` is the piece that closes it, and it is MIT.
+
+🟢 **Components, all permissive, all byte-read `2026-11-16`:**
+
+| Role | Component | Grant | Why this one |
+|---|---|---|---|
+| Marking engine | [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | Apache-2.0 (`11,357 B`, `c71d239df917`) | `66★`; the only marking row with a **submission sandbox** (no network, bounded memory/processes) and tree-structured weighted rubrics; EN + pt-BR reports |
+| Accuracy harness | [`TREMA-UNH/rubric-grading-workbench`](https://github.com/TREMA-UNH/rubric-grading-workbench) | MIT (`1,068 B`, `3f68bfcd4ec5`) | The only permissive tool found that emits **inter-annotator agreement and rank correlation** between model and human judgements |
+| Assessment authoring | [`BridgeSuite/GradeBridge-Assignment-Maker`](https://github.com/BridgeSuite/GradeBridge-Assignment-Maker) | MIT (`1,100 B`, `6203d12e65d7`) | Browser-local, no backend, no telemetry; **QR-registered handwritten sheets** so paper submissions are machine-locatable |
+| Score round-trip | [`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system) | MIT (`1,066 B`, `5bb49280d709`) | Writes marker comments back as QTI Results Reporting **`COMMENT` outcomes**, so the pilot's output survives a platform migration |
+
+🟢 **The wiring, in the order it is built.**
+
+1. **Author the instrument in `GradeBridge-Assignment-Maker`.** Electronic mode for typed work,
+   handwritten mode for paper — the QR registration mark is what makes step 4 reliable rather
+   than hopeful. 🔵 **Nothing leaves the browser at this stage, which is what gets it past a
+   student-data review.**
+2. **Grade twice, deliberately.** Run `webtech-network/autograder` over the submission set with
+   the rubric expressed as its versioned grading definition. 🔴 **In parallel, have humans mark a
+   stratified sample — not a convenience sample — and keep both sets of per-criterion scores.**
+3. **Produce the number.** Feed both score sets to `rubric-grading-workbench` and emit the
+   agreement statistics and rank correlation. 🟢 **This is the deliverable the faculty senate
+   asked for, and it is the step every parked pilot skipped.**
+4. **Close the loop into the institution's own records** via `qti-scoring-system`, so marks and
+   marker comments land as QTI Results Reporting rather than in a spreadsheet.
+5. **Gate the release.** Adopt `johnswyou/autograder`'s published posture verbatim — review every
+   queued item, sample the rest, approve before any grade is released.
+
+🔵 **North America argument:** `~100` state bills and `≥15` states legislating on AI in education,
+against only `45%` of the most-used tools carrying ESSA-tier research. 🟢 **Step 3 IS the
+procurement answer.**
+🔵 **LATAM argument:** `92%` student engagement against `~30%` of universities having any
+published AI-use policy. 🟢 **Step 3 is the governance artefact, and
+`webtech-network/autograder` renders reports in Brazilian Portuguese** — 🔴 **a localisation
+capability, not a regional origin.**
+
+🔴 **What this recipe does NOT give you, stated so it is not oversold.** The sandbox covers
+submitted CODE; none of these components sandboxes a model provider. `GradeBridge-AI` and
+`Canvas-grading-with-AI` both send assessment content to a hosted API — 🔴 **and
+`Canvas-grading-with-AI`'s "FERPA-compliant" wording is unaudited. Sell the de-identification
+pattern, never the compliance claim.** 🔴 **Effort is UNMEASURED: no component here has been
+implemented end-to-end by this base, and `rubric-grading-workbench` is built for
+retrieve-and-generate evaluation, so the adapter from classroom rubrics to its test-bank format is
+real work nobody has priced. Do not quote a duration.**
+
+## P82 — the EMEA standards-seam delivery: integrate with the AGPL LMS the client already runs, on a 2 December 2027 clock
+
+🔴 **The problem, in the client's words.** *"We are a public university on Moodle. We cannot
+replace it, we cannot fork it, and we have an AI Act deadline. What can you actually build us?"*
+
+🟢 **The answer this pass makes available: you do not need a permissive LMS.** 🔵 **Integration
+code does not inherit the platform's grant** — so a permissive adapter into an AGPL-3.0 Moodle or
+Canvas is sellable where a permissive LMS does not exist, and the platform leg's thirteen
+consecutive nils stop being a dead end.
+
+🟢 **Components, all permissive, all byte-read `2026-11-16`:**
+
+| Role | Component | Grant | Why this one |
+|---|---|---|---|
+| Launch (tool side) | [`UOC/java-lti-1.3`](https://github.com/UOC/java-lti-1.3) | MIT (`1,060 B` @ `master`, `b6b29f11f74e`) | `21★`, full LTI 1.3 **Advantage** tool on the JVM; 🟢 **EMEA-anchored on a payload channel — maintainer at `uoc.edu`, Universitat Oberta de Catalunya** |
+| Item + score | [`Citolab/qti-scoring-engine`](https://github.com/Citolab/qti-scoring-engine) | MIT (`1,112 B`, `fae7c63759fe`) | Scores QTI 2.x/3.0 and Results Reporting 2.x **server-side**, which is the only place a registrar accepts a mark from |
+| Marker UI + a11y | [`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system) | MIT (`1,066 B` @ `master`, `5bb49280d709`) | `COMMENT`-outcome round-trip, and the only row in the seam layer shipping **axe accessibility tests** |
+| Activity record | [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) | MIT (`1,066 B`, `06ff7c71a6a1`) | Laravel-native xAPI LRS with a **`cmi5`** endpoint — the profile an LMS actually launches content through |
+| Credential lint | [`TanimowoObaloluwaDavid/credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens) | MIT (`1,080 B`, `f65f32330671`) | Zero-dependency, offline OB 3.0 / W3C VCDM 2.0 well-formedness check for CI |
+
+🟢 **The wiring, in the order it is built.**
+
+1. **Launch from Moodle as an LTI 1.3 Advantage tool** using `UOC/java-lti-1.3`
+   (`edu.uoc.elc.lti.tool.Tool`). 🔵 **Moodle stays the platform and stays AGPL; your tool is a
+   separate work reached over a standard protocol.**
+2. **Deliver and score items** with `Citolab/qti-scoring-engine` server-side, and give markers
+   `metyatech/qti-scoring-system` for the human pass. 🟢 **Comments round-trip as QTI `COMMENT`
+   outcomes, so nothing is trapped in your layer.**
+3. **Emit the activity record** to `EscolaLMS/LRS` over `cmi5`, which is what makes the engagement
+   auditable rather than merely functional — 🔵 **and auditability is the AI Act posture, not an
+   extra.**
+4. **Lint every credential in CI** with `credential-lens`. 🔴 **Then stop: `signatureVerified` is
+   hardcoded `false` in that tool. Well-formedness is NOT authenticity, and the signature
+   verification is work you must do elsewhere.**
+5. **Certify the process, not the model.** Point the whole pipeline at **ISO/IEC 42001**, cited in
+   this pass's EMEA intel as the operational complement to a policy layer whose dates keep moving.
+
+🔵 **The clock, measured:** high-risk education obligations under the AI Act moved to
+**2 December 2027** on the Digital Omnibus political agreement of **7 May 2026** — 🟢 **about `13`
+months of runway from today, with the high-risk CLASSIFICATION unchanged.** 🔴 **That is a build
+window, not a reprieve, and it is the single most quotable fact in this pass's EMEA intel.**
+
+🔴 **What this recipe does NOT give you.** (i) 🔴 **You cannot BE the platform.** The only
+permissive platform-side LTI implementation found, `rolloutit/lti-platform`, implements OIDC login,
+the authorization endpoint and JWKS and **nothing of LTI Advantage** — its own `README` says
+"proof of concept", "not ready for production" (`852-G4`). (ii) 🟡 **There is no MIT/Apache QTI
+ITEM BANK.** `stichting-cito/QuestifyBuilder` is the only genuine item bank the legs returned and
+it is **MS-PL** (`master/License.md`, `4,616 B`, `sha256₁₂ da87cc5e5e39`) — OSI-approved and
+commercially usable, but GPL-incompatible and carrying a source-form reciprocity condition.
+🔴 **So item authoring and storage at scale needs a deliberate licence decision before it is
+proposed, not a default yes** (`852-G2`). (iii) 🔴 **`EscolaLMS/LRS` depends on `trax2/framework ^2`,
+so a TRAX licence change propagates into this build — pin it and watch it.** (iv) 🔴 **Effort
+UNMEASURED; the LTI-launch-plus-AGS seam remains this base's longest-standing unpriced number
+(`Gap 316(i)`). Do not quote it.**
+
+---
+
+
 ## 🟢 Fifty-sixth pass (`p851`, 2026-11-16) — `2` recipes (`P79`, `P80`), built only from rows filed or measured this pass
 
 🔵 **Both are numbered in the bare form this repository's own gate counts** (`## P<n> — …`), per

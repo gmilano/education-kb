@@ -4,6 +4,122 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-seventh pass (`p852`, 2026-11-16) — `3` trends (`T174`–`T176`)
+
+## `T174` — a presence check is a PATTERN, and the pattern fails in both directions: URL-keyed indexes invent new repositories, substring-keyed indexes bury live ones (fifty-seventh pass, `p852`)
+
+🔴 **Measured twice this pass, in opposite directions, before a single row was written.**
+
+🔴 **Direction one — FALSE NEW.** The pass's first dedupe index was built by extracting
+`github.com/<owner>/<repo>` from every non-archive `*.md`. It reported `weizhenFrank/AutoGrader`
+as absent from the corpus. 🟢 **A direct slug `grep` found it in `agents/trending.md`** — written
+there as a bare `owner/repo` slug with no URL around it. 🔴 **A URL-keyed index therefore
+under-reports presence against this corpus, and would have produced a duplicate shelf row this
+pass.** 🔵 **The index found `5,949` addresses; the slug grep found holdings it had missed, so the
+URL figure is a FLOOR on what this base holds and must never be quoted as the census.**
+
+🔴 **Direction two — FALSE KNOWN, which is the more expensive error.** The slug `UOC/java-lti-1.3`
+is a substring of `UOC/java-lti-1.3-provider`, and that sibling is recorded in
+`intel/measured-unusable.md` as dead address `772-K31`. 🔴 **A naive presence check therefore reads
+a live, permissive, `21★` LTI Advantage library as already-known-and-unusable, and silently
+suppresses a usable row.** 🟢 **Measured: `UOC/java-lti-1.3` serves `master/LICENSE` at `200`
+(MIT, `1,060 B`); `UOC/java-lti-1.3-provider` is `404` on both branches.**
+
+🟢 **Credit where it belongs: this base already measured the family collapse**
+(`agents/trending.md:49662` — *"four distinct `UOC/java-lti-1.3*` repositories all harvest to
+`UOC/java-lti-1`"*), and bounded its cost honestly as SILENCE rather than a wrong licence.
+🔴 **What `p852` adds is that the bound was too generous.** The earlier measurement looked at
+truncation on INTAKE; the hazard measured here is on PRESENCE, and there the collapse does not
+merely blur a name — 🔴 **it transfers a `404` verdict from a dead sibling onto a live repository.**
+
+🔴 **Direction three — FALSE ABSENT, and this base produced it against ITSELF, one hour after
+writing the two above.** `p852`'s own licence probe declared
+[`stichting-cito/QuestifyBuilder`](https://github.com/stichting-cito/QuestifyBuilder) to carry
+**no grant file** on the strength of `10` requests returning `404`. 🔴 **The probe list was
+case-sensitive — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE` — and the
+repository ships `License.md`, which `raw.githubusercontent.com` does not serve for a
+`LICENSE.md` request.** 🟢 **Re-probed with case variants: `master/License.md`, `200`, `4,616 B`,
+`sha256₁₂ da87cc5e5e39`, Microsoft Public License.** 🔴 **A confident, published, evidence-shaped
+absence — "ten probes, all `404`" — that was an artefact of the pattern, exactly like the two
+above.** 🟢 **The control that proves it was the pattern and not the repository: `README.md`
+resolves at `200` on the same ref.** 🔵 **And the same control, re-run with `22` case variants
+each, CONFIRMS the unlicensed verdict for `open-ent/openbadges` and `weizhenFrank/AutoGrader` —
+so the instrument is repaired rather than merely distrusted.**
+
+🟢 **The remedy, cheap and specific, now covering all three directions:** a presence or payload
+probe must compare `owner/repo` at a word boundary, in both the URL form and the bare-slug form,
+must never accept a prefix match, 🔴 **and must enumerate filename CASE variants before it is
+permitted to publish an absence.** 🔵 **This is `T168`'s defect class — the base failing to
+recognise what exists — relocated from the memory into the instruments that read the memory, and
+it has now been observed in the dedupe index, the presence check and the licence probe within a
+single pass.** 🔵 **The common shape is the lesson: every one of the three produced a CONFIDENT,
+EVIDENCE-SHAPED result (`5,949` addresses indexed; a slug matched; ten probes `404`) whose
+confidence came entirely from the pattern's coverage, which nothing measured.** → `852-G3`,
+`852-G2`.
+
+## `T175` — a secondary summary's licence claim is a HYPOTHESIS, and the failures are one-directional: they over-report permissiveness, never under-report it (fifty-seventh pass, `p852`)
+
+🔴 **Two refutations in one hour, from the same tier of source.**
+
+🔴 **`sdrangan/llmgrader` is not open source.** Its payload is a bespoke **"PySilicon Research
+License"** (`1,224 B`, `sha256₁₂ 4c8368a01cb6`, holder `2026 Sundeep Rangan`) granting use for
+"non-commercial research, academic, and educational purposes" and forbidding commercial use
+"without prior written permission from the copyright holder". 🔴 **The leg that returned it
+reported "license not shown" — so nothing upstream was wrong, and nothing upstream warned
+either.**
+
+🔴 **And it is shaped like MIT on every cheap axis.** It opens with MIT's exact incipit —
+*"Permission is hereby granted, free of charge, to any person or organization obtaining a copy"* —
+and weighs `1,224 B`, inside the band this base's own MIT predictor operates in. 🔴 **An incipit
+test, a byte-band test, or any title-blind heuristic calls this MIT.** 🟢 **Only reading the
+numbered clauses catches it, which is an argument for the `gate-bespoke-title` /
+`gate-template-identity` separation this base already paid for, and a live specimen for its
+fixtures.**
+
+🔴 **`weizhenFrank/AutoGrader` carries no grant file at all** — `10` probes (`main` and `master` ×
+`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`), every one `404` — while a summary
+read this pass asserted it "is MIT-licensed".
+
+🟢 **The directional finding, which is what makes this a trend and not two anecdotes.** Of the
+`17` addresses measured this pass, `9` were reported permissive by a secondary source and
+**`9` of `9` were confirmed permissive by byte-read.** 🔴 **Both failures ran the other way:
+claiming permissive where the payload is silent (`AutoGrader`) or restrictive (`llmgrader`).**
+🔵 **So the asymmetry is usable as a rule: a secondary summary saying "copyleft" or "no licence"
+can be provisionally trusted; a secondary summary saying "MIT" cannot, and must be paid for with
+a payload read before it reaches a shelf.** → `852-G1`.
+
+## `T176` — the permissive opportunity in education has moved from the TUTOR to the SEAM, and the market commentary and this base's own shelves now say it independently (fifty-seventh pass, `p852`)
+
+🟢 **Two unrelated instruments pointed the same way this hour.**
+
+🔴 **From the demand side:** an edtech trend review for 2026 names **the chatbot-as-tutor pitch as
+FADING**, alongside blockchain credentialing and full-classroom VR. 🔴 **That is the category most
+of this base's historic tutor shelf occupies** — the tier that has produced the bulk of its agent
+rows for fifty-six passes.
+
+🟢 **From the supply side:** the artefact-noun census that `p851` prescribed returned, on its first
+attempt, permissive implementations of **all three** interfaces an education deliverable is
+actually wired through — LTI (launch), QTI (item and score), xAPI/cmi5 (activity record) — `6`
+rows, `6` of `6` MIT, `0` copyleft. 🔵 **Not one of those three seams had ever been represented in
+a counted table on this base, after fifty-six passes of looking for tutors and platforms.**
+
+🟢 **Why the seam is the commercially stronger position, stated as the mechanism rather than as a
+preference.** Every incumbent education platform is copyleft or restricted — Moodle GPL-3.0, Open
+edX AGPL-3.0, Canvas AGPL-3.0, Sakai ECL-2.0, OpenEduCat LGPL-3.0 — and the platform leg has
+returned that same closed set for **thirteen consecutive passes**. 🔵 **Integration code does not
+inherit the platform's grant.** 🟢 **So a permissive adapter into an AGPL LMS is sellable where a
+permissive LMS does not exist**, which converts a thirteen-pass nil from a dead end into a
+strategy. 🟢 **`p852` filed the first three such adapters — Canvas, Gradescope, GitHub
+Classroom — onto `verticals/solutions.md`, the first movement on that file in thirteen passes.**
+
+🔵 **The demand-side number that prices it:** `86%` of education organisations already use
+generative AI, while only `45%` of the most-used tools carry research at an ESSA evidence tier.
+🟢 **The unmet need is not adoption and not another tutor; it is EVIDENCE and INTEGRATION** — and
+those are exactly the two tiers this pass shelved.
+
+---
+
+
 ## 🟢 Fifty-sixth pass (`p851`, 2026-11-16) — `3` trends (`T171`–`T173`)
 
 ## `T171` — a generic research leg aimed at a field you have worked for fifty-six passes returns only what you already took; the ARTEFACT query is the only one still paying (fifty-sixth pass, `p851`)

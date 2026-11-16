@@ -4,6 +4,79 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-seventh pass (`p852`, 2026-11-16) — **`7` agent rows (`398` → `405`). `13` of the `17` addresses today's legs returned were in this base's own trending history and on NO graded shelf — so the pass spent its hour PROMOTING rather than searching, and found two false-permissive payloads doing it.**
+
+🟢 **`p851` proved the generic leg is saturated and prescribed the artefact query as the one still
+paying. This pass ran both, and the artefact leg paid — but not in the way the prescription
+expected.** 🔴 **It did not return unknown repositories. It returned repositories this base had
+already written down and never graded.** 🔵 **That is `T172`/`851-G2` — the `1,905` addresses lost
+to rewrites — measured for the first time on a LIVE research yield instead of an archive diff.
+`p851` found the loss by looking backwards; this pass hit the same loss by looking forwards, which
+is the stronger instrument, because it is the one a client engagement would hit.**
+
+### 🔴 Finding 1 — `13` of `17`: the base re-finds what it already holds and has never shelved
+
+🟢 **Measured address-by-address with a direct slug `grep` across every non-archive `*.md` in this
+repository**, the rule `ACTION p850-B` prescribes, run before a single row was written:
+
+| State | Count | Addresses |
+|---|---|---|
+| 🔴 **UNGRADED** — present in `agents/trending.md`, `repos/trending.md`, an instrument `README` or `intel/open-gaps.md`, and on **no** graded shelf | **13** | `webtech-network/autograder` · `TREMA-UNH/rubric-grading-workbench` · `jlouisbru/Canvas-grading-with-AI` · `BridgeSuite/GradeBridge-AI` · `johnswyou/autograder` · `sdrangan/llmgrader` · `weizhenFrank/AutoGrader` · `OtterDen-Lab/Autograder` · `EscolaLMS/LRS` · `TanimowoObaloluwaDavid/credential-lens` · `open-ent/openbadges` · `lepo-project/roster-hub` · `schroedinger-Hat/certo` |
+| 🟢 **NEW** — absent from the whole non-archive corpus | **3** | `BridgeSuite/GradeBridge-Assignment-Maker` (returned as `VeriQAi/…`) · `LiangGou/ai-grader` · `cmoffatt-1edtech/edfi-oneroster` |
+| 🔵 **SHELVED** — already on a graded shelf, correctly | **1** | `yetanalytics/lrs` |
+
+🔴 **`13` of `17` is `76%`.** 🔵 **Read that as a cost: three-quarters of this pass's research
+budget was spent re-discovering the base's own holdings, and the only reason it is not a wasted
+hour is that nothing had ever read their grants.** 🟢 **All `13` now carry a byte-read licence and
+sit in a table the count gate can see — here, on `repos/foundations.md`, or in the declined table
+below with the payload that disqualified them.**
+
+### 🔴 Finding 2 — the dedupe rule is only as good as the PATTERN, and this pass broke it twice before it worked
+
+🔴 **First break: a URL-shaped index under-reports presence.** This pass's first dedupe index was
+built from `github.com/<owner>/<repo>` matches and reported `weizhenFrank/AutoGrader` as **NEW**.
+🟢 **A direct slug `grep` found it in `agents/trending.md`** — recorded there as a bare
+`owner/repo` slug with no URL. 🔴 **A URL-keyed index is therefore a live FALSE-NEW generator
+against this corpus, and it would have produced a duplicate row this pass had the second check not
+run.** 🔵 **Same defect class as `T168` — the base failing to recognise its own holdings — one
+layer down, in the instrument rather than the memory.** → `T174`, `852-G3`.
+
+🔴 **Second break, the opposite direction: a substring `grep` over-reports presence.** The slug
+`UOC/java-lti-1.3` matches `UOC/java-lti-1.3-provider` as a substring, and that sibling sits in
+`intel/measured-unusable.md` as a dead address (`772-K31`). 🔴 **A naive presence check therefore
+reads a LIVE, permissive, `21★` repository as already-known-and-unusable.** 🟢 **Measured this
+pass: `UOC/java-lti-1.3` serves `master/LICENSE` at `200` (MIT, `1,060 B`); `UOC/java-lti-1.3-provider`
+is `404` on both branches.** 🔵 **Credit where it is due — the base already measured this family
+collapse** (`agents/trending.md:49662`: *"four distinct `UOC/java-lti-1.3*` repositories all harvest
+to `UOC/java-lti-1`"*). 🟢 **What this pass adds is that the collapse runs in BOTH directions, and
+that the over-reporting direction suppresses a usable row rather than merely blurring a name.**
+🟢 **And a third channel closes it: `agents/trending.md:61444` already recorded
+`UOC/java-lti-1.3` as MIT at `1 060 B` — the same byte count this pass read independently today.**
+→ `T174`.
+
+### 🔴 Finding 3 — two payloads this pass read assert a permissive grant they do not carry, and one of them is shaped exactly like MIT
+
+🔴 **`sdrangan/llmgrader` is not open source.** Its grant is a bespoke **"PySilicon Research
+License"** permitting use for "non-commercial research, academic, and educational purposes" and
+forbidding commercial use "without prior written permission". 🔴 **It opens with MIT's exact
+incipit and weighs `1,224 B`, inside the band this base's own MIT predictor works in** — an
+incipit test, a byte-band test or a title-blind heuristic all call it MIT. 🟢 **Only the numbered
+clauses give it away.** → `852-G1`, `T175`.
+
+🔴 **`weizhenFrank/AutoGrader` carries NO grant file at all** — `10` probes, two branches × five
+conventional names, every one `404` — while a search summary read this pass asserted it "is
+MIT-licensed". 🔵 **Two independent false-permissive assertions in one hour, from the same tier of
+source, is not an anecdote; it is a measured property of secondary summaries about licences.**
+→ `T175`.
+
+🟢 **And the honest counter-observation, recorded so this finding is not read as broader than it
+is:** of the `17` addresses measured, `9` reported a permissive grant and **every one of those `9`
+was confirmed permissive by byte-read**. 🔵 **The failures were both in the direction of claiming
+permissive where the payload is silent or restrictive — never the reverse.**
+
+---
+
+
 ## 🔴 Fifty-sixth pass (`p851`, 2026-11-16) — **`0` agent rows (`398` → `398`). The four mandated generic legs returned `10` addresses and this base already held `10` of `10`. The generic leg is SATURATED, and this pass measures it instead of re-running it.**
 
 🔴 **The nil is the finding, and it has a denominator.** 🟢 **All four mandated global legs were
@@ -3272,7 +3345,44 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 398 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 405 rows
+
+### Filed by `p852` (2026-11-16) — `7` rows: the AI MARKING tier, every grant byte-read today, and all `7` were in this base's trending history with `0` on any graded shelf
+
+🟢 **These `7` are not new discoveries and this pass does not present them as such.** 🔴 **Every
+one of them was already written down somewhere in this corpus — `agents/trending.md`,
+`repos/trending.md`, an instrument `README` or the gap ledger — and not one sat on a graded
+shelf.** 🟢 **What `p852` did was read the grant, measure the repository and file it where the
+count gate can see it.** 🔵 **See this pass's Finding 1 for the denominator: `13` of `17`
+addresses returned by today's legs were in exactly that state.**
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| autograder (webtech-network) | https://github.com/webtech-network/autograder | 🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`, stock Apache text, no holder line) | 66 | Global | 🟢 **The most-starred permissive marking agent this base has found, and the only one with a submission SANDBOX.** Student code runs in a disposable sandbox with **no network access and bounded memory and process count** — the property that separates a tool you can point at real submissions from one you can only demo. Grades command-line programs in Python, Java, JavaScript, C and C++ against expected output, plus HTML/CSS/JS files. Rubrics are **tree-structured with weighted subjects, extra credit and penalties**, written once as a versioned grading definition, and every grade comes back with a per-criterion explanation. Two integration surfaces: a **FastAPI REST service** its `README` offers for LMS integration (no specific LMS named), and a **GitHub Action** that grades a checkout and uploads a versioned outcome artefact. `1,841` commits, `6` forks, `13` open issues, topic tag `github-classroom-autograder`. 🟡 **Reports render in English AND Brazilian Portuguese** (`README` line 52) — 🔵 **a pt-BR LOCALISATION CAPABILITY, which is what makes it the natural LATAM anchor on this shelf; it is NOT a statement of origin, and this pass places no origin from it.** 🔴 **Self-labelled "in active development" — take the sandbox and the rubric tree; pin the version.** |
+| rubric-grading-workbench | https://github.com/TREMA-UNH/rubric-grading-workbench | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,068 B`, `sha256₁₂ 3f68bfcd4ec5`, holder `2025 Laura Dietz`), 🟢 **second channel agrees:** `pyproject.toml` line `14` reads `license = {text = "MIT"}` | 15 | North America | 🟢 **The only row on this shelf that grades the GRADER.** An LLM-autograding workbench for retrieve-and-generate systems: it builds a nugget or exam-question test bank, grades passages with a model, supports manual verification of those judgements, and emits **`trec_eval`-compatible qrels and leaderboards**, plus rank-correlation and inter-annotator-agreement analyses. Extends the Exam Answerability Metric code base for CAR Y3. `446` commits, `4` forks. 🔵 **Why a studio wants it even though it is not a classroom tool:** it is the measurement harness for every other row in this tier. An AI marking pilot that cannot show agreement with human graders does not survive procurement, and this is the only permissive thing found that produces that number. 🟡 **Region North America on the ACCOUNT name — `TREMA-UNH` carries the institutional acronym of the University of New Hampshire, and the grant holder is that group's lead.** 🔴 **Stated as account-name evidence, not a resolved institutional domain** (`T165`). 🔵 **A secondary summary read this pass claimed the `README` declares BSD-3; a `grep` of `main/README.md` for the terms `licen`, `BSD` and `MIT` returned ZERO lines, so the conflict is UNCONFIRMED and the two first-hand channels both say MIT.** |
+| GradeBridge Assignment Maker | https://github.com/BridgeSuite/GradeBridge-Assignment-Maker | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,100 B`, `sha256₁₂ 6203d12e65d7`, holder `2026 The Rege…`) | 6 | Global | 🟢 **The authoring half of the marking loop, and it is entirely browser-local.** An instructor writes a structured assignment with LaTeX maths and figures; it exports a printable sheet, a student file and the grading materials, **all generated in the browser** — `localStorage` only, no account, no backend, no telemetry. Two modes: electronic, and **handwritten, which emits a QR-registered sheet the student prints, writes on and photographs** — the registration mark is what makes downstream photo-grading reliable instead of hopeful. TypeScript / React, `184` commits. 🔵 **Why the no-backend property is the row:** student work and unreleased assessment items are the two artefact classes a university most often forbids sending to a third-party service, and this one cannot send them anywhere. 🔴 **Address correction filed by this pass: the leg returned `VeriQAi/GradeBridge-Assignment-Maker`, which RESOLVES to `BridgeSuite/…` — an organisation rename. The canonical address is `BridgeSuite`, and the pre-rename name survives inside the sibling's grant (see the next row), which is what corroborates the rename rather than a redirect alone.** |
+| GradeBridge AI | https://github.com/BridgeSuite/GradeBridge-AI | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,064 B`, `sha256₁₂ 2bdd760d7375`, holder `2026 VeriQAi` — 🔵 **the PRE-RENAME organisation name, inside the grant**) | 0 | Global | 🟢 **The only permissive Gradescope-native marking agent found.** Two pipelines. **Lab:** an existing lab manual becomes an AI-graded Gradescope assignment; the student package submits as a ZIP, AI-graded questions score automatically and human-review questions are flagged for a TA against a grader document (`AUTOGRADER_ZIP_SPEC.md`). **MQ:** timed multiple-choice from a SQLite question bank, with a Python autograder that **runs inside Gradescope's own Docker environment**, decrypts the submission, scores against an encrypted spec baked into the image and returns a Gradescope `results.json` with per-question feedback. AES-256-GCM throughout, and it **compares the typed student name against the Gradescope-authenticated submitter and flags mismatches**. 🔴 **`0★`, `8` commits — this is a reference implementation of a Gradescope autograder contract, not a dependency. Read the ZIP spec and the Docker contract; write your own.** |
+| Canvas-grading-with-AI | https://github.com/jlouisbru/Canvas-grading-with-AI | 🟡 **DUAL — MIT for the CODE, CC BY-SA 4.0 for the DOCS** (`main/LICENSE` byte-read `2026-11-16`, `1,071 B`, `sha256₁₂ 72f0ea5266d9`, holder `2025 Jea…`; the documentation grant is declared separately in `LICENSE-DOCS.md`) | 0 | Global | 🟢 **Canvas essay grading that a department can actually run tomorrow, because it ships as a Google Apps Script and needs no server.** Pulls quiz questions and submissions from Canvas, drafts answer keys and rubric criteria for the instructor to review, grades on a 1–5 generosity scale, writes feedback comments, and uploads grades and comments back to Canvas. Google Sheets is the whole interface. `80` commits; changelog `v1.1.0` dated **`2026-09-24`**. 🔴 **The FERPA claim needs reading carefully, and this is why the row carries it in full.** The repository advertises a *"FERPA-compliant workflow"* and removed student answer text from execution logs for that reason — but **question text, answer keys, rubric criteria and student answer text are all sent to the model API**, with student names and Canvas IDs withheld. 🔴 **There is no independent audit or certification behind the word "compliant"; the `README` itself tells the operator to confirm the arrangement against institutional policy.** 🔵 **Treat it as a de-identification pattern worth copying, not as a compliance guarantee to repeat to a client.** Not affiliated with Instructure. |
+| autograder (johnswyou) | https://github.com/johnswyou/autograder | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,065 B`, `sha256₁₂ 684d737736e0`, holder `2026 Joh…`) | 0 | Global | 🟢 **Handwritten physics and maths, which is the submission format the rest of this tier cannot read.** Locates the answers on the page, transcribes the student's working, applies a rubric and emits reports plus a **review queue** of items needing a human. Solutions and rubrics are optional inputs — omit them and the model generates them. Python, `41` commits, model access via OpenRouter. 🟢 **Two properties worth copying outright:** the default routing **requires zero data retention and denies provider data collection** unless the operator passes explicit override flags, and the `README` instructs the operator to review every queued item, sample the rest, and approve before any grade is released. 🔵 **That is the correct posture for an assessment agent, written down by the author rather than bolted on by a buyer.** 🔴 **`0★`, single author, and its own worked example runs on synthetic data — a pattern to lift, not a dependency to adopt.** |
+| ai-grader (LiangGou) | https://github.com/LiangGou/ai-grader | 🟢 **MIT — byte-read `2026-11-16`** (**`master`**`/LICENSE`, `1,066 B`, `sha256₁₂ 3ab2e2e86bec`, holder `2026 Lia…`) | 0 | Global | 🟡 **Mobile-first photo grading, filed with its provenance stated.** A teacher photographs a paper; the model grades each question against a rubric the teacher has reviewed; the app returns class statistics and a CSV export. The rubric is built by uploading a graded example or an answer key, from which it drafts question text, reference solutions and point values — then **re-solves each question and checks the arithmetic with Python** rather than trusting the model's own sum. Python / Flask, teacher and admin roles with password login, SQLite locally or Postgres in production, `157` commits. 🔴 **Its own `README` states the codebase was generated by an AI assistant. Filed because the arithmetic-recheck and rubric-from-example mechanisms are sound and worth lifting; NOT recommended as a dependency, and the provenance is part of the row rather than a footnote.** 🔵 **Default ref is `master`, not `main` — the legacy alias this base grades under `gate-branch-alias`, and the fourth such row on this shelf.** |
+
+### Declined by `p852` (2026-11-16) — `8` candidates measured and NOT shelved, each with the payload that disqualified it
+
+🔵 **Declared NOT-counted, deliberately** (`ingest/derive-counts.py`): the shelf figure is the
+build-safe table above. 🟢 **These rows exist so that a later pass does not spend its hour
+re-finding them.**
+
+| Candidate | Repo | Actual license | Stars | Why rejected |
+|---|---|---|---|---|
+| llmgrader | https://github.com/sdrangan/llmgrader | 🔴 **"PySilicon Research License" — byte-read `2026-11-16`** (`main/LICENSE`, `1,224 B`, `sha256₁₂ 4c8368a01cb6`, holder `2026 Sundeep Rangan`) | n/a | 🔴 **NOT OPEN SOURCE, and it is the most dangerous payload this pass read.** The grant permits use "for non-commercial research, academic, and educational purposes" and clause `2` states the software "may not be used, copied, modified, or distributed for commercial purposes without prior written permission from the copyright holder." 🔴 **Globant cannot build on it, bill for it, or ship it to a client.** 🔵 **The trap: it opens with MIT's exact incipit — *"Permission is hereby granted, free of charge, to any person or organization obtaining a copy"* — and sits at `1,224 B`, inside the band where this base's own MIT predictor lives.** 🔴 **An incipit test, a byte-band test, or a title-less heuristic would all have called this MIT.** Only reading the numbered clauses catches it. 🔵 **The search leg that returned it reported "license not shown", so nothing upstream flagged it either.** → `852-G1`, `T175`. |
+| AutoGrader (weizhenFrank) | https://github.com/weizhenFrank/AutoGrader | 🔴 **NO GRANT FILE — `10`-probe sweep `2026-11-16`** (`main` and `master` × `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`; all `404`) | n/a | 🔴 **Refuted by payload absence.** A search summary read this pass asserted it "is MIT-licensed"; no grant file exists on either branch under any of five conventional names, so the default position is all-rights-reserved. 🔵 **A GPT-4 grader for coding assignments with customisable rubrics — functionally in scope, and unusable. This is the second time in this pass that a secondary summary asserted a permissive grant the payload does not carry** (see `llmgrader`). → `T175`. |
+| Autograder (OtterDen-Lab) | https://github.com/OtterDen-Lab/Autograder | 🔴 **GPL-3.0-or-later — byte-read `2026-11-16`** (`main/LICENSE`, `35,149 B`, `sha256₁₂ 3972dc9744f6`) | n/a | 🔴 **Copyleft.** Canvas-focused with AI rubric generation for text submissions — the closest functional match to `Canvas-grading-with-AI` and licence-blocked for a client deliverable. 🔵 **Recorded so the Canvas tier's permissive option is known to be exactly ONE.** |
+| RosterHub | https://github.com/lepo-project/roster-hub | 🔴 **AGPL-3.0 — byte-read `2026-11-16`** (`main/LICENSE`, `34,523 B`, `sha256₁₂ 8486a10c4393`) | 4 | 🔴 **Network copyleft, and superseded on the standard anyway.** Ruby on Rails roster management on **OneRoster v1.1** (`VERSION_OF_ONEROSTER = '1.1'`), self-described as "under development", `141` commits, `1` fork. 🔵 **The permissive OneRoster path on these shelves remains `Ed-Fi-Alliance-OSS/edfi-oneroster` at v1.2, already shelved.** |
+| Certo | https://github.com/schroedinger-Hat/certo | 🔴 **AGPL-3.0 — byte-read `2026-11-16`** (`main/LICENSE`, `33,820 B`, `sha256₁₂ 895609d3e304`, 🟡 **holder line is an UNFILLED template: `Copyright (C) <year> <`**) | n/a | 🔴 **Network copyleft** on an Open Badges 3.0 / W3C VC issuing and verifying platform. 🟡 **The unfilled holder placeholder is recorded because it means the grant was pasted and never completed — a provenance signal, not a licence defect.** |
+| Open ENT openbadges | https://github.com/open-ent/openbadges | 🔴 **NO GRANT FILE — `10`-probe sweep `2026-11-16`** (both branches × five names, all `404`) | n/a | 🔴 **All-rights-reserved by default.** An Open Badges 3.0 issuer module for the French **Open ENT** platform, emitting `AchievementCredential` (VCDM 2.0 + OB 3.0 context) signed VC-JWT / RS256. 🔵 **Functionally the single most interesting EMEA credential finding of the pass and it cannot be used, which is worth more written down than silently dropped.** → `852-G2`. |
+| Questify Builder | https://github.com/stichting-cito/QuestifyBuilder | 🟡 **MS-PL (Microsoft Public License) — byte-read `2026-11-16`** (**`master`**`/License.md`, `4,616 B`, `sha256₁₂ da87cc5e5e39`) | 0 | 🟡 **CORRECTED WITHIN THIS PASS — the first verdict on this row was wrong and the error is recorded rather than quietly replaced.** `p852` first published *"no grant file, `10` probes"*; 🔴 **the probe list was CASE-SENSITIVE and the file is `License.md`, which `LICENSE.md` does not match on `raw.githubusercontent.com`.** 🟢 **Re-probed with case variants: the grant exists and is MS-PL.** 🔵 **Assessment authoring and delivery with item-bank management and QTI 3.0 package export — the one genuine ITEM BANK the QTI leg returned, and it is OSI-approved and commercially usable.** 🔴 **Not shelved here because this table's shelf is defined as MIT / Apache-2.0 / BSD / ISC / 0BSD and MS-PL is outside that enumerated set** — it is also GPL-incompatible and carries a source-form reciprocity condition, so it needs a licence decision rather than a default yes. 🟢 **The `852-G2` gap is narrowed accordingly: there IS an open QTI item bank; there is no MIT/Apache one.** → `852-G2`, `T174`. |
+| edfi-oneroster (cmoffatt-1edtech) | https://github.com/cmoffatt-1edtech/edfi-oneroster | 🟡 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `10,173 B`, `sha256₁₂ a6cba85bc92e`) | 0 | 🔵 **Permissive, in scope, and NOT a row, because it is a FORK.** The GitHub banner reads *"forked from Ed-Fi-Alliance-OSS/edfi-oneroster"*, which is already on two shelves. 🟢 **The grant sha is BYTE-IDENTICAL to the upstream's `a6cba85bc92e`, which is what predicted the fork before the banner was read** — the same instrument `gate-fork-direction` exists for. `0★`, `152` commits. 🔴 **Filed as declined so a later leg that returns it again does not count the Ed-Fi row twice.** |
+
 ### Filed by `p849` (2026-11-16) — `4` rows: `2` new, and `2` RESTORED from `p848`'s own narrative, where they were announced but never filed
 
 🔴 **`2` of these `4` are not discoveries. They are `p848`'s rows.** `p848` announced them in its

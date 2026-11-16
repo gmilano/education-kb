@@ -4,6 +4,62 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-seventh pass (`p852`) — 🟢 **`6` foundation rows: the STANDARDS SEAM (LTI, QTI, xAPI), `6` of `6` MIT, `0` copyleft — the layer every marking agent on this base has to cross and none of which was ever shelved**
+
+🟢 **Why this layer and not another.** `p851` shelved credentials and content portability. 🔴 **The
+seam below it was missing entirely: the launch (LTI), the item and its score (QTI), the activity
+record (xAPI).** 🔵 **An artefact-noun census — `LTI 1.3 Advantage`, `QTI 3.0`, `xAPI`, `cmi5` —
+returned permissive implementations of all three on the first attempt, which is the fourth
+consecutive pass in which naming the ARTEFACT paid where naming the product did not.**
+
+🟢 **LTI (`2` rows).**
+[`UOC/java-lti-1.3`](https://github.com/UOC/java-lti-1.3)
+(MIT, `1,060 B` @ **`master`**, `sha256₁₂ b6b29f11f74e`, holder `2019 UOC`, `21★`, `14` forks — a
+full LTI 1.3 Advantage **tool** on the JVM; 🟢 **region EMEA on a payload channel, the maintainer
+contact `xaracil at uoc dot edu`, Universitat Oberta de Catalunya**) ·
+[`rolloutit/lti-platform`](https://github.com/rolloutit/lti-platform)
+(MIT, `1,066 B` @ **`master`**, `sha256₁₂ 5f22ee03aa9f`, `1★` — the **platform** side, i.e. the LMS
+end of the launch; 🔴 **OIDC login, auth endpoint and JWKS only — AGS, NRPS, Deep Linking and
+Dynamic Registration are all PLANNED, and its own `README` says "proof of concept", "not ready for
+production"**).
+
+🟢 **QTI (`2` rows).**
+[`Citolab/qti-scoring-engine`](https://github.com/Citolab/qti-scoring-engine)
+(MIT, `1,112 B`, `sha256₁₂ fae7c63759fe`, `4★`, `4` forks — C#/.NET, scores QTI **2.x and 3.0**
+items and tests plus Results Reporting 2.x **server-side**, where the players already on this
+shelf score in the browser) ·
+[`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system)
+(MIT, `1,066 B` @ **`master`**, `sha256₁₂ 5bb49280d709`, `0★`, `216` commits — Next.js 15 marking
+application that writes marker comments back as Results Reporting **`COMMENT` outcomes**, and the
+only row in this layer shipping **axe accessibility tests**).
+
+🟢 **xAPI (`1` row).**
+[`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS)
+(MIT, `1,066 B`, `sha256₁₂ 06ff7c71a6a1`, holder `2021 EscolaLMS`, `7★` — Laravel/PHP xAPI LRS
+with a **`cmi5`** endpoint, tested against the `cmi5-demo` player; 🟢 **second channel agrees,
+`composer.json` declares `"license": "MIT"`**; 🔵 **requires `trax2/framework ^2`, so it is a
+Laravel front end over the TRAX core, not an independent LRS**).
+
+🟢 **Credential linting (`1` row).**
+[`TanimowoObaloluwaDavid/credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens)
+(MIT, `1,080 B`, `sha256₁₂ f65f32330671`, `1★` — zero-dependency offline inspector for Open Badges
+3.0, W3C VCDM 2.0 and `vc-di-eddsa` Data Integrity proofs. 🔴 **Its `README` states
+`signatureVerified` is hardcoded `false`: it checks well-formedness and never authenticity, and
+CLR is unsupported.** 🔵 **A CI linter, not a trust boundary** → `852-G5`).
+
+🔴 **The permissive gaps this layer leaves OPEN, stated so the next pass does not re-walk them.**
+(i) **No permissive production-grade LTI PLATFORM** — the only one found is a self-declared proof
+of concept with no Advantage service implemented (`852-G4`). (ii) 🟡 **No MIT/Apache QTI ITEM BANK** —
+`stichting-cito/QuestifyBuilder` is the only genuine item bank the leg returned and it is
+**MS-PL** (`master/License.md`, `4,616 B`, `sha256₁₂ da87cc5e5e39`): OSI-approved and commercially
+usable, GPL-incompatible, with a source-form reciprocity condition (`852-G2`). 🔴 **This entry
+was published an hour earlier as "no grant file" and was WRONG — the probe list was
+case-sensitive and the file is `License.md`. Corrected in-pass; see `T174`.** 🟢 **Both gaps are
+licence or maturity gaps, not capability gaps.**
+
+---
+
+
 ## `2026-11-16` — fifty-sixth pass (`p851`) — 🟢 **`6` foundation rows from the credential and content-portability tier, chosen by an artefact-noun census — and `4` of the `6` were on `repos/foundations.md` four days ago**
 
 🟢 **Credentials (`4` rows, `0` copyleft).**
