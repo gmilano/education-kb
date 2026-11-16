@@ -4,6 +4,83 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` (fifty-fourth pass, `p849`) — **the shelf gate's five-pass RED repaired, `6` new actions, and `open-gaps 235` re-measured and still open**
+
+### 🟢 `844`-era count drift — CLOSED
+
+🟢 **All three shelves GREEN on `ingest/derive-counts.py`: `agents/top.md 397/397`,
+`repos/foundations.md 191/191`, `verticals/solutions.md 147/147`, `ragged=0 nolink=0`.** 🔴 **The
+drift ran `p844` → `p848` and reached `7` on `agents/top.md`, `12` on `foundations.md` and `2` on
+`solutions.md`.** 🔵 Mechanism and commit-by-commit evidence in `agents/top.md` Finding 1.
+
+### 🟢 `p383` region-heading gate — RED at `p848`, PASS at `p849`
+
+🔴 **`intel/market.md` carried `2` canonical `## Opportunities by region` blocks at `p848` and the
+gate was reporting `P383-MULTIPLE-BLOCKS`; appending this pass's block made it `3`.** 🟢 **The two
+historical blocks are now titled `## Opportunities by region — as filed by …`, so the file carries
+exactly ONE canonical block — what the rotation brief asks for and what the gate checks — with the
+superseded ones still readable in place.** 🔵 **`gate-region-headings` now reports `total 0`.** 🟡
+**Nothing was deleted: only the two historical headings were retitled.**
+
+### 🔴 `ACTION p849-A` — a pass must READ the gate before it commits
+
+🔴 **Detection was never the problem.** The gate printed `RED … NOT counted` and named the exact
+lines for three consecutive passes, and three consecutive passes committed over it. 🟢 **The
+procedure needs a step that is not optional: run `python3 -I ingest/derive-counts.py .`, and do not
+commit while any line reads `RED`.** 🔵 **`make hooks` should fail the pass, not report it.**
+
+### 🟡 `ACTION p849-B` — the Digital Omnibus claim needs a primary read
+
+🟡 **A single secondary source reports education high-risk obligations slipping from `2026-12-02`
+to `2027-12-02` on a political agreement of `2026-05-07`.** 🔴 **This base has been reasoning from
+the earlier date.** 🟢 **It does not touch Art. `50`.** → read `eur-lex.europa.eu` the moment a
+channel exists (`ACTION p848-A`).
+
+### 🟢 `ACTION p849-C` — run one UNFLOORED leg per pass
+
+🟢 **`T166`: every sweep with a `pushed:` floor returned `0` education rows; the unfloored sweep
+returned the whole yield.** 🔵 **Each pass should run one leg with no recency bound against a
+different foundational class** — benchmarks, datasets, metrics, specifications, corpora — **because
+those classes do not decay and a floor makes them invisible.**
+
+### 🟡 `ACTION p849-D` — two recipes are invisible to the recipe gate
+
+🟡 **`p848` filed `` `P103` `` and `` `P104` `` with backticks; `ingest/derive-counts.py` matches
+`## P<n> — …` and does not see them.** 🔵 **The page holds `76` gate-visible recipes (`P-1`…`P-76`,
+contiguous) plus two that are not counted.** 🟢 Renumber them or widen the gate — but do one, and
+do it deliberately.
+
+### 🟡 `ACTION p849-E` — retire the vertical-platform leg as a discovery instrument
+
+🔴 **Ten consecutive passes, same seven platforms, none permissive.** 🟢 **Replace the query with
+one that searches for what ATTACHES to the seven — LTI tools, Moodle and Open edX plugins, xAPI
+stores — which is where `P76` says the permissive supply actually is.**
+
+### 🟡 `ACTION p849-F` — audit the undeclared tables
+
+🟡 **`agents/top.md` has `21`, `repos/foundations.md` `13` and `verticals/solutions.md` `12` tables
+carrying `github.com` rows whose signature is not declared to the gate.** 🔵 **Most are censuses and
+comparison tables and are correctly uncounted — but that has never been verified row by row, and
+`p846`/`p847` prove a real shelf row can hide among them.** 🟢 One pass, one audit, a declared
+disposition per table.
+
+### 🔴 `open-gaps 235` — re-measured `2026-11-16`, STILL OPEN
+
+🔴 **No permissive essay or short-answer scorer for Portuguese or Spanish.** 🔵 **Measured twice
+this pass from different directions:** the Spanish and Portuguese agent legs (`educación IA
+agente`, `educação IA agente professor`, `tutor inteligente LLM`) returned **`0` new addresses at
+`stars:>5`**, and the unfloored AES sweep returned **`8` addresses, all English or Chinese**. 🟡
+**New and adjacent:** `iris2hu/L2C-rater` is the only non-English scorer found and it carries **no
+grant**. 🟢 **Partial mitigation now shelved: `quadratic weighted kappa` is language-independent,
+so `P75`'s evidence pack ports to LATAM even though the scorer does not.**
+
+### 🔴 New gap — no permissive CROSS-PROMPT scorer, in any language
+
+🔴 **`robert1ridley/cross-prompt-trait-scoring` (`34★`) is the only implementation of grading
+against a rubric the model has not seen, and it carries no grant.** 🔵 **Cross-prompt is the
+problem a studio actually meets, because a client's rubric is never in the training set.** 🟡
+**Highest-value upstream licence request this base has identified.**
+
 ## 🟢 `2026-11-16` (fifty-third pass, `p848`) — **`p844`'s Art. `50` residual CLOSED, `T906`'s theory WITHDRAWN, `ACTION p844-A` BROADENED**
 
 ### 🟢 `844-residual` (Art. `50` marking grace) — CLOSED

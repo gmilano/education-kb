@@ -4,6 +4,97 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-fourth pass (`p849`, 2026-11-16) — `3` trends (`T165`–`T167`)
+
+## `T165` — the first-party channel is SPLIT across two hosts, and the obvious third one is refused in a way that looks like a missing repository (fifty-fourth pass, `p849`)
+
+🔴 **`p849` built a grant probe the way any reader of these shelves would build one — `gh api
+repos/{owner}/{repo}` for metadata, then `repos/{owner}/{repo}/contents/LICENSE` for the bytes —
+and every single call failed.** 🔵 **The failure text is the danger:**
+
+```
+GitHub access to this repository is not enabled for this session. Use add_repo to request access.
+```
+
+🔴 **A probe that treats that as "not found" manufactures a false absence for EVERY repository on
+earth, including the `397` already shelved.** 🟢 **This base has now been burned by exactly this
+shape three times — `p843` read a `422` as a death, `p845` nearly read `github.com` HTML as a
+liveness oracle, `p846` recovered `6` live addresses the search index could not see — and the
+common factor is a channel whose refusal is indistinguishable from an absence.**
+
+🟢 **The conditions, each probed this pass:**
+
+| Channel | Result | Use |
+|---|---|---|
+| `gh api search/repositories -f q='repo:<o>/<n>'` | 🟢 `200` with `default_branch`, `license.spdx_id`, `stargazers_count`, `forks_count`, `pushed_at`, `created_at`, `archived` | **Metadata. The only one that works for a repository this session does not own** |
+| `gh api repos/{owner}/{repo}` and `/contents/…` | 🔴 Access error, not `404` | **Never.** It cannot byte-read a grant here |
+| `gh api users/{login}` | 🔴 `403` *"sessions are bound to their configured repositories"* | **Never** — and this is why an owner's region cannot be resolved |
+| `raw.githubusercontent.com/<o>/<n>/<branch>/LICENSE` | 🟢 `200`, real bytes, with and without `-L` | **Bytes.** `p848` recorded this host as `301`; that reading is WITHDRAWN |
+| `WebSearch` | 🟢 All `8` mandated legs returned | Secondary research. Unaffected by egress — it is not an outbound request from this session |
+| `WebFetch` / `curl` to any non-GitHub host | 🔴 `ENOTFOUND` at DNS (`push-based.io`) | **Never.** 🔵 **This REFINES `T162`: the allow-list bites at NAME RESOLUTION, not at HTTP** |
+
+🟢 **The rule: metadata from `search/repositories`, bytes from `raw.githubusercontent.com`, region
+only from the artefact itself.** 🔴 **A consequence worth stating plainly — `users/{login}` being
+refused means this base CANNOT resolve the region of an organisation-owned repository at all, and
+every such row must be filed `Global` with the limit recorded, not guessed from a name.** `p849`
+filed two rows that way.
+
+## `T166` — the RECENCY FLOOR is a blindness instrument, and it hid an entire sub-field for fifty-three passes (fifty-fourth pass, `p849`)
+
+🔴 **`p848` concluded its own nil was *"attributable to this base's own query vocabulary rather than
+to the supply"* and left it there. `p849` ran the experiment and the binding term is narrower and
+more fixable: it is the `pushed:` floor.**
+
+🟢 **Three sweeps, same session, same instrument, different shapes:**
+
+| Sweep | Shape | Results | New addresses | Education rows |
+|---|---|---|---|---|
+| `1` | Agent vocabulary, `pushed:>2026-10-01` | `68` | `4` | 🔴 **`0`** |
+| `2` | Non-English vocabulary, `pushed:>2026-08-01` on most legs | `64` | `8` | 🔴 **`0`** |
+| `3` | Literal education phrases, **no `pushed:` floor** | `78` | `19` | 🟢 **`8`, of which `3` shelved and `1` rejected on evidence** |
+
+🔵 **The reason is a property of the field, not of the query.** Automated essay scoring's reference
+artefacts were produced for the Hewlett Foundation's `ASAP` competition in `2012` and the Kaggle
+`Learning Agency Lab` rerun in `2024`. 🟢 **`benhamner/ASAP-AES` has not been pushed since
+`2012-02-23` and is completely current, because it implements `quadratic weighted kappa` — a
+statistic, not a dependency.** 🔴 **A floor at `2026` cannot see it, and no amount of better
+vocabulary fixes that.**
+
+🟢 **The generalisation, which this base should apply to every future sweep: recency is a proxy for
+decay, and it is a VALID proxy for agents, frameworks and SDKs — and an INVALID one for metrics,
+benchmarks, datasets, specifications and corpora.** 🔵 **Those classes do not rot; they get cited.
+Sweep them with no floor and sort by stars, or do not sweep them at all.** → `ACTION p849-C`: run
+one unfloored leg per pass, on a different foundational class each time.
+
+## `T167` — in an academic sub-field the licensed code is the COMPETITION code, not the paper code (fifty-fourth pass, `p849`)
+
+🟢 **`p849` byte-read or field-read the grant on all `8` addresses in the automated-essay-scoring
+tier, which is the first time this base has had a complete licence census of a research field
+rather than a sample.**
+
+| Grant | Count | Addresses |
+|---|---|---|
+| 🟢 Permissive (MIT / BSD-2) | **`3`** | `benhamner/ASAP-AES`, `Syhen/…-AES-2.0`, `shubhpawar/Automated-Essay-Scoring` |
+| 🔴 Copyleft (`GPL-3.0`) | `1` | `nusnlp/nea` (`207★`, the most-cited in the field) |
+| 🔴 **No grant at all** | **`4`** | `mankadronit/…`, `lingochamp/Multi-Scale-BERT-AES`, `Turanga1/…`, `robert1ridley/cross-prompt-trait-scoring`, `iris2hu/L2C-rater`, `gdufsnlp/PMAES` |
+
+🔵 **The split is not random. The three permissive repositories are all COMPETITION artefacts** —
+an official metrics package and two Kaggle solutions — **and every unlicensed one is paper code.**
+🟢 **The mechanism is mundane and therefore reliable: a competition requires a submission licence
+and a public leaderboard; a paper requires neither, and the authors' institutions rarely supply
+one.**
+
+🔴 **The two most useful repositories in the field are among the unusable.** `nusnlp/nea` is the
+canonical Neural Essay Assessor and is `GPL-3.0`; `robert1ridley/cross-prompt-trait-scoring`
+implements **cross-prompt trait scoring** — grading against a rubric the model has not seen, which
+is the problem a studio actually meets — and carries **no grant**. 🟡 **Both are worth an upstream
+licence request, and `cross-prompt` is the higher-value ask.**
+
+🟢 **The operational rule for any field this base sweeps next: find the competition first.** 🔵
+**Kaggle, DrivenData, SemEval and the shared-task circuit produce permissively-licensed reference
+implementations as a by-product of their own rules, and they are the fastest route from "this field
+exists" to "here is code a client can own."**
+
 ## 🟢 Fifty-third pass (`p848`, 2026-11-16) — `3` trends (`T162`–`T164`)
 
 ## `T162` — the egress refusal is an ALLOW-LIST, not a publisher pattern, and three passes have reasoned from the wrong theory (fifty-third pass, `p848`, Global)

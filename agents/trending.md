@@ -4,6 +4,40 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-fourth pass (`p849`) — 🟢 **`2` MIT entrants, `1` AGPL entrant, `2` disqualifications — and the week's real movement is that `8` rows which had already MOVED were not being counted**
+
+🔵 **`p848` moved two rows onto the shelf in prose and onto no table. `p847` and `p846` moved six
+more into tables the count cannot see.** 🟢 **This pass put all eight where the gate reads them;
+the shelf's true figure is `397`, not the `394` it was publishing.** See `agents/top.md` Finding 1.
+
+### 🟢 Movement 1 — two MIT entrants, one of them a category this shelf did not have
+
+| Repo | ★ / forks | Licence (byte-read `2026-11-16`) | Pushed | Why it moved |
+|---|---|---|---|---|
+| [`push-based/ai-performance-coach`](https://github.com/push-based/ai-performance-coach) | `19` / `2` | 🟢 MIT (`1,067 B`, `sha256₁₂ 9b6cc07d9c55`) | `2026-11-15` | 🟢 **SHELVED** → `agents/top.md` build-safe table. Teach-back loop over an Obsidian vault: one idea taken from "I've read it" to "I can teach it" in seven tutor-checked steps, on PARA. 🔵 **First row here whose unit of work is a learning PROTOCOL, not a subject.** Created `2026-11-03` — thirteen days old |
+| [`Deepnar/presentation-forge`](https://github.com/Deepnar/presentation-forge) | `18` / `0` | 🟢 MIT (`1,070 B`, `sha256₁₂ 8f97b35d4969`) | `2026-11-14` | 🟢 **SHELVED** → `agents/top.md` build-safe table. Local-first academic deck + **graded report** + speaker script, `34` themes, `74` slide types, editable `PPTX`/PDF. 🔵 The graded report is what makes it education rather than office tooling |
+
+### 🟡 Movement 2 — one AGPL entrant, filed where the licence puts it
+
+| Repo | ★ / forks | Licence (byte-read `2026-11-16`) | Pushed | Why it moved |
+|---|---|---|---|---|
+| [`NaEs25/studiamo`](https://github.com/NaEs25/studiamo) | `27` / `4` | 🔴 AGPL-3.0 (`33,880 B`, `sha256₁₂ f0c3e444e06d`) | `2026-10-30` | 🟡 **COPYLEFT TABLE**, not the build-safe shelf. YouTube/PDF/lecture notes → AI active-recall flashcards on a spaced-repetition schedule, self-hosted or cloud. 🔴 **AGPL reaches a network deliverable: a hosted student-facing service built on it must publish source.** Fine on-premises, fine internally, not a SaaS component |
+
+### 🔴 Movement 3 — two disqualifications, `60★` combined, both at the grant
+
+| Repo | ★ | What the bytes say | Verdict |
+|---|---|---|---|
+| [`bahfahh/engram-quest`](https://github.com/bahfahh/engram-quest) | `32` | 🔴 `2,701 B` bespoke **"Engram Quest Plugin License v1.1"**: §2 non-compete bans any derivative gamified-review plugin, §3 bans selling it or any derivative, §4 key-gates published Pro source | 🔴 **REJECTED.** `P990`'s clearest specimen — a document that reads like a licence and functions as a prohibition |
+| [`zlliang/essaysense`](https://github.com/zlliang/essaysense) | `28` | 🟢 MIT, byte-read, valid — 🔴 and `search/repositories` reports **`archived: true`** | 🔴 **REJECTED on archived status alone, a first for this base.** No issue tracker, no security response, no upstream path |
+
+### 🔵 What did NOT move, measured
+
+🔴 **The recency-floored agent vocabulary returned `132` results across two sweeps and `0`
+education rows.** 🔴 **The Spanish and Portuguese legs returned `0` new addresses at `stars:>5`.**
+🔴 **The Chinese leg returned developer AI-agent courses, not education agents** — `教程` is
+"tutorial", and `p840`'s collision reproduces exactly. 🟢 **The one leg that yielded dropped the
+`pushed:` floor entirely** (`T166`).
+
 ## `2026-11-16` — fifty-third pass (`p848`) — 🔴 **the week's three highest-traction education repositories are all unusable, and the instrument that was supposed to check the fourth claim turns out to be fenced**
 
 🔵 **`p847` ended seven nil passes with one MIT tutor. `p848` adds two more MIT rows — and

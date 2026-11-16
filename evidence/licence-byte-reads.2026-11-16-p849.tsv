@@ -1,0 +1,9 @@
+repo	stars	forks	spdx_reported	licence_byte_read	bytes	sha256_12	branch_path	verdict
+push-based/ai-performance-coach	19	2	MIT	MIT	1067	9b6cc07d9c55	main/LICENSE	BUILD-SAFE
+Deepnar/presentation-forge	18	0	MIT	MIT	1070	8f97b35d4969	main/LICENSE	BUILD-SAFE
+benhamner/ASAP-AES	43	19	BSD-2-Clause	BSD-2-Clause	1298	06f4e22bae96	master/LICENSE	BUILD-SAFE
+Syhen/2nd-Place-Solution-Kaggle-Learning-Agency-Lab-Automated-Essay-Scoring-2.0	13	4	MIT	MIT	1063	7784a0048f70	master/LICENSE	BUILD-SAFE
+shubhpawar/Automated-Essay-Scoring	32	13	MIT	MIT	1080	3b2d2dfccbf9	master/LICENSE	BUILD-SAFE
+NaEs25/studiamo	27	4	AGPL-3.0	AGPL-3.0	33880	f0c3e444e06d	main/LICENSE	COPYLEFT-NETWORK
+bahfahh/engram-quest	32	1	NOASSERTION	custom-engram-quest-plugin-v1.1	2701	4aa2ba9abfc6	master/LICENSE	DISQUALIFIED-NONCOMPETE-NOSELL
+zlliang/essaysense	28	10	MIT	MIT	1099	fe23993a99d8	master/LICENSE.md	DISQUALIFIED-ARCHIVED-UPSTREAM

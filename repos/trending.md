@@ -4,6 +4,41 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-fourth pass (`p849`) — 🟢 **`3` foundation rows from a tier that is `2012`-to-`2024` vintage, and the reason it never surfaced is that every previous sweep floored its queries at `2026`**
+
+🟢 **First-party `search/repositories`, `28` queries across three differently-shaped sweeps,
+`2026-11-16`.** 🔴 **The two sweeps built like previous passes — recency-floored, agent
+vocabulary — returned `132` results and `0` foundational rows.** 🟢 **The third sweep dropped the
+`pushed:` floor and ran literal education phrases; it produced the whole yield.**
+
+### 🟢 What moved — the automated essay scoring reference tier
+
+| Repo | ★ / forks | Licence (byte-read `2026-11-16`) | Pushed | Why it moved |
+|---|---|---|---|---|
+| [`benhamner/ASAP-AES`](https://github.com/benhamner/ASAP-AES) | `43` / `19` | 🟢 BSD-2-Clause (`1,298 B`, `sha256₁₂ 06f4e22bae96`, `2012, Ben Hamner`) | `2012-02-23` | 🟢 **SHELVED** → `repos/foundations.md`. Official evaluation metrics and benchmarks for the Hewlett Foundation's `ASAP` essay-scoring competition. 🔵 **Where `quadratic weighted kappa` — invoked in `compose/patterns.md` and never backed by an implementation — becomes runnable licensed code** |
+| [`Syhen/2nd-Place-Solution-…-Automated-Essay-Scoring-2.0`](https://github.com/Syhen/2nd-Place-Solution-Kaggle-Learning-Agency-Lab-Automated-Essay-Scoring-2.0) | `13` / `4` | 🟢 MIT (`1,063 B`, `sha256₁₂ 7784a0048f70`, `2024 何耀`) | `2024-07-13` | 🟢 **SHELVED** → `repos/foundations.md`. Two-stage `DeBERTa-v3-large` with an MLM domain-adaptation step; Kaggle `Learning Agency Lab AES 2.0` runner-up. 🔴 Its own `README` states results are not bit-reproducible (lost stage-one seed) |
+| [`shubhpawar/Automated-Essay-Scoring`](https://github.com/shubhpawar/Automated-Essay-Scoring) | `32` / `13` | 🟢 MIT (`1,080 B`, `sha256₁₂ 3b2d2dfccbf9`, `2018 Shubham Shantaram Pawar`) | `2018-04-26` | 🟢 **SHELVED** → `repos/foundations.md`. Compact LSTM scorer over the same `ASAP` dataset. 🔵 Earns its row on readability: small enough to explain to an exam board |
+
+### 🔴 Measured and NOT shelved, with the reason
+
+| Repo | ★ | Reason |
+|---|---|---|
+| [`nusnlp/nea`](https://github.com/nusnlp/nea) | `207` | 🔴 `GPL-3.0`. The Neural Essay Assessor, the most-cited repository in the tier — and the licence propagates into any deliverable built on it |
+| [`mankadronit/Automated-Essay--Scoring`](https://github.com/mankadronit/Automated-Essay--Scoring) | `150` | 🔴 Licence field `NONE`; all-rights-reserved by default |
+| [`lingochamp/Multi-Scale-BERT-AES`](https://github.com/lingochamp/Multi-Scale-BERT-AES) | `63` | 🔴 Licence field `NONE`. 🔵 Notable anyway: `lingochamp` is Liulishuo, a listed APAC education company publishing paper code without a grant |
+| [`Turanga1/Automated-Essay-Scoring`](https://github.com/Turanga1/Automated-Essay-Scoring) | `58` | 🔴 Licence field `NONE` |
+| [`robert1ridley/cross-prompt-trait-scoring`](https://github.com/robert1ridley/cross-prompt-trait-scoring) | `34` | 🔴 Licence field `NONE`. 🟡 Cross-prompt trait scoring is the sub-problem a studio actually meets (a rubric the model has not seen) and there is **no permissive implementation of it** — recorded as a gap |
+| [`iris2hu/L2C-rater`](https://github.com/iris2hu/L2C-rater) | `33` | 🔴 Licence field `NONE`. 🟡 Chinese-as-a-second-language scoring — the only non-English scorer in the tier, and it is unlicensed |
+| [`gdufsnlp/PMAES`](https://github.com/gdufsnlp/PMAES) | `12` | 🔴 Licence field `NONE` |
+
+🔴 **The tier's licence profile is the finding: `8` addresses, `3` permissive, `1` GPL, `4` with no
+grant at all.** 🔵 **Academic AES code is overwhelmingly unlicensed, so the usable corpus is the
+competition code rather than the paper code** — a rule that should hold in any field this base
+sweeps next.
+
+🔴 **Still open after this pass:** no permissive essay or short-answer scorer for **Portuguese or
+Spanish** (`open-gaps 235`, unchanged), and no permissive **cross-prompt** scorer in any language.
+
 ## `2026-11-16` — fifty-third pass (`p848`) — 🔴 **a `506`-address sweep, `230` of them new to this base, and `0` foundational rows: the yield was real and the relevance was not**
 
 🟢 **First-party `search/repositories`, ten queries, `2026-11-16`.** 🔴 **The headline number is a

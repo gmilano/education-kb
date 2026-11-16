@@ -1,0 +1,11 @@
+# p849: first-party channel conditions, each probed this pass. Supersedes p848's reading
+# of raw.githubusercontent.com as 301.
+channel	probe	result	usable_for
+gh api search/repositories	q=repo:<owner>/<name>	200 with default_branch, license.spdx_id, stars, forks, pushed_at, created_at, archived	metadata
+gh api repos/{owner}/{repo}	benhamner/ASAP-AES	access error: GitHub access to this repository is not enabled for this session	nothing
+gh api repos/{owner}/{repo}/contents/LICENSE	benhamner/ASAP-AES	same access error	nothing
+gh api users/{login}	users/benhamner	403 sessions are bound to their configured repositories	nothing
+raw.githubusercontent.com	benhamner/ASAP-AES/master/LICENSE	200, 1298 bytes, with and without -L	licence bytes
+raw.githubusercontent.com	zlliang/essaysense/master/LICENSE	404, 14 bytes	negative control, resolves correctly
+WebSearch	8 mandated legs	all returned results	secondary research
+WebFetch	push-based.io	ENOTFOUND at DNS resolution	nothing

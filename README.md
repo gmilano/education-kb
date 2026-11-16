@@ -6,6 +6,33 @@ updated: 2026-11-16
 
 # Globant AI Studios — Education KB
 
+**Pass `p849` · `2026-11-16`** — 🔴 **All three shelves had been RED on this repository's own
+count gate for five consecutive passes, `8` rows were off the count and `2` of them were on no
+table at all. Measured commit-by-commit with `ingest/derive-counts.py` itself, repaired, and all
+three are GREEN.** 🟢 **`4` agent rows (`393` → `397`), `3` foundation rows (`188` → `191`), `2`
+recipes, `3` trends, every grant byte-read today.**
+
+## What this pass established
+
+| | |
+|---|---|
+| 🔴 **The shelf gate has been RED since `p844`, and the gate was not silent** | 🔴 **`p844` `387/388` · `p846` `387/392` · `p847` `387/394` · `p848` `387/394`.** `p846` and `p847` filed rows into tables whose column signature is not the declared one — **`p846`'s had no `Region` column at all, so four regions lived in prose** — and **`p848` filed its `2` announced rows into no table whatsoever**. 🟢 All repaired; `397/397`, `191/191`, `147/147` GREEN |
+| 🟢 **`2` new MIT agent rows, `1` AGPL, `2` rejected** | 🟢 [`push-based/ai-performance-coach`](https://github.com/push-based/ai-performance-coach) (`19★`, MIT, a seven-step teach-back protocol) · [`Deepnar/presentation-forge`](https://github.com/Deepnar/presentation-forge) (`18★`, MIT, academic deck **plus graded report**, local-first) · 🟡 [`NaEs25/studiamo`](https://github.com/NaEs25/studiamo) (`27★`, AGPL-3.0 → copyleft table) |
+| 🟢 **The automated essay scoring reference tier, missing for `53` passes** | 🟢 [`benhamner/ASAP-AES`](https://github.com/benhamner/ASAP-AES) (BSD-2-Clause) — **`quadratic weighted kappa`, invoked in this base's recipes for passes and never backed by code, is now runnable and licensed** · [`Syhen/…-AES-2.0`](https://github.com/Syhen/2nd-Place-Solution-Kaggle-Learning-Agency-Lab-Automated-Essay-Scoring-2.0) (MIT, `DeBERTa-v3-large`) · [`shubhpawar/…`](https://github.com/shubhpawar/Automated-Essay-Scoring) (MIT, readable) |
+| 🔴 **The RECENCY FLOOR is why it was missing** (`T166`) | 🔴 **Two recency-floored sweeps: `132` results, `0` education rows. One unfloored sweep: `19` new addresses, `8` of them the AES tier.** 🔵 **Recency is a valid decay proxy for agents and a useless one for metrics, benchmarks and corpora** — `ASAP-AES` was last pushed `2012-02-23` and is entirely current |
+| 🔴 **`2` disqualifications, `60★`, both at the grant** | 🔴 [`bahfahh/engram-quest`](https://github.com/bahfahh/engram-quest) — a `2,701 B` file named `LICENSE` that **bans competing plugins, bans selling, and key-gates its published Pro source**: `P990`'s clearest specimen · 🔴 [`zlliang/essaysense`](https://github.com/zlliang/essaysense) — valid MIT, **`archived: true`**, the first row this base rejects on archived status alone |
+| 🔵 **The first-party channel is SPLIT, and the third obvious one lies** (`T165`) | 🔴 **`gh api repos/{owner}/{repo}` and `users/{login}` are REFUSED here** with text that reads like a missing repository. 🟢 **Metadata from `search/repositories`; bytes from `raw.githubusercontent.com` (`200` — `p848`'s `301` reading is WITHDRAWN); region only from the artefact.** 🔵 `T162`'s allow-list bites at **DNS**, not HTTP |
+| 🟡 **An EMEA date that would move this base's posture, flagged as a LEAD** | 🟡 One secondary source reports the **Digital Omnibus** agreed `2026-05-07` slipping education **high-risk** obligations to **`2027-12-02`**. 🔴 **It changes nothing about Art. `50`: deployer disclosure is live, provider marking is due `2026-12-02`, `16` days out.** `CITED, NOT READ` |
+| 🔴 **`10`th consecutive nil on the vertical-platform leg** | 🔴 Same closed set of seven, none permissive. 🟢 **Acted on rather than re-recorded:** `P76` inherits the LMS over **LTI 1.3** instead of replacing it |
+| 🔴 **LATAM supply gap re-measured, still open** | 🔴 Spanish and Portuguese agent legs returned **`0` new addresses**; the AES sweep found **no Portuguese or Spanish scorer at any licence**. 🟢 **Kappa is language-independent, so `P75` still ports** |
+
+🔵 **`2` new recipes:** `P75` (the marking-agreement harness — sell measured agreement with human
+raters, with a Random-Forest baseline in week `1` as the control that protects the engagement) and
+`P76` (the retention layer — a teach-back protocol launched over LTI 1.3 beside the LMS you were
+never going to replace).
+
+---
+
 **Pass `p848` · `2026-11-16`** — 🟢 **`p844`'s open Art. `50` residual is CLOSED, and the
 sub-paragraph that binds a STUDIO was never deferred: the deployer disclosure duty has been live
 since `2026-08-02` and the provider marking grace expires `2026-12-02`, `16` days from this pass.**

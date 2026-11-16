@@ -4,6 +4,35 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-fourth pass (`p849`, 2026-11-16) — **`3` rows (`188` → `191`): the AUTOMATED ESSAY SCORING reference tier, absent from these shelves for fifty-three passes, and the reason it was absent is a query-vocabulary defect this base already named**
+
+🔵 **What `p849` ran, and what it changed.** The mandated WebSearch legs plus `28` first-party
+`search/repositories` queries. 🔴 **The agent-facing legs returned nothing new** — see
+`agents/top.md` for that nil, measured. 🟢 **One leg did: `automated essay scoring` run as a
+LITERAL PHRASE with no `pushed:` floor returned a coherent research tier of `8` addresses, `0` of
+which this base held anywhere, including its archives.**
+
+🔴 **Why fifty-three passes missed it, stated precisely because the mechanism is reusable.** This
+base's grading queries have carried a recency floor (`pushed:>2026-xx-xx`) in almost every pass,
+and `p848` concluded its own nil was *"attributable to this base's own query vocabulary rather
+than to the supply"*. 🟢 **This is the confirming instance, and it sharpens the diagnosis: the
+defect was not only vocabulary, it was the RECENCY FLOOR.** The canonical AES corpus — the
+Hewlett Foundation's `ASAP` competition and the Kaggle `Learning Agency Lab` rerun — produced its
+reference implementations in `2012` and `2024`. 🔵 **A floor at `2026` cannot see a field whose
+foundational artefacts are a decade old and still correct.** A metric does not go stale the way
+an agent does.
+
+🟡 **What these rows are, and are not.** They are **reference implementations and a scoring
+metric**, not products and not agents. 🟢 **The reason they are foundations is `P-75` in
+`compose/patterns.md`: the hard part of shipping a grading engagement is not the model, it is
+proving agreement with human raters, and these three are where that proof is already written.**
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/benhamner/ASAP-AES | 🟢 **BSD-2-Clause — byte-read `2026-11-16`** (`master/LICENSE`, `1,298 B`, `sha256₁₂ 06f4e22bae96`, holder `Copyright (c) 2012, Ben Hamner`) | 43 | 🟢 **New this pass (`p849`), and the single most reusable artefact in the tier.** The official **evaluation metrics and benchmarks for the Hewlett Foundation's Automated Student Assessment Prize (`ASAP`) essay-scoring competition**, published by Kaggle's co-founder. Its own `README` (byte-read at `master/README`, there is no `README.md`) states the scope and names `length_benchmark.py`, a Random-Forest baseline over character and word counts. 🔵 **This is where `quadratic weighted kappa` — the inter-rater agreement statistic `compose/patterns.md` already invokes and never had an implementation for — is defined in runnable form, under BSD-2.** 🔴 **Pushed `2012-02-23`: it is fourteen years old and that is NOT a defect here.** A metric is not a dependency that rots; it is arithmetic with a licence on it, and the arithmetic has not changed. `19` forks, not archived. 🟡 **Region North America** on the artefact's own evidence — a US foundation's competition hosted on a US platform, named in the `README`, not inferred from the holder. |
+| https://github.com/Syhen/2nd-Place-Solution-Kaggle-Learning-Agency-Lab-Automated-Essay-Scoring-2.0 | 🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,063 B`, `sha256₁₂ 7784a0048f70`, holder `2024 何耀`) | 13 | 🟢 **New this pass (`p849`) — the MODERN counterpart to the row above, and the one that shows what a competitive AES system looks like in the transformer era.** Full training code for the **2nd-place solution to the Kaggle `Learning Agency Lab — Automated Essay Scoring 2.0` competition**: a two-stage `DeBERTa-v3-large` pipeline with a masked-LM domain-adaptation step (`tools/mlm/`) before the scoring heads, YAML-configured, single-GPU. 🔴 **Read its `README`'s own honesty note before promising reproducibility: the author trained with `train.use_random_seed` on and lost the stage-one seed, so results are not bit-reproducible.** 🔵 **Why that is still a foundation: the ARCHITECTURE and the staging are the transferable part, and they are the part a studio would otherwise spend a month rediscovering.** `4` forks, `1x RTX4090`, no multi-GPU. Pushed `2024-07-13`. 🟡 **Region APAC** — the grant holder's name is rendered in Chinese characters in the `LICENSE` bytes; recorded as a weak signal, not as the artefact-level evidence this base prefers. |
+| https://github.com/shubhpawar/Automated-Essay-Scoring | 🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,080 B`, `sha256₁₂ 3b2d2dfccbf9`, holder `2018 Shubham Shantaram Pawar`) | 32 | 🟢 **New this pass (`p849`) — the READABLE one.** A compact LSTM/word-embedding scorer over the same Hewlett `ASAP` dataset, `32★` on `13` forks. 🔵 **It earns a row on pedagogy rather than performance: it is small enough to read end-to-end in an afternoon, which is what a studio needs when it has to explain a grading model to a ministry or an exam board rather than only run one.** 🔴 **Scope it honestly: pushed `2018-04-26`, pre-transformer, no dependency manifest pinned to a resolvable era — treat it as a readable specification of the task, not as code to deploy.** Not archived. 🟡 Region not established first-party; this base does not file a region from a personal name. |
+
 ## 🔴 Fifty-third pass (`p848`, 2026-11-16) — **`0` rows (`216` → `216`). The nil is declared, and for the first time it is ATTRIBUTABLE to this base's own query vocabulary rather than to the supply.**
 
 🟢 **What was run.** Ten first-party `search/repositories` harvest queries plus the four mandated
@@ -904,7 +933,7 @@ above was graded on the licence question alone.**
 | https://github.com/langchain-ai/langchain | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`) | 149546 | **Region: Global.** The model and tool abstraction layer beneath the above. 🟡 **Shelved with a deliberate caution: this base's compose recipes should depend on `langgraph` for control flow and on `langchain-core` for interfaces, not on the `langchain` meta-package, whose surface moves faster than an education deliverable's support window.** 🔵 **Note for the byte-read gate: its `LICENSE` is on `master`, not `main` — a `main`-only probe returns `404` and would record a false `NO_LICENCE_FILE`, which is a live defect in any sweep that assumes the default branch name** |
 | https://github.com/teppei-miyashita/agenticstar-agentcore | 🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last touched `2026-08-12` | 0 | 🔴 **Region: APAC. Shelved as a WARNING row — the worked example for `T89`.** This is the source repository that the PyPI package `agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository`, and it holds no commits at all. 🟢 **The package itself is genuinely MIT** (`License-Expression: MIT` in the wheel, `dist-info/licenses/LICENSE`, `1,078 B`, `sha256:2afbb5fc…`) **and genuinely installable** — 🔴 **but it is wheel-only, single-release (`2026-09-17`), and unreadable at its stated address, while hard-pinning `langgraph==1.1.10`, `langchain==1.2.18`, `fastapi==0.136.0` and `agenticstar-platform==0.5.32`.** 🔵 **Do NOT add it to a delivery tree. It is here so that the next pass asking "is the AGENTIC STAR stack adoptable?" finds the answer already measured: licensed yes, auditable no** |
 
-## Foundational repos — 176 rows
+## Foundational repos — 191 rows
 
 ## 🟢 The ASSESSMENT-PLATFORM BASE layer — **what a marking agent is built ON rather than beside** (new, thirty-ninth pass `p834`) (4 rows)
 

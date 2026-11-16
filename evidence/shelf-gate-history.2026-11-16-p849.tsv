@@ -1,0 +1,10 @@
+# p849: ingest/derive-counts.py run against each commit's own tree (git archive into a
+# scratch dir), not reimplemented. Column `drift` = claimed - derived for agents/top.md.
+commit	pass	derived	claimed	drift	cause
+7f9a490	p834-p843	388	388	0	GREEN, ten consecutive commits
+3d9b787	p844	387	388	1	removed the dead Nordup/askaboard row, heading not decremented
+3d1a4df	p845	387	388	1	nil pass, carried the drift
+621dc0b	p846	387	392	5	4 rows filed under an undeclared 5-column signature with no Region column
+8f61d09	p847	387	394	7	2 rows filed under an undeclared 6-column signature
+3c5daae	p848	387	394	7	2 rows announced in prose and filed into no table at all
+p849-worktree	p849	397	397	0	GREEN, repaired

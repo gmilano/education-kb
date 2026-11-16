@@ -4,6 +4,163 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-fourth pass (`p849`, 2026-11-16) — **`4` agent rows (`393` → `397`) and `3` foundation rows, but the pass's primary output is a GATE finding: all three shelves had been RED on their own contract for five consecutive passes, `8` rows were off the count, and `2` of them were on no table at all**
+
+🔴 **`ingest/derive-counts.py` — this repository's own gate, the one `p819` rebuilt precisely so a
+count could not drift silently — has been reporting RED on `agents/top.md` since `p844`, and five
+passes shipped over it.** 🟢 **Measured commit-by-commit, repaired, and all three shelves are GREEN
+for the first time since `p843`.** 🟢 **`2` genuinely new MIT agent rows and `3` new BSD/MIT
+foundation rows, every grant byte-read today.** 🔴 **`2` candidates disqualified at the grant, one
+of them the cleanest `P990` specimen this base has filed.** → `T165`, `T166`, `T167`.
+
+### 🔴 Finding 1 — the shelf gate has been RED for five passes, and the arithmetic says exactly how
+
+🔵 **How this was measured, since the method matters more than the number.** `git fetch --depth=50`,
+then `git archive` each commit into a scratch tree and run **the repository's own
+`ingest/derive-counts.py` against it**. 🟢 **No reimplementation, no inline `grep` count — the same
+instrument the `Makefile` runs, applied to history.** That is the control this base lacked every
+previous time it argued about its own row count (`p818`, `p819`, `p843`).
+
+| Commit | Pass | Gate derived | Heading claimed | Drift | What the pass did |
+|---|---|---|---|---|---|
+| `7f9a490`…`7e1ff0b` | `p834`–`p843` | `388` | `388` | `0` | 🟢 GREEN, ten consecutive commits |
+| `3d9b787` | `p844` | `387` | `388` | `1` | 🔴 Correctly REMOVED the dead `Nordup/askaboard` row and did not decrement the heading |
+| `3d1a4df` | `p845` | `387` | `388` | `1` | 🔴 Nil pass; carried the drift |
+| `621dc0b` | `p846` | `387` | `392` | `5` | 🔴 Filed `4` rows into a table whose column signature is **not** the declared one — **and which has no `Region` column at all** |
+| `8f61d09` | `p847` | `387` | `394` | `7` | 🔴 Filed `2` rows into a table with the same undeclared signature |
+| `3c5daae` | `p848` | `387` | `394` | `7` | 🔴 Announced `2` rows in prose, byte-read both grants, and filed them into **no table whatsoever** |
+| *this pass* | `p849` | **`397`** | **`397`** | **`0`** | 🟢 GREEN |
+
+🔴 **The mechanism, stated so it cannot recur as a surprise.** The gate does not look for a prose
+heading — `p718` deliberately removed that, because a reworded sentence had defeated the predicate
+three separate times. It identifies a shelf table by its **column-header signature**, and for this
+file the declared signature is exactly:
+
+```
+| Name | Repo | Licence | Stars | Region | Description |
+```
+
+🟡 **`p846` and `p847` wrote `| Agent / library | Repo | License | Stars | Region | Description |`
+instead** — `Agent / library` for `Name`, `License` for `Licence`. 🔵 **Two words. Both tables
+rendered perfectly, read perfectly, and were invisible to the count.** 🔴 **`p846`'s was worse than
+invisible: it had five columns, not six, so its four rows carried `Region` as a sentence inside the
+Description cell (`"Region: EMEA"`) rather than as a field.** 🟢 **That is the precise failure the
+rotation brief warns about — *"region and license have to be inferred from prose, and inferences
+become wrong data"* — happening inside the file whose job is to prevent it.**
+
+🔴 **And the gate was NOT silent.** It printed `RED 23 table(s) carry github.com rows but no
+declared signature; they are NOT counted`, naming line `2951` and line `2963`. 🔵 **`p813` added
+that detector for exactly this case and wrote that an undeclared table "cannot be added SILENTLY".
+It was not added silently. It was added LOUDLY and the alarm was not read.** 🟡 **The defect class
+this pass adds is therefore not detection — detection worked — it is that nothing in the pass
+procedure obliges a pass to look at the gate's output before committing.** → `ACTION p849-A`.
+
+🟢 **The repair, in full, every step verified by re-running the gate.**
+
+1. Line `2951` (`p847`'s table): header normalised to the declared signature. **`+2` counted.**
+2. Line `2963` (`p846`'s table): header normalised **and the sixth column restored**; the four
+   rows' regions — `Global`, `Global`, `EMEA`, `Global` — lifted out of `p846`'s own prose and
+   written into the new `Region` cells. **`+4` counted.** 🔵 Nothing was invented: each value is
+   `p846`'s own stated region, moved from a sentence into a field.
+3. `p848`'s two orphaned rows filed into a real `### Filed by p849` table, with `p848`'s own
+   byte-read grants, star and fork counts, dates and regions carried across verbatim. **`+2`.**
+4. `repos/foundations.md` heading `176` → `188` and `verticals/solutions.md` heading `145` → `147`,
+   both of which the same gate run had been reporting RED, and neither of which any pass had
+   touched. 🔴 **`foundations.md` had been stale by `12` and `solutions.md` by `2`.**
+
+🟢 **Final state, from the gate itself:** `agents/top.md 397/397 GREEN · repos/foundations.md
+191/191 GREEN · verticals/solutions.md 147/147 GREEN`, `ragged=0 nolink=0`.
+
+### 🟢 Finding 2 — `2` new MIT agent rows, and the first one teaches a PROTOCOL rather than a subject
+
+🟢 **[`push-based/ai-performance-coach`](https://github.com/push-based/ai-performance-coach)**
+(`19★`, MIT byte-read, `1,067 B`, `sha256₁₂ 9b6cc07d9c55`) takes one idea from a book, course,
+paper or talk **from "I've read it" to "I can teach it" in seven steps, with a demanding tutor
+checking the learner's work at each step** — the teach-back loop, implemented. 🔵 **Every tutor row
+on this shelf teaches a subject. This one teaches the conversion of any source into retained
+knowledge, so it composes with them rather than competing.** 🔴 Thirteen days old at filing.
+
+🟢 **[`Deepnar/presentation-forge`](https://github.com/Deepnar/presentation-forge)** (`18★`, MIT
+byte-read, `1,070 B`, `sha256₁₂ 8f97b35d4969`) — local-first academic deck **and companion graded
+report** generation, `34` themes, `74` slide types, editable `PPTX`/PDF out. 🔵 **The graded report
+and the speaker script are what make it an education row and not a generic deck tool**; local-first
+is what makes it shippable, because lecture material and student work are the two artefact classes
+a studio most often cannot send to a hosted API.
+
+🟡 **Both are filed `Region: Global` and the reason is an instrument limit, not laziness — see
+`T165`.** This environment cannot resolve `push-based.io`, and GitHub's `users/{login}` endpoint is
+refused outright, so no region is claimed where no artefact-level evidence exists.
+
+### 🟢 Finding 3 — the automated-essay-scoring reference tier, missing for fifty-three passes, and the RECENCY FLOOR is why
+
+🔵 **`3` rows filed in `repos/foundations.md`** — `benhamner/ASAP-AES` (BSD-2-Clause, the Hewlett
+`ASAP` competition's official metrics, where **quadratic weighted kappa** finally has a runnable
+licensed implementation), `Syhen/…-Automated-Essay-Scoring-2.0` (MIT, the `DeBERTa-v3-large`
+two-stage Kaggle runner-up) and `shubhpawar/Automated-Essay-Scoring` (MIT, the readable one).
+
+🔴 **`p848` concluded its nil was *"attributable to this base's own query vocabulary rather than to
+the supply"*. This pass confirms that and sharpens it: the binding defect was the RECENCY FLOOR.**
+🟢 **Run `automated essay scoring` as a literal phrase with NO `pushed:` bound and a coherent
+`8`-address research tier appears, `0` of them held anywhere on these shelves or in their
+archives.** 🔵 **A field whose foundational artefacts are from `2012` and `2024` is invisible to a
+query floored at `2026`. A metric does not go stale the way an agent does.** → `T166`.
+
+### 🔴 Finding 4 — `2` disqualifications, and one of them is the cleanest `P990` specimen this base has filed
+
+🔴 **[`bahfahh/engram-quest`](https://github.com/bahfahh/engram-quest)** (`32★`, pushed
+`2026-11-15`) serves a `2,701 B` file named `LICENSE`. 🔵 **It is a bespoke "Engram Quest Plugin
+License v1.1" and it grants a studio nothing**: §2 forbids building *any* competing gamified-review
+or deck-based plugin from it, §3 forbids selling it or any derivative, §4 key-gates published Pro
+source and forbids patching the check. 🟢 **`P990` — "a file named `LICENSE` is not necessarily a
+grant" — has now fired three passes running, and this is its clearest instance: not a missing file,
+not an ambiguous one, but a careful `2,701 B` document that reads like a licence and functions as a
+prohibition.**
+
+🔴 **[`zlliang/essaysense`](https://github.com/zlliang/essaysense)** (`28★`) is genuinely MIT
+(byte-read, `LICENSE.md`, `1,099 B`) and genuinely in the grading category — **and
+`search/repositories` reports `archived: true`.** 🟢 **This is the first row this base has rejected
+on archived status alone**, and it discharges `p846`'s Finding `6`, which recorded that `10`
+already-shelved rows are archived upstream and that the property had never been checked before
+shelving. 🔵 **Checked before, not after, for the first time.**
+
+### 🔵 Finding 5 — instrument conditions, re-established first-party, and `p848`'s raw-channel note is WITHDRAWN
+
+| Channel | Probe `2026-11-16` | Verdict |
+|---|---|---|
+| `gh api search/repositories` | `repo:<owner>/<name>` returns `full_name`, `default_branch`, `license.spdx_id`, stars, forks, `pushed_at`, `created_at`, **`archived`** | 🟢 **The only first-party metadata channel that resolves for a repository this session does not own** |
+| `gh api repos/{owner}/{repo}` | `403` — *"sessions are bound to their configured repositories"* | 🔴 **NOT available.** Neither is `repos/…/contents/…`, so **the API cannot byte-read a grant here** |
+| `gh api users/{login}` | `403`, same refusal | 🔴 **NOT available — this is why region cannot be resolved from an owner account** |
+| `raw.githubusercontent.com` | `HTTP 200`, real bytes, `curl` with and without `-L` | 🟢 **The byte-read channel. `p848` recorded this host as `301`; that reading is WITHDRAWN** |
+| `WebSearch` | All `8` mandated legs returned results | 🟢 Works — it is an Anthropic-side tool and does not traverse this session's egress |
+| `WebFetch` / `curl` to a non-GitHub host | `push-based.io` → `ENOTFOUND` at DNS | 🔴 Consistent with `T162`'s allow-list, and it **refines** it: the block is at name resolution |
+
+🟢 **The composite rule for every future pass, since the two halves are now separately
+established:** metadata from `search/repositories`, bytes from `raw.githubusercontent.com`, and
+**never** `repos/{full_name}` — a probe built on it returns an access error that reads like a
+missing repository and will manufacture false absences. → `T165`.
+
+### 🟢 Finding 6 — what the mandated legs returned, stated so the nil is informed
+
+🔵 **`4` global WebSearch legs, `4` regional WebSearch legs, `28` first-party
+`search/repositories` queries across three differently-shaped sweeps** (recency-floored agent
+vocabulary; non-English vocabulary in Spanish, Portuguese and Chinese; education-semantic phrases
+with no floor).
+
+🔴 **Sweep 1 — `68` results, `4` addresses new to this base, `0` of them education.** The two
+permissive ones are `loyiv/itp` (an `EMNLP 2026` world-model planning agent) and
+`malkreide/zurich-opendata-mcp` (a Zürich open-data MCP server). 🟢 **The nil is clean.**
+
+🔴 **Sweep 2 — the non-English leg, `64` results, `8` new, and it reproduces `p840`'s collision
+exactly.** 🔵 **Every Chinese-language hit for 教程 ("tutorial") is a developer AI-agent course —
+`warmsum/deepseek-harness-python-tutorial` (`153★`), `yanhua1010/dsh-harness-tutorial` (`92★`),
+`gitzyong812/agent_tutorial` (`26★`).** 🔴 **Spanish and Portuguese legs (`educación IA agente`,
+`educação IA agente professor`, `tutor inteligente LLM`) returned `0` new addresses at
+`stars:>5`.** 🟢 **The LATAM-language agent nil is real, measured this pass, and consistent with
+`open-gaps` `235`.**
+
+🟢 **Sweep 3 — the one that worked, and the only one that dropped the recency floor.** `19` new
+addresses, `8` of them a coherent AES tier, `4` build-safe after byte-read. **Finding 3.**
+
 ## 🟢 Fifty-third pass (`p848`, 2026-11-16) — **`2` agent rows (`426` → `428`), and the pass's hardest-won output is an INSTRUMENT correction: this environment's egress is a GitHub-only allow-list, not the governmental-publisher pattern `T906` named**
 
 🟢 **`2` genuinely new build-safe rows**, both byte-read on their default branch today:
@@ -2945,10 +3102,26 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 394 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 397 rows
+### Filed by `p849` (2026-11-16) — `4` rows: `2` new, and `2` RESTORED from `p848`'s own narrative, where they were announced but never filed
+
+🔴 **`2` of these `4` are not discoveries. They are `p848`'s rows.** `p848` announced them in its
+pass narrative at the head of this file, byte-read both grants, and then filed neither into any
+table the shelf gate can see — so the shelf has been publishing them in prose and counting them
+nowhere. 🟢 **They are entered here verbatim from `p848`'s own measurements, regions included, and
+the gate now counts them.** 🔵 **See this pass's Finding 1 for the mechanism and the four-pass
+history behind it.**
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| ai-coach (push-based) | https://github.com/push-based/ai-performance-coach | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,067 B`, `sha256₁₂ 9b6cc07d9c55`, stock text, holder `2026 push-based`) | 19 | Global | 🟢 **New this pass (`p849`), and it is the first row on this shelf whose unit of work is a LEARNING PROTOCOL rather than a subject.** An Obsidian-vault agent system that takes one idea from a book, course, paper or talk **from "I've read it" to "I can teach it" in seven steps, with a deliberately demanding tutor checking the learner's work at each step** — the teach-back / Feynman loop, implemented rather than described. Organises the vault on PARA (`0.Inbox` / `1.Projects` / `2.Areas` / `3.Resources` / `4.Archive`), renders the note graph and per-source chapter notes in the browser, and plans goals down to daily habits via Claude Code. 🔵 **Why it belongs beside the tutor tier and not inside it:** every tutor row on this shelf teaches a SUBJECT; this one teaches the learner how to convert any source into retained knowledge, so it composes with them instead of competing. Docusaurus documentation site, CI badge green. 🔴 **Created `2026-11-03`, `2` forks — thirteen days old at filing. Read it for the protocol; do not make a client dependent on it.** Pushed `2026-11-15`. 🟡 **Region Global:** `push-based` is an organisation account and this environment cannot resolve `push-based.io` or the `users/{login}` endpoint (`T165`), so no region is claimed from the name. |
+| Presentation Forge | https://github.com/Deepnar/presentation-forge | 🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,070 B`, `sha256₁₂ 8f97b35d4969`, stock text, holder `2026 Deepesh Sonar`) | 18 | Global | 🟢 **New this pass (`p849`).** Local-first generation of **academic** presentation decks and a companion graded report: a topic or a source set goes in, an editable `PPTX`/PDF deck, a written report and a speaker script come out, across `34` themes and `74` slide types. 🔵 **The property that makes it an education row rather than a generic deck generator is the GRADED REPORT and the speaker script** — it is built for coursework and lecture preparation, and its own published examples are academic (mixed-mode HPC programming, perovskite solar cells). 🟢 **Local-first matters on this shelf:** lecture material and student work are the two artefact classes a studio most often cannot send to a hosted API. Node `24+`, automated test suite, complete worked outputs committed to the repository. 🔴 **`0` forks, created `2026-08-10` — a one-author project. Take the pipeline shape; review before shipping.** Pushed `2026-11-14`. |
+| Student Management System (Django) | https://github.com/jobic10/student-management-using-django | 🟢 **MIT — byte-read** (`main/LICENSE`, `1,075 B`, `sha256₁₂ 92be33e226c0`, holder `2020 Owonubi Job Sunday`) | 394 | Global | 🔵 **RESTORED by `p849` — measured and announced by `p848`, never filed into a counted table.** The only address found at any threshold carrying **role-separated school administration under a permissive licence**: admin / staff / student roles, attendance capture, result entry, leave approval, course–subject–session modelling, per-role summary dashboards. Python / Django / AdminLTE. 🟢 **`202` forks on `394★` — `1:1.95`, the highest fork-to-star ratio on this shelf against a median nearer `1:20`:** people are taking the skeleton and building a school on it. 🔴 **Its own `README` calls it *"a Simple Student Management System Developed While Learning Django"* — a licence-clean starting point for a client SIS, not a production SIS and not a dependency.** The SIS tier's alternatives are licence-blocked: `OS4ED/openSIS-Classic` (`351★`) reports no grant, `francoisjacquet/rosariosis` (`654★`) is `GPL-2.0`, `hassanhabib/OtripleS` (`342★`) reports no grant and is stale since `2024-07-18`. Created `2020-09-23`, pushed `2026-11-11`, not archived, `1` open issue. 🟡 **Region Global, origin noted as unverified — this base does not file a region from a personal name.** |
+| japanese-tutor-mugi (むぎ) | https://github.com/brian901106/japanese-tutor-mugi | 🟢 **MIT — byte-read** (`main/LICENSE`, `1,068 B`, `sha256₁₂ b349f14f3e8e`, holder `2026 brian901106`) | 104 | APAC | 🔵 **RESTORED by `p849` — measured and announced by `p848`, never filed into a counted table.** Mobile-web one-to-one Japanese conversation tutor: the learner speaks Japanese or Chinese, the tutor answers in Japanese, and the app mines the tutor's own replies for the vocabulary and phrasing it then teaches. 🟢 **Two mechanisms make it a row rather than another chat wrapper** — a multi-layer cache that makes repeated turns cheaper the longer a session runs, and an explicit architectural rule that **the API key stays on the local development server and never reaches the browser**, stated in both `README` and `NOTICE.md`. 🔵 **That second property is the one a studio actually needs from a client-facing tutor demo, and it is what most `100★`-tier tutor repositories get wrong.** TypeScript / React / Vite. 🔴 **Created `2026-10-28`, pushed `2026-11-02` — five days of pushes then silence; single-language, single-purpose.** `36` forks on `104★` (`1:2.9`). 🟢 **Region APAC on the artifact's own evidence** — Traditional Chinese interface and documentation throughout with a bilingual `README.en.md`, not an inference from a name. |
+
 ### Filed by `p847` (2026-11-16) — `2` rows: `1` new, `1` restored from an archive the current shelves had dropped
 
-| Agent / library | Repo | License | Stars | Region | Description |
+| Name | Repo | Licence | Stars | Region | Description |
 |---|---|---|---|---|---|
 | BloomTutor | https://github.com/Li-Evan/BloomTutor | 🟢 **MIT — byte-read** (`main/LICENSE`, `1,069 B`, `sha256₁₂ 7d574cf3632e`, stock text, holder `2026 Li Zhengping`) | 310 | Global | 🟢 **New this pass (`p847`).** A personal AI tutor built explicitly on Bloom's 2-sigma finding: generate a structured syllabus, deliver **one lesson at a time**, read the learner's annotations and feedback, then tailor the next lesson from them. 🔵 **The learner model advances BETWEEN lessons — that is the property separating a tutor from a chat transcript, and it is the one this base keeps failing to find in `stars:>30` returns.** Two surfaces: a Claude Code CLI mode and a web app (`bloomtutor.app`). Python `3.11+` / FastAPI / Next.js `15`. Bilingual EN + 中文 `README`. `44` forks on `310★` — a high fork-to-star ratio, i.e. being taken apart rather than bookmarked. 🔴 **Small and young (created `2026-03-10`): read it and take the pattern; do not make a client dependent on it unreviewed.** |
 | Astron Harness Tutorial (iFlytek) | https://github.com/iflytek/astron-harness-tutorial | 🟢 **Apache-2.0 — byte-read** (`main/LICENSE`, `11,347 B`, `sha256₁₂ 649fc6df7e4c`, stock text) | 363 | APAC | 🟢 **RESTORED this pass (`p847`), not new.** Bilingual illustrated guides to iFlytek's AStudio / Loomy / AstronClaw agent tooling, with official sample code. 🔴 **It is held by `archive/2026-11-09-p722-pre-rewrite/` and `archive/2026-11-12-p787-pre-rewrite/` and was absent from all eight current shelf files — dropped in the `p787` rewrite, the mechanism `p837` named.** 🔵 **Why it belongs on an education shelf: iFlytek is the APAC education-AI incumbent this base's own market intel tracks, and this is the permissively-licensed, bilingual on-ramp to its agent stack — the thing a China or SEA engagement reads before proposing anything that has to interoperate with it.** Pushed `2026-11-02`, not archived. |
@@ -2960,12 +3133,12 @@ shelf-wide sweep could not resolve, on a channel calibrated against a live contr
 never-existed control in the same loop (`P100`).** 🔴 **Two of them replace rows this base had
 declared dead.**
 
-| Agent / library | Repo | License | Stars | Description |
-|---|---|---|---|---|
-| Learner Credential Wallet (OWF Labs) | https://github.com/openwallet-foundation-labs/learner-credential-wallet | 🟢 **MIT — byte-read** (`main/LICENSE`, `1,091 B`, `sha256₁₂ d8c69cd2855b`) | 🟡 *not retrieved — the address is itself absent from the search index; existence and grant are from `raw.githubusercontent.com`* | **New this pass (`p846`). Region: Global.** Cross-platform iOS/Android wallet for verifiable learner credentials (`lcw.app`), now under **OpenWallet Foundation Labs (Linux Foundation)**. 🟢 **The reference client for the W3C VC / Open Badges 3.0 seam, and the procurement story changed with the stewardship**: a foundation-hosted wallet clears institutional review where a lab repository does not. 🔴 **Its grant is a DIFFERENT blob from the Digital Credentials Consortium original** (`1,091 B` / `d8c69cd2855b` here against `1,092 B` / `1032f65d…` at `digitalcredentials/`), so this is a sibling project, not a redirect — keep both rows and cite this one. |
-| lti-1-3-php-library (1EdTech upstream) | https://github.com/1EdTech/lti-1-3-php-library | 🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810`) | 124 | **New this pass (`p846`). Region: Global.** The SPEC-ANCHOR for LTI 1.3 in PHP, published by **1EdTech — the body that writes the LTI specification** (formerly IMS Global). `111` forks. 🔵 Named as the upstream inside `packbackbooks/lti-1-3-php-library`'s own `README`. 🔴 **Last push `2024-08-20` — cite it for provenance and certification lineage, build on the maintained forks.** |
-| lti-1-3-php-library (talis, maintained) | https://github.com/talis/lti-1-3-php-library | 🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810` — byte-identical to the `1EdTech` upstream) | 1 | **New this pass (`p846`). Region: EMEA** (Talis is a UK higher-education software house). 🟢 **Pushed `2026-11-10` — the most recently maintained Apache-2.0 LTI 1.3 PHP tree this base holds**, against `2024-08-20` upstream and a de-indexed `packbackbooks` tree. 🟡 **`1★` carries no information here**: a certification-bound protocol library is maintained by its integrators, not starred. Validates launches, Names & Roles Provisioning for rosters, Assignment & Grades for writeback. |
-| present-together | https://github.com/fabian-thinks/present-together | 🟢 **MIT + appended boundary — byte-read** (`main/LICENSE`, `1,344 B`, `sha256₁₂ 4f78693ecfd8`, holder `fabian-thinks and the Singularity seminar contributors`, 2026) 🔴 GitHub field reports `NOASSERTION` — `T81` | 0 | **New ADDRESS this pass (`p846`) for the asset shelved at `p824` as `FabianJun/PresentTogether`. Region: Global.** Pushed `2026-11-15`. Co-designs interactive presentations with an AI agent and coaches the human on the teaching; the agent does the technical build. 🟢 **The two appended clauses survive the rename** — *"Third-party material is excluded from this grant"* (→ `THIRD_PARTY_NOTICES.md`) and *"Software permissions do not override academic rules or rights to institutional content"* (→ `docs/ACADEMIC-USE.md`). 🔵 **This is the live address; the old one is a GitHub redirect that `raw` follows and the search index does not.** |
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| Learner Credential Wallet (OWF Labs) | https://github.com/openwallet-foundation-labs/learner-credential-wallet | 🟢 **MIT — byte-read** (`main/LICENSE`, `1,091 B`, `sha256₁₂ d8c69cd2855b`) | 🟡 *not retrieved — the address is itself absent from the search index; existence and grant are from `raw.githubusercontent.com`* | Global | **New this pass (`p846`). Region: Global.** Cross-platform iOS/Android wallet for verifiable learner credentials (`lcw.app`), now under **OpenWallet Foundation Labs (Linux Foundation)**. 🟢 **The reference client for the W3C VC / Open Badges 3.0 seam, and the procurement story changed with the stewardship**: a foundation-hosted wallet clears institutional review where a lab repository does not. 🔴 **Its grant is a DIFFERENT blob from the Digital Credentials Consortium original** (`1,091 B` / `d8c69cd2855b` here against `1,092 B` / `1032f65d…` at `digitalcredentials/`), so this is a sibling project, not a redirect — keep both rows and cite this one. |
+| lti-1-3-php-library (1EdTech upstream) | https://github.com/1EdTech/lti-1-3-php-library | 🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810`) | 124 | Global | **New this pass (`p846`). Region: Global.** The SPEC-ANCHOR for LTI 1.3 in PHP, published by **1EdTech — the body that writes the LTI specification** (formerly IMS Global). `111` forks. 🔵 Named as the upstream inside `packbackbooks/lti-1-3-php-library`'s own `README`. 🔴 **Last push `2024-08-20` — cite it for provenance and certification lineage, build on the maintained forks.** |
+| lti-1-3-php-library (talis, maintained) | https://github.com/talis/lti-1-3-php-library | 🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810` — byte-identical to the `1EdTech` upstream) | 1 | EMEA | **New this pass (`p846`). Region: EMEA** (Talis is a UK higher-education software house). 🟢 **Pushed `2026-11-10` — the most recently maintained Apache-2.0 LTI 1.3 PHP tree this base holds**, against `2024-08-20` upstream and a de-indexed `packbackbooks` tree. 🟡 **`1★` carries no information here**: a certification-bound protocol library is maintained by its integrators, not starred. Validates launches, Names & Roles Provisioning for rosters, Assignment & Grades for writeback. |
+| present-together | https://github.com/fabian-thinks/present-together | 🟢 **MIT + appended boundary — byte-read** (`main/LICENSE`, `1,344 B`, `sha256₁₂ 4f78693ecfd8`, holder `fabian-thinks and the Singularity seminar contributors`, 2026) 🔴 GitHub field reports `NOASSERTION` — `T81` | 0 | Global | **New ADDRESS this pass (`p846`) for the asset shelved at `p824` as `FabianJun/PresentTogether`. Region: Global.** Pushed `2026-11-15`. Co-designs interactive presentations with an AI agent and coaches the human on the teaching; the agent does the technical build. 🟢 **The two appended clauses survive the rename** — *"Third-party material is excluded from this grant"* (→ `THIRD_PARTY_NOTICES.md`) and *"Software permissions do not override academic rules or rights to institutional content"* (→ `docs/ACADEMIC-USE.md`). 🔵 **This is the live address; the old one is a GitHub redirect that `raw` follows and the search index does not.** |
 
 
 ### Filed by `p834` (2026-11-15) — `9` rows: the MARKING population enumerated BY `pushed_at` instead of by stars, and every licence byte-read on the DEFAULT branch
@@ -3315,6 +3488,7 @@ measured on the way.
 
 | Agent | Repo | License | Stars | What it does |
 |---|---|---|---|---|
+| Studiamo | https://github.com/NaEs25/studiamo | 🔴 **AGPL-3.0 — byte-read `2026-11-16`** (`main/LICENSE`, `33,880 B`, `sha256₁₂ f0c3e444e06d`, stock FSF text, `Copyright (C) 2007 Free Software Foundation`) | 27 | 🟢 **New this pass (`p849`).** Turns YouTube videos, PDFs and lecture notes into **AI-generated active-recall flashcards scheduled by spaced repetition**, self-hosted or cloud, Python `3.12`. 🔵 **It is the most complete open active-recall pipeline this base has measured, and the licence is why it is here and not on the build-safe shelf: AGPL-3.0 reaches a NETWORK deliverable** — a hosted student-facing service built on it must publish its source. 🟢 **Fine as an internal reference or an on-premises deployment the client owns; not a component of a SaaS deliverable.** `4` forks, created `2026-08-15`, pushed `2026-10-30`, beta by its own `README`. 🟡 Region not established first-party; the name is Italian, which this base does not treat as evidence. |
 | VietAIS-Sentinel | https://github.com/NukeGeng/VietAIS-Sentinel | 🔴 **AGPL-3.0 — byte-read** (`34,522 B`, `sha256:4df3c306…`, stock text, title line `GNU AFFERO GENERAL PUBLIC LICENSE`) | 0 | 🟢 **New this pass (`p824`) — and the anchor of `T84`.** *"Open-source AI engine for explainable exam proctoring, combining object detection, gaze and head-pose estimation, and temporal behavior analysis."* 🔴 **It is the ONLY licensed education repository this pass could find in 🇻🇳 Vietnam, the jurisdiction whose AI law has named education and automated assessment as high-risk since `2026-03-01`** — `q="giao duc viet nam ai"` → `7`, all unlicensed; `q="vietnam education platform"` → `5`, all unlicensed. 🔵 **EXPLAINABLE is the right word for that law and the reason to read it: object, gaze, head-pose and temporal behaviour are inspectable signals, not an affect score.** 🔴 **AGPL-3.0 over a system an institution would HOST means network copyleft reaches the deployment, so this is the reference architecture for `P58`, not a fork candidate.** Created and pushed `2026-10-14`, `56 KB` |
 | bupt-anything | https://github.com/Sun-sunshine06/bupt-anything | 🔴 **GPL-3.0 — byte-read** (`35,149 B`, `sha256:3972dc97…`, title line `GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007`) | 2 | 🟢 **New this pass (`p823`).** 北邮 **BUPT** 🇨🇳 campus MCP server and CLI: timetable, grades, free classrooms, 教学云 assignments and materials — *"unofficial read-only campus tools"*. 🔵 **The APAC member of the `T77` institution-integration population, and the one that cannot be adopted:** GPL-3.0 propagates to any deliverable it is linked into, so a client engagement would have to reimplement the campus adapters rather than vendor this one. 🟢 **Read-only by design, which is the right default for a student-facing campus agent** and worth copying even though the code is not. Pushed `2026-11-13`. |
 | anki-cli | https://github.com/Macro002/anki-cli | 🔴 **AGPL-3.0 — byte-read** (`34,523 B`, `sha256:0d96a4ff…`, title line `GNU AFFERO GENERAL PUBLIC LICENSE Version 3`) | 1 | 🟢 **New this pass (`p817`), and it DISCHARGES `ACTION p816-D` — the AnkiConnect single-point-of-failure now has a successor, and it is not build-safe.** *“Anki's own engine as a fast headless server and CLI: a drop-in AnkiConnect replacement (legacy + v1 API) without Anki Desktop.”* Created `2026-10-26`, pushed `2026-11-13`. 🟢 **Architecturally it is what `p816` asked for: it removes the Qt desktop dependency, so an agent stack no longer needs a GUI application running to reach a collection.** 🔴 **But it is built on the official `anki` Python package, which is AGPL-3.0, and it inherits that — so it is limb 2 of `p816-D`, not limb 1.** 🔵 **Consequence for this base, stated plainly: `P40`'s algorithm-first shape remains the only recommendation in the retention layer that carries no copyleft. The replacement exists; it is not a replacement a studio can ship inside a deliverable.** 🔴 **Its AGPL payload is byte-identical (`34,523 B`, `0d96a4ff…`) to `frametell`'s and `learnharness`'s, recorded at `T817` — stock text, no lineage information** |
@@ -3344,6 +3518,8 @@ Globant can build a client deliverable on.
 
 | Candidate | Repo | Actual license | Stars | Why rejected |
 |---|---|---|---|---|
+| Engram Quest (Obsidian plugin) | https://github.com/bahfahh/engram-quest | 🔴 **BESPOKE "Engram Quest Plugin License" v1.1 (November 2026) — byte-read `2026-11-16`** (`master/LICENSE`, `2,701 B`, `sha256₁₂ 4aa2ba9abfc6`, `Copyright 2026 powen. All rights reserved.`); GitHub field reads `NOASSERTION` | 32 | 🔴 **New rejection this pass (`p849`), and the cleanest `P990` specimen this base has filed: the file is named `LICENSE`, is `2,701 B` of carefully drafted terms, and grants nothing a studio can use.** Three independent blockers, each quoted from the text: **§2 Non-Compete** — *"You may NOT use the Software, its source code, or any derivative works to create, develop, or distribute a competing Obsidian plugin"*, defined to include **any** gamified review or deck-based macro-review tool; **§3 Commercial Use** — *"You may NOT sell the Software or any derivative works"*, and redistribution inside a commercial service needs written permission; **§4** — Pro features are **source-published but key-gated**, and patching the licence check is forbidden. 🔵 **Note what it IS: the product is genuinely an education artefact** (quest-based memory maps and gamified review over an Obsidian vault, `32★`, pushed `2026-11-15`). 🔴 **Read it for the interaction design; a studio cannot fork it, ship it, or build in its category.** Filed by name so a later pass does not re-pay for the grant read. |
+| essaysense | https://github.com/zlliang/essaysense | 🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE.md`, `1,099 B`, `sha256₁₂ fe23993a99d8`, holder `2017-2019 Zilong (Quincy) Liang & Jiancong Gao`) — 🔴 rejected on a basis the licence does not cure | 28 | 🔴 **New rejection this pass (`p849`), and it is the first row this base rejects on ARCHIVED status alone.** `search/repositories` reports **`archived: true`** on `2026-11-16` — the repository is read-only upstream, so there is no issue tracker, no security response and no path to upstream a fix. An end-to-end neural **automated essay scoring** experiment over the ASAP corpus, genuinely in the grading category this base has carried as a gap since `T96`, and genuinely MIT. 🔵 **`p846` Finding `6` recorded that `10` shelved rows are archived upstream and that this base had never recorded the property; this is the first pass to act on it BEFORE shelving rather than after.** 🟢 **Still worth reading as a reference implementation, and the `ASAP-AES` metric code filed in `repos/foundations.md` this pass is its live counterpart.** |
 | multi-framework-agent-orchestrator | https://github.com/TruptiLone/multi-framework-agent-orchestrator | 🔴 **MIT bytes, but the grant is NOT this author's — `sha256:ab6328fe6d4d…`, `1,066 B`, holder `Copyright (c) 2025 Ed Donner`** | 0 | **New rejection (`p829`), and it is `T94`'s silent-republish class with the upstream NAMED BY HASH for the first time.** The identical `1,066 B` / `ab6328fe6d4d…` blob is served by [`ed-donner/agents`](https://github.com/ed-donner/agents) (`6,628★`), whose course these notebooks solve. 🔴 **GitHub reports `fork=false`.** 🔵 **Not a licence violation — MIT permits redistribution with the notice intact, and the notice IS intact. It is a SUPPLY-COUNTING defect: shelving this as an independent language-learning agent would count one upstream twice.** 🟢 The method generalises: a licence-byte hash collision against a larger repository is a republish detector needing no README reading |
 | ApprenticeshipStandardsDotOrg | https://github.com/ApprenticeshipStandardsDotOrg/ApprenticeshipStandardsDotOrg | 🔴 **`CC0-1.0` — byte-read** (`7,048 B`, `sha256:a2010f343487…`, title line `Creative Commons Legal Code`) | 4 | **New rejection (`p829`), on `T78`'s rule and with real regret.** 🇺🇸 The US counterpart to `ksb-diff` and the only North American artefact the apprenticeship leg produced. 🔴 **CC0 is a public-domain dedication drafted for CONTENT, not software: no patent grant, no warranty disclaimer — which is exactly why `T78` exists.** 🔵 **Disposition is REFUSE-AS-SOFTWARE, not refuse-as-data: the STANDARDS DATA it publishes is usable, the Rails application around it is not clean to vendor.** 🟢 Filed as a licence-request candidate — a one-line relicence to MIT would make it `P69`'s North America adapter |
 | english-teacher-agent | https://github.com/el-abid/english-teacher-agent | 🔴 **NO LICENCE FILE — byte-probed at `10` addresses (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE` × `main`/`master`), all HTTP `404`**; field `NONE` | 0 | **New rejection (`p829`).** CEFR English tutor for high-school students: LangGraph agent, FastAPI UI, local TTS. 🔵 Recorded so the next pass does not re-probe it |

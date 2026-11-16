@@ -4,6 +4,38 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 `2026-11-16` — fifty-fourth pass (`p849`): **the TENTH consecutive nil on the vertical-platform leg, and this shelf's own row count was wrong by `2` the whole time**
+
+🔴 **The mandated leg — `open source platform education ERP CRM MIT Apache` — was run again and
+returned marketing pages for a single vendor.** 🟢 **`OpenEduCat`, already held here for many
+passes: an education ERP built on the **Odoo** framework, covering admissions, SIS, academics,
+attendance, finance, HR and a prospective-student CRM pipeline, with a free Community Edition and
+paid enterprise modules.** 🔴 **Not one result in the leg stated a licence**, and this shelf's own
+byte-read record stands: **`OpenEduCat` is `LGPL-3.0`, on an Odoo framework that is `LGPL-3.0`** —
+🔵 **weak copyleft, so a studio's own modules can stay proprietary while modifications to the
+platform itself must be published.** 🟡 **Usable, with that boundary drawn in the contract.**
+
+🟢 **The closed set of seven is unchanged for a tenth pass** — Open edX (`AGPL-3.0`), Canvas LMS
+(`AGPL-3.0` core), Moodle, ILIAS and Chamilo (`GPL-3.0`), Sakai (`ECL-2.0`), OpenEduCat
+(`LGPL-3.0`). 🔴 **None is permissive and none has become permissive.** 🔵 **`p848` argued this leg
+has stopped being a discovery instrument; `p849` agrees and acts on it — `P76` in
+`compose/patterns.md` is built on the premise that the LMS is INHERITED over LTI 1.3 and never
+replaced.** → `ACTION p849-E`: replace this leg's query with one that looks for what attaches to
+the seven, not for an eighth.
+
+### 🔴 The count defect, repaired
+
+🟡 **`ingest/derive-counts.py` was reporting `RED heading claims 145, the file holds 147` on this
+file, and no pass had touched it.** 🟢 **Heading corrected to `147`, derived from the gate, and
+this shelf is GREEN for the first time in the window `p849` examined.** 🔵 **The same run found
+`agents/top.md` stale by `3` and `repos/foundations.md` stale by `12`; the mechanism and the
+five-pass history are in `agents/top.md` Finding 1.**
+
+🟡 **Note for the next pass, not repaired here:** this file has **`12` tables carrying
+`github.com` rows whose column signature is not declared to the gate**, so their rows are not in
+the `147`. 🔵 **That is by design for censuses and comparison tables — but it has never been
+audited row by row, and `p849` did not audit it.** → `ACTION p849-F`.
+
 ## 🟢 `2026-11-16` — fifty-third pass (`p848`): **the ninth consecutive nil on the LMS leg, and the SIS tier finally gets a permissively-licensed option**
 
 🔴 **The mandated vertical leg was run again and returned the same seven platforms for the ninth
@@ -683,7 +715,7 @@ platform.** 🟡 **Treat it as competitive intelligence that happens to be MIT-l
 | **AGENTIC STAR** (SoftBank, 🇯🇵) | 🔴 **Not institution-run — a hosted commercial agent platform**, developer docs at `developers.fd.agenticstar.tm.softbank.jp`, homepage `agenticstar.io`. 🟢 Its runtime SDKs `agenticstar-agentcore` (`1.0.3`) and `agenticstar-platform` (`3.3.0`, `80` releases) are public on PyPI and MIT by their wheel metadata | 🟢 **`74` MIT education agent templates, `54` catalogue ids `EDU-C2-004`…`EDU-C2-173`** — reference row [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent), `EDU-C2-028`, byte-read MIT (`1,074 B`, HEAD `71c442ebd88e`) | 🟢 **MIT** (templates and both SDKs, all byte- or metadata-verified) | 🟡 **Adopt the SPECS, not the runtime.** 🔴 Templates raise `PlatformRequired` at graph compile without a SoftBank deployment; all `74` are `0★`, unmaintained since October; the framework's advertised source repo has **zero commits** (`T89`); hard `==` pins on `langgraph`/`langchain`/`fastapi`. 🟢 **Tests run without the platform — harvest per `P61`** |
 | **AgentCore graph scaffold** (the catalogue's shared architecture) | 🔵 Not a product — the uniform structure under all `74` templates: `config/agent.yaml` manifest (`required_trust_level`, declared secrets), `src/graph/`, `src/nodes/`, `src/schemas/state.py`, `docs/02_design.md`, `docs/03_test_spec.md`, `tests/proof_of_boundary/` | 🟢 Domain nodes differ completely between ids — byte-compared across three repositories this pass: `iep_section_generator`/`regulatory_compliance` vs `affected_material_analysis`/`stakeholder_mapping` vs `bloom_level`/`difficulty_score`. Reference row [`haidang024/agentic-star-education-curriculum-change-impact-briefing-agent`](https://github.com/haidang024/agentic-star-education-curriculum-change-impact-briefing-agent) (`EDU-C2-046`, `45` files) | 🟢 **MIT** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ae3eea9ac056`) | 🟢 **This is the reusable asset.** 🔵 One scaffold, `54` real domain implementations — so a studio gets a uniform, inspectable architecture across `54` education workflows instead of `54` unrelated codebases. 🔴 The scaffold's base class ships only in the binary wheel; re-implement on LangGraph (now on `repos/foundations.md`) |
 
-## Education vertical platforms — 145 rows
+## Education vertical platforms — 147 rows
 
 ### Filed by `p834` (2026-11-15) — `5` rows: the EXAMINATION-PLATFORM vertical, and the two AGPL rows are the traction leaders
 

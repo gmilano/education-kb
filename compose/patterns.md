@@ -4,6 +4,97 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-fourth pass (`p849`, 2026-11-16) — `2` recipes (`P75`, `P76`), built only from rows filed or measured this pass
+
+🔵 **Both are numbered in the form this repository's own gate counts** (`## P<n> — …`). 🔴 **`p848`
+filed `P103` and `P104` as `` `P103` `` with backticks, which `ingest/derive-counts.py` does not
+match — the page holds `74` gate-visible recipes and two that are invisible to it.** 🟡 Recorded,
+not silently renumbered: → `ACTION p849-D`.
+
+## P75 — The marking-agreement harness: sell measured agreement with human raters, not a grading model (North America anchor on the ESSA/Ofqual evidence gate; EMEA, APAC and LATAM on the same build with a different argument)
+
+🔵 **Why this recipe exists now and could not exist last pass.** Every region's intel this pass
+says the same thing in four different vocabularies — North America's **ESSA evidence tier** (only
+`45%` of the most-used tools clear it), **Ofqual's January `2026` principles for AI in high-stakes
+marking**, the **OECD's "pedagogy in control"** framing and **LATAM's governance vacuum at `92%`
+student adoption**. 🟢 **All four are demands for PROOF, and until `p849` this base had no
+permissively-licensed way to produce it.** 🔴 **`compose/patterns.md` has invoked `quadratic
+weighted kappa` for passes without naming an implementation.** 🟢 **It now has one.**
+
+**The stack, every component byte-read and shelved:**
+
+| Layer | Component | Grant | What it contributes |
+|---|---|---|---|
+| Metric | [`benhamner/ASAP-AES`](https://github.com/benhamner/ASAP-AES) | 🟢 BSD-2-Clause | **`quadratic weighted kappa` and the `ASAP` benchmark set**, plus `length_benchmark.py` — a Random-Forest baseline over character and word counts |
+| Floor | the same `length_benchmark.py` | 🟢 BSD-2-Clause | 🔴 **The control that stops the engagement lying to itself** — see step `2` |
+| Model | [`Syhen/2nd-Place-Solution-…-AES-2.0`](https://github.com/Syhen/2nd-Place-Solution-Kaggle-Learning-Agency-Lab-Automated-Essay-Scoring-2.0) | 🟢 MIT | Two-stage `DeBERTa-v3-large` with an MLM domain-adaptation pass; the architecture, not the weights |
+| Explanation | [`shubhpawar/Automated-Essay-Scoring`](https://github.com/shubhpawar/Automated-Essay-Scoring) | 🟢 MIT | 🔵 **The version you walk an exam board through**: small enough to read end-to-end |
+| Feedback surface | [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) | 🟡 Apache-2.0, **boilerplate-only** (`p843`) | Essay scoring + label-aware feedback as a deployable system. 🔴 **Confirm the grant upstream before it enters a deliverable** |
+| System of record | [`jobic10/student-management-using-django`](https://github.com/jobic10/student-management-using-django) | 🟢 MIT | Role-separated result entry and per-role dashboards — where a mark becomes a record with an owner |
+
+**Wiring, in build order:**
+
+1. **Fix the rubric and collect double-marked human scores FIRST.** 🔴 **No model until there are
+   two human marks on the same scripts.** The deliverable is agreement, and agreement needs a
+   reference.
+2. 🟢 **Run `length_benchmark.py` before anything neural, and publish its kappa.** 🔵 **This is the
+   step that protects the engagement:** if a Random Forest over word counts scores `κ = 0.70` on
+   the client's scripts, then a transformer at `κ = 0.74` has bought almost nothing, and the
+   honest finding is that the rubric rewards length. 🔴 **Discovering that in week `10` instead of
+   week `1` is how grading projects die.**
+3. **Port the two-stage pattern from `Syhen`**, not the weights: MLM domain-adaptation on the
+   client's own corpus, then the scoring heads. 🔴 **Its `README` states results are not
+   bit-reproducible — fix the seed yourself and record it in the evidence pack.**
+4. **Score human-vs-model and human-vs-human with the same `ASAP-AES` kappa implementation.** 🔵
+   **The second number is the one that sells:** human raters typically agree with each other less
+   than a client expects, and a model inside that band is defensible.
+5. **Put the mark behind a human.** Route every score through `AI_AWE`'s feedback surface for a
+   marker to accept, adjust or reject, and write the final mark into the SIS skeleton. 🟢 **The
+   accept/adjust/reject log IS the audit trail**, and it is what Art. `50(4)` deployer disclosure
+   and Ofqual's principles both want to see.
+6. **Ship the evidence pack as the primary artefact:** rubric, inter-rater kappa, model kappa,
+   baseline kappa, the disagreement distribution, and the override log. 🔵 **The model is an
+   appendix.**
+
+**Regional argument, same build:** 🟢 **North America** — ESSA evidence tier, federal grant
+priorities. 🟢 **EMEA** — Ofqual principles, plus Art. `50(4)` disclosure already live and `50(2)`
+marking due `2026-12-02`. 🟢 **APAC** — exam-board scale and a public more permissive than EMEA's;
+🔴 use `Syhen`'s architecture and not `lingochamp/Multi-Scale-BERT-AES`, which is unlicensed.
+🟢 **LATAM** — `92%` student adoption against near-absent institutional policy; 🔴 **the language
+layer must be built, because no permissive Portuguese or Spanish scorer exists (`open-gaps 235`)
+— but kappa is language-independent, so steps `1`, `2`, `4`, `5` and `6` port unchanged.**
+
+🟡 **Honest scope: `8`–`12` weeks to a defended evidence pack on one subject and one rubric.** 🔴
+**Not a product. Anyone promising a general-purpose grader in that window is selling step `3`
+without steps `1`, `2` and `4`.**
+
+## P76 — The retention layer: put a teach-back protocol beside the LMS you already lost the argument about (Global; the components are protocol-shaped, so the regional variable is language, not law)
+
+🔵 **Why beside and not inside.** `verticals/solutions.md` has recorded for nine consecutive passes
+that the open LMS market is a closed set of seven and **none of them is permissive** — Open edX and
+Canvas `AGPL-3.0`, Moodle, ILIAS and Chamilo `GPL-3.0`, Sakai `ECL-2.0`, OpenEduCat `LGPL-3.0`. 🟢
+**So stop trying to win the LMS and win the layer above it**, where this pass filed two permissive
+rows.
+
+| Layer | Component | Grant | What it contributes |
+|---|---|---|---|
+| Protocol | [`push-based/ai-performance-coach`](https://github.com/push-based/ai-performance-coach) | 🟢 MIT | The seven-step **"read it → can teach it"** loop with a tutor that checks the learner's work at each step, over a PARA-organised vault |
+| Material | [`Deepnar/presentation-forge`](https://github.com/Deepnar/presentation-forge) | 🟢 MIT | Turns the learner's own teach-back into a deck, a graded report and a speaker script — **local-first**, so student work never leaves the institution |
+| Recall | [`NaEs25/studiamo`](https://github.com/NaEs25/studiamo) | 🔴 **AGPL-3.0** | Spaced-repetition active recall from PDFs, video and notes. 🔴 **On-premises or internal only — AGPL reaches a hosted student-facing service** |
+| Substrate | the incumbent LMS, via LTI 1.3 — [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) or the maintained [`talis/lti-1-3-php-library`](https://github.com/talis/lti-1-3-php-library) | 🟢 Apache-2.0 | 🟢 **The seam.** Launch the layer as an LTI tool; inherit the roster and the gradebook; copy neither |
+
+**Wiring:** 🟢 **LTI 1.3 launch from the incumbent LMS** (`talis` fork for maintenance, `1EdTech`
+for the spec reading) → **`ai-performance-coach` runs the teach-back loop on the learner's own
+notes** → **the artefact of the final step is generated by `presentation-forge`** as a deck plus a
+graded report, which is a submittable deliverable rather than a chat log → **`studiamo` schedules
+the recall** if and only if the deployment is on-premises → **grades return to the LMS gradebook
+over the same LTI connection.**
+
+🔵 **The property that makes this sellable: nothing in the chain requires the institution to
+migrate anything.** 🔴 **The property that makes it honest: `ai-performance-coach` is thirteen days
+old and `presentation-forge` has `0` forks.** 🟢 **Take the protocol shape and the local-first
+boundary; own the implementation.** 🟡 **`6`–`8` weeks to an LTI-launchable pilot in one faculty.**
+
 ## 🟢 Fifty-third pass (`p848`, 2026-11-16) — `2` recipes (`P103`, `P104`), built only from rows filed or measured this pass
 
 ## 🟢 `P103` — THE ARTICLE 50 MARKING RETROFIT: a two-week, statutory-deadline engagement that ends `2026-12-02` (fifty-third pass, `p848`, EMEA anchor)
