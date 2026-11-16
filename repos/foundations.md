@@ -1,8 +1,126 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-15
+updated: 2026-11-16
 ---
+
+## 🔴 Forty-second pass (`p837`, 2026-11-16) — **`3` rows RESTORED that this base has published as filed since `p597`, `4` rows new, and the mechanism of the loss is a file REWRITE rather than a bad ledger**
+
+🟢 **Foundations `179` → `186`: `3` restorations and `4` new rows. Every payload byte-read
+`2026-11-16` on the real default branch.**
+
+### 🔴 `D837-1` — the audit, and it is this base auditing its own remedy
+
+🔵 **`p677` (`2026-11-06`) exists because the `p597` promotion ledger had claimed six addresses
+were shelved while they were absent — one of them claimed twice, `25` days apart.** `p677`
+re-measured all six payloads first-hand, published them in a table in
+[`repos/trending.md`](trending.md) with a **`Filed to`** column, and declared the defect remedied.
+
+🔴 **All six are absent from the shelf that table names. Measured `2026-11-16` by `grep -ci` over
+each file:**
+
+| Address | `p677` said `Filed to` | Mentions on that shelf, measured `2026-11-16` |
+|---|---|--:|
+| `aureuserp/aureuserp` | `verticals/solutions.md` | 🔴 **`0`** |
+| `netless-io/flat` | `verticals/solutions.md` | 🔴 **`0`** |
+| `anubislms/anubis` | `repos/foundations.md` | 🔴 **`0`** |
+| `sunbird-ed/sunbirded-portal` | `verticals/solutions.md` | 🔴 **`0`** |
+| `oaknational/oak-open-curriculum-ecosystem` | `repos/foundations.md` | 🔴 **`0`** |
+| `open-edge-platform/education-ai-suite` | `repos/foundations.md` | 🔴 **`0`** |
+
+🔴 **`Sunbird-Ed/SunbirdEd-portal` is absent from EVERY curated shelf in this base** — `0` mentions
+of the string `sunbird` in `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`,
+`intel/market.md`, `intel/trends.md` and `compose/patterns.md`. 🟢 **It survives only in the two
+append-only trending files (`54` and `115` mentions), where `p514`, `p677`, `p801`-era censuses and
+`T126`'s licence census all discuss it at length.** 🔵 **That is the signature of the defect: the
+base's REASONING about an address is append-only and intact, while the SHELF ROW is not.**
+
+### 🟢 The mechanism, measured rather than supposed — and it is not the ledger
+
+🔵 **`p677`'s measurements were never wrong. All six payloads reproduce its published figures
+exactly, ten days later:**
+
+| Address | `p677` published | Re-read `2026-11-16` | Verdict |
+|---|---|---|---|
+| `aureuserp/aureuserp` | MIT `1,077 B` `c6dca3b0db5b` © *2010-2025 Webkul Software* | **identical** | 🟢 exact |
+| `netless-io/flat` | MIT `1,062 B` `8fa1566550df` © *2021 Agora* | **identical** | 🟢 exact |
+| `AnubisLMS/Anubis` | MIT `1,083 B` `e36740a2a510` © *2021 John McCann Cunniff Junior* | **identical** | 🟢 exact |
+| `Sunbird-Ed/SunbirdEd-portal` | MIT `1,072 B` `7dde06716f25` © *2018 Project Sunbird* | **identical** | 🟢 exact |
+| `oaknational/oak-open-curriculum-ecosystem` | MIT, file spelled **`LICENCE`**, `1,086 B` `02c5a8e84229` © *2024-present Oak National Academy* | **identical**, and `LICENCE` → `200` while `LICENSE` → `404` | 🟢 exact |
+| `open-edge-platform/education-ai-suite` | Apache-2.0 `11,351 B` `3f17cff4210f` | **identical** | 🟢 exact |
+
+🔴 **The loss is a REWRITE, and it is datable to a single day from this repository's own archive
+directory:**
+
+| File, distinct `github.com/owner/repo` slugs | `archive/2026-11-12-p787-pre-rewrite/` | `archive/2026-11-12-p793-pre-rewrite/` | Now (`2026-11-16`) |
+|---|--:|--:|--:|
+| `verticals/solutions.md` | **`508`** | 🔴 sunbird `0`, aureuserp `0` | **`162`** |
+| `repos/foundations.md` | **`943`** | — | **`185`** |
+| `agents/top.md` | **`1,073`** | — | **`493`** |
+
+🟢 **`sunbird` appears `4` times and `aureuserp` once in the `p787` snapshot of
+`verticals-solutions.md`, and `0` times in the `p793` snapshot of the same file.** 🔴 **So the rows
+were dropped in a rewrite of that file on `2026-11-12`, between `p787` and `p793`, and `p793`
+through `p836` — nine passes, four of them adding rows to that very file and publishing a running
+row count — did not notice.** 🔵 **Row counts kept rising (`140` → `145` → `147`) across the window
+in which a verified national-infrastructure row disappeared, because the counter counts
+ADDITIONS.** `T130`.
+
+🟢 **`p836`'s own five promotions were checked by the same method and all five are present**
+(`w3c/epubcheck`, `daisy/ace`, `liblouis/liblouis` here; `daisy/ace-gui`, `sukrutrao/Timetabler` in
+`verticals/solutions.md`). 🔵 **The recent passes are honest; the defect is historical and
+mechanical.**
+
+🟡 **`ACTION p837-A`, and it is a tool rather than a resolution.** Writing
+`ingest/promotion-audit.sh` (added this pass) makes the check one command: extract every
+`(address, Filed to)` pair published in the trending files and `grep` the named shelf for the
+address. 🔴 **Three occurrences of this defect have now been found by hand, each one by a pass that
+happened to look. The fourth should be found by the script.**
+
+🔵 **First run, `2026-11-16`: `88` published `(address → shelf)` routing pairs found, 🟢 `40` PASS,
+🔴 `48` ABSENT from the shelf named.** 🟡 **Read that `48` as an UPPER BOUND, and the reason is
+stated rather than buried: the destination column in these tables is sometimes literally
+`Filed to` (as in `p677`'s, which is how this pass's six were confirmed) and sometimes a ROUTING
+RECOMMENDATION for a later pass.** 🟢 **The script cannot tell those apart, so it reports pairs,
+not verdicts — and `48` unresolved routing claims is itself the measurement that justified
+writing it.** 🔴 **Named examples from the first run, each a real published pair:
+`mozilla/common-voice` → `repos/foundations.md`, `telekom/ki-in-schulen` → `repos/foundations.md`,
+`openedx/XBlock` → `compose/patterns.md`, `jupyterlite/jupyterlite` → `repos/foundations.md`,
+`livekit/agents` → `repos/foundations.md`, `lplnufpi/essay-br` → `repos/foundations.md`,
+`insolitos/IA_para_aprender` → `agents/top.md`. 🟡 **Triaging those `48` into filed-or-routed is
+`ACTION p838-A` and is NOT claimed as done here.**
+
+🟢 **Re-run after this pass's `20` rows were written: `46` PASS / `42` ABSENT — a movement of
+exactly `6`, which is this pass's restoration set and nothing else.** 🔵 **The script agrees with
+the hand audit to the row, which is the only reason it is being trusted as the standing check.**
+
+### 🟢 `3` rows RESTORED to this file
+
+| Repo | Licence, re-read `2026-11-16` | ★ / forks | Default ref · pushed | Why it is a FOUNDATION and not a platform |
+|---|---|---|---|---|
+| https://github.com/AnubisLMS/Anubis | 🟢 **MIT** — `main/LICENSE`, `1,083 B`, `sha256:e36740a2a510…`, © *2021 John McCann Cunniff Junior* | `383★` / `54` | `main` · `2026-09-15` | 🟢 **An autograding/IDE-in-the-browser LMS built for a real CS course at scale**, Kubernetes-native. 🔵 **It is the HARNESS half of `P84`:** `drop-project` grades a submitted project, Anubis provisions the environment the student works in and collects telemetry while they do. 🔴 **Canonical casing is `AnubisLMS/Anubis`; this base published `anubislms/anubis`** — harmless to GitHub, which is case-insensitive on owner/repo, and a trap for any script that string-matches a shelf against an API response. |
+| https://github.com/oaknational/oak-open-curriculum-ecosystem | 🟢 **MIT** — 🔴 **`main/LICENCE`** (British spelling; `LICENSE` → `404`), `1,086 B`, `sha256:02c5a8e84229…`, © *2024-present Oak National Academy* | `9★` / `5` | `main` · **`2026-11-12`** | 🟢 **The authoritative English national curriculum, with an API, SDK and MCP server, under MIT.** 🔵 **Every curriculum-grounding pattern this base publishes has to answer "where does the authoritative curriculum come from, and may we ship it?" — for England, this is the one address.** 🟢 **Pushed four days before this pass: it is maintained, which is more than the `9★` suggests.** 🔴 **A probe that tries only `LICENSE` grades this repository unlicensed — the `p836` extension-set rule, second instance.** |
+| https://github.com/open-edge-platform/education-ai-suite | 🟢 **Apache-2.0** — `main/LICENSE`, `11,351 B`, `sha256:3f17cff4210f…` | `2★` / `16` | `main` · **`2026-11-15`** | 🟢 **Classroom multimodal analytics WITHOUT EGRESS**, on OpenVINO across CPU / iGPU / NPU: Smart Classroom (multi-camera pose, student re-identification, speaker diarisation, ASR, summarisation, session reports) and a voice-first Teaching Assistant, with multimodal RAG. 🟢 **Its benchmarking harness is the part with no permissive equivalent anywhere in this base — it answers "which hardware do we quote?", the question that prices an on-premise deployment.** 🔴 **Its README says reference and demonstration, explicitly NOT production. Adopt-and-harden, and the hardening is the engagement.** 🔵 `16` forks against `2★` — a fork-dominant shape, like Sunbird's `7.8:1`. |
+
+### 🟢 `4` NEW rows
+
+| Repo | Licence, byte-read `2026-11-16` | ★ / forks | Default ref · pushed | What it is |
+|---|---|---|---|---|
+| https://github.com/hmrc/apprenticeship-levy | 🟢 **Apache-2.0** — `main/LICENSE`, **`11,357 B`**, `sha256:b40930bbcf80…` | `2★` / `6` | `main` · `2026-11-12` (created `2016-05-17`) | 🟢 **The UK government's Apprenticeship Levy API, published by HMRC itself, in Scala, still being pushed to after ten years.** 🔵 **This base's vocational gap was declared and re-declared as a SOFTWARE nil; what was missing was the FUNDING RAIL.** An apprenticeship system's hard integration is not an LMS, it is the levy account that pays for the training — and in the UK that interface is open, documented and Apache-licensed. 🔴 **`2★` is irrelevant here: this is a government API client/spec, not a product.** 🟢 **A different UK authority from the `DFE-Digital` estate this base censused at `829` repositories / `62.2%` licensed — the census has been measuring the wrong department for the vocational question.** `P86`. |
+| https://github.com/Tue-StudyOS/tue-api-wrapper | 🟢 **Apache-2.0** — `main/LICENSE`, **`10,762 B`**, `sha256:61335d750ed8…` | `14★` / `1` | `main` · `2026-11-15` (created `2026-03-09`) | 🟢 **SDKs, native clients and apps for the University of Tübingen's study systems — `Alma`, `ILIAS` and `Moodle` — in one wrapper.** 🔵 **The integration shape this base's "build once, mount everywhere" section argues for, built by students against a real German university's actual three-system estate.** 🟢 **Its value is the SEAM INVENTORY: it is a worked map of which endpoints a European university actually exposes, which is the first week of any such engagement.** 🔴 **`10,762 B` — the payload is `595 B` SHORTER than the stock Apache text, so it is a modified or truncated copy; the grant is Apache-2.0 on its face and the deviation is recorded rather than smoothed over.** |
+| https://github.com/amitshekhariitbhu/ai-engineering-course | 🟢 **Apache-2.0** — `main/LICENSE`, `11,357 B`, `sha256:c71d239df917…` (stock) | **`737★`** / `150` | `main` · `2026-11-15` (created `2026-09-23`) | 🟢 **The most-starred row in this pass: a free, complete AI-engineering CURRICULUM, Apache-2.0, `737★` and `150` forks in under two months.** 🔵 **Filed beside `microsoft/AI-For-Beginners` and `microsoft/ai-agents-for-beginners` for the same reason `p835` filed the first: a curriculum a studio may legally re-brand, re-sequence and ship inside a client's L&D programme is a different asset from a course a client must link to.** 🟡 **Markdown, single author (India) — the maintenance risk is one person, and the fork count is the mitigation.** |
+| https://github.com/MARKUS-LEARNING/ROBOTICS-for-PEOPLE | 🟢 **MIT** — `main/LICENSE`, `1,072 B`, `sha256:1b99886264b5…`, © *2025 MARKUS_LEARNING* | `20★` / `2` | `main` · **`2026-11-16`** | 🟡 **An open robotics knowledge base and project library with a structured curriculum across skill levels, MIT.** 🟢 **Filed as STEM-curriculum substrate, the thinnest tier on this shelf:** this base is rich in LMS, SIS and tutor infrastructure and poor in subject-matter content a studio may relicense. 🔴 **`20★`, pushed the day of this pass; treat as content to lift, not a system to deploy.** |
+
+### 🔵 Instrument note — `T131`, and it corrects this file's own notation
+
+🔴 **Two Apache-2.0 payloads read this pass are EXACTLY `11,357 B` with DIFFERENT `sha256`:**
+`hmrc/apprenticeship-levy` (`b40930bbcf80`) and `amitshekhariitbhu/ai-engineering-course`
+(`c71d239df917`). 🟢 **Diffed byte for byte, the entire difference is two lines in the appendix
+boilerplate — `{}` versus `[]` around the placeholder fields.** 🔵 **So on an Apache row the digest
+distinguishes VINTAGES OF THE STOCK TEXT, not grantors — and byte-count is not an identity either,
+since two different payloads share one.** 🟢 **`p833`'s `T127` said to read the `NOTICE` for the
+holder; this adds that a digest MISMATCH between two Apache rows is not evidence of anything about
+the grant.** `T131`.
 
 ## 🟢 Forty-first pass (`p836`, 2026-11-15) — **`3` rows: the ACCESSIBILITY-CONFORMANCE substrate, which `40` passes never filed while this base's own intel tracked the law**
 

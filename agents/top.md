@@ -1,8 +1,81 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-15
+updated: 2026-11-16
 ---
+
+## Forty-second pass (`p837`, 2026-11-16) — **the agent shelf grows again after four nil passes, and it grew because the CHANNEL changed, not because the supply did**
+
+🟢 **`11` build-safe agent rows added (`388` → `399`). Every grant byte-read on the REAL default
+branch on `2026-11-16`, with payload size and `sha256₁₂` recorded. Stars, forks and `pushed_at`
+measured the same day from the repository index.**
+
+🔴 **`p835` and `p836` each reported `0` new agents and each gave a reason — saturation, then
+unlicensable local-language supply. 🟢 Both reasons were true of the channel they used, and
+neither was true of the sector.** 🔵 **This pass ran `search/repositories` with a `license:`
+qualifier, a `pushed:` window and `sort=updated` — the GitHub repository INDEX rather than a
+web-search keyword leg — and the shelf moved immediately.** See `T128`.
+
+🔵 **Instrument conditions, measured this pass and differing from `p835`/`p836` in one material
+respect.** `curl` to `github.com` HTML and `api.github.com` remains `403` through the session's
+agent proxy. 🟢 **`raw.githubusercontent.com` returns `200`, so the byte-read-plus-`sha256`
+instrument is intact.** 🟢 **`gh api -X GET search/repositories` is LIVE and richer than this base
+has been treating it:** a single query returns `stargazers_count`, `forks_count`,
+`license.spdx_id`, `default_branch`, `pushed_at`, `created_at` and `language`. 🔴 **Controls run in
+both directions:** `repo:HKUDS/DeepTutor` → `1` hit (`59,484★`, `Apache-2.0`, default `main`,
+pushed `2026-11-15`), and an invented slug → `HTTP 422`. 🔴 **`422` is also what a real-but-unknown
+slug returns, so `422` means "not resolvable", never "not licensed".**
+
+### 🟢 `11` new agent rows — byte-read `2026-11-16` on the real default branch
+
+| Agent | Repo | Licence, as measured | ★ / forks | Default ref · pushed | Region | What it actually does, and the posture |
+|---|---|---|---|---|---|---|
+| **TutorMoments** | https://github.com/allenai/tutormoments | 🟢 **Apache-2.0** — `main/LICENSE`, **`11,377 B`**, `sha256:b2c7059a9ab4…` | `28★` / `6` | `main` · `2026-11-14` (created `2025-11-15`) | Global (US institute) | 🟢 **The instrument this base has had no row for: a benchmark that measures how well a model TUTORS.** From the Allen Institute for AI. Runs a model-under-test against a **simulated student** on frozen, **expert-teacher-annotated "moments"** cut from real tutoring transcripts, then scores the continuation on **Appropriate Scaffolding**, **Appropriate Rigor**, **Avoids Over-Scaffolding** and an **Action Taxonomy** against human tutor moves. 🔴 **This base holds hundreds of tutor agents and, until this row, nothing that could tell a client whether one of them teaches well.** 🟢 Ships its own prompts and `default_config.yaml` inside the package; dataset defaults to the released Hugging Face set. Recipe: `P83`. |
+| **Drop Project** | https://github.com/drop-project-edu/drop-project | 🟢 **Apache-2.0** — `master/LICENSE.txt`, **`11,357 B`**, `sha256:c71d239df917…` (stock text, no holder in payload — `T131`) | `33★` / `34` | `master` · `2026-11-11` (created `2019-03-04`) | EMEA — Portugal (ISCTE-IUL lineage) | 🟢 **A CONTINUOUS AUTO-GRADER, and it is the answer to `T96`'s grading gap that seven passes of agent queries never found, because it is not an agent.** Students submit a project; it checks folder structure and mandatory files, that it **compiles**, that it passes **the student's own tests**, a **minimum coverage** threshold, the **teacher's tests**, the teacher's **coding guidelines**, and **performance on large datasets** — then produces a report both the student and the teacher read. Kotlin/JVM, Maven Invoker, ships a `ghcr` container. 🔴 **Constraints stated rather than glossed: Java/Kotlin projects only; JDK 17–23, because Java 24+ removed the SecurityManager (JEP 486) and `-Djava.security.manager=allow` is required on 18–23.** 🟢 **The agent surface is the FEEDBACK NARRATIVE, never the grade** — `P84`. |
+| **e-dnevnik-bot** | https://github.com/dkorunic/e-dnevnik-bot | 🟢 **MIT** — `main/LICENSE`, **`1,076 B`**, `sha256:d9bdf42fd7a5…`, © *2022 Dinko Korunic* | `70★` / `10` | `main` · `2026-11-15` (created `2022-03-14`) | EMEA — Croatia | 🟢 **An agent that reads a NATIONAL system of record and pushes to the family, and the most-starred row in this pass's set.** Grade and exam alerting against Croatia's **e-Dnevnik** national e-gradebook, in Go, multi-channel. 🔵 **This is the agent surface `p826`'s NATIONAL SCHOOL SYSTEM-OF-RECORD tier was filed without:** that tier named the platforms a European family logs into and had no row that talks to one. 🔴 **It is an unofficial integration against a state system — scraping posture, rate limits and terms are an engagement question, not a library question.** |
+| **AI123 education-agent** | https://github.com/AI123-cmd/education-agent | 🟢 **Apache-2.0** — **`master/LICENSE`**, **`11,558 B`**, `sha256:1eb85fc97224…` | `1★` / `0` | 🔴 **`master`** · `2026-10-14` | APAC — China | 🟡 **A multi-agent personalised-learning system for HIGHER education on LangChain + LangGraph, organised explicitly around 认知学徒制 — COGNITIVE APPRENTICESHIP.** 🟢 **Filed for the pedagogy, not the traction:** it is the only row on this shelf whose orchestration is named after a learning theory rather than a product metaphor, and cognitive apprenticeship (model → coach → scaffold → fade) is a *sequence a graph can actually encode*. 🔴 **`1★`, one month old, single author — a reference design to read, not a dependency to pin.** 🔴 **This row cost a false negative first:** probed on `main` it returned `NO-GRANT-AT-ROOT`; its default ref is `master`. Second live reproduction of the `T112`/`p834` branch-axis defect in this pass. |
+| **NASWA apprenticeship matcher** | https://github.com/NASWA-OpenUI/naswa-ai-apprenticeship-matcher | 🟢 **Apache-2.0** — `main/LICENSE.md`, **`11,382 B`**, `sha256:2d915fb4a6ea…` | `2★` / `0` | `main` · `2026-11-10` (created `2026-06-01`) | North America — US | 🟢 **A US PUBLIC-SECTOR authority's own apprenticeship-matching POC, under Apache-2.0.** `NASWA-OpenUI` is the **National Association of State Workforce Agencies** open-UI programme — the body whose members run state unemployment-insurance and workforce systems. 🔵 **Against this base's authority-estate census (`T126`), North America has been represented by districts and universities and not once by a workforce authority.** 🔴 **Self-described "Jobs app POC", `2★` — the value is the DATA MODEL and the institutional provenance, not the code.** `P86`. |
+| **Google-AI-Classroom** | https://github.com/wongcyrus/Google-AI-Classroom | 🟢 **MIT** — `main/LICENSE`, **`1,062 B`**, `sha256:b79982c14bb1…` | `1★` / `1` | `main` · **`2026-11-16`** (created `2025-09-14`) | APAC — Hong Kong | 🟡 **Edge-to-cloud multimodal classroom agent, including exam invigilation.** 🟢 **Filed as the permissive counterpart to `open-edge-platform/education-ai-suite`** (Apache-2.0, Intel/OpenVINO, restored to `repos/foundations.md` this pass): the same classroom-sensing job, one on an on-premise inference stack and one edge-to-cloud. **An engagement that must choose a privacy posture now has both shapes on these shelves instead of one.** 🔴 **`1★`, single author.** 🔴 **Classroom sensing of minors is the highest-consent surface in this base — in EMEA it is an Annex III use, and the EU date is `2027-12-02` (`intel/market.md` this pass), not a reason to skip the DPIA.** |
+| **Seren (IELTS tutor)** | https://github.com/Mahmud-Mahi/Seren--Your-IELTS-Tutor | 🟢 **MIT** — **`master/LICENSE`**, **`1,068 B`**, `sha256:d97b496ed043…`, © *2026 Mahmud Mahi* | `11★` / `1` | 🔴 **`master`** · `2026-11-13` (created `2026-09-04`) | APAC — Bangladesh | 🟢 **A speaking coach scored against a PUBLISHED RUBRIC — CEFR — rather than against model preference.** AI IELTS speaking practice with CEFR evaluation, diagnostic tests and personalised lessons, in TypeScript. 🔵 **The rubric is the reason this is filed:** high-stakes language assessment is the one education task where the scoring scale is public, externally defined and audited, so the agent's output is checkable by someone other than its author. 🔴 **`11★`, two months old.** 🔴 **Third `main`-vs-`master` false negative avoided this pass by resolving the ref first.** |
+| **MelodyMate** | https://github.com/lorenaedwin08-hub/melodymate | 🟢 **MIT** — `main/LICENSE`, **`1,074 B`**, `sha256:0d46a2c87d7e…`, © *2026* | `47★` / `5` | `main` · `2026-11-14` (created **`2026-11-05`**) | Global | 🟢 **Accessibility-FIRST, not accessibility-retrofitted: a voice-guided music-learning app built for blind and visually impaired learners.** 🔵 **It belongs beside `p836`'s accessibility-conformance tier for the reason that tier exists:** `daisy/ace` and `w3c/epubcheck` tell you whether a MATERIAL conforms; this is the rarer thing, an application whose primary interaction was designed for a non-visual learner instead of being audited into tolerance afterwards. 🟡 **`47★` in eleven days is this set's fastest accrual — filed on shape and freshness, and sold as an early bet.** |
+| **Bewerbär (Hack-Apertus)** | https://github.com/iatee/Hack-Apertus | 🟢 **Apache-2.0** — `main/LICENSE`, **`11,340 B`**, `sha256:3266fb7d3671…` | `0★` / `2` | `main` · `2026-10-16` (created `2026-10-05`) | EMEA — Switzerland | 🟡 **An AI interview coach that helps Swiss teens practise APPRENTICESHIP interviews, built on Apertus — Switzerland's sovereign open LLM.** 🟢 **Filed for the stack, which is the one thing this shelf could not previously demonstrate: a vocational agent running end-to-end on a European sovereign model rather than a US API.** 🔴 **`0★`, a hackathon artefact, `2` forks and no release — this is a PROOF THAT THE WIRING EXISTS, cited as such in `P86`, and nothing more.** |
+| **ezhuthu** | https://github.com/Vivek0712/ezhuthu | 🟢 **Apache-2.0** — `main/LICENSE`, **`11,358 B`**, `sha256:cfc7749b96f6…` | `3★` / `0` | `main` · `2026-11-03` (created `2026-11-01`) | APAC — India (Tamil) | 🟡 **An apprenticeship tool for TAMIL EPIGRAPHY — read, transcribe, interpret inscriptions — built on Strands Agents.** 🟢 **Filed because of what it is evidence of, stated plainly: the long tail of education AI is DOMAIN APPRENTICESHIP in a low-resource language, and it is where a studio's language-and-heritage work actually lands in India.** 🔴 **`3★`, two weeks old.** |
+| **Scaler exam-guard** | https://github.com/Scaler-Opensource/exam-guard | 🟢 **Apache-2.0** — `main/LICENSE`, **`11,357 B`**, `sha256:c71d239df917…` (stock) | `3★` / `1` | `main` · `2026-10-13` (created `2024-09-09`) | APAC — India | 🟢 **A COMPANY-BACKED permissive proctoring tool, and the only one in a population of `478` that is not a personal project.** Published by Scaler's open-source org. 🔵 **It is filed as the credible entry point to the proctoring population `T128` uncovered — see that trend for why this axis was declared nil for `35` passes and was never nil.** 🔴 **`3★` and `1` fork after two years: adoption is not the argument. Provenance is.** 🔴 **Proctoring is the single most consent-sensitive agent class in education — in the EU it is an Annex III high-risk use and nothing about a permissive licence changes that.** |
+
+### 🔴 Found and NOT filed, with the reason per row
+
+- 🔴 **`openedx/mockprock` — Apache-2.0 per the repository index, and `NO-GRANT-AT-ROOT` in the
+  bytes.** Probed `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `LICENSE.rst`, `NOTICE`, `COPYING` and
+  `setup.py` across `master` and `main`: **all `404`.** `git ls-remote --heads` resolves (the
+  repository is live; heads include `dependabot/*` and feature branches). 🟢 **Recorded as
+  unverifiable-at-source, exactly as `p833` recorded `formalms/formalms`, and NOT counted as
+  build-safe.** 🔵 **This is the same defect in the opposite direction from `p836`'s DeepTutor
+  correction: there an aggregator understated the obligation; here GitHub's own licence field
+  asserts a grant whose payload is not in the tree.** The useful part of this repository is
+  anyway not its code but the **proctoring integration CONTRACT** it mocks — recorded in
+  `verticals/solutions.md` this pass for that reason only.
+- 🔴 **`Drone9/mereos`, `vishwa-10147/ExamSentiinel`, `vijaysingh0021/ExamGuard`,
+  `TusharS230/exam-proctor-system`, `gurleenkamboj990/EXAM-IQ`,
+  `architmahajann/EduCode-...-Proctoring-Platform`, `AshrafEqbal/Proctoring-System`,
+  `theshauryajha/exam-proctoring`** — all live, all at `0`–`2★`, each a single-author project with
+  no release. 🟢 **Not filed, and the population is reported as a measurement in `T128`/`T129`
+  rather than padded into rows here.** `0★` is not disqualifying on this shelf — `p836` filed
+  `0★` rows on freshness and gap-fit — but **nine interchangeable `0★` proctoring projects are a
+  population, not nine findings.**
+- 🔴 **`sethuiyer/tensor-to-tenant`, `yugh88/raahi`, `vedantsur09/Kinvia`,
+  `mrinmoyChakraborty-mrinox/kaushal-app`, `palakrai573/Jaagruk-app`,
+  `adhalakhadhanesh-ai/KISS-Vocational-Training-Management-Portal`,
+  `Coding7hub/...Berufearchiv`** — the vocational population. 🟡 **All `0`–`2★`; the two with an
+  institutional anchor (`hmrc/apprenticeship-levy`, `NASWA-OpenUI/...`) are filed, the rest are
+  reported as population in `T129`.**
+- 🔴 **Keyword collisions, recorded so the next pass does not re-triage them:** a `grading` /
+  `grade` leg returns **colour grading** (`harborjoninrectify/resolve-color-lab`,
+  `seth38-taylor/davinci-fusion-desktop`, `azuremaple1997/coreldraw-desktop`) and
+  **"production-grade"** in a description; a `lesson` leg returns **"lessons learned"** blogs; a
+  `tutor` leg returns **`*/tutorials`** repositories from `rabbitmq`, `IBM`, `KhronosGroup`,
+  `deepset-ai`, `OpenVidu`, `kornia`, `lsst` and `sap-tutorials`. 🟢 **`6,902★` of RabbitMQ
+  tutorials is the loudest false positive in the education query space, and it is loud in every
+  channel.**
 
 ## Forty-first pass (`p836`, 2026-11-15) — **`0` agent rows added for a SECOND pass, and this time the reason is a different one**
 

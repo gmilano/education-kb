@@ -1,8 +1,250 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-15
+updated: 2026-11-16
 ---
+
+## 🟢 `P83` — PROVE THE TUTOR BEFORE YOU SHIP IT: a pedagogical acceptance gate in CI (forty-second pass, `p837`)
+
+🔵 **The engagement this answers.** A client — a ministry, a university system, a publisher, a
+workforce programme — wants an AI tutor. 🔴 **What they will be asked for at renewal, by a
+procurement office or an evaluator, is not a demo: it is evidence that the thing teaches.**
+`intel/market.md` this pass: **only `45%` of the most-used education tools have research meeting an
+ESSA evidence tier**; **Ofqual has published principles for AI in high-stakes marking**; the OECD's
+position is that AI helps only when pedagogy stays in control. 🟢 **`P83` makes "it teaches" a
+BUILD ARTEFACT produced on every commit, instead of a claim defended after delivery.**
+
+**The wiring — every component a row on these shelves with a byte-verified grant:**
+
+```
+  [ Tutor under test ]
+  HKUDS/DeepTutor (Apache-2.0)  — or the client's own agent, or any tutor row on agents/top.md
+            │  exposed behind one provider-agnostic chat endpoint
+            ▼
+  [ ACCEPTANCE GATE ]  allenai/tutormoments (Apache-2.0, 11,377 B, sha256:b2c7059a9ab4…)
+     tutormoments run --tutors <model-or-endpoint> --modes plain scaffolding_rigor --sample N
+            │  simulated student × frozen expert-annotated moments
+            ├── Appropriate Scaffolding        ── did it scaffold WHERE a teacher would?
+            ├── Appropriate Rigor              ── did it raise cognitive demand WHERE a teacher would?
+            ├── Avoids Over-Scaffolding        ── did it answer instead of teach?   ◄── the one that matters
+            └── Action Taxonomy               ── how do its moves differ from a human tutor's?
+            ▼
+  [ GATE DECISION in CI ]  fail the build on regression in any of the four, not on an average
+            ▼
+  [ EVIDENCE ARTEFACT ]  per-release scorecard, retained → the document procurement asks for
+            │
+            └─► served to the institution through the LMS it already runs:
+                  Moodle (GPL-3.0) / Open edX (AGPL-3.0) via LTI 1.3  — see the licence note below
+```
+
+**Build order, and the week it belongs in:**
+
+1. **Week 1 — endpoint, not integration.** Put the tutor behind one chat endpoint. 🔴 **Do not
+   start with the LMS.** TutorMoments drives a model-under-test; anything that needs a logged-in
+   student is out of scope for the gate.
+2. **Week 1–2 — baseline, and publish it internally before tuning anything.** Run the harness over
+   the released dataset at `--sample 10`, then full. 🟢 **Record the four metrics for a frontier
+   model, for the client's chosen model, and for the client's CURRENT product if one exists.** 🔵
+   **The third number is the one that sells the engagement.**
+3. **Week 2–4 — tune against the gate, and watch the right metric.** 🔴 **Appropriate Scaffolding
+   and Avoids Over-Scaffolding move in OPPOSITE directions under naive prompt tuning:** telling a
+   model to be more helpful raises one and destroys the other. 🟢 **Report the pair, never a
+   composite score.**
+4. **Week 4–6 — wire the gate into CI** so a prompt change that makes the tutor more agreeable and
+   less pedagogical fails the build. 🟢 **This is the deliverable the client keeps after the
+   studio leaves.**
+5. **Week 6–8 — the LMS leg**, if in scope: mount through **LTI 1.3**, not a bespoke plugin per
+   platform (the standards section of `verticals/solutions.md`).
+
+🔴 **Licence consequence, stated at PROPOSAL time rather than at delivery.** TutorMoments and
+DeepTutor are Apache-2.0 — a studio may fork, re-skin and ship both. 🔴 **Moodle is GPL-3.0 and
+Open edX is AGPL-3.0, and AGPL's network clause reaches a HOSTED derivative: a client-facing Open
+edX fork delivered as a service must offer its source to its users.** 🟢 **Keeping the tutor and
+the gate OUTSIDE the LMS and mounting over LTI 1.3 keeps the studio's work on the permissive side
+of that line. That is an architectural reason, not a legal preference.**
+
+🔴 **The honest limitation, and it is a priced deliverable rather than a caveat.** The moment set is
+cut from **English-language** transcripts. 🟢 **The harness transfers to a LATAM or EMEA
+engagement; the DATASET does not.** 🔵 **Building a Spanish- or Portuguese-language moment set with
+the client's own expert teachers is `6`–`8` weeks of work, produces an asset no competitor has,
+and `T132` records that no open tutoring benchmark exists in either language.**
+
+**Effort:** `6`–`8` weeks for the gate and baseline; `+6`–`8` for a non-English moment set.
+
+
+## 🟢 `P84` — AUTO-GRADING WHERE THE GRADE IS DETERMINISTIC AND ONLY THE FEEDBACK IS GENERATED (forty-second pass, `p837`)
+
+🔵 **The engagement this answers, and it is `T96`'s gap closed with the right architecture.** A
+university department, a bootcamp or a national programme marks thousands of programming
+submissions. 🔴 **The pitch they receive is "an LLM grades it". That pitch fails the first appeal:
+a model cannot produce a defensible mark, and in England Ofqual has now published principles for AI
+use in high-stakes marking.** 🟢 **`P84` puts a DETERMINISTIC grader of record underneath and uses
+the model only for the thing models are good at — explaining the result to the student.**
+
+**The wiring:**
+
+```
+  [ STUDENT SUBMISSION ]  via the LMS the institution already runs, over LTI 1.3
+            ▼
+  [ GRADER OF RECORD — deterministic, no model in the loop ]
+  drop-project-edu/drop-project (Apache-2.0, 11,357 B, sha256:c71d239df917…, Kotlin/JVM, ghcr image)
+    ├── structure + mandatory files present?
+    ├── does it COMPILE?
+    ├── does it pass the STUDENT's own tests?
+    ├── minimum COVERAGE reached?
+    ├── does it pass the TEACHER's tests?        ◄── the mark comes from here
+    ├── does it meet the teacher's CODING GUIDELINES?
+    └── does it PERFORM? (large-dataset timings)
+            │   → machine-readable report, student-visible and teacher-visible
+            ▼
+  [ ENVIRONMENT + TELEMETRY ]  AnubisLMS/Anubis (MIT, 1,083 B, sha256:e36740a2a510…)
+     browser IDE + Kubernetes-provisioned per-student environment; collects the WORK, not just the result
+            ▼
+  [ FEEDBACK LAYER — the only generative component ]
+     LLM reads the deterministic report + the diff and writes the NARRATIVE:
+       what failed, which concept it maps to, what to read, what to try next
+            ▼
+  [ INVIGILATION, only where the assessment is high-stakes ]
+     shaheeranser/exam-proctor (Apache-2.0) — LTI 1.3, runs inside Moodle
+     contract reference: openedx/mockprock  🔴 licence field says Apache-2.0, NO grant payload at root — read it, do not ship it
+            ▼
+  [ GRADEBOOK ]  back over LTI 1.3 Assignment & Grade Services
+```
+
+**The rules that make this defensible, and each one is a rule because its violation is a known
+failure:**
+
+1. 🔴 **The model NEVER produces or adjusts the mark.** The mark is "passed the teacher's tests",
+   which is reproducible, appealable and explainable to a registrar. 🟢 **The model produces prose
+   about a mark that already exists.**
+2. 🟢 **Every generated sentence must cite a line of the deterministic report.** An uncited claim
+   in feedback is a hallucination with a student's grade attached to it.
+3. 🔴 **Scope limits, stated because they bound the sale:** Drop Project handles **Java 8+ and
+   Kotlin only**, needs a **JDK 17–23** (Java 24+ removed the SecurityManager, JEP 486; `18`–`23`
+   require `-Djava.security.manager=allow`), and needs a relational database. 🟡 **Other languages
+   mean another runner behind the same contract — that is the extension point, and it is where the
+   build hours go.**
+4. 🟢 **Teacher tests are the real artefact.** The engagement's hard work is helping faculty write
+   the test suites that encode their rubric. 🔵 **Budget for that explicitly: it is pedagogical
+   work billed as engineering, and it is the part that cannot be bought.**
+5. 🔴 **Proctoring is opt-in and jurisdictional.** In the EU it is an Annex III high-risk use with
+   obligations landing `2027-12-02`, and Article 50 transparency duties apply ALREADY
+   (`intel/market.md` this pass). 🟢 **Ship `P84` without the invigilation leg by default.**
+
+**Effort:** `8`–`10` weeks for grader + feedback + LTI mount on one language stack; `+3`–`4` per
+additional language runner; `+4` for the invigilation leg where it is lawful and wanted.
+
+
+## 🟢 `P85` — THE APAC NATIONAL-STACK ENGAGEMENT: extend India's incumbent instead of proposing a replacement (forty-second pass, `p837`)
+
+🔵 **The engagement this answers.** A state board, a national programme or an NGO in India wants AI
+on its education platform. 🔴 **The platform already exists, it is deployed to all `36` states and
+union territories in `30+` languages, and proposing to replace it loses the engagement.** 🟢 **The
+Sunbird estate is MIT almost throughout — `T126` measures it at `196/212 = 92.5%` permissively
+licensed, the highest of any education authority in this base — so a studio may legally fork,
+extend and ship it. That is the whole opportunity.**
+
+**The stack, every component byte-verified and restored to these shelves this pass:**
+
+```
+  [ PORTAL ]      Sunbird-Ed/SunbirdEd-portal        MIT  1,072 B  sha256:7dde06716f25…   41★/318f  master  pushed 2026-02-21
+  [ CONTENT ]     Sunbird-Knowlg/knowledge-platform  MIT  1,072 B  sha256:fd3adcd57676…   17★/182f  master  pushed 2026-11-13
+                                                     © 2019 Project Sunbird — content, taxonomy, DIAL codes
+  [ IDENTITY ]    Sunbird-Lern/userorg-service       MIT  1,072 B  sha256:7dde06716f25…   31★/162f  master  pushed 2026-03-02
+                                                     © 2018 Project Sunbird — channel isolation = 36 boards, one deployment
+  [ ASSESSMENT ]  Sunbird-inQuiry/editor-v2          Apache-2.0  11,357 B  c71d239df917…   0★/4f   main  pushed 2026-11-11
+                  Sunbird-inQuiry/player-v2          Apache-2.0  11,357 B  c71d239df917…   0★/5f   main  pushed 2026-10-06
+                                                     QuML authoring + delivery — the only end-to-end assessment
+                                                     chain this base holds under permissive grants only
+            ▼  the agent layer the studio actually builds and owns
+  ├── CONTENT TAGGING agent        → classify incoming material against the NATIONAL taxonomy, not a generic one
+  ├── DIAL-CODE resolution agent   → textbook QR → the right digital artefact in the right language
+  ├── LANGUAGE ADAPTATION agent    → one lesson, 30+ languages, reviewed by a human per language
+  ├── TEACHER ASSISTANT agent      → aligned to the board's own curriculum, grounded in Knowlg
+  └── ENROLMENT TRIAGE agent       → over userorg-service's channel model
+            ▼
+  [ EVALUATION ]  P83's gate, with a Hindi/regional-language moment set built with the board's teachers
+```
+
+🔴 **Five delivery facts that decide whether this engagement succeeds, all measured on these
+shelves rather than assumed:**
+
+1. 🔴 **There is no such thing as a "Sunbird version". The estate moves at five different
+   speeds**, all measured `2026-11-16`: `knowledge-platform` pushed **`2026-11-13`**,
+   `inQuiry/editor-v2` **`2026-11-11`**, `inQuiry/player-v2` **`2026-10-06`**,
+   `userorg-service` **`2026-03-02`**, the portal **`2026-02-21`**. 🟢 **Pin per repository and
+   state the date per repository.** 🔵 **The content and assessment layers are live; the portal and
+   identity layers are the stale ones, which is the opposite of what a reader would assume from
+   the portal being the famous repository.**
+2. 🔴 **Default refs are `master`, not `main`,** across the estate. A clone script that assumes
+   `main` gets nothing. 🔵 **This base reproduced that failure twice in one pass on other
+   repositories — it is the most common self-inflicted error here.**
+3. 🔴 **`SunbirdEd-mobile-app` release branches `release-2.6.0` and `release-2.7.0` carry NO grant
+   at `25` root paths, while the project is MIT on `main`.** 🟢 **An engagement that pins an old
+   release — which India engagements do — pins a branch with no licence file on it. Resolve the
+   grant at the ref you ship, and get it in writing if you ship a pinned release.**
+4. 🟡 **The repositories are large — the Sunbird tree was measured at `334 MB`.** Shallow-clone,
+   and budget CI accordingly.
+5. 🔵 **The fork-to-star ratio is the signal and it holds across the whole estate, not just the
+   portal: `41★`/`318` forks = `7.8:1`, `knowledge-platform` `17★`/`182` = `10.7:1`,
+   `userorg-service` `31★`/`162` = `5.2:1`, and the two inQuiry repositories have `4` and `5`
+   forks against `0★`.** 🟢 **Nobody forks a backend `182` times to read it — these are deployments.
+   Star-ranked discovery cannot see any of it, which is exactly why a competitor pitching from a
+   trending list will propose building what the client already runs.**
+
+**Effort:** `4`–`6` weeks to stand up and read the estate; `10`–`14` weeks for two agent surfaces in
+production against a live state deployment.
+
+
+## 🟡 `P86` — THE VOCATIONAL ENGAGEMENT, BUILT FROM THE FUNDING RAIL BECAUSE THE SOFTWARE TIER IS EMPTY (forty-second pass, `p837`)
+
+🔴 **This recipe is published with its thinness on the label.** This base declared the vocational
+platform tier a measured gap in five languages (`p829`, `T114`, `T118`); `T128` found the
+POPULATION is real (`58` MIT + `39` Apache repositories) and `T129` found that **almost none of it
+is shippable** — `0`–`2★`, single-author, no releases. 🟢 **So `P86` does not pretend there is a
+platform to adopt. It builds from the two things that ARE institutional: the funding rail and the
+matching problem.**
+
+```
+  [ FUNDING / ELIGIBILITY RAIL — the hard integration, and it is open ]
+  hmrc/apprenticeship-levy (Apache-2.0, 11,357 B, sha256:b40930bbcf80…, Scala, pushed 2026-11-12)
+    → UK: levy account, eligibility, the money that actually pays for the training
+    🔵 the equivalent in each jurisdiction is the FIRST question of the engagement, not the last
+            ▼
+  [ MATCHING ]  NASWA-OpenUI/naswa-ai-apprenticeship-matcher (Apache-2.0, 11,382 B, sha256:2d915fb4a6ea…)
+    → the US National Association of State Workforce Agencies' own POC: read it for the DATA MODEL
+      and the institutional provenance, not for the code (2★, self-described POC)
+            ▼
+  [ CANDIDATE PREPARATION — the agent surface with the clearest value ]
+  iatee/Hack-Apertus (Apache-2.0) — apprenticeship INTERVIEW coach running on Apertus,
+    Switzerland's sovereign open LLM   🔴 0★, hackathon artefact: proof the wiring exists, nothing more
+  Mahmud-Mahi/Seren--Your-IELTS-Tutor (MIT, master) — the same shape scored against a PUBLISHED
+    rubric (CEFR), which is the model to copy for any vocational competence framework
+            ▼
+  [ SIMULATED WORKSHOP — the one thing a general LMS cannot provide ]
+  blagojevicboban/GEAR (MIT, 1,073 B, sha256:0ccee16b71b8…) — WebXR built for VET, browser-delivered
+    🔴 0★, 0 forks: evidence the browser route works. PRICE THE BUILD; do not quote this as a product.
+            ▼
+  [ RECORD OF ATTAINMENT ]  the credentialing tier already on these shelves (p817)
+            ▼
+  [ HOST ]  the client's existing LMS over LTI 1.3
+```
+
+🔴 **What to tell the client, in these words.** *The tutor tier of education AI is crowded and the
+vocational tier is empty. There is no platform to adopt here — there is a funding API, a public
+data model, and three proofs that the pieces work. The build is real and so is the gap, and the
+gap is why the engagement is worth doing.* 🟢 **`T129` is the evidence that the category is wanted
+and unserved; that is a better opening than a product tour.**
+
+🔵 **Where the sovereign-model leg matters.** `Hack-Apertus` on Apertus is the only row on these
+shelves demonstrating a vocational agent end-to-end on a European sovereign model rather than a US
+API. 🟢 **For an EMEA public-sector buyer with a data-residency constraint, that is the
+architecture diagram the proposal needs — and the EU date for Annex III education uses is
+`2027-12-02`, with Article 50 transparency duties already live (`intel/market.md`).**
+
+**Effort:** `4` weeks of discovery dominated by the funding/eligibility rail in the target
+jurisdiction; `10`–`12` weeks for matcher + interview coach in production; the simulated-workshop
+leg is a separate build, `12`+ weeks, and should be sold separately.
 
 ## 🟢 `P76` — the ACCESSIBLE-MATERIALS programme that produces EVIDENCE, not an overlay (forty-first pass, `p836`)
 

@@ -1,8 +1,62 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-15
+updated: 2026-11-16
 ---
+
+## 🔴 Forty-second pass (`p837`, 2026-11-16) — **INDIA'S NATIONAL EDUCATION STACK IS RESTORED TO THIS FILE, after being dropped from it in a rewrite on `2026-11-12` while this base went on publishing it as filed**
+
+🟢 **`10` rows (`147` → `157`): `3` RESTORATIONS and `7` new. Every grant byte-read `2026-11-16` on
+the real default branch.**
+
+🔴 **The admission this pass owes, and it is this file's defect rather than a gap in the world.**
+`p677` published `sunbird-ed/sunbirded-portal` as *filed to `verticals/solutions.md`*, having
+re-measured its payload first-hand. **It is not in this file, and `sunbird` appears `0` times in
+every curated shelf in this base.** 🟢 **The reasoning survived — `54` and `115` mentions across the
+two append-only trending files, including `T126`'s licence census that measures the Sunbird estate
+at `196/212 = 92.5%` permissively licensed, the highest of any education authority anywhere in
+this base.** 🔴 **Only the ROW died.** The dating, the census and the `ACTION` that makes the check
+mechanical are in [`repos/foundations.md`](../repos/foundations.md) `D837-1`; the rule is `T130`.
+
+### 🟢 `3` rows RESTORED — payloads reproduce `p677`'s published figures exactly, ten days on
+
+| Platform | What institutions run it | Agent surface | Licence, re-read `2026-11-16` | Posture |
+|---|---|---|---|---|
+| **Sunbird ED** — https://github.com/Sunbird-Ed/SunbirdEd-portal | 🟢 **India's national public digital infrastructure for education — the platform family behind DIKSHA, serving all `36` states and union territories in `30+` languages.** One of a multi-repository stack: `Sunbird-Knowlg/knowledge-platform` (content, taxonomy, DIAL codes), `Sunbird-Lern/userorg-service` (identity, tenancy, enrolment — **channel isolation is why one deployment serves `36` boards**), `Sunbird-inQuiry/editor-v2` and `player-v2` (QuML authoring and delivery). | 🟢 **For an APAC public-sector engagement this is the INCUMBENT, so the question is what to EXTEND, not what to build.** The surface is agent-per-role on top of an existing system of record: content tagging against the national taxonomy, DIAL-code resolution, multilingual lesson adaptation, enrolment triage. `P85`. | 🟢 **MIT** — `master/LICENSE`, **`1,072 B`**, `sha256:7dde06716f25…`, © *2018 Project Sunbird*. 🟢 **Exact reproduction of the figure `p677` published.** | 🟢 **The most permissively licensed platform of its deployment size anywhere in this base, and `T126` says that is a PROCUREMENT DOCTRINE rather than an accident.** 🔴 **Read the fork column, not the star column: `41★` against `318` forks — `7.8:1`, the most extreme ratio on these shelves. Nobody forks a web portal `318` times to read it.** 🔴 **Delivery warnings, stated: the portal's own last push is `2026-02-21`, so the motion is in the siblings; the default ref is `master`, not `main`; and `SunbirdEd-mobile-app` release branches `release-2.6.0`/`2.7.0` carry NO grant at `25` root paths while the project is MIT on `main` — an engagement that pins an old Sunbird release, which India engagements do, pins a branch with no licence file on it.** |
+| **AureusERP** — https://github.com/aureuserp/aureuserp | 🟢 **A full open ERP on Laravel/Filament — the money-and-people half of an institution, which an LMS does not provide.** `12,239★` / `627` forks. | 🟢 **`Pattern D`: the academic system of record stays, the ERP carries finance, HR, procurement and inventory, and the agent sits across the seam** — fee reconciliation, purchase-request triage, payroll exception explanation. | 🟢 **MIT** — `master/LICENSE`, `1,077 B`, `sha256:c6dca3b0db5b…`, © *2010-2025 Webkul Software*. 🟢 Exact reproduction. | 🟢 **Build-safe and genuinely large: `12.2k★` makes it the most-starred MIT ERP on these shelves, against `OpenEduCat` at LGPL-3.0 and the whole Frappe education family at GPL/AGPL.** 🔴 Default ref `master`. 🔵 Not education software — it is the half of an education institution that education software ignores. |
+| **Agora Flat** — https://github.com/netless-io/flat | 🟢 **An open-source interactive online classroom: real-time whiteboard, multi-party video, recording and replay.** `6,445★` / `877` forks, pushed `2026-11-10`. | 🟢 **The SYNCHRONOUS surface this file is thin on.** Everything else here is asynchronous — LMS, SIS, MOOC, assessment. The agent surface is live: transcription, in-session summarisation, and the replay artefact that `P83`'s tutoring evaluation can actually be scored against. | 🟢 **MIT** — `main/LICENSE`, `1,062 B`, `sha256:8fa1566550df…`, © *2021 Agora*. 🟢 Exact reproduction. | 🟢 **Build-safe, maintained, and the client is cross-platform (Windows, macOS, web).** 🔴 **The MIT grant covers the CLIENT; the real-time transport behind it is Agora's commercial RTC service — the licence is not the bill.** Say that at proposal time. |
+
+### 🟢 `7` NEW rows
+
+| Platform | What it is | Licence, byte-read `2026-11-16` | ★ / forks · ref · pushed | Region & posture |
+|---|---|---|---|---|
+| **Tuantuan Cloud Study** — https://github.com/yang-jiacheng/selfstudy-server | 🟢 **A deployed online self-study platform (Java), server side of a mobile product — "study anytime, anywhere".** The most-starred new vertical row this pass. | 🟢 **Apache-2.0** — `master/LICENSE`, `11,343 B`, `sha256:3391ea6318f0…` | `101★` / `8` · 🔴 `master` · `2026-11-03` | **APAC — China.** 🟢 **Filed because this file's China tier was one university LMS (`p813`) and nothing consumer-side.** 🔴 Single author; documentation is Chinese-first. |
+| **ÉTSMobile (Notre-Dame)** — https://github.com/ApplETS/Notre-Dame | 🟢 **The 4th-generation student mobile gateway for École de technologie supérieure, Montréal — grades, schedule, account, campus services in one Flutter app.** Student-run club (`ApplETS`), six years of history. | 🟢 **Apache-2.0** — `master/LICENSE.md`, `11,356 B`, `sha256:43070e2d4e53…` | `46★` / `13` · 🔴 `master` · `2026-11-05` | **North America — Canada (Québec).** 🟢 **The STUDENT-FACING mobile tier, which this file had only in Europe and India.** 🔵 It is also a French-language Canadian build, which is the rarer thing on these shelves. 🔴 Volunteer-maintained against one institution's SIS — the value is the pattern and the seam list. |
+| **UKit** — https://github.com/KAE-Lab/UKit | 🟢 **Companion app for students in Bordeaux, iOS and Android.** | 🟢 **Apache-2.0** — `main/LICENSE`, `11,363 B`, `sha256:4983e1b71316…` | `11★` / `0` · `main` · `2026-11-15` | **EMEA — France.** 🟡 **`11★`, `0` forks, pushed the day before this pass — an early bet, sold as one.** 🟢 Filed as the second data point in a pair with ÉTSMobile: the student-companion app is a repeatable, locally-built shape, and a studio proposing one should be able to name two working precedents on two continents. |
+| **HSC Stack** — https://github.com/hscstack/platform | 🟢 **A curated resource platform for HSC and SSC students of Bangladesh, "built by members, for everyone".** Vue. | 🟢 **Apache-2.0** — `main/LICENSE`, `11,357 B`, `sha256:c71d239df917…` (stock) | `13★` / `2` · `main` · `2026-11-09` | **APAC — Bangladesh.** 🟢 **A national-examination-cohort platform built by the cohort itself, under a permissive grant — the shape this base has for Brazil and England and did not have for South Asia outside the Sunbird estate.** 🔴 `13★`, five months old. |
+| **vagaLume** — https://github.com/PedroCamargoLINCE/vagaLume | 🟢 **Aggregates every internship, research programme, fellowship and summer school open to students, collected and refreshed on a schedule.** Python, from a Brazilian university lab (LINCE). | 🟢 **Apache-2.0** — `main/LICENSE`, `11,358 B`, `sha256:cfc7749b96f6…` | `13★` / `4` · `main` · `2026-11-15` | 🟢 **LATAM — Brazil, and it matters disproportionately.** 🔴 **`T126`'s authority census measured LATAM education authorities at `0` permissively licensed repositories against Sunbird's `196`.** 🟢 **This is not an authority, it is a university lab — and it is a live, permissive, LATAM-authored education platform row, which this file has had almost none of.** 🔴 **One month old, `13★` — filed on provenance and gap-fit, and the gap is the argument.** |
+| **GEAR (WebXR for VET)** — https://github.com/blagojevicboban/GEAR | 🟢 **An open WebXR platform designed specifically for Vocational Education and Training** — the simulated-workshop shape, delivered in a browser instead of a headset-only app. TypeScript. | 🟢 **MIT** — `main/LICENSE`, `1,073 B`, `sha256:0ccee16b71b8…` | `0★` / `0` · `main` · `2026-11-11` | **EMEA.** 🟡 **`0★`, `0` forks.** 🟢 **Filed for ONE reason, stated plainly: this base has declared the vocational platform tier a measured gap in five languages (`p829`, `T114`, `T118`), and the single thing a VET programme needs that a general LMS cannot give it is a safe simulated workshop.** 🔴 **Do not propose this as a product. Propose it as evidence that the browser-delivered route exists, and price the build.** `P86`. |
+| **exam-proctor (LTI 1.3 in Moodle)** — https://github.com/shaheeranser/exam-proctor | 🟢 **A proctoring platform that runs INSIDE Moodle over LTI 1.3** — React/TS client, Express service. | 🟢 **Apache-2.0** — `main/LICENSE`, `11,358 B`, `sha256:c95bae1d1ce0…` | `0★` / `0` · `main` · `2026-10-11` | **APAC.** 🟢 **Filed for its ARCHITECTURE, not its traction: it is the only row in a population of `540` permissively licensed proctoring repositories that mounts through the standards layer this file already documents, rather than asking an institution to adopt a second system.** 🔴 **`0★`, four months old, one author.** 🔵 **The integration CONTRACT it implements is better documented by `openedx/mockprock` — Apache-2.0 per GitHub's licence field and `NO-GRANT-AT-ROOT` in the bytes, so recorded here as a contract to read and NOT as a dependency to ship (`agents/top.md` this pass).** |
+
+### 🔴 Declared nils and placements, so silence is not read as coverage
+
+- 🔴 **Indonesia — a national platform with NO open-source estate.** `Rumah Pendidikan`, Indonesia's
+  unified digital education platform (an ITU WSIS Prizes 2026 entry, with `Merdeka Mengajar` now
+  reached through the `Ruang GTK` space inside it), publishes **no repository and no licence**.
+  Enumerated this pass: **`user:kemdikbud` → `1` repository** (`Kemdikbud/kemdikbud`, `0★`, **no
+  licence**, last pushed `2025-08-27`), and `user:pusdatin` → `3` repositories, all unrelated
+  office tooling from 2015–2016. `user:kemendikbudristek` does not resolve. 🔵 **The ministry's
+  announced AI work is a Pusdatin partnership on Google Gemini — proprietary.** 🟢 **So the fourth
+  most populous country in the world runs a national education platform a studio cannot start
+  from, and an Indonesian engagement must IMPORT build-safe supply from these shelves and localise
+  it.** Same conclusion `p836` reached for Vietnam, Korea and the Gulf, now measured for Indonesia.
+- 🟡 **The UAE's `25` generative-AI prohibitions for schools (February 2026) surfaced on the APAC
+  leg and is recorded under EMEA**, which is where this base's closed region vocabulary puts the
+  Gulf. 🔵 **Noted because the query leg and the region field disagreed, and the field wins.**
+- 🔴 **UDL (Universal Design for Learning) remains a TRUE nil, now measured with a better
+  instrument:** `universal design for learning accessibility education in:name,description
+  license:mit` returns **`0` repositories**. 🟢 **Two of this base's three standing nils fell this
+  pass; this one did not.** `T128`.
 
 ## 🟢 `2026-11-15` (forty-first pass, `p836`) — **the ACCESSIBILITY-CONFORMANCE vertical enters this file with `0` prior rows, and the TIMETABLING system a school runs every term**
 

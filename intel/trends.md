@@ -1,8 +1,172 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-15
+updated: 2026-11-16
 ---
+
+## `T128` — a nil declared from a keyword channel is an INSTRUMENT READING; two of this base's three standing nils fell to a `license:` qualifier, in English (forty-second pass, `p837`)
+
+🟢 **Stated as a caused rule.** `T114` said a nil is only a nil in the language the supply is
+written in. `T118` shrank that to a CHINESE-supply rule. 🔴 **`T128` shrinks it again and moves the
+cause: it was never primarily a LANGUAGE property. It was a CHANNEL property.**
+
+🔵 **The measurement, run `2026-11-16` against the GitHub repository index
+(`gh api -X GET search/repositories`) with a `license:` qualifier — a channel this base has not
+used in `41` passes of keyword legs:**
+
+| Standing nil | Declared at | Index query | Repositories returned | Verdict |
+|---|---|---|--:|---|
+| **PROCTORING** | `p834`: *"flipped — Chinese only, `36` + `11` repositories"* | `proctoring in:name,description license:mit` | 🔴 **`478`** | 🔴 **FALSE NIL in ENGLISH. No Chinese required.** |
+| | | `proctoring in:name,description license:apache-2.0` | 🔴 **`62`** | 🔴 **`540` permissively licensed in total** |
+| **VOCATIONAL** | `p829`, held in `5` languages (`T114`) | `vocational training in:name,description license:mit` | 🔴 **`58`** | 🔴 **FALSE as a POPULATION claim** |
+| | | `vocational OR apprenticeship ... license:apache-2.0 pushed:>2026-01-01` | 🔴 **`39`** | 🔴 same |
+| **UDL** | `p834`, *"flipped as a population, not as supply"* | `universal design for learning accessibility education in:name,description license:mit` | 🟢 **`0`** | 🟢 **TRUE NIL, and now measured rather than inferred** |
+
+🔴 **Why the keyword channel could not see this.** A web-search leg returns ARTICLES ABOUT the
+sector; the index returns REPOSITORIES WITH A LICENCE FIELD. 🟢 **The index also answers the
+licence question in the same call that answers the existence question** — `license.spdx_id`,
+`stargazers_count`, `forks_count`, `default_branch`, `pushed_at`, `created_at` and `language` all
+arrive together — 🔵 **which is why this pass added `11` agent rows after two consecutive passes
+reported the agent shelf saturated.**
+
+🟡 **The channel's limits, stated so the next pass does not over-trust it.** 🔴 `license:` reports
+GitHub's own licence DETECTION, which this pass caught asserting `Apache-2.0` over a repository
+with **no grant payload at root on either resolved head** (`openedx/mockprock`, `20` probes). 🟢
+**The index is a DISCOVERY instrument; the byte-read remains the VERIFICATION instrument, and the
+order matters.** 🔴 **`repo:<invented-slug>` returns `HTTP 422`, and so does a real-but-unknown
+slug — `422` means "not resolvable", never "not licensed".**
+
+🟢 **The operational rule:** *a nil may only be published naming the CHANNEL it was measured on.*
+🔴 **This base has published nils for `35` passes on a channel that could not have found the
+supply, and the honest label for those was never "no supply" — it was "none visible to a
+keyword leg".**
+
+
+## `T129` — POPULATION is not SUPPLY, and the `540`-repository proctoring population contains almost nothing a studio can ship (forty-second pass, `p837`)
+
+🟢 **`T128` is only half a finding without this one, and publishing it alone would mislead.**
+
+🔵 **Measured across all three re-tested axes: the populations are real and are dominated by `0★`,
+single-author, never-released student projects.** Of the first `12` MIT proctoring repositories
+sorted by `pushed_at`, **`11` are at `0`–`2★`**. The vocational MIT set's first `12` are
+**`0`–`1★`**. 🟢 **Exactly ONE row in `540` permissively licensed proctoring repositories has
+institutional provenance — `Scaler-Opensource/exam-guard` (Apache-2.0, `3★`), filed this pass — and
+exactly one mounts through the standards layer (`shaheeranser/exam-proctor`, Apache-2.0, `0★`).**
+
+🔴 **So both prior statements were wrong in opposite directions.** `p829`/`p834` said *no supply*;
+that is false. A reading of `T128` alone would say *abundant supply*; that is also false. 🟢 **The
+true shape: an abundant POPULATION with a near-empty SHELF-WORTHY tier, which is a different
+commercial fact and a better one — the category is proven to be wanted and is not yet served.**
+
+🔵 **Consequence for how this base files.** `0★` is not disqualifying here — `p836` filed `0★` rows
+on freshness and gap-fit, and this pass files two more. 🔴 **What is disqualifying is
+INTERCHANGEABILITY: nine equivalent `0★` proctoring projects are one measurement, not nine rows.**
+🟢 **Filed on provenance (a company, an authority, a research institute), on architecture (it mounts
+through a standard), or on gap-fit — never on count.**
+
+
+## `T130` — the claimed-as-filed-while-absent defect is now at its THIRD occurrence, and its mechanism is a file REWRITE, not a bad ledger (forty-second pass, `p837`)
+
+🔴 **`p597` claimed six addresses were shelved while they were absent. `p677` audited that, re-read
+all six payloads first-hand, published a `Filed to` column and declared the defect remedied.**
+🔴 **All six are absent from the shelf `p677` named, measured `2026-11-16`.**
+
+🟢 **The ledger was never the problem, and this is provable: all six payloads reproduce `p677`'s
+published byte-counts and `sha256` prefixes EXACTLY, ten days later.** 🔴 **The loss is a REWRITE,
+datable to one day from this repository's own `archive/` directory:** `sunbird` appears `4` times
+in `archive/2026-11-12-p787-pre-rewrite/verticals-solutions.md` and `0` times in
+`archive/2026-11-12-p793-pre-rewrite/verticals-solutions.md`.
+
+🔵 **The census of that rewrite, in distinct `github.com/owner/repo` slugs:**
+
+| File | `p787` (`2026-11-12`) | Now (`2026-11-16`) |
+|---|--:|--:|
+| `agents/top.md` | `1,073` | `493` |
+| `repos/foundations.md` | `943` | `185` |
+| `verticals/solutions.md` | `508` | `162` |
+
+🟡 **Consolidation is a declared practice in this base and shrinkage is not automatically a
+defect — much of that delta is prose mentions, not rows.** 🔴 **What IS a defect: `verticals/
+solutions.md` published a RISING row count (`140` → `145` → `147`) across the same window in which
+a byte-verified national-infrastructure row vanished from it, because the counter counts
+ADDITIONS and nothing audits DELETIONS.**
+
+🟢 **The caused rule:** *an append-only file preserves REASONING; only an audited shelf preserves
+ROWS.* 🔵 **Sunbird is the proof in both directions — `54` + `115` mentions of it survive in the two
+append-only trending files, including the licence census that measures its estate at `92.5%`
+permissive, while the row itself was gone from every curated shelf for four days.**
+
+🟡 **`ACTION p837-A` — `ingest/promotion-audit.sh`, added this pass: extract every
+`(address, Filed to)` pair published in the trending files and `grep` the named shelf for the
+address.** 🔴 **Three occurrences have now been found by hand, each by a pass that happened to
+look. The fourth should be found by the script.**
+
+🔵 **First run, `2026-11-16`: `88` published `(address → shelf)` routing pairs found, 🟢 `40` PASS,
+🔴 `48` ABSENT from the shelf named.** 🟡 **Read that `48` as an UPPER BOUND, and the reason is
+stated rather than buried: the destination column in these tables is sometimes literally
+`Filed to` (as in `p677`'s, which is how this pass's six were confirmed) and sometimes a ROUTING
+RECOMMENDATION for a later pass.** 🟢 **The script cannot tell those apart, so it reports pairs,
+not verdicts — and `48` unresolved routing claims is itself the measurement that justified
+writing it.** 🔴 **Named examples from the first run, each a real published pair:
+`mozilla/common-voice` → `repos/foundations.md`, `telekom/ki-in-schulen` → `repos/foundations.md`,
+`openedx/XBlock` → `compose/patterns.md`, `jupyterlite/jupyterlite` → `repos/foundations.md`,
+`livekit/agents` → `repos/foundations.md`, `lplnufpi/essay-br` → `repos/foundations.md`,
+`insolitos/IA_para_aprender` → `agents/top.md`. 🟡 **Triaging those `48` into filed-or-routed is
+`ACTION p838-A` and is NOT claimed as done here.**
+
+🟢 **Re-run after this pass's `20` rows were written: `46` PASS / `42` ABSENT — a movement of
+exactly `6`, which is this pass's restoration set and nothing else.** 🔵 **The script agrees with
+the hand audit to the row, which is the only reason it is being trusted as the standing check.**
+
+
+## `T131` — on an Apache-2.0 row the digest identifies the VINTAGE of the stock text, and byte-count identifies nothing at all (forty-second pass, `p837`)
+
+🔴 **`T127` established that an Apache-2.0 payload certifies the stock FSF text and nothing about
+who granted it. This pass found the sharper case and it indicts the byte-count column too.**
+
+🟢 **Measured: `hmrc/apprenticeship-levy` and `amitshekhariitbhu/ai-engineering-course` both carry
+a root `LICENSE` of EXACTLY `11,357 B` with DIFFERENT `sha256` (`b40930bbcf80` vs
+`c71d239df917`).** 🔵 **Diffed line by line, the entire difference is two lines of appendix
+boilerplate: `{}` versus `[]` around the placeholder fields.**
+
+🔴 **Two consequences, both against this base's own notation.** A digest MISMATCH between two
+Apache rows is not evidence of a different grant — it can be a different vintage of the identical
+licence. And an identical BYTE-COUNT is not evidence of an identical payload, since these two share
+one. 🟢 **The Apache byte-counts observed on these shelves now span `10,762` → `11,558 B`
+(`Tue-StudyOS/tue-api-wrapper` at `10,762 B` is `595 B` SHORTER than stock), so the column has
+range but no identity.** 🔵 **Read the `NOTICE` for the holder; treat the digest as a vintage
+fingerprint; and never infer a licence DIFFERENCE from a digest difference on an Apache row.**
+
+
+## `T132` — the instrument that measures whether a tutor TEACHES arrived from a research institute, not from the tutor projects, and the market is now asking for it (forty-second pass, `p837`)
+
+🟢 **The organising finding of this pass's supply side.** This base holds `399` agent rows, a large
+share of them tutors, and until `2026-11-16` **not one row could tell a client whether any of them
+teaches well.**
+
+🔵 **`allenai/tutormoments` (Apache-2.0, Allen Institute for AI, `28★`, pushed `2026-11-14`) runs a
+model-under-test against a simulated student on frozen, expert-teacher-annotated MOMENTS cut from
+real tutoring transcripts, and scores the continuation on Appropriate Scaffolding, Appropriate
+Rigor, Avoids Over-Scaffolding and an Action Taxonomy against human tutor moves.**
+
+🔴 **Note what it does NOT do, since that is the reason it is credible: it does not ask a model to
+rate a model's helpfulness.** The annotations are an expert teacher's judgement of where
+scaffolding *should* occur; the metric is agreement with that, plus the over-scaffolding penalty
+that makes a flattering tutor score WORSE. 🟢 **Over-scaffolding is the exact failure mode of every
+LLM tutor — it answers instead of teaching — and this is the first instrument on these shelves that
+penalises it.**
+
+🟢 **Why this is commercial and not academic.** `intel/market.md` this pass: **only `45%` of the
+most-used education tools have research meeting an ESSA evidence tier**, the market is reported to
+reward products that can prove a specific outcome, **Ofqual has published principles for AI use in
+high-stakes marking in England**, and the OECD's position is that AI helps only when pedagogy
+stays in control. 🔵 **Every one of those is a demand for evidence, and a permissively licensed
+evidence harness is the cheapest way a studio supplies it.** `P83`.
+
+🔴 **The standing gap this sharpens rather than closes:** there is still **no open benchmark for
+tutoring in Spanish or Portuguese**, and TutorMoments' moments are cut from English-language
+transcripts. 🟢 **For a LATAM engagement the harness transfers; the DATASET does not, and building
+the Spanish/Portuguese moment set is a fundable deliverable rather than a footnote.**
 
 ## `T123` — the base tracked the REGULATION and never filed the TOOLING, and the gap was measurable in its own files (forty-first pass, `p836`)
 

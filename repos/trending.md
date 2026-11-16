@@ -1,8 +1,113 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-15
+updated: 2026-11-16
 ---
+
+## 🆕 `2026-11-16` (forty-second pass, `p837`) — 🔴 **ALL SIX ADDRESSES THIS FILE PUBLISHED AT `p677` AS `Filed to <shelf>` ARE ABSENT FROM THAT SHELF. The payloads all reproduce EXACTLY. The ledger was never the defect — a file REWRITE on `2026-11-12` was, and nine passes did not notice.**
+
+🔵 **`p677`'s own headline was that the `p597` ledger had claimed-as-filed-while-absent twice,
+`25` days apart. `p677` re-measured all six payloads first-hand and declared it remedied.** 🔴
+**This is the third occurrence, and this time the remedy itself is what did not land.**
+
+### 🔴 The audit — `grep -ci <address> <shelf named by p677>`, run `2026-11-16`
+
+| Address | `p677` `Filed to` | Mentions on that shelf today | Payload re-read `2026-11-16` | Reproduces `p677`? |
+|---|---|--:|---|---|
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | `verticals/solutions.md` | 🔴 **`0`** | MIT `1,077 B` `c6dca3b0db5b` © *2010-2025 Webkul Software* · `12,239★`/`627` · `master` · pushed `2026-11-06` | 🟢 **exact** |
+| [`netless-io/flat`](https://github.com/netless-io/flat) | `verticals/solutions.md` | 🔴 **`0`** | MIT `1,062 B` `8fa1566550df` © *2021 Agora* · `6,445★`/`877` · `main` · pushed `2026-11-10` | 🟢 **exact** |
+| [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | `repos/foundations.md` | 🔴 **`0`** | MIT `1,083 B` `e36740a2a510` © *2021 John McCann Cunniff Junior* · `383★`/`54` · `main` · pushed `2026-09-15` | 🟢 **exact** |
+| [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) | `verticals/solutions.md` | 🔴 **`0`**, and 🔴 **`0` on EVERY curated shelf** | MIT `1,072 B` `7dde06716f25` © *2018 Project Sunbird* · `41★`/`318` · `master` · pushed `2026-02-21` | 🟢 **exact, to the byte and the fork** |
+| [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) | `repos/foundations.md` | 🔴 **`0`** | MIT, 🔴 file spelled **`LICENCE`** (`LICENSE` → `404`), `1,086 B` `02c5a8e84229` © *2024-present Oak National Academy* · `9★`/`5` · `main` · pushed `2026-11-12` | 🟢 **exact** |
+| [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | `repos/foundations.md` | 🔴 **`0`** | Apache-2.0 `11,351 B` `3f17cff4210f` · `2★`/`16` · `main` · pushed `2026-11-15` | 🟢 **exact** |
+
+🟢 **Six payloads, six exact reproductions of figures published ten days earlier, across two
+licence families and one British-spelt filename. The measuring instrument in this base is sound.**
+🔴 **Its FILING is what nothing audits.**
+
+### 🔴 The mechanism, datable to one day from this repository's own `archive/`
+
+🟢 **`sunbird` appears `4` times (and `aureuserp` once) in
+`archive/2026-11-12-p787-pre-rewrite/verticals-solutions.md`, and `0` times in
+`archive/2026-11-12-p793-pre-rewrite/verticals-solutions.md`.** 🔴 **So the rows died in a rewrite
+of that file on `2026-11-12`, between `p787` and `p793`.**
+
+| File, distinct `github.com/owner/repo` slugs | `p787` snapshot | Live, `2026-11-16` | Δ |
+|---|--:|--:|--:|
+| `agents/top.md` | `1,073` | `493` | 🔴 `-580` |
+| `repos/foundations.md` | `943` | `185` | 🔴 `-758` |
+| `verticals/solutions.md` | `508` | `162` | 🔴 `-346` |
+
+🟡 **Consolidation is a declared practice here and most of that delta is prose mentions rather than
+rows — this is NOT a claim that `1,684` rows were lost.** 🔴 **The defect is narrower and worse:
+`verticals/solutions.md` published a RISING row count (`140` → `145` → `147`) across the exact
+window in which a byte-verified national-infrastructure row vanished from it.** 🟢 **The counter
+counts additions. Nothing counts deletions.** `T130`.
+
+🟢 **`p836`'s five promotions were checked by the same method and all five are PRESENT**
+(`w3c/epubcheck`, `daisy/ace`, `liblouis/liblouis`, `daisy/ace-gui`, `sukrutrao/Timetabler`).
+🔵 **The recent passes are honest. The defect is historical and mechanical, which is why the remedy
+is a script and not a resolution.**
+
+🟡 **`ACTION p837-A` — `ingest/promotion-audit.sh`, added this pass.** Extracts every
+`(address, Filed to)` pair published in these two append-only files and `grep`s the named shelf for
+the address. 🔴 **Three occurrences found by hand, each by a pass that happened to look. The fourth
+should be found by the script.**
+
+🔵 **First run, `2026-11-16`: `88` published `(address → shelf)` routing pairs found, 🟢 `40` PASS,
+🔴 `48` ABSENT from the shelf named.** 🟡 **Read that `48` as an UPPER BOUND, and the reason is
+stated rather than buried: the destination column in these tables is sometimes literally
+`Filed to` (as in `p677`'s, which is how this pass's six were confirmed) and sometimes a ROUTING
+RECOMMENDATION for a later pass.** 🟢 **The script cannot tell those apart, so it reports pairs,
+not verdicts — and `48` unresolved routing claims is itself the measurement that justified
+writing it.** 🔴 **Named examples from the first run, each a real published pair:
+`mozilla/common-voice` → `repos/foundations.md`, `telekom/ki-in-schulen` → `repos/foundations.md`,
+`openedx/XBlock` → `compose/patterns.md`, `jupyterlite/jupyterlite` → `repos/foundations.md`,
+`livekit/agents` → `repos/foundations.md`, `lplnufpi/essay-br` → `repos/foundations.md`,
+`insolitos/IA_para_aprender` → `agents/top.md`. 🟡 **Triaging those `48` into filed-or-routed is
+`ACTION p838-A` and is NOT claimed as done here.**
+
+🟢 **Re-run after this pass's `20` rows were written: `46` PASS / `42` ABSENT — a movement of
+exactly `6`, which is this pass's restoration set and nothing else.** 🔵 **The script agrees with
+the hand audit to the row, which is the only reason it is being trusted as the standing check.**
+
+### 🟢 Where the `20` rows went this pass
+
+| Shelf | Restored | New | Total |
+|---|--:|--:|---|
+| [`agents/top.md`](../agents/top.md) | `0` | **`11`** | `388` → **`399`** |
+| [`repos/foundations.md`](foundations.md) | **`3`** (Anubis, Oak National, Intel education-ai-suite) | **`4`** (`hmrc/apprenticeship-levy`, `Tue-StudyOS/tue-api-wrapper`, `amitshekhariitbhu/ai-engineering-course`, `MARKUS-LEARNING/ROBOTICS-for-PEOPLE`) | `179` → **`186`** |
+| [`verticals/solutions.md`](../verticals/solutions.md) | **`3`** (Sunbird ED, AureusERP, Agora Flat) | **`7`** (`selfstudy-server`, `ApplETS/Notre-Dame`, `KAE-Lab/UKit`, `hscstack/platform`, `vagaLume`, `GEAR`, `shaheeranser/exam-proctor`) | `147` → **`157`** |
+
+### 🟢 The Sunbird estate, re-measured INDEPENDENTLY this pass rather than copied from `T126`
+
+| Repo | Grant, byte-read `2026-11-16` | ★ / forks | ratio | Default ref · pushed |
+|---|---|---|--:|---|
+| [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) | MIT `1,072 B` `7dde06716f25` © *2018* | `41` / `318` | **`7.8:1`** | `master` · `2026-02-21` |
+| [`Sunbird-Knowlg/knowledge-platform`](https://github.com/Sunbird-Knowlg/knowledge-platform) | MIT `1,072 B` `fd3adcd57676` © *2019 Project Sunbird* | `17` / `182` | 🔴 **`10.7:1`** | `master` · **`2026-11-13`** |
+| [`Sunbird-Lern/userorg-service`](https://github.com/Sunbird-Lern/userorg-service) | MIT `1,072 B` `7dde06716f25` © *2018* | `31` / `162` | **`5.2:1`** | `master` · `2026-03-02` |
+| [`Sunbird-inQuiry/editor-v2`](https://github.com/Sunbird-inQuiry/editor-v2) | Apache-2.0 `11,357 B` `c71d239df917` | `0` / `4` | — | `main` · **`2026-11-11`** |
+| [`Sunbird-inQuiry/player-v2`](https://github.com/Sunbird-inQuiry/player-v2) | Apache-2.0 `11,357 B` `c71d239df917` | `0` / `5` | — | `main` · `2026-10-06` |
+
+🟢 **Every digest this file published for the estate at `p677`/`T126` is reproduced.** 🔴 **And one
+of its inferences is corrected: there is no "Sunbird version". The estate moves at five different
+speeds, the CONTENT and ASSESSMENT layers are the live ones (`2026-11-13`, `2026-11-11`), and the
+famous PORTAL is the stalest (`2026-02-21`).** 🟢 **Pin per repository and publish the date per
+repository.** `P85`.
+
+### 🔴 Authority-org enumeration — Indonesia, and the nil is the finding
+
+🔵 **`Rumah Pendidikan` is Indonesia's unified national digital education platform (ITU WSIS Prizes
+2026 entry; `Merdeka Mengajar` now reached through the `Ruang GTK` space inside it).** 🔴
+**Enumerated `2026-11-16`: `user:kemdikbud` → `1` repository (`Kemdikbud/kemdikbud`, `0★`, NO
+licence, last pushed `2025-08-27`); `user:pusdatin` → `3` repositories, all unrelated office
+tooling from 2015–2016; `user:kemendikbudristek` → does not resolve.** 🟢 **The ministry's announced
+AI work is a Pusdatin partnership on Google Gemini — proprietary.**
+
+🟢 **So Indonesia joins Vietnam, Korea and the Gulf on the measured no-local-supply list, and the
+`T126` authority census gains a fourth datum: Sunbird (India) `196/212` = `92.5%` · UK DfE
+`515/828` = `62.2%` · France (`openfun`) `52/100` · Finland `1/182` = `0.5%` · GÉANT `0/54` ·
+🔴 **Indonesia `0/4`** · 🔴 **LATAM education authorities `0`**.
 
 ## `2026-11-15` (forty-first pass, `p836`) — **`5` new rows, and NONE of them came from a trending feed**
 

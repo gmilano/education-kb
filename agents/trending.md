@@ -1,8 +1,78 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-15
+updated: 2026-11-16
 ---
+
+## `2026-11-16` (forty-second pass, `p837`) — **the agent shelf moves after FOUR nil passes, and it moved because the CHANNEL changed; two of three standing nils fall in ENGLISH**
+
+🟢 **`11` new build-safe agent rows (`388` → `399`), `7` foundation rows (`179` → `186`, of which
+`3` are RESTORATIONS), `10` vertical rows (`147` → `157`, of which `3` are RESTORATIONS), `5`
+trends (`T128`–`T132`), `4` recipes (`P83`–`P86`), `1` audit script added
+(`ingest/promotion-audit.sh`). `6` payloads re-read and reproduced EXACTLY against figures this
+base published ten days earlier.**
+
+### 🔴 The leg-by-leg table, including the four mandated global legs
+
+| Leg | Channel | Candidates | Novel vs the `5,654`-slug corpus | Verified by bytes | Filed |
+|---|---|--:|--:|--:|--:|
+| `top open source AI agents education 2026 github MIT` | WebSearch | ~`18` | **`0`** | `0` | `0` |
+| `github trending education AI 2026` | WebSearch | `5` | **`0`** (`SirhanMacx/Claw-ED`, `geekjourneyx/interactive-learning`, `TapXWorld/ChinaTextbook`, `microsoft/ai-agents-for-beginners`, `HKUDS/DeepTutor` — all filed) | `0` | `0` |
+| `open source platform education ERP CRM MIT Apache` | WebSearch | `1` (OpenEduCat, LGPL-3.0) | **`0`** | `0` | `0` |
+| `AI education industry trends 2026` | WebSearch | `0` repositories | — | — | `0` — but **the richest MARKET leg of the pass** |
+| `AI education {North America,EMEA,APAC,LATAM} 2026 adoption regulation players` ×`4` | WebSearch | `0` repositories | — | — | `0` software; **`4` regional blocks** in `intel/market.md` |
+| 日本語: `教育 AI オープンソース GitHub 2026 MITライセンス 学校 エージェント` | WebSearch | `0` repositories | — | — | `0` — 🔴 **a language this base had never run, and it returns NO local open-source supply**; it did return the NYC K-8 moratorium and the McGraw Hill/TeachFX close |
+| Bahasa Indonesia: `platform pendidikan open source AI GitHub 2026 Kemdikbud Merdeka Mengajar` | WebSearch | `0` repositories | — | — | `0` — 🔴 **informed nil, then MEASURED by org enumeration (below)** |
+| 🟢 **`license:`-qualified index legs ×`6`** | `gh api search/repositories`, `sort=updated` | `135` distinct | **`~110`** | `23` | **`21`** |
+| 🟢 **standing-nil retest legs ×`5`** | same, with `license:` | `540` + `97` population | — | `6` | `4` |
+| 🟢 **authority-org enumeration (Indonesia)** | `user:` queries | `4` repositories | `4` | `0` | `0` — **the nil IS the finding** |
+
+🔴 **Read the table as a verdict on the brief rather than on the sector: the four mandated global
+legs have now returned `0` novel repositories for `29` consecutive passes, while a channel the
+brief does not mention returned `21` filable rows in one.** 🟢 **`T128` states the rule; the
+mandated legs remain worth running for MARKET intelligence, which is what they actually produce.**
+
+### 🟢 The `11` agents, in one line each (full rows, grants and postures in `agents/top.md`)
+
+| Agent | Grant, byte-read `2026-11-16` | ★/forks | Region | One line |
+|---|---|---|---|---|
+| [`allenai/tutormoments`](https://github.com/allenai/tutormoments) | Apache-2.0 `11,377 B` `b2c7059a9ab4` | `28`/`6` | Global | 🟢 **The pass's most important row: a benchmark that measures whether a model TUTORS**, scored against expert-teacher-annotated moments, with an over-scaffolding PENALTY. `T132`, `P83`. |
+| [`drop-project-edu/drop-project`](https://github.com/drop-project-edu/drop-project) | Apache-2.0 `11,357 B` `c71d239df917` | `33`/`34` | EMEA (PT) | 🟢 **A deterministic continuous AUTO-GRADER — `T96`'s grading gap answered by something that is not an agent.** `P84`. |
+| [`dkorunic/e-dnevnik-bot`](https://github.com/dkorunic/e-dnevnik-bot) | MIT `1,076 B` `d9bdf42fd7a5` | `70`/`10` | EMEA (HR) | 🟢 Most-starred row of the pass: alerting against Croatia's **national** e-gradebook — the agent surface `p826`'s national-system tier lacked. |
+| [`AI123-cmd/education-agent`](https://github.com/AI123-cmd/education-agent) | Apache-2.0 `11,558 B` `1eb85fc97224` (**`master`**) | `1`/`0` | APAC (CN) | 🟡 Multi-agent HE learning organised around **cognitive apprenticeship**. 🔴 Probed on `main` first → false `NO-GRANT`. |
+| [`NASWA-OpenUI/naswa-ai-apprenticeship-matcher`](https://github.com/NASWA-OpenUI/naswa-ai-apprenticeship-matcher) | Apache-2.0 `11,382 B` `2d915fb4a6ea` | `2`/`0` | North America | 🟢 **First North American workforce AUTHORITY with permissive supply in this base.** `P86`. |
+| [`wongcyrus/Google-AI-Classroom`](https://github.com/wongcyrus/Google-AI-Classroom) | MIT `1,062 B` `b79982c14bb1` | `1`/`1` | APAC (HK) | 🟡 Edge-to-cloud classroom + invigilation agent; the permissive counterpart to Intel's on-premise suite. |
+| [`Mahmud-Mahi/Seren--Your-IELTS-Tutor`](https://github.com/Mahmud-Mahi/Seren--Your-IELTS-Tutor) | MIT `1,068 B` `d97b496ed043` (**`master`**) | `11`/`1` | APAC (BD) | 🟢 Scored against a **published rubric (CEFR)** rather than model preference. |
+| [`lorenaedwin08-hub/melodymate`](https://github.com/lorenaedwin08-hub/melodymate) | MIT `1,074 B` `0d46a2c87d7e` | `47`/`5` | Global | 🟢 Accessibility-FIRST voice music learning for blind/VI learners; `47★` in eleven days. |
+| [`iatee/Hack-Apertus`](https://github.com/iatee/Hack-Apertus) | Apache-2.0 `11,340 B` `3266fb7d3671` | `0`/`2` | EMEA (CH) | 🟡 Apprenticeship interview coach on **Apertus**, Switzerland's sovereign open LLM. Proof the wiring exists. |
+| [`Vivek0712/ezhuthu`](https://github.com/Vivek0712/ezhuthu) | Apache-2.0 `11,358 B` `cfc7749b96f6` | `3`/`0` | APAC (IN) | 🟡 Tamil epigraphy apprenticeship on Strands Agents — the low-resource-language long tail. |
+| [`Scaler-Opensource/exam-guard`](https://github.com/Scaler-Opensource/exam-guard) | Apache-2.0 `11,357 B` `c71d239df917` | `3`/`1` | APAC (IN) | 🟢 **The ONE company-backed row in `540` permissively licensed proctoring repositories.** `T129`. |
+
+### 🔴 Standing-nil retest — two fell, one held, and the instrument is the story
+
+| Standing nil | Index query, `2026-11-16` | Returned | Verdict |
+|---|---|--:|---|
+| PROCTORING | `proctoring … license:mit` / `license:apache-2.0` | **`478`** / **`62`** | 🔴 **FALSE NIL in English. `p834`'s "Chinese only" is wrong.** |
+| VOCATIONAL | `vocational training … license:mit`; `vocational OR apprenticeship … license:apache-2.0 pushed:>2026-01-01` | **`58`** / **`39`** | 🔴 **FALSE as a POPULATION claim; HOLDS as a build-safe-supply claim (`T129`).** |
+| UDL | `universal design for learning accessibility education … license:mit` | 🟢 **`0`** | 🟢 **TRUE NIL, now measured rather than inferred.** |
+
+### 🔴 Instrument notes, all measured this pass
+
+- 🟢 `raw.githubusercontent.com` → `200`; `github.com` HTML and `api.github.com` → `403`, unchanged.
+- 🟢 **`gh api -X GET search/repositories` is live and returns `license.spdx_id`, `default_branch`,
+  `stargazers_count`, `forks_count`, `pushed_at`, `created_at` and `language` in ONE call.**
+  Controls: `repo:HKUDS/DeepTutor` → `1` hit (`59,484★`, Apache-2.0, `main`, pushed `2026-11-15` —
+  🟢 agreeing with the `59.5k` `p836` published); invented slug → `422`. 🔴 **`422` is also what a
+  real-but-unknown slug returns.**
+- 🔴 **GitHub's licence field can assert a grant with NO payload in the tree:**
+  `openedx/mockprock` → Apache-2.0 in the index, `404` on `LICENSE`/`.txt`/`.md`/`.rst`/`NOTICE`/
+  `COPYING`/`setup.py` across both resolved heads (`20` probes). **Recorded unverifiable-at-source,
+  not filed as build-safe.**
+- 🔴 **`main`-vs-`master` cost this pass TWO false `NO-GRANT` verdicts** before the ref was
+  resolved (`AI123-cmd/education-agent`, `Mahmud-Mahi/Seren--Your-IELTS-Tutor`). 🟢 **`T112`'s
+  branch axis is still the most expensive defect in this base's instrument.**
+- 🔴 **`eur-lex.europa.eu` does not resolve from this session**, so every EU AI Act date in this
+  base is secondary-sourced by construction. `ACTION p837-B` in `intel/market.md`.
 
 ## `2026-11-15` (forty-first pass, `p836`) — **`0` new agents for a second pass, `5` rows from a REGULATION-first query, and an aggregator caught understating a licence**
 
