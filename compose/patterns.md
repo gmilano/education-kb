@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-sixth pass (`p851`, 2026-11-16) — `2` recipes (`P79`, `P80`), built only from rows filed or measured this pass
+
+🔵 **Both are numbered in the bare form this repository's own gate counts** (`## P<n> — …`), per
+`ACTION p849-D`.
+
+## P79 — the portable-credential spine: issue a verifiable skill credential out of an LMS you do not own, and let the client leave with it (North America and EMEA anchors; APAC and LATAM on the same build with a different argument)
+
+🔴 **The problem, in the client's words.** *"We can tell you a student finished the course. We
+cannot tell an employer what they can DO, and if we ever change LMS we lose the record."*
+
+🔵 **Why this is now buildable and was not last pass.** `P76` inherits the LMS over LTI 1.3 and
+`P77` inherits the SIS over Ed-Fi/OneRoster — both avoid replacing a system. 🟢 **Neither produces
+anything the learner can take with them.** 🟢 **The credential tier filed at `p851` closes that,
+and every component below is a byte-read permissive grant on these shelves.**
+
+### 🟢 The build, component by component — `0` copyleft in the shipped path
+
+| Step | Component | Licence | What it does here |
+|---|---|---|---|
+| 1. Name the competency | [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) | 🟢 Apache-2.0 | Publishes the client's competency framework as **CASE**, so the credential attests a referenceable competency, not a free-text string. **This is the step everyone skips and it is why credentials do not aggregate.** |
+| 2. Identify the learner | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) (via `P77`) | 🟢 Apache-2.0 | Serves OneRoster 1.2 from the SIS already in place. The credential's subject is the roster's identifier — no new identity system. |
+| 3. Gather the evidence | [`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) `207★` or [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) `119★` | 🟢 MIT | The agent reads submissions, rubric outcomes and gradebook state **through MCP**, so the evidence trail is a tool call with a log, not a database scrape. |
+| 4. Assemble the assertion | your code | — | Build the **Open Badges 3.0 / CLR** assertion: subject from step 2, competency `CASE` URI from step 1, evidence from step 3. 🔴 **Roughly `300` lines. This is the only bespoke code in the recipe.** |
+| 5. 🔴 **Gate it in CI** | [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | 🟢 Apache-2.0 | **Validates Open Badges AND Comprehensive Learner Record with one instrument.** Pushed `2026-11-13`; `14` forks on `18` stars — people run this. 🟢 **Make it a required check: an assertion that does not validate never leaves the build.** |
+| 5b. Second opinion | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 Apache-2.0 | Python reference validator, ref **`develop`**. 🔴 **Carry its appended `AOL LLC` and `ASF Base64` notices into your attribution file — the grant is `13,185 B`, not the canonical `11,357 B`.** |
+| 6. Cross the EMEA border | [`impierce/credential-converter`](https://github.com/impierce/credential-converter) → [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | 🟢 Apache-2.0 → 🟡 EUPL-1.2 | Converts the OB 3.0 assertion into **ELM**, the Europass Digital Credentials data model. 🔴 **`13★`, `2` forks, pushed `2026-02-05`, and ELM's own repo is ARCHIVED — treat this leg as a reference implementation to be vendored and owned, not a dependency to track.** |
+| 7. Prove the exit | [`instructure/common-cartridge-viewer`](https://github.com/instructure/common-cartridge-viewer) | 🟢 MIT | Reads the `.imscc` export of the course the credential refers to, so "you can leave with this" is a page the client clicks, not a promise. 🔴 **The CONVERTERS are AGPL/GPL (`T173`) — run them as tools in a migration, never link them.** |
+
+🟢 **Anchor the whole thing with [`1EdTech/cert-schema`](https://github.com/1EdTech/cert-schema)
+(MIT, `77★`, `71` forks) only if the client asks for blockchain anchoring.** 🔴 **Pushed
+`2024-05-24` — offer it as an option with its staleness stated, never as the spine.**
+
+### 🟢 Pricing, and where the weeks actually go
+
+🟢 **`6`–`8` weeks**, of which steps 1, 2, 3, 5, 5b, 6 and 7 are configuration and CI wiring of
+existing permissive artefacts, and **step 4 is the only build**. 🔵 **Compare `P77`'s `2`–`3`
+weeks for rostering alone: the credential spine is more expensive because the competency framework
+in step 1 is a CONTENT exercise with the client's faculty, not an engineering one.** 🔴 **Quote
+step 1 by the framework's size, not by the sprint.**
+
+### 🟢 The regional argument — same build, four different sentences
+
+- 🟢 **North America** — lead with provenance: the cartridge reader is **Instructure's own, under
+  MIT**, and the validators are the standards body's. 🔵 **In a district or state procurement
+  under `35+` state AI guidance regimes, "every component is the vendor's or the standards body's,
+  permissively licensed" is the sentence that ends the legal review.**
+- 🟢 **EMEA** — lead with step 6. **Europass/ELM is the credential currency**, and the Council's
+  stated push to reduce dependency on non-European tooling makes an OB-3.0→ELM bridge a
+  sovereignty argument as well as an interop one. 🔵 **Pair it with the `p850` accessibility
+  pipeline (`P78`): EN 301 549 and the European Accessibility Act are the same procurement gate.**
+- 🟡 **APAC** — the same build, and **this base has no APAC-specific credential artefact to offer**
+  (`851-G3`, measured). 🔵 **Sell it on Korea's AI Basic Act and Vietnam's AI Law, which name
+  education as higher-risk: a validated, auditable credential assertion is evidence of the
+  record-keeping those regimes require.**
+- 🟢 **LATAM** — lead with the governance gap, which is the region's own measured problem: UNESCO
+  IESALC finds `87%` of surveyed institutions using AI and **`26%` with a formal AI strategy**.
+  🔵 **A credential that validates in CI is the cheapest piece of governance an institution can
+  actually show a regulator**, and it does not require the AI budget `55%` of them do not have.
+
+---
+
+## P80 — sell the corpus-reachability audit: the deliverable is proof that the client's knowledge base can still find what it paid to learn (Global; the artefact is an instrument, so it ships in every region)
+
+🔴 **The problem, in the client's words.** *"We have been running this knowledge base for a year.
+How do we know it still knows what it knew?"*
+
+🟢 **This base is the worked example and the numbers are its own.** `T172`: `2,125` addresses on
+the shelves four days ago, `865` today, **`208` reachable from no file any reader is pointed at,
+`200` of them formerly graded rows.** 🔵 **Nobody deleted anything maliciously and nothing is
+missing from disk. The failure is REACHABILITY, and it is invisible to every quality check that
+reads only the current files.**
+
+### 🟢 The build — three measurements, one regex, no model
+
+| Step | What it does | How |
+|---|---|---|
+| 1. **Address census** | Extract every `github.com/owner/repo` from the live shelves and from each snapshot in `archive/` | One regex; `case-fold` the keys (`p288`) |
+| 2. **Reachability diff** | For each archived address: on a shelf? in trending? in neither? | Set difference. 🟢 **The third bucket is the deliverable.** |
+| 3. **Row-vs-prose grading** | Of the unreachable set, how many were TABLE ROWS rather than passing mentions | Test whether the address appears on a line starting `\|`. 🔵 **`96%` here — the loss is graded content, not chatter** |
+| 4. **Gate it** | Fail the build when a rewrite drops a graded row without emitting it to the append-only trending file | 🔴 **Key the selector on the `` `pNNN` `` token, never on heading markup — that predicate has now failed three times in this base (`p718`, `p813`, `850-D1`)** |
+
+🟢 **Why a client buys this rather than building it.** It costs under a day and it is the only
+check that catches the failure mode a long-lived KB is actually prone to: **not wrong facts, but
+silently unreachable ones.** 🔵 **`P78` sells the accessibility pipeline as an instrument; `P80`
+sells the KB's own integrity the same way — and this base can show the audit run against itself,
+with the losses named.** 🔴 **That is a more credible demo than a clean report.**
+
+🟢 **Pricing: `1`–`2` weeks**, most of it in step 4's gate and in agreeing what "graded row" means
+in the client's own format.
+
+---
+
 ## 🟢 Fifty-fifth pass (`p850`, 2026-11-16) — `2` recipes (`P77`, `P78`), built only from rows filed or measured this pass
 
 🔵 **Both are numbered in the bare form this repository's own gate counts** (`## P<n> — …`), per

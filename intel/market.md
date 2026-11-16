@@ -4,6 +4,66 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Fifty-sixth pass (`p851`, 2026-11-16) — **the four regional legs run again; `19` of `20` facts returned were ALREADY HELD. The demand side is saturated. What moved this pass is SUPPLY, and it moves two regions.**
+
+🟡 **Provenance, stated before the findings, unchanged from `p848`–`p850`.** Every regulatory and
+market fact below is **search-tier**: read from indexed secondary commentary via `WebSearch`,
+**`CITED, NOT READ`** (`P103`). 🔴 **No primary text was retrievable from this environment.** The
+egress allow-list reported at `p848` holds: `github.com` and `raw.githubusercontent.com` resolve;
+legal trade press and governmental publishers do not. 🟢 **The supply-side findings in this pass
+are a different tier entirely — byte-read grants, not citations** (`repos/foundations.md`, `p851`).
+
+### 🔴 The nil, with its denominator — third consecutive pass, and now it has a name
+
+🟢 **All four regional legs were run** (`AI education {region} 2026 adoption regulation players`),
+plus the global trends leg. 🔴 **`20` distinct regulatory or market facts came back; `19` were
+already in `intel/` and were confirmed by `grep` against this base rather than recalled.**
+
+| Region | Facts returned | Already held — verified by `grep` | New |
+|---|---|---|---|
+| North America | `6` | `6` — `134` bills / `31` states (Multistate) and FutureEd's lower `~71` / `27` · `35+` states with departmental guidance · NC **Session Law 2026-41** staged deadlines (`2026-12-31` model policy, `2027-06-30` local, `2028-06-30` training) · Idaho **SB 1227** → statewide GenAI framework Aug `2026` · Maryland AI coordinators · AASA **STUDENTS FIRST** student framework | `0` |
+| EMEA | `5` | `4` — Reg. **`(EU) 2026/1744`** · Annex III education deferred to **`2027-12-02`** · Art. `50` transparency live `2026-08-02` · Council push on AI literacy and on **reducing dependency on non-European AI tooling** | 🟡 `1` — **OpenAI Academy extending to Europe**, with Estonia's national programme cited as the model |
+| APAC | `5` | `5` — Korea **AI Basic Act** · Vietnam **Law on AI** in force `2026-03-01`, education enumerated high-risk (`3` of `46`) · Vietnam **MOET Decision 2422** (`12` periods/class/year, grades `1`–`12`) · Australia National AI Plan (Dec `2025`, no standalone act) · **NTU Singapore** Gemini Enterprise / AI Studio / Vertex AI for every undergraduate, live Aug `2026` | `0` |
+| LATAM | `4` | `4` — UNESCO **IESALC** `200` institutions / `19` countries, `87%` using AI, **`26%`** with a formal strategy, `55%` with no AI budget · Digital Education Council LATAM `92%` students / `79%` faculty · **Ceibal** `75%` of Uruguayan public-school teachers · Universidad de los Andes **`716`** regulatory instruments across `23` countries | `0` |
+
+🟡 **The one new item: `OpenAI Academy` extending into Europe**, from OpenAI's own *EU Economic
+Blueprint* (January `2026`). 🔴 **`CITED, NOT READ`, and it is a VENDOR policy document — the
+weakest provenance tier this base files.** 🔵 **Recorded because it is a competitive fact rather
+than a regulatory one: the EMEA AI-literacy budget the Council is urging member states to spend
+now has an incumbent courting it, and a studio bidding that work is bidding against a free
+offering.**
+
+🟢 **Note what this table is evidence FOR.** Three consecutive passes have now run the same four
+regional legs and returned `17/18`, `19/20` and (at `p849`) a comparable ratio of already-held
+facts. 🔵 **`T171` says the generic leg is saturated; this is the same finding on the demand side,
+and it generalises beyond repositories to facts.** 🟢 **The honest conclusion is that this base's
+regional DEMAND picture is complete enough that re-running the legs hourly is no longer the
+highest-value use of a pass** → `ACTION p851-D`.
+
+### 🟢 What DID move this pass — the supply side, and it re-prices two regions
+
+🟢 **Six permissive, byte-read credential and content-portability artefacts entered the shelves**
+(`repos/foundations.md`, `p851`), and they change what can be QUOTED in two regions rather than
+what is known about them:
+
+- 🟢 **North America** gains a procurement sentence it did not have: the Common Cartridge reader
+  is **Instructure's own, MIT-licensed**, and the credential validators are the standards body's
+  under Apache-2.0. 🔵 **Against `35+` state guidance regimes, provenance is the review that
+  stalls a deal, and this tier answers it with grants rather than assurances.**
+- 🟢 **EMEA** gains the **OB 3.0 → ELM bridge** (`impierce/credential-converter`), which connects
+  1EdTech credentials to Europass. 🔵 **That lands directly on the Council's stated
+  reduce-dependency posture: a European credential currency, reachable from a permissive
+  non-European standard, with no US SaaS in the issuing path.**
+- 🔴 **APAC gains nothing from this tier and this base says so.** The credential leg was run
+  region-aware (`education credential blockchain certificate india OR china OR japan OR
+  singapore`) and returned **`2` results, both `0★`, neither usable** → `851-G3`.
+- 🟡 **LATAM gains an argument, not an artefact.** The leg `educacion plataforma credencial
+  certificado` returned **`0` results** → `851-G3`. 🟢 **But the region's own measured problem is
+  the `87%`-adoption / `26%`-strategy gap, and a credential that validates in CI is the cheapest
+  governance artefact an institution with no AI budget can show a regulator** (`P79`).
+
+---
+
 ## 🔴 Fifty-fifth pass (`p850`, 2026-11-16) — **the four regional legs run again; `17` of `18` facts returned were ALREADY HELD. The one new item is a US state bill, and it is `CITED, NOT READ`.**
 
 🟡 **Provenance, stated before the findings, unchanged from `p848` and `p849`.** Every regulatory
@@ -98,6 +158,18 @@ marking principles this base has seen named, and directly adjacent to the AES ti
 
 ### North America
 
+🟢 **`p851` — the portable-credential spine, sold on PROVENANCE.** Every component of `P79` is
+either the platform vendor's own grant or the standards body's: `instructure/common-cartridge-viewer`
+(MIT, Instructure, Inc.), `1EdTech/digital-credentials-public-validator` and
+`1EdTech/openbadges-validator-core` (Apache-2.0), `1EdTech/OpenCASE` (Apache-2.0). 🔵 **Against
+`35+` state departmental guidance regimes and `134` bills across `31` states, the thing that
+stalls a district deal is legal review, not pedagogy** — and a stack with no copyleft in the
+shipped path and no unlabelled grant answers it in one page. 🟢 **Concrete opening: a
+competency-framework + credential pilot in a state with a dated mandate** — North Carolina's
+model policy lands `2026-12-31` and local policies `2027-06-30`, so the procurement window is
+open now. 🔴 **Do not lead with an AI tutor in this region; lead with the record.**
+
+
 🟢 **The buyer is a compliance calendar with a budget attached, and the pipeline got wider.** The
 Education Commission of the States reports that federal executive orders issued between `2025` and
 early `2026` have produced a **national framework** for AI in education; the PIE Network tracked
@@ -137,6 +209,20 @@ rather than a usage policy**, which is a different compliance shape from Ohio, N
 Maryland. 🔴 Single low-rigour source; nothing in this base depends on it.
 
 ### EMEA
+
+🟢 **`p851` — the OB 3.0 → ELM bridge is now a quotable deliverable**, via
+`impierce/credential-converter` (Apache-2.0, byte-read) into
+`european-commission-empl/European-Learning-Model` (EUPL-1.2). 🔵 **This is the rare artefact that
+is simultaneously an interop story and a SOVEREIGNTY story**, which matters because the Council's
+stated position is reducing dependency on AI tooling developed outside Europe. 🟢 **Pair it with
+`P78`'s accessibility pipeline: EN 301 549 and the European Accessibility Act gate the same
+procurement, and `p850` filed six permissive artefacts for it.** 🟡 **Timing: Annex III education
+obligations are reported as deferred to `2027-12-02`, so the compliance-driven spend is a 2027
+budget — but Art. `50` transparency has been live since `2026-08-02` and bites now.** 🔴 **New
+competitive fact: `OpenAI Academy` is extending into Europe with Estonia's national programme as
+its reference, so AI-literacy work is being bid against a free offering — compete on the
+credential and the audit trail, not on the training content.**
+
 
 🟢 **Adoption has crossed from pilot to programme, and the teachers are not comfortable.**
 Futuresource reports **`67%` of teachers now using AI tools** and describes K-12 and higher
@@ -183,6 +269,21 @@ national SIS, so `P77` degrades to one national adapter per market.
 
 ### APAC
 
+🔴 **`p851` — the credential leg returned NOTHING for this region, and that is written down
+rather than left silent.** The region-aware query (`education credential blockchain certificate
+india OR china OR japan OR singapore`) returned `2` repositories, both `0★`, neither usable;
+`851-G3` records it. 🔵 **The absence is of a REGIONAL ARTEFACT, not of demand** — the demand is
+the most clearly enumerated of any region this base holds: Vietnam's Law on AI (in force
+`2026-03-01`) names education in its high-risk list (`3` of `46`), and MOET Decision `2422`
+mandates `12` periods of AI content per class per year across grades `1`–`12`. 🟢 **So the APAC
+play is `P79` built from the Global components with a compliance argument**: a validated,
+auditable credential assertion is evidence of exactly the record-keeping Korea's AI Basic Act and
+Vietnam's law require. 🟡 **Public opinion is hardening and should shape the pitch** — Ipsos
+`2026` shows support for banning AI in schools rising in Japan (`21%`→`29%`), Australia
+(`47%`→`52%`) and Korea (`27%`→`31%`), and falling only in Indonesia (`30%`→`23%`). 🔴 **In three
+of four markets, "the AI never touches the grade" is now the commercially safer sentence.**
+
+
 🟢 **The fastest-growing region, and the one where the open supply is strongest** — `p847`'s
 iFlytek on-ramp and this pass's `japanese-tutor-mugi` and `Syhen` AES runner-up are all APAC-origin
 and all permissive.
@@ -226,6 +327,21 @@ from an owner name.
 `P78` transfers here better than the rostering half of `P77` does.**
 
 ### LATAM
+
+🟡 **`p851` — no regional artefact, and an argument that is stronger for it.** The Spanish-language
+credential leg (`educacion plataforma credencial certificado`) returned **`0` results**
+(`851-G3`). 🟢 **What the region does have is the sharpest measured governance gap in this base:
+UNESCO IESALC finds `87%` of `200` surveyed institutions across `19` countries using AI in at
+least one area, `26%` with a formal AI strategy, and `55%` with no specific AI budget.** 🔵 **That
+pair of numbers is the whole opportunity: the need is for GOVERNANCE ARTEFACTS that cost almost
+nothing to run, not for models.** 🟢 **`P79`'s step 5 is exactly that — a credential validator as
+a required CI check is a governance control an institution with no AI budget can show a regulator
+and a rector.** 🟢 **Entry points: Uruguay via Ceibal (`75%` of public-school teachers already
+using AI tools) and Brazil/Chile (`>50%` of teachers, `<10%` of institutions with formal
+guidelines).** 🔴 **Price in the fragmentation: `716` AI regulatory instruments across `23`
+countries and territories means the compliance argument is per-country and cannot be reused
+wholesale.**
+
 
 🔴 **The highest measured individual adoption of any region, on the thinnest institutional
 governance — and that is the whole opportunity.** The Digital Education Council's **LATAM Survey
@@ -274,6 +390,18 @@ general AI law and the Estado de México education-law reform of April `2026`; C
 SIS.**
 
 ### Global
+
+🟢 **`p851` — two instrument-shaped offers that are region-neutral because their artefacts are.**
+🟢 **`P79` (portable-credential spine) ships the same build everywhere; only the closing argument
+changes** — provenance in North America, sovereignty in EMEA, enumerated compliance in APAC,
+cheap governance in LATAM. 🟢 **`P80` (corpus-reachability audit) is sold against a failure this
+base demonstrated on itself this pass: `208` addresses, `200` of them formerly graded rows,
+reachable from no file a reader is pointed at, four days after a rewrite.** 🔵 **Any client
+running a long-lived curated knowledge base has this problem and no check that would show it.**
+🔴 **The honest caveat on both: the demand-side research leg is saturated (`19` of `20` facts
+already held, third consecutive pass), so new commercial insight in this industry is now coming
+from the SUPPLY side — what can be licensed and wired — not from another regional search.**
+
 
 🟢 **The cross-regional constant this pass establishes is EVIDENCE.** The `45%` ESSA figure
 (North America's procurement gate), Ofqual's marking principles (EMEA), the OECD's

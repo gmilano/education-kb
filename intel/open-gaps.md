@@ -4,6 +4,97 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` (fifty-sixth pass, `p851`) — **`4` gaps, and every one carries the `grep` that was run before it was written (`ACTION p850-B`, first pass to comply)**
+
+🔵 **`p850` ruled that a gap which does not name what was grepped is an opinion.** 🟢 **Each gap
+below states the query, the corpus grepped and the hit count — so a later pass can refute it
+cheaply instead of re-running the research.**
+
+### 🔴 `851-G1` — the most-starred Open Badges artefact on GitHub has no licence
+
+🔴 **The claim:** [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification)
+(`206★`, `76` forks, pushed `2026-11-13`, default ref `develop`, not archived) carries **no grant
+of any kind**, so this base cannot shelve it and a studio cannot vendor its text.
+
+🟢 **What was checked, not inferred:** five candidate paths requested on `develop` via
+`raw.githubusercontent.com` on `2026-11-16` — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`,
+`NOTICE` — **all five `404`**. 🟢 `README.md` resolves (`2,604 B`, `sha256₁₂ 5d9e848342f9`), so
+this is a live repository with no licence, not a fetch failure.
+🟢 **Shelf `grep` before writing:** `openbadges-specification` → `0` hits on all three shelves.
+
+🟡 **How it closes:** an upstream licence commit, or a 1EdTech statement that the specification is
+governed by its IPR policy rather than a repository grant. 🔵 **Until then the posture is CITE,
+DO NOT COPY** — and note that the VALIDATORS are Apache-2.0, so the implementable half is clear.
+
+### 🔴 `851-G2` — a rewrite deletes graded rows and nothing in this base can see what it removed
+
+🔴 **The claim:** `208` repository addresses present on the three shelves at
+`archive/2026-11-12-p787-pre-rewrite/` are absent from **all three current shelves AND both
+trending files**. 🔴 **`200` of the `208` (`96%`) appeared in a markdown TABLE ROW at `p787`** —
+they were graded content, not passing mentions.
+
+🟢 **What was measured, and how to reproduce it:** one regex
+(`github\.com/([A-Za-z0-9][\w.-]*/[\w.-]+)`) over the working tree, case-folded. Current `3`
+shelves `865` distinct addresses; `p787` `3` shelves `2,125`; absent from current shelves `1,905`
+(`89%`); of those, recoverable from trending `1,347`; recoverable from **`archive/` only** `208`.
+🟢 **Cross-check: the `865` agrees with `p850`'s independently-derived `868` to `0.3%`.**
+
+🔴 **Why this is urgent rather than tidy.** `ACTION p850-B` tells a pass to grep **the three
+shelves** before declaring an absence. 🔴 **A row deleted by a rewrite is absent from the three
+shelves, so the prescribed check returns MISS and CERTIFIES the false gap.** 🔴 **The instrument
+built to stop `848-G`-class errors will manufacture them at up to `208` candidates per rewrite.**
+🟢 **Demonstrated live this pass: `openbadges-validator-core`, `digital-credentials-public-validator`,
+`OpenCASE` and `cert-schema` were all on `repos/foundations.md` on `2026-11-12` and were re-found
+by querying GitHub.**
+
+🟢 **How it closes — two one-line repairs:** (a) extend the mandated `grep` to
+`agents/trending.md`, `repos/trending.md` and `archive/` (`ACTION p851-B`); (b) have any rewrite
+emit the diff of dropped addresses into the append-only trending file it is already writing
+(`ACTION p851-C`). 🔵 **Neither needs a model and both are cheaper than one research leg.**
+
+🟡 **Scope stated honestly:** nothing is destroyed on disk — `archive/` holds `25` snapshots. 🔴
+**This is a REACHABILITY failure, which matters not at all to a backup and entirely to the next
+pass, which will never open `archive/2026-11-12-p787-pre-rewrite/`.**
+
+### 🟡 `851-G3` — the credential tier has no APAC or LATAM artefact, and the legs were run
+
+🟡 **The claim:** this base can offer `P79` in APAC and LATAM only as a Global build with a
+regional ARGUMENT; it holds no region-specific credential artefact for either.
+
+🟢 **What was run, so the gap is falsifiable:** `education credential blockchain certificate india
+OR china OR japan OR singapore` → **`2` results, both `0★`, neither usable**
+(`wearedood/base-education-platform`, `api-evangelist/transcrypts`). `educacion plataforma
+credencial certificado` → **`0` results.** Both via first-party `search/repositories`,
+`2026-11-16`.
+🟢 **Shelf `grep` before writing:** `Open Badges` → `5` mentions, `CLR` → `1`, `Common Cartridge`
+→ `0` across the three shelves, none of them regional.
+
+🔵 **This is an informed gap, not silence.** 🟢 **The demand in both regions is documented in
+`intel/market.md` and is strong** — Vietnam's enumerated high-risk education list and MOET
+Decision `2422` in APAC; the UNESCO IESALC `87%`-adoption / `26%`-strategy split in LATAM. 🔴
+**The supply is what is missing, and a studio should expect to BUILD the regional layer rather
+than adopt it.**
+
+### 🟡 `851-G4` — there is an MCP surface over three LMSs and none over the learning record or credentials
+
+🟡 **The claim:** this base holds `Moodle-MCP` (`207★`), `canvas-mcp` (`119★`) and
+`brightspace-mcp-server` (`67★`), and **no MCP server over an LRS/xAPI store or over a credential
+issuer**.
+
+🟢 **What was run:** `xapi LRS mcp server learning record` → **`0` results**;
+`mcp server credential badge certificate` → **`0` results**; `mcp server education LMS gradebook`
+→ `1` result, `PsychQuant/che-ntucool-mcp` (`1★`, MIT, **already shelved** — caught by the
+mandated `grep`). All first-party `search/repositories`, `2026-11-16`.
+🟢 **Shelf `grep` before writing:** `LRS` → `36` mentions on the shelves (the stores are held;
+the MCP surface over them is not).
+
+🔵 **Filed as a demand signal and a candidate BUILD, not as a missing dependency.** 🟢 **`P79`
+step 3 reads evidence through the LMS MCP servers precisely because the LRS has no such surface**
+— if that step proves load-bearing across engagements, the LRS MCP server is the obvious thing
+for a studio to publish, and it would be first.
+
+---
+
 ## 🔴 `2026-11-16` (fifty-fifth pass, `p850`) — **all three of `p848`'s declared gaps are REFUTED by this base's own shelves, and the gate built to prevent that has never graded a claim**
 
 ### 🔴 `848-G1` — **REFUTED, not closed.** The SIS interchange was never missing

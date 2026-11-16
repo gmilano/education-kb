@@ -4,6 +4,102 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-sixth pass (`p851`, 2026-11-16) — `3` trends (`T171`–`T173`)
+
+## `T171` — a generic research leg aimed at a field you have worked for fifty-six passes returns only what you already took; the ARTEFACT query is the only one still paying (fifty-sixth pass, `p851`)
+
+🔴 **Measured, not asserted.** The four mandated generic legs returned `10` distinct repository
+addresses this pass. 🔴 **This base already held `10` of `10`** — `7` on a graded shelf, `3` in
+trending history. 🔴 **The vertical-platform leg scored `10` of `10` on the same test, for the
+twelfth consecutive pass.** 🟢 **The artefact legs, run in the same hour by the same instrument,
+returned `6` permissive byte-read rows from three standards this base had mentioned `5`, `1` and
+`0` times** (`Open Badges`, `CLR`, `Common Cartridge`).
+
+🔵 **The mechanism is not that the web stopped producing education repos.** It is that a generic
+query and a mature KB are ranked by the same thing — popularity — so the query's whole first page
+is, by construction, what a popularity-ranked KB already absorbed. 🟢 **An artefact noun escapes
+that because it is ranked by RELEVANCE to a standard almost nobody searches for.**
+
+🟢 **The operational rule, and it is cheap:** before running a generic leg, grep the shelves for
+the field's artefact nouns and run the legs for the nouns scoring **under `10` mentions**. 🔵 **The
+census this pass cost one `grep` over three files and chose four productive queries out of
+thirteen candidates.** → `ACTION p851-A`.
+
+🟡 **Honest scope.** `10` is a small denominator and one hour is one sample. 🟢 **But the
+direction is corroborated by `p850` independently** — its nine rows also came from artefact
+queries (`OneRoster`, `WCAG`, `AAC`), after its generic legs produced the same nil. 🔵 **Two
+consecutive passes, the same split, found by different people-shaped processes.**
+
+## `T172` — the rewrite is this base's largest DELETION event, nothing in the base can see what it removed, and the loss is not in the archive's favour (fifty-sixth pass, `p851`)
+
+🔴 **`T168` said a base this large cannot find what it holds. `T172` is worse and it is measured:
+this base DISCARDS at scale, on a four-day cycle, and the discard is invisible from every file a
+later pass is told to read.**
+
+🟢 **The measurement, reproducible with one regex over the working tree:**
+
+| Corpus | Distinct `github.com/owner/repo` addresses |
+|---|---|
+| The `3` current shelves (`agents/top`, `repos/foundations`, `verticals/solutions`) | `865` |
+| The same `3` shelves at `archive/2026-11-12-p787-pre-rewrite/` | `2,125` |
+| 🔴 **Absent from all `3` current shelves** | **`1,905`** (`89%`) |
+| 🟡 …of those, still recoverable from `agents/trending.md` or `repos/trending.md` | `1,347` |
+| 🔴 **…absent from the shelves AND both trending files — recoverable from `archive/` only** | **`208`** |
+| 🔴 …of those `208`, how many were graded TABLE ROWS at `p787` | **`200` (`96%`)** |
+
+🟢 **The `865` agrees with `p850`'s independently-derived `868` to `0.3%`**, which is what makes
+the `2,125` trustworthy: the same instrument produced both.
+
+🔴 **What was dropped is not filler:** `h5p/h5p-interactive-video` (the dominant open interactive-
+content runtime), `microsoft/pxt` (MakeCode), `kobotoolbox/kpi`, `adlnet/lrs-conformance-test-suite`
+(the xAPI conformance suite), `learnosity/learnosity-sdk-php`, `simplesamlphp/simplesamlphp-module-oidc`,
+`oppia/analytics-data-platform`, `ourresearch/oadoi`.
+
+🔵 **And here is the join with `T168` that makes this urgent rather than tidy.** `ACTION p850-B`
+tells a pass to grep **the three shelves** before declaring an absence. 🔴 **A row deleted by a
+rewrite is absent from the three shelves — so the prescribed check returns MISS and certifies the
+gap as real.** 🔴 **The instrument built to stop false absences will now manufacture them, at a
+rate of `208` candidate addresses per rewrite.** 🟢 **Two of this pass's own six "new" foundation
+rows — `openbadges-validator-core`, `digital-credentials-public-validator` — were on
+`repos/foundations.md` on `2026-11-12` and were re-found this pass by querying GitHub, exactly as
+a stranger would.**
+
+🟢 **The repair is one word in the rule: grep the shelves, the trending files AND `archive/`.**
+🔵 **And a rewrite should emit the diff of dropped addresses into the trending file it is already
+appending to, which costs nothing and converts a deletion into a record.**
+→ `ACTION p851-B`, `ACTION p851-C`, `851-G2`.
+
+🟡 **Scope it honestly.** `archive/` holds `25` snapshots and nothing is destroyed on disk; this
+is a REACHABILITY failure, not data loss. 🔴 **That distinction matters to a backup engineer and
+not at all to the next pass, which will never open `archive/2026-11-12-p787-pre-rewrite/`.**
+
+## `T173` — in an education standards field, the PERMISSIVE half is the half that reads and verifies; the COPYLEFT half is the half that transforms (fifty-sixth pass, `p851`)
+
+🟢 **Held in two unrelated tiers now, which is why it is promoted from observation to rule.**
+
+| Field | Reads / verifies — permissive | Transforms / produces — copyleft |
+|---|---|---|
+| Accessibility (`p850`, `T170`) | `guidepup` MIT · `a11y-checker` MIT · `bbc/color-contrast-checker` Apache-2.0 · `AIMAC` MIT | `cboard` GPL-3.0 · `OTTAA-Project` GPL-3.0 · `FreeAAC` AGPL-3.0 |
+| Content portability (`p851`) | `common-cartridge-viewer` **MIT** | `cc2olx` **AGPL-3.0** · `moodle2cc` **AGPL-3.0** · `multi_version_common_cartridge` **GPL-3.0** |
+| Credentials (`p851`) | `digital-credentials-public-validator` Apache-2.0 · `openbadges-validator-core` Apache-2.0 | — 🟡 **the issuing half of this tier is commercial SaaS, not copyleft** |
+
+🔵 **Why it happens, stated as a mechanism so it can be wrong:** a verifier is written by the
+standards body or a platform vendor who wants adoption and gains nothing from reciprocity; a
+converter is written by a competitor who wants migration TOWARD their platform and uses copyleft
+to stop the other side shipping it. 🟢 **`moodle2cc` is published by Instructure — Canvas's
+vendor — under AGPL-3.0, and `common-cartridge-viewer` by the same company under MIT. The same
+publisher, the same week, two licences, split exactly on that line.**
+
+🟢 **The operational value is that it is PREDICTIVE.** Before querying a new education standard,
+expect the permissive artefact to be the validator and budget for the transform step being
+tool-only. 🔵 **`P79` is built on that assumption and states it in the quote.**
+
+🔴 **The third row is a genuine exception and is recorded as one:** in credentials there is no
+copyleft transform half, because issuance went to commercial SaaS (Credly, Sertifier, Accredible)
+rather than to GPL. 🟡 **A two-of-three rule, not a law.**
+
+---
+
 ## 🟢 Fifty-fifth pass (`p850`, 2026-11-16) — `3` trends (`T168`–`T170`)
 
 ## `T168` — a knowledge base large enough to be useful is large enough to not know what it holds, and the failure mode is DECLARING AN ABSENCE (fifty-fifth pass, `p850`)

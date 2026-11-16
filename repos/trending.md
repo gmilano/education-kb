@@ -4,6 +4,62 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-sixth pass (`p851`) — 🟢 **`6` foundation rows from the credential and content-portability tier, chosen by an artefact-noun census — and `4` of the `6` were on `repos/foundations.md` four days ago**
+
+🟢 **Credentials (`4` rows, `0` copyleft).**
+[`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator)
+(Apache-2.0, `18★`, `14` forks, pushed `2026-11-13` — validates **Open Badges AND Comprehensive
+Learner Record**) ·
+[`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core)
+(Apache-2.0, `61★`, default ref **`develop`**, grant is `13,185 B` = Apache-2.0 **plus appended
+`AOL LLC` and `ASF Base64` notices**) ·
+[`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) (Apache-2.0, `12★`, pushed `2026-11-11`
+— CASE server and editor; this base mentioned `CASE` `26` times and shelved `0` implementations) ·
+[`1EdTech/cert-schema`](https://github.com/1EdTech/cert-schema) (MIT, `77★`, **`71` forks**, holder
+`Media Lab Learning Initiative`, stale `2024-05-24`).
+
+🟢 **Content portability (`2` rows).**
+[`instructure/common-cartridge-viewer`](https://github.com/instructure/common-cartridge-viewer)
+(MIT, `95★`, holder `Instructure, Inc.`, pushed `2026-11-04` — the only permissive Common
+Cartridge artefact found) ·
+[`impierce/credential-converter`](https://github.com/impierce/credential-converter) (Apache-2.0,
+`13★`, OB 3.0 ↔ ELM; 🔴 region NOT established first-party — `README` grepped for `Netherlands`,
+`Enschede`, `Europe`, `EU`, `EBSI`: `0` hits).
+
+🔴 **The flag of the week: [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification)
+has `206★`, `76` forks, was pushed `2026-11-13` — and has NO LICENCE AT ALL.** `LICENSE`,
+`LICENSE.md`, `LICENSE.txt`, `COPYING` and `NOTICE` were each requested on `develop` and all five
+returned `404`; the `README` resolves, so the repository is live and simply ungranted. 🔵 **The
+most-starred Open Badges artefact on GitHub is the one a studio may not vendor.** → `851-G1`.
+
+🔴 **Star-ranking this tier returns a corpse first.** The highest-starred result in the whole leg
+is [`mozilla/openbadges-backpack`](https://github.com/mozilla/openbadges-backpack) at **`862★`** —
+**archived**, last pushed `2019-08-22`, licence `NOASSERTION`. `openbadges-badgekit`,
+`openbadges-bakery`, `openbadges-validator` and `openbadges-discovery` are all archived
+`2018`–`2020`. 🟢 **Open Badges did not die — custodianship moved to 1EdTech, which is why every
+live row above is small.**
+
+🔴 **Copyleft half of Common Cartridge, recorded so it is not re-discovered as good news:**
+[`openedx/cc2olx`](https://github.com/openedx/cc2olx) **AGPL-3.0** (`10★`, pushed `2026-11-10`) ·
+[`instructure/moodle2cc`](https://github.com/instructure/moodle2cc) **AGPL-3.0** (`9★`) ·
+[`vhl/multi_version_common_cartridge`](https://github.com/vhl/multi_version_common_cartridge)
+**GPL-3.0** (`5★`). 🔵 **Every converter is copyleft; the one viewer is MIT — and both halves are
+published by Instructure.** → `T173`.
+
+🔴 **The uncomfortable half of this week's haul.**
+`digital-credentials-public-validator`, `openbadges-validator-core`, `OpenCASE` and `cert-schema`
+were **graded rows on `repos/foundations.md` in `archive/2026-11-12-p787-pre-rewrite/`** and are
+absent from all three shelves and both trending files today. 🔴 **They were re-found by querying
+GitHub, exactly as a stranger would.** 🔴 **`208` addresses are in that condition, `200` of them
+former table rows.** → `T172`, `851-G2`.
+
+🟡 **Noise note for the next pass.** The leg `common cartridge` returns
+`euan-forrester/save-file-converter` (`242★`, GPL-3.0) at the top — a **retro games console**
+cartridge converter. 🔵 **Highest-starred result in that query and entirely unrelated; filed so
+nobody grades it.**
+
+---
+
 ## `2026-11-16` — fifty-fifth pass (`p850`) — 🟢 **`9` foundation rows from two tiers this base declared empty one pass ago, found by querying the ARTEFACT instead of the product**
 
 🟢 **Accessibility (`6` rows, `0` copyleft).**

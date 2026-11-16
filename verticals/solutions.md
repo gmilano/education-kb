@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Fifty-sixth pass (`p851`, 2026-11-16) — **`0` platform rows (`147` → `147`). TWELFTH consecutive nil — and this pass stops asking the question and prices the EXIT instead.**
+
+🔴 **The leg was run verbatim** (`open source platform education LMS SIS MIT Apache`, WebSearch,
+plus first-party `search/repositories`). 🔴 **Same closed set, twelfth time:** Moodle (GPL-3.0) ·
+Open edX (AGPL-3.0) · Canvas (AGPL-3.0, commercial SaaS in practice) · Sakai (**ECL-2.0**, not
+Apache-2.0 — `p846`) · OpenEduCat (LGPL-3.0) · ILIAS (GPL) · Chamilo (GPL) · Frappe LMS (AGPL-3.0).
+🟢 **Every one was already on this shelf before the leg ran — `10` of `10`, measured in
+`agents/top.md` (`p851`).** 🔵 **Not one is permissive. Twelve passes is enough evidence that
+this is the FIELD's shape, not this base's blind spot.**
+
+### 🟢 What changed this pass is the question
+
+🔴 **Eleven passes asked "is there a permissive platform to adopt?" and the answer is settled: no.**
+🟢 **`p849` answered it with `P76` (inherit the LMS over LTI 1.3) and `p850` with `P77` (inherit
+the SIS over Ed-Fi/OneRoster). `p851` adds the third and least comfortable half: how a client
+LEAVES.**
+
+🟢 **`Common Cartridge` is the exit, and this base could not read one until today.** The `.imscc`
+package is the 1EdTech format a course is exported from an LMS in — the only thing that makes the
+copyleft platform set above survivable, because it is what makes the content portable even when
+the platform is not. 🔴 **The artefact-noun census this pass found `Common Cartridge` mentioned
+`0` times across all three shelves** (`repos/foundations.md`, `p851`).
+
+🟢 **Now filed, with the licence split stated so no one re-discovers it as good news:**
+
+| Role in a migration | Artefact | Licence | Consequence for a studio |
+|---|---|---|---|
+| **Read / audit** a cartridge | [`instructure/common-cartridge-viewer`](https://github.com/instructure/common-cartridge-viewer) `95★` | 🟢 **MIT** (byte-read `2026-11-16`, `1,074 B`, `sha256₁₂ 21f8b02800eb`, holder `Instructure, Inc.`) | 🟢 **Build on it, ship it, put it in front of the client.** Published by Canvas's own vendor. |
+| **Convert** Moodle → cartridge | [`instructure/moodle2cc`](https://github.com/instructure/moodle2cc) `9★` | 🔴 **AGPL-3.0** (byte-read, `34,520 B`, `sha256₁₂ 57c8ff33c9c0`) | 🔴 **Run it as a tool, do not link it into a deliverable.** |
+| **Convert** cartridge → Open edX | [`openedx/cc2olx`](https://github.com/openedx/cc2olx) `10★` | 🔴 **AGPL-3.0** (byte-read, `35,136 B`, `sha256₁₂ e12d78569742`, pushed `2026-11-10`) | 🔴 Same posture. 🟢 Actively maintained, which the rest of this tier is not. |
+| **Parse** multi-version cartridges | [`vhl/multi_version_common_cartridge`](https://github.com/vhl/multi_version_common_cartridge) `5★` | 🔴 **GPL-3.0** (byte-read, `35,149 B`, `sha256₁₂ 3972dc9744f6`) | 🔴 Ruby; tool-only. |
+
+🔵 **The shape repeats `T170` exactly: the permissive half of the field is the half that READS and
+VERIFIES; the copyleft half is the half that TRANSFORMS.** 🟢 **Stated as a rule in `T173`,
+because it has now held in two unrelated tiers (AAC at `p850`, Common Cartridge at `p851`) and it
+predicts where to look before the query is written.**
+
+🟡 **One address declined, re-checked as `p850` promised.**
+[`eloompty/Eloom-LMS-International`](https://github.com/eloompty/Eloom-LMS-International) — MIT,
+still `0★`, no change since `2026-10-06`. 🔴 **Declined again. A permissive LMS with no deployment
+is not a platform row on a shelf whose other entries run national education systems.**
+
+---
+
 ## 🔴 Fifty-fifth pass (`p850`, 2026-11-16) — **`0` platform rows (`147` → `147`). ELEVENTH consecutive nil, and this pass stops re-recording it and prices it instead.**
 
 🔴 **The leg was run.** `open source platform education LMS student information system MIT Apache 2026`

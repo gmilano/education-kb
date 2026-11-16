@@ -4,6 +4,73 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Fifty-sixth pass (`p851`, 2026-11-16) — **`0` agent rows (`398` → `398`). The four mandated generic legs returned `10` addresses and this base already held `10` of `10`. The generic leg is SATURATED, and this pass measures it instead of re-running it.**
+
+🔴 **The nil is the finding, and it has a denominator.** 🟢 **All four mandated global legs were
+run verbatim** — `top open source AI agents education 2026 github MIT`, `github trending education
+AI 2026`, `open source platform education LMS SIS MIT Apache`, `AI education industry trends 2026`
+— 🔴 **and every distinct repository address they returned was already in this corpus, checked by
+`grep` before anything was written.**
+
+### 🔴 Finding 1 — `10` of `10`, measured address-by-address
+
+| Address returned by a mandated generic leg | On a graded shelf? | In trending history? | New to this base? |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 yes (`2` shelves) | yes | 🔴 no |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 yes (`2` shelves) | yes | 🔴 no |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | 🟢 yes (`2` shelves) | yes | 🔴 no |
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | 🟢 yes (`2` shelves) | yes | 🔴 no |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 yes (`2` shelves) | yes | 🔴 no |
+| [`eloompty/Eloom-LMS-International`](https://github.com/eloompty/Eloom-LMS-International) | 🟢 yes (`2` shelves) | yes | 🔴 no — **declined by `p850` one pass ago** |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🟡 yes (`1` shelf) | yes | 🔴 no |
+| [`dvbs2000/visible-ai`](https://github.com/dvbs2000/visible-ai) | 🔴 no | 🟢 yes | 🔴 no |
+| [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) | 🔴 no | 🟢 yes | 🔴 no |
+| [`huggingface/agents-course`](https://github.com/huggingface/agents-course) | 🔴 no | 🟢 yes | 🔴 no |
+
+🔵 **`7` of `10` sit on a graded shelf; `10` of `10` are somewhere in this corpus.** 🟢 **The
+vertical-platform leg scored the same way: `Moodle`, `Open edX`, `Canvas`, `Sakai`, `Chamilo`,
+`ILIAS`, `OpenEduCat`, `Frappe`, `RosarioSIS` and `openSIS` are all already on
+`verticals/solutions.md` — `10` of `10`, the eleventh consecutive pass of the same closed set.**
+
+🔴 **This is not `T168` repeating.** `T168` was the base failing to recognise its own holdings and
+publishing an absence. 🟢 **This pass recognised them correctly and on the first try.** 🔵 **The
+finding is about the QUERY, not the memory: a generic leg aimed at a field this base has worked
+for `56` passes now returns only what it has already taken.** → `T171`.
+
+### 🟢 Finding 2 — the artefact query returned `6` rows, and `ACTION p850-B` caught a seventh before it was filed
+
+🟢 **The same pass, same hour, a different question.** Instead of naming the product (`AI agent`,
+`platform`, `LMS`), the queries named the artefact an education system actually exchanges:
+`Open Badges`, `Comprehensive Learner Record`, `CASE`, `Common Cartridge`. 🟢 **`6` permissive,
+byte-read foundation rows — see `repos/foundations.md` (`p851`).**
+
+🟢 **And the rule prevented a false row.** The artefact leg
+`mcp server education LMS gradebook` returned
+[`PsychQuant/che-ntucool-mcp`](https://github.com/PsychQuant/che-ntucool-mcp) — MIT (byte-read
+`2026-11-16`, `main/LICENSE`, `1,066 B`, `sha256₁₂ 92fa9122481d`, holder
+`Copyright (c) 2026 Che Cheng`), `1★`, pushed `2026-10-18`, an MCP server for **NTU COOL**, the
+National Taiwan University Canvas instance. 🔴 **It looked like a new APAC row for the LMS-MCP
+tier.** 🟢 **The mandated `grep` ran first and found it already on `agents/top.md` AND
+`verticals/solutions.md`.** 🔵 **First recorded SAVE by `ACTION p850-B` — the rule has now
+prevented a duplicate as well as diagnosed three bad gaps.** → `T171`.
+
+### 🔴 Finding 3 — why this shelf's `398` is not a count of what this base knows
+
+🔴 **Measured this pass:** the `3` shelves carry `865` distinct repository addresses. 🟢 **That
+agrees with `p850`'s independently-derived `868` to within `0.3%`**, which is the first
+cross-check of that census by a different instrument. 🔴 **The same measurement against
+`archive/2026-11-12-p787-pre-rewrite/` returns `2,125` addresses — and `1,905` of them
+(`89%`) are absent from all three shelves today.** 🔴 **`208` are absent from the shelves **and**
+from both trending files; `200` of those `208` (`96%`) were graded TABLE ROWS four days ago.**
+
+🟢 **Named, so the scale is not abstract:** `h5p/h5p-interactive-video`, `microsoft/pxt`
+(MakeCode), `kobotoolbox/kpi`, `oppia/analytics-data-platform`,
+`simplesamlphp/simplesamlphp-module-oidc`, `learnosity/learnosity-sdk-php`,
+`adlnet/lrs-conformance-test-suite`, `ourresearch/oadoi`. 🔵 **None of these is obscure and none
+is reachable from any file a client or a later pass is told to read.** → `T172`, `851-G2`.
+
+---
+
 ## 🟢 Fifty-fifth pass (`p850`, 2026-11-16) — **`1` agent row (`397` → `398`), and the pass's primary output is that ALL THREE of `p848`'s declared gaps are refuted by this base's own shelves, by rows filed `38`–`43` passes before the gap was declared**
 
 🔴 **`848-G1`, `848-G2` and `848-G3` are all still OPEN in `intel/open-gaps.md`, and all three are

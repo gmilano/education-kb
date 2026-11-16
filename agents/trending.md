@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-sixth pass (`p851`) — 🔴 **`0` entrants, and the week's finding is that the generic agent leg returned `10` addresses this base already held, `10` out of `10`**
+
+🔴 **No entrant to report, and this is a measured nil rather than a quiet one.** The four mandated
+generic legs ran verbatim and returned
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) ·
+[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) ·
+[`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) ·
+[`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) ·
+[`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) ·
+[`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) ·
+[`dvbs2000/visible-ai`](https://github.com/dvbs2000/visible-ai) ·
+[`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) ·
+[`huggingface/agents-course`](https://github.com/huggingface/agents-course) ·
+[`eloompty/Eloom-LMS-International`](https://github.com/eloompty/Eloom-LMS-International).
+🔴 **Every one was already in this corpus — `7` on a graded shelf, `3` here in trending.**
+🔵 **`Eloom` was declined by `p850` one pass ago and the leg surfaced it again**, which is the
+clearest single illustration of what a saturated query does. → `T171`.
+
+🟢 **Watched, and NOT filed — the first recorded save by `ACTION p850-B`.**
+[`PsychQuant/che-ntucool-mcp`](https://github.com/PsychQuant/che-ntucool-mcp) — MIT (byte-read
+`2026-11-16`, `main/LICENSE`, `1,066 B`, `sha256₁₂ 92fa9122481d`, holder `Copyright (c) 2026 Che
+Cheng`), `1★`, pushed `2026-10-18`. An MCP server for **NTU COOL**, National Taiwan University's
+Canvas instance — `10` tools over courses, assignments and submissions. 🔴 **It looked like a new
+APAC row for the LMS-MCP tier; the mandated `grep` ran first and found it already on
+`agents/top.md` and `verticals/solutions.md`.** 🔵 **The rule has now prevented a duplicate as
+well as diagnosed three bad gaps.**
+
+🔴 **The LMS-MCP tier is unchanged for a second consecutive pass.**
+[`Faixiang/Moodle-MCP`](https://github.com/Faixiang/Moodle-MCP) (`207★`) ·
+[`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) (`119★`) ·
+[`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server)
+(`67★`). 🟢 **Still this base's healthiest education-agent category; still no new entrant above
+`1★`.** 🔴 **The artefact queries `xapi LRS mcp server learning record` and `mcp server credential
+badge certificate` each returned `0` results** — there is no MCP surface over the learning-record
+store or over credentials, in a field that has one over three LMSs. 🟡 **Recorded as a demand
+signal, not as a build commitment** → `851-G4`.
+
+🔵 **What the agent tier did NOT produce this pass, the supply tier did:** `6` permissive
+byte-read credential and content-portability rows — see `repos/trending.md` and
+`repos/foundations.md` (`p851`).
+
+---
+
 ## `2026-11-16` — fifty-fifth pass (`p850`) — 🔴 **`1` MIT entrant, and the week's real movement is that three "gaps" this base declared last pass were already sitting on its own shelves**
 
 🟢 **Entrant.** [`VishwamPatel-Infynno/Question-Bank-Generator`](https://github.com/VishwamPatel-Infynno/Question-Bank-Generator)

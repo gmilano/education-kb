@@ -4,6 +4,96 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-sixth pass (`p851`, 2026-11-16) — **`6` foundation rows (`200` → `206`): the credential and content-portability tier, found by the artefact census `ACTION p850-B` prescribes — and `4` of the `6` were graded rows on THIS file on `2026-11-12` before a rewrite deleted them**
+
+🟢 **Every grant below was read as bytes from `raw.githubusercontent.com` on `2026-11-16`**, with
+byte size, `sha256₁₂`, default ref and copyright holder recorded in the cell. 🔵 **Six rows,
+`0` copyleft, `0` unlabelled: `4` Apache-2.0 and `2` MIT.**
+
+🔴 **Read `intel/trends.md` (`T172`) before trusting this file's row count as a measure of what
+this base knows.** Four of the six rows below are not discoveries. They were graded rows on
+`repos/foundations.md` as it stood on `2026-11-12`, and they are absent from all three shelves
+**and from both trending files** today. 🔴 **They were re-found this pass by querying GitHub —
+the same way a stranger would — because nothing in this base can see its own archive.**
+
+### 🟢 How the tier was found — the artefact-noun census, run BEFORE any query
+
+🟢 **`ACTION p850-B` says to grep the shelves for the artefact noun before declaring anything.
+This pass ran that census first and used it to CHOOSE the queries**, which is the first use of
+the rule as an instrument rather than as a check.
+
+| Artefact noun | Mentions across the `3` shelves | Verdict |
+|---|---|---|
+| `LTI` | `206` | 🟢 saturated — not queried |
+| `Caliper` | `104` | 🟢 saturated — not queried |
+| `QTI` | `90` | 🟢 saturated — not queried |
+| `Ed-Fi` | `76` | 🟢 saturated — not queried |
+| `OneRoster` | `59` | 🟢 saturated — not queried |
+| `xAPI` | `57` | 🟢 saturated. 🔵 **`Tin-Can` — its former name — returns `0`. That is an ALIAS, not a gap**, and filing it as one is the `848-G`-class error |
+| `SCORM` | `39` | 🟢 saturated — not queried |
+| `SIF` | `36` | 🟡 prose only, `0` implementations — `848-G1`'s genuine residual, still open |
+| `PESC` | `33` | 🟢 covered |
+| `CASE` | `26` | 🟡 **standard covered, `0` implementations shelved** → queried |
+| `Open Badges` | `5` | 🔴 **thin** → queried |
+| `CLR` / Comprehensive Learner Record | `1` | 🔴 **near-absent** → queried |
+| `Common Cartridge` | `0` | 🔴 **absent** → queried |
+
+🔵 **The census IS the pass.** The four mandated generic legs returned `10` addresses and
+`0` new rows (measured in `agents/top.md`, `p851`). 🟢 **Four artefact nouns returned these six.**
+
+### 🟢 The credential tier — `Open Badges`, `CLR` and `CASE`, which this shelf held at `5`, `1` and `0`
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/1EdTech/digital-credentials-public-validator | 🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917` — the canonical full payload) | 18 | 🟢 **The row that answers `CLR`, which this shelf mentioned exactly once.** The **public validator for Open Badges AND Comprehensive Learner Record** — one instrument covering both credential standards. `14` forks, pushed **`2026-11-13`** (three days before this pass), not archived, default ref `main`. 🔵 **The fork:star ratio (`14:18`) is the tell: this is an artefact people RUN, not one they bookmark.** 🟢 **Load-bearing for `P79`.** 🔴 **Was on this file on `2026-11-12`; deleted by the rewrite; re-found by query (`T172`).** 🟡 Region not established first-party; 1EdTech is a US-incorporated standards body but this base does not file a region from an org's incorporation alone. |
+| https://github.com/1EdTech/openbadges-validator-core | 🟢 **Apache-2.0 — byte-read `2026-11-16`** (`develop/LICENSE`, `13,185 B`, `sha256₁₂ ba1f153bdba3`; identical bytes on `master`) | 61 | 🟢 **Open Badges validation in Python** — the reference validator, `32` forks, pushed `2025-11-04`, not archived. 🔴 **Default ref is `develop`, not `main` or `master`** — recorded because this base has mis-read a grant twice by assuming the ref (`gate-branch-alias`, `p428`). 🔴 **The `13,185 B` payload is NOT plain Apache-2.0 and a studio must not treat it as such:** it is Apache-2.0 **plus appended third-party notices** — `Copyright (c) 1998-2009 AOL LLC` and `Copyright 1999-2008 The Apache Software Foundation` (a vendored Base64). 🔵 **Canonical Apache-2.0 is `11,357 B`; the extra `1,828 B` are attribution obligations that travel with any derivative.** 🟢 **This is exactly why this base byte-reads instead of trusting the API's `spdx_id`, which says `Apache-2.0` and stops there.** |
+| https://github.com/1EdTech/OpenCASE | 🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/LICENSE`, `11,264 B`, `sha256₁₂ ccf5a4564e72`) | 12 | 🟢 **New to this shelf — and it converts `CASE` from a noun into a dependency.** **Implementations of CASE Server and Editor**: `CASE` (Competencies and Academic Standards Exchange) is how a curriculum's competency framework is published and referenced machine-readably. 🔵 **This shelf mentioned `CASE` `26` times and shelved `0` implementations of it** — the exact shape of gap the census is built to catch. `5` forks, pushed `2026-11-11`, not archived, default ref `main`. 🟡 Region not established first-party. |
+| https://github.com/1EdTech/cert-schema | 🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,096 B`, `sha256₁₂ 06d87bf42a0a`, holder `Copyright (c) 2016 Media Lab Learning Initiative`) | 77 | 🟢 **The schema for Blockcerts** — blockchain-anchored certificates, and the most-starred permissive artefact in this tier. 🔵 **`71` forks against `77` stars is the highest fork:star ratio on this shelf**, which for a SCHEMA means implementations rather than enthusiasm. 🔴 **Scope it honestly: pushed `2024-05-24`, two years stale.** 🟢 **Filed as the interchange REFERENCE for anchored credentials, not as a live dependency** — and the `MIT Media Lab Learning Initiative` holder line is the provenance that makes it citable in a procurement conversation. |
+
+### 🟢 The content-portability tier — `Common Cartridge`, which this shelf mentioned `0` times
+
+🔵 **Why a portability tier belongs under foundations.** Every platform on `verticals/solutions.md`
+is copyleft and none is replaceable (twelfth consecutive nil, `p851`). 🟢 **Common Cartridge is
+not a platform — it is the EXIT**, the IMS/1EdTech package format a course leaves an LMS in. 🔴
+**A studio that cannot read a `.imscc` cannot quote a migration, and this base could not read one
+until this pass.**
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/instructure/common-cartridge-viewer | 🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,074 B`, `sha256₁₂ 21f8b02800eb`, holder `Copyright (c) 2018 Instructure, Inc.`) | 95 | 🟢 **The only permissive Common Cartridge artefact found, and its publisher is Instructure** — the vendor behind Canvas. 🔵 **The provenance is the value: "the cartridge reader is Canvas's own, under MIT" survives a procurement review in a way a personal repo does not.** Views `.imscc` packages in the browser, so a migration audit becomes a page a client can look at rather than a script they must trust. `27` forks, pushed `2026-11-04`, not archived, default ref `master`. 🟡 **Region North America on the artefact's publisher** (Instructure, Inc., a US corporation named in the grant itself) — institutional evidence, not inference. |
+| https://github.com/impierce/credential-converter | 🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,356 B`, `sha256₁₂ efd09e39cb61`) | 13 | 🟢 **Translates BETWEEN credential data formats** — Open Badges 3.0, W3C Verifiable Credentials and the European Learning Model among them. 🔵 **It is the joint between the two credential worlds this base already holds separately**: `european-commission-empl/European-Learning-Model` (EUPL-1.2) is on these shelves and 1EdTech's stack now is too; this is what moves a record from one to the other. `2` forks, pushed `2026-02-05`, not archived. 🔴 **Scope it honestly: `13★`, `2` forks, nine months since the last push — a reference implementation, not a dependency.** 🟡 **Region NOT established first-party.** The `README` was fetched and grepped this pass for `Netherlands`, `Enschede`, `Europe`, `EU` and `EBSI`: **`0` hits.** 🔵 **An ELM converter is circumstantially European and this base still does not file a region on circumstance.** |
+
+### 🔴 Flagged, not shelved — what the same census turned up and this base will not build on
+
+🔴 **`1EdTech/openbadges-specification` — `206★`, and it has NO LICENSE AT ALL.** The
+most-starred Open Badges artefact on GitHub, `76` forks, pushed `2026-11-13`, not archived,
+default ref `develop`. 🔴 **Five candidate filenames were requested on `develop` and every one
+returned `404`: `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `NOTICE`.** 🟢 The `README`
+resolves (`2,604 B`, `sha256₁₂ 5d9e848342f9`), so this is a live repository with no grant, not a
+fetch failure. 🔵 **Spec text without a licence is the normal condition of a standards body and a
+blocker for a studio that wants to vendor it** — cite it, do not copy it. → `851-G1`.
+
+🔴 **The copyleft half of Common Cartridge, recorded so nobody re-discovers it as good news:**
+[`openedx/cc2olx`](https://github.com/openedx/cc2olx) **AGPL-3.0** (byte-read, `35,136 B`,
+`sha256₁₂ e12d78569742`, `10★`, pushed `2026-11-10`) ·
+[`instructure/moodle2cc`](https://github.com/instructure/moodle2cc) **AGPL-3.0** (byte-read,
+`34,520 B`, `sha256₁₂ 57c8ff33c9c0`, `9★`) ·
+[`vhl/multi_version_common_cartridge`](https://github.com/vhl/multi_version_common_cartridge)
+**GPL-3.0** (byte-read, `35,149 B`, `sha256₁₂ 3972dc9744f6`, `5★`, pushed `2026-11-05`).
+🔵 **Every CONVERTER is copyleft; the one VIEWER is MIT.** 🟢 **That is `T170`'s accessibility
+finding repeating in a second field, and `T173` states it as a rule.**
+
+🔴 **The Mozilla Open Badges estate is dead and its star count is a trap.**
+[`mozilla/openbadges-backpack`](https://github.com/mozilla/openbadges-backpack) is the
+highest-starred result in the whole leg at **`862★`** — and it is **archived**, last pushed
+`2019-08-22`, licence `NOASSERTION`. `openbadges-badgekit`, `openbadges-bakery`,
+`openbadges-validator` and `openbadges-discovery` are all archived `2018`–`2020`. 🟢 **Open Badges
+did not die; its custodianship moved to 1EdTech, which is why the live rows above are small.**
+🔵 **A star-ranked query on this tier returns the corpse first — file this so the next pass does
+not grade stars without reading `archived`.**
+
+---
+
 ## 🟢 Fifty-fifth pass (`p850`, 2026-11-16) — **`9` foundation rows (`191` → `200`): the accessibility tier `848-G2` said did not exist, and the SIS-interchange spine `848-G1` said was missing — both found by searching the ARTEFACT, both byte-read today**
 
 🟢 **Every grant below was read as bytes from `raw.githubusercontent.com` on `2026-11-16`**, with
