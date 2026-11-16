@@ -4,6 +4,102 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` (sixty-first pass, `p856`) — **`5` gaps, plus `855-G5` DISCHARGED with the fix verified against `p855`'s own figure**
+
+### 🟢 `855-G5` — DISCHARGED. The absence-claims instrument read nothing, and now reads the base
+
+🔴 **`p855` reported the defect: [`ingest/absence-claims.py`](../ingest/absence-claims.py) resolved
+its root to `os.path.dirname(__file__)` — the `ingest/` directory — so run as its own docstring
+shows it reported `0 pages, 0 shelf rows, 0 absence claims`:** 🔴 **a clean bill of health from an
+instrument that read nothing.**
+
+🟢 **`p856` reproduced it, patched it, and verified the patch.** The default root is now the PARENT
+of `ingest/`; `KB_ROOT` still overrides for out-of-tree runs.
+
+| `python3 ingest/absence-claims.py`, no `KB_ROOT` | Before | After |
+|---|---|---|
+| pages read | 🔴 `0` | 🟢 `11` |
+| shelf rows | 🔴 `0` | 🟢 `17,421` |
+| distinct addresses | 🔴 `0` | 🟢 `6,098` |
+| absence claims | 🔴 `0` | 🟢 `2,328` (`1,731` UNDATED, `74.4%`) |
+| SUPPLY absence claims | 🔴 `0` | 🟢 **`855`** |
+
+🟢 **The cross-check that makes this a verification rather than an assertion: `p855` reported
+`855` supply absence claims with `KB_ROOT` set, and the patched default reproduces `855` exactly.**
+
+### 🔴 `856-G1` — the weight grant is not merely unprobed; it is UNREACHABLE from this environment
+
+🔴 **`T189` shows `10` of `22` model-bearing rows keep their capability off-repo. The terms live
+mostly on `huggingface.co`, and this session cannot resolve that host:**
+`getaddrinfo ENOTFOUND huggingface.co`, `curl` exit `000`. 🔴 **It is outside the session's allowed
+network domains.**
+
+🟡 **How it closes:** (a) `huggingface.co` is allowed in the session's network settings, and a
+weight-grant probe is written to sit beside the root byte-read; or (b) the terms are read through an
+already-allowed channel. 🔴 **Until then every model-bearing row here is `CODE-ONLY` and must be
+published as such.** 🟢 **The cost of NOT closing it is asymmetric: `DiariZen` is MIT at root and
+`CC BY-NC 4.0` where it counts.**
+
+### 🟡 `856-G2` — `10 of 22` is a FLOOR, because the weight probe reads only `README`
+
+🔴 [`qurator-spk/eynollah`](https://github.com/qurator-spk/eynollah) — filed PERMISSIVE by `p855` —
+scored `-` on the probe and **does** ship its weights off-repo, via a Zenodo DOI documented in
+`models.md`. 🔴 **Found by hand, which is not a method.**
+
+🟡 **How it closes:** the probe reads `models.md`, `MODEL_CARD*`, `docs/`, and `setup.py`/`pyproject`
+download URLs, not `README` alone. 🔵 **The number to recover is how many of `p855`'s `25` filed
+perception rows are false negatives on this axis.**
+
+### 🔴 `856-G3` — the discovery-to-shelf backlog, RE-MEASURED (not discovered) and larger than when it was last priced
+
+🔵 **PROVENANCE FIRST, because this base's recurring defect is claiming novelty for what it already
+holds.** [`ingest/history-backlog.py`](../ingest/history-backlog.py) (`p539`) measured `4,144`
+history addresses against `240` filed (`5.8%`); `promotion-rank.py` (`p533`), `p587-promotion-census.py`
+and `promotion-audit.sh` / `T130` own this question. 🔴 **`p856` only re-ran it.**
+
+| Address census, `2026-11-16` | Count |
+|---|---|
+| distinct addresses held in total | `5,978` |
+| on the CURATED shelves | 🔴 **`1,033`** (`17.3%`) |
+| adjudicated in `measured-unusable.md` | `164` |
+| 🔴 **in the research logs ONLY, never promoted and never adjudicated** | 🔴 **`4,811`** (`80.5%`) |
+
+🔴 **The concrete cost, found by accident this pass:** `stanfordnlp/edu-convokit` and
+`EduNLP/nemo-multistage-classroom-diarization` — the two most education-specific artefacts in the
+whole classroom-discourse tier — **were already in `agents/trending.md` and on no shelf**, so `p856`
+re-discovered as "new" what earlier passes had already found. 🔵 **The research log is not a shelf,
+and a tier can be simultaneously "discovered" and absent.**
+
+🟡 **How it closes:** not by more searching. 🟢 **By promoting from the backlog instead of
+searching, for at least one pass.**
+
+### 🔴 `856-G4` — no instrument here can test an absence claim against a VOCABULARY SET
+
+🔴 **`T190`: `855-G2` declared the speech tier missing on the single phrase
+`speech-to-text in assessment`, while `pronunciation` returned `80` hits and `29` speech addresses
+sat on the shelves.** 🔴 `absence-claims.py` tests the tokens OF THE CLAIM SENTENCE against shelf
+rows; it has no notion of synonyms for the capability the sentence is about.
+
+🟡 **How it closes:** an absence claim carries, as data, the vocabulary set it was tested against
+(`≥3` terms the field actually uses, at the ARTEFACT altitude per `T185`), and the instrument fails
+any supply-absence claim that ships without one. 🔵 **Cheap, decidable, and it would have caught
+`855-G2` on the day it was written.**
+
+### 🟡 `856-G5` — LATAM's classroom-discourse supply, MEASURED in two languages rather than assumed
+
+🟢 **Run this pass in Spanish and Portuguese at the artefact altitude** (`diarización` / `análisis
+de audio` / `aula`; `diarização` / `análise de áudio` / `sala de aula`).
+
+🔴 **Result: the region returns GENERAL-PURPOSE transcription — meeting transcribers, a court-hearing
+transcriber, desktop WhisperX wrappers — and no classroom-specific granted project.** The one
+Spanish classroom-adjacent artefact that computes talk time and participation share,
+`notos15/Proyecto_Diarizacion`, is coursework (`1★`, an acoustics module) and 🔴 **`NO-GRANT-AT-PROBED-PATHS`**.
+
+🔵 **This is an INFORMED gap, not silence: the tier's substrate is region-neutral** (`diart` is
+French, `pyAudioAnalysis` needs no weights at all), **so LATAM's gap is in the CLASSROOM layer, not
+the audio layer** — which is exactly the layer a studio builds. 🟢 **Portuguese and Spanish
+transcription of the region's own accents is already solved by the WhisperX wrappers above.**
+
 ## 🟢 `2026-11-16` (sixtieth pass, `p855`) — **`6` gaps, each with the query, probe or instrument run before it was written (`ACTION p850-B`)**
 
 🔵 **Three of these (`855-G4`, `855-G5`, `855-G6`) are instrument defects rather than market

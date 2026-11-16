@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — `p856` — **classroom DISCOURSE enters; and every model-bearing agent in this base is re-graded `CODE-ONLY`**
+
+🟢 **New and permissive, byte-read today:** [`juanmc2005/diart`](https://github.com/juanmc2005/diart)
+(MIT, `1,105 B`, `2,047★`, Paris-Saclay + CNRS) · [`tyiannak/pyAudioAnalysis`](https://github.com/tyiannak/pyAudioAnalysis)
+(Apache-2.0, `11,357 B`, `6,273★`, 🟢 **no weights at all**) · [`NavodPeiris/speechlib`](https://github.com/NavodPeiris/speechlib)
+(MIT, `1,068 B`, `268★`, LK) · [`notch-up/diarize`](https://github.com/notch-up/diarize)
+(Apache-2.0, `11,357 B`, `127★`) · [`DMlabcodeorg/WhoSaidWhat`](https://github.com/DMlabcodeorg/WhoSaidWhat)
+(MIT, `1,069 B`, `1★`, ICDL 2024, 🟢 validated against human coding) · [`07anishu12/ClassEvidence-AI`](https://github.com/07anishu12/ClassEvidence-AI)
+(Apache-2.0, `11,350 B`, `0★`, IN).
+
+🟡 **Permissive at root, NOT deployable on its weights:** [`BUTSpeechFIT/DiariZen`](https://github.com/BUTSpeechFIT/DiariZen)
+— MIT code (`1,071 B`), 🔴 **weights `CC BY-NC 4.0`, research/academic only** · [`revdotcom/reverb`](https://github.com/revdotcom/reverb)
+— Apache-2.0 code (`11,357 B`), 🔴 **"the license in this repository applies only to the code not the models"**.
+
+🔴 **The re-grade (`T189`):** `10` of `22` model-bearing rows across this base point their weights
+off-repo; `1` of those `10` states the terms anywhere the probe can read them. 🔴 **`huggingface.co`
+does not resolve from this session** (`getaddrinfo ENOTFOUND`), so the weight grant is unreachable
+and every such row now travels as `CODE-ONLY` (`856-G1`).
+
+🔴 **`NO-GRANT-AT-PROBED-PATHS` (`9` filenames × `{main, master}`, weaker than `p855`'s `31`×resolved-ref):**
+`LAAC-LSCP/voice-type-classifier` + `MarvinLvn` fork, `desh2608/diarizer`,
+`Gailanimesh/Classroom-Voice-Analytics-MVP-`, `JakeOJeff/cva`, `rishaan1402/ai-smart-classroom-platform`,
+`gopikakrishnan06/OnlineClassQualityAssessment`, `patelharsh0706-byte/classroom-enhancement`,
+`wajidbscs4754-boop/Audio_Conversation_Analysis`. 🔵 `6` of `9` are student prototypes — `T185`'s
+workflow-noun rule in a new tier.
+
+🟡 **New verdict class `CONFLICTED-GRANT` (`T192`):** `filipevieira/TranscreverAudioAndContarPalavras`
+ships a `LICENSE` opening `<<<<<<< HEAD` — 🟢 MIT body intact, 🔴 copyright HOLDER unresolved.
+
+🔴 **Already found, never shelved (`856-G3`):** `stanfordnlp/edu-convokit` and
+`EduNLP/nemo-multistage-classroom-diarization` were in THIS file before today and on no shelf.
+🔴 **`4,811` of `5,978` distinct addresses here are log-only and unadjudicated.**
+
+🟢 **Channel note: both channels live and bidirectionally controlled this pass** — search
+(`repo:` live→`1`, invented→`422`), byte-read (live→`200`, invented→`404`). 🔴 **`curl -sI` was NOT
+used as an oracle — through this session's proxy it returns `HTTP/1.1 200 Connection Established`
+for live AND invented hosts: `T923`/`T970` hold, re-confirmed today.** 🔴 `huggingface.co`
+unreachable. 🔴 Every market and regulatory item is `CITED, NOT READ`.
+
 ## `2026-11-16` — sixtieth pass (`p855`) — 🔴 **`p854`'s language rule tested by holding language constant and varying ALTITUDE — and it does not survive. The same channel returns `180` of `196` NEW and `2` usable. 🟢 The pass that failed paid anyway: it exposed a whole TIER this base has never held.**
 
 🟢 **Queries run verbatim this pass.** Mandated English legs (WebSearch):

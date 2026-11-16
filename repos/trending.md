@@ -4,6 +4,35 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — `p856` — **the audio-perception substrate, and three LMS grants corrected at the byte**
+
+🟢 **Filed to [`repos/foundations.md`](foundations.md) today:** [`tyiannak/pyAudioAnalysis`](https://github.com/tyiannak/pyAudioAnalysis)
+(Apache-2.0, `11,357 B`, `sha256₁₂ b40930bbcf80`, `6,273★`, pushed `2026-10-09`) ·
+[`juanmc2005/diart`](https://github.com/juanmc2005/diart) (MIT, `1,105 B`, `e459a25bfc32`, `2,047★`) ·
+[`notch-up/diarize`](https://github.com/notch-up/diarize) (Apache-2.0, `11,357 B`, `c71d239df917`, `127★`) ·
+[`BUTSpeechFIT/DiariZen`](https://github.com/BUTSpeechFIT/DiariZen) (🟡 MIT **code only**, `1,071 B`, `98ad14ba39e3`, `569★`).
+
+🔴 **Corrections to grants this base would otherwise have taken from a blog, all byte-read `2026-11-16`:**
+
+| Repo | Blog/search claim | 🔬 Byte-read verdict |
+|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | "the clearest MIT-licensed LMS" | 🔴 **`NO-GRANT-AT-PROBED-PATHS`** — `6` filenames × `3` branches incl. resolved default ref (`develop`, via `git ls-remote --symref`) |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | "Apache 2.0 for some components" | 🔴 **AGPL-3.0**, `35,136 B`, `e12d78569742` |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | "the one Apache 2.0 LMS" | 🟢 **CONFIRMED** Apache-2.0, `10,982 B`, `6dbc5b605ed0` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | — | 🟢 MIT, `1,097 B`, `3c056b34a476` |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | GitHub field: `BSD-3-Clause` | 🟢 **NEGATIVE CONTROL — field is CORRECT.** `1,531 B`, `57c341d09920`; opens "All rights reserved" but is stock BSD-3-Clause read in full. 🔵 **A mismatch NOT found is worth recording in a base that files mismatches** |
+
+🟡 **`T191` — Apache-2.0 byte-length collides, twice, inside this pass.** `11,357 B` holds TWO
+different payloads (`c71d239df917` across `revdotcom/reverb`, `notch-up/diarize` and
+`nikhilraghav29/diarizen-tutorial`; `b40930bbcf80` for `pyAudioAnalysis`). Five distinct lengths now
+observed for one licence: `10,982` / `11,350` / `11,356` / `11,357` / `11,358`. 🟢 **Pin the
+`sha256`; the length is an index at best.**
+
+🟢 **Instrument repaired this pass (`855-G5` discharged):** [`ingest/absence-claims.py`](../ingest/absence-claims.py)
+defaulted its root to `ingest/` and so reported `0 pages, 0 claims`. 🟢 **Patched to default to the
+KB root; it now reads `11` pages, `17,421` shelf rows, `6,098` addresses and `2,328` absence claims
+— and reproduces `p855`'s `855` supply-claim figure EXACTLY.**
+
 ## `2026-11-16` — sixtieth pass (`p855`) — 🟢 **The DOCUMENT-PERCEPTION tier enters this base for the first time in `60` passes: `16` foundation rows across four layers, every grant byte-read. 🔴 And the tier's traction leaders are copyleft, which inverts this base's usual licence finding.**
 
 🔵 **What the tier is, and why its absence mattered.** Between a photographed worksheet and a

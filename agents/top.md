@@ -4,6 +4,76 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-first pass (`p856`, 2026-11-16) — **`8` agent rows (`434` → `442`): the classroom-DISCOURSE tier filed, and the grade on every model-bearing row in this base narrowed from `PERMISSIVE` to `PERMISSIVE (CODE ONLY)`**
+
+🔴 **The finding that governs this pass, and it is retroactive.** This base grades a row by
+byte-reading the `LICENCE` file at the repository root. 🔴 **That document governs the CODE. For a
+perception-tier or discourse-tier row the capability IS THE WEIGHTS, the weights live off-repo, and
+their grant is a DIFFERENT document that this base has never probed.**
+
+| Measured over the `22` model-bearing rows probed today | Count |
+|---|---|
+| rows whose README points weights off-repo (HF / Zenodo / Drive / ModelScope) | 🔴 **`10`** |
+| of those `10`, rows that STATE the weight terms where the probe can see them | 🔴 **`1`** |
+| rows where the stated weight terms are NON-COMMERCIAL | 🔴 **`1`** (`DiariZen`, CC BY-NC 4.0) |
+
+🔴 **The worked case.** [`BUTSpeechFIT/DiariZen`](https://github.com/BUTSpeechFIT/DiariZen) is MIT at
+root — byte-read `1,071 B`, `sha256₁₂ 98ad14ba39e3`. 🔴 **Its README says the weights are
+`CC BY-NC 4.0`, "research and academic purposes only", because its training corpora (AISHELL-4,
+AliMeeting) are CC BY-SA 4.0.** 🔵 A studio reading only this base's old grade ships a
+non-commercial model into a paid engagement. 🔴 **[`revdotcom/reverb`](https://github.com/revdotcom/reverb)
+states the split in prose: _"The license in this repository applies only to the code not the models."_**
+
+🟡 **`10` is a FLOOR, not a count** — the probe reads `README` only, and
+[`qurator-spk/eynollah`](https://github.com/qurator-spk/eynollah) (filed PERMISSIVE by `p855`)
+keeps its Zenodo weight pointer in `models.md`, so it scored `-` and is a false negative found by
+hand. → `856-G2`.
+
+🔴 **And the weight grant CANNOT BE PROBED FROM THIS ENVIRONMENT.** `huggingface.co` fails DNS here
+(`getaddrinfo ENOTFOUND`, `curl` exit code `000`) — it is outside this session's allowed network
+domains. 🔵 **So every model-bearing row in this base is published today as `CODE-ONLY` and says
+so.** → `856-G1`.
+
+### 🟢 The classroom-DISCOURSE tier — `8` rows, every grant byte-read `2026-11-16`
+
+🔵 **What this tier does and why it is not the speech tier.** The pronunciation tier (`p854`, `P84`)
+scores ONE learner reading a known prompt. 🟢 **This tier takes a room — many speakers, no prompt —
+and answers _who spoke, for how long, in what role_.** 🔵 That is the measurement under teacher
+coaching, lesson observation and participation equity, and it is the audio sibling of `p855`'s
+document-perception tier.
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| diart | [`juanmc2005/diart`](https://github.com/juanmc2005/diart) | 🟢 MIT — byte-read `1,105 B`, `sha256₁₂ e459a25bfc32` | `2,047` | EMEA | 🟢 **STREAMING speaker diarisation** — the only row here that answers "who is speaking" DURING the lesson rather than after it. Université Paris-Saclay + CNRS, pushed `2026-06-19`. 🔴 Pulls pyannote weights from an unreachable host → `856-G1` |
+| pyAudioAnalysis | [`tyiannak/pyAudioAnalysis`](https://github.com/tyiannak/pyAudioAnalysis) | 🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ b40930bbcf80` | `6,273` | Global | 🟢 **The only row in this tier with NO weight dependency** — classical features, segmentation, trainable classifiers. 🔵 The CPU/offline escape hatch when `856-G1` cannot be resolved. Pushed `2026-10-09`; author affiliation NOT probed |
+| DiariZen | [`BUTSpeechFIT/DiariZen`](https://github.com/BUTSpeechFIT/DiariZen) | 🟡 MIT **CODE ONLY** — byte-read `1,071 B`, `sha256₁₂ 98ad14ba39e3` | `569` | EMEA | 🔴 **Weights are `CC BY-NC 4.0`, "research and academic purposes only"**, because training corpora AISHELL-4/AliMeeting are CC BY-SA 4.0. Highest accuracy in this set and **not commercially deployable on its released weights**. Brno Univ. of Technology, pushed `2026-08-04` |
+| Reverb | [`revdotcom/reverb`](https://github.com/revdotcom/reverb) | 🟡 Apache-2.0 **CODE ONLY** — byte-read `11,357 B`, `sha256₁₂ c71d239df917` | `442` | North America | 🔴 README states the grant covers the code and NOT the models. ASR + diarisation inference (WeNet + pyannote), Rev (US), pushed `2025-04-22` |
+| speechlib | [`NavodPeiris/speechlib`](https://github.com/NavodPeiris/speechlib) | 🟢 MIT — byte-read `1,068 B`, `sha256₁₂ a551e0641ff2` | `268` | APAC | 🟢 **One pipeline for diarisation + transcription + speaker recognition** with named speakers and time tags — the shortest path from a raw lesson recording to a role-labelled transcript. Sri Lanka, pushed `2026-04-19` |
+| diarize | [`notch-up/diarize`](https://github.com/notch-up/diarize) | 🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917` | `127` | Global | 🟢 **CPU-only, no API keys, RTTM export** — RTTM is the format the evaluation tooling expects, so this is the row that connects to a METRIC. 🟡 `~10.8%` DER on VoxConverse is the project's OWN README claim, `CITED, NOT READ`. Pushed `2026-05-06` |
+| WhoSaidWhat | [`DMlabcodeorg/WhoSaidWhat`](https://github.com/DMlabcodeorg/WhoSaidWhat) | 🟢 MIT — byte-read `1,069 B`, `sha256₁₂ 9c3aff6abf8a` | `1` | North America | 🟢 **The VALIDATION reference, not a substrate.** ICDL 2024 code+data separating ADULT from CHILD speech, compared against human expert coding. 🔵 `1★` is irrelevant — this is how a talk-ratio number is defended to a school board. Pushed `2025-10-23` |
+| ClassEvidence-AI | [`07anishu12/ClassEvidence-AI`](https://github.com/07anishu12/ClassEvidence-AI) | 🟢 Apache-2.0 — byte-read `11,350 B`, `sha256₁₂ d352274a97f8` | `0` | APAC | 🟡 **Read as DESIGN INPUT, not substrate** (`0★`, single author, India). 🟢 Its rubric — interaction, instructional practice, audio/video usability — is a free specification for the scoring layer. Pushed `2026-10-23` |
+
+### 🔴 Rejected this pass, with the reason
+
+🔴 **`9` addresses `NO-GRANT-AT-PROBED-PATHS`** (`9` filenames × `{main, master}` — 🟡 **a WEAKER
+probe than `p855`'s `31` filenames × resolved default ref, so this verdict is stated at its real
+strength**): `LAAC-LSCP/voice-type-classifier` and the `MarvinLvn` fork, `desh2608/diarizer`,
+`Gailanimesh/Classroom-Voice-Analytics-MVP-`, `JakeOJeff/cva`,
+`rishaan1402/ai-smart-classroom-platform`, `gopikakrishnan06/OnlineClassQualityAssessment`,
+`patelharsh0706-byte/classroom-enhancement`, `wajidbscs4754-boop/Audio_Conversation_Analysis`.
+
+🔵 **`6` of those `9` are student prototypes, which is `T185`'s workflow-noun rule reproduced in a
+new tier**: `classroom voice analytics` is an assigned exercise, so the query indexes COURSEWORK.
+🔴 **`LAAC-LSCP/voice-type-classifier` is the expensive one** — a published, paper-backed
+child/adult voice-type classifier described everywhere as open source, 🔴 **with no grant at any
+probed path on either branch.**
+
+🟡 **`filipevieira/TranscreverAudioAndContarPalavras` — a NEW verdict class, `CONFLICTED-GRANT`.**
+Its `LICENSE` (`1,211 B`, `sha256₁₂ f591794bce98`) begins `<<<<<<< HEAD` — **an unresolved git merge
+conflict committed into the grant.** 🟢 **Read in full, the conflict is confined to the COPYRIGHT
+HOLDER lines** (`Transcrição de Áudio` vs `Filipe Vieira`); the MIT body below is single and intact.
+🔵 **So the licence TYPE is unambiguous and the PARTY who could enforce or relicense is not** → `T192`.
+
 ## 🟢 Sixtieth pass (`p855`, 2026-11-16) — **`9` agent rows (`425` → `434`): `p854`'s language rule held constant and ALTITUDE varied instead — and it does not survive. 🔴 The same non-English channel that returned `17` of `17` NEW-and-USABLE yesterday returns `180` of `196` NEW and `2` usable today.**
 
 🟢 **`854-G1` left a rule: *yield is a function of the query's LANGUAGE.* `p855` tested it the only
@@ -3677,7 +3747,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 434 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 442 rows
 
 ### Filed by `p853` (2026-11-16) — `12` rows: the SPOKEN-LANGUAGE ASSESSMENT tier, every grant byte-read today, `0` copyleft, and every row's CORPUS dependency stated beside its licence
 

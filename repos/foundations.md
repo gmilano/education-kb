@@ -4,6 +4,43 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-first pass (`p856`, 2026-11-16) — **`4` foundation rows (`261` → `265`): the AUDIO-PERCEPTION layer beneath the discourse agents, plus a correction to a licence this base would otherwise have taken from a blog**
+
+🔵 **Why these are foundations and not agents.** Nothing on this shelf coaches a teacher or scores a
+lesson. Every row converts ROOM AUDIO into a structured object — speaker turns with timestamps —
+that the discourse agents on [`agents/top.md`](../agents/top.md) consume. 🟢 **It is the audio
+sibling of `p855`'s document-perception layer: `p855` turns a page into structure, this turns a
+room into structure.**
+
+| Repo | Licence, as measured | ★ / forks | Default ref · pushed | Region | Why it is a foundation and not a row on another shelf |
+|---|---|---|---|---|---|
+| [`tyiannak/pyAudioAnalysis`](https://github.com/tyiannak/pyAudioAnalysis) | 🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ b40930bbcf80` | `6,273★` | `master` · `2026-10-09` | Global | 🟢 **Feature extraction, segmentation and trainable classifiers with NO pretrained weights**, so no `856-G1` exposure. It classifies nothing about teaching on its own — it turns audio into features the discourse agents consume. The floor of this tier and the only row usable with no network at all |
+| [`juanmc2005/diart`](https://github.com/juanmc2005/diart) | 🟢 MIT — byte-read `1,105 B`, `sha256₁₂ e459a25bfc32` | `2,047★` | `main` · `2026-06-19` | EMEA | Streaming speaker turns — who spoke, when. 🔵 A substrate, not an agent: it emits segments and holds no opinion about a lesson. 🔴 Pulls pyannote weights from a host unreachable in this session |
+| [`notch-up/diarize`](https://github.com/notch-up/diarize) | 🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917` | `127★` | `main` · `2026-05-06` | Global | 🟢 **Batch diarisation, CPU-only, no API keys, RTTM output.** RTTM is the interchange format the evaluation tooling expects, which makes this the row that connects a pipeline to a MEASURABLE error rate |
+| [`BUTSpeechFIT/DiariZen`](https://github.com/BUTSpeechFIT/DiariZen) | 🟡 MIT **CODE ONLY** — byte-read `1,071 B`, `sha256₁₂ 98ad14ba39e3` | `569★` | `main` · `2026-08-04` | EMEA | Training and pruning recipes for diarisation. 🔴 **Weights are `CC BY-NC 4.0` (research/academic only)** — filed for the RECIPES, which are MIT, and not for the weights, which are not |
+
+### 🔴 A correction this pass owes the shelf: `frappe/lms` has no grant at its root
+
+🔴 **A widely repeated claim — "Frappe Learning is the clearest MIT-licensed LMS" — is wrong at the
+repository.** Probed `2026-11-16` at `6` filenames × `3` branches **including the resolved default
+ref**, obtained from `git ls-remote --symref` (🟢 `refs/heads/develop`, not `main` or `master`):
+
+🔴 **`frappe/lms` → `NO-GRANT-AT-PROBED-PATHS` on every one.**
+
+🔵 **Stated at its real strength:** this is an absence at the probed paths of the resolved default
+ref, not proof that no grant exists anywhere in the project's history or docs. 🟢 **But it is
+enough to stop a studio adopting it as "the MIT LMS" on a blog's say-so**, and the resolution step
+is `T112`'s false-absence rule applied in the opposite direction — 🔴 **had this pass probed only
+`main`/`master`, it would have published the same verdict for the WRONG reason.**
+
+🟢 **Byte-read the same day, for the shelf:** [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)
+Apache-2.0 (`10,982 B`, `sha256₁₂ 6dbc5b605ed0`) and
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) MIT (`1,097 B`,
+`sha256₁₂ 3c056b34a476`) are 🟢 **genuinely permissive**, while
+[`openedx/edx-platform`](https://github.com/openedx/edx-platform) is 🔴 **AGPL-3.0 (`35,136 B`,
+`sha256₁₂ e12d78569742`)** — the reach-through-a-hosted-service licence, and the single most
+misreported grant in open education.
+
 ## 🟢 Sixtieth pass (`p855`, 2026-11-16) — **`16` foundation rows (`245` → `261`): the DOCUMENT-PERCEPTION layer, absent from this base for `59` passes, filed in one pass with every grant byte-read**
 
 🔵 **Why these are foundations and not agents.** Nothing on this shelf marks anything. Every row
@@ -1212,7 +1249,7 @@ above was graded on the licence question alone.**
 | https://github.com/langchain-ai/langchain | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`) | 149546 | **Region: Global.** The model and tool abstraction layer beneath the above. 🟡 **Shelved with a deliberate caution: this base's compose recipes should depend on `langgraph` for control flow and on `langchain-core` for interfaces, not on the `langchain` meta-package, whose surface moves faster than an education deliverable's support window.** 🔵 **Note for the byte-read gate: its `LICENSE` is on `master`, not `main` — a `main`-only probe returns `404` and would record a false `NO_LICENCE_FILE`, which is a live defect in any sweep that assumes the default branch name** |
 | https://github.com/teppei-miyashita/agenticstar-agentcore | 🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last touched `2026-08-12` | 0 | 🔴 **Region: APAC. Shelved as a WARNING row — the worked example for `T89`.** This is the source repository that the PyPI package `agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository`, and it holds no commits at all. 🟢 **The package itself is genuinely MIT** (`License-Expression: MIT` in the wheel, `dist-info/licenses/LICENSE`, `1,078 B`, `sha256:2afbb5fc…`) **and genuinely installable** — 🔴 **but it is wheel-only, single-release (`2026-09-17`), and unreadable at its stated address, while hard-pinning `langgraph==1.1.10`, `langchain==1.2.18`, `fastapi==0.136.0` and `agenticstar-platform==0.5.32`.** 🔵 **Do NOT add it to a delivery tree. It is here so that the next pass asking "is the AGENTIC STAR stack adoptable?" finds the answer already measured: licensed yes, auditable no** |
 
-## Foundational repos — 261 rows
+## Foundational repos — 265 rows
 
 ## 🟢 The STANDARDS-SEAM layer — **LTI, QTI and xAPI, the four interfaces an education deliverable is actually wired through** (new, fifty-seventh pass `p852`) (6 rows)
 

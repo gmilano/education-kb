@@ -4,6 +4,106 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-first pass (`p856`, 2026-11-16) — **the classroom-DISCOURSE tier placed by region, and the region that SUPPLIES it best is the region that most restricts it**
+
+🔵 **The one regional claim this pass can make that it could not make before.** `p855` separated a
+region with NO open supply from a region with UNUSABLE open supply. 🟢 **`p856` adds a third case
+that neither covers: a region whose open supply is EXCELLENT and whose LAW makes the obvious
+application of it illegal.** 🔴 **EMEA publishes the two strongest permissive rows in this tier and
+is the jurisdiction where pointing them at a classroom is most constrained.**
+
+| | |
+|---|---|
+| 🟢 **EMEA supplies this tier** | [`juanmc2005/diart`](https://github.com/juanmc2005/diart) (MIT, `1,105 B`, Université Paris-Saclay + CNRS) and [`BUTSpeechFIT/DiariZen`](https://github.com/BUTSpeechFIT/DiariZen) (MIT code, Brno Univ. of Technology) are the accuracy and latency leaders here — 🔴 **and `DiariZen`'s weights are `CC BY-NC 4.0`** |
+| 🔴 **EMEA also restricts it hardest** | Emotion recognition in education is PROHIBITED under the EU AI Act, and voice is biometric data. 🟢 **The build that is legal is talk-TIME and talk-ROLE; the build that is not is inferring how a child FEELS** |
+| 🟢 **The substrate is region-neutral, the classroom layer is not** | `pyAudioAnalysis` (Apache-2.0) needs no weights and no network, so the tier's floor is available in every region including under data-residency rules |
+| 🔴 **LATAM's gap is in the CLASSROOM layer, not the AUDIO layer** | ES+PT legs return meeting and court-hearing transcribers and `0` granted classroom projects → `856-G5` |
+
+🔴 **Every market and regulatory item below is `CITED, NOT READ` from WebSearch summaries and says
+so.** 🟢 Every licence, byte count and `sha256₁₂` is byte-read on `2026-11-16`.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The commercial trigger is a DEADLINE, and it is `2027-06-30`.** `CITED, NOT READ`: North
+Carolina sets a state model policy due `2026-12-31` with district policies by `2027-06-30` and
+teacher professional development by `2028-06-30`; Maryland's AI Ready Schools Act requires state
+guidance and district AI policies; New York's `A 9190` restricts classroom AI to grade `9` and
+above with diagnostic and special-education exceptions. Trackers disagree on volume — `134` bills
+across `31` states on one count, `~71` across `27` on FutureEd's — 🔵 **and the disagreement does
+not matter, because the district-policy deadline is the thing a studio sells against.**
+
+🔴 **The blocker specific to THIS tier, and it is not AI law.** Classroom audio capture runs into
+state wiretap and two-party-consent statutes before it reaches any AI statute. 🟢 **So the
+North-American engagement leads with consent architecture and retention, and
+[`DMlabcodeorg/WhoSaidWhat`](https://github.com/DMlabcodeorg/WhoSaidWhat) (MIT, ICDL 2024,
+validated against human expert coding) is the defensibility asset** — a talk-ratio number that a
+school board challenges must cite a method someone validated.
+
+🟡 **Supply note:** the region's traction row here, [`revdotcom/reverb`](https://github.com/revdotcom/reverb),
+is 🔴 **a CODE-ONLY grant** and was last pushed `2025-04-22`.
+
+### EMEA
+
+🟢 **Strongest permissive supply in this tier of any region, and the tightest constraint on its use.**
+`CITED, NOT READ`: the EU AI Act treats admissions, student evaluation and exam scoring as
+high-risk; the Article 4 AI-literacy duty has applied since `2025-02-02`; emotion recognition in
+education has been prohibited since February 2025; the `2026` Digital Omnibus moved stand-alone
+Annex III high-risk application to `2027-12-02` (sources conflict — an older guide says August 2026;
+🔵 **the later date is the one repeated by more sources and is NOT verified against EUR-Lex here**).
+A late-2026 Council of the EU document stresses digital sovereignty and reducing dependence on
+non-European AI tools in education.
+
+🟢 **The opportunity that follows from the law rather than despite it.** A lesson-observation tool
+that reports TALK TIME and TURN STRUCTURE and refuses to infer emotion is 🟢 **sellable as AI Act
+conformance**, and its substrate is European (`diart`: Paris-Saclay + CNRS; `DiariZen`: Brno).
+🔵 **Sovereignty-conscious buyers can be shown a pipeline with no US dependency and, via
+`pyAudioAnalysis`, no model weights at all.** 🔴 **The works-council/union review is the real gate:
+teacher audio is employee monitoring, and the build survives only if the teacher owns the output.**
+
+### APAC
+
+🟢 **The region with statutes in force NOW, which makes "high-risk" a procurement fact rather than a
+forecast.** `CITED, NOT READ`: South Korea's AI Basic Act took effect `2026-01-22`; Vietnam's Law on
+Artificial Intelligence took effect `2026-03-01` and 🔴 **classifies education as high-risk, with a
+reported 18-month transition for systems already in operation**; India's AI-content labelling rules
+took effect `2026-02-20`; Japan and Australia rely on voluntary guidance; Indonesia's AI regulation
+is expected as a Presidential Regulation. 🟡 Vietnam's MOET Decision `2422` (reportedly `12` periods
+per class per year of AI content, grades `1`–`12`) rests on a SINGLE tracker and is flagged as such.
+Ipsos' `2026` Education Monitor finds support for banning AI in schools LOWER across most Asian
+markets, and higher in Australia and New Zealand.
+
+🟢 **Supply is real and seeded rather than stocked:** [`NavodPeiris/speechlib`](https://github.com/NavodPeiris/speechlib)
+(MIT, `268★`, Sri Lanka) is the most directly usable one-pipeline row in this tier, and
+[`07anishu12/ClassEvidence-AI`](https://github.com/07anishu12/ClassEvidence-AI) (Apache-2.0, India)
+is a `0★` rubric worth reading and not deploying. 🔵 **Vietnam's 18-month clock on in-service
+systems is the clearest dated opening in this tier anywhere in the world.**
+
+### LATAM
+
+🟢 **Demand is measured and overwhelming; governance is measured and absent. That IS the
+engagement.** `CITED, NOT READ`: UNESCO IESALC (`2026`, `200` institutions across `19` countries)
+finds 🟢 **`87%` of institutions already use AI in some capacity and 🔴 only `26%` have a formal AI
+strategy**; the Digital Education Council's LATAM survey reports `92%` of students and `79%` of
+faculty actively engaging with AI; across the `13` regional countries in PISA 2025, about nine in
+ten 15-year-olds have used AI chatbots for schoolwork; in Brazil `53%` of school administrators use
+AI while 🔴 **only `22%` report school guidelines on its use**. A `2026` Universidad de los Andes
+study counts `716` AI-related regulatory instruments and proposals across `23` countries and
+territories, `80%+` initiated since 2023; Colombia's CONPES `4144` (February 2025) took the
+policy-first route; Brazil's federal AI bill mirrors the risk-based approach.
+
+🟢 **The institutional counterpart now exists and is named:** the UNESCO Observatory on AI in
+Education for LAC launched April 2026 with CAF, CENIA, Cetic.br/NIC.br, ECLAC, Fundación Ceibal,
+Fundación Santillana, Tecnológico de Monterrey, ProFuturo, Universidad del Desarrollo and IRCAI.
+🔵 **`87%` adoption against `26%` strategy is a governance engagement, not a build engagement, and
+the Observatory is the reference a proposal cites.**
+
+🔴 **This tier's LATAM supply, measured in-language this pass rather than assumed: `0` granted
+classroom projects** → `856-G5`. 🟢 **The audio layer is already solved for the region's accents by
+Portuguese and Spanish WhisperX wrappers; the classroom layer is the hole, and it is the layer a
+studio builds anyway.**
+
 ## 🟢 Sixtieth pass (`p855`, 2026-11-16) — **the regional picture re-read against a byte-probed census, and the LATAM entry changes from "thin supply" to "active supply, zero grants"**
 
 🔵 **One regional claim this pass can make that it could not make before: the difference between a

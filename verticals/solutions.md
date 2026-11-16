@@ -4,6 +4,26 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-first pass (`p856`, 2026-11-16) — **where a discourse tool actually lands in an institution, and three LMS grants byte-read rather than cited**
+
+🔵 **A lesson-observation tool is not bought as a product; it is bought as a feature of whatever
+system already holds the timetable, the roster and the teacher's record.** 🟢 So the platform row
+below is the integration target, and `P86` is what plugs into it.
+
+| Platform | Grant (byte-read `2026-11-16`) | Verdict for a studio |
+|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** — `10,982 B`, `sha256₁₂ 6dbc5b605ed0` | 🟢 **The permissive LMS of record in EMEA.** Java, modular course and assessment tooling; 🟢 **the one mainstream LMS a studio can extend and ship without copyleft reach** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** — `1,097 B`, `sha256₁₂ 3c056b34a476` | 🟢 **Offline-first by design**, which is why it keeps winning low-connectivity deployments in APAC, LATAM and MEA. Pairs with `P86`'s no-weights path for a fully offline build |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** — `35,136 B`, `sha256₁₂ e12d78569742` | 🔴 **The most misreported grant in open education.** Repeatedly described as "Apache 2.0 for some components"; the platform is AGPL-3.0 and 🔴 **AGPL reaches a HOSTED derivative, which is how an LMS is always delivered** |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **NO-GRANT-AT-PROBED-PATHS** — `6` filenames × `3` branches incl. resolved default ref `develop` | 🔴 **Blogs call it "the clearest MIT-licensed LMS". There is no licence file at its root.** Do not adopt on that claim |
+| Moodle · Chamilo · Canvas LMS (community) · Sakai | 🔴 GPL / AGPL-3.0 / ECL-2.0 — 🟡 `CITED, NOT READ` this pass | The incumbents. 🔵 **Integrate ACROSS the boundary (LTI, APIs) rather than forking, and the copyleft question never arises** |
+
+🟢 **The integration rule this tier makes concrete.** 🔵 A discourse report is per-lesson, per-teacher
+and sensitive; an LMS is per-course and widely readable. 🔴 **Do not write talk-ratio data into the
+LMS gradebook or any roster-visible surface.** 🟢 **Land it in a teacher-scoped space the LMS links
+OUT to** — which keeps `P86`'s stage-7 boundary intact at the data layer, not merely in the UI, and
+keeps an AGPL platform at arm's length by construction.
+
 ## 🟢 Sixtieth pass (`p855`, 2026-11-16) — **`2` platform rows (`153` → `155`): the two end-to-end MARKING platforms the non-English sweep produced, and both are copyleft — which is the finding, not an aside**
 
 🔴 **`20` non-English legs returned `196` addresses. Exactly `2` of them are deployable platforms

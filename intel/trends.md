@@ -4,6 +4,93 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — sixty-first pass (`p856`) — **`4` trends (`T189`–`T192`): the grade this base publishes shown to cover the CODE and not the CAPABILITY, `855-G2`'s "missing tier" shown to be a PHRASE artefact, the Apache byte-length collision reproduced inside one pass, and a new grant verdict class**
+
+## 🔴 `T189` — the licence this base byte-reads governs the CODE; for a model-bearing row the capability is the WEIGHTS, and their grant is a different document
+
+🔴 **The claim, measured over `22` model-bearing rows (`17` from `p855`'s document-perception tier,
+`5` from this pass's discourse tier), probed `2026-11-16` by reading each README for an off-repo
+weight host.**
+
+| | Count |
+|---|---|
+| rows pointing weights off-repo (`huggingface.co` / `zenodo.org` / `drive.google.com` / `modelscope`) | 🔴 **`10` of `22`** |
+| of those, rows stating the weight terms where the probe can read them | 🔴 **`1`** |
+| of those, stated NON-COMMERCIAL | 🔴 **`1`** |
+
+🔴 **The case that proves the exposure is real rather than theoretical.**
+[`BUTSpeechFIT/DiariZen`](https://github.com/BUTSpeechFIT/DiariZen): root grant MIT, byte-read
+`1,071 B` / `sha256₁₂ 98ad14ba39e3` — 🔴 **weights `CC BY-NC 4.0`, "research and academic purposes
+only", because the training corpora are CC BY-SA 4.0.** 🔴 **Every instrument this base owns grades
+that row `PERMISSIVE`.** 🔵 [`revdotcom/reverb`](https://github.com/revdotcom/reverb) says it
+outright: _"The license in this repository applies only to the code not the models."_
+
+🟢 **The rule a studio carries: a permissive root grant on a model-bearing repository is a statement
+about the SOURCE, and the thing you deploy is the WEIGHTS.** 🔵 **Resolve the weight terms before
+the pilot, not before the renewal.** 🔴 **This base cannot resolve them today** (`856-G1`), so every
+such row is now published as `CODE-ONLY` and the uncertainty travels with the row.
+
+🟡 **Counted honestly, `10` is a FLOOR.** [`qurator-spk/eynollah`](https://github.com/qurator-spk/eynollah)
+scored `-` because its Zenodo pointer sits in `models.md`, not `README.md` → `856-G2`.
+
+## 🔴 `T190` — `855-G2` declared a tier missing on ONE PHRASE, and the tier was already on the shelves under other words
+
+🔴 **The claim, re-run over the same curated pages `855-G2` measured.** `855-G2` closed on
+`grep -ric` returning **`0`** for `speech-to-text in assessment`. 🔴 **That phrase is still `0`
+today. The CAPABILITY is not.**
+
+| Token over the same six curated pages | Hits |
+|---|---|
+| `pronunciation` | 🟢 **`80`** |
+| `kaldi` | `12` · `whisper` `11` · `wav2vec` `9` · `forced alignment` `6` |
+| distinct speech/audio ADDRESSES already shelved | 🟢 **`29`** (`speechocean762`, `kaldi-dnn-ali-gop`, `Montreal-Forced-Aligner`, `espnet`, `speechbrain`, `openai/whisper`, `transphone`, `phonemizer`, …) |
+
+🔵 **The mechanism:** an absence instrument tests the PHRASE the claimant happened to type. A
+capability is named by a SET of phrases, and the set a field actually uses is rarely the set a
+claimant reaches for. 🔴 **`855-G2` was literally true and materially misleading in the same
+sentence** — it reads as "this base cannot hear speech", and this base has heard speech for passes.
+
+🟢 **The rule: an absence claim must be tested against the capability's VOCABULARY SET, and must
+publish the set it tested.** 🔴 **No instrument here does that** → `856-G4`. 🔵 This is `568-A`'s
+founding defect one level up: `568-A` asked whether absence claims are CHECKED; `T190` asks whether
+the check can SUCCEED.
+
+## 🟡 `T191` — Apache-2.0 byte-length does not merely collide across passes; it collided twice inside this one
+
+🟢 **`855-G4` found two different Apache-2.0 payloads at exactly `11,358 B`. `p856` reproduced the
+class without looking for it**, from `6` Apache payloads byte-read today:
+
+| Bytes | `sha256₁₂` | Repositories |
+|---|---|---|
+| `11,357` | `c71d239df917` | `revdotcom/reverb`, `notch-up/diarize`, `nikhilraghav29/diarizen-tutorial` |
+| `11,357` | 🔴 `b40930bbcf80` | `tyiannak/pyAudioAnalysis` |
+| `11,356` | `eee6f26f94bb` | `braiinz94/braiinz-education` |
+| `11,350` | `d352274a97f8` | `07anishu12/ClassEvidence-AI` |
+| `10,982` | `6dbc5b605ed0` | `OpenOLAT/OpenOLAT` |
+
+🔴 **Two DIFFERENT payloads at `11,357 B`, and three IDENTICAL payloads at the same length —
+so byte-length neither identifies nor discriminates.** 🟢 **Five distinct lengths now observed for
+one licence (`10,982` / `11,350` / `11,356` / `11,357` / `11,358`).** 🔵 **The `sha256` is the
+identifier; the length is an index at best.** 🟢 Pin both, compare only the hash.
+
+## 🟡 `T192` — a new grant verdict class: `CONFLICTED-GRANT`, where the licence file contains an unresolved merge conflict
+
+🔴 **The claim, byte-read `2026-11-16`.**
+[`filipevieira/TranscreverAudioAndContarPalavras`](https://github.com/filipevieira/TranscreverAudioAndContarPalavras)
+publishes a `LICENSE` of `1,211 B` (`sha256₁₂ f591794bce98`) whose first line is `<<<<<<< HEAD`,
+with `=======` and `>>>>>>> f40e0cf6…` below it.
+
+🟢 **Read in FULL rather than graded on its title line, the verdict is precise and not alarming:**
+the conflict spans only the copyright-holder lines — `Copyright (c) 2026 Transcrição de Áudio`
+against `Copyright (c) 2026 Filipe Vieira` — and the MIT body beneath is single, complete and
+unambiguous. 🟢 **Licence TYPE: MIT. Licence HOLDER: undetermined.**
+
+🔴 **Why it matters to this base specifically: the title-line graders here
+(`p612-grade-title-line.py`, `grant-title-block.sh`) would ingest `<<<<<<< HEAD # License MIT` as
+the licence title.** 🔵 **And why it matters to a client: attribution, CLA and indemnity all name a
+party, and this grant does not have one.** 🟢 **`CONFLICTED-GRANT` is neither `NO-GRANT` nor
+`NOASSERTION` and should not be collapsed into either.**
+
 ## 🟢 `2026-11-16` — sixtieth pass (`p855`) — **`4` trends (`T185`–`T188`): `T181` amended rather than carried forward, a whole perception tier found missing, the licence polarity of that tier inverted against this base's usual finding, and LATAM's open estate shown to be active-and-ungranted rather than absent**
 
 ## 🔴 `T185` — research yield is a function of language × ALTITUDE, and `T181` measured only the altitude where language works

@@ -135,7 +135,11 @@ def strip_md(s):
 
 
 def main():
-    root = os.path.dirname(os.path.abspath(__file__))
+    # p856 (855-G5): __file__ lives in ingest/, but PAGES are relative to the KB
+    # ROOT.  Defaulting to the script's own directory made every page miss and the
+    # instrument reported "0 claims" -- a clean bill of health from a read of nothing.
+    # Default to the PARENT of ingest/; KB_ROOT still overrides for out-of-tree runs.
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     root = os.environ.get("KB_ROOT", root)
 
     # ---- shelf index: every line that carries an address is a candidate row ----

@@ -4,6 +4,48 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-first pass (`p856`, 2026-11-16) — **`P86`: the TEACHER-TALK instrument — a lesson-observation pipeline wired entirely from rows byte-read today, whose first design decision is a LICENCE decision rather than a model decision**
+
+## P86 — from a lesson recording to a teacher-owned participation report (EMEA anchor on AI Act conformance; same build serves NA consent law and APAC high-risk regimes)
+
+🔵 **What it produces:** for one lesson, the share of talk by role, the number and length of student
+turns, the teacher's wait time after a question, and the distribution of turns across the room.
+🔴 **What it must never produce: a rating of the teacher, or an inference about how anyone FEELS.**
+🟢 That restraint is not timidity — it is the thing that makes the build legal in EMEA, survivable in
+a works council, and renewable anywhere.
+
+| Stage | Row | Grant | Why this one |
+|---|---|---|---|
+| 🔴 **0. The licence decision, BEFORE the model decision** | — | — | 🔴 **`T189`: a permissive root grant on a model-bearing repo describes the SOURCE; you deploy the WEIGHTS.** Choose the no-weights path or resolve weight terms now. 🔴 `856-G1` says this base cannot resolve them today |
+| 1a. No-weights path | [`tyiannak/pyAudioAnalysis`](https://github.com/tyiannak/pyAudioAnalysis) | 🟢 Apache-2.0 (`11,357 B`) | 🟢 **Zero weight exposure, runs offline on CPU.** Pick this under data residency, in a sovereignty-led EMEA deal, or when procurement cannot clear a model licence |
+| 1b. Neural path, batch | [`notch-up/diarize`](https://github.com/notch-up/diarize) | 🟢 Apache-2.0 (`11,357 B`) | CPU-only, no API keys, 🟢 **RTTM output — so stage 5 can be MEASURED rather than asserted** |
+| 1c. Neural path, live | [`juanmc2005/diart`](https://github.com/juanmc2005/diart) | 🟢 MIT (`1,105 B`) | Only if the classroom needs in-lesson feedback. 🔴 Weight terms unresolved (`856-G1`) |
+| 2. Transcribe | [`ggml-org/whisper.cpp`](https://github.com/ggml-org/whisper.cpp) | 🟢 MIT — already shelved | On-device, no audio leaves the building. 🔵 **The single strongest sentence in the EMEA proposal** |
+| 3. One-pipeline shortcut | [`NavodPeiris/speechlib`](https://github.com/NavodPeiris/speechlib) | 🟢 MIT (`1,068 B`) | 🟢 Collapses 1+2+speaker naming into one dependency for the pilot; unpick it for production |
+| 4. Role assignment + defensibility | [`DMlabcodeorg/WhoSaidWhat`](https://github.com/DMlabcodeorg/WhoSaidWhat) | 🟢 MIT (`1,069 B`) | 🟢 **The method was compared against human expert coding (ICDL 2024).** 🔴 Do not use the "longest total talk time = the teacher" heuristic the prototypes use — it inverts in a seminar |
+| 5. Metrics | `stanfordnlp/edu-convokit` | 🟡 **in this base's logs, on NO shelf** (`856-G3`) | Talk time and accountable-talk moves from the transcript. 🔵 **Promote it from the backlog instead of rebuilding it** |
+| 6. Rubric design input | [`07anishu12/ClassEvidence-AI`](https://github.com/07anishu12/ClassEvidence-AI) | 🟢 Apache-2.0 (`11,350 B`) | 🟡 `0★` — read its interaction / instructional-practice / usability rubric, deploy none of it |
+| 🔴 **7. The boundary** | — | — | 🔴 **The system DESCRIBES; the teacher INTERPRETS; nothing RATES.** The report goes to the teacher first and to no one else by default |
+
+🟢 **Why stage 7 is the commercial core, stated per region.** 🔵 **EMEA:** emotion recognition in
+education is prohibited and voice is biometric — a describe-only tool is the conformant version, and
+teacher audio is employee monitoring, so teacher ownership is what gets it past a works council.
+🔵 **North America:** two-party-consent states make capture the gate, and stage 4's validated method
+is what answers a school-board challenge to a number. 🔵 **APAC:** Vietnam classifies education as
+high-risk with a reported 18-month transition for in-service systems — a describe-only system is the
+cheapest thing to bring into conformance. 🔵 **LATAM:** `87%` of institutions use AI and `26%` have a
+strategy — 🟢 **here the deliverable is the POLICY the tool is governed by, with the tool as its
+demonstration.**
+
+🟡 **Cost:** `6`–`8` weeks to a defensible single-classroom pilot on the no-weights path
+(`1a + 2 + 4 + 5`), 🔴 **plus however long procurement needs to clear a model licence if `1b`/`1c`
+is chosen — which is the schedule risk `856-G1` creates and the reason stage 0 exists.**
+
+🔴 **The LATAM variant builds one extra thing and it is not audio.** `856-G5` measured this region's
+classroom layer at `0` granted projects while its transcription layer is already solved for local
+accents. 🟢 **So the LATAM build is stages 4–7 over an existing Portuguese/Spanish WhisperX
+pipeline, and the differentiator is the governance artefact, not the model.**
+
 ## 🟢 Sixtieth pass (`p855`, 2026-11-16) — **`P85`: the PAPER-TO-MARK pipeline — the first recipe on this page whose first stage is a camera rather than an API, wired entirely from rows byte-read today**
 
 ## P85 — the PAPER-TO-MARK pipeline: turn a photographed worksheet into a provisional mark a teacher can overrule (LATAM anchor on the ENEM estate; same build serves any paper-based system in MEA and APAC)
