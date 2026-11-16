@@ -4,6 +4,157 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-second pass (`p847`, 2026-11-16) — **`2` agent rows (`424` → `426`), and the pass's most valuable output is a NEGATIVE: the largest auto-graded exercise estate on GitHub is not open source, and this base was one search away from shelving it**
+
+🟢 **`1` genuinely new build-safe agent** ([`Li-Evan/BloomTutor`](https://github.com/Li-Evan/BloomTutor),
+`310★`, MIT, byte-read). 🟢 **`1` row RESTORED** that two archives hold and no current shelf does
+([`iflytek/astron-harness-tutorial`](https://github.com/iflytek/astron-harness-tutorial), `363★`,
+Apache-2.0, byte-read). 🔴 **`1` high-traction lead disqualified at the grant**: the `4GeeksAcademy`
+auto-graded exercise estate and the `learnpack` runtime under it. 🔵 **`p842`'s intake gate (`P94`)
+and `P990` ("a file named `LICENSE` is not necessarily a grant") both fired, on the same candidate,
+for different reasons.** → `T158`, `T159`, `T160`, `T161`.
+
+### 🟢 Finding 1 — BloomTutor: the Bloom 2-sigma framing, shipped, MIT, and `44` forks in eight months
+
+| | |
+|---|---|
+| Address | [`Li-Evan/BloomTutor`](https://github.com/Li-Evan/BloomTutor) |
+| Stars / forks (first-party, `search/repositories`, `2026-11-16`) | `310` / `44` |
+| Created / last push | `2026-03-10` / `2026-11-16` (**today**) |
+| Grant | 🟢 **MIT — byte-read** (`main/LICENSE`, `1,069 B`, `sha256₁₂ 7d574cf3632e`, holder `2026 Li Zhengping`) |
+| Archived | `false` |
+| Stack (from `README` badges) | Python `3.11+`, FastAPI `0.115+`, Node `20+`, Next.js `15` |
+
+🔵 **Why it is a row and not noise.** Its own `README` states the thesis it is built on:
+Bloom's 1984 finding that one-to-one tutoring moves a learner `+2σ` to roughly the top `2%`, and
+that the obstacle is scale, not efficacy. 🟢 **The mechanism it ships against that thesis is the
+one this base has repeatedly said is missing from chat-wrapper tutors**: it generates a structured
+syllabus, delivers *one lesson at a time*, reads the learner's annotations and feedback, and
+tailors the NEXT lesson from them — a learner model that advances between lessons rather than a
+transcript that grows inside one. 🔵 **It ships two surfaces**: a CLI mode driven through Claude
+Code, and a web app (`bloomtutor.app`). Bilingual `README` (English + 中文).
+
+🔴 **Scope it honestly.** `310★` is a small fraction of `HKUDS/DeepTutor` (`59,637★` first-party
+today). 🟢 **What makes it worth a row anyway is the LICENCE and the SIZE**: it is MIT and it is
+small enough to read, which is what a studio needs when the deliverable is *the client's* tutor,
+not a dependency on someone else's. `44` forks on `310★` is a high fork ratio — people are taking
+it apart, not starring it.
+
+**Region: Global** (author's name and the bilingual `README` indicate APAC origin; nothing in the
+repository scopes it to a market, so it is filed Global with the origin noted rather than
+mis-placed into APAC).
+
+### 🟢 Finding 2 — a restoration with a named mechanism, and the loss hypothesis around it tested NEGATIVE
+
+🟢 **The restored row.** [`iflytek/astron-harness-tutorial`](https://github.com/iflytek/astron-harness-tutorial)
+— `363★`, 🟢 **Apache-2.0 — byte-read** (`main/LICENSE`, `11,347 B`, `sha256₁₂ 649fc6df7e4c`),
+created `2026-03-19`, pushed `2026-11-02`, not archived. Bilingual illustrated guides to iFlytek's
+AStudio / Loomy / AstronClaw agent tooling. 🔵 **It is held by
+`archive/2026-11-09-p722-pre-rewrite/` and `archive/2026-11-12-p787-pre-rewrite/` (both
+`agents-top.md` and `intel-market.md`) and appears in NONE of the eight current shelf files.**
+🔴 **So it was dropped in the `p787` rewrite — the same mechanism `p837` named.** **Region: APAC**
+(iFlytek is the Chinese education-AI incumbent this base's APAC intel already tracks; developer
+education rather than learner tutoring, which is why it belongs on the agents shelf as tooling
+provenance, not as a tutor).
+
+🔴 **And the hypothesis that this is a SYSTEMIC loss is now tested, and it is mostly false.**
+This pass extracted every `OWNER/REPO` repository address from the five most recent pre-rewrite
+archives and differenced each against all eight current shelf files:
+
+| Archive | Addresses in it | Absent from every current shelf file |
+|---|---|---|
+| `2026-11-12-p796-pre-rewrite` | `190` | `2` |
+| `2026-11-12-p797-pre-rewrite` | `4` | 🟢 `0` |
+| `2026-11-12-p800-pre-rewrite` | `219` | `2` |
+| `2026-11-13-p801-pre-rewrite` | `40` | 🟢 `0` |
+| `2026-11-13-p809-pre-rewrite` | `131` | 🟢 `0` |
+
+🔵 **The `2` are the same `2` in both archives, and they were correctly dropped, not lost:**
+[`Bestisco/My-WASSCE-Companion`](https://github.com/Bestisco/My-WASSCE-Companion) (`0★`, no
+licence, last push `2026-02-27`) and [`Elite2828/ACE-AI-Tutor`](https://github.com/Elite2828/ACE-AI-Tutor)
+(`1★`, no licence, last push `2026-03-05`) — both WAEC/WASSCE exam-prep prototypes, both below
+every bar this base publishes. 🟢 **Recent rewrites are clean.** 🔴 **The `847` archive-only
+addresses this pass counted across ALL archives are concentrated before the `2026-10-06` reset,
+which was deliberate — they are not evidence of ongoing loss and this base should stop treating
+the archive differential as an alarm.** → `T158`.
+
+🔵 **The WASSCE pair is still worth one sentence as INTEL even though it is not worth a row:**
+West African school-leaving exam prep is being prototyped, repeatedly, by individual developers
+with no licence and no traction. That is a demand signal under an empty supply, which is the same
+shape this base recorded for LATAM at `p839`.
+
+### 🔴 Finding 3 — the disqualification: `4GeeksAcademy` + `learnpack`, rejected at the grant, in three independent probes
+
+🔵 **How it surfaced.** `q="auto grading" OR "autograder" OR "essay scoring" ... stars:>20`
+returned a *cluster*: nine `4GeeksAcademy` repositories of interactive auto-graded exercises
+(`472★`, `140★`, `136★`, `114★`, `113★`, `95★`, `85★`, `74★`, `74★` — roughly `1,300★` and `634`
+forks on the JavaScript one alone). 🟢 **On traction alone this is the richest auto-grading
+courseware estate this base has ever surfaced, and the base has a DECLARED grading gap.**
+
+🔴 **Three probes, three disqualifying facts:**
+
+| Probe | Result |
+|---|---|
+| GitHub licence field on the content repos | `Other` / `NOASSERTION` — not a recognised grant |
+| 🔴 Byte-read of `master/LICENSE.md` on [`4GeeksAcademy/python-beginner-programming-exercises`](https://github.com/4GeeksAcademy/python-beginner-programming-exercises) | `954 B`, and its first line is **`# TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION`** followed by *"By accessing Breathe Code we assume you accept these terms and conditions"* — 🔴 **a terms-of-service page in a file named `LICENSE.md`, not an open-source grant** |
+| 🔴 npm `registry.npmjs.org/learnpack` (the runtime the estate executes on) | `"license": "https://learnpack.co/terms"` — 🔴 **a URL where an SPDX identifier belongs**; `latest 0.1.30`, `modified 2024-11-05` |
+| 🔴 The repository npm points at, `learnpack/learnpack-cli` | 🔴 **`404` on `raw.githubusercontent.com` for `README.md`, `package.json` and `LICENSE`, on both `master` and `main`, and absent from `search/repositories`** — the canonical source address in the package metadata does not resolve |
+| The `learnpack` org's visible repos | [`learnpack/learnpack`](https://github.com/learnpack/learnpack) `10★`, **no licence**, last push `2025-10-14`; `learnpack/ide` `2★` and `learnpack/web` `1★`, both pushed November 2026, both **no licence** |
+| `learnpack.co/terms` itself | 🟡 **Unreachable from this environment** — the agent proxy returned `CONNECT tunnel failed, response 403`. The licence text behind the URL was NOT read, and this pass does not characterise it. |
+
+🔵 **The shape of the trap, which is the transferable part.** The *content* is where the stars
+are; the *engine* is where the licence is; and the engine's licence is a link, in a package whose
+source repository `404`s. 🟢 **A reviewer who checks the exercise repo's star count and sees a file
+called `LICENSE.md` passes this candidate. `P990` is the rule that catches it and `P94` is the gate
+that stops it.** 🔴 **Verdict: NOT build-safe, NOT shelved, and recorded here so no later pass
+spends the same hour.** → `T159`.
+
+🟡 **One honest qualifier**: `user:4GeeksAcademy` reports `total_count = 45,594` repositories, of
+which `auto-graded in:description` matches `12`. 🔵 **The estate is overwhelmingly per-student
+scaffolding, so the `~1,300★` sits on a dozen canonical templates, not on a thousand products.**
+
+### 🔴 Finding 4 — three more candidates named and rejected, each for a different reason
+
+| Candidate | Stars | Why not shelved as build-safe |
+|---|---|---|
+| [`kg-bnu/SciMKG`](https://github.com/kg-bnu/SciMKG) | `130` | 🔴 **No grant blob** — `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `COPYING`, `LICENCE` all `404` on `main` and `master`; GitHub reports `NONE`. 🔵 Source code of the AAAI-2026 paper *"SciMKG: A Multimodal Knowledge Graph for Science Education"*, from **Beijing Normal University** — China's principal teacher-training university. **Region: APAC.** 🔵 **This is exactly the curriculum-graph substrate this base has wanted since `p587`, and it is unlicensed — cite the paper, do not vendor the code.** |
+| [`RockeyRoc/DeepProf`](https://github.com/RockeyRoc/DeepProf) | `102` | 🔴 **No grant blob** (same five filenames, both branches). 🔵 A Chinese higher-education course-level companion agent whose own description claims the three properties this base keeps asking for — *答案可溯源* (traceable answers), *引导可分级* (gradable scaffolding), *学习可接续* (resumable learning) — on a self-built agent runtime coordinated with a teaching-strategy graph. **Region: APAC.** 🔴 **Unlicensed, `2026-09-19` creation, `102★` — a design to read, not a dependency to take.** |
+| [`MAX-API-Next/Academic-Agents-Studio`](https://github.com/MAX-API-Next/Academic-Agents-Studio) | `168` | 🟡 **`GPL-3.0`** → belongs in the copyleft table below, not the build-safe one. Multi-model (GPT / Claude / DeepSeek / Qwen) full-pipeline academic-research agent platform for researchers, educators and students. **Region: APAC.** |
+
+🔴 **And a supply-pollution note worth one line.** `q='"lesson plan" in:name,description license:mit'`
+returned three repositories at `39★`, `24★` and `23★` — `redowl2265-aklhu/edu-lesson-plan`,
+`codebear9535-0xd4i/lesson-plan-builder`, `fastdeer4365-n4fst/lesson-plan-reviewer` — all created
+within four days of each other, all with **empty descriptions**, all under owner names with the
+same `word+digits-hash` shape. 🔵 **Three stars-bearing results in a four-result query, and none of
+them is a project.** 🔴 **A star floor does not filter this; an empty description plus a generated
+owner name does.** → `T160`.
+
+### 🟢 What this pass did NOT find, stated so the nil is informed
+
+🔴 **`0` new build-safe tutoring agents from the English-language star-ranked channel.** Queries
+run: `"AI tutor" license:mit pushed:>2026-08-01 stars:>30` (`5` hits, `4` of them tutorials about
+AI rather than AI tutors — `data-ai-tutorials`, `cal-ai-tutorial`, `geoai-tutorials`,
+`ai-tutorial-scraping-prescriptions`); `"intelligent tutoring" in:name,description,readme
+pushed:>2026-06-01` (`13` new hits, `0` tutoring agents — the top result is a Chinese computer-science
+course); `agent education created:>2026-08-01 stars:>30` (`1` hit, an animation set);
+`topic:education created:>2026-09-01 stars:>100` (`2` hits, neither an agent).
+🔵 **The lexical collision between "tutor/tutorial" and "education/educational" is now measured at
+roughly `4` in `5` of returns on the obvious queries — that is the channel defect, not a supply
+defect.** → `T160`.
+
+🔴 **`0` build-safe LATAM-ORIGIN education software.** `escuela OR docente OR profesor OR alumno`
+and `professor OR aluno OR ensino OR escola` together returned `34` new addresses. 🟢 **Every single
+one of the LATAM-origin hits is COURSEWARE — lecture notes, university course material, exercise
+sets — and the licence field is `NONE` or `NOASSERTION` on all but two.** Named examples:
+[`nad-garraz/algebraUno`](https://github.com/nad-garraz/algebraUno) (`150★`, no licence, UBA Exactas
+algebra notes in LaTeX, maintained by current and former students),
+[`henriquegpb/gradesinteli`](https://github.com/henriquegpb/gradesinteli) (`86★`, no licence,
+pushed **today**, an open replacement UI computing grades and absences for Inteli's Adalove
+platform, Brazil), [`lugaralgum/material-aulas`](https://github.com/lugaralgum/material-aulas)
+(`102★`, `NOASSERTION`, introductory Python teaching material in a visual context).
+🔵 **This does not contradict `p839`'s "LATAM is not an agent-supply region" — it SHARPENS it:
+LATAM supplies education CONTENT in volume, and ships it without a grant.** → `T161`, `P102`.
+
 ## 🔴 Fifty-first pass (`p846`, 2026-11-16) — **the whole shelf swept at last (`815` addresses, `3.5` minutes), and the instrument that swept it is NOT a liveness oracle: `6` of the `11` addresses it could not resolve are ALIVE, including BOTH of `p845`'s "genuine absences"**
 
 🟢 **`ACTION p845-A` is CARRIED and `845-G1` is CLOSED.** 🔵 **The search channel in this
@@ -2697,7 +2848,13 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 392 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 394 rows
+### Filed by `p847` (2026-11-16) — `2` rows: `1` new, `1` restored from an archive the current shelves had dropped
+
+| Agent / library | Repo | License | Stars | Region | Description |
+|---|---|---|---|---|---|
+| BloomTutor | https://github.com/Li-Evan/BloomTutor | 🟢 **MIT — byte-read** (`main/LICENSE`, `1,069 B`, `sha256₁₂ 7d574cf3632e`, stock text, holder `2026 Li Zhengping`) | 310 | Global | 🟢 **New this pass (`p847`).** A personal AI tutor built explicitly on Bloom's 2-sigma finding: generate a structured syllabus, deliver **one lesson at a time**, read the learner's annotations and feedback, then tailor the next lesson from them. 🔵 **The learner model advances BETWEEN lessons — that is the property separating a tutor from a chat transcript, and it is the one this base keeps failing to find in `stars:>30` returns.** Two surfaces: a Claude Code CLI mode and a web app (`bloomtutor.app`). Python `3.11+` / FastAPI / Next.js `15`. Bilingual EN + 中文 `README`. `44` forks on `310★` — a high fork-to-star ratio, i.e. being taken apart rather than bookmarked. 🔴 **Small and young (created `2026-03-10`): read it and take the pattern; do not make a client dependent on it unreviewed.** |
+| Astron Harness Tutorial (iFlytek) | https://github.com/iflytek/astron-harness-tutorial | 🟢 **Apache-2.0 — byte-read** (`main/LICENSE`, `11,347 B`, `sha256₁₂ 649fc6df7e4c`, stock text) | 363 | APAC | 🟢 **RESTORED this pass (`p847`), not new.** Bilingual illustrated guides to iFlytek's AStudio / Loomy / AstronClaw agent tooling, with official sample code. 🔴 **It is held by `archive/2026-11-09-p722-pre-rewrite/` and `archive/2026-11-12-p787-pre-rewrite/` and was absent from all eight current shelf files — dropped in the `p787` rewrite, the mechanism `p837` named.** 🔵 **Why it belongs on an education shelf: iFlytek is the APAC education-AI incumbent this base's own market intel tracks, and this is the permissively-licensed, bilingual on-ramp to its agent stack — the thing a China or SEA engagement reads before proposing anything that has to interoperate with it.** Pushed `2026-11-02`, not archived. |
 
 ### Filed by `p846` (2026-11-16) — `4` rows, every one recovered from an address the search index could not see
 

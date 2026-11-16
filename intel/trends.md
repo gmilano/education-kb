@@ -4,6 +4,104 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-second pass (`p847`, 2026-11-16) — `4` trends (`T158`–`T161`)
+
+## `T158` — the archive differential is NOT an alarm, and three passes have been reading it as one (fifty-second pass, `p847`, Global)
+
+🔵 **`p837` found rows lost in a file rewrite, named the mechanism, and restored three. Every pass
+since has treated the archive directory as a standing accusation.** 🟢 **`p847` measured it
+properly for the first time:** every `OWNER/REPO` repository address in each of the five most
+recent pre-rewrite archives, differenced against all eight current shelf files.
+
+| Archive | Addresses | Absent from current shelves |
+|---|---|---|
+| `p796` | `190` | `2` |
+| `p797` | `4` | 🟢 `0` |
+| `p800` | `219` | `2` |
+| `p801` | `40` | 🟢 `0` |
+| `p809` | `131` | 🟢 `0` |
+
+🔵 **The `2` are the same pair in both archives**
+([`Bestisco/My-WASSCE-Companion`](https://github.com/Bestisco/My-WASSCE-Companion) `0★` unlicensed,
+[`Elite2828/ACE-AI-Tutor`](https://github.com/Elite2828/ACE-AI-Tutor) `1★` unlicensed) — 🟢 **below
+every bar this base publishes, so they were correctly dropped, not lost.**
+
+🔴 **The `847` archive-only addresses across ALL archives are concentrated before the `2026-10-06`
+reset, which was deliberate.** 🟢 **So: recent rewrites are clean, and the differential should be
+run as a SPOT CHECK against the last rewrite, not quoted as a loss count.**
+🔵 **The exception proves it is worth running at all**:
+[`iflytek/astron-harness-tutorial`](https://github.com/iflytek/astron-harness-tutorial)
+(`363★`, `Apache-2.0`, alive) sat in the `p722` and `p787` archives and in no current file, and is
+restored this pass. 🟢 **One real loss in `584` archived addresses from the last five rewrites.
+Run the check; stop treating its output as a scandal.**
+
+## `T159` — the stars sit on the CONTENT and the grant sits on the RUNTIME, and the two can disagree completely (fifty-second pass, `p847`, Global; NA/LATAM instance)
+
+🔵 **`P990` already says a file named `LICENSE` is not necessarily a grant. `T159` is the
+structural case that makes that rule expensive to skip, measured at scale for the first time.**
+
+🔴 **The instance.** The `4GeeksAcademy` auto-graded exercise estate: `9` canonical repositories,
+`~1,300★`, `634` forks on the JavaScript one, `4` pushed within `60` days, and a declared grading
+gap on this base waiting for exactly this. 🔴 **Four independent probes, four disqualifying
+results:** the GitHub licence field reports `Other`; the byte-read of `master/LICENSE.md` is a
+`954 B` Breathe Code **terms-of-service** document opening
+`# TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION`; the npm package `learnpack`
+declares `"license": "https://learnpack.co/terms"` where an SPDX identifier belongs; and
+`learnpack/learnpack-cli`, the repository that package names, `404`s on `README.md`,
+`package.json` and `LICENSE` on both branches and is absent from `search/repositories`.
+🟡 The terms page itself was unreachable from this environment (`CONNECT tunnel failed, 403`), so
+the terms are not characterised — only that no SPDX grant exists anywhere in the estate.
+
+🟢 **The generalisation.** In education more than in any other vertical this base covers, the
+traction accrues to CONTENT (exercises, courses, notes) while the reusability question lives in the
+RUNTIME that executes it. 🔵 **They are usually different repositories, usually different owners,
+and sometimes — as here — only one of them is open at all.** 🔴 **Operational rule: when a
+candidate's stars are on content, resolve the runtime's grant to bytes BEFORE costing anything.**
+
+## `T160` — the discovery channel for education is now majority-noise on its own vocabulary, in two distinct ways (fifty-second pass, `p847`, Global)
+
+🔴 **Noise type 1 — lexical collision.** `"AI tutor" license:mit pushed:>2026-08-01 stars:>30`
+returned `5` repositories this base did not hold; `4` of them are **tutorials about AI**, not AI
+tutors (`data-ai-tutorials`, `cal-ai-tutorial`, `geoai-tutorials`,
+`ai-tutorial-scraping-prescriptions`). `"intelligent tutoring" in:name,description,readme` returned
+`13` new addresses and `0` tutoring agents, headed by a Chinese computer-science course.
+🔵 **"tutor/tutorial" and "education/educational" collide at roughly `4` in `5` on the obvious
+queries. That is a CHANNEL defect and it has been mis-read as supply scarcity for several passes.**
+
+🔴 **Noise type 2 — manufactured repositories that clear a star floor.**
+`"lesson plan" in:name,description license:mit pushed:>2026-06-01 stars:>20` returned four results,
+of which three — `redowl2265-aklhu/edu-lesson-plan` (`39★`),
+`codebear9535-0xd4i/lesson-plan-builder` (`24★`), `fastdeer4365-n4fst/lesson-plan-reviewer` (`23★`) —
+were created within four days of one another, carry **empty descriptions**, and sit under owner
+names of the identical `word+digits-hash` shape.
+
+🟢 **The two screens that work, in order:** (`1`) reject empty description plus generated-owner-name
+before reading anything else; (`2`) require the DOMAIN noun in the description, not in the name.
+🔵 **A star floor filters neither.**
+
+## `T161` — LATAM supplies education CONTENT in volume and ships it ungranted: the region's gap is a RIGHTS gap, not a software gap (fifty-second pass, `p847`, LATAM)
+
+🔵 **`p839` established that LATAM is not an agent-supply region and the base has repeated it
+since.** 🟢 **`p847` ran both language legs again and found the statement true but mis-framed.**
+`escuela OR docente OR profesor OR alumno` and `professor OR aluno OR ensino OR escola`
+(`pushed:>2026-01-01`) returned `34` addresses not held here. 🔴 **`0` agents. Almost all
+courseware — and all but two carry `NONE` or `NOASSERTION`.** Named:
+`nad-garraz/algebraUno` (`150★`, UBA Exactas, no licence), `lugaralgum/material-aulas` (`102★`,
+`NOASSERTION`), `henriquegpb/gradesinteli` (`86★`, no licence, pushed the day of this pass).
+
+🟢 **The one exception is the whole finding:**
+[`bandtec/web-data-viz`](https://github.com/bandtec/web-data-viz) (`167★`, 🟢 **MIT — byte-read**,
+`1,113 B`, `sha256₁₂ de03212ef57c`, holder *"2022 BandTec Digital School — agora é São Paulo Tech
+School"*) is a reference implementation published by a São Paulo technical school **so its own
+students may build on it**. 🔵 **One institution in thirty-four chose a grant.**
+
+🔴 **So the regional deficit is not that LATAM writes no education software. It is that LATAM
+writes a great deal of education MATERIAL and publishes it with no right to reuse it — including,
+in most cases, by the institution that produced it.** 🟢 **That converts a declared gap into a
+scopeable engagement (`P102`): inventory, rights clearance, grant selection, republication. It
+needs no model, and the licensed corpus it produces is the precondition for every tutoring
+engagement proposed in the region afterwards.**
+
 ## 🟢 Fifty-first pass (`p846`, 2026-11-16) — `7` trends (`T151`–`T157`)
 
 ## `T151` — the deferral was priced against the wrong rate: the sweep two passes declined as "an hour" is a three-and-a-half-minute run (fifty-first pass, `p846`, Global)

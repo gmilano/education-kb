@@ -4,6 +4,57 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-second pass (`p847`, 2026-11-16) — **`9` rows (`207` → `216`): the CLASSROOM-COMPUTE layer, which `51` passes legislated about and never filed, plus the auto-grading toolkit that closes part of the standing grading gap**
+
+🔵 **Why this layer was missing.** Every tutoring, lab-grading and data-science pattern in
+`compose/patterns.md` assumes a place where the learner's code RUNS — and this base has filed the
+LMS, the assessment platform, the rostering layer, the credential layer and the curriculum graph
+without ever filing the compute. 🟢 **All nine rows below are byte-read on their default branch
+today, and all nine are permissive.**
+
+### 🟢 The CLASSROOM-COMPUTE layer — **where the learner's code actually runs** (new, fifty-second pass `p847`) (2 rows)
+
+| Repo | License | Stars | Region | Description | Why it is a foundation |
+|---|---|---|---|---|---|
+| [`jupyterhub/the-littlest-jupyterhub`](https://github.com/jupyterhub/the-littlest-jupyterhub) | 🟢 **BSD-3-Clause — byte-read** (`main/LICENSE`, `1,510 B`, `sha256₁₂ a9d15a91664e`, holder `2018, Yuvi Panda`) | 1,147 | Global | A JupyterHub distribution deliberately scoped to **1–100 users on a single server** — the size of a class, not of a campus. Pushed `2026-11-05`, not archived. | 🟢 **The substrate under every "grade the code by running it" pattern this base publishes (`P84`, `P89`).** 🔵 **Its design constraint IS the education fit: one VM, one course, no Kubernetes, which is the only shape a school or a faculty department can actually operate.** Permissive, so the client owns the deployment outright. |
+| [`plasmabio/plasma`](https://github.com/plasmabio/plasma) | 🟢 **BSD-3-Clause — byte-read** (`master/LICENSE`, `1,527 B`, `sha256₁₂ 2bb2635332c1`, holder `2020, Plasma Contributors`) | 42 | EMEA | A Jupyter-based e-learning platform for data analysis, built around per-course reproducible environments. Pushed `2026-10-20`. | 🟡 **`42★` — small, and filed for what it IS rather than for traction**: a worked, permissively-licensed example of the layer above TLJH, where a course's environment is itself a versioned artifact. 🔵 **EMEA-origin (French academic project), which matters for a European public-sector bid that must name an EU-origin component.** |
+
+### 🟢 The AUTO-GRADING TOOLKIT row — **the grading gap, partly closed, from an unexpected direction** (fifty-second pass `p847`) (1 row)
+
+| Repo | License | Stars | Region | Description | Why it is a foundation |
+|---|---|---|---|---|---|
+| [`ryukzak/wrench`](https://github.com/ryukzak/wrench) | 🟢 **BSD-3-Clause — byte-read** (`master/LICENSE`, `1,466 B`, `sha256₁₂ 8a9b41684109`, holder `2024 Aleksandr Penskoi`) | 45 | EMEA | A multi-architecture CPU simulator, assembler **and auto-grading toolkit** for teaching computer architecture. Pushed `2026-11-13`. | 🟢 **This base has declared a grading gap since `p827` and kept looking for it in LLM-marking repositories. This is the other kind, and it is the kind `P84` says to prefer: the grade is DETERMINISTIC (the student's program either runs correctly on the simulated machine or it does not) and only the feedback needs generating.** 🔵 **Permissive, actively pushed, and small enough to adapt to another instruction set.** 🔴 **`45★` — this is a teaching artifact from one lecturer, not a product. Take the architecture of it.** |
+
+### 🟢 The LEARNING-APPLICATION layer — **permissively-licensed, finished, teachable products to put an agent BESIDE** (new, fifty-second pass `p847`) (5 rows)
+
+🔵 **Why these are foundations and not agents.** None of them contains an LLM. 🟢 **All five are
+finished learning products with a permissive grant, which makes them the cheapest honest demo a
+studio can build: the pedagogy and the content already work, and the engagement adds the adaptive
+layer rather than inventing the subject.**
+
+| Repo | License | Stars | Region | Description |
+|---|---|---|---|---|
+| [`pshenok/server-survival`](https://github.com/pshenok/server-survival) | 🟢 **MIT — byte-read** (`main/LICENSE`, `1,079 B`, `sha256₁₂ e86ab27fe716`, holder `2025 Kostyantyn Pshenychnyy`) | 6,498 | Global | A **tower-defence game that teaches cloud architecture** — build infrastructure, survive traffic. Pushed `2026-11-04`. 🟢 **The highest-traction permissively-licensed serious game this base has shelved, and the clearest proof that learning-by-play ships: `6,498★` for a corporate-training subject nobody would click a course on.** 🔵 **Directly reusable as the engagement-model demo in a technology-upskilling pitch.** |
+| [`CrypToolProject/CrypTool-2`](https://github.com/CrypToolProject/CrypTool-2) | 🟢 **Apache-2.0 — byte-read** (`main/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`, stock text) | 169 | EMEA | The official CrypTool 2 e-learning software for cryptography and cryptanalysis — a visual-workflow lab with decades of German academic provenance. Pushed `2026-11-02`. 🔵 **The reference example of a DOMAIN-SPECIFIC learning platform under a permissive grant, and a ready vehicle for a security-training engagement in EMEA.** |
+| [`SimonSchubert/Braincup`](https://github.com/SimonSchubert/Braincup) | 🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`, stock text) | 352 | EMEA | A memory, focus and mental-arithmetic trainer, maintained continuously since `2019-06-01` and pushed `2026-11-14`. 🟢 **Seven years of maintenance on a `352★` education app is a rarer signal than a 20k-star six-month spike** — this is what a sustainable small learning product looks like. |
+| [`paytonjjones/bsharp`](https://github.com/paytonjjones/bsharp) | 🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 638e16badc1c`, stock text) | 314 | Global | A tool to teach children **perfect pitch**. Created `2026-02-05`, pushed `2026-11-06`. 🔵 **Filed because it is a clean instance of a hard pedagogical claim implemented as software for young learners — the exact shape of an early-years engagement, with a grant that permits derivation.** |
+| [`wixette/8800-simulator`](https://github.com/wixette/8800-simulator) | 🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`, stock text) | 152 | Global | An Altair 8800 emulator in the browser — an Intel 8080 with a working front panel, whole machine in a page. Pushed `2026-11-08`. 🔵 **Pairs with `ryukzak/wrench` above: the simulator for the browser-side lab, the toolkit for the grading.** |
+
+🔴 **Declared, measured and NOT filed this pass**, so no later pass repeats the search: the
+`4GeeksAcademy` auto-graded exercise estate (`~1,300★` across `9` canonical repositories, `634`
+forks on one of them) and the `learnpack` runtime beneath it are **not open source** — the content
+repositories carry a Breathe Code terms-of-service document in a file named `LICENSE.md`
+(`954 B`, first line `# TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION`), the npm
+package declares `"license": "https://learnpack.co/terms"` where an SPDX identifier belongs, and
+the source repository that package names (`learnpack/learnpack-cli`) `404`s on both branches and
+is absent from the search index. 🔵 Full probe table in `agents/top.md`, Finding `3`. → `T159`.
+
+### 🟢 The one permissively-licensed LATAM courseware row found in `34` returns (fifty-second pass `p847`) (1 row)
+
+| Repo | License | Stars | Region | Description |
+|---|---|---|---|---|
+| [`bandtec/web-data-viz`](https://github.com/bandtec/web-data-viz) | 🟢 **MIT — byte-read** (`main/LICENSE`, `1,113 B`, `sha256₁₂ de03212ef57c`, holder *"2022 BandTec Digital School — agora é São Paulo Tech School"*) | 167 | LATAM | A **reference implementation** of a web data-visualisation project (Node + relational database + charting), published by a São Paulo technical school for its own first-semester students to build their projects on. Pushed `2026-06-12`. 🟢 **Filed because of what it proves, not its size: a LATAM institution deliberately licensing its teaching artifact so students and third parties may derive from it. In `34` LATAM-origin returns this pass, it is the ONLY one that did.** 🔵 **Cite it in a LATAM education bid as the local precedent for the licensing posture the engagement should ask the client to adopt.** → `P102`. |
+
 ## 🟢 Fifty-first pass (`p846`, 2026-11-16) — **`2` rows, and a correction to this shelf's own `p843` table: the category it named once and counted at `1` is actually `6` wide, base-wide**
 
 🔵 **`p843` measured this shelf first-party and recorded a row that turned out to be the most

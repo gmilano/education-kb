@@ -4,6 +4,59 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟡 Fifty-second pass (`p847`, 2026-11-16) — **`4` regions queried plus Global. `4` of `19` distinctive regional facts were NOT already on this shelf, and the most useful one is a LATAM SUPPLY fact rather than a demand figure.**
+
+🔵 **Method, unchanged from `p843`:** every fact the regional legs returned was checked against
+`intel/`, `agents/` and `repos/` with `grep` before being called new. 🟡 **Every figure below comes
+from secondary sources — trade press, compliance vendors and market reports — and is labelled as
+such. None of it is primary-verified, and none of it should be quoted to a client as measured.**
+
+### 🟢 New this pass — `4` facts
+
+| # | Region | Fact | Source class | Why it matters to a Globant engagement |
+|---|---|---|---|---|
+| `1` | **APAC** | 🟡 China's **amended Cybersecurity Law took effect `2026-01-01`** and adds an AI-governance clause, with penalties reported up to **RMB `10` million**. | Compliance-vendor summaries | 🔵 **This base's APAC intel tracked the MOE's classroom push and the `AI+Education` Action Plan but not the statute with the fine attached.** 🔴 A China education pilot that does emotion inference, psychological screening or pupil monitoring now sits under a penalty regime, not just a policy. 🟢 **Verify against the NPC text before it goes in a proposal.** |
+| `2` | **LATAM** | 🟡 Google.org's AI-education commitment carries a stated target of **`1.25` million students by `2028` across `9` countries**, Brazil, Colombia and Mexico among them. | Trade press (`edtechinnovationhub`) | 🔵 The `$4.6M` figure was already held; 🟢 **the TARGET was not, and a target is what a public-sector counterpart benchmarks a proposal against.** |
+| `3` | **LATAM** | 🟡 Brazil is reported at **`68.93%` of LATAM's `898` active edtech startups**. | 2026 market report, single source | 🔴 **Treat the decimal as false precision** — but the ORDER is the usable part: roughly two-thirds of regional edtech supply sits in one country. 🔵 A "LATAM edtech strategy" that is not mostly a Brazil strategy is mis-shaped. |
+| `4` | **North America** | 🟡 The federal **K-12 AI Literacy and Readiness Act of 2026 advanced in committee and has NOT passed Congress**. | Trade press | 🟢 **The bill was already on this shelf; its STATUS was not.** 🔴 Stop any slide that implies a federal mandate exists. The binding layer in the US is still state law. |
+
+### 🔴 Held already — `15` of `19`, which is the real headline
+
+🔵 **`p846` measured `21` of `22` held; `p843` measured `20` of `21`. This pass measures `15` of
+`19`.** 🟢 **Three consecutive passes agree that the regional demand channel is saturated for this
+base.** Held and re-confirmed this pass: EU Regulation `2026/1744` moving stand-alone high-risk
+education systems to `2027-12-02`; Annex III point `3` scope (admissions, learning-outcome
+evaluation, placement, proctoring); Article `27` FRIA duty on public deployers; the emotion-recognition
+ban in schools; Idaho `SB 1227`; Maryland `SB 720`; Ohio's July 2026 district-policy deadline;
+California `AB 1159`; the `134` bills across `31` states; Brazil `PL 2.338/2023`; Colombia
+`CONPES 4144`; Mexico's Senate bill with no unacceptable-risk prohibition; Japan's penalty-free
+AI Promotion Act and the second AI Basic Plan; India's July 2026 signal toward dedicated AI
+legislation; ByteDance's Gauth and PhysicsWallah's AI tutor.
+
+### 🔴 Named gaps this pass could not close, stated so they are not mistaken for coverage
+
+- 🔴 **North America means the United States in every source returned.** `0` sources on Canada,
+  `0` on Mexico's classroom AI rules. 🔵 **A Canadian engagement cannot be priced off this shelf.**
+- 🔴 **EMEA means the European Union in every source returned.** `0` adoption rates, `0` named
+  European edtech vendors, `0` sources on the UK, the Gulf beyond the `p843` UAE instrument, or
+  any African system. 🔵 **The only African education signal this pass found at all was two
+  unlicensed WASSCE exam-prep prototypes at `0★` and `1★` — see `agents/top.md`, Finding `2`.**
+- 🔴 **APAC education-specific REGULATION for 2026 returned nothing for Japan or India** —
+  Japan has guidelines and pilot schools, India has no top-down education-AI rule at all.
+- 🟡 **Two APAC commercial names surfaced that this base does not hold** — **Embibe** (India,
+  AI explanation of maths and science) and **Prep Edu** (Vietnam) — 🔴 **recorded as leads, NOT as
+  intel: neither was verified beyond a single mention.**
+
+### 🟢 The supply-side regional fact this pass CAN state first-party
+
+🔵 **Education's two largest open projects are both APAC-origin and both permissive**, measured
+against the GitHub API today, not quoted from a digest:
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) `59,637★` `Apache-2.0` `7,226` forks (HKU)
+and [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) `43,702★` `MIT` `6,734` forks
+(Tsinghua). 🟢 **This is the one regional claim on this shelf that needs no source caveat.**
+🔴 **And it inverts the usual pitch posture: in education, APAC is where the buildable supply is,
+while North America and EMEA are where the regulation is.**
+
 ## 🟡 Fifty-first pass (`p846`, 2026-11-16) — **`4` regions queried plus Global. `1` of `22` distinctive regional facts was NOT already on this shelf, and it is a LATAM demand-side figure.**
 
 🔵 **Provenance discipline, restated because it is load-bearing and because this pass makes the
@@ -1475,6 +1528,29 @@ across EMEA.
 
 ### North America
 
+#### Update 2026-11-16 (fifty-second pass, `p847`) — 🟡 **the federal bill is still a bill; the opportunity is the CLASSROOM-COMPUTE line item, and it is permissively licensed**
+
+🔴 **Status correction to carry into every US deck:** the `K-12 AI Literacy and Readiness Act of 2026`
+**advanced in committee and has not passed**. 🟢 **The binding layer remains state law** — Idaho
+`SB 1227`, Maryland `SB 720`, Ohio's July 2026 district-policy deadline, California `AB 1159`,
+`134` bills across `31` states, all already held here.
+
+🟢 **What `p847` adds is buildable.** A US district or faculty engagement that has to grade code,
+run labs, or teach data skills now has a filed, permissive substrate it can own outright:
+[`the-littlest-jupyterhub`](https://github.com/jupyterhub/the-littlest-jupyterhub) (`BSD-3-Clause`,
+`1,147★`, scoped to `1–100` users on one server) under `P84` / `P89`, with
+[`ryukzak/wrench`](https://github.com/ryukzak/wrench) (`BSD-3-Clause`) as the worked example of
+deterministic auto-grading where only the FEEDBACK is generated. 🔵 **Deterministic grading is also
+the cheapest answer to a state statute that restricts AI from making the evaluative decision:
+the machine runs the program, the rubric is code, and the model only writes the explanation.**
+
+🔴 **And one line item to remove from the pipeline:** the `4GeeksAcademy` / `learnpack` estate is
+**not open source** (`agents/top.md`, Finding `3`). Any US curriculum proposal that assumed that
+courseware could be forked must be re-costed. → `T159`.
+
+🔴 **Still uncovered:** `0` sources on Canada in this pass's North America leg. A Canadian
+engagement cannot be priced from this shelf.
+
 #### Update 2026-11-16 (fifty-first pass, `p846`) — 🔴 **NIL on instruments a seventh time. The opportunity this pass creates is a LICENCE-SCANNER line item, not a new fact.**
 
 🔴 **All `10` North American instruments the leg returned are held** (NC `SL 2026-41`, the `134`
@@ -2919,6 +2995,34 @@ that cannot name what the campus actually runs is the failure mode every one of 
 64 campuses is about to hit.
 
 ### EMEA
+
+#### Update 2026-11-16 (fifty-second pass, `p847`) — 🟢 **the first EU-ORIGIN permissive components this shelf can name in a European public bid**
+
+🔵 **European public procurement rewards a named EU-origin component, and this base has had
+almost none to offer** — the credentialing story was one proof-of-concept and one archived data
+model (`p817`), and the platform tier is copyleft (Moodle `GPL-3.0`, Open edX / Canvas `AGPL-3.0`,
+ILIAS / Chamilo `GPL-3.0`).
+
+🟢 **`p847` files three EMEA-origin permissive rows**, all byte-read:
+[`CrypToolProject/CrypTool-2`](https://github.com/CrypToolProject/CrypTool-2) (`Apache-2.0`,
+`169★`, German academic provenance, a complete cryptography training lab),
+[`plasmabio/plasma`](https://github.com/plasmabio/plasma) (`BSD-3-Clause`, French academic project,
+course environments as versioned artifacts) and
+[`ryukzak/wrench`](https://github.com/ryukzak/wrench) (`BSD-3-Clause`, auto-grading toolkit).
+🔵 **Small stars, correct provenance, derivable licence — which is the combination a conformity
+annex needs, not a 50k-star repository from another jurisdiction.**
+
+🟢 **The regulatory frame is unchanged and re-confirmed**: Regulation (EU) `2026/1744` moves
+stand-alone high-risk education systems to `2027-12-02`; Annex III point `3` still catches
+admissions, learning-outcome evaluation, placement and proctoring; Article `27` FRIA still binds
+public deployers; the emotion-recognition prohibition in schools still stands. 🔵 **Deterministic
+grading (`P84`, and now `wrench` as the worked instance) is the cleanest way to keep a marking
+feature OUT of Annex III point `3(b)` altogether, rather than compliance-engineering it afterwards.**
+
+🔴 **Named gaps, so this is not read as coverage:** `0` European adoption rates and `0` named
+European edtech vendors returned; `0` UK sources; `0` African education-system sources. 🔴 **The
+only African signal found anywhere this pass was two unlicensed WASSCE exam-prep prototypes
+(`0★`, `1★`) — demand with no supply beneath it, the same shape `p839` recorded for LATAM.**
 
 #### Update 2026-11-16 (fifty-first pass, `p846`) — 🟢 **NIL on instruments, and an ASSISTIVE-TECHNOLOGY row recovered that the base was one pass away from deleting**
 
@@ -4427,6 +4531,38 @@ absence: the denominator for the AI Act's deployer duties is not publicly measur
 
 ### APAC
 
+#### Update 2026-11-16 (fifty-second pass, `p847`) — 🟢 **APAC is the SUPPLY region, now stated first-party — and `p847` adds a penalty regime to the China risk picture**
+
+🟢 **The claim this base should lead an APAC conversation with, measured against the GitHub API
+today rather than quoted from a digest:** education's two largest open projects are both
+APAC-origin and both permissive —
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (`59,637★`, `Apache-2.0`, `7,226` forks, HKU)
+and [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (`43,702★`, `MIT`, `6,734` forks,
+Tsinghua). 🔵 **Both are buildable. Neither needs a licence negotiation.**
+
+🟡 **New risk fact this pass:** China's **amended Cybersecurity Law took effect `2026-01-01`** with
+an AI-governance clause and reported penalties up to **RMB `10` million** (secondary sources;
+verify against the NPC text before use). 🔴 **The MOE classroom push this base already tracks —
+artwork grading, expression monitoring, psychological screening — now sits under a statute with a
+fine attached, not only under policy.** 🔵 **The engagement consequence is concrete: in a Chinese
+pilot, inference ABOUT the pupil is the regulated surface; inference about the pupil's WORK is not.
+Shape the scope on that line.**
+
+🟢 **Two APAC designs worth reading and NOT vendoring**, both unlicensed (no grant blob on either
+branch): [`kg-bnu/SciMKG`](https://github.com/kg-bnu/SciMKG) (`130★`, AAAI-2026, Beijing Normal
+University — the multimodal science-curriculum knowledge graph this base has wanted since `p587`)
+and [`RockeyRoc/DeepProf`](https://github.com/RockeyRoc/DeepProf) (`102★`, a course-level companion
+agent claiming traceable answers, gradable scaffolding and resumable learning). 🔴 **Cite the
+paper, reproduce the design, do not copy the code.**
+
+🟢 **Restored to the agents shelf this pass:**
+[`iflytek/astron-harness-tutorial`](https://github.com/iflytek/astron-harness-tutorial)
+(`Apache-2.0`, `363★`) — the permissive bilingual on-ramp to the APAC education-AI incumbent's
+agent stack, dropped in the `p787` rewrite and absent from every shelf file until now.
+
+🔴 **Gaps:** `0` education-specific 2026 regulation found for Japan (guidelines and pilot schools
+only) or India (no top-down rule). 🟡 **Leads, not intel:** Embibe (India), Prep Edu (Vietnam).
+
 #### Update 2026-11-16 (fifty-first pass, `p846`) — 🔴 **NIL on instruments, and an honest declaration: APAC gained NOTHING from this pass, and the reason is measurable**
 
 🔴 **All `7` APAC instruments returned are held** — Korea's AI Basic Act in force `2026-01-22`
@@ -5933,6 +6069,39 @@ procurement-led" corner of that matrix, which `P5` did not previously have a nam
 example of.
 
 ### LATAM
+
+#### Update 2026-11-16 (fifty-second pass, `p847`) — 🟢 **the LATAM finding sharpens: the region supplies education CONTENT in volume, and ships it without a grant. That is a sellable engagement, not a gap.**
+
+🔵 **`p839` recorded "LATAM is not an agent-supply region" and `p844` opened the national
+education-data spine. `p847` ran the Spanish- and Portuguese-language supply legs again and the
+result is more specific than either.** `escuela OR docente OR profesor OR alumno` and
+`professor OR aluno OR ensino OR escola` returned `34` addresses this base did not hold.
+🔴 **`0` are agents. Almost all are COURSEWARE — lecture notes, course material, exercise sets,
+student tooling — and all but two carry `NONE` or `NOASSERTION`.**
+
+| Named instance | ★ | Grant | What it is |
+|---|---|---|---|
+| [`nad-garraz/algebraUno`](https://github.com/nad-garraz/algebraUno) | `150` | 🔴 none | The single consolidated algebra text for UBA Exactas (Argentina), written and maintained by current and former students |
+| [`lugaralgum/material-aulas`](https://github.com/lugaralgum/material-aulas) | `102` | 🔴 `NOASSERTION` | Introductory Python teaching material in a visual context (Brazil) |
+| [`henriquegpb/gradesinteli`](https://github.com/henriquegpb/gradesinteli) | `86` | 🔴 none | An open replacement UI computing grades and absences on Inteli's Adalove platform (Brazil) — pushed **today** |
+| [`bandtec/web-data-viz`](https://github.com/bandtec/web-data-viz) | `167` | 🟢 **MIT — byte-read** (`1,113 B`, `de03212ef57c`) | A reference implementation published by a São Paulo technical school **for its own students to build on** |
+
+🟢 **The opportunity is the licensing posture itself.** 🔵 **One institution in `34` returns —
+BandTec / São Paulo Tech School — licensed its teaching artifact so that others may derive from
+it. The other thirty-three produced public, valuable, high-traction educational content that no
+one, including the institution that wrote it, can legally reuse or feed to a model.**
+🟢 **That is a short, concrete, fundable piece of work for a ministry, a university system or a
+foundation: an open-licensing programme over material that already exists** — inventory, rights
+clearance, grant selection, republication. 🔵 **It needs no model, it produces an auditable
+corpus, and the corpus is the precondition for every tutoring engagement that follows.** → `P102`.
+
+🟡 **Demand-side figures added this pass (secondary sources, label them when quoting):** Google.org's
+AI-education programme states a target of **`1.25` million students by `2028` across `9` countries**
+including Brazil, Colombia and Mexico; one 2026 market report puts Brazil at **`68.93%` of LATAM's
+`898` active edtech startups** — 🔴 **ignore the decimal, keep the order: roughly two-thirds of
+regional supply is Brazilian.** 🔵 **A "LATAM edtech strategy" that is not mostly a Brazil strategy
+is mis-shaped.** Regulatory frame unchanged: Brazil `PL 2.338/2023`, Colombia `CONPES 4144`,
+Mexico's Senate bill with no unacceptable-risk prohibition.
 
 #### Update 2026-11-16 (fifty-first pass, `p846`) — 🟢 **The ONE new demand-side figure of the pass, with the caveat its publisher omits**
 

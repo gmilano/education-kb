@@ -4,6 +4,78 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Fifty-second pass (`p847`, 2026-11-16) — `1` recipe (`P102`), built only from rows filed or measured this pass
+
+## 🟢 `P102` — THE OPEN-LICENSING PROGRAMME: turn the education material a region already wrote into a corpus it is allowed to use (fifty-second pass, `p847`, LATAM anchor; portable to EMEA/Africa)
+
+🔵 **Why this recipe exists.** `p847` ran both LATAM-language supply legs and returned `34`
+addresses: `0` agents, almost all courseware, and all but two with **no grant** (`T161`).
+🟢 **The material is good, public and used. It simply cannot be reused, derived from, or fed to a
+model — not by Globant, not by the ministry, and in most cases not by the institution that wrote
+it.** 🔴 **Every tutoring, curriculum-grounding and assessment pattern in this file assumes a
+licensed corpus. In LATAM that assumption is currently false, and no amount of model work fixes
+it.** 🟢 **So the first engagement is not an AI engagement.**
+
+### What it is
+
+A `6`–`10` week programme that takes an institution's existing educational material from
+"published" to "licensed", and leaves behind a corpus plus the machinery to keep it that way.
+
+### Inputs — all filed on these shelves, all byte-read
+
+| Component | Repo | Licence | Role in the recipe |
+|---|---|---|---|
+| The LOCAL PRECEDENT | [`bandtec/web-data-viz`](https://github.com/bandtec/web-data-viz) | 🟢 `MIT` (`1,113 B`, `de03212ef57c`) | 🟢 **The argument, not the code.** A São Paulo technical school already licensed its teaching artifact so students may build on it. Open the conversation with a domestic precedent rather than a foreign one. |
+| The NEGATIVE EXHIBIT | `4GeeksAcademy` estate + `learnpack` runtime | 🔴 ToS in `LICENSE.md`; npm `"license": "<url>"` | 🔴 **What happens when nobody does this**: `~1,300★`, `634` forks, and a corpus no third party may build on. Shows the client the cost in two minutes (`T159`). |
+| The DILIGENCE GATE | `P99` + `P94` | — | Run over every candidate artifact before it enters the corpus. `P990`: a file named `LICENSE` is not a grant. |
+| The MEASUREMENT | `P95` (first-party metadata sweep) | — | Produces the inventory and re-runs it as a regression each quarter. |
+| The DELIVERY SUBSTRATE | [`the-littlest-jupyterhub`](https://github.com/jupyterhub/the-littlest-jupyterhub) · [`plasmabio/plasma`](https://github.com/plasmabio/plasma) | 🟢 `BSD-3-Clause` both | Where the licensed corpus is taught FROM once it exists — one VM per course, environment versioned with the material. |
+| The GROUNDING TARGET | `P87` (ground the tutor in a curriculum you are licensed to ship) | — | 🟢 **The reason the client is paying**: `P87` is unexecutable until `P102` has run. |
+
+### Steps
+
+1. **Inventory (week `1`–`2`).** Run `P95` across the institution's GitHub orgs, VLE exports and
+   departmental drives. Output one row per artifact: address, author, last modified, grant blob
+   present `yes/no`, grant bytes, SPDX id or `NONE`.
+   🔴 **Expect `NONE` on `>90%` — that is the `p847` measurement, not a guess.**
+2. **Triage by RIGHTS, not by quality (week `2`–`3`).** Three buckets: (a) institution-owned and
+   clearable; (b) individually authored, author reachable; (c) third-party content embedded —
+   figures, exam items, textbook extracts. 🔴 **Bucket (c) is where the programme actually
+   stalls; size it in week two, not in week eight.**
+3. **Choose ONE grant per bucket and write it down (week `3`).** Code → `MIT` or `Apache-2.0`.
+   Prose and media → `CC BY 4.0` or `CC BY-SA 4.0`. 🔴 **Do not let each department choose. A
+   corpus with eleven licences is a corpus with no licence.** 🔵 Use `P94`'s intake gate wording so
+   the institution's own future contributions pass the same bar.
+4. **Clear and apply (week `4`–`7`).** Author sign-off for bucket (b); replace or excise bucket
+   (c). Every artifact gets a real grant FILE — 🔴 **not a README line, not a terms page, not a
+   URL in a metadata field (`T159`).**
+5. **Republish and prove it (week `7`–`8`).** Push the corpus with grants in place; re-run `P95`;
+   the deliverable is the inventory showing the SPDX column populated.
+6. **Hand over the gate (week `8`–`10`).** Install `P99` in the institution's publication process
+   so the next artifact arrives licensed. 🟢 **Without this step the corpus decays back within a
+   year and the engagement has sold a snapshot.**
+
+### What it costs and what it is worth
+
+🟢 **No model, no GPU, no data platform.** Legal-adjacent work, a metadata sweep and a
+republication. 🔵 **It is the cheapest thing in this file to deliver and the hardest thing in this
+file to deliver twice** — which is why it is worth proposing as a programme rather than a project.
+
+🔴 **Qualify hard before proposing it.** It needs a counterpart with authority over rights, not a
+head of innovation. 🔵 **Signals that it will land:** a national AI-in-education commitment with a
+student target attached (LATAM: Google.org's stated `1.25` million by `2028` across `9` countries),
+a ministry that has already funded content production, or an accreditation body asking where
+teaching material lives.
+
+### Portability
+
+🟢 **Run the same recipe in EMEA/Africa with a different exhibit.** The only African education
+supply `p847` found anywhere was two WASSCE exam-prep prototypes at `0★` and `1★`, both
+unlicensed — 🔵 **demand with neither software nor a licensed corpus beneath it, which is `P102`
+with an even larger bucket (c).** 🔴 **Do not port it to APAC**: there the supply is large and
+already permissive (`DeepTutor` `Apache-2.0`, `OpenMAIC` `MIT`), so the binding constraint is
+regulatory, not licensing.
+
 ## 🟢 Pattern (`p846`, `2026-11-16`) — **"Source the interoperability layer by specification, not by search"**
 
 🔵 **The problem this solves.** A Globant education engagement almost always has an integration

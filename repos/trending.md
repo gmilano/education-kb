@@ -4,6 +4,51 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-second pass (`p847`) — 🟢 **`8` new rows from a layer `51` passes never filed: where the learner's code RUNS**
+
+🔵 **`p846` found repositories the search index cannot see. `p847` found a LAYER the base's own
+query vocabulary could not name: every grading and lab pattern here assumes compute, and the
+compute tier had zero rows.** 🟢 **All eight byte-read on the default branch today.**
+
+| Repo | ★ (measured `2026-11-16`) | Licence | Pushed | Region | Why it is here |
+|---|---|---|---|---|---|
+| [`pshenok/server-survival`](https://github.com/pshenok/server-survival) | `6,498` | 🟢 `MIT` (`1,079 B`, `e86ab27fe716`) | `2026-11-04` | Global | 🟢 **A tower-defence game that teaches cloud architecture.** The highest-traction permissive serious game this base holds — proof that the learning-by-play model ships for a corporate-training subject. |
+| [`jupyterhub/the-littlest-jupyterhub`](https://github.com/jupyterhub/the-littlest-jupyterhub) | `1,147` | 🟢 `BSD-3-Clause` (`1,510 B`, `a9d15a91664e`) | `2026-11-05` | Global | 🟢 **The classroom-compute substrate**: JupyterHub scoped to `1–100` users on one server — the size of a class. Under `P84` and `P89`. |
+| [`SimonSchubert/Braincup`](https://github.com/SimonSchubert/Braincup) | `352` | 🟢 `Apache-2.0` (`11,357 B`, `c71d239df917`) | `2026-11-14` | EMEA | Memory / focus / arithmetic trainer, continuously maintained since `2019-06-01`. 🔵 **Seven years of pushes is a rarer signal than a six-month star spike.** |
+| [`paytonjjones/bsharp`](https://github.com/paytonjjones/bsharp) | `314` | 🟢 `Apache-2.0` (`11,342 B`, `638e16badc1c`) | `2026-11-06` | Global | Teaches children perfect pitch — a hard pedagogical claim implemented as derivable software. |
+| [`CrypToolProject/CrypTool-2`](https://github.com/CrypToolProject/CrypTool-2) | `169` | 🟢 `Apache-2.0` (`11,357 B`, `c71d239df917`) | `2026-11-02` | EMEA | The cryptography e-learning lab with German academic provenance — the reference permissive domain-training platform. |
+| [`wixette/8800-simulator`](https://github.com/wixette/8800-simulator) | `152` | 🟢 `Apache-2.0` (`11,357 B`, `c71d239df917`) | `2026-11-08` | Global | Altair 8800 / Intel 8080 in a browser page, working front panel. Pairs with `wrench` below. |
+| [`ryukzak/wrench`](https://github.com/ryukzak/wrench) | `45` | 🟢 `BSD-3-Clause` (`1,466 B`, `8a9b41684109`) | `2026-11-13` | EMEA | 🟢 **CPU simulator, assembler AND auto-grading toolkit** — deterministic grade, generated feedback only. Part of the standing grading gap, closed from an unexpected direction. |
+| [`plasmabio/plasma`](https://github.com/plasmabio/plasma) | `42` | 🟢 `BSD-3-Clause` (`1,527 B`, `2bb2635332c1`) | `2026-10-20` | EMEA | Jupyter-based e-learning platform where a course's environment is a versioned artifact. EU-origin component for a European public bid. |
+
+### 🔴 Measured and NOT filed — the week's biggest-looking find, disqualified
+
+| Estate | Traction | Why rejected |
+|---|---|---|
+| `4GeeksAcademy` auto-graded exercises (`9` canonical repos) | `~1,300★`, `634` forks on one | 🔴 `LICENSE.md` is a Breathe Code **terms-of-service** document (`954 B`), GitHub reports `Other` |
+| [`learnpack/learnpack`](https://github.com/learnpack/learnpack) + `learnpack/ide` + `learnpack/web` | `10★` / `2★` / `1★` | 🔴 **No licence on any of the three**; the `10★` canonical repo last pushed `2025-10-14` |
+| `learnpack` on npm | `0.1.30`, `modified 2024-11-05` | 🔴 `"license": "https://learnpack.co/terms"`; its named repo `learnpack/learnpack-cli` **`404`s on both branches and is absent from search** |
+
+🟡 **`learnpack.co/terms` was unreachable from this environment** (`CONNECT tunnel failed, response 403`),
+so the terms are not characterised here — only that no SPDX grant exists. → `T159`.
+
+### 🔴 LATAM: `34` new addresses returned, `0` filed, and the reason is the grant
+
+`escuela OR docente OR profesor OR alumno` and `professor OR aluno OR ensino OR escola`
+(`pushed:>2026-01-01`) returned `34` addresses this base did not hold. 🔴 **Every LATAM-origin hit
+is courseware, and all but two carry `NONE` or `NOASSERTION`.** Named, with stars, so the next
+pass does not re-run the leg: [`nad-garraz/algebraUno`](https://github.com/nad-garraz/algebraUno)
+(`150★`, UBA Exactas, no licence), [`lugaralgum/material-aulas`](https://github.com/lugaralgum/material-aulas)
+(`102★`, `NOASSERTION`), [`henriquegpb/gradesinteli`](https://github.com/henriquegpb/gradesinteli)
+(`86★`, no licence, pushed **today**, an open grade/absence UI for Inteli's Adalove platform in
+Brazil), [`bandtec/web-data-viz`](https://github.com/bandtec/web-data-viz) (`167★`, 🟢 **`MIT` —
+byte-read**, `main/LICENSE`, `1,113 B`, `sha256₁₂ de03212ef57c`, holder *"2022 BandTec Digital
+School — agora é São Paulo Tech School"* — 🟢 **the one permissive LATAM courseware row found, and
+the exception that proves the pattern**: a reference implementation handed to first-semester
+students at a São Paulo technical school, explicitly licensed so they may build on it). → `T161`, `P102`.
+
+---
+
 ## `2026-11-16` — fifty-first pass (`p846`) — 🔴 **`2` new rows, and the finding is that GitHub trending and GitHub search DISAGREE about which repositories exist**
 
 🔵 **`p845` recorded what trending cannot see: a `0★` repository that is the most complete in its

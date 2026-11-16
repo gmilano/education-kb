@@ -4,6 +4,70 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` — fifty-second pass (`p847`) — 🟢 **the eighth nil on the mandated legs ENDS: one new build-safe tutor, and the week's sharpest signal is a `~1,300★` estate that turns out to be proprietary**
+
+🔵 **Two of the three things that moved this window are negative, and that is the point of a
+trending file that is kept rather than rewritten.**
+
+### 🟢 Movement 1 — a new entrant on the tutoring shelf after seven nil passes
+
+| | |
+|---|---|
+| Repo | [`Li-Evan/BloomTutor`](https://github.com/Li-Evan/BloomTutor) |
+| ★ / forks (🟢 GitHub API, `2026-11-16`) | `310` / `44` |
+| Licence | 🟢 `MIT` — byte-read, `1,069 B`, `sha256₁₂ 7d574cf3632e` |
+| Created / pushed | `2026-03-10` / `2026-11-16` |
+
+🟢 **Why it is the week's entry and not just another tutor.** The fork-to-star ratio is `1:7`.
+🔵 **On this shelf the median education repository sits nearer `1:20` — a `1:7` ratio means the
+people arriving are cloning it to change it.** Its thesis is explicit in the `README` (Bloom's
+`+2σ`), its mechanism is a learner model that updates **between** lessons, and it ships a Claude
+Code CLI surface alongside the web app.
+
+### 🔴 Movement 2 — the `4GeeksAcademy` / `learnpack` estate: high traction, no grant
+
+🔵 **This is the single most useful thing this pass can hand the next engagement**, because the
+estate looks exactly like a find:
+
+- `9` canonical auto-graded exercise repositories, roughly `1,300★` between them, `634` forks on
+  the JavaScript one alone, `4` of them pushed within the last `60` days.
+- 🔴 **The content licence is a Breathe Code terms-of-service document in a file named
+  `LICENSE.md` (`954 B`), opening `# TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION`.**
+- 🔴 **The runtime's npm metadata declares `"license": "https://learnpack.co/terms"`** — a URL, not
+  an SPDX identifier — at `0.1.30`, `modified 2024-11-05`.
+- 🔴 **`learnpack/learnpack-cli`, the repository that npm package names, `404`s** on
+  `raw.githubusercontent.com` for `README.md`, `package.json` and `LICENSE`, on `master` and
+  `main`, and does not appear in `search/repositories`.
+- 🟡 `learnpack.co/terms` could not be read from this environment (agent proxy returned
+  `CONNECT tunnel failed, response 403`), so this pass does **not** characterise the terms
+  themselves — only that they are not an SPDX grant.
+
+🔵 **Standing instruction that falls out of it:** when an education estate's stars sit on CONTENT,
+read the grant on the RUNTIME, and read it as bytes. → `T159`, `P990`.
+
+### 🟢 Movement 3 — the two giants re-measured first-party, and both are still climbing
+
+| Repo | Third-party digest | 🟢 First-party, `2026-11-16` | Licence | Forks |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `~50,000★` (`2026-10-30`), `58,003★` (`2026-11-11`) | 🟢 **`59,637★`** | `Apache-2.0` | `7,226` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `~42,000★` (November digests) | 🟢 **`43,702★`** | `MIT` | `6,734` |
+
+🔵 **Both already held. Recorded because the third-party digests this base reads are running
+`1,600`–`1,700★` behind the API within days, which is the right size of correction to apply
+mentally when a digest is the only source available.** 🟢 **Education's two largest open projects
+are both APAC-origin (HKU and Tsinghua) and both permissive** — the supply-side fact a Globant
+APAC engagement should open with.
+
+### 🔴 Movement 4 — a star floor no longer filters the lesson-plan channel
+
+`q='"lesson plan" in:name,description license:mit pushed:>2026-06-01 stars:>20'` →
+`redowl2265-aklhu/edu-lesson-plan` (`39★`), `codebear9535-0xd4i/lesson-plan-builder` (`24★`),
+`fastdeer4365-n4fst/lesson-plan-reviewer` (`23★`). 🔴 **All created within four days of each
+other, all with empty descriptions, all under `word+digits-hash` owner names.** 🔵 **Three of a
+four-result query. Screen on empty-description + generated-owner-name, not on stars.** → `T160`.
+
+---
+
 ## `2026-11-16` — fifty-first pass (`p846`) — 🔴 **the week's real movement is that `6` agents this base could have buried are alive, and `1` of the two deaths it recorded is a TAKEDOWN**
 
 🔵 **Nothing new entered the education-agent market this window that this base does not already

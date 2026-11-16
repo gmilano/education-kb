@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — fifty-second pass (`p847`): **the vertical nil ENDS — not with another LMS, but with the tier beneath every LMS pattern on this shelf: where the learner's code runs**
+
+🔵 **The mandated vertical leg was run globally and returned the same seven platforms as `p846`
+(Open edX, Sakai, Moodle, OpenEduCat, ILIAS, Chamilo, Canvas LMS), all already held, all copyleft
+except Sakai's `ECL-2.0`.** 🟢 **The eighth consecutive nil on that leg is therefore confirmed —
+and `p847` stopped re-running it and asked a different question: what does a studio deploy when
+the deliverable is a COURSE rather than an institution?**
+
+### 🟢 The CLASSROOM-COMPUTE tier — customisable, permissive, and absent from this shelf for `51` passes
+
+| Platform | Repo | Licence | ★ | Region | Scale it is built for | Where the AI layer goes |
+|---|---|---|---|---|---|---|
+| **The Littlest JupyterHub** | [`jupyterhub/the-littlest-jupyterhub`](https://github.com/jupyterhub/the-littlest-jupyterhub) | 🟢 **BSD-3-Clause — byte-read** (`1,510 B`, `a9d15a91664e`) | `1,147` | Global | 🟢 **`1`–`100` users on ONE server — a class, not a campus** | Above it: the agent reads submitted notebooks, runs them, and writes feedback. The GRADE comes from execution (`P84`), the model writes only the explanation. |
+| **Plasma** | [`plasmabio/plasma`](https://github.com/plasmabio/plasma) | 🟢 **BSD-3-Clause — byte-read** (`1,527 B`, `2bb2635332c1`) | `42` | EMEA | A course, with its environment as a versioned artifact | 🔵 **EU-origin component for a European public bid.** The agent proposes environment changes as pull requests against the course definition. |
+
+🔵 **Why this tier matters commercially.** 🔴 **Every LMS on this shelf is copyleft, so the
+institution's platform choice is made before Globant arrives and the licence boundary has to be
+engineered around (`P100`, `P101`).** 🟢 **The compute tier is permissive, and it is the part the
+studio actually builds. A faculty-level engagement can therefore be delivered end-to-end on a
+licence the client owns outright, with the LMS reached only through LTI (`P87`) — no copyleft
+boundary crossed at all.**
+
+### 🟢 The DOMAIN-TRAINING tier — finished, permissive platforms to put an agent beside
+
+| Platform | Repo | Licence | ★ | Region | Why it is a vertical starting point |
+|---|---|---|---|---|---|
+| **CrypTool 2** | [`CrypToolProject/CrypTool-2`](https://github.com/CrypToolProject/CrypTool-2) | 🟢 **Apache-2.0 — byte-read** (`11,357 B`, `c71d239df917`) | `169` | EMEA | A complete visual-workflow cryptography and cryptanalysis lab with decades of German academic provenance. 🟢 **The subject matter, the exercises and the pedagogy already work** — a security-training engagement adds adaptivity and assessment, and invents none of it. |
+| **wrench** | [`ryukzak/wrench`](https://github.com/ryukzak/wrench) | 🟢 **BSD-3-Clause — byte-read** (`1,466 B`, `8a9b41684109`) | `45` | EMEA | CPU simulator + assembler + **auto-grading toolkit**. 🟢 **The deterministic-grading reference**: the student's program either runs correctly on the simulated machine or it does not. 🔵 Pairs with `wixette/8800-simulator` (`Apache-2.0`) for the browser-side lab. |
+| **Server Survival** | [`pshenok/server-survival`](https://github.com/pshenok/server-survival) | 🟢 **MIT — byte-read** (`1,079 B`, `e86ab27fe716`) | `6,498` | Global | A tower-defence game that teaches cloud architecture. 🟢 **`6,498★` for a corporate-training subject nobody clicks a course on — the strongest evidence on this shelf that the learning-by-play delivery model ships.** Reusable as the engagement-model demo in an upskilling pitch. |
+
+### 🔴 A vertical that looks adoptable and is NOT — recorded here because it will be proposed again
+
+| Estate | What it looks like | 🔴 What it is |
+|---|---|---|
+| `4GeeksAcademy` auto-graded exercise estate + the `learnpack` runtime | `9` canonical repositories, `~1,300★`, `634` forks on one, `4` pushed within `60` days, interactive auto-graded courseware in Python / JavaScript / HTML / CSS — i.e. precisely the vertical this base's declared grading gap has been waiting for | 🔴 **Not open source.** Content `LICENSE.md` is a `954 B` Breathe Code **terms-of-service** document (`# TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION`); GitHub reports `Other`. The npm runtime declares `"license": "https://learnpack.co/terms"` — a URL where an SPDX identifier belongs. `learnpack/learnpack-cli`, the repo npm names, **`404`s on both branches and is absent from the search index**. The visible `learnpack/*` repositories (`10★`, `2★`, `1★`) carry **no licence at all**. 🟡 The terms page was unreachable from this environment (`403` at the proxy) and is therefore not characterised here. |
+
+🔵 **The transferable rule, because this will recur in every vertical:** when an education estate's
+traction sits on CONTENT, the reusability question lives in the RUNTIME — different repository,
+often different owner, sometimes not open at all. 🔴 **Resolve the runtime's grant to bytes before
+costing anything.** → `T159`, `P990`, `P94`.
+
+---
+
 ## 🔴 `2026-11-16` — fifty-first pass (`p846`): **the vertical leg nilled an eighth time, and the pass instead CORRECTED two platform licences this shelf has been quoting wrong**
 
 🟢 **The mandated vertical-platform leg was run globally and returned seven named platforms. All
