@@ -4,6 +4,103 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Forty-eighth pass (`p843`, 2026-11-16) — `1` recipe (`P95`), runnable, tested against a 6-repo fixture and then run over `482` real shelf rows this pass
+
+## 🟢 `P95` — THE FIRST-PARTY METADATA SWEEP: stop quoting the shelf and start measuring it (forty-eighth pass, `p843`, Global)
+
+🔵 **Why this exists.** `P94` gates a candidate at intake. 🔴 **Nothing on this
+base gated a row after intake**, and `p843` found out what that costs: two
+build-safe rows had ceased to exist, six foundations had been archived
+upstream, thirty-nine had not been pushed to in six months, three licence
+claims had never been byte-read, and every star count in `repos/trending.md`
+was a third-party figure the previous pass explicitly marked unverified — all
+three of them wrong, all three low, one by `6,781★`.
+
+🟢 **Code, tested, in this repository:**
+[`compose/code/p95-first-party-sweep/`](code/p95-first-party-sweep/) —
+`sweep.sh` (stage 1), `grant-bytes.sh` (stage 2), `fixture-repos.txt`,
+`fixture-expected.tsv` and a README. Stage 1 exits `0` when every input
+resolved, stage 2 exits `1` when any repository has no grant payload, so both
+drop into CI unchanged.
+
+```bash
+./sweep.sh repos.txt out.tsv          # licence, stars, forks, last push, liveness
+./grant-bytes.sh owner/repo [...]     # byte-read whatever stage 1 left unclassified
+```
+
+### 🟢 The wiring — why this works here at all
+
+🔴 **The two obvious channels are both closed in this environment**, which is
+why forty-seven passes did without:
+
+| Channel | Result, measured 2026-11-16 |
+|---|---|
+| `gh api repos/{owner}/{repo}` | 🔴 `403` — the session credential is scoped to attached repositories |
+| `github.com/<owner>/<repo>` (HTML) | 🔴 `403` through the proxy (`T124`) |
+| `huggingface.co`, `arxiv.org`, `aclanthology.org` | 🔴 do not resolve (`curl` exit `56`) |
+| **`gh api search/repositories`** | 🟢 **`200` for any public repo, full metadata** |
+| **`raw.githubusercontent.com`** | 🟢 `200`/`404` — a real answer |
+
+🟢 **Stage 1** batches ten `repo:` qualifiers per search query as an OR and
+reads `license.spdx_id`, `stargazers_count`, `forks_count`, `pushed_at`,
+`archived` and `fork`. Three details are not optional, each learned by getting
+it wrong first:
+
+1. 🔴 **`fork:true` must be in the query.** GitHub search excludes forks by
+   default, so a maintained fork is indistinguishable from a deleted
+   repository. Two foundation rows —
+   `packbackbooks/lti-1-3-php-library` (Apache-2.0, 54★, pushed 2026-11-13) and
+   `tl-its-umich-edu/caliper-php-public` (LGPL-3.0) — were nearly recorded as
+   dead for exactly this reason.
+2. 🔴 **A batch containing one non-existent repository returns `422` for all
+   ten.** The script falls back to one-at-a-time on failure rather than losing
+   the batch.
+3. 🔴 **Absence from the search index is NOT proof of deletion.**
+   `digitalcredentials/learner-credential-wallet` answers `422` even with
+   `fork:true`, yet `git ls-remote` resolves it (`HEAD 1c46a82ba384`) and raw
+   serves its README. Stage 1 therefore adjudicates every absence with
+   `git ls-remote` and prints 🔴 `GONE` or 🟡 `UNINDEXED`, never one for the
+   other.
+
+🟢 **Stage 2** byte-reads the grant for everything stage 1 left as
+`NOASSERTION` or `NONE`, over 7 filenames × 2 branches via raw, reporting
+bytes, `sha256₁₂` and title line — and flags any Apache-asserting file under
+`5,000 B` as **`BOILERPLATE-ONLY`** (`T145`), because the full Apache-2.0 text
+is `11,357 B` and a `738 B` file is a grant by *reference*, not by text.
+
+### 🟢 What it produced this pass, on this base
+
+| Shelf | Rows swept | Dead | Archived | No push in 6 months | Licence claims corrected or newly evidenced |
+|---|---|---|---|---|---|
+| `agents/top.md` build-safe | `275` | 🔴 **`2`** | 0 | `21` | 🟢 `3` byte-read for the first time |
+| `repos/foundations.md` | `207` | 🟢 **`0`** | 🔴 **`6`** | `39` | — |
+
+🔴 **The single most actionable output**: [`frappe/mcp`](https://github.com/frappe/mcp)
+— MIT, 171★, Frappe's own MCP server for the ERPNext stack, the cleanest
+example this base had of a *permissive agent seam into a copyleft
+administrative core* — **was archived upstream on 2026-10-27** and no row said
+so. 🟢 The licence permits a fork, and that is now the recommendation.
+
+🟢 **Evidence:**
+[`evidence/first-party-sweep.2026-11-16-p843.tsv`](../evidence/first-party-sweep.2026-11-16-p843.tsv) (273 rows),
+[`evidence/foundations-sweep.2026-11-16-p843.tsv`](../evidence/foundations-sweep.2026-11-16-p843.tsv) (206 rows),
+[`evidence/grant-bytes.2026-11-16-p843.tsv`](../evidence/grant-bytes.2026-11-16-p843.tsv).
+
+### 🔵 How to sell it
+
+🟢 **A client running an open-source stack has exactly this rot and no
+instrument for it.** The engagement is two weeks, not two months: point stage 1
+at the dependency manifest, adjudicate the absences, byte-read the
+unclassified grants, and hand back a table with four columns a procurement
+team can act on — *does it exist, who granted what, is anyone maintaining it,
+and what cannot be redistributed*. 🔵 The last column is the one that surprises
+people: `wwrwbs/AI_AWE` looks like a single Apache-2.0 asset and is in fact
+five grants, one of which — the `Persuade 2.0` corpus — **cannot ship**.
+
+🟢 **Composes with `P94`**, which gates intake. `P94` is the door; `P95` is the
+annual inspection. 🔴 **A shelf with only the first is a shelf that decays
+silently**, and this one did, for forty-seven passes.
+
 ## 🟢 Forty-seventh pass (`p842`, 2026-11-16) — `1` recipe (`P94`), runnable and tested against a `5`-repo fixture corpus this pass measured
 
 ## 🟢 `P94` — THE LICENCE-AND-SUBSTANCE INTAKE GATE: reject the candidate that cannot be built on, before it becomes a row (forty-seventh pass, `p842`, Global; EMEA audit note)

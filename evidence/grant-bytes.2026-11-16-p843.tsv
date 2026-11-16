@@ -1,0 +1,7 @@
+repo	probe	path	bytes	sha256_12	verdict
+kingdonkatsu/ntulearn-mcp	raw.githubusercontent	main/LICENSE	1055	e6bd1450153a	MIT byte-read; upgrades an unevidenced row
+wwrwbs/AI_AWE	raw.githubusercontent	main/LICENSE	1865	4b5296db216d	Apache-2.0 BOILERPLATE-ONLY + component manifest
+zavora-ai/mcp-education	raw.githubusercontent	main/LICENSE	738	b3886fcd4f82	Apache-2.0 BOILERPLATE-ONLY (full text is 11357 B)
+eth-lre/PedagogicalRL	raw.githubusercontent	7 names x 2 branches	0	-	NO GRANT PAYLOAD; reproduces p552 NO-GRANT verdict
+Nordup/askaboard	search API 422 + ls-remote	-	0	-	DOES NOT RESOLVE; was a build-safe row (MIT, p823)
+bhuvantejakomera/agentic-assignment-evaluator	search API 422 + ls-remote	-	0	-	DOES NOT RESOLVE; was a build-safe row

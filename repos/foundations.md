@@ -4,6 +4,77 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Forty-eighth pass (`p843`, 2026-11-16) — **`0` new foundation rows, and instead the first FIRST-PARTY measurement of the whole foundations shelf: `206` of `207` repositories measured against GitHub's own API, `0` are dead, `6` are ARCHIVED, `39` have not been pushed to in six months**
+
+🔵 **The ERP/CRM leg was run verbatim again and returned what it has returned
+every pass:** `openeducat.org`'s own marketing domain, in eight languages, and
+no MIT-, Apache- or BSD-licensed education ERP/CRM platform. 🟢 That standing
+structural fact is unchanged and is recorded in `verticals/solutions.md`.
+🔴 **Re-running a saturated leg a forty-eighth time is not a deliverable**, so
+this pass measured the shelf instead. → `P95`, `T144`.
+
+### 🟢 The foundations shelf, as GitHub itself reports it on 2026-11-16
+
+| Measure | Value |
+|---|---|
+| Distinct `github.com` slugs on table rows | `208` — of which **one is a literal placeholder slug of the form `github.com/<owner>/<repo>`**, inside a metrics table at line 231, not a row |
+| Real repositories | `207` |
+| Measured first-party | **`206`** |
+| 🔴 **Dead rows** | **`0`** |
+| 🟡 Live but absent from GitHub's search index | `1` — [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) |
+| 🔴 **Archived upstream** | **`6`** |
+| 🟡 No push in six months | `39` |
+
+🟢 **Licence mix, from GitHub's own `spdx_id`:** `146` permissive (95 MIT,
+37 Apache-2.0, 7 BSD-3-Clause, 4 BSD-2-Clause, CC0, OFL), `40` copyleft or
+other-OSI (19 GPL-3.0, 6 GPL-2.0, 5 AGPL-3.0, 3 LGPL-3.0, LGPL-2.1, 2 MPL-2.0,
+2 ECL-2.0, EUPL-1.2), `13` `NOASSERTION` and `7` `NONE`. 🔵 **Roughly 71% of
+this shelf is permissively licensed** — against an *administrative* core that
+is entirely copyleft. That split is the architecture this base keeps selling.
+
+### 🔴 The six archived foundations — upstream has stopped, and a row does not say so
+
+| Repo | Licence | Stars | Last push |
+|---|---|---|---|
+| [`FooSoft/anki-connect`](https://github.com/FooSoft/anki-connect) | `NOASSERTION` | **2,083★** | 2025-11-04 |
+| [`frappe/mcp`](https://github.com/frappe/mcp) | MIT | 171★ | 2026-10-27 |
+| [`GeovaneSchmitz/sigaa-api`](https://github.com/GeovaneSchmitz/sigaa-api) | MIT | 61★ | 2024-04-10 |
+| [`european-commission-empl/European-Learning-Model`](https://github.com/european-commission-empl/European-Learning-Model) | EUPL-1.2 | 54★ | 2024-02-14 |
+| [`scieloorg/opac`](https://github.com/scieloorg/opac) | BSD-2-Clause | 10★ | 2026-01-26 |
+| [`neuronova-apps/DUA-3.0`](https://github.com/neuronova-apps/DUA-3.0) | MIT | 0★ | 2026-09-21 |
+
+🔴 **`frappe/mcp` is the one to act on.** It is the MCP server for the Frappe /
+ERPNext stack — the nearest thing this shelf has to an agent seam into an open
+administrative core — it is MIT, it is at 171★, and **Frappe archived it last
+month**. 🔵 A client told "there is an MIT MCP server for ERPNext" in January
+will find a read-only repository. The row needs the flag now.
+🟡 `FooSoft/anki-connect` at 2,083★ is the highest-starred archived row and the
+spaced-repetition seam a dozen other rows depend on.
+
+### 🟡 What was searched and what was missing
+
+🟢 **Searched:** the mandated foundations leg verbatim; a **non-GitHub-forge**
+leg (GitLab, Codeberg, Forgejo, sourcehut); an **Arabic-language** leg.
+🔴 **Missing, and stated rather than filled:**
+
+- **No MIT/Apache/BSD education ERP or CRM platform exists.** Forty-eighth
+  consecutive confirmation. `OpenEduCat` is LGPL-3.0 on Odoo; that is the market.
+- **The forge leg found nothing to add.** Measured on this shelf today:
+  `7,428` distinct `github.com` slugs, `31` `gitlab.com`, **`1` `codeberg.org`**,
+  `1` `git.sr.ht`, `1` `framagit`. 🔵 The leg's one substantive result is
+  context, not a repo: the Dutch government began piloting a self-hosted
+  **Forgejo** forge in April 2026 as a GitHub/GitLab alternative — a sovereignty
+  signal for EMEA, not a foundation row.
+- 🔴 **The real blind spot is not another forge — it is Hugging Face.** This
+  shelf holds **one** model URL (`CenIA/nllb-200-3.3B-spa-rap`) against `7,428`
+  GitHub slugs, and `huggingface.co` **does not resolve from this session at
+  all** (`curl` exit `56`, measured 2026-11-16, as do `arxiv.org` and
+  `aclanthology.org`). An education-specific open-weights tutor surfaced this
+  pass — `TutorRL-7B` — and **cannot be licence-verified from here**. → `T144`.
+
+🟢 **Evidence:** [`evidence/foundations-sweep.2026-11-16-p843.tsv`](../evidence/foundations-sweep.2026-11-16-p843.tsv)
+(206 rows, first-party). 🟢 **Instrument:** [`compose/code/p95-first-party-sweep/`](../compose/code/p95-first-party-sweep/).
+
 ## 🔴 Forty-seventh pass (`p842`, 2026-11-16) — **`0` new foundation rows, and the searched-and-missing list is the deliverable**
 
 🟢 **What was searched.** The mandated foundations leg
@@ -887,7 +958,7 @@ session's network policy.** The evidence is
 |---|---|---|---|
 | https://github.com/frappe/frappe | **MIT** (byte-read, `1,083 B`-class) | 11.1k | **New (`p812`) — the row that matters.** Frappe Framework, `5,534` forks, pushed `2026-11-13`. 🟢 **Ships a built-in MCP server at `frappe/mcp/` exposing `13` tools, every one taking the DocType as a PARAMETER:** `search_doctypes`, `get_doctype_schema`, `search_methods`, `get_method_schema`, `list_document_methods`, `list_documents`, `get_document`, `count_documents`, `create_document`, `update_document`, `delete_document`, `call_method`, `call_document_method`. 🟢 **Self-describing** — an agent discovers `Student` / `Program Enrollment` / `Assessment Result` at runtime instead of being told. 🟢 **Governed:** `tools/documents.py` states *"Document tools reuse REST API v2 permissions and controller hooks"*, tools carry correct MCP annotations (`readOnlyHint` on reads, **`destructiveHint: True` on `update_document` and `delete_document`**), and `__init__.py` raises `NotFound` unless the **`enable_mcp`** system setting is on. 🔴 **Generic means generic: the write and `call_method` tools reach every DocType the role can reach. The gate is Frappe's permission model, so the work is ROLE DESIGN** — see `P29` |
 | https://github.com/frappe/education | 🔴 **GPL-3.0 — byte-read `license.txt` (`19 B`, `sha256:1fcecf395312d876…`, `License: GNU GPL V3`), against GitHub's `NOASSERTION`** | 709 | **New (`p812`).** The Frappe education app — students, programs, enrolment, assessment, fees. `494` forks, pushed `2026-10-30`. 🟢 **Reachable through the framework's built-in MCP server with NO education-specific code**, exactly as OpenEduCat is reachable through the Odoo connectors (`T13`). 🔴 **GPL-3.0: a system of record to integrate with, never to derive from.** 🔵 Sixth instance of `NOASSERTION` meaning "read the bytes" |
-| https://github.com/frappe/mcp | **MIT** (byte-read, `1,083 B`, `sha256:a2f4480ba60bfae2…`) | 170 | **New (`p812`) — shelved as a TRAP MARKER, not as a dependency.** 🔴 **Deprecated by its own README: *"This app is deprecated. Frappe Framework now has a built-in MCP server. Use the built-in MCP server for new projects."*** 🔴 **And it is a different KIND of thing: a tool-authoring SDK (`@mcp.tool()` decorators over WSGI, written because the official Python SDK assumes ASGI), NOT a generic connector.** 🔵 **It is the repository every search surfaces for "frappe mcp", at `170★` with a clean MIT grant — so it is precisely the artifact a future pass will shelve by mistake and mis-scope an engagement on.** Its own README also says *"highly experimental … bugs, breaking changes and large updates. Mostly without notice."* |
+| https://github.com/frappe/mcp | **MIT** (byte-read, `1,083 B`, `sha256:a2f4480ba60bfae2…`) 🔴 **ARCHIVED UPSTREAM — GitHub `archived=true`, measured `2026-11-16` (`p843`); last push `2026-10-27`. The licence permits a fork and a fork is now the recommendation.** | 170 | **New (`p812`) — shelved as a TRAP MARKER, not as a dependency.** 🔴 **Deprecated by its own README: *"This app is deprecated. Frappe Framework now has a built-in MCP server. Use the built-in MCP server for new projects."*** 🔴 **And it is a different KIND of thing: a tool-authoring SDK (`@mcp.tool()` decorators over WSGI, written because the official Python SDK assumes ASGI), NOT a generic connector.** 🔵 **It is the repository every search surfaces for "frappe mcp", at `170★` with a clean MIT grant — so it is precisely the artifact a future pass will shelve by mistake and mis-scope an engagement on.** Its own README also says *"highly experimental … bugs, breaking changes and large updates. Mostly without notice."* |
 | https://github.com/frappe/lms | 🔴 **AGPL-3.0** (byte-read `license.txt`, `33,893 B`, `sha256:db1a87ba81e885b6…`) | 3.4k | **New (`p812`).** Frappe LMS, `1,593` forks, pushed `2026-11-13`. 🔴 **AGPL network clause — integrate as a separate service, never derive.** Reachable by the same built-in MCP server |
 | https://github.com/rakeshgangwar/erpnext-mcp-server | **MIT** (byte-read, `1,071 B`, `sha256:aed951366a50288e…`) | 131 | **New (`p812`).** Third-party ERPNext MCP server, the option that predates the built-in one. Pushed `2026-04-25`. 🔵 **Useful where the site runs a Frappe version without `enable_mcp`;** otherwise prefer first-party |
 | https://github.com/nasroykh/foxmayn_frappe_cli | **MIT** (byte-read, `1,060 B`, `sha256:ccd3695dc9fee04e…`) | 16 | **New (`p812`).** CLI, MCP server and desktop app for Frappe/ERPNext, described as *"scripts, AI assistants with approval"*. Pushed `2026-11-11`. 🔵 **The approval gate is in the product description — worth reading next to `P29`'s role design** |

@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🆕 `2026-11-16` (forty-eighth pass, `p843`) — 🟢 **`0` new repo rows, and the first dated section on this file whose numbers are NOT third-party. Every star count below was read from GitHub's own API today.**
+
+🔴 **`p842` opened this file with a provenance warning**: the GitHub-trending
+leg returned nothing from GitHub's own Trending page, every ranking came from
+trend blogs, and *"this pass did NOT independently verify a single star count."*
+🟢 **`p843` verified them.** The channel is `gh api search/repositories` with
+`repo:` qualifiers — see `P95`. The trend-blog channel is still the only source
+of *ranking*; it is no longer the source of *figures*.
+
+| Repo | Licence 🟢 | 🟢 Stars, GitHub, 2026-11-16 | Forks | Last push | 🟡 What the blogs claimed |
+|---|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **59,564★** | 7,216 | 2026-11-15 | `52,783★` (2026-11-01) — **low by 6,781** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | **43,683★** | 6,734 | **2026-11-16** | `~42,000★` — low by ~1,683 |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | **MIT** | **41,918★** | 6,695 | 2026-11-01 | `40,466★` — low by 1,452 |
+
+🔵 **All three were already shelved, so the trending channel added `0` rows for
+the fourth consecutive pass.** What is new is that the figures are now
+measurements. 🟢 **All three third-party claims erred LOW**, by 3.5%–12.9% —
+consistent with stale snapshots rather than invention, and the opposite of the
+pipeline *inflation* this base had to correct in an earlier cycle. 🔵 Both
+failure modes are closed on this channel now.
+
+🟢 **`OpenMAIC` is the repository to watch.** MIT, Tsinghua MAIC lab, first
+commit 2026-03-11, **43,683★ in eight months**, and pushed to *today*. It is
+the only education agent on this shelf whose licence, velocity and provenance
+all line up for an APAC engagement.
+
+### 🟡 Two method findings this pass that change how this file should be read
+
+🔴 **1. GitHub search EXCLUDES forks by default.** Measured on the foundations
+shelf: three rows looked deleted and two were simply forks —
+[`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library)
+(Apache-2.0, 54★, pushed 2026-11-13) and
+[`tl-its-umich-edu/caliper-php-public`](https://github.com/tl-its-umich-edu/caliper-php-public)
+(LGPL-3.0, 3★, pushed 2016-01-29). 🟢 **`fork:true` recovers them; without it a
+maintained fork is indistinguishable from a dead repository.**
+
+🔴 **2. Absence from the search index is not proof of deletion.**
+[`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet)
+answers `422` from search even with `fork:true`, yet `git ls-remote` resolves it
+(`HEAD 1c46a82ba384`) and its `README.md` serves `200` from raw. 🔵 A same-named
+non-fork, `ryjones/learner-credential-wallet` (MIT, 91★), carries what looks
+like its history — the signature of a transfer the search index has not caught
+up with. 🟢 **`git ls-remote` is the authority on existence; search is the
+authority on metadata.** `P95` now adjudicates in that order.
+
 ## 🆕 `2026-11-16` (forty-seventh pass, `p842`) — 🟡 **`0` new repo rows. The trending signal this pass is THIRD-PARTY and this section labels it as such rather than restating it as measured.**
 
 🔴 **Provenance warning, first.** The GitHub-trending leg (`github trending education AI 2026`)

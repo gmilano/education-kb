@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Forty-eighth pass (`p843`, 2026-11-16) — `2` trends (`T144`, `T145`)
+
+## `T144` — the shelf is GITHUB-SHAPED, and education's most interesting open asset of the last four passes is a set of WEIGHTS: the discovery frontier has moved from repositories to models, and this instrument cannot see it (forty-eighth pass, `p843`)
+
+🔵 **What this trend replaces.** `T140` found that the mandated battery returns
+nil. `T143` found that when you do get past the battery, the candidates cannot
+be *built on*. 🟢 **`T144` finds that the battery and the shelf are looking at
+the wrong object.**
+
+🟢 **The measurement.** This base holds **`7,428` distinct `github.com` slugs**
+and, against them, **one** Hugging Face model URL
+(`CenIA/nllb-200-3.3B-spa-rap`), `31` GitLab URLs and `1` Codeberg URL. Every
+mandated discovery leg ends in the word `github`. 🔵 **The shelf is not a map of
+open education AI; it is a map of the part of it that lives in Git.**
+
+🔴 **The case that proves it.** `p843`'s Arabic-language leg surfaced
+**`TutorRL-7B`** — a 7B tutor model from ETH Zurich's NLP-for-Education group
+with TU Darmstadt, GRPO-aligned against a simulated student from
+`Qwen2.5-7B-Instruct`, published at **EMNLP 2025 (Oral)** as arXiv `2505.15607`,
+downloaded over a thousand times, claiming parity with far larger proprietary
+tutors **without human annotation**. This base had **`0`** prior mentions of it.
+
+🟢 **But it had `46` files mentioning `eth-lre/PedagogicalRL`** — the *code* for
+that exact paper, which `p552` correctly rejected as `NO-GRANT` and which
+`p843` re-probed today: `NONE` at GitHub, **no payload at 7 filenames × 2
+branches**, 55★, last push 2025-12-11.
+
+🔴 **So this base found the unusable half of the asset, rejected it correctly,
+and never saw the usable half** — because the usable half is weights, and
+weights are not a repository. 🔵 **The two halves even share a name.** Any
+pipeline keyed on `github.com/owner/repo` will keep making this exact mistake,
+and it will make it most often on *research-origin* assets, which is precisely
+where education's open supply is strongest.
+
+🔴 **And this session cannot close it.** Measured `2026-11-16`:
+`huggingface.co`, `arxiv.org` and `aclanthology.org` all fail to resolve
+(`curl` exit `56`, `ENOTFOUND`), while `raw.githubusercontent.com` answers
+normally and `github.com` HTML returns `403` (`T124`). 🟢 **The licence on
+`TutorRL-7B` is therefore 🟡 UNVERIFIED and must stay that way until the
+network allows it** — one aggregator lists the `-think` variant as
+`apache-2.0`, which is a lead, not a grant, and the upstream `Qwen2.5` terms
+would need checking besides.
+
+🟢 **What follows, concretely.** The discovery battery needs a model leg
+(`huggingface.co/models?pipeline_tag=…`, `open-weights tutor`, `education
+fine-tune`), the shelf needs a second address space for model IDs with its own
+licence column — a model carries *two* grants, the weights' and the base
+model's — and the environment needs `huggingface.co` allowed. 🔵 Until then,
+**`T144` is a declared blind spot, not a solved problem**, and this base should
+say so wherever it claims coverage.
+
+## `T145` — a fourth grant class: the licence that is real but ABSENT AS TEXT, and why every size-, hash- or template-based licence test mis-grades it (forty-eighth pass, `p843`)
+
+🟢 **`P94` named three failure modes:** unlicensed-by-omission,
+licensed-but-proprietary-dependent, and a real grant over no substance.
+🔵 **`p843` adds a fourth, and it is not a failure — it is a measurement
+error waiting to happen.**
+
+🔴 **The finding.** Two build-safe rows assert Apache-2.0 and carry **only
+Apache's appendix boilerplate**: the five-paragraph *"Licensed under the Apache
+License, Version 2.0 … You may obtain a copy of the License at …"* notice plus
+a copyright line. [`zavora-ai/mcp-education`](https://github.com/zavora-ai/mcp-education)
+is **`738 B`** (`sha256₁₂ b3886fcd4f82`); [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE)
+is **`1,865 B`** (`sha256₁₂ 4b5296db216d`). 🟢 **The full Apache-2.0 text is
+`11,357 B`** — measured the same day at `apache/.github/main/LICENSE`, and
+corroborated to the byte by this base's own earlier reading of
+`openedx/django-user-tasks` at `11,356 B`.
+
+🟢 **The grant is real.** Incorporation by reference is exactly how the Apache
+Foundation tells you to mark files, and the notice names the licence, the
+version and where to obtain it. 🔴 **But GitHub's own detector returns
+`NOASSERTION` for both**, and so will any test that compares bytes, hashes or
+template text — which is what a licence pipeline is usually built out of.
+🔵 **The three honest verdicts for a licence file are not two.** They are:
+*matches a known grant*, *asserts a known grant by reference*, and *asserts
+nothing*. Collapsing the middle one into either neighbour produces a wrong
+answer in opposite directions.
+
+🟢 **`AI_AWE` also shows what the middle class is often hiding: a component
+manifest with a build constraint in it.** Its `1,865 B` declare Apache-2.0 over
+the code, LoRA adapters and LightGBM scorer; MIT over a vendored
+`TextComplexityToolkit`; permissive-by-notice over `TAALED`; Apache-2.0 over a
+`Qwen2.5-7B-Instruct` base model **obtained separately and not redistributed**;
+and an **academic-use-only licence over the `Persuade 2.0` corpus, which is
+also not redistributed**. 🔵 **Globant can ship the scorer and cannot ship the
+corpus.** A single-SPDX-field pipeline erases that sentence — and it is the
+sentence a client engagement has to start from.
+
+🟢 **Operationally:** `P95` stage 2 now flags any Apache-asserting file under
+`5,000 B` as `BOILERPLATE-ONLY` rather than passing or failing it, and the row
+keeps the byte evidence alongside the SPDX string.
+
 ## 🟢 Forty-seventh pass (`p842`, 2026-11-16) — `1` trend (`T143`)
 
 ## `T143` — a licence badge is a claim about a FILE, not about an asset: at the discovery frontier the failure mode has shifted from "no candidates" to "candidates that cannot be built on", and the three disqualification modes are now distinct and nameable (forty-seventh pass, `p842`)

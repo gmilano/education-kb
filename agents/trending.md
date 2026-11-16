@@ -4,6 +4,83 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🆕 `2026-11-16` (forty-eighth pass, `p843`) — 🟢 **NIL `38` on new rows, but the first pass that VERIFIED the trending numbers instead of quoting them. All three headline star counts were understated by third parties.**
+
+🔴 **What `p842` had to write one hour ago:** *"This pass did NOT independently
+verify a single star count in this section, and the figures are therefore 🟡
+unverified."* 🟢 **That caveat is retired.** `p843` found that
+`gh api search/repositories` — unlike `gh api repos/{owner}/{repo}`, which is
+`403` for unattached repositories, and unlike `github.com` HTML, which is `403`
+through this proxy (`T124`) — answers for **any** public repository and returns
+the licence SPDX, star count, fork count and last push. → `P95`.
+
+### 🟢 The trending set, measured first-party `2026-11-16`
+
+| Repo | 🟡 Third-party claim carried by `p842` | 🟢 GitHub's own figure, 2026-11-16 | Error |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `52,783★`, dated 2026-11-01 | **`59,564★`**, Apache-2.0, 7,216 forks, pushed 2026-11-15 | 🔴 understated by **`6,781★`** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `~42,000★` | **`43,683★`**, MIT, 6,734 forks, pushed **2026-11-16** | understated by ~`1,683★` |
+| [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) | `40,466★` | **`41,918★`**, MIT, 6,695 forks, pushed 2026-11-01 | understated by `1,452★` |
+
+🔵 **Every third-party figure erred in the same direction — low — and the
+largest error was `12.9%` of the true count.** That is what a stale snapshot
+looks like, not a fabricated one, and it is the reason this base twice had to
+correct "pipeline-inflated" counts in the other direction. 🟢 **Neither failure
+mode can happen again on this channel: the number now comes from GitHub.**
+
+🟢 **The substance behind the numbers is unchanged and worth restating**:
+`DeepTutor` is Apache-2.0 and was pushed to yesterday; `OpenMAIC` is **MIT**,
+was pushed to **today**, and at `43,683★` eleven months after its first commit
+(2026-03-11) it is the fastest-growing education agent codebase this base has
+measured. 🔵 **For an APAC engagement the provenance matters as much as the
+licence** — `OpenMAIC` is Tsinghua's MAIC lab, MIT-licensed, self-hostable.
+
+### 🔴 The candidate this base cannot shelve, and why that is the finding
+
+`p842` ran four angles past the mandated battery. `p843` ran two more — a
+**non-GitHub-forge** angle and an **Arabic-language** angle — and the Arabic leg
+returned something the eight English legs across four passes never did:
+
+🟢 **`TutorRL-7B`** — a 7B pedagogical tutor model from **ETH Zurich's NLP for
+Education group with TU Darmstadt**, aligned with GRPO against a simulated
+student in a synthetic multi-turn classroom, starting from
+`Qwen2.5-7B-Instruct` with `Llama-3.1-8B-Instruct` as the student. Published as
+*"From Problem-Solving to Teaching Problem-Solving: Aligning LLMs with Pedagogy
+using Reinforcement Learning"*, **EMNLP 2025 main / Oral**, arXiv `2505.15607`.
+ETH reports it has been downloaded **over a thousand times** and that it is
+**not yet evaluated with learners in a classroom**. The authors claim parity
+with far larger proprietary tutors such as `LearnLM`, trained **without human
+annotation**. 🔵 There is a reasoning variant, `TutorRL-7B-think`, and the same
+group publishes `Eduardo-27b`.
+
+🔴 **This base has `0` prior mentions of `TutorRL`. It has `46` files mentioning
+`eth-lre/PedagogicalRL`** — the *code* for the same paper, which `p552`
+correctly rejected as `NO-GRANT` and which `p843` re-probed today: `NONE` at
+GitHub, **no payload at 7 filenames × 2 branches**, 55★, last push 2025-12-11.
+
+🟢 **So this base found the unusable half of the asset and never saw the usable
+half**, because the usable half is a set of weights on Hugging Face and this
+shelf is GitHub-shaped. 🔴 **And it cannot close the gap from here**: measured
+`2026-11-16`, `huggingface.co`, `arxiv.org` and `aclanthology.org` all fail to
+resolve from this session (`curl` exit `56`, `ENOTFOUND`), while
+`raw.githubusercontent.com` answers normally. **The licence on `TutorRL-7B` is
+therefore 🟡 UNVERIFIED** — one third-party aggregator lists the `-think`
+variant as `apache-2.0`, which is a lead, not evidence, and the upstream
+`Qwen2.5` terms would need checking besides. → `T144`, and a declared gap.
+
+### 🔵 Also examined, also not rows
+
+| Candidate | First-party 2026-11-16 | Disposition |
+|---|---|---|
+| [`agentschools/opencode.school`](https://github.com/agentschools/opencode.school) | `NOASSERTION`, 75★, pushed 2026-11-09 | 🟡 Novel to the shelf; a **course about** a coding agent, not an education agent |
+| [`slayadapraya/School-Agent`](https://github.com/slayadapraya/School-Agent) | 🔴 `NONE`, 0★ | Unlicensed — re-confirmed first-party |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `NOASSERTION`, **988★** (shelf carried 977★) | Already correctly shelved as **CC BY-SA 4.0**, a content licence |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | `AGPL-3.0`, 1,326★, pushed 2026-01-09 | Copyleft and ten months stale |
+
+🟢 **The mandated battery itself returned `0` novel education agents for the
+fourth consecutive pass.** The supply channel is saturated; what moved this
+pass was the *measurement*, not the supply.
+
 ## 🆕 `2026-11-16` (forty-seventh pass, `p842`) — 🟡 **NIL `37`, but a DIFFERENT nil: `3` novel URLs were found and all `3` were disqualified on inspection. The licence-and-substance gate is the story.**
 
 🟢 **What changed in method.** `p840` and `p841` ran the mandated battery and returned nil; `p841`

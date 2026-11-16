@@ -4,6 +4,58 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Forty-eighth pass (`p843`, 2026-11-16) — **`0` new platform rows. The ERP/CRM leg is vendor-captured for the forty-eighth time, and this pass found the first ARCHIVED agent seam into the administrative core.**
+
+🟢 **Leg run verbatim:** `open source platform education ERP CRM MIT Apache`.
+🔴 **Result: unchanged and vendor-captured.** Ten of ten returned hits were
+`openeducat.org` pages — glossary pages in `es`, `fr`, `ar`, `de`, `pt-BR`,
+`zh`, `vi` and English, plus the school-management and institute-management
+feature pages. 🔵 **A leg that returns one vendor's SEO surface in eight
+languages is not measuring a market**, and that remains the finding.
+
+🟢 **`OpenEduCat` stays shelved exactly as it is**: LGPL-3.0 (Community) /
+commercial (Enterprise), built on the **Odoo** framework, which is itself
+LGPL-based. The leg's own sources restate that licence, so the row is
+corroborated, not revised. 🔴 **No MIT-, Apache- or BSD-licensed education
+ERP/CRM platform surfaced, again.**
+
+### 🔴 What is new: the MIT seam into ERPNext was ARCHIVED last month
+
+The `P95` sweep measured every repository behind this file's recommended
+architecture. One result changes a recommendation:
+
+| Repo | Licence | Stars | Status 2026-11-16 |
+|---|---|---|---|
+| [`frappe/mcp`](https://github.com/frappe/mcp) | **MIT** | 171★ | 🔴 **ARCHIVED upstream**, last push 2026-10-27 |
+| [`rakeshgangwar/erpnext-mcp-server`](https://github.com/rakeshgangwar/erpnext-mcp-server) | MIT | — | 🟡 live, but no push since 2026-04-25 |
+
+🔵 **This matters more than its star count.** The architecture this base
+recommends is: *copyleft administrative core, permissive agent-facing
+integration tier on top*. `frappe/mcp` was the cleanest example of that tier
+against an open ERP — Frappe's own MIT-licensed MCP server. 🔴 **Frappe has
+stopped maintaining it.** The tier still holds; the exemplar needs replacing,
+and a fork is the realistic answer because the licence permits it.
+
+🟢 **The standing architecture, re-confirmed with first-party licence data:**
+the administrative core is a copyleft estate — `OpenEduCat` LGPL-3.0,
+`Odoo` LGPL, `Moodle` GPL-3.0, `Open edX` AGPL-3.0, `BigBlueButton` LGPL-3.0 —
+while the layer Globant can ship without reciprocity is the **agent-facing
+integration tier** (`vishalsachdev/canvas-mcp` and its fork family,
+`loyaniu/moodle-mcp`, `jtayped/sakai-mcp`, `kingdonkatsu/ntulearn-mcp` —
+the last one's MIT grant **byte-read for the first time this pass**,
+`1,055 B`, `sha256₁₂ e6bd1450153a`) and the **content tier**
+(`Kolibri` MIT, `H5P` MIT).
+
+🟡 **One platform-level signal worth recording, from the EMEA regulatory leg:**
+the UAE Ministry of Education's *Safe and Responsible Use of Artificial
+Intelligence in Classrooms 2026* guide names an **approved-platform annex** and
+bars unapproved generative-AI tools from classrooms outright. 🔵 **That turns
+"which LLM does your tutor call?" into a procurement gate**, and it is an
+argument for the self-hostable, provider-neutral end of this shelf —
+`Kolibri`, `OpenMAIC` (MIT), `Ollama`-backed deployments — over anything that
+can only reach a hosted frontier endpoint. Detail and provenance in
+`intel/market.md`.
+
 ## 🔴 Forty-seventh pass (`p842`, 2026-11-16) — **`0` new platform rows; the ERP/CRM leg returned ONE platform and `13`-of-`17` hits were its own marketing domain**
 
 🟢 **Leg run verbatim:** `open source platform education ERP CRM MIT Apache`.

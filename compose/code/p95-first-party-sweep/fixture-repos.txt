@@ -1,0 +1,6 @@
+AgentTeam-TaichuAI/ScienceClaw
+kingdonkatsu/ntulearn-mcp
+wwrwbs/AI_AWE
+zavora-ai/mcp-education
+eth-lre/PedagogicalRL
+Nordup/askaboard
