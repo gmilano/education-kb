@@ -4,6 +4,20 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Forty-sixth pass (`p841`, 2026-11-16) — **`0` new foundation rows (`207` → `207`)**
+
+🔴 **Cold-start replication of the mandated battery surfaced no foundational repository this base
+does not already hold.** 🟢 **Nothing was added; the shelf is unchanged and that is reported rather
+than padded** — `T63`.
+
+🟡 **The LMS/SIS leg's only new information was a licence-label CONFLICT in secondary sources, not a
+repository** — Sakai labelled `Apache-2.0` by one aggregator and **`ECL-2.0`** by another (the
+Apache-derived Educational Community License, with a narrowed patent grant — **not interchangeable
+in a client licence review**), and the licence field absent entirely for `RosarioSIS`, `openSIS` and
+`OpenEduCat`. 🔴 **No label was moved on the strength of a blog: byte-read or it does not move.**
+Detail in `repos/trending.md`.
+
+
 ## 🟢 Forty-fifth pass (`p840`, 2026-11-16) — **`5` rows (`202` → `207`): the OSSU curriculum estate lands, and the largest member of it is NOT build-safe for the reason GitHub's label does not say**
 
 🟢 **Every payload byte-read `2026-11-16` at the real default ref, with size and `sha256₁₂`.**

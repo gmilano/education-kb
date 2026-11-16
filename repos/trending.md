@@ -4,6 +4,40 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🆕 `2026-11-16` (forty-sixth pass, `p841`) — 🔴 **NIL `36` on the repo channel; the LMS/SIS leg returned a LICENCE-LABEL CONFLICT rather than a repository, and that conflict is the pass's only new information**
+
+🔴 **`0` new foundation rows, `0` new vertical rows.** 🟢 **Cold-start replication of the mandated
+battery; every repository surfaced was already held.** → `T63`.
+
+### 🔴 The LMS/SIS leg, and what it actually returned
+
+🟢 **Leg run `2026-11-16`: `open source platform education LMS SIS MIT Apache 2026`.**
+🔴 **It surfaced no repository this base does not hold** (`OpenOlat`, `OpenEduCat`, `RosarioSIS`,
+`openSIS`, Open edX, Canvas, Sakai, Moodle — all shelved in `verticals/solutions.md`).
+
+🟡 **It did surface a licence-label CONFLICT across secondary sources, recorded because this base's
+own `p840` pass measured `4` of `14` labels wrong and the same failure mode is visible here:**
+
+| Platform | Conflicting claims found on this leg | Posture |
+|---|---|---|
+| **Sakai** | one aggregator labels it `Apache-2.0`; another gives **`ECL-2.0`** (Educational Community License, Apache-derived) | 🔴 **`ECL-2.0` is the correct family — it is Apache-2.0 plus an explicit patent-grant narrowing for educational institutions. Not interchangeable with Apache-2.0 in a client licence review.** 🟡 Not byte-read this pass. |
+| **OpenOlat** | named as the one `Apache-2.0` LMS in the top tier | 🟡 Consistent with this base's row; 🔴 not re-verified this pass. |
+| **OpenEduCat** | described as the most complete free LMS+SIS+fees combination, **licence not stated by any source on the leg** | 🔴 This base holds it as `LGPL-3.0`. 🟡 The leg could not corroborate; the shelved value stands. |
+| **RosarioSIS / openSIS** | surfaced as SIS options, **licences absent from every result** | 🔴 Aggregators routinely omit the licence for exactly the platforms whose licence decides the engagement. |
+
+🔴 **The generalisable finding: on the LMS/SIS leg, the licence is the field most often MISSING or
+WRONG in secondary sources, and it is the field an engagement turns on.** 🟢 **No label above was
+promoted into `verticals/solutions.md` on the strength of a blog; byte-read or it does not move.**
+
+### 🟢 Verification instruments, re-measured this pass
+
+🟢 **`git ls-remote --symref` — WORKS** (`30`/`30` sampled repos resolved their default ref).
+🟢 **`raw.githubusercontent.com` GET — WORKS** (`200`).
+🔴 **`curl -sI https://github.com/<owner>/<name>` — `403` for all `30`, including repos proven live
+in the same minute.** 🔴 **A pass that reads that `403` as a dead link will delete valid rows.**
+🔴 **`api.github.com` remains `403` through this proxy (`T124`).**
+
+
 ## 🆕 `2026-11-16` (forty-fifth pass, `p840`) — 🟢 **THE PLATFORM VENDORS' OWN SUBSTRATE WAS NEVER FILED, while hundreds of third-party wrappers around it were — and `4` of `14` licence labels read this week were WRONG**
 
 🔴 **Two findings, and the first is a curation defect in this base rather than a discovery about the
@@ -950,7 +984,6 @@ and OCR) is real, active and copyleft — a reference architecture for `P38`, no
 `q="lti 1.3 tool mcp"` → **`1`**, and it is `course-code-framework/coursecode`, already held.
 🔵 **The standards tier is stable, shelved and North American, which is the inverse of where this
 pass's supply came from.**
-
 
 
 ## `2026-11-15` (twenty-eighth pass, `p823`) — **the foundation nil ENDS at four passes, and it ended in the STANDARDS tier rather than the application tier**
@@ -7357,7 +7390,6 @@ Counted across every leg run this pass:
 🟡 **Measured caution on `THU-MAIC/dsh-openmaic` (`119★`, MIT, already held):** OpenMAIC packaged for the DeepSeek Harness, last push `2026-08-13`. It is the harness-specific port, not the project — **start from `OpenMAIC` itself unless the engagement is already committed to that harness.**
 
 
-
 ## 🆕 2026-11-09 (p720) — 🔴 **FIVE FOUNDATION ROWS, AND THE FINDING IS A MEASUREMENT OF DEATH: THE PERMISSIVE SCHOOL-ADMINISTRATION FIELD HAS EXACTLY ONE LIVE MEMBER ABOVE `48★`, AND NONE OF THE NINE DEAD ONES IS FLAGGED `archived`**
 
 **[`foundations.md`](foundations.md) `359` → `364`.** 🟢 **`359` carried in COUNTED and it MATCHED the published figure — a SECOND consecutive clean arrival, this shelf's longest run.** **Regions on the `5`: `APAC 2` · `Global 2` · `EMEA 1`.** Both `Global` rows are **explicit in-cell refusals with the reason stated**.
@@ -8664,7 +8696,6 @@ The `19` are course material (`joanby/cursos-unity-5`, `mizaelsouto/CursoTecnico
 🔵 **The structural reason, and it is a property of the index rather than of the region.** GitHub free-text matches **name, description and topics — not README**. A LATAM project with a Spanish README and an English `description` cannot be reached by any of these probes. **The honest statement for a LATAM engagement is therefore that the regional permissive supply is `unmeasured` on this channel, not that it is empty** — and the build answer, since there is nothing to fork, is assembly from parts already shelved: [`../compose/patterns.md`](../compose/patterns.md) **`P71`**.
 
 
-
 ## 🆕 2026-11-07 (p690) — 🟢 **`255` FOUNDATION AND VERTICAL SUBJECTS AUDITED AGAINST GITHUB'S `spdx_id`: `39` DIVERGENCES, `0` ERRORS, AND THE DIVERGENCES SORT CLEANLY INTO **FIVE NAMED FAILURE MODES**. 🔴 THE LARGEST SINGLE MODE IS A DETECTOR THAT CANNOT READ **EUPL** — WHICH IS THE LICENCE OF ELEVEN EUROPEAN NATIONAL-AGENCY REPOSITORIES ON THIS SHELF**
 
 ### 🟢 690-R1 — The two shelves, measured
@@ -8976,7 +9007,6 @@ Every distinct bare repository name on `../agents/top.md` (`104`, taken as the t
 ### 🔵 Method note, carried forward
 
 The census cost `104` search-API calls at the `30/min` limit and took roughly seven minutes throttled at `2.1 s`. 🔴 **It cannot be run on the `core` API instead:** `gh api repos/<slug>` returns `403` in this session for **every** repository, real or imaginary, because repository access is session-scoped — see `685-D` in [`../agents/trending.md`](../agents/trending.md) for the controlled channel table. The search index is the only metadata channel available here, and `p674`'s index-absence caveat still applies to it: `3` of the `104` canonicals do not appear in their own exact-name query, among them the repository that first defined that condition.
-
 
 
 ## 🆕 2026-11-06 (p684) — 🟢 **THE ACADEMIC-INTEGRITY SHELF, CENSUSED FOR THE FIRST TIME: `395` CANDIDATES, `337` NOVEL (`85.3 %`), AND A `16★` CEILING ON LIVE PERMISSIVE SUPPLY.**
@@ -9568,7 +9598,6 @@ The one genuinely new supply route this pass found is not a search leg at all. [
 | 🔴 **`668-L` — and the licence channel closes it: the three most plausible novel members are all unusable, byte-read at the real default ref** | [`MeetPlan/MeetPlanFrontend`](https://github.com/MeetPlan/MeetPlanFrontend) — **AGPL-3.0**, `34,523 B` payload read on `main`. [`ClassyCreations/ScheduleCheck`](https://github.com/ClassyCreations/ScheduleCheck) — **GPL-3.0**, `35,069 B`, on `master`. [`LindungiLw/student_information_portal`](https://github.com/LindungiLw/student_information_portal) — **no grant at all**, `404` on `LICENSE`, `LICENSE.md`, `LICENSE.txt` and `COPYING` on `master`: a **second specimen** of the fourth claim-form registered at `668-H`. 🔴 **Nothing filed from this census, and the reason is licence and adoption, not search coverage** |
 | 🔵 **`668-M` — the AGPL frontend completes a pair this base holds half of, and the completion is bad news** | `MeetPlan/MeetPlanBackend` (`8★`, Go) has been held on this base's logs; `MeetPlanFrontend` (`9★`, Svelte) was the missing half. Read together the **pair is AGPL-3.0**, so the half this base was missing does not turn a held backend into a permissive opportunity — it confirms the system is off-limits for a commercial derivative. `p667` filed an `.apkg` writer on exactly this "completes a held pair" reasoning; **the same reasoning run here returns a rejection, which is what makes it a test rather than a habit** |
 | 🔴 **`668-P` — branch discipline is *twice* this base's standing rate on this layer, and the `#1` repo's default ref is a word this base has never recorded** | All `13` addresses referenced at p668 verified live on the git channel, and **`7` of `13` (`54%`) are not on `main`** — `master` ×`5`, plus **[`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) on `mobile`**. That is double this base's standing `~27%` off-`main` rate. 🔴 **`mobile` is a new specimen class:** not `main`, not `master`, not `p646-J`'s bare-version-number form — a *feature-named* default ref on the most-adopted school-management repository in the field, which means a reader that falls back to `main` or `master` reads **nothing** from the topic's `#1` and a licence tool that does so reports no grant. 🔵 Every grant read in this block names the ref it was read at, and this is why |
-
 
 
 ## 🆕 `p667` — `2026-11-05` — **🔴 THE LEDGER-BASED NOVELTY FILTER EVERY PASS USES OVER-REPORTS BY `44.2%`. 🟢 THE RETENTION AND SCHEDULING LAYER IS A DENSE PERMISSIVE FIELD AND THIS BASE HELD ONE POINT OF IT. 🔴 `p646-H`'s TOPIC HOMONYMY REPRODUCED — THE TWO HIGHEST-STARRED NOVEL ADDRESSES OF THE PASS ARE BOTH OFF-DOMAIN.**
@@ -15844,7 +15873,6 @@ to every other industry KB in this collection, not only education.
 ---
 
 
-
 ## 2026-10-31 (fourth pass) — the largest MIT repo in this KB was found by a listicle, and "no permissive education platform" needs qualifying
 
 **Method note.** `raw.githubusercontent.com` answers **HTTP 200** from this
@@ -20314,7 +20342,6 @@ repositories"*) and `/search/repositories` **403** (*"This GitHub API path is no
 `add_repo` does **not** unblock the latter. `git ls-remote` and `raw.githubusercontent.com` work.
 
 ---
-
 
 
 ## 🆕 `p515` — `2026-10-28` — **🟢 THE `API 403` THAT HAS DEGRADED THIS FILE'S CHANNEL FOR ~16 PASSES IS A MISDIAGNOSIS, AND THE FIX IS NAMED IN THE 403 ITSELF: it is not a rate limit and not an outage — it is **per-repository session scope**, and the body says so and names `add_repo`. 🟡 Deliberately not exercised on third-party repos; exercised on this KB's own repo, where it opened the push channel. 🔴 The trending leg produced **no new education address** — an eighth consecutive pass in which star-ranked discovery adds nothing this base does not hold. 🟢 `raw.githubusercontent.com` served **4 of 4** licence payloads at `200`. 🔴 `make hooks` not attempted (declared abstention).**
@@ -33151,7 +33178,6 @@ found in a single hour of fetching:
   stated as the measured shape of the tier, not as a search failure.
 
 
-
 ## 📈 2026-10-19 · Pass 313 — THE `403` `p311` CALLED A GITHUB PATH RULE IS THIS SESSION'S OWN REPOSITORY BINDING, AND IT EXPLAINS WHY THE PRESCRIBED SUPPLY BATTERY KEEPS SATURATING
 
 **Append-only. Added above `p311`'s section; nothing below is rewritten.**
@@ -41924,7 +41950,6 @@ HEAD sha.**
 🔴 **Declared gap, unchanged for a FOURTEENTH pass: no APAC-origin open-source education repository has
 ever been named by this sweep. Not *"none exists"* — none has been NAMED, on a channel where discovery
 is closed and the web is answering in English.**
-
 
 
 ## 2026-10-13 — Pass 168

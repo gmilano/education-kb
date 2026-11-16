@@ -4,6 +4,21 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Forty-sixth pass (`p841`, 2026-11-16) — **`0` new agent rows (`424` → `424`), and the row count is the finding**
+
+🟢 **The mandated battery was re-run cold** — four global legs plus one leg each for North America,
+EMEA, APAC and LATAM — **by an operator holding none of this base's prior conclusions.**
+🔴 **All `10` agent candidates it surfaced were already shelved here** (`OpenMAIC`, `DeepTutor`,
+`ai-engineering-hub`, `Claw-ED`, `ChatTutor`, `OpenOlat`, `RosarioSIS`, `openSIS`, `OpenEduCat`,
+`MAIC`). **`0` rows added.** 🟢 **No row was invented to fill the pass** — `T63`, `T140`.
+
+🟢 **Audit published instead, with its method** (full table in `agents/trending.md`): of the `532`
+unique GitHub URLs on this shelf a `30`-URL sample was probed with `git ls-remote --symref` →
+🟢 **`30` LIVE / `0` dead**; `0` placeholder or header-as-data rows across `1,312` table lines in
+this file, `repos/foundations.md` and `verticals/solutions.md`; frontmatter correct on `8`/`8` files.
+🔴 **`curl -sI` returned `403` for all `30` live repos — `403` is not `404` here (`T124`).**
+
+
 ## 🟡 Forty-fifth pass (`p840`, 2026-11-16) — **`1` agent row (`423` → `424`), and the honest headline is the NIL: the education agent channel returned `18` of `18` top hits that are not education at all**
 
 🟢 **Every figure below measured `2026-11-16`: real default ref from `git ls-remote --symref`, grant
@@ -2004,7 +2019,6 @@ at both branch roots as a positive control:** the five `TronClass` repositories 
 invented control addresses return `404` on both. 🔴 **The whole TronClass tier (🇹🇼 Taiwan
 universities: NTOU, FJU) is therefore a HARD nil, not a search failure: `5` repositories, `0`
 licences.**
-
 
 
 ### The finding (`T34`): LATAM's agent supply is attached to UNIVERSITY SELF-MANAGEMENT systems, it FORKS rather than duplicates, and it refuses to send a password over plaintext HTTP

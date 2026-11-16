@@ -4,6 +4,70 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🆕 `2026-11-16` (forty-sixth pass, `p841`) — 🔴 **NIL `36`, and this pass is a COLD-START REPLICATION: the mandated battery was re-run from scratch by an operator holding none of this base's prior conclusions, and it reproduced them candidate-for-candidate**
+
+🔴 **`0` new agent rows. `0` new repo rows. `0` new regional instruments across four regions.**
+🟢 **What makes `p841` worth a section is the METHOD, not the yield: the battery was run blind, and
+the nil is therefore no longer a property of one operator's query habits.** → `T63`, `T140`.
+
+### 🔴 The denominator, stated
+
+🟢 **Battery run `2026-11-16`, exactly as mandated: four global legs (`top open source AI agents
+education 2026 github MIT`, `github trending education AI 2026`, `open source platform education
+LMS SIS MIT Apache 2026`, `AI education industry trends 2026`) plus one leg per region for North
+America, EMEA, APAC and LATAM.**
+
+| Channel | Candidates surfaced | Already held in this base | New |
+|---|---|---|---|
+| Agents / repos | `10` | 🔴 **`10`** — `OpenMAIC`, `DeepTutor`, `ai-engineering-hub`, `Claw-ED`, `ChatTutor`, `OpenOlat`, `RosarioSIS`, `openSIS`, `OpenEduCat`, `MAIC` | 🔴 **`0`** |
+| Regional instruments | `20` | 🔴 **`20`** — incl. CA `AB 1159`, Idaho `SB 1227`, NY `A 9190`, NC `SL 2026-41`, `TRAIGA`/`HB149`, `HB2400`, K-12 AI Literacy & Readiness Act, Reg (EU) `2026/1744`, EC+OECD AI Literacy Framework, KR AI Basic Act, VN MOET Decision `2422`, Ipsos Education Monitor, UNESCO IESALC, Univ. de los Andes `716`, Ceibal, Cetic.br, UNESCO LAC Observatory, ECLAC, Digital Education Council | 🔴 **`0`** |
+
+🔵 **One candidate was initially scored as a GAP and was not one.** A grep for `Decision 2422`
+returned `0` while the instrument is held at four places in `intel/market.md` — the stored form is
+`` Decision `2422` `` with the number inside backticks, so a plain-string grep misses it.
+🔴 **Recorded because it is a live false-gap generator in this base: any audit that greps the prose
+form of an instrument will under-report coverage and re-research what is already shelved.**
+🟢 **Audit rule: grep the bare number, never the labelled phrase.**
+
+### 🟢 Data-quality audit published with its method, since the nil leaves room for one
+
+| Check | Method, run `2026-11-16` | Result |
+|---|---|---|
+| Repo liveness | `git ls-remote --symref` on a `30`-URL sample drawn from the `532` unique GitHub URLs in `agents/top.md` | 🟢 **`30` LIVE / `0` dead**, default refs resolved (`main`×`24`, `master`×`5`, `develop`×`1`) |
+| Placeholder rows | regex for header/example/`TBD` rows as data across `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` (`1,312` table lines) | 🟢 **`0` found** |
+| Empty/separator-only data rows | regex, same three files | 🟢 **`0` found** |
+| Frontmatter | all `8` mandated files | 🟢 **`8`/`8` present, `industry: education`, closed-vocabulary `region`, `updated: 2026-11-16`** |
+| Region structure | `intel/market.md` | 🟢 **single `## Opportunities by region`, one `###` each for North America / EMEA / APAC / LATAM / Global — no LATAM-only section** |
+
+🔴 **`curl -sI` is still the wrong instrument and this pass re-measured it: all `30` URLs returned
+`403` on the HTML endpoint through the egress proxy while all `30` were proven LIVE seconds later.**
+🟢 **`403` here is not `404` — already stated at `T124`/`trends.md:350`, re-confirmed, and the
+working instruments remain `git ls-remote --symref` and a `raw.githubusercontent.com` GET (`200`).**
+
+### 🔴 One network gap, declared
+
+🔴 **`vietnamlawmagazine.vn` does not resolve from this session** (outside the allowed network
+domains), so Decision `2422`'s primary text was again not byte-read. 🟡 The instrument is
+corroborated across secondary sources (dated `2026-08-18`, companion dispatch
+`5588/BGDDT-GDPT` dated `2026-08-19`, `12` periods per class per year, grades `1`–`12`, from the
+`2026-2027` academic year, four strands). 🔴 **Sources still CONFLICT on whether the `12` periods
+are compulsory or a flexible baseline — unchanged from `p803`, and not resolvable without the
+decision text.**
+
+### 🔴 The finding this pass escalates, because it is operational and no earlier pass could see it
+
+🔴 **This base has now nilled the mandated battery `36` consecutive times while `rotation.json` in
+`globant-kb` has pointed at index `8` (education) since `2026-11-06` — ten days.** 🟢 **`p841`
+advanced it to `9` (automotive).** 🔴 **The nil was never an education finding. It is a
+ROTATION-STATE defect: eleven industries received zero passes while this one received ~`840`.**
+🔴 **Second-order damage, measured: `agents/trending.md` `7.3 MB`/`82,256` lines,
+`repos/trending.md` `5.5 MB`/`64,303` lines, repo `158 MB`, `25` archive snapshots.**
+🟢 **The append-only mandate is correct and was NOT violated here; it is the pass FREQUENCY against
+a saturated channel that is destroying the readability append-only exists to protect.**
+🔵 **Recommendation to the base owner, not an action taken: cap passes per industry per day, or
+gate a pass on a non-nil battery.**
+
+
 ## 🆕 `2026-11-16` (forty-fifth pass, `p840`) — 🔴 **THE EDUCATION AGENT CHANNEL RETURNED `18` OF `18` NON-EDUCATION HITS: this week's trend in education agents is that star-ranked keyword search has stopped measuring education**
 
 🔴 **`1` new agent row (`423` → `424`), `3` named refusal classes, `1` instrument substitution, and
@@ -1284,7 +1348,6 @@ every repository above is byte-read and first-hand. 🔴 **`gh api repos/{owner}
 for unattached repositories here**, so default branches came from the search response (`T57`'s
 instrument, `20`/`20`). 🔴 **`oecd.org` refused at the proxy**; every market item this pass is
 `CITED, NOT READ`. 🔴 **And the HTML channel the scheduler prescribes for URL verification (`curl -sI https://github.com/<owner>/<repo>`) is REFUSED in this environment — controlled in both directions at `p824`: `torvalds/linux` returns `403` and the invented `zzz-not-a-real-owner-p824/zzz-not-a-real-repo` ALSO returns `403`, so the channel cannot distinguish a real repository from an imaginary one and no verdict may be read from it.** 🟢 **Existence was established instead on the two channels that ARE informative and that pass the same control: `gh api search/repositories -f q='repo:<owner>/<repo>'` returns `1` for the real repository and HTTP `422 Validation Failed` for the invented one, and `raw.githubusercontent.com` returned licence bytes for every shelved row.**
-
 
 
 ## `2026-11-15` (twenty-eighth pass, `p823`) — **the largest discovery pass in this base's history: `21` build-safe rows, and the institution-integration tier revealed as a POPULATION**
@@ -4144,7 +4207,6 @@ A `grading agent` query put [`bruchris/canvas-lms-mcp`](https://github.com/bruch
 ### 🟢 `ACTION p791-A` discharged as far as this session's authority allows
 
 🟢 **The `5` licence requests are DRAFTED and committed** at [`intel/licence-requests/`](../intel/licence-requests/) — one file per target, each naming the measured absence, the tree size, the sha and the exact ask. 🟢 **Absences re-confirmed a third consecutive time** (`5`/`5` ungranted on the tree channel). 🔴 **They are NOT sent.** Sending means opening issues on third-party repositories, which is outside this session's GitHub authorisation (scoped to `gmilano/*`) and is an outward-facing act on other people's projects that this task does not authorise. 🔵 **Stated plainly rather than logged as "blocked"** — which is the `T879-bis` lesson. The drafts are the part that was ever in scope, and they are done.
-
 
 
 ## 🆕 `2026-11-12` · `p791` — **This base can PUBLISH again: the push `403` that four cycles recorded as "blocked" was an authorisation-scope symptom, not a network one, and it is fixed. Plus `NOASSERTION` shown to fail in both directions in the same sector, a `★` figure corrected `23×` downward, a non-OSI Chinese font grant found inside a `43,376★` MIT repository, and one trend-digest darling REFUSED for having no licence at all.**
@@ -8185,7 +8247,6 @@ This pass extended the base rather than re-measuring it, because the shelf re-re
 **Filed:** `4` rows across two shelves. **`15` subjects probed, `15` alive, `11` already held, `4` filed, `4` refused with cause.** Every grant read from **bytes** at the default ref — `0` licence claims from a detector badge, `0` from a secondary source. Stars and `spdx_id` cross-read from `gh api search/repositories`; existence cross-read from `raw.githubusercontent.com` against a known-absent control.
 
 
-
 ## 🆕 2026-11-09 (p720) — 🟢 **THE STAR AND METADATA CHANNEL WAS NEVER SHUT: `repos/{owner}/{repo}` IS `403`, BUT `search/repositories` RETURNS THE SAME FIELDS AND IS OPEN — AND IT IMMEDIATELY CAUGHT A `46★` ARCHIVED REPOSITORY THIS PASS WAS ABOUT TO FILE**
 
 **`22` subjects filed** (`17` agents, `5` foundations, `0` platforms) out of `25` verified payload-by-payload and `~250` screened across `15` legs (`4` global + `4` regional + a **standing ten-term single-word Spanish/Portuguese leg** + `6` topic- and phrase-qualified capability legs). [`top.md`](top.md) **`325` → `342`** · [`../repos/foundations.md`](../repos/foundations.md) **`359` → `364`** · [`../verticals/solutions.md`](../verticals/solutions.md) **`128` → `128`** (measured nil, with a cause).
@@ -10612,7 +10673,6 @@ The brief requires that no header or example row is ever left as data. All eight
 🟡 **But the compiler risk the brief describes is real here, reached by a different route, and it is flagged rather than patched.** If the compiler takes **column 1 of a two-column table as an entity name**, these rows compile to entities named `region`, `licence` and `stars` — precisely the *"entity literally named nombre"* failure, produced not by a leaked header but by a correct and intentional format. 🔵 **The fix belongs in the compiler (require a `|---|` separator before treating a table as record-oriented, or skip two-column tables entirely), not in `71` well-formed rows across two append-only files.** Recorded so a future pass does not mistake a format for a defect and rewrite history to "repair" it.
 
 
-
 ## 🆕 2026-11-07 (p690) — 🟢 **THE WHOLE INVENTORY WAS CROSS-CHECKED AGAINST GITHUB'S OWN `spdx_id` FOR THE FIRST TIME — `339` SUBJECTS, `334` RESOLVED, `44` DIVERGENT, AND **`0` SUBSTANTIVE ERRORS**. 🔵 EVERY ONE OF THE `44` WAS ALREADY ANNOTATED IN-CELL. 🔴 BUT THE CHANNEL THAT PROVED IT CANNOT BE USED AS AN EXISTENCE TEST: `5` SHELVED REPOS ARE ALIVE AND ABSENT FROM THE INDEX, AND IT RETURNS A SILENT `total_count: 0` FOR QUERIES THAT HAVE HUNDREDS OF HITS**
 
 ### 🟢 690-A — The audit: `0` rows added, `66` star cells corrected, `0` licence claims overturned
@@ -11129,7 +11189,6 @@ All four global and all four regional legs ran. **Supply:** `7/7` distinct owner
 | `patchy631/ai-engineering-hub` | grant payload | `1,066 B` (no digest) | **`1,066 B` · `93123909818c`** |
 
 🔵 **The DeepTutor star figure moved three times during one pass** (`55,981` → `55,984` → `55,986`, ~20 minutes). It is pinned in-cell with its read time rather than presented as stable.
-
 
 
 ## 🆕 2026-11-06 (p684) — 🟢 **AN ENTIRE CATEGORY THIS BASE HAD NEVER SWEPT: ACADEMIC INTEGRITY. `337` NOVEL SLUGS, AND ITS PERMISSIVE SUPPLY TOPS OUT AT `16★`. 🔴 AND THE MANDATED `curl -sI` URL CHECK HAS ZERO DISCRIMINATING POWER IN THIS ENVIRONMENT — IT RETURNS `403` FOR `torvalds/linux` AND FOR A REPOSITORY THAT DOES NOT EXIST.**
@@ -11936,7 +11995,6 @@ The four mandated global legs and the four regional legs were run. **No agent ad
 ---
 
 
-
 ## 🆕 2026-11-06 (p673) — 🔴 **A PAYLOAD THAT MATCHES THE CANONICAL LENGTH *EXACTLY* AND HASHES DIFFERENTLY — TWO WHITESPACE EDITS THAT CANCEL IN LENGTH AND NOT IN HASH. 🔴 `NOASSERTION` IS AT LEAST THREE DIFFERENT CONDITIONS AND ALL THREE ARE PERMISSIVE. 🟢 `16` ADDRESSES FILED, ALL `16` ALREADY IN THIS REPOSITORY. 🔴 THE EIGHT LEGS NIL A `25`TH TIME — `91/91` HELD.**
 
 **Verification channels, re-tested before use at p673:** `git ls-remote --symref` 🟢 **live** (negative control `gmilano/qvxz-not-a-real-repo-7731` → DEAD, positive control `moodle/moodle` → `refs/heads/main`); `raw.githubusercontent.com` byte reads 🟢 **live** (`18/18` candidates probed, `17` payloads retrieved); `gh api repos/{owner}/{repo}` 🔴 **BLOCKED this session** (`403`, session scope) — but `gh api search/repositories` with **space-separated `repo:` qualifiers 🟢 live**, so all `18` addresses were measured in **one call**, reconfirming `671-G`'s OR-batching at a new scale; grant grader 🟢 **controlled at both signs** per `672-B1` (positive: `rizukirr/no-vibe` → verbatim MIT; negative: `July-Tea/EssayMate` → correctly refuses to grade as MIT).
@@ -12069,7 +12127,6 @@ The four mandated global legs and the four regional legs were run. **No agent ad
 | 🟢 `668-N` — **the corrected probe is the largest single-pass placement yield this shelf has had, and it added zero addresses.** Run throttled over all `24` unplaced rows of `agents/top.md`: **`24/24` owners probed, `0` probe errors, `0` unsearchable**, controls `user:moodle` → `1` both before and after, `208` search calls. **`6` placed:** `GeminiLight/gen-mentor` → **China**, `DozenTwelve/Papermorph` → **Japan**, `karanb192/algo-sensei` → **India**, `SenmuuuuW/universal-diagnostic-tutor-skill` → **China**, `ahmedEid1/lumen` → **Germany**, `Fazmin/AILearningGuide` → **Canada**. The `Region` column moves from `APAC 8 / LATAM 5 / EMEA 3 / North America 2 / unplaced 24` to **`APAC 12 / LATAM 5 / EMEA 4 / North America 3 / unplaced 18`**. 🔵 **And it is the shelf's weakest evidence class — a free-text field the account holder wrote, not documentary repository evidence — so all six rows say so in-cell and rank below the three documentary channels.** 🔴 The `18` that did not place returned `NO-LOCATION-MATCH`, which under `668-A`/`668-B` now means *the field is unset or spelled outside the probe set*, **not** *the owner could not be searched* | 🟢 **6 PLACED / 24 PROBED** |
 | 🔧 `668-O` — **a third stale count on `agents/top.md`, and this time the prose was stale while the heading was right.** The sentence under the heading read *“Thirty-seven rows”* against a heading of `42` and a table that counts `42`. 🔵 **Both prior instances were the opposite way round** (p658 repaired *“Twenty rows”* against a heading of `27`; p663's region bullet described a 13-row shelf against a table of `29`), so the defect is not “headings go stale” — **it is that every derived figure on that page goes stale independently, and the page carries four of them**: heading, count sentence, region bullet, and the per-region tallies inside the bullet. All four re-derived by counting at p668 | 🔧 **REPAIRED — 3rd INSTANCE, NEW DIRECTION** |
 | 🔴 `668-Q` — **`make hooks` denied a fourth consecutive pass** (`[Code from External]`), so **no gate figure is published or claimed at p668** and this diff is unjudged by the repo's own suite. 🔵 `667-J`'s qualification still stands and is worth restating rather than re-discovering: **the block is on the `make` wrapper, not on repo-local Python**, so a gate implemented as a pure Python suite remains reachable — but p668 spent its executable budget on the two instrument refutations (`668-A`, `668-I`) and did not build one. **Stated as an unjudged diff, not as a passing one** | 🔴 **DENIED — 4th CONSECUTIVE** |
-
 
 
 ## 🆕 2026-11-05 (p667) — 🔴 **THE NON-ENGLISH SUPPLY LEGS `p664`/`p665` INSTALLED AS STANDING PRACTICE RETURNED `6` CANDIDATES AND **NOT ONE** CLEARED THE ADOPTION FLOOR. 🔧 A LICENCE CLAIM WITHOUT A GRANT PAYLOAD COMES IN **THREE** FORMS, RANKED HERE BY WHAT THEY ARE WORTH. 🔴 `location:` ON `search/repositories` IS SILENTLY UNSUPPORTED AND RETURNS `0` FOR EVERY INPUT — THE PLACEMENT PROBE FOUR PASSES RELIED ON COULD NEVER HAVE WORKED. 🟢 A WORKING REPLACEMENT IS BUILT, CONTROLLED AND RUN.**
@@ -19429,7 +19486,6 @@ does not.
 ---
 
 
-
 ## 2026-10-31 (fourth pass) — the licence *files* became readable, and a whole agent cohort turned out to be hiding behind one topic axis
 
 **Two things happened this pass, and both are method findings with immediate
@@ -25776,7 +25832,6 @@ the search channel as Apache-2.0. The bytes say **MIT** (`LICENSE` @ `main`, HEA
 `41ae3bd4dd9e`). The bytes win.
 
 ---
-
 
 
 ## 🆕 `p515` — `2026-10-28` — **🔴 THE TRENDING CHANNEL IS THE ONE THAT WAS WRONG, AND THIS PASS CAN SAY SO: `p514` refused `DeepTutor`'s star cell on a three-way conflict, and the repo's own page settles it — **47.9k**, continuing a ten-reading monotone ladder, against this channel's **~46,026**, under-reported by ~4%. 🔴 The discovery legs returned **ZERO** new education addresses: every `ai-tutor` topic row a star-ranked search surfaces is already filed here. 🟢 The push channel is OPEN for the first time in this base's recorded rotation history — the blocker was repository scope, not the proxy. 🔴 `make hooks` not attempted (declared abstention).**
@@ -43557,7 +43612,6 @@ this pass read (`frappe/lms`, `classroomio`, `learnhouse`) is `AGPL-3.0`.
   section are first-hand.
 
 
-
 ## 📈 2026-10-19 · Pass 313 — THIS WEEK'S SIGNAL IS A NEGATIVE ONE, MEASURED: THE PRESCRIBED SEARCH BATTERY RETURNED EIGHT QUERIES OF MATERIAL AND NOT ONE ITEM THIS BASE DID NOT ALREADY HOLD
 
 **Append-only. This section is added above `p311`'s; nothing below it is rewritten.**
@@ -52539,7 +52593,6 @@ search. `T199`'s query collision holds — the web reads *"AI agents education"*
 and this week returned Microsoft's `AI Agents for Beginners` and the Hugging Face Agents Course again.**
 🔴 **Still `0` for a FOURTEENTH consecutive pass: no APAC open-source education platform named by any
 query.**
-
 
 
 ## 2026-10-13 — Pass 168

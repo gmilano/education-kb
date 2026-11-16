@@ -4,6 +4,20 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Forty-sixth pass (`p841`, 2026-11-16) — **`0` new vertical rows (`172` → `172`); one licence-label conflict DECLARED and deliberately not applied**
+
+🔴 **The mandated LMS/SIS leg returned only platforms already on this shelf** — `OpenOlat`,
+`OpenEduCat`, `RosarioSIS`, `openSIS`, Moodle, Open edX, Canvas, Sakai. **`0` rows added.**
+
+🟡 **Declared, not applied:** secondary sources on this leg disagree on **Sakai** —
+`Apache-2.0` per one aggregator, **`ECL-2.0`** per another. 🟢 **`ECL-2.0` is the correct family**
+(Apache-2.0 with the patent grant narrowed to educational institutions). 🔴 **The shelved row was
+NOT edited, because this pass did not byte-read Sakai's `LICENSE`.** 🟡 Sources also omitted the
+licence entirely for `RosarioSIS`, `openSIS` and `OpenEduCat` — 🔴 **the field an engagement turns
+on is the field aggregators drop most often.** 🟢 **Action for the next pass: byte-read Sakai's
+grant and either confirm or correct the label.**
+
+
 ## 🟢 Forty-fifth pass (`p840`, 2026-11-16) — **`5` rows (`167` → `172`): the OFFICIAL platform-vendor substrate, which this base had skipped while filing hundreds of third-party wrappers around it**
 
 🟢 **Every grant byte-read `2026-11-16` at the real default ref.**
@@ -281,7 +295,6 @@ government-granted PICTOGRAM SET, not the runtime.
 | **ARASAAC** (Gobierno de Aragón) | https://github.com/juanda99/arasaac-frontend | 🟢 **MIT — byte-read** (`LICENSE.md`, `1,084 B`, `sha256:1db6216968f9…`, holder **`2016 Gobierno de Aragón`**) | 16 | **Region: EMEA — placed on a GOVERNMENT holder line, the strongest placement this base accepts.** 🟢 The Aragonese Portal of Augmentative and Alternative Communication: the pictogram set and front-end that most Spanish-language AAC software in BOTH hemispheres draws on. 🔵 **Its reach is the point for a LATAM engagement** — an EMEA public body publishing under MIT is what gives a Colombian or Mexican build a symbol vocabulary it does not have to commission. 🔵 **Re-measured this pass: `16★` at `p622` → `16★` today, but pushed `2026-10-24` → `2026-11-14`** — flat traction, live development, the signature of a funded public asset rather than a product. Consume it through `kitsteam/pictosearch` (MIT, `repos/foundations.md` `p830`) |
 | **cboard** (UNICEF-backed) | https://github.com/cboard-org/cboard | 🔴 **`GPL-3.0` — byte-read** (`LICENSE.txt`, `35,141 B`, `sha256:589ed823e9a8…`) | 768 | **Region: Global.** 🟢 **The most-deployed open AAC communicator there is**, browser-based with text-to-speech, UNICEF support and `5,531` commits. 🔴 **`GPL-3.0`: the licence propagates.** A studio may deploy, host and configure it for a client and may contribute back; it may NOT fold it into a proprietary product. 🔵 **The build-safe pattern is an ADAPTER, not a fork** — talk to it, import/export its board format, keep your own code out of the combined work. 🔵 Re-measured this pass: `759★` at `p621` (`2026-11-02`) → **`768★`** today, `+1.2 %` in `13` days |
 | **AsTeRICS Grid** | https://github.com/asterics/AsTeRICS-Grid | 🔴 **`AGPL-3.0` — byte-read** (`34,523 B`, `sha256:8486a10c4393…`) | *not retrieved* | **Region: EMEA** (AsTeRICS is an EU-funded Austrian lineage). 🟢 Offline-capable AAC grid system with device control. 🔴 **`AGPL-3.0` is the stricter case: network use counts as distribution.** Hosting it for a client triggers the source obligation. 🔵 **The permissive way in is `fjrodl/astericsgrid_ros` (Apache-2.0)** — a bridge, shelved this pass in `repos/foundations.md`. 🔴 **Star count deliberately left as `not retrieved` rather than guessed: the free-text search channel does not return this repository at all**, although its `LICENSE` byte-reads `200`. 🔴 **And a name-integrity warning: the channel DOES return `astericsfree/AsTeRICS-Grid`, `astericsgridfree/AAC-Grid-Let-Me-Talk-Asterics-LogoRemakeFour` and `logoremakefour8/Asterics-Grid-AAC-LRF-LogoRemakeFour` — low-star look-alikes outranking the canonical project. Resolve this brand by byte-read only** |
-
 
 
 ## Thirty-fourth pass (`p829`, 2026-11-15) — `0` rows added, and the vocational PLATFORM tier is declared a measured gap

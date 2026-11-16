@@ -4,6 +4,34 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Forty-sixth pass (`p841`, 2026-11-16) — **`0` new trends, and the refusal to add one is deliberate**
+
+🔴 **The mandated eight-leg battery nilled a `36`th consecutive time, measured with its
+denominator: `0` new repositories and `0` new regional instruments across four regions, from `10`
+agent/repo candidates and `20` policy instruments surfaced — all `30` already held.**
+🟢 **Recorded in `agents/trending.md` and `repos/trending.md`, and NOT promoted to a new trend,
+because `T63` (channel saturated) and `T140` (education discovery captured by the coding-agent
+skills ecosystem) already state it.** 🔵 **Following the `p820` precedent for exactly this case.**
+
+🟢 **What `p841` adds to the existing trends rather than beside them:**
+
+- **To `T63`** — the saturation is now REPLICATED COLD. `p841`'s operator held none of this base's
+  prior conclusions and re-derived the same candidate set, so the nil is not an artefact of one
+  operator's query habits.
+- **To `T124`** — `curl -sI` re-measured as a false-negative generator: `403` on all `30` sampled
+  repos, every one of which `git ls-remote --symref` proved LIVE in the same minute.
+- 🔴 **A new false-GAP generator in this base's own audit practice**, worth more than a trend
+  because it is a tooling rule: instruments are stored with the number in backticks
+  (`` Decision `2422` ``), so a grep for the labelled prose form (`Decision 2422`) returns `0` on an
+  instrument held at four places in `intel/market.md`. 🟢 **Grep the bare number, never the phrase** —
+  otherwise an audit under-reports its own coverage and re-researches shelved material.
+
+🔴 **The pass's largest finding is not a trend about education at all: the `36` nils coincide with
+`rotation.json` pointing at index `8` since `2026-11-06`, so eleven industries took zero passes
+while this one took ~`840`.** 🟢 **`p841` advanced the rotation to `9`.** Detail in
+`agents/trending.md`.
+
+
 ## 🟢 Forty-fifth pass (`p840`, 2026-11-16) — `3` trends (`T140`–`T142`)
 
 ### 🔴 `T140` — The education discovery channel has been CAPTURED by the coding-agent skills ecosystem, and star-ranked keyword search no longer finds this sector

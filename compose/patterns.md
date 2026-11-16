@@ -4,6 +4,29 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🔴 Forty-sixth pass (`p841`, 2026-11-16) — **`0` new recipes (`P93` → `P93`), stated with the reason**
+
+🔴 **A compose pattern is only honest if it is built from components measured in the pass that
+writes it. `p841` measured `0` new components, so it writes `0` new recipes.**
+
+🟢 **The two engagement shapes the regional legs pointed at are ALREADY shipped here, and `p841`
+re-confirms their demand side rather than duplicating them:**
+
+- **Mandated AI-literacy delivery (APAC).** Vietnam MOET Decision `2422` (`12` periods per class per
+  year, grades `1`–`12`, from the `2026-2027` academic year) plus Korea's AI Basic Act →
+  🟢 **already wired by `P91`** (vocational AI-literacy programme, two MIT estates for courseware,
+  NTNU pedagogy read-only) and **`P75`** (AI-literacy programme that does not license curriculum).
+  🔴 **No new recipe needed; the `2422` hour-budget is a sizing input to `P91`, not a new pattern.**
+- **High-risk assessment governance (APAC/EMEA).** Vietnam Decision `33/2026/QD-TTg` naming
+  automated assessment, and Reg (EU) `2026/1744`'s `2027-12-02` Annex III date →
+  🟢 **already wired by `P91`'s compliance notes and the `P92` GPL-boundary line.**
+
+🔵 **The honest statement for a studio reading this file today: the education recipe shelf is
+saturated against the current open-source supply. The next genuinely new pattern needs a new
+COMPONENT, and `36` consecutive battery nils say the component is not arriving through the mandated
+discovery channel** — `T63`, `T140`.
+
+
 ## 🟢 Forty-fifth pass (`p840`, 2026-11-16) — `2` recipes (`P92`–`P93`), both built from rows measured THIS pass
 
 ### 🟢 `P92` — Moodle AI assessment + credentialing line, wired so the GPL boundary is explicit and the estimate survives legal review
