@@ -1,0 +1,61 @@
+# p858 2026-11-16 — blobless-clone verification + licence byte-read
+# channel: git clone --filter=blob:none  (curl -sI returns 403 for live AND invented addresses here, T923)
+# negative control: gmilano/this-repo-does-not-exist-p858 -> CLONE-FAIL
+address	clone	head_sha	default_ref	head_commit_date	licence_path	bytes	sha256_12	first_nonblank_line
+openeduhub/tutor-chatbot	OK	7e1f38dae74341569583642ba9447a8a46ffa836	main	2025-08-27	LICENSE	11357	c71d239df917	                                 Apache License
+openeduhub/lernpfadeditor	OK	1ccbb1d8bb58a29751146752a129c01fb2c03ce5	main	2026-01-18	LICENSE	11357	c71d239df917	                                 Apache License
+openeduhub/llm-judge	OK	8cb0a04c941c34a926a516671c5abb8a84fcfcb0	main	2025-02-25	LICENSE	11357	c71d239df917	                                 Apache License
+openeduhub/ki-prompt-benchmark	OK	da062c4b1b51a4c783ae8b36f212ee461cd74e5d	main	2026-05-29	LICENSE	11357	c71d239df917	                                 Apache License
+openeduhub/metadata-agent-canvas	OK	d8f7f2580fce770968214215494d425d9f05902e	main	2026-03-05	NO-LICENCE-FILE	-	-	-
+openeduhub/duplicate-detection	OK	7c437d38f1cf01438985ba8e99c581fd529a82e5	main	2026-02-25	LICENSE	11357	c71d239df917	                                 Apache License
+openeduhub/its-jointprobability	OK	c060f9ec9bc1b825bfa844e776f5682d35ef36a9	main	2024-04-19	NO-LICENCE-FILE	-	-	-
+openeduhub/its-qna	OK	407f20d0519ccb76b89bea804978f634929a40cc	main	2024-04-09	NO-LICENCE-FILE	-	-	-
+openeduhub/edu-sharing-python-client	OK	10e59fa3cdceec2be740432b72c16b6d8e987262	main	2026-11-02	LICENSE	11349	e54a97efb7d3	                                 Apache License
+openeduhub/oeh-metadata-vocabs	OK	04e833e18a6f63bd8c31e5140d5b83a52a1d8773	master	2026-08-12	LICENSE	7048	a2010f343487	Creative Commons Legal Code
+openeduhub/metalookup	OK	ede58b8057063181102102575209765d5f806b18	main	2022-12-05	LICENSE.txt	35149	3972dc9744f6	                    GNU GENERAL PUBLIC LICENSE
+openeduhub/text-statistics	OK	9dfeb41f4e8643598b963ce4b484bfba3ae60599	main	2024-04-02	LICENSE	35149	3972dc9744f6	                    GNU GENERAL PUBLIC LICENSE
+openeduhub/wlo-quellenliste	OK	8144589f661df83ec47e92cc7af349e025bd43e4	main	2026-03-30	LICENSE	11357	c71d239df917	                                 Apache License
+skolverket/dnp-ss12000-reference-api	OK	a3187df2baf07bc996e579745a7f635f1e7fbc73	main	2026-01-26	LICENSE	11340	ac2e2b321b48	                                 Apache License
+kennisnet/php-qti3	OK	8657fc60a1642da1f2abbf126f8860222e4c9000	main	2026-11-10	LICENSE	1066	27fb6d463569	MIT License
+kennisnet/phpNLLOM	OK	f3287302a6d8b6d5ebaa435a270fbbbdf1003710	master	2022-06-28	LICENSE	1087	45180ed97b3e	# The MIT License (MIT)
+kennisnet/phpEdurepSearch	OK	5f975bf5f2100e3f72b8932db1e2572631de765b	master	2022-12-19	LICENSE	1086	a732a2ae1c48	The MIT License (MIT)
+kennisnet/phpEdutermClient	OK	3374538d23784c8517bad50025aaffa5431213ef	master	2023-08-22	LICENSE	1066	de48ba028771	MIT License
+kennisnet/pylom	OK	d7fb7e446ee2c94400fccae267c947b4ef0c0cd7	master	2020-10-03	LICENSE	1066	cb979719e9ca	MIT License
+kennisnet/phpECKCS	OK	2a6ff9eae7c84b9f53ad57c89a4ebc102b27d96a	master	2024-09-04	LICENSE	1066	4bf4fd11bcd9	MIT License
+Utdanningsdirektoratet/designsystem	OK	91e369b25a73e3274a8024bb2f8d2bab48f81801	main	2026-11-16	LICENSE	1079	9e2e5857e0ef	MIT License
+Utdanningsdirektoratet/PAS2-Public	OK	489129c42c9d8290d3ec86c2909286f09d6d3971	master	2026-09-25	LICENSE	11325	cb5e8e7e5f4a	Apache License
+Utdanningsdirektoratet/pifu	OK	3861b0c141c0c2b3ef52ea0a0d8d1dd5eeb134ed	master	2024-03-14	NO-LICENCE-FILE	-	-	-
+SURFnet/pea-poc	OK	2698a9b848cb1340d6d2b1b26239eaa3eab094f2	master	2026-06-02	LICENSE	1512	8d581f677474	BSD 3-Clause License
+SURFnet/eduhub-gateway	OK	bb28b6f260a3dc55be0edfe438017e4152e51d38	master	2026-11-10	LICENSE.md	34916	33bc26d4498c	### GNU GENERAL PUBLIC LICENSE
+SURFnet/apie	OK	269bd5a03f12ba7867bac4c61152d2ceb1aadcd8	main	2026-07-22	LICENSE	14198	0becf16567be	Eclipse Public License - v 2.0
+SURFnet/eduGenAI	OK	HEAD	main		NO-LICENCE-FILE	-	-	-
+SURFnet/sds	OK	0bc6a3f6ecf780ae4d9ae06415ebacd6e0e15d25	main	2026-08-05	LICENSE	11357	c71d239df917	                                 Apache License
+hitsa/estcore2	OK	6c09d59863fe479bc455c0bfc949984c95898b8c	master	2026-10-27	NO-LICENCE-FILE	-	-	-
+gmilano/this-repo-does-not-exist-p858	CLONE-FAIL	-	-	-	-	-
+Opetushallitus/koski	OK	67efa0c9f481d933bac7bb1cca5422e4846a6e0d	master	2026-11-16	LICENSE.txt	654	9f68b0df35be	Copyright (c) 2015 The Finnish National Board of Education - Opetushal
+Opetushallitus/ataru	OK	0f943974f9f3bbd931899406705369b87b5cd44d	master	2026-11-14	LICENSE.md	296	db5b61c3f444	Copyright (c) 2025 Finnish National Agency for Education
+Opetushallitus/aoe	OK	a41cf07751385da0c46058b005e98bf552ceff9c	main	2026-11-15	NO-LICENCE-FILE	-	-	-
+Opetushallitus/ludos	OK	e20b226a7ce50fcbd09e1ffbdad6af1e8a15ce4e	main	2026-11-16	LICENSE.txt	654	fbab20f247a0	Copyright (c) 2023 The Finnish National Board of Education - Opetushal
+Opetushallitus/eperusteet	OK	2920e7a4e0910b2fef21ee66681deeac485c46e0	master	2026-11-11	LICENSE.txt	632	7c5df5c3eacb	Copyright (c) 2013 The Finnish National Board of Education - Opetushal
+Opetushallitus/oppijanumerorekisteri	OK	a55a5a00f77617b3583bcb18c3fee9d5ec16ba78	master	2026-11-16	LICENSE.txt	632	7c5df5c3eacb	Copyright (c) 2013 The Finnish National Board of Education - Opetushal
+Opetushallitus/valtionavustus	OK	d2d789c5266e0b51886b9e0fac95ee7fea00e358	master	2026-11-16	LICENSE.txt	653	a203b813f563	Copyright (c) 2026 The Finnish National Board of Education - Opetushal
+Opetushallitus/jod-design-system	OK	c2b2ccc21e6ffa7d87ce07cc6dc5f41e5ea6fc56	main	2026-11-16	LICENSE	451	06b723e33492	Copyright (c) 2024 The Finnish Ministry of Education and Culture, The 
+Opetushallitus/jod-yksilo-ui	OK	753fdc3caba5ea6d660672209450ca161a6681c9	main	2026-11-16	LICENSE	451	06b723e33492	Copyright (c) 2024 The Finnish Ministry of Education and Culture, The 
+Opetushallitus/kouta-backend	OK	a30b4328195348d3af2e683281df99e746729924	master	2026-11-14	LICENSE.md	296	db5b61c3f444	Copyright (c) 2025 Finnish National Agency for Education
+Opetushallitus/varda	OK	2290aa1e02c0263296484f2a0c93c944a4f1106c	main	2026-10-27	LICENSE.txt	653	986fdfc9ba85	Copyright (c) 2015 The Finnish National Board of Education - Opetushal
+Opetushallitus/lokalisointi	OK	1d2f00fd7c9d4df037df2b589f6ba687bea9600a	master	2026-11-14	LICENSE.txt	632	7c5df5c3eacb	Copyright (c) 2013 The Finnish National Board of Education - Opetushal
+#
+# --- ls-remote existence oracle (Gap 253's rule: ls-remote is the sole existence oracle) ---
+# every remaining address written by p858 that was not cloned above; 1 invented negative control
+Opetushallitus/jod-ohjaaja-ui	ALIVE	refs/heads/main
+Opetushallitus/jod-urataidot-ui	ALIVE	refs/heads/main
+Opetushallitus/valintalaskenta	ALIVE	refs/heads/master
+SURFnet/eduhub-rio-mapper	ALIVE	refs/heads/main
+SURFnet/eduhub-validator-service	ALIVE	refs/heads/main
+SURFnet/ooapi-demo-data-server	ALIVE	refs/heads/main
+skolverket/dnp-access-management	ALIVE	refs/heads/main
+skolverket/dnp-provplattform	ALIVE	refs/heads/main
+ArnaudGuiovanna/tutor-mcp	ALIVE	refs/heads/main
+gmilano/invented-control-p858b	DEAD	-
+# --- org pages, re-counted on search/repositories at publish time ---
+# Opetushallitus 182 | SURFnet 97 | openeduhub 56 | udir-moodle 55 | kennisnet 25 | Utdanningsdirektoratet 19 | skolverket 5 | hitsa 3 = 442 enumerable; 305 read into meta.tsv across 7 orgs

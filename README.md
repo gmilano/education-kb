@@ -6,6 +6,36 @@ updated: 2026-11-16
 
 # Globant AI Studios — Education KB
 
+## Pass `p858` · `2026-11-16`
+
+🟢 **The pass found a CHANNEL, not a repository.** 🔴 **`854-G1` through `857-G5` all tuned the
+QUERY — language, altitude, vocabulary set. `p858` stopped querying.** 🟢 **Seven national education
+agencies were enumerated by organisation: `305` repositories, `0` of them GitHub forks, `26` of them
+shelved today.** 🔵 **Against the four English WebSearch legs the scheduler prescribes, run in the
+same hour: `65` links and `0` usable supply rows.**
+
+🔴 **And the first thing the channel exposed is this base's own defect.** 🔴 **`Opetushallitus` has
+been read for sixty-one passes — `61` mentions in `agents/trending.md`, `82` in `repos/trending.md`,
+`27` in `open-gaps.md` — and appears `0` times on any shelf.** 🔴 **`Gap 251` states that `8` rows
+were shelved. None were.**
+
+🟢 **`5` agent rows (`451` → `456`), `20` foundation rows (`274` → `294`), `6` platform families,
+`2` recipes (`P88`–`P89`), `5` trends (`T196`–`T200`), `6` gaps — `41` addresses byte-verified on
+the clone channel with a negative control, `0` licences taken from GitHub's field.**
+
+## What this pass established
+
+| | |
+|---|---|
+| 🟢 **The EMEA line this base has carried since `p798` is RETIRED** | *"Still ONE European-origin open-source education agent at scale."* 🔴 **Withdrawn.** 🟢 Germany's `openeduhub` / **WirLernenOnline** ships `5` Apache-2.0 education agents — a tutor whose curated QA pairs take PRECEDENCE over generation, a differentiated learning-path editor, a factual-correctness judge, a prompt-regression harness and a MinHash de-duplicator. 🔵 **They were invisible because they have `0` stars, and a state agency's code never will** |
+| 🔴 **`pushed_at` is an ORGANISATION event, not a freshness signal** | 🔴 `51` of `56` repositories at one agency report `2026-11-03`; `12` of `13` cloned have no commit within five months of it, one by **`47` months**, and two checked across ALL refs have none on any branch. 🟢 **Control at a second agency, same hour: `12` of `12` within FIVE DAYS.** 🔵 This base writes `pushed` on every row → `T197`, `858-G1` |
+| 🟢 **The licence is a POLICY artefact and it changes at every border** | 🇫🇮 **EUPL** uniformly, `2013`→`2026` · 🇳🇴 **MIT/Apache-2.0**, with a state-to-state reuse chain Digdir → Nav → Udir · 🇳🇱 **MIT** at Kennisnet and **five regimes in one org** at SURF · 🇩🇪 **Apache-2.0** apps, **CC0** vocabularies · 🇸🇪 **`1` of `5` granted** · 🇪🇪 nothing since `2020`. 🔵 **Finland will take a co-build and refuse a closed fork; Norway and the Netherlands will take either** → `T196` |
+| 🔴 **A fourth place a licence hides, and GitHub under-claiming twice running** | 🔴 `Opetushallitus/aoe` — Finland's national OER library — has `NONE` in GitHub's field and no root licence; **`aoe-web-backend/LICENSE` and `aoe-web-frontend/LICENSE` are both EUPL-1.2, `304 B`, byte-identical.** 🟢 `SURFnet/apie` reads `NOASSERTION` and the bytes read **EPL-2.0 WITH Classpath-exception-2.0** → `T198` |
+| 🟢 **`T193` gets the precondition it was missing** | 🟢 `4` MIT payloads of ONE holder are **byte-size-identical at `1,066 B` and hash differently** — the four-digit year is the only difference. 🔴 `7` Apache-2.0 payloads across **two organisations in two countries** hash **identically**. 🔵 **A collision on a holder-BEARING licence is evidence about the holder; on a holder-AGNOSTIC one it is evidence about the template and nothing else** → `T200` |
+| 🟢 **`857-G6` discharged by measurement** | `6` Spanish and Portuguese supply legs: `27` distinct addresses, 🔴 **`0` above `1` star**, `4` MIT, 🔴 **`7` traceable to two named course assignments** (Alura *Challenge ONE* 🇧🇷, UNAH `MGI-201` 🇭🇳). 🟢 **The LATAM-origin nil is now MEASURED.** 🔴 `0` of the `27` is published as a LATAM row — `es` ≠ LATAM |
+| 🟢 **This repository's own gates RAN, and they were RED before this pass** | 🟢 `python3 -I ingest/derive-counts.py .` executes in this session. 🔴 **At `HEAD` it reported `agents/top.md` claiming `442` while holding `451`, and `repos/foundations.md` claiming `265` while holding `274`.** 🟢 **Both are GREEN after `p858`, at `456` and `294`, and every count published today is the gate's number rather than this pass's** → `858-G5` |
+| 🔴 **The instrument was pointed at ONE region** | `305` repositories, six countries, **all EMEA**. 🔴 **`0` agencies enumerated in North America, APAC or LATAM — so public-buyer supply outside Europe is an UNMEASURED absence, not a nil.** 🟢 Targets named with no search step: KERIS 🇰🇷, MEXT 🇯🇵, ESA 🇦🇺, **Plan Ceibal 🇺🇾 first**, Ed-Fi Alliance → `858-G6` |
+
 ## Pass `p855` · `2026-11-16`
 
 🔴 **`854-G1` ended with a rule — *yield is a function of the query's LANGUAGE* — and `p855` tested
@@ -487,14 +517,16 @@ deliberately NOT run.**
 
 ## Regional summary
 
-🟢 **`p811` delta by region, before the `p810` table below:** **North America** — Florida becomes
-the fourth dated state obligation (Rule `6A-14.0719`, districts by `2027-07-01`) and the
-consolidation reached headcount (Coursera `-10%`, `2026-11-09`). **EMEA** — the region's agent
-supply appeared at the portal layer, five systems in five days, four of them state-operated.
-**APAC** — CHED Memorandum Order No. `21` s.`2026` (`2,366` HEIs, `12`-month window) and
-Australia's automated-decision transparency duty from `2026-12-10`. **LATAM** — the nil is now
-measured: `0` of `65` agents attach to a system operated in the region. **Global** — Q1 `2026`
-funding `$512M`, `>70%` to workforce training, `116` M&A transactions.
+🟢 **`p858` delta by region, before the `p810` table below:** **EMEA** — the region stops being a
+demand story: `305` repositories from seven state education bodies in six countries, `26` shelved
+today, and the standing *"one European-origin agent"* line retired. 🔴 **North America** — `0` state
+or provincial education agencies enumerated, so public-buyer supply here is an unrun leg rather than
+a nil (`858-G6`); Canada/Mexico spend unanswered for a SIXTH pass. 🔴 **APAC** — the prescribed leg
+returned two specific instruments and **both were EMEA** (UAE, UK), reproducing `T935`; `0` APAC
+ministries enumerated. 🟢 **LATAM** — `857-G6` discharged: `27` distinct ES/PT addresses, `0` above
+one star, `7` traceable to two named course assignments; and the DEC LATAM survey's **denominator**
+recovered at `30,000`+ responses across `29` institutions. 🔴 **Global** — `pushed_at` shown to be an
+organisation event, which undermines every freshness claim on these shelves that rests on it.
 
 
 | Region | The opening | The named gap |
@@ -507,19 +539,21 @@ funding `$512M`, `>70%` to workforce training, `116` M&A transactions.
 
 ## Files
 
+🟢 **Every count below is the output of `python3 -I ingest/derive-counts.py .`, run in this session
+after this pass's edits — not a figure carried from a heading.**
+
 | File | What it holds | Mode |
 |---|---|---|
-| [`agents/top.md`](agents/top.md) | 🟢 **`66` agents — `59` build-safe, `7` copyleft, `9` rejected.** 🟢 **`22` added, the largest single-pass addition recorded** · counts re-derived, not carried | prepended each pass |
-| [`agents/trending.md`](agents/trending.md) | What is new per window · 🟢 **`NOASSERTION` resolved in both directions; the Ed-Fi control stack** | 🟢 **append-only** |
-| [`repos/foundations.md`](repos/foundations.md) | 🟢 **`69` repos, `1:1` with rows** · 🟢 **`6` added, SIX-pass nil BROKEN** · 🟢 new **OneRoster rostering layer** · `runno` as the untrusted-code boundary | prepended each pass |
-| [`repos/trending.md`](repos/trending.md) | Repo movement per window · 🔴 the `D810-1` count defect and its corrected prescription | 🟢 **append-only** |
-| [`verticals/solutions.md`](verticals/solutions.md) | 🟢 **Sakai, Canvas, Schoology/Infinite Campus and Cubite gain agent surfaces** · 🟢 **one platform at TWO risk postures** · `FenixEdu` as the EMEA SIS | prepended each pass |
-| [`intel/market.md`](intel/market.md) | 🟢 **`53` `#### Update` blocks — NA `12`, EMEA `12`, APAC `12`, LATAM `12`, Global `5`.** Every region gained one | rewritten each pass |
-| [`intel/trends.md`](intel/trends.md) | 🟢 **`33` trends · `T31`–`T33` added** (EMEA's portal-layer supply · region-by-target-system · inherited copyleft) · 🟢 **`T30` extended to six jurisdictions**. Superseded: 🟢 **`30` trends · `T27`–`T30` added** (licence field · standards bodies · the transform as instrument · the sole-decider convergence) | prepended each pass |
-| [`compose/patterns.md`](compose/patterns.md) | 🟢 **`28` patterns · `P27`–`P28` added** — the OneRoster agent nobody has built · the national-school-portal family agent · 🟢 **count now machine-graded**. Superseded: 🟢 **`26` patterns · `P24`–`P26` added** — FRIA-survivable early warning · Markdown→SCORM with a conformance gate · assessment shaped to Ofqual's OPEN categories | prepended each pass |
-| [`intel/open-gaps.md`](intel/open-gaps.md) | Action ledger · `ACTION p810-A` (re-probe rows rejected on a blank licence signal alone) | 🟢 **append-only** |
-| [`evidence/*2026-11-13-p811*`](evidence/) | 🟢 **The three machine outputs behind this pass** — [`repo-verification`](evidence/repo-verification.2026-11-13-p811.tsv) (14 addresses, 2 negative controls), [`origin-location-channel`](evidence/origin-location-channel.2026-11-13-p811.tsv) (the probe, its silent defect, and the declaration that it was not run at scale), [`websearch-legs`](evidence/websearch-legs.2026-11-13-p811.tsv) (every prescribed leg with its yield) | — |
-| [`evidence/*2026-11-13-p810*`](evidence/) | 🟢 **The three machine outputs behind this pass** — the verification channel with its negative control, the licence byte reads, and the **three-run gate control that caught this pass's own regression** | — |
+| [`agents/top.md`](agents/top.md) | 🟢 **`456` agent rows, gate-GREEN** (`451` → `456`; the roll-up heading said `442` at `HEAD` and now agrees) · 🟢 **`5` added: the German state Apache-2.0 agent fleet** · 🔴 `3` examined and refused for having no licence file at any path | prepended each pass |
+| [`agents/trending.md`](agents/trending.md) | What is new per window · 🟢 **this window the movement is a RETIREMENT — the "one European agent" line** · 🔴 the `pushed_at` anti-movement | 🟢 **append-only** |
+| [`repos/foundations.md`](repos/foundations.md) | 🟢 **`294` rows, gate-GREEN** (`274` → `294`; the roll-up heading said `265` at `HEAD`) · 🟢 **`20` added: the national education agency tier, shelved for the first time** · 🔴 the date column is now the **HEAD commit date**, and the new signature is declared in the gate | prepended each pass |
+| [`repos/trending.md`](repos/trending.md) | Repo movement per window · 🟢 **`305` repositories enumerated from seven state bodies, `0` forks** · 🔴 the `Gap 251` refutation | 🟢 **append-only** |
+| [`verticals/solutions.md`](verticals/solutions.md) | 🟢 **`155` rows, gate-GREEN** · 🟢 **`6` national PLATFORM families added — Opintopolku, JOD, SURFeduhub/OOAPI, PEA, Udir's `55`-plugin Moodle estate, Skolverket's DNP** · 🔵 declared NOT-counted in the roll-up, because their addresses are shelved individually on `repos/foundations.md` | prepended each pass |
+| [`intel/market.md`](intel/market.md) | 🟢 **The PUBLIC BUYER placed by region** — five `###` sections under one `## Opportunities by region`, NA · EMEA · APAC · LATAM · Global · 🔴 **three of the five carry an explicit unrun-leg declaration rather than a silent nil** | rewritten each pass |
+| [`intel/trends.md`](intel/trends.md) | 🟢 **`192` trends · `T196`–`T200` added** — the licence geography · `pushed_at` as an org event · the fourth licence location · log-without-shelf · the `T193` boundary | prepended each pass |
+| [`compose/patterns.md`](compose/patterns.md) | 🟢 **`89` recipes · `P88`–`P89` added** — the national-estate AI layer wired only from grants byte-read today, and the three-command instrument that enumerates a ministry's codebase | prepended each pass |
+| [`intel/open-gaps.md`](intel/open-gaps.md) | Gap ledger · 🟢 **`857-G6` DISCHARGED**, 🟡 **`Gap 251` PARTIALLY CLOSED with one of its own claims refuted**, 🟢 **`858-G5` declared and discharged in the same pass** · `5` live | 🟢 **append-only** |
+| [`evidence/*2026-11-16-p858*`](evidence/) | 🟢 **The six machine outputs behind this pass** — [`repo-verification`](evidence/repo-verification.2026-11-16-p858.tsv) (`41` clones, `1` invented negative control), [`agency-org-enumeration`](evidence/agency-org-enumeration.2026-11-16-p858.tsv) (every login probed, present or `422`), [`pushed-at-divergence`](evidence/pushed-at-divergence.2026-11-16-p858.tsv) (the defect **and** its control agency), [`licence-payload-identity`](evidence/licence-payload-identity.2026-11-16-p858.tsv) (the `T193` boundary fixture), [`websearch-legs`](evidence/websearch-legs.2026-11-16-p858.tsv) (every prescribed leg with its yield), [`latam-language-legs`](evidence/latam-language-legs.2026-11-16-p858.tsv) (`857-G6`) | — |
 
 ## 🔴 Channel discipline — read before quoting anything here
 
@@ -536,7 +570,7 @@ funding `$512M`, `>70%` to workforce training, `116` M&A transactions.
 | Licence **restrictions** | 🔴 **Still the direction instruments fail in, and the LOCATION keeps moving:** a second licence file (`T914`), a different repository (`T925`), two grants in one file (`T915`), 🆕 **and the README under an unmodified MIT** (`T937`) |
 | **Region placement** | 🔴 **A query LANGUAGE is not a region** (`T935`). 🔴 **The `es` leg returns Spain; the APAC leg returned the UAE.** 🟢 **Rows placed on language alone are published as `LATAM?`, and the closed vocabulary is never given a guess** |
 | Star counts | 🟢 **Re-measured on `search/repositories`.** 🔴 A secondary source was off by `-23%` on this base's largest row at `p797` |
-| 🔴 **Running this repository's own code — RE-CORRECTED at `p820`: it is SESSION-DEPENDENT, not a property of this repository** | 🔴 **REFUSED in `p818`, `p819` AND `p820` — three consecutive passes. The sandbox classifier declines `python3 -I ingest/derive-counts.py`, so all five graded counts are carried on independently written REIMPLEMENTATIONS of that gate (`ACTION p820-B`). Two such substitutes, written independently at `p819` and `p820`, agree on all five figures.** 🔵 **Read this row as: assume NOTHING about whether committed code will run — test it each pass and publish the result either way.** 🟡 **`p811` recorded the opposite and was right about `p811`:** 🟢 **It ran THERE. `make hooks` completed and `python3 -I ingest/derive-counts.py .` was used as a working control before and after every edit this pass.** 🔵 **So the claim below was true of `p800`'s session and is NOT a property of this repository.** 🔴 **Baseline failing-gate set at `HEAD` before this pass: `gate-absence`, `gate-dates`, `gate-derived-counts`, `gate-enumeration`, `gate-evidence-store`, `gate-offline`, `gate-shelf-consistency`, `recount` — carried pre-existing, and re-checked after this pass's edits.** Superseded text: 🔴 **REFUSED in this session.** An attempt to run one instrument's test suite was declined by the command classifier. 🔴 **So `make hooks`, `make commit-gates` and `ACTION p797-H` are undischargeable from here, and [`p135`](compose/code/p135-licence-sha-identity/) is cited from its README and source rather than from a run.** 🟢 **No claim in this pass depends on executing committed code** |
+| 🔴 **Running this repository's own code — RE-CONFIRMED at `p858` as SESSION-DEPENDENT, and in THIS session it RUNS** | 🟢 **`p858`: `python3 -I ingest/derive-counts.py .` and `make hooks` both executed.** 🔴 **And they were RED before this pass touched anything: at `HEAD`, `agents/top.md` claimed `442` while holding `451`, and `repos/foundations.md` claimed `265` while holding `274`.** 🟢 **Both GREEN after `p858` at `456` and `294`; `verticals/solutions.md` GREEN at `155` throughout.** 🟢 **`make hooks` measured on BOTH sides — a clean `HEAD` worktree and the edited tree: `51/73` → `52/73` green, `22` → `21` RED, `gate-region-headings` FIXED (`p857`'s regional block carried no `### Global`), `0` regressions.** 🔵 `gate-derived-counts` stays RED on both sides because its second instrument fails on a pre-existing `p644` manifest mismatch — in the Makefile's own `DECLARED_RED` set, untouched here. 🔵 **Read this row as: assume NOTHING about whether committed code will run — test it each pass and publish the result either way.** 🔴 Superseded text, kept for citation integrity: REFUSED in `p818`, `p819` AND `p820` — three consecutive passes, with all five graded counts carried on independently written reimplementations. 🟡 `p811` recorded the opposite and was right about `p811`. 🔵 So neither reading is a property of this repository |
 | Every market, adoption and regulatory figure | 🔴 **Search-channel testimony.** 🔴 **`T906` now names TEN domains that fail at `CONNECT`:** `eur-lex.europa.eu`, `oecd.org`, `unesco.org`, `op.europa.eu`, `iesalc.unesco.org`, `digital-strategy.ec.europa.eu`, `www.gov.br`, and 🆕 **`www.moe.go.kr`, `moe.go.kr`, `english.moe.go.kr`.** 🔵 **Every one is a government or multilateral publisher and no commercial domain has ever failed this way — a network POLICY, not an outage** |
 | 🟢 **A numbered instrument** | 🟢 **Now tested rather than asserted: `Regulation (EU) 2026/1744` was challenged by this pass's own EMEA leg and held across four independent legal readings** (`T939`). 🔵 **`CITED, NOT READ` is usable because anyone can check a number in one lookup** |
 

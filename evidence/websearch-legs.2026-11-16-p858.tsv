@@ -1,0 +1,11 @@
+# p858 2026-11-16 — every leg the scheduler's prompt prescribes, with its measured yield
+# year computed from the session date, not hardcoded: 2026
+leg	channel	returned	new_to_this_base	usable	note
+top open source AI agents education 2026 github MIT	WebSearch	18 links	0	0	general agent roundups (OpenClaw, OpenHands, browser-use, Dify); not education; sources disagree on licence
+github trending education AI 2026	WebSearch	18 links	0	0	DeepTutor (already this base's largest row), Claw-ED, ChinaTextbook, microsoft/ai-agents-for-beginners
+open source platform education ERP CRM MIT Apache	WebSearch	10 links	0	0	10 of 10 are openeducat.org's own glossary pages; OpenEduCat is LGPL and already shelved
+AI education industry trends 2026	WebSearch	19 links	2	2	US Dept of Education $169M FIPSE awards incl. responsible AI in HE; Instructure Canvas Career (skills-first AI LMS)
+AI education North America 2026 adoption regulation players	WebSearch	14 links	3	3	ECS: federal EOs 2025-early 2026 -> national AI-in-education framework + K-12 AI task force; NTIA on edtech privacy; Ken Research counts 1,435 players, US $3.28B(2025)->$15.25B(2031)
+AI education EMEA 2026 adoption regulation players	WebSearch	15 links	4	4	Digital Omnibus political agreement 2026-05-07; Art.6 high-risk draft guidelines consultation to 2026-06-23; Education Council conclusions on teachers in the era of AI 2026-05-11; Eurydice "Digital education at school in Europe 2026"
+AI education APAC 2026 adoption regulation players	WebSearch	19 links	2	0	REGION DEFECT REPRODUCED: the 2 specific instruments returned are UAE MoE (Feb 2026, 25 generative-AI prohibitions) and UK (Jan 2026 genAI safety standards) -- both EMEA. T935 holds.
+AI education LATAM 2026 adoption regulation players	WebSearch	17 links	1	1	DEC LATAM survey DENOMINATOR recovered: 30,000+ responses across 29 institutions, with Tec de Monterrey / Institute for the Future of Education

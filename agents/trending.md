@@ -4,6 +4,28 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — `p858`: the state-agency channel, and the window's movement is a RETIREMENT
+
+🟢 **What is new in this window is not a repository that got popular. It is a channel that was never
+searched.** 🔴 GitHub's ranked search cannot surface a state agency's code because that code has no
+stars — 🟢 **`5` Apache-2.0 education agents were filed to [`top.md`](top.md) this pass and the
+highest star count among them is `0`.**
+
+| Movement | What moved |
+|---|---|
+| 🟢 **RETIRED: *"one European-origin open-source education agent at scale"*** | Carried in every regional summary since `p798`. 🔴 Withdrawn. 🟢 Germany's [`openeduhub`](https://github.com/openeduhub) fleet — `tutor-chatbot`, `lernpfadeditor`, `llm-judge`, `ki-prompt-benchmark`, `duplicate-detection` — is state-funded, Apache-2.0 and in production behind **WirLernenOnline** |
+| 🟢 **NEW capability class: sovereign inference as a CONFIG value** | 🟢 `tutor-chatbot` ships `GWDG` alongside `gpt-4o-mini`; `ki-prompt-benchmark` ships **`AcademicCloud (KISSKI)`**. 🔵 **The EMEA sovereignty question is answered by a provider setting, not an architecture** |
+| 🟢 **NEW capability class: `Binnendifferenzierung`** | 🟢 `lernpfadeditor` detects learner sub-groups from the teacher's own prose and emits a path per group. 🔵 **No English-language equivalent is on these shelves after sixty-three passes** |
+| 🟢 **NEW capability class: prompt REGRESSION for a live public service** | 🟢 `ki-prompt-benchmark` holds a shipped prompt set against a candidate set, across models, with a constant judge model. 🔵 `p811` declared "no dominant OSS agent-eval tool" a gap; this is a state-operated one |
+| 🔴 **ANTI-movement: `pushed_at` said all of it shipped `2026-11-03`** | 🔴 **`51` of `56` repos report that date; `12` of `13` cloned have no commit within five months of it, one by `47` months, none on any branch.** 🟢 Control at a second agency: `12` of `12` within five days → `T197` |
+| 🔴 **`3` agents examined and NOT filed, all for one reason** | `metadata-agent-canvas`, `its-jointprobability`, `its-qna` — 🔴 **no licence file at any path.** 🔵 Inside one org the user-facing apps are Apache-2.0 and the research components are ungranted |
+| 🔴 **A login that looks like an agency and is not** | 🔴 `intef-dev`: `6` repos, `4` MIT, and READMEs that speak in the first person singular about the author's own YouTube channel. 🔵 It is Excel Script Lab add-ins, not Spain's INTEF → `858-G4` |
+| 🟡 **ES/PT supply window, measured for the first time** | `6` legs, `27` distinct addresses, 🔴 **`0` above `1` star**, `4` MIT, 🔴 **`7` traceable to two named course assignments** (Alura *Challenge ONE* 🇧🇷; UNAH `MGI-201` 🇭🇳) → `857-G6` discharged |
+
+🔵 **The window's lesson for a later pass, in one line:** 🟢 **when a tier's rows would all carry
+`0` stars, a ranked search is the wrong instrument and an org enumeration is the right one** —
+`P89` holds the three commands.
+
 ## 🟢 `2026-11-16` — `p857` — **ACADEMIC RISK enters the base, and the tier turns out to be a BUILD rather than an ADOPT**
 
 🟢 **New and permissive, every grant byte-read today:**

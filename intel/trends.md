@@ -4,6 +4,119 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — sixty-third pass (`p858`) — **`5` trends (`T196`–`T200`): the licence map of public-sector Europe, `pushed_at` shown to be an org event rather than a freshness signal, a fourth place a licence hides, a tier logged for sixty-one passes and never shelved, and the boundary that makes `T193` safe to act on**
+
+## 🟢 `T196` — the national education agency tier has a LICENCE GEOGRAPHY, and the border decides the commercial shape of the engagement
+
+🟢 **Measured, not felt: `305` repositories across seven state education bodies in six countries,
+every grant on the `20` shelved rows byte-read on `2026-11-16`.**
+
+| Country · body | Regime | What a studio may do |
+|---|---|---|
+| 🇫🇮 Opetushallitus | 🟡 **EUPL-1.1 / 1.2**, uniformly, `2013`→`2026` | 🔴 Reciprocal, network trigger included → **co-build and contribute** |
+| 🇳🇴 Utdanningsdirektoratet | 🟢 **MIT · Apache-2.0** | 🟢 **Fork, close, ship** |
+| 🇳🇱 Kennisnet | 🟢 **MIT**, `11` of `25` | 🟢 **Fork, close, ship** |
+| 🇳🇱 SURF | 🔴 **GPL-3.0 · AGPL-3.0 · EPL-2.0 · BSD-3 · Apache-2.0, in ONE org** | 🔴 **Per-repository reading is mandatory** |
+| 🇩🇪 openeduhub | 🟢 **Apache-2.0** apps · GPL-3.0 edges · **CC0-1.0** vocabularies | 🟢 Apps shippable, taxonomy public domain |
+| 🇸🇪 Skolverket | 🔴 **`1` of `5` granted** | 🔴 Cite the spec; vendor nothing |
+| 🇪🇪 HITSA | 🔴 GPL-3.0 or nothing, untouched since `2020` | 🔴 Not a channel today |
+
+🔵 **The inference that is worth more than the table: the licence is a POLICY artefact, not an
+engineering one.** 🟢 Finland chose the European Commission's own licence and applied it to a
+thirteen-year estate without exception; Norway chose MIT and 🟢 **built a reuse CHAIN on it — Digdir
+publishes `Designsystemet` MIT, Nav builds `Aksel` on it MIT, Udir builds its education design
+system on both and republishes all three grants.** 🔴 **Nothing of that kind exists in the EUPL
+countries, because reciprocity makes the next agency a licensee rather than a co-author.**
+
+🟢 **Use it this way in a pitch: name the regime before naming the architecture.** 🔵 A Finnish
+ministry will accept an integration-and-contribution proposal and reject a closed fork; a Norwegian
+or Dutch one will accept either. 🔴 **Getting that backwards costs the meeting, not the deal.**
+
+## 🔴 `T197` — `pushed_at` is an ORGANISATION event. It is not a freshness signal, and this base writes it on every row
+
+🔴 **`51` of `openeduhub`'s `56` repositories report the identical `pushed_at` of `2026-11-03`.**
+🟢 **`13` were cloned and their default-ref HEAD read. `12` of `13` are between `3` and `47` months
+older than the date they report; the median gap is `10` months.** 🔴 **Two were re-checked across
+ALL remote refs after a full ref fetch, and neither has a commit near `2026-11-03` on ANY branch.**
+🔴 [`openeduhub/metalookup`](https://github.com/openeduhub/metalookup): claimed `2026-11-03`, newest
+commit across `12` refs `2023-02-16`. 🔴 `tutor-chatbot`: `0` tags, `2` refs, newest commit
+`2025-08-27` — **`14` months.**
+
+🟢 **The control is the half that makes it a finding.** Same channel, same hour, different agency:
+🟢 **`12` Opetushallitus repositories, `12` of `12` within FIVE DAYS of their reported `pushed_at`.**
+🔵 So the field is not broken — **it records the last push to the repository, which at a mirrored or
+administratively-managed org is one event for the whole org.**
+
+🔴 **The consequence is procedural and it is this base's own.** Every shelf row carries a `pushed`
+value, and for this organisation every one of those values would have overstated maintenance by up
+to four years. 🟢 **The remedy costs nothing: the clone channel already returns `git log -1
+--format=%cI`, so publish the HEAD COMMIT DATE and treat `pushed_at` as a discovery hint only.**
+🟢 **`p858`'s own foundation rows are the first on these shelves to do it** →
+[`pushed-at-divergence`](../evidence/pushed-at-divergence.2026-11-16-p858.tsv), `858-G1`
+
+## 🔴 `T198` — a FOURTH place a licence hides: the monorepo sub-package — and GitHub's field caught UNDER-claiming for the second pass running
+
+🟢 **The ledger of locations this base has now paid to learn, in order:** a second licence file
+(`T914`) · a different repository (`T925`) · two grants in one file (`T915`) · the README under an
+unmodified MIT (`T937`) · 🆕 **the sub-package of a monorepo.**
+
+🔴 **The specimen: [`Opetushallitus/aoe`](https://github.com/Opetushallitus/aoe)** — `aoe.fi`,
+Finland's **national** open-educational-resources library. GitHub's licence field: `NONE`.
+Repository root: no licence file. 🟢 **`aoe-web-backend/LICENSE` and `aoe-web-frontend/LICENSE`:
+both `304 B`, both `sha256₁₂ 3d3a635e4379`, both EUPL-1.2.** 🔴 **A root-only check declares a live
+national service ungranted and drops it.**
+
+🟢 **And the field under-claims again.** [`SURFnet/apie`](https://github.com/SURFnet/apie) reads
+`NOASSERTION`; the bytes read **`EPL-2.0 WITH Classpath-exception-2.0`** — `LICENSE` `14,198 B`,
+`sha256₁₂ 0becf16567be`, SPDX declared in the README, `LICENSES/` directory REUSE-compliant.
+🔵 **`T195` recorded the first under-claim at `p857` and called it a first; it is now a PATTERN, and
+the pattern has a cause worth naming: REUSE-compliant projects put the grant where a human reads it
+and GitHub's classifier does not look.** 🔴 **Which means `NOASSERTION` is now evidence of nothing
+in BOTH directions, and the byte-read is the only channel.**
+
+## 🔴 `T199` — a channel can be read for sixty-one passes, logged `170` times, and never reach a shelf
+
+🔴 **`Opetushallitus` occurs `61` times in [`agents/trending.md`](../agents/trending.md), `82` times
+in [`repos/trending.md`](../repos/trending.md) and `27` times in
+[`intel/open-gaps.md`](open-gaps.md). It occurs `0` times on `agents/top.md`, `0` times on
+`repos/foundations.md` and `0` times on `verticals/solutions.md`.**
+
+🔴 **`Gap 251` states that this base *"has read `15` and shelved `8`"*. The second clause is false,
+and it was false when it was written.** 🟢 Nothing was shelved. `20` addresses were logged.
+
+🔵 **The mechanism, because it will recur and it is structural rather than careless.** The two
+trending files are **append-only** and the three shelves are **prepended**. A pass that writes a
+finding into trending has discharged its obligation to the LOG and incurred an undischarged one to
+the SHELF — 🔴 **and no gate in this tree compares the two.**
+
+🟢 **`p858` shelves the tier (`20` foundation rows, `6` platform rows) and leaves the generalisable
+part as a rule:** 🔴 **an address that appears in `trending.md` and in no shelf after two passes is a
+BACKLOG item, not a finding.** 🟢 The sweep is one `grep -o` per file and a set difference →
+`858-G3`, and it would audit every tier this base has ever logged.
+
+## 🟢 `T200` — the boundary that makes `T193` safe to act on: a hash collision is evidence about the HOLDER only when the payload names one
+
+🟡 **`T193` (`p857`) established that a licence-hash collision establishes a shared holder, and that
+a shared holder is as consistent with a donation as with a copy.** 🟢 **`p858` supplies the
+precondition `T193` did not state, by measuring the case where it fails.**
+
+| Payload class | Measured this pass | Collides? |
+|---|---|---|
+| 🟢 **MIT, holder-BEARING** | `4` payloads of ONE holder (`Kennisnet`), **all exactly `1,066 B`**, hashes `27fb6d463569` · `de48ba028771` · `cb979719e9ca` · `4bf4fd11bcd9` | 🟢 **No. The only difference is the four-digit YEAR** |
+| 🔴 **Apache-2.0, holder-AGNOSTIC (appendix unfilled)** | `7` payloads, `11,357 B`, `sha256₁₂ c71d239df917` — 🔴 **across TWO organisations in TWO countries** (`openeduhub` 🇩🇪 ×`6`, `SURFnet` 🇳🇱 ×`1`) | 🔴 **Yes, totally — and it means nothing** |
+
+🟢 **The rule, stated so a sweep author can apply it without judgement:** 🔵 **MIT and BSD embed the
+copyright holder in the granting text; Apache-2.0 and GPL do not.** 🟢 **So a collision on MIT or
+BSD is evidence about the holder — which is `T193`'s claim, and it survives. A collision on
+Apache-2.0 or GPL is evidence about the TEMPLATE and about nothing else.** 🔴 **A de-duplication
+instrument that does not partition by payload class will report every Apache-2.0 project on GitHub
+as one donor.** → [`licence-payload-identity`](../evidence/licence-payload-identity.2026-11-16-p858.tsv)
+
+🔵 **And the corollary that costs nothing: `T938`'s byte-size band is even weaker than `p857` found
+it.** 🟢 **Four MIT payloads from a single holder are byte-size-IDENTICAL and hash differently** —
+so size is not a proxy for identity in either direction. 🟢 **Use `p135`'s copyright-stripped
+normalisation, and partition by class first.**
+
 ## 🟢 `2026-11-16` — sixty-second pass (`p857`) — **`3` trends (`T193`–`T195`): the de-duplication instrument shown to need CLASSIFYING before it is acted on, the Fedena trap where stars and grant point at different repositories, and GitHub's licence field caught UNDER-claiming for the first time on these shelves**
 
 ## 🟡 `T193` — a licence-hash collision establishes a shared HOLDER, and a shared holder is as consistent with a DONATION as with a copy

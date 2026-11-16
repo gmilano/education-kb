@@ -1,0 +1,13 @@
+# p858 2026-11-16 — 857-G6 discharge: ES/PT first-party supply legs (gh api search/repositories)
+# 857-G6: "no ES/PT leg was run, so the 0 LATAM-origin rows are an unmeasured absence."
+leg	returned	with_2_or_more_stars	permissive	traceable_to_a_named_course_assignment
+agente educativo inteligencia artificial	4	0	0	0
+tutor inteligente estudiantes IA	6	0	0	3 (UNAH MGI-201, Universidad Nacional Autonoma de Honduras, three groups of one brief)
+plataforma educativa agente IA	8	0	3 MIT	4 (Alura "Challenge ONE / Challenge Escuela IA")
+agente educacional inteligencia artificial	6	0	1 MIT	0
+tutor inteligente aluno IA	3	0	0	0
+correcao automatica redacao	2	0	0	0
+TOTAL	29 (27 distinct)	0	4 MIT	7 of 27
+# VERDICT: the LATAM-origin absence is now MEASURED, not assumed. Highest star count across all 27: 1.
+# The channel returns coursework in Spanish and Portuguese exactly as T185 predicted for English workflow nouns.
+# Region NOT asserted from language (T935): none of these 27 is published as a LATAM row.

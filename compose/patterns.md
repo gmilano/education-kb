@@ -4,6 +4,87 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-third pass (`p858`, 2026-11-16) — **`P88`–`P89`: the national-estate AI layer wired entirely from grants byte-read today, and the one-call instrument that finds a ministry's codebase before the first meeting**
+
+## P88 — an AI layer for a state education estate, where the first architectural decision is WHERE THE LICENCE BOUNDARY FALLS (EMEA anchor; the same build serves any public buyer)
+
+🔵 **What it produces:** for a ministry, directorate or national OER service that already runs a
+platform, an AI layer that **enriches, generates and checks learning material** — and that can be
+handed over, audited, or sold on, because every component's grant was read before it was wired.
+
+🔴 **What it must never do: live inside the platform.** 🟢 Moodle is GPL-3.0 and Open edX is
+AGPL-3.0, and `p858` measured a `55`-repository national Moodle estate at
+[`udir-moodle`](https://github.com/udir-moodle) to prove the inheritance is not theoretical.
+🔵 **Everything below sits BESIDE the platform and speaks to it over an API.** That one decision is
+what keeps the layer permissive.
+
+### The build, component by component — every licence byte-read `2026-11-16`
+
+| Layer | Component | Grant, as measured | Why this one |
+|---|---|---|---|
+| **1. Repository client** | [`openeduhub/edu-sharing-python-client`](https://github.com/openeduhub/edu-sharing-python-client) | 🟢 Apache-2.0, `11,349 B`, `e54a97efb7d3` | Async-first, repository-agnostic, verified against edu-sharing `11.0` **including writes**. 🟡 Pre-`1.0`: pin the commit |
+| **2. Taxonomy** | [`openeduhub/oeh-metadata-vocabs`](https://github.com/openeduhub/oeh-metadata-vocabs) | 🟢 **CC0-1.0**, `7,048 B`, `a2010f343487` | 🟢 **Public domain.** Subject, educational context and audience vocabularies in SKOS — the cold-start for classification |
+| **3. Ingest hygiene** | [`openeduhub/duplicate-detection`](https://github.com/openeduhub/duplicate-detection) | 🟢 Apache-2.0, `c71d239df917` | MinHash + URL/title normalisation as a rate-limited FastAPI service. 🔵 Run it BEFORE enrichment or you pay to enrich twins |
+| **4. Enrichment** | `metadata-agent-canvas` — 🔴 **DO NOT VENDOR** | 🔴 **No licence file at any path** | 🔴 **Named here as the hole, not the component.** Reimplement over layers `1`–`2`, or ask `openeduhub` for terms → `858-G2` |
+| **5. Learner-facing agent** | [`openeduhub/tutor-chatbot`](https://github.com/openeduhub/tutor-chatbot) | 🟢 Apache-2.0, `c71d239df917` | 🟢 **Curated QA pairs take precedence over generation.** That ordering is the regulator-facing property — pedagogy in control — and it is already implemented |
+| **6. Teacher-facing agent** | [`openeduhub/lernpfadeditor`](https://github.com/openeduhub/lernpfadeditor) | 🟢 Apache-2.0, `c71d239df917` | 🟢 **Binnendifferenzierung**: detects sub-groups from the teacher's own prose and emits a path per group. 🔵 No English-language equivalent exists on these shelves |
+| **7. Content gate** | [`openeduhub/llm-judge`](https://github.com/openeduhub/llm-judge) | 🟢 Apache-2.0, `c71d239df917` | 🟢 Factual-correctness scoring with remediation text, batch or single. 🔴 **Nothing generated reaches a learner without passing this** |
+| **8. Prompt CI** | [`openeduhub/ki-prompt-benchmark`](https://github.com/openeduhub/ki-prompt-benchmark) | 🟢 Apache-2.0, `c71d239df917` | 🟢 **Set A (shipped) vs set B (candidate) over the same material, across models, with a constant judge model and five criteria.** 🔵 This is the regression suite; wire it into the pipeline, not into a notebook |
+| **9. Assessment interchange** | [`kennisnet/php-qti3`](https://github.com/kennisnet/php-qti3) **+** `qti3` (TypeScript, `Gap 240`) | 🟢 MIT, `1,066 B`, `27fb6d463569` | 🟢 **Both halves of QTI 3.0 are now permissive and state-maintained.** PHP for the school estate, TypeScript for the browser |
+| **10. Rostering** | [`skolverket/dnp-ss12000-reference-api`](https://github.com/skolverket/dnp-ss12000-reference-api) · [`Utdanningsdirektoratet/pifu`](https://github.com/Utdanningsdirektoratet/pifu) · OOAPI | 🟡 Apache-2.0 `ac2e2b321b48` · 🔴 pifu **no grant** · OOAPI a spec | 🔵 **Pick by country: `SS 12000` in Sweden, `PIFU` in Norway, `OOAPI` in the Netherlands, OneRoster or Ed-Fi elsewhere.** 🔴 Read the SS12000 repo as an executable spec — its README forbids production use |
+| **11. Conformance gate** | [`SURFnet/apie`](https://github.com/SURFnet/apie) | 🟢 **EPL-2.0 WITH Classpath-exception-2.0**, `14,198 B`, `0becf16567be` | 🟢 **The exception is the point: link freely, publish changes to EPL files only.** Proves the API you built matches the spec you promised |
+| **12. Inference** | 🇩🇪 `GWDG` / `AcademicCloud (KISSKI)` — already a configured provider in rows `5` and `8` · elsewhere self-hosted | — | 🟢 **The sovereignty answer is a configuration change, not a rewrite**, because the German state fleet already ships both paths |
+
+### The three decisions that make or break it
+
+| Decision | 🟢 Do | 🔴 Do not |
+|---|---|---|
+| **Boundary** | Beside the platform, over an API | 🔴 Inside Moodle or Open edX — the layer becomes GPL/AGPL and unsellable |
+| **Finland** | 🟡 **If the estate is EUPL (Opetushallitus), price a CO-BUILD**: contribute upstream and bill integration | 🔴 Fork it closed. EUPL reciprocity includes network availability |
+| **Freshness** | 🟢 Pin every component by **HEAD commit sha** | 🔴 Trust `pushed_at` — `T197` measured it `47` months wrong on this very fleet |
+
+🔵 **Honest shape of the effort.** Layers `1`–`3` and `9`–`11` are integration: **`4`–`6` weeks**.
+Layers `5`–`8` are German-language codebases with German-language READMEs — **budget translation and
+a domain reviewer before estimating**. 🔴 **Layer `4` is a build, not an adopt**, and it is the one
+the client will assume is free because the rest of the fleet is.
+
+## P89 — find a public buyer's codebase, and grade it, in one API call per agency
+
+🔵 **What it produces:** for any named public body, a graded list of its open repositories — before
+the first meeting, with no search step and no scraping.
+
+🔴 **Why it is worth a pattern.** `p858` measured the alternative: the four prescribed English
+WebSearch legs returned `65` links and **`0` usable supply rows**, while seven `user:` enumerations
+returned `305` repositories and `26` shelf rows. 🟢 **An org listing is not a ranked search, and a
+state agency's code has no stars to rank by.**
+
+```bash
+# 1. resolve the login  (gh api users/{login} is REFUSED here; search/users is not)
+gh api -X GET search/users -f q='<agency name>' --jq '.items[]|"\(.login)\t\(.type)"'
+
+# 2. enumerate.  HTTP 422 == the login does not exist or has no public repos.
+gh api -X GET search/repositories -f q='user:<ORG>' -f per_page=100 -f sort=updated \
+  --jq '.items[]|"\(.full_name)\t\(.stargazers_count)\t\(.license.spdx_id // "NONE")\t\(.pushed_at[0:10])\t\(.description)"'
+
+# 3. grade: clone blobless, read the GRANT, read the HEAD COMMIT DATE.  Never the licence field.
+git clone --filter=blob:none https://github.com/<ORG>/<REPO> && cd <REPO>
+git log -1 --format=%cI                       # the real freshness signal (T197)
+git ls-files | grep -iE 'licen[sc]e|copying'  # root AND sub-packages (T198)
+```
+
+| Step | 🔴 The trap `p858` paid for | 🟢 The guard |
+|---|---|---|
+| 1 | A login that LOOKS like the agency: 🔴 `intef-dev` has `6` repos and `4` MIT grants, and is one person's Excel add-ins | 🟢 Read a README for first-person singular and for the agency's own name |
+| 2 | 🔴 `pushed_at` identical across the whole org | 🟢 Compare it to `git log -1` on three repos before trusting the column |
+| 3 | 🔴 Root-only licence check | 🟢 `git ls-files` over the whole tree — `aoe`'s grant is two levels down |
+| 4 | 🔴 Logging the find into `trending.md` and calling it done | 🟢 **A find is not a finding until it is on a shelf** (`T199`) |
+
+🟢 **Named, unspent channels this instrument should be pointed at next**, in descending expected
+yield: 🇫🇮 the remaining `~162` `Opetushallitus` repositories · 🇳🇱 the `58` `SURFnet` repositories
+not yet read · 🇩🇪 `openeduhub`'s `43` unread · 🇳🇴 `digdir` (`30`) · and the agencies that are
+ABSENT from GitHub — 🇩🇰 STIL, 🇫🇷 Éducation nationale, 🇪🇸 INTEF — 🔵 **which must be looked for on
+national forges rather than declared non-existent** → `858-G4`.
+
 ## 🟢 Sixty-second pass (`p857`, 2026-11-16) — **`P87`: the ACADEMIC-RISK instrument — an early-warning build wired entirely from rows byte-read today, whose first engineering decision is where the boundary with the LMS falls**
 
 ## P87 — from an institution's existing event data to a defensible student early-warning service (EMEA anchor on AI Act high-risk conformance; same build serves NA state policy, APAC multi-jurisdiction, LATAM governance-first)

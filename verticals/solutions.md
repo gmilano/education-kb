@@ -4,6 +4,37 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-third pass (`p858`, 2026-11-16) — **`6` platform rows: the NATIONAL platform tier — systems a state already runs, already publishes and already procures around**
+
+🟢 **The count is RE-DERIVED rather than carried, by running this repository's own gate.**
+`python3 -I ingest/derive-counts.py .` reports this page **GREEN at `155`**, and the `6` rows below
+are **declared NOT-counted in that total** — deliberately, because each is a platform FAMILY whose
+cell names three to five addresses, and those addresses are shelved individually on
+[`repos/foundations.md`](../repos/foundations.md). 🔵 **Counting them here would double-count them
+there.** 🟢 The signature is declared in the gate rather than left to its uncounted-table detector,
+which is `p811`'s rule → `858-G5`.
+
+🔵 **Why this tier belongs on THIS shelf and not on `repos/foundations.md`.** The fourteen-pass nil
+on *"a permissively-licensed open-source LMS/SIS"* has been asking a question with no answer. 🟢
+**These rows answer a better one: *which education platforms does a European state already operate
+in the open, and on what terms?*** 🔵 A platform you can read, extend and bid against is worth more
+than a platform you can fork and nobody uses.
+
+| Platform | Operator · country | 🔬 Licence, byte-read `2026-11-16` | Verdict for a studio |
+|---|---|---|---|
+| **Opintopolku** — the national study-path service ([`koski`](https://github.com/Opetushallitus/koski), [`ataru`](https://github.com/Opetushallitus/ataru), [`kouta-backend`](https://github.com/Opetushallitus/kouta-backend), [`valintalaskenta`](https://github.com/Opetushallitus/valintalaskenta), [`oppijanumerorekisteri`](https://github.com/Opetushallitus/oppijanumerorekisteri)) | 🇫🇮 Opetushallitus (EDUFI) | 🟡 **EUPL-1.1/1.2 throughout** — `654 B` `9f68b0df35be` · `296 B` `db5b61c3f444` · `632 B` `7c5df5c3eacb` | 🟢 **The most complete public education platform on any shelf in this base: registry, admissions intake, programme catalogue, selection calculation and the learner identifier, all live and all readable.** `110` repositories pushed since `2025-06`; `koski` `23★`/`12` forks. 🔴 **EUPL is reciprocal and its trigger includes network availability — so this is a CO-BUILD platform, never a closed fork.** 🔵 The right commercial shape here is integration and contribution, priced as such |
+| **JOD** — continuous learning and career guidance ([`jod-yksilo-ui`](https://github.com/Opetushallitus/jod-yksilo-ui), [`jod-ohjaaja-ui`](https://github.com/Opetushallitus/jod-ohjaaja-ui), [`jod-urataidot-ui`](https://github.com/Opetushallitus/jod-urataidot-ui), [`jod-design-system`](https://github.com/Opetushallitus/jod-design-system)) | 🇫🇮 **four bodies jointly**: Ministry of Education and Culture · Ministry of Economic Affairs and Employment · EDUFI · KEHA | 🟡 **EUPL-1.2 or later** — `451 B`, `sha256₁₂ 06b723e33492` | 🟢 **New to this base and the most commercially legible thing in it.** 🔵 **The copyright line is the intelligence: a labour ministry and an education ministry are co-funding one service, split into a LEARNER surface, a COUNSELLOR surface and a CAREER-SKILLS surface.** 🟢 That is the workforce/microcredential thesis the `2026` market pages assert, with running code and four named public buyers under it |
+| **SURFeduhub / OOAPI** ([`eduhub-gateway`](https://github.com/SURFnet/eduhub-gateway), [`eduhub-validator-service`](https://github.com/SURFnet/eduhub-validator-service), [`eduhub-rio-mapper`](https://github.com/SURFnet/eduhub-rio-mapper), [`ooapi-demo-data-server`](https://github.com/SURFnet/ooapi-demo-data-server)) | 🇳🇱 SURF | 🔴 **Mixed and it must be read per repository**: gateway **GPL-3.0** (`34,916 B`, `33bc26d4498c`), rio-mapper **AGPL-3.0**, validator **no grant**, demo-data-server **no grant** | 🟡 **The Dutch higher-education data exchange, built on the Open Education API.** 🔵 **The protocol is the asset; the implementations are copyleft.** 🔴 **`eduhub-rio-mapper` is AGPL AND a network service — §13 is live, so hosting a modified copy for a client triggers it.** 🟢 **Implement OOAPI cleanly instead and validate against [`SURFnet/apie`](https://github.com/SURFnet/apie) (EPL-2.0 WITH Classpath-exception-2.0), which is the one permissive instrument in the family** |
+| **PEA — Platform Educatieve Applicaties** ([`SURFnet/pea-poc`](https://github.com/SURFnet/pea-poc)) | 🇳🇱 SURF | 🟢 **BSD-3-Clause** — `1,512 B`, `sha256₁₂ 8d581f677474`, `© 2022 SURF` | 🟢 **The buyer-side catalogue: how Dutch institutions discover, procure and provision learning applications.** 🔵 **Read it as the DOOR rather than the product — an AI tool sold into the Netherlands enters through a list like this one, and the list's data model is published.** Pilot-phase; PHP 8 / Node 20 / MySQL / S3 |
+| **Udir's Moodle estate** ([`udir-moodle`](https://github.com/udir-moodle), `55` repositories) | 🇳🇴 Utdanningsdirektoratet | 🔴 **GPL-3.0 / AGPL-3.0 throughout — inherited, not chosen**: anything inside Moodle is GPL | 🟢 **A national directorate's ACTUAL plugin list, in the open — `mod_customcert`, `theme_boost_union`, `block_completion_progress`, `format_tiles`, `filter_wiris`, the PoodLL speech family (`mod_readaloud`, `mod_solo`, `mod_wordcards`), `local_staticpage`, `mod_learningmap`.** 🔵 **This is competitive intelligence a vendor pays for: it names exactly which commercial plugins a Nordic ministry has standardised on, and therefore which integration surfaces a bid must support.** 🔴 **No permissive AI layer can live INSIDE this estate — it must sit beside it over an API** |
+| **DNP provtjänst** — digital national tests ([`dnp-ss12000-reference-api`](https://github.com/skolverket/dnp-ss12000-reference-api), [`dnp-usermanagement`](https://github.com/skolverket/dnp-usermanagement), [`dnp-provplattform`](https://github.com/skolverket/dnp-provplattform), [`dnp-access-management`](https://github.com/skolverket/dnp-access-management)) | 🇸🇪 Skolverket | 🟡 **`1` of `4` granted: reference API Apache-2.0** (`11,340 B`, `ac2e2b321b48`). 🔴 **`dnp-usermanagement`, `dnp-provplattform` and `dnp-access-management` carry NO licence file of any kind** | 🟡 **Sweden's national examinations, digitised, with the provisioning interface published against `SS 12000`.** 🟢 **The specification material is open to read and that is most of its value**; 🔴 **but its terms of reuse are unstated, so a deliverable may cite it and must not vendor it.** 🔴 The reference API's own README forbids production use and terminates no TLS → an executable spec, not a deployable |
+
+🔵 **The thread through all six, and it is the answer the LMS/SIS nil has been circling for fourteen
+passes:** 🟢 **the permissive, adoptable, fork-and-ship education platform does not exist — but the
+*state-operated, readable, procurable* one does, in at least four European countries.** 🔴 **The
+engagement shape it implies is integration and contribution, not replacement**, and the licence
+tells you which of the two the ministry will accept before the first meeting.
+
 ## 🟢 Sixty-second pass (`p857`, 2026-11-16) — **the STUDENT INFORMATION SYSTEM tier, byte-read: the one the blogs call MIT is MIT, and the two biggest are not licensed at all**
 
 🔵 **Why this tier and why now.** The academic-risk agents filed today

@@ -1,0 +1,24 @@
+# p858 2026-11-16 — T193 boundary test: when does a licence-hash collision mean a shared HOLDER?
+# T193 was built on MIT payloads. MIT and BSD embed the holder name; Apache-2.0 and GPL do not.
+payload_class	address	bytes	sha256_12	holder_in_payload	collides_with
+Apache-2.0 (appendix unfilled)	openeduhub/tutor-chatbot	11357	c71d239df917	NONE - template	6 others
+Apache-2.0 (appendix unfilled)	openeduhub/lernpfadeditor	11357	c71d239df917	NONE - template	6 others
+Apache-2.0 (appendix unfilled)	openeduhub/llm-judge	11357	c71d239df917	NONE - template	6 others
+Apache-2.0 (appendix unfilled)	openeduhub/ki-prompt-benchmark	11357	c71d239df917	NONE - template	6 others
+Apache-2.0 (appendix unfilled)	openeduhub/duplicate-detection	11357	c71d239df917	NONE - template	6 others
+Apache-2.0 (appendix unfilled)	openeduhub/wlo-quellenliste	11357	c71d239df917	NONE - template	6 others
+Apache-2.0 (appendix unfilled)	SURFnet/sds	11357	c71d239df917	NONE - template	6 others - AND A DIFFERENT ORGANISATION, DIFFERENT COUNTRY
+MIT	kennisnet/php-qti3	1066	27fb6d463569	Copyright (c) 2026 Kennisnet	none
+MIT	kennisnet/phpEdutermClient	1066	de48ba028771	Copyright (c) 2018 Kennisnet	none
+MIT	kennisnet/pylom	1066	cb979719e9ca	Copyright (c) 2017 Kennisnet	none
+MIT	kennisnet/phpECKCS	1066	4bf4fd11bcd9	Copyright (c) 2019 Kennisnet	none
+MIT	kennisnet/phpNLLOM	1087	45180ed97b3e	Copyright (c) 2017 Stichting Kennisnet	none
+MIT	kennisnet/phpEdurepSearch	1086	a732a2ae1c48	Copyright (c) 2015 Stichting Kennisnet	none
+MIT	Utdanningsdirektoratet/designsystem	1079	9e2e5857e0ef	Copyright (c) 2025 Utdanningsdirektoratet	none
+MIT	Utdanningsdirektoratet/designsystem LICENSES/LICENSE-Aksel	1142	aaa99b9714b7	Copyright 2025 Nav (Arbeids- og velferdsdirektoratet)	none
+MIT	Utdanningsdirektoratet/designsystem LICENSES/LICENSE-Designsystemet	1076	84243b0c3857	Copyright 2024 Digitaliseringsdirektoratet (Digdir)	none
+# READ THIS WAY:
+# 4 MIT payloads of ONE holder are byte-size-IDENTICAL at 1,066 B and hash DIFFERENTLY - the 4-digit year is the only difference.
+# 7 Apache payloads across TWO organisations in TWO countries hash IDENTICALLY - because the appendix names nobody.
+# So: a hash collision on a holder-bearing licence (MIT, BSD) is evidence about the holder.
+#     A hash collision on a holder-agnostic licence (Apache-2.0, GPL) is evidence about the TEMPLATE and nothing else.

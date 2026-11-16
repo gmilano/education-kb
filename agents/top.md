@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-third pass (`p858`, 2026-11-16) — **`5` agent rows (`451` → `456`): Germany has a state-funded, Apache-2.0 education agent FLEET, and this base had `0` rows of it after sixty-two passes**
+
+🔴 **The line this pass retires.** Every regional summary since `p798` has said the same thing about
+EMEA: *"still ONE European-origin open-source education agent at scale"*
+([`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) 🇫🇷, ★`102`). 🟢 **That line was true of
+the channel this base was searching and false of the field.** The agents were not on GitHub search's
+ranked results because they carry no stars; they are inside a **state agency's organisation**, and
+an org listing is not a ranked search.
+
+| | |
+|---|---|
+| 🟢 **What the tier is** | The AI layer that a publicly-funded national open-educational-resources service builds for itself: a tutor, a lesson-path generator, a content-quality judge, a prompt-regression harness, a de-duplicator |
+| 🟢 **Who operates it** | 🇩🇪 `openeduhub` — **WirLernenOnline**, the German federal OER portal, on the **edu-sharing** repository platform. `56` repositories, enumerated in full this pass |
+| 🟢 **Why it matters commercially** | 🔵 These are not demos. They are the working parts of a **production public service**, published under **Apache-2.0** — so a studio may fork, close and ship them. 🔴 And they are **unmaintained in the open**: see Finding 2 |
+
+### 🟢 Finding 1 — `5` rows, every grant byte-read `2026-11-16`, `0` taken from GitHub's licence field
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| WLO QA Tutor Chatbot | [`openeduhub/tutor-chatbot`](https://github.com/openeduhub/tutor-chatbot) | 🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917`, HEAD `7e1f38da` | `0` | EMEA | 🟢 **The row that breaks the "one European agent" line.** A hybrid learner-companion: a curated **QA dataset searched semantically takes PRECEDENCE over the model**, and only then does generation run. 🔵 **That ordering is the pedagogy-in-control architecture every regulator in this base demands, implemented rather than promised.** 🟢 **It targets `GWDG` LLM endpoints as well as `gpt-4o-mini`** — the German academic compute centre — so the sovereign-inference path is already wired. Pulls live material from the WLO API and cites it with links. 🔴 Default branch last committed `2025-08-27` (see Finding 2) |
+| WLO Lernpfadeditor | [`openeduhub/lernpfadeditor`](https://github.com/openeduhub/lernpfadeditor) | 🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917`, HEAD `1ccbb1d8` | `0` | EMEA | 🟢 **The most distinctive row in this pass and the one with no English-language equivalent on these shelves.** It generates a differentiated learning path from a natural-language description and performs **Binnendifferenzierung** — automatic detection of sub-groups with particular needs from the teacher's own prose, then a path per sub-group. 🔵 **Differentiation is the single most-cited unmet teacher need in this base's EMEA evidence, and this is the only artefact that addresses it directly.** Whisper dictation; up to `20` parallel model calls. Committed `2026-01-18` |
+| WLO KI-Prompt-Benchmark | [`openeduhub/ki-prompt-benchmark`](https://github.com/openeduhub/ki-prompt-benchmark) | 🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917`, HEAD `da062c4b` | `0` | EMEA | 🟢 **A prompt-REGRESSION harness for a live public service, which is the thing `p811` declared missing and named as a gap: no dominant OSS agent-evaluation tool.** Holds prompt set A (shipped) against set B (candidate) over the same material, across models, with a **separate constant judge model** and five scored criteria, then emits an improved prompt per field. 🟢 **Provider list includes `AcademicCloud (KISSKI)`** — Germany's federally-funded AI service for science — 🔵 so the sovereignty question is answered at the configuration layer, not by a rewrite. Committed `2026-05-29`, the most recent in the fleet |
+| WLO LLM-Judge | [`openeduhub/llm-judge`](https://github.com/openeduhub/llm-judge) | 🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917`, HEAD `8cb0a04c` | `0` | EMEA | 🟢 **Scores educational content for FACTUAL CORRECTNESS (`Sachrichtigkeit`) and returns a report with remediation, not a number.** Python/Streamlit, batch or single, CSV/JSON export. 🔵 **This is the acceptance gate a studio needs when an agent writes material a ministry will publish** — and it is the smaller, separable half of the benchmark row above. 🔴 OpenAI-only in this version. Committed `2025-02-25` |
+| WLO Duplicate Detection | [`openeduhub/duplicate-detection`](https://github.com/openeduhub/duplicate-detection) | 🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917`, HEAD `7c437d38` | `0` · `1` fork | EMEA | 🟢 **MinHash near-duplicate detection over a national OER catalogue, as a rate-limited FastAPI service.** URL and title normalisation (publisher-suffix stripping), exact-URL short-circuit, automatic pagination past `100` candidates, and **metadata enrichment from the matched twin**. 🔵 **Every OER aggregation engagement hits this problem in week two**; this is the only implementation on these shelves that treats it as a service with a contract. Committed `2026-02-25` |
+
+### 🔴 Finding 2 — `pushed_at` said `2026-11-03` for all of them. Not one of them has a commit anywhere near it
+
+🔴 **`51` of `openeduhub`'s `56` repositories report the same `pushed_at`: `2026-11-03`.** 🟢 **`13`
+were cloned and read. `12` of the `13` have no commit within five months of that date on their
+default branch, and the two checked across ALL remote refs have none on any branch either.**
+🔴 **[`openeduhub/metalookup`](https://github.com/openeduhub/metalookup) claims `2026-11-03` and its
+newest commit on any of `12` refs is `2023-02-16` — `47` months.** 🔴 `tutor-chatbot` has `0` tags,
+`2` refs, and a newest commit of `2025-08-27`: **`14` months before the push it reports.**
+
+🟢 **The control is what makes this a finding rather than a suspicion.** The same channel, the same
+hour, a different agency: 🟢 **`12` Finnish repositories, `12` of `12` within FIVE DAYS of their
+reported `pushed_at`.** 🔵 So `pushed_at` is not broken — it is **an org-level event timestamp**, and
+at `openeduhub` an administrative action moved all `51` at once.
+
+🔴 **Consequence for this base, which writes a `pushed` value on every row it files: that column is
+not a maintenance signal.** 🟢 **The maintenance signal is the HEAD commit date on the default ref,
+which the clone channel already produces for free.** → `T197`, `858-G1`,
+[`pushed-at-divergence`](../evidence/pushed-at-divergence.2026-11-16-p858.tsv)
+
+### 🟡 Finding 3 — `3` rows of this fleet were examined and NOT filed, and the reason is the same for all three
+
+| Not filed | Why |
+|---|---|
+| [`openeduhub/metadata-agent-canvas`](https://github.com/openeduhub/metadata-agent-canvas) | 🔴 **No licence file at any path.** AI metadata extraction from text — capable, and ungranted |
+| [`openeduhub/its-jointprobability`](https://github.com/openeduhub/its-jointprobability) | 🔴 **No licence file.** A Bayesian approach to education metadata prediction — the most academically interesting artefact in the org and the least usable |
+| [`openeduhub/its-qna`](https://github.com/openeduhub/its-qna) | 🔴 **No licence file.** LLM question-answer pair generation from a text |
+
+🔵 **The shape is worth naming: inside ONE organisation, the user-facing apps carry Apache-2.0 and
+the research components carry nothing.** 🟢 A studio that wants the Bayesian metadata work has a
+named counterparty and a one-email ask, which is a far better position than a search would ever
+produce → `858-G2`.
+
 ## 🟢 Sixty-second pass (`p857`, 2026-11-16) — **`9` agent rows (`442` → `451`): the ACADEMIC-RISK tier, absent for sixty-one passes, filed — and the whole tier trains on ONE dataset of `32,593` UK distance-learning adults from `2013–2014`**
 
 🔵 **How the gap was found, because the method matters more than the rows.** This base holds `442`
@@ -3877,7 +3934,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 442 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 456 rows
 
 ### Filed by `p853` (2026-11-16) — `12` rows: the SPOKEN-LANGUAGE ASSESSMENT tier, every grant byte-read today, `0` copyleft, and every row's CORPUS dependency stated beside its licence
 

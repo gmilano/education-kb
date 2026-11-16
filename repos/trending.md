@@ -4,6 +4,34 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — `p858`: `305` repositories enumerated from seven state education bodies, and the movement is that this base had shelved NONE of them
+
+🔴 **The defect first, because it is this base's own and it is larger than the window.**
+🔴 **`Opetushallitus` appears `61` times in [`agents/trending.md`](../agents/trending.md), `82`
+times in this file and `27` times in [`open-gaps.md`](../intel/open-gaps.md) — and `0` times on any
+shelf.** 🔴 **`Gap 251` claims `8` were shelved. None were.** 🟢 **`p858` shelves `20` foundation
+rows and `6` platform rows** → `T199`.
+
+| Org | Repos | Licence regime, byte-read | Movement this window |
+|---|---|---|---|
+| 🇫🇮 [`Opetushallitus`](https://github.com/Opetushallitus) | `182` (`110` since `2025-06`) | 🟡 **EUPL-1.1 / 1.2, uniformly, `2013`→`2026`** | 🟢 **Genuinely live — `koski`, `ludos`, `valtionavustus`, `kouta-backend` and `jod-*` all committed on `2026-11-16`.** 🆕 **`JOD`** appears: a continuous-learning service whose copyright is held jointly by **four** Finnish bodies incl. two ministries |
+| 🇳🇱 [`SURFnet`](https://github.com/SURFnet) | `97` (`39` since `2024`) | 🔴 **GPL-3.0 · AGPL-3.0 · EPL-2.0 · BSD-3 · Apache-2.0 in ONE org** | 🟢 **`eduhub-*` (OOAPI) active this month**; 🆕 **`eduGenAI` exists and is EMPTY — `0` commits**, which is a plan rather than a product |
+| 🇩🇪 [`openeduhub`](https://github.com/openeduhub) | `56` | 🟢 **Apache-2.0 apps · GPL-3.0 edges · CC0-1.0 vocabularies** | 🔴 **`51` report `pushed_at 2026-11-03` and the commits are up to `47` months older** → `T197`. 🟢 The one genuinely fresh row is `edu-sharing-python-client` (`2026-11-02`) |
+| 🇳🇴 [`udir-moodle`](https://github.com/udir-moodle) | `55` | 🔴 **GPL/AGPL inherited throughout** | 🟢 **A national directorate's actual plugin list, in the open** — `mod_customcert`, `theme_boost_union`, `format_tiles`, `filter_wiris`, the PoodLL speech family. 🔵 Competitive intelligence, not a build channel |
+| 🇳🇱 [`kennisnet`](https://github.com/kennisnet) | `25` | 🟢 **`11` MIT** | 🆕 **`php-qti3` committed `2026-11-10`** — the PHP half of QTI 3.0, state-maintained and permissive. 🔵 `Gap 240` holds the TypeScript half |
+| 🇳🇴 [`Utdanningsdirektoratet`](https://github.com/Utdanningsdirektoratet) | `19` | 🟢 **MIT · Apache-2.0** | 🟢 **`designsystem` committed `2026-11-16`** and carries **three** MIT grants — its own, Nav's and Digdir's → a state-to-state reuse chain |
+| 🇸🇪 [`skolverket`](https://github.com/skolverket) | `5` | 🔴 **`1` of `5` granted** | 🆕 **`SS 12000`** enters this base — a third national rostering standard beside OneRoster and Ed-Fi, with Skolverket's own Apache-2.0 reference implementation |
+| 🇪🇪 [`hitsa`](https://github.com/hitsa) | `3` | 🔴 GPL-3.0 or nothing | 🔴 **No movement since `2020-08`.** `HARNO` itself resolves to a personal account |
+
+🟢 **Verification: `41` addresses cloned on the blobless channel, `0` failures, `1` invented address
+as the negative control (`CLONE-FAIL`).** 🟢 **`0` of the `305` enumerated repositories is a GitHub
+fork** — first-party state publications, not mirrors.
+[`repo-verification`](../evidence/repo-verification.2026-11-16-p858.tsv) ·
+[`agency-org-enumeration`](../evidence/agency-org-enumeration.2026-11-16-p858.tsv)
+
+🔴 **Three of `Gap 251`'s six named agencies are ABSENT from GitHub under nine probed spellings**
+— 🇩🇰 STIL, 🇫🇷 Éducation nationale, 🇪🇸 INTEF. 🔵 **A forge gap, not an absence** → `858-G4`.
+
 ## 🟢 `2026-11-16` — `p857` — **the learning-analytics plumbing, and a licence rule that runs the opposite way to the models above it**
 
 🟢 **Filed to [`repos/foundations.md`](foundations.md) today, every grant byte-read:**

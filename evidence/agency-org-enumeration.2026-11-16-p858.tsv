@@ -1,0 +1,27 @@
+# p858 2026-11-16 — Gap 251 discharge: national education agency GitHub org enumeration
+# channel: gh api -X GET search/repositories -f q='user:<ORG>'   (per-repo repos/{o}/{r} is REFUSED in this session)
+# ABSENT = HTTP 422 "listed users and repositories cannot be searched"
+# NOTE on the figure `305`: that is the number of repository records READ into the metadata sweep,
+# not the sum of the org totals.  `search/repositories` returns at most 100 rows per page and this
+# pass did not paginate: Opetushallitus contributed its first 100 of 182.  Composition:
+# Opetushallitus 100 (of 182) + SURFnet 97 + openeduhub 56 + kennisnet 25 + Utdanningsdirektoratet 19
+# + skolverket 5 + hitsa 3 = 305.  udir-moodle (55) was enumerated separately and is NOT in the 305.
+# `fork=true` count across those 305 records: 0.
+country	agency	probed_login	result	repo_count	named_by_Gap251	note
+Finland	Opetushallitus (EDUFI)	Opetushallitus	PRESENT	182	yes (prior pass)	110 pushed since 2025-06-01; genuinely live
+Netherlands	Kennisnet	kennisnet	PRESENT	25	yes	11 MIT, 3 GPL, 11 ungranted
+Netherlands	SURF	SURFnet	PRESENT	97	yes	39 pushed since 2024-01-01; mixed licence regime
+Norway	Utdanningsdirektoratet (Udir)	Utdanningsdirektoratet	PRESENT	19	yes	MIT + Apache-2.0 core
+Norway	Udir Moodle estate	udir-moodle	PRESENT	55	no	plugin estate, GPL inheritance throughout
+Sweden	Skolverket	skolverket	PRESENT	5	no	4 of 5 carry NO grant; the programme is DNP
+Germany	OpenEduHub / WirLernenOnline	openeduhub	PRESENT	56	no	Apache-2.0 agent fleet; see pushed-at-divergence
+Estonia	HITSA (HARNO predecessor)	hitsa	PRESENT	3	yes (as HARNO)	stale since 2020-08; 1 GPL-3.0, 2 ungranted
+Estonia	HARNO	harno / HARNO	ABSENT-AS-AGENCY	1	yes	`Harno` is a personal account, not the agency
+Estonia	e-Koolikott	ekoolikott / eKoolikott	ABSENT	0	no	-
+Denmark	STIL	stil-dk / stildk / Danmarks-STIL / uddannelsesstyrelsen	ABSENT	0	yes	4 spellings probed, all 422
+France	Education nationale	Ministere-Education-Nationale / education-nationale / DNE-MENJ / edtech-gouv / apps-education	ABSENT	0	yes	5 spellings probed, all 422
+Spain	INTEF	intef	ABSENT	0	yes	login exists as a User but is unsearchable (0 public repos)
+Spain	INTEF (lookalike)	intef-dev	PRESENT-BUT-NOT-THE-AGENCY	6	no	Excel Script Lab add-ins; README speaks in the first person singular and cites the author's own YouTube channel
+Germany	Kultusministerkonferenz	Kultusministerkonferenz	ABSENT	0	no	-
+Germany	Dataport (public-sector IT)	Dataport	PRESENT	14	no	not education-specific; not read
+Norway	Digdir (cited by Udir's grant)	digdir	PRESENT	30	no	source of one of designsystem's three MIT grants

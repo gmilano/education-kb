@@ -151,6 +151,11 @@ SHELVES = [
         # names are named precisely because they are NOT shelf rows (one dead, one
         # proprietary).  Declared rather than left silent -- p811's rule.
         "| Verdict | Count | What it means |",
+        # 🟢 p858: the EXAMINED-AND-NOT-FILED table.  Declared NOT-counted: its rows
+        # are refusals carrying the address that was refused, and a refusal is not a holding
+        # (same reasoning as p854's DECLINES signature above).  Declared rather than left to
+        # the uncounted-table detector, which is p811's rule.
+        "| Not filed | Why |",
     ]),
     ("repos/foundations.md", [
         "| Repo | License | Stars | Notes |",
@@ -160,6 +165,16 @@ SHELVES = [
         # shape the agent shelf already uses (grant evidence, traction, resolved ref,
         # region, posture), carried onto the foundations shelf for the speech layer.
         "| Repo | Licence, as measured | \u2605 / forks | Default ref \u00b7 pushed | Region | "
+        "Why it is a foundation and not a row on another shelf |",
+        # 🟢 p858 declared this signature rather than adding a layer table silently --
+        # the p811/p853 path.  It is the SAME six-column shape with one column renamed:
+        # `Default ref \u00b7 pushed` becomes `Default ref \u00b7 HEAD commit`, because T197
+        # measured GitHub's `pushed_at` as an ORGANISATION event (51 of 56 repositories at one
+        # agency reporting one date, with commits up to 47 months older, on no branch).  The
+        # column now carries `git log -1 --format=%cI` on the default ref, which the blobless
+        # clone returns for free.  Both signatures are counted: the older rows are not
+        # re-dated by this pass and must not be silently reinterpreted.
+        "| Repo | Licence, as measured | \u2605 / forks | Default ref \u00b7 HEAD commit | Region | "
         "Why it is a foundation and not a row on another shelf |",
     ], []),
     ("verticals/solutions.md", [
@@ -177,7 +192,15 @@ SHELVES = [
         # against the bytes.  Not counted: it grades CLAIMS, and its rows are already
         # shelved (or refused) in the counted table beneath it.
         "| Platform | Repo | The source's claim | \U0001f52c **The bytes, `2026-11-16`** | Verdict |",
-    ], []),
+    ], [
+        # 🟢 p858: the NATIONAL PLATFORM tier.  Declared NOT-counted, deliberately and
+        # for a structural reason rather than convenience: each row is a platform FAMILY whose
+        # cell names three to five addresses (Opintopolku names five), so its rows are not
+        # one-address holdings and summing them into a row count would double-count against
+        # repos/foundations.md, where those same addresses are shelved individually.
+        "| Platform | Operator \u00b7 country | \U0001f52c Licence, byte-read `2026-11-16` | "
+        "Verdict for a studio |",
+    ]),
 ]
 
 

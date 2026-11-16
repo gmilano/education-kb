@@ -4,6 +4,179 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` (sixty-third pass, `p858`) — **`6` gaps — `5` live and `858-G5` DISCHARGED in the same pass that declared it — plus `857-G6` DISCHARGED by measurement and `Gap 251` PARTIALLY CLOSED with one of its own claims refuted**
+
+### 🟢 `857-G6` — DISCHARGED. The LATAM-origin absence is now measured, not assumed
+
+🔴 **`p857` declared: *"no ES/PT leg was run, so the `0` LATAM-origin rows are an unmeasured
+absence, not a measured one."*** 🟢 **`p858` ran six first-party Spanish and Portuguese supply legs
+on `gh api search/repositories`.**
+
+| Measured | |
+|---|---|
+| addresses returned | `29` (`27` distinct) |
+| 🔴 **highest star count across all `27`** | 🔴 **`1`** |
+| permissively licensed | 🟡 `4` MIT |
+| 🔴 **traceable to a NAMED course assignment** | 🔴 **`7` of `27`** — Alura *Challenge ONE / Challenge Escuela IA* (🇧🇷) and UNAH `MGI-201` (🇭🇳), the latter from three separate groups |
+
+🟢 **The absence is real at this altitude and the reason is now known: the channel indexes
+coursework in Spanish and Portuguese exactly as `T185` predicted for English workflow nouns.**
+🔴 **`0` of the `27` is published as a LATAM row** — `es` ≠ LATAM (`T935`), and `gh api
+users/{login}` is refused here, so origin is not resolvable at scale.
+[`latam-language-legs`](../evidence/latam-language-legs.2026-11-16-p858.tsv)
+
+### 🟡 `Gap 251` — PARTIALLY CLOSED, and one of its own claims is REFUTED
+
+🔴 **Gap 251 says of `Opetushallitus`: *"this base has read `15` and shelved `8`."* The second
+clause is false.** 🟢 **`0` rows of that agency were on any shelf before this pass. `20` addresses
+had been LOGGED to the two append-only trending files.** → `T199`, and `858-G3` generalises it.
+
+🟢 **What `p858` closed**: all six named agencies probed; three more found that the gap never named;
+`305` repositories enumerated; `26` rows shelved.
+
+| Gap 251's six | Result |
+|---|---|
+| 🇪🇪 Estonia (HARNO) | 🟡 `hitsa` (`3` repos, stale since `2020`). 🔴 `HARNO` is a personal account |
+| 🇳🇱 Netherlands (SURF / Kennisnet) | 🟢 **`97` + `25`** |
+| 🇫🇷 France (Éducation nationale) | 🔴 **ABSENT — five spellings, five `422`s** |
+| 🇳🇴 Norway (Udir) | 🟢 **`19` + a `55`-repo Moodle estate** |
+| 🇩🇰 Denmark (STIL) | 🔴 **ABSENT — four spellings, four `422`s** |
+| 🇪🇸 Spain (INTEF) | 🔴 **ABSENT, and a lookalike trap** → `858-G4` |
+| 🆕 not named by the gap | 🟢 🇸🇪 `skolverket` · 🟢 🇩🇪 `openeduhub` · 🟢 🇳🇴 `digdir` |
+
+🔴 **Residual, carried forward as `858-G4` and `858-G6`**: three European agencies unreachable on
+GitHub, and `0` agencies probed in North America, APAC or LATAM.
+
+### 🔴 `858-G1` — this base writes `pushed_at` on every row, and `pushed_at` is an organisation event
+
+🔴 **Declared with its remedy and its cost.** 🟢 **Measured, not suspected: `51` of `56`
+`openeduhub` repositories report `pushed_at 2026-11-03`; `13` were cloned; `12` have no default-ref
+commit within five months of it; `2` were re-checked across ALL remote refs and have none on any
+branch; `metalookup` is `47` months out.** 🟢 **Control at a second agency, same channel, same hour:
+`12` of `12` Finnish repositories within FIVE DAYS.**
+
+🔵 **Remedy, named and already proven**: publish `git log -1 --format=%cI` on the default ref, which
+the blobless clone returns for free, and demote `pushed_at` to a discovery hint. 🟢 **`p858`'s own
+`20` foundation rows are the first on these shelves to do it.** 🔴 **Cost: one pass to re-date the
+existing `451`+ agent rows and `274`+ foundation rows, and it is a SWEEP rather than research.**
+🔴 **Why it was not done here**: re-dating ~`725` rows is a second pass's work, and bundling it with
+the finding would have left neither verifiable.
+[`pushed-at-divergence`](../evidence/pushed-at-divergence.2026-11-16-p858.tsv)
+
+### 🟡 `858-G2` — inside ONE organisation the apps are granted and the research is not, and the counterparty is named
+
+🔴 **Three `openeduhub` components were examined and could not be filed**:
+[`metadata-agent-canvas`](https://github.com/openeduhub/metadata-agent-canvas) (AI metadata
+extraction), [`its-jointprobability`](https://github.com/openeduhub/its-jointprobability) (a
+Bayesian approach to education metadata prediction) and
+[`its-qna`](https://github.com/openeduhub/its-qna) (LLM question-answer generation). 🔴 **No licence
+file at any path in any of the three.**
+
+🔵 **Why this is a gap and not a rejection**: the five sibling repositories filed today carry
+Apache-2.0 from the same publisher, so this is almost certainly an omission rather than a position.
+🟢 **Remedy and cost: one issue or one email to a named public body — minutes — and the prize is
+the most academically interesting metadata work in this tier.** 🔴 **Opening it is a deliberate
+outward action and was not taken unprompted by this pass.**
+
+### 🔴 `858-G3` — nothing in this tree compares what was LOGGED against what was SHELVED
+
+🔴 **Proven, not suspected**: `Opetushallitus` → `170` occurrences across the two trending files and
+the gap ledger, `0` on three shelves, for sixty-one passes. 🔴 **`Gap 251` asserted the opposite and
+no gate caught it.**
+
+🔵 **The mechanism is structural**: trending files are append-only and shelves are prepended, so a
+pass that writes to the log has discharged one obligation and silently incurred another.
+🟢 **Remedy, named and cheap**: `grep -oE '[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+' ` over both trending
+files and over the three shelves, then the set difference, with an age filter of two passes.
+🔴 **Cost: one pass, one script, and it audits every tier this base has ever logged.**
+🟢 **Acceptance test: the instrument must report `Opetushallitus` as CLEARED after this pass and
+must still report whatever else it finds.**
+
+### 🔴 `858-G4` — three European education agencies are absent from GitHub, and that is a FORGE gap rather than an absence
+
+🔴 **Nine spellings probed, nine `422`s**: 🇩🇰 `stil-dk`·`stildk`·`Danmarks-STIL`·`uddannelsesstyrelsen`;
+🇫🇷 `Ministere-Education-Nationale`·`education-nationale`·`DNE-MENJ`·`edtech-gouv`·`apps-education`;
+🇪🇸 `intef`.
+
+🔴 **And a live hazard found while probing**: `intef-dev` EXISTS, holds `6` repositories and `4` MIT
+grants, and is **not the Spanish institute** — its READMEs speak in the first person singular about
+the author's own YouTube channel. 🔵 **A login that resembles an agency's name is a marketing string
+exactly as `-public` is (`T60`), and the guard is the same: read a README before you believe an
+attribution.**
+
+🔵 **Remedy and cost, with the channel named so no search step is needed**: France and Spain operate
+national public-code forges outside GitHub, and Denmark's STIL publishes through the agency's own
+site. 🟢 **One pass per country, and the expected finding is procurement-grade rather than
+star-ranked.** 🔴 **Until then, "these countries publish no education code" must not be written.**
+
+### 🟢 `858-G5` — DISCHARGED, and it was a worse defect than it was declared as: the shelf counts were RED and this pass ran the gate that says so
+
+🔴 **Declared mid-pass as a carried count on one file. 🟢 Running the gate turned it into a
+measured, three-file defect — and then closed it.**
+
+🟢 **`python3 -I ingest/derive-counts.py .` RAN in this session**, which the channel-discipline
+table says to test every pass and publish either way. 🔴 **It was REFUSED in `p818`–`p820`; it ran
+in `p811` and it runs here.**
+
+| Gate output | 🔴 At `HEAD` (`p857`) | 🟢 After `p858` |
+|---|---|---|
+| `agents/top.md` | 🔴 **RED — heading claims `442`, file holds `451`** | 🟢 **GREEN — `456` / `456`** |
+| `repos/foundations.md` | 🔴 **RED — heading claims `265`, file holds `274`** | 🟢 **GREEN — `294` / `294`** |
+| `verticals/solutions.md` | 🟢 GREEN `155` | 🟢 GREEN `155` |
+| `compose/patterns.md` | `87` recipes | 🟢 `89` (`P88`–`P89`) |
+| `intel/trends.md` | `187` trends | 🟢 `192` (`T196`–`T200`) |
+| uncounted tables (agents · foundations · verticals) | `22` · `11` · `15` | 🟢 **`22` · `11` · `15` — unchanged** |
+
+🔴 **So `p857` published `451` agent rows and `274` foundation rows into headings that still said
+`442` and `265`, and the roll-up headings deeper in both files were the stale ones.** 🟢 **`p858`
+re-derived both from the gate rather than by carrying, and every count this pass publishes is the
+gate's number, not its own.**
+
+🟢 **Two new table signatures were DECLARED in the gate rather than added silently** — the p811
+rule: the foundations six-column shape with `Default ref · HEAD commit` in place of
+`Default ref · pushed` (counted, because `T197`), and the national-platform family table (NOT
+counted, because each row names three to five addresses already shelved individually). 🟢 **The
+uncounted-table detector is left exactly where it was found, so this pass hid nothing from it.**
+
+🟢 **And the whole gate set was measured on both sides, on a clean `HEAD` worktree and on the
+edited tree, so this pass's effect is published rather than asserted:**
+
+| `make hooks` | 🔴 `HEAD` (`p857`) | 🟢 After `p858` |
+|---|---|---|
+| gates green | `51` / `73` | 🟢 **`52` / `73`** |
+| RED gates | `22` | 🟢 **`21`** |
+| 🟢 **fixed** | — | 🟢 **`gate-region-headings`** — `p857`'s `## Opportunities by region` block carried NA, EMEA, APAC and LATAM and **no `### Global`** |
+| 🔴 **regressions** | — | 🟢 **none** |
+
+🔵 **`gate-derived-counts` stays RED on BOTH sides and it is honest to say why**: it runs two
+instruments, and the second (`derive-foundations.py`) fails on a `p644` manifest naming a heading
+the page no longer carries. 🔴 **Pre-existing, in the Makefile's own `DECLARED_RED` set, untouched
+by this pass.**
+
+🔴 **What is NOT closed**: `compose/patterns.md` and `intel/trends.md` still AMBER — neither carries
+a `derived recipes: **N**` / `derived trends: **N**` claim for the gate to check against. 🔵 **Cost:
+one line in each header. It is the cheapest open item on this base** → carried as the residual of
+this gap.
+
+### 🔴 `858-G6` — the instrument that produced this pass's entire result was pointed at ONE region
+
+🔴 **`305` repositories, seven bodies, six countries — all EMEA.** 🔴 **`0` state education
+agencies were enumerated in North America, APAC or LATAM, so every regional statement this pass
+makes about public-buyer supply outside Europe is an UNMEASURED absence.**
+
+🟢 **Bounded and named, so the next pass has no search step** — in descending expected yield:
+
+| Region | Targets |
+|---|---|
+| **APAC** | MEXT 🇯🇵 · Korean Ministry of Education and **KERIS** 🇰🇷 · MOE Singapore / GovTech 🇸🇬 · **Education Services Australia** 🇦🇺 |
+| **LATAM** | 🟢 **Plan Ceibal 🇺🇾 first** — a long-running state education technology operator · MEC 🇧🇷 · MINEDUC 🇨🇱 · SEP 🇲🇽 |
+| **North America** | state departments of education · Canadian provincial ministries · the **Ed-Fi Alliance** |
+
+🔵 **Why it matters commercially rather than as completeness**: `p858` measured the yield of this
+channel against the yield of the prescribed English WebSearch legs — 🟢 **`305` repositories and
+`26` shelf rows against `65` links and `0`.** 🔴 **Cost: one pass per region. `P89` holds the three
+commands.**
+
 ## 🟢 `2026-11-16` (sixty-first pass, `p856`) — **`5` gaps, plus `855-G5` DISCHARGED with the fix verified against `p855`'s own figure**
 
 ### 🟢 `855-G5` — DISCHARGED. The absence-claims instrument read nothing, and now reads the base

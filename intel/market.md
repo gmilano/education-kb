@@ -4,6 +4,192 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-third pass (`p858`, 2026-11-16) — **the PUBLIC BUYER placed by region: where a state publishes its own education code, what it publishes it under, and where it publishes nothing at all**
+
+🔵 **The one regional claim this pass can make that no previous pass could.** Every prior regional
+reading here measured *demand* — adoption surveys, regulatory calendars, spend forecasts. 🟢
+**`p858` measures SUPPLY FROM THE BUYER: `305` repositories published by seven state education
+bodies in six countries, every shelved grant byte-read today.** 🔵 **A ministry that publishes its
+own code is simultaneously a reference architecture and a named prospect, and the licence it chose
+tells you which of the two conversations it will have.**
+
+🔴 **And the channel comparison is the methodological result.** The four English WebSearch legs the
+scheduler prescribes returned **`65` links and `0` usable supply rows**. 🟢 **Seven `user:`
+enumerations returned `305` repositories and `26` shelf rows.** 🔵 State code has no stars, so a
+ranked search cannot see it → `P89`.
+
+🔴 **Every market, adoption and regulatory figure below is `CITED, NOT READ` from WebSearch
+summaries and says so.** 🟢 Every licence, byte count, `sha256₁₂` and HEAD commit sha is byte-read
+`2026-11-16`.
+
+## Opportunities by region
+
+### North America
+
+🟡 **`CITED, NOT READ`.** 🟢 **The federal layer acquired a shape this pass**: the Education
+Commission of the States reports that **executive orders issued between `2025` and early `2026`
+produced a national framework for AI in education and a task force supporting K-12 AI
+instruction** — 🔵 a posture, not a binding rule, which keeps the `35+` states with their own
+departmental guidance as the real calendar.
+
+- 🟡 **Market, with its spread stated**: one house puts the **US** AI-in-education market at
+  **`$3.28B` (`2025`) → `$15.25B` (`2031`)**, names **AI tutoring and adaptive learning** as the
+  dominant segment and counts **`1,435` players**; another forecasts North America contributing
+  **`41.7%` of global growth**. 🔴 **Two houses, two definitions — quote the segment, never the
+  total.**
+- 🟡 **Adoption has moved past the pilot**: **institution-wide implementation at `66%`**.
+- 🟡 **Privacy is the second front and it is not an education regulator**: the **NTIA** has said
+  edtech adoption outpaced serious scrutiny, and a **California ballot initiative on how AI
+  companies interact with MINORS** (announced January `2026`) would bind school deployments through
+  child-safety law rather than education law.
+- 🔵 **The consolidation keeps its name**: **Chegg cut `45%` of staff (`388` roles)**. 🔴 The first
+  business AI destroyed here was answer delivery — which is what *"a chatbot that answers student
+  questions"* asks to become.
+
+🔴 **The informed gap, stated rather than left silent — and it is a NEW one this pass.** 🟢 **`0`
+North American state or provincial education agencies were probed on the channel that produced this
+pass's entire EMEA result.** 🔵 Departments of education, Canadian provincial ministries and bodies
+like the **Ed-Fi Alliance** publish code; none was enumerated here. 🔴 **So "North America has no
+public-buyer supply" is NOT a finding of this pass — it is an unrun leg** → `858-G6`. 🔴 **And the
+Canada/Mexico spend figure is unanswered for a SIXTH pass**, because the prescribed query says
+*"North America"* and returns US-only results.
+
+### EMEA
+
+🟢 **This is the region `p858` changes, and the change is a retirement.** 🔴 **Every regional
+summary since `p798` has carried the line *"still ONE European-origin open-source education agent at
+scale"*. That line is withdrawn.** 🟢 **It was true of GitHub's ranked search and false of the
+field**: the agents are inside state organisations and carry `0` stars.
+
+| What is now shelved, by country | |
+|---|---|
+| 🇩🇪 **Germany** | **`5` Apache-2.0 agents** from `openeduhub`/WirLernenOnline — tutor, differentiated-path editor, content judge, prompt-regression harness, de-duplicator — 🟢 **with `GWDG` and `AcademicCloud (KISSKI)` already configured as providers**, so sovereign inference is a setting |
+| 🇫🇮 **Finland** | **`182` repositories, `110` pushed since `2025-06`.** Opintopolku (registry, admissions, catalogue, selection), `varda` (early childhood), `eperusteet` (machine-readable national curriculum), `aoe.fi` (national OER), **`JOD`** (continuous learning). 🟡 **EUPL throughout** |
+| 🇳🇱 **Netherlands** | Kennisnet's **`11` MIT** metadata and assessment libraries incl. **QTI 3.0 in PHP**; SURF's OOAPI exchange and the **PEA** procurement catalogue (BSD-3) |
+| 🇳🇴 **Norway** | **MIT/Apache-2.0 throughout**, a **`55`-plugin national Moodle estate**, and a **state-to-state MIT reuse chain** Digdir → Nav → Udir |
+| 🇸🇪 **Sweden** | `SS 12000`, a third national rostering standard, with Skolverket's own Apache-2.0 reference implementation |
+
+🟡 **`CITED, NOT READ`, and the regulatory split is unchanged and now four-source corroborated**:
+**political agreement on the Digital Omnibus reached `2026-05-07`**; **Annex III high-risk —
+education — applies from `2 December 2027`**, deferred from the original August `2026`;
+**Article `50` transparency live since `2026-08-02` and NOT deferred**; **Article `6` high-risk
+draft guidelines consulted to `2026-06-23`**. 🔵 **The expensive work has `13` months of
+slack and the cheap work is already late.**
+
+- 🟡 **The same Council, eleven days after the Omnibus deal, approved conclusions on *teachers in
+  the era of AI* (`2026-05-11`)** — 🔵 **Brussels deferring the obligations and urging the adoption
+  in the same fortnight is the compliance grey zone teachers are describing.**
+- 🟡 **Two instruments to cite in a bid**: **Eurydice, *Digital education at school in Europe
+  2026***, and the **OECD `2026` Digital Education Outlook** — pedagogy in control.
+- 🟡 **Adoption**: **`67%` of teachers now using AI tools** (Futuresource), with the shift from
+  pilots to structured implementation. 🔴 **And the counterweight, commissioned research across the
+  UK, France, Italy, Germany, Spain and Poland: `80%` of teachers worry AI is entering the classroom
+  faster than schools can manage.** 🔵 Still the best line in this base: **`63%` of European
+  teachers use AI and `16%` believe general-purpose AI improves outcomes.**
+- 🟡 **DEC Leadership Summit EMEA `2026`, Paris: `41` senior leaders, `30` institutions, `14`
+  countries** — a named, dated convening to target.
+
+🔴 **The informed gap that remains**: EMEA spend is still unanswerable at **`$2.11B`–`$5.86B`, a
+`2.8×` spread**, and 🔴 **three of `Gap 251`'s six named agencies — 🇩🇰 STIL, 🇫🇷 Éducation
+nationale, 🇪🇸 INTEF — are ABSENT from GitHub under nine probed spellings.** 🔵 **That is a FORGE
+gap, not an absence**: France and Spain run national public-code forges, and this session did not
+reach them → `858-G4`.
+
+### APAC
+
+🔴 **The prescribed APAC leg failed in a measurable way, for the second pass in a row, and the
+failure is published rather than smoothed.** 🟢 **It returned exactly two specific regulatory
+instruments and BOTH are EMEA**: the **UAE Ministry of Education's February `2026` rules — `25`
+generative-AI prohibitions covering age suitability, privacy, academic integrity and exam use** —
+and the **UK's January `2026` generative-AI safety standards for schools**. 🔵 **`T935` holds: a
+query's geography is not a region**, and `AI education APAC` returns the Gulf and Britain.
+
+🟡 **What the leg did return for APAC, `CITED, NOT READ`:**
+
+- 🟢 **Permission to operate is running AHEAD of regulation here, which is the inverse of Europe**:
+  the **Ipsos Education Monitor `2026`** finds **lower support for banning AI in schools across the
+  Asian markets measured**, while support for limiting children's social-media use stays high.
+- 🟡 **Uptake is patchy and connectivity is named as the constraint** (Times Higher Education,
+  April `2026` regional survey): **virtual-tutor use at `30%`** across the cohort.
+- 🟢 **Two dated convenings to target**: the **World Bank's Global EdTech Policy Academy on AI,
+  Seoul, `2026-08-31`–`09-04`**, and **Cambridge English's regional leaders' summit, Kuala Lumpur,
+  April `2026`**.
+- 🔵 Vendor-led infrastructure push continues (**Acer's Asia Pacific education summit**, April
+  `2026`), which is a device-and-partnership story, not a software one.
+
+🔴 **The informed gap, and `p858` makes it specific instead of repeating it.** 🔴 **`0` procurement
+documents for India, Singapore or Australia, for a SIXTH pass.** 🟢 **But this pass now knows why
+the English leg cannot fix that, and what would**: 🔵 **the `user:` enumeration that produced
+`305` European repositories was never pointed at an APAC ministry.** 🟢 **Named targets for the
+next pass, no search step required: MEXT (🇯🇵), the Korean Ministry of Education and KERIS (🇰🇷),
+MOE Singapore / GovTech (🇸🇬), and the Australian ESA (Education Services Australia).** 🔴 **Until
+that leg is run, "APAC publishes no education code" is an unmeasured absence** → `858-G6`.
+
+### LATAM
+
+🟢 **`857-G6` is DISCHARGED, and the answer is a measured nil rather than an assumed one.** 🔴
+`p857` declared: *"no ES/PT leg was run, so the `0` LATAM-origin rows are an unmeasured absence."*
+🟢 **`p858` ran six first-party Spanish and Portuguese supply legs.**
+
+| Measured over the `6` ES/PT legs | |
+|---|---|
+| addresses returned | `29` (`27` distinct) |
+| 🔴 **with `2`+ stars** | 🔴 **`0`. The highest star count across all `27` is `1`** |
+| permissively licensed | 🟡 `4` MIT |
+| 🔴 **traceable to a NAMED course assignment** | 🔴 **`7` of `27`** — Alura's *Challenge ONE / Challenge Escuela IA* (🇧🇷) and UNAH's `MGI-201` brief (🇭🇳), the latter submitted by three separate groups |
+
+🔵 **So the channel behaves in Spanish and Portuguese exactly as `T185` predicted for English
+workflow nouns: it indexes COURSEWORK.** 🟢 **The absence of LATAM-origin supply at this altitude is
+now a measurement, and `0` of the `27` is published as a LATAM row** — 🔴 **because `es` ≠ LATAM
+(`T935`) and `gh api users/{login}` is refused here, so origin is not resolvable at scale.**
+
+🟡 **Demand, by contrast, keeps getting sharper, and this pass recovers the DENOMINATOR this base
+was missing**, `CITED, NOT READ`:
+
+- 🟢 **Digital Education Council LATAM `2026`, with Tecnológico de Monterrey and the Institute for
+  the Future of Education: `92%` of students and `79%` of faculty actively engaging with AI** —
+  🟢 **drawn from `30,000`+ responses across `29` higher-education institutions.** 🔵 **The
+  denominator is what makes it quotable in a pitch; this base held the percentages without it.**
+- 🔴 **Against `30%` who believe their institution has responded effectively.**
+- 🔴 **UNESCO IESALC: adoption is *"neither uniform nor evenly distributed"*, with the gap widest
+  between private and public universities** — and the standing denominators hold: `200`
+  institutions / `19` countries, `87%` use · `9%` evaluation · **`8%` any AI budget, `4%` among
+  PUBLIC universities.**
+- 🟢 **Two named channels to work, both already partnered**: the **IDB's `193`-initiative LAC
+  inventory**, and **EdTech Hub + Fundación Ceibal**.
+- 🟢 **Brazil's `12`-month clock remains the anchor**: `Parecer CNE/CP nº 15/2026`, homologated
+  `2026-11-10`, prohibitions effective on publication, `12` months for policies, governance
+  instruments and **contracts** — 🔴 `CITED, NOT READ`, `www.gov.br` refuses at `CONNECT`.
+
+🔴 **The informed gap**: 🔴 **`0` LATAM state education agency organisations were probed this pass**
+— the instrument that produced the entire European result was not pointed at Brazil's MEC, Chile's
+MINEDUC, Uruguay's **Plan Ceibal** or Mexico's SEP. 🟢 **Plan Ceibal is the single highest-value
+named target in this region**, because it is a long-running state education technology operator of
+exactly the kind that publishes → `858-G6`.
+
+### Global
+
+🟢 **The finding that crosses every region and is not about any of them: `pushed_at` is an
+organisation event.** 🔴 **`51` of `56` repositories at one agency report the same push date and
+`12` of `13` cloned have no commit within five months of it — one by `47` months.** 🟢 **A control
+at a second agency, same hour, put `12` of `12` within five days.** 🔵 **Any regional freshness
+claim anywhere in this base that rests on `pushed_at` rests on nothing** → `T197`.
+
+- 🟢 **The licence is a POLICY artefact, and it is the first thing to establish about a public
+  buyer.** 🔵 Finland's EUPL makes the next agency a licensee; Norway's MIT made it a co-author, and
+  a three-body reuse chain exists in one country and not the other.
+- 🔴 **`NOASSERTION` is now evidence of nothing in BOTH directions.** Second consecutive pass in
+  which GitHub's field UNDER-claims: `SURFnet/apie` reads `NOASSERTION` and the bytes read
+  **EPL-2.0 WITH Classpath-exception-2.0**.
+- 🟡 **The market frame, `CITED, NOT READ`, unchanged and still wide**: global AI-in-education
+  ≈ **`$10.6B` (`2026`) → `~$42.5B` (`2030`)**, with other houses between `$41B` and `$137B` by
+  `2035`. 🔵 **The usable number is not the total; it is that only `45%` of the most-used tools have
+  published research meeting an ESSA evidence tier.** 🟢 That is the gap a studio sells into.
+- 🟢 **Two new global demand signals this pass**: the **US Department of Education's `$169M` FIPSE
+  awards** including responsible AI use in higher education, and **Instructure's Canvas Career**, a
+  skills-first AI LMS for workforce learning — 🔵 **which is the same thesis as Finland's `JOD`, one
+  built by a vendor and one co-funded by two ministries.**
+
 ## 🟢 Sixty-second pass (`p857`, 2026-11-16) — **the academic-risk tier placed by region, and the regional story is a GOVERNANCE gap, not a technology gap**
 
 🔵 **The one regional claim this pass can make that it could not make before.** `p856` found a
@@ -23,7 +209,7 @@ whether they are ALLOWED to deploy it and whether anyone is governing it.**
 summaries and says so.** 🟢 Every licence, byte count and `sha256₁₂` on these shelves is byte-read
 `2026-11-16`.
 
-## Opportunities by region
+## Opportunities by region — as filed by `p857` (historical, superseded above)
 
 ### North America
 

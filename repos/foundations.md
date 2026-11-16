@@ -4,6 +4,86 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-third pass (`p858`, 2026-11-16) — **`20` foundation rows (`274` → `294`): the national education agency tier, read for sixty-one passes and SHELVED for none of them — and its licence changes at every border**
+
+🔴 **Start with the defect, because it is this base's own.** `Opetushallitus` — the Finnish National
+Agency for Education — appears **`61` times in [`agents/trending.md`](../agents/trending.md), `82`
+times in [`repos/trending.md`](trending.md) and `27` times in
+[`intel/open-gaps.md`](../intel/open-gaps.md).** 🔴 **It appears `0` times on
+[`agents/top.md`](../agents/top.md), `0` times on this file and `0` times on
+[`verticals/solutions.md`](../verticals/solutions.md).**
+
+🔴 **`Gap 251` says of this agency: *"this base has read `15` and shelved `8`."* The second half is
+false.** 🟢 **Nothing was shelved. `20` distinct addresses were LOGGED.** 🔵 The two trending files
+are append-only and the shelves are prepended, and a whole tier fell between them for sixty-one
+passes → `T199`, `858-G3`.
+
+🟢 **`p858` shelves it, and extends it to five more agencies.**
+
+### 🟢 Finding 1 — `Gap 251` named six agencies. Three are reachable, three are not, and the three it never named are the richest
+
+| Agency | Login probed | Repos | Verdict |
+|---|---|---|---|
+| 🇫🇮 **Opetushallitus** (EDUFI) | `Opetushallitus` | 🟢 `182` (`110` pushed since `2025-06`) | 🟢 **Live today. The largest public education codebase this base has found anywhere** |
+| 🇳🇱 **Kennisnet** | `kennisnet` | 🟢 `25` | 🟢 **`11` MIT. The metadata and assessment-interchange layer of Dutch school education** |
+| 🇳🇱 **SURF** | `SURFnet` | 🟢 `97` (`39` since `2024`) | 🟢 **The higher-education federation layer: OOAPI, eduhub, student mobility.** 🔴 Five licence regimes in one org |
+| 🇳🇴 **Utdanningsdirektoratet** | `Utdanningsdirektoratet` | 🟢 `19` | 🟢 **MIT and Apache-2.0 throughout.** Plus 🆕 `udir-moodle`, a **`55`-plugin national Moodle estate** |
+| 🇸🇪 **Skolverket** | `skolverket` | 🟡 `5` | 🟡 **One Apache-2.0 reference implementation; the other four are specifications with NO grant** |
+| 🇩🇪 **OpenEduHub / WirLernenOnline** | `openeduhub` | 🟢 `56` | 🟢 **Apache-2.0 agent fleet — see [`agents/top.md`](../agents/top.md)** |
+| 🇪🇪 **HITSA** (HARNO's predecessor) | `hitsa` | 🟡 `3` | 🔴 **Stale since `2020-08`. `1` GPL-3.0, `2` ungranted.** 🔴 `HARNO` itself resolves to a personal account |
+| 🇩🇰 **STIL** | `stil-dk`·`stildk`·`Danmarks-STIL`·`uddannelsesstyrelsen` | 🔴 `0` | 🔴 **ABSENT — four spellings, four `422`s** |
+| 🇫🇷 **Éducation nationale** | `Ministere-Education-Nationale`·`education-nationale`·`DNE-MENJ`·`edtech-gouv`·`apps-education` | 🔴 `0` | 🔴 **ABSENT — five spellings, five `422`s** |
+| 🇪🇸 **INTEF** | `intef` | 🔴 `0` | 🔴 **ABSENT as an agency.** 🔴 **And a TRAP: `intef-dev` exists with `6` repos, `4` MIT — and its READMEs speak in the first person singular about the author's own YouTube channel. It is Excel Script Lab add-ins, not the Spanish institute.** 🔵 A login that resembles an agency's name is a marketing string exactly as `-public` is (`T60`) → `858-G4` |
+
+🟢 **Method, so it is repeatable without a search step:** `gh api -X GET search/repositories -f
+q='user:<ORG>' -f per_page=100 -f sort=updated`. 🔴 **`gh api repos/{owner}/{repo}` is REFUSED in
+this session (`T941`), so every figure below comes from the search channel plus a blobless clone.**
+🟢 **`0` of the `305` enumerated repositories is a GitHub fork** — these are first-party state
+publications, not mirrors. [`agency-org-enumeration`](../evidence/agency-org-enumeration.2026-11-16-p858.tsv)
+
+### 🔴 Finding 2 — the licence changes at every border, and the border decides what a studio may ship
+
+| Country | Regime, byte-read | What it means for a Globant engagement |
+|---|---|---|
+| 🇫🇮 **Finland** | 🟡 **EUPL `1.1`/`1.2` on every row** | 🔴 **Reciprocal.** A derivative distributed or **made available over a network** carries the same licence. 🟢 Perfect for a co-build with a ministry; 🔴 fatal to a closed product fork |
+| 🇳🇴 **Norway** | 🟢 **MIT · Apache-2.0** | 🟢 **Fork, close, ship.** 🆕 **And `designsystem` carries THREE MIT grants — its own, `Nav`'s and `Digdir`'s — a state-to-state reuse chain** |
+| 🇳🇱 **Kennisnet** | 🟢 **MIT** | 🟢 **Fork, close, ship.** The assessment and metadata plumbing is the most reusable in Europe |
+| 🇳🇱 **SURF** | 🔴 **GPL-3.0 · AGPL-3.0 · EPL-2.0 · BSD-3 · Apache-2.0 in ONE org** | 🔴 **Licence must be read per repository; the org tells you nothing.** 🔵 `eduhub-rio-mapper` is AGPL and it is a *service* — §13 is live |
+| 🇩🇪 **Germany** | 🟢 **Apache-2.0 for apps · GPL-3.0 at the edges · CC0-1.0 for vocabularies** | 🟢 **The apps are the shippable part**, and the vocabularies are public domain |
+| 🇸🇪 **Sweden** | 🔴 **One Apache-2.0; four with NO grant** | 🔴 **The national digital-exam specification is published without terms of reuse** |
+| 🇪🇪 **Estonia** | 🔴 **GPL-3.0 or nothing, and nothing has moved since `2020`** | 🔴 Not a build channel today |
+
+🔵 **Say this plainly to a client: the same public function, six countries, six legal postures.
+Which ministry you are standing in front of decides whether the work can be productised.**
+
+### 🟢 Finding 3 — `20` rows, every grant byte-read `2026-11-16`
+
+🔴 **The date column below is the HEAD COMMIT DATE on the default ref, not GitHub's `pushed_at`** —
+`T197` shows why that distinction is not pedantry.
+
+| Repo | Licence, as measured | ★ / forks | Default ref · HEAD commit | Region | Why it is a foundation and not a row on another shelf |
+|---|---|---|---|---|---|
+| [`skolverket/dnp-ss12000-reference-api`](https://github.com/skolverket/dnp-ss12000-reference-api) | 🟢 **Apache-2.0** — `11,340 B`, `sha256₁₂ ac2e2b321b48` | `5` / `0` | `main` · `a3187df2` · `2026-01-26` | EMEA | 🟢 **The highest-value single row in this pass.** Skolverket's own reference implementation of **SIS `SS 12000`**, Sweden's national education-interoperability standard, for provisioning the **digital national tests (`DNP`)**. 🔵 **A third national rostering standard beside OneRoster and Ed-Fi, with a state-published implementation to read.** 🔴 **Its own README forbids production use and states it terminates no TLS** — read it as the spec made executable, never as a deployable |
+| [`kennisnet/php-qti3`](https://github.com/kennisnet/php-qti3) | 🟢 **MIT** — `1,066 B`, `sha256₁₂ 27fb6d463569`, `© 2026 Kennisnet` | `0` / `0` | `main` · `8657fc60` · `2026-11-10` | EMEA | 🟢 **The PHP half of the QTI 3.0 problem, and `Gap 240` holds the TypeScript half.** Reads, writes and manipulates QTI 3.0 packages, tests and items; Composer `wikiwijs/php-qti3`. 🔵 **Assessment interchange is where every LMS engagement stalls, and a state agency now maintains a permissive implementation in the language most European school systems run** |
+| [`kennisnet/phpNLLOM`](https://github.com/kennisnet/phpNLLOM) | 🟢 **MIT** — `1,087 B`, `sha256₁₂ 45180ed97b3e`, `© 2017 Stichting Kennisnet` | `0` / `2` | `master` · `f3287302` · `2022-06-28` | EMEA | 🟢 Read/write **NL-LOM**, the Dutch national learning-object metadata profile. 🔵 The profile a Dutch OER engagement must emit on day one; 🟡 stable rather than stale — the standard has not moved either |
+| [`kennisnet/phpEdurepSearch`](https://github.com/kennisnet/phpEdurepSearch) | 🟢 **MIT** — `1,086 B`, `sha256₁₂ a732a2ae1c48`, `© 2015 Stichting Kennisnet` | `1` / `5` | `master` · `5f975bf5` · `2022-12-19` | EMEA | 🟢 Client for **Edurep**, the Dutch national learning-resource search index. 🔵 **The most-forked row in the Kennisnet set (`5`), which is the adoption signal a `1★` repository will never show** |
+| [`kennisnet/phpEdutermClient`](https://github.com/kennisnet/phpEdutermClient) | 🟢 **MIT** — `1,066 B`, `sha256₁₂ de48ba028771`, `© 2018 Kennisnet` | `0` / `0` | `master` · `3374538d` · `2023-08-22` | EMEA | 🟢 Client for **Eduterm**, the Dutch curriculum vocabulary service. 🔵 Pairs with `phpNLLOM`: one supplies the terms, the other the record |
+| [`kennisnet/pylom`](https://github.com/kennisnet/pylom) | 🟢 **MIT** — `1,066 B`, `sha256₁₂ cb979719e9ca`, `© 2017 Kennisnet` | `1` / `0` | `master` · `d7fb7e44` · `2020-10-03` | EMEA | 🟢 **The Python row in a PHP shelf** — IMS-LOM read/write. 🔵 The one piece of this stack that drops straight into a Python ingestion pipeline |
+| [`kennisnet/phpECKCS`](https://github.com/kennisnet/phpECKCS) | 🟢 **MIT** — `1,066 B`, `sha256₁₂ 4bf4fd11bcd9`, `© 2019 Kennisnet` | `0` / `2` | `master` · `2a6ff9ea` · `2024-09-04` | EMEA | 🟢 **ECK Catalog Service** records — the Dutch *commercial* schoolbook-supply chain's catalogue format. 🔵 **The only row on these shelves that touches publisher procurement rather than pedagogy** |
+| [`Utdanningsdirektoratet/designsystem`](https://github.com/Utdanningsdirektoratet/designsystem) | 🟢 **MIT ×3, all byte-read**: root `1,079 B` `9e2e5857e0ef` `© 2025 Utdanningsdirektoratet`; `LICENSES/LICENSE-Aksel` `1,142 B` `aaa99b9714b7` `© 2025 Nav`; `LICENSES/LICENSE-Designsystemet` `1,076 B` `84243b0c3857` `© 2024 Digdir` | `12` / `0` | `main` · `91e369b2` · `2026-11-16` | EMEA | 🟢 **Permissive closure across three Norwegian state bodies**, and the most-starred agency row in this pass. 🔵 **The structural fact is the chain, not the components: Digdir → Nav → Udir, each publishing MIT so the next may build.** 🟢 A ready accessibility-conformant component set for a Norwegian public-sector education bid → `T196` |
+| [`SURFnet/apie`](https://github.com/SURFnet/apie) | 🔴 **GitHub says `NOASSERTION`.** 🟢 **The bytes say `EPL-2.0 WITH Classpath-exception-2.0`** — `LICENSE` `14,198 B`, `sha256₁₂ 0becf16567be`, SPDX declared in the README, `LICENSES/` REUSE-compliant | `6` / `2` | `main` · `269bd5a0` · `2026-07-22` | EMEA | 🟢 **An OpenAPI service validator — the instrument that proves a national API actually conforms to its own specification.** 🔵 **Read the exception, because it is the whole commercial answer: EPL-2.0 is file-level copyleft, and the Classpath exception removes the linking restriction.** 🟢 **Link freely; publish changes to EPL files only.** 🔴 **GitHub's field would have had this rejected** → `T198` |
+| [`SURFnet/pea-poc`](https://github.com/SURFnet/pea-poc) | 🟢 **BSD-3-Clause** — `1,512 B`, `sha256₁₂ 8d581f677474`, `© 2022 SURF` | `3` / `1` | `master` · `2698a9b8` · `2026-06-02` | EMEA | 🟢 **Platform Educational Applications** — SURF's pilot for a national catalogue through which institutions procure and provision learning applications. 🔵 **The buyer-side marketplace, which is the shape every "AI tool for schools" has to enter the Netherlands through.** PHP 8, Node 20, MySQL, S3 |
+| [`SURFnet/sds`](https://github.com/SURFnet/sds) | 🟢 **Apache-2.0** — `11,357 B`, `sha256₁₂ c71d239df917` | `1` / `2` | `main` · `0bc6a3f6` · `2026-08-05` | EMEA | 🟢 The SURF design system. 🔵 Filed for one reason beyond reuse: 🔴 **its licence payload is byte-identical to six German repositories in a different organisation and a different country** — the specimen behind `T196`'s correction to `T193` |
+| [`SURFnet/eduhub-gateway`](https://github.com/SURFnet/eduhub-gateway) | 🔴 **GPL-3.0** — `LICENSE.md` `34,916 B`, `sha256₁₂ 33bc26d4498c` | `2` / `0` | `master` · `bb28b6f2` · `2026-11-10` | EMEA | 🟡 **The gateway of SURFeduhub, the Dutch national higher-education data exchange built on OOAPI.** 🔴 **Copyleft, so it is an integration target and not a fork base.** 🔵 Filed because the *protocol* is the reusable part and this is its reference deployment |
+| [`openeduhub/edu-sharing-python-client`](https://github.com/openeduhub/edu-sharing-python-client) | 🟢 **Apache-2.0** — `11,349 B`, `sha256₁₂ e54a97efb7d3` | `0` / `0` | `main` · `10e59fa3` · `2026-11-02` | EMEA | 🟢 **The only row in the German fleet whose HEAD commit is actually recent, and the one the five agent rows all need.** Async-first, repository-agnostic client for **edu-sharing** and the **b-api (Bildungs-API)**, verified against edu-sharing `11.0` **including writes against a live instance**. 🟡 Pre-`1.0` at `v0.3.0` |
+| [`openeduhub/oeh-metadata-vocabs`](https://github.com/openeduhub/oeh-metadata-vocabs) | 🟢 **CC0-1.0** — `7,048 B`, `sha256₁₂ a2010f343487` | `2` / `7` | `master` · `04e833e1` · `2026-08-12` | EMEA | 🟢 **Public domain. No attribution, no conditions.** Every SKOS vocabulary WirLernenOnline classifies against — subject, educational context, intended audience. 🔵 **`7` forks on `2` stars is this pass's clearest reuse signal**, and 🟢 **a German curriculum taxonomy under CC0 is the cheapest cold-start a DACH education engagement will ever get** |
+| [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) | 🟡 **EUPL-1.1 or later** — `LICENSE.txt` `654 B`, `sha256₁₂ 9f68b0df35be`, `© 2015 The Finnish National Board of Education` | `23` / `12` | `master` · `67efa0c9` · `2026-11-16` | EMEA | 🟢 **The most-starred, most-forked state education repository this base has ever shelved, and it was committed to on the day of this pass.** Finland's national register of study rights and completed study attainments — Scala. 🔵 **This is what a national learner-record system looks like when it is legible: the data model a studio would otherwise spend a quarter reverse-engineering.** 🔴 EUPL: reciprocal, with a network trigger |
+| [`Opetushallitus/ataru`](https://github.com/Opetushallitus/ataru) | 🟡 **EUPL-1.2 or later** — `LICENSE.md` `296 B`, `sha256₁₂ db5b61c3f444`, `© 2025 Finnish National Agency for Education` | `12` / `4` | `master` · `0f943974` · `2026-11-14` | EMEA | 🟢 **Finland's national application-form service — generic form generation at state scale, in Clojure.** 🔵 **Admissions is named high-risk by the EU AI Act, and this is the only production admissions intake on these shelves whose source can be read before a proposal is written** |
+| [`Opetushallitus/aoe`](https://github.com/Opetushallitus/aoe) | 🔴 **GitHub says `NONE` and the repository root holds no licence.** 🟢 **The bytes are in the sub-packages: `aoe-web-backend/LICENSE` and `aoe-web-frontend/LICENSE`, both `304 B`, both `sha256₁₂ 3d3a635e4379`, both EUPL-1.2** | `1` / `0` | `main` · `a41cf077` · `2026-11-15` | EMEA | 🟢 **`aoe.fi` — Finland's national open-educational-resources library, as a monorepo.** 🔴 **A FOURTH place a licence hides: the monorepo sub-package.** 🔵 A root-only check would have declared this ungranted and dropped a live national service → `T198` |
+| [`Opetushallitus/varda`](https://github.com/Opetushallitus/varda) | 🟡 **EUPL-1.1 or later** — `LICENSE.txt` `653 B`, `sha256₁₂ 986fdfc9ba85` | `3` / `0` | `main` · `2290aa1e` · `2026-10-27` | EMEA | 🟢 **The national EARLY-CHILDHOOD education register — the only pre-primary system on any shelf here.** 🔵 Every other row in this base starts at school age; procurement, safeguarding and consent are different below it |
+| [`Opetushallitus/eperusteet`](https://github.com/Opetushallitus/eperusteet) | 🟡 **EUPL-1.1 or later** — `LICENSE.txt` `632 B`, `sha256₁₂ 7c5df5c3eacb` | `3` / `1` | `master` · `2920e7a4` · `2026-11-11` | EMEA | 🟢 **The national CURRICULUM as a queryable service** — Finland's `eperusteet`, with local-curriculum derivation (`-ylops`, `-amosaa`) in sibling repositories. 🔵 **Curriculum alignment is the claim every AI tutor makes and almost none can evidence; this is a machine-readable curriculum to evidence it against** |
+| [`Opetushallitus/jod-design-system`](https://github.com/Opetushallitus/jod-design-system) | 🟡 **EUPL-1.2 or later** — `LICENSE` `451 B`, `sha256₁₂ 06b723e33492`, 🟢 **copyright held JOINTLY by the Finnish Ministry of Education and Culture, the Ministry of Economic Affairs and Employment, EDUFI and KEHA** | `1` / `0` | `main` · `c2b2ccc2` · `2026-11-16` | EMEA | 🟢 **`JOD` — Finland's continuous-learning and career-guidance service, and the only FOUR-AGENCY joint grant this base holds.** 🔵 **Read the holder line as market intelligence: labour and education ministries are co-funding one digital service, which is exactly the skills-first workforce brief the `2026` market pages describe — with a published codebase (`jod-yksilo-ui`, `jod-ohjaaja-ui`, `jod-urataidot-ui`) already under it** |
+
 ## 🟢 Sixty-second pass (`p857`, 2026-11-16) — **`9` foundation rows (`265` → `274`): the learning-analytics PLUMBING beneath the academic-risk agents — and its licence grade is the mirror image of theirs**
 
 🔵 **Why these are foundations and not agents.** Nothing on this shelf predicts anything. Every row
@@ -1307,7 +1387,7 @@ above was graded on the licence question alone.**
 | https://github.com/langchain-ai/langchain | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`) | 149546 | **Region: Global.** The model and tool abstraction layer beneath the above. 🟡 **Shelved with a deliberate caution: this base's compose recipes should depend on `langgraph` for control flow and on `langchain-core` for interfaces, not on the `langchain` meta-package, whose surface moves faster than an education deliverable's support window.** 🔵 **Note for the byte-read gate: its `LICENSE` is on `master`, not `main` — a `main`-only probe returns `404` and would record a false `NO_LICENCE_FILE`, which is a live defect in any sweep that assumes the default branch name** |
 | https://github.com/teppei-miyashita/agenticstar-agentcore | 🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last touched `2026-08-12` | 0 | 🔴 **Region: APAC. Shelved as a WARNING row — the worked example for `T89`.** This is the source repository that the PyPI package `agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository`, and it holds no commits at all. 🟢 **The package itself is genuinely MIT** (`License-Expression: MIT` in the wheel, `dist-info/licenses/LICENSE`, `1,078 B`, `sha256:2afbb5fc…`) **and genuinely installable** — 🔴 **but it is wheel-only, single-release (`2026-09-17`), and unreadable at its stated address, while hard-pinning `langgraph==1.1.10`, `langchain==1.2.18`, `fastapi==0.136.0` and `agenticstar-platform==0.5.32`.** 🔵 **Do NOT add it to a delivery tree. It is here so that the next pass asking "is the AGENTIC STAR stack adoptable?" finds the answer already measured: licensed yes, auditable no** |
 
-## Foundational repos — 265 rows
+## Foundational repos — 294 rows
 
 ## 🟢 The STANDARDS-SEAM layer — **LTI, QTI and xAPI, the four interfaces an education deliverable is actually wired through** (new, fifty-seventh pass `p852`) (6 rows)
 
