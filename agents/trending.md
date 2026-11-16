@@ -4,6 +4,78 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `2026-11-16` (forty-third pass, `p838`) — **`15` new agent rows, and `9` of the best came from ONE owner account: the index indexes repositories, not organisations**
+
+🟢 **`15` new build-safe agent rows (`399` → `414`), `9` foundation rows (`186` → `195`), `7`
+vertical rows (`157` → `164`), `4` trends (`T133`–`T136`), `3` recipes (`P87`–`P89`), `3` named
+refusals. Every grant byte-read `2026-11-16` at the REAL default ref, with payload size and
+`sha256₁₂` recorded; stars, forks and `pushed_at` measured the same day from the repository index.**
+
+🔵 **The channel finding, which is the headline.** `p837` established (`T128`) that a `license:`
+qualifier on the repository index breaks nils that keyword search reports as saturation. 🟢 **`p838`
+found the next level up.** The `license:`-qualified leg returned a single low-ranked hit —
+`oaknational/Oak-Web-Application`, **`27★`** — and enumerating its OWNER returned a complete
+national-curriculum agent stack:
+
+```
+gh api -X GET search/repositories -f q="user:oaknational" -f sort=updated
+```
+
+🟢 **Nine repositories, five of them at `0` or `1` star, together comprising platform → ontology →
+API → MCP server → agent skills → lesson assistant → eval.** 🔴 **No single repository ranked high
+enough for `42` prior passes of keyword search to see it.** → `T133`.
+
+### 🟢 What was added to the agent shelf
+
+| Agent | Grant (byte-read `2026-11-16`) | ★ / forks | Ref | Region |
+|---|---|---|---|---|
+| [`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) (Aila) | 🟢 MIT `1,077 B` `d150aadcccd2` | `35` / `7` | `main` | EMEA — UK |
+| [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 MIT `1,086 B` `02c5a8e84229` (`LICENCE`) | `9` / `5` | `main` | EMEA — UK |
+| [`oaknational/oak-agent-skills`](https://github.com/oaknational/oak-agent-skills) | 🟢 MIT `1,085 B` `5248beedeb05` | `0` / `1` | `main` | EMEA — UK |
+| [`oaknational/oak-ai-plugins`](https://github.com/oaknational/oak-ai-plugins) | 🟢 MIT `1,085 B` `e90b3e1c8e94` | `0` / `3` | `main` | EMEA — UK |
+| [`finereli/yarareads`](https://github.com/finereli/yarareads) | 🟢 MIT `1,066 B` `7c4cf856c78c` | `28` / `2` | `main` | Global |
+| [`natolambert/colloquium`](https://github.com/natolambert/colloquium) | 🟢 MIT `1,071 B` `bce041d216bb` | `367` / `22` | `main` | North America |
+| [`pamelafox/presentation-skills`](https://github.com/pamelafox/presentation-skills) | 🟢 MIT `1,067 B` `e6bf682c17c8` | `130` / `24` | `main` | North America |
+| [`LaplacianAI/manimvox`](https://github.com/LaplacianAI/manimvox) | 🟢 MIT `1,068 B` `56fd265bbaea` | `6` / `1` | `main` | Global |
+| [`liangdabiao/whiteboard-teacher-video-motion`](https://github.com/liangdabiao/whiteboard-teacher-video-motion) | 🟢 MIT `1,068 B` `092d7cba85ea` | `42` / `4` | `main` | APAC — China |
+| [`precious112/code-slowmo`](https://github.com/precious112/code-slowmo) | 🟢 MIT `1,068 B` `0f8451cf2cc9` | `27` / `1` | `main` | Global |
+| [`HolobiomicsLab/Perspicacite-AI`](https://github.com/HolobiomicsLab/Perspicacite-AI) | 🟢 Apache-2.0 `11,357 B` `c71d239df917` | `21` / `7` | `main` | EMEA |
+| [`tmchow/hermes-kids-profile-blueprint`](https://github.com/tmchow/hermes-kids-profile-blueprint) | 🟢 MIT `1,068 B` `d5c6b57f6897` | `30` / `4` | `main` | Global |
+| [`Slymaster/masame`](https://github.com/Slymaster/masame) | 🟢 MIT `1,068 B` `b428f1061a51` | `41` / `1` | 🔴 **`develop`** | Global |
+| [`soniccat/WordTeacher`](https://github.com/soniccat/WordTeacher) | 🟢 MIT `1,072 B` `607d1ee2794a` | `15` / `2` | `main` | Global |
+| [`santanu-atta03/Intervyo`](https://github.com/santanu-atta03/Intervyo) | 🟢 MIT `1,071 B` `ddba443d98e9` | `16` / **`95`** | `main` | APAC — India |
+
+🔴 **Three refusals, named with reasons so the next pass does not re-pay for them:**
+[`XueHua-s/ouchn-learn`](https://github.com/XueHua-s/ouchn-learn) (MIT, `14★`) — refused on
+**integrity**, not licence: it auto-completes coursework and answers quizzes for China's Open
+University, making a completion requirement register as met without the learning;
+[`oaknational/oak-mcp-server`](https://github.com/oaknational/oak-mcp-server) (MIT, `0★`) — its own
+README says the code has not landed yet and the repo holds governance documents, so the `p821` rule
+applies (a design document with a licence file is not a build-safe agent), and the capability is
+shelved at `oak-open-curriculum-ecosystem` where the code actually lives;
+[`oaknational/oak-dspy-mcq-eval`](https://github.com/oaknational/oak-dspy-mcq-eval) — **archived**,
+dual MIT-code / restricted-dataset grant recorded for reuse.
+
+🔴 **Four instrument readings recorded as `T136`, because each would otherwise be misread as a
+finding:** `gh api repos/<o>/<n>` is blocked for unattached repositories while
+`search/repositories` with a `repo:` qualifier returns the same fields and is not; **`curl
+https://github.com/<o>/<n>` returns `403` from the proxy and `403` is NOT `404`** — `ls-remote` plus
+a `raw.githubusercontent.com` payload read are the existence proofs that work; `WebFetch` cannot
+resolve hosts outside the session's allowed domains, so this pass's market figures are
+channel-attributed rather than primary-verified; and a grant loop must try `LICENCE`, `LICENSE.txt`
+and `LICENSE.md` as well as `LICENSE` — four of this pass's rows would otherwise have been filed as
+unlicensed, and `NOASSERTION` meant "dual-licensed, read the payload" in both cases it appeared.
+
+🟢 **`T134`: the curriculum-graph gap this base carried since `p587` is closed — not by a new
+project, but by a licence distinction.** `os-taxonomy` (`7,489★`, `99` trending mentions, never
+shelved) is **ODbL-1.0** share-alike, so a client's extended graph could never be proprietary. Oak's
+ontology is **OGL-UK-3.0 data + MIT code**: commercial use and adaptation against **attribution
+only, no share-alike**. 🟢 **The flag was right for nine passes; the alternative simply had to come
+from a public body rather than a community project.**
+
+---
+
+
 ## `2026-11-16` (forty-second pass, `p837`) — **the agent shelf moves after FOUR nil passes, and it moved because the CHANNEL changed; two of three standing nils fall in ENGLISH**
 
 🟢 **`11` new build-safe agent rows (`388` → `399`), `7` foundation rows (`179` → `186`, of which

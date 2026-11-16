@@ -4,6 +4,145 @@ region: Global
 updated: 2026-11-16
 ---
 
+## `T133` — the repository index indexes REPOSITORIES, not ORGANISATIONS, and a public body's stack is therefore invisible to it (forty-third pass, `p838`)
+
+🟢 **Stated as a caused rule.** `T128` (`p837`) found that a `license:` qualifier breaks nils that a
+keyword search reports as saturation. 🟢 **`T133` names the channel one level up, and it is the
+higher-yield one.**
+
+🔵 **The measurement.** The `license:`-qualified leg returned
+`oaknational/Oak-Web-Application` at **`27★`** — a rank low enough that `42` prior passes of
+keyword search never surfaced it. 🟢 **Enumerating its OWNER (`gh api -X GET search/repositories
+-f q="user:oaknational"`) returned a complete national-curriculum agent stack:**
+
+| Repo | Grant (byte-read `2026-11-16`) | ★ | What it is |
+|---|---|---|---|
+| `oak-ai-lesson-assistant` | MIT `1,077 B` `d150aadcccd2` | 35 | Aila — the lesson-planning assistant |
+| `oak-ai-plugins` | MIT `1,085 B` `e90b3e1c8e94` | 0 | Curriculum plugin for ChatGPT/Claude/Copilot/Gemini |
+| `oak-agent-skills` | MIT `1,085 B` `5248beedeb05` | 0 | Shared agent skills + a cross-repo sync tool |
+| `oak-open-curriculum-ecosystem` | MIT `1,086 B` `02c5a8e84229` | 9 | MCP app, TS SDK, semantic search, graph tools |
+| `oak-mcp-server` | MIT `1,086 B` `02c5a8e84229` | 0 | Canonical external MCP server — 🔴 code not yet landed |
+| `oak-curriculum-ontology` | 🟡 OGL-UK-3.0 + MIT `1,867 B` `98ac0c16f708` | 26 | The curriculum as RDF/OWL/SKOS/SHACL |
+| `oak-curriculum-api` | MIT `1,077 B` `0eeb9d32caed` | 1 | The query surface |
+| `oak-components` | MIT | 4 | React design system |
+| `oak-dspy-mcq-eval` | 🟡 MIT code / restricted data `2,267 B` | 1 | 🔴 ARCHIVED DSPy MCQ eval harness |
+
+🔴 **Five of the nine are at `0` or `1` star.** 🟢 **The star distribution is the whole point: a
+public body ships a stack across many small repositories, and no individual repository ranks. The
+organisation is the unit of supply; the index's unit is the repository.** 🔵 **Operational rule for
+the next pass: when a `license:` leg returns ANY institutional owner — a ministry, a university, a
+national academy, a research group — enumerate `user:<owner>` before moving on. `p838` paid one
+query for nine addresses.**
+
+---
+
+## `T134` — the curriculum-graph gap was a LICENCE problem, and open-government data licences resolve it where community data licences do not (forty-third pass, `p838`)
+
+🔴 **This base flagged the same repository `99` times across the trending logs and never shelved
+it, correctly.** `withmarbleapp/os-taxonomy` — `7,489★`, `1,590` micro-topics, `3,221` prerequisite
+edges, education-native — is **ODbL-1.0**. 🔴 **ODbL's share-alike obligation propagates into
+derived databases, and a curriculum graph extended for a client IS a derived database.**
+
+🟢 **`p838` read both halves of `oak-curriculum-ontology`'s `1,867 B` payload and the distinction is
+clean:**
+
+| | `os-taxonomy` | `oak-curriculum-ontology` |
+|---|---|---|
+| Data grant | 🔴 **ODbL-1.0** | 🟢 **Open Government Licence v3.0** |
+| Code grant | — | 🟢 **MIT** |
+| Commercial use | 🟢 permitted | 🟢 permitted |
+| Adaptation | 🟢 permitted | 🟢 permitted |
+| **Share-alike on a derived database** | 🔴 **REQUIRED** | 🟢 **NONE** |
+| Obligation | share-alike + attribution | 🟡 **attribution only** |
+| Scale | `1,590` topics / `3,221` edges | England's National Curriculum (2014), `v0.1.3` early release |
+
+🟢 **The caused rule: a curriculum graph published by a PUBLIC BODY under an open-government licence
+is build-safe for a closed client derivative; the same graph published by a community project under
+a data-commons licence is not.** 🔵 **The deliverable difference is whether the client can own the
+extended graph. On OGL-3.0 they can, against one attribution line.** 🔴 **The constraint that
+remains is NOT legal but jurisdictional: OGL-3.0 covers UK public sector information, and the
+content is England's curriculum — so the LICENCE travels and the CURRICULUM does not.**
+
+---
+
+## `T135` — a `0★` repository in a national language is COURSEWORK, and counting it as supply is how a market gets reported as served (forty-third pass, `p838`)
+
+🟢 **`T124` (`p836`) found that where education-AI regulation became binding, mother-tongue supply
+is personal and unlicensed. `T128` (`p837`) shrank the nil rule to a CHANNEL property. 🔴 `T135`
+corrects an over-broad `p837` conclusion using the same instrument.**
+
+🔵 **The measurement, `2026-11-16`, `license:mit` legs run in five non-English vocabularies:**
+`educacion agente`, `escolar`, `docente aula` (Spanish), `educação escolar` (Portuguese),
+`pendidikan` (Indonesian), `教育 agent` (Chinese), `교육` (Korean).
+
+🔴 **The dominant return is not agents. It is student and teacher COURSEWORK.** Representative of
+the Indonesian leg alone: `MPI-PENDIDIKAN-PANCASILA-KELAS-4` (`0★`, "MAKNA SILA PANCASILA"),
+`takwa_adventure` (`0★`, a religious-education assignment naming its school),
+`Kelompok2PraktikumPemrogramanDasar…` (`0★`, "untuk pemenuhan tugas… Semester 3"),
+`capstone-dw-kelompok-09` (`0★`), `FRONT-END-PENDAFTARAN-PAUD` (`0★`),
+`2225250076_Ziana_Alfia_Zahra_lingkarku` (`0★` — a student ID in the repository name). 🔵 **The
+Spanish and Portuguese legs return the same shape:** `manipulables-digitales-para-matematicas`
+(`0★`), `monitor-co2-aula` (`0★`), `Aulas-de-ling-VI_python` (`0★`),
+`REACT` — *"conteúdos ministrados como docente"* (`0★`).
+
+🟢 **These are real teaching artefacts and they are MIT-licensed. They are not adoptable software,
+and a count that includes them describes a market as served when it is not.**
+
+🔴 **The correction `p838` owes `p837`.** `p837` added **Indonesia** to its "measured
+no-local-supply" list. 🟢 **That was too broad. Indonesian supply EXISTS and this pass filed three
+addresses of it — `banghamid/pddikti_sdk` (national higher-education database SDK),
+`GANNER-STUDIO/dapodiksq` (national school data), `mrizalbasri/Equora` (regional education-data
+platform with MCDA priority analysis).** 🔴 **All at `0–1★`, all days old, all built by
+individuals.** 🟢 **So the accurate finding is narrower and more useful: Indonesia has no
+institutional open-source education PLATFORM supply, and what exists is individual NATIONAL-DATA
+ACCESS work. A studio entering that market builds the layer rather than extending one** — which is
+the opposite of the India (`P85`) and now England (`P87`) engagements.
+
+🟢 **Declared gaps this pass, stated so silence is not read as coverage:** no institutional
+open-source education platform found in **Indonesia**, **Vietnam** or **Japan**; no LATAM
+institutional platform row added this pass (the Spanish/Portuguese legs returned coursework only);
+no dominant open-source AI-tutor project found in **Korean** beyond the single IITP research module
+filed.
+
+---
+
+## `T136` — four instrument readings from this session, recorded because a future pass will otherwise misread them as findings (forty-third pass, `p838`)
+
+🔴 **An instrument limit reported as a measurement becomes wrong data. `p838` hit four and states
+each with the evidence.**
+
+**1. 🔴 The per-repository GitHub API is CLOSED to this session; the SEARCH index is OPEN.**
+`gh api repos/<owner>/<name>` returns *"GitHub access to this repository is not enabled for this
+session"* for every unattached repository. 🟢 **`gh api -X GET search/repositories -f q="repo:<owner>/<name>"`
+returns the SAME fields — stars, forks, SPDX id, default branch, `pushed_at`, `created_at`,
+`archived` — and is not blocked.** 🔵 **So per-repo metadata is fully obtainable; `p838` measured all
+`31` candidates this way. Do not record a repo as unverifiable because `repos/` 403s.**
+
+**2. 🔴 `curl https://github.com/<owner>/<name>` returns `403`, and `403` HERE IS NOT `404`.** Every
+repository probed — including ones proven live seconds later — returned `403` from the egress proxy
+on the HTML endpoint. 🔴 **A pass that reads `403` as "dead link" will delete valid rows.** 🟢 **The
+two authoritative existence proofs that DO work: `git ls-remote --symref https://github.com/<o>/<n> HEAD`
+(which also yields the REAL default ref and the `HEAD` sha) and a `200` on
+`raw.githubusercontent.com/<o>/<n>/<realref>/<LICENCE-PATH>`.** 🟢 **Both were used for every row
+this pass.**
+
+**3. 🔴 `WebFetch` cannot reach hosts outside this session's allowed network domains.**
+`www.iesalc.unesco.org` and `www.digitaleducationcouncil.com` both failed with `ENOTFOUND`, and
+`mcp.thenational.academy` was refused by the proxy (`connect_rejected`). 🔴 **Consequence stated
+plainly: the market figures in `intel/market.md` this pass are attributed to the SEARCH channel that
+surfaced them and are NOT primary-source verified.** 🟢 **That is a weaker claim than `p837` could
+make and it is labelled as such in the file rather than quietly carried at full confidence.**
+
+**4. 🟡 A licence filename is not `LICENSE`.** This pass read grants from `LICENSE`, **`LICENCE`**
+(British spelling — the whole newer half of the Oak estate), `LICENSE.txt` (Coursera) and
+`LICENSE.md` (both Oak dual-licence repos). 🔴 **A grant loop that tries only `LICENSE` would have
+recorded `NO-GRANT-FOUND` for four of this pass's rows and mis-filed two dual-licensed ones as
+unlicensed.** 🟢 **`NOASSERTION` from the API meant "dual-licensed, read the payload" in BOTH cases
+here — never "no grant".**
+
+---
+
+
 ## `T128` — a nil declared from a keyword channel is an INSTRUMENT READING; two of this base's three standing nils fell to a `license:` qualifier, in English (forty-second pass, `p837`)
 
 🟢 **Stated as a caused rule.** `T114` said a nil is only a nil in the language the supply is

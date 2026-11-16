@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🆕 `2026-11-16` (forty-third pass, `p838`) — 🟢 **THE CURRICULUM-GRAPH GAP CLOSES ON A LICENCE TERM, NOT A STAR COUNT: `os-taxonomy` stays off the shelves after `99` trending mentions, and a national body's OGL-3.0 ontology takes the slot**
+
+🔵 **This file has named [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy)
+repeatedly since `p587` — `7,489★`, `1,590` micro-topics, `3,221` prerequisite edges, education-
+native — and flagged it every time (`587-E`) because it is **ODbL-1.0**, a share-alike DATA licence
+whose obligation propagates into derived databases.** 🟢 **It is still not on the shelves, and the
+audit this pass ran confirms that was CORRECT rather than an oversight:** `grep -c` across
+`agents/top.md`, `repos/foundations.md` and `verticals/solutions.md` returns **`0`** for it, with
+`99` mentions across the two trending logs. 🟢 **A flag that never became a row is this base working
+as designed — the `T130` defect was rows claimed as filed and absent, which is a different failure.**
+
+🟢 **The slot is now filled, by a repository the keyword index could never have surfaced.**
+
+### 🟢 `9` foundation rows added (`186` → `195`), byte-read `2026-11-16` at the real default ref
+
+| Repo | Grant (payload measured) | ★ / forks | Ref | Region |
+|---|---|---|---|---|
+| [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | 🟡 **OGL-UK-3.0 (data) + MIT (code)** — `LICENSE.md` `1,867 B` `98ac0c16f708`; API says `NOASSERTION` | `26` / `6` | `main` | EMEA — UK |
+| [`oaknational/oak-curriculum-api`](https://github.com/oaknational/oak-curriculum-api) | 🟢 MIT `1,077 B` `0eeb9d32caed` | `1` / `3` | `main` | EMEA — UK |
+| [`rage/tmc-cli-rust`](https://github.com/rage/tmc-cli-rust) | 🟢 Apache-2.0 `11,352 B` `5f8dce79b134` | `36` / `2` | `main` | EMEA — Finland |
+| [`socialsoftware/quizzes-tutor`](https://github.com/socialsoftware/quizzes-tutor) | 🟢 MIT `1,064 B` `c357a77752cd` | `34` / **`46`** | 🔴 `master` | EMEA — Portugal |
+| [`coursera/coursera_autograder`](https://github.com/coursera/coursera_autograder) | 🟢 Apache-2.0 **`LICENSE.txt`** `11,337 B` `1332404c1e9f` | `18` / `13` | 🔴 `master` | North America |
+| [`RiceComp215-Staff/RiceChecks`](https://github.com/RiceComp215-Staff/RiceChecks) | 🟢 Apache-2.0 `11,357 B` `c71d239df917` | `12` / `1` | 🔴 `master` | North America |
+| [`itkdm/open-lab-components`](https://github.com/itkdm/open-lab-components) | 🟢 MIT `1,091 B` `8e86e6b3ee15` | `10` / `2` | `main` | APAC — China |
+| [`eval-protocol/eval-protocol`](https://github.com/eval-protocol/eval-protocol) | 🟢 MIT `1,074 B` `66aab1fd81f2` | `42` / `11` | `main` | Global |
+| [`banghamid/pddikti_sdk`](https://github.com/banghamid/pddikti_sdk) | 🟢 MIT `1,066 B` `24ce8110ac3c` | `1` / `0` | `main` | APAC — Indonesia |
+
+### 🟢 `7` vertical rows added (`157` → `164`)
+
+| Platform | Grant | ★ / forks | Ref | Region |
+|---|---|---|---|---|
+| [`oaknational/Oak-Web-Application`](https://github.com/oaknational/Oak-Web-Application) | 🟢 MIT `1,081 B` `d40d8b747c4f` | `27` / `9` | `main` | EMEA — UK |
+| [`netgroup-polito/CrownLabs`](https://github.com/netgroup-polito/CrownLabs) | 🟢 Apache-2.0 `11,356 B` `22f773775976` | **`136`** / **`76`** | 🔴 `master` | EMEA — Italy |
+| [`yamanidev/octolib.org`](https://github.com/yamanidev/octolib.org) | 🟢 MIT `1,080 B` `c6e635a40028` | `31` / `2` | `main` | EMEA — Algeria |
+| [`qiqqqqq517/shangkeschedule`](https://github.com/qiqqqqq517/shangkeschedule) | 🟢 Apache-2.0 `11,393 B` `f7da4a65bd5a` | `38` / `3` | `main` | APAC — China |
+| [`ChurchApps/LessonsApp`](https://github.com/ChurchApps/LessonsApp) | 🟢 MIT `1,067 B` `1b7227343b83` | `15` / `9` | `main` | Global |
+| [`sweetk-dev/03-IITP-DABT-JobMatching`](https://github.com/sweetk-dev/03-IITP-DABT-JobMatching) | 🟢 MIT `1,086 B` `200f31db9392` | `12` / `7` | `main` | APAC — Korea |
+| [`GANNER-STUDIO/dapodiksq`](https://github.com/GANNER-STUDIO/dapodiksq) | 🟢 MIT `1,070 B` `563368177a58` | `1` / `0` | `main` | APAC — Indonesia |
+
+🔵 **Sibling filed in prose rather than as a row:** [`mrizalbasri/Equora`](https://github.com/mrizalbasri/Equora)
+(🟢 MIT `1,088 B` `1630acba72ea`, `0★`, Svelte) — Indonesian education-data platform with regional
+MCDA priority analysis.
+
+🟢 **An Apache-vintage reproduction worth recording against `T131`.** Three unrelated projects
+measured this pass carry a **byte-identical** Apache-2.0 payload — `11,357 B` /
+`sha256:c71d239df917` — `RiceChecks`, `Perspicacité-AI` and `p837`'s Drop Project. 🔵 **Meanwhile
+four DIFFERENT Apache byte-lengths appear in this one pass: `11,337` (Coursera), `11,352`
+(TestMyCode), `11,356` (CrownLabs), `11,357`, `11,393` (shangkeschedule).** 🟢 **`T131` holds: the
+digest identifies the VINTAGE of the stock text and the byte-count identifies nothing at all.**
+
+🔴 **A pre-existing defect this pass FOUND and did not fix, recorded so the next pass can.**
+`intel/market.md` contains **TWO** `## Opportunities by region` headings (at lines `297` and `600`
+before this pass's insert), each with its own `### North America / EMEA / APAC / LATAM / Global`
+subsections. 🔴 **The spec is a SINGLE such heading.** 🟢 **`p838` added its regional opportunities
+inside the EXISTING subsections of the first heading and created no new bucket** — but the
+duplication remains. 🔴 **It was not merged because the second block carries roughly `5,600` lines
+of historical regional content, and a blind splice of that size is exactly the kind of file REWRITE
+that `T130` identifies as the mechanism by which this base has lost rows three times.** 🟢 **It
+needs a deliberate pass with a row-count check before and after, not an incidental edit.**
+
+---
+
+
 ## 🆕 `2026-11-16` (forty-second pass, `p837`) — 🔴 **ALL SIX ADDRESSES THIS FILE PUBLISHED AT `p677` AS `Filed to <shelf>` ARE ABSENT FROM THAT SHELF. The payloads all reproduce EXACTLY. The ledger was never the defect — a file REWRITE on `2026-11-12` was, and nine passes did not notice.**
 
 🔵 **`p677`'s own headline was that the `p597` ledger had claimed-as-filed-while-absent twice,

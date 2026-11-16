@@ -4,6 +4,48 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Forty-third pass (`p838`, 2026-11-16) — **`9` rows (`186` → `195`), and the CURRICULUM-GRAPH GAP this base has carried since `p587` is closed by a LICENCE distinction rather than by a new project**
+
+🟢 **Every payload byte-read `2026-11-16` at the real default ref.**
+
+### 🟢 `D838-1` — the gap that closes, and why it was never a supply problem
+
+🔵 **`p837` and earlier passes filed [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy)
+in the trending logs `99` times — `7,489★`, an education-native curriculum graph of `1,590`
+micro-topics and `3,221` prerequisite edges — and FLAGGED it every time (`587-E`), because it is
+**ODbL-1.0**: a share-alike DATA licence whose obligation propagates into any derived database.** 🔴
+**A curriculum graph a studio extends for a client becomes a derived database, so `os-taxonomy`
+could never reach these shelves.** 🟢 **It is still not on them, and that was correct.**
+
+🟢 **`p838` closes the gap from the other side.** `oaknational/oak-curriculum-ontology` is
+**dual-licensed, and this pass read both halves of the payload**: the ontology, vocabularies and
+curriculum data under the **Open Government Licence v3.0**, the code under **MIT**. 🟢 **OGL-3.0
+grants commercial exploitation and adaptation against ONE obligation — attribution
+(*"Contains public sector information licensed under the Open Government Licence v3.0"*).** 🔴 **It
+carries NO share-alike term.** 🟢 **So a client-owned curriculum graph built on it is permissible
+where the same graph built on `os-taxonomy` is not.** → `T134`.
+
+🔵 **The lesson is not "a bigger graph appeared". It is that an OPEN-GOVERNMENT data licence and a
+COMMUNITY data licence differ on exactly the term that decides whether a studio can ship**, and
+this base spent nine passes measuring the star count of the wrong one.
+
+### 🟢 `9` new foundation rows
+
+| Repo | License | Stars | Notes |
+|---|---|---|---|
+| https://github.com/oaknational/oak-curriculum-ontology | 🟡 **Dual: OGL-UK-3.0 (data) + MIT (code)** — `main/LICENSE.md`, **`1,867 B`**, `sha256:98ac0c16f708…`; API reports `NOASSERTION`, which is why `42` passes never saw it | 26 | 🟢 **A formal semantic representation of England's National Curriculum (2014) and Oak's alignment to it, in W3C standards: RDF 1.1, OWL 2, SKOS, SHACL — with SPARQL examples, Widoco-generated docs and CI that VALIDATES the ontology.** 🟢 **Its own stated purpose includes "grounded curriculum knowledge for AI systems", so this is a national curriculum published deliberately as agent-reachable ground truth.** 🔴 **Delivery warnings, stated: version `0.1.3`, badge status `early_release`, and its README says URIs, structure and data are "subject to change" — pin a release, do not track `main`. It is an Oak representation and NOT an official DfE publication.** 🟢 **`6` forks, pushed `2026-11-12`.** Region: **EMEA — United Kingdom**. `T134`, `P87`. |
+| https://github.com/oaknational/oak-curriculum-api | 🟢 **MIT** — `main/LICENSE`, **`1,077 B`**, `sha256:0eeb9d32caed…` | 1 | 🟢 **The query surface over that curriculum — TypeScript, created `2024-04-16`, pushed `2026-11-09`.** 🔵 **Filed because an ontology without a served API is a download, and the whole point of `P87` is that a tutor resolves curriculum at RUNTIME rather than embedding a snapshot in a prompt.** 🔴 **`1★` / `3` forks: this is infrastructure a single organisation runs, so read it as a reference implementation and expect to host your own.** Region: **EMEA — United Kingdom**. |
+| https://github.com/rage/tmc-cli-rust | 🟢 **Apache-2.0** — `main/LICENSE`, **`11,352 B`**, `sha256:5f8dce79b134…` | 36 | 🟢 **TestMyCode — the CLI students use against the assignment evaluator that has run University of Helsinki's programming courses (MOOC.fi) at national scale for over a decade.** Rust; created `2021-01-18`, pushed `2026-10-29`. 🟢 **This is the autograding SUBSTRATE `p837`'s `P84` was written against and did not have: `rage` is the Agile Education Research group, so the provenance is an operating university, not a side project.** 🔴 **It is the CLIENT half — the server (`tmc-langs`, `tmc-server`) is a separate estate, so scope an engagement on which half you are running.** Region: **EMEA — Finland**. `P89`. |
+| https://github.com/socialsoftware/quizzes-tutor | 🟢 **MIT** — `master/LICENSE`, **`1,064 B`**, `sha256:c357a77752cd…` | 34 | 🟢 **A quiz tutor in production teaching use at Instituto Superior Técnico, Lisbon — Java, created `2018-10-24`, pushed `2026-11-15` (the day of measurement).** 🔴 **Default ref is `master`, not `main`.** 🟢 **Read the fork ratio: `34★` / `46` forks — more forks than stars, the signature of course-by-course institutional deployment rather than casual interest.** 🔵 **Eight years of continuous academic use under MIT makes it the most adoptable assessment base on these shelves for a European university engagement.** Region: **EMEA — Portugal**. `P89`. |
+| https://github.com/coursera/coursera_autograder | 🟢 **Apache-2.0** — `master/LICENSE.txt`, **`11,337 B`**, `sha256:1332404c1e9f…` (note the FILENAME: `LICENSE.txt`, a path a grant loop must try) | 18 | 🟢 **Coursera's own command-line tooling for authoring and deploying autograders onto its platform — Python, from the platform vendor itself.** 🔴 **Stale: last push `2026-01-28`, nearly ten months before measurement.** 🔵 **Filed anyway because it is the only VENDOR-PUBLISHED autograder contract in this base, and an engagement that must deliver graded content into a commercial MOOC has no other documented path.** Region: **North America**. `P89`. |
+| https://github.com/RiceComp215-Staff/RiceChecks | 🟢 **Apache-2.0** — `master/LICENSE`, **`11,357 B`**, `sha256:c71d239df917…` — **byte-identical to `Perspicacité-AI` (agent shelf) and to `p837`'s Drop Project: one stock vintage, three unrelated projects (`T131`)** | 12 | 🟡 **A Gradle-based Java autograder from Rice University's COMP 215 staff.** 🔴 **Last push `2023-01-09` — nearly four years stale, and filed with that stated plainly.** 🟢 **Why it is still worth a row: with `tmc-cli-rust` (Rust/Helsinki), `Drop Project` (Kotlin/ISCTE, `p837`) and this (Gradle/Rice), the base now holds THREE independent university autograders on the JVM, which is enough to say the pattern is institutionally normal rather than one group's habit.** 🔴 Do not propose it as a live dependency; mine it for the Gradle integration. Region: **North America**. |
+| https://github.com/itkdm/open-lab-components | 🟢 **MIT** — `main/LICENSE`, **`1,091 B`**, `sha256:8e86e6b3ee15…` | 10 | 🟢 **A STEM teaching-component library aimed explicitly at AI and teaching PLATFORMS: HTML fragments, a JS API and a registry, so a component can be dropped into an existing LMS page.** HTML; created `2026-01-07`, pushed `2026-10-03`. 🔵 **Filed because `T122` recorded that this base's agent-tuned discovery rule is blind to CONTENT, and interactive manipulables are the content layer a tutor agent has nothing to point at.** 🔴 **Chinese-language project, `10★` — small; the value is the embedding contract, not the component count.** Region: **APAC — China**. |
+| https://github.com/eval-protocol/eval-protocol | 🟢 **MIT** — `main/LICENSE`, **`1,074 B`**, `sha256:66aab1fd81f2…` | 42 | 🟢 **An open protocol for evaluating and reinforcement-fine-tuning models on verifiable tasks** — MDX/Python, created `2025-07-27`, pushed `2026-10-31`. 🔵 **Filed as INFRASTRUCTURE under the `671-P` rule, not as education supply.** 🟢 **Its relevance is `T132` and `P83`: once a client demands evidence that a tutor teaches, the acceptance gate needs a protocol for scoring model behaviour on tasks with checkable answers, and `TutorMoments` supplies the pedagogical rubric while this supplies the harness shape.** Region: **Global**. |
+| https://github.com/banghamid/pddikti_sdk | 🟢 **MIT** — `main/LICENSE`, **`1,066 B`**, `sha256:24ce8110ac3c…` | 1 | 🟡 **A Python SDK for PDDikti — Indonesia's national higher-education database (Pangkalan Data Pendidikan Tinggi).** Created `2026-11-08`, pushed `2026-11-15`. 🔴 **`1★` / `0` forks, eight days old: this is filed as EVIDENCE, not as a dependency.** 🟢 **It is the row that corrects `p837`: that pass put Indonesia on the "measured no-local-supply" list, and this pass's Indonesian-language leg shows the finding was too broad — there IS Indonesian open-source education supply, but it is NATIONAL-DATA ACCESS (this, `dapodiksq`, `Equora`) rather than agents, and it sits at `0–1★`.** → `T135`. Region: **APAC — Indonesia**. |
+
+---
+
+
 ## 🔴 Forty-second pass (`p837`, 2026-11-16) — **`3` rows RESTORED that this base has published as filed since `p597`, `4` rows new, and the mechanism of the loss is a file REWRITE rather than a bad ledger**
 
 🟢 **Foundations `179` → `186`: `3` restorations and `4` new rows. Every payload byte-read

@@ -4,6 +4,134 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `P87` — GROUND THE TUTOR IN A NATIONAL CURRICULUM YOU ARE LICENSED TO SHIP (forty-third pass, `p838`)
+
+🔵 **The engagement this answers.** A ministry, an academy trust, a publisher or an edtech vendor
+wants an AI tutor or lesson assistant that is **aligned to the national curriculum** — and wants to
+own the result. 🔴 **The usual failure is to paste curriculum text into a prompt: unversioned,
+unattributable, and legally undefined. The second usual failure is to build the curriculum graph on
+`os-taxonomy`, whose ODbL share-alike makes the client's extended graph non-proprietary (`T134`).**
+
+🟢 **The build, all MIT or OGL-UK-3.0 — every grant byte-read `2026-11-16`.**
+
+| Layer | Component | Grant |
+|---|---|---|
+| Curriculum ground truth | [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) — RDF/OWL/SKOS/SHACL, SPARQL-queryable | 🟡 **OGL-UK-3.0** (data) + **MIT** (code), `1,867 B` `98ac0c16f708` |
+| Runtime query surface | [`oaknational/oak-curriculum-api`](https://github.com/oaknational/oak-curriculum-api) | 🟢 MIT `1,077 B` `0eeb9d32caed` |
+| Agent reach | [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) — MCP app + generated TS SDK + semantic search | 🟢 MIT `1,086 B` `02c5a8e84229` |
+| Assistant reference | [`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) (Aila) | 🟢 MIT `1,077 B` `d150aadcccd2` |
+| Agent-behaviour consistency | [`oaknational/oak-agent-skills`](https://github.com/oaknational/oak-agent-skills) + `oak-ai-plugins` | 🟢 MIT |
+| 🔴 **Acceptance gate** | [`allenai/tutormoments`](https://github.com/allenai/tutormoments) (`P83`) | 🟢 Apache-2.0 |
+
+🟢 **How it wires.** The ontology is pinned at a **release tag** (never `main` — it is `v0.1.3` and
+declares its URIs subject to change) and loaded into a triple store. `oak-curriculum-api` serves
+lookups; the tutor resolves *"which unit, which prior knowledge, which misconception"* **at
+runtime** against that graph instead of carrying curriculum in its prompt. The MCP app from the
+ecosystem repo exposes the same graph to the assistants teachers already use, so the deliverable
+lands inside ChatGPT/Claude/Copilot/Gemini rather than in a new product. `oak-agent-skills` keeps
+behaviour consistent across teams. 🔴 **Then `P83`'s gate runs in CI: `TutorMoments` scores the
+tutor on Appropriate Scaffolding, Appropriate Rigor and Avoids Over-Scaffolding against
+expert-annotated moments, and the build fails if the thing does not teach.**
+
+🔴 **What you must tell the client, in these words.**
+1. **Attribution is the price of the data:** every surface carries *"Contains public sector
+   information licensed under the Open Government Licence v3.0."* 🟢 There is **no** share-alike —
+   the extended graph can be the client's asset (`T134`).
+2. **The curriculum is ENGLAND's.** 🔴 The licence travels; the content does not. A Scottish, Welsh,
+   Gulf or APAC deployment re-maps to the local framework — pair with `opensalt`/CASE for that.
+3. **Aila is not a turnkey deployment.** 🔴 Its README says internal-use-oriented with no
+   expectation that outsiders run it. 🟢 Adopt the architecture and prompt corpus, not the installer.
+4. **Pin everything.** `v0.1.3`, `early_release`. 🔴 Not an official DfE publication.
+
+🟢 **Sizing: `8–10` weeks** to a grounded, curriculum-aligned assistant with a passing `P83` gate,
+assuming the triple store and the API are hosted by the client. 🔵 **The EMEA counterpart of `P85`
+(extend India's Sunbird): the incumbent is open, so the pitch is extension of public
+infrastructure, not replacement.**
+
+---
+
+## 🟢 `P88` — THE EXPLAINER-ASSET PRODUCTION LINE, WITH THE SUBJECT LEAD AS THE GATE (forty-third pass, `p838`)
+
+🔵 **The engagement this answers.** A publisher, university or training provider must produce
+hundreds of short explanatory assets — video, animation, decodable reading, interactive
+walk-throughs — and cannot staff it. 🔴 **The thing that gets a generated teaching asset rejected is
+almost never production quality. It is that no subject lead can tell where a claim came from.**
+
+🟢 **The line, all MIT, every grant byte-read `2026-11-16`.**
+
+| Stage | Component | Grant |
+|---|---|---|
+| Cited script → animation → narration | [`LaplacianAI/manimvox`](https://github.com/LaplacianAI/manimvox) | 🟢 MIT `1,068 B` `56fd265bbaea` |
+| Hand-drawn progressive SVG + GIF frames | [`liangdabiao/whiteboard-teacher-video-motion`](https://github.com/liangdabiao/whiteboard-teacher-video-motion) | 🟢 MIT `1,068 B` `092d7cba85ea` |
+| Lecture/seminar source as markdown | [`natolambert/colloquium`](https://github.com/natolambert/colloquium) | 🟢 MIT `1,071 B` `bce041d216bb` |
+| Agents over EXISTING decks | [`pamelafox/presentation-skills`](https://github.com/pamelafox/presentation-skills) | 🟢 MIT `1,067 B` `e6bf682c17c8` |
+| Code execution walk-throughs (CS) | [`precious112/code-slowmo`](https://github.com/precious112/code-slowmo) | 🟢 MIT `1,068 B` `0f8451cf2cc9` |
+| Decodable early-reading delivery | [`finereli/yarareads`](https://github.com/finereli/yarareads) | 🟢 MIT `1,066 B` `7c4cf856c78c` |
+| Embeddable STEM manipulables | [`itkdm/open-lab-components`](https://github.com/itkdm/open-lab-components) | 🟢 MIT `1,091 B` `8e86e6b3ee15` |
+
+🟢 **How it wires.** `manimvox` is the spine *because it is the only component that emits a CITED
+script* — research, citation, Manim render, narration. The citation file is the review artefact: the
+subject lead approves **the script and its sources**, never the rendered video, and approval is
+recorded against the asset before render spend. `whiteboard-teacher-video-motion` is the
+alternative renderer where a drawn explanation beats an animated one (and is the one with real
+traction — `42★` in eight days). `colloquium` holds lecture source in git so an agent can maintain
+it; `presentation-skills` is the harder half — reading the `.pptx` estate the institution already
+has. `code-slowmo` covers CS, where the misconception is execution order. `open-lab-components`
+drops the interactive piece into an existing LMS page via its JS API.
+
+🔴 **Constraints, stated.** `manimvox` is `6★` and a month old — read the code, budget Manim render
+time. 🔴 `whiteboard-teacher-video-motion` and `open-lab-components` are Chinese-language: the
+produced asset is language-neutral, the prompts are not. 🔴 **`yarareads` is phonics, and phonics is
+orthography-specific** — a Spanish or Bahasa deployment is a new decodability corpus, not a
+translation. 🟢 **Pair the output with `P83`/`TutorMoments` only where the asset is interactive; a
+video is reviewed by a human, not scored by a simulated student.**
+
+🟢 **Sizing: `6–8` weeks** to a running line with an approval gate and the first `50` assets.
+
+---
+
+## 🟢 `P89` — THE UNIVERSITY LAB-AND-AUTOGRADE ESTATE: grade code by RUNNING it, somewhere disposable (forty-third pass, `p838`, EMEA anchor)
+
+🔵 **The engagement this answers.** A university or vocational provider with programming or
+engineering cohorts wants automated assessment. 🔴 **Marking code by reading it is what an LLM does
+cheaply and badly. The defensible version runs the student's code against tests — which requires a
+disposable machine per student, and that is the half nobody budgets for.**
+
+🟢 **The estate, all Apache-2.0 or MIT, every grant byte-read `2026-11-16`.**
+
+| Layer | Component | Grant |
+|---|---|---|
+| Disposable execution target | [`netgroup-polito/CrownLabs`](https://github.com/netgroup-polito/CrownLabs) — K8s VMs/containers per student | 🟢 Apache-2.0 `11,356 B` `22f773775976` (ref **`master`**) |
+| Submission + evaluation client | [`rage/tmc-cli-rust`](https://github.com/rage/tmc-cli-rust) — TestMyCode, MOOC.fi lineage | 🟢 Apache-2.0 `11,352 B` `5f8dce79b134` |
+| JVM/Gradle grading reference | [`RiceComp215-Staff/RiceChecks`](https://github.com/RiceComp215-Staff/RiceChecks) | 🟢 Apache-2.0 `11,357 B` `c71d239df917` 🔴 stale `2023-01-09` |
+| Continuous project grading | [`drop-project-edu/drop-project`](https://github.com/drop-project-edu/drop-project) (`P84`) | 🟢 Apache-2.0 |
+| Quiz/assessment surface | [`socialsoftware/quizzes-tutor`](https://github.com/socialsoftware/quizzes-tutor) | 🟢 MIT `1,064 B` `c357a77752cd` (ref **`master`**) |
+| Commercial-MOOC delivery path | [`coursera/coursera_autograder`](https://github.com/coursera/coursera_autograder) | 🟢 Apache-2.0 `11,337 B` `1332404c1e9f` 🔴 stale |
+
+🟢 **How it wires, and the rule that makes it defensible.** CrownLabs issues a per-student
+environment; the grader runs **inside** it, so arbitrary student code executes against a blast
+radius of one disposable container. `tmc-cli-rust` or `drop-project` decides the **grade
+deterministically** — compiles, student's own tests, coverage threshold, teacher's tests, coding
+guidelines, performance. 🔴 **`P84`'s rule holds and is the whole governance story: the MODEL NEVER
+SETS THE GRADE. The agent writes only the FEEDBACK NARRATIVE over a deterministic result**, which is
+what survives an appeal and what Ofqual-style marking principles expect. `quizzes-tutor` covers the
+non-code assessment on the same stack.
+
+🔴 **Constraints, stated.** CrownLabs is a Kubernetes platform — a client without K8s capability is
+buying an operating burden; its ref is **`master`**. 🔴 `tmc-cli-rust` is the CLIENT half; the server
+estate (`tmc-langs`, `tmc-server`) is separate, so scope which half you run. 🔴 `RiceChecks`
+(`2023-01-09`) and `coursera_autograder` (`2026-01-28`) are **stale — mine them, do not depend on
+them**; Drop Project needs JDK 17–23 because Java 24+ removed the SecurityManager (JEP 486). 🟢
+**Three independent university autograders on the JVM (Helsinki, Rice, ISCTE) is enough to argue
+the pattern is institutionally normal rather than one group's habit.**
+
+🟢 **Sizing: `10–12` weeks** for a cohort-scale estate with deterministic grading, generated
+feedback and an evidence trail. 🔵 **EMEA anchor (Italy, Finland, Portugal provenance), portable to
+any provider that must defend a mark.**
+
+---
+
+
 ## 🟢 `P83` — PROVE THE TUTOR BEFORE YOU SHIP IT: a pedagogical acceptance gate in CI (forty-second pass, `p837`)
 
 🔵 **The engagement this answers.** A client — a ministry, a university system, a publisher, a
