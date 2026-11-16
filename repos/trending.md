@@ -4,6 +4,66 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🆕 `2026-11-16` (forty-fifth pass, `p840`) — 🟢 **THE PLATFORM VENDORS' OWN SUBSTRATE WAS NEVER FILED, while hundreds of third-party wrappers around it were — and `4` of `14` licence labels read this week were WRONG**
+
+🔴 **Two findings, and the first is a curation defect in this base rather than a discovery about the
+world.** 🟢 `5` foundation rows (`202` → `207`), `5` vertical rows (`167` → `172`), `2` declared
+licence gaps, `4` corrected licence labels.
+
+### 🟢 Finding 1 — the wrappers were keyword-discoverable; the substrate was only owner-discoverable
+
+🔴 **This base already files hundreds of third-party Moodle and Canvas connectors — the
+`*-moodle-mcp` / `*-canvas-mcp` long tail spans dozens of distinct owners.** 🔴 **It had NOT filed
+the platform vendors' own build substrate, which every one of those wrappers sits on top of.**
+
+🟢 **One query each — `user:moodlehq`, `user:openedx`, `user:ossu`, `user:gcompris`, `user:1edtech`,
+`user:learningequality`: `6` owners, `117` repositories, and the entire yield of this pass.**
+
+| Repo | Grant, byte-read `2026-11-16` | ★ / forks | Ref · pushed | Why it matters |
+|---|---|---|---|---|
+| [`maths/moodle-qtype_stack`](https://github.com/maths/moodle-qtype_stack) | 🟡 `GPL-3.0` `COPYING.txt` `35,146 B` `sha256₁₂:c53a65c2fd56` | `173★` / `183` | `master` · **`2026-11-15`** | 🟢 **CAS-graded mathematics assessment, ALIVE** — `version.php`: `release 4.14.0 for Moodle 4.2+`, `version 2026101500`. 🟢 Runs on Moodle AND ILIAS; **exposes a web-service API** — the non-GPL seam. |
+| [`gcompris/gcompris-qt`](https://github.com/gcompris/gcompris-qt) | 🟡 `GPL-3.0-or-later` at `LICENSES/` (REUSE) — 🔴 label `NONE` | `266★` / `184` | `master` · **`2026-11-13`** | 🟢 Early-childhood tier, barely covered here. 🔵 Mirror of `invent.kde.org`; upstream is KDE. |
+| [`mdjnelson/moodle-mod_customcert`](https://github.com/mdjnelson/moodle-mod_customcert) | 🟡 `GPL-3.0` `LICENSE.md` `35,146 B` 🟢 **byte-identical to STACK's GPL-3 text** | `115★` / **`205`** | `main` · **`2026-11-14`** | 🟢 **Fork ratio inverted `1.8:1` — deployed more than starred.** Credential issuance. |
+| [`moodlehq/moodle-tool_pluginskel`](https://github.com/moodlehq/moodle-tool_pluginskel) | 🟡 `GPL` `35,178 B` — 🔴 label `NOASSERTION` | `60★` / `47` | `main` · `2026-05-27` | 🟢 **The vendor's OWN plugin skeleton generator.** Makes an AI-plugin engagement start conformant. |
+| [`aws-samples/aws-refarch-moodle`](https://github.com/aws-samples/aws-refarch-moodle) | 🟢 **`Apache-2.0`** `11,357 B` `sha256₁₂:58d1e17ffe51` | `150★` / `142` | `master` · 🔴 `2025-05-07` | 🟢 **The only permissive artefact in the group** — Moodle at scale, CloudFormation. 🔴 `18` months stale: reference, not template. |
+| [`ossu/math`](https://github.com/ossu/math) | 🟢 **MIT** `1,086 B` `sha256₁₂:6e6ee97a68dc` | `9,354★` / `842` | `master` · `2026-08-08` | 🟢 Full curriculum with prerequisite ordering — the spine a tutor needs. |
+| [`ossu/data-science`](https://github.com/ossu/data-science) | 🔴 **`CC BY-SA 4.0`** `371 B` `sha256₁₂:cf2387f835ea` — 🔴 label `NOASSERTION` | **`22,420★`** / `4,379` | `master` · `2025-05-13` | 🔴 **Share-alike. The most consequential mislabel in the sector.** |
+| [`ossu/precollege-math`](https://github.com/ossu/precollege-math) | 🟢 **MIT** `1,096 B` `sha256₁₂:7b5718570e9d` | `346★` / `175` | `main` · `2026-06-01` | 🟢 Remediation — where demand actually is. Fork ratio `1:2`. |
+| [`ossu/computer-science-cn`](https://github.com/ossu/computer-science-cn) | 🟢 **MIT** `1,075 B` `sha256₁₂:4106ff2ca607` | `1,603★` / `183` | `master` · 🔴 `2023-09-04` | 🟡 APAC/Chinese translation base. 🔴 Stale `2+` years. |
+| [`openedx/django-user-tasks`](https://github.com/openedx/django-user-tasks) | 🟢 **`Apache-2.0`** `11,356 B` `sha256₁₂:c5accbbd8546` | `33★` / `22` | `master` · **`2026-11-16`** | 🟢 The one Apache-2.0 piece of the Open edX estate; pushed the day measured. |
+
+🔵 **Also enumerated and deliberately not filed:** `openedx/frontend-template-application`
+(`AGPL-3.0`, byte-read `34,522 B` `sha256₁₂:20b067f86de3`, pushed `2026-11-16`) — live and real, but
+AGPL on a frontend template is a decision a client makes, not a shelf default.
+
+### 🔴 Finding 2 — `4` of `14` licence labels were wrong, and all four erred toward MORE restriction
+
+🔴 **`ossu/data-science` `NOASSERTION` → `CC BY-SA 4.0`. `nurkan1/anatria-3d` `NOASSERTION` →
+`BSL 1.1` (+ `CC BY-SA` / `CC BY 4.0` data). `gcompris-qt` `NONE` → `GPL-3.0-or-later`.
+`moodle-tool_pluginskel` `NOASSERTION` → `GPL`.**
+
+🟢 **Direction of error is the finding: a curator treating unlabelled repos as "probably permissive"
+is wrong in the expensive direction every time.** 🔵 Two mechanisms: the **REUSE convention** puts
+grants under `LICENSES/` not the root, and **multi-licence trees** defeat single-label classification
+(`anatria-3d` carries three). → `T141`
+
+### 🔴 `2` declared licence gaps — measured, not assumed
+
+- 🔴 **[`ossu/math-br`](https://github.com/ossu/math-br) (`181★`, LATAM — Brazilian mathematics
+  curriculum): NO licence file.** `LICENSE` → `404`, `LICENSE.md` → `404`, `README.md` → `200`.
+  🟢 **The only Brazilian-curriculum artefact found; a licensing email is cheaper than a BNCC
+  rebuild.** → `P93`
+- 🔴 **`fmcorz/moodle-block_xp` (`164★`, gamification/XP): no licence file** at `LICENSE`,
+  `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.txt`. 🔵 Moodle convention is GPL, **but
+  convention is not a grant** — named, not filed.
+
+### 🔵 Live controls re-read the same day
+
+🟢 `HKUDS/DeepTutor` → **`59,528★`** `Apache-2.0` pushed `2026-11-15` (**`+14★` on `p839`**).
+🟢 `THU-MAIC/OpenMAIC` → **`43,672★`** `MIT` pushed **`2026-11-16`**. 🔴
+`withmarbleapp/os-taxonomy` → `7,712★` pushed `2026-11-15`, **`ODbL-1.0`** — 🔴 **share-alike on the
+database**, a materially different obligation from the MIT/Apache rows beside it. → `P93`
+
 ## 🆕 `2026-11-16` (forty-fourth pass, `p839`) — 🟢 **THE LATAM GAP CLOSES ON A DATA LICENCE, AND THE VOCATIONAL GAP CLOSES ON A `28`-REPOSITORY ESTATE: both were invisible to keyword search for the same reason**
 
 🔴 **Two gaps this base has carried for multiple passes closed in the same measurement window, and

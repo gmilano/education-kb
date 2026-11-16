@@ -4,6 +4,55 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Forty-fifth pass (`p840`, 2026-11-16) — **`5` rows (`202` → `207`): the OSSU curriculum estate lands, and the largest member of it is NOT build-safe for the reason GitHub's label does not say**
+
+🟢 **Every payload byte-read `2026-11-16` at the real default ref, with size and `sha256₁₂`.**
+
+🔵 **Why this estate and why now.** `p840`'s agent legs were contaminated (`T140`), so the pass
+changed channel to owner enumeration — `user:ossu`, `user:moodlehq`, `user:openedx`,
+`user:gcompris`, `user:1edtech`, `user:learningequality` — which is a channel keyword ranking cannot
+reach. 🟢 **`6` owners, `117` repositories enumerated, and the curriculum tier below was sitting in
+plain sight at `22,420★` with a licence GitHub reports as `NOASSERTION`.**
+
+### 🟢 What moved onto the foundation shelf
+
+| Repo | Grant, byte-read `2026-11-16` | ★ / forks | Ref · pushed | Region | Why it is a foundation |
+|---|---|---|---|---|---|
+| [`ossu/math`](https://github.com/ossu/math) | 🟢 **MIT** `1,086 B` `sha256₁₂:6e6ee97a68dc` | `9,354★` / `842` | `master` · `2026-08-08` | Global | 🟢 **A complete self-taught mathematics curriculum with prerequisite ordering.** The spine a tutor agent needs and almost never has — adaptable and shippable without share-alike. |
+| [`ossu/data-science`](https://github.com/ossu/data-science) | 🔴 **`CC BY-SA 4.0`** — byte-read `LICENSE.md` `371 B` `sha256₁₂:cf2387f835ea`, links `creativecommons.org/licenses/by-sa/4.0/`. 🔴 **GitHub label: `NOASSERTION`** | **`22,420★`** / `4,379` | `master` · `2025-05-13` | Global | 🟡 **The largest curriculum artefact measured this pass, and the one a curator would most likely get wrong.** 🔴 **Share-alike: a derivative curriculum must ship under `CC BY-SA 4.0` too.** 🔴 Also `18` months without a push. |
+| [`ossu/precollege-math`](https://github.com/ossu/precollege-math) | 🟢 **MIT** `1,096 B` `sha256₁₂:7b5718570e9d` | `346★` / `175` | `main` · `2026-06-01` | Global | 🟢 **Remediation, which is the actual demand.** Fork ratio `1:2` — read and re-used, not just starred. The on-ramp beneath `ossu/math`. |
+| [`ossu/computer-science-cn`](https://github.com/ossu/computer-science-cn) | 🟢 **MIT** `1,075 B` `sha256₁₂:4106ff2ca607` | `1,603★` / `183` | `master` · **`2023-09-04`** | APAC — China | 🟡 **A Chinese-language translation of a curriculum this base already files in English.** 🔴 **Stale by over two years: a translation BASE to re-verify against upstream, never a live dependency.** |
+| [`openedx/django-user-tasks`](https://github.com/openedx/django-user-tasks) | 🟢 **`Apache-2.0`** `LICENSE.txt` `11,356 B` `sha256₁₂:c5accbbd8546` | `33★` / `22` | `master` · **`2026-11-16`** | Global | 🟢 **The one piece of the Open edX estate that is Apache-2.0 rather than AGPL** — user-triggered async task management, pushed the day it was measured. 🔵 Low stars, platform-vendor maintained: infrastructure, not a product. |
+
+### 🔴 The declared gap — LATAM, named precisely so it is actionable
+
+🔴 **`ossu/math-br` (`181★` / `11`, `main`, pushed `2025-07-22`) — a BRAZILIAN mathematics curriculum,
+and it carries NO licence at all.** 🟢 **Measured, not assumed: `LICENSE` → `404`, `LICENSE.md` →
+`404`, `README.md` → `200`.** 🔴 **No licence file means no grant: default copyright, nothing to
+build on.**
+
+🔵 **This is the informed gap, and it is a cheap one to close.** It is the only
+Brazilian-curriculum artefact the pass found in the region; rebuilding a BNCC-aligned mathematics
+curriculum from scratch is a multi-month content exercise, while **asking its author to add an
+`MIT` or `CC BY` file is an email.** 🟢 **Recorded as a licensing conversation to open, not as a
+dead end.** → `P93`.
+
+🔴 **A second licence gap, same class:** `fmcorz/moodle-block_xp` (`164★` / `53`, `master`, pushed
+`2026-10-03`) — a gamification plugin with experience points and levels, **and no licence file
+found** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.txt` all absent at the default
+ref). 🔵 Moodle plugins are conventionally GPL by the platform's own requirement, **but convention
+is not a grant** — so it is named here and NOT filed on the vertical shelf.
+
+### 🔵 Measured and corroborated — the sector's two headline repos, same day
+
+🟢 Re-read as live controls, both moving: [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)
+→ **`59,528★`**, `Apache-2.0`, pushed `2026-11-15` (**`+14★` on `p839`'s `59,514`**);
+[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) → **`43,672★`**, `MIT`, `main`, pushed
+**`2026-11-16`**. 🔵 **And a licence nuance this base should carry explicitly:**
+[`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) → `7,712★`, pushed
+`2026-11-15`, **`ODbL-1.0`** — 🔴 **a database licence with share-alike on the database itself**,
+which is a materially different obligation from the MIT/Apache rows around it. → `P93`.
+
 ## 🟢 Forty-fourth pass (`p839`, 2026-11-16) — **`7` rows (`195` → `202`): the LATAM gap this base has declared for eight consecutive passes is answered, and the answer is DATA under an attribution-only licence, not an agent**
 
 🟢 **Every payload byte-read `2026-11-16` at the real default ref, with size and `sha256₁₂`.**

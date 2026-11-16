@@ -4,6 +4,94 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Forty-fifth pass (`p840`, 2026-11-16) — `3` trends (`T140`–`T142`)
+
+### 🔴 `T140` — The education discovery channel has been CAPTURED by the coding-agent skills ecosystem, and star-ranked keyword search no longer finds this sector
+
+🟢 **Measured, `2026-11-16`.** A leg built from education's own vocabulary —
+`agent skills teaching OR tutoring OR pedagogy`, `stars:>25`, `pushed:>2026-09-01` — returned
+eighteen repositories ranked `325,285★` down to `60,618★`. 🔴 **Zero of the eighteen are education
+products.** They are coding-agent skill collections (`mattpocock/skills`, `obra/superpowers`,
+`anthropics/skills`, `addyosmani/agent-skills`), agent harnesses, a security-audit skill, a
+marketing-skill pack, an ADHD-output skill, a diagramming skill.
+
+🟢 **Two independent generative causes, and both are permanent:**
+
+1. 🔴 **`learning` resolves to MACHINE learning.** Corroborated on a separate leg, where
+   `contrastive-lm/clm` (`3,204★`), `nuglifeleoji/sentry` (`1,521★`), `psrben/visionhope`
+   (`1,415★`), `volotat/mini-agi` (`1,309★`) and `fudan-generative-vision/remory` (`783★`) all
+   ranked on education queries.
+2. 🔴 **`skill` and `teaching` now belong to the agent-tooling ecosystem**, which is two to three
+   ORDERS OF MAGNITUDE larger by stars than education software. The largest genuine education repo
+   on these shelves is `HKUDS/DeepTutor` at `59,528★`; **five agent-skill repositories outrank it on
+   an education query.**
+
+🟢 **The control proving this is contamination and not blindness: the same run's twelve topic legs
+returned `166` unique repositories of which `109` (`66%`) were ALREADY filed here.** 🔵 Where the
+channel is real, this base is saturated; where the channel is large, it is pointed at another
+industry.
+
+🟢 **The operational consequence, and `p840` acted on it:** education discovery must move to
+**owner enumeration** (`user:ossu`, `user:moodlehq`, `user:openedx` — `6` owners, `117` repositories,
+and the pass's entire foundation and vertical yield came from there), **topic legs**, and
+**licence reads**. 🔴 **A pass that reports "nothing new in education this week" from a keyword leg
+is reporting an instrument artefact.** 🔵 This is the same class of error `p839` withdrew for APAC —
+twice now, an English-keyword leg has been mistaken for the sector.
+
+### 🔴 `T141` — GitHub's licence label was WRONG or ABSENT on `4` of `14` repositories measured (`29%`), and every error pointed toward more restriction, not less
+
+🟢 **Byte-read against the label, `2026-11-16`, `14` repositories:**
+
+| Repo | GitHub label | 🟢 Byte-read actual | Why the error matters |
+|---|---|---|---|
+| [`ossu/data-science`](https://github.com/ossu/data-science) | 🔴 `NOASSERTION` | 🔴 **`CC BY-SA 4.0`** (`371 B`, `sha256₁₂:cf2387f835ea`) | **`22,420★`.** Share-alike on derivative curricula — the single most consequential miss available in this sector |
+| [`nurkan1/anatria-3d`](https://github.com/nurkan1/anatria-3d) | 🔴 `NOASSERTION` | 🔴 **`BSL 1.1`** (`5,557 B`, `sha256₁₂:179c0cb1e12d`) + `CC BY-SA` / `CC BY 4.0` data | **Not open source at all.** No production revenue use before `2030-10-30` |
+| [`gcompris/gcompris-qt`](https://github.com/gcompris/gcompris-qt) | 🔴 `NONE` | 🟡 **`GPL-3.0-or-later`** at `LICENSES/GPL-3.0-or-later.txt` (REUSE) | Label said "no licence"; the project is properly licensed, just not at the root |
+| [`moodlehq/moodle-tool_pluginskel`](https://github.com/moodlehq/moodle-tool_pluginskel) | 🔴 `NOASSERTION` | 🟡 **`GPL`** (`35,178 B`, `sha256₁₂:ccb349b4132e`) | A platform VENDOR's own repo mislabelled |
+
+🔴 **The direction of error is the finding.** 🟢 **All four errors resolved toward MORE restriction
+than an optimistic curator would assume from `NOASSERTION`/`NONE`** — share-alike, source-available,
+and copyleft. 🔵 **A curator who treats an unlabelled repo as "probably permissive, verify later"
+will be wrong in the expensive direction every time.** 🟢 Conversely `gcompris-qt` shows the
+opposite failure: `NONE` caused a properly-licensed, actively-maintained early-childhood suite to
+look unusable.
+
+🟢 **Two mechanisms, both now known and both cheap to defeat:** the **REUSE convention** puts grants
+in `LICENSES/` rather than at the root, and **multi-licence repositories** (code under one grant,
+data under another) defeat single-label classification entirely. 🔵 `anatria-3d` carries **three**
+grants in one tree.
+
+🟢 **Method that worked, and is now this base's standing procedure:** byte-read `LICENSE`,
+`LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.txt` at the **real default ref** from
+`git ls-remote --symref`, record size and `sha256₁₂`, 🔴 **and when the body says `Creative Commons`
+or `Business Source`, read the PARAMETERS** — variant, Additional Use Grant, Change Date. 🟢 The
+`anatria-3d` row is only useful because the parameters were read: "`BSL 1.1`" alone would have said
+*unusable*, when teaching use is in fact granted today.
+
+### 🔴 `T142` — The academic-integrity arms race is now asymmetric by LICENCE: evasion is MIT and mainstream, detection is procured
+
+🟡 **Demand side (NOT primary-verified): AI-detection tool use in higher education rose `38%` →
+`68%` in one year**, and 🟡 `86%` of higher-education students report using AI in their studies.
+
+🔴 **Supply side, measured `2026-11-16`: [`blader/humanizer`](https://github.com/blader/humanizer)
+— `69,524★`, `5,474` forks, 🟢 MIT (`1,065 B`, `sha256₁₂:b35b41535e51`), pushed `2026-11-10` —
+removes the signatures of AI-generated writing.** 🔵 **It outranks every genuine education repository
+on these shelves except `DeepTutor` and `OpenMAIC`.**
+
+🔴 **The asymmetry, stated precisely:** the evasion tool is free, MIT-licensed, forkable `5,474`
+times and improves continuously in public; the detection tool is a per-seat procurement with a
+vendor roadmap. 🟢 **`5,474` forks is the number to quote** — forks, not stars, measure use.
+
+🔵 **What this means for an assessment engagement, and it is a recommendation this base will stand
+behind: an integrity programme whose control is DETECTION is buying the losing side of a public
+arms race.** 🟢 The defensible designs are the ones that do not depend on classifying finished text
+— **process evidence** (draft history, revision trails), **in-person or supervised demonstration**,
+and **assessment redesign toward artefacts an AI cannot produce unattended**. 🔵 These shelves
+already hold the instruments for the first and third: `p839`'s `FAIR` (`azapg/FAIR`, MIT) makes
+grading approaches comparable on a client's own submissions, and `CorrectExam` (MIT) grades paper
+exams entirely in-browser so handwriting never leaves the marker's machine. 🟢 **Paper and process
+are not nostalgia here; they are the measured response to an MIT-licensed `69.5k★` adversary.**
+
 ## `T137` — the ORGANISATION-as-unit rule generalises beyond public bodies, and the English-keyword channel was mislabelling APAC supply as absence (forty-fourth pass, `p839`)
 
 🟢 **Two findings that are the same finding, stated together because separating them is what cost

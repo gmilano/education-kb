@@ -4,6 +4,86 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🆕 `2026-11-16` (forty-fifth pass, `p840`) — 🔴 **THE EDUCATION AGENT CHANNEL RETURNED `18` OF `18` NON-EDUCATION HITS: this week's trend in education agents is that star-ranked keyword search has stopped measuring education**
+
+🔴 **`1` new agent row (`423` → `424`), `3` named refusal classes, `1` instrument substitution, and
+one finding large enough to change how every future pass searches** → `T140`.
+
+### 🔴 What the sector's own vocabulary returned this week
+
+🟢 **Leg, run `2026-11-16`: `agent skills teaching OR tutoring OR pedagogy`, `stars:>25`,
+`pushed:>2026-09-01`, ranked by stars.** 🔴 **Top eighteen, and not one is an education product:**
+
+| ★ | Repo | What it actually is |
+|---|---|---|
+| `325,285` | `mattpocock/skills` | Coding-agent skills |
+| `318,120` | `obra/superpowers` | Agentic skills framework |
+| `303,914` | `affaan-m/ecc` | Agent harness optimisation |
+| `195,443` | `anthropics/skills` | Agent Skills repository |
+| `161,229` | `langgenius/dify` | Agentic workflow builder |
+| `159,571` | `snailclimb/javaguide` | Java interview guide |
+| `144,770` | `shubhamsaboo/awesome-llm-apps` | Agent/RAG app collection |
+| `120,496` | `juliusbrussee/caveman` | Token-reduction skill |
+| `117,997` | `addyosmani/agent-skills` | Engineering skills for agents |
+| `116,311` | `leonxlnx/taste-skill` | Art-direction skill |
+| `96,863` | `tt-a1i/archify` | Diagramming skill |
+| `85,590` | `lobehub/lobehub` | Team agent platform |
+| `80,757` | `openmontageinc/openmontage` | Agentic video production |
+| `73,311` | `cloudflare/security-audit-skill` | Security-audit skill |
+| `69,523` | `blader/humanizer` | 🔴 **AI-writing-signature removal** |
+| `67,793` | `mvanhorn/last30days-skill` | Research skill |
+| `61,306` | `ayghri/i-have-adhd` | Agent-output formatting |
+| `60,618` | `coreyhaines31/marketingskills` | Marketing skills |
+
+🔵 **The leg was alive and ranked correctly — it ranks a different industry.** 🔴 **`skill` and
+`teaching` now belong to the coding-agent ecosystem, and `learning` resolves to machine learning.**
+🟢 **For scale: the largest genuine education repo on these shelves is `HKUDS/DeepTutor` at
+`59,528★` — five agent-skill repositories outrank it on an education query.** → `T140`
+
+🟢 **Control, so this reads as contamination and not as blindness: the same run's twelve topic legs
+returned `166` unique repositories, `109` of them (`66%`) ALREADY filed here.** 🔵 Saturated where
+real, captured where large.
+
+### 🟡 The one genuine new agent — and it is `BSL 1.1`, which no label would have told us
+
+| Agent | Repo | Grant (byte-read `2026-11-16`) | ★ / forks | Region | Signal |
+|---|---|---|---|---|---|
+| **Anatria3D** | [`nurkan1/anatria-3d`](https://github.com/nurkan1/anatria-3d) | 🔴 **`BSL 1.1`** `5,557 B` `sha256₁₂:179c0cb1e12d` — GitHub label `NOASSERTION` | `59★` / `18` | EMEA | 🟢 **An AI tutor that DRIVES THE VIEWPORT** of a local-first 3D anatomy atlas — the tutor manipulates the model, it does not chat beside it. 🔴 Three grants in one tree: `BSL 1.1` code, `CC BY-SA` meshes, `CC BY 4.0` female atlas. 🟢 **Teaching use granted today; revenue deployment NOT before `2030-10-30`** (Change Licence `Apache-2.0`). |
+
+🔵 **Filed because the parameters were read, not the label.** 🔴 "`NOASSERTION`" would have sent it
+to the refusal pile; "`BSL 1.1`" alone would have read as unusable. 🟢 **The Additional Use Grant
+explicitly names students, teachers, schools and universities — so a university can run it in
+teaching now.** That distinction only exists because the grant body was byte-read. → `T141`
+
+### 🔴 `3` refusal CLASSES — named so no future pass re-pays for them
+
+- 🔴 **`blader/humanizer` (`69,524★` / `5,474` forks, MIT, pushed `2026-11-10`) — refused as an agent,
+  PROMOTED to intel.** It is not an education tool; **it is what education assessment is now up
+  against**, free and forkable. → `T142`
+- 🔴 **The ML-"learning" class:** `contrastive-lm/clm` `3,204★`, `nuglifeleoji/sentry` `1,521★`,
+  `psrben/visionhope` `1,415★`, `volotat/mini-agi` `1,309★`, `fudan-generative-vision/remory` `783★`.
+  Machine-learning research ranking on education legs.
+- 🔴 **The developer-tutorial class:** `eugenp/tutorials` `37,308★`, `changkun/modern-cpp-tutorial`
+  `25,957★`, `eunomia-bpf/bpf-developer-tutorial` `4,340★`. Engineering docs with no learner model,
+  no assessment, no instructor surface.
+
+🟡 **Weighed and NOT filed:** `maludb/learn-claude` (`53★`, MIT `1,069 B` `sha256₁₂:d7829e8f73b9`,
+pushed `2026-07-03`) — a real exam-prep tutor, left off for single-vendor scope and `4½` months
+without a push. 🔵 Recorded so the next pass sees it was weighed.
+
+### 🔵 Instrument conditions, `2026-11-16` — `curl -sI` re-tested and again REJECTED
+
+🔴 **The curation contract names `curl -sI` as the URL verifier. `p840` re-ran the control and
+substituted it.** 🟢 **Fresh controls: `torvalds/linux` → `403`, `HKUDS/DeepTutor` → `403`, invented
+`zzz-not-real-org-9x7/zzz-nope-9x7` → `403`.** 🔴 **Famous, real and nonexistent all return `403`:
+zero discriminating power.**
+
+🟢 **Substituted with three controlled instruments:** `git ls-remote --symref` (every real slug
+resolved; the invented slug failed), `raw.githubusercontent.com` (🟢 `200` real `LICENSE`, 🟢 **`404`
+invented** — this is the verifier that actually discriminates), `gh api search/repositories`
+(control `repo:HKUDS/DeepTutor` → `59,528★` `Apache-2.0` pushed `2026-11-15`). 🔴
+`api.github.com/repos` → `403`. 🟢 Search rate limit `30/30`.
+
 ## `2026-11-16` (forty-fourth pass, `p839`) — **`9` agent rows, and `5` of them are APAC-origin: this base's "APAC supply is thin" line was an INSTRUMENT artefact and is now withdrawn**
 
 🟢 **`9` new build-safe agent rows (`414` → `423`), `7` foundation rows (`195` → `202`), `3` vertical

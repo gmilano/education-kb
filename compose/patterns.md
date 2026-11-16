@@ -4,6 +4,89 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Forty-fifth pass (`p840`, 2026-11-16) — `2` recipes (`P92`–`P93`), both built from rows measured THIS pass
+
+### 🟢 `P92` — Moodle AI assessment + credentialing line, wired so the GPL boundary is explicit and the estimate survives legal review
+
+🔵 **The engagement this answers:** an institution on Moodle wants AI-assisted STEM assessment and
+automated credential issuance, and the studio needs to deliver without accidentally putting its own
+orchestration layer under GPL.
+
+🟢 **Components, every grant byte-read `2026-11-16`:**
+
+| Step | Component | Grant | Zone |
+|---|---|---|---|
+| 1. Scaffold | [`moodlehq/moodle-tool_pluginskel`](https://github.com/moodlehq/moodle-tool_pluginskel) `60★` | 🟡 `GPL` (`35,178 B`) | 🔴 Inside |
+| 2. Assess | [`maths/moodle-qtype_stack`](https://github.com/maths/moodle-qtype_stack) `173★`, `v4.14.0 for Moodle 4.2+` | 🟡 `GPL-3.0` (`35,146 B`) | 🔴 Inside |
+| 3. Issue credential | [`mdjnelson/moodle-mod_customcert`](https://github.com/mdjnelson/moodle-mod_customcert) `115★` / `205` forks | 🟡 `GPL-3.0` | 🔴 Inside |
+| 4. Run it | [`aws-samples/aws-refarch-moodle`](https://github.com/aws-samples/aws-refarch-moodle) `150★` | 🟢 `Apache-2.0` | 🟢 Outside |
+| 5. Style gate | [`moodlehq/moodle-cs`](https://github.com/moodlehq/moodle-cs) `28★` + [`moodle-local_codechecker`](https://github.com/moodlehq/moodle-local_codechecker) `73★` | 🟡 `GPL-3.0` (`moodle-cs`) · 🔴 **`codechecker` label `NONE` — not grant-verified this pass** | 🔴 Inside (CI only) |
+| 6. Dev env | [`moodlehq/moodle-php-apache`](https://github.com/moodlehq/moodle-php-apache) `77★` | 🔴 No licence file found | 🟡 Dev only — do not ship |
+
+🟢 **How to wire it, and the one decision that matters.** 🔴 **Do NOT call STACK in-process from your
+agent.** 🟢 **Call it over its web-service API** — STACK's own `doc/en/About` documents an API that
+serves questions as a web service, and `p840` verified that page by byte-read. 🔵 **An agent that
+reaches assessment over HTTP has not linked to GPL code**, so the orchestration layer, the model
+routing and any Globant-authored IP stay outside the copyleft boundary. 🔴 Steps `1`–`3` and `5` are
+inside the Moodle tree and their deliverables ship GPL; say so in the SoW rather than discovering it
+at handover.
+
+🟢 **Two cautions carried from measurement, not guesswork:** 🔴 the AWS reference architecture has not
+been pushed since **`2025-05-07`** (`18` months) — read it as a design reference and re-derive the
+templates against current CloudFormation; 🔴 `moodle-php-apache` has **no licence file at its default
+ref**, so it is a local development convenience and must not enter a client deliverable.
+
+🟢 **Why STACK and not an LLM grader:** STACK grades a *mathematical expression* with a CAS, so it is
+deterministic and auditable — exactly the property an EU high-risk grading system needs
+(`intel/market.md`, EMEA). 🔵 **The LLM belongs in feedback and hint generation around a
+deterministic grader, never in the score itself.** 🟢 Bonus reach: STACK also runs on **ILIAS**, so
+this line is portable across the two copyleft LMSes common in EMEA public education.
+
+### 🟢 `P93` — Curriculum-grounded tutor where the CONTENT licence, not the model, decides what can ship
+
+🔵 **The engagement this answers:** a client wants a tutor that follows a real curriculum with
+prerequisite ordering rather than improvising a syllabus per learner. 🔴 **The binding constraint is
+never the model — it is whether the curriculum content can be adapted and shipped.**
+
+🟢 **The spine, chosen ON LICENCE, all byte-read `2026-11-16`:**
+
+- 🟢 **USE as the spine: [`ossu/math`](https://github.com/ossu/math) — `MIT`, `9,354★`** — full
+  curriculum with prerequisite ordering, adaptable and shippable with attribution only.
+- 🟢 **USE as the on-ramp: [`ossu/precollege-math`](https://github.com/ossu/precollege-math) —
+  `MIT`, `346★` / `175` forks** — remediation, which is where the actual demand sits.
+- 🔴 **DO NOT ship derivatives of [`ossu/data-science`](https://github.com/ossu/data-science) —
+  `CC BY-SA 4.0`** (byte-read; GitHub says `NOASSERTION`). 🔵 At `22,420★` it is the obvious thing to
+  reach for and **share-alike means the client's derived curriculum must itself ship `CC BY-SA 4.0`.**
+  🟢 Reference it, link it, teach from it — do not fold it into proprietary courseware.
+- 🔴 **Same trap, different licence family:
+  [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) — `ODbL-1.0`,
+  `7,712★`** — a `1,590`-topic curriculum graph with `3,221` prerequisite edges, 🔴 **share-alike on
+  the DATABASE.** 🔵 It is the best-shaped prerequisite graph available and the most likely to be
+  copied without reading its grant.
+
+🟢 **Wiring:** curriculum graph → topological prerequisite ordering → mastery state per learner →
+tutor loop. 🔵 **Pair it with a learner model rather than a chat history** — `p839`'s
+`hhyqhh/inno-agent` (`MIT`, `1,497★`) is the row on these shelves built around exactly that (`L1`
+profile / `L2` agent-queryable wiki / `L3` session recall), so `P93` composes with it directly
+instead of re-implementing mastery tracking.
+
+🟢 **Regional placement, each stated with its measured limit:**
+
+- 🟡 **APAC / Chinese-language delivery:**
+  [`ossu/computer-science-cn`](https://github.com/ossu/computer-science-cn) is `MIT` at `1,603★`,
+  🔴 **but last pushed `2023-09-04`** — a translation base to re-verify against English upstream,
+  never a live dependency.
+- 🔴 **LATAM / Brazil — the gap, and the cheapest fix in this document:**
+  [`ossu/math-br`](https://github.com/ossu/math-br) (`181★`) is the only Brazilian-curriculum
+  artefact `p840` found and it has **no licence file** (`LICENSE` → `404`, `LICENSE.md` → `404`,
+  measured). 🟢 **Rebuilding a BNCC-aligned mathematics curriculum is months of content work;
+  asking the author for an `MIT` or `CC BY` file is an email.** 🔵 **Open that conversation before
+  quoting the rebuild** — and until a grant exists, run Brazilian engagements off `ossu/math` (`MIT`)
+  with localisation as scoped work.
+- 🟢 **EMEA:** keep the grader deterministic (`P92`) — personalised learning paths that *steer* the
+  learner are inside the reported high-risk scope, so the curriculum graph should be inspectable and
+  the ordering explainable, which an explicit prerequisite graph gives you for free.
+
 ## 🟢 `P90` — THE LATAM EVIDENCE ENGAGEMENT: build on licence-clean national open data, because the regional agent supply is measurably empty (forty-fourth pass, `p839`, LATAM anchor)
 
 🔴 **Why this recipe exists.** Four consecutive passes declared a LATAM supply gap, and `p839`

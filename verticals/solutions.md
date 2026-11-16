@@ -4,6 +4,40 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Forty-fifth pass (`p840`, 2026-11-16) — **`5` rows (`167` → `172`): the OFFICIAL platform-vendor substrate, which this base had skipped while filing hundreds of third-party wrappers around it**
+
+🟢 **Every grant byte-read `2026-11-16` at the real default ref.**
+
+🔴 **The structural finding first, because it is a curation defect and not a discovery.** 🔵 This
+base already files **hundreds** of third-party Moodle/Canvas connectors — the `*-moodle-mcp` and
+`*-canvas-mcp` long tail runs to many dozens of distinct owners. 🔴 **It did NOT file the platform
+vendors' own build substrate: `moodlehq/*` and `openedx/*` repositories that the connectors all sit
+on top of.** 🟢 **One query each — `user:moodlehq`, `user:openedx` — surfaced them.** 🔵 The wrappers
+were discoverable by keyword; the substrate was only discoverable by owner.
+
+### 🟢 What moved onto the vertical shelf
+
+| Platform / plugin | Repo | Grant, byte-read `2026-11-16` | ★ / forks | Ref · pushed | What it is, and the licence boundary it imposes |
+|---|---|---|---|---|---|
+| **STACK** (assessment for mathematics) | [`maths/moodle-qtype_stack`](https://github.com/maths/moodle-qtype_stack) | 🟡 **`GPL-3.0`** — `COPYING.txt` `35,146 B` `sha256₁₂:c53a65c2fd56` | `173★` / `183` | `master` · **`2026-11-15`** | 🟢 **The real thing for STEM assessment, and it is ALIVE** — `version.php` reads `release 4.14.0 for Moodle 4.2+`, `version 2026101500`. 🟢 From its own `doc/en/About`: *"an assessment system for mathematics, science and related disciplines"* where **students answer with a mathematical expression**, graded by CAS, plus free-text mathematical argument. 🟢 **Runs on Moodle AND ILIAS, and exposes an API to serve questions as a web service** — that API is the seam a non-GPL agent can call without linking. → `P92` |
+| **GCompris** (early childhood) | [`gcompris/gcompris-qt`](https://github.com/gcompris/gcompris-qt) | 🟡 **`GPL-3.0-or-later`** — 🔴 **not at the repo root.** `COPYING` → `404`, `COPYING.md` → `404`; the grant is at `LICENSES/GPL-3.0-or-later.txt` → `200` (REUSE convention). 🔴 **GitHub label: `NONE`** | `266★` / `184` | `master` · **`2026-11-13`** | 🟢 **The early-childhood tier, which this base barely covers** — Qt Quick activity suite for young learners, actively pushed. 🔵 A mirror of `invent.kde.org/education/gcompris`, so **upstream is KDE and GitHub is downstream**: file issues upstream. 🔴 Copyleft: deploy and customise, never re-licence. |
+| **Custom certificates** (credentialing) | [`mdjnelson/moodle-mod_customcert`](https://github.com/mdjnelson/moodle-mod_customcert) | 🟡 **`GPL-3.0`** — `LICENSE.md` `35,146 B` `sha256₁₂:c53a65c2fd56` 🟢 **(byte-identical GPL-3 text to STACK's — a useful cross-check that both reads are clean)** | `115★` / `205` | `main` · **`2026-11-14`** | 🟢 **Dynamically generated, fully customisable certificates.** 🟢 **Inverted fork ratio `1.8:1` — deployed far more than it is starred**, which is the signature of an operations plugin rather than a demo. The issuance end of a credentialing line. → `P92` |
+| **Moodle plugin scaffolder** | [`moodlehq/moodle-tool_pluginskel`](https://github.com/moodlehq/moodle-tool_pluginskel) | 🟡 **`GPL`** — `LICENSE.md` `35,178 B` `sha256₁₂:ccb349b4132e`. 🔴 **GitHub label: `NOASSERTION`** | `60★` / `47` | `main` · `2026-05-27` | 🟢 **The VENDOR's own generator of Moodle plugin skeletons.** 🔵 Unglamorous and decisive: it is what makes an AI-plugin engagement start from a conformant tree instead of a hand-rolled one. → `P92` |
+| **Moodle reference architecture** | [`aws-samples/aws-refarch-moodle`](https://github.com/aws-samples/aws-refarch-moodle) | 🟢 **`Apache-2.0`** — `LICENSE` `11,357 B` `sha256₁₂:58d1e17ffe51` | `150★` / `142` | `master` · 🔴 **`2025-05-07`** | 🟢 **The one Apache-2.0 artefact in this group** — Moodle at scale with CloudFormation templates, so the infrastructure layer is separable from Moodle's GPL. 🔴 **`18` months without a push: treat as a REFERENCE to read, not a template to apply unreviewed.** → `P92` |
+
+### 🔵 The licence boundary this group forces a studio to state out loud
+
+🔴 **Four of the five rows are copyleft, and that is not incidental — it is Moodle's platform
+requirement propagating.** 🟢 **The usable split, stated once so an estimate can rely on it:**
+
+- 🔴 **Inside the Moodle plugin tree → GPL, and the deliverable ships GPL.** Scaffolder, question
+  type and certificate module are all in this zone.
+- 🟢 **Outside it → free.** The `Apache-2.0` infrastructure layer and any external agent
+  orchestration stay separable.
+- 🟢 **The seam is STACK's web-service API** — an agent that calls assessment over HTTP has not
+  linked to it. 🔵 **That one sentence is what makes a mixed-licence education engagement
+  estimable.** → `P92`
+
 ## 🟢 Forty-fourth pass (`p839`, 2026-11-16) — **`3` rows (`164` → `167`): the PAPER-EXAM tier opens, and two school-management systems are filed with their fork ratios read rather than their stars**
 
 🟢 **Every grant byte-read `2026-11-16` at the real default ref.**

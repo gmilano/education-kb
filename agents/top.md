@@ -4,6 +4,93 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟡 Forty-fifth pass (`p840`, 2026-11-16) — **`1` agent row (`423` → `424`), and the honest headline is the NIL: the education agent channel returned `18` of `18` top hits that are not education at all**
+
+🟢 **Every figure below measured `2026-11-16`: real default ref from `git ls-remote --symref`, grant
+payload byte-read from `raw.githubusercontent.com` AT that ref with size and `sha256₁₂`, and
+stars/forks/`pushed_at` from the GitHub repository index the same day.**
+
+🔴 **This pass adds ONE agent row, not nine. The reason is a measurement, not a shortage of effort,
+and it is the most useful thing `p840` has to report** → `T140`.
+
+### 🟡 The one row
+
+| Agent | Repo | Licence, as measured | ★ / forks | Default ref · pushed | Region | What it actually does, and the posture |
+|---|---|---|---|---|---|---|
+| **Anatria3D** | [`nurkan1/anatria-3d`](https://github.com/nurkan1/anatria-3d) | 🔴 **`BSL 1.1` — NOT open source.** Byte-read `LICENSE` `5,557 B` `sha256₁₂:179c0cb1e12d`. GitHub label: `NOASSERTION` | `59★` / `18` | `main` · `2026-10-30` (created `2026-08-08`) | EMEA | 🟢 Local-first 3D anatomy atlas with an **AI tutor that drives the viewport** — the tutor manipulates the model rather than talking beside it. 🔴 **Filed with its grant spelled out because the label hides it.** |
+
+🔴 **The Anatria3D grant, read in full, because this is the row that teaches the pass:**
+
+- **Licensor:** Nurdzhan Kerimov (Digital Rose). **Licensed Work:** the application source only.
+- 🔴 **The meshes are NOT in the grant.** The licence explicitly excludes the anatomical meshes,
+  the nomenclature and the manifests under `public/anatomy/` — those are third-party datasets, and
+  the file names **`CC BY-SA`** terms with **`CC BY 4.0` for the female atlas**. 🟢 **So this is a
+  three-licence artefact in one repository: `BSL 1.1` code, `CC BY-SA` data, `CC BY 4.0` data.**
+- 🟢 **Additional Use Grant — production use IS permitted for study, teaching and academic
+  research,** naming students, teachers, schools and universities.
+- 🔴 **Withheld without a commercial licence:** deployment in a commercial clinic or any healthcare
+  business, use in a revenue-generating environment, and re-branding.
+- 🟢 **Change Date `2030-10-30` → Change Licence `Apache-2.0`.**
+- 🔵 **The studio consequence, stated plainly: a university may run this in teaching today; a
+  Globant commercial engagement may NOT ship it before `2030-10-30` without buying a licence.**
+  🟢 That sentence is the whole value of the row, and GitHub's `NOASSERTION` label contains none of it.
+
+### 🔴 The nil, measured with controls so it is reportable — `18` of `18`
+
+🔴 **A leg built from this sector's own vocabulary — `agent skills teaching OR tutoring OR pedagogy`,
+`stars:>25`, `pushed:>2026-09-01` — returned, ranked by stars: `325,285★`, `318,120★`, `303,914★`,
+`195,443★`, `161,229★`, `159,571★`, `144,770★`, `120,496★`, `117,997★`, `116,311★`, `96,863★`,
+`85,590★`, `80,757★`, `73,311★`, `69,523★`, `67,793★`, `61,306★`, `60,618★`.**
+
+🟢 **Not one of the eighteen is an education product.** They are coding-agent skill collections,
+agent harnesses, a security-audit skill, a marketing-skill pack, an ADHD-output skill and a
+diagramming skill. 🔵 **The leg was alive and correctly ranked — it simply ranks a different
+industry**, because `skill` and `teaching` now belong to the coding-agent ecosystem and `learning`
+resolves to *machine* learning. → `T140`.
+
+🟢 **Control that this base is not merely blind: the same discovery run's twelve topic legs returned
+`166` unique repositories of which `109` were ALREADY on these shelves (`66%`).** 🔵 The channel is
+saturated where it is real, and contaminated where it is large. Both at once.
+
+### 🔴 `3` named refusals — recorded so the next pass does not re-pay for them
+
+- 🔴 **`blader/humanizer` (`69,524★` / `5,474` forks, 🟢 MIT `1,065 B` `sha256₁₂:b35b41535e51`,
+  pushed `2026-11-10`) — refused as an agent row and PROMOTED to intel instead.** It removes the
+  signatures of AI-generated writing. 🔵 **It is not an education tool; it is the thing education
+  assessment is now up against, at `69.5k★` and under the most permissive licence there is.** → `T142`.
+- 🔴 **The ML-"learning" false-positive class — refused as a CLASS.** `contrastive-lm/clm` (`3,204★`),
+  `nuglifeleoji/sentry` (`1,521★`), `psrben/visionhope` (`1,415★`), `volotat/mini-agi` (`1,309★`),
+  `fudan-generative-vision/remory` (`783★`) all rank on education legs and all are machine-learning
+  research. 🟢 Named because every one of them will rank again next pass.
+- 🔴 **The developer-tutorial class — refused on SCOPE.** `eugenp/tutorials` (`37,308★`, MIT),
+  `changkun/modern-cpp-tutorial` (`25,957★`, MIT), `eunomia-bpf/bpf-developer-tutorial` (`4,340★`)
+  are engineering documentation, not instruction with a learner model, assessment or an instructor
+  surface. 🔵 They are the largest single category the education legs return and they have no
+  pedagogy in them.
+
+### 🟡 Measured but NOT filed — one judgement call, recorded
+
+🟡 **`maludb/learn-claude` (`53★` / `13`, 🟢 MIT `1,069 B` `sha256₁₂:d7829e8f73b9`, `main`, pushed
+`2026-07-03`) — a real exam-prep tutor, left off the shelf deliberately:** single-vendor
+certification scope and no push in `4½` months. 🔵 **Recorded rather than filed so the next pass can
+see it was weighed, not missed.** Fewer real rows beat padding.
+
+### 🔵 Instrument conditions, `2026-11-16` (independently re-established this pass)
+
+🔴 **The curation contract names `curl -sI` as the URL check. This pass re-ran that control and
+again found it BLIND, so it was substituted.** 🟢 **Controls, run fresh:
+`curl -sI github.com/torvalds/linux` → `403`, `.../HKUDS/DeepTutor` → `403`, and an invented
+`zzz-not-real-org-9x7/zzz-nope-9x7` → `403`.** 🔴 **A famous repo, a real repo and a nonexistent one
+return the identical code: `curl -sI` carries zero signal here and a `403` from it is neither a
+confirmation nor a `404`.**
+
+🟢 **Substituted with three instruments that DO discriminate, each controlled against the invented
+slug:** `git ls-remote --symref` (resolved every real slug; the invented one failed),
+`raw.githubusercontent.com` (`200` on a real `LICENSE`, 🟢 **`404` on the invented one**), and
+`gh api -X GET search/repositories` (🟢 control `repo:HKUDS/DeepTutor` → `59,528★` / `Apache-2.0` /
+pushed `2026-11-15`). 🔴 `api.github.com/repos` → `403` through the session proxy, unchanged.
+🟢 Search rate limit read directly at `30/30` remaining.
+
 ## 🟢 Forty-fourth pass (`p839`, 2026-11-16) — **`9` agent rows added (`414` → `423`), and for the first time on these shelves the majority of them are APAC-origin, which CONTRADICTS a line this base has repeated for three passes**
 
 🟢 **Every row below was measured `2026-11-16`: the real default ref from `git ls-remote --symref`,
