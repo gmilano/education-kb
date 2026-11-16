@@ -4,6 +4,100 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-fifth pass (`p860`, 2026-11-16) — **`P92`–`P93`: the university tutor stack that is ALREADY permissive end to end, and the LATAM curriculum-aligned build whose every component now has a licence trail**
+
+**Ninety-three** concrete recipes — derived recipes: **93**. 🔴 **Count derived with the gate's own
+regex re-implemented in a scratch script OUTSIDE this repository, NOT by executing
+`ingest/derive-counts.py`** (the `p827` / `p859` convention). 🟢 **Every component named below was
+byte-read on `2026-11-16` from a treeless partial clone; `0` licences come from GitHub's SPDX
+field, and `4` of them contradict it** (`T208`). 🔴 **`curl -sI` is `403` from this environment and
+was not used to verify anything.**
+
+## P92 — the university AI-teaching stack that is permissive end to end, because one publisher already built it that way (EMEA anchor; transfers to any university with an LMS and an AI Act deadline)
+
+🔵 **What it produces:** for a university, polytechnic or large faculty, an AI teaching layer —
+in-course tutor, automated exercise feedback, and an evidence trail that the thing works — on a
+platform the institution can self-host, fork, brand and keep, with **no copyleft and no vendor
+agent licence anywhere in the build**.
+
+🟢 **Why this recipe exists now, and why it is short.** `T213` refuted this base's own fourteen-pass
+nil: a permissively-licensed learning platform does exist. 🟢 **[`ls1intum/Artemis`](https://github.com/ls1intum/Artemis)
+is MIT (`832★`, `398` forks) and its AI layer [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence)
+is MIT from the SAME publisher, both committed `2026-11-16`.** 🔵 **So the integration work that
+every other recipe in this file has to invent has already been done by the people who wrote both
+halves.**
+
+🔴 **The architectural decision that comes first, and it is a date rather than a model.** EU AI Act
+Annex III point `3` makes assessing learning outcomes high-risk by construction; transparency
+obligations apply from **`2026-08-02`** and the high-risk education obligations from
+**`2027-12-02`** (`CITED, NOT READ`). 🟢 **So `athena` PROPOSES feedback and a human RECORDS the
+mark — the `P67`/`P73` boundary, inherited unchanged — and the conformance argument is written at
+node `1`, not retrofitted.**
+
+| # | Node | Component | Licence, byte-read `2026-11-16` |
+|---|---|---|---|
+| `1` | The platform you do NOT build | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) — exercises, assessment, communication. 🔴 default ref `develop` | 🟢 MIT · `1,091 B` · `sha256₁₂ 63a0a2b4d6d9` |
+| `2` | The AI layer, from the same publisher | [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence) — `athena` (feedback), `iris` (in-course tutor), `weaviate` (vectors) | 🟢 MIT · `1,091 B` · `sha256₁₂ 6b9b9eda00d6` |
+| `3` | Arrival through the LMS the institution already runs | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) (LTI framework) and, for notebook estates, [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | 🟢 Apache-2.0 · `10,273 B` / 🟢 BSD-3 · `1,528 B` |
+| `4` | The existing content library | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) — read the client's SCORM packages instead of migrating them | 🟢 MIT · `1,072 B` · `sha256₁₂ 383b85b370e8` |
+| `5` | 🟢 **The proof the tutor works — and the node that wins the renewal** | [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) — randomised controlled trials INSIDE real assignments, with consent hidden from the teacher and identifiers stripped from exports | 🟢 Apache-2.0 · `11,323 B` · 🔴 default ref `development` |
+| `6` | Model choice, defensibly | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) — a pedagogy benchmark you may redistribute | 🟢 MIT · `1,064 B` |
+| `7` | Rubric scoring of the agent's own output | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) — 🔴 **code MIT, rubrics CC BY 4.0, annotated corpora CC BY-NC-SA: ship the first two, never the third** | 🔴 SPLIT · `1,615 B` · `sha256₁₂ 86c7be78af8b` |
+| `8` | Reporting the institution already understands | [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) — statements out to the client's LRS | 🟢 Apache-2.0 · `11,525 B` |
+
+🔴 **Two components a keyword sweep would have put in this build, and both must stay out.**
+🔴 [`ls1intum/AngelosAI`](https://github.com/ls1intum/AngelosAI) — the same university's RAG advising
+assistant — is **`MIT License with Commons Clause`** with an unfilled `<COPYRIGHT HOLDER>` line
+(`T207`): read its architecture, use none of its code. 🔴
+[`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) has `0` licence files in `40`
+and cannot enter a client's CI.
+
+🟢 **Effort, stated as this file states it:** `6`–`8` weeks to a faculty pilot where Artemis is
+already deployed, `10`–`12` where it is not, with node `5` adding `2` weeks and being the only node
+that produces evidence a procurement committee will read.
+
+## P93 — the LATAM curriculum-aligned tutor, built on the national curriculum as DATA (Brazil anchor; the Colombian and Chilean variants differ only at node `1`)
+
+🔵 **What it produces:** for a state secretariat, a school group or an edtech vendor in Brazil, a
+tutor and lesson-planning assistant whose every output is traceable to a **BNCC** learning
+objective — and whose entire component set can be shipped in a closed product, because every
+licence in it is permissive and was byte-read before it was wired.
+
+🟢 **Why this recipe is possible now and was not two passes ago.** 🔴 This base has repeatedly
+recorded LATAM curriculum data as a nil. 🟢 **It is not one: [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados)
+publishes `1,721` BNCC learning objectives as MIT-licensed JSON, SQLite and CSV with per-record
+provenance and a reproducible extraction pipeline** — `26★`, which is why no ranked search ever
+returned it (`T202`, `T206`).
+
+🔴 **The licence decision that comes first, and it is about the platform rather than the model.**
+The LATAM higher-education and secondary estate runs on **Open edX, which is AGPL**. 🟢 **The
+escape is already standard and already Apache-2.0: build the learner-facing work as an
+[`openedx/XBlock`](https://github.com/openedx/XBlock) component and a separate service, and keep the
+catalogue layer on [`openfun/richie`](https://github.com/openfun/richie) (MIT).** 🔵 **The platform
+stays AGPL and untouched; what the studio writes stays the studio's.**
+
+| # | Node | Component | Licence, byte-read `2026-11-16` |
+|---|---|---|---|
+| `1` | 🟢 **The curriculum, as data rather than as PDF** | [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) — `1,721` objectives, JSON/SQLite/CSV, provenance per record | 🟢 MIT · `1,092 B` · `sha256₁₂ e162f8f4b461` |
+| `2` | The tutor, with a regional reference implementation to read | [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) 🇨🇴 (rural higher education, UTP Pereira) or [`Li-Evan/BloomTutor`](https://github.com/Li-Evan/BloomTutor) for the Socratic loop | 🟢 MIT · `1,069 B` each |
+| `3` | The teacher-facing skills | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) + [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills), translated and re-anchored to BNCC codes | 🟢 Apache-2.0 · `11,357 B` / `10,173 B` |
+| `4` | The platform seam, NOT a fork | [`openedx/XBlock`](https://github.com/openedx/XBlock) — the Apache-2.0 contract that lets a closed component run inside an AGPL LMS | 🟢 Apache-2.0 · `11,358 B` · `sha256₁₂ cfc7749b96f6` |
+| `5` | The learner-facing catalogue | [`openfun/richie`](https://github.com/openfun/richie) — MIT, and already built to sit in front of Open edX | 🟢 MIT · `1,079 B` |
+| `6` | Records, where the client has no SIS | [`academico-sis/academico`](https://github.com/academico-sis/academico) — MIT school management | 🟢 MIT · `1,094 B` |
+| `7` | The LMS bridge, where the client runs Moodle instead | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 MIT · `1,064 B` |
+| `8` | Quality evidence | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) 🔴 **code only** + [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) for a trial | 🔴 SPLIT / 🟢 Apache-2.0 |
+
+🔴 **The governance node, and in LATAM it is the one that sells.** `92%` of students and `79%` of
+faculty are already using AI while **only `30%` of universities have a published policy**
+(`CITED, NOT READ`). 🟢 **So node `0` of this recipe is a policy and an evidence framework, written
+against the institution's own curriculum codes from node `1`** — billable before a single model
+call, and the thing the UNESCO/CENIA observatory's existence tells you the buyer is being asked
+for.
+
+🟢 **Effort:** `4`–`6` weeks to a BNCC-aligned pilot on an existing Open edX or Moodle estate; add
+`3`–`4` weeks where node `6` is needed. 🔴 **Do not budget for curriculum extraction — node `1` is
+already done, reproducibly, under MIT.**
+
 ## 🟢 Sixty-fourth pass (`p859`, 2026-11-16) — **`P90`–`P91`: the AI layer over a US district data estate, and the one-command liveness check that stops this base shipping a dead repository to a client**
 
 **Ninety-one** concrete recipes — derived recipes: **91**. 🔴 **Count derived with the gate's own

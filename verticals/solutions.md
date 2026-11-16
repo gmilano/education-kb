@@ -4,6 +4,35 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-fifth pass (`p860`, 2026-11-16) — **`7` platform rows: the university teaching estate, and the discovery that on the one platform where the AI layer is NOT open, it is the AI layer specifically that is withheld**
+
+🔵 **`p858` shelved the European NATIONAL platform tier and `p859` the non-European one. `p860`
+shelves the tier beneath both: the platforms a UNIVERSITY or a school group actually operates**,
+recovered from this base's own trending log rather than from a search → `T206`.
+
+🔴 **And the tier's finding is a boundary, drawn by a vendor rather than by a regulator.**
+🟢 [`PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn)'s licence file is explicit:
+the Community Edition is **AGPL-3.0**, and two directories are Enterprise Edition under separate
+terms — `apps/prairielearn/src/ee/` 🔴 **and `apps/course-agent/`.** 🔵 **The course AGENT is the
+withheld part.** 🟢 **That is the clearest commercial signal in this pass: on an established
+open-source assessment platform, the AI layer is where the vendor put the paywall** → `T209`.
+
+| Platform | Repo | License | Stars | Where it is the incumbent | AI customization surface |
+|---|---|---|---|---|---|
+| **Artemis** | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **MIT** — byte-read `1,091 B`, `sha256₁₂ 63a0a2b4d6d9`, holder `© 2026 TUM Applied Education Technologies` | `832` | 🇩🇪 **TUM's own teaching estate**, per the holder line in the grant. 🔴 **Adoption beyond it was NOT measured this pass and is not claimed** | 🟢 **OPEN, and from the same publisher**: [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence) (MIT) ships `athena` (assessment feedback), `iris` (in-course tutor) and a `weaviate` service. 🔵 **The only platform on any of these shelves whose core AND agents are both permissive** |
+| **PrairieLearn** | [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🔴 **SPLIT — AGPL-3.0 Community Edition + PROPRIETARY Enterprise Edition**, byte-read `37,237 B`, `sha256₁₂ 548cbfae567a`; copyright PrairieLearn, Inc. with portions © University of Illinois Board of Trustees | `532` | 🇺🇸 Problem-driven assessment in US higher education; `413` forks | 🔴 **CLOSED, specifically. `apps/course-agent/` is Enterprise Edition by name in the licence file.** 🟡 The open route is an external agent against the CE question runtime, never a fork of the agent → `T209` |
+| **INGInious** | [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | 🔴 **AGPL-3.0** — byte-read `34,764 B`, `sha256₁₂ 6d1ebe4ddf66` — 🔴 **against GitHub's `NOASSERTION`** | `242` | 🇧🇪 Secure automated exercise assessment with a pluggable LMS interface, from the UCLouvain tradition; `153` forks | 🟡 **Plug-in interface is the seam.** 🔴 **AGPL in-process: an agent linked into INGInious inherits the obligation; run it as a separate service against the plug-in API** → `T208` |
+| **LearnHouse** | [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🔴 **AGPL-3.0** — byte-read `34,523 B`, `sha256₁₂ 8486a10c4393` | **`2,480`** | The best-starred modern open LMS in this pass; `611` forks; default ref 🔴 **`dev`**, HEAD `2026-11-16` | 🟡 **Open to extend, closed to resell.** 🔵 **The right answer when a client wants an LMS they will self-host and never redistribute, and the wrong one for a studio's own product** |
+| **ClassroomIO** | [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🔴 **AGPL-3.0** — byte-read `34,523 B`, `sha256₁₂ 8486a10c4393` 🔵 **(byte-identical to LearnHouse's — same FSF payload, two publishers)** | `1,745` | Customer/partner TRAINING rather than schooling — the corporate-academy segment; `415` forks, HEAD `2026-11-16` | 🟡 Same posture as LearnHouse. 🔵 **Shelved because the corporate-academy ask arrives constantly and this is the credible open base for it** |
+| **Richie** | [`openfun/richie`](https://github.com/openfun/richie) | 🟢 **MIT** — byte-read `1,079 B`, `sha256₁₂ e4b2a3148135`, holder `© 2018-present GIP FUN MOOC` | `318` | 🇫🇷 **France Université Numérique's own course portals**, in front of an Open edX estate | 🟢 **FULLY OPEN and permissive — the catalogue/CMS layer can be forked, closed and shipped even where the LMS underneath it is AGPL.** 🔵 **This is the practical escape hatch from Open edX's licence for everything learner-facing that is not the LMS itself** → `T211`, `P93` |
+| **Academico** | [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 **MIT** — byte-read `1,094 B`, `sha256₁₂ 6051a15f4d44` | `412` | Small and medium institutions — language schools, private colleges; `154` forks, HEAD `2026-11-11` | 🟢 **OPEN. An MIT student-information system is the base on which an enrolment or attendance agent can be sold as a product** → `T213` |
+
+🔴 **The licence map of this tier, stated plainly so a proposal can quote it.** 🟢 **Permissive:
+Artemis, Richie, Academico.** 🔴 **AGPL: LearnHouse, ClassroomIO, INGInious, and PrairieLearn's
+Community Edition — with PrairieLearn's agent withheld entirely.** 🔵 **A studio that needs to SHIP
+a closed product chooses from the first list; one that is STAFFING a client's self-hosted estate
+may use either.**
+
 ## 🟢 Sixty-fourth pass (`p859`, 2026-11-16) — **`3` platform rows: the national platform tier OUTSIDE Europe, and two of its three rows have NO agent surface at all**
 
 🔵 **`p858` shelved the European national-platform tier. `p859` runs the same instrument across
@@ -977,7 +1006,7 @@ platform.** 🟡 **Treat it as competitive intelligence that happens to be MIT-l
 | **AGENTIC STAR** (SoftBank, 🇯🇵) | 🔴 **Not institution-run — a hosted commercial agent platform**, developer docs at `developers.fd.agenticstar.tm.softbank.jp`, homepage `agenticstar.io`. 🟢 Its runtime SDKs `agenticstar-agentcore` (`1.0.3`) and `agenticstar-platform` (`3.3.0`, `80` releases) are public on PyPI and MIT by their wheel metadata | 🟢 **`74` MIT education agent templates, `54` catalogue ids `EDU-C2-004`…`EDU-C2-173`** — reference row [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent), `EDU-C2-028`, byte-read MIT (`1,074 B`, HEAD `71c442ebd88e`) | 🟢 **MIT** (templates and both SDKs, all byte- or metadata-verified) | 🟡 **Adopt the SPECS, not the runtime.** 🔴 Templates raise `PlatformRequired` at graph compile without a SoftBank deployment; all `74` are `0★`, unmaintained since October; the framework's advertised source repo has **zero commits** (`T89`); hard `==` pins on `langgraph`/`langchain`/`fastapi`. 🟢 **Tests run without the platform — harvest per `P61`** |
 | **AgentCore graph scaffold** (the catalogue's shared architecture) | 🔵 Not a product — the uniform structure under all `74` templates: `config/agent.yaml` manifest (`required_trust_level`, declared secrets), `src/graph/`, `src/nodes/`, `src/schemas/state.py`, `docs/02_design.md`, `docs/03_test_spec.md`, `tests/proof_of_boundary/` | 🟢 Domain nodes differ completely between ids — byte-compared across three repositories this pass: `iep_section_generator`/`regulatory_compliance` vs `affected_material_analysis`/`stakeholder_mapping` vs `bloom_level`/`difficulty_score`. Reference row [`haidang024/agentic-star-education-curriculum-change-impact-briefing-agent`](https://github.com/haidang024/agentic-star-education-curriculum-change-impact-briefing-agent) (`EDU-C2-046`, `45` files) | 🟢 **MIT** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ae3eea9ac056`) | 🟢 **This is the reusable asset.** 🔵 One scaffold, `54` real domain implementations — so a studio gets a uniform, inspectable architecture across `54` education workflows instead of `54` unrelated codebases. 🔴 The scaffold's base class ships only in the binary wheel; re-implement on LangGraph (now on `repos/foundations.md`) |
 
-## Education vertical platforms — 155 rows
+## Education vertical platforms — 162 rows
 
 ## 🟡 The MARKING-ADAPTER layer — **permissive code that reaches INTO an incumbent this shelf already carries** (new, fifty-seventh pass `p852`) (3 rows)
 

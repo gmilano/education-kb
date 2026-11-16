@@ -4,6 +4,197 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — sixty-fifth pass (`p860`) — **`8` trends (`T206`–`T213`): this base's own log audited and found to be holding `4,924` ungraded addresses, a licence that says MIT and forbids sale, GitHub's licence field under-reading four grants in one batch, the AI layer identified as the PAYWALLED layer, institutional repositories carrying individual copyright, the agency channel shown to find ministries and miss operators, two addresses on which the forge's channels disagree about existence, and a fourteen-pass nil REFUTED**
+
+**Two hundred and five** trends — derived trends: **205**. 🔴 **Count derived this pass with the
+gate's own regex re-implemented in a scratch script OUTSIDE the repository, NOT by executing
+`ingest/derive-counts.py`** — the `p827` / `p859` convention, declared rather than claimed GREEN.
+🟢 **Channel note, and one channel the scheduler prescribes is NOT available here: `curl -sI`
+against `github.com` returns `403` from this environment's proxy for every address, live or
+invented, so it was not used as an oracle and no claim below rests on it.** 🟢 **Existence is
+established by `git clone --filter=blob:none --no-checkout --depth 1` returning a tree, and by
+`git ls-remote`; `gh api search/repositories` supplied traction and is bidirectionally controlled
+(a live `user:` returns `total_count`, an empty org returns `422`).** 🔴 **`gh api repos/{owner}/{repo}`
+remains `403` session-scoped.** 🟢 **Every licence in `p860` is byte-read from a treeless clone,
+sized with `git cat-file -s`, hashed with `sha256sum`; `0` come from GitHub's SPDX field.** 🔴 Every
+market and regulatory item is `CITED, NOT READ` from WebSearch summaries and says so.
+
+## 🔴 `T206` — this base has logged `5,629` addresses and graded `1,085`: the append-only file is a liability, not an archive
+
+🟢 **Measured, and the instrument is four lines of `grep`.** Every `owner/repo` in
+[`agents/trending.md`](../agents/trending.md) and [`repos/trending.md`](../repos/trending.md) was
+set against every `owner/repo` on the three shelves.
+
+| | Distinct addresses |
+|---|---|
+| LOGGED to the two trending files | `5,629` |
+| SHELVED on `agents/top.md` + `repos/foundations.md` + `verticals/solutions.md` | `1,085` |
+| 🔴 **LOGGED AND NEVER SHELVED** | 🔴 **`4,924` (`87.5%`)** |
+
+🟢 **`858-G3`'s acceptance test passes**: `Opetushallitus` now returns `5` shelved addresses
+(`koski`, `ataru`, `aoe`, `varda`, `eperusteet`), so the specific defect it named is CLEARED and
+the instrument still reports everything else.
+
+🔵 **The mechanism is structural, which is why no amount of care would have prevented it.** A
+trending file is append-only and a shelf is prepended; a pass that writes to the log has discharged
+a visible obligation and incurred an invisible one. 🔴 **The residue is not noise: the thirty-four
+most-logged ungraded addresses were read back today and `37` of them became shelf rows** — `16`
+agents, `14` foundations, `7` platforms. 🔴 **Among them a `2,480★` LMS, a `954★` specification, an
+`832★` MIT platform and three MIT student-facing systems this base had declared did not exist.**
+
+🟢 **What a studio takes from this, beyond the housekeeping.** Any client with a research or
+scouting function has the same shape: a capture channel that is append-only and a decision channel
+that is not, with no instrument comparing them. 🔵 **The audit is cheap, runs on any two corpora of
+addresses, and its output is a ranked recovery list rather than a backlog.**
+
+## 🔴 `T207` — `MIT License with Commons Clause` passes a first-line licence classifier, and the grant beneath it has no grantor
+
+🔴 **Caught on this base's own instrument, mid-pass, on [`ls1intum/AngelosAI`](https://github.com/ls1intum/AngelosAI).**
+Three independent defects stack in one file:
+
+| # | What the file does | What a probe concludes |
+|---|---|---|
+| `1` | The grant is spelled **`LICENCE`**, British English | 🔴 A root probe for `LICENSE`/`LICENSE.md`/`LICENSE.txt` returns **false absence** |
+| `2` | Its first line reads 🔴 **`MIT License with Commons Clause`** | 🔴 A matcher accepting a line that *contains* `MIT License` files a **sale-prohibiting** licence as MIT. 🟢 **This pass's own classifier did exactly that, and was corrected by reading the line** |
+| `3` | Its holder line reads 🔴 **`Copyright (c) 2025 <COPYRIGHT HOLDER>`** | 🔴 **An unfilled template. There is no grantor, so there is nothing to rely on even if the terms were acceptable** |
+
+🟢 **The fix, and it is one character of regex**: a licence family may be accepted only when the
+payload's first non-empty line **equals** the family name, not when it contains it. 🔵 **Anything
+appended to that line — `with Commons Clause`, `with the Commons Clause`, `(modified)` — is a
+narrowing, and a narrowing is the whole finding.**
+
+🔴 **Commons Clause specifically forbids selling the software or a product whose value derives
+substantially from it.** 🔵 **For a studio that is not a caveat, it is a disqualification: the
+engagement model is selling exactly that.**
+
+## 🔴 `T208` — GitHub's licence field under-read FOUR executed grants in a single batch of `34`
+
+🟢 **Measured against the bytes, one batch, one hour, `0` cherry-picking.**
+
+| Repo | GitHub SPDX field | 🔬 The bytes, `2026-11-16` |
+|---|---|---|
+| [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | 🔴 `NOASSERTION` | 🟢 **AGPL-3.0**, `34,764 B`, `sha256₁₂ 6d1ebe4ddf66` |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🔴 `NOASSERTION` | 🟢 **Apache-2.0**, `10,785 B`, holder `Technische Hochschule Mittelhessen` |
+| [`inducer/relate`](https://github.com/inducer/relate) | 🔴 `NOASSERTION` | 🟢 **MIT/X Consortium**, `1,145 B`, declared in one sentence of prose above the terms |
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🔴 `NOASSERTION` | 🔴 **THREE licences: MIT code · CC BY 4.0 content · CC BY-NC-SA 4.0 corpora** |
+
+🔵 **The direction matters.** 🔴 **Every error here is an UNDER-read**: the field says "unknown"
+where a grant exists. 🟢 **A licence-filtered search therefore does not return noise — it returns a
+SHORTER list, silently**, and `437★` of maintained MIT courseware (`relate`) has been invisible to
+every such search this base has run. 🔴 **And the fourth row shows the opposite failure mode of the
+same field: `NOASSERTION` concealing a NON-COMMERCIAL obligation on the data a studio would ship.**
+
+## 🔴 `T209` — on the one platform in this tier that withholds something, the withheld thing is the AGENT
+
+🟢 **Read in the licence file, not inferred.** [`PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn)
+(`532★`, `413` forks) states that its Community Edition is AGPL-3.0 and that two directories are
+Enterprise Edition under separate terms: `apps/prairielearn/src/ee/` 🔴 **and `apps/course-agent/`.**
+
+🔵 **Why this is a market signal and not a licence note.** 🟢 An established education platform with
+a decade of university adoption has drawn its open/closed line **through the AI layer**. 🔴 **The
+assessment engine is open; the agent that drives a course is not.** 🔵 **Read with `T201`** — where
+a public buyer publishes infrastructure and no AI layer — **the same conclusion arrives from two
+directions: the AI layer over an education estate is the part nobody is giving away.**
+
+🟢 **The engagement shape that follows**: build the agent OUTSIDE the platform, against its open
+API, and own it. 🔴 **Do not fork `apps/course-agent/`; it is not yours to fork.**
+
+## 🟡 `T210` — institutional education repositories carry INDIVIDUAL copyright holders, `3` of `3` at one university
+
+🟢 **Measured at MIT Open Learning (`mitodl`, `187` public repositories), on every AI repository the
+org publishes:**
+
+| Repo | Grant | Holder line, byte-read |
+|---|---|---|
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | MIT, `1,069 B` | 🔴 `© 2024 Romain Puech` |
+| [`mitodl/learn-ai`](https://github.com/mitodl/learn-ai) | MIT, `1,070 B` | 🔴 `© 2024 Matt Bertrand` |
+| [`mitodl/agent-kit`](https://github.com/mitodl/agent-kit) | BSD-3-Clause, `1,499 B` | 🔴 `© 2026, Tobias Macey` |
+
+🔵 **The org's house licence is BSD-3-Clause** (observed across `mitxonline`, `ol-infrastructure`,
+`mit-learn`, `ol-llm`, `ol-keycloak` and others), 🔴 **and two of its three AI repositories are MIT
+instead** — so the AI work diverges from house style in BOTH the licence and the holder.
+
+🟡 **Why it is AMBER and not RED.** Both MIT and BSD-3 are build-safe whoever holds them, and an
+individual holder is normal for a contributor-authored file. 🔴 **It becomes a procurement question
+only at the moment it always does: when a client's counsel asks who granted the licence on the
+component in the deliverable, and the answer is a person rather than the institution whose name is
+on the repository.** 🟢 **The remedy is one line in a technical-due-diligence checklist, and this
+base can now supply the evidence for it.**
+
+## 🔴 `T211` — the agency channel finds MINISTRIES and misses OPERATORS, and France was recorded absent while publishing `100` repositories
+
+🔴 **`p858` probed five spellings of the French ministry — `Ministere-Education-Nationale`,
+`education-nationale`, `DNE-MENJ`, `edtech-gouv`, `apps-education` — got five `422`s, and recorded
+France as ABSENT from GitHub** (`858-G4`).
+
+🟢 **`p860` found French public education code on GitHub in one step, from this base's own log:**
+[`openfun/richie`](https://github.com/openfun/richie), MIT, `318★`, holder line
+🔵 **`© 2018-present GIP FUN MOOC`** — France Université Numérique, a *groupement d'intérêt public*.
+🟢 **`gh api search/repositories -f q="user:openfun"` returns `100` public repositories.**
+
+| Publisher type | Probed as | Found |
+|---|---|---|
+| 🔴 Ministry | `education-nationale`, `DNE-MENJ`, … | 🔴 `422` × `5` |
+| 🟢 **Operator** | `openfun` 🇫🇷 (GIP FUN MOOC) | 🟢 **`100` repos, MIT flagship** |
+| 🟢 **Operator** | `ls1intum` 🇩🇪 (TUM chair) | 🟢 **`157` repos, MIT platform + MIT agents** |
+| 🟢 **Operator** | `mitodl` 🇺🇸 (MIT Open Learning) | 🟢 **`187` repos** |
+
+🔵 **The rule this replaces the agency channel's assumption with**: a state's education code is
+published by whoever OPERATES the service — a GIP, a university chair, a national MOOC body — not
+by the ministry that funds it. 🔴 **"This country publishes no education code" may not be written
+from ministry-handle probes alone, and `858-G4` is hereby narrowed rather than discharged: the
+Spanish and Danish nils remain unprobed at the operator layer.**
+
+🟢 **And the commercial reading.** 🔴 `openfun`'s AI repositories are a 2023 conference landing page
+and a slide deck; 🟢 **the French operator publishes a CMS and no AI layer** — exactly `T201`'s
+shape, now observed inside Europe as well as outside it.
+
+## 🔴 `T212` — two addresses on which the forge's own channels disagree about whether a repository exists
+
+🟢 **Both measured today, in opposite directions.**
+
+| Address | `git` channel | `gh api search` channel | What it means |
+|---|---|---|---|
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 **Clones. `git ls-remote` → `d3d9c0b60958…`** | 🔴 **Returns nothing; `Li-Evan/BloomTutor` is returned instead** | 🔴 **A RENAME. `BloomTutor`'s `HEAD` is the SAME object `d3d9c0b60958…`** — the old name is a silent alias, so every automated check passes while the published address no longer exists as a name |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 **Clones. `git ls-remote` → `91ba6937fba5…`** | 🔴 **`0` rows on two query forms** | 🔴 **The search index does not return a repository the git endpoint serves.** Traction cannot be read for it at all |
+
+🔵 **Why this matters more than it looks.** 🔴 **A rename is invisible to the check most pipelines
+run** — the clone succeeds, the licence reads, the HEAD date is current — 🔴 **and the deliverable
+then cites an address that is an alias.** 🟢 **The cheap discriminator is to compare
+`git ls-remote HEAD` against the name the search channel returns; where they differ on the same
+object, publish the CURRENT name and record the alias.** 🟢 **This pass publishes `BloomTutor` and
+records `Bloom` as the alias it was logged under.**
+
+🔴 **And the second row sets a limit on every traction figure in this base**: a `0` from the search
+channel is not a `0★` repository, it is an unmeasured one, and the two must not be written the same
+way. 🟢 **The row is shelved with its stars cell reading `n/a` and the reason in the cell.**
+
+## 🟢 `T213` — the fourteen-pass nil on "a permissively-licensed LMS/SIS" is REFUTED, and the nil was a VOCABULARY artefact
+
+🔴 **The claim these shelves have carried**: there is no permissively-licensed open-source LMS or
+student information system; the category is GPL, AGPL and LGPL all the way down (Moodle, Open edX,
+Canvas, OpenEduCat). 🟢 **Three counter-examples, all byte-read `2026-11-16`, all from this base's
+own trending log:**
+
+| Address | Licence, byte-read | ★ / forks | Category |
+|---|---|---|---|
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **MIT**, `1,091 B` | **`832` / `398`** | Interactive learning platform with automated assessment — an LMS by function |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 **MIT**, `1,094 B` | `412` / `154` | School management: enrolment, courses, results — an **SIS** |
+| [`openfun/richie`](https://github.com/openfun/richie) | 🟢 **MIT**, `1,079 B` | `318` / `94` | Course catalogue / learner-facing CMS over an LMS estate |
+
+🔵 **Why the nil survived fourteen passes.** 🔴 **It was tested against the NAMES `LMS`, `SIS` and
+`student information system`, which are the vocabulary of the PROCUREMENT document, and the
+permissive supply does not use them**: Artemis calls itself *"interactive learning with automated
+feedback"*, Academico *"school management platform"*, Richie *"a CMS to build education portals"*.
+🟢 **This is `T82`'s statutory-vocabulary rule inverted — there, the right word was the statutory
+one; here, the right word is the FUNCTIONAL one and the statutory word is the trap.**
+
+🟢 **What changes commercially.** 🔴 **Every recipe in this base that routed around AGPL by keeping
+the platform at arm's length was solving a problem that has three permissive answers.** 🔵 **For a
+client who needs a closed, branded, shippable product rather than a self-hosted deployment, the
+base is now Artemis, Academico or Richie** → `P92`, `P93`, and `verticals/solutions.md`'s licence
+map.
+
 ## 🟢 `2026-11-16` — sixty-fourth pass (`p859`) — **`5` trends (`T201`–`T205`): the public-buyer instrument pointed outside Europe, forks shown to be the adoption signal stars miss, the licence payload read as provenance AND vintage, `pushed_at` traced to its actual cause, and a token that means the opposite of what this base has shelved**
 
 **One hundred and ninety-seven** trends — derived trends: **197**. 🔴 **Count derived this pass with

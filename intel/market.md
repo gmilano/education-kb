@@ -4,6 +4,151 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-fifth pass (`p860`, 2026-11-16) — **the UNIVERSITY and SCHOOL-GROUP buyer, placed by region — plus the `2026` demand figures the scheduler's regional legs returned, and the two regions where this pass placed NOTHING and says so**
+
+🔵 **`p858` measured the European public buyer, `p859` the non-European one. `p860` measures the
+tier beneath both — the institution that buys for itself — and it measures SUPPLY from this base's
+own ungraded log (`T206`) rather than from a search.** 🔴 **The scheduler's four regional WebSearch
+legs were run; they returned demand, regulation and adoption figures and `0` usable supply rows,
+which is now the fourth consecutive pass in which that is true.**
+
+### Supply placed this pass, by region — `37` rows, byte-read `2026-11-16`
+
+| Region | Rows shelved | What was placed, and on what evidence |
+|---|---|---|
+| 🇺🇸 **North America** | 🟢 **`7`** | MIT Open Learning's three AI repositories; Learning Commons' `agent-skills`, `evaluators` and `knowledge-graph`; Anthropic's `k12-teacher-skills`. 🔵 **Placed on publisher identity, which is stated and not inferred** |
+| 🇩🇪🇫🇷 **EMEA** | 🟢 **`4`** | `ls1intum/Artemis` + `ls1intum/edutelligence` (holder line: *TUM Applied Education Technologies*), `openfun/richie` (holder line: *GIP FUN MOOC*), `thm-mni-ii/feedbacksystem` (holder line: *Technische Hochschule Mittelhessen*). 🟢 **All four placed from the COPYRIGHT LINE IN THE BYTES** |
+| 🇨🇴🇧🇷 **LATAM** | 🟡 **`2`** | `LabSirius/TutorIA` (its own description names Universidad Tecnológica de Pereira, Risaralda 🇨🇴) and `bncc-dev/bncc-dados` (Brazil's BNCC as open data; holder is a *Ltda*) |
+| 🌏 **APAC** | 🔴 **`0`** | 🔴 **And this is an INSTRUMENT gap, not a supply nil.** Two rows with Chinese-language READMEs and Chinese holder names (`Li-Evan/BloomTutor` `312★`, `flysheep-ai/education-skills` `125★`) were shelved **`Global`** because `T935` forbids reading language as region and `gh api users/{login}` is `403` in this session, so origin cannot be resolved. 🔵 **The supply exists; the placement channel does not** |
+| 🌐 **Global (unplaced)** | `19` | 🔴 **Declared, not hidden: `19` of `37` rows could not be placed from bytes.** The honest figure for this instrument is that it places roughly one row in three |
+
+### Demand, regulation and adoption — `CITED, NOT READ` from the four regional legs run `2026-11-16`
+
+🔴 **Every figure in this section comes from a WebSearch summary. None was read at source, none is
+reproducible from this repository, and market sizings disagree by a factor of two.**
+
+| Scope | Figure, as cited | Source as cited |
+|---|---|---|
+| AI in education, `2025` | ~**`USD 6.4B`** | IMARC |
+| AI in education, `2026` → `2030` | ~**`$10.6B`** → **`$42.48B`**, `41.5%` CAGR | Research and Markets, via a secondary summary |
+| AI in education, `2025` → `2032` | `USD 5.37B` → `USD 12.30B` | unnamed firm, via summary |
+| AI in education, `2025`–`2030` | growth of `USD 3.37B` at **`45%`** CAGR | Technavio |
+| EdTech overall, to `2029` | growth of **`USD 170.8B`** | Technavio, via FutureCIO |
+
+🔵 **The spread is the finding.** 🔴 **A `2026` figure of `$6.4B`, `$10.6B` or `$5.37B` depending on
+the publisher is not a market size, it is three different definitions** — and a proposal that
+quotes one without the definition is quoting a press release.
+
+## Opportunities by region
+
+### North America
+
+🔴 **Demand, as cited.** Stanford's `2026` AI Index puts **`50`–`84%` of K-12 students** and
+**~`90%` of US higher-education students** using AI for schoolwork. The PIE Network tracked
+**~`100` state bills in `2026`** touching student AI use; Ohio was first to require AI policies in
+every K-12 district; Illinois (`S.B. 1920`) requires state guidance by **`2026-07-01`**; Tennessee
+requires every public institution, LEA and charter to adopt a policy. Federal action remains
+executive — a December `2025` order for a light-touch national framework and a K-12 AI task force
+(ECS). Google has pledged **`$1B`** to higher education; TED, Khan Academy and ETS have launched an
+AI institute for higher ed.
+
+🟢 **Supply, as measured today.** The region's open supply is **institutional**: MIT Open Learning
+publishes a tutor library, a chatbot backend and an internal agent toolkit; Learning Commons and
+Anthropic co-publish rubrics, skills and an evaluation harness. 🔴 **The most-wanted integration
+surface — an MCP server over Canvas LMS (`104★`) — is UNGRANTED** (`0` licence files in the tree).
+
+🟢 **The opening.** 🔵 **Policy is the budget line**: `~100` bills and a state-by-state patchwork
+mean districts and systems must produce POLICY-CONFORMANT deployments on deadlines, and the
+rubric/evaluation layer that proves conformance is Apache-2.0 and MIT today. 🟢 **Build the
+evidence layer first** (`learning-commons-org/evaluators` + `anthropics/k12-teacher-skills`), 🔴
+**and treat `knowledge-graph`'s Gated datasets as out of scope for anything shipped** →
+`agents/top.md`, `P92`.
+
+### EMEA
+
+🔴 **Demand and regulation, as cited.** The EU AI Act is the frame: emotion-recognition prohibition
+applied **`2025-02-02`**, transparency obligations **`2026-08-02`**, and the high-risk education
+obligations **`2027-12-02`** (one source records this as a slip from an original August `2026`
+date; the Commission's Article 6 guidelines went to consultation in May `2026`). The UK set
+generative-AI safety standards for schools in **January `2026`**; the UAE issued **`25`** generative
+AI restrictions for schools in **February `2026`**. Eurydice's *Digital education at school in
+Europe 2026* reports uneven access to advanced AI at school level; one EU analysis cites **`13%`**
+of pupils in Greece attending a school with Wi-Fi against **`100%`** in the Netherlands. An Epson
+Europe survey of `3,360` respondents reports **`80%`** of educators concerned about the pace of AI
+in the classroom, and a six-country adult-education study reports **>`90%`** of Spanish respondents
+using AI in their work, largely without a regulatory frame. 🔴 **A UK policy paper reports
+school-technology investment down `96%` since `2020`, with `0.7%` of edtech investment going to AI
+tools.**
+
+🟢 **Supply, as measured today.** 🟢 **EMEA is the only region where a university publishes BOTH an
+open teaching platform and its open AI layer**: `ls1intum/Artemis` (MIT) with `edutelligence`
+(MIT, `athena` + `iris`). France's national MOOC operator publishes `richie` (MIT) — 🔴 **and
+`p858` had recorded France as absent from GitHub entirely** (`T211`).
+
+🟢 **The opening.** 🔵 **Two deadlines and one architecture.** The `2026-08-02` transparency
+obligations and the `2027-12-02` high-risk obligations give a named date to sell against, and
+Annex III point `3` makes "assessing learning outcomes" high-risk by construction. 🟢 **The build
+that satisfies both is already open and already European**: Artemis + EduTelligence, self-hosted,
+with the agent PROPOSING and the human RECORDING. 🔴 **Do not build it on
+[`ls1intum/AngelosAI`](https://github.com/ls1intum/AngelosAI) — its grant is `MIT with Commons
+Clause` and names no holder** (`T207`) → `P92`.
+
+### APAC
+
+🔴 **Demand, as cited.** The Philippines' Department of Education launched **AGAP.AI** in January
+`2026`, a nationwide responsible-AI programme aimed at `1.5M` people, with a National Education Plan
+`2026`–`2035` embedding AI and digital literacy at every level. Australia's education ministers
+backed a national review of the Generative AI Framework for Schools in June `2025`. An EdTech Hub
+briefing reports **~`86%` of Southeast Asian teachers already using AI tools**; Ipsos's `2026`
+Education Monitor finds weaker support for banning AI in Asian schools than elsewhere. Market
+sources cite a **`20.9%` CAGR** for APAC AI-in-education (`2024`–`2029`), **>`3,000`** regional
+edtech players, and APAC leading global edtech investment in `2023` at ~**`$12B`**.
+
+🔴 **Supply, as measured today: `0` rows placed in APAC, and the reason is this base's instrument.**
+Two substantial Chinese-language projects were shelved `Global` rather than APAC
+(`Li-Evan/BloomTutor`, `312★`, MIT; `flysheep-ai/education-skills`, `125★`, MIT), because language
+is not region (`T935`) and the account-origin endpoint is `403` here. 🔵 **`p859`'s APAC finding
+still stands and is unchallenged: India's Sunbird estate is MIT, `393`-forked, and has NO AI layer.**
+
+🟢 **The opening.** 🔵 **APAC is the region where the mandate is national and the AI layer is
+absent** — the Philippines' plan and India's platform are both state-scale with no incumbent agent
+to displace. 🔴 **The gating risk is equally clear: Sunbird's flagship repository's last human
+commit is `2023-04-26`, so the liveness check runs BEFORE the proposal, not after** (`P91`).
+
+### LATAM
+
+🔴 **Demand, as cited.** A Digital Education Council survey (February `2026`) reports **`92%` of
+Latin American students and `79%` of faculty** engaging with AI, while **only `30%` of universities
+have published AI-use policies**. UNESCO's September `2026` report on AI in higher education in the
+region describes adoption as *"neither uniform nor evenly distributed"*. An observatory launched in
+April `2026` with CAF, CENIA, the OECD and Harvard scholars addresses a learning gap in which **six
+in ten sixth-graders** fall below minimum proficiency in reading and mathematics; a UNESCO–CENIA
+agreement (March `2026`) pairs ethical AI standards with **Latam-GPT**. The IDB has catalogued
+**`193`** classroom AI initiatives and argues the region is building hybrid, context-sensitive
+systems rather than importing them. EdTech Hub's AI Observatory has partnered with **Fundación
+Ceibal** 🇺🇾 (September `2026`). 🔴 **No regional AI-in-education law was found in these legs.**
+
+🟢 **Supply, as measured today — and it is better than this base has previously recorded.**
+🟢 **Brazil's national curriculum is available as MIT-licensed, provenance-tracked open data**
+(`bncc-dev/bncc-dados`: `1,721` learning objectives in JSON, SQLite and CSV), and a Colombian
+university has published an MIT autonomous tutor for RURAL higher education
+(`LabSirius/TutorIA`). 🔴 **Both are low-star rows that no ranked search returns** — `26★` and
+`0★`.
+
+🟢 **The opening.** 🔵 **`92%` student adoption against `30%` institutional policy is the widest
+demand/governance gap of the four regions**, and it is an advisory-and-policy engagement before it
+is a build. 🟢 **The build that follows has a licence trail for the first time**: BNCC curriculum
+data (MIT) + an MIT tutor + Apache-2.0 teacher skills, with the Open edX estate kept at arm's
+length through the Apache-2.0 `XBlock` contract rather than forked → `P93`.
+
+### Global — what belongs to no region, and the two gaps this pass leaves open
+
+🔴 **`19` of `37` rows could not be placed.** 🔵 **An unplaced row is still a usable row — the
+licence, the traction and the HEAD date are all measured — but it cannot answer "who near the
+client already does this".** 🔴 **Two gaps are therefore declared rather than closed: APAC origin
+is unresolvable with the channels available here (`860-G2`), and `858-G4`'s Spanish and Danish
+national-forge nils remain unprobed at the OPERATOR layer that just found France** (`T211`).
+
 ## 🟢 Sixty-fourth pass (`p859`, 2026-11-16) — **the public buyer placed OUTSIDE Europe: what a state publishes, what it withholds, and the two agencies that turned out to be empty**
 
 🔵 **`p858` measured public-buyer SUPPLY in six European countries and closed by naming its own

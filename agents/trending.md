@@ -4,6 +4,31 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — `p860`: the window's movement came from INSIDE this file — `4,924` addresses logged here and never graded, and the first `34` read back yield `16` agent rows
+
+🟢 **What is new this window is not a repository and not a search. It is an audit of this file
+against the three shelves**, run because `858-G3` demanded it and kept because of what it returned.
+
+| Movement | What moved |
+|---|---|
+| 🔴 **THE FINDING: `87.5%` of everything this file has ever logged has never been graded** | `5,629` distinct addresses logged across this file and [`repos/trending.md`](../repos/trending.md) · `1,085` on the shelves · 🔴 **`4,924` logged and never shelved** → `T206` |
+| 🟢 **`858-G3` DISCHARGED, acceptance test passed** | `Opetushallitus` reports **CLEARED** — `koski`, `ataru`, `aoe`, `varda`, `eperusteet` are shelved since `p858`, and the instrument still reports everything else |
+| 🟢 **NEW, and the best agent row of the pass** | [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence) — TUM's MIT suite of teaching microservices: `athena` (assessment feedback), `iris` (in-course tutor), `weaviate`. 🔵 **Its platform [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) is MIT too — the only platform+agents pair on these shelves that is permissive on BOTH halves**. `17★`, HEAD `2026-11-16` |
+| 🟢 **NEW cluster: the North American rubric/evaluation tier** | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) (Apache-2.0, `634★`), [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) (Apache-2.0, `44★`), [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) (🔴 **SPLIT: MIT code · CC BY rubrics · CC BY-NC-SA corpora**, `88★`) |
+| 🟢 **NEW: a university's own agent toolkit, published** | [`mitodl/agent-kit`](https://github.com/mitodl/agent-kit) (BSD-3), [`mitodl/learn-ai`](https://github.com/mitodl/learn-ai) (MIT), [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) (MIT) — 🔴 **all three carry INDIVIDUAL copyright holders** → `T210` |
+| 🟢 **NEW LATAM row, placed from its own description** | [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) — MIT autonomous tutor for RURAL higher education, Universidad Tecnológica de Pereira 🇨🇴, `0★` |
+| 🔴 **REFUSED, and the refusal is the lesson** | [`ls1intum/AngelosAI`](https://github.com/ls1intum/AngelosAI): file spelled **`LICENCE`**, first line 🔴 **`MIT License with Commons Clause`**, holder line 🔴 **`<COPYRIGHT HOLDER>`** — unfilled. 🟢 **This pass's own classifier filed it as MIT before the line was read in full** → `T207` |
+| 🔴 **REFUSED: three repositories with `0` licence files in the WHOLE tree** | [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) (`104★`, `54` Canvas tools), [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) (`49★`, ETH Zurich), [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor). 🔵 Measured by `git ls-tree -r HEAD`, not by a root guess |
+| 🔴 **RETIRED: `Li-Evan/Bloom` as an address** | 🔴 It still CLONES — and `git ls-remote` returns the same object `d3d9c0b60958…` as [`Li-Evan/BloomTutor`](https://github.com/Li-Evan/BloomTutor). **A rename alias that every automated check passes** → `T212`. The shelf publishes `BloomTutor` |
+| 🔴 **LIMIT recorded on this file's own star figures** | [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) is served by `git` and returns `0` rows from `gh api search` on two query forms. 🔵 **An unmeasured traction is not `0★` and is now written `n/a`** |
+
+🔴 **Channel note, and one prescribed check is UNAVAILABLE here.** `curl -sI https://github.com/…`
+returns **`403` from this environment's proxy for every address**, live or invented, so it is not
+an oracle and nothing above rests on it. 🟢 **Existence is established by a treeless partial clone
+returning a tree and by `git ls-remote`; every licence is byte-read with `git cat-file -s` and
+`sha256sum`; `0` licences come from GitHub's SPDX field — and `4` of this window's readings
+CONTRADICT that field** → `T208`.
+
 ## 🟢 `2026-11-16` — `p859`: the same channel, three new continents — and the window's finding is that the non-European public buyer ships NO agents
 
 🟢 **What is new this window is not a repository and not a channel. It is the first

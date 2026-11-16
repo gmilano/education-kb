@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 Sixty-fifth pass (`p860`, 2026-11-16) — **`16` agent rows recovered from this base's OWN trending log: `4,924` addresses were logged and never shelved, and the first `34` read back yield `16` shelf rows, `6` refusals and `5` instrument defects**
+
+🟢 **`858-G3` is DISCHARGED, and its acceptance test passes.** The gap said: *"nothing in this
+tree compares what was LOGGED against what was SHELVED"*, and demanded that the instrument report
+`Opetushallitus` as CLEARED. 🟢 **It does** — `Opetushallitus/koski`, `ataru`, `aoe`, `varda` and
+`eperusteet` are all on a shelf since `p858`. 🔴 **And the same instrument reports the size of the
+untouched residue: `5,629` distinct `owner/repo` addresses appear in
+[`agents/trending.md`](trending.md) and [`repos/trending.md`](../repos/trending.md); `1,085` appear
+on the three shelves; `4,924` have been LOGGED AND NEVER SHELVED.**
+
+🔵 **Why that is a finding and not a backlog.** A trending file is append-only and a shelf is
+prepended, so every pass that writes to the log discharges one obligation and silently incurs
+another. 🟢 **The addresses were already paid for — searched, read, described — and `87.5%` of them
+have never been graded.** 🔴 **This pass read back `34` of them, chosen by log frequency, and the
+hit rate says the residue is worth mining: `16` shelf rows here, `14` foundation rows, `7` platform
+rows, from `34` addresses.**
+
+🟢 **Channel note, declared because the scheduler's prescribed check is NOT available here.**
+🔴 `curl -sI https://github.com/…` answers **`403` from this environment's proxy on every address,
+live or invented**, so it is not an oracle and was not used as one. 🟢 **Existence is established by
+a successful `git clone --filter=blob:none --no-checkout --depth 1`, which returns a tree, and by
+`gh api search/repositories`; every licence below is byte-read from that clone with
+`git cat-file -s` and `sha256sum`, and `0` licences are taken from GitHub's SPDX field.**
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| EduTelligence | [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence) | 🟢 **MIT** — byte-read `1,091 B`, `sha256₁₂ 6b9b9eda00d6`, holder 🔵 **`© 2025 TUM Applied Education Technologies`** | `17` | EMEA | 🟢 **The highest-value agent row in this pass, and the one this base should have shelved sixty passes ago.** TUM's suite of AI microservices for university teaching, MIT, HEAD commit `2026-11-16`: **`athena`** (automated assessment feedback with an assessment-module manager), **`iris`** (the tutor that answers inside the course), and a **`weaviate`** vector service. 🔵 **It is the AI layer of [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis), which is itself MIT — so the platform AND its agents are permissive, from one publisher, both committed today.** 🟢 **That combination does not exist anywhere else on this shelf** |
+| k12-teacher-skills | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 **Apache-2.0** — byte-read `11,357 B`, `sha256₁₂ 58d1e17ffe51` (full payload with appendix) | `634` | North America | 🟢 **The most-starred education Agent-Skills library this base has shelved, and it is the counterpart of the `p859` Ed-Fi form at the TEACHER tier rather than the standards tier.** Skills and **eval rubrics** for K-12 teachers, co-developed with Learning Commons. `113` forks, HEAD `2026-10-13`. 🔵 **Apache-2.0 means a studio may ship a derived skill pack closed; the rubrics are the part a client cannot write for itself** |
+| Learning Commons agent-skills | [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) | 🟢 **Apache-2.0** — byte-read `10,173 B`, `sha256₁₂ c4a2cd14eb3a` (appendix-stripped variant) | `44` | North America | 🟢 The publisher side of the row above: the skills Learning Commons maintains in its own name. HEAD `2026-10-20`. 🔵 **Two orgs, one corpus, two different Apache payloads — `11,357 B` at Anthropic and `10,173 B` here, which is the vintage signal `T203` named** |
+| Evaluators | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🔴 **SPLIT, and the split is commercial** — `LICENSE.md`, `1,615 B`, `sha256₁₂ 86c7be78af8b`: 🟢 **code MIT** · 🟡 **rubric/prompt content CC BY 4.0** · 🔴 **the annotated CLEAR and PERSUADE 2.0 corpora CC BY-NC-SA 4.0 — NON-COMMERCIAL** | `88` | North America | 🟢 Scores AI output against trusted educational rubrics — the measurement half of the skills above, HEAD commit `2026-11-16`. 🔴 **GitHub reports `NOASSERTION` and a studio reading that field would not learn the one fact that decides the engagement: the CODE ships in a client product, the TRAINING CORPORA do not** → `T208` |
+| MIT Open Learning AI tutor | [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 **MIT** — byte-read `1,069 B`, `sha256₁₂ 77a612c534cf`, 🔴 holder **`© 2024 Romain Puech`**, an individual | n/a — 🔴 **invisible to `gh api search/repositories` on two query forms, while `git ls-remote` returns `91ba6937fba5…`** | North America | 🟢 MIT Open Learning's tutor library, HEAD `2026-11-14`. 🔴 **Shelved with its traction cell EMPTY rather than guessed**: the search channel returns `0` rows for a repository the git channel serves → `T212` |
+| MIT Learn AI backend | [`mitodl/learn-ai`](https://github.com/mitodl/learn-ai) | 🟢 **MIT** — byte-read `1,070 B`, `sha256₁₂ d1ea675aa9bb`, 🔴 holder **`© 2024 Matt Bertrand`**, an individual | `0` | North America | 🟢 The backend API for MIT Learn's chatbots, HEAD commit `2026-11-16`. 🔵 **The deployed half of the row above, and the two together are how a university actually ships a tutor: a library plus an API tenancy** → `T210` |
+| MIT OL agent-kit | [`mitodl/agent-kit`](https://github.com/mitodl/agent-kit) | 🟢 **BSD-3-Clause** — byte-read `1,499 B`, `sha256₁₂ 8afd1cd502a7`, 🔴 holder **`© 2026, Tobias Macey`**, an individual | `5` | North America | 🟢 **A university's INTERNAL agent toolkit, published: skills, custom agents, MCP helpers and configuration.** HEAD commit `2026-11-16`. 🔵 **This is the form a studio is usually asked to build and rarely gets to read** |
+| TutorIA | [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | 🟢 **MIT** — byte-read `1,069 B`, `sha256₁₂ 346d7b5d3913`, holder `© 2026 Grupo Sirius` | `0` | LATAM | 🟢 **An autonomous tutor agent for RURAL higher education in Risaralda, Colombia, written at Universidad Tecnológica de Pereira — and the region is taken from the repository's own description, not inferred from language** (`T935`). HEAD `2026-05-20`. 🔵 **`0★`, which `p859` established is the signature of the public-education tier rather than a quality signal** |
+| BloomTutor | [`Li-Evan/BloomTutor`](https://github.com/Li-Evan/BloomTutor) | 🟢 **MIT** — byte-read `1,069 B`, `sha256₁₂ 7d574cf3632e`, holder `© 2026 Li Zhengping` | `312` | Global | 🟢 Socratic, adaptive, lesson-planning open-source tutor, `44` forks, HEAD commit `2026-11-16`. 🔴 **Shelved as `Global` deliberately: the holder's name and a Chinese-language README are language evidence, and `T935` forbids reading language as region.** 🔴 **And this base logged it as `Li-Evan/Bloom`, an address that still clones — see `T212`** |
+| OpenTutor | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** — byte-read `1,068 B`, `sha256₁₂ 5352b4967982`, holder `© 2026 Zijin Zhang` | `180` | Global | 🟢 **A block-based adaptive learning workspace that runs LOCALLY**: upload material → notes, quizzes, flashcards and an adaptive tutor, self-hosted, `10+` LLM providers. `46` forks, HEAD commit `2026-11-16`. 🔵 **Local-first with pluggable providers is the data-residency posture every EMEA and public-sector engagement asks for** |
+| algo-sensei | [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 🟢 **MIT** — byte-read `1,081 B`, `sha256₁₂ 3b2ca73e81ad`, holder `© 2025 Algo Sensei Contributors` | `303` | Global | 🟢 A DSA/interview mentor that runs as Claude Code skills: progressive hints, pattern recognition, mock interviews, code review, multi-language. `64` forks, HEAD `2026-10-02`. 🔵 **The clearest worked example on this shelf of "teach, do not solve" encoded as skill files rather than as a prompt** |
+| education-skills | [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | 🟢 **MIT** — byte-read `1,068 B`, `sha256₁₂ 23b91d7c0aef`, holder `© 2026 flysheep-ai` | `125` | Global | 🟢 A Chinese-language collection of teaching and tutoring Claude Code skills (教育类 Claude Code Skills 集合), `24` forks, HEAD `2026-01-29`. 🔴 **`Global` for the same reason as `BloomTutor`: `zh` is not APAC** |
+| Moodle MCP server | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** — byte-read `1,064 B`, `sha256₁₂ 845ac6ac9e57`, holder `© 2025 peancor` | `45` | Global | 🟢 **An MCP server over Moodle — the incumbent LMS of most of the public education estate this base has mapped.** `14` forks, HEAD `2026-02-22`. 🔵 **`T116`'s access-before-agent rule: the integration surface is worth more than the agent, and this one is MIT** |
+| Instructional Agents | [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | 🟢 **MIT** — byte-read `1,067 B`, `sha256₁₂ 4e085d826a64`, holder `© 2025 DaRL-GenAI` | `0` | Global | 🟢 A multi-agent system for end-to-end course-material generation, HEAD `2026-10-14`, with a published paper (EACL '26) and sibling `instructional_agents-skills` (MIT). 🔵 **Research code with a grant and a maintained skills package is the rarest combination in the academic tier** |
+| Pedagogy benchmark | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT** — byte-read `1,064 B`, `sha256₁₂ 4cdfd8894a13`, holder `© 2025 Fab Inc` | `13` | Global | 🟢 **A pedagogy benchmark for model selection, HEAD commit `2026-11-16` — and the only MIT-granted evaluation harness on this shelf.** 🔵 **A studio proposing a tutor has to answer "which model" in writing; this is a defensible way to answer it** |
+| AITutorAgent | [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🟢 **MIT** — byte-read `1,072 B`, `sha256₁₂ c8050f8df7c1`, holder `© 2025 Ebrahim Mousavi` | `15` | Global | 🟡 A LangGraph tutoring system — structured tutorials, Q&A, knowledge evaluation. 🔴 **HEAD `2025-06-03`, seventeen months old: shelved as a READABLE REFERENCE for the LangGraph tutoring topology, not as a dependency** |
+
+### 🔴 Examined and NOT filed — `6` refusals, each with the bytes that refused it
+
+🔵 **Declared rather than left silent (`p811`'s rule).** 🟢 Absence of a grant is established by
+`git ls-tree -r HEAD` over the WHOLE tree, not by a root-directory guess.
+
+| Not filed | Why |
+|---|---|
+| [`ls1intum/AngelosAI`](https://github.com/ls1intum/AngelosAI) | 🔴 **The sharpest licence trap this base has read, and it defeated this pass's own classifier before it was caught.** The grant file is spelled **`LICENCE`**, not `LICENSE` — a root probe for `LICENSE` returns a false absence. Its first line is 🔴 **`MIT License with Commons Clause`**: a first-line matcher that accepts a line *containing* `MIT License` files a **sale-prohibiting** licence as MIT. 🔴 **And the holder line reads `Copyright (c) 2025 <COPYRIGHT HOLDER>` — an unfilled template, so there is no grantor.** `1,633 B`, `sha256₁₂ 351aaa22556d` → `T207`. 🔵 The system itself (RAG advising assistant: `application-server`, `chatbot-ui`, `knowledge-manager-ui`, `mail-system`, `rag`, `reverse-proxy`) is worth reading as an ARCHITECTURE and must not be built on |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🔴 **`104★`, `40` forks, `54` tools over the Canvas LMS API — and `0` licence files across all `36` files in the tree.** Measured, not assumed. 🔵 **The most-wanted integration surface in North American higher education is ungranted; that is a gap a studio can fill rather than a row it can use** |
+| [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | 🔴 **ETH Zurich's benchmark for open-ended pedagogical capability (EMNLP 2025 Oral), `49★` — `0` licence files across `40` files.** 🔵 **A benchmark nobody may redistribute cannot be put in a client's CI** |
+| [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **The most-cited AI-tutor prompt repository of the LLM era — `12` files, `0` licence files, HEAD `2025-09-30`.** 🔵 Cite it as prior art; never copy a line of it into a deliverable |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | 🔴 **`CC0-1.0`, byte-read `7,048 B`, `sha256₁₂ a2010f343487` — a copyright WAIVER, not a software licence: no patent peace and no warranty disclaimer of the kind a procurement office expects.** `137★`, WWW '25 Oral. 🟡 **Usable as a reference implementation of goal-oriented multi-agent tutoring; flagged rather than shelved** |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | 🔴 **`4,568` files, `14` licence files — and all `14` are VENDORED third-party grants (`fckeditor`, `tiny_mce`, `delayed_job`). The project's own code has no root grant.** 🔴 **HEAD commit `2012-10-12`.** 🔵 **A licence-file COUNT is not a grant: this base's own instrument would have said "`14` licences found"** |
+
 ## 🟢 Sixty-fourth pass (`p859`, 2026-11-16) — **`2` agent rows (`456` → `458`): the org-enumeration channel is pointed OUTSIDE Europe for the first time, and `386` repositories from eight public education bodies yield exactly TWO agents**
 
 🟢 **`858-G6` is discharged, and the answer is a number rather than a nil.** `p858` ended by naming
@@ -3969,7 +4026,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 456 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 474 rows
 
 ### Filed by `p853` (2026-11-16) — `12` rows: the SPOKEN-LANGUAGE ASSESSMENT tier, every grant byte-read today, `0` copyleft, and every row's CORPUS dependency stated beside its licence
 

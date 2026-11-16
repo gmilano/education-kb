@@ -4,6 +4,42 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` — `p860`: `34` addresses recovered from this base's own log — and a fourteen-pass nil on "a permissively-licensed LMS/SIS" dies with three counter-examples
+
+🔴 **The movement first, because it is a RETRACTION rather than a discovery.** 🟢 These shelves have
+carried a declared nil for fourteen passes: *no permissively-licensed open-source LMS or SIS
+exists*. 🔴 **Three were in this very file, logged and never graded, and all three were byte-read
+today.**
+
+| Address | Licence, byte-read `2026-11-16` | ★ / forks | Default ref · HEAD |
+|---|---|---|---|
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **MIT**, `1,091 B`, `sha256₁₂ 63a0a2b4d6d9` | **`832` / `398`** | 🔴 `develop` · `2026-11-16` |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 **MIT**, `1,094 B`, `sha256₁₂ 6051a15f4d44` | `412` / `154` | `main` · `2026-11-11` |
+| [`openfun/richie`](https://github.com/openfun/richie) | 🟢 **MIT**, `1,079 B`, `sha256₁₂ e4b2a3148135` | `318` / `94` | `master` · `2026-11-02` |
+
+🔵 **Why the nil held so long: it was tested against `LMS`, `SIS` and `student information system`
+— the vocabulary of the procurement document — and the permissive supply calls itself
+*"interactive learning with automated feedback"*, *"school management platform"* and *"a CMS to
+build education portals"*** → `T213`.
+
+### 🟢 What else came off the log this window
+
+| Movement | What moved |
+|---|---|
+| 🟢 **France is NOT absent from GitHub** | 🔴 `p858` probed five ministry spellings and recorded France ABSENT. 🟢 [`openfun/richie`](https://github.com/openfun/richie)'s grant names **`GIP FUN MOOC`** in its bytes, and `user:openfun` returns **`100` public repositories**. 🔵 **Education code is published by the OPERATOR, not the ministry** → `T211` |
+| 🔴 **The AI layer is the PAYWALLED layer** | [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) (`532★`): AGPL-3.0 Community Edition, 🔴 **with `apps/prairielearn/src/ee/` AND `apps/course-agent/` as Enterprise Edition**. Read in the licence file → `T209` |
+| 🟢 **NEW standards tier** | [`openedx/XBlock`](https://github.com/openedx/XBlock) (Apache-2.0, `471★`), [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) (Apache-2.0, `377★`, `267` forks), [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) (BSD-3), [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) (Apache-2.0, `954★`), [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (MIT, `367★`) |
+| 🟢 **NEW LATAM data row** | [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) — Brazil's **BNCC** curriculum as MIT open data: `1,721` learning objectives in JSON/SQLite/CSV with per-record provenance. `26★` — invisible to any ranked search |
+| 🟢 **NEW research-method row** | [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) (Apache-2.0) — randomised controlled trials inside real LMS assignments, consent hidden from the teacher, identifiers stripped from exports |
+| 🔴 **GitHub's licence field UNDER-read four grants in one batch of `34`** | `INGInious` → AGPL-3.0 · `thm-mni-ii/feedbacksystem` → Apache-2.0 (holder: *Technische Hochschule Mittelhessen*) · `inducer/relate` → MIT/X (`437★`, declared in prose) · `learning-commons-org/evaluators` → a THREE-licence split. All four read `NOASSERTION` on GitHub → `T208` |
+| 🔴 **A licence-file COUNT is not a grant** | [`foradian/fedena`](https://github.com/foradian/fedena): `4,568` files, `14` licence files — 🔴 **all `14` vendored third-party**, no root grant, HEAD commit `2012-10-12` |
+| 🔴 **Byte-identical copyleft across two publishers** | `learnhouse/learnhouse` (`2,480★`) and `classroomio/classroomio` (`1,745★`) both ship AGPL-3.0 at **`34,523 B`, `sha256₁₂ 8486a10c4393`** — the same FSF payload, which is how a shared payload is distinguished from a shared origin |
+
+🔴 **Channel note.** `curl -sI` against `github.com` is **`403` from this environment's proxy**, so
+it was not used. 🟢 Existence = a treeless partial clone returning a tree; licences = `git cat-file
+-s` + `sha256sum` on that clone; traction = `gh api search/repositories`, bidirectionally
+controlled. 🔴 `gh api repos/{owner}/{repo}` remains `403` session-scoped.
+
 ## 🟢 `2026-11-16` — `p859`: `386` repositories enumerated from eight NON-European education bodies, and the window's movement is that two of the named targets are EMPTY
 
 🔴 **The movement first, because it is a retirement of a plan rather than a discovery of a

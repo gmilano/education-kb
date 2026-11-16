@@ -1,0 +1,42 @@
+address	default_ref	head_commit	licence_file	bytes	sha256_12	family_first_line	holder_line
+mitodl/open-learning-ai-tutor	main	2026-11-14T15:57:04+00:00	LICENSE	1069	77a612c534cf	MIT License 	Copyright (c) 2024 Romain Puech
+DMontgomery40/mcp-canvas-lms	main	2026-05-31T17:10:05-06:00	NONE			 	
+peancor/moodle-mcp-server	main	2026-02-22T11:37:13+01:00	LICENSE	1064	845ac6ac9e57	MIT License 	Copyright (c) 2025 peancor
+anthropics/k12-teacher-skills	main	2026-10-13T20:54:37-04:00	LICENSE	11357	58d1e17ffe51	Apache License Version 2.0	      "Licensor" shall mean the copyright owner or entity authorized by
+GeminiLight/gen-mentor	main	2026-10-23T20:21:36+08:00	LICENSE	7048	a2010f343487	 	exclusive Copyright and Related Rights (defined below) upon the creator
+DaRL-GenAI/instructional_agents	main	2026-10-14T18:08:14-07:00	LICENSE	1067	4e085d826a64	MIT License 	Copyright (c) 2025 DaRL-GenAI
+eth-lre/mathtutorbench	main	2026-08-27T13:02:28+02:00	NONE			 	
+AI-for-Education/pedagogy-benchmark	main	2025-10-15T12:22:32+01:00	LICENSE	1064	4cdfd8894a13	MIT License 	Copyright (c) 2025 Fab Inc
+Ebimsv/AITutorAgent	main	2025-06-03T12:44:33+03:30	LICENSE	1072	c8050f8df7c1	MIT License 	Copyright (c) 2025 Ebrahim Mousavi
+LabSirius/TutorIA	main	2026-05-20T14:41:29-05:00	LICENSE	1069	346d7b5d3913	MIT License 	Copyright (c) 2026 Grupo Sirius
+zijinz456/OpenTutor	main	2026-11-16T09:01:57+11:00	LICENSE	1068	5352b4967982	MIT License 	Copyright (c) 2026 Zijin Zhang
+Li-Evan/Bloom	main	2026-11-16T21:09:54+08:00	LICENSE	1069	7d574cf3632e	MIT License 	Copyright (c) 2026 Li Zhengping
+learning-commons-org/evaluators	main	2026-11-16T11:47:27-08:00	LICENSE.md	1615	86c7be78af8b	 	
+flysheep-ai/education-skills	main	2026-01-29T21:09:50+08:00	LICENSE	1068	23b91d7c0aef	MIT License 	Copyright (c) 2026 flysheep-ai
+JushBJJ/Mr.-Ranedeer-AI-Tutor	main	2025-09-30T11:07:44+03:00	NONE			 	
+karanb192/algo-sensei	main	2026-10-02T15:10:33+05:30	LICENSE	1081	3b2ca73e81ad	MIT License 	Copyright (c) 2025 Algo Sensei Contributors
+ls1intum/Artemis	develop	2026-11-16T21:54:16+01:00	LICENSE	1091	63a0a2b4d6d9	MIT License 	Copyright (c) 2026 TUM Applied Education Technologies
+learnhouse/learnhouse	dev	2026-11-16T19:27:35+01:00	LICENSE	34523	8486a10c4393	GNU AFFERO GENERAL PUBLIC LICENSE 	 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+classroomio/classroomio	main	2026-11-16T18:39:22+01:00	LICENSE	34523	8486a10c4393	GNU AFFERO GENERAL PUBLIC LICENSE 	 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+openedx/XBlock	master	2026-11-16T11:42:11+05:00	LICENSE.TXT	11358	cfc7749b96f6	Apache License Version 2.0	      "Licensor" shall mean the copyright owner or entity authorized by
+jcputney/scorm-again	master	2026-11-16T14:10:05-05:00	LICENSE	1072	383b85b370e8	MIT License 	Copyright (c) 2020 Jonathan Putney
+tsugiproject/tsugi	master	2026-11-16T11:43:05-05:00	LICENSE	10273	73ba74dfaa52	Apache License Version 2.0	"Licensor" shall mean the copyright owner or entity authorized by the copyright
+jupyterhub/ltiauthenticator	main	2026-07-01T09:21:54+01:00	LICENSE	1528	08eebd9662cb	BSD 3-Clause 	Copyright (c) 2016, Project Jupyter Contributors
+PrairieLearn/PrairieLearn	master	2026-11-16T21:16:11+00:00	LICENSE	37237	548cbfae567a	GNU Affero General Public License 	Copyright (c) 2021-present PrairieLearn, Inc.
+INGInious/INGInious	main	2026-11-16T09:33:13+01:00	LICENSE	34764	6d1ebe4ddf66	GNU AFFERO GENERAL PUBLIC LICENSE 	 Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+openfun/richie	master	2026-11-02T11:32:29+01:00	LICENSE	1079	e4b2a3148135	MIT License 	Copyright (c) 2018-present GIP FUN MOOC.
+terracotta-education/terracotta	development	2026-11-16T13:54:59-05:00	LICENSE	11323	6dc0e068dcf3	Apache License Version 2.0	      "Licensor" shall mean the copyright owner or entity authorized by
+academico-sis/academico	main	2026-11-11T15:37:30+00:00	LICENSE	1094	6051a15f4d44	MIT License 	Copyright (c) 2020 Thomas Debay and project contributors
+foradian/fedena	master	2012-10-12T17:05:36+05:30	NONE			 	
+inducer/relate	main	2026-11-14T14:40:48-06:00	LICENSE	1145	66ff89ebf05f	 	Copyright (c) 2014-15 Andreas Klöckner and Contributors.
+thm-mni-ii/feedbacksystem	dev	2026-11-03T16:40:04+01:00	LICENSE	10785	65125d9e480b	Apache License Version 2.0	   Copyright 2021 Technische Hochschule Mittelhessen
+bncc-dev/bncc-dados	main	2026-10-15T16:45:16-03:00	LICENSE	1092	e162f8f4b461	MIT License 	Copyright (c) 2026 Profy Tecnologias Educacionais Ltda
+jdolny/OneRoster.NET	master	2023-10-13T09:43:35-04:00	LICENSE	1066	1dc50226c38a	MIT License 	Copyright (c) 2020 theopenem
+adlnet/xAPI-Spec	master	2025-07-03T11:08:52-04:00	LICENSE	11525	a1587287ff04	Apache License Version 2.0	      "Licensor" shall mean the copyright owner or entity authorized by
+ls1intum/edutelligence	main	2026-11-16T19:44:37+01:00	LICENSE	1091	6b9b9eda00d6	MIT License 	Copyright (c) 2025 TUM Applied Education Technologies
+ls1intum/AngelosAI	main	2026-04-10T15:13:38+02:00	LICENCE	1633	351aaa22556d	MIT License 	Copyright (c) 2025 <COPYRIGHT HOLDER>
+ls1intum/Thaii	main	2024-10-25T12:26:38+02:00	LICENSE	1089	b6a81f955656	MIT License 	Copyright (c) 2024 TUM Applied Software Engineering
+mitodl/learn-ai	main	2026-11-16T18:51:28+00:00	LICENSE	1070	d1ea675aa9bb	MIT License 	Copyright (c) 2024 Matt Bertrand
+mitodl/agent-kit	main	2026-11-16T14:14:05-05:00	LICENSE	1499	8afd1cd502a7	BSD 3-Clause 	Copyright (c) 2026, Tobias Macey
+learning-commons-org/agent-skills	main	2026-10-20T14:12:25-07:00	LICENSE	10173	c4a2cd14eb3a	Apache License Version 2.0	      "Licensor" shall mean the copyright owner or entity authorized by
+learning-commons-org/knowledge-graph	main	2026-11-10T14:15:22-08:00	LICENSE.md	5789	d849ffef4f98	 	| **Open**             | Freely usable under an open license, subject to that license's te

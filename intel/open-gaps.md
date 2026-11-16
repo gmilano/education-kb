@@ -4,6 +4,99 @@ region: Global
 updated: 2026-11-16
 ---
 
+## 🟢 `2026-11-16` (sixty-fifth pass, `p860`) — **`4` gaps — `858-G3` DISCHARGED with its acceptance test passed and the residue MEASURED, `858-G4` NARROWED rather than closed, and two new limits named with the probe that found them**
+
+### 🟢 `858-G3` — DISCHARGED, acceptance test passed, and the defect is larger than it was declared as
+
+🔴 **The gap said: *"nothing in this tree compares what was LOGGED against what was SHELVED"*, and
+required that the instrument report `Opetushallitus` as CLEARED after the pass that builds it.**
+
+🟢 **Built, run, and both halves hold.** `Opetushallitus` → `5` shelved addresses (`koski`, `ataru`,
+`aoe`, `varda`, `eperusteet`): **CLEARED**. 🔴 **And the instrument's second output is the
+population the gap did not ask for:**
+
+| Measured `2026-11-16` | Before `p860` | After `p860` |
+|---|---|---|
+| distinct addresses LOGGED to the two trending files | `5,629` | `5,630` |
+| distinct addresses on the three shelves | `1,085` | 🟢 **`1,124`** |
+| 🔴 **LOGGED AND NEVER SHELVED** | 🔴 **`4,924`** | 🟡 **`4,886`** |
+
+🟢 Both lists are published:
+[`logged-not-shelved`](../evidence/logged-not-shelved.2026-11-16-p860.tsv) (top `600`, ranked by
+times logged) and [`byte-read-grants`](../evidence/byte-read-grants.2026-11-16-p860.tsv) (`41`
+addresses with ref, HEAD commit, licence path, bytes, `sha256₁₂`, first line and holder). 🔵 **The
+instrument is four lines of `grep` plus a set difference and runs on any two corpora of addresses.**
+
+### 🔴 `860-G1` — the residue is `4,886` addresses and one pass mines `34` of them
+
+🔴 **Declared with its arithmetic.** At this pass's rate the log is cleared in roughly **`144`
+passes**, and the log grows every pass. 🔵 **So "mine the backlog" is not a plan; a SELECTION RULE
+is.**
+
+🟢 **Remedy, named and cheap**: rank by times-logged (done, and the top `600` are published), then
+filter to addresses whose name or logged description carries a platform, standard or institution
+token, and read `20`–`30` per pass. 🔴 **Cost: one pass in four, indefinitely.**
+🟢 **Acceptance test, and it is a direction rather than a number: the LOGGED-AND-NEVER-SHELVED
+figure must FALL between two consecutive passes that run it.** 🟢 **`p860` moved it `4,924` →
+`4,886`.**
+
+🔵 **Known false positive in the residue, declared so the next pass does not chase it**:
+`Li-Evan/Bloom` still appears there because the shelf deliberately publishes its current name
+`Li-Evan/BloomTutor` (`T212`). 🔵 **A rename alias will always read as unshelved; the recovery rule
+must compare `git ls-remote` objects, not strings.**
+
+### 🔴 `860-G2` — `0` rows placed in APAC this pass, and the cause is the channel rather than the supply
+
+🔴 **Measured.** Two substantial APAC-plausible rows were shelved **`Global`**:
+[`Li-Evan/BloomTutor`](https://github.com/Li-Evan/BloomTutor) (MIT, `312★`) and
+[`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) (MIT, `125★`).
+🔴 **`T935` forbids reading language as region; `gh api users/{login}` is `403` session-scoped; so
+origin is not resolvable and the rows are honest but unplaced.** 🔴 **`19` of this pass's `37` rows
+are in that state.**
+
+🟢 **Remedy, with a channel that IS available here**: the treeless clone already fetches the tree,
+so `README`, `CITATION.cff`, `pyproject.toml`, `package.json` and `CODEOWNERS` can be read for an
+institutional affiliation at **zero extra network cost**. 🔵 **An affiliation stated by the project
+is evidence of the same class as a copyright holder line — which is how all four EMEA rows in this
+pass were placed.** 🔴 **Cost: one extra blob fetch per candidate and a declared precedence order
+(holder line → citation/affiliation → namespace → unplaced).**
+
+### 🟡 `860-G3` — `858-G4` is NARROWED, not discharged: France is answered, Spain and Denmark are not
+
+🟢 **France is no longer an absence.** `p858` probed five MINISTRY spellings and recorded France as
+absent from GitHub; 🟢 **`openfun` — France Université Numérique, named `GIP FUN MOOC` in its own
+MIT grant — holds `100` public repositories** (`T211`).
+
+🔴 **What remains open, exactly**: 🇪🇸 Spain (`intef` → `422`, with `intef-dev` a lookalike trap) and
+🇩🇰 Denmark (four spellings, four `422`s) have **not** been re-probed at the OPERATOR layer that
+just answered France. 🔵 **Candidate operator classes, named so the next pass has no search step:
+the national MOOC/platform body, the university-consortium IT body, and the regional education
+agency.** 🔴 **Until that is run, "Spain and Denmark publish no education code" must still not be
+written.**
+
+🟡 **And a second residue inside this gap**: `openfun`'s own AI repositories are a `2023` conference
+landing page and a slide deck. 🟢 **The French operator publishes a CMS and no AI layer** — `T201`'s
+shape, now observed inside Europe, and worth one targeted pass rather than an assumption.
+
+### 🔴 `860-G4` — this base's licence classifier accepts a first line that CONTAINS a family name, and it was wrong today
+
+🔴 **Caught in flight, on this pass's own instrument.**
+[`ls1intum/AngelosAI`](https://github.com/ls1intum/AngelosAI) opens with `MIT License with Commons
+Clause`; the classifier matched `MIT License` inside that line and filed a **sale-prohibiting**
+grant as MIT. 🔴 **Two further axes failed on the same file: the grant is spelled `LICENCE`, and
+its holder line is the unfilled template `<COPYRIGHT HOLDER>`.**
+
+🟢 **Remedy, and it is three small changes rather than a rewrite**: (a) accept a family only when
+the first non-empty line **equals** the family name, and treat any suffix as a NARROWING to be
+reported; (b) add `LICENCE`, `LICENCE.md`, `LICENCE.txt` to the filename list; (c) 🔴 **grade the
+holder line — a payload whose copyright line still contains `<`, `[`, `YOUR NAME`, `COPYRIGHT
+HOLDER` or `yyyy` is an UNEXECUTED grant and must not be shelved as permissive.**
+
+🔴 **Cost, and it is the uncomfortable half**: (a) and (c) must be re-run over the `474` agent rows
+and `318` foundation rows already published, because the defect is in the READER and every past
+reading inherits it. 🔵 **That is a sweep, not research — the same shape as `858-G1`'s re-dating —
+and the two should be run in ONE pass over one clone set.**
+
 ## 🟢 `2026-11-16` (sixty-third pass, `p858`) — **`6` gaps — `5` live and `858-G5` DISCHARGED in the same pass that declared it — plus `857-G6` DISCHARGED by measurement and `Gap 251` PARTIALLY CLOSED with one of its own claims refuted**
 
 ### 🟢 `857-G6` — DISCHARGED. The LATAM-origin absence is now measured, not assumed
