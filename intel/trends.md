@@ -6,7 +6,12 @@ updated: 2026-11-17
 
 # Current trends — education AI
 
-**Pass `p880`, 2026-11-17** (tenth pass of the day). `p880` adds **T17** — restored, and under a new number: an agent mounted on an incumbent system **inherits its authority and none of its defences**, a clause `gate-prose-claims` had been reporting lost since the `p871` rewrite, whose original slot `T15` `p878` had meanwhile reassigned — and **T18**, the category `T7` and `T16` both omit: **a third of this vertical's open-source estate carries no grant at all**, measured over a real denominator of `2,574` repositories rather than a top-40 sample.
+**Pass `p882`, 2026-11-17** (twelfth pass of the day). `p882` adds **T20** — the permissive share of
+education open source is **a function of the layer, not of the vertical**, measured across 173
+shelved addresses for the first time — and it closes `881-G3` by replacing a presentation check
+that had been masquerading as a structural one. 🔵 **Derived trends: **20**.**
+
+**Previous pass (`p880`), retained:** **Pass `p880`, 2026-11-17** (tenth pass of the day). `p880` adds **T17** — restored, and under a new number: an agent mounted on an incumbent system **inherits its authority and none of its defences**, a clause `gate-prose-claims` had been reporting lost since the `p871` rewrite, whose original slot `T15` `p878` had meanwhile reassigned — and **T18**, the category `T7` and `T16` both omit: **a third of this vertical's open-source estate carries no grant at all**, measured over a real denominator of `2,574` repositories rather than a top-40 sample.
 
 **Previous pass (`p879`), retained:** **Pass `p879`, 2026-11-17** (ninth pass of the day). `p879` adds **T16** — measured per
 organisation, **the permissive/copyleft fault line runs *inside* the big projects, not between
@@ -964,6 +969,59 @@ a **new gap opened** (the dormant LRS).
   settings would upgrade the whole efficacy section from secondary to primary, and is the single
   highest-leverage change available to this KB.
 
+
+## T20 — The permissive share is a property of the LAYER, not of the vertical — new in `p882`
+
+🟢 **The measurement.** `p882` re-measured every address on all three sell shelves through
+`api.github.com/search/repositories` — 143 distinct repositories, SPDX id as GitHub resolves it
+([`record`](../evidence/sell-shelf-measure.2026-11-17-p882.tsv)) — and the licence posture turns out
+to be ordered by *architectural layer*, monotonically:
+
+| Layer | Shelf | Rows | Permissive | Copyleft | No resolvable grant |
+|---|---|---:|---:|---:|---:|
+| substrate, libraries, standards | `repos/foundations.md` | 76 | **82.9%** | **6.6%** | 9.2% |
+| agents | `agents/top.md` | 42 | 78.6% | 4.8% | 14.3% |
+| platforms institutions actually run | `verticals/solutions.md` | 55 | **50.9%** | **38.2%** | 10.9% |
+
+🔴 **Why this reverses how `T7` and `T16` have been applied.** `T7` reads the permissive/copyleft
+fault line as running *through the vertical*; `T16` corrected it to run *inside the big projects*.
+Both are true and both are incomplete, because they are stated about **projects**. Stated about
+**layers**, the distribution is not a fault line at all — it is a **gradient**, and it has a cause:
+copyleft in education is carried almost entirely by the **incumbent platforms**, which are the
+oldest software on the shelf (Moodle 2002, Sakai 2004, Koha 1999, Canvas 2011) and were licensed in
+an era when GPL/AGPL *was* the way an education consortium protected a commons. The substrate a
+studio builds on was licensed later, in the permissive era, and is **83%** permissive.
+
+🟢 **The consequence, and it is the most actionable thing in this file.** A licence constraint that
+is distributed by layer can be **designed around rather than negotiated around**. You do not need a
+permissive LMS — this KB has measured repeatedly that none exists at Moodle's or Canvas's scale, and
+`p882`'s verticals leg found none again. You need the **boundary** to be in the right place:
+
+- the **incumbent platform** keeps its licence and its data, untouched;
+- the **integration surface** is a standard — **LTI 1.3**, **xAPI**, **OneRoster** — which is a
+  specification, not a derivative work;
+- everything a studio **writes** sits in the 83%-permissive substrate layer and is the client's to
+  license as they choose.
+
+🔵 **This is why every pattern in `compose/patterns.md` that has survived contact with an engagement
+has the same shape**, and `P19` (Open edX capability without the AGPL obligation) and `P20` (the
+MIT-end-to-end offline supply chain) are the explicit statements of it. 🔴 **The inverse is the one
+genuinely expensive mistake available here:** forking an AGPL-3.0 platform to add an agent. The
+obligation attaches to the modified work *served over a network*, which is exactly what a hosted LMS
+is — so the fork converts a licence question into a disclosure obligation on the studio's own code,
+for no capability that attaching would not also deliver.
+
+🟡 **Read `T18` against this, not instead of it.** `T18` measured *no grant at all* on about a third
+of the 2,574-repository estate. On the **curated** shelf the same measure is **11.9%** — so curation
+removes roughly two-thirds of the problem, and the residual 17 are **named** on `agents/top.md`
+rather than averaged away. `T14` still governs how they are read: `NOASSERTION` is GitHub declining
+to classify, not a permission, and nine of the 17 already carry byte-read grant cells.
+
+🔵 **Boundary of the claim, stated so the next pass does not over-read it.** This is 143
+repositories chosen *by this KB* for client-facing shelves, so it measures the posture of a
+**curated** estate and not of the vertical's whole population. `T12`'s long tail of zeroes and
+`T10`'s unlicensed Global South supply are the population-level statements, and they disagree with
+this one in exactly the way a curated sample should.
 
 ## T19 — The red gates were holding the supply the search channel could not find — new in `p881`
 

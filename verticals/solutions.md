@@ -6,7 +6,23 @@ updated: 2026-11-17
 
 # Vertical platforms — education
 
-**Pass `p879`, 2026-11-17** (ninth pass of the day). **`p879` adds the layer this file has
+**Pass `p882`, 2026-11-17** (twelfth pass of the day). **`p882` measured what this file has always
+asserted: the copyleft problem in education lives HERE, and almost nowhere else.**
+
+- 🔴 **This shelf is 38.2% copyleft and only 50.9% permissive** — against 6.6% copyleft and 82.9%
+  permissive on `repos/foundations.md`. Every address on all three sell shelves was re-measured
+  this pass ([`record`](../evidence/sell-shelf-measure.2026-11-17-p882.tsv)); the per-layer table is
+  on `repos/foundations.md` and the consequence for an engagement is below.
+- 🟢 **The channel:** `api.github.com/search/repositories` is `200` this pass while
+  `api.github.com/repos/<slug>` is `403` — `p881` recorded the metadata channel as flatly down, so
+  this is the first full re-measure of this shelf since `p879`
+  ([`record`](../evidence/channel-state.2026-11-17-p882.tsv)).
+- 🔴 **A `p881` repair on this shelf is reversed:** canonical is `sudosylabs/proctor`, lower-case.
+  The three addresses are re-cased; the reasoning is kept under the `p881` section below rather than
+  edited away.
+- 🟢 **This shelf can be counted again:** **53 rows across 10 tables**, measured (`881-G3`).
+
+**Previous pass (`p879`), retained:** **Pass `p879`, 2026-11-17** (ninth pass of the day). **`p879` adds the layer this file has
 described 879 passes of systems on top of and never named: identity.**
 
 - 🟢 **`apereo/cas` — Apache-2.0, 11,402 ★, pushed 2026-11-17.** Single sign-on for higher
@@ -122,11 +138,59 @@ verified via `git ls-remote` + `raw.githubusercontent.com` on the resolved defau
 > conclusion survives the measurement and is strengthened by it: do not fork a platform to chase a
 > licence — **attach over LTI 1.3 and xAPI, where the permissive layer is yours to write.**
 
+## 🆕 `p882` · 2026-11-17 — what changed on this shelf
+
+### 🔴 38.2% copyleft, and that is this shelf's defining property rather than a defect
+
+Measured over all 55 resolvable addresses on this shelf:
+
+| Posture | SPDX ids | Rows | Share |
+|---|---|---:|---:|
+| Permissive | Apache-2.0 14 · MIT 11 · ECL-2.0 2 · BSD-3-Clause 1 | 28 | 50.9% |
+| **Copyleft** | GPL-3.0 10 · AGPL-3.0 7 · GPL-2.0 3 · LGPL-3.0 1 | **21** | **38.2%** |
+| No resolvable grant | NOASSERTION 5 · none 1 | 6 | 10.9% |
+
+🔵 **The comparison is the finding, not the number.** The substrate shelf is **6.6%** copyleft; this
+one is **38.2%** — a sixfold concentration in exactly the layer a client already runs in production
+and will not be replacing. 🟢 **That makes the licence question an architecture question with one
+answer:** the platform stays where it is and keeps its licence; the work a studio delivers attaches
+to it over **LTI 1.3**, **xAPI** and **OneRoster**, and lives in the permissive layer where it is
+the client's to license as they choose. Every pattern in `compose/patterns.md` that survived
+contact with a real engagement has this shape, and `P19`/`P20` are the explicit recipes.
+
+🔴 **The one thing not to do, stated once:** do not fork an AGPL-3.0 platform to add an agent to it.
+The obligation attaches to the modified work served over a network, which is what a hosted LMS is.
+Attaching leaves the obligation where it already was.
+
+### 🟢 The permissive escape hatches this shelf already holds, now with first-party numbers
+
+| Address | Licence | ★ | Pushed | Role in an engagement |
+|---|---|---:|---|---|
+| https://github.com/apereo/cas | **Apache-2.0** | 11,402 | 2026-11-17 | the identity layer under higher education — permissive, and where AI-governance consent becomes auditable |
+| https://github.com/moodlehq/moodleapp | **Apache-2.0** | 1,006 | 2026-11-17 | a white-labelled mobile client for a GPL-3.0 server: a permissive deliverable against a copyleft platform |
+| https://github.com/ls1intum/Artemis | **MIT** | 832 | 2026-11-17 | assessment at scale without a copyleft core; still the only one on this shelf |
+| https://github.com/learningequality/kolibri | **MIT** | 1,178 | 2026-11-17 | the offline platform, MIT end to end with its content supply chain |
+
+🔵 **Four rows, and they are the whole argument.** The permissive half of this shelf is not a thin
+version of the copyleft half — it is **identity, assessment, mobile delivery and offline**, which is
+precisely the set of places a studio adds value without touching the incumbent's core.
+
+🔴 **Liveness, measured separately from licence:** three addresses on this shelf have not been pushed
+in over twelve months — `LearningLocker/learninglocker` (2024-05-30, GPL-3.0, 587 ★),
+`kamlendras/OpenProctor` (2025-05-28) and `ganesh-786/Proctor` (2025-06-09). The last two are the
+proctoring category `p875` already called *"real demand, and effectively no supply"*; the first is
+the xAPI LRS, and it is load-bearing. See `repos/foundations.md`, this pass, for the full list.
+
 ## 🆕 `p881` · 2026-11-17 — what changed on this shelf
 
 🟢 **Six slug corrections on this shelf — the two `880-G4` mismatches in the whole base were both here.**
 `OpenOlat/OpenOlat` → `OpenOLAT/OpenOLAT` (3) and `sudosylabs/proctor` → `sudosylabs/Proctor` (3). The
 base-wide count is now **`0`** ([`record`](../evidence/case-oracle-postfix.2026-11-17-p881.tsv)).
+>
+> 🔴 **`p882` REVERSED the second of those two.** Canonical is `sudosylabs/proctor`, lower-case —
+> first-party `full_name` from `search/repositories`, a channel `p881` recorded as wholly down. The
+> `OpenOLAT` half is confirmed correct. The three addresses on this shelf are re-cased back; the
+> sentence above is kept rather than quietly edited, because what it got wrong is the lesson.
 
 🟢 **This shelf was RIGHT and the register was WRONG about `h5p/h5p-php-library`, and `p881` byte-read it
 to settle the matter.** `gate-shelf-consistency` reported a live disagreement — Apache-2.0 at
@@ -148,6 +212,18 @@ LCMS) — the portal and media layers clients ask for and that Moodle/Open edX d
 `OpenOLAT/OpenOLAT`; Apache-2.0 re-confirmed on the canonical address), and both high-star education
 ERPs remain unusable — `openeducat_erp` is **LGPL**, `frappe/education`'s whole grant is a **19-byte**
 `License: GNU GPL V3` declaration.
+
+## The platforms — 53 rows
+
+🟢 **Derived, not asserted.** `53` distinct platforms across the **11** tables below. The raw row
+count is `57`: four addresses — `apereo/cas`, `moodlehq/moodleapp`, `ls1intum/Artemis` and
+`learningequality/kolibri` — appear both in their layer table and in the `p882` permissive-escape-
+hatch table, and are counted **once** (`p813`'s distinct-subject rule). `ingest/derive-counts.py`
+grades this heading against the rows on every pass.
+
+🔴 **Read the licence posture before the list:** this shelf is **38.2% copyleft** against 6.6% on
+`repos/foundations.md`. That is a property of the layer, not of the curation — see the `p882`
+section above.
 
 ## Learning management systems
 
@@ -359,7 +435,7 @@ explicitly**. See `compose/patterns.md` **P14**.
 > | `amaanwarsi/Proctora` | **3** | MIT | 2026-04-07 |
 > | `ganesh-786/Proctor` | **0** | MIT | 2025-06-09 🔴 |
 > | `code-by-abrar/Online-Proctoring-system` | **0** | MIT | 2026-09-19 |
-> | `sudosylabs/Proctor` | **0** | AGPL-3.0 | 2026-11-16 |
+> | `sudosylabs/proctor` | **0** | AGPL-3.0 | 2026-11-16 |
 > | `SriSatyaLokesh/pariksha` | **0** | AGPL-3.0 ✅ (`p874`'s correction, SPDX-confirmed) | 2026-11-07 |
 >
 > **The framing of the last three passes was wrong in a way that mattered.** `p871` said no
@@ -386,7 +462,7 @@ platforms."** The distinction decides what you can say in a procurement.
 
 | Platform | Repo | Licence | Branch | Position |
 |---|---|---|---|---|
-| **Proctor** | https://github.com/sudosylabs/Proctor | **AGPL-3.0** | `main` | Self-hosted examination **and** proctoring platform aimed at institutions — Go server, React front end. The most complete open-source project in this category. No published supported-release or compatibility window, so treat maturity as unproven. |
+| **Proctor** | https://github.com/sudosylabs/proctor | **AGPL-3.0** | `main` | Self-hosted examination **and** proctoring platform aimed at institutions — Go server, React front end. The most complete open-source project in this category. No published supported-release or compatibility window, so treat maturity as unproven. |
 | **OpenProctor** | https://github.com/kamlendras/OpenProctor | **AGPL-3.0** | `main` | Next.js/TypeScript. **Licence correction: secondary listings say MIT; the bytes on `main` say AGPL-3.0.** Thin install documentation, Vercel-oriented rather than clearly self-hostable. |
 | **Proctor** (ganesh-786) | https://github.com/ganesh-786/Proctor | 🟢 **MIT** | `main` | **NEW `p874`.** Self-described modular, microservices-based AI proctoring. The most architecturally ambitious of the permissive three. **No tags, 1 branch** — a reference implementation. |
 | **Proctora** | https://github.com/amaanwarsi/Proctora | 🟢 **MIT** | `main` | **NEW `p874`.** Flask + OpenCV + MediaPipe; webcam, microphone-noise and tab-switch monitoring, session violation logging, CI configured. 🔴 **Its own README says it should not be presented as a secure exam platform in its current state** — the project's words, not this KB's. |
@@ -404,7 +480,7 @@ useless. The **maturity** axis does:
   a procurement board as a platform.** Their real value is as *capability references* — the
   face-tracking, tab-switch and audio-monitoring pieces are readable MIT code you can learn the
   shape of a build from, and legally reuse.
-- 🔴 **The one complete platform (`sudosylabs/Proctor`) is AGPL-3.0.** Workable where the
+- 🔴 **The one complete platform (`sudosylabs/proctor`) is AGPL-3.0.** Workable where the
   institution hosts it itself — the copyleft obligation stays inside one tenancy, which is the
   normal education deployment — and unusable inside a distributed proprietary product. So the
   *mature* path remains open to a Globant **integration** engagement and closed to a Globant

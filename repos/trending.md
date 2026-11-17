@@ -4,6 +4,93 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p882`) — **173 shelved addresses re-measured first-hand, and the permissive share turns out to be a function of the LAYER: 82.9% at the substrate, 50.9% at the platforms institutions actually run**
+
+🟢 **The census.** All 146 addresses written on `agents/top.md`, `repos/foundations.md` and
+`verticals/solutions.md` were put through `api.github.com/search/repositories`, which is `200` this
+pass while `api.github.com/repos/<slug>` is `403`. **143 resolved** — the three that did not are not
+repositories at all (`github.com/advisories/…`, `github.com/search/code`,
+`github.com/search/repositories`), captured by the address regex and named here rather than counted
+as misses ([`record`](../evidence/sell-shelf-measure.2026-11-17-p882.tsv)).
+
+### 🟢 The gradient — `T20`, new this pass
+
+| Layer | Shelf | Rows | Permissive | Copyleft | No resolvable grant |
+|---|---|---:|---:|---:|---:|
+| substrate, libraries, standards | `repos/foundations.md` | 76 | **82.9%** (63) | **6.6%** (5) | 9.2% (7) |
+| agents | `agents/top.md` | 42 | 78.6% (33) | 4.8% (2) | 14.3% (6) |
+| platforms institutions run | `verticals/solutions.md` | 55 | **50.9%** (28) | **38.2%** (21) | 10.9% (6) |
+| **whole curated estate** | all three | **143** | **71.3%** (102) | 16.1% (23) | **11.9%** (17) |
+
+🔵 **This reverses how `T7` and `T16` have been applied.** Both state the fault line about
+*projects*. Stated about *layers* it is not a fault line but a **gradient**, with a cause: copyleft
+in education is carried by the **incumbent platforms**, the oldest software on the shelf (Koha 1999,
+Moodle 2002, Sakai 2004, Canvas 2011), licensed when GPL/AGPL was how an education consortium
+protected a commons. The substrate came later and is 83% permissive. 🟢 **So the licence
+constraint is designed around, not negotiated around:** the platform keeps its licence, the boundary
+is a *specification* (LTI 1.3, xAPI, OneRoster) rather than a derivative work, and everything a
+studio writes sits in the permissive layer.
+
+🟢 **Read against `T18`:** a third of the 2,574-repository estate carries no grant; on the
+**curated** shelf it is **11.9%**. Curation removes about two-thirds of the problem, and the residual
+17 are **named** on `agents/top.md` rather than averaged away.
+
+### 🔴 Liveness is a separate measurement, and seven rows fail it
+
+Stars do not show maintenance. Seven shelved rows have not been pushed in over twelve months:
+
+| Address | Last push | ★ | SPDX | Why it matters |
+|---|---|---:|---|---|
+| https://github.com/LearningLocker/learninglocker | **2024-05-30** | 587 | GPL-3.0 | the xAPI **LRS** in this KB's analytics layer |
+| https://github.com/stanford-oval/storm | **2025-09-30** | 31,902 | MIT | 31,902 ★ and 14 months quiet — the clearest case that stars are not liveness |
+| https://github.com/adlnet/ADL_LRS | 2025-11-14 | 335 | Apache-2.0 | the *other* LRS, also quiet |
+| https://github.com/1EdTech/openbadges-validator-core | 2025-11-04 | 61 | Apache-2.0 | credentialing validator trailing its own standard |
+| https://github.com/kamlendras/OpenProctor | 2025-05-28 | 16 | AGPL-3.0 | `p875`'s proctoring finding, reinforced |
+| https://github.com/ganesh-786/Proctor | 2025-06-09 | 0 | MIT | same |
+| https://github.com/PritK99/WriteRight | 2024-11-19 | 1 | MIT | same class, writing feedback |
+
+🟢 **The actionable one is the LRS.** *Both* permissive xAPI learning-record stores on these
+shelves are quiet, so the live analytics path is **write the LRS boundary yourself behind xAPI**
+rather than adopt one. 🔴 Registered as `882-G2`: these shelves have had **no liveness column**,
+so a row could go eighteen months stale with its licence cell perfectly accurate — a licence measure
+and a liveness measure must not be read as each other.
+
+### 🟢 Three shelves can be counted again — 28 / 75 / 53 rows
+
+They have published no row count since the `p871`/`p877`–`p880` rewrites. `gate-derived-counts`
+reported *"none of the 21 declared column-header signatures was found; no table can be located"*,
+which reads as a parse fault and was in fact **three defects superposed**, now separated and all
+three closed:
+
+1. 🟢 **the date tripwire** — `881-G3`, keyed now on the normalised column set; **4 of 37** declared
+   literals turned out to be pure date-variants of another and collapse into one key;
+2. 🟢 **every declared shape replaced by a rewrite** — `881-G2`'s cluster; the live shapes are
+   declared, which added **no row** to any file and counted rows already published (the `865-G1`
+   situation);
+3. 🟢 **no canonical count heading at all** on any of the three — now derived and graded every pass.
+
+🔵 **And a third instrument in the same cluster — which turns out to have reported this finding
+twice already, in its own file, before `p882` looked.** `ingest/foundations-disposition.tsv` keys a
+per-table disposition on **heading text**; `p545` chose text over line numbers because *"the text
+survives edits above it"*, which is true of edits and false of **rewrites**. 🔴 **The file's own
+history is the measurement:** `p568`'s rewrite left 33 keys stale and 22 tables undeclared and
+`p574` re-declared them; a later rewrite did it again and `p644` re-declared three more; the
+`p871`/`p877`–`p880` rewrites left **one** live key, naming a `p644` heading the page no longer
+carries. **Three rebuilds, one cause.**
+
+🔵 **And `p574` had already written the mechanism down**, in a note still in the file: *"A stale key
+here is not a cosmetic defect: it silences the whole gate."* It was exactly right —
+`derive-foundations.py` exited `2` on the stale row and so never reported that **fifteen of sixteen**
+tables were undeclared. `p574`'s remedy was to remove the key by hand: correct, local, and the
+recurrence is the evidence it was not enough.
+
+🟢 **So `p882` changed the instrument as well as the data.** Manifest re-declared from the live
+page (16 tables: 14 `SHELF` = 75 rows, 1 `METRIC`, 1 `SUMMARY`), with all 68 `#STALE-p574`/`p644`
+keys and the 110 lines of design rationale **preserved** under the file's own convention — and a
+**stale declaration is now AMBER rather than a hard exit**, which is how the *same script* already
+grades a stale alias relation thirty lines below. 🔴 The ratchet that matters is kept: a table **on
+the page** with no declaration is still RED, so a new table cannot be added silently.
+
 ## 🟢 `2026-11-17` (`p881`) — **the gate triage `880-G1` demanded, run gate by gate because the aggregate target is refused: `10` shelf defects, `5` instrument defects, `1` stale control to retire, `2` mixed — and the biggest single cause is this base's own full-page rewrites**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

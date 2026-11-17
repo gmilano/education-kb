@@ -4,6 +4,90 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p882`) — **the metadata channel was never down, only SPLIT: `search` is `200` while `/repos/` is `403`, so all 143 shelved repositories were re-measured — and the first thing that measurement did was reverse a `p881` repair**
+
+🔵 **Channel state, measured before anything was written**
+([`record`](../evidence/channel-state.2026-11-17-p882.tsv)). `p881` probed
+`api.github.com/repos/<slug>`, got `403`, and recorded *"metadata channel DOWN"*, drawing the rule
+*"a pass that cannot measure stars must not publish stars."* The rule was right for `p881`. The
+**declaration** generalised one limb to a whole service, and nine passes worked around a limitation
+the other limb did not have:
+
+| Channel | Result | Reading |
+|---|---|---|
+| `api.github.com/search/repositories` | **`200`** | **UP** — `full_name`, `stargazers_count`, `license.spdx_id`, `pushed_at`, `created_at`, `forks_count` |
+| `api.github.com/repos/<slug>` | `403` | DOWN |
+| `github.com` HTML over `curl` | `403` | DOWN |
+| `raw.githubusercontent.com` | `200` | UP |
+| `git ls-remote --symref` | UP | UP |
+| `api.osv.dev` / `osv.dev` web | `000` / `ENOTFOUND` | **UNREACHABLE on both** — `881-G5` settled |
+
+🟢 **A channel declaration should name the limb it tested.** That is the transferable finding of
+this pass, and it cost one `curl` to establish.
+
+### 🔴 `p881`'s case repair went the wrong way on one of its two slugs
+
+`p881` discharged `880-G4` by grading 156 published slugs against an oracle built from **this base's
+own 26 committed evidence TSVs**, found 2 `CASE-MISMATCH`, fixed both, re-ran to `0`, and published
+the `0`.
+
+| Slug as `p881` left it | First-party `full_name` | Verdict |
+|---|---|---|
+| `sudosylabs/Proctor` | **`sudosylabs/proctor`** (`owner.login='sudosylabs'`, `name='proctor'`) | 🔴 **wrong direction** |
+| `OpenOLAT/OpenOLAT` | `OpenOLAT/OpenOLAT` | 🟢 correct |
+
+🔵 **Neither `p881` nor any instrument it had could have got this right**, and it said so itself:
+fork DIRECTION was declined as *"unverifiable, since followRedirects=false returns the sha for both
+sides."* Measured again here: `git ls-remote` returns HEAD `33db973021b3` for **both** spellings.
+An oracle built from a base's own history can only propagate that history. 🔴 **A case oracle with
+no first-party column is a coin-flip on direction** — so `880-G4` is reopened as `882-G1`, and the
+base-wide `0` it published was produced by re-running the oracle that produced the error.
+Re-graded this pass against first-party `full_name`: **142 `MATCH`, 1 `CASE-MISMATCH`, fixed**
+([`record`](../evidence/case-oracle.2026-11-17-p882.tsv)).
+
+### 🔴 Supply: `0` new repositories, fourth consecutive pass
+
+Eight WebSearch legs — **35 facts held / 9 new / 0 new repositories**
+([`record`](../evidence/websearch-legs.2026-11-17-p882.tsv)). Every repository the legs named was
+already in this file's history, and each was re-measured to confirm it:
+
+| Address | ★ (`p882`) | SPDX | Pushed | Already here? |
+|---|---:|---|---|---|
+| https://github.com/NousResearch/hermes-agent | 264,190 | MIT | 2026-11-17 | yes — general-purpose, not education-native |
+| https://github.com/langflow-ai/langflow | 156,723 | MIT | 2026-11-17 | yes — named "often used for education", still general-purpose |
+| https://github.com/TapXWorld/ChinaTextbook | 84,706 | **none** | 2026-10-26 | yes — 🔴 no licence file at any star count, and a textbook corpus rather than code |
+| https://github.com/microsoft/ai-agents-for-beginners | 79,956 | MIT | 2026-11-17 | yes — curriculum, already shelved as such |
+| https://github.com/HKUDS/DeepTutor | 60,041 | Apache-2.0 | 2026-11-15 | yes — the flagship, `+25` on `p879` |
+| https://github.com/FlowiseAI/Flowise | 55,575 | **`NOASSERTION`** | 2026-08-13 | yes — 🔴 a vendor roundup this pass called it *"MIT"*; it is not |
+| https://github.com/SirhanMacx/Claw-ED | 65 | MIT | 2026-09-19 | yes — local-first teaching assistant, quiet since September |
+| https://github.com/geekjourneyx/interactive-learning | 52 | MIT | 2026-04-10 | yes — one-word description, no substance to shelve |
+
+🟢 **Two licence claims refuted first-hand, one query each**, on the channel `p881` believed closed:
+**Flowise is not MIT**, and **ChinaTextbook has no grant at all**. 🔵 `880-G5`'s split is being
+vindicated by its own numbers — supply legs: `0` new repos across `p879`–`p882`; demand legs: 9 new
+facts this pass alone. **Hold the 5-pass supply cadence.**
+
+### 🟢 `881-G3` DISCHARGED, and the second gate it named was the wrong gate
+
+`gate-derived-counts` located a shelf table by **string equality** against a list of exact literal
+header rows, several embedding a literal date — so it reddened on a *correct* shelf whenever a shelf
+re-dated a header. That list had been widened by **twelve** passes (`p543`, `p568`, `p718`, `p811`,
+`p813`, `p853`, `p858`, `p865`–`p867`, `p869`, `p870`), each pinning the spelling its own rewrite
+had just invented.
+
+🟢 **Keyed now on the normalised COLUMN SET** (`ingest/header_sig.py`), with
+`compose/code/p882-header-normalisation/` as the acceptance test: **33 controls**, including the
+fixture pair that differs *only* in an embedded date and must grade identically, and the assertion
+that no date or pass-id survives into a key. **`gate-derived-counts` is GREEN for the first time
+since `p718`.**
+
+🔴 **And `881-G3`'s second limb is refused with a measurement.** It named
+`gate-cell-reproduction` as *"keying on the same shapes"*. It does not — it keys on the **payload
+cell** shape and reads no header at all. The three sell shelves publish **zero** payload cells, so
+its *"zero published cells parsed"* is the `p871`/`p877`–`p880` rewrite dropping the notation. That
+moves it into **`881-G2`'s** cluster and makes that cluster **eight** instruments reporting one
+habit, not seven. `C13` is the control that keeps this from being an opinion.
+
 ## 🟢 `2026-11-17` (`p881`) — **the eighteen red gates were triaged (10 shelf / 5 instrument / 1 stale-control, plus 2 mixed), and `gate-promotion` — one of the red ones — handed over two unpublished MIT education agents while eight WebSearch legs returned zero**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

@@ -125,7 +125,7 @@ PASS ?= p381
 # per-gate verdict, and exits non-zero if any failed -- same exit-code contract, no
 # masking.  A gate that cannot mask its siblings is the only kind whose green means
 # anything.
-HOOK_GATES = gate-offline recount gate-derived-counts gate-enumeration gate-tables gate-conflict \
+HOOK_GATES = gate-header-signature gate-offline recount gate-derived-counts gate-enumeration gate-tables gate-conflict \
              gate-absence gate-dates gate-provenance gate-identity gate-ladder-case \
              gate-readme-channel gate-restatement gate-pin-grant gate-evidence-store \
              gate-slug-oracle gate-payload-pin gate-shelf-consistency \
@@ -935,6 +935,28 @@ enumerate: ## ACTION p275 — enumerate trees for a slug list: make enumerate SL
 # passing suite, in no target — and it is HOW p573 committed `derived trends: 24` against a page
 # holding 18 and `derived recipes: 30` against a page holding 25. Wired in here, where it is
 # judged every pass rather than when someone remembers to run it by hand.
+# 🟢 p882 -- `881-G3`, DISCHARGED.  `gate-derived-counts` located a shelf table by testing
+# its header row against a list of EXACT LITERAL strings, several embedding a literal date, so
+# it reddened on a CORRECT shelf the next time a shelf re-dated a header: "none of the 21
+# declared column-header signatures was found; no table can be located", on three shelves that
+# all plainly contain tables.  The list had been widened by p543, p568, p718, p811, p813, p853,
+# p858, p865, p866, p867, p869 and p870 -- twelve passes, each pinning the spelling its own
+# rewrite had just invented.
+#
+# 🟢 The key is now the NORMALISED COLUMN SET (`ingest/header_sig.py`), and this suite is the
+# acceptance test: a fixture pair differing ONLY in an embedded date must grade identically,
+# and no date or pass-id may survive into a key.
+#
+# 🔴 One clause of 881-G3 is REFUSED here with a measurement, not an opinion: it named
+# `gate-cell-reproduction` as the second gate "keying on the same shapes".  It does not -- it
+# keys on the PAYLOAD CELL shape and reads no header at all.  `C13` measures the real cause
+# (the sell shelves publish ZERO payload cells), which puts that gate in 881-G2's rewrite
+# cluster and makes that cluster EIGHT instruments reporting one habit, not seven.
+gate-header-signature: ## p882 — 881-G3: a shelf table is keyed by its COLUMN SET, not by a dated literal string
+	@cd compose/code/p882-header-normalisation && { $(PY) test_header_sig.py > $(HEADERSIG_LOG) 2>&1 || { echo "🔴 p882-header-signature FAILED — the suite's own report follows:" ; sed "s/^/   /" $(HEADERSIG_LOG) ; false ; } ; } && echo "── p882-header-signature (33 controls: the date-only fixture pair, the no-date-survives clause, the three declared reductions, what must NOT be folded, the separator-row guard this suite itself found, C13's refusal of 881-G3's second limb, and shelf location with no uncounted table)" && echo "   PASS" || exit 1
+
+HEADERSIG_LOG ?= /tmp/education-kb-gate-header-signature.log
+
 gate-derived-counts: ## p574 — the count derivers, wired into hooks (they were in no target)
 	@$(PY) -I ingest/derive-counts.py . || exit 1
 	@$(PY) -I ingest/derive-foundations.py . || exit 1

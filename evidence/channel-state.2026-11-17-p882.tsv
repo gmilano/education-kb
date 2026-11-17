@@ -1,0 +1,8 @@
+channel	probe	result	reading
+api.github.com/search/repositories	curl GET repo: query	200	UP — full_name, stargazers_count, license.spdx_id, pushed_at, created_at, forks_count all returned
+api.github.com/repos/<slug>	curl GET	403	DOWN — "not enabled for this session"
+github.com HTML	curl GET	403	DOWN
+raw.githubusercontent.com	curl GET LICENSE	200	UP — grant bytes readable
+git ls-remote --symref	git	UP	UP — refs and default branch
+api.osv.dev	curl GET	000	UNREACHABLE — host does not resolve from this network policy
+osv.dev (web)	WebFetch	ENOTFOUND	UNREACHABLE — outside this session allowed network domains; 881-G5 second channel

@@ -107,4 +107,49 @@
 #STALE-p644 ### 🔴 Open edX, stated correctly: the platform is copyleft and the extension seam is not ~ 0 ~ SUMMARY ~ p579: licence map of one org already shelved (openedx-platform AGPL vs five Apache-2.0 seams); not new shelf rows
 # p644: this pass's own section, declared in the same commit that adds it -- the manifest
 # header requires it ('a section added later cannot silently re-break the count').
-## 🆕 `p644` — reads `2026-11-04` — **🟢 `644-C`: THE `LTI` BOUNDARY HAS PERMISSIVE REFERENCE IMPLEMENTATIONS FROM THE STANDARDS BODY *AND* FROM THE LMS VENDOR. `p643` FOUND ONE DOOR; THERE ARE FIVE, AND THE LIVE ONES ARE ALL SUCCESSORS TO ARCHIVED INSTITUTIONAL ORIGINALS.**	0	SHELF	p644 the permissive LTI boundary layer (1EdTech/Izumi-kun/pymsglobal/instructure/hypothesis)
+#STALE-p882 ## 🆕 `p644` — reads `2026-11-04` — **🟢 `644-C`: THE `LTI` BOUNDARY HAS PERMISSIVE REFERENCE IMPLEMENTATIONS FROM THE STANDARDS BODY *AND* FROM THE LMS VENDOR. `p643` FOUND ONE DOOR; THERE ARE FIVE, AND THE LIVE ONES ARE ALL SUCCESSORS TO ARCHIVED INSTITUTIONAL ORIGINALS.** ~ 0 ~ SHELF ~ p644 the permissive LTI boundary layer (1EdTech/Izumi-kun/pymsglobal/instructure/hypothesis)
+#
+# =====================================================================================
+# p882: THIS IS THE THIRD TIME THIS MANIFEST HAS BEEN REBUILT FOR THE SAME CAUSE.
+#
+#   p568 rewrite -> p574 re-declared 22 tables and marked 33 keys #STALE-p574
+#   a later rewrite -> p644 re-declared 3 and marked 59 keys #STALE-p644
+#   p871 + p877-p880 rewrites -> p882 re-declares 16 and marks the last live key above
+#
+# So this file has itself reported 881-G2's finding three times. The p574 note above
+# already names the mechanism exactly -- "a stale key here is not a cosmetic defect: it
+# silences the whole gate" -- and it was right: with one live key left and that key stale,
+# derive-foundations.py exited 2 before it could report that FIFTEEN OF SIXTEEN tables on
+# the page were undeclared. p574's remedy was to remove the stale key by hand, which is
+# correct and local, and the recurrence shows why it was not enough.
+#
+# p882 therefore changes the INSTRUMENT as well as the data: a declaration naming a heading
+# the page no longer carries is now reported as AMBER and skipped, not a hard exit. That is
+# how the same script already grades a stale ALIAS relation thirty lines further down ("a
+# relation naming an address this page does not hold is a stale declaration, not a reason to
+# subtract"). One script, one situation, two gradings -- now one.
+#
+# The ratchet the header demands is KEPT and is the one that matters: a table PRESENT on the
+# page and ABSENT from this manifest is still an ERROR that exits 2 and names the line, so a
+# section added later cannot silently re-break the count.
+#
+# Re-declared from the live page: 16 tables -- 14 SHELF (75 rows), 1 METRIC, 1 SUMMARY.
+# Dispositions are a JUDGEMENT a later pass may correct, per p574's own caveat.
+# =====================================================================================
+
+### 🟢 The licence gradient, measured per layer for the first time	0	METRIC	p882 shares per layer across the three sell shelves; carries no repository rows
+### 🔴 Liveness: seven sell rows have gone quiet, and stars do not show it	0	SUMMARY	p882 restates rows filed in the layer tables to flag staleness; counting it double-counts
+## The permissive periphery of the copyleft platforms — new in `p879`	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites
+## Kolibri's content supply chain — the offline-first half nobody shelved, new in `p879`	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites
+## H5P as components rather than as a plugin — new in `p879`	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites
+## Education standards & interoperability	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites
+## Learning analytics & telemetry (xAPI) — new in `p876`	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites
+## Curriculum structure — new in `p875`	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites
+## Permissive institutional platforms — new in `p877`	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites
+## The TUM stack — permissive university teaching infrastructure, new in `p878`	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites
+## The second permissive auto-grader — `autolab/Autolab`, new in `p878`	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites
+## LATAM-origin education platforms — new in `p878`	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites
+## 🟢 Rows the full-estate recount surfaced — new in `p880`	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites
+## Document & media ingestion — the real bottleneck in education AI	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites
+## Retrieval, orchestration & serving substrate	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites
+## Evaluation & data quality — how an education claim gets defended	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites

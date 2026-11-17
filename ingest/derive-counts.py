@@ -22,6 +22,17 @@ import os
 import re
 import sys
 
+# 🟢 p882 -- `881-G3`. The signature match below used to be STRING EQUALITY against a
+# list of exact literal header rows, several of them embedding a literal date, so this gate
+# reddened on a CORRECT shelf the next time any shelf re-dated a header. The key is now the
+# normalised COLUMN SET: `ingest/header_sig.py` holds the one normalisation and its
+# reasoning, and `compose/code/p882-header-normalisation/` holds the fixture pair that proves
+# a date-only difference grades identically, plus the assertion that no date survives into a
+# key. `-I` strips this script's own directory from `sys.path` (the `p355-cwd-portability`
+# class the Makefile's header records), so the path is made explicit here.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from header_sig import sig_key  # noqa: E402  (one normalisation, not two)
+
 root = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 rc = 0
 
@@ -135,6 +146,18 @@ if os.path.exists(tre):
 # it cannot be added SILENTLY.
 SHELVES = [
     ("agents/top.md", [
+        # 🟢 p882 -- the LIVE shapes. `881-G3` fixed the date tripwire; this closes the
+        # OTHER half of the same RED, which is `881-G2`'s cluster: the `p871`/`p877`-`p880`
+        # full-page rewrites replaced every shape declared above, so these shelves held real,
+        # github.com-bearing, byte-read rows that were counted NOWHERE -- the `865-G1`/`p866`
+        # situation exactly. Declaring them adds no row to any file; it counts the rows that
+        # are already published. Keyed on the COLUMN SET, so the count below is what
+        # collapses: 6 live tables -> 5 keys.
+        "| Repo | Licence | ★ | Pushed | Created | Forks | Role |",
+        "| Agent | Repo | Licence | Default branch | What it does |",
+        "| Agent / framework | Repo | Licence | Default branch | Education role |",
+        "| Component | Repo | Licence (byte-read) | ★ | Pushed | What it does |",
+        "| Repo | Licence (byte-read) | ★ | Pushed | What it is |",
         "| Name | Repo | Licence | Stars | Region | Description |",
         # 🟢 p866 — 865-G1's repair. These two signatures carry HOLDINGS and were
         # counted NOWHERE: 36 rows under the seven-column shape (p857-p862 filed their agent
@@ -156,6 +179,9 @@ SHELVES = [
         "Region | What it actually does, and the posture |",
         "| Agent / library | Repo | License | ★ | Why it is a row |",
     ], [
+        # 🟢 p882 -- live NON-holding tables, declared not-counted with the reason.
+        "| Repo | ★ `p879` | `p878` | Δ | SPDX | Pushed | Created |",  # a re-measure of rows counted above, not new holdings
+        "| Project | Nominal licence | The actual constraint |",  # licence WARNINGS: rows a studio must not propose
         # 🟢 Declared NOT-counted, deliberately: the shelf figure is the build-safe table.
         # Declaring them is what makes the detector below meaningful -- an undeclared table
         # is an omission, a declared one is a decision.
@@ -181,6 +207,10 @@ SHELVES = [
         # Each is declared here with the reason, per p811: an undeclared table is an
         # omission, a declared one is a decision.
         "| Channel | Result |",                  # channel declarations (863-G1)
+        # 🟢 p882: the same class with a third column. A channel row names a HOST
+        # (`api.github.com/search/repositories`), which contains the substring "github.com/"
+        # and so trips the address test -- it is a channel declaration, not a holding.
+        "| Channel | Result | Reading |",
         "| Probe | Result |",                    # a single probe's outcome
         "| | |",                                 # continuation fragments, no header
         "| Address returned by a mandated generic leg | On a graded shelf? | "
@@ -207,6 +237,19 @@ SHELVES = [
         "Region | What it actually does, and the posture |",
     ]),
     ("repos/foundations.md", [
+        # 🟢 p882 -- the LIVE shapes. `881-G3` fixed the date tripwire; this closes the
+        # OTHER half of the same RED, which is `881-G2`'s cluster: the `p871`/`p877`-`p880`
+        # full-page rewrites replaced every shape declared above, so these shelves held real,
+        # github.com-bearing, byte-read rows that were counted NOWHERE -- the `865-G1`/`p866`
+        # situation exactly. Declaring them adds no row to any file; it counts the rows that
+        # are already published. Keyed on the COLUMN SET, so the count below is what
+        # collapses: 14 live tables -> 6 keys.
+        "| Repo | Licence (byte-read) | ★ | Pushed | Created | What it gives you alone |",
+        "| Repo | Licence (byte-read) | ★ | Pushed | Role |",
+        "| Repo | Licence | ★ | Pushed |",
+        "| Repo | Licence | Branch | Why it is foundational |",
+        "| Repo | Licence | Branch | Stars | HEAD | Commits/12mo | Why it is foundational |",
+        "| Repo | Licence (byte-read) | Branch | ★ | HEAD | Commits/12mo | Why it is here |",
         "| Repo | License | Stars | Notes |",
         "| Repo | License | Stars | What it is, and what it is not |",
         # 🟢 p853 declared this signature rather than adding a layer table silently,
@@ -250,6 +293,10 @@ SHELVES = [
         # \U0001f7e2 p866 -- declared NOT holdings on this shelf, each with its reason.
         "| Measure | Value |",                     # a scalar measurement, no address semantics
         "| Repo | Licence | Stars | Last push |",  # re-measure of rows already counted above
+        # 🟢 p882: the LIVENESS table. Same class as the line above -- rows already counted
+        # on this shelf, restated with a `Last push` column to flag the seven that have gone
+        # quiet. A warning about a holding, not a holding.
+        "| Repo | Last push | ★ | Licence | Why it matters here |",
         # \U0001f7e2 p866 -- the licence byte-band MECHANISM table: one row per measured payload
         # offset with the diff that caused it. Its rows are payload measurements over
         # repositories shelved elsewhere (or deliberately not shelved at all), never
@@ -257,6 +304,18 @@ SHELVES = [
         "| Bytes | Repo | `sha256₁₂` | Offset | \U0001f52c Cause, measured by diff |",
     ]),
     ("verticals/solutions.md", [
+        # 🟢 p882 -- the LIVE shapes. `881-G3` fixed the date tripwire; this closes the
+        # OTHER half of the same RED, which is `881-G2`'s cluster: the `p871`/`p877`-`p880`
+        # full-page rewrites replaced every shape declared above, so these shelves held real,
+        # github.com-bearing, byte-read rows that were counted NOWHERE -- the `865-G1`/`p866`
+        # situation exactly. Declaring them adds no row to any file; it counts the rows that
+        # are already published. Keyed on the COLUMN SET, so the count below is what
+        # collapses: 10 live tables -> 5 keys.
+        "| Platform | Repo | Licence | Branch | Position & AI surface |",
+        "| Platform | Repo | Licence | ★ | Pushed | Notes |",
+        "| App | Repo | Licence (byte-read) | ★ | Forks | Server it talks to |",
+        "| Platform | Repo | Licence (byte-read) | ★ | Pushed | What it is |",
+        "| Platform | Licence | Stars | HEAD | Use it for |",
         # 🟢 p867 declared this signature rather than filing eight platform rows under a
         # header no declared signature matched -- the p811/p853/p858 path. It is the
         # Region-carrying shape the other two shelves already use, which this shelf needed
@@ -284,6 +343,11 @@ SHELVES = [
         "Role in an engagement |",
         "| Address | Licence, byte-read `2026-11-17` | ★ | Pushed | Role in an engagement |",
         "| Address | Licence | Pushed | Role in a PHP LMS engagement |",
+        # 🟢 p882 -- the permissive-escape-hatch table. Declared COUNTED rather than
+        # excluded: its four rows are real addresses with a role cell. They also appear in the
+        # layer tables above, and p813's distinct-subject rule is what keeps that from being a
+        # double count -- which is the whole reason that rule exists on a layered shelf.
+        "| Address | Licence | ★ | Pushed | Role in an engagement |",
         "| Platform | Repo | Licence | ★ | Region | Scale it is built for | "
         "Where the AI layer goes |",
         "| Platform | Repo | Licence | ★ | Region | Why it is a vertical starting point |",
@@ -295,6 +359,8 @@ SHELVES = [
         "★ / forks · ref · pushed | Region & posture |",
         "| Repo | Licence | Stars | Status 2026-11-16 |",
     ], [
+        # 🟢 p882 -- live NON-holding tables, declared not-counted with the reason.
+        "| Candidate | ★ | Byte-read this pass | Verdict |",  # candidates adjudicated this pass, not shelf rows
         # \U0001f7e2 p866 -- declared NOT holdings on this shelf: verdict and refusal tables.
         "| Address | ★ | Platform it is | Why it is not a row |",
         "| Platform | GitHub's licence field | \U0001f52c Byte-read verdict, `2026-11-16` | "
@@ -341,22 +407,29 @@ for rel, signatures, excluded in SHELVES:
         continue
     lines = open(path, encoding="utf-8").read().split("\n")
 
-    sigset = set(signatures)
+    # 🟢 p882 -- `881-G3`: keyed on the normalised column SET, so a re-dated header is
+    # the same table.  Collapsing the literals is itself a measurement -- 4 of the 37 declared
+    # signatures on these three shelves were pure date-variants of another and are now one key.
+    sigset = {sig_key(s) for s in signatures}
+    sigset.discard(frozenset())
+    exclset = {sig_key(s) for s in excluded}
+    exclset.discard(frozenset())
     rows, ragged, uncounted, matched = [], 0, [], 0
     for hi, header, body in _tables(lines):
         linked = [r for r in body if "github.com/" in r]
-        if header in sigset:
+        key = sig_key(header)
+        if key and key in sigset:
             matched += 1
             ncol = len(header.strip().strip("|").split("|"))
             rows.extend(linked)
             ragged += sum(1 for r in linked
                           if len(r.strip().strip("|").split("|")) != ncol)
-        elif linked and header not in set(excluded):
+        elif linked and key not in exclset:
             uncounted.append((hi + 1, header, len(linked)))
 
     if matched == 0:
-        print("%-22s RED  none of the %d declared column-header signatures was found; "
-              "no table can be located." % (rel, len(signatures)))
+        print("%-22s RED  none of the %d declared column signatures (%d distinct keys) "
+              "was found; no table can be located." % (rel, len(signatures), len(sigset)))
         for sig in signatures:
             print("                       expected: %s" % sig)
         rc = 1

@@ -6,7 +6,14 @@ updated: 2026-11-17
 
 # Compose patterns — education
 
-**Pass `p879`, 2026-11-17** (ninth pass of the day). **Twenty recipes** — `p879` adds **P19**
+**Pass `p882`, 2026-11-17** (twelfth pass of the day). **Twenty-three recipes** — 🔵 derived recipes: **23**. `p882` adds **P23**, the open-source **due-diligence** recipe this KB has been
+performing for 882 passes and never written down as a deliverable: a two-channel verification
+harness that answers *is this repo safe to build on* in licence, liveness and identity terms, and
+which exists because `p882` measured that the three channels fail **independently** and a client's
+shortlist has to survive all three. It also records the layer gradient (`T20`) as the selection rule
+that `P19` and `P20` were already instances of.
+
+**Previous pass (`p879`), retained:** **Pass `p879`, 2026-11-17** (ninth pass of the day). **Twenty recipes** — `p879` adds **P19**
 (Open edX capability **without** the AGPL obligation: the platform's component layer is Apache-2.0,
 so the deliverable can be Globant's even when the host platform is copyleft) and **P20** (the
 offline-first content supply chain, MIT end to end — `ricecooker` → `studio` → Kolibri →
@@ -1133,6 +1140,92 @@ see a reason for.**
 **Region.** Global. 🔵 The EU adds a reason to keep the human confirmation: under the AI Act the
 education high-risk tier attaches to assessment, and a write path that can change a grade without a
 person in it is the clearest possible way into that tier.
+
+## P23 — Open-source due diligence for an education shortlist, on three independent channels — new in `p882`
+
+🔵 **The engagement this is for.** A client arrives with a shortlist — *"we are considering Moodle,
+Open edX, Artemis and DeepTutor"* — and needs, before any build decision, three answers per
+candidate: **may we build on it** (licence), **is anyone still maintaining it** (liveness), and **is
+this even the right repository** (identity). 🔴 This is the first week of most education
+engagements, it is currently done by opening browser tabs, and `p882` measured why that is
+unreliable: **the three answers come from three channels that fail independently.**
+
+🟢 **The channel split, measured this pass** ([`record`](../evidence/channel-state.2026-11-17-p882.tsv)):
+
+| Question | Channel | State at `p882` | What it alone cannot tell you |
+|---|---|---|---|
+| **Identity** — is this the canonical address? | `api.github.com/search/repositories` → `full_name` | **`200` UP** | nothing about the grant text |
+| **Licence** — what does the grant actually say? | `raw.githubusercontent.com/<slug>/<branch>/LICENSE` | **`200` UP** | nothing about whether it is still maintained |
+| **Liveness** — is the default ref moving? | `git ls-remote --symref` + `pushed_at` | **UP** | nothing about identity: a redirect answers for a *wrong* spelling |
+
+🔴 **Each channel's blind spot bit this KB in a measurable way, which is the whole argument for using
+all three:**
+
+- **Identity alone is not enough:** `p881` graded 156 published slugs against an oracle built from
+  this base's own history, "fixed" two, and got one **backwards** —
+  `sudosylabs/proctor` → `sudosylabs/Proctor` — because `git ls-remote` returns the *same* HEAD
+  (`33db973021b3`) for both spellings. Only first-party `full_name` settles direction.
+- **Metadata alone is not enough:** GitHub resolved **17 of 143** shelved repos to `NOASSERTION` or
+  no licence — including `BerriAI/litellm` and `opendatalab/MinerU`. `NOASSERTION` is GitHub
+  declining to classify, not a permission (`T14`), so the grant bytes must be read.
+- **Stars are not liveness:** `stanford-oval/storm` carries **31,902 ★** and was last pushed
+  **2025-09-30**. `LearningLocker/learninglocker` (587 ★, GPL-3.0) has been quiet since
+  **2024-05-30** and is the **xAPI LRS** in this KB's analytics layer — the one component a
+  learning-analytics engagement cannot route around.
+
+### 🟢 Wiring it
+
+**Components, all measured this pass:**
+
+| Component | Repo | Licence (`p882`, first-party) | ★ | Pushed | Role |
+|---|---|---|---:|---|---|
+| licence scanner | https://github.com/aboutcode-org/scancode-toolkit | `NOASSERTION` — Apache-2.0 code over CC-BY-4.0 data, so it needs its own byte-read | 2,674 | 2026-11-11 | the industry-standard scanner: grades grant bytes against SPDX texts, including the **untitled-payload** shapes this KB hit on MIT and BSD-3 |
+| the detector that produces `NOASSERTION` | https://github.com/licensee/licensee | **MIT** | 923 | 2026-11-16 | GitHub's own detector. Run it yourself and `NOASSERTION` stops being a mystery: you can see *which* rule abstained and why |
+| orchestration | https://github.com/langchain-ai/langgraph | **MIT** | 45,078 | 2026-11-17 | one node per channel, so a single channel's `403` **degrades** the report instead of failing it — which is the behaviour `p881` needed and did not have |
+| run record | https://github.com/temporalio/temporal | **MIT** | 24,460 | 2026-11-17 | the shortlist is re-graded on a schedule; a row that goes quiet surfaces without anyone asking |
+| report surface | https://github.com/appsmithorg/appsmith | **Apache-2.0** | 41,262 | 2026-11-17 | three verdicts per candidate, for a client who will not read a TSV |
+| grant-byte reader | *in-repo:* `compose/code/p881-channel-probe/probe.sh` | — | — | — | walks a path ladder (`LICENSE`, `LICENSE.txt`, `COPYING`, `docs/License.txt`, …) and emits path, byte count and `sha256₁₂`. 🔵 Deliberately **not** a GitHub row: it is 30 lines of `curl` and belongs in the engagement's own repo, not as a dependency |
+
+🔴 **Note what the first row says about the recipe itself.** The industry-standard licence
+scanner resolves to `NOASSERTION` on GitHub, for the same structural reason as nine rows on this
+KB's shelves: a permissive code licence over a differently licensed data set. 🟢 **If the tool that
+reads licences cannot be licence-classified by metadata alone, no shortlist can be** — which is
+step 2's entire justification.
+
+**The recipe, in the order the channels must run:**
+
+1. **Resolve identity first, and never skip it.** `search/repositories?q=repo:<slug>` → take
+   `full_name` verbatim. If it differs from the client's spelling in *any* character, the client's
+   spelling is the one to correct — and record `owner.login` and `name` separately, because that is
+   the evidence a redirect cannot give you.
+2. **Read the grant bytes** at the resolved `full_name` and its default ref from step 1 — not at the
+   spelling you were handed, and not at `main` assumed. Emit path, byte count and `sha256₁₂`. A cell
+   a client can re-check is worth more than a licence name they cannot.
+3. **Classify, and abstain loudly.** If the classifier cannot name a family, the verdict is
+   `UNGRADED`, never `permissive`. 🔴 Three of this KB's 17 `NOASSERTION` rows still have no
+   byte-read cell; that is the honest state and it is published as such.
+4. **Grade liveness on two signals, not one:** `pushed_at` **and** whether the default ref's HEAD
+   has moved since the last run. Flag at **>12 months** — this KB's own sweep found **7 of 143**
+   over that line.
+5. **Apply `T20`'s layer rule to the verdict, not just the licence.** A copyleft **platform** is a
+   normal, buildable situation — attach over LTI 1.3 / xAPI / OneRoster. A copyleft **library** in
+   the layer the studio is writing is the one that changes the design. Same SPDX id, opposite
+   consequence, and the shortlist report should say which it is.
+6. **Re-run on a schedule and keep the history.** The point is not the one-off verdict; it is the
+   **delta** — a row's licence changing, or its pushes stopping, is what a client needs to hear
+   about and will not notice.
+
+🔵 **Effort and shape:** **2–3 weeks** for a 40–80 candidate shortlist including the report surface,
+and it is usually the cheapest first phase a studio can sell into an education engagement, because
+it de-risks every later decision and produces an artefact the client's own procurement and legal
+teams can read. 🟢 **It also composes forward:** the identity and grant columns it produces are
+exactly the inputs `P19` (Open edX without the AGPL obligation) and `P20` (the MIT offline supply
+chain) need in order to be proposed with evidence rather than assertion.
+
+🔴 **Do not promise a verdict the channels cannot give.** This pass could not reach `osv.dev` on
+either `curl` or `WebFetch`, so **known-vulnerability coverage is not part of this recipe** in an
+environment with that network policy. Say so in the report rather than leaving a column blank — an
+absent channel is a finding, and a blank cell reads as a clean result.
 
 ## Pattern selection by region
 

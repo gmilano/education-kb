@@ -6,7 +6,28 @@ updated: 2026-11-17
 
 # Top AI agents — education
 
-**Pass `p879`, 2026-11-17** (ninth pass of the day). **`p879` discovers by *owner* rather than by
+**Pass `p882`, 2026-11-17** (twelfth pass of the day). **`p882` found that the metadata channel is
+not down — it is SPLIT, and the half that measures is up.**
+
+- 🟢 **`api.github.com/search/repositories` is `200`; `api.github.com/repos/<slug>` is `403`.**
+  `p881` recorded `api.github.com` as flatly down and drew the rule *"a pass that cannot measure
+  stars must not publish stars"* — correct for `p881`, and not a property of the channel. The
+  search limb returns `full_name`, `stargazers_count`, `license.spdx_id`, `pushed_at`,
+  `created_at` and `forks_count`, so **all 143 repositories on the three sell shelves were
+  re-measured this pass** ([`record`](../evidence/sell-shelf-measure.2026-11-17-p882.tsv)).
+- 🔴 **The first thing that re-measurement did was REVERSE a `p881` repair.** `p881` normalised this
+  shelf's `sudosylabs/proctor` *to* `sudosylabs/Proctor` and declared `880-G4` clear at `0`.
+  First-party `full_name` says lower-case. Corrected in place, with the reasoning, below.
+- 🟡 **Supply: `0` new repositories, for the fourth consecutive pass.** Eight WebSearch legs,
+  **34 facts held / 10 new / 0 new repositories**; every repository the legs named was already in
+  this KB's trending history ([`record`](../evidence/websearch-legs.2026-11-17-p882.tsv)).
+- 🟢 **This shelf can be counted again.** It has had no row count since the `p871`/`p877`–`p880`
+  rewrites: `gate-derived-counts` reported *"no table can be located"*. It holds **28 rows across
+  6 tables**, measured, and the heading below now says so (`881-G3`).
+
+Method, the channel record and the full held/new split: `intel/open-gaps.md`, this pass.
+
+**Previous pass (`p879`), retained:** **Pass `p879`, 2026-11-17** (ninth pass of the day). **`p879` discovers by *owner* rather than by
 subject**, and that one change to the query form produces three things this file did not have:
 
 - 🟢 **A corrected flagship row.** `p878` listed `openedx/edx-platform` here as **unmeasurable**
@@ -186,6 +207,81 @@ branch was resolved with `git ls-remote --symref ... HEAD` rather than assumed t
 > figure is its measurement, not this pass's, and is not restated here as fact. Writing a
 > star count sourced from a blog is how this KB previously recorded inflated numbers.
 
+## 🆕 `p882` · 2026-11-17 — what changed on this shelf
+
+🔵 **Channel state, measured before anything was written**
+([`record`](../evidence/channel-state.2026-11-17-p882.tsv)):
+
+| Channel | Result | Reading |
+|---|---|---|
+| `api.github.com/search/repositories` | **`200`** | **UP** — stars, SPDX, pushed, created, forks, canonical `full_name` |
+| `api.github.com/repos/<slug>` | `403` | DOWN — "not enabled for this session" |
+| `github.com` HTML over `curl` | `403` | DOWN |
+| `raw.githubusercontent.com` | `200` | UP — grant bytes |
+| `git ls-remote --symref` | UP | UP — refs, default branch |
+| `api.osv.dev` · `osv.dev` web | `000` · `ENOTFOUND` | **UNREACHABLE on both channels** — `881-G5` |
+
+🔴 **The lesson is about how a channel gets declared, not about this channel.** `p881` probed
+`api.github.com/repos/*`, got `403`, and recorded *"metadata channel DOWN"* — one limb generalised
+to a service. Nine passes then worked around a limitation that the `search` limb did not have.
+🟢 **A channel declaration should name the limb it tested.** The table above does.
+
+### 🔴 The `p881` case repair went the wrong way, and this is how that was possible
+
+`p881` discharged `880-G4` by grading 156 published slugs against an oracle built from **this
+base's own 26 committed evidence TSVs**, found 2 `CASE-MISMATCH`, fixed both, and re-ran to `0`.
+One of the two fixes is wrong:
+
+| Slug as `p881` left it | First-party `full_name` | Verdict |
+|---|---|---|
+| `sudosylabs/Proctor` | `sudosylabs/proctor` (`owner.login='sudosylabs'`, `name='proctor'`) | 🔴 **`p881` moved it the wrong way** |
+| `OpenOLAT/OpenOLAT` | `OpenOLAT/OpenOLAT` | 🟢 confirmed correct |
+
+🔵 **Why an oracle could not have got this right.** It was built out of this KB's own history, which
+can only propagate the casing some earlier pass recorded; and `p881` had *itself* written that fork
+DIRECTION was *"unverifiable, since followRedirects=false returns the sha for both sides"* — which
+is exactly true here: `git ls-remote` returns the same HEAD `33db973021b3` for **both** spellings.
+🔴 **A case oracle with no first-party column is a coin-flip on direction.** `880-G4` is reopened
+as `882-G1`: one of two is not a discharge, and the base-wide `0` it published was an artefact of
+re-running the same non-first-party oracle that produced the error.
+
+🟢 **Re-graded this pass against first-party `full_name`: 142 `MATCH`, 1 `CASE-MISMATCH`, now fixed**
+([`record`](../evidence/case-oracle.2026-11-17-p882.tsv)) — and this oracle has the column the last
+one lacked.
+
+### 🟢 The licence posture of the whole sell estate, measured in one pass
+
+All 143 repositories across `agents/top.md`, `repos/foundations.md` and `verticals/solutions.md`,
+by SPDX id as GitHub resolves it:
+
+| Posture | SPDX ids | Repos | Share |
+|---|---|---:|---:|
+| **Permissive — build-safe** | MIT 58 · Apache-2.0 36 · BSD-3-Clause 6 · ECL-2.0 2 | **102** | **71.3%** |
+| Copyleft — attach, do not fork | GPL-3.0 11 · AGPL-3.0 8 · GPL-2.0 3 · LGPL-3.0 1 | 23 | 16.1% |
+| **No resolvable grant** | NOASSERTION 12 · none 5 | **17** | **11.9%** |
+| Data licence | ODbL-1.0 1 | 1 | 0.7% |
+
+🔵 **Read this against `T18`.** `T18` measured *a third* of this vertical's open-source estate
+carrying no grant at all, over a denominator of 2,574 repositories. On the **curated** shelf the
+same measure is **11.9%** — so curation is doing roughly two-thirds of the work the number implies,
+and the residual 17 are named rather than averaged away: `BerriAI/litellm`, `opendatalab/MinerU`,
+`ankitects/anki`, `OpenOLAT/OpenOLAT`, `apereo/java-cas-client`, `frappe/education`,
+`openeducat/openeducat_erp`, `instructure/instructure-ui`, `OS4ED/openSIS-Classic`,
+`portabilis/i-diario`, `Gego-K12/gegok12`, and six sub-10★ rows. 🔴 **`NOASSERTION` is not a
+licence finding — it is GitHub declining to classify, and every one of those rows needs its grant
+byte-read before a studio quotes it.** Nine already are, in this file's own cells.
+
+### 🔴 A licence claim from this pass's search legs, refuted first-hand
+
+| Project | What the source said | First-party SPDX | Reading |
+|---|---|---|---|
+| **Flowise** | *"51,000+ stars, MIT license"* (vendor roundup) | **`NOASSERTION`**, 55,575 ★ | 🔴 **Not MIT.** A studio cannot treat it as permissive on this evidence |
+| **ChinaTextbook** | GitHub-trending education repo, 84,706 ★ | **no licence file at all** | 🔴 Not shelvable at any star count; also a textbook corpus, not code |
+| **Langflow** | "often used for education" | MIT, 156,723 ★ | 🟡 real and permissive, but general-purpose; stays in trending, not here |
+
+🟢 **Both refutations cost one query each**, on a channel `p881` believed was closed. That is the
+practical value of the split above, and it is why the first table in this section exists.
+
 ## 🆕 `p881` · 2026-11-17 — what changed on this shelf
 
 🟢 **Two new education-native rows, both MIT, both byte-read — `zhangl1001/civil-ai` and
@@ -196,8 +292,15 @@ WebSearch legs returned **zero** new education repositories. See the note under 
 🟢 **The table's caption said `8` rows over a table of `12`.** `p877` restored five rows and nothing
 updated the count. Corrected to **`14`** and keyed on the rows.
 
-🟢 **`sudosylabs/proctor` → `sudosylabs/Proctor`.** `880-G4`'s class, caught here by instrument rather
-than by hand ([`record`](../evidence/case-oracle.2026-11-17-p881.tsv)).
+🔴 **`p882` REVERSED this, and the canonical spelling is `sudosylabs/proctor`, lower-case.**
+`p881` normalised the shelf *to* `sudosylabs/proctor` from an oracle built out of this base's own 26
+committed evidence TSVs — a source that can only propagate whatever casing an earlier pass recorded —
+and `p881` had itself declined fork DIRECTION as unverifiable, because a redirect answers for both
+spellings. First-party metadata settles it: `search/repositories` returns
+`full_name='sudosylabs/proctor'`, `owner.login='sudosylabs'`, `name='proctor'`. The other half of
+`p881`'s fix, `OpenOlat/OpenOlat` → `OpenOLAT/OpenOLAT`, is CONFIRMED correct by the same channel
+([`record`](../evidence/case-oracle.2026-11-17-p882.tsv)). 🔵 One of two is the useful number: a case
+oracle with no first-party column is a coin-flip on DIRECTION, so `880-G4` is not discharged by it.
 
 🔴 **No star, fork or `pushed_at` figure on this shelf was re-measured this pass, and none was changed.**
 `api.github.com` is `403` for this session, so the metadata channel is DOWN
@@ -213,6 +316,21 @@ advisories**, which a rewrite had dropped together — `gate-prose-claims` was r
 advisories read at source. 🔴 **New and client-facing: those advisories are repository-level and
 absent from the GLOBAL GitHub Advisory Database, so an SCA scan will not surface them.** Pin
 `>=1.16.0`, assert the Node.js `22.18` floor, and put the GHSA ids in the risk register by hand.
+
+## The agents — 28 rows
+
+🟢 **Derived, not asserted.** `28` distinct repositories across the **6** holding tables below:
+LMS-bridge (1), education-native (14), grading & assessment (2), general-purpose composable (6),
+institutional AI subsystems (4), vendor-built AI components (1). `ingest/derive-counts.py` grades
+this heading against the rows on every pass and the two must agree.
+
+🔵 **This shelf has carried no row count since the `p871`/`p877`–`p880` rewrites.** The gate was
+not silent about it — it reported *"none of the 21 declared column-header signatures was found; no
+table can be located"*, which reads like a parse fault and was in fact three defects at once: a
+date-bearing literal signature (`881-G3`), every declared shape replaced by a rewrite (`881-G2`),
+and no count heading at all. All three are closed here. 🔴 **Two tables are deliberately NOT
+counted** and declared so with their reasons: the `p882` re-measurement table (rows already counted
+above) and the licence-flag table (projects a studio must *not* propose).
 
 ## 🟢 LMS-bridge agents and their security envelope — RESTORED in `p880`
 
@@ -507,17 +625,27 @@ topics and do not name themselves after the platform's subject matter, so **no `
 query in this KB's history could return them.** Owner-first discovery (`user:<org>`) does not
 depend on tagging — see `agents/trending.md` for the method.
 
-## Measured this pass — the headline agents moved almost not at all, new in `p879`
+## Measured this pass — three hours, and the boring finding holds, re-measured in `p882`
 
-| Repo | ★ `p879` | `p878` | Δ | SPDX | Pushed | Created |
+| Repo | ★ `p882` | `p879` | Δ | SPDX | Pushed | Created |
 |---|---:|---:|---:|---|---|---|
-| https://github.com/HKUDS/DeepTutor | **60,016** | 60,007 | +9 | Apache-2.0 | 2026-11-15 | 2025-12-28 |
-| https://github.com/Crosstalk-Solutions/project-nomad | **43,858** | 43,852 | +6 | Apache-2.0 | 2026-11-16 | 2025-06-24 |
-| https://github.com/THU-MAIC/OpenMAIC | **43,824** | 43,823 | +1 | MIT | 2026-11-17 | 2026-03-11 |
+| https://github.com/HKUDS/DeepTutor | **60,041** | 60,016 | +25 | Apache-2.0 | 2026-11-15 | 2025-12-28 |
+| https://github.com/Crosstalk-Solutions/project-nomad | **43,876** | 43,858 | +18 | Apache-2.0 | 2026-11-17 | 2025-06-24 |
+| https://github.com/THU-MAIC/OpenMAIC | **43,828** | 43,824 | +4 | MIT | 2026-11-17 | 2026-03-11 |
 | https://github.com/ls1intum/Artemis | **832** | 832 | 0 | MIT | 2026-11-17 | 2016-09-29 |
-| https://github.com/oppia/oppia | **6,998** | — | — | Apache-2.0 | 2026-11-17 | 2015-08-14 |
+| https://github.com/oppia/oppia | **6,998** | 6,998 | 0 | Apache-2.0 | 2026-11-17 | 2015-08-14 |
 | https://github.com/autolab/Autolab | **808** | 808 | 0 | Apache-2.0 | 2026-11-11 | 2014-10-25 |
 | https://github.com/learningequality/kolibri | **1,178** | 1,178 | 0 | MIT | 2026-11-17 | 2016-01-19 |
+| https://github.com/apereo/cas | **11,402** | 11,402 | 0 | Apache-2.0 | 2026-11-17 | 2011-09-09 |
+| https://github.com/openedx/openedx-platform | **8,241** | 8,240 | +1 | AGPL-3.0 | 2026-11-17 | 2013-05-30 |
+| https://github.com/moodlehq/wiki-rag | **54** | 54 | 0 | BSD-3-Clause | 2026-06-15 | 2025-03-04 |
+
+🟢 **`p879`'s finding survives a second independent measurement, and `p881` could not take one.**
+Three headline repos moved by `+25`, `+18` and `+4` over roughly three hours; seven did not move at
+all. 🔵 **This table's column header changed from `★ \`p879\`` to `★ \`p882\`` and the gate did not
+notice, which is the point of `881-G3`:** the key is the normalised column SET, so re-dating a
+header no longer reddens a correct shelf — and this table stays declared NOT-counted, as a
+re-measure of rows counted above rather than new holdings.
 
 🔵 **Keep this table precisely because it is boring.** `p878` recorded DeepTutor at **+7,224** and
 OpenMAIC at **+1,823** against the previously *written* figures, and read those as growth. They
@@ -569,7 +697,7 @@ allows.
   for the human-workflow half; ArguLens is the scoring half. **Still an open build opportunity
   for Globant — but now as hardening a real base, which is a far cheaper proposal than greenfield.**
 - **No permissively licensed open-source proctoring platform exists — now evidenced, not assumed.**
-  `p872` verified two real candidates and **both are AGPL-3.0**: `sudosylabs/Proctor` (Go+React,
+  `p872` verified two real candidates and **both are AGPL-3.0**: `sudosylabs/proctor` (Go+React,
   the most complete) and `kamlendras/OpenProctor`. Copyleft is workable for a single
   institution's self-hosted deployment and unusable in a distributed product. Given that the EU
   has moved proctoring into the high-risk tier and Vietnam now lists biometric learner monitoring

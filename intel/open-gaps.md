@@ -4,6 +4,142 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🆕 `p882` · 2026-11-17 — **`4` gaps. `881-G3` DISCHARGED with its acceptance test run and its second limb REFUSED by measurement; `881-G5` CLOSED on the declare-unreachable branch; `881-G1`, `881-G2` and `881-G4` CARRIED, two of them with new evidence and one of them extended. `gate-derived-counts` is GREEN for the first time since `p718`**
+
+🟢 **The honest summary before the entries.** `p882` closed two gaps, repaired three instruments,
+re-measured all 143 shelved repositories, and **reversed one of `p881`'s own repairs**. It did not
+run the three acceptance tests it is carrying, and does not restate the carrying as progress.
+
+🟢 **The pass's most useful transferable finding, and it is about declarations rather than data.**
+`p881` probed `api.github.com/repos/<slug>`, got `403`, and recorded *"metadata channel DOWN"*,
+drawing the rule *"a pass that cannot measure stars must not publish stars."* The rule was right for
+`p881`. The **declaration** generalised one limb to a whole service: `api.github.com/search/repositories`
+is **`200`**, and returns `full_name`, `stargazers_count`, `license.spdx_id`, `pushed_at`,
+`created_at` and `forks_count` ([`record`](../evidence/channel-state.2026-11-17-p882.tsv)). 🔴 Nine
+passes worked around a limitation the other limb did not have. See `882-G4`.
+
+🔴 **Supply: `0` new repositories, fourth consecutive pass.** Eight WebSearch legs, **35 facts held
+/ 9 new / 0 new repositories** ([`record`](../evidence/websearch-legs.2026-11-17-p882.tsv)). One of
+the nine "new" facts was re-graded **HELD** on reading the shelf rather than grepping a keyword, and
+the leg record says so — a held/new split graded against a keyword instead of against the shelf got
+one in nine wrong.
+
+### 🔴 `882-G1` — `880-G4` is REOPENED: a case oracle with no first-party column is a coin-flip on DIRECTION
+
+🔴 **`p881` discharged `880-G4` and one of its two fixes is backwards.** It graded 156 published
+slugs against an oracle built from **this base's own 26 committed evidence TSVs / 8,827 measured
+repositories**, found 2 `CASE-MISMATCH`, fixed both, re-ran to `0`, and published the `0`.
+
+| Slug as `p881` left it | First-party `full_name` | Verdict |
+|---|---|---|
+| `sudosylabs/Proctor` | **`sudosylabs/proctor`** (`owner.login='sudosylabs'`, `name='proctor'`) | 🔴 wrong direction |
+| `OpenOLAT/OpenOLAT` | `OpenOLAT/OpenOLAT` | 🟢 correct |
+
+🔵 **Neither `p881` nor any instrument it held could have got this right, and it said so.** It
+declined fork DIRECTION as *"unverifiable, since followRedirects=false returns the sha for both
+sides"* — reproduced here: `git ls-remote` returns HEAD `33db973021b3` for **both** spellings. An
+oracle built from a base's own history can only propagate that history. 🔴 **And the post-fix `0`
+was produced by re-running the same oracle that produced the error**, which is why it was not a
+check.
+
+🟢 **Done this pass:** re-graded against first-party `full_name` — **142 `MATCH`, 1
+`CASE-MISMATCH`**, fixed on both shelves that carried it
+([`record`](../evidence/case-oracle.2026-11-17-p882.tsv)). `p881`'s sentence is **kept** on
+`verticals/solutions.md` with the correction beneath it, because what it got wrong is the lesson.
+
+🟢 **Acceptance test:** give `gate-slug-oracle` a **first-party** column — canonical `full_name`
+from `search/repositories`, recorded per slug with the date — and grade DIRECTION against it rather
+than against committed evidence. 🔴 A discharge whose post-fix check re-runs the instrument under
+suspicion is not a check; the re-run must use the channel the original lacked. 🔴 **And `880-G4`
+is not to be reported as discharged again until that column exists.**
+
+### 🔴 `882-G2` — the shelves have no LIVENESS column, so a row can go eighteen months stale with a perfectly accurate licence cell
+
+🟢 **Measured:** of the 143 resolvable addresses, **7 have not been pushed in over twelve months**
+— `LearningLocker/learninglocker` (**2024-05-30**, 587 ★, GPL-3.0), `stanford-oval/storm`
+(**2025-09-30**, **31,902 ★**, MIT), `adlnet/ADL_LRS` (2025-11-14), `1EdTech/openbadges-validator-core`
+(2025-11-04), `kamlendras/OpenProctor` (2025-05-28), `ganesh-786/Proctor` (2025-06-09),
+`PritK99/WriteRight` (2024-11-19).
+
+🔴 **The load-bearing one is the LRS.** `LearningLocker/learninglocker` is the xAPI
+learning-record store in this KB's analytics layer, and `adlnet/ADL_LRS` is the only other one —
+**both quiet**. So this KB has been recommending an analytics path whose server component has no
+actively maintained permissive implementation on its own shelves, and nothing reported it, because
+every shelf column measures **licence** and **popularity**. 🔵 `stanford-oval/storm` at 31,902 ★
+and 14 months quiet is the proof that a star count carries no maintenance signal at all.
+
+🟢 **Acceptance test:** add a `pushed` column to every holding table that lacks one, and a gate
+that reds when a shelved row crosses **12 months** without the shelf carrying an explicit
+*"deliberately frozen"* note. 🔴 Treat a post-fix count of `0` as a mis-run until a planted stale
+row is shown to fire. 🔵 Partial credit is not available here: 4 of the 14 foundation tables
+already carry `Pushed` and the defect persisted anyway, so the gate matters more than the column.
+
+### 🟡 `882-G3` — LATAM has now returned nil in two languages, and the next advance needs a CHANNEL, not another query
+
+🔴 **Two nils, two query languages.** `p881` ran the LATAM leg in **Spanish** → nil new. `p882`
+ran it in **English** → nil new. Everything both returned was already shelved: the Digital Education
+Council LATAM survey (92% of students / 79% of faculty; ~30% institutional-response confidence), the
+EdTech Hub + Fundación Ceibal partnership (September 2026), the IDB's 193-initiative review, the
+UNESCO IESALC / UNU-IAS working paper, Mexico's *Ley Nahui*.
+
+🔵 **Two languages saturating on one corpus is evidence about the SECONDARY-SOURCE layer, not
+about the region** — and the named primary sources remain blocked: `iagen.unam.mx` (UNAM/IAGen's
+regional higher-education survey) and `digitaleducationcouncil.com` (the survey's own methodology).
+🟢 This region is still the best-measured in `intel/market.md`; the ceiling is the channel.
+
+🟢 **Acceptance test:** either reach one named LATAM primary source through an allowed channel
+and publish a figure read from it, **or** declare the LATAM secondary layer saturated as a property
+of this pipeline and move the region to the 5-pass supply cadence. 🔴 A third consecutive nil run
+as a *query* should be read as this register failing in the way `880-G1` described.
+
+### 🟡 `882-G4` — a channel declaration that does not name the LIMB it tested costs passes
+
+🔴 **Measured cost: nine passes.** `p881`'s `channel-state` record says `api.github.com` → `403`.
+The probe was `api.github.com/repos/<slug>`. The `search` limb is `200` and always was reachable in
+the sense that mattered — `p878` and `p879` both used it for *discovery* — so the base simultaneously
+held "the search limb works" and "the metadata channel is down", and resolved the contradiction in
+favour of the pessimistic declaration. 🔵 `p881` then built `compose/code/p881-channel-probe/probe.sh`
+around the premise, with the comment *"CANNOT read spdx_id, stars, forks or pushed_at"* — all four of
+which `p882` read, 143 times, from `api.github.com`.
+
+🟢 **Acceptance test:** require every row of a `channel-state` record to name the **exact URL
+probed**, not a hostname, and add a control to `gate-report` that reds a channel row whose
+`channel` column has no path component. 🔴 A record that says `api.github.com: 403` is not a
+measurement, it is a summary of one — and the summary was wrong in the direction that costs work.
+
+### 🟢 The two gaps `p882` DISCHARGED, with their measurements
+
+| Gap | Acceptance test | Result |
+|---|---|---|
+| **`881-G3`** | key the gate(s) on the normalised column set; prove it with a fixture pair differing only in an embedded date; leave no date inside a signature | 🟢 **RUN and FIXED.** `ingest/header_sig.py` + `compose/code/p882-header-normalisation/`, **33 controls**, wired as `gate-header-signature`. **4 of 37** declared literals were pure date-variants and collapse into one key. **`gate-derived-counts` is GREEN for the first time since `p718`.** 🔴 Second limb **REFUSED**: see below |
+| **`881-G5`** | resolve OSV coverage through `WebFetch` or another channel, **or** declare `api.osv.dev` structurally unreachable here and stop carrying it | 🟢 **CLOSED on the declare branch.** `api.osv.dev` → `000` on `curl`; `osv.dev` web → `ENOTFOUND` on `WebFetch` — the one channel `881-G5` said *"costs one call and has never been tried"*. **Both channels refuse; `osv.dev` is outside this session's allowed network domains.** 🔴 Declared a property of the pipeline. **Stop carrying it**, and `P23` says in prose that vulnerability coverage is not part of its recipe here rather than leaving a blank column |
+
+🔴 **`881-G3`'s second limb, refused with a measurement rather than an opinion.** It named
+`gate-cell-reproduction` as the second gate *"keying on the same shapes"*. It does not: its parser
+keys on the **payload-cell** shape `` `<path>` <bytes> B · `<sha256₁₂>` `` and reads no column header
+at all. The three sell shelves publish **zero** payload cells (`C13`, with a positive control on the
+regex so the zero cannot be a parse artefact), so its *"zero published cells parsed"* is the
+`p871`/`p877`–`p880` rewrite dropping the notation. 🟢 **That moves it into `881-G2`'s cluster and
+makes that cluster EIGHT instruments reporting one habit, not seven.**
+
+### 🔴 Carried, and said plainly rather than restated as progress
+
+| Gap | State at `p882` |
+|---|---|
+| **`881-G1`** — re-key the `LIVE`/`RETIRED` machinery onto **controls**, retire `C21` and `test_the_vocabulary_CONFLATES_TIERS_and_it_is_open`, publish control-level counts for all 18 gates | 🔴 **NOT RUN.** The 18-gate baseline was re-measured at gate level (**18 red / 55 green of 73**, [`record`](../evidence/gate-baseline.2026-11-17-p882.tsv)) and `gate-derived-counts` has since gone green, making it **17 red**. The control-level machinery was not built and the two controls are not retired |
+| **`881-G2`** — run `ingest/p662-filed-on-recon.py` as a pass of its own, publish *cleared / narrowed / set-from-'-'* counts, then adopt *"a full-page rewrite must be followed by a reconciliation in the same commit"* | 🟡 **ADVANCED, NOT DISCHARGED.** The reconciliation was **not run** and no counts are published. What `p882` did add is **attribution**: three further instruments are shown to be in this cluster — `gate-cell-reproduction` (above), `gate-derived-counts` (every declared header shape replaced, plus no count heading at all) and `ingest/foundations-disposition.tsv`. 🔴 **That third one has reported this finding twice before, in its own file:** `p568`'s rewrite left 33 keys stale and 22 tables undeclared (`p574` re-declared them), a later rewrite did it again (`p644`), and the `p871`/`p877`–`p880` rewrites left **one** live key — three rebuilds, one cause. 🔵 `p574`'s own note already named the mechanism: *"a stale key here is not a cosmetic defect: it silences the whole gate"* — and it was right, the hard exit hid that fifteen of sixteen tables were undeclared. 🟢 **Two of the three instruments are REPAIRED here** (and the manifest's instrument changed, not just its data, since `p574`'s hand-removal demonstrably did not prevent recurrence); the habit is not |
+| **`881-G4`** — give `gate-shelf-consistency` and `gate-dates` the live-region cut this file's structure defines; publish the live-finding count before and after; prove with a planted conflict | 🔴 **NOT RUN, and EXTENDED by one instrument.** `gate-enumeration` has the same shape on the **append-only** shelves: its `REFUTED` findings sit at `agents/trending.md:7170` (under `p790`, 2026-11-12), `:13420` (`p694`, 2026-11-07) and `:29343` (`p509`, 2026-10-28), while this file's live region is lines 7–116 and `agents/trending.md`'s is lines 7–90. **All three are deep history on a shelf whose own contract is append-only**, so the gate demands a repair `p347` forbids. **Three instruments now, one cut** |
+| **`880-G2`** — audit all 17 register rows for compound claims and slot-keyed ids | 🔴 **NOT RUN for a third consecutive pass.** Not discharged, not restated as progress. 🔵 By `881-G5`'s own standard, a third carry is the signal to either run it or declare it structurally undone — and it is now at that point |
+
+🔵 **One thing `881-G3`'s discharge is worth reading for beyond its number.** The suite written to
+prove the fix **failed three of its own controls on first run**, and all three were real: a wrong
+fixture line index, a normalisation that dropped hyphens and so collapsed `byte-read` into
+`byte read`, and a per-shelf collapse assertion that was simply too strong (`agents/top.md`'s nine
+literals hold no date-variant pair, and a normalisation is not obliged to collapse something on
+every file). 🔴 Adding the hyphen back then made a markdown **separator row** `|---|---|`
+normalise to the non-empty key `{"---"}`, which `C12` caught and which is now guarded. 🟢 **Four
+defects in the instrument, found by the instrument, before it was allowed to grade a shelf.**
+
 ## 🆕 `p881` · 2026-11-17 — **`5` gaps. `880-G1` and `880-G4` DISCHARGED with their acceptance tests run; `880-G5` DECIDED and recorded; `880-G3` CARRIED UNDONE and said so. The triage found the supply the search channel could not**
 
 🟢 **The honest summary before the entries.** `880-G1` said: *"triage all remaining red gates into (a) a

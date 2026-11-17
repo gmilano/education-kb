@@ -6,7 +6,30 @@ updated: 2026-11-17
 
 # Foundational repos — education
 
-**Pass `p879`, 2026-11-17** (ninth pass of the day). **`p879` reverses a standing conclusion in
+**Pass `p882`, 2026-11-17** (twelfth pass of the day). **`p882` re-measured every row on this
+shelf first-hand and found the thing this file has asserted for 882 passes without ever measuring
+it: the permissive share RISES as you go down the stack.**
+
+- 🟢 **This shelf is 82.9% permissive** — 63 of 76 resolvable rows MIT, Apache-2.0 or BSD-3-Clause,
+  against **50.9%** on `verticals/solutions.md`. The gradient is the *"attach, don't fork"* thesis
+  as a number rather than as advice; the table is below.
+- 🟢 **The channel that makes it possible:** `api.github.com/search/repositories` is `200` this pass
+  while `api.github.com/repos/<slug>` is `403`. `p881` recorded the metadata channel as flatly down
+  and could publish no star at all ([`record`](../evidence/channel-state.2026-11-17-p882.tsv)).
+- 🔴 **Seven rows on the sell shelves have not been pushed in over twelve months**, one of them
+  `stanford-oval/storm` at **31,902 ★**. Named below, because a star count is not a liveness check.
+- 🟢 **This shelf can be counted again:** **75 rows across 14 tables**, measured. It has published no
+  row count since the `p871`/`p877`–`p880` rewrites, which `gate-derived-counts` reported as *"no
+  table can be located"* (`881-G3`, discharged this pass).
+
+🔵 **Derived figures for this page, graded every pass** (`ingest/derive-foundations.py`,
+`Gap 544-E`): **derived shelf rows: **75****, across **14** SHELF-disposition tables, **75**
+distinct addresses and **75** systems after declared alias collapse. 🔴 The disposition
+manifest was REBUILT this pass: it held **one** row, naming a `p644` heading this page no
+longer carries, so the instrument exited on stale bookkeeping and never reported that
+fifteen of sixteen tables were undeclared. `881-G2`'s cluster, third instrument.
+
+**Previous pass (`p879`), retained:** **Pass `p879`, 2026-11-17** (ninth pass of the day). **`p879` reverses a standing conclusion in
 this file.** Discovery by **owner** (`user:<org>`) rather than by subject measured **571
 repositories across 19 education organisations**, and the result is that the copyleft platforms
 this KB has been routing clients away from **ship substantial, active, permissively licensed
@@ -171,6 +194,51 @@ makes a tool interoperable with institutional systems, and the AI substrate that
 work. The standards layer matters more here than in most verticals — an education tool that
 cannot speak LTI, xAPI/Caliper, QTI or Ed-Fi cannot be bought by a school district.
 
+## 🆕 `p882` · 2026-11-17 — what changed on this shelf
+
+### 🟢 The licence gradient, measured per layer for the first time
+
+Every address on the three sell shelves, re-measured this pass by SPDX id as GitHub resolves it
+([`record`](../evidence/sell-shelf-measure.2026-11-17-p882.tsv)):
+
+| Shelf | Layer | Rows resolved | Permissive | Copyleft | No resolvable grant |
+|---|---|---:|---:|---:|---:|
+| `repos/foundations.md` | substrate & libraries | 76 | **82.9%** (63) | 6.6% (5) | 9.2% (7) |
+| `agents/top.md` | agents | 42 | **78.6%** (33) | 4.8% (2) | 14.3% (6) |
+| `verticals/solutions.md` | platforms institutions run | 55 | **50.9%** (28) | **38.2%** (21) | 10.9% (6) |
+
+🔵 **Why this is the most useful table on this shelf.** The copyleft problem in education is not
+spread through the open-source estate — it is **concentrated in the layer a client already owns and
+is not going to replace**. Moodle, Canvas, Open edX, Chamilo, ILIAS and Koha are the incumbents and
+they are GPL/AGPL; the substrate you *build* on is 83% permissive. 🟢 **So the licence answer and
+the architecture answer are the same answer:** leave the platform where it is, attach over LTI 1.3,
+xAPI and OneRoster, and keep every line you write in the permissive layer. This file's **P19** and
+**P20** are that shape, and `verticals/solutions.md`'s mobile-client row is its cheapest instance.
+
+🔴 **The 9.2% here is not a licence, it is a silence.** Seven rows resolve to `NOASSERTION` — GitHub
+declining to classify, not a permission: `BerriAI/litellm`, `opendatalab/MinerU`, `ankitects/anki`,
+`apereo/java-cas-client`, `frappe/education`, `instructure/instructure-ui`, `Gego-K12/gegok12`.
+Four already carry byte-read grant cells in this file; the other three do not, and a studio must
+read the bytes before quoting them.
+
+### 🔴 Liveness: seven sell rows have gone quiet, and stars do not show it
+
+| Repo | Last push | ★ | Licence | Why it matters here |
+|---|---|---:|---|---|
+| https://github.com/LearningLocker/learninglocker | **2024-05-30** | 587 | GPL-3.0 | ~18 months. The xAPI **LRS** in this file's analytics layer — the one component a learning-analytics engagement cannot route around |
+| https://github.com/stanford-oval/storm | **2025-09-30** | 31,902 | MIT | ~14 months at **31,902 ★**. The clearest case that a star count is not a maintenance signal |
+| https://github.com/adlnet/ADL_LRS | 2025-11-14 | 335 | Apache-2.0 | the *other* LRS, also quiet — so the xAPI layer has no actively maintained permissive server on this shelf |
+| https://github.com/1EdTech/openbadges-validator-core | 2025-11-04 | 61 | Apache-2.0 | credentialing validator; the standard moves faster than the validator |
+| https://github.com/kamlendras/OpenProctor | 2025-05-28 | 16 | AGPL-3.0 | reinforces `p875`'s proctoring finding — real demand, no live supply |
+| https://github.com/ganesh-786/Proctor | 2025-06-09 | 0 | MIT | same |
+| https://github.com/PritK99/WriteRight | 2024-11-19 | 1 | MIT | same class, writing feedback |
+
+🟢 **The actionable one is the LRS.** Both permissive xAPI learning-record stores on this shelf are
+quiet, and the live analytics path is therefore *write the LRS boundary yourself behind xAPI* rather
+than adopt one. 🔴 Registered as `882-G2`: **this shelf has had no liveness column, so a row could
+go eighteen months stale while its licence cell stayed perfectly accurate.** The gradient table
+above is a licence measure, not a liveness one, and the two must not be read as each other.
+
 ## 🆕 `p881` · 2026-11-17 — what changed on this shelf
 
 🟢 **Two slug corrections, `OpenOlat/OpenOlat` → `OpenOLAT/OpenOLAT`**, discharging `880-G4` on this
@@ -197,6 +265,19 @@ Apache-2.0 *and* BSD-3-Clause in one payload, notice obligation of two), `instru
 disprove it** — Artemis (MIT, `832★`), Autolab (Apache-2.0, `808★`) and Kolibri (MIT) are all
 permissive full platforms. 🟡 `2,003` extra repositories of denominator yielded these four rows,
 which is `T12` reconfirmed from the denominator side.
+
+## The foundations — 75 rows
+
+🟢 **Derived, not asserted.** `75` distinct repositories across the **14** layer tables below,
+and the layering is the value of this file rather than an accident of its history: substrate,
+standards, analytics, curriculum, institutional platforms, ingestion, retrieval and evaluation are
+different procurement decisions. `ingest/derive-counts.py` grades this heading against the rows on
+every pass.
+
+🔵 One repository may legitimately appear in two layers — `frappe/education` sits in both the
+Frappe layer and the ERP layer — so the figure counts **distinct subjects**, not table rows
+(`p813`'s rule). 🔴 The liveness table in the `p882` section is declared NOT counted: it restates
+rows from these tables to flag the seven that have gone quiet.
 
 ## The permissive periphery of the copyleft platforms — new in `p879`
 

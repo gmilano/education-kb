@@ -6,7 +6,25 @@ updated: 2026-11-17
 
 # Market intelligence — education
 
-**Pass `p879`, 2026-11-17** (ninth pass of the day). `p879` ran the global sweep plus **all four
+**Pass `p882`, 2026-11-17** (twelfth pass of the day). `p882` ran the **demand** legs — trends plus
+all four regions — under the policy `880-G5` set: **8 legs, 35 facts held / 9 new / 0 new
+repositories** ([`record`](../evidence/websearch-legs.2026-11-17-p882.tsv)). New this pass:
+**North America** gains two policy *trackers* and one state instrument; **EMEA** moves off its nil
+with the Council of Europe's *Compass for AI and education* and the Commission's 2026 update to its
+ethics guidelines; **APAC** gains its first *national programme with a target number attached*
+(the Philippines' AGAP.AI, 1.5 million people) plus a seven-country policy comparison; **LATAM
+returned nothing this file did not already hold, and that nil is written down here rather than left
+to look like coverage** — the exact inverse of `p879`, where EMEA was the silent leg and LATAM the
+productive one.
+
+🔵 **One honest correction to this pass's own grading.** The EU education ministers' conclusions on
+teachers and AI were graded NEW on first reading of the search summary and re-graded **HELD** on
+reading this file's EMEA section, which carries them as *"the Council conclusions on teachers and AI
+of 2026-05-11"*. The leg record says so. 🔴 **A held/new split is only worth publishing if the
+grading is done against the shelf and not against a keyword**, and keyword-grading got one of nine
+wrong here.
+
+**Previous pass (`p879`), retained:** **Pass `p879`, 2026-11-17** (ninth pass of the day). `p879` ran the global sweep plus **all four
 regional legs**. New: the **agentic sub-segment gets its own sizing** ($2.37B in 2026 → $11.83B by
 2031, Mordor) against the ~$9.58–10.6B whole-market modal estimate; **North America** gains the
 2026 legislative count (134 bills, 31 states) and SUNY's 64-campus policy; **APAC** gains its
@@ -96,6 +114,43 @@ detail. **The headline change: `p871` declared that no reliable per-region adopt
 existed. They do, and they are below.** That gap is now largely closed, and the figures come
 from UNESCO IESALC, the Digital Education Council, Ipsos, Tyton Partners and Inside Higher Ed
 rather than from market-research aggregators.
+
+## 🆕 `p882` · 2026-11-17 — what changed on this shelf
+
+🔴 **The source-quality warning below still governs every number in this file, and `p882` adds a
+reason to keep it.** Every figure in this section is a **search-engine summary of a secondary
+source**, not a primary read: `api.osv.dev` and `osv.dev` both fail to resolve from this session's
+network policy, and the hosts `p878`–`p881` probed (`unesco.org`, `hepi.ac.uk`,
+`digitaleducationcouncil.com`, `iagen.unam.mx`, `multistate.us`, `reports.weforum.org`,
+`data.consilium.europa.eu`, `www.seameo.org`) have never once answered. 🟢 What `p882` *can* read
+first-hand is GitHub metadata, and it read all of it — see `agents/top.md`, this pass.
+
+### 🟢 The held/new split, per leg
+
+| Leg | Class | Held | New | New repos |
+|---|---|---:|---:|---:|
+| global — agents | supply | 5 | 0 | 0 |
+| global — trending | supply | 4 | 0 | 0 |
+| global — verticals | supply | 7 | 0 | 0 |
+| trends | demand | 3 | 1 | 0 |
+| **North America** | demand | 3 | **3** | 0 |
+| **EMEA** | demand | 4 | **2** | 0 |
+| **APAC** | demand | 4 | **3** | 0 |
+| **LATAM** | demand | 5 | **0** | 0 |
+| **Total** | | **35** | **9** | **0** |
+
+🔵 **`880-G5`'s policy is being vindicated by its own numbers.** The three *supply* legs have now
+returned **0 new repositories across `p879`, `p880`, `p881` and `p882`** — four consecutive passes —
+while the five *demand* legs returned 9 new facts this pass alone. 🟢 The split was the right call,
+and the 5-pass supply cadence it set should be held to rather than quietly re-run every pass.
+
+🔴 **A measured caution about the market numbers themselves, from this pass's own legs.** The North
+America leg returned a 2025 base of **USD 3,280M** growing to **USD 15,250M by 2031** from one
+vendor, and **USD 7.35B in 2025** growing to **USD 207.62B by 2035** from another — a 2035 figure
+**more than an order of magnitude** apart from the first's trajectory. 🟢 **This file's modal
+estimate (~$9.58–10.6B in 2026, ~$42.5B by 2030) sits inside the cluster and should keep being
+quoted with its dispersion attached**, which is the only honest way to quote it. The `p879`
+dispersion note below is unchanged and still the right reading.
 
 ## 🆕 `p881` · 2026-11-17 — what changed on this shelf
 
@@ -869,6 +924,29 @@ European education-AI vendors, no procurement volumes.** The EMEA picture here r
 
 ### North America
 
+#### 🆕 `p882` — the measurement infrastructure for state policy now exists, and that is the sellable part
+
+🟢 **Two standing trackers, named for the first time in this file.** The **Education Commission of
+the States** maintains an *AI in education state policy trends* tracker, and the **PIE Network**
+counted **close to 100 state bills this year** that could affect K-12 student AI use. 🔵 Set against
+the **134 bills across 31 states** this file already holds, the useful fact is not the count — it is
+that *the counts disagree because the trackers scope "AI in education" differently*. A district or
+system buying compliance work is buying a defensible scope definition before it buys any software.
+
+🟢 **One new state instrument: California's "AI bridge"**, named in the 2026 EdTech policy
+commentary alongside screentime scrutiny as the two fronts reshaping edtech policy this year.
+
+🔵 **Why this is an opportunity line.** This region's constraint has never been model capability; it
+is that **guidance is proliferating while binding rules stay thin** — this pass's leg put it as
+*"guidance is proliferating, but hard regulation remains limited"*. 🟢 **The engagement shape that
+follows:** a *policy-to-control* mapping — take a state's guidance plus the district's own board
+policy, and emit the consent records, disclosure surfaces and audit trail that `P15` specifies, on
+the identity layer `apereo/cas` provides. It is billable precisely because the rules are not yet
+binding: the client is buying readiness, and readiness has to be built before the deadline, not
+after. 🔴 Student-data privacy remains the named restraint on adoption in this region, so the
+consent spine is the first deliverable and not a later phase.
+
+
 #### 🆕 `p881` — one new named player, and it is a procurement-shaped one
 
 🟢 **`Panorama Education` is the first named *vendor* this file can point to as having co-authored
@@ -1029,6 +1107,32 @@ that is where consent, disclosure and logging can actually be enforced (**P15**,
 
 
 ### EMEA
+
+#### 🆕 `p882` — 🟢 **off nil:** two instruments, and both are *teacher-facing* rather than system-facing
+
+🟢 **The Council of Europe published a *Compass for AI and education*** following its October 2025
+working conference — a framework distinct from the EU instruments this file already tracks, and from
+a body whose membership is wider than the EU.
+
+🟢 **The European Commission updated its ethics guidelines on AI and data in education in 2026**,
+and the update is reported to explain the AI Act and GDPR together for a teacher audience.
+
+🔵 **Both land on the same gap, and this pass's leg measured it.** A six-country study of adult
+education (Austria, Belgium, France, Greece, Ireland, Spain) found educators adopting AI
+*"enthusiastically, but largely on their own and without a clear regulatory framework"*, with the
+shared priority across Europe being **applied professional development**. A Commission-linked report
+adds that access to advanced AI at school level *"remains uneven"*. 🟢 **So the EMEA opportunity is
+not a platform — it is the layer between a binding regulation and a teacher who has already started
+using the tools:** AI-literacy delivery under **Art. 4**, Art. 50 disclosure surfaces, and the
+human-oversight duties schools carry as AI Act **deployers**. All three are recorded against an
+identity, which is why `apereo/cas` is on the vertical shelf.
+
+🔴 **The clock is still the deferred one.** High-risk obligations for education are reported to apply
+from **`2027-12-02`** under the Digital Omnibus amendment (Regulation (EU) 2026/1744), which this
+file already holds and which
+`T11` says is the date most of the market is *not* watching. Nothing this pass found changes it, and
+no primary read of the Official Journal was possible — `data.consilium.europa.eu` refused again.
+
 
 #### 🆕 `p881` — **nil new, declared.** Three legs, nothing this file did not already hold
 
@@ -1250,6 +1354,32 @@ assume an identity layer they never name.
 
 ### APAC
 
+#### 🆕 `p882` — the first national programme in this section with a target number attached
+
+🟢 **The Philippines' Department of Education launched `AGAP.AI` in January 2026** — a nationwide
+responsible-AI programme reported to target **1.5 million people** — and its **National Education
+Plan 2026–2035** embeds AI and digital literacy across the system. 🔵 **This is the fact this
+section has been missing.** APAC has been strong on attitudes and thin on instruments: a national
+plan with a decade's horizon and a programme with a headcount target is a *procurement* object, and
+teacher-capability delivery at 1.5M scale is not a pilot.
+
+🟢 **Clarivate has compared AI policy and AI-ethics education across seven APAC countries and
+territories** — the first cross-jurisdiction comparator this file can point to for the region, which
+matters because `P-APAC` work is priced on how many regimes a solution must satisfy at once.
+
+🟡 **EtonHouse launched a secure enterprise AI workspace across its international school network**,
+positioned inside Singapore's responsible-AI push — a private-group reference for the
+*institutional-perimeter* pattern rather than a public-system one.
+
+🔵 **The structural reading is unchanged and now better evidenced:** this region is the fastest-growing
+and the least uniform. Growth estimates from this pass's leg span **20.9% CAGR** (MarketsandMarkets,
+~USD 591.6M in 2024) to **35.3%** from another source; ASEAN governance is explicitly per-ministry,
+with experts warning against both over-regulation and vendor monopoly. 🔴 **Roughly 86% of Southeast
+Asian teachers are reported already using AI tools while fewer than half have confidence in their
+institution's or government's policy** — the widest adoption-to-governance gap in this file, and the
+reason `P-APAC`'s policy-nodes design exists.
+
+
 #### 🆕 `p881` — one new named convening body, and it is the ministry channel
 
 🟢 **Cambridge English (Cambridge University Press & Assessment) convened 200+ senior leaders, including
@@ -1470,6 +1600,30 @@ with **P8**: Vietnam's law (1 Mar 2026), Korea's (22 Jan 2026) and India's label
 
 
 ### LATAM
+
+#### 🆕 `p882` — 🔴 **nil new, declared.** The leg is saturated in English as well as in Spanish
+
+🔴 **`p882`'s LATAM leg returned no fact this file did not already hold.** Every item it surfaced is
+already shelved: the **Digital Education Council** LATAM survey (**92% of students, 79% of faculty**
+actively engaging with AI; only ~30% believing their institution has responded effectively), the
+**EdTech Hub + Fundación Ceibal** partnership of September 2026, the **IDB's review of 193
+initiatives** finding the region builds *hybrid, context-sensitive* systems rather than importing
+them, the **UNESCO IESALC / UNU-IAS** working paper mapping AI across five institutional dimensions,
+and Mexico's **"Ley Nahui"**.
+
+🔵 **This is the second nil for this region in two passes, and it means something specific.** `p881`
+ran the leg in **Spanish** and got nil; `p882` ran it in **English** and got nil. 🟢 **Two different
+query languages saturating on the same corpus is evidence that the *secondary-source* layer for LATAM
+is exhausted, not that the region is quiet** — and the named, blocked primary sources are still
+blocked (`iagen.unam.mx` for UNAM/IAGen's regional higher-education survey,
+`digitaleducationcouncil.com` for the survey's own methodology). 🔴 **Registered as `882-G3`: the
+next advance on this region requires a channel, not another query.** A third nil leg in a row should
+be read as this file reporting a *channel* limit and should not be run a fourth time without one.
+
+🟢 **What remains true and sellable, unchanged:** this is still the best-measured region in this
+file, the adoption-to-policy gap is the widest documented anywhere in it (92% student use against
+~30% institutional-response confidence), and the gap *is* the engagement — governance, not capability.
+
 
 #### 🆕 `p881` — **nil new, declared.** The Spanish leg is saturated
 

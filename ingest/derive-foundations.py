@@ -55,6 +55,7 @@ def tables_of(start, end):
 
 # --- load declared dispositions, keyed by (section heading text, table ordinal) ----------
 declared = {}
+stale_decls = []
 head_texts = {l for _, l in heads}
 for raw in open(manifest, encoding="utf-8"):
     # A comment is a '#' line with NO tab in it. The keys themselves are markdown headings
@@ -65,9 +66,18 @@ for raw in open(manifest, encoding="utf-8"):
     heading, ordinal, disp, note = (raw.rstrip("\n").split("\t") + ["", "", "", ""])[:4]
     # Keyed on the heading's own TEXT. p545's first draft keyed on line numbers and broke
     # on the first edit of the page it describes; the text survives edits above it.
+    # 🟢 p882. This was `RED ... sys.exit(2)`, and the SAME SCRIPT thirty lines below already
+    # grades the same situation the other way: "an alias only collapses if BOTH ends are
+    # actually on the shelf; a relation naming an address this page does not hold is a STALE
+    # DECLARATION, not a reason to subtract" -- reported as AMBER. One script, one situation,
+    # two gradings. 🔴 And the hard exit MASKED the bigger finding: the manifest held one row
+    # for a page of sixteen tables, so the fifteen undeclared ones were never reported.
+    # 🔵 The ratchet that matters is kept and is the one below: a table ON THE PAGE with no
+    # declaration is still RED, so a new table cannot be added silently. A declaration naming a
+    # heading the page has since rewritten is stale bookkeeping, and is reported as such.
     if heading not in head_texts:
-        print(f"RED  manifest names a heading the page no longer carries:\n     {heading[:100]}")
-        sys.exit(2)
+        stale_decls.append(heading)
+        continue
     declared[(heading, int(ordinal))] = (disp, note)
 
 # --- walk the page ------------------------------------------------------------------------
@@ -91,6 +101,11 @@ for k in range(len(heads) - 1):
                 shelf_addrs |= {a.rstrip(".") for a in ADDR.findall(r)}
 
 print(f"repos/foundations.md  tables declared={len(declared)}")
+if stale_decls:
+    print(f"  AMBER {len(stale_decls)} declared disposition(s) name a heading the page no longer "
+          f"carries (p882: stale bookkeeping, not a shelf defect):")
+    for h in stale_decls:
+        print(f"        {h[:96]}")
 for d in ("SHELF", "CENSUS", "METRIC", "SUMMARY"):
     print(f"  {d:8s} rows = {counts.get(d, 0)}")
 # --- collapse declared alias relations onto addresses -> systems -------------------------

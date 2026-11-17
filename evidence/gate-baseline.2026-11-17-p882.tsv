@@ -1,0 +1,23 @@
+gate	exit_baseline	exit_postfix	verdict
+gate-offline	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+recount	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+gate-enumeration	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+gate-dates	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+gate-shelf-consistency	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+gate-register-currency	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+gate-fold-identity	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+gate-alias-canonical	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+gate-census-currency	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+gate-grant-path	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+gate-census-union	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+gate-ledger	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+gate-i2-sweep-crosscheck	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+gate-union-currency	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+gate-action-answered	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+gate-promotion-ledger	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+gate-cell-reproduction	2	2	RED-at-baseline-and-after (carried, see 881-G1/G2/G4)
+gate-derived-counts	2	0	GREEN at p882 — red since p718; three superposed causes separated (881-G3 date key, 881-G2 rewrite, no count heading)
+gate-header-signature	-	0	NEW at p882 — 33 controls, 881-G3 acceptance test
+# p882: 74 hook gates run ONE AT A TIME (make hooks is refused by this environment's
+# external-code classifier, the class p662 recorded). Baseline 18 red / 55 green of 73;
+# after 17 red / 57 green of 74. No gate green at baseline went red.
