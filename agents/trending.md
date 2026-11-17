@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — `p864`: the **Chinese examination-system tier**, a `2.7×` star correction to the base's most-cited agent, and two cases where a web search named the wrong repository
+
+🟢 **`863-G3` asked for four more APAC languages. All four were run.** 🔴 **The result inverted the
+gap's premise for the second consecutive pass**: the APAC assessment vein is not "one language
+deep" — 🟢 **Chinese alone returns more addresses than every other language this base has ever
+queried combined.**
+
+| Language | Terms | `total_count` | `stars:>5` | 🟢 Permissive shelved |
+|---|---|---|---|---|
+| 🟢 **Chinese** | `5` | 🟢 **`18,328`** | 🟢 **`2,124`** | 🟢 **`4`** |
+| 🟡 Bahasa Indonesia | `3` | `1,714` | `20` | 🟡 `2` *(one `ARCHIVED`)* |
+| 🔴 Japanese | `3` | `626` | `23` | 🔴 **`0`** |
+| 🔴 Korean | `3` | `206` | `6` | 🔴 **`1`** *(`9★`, `2020`)* |
+
+### 🟢 New agent-class signals, licences byte-read
+
+| Address | ★ | Licence, byte-read `2026-11-17` | HEAD | What it is |
+|---|---|---|---|---|
+| 🟢 [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | **`180`** | 🟢 **MIT**, `1,068 B`, `sha256₁₂ 5352b4967982` | 🟢 **`2026-11-16`** | Block-based adaptive learning workspace that runs **locally** — PDF in, notes and quizzes out |
+| 🟢 [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | `125` | 🟢 **MIT**, `1,068 B`, `sha256₁₂ 23b91d7c0aef` | `2026-01-29` | Education **Agent Skills** collection — `高考` science tutor and siblings. First skill-class education row here |
+| 🟡 [`JoyLeeA/POSCO_...CheatingDetectionAiSystem`](https://github.com/JoyLeeA/POSCO_AIProject_OnlineTestCheatingDetectionAiSystem) | `9` | 🟢 **MIT**, `1,064 B`, `sha256₁₂ 671db79febc0` | `2020-06-07` | 🔴 **The only permissive artefact in `206` Korean addresses** |
+| 🟡 [`Gchism94/ai-tutor`](https://github.com/Gchism94/ai-tutor) | low | 🟢 **MIT**, `1,070 B`, `sha256₁₂ 3d5a24e51479` | `2025-05-08` | Adaptive quizzes + coding help; 🔴 self-declared not production-ready, autograding marked PLANNED |
+
+### 🔴 Two web-search identifications that the byte channel refused
+
+🔴 **A `2026` sweep called [`0xysh/deeptutor`](https://github.com/0xysh/deeptutor) "the most mature
+2026 candidate".** 🟢 **Cloned: it is a `1`-star FORK of `HKUDS/DeepTutor`, stale `2026-04-08`,
+carrying `HKUDS`'s own README.** 🔵 **Invisible to `gh api search` because GitHub excludes forks by
+default** — measured on `题库 stars:>5`: `1,359` without forks, `1,466` with.
+
+🔴 **The same sweep attributed a notable OpenTutor to
+[`tutornew/OpenTutor`](https://github.com/tutornew/OpenTutor) — `8` ★, NO licence at any path.**
+🟢 **The `180`-star OpenTutor is `zijinz456`'s.** 🔵 **Twelve repositories share the name.**
+
+### 🔴 The correction
+
+🟢 **[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor): `59,826` ★, `7,242` forks,
+Apache-2.0, pushed `2026-11-15`, measured today.** 🔴 **This base has carried `22k+` since `p6`.**
+🔵 **Stars are the field that rots while nobody touches the row** → `T237`.
+
+🔴 **Also logged and NOT shelved:** `angular/ai-tutor` (`117★`, MIT) is **`ARCHIVED`** as of
+`2025-11-25`.
+
+---
+
+
 ## 🟢 `2026-11-17` — `p863`: `862-G2` run to exhaustion — the Hispanic examination tier is **measured, large and nearly ungrantable**, and the same instrument found **three times its permissive supply in ONE Vietnamese term**
 
 🟢 **What is new this window is again a vocabulary, and this time it crossed a region boundary.**

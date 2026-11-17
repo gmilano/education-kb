@@ -4,6 +4,114 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (sixty-ninth pass, `p864`) — **`4` gaps — `863-G1`, `863-G2`, `863-G3` and `863-G4` ALL DISCHARGED with their acceptance tests run, one of them returning a FOURTH channel the gap did not know about, and a rule `p863` published shown to be wrong**
+
+### 🟢 `863-G1` — DISCHARGED, and the gap undercounted the channels
+
+🔴 **The gap: state which of the three channels (`curl`, `gh api`, `git`) answered and which
+returned `403`.** 🟢 **Stated before the first row of [`agents/top.md`](../agents/top.md). There
+are FOUR:**
+
+| Channel | `2026-11-17` |
+|---|---|
+| `curl https://github.com/...` | 🔴 `403` |
+| `curl https://api.github.com/...` | 🔴 `403` |
+| 🟢 `gh api search/repositories` | 🟢 `200` |
+| 🔴 🆕 `gh api repos/{owner}/{repo}` | 🔴 **`403` — "not enabled for this session"** |
+| 🟢 `git clone --filter=blob:none --depth 1` | 🟢 `200` |
+
+🔵 **The split inside `gh api` is the new fact: SEARCH is open, the per-repository endpoint is
+denied.** 🟢 **So stars, forks and `archived` must be read from search results.** 🔴 **A pass that
+reads `repos/`'s `403` as "repository gone" will delete live rows.**
+
+### 🟢 `863-G2` — DISCHARGED: five legs, `0` region tokens, and the rule held
+
+🟢 **Every policy query this pass contained no `APAC`, `EMEA`, `LATAM` or `North America`**
+([`websearch-legs`](../evidence/websearch-legs.2026-11-17-p864.tsv)). 🟢 **Returned a numbered
+Indonesian instrument, a binding Brazilian resolution, a disputed US count and South Africa's
+abrogation.** 🔴 **It also showed its own limit** → `864-G1`.
+
+### 🟢 `863-G3` — DISCHARGED: four languages run, every total published, two measured nils
+
+| Language | Terms | Addresses | `stars:>5` | Permissive |
+|---|---|---|---|---|
+| 🟢 Chinese | `5` | 🟢 **`18,328`** | **`2,124`** | 🟢 **`4`** |
+| 🟡 Bahasa Indonesia | `3` | `1,714` | `20` | 🟡 `2` |
+| 🔴 Japanese | `3` | `626` | `23` | 🔴 **`0`** |
+| 🔴 Korean | `3` | `206` | `6` | 🔴 **`1`** |
+
+🟢 **Nils published WITH their terms**: `オンライン試験` (`2` addresses, `0` above five stars) and
+`自動採点` (`78`, `2`, both contamination). 🔴 **The gap's premise — "the APAC vocabulary is one
+language deep" — is inverted: Chinese alone out-returns every language this base has queried,
+combined** (`T232`).
+
+### 🟢 `863-G4` — DISCHARGED: the `class:` field is in use on its first eligible entries
+
+🟢 **All `8` new [`measured-unusable`](measured-unusable.md) entries carry `class: original`.**
+🟢 **The content/code split was also exercised**: no new CONTENT-payload row appeared this pass,
+🔵 **and the honest discharge is that the field exists, is populated, and immediately showed an
+asymmetry worth having** — `p863` could draft `0` viable licence requests, `p864` can draft `8`.
+
+---
+
+### 🔴 `864-G1` — a query naming three jurisdictions returns one of them
+
+🔴 **Measured this pass**: a single query naming **Brazil, Chile and Colombia** returned Brazil's
+instrument in full and 🔴 **nothing whatever for Chile or Colombia.** 🔵 **`863-G2` removed the
+region token and the same dominance reappeared one level down — the loudest JURISDICTION now
+crowds out its neighbours.**
+
+🟢 **Acceptance test: the next pass running a multi-country leg issues ONE query per jurisdiction
+and reports each separately, including nils.** 🔴 **Chile and Colombia are currently recorded as
+measured nils that are almost certainly artefacts of the query, not of the world** — they must be
+re-run alone before any client-facing claim rests on them.
+
+### 🔴 `864-G2` — every count this base has ever published excludes forks, and this is undeclared
+
+🟢 **Measured: `题库 stars:>5` returns `1,359`; with `fork:true`, `1,466`.** 🔴 **`107`
+repositories — `7.3%` of the band — are invisible to every total in this base's evidence files.**
+
+🔵 **The default is CORRECT for finding originals**, 🔴 **but it is nowhere written down**, and it
+produced a live contradiction this pass: a web search promoted a repository (`0xysh/deeptutor`)
+that `gh api search` reported as non-existent, because it is a fork.
+
+🟢 **Acceptance test: the next pass's term-sweep header states the fork policy explicitly, and one
+term is run both ways so the ratio is on record a second time.**
+
+### 🔴 `864-G3` — the Brazilian essay clause is UNRESOLVED and the primary text was not reached
+
+🔴 **`Resolução CNE/CP nº 1/2026` is the most consequential instrument in this base — it has a
+`12`-month contract-adaptation clock — and the sources disagree on its central clause.** Some
+report AI permitted for PRE-correction with the teacher assigning the mark after a full read;
+others report a flat prohibition on AI correcting, evaluating or grading essays.
+
+🔴 **No secondary source settles it and the `gov.br`/`DOU` primary text was not retrieved** —
+🔵 **`T906`'s blocked government-domain class is the likely cause and was not separately proved
+this pass.**
+
+🟢 **Acceptance test: the next pass either quotes the operative sentence from the `gov.br` or
+`DOU` text, or records the specific domain and the specific failure code.** 🔴 **`P103` is
+deliberately built to survive the STRICTER reading in the meantime**, 🔵 **so the gap blocks a
+claim, not a deliverable.**
+
+### 🔴 `864-G4` — `language:` repairs CJK contamination and its COST is unmeasured
+
+🟢 **Measured: `in:name,description` repaired nothing (`1,359`, `21`, `2` — identical to the
+byte); `language:java` removed the keyword-stuffed cluster completely (`题库`: `1,359` → `172`,
+top band on topic).**
+
+🔴 **But `language:` filters on DETECTED SOURCE LANGUAGE, so it drops exactly the class this base
+shelves most often**: item banks, corpora, awesome-lists and documentation repositories — 🔴 **four
+of `p862`/`p863`'s shelved rows would have been invisible under it**
+(`uol-redacoes-xml`, `awesome-poscomp`, `ResultadosUNAM---data`, `picuino/test`).
+
+🟢 **Acceptance test: one pass runs a known-good vein both with and without `language:` and
+reports how many SHELVED rows the filter would have hidden.** 🔵 **Until that number exists,
+`language:` is a tool for finding SYSTEMS and must not be used on a corpus leg.**
+
+---
+
+
 ## 🟢 `2026-11-17` (sixty-eighth pass, `p863`) — **`4` gaps — `862-G2` and `862-G3` both DISCHARGED with their acceptance tests run, and four new limits named, one of which is a defect in this base's own shelf FORMAT**
 
 ### 🟢 `862-G2` — DISCHARGED: all nine Hispanic examination terms run, every total published, including six nils

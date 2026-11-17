@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Sixty-ninth pass (`p864`, 2026-11-17) — **`863-G2` OBEYED: every policy query carried `0` region tokens, and the jurisdiction-only rule returned a numbered instrument in Indonesia, a binding resolution in Brazil, an unresolved count in the United States and an ABROGATED national policy in South Africa**
+
+🟢 **`863-G2` required that a regional leg contain no `APAC`, no `EMEA`, no `LATAM`, no
+`North America`.** 🟢 **Five legs were run, all with `0` region tokens**
+([`websearch-legs`](../evidence/websearch-legs.2026-11-17-p864.tsv)).
+
+| Leg, named by jurisdiction only | Returned |
+|---|---|
+| 🇮🇩 Indonesia | 🟢 **A numbered instrument with grade levels and dates** |
+| 🇺🇸 United States | 🟡 **State activity, and a count the sources do not agree on** |
+| 🇳🇬🇰🇪🇿🇦 Nigeria · Kenya · South Africa | 🔴 **One strategy, one abrogation, one set of unverifiable claims** |
+| 🇧🇷🇨🇱🇨🇴 Brazil · Chile · Colombia | 🟢 **Brazil binding; 🔴 Chile and Colombia returned NOTHING — a measured nil, published as one** |
+
+🔴 **The rule held, and it also showed its limit**: naming three countries in one query returned
+all results for one of them. 🟢 **Brazil's instrument is precise and Chile and Colombia are
+absent — not because they have no policy, but because the query let the loudest jurisdiction
+dominate exactly as the region token used to** → `864-G1`.
+
+### 🟢 National positions measured this pass
+
+| Jurisdiction | Instrument | Position, `2026` |
+|---|---|---|
+| 🇮🇩 **Indonesia** | 🟢 **`Permendikdasmen 13/2025`** | 🟢 **Coding and AI (`koding dan kecerdasan artifisial`) as ELECTIVE subjects, phased from `kelas 5 SD`, `kelas 7 SMP`, `kelas 10 SMA/SMK`, from the `2025/26` school year.** 🔴 **Elective, not compulsory, and no new curriculum was named** — schools may stay on `Kurikulum 2013` or `Merdeka`; `3T` (remote/frontier/disadvantaged) regions have until `2026/27`. 🔴 **Teacher training target REVISED DOWN from `1,000,000` to `361,000`** |
+| 🇧🇷 **Brazil** | 🟢 **`Parecer CNE/CP nº 15/2026`** homologated `2026-11-10`, `DOU` `2026-11-11`; **`Resolução CNE/CP nº 1/2026`** | 🔴 **The most restrictive instrument in this base.** Automated grading constrained; AI-detector output alone cannot ground a sanction; prohibited for children through the `5ᵗʰ` year; mediated for years `6`–`9`. 🟢 **Immediate effect, `12` months to adapt policies, practices and CONTRACTS** → `T236` |
+| 🇺🇸 **United States** | 🔴 **No confirmed new FEDERAL `2026` K-12 instrument** | 🟡 **State-led and the count is disputed: `31` states (Ballotpedia, Jan `2026`) vs `33`–`35` plus Puerto Rico (trackers).** Binding: **Ohio** and **Tennessee** require districts to adopt AI policies; **Maryland** mandates state guidance and PD; **Oklahoma `S.B. 1734`** requires district policies before `2027–28`; **Idaho `S.B. 1227`**. 🔴 **`New York A.B. 9190`** (AI barred before `9ᵗʰ` grade) rests on a SINGLE tracker — unverified |
+| 🇰🇪 **Kenya** | 🟢 **National AI Strategy `2025–2030`** (Mar `2025`) | 🟢 **The most concrete footing of the three African jurisdictions**: AI literacy committed across education, coding and computer science introduced in primary and secondary |
+| 🇿🇦 **South Africa** | 🔴 **Draft National AI Policy — ABROGATED `2026-04-27`** | 🔴 **Cabinet-approved March `2026`, gazetted April, withdrawn weeks later after at least `6` of its `67` academic citations were found to be AI-GENERATED FABRICATIONS.** 🔵 **A national AI policy retracted for AI-fabricated evidence is the sharpest governance datum in this base** |
+| 🇳🇬 **Nigeria** | 🔴 **Claims inconsistent across sources** | 🔴 **One source reports NERDC directed to integrate robotics and AI into the primary curriculum, undated; an academic paper states the NERDC curriculum is SILENT on AI literacy.** 🟢 **Published as contested, not resolved** |
+| 🇨🇱 **Chile**, 🇨🇴 **Colombia** | 🔴 **MEASURED NIL this pass** | 🔴 **The Brazil/Chile/Colombia query returned Brazil only.** 🟢 **Published as a nil WITH its query**, not as absence of policy |
+
+## Opportunities by region
+
+### North America
+
+🟡 **The opportunity is compliance surface, not technology.** 🔴 **No federal K-12 instrument,
+`31`–`35` state regimes, and at least five with BINDING district-policy duties** (Ohio,
+Tennessee, Maryland, Oklahoma, Idaho) on different clocks — Oklahoma's bites before `2027–28`.
+🟢 **A district-facing engagement sells policy-conformant configuration and auditable logs across
+a patchwork, and the patchwork is the moat.** 🔴 **The US Department of Education has cautioned
+against AI detection as the sole basis for integrity determinations** — 🟢 **the same position
+Brazil has now made binding, which means a detector-free integrity design is portable across both
+markets.** 🔵 **Open supply here is the base's existing English-language shelf; nothing in this
+pass's four languages targets a US curriculum.**
+
+### EMEA
+
+🟡 **Two opposite situations under one label, which is why `863-G2` matters.** 🟢 **Kenya has a
+published national strategy with education commitments and an expanding coding curriculum — a
+build market.** 🔴 **South Africa has an abrogated policy and, by one commentary, no AI education
+policy at all; coding and robotics exist in selected grades only.** 🟢 **The opportunity in South
+Africa is therefore ADVISORY and evidence-grade first** — 🔵 **a government that withdrew a policy
+over fabricated citations has an acute, nameable need for verifiable sourcing, which is precisely
+what this base's byte-read method produces.** 🔴 **Nigeria cannot be sized from these sources.**
+🟢 **The only EMEA-placed code row in the recent vein remains `picuino/test` (Spain, `CC-BY-SA-4.0`,
+content grant only).**
+
+### APAC
+
+🟢 **This is where the pass's supply is, and it is not evenly distributed.** 🟢 **China: `18,328`
+addresses, `2,124` above five stars, four MIT systems shelved — the deepest permissive
+examination tier in the base.** 🟢 **Indonesia: a numbered national mandate
+(`Permendikdasmen 13/2025`) AND a maintained MIT CBT platform already written for `AKM`
+(`cbt-eschool`), which is the rare case of mandate and open base in the same jurisdiction →
+`P102`.** 🔴 **Japan and Korea: `832` addresses between them and effectively no permissive
+supply** (`T233`) — 🟢 **bring-your-own-stack markets, and Korea's `37%`→`19%` textbook reversal
+(`T231`) means the honest pitch is remediation of a reversed deployment, not greenfield
+enthusiasm.** 🔴 **`3T`-region readiness in Indonesia and a teacher-training target cut from
+`1M` to `361k` say the binding constraint is TEACHER CAPACITY, not software.**
+
+### LATAM
+
+🔴 **Brazil has moved from opportunity to constraint, and that is worth more than a market size.**
+🟢 **`Resolução CNE/CP nº 1/2026` gives every institution `12` months to adapt policies,
+practices and CONTRACTS** — 🔵 **a contract-adaptation deadline is a dated, mandatory,
+budget-bearing engagement for every school and university in the country, and it starts now.**
+🟢 **The deliverable is a teacher-in-the-loop assessment architecture that can prove a human
+assigned every mark** (`P103`), 🔴 **not an autonomous grader.** 🟢 **This base already holds the
+Brazilian assets: `uol-redacoes-xml` (Apache-2.0, human-scored essays), `enem-api` (GPL-2.0),
+`awesome-poscomp` (MIT).** 🔴 **Chile and Colombia returned nothing this pass and are NOT
+assessed** — 🟢 **Colombia's permissive item bank `alvaretto/r-exams_matematicas` remains the
+only shelved Colombian code asset.**
+
+### Global
+
+🔴 **The cross-region finding is that no generalisation survived.** 🟢 **Two consecutive passes
+produced a regional conclusion that the next control overturned** (`T232`), 🔵 **so the defensible
+statement for a client is per-jurisdiction and per-language, never per-region** — 🟢 **which is
+exactly what `863-G2` forced and what this section is now shaped by.**
+
+---
+
+
 ## 🟢 Sixty-eighth pass (`p863`, 2026-11-17) — **`862-G3` DISCHARGED: the APAC leg was re-run against JURISDICTIONS instead of the region, and it returned `6` national positions where the previous run returned `0` — including a numbered instrument**
 
 🔴 **`862-G3` recorded that the APAC leg returned `0` national frameworks for China, India, Japan,

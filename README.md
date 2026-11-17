@@ -6,330 +6,68 @@ updated: 2026-11-17
 
 # Globant AI Studios — Education KB
 
-## Pass `p863` · `2026-11-17`
+## Pass `p864` · `2026-11-17`
 
-🔴 **This pass set out to measure LATAM and the answer came back from Vietnam.** 🟢 **`862-G2`
-required the nine Spanish-speaking national-examination terms to be run and every total
-published. All nine were run.** 🔴 **`2,142` addresses. `11` above five stars. `5` on topic.
-🔴 `2` permissively granted.**
+🟢 **`863-G1`, `863-G2`, `863-G3` and `863-G4` were all discharged with their acceptance
+tests run, and the first of them found a channel the gap did not know existed.** 🔴 **`gh api`
+is split: `search/repositories` answers `200`, `repos/{owner}/{repo}` answers `403`.** 🔵 **A
+pass that reads that `403` as "repository gone" will delete live rows.**
 
-🟢 **Then this base's own `p798-G` rule was obeyed — when a finding is a RATE, measure it where it
-should NOT hold — and the control overturned the conclusion.** 🔴 **One Vietnamese term,
-`"trắc nghiệm"`, returned `1,170` addresses, `7` above five stars, `7` of `7` on topic and
-`3` MIT.** 🔵 **More usable permissive assessment code from one term than from nine.** 🟢 **So the
-thin yield is not a property of LATAM, not of non-English querying and not of the examination
-vein — it is a property of Spanish-language GitHub specifically** → `T226`. 🔴 **Three passes of
-narrative were one two-minute control away from shipping wrong.**
+🔴 **`863-G3` asked for four more APAC languages and its premise inverted for the second
+consecutive pass.** 🟢 **Chinese alone returns `18,328` addresses and `2,124` above five stars —
+more than every language this base has ever queried, combined, and `303×` Korean's `206`.**
+🔴 **Japanese shelved `0` permissive rows. Korean shelved `1`, a `9`-star project from `2020`.**
+🔵 **No regional or linguistic generalisation this base has attempted has survived its own next
+measurement** → `T232`.
 
-🔴 **A third defect class in query vocabulary, and it is the worst of the three.** `EXANI`
-returns Cisco's **ExaNIC** network cards (`206★`), an *Exanima* game map and an *Exanite*
-action-RPG; `"Saber Pro"` returns a **Beat Saber** mod, a Chinese UI kit and
-`ecomfe/saber-promise`. 🔴 **`0` of those `6` top-band addresses is an examination artefact, and
-no `NOT` repairs an acronym that collides with a hardware and a games namespace.** 🟢 **The two
-Hispanic terms that worked are an institution name (`Ceneval`) and a natural-language phrase
-(`"examen de admisión"`)** → `T227`. 🔵 **A stem collision loses precision and a homograph loses a
-word, but an acronym collision returns a full top band of confident wrong answers.**
+🟢 **A fourth defect class in query vocabulary, and it is the quietest.** `题库` means
+"question bank" and is the correct word — 🔴 **its top band is `面试题库`, JOB-INTERVIEW
+preparation: `web-interview` (`11,889★`), `DotNetGuide` (`11,151★`), `mianshiya` (`6,055★`).**
+🟢 **`考试系统` — the SYSTEM noun — returns the real tier, `3` of its top `4` MIT.**
+🔵 **Right language, right word, wrong industry** → `T235`.
 
-🟢 **`862-G3` discharged, and its first attempt still failed.** 🔴 **A query naming China, India,
-Japan, Korea and Singapore *and* the regional framing returned `0` of the five.** 🟢 **The same
-five asked of their ministries directly returned four, plus Vietnam's numbered instrument —
-MoET Decision `2422/QĐ-BGDĐT`, `18 Aug 2026`, nationwide from `2026–27`, `12` periods per grade
-per year — and India's Class-`3` mandate from session `2026–27`.** 🔵 **Name ONLY the
-jurisdiction; the region token dominates a query that carries both** → `863-G2`.
+🟢 **Two search repairs measured on the same terms in the same hour.** 🔴 **`in:name,description`
+repaired nothing — `1,359`, `21`, `2`, identical to the byte, because the keyword-stuffing IS in
+the description.** 🟢 **`language:java` removed the contaminating cluster completely
+(`题库`: `1,359` → `172`).** 🔴 **Its cost is unmeasured and named as a gap: it would have hidden
+four rows this base has already shelved** → `864-G4`.
 
-🔴 **The first measured RETREAT from a national AI-education deployment anywhere in this base.**
-🟢 **South Korea's AI digital-textbook adoption fell `37%` → `19%` in one semester and the
-software was reclassified from *textbook* to *educational material*.** 🔵 **Read with Singapore's
-"cognitive offloading" concern, Japan's `2030` horizon and the global `38%` → `68%` rise in
-AI-detection use: institutions are buying CONTROL over AI faster than INSTRUCTION from it** →
-`T231`.
+🔴 **Brazil has moved against the thing this base shelved a corpus for, one pass ago.**
+`Parecer CNE/CP nº 15/2026` was homologated `2026-11-10` and published in the `DOU` on
+`2026-11-11`; `Resolução CNE/CP nº 1/2026` binds every public and private institution.
+🔴 **Automated grading is constrained, AI-detector output alone cannot ground a sanction, and
+generative tools are barred for children through the `5ᵗʰ` year.** 🟢 **Immediate effect, `12`
+months to adapt policies, practices AND CONTRACTS** — 🔵 **a dated, budget-bearing engagement for
+every school and university in the country** → `T236`, `P103`.
 
-🟢 **`8` rows shelved, every licence byte-read from a blobless clone, `0` clone failures, `0`
-licences taken from GitHub's SPDX field**: `3` agents (`733` → `736`), `3` foundations
-(`388` → `391`), `2` platforms (`251` → `253`). 🟢 **`6` trends (`T226`–`T231`), `2` recipes
-(`P100`–`P101`), `2` gaps discharged, `4` gaps declared.** 🔴 **`13` addresses refused with their
-bytes, across two incompatible refusal classes.**
+🟢 **Indonesia is the rare case where the mandate and the open base are in the same
+jurisdiction.** `Permendikdasmen 13/2025` phased coding and AI from `kelas 5 SD`, `7 SMP`,
+`10 SMA/SMK`; 🔴 **elective, not compulsory, and the teacher-training target was cut from
+`1,000,000` to `361,000`.** 🟢 **`gludugbanyu/cbt-eschool` is MIT, maintained, and already written
+for `AKM`** → `P102`.
 
-## What this pass established
+🔴 **Two measurement defects that rot rows nobody touches.** 🟢 **`HKUDS/DeepTutor` is
+`59,826★` as measured today; this base has carried `22k+` since `p6` — off by `2.7×`.**
+🔴 **And GitHub search excludes forks by default: `1,359` vs `1,466` on one term, `7.3%` of the
+band invisible to every total ever published here** → `T237`, `864-G2`.
 
-| | |
-|---|---|
-| 🟢 **A control that overturned three passes of narrative** | `9` Hispanic terms → `2` permissive; `1` Vietnamese term → `3`. 🔵 The thin yield is Spanish-language GitHub, not LATAM and not non-English → `T226` |
-| 🔴 **A third query-defect class, with no repair** | the national-examination ACRONYM collides with hardware, game and library namespaces — `0` of `6` top-band hits on topic, and nothing to exclude → `T227` |
-| 🔴 **Two refusal classes that look identical and need opposite remedies** | Hispanic/Brazilian `NONE` = the uploader's OWN work, a request can succeed. 🔴 India's `NONE` across `2,257` addresses = mirrored NCERT/CBSE copyright, a request can NEVER succeed → `T230`, `863-G4` |
-| 🔴 **The shelf format itself is a defect** | one licence column cannot express *items share-alike, code ungranted* (`picuino/test`), nor record which refusal class a `NONE` is → `T229`, `863-G4` — discharged by an INSTRUMENT change, not a search |
-| 🔴 **The first national-deployment reversal in this base** | Korea `37%` → `19%` in one semester, with a legal reclassification attached → `T231` |
-| 🟢 **An unplanned regression test that passed** | `bk-study-desk`'s AGPL-3.0 byte-reads at `34,523 B` / `sha256₁₂ 0d96a4ff68ad` — identical to `p862`'s `opoalerta` reading from another country on another day. 🔵 The grant instrument measures the payload, not the packaging |
-| 🔴 **A channel this pass could NOT use, declared** | `api.github.com` and `github.com` HTML both return `403` at the egress proxy, so the `curl -sI` step this base's instructions name was unavailable. 🟢 Every address proved over the GIT channel instead, which is strictly stronger → `863-G1` |
+🔴 **A rule `p863` published is wrong.** It expected an AGPL-3.0 file whose bytes differ from a
+reference digest to have been modified. 🟢 **Three legitimate AGPL-3.0 grants read this pass gave
+three distinct digests** — CRLF endings, `http`→`https`, and a truncated "How to Apply" appendix.
+🔵 **Byte-identity is SUFFICIENT to confirm canonical text and not NECESSARY**
+([`evidence`](evidence/agpl-digest-variance.2026-11-17-p864.tsv)).
 
-## Pass `p862` · `2026-11-17`
+### This pass added
 
-🔴 **This pass ran a vocabulary that had never been run here, and the tier it found is real,
-Brazilian, and `46%` unusable.** 🟢 **`861-G2` required the Spanish and Portuguese assessment
-terms to be measured and their totals published.** 🟢 **All seven were run.**
-`"correção automática"` returns **`147`** with `4` above five stars; `"corrección automática"`
-returns **`54`** with **`0`**; `autocorrección` **`22`** with **`0`**. 🔵 **Portuguese out-supplies
-Spanish `3:1` on raw count and `5:0` on traction** — this base has written *LATAM* where its
-evidence supported *Brazil*, and that is now corrected and measured.
-
-🔴 **Two of the seven terms cannot be run at all, and `p861`'s remedy does not repair them.**
-`banca` returns `34,437` and is **banking**; `rúbrica` returns `919` and is the Italian *address
-book*; 🔴 **`banca NOT banco NOT bancaria NOT bancario` still returns `8,123` and still `0` of the
-top `10` on topic.** 🔵 **A stem collision can be excluded; a cross-language homograph cannot —
-the only repair is to abandon the word** → `T219`. 🟢 **And `prova` is the control that keeps this
-honest: `105,979` results, `5` of the top `10` genuinely Brazilian examination corpora** → `T220`.
-
-🟢 **`26` addresses byte-read from blobless clones, `0` clone failures, `0` licences taken from
-GitHub's SPDX field.** 🔴 **`10` carry NO grant at any path; `2` carry an explicit non-commercial
-grant that GitHub reports only as `NOASSERTION`; `12` of `26` — `46%` — cannot be used.**
-🔴 **And the four highest-star addresses in the vein (`919`, `368`, `121`, `113` stars) are all in
-that set, while the best permissive runnable artefact has `54`** → `T223`. 🔵 **A star-ranked
-shortlist of this vein selects almost perfectly for what cannot be delivered.**
-
-🟢 **`11` rows shelved, all byte-read**: `6` agents (`480` → `486`), `4` foundations
-(`336` → `340`), `1` platform (`167`, roll-up corrected). 🟢 **`7` trends (`T219`–`T225`),
-`2` recipes (`P98`–`P99`), `3` gaps discharged, `1` acceptance test FAILED and published as a
-failure, `4` gaps declared, `2` licence requests drafted.**
-
-## What this pass established
-
-| | |
-|---|---|
-| 🟢 **A second defect class in query vocabulary, with a control** | `banca` and `rúbrica` fail as cross-language homographs, not as stems — and the `NOT` remedy that fixed `grading` removes `76%` of `banca`'s postings and `0%` of its problem → `T219`, `T220` |
-| 🟢 **The LATAM assessment tier, measured for the first time** | Portuguese `3:1` over Spanish, `5:0` on anything above five stars → `T221`. 🔴 Spain returns `7`, `60` and `3` repositories across its three examination terms, with the top `EBAU` hit being Swiss building-permit software → `T225` |
-| 🔴 **A tier where traction and grant run in opposite directions** | `919★` ungranted · `368★` GPL-2.0 · `113★` non-commercial · 🟢 `54★` MIT and runnable → `T223` |
-| 🔴 **`NOASSERTION` hides two incompatible refusals** | *all rights reserved* and *free but non-commercial* read identically in GitHub's field; only the bytes separate them → `T224` |
-| 🟢 **`861-G1` discharged, and its second instrument outperformed the first** | STATED affiliation `2`, PLACED `5` — 🟢 **`3` placements came from the region stage alone**, independent of any affiliation, which is exactly what the gap asked for |
-| 🟢 **`861-G3` discharged, and the jurisdiction remedy held twice** | the Africa leg returned Kenya's draft AI Bill (`19 Feb 2026`), Nigeria's regulator demanding compliance proof from tertiary institutions, and South Africa's 🔴 **disputed** policy status; the Canada/Mexico leg returned `$162M`/`10,000` Mitacs placements, `$30M` CanCode, and US `$776M` Mexican enterprise AI spend — 🟢 **`0` US-only drift for the first time in seven passes** |
-| 🔴 **An acceptance test this pass FAILED, published as a failure** | `860-G1` requires the logged-and-never-shelved residue to fall. 🔴 **It rose, `4,779` → `4,783`** — because `21` new addresses were logged and `12` of the `26` read can never be shelved at all. 🟢 **The measure conflates *not yet graded* with *graded and refused*; the remedy is to take the direction net of [`measured-unusable`](intel/measured-unusable.md)** |
-| 🟢 **Two recipes that route around the unusable tier** | `P98` scores Portuguese essays against a human-marked gold corpus and publishes the agreement rate; `P99` builds a Brazilian item bank by re-extracting from public papers, keeping the one GPL-2.0 component behind a network boundary |
-
-🔵 **What a reader should distrust in this pass.** 🔴 **`T225`'s claim that Spanish-language
-examination software barely exists rests on three SPANISH terms; Mexico, Colombia, Chile and
-Argentina have their own examination names and none was queried** → `862-G2`. 🔴 **The APAC leg
-returned `0` national frameworks for China, India, Japan, Korea and Singapore** → `862-G3`.
-🔴 **And it returned the UAE's school AI prohibitions as an APAC result; the UAE is EMEA, and the
-row was refiled by hand.**
-
-
-## Pass `p861` · `2026-11-17`
-
-🔴 **This pass did not find a new tier. It found out why a tier it already half-held was
-invisible, and the reason is one English word.** 🟢 **`grading` is stemmed to `grade` on
-GitHub's search channel, and `-grade` is a software-marketing adjective** — `kubernetes`
-(*Production-Grade*), `spring-boot` (*production-grade*), `MaxKB` (*enterprise-grade*).
-🔴 **`grading` returns `726`, `grade` returns `731`, `grading NOT grade` returns `9`, and `0` of
-the top `30` by stars are about grading.** 🟢 **`autograding` returns the real tier at `8` of `8`.**
-
-🟢 **`28` repositories byte-read on a blobless clone, `0` failures, `0` licences from GitHub's
-SPDX field. `24` permissive, `3` copyleft, `1` Apache-2.0 by reference that GitHub's field calls
-`NOASSERTION`.** 🔴 **`21` of the `28` were already in this base's own trending log and on no
-shelf** — the residue `860-G1` measured, now `4,805` → `4,784`.
-
-🟢 **`6` agent rows (`474` → `480`), `18` foundation rows (`318` → `336`), `4` platform rows
-(`163` → `167`, and the roll-up heading's standing `162` claim corrected), `2` recipes
-(`P94`–`P95`), `5` trends (`T214`–`T218`), `2` gaps discharged, `3` declared.**
-
-## What this pass established
-
-| | |
-|---|---|
-| 🔴 **A query term that cannot be run, and the control that proves it is specific** | `tutoring` (`61`), `proctoring` (`7`) and `attendance` (`50`) all return their own tier cleanly on the same day — no `-tutor`, `-proctor` or `-attendance` adjective exists. 🔵 **So this is one morphological collision, not search noise** → `T214`. 🟢 **It retires `T96`'s *grading gap* and corrects `p833`'s LANGUAGE diagnosis of the English nil** |
-| 🟢 **`860-G2` discharged — the affiliation channel built, run, and its yield PUBLISHED as a rate** | `8` of `28` placed (`29%`): `domain` `4`, `readme` `2`, `citation` `1`, `holder` `1`, plus `2` on the weaker declared `org-sibling` axis. 🔵 **The axis that paid — a `.edu`/`.ac.XX` domain in the README — was in none of the gap's proposed steps**, and it placed the first APAC row in two passes ([`skt09/IndiGrader`](https://github.com/skt09/IndiGrader), `cse.iitm.ac.in`) → `T215` |
-| 🔴 **The instrument caught itself on its first run** | Its HIGHEST-precedence step read the LICENCE's own copyright line and placed three GPL/AGPL projects at the **Free Software Foundation**. 🔵 **An instrument validated on permissive payloads inverts on copyleft ones** → `T216`. Fixed in [`p861-affiliation-v2.sh`](ingest/p861-affiliation-v2.sh); yield rose `5` → `8` |
-| 🔵 **An affiliation is not a region** | [`foundation50/classroom50`](https://github.com/foundation50/classroom50) states its publisher (*Fifty Foundation*) and the publisher names no country, so the row is published `Global` with its origin known → `T217`, and `861-G1` names the second instrument that would place it |
-| 🟢 **The licence split measured in ONE batch, across the whole layer** | 🔴 **`3` of `4` assessment PLATFORMS are GPL/AGPL; `18` of `18` COMPONENTS are MIT, Apache-2.0 or BSD** → `T218`. 🔵 **One escape hatch, worth knowing by name: [`Submitty`](https://github.com/Submitty/Submitty) is BSD-3-Clause with `1,123` forks — the largest fork count on this shelf** |
-| 🟢 **A standing gate half-fixed, in this pass's own block only** | `gate-region-headings` has been RED since `p857`. 🔴 **The cause is that every block since `p854` writes `### Global — <subtitle>`, which the closed-vocabulary gate reads as OUT-OF-VOCAB *and* as `Global` MISSING.** 🟢 **`p861`'s block writes a bare `### Global` and is the first to pass both halves** — findings on `intel/market.md` fall `7` → `5`, and the `5` that remain are historical blocks plus one structural `MULTIPLE-BLOCKS` per retained pass |
-| 🔴 **Gate suite: `51/73` green on BOTH sides, `22` RED on both — `0` regressions and `0` fixes** | 🟢 Measured, not assumed: `make -k hooks` run on a clean `git archive HEAD` export AND on the edited tree, with byte-identical RED lists. 🔵 **`python3 -I ingest/derive-counts.py` RUNS in this session and is GREEN on all five counted pages after this pass — including `verticals/solutions.md`, RED at `HEAD` since `p858`** |
-| 🔴 **Three regional legs under-cover their own territory, and two are now named gaps** | 🔴 **Africa returned `0` from the EMEA leg, with the source itself saying so (`861-G3`).** 🔴 **Canada and Mexico have no spend figure for a sixth pass.** 🔴 **The APAC leg returned the UAE's KHDA for a THIRD consecutive pass** — `T935`'s Gulf leak is now a known defect of the leg, not a surprise |
-| 🔴 **LATAM: `0` rows placed, declared as an UNRUN LEG** | 🟢 **`861-G2` names the five Spanish and Portuguese assessment terms that have never been queried in this base** (`corrección automática`, `correção automática`, `autocorrección`, `rúbrica`, `corretor automático`). 🔴 **The tutoring-vocabulary legs that WERE run returned `87` in-language addresses and `0` above one star** — `T940` reproduced exactly |
-| 🔵 **Current-state file counts after this pass** | [`agents/top.md`](agents/top.md) **`480`** · [`repos/foundations.md`](repos/foundations.md) **`336`** · [`verticals/solutions.md`](verticals/solutions.md) **`167`** · [`intel/trends.md`](intel/trends.md) **`210`** · [`compose/patterns.md`](compose/patterns.md) **`95`** — all five gate-GREEN. 🔵 **The `Files` table further down is `p859`'s and its figures are superseded by these** |
-| 🟢 **Evidence published this pass** | [`byte-read-grants`](evidence/byte-read-grants.2026-11-17-p861.tsv) (`28` grants with ref, HEAD sha, path, bytes, `sha256₁₂`, family, title line, holder) · [`stem-collision-control`](evidence/stem-collision-control.2026-11-17-p861.tsv) · [`affiliation-channel-v1`](evidence/affiliation-channel-v1.2026-11-17-p861.tsv) and [`v2`](evidence/affiliation-channel-v2.2026-11-17-p861.tsv) (the defect and its repair, both kept) · [`search-legs`](evidence/search-legs.2026-11-17-p861.tsv) (`12` legs, every total, first `30` each) · [`candidate-metadata`](evidence/candidate-metadata.2026-11-17-p861.tsv) |
-
-
-## Pass `p859` · `2026-11-16`
-
-🟢 **`p858` found a CHANNEL and then named its own blind spot: it had been pointed at ONE region.**
-🟢 **`p859` points the same instrument at three others.** Eight public education bodies in North
-America, APAC and LATAM enumerated by organisation: **`386` repositories, `0` GitHub forks,
-`19` grants byte-read today, `0` licences taken from GitHub's SPDX field.**
-
-🔴 **And the result is a deficit, reported as one.** 🟢 EMEA's `openeduhub` yielded `5` Apache-2.0
-education agents in one org. 🔴 **The same channel over `386` non-European repositories yields
-`2`** — both from the US Ed-Fi Alliance, both `0★`. 🔵 **Outside Europe the public education buyer
-publishes INFRASTRUCTURE and does not publish an AI layer.**
-
-🟢 **`2` agent rows (`456` → `458`), `14` foundation rows, `3` platform rows, `2` recipes
-(`P90`–`P91`), `5` trends (`T201`–`T205`), `2` measured nils.**
-
-## What this pass established
-
-| | |
-|---|---|
-| 🟢 **`858-G6` discharged — and two of its five named targets are EMPTY** | 🔴 **Plan Ceibal 🇺🇾 (`Ceibal`): org exists, `0` public repositories.** 🔴 **Korea's KERIS: the handle `p858` named is a private individual's ML scratch account; the real org `KERISdev` also has `0` public repositories.** 🔵 Both measured against a controlled oracle (`422` vs `total_count`), not assumed. 🔴 MEXT 🇯🇵 and ESA 🇦🇺 were not located by an English-language org search and are recorded as SEARCH-LIMITED, not as nils |
-| 🟢 **North America is the only non-European region with a public-sector AI layer** | 🟢 [`Ed-Fi-Alliance-OSS/Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona) — a production Slack RAG agent, `240` files, with `escalation`, `citation-telemetry`, `idempotent-finalize`, rate limiting and a mirrored test suite — and [`AI-Tools-for-Ed-Fi-SDLC`](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC), `13` Apache-2.0 Agent Skills encoding how a national data model is reviewed. 🔵 **Both `0★`**, which is now the confirmed signature of this tier on a second continent → `T201` |
-| 🟢 **India's national stack is MIT, massively deployed, and has NO AI layer** | 🟢 Sunbird: **MIT on `162` of `182` repositories** across three orgs. 🔴 **`0` agents** — the five `ml-*` services are survey plumbing and `teacher-aid-*` froze in `2019`. 🔵 **A studio may ship a closed product on top, with no incumbent agent to displace** |
-| 🟢 **The adoption signal for this tier is FORKS, and star-ranking is blind to it** | `SunbirdEd-portal` `41★` / **`318` forks** (`7.8:1`); `sunbird-devops` `62★` / **`393` forks** (`6.3:1`); `SunbirdEd-mobile-app` **`9.2:1`**. 🔵 **`T115` said stars invert on a CJK corpus; `T202` is stronger — they fail on an entire TIER in every language, because ministries deploy by forking** |
-| 🔴 **`pushed_at` is a DEPENDABOT event — `T197`'s symptom now has its cause** | 🔴 `sunbird-devops` reports `2026-03-25`; last human commit **`2023-04-26`** — `1,064` days. 🔴 `decyt-tdf/siep-pwa`: `1,130` days. 🟢 **In both, the newest ref is a `dependabot/*` branch whose date matches `pushed_at` exactly.** 🟢 Clean control same hour: `5` of `5` Ed-Fi repos within `6` days → `T204`, recipe `P91` |
-| 🟢 **The licence payload is TWO evidence channels, and both paid in one corpus** | 🟢 **Holder channel (MIT):** six Sunbird grants, four holders — three byte-identical across three different orgs, plus `© 2018 EkStep`, `© 2018 IIIT Bangalore` and `© 2021 Sunbird for Education`, which reconstructs the programme's history from copyright lines alone. 🟢 **Body channel (Apache-2.0):** three payloads in ONE org, sorting by vintage — `11,357 B` with appendix on the three newest, appendix-stripped `10,173 B` on the legacy, 🔴 **and `10,172 B` on `Ed-Fi-ODS`, differing by exactly ONE trailing newline** → `T203` |
-| 🔴 **Two discovery tokens retired, both of which this base relies on** | 🔴 **`tutor`**: in Open edX — the whole LATAM higher-ed estate — it is the Docker DEPLOYMENT tool, not an AI tutor. 🔴 **`ml-`**: five MIT `ml-*` Sunbird services are survey and reporting plumbing → `T205` |
-| 🔴 **LATAM: demand highest in this base, adoptable supply lowest** | 🔴 Chile `65` of `109` ungranted, and AGPL-3.0 exactly where code runs inside Open edX while themes are MIT. 🔴 **Brazil's Fundação Lemann `23` of `24` ungranted, newest commit `2021-02`.** 🔴 **Argentina's `decyt-tdf` newest commit `2019-11`.** 🟢 Against `92%` of LATAM students using AI regularly (`CITED, NOT READ`). 🔵 **The inversion is the market** |
-| 🔴 **The gate was NOT executed this pass** | 🔴 The runner declined to execute repository-provided code, so `ingest/derive-counts.py` did not run. 🟢 **Counts were derived by re-implementing the gate's own regexes in a scratch script and are marked as such rather than claimed GREEN** — the `p827` convention. 🟢 `intel/trends.md` **`197`/`197`** and `compose/patterns.md` **`91`/`91`** agree under that re-implementation |
-
-## Pass `p858` · `2026-11-16`
-
-🟢 **The pass found a CHANNEL, not a repository.** 🔴 **`854-G1` through `857-G5` all tuned the
-QUERY — language, altitude, vocabulary set. `p858` stopped querying.** 🟢 **Seven national education
-agencies were enumerated by organisation: `305` repositories, `0` of them GitHub forks, `26` of them
-shelved today.** 🔵 **Against the four English WebSearch legs the scheduler prescribes, run in the
-same hour: `65` links and `0` usable supply rows.**
-
-🔴 **And the first thing the channel exposed is this base's own defect.** 🔴 **`Opetushallitus` has
-been read for sixty-one passes — `61` mentions in `agents/trending.md`, `82` in `repos/trending.md`,
-`27` in `open-gaps.md` — and appears `0` times on any shelf.** 🔴 **`Gap 251` states that `8` rows
-were shelved. None were.**
-
-🟢 **`5` agent rows (`451` → `456`), `20` foundation rows (`274` → `294`), `6` platform families,
-`2` recipes (`P88`–`P89`), `5` trends (`T196`–`T200`), `6` gaps — `41` addresses byte-verified on
-the clone channel with a negative control, `0` licences taken from GitHub's field.**
-
-## What this pass established
-
-| | |
-|---|---|
-| 🟢 **The EMEA line this base has carried since `p798` is RETIRED** | *"Still ONE European-origin open-source education agent at scale."* 🔴 **Withdrawn.** 🟢 Germany's `openeduhub` / **WirLernenOnline** ships `5` Apache-2.0 education agents — a tutor whose curated QA pairs take PRECEDENCE over generation, a differentiated learning-path editor, a factual-correctness judge, a prompt-regression harness and a MinHash de-duplicator. 🔵 **They were invisible because they have `0` stars, and a state agency's code never will** |
-| 🔴 **`pushed_at` is an ORGANISATION event, not a freshness signal** | 🔴 `51` of `56` repositories at one agency report `2026-11-03`; `12` of `13` cloned have no commit within five months of it, one by **`47` months**, and two checked across ALL refs have none on any branch. 🟢 **Control at a second agency, same hour: `12` of `12` within FIVE DAYS.** 🔵 This base writes `pushed` on every row → `T197`, `858-G1` |
-| 🟢 **The licence is a POLICY artefact and it changes at every border** | 🇫🇮 **EUPL** uniformly, `2013`→`2026` · 🇳🇴 **MIT/Apache-2.0**, with a state-to-state reuse chain Digdir → Nav → Udir · 🇳🇱 **MIT** at Kennisnet and **five regimes in one org** at SURF · 🇩🇪 **Apache-2.0** apps, **CC0** vocabularies · 🇸🇪 **`1` of `5` granted** · 🇪🇪 nothing since `2020`. 🔵 **Finland will take a co-build and refuse a closed fork; Norway and the Netherlands will take either** → `T196` |
-| 🔴 **A fourth place a licence hides, and GitHub under-claiming twice running** | 🔴 `Opetushallitus/aoe` — Finland's national OER library — has `NONE` in GitHub's field and no root licence; **`aoe-web-backend/LICENSE` and `aoe-web-frontend/LICENSE` are both EUPL-1.2, `304 B`, byte-identical.** 🟢 `SURFnet/apie` reads `NOASSERTION` and the bytes read **EPL-2.0 WITH Classpath-exception-2.0** → `T198` |
-| 🟢 **`T193` gets the precondition it was missing** | 🟢 `4` MIT payloads of ONE holder are **byte-size-identical at `1,066 B` and hash differently** — the four-digit year is the only difference. 🔴 `7` Apache-2.0 payloads across **two organisations in two countries** hash **identically**. 🔵 **A collision on a holder-BEARING licence is evidence about the holder; on a holder-AGNOSTIC one it is evidence about the template and nothing else** → `T200` |
-| 🟢 **`857-G6` discharged by measurement** | `6` Spanish and Portuguese supply legs: `27` distinct addresses, 🔴 **`0` above `1` star**, `4` MIT, 🔴 **`7` traceable to two named course assignments** (Alura *Challenge ONE* 🇧🇷, UNAH `MGI-201` 🇭🇳). 🟢 **The LATAM-origin nil is now MEASURED.** 🔴 `0` of the `27` is published as a LATAM row — `es` ≠ LATAM |
-| 🟢 **This repository's own gates RAN, and they were RED before this pass** | 🟢 `python3 -I ingest/derive-counts.py .` executes in this session. 🔴 **At `HEAD` it reported `agents/top.md` claiming `442` while holding `451`, and `repos/foundations.md` claiming `265` while holding `274`.** 🟢 **Both are GREEN after `p858`, at `456` and `294`, and every count published today is the gate's number rather than this pass's** → `858-G5` |
-| 🔴 **The instrument was pointed at ONE region** | `305` repositories, six countries, **all EMEA**. 🔴 **`0` agencies enumerated in North America, APAC or LATAM — so public-buyer supply outside Europe is an UNMEASURED absence, not a nil.** 🟢 Targets named with no search step: KERIS 🇰🇷, MEXT 🇯🇵, ESA 🇦🇺, **Plan Ceibal 🇺🇾 first**, Ed-Fi Alliance → `858-G6` |
-
-## Pass `p855` · `2026-11-16`
-
-🔴 **`854-G1` ended with a rule — *yield is a function of the query's LANGUAGE* — and `p855` tested
-it the only way a rule like that can be tested: by holding language constant and varying the other
-axis. 🔴 It does not survive.** The same non-English channel that returned `17` of `17` new and `8`
-usable yesterday returned 🔴 **`180` of `196` new and `2` usable today.**
-
-🟢 **The pass that failed paid anyway.** Re-running at the altitude the amended rule prescribes
-exposed a whole TIER this base has never held: 🔴 **of `7,086` distinct addresses, `3` belonged to
-the document-PERCEPTION layer — the step that turns a photographed worksheet into something a
-marking agent can read.** 🟢 **`25` permissive rows of it are now filed, every grant byte-read.**
-
-🟢 **`9` agent rows (`425` → `434`), `16` foundation rows (`245` → `261`), `2` platform rows
-(`153` → `155`), `1` recipe (`P85`), `4` trends (`T185`–`T188`), `6` gaps — `37` grants byte-read
-today, `0` licences taken from GitHub's SPDX field.**
-
-## What this pass established
-
-| | |
-|---|---|
-| 🔴 **`T181` is AMENDED: yield is a function of language × ALTITUDE** | Same field, same hour: non-English at the WORKFLOW-noun altitude (`gestión escolar`, `学習管理システム`, `okul yönetim sistemi` — `20` legs, `14` languages) → `196` addresses, `180` NEW (`92%`), 🔴 **`2` usable (`1%`)**. Against `p854`'s artefact-noun legs at `47%` usable. 🔵 **The NEW rate barely moved; the USABLE rate fell `47×`** — a workflow noun indexes student COURSEWORK, because "school management system" is the world's most-assigned exercise → `T185`, `855-G1` |
-| 🔴 **And the language axis is not even monotone** | `手書き数式認識` *(Japanese, artefact noun)* → **`0`**, while `handwritten math recognition` → **`252`**. 🟢 Here the ENGLISH query is the one that finds the field — the exact inverse of `T181`'s founding case |
-| 🟢 **A whole tier was missing, and it is the gate on every paper-based engagement** | `3` of `7,086` addresses covered document perception (`pix2tex`, `Pix2Text`, `JabRef`). 🟢 **`25` permissive rows filed across four layers**: structure (`layout-parser` `5,779★`, `eynollah`, `oar-ocr`, `JiaJiaOCR`, `DocFusion`), mathematics (`TexTeller`, `Image2Katex`, `Pytorch-HMER`, …), handwriting (`indic-htr`, `handwritten-ocr-system`, `HTG_evaluation`), optical music (`Mozart`, `OMR-Datasets`, `moonlight`, …). 🔵 It stayed invisible because every leg this base ran names the PEDAGOGY or the SYSTEM; this tier is named after the ARTEFACT → `T186`, `855-G2` |
-| 🔴 **In that tier the licence polarity INVERTS against this base's standing finding** | `6` of its traction leaders are copyleft: `MixTeX` `1,636★` AGPL-3.0 · `LaTeX_OCR_PRO` `1,313★` GPL-3.0 · `texify` `1,124★` GPL-3.0 · `LaTeXSnipper` `1,115★` GPL-3.0 · `Texo` `919★` AGPL-3.0 · `homr` `483★` AGPL-3.0. 🔴 **Sharpest instance is a name collision: `LaTeX_OCR` (Apache-2.0, `558★`) and `LaTeX_OCR_PRO` (GPL-3.0, `1,313★`) — same author, adjacent names, and the copyleft one ranks higher** → `T187` |
-| 🔴 **LATAM: the estate is ACTIVE and UNGRANTED, which is a different market from an empty one** | The whole `18`-address ENEM/exam-correction set byte-probed at `31` filenames × resolved default ref: 🔴 **`16` `NO-GRANT-AT-ROOT`, `1` dead, `1` `GRANT` — and that grant is `LICENCIA PROPIETARIA — ZARCONT` (`2,088 B`), reported by GitHub as `NOASSERTION`.** 🔴 **`0` of `18` permissive.** 🟢 But a dozen projects have converged on the same five published ENEM competencies, so the SPECIFICATION is free even though no code is adoptable → `T188`, `855-G3`, recipe `P85` |
-| 🟡 **`854-G5` answered, and the answer is worse than the question** | Two Apache-2.0 payloads at **exactly `11,358 B`** with different `sha256`: `tensorflow/moonlight` (`cfc7749b96f6`) and `jiangnanboy/JiaJiaOCR` (`230e34f4f506`). 🟢 `diff` gives four independent edits — leading newline, `33`- vs `13`-space title indent, `http://` vs `https://`, appendix placeholder vs **filled-in** copyright — 🔴 **netting to a byte delta of ZERO.** 🔵 Byte-length is a COLLIDING identifier, and the collision is between a pristine template and a customised instance → `855-G4` |
-| 🔴 **The instrument built to audit this register reports a clean bill from reading nothing** | `ingest/absence-claims.py` (built at `p569` as `568-A`) resolves its root to `dirname(__file__)` = `ingest/`, so run as its own docstring shows it prints 🔴 **`0 pages, 0 shelf rows, 0 absence claims` and exits `0`.** 🟢 With `KB_ROOT` set: `11` pages, `17,354` shelf rows, 🔴 **`855` supply absence claims, `598` of them undated, `333` carrying a region or language token** → `855-G5` |
-| 🟢 **`854-G1`'s prescription is PRICED, and it is not mechanical** | `333` regional absence claims is the re-probe bill. 🔴 **But `855-G1` shows a blanket in-language re-probe at the wrong altitude returns `92%` new and `1%` usable** — it would manufacture false withdrawals faster than it corrected real ones. 🟢 **Re-probe the claims whose noun is an ARTEFACT; leave the workflow-noun claims standing** |
-| 🔴 **The search index serves DEAD addresses** | `jbrito58/Redacao-1000` — returned LIVE by `search/repositories` with stars and a description, 🔴 **`EMPTY-REF-SET` to `git ls-remote --heads`, all `31` licence paths `404`.** 🔵 `854-G6`'s existence problem from the opposite direction: there the CORPUS named something unreal, here the INDEX does → `855-G6` |
-| 🟢 **`D834`'s branch resolution earned its keep twice in one pass** | `xiaofengShi/Image2Katex` ships a clean MIT grant on default ref 🔴 **`updata200412`**; `itsmorninghao/CogniLoop` ships AGPL-3.0 on default ref 🔴 **`v2`**. A probe that guessed `main` would have published two false absences |
-
-🔵 **`1` new recipe.** `P85` — **paper-to-mark**: camera → `eynollah`/`layout-parser` (Apache-2.0) →
-`handwritten-ocr-system`/`indic-htr`/`TexTeller` (MIT, MIT, Apache-2.0) → `HTG_evaluation` (MIT) →
-`P74`'s MIT rubric substrate → 🔴 **`AI 预批 → 教师复核 → 系统记录`: the model proposes a mark and
-never records one.** 🟢 **`0` metered APIs, `0` copyleft in the delivery path, `6`–`8` weeks for
-pt-BR/Latin script**, 🔴 **`12`–`16` where the script is Indic or Arabic — because `indic-htr` is
-`8★` and that phase is corpus collection wearing an integration phase's clothes.**
-
-🔴 **Inherited and NOT introduced by this pass, verified against a clean `HEAD` worktree:**
-`repos/foundations.md` and `verticals/solutions.md` remain RED on undeclared layer tables (`11` and
-`13` respectively), and `make recount` / `make gate-register-currency` fail identically before and
-after `p855`. 🟢 **`p855`'s own tables all use declared signatures, so the pass adds no new RED.**
-
-## Pass `p854` · `2026-11-16`
-
-🟢 **`853-G6` ended with a prescription — *"a leg written in Japanese, Arabic or Portuguese is a
-different index"* — and running it produced the largest yield gap this base has measured.**
-🔴 **Same field, same hour: the `4` mandated ENGLISH generic legs returned `12` addresses of which
-`0` were new. Five NON-ENGLISH legs returned `17` of which `17` were new.**
-🟢 **`8` agent rows (`417` → `425`), `10` foundation rows (`235` → `245`), `2` platform rows
-(`151` → `153`), `1` recipe (`P84`) with `P83-LATAM` re-costed, `4` trends (`T181`–`T184`),
-`7` gaps — `30` grants byte-read today, and all three shelves agree with their own published figure.**
-
-🔴 **Two of this base's published regional nils are WITHDRAWN by this pass**, and that is the
-finding with the longest reach: they were never properties of the field, only of the query's
-language. 🟢 **Two others are UPHELD and sharpened — which is the more useful result, because the
-obvious objection to them has now been eliminated.**
-
-## What this pass established
-
-| | |
-|---|---|
-| 🟢 **Yield is a function of the query's LANGUAGE, not only its altitude** | `T177` varied altitude (`0%` → `18%` → `60%`). `p854` held altitude and varied LANGUAGE: 🔴 **`0%` English vs `100%` non-English, in the same hour, measured with `p853-slug-presence` before any row was written.** 🔵 A client's domain must be searched in the client's language before anyone concludes the open supply is thin → `T181`, `854-G1` |
-| 🔴 **Two published nils were artefacts of the query and are withdrawn** | `japanese pronunciation learning app open source` → `0` became `発音 評価` → **`6`** (`1` Apache-2.0, `1` MIT); `portuguese pronunciation speech assessment` → `0` became `avaliação de pronúncia` → **`5`** (`3` MIT). 🔴 `853-G6`'s reading that APAC's speech supply is *"Chinese-published, not pan-Asian"* is withdrawn with them → `854-G2` |
-| 🟢 **The two UPHELD nils are now stronger than when written** | `evaluación de pronunciación` → `6` repositories, 🔴 **`0` carrying any licence file**; `تقييم التلاوة` *(recitation **assessment**)* → **`0`**, against `54` results for `تلاوة` alone. 🔵 The Arabic estate has recitation PLAYERS and no recitation SCORERS → `854-G7`, `854-G3` |
-| 🔴 **The most-forked Arabic artefact advertises MIT in a badge and ships no grant** | [`IemProg/itqan`](https://github.com/IemProg/itqan), `11★`/`8` forks: 🔴 **`44` licence paths probed, all `404`**, while `README.md` serves `200`. 🟢 Graded by this base's OWN instrument — `p1060/readme_claim.py` → `MIT 0 BADGE` on a **hardcoded** `shields.io` image linking to a `LICENSE` that does not exist. 🟢 `p1052`'s rule obeyed: *a badge is a hint to RE-PROBE*, and the re-probe found nothing → `854-G3` |
-| 🔴 **`NOASSERTION` failed in BOTH directions in one pass** | [`pytorch/executorch`](https://github.com/pytorch/executorch) (`5180★`) — field `NOASSERTION`, bytes **`BSD License`**, Meta: a permissive-SPDX filter DISCARDS it. [`ahmedezz33/compactshakkil`](https://github.com/ahmedezz33/compactshakkil) — field `NOASSERTION`, bytes **PolyForm Noncommercial 1.0.0**: a "probably fine" reading ADMITS it. 🔵 The field is not biased, it is uninformative → `854-G4` |
-| 🔴 **A secondary source's licence claims failed `2` of `3` on the mandated platform leg** | `idurar/idurar-erp-crm` claimed MIT, bytes **AGPL-3.0** (`34,230 B`); `hcengineering/platform` claimed Apache-2.0, bytes **EPL-2.0** (`14,197 B`); only `krayin/laravel-crm` (MIT, `1,078 B`, Webkul) survived. 🔴 The AGPL case is the expensive one: a school SIS is a hosted derivative |
-| 🟡 **The smallest presentation fold is ONE byte** | Four Apache-2.0 payloads, two sha256 buckets, `diff` = `1d0` — a single LEADING NEWLINE (`11,358` vs `11,357 B`). 🔴 And `alphacep/vosk-api` serves a complete Apache-2.0 at `10,173 B` with the APPENDIX removed, which a byte-band classifier drops → `854-G5` |
-| 🔴 **A presence verdict is about this CORPUS, not about REALITY — and this pass nearly shipped the error** | `openeducat/openeducat`, a slug guessed from prose, scored **`UNGRADED`** (`27` hits) and the instrument's contract maps that to *"promote it"*. 🔴 **The repository does not exist** (`total_count: 0`, `raw` `404`). 🟢 `grep -nE "p293\|exist" presence.py` → no match: the base HAS a slug-existence oracle and the presence check is not wired to it → `854-G6` |
-| 🟢 **`853-G7`'s defect class, met on this pass's own rows and closed rather than inherited** | `p854`'s shelf tables first landed under UNDECLARED signatures, so `8` agent and `2` platform rows were held but not counted. 🟢 **Fixed at the source:** the shelf tables now use the files' declared signatures, and the pass's two NARRATIVE tables are declared NOT-counted in `ingest/derive-counts.py` with the reason in a comment. 🟢 All three shelves GREEN, `ragged=0`, `nolink=0` |
-| 🟢 **On-device scoring became a COMPLIANCE architecture, not a bandwidth workaround** | Korea's `AI Basic Act` **in force `2026-01-22`** (education high-impact) · Vietnam's AI law **in force `2026-03-01`** (education high-risk, **pre-deployment registration**) · EU Annex III (admissions, grading, proctoring) · California `AB 1159` (no student data for training). 🔵 A pipeline that scores on the handset removes the transfer each regime regulates — 🔴 **but not the duty: grading stays high-risk whoever computes it** → `T182`, recipe `P84` |
-| 🟢 **The regional numbers worth quoting** | **LATAM:** UNESCO IESALC 2026 (`200` institutions, `19` countries) — `87%` use AI, **`26%`** have a strategy, **`55%`** have no AI budget; Cetic.br — `53%` of Brazilian administrators use AI, `22%` have guidelines; `716` regulatory instruments across `23` countries; IDB Nov 2026: AI could add **`5.1%`** to regional GDP over a decade. **North America:** ~`134` bills across `31` states; NC `Session Law 2026-41` — model policy due `2026-12-31`, district policies `2027-06-30`. **EMEA:** UK DfE genAI product safety standards (Jan 2026), Ofqual coursework integrity (Mar 2026); EU high-risk date still contested. **APAC:** two BINDING laws now in force; Australia's TEQSA requires institutional genAI action plans |
-
-🔵 **`1` new recipe, `1` re-costed.** `P84` — **on-device speaking assessment for a regulated
-market**: `transphone` (MIT) → `onnxruntime` (MIT) → `sherpa-onnx` / `vosk-api` (Apache-2.0) →
-`PronunciationEvaluator` (MIT) → `piper` (MIT) → CEFR levelling, 🟢 **`4` MIT + `3` Apache-2.0,
-`0` copyleft, `0` metered API**, `8`–`10` weeks for one language, `+6`–`8` where the corpus must be
-collected. 🟢 **`P83-LATAM` re-costed `4`–`6` weeks → `3`–`4` for pt-BR**, because
-`gato-zen-speech-eval-zh` supplies a working L1-parameterised architecture that did not exist on
-this base yesterday; 🔴 **es-`419` stays `4`–`6`: its blank page is still blank.**
-
-🔴 **Inherited and NOT introduced by this pass, verified against a clean `HEAD` worktree:**
-`make recount` (`5` of `5` registered claims `NO-ANCHOR`) and `make gate-register-currency`
-(`P418-NO-HEADER` on `6` shelves) fail identically before and after `p854`.
-
-## Pass `p853` · `2026-11-16`
-
-🟢 **The SPOKEN-LANGUAGE ASSESSMENT tier lands, and for the first time in three passes the
-majority of what the legs returned is genuinely new: `34` of `57` measured addresses were absent
-from this entire non-archive corpus.** 🟢 **`12` agent rows (`405` → `417`), `14` foundation rows
-(`212` → `235`, of which `9` were recovered rows this shelf already held and could not count),
-`1` platform row (`150` → `151`), `2` recipes (`P83`, `P84`), `4` trends (`T177`–`T180`), `7` gaps
-— `37` grants byte-read today, `29` permissive, and all three shelves agree with their own
-published figure.**
-
-🔴 **The pass's hardest finding is not a row: the code in this tier is permissive and the DATA is
-not.** `9` of the `10` rows read for corpora depend on `speechocean762` (**no licence file** —
-`26` probes, all `404`, while its `README` grants commercial use in prose), `TIMIT` (LDC, paid),
-`L2-ARCTIC` (request form) or `UASpeech` (signed agreement). 🔵 **The one row with no gated corpus
-is not the most-starred one, and that is now a priced work package** (`P84`).
-
-## What this pass established
-
-| | |
-|---|---|
-| 🟢 **Saturation is a property of the QUERY'S ALTITUDE, not of the field** | Same corpus, same instrument, three consecutive passes: generic legs `0` new of `10` (`p851`), artefact nouns `3` of `17` (`p852`), TIER nouns **`34` of `57`** (`p853`). 🔴 A studio researching with product-level queries concludes the open supply is thin and is wrong by a factor of three → `T177` |
-| 🟢 **`852-G3` discharged: the dedupe instrument exists, is tested and is in `hooks`** | [`compose/code/p853-slug-presence/`](compose/code/p853-slug-presence/), `35` offline controls, `make gate-slug-presence`. 🔴 **It also broke twice before it worked:** the two arms are complementary rather than nested, and it reported three false PRESENTs from its OWN test fixtures in its first hour → `853-G4` |
-| 🔴 **The licence frontier has moved from code to data** | `29` of `37` grants permissive; `9` of `10` models corpus-gated. 🔵 Education hits this first because the training data IS the regulated artefact — children's voices cannot be scraped → `T178`, `853-G1` |
-| 🔴 **A `237★` repository relicenses its upstream MORE restrictively, and the field says `NOASSERTION`** | [`tbright17/kaldi-dnn-ali-gop`](https://github.com/tbright17/kaldi-dnn-ali-gop): `543 B` payload, `sha256₁₂ 531cd080f3e2`, *"NOT UNDER THE SAME LICENSE of Kaldi's"*, then **GPL-2.0-only**. 🔴 Both cheap resolutions of `NOASSERTION` — inherit upstream, or treat as unlicensed — are wrong here, in opposite directions → `853-G2` |
-| 🟡 **A permissive grant can name a famous unrelated holder** | [`xinjli/transphone`](https://github.com/xinjli/transphone)'s MIT names `Scott Chacon and others`; two `doheejin` rows carry `GOPT`'s holder `Yuan Gong`. 🔴 `3` of `12` rows in one tier, so a generated notices file ships wrong attributions → `853-G3` |
-| 🔴 **`9` graded rows sat OUTSIDE this shelf's own figure for fourteen passes** | `repos/foundations.md` published `212` while holding `221`: `p839` and `p840` used a six-column header that was never declared to `ingest/derive-counts.py`, so their rows printed as an uncounted-table RED inside a gate listed in `DECLARED_RED` and read as noise. 🟢 Signature declared, heading corrected to `235` → `853-G7` |
-| 🟢 **`852-G2` fixed in the INSTRUMENT, not in a re-probe** | [`compose/code/p779/verify_row.sh`](compose/code/p779/verify_row.sh) extended from `8` to `26` case-variant grant paths, upper case kept first. 🟢 Regression: `webtech-network/autograder`, `TREMA-UNH/rubric-grading-workbench` and `stichting-cito/QuestifyBuilder` all reproduce `p852`'s byte figures exactly |
-| 🔵 **The first-party licence FIELD did not over-claim once in `37` reads** | `36` of `37` agree with the bytes; the one divergence is toward SILENCE. 🔵 Across two passes and `54` reads: first-party fields under-report, prose summaries over-report (`p852`: `9/9`) → `T179` |
-| 🔴 **Three regional nils, each with its query and result count** | `spanish pronunciation learning` → `8` results, best permissive `3★`/`NOASSERTION`; `portuguese pronunciation speech assessment` → **`0` results**; `arabic quran recitation pronunciation` → `3` results, all unlicensed; `japanese pronunciation learning app open source` → **`0` results**. 🟢 Named so they cannot be read as coverage → `853-G5`, `853-G6` |
-| 🟢 **The regional numbers worth quoting** | **LATAM:** `92%` of students and `79%` of faculty using AI with only `30%` of universities holding a published policy (DEC / Tec de Monterrey, Feb 2026, `7,319` faculty, `29` institutions) — a `62`-point governance gap. **EMEA:** AI Act high-risk education obligations moved to `2 December 2027`; `67%` teacher use; `76%` of students expect AI against `80%` of teachers worried it is outpacing schools. **APAC:** `30%` virtual-tutor adoption, connectivity named as the barrier. **North America:** `~100` state bills, `≥15` states legislating, Chegg `-45%` staff |
-
-🔵 **`2` new recipes.** `P83` — the **sovereign speaking scorer**: `OpenPronounce` (MIT) behind the
-client's own ingress, `ctc-forced-aligner` (BSD-2) for the timeline, `Kyubyong/g2p` +
-`DeepPhonemizer` for the target pronunciation, `IMS-Toucan` for the model utterance, and the Aalto
-**articulatorily weighted edit distance** scored IN PARALLEL so the neural score goes in the
-product and the explainable one goes in the appeal. 🟢 `8`–`10` weeks, `0` copyleft in the shipped
-path, LTI 1.3 into the LMS the client already runs. `P84` — the **data-rights schedule**: the
-two-week review that decides whether any of it can reach production.
+| Shelf | Added | Total |
+|---|---|---|
+| [`agents/top.md`](agents/top.md) | `3` rows + a `2.7×` star correction | `739` |
+| [`repos/foundations.md`](repos/foundations.md) | `4` rows | `395` |
+| [`verticals/solutions.md`](verticals/solutions.md) | `2` rows | `255` |
+| [`intel/trends.md`](intel/trends.md) | `7` trends (`T232`–`T238`) | `230` |
+| [`compose/patterns.md`](compose/patterns.md) | `2` recipes (`P102`–`P103`) | `101` |
+| [`intel/measured-unusable.md`](intel/measured-unusable.md) | `8` refusals, all `class: original` | — |
+| [`intel/open-gaps.md`](intel/open-gaps.md) | `4` discharged, `4` new (`864-G1`–`G4`) | — |
 
 ---
 

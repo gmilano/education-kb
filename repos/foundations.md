@@ -4,6 +4,37 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Sixty-ninth pass (`p864`, 2026-11-17) — **`4` foundation rows (`391` → `395`): the Chinese examination-system tier, which is the deepest permissive vein this base has found in ANY language, English included**
+
+🟢 **Every licence byte-read `2026-11-17` from `git clone --filter=blob:none --depth 1`
+([`byte-read-grants`](../evidence/byte-read-grants.2026-11-17-p864.tsv)). GitHub's SPDX field
+agreed on all `16` addresses read this pass.** 🔴 **Channel note per [`863-G1`](../intel/open-gaps.md):
+`curl` and `gh api repos/` both returned `403`; `gh api search/repositories` and `git` answered.**
+
+| Repo | Licence, as measured | ★ / forks | Default ref · HEAD | Region | Why it is a foundation |
+|---|---|---|---|---|---|
+| [`qiutiandefeng/yfexam-exam`](https://github.com/qiutiandefeng/yfexam-exam) | 🟢 **MIT** — `LICENSE`, `1,096 B`, `sha256₁₂ 89a6f0da2879` | **`998`** / `178` | `main` · `2025-03-28` | 🟢 **APAC** *(prose: China, `云帆培训考试系统`)* | 🟢 **A complete training-and-examination system shipped MIT, with a public demo.** 🔵 **`178` forks is the signal**: this is a base other people have already taken and run, which is the only forking metric that matters when the question is "can we start from it". 🔴 `HEAD 2025-03-28` — stable rather than active; fork it, do not depend on upstream |
+| [`Alanosy/exam-platform`](https://github.com/Alanosy/exam-platform) | 🟢 **MIT** — `LICENSE`, `1,061 B`, `sha256₁₂ f358d42c8caf` | **`887`** / `92` | `master` · `2026-10-04` *(pushed `2026-11-05`)* | 🟢 **APAC** *(placed `url-tld:.cn` — `doc.alan.org.cn`)* | 🟢 **「砚考」 — an actively developed MIT examination platform with its own documentation site.** 🔴 **Logged in this base's trending files by an earlier pass and never graded onto a shelf** — the `T172` residue class again — 🟢 **so it is promoted here with its bytes read rather than re-discovered a fourth time.** 🟢 **The freshest permissive examination platform in the vein** |
+| [`hongmaple/octopus`](https://github.com/hongmaple/octopus) | 🟢 **MIT** — `LICENSE`, `1,090 B`, `sha256₁₂ 46973d260eab` | `316` / `93` | `master` · `2024-12-16` | 🟢 **APAC** *(prose: China)* | 🟢 **The only row in this pass that spans teaching administration AND assessment**: student/teacher/course/major/class management, question bank, paper setting, online sitting and **automatic marking** (`自动评分`), on the RuoYi framework. 🔵 **Shelved as the SIS-plus-assessment bridge** — this base's Chinese tier was otherwise examination-only. 🔴 **The slug is badly collided — `17` distinct `octopus` repositories above `80` ★, none related** (`T236`); cite the owner, never the name |
+| [`gludugbanyu/cbt-eschool`](https://github.com/gludugbanyu/cbt-eschool) | 🟢 **MIT** — `LICENSE`, `1,063 B`, `sha256₁₂ 65e229e6c4f0` | `34` / `15` | `main` · 🟢 **`2026-10-02`** | 🟢 **APAC** *(prose: Indonesia, `AKM`)* | 🟢 **A maintained computer-based-test platform written for Indonesia's `AKM`** — *Asesmen Kompetensi Minimum*, the national minimum-competency assessment. 🔵 **This is the row that makes `P102` buildable**: Indonesia has a numbered national mandate (`Permendikdasmen 13/2025`) and this is a permissive CBT base already shaped to the national instrument. 🔴 **`34` ★ is small — it is shelved for FIT, not for traction**, and that distinction is the row's honest content |
+
+### 🔴 What this shelf did NOT gain, and it is the largest single refusal in the pass
+
+🔴 **[`YXJ2018/SpringBoot-Vue-OnlineExam`](https://github.com/YXJ2018/SpringBoot-Vue-OnlineExam)
+is `2,281` ★ and `471` forks with NO licence at any path** — 🔴 **the highest-traction ungranted
+education artefact this base has ever measured**, and `9` further copies of the same slug carry
+no grant either. 🟢 **Recorded on [`measured-unusable`](../intel/measured-unusable.md) as
+`class: original`** (`863-G4`) — 🔵 **the uploader holds the rights, so a licence request is the
+correct remedy and is worth drafting.**
+
+🟢 **Not re-shelved, checked by slug first:**
+[`lsgwr/spring-boot-online-exam`](https://github.com/lsgwr/spring-boot-online-exam) (MIT, `1,695` ★)
+is already on this shelf and [`mindskip/xzs`](https://github.com/mindskip/xzs) is already on
+[`verticals`](../verticals/solutions.md). 🔵 **Both were re-byte-read anyway and both still match.**
+
+---
+
+
 ## 🟢 Sixty-eighth pass (`p863`, 2026-11-17) — **`3` foundation rows (`388` → `391`): the two permissive artefacts the entire Hispanic examination corpus yielded, plus the Spanish question bank that is granted as CONTENT and not as code**
 
 🟢 **Every licence below was byte-read `2026-11-17` from `git clone --filter=blob:none --depth 1`.

@@ -1,0 +1,7 @@
+# p864 2026-11-17 — DISPROVES p863's stated expectation that an AGPL-3.0 file whose bytes
+# do not match a reference digest "has been modified". Three legitimate AGPL-3.0 grants,
+# three distinct digests, three benign causes.
+repo	bytes	raw_lines	crlf_lines	normalised_lines	normalised_sha256_12	cause_of_variance
+mindskip/xzs	34520	661	0	544	ccd9c0f7471d	baseline: canonical text, LF endings, full "How to Apply" appendix
+roncoo/roncoo-education	35184	661	661	544	6efd62f48f10	CRLF line endings (+661 B) and http->https in 3 URLs (+3 B)
+ekojs/Ujian-Online	32385	618	0	511	33a9f94cecb5	"How to Apply These Terms" appendix truncated (43 lines); operative terms intact

@@ -1,0 +1,18 @@
+# p864 2026-11-17 — 863-G3 discharge: assessment nouns in Chinese, Japanese, Korean, Bahasa Indonesia
+# channel: gh api search/repositories (curl github.com + curl api.github.com + gh api repos/ ALL 403)
+# NOTE: GitHub search EXCLUDES forks by default. Every total below is a NON-FORK count.
+lang	term	gloss	total_addresses	stars_gt5	verdict
+zh	题库	question bank	11945	1359	contaminated: top band is job-interview prep, not education
+zh	在线考试	online examination	2215	277	productive
+zh	自动组卷	automatic paper assembly	157	41	productive, narrow
+zh	考试系统	examination system	3935	426	MOST productive Chinese term
+zh	智能阅卷	intelligent marking	76	21	contaminated: propaganda cluster dominates
+ja	問題集	problem collection	546	21	near-nil: 1 genuine JP repo in top band, rest CJK contamination
+ja	オンライン試験	online examination	2	0	MEASURED NIL
+ja	自動採点	automatic scoring	78	2	MEASURED NIL on topic: both hits are contamination
+ko	문제은행	question bank	95	1	near-nil
+ko	온라인 시험	online examination	32	3	near-nil
+ko	자동 채점	automatic scoring	79	2	near-nil
+id	bank soal	question bank	397	2	thin
+id	ujian online	online examination	1209	17	productive
+id	soal pilihan ganda	multiple-choice items	108	1	thin

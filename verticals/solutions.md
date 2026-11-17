@@ -4,6 +4,29 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Sixty-ninth pass (`p864`, 2026-11-17) — **`2` platform rows (`253` → `255`): one AGPL system with `594` forks, one MIT platform that is ARCHIVED and shelved saying so**
+
+| Address | Licence, byte-read `2026-11-17` | ★ / forks | Pushed | Role in an engagement |
+|---|---|---|---|---|
+| [`roncoo/roncoo-education`](https://github.com/roncoo/roncoo-education) | 🔴 **AGPL-3.0 — strong copyleft, network clause** — `master`, `LICENSE`, `35,184 B`, `sha256₁₂ 6f1e622c82a3` | `1,574` / 🟢 **`594`** | 🟢 **`2026-11-06`** | 🟢 **`领课教育系统` — the most complete open education SYSTEM in the Chinese tier**: on-demand video, live teaching, examinations, question bank and task tracking in one deployment. 🔵 **`594` forks is the highest fork count on this shelf for any non-English platform** — it is a system institutions actually stand up. 🔴 **AGPL-3.0: a hosted derivative must publish source to its users.** 🟢 **Correct as an institutional deployment, wrong as the base of a proprietary SaaS** — and note the published open version is a deliberate subset of a commercial one |
+| [`arfandotid/ujian-online-ci`](https://github.com/arfandotid/ujian-online-ci) | 🟢 **MIT** — `master`, `LICENSE`, `1,071 B`, `sha256₁₂ b947a9399cb3` | `131` / `119` | 🔴 **`2024-07-02` — `ARCHIVED` by its owner** | 🟡 **An Indonesian online-examination application on CodeIgniter 3, and the single most-forked Indonesian education artefact measured** (`119` forks against `131` stars — a ratio near `1:1`, which means it was taken and deployed far more than it was admired). 🔴 **Shelved WITH the archive flag in the row, not in a footnote**: it is read-only, CodeIgniter 3 is end-of-life, and it must be treated as a REFERENCE for the Indonesian examination workflow — 🟢 **never as a dependency.** 🔵 **Its near-`1:1` fork ratio is the evidence behind `P102`'s claim that Indonesian schools self-host rather than buy** |
+
+### 🔵 What is deliberately NOT added, with the measurement behind it
+
+🔴 **`"hệ thống quản lý học tập"` returned `0` LMS repositories above five stars for `p863`;
+`p864` extends the same finding to three more languages.** 🟢 **The Chinese, Japanese, Korean and
+Indonesian legs together returned `16,863` addresses and produced `0` new LMS-class platforms** —
+🔵 **every canonical LMS the research surfaced (Moodle, Open edX, Chamilo, ILIAS, Sakai,
+OpenOLAT, Canvas) is already on this shelf, checked by slug before any row was written.**
+
+🟢 **The asymmetry is now measured across four APAC languages and it is consistent: this region
+builds ASSESSMENT in the open and consumes its LMS from elsewhere.** 🔴 **That is a market
+statement, not a repository shortage** — it says where an engagement's differentiation can
+actually live → `T232`.
+
+---
+
+
 ## 🟢 Sixty-eighth pass (`p863`, 2026-11-17) — **`2` platform rows (`251` → `253`), both COPYLEFT, and a byte-level cross-check that validates this base's own instrument**
 
 🔴 **The Hispanic examination leg produced `0` platform-class rows** — its three platform-shaped

@@ -1,0 +1,9 @@
+# p864 2026-11-17 — 863-G2 OBEYED: every query below contains ZERO region tokens.
+# No "APAC", no "EMEA", no "LATAM", no "North America". Jurisdictions named directly.
+leg	query_jurisdictions	region_token_count	returned
+indonesia	Indonesia Kemendikdasmen AI education curriculum 2026 kurikulum kecerdasan artifisial sekolah	0	Permendikdasmen 13/2025 - numbered instrument, dates, grade levels, teacher-training revision
+united-states	United States Department of Education artificial intelligence guidance 2026 state policy K-12	0	31 states (Ballotpedia Jan 2026) vs 33-35 (other trackers) - UNRESOLVED source conflict; 4 named state instruments
+africa	Nigeria Kenya South Africa ministry of education AI curriculum policy 2026 schools rollout	0	Kenya National AI Strategy 2025-2030; South Africa draft policy ABROGATED 2026-04-27; Nigeria claims inconsistent
+brazil	Brazil Chile Colombia politica nacional inteligencia artificial educacao escolas 2026 MEC	0	Brazil: Parecer CNE/CP 15/2026 + Resolucao CNE/CP 1/2026. Chile and Colombia returned NOTHING - measured nil
+brazil-confirm	MEC parecer CNE diretrizes inteligencia artificial educacao novembro 2026 correcao automatica redacoes	0	Instrument numbers + DOU date confirmed; essay clause DISPUTED between sources
+agents	open source AI tutoring agent github 2026 MIT Apache education grading autograding release	0	4 candidates; 1 was a 1-star FORK promoted as "most mature"; 1 canonical-slug error caught

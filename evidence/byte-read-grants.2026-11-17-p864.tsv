@@ -1,0 +1,19 @@
+# p864 2026-11-17 — every licence byte-read from git clone --filter=blob:none --depth 1
+# GitHub SPDX field recorded separately; agreed on all 16.
+repo	default_ref	head_date	licence_path	bytes	sha256_12	first_line
+lsgwr/spring-boot-online-exam	master	2026-10-10	LICENSE	1072	4653947f9792	MIT License
+qiutiandefeng/yfexam-exam	main	2025-03-28	LICENSE	1096	89a6f0da2879	MIT License
+Alanosy/exam-platform	master	2026-10-04	LICENSE	1061	f358d42c8caf	MIT License
+hongmaple/octopus	master	2024-12-16	LICENSE	1090	46973d260eab	The MIT License (MIT)
+mindskip/xzs	master	2026-11-16	LICENSE	34520	76a97c878c9c	GNU AFFERO GENERAL PUBLIC LICENSE
+mindskip/xzs-mysql	master	2026-11-17	LICENSE	34521	ec5658b32ded	GNU AFFERO GENERAL PUBLIC LICENSE
+roncoo/roncoo-education	master	2026-11-06	LICENSE	35184	6f1e622c82a3	GNU AFFERO GENERAL PUBLIC LICENSE
+gludugbanyu/cbt-eschool	main	2026-10-02	LICENSE	1063	65e229e6c4f0	MIT License
+arfandotid/ujian-online-ci	master	2024-07-02	LICENSE	1071	b947a9399cb3	MIT License
+ekojs/Ujian-Online	master	2015-07-14	LICENSE	32385	6787cce53a08	GNU AFFERO GENERAL PUBLIC LICENSE
+JoyLeeA/POSCO_AIProject_OnlineTestCheatingDetectionAiSystem	master	2020-06-07	LICENSE	1064	671db79febc0	MIT License
+tutornew/OpenTutor	main	2026-02-27	NONE_AT_ANY_PATH	-	-	-
+Gchism94/ai-tutor	main	2025-05-08	LICENSE	1070	3d5a24e51479	MIT License
+0xysh/deeptutor	main	2026-04-08	LICENSE	11408	cd2f54e1e506	(blank first line) Apache License 2.0
+flysheep-ai/education-skills	main	2026-01-29	LICENSE	1068	23b91d7c0aef	MIT License
+zijinz456/OpenTutor	main	2026-11-16	LICENSE	1068	5352b4967982	MIT License

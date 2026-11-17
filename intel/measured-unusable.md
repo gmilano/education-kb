@@ -4,6 +4,45 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🔴 `2026-11-17` — `p864`: the highest-traction ungranted artefact this base has ever measured (`2,281` ★ / `471` forks), and the first entries carrying the `class:` field `863-G4` required
+
+🟢 **`863-G4` required that every new entry carry `class: original` or `class: redistribution`,
+because the two look identical in a `NONE` field and need OPPOSITE remedies.** 🟢 **Every entry
+below carries it.** 🔵 **All are `class: original` — this pass's refusals are uploaders' own work,
+so unlike `p863`'s Indian `NCERT` tier a licence request CAN succeed for every one of them.**
+
+### 🔴 `class: original` — no grant at any path, request IS worth drafting — `8`
+
+| Address | ★ / forks | GitHub's field | What the bytes say | `class` | Consequence |
+|---|---|---|---|---|---|
+| 🔴 [`YXJ2018/SpringBoot-Vue-OnlineExam`](https://github.com/YXJ2018/SpringBoot-Vue-OnlineExam) | 🔴 **`2,281` / `471`** | `NONE` | 🔴 **No `LICENSE`, `LICENCE` or `COPYING` at any root path** (`master`) | 🟢 `original` | 🔴 **The highest-traction ungranted education artefact in this base.** `471` forks of code nobody may lawfully ship. 🟢 **The single highest-value licence request this base could draft** |
+| 🔴 [`tutornew/OpenTutor`](https://github.com/tutornew/OpenTutor) | `8` / `1` | `NONE` | 🔴 **`NONE_AT_ANY_PATH`, byte-checked** (`main`, `HEAD 2026-02-27`) | 🟢 `original` | 🔴 **The repository a `2026` web sweep credited with another project's prominence** (`T237`). 🟢 The `180`-star `zijinz456/OpenTutor` IS granted and IS shelved |
+| 🔴 [`kaku3/workbooks`](https://github.com/kaku3/workbooks) | `145` | `NONE` | 🔴 No licence path | 🟢 `original` | 🔴 **The ONLY genuine Japanese artefact in the `問題集` top band — and ungranted.** 🔵 Also not school education: `エンジニアのためのお仕事問題集` is engineer interview prep (`T235` again, in a second language) |
+| 🔴 [`boostcampaitech3/final-project-level3-nlp-03`](https://github.com/boostcampaitech3/final-project-level3-nlp-03) | `34` | `NONE` | 🔴 No licence path | 🟢 `original` | 🔴 **`곰파다` — Korean short-answer AUTOMATIC SCORING, the single most on-topic Korean result in the pass, ungranted** |
+| 🔴 [`luobang/opencv_exam`](https://github.com/luobang/opencv_exam) | `38` | `NONE` | 🔴 No licence path (`HEAD 2019-02-22`) | 🟢 `original` | 🔴 OMR answer-sheet generation and automatic marking in OpenCV — the only `智能阅卷` hit that was on topic |
+| 🔴 [`alstn113/fluffy`](https://github.com/alstn113/fluffy) | `14` | `NONE` | 🔴 No licence path (`HEAD 2025-10-29`) | 🟢 `original` | 🔴 Korean online-examination authoring and management service |
+| 🔴 [`theplusmath/MathBank_Project`](https://github.com/theplusmath/MathBank_Project) | `7` | `NONE` | 🔴 No licence path | 🟢 `original` | 🔴 **The entire `stars:>5` band of `문제은행` — Korean "question bank" — is this one ungranted repository** |
+| 🔴 [`ggsno/Digital-SAT-simulator-client`](https://github.com/ggsno/Digital-SAT-simulator-client) | `7` | `NONE` | 🔴 No licence path | 🟢 `original` | 🔴 Digital SAT simulator |
+
+### 🔵 Why every entry this pass is `class: original`, and why that is itself the finding
+
+🟢 **`p863`'s Indian tier was `class: redistribution`: uploaders mirroring `NCERT`/`CBSE` state
+copyright, who have nothing to grant.** 🟢 **This pass's Chinese, Japanese, Korean and Indonesian
+refusals are the opposite** — original applications their authors wrote and simply never licensed.
+
+🔴 **The practical consequence is a real asymmetry in what is recoverable.** 🟢 **`p863` could
+draft `0` useful requests against `2,257` Indian addresses. `p864` could draft `8`, one of them
+against `471` forks.** 🔵 **`863-G4`'s field earns its place on its first use: without it these
+`8` rows and `p863`'s `10` would read as one undifferentiated wall of `NONE`.**
+
+🔴 **One entry is NOT recorded as a refusal and the distinction matters**:
+[`0xysh/deeptutor`](https://github.com/0xysh/deeptutor) is Apache-2.0 and perfectly usable — 🟢 **it
+is simply a `1`-star stale FORK of a repository this base already holds**, so it belongs in
+`trending` as a misidentification, not here as a licence problem.
+
+---
+
+
 ## 🔴 `2026-11-17` — `p863`: `3` of `5` on-topic Hispanic addresses are ungranted (`60%`, worse than `p862`'s `46%`), and India's entire `2,257`-address estate is unusable for a reason a licence request cannot fix
 
 🔵 **Two refusal classes appear in this table and they need OPPOSITE remedies** (`T230`).

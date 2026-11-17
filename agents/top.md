@@ -4,6 +4,58 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Sixty-ninth pass (`p864`, 2026-11-17) — **`3` agent rows (`736` → `739`), a `2.7×` star correction to this base's most-cited row, and a web search that promoted a `1`-star FORK as "the most mature 2026 candidate"**
+
+🔴 **Channel declaration first, because [`863-G1`](../intel/open-gaps.md) requires it before the
+first row.** 🟢 **Four channels were tested on `2026-11-17`, not three:**
+
+| Channel | Result |
+|---|---|
+| 🔴 `curl -sI https://github.com/...` | 🔴 **`403`** at the egress proxy |
+| 🔴 `curl -sI https://api.github.com/...` | 🔴 **`403`** |
+| 🟢 `gh api search/repositories` | 🟢 **`200`** — every count in this pass came from here |
+| 🔴 🆕 **`gh api repos/{owner}/{repo}`** | 🔴 **`403` — "not enabled for this session"** |
+| 🟢 `git clone --filter=blob:none --depth 1` | 🟢 **`200`** — every licence byte in this pass came from here |
+
+🔴 **`863-G1` assumed three channels and there are four.** 🟢 **The per-repository API endpoint
+is denied while the SEARCH endpoint is open** — so stars, forks and the `archived` flag must be
+read out of search results, never from `repos/`. 🔵 **A pass that reaches for `repos/` and reads
+the `403` as "repository gone" will delete live rows.**
+
+### 🔴 The correction that matters more than the three new rows
+
+🟢 **[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) was re-measured `2026-11-17`:
+`59,826` ★, `7,242` forks, Apache-2.0, pushed `2026-11-15`.** 🔴 **This base has carried it at
+`22k+` since `p6`** — 🔴 **the shelved figure is `37%` of the real one.** 🟢 **It is not a new
+row, it is the oldest row in the base and it was wrong by a factor of `2.7`.** 🔵 **Star counts
+are the one field here that rots without anyone touching the row** → `T237`.
+
+### The `3` agent rows, every licence byte-read `2026-11-17` from a blobless clone
+
+| Name | Repo | Licence | Stars | Region | Description |
+|------|------|---------|-------|--------|-------------|
+| OpenTutor | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** — `main`, `LICENSE`, `1,068 B`, `sha256₁₂ 5352b4967982` | `180` ★ / `47` f | 🔴 **Global — UNPLACED, and said so** | 🟢 **A block-based adaptive learning workspace that runs LOCALLY**: drop in a PDF, get generated notes, quizzes and a tutor that adapts. 🟢 **`HEAD 2026-11-16` — one day before this reading, the freshest agent row in the base.** 🔴 **No affiliation, no TLD, no `CITATION.cff`: both placement stages returned nothing, so it is published as unplaced rather than guessed** (`861-G1`'s rule). 🔵 **Local-first is the attribute to note** — it is the only tutoring row here that needs no model egress, which is what a data-residency engagement asks for first |
+| education-skills | [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | 🟢 **MIT** — `main`, `LICENSE`, `1,068 B`, `sha256₁₂ 23b91d7c0aef` | `125` ★ / `24` f | 🟢 **APAC** *(placed by CURRICULUM NAME: `高考`)* | 🟢 **A collection of education Claude Code Agent Skills, not a framework** — `高考理科导师` (gaokao science tutor) and siblings. 🔵 **The first SKILL-class education artefact this base has shelved**: it ships prompt-and-procedure units against a named national curriculum, so the reusable asset is the pedagogy encoding, not the runtime. 🟢 **Placed to China by the examination name in its prose** — a placement instrument neither `p861` nor `p862` had → `T238`. `HEAD 2026-01-29` |
+| POSCO online-test integrity | [`JoyLeeA/POSCO_AIProject_OnlineTestCheatingDetectionAiSystem`](https://github.com/JoyLeeA/POSCO_AIProject_OnlineTestCheatingDetectionAiSystem) | 🟢 **MIT** — `master`, `LICENSE`, `1,064 B`, `sha256₁₂ 671db79febc0` | `9` ★ | 🟢 **APAC** *(prose: Korea, POSCO)* | 🟡 **Gaze- and motion-recognition examination-integrity system.** 🔴 **`HEAD 2020-06-07` and `9` stars — a weak row, and shelved only because of what surrounds it:** 🔴 **it is the ONLY permissively granted artefact in the entire `206`-address Korean assessment corpus** (`T233`). 🔵 **Its value is as the measured ceiling of Korean open assessment supply, not as a component** |
+
+### 🔴 What a web search returned and the byte-read channel refused
+
+🔴 **A `2026` agent sweep named [`0xysh/deeptutor`](https://github.com/0xysh/deeptutor) "the most
+mature 2026 candidate".** 🟢 **It is a `1`-star FORK of `HKUDS/DeepTutor`, stale at
+`2026-04-08`** — proved by cloning it (`LICENSE`, `11,408 B`, `sha256₁₂ cd2f54e1e506`, Apache-2.0)
+and finding `HKUDS`'s own README inside. 🔴 **It is invisible to `gh api search` because GitHub
+search excludes forks by default**, which is why the two channels disagreed → `T237`.
+
+🔴 **The same sweep attributed a notable OpenTutor to
+[`tutornew/OpenTutor`](https://github.com/tutornew/OpenTutor).** 🟢 **That repository is `8` ★
+with NO licence at any path.** 🟢 **The OpenTutor with `180` ★ is a different owner entirely**
+(`zijinz456`, shelved above) — 🔵 **one project name, twelve distinct repositories, and the
+prominence of one was attached to the slug of another.** 🔴 **Both are now on
+[`measured-unusable`](../intel/measured-unusable.md) or the shelf by BYTES, not by narrative.**
+
+---
+
+
 ## 🟢 Sixty-eighth pass (`p863`, 2026-11-17) — **`3` agent rows (`733` → `736`): `862-G2` and `862-G3` both run, and the answer to the LATAM question came back from VIETNAM**
 
 🔴 **The finding first, because it inverts the premise of the gap that commissioned it.**

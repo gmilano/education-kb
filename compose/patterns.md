@@ -4,6 +4,89 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Sixty-ninth pass (`p864`, 2026-11-17) — **`P102`–`P103`: one recipe where the mandate and the open base are in the SAME jurisdiction, and one built around a prohibition published seven days ago**
+
+**One hundred and one** concrete recipes — derived recipes: **101** (`99` + `2`).
+
+🟢 **Every component named below was byte-read on `2026-11-17` from a blobless partial clone**
+([`byte-read-grants`](../evidence/byte-read-grants.2026-11-17-p864.tsv)).
+
+---
+
+## 🟢 P102 — *Indonesia `AKM` assessment, on an elective mandate that is already running*
+
+🔵 **The engagement this answers**: `Permendikdasmen 13/2025` phased coding and AI into Indonesian
+schools from `kelas 5 SD`, `kelas 7 SMP` and `kelas 10 SMA/SMK` starting `2025/26`. 🔴 **It is
+ELECTIVE, no new curriculum was named, `3T` regions have until `2026/27`, and the teacher-training
+target was cut from `1,000,000` to `361,000`.** 🟢 **So the binding constraint is teacher capacity
+and the deliverable must assume an UNTRAINED teacher**, which is what makes this different from
+`P100`'s Vietnamese compulsory-hours case.
+
+| Component | Grant, byte-read `2026-11-17` | Role in the build |
+|---|---|---|
+| [`gludugbanyu/cbt-eschool`](https://github.com/gludugbanyu/cbt-eschool) `34★` | 🟢 **MIT** — `1,063 B`, `sha256₁₂ 65e229e6c4f0` | 🟢 **Fork as the delivery base.** PHP 8 + JS, written for **`AKM`** — the national assessment the schools already sit. 🔵 Live at `2026-10-02` |
+| [`arfandotid/ujian-online-ci`](https://github.com/arfandotid/ujian-online-ci) `131★`/`119`f | 🟢 **MIT** — `1,071 B`, `sha256₁₂ b947a9399cb3` | 🔴 **READ ONLY — `ARCHIVED`, CodeIgniter 3 is end-of-life.** 🟢 Mine it for the Indonesian examination WORKFLOW its `119` forks validated; take no code |
+| [`qiutiandefeng/yfexam-exam`](https://github.com/qiutiandefeng/yfexam-exam) `998★`/`178`f | 🟢 **MIT** — `1,096 B`, `sha256₁₂ 89a6f0da2879` | 🟢 **Lift the TRAINING half.** It is a training-plus-examination system; the teacher-capacity gap is the actual constraint, and this is the only permissive row in the base that already models cohort training |
+| [`shevandrin/rqti`](https://github.com/shevandrin/rqti) `9★` | 🔴 **GPL-3.0** — `34,904 B` | 🔴 **AUTHORING-TIME ONLY.** Emit **QTI** so items survive a school moving to Moodle or Chamilo. 🟢 QTI output is DATA, not a derivative work |
+
+**Wiring:**
+
+1. 🟢 **Fork `cbt-eschool`;** keep its `AKM` item model — that fit is the asset, not its `34` stars.
+2. 🟢 **Author items once in `r-exams`/`rqti`, emit QTI**, so the same bank serves the elective
+   subject and the `AKM` sitting.
+3. 🟢 **Port `yfexam-exam`'s cohort-training flow to the TEACHER**, not the student: the `639,000`
+   teachers who fall outside the revised target are the people who must run this.
+4. 🔴 **Ship an offline/low-bandwidth path before anything else.** `3T` schools are explicitly
+   on a later clock; a cloud-only build excludes the schools the mandate most affects.
+5. 🔴 **Keep the GPL boundary at the pipeline edge** — `rqti` authors, the MIT fork only reads QTI.
+
+🔵 **Why it is credible**: `ujian-online-ci`'s near-`1:1` fork-to-star ratio (`119`/`131`) is
+evidence Indonesian schools SELF-HOST examination software. 🟢 **This is a deployment market, not
+a SaaS market.**
+
+---
+
+## 🔴 P103 — *Brazilian essay assessment that is legal on `2026-11-11` terms: the teacher assigns every mark*
+
+🔵 **The engagement this answers**: `Resolução CNE/CP nº 1/2026` binds every public and private
+Brazilian institution, basic through higher education, **from the `DOU` publication of
+`2026-11-11`**, with **`12` months to adapt policies, practices AND CONTRACTS**. 🔴 **Automated
+grading is constrained and AI-detector output alone may not ground a sanction.**
+
+🔴 **`p862` shelved the UOL essay corpus for automated essay scoring six days before this rule
+was homologated.** 🟢 **This recipe is that asset, re-scoped rather than discarded.**
+
+| Component | Grant, byte-read | Role in the build |
+|---|---|---|
+| [`gpassero/uol-redacoes-xml`](https://github.com/gpassero/uol-redacoes-xml) `39★` | 🟢 **Apache-2.0** — `11,357 B`, `sha256₁₂ b40930bbcf80` | 🟢 **CALIBRATION set, not training-for-autonomy.** Human marks plus per-criterion examiner comments — 🔵 **use it to measure how far a suggestion drifts from a human examiner, which is now the compliance question** |
+| [`yunger7/enem-api`](https://github.com/yunger7/enem-api) `368★`/`76`f | 🔴 **GPL-2.0** — `18,092 B`, `sha256₁₂ 8177f9751321` | 🔴 **Over the network or as an internal fork ONLY.** ENEM items as a documented service; do not link into proprietary code |
+| [`paladini/awesome-poscomp`](https://github.com/paladini/awesome-poscomp) `203★` | 🟢 **MIT** — `1,084 B` | 🟢 Index to POSCOMP past papers for the higher-education tier |
+| [`alvaretto/r-exams_matematicas`](https://github.com/alvaretto/r-exams_matematicas) `8★` | 🟢 **MIT** — `1,078 B`, `sha256₁₂ 67a6e5e5a2af` | 🟢 Re-targetable item source where objective items are wanted instead of essays |
+
+**Wiring — the architecture IS the compliance argument:**
+
+1. 🔴 **No autonomous score ever leaves the system.** The model produces per-criterion OBSERVATIONS
+   against the examiner rubric; 🟢 **the mark field is writable only by an authenticated teacher.**
+2. 🟢 **Log the human act, not just the output.** Record which teacher read which text and assigned
+   which mark — 🔵 **that log is what satisfies an inspection, and nothing in a model's output can
+   substitute for it.**
+3. 🔴 **Ship NO detector-based sanction path.** Detector output alone cannot ground a penalty;
+   🟢 **the safest build simply does not expose a score that a school could act on.**
+4. 🟢 **Gate by school year in the product, not in a policy document**: blocked through year `5`,
+   mediated `6`–`9`, individual at secondary and above.
+5. 🟢 **Calibrate against `uol-redacoes-xml` and publish the drift** — 🔵 **"our suggestions sit
+   within `X` of a human examiner, and a human assigned `100%` of marks" is the sellable claim.**
+
+🔴 **The honest caveat, carried from `T236` and not resolved**: the sources disagree on whether AI
+may perform PRE-correction with the teacher marking after a full read, or whether it is barred
+from essay correction outright. 🟢 **This recipe is built to survive the STRICTER reading** — under
+it the system never scores, it only annotates — 🔵 **so it remains deliverable whichever reading
+the published text supports.** 🔴 **Confirm against the `gov.br`/`DOU` text before contracting**
+(`864-G3`).
+
+---
+
+
 ## 🟢 Sixty-eighth pass (`p863`, 2026-11-17) — **`P100`–`P101`: one recipe built on a mandate with a published date and a corpus that already exists, and one built on the honest finding that its region's corpus does NOT**
 
 **Ninety-nine** concrete recipes — derived recipes: **99** (`97` + `2`).

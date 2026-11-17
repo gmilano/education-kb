@@ -4,6 +4,43 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — `p864`: the **Chinese `考试系统` vein** — four MIT systems above `300` ★, the deepest permissive examination tier in this base, and the `2,281`-star refusal beside it
+
+🔴 **`p863` found the Vietnamese tier by querying a LANGUAGE instead of a region.** 🟢 **`p864`
+ran four more and found that the term's SHAPE matters as much as its language**: `题库`
+("question bank") returns job-interview preparation, while `考试系统` ("examination system")
+returns the real tier → `T235`.
+
+| Address | ★ / forks | Licence, byte-read `2026-11-17` | HEAD | What it is |
+|---|---|---|---|---|
+| 🔴 [`mindskip/xzs`](https://github.com/mindskip/xzs) | `3,916` | 🔴 **AGPL-3.0**, `34,520 B`, `sha256₁₂ 76a97c878c9c` | 🟢 **`2026-11-16`** | `学之思` exam system, Java + Vue, web and WeChat mini-program. *Already shelved* |
+| 🔴 [`roncoo/roncoo-education`](https://github.com/roncoo/roncoo-education) | `1,574` / 🟢 **`594`** | 🔴 **AGPL-3.0**, `35,184 B`, `sha256₁₂ 6f1e622c82a3` | 🟢 **`2026-11-06`** | `领课教育系统` — video, live, exam, question bank, tasks. **Highest non-English fork count here** |
+| 🟢 [`lsgwr/spring-boot-online-exam`](https://github.com/lsgwr/spring-boot-online-exam) | `1,695` | 🟢 **MIT**, `1,072 B`, `sha256₁₂ 4653947f9792` | `2026-10-10` | Spring Boot online examination. *Already shelved; re-read, still matches* |
+| 🟢 [`qiutiandefeng/yfexam-exam`](https://github.com/qiutiandefeng/yfexam-exam) | `998` / `178` | 🟢 **MIT**, `1,096 B`, `sha256₁₂ 89a6f0da2879` | `2025-03-28` | `云帆培训考试系统` — training + examination, public demo |
+| 🟢 [`Alanosy/exam-platform`](https://github.com/Alanosy/exam-platform) | `887` / `92` | 🟢 **MIT**, `1,061 B`, `sha256₁₂ f358d42c8caf` | 🟢 **`2026-10-04`** | 「砚考」 — actively developed, own docs site (`doc.alan.org.cn`) |
+| 🟢 [`hongmaple/octopus`](https://github.com/hongmaple/octopus) | `316` / `93` | 🟢 **MIT**, `1,090 B`, `sha256₁₂ 46973d260eab` | `2024-12-16` | Teaching administration **and** question bank, paper setting, online sitting, **automatic marking** |
+| 🟢 [`gludugbanyu/cbt-eschool`](https://github.com/gludugbanyu/cbt-eschool) | `34` / `15` | 🟢 **MIT**, `1,063 B`, `sha256₁₂ 65e229e6c4f0` | 🟢 **`2026-10-02`** | 🇮🇩 CBT platform written for **`AKM`**, Indonesia's national competency assessment |
+| 🟡 [`arfandotid/ujian-online-ci`](https://github.com/arfandotid/ujian-online-ci) | `131` / `119` | 🟢 **MIT**, `1,071 B`, `sha256₁₂ b947a9399cb3` | 🔴 **`2024-07-02` `ARCHIVED`** | 🇮🇩 CodeIgniter 3 examination app. 🔵 Fork:star ratio near `1:1` — deployed, not admired |
+| 🔴 [`ekojs/Ujian-Online`](https://github.com/ekojs/Ujian-Online) | `18` | 🔴 **AGPL-3.0**, `32,385 B`, `sha256₁₂ 6787cce53a08` | `2015-07-14` | 🇮🇩 Logged for the licence-variance finding, not as a candidate |
+
+### 🔴 The refusal that outranks every row above
+
+🔴 **[`YXJ2018/SpringBoot-Vue-OnlineExam`](https://github.com/YXJ2018/SpringBoot-Vue-OnlineExam) —
+`2,281` ★, `471` forks, NO licence at any path.** 🔴 **The highest-traction ungranted education
+artefact this base has measured**, and `9` further copies of the slug are ungranted too.
+🟢 **Filed `class: original`** (`863-G4`) — the uploader can still fix it.
+
+### 🟢 An instrument result worth more than any single row
+
+🔴 **A keyword-stuffed cluster dominates the top band of EVERY CJK query here.** 🟢 **Two repairs
+measured on the same terms, same hour:** `in:name,description` 🔴 **changed nothing — `1,359`,
+`21`, `2`, identical to the byte** — 🟢 **`language:java` removed the cluster completely**
+(`题库`: `1,359` → `172`, top band on topic). 🔵 **Cost stated: `language:` also drops data and
+documentation repositories** → `864-G4`.
+
+---
+
+
 ## 🟢 `2026-11-17` — `p863`: the **Vietnamese secondary-assessment vein** — a national corpus this base had never indexed, and the first APAC tier here that is permissive at every level
 
 🔴 **This base has run APAC legs for ten passes and placed almost nothing.** `p862` recorded the

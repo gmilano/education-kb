@@ -4,6 +4,150 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — sixty-ninth pass (`p864`) — **`7` trends (`T232`–`T238`): `863-G3` discharged and its premise inverted for the second pass running, a measured repair for CJK search contamination, a national instrument that bans the thing this base built last pass, and a rule `p863` published that is wrong**
+
+**Two hundred and thirty** trends — derived trends: **230** (`223` + `7`).
+
+## 🟢 `T232` — the Chinese assessment vein is an order of magnitude deeper than any other non-English language, English included
+
+🔴 **`863-G3` said the APAC assessment vocabulary was "one language deep" and asked for four more
+languages to be run.** 🟢 **All four were run, every total published**
+([`term-sweep`](../evidence/term-sweep.2026-11-17-p864.tsv)):
+
+| Language | Terms | Addresses | `stars:>5` | 🟢 Permissive rows shelved |
+|---|---|---|---|---|
+| 🟢 **Chinese** | `5` | 🟢 **`18,328`** | 🟢 **`2,124`** | 🟢 **`4`** |
+| 🟡 Bahasa Indonesia | `3` | `1,714` | `20` | 🟡 `2` *(one ARCHIVED)* |
+| 🔴 Japanese | `3` | `626` | `23` | 🔴 **`0`** |
+| 🔴 Korean | `3` | `206` | `6` | 🔴 **`1`** *(`9` ★, `2020`)* |
+| *(`p863` baselines)* Vietnamese | `1` | `1,170` | `7` | `3` |
+| *(`p863` baselines)* Hispanic | `9` | `2,142` | `11` | `2` |
+
+🔵 **Chinese returns more addresses than every other language this base has ever queried
+COMBINED, and `303×` Korean's.** 🔴 **For two consecutive passes the headline conclusion has
+been overturned by the next control run**: `p863` concluded "thin outside English" and Vietnamese
+broke it; `p864` would have concluded "APAC is thin apart from Vietnamese" and Chinese broke it
+by an order of magnitude. 🟢 **The honest statement is the one that survives both: supply varies
+by LANGUAGE COMMUNITY, by factors of hundreds, and no regional or linguistic generalisation this
+base has attempted has survived its own next measurement.**
+
+## 🔴 `T233` — Japanese and Korean open assessment supply is a measured near-nil, and Korea's is the one that matters
+
+🔴 **`オンライン試験` returns `2` addresses in all of GitHub. Two.** 🔴 **`自動採点` returns `78`
+and `0` of the top band is Japanese.** 🔴 **The entire Korean corpus — `문제은행`, `온라인 시험`,
+`자동 채점` — is `206` addresses, `6` above five stars, `1` permissive, and that one is a
+`9`-star `2020` university capstone.**
+
+🔵 **Korea is the finding, because of what sits beside it.** 🟢 **`T231` recorded Korea's AI
+digital-textbook adoption collapsing `37%` → `19%` in one semester with a legal
+reclassification.** 🔴 **So the country with the most aggressive state AI-education programme in
+the base ALSO has one of its emptiest open assessment commons.** 🟢 **The two facts explain each
+other: a state-procured textbook platform does not produce an open ecosystem, and when the
+procurement reverses there is nothing underneath it.** 🔵 **An engagement in Korea cannot start
+from local open supply — it must bring its own, and that is a positioning statement, not a
+complaint.**
+
+## 🟢 `T234` — CJK search contamination: `in:name,description` does NOT repair it, `language:` does, and both were measured
+
+🔴 **A keyword-stuffed cluster dominates the top band of essentially every CJK query in this
+base's vein** — `cirosantilli/china-dictatorship` and its clones, `Dujltqzv/Some-Many-Books`,
+`gege-circle/.github`, `fighting41love/funNLP`. 🔴 **They are not education, not assessment, and
+in several cases not software.**
+
+🟢 **Two repairs were run on the same terms in the same hour:**
+
+| Repair | `题库` | `問題集` | `自動採点` | Verdict |
+|---|---|---|---|---|
+| *(none)* | `1,359` | `21` | `2` | baseline |
+| 🔴 **`in:name,description`** | 🔴 **`1,359`** | 🔴 **`21`** | 🔴 **`2`** | 🔴 **FAILS — identical to the byte, and the top band is unchanged** |
+| 🟢 **`language:java`** | `172` | — | — | 🟢 **Removes the cluster entirely** |
+
+🔴 **`in:name,description` fails for a specific and instructive reason: the stuffing IS in the
+description.** 🟢 **`language:` works because the cluster is markdown and data with no detected
+source language.** 🔵 **The cost is stated rather than hidden: `language:` also drops legitimate
+documentation, dataset and item-bank repositories, which is exactly the class this base shelves
+most often** → `864-G4`.
+
+## 🔴 `T235` — the ARTEFACT noun and the SYSTEM noun return different industries, and this is a fourth defect class
+
+🟢 **`题库` means "question bank" and is the correct word.** 🔴 **Its top band is
+`面试题库` — JOB-INTERVIEW preparation**: `web-interview` (`11,889` ★), `DotNetGuide` (`11,151` ★),
+`Waking-Up` (`10,308` ★), `golangFamily` (`6,990` ★), `mianshiya` (`6,055` ★). 🔵 **Right
+language, right word, wrong INDUSTRY.**
+
+🟢 **`考试系统` — "examination system" — returns `mindskip/xzs`, `roncoo-education`,
+`yfexam-exam`, `exam-platform`, `spring-boot-online-exam`: on topic, and `3` of the top `4` MIT.**
+
+🟢 This base has now catalogued four distinct ways a query term fails:
+
+| Class | Example | Failure | Repair |
+|---|---|---|---|
+| Stem collision (`p861`) | `grading` → `grade` | shares a root | 🟢 `NOT`, or a precise synonym |
+| Cross-language homograph (`T219`) | `rúbrica`, `banca` | shares spelling across languages | 🔴 abandon the word, query the phrase |
+| Acronym namespace collision (`T227`) | `EXANI`, `"Saber Pro"` | collides with hardware and games | 🔴 no repair |
+| 🆕 **Domain drift** (`T235`) | `题库` → interview prep | 🔴 **correct word, wrong industry** | 🟢 **query the SYSTEM, not the ARTEFACT** |
+
+🔵 **Domain drift is the most dangerous of the four, because every result is a real question bank
+and nothing looks wrong.**
+
+## 🔴 `T236` — Brazil has banned the thing this base shelved a corpus for, one pass ago
+
+🔴 **Brazil's MEC homologated `Parecer CNE/CP nº 15/2026` on `2026-11-10`, published in the
+`DOU` on `2026-11-11`; `Resolução CNE/CP nº 1/2026` binds public and private institutions from
+basic education through higher education.** Measured positions:
+
+- 🔴 **Automated grading is constrained, and AI-detector output alone may NOT ground an academic or
+  disciplinary sanction.**
+- 🔴 **Children through the `5ᵗʰ` year: direct or unsupervised access to generative tools
+  prohibited.** Years `6`–`9`: permitted with professional mediation. Secondary and above:
+  individual use permitted with authorship and data conditions.
+- 🟢 **Prohibitions apply immediately on publication; institutions have `12` months to adapt
+  policies, practices AND CONTRACTS.** CNE reviews roughly every two years.
+
+🔴 **`p862` shelved [`gpassero/uol-redacoes-xml`](https://github.com/gpassero/uol-redacoes-xml)
+specifically because "automated essay scoring cannot be evaluated without scored essays".**
+🔴 **Six days before that row was written, Brazil's education ministry moved against autonomous
+essay grading.** 🟢 **The asset is not dead — it is re-scoped**, and `P103` rebuilds it as
+teacher-in-the-loop calibration rather than autonomous scoring.
+
+🔴 **The sources genuinely disagree on the essay clause and this base will not resolve it by
+preference**: some report AI permitted for PRE-correction with the teacher assigning the mark
+after reading the whole text, others report a flat prohibition on AI correcting or grading essays
+and authorial work. 🟢 **Both readings forbid the autonomous scorer; they differ on whether a
+human-supervised assistant survives.** → `864-G3`.
+
+## 🔴 `T237` — two measurement defects that rot rows nobody touches: stale stars, and forks excluded by default
+
+🟢 **(a)** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) is **`59,826` ★** as measured
+`2026-11-17`. 🔴 **This base has carried `22k+` since `p6` — off by `2.7×`.**
+
+🟢 **(b) GitHub search excludes forks by default.** Measured on `题库 stars:>5`: **`1,359`
+without, `1,466` with `fork:true` — `107` repositories, `7.3%` of the band, invisible to every
+count this base has ever published.** 🔵 **That default is CORRECT for finding originals and
+undeclared in the method**, and it produced a visible contradiction this pass: a web search
+promoted [`0xysh/deeptutor`](https://github.com/0xysh/deeptutor) as "the most mature `2026`
+candidate" while `gh api search` could not see it at all. 🟢 **It is a `1`-star fork of
+`HKUDS/DeepTutor`, proved by cloning it and finding `HKUDS`'s README inside.** → `864-G2`.
+
+## 🟢 `T238` — the national EXAMINATION NAME places a repository where affiliation and TLD both fail
+
+🟢 **`861-G1` built a two-stage placement instrument: a stated affiliation, then a TLD, a
+`CITATION.cff` or a jurisdiction in `CONTRIBUTING`.** 🔴 **Both stages returned nothing for
+[`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills)** — no
+institution, no TLD, no citation file.
+
+🟢 **It was placed to China anyway, by one token in its prose: `高考`.** 🔵 **A national
+examination name is a jurisdiction claim that cannot be incidental** — `高考` is China, `AKM` is
+Indonesia, `THPT` is Vietnam, `ENEM` is Brazil, `ICFES` is Colombia. 🟢 **It placed `3` of this
+pass's `6` new rows**, and unlike a TLD it cannot be a hosting accident.
+
+🔴 **The same token is useless as a SEARCH term** (`T227`: the acronym collides) 🟢 **and
+reliable as a PLACEMENT term once the repository is already in hand.** 🔵 **Find by system noun,
+place by examination name.**
+
+---
+
+
 ## 🟢 `2026-11-17` — sixty-eighth pass (`p863`) — **`6` trends (`T226`–`T231`): a thin yield that turned out to be a property of ONE language and not of the method, a third defect class in query vocabulary, two incompatible kinds of licence refusal, and the first measured RETREAT from a national AI-education deployment**
 
 **Two hundred and twenty-three** trends — derived trends: **223** (`217` + `6`).
