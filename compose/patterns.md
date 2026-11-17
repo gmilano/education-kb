@@ -6,7 +6,15 @@ updated: 2026-11-17
 
 # Compose patterns — education
 
-**Pass `p882`, 2026-11-17** (twelfth pass of the day). **Twenty-three recipes** — 🔵 derived recipes: **23**. `p882` adds **P23**, the open-source **due-diligence** recipe this KB has been
+**Pass `p883`, 2026-11-17** (thirteenth pass of the day). **Twenty-four recipes** — 🔵 derived recipes: **24**. `p883` adds **P24**, and it is the first recipe in this file whose reference
+implementation is a **university's own shipped product**: an institutional AI distribution built on an
+MIT agent harness (`deepseek-ai/deepseek-harness`, 282,965 ★) rather than a plugin bolted inside a
+copyleft LMS — found this pass, with the branding step already executed in public by its authors.
+🟢 **`P23` is also amended**: its *liveness* channel, which `p882` could answer only with
+`pushed_at`, now has a real limb — `api.github.com/search/commits` returns **default-branch** dates,
+and `p883` measured `pushed_at` overstating liveness by up to **22 months** on this KB's own rows.
+
+**Previous pass (`p882`), retained:** **Pass `p882`, 2026-11-17** (twelfth pass of the day). **Twenty-three recipes** — 🔵 derived recipes: **23**. `p882` adds **P23**, the open-source **due-diligence** recipe this KB has been
 performing for 882 passes and never written down as a deliverable: a two-channel verification
 harness that answers *is this repo safe to build on* in licence, liveness and identity terms, and
 which exists because `p882` measured that the three channels fail **independently** and a client's
@@ -1141,6 +1149,70 @@ see a reason for.**
 education high-risk tier attaches to assessment, and a write path that can change a grade without a
 person in it is the clearest possible way into that tier.
 
+## P24 — Ship a branded institutional AI distribution on an MIT agent harness, instead of bolting AI onto the LMS — new in `p883`
+
+🔵 **The engagement this is for.** A university, university system or ministry says: *"we want our
+own AI assistant for staff and students — on our identity, on our models, on our data, with our
+name on it."* The default proposal is a plugin inside the incumbent LMS (Moodle GPL-3.0, Open edX
+AGPL-3.0), which inherits the LMS's copyleft posture, its release cadence and its browser-only
+surface. 🟢 **`p883` found that the other path is already executed, in public, by a university, under
+a permissive grant** — so it can be proposed with a reference rather than as a theory.
+
+🟢 **The reference implementation.** East China Normal University publishes
+**[`ECNU/EduWork`](https://github.com/ECNU/EduWork)** (376 ★, `MulanPSL-2.0`, pushed 2026-11-17) —
+an education distribution of **[`deepseek-ai/deepseek-harness`](https://github.com/deepseek-ai/deepseek-harness)**
+(DSH; **282,965 ★, MIT**, byte-read `master/LICENSE`, `sha256₁₂ ebb4f09972ae`) — **and**
+**[`ECNU/EduWork-ECNU`](https://github.com/ECNU/EduWork-ECNU)** (29 ★), its own branded deployment
+of its own distribution. 🔵 **Two repositories = the product and the worked example of
+institutionalising it.**
+
+### The stack
+
+| Layer | Component | Licence | Why this one |
+|---|---|---|---|
+| Agent runtime | [`deepseek-ai/deepseek-harness`](https://github.com/deepseek-ai/deepseek-harness) | **MIT** (byte-read `master/LICENSE`) | Plugin/skill system, tools, browser and file capabilities. **MIT means the client keeps the deliverable**; no copyleft reach into your plugins |
+| Education distribution | [`ECNU/EduWork`](https://github.com/ECNU/EduWork) | **MulanPSL-2.0** (byte-read, 9,233 B) | The education plugin composition already assembled: institutional login, model discovery, knowledge studio |
+| Institutional reference | [`ECNU/EduWork-ECNU`](https://github.com/ECNU/EduWork-ECNU) | MulanPSL-2.0 | What "branded for one university" looks like when its own authors do it |
+| Identity | [`apereo/cas`](https://github.com/apereo/cas) | **Apache-2.0**, 11,402 ★ | The SSO layer already under much of higher education; EduWork speaks browser OIDC, so CAS's OIDC endpoint is the join |
+| Model gateway | LiteLLM (EduWork ships **LiteLLM OAuth** support) | MIT | One gateway, many providers, per-faculty budgets and audit logs; keeps model choice reversible |
+| Sandboxed execution (if grading) | [`openedx/codejail`](https://github.com/openedx/codejail) | **Apache-2.0** | Untrusted student code, without taking an AGPL dependency |
+| Attach, don't fork | Moodle / Open edX | GPL-3.0 / AGPL-3.0 | The distribution sits **beside** the LMS and reads it over API — the copyleft stays on the far side of the boundary |
+
+### Wiring
+
+1. **Fork DSH? No — depend on it.** Take DSH at a pinned release (`0.2.1-rc.3` is what EduWork
+   tracks). Your work is plugins, not a runtime fork; this is what keeps the MIT boundary clean.
+2. **Read `EduWork`'s plugin set as the requirements document.** Institutional login + model
+   discovery, knowledge studio over local materials, education skills. 🔵 It tells you which
+   plugins a university actually needed, which is a month of discovery already paid for.
+3. **Replace the identity plugin with the client's.** EduWork's gateway login is browser-OIDC
+   against a school gateway with LiteLLM OAuth. For a CAS estate, point it at CAS's OIDC endpoint;
+   for Entra/Google, the same seam. **This is the one component you always rewrite**, and it is
+   the component the EU AI-literacy and transparency duties attach to (`P11`, `P19`).
+4. **Put LiteLLM in front of every model call** — sovereign/self-hosted for EMEA data-residency
+   (`P4`), commercial APIs elsewhere, switchable per tenant without touching plugins.
+5. **Keep the LMS at arm's length.** Grades and roster over API (`vishalsachdev/canvas-mcp` for
+   Canvas — 🔴 **pin ≥ 1.16.0**, see its advisory block in `agents/top.md`), never a fork.
+6. **Localise.** 🟡 EduWork is Chinese-language-first with an English README. Spanish/Portuguese UI
+   localisation is real work and belongs in the estimate, not in the assumptions.
+
+### Grant posture, stated plainly
+
+🟢 **DSH is MIT; your plugins are yours.** 🟡 **`MulanPSL-2.0` is OSI-approved and permissive with an
+explicit patent grant** — functionally Apache-2.0-like for building — but it is **bilingual with the
+Chinese text governing and framed under Chinese law**. Two consequences: name it explicitly in the
+client's legal review, and if the client's procurement cannot accept a non-English governing text,
+**take EduWork as the requirements reference and build the distribution directly on MIT DSH** —
+which costs you the assembled plugin set and nothing else.
+
+🔴 **Where this pattern does not apply.** A client whose requirement is *"inside the LMS, in the
+browser, no desktop install"* — EduWork is a desktop distribution (Windows x64, macOS arm64/x64).
+That client gets `P12` or the Moodle-plugin path, not this.
+
+**Effort:** 8–12 weeks to a branded pilot on real institutional identity (identity plugin, model
+gateway, localisation, one LMS read path). Add 4–6 weeks for grading with `codejail` and a
+human-review trail (`P2`).
+
 ## P23 — Open-source due diligence for an education shortlist, on three independent channels — new in `p882`
 
 🔵 **The engagement this is for.** A client arrives with a shortlist — *"we are considering Moodle,
@@ -1156,7 +1228,7 @@ unreliable: **the three answers come from three channels that fail independently
 |---|---|---|---|
 | **Identity** — is this the canonical address? | `api.github.com/search/repositories` → `full_name` | **`200` UP** | nothing about the grant text |
 | **Licence** — what does the grant actually say? | `raw.githubusercontent.com/<slug>/<branch>/LICENSE` | **`200` UP** | nothing about whether it is still maintained |
-| **Liveness** — is the default ref moving? | `git ls-remote --symref` + `pushed_at` | **UP** | nothing about identity: a redirect answers for a *wrong* spelling |
+| **Liveness** — is the default ref moving? | 🆕 `api.github.com/search/commits?q=<text>+repo:<slug>` (**`200`, added `p883`**) — with `git ls-remote --symref` + `pushed_at` | **UP** | nothing about identity: a redirect answers for a *wrong* spelling. 🔴 **`p883`: `pushed_at` alone is NOT liveness** — it counts any-branch pushes and overstated three of this KB's rows by 13–22 months. Use the commits limb for the default branch, over **several free-text terms** (a one-term probe manufactures a false death), and publish the result as `HEAD ≥ date`. |
 
 🔴 **Each channel's blind spot bit this KB in a measurable way, which is the whole argument for using
 all three:**

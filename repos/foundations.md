@@ -6,7 +6,25 @@ updated: 2026-11-17
 
 # Foundational repos — education
 
-**Pass `p882`, 2026-11-17** (twelfth pass of the day). **`p882` re-measured every row on this
+**Pass `p883`, 2026-11-17** (thirteenth pass of the day). **`p883` adds the highest-star repository
+this shelf has ever carried, and the reason it was never carried is that nobody looked at who owned
+it.**
+
+- 🟢 **`deepseek-ai/deepseek-harness` (DSH) — 282,965 ★, 35,072 forks, MIT, created 2026-08-13,
+  pushed 2026-11-17.** Licence read as **bytes**: `master/LICENSE`, **1,065 B**,
+  `sha256₁₂ ebb4f09972ae`, `MIT License` / `Copyright (c) 2026 DeepSeek`. This KB's trending history
+  mentions the name; **no curated shelf has ever carried it.** It becomes an *education* substrate
+  because an education distribution of it now exists — `ECNU/EduWork` (`agents/top.md`, `p883`).
+- 🔴 **DSH's `main/LICENSE` is `404`. Its default branch is `master`.** A pass that probed `main`
+  alone would have published *"no licence file"* on a 283,000-star MIT repository, and this KB's own
+  `NOASSERTION` logic would then have shelved it as unusable. 🔵 **Rule: resolve the default branch
+  with `git ls-remote --symref` BEFORE probing licence bytes.** `p882` added `default_branch` to the
+  measurable fields and did not yet use it for this.
+- 🟢 **This shelf now has a liveness column, and `882-G2` was a real defect** — see
+  `repos/trending.md`, this pass, for the third metadata limb (`search/commits`, `200`) and the
+  three rows whose licence cells are perfect and whose default branches are 13–22 months stale.
+
+**Previous pass (`p882`), retained:** **Pass `p882`, 2026-11-17** (twelfth pass of the day). **`p882` re-measured every row on this
 shelf first-hand and found the thing this file has asserted for 882 passes without ever measuring
 it: the permissive share RISES as you go down the stack.**
 
@@ -18,13 +36,13 @@ it: the permissive share RISES as you go down the stack.**
   and could publish no star at all ([`record`](../evidence/channel-state.2026-11-17-p882.tsv)).
 - 🔴 **Seven rows on the sell shelves have not been pushed in over twelve months**, one of them
   `stanford-oval/storm` at **31,902 ★**. Named below, because a star count is not a liveness check.
-- 🟢 **This shelf can be counted again:** **75 rows across 14 tables**, measured. It has published no
+- 🟢 **This shelf can be counted again:** **76 rows across 14 tables**, measured (🆕 `p883` adds `deepseek-ai/deepseek-harness`). It has published no
   row count since the `p871`/`p877`–`p880` rewrites, which `gate-derived-counts` reported as *"no
   table can be located"* (`881-G3`, discharged this pass).
 
 🔵 **Derived figures for this page, graded every pass** (`ingest/derive-foundations.py`,
-`Gap 544-E`): **derived shelf rows: **75****, across **14** SHELF-disposition tables, **75**
-distinct addresses and **75** systems after declared alias collapse. 🔴 The disposition
+`Gap 544-E`): **derived shelf rows: **76****, across **14** SHELF-disposition tables, **76**
+distinct addresses and **76** systems after declared alias collapse. 🔴 The disposition
 manifest was REBUILT this pass: it held **one** row, naming a `p644` heading this page no
 longer carries, so the instrument exited on stale bookkeeping and never reported that
 fifteen of sixteen tables were undeclared. `881-G2`'s cluster, third instrument.
@@ -266,7 +284,7 @@ disprove it** — Artemis (MIT, `832★`), Autolab (Apache-2.0, `808★`) and Ko
 permissive full platforms. 🟡 `2,003` extra repositories of denominator yielded these four rows,
 which is `T12` reconfirmed from the denominator side.
 
-## The foundations — 75 rows
+## The foundations — 76 rows
 
 🟢 **Derived, not asserted.** `75` distinct repositories across the **14** layer tables below,
 and the layering is the value of this file rather than an accident of its history: substrate,
@@ -294,6 +312,7 @@ repository's own licence file** over `raw.githubusercontent.com`
 
 | Repo | Licence (byte-read) | ★ | Pushed | Created | What it gives you alone |
 |---|---|---:|---|---|---|
+| 🟢 https://github.com/deepseek-ai/deepseek-harness | 🟢 **MIT** — byte-read **`master/LICENSE`** (⚠️ `main/LICENSE` is `404`), 1,065 B, `sha256₁₂ ebb4f09972ae` | **282,965** | 2026-11-17 | 2026-08-13 | **DeepSeek Harness — "Everything is a Plugin."** An MIT agent runtime with a plugin and skill system, 35,072 forks, three months old. 🟢 **NEW in `p883`, and the highest-star row on this shelf.** It is here because **`ECNU/EduWork` proves the education path**: a university took DSH and shipped a teaching distribution on it under a permissive grant. **For a Globant engagement this is the substrate you can keep** — MIT runtime, your plugins, no copyleft reach, and an existing institutional reference implementation to point a buyer at. |
 | https://github.com/apereo/cas | **Apache-2.0** (`LICENSE`) | **11,402** | 2026-11-17 | 2011-09-09 | **Central Authentication Service — the SSO layer under a large share of the world's universities.** 3,954 forks. Protocol support for CAS, SAML2, OAuth2, OIDC, WS-Fed; MFA; delegated auth. 🔵 **The highest-star permissive education-infrastructure repository in this KB, and it was never carried.** |
 | https://github.com/apereo/phpCAS | **Apache-2.0** (`LICENSE`) | 802 | 2026-06-30 | — | The PHP client — i.e. how Moodle and other PHP estates attach to CAS. 🔴 Five months since last push. |
 | https://github.com/openedx/codejail | **Apache-2.0** (`LICENSE.txt`) | 477 | 2026-11-16 | 2013-04-26 | **Secure sandboxed execution of untrusted code.** The substrate any auto-grader or code-running tutor needs, usable with no Open edX dependency. |

@@ -6,7 +6,37 @@ updated: 2026-11-17
 
 # Top AI agents — education
 
-**Pass `p882`, 2026-11-17** (twelfth pass of the day). **`p882` found that the metadata channel is
+**Pass `p883`, 2026-11-17** (thirteenth pass of the day). **`p883` ran the one action this KB has
+carried without ever executing it, and it paid: the supply the keyword legs could not find was
+behind the OWNER, not the subject.**
+
+- 🟢 **`ACTION p846-D` DISCHARGED POSITIVE.** 31 APAC and 22 LATAM organisation handles queried **by
+  name**; 218 repositories measured, 186 new to this KB
+  ([`record`](../evidence/by-name-org-sweep.2026-11-17-p883.tsv)). It produced
+  **[`ECNU/EduWork`](https://github.com/ECNU/EduWork) — 376 ★, `MulanPSL-2.0`, pushed on the day of
+  measurement** — East China Normal University's **education distribution of DeepSeek Harness**,
+  and the first APAC-origin, education-native, permissively licensed agent *platform* in this KB.
+- 🔴 **It was invisible to every query this KB has ever run, and the reason is structural: its
+  GitHub description is EMPTY.** `p876`–`p878` ran 82 `topic:`/`in:name,description` legs between
+  them and concluded *"there is no hidden shelf"*. That conclusion holds **for keyword discovery**
+  and is now bounded — the key to this shelf was the owner.
+- 🟢 **`882-G2` CLOSED, and it was a real defect.** A third metadata limb exists —
+  **`api.github.com/search/commits` is `200`** and returns **default-branch** dates. These shelves
+  now have a liveness column, and it found **three rows with perfect licence cells and default
+  branches 13–22 months stale**, including `ls1intum/Ares`, which `p878` named *"the most liftable
+  component found this pass"*.
+- 🔴 **Two false findings were caught before publication, both the same shape.** A **one-term**
+  commit probe dated `Ares` to 2022 (six terms: 2025-09-11) — `p845`'s manufactured-death class in a
+  new instrument. And DSH's `main/LICENSE` is `404` because its default branch is `master` — probing
+  `main` alone would have published *"no licence file"* on a 283,000-star MIT repository.
+- 🟡 **The eight prescribed WebSearch legs returned `0` new repositories for the fifth consecutive
+  pass**, named rather than left as silence
+  ([`record`](../evidence/websearch-legs.2026-11-17-p883.tsv)).
+
+Method, the channel table and the liveness record: `repos/trending.md` and `agents/trending.md`,
+this pass.
+
+**Previous pass (`p882`), retained:** **Pass `p882`, 2026-11-17** (twelfth pass of the day). **`p882` found that the metadata channel is
 not down — it is SPLIT, and the half that measures is up.**
 
 - 🟢 **`api.github.com/search/repositories` is `200`; `api.github.com/repos/<slug>` is `403`.**
@@ -400,13 +430,15 @@ Read this before the tables below. Measured `2026-11-17` via `api.github.com/sea
 | vulinh1704/ai-tutor-agent | **0** | MIT | 2026-11-16 | A starter template, as flagged. Confirmed by adoption. |
 | LabSirius/TutorIA | **0** | MIT | 2026-10-27 | 🟡 **Zero stars, and this one is not a weekend project** — it is a funded Colombian university deliverable. The maturity caveat below (docs-only `main`) is the operative fact; the star count corroborates that nobody outside the lab has used it. |
 | **ls1intum/Artemis** | **832** | **MIT** — byte-read `main/LICENSE` | 2026-11-17 | 🟢 **New in `p878`.** A platform, not an agent, but it is the largest permissive education *system* in this KB and it grades. Ten years old, pushed on the day of measurement, OpenSSF Scorecard + Best Practices (project 14163). See `verticals/solutions.md`. |
-| **autolab/Autolab** | **808** | **Apache-2.0** — byte-read `master/LICENSE` | 2026-11-11 | 🟢 **New in `p878`.** Carnegie Mellon's auto-graded course-management service. Created 2014-10-25. |
+| **autolab/Autolab** | **808** | **Apache-2.0** — byte-read `master/LICENSE` | `pushed_at` 2026-11-11 · 🔴 **default-branch `HEAD ≥ 2025-10-21` (~13 months)** | 🟡 **`p883` liveness correction.** Carnegie Mellon's auto-graded course-management service, created 2014-10-25. `p878` shelved it as *pushed on the day of measurement*; the push was not to the default branch. Mature and usable, **not** actively developed. |
 | **ls1intum/Apollon** | 106 | **MIT** | 2026-11-17 | 🟢 New in `p878`. UML modelling editor, standalone-capable. |
-| **ls1intum/Ares** | 27 | **MIT** | 2026-11-03 | 🟢 New in `p878`. Secure sandboxed auto-grading execution (JUnit 5). The most liftable component found this pass. |
+| **ls1intum/Ares** | 27 | **MIT** | `pushed_at` 2026-11-03 · 🔴 **default-branch `HEAD ≥ 2025-09-11` (~14 months)** | 🔴 **`p883` liveness correction.** Secure sandboxed auto-grading execution (JUnit 5). `p878` called it *"the most liftable component found this pass"* — **it is liftable, and it is not actively developed.** Lift it as a frozen component and own the maintenance, or do not lift it. (A one-term probe dated it to 2022; six terms give 2025-09-11. Published as a lower bound.) |
 | **ls1intum/edutelligence** | 17 | **MIT** | 2026-11-17 | 🟢 New in `p878`. Iris / Athena / Hyperion AI microservice suite. |
-| **ls1intum/Pyris** | 12 | **MIT** | 2026-06-03 | 🟢 New in `p878`. Standalone LLM microservice behind Iris. |
+| **ls1intum/Pyris** | 12 | **MIT** | `pushed_at` 2026-06-03 · 🔴 **default-branch `HEAD ≥ 2025-01-29` (~22 months)** | 🔴 **`p883` liveness correction.** Standalone LLM microservice behind Iris. **The stalest row on this shelf.** Treat as reference architecture, not as a dependency. |
 | **virtualryder/edu-ai-agents** | **4** | **MIT** — byte-read | 2026-10-10 | 🔴 New in `p878`. FERPA/COPPA/IDEA-504/ADA-aligned governed-agent reference. **Four stars — reference reading, not a dependency.** |
 | 🟢 `openedx/openedx-platform` | **8,240** | AGPL-3.0 — SPDX + byte-read | 2026-11-17 | 🟢 **Measured by `p879`.** `p878` listed this row as *unmeasurable* under the stale slug `openedx/edx-platform`; the `422` was a rename, not a channel hole. Created 2013-05-30, 4,382 forks. **AGPL-3.0 — the core is off-limits to a client who cannot take copyleft; its Apache-2.0 component layer is not (see `compose/patterns.md` P19).** |
+| 🟢 **`ECNU/EduWork`** | **376** (44 forks) | 🟢 **`MulanPSL-2.0`** — byte-read `main/LICENSE`, **9,233 B**, `sha256₁₂ eb7a1d713eb9`, 9 patent references | `pushed_at` 2026-11-17 · default-branch `HEAD ≥ 2026-11-17` | 🟢 **NEW in `p883`, and the find of the pass.** East China Normal University's **education distribution of DeepSeek Harness** (`deepseek-ai/deepseek-harness`, MIT, 282,965 ★ — shelved on `repos/foundations.md`, `p883`; DSH `0.2.1-rc.3`): desktop agent runtime plus a maintained education plugin set — institutional OIDC login and model access (LiteLLM OAuth), knowledge studio over local materials. Windows x64 / macOS arm64+x64. **376 ★ in nine weeks** (created 2026-09-14). Found via the owner channel; **empty GitHub description**, so invisible to all 82 prior keyword legs. |
+| 🟢 **`ECNU/EduWork-ECNU`** | **29** (6 forks) | **`MulanPSL-2.0`** | `pushed_at` 2026-11-17 | 🟢 **NEW in `p883`.** The university's own branded deployment of its own distribution — a worked example of the configure-and-brand step, not a second product. **This is the artefact to show a ministry or a university buyer.** |
 
 🟡 **How to use this column.** It separates *support burden* from *engineering quality*. A 0-star
 repo may be excellent code; it will still have no external contributors, no issue history and

@@ -1,0 +1,8 @@
+limb	probe	http	reading	note
+api.github.com/search/repositories	?q=repo:HKUDS/DeepTutor	200	UP	stars, spdx_id, pushed_at, created_at, forks, canonical full_name, default_branch, archived
+api.github.com/repos/<slug>	/repos/HKUDS/DeepTutor	403	DOWN	"not enabled for this session" - unchanged from p881/p882
+api.github.com/search/commits	?q=a+repo:<slug> (free text REQUIRED)	200	UP - NEW LIMB, never used by any prior pass	returns default-branch committer dates; qualifier-only query returns 422 with an explanatory body
+api.github.com/search/commits	?q=repo:<slug> (qualifiers only)	422	refused, NOT down	body: "Search text is required when searching commits"
+raw.githubusercontent.com	/HKUDS/DeepTutor/main/LICENSE	200	UP	grant bytes
+github.com/<slug>/commits/<branch>.atom	/HKUDS/DeepTutor/commits/main.atom	403	DOWN	the obvious liveness channel, and it is closed; search/commits is the open one
+git ls-remote --symref	HEAD	UP	UP	refs AND default-branch name - required before any raw licence probe

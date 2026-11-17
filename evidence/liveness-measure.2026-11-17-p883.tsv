@@ -1,0 +1,20 @@
+slug	shelf_pushed_at	head_lower_bound	terms_used	match_total	gap_days_approx	reading
+HKUDS/DeepTutor	2026-11-15	2026-11-15	a	893	0	agrees
+THU-MAIC/OpenMAIC	2026-11-17	2026-11-17	a	476	0	agrees
+ls1intum/Artemis	2026-11-17	2026-11-17	a	596	0	agrees
+ls1intum/Apollon	2026-11-17	2026-11-16	a,e,the,fix,update,merge	468	1	agrees
+ls1intum/edutelligence	2026-11-17	2026-11-11	a,e,the,fix,update,merge	134	6	agrees
+vishalsachdev/canvas-mcp	2026-11-17	2026-11-15	a	381	2	agrees
+CAHLR/OATutor	2026-11-17	2026-10-12	a	22	36	minor divergence
+vulinh1704/ai-tutor-agent	2026-11-16	2026-10-26	a,e,the,fix,update,merge	10	21	minor divergence
+littlecookie0722/AI-Teaching-Agent	2026-08-23	2026-08-23	a,e,the,fix,update,merge	2	0	agrees
+wwrwbs/AI_AWE	2026-07-29	2026-07-28	a,e,the,fix,update,merge	1	1	agrees
+virtualryder/edu-ai-agents	2026-10-10	2026-07-12	a,e,the,fix,update,merge	73	90	DIVERGES
+LabSirius/TutorIA	2026-10-27	2026-05-20	a	1	160	DIVERGES
+autolab/Autolab	2026-11-11	2025-10-21	a,e,the,fix,update,merge	482	386	DIVERGES - 13 months
+ls1intum/Ares	2026-11-03	2025-09-11	a,e,the,fix,update,merge	95	418	DIVERGES - 14 months; p878 called this "the most liftable component"
+ls1intum/Pyris	2026-06-03	2025-01-29	a,e,the,fix,update,merge	58	490	DIVERGES - 22 months
+AI-for-Education/pedagogy-benchmark	2026-11-16	NO_COVERAGE	a,e,the,fix,update,merge	0	-	limb returns total_count=0; repo not in the commit index. Declared unmeasurable on THIS limb, not declared dead.
+PritK99/WriteRight	2024-11-19	NO_COVERAGE	a	0	-	limb returns total_count=0; not measurable here
+ECNU/EduWork	2026-11-17	2026-11-17	a,e,the,update	-	0	agrees - new this pass
+deepseek-ai/deepseek-harness	2026-11-17	2026-11-17	a,e,the,update	-	0	agrees - new to foundations this pass

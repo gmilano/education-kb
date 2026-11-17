@@ -6,7 +6,27 @@ updated: 2026-11-17
 
 # Vertical platforms — education
 
-**Pass `p882`, 2026-11-17** (twelfth pass of the day). **`p882` measured what this file has always
+**Pass `p883`, 2026-11-17** (thirteenth pass of the day). **`p883` adds a platform class this file
+has never held: a permissively licensed, institutionally deployed AI DISTRIBUTION — not an LMS with
+AI bolted on, and not an agent, but a desktop agent runtime packaged as a school product.**
+
+- 🟢 **[`ECNU/EduWork`](https://github.com/ECNU/EduWork) — 376 ★, `MulanPSL-2.0` (bytes verified),
+  pushed 2026-11-17.** East China Normal University's education distribution of **DeepSeek
+  Harness**. It ships institutional OIDC login and model access (LiteLLM OAuth), a knowledge studio
+  over local materials, and a maintained education plugin set, for Windows and macOS. Its sibling
+  **[`ECNU/EduWork-ECNU`](https://github.com/ECNU/EduWork-ECNU)** (29 ★) is the university's own
+  branded deployment — the configure-and-brand step, already done once, in public.
+- 🟡 **Why it belongs on THIS shelf rather than on `agents/top.md` alone.** The copyleft problem
+  `p882` measured here — 38.2% copyleft, 50.9% permissive — exists because the platforms
+  institutions actually run (Moodle GPL-3.0, Open edX AGPL-3.0, OpenEduCat LGPL-3.0) predate the
+  permissive era. **EduWork is the first institution-grade education platform on this shelf whose
+  whole stack is permissive**, runtime included. It does not replace an LMS; it sits beside one.
+- 🟡 **`MulanPSL-2.0` is a new licence family here.** OSI-approved and permissive with an explicit
+  patent grant, so build-safe — but bilingual with the **Chinese text governing** and framed under
+  **Chinese law**. 🟢 Usable. 🟡 Name it in the client's legal review rather than passing it
+  silently as "Apache-like".
+
+**Previous pass (`p882`), retained:** **Pass `p882`, 2026-11-17** (twelfth pass of the day). **`p882` measured what this file has always
 asserted: the copyleft problem in education lives HERE, and almost nowhere else.**
 
 - 🔴 **This shelf is 38.2% copyleft and only 50.9% permissive** — against 6.6% copyleft and 82.9%
@@ -20,7 +40,7 @@ asserted: the copyleft problem in education lives HERE, and almost nowhere else.
 - 🔴 **A `p881` repair on this shelf is reversed:** canonical is `sudosylabs/proctor`, lower-case.
   The three addresses are re-cased; the reasoning is kept under the `p881` section below rather than
   edited away.
-- 🟢 **This shelf can be counted again:** **53 rows across 10 tables**, measured (`881-G3`).
+- 🟢 **This shelf can be counted again:** **54 rows across 11 tables**, measured (`881-G3`; 🆕 `p883` adds `ECNU/EduWork`).
 
 **Previous pass (`p879`), retained:** **Pass `p879`, 2026-11-17** (ninth pass of the day). **`p879` adds the layer this file has
 described 879 passes of systems on top of and never named: identity.**
@@ -166,6 +186,7 @@ Attaching leaves the obligation where it already was.
 
 | Address | Licence | ★ | Pushed | Role in an engagement |
 |---|---|---:|---|---|
+| 🟢 https://github.com/ECNU/EduWork | 🟢 **MulanPSL-2.0** (byte-read, 9,233 B) | 376 | 2026-11-17 | **NEW in `p883`.** A permissive education *distribution* of an MIT agent runtime (DeepSeek Harness) — the first platform on this shelf whose entire stack, runtime included, carries a permissive grant. Institutional OIDC + LiteLLM OAuth out of the box. |
 | https://github.com/apereo/cas | **Apache-2.0** | 11,402 | 2026-11-17 | the identity layer under higher education — permissive, and where AI-governance consent becomes auditable |
 | https://github.com/moodlehq/moodleapp | **Apache-2.0** | 1,006 | 2026-11-17 | a white-labelled mobile client for a GPL-3.0 server: a permissive deliverable against a copyleft platform |
 | https://github.com/ls1intum/Artemis | **MIT** | 832 | 2026-11-17 | assessment at scale without a copyleft core; still the only one on this shelf |
@@ -213,7 +234,7 @@ LCMS) — the portal and media layers clients ask for and that Moodle/Open edX d
 ERPs remain unusable — `openeducat_erp` is **LGPL**, `frappe/education`'s whole grant is a **19-byte**
 `License: GNU GPL V3` declaration.
 
-## The platforms — 53 rows
+## The platforms — 54 rows
 
 🟢 **Derived, not asserted.** `53` distinct platforms across the **11** tables below. The raw row
 count is `57`: four addresses — `apereo/cas`, `moodlehq/moodleapp`, `ls1intum/Artemis` and
@@ -229,6 +250,7 @@ section above.
 
 | Platform | Repo | Licence | Branch | Position & AI surface |
 |---|---|---|---|---|
+| 🟢 **EduWork** (ECNU) | https://github.com/ECNU/EduWork | **MulanPSL-2.0** (`LICENSE`, 9,233 B) | `main` | **NEW in `p883`. An AI-native education distribution rather than an LMS.** Built on [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (MIT, DSH `0.2.1-rc.3`); the AI surface IS the product, not a plugin. Pre-installed: institutional gateway login and model discovery (browser OIDC, LiteLLM OAuth, experimental `oidc-llm`), knowledge studio over local files, agent tools/browser/file capabilities inherited from upstream. Windows x64 · macOS arm64/x64. **Customisation path: write DSH plugins and ship a branded build — `EduWork-ECNU` is that path executed by its own authors.** 🟡 Chinese-language-first; English README present, UI localisation is work. |
 | **Moodle** | https://github.com/moodle/moodle | GPL-3.0 (`COPYING.txt`) | `main` | The most widely deployed LMS worldwide and dominant in EMEA and LATAM public education. Has a first-party AI subsystem with pluggable providers, so **AI can be added as a plugin without forking** — the cleanest copyleft-safe integration path in this file. |
 | **Open edX** | https://github.com/openedx/openedx-platform 🟢 (`p879`: renamed; `openedx/edx-platform` is the stale slug) | AGPL-3.0 | `master` | Originated at MIT and Harvard, now stewarded by the non-profit Axim Collaborative. The standard choice for large-scale MOOC and national-platform deployments. Note: the *platform* is AGPL-3.0 — the Apache-2.0 figure that circulates in listicles refers to satellite repos such as `openedx-aspects`, not to `edx-platform`. Verified this run. |
 | **Canvas LMS** | https://github.com/instructure/canvas-lms | AGPL-3.0 | `master` | Dominant in North American higher education. The open-source edition carries core LMS function; some commercial features are withheld. AGPL. |

@@ -4,6 +4,73 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p883`) — **the keyword legs nilled for a fifth pass and the by-name channel paid on its first run: `ECNU/EduWork`, an APAC university's education distribution of DeepSeek Harness, 376 ★, permissive, and invisible to every query this KB has ever run**
+
+🔵 **`ACTION p846-D` was carried for the first time since `p846` and is DISCHARGED POSITIVE.** The
+action said: *"Run one APAC-origin supply leg by NAME — Korean, Japanese and Vietnamese university
+and ministry GitHub organisations — rather than by keyword."* It had never been run. It was run this
+pass, over **31 APAC handles and 22 LATAM handles**
+([`record`](../evidence/by-name-org-sweep.2026-11-17-p883.tsv)), and it produced the first
+APAC-origin, education-native, permissively licensed agent **platform** this KB has found.
+
+| Finding | Measurement |
+|---|---|
+| APAC handles queried by name | **31** — 21 resolved `200`, **10 returned `422` (the organisation does not exist)** |
+| LATAM handles queried by name | **22** — 4 resolved `200`, **18 returned `422`** |
+| Repositories measured | **218** |
+| New to this KB | **186** (85.3%) |
+| New **and** education-keyword | **5** |
+| New, education-keyword **and** permissive | **1 — `ECNU/EduWork`** |
+
+### 🟢 The find, verified first-hand before it was written
+
+**[`ECNU/EduWork`](https://github.com/ECNU/EduWork) — 376 ★, 44 forks, `MulanPSL-2.0`, created
+2026-09-14, pushed 2026-11-17.** East China Normal University — one of China's six central normal
+(teacher-training) universities. Licence read as **bytes**, per this KB's own rule that `spdx_id`
+screens and bytes decide: `main/LICENSE`, **9,233 B**, `sha256₁₂ eb7a1d713eb9`, opening
+`木兰宽松许可证, 第2版` / *Mulan Permissive Software License, Version 2*, **9 patent references**.
+
+What it is, from its own README: **`基于 DSH 的教育发行版` — an education distribution built on
+[DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH `0.2.1-rc.3`)**, shipping a
+desktop agent runtime plus a maintained plugin set for teaching, research and administration.
+Pre-installed plugins include **institutional login and model access** (browser OIDC against a
+school gateway, LiteLLM OAuth, experimental `oidc-llm`) and a knowledge studio over local
+materials. Windows x64 and macOS arm64/x64. Project site `ecnu.github.io/EduWork`.
+
+**[`ECNU/EduWork-ECNU`](https://github.com/ECNU/EduWork-ECNU) — 29 ★, 6 forks, `MulanPSL-2.0`,
+pushed 2026-11-17.** The university's own branded deployment of its own distribution, and
+therefore a worked example of the configure-and-brand step rather than a second product.
+
+### 🔴 Why five passes of keyword legs could not see it
+
+**`ECNU/EduWork` has no GitHub description — the field is empty.** `p878` ran 44 English legs and
+12 Spanish/Portuguese legs; `p877` ran 16 star-ranked legs; `p876` ran 10. Every one of those legs
+was `topic:` or `in:name,description`. A repository with an empty description and a name that is a
+portmanteau rather than a keyword (`EduWork`, not `education` or `tutor`) is **structurally
+invisible** to all of them. It is not that those passes looked in the wrong place; the instrument
+cannot see this class of repository at all.
+
+🔵 **This is the supply-side counterpart to `T12`.** `p876` and `p877` concluded *"there is no
+hidden shelf"* from keyword discovery. That conclusion was sound **for keyword discovery** and is
+now bounded: there was a hidden shelf, and the key to it was the owner, not the subject.
+
+### 🟡 A new licence family on this KB's shelves: `MulanPSL-2.0`
+
+Mulan Permissive Software License v2 is **OSI-approved and permissive**, with an explicit patent
+grant — functionally comparable to Apache-2.0 for build purposes. Two things a proposal must say
+anyway: the authoritative text is **bilingual Chinese/English with the Chinese governing**, and
+disputes are framed under **Chinese law**. 🟢 **Build-safe. 🟡 Not boilerplate-identical to
+Apache-2.0, so it needs a named line in a client's legal review rather than a silent pass.**
+
+### 🟡 The eight prescribed WebSearch legs: `0` new repositories, fifth consecutive pass
+
+Recorded as a nil with the legs named, not as silence
+([`record`](../evidence/websearch-legs.2026-11-17-p883.tsv)). Every repository the legs named —
+`OpenHands`, `MetaGPT`, `SWE-agent`, `CrewAI`, `OpenClaw`, `Hermes`, `DeepTutor`, `OpenMAIC`,
+`ai-engineering-hub`, `os-taxonomy`, `OpenEduCat`, `frappe/education`, `GegoK12`, `Fedena`,
+`openSIS`, `Gibbon`, `SchoolTool` — was already held. 🔵 **The method finding of this pass is that
+the new supply came from the owner channel while the keyword channel nilled in the same hour.**
+
 ## 🟢 `2026-11-17` (`p882`) — **the metadata channel was never down, only SPLIT: `search` is `200` while `/repos/` is `403`, so all 143 shelved repositories were re-measured — and the first thing that measurement did was reverse a `p881` repair**
 
 🔵 **Channel state, measured before anything was written**

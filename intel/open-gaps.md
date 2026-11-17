@@ -4,6 +4,158 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🆕 `p883` · 2026-11-17 — **`5` gaps. `882-G2` CLOSED with a limb no pass had tried and the defect it was built to find CONFIRMED on 3 rows; `882-G3` ANSWERED rather than carried, by building the channel it asked for and measuring that the channel FAILS for LATAM; `882-G4` DISCHARGED by declaring seven limbs with their probes. `ACTION p846-D`, carried since `p846` and never run, EXECUTED and PAID**
+
+🔵 **The suite's standing RED, reported per `ACTION p850-D`.** `make hooks` ran twice this pass:
+**55/74 green** mid-pass and **57/74 green** at close. 🟢 **The two that went green are `p883`'s own
+repairs** — `gate-derived-counts` and `gate-header-signature`, both reddened by this pass's edits and
+both fixed before commit (see `883-G5`). 🔴 **The remaining 16 are the standing set**, unchanged and
+not caused by this pass: `grep -iE 'p883|EduWork|deepseek-harness|MulanPSL'` over the full gate log
+returns **`0` lines**. `gate-action-answered`'s two failures are `p421`–`p423` regressions pinned
+OPEN by design (`frappe/lms` absent from the platform vocabulary; the `canvas` tier conflation).
+
+### 🔴 `883-G1` — the owner channel's inputs were GUESSED, so "the region was covered" is not a claim this pass can make
+
+🟢 **The probe, and it is the pass's own headline instrument.** 53 `user:<handle>` queries
+([`register`](../evidence/by-name-handles.2026-11-17-p883.tsv)):
+`awk -F'\t' 'NR>1{t[$1]++; if($3==422) f[$1]++}'` gives **APAC 31 queried / 10 × `422`** and
+**LATAM 22 queried / 18 × `422` (82%)**.
+
+🔴 **Every handle was invented by this pass from an institution's name.** `kerisorg`, `u-tokyo`,
+`titech`, `mext-japan`, `kaist-ai`, `moet-vn`, `ntu-sg`, `nptel`, `anu-cecs` — nine of the ten APAC
+refusals are spelling guesses at organisations that may well exist under another handle. **A `422`
+measures the guess, not the institution.** `ECNU` resolved and paid; `u-tokyo` did not resolve and
+proves nothing about the University of Tokyo.
+
+🔵 **Why this matters more than it looks.** `T21` now states that owner discovery beats keyword
+discovery, and `intel/market.md` states that LATAM's named institutions publish no public code.
+**Both claims rest on a handle list with an 82% refusal rate in the region the stronger claim is
+about.** The LATAM finding is still the best available reading — four resolved handles returned six
+repositories and zero education agents — but it is a finding about *guessable handles*, and it must
+not harden into *"LATAM publishes nothing"* without a sourced register.
+
+🟢 **Acceptance test for the next pass.** Build the handle register from a **primary** source — the
+institution's own website, its UNESCO Observatory listing, a `gh api search/users` lookup by display
+name — and re-run. The gap closes when the APAC and LATAM refusal rates are **properties of the
+institutions rather than of this KB's spelling**.
+
+### 🔴 `883-G2` — the shelf gate's grant classifier returns "no recognised licence title" on this pass's own best find, and two OTHER classifiers in this repository already know the answer
+
+🟢 **The probe, run on real bytes.** `classify_grant.classify()` from
+`compose/code/p228-shelf-gate/` — the classifier wired into the gate that guards the shelves — was
+run against `ECNU/EduWork`'s actual `LICENSE` payload (9,233 B, `sha256₁₂ eb7a1d713eb9`):
+
+```
+classify(bytes) -> (None, None, 'no recognised licence title')
+```
+
+🔴 **That is a FALSE ABSENCE on an OSI-approved permissive licence**, and it is `T14`'s exact class:
+*"`NOASSERTION` is not a licence finding, and treating it as one creates false absences."* `p877`
+caught this KB publishing a false *permissive* (PageLM); this is the mirror — a real permissive
+grant the instrument cannot see.
+
+🟡 **And the knowledge is already in this repository, in the wrong module.**
+`grep -ril 'mulan' compose/code/` returns **three** hits:
+`p125-retraction-cue/permissiveness.py` scores `MulanPSL-2.0` explicitly (`: 2`) and carries the
+regex `Mulan Permissive Software License`; `p122-prose-licence-census/classify_licence.py` carries
+the same regex. **`p228-shelf-gate/classify_grant.py` — the only one the gate runs — does not.**
+
+🔵 **Diagnosis, so the fix is not mis-aimed.** The failure is not the Chinese text. The English
+title *is* present in the payload (3 occurrences) and the two other modules' case-insensitive
+regexes would match it. `classify_grant.py`'s title table simply has no Mulan row.
+
+🟢 **Acceptance test.** Add the profile to `classify_grant.py`, with a control asserting the
+EduWork payload resolves to `MulanPSL-2.0`, **and** a negative control asserting a Mulan payload is
+not read as Apache-2.0. 🔴 **The structural finding is the one to carry: this base has THREE licence
+classifiers of differing capability, and the gate runs the weakest.** That is `T13` (propagation) in
+the instrument layer.
+
+### 🟡 `883-G3` — the liveness figure is a lower bound over six hand-picked words, and two rows have no coverage at all
+
+🟢 **The probe.** `api.github.com/search/commits?q=<text>+repo:<slug>` requires free text, so it
+returns *the newest default-branch commit whose message contains that text*. Measured over
+`a,e,the,fix,update,merge` on 19 rows
+([`record`](../evidence/liveness-measure.2026-11-17-p883.tsv)).
+
+🔴 **The term set changes the answer, and this pass nearly published two false deaths.** One term
+(`a`) dated `ls1intum/Ares` to **2022-10-14**; six terms give **2025-09-11** — a ~3-year
+fabrication. `autolab/Autolab`: `2025-02-02` → `2025-10-21`. 🔵 **This is `p845`'s
+manufactured-death class arriving through a new instrument**, and the only reason it was caught is
+that the bound was re-run with more terms before publication.
+
+🟡 **Nobody knows where the bound converges.** Six terms were chosen by this pass, not derived. The
+honest reading of every liveness figure now on the shelves is **`HEAD ≥ date`**, and that is how
+they are written.
+
+🔴 **Two rows return `total_count=0` on every term** — `AI-for-Education/pedagogy-benchmark` and
+`PritK99/WriteRight` are **not in the commit index**. Recorded as **unmeasurable on this limb**, not
+as dead. (`pedagogy-benchmark`'s staleness stands on `p876`'s separate evidence, not on this.)
+
+🟢 **Acceptance test.** Add terms until the bound stops moving on a control set of 5 rows with known
+HEADs, and record the convergent term count. If it does not converge, the limb reports **ranges**
+and the shelves say so.
+
+### 🟡 `883-G4` — `882-G2` is closed as a method and only 3 rows deep as a shelf
+
+🟢 **What closed.** `882-G2` asked for a liveness column; the limb now exists, and the defect it
+predicted was **real and worse than stated** — three rows with accurate licence cells and default
+branches **13, 14 and 22 months** stale, including `ls1intum/Ares`, which `p878` recommended as
+*"the most liftable component found this pass"*.
+
+🔴 **What did not close.** **19 of 143 shelved addresses were measured.** The remaining 124 still
+carry `pushed_at` alone, which this pass has just demonstrated overstates liveness by up to 22
+months on exactly the mature institutional rows this KB most often recommends.
+`grep -c '^|' agents/top.md` → the shelves were not re-columned; three cells were annotated in
+prose.
+
+🟢 **Acceptance test.** Run the limb over all 143 sell-shelf addresses in one sweep and add
+`HEAD ≥` as a real column, with the 6-term lower-bound rule and `NO_COVERAGE` where the index is
+empty. 🔵 **Cost is the binding constraint, not method:** unauthenticated search is ~10 queries/min
+and 6 terms × 143 rows is ~86 minutes — so this is the pass where `ACTION p845-A` (authenticate the
+search channel) stops being tidy and becomes the thing that unblocks a shelf-wide column.
+
+### 🔴 `883-G5` — this pass reddened two green gates with its own edits, and found out by running them rather than by being told
+
+🟢 **The probe, and the order it happened in.** `make gate-derived-counts` after the file writes:
+**4 RED sub-checks, all four caused by `p883`** — `compose/patterns.md` claimed 23 against 24
+derived; `agents/top.md` carried a table with `github.com` rows and no declared signature;
+`repos/foundations.md` claimed 75 against 76; `verticals/solutions.md` claimed 53 against 54.
+
+🔵 **The causes are worth naming, because two are invisible on reading.** The patterns miscount was
+a **line break inside the count marker** — `🔵 derived\nrecipes: **24**` — so the gate's regex fell
+through to `p882`'s retained `derived recipes: **23**`. The signature failure was a **column rename**
+(`Last push` → `Last push / 🆕 liveness`) plus one inline `github.com` link in a new cell. Neither
+is a content error; both are **presentation changes that silently de-count a shelf**.
+
+🔴 **`p882` had just brought `gate-derived-counts` green for the first time since `p718`, and this
+pass broke it within one file write.** All four are repaired and both gates verified green
+(`exit=0`).
+
+🟢 **The rule this earns.** `ACTION p849-A` says a pass must read the gate before it commits.
+`p883` adds the narrower one that would have caught all four: **a pass that adds a shelf row or
+edits a count marker runs `gate-derived-counts` BEFORE it writes prose about what it added** — the
+row count and the header claim are written in the same edit, or the gate catches it at commit time
+instead of at authoring time. 🔵 **Count markers must also be single-line**: a line break inside one
+is indistinguishable, to the gate, from the marker being absent.
+
+### 🟢 The gaps `p883` DISCHARGED, with their measurements
+
+| Gap / action | Disposition | Measurement |
+|---|---|---|
+| **`ACTION p846-D`** (carried since `p846`, never run) | 🟢 **DISCHARGED POSITIVE** | 31 APAC handles by name → **`ECNU/EduWork`**, 376 ★, `MulanPSL-2.0`, byte-verified, pushed on the day of measurement; plus `EduWork-ECNU` and the MIT substrate `deepseek-ai/deepseek-harness` (282,965 ★). **The 4-pass APAC supply nil was an instrument artefact** (`T21`) |
+| **`882-G2`** (no liveness column) | 🟢 **CLOSED as method, `883-G4` carries the depth** | Third limb found (`search/commits`, `200`); 19 rows measured; **3 divergences of 13–22 months**, one of them on a row `p878` recommended |
+| **`882-G3`** (LATAM needs a channel, not a query) | 🟢 **ANSWERED, negative, and more useful than a nil** | The channel was built and run: 22 LATAM handles, **18 × `422`**, 6 repositories, 0 education agents. **CENIA, Ceibal, Cetic.br, ProFuturo, Fundación Santillana — named by UNESCO's own LAC Observatory — have no discoverable GitHub organisation.** Engagement consequence recorded in `intel/market.md`. 🔴 Bounded by `883-G1` |
+| **`882-G4`** (a channel declaration must name the LIMB) | 🟢 **DISCHARGED** | Seven limbs declared, each with its probe ([`record`](../evidence/channel-state.2026-11-17-p883.tsv)). **Two new facts the earlier declarations hid:** `search/commits` is `200` (no pass had tried it), and the commits **atom** feed — the obvious liveness channel — is `403` |
+| **`881-G2`** (rewrite habit loses claims) | 🟡 **respected, not discharged** | Both trending files were **prepended**, not rewritten; `agents/trending.md` 85,369 lines and `repos/trending.md` retain full history below the `p883` section |
+
+🔵 **One repair of a prior pass's reasoning, not of its data.** `p876`/`p877` concluded *"there is no
+hidden shelf"* from keyword discovery. That conclusion was sound **for its instrument** and is now
+bounded rather than overturned: the shelf was real, and the key to it was the **owner**, not the
+subject. 🟢 **`p883` also records the counter-discipline this cost:** both of this pass's
+near-misses — the one-term liveness probe and the `main/LICENSE` `404` on a `master`-branch
+repository — were **an instrument's default assumption about to be published as a property of the
+repository.** Both were caught by re-running the probe differently before writing.
+
 ## 🆕 `p882` · 2026-11-17 — **`4` gaps. `881-G3` DISCHARGED with its acceptance test run and its second limb REFUSED by measurement; `881-G5` CLOSED on the declare-unreachable branch; `881-G1`, `881-G2` and `881-G4` CARRIED, two of them with new evidence and one of them extended. `gate-derived-counts` is GREEN for the first time since `p718`**
 
 🟢 **The honest summary before the entries.** `p882` closed two gaps, repaired three instruments,

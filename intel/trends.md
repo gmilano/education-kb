@@ -6,7 +6,12 @@ updated: 2026-11-17
 
 # Current trends — education AI
 
-**Pass `p882`, 2026-11-17** (twelfth pass of the day). `p882` adds **T20** — the permissive share of
+**Pass `p883`, 2026-11-17** (thirteenth pass of the day). `p883` adds **T21** — keyword discovery
+and owner discovery return **disjoint** supply, and the five-pass nil was an instrument artefact, not
+an empty market — and **T22**: `pushed_at` is not liveness, measured at up to 22 months of divergence
+on this KB's own recommended rows. 🔵 **Derived trends: **22**.**
+
+**Previous pass (`p882`), retained:** **Pass `p882`, 2026-11-17** (twelfth pass of the day). `p882` adds **T20** — the permissive share of
 education open source is **a function of the layer, not of the vertical**, measured across 173
 shelved addresses for the first time — and it closes `881-G3` by replacing a presentation check
 that had been masquerading as a structural one. 🔵 **Derived trends: **20**.**
@@ -1022,6 +1027,68 @@ repositories chosen *by this KB* for client-facing shelves, so it measures the p
 **curated** estate and not of the vertical's whole population. `T12`'s long tail of zeroes and
 `T10`'s unlicensed Global South supply are the population-level statements, and they disagree with
 this one in exactly the way a curated sample should.
+
+## T21 — Discovery by OWNER and discovery by SUBJECT return disjoint supply, and this KB spent five passes on the wrong one — new in `p883`
+
+🔵 **The claim.** In education, a keyword query and an owner query do not find the same
+repositories, and the gap is not a matter of ranking — it is **structural**. A repository with an
+empty `description` field and a name that is a portmanteau rather than a keyword is **invisible to
+every `topic:` and `in:name,description` query that can be written**, at any star count, forever.
+
+🟢 **Measured.** `p876` ran 10 star-ranked discovery legs, `p877` 16, `p878` 56 (44 English + 12
+Spanish/Portuguese). All keyword-shaped. `p876` and `p877` concluded *"there is no hidden shelf"*.
+`p883` ran **53 owner-shaped legs** (`user:<handle>`, 31 APAC + 22 LATAM) and found
+[`ECNU/EduWork`](https://github.com/ECNU/EduWork) — **376 ★ in nine weeks, `MulanPSL-2.0`, an
+education distribution of DeepSeek Harness, pushed on the day of measurement**
+([`record`](../evidence/by-name-org-sweep.2026-11-17-p883.tsv)).
+
+**`EduWork`'s GitHub description is empty.** That single missing field is why 82 keyword legs across
+three passes could not see a 376-star education platform.
+
+| Channel | Legs run | New education agents found |
+|---|---:|---:|
+| Keyword (`topic:`, `in:name,description`) — `p876`, `p877`, `p878`, and the 8 prescribed legs of `p880`–`p883` | **82+** | **0 in the last 5 passes** |
+| Owner (`user:<handle>`) — `p883`, first run | **53** | **1 permissive platform + its institutional deployment + 1 MIT substrate (DSH)** |
+
+🔴 **The correction this forces on T12 and T13.** `T12` says open-source education AI is *"a few
+projects and a long tail of zeroes"*. That remains true of what keyword discovery can see, and is
+now **bounded by instrument** rather than stated as a property of the vertical. `p876`'s *"there is
+no hidden shelf"* was a sound conclusion from an instrument that cannot resolve this class.
+
+🟢 **The operational rule.** **Discover institutions by name, not subjects by keyword.** An
+education buyer is an institution; institutions publish under their own handle; and the thing worth
+finding — a university that already shipped the product your client wants — is named after itself,
+not after its category. 🔵 **Cheap corollary:** `422` from `user:<handle>` means the organisation
+does not exist, which is itself a measurement (`p883`: 10 of 31 APAC handles, 18 of 22 LATAM —
+[`register`](../evidence/by-name-handles.2026-11-17-p883.tsv)).
+
+## T22 — `pushed_at` is not liveness, and the divergence is largest on exactly the institutional repos this KB recommends — new in `p883`
+
+🔵 **The claim.** `pushed_at` records a push to **any** ref — a dependency bot on a side branch, a
+tag, a fork-sync. The question an engagement actually asks is whether the **default branch** moves.
+On mature, multi-branch, institutionally maintained repositories these two numbers diverge by
+**more than a year**, and the direction of the error is always flattering.
+
+🟢 **Measured on 19 shelved rows** ([`record`](../evidence/liveness-measure.2026-11-17-p883.tsv)),
+using a limb no prior pass had tried — `api.github.com/search/commits`, `200`, which returns
+default-branch committer dates:
+
+| Repo | `pushed_at` says | Default branch `HEAD ≥` | Gap |
+|---|---|---|---|
+| `ls1intum/Pyris` | 2026-06-03 | **2025-01-29** | **~22 months** |
+| `ls1intum/Ares` | 2026-11-03 | **2025-09-11** | **~14 months** |
+| `autolab/Autolab` | 2026-11-11 | **2025-10-21** | **~13 months** |
+
+🔴 **`ls1intum/Ares` is the expensive case: `p878` named it "the most liftable component found this
+pass"** on the strength of a `pushed_at` three weeks old. It is liftable — and its default branch
+has not moved in fourteen months. **The recommendation was not wrong; it was unqualified.**
+
+🟡 **12 of 19 rows agreed within six days**, so this is a defect in a specific row class — mature
+institutional projects with busy side branches — not a general indictment of the shelves. 🔵 **The
+rule: a shelf row carries both numbers, or it carries neither.** And a liveness figure from a
+text-filtered index is a **lower bound** published with its term set (see `repos/trending.md`,
+`p883`: a one-term probe dated `Ares` to 2022 and would have published a three-year false death —
+`p845`'s manufactured-death class in a new instrument).
 
 ## T19 — The red gates were holding the supply the search channel could not find — new in `p881`
 

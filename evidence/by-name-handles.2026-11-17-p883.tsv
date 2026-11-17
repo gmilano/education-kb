@@ -1,0 +1,54 @@
+region	handle_queried	http	total_count	resolved
+APAC	keris	200	15	yes
+APAC	kerisorg	422	-	no - organisation does not exist
+APAC	u-tokyo	422	-	no - organisation does not exist
+APAC	UTokyo	422	-	no - organisation does not exist
+APAC	titech	422	-	no - organisation does not exist
+APAC	kyoto-u	200	9	yes
+APAC	nii-cloud	200	6	yes
+APAC	mext-japan	422	-	no - organisation does not exist
+APAC	kaist	200	15	yes
+APAC	kaist-ai	422	-	no - organisation does not exist
+APAC	snu	200	1	yes
+APAC	snuailab	200	9	yes
+APAC	naver	200	274	yes
+APAC	naver-ai-hackathon	200	6	yes
+APAC	moet-vn	422	-	no - organisation does not exist
+APAC	vnu	200	31	yes
+APAC	hust	200	0	yes - exists, no public repos
+APAC	nus	200	39	yes
+APAC	NUS-HPC-AI-Lab	200	36	yes
+APAC	ntu-sg	422	-	no - organisation does not exist
+APAC	moe-sg	200	30	yes
+APAC	THUDM	200	128	yes
+APAC	OpenBMB	200	92	yes
+APAC	zjunlp	200	112	yes
+APAC	ECNU	200	20	yes - YIELDED EduWork + EduWork-ECNU
+APAC	iitb	200	1	yes
+APAC	IITMadras	200	0	yes - exists, no public repos
+APAC	nptel	422	-	no - organisation does not exist
+APAC	unimelb	200	10	yes
+APAC	anu-cecs	422	-	no - organisation does not exist
+APAC	cccties	200	5	yes
+LATAM	ceibal	422	-	no - organisation does not exist (named by UNESCO LAC Observatory)
+LATAM	CeibalEduca	422	-	no - organisation does not exist
+LATAM	cenia	422	-	no - organisation does not exist (named by UNESCO LAC Observatory)
+LATAM	cenia-chile	422	-	no - organisation does not exist
+LATAM	cetic-br	422	-	no - organisation does not exist (named by UNESCO LAC Observatory)
+LATAM	nic-br	422	-	no - organisation does not exist
+LATAM	TecdeMonterrey	200	3	yes (named by UNESCO LAC Observatory)
+LATAM	tecnologicodemonterrey	422	-	no - organisation does not exist
+LATAM	unam	200	2	yes
+LATAM	unam-mx	422	-	no - organisation does not exist
+LATAM	usp	422	-	no - organisation does not exist
+LATAM	ufmg	200	1	yes
+LATAM	profuturo	422	-	no - organisation does not exist (named by UNESCO LAC Observatory)
+LATAM	ProFuturoEdu	422	-	no - organisation does not exist
+LATAM	FundacionSantillana	422	-	no - organisation does not exist (named by UNESCO LAC Observatory)
+LATAM	mineduc-cl	422	-	no - organisation does not exist
+LATAM	mineducacion	200	0	yes - exists, no public repos
+LATAM	SEP-Mexico	422	-	no - organisation does not exist
+LATAM	educacionar	422	-	no - organisation does not exist
+LATAM	inep-br	422	-	no - organisation does not exist
+LATAM	fundacionkarisma	422	-	no - organisation does not exist
+LATAM	LatamGPT	422	-	no - organisation does not exist

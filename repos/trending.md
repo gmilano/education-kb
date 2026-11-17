@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p883`) — **a third metadata limb exists and no pass has ever used it: `search/commits` returns default-branch dates, which gives these shelves their first LIVENESS column — and the first thing it measured was three rows whose licence cells are perfect and whose default branches are a year stale**
+
+🔵 **Channel state, probed before anything was written**
+([`record`](../evidence/channel-state.2026-11-17-p883.tsv)). `p882` found the metadata channel
+**split** — `search/repositories` `200`, `/repos/<slug>` `403` — and worked within that. `p883`
+probed the limbs `p882` did not, and the declaration now names **seven**, each with the exact probe
+that produced it (`882-G4`):
+
+| Limb | Probe | Result | Reading |
+|---|---|---|---|
+| `api.github.com/search/repositories` | `?q=repo:<slug>` | **`200`** | UP — stars, SPDX, `pushed_at`, `created_at`, forks, `default_branch`, `archived` |
+| `api.github.com/search/commits` | `?q=<text>+repo:<slug>` | **`200`** | 🟢 **UP — NEW. Default-branch committer dates.** No prior pass has used this limb |
+| `api.github.com/search/commits` | `?q=repo:<slug>` (qualifiers only) | `422` | **refused, not down** — body: *"Search text is required when searching commits"* |
+| `api.github.com/repos/<slug>` | `/repos/HKUDS/DeepTutor` | `403` | DOWN — unchanged |
+| `github.com/<slug>/commits/<branch>.atom` | `/commits/main.atom` | `403` | DOWN — **the obvious liveness channel is the closed one** |
+| `raw.githubusercontent.com` | `/<slug>/<branch>/LICENSE` | `200` | UP — grant bytes |
+| `git ls-remote --symref` | `HEAD` | UP | UP — refs **and the default-branch name** |
+
+### 🔴 The one-term probe MANUFACTURES staleness, and it nearly published two false deaths
+
+`search/commits` requires free text, so it returns *the newest default-branch commit whose message
+matches that text* — a **lower bound** on activity, not the HEAD date. Run with a single term, it
+lies in the pessimistic direction:
+
+| Repo | 1 term (`a`) | 6 terms (`a,e,the,fix,update,merge`) | Error the one-term probe would have published |
+|---|---|---|---|
+| `ls1intum/Ares` | `2022-10-14` | **`2025-09-11`** | **~3 years of false death** |
+| `autolab/Autolab` | `2025-02-02` | **`2025-10-21`** | ~8 months of false death |
+
+🔵 **This is `p845`'s manufactured-death failure class, arriving through a new instrument.** `p845`
+amended `ACTION p844-B` after its own first full run produced four fabricated deaths. The rule that
+survives both: **a liveness number from a text-filtered index is a lower bound, is published as one,
+and carries its term set.** Every figure below is `HEAD ≥ date`, over six terms.
+
+### 🔴 What the new column found: three shelf rows whose licence cell is right and whose liveness claim is a year out
+
+`882-G2` said *"a row can go eighteen months stale with a perfectly accurate licence cell"* and
+asked for a liveness column. It was a real defect, not a tidy-up
+([`record`](../evidence/liveness-measure.2026-11-17-p883.tsv)):
+
+| Repo | Shelf `pushed_at` | Default-branch `HEAD ≥` | Gap | Consequence |
+|---|---|---|---|---|
+| **`ls1intum/Pyris`** | 2026-06-03 | **2025-01-29** | **~22 months** | Shelved as the standalone LLM microservice behind Iris |
+| **`ls1intum/Ares`** | 2026-11-03 | **2025-09-11** | **~14 months** | 🔴 **`p878` called this "the most liftable component found this pass."** It is liftable and it is **not** actively developed |
+| **`autolab/Autolab`** | 2026-11-11 | **2025-10-21** | **~13 months** | CMU's auto-grader, shelved in `p878` as pushed-on-the-day-of-measurement |
+| `LabSirius/TutorIA` | 2026-10-27 | 2026-05-20 | ~5 months | corroborates the existing zero-adoption verdict |
+| `virtualryder/edu-ai-agents` | 2026-10-10 | 2026-07-12 | ~3 months | reference reading, as already stated |
+
+🔵 **`pushed_at` counts a push to ANY branch** — a dependency-bot commit on a side branch, a tag, a
+fork-sync. The three divergences above are all of that shape. **12 of 19 rows agreed within 6 days**,
+so this is not a blanket indictment of the shelves; it is three specific rows, now carrying both
+numbers.
+
+🟡 **Two rows the limb cannot measure, declared rather than inferred.**
+`AI-for-Education/pedagogy-benchmark` and `PritK99/WriteRight` both return `total_count=0` on every
+term — they are **not in the commit index**. That is **unmeasurable on this limb**, which is not
+evidence of death and is not recorded as such. (`pedagogy-benchmark`'s staleness is separately
+established by `p876` and stands on that evidence, not on this.)
+
+### 🟢 `deepseek-ai/deepseek-harness` belongs on a foundations shelf, and has never been on one
+
+**282,965 ★, 35,072 forks, MIT, created 2026-08-13, pushed 2026-11-17.** Licence read as bytes:
+**`master/LICENSE`, 1,065 B, `sha256₁₂ ebb4f09972ae`**, `MIT License` / `Copyright (c) 2026 DeepSeek`.
+This KB's trending history mentions the name; **no curated shelf has ever carried it.**
+`ECNU/EduWork` is the reason it now must: an education distribution of DSH exists, so DSH is an
+education substrate whether or not it was built as one.
+
+🔴 **And a second probe-manufactured error, caught in the same hour as the first.** DSH's
+`main/LICENSE` is **`404`** — its default branch is **`master`**. A pass that probed `main` alone
+would have published *"no licence file"* on a 283,000-star MIT repository, and `NOASSERTION` logic
+would have shelved it as unusable. **Rule: resolve the default branch with
+`git ls-remote --symref` BEFORE probing licence bytes.** Both of this pass's near-misses are the
+same shape — an instrument's default assumption published as a property of the repository.
+
 ## 🟢 `2026-11-17` (`p882`) — **173 shelved addresses re-measured first-hand, and the permissive share turns out to be a function of the LAYER: 82.9% at the substrate, 50.9% at the platforms institutions actually run**
 
 🟢 **The census.** All 146 addresses written on `agents/top.md`, `repos/foundations.md` and

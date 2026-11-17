@@ -1,0 +1,9 @@
+leg	query	region_scope	repos_named	new_repositories	outcome
+1	top open source AI agents education 2026 github MIT	Global	OpenHands, MetaGPT, SWE-agent, CrewAI, OpenClaw, Hermes, 500-AI-Agents-Projects, awesome-ai-agents-2026, LLMs-from-scratch	0	all held in trending history; no education-native agent ranked by any source
+2	github trending education AI 2026	Global	HKUDS/DeepTutor, THU-MAIC/OpenMAIC, patchy631/ai-engineering-hub, withmarbleapp/os-taxonomy	0	all four already held; star figures disagree across snapshots and are lower than this KB's own measurements
+3	open source platform education ERP CRM MIT Apache student information system	Global	OpenEduCat, frappe/education, GegoK12, Fedena, openSIS, Gibbon, SchoolTool	0	all held; SchoolTool reconfirmed discontinued
+4	AI education industry trends 2026	Global	none	0	no repositories; policy/market prose only
+5	AI education North America 2026 adoption regulation players	North America	none	0	policy instruments only - 8 new dated items, filed in intel/market.md
+6	AI education EMEA Europe 2026 adoption regulation players	EMEA	none	0	policy instruments only - Council 14902/26 and Digital Omnibus dates, filed in intel/market.md
+7	AI education APAC Asia Pacific 2026 adoption regulation players	APAC	none	0	policy instruments only - Korea AI Basic Act, Vietnam AI Law + MOET Decision 2422, filed in intel/market.md
+8	AI education LATAM Latin America 2026 adoption regulation players	LATAM	none	0	no repositories, but yielded the INSTITUTION NAMES that seeded the by-name channel test; UNESCO LAC Observatory membership
