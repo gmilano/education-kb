@@ -1,0 +1,572 @@
+org	full_name	stars	spdx	pushed	created	archived	language	description
+openedx	openedx/openedx-platform	8240	AGPL-3.0	2026-11-17	2013-05-30	False	Python	The Open edX LMS & Studio, powering education sites around the world!
+openedx	openedx/codejail	477	Apache-2.0	2026-11-16	2013-04-26	False	Python	Secure code execution
+openedx	openedx/XBlock	471	Apache-2.0	2026-11-16	2013-03-11	False	Python	Framework for building custom learning components that run in the Open edX LMS!
+openedx	openedx/paragon	141	Apache-2.0	2026-11-17	2017-04-27	False	JavaScript	💎 An accessible, theme-ready design system built for learning applications and Open edX.
+openedx	openedx/frontend-app-learning	71	AGPL-3.0	2026-11-16	2019-04-30	False	JavaScript	Front-end for the Open edX course experience, implemented using React and Paragon.
+openedx	openedx/edx-proctoring	69	AGPL-3.0	2026-11-17	2015-06-08	False	Python	
+openedx	openedx/xblock-sdk	69	Apache-2.0	2026-11-16	2014-03-06	False	JavaScript	Workbench and example xblocks
+openedx	openedx/edx-ora2	64	AGPL-3.0	2026-11-13	2013-12-23	False	Python	Open Response Assessment Suite
+openedx	openedx/event-tracking	63	AGPL-3.0	2026-11-17	2013-09-16	False	Python	a system for tracking events
+openedx	openedx/course-discovery	59	AGPL-3.0	2026-11-16	2015-11-09	False	Python	Service providing access to consolidated course and program metadata
+openedx	openedx/edx-lint	52	Apache-2.0	2026-11-16	2015-01-29	False	Python	Custom tooling for pylint and other repo management tools
+openedx	openedx/openedx-demo-course	51	AGPL-3.0	2026-10-30	2013-09-30	False	HTML	A demonstration course that can be imported into an Open edX instance
+openedx	openedx/edx-enterprise	50	AGPL-3.0	2026-11-17	2016-10-12	False	Python	
+openedx	openedx/openedx-proposals	49	NOASSERTION	2026-11-17	2016-03-31	False	Python	Proposals for Open edX architecture, best practices and processes 
+openedx	openedx/docs.openedx.org	39	NOASSERTION	2026-11-15	2022-03-14	False	JavaScript	Open edX Official Documentation
+openedx	openedx/frontend-platform	38	AGPL-3.0	2026-11-16	2019-11-06	False	JavaScript	A framework for Open edX micro-frontend applications.
+openedx	openedx/frontend-template-application	38	AGPL-3.0	2026-11-16	2018-02-27	False	TypeScript	A template repository for creating Open edX frontend applications. 💿➡️📀
+openedx	openedx/openedx-app-android	38	Apache-2.0	2026-11-09	2023-03-13	False	Kotlin	The mobile app for Android for the Open EdX Platform.
+openedx	openedx/license-manager	37	AGPL-3.0	2026-11-16	2020-04-07	False	Python	Django backend for managing licenses and subscriptions
+openedx	openedx/django-user-tasks	33	Apache-2.0	2026-11-16	2016-08-09	False	Python	A Django application for managing user-triggered asynchronous tasks.
+openedx	openedx/repo-tools	33	Apache-2.0	2026-11-12	2013-10-16	False	Python	Tools for repo maintenance, etc.
+openedx	openedx/edx-bootstrap	32	Apache-2.0	2026-11-12	2017-06-23	False	JavaScript	Bootstrap theme for Open edX
+openedx	openedx/openedx-app-ios	31	Apache-2.0	2026-10-30	2023-03-13	False	Swift	The mobile app for iOS for the Open EdX Platform.
+openedx	openedx/edx-cookiecutters	30	Apache-2.0	2026-11-16	2020-04-29	False	Python	Open edx public templates for apps, libraries and services.
+openedx	openedx/xblock-lti-consumer	30	AGPL-3.0	2026-11-17	2015-11-09	False	Python	
+openedx	openedx/edx-django-utils	28	Apache-2.0	2026-11-14	2018-07-20	False	Python	edX utilities for Django Application development.
+openedx	openedx/frontend-app-admin-portal	27	AGPL-3.0	2026-11-16	2018-05-10	False	JavaScript	edx-portal is a frontend that provides branded learning experiences.
+openedx	openedx/i18n-tools	26	Apache-2.0	2026-11-16	2014-06-03	False	Python	Tools to help with internationalization and localization of Open edX projects
+openedx	openedx/frontend-build	25	AGPL-3.0	2026-11-15	2019-09-23	False	JavaScript	Common build scripts and tooling for Open edX micro-frontends.
+openedx	openedx/credentials	25	AGPL-3.0	2026-11-17	2015-12-11	False	Python	Service hosting course and program certificates
+openedx	openedx/wg-build-test-release	25	None	2026-05-19	2021-02-01	False	Python	Open edX Build / Test / Release Working Group
+openedx	openedx/openedx-wordpress-ecommerce	24	GPL-2.0	2026-10-30	2023-06-05	False	PHP	You can sell your Open edX courses with WooCommerce using this free and open-source WordPress plugin.
+openedx	openedx/frontend-app-account	24	AGPL-3.0	2026-11-16	2019-04-23	False	JavaScript	Open edX micro-frontend application for managing user account information.
+openedx	openedx/django-config-models	24	AGPL-3.0	2026-11-16	2016-10-06	False	Python	Configuration models for Django allowing config management with auditing.
+openedx	openedx/auth-backends	24	AGPL-3.0	2026-11-13	2015-02-17	False	Python	Custom authentication backends and views for edX services
+openedx	openedx/edx-rest-api-client	23	Apache-2.0	2026-11-17	2015-04-29	False	Python	Facilitates interaction with edX REST APIs
+openedx	openedx/enterprise-catalog	21	AGPL-3.0	2026-11-16	2019-12-10	False	Python	A Django-based microservice for handling Enterprise catalogs, associating enterprise customers with curated courses from the full course catalog.
+openedx	openedx/edx-search	21	AGPL-3.0	2026-11-16	2015-01-14	False	Python	
+openedx	openedx/cypress-e2e-tests	20	AGPL-3.0	2026-11-16	2018-12-11	False	JavaScript	Cypress E2E Tests for Open edX applications
+openedx	openedx/xblock-drag-and-drop-v2	19	AGPL-3.0	2026-11-17	2014-06-30	False	JavaScript	
+moodle	moodle/moodle	7619	GPL-3.0	2026-11-17	2009-12-16	False	PHP	Moodle - the world's open source learning platform
+moodle	moodle/devdocs	74	NOASSERTION	2026-11-17	2022-03-27	False	TypeScript	Source of the Moodle Developer Resources and Documentation
+moodle	moodle/moodlenet	26	AGPL-3.0	2025-05-28	2018-06-12	True	TypeScript	MoodleNet Project
+moodle	moodle/custom-mustache.js	5	MIT	2022-10-10	2016-10-18	False	JavaScript	
+moodle	moodle/moodle-composer-scaffold	5	GPL-3.0	2026-01-22	2025-12-11	False	PHP	
+moodle	moodle/jsdoc	5	None	2026-04-16	2022-05-30	False	Shell	JavaScript API Documentation builds for Moodle LMS
+moodle	moodle/composer-installer	4	GPL-3.0	2026-03-19	2025-12-17	False	PHP	
+moodle	moodle/phpdoc	3	None	2026-04-16	2022-05-30	False	PHP	Moodle API Documentation
+moodle	moodle/seed	1	GPL-3.0	2026-03-26	2025-12-11	False	None	The seed to grow a Moodle site from
+moodle	moodle/integration	1	GPL-3.0	2026-11-17	2026-10-12	False	PHP	Moodle integration branch, mirrored from GitLab
+moodle	moodle/moodle-testing	0	GPL-3.0	2026-11-17	2026-01-05	False	None	
+moodle	moodle/custom-html2text	0	None	2012-03-10	2012-03-10	False	None	
+moodlehq	moodlehq/moodleapp	1006	Apache-2.0	2026-11-17	2015-03-03	False	TypeScript	The Moodle App
+moodlehq	moodlehq/moodle-docker	582	GPL-3.0	2026-10-19	2017-04-25	False	Shell	A docker environment for moodle developers
+moodlehq	moodlehq/moodlemobile	198	Apache-2.0	2020-06-02	2012-06-28	True	JavaScript	Moodle Mobile
+moodlehq	moodlehq/sample-ws-clients	144	None	2020-05-28	2011-09-15	False	PHP	Sample clients for testing Web Services
+moodlehq	moodlehq/moodle-mod_newmodule	123	None	2018-10-16	2010-12-10	True	None	Code template for the Moodle activity module
+moodlehq	moodlehq/moodlemobile-phonegapbuild	103	None	2020-02-28	2015-06-05	True	None	Moodle Mobile repository for Phonegap builds
+moodlehq	moodlehq/moodle-performance-comparison	85	GPL-2.0	2026-04-16	2013-08-19	False	PHP	Set of shell scripts to run Moodle performance tests using different hardware and configurations and compare results.
+moodlehq	moodlehq/moodle-php-apache	77	None	2026-11-05	2017-05-23	False	Shell	PHP + Apache docker images for Moodle development
+moodlehq	moodlehq/moodle-local_codechecker	73	None	2025-12-02	2012-01-20	False	PHP	A Moodle local plugin providing a simple web UI to run the MoodleCS coding style checks with PHP_CodeSniffer.
+moodlehq	moodlehq/moodle-plugin-ci	68	GPL-3.0	2026-10-14	2020-06-29	False	PHP	Helps running Moodle plugins analysis checks and tests under various CI environments.
+moodlehq	moodlehq/moodle-tool_pluginskel	60	NOASSERTION	2026-05-27	2016-06-21	False	PHP	Generator of Moodle plugins skeletons
+moodlehq	moodlehq/wiki-rag	54	BSD-3-Clause	2026-06-15	2025-03-04	False	Python	An experimental Retrieval-Augmented Generation (RAG) system specialised in ingesting MediaWiki sites via their API and providing an OpenAI API interface to inte
+moodlehq	moodlehq/moodle-local_moodlecheck	28	None	2024-05-18	2012-01-13	False	PHP	Checks style of phpdocs in moodle source file
+moodlehq	moodlehq/moodle-cs	28	GPL-3.0	2026-11-05	2022-02-28	False	PHP	Moodle Coding Style
+moodlehq	moodlehq/totara	25	GPL-3.0	2013-11-29	2011-10-07	False	PHP	This is a clone of the Totara source code (which is based on Moodle) as of November 29th 2013.  It's not being updated because our access to the original reposi
+moodlehq	moodlehq/moodle-plugin-release	21	GPL-3.0	2026-10-17	2021-06-09	False	None	Workflow to automatically release tagged version in the Moodle Marketplace
+moodlehq	moodlehq/moodle-local_ci	20	None	2026-11-17	2012-11-12	False	Shell	Stuff run by Moodle CI integration servers.
+moodlehq	moodlehq/mymoodle	20	None	2012-06-28	2012-06-28	False	Objective-C	My Moodle (iOS)
+moodlehq	moodlehq/moodle-mlbackend-python	19	GPL-3.0	2022-05-27	2017-06-23	False	Python	Moodle machine learning backend
+moodlehq	moodlehq/design-system	16	GPL-3.0	2026-11-17	2025-10-28	False	TypeScript	The Moodle HQ design system based on React
+moodlehq	moodlehq/moodle-tool_inspire	13	GPL-3.0	2017-06-14	2016-09-06	True	PHP	
+moodlehq	moodlehq/moodle-local_hub	12	None	2017-08-22	2010-12-08	False	PHP	Community hub server (No longer supported)
+moodlehq	moodlehq/moodle-ci-runner	12	None	2026-11-17	2019-05-24	False	Shell	This test runner was designed to be run within a CI environment to give a consistent interface for running both Behat, and PHPUnit tests for Moodle.
+moodlehq	moodlehq/moodle-behat-extension	9	None	2022-04-07	2012-12-14	True	PHP	
+moodlehq	moodlehq/who-broke-it	8	GPL-3.0	2017-09-06	2013-12-09	False	Shell	Finds which commit is breaking "something", where something can be a test suite, script...
+moodlehq	moodlehq/moodle-tool_dataprivacy	8	GPL-3.0	2020-09-23	2018-02-23	True	PHP	The Data Privacy Plugin Tool for Moodle
+moodlehq	moodlehq/rtlcss-php	8	MIT	2022-01-25	2016-07-19	False	PHP	RTLCSS-PHP is a framework for converting LTR CSS to RTL.
+moodlehq	moodlehq/moodlemobile-scripts	7	None	2018-12-13	2014-01-30	False	PHP	Scripts for automatic building, language package updating from AMOS, etc...
+moodlehq	moodlehq/moodle-local_mobile	7	None	2019-06-11	2014-05-27	False	None	Local plugin for extending the current Moodle Mobile app features
+moodlehq	moodlehq/moodle-local_amos	7	None	2026-10-12	2016-04-04	False	PHP	AMOS - Moodle localisation tool running at lang.moodle.org
+moodlehq	moodlehq/moodle-tool_migratehvp2h5p	6	NOASSERTION	2025-09-30	2020-06-19	False	PHP	Tool to migrate mod_hvp to Moodle 3.9 mod_h5pactivity modules
+moodlehq	moodlehq/moodle-filter_geshi	6	None	2014-01-10	2011-03-09	True	PHP	Display code in a beautiful way (by Geshi) within Moodle contents.
+moodlehq	moodlehq/moodle-tool_componentlibrary	6	None	2023-09-17	2020-03-07	True	JavaScript	
+moodlehq	moodlehq/moodle-db-oracle	4	None	2024-01-26	2017-05-23	False	Dockerfile	Oracle XE/FREE Server configured for Moodle development
+moodlehq	moodlehq/moodle-docker-mlbackend-python	4	None	2023-04-03	2019-12-04	False	Shell	Dockerfile for the moodle-mlbackend-python backend
+moodlehq	moodlehq/mdlrelease	4	None	2026-11-02	2012-11-20	False	PHP	
+moodlehq	moodlehq/CFPropertyList	4	MIT	2025-02-17	2025-01-24	False	PHP	PHP Implementation of Apple's PList (binary and xml)
+moodlehq	moodlehq/moodle-exttests	3	GPL-3.0	2024-01-26	2013-09-27	False	HTML	Test files for phpunit tests using external data
+moodlehq	moodlehq/moodle-local_moodlemobileapp	3	None	2026-11-17	2014-01-24	False	TypeScript	Moodle App translation plugin. This plugin is for translating the app strings in AMOS
+moodlehq	moodlehq/qbank	3	GPL-3.0	2025-04-14	2024-11-25	False	PHP	An experimental repository featuring the mod_qbank plugin built on top of Moodle 4.5.
+learningequality	learningequality/kolibri	1178	MIT	2026-11-17	2016-01-19	False	Python	Kolibri Learning Platform: the offline app for universal education
+learningequality	learningequality/ka-lite	457	NOASSERTION	2021-04-19	2012-09-09	False	Python	KA Lite: lightweight web server for serving core Khan Academy content (videos and exercises) without needing internet connectivity
+learningequality	learningequality/studio	212	MIT	2026-11-09	2015-05-06	False	Python	Content curation tools for Kolibri
+learningequality	learningequality/kolibri-design-system	53	None	2026-11-16	2020-01-31	False	Vue	Kolibri Design System
+learningequality	learningequality/vue-intl	39	MIT	2021-01-08	2016-05-04	True	JavaScript	Vue Plugin for FormatJS Internalization and Localization
+learningequality	learningequality/ricecooker	32	MIT	2026-11-02	2016-08-29	False	Python	Python library for creating Kolibri channels and uploading to Studio
+learningequality	learningequality/kolibri-installer-android	31	MIT	2026-07-15	2017-06-28	True	Java	Android wrapper for Kolibri.
+learningequality	learningequality/video-vectorization	25	MIT	2022-12-07	2015-06-29	False	Python	Vectorizing blackboard style educational videos.
+learningequality	learningequality/morango	15	MIT	2026-11-13	2016-09-13	False	Python	A pure Python DB replication engine for Django that supports SQLite and PostgreSQL.
+learningequality	learningequality/ka-lite-config-pi	14	None	2014-02-02	2013-04-24	False	Python	Scripts and notes for setting up a KA Lite server on a Raspberry Pi in Access Point mode
+learningequality	learningequality/kolibri-docs	14	None	2026-04-03	2018-02-12	False	Makefile	Kolibri Learning Platform documentation
+learningequality	learningequality/kolibri-app	11	MIT	2026-07-18	2017-05-08	True	Python	Kolibri app for Mac and Windows
+learningequality	learningequality/khan-api-python	11	None	2015-08-02	2013-07-19	True	Python	Python wrapper for Khan Academy API
+learningequality	learningequality/kolibri-server	8	None	2026-10-06	2019-01-03	True	Python	A performance-boosting access layer for Kolibri with multi-core support and improved caching
+learningequality	learningequality/ka-lite-installers	7	MIT	2020-06-02	2014-12-08	False	Objective-C	Various platform-specific installers and supporting scripts for KA Lite
+learningequality	learningequality/le-utils	7	MIT	2026-11-02	2014-03-04	False	Python	Utilities and constants shared across Kolibri, Ricecooker, and Kolibri Studio
+learningequality	learningequality/kolibri-wd-my-passport-wireless	6	None	2018-06-10	2018-06-01	False	Shell	Scripts and resources for running Kolibri on WD My Passport Wireless devices
+learningequality	learningequality/ka-lite-installer-android	6	None	2015-11-24	2013-01-20	False	Java	Android port of KA Lite (an offline version of Khan Academy), encapsulating the Django project.
+learningequality	learningequality/sushi-chef-khan-academy	6	MIT	2026-02-14	2018-01-23	True	Python	Content integration script for the Khan Academy Kolibri channels.
+learningequality	learningequality/kolibri-installer-windows	6	MIT	2026-08-03	2016-05-05	True	Inno Setup	Repository for Kolibri windows installer
+learningequality	learningequality/kolibri-instant-schools-plugin	5	None	2025-01-08	2017-01-31	False	Vue	
+learningequality	learningequality/iceqube	4	BSD-3-Clause	2022-04-14	2016-12-13	True	Python	Kolibri internal messaging and task queue system
+learningequality	learningequality/BasicCrawler	4	MIT	2020-07-09	2017-11-14	False	Jupyter Notebook	Basic web crawler that automates website exploration and producing web resource trees.
+learningequality	learningequality/kolibri-installer-debian	4	MIT	2026-10-06	2017-04-20	True	Python	Kolibri installer source for Debian
+learningequality	learningequality/kolibri-rpi-with-hotspot	4	None	2023-12-29	2019-08-19	False	Shell	Ansible scripts for configuring an RPi 3 or RPi Zero W as a hotspot, with Kolibri as a captive portal
+learningequality	learningequality/point-loma	4	None	2018-08-06	2017-06-02	True	Python	
+learningequality	learningequality/3G-link	4	None	2014-04-19	2014-03-29	False	Python	Collection of scripts to aid in connecting an Ubuntu laptop to the internet via a 3G dongle
+learningequality	learningequality/svg-icon-inline-loader	3	None	2017-02-09	2017-02-03	False	JavaScript	
+learningequality	learningequality/curriculum-recommendation-eval-framework	3	None	2022-01-27	2021-06-15	False	Python	Shared codebase for evaluation framework for curriculum alignment recommendation algorithms
+learningequality	learningequality/kolibri-installer-gnome	3	MIT	2026-09-24	2020-04-15	True	Python	
+learningequality	learningequality/pressurecooker	3	MIT	2021-05-11	2016-12-13	True	Python	A library of various media and content processing utilities for use in Ricecooker
+learningequality	learningequality/sample-channels	3	MIT	2020-07-23	2017-12-01	False	Python	Showcase of different content types and methods for uploading channels to Kolibri Studio
+learningequality	learningequality/kolibri-oidc-client-plugin	3	MIT	2026-07-11	2019-09-19	True	Python	
+learningequality	learningequality/ka-lite-installer-android-python27	2	None	2015-11-22	2015-08-31	False	C++	
+learningequality	learningequality/ka-lite-gtk	2	BSD-3-Clause	2022-12-26	2015-07-27	False	Python	A GTK control panel for KA Lite
+learningequality	learningequality/kolibri-sync-extras-plugin	2	MIT	2026-07-09	2022-06-03	True	Python	Optional features for Kolibri, taking advantage of advanced features of Morango
+learningequality	learningequality/kolibri-sandisk-connect	2	None	2017-09-28	2017-09-28	False	Python	
+learningequality	learningequality/sushi-chef-better-world-ed	2	MIT	2026-03-09	2017-10-05	True	Python	Sushi Chef script for importing Better World Ed learning resources
+learningequality	learningequality/treediffer	2	MIT	2020-12-09	2020-05-22	False	Python	A library of utility functions for computing diffs between tree-like data structures.
+learningequality	learningequality/meltano	1	MIT	2021-03-03	2021-03-03	False	Python	A fork of the Meltano project by GitLab
+sakaiproject	sakaiproject/sakai	1240	ECL-2.0	2026-11-17	2014-12-29	False	Java	Sakai is a freely available, feature-rich technology solution for learning, teaching, research and collaboration. Sakai is an open source software suite develop
+sakaiproject	sakaiproject/www.sakailms.org	19	None	2026-11-17	2026-10-22	False	HTML	The HTML for www.sakailms.org - Temporarily at https://sakaiproject.github.io/www.sakailms.org/
+sakaiproject	sakaiproject/sakai-reference	16	None	2026-11-17	2017-08-03	False	HTML	Sakai reference docs
+sakaiproject	sakaiproject/sakai-documentation	11	None	2023-07-02	2013-06-03	False	HTML	Sakai project documentation
+sakaiproject	sakaiproject/sakai-stress-test	11	None	2017-11-29	2016-07-19	False	Scala	Gatling stress tests in sakai
+sakaiproject	sakaiproject/nightly-config	5	None	2026-11-12	2016-02-01	False	Shell	Configuration used by the nightly servers
+sakaiproject	sakaiproject/genericdao	4	NOASSERTION	2025-10-01	2015-11-13	False	Java	Automatically exported from code.google.com/p/genericdao
+sakaiproject	sakaiproject/sakai-release	3	None	2018-07-26	2014-06-26	False	JavaScript	Tools for performing community releases of Sakai
+sakaiproject	sakaiproject/sakai-wicket-maven-archetype	2	None	2021-04-12	2015-06-25	False	Java	
+sakaiproject	sakaiproject/sakai-maven-plugin	0	None	2020-10-20	2015-01-09	False	Java	The Sakai Maven plugin
+sakaiproject	sakaiproject/ecl-license	0	None	2015-06-26	2015-06-25	False	None	Packaging of the ECL 2.0 license
+sakaiproject	sakaiproject/sakai-translations	0	None	2025-11-10	2017-01-25	False	Python	Keep sakai translations up to date.
+sakaiproject	sakaiproject/reflectutils	0	Apache-2.0	2026-06-11	2024-12-16	False	Java	
+sakaiproject	sakaiproject/.github	0	None	2020-04-28	2019-10-23	False	None	Top Level Organization Repository
+apereo	apereo/cas	11402	Apache-2.0	2026-11-17	2011-09-09	False	Java	Apereo CAS - Identity & Single Sign On for all earthlings and beyond.
+apereo	apereo/java-cas-client	949	NOASSERTION	2026-11-16	2012-03-07	False	Java	Apereo Java CAS Client
+apereo	apereo/phpCAS	802	Apache-2.0	2026-06-30	2011-09-09	False	PHP	Apereo PHP CAS Client
+apereo	apereo/dotnet-cas-client	230	Apache-2.0	2022-05-09	2012-03-08	False	C#	Apereo .NET CAS Client
+apereo	apereo/mod_auth_cas	150	None	2026-05-27	2011-07-26	False	Shell	An Apache httpd module for integrating with Apereo CAS Server project.
+apereo	apereo/cas-webapp-docker	114	Apache-2.0	2019-05-06	2016-10-30	True	Shell	Apereo CAS Server web application running inside a docker container.
+apereo	apereo/cas-gradle-overlay-template	71	Apache-2.0	2018-07-27	2016-08-02	True	Shell	CAS Gradle Overlay: Generic CAS gradle war overlay to exercise the latest versions of CAS
+apereo	apereo/cas-management	59	Apache-2.0	2025-03-19	2017-11-15	True	TypeScript	Apereo CAS Management Web Application
+apereo	apereo/cas-configserver-overlay	33	Apache-2.0	2026-11-16	2017-03-03	False	Dockerfile	Generic CAS Spring Cloud Configuration Server WAR overlay
+apereo	apereo/person-directory	29	Apache-2.0	2024-03-29	2012-03-14	True	Java	A framework for resolving persons and attributes from a variety of underlying sources.
+apereo	apereo/cas-initializr	22	Apache-2.0	2026-11-15	2021-03-09	False	TypeScript	Apereo CAS Initializr generates CAS WAR overlays with just what you need to start quickly!
+apereo	apereo/cas-bootadmin-overlay	20	Apache-2.0	2021-02-09	2017-04-18	True	Shell	CAS Spring Boot Admin Server Overlay Template
+apereo	apereo/cas-server-security-filter	17	Apache-2.0	2019-08-10	2014-08-06	True	Java	A security filter to protect the CAS server against HTTP attacks
+apereo	apereo/cas-sample-python-webapp	13	Apache-2.0	2022-06-26	2017-04-11	True	Python	Sample CASified Python Web Application based on Flask
+apereo	apereo/oauth2-sample-java-webapp	11	None	2022-06-26	2018-12-04	True	Java	OAuth2 client java web application based on Spring Boot
+apereo	apereo/apereo.github.io	11	MIT	2026-11-13	2016-09-08	False	SCSS	Apereo Community Blog
+apereo	apereo/saml2-sample-java-webapp	9	Apache-2.0	2023-02-24	2018-12-03	True	Java	SAML2 client java web application based on Spring Security
+apereo	apereo/springsecurity-bootiful-cas-client	7	None	2022-06-26	2020-10-28	True	Java	Sample CASified application with Spring Security
+apereo	apereo/cas-management-gradle-overlay	6	Apache-2.0	2018-11-01	2017-10-17	True	Shell	Generic CAS gradle war overlay to exercise the latest versions of CAS Management web application.
+apereo	apereo/cas-sample-java-webapp	4	None	2022-06-26	2021-07-14	True	Java	Sample Java web app protected by Java CAS client
+apereo	apereo/cas-discoveryserver-overlay	3	None	2021-02-15	2017-04-14	True	Batchfile	Generic CAS Spring Cloud Discovery Server WAR overlay.
+apereo	apereo/wsfed-sample-java-webapp	3	Apache-2.0	2025-04-23	2021-08-10	True	Java	This is a sample application that acts as a WS Federation client using Apache Fediz.
+apereo	apereo/oss-rubric	3	CC-BY-4.0	2024-02-01	2022-11-13	False	None	A rubric to rate the maturity of open source software projects
+apereo	apereo/dotnet-cas-client-redis	2	Apache-2.0	2021-07-02	2018-05-09	True	C#	
+apereo	apereo/oidc-sample-java-webapp	2	None	2022-12-16	2018-12-03	True	JavaScript	OpenID Connect client java web application based on MITREid Connect
+apereo	apereo/dotnet-cas-client-mssql	1	Apache-2.0	2019-04-17	2018-05-09	True	None	
+apereo	apereo/openid-sample-java-webapp	0	None	2022-06-26	2018-12-04	True	Java	OpenID client java web application
+apereo	apereo/dotnet-cas-client-memcached	0	Apache-2.0	2021-04-29	2018-05-09	True	C#	
+apereo	apereo/apereo-redirector	0	None	2020-03-30	2020-03-30	True	HTML	Firebase configs for redirectors
+apereo	apereo/heosat	0	None	2026-09-30	2026-09-23	False	JavaScript	Higher Education Open Source Assessment Tool (HEOSAT): A guided maturity assessment for open source software projects in higher education and edtech.
+ls1intum	ls1intum/Artemis	832	MIT	2026-11-17	2016-09-29	False	Java	Artemis - Interactive Learning with Automated Feedback
+ls1intum	ls1intum/thesis-template-typst	137	MIT	2026-09-11	2023-06-20	False	Typst	TUM AET thesis typst template 
+ls1intum	ls1intum/Apollon	106	MIT	2026-11-17	2018-02-05	False	TypeScript	UML Modeling Editor
+ls1intum	ls1intum/sReto	95	MIT	2025-12-15	2015-02-18	False	Swift	P2P Framework for realtime collaboration in Swift
+ls1intum	ls1intum/fogernetes	38	BSD-3-Clause	2025-12-15	2018-01-26	False	Python	Using Kubernetes for Fog Computing
+ls1intum	ls1intum/thesis-management	31	MIT	2026-11-17	2024-05-13	False	Java	Say Goodbye to Email Chaos: A Smarter Way to Manage Theses
+ls1intum	ls1intum/Orion	29	MIT	2025-03-21	2019-08-20	True	Kotlin	Plugin integrating Artemis programming exercises into IntelliJ
+ls1intum	ls1intum/thesis-template	28	MIT	2024-04-22	2016-11-20	True	TeX	A Latex Template for your bachelor / master thesis
+ls1intum	ls1intum/Ares	27	MIT	2026-11-03	2020-01-10	False	Java	The Artemis Java Test Sandbox. A JUnit 5 Extension for Easy and Secure Artemis Java Testing
+ls1intum	ls1intum/jReto	23	MIT	2025-12-15	2015-02-18	False	Java	P2P Framework for realtime collaboration in Java
+ls1intum	ls1intum/Athena-CoFee	21	MIT	2024-09-18	2020-04-06	True	Python	A system to support (semi-)automated assessment of textual exercises
+ls1intum	ls1intum/edutelligence	17	MIT	2026-11-17	2025-02-28	False	Python	Comprehensive suite of AI-powered microservices
+ls1intum	ls1intum/Apollon_standalone	14	MIT	2026-04-02	2020-03-29	True	TypeScript	Standalone version of Apollon Editor
+ls1intum	ls1intum/artemis-ios	13	MIT	2026-11-16	2022-10-26	False	Swift	Native iOS application for Artemis. 
+ls1intum	ls1intum/artemis-android	13	MIT	2026-11-14	2022-09-15	False	Kotlin	Native Android application for Artemis. 
+ls1intum	ls1intum/Themis	12	MIT	2025-12-15	2022-10-28	False	Swift	Themis - Artemis Tutor App for iPad
+ls1intum	ls1intum/Pyris	12	MIT	2026-06-03	2023-06-08	False	Python	An LLM microservice for the learning platform Artemis
+ls1intum	ls1intum/prompt	11	None	2025-01-20	2023-03-21	True	TypeScript	PROMPT is a support tool designed to assist program management in project-based courses
+ls1intum	ls1intum/apollon-ios	10	MIT	2025-12-15	2023-11-29	True	Swift	UML Modeling Editor for iOS written in Swift
+ls1intum	ls1intum/Aeolus	9	MIT	2025-12-15	2023-07-31	False	Python	
+ls1intum	ls1intum/Helios	8	MIT	2026-11-17	2024-10-29	False	Java	Interactive CI/CD dashboard for GitHub Actions providing deployment management, test analytics, and release management.
+ls1intum	ls1intum/Prototyper	8	MIT	2021-05-04	2017-11-01	True	Swift	Framework that allows you to integrate prototypes into an iOS application and receive feedback using the Prototyper service
+ls1intum	ls1intum/artemis-ansible-collection	8	MIT	2026-11-17	2021-11-29	False	Jinja	Ansible Collection to configure Artemis
+ls1intum	ls1intum/Interactex	7	GPL-3.0	2024-08-12	2014-11-22	False	Objective-C	You can use the Interactex Designer to visually create and test software for your eTextiles without the need to write any code. It supports every hardware compo
+ls1intum	ls1intum/Athena	6	None	2025-12-15	2023-04-25	False	Python	A system to support (semi-)automated assessment of exercises, built on ls1intum/Athena
+ls1intum	ls1intum/Ares2	5	NOASSERTION	2026-11-17	2024-04-18	False	Java	The Artemis Java Test Sandbox: the second Java implementation of the SCORE (Secure COder Remote Execution) framework. Sandboxes student submissions via policy-b
+ls1intum	ls1intum/Artemis-Benchmarking	5	MIT	2026-11-17	2023-10-23	False	Java	A benchmarking application for Artemis features
+ls1intum	ls1intum/Themis-ML	5	MIT	2025-12-15	2022-12-19	False	Python	Themis-ML - automated feedback on programing exercises
+ls1intum	ls1intum/prototyper_web	5	GPL-3.0	2020-05-12	2020-01-13	True	Ruby	
+ls1intum	ls1intum/BasicWebApp	5	MIT	2025-12-15	2022-07-04	False	Java	
+ls1intum	ls1intum/apollon-ios-module	4	MIT	2025-12-15	2023-09-18	True	Swift	Apollon editor SPM package for iOS
+ls1intum	ls1intum/artemis-notification-plugin	4	MIT	2024-08-12	2022-10-12	True	Java	
+ls1intum	ls1intum/MIDAS	4	MIT	2025-12-15	2016-10-10	False	C++	App User Behavior Tracking and Visualization
+ls1intum	ls1intum/Prototype	4	MIT	2025-12-15	2017-11-01	False	Swift	Framework to integrate prototypes into iOS, macOS or tvOS applications
+ls1intum	ls1intum/artemis-maven-docker	3	None	2026-11-15	2020-04-05	False	Java	Artemis Maven Docker Image
+ls1intum	ls1intum/Artemis-Testing-Patterns	3	None	2025-01-30	2024-12-05	False	Java	A place to collect test patterns for auto grading
+ls1intum	ls1intum/artemis-extension	3	MIT	2026-11-16	2025-10-16	False	TypeScript	
+ls1intum	ls1intum/bamboo-server-notification-plugin	3	MIT	2025-12-15	2018-11-28	False	Java	Notification Plugin for Bamboo to notify Artemis about build results
+ls1intum	ls1intum/Apollon2	3	MIT	2026-04-02	2024-12-03	True	TypeScript	Apollon re-engineering
+ls1intum	ls1intum/artemis-ios-core-modules	3	MIT	2026-11-17	2023-04-20	False	Swift	Core modules for the Artemis related iOS apps
+autolab	autolab/Autolab	808	Apache-2.0	2026-11-11	2014-10-25	False	Ruby	Course management service that enables auto-graded programming assignments.
+autolab	autolab/Tango	49	Apache-2.0	2026-10-21	2014-10-26	False	Python	Standalone RESTful autograding service
+autolab	autolab/docker	9	None	2026-11-05	2020-08-15	False	Shell	Easy Docker Compose installation for Autolab
+autolab	autolab/autograders-examples	7	None	2025-08-30	2021-10-19	False	C++	This is a repo for example Autograders. They are more complicated than hello lab in the documentation but simpler than real life scenario ones. They serve to of
+autolab	autolab/autolab-oneclick	6	Apache-2.0	2019-09-19	2016-09-06	True	Ruby	
+autolab	autolab/Autolab-CLI	3	None	2026-05-05	2018-01-15	False	C++	Command line autolab client that uses the Autolab API
+autolab	autolab/autolab.github.io	1	Apache-2.0	2018-04-23	2015-03-13	True	CSS	
+oppia	oppia/oppia	6998	Apache-2.0	2026-11-17	2015-08-14	False	Python	A free, online learning platform to make quality education accessible for all.
+oppia	oppia/oppia-android	422	Apache-2.0	2026-11-17	2018-09-10	False	Kotlin	A free online & offline learning platform to make quality education accessible for all.
+oppia	oppia/oppiabot	28	Apache-2.0	2026-01-28	2018-04-26	False	JavaScript	Helper bot for the Oppia code repository dev workflow.
+oppia	oppia/lessons-team	22	None	2022-09-25	2022-09-25	False	None	Workflow repo for the Oppia lessons team.
+oppia	oppia/oppia-web-developer-docs	19	Apache-2.0	2026-11-06	2022-01-01	False	Python	Repo for Web developer documentation on Oppia. For contribution instructions, see: https://github.com/oppia/oppia/wiki/Wiki#contributing-to-the-wiki
+oppia	oppia/xblock	7	Apache-2.0	2020-06-30	2015-08-14	False	JavaScript	Oppia XBlock for the OpenEdX platform
+oppia	oppia/foundation-website	7	Apache-2.0	2022-04-09	2018-06-24	False	HTML	Repository for developing the new Oppia Foundation website.
+oppia	oppia/oppia.github.io	6	Apache-2.0	2023-01-18	2015-08-14	False	HTML	Main page of the Oppia project on GitHub.
+oppia	oppia/oppia-ml	3	Apache-2.0	2024-12-02	2017-05-25	True	Python	
+oppia	oppia/creator-documentation	3	Apache-2.0	2026-06-09	2019-09-10	False	None	GitHub repo powering Oppia's creator and contributor "Read the Docs" site.
+oppia	oppia/oppia-bazel-tools	2	Apache-2.0	2021-02-11	2021-02-11	False	Starlark	
+oppia	oppia/oppia-ml-proto	1	Apache-2.0	2024-12-23	2020-07-17	True	Python	The public API defined for Oppia-ML to be shared between Oppia-ML and other integrated platforms.
+oppia	oppia/.github	1	Apache-2.0	2025-12-16	2022-03-06	False	None	
+oppia	oppia/stale-review-request-notifier	1	Apache-2.0	2026-09-17	2023-05-26	False	Python	
+oppia	oppia/oppia-proto-api	1	Apache-2.0	2026-10-16	2021-07-31	False	None	Published Android-specific API for the Oppia backend.
+oppia	oppia/hacktoberfest-2022-non-code-contributions	0	None	2022-10-07	2022-09-29	False	None	Repository for logging low/non-code Hacktoberfest participation activities.
+oppia	oppia/oppia-android-licenses	0	Apache-2.0	2022-02-10	2021-07-07	False	None	Repository for some of the third-party licenses for dependencies of the Oppia Android app.
+oppia	oppia/qa-team	0	None	2025-02-24	2025-02-24	False	None	Workflow repository for the Oppia QA team
+oppia	oppia/analytics-data-platform	0	Apache-2.0	2026-11-02	2026-06-17	False	None	Core data platform and transformation pipeline for Oppia product analytics. Contains dbt models, schemas, and SQL logic translating raw web and Android event da
+oppia	oppia/product-operations-team	0	None	2026-11-08	2024-12-16	False	None	Workflow repository for the Oppia Product Operations team.
+oppia	oppia/common-actions	0	Apache-2.0	2025-01-06	2025-01-06	False	None	Common GitHub Actions that are reused by Oppia repositories.
+oppia	oppia/design-team	0	None	2026-10-23	2022-07-19	False	None	Workflow repo for the Oppia design team.
+h5p	h5p/h5p-interactive-video	267	MIT	2026-11-17	2014-03-28	False	JavaScript	
+h5p	h5p/moodle-mod_hvp	160	GPL-3.0	2026-11-02	2015-11-10	False	PHP	H5P Plugin for Moodle
+h5p	h5p/h5p-php-library	156	GPL-3.0	2026-11-10	2014-04-13	False	PHP	
+h5p	h5p/h5p-editor-php-library	83	None	2026-11-17	2014-04-29	False	JavaScript	
+h5p	h5p/h5p-cli	79	MIT	2026-10-31	2013-11-27	False	JavaScript	Command Line Interface
+h5p	h5p/h5p-wordpress-plugin	77	None	2026-10-27	2014-04-13	False	PHP	Adds support for H5P Content in WordPress.
+h5p	h5p/h5p-course-presentation	57	MIT	2026-11-11	2014-03-28	False	JavaScript	
+h5p	h5p/h5p-editor-interactive-video	39	None	2026-03-04	2014-03-28	False	JavaScript	
+h5p	h5p/h5p-branching-scenario	36	None	2026-10-30	2017-11-30	False	JavaScript	
+h5p	h5p/h5p-audio-recorder	36	MIT	2026-11-17	2017-04-19	False	JavaScript	
+h5p	h5p/h5pmods-wordpress-plugin	28	None	2022-07-18	2015-07-07	False	PHP	
+h5p	h5p/h5p-image-hotspots	23	None	2026-10-13	2014-03-27	False	JavaScript	Create images with hotspots
+h5p	h5p/h5p-memory-game	20	None	2026-10-30	2014-03-28	False	JavaScript	
+h5p	h5p/h5pmods-moodle-plugin	19	None	2021-05-12	2017-02-08	False	PHP	Theme for modifying H5Ps
+h5p	h5p/font-awesome	15	None	2023-12-05	2013-11-21	False	None	
+h5p	h5p/h5p-multi-choice	15	None	2026-11-13	2013-11-21	False	JavaScript	
+h5p	h5p/h5p-speak-the-words	12	MIT	2026-11-17	2017-02-13	False	JavaScript	Create questions answered through speech
+h5p	h5p/h5p-three-image	12	MIT	2026-11-17	2017-10-10	False	JavaScript	Interactive 360 panorama image viewer for H5P
+h5p	h5p/h5p-boilerplate	11	MIT	2026-11-11	2017-03-09	False	JavaScript	Example H5P Content Type for getting started
+h5p	h5p/h5p-video	11	None	2026-10-30	2013-12-19	False	JavaScript	
+h5p	h5p/h5p-blanks	10	None	2026-11-17	2013-12-19	False	JavaScript	
+h5p	h5p/h5p-audio	10	None	2026-11-12	2013-12-19	False	JavaScript	
+h5p	h5p/h5p-mark-the-words	9	None	2026-11-16	2014-11-01	False	JavaScript	Content type for marking the correct words in a textfield.
+h5p	h5p/h5p-math-display	9	MIT	2026-10-02	2018-05-13	False	JavaScript	A library for displaying LaTeX in H5P
+h5p	h5p/h5p-multi-media-choice	9	MIT	2026-11-17	2021-06-18	False	JavaScript	
+h5p	h5p/h5p-flashcards	8	None	2026-10-30	2013-12-19	False	JavaScript	
+h5p	h5p/h5p-drag-question	8	None	2026-11-16	2014-03-28	False	JavaScript	
+h5p	h5p/h5p-question-set	8	None	2026-10-30	2014-03-26	False	JavaScript	
+h5p	h5p/h5p-drag-text	7	MIT	2026-11-17	2014-11-10	False	JavaScript	
+h5p	h5p/h5p-iframe-embed	7	MIT	2025-07-21	2014-02-13	False	JavaScript	
+h5p	h5p/h5p-arithmetic-quiz	7	None	2026-10-31	2015-06-17	False	JavaScript	Basic arithmetic quiz containing addition, division, multiplication and subtraction
+h5p	h5p/h5p-question	6	None	2026-11-11	2015-05-19	False	JavaScript	
+h5p	h5p/h5p-true-false	6	None	2026-11-13	2016-09-30	False	JavaScript	
+h5p	h5p/h5p-timeline	6	MIT	2026-09-08	2014-07-30	False	JavaScript	
+h5p	h5p/h5p-dialogcards	6	None	2026-11-17	2014-03-28	False	JavaScript	
+h5p	h5p/h5p-php-report	6	MIT	2026-08-10	2016-11-20	False	PHP	
+h5p	h5p/h5p-matching	6	MIT	2024-02-22	2017-10-27	True	Vue	Match two texts, or an image and a text
+h5p	h5p/h5p-editor-course-presentation	6	None	2026-10-14	2014-03-28	False	JavaScript	
+h5p	h5p/h5p-hub-client	5	MIT	2026-11-17	2017-02-20	False	JavaScript	Client for installing, updating and using interactive content types through the H5P plugin
+h5p	h5p/h5p-joubel-ui	5	None	2026-08-31	2014-04-11	False	JavaScript	
+bigbluebutton	bigbluebutton/bigbluebutton	9281	LGPL-3.0	2026-11-17	2010-05-25	False	TypeScript	A complete web conferencing system for virtual classes and more!
+bigbluebutton	bigbluebutton/greenlight	850	LGPL-3.0	2026-11-13	2016-10-13	False	Ruby	A really simple end-user interface for your BigBlueButton server.
+bigbluebutton	bigbluebutton/bbb-install	665	LGPL-3.0	2026-11-16	2018-02-07	False	Shell	BASH script to install BigBlueButton in 30 minutes.
+bigbluebutton	bigbluebutton/docker	438	LGPL-3.0	2026-11-12	2017-10-27	False	Shell	Docker files for BigBlueButton (community maintained)
+bigbluebutton	bigbluebutton/bigbluebutton-api-php	192	LGPL-3.0	2026-08-19	2016-01-17	False	PHP	Offical @BigBlueButton PHP API
+bigbluebutton	bigbluebutton/bbb-webrtc-sfu	53	LGPL-3.0	2026-11-17	2018-11-20	False	JavaScript	Control server for WebRTC SFU
+bigbluebutton	bigbluebutton/bbb-playback	30	LGPL-3.0	2026-11-16	2020-05-28	False	JavaScript	
+bigbluebutton	bigbluebutton/bigbluebutton.github.io	26	None	2023-03-22	2015-04-05	True	CSS	(retired) BigBlueButton Documentation
+bigbluebutton	bigbluebutton/bbb-events	26	LGPL-3.0	2026-02-12	2017-11-23	False	Ruby	A ruby gem for extracting data from a BigBlueButton recording's events.xml file.
+bigbluebutton	bigbluebutton/bbb-air-client	24	NOASSERTION	2015-05-06	2013-11-01	True	ActionScript	
+bigbluebutton	bigbluebutton/docker-dev	21	None	2026-08-27	2021-06-15	False	Shell	How to use Docker to setup a development environment for BigBlueButton
+bigbluebutton	bigbluebutton/bigbluebutton-mobile	18	None	2025-12-26	2022-02-09	False	Swift	Repository for mobile code
+bigbluebutton	bigbluebutton/deepspeech-web	18	None	2022-04-12	2019-08-28	True	Ruby	Rails app providing API to send audio for captioning using DeepSpeech
+bigbluebutton	bigbluebutton/bigbluebutton-html-plugin-sdk	17	None	2026-10-06	2023-06-15	False	None	BigBlueButton Plugin SDK
+bigbluebutton	bigbluebutton/screenshare-chrome-extension	13	None	2018-08-07	2018-03-20	True	JavaScript	Template and instructions for creating your own Google Chrome Extension to allow screensharing
+bigbluebutton	bigbluebutton/plugins	13	None	2026-10-28	2024-01-15	False	None	A directory of BigBlueButton plugins
+bigbluebutton	bigbluebutton/bbb-app-rooms	12	LGPL-3.0	2026-10-29	2018-07-19	False	Ruby	Simple web applcation for providing BigBlueButton rooms through LTI using a bbb-lti-broker
+bigbluebutton	bigbluebutton/bbb-transcription-controller	11	None	2026-10-08	2022-12-13	False	JavaScript	
+bigbluebutton	bigbluebutton/bigbluebutton-api-java	10	GPL-3.0	2023-05-18	2018-05-08	False	Java	BigBlueButton API Library for Java
+bigbluebutton	bigbluebutton/perfect-freehand-python	10	MIT	2023-04-26	2022-07-27	False	Python	Draw perfect pressure-sensitive freehand lines. (Python port)
+bigbluebutton	bigbluebutton/bbb-presentation-video	10	GPL-3.0	2026-11-17	2023-01-03	False	Python	Script to render a video of the presentation area from a BBB recording events.xml
+bigbluebutton	bigbluebutton/webcams-to-screenshare	9	LGPL-3.0	2020-12-09	2020-12-09	False	JavaScript	A prototype of using Chrome as a MCU for combining multiple webcams into a single video stream
+bigbluebutton	bigbluebutton/bbb-recording-api	9	None	2022-04-12	2018-11-20	True	Ruby	Implementation of BigBlueButton recording API external to bbb-web
+bigbluebutton	bigbluebutton/bbb-webrtc-recorder	8	LGPL-3.0	2026-11-17	2023-01-04	False	Go	Server application to record BBB WebRTC streams to file
+bigbluebutton	bigbluebutton/bbb-lti-broker	8	LGPL-3.0	2026-11-14	2018-06-15	False	Ruby	Generic LTI Broker based on https://github.com/instructure/lti_tool_provider_example
+bigbluebutton	bigbluebutton/bbb-webhooks	6	LGPL-3.0	2026-10-30	2021-05-10	False	JavaScript	
+bigbluebutton	bigbluebutton/text-track-service	6	MIT	2022-03-30	2019-06-25	True	Ruby	
+bigbluebutton	bigbluebutton/bigbluebutton-room-media-connector	6	GPL-3.0	2025-03-24	2023-11-30	False	TypeScript	
+bigbluebutton	bigbluebutton/bbb-plugin-generic-link-share	5	LGPL-3.0	2026-11-04	2024-06-10	False	TypeScript	An official BigBlueButton plugin which allows the presenter to display a web page to all viewers inside of a session.
+bigbluebutton	bigbluebutton/bbb-plugin-typed-captions	5	LGPL-3.0	2026-10-16	2024-06-10	False	TypeScript	
+bigbluebutton	bigbluebutton/gdpr	5	LGPL-3.0	2020-04-17	2018-05-02	False	Ruby	A collection of tools to support requirements in GDPR on a BigBlueButton ser
+bigbluebutton	bigbluebutton/speech_to_text	5	MIT	2023-06-13	2019-06-24	True	Ruby	
+bigbluebutton	bigbluebutton/bigbluebutton-font	5	None	2023-03-21	2017-05-22	False	CSS	Custom font used in BigBlueButton
+bigbluebutton	bigbluebutton/bbb-plugin-code-highlight	4	LGPL-3.0	2026-09-05	2024-06-10	True	TypeScript	
+bigbluebutton	bigbluebutton/bbb-plugin-h5p	4	LGPL-3.0	2026-10-07	2024-06-10	False	TypeScript	
+bigbluebutton	bigbluebutton/bbb-plugin-live-transcription	4	LGPL-3.0	2026-10-01	2025-04-30	False	TypeScript	
+bigbluebutton	bigbluebutton/bbb-plugin-template	4	LGPL-3.0	2026-09-14	2024-06-10	False	JavaScript	A template repository reused for most BigBlueButton plugins
+bigbluebutton	bigbluebutton/office2pdf	4	MIT	2018-07-09	2018-07-09	True	Go	Convert office doc to pdf
+bigbluebutton	bigbluebutton/bbb-plugin-picture-in-picture	4	LGPL-3.0	2026-11-17	2025-04-25	False	TypeScript	
+bigbluebutton	bigbluebutton/voiceconfmanager	3	None	2015-02-05	2014-12-30	True	Go	BigBlueButton Voice Conference Manager
+overhangio	overhangio/tutor	1132	AGPL-3.0	2026-11-17	2017-07-03	False	Python	The Docker-based Open edX distribution designed for peace of mind
+overhangio	overhangio/tutor-indigo	97	AGPL-3.0	2026-11-11	2020-01-16	False	SCSS	An elegant, customizable theme for Open edX
+overhangio	overhangio/openedx-scorm-xblock	36	AGPL-3.0	2026-11-17	2020-04-25	False	Python	SCORM XBlock for Open edX
+overhangio	overhangio/tutor-mfe	33	AGPL-3.0	2026-11-17	2021-02-04	False	Python	This plugin makes it possible to easily add micro frontend (MFE) applications on top of an Open edX platform that runs with Tutor.
+overhangio	overhangio/mu	29	AGPL-3.0	2025-04-07	2022-06-21	False	Python	Mu is the course authoring tool for teachers with a deadline.
+overhangio	overhangio/tutor-minio	18	AGPL-3.0	2026-11-13	2019-08-20	False	Python	This is a plugin for Tutor that provides S3-like object storage for Open edX platforms. 
+overhangio	overhangio/tutor-ecommerce	18	AGPL-3.0	2024-12-16	2019-07-11	True	Python	Ecommerce plugin for Tutor
+overhangio	overhangio/cookiecutter-tutor-plugin	17	AGPL-3.0	2026-09-30	2019-10-24	False	Python	Cookiecutter for tutor plugins
+overhangio	overhangio/tutor-cairn	15	AGPL-3.0	2026-10-27	2023-05-16	False	Python	Scalable, real-time analytics for Open edX
+overhangio	overhangio/tutor-discovery	15	AGPL-3.0	2026-10-27	2019-07-11	False	Python	Course Discovery plugin for Tutor
+overhangio	overhangio/tutor-android	15	AGPL-3.0	2026-10-27	2021-05-18	False	Python	Building an Android application for your Open edX platform
+overhangio	overhangio/tutor-xqueue	10	AGPL-3.0	2026-10-27	2019-08-20	False	Python	Xqueue plugin for Tutor
+overhangio	overhangio/tutor-figures	9	AGPL-3.0	2022-09-20	2019-07-04	True	Python	Figures plugin for Tutor, for analytics and reporting
+overhangio	overhangio/tutor-notes	8	AGPL-3.0	2026-10-27	2019-08-21	False	Python	Student notes plugin for Tutor
+overhangio	overhangio/tutor-credentials	8	AGPL-3.0	2026-10-27	2022-05-13	False	Python	Credentials plugin for Tutor
+overhangio	overhangio/tutor-forum	7	AGPL-3.0	2026-10-23	2021-10-05	False	Python	This plugin adds discussion forums to your Open edX platform, such that students can have conversations about the courses they are following right in your LMS
+overhangio	overhangio/openedx-micromanager	6	AGPL-3.0	2020-01-20	2019-10-16	True	Python	Micromanage all your Open edx micro frontend (MFE) applications -- with style.
+overhangio	overhangio/openedx-e2e	5	AGPL-3.0	2022-02-12	2019-06-25	True	JavaScript	End-to-end testing for any live-running Open edX platform [BETA]
+overhangio	overhangio/tutor-jupyter	5	AGPL-3.0	2026-10-19	2023-05-12	False	Python	Integrate JupyterHub notebooks with Open edX
+overhangio	overhangio/tutor-webui	4	AGPL-3.0	2025-07-08	2021-05-18	True	Python	A web user interface plugin for Tutor
+overhangio	overhangio/tutor-deck	4	AGPL-3.0	2026-10-27	2024-12-06	False	Python	
+overhangio	overhangio/tpi	3	AGPL-3.0	2026-10-13	2023-01-10	False	Python	
+overhangio	overhangio/jupyter-xblock	2	AGPL-3.0	2025-04-07	2023-02-22	False	Python	Integrate JupyterHub notebooks with Open edX
+overhangio	overhangio/tutor-gradebook	2	None	2021-08-10	2020-09-05	True	Python	This plugin is now deprecated in favour of the MFE plugin: https://github.com/overhangio/tutor-mfe/
+overhangio	overhangio/tutor-livedeps	1	AGPL-3.0	2026-11-11	2025-09-10	False	Python	Tutor plugin that allows installing python packages at runtime without building the openedx image (Under active development: works only for tutor local and tuto
+overhangio	overhangio/openedx-release-demo	1	None	2026-08-10	2022-04-11	True	None	Open edX Sumac demo platform CD
+overhangio	overhangio/tutor-objectstorage	0	AGPL-3.0	2026-10-27	2026-10-21	False	Python	
+overhangio	overhangio/py2neo	0	Apache-2.0	2023-10-10	2023-10-10	False	Python	Fork of the now deleted py2neo repository
+overhangio	overhangio/test-docker-build	0	None	2023-04-27	2023-03-17	False	None	Test Docker image building
+ILIAS-eLearning	ILIAS-eLearning/ILIAS	512	GPL-3.0	2026-11-17	2015-02-11	False	PHP	GitHub repository for official ILIAS release branches and development branches (trunk)
+ILIAS-eLearning	ILIAS-eLearning/TestRepositoryObject	2	None	2026-10-17	2016-12-09	False	PHP	
+ILIAS-eLearning	ILIAS-eLearning/ilias-elearning.github.io	1	None	2019-10-17	2019-10-17	False	HTML	Github Page of the ILIAS e.V.
+ILIAS-eLearning	ILIAS-eLearning/delos	1	None	2026-11-05	2023-06-26	False	HTML	This repo contains all files relevant for creating a custom style of ILIAS. It is updated from the main repo automatically.
+ILIAS-eLearning	ILIAS-eLearning/ilias-plugin-EditorAsMode	1	GPL-3.0	2024-09-20	2021-12-08	False	PHP	Sets ModeLayout when editing and turns mainbar-tools into sole entries
+ILIAS-eLearning	ILIAS-eLearning/TestCalendarCustomGrid	0	None	2026-02-19	2017-10-06	False	PHP	ILIAS Plugin to test the "AppointmentCustomGrid" plugin slot.
+ILIAS-eLearning	ILIAS-eLearning/TestSoapHook	0	None	2017-12-20	2017-05-10	False	PHP	
+ILIAS-eLearning	ILIAS-eLearning/TestCronInterface	0	GPL-3.0	2026-09-17	2021-02-19	False	PHP	
+ILIAS-eLearning	ILIAS-eLearning/TestExportScaffold	0	GPL-3.0	2023-11-16	2023-11-15	False	PHP	Test Plugin for T&A Export Plugin Slot
+ILIAS-eLearning	ILIAS-eLearning/FieldTypeHookExample	0	None	2026-09-21	2026-09-21	False	PHP	Example Plugin for the Slot FieldTypeHook
+ILIAS-eLearning	ILIAS-eLearning/TestOrgUnitExtension	0	None	2017-05-10	2016-08-22	False	PHP	
+ILIAS-eLearning	ILIAS-eLearning/TestCalendarCustomModal	0	None	2026-02-19	2017-10-06	False	PHP	ILIAS Plugin to test the "AppointmentCustomModal" plugin slot. 
+ILIAS-eLearning	ILIAS-eLearning/ILIAS-images	0	GPL-3.0	2026-06-23	2022-06-14	False	None	Master files for ILIAS images
+ILIAS-eLearning	ILIAS-eLearning/TestQuestionScaffold	0	GPL-3.0	2023-11-16	2023-11-15	False	PHP	Test Plugin for T&A Question Plugin Slot
+ILIAS-eLearning	ILIAS-eLearning/TestPDFRenderer	0	None	2022-11-14	2017-08-28	False	PHP	
+ILIAS-eLearning	ILIAS-eLearning/TestPluginSetup	0	GPL-3.0	2026-02-16	2020-11-04	False	PHP	Plugin to test the integration of plugins into the ILIAS setup
+openeducat	openeducat/openeducat_erp	913	NOASSERTION	2026-11-16	2013-05-02	False	HTML	Comprehensive Open Source ERP for Educational Institutes
+jupyter	jupyter/jupyter	15349	BSD-3-Clause	2026-07-09	2015-06-04	False	Python	Jupyter metapackage for installation and documentation
+jupyter	jupyter/notebook	13472	BSD-3-Clause	2026-11-17	2015-04-09	False	Jupyter Notebook	Jupyter Interactive Notebook
+jupyter	jupyter/docker-stacks	8479	BSD-3-Clause	2026-11-15	2015-07-15	False	Python	Ready-to-run Docker images containing Jupyter applications
+jupyter	jupyter/nbdime	2848	NOASSERTION	2026-06-10	2015-11-16	False	TypeScript	Tools for diffing and merging of Jupyter notebooks.
+jupyter	jupyter/nbviewer	2284	NOASSERTION	2026-11-05	2012-08-05	False	Python	nbconvert as a web service: Render Jupyter Notebooks as static web pages
+jupyter	jupyter/nbconvert	1947	BSD-3-Clause	2026-11-17	2015-04-09	False	Python	Jupyter Notebook Conversion
+jupyter	jupyter/nbgrader	1370	BSD-3-Clause	2026-11-03	2014-09-13	False	Python	A system for assigning and grading notebooks
+jupyter	jupyter/dashboards	975	NOASSERTION	2019-10-26	2015-09-21	True	Jupyter Notebook	[RETIRED] See Voilà as a supported replacement
+jupyter	jupyter/colaboratory	734	BSD-3-Clause	2017-12-28	2014-03-06	True	JavaScript	[deprecated] Jupyter CoLaboratory, goto google colab now
+jupyter	jupyter/tmpnb	525	BSD-3-Clause	2018-01-24	2014-09-16	True	JavaScript	Creates temporary Jupyter Notebook servers using Docker containers. [DEPRECATED - See BinderHub project]
+jupyter	jupyter/jupyter_client	483	BSD-3-Clause	2026-11-06	2015-04-09	False	Python	Jupyter protocol client APIs
+jupyter	jupyter/jupyter-drive	419	BSD-2-Clause	2020-03-27	2014-10-28	True	TypeScript	Google drive for jupyter notebooks
+jupyter	jupyter/terminado	372	BSD-2-Clause	2026-11-16	2014-09-29	False	Python	Terminals served by tornado websockets
+jupyter	jupyter/nbformat	316	BSD-3-Clause	2026-11-02	2015-04-09	False	Python	Reference implementation of the Jupyter Notebook format
+jupyter	jupyter/atom-notebook	298	MIT	2021-05-14	2015-07-28	False	JavaScript	[Deprecated] Jupyter Notebook, but inside Atom.
+jupyter	jupyter/help	291	None	2019-03-25	2016-04-01	True	None	:sparkles: Need some help or have some questions? Please visit our Discourse page.
+jupyter	jupyter/jupyter_console	281	BSD-3-Clause	2026-09-14	2015-04-09	False	Python	Jupyter Terminal Console
+jupyter	jupyter/jupyter_core	219	BSD-3-Clause	2026-11-04	2015-03-25	False	Python	Core Jupyter functionality
+jupyter	jupyter/jupyter.github.io	215	BSD-3-Clause	2026-11-11	2014-07-07	False	HTML	Project Jupyter's home on the World Wide Web
+jupyter	jupyter/jupyter-sphinx	194	BSD-3-Clause	2026-11-16	2016-11-15	False	Python	Sphinx extension for rendering of Jupyter interactive widgets.
+jupyter	jupyter/nbclient	187	BSD-3-Clause	2026-06-05	2020-01-13	False	Python	A client library for executing notebooks. Formally nbconvert's ExecutePreprocessor
+jupyter	jupyter/docker-notebook	186	BSD-2-Clause	2016-06-21	2014-07-24	True	Shell	Docker containers for the IPython notebook (+SciPy Stack)
+jupyter	jupyter/dashboards_server	182	NOASSERTION	2017-10-12	2015-12-04	True	JavaScript	[RETIRED] Server that runs and renders Jupyter notebooks as interactive dashboards
+jupyter	jupyter/nbconvert-examples	176	BSD-3-Clause	2019-01-14	2013-07-01	False	Jupyter Notebook	Examples that illustrate how nbconvert can be used
+jupyter	jupyter/kernel_gateway_demos	160	BSD-3-Clause	2024-04-21	2015-12-02	False	Jupyter Notebook	Demos associated with the kernel gateway incubator project
+jupyter	jupyter/enhancement-proposals	127	BSD-3-Clause	2026-11-06	2015-08-27	False	JavaScript	Enhancement proposals for the Jupyter Ecosystem
+jupyter	jupyter/declarativewidgets	120	NOASSERTION	2017-08-26	2015-09-21	True	HTML	[RETIRED] Jupyter Declarative Widget Extension
+jupyter	jupyter/nbclassic	110	BSD-3-Clause	2026-06-29	2019-10-18	False	JavaScript	Jupyter Notebook as a Jupyter Server extension
+jupyter	jupyter/governance	103	CC0-1.0	2026-10-30	2015-09-02	False	Python	The governance process and model for Project Jupyter
+jupyter	jupyter/papyri	88	MIT	2026-11-14	2020-07-22	False	Python	
+jupyter	jupyter/design	85	BSD-3-Clause	2025-01-09	2014-07-07	False	HTML	Design related materials for Project Jupyter
+jupyter	jupyter/roadmap	84	BSD-3-Clause	2019-07-17	2015-10-23	False	None	Master roadmap for Project Jupyter
+jupyter	jupyter/scipy-advanced-tutorial	79	None	2017-08-26	2015-06-19	True	JavaScript	Advance Tutorial For SciPy
+jupyter	jupyter/dashboards_bundlers	78	NOASSERTION	2017-09-13	2015-12-04	True	Python	[RETIRED] Converts a notebook to a dashboard and deploys it / downloads it
+jupyter	jupyter/docker-demo-images	75	BSD-3-Clause	2018-03-04	2014-11-21	True	Jupyter Notebook	Demo images for use in try.jupyter.org and tmpnb.org
+jupyter	jupyter/services	75	BSD-3-Clause	2020-02-24	2015-07-23	True	TypeScript	This repository is deprecated.  It has been moved to https://github.com/jupyterlab/jupyterlab as a sub-package
+jupyter	jupyter/accessibility	74	BSD-3-Clause	2026-04-20	2019-03-06	False	Python	A repository for ongoing work around making Jupyter's software accessible and inclusive
+jupyter	jupyter/nb2kg	73	NOASSERTION	2020-05-21	2017-12-26	True	Python	
+jupyter	jupyter/jupyter_kernel_test	66	BSD-3-Clause	2024-03-12	2015-04-27	False	Python	A tool for testing Jupyter kernels
+jupyter	jupyter/jupyter-packaging	65	BSD-3-Clause	2026-11-02	2017-03-04	False	Python	Tools to help build and install Jupyter Python packages
+jupyterhub	jupyterhub/jupyterhub	8368	BSD-3-Clause	2026-11-05	2014-06-12	False	Python	Multi-user server for Jupyter notebooks
+jupyterhub	jupyterhub/binderhub	2672	BSD-3-Clause	2026-11-14	2017-04-26	False	Python	Run your code in the cloud, with technology so advanced, it feels like magic!
+jupyterhub	jupyterhub/repo2docker	1741	BSD-3-Clause	2026-11-09	2017-05-09	False	Python	Turn repositories into Jupyter-enabled Docker images
+jupyterhub	jupyterhub/zero-to-jupyterhub-k8s	1727	NOASSERTION	2026-11-15	2017-04-10	False	Python	Helm Chart & Documentation for deploying JupyterHub on Kubernetes
+jupyterhub	jupyterhub/the-littlest-jupyterhub	1146	BSD-3-Clause	2026-11-05	2018-06-15	False	Python	Simple JupyterHub distribution for 1-100 users on a single server
+jupyterhub	jupyterhub/jupyterhub-deploy-docker	767	BSD-3-Clause	2026-11-02	2016-04-14	False	Python	Reference deployment of JupyterHub with docker
+jupyterhub	jupyterhub/kubespawner	611	BSD-3-Clause	2026-11-09	2015-11-21	False	Python	Kubernetes spawner for JupyterHub
+jupyterhub	jupyterhub/dockerspawner	544	BSD-3-Clause	2026-11-02	2014-09-26	False	Python	Spawns JupyterHub single user servers in Docker containers 
+jupyterhub	jupyterhub/oauthenticator	443	BSD-3-Clause	2026-11-09	2014-09-23	False	Python	OAuth + JupyterHub Authenticator = OAuthenticator
+jupyterhub	jupyterhub/jupyter-server-proxy	405	BSD-3-Clause	2026-11-11	2016-10-18	False	Python	Jupyter notebook server extension to proxy web services.
+jupyterhub	jupyterhub/configurable-http-proxy	273	BSD-3-Clause	2026-11-12	2014-08-25	False	JavaScript	node-http-proxy plus a REST API
+jupyterhub	jupyterhub/jupyterhub-deploy-teaching	258	BSD-3-Clause	2024-06-11	2016-04-14	False	Jinja	Reference deployment of JupyterHub and nbgrader on a single server
+jupyterhub	jupyterhub/nbgitpuller	237	BSD-3-Clause	2026-11-02	2017-05-24	False	Python	Jupyter server extension to sync a git repository one-way to a local path
+jupyterhub	jupyterhub/helm-chart	219	None	2026-11-14	2017-04-11	False	None	A store of Helm chart tarballs for deploying JupyterHub and BinderHub on a Kubernetes cluster
+jupyterhub	jupyterhub/ldapauthenticator	214	BSD-3-Clause	2026-11-02	2016-01-17	False	Python	LDAP Authenticator Plugin for Jupyter
+jupyterhub	jupyterhub/batchspawner	207	BSD-3-Clause	2026-11-02	2015-10-27	False	Python	Custom Spawner for Jupyterhub to start servers in batch scheduled systems
+jupyterhub	jupyterhub/jupyterhub-tutorial	202	BSD-3-Clause	2018-02-01	2016-05-11	True	Shell	Tutorial materials for deploying JupyterHub
+jupyterhub	jupyterhub/mybinder.org-user-guide	186	BSD-3-Clause	2026-09-27	2017-08-17	False	Python	Turn a Git repo into a collection of interactive notebooks. This is Binder's user documentation repository.
+jupyterhub	jupyterhub/jupyterlab-hub	181	BSD-3-Clause	2019-07-09	2016-10-17	True	TypeScript	Deprecated: JupyterLab extension for running JupyterLab with JupyterHub
+jupyterhub	jupyterhub/repo2docker-action	153	MIT	2026-02-23	2019-10-21	False	Shell	A GitHub action to build data science environment images with repo2docker and push them to registries.
+jupyterhub	jupyterhub/jupyter-remote-desktop-proxy	150	BSD-3-Clause	2026-11-02	2019-10-18	False	Python	 Run a Linux Desktop on a JupyterHub 
+jupyterhub	jupyterhub/jupyter-rsession-proxy	128	BSD-3-Clause	2026-11-10	2016-12-09	False	Python	Jupyter extensions for running an RStudio rsession proxy
+jupyterhub	jupyterhub/jupyterhub-idle-culler	117	NOASSERTION	2026-11-09	2020-04-27	False	Python	JupyterHub service to cull idle servers and users
+jupyterhub	jupyterhub/systemdspawner	101	BSD-3-Clause	2026-11-09	2016-09-06	False	Python	Spawn JupyterHub single-user notebook servers with systemd
+jupyterhub	jupyterhub/mybinder.org-deploy	83	BSD-3-Clause	2026-11-15	2017-05-22	False	Python	Deployment config files for mybinder.org
+jupyterhub	jupyterhub/nativeauthenticator	80	BSD-3-Clause	2026-11-06	2018-12-03	False	Python	JupyterHub-native User Authenticator
+jupyterhub	jupyterhub/jupyterhub-the-hard-way	80	BSD-3-Clause	2025-12-06	2019-09-05	False	None	Understanding JupyterHub by deploying it step by step
+jupyterhub	jupyterhub/ltiauthenticator	73	BSD-3-Clause	2026-11-02	2017-12-15	False	Python	A JupyterHub authenticator for LTI
+jupyterhub	jupyterhub/team-compass	70	None	2026-10-26	2017-12-07	False	Jupyter Notebook	A repository for team interaction, syncing, and handling meeting notes across the JupyterHub ecosystem.
+jupyterhub	jupyterhub/grafana-dashboards	66	BSD-3-Clause	2026-11-02	2020-12-30	False	Jsonnet	Grafana Dashboards useful for k8s + JupyterHub
+jupyterhub	jupyterhub/wrapspawner	65	BSD-3-Clause	2024-04-09	2016-09-21	False	Python	Mechanism for runtime configuration of spawners for JupyterHub
+jupyterhub	jupyterhub/traefik-proxy	60	BSD-3-Clause	2026-11-02	2018-11-19	False	Jupyter Notebook	JupyterHub proxy implementation with traefik
+jupyterhub	jupyterhub/chartpress	57	BSD-3-Clause	2026-11-02	2018-02-15	False	Python	automate building and publishing images for helm charts
+jupyterhub	jupyterhub/hubshare	56	BSD-3-Clause	2024-06-12	2016-11-12	True	Python	A directory sharing service for JupyterHub
+jupyterhub	jupyterhub/sudospawner	52	BSD-3-Clause	2026-11-02	2014-11-24	False	Python	Spawn JupyterHub single-user servers with sudo
+jupyterhub	jupyterhub/firstuseauthenticator	50	BSD-3-Clause	2026-10-23	2016-10-25	False	Python	JupyterHub Authenticator that lets users set passwords when they first log in
+jupyterhub	jupyterhub/jupyterhub-deploy-hpc	36	None	2024-06-11	2016-07-25	False	Python	Documented examples of Jupyterhub deployment in HPC settings
+jupyterhub	jupyterhub/outreachy	33	BSD-3-Clause	2025-12-01	2018-09-18	True	Python	Tasks, management and documentation for Outreachy Internships in JupyterHub
+jupyterhub	jupyterhub/jupyterhub-example-kerberos	33	NOASSERTION	2017-10-17	2016-11-09	True	Python	Example for experimenting with how JupyterHub can be configured to work with Kerberos
+jupyterhub	jupyterhub/pebble-helm-chart	31	BSD-3-Clause	2026-10-12	2020-05-05	False	Shell	To deploy a server to replace Let's Encrypt in externally unreachable CI environment for testing purposes.
+edx	edx/ux-pattern-library	281	Apache-2.0	2024-02-29	2015-01-22	False	SCSS	The (working) Visual, UI, and Front End Styleguide for edX.
+edx	edx/jenkins-configuration	178	Apache-2.0	2026-09-24	2017-05-30	False	Groovy	A collection of utilities for configuring a Jenkins instance and its plugins
+edx	edx/xserver	73	AGPL-3.0	2021-01-18	2013-05-30	True	Python	XServer accepts student code submissions from the LMS and runs the code using (separate) courseware graders
+edx	edx/insights	47	AGPL-3.0	2018-12-10	2013-03-29	True	Python	[ARCHIVED]  Python+Mongo+Django framework for creating simple, pluggable analytics based on streaming events. 
+edx	edx/jenkins-job-dsl	36	AGPL-3.0	2026-10-08	2016-05-13	False	Groovy	DSL scripts for edx Jenkins instances
+edx	edx/snowflake_timetravel_table	22	Apache-2.0	2026-01-12	2021-03-03	False	Python	A table-type dbt materialization for Snowflake to enable Time Travel
+edx	edx/edx-ora	20	AGPL-3.0	2026-08-05	2012-11-08	True	Python	[ARCHIVED] edX ORA (Open Response Assessor) allows for the peer, instructor, and AI assessment of problems on the edX platform.
+edx	edx/edx-load-tests	20	Apache-2.0	2019-08-09	2015-07-30	True	Python	Open source load tests for edX software components
+edx	edx/pa11ycrawler	18	Apache-2.0	2019-04-18	2016-03-22	True	JavaScript	Python crawler (using Scrapy) that uses Pa11y to check accessibility of pages as it crawls.
+edx	edx/cookiecutter-django-app	16	Apache-2.0	2020-05-21	2016-07-05	True	Python	A cookiecutter template for creating reusable Django packages (installable apps) quickly
+edx	edx/edx-oauth2-provider	15	AGPL-3.0	2019-09-18	2014-08-19	True	Python	
+edx	edx/edx-video-pipeline	14	AGPL-3.0	2020-09-30	2017-07-03	True	Python	[ARCHIVED] Video encode automation for edx-platform
+edx	edx/harprofiler	13	Apache-2.0	2019-07-24	2014-10-27	True	Python	record har files for automated web pageloads
+edx	edx/notifier	13	AGPL-3.0	2020-10-27	2013-08-15	True	Python	
+edx	edx/api-manager	12	AGPL-3.0	2026-10-27	2016-04-11	False	Python	A set of configuration files, documentation, and sample code for the edX API Manager.
+edx	edx/braze-client	11	AGPL-3.0	2026-08-26	2021-10-20	False	Python	Python client for interacting with Braze APIs
+edx	edx/loghandlersplus	11	AGPL-3.0	2016-09-01	2013-03-08	True	Python	Additional handlers for Python logging (AWS SNS, AWS SQS)
+edx	edx/commerce-coordinator	11	AGPL-3.0	2026-11-17	2021-10-01	False	Python	A controller to manage commerce workflows and services
+edx	edx/edx-exams	11	AGPL-3.0	2026-11-17	2022-05-05	False	Python	Service providing access to exam information
+edx	edx/edxanalytics	11	AGPL-3.0	2017-01-19	2013-03-29	True	JavaScript	[ARCHIVED] edX Analytics Service
+edx	edx/dbt-schema-builder	11	AGPL-3.0	2026-11-05	2020-06-02	False	Python	
+edx	edx/cookiecutter-django-ida	10	Apache-2.0	2020-05-21	2015-09-09	True	Python	A cookiecutter template for creating Django IDAs quickly
+edx	edx/js-test-tool	8	Apache-2.0	2017-01-19	2013-06-18	True	Python	[ARCHIVED] Run JavaScript test suites and collect coverage information
+edx	edx/django-openid-auth	8	BSD-2-Clause	2019-05-23	2015-09-18	True	Python	Fork of http://bazaar.launchpad.net/~django-openid-auth/django-openid-auth/trunk/revision/113
+edx	edx/edx-solutions-jquery-xblock	8	AGPL-3.0	2016-09-20	2014-03-26	True	JavaScript	jQuery plugin to load XBlocks remotely
+edx	edx/edx-prefectutils	7	AGPL-3.0	2026-03-09	2020-05-11	False	Python	Utility code to use in writing Prefect Flows.
+edx	edx/ai-aside	7	AGPL-3.0	2026-11-15	2023-05-09	False	Python	A plugin containing xblocks and apps supporting GPT and other LLM use on edX
+edx	edx/edx-e2e-tests	7	AGPL-3.0	2023-01-27	2013-10-23	True	Python	End-to-end tests for edx applications
+edx	edx/api-integration	6	AGPL-3.0	2021-10-20	2016-06-17	True	Python	
+edx	edx/alton	5	None	2019-07-24	2014-05-22	True	Python	The edx robot.
+edx	edx/edx-app-android-white-label-demo	5	None	2022-12-07	2016-07-19	True	Shell	
+edx	edx/skel	5	None	2015-09-02	2013-05-15	True	None	A skeleton that can be used as the basis for open-source edX repositories
+edx	edx/djeventstream	5	AGPL-3.0	2016-08-24	2013-03-29	True	Python	djeventstream
+edx	edx/programs	5	AGPL-3.0	2019-06-05	2015-09-10	True	Python	[ARCHIVED] Service formerly used to support programs-based products
+edx	edx/brand-edx.org	5	None	2024-12-18	2020-08-17	False	SCSS	
+edx	edx/datajam	5	AGPL-3.0	2014-12-02	2013-12-02	True	Python	edX Dajatam
+edx	edx/edx-solutions-xblock-brightcove	5	AGPL-3.0	2014-08-21	2014-02-19	True	Python	XBlock - Video Player for Brightcove
+edx	edx/edx-video-worker	4	AGPL-3.0	2020-09-30	2017-07-03	True	Python	[ARCHIVED] edx-video-pipeline Encode Worker
+edx	edx/frontend-auth	4	AGPL-3.0	2021-06-01	2018-09-12	True	JavaScript	[DEPRECATED] Use frontend-platform instead.
+edx	edx/frontend-create-react-app	4	AGPL-3.0	2020-11-30	2018-04-30	True	JavaScript	[ARCHIVED]
+HKUDS	HKUDS/DeepTutor	60015	Apache-2.0	2026-11-15	2025-12-28	False	Python	DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.
+HKUDS	HKUDS/CLI-Anything	59056	Apache-2.0	2026-09-22	2026-03-08	False	Python	"CLI-Anything: Making ALL Software Agent-Native" -- CLI-Hub: https://clianything.cc/
+HKUDS	HKUDS/nanobot	50152	MIT	2026-11-17	2026-02-01	False	Python	Your lightweight open-source personal agent.
+HKUDS	HKUDS/LightRAG	40744	MIT	2026-11-17	2024-10-02	False	Python	[EMNLP2025] LightRAG: Simple and Fast Retrieval-Augmented Generation
+HKUDS	HKUDS/Vibe-Trading	38434	MIT	2026-11-17	2026-04-01	False	Python	"Vibe-Trading: Your Personal Trading Agent"
+HKUDS	HKUDS/RAG-Anything	24590	MIT	2026-11-16	2025-06-06	False	Python	"RAG-Anything: All-in-One RAG Framework"
+HKUDS	HKUDS/AI-Trader	23306	None	2026-06-11	2025-10-23	False	Python	"AI-Trader: 100% Fully-Automated Agent-Native Trading"  
+HKUDS	HKUDS/DeepCode	16849	MIT	2026-11-17	2025-05-14	False	Python	"DeepCode: Open Agentic Coding (Agent Harness & Loop Engineering & Multi-Agent Orchestration)"
+HKUDS	HKUDS/OpenHarness	16222	MIT	2026-06-04	2026-04-01	False	Python	"OpenHarness: Open Agent Harness with a Built-in Personal Agent--Ohmo!"
+HKUDS	HKUDS/ViMax	12946	MIT	2026-09-30	2025-03-30	False	Python	"ViMax: Agentic Video Generation (Director, Screenwriter, Producer, and Video Generator All-in-One)"
+HKUDS	HKUDS/AutoAgent	9843	MIT	2025-10-16	2025-02-06	False	Python	"AutoAgent: Fully-Automated and Zero-Code LLM Agent Framework"
+HKUDS	HKUDS/ClawWork	8571	MIT	2026-03-03	2026-02-15	False	Python	"ClawWork: OpenClaw as Your AI Coworker - 💰 $15K earned in 11 Hours"
+HKUDS	HKUDS/AgentPilot	8069	MIT	2026-11-12	2026-03-24	False	Python	AgentPilot: Make Your Agents Move Better and Faster
+HKUDS	HKUDS/AI-Researcher	5894	None	2025-10-16	2025-03-11	False	Python	[NeurIPS2025] "AI-Researcher: Autonomous Scientific Innovation" -- A production-ready version: https://novix.science/chat
+HKUDS	HKUDS/ClawTeam	5555	MIT	2026-05-09	2026-03-17	False	Python	"ClawTeam: Agent Swarm Intelligence" (One Command → Full Automation)
+HKUDS	HKUDS/Paper2Slides	3862	MIT	2026-05-20	2025-12-07	False	Python	"Paper2Slides: From Paper to Presentation in One Click"
+HKUDS	HKUDS/VideoRAG	3526	NOASSERTION	2026-03-18	2025-02-03	False	Python	[KDD'2026] "VideoRAG: Chat with Your Videos"
+HKUDS	HKUDS/AutoSwarm	2626	MIT	2026-11-15	2026-07-01	False	Python	AutoSwarm: Unify All Your Agents. Break Context Barriers. Watch Them Work Together for You.
+HKUDS	HKUDS/FastCode	2289	None	2026-07-06	2026-02-13	False	Python	"FastCode: Accelerating and Streamlining Your Code Understanding"
+HKUDS	HKUDS/VideoAgent	2049	MIT	2026-07-22	2025-07-16	False	Python	[EMNLP2026] "VideoAgent: All-in-One Agentic Framework for Video Understanding and Editing, and Remaking"
+HKUDS	HKUDS/MiniRAG	2036	MIT	2025-10-16	2025-01-11	False	Python	[ACL2026] "MiniRAG: Making RAG Simpler with Small and Open-Sourced Language Models"
+HKUDS	HKUDS/Auto-Deep-Research	1756	None	2025-10-16	2025-02-16	False	Python	"Your Fully-Automated Personal AI Assistant"
+HKUDS	HKUDS/AgentSpace	1034	Apache-2.0	2026-07-24	2026-06-22	False	TypeScript	"AgentSpace: Human + Agents. One Team. One Workspace"
+HKUDS	HKUDS/PhoneGo	1010	MIT	2026-11-17	2025-10-19	False	Python	PhoneGo: Your AI Agent on Your Phone
+HKUDS	HKUDS/GraphGPT	831	Apache-2.0	2024-06-25	2023-10-15	False	Python	[SIGIR'2024] "GraphGPT: Graph Instruction Tuning for Large Language Models"
+HKUDS	HKUDS/AnyTool	704	MIT	2026-02-28	2025-12-09	False	Python	"AnyTool: Universal Tool-Use Layer for AI Agents"
+HKUDS	HKUDS/LightReasoner	616	MIT	2026-05-22	2025-09-29	False	Python	[ACL 2026 Oral] "LightReasoner: Can Small Language Models Teach Large Language Models Reasoning?"
+HKUDS	HKUDS/SepLLM	574	None	2026-11-09	2024-12-11	False	Python	[ICML 2025] "SepLLM: Accelerate Large Language Models by Compressing One Segment into One Separator"
+HKUDS	HKUDS/SSLRec	571	Apache-2.0	2025-03-21	2023-02-08	False	Python	[WSDM'2024 Oral] "SSLRec: A Self-Supervised Learning Framework for Recommendation"
+HKUDS	HKUDS/LLMRec	537	Apache-2.0	2024-06-10	2023-10-23	False	Python	[WSDM'2024 Oral] "LLMRec: Large Language Models with Graph Augmentation for Recommendation"
+HKUDS	HKUDS/CatchMe	523	Apache-2.0	2026-09-26	2026-03-30	False	Python	"CatchMe: Make Your AI Agents Truly Personal"
+HKUDS	HKUDS/RLMRec	465	Apache-2.0	2024-06-26	2023-10-23	False	Python	[WWW'2024] "RLMRec: Representation Learning with Large Language Models for Recommendation"
+HKUDS	HKUDS/UrbanGPT	464	Apache-2.0	2025-04-18	2024-02-21	False	Python	[KDD'2024] "UrbanGPT: Spatio-Temporal Large Language Models"
+HKUDS	HKUDS/GraphAgent	372	None	2025-02-08	2024-12-18	False	Jupyter Notebook	[EMNLP2025] "GraphAgent: Agentic Graph Language Assistant"
+HKUDS	HKUDS/Awesome-LLM4Graph-Papers	368	None	2025-03-15	2024-05-11	False	None	[KDD'2024] "LLM4Graph: A Survey of Large Language Models for Graphs"
+HKUDS	HKUDS/OpenGraph	340	Apache-2.0	2024-10-11	2024-02-21	False	Python	[EMNLP'2024] "OpenGraph: Towards Open Graph Foundation Models"
+HKUDS	HKUDS/DeepInnovator	292	MIT	2026-03-06	2026-02-27	False	Python	"DeepInnovator: AI Research Assistant - Idea Spark & Scientific Discovery"
+HKUDS	HKUDS/AnyGraph	232	None	2024-09-19	2024-08-12	False	Python	"AnyGraph: Graph Foundation Model in the Wild"
+HKUDS	HKUDS/MoChat	230	MIT	2026-02-12	2026-02-10	False	TypeScript	"MoChat: OpenClaw as Your Social Agent https://mochat.io"
+HKUDS	HKUDS/MMSSL	228	None	2024-06-20	2023-02-08	False	Python	[WWW'2023] "MMSSL: Multi-Modal Self-Supervised Learning for Recommendation"
+chaoss	chaoss/grimoirelab	643	GPL-3.0	2026-11-16	2017-09-20	False	Shell	GrimoireLab: platform for software development analytics and insights
+chaoss	chaoss/grimoirelab-perceval	330	GPL-3.0	2026-10-28	2015-12-04	False	Python	Send Sir Perceval on a quest to retrieve and gather data from software repositories.
+chaoss	chaoss/metrics	182	MIT	2022-03-24	2017-09-05	True	None	Implementation-agnostic metrics for assessing open source community health. Maintained by the CHAOSS Metrics Committee.
+chaoss	chaoss/community	109	MIT	2026-11-16	2017-10-03	False	JavaScript	This is the main CHAOSS community repository. Feel free to open an issue to discuss a topic of community interest! This repository also holds governance, mentor
+chaoss	chaoss/wg-dei	92	MIT	2026-11-02	2017-12-20	False	None	CHAOSS Working Group focused on Diversity, Equity, and Inclusion metrics
+chaoss	chaoss/8Knot	80	MIT	2026-11-17	2022-01-30	False	Python	Dash app in development to serve open source community visualizations using GitHub data from CollectOSS.
+chaoss	chaoss/prospector	66	GPL-3.0	2019-03-23	2017-09-04	True	Python	Prospector permits automated collection of a wide range of metrics of open source projects useful in evaluating the project.
+chaoss	chaoss/grimoirelab-elk	62	GPL-3.0	2026-11-13	2015-09-30	False	Python	
+chaoss	chaoss/grimoirelab-sortinghat	58	GPL-3.0	2026-11-14	2014-10-01	False	Python	A tool to manage identities
+chaoss	chaoss/website	46	MIT	2026-11-17	2018-01-02	False	HTML	(Some of the) Content of http://chaoss.community website. 
+chaoss	chaoss/grimoirelab-sirmordred	41	GPL-3.0	2026-11-13	2016-08-24	False	Python	Orchestrate the execution of GrimoireLab tools to produce a dashboard
+chaoss	chaoss/wg-evolution	39	MIT	2026-03-12	2018-04-13	False	None	Working Group focused on Evolution metrics (for software development projects)
+chaoss	chaoss/grimoirelab-sigils	39	GPL-3.0	2025-09-23	2016-06-23	False	Python	Panels from GrimoireLab dashboards
+chaoss	chaoss/wg-value	38	MIT	2025-02-13	2019-03-22	False	None	CHAOSS Value Working Group
+chaoss	chaoss/wg-metrics-development	36	MIT	2026-05-19	2019-04-18	False	None	CHAOSS Common Metrics Working Group
+chaoss	chaoss/disclosure	34	GPL-3.0	2026-11-11	2026-02-13	False	Go	A CLI tool and GitHub Action to gather signals of disclosed AI contribution to aid community health monitoring tools and open source maintainers
+chaoss	chaoss/wg-data-science	31	MIT	2026-11-11	2023-08-09	False	Jupyter Notebook	CHAOSS Data Science Working Group: collaborate and improve open source project health using data science-based approaches
+chaoss	chaoss/grimoirelab-graal	30	GPL-3.0	2026-10-28	2018-05-06	False	Python	A Generic Repository AnALyzer
+chaoss	chaoss/grimoirelab-tutorial	30	NOASSERTION	2026-05-08	2016-10-02	False	Ruby	Tutorial for installing, using, developing GrimoireLab
+chaoss	chaoss/wg-risk	27	MIT	2026-05-19	2019-03-25	False	None	Risk Working Group Repository
+chaoss	chaoss/wg-ai-alignment	26	MIT	2026-11-05	2025-10-02	False	HTML	Planning and collaboration hub for the CHAOSS AI Alignment Working Group. We develop metrics to evaluate how effectively AI systems respect and align with open 
+chaoss	chaoss/grimoirelab-kingarthur	24	GPL-3.0	2026-10-23	2016-01-27	False	Python	King Arthur commands his loyal knight Perceval on the quest to retrieve data from software repositories.
+chaoss	chaoss/wg-funding-impact	23	MIT	2026-02-13	2025-01-13	False	None	The CHAOSS Working Group on OSS Funding Impacts aims to develop frameworks, metrics, and methodologies for measuring and understanding the impacts of funding on
+chaoss	chaoss/AFOS-AfricanOpenSource	23	MIT	2025-01-14	2023-07-03	False	JavaScript	AFOS (AfricanOpenSource) is a platform for showcasing Open Source projects build by Africans to increase visibility, and expose the projects to more contributor
+chaoss	chaoss/grimoirelab-manuscripts	20	GPL-3.0	2021-01-25	2017-03-28	False	Jupyter Notebook	Bitergia reports engine
+chaoss	chaoss/augur-community-reports	18	MIT	2024-04-15	2020-07-07	True	Jupyter Notebook	A set of Jupyter Lab Notebooks and Other Implementations of Community Reports in Standard Form
+chaoss	chaoss/CollectOSS	17	MIT	2026-11-17	2026-04-21	False	Python	Python-based data collection and relational storage tool for Open Source Community Health data and CHAOSS metrics
+chaoss	chaoss/wg-metrics-models	17	MIT	2025-02-13	2021-08-24	False	Jupyter Notebook	Working Group for Metrics Model 
+chaoss	chaoss/chaoss-africa	16	MIT	2026-09-23	2022-09-09	False	None	CHAOSS Africa is the local chapter of the CHAOSS Project
+chaoss	chaoss/chaoss-slack-bot	16	MIT	2025-07-25	2022-04-19	False	JavaScript	This holds the code to the CHAOSS slack bot for newcomers to the project
+chaoss	chaoss/education	15	MIT	2026-11-04	2023-10-12	False	None	This holds info on the CHAOSS Onboarding Courses
+chaoss	chaoss/community-handbook	15	MIT	2022-09-05	2020-06-19	True	None	This is the home of documentation included in the Community Handbook.
+chaoss	chaoss/wg-ospo	13	MIT	2026-03-09	2023-04-04	False	None	
+chaoss	chaoss/grimoirelab-kidash	13	GPL-3.0	2026-10-28	2018-01-18	False	Python	Kidash: A GrimoireLab tool & library to manage Kibana/Kibiter visualizations and dashboards
+chaoss	chaoss/wg-app-ecosystem	13	MIT	2023-01-18	2020-03-14	False	None	Working group for community metrics in the context of the open source app ecosystem
+chaoss	chaoss/UNSDG-classifier-tool	12	MIT	2026-11-11	2025-09-05	False	Python	A responsive website for categorizing the open source projects into different UN SDG's goals that closely align with their repository by reading their directory
+chaoss	chaoss/grimoirelab-cereslib	12	LGPL-3.0	2026-10-28	2016-03-10	False	Python	This project aims at unifying, eventizing and enriching information from the Perceval tool
+chaoss	chaoss/grimoirelab-hatstall	11	GPL-3.0	2021-03-05	2017-11-23	False	HTML	
+chaoss	chaoss/translations	9	None	2022-09-21	2021-01-13	True	None	
+chaoss	chaoss/wg-un-sdg	9	MIT	2024-12-23	2024-10-30	False	None	UN-SDG working group aims to empower open source communities with metrics to align their contributions with the UN's Sustainable Development Goals (SDGs) and en

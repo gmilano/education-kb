@@ -6,7 +6,14 @@ updated: 2026-11-17
 
 # Compose patterns — education
 
-**Pass `p878`, 2026-11-17** (eighth pass of the day). **Eighteen recipes** — `p878` adds **P17**
+**Pass `p879`, 2026-11-17** (ninth pass of the day). **Twenty recipes** — `p879` adds **P19**
+(Open edX capability **without** the AGPL obligation: the platform's component layer is Apache-2.0,
+so the deliverable can be Globant's even when the host platform is copyleft) and **P20** (the
+offline-first content supply chain, MIT end to end — `ricecooker` → `studio` → Kolibri →
+`morango`, which is the piece that makes an offline programme *measurable* and therefore
+renewable). It also repairs the stale `openedx/edx-platform` slug in **P16**'s table.
+
+**Previous pass (`p878`), retained:** **Pass `p878`, 2026-11-17** (eighth pass of the day). **Eighteen recipes** — `p878` adds **P17**
 (MIT auto-grading at scale, with integrity by design rather than surveillance — newly possible
 because `ls1intum/Artemis` exists and is MIT) and **P18** (paper-first assessment capture for
 low-bandwidth systems, built on an MIT OMR grader and Brazil's incumbent SIS, both surfaced this
@@ -441,7 +448,7 @@ engagement:**
 
 | Instead of | Consider | Why |
 |---|---|---|
-| `openedx/edx-platform` (AGPL-3.0) as the records/LMS layer, in **Brazil** | **https://github.com/portabilis/i-educar** (🔴 GPL-2.0, **726 ★**, created 2013, CI, tagged releases) **as an integration target, not a base** | It is **the incumbent** in Brazilian municipal education. A pattern that ignores the incumbent and proposes a parallel system loses on procurement, not on technology. Keep the AI layer a separate service and the copyleft boundary holds. |
+| `openedx/openedx-platform` (AGPL-3.0; 🟢 `p879` corrected slug) as the records/LMS layer, in **Brazil** | **https://github.com/portabilis/i-educar** (🔴 GPL-2.0, **726 ★**, created 2013, CI, tagged releases) **as an integration target, not a base** | It is **the incumbent** in Brazilian municipal education. A pattern that ignores the incumbent and proposes a parallel system loses on procurement, not on technology. Keep the AI layer a separate service and the copyleft boundary holds. |
 | `Gego-K12/gegok12` (MIT, 57 ★) where a permissive SIS is needed | **https://github.com/Antonio-Neves/Gestao-Escolar** (**MIT**, 50 ★, bilingual PT/EN, pushed 2026-10-12) | Comparable size and licence, but **LATAM-origin and already bilingual** — which is the specific thing this pattern is selling. |
 
 🟡 **`TutorIA` remains the right core for a Spanish-language public-sector tutor** — the substitutions
@@ -453,7 +460,7 @@ twelve legs, not a systematic sweep, and ran none in indigenous or regional lang
 | Layer | Component | Licence |
 |---|---|---|
 | Tutor backend (base) | https://github.com/LabSirius/TutorIA — **clone `feature/refactor-to-v2-requirements`, NOT `main`** | MIT |
-| LMS | https://github.com/openedx/edx-platform | AGPL-3.0 |
+| LMS | https://github.com/openedx/openedx-platform | AGPL-3.0 |
 | LTI launch (the piece to add) | https://github.com/Cvmcosta/ltijs | Apache-2.0 |
 | Local inference | https://github.com/ollama/ollama | MIT |
 | Model-swap seam | https://github.com/BerriAI/litellm | MIT |
@@ -948,6 +955,119 @@ SIS, and adding it here is a one-field change while it is still your fork and be
 accumulates.
 
 ---
+
+## P19 — Open edX capability without the AGPL obligation — new in `p879`
+
+**Problem it solves.** A university, ministry or corporate client already runs Open edX, or wants
+to, and needs AI-assisted capability built on top. The standing advice in this KB has been that the
+engagement is then AGPL-3.0 at the platform layer and AGPL-3.0 at the operations layer (Tutor), so
+anything Globant builds and hosts is exposed to §13 network-copyleft. 🔵 **`p879`'s census shows
+the component layer is Apache-2.0, so the deliverable does not have to be.**
+
+**The licence line, stated plainly before the recipe:**
+
+| What you do | Licence consequence |
+|---|---|
+| Write an **XBlock** and ship it to the client | **Apache-2.0 framework; your component is yours.** No AGPL obligation attaches to the component. |
+| Use **`codejail`** to sandbox execution inside your component | Apache-2.0. |
+| Build the UI with **`paragon`** | Apache-2.0. |
+| Put **CAS** in front | Apache-2.0. |
+| 🔴 **Fork `openedx/openedx-platform` and host the modified server** | 🔴 **AGPL-3.0 §13 — source of your modifications must be offered to every network user.** |
+| 🔴 **Fork Tutor (AGPL-3.0, `overhangio`) to change the deployment** | 🔴 Same. The `overhangio` estate is **3% permissive** in the census sample — there is no permissive escape there. |
+
+🟢 **The rule: extend, never fork.** Open edX's whole plugin architecture exists so that extension
+is the supported path, and the extension points are the Apache-2.0 repositories.
+
+**Stack, all byte-read Apache-2.0:**
+
+| Layer | Repo | ★ |
+|---|---|---:|
+| Component framework | https://github.com/openedx/XBlock | 471 |
+| Dev workbench (no LMS needed) | https://github.com/openedx/xblock-sdk | 69 |
+| Secure execution of untrusted code | https://github.com/openedx/codejail | 477 |
+| Accessible UI system for learning apps | https://github.com/openedx/paragon | 141 |
+| Identity / SSO / attribute release | https://github.com/apereo/cas | 11,402 |
+| Mobile delivery | https://github.com/openedx/openedx-app-android · https://github.com/openedx/openedx-app-ios | 38 · 31 |
+| Host platform (**client's**, unmodified) | https://github.com/openedx/openedx-platform | 8,240 (AGPL-3.0) |
+
+**Wiring.**
+
+1. **Develop against `xblock-sdk`, not against the client's LMS.** The workbench runs an XBlock
+   standalone, so the whole build loop happens without an Open edX instance and without touching
+   AGPL code.
+2. **Put the model call behind the XBlock's server-side handler**, never in the browser. The
+   handler is where the Art. 50 disclosure, the consent check from **P15** and the logging in
+   **P14**'s measurement spine attach.
+3. **Any learner-submitted code or expression runs inside `codejail`**, not in the handler's own
+   process. `codejail` is the AppArmor-confined execution path Open edX itself uses for graded
+   code; reusing it means the sandbox has had a decade of adversarial exposure that a new one has
+   not.
+4. **Register the XBlock as a CAS service** and release the minimum attribute set —
+   pseudonymous id plus enrolment. The tutor then never receives a name or an email address, and
+   the data-minimisation claim is a configuration file you can show an auditor.
+5. **Build the UI in `paragon`** so the accessibility conformance in `verticals/solutions.md`'s
+   accessibility section is inherited rather than re-litigated in the bid.
+6. **Deploy as a plugin into the client's existing Tutor/Open edX install.** Globant's repository
+   contains the XBlock only. 🔵 **Nothing Globant hosts is a modified Open edX, so §13 is never
+   triggered.**
+
+**Timeline:** 6–8 weeks for a first graded, sandboxed, SSO-attached XBlock in a client's staging
+install, assuming the client operates Open edX already. Add 3–4 weeks if the engagement also has to
+stand the platform up.
+
+**Where it sells.** 🌎 **North America** (Open edX's origin and its largest institutional base),
+🌍 **EMEA** (where the AGPL question is asked by procurement before the AI question), 🌏 **APAC**
+and 🌎 **LATAM** national-platform deployments, which are overwhelmingly Open edX.
+
+🔴 **Do not oversell this.** Apache-2.0 on the component layer does not make an Open edX engagement
+copyleft-free. It makes **Globant's deliverable** copyleft-free. If the client asks Globant to host
+a modified platform, P19 does not apply and the AGPL answer stands.
+
+## P20 — Offline-first content supply chain for intermittently connected systems — new in `p879`
+
+**Problem it solves.** A ministry, NGO or rural school system has content to distribute and
+learners whose devices are online rarely and briefly. **P5** covers offline *tutoring*; it assumes
+content is already on the device and says nothing about how it got there, how it is updated, or
+how learner records get back. 🔵 **`p879` found that the whole pipeline exists, is MIT, and is
+maintained by the organisation that built Kolibri.**
+
+**Stack, all MIT, all byte-read:**
+
+| Layer | Repo | ★ | Pushed |
+|---|---|---:|---|
+| Authoring / curation | https://github.com/learningequality/studio | 212 | 2026-11-09 |
+| **Programmatic channel build** | https://github.com/learningequality/ricecooker | 32 | 2026-11-02 |
+| Shared constants | https://github.com/learningequality/le-utils | 7 | 2026-11-02 |
+| **Multi-peer DB replication** | https://github.com/learningequality/morango | 15 | 2026-11-13 |
+| Learner-facing platform | https://github.com/learningequality/kolibri | 1,178 | 2026-11-17 |
+
+**Wiring.**
+
+1. **Ingest with a `ricecooker` chef.** The client's existing corpus — PDFs, videos, a ministry's
+   textbook archive — becomes a Kolibri channel through a Python script, not a manual upload.
+   This is the seam where AI earns its place: classification, metadata extraction, automatic
+   alignment to the national curriculum and language tagging all happen **in the chef**, offline,
+   before anything is published.
+2. **Publish to Studio**, which gives the ministry a human review and approval step over
+   machine-generated metadata. 🔵 **Keep the human gate.** `T9`'s efficacy evidence and every
+   governance pattern in this file point the same way: the automated step that nobody can veto is
+   the one that fails an audit.
+3. **Distribute by whatever moves** — USB, local server, intermittent link. Kolibri is built for
+   this and does not assume a connection.
+4. **Sync records back with `morango`.** This is the part teams usually under-estimate: multi-writer
+   replication between devices that are **never online simultaneously**, with conflict resolution,
+   over SQLite and PostgreSQL. Reusing it instead of writing it is the difference between a 10-week
+   and a 20-week engagement.
+5. **Attach the measurement spine from P14** at the `morango` boundary, so efficacy data survives
+   the offline hop. An offline programme that cannot measure itself cannot be renewed.
+
+**Timeline:** 8–10 weeks for ingest → review → distribute → sync on a real corpus.
+
+**Where it sells.** 🌎 **LATAM** (rural and public-school programmes; pairs with the Spanish-language
+base in **P9**), 🌏 **APAC** (archipelagic and remote deployments), 🌍 **EMEA** (development-funded
+programmes in Africa and the Middle East). 🔴 **Not** a North America pattern — connectivity there
+is rarely the binding constraint, and the sale is **P13** or **P15** instead.
+
 
 ## Pattern selection by region
 

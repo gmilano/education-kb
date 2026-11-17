@@ -6,7 +6,19 @@ updated: 2026-11-17
 
 # Vertical platforms — education
 
-**Pass `p878`, 2026-11-17** (eighth pass of the day). **`p878` adds the first permissively
+**Pass `p879`, 2026-11-17** (ninth pass of the day). **`p879` adds the layer this file has
+described 879 passes of systems on top of and never named: identity.**
+
+- 🟢 **`apereo/cas` — Apache-2.0, 11,402 ★, pushed 2026-11-17.** Single sign-on for higher
+  education, governed by the Apereo Foundation. 🔵 The EU AI Act's Art. 50 disclosure and Art. 4
+  literacy duties, and every US state consent rule in **P15**, are recorded **against an
+  identity** — so the SSO layer is where AI governance becomes auditable.
+- 🟢 **Permissive mobile clients for copyleft servers:** `moodlehq/moodleapp` (Apache-2.0, 1,006 ★,
+  **2,491 forks**), Open edX Android/iOS, `oppia-android`. A white-labelled app is **not** a
+  copyleft deliverable.
+- 🟢 **Corrected:** Open edX's address here was stale — `openedx/openedx-platform`, 8,240 ★.
+
+**Previous pass (`p878`), retained:** **Pass `p878`, 2026-11-17** (eighth pass of the day). **`p878` adds the first permissively
 licensed assessment platform this file has ever carried, a second permissive auto-grader, and
 Brazil's incumbent SIS — all three found by a discovery channel no pass had used.**
 `api.github.com/search/repositories` takes full discovery queries, not just `repo:` lookups:
@@ -29,9 +41,8 @@ as an HTML comment on line 3. 🔵 **Keep briefing clients that the automated ch
 🔴 **And the warning that belongs with this file's flagship row:** **`overhangio/tutor`**
 (**AGPL-3.0**, byte-read, 1,132 ★, pushed 2026-11-17) is the Docker-based Open edX distribution and
 in practice *the* way Open edX gets deployed. **An Open edX engagement is AGPL at the platform
-layer and AGPL at the operations layer.** Separately, `openedx/edx-platform` **cannot be measured
-by the star channel at all** (`422`; see `repos/foundations.md`), so no star figure for it appears
-in this KB.
+layer and AGPL at the operations layer.** 🟢 **Corrected by `p879`:** the platform *can* be measured — the address this KB was using was
+stale. **https://github.com/openedx/openedx-platform — 8,240 ★, AGPL-3.0, pushed 2026-11-17.**
 
 **Previous pass (`p877`), retained:** Pass `p877`, 2026-11-17** (seventh pass of the day). **`p877` adds the two platforms this file
 most needed and did not have: a permissively licensed SIS, and the largest permissively licensed
@@ -116,7 +127,7 @@ verified via `git ls-remote` + `raw.githubusercontent.com` on the resolved defau
 | Platform | Repo | Licence | Branch | Position & AI surface |
 |---|---|---|---|---|
 | **Moodle** | https://github.com/moodle/moodle | GPL-3.0 (`COPYING.txt`) | `main` | The most widely deployed LMS worldwide and dominant in EMEA and LATAM public education. Has a first-party AI subsystem with pluggable providers, so **AI can be added as a plugin without forking** — the cleanest copyleft-safe integration path in this file. |
-| **Open edX** | https://github.com/openedx/edx-platform | AGPL-3.0 | `master` | Originated at MIT and Harvard, now stewarded by the non-profit Axim Collaborative. The standard choice for large-scale MOOC and national-platform deployments. Note: the *platform* is AGPL-3.0 — the Apache-2.0 figure that circulates in listicles refers to satellite repos such as `openedx-aspects`, not to `edx-platform`. Verified this run. |
+| **Open edX** | https://github.com/openedx/openedx-platform 🟢 (`p879`: renamed; `openedx/edx-platform` is the stale slug) | AGPL-3.0 | `master` | Originated at MIT and Harvard, now stewarded by the non-profit Axim Collaborative. The standard choice for large-scale MOOC and national-platform deployments. Note: the *platform* is AGPL-3.0 — the Apache-2.0 figure that circulates in listicles refers to satellite repos such as `openedx-aspects`, not to `edx-platform`. Verified this run. |
 | **Canvas LMS** | https://github.com/instructure/canvas-lms | AGPL-3.0 | `master` | Dominant in North American higher education. The open-source edition carries core LMS function; some commercial features are withheld. AGPL. |
 | **ILIAS** | https://github.com/ILIAS-eLearning/ILIAS | GPL-3.0 | `release_11` | Strong in German-speaking EMEA, including public-sector and military training. Note the default branch is `release_11`, not `main`. |
 | **Chamilo** | https://github.com/chamilo/chamilo-lms | GPL-3.0 | `master` | Significant installed base in **LATAM** and francophone Africa; lighter to operate than Moodle, which is why ministries with thin IT capacity pick it. |
@@ -173,6 +184,47 @@ ministry programme reaches rural schools at all.
 | **Project NOMAD** 🟢 **new `p877`** | https://github.com/Crosstalk-Solutions/project-nomad | **Apache-2.0** (10,778 B, byte-read) | `main` | 🟢 **The permissive leader of this category, and now the default starting point.** An offline-first knowledge and education server: Wikipedia, thousands of books, courses, maps and **optional local AI**, all from one box with no internet. **43,849★ / 4,526 forks / 813 commits in 12 months** — and on an appliance repository, forks read as deployments. Dockerised, with `collections/`, `admin/` and `install/` in-tree and semantic-release. **Apache-2.0 is the decisive fact against Kiwix (GPL-3.0) and Internet-in-a-Box (LGPL):** a ministry deliverable can be rebranded and redistributed without copyleft obligations on the surrounding work. |
 
 **23 verified platforms.**
+
+## Identity & single sign-on — the layer under every other row in this file, new in `p879`
+
+🔴 **This file has described LMSs, SIS, proctoring, content and classroom delivery for 879 passes
+and never once named how a user signs in.** Every institutional deployment in this KB assumes an
+identity layer, and in higher education that layer has a dominant open-source implementation.
+
+| Platform | Repo | Licence | ★ | Pushed | Notes |
+|---|---|---|---:|---|---|
+| **Apereo CAS** | https://github.com/apereo/cas | **Apache-2.0** (byte-read, `master/LICENSE`) | **11,402** | 2026-11-17 | Created 2011-09-09, 3,954 forks. Central Authentication Service: CAS protocol plus SAML2, OAuth2, OIDC and WS-Fed, MFA, delegated/social auth, attribute release and consent. Governed by the **Apereo Foundation**, the same non-profit behind Sakai — i.e. an institutional steward, not a vendor. |
+| **phpCAS** | https://github.com/apereo/phpCAS | **Apache-2.0** (byte-read) | 802 | 2026-06-30 🔴 | The PHP client library — the usual way a Moodle estate attaches to CAS. **Five months since last push**; treat as mature-but-quiet and check before committing to it. |
+
+🔵 **Why it belongs in a KB about AI.** Two of this file's live compliance clocks attach to a
+*person*, not to a system: **EU AI Act Art. 50 disclosure** (who was told that they were talking to
+an AI) and **Art. 4 AI-literacy** (who was trained), plus every US state consent and opt-out
+requirement tracked in `compose/patterns.md` **P15**. 🟢 **Those obligations are recorded against
+an identity, and in a university that identity comes from CAS.** An AI component bolted on beside
+the SSO rather than behind it cannot produce the audit trail the regulation asks for.
+
+🟡 **Attribute release is the privacy control, and it is configuration, not code.** CAS decides
+which attributes each service receives. A tutoring agent registered as a CAS service can be given a
+pseudonymous identifier and a course enrolment and **nothing else** — which is a cheaper and more
+defensible data-minimisation story than anything implemented inside the agent.
+
+## Mobile clients — permissive, and separable from their copyleft servers, new in `p879`
+
+🟢 Measured in `p879`'s org census. Each of these is a **permissively licensed client for a
+copyleft server**, so a white-labelled app for a client is not a copyleft obligation.
+
+| App | Repo | Licence (byte-read) | ★ | Forks | Server it talks to |
+|---|---|---|---:|---:|---|
+| **Moodle App** | https://github.com/moodlehq/moodleapp | **Apache-2.0** (`main/package.json`) | 1,006 | **2,491** | Moodle (GPL-3.0) |
+| **Open edX Android** | https://github.com/openedx/openedx-app-android | **Apache-2.0** (`LICENSE`) | 38 | — | Open edX (AGPL-3.0) |
+| **Open edX iOS** | https://github.com/openedx/openedx-app-ios | **Apache-2.0** (SPDX) | 31 | — | Open edX (AGPL-3.0) |
+| **Oppia Android** | https://github.com/oppia/oppia-android | **Apache-2.0** (`LICENSE`) | 422 | — | Oppia (Apache-2.0) — offline-capable |
+
+🔵 **The 2,491 forks on `moodleapp` are the finding.** That is not a developer-interest number; it
+is the count of people who have already done the thing a Globant engagement would propose —
+**fork the official app, re-brand it, ship it to an institution's students.** The path is
+well-trodden and the licence permits it.
+
 
 ## Permissive-licence shortlist
 
@@ -323,6 +375,17 @@ LMS routinely serves an inaccessible SCORM package, PDF workbook or generated sl
 content generator in the build inherits that obligation for everything it emits.**
 
 ## Declared gaps
+### 🟢 `p879` — declared
+
+- 🔴 **`ILIAS-eLearning` has no permissive surface at all** — 0 of 16 sampled repositories.
+  Combined with `overhangio`/Tutor at 3%, these are the two estates where this KB's copyleft advice
+  is **unchanged**, and `compose/patterns.md` **P19** does not apply.
+- 🔴 **Still no permissive proctoring platform.** `openedx/edx-proctoring` is **AGPL-3.0**
+  (measured this pass, 69 ★), so the census did not change `p875`'s conclusion: the honest advice
+  remains **buy, or redesign the assessment** (**P17**).
+- 🟡 **`apereo/phpCAS` was last pushed 2026-06-30.** CAS itself is pushed daily; its PHP client is
+  not. Check it before committing a Moodle estate to it.
+
 
 - ~~**No permissive open-source SIS exists**~~ — 🟢 **CLOSED by `p877`.**
   [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) is **MIT** at the bytes (1,150 B,

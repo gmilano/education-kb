@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p879`) — **the licence fault line runs *inside* the organisation: 571 repositories across 19 education orgs, measured, and every copyleft core turns out to ship a permissive periphery**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+Ninth pass of the day. Method, the `user:<org>` channel and the `openedx/edx-platform` **rename
+correction** are in `agents/trending.md` for this pass. This file carries the **census result**,
+which is a structural finding this KB has had backwards.
+
+### The finding: permissive periphery, copyleft core
+
+`T7` has held since it was written that *"the permissive/copyleft fault line runs straight through
+this vertical"* — and every pass has drawn that line **between** projects: Kolibri (MIT) and
+Artemis (MIT) on one side, Moodle (GPL-3.0) and Open edX (AGPL-3.0) on the other. 🔵 **Measured
+per organisation, the line runs *inside* the big copyleft projects, and the permissive side of it
+is substantial, active and load-bearing.**
+
+| Org | Sampled | Permissive | % | What the permissive part actually is |
+|---|---:|---:|---:|---|
+| `jupyterhub` | 40 | 34 | **85%** | BSD-3-Clause throughout |
+| `ls1intum` | 40 | 33 | **82%** | MIT throughout (TUM; see `p878`) |
+| `oppia` | 22 | 17 | **77%** | Apache-2.0 throughout |
+| `jupyter` | 40 | 30 | **75%** | BSD-3-Clause throughout |
+| `HKUDS` | 40 | 30 | **75%** | MIT + Apache-2.0 |
+| `apereo` | 30 | 19 | **63%** | Apache-2.0 — **CAS, the higher-ed identity layer** |
+| `learningequality` | 40 | 24 | **60%** | MIT — Kolibri **and its whole content supply chain** |
+| `autolab` | 7 | 4 | **57%** | Apache-2.0 — Autolab **and `Tango`, the standalone grader** |
+| `h5p` | 40 | 15 | **37%** | MIT — the **individual content types** |
+| 🔵 `openedx` | 40 | 14 | **35%** | **Apache-2.0: `XBlock`, `codejail`, `paragon`, `xblock-sdk`, both mobile apps** — around an **AGPL-3.0** core |
+| `edx` | 40 | 10 | 25% | Apache-2.0 tooling around AGPL legacy |
+| `moodlehq` | 40 | 5 | 12% | **Apache-2.0 `moodleapp`**, BSD-3-Clause `wiki-rag` — around a **GPL-3.0** core |
+| `bigbluebutton` | 40 | 4 | 10% | LGPL core; MIT fringe |
+| `moodle` | 12 | 1 | 8% | GPL-3.0 core |
+| `sakaiproject` | 14 | 1 | 7% | ECL-2.0 core |
+| `overhangio` | 29 | 1 | 3% | AGPL-3.0 (Tutor) |
+| `ILIAS-eLearning` | 16 | **0** | **0%** | GPL throughout — **no permissive surface at all** |
+
+🟡 **How to read the percentages.** These are **samples, not totals**: the search endpoint returns
+at most 40 per query and several of these orgs are larger (`openedx` 174, `learningequality` 203,
+`ls1intum` 157, `edx` 159, `h5p` 145, `moodlehq` 139, `jupyter` 135). The sample is the **top 40
+by stars**, so it is biased toward the repositories anyone would actually adopt — which is the
+right bias for this question, and the wrong one for claiming a total. **Percentages are of the
+sample. Do not quote them as org-wide.**
+
+🔵 **The decision this changes.** The standing advice in this KB has been that Open edX and Moodle
+are off-limits for a client who cannot take AGPL/GPL. **That is true of their cores and false of
+their component layers.** `compose/patterns.md` **P19** is the pattern that follows.
+
+### New permissive repositories, licence byte-read
+
+🟢 Every row's licence was read from the repository's own licence file over `raw.githubusercontent.com`,
+not taken from the search index. Where the two disagree or a file is absent, the row says so.
+
+| Repo | SPDX | Byte-read source | ★ | Pushed | Role |
+|---|---|---|---:|---|---|
+| https://github.com/apereo/cas | **Apache-2.0** | `master/LICENSE` | **11,402** | 2026-11-17 | **Single sign-on for higher education.** Created 2011; 3,954 forks. The identity layer under a large share of the world's universities — and this KB had **never carried it**. |
+| https://github.com/openedx/codejail | **Apache-2.0** | `master/LICENSE.txt` | 477 | 2026-11-16 | Secure sandboxed code execution |
+| https://github.com/openedx/XBlock | **Apache-2.0** | `master/LICENSE.TXT` 🟡 | 471 | 2026-11-16 | The Open edX **learning-component framework** |
+| https://github.com/learningequality/studio | **MIT** | `master/LICENSE` | 212 | 2026-11-09 | Kolibri Studio — content curation |
+| https://github.com/h5p/h5p-interactive-video | **MIT** | `master/package.json` 🟡 | 267 | 2026-11-17 | The most-used H5P content type |
+| https://github.com/openedx/paragon | **Apache-2.0** | `master/LICENSE` | 141 | 2026-11-17 | **Accessible, theme-ready design system built for learning applications** |
+| https://github.com/moodlehq/moodleapp | **Apache-2.0** | `main/package.json` 🟡 | 1,006 | 2026-11-17 | **The official Moodle mobile app** — Apache-2.0 against a GPL-3.0 core |
+| https://github.com/oppia/oppia-android | **Apache-2.0** | `master/LICENSE` | 422 | 2026-11-17 | Oppia's offline-capable Android client |
+| https://github.com/h5p/h5p-cli | **MIT** | `master/LICENSE` | 79 | 2026-10-31 | Build/CI tooling for H5P content types |
+| https://github.com/openedx/xblock-sdk | **Apache-2.0** | `master/LICENSE.TXT` 🟡 | 69 | 2026-11-16 | Workbench + example XBlocks |
+| https://github.com/apereo/phpCAS | **Apache-2.0** | `master/LICENSE` | 802 | 2026-06-30 | PHP CAS client — the Moodle/PHP side of CAS |
+| https://github.com/autolab/Tango | **Apache-2.0** | `master/LICENSE` | 49 | 2026-10-21 | Standalone RESTful autograder |
+| https://github.com/openedx/openedx-app-android | **Apache-2.0** | `master/LICENSE` | 38 | 2026-11-09 | Official Open edX Android app |
+| https://github.com/moodlehq/wiki-rag | **BSD-3-Clause** | `master/LICENSE` | 54 | 2026-06-15 🔴 | Moodle HQ's own RAG over MediaWiki content. **Five months stale** |
+| https://github.com/learningequality/ricecooker | **MIT** | `master/LICENSE` | 32 | 2026-11-02 | Python library for building Kolibri channels |
+| https://github.com/learningequality/morango | **MIT** | `master/LICENSE` | 15 | 2026-11-13 | **Pure-Python DB replication for Django, SQLite + PostgreSQL** — the sync engine under offline-first Kolibri |
+
+🟡 **Three rows needed a second look and the table records which.** `openedx/XBlock` and
+`openedx/xblock-sdk` have **no `LICENSE`, `LICENSE.txt` or `COPYING`** — their licence file is
+`LICENSE.TXT`, **uppercase extension**, which `XBlock`'s own `pyproject.toml` names
+(`license = "Apache-2.0"`, `license-files = ["LICENSE.TXT"]`). `moodlehq/moodleapp` and
+`h5p/h5p-interactive-video` have **no licence file at all**; their licence is declared in
+`package.json` (`"license": "Apache-2.0"` and `"license": "MIT"`). 🔵 **A byte-read that tries
+six filenames and gives up is a false `NOASSERTION` — exactly the error `T14` was written about.**
+The probe used by later passes must try `LICENSE.TXT` and fall back to `package.json`,
+`pyproject.toml` and `setup.py`.
+
+### Regional placement of this pass's repository findings
+
+| Region | Placement |
+|---|---|
+| **EMEA** | `apereo/cas` and `phpCAS` — CAS is the de-facto SSO in European higher education and the piece an EU engagement needs before any AI component, because identity is where the Art. 50 disclosure and the Art. 4 literacy duties get attached to a real user. `ls1intum` (TUM, Germany) remains the largest permissive estate measured. |
+| **North America** | `openedx` (Open edX, US), `autolab` (Carnegie Mellon), `edx` — the Apache-2.0 periphery is a US-origin component supply. |
+| **LATAM** | `learningequality/morango` + `ricecooker` + `studio` — offline-first replication and content pipelines are the LATAM-relevant half of this census; see **P20**. 🔴 **No LATAM-headquartered organisation appeared in this census**, because the census is owner-first and this pass chose owners from addresses the KB already held, all of which are US/EU/APAC. **That is a method limit, not a finding about LATAM supply** — `p878`'s Spanish/Portuguese legs are the channel that answers it. |
+| **APAC** | `HKUDS` (Hong Kong) at 75% permissive and `THU-MAIC` (Tsinghua) remain the region's producers. 🔴 **No APAC *institutional* estate** — no university or ministry org — **surfaced in this census.** |
+| **Global** | `jupyter` / `jupyterhub` (BSD-3-Clause, 75–85% of sample) — the notebook stack is the one piece of education infrastructure with no regional character at all. |
+
+
 ## 🟢 `2026-11-17` (`p878`) — **44 discovery queries, 546 measured repositories: the trending leg stops being a blog reconstruction and becomes a census**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

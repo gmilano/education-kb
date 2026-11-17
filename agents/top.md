@@ -6,7 +6,24 @@ updated: 2026-11-17
 
 # Top AI agents — education
 
-**Pass `p878`, 2026-11-17** (eighth pass of the day). **`p878` turns discovery first-hand.**
+**Pass `p879`, 2026-11-17** (ninth pass of the day). **`p879` discovers by *owner* rather than by
+subject**, and that one change to the query form produces three things this file did not have:
+
+- 🟢 **A corrected flagship row.** `p878` listed `openedx/edx-platform` here as **unmeasurable**
+  because the search channel returns `422`. It is a **rename**, settled in this KB back in `p606`
+  and reopened as `ACTION p800-A`. The canonical address is
+  **https://github.com/openedx/openedx-platform — 8,240 ★, AGPL-3.0, pushed 2026-11-17**, measured
+  first-hand. `p877`'s reading of the `422` was right and `p878` overruled it wrongly.
+- 🟢 **A new category — vendor-built AI components**: `moodlehq/wiki-rag`, BSD-3-Clause, built by
+  Moodle HQ itself. Invisible to every `topic:` query ever run here, because vendor infrastructure
+  is not tagged.
+- 🟡 **A deliberately boring measurement table.** Nine hours, single-digit star movement on every
+  headline agent — which retrospectively shows `p878`'s four-figure "growth" to have been
+  measurement correction.
+
+Method and the full 571-repository census: `agents/trending.md` and `repos/trending.md`, this pass.
+
+**Previous pass (`p878`), retained:** **Pass `p878`, 2026-11-17** (eighth pass of the day). **`p878` turns discovery first-hand.**
 `api.github.com/search/repositories` accepts full **discovery** queries — `topic:`,
 `in:name,description`, `stars:>`, `pushed:>` — and not merely the `repo:` slug lookups `p875`
 used it for. 44 English legs returned **546 measured repositories**; 12 further legs in **Spanish
@@ -32,12 +49,15 @@ this file:
   licence errors: `spdx_id` screens, bytes decide.** A permissive claim needs bytes to confirm it;
   a `NOASSERTION` needs bytes to refute it.
 
-🔴 **A blind spot in the measured census, named.** `openedx/edx-platform` returns `422` from the
-search channel while `raw.githubusercontent.com` serves its AGPL-3.0 licence bytes — it exists and
-is public, but **cannot be measured or discovered by this channel at all**, though its siblings
-(`edx-ora2`, `edx-proctoring`, `openedx-aspects`) can. `p877` read `422` as a renamed-slug signal;
-the error body says otherwise — *"the listed users and repositories cannot be searched either
-because the resource does not exist or you do not have permission to view them."* **A repository
+🟢 **`p879` closes the blind spot `p878` named here, and `p877` was right.** `p878` wrote that
+`openedx/edx-platform` returns `422` from the search channel and is therefore **unmeasurable**.
+It is not: the address is **stale**. `p879` ran `user:openedx` and got **174 repositories with no
+`edx-platform` among them**, then measured the canonical slug directly —
+**https://github.com/openedx/openedx-platform, 8,240 ★, AGPL-3.0, pushed 2026-11-17, created
+2013-05-30, 4,382 forks** (`evidence/headline-measure.2026-11-17-p879.tsv`). `p877` read the `422`
+as a renamed-slug signal and `p878` overruled it on the strength of the error body; **the error
+body is generic and `p877`'s reading was correct.** The rename itself was settled back in `p606`
+and reopened as `ACTION p800-A`; this pass discharges it for the curated files. **A repository
 absent from the sweep is not evidence it does not exist.**
 
 **Previous pass (`p877`), retained:** Pass `p877`, 2026-11-17** (seventh pass of the day). **`p877` is a grant audit, and it found
@@ -190,7 +210,7 @@ Read this before the tables below. Measured `2026-11-17` via `api.github.com/sea
 | **ls1intum/edutelligence** | 17 | **MIT** | 2026-11-17 | 🟢 New in `p878`. Iris / Athena / Hyperion AI microservice suite. |
 | **ls1intum/Pyris** | 12 | **MIT** | 2026-06-03 | 🟢 New in `p878`. Standalone LLM microservice behind Iris. |
 | **virtualryder/edu-ai-agents** | **4** | **MIT** — byte-read | 2026-10-10 | 🔴 New in `p878`. FERPA/COPPA/IDEA-504/ADA-aligned governed-agent reference. **Four stars — reference reading, not a dependency.** |
-| 🔴 `openedx/edx-platform` | **unmeasurable** | AGPL-3.0 — byte-read via `raw.githubusercontent.com` | — | 🔴 **New in `p878`: returns `422` from the search channel and cannot be measured or discovered by it**, although it exists and is public and its sibling repos are indexed. The census has a named hole, and it is this KB's flagship LMS. |
+| 🟢 `openedx/openedx-platform` | **8,240** | AGPL-3.0 — SPDX + byte-read | 2026-11-17 | 🟢 **Measured by `p879`.** `p878` listed this row as *unmeasurable* under the stale slug `openedx/edx-platform`; the `422` was a rename, not a channel hole. Created 2013-05-30, 4,382 forks. **AGPL-3.0 — the core is off-limits to a client who cannot take copyleft; its Apache-2.0 component layer is not (see `compose/patterns.md` P19).** |
 
 🟡 **How to use this column.** It separates *support burden* from *engineering quality*. A 0-star
 repo may be excellent code; it will still have no external contributors, no issue history and
@@ -374,6 +394,48 @@ and was last pushed 2026-10-10.** Secondary coverage presented it as a notable r
 measurement does not support that. **Read it as a compliance checklist for P15. Do not depend on
 it.**
 
+## Vendor-built AI components — new in `p879`
+
+🔵 **A category this file has never had: AI components written by the platform vendors themselves.**
+Everything else in this file is written *about* education platforms by third parties. `p879`'s
+owner-first census surfaced the first instance of a platform's own organisation shipping an AI
+component.
+
+| Repo | Licence (byte-read) | ★ | Pushed | What it is |
+|---|---|---:|---|---|
+| https://github.com/moodlehq/wiki-rag | **BSD-3-Clause** (`master/LICENSE`) | 54 | 2026-06-15 🔴 | **Moodle HQ's own experimental RAG system**, specialised in ingesting MediaWiki content — i.e. the Moodle documentation corpus. Permissive, against a GPL-3.0 server. |
+
+🔴 **Shelved with its staleness attached.** Last push **2026-06-15 — five months ago**. This is a
+**reference implementation for how Moodle HQ thinks retrieval over its own docs should work**, not
+a dependency to build a client deliverable on. 🟡 Its real value is as evidence in a conversation:
+when a Moodle-estate client asks whether AI on Moodle is a supported direction, the vendor's own
+BSD-3-Clause RAG experiment is a better answer than a listicle.
+
+🔵 **Why the category was invisible until now.** Vendor components are not tagged with education
+topics and do not name themselves after the platform's subject matter, so **no `topic:` or keyword
+query in this KB's history could return them.** Owner-first discovery (`user:<org>`) does not
+depend on tagging — see `agents/trending.md` for the method.
+
+## Measured this pass — the headline agents moved almost not at all, new in `p879`
+
+| Repo | ★ `p879` | `p878` | Δ | SPDX | Pushed | Created |
+|---|---:|---:|---:|---|---|---|
+| https://github.com/HKUDS/DeepTutor | **60,016** | 60,007 | +9 | Apache-2.0 | 2026-11-15 | 2025-12-28 |
+| https://github.com/Crosstalk-Solutions/project-nomad | **43,858** | 43,852 | +6 | Apache-2.0 | 2026-11-16 | 2025-06-24 |
+| https://github.com/THU-MAIC/OpenMAIC | **43,824** | 43,823 | +1 | MIT | 2026-11-17 | 2026-03-11 |
+| https://github.com/ls1intum/Artemis | **832** | 832 | 0 | MIT | 2026-11-17 | 2016-09-29 |
+| https://github.com/oppia/oppia | **6,998** | — | — | Apache-2.0 | 2026-11-17 | 2015-08-14 |
+| https://github.com/autolab/Autolab | **808** | 808 | 0 | Apache-2.0 | 2026-11-11 | 2014-10-25 |
+| https://github.com/learningequality/kolibri | **1,178** | 1,178 | 0 | MIT | 2026-11-17 | 2016-01-19 |
+
+🔵 **Keep this table precisely because it is boring.** `p878` recorded DeepTutor at **+7,224** and
+OpenMAIC at **+1,823** against the previously *written* figures, and read those as growth. They
+were **measurement corrections**: the old numbers came from secondary sources and the new ones
+from the API. With both ends now measured first-hand over nine hours, the true rate on a
+60,000-star repository is **single digits per hour**. 🔴 **A future pass that reports a four-figure
+jump should check its own channel before it writes a trend.**
+
+
 ## Licence flags — read before proposing any of these to a client
 
 | Project | Nominal licence | The actual constraint |
@@ -391,6 +453,18 @@ it.**
 | **Any Apache-2.0 repo** | *not* "Apache-2.0 + additional terms" | **Method warning.** Apache-2.0 §5 contains the phrase *"without any additional terms or conditions"*, so a substring grep for `additional terms` false-positives on **100%** of Apache-2.0 projects. `p872` hit this on seven repos (DeepTutor, agents-course, ltijs, Ed-Fi-ODS, oppia, OpenOlat, openedx-aspects) and **discarded the flag rather than publishing it**. MinerU remains the one genuine case, because its `LICENSE.md` adds substantive prose terms. Licence characterisation requires reading the bytes, not matching a substring. |
 
 ## Declared gaps — searched and not found
+### 🟢 `p879` — what was searched and not found
+
+- 🔴 **No new education-native agent.** The mandated `top open source AI agents education 2026
+  github MIT` leg returned general-purpose frameworks (OpenHands, MetaGPT, CrewAI, SWE-agent) and
+  two courses — nothing education-native and nothing this file lacks. **Three consecutive passes
+  have now exhausted this query form through search engines: the channel is spent, which is not
+  the same as the supply being spent.**
+- 🔴 **`github.com/trending` remains `403`** through this session's proxy (unchanged since `p878`),
+  as do `api.github.com/repos/{owner}/{repo}`, `/orgs/{org}/repos` and `/releases/latest`.
+- 🟡 **`api.github.com/search/code` answers `200` but returns `total_count: 0` for every query
+  tried.** Unauthenticated code search is answered, not served. **Do not build a pass on it.**
+
 
 An informed gap is information; silence looks identical to coverage. `p873` moved the two
 regional-origin gaps that had stood longest; what remains is stated as precisely as the evidence

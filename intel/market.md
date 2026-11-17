@@ -6,7 +6,17 @@ updated: 2026-11-17
 
 # Market intelligence — education
 
-**Pass `p878`, 2026-11-17** (eighth pass of the day). `p878` ran the global sweep plus **all four
+**Pass `p879`, 2026-11-17** (ninth pass of the day). `p879` ran the global sweep plus **all four
+regional legs**. New: the **agentic sub-segment gets its own sizing** ($2.37B in 2026 → $11.83B by
+2031, Mordor) against the ~$9.58–10.6B whole-market modal estimate; **North America** gains the
+2026 legislative count (134 bills, 31 states) and SUNY's 64-campus policy; **APAC** gains its
+first *longitudinal* institutional data point (Kitasato University reversing from restriction to
+promotion) and India's 20 Feb 2026 labelling duty; **LATAM** gains Mexico's "Ley Nahui" and a
+**named, blocked primary source** (UNAM/IAGen's regional higher-education survey, on a host this
+session cannot resolve); **EMEA** returned nothing new and this file says so rather than leaving
+the silence to look like coverage. Opportunities for all four regions gain a `p879` entry.
+
+**Previous pass (`p878`), retained:** **Pass `p878`, 2026-11-17** (eighth pass of the day). `p878` ran the global sweep plus **all four
 regional legs**, and the headline is that **the longest-standing gap in this file moves**: APAC now
 has an institutional measure (Japan, 27 of 37 institutions), and one of the three instruments
 `p875` named is formally spent (SEAMEO returned nothing). Also added: a **US federal funder paying
@@ -153,6 +163,35 @@ none of the publishers' pages was reachable from this session.** The dispersion 
 reliable finding here: **this market is not measured well enough for a point estimate to mean
 anything.**
 
+### 🟢 `p879` — the agentic sub-segment gets its own sizing, and the dispersion holds
+
+New this pass, from the global trends leg (all **vendor-funded or syndicated**, read as directional):
+
+| Scope | Figure | Source |
+|---|---|---|
+| **Agentic AI in education & learning technologies** | **$2.37B in 2026 → $11.83B by 2031 (37.92% CAGR)** | Mordor Intelligence |
+| AI tutoring & adaptive learning | $6.5B (2025) → $45.5B by 2035 | Astute Analytica |
+| Adaptive learning **software** | → $17.0B by 2033 (12% CAGR) | Coherent Market Insights |
+| Adaptive learning (broader) | $6.48B (2026) → $29.0B by 2035 | Market Research Future |
+
+🔵 **The one genuinely new thing here is the first number.** Every prior figure in this file sizes
+*AI in education*; Mordor sizes **agentic** AI in education separately at **$2.37B — roughly a
+quarter of the $9.58–10.6B modal AI-in-education estimate**, growing nearly three times as fast.
+🟡 **Treat the ratio, not the level, as the signal:** four firms using four definitions cannot be
+compared on absolute size, but they agree that the agentic slice is small today and is the part
+that grows.
+
+🔴 **The spread between the 12% CAGR (Coherent, adaptive-learning software) and the 37.92% CAGR
+(Mordor, agentic) is not disagreement about the world — it is disagreement about the noun.**
+Software licences grow like software licences; agents are being counted as a new category from a
+near-zero base. Quote whichever matches the client's question and say which one you quoted.
+
+🟢 **One datable product move, useful as evidence the category is real:** Docebo shipped
+AI-powered Knowledge and Agents tooling in **October 2026**, including a *Reinforcement Agent* that
+generates personalised practice from individual learner responses. 🟡 Vendor announcement, not
+independently verified — cite it as a market signal, never as efficacy.
+
+
 ### Regional share of the AI-in-education market (directional, low-authority sources)
 
 | Region | 2026 estimate | Growth |
@@ -256,6 +295,24 @@ engagement, and it is a *policy and change* engagement before it is a software o
 provosts, instructors) and different objects (policy, strategy, guidelines). They must not be
 averaged or treated as a trend line. The AAC&U/Elon survey is self-described as non-scientific.
 
+🟢 **`p879` adds the 2026 legislative count and the first multi-campus system policy.**
+
+- **134 bills related to AI in education were introduced across 31 states in 2026.** 🟡 The count
+  is consistent across the sources that carry it; the *content* is not — the bills cluster on data
+  privacy, classroom-use rules and curriculum, **not** on mandating or funding adoption.
+- 🔴 **There is still no comprehensive federal statute for AI in US higher education.** Federal
+  activity is executive-order level, aimed at AI literacy and teacher training. The governance
+  vacuum this section has recorded for several passes **persists into the 2026 session**.
+- 🟢 **SUNY's 64-campus policy (approved spring 2026)** is the first system-scale instrument this
+  file has been able to name: mandatory responsible-use training, **AI literacy in general
+  education from fall 2026**, and bias evaluation of AI tools before adoption.
+- 🔵 **The divergence is the sellable fact.** In the same academic year, **UC Berkeley Law banned
+  AI for all exams and credited coursework (effective Summer 2026)** while **Columbia Law permits
+  it as a learning aid but bars it from submitted work**. Ohio State requires AI fluency in the
+  general curriculum. **An institution buying here is buying a policy it can defend, not a
+  capability** — which is precisely the shape of `compose/patterns.md` **P13** and **P15**.
+
+
 ### LATAM — the best-measured region in this file
 #### `p875` — a PISA-anchored usage figure, and an imminent ministry event
 
@@ -314,6 +371,28 @@ measured anywhere.** And the 8% student-awareness figure is the operative one: a
 with a policy nobody has read has a compliance exposure, not a policy. Note also that the
 92%/79% LATAM engagement figures run **above** the 88%/77% global averages — LATAM is not a
 laggard in use, only in governance.
+
+🟢 **`p879` — two regulatory movements and one honest instrument failure.**
+
+- 🟢 **Mexico: the "Ley Nahui" general AI bill is in discussion, with sources suggesting possible
+  approval before the end of 2026.** 🟡 Secondary sources only; **new to this file** and worth
+  watching, because Mexico has until now been this file's clearest example of adoption with no
+  national instrument at all.
+- **Brazil: PL 2338/2023 passed the Senate in December 2024 and remains pending in the Câmara dos
+  Deputados.** Unchanged from what this file already records — **re-verified, not advanced**.
+  Separate bills would put AI in the basic-education curriculum, and another would *prohibit* AI as
+  a reference for pedagogical material or assessment; neither has a confirmed status.
+- **Chile: the AI bill may advance in the Senate in H2 2026.** Chile retains the region's earliest
+  national AI policy (2021).
+- 🔴 **No LATAM country has education-sector-specific AI regulation.** Academic sources are
+  consistent on this: strategies and general bills exist; a sectoral instrument for education does
+  not. Colombia, Mexico and Chile have issued **non-binding institutional guidance**.
+- 🔴 **A real instrument exists that this pass could not read.** UNAM/IAGen's *"Encuesta sobre la
+  IA en la Educación Superior en América Latina 2026"* is published at `iagen.unam.mx`, and
+  **that host does not resolve through this session's network policy**. It is the kind of primary,
+  region-wide survey this file is short of. 🟢 **Recorded as a reachable-but-blocked source so a
+  later pass with different egress can go straight to it** — not as a gap in the world.
+
 
 ### APAC — attitudes measured; 🟢 `p878` adds the first institutional measure (Japan)
 
@@ -461,6 +540,30 @@ the missing rate.
 
 **Also `p874`:** the Ipsos Indonesia movement is quantified — support for banning AI in schools
 **fell from 30% to 23%**, the clearest liberalising trend in the Monitor.
+
+🟢 **`p879` adds an institutional reversal and the regional share estimate.**
+
+- 🟢 **Kitasato University (Japan) moved from largely *restricting* AI use in 2024 to promoting
+  university-wide adoption in 2026.** 🔵 **This is the first *longitudinal* institutional data
+  point in this file for any region** — not a snapshot of policy, but the same institution
+  changing its mind in two years, in the direction of adoption. 🟡 Japanese university policy is
+  explicitly **not uniform**; the same analysis describes the first wave as uneven, leaving
+  discretion to instructors and support varying by institution.
+- **Japan's AI Promotion Act has been fully in force since 1 September 2025** and is
+  **promotion-first**: it relies on voluntary guidelines and does not penalise. Read against the
+  Korean, Vietnamese and Chinese instruments this file already tracks, the APAC picture is
+  **binding rules in Korea (22 Jan 2026), Vietnam (1 Mar 2026) and China (by service type);
+  promotion and guidance in Japan, Singapore, Australia and India**.
+- **India: AI-generated content labelling is binding from 20 February 2026**, and the government
+  signalled in July 2026 that it may pursue dedicated risk-based legislation. 🟡 Labelling is a
+  *provenance* duty, and in education it lands on generated teaching material before it lands on
+  tutoring.
+- 🟡 **Coherent Market Insights puts APAC at a 33% share of the global adaptive-learning software
+  market in 2026 — the largest of any region.** Single vendor-funded source; directional only.
+- 🔴 **Still missing for APAC: institution-level adoption *rates* for India and China.** The leg
+  was run and returned regulatory and vendor material only. **Japan remains the only APAC country
+  in this file with an institutional measure.**
+
 
 ### EMEA — 🟢 the three-pass gap CLOSES: a European instrument, measuring European students, exists
 #### 🟢 `p875` — the EU timeline RESOLVES to a named instrument, and this KB's own date was wrong
@@ -623,6 +726,17 @@ an error: **EMEA is Europe, Middle East and Africa.** Filed here accordingly:
   offline-first platform of record for low-connectivity programmes. Those are the integration
   surfaces for any African engagement, not a greenfield build.
 
+🟡 **`p879` re-ran the EMEA leg and found nothing this file does not already hold — recorded so
+the silence is not mistaken for absence of coverage.** The leg returned the Digital Omnibus
+(Regulation (EU) 2026/1744, in force 27 July 2026), the deferral of education high-risk duties from
+August 2026 to **December 2027**, the unchanged **Article 50** transparency date of **2 August
+2026**, and the retained-but-unlevelled **Article 4** AI-literacy duty. 🟢 **All four are already
+in this file (7 citations) and in `intel/trends.md` (T4, T11).** 🔴 **What the leg did *not*
+return, for the third consecutive pass, is any EMEA *market* data: no adoption rates, no named
+European education-AI vendors, no procurement volumes.** The EMEA picture here remains
+**regulatory-only**, and that is a gap in the sources, not in the search.
+
+
 ## Opportunities by region
 
 ### North America
@@ -760,6 +874,17 @@ consequential decisions human.
 - **Assessment redesign.** Berkeley Law's exam ban and the Florida disclosure debate signal
   demand for assessment that is robust to AI, not merely detection of it. `edx-ora2` plus
   oral/viva and process-evidence workflows is a concrete offering.
+
+#### 🟢 New in `p879` — sell the Apache-2.0 component layer into the Open edX installed base
+
+Open edX originated at MIT and Harvard and its largest institutional base is here. `p879` measured
+its component layer as **Apache-2.0** (`XBlock` 471 ★, `codejail` 477 ★, `paragon` 141 ★,
+`xblock-sdk` 69 ★) around the **AGPL-3.0** core. 🔵 **That makes "we will build you AI capability
+on Open edX and you will own it, and nothing you host becomes copyleft" a statement Globant can
+make truthfully** — see `compose/patterns.md` **P19**. Against 134 state bills and SUNY's
+64-campus policy, the attachment point that matters is the **server-side XBlock handler**, because
+that is where consent, disclosure and logging can actually be enforced (**P15**, **P14**).
+
 
 ### EMEA
 
@@ -955,6 +1080,18 @@ high-risk tier. `p874` adds the opportunity that does not wait for it:
   high-risk conformance work (**P4**). Written up as **P11** in `compose/patterns.md`.
 
 
+#### 🟢 New in `p879` — identity first, because the EU duties attach to a person
+
+`apereo/cas` (**Apache-2.0, 11,402 ★, pushed 2026-11-17**) is the SSO layer under a large share of
+European higher education, and this KB had never carried it. 🔵 **Article 50 disclosure and
+Article 4 AI-literacy are obligations recorded against an identity**, so an engagement that puts
+the AI component *behind* CAS can produce the audit trail, and one that bolts it on beside CAS
+cannot. CAS attribute release is also the cheapest data-minimisation story available: register the
+tutor as a CAS service and give it a pseudonymous id plus an enrolment, nothing more. Pairs with
+**P4** (AI Act conformance retrofit) and **P11** (AI-literacy duty pack) — both of which currently
+assume an identity layer they never name.
+
+
 ### APAC
 
 #### 🟢 `p878` — Japan's 73% gives APAC its first **institutional** sales argument, and the supply side is larger than this file assumed
@@ -1146,6 +1283,18 @@ a defined volume. **South Korea's AI Basic Act** has been in force since **22 Ja
 **Australia's National AI Plan** (December 2025) relies on existing law rather than a standalone
 act; **Japan** remains voluntary-guidelines-based; and the **UAE (KHDA)** has issued explicit
 responsible-AI guidance to private schools.
+
+
+#### 🟢 New in `p879` — permissive mobile clients for a mobile-first region
+
+The census measured **`moodlehq/moodleapp` at Apache-2.0, 1,006 ★ and 2,491 forks** against a
+GPL-3.0 server, plus Apache-2.0 Android and iOS clients for Open edX and Oppia. 🔵 **A
+white-labelled, institution-branded mobile client is therefore a permissive deliverable even when
+the server is copyleft** — and 2,491 forks say the path is well travelled. In a region where
+Coherent puts adaptive-learning software share at 33% and where Japan's institutions are now
+actively promoting adoption (Kitasato), the mobile client is the surface students meet. 🔴 Pair
+with **P8**: Vietnam's law (1 Mar 2026), Korea's (22 Jan 2026) and India's labelling duty
+(20 Feb 2026) are binding, so the disclosure has to be **in the app**, not in a policy PDF.
 
 
 ### LATAM
@@ -1351,6 +1500,18 @@ to **Minciencias**. Three ways that changes a LATAM conversation:
   not as per-seat commercial SaaS — but note that the **adoption** figures (92% students, 79%
   faculty) run *above* global averages, so low spend reflects budget, not disinterest.
 
+#### 🟢 New in `p879` — the offline content supply chain is MIT, end to end
+
+`p879` shelved the rest of the Kolibri estate: **`studio` (MIT, 212 ★)** for curation,
+**`ricecooker` (MIT, 32 ★)** for programmatic channel building, and **`morango` (MIT, 15 ★)** for
+multi-peer database replication between devices that are never online at the same time.
+🔵 **`morango` is the piece that makes an offline programme measurable** — without record
+sync-back there is no efficacy data, and without efficacy data a ministry programme does not get
+renewed. `compose/patterns.md` **P20** is the recipe; it pairs with **P9**'s Spanish-language base
+and **P14**'s measurement spine. 🟡 Positioned for ministry and NGO rural programmes, where the
+binding constraint is connectivity rather than governance — the opposite of the North America sale.
+
+
 ### Global
 
 #### 🟡 `p876` — one global funding signal, and a correction to how this file should be read
@@ -1382,6 +1543,23 @@ measured ones: adoption rates, policy deadlines, star counts and commit dates.
   makes academic partnership a credible sourcing channel for Globant.
 
 ## Declared gaps
+### 🟢 `p879` — declared
+
+- 🔴 **EMEA returned no market data for the third consecutive pass.** The leg was run; it produced
+  regulation only — no adoption rates, no named European education-AI vendors, no procurement
+  volumes. **The EMEA picture in this file is regulatory-only, and that is a gap in the available
+  sources rather than in the search.**
+- 🔴 **APAC still has no institution-level adoption *rates* for India or China.** The leg returned
+  regulatory and vendor material. **Japan remains the only APAC country here with an institutional
+  measure.**
+- 🔴 **A named primary source is blocked, not missing: UNAM/IAGen's *"Encuesta sobre la IA en la
+  Educación Superior en América Latina 2026"*.** `iagen.unam.mx` **does not resolve** through this
+  session's network policy. 🟢 Recorded with its exact title so a pass with different egress can
+  go straight to it.
+- 🟡 **Every market-size figure added this pass is vendor-funded or syndicated** (Mordor, Astute,
+  Coherent, Market Research Future). The **dispersion is the finding**; the levels are not
+  comparable across firms because the definitions are not.
+
 
 - **All EU primary sources remain unreachable from this session.** `p871` could not reach
   `eur-lex.europa.eu`; `p872` additionally failed to resolve **`data.consilium.europa.eu`** and

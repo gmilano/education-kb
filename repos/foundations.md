@@ -6,7 +6,23 @@ updated: 2026-11-17
 
 # Foundational repos — education
 
-**Pass `p878`, 2026-11-17** (eighth pass of the day). **`p878` makes discovery first-hand for the
+**Pass `p879`, 2026-11-17** (ninth pass of the day). **`p879` reverses a standing conclusion in
+this file.** Discovery by **owner** (`user:<org>`) rather than by subject measured **571
+repositories across 19 education organisations**, and the result is that the copyleft platforms
+this KB has been routing clients away from **ship substantial, active, permissively licensed
+component layers**:
+
+- 🟢 **The permissive periphery** — `openedx/XBlock`, `codejail`, `paragon`, `xblock-sdk` and both
+  mobile apps are **Apache-2.0** around an AGPL-3.0 core; `moodlehq/moodleapp` is Apache-2.0
+  around a GPL-3.0 core. `compose/patterns.md` **P19** is the recipe.
+- 🟢 **`apereo/cas`** — **Apache-2.0, 11,402 ★**, the SSO layer under much of the world's higher
+  education, and the highest-star permissive education-infrastructure repository this KB has ever
+  carried. It was missing entirely.
+- 🟢 **Kolibri's content supply chain** — `studio`, `ricecooker`, `morango`, `le-utils`, all MIT.
+  `morango` is multi-peer DB replication for devices that are never online together; **P20**.
+- 🟢 **Closed:** the `openedx/edx-platform` "measurement gap" was a stale slug, not a channel hole.
+
+**Previous pass (`p878`), retained:** **Pass `p878`, 2026-11-17** (eighth pass of the day). **`p878` makes discovery first-hand for the
 first time, and the first thing it finds is the largest shelving miss in this KB's history.**
 `api.github.com/search/repositories` accepts full discovery queries, not only the `repo:` slug
 lookups `p875` used; 44 English legs returned **546 measured repositories** and 12 legs in
@@ -30,12 +46,12 @@ states its own SPDX identifier. 🔵 **The rule that covers both of this KB's li
 `p877`'s false permissive and the false negatives here — is one rule: `spdx_id` screens, bytes
 decide, in either direction.**
 
-🔴 **New gap, and it is in the measurement channel itself.** `openedx/edx-platform` returns `422`
-from `search/repositories` and **cannot be measured or discovered by it**, while
-`raw.githubusercontent.com` serves its **AGPL-3.0** bytes and its sibling repos (`edx-ora2`,
-`edx-proctoring`, `openedx-aspects`) are indexed normally. `p877` read `422` as a renamed-slug
-signal; the error body reads *"the listed users and repositories cannot be searched either because
-the resource does not exist or you do not have permission to view them."* **The flagship LMS in
+🟢 **Closed by `p879`: this was never a channel gap.** `p878` recorded `openedx/edx-platform` as
+**unmeasurable** because `search/repositories` answers `422` for it. The slug is simply **stale**.
+The canonical address is **https://github.com/openedx/openedx-platform** — measured first-hand at
+**8,240 ★, AGPL-3.0, pushed 2026-11-17, 4,382 forks**. `raw.githubusercontent.com` keeps serving
+the old path (byte-identical, 12,381 B) because GitHub honours rename redirects forever, which is
+why nine passes of liveness probing never caught it. **The flagship LMS in
 this KB has no measured star count, and absence from the sweep is not evidence of absence.**
 
 🔴 **One more licence fact an Open edX engagement needs:** **`overhangio/tutor`**, the Docker-based
@@ -154,6 +170,75 @@ These are the load-bearing pieces an education build sits on: the standards plum
 makes a tool interoperable with institutional systems, and the AI substrate that makes it
 work. The standards layer matters more here than in most verticals — an education tool that
 cannot speak LTI, xAPI/Caliper, QTI or Ed-Fi cannot be bought by a school district.
+
+## The permissive periphery of the copyleft platforms — new in `p879`
+
+🔵 **This is the single most useful thing `p879` measured, and it reverses standing advice in this
+KB.** Every pass until now has treated Open edX (AGPL-3.0) and Moodle (GPL-3.0) as unusable for a
+client who cannot take copyleft. Measured **per organisation** rather than per flagship, each of
+those projects ships a **substantial, actively maintained, permissively licensed component layer**
+that can be adopted on its own.
+
+🟢 Method: `search/repositories?q=user:<org> fork:false`, 19 education orgs, **571 repositories
+measured** (`evidence/org-estate-census.2026-11-17-p879.tsv`). Licences below were **read from the
+repository's own licence file** over `raw.githubusercontent.com`
+(`evidence/license-byteread.2026-11-17-p879.tsv`), not taken from the search index.
+
+| Repo | Licence (byte-read) | ★ | Pushed | Created | What it gives you alone |
+|---|---|---:|---|---|---|
+| https://github.com/apereo/cas | **Apache-2.0** (`LICENSE`) | **11,402** | 2026-11-17 | 2011-09-09 | **Central Authentication Service — the SSO layer under a large share of the world's universities.** 3,954 forks. Protocol support for CAS, SAML2, OAuth2, OIDC, WS-Fed; MFA; delegated auth. 🔵 **The highest-star permissive education-infrastructure repository in this KB, and it was never carried.** |
+| https://github.com/apereo/phpCAS | **Apache-2.0** (`LICENSE`) | 802 | 2026-06-30 | — | The PHP client — i.e. how Moodle and other PHP estates attach to CAS. 🔴 Five months since last push. |
+| https://github.com/openedx/codejail | **Apache-2.0** (`LICENSE.txt`) | 477 | 2026-11-16 | 2013-04-26 | **Secure sandboxed execution of untrusted code.** The substrate any auto-grader or code-running tutor needs, usable with no Open edX dependency. |
+| https://github.com/openedx/XBlock | **Apache-2.0** (`LICENSE.TXT`) | 471 | 2026-11-16 | 2013-03-11 | **The learning-component framework.** Write a component once; it runs inside any Open edX install — **without your component inheriting AGPL**. |
+| https://github.com/openedx/xblock-sdk | **Apache-2.0** (`LICENSE.TXT`) | 69 | 2026-11-16 | — | Workbench and worked examples — develop and run an XBlock with no LMS present. |
+| https://github.com/openedx/paragon | **Apache-2.0** (`LICENSE`) | 141 | 2026-11-17 | — | **Accessible, theme-ready React design system built specifically for learning applications.** Carries the accessibility work most teams re-do badly; see the accessibility section of `verticals/solutions.md`. |
+| https://github.com/moodlehq/moodleapp | **Apache-2.0** (`package.json`) | 1,006 | 2026-11-17 | 2015-03-03 | **The official Moodle mobile app** — Apache-2.0 against a GPL-3.0 server. 2,491 forks: it is routinely white-labelled. |
+| https://github.com/moodlehq/wiki-rag | **BSD-3-Clause** (`LICENSE`) | 54 | 2026-06-15 🔴 | — | Moodle HQ's own experimental RAG over MediaWiki content. **Stale by five months — reference implementation, not a dependency.** |
+| https://github.com/autolab/Tango | **Apache-2.0** (`LICENSE`) | 49 | 2026-10-21 | 2014-10-26 | **Standalone RESTful autograding service**, separable from Autolab itself. |
+| https://github.com/openedx/openedx-app-android | **Apache-2.0** (`LICENSE`) | 38 | 2026-11-09 | — | Official Open edX Android client. An iOS twin exists at `openedx/openedx-app-ios` (Apache-2.0, 31 ★). |
+| https://github.com/oppia/oppia-android | **Apache-2.0** (`LICENSE`) | 422 | 2026-11-17 | — | Oppia's offline-capable Android client. |
+
+🟡 **The caveat that has to travel with this table.** Apache-2.0 on a component does **not**
+launder the platform. If the client **runs a modified Open edX server over a network**, AGPL-3.0
+§13 applies to *that server*. What these licences buy is the right to build, keep and sell **your
+components** — XBlocks, a grader, a design system, a mobile client — on permissive terms. 🔵 **The
+clean line: permissive for what you write and ship, copyleft for what you fork and host.**
+
+## Kolibri's content supply chain — the offline-first half nobody shelved, new in `p879`
+
+🟢 `learningequality/kolibri` (MIT, 1,178 ★) has been in this file for many passes **on its own**.
+The census shows the rest of its estate is MIT too, and the pieces are individually useful.
+
+| Repo | Licence (byte-read) | ★ | Pushed | Role |
+|---|---|---:|---|---|
+| https://github.com/learningequality/studio | **MIT** (`LICENSE`) | 212 | 2026-11-09 | **Kolibri Studio** — the content curation and channel-authoring application. |
+| https://github.com/learningequality/ricecooker | **MIT** (`LICENSE`) | 32 | 2026-11-02 | **Python library for programmatically building Kolibri channels** and pushing them to Studio. This is the automation seam: a pipeline that ingests a ministry's PDFs and emits a Kolibri channel is a `ricecooker` script. |
+| https://github.com/learningequality/morango | **MIT** (`LICENSE`) | 15 | 2026-11-13 | **Pure-Python database replication engine for Django** (SQLite **and** PostgreSQL), built for intermittently connected peers. 🔵 **This is the piece that makes offline-first real**, and it is usable outside Kolibri. |
+| https://github.com/learningequality/le-utils | **MIT** | 7 | 2026-11-02 | Shared constants and utilities across the three above. |
+
+🔵 **Why this matters more than the star counts suggest.** `morango` at 15 ★ is not a popularity
+signal; it is a **15-star solution to the hardest problem in low-connectivity deployment** —
+multi-writer sync with conflict resolution across devices that are rarely online together. Writing
+that from scratch is a quarter of an engagement. See `compose/patterns.md` **P20**.
+
+## H5P as components rather than as a plugin — new in `p879`
+
+🟡 H5P has been carried in `verticals/solutions.md` as a content-type *framework*. The census shows
+the **individual content types are separately MIT-licensed repositories**, which changes how they
+can be used: a team can take one interaction type into its own product without adopting H5P's
+integration layer.
+
+| Repo | Licence | ★ | Pushed |
+|---|---|---:|---|
+| https://github.com/h5p/h5p-interactive-video | **MIT** (`package.json`) | 267 | 2026-11-17 |
+| https://github.com/h5p/h5p-cli | **MIT** (`LICENSE`) | 79 | 2026-10-31 |
+| https://github.com/h5p/h5p-course-presentation | MIT | 57 | 2026-11-11 |
+| https://github.com/h5p/h5p-audio-recorder | MIT | 36 | 2026-11-17 |
+| https://github.com/h5p/h5p-speak-the-words | MIT | 12 | 2026-11-17 |
+
+🔴 **15 of the 40 sampled `h5p` repositories carry MIT and 23 carry no licence file at all.** Check
+each content type individually; **do not generalise H5P's licence from one repository to the next.**
+
 
 ## Education standards & interoperability
 
@@ -332,6 +417,24 @@ quality, not model quality, is what usually determines whether a tutoring build 
 canonical address and `wwrwbs/AI_AWE` added by `p872`).
 
 ## Declared gaps
+### 🟢 `p879` — gaps opened, closed and declared
+
+- 🟢 **CLOSED:** *"`openedx/edx-platform` cannot be measured"* — stale slug, not a channel hole.
+- 🔴 **OPEN, and named precisely: `user:UCBerkeley-OATutor` returns `422`.** OATutor is carried in
+  this KB under an owner the search index does not recognise, so the address is wrong somewhere.
+  **Not repaired this pass.** The fix is one `in:name` query plus a byte-read; it is left for the
+  next pass rather than guessed at here.
+- 🔴 **The census is owner-first, and the owners came from addresses this KB already held** — all
+  of them US, EU or APAC. **No LATAM-headquartered organisation could appear**, by construction.
+  🟡 That is a limit of this pass's method, **not** a finding about LATAM supply; `p878`'s
+  Spanish/Portuguese keyword legs are the channel that answers it.
+- 🔴 **No APAC *institutional* estate surfaced** — no university or ministry organisation. The
+  region's permissive producers in this census are labs (`HKUDS`, `THU-MAIC`), not institutions.
+- 🟡 **The licence probe used here tried six filenames and still produced three false negatives**
+  (`LICENSE.TXT` with an uppercase extension on the XBlock repos; `package.json`-only licences on
+  `moodleapp` and `h5p-interactive-video`). **A later pass must extend the probe** to `LICENSE.TXT`,
+  `package.json`, `pyproject.toml` and `setup.py` before recording any `NOASSERTION` (`T14`).
+
 
 - **The permissive/copyleft split is the central licence fact of this vertical.** The AI
   substrate above is almost entirely MIT/Apache-2.0, and the standards plumbing is mixed, but

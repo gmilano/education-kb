@@ -4,6 +4,115 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p879`) — **`user:<org>` is a working discovery channel: 19 education orgs, 571 repositories measured, and the KB's "unreachable" Open edX address turns out to be a rename it has been carrying wrong in 12 places**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+Ninth pass of the day. `p878` opened `api.github.com/search/repositories` for **topic and keyword**
+discovery (`topic:`, `in:name,description`) and closed by declaring one blind spot:
+*"`openedx/edx-platform` returns `422` and is **unreachable by this channel**."* 🔵 **`p879`'s
+finding is that the blind spot was never a channel limit. It was a stale address, and this KB has
+known that since `p606`.**
+
+🔴 **State this precisely, because the interesting part is the failure mode, not the fact.**
+`p606-K` settled the canonical address as `openedx/openedx-platform`. `p800` re-recorded the
+rename and opened **`ACTION p800-A`** against roughly **306 citations base-wide**; `intel/trends.md`
+still lists it under *"still unrepaired"*. `p878` then met the same rename from the other side,
+did not recognise it, and wrote it up as a **defect in the measurement channel**. 🔵 **So a
+settled fact was re-derived as a new gap three passes later — which is exactly the propagation
+failure `T13` describes, caught happening in real time.** `p879` discharges it: the slug is
+repaired in the curated files below, and the `422` is re-labelled as what it is.
+
+### 1. The correction: `openedx/edx-platform` → `openedx/openedx-platform`
+
+| Evidence | Result |
+|---|---|
+| `search/repositories?q=user:openedx` | **174** repositories; **no `edx-platform` among them** |
+| `search/repositories?q=openedx-platform in:name` | `openedx/openedx-platform` — **8,240 ★, AGPL-3.0, pushed `2026-11-17`, created `2013-05-30`, 4,382 forks** |
+| `raw.githubusercontent.com/openedx/edx-platform/master/README.rst` | **`200`, 12,381 bytes** — *identical byte length* to the new path |
+| `raw.githubusercontent.com/openedx/openedx-platform/master/README.rst` | **`200`, 12,381 bytes** |
+
+🟡 **Why the stale slug keeps looking healthy, and the general lesson.** GitHub serves **renamed
+repositories from their old path forever** on `raw.githubusercontent.com`. Every liveness probe this KB ever ran
+against `openedx/edx-platform` returned `200` with the right content, so the address kept
+re-passing verification **after** `p606` had already settled it as stale. The search index, by contrast, only knows the **current** name — which is why the
+old slug `422`s. 🔵 **A `raw` fetch proves a file is reachable; it does not prove the address is
+current.** A rename is invisible to the one channel this KB trusted most and visible only to the
+one `p878` had written off. 🟢 **`p800` reached the same rule from the opposite direction
+(`T952`: "an address absent from `search/repositories` but alive on clone is a fork or a rename").
+Two independent channels, one rule — it is now as well-evidenced as anything in this base.**
+
+🔴 **This is now a standing check, not a one-off repair.** Any address this KB carries may have
+been renamed under it, and the symptom is exactly the pattern p878 recorded as a channel defect:
+**`raw` says `200`, the search index says `0` or `422`.** That disagreement is a **rename
+detector**, and it is the cheapest one available here.
+
+### 2. The method: `user:<org>` estate census
+
+`p878` discovered by subject (`topic:`, keywords). `p879` discovers by **owner** — ask an
+organisation for its whole estate and measure every repository in it at once.
+
+| Parameter | Value |
+|---|---|
+| Endpoint | `GET https://api.github.com/search/repositories` |
+| Query form | `user:<org> fork:false`, `sort=stars&order=desc&per_page=40` |
+| Orgs run | 19 (`openedx`, `moodle`, `moodlehq`, `learningequality`, `sakaiproject`, `apereo`, `ls1intum`, `autolab`, `oppia`, `h5p`, `bigbluebutton`, `overhangio`, `ILIAS-eLearning`, `openeducat`, `jupyter`, `jupyterhub`, `edx`, `HKUDS`, `chaoss`) |
+| Rows measured | **571** (each with `stargazers_count`, `license.spdx_id`, `pushed_at`, `created_at`, `archived`, `forks_count`, `language`) |
+| Permissive **and** active (pushed ≥ `2026-05-17`) | **136** |
+| Permissive, active, **absent from every file in this KB** | **76** |
+| Permissive, active, **absent from the four curated files** | **121** |
+| Failures | 1 — `user:UCBerkeley-OATutor` → `422` (org does not exist under that name; OATutor's owner is recorded wrong somewhere and is **not repaired this pass**) |
+| Rate budget | 30/min `search` resource; 2.3 s spacing; **0 failures in 19 + 20 calls** beyond the one above |
+| Evidence | `evidence/org-estate-census.2026-11-17-p879.tsv` (571 rows), `evidence/license-byteread.2026-11-17-p879.tsv`, `evidence/headline-measure.2026-11-17-p879.tsv` |
+
+🔵 **Why owner-first finds what subject-first cannot.** A repository is returned by `topic:` only
+if its maintainers **tagged** it. Infrastructure components almost never are: `openedx/codejail`
+("Secure code execution", 477 ★) carries no education topic, and no subject query in this KB's
+history has ever returned it. **Owner-first does not depend on anyone having labelled anything.**
+
+### 3. Measured this pass — headline agents, first-hand
+
+| Repo | ★ `p879` | `p878` | Δ | SPDX | Pushed |
+|---|---:|---:|---:|---|---|
+| https://github.com/HKUDS/DeepTutor | **60,016** | 60,007 | +9 | Apache-2.0 | 2026-11-15 |
+| https://github.com/Crosstalk-Solutions/project-nomad | **43,858** | 43,852 | +6 | Apache-2.0 | 2026-11-16 |
+| https://github.com/THU-MAIC/OpenMAIC | **43,824** | 43,823 | +1 | MIT | 2026-11-17 |
+| https://github.com/patchy631/ai-engineering-hub | **41,962** | 41,961 | +1 | MIT | 2026-11-01 |
+| https://github.com/ls1intum/Artemis | **832** | 832 | 0 | MIT | 2026-11-17 |
+
+🟡 **Read this table as a null result and keep it.** Nine hours of elapsed time, single-digit
+movement on every headline. **DeepTutor's `+7,224` between `p877` and `p878` was a measurement
+correction, not growth** — the earlier figure came from a secondary source. Now that both ends are
+measured first-hand, the real daily rate on a 60k-star repository is **single digits per hour**.
+🔵 **Any future pass that reports a four-figure jump should suspect its own channel first.**
+
+### 4. New this pass, and agent-adjacent
+
+| Repo | SPDX (byte-read) | ★ | Pushed | Why it belongs here |
+|---|---|---:|---|---|
+| https://github.com/moodlehq/wiki-rag | **BSD-3-Clause** (`master/LICENSE`) | 54 | 2026-06-15 | **An experimental RAG system built by Moodle HQ itself**, specialised in ingesting MediaWiki content — i.e. the Moodle docs. The first *official-vendor* AI component this KB has found in the Moodle estate, and it is permissive while Moodle core is GPL-3.0. |
+| https://github.com/openedx/codejail | **Apache-2.0** (`master/LICENSE.txt`) | 477 | 2026-11-16 | Secure sandboxed code execution — the execution substrate an auto-grading agent needs. Apache-2.0 inside an AGPL-3.0 platform. See `compose/patterns.md` **P19**. |
+| https://github.com/autolab/Tango | **Apache-2.0** (`master/LICENSE`) | 49 | 2026-10-21 | **Standalone RESTful autograding service** — usable without Autolab itself. Pairs directly with `codejail`. |
+
+🔴 **Declared, not implied.** `moodlehq/wiki-rag` was last pushed **2026-06-15** — five months
+stale. It is shelved as a **reference implementation**, not a dependency, and this file says so
+rather than letting liveness be inferred from its presence in a table.
+
+### 5. What this pass did **not** find
+
+- 🔴 **No new education-native agent.** The `top open source AI agents education 2026 github MIT`
+  leg returned general-purpose frameworks (OpenHands, MetaGPT, CrewAI, SWE-agent) and two courses.
+  Three consecutive passes have now exhausted this query form through search engines; the finding
+  is that **the channel is spent**, not that the supply is.
+- 🔴 **`github.com/trending` is still `403`** through this session's proxy. Unchanged since `p878`.
+- 🔴 **`api.github.com/repos/{owner}/{repo}` is `403`** here, as are `/orgs/{org}/repos` and
+  `/releases/latest`. Only `search/repositories`, `search/code` and `raw.githubusercontent.com`
+  are open. 🟡 `search/code` returns `200` but **`total_count: 0` for every query tried** —
+  unauthenticated code search is answered, not served. **Do not build a pass on it.**
+- 🔴 **`user:UCBerkeley-OATutor` → `422`.** OATutor is carried in this KB at an owner that the
+  index does not recognise. Not repaired this pass; **recorded as open**.
+
+
 ## 🟢 `2026-11-17` (`p878`) — **the KB's first first-hand *discovery* channel: `search/repositories` takes full queries, not just `repo:` lookups — 44 queries, 546 measured repositories, and a complete MIT university teaching stack that eight passes never saw**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

@@ -6,7 +6,13 @@ updated: 2026-11-17
 
 # Current trends — education AI
 
-**Pass `p878`, 2026-11-17** (eighth pass of the day). `p878` adds **T15**, **sharpens T8, T13 and
+**Pass `p879`, 2026-11-17** (ninth pass of the day). `p879` adds **T16** — measured per
+organisation, **the permissive/copyleft fault line runs *inside* the big projects, not between
+them**, which reverses how `T7` has been applied. It also **closes the measurement gap `p878`
+opened** (the `openedx/edx-platform` `422` was a rename this KB settled in `p606`, not a channel
+defect) and records that correction where the wrong version was written.
+
+**Previous pass (`p878`), retained:** **Pass `p878`, 2026-11-17** (eighth pass of the day). `p878` adds **T15**, **sharpens T8, T13 and
 T14**, and moves the longest-standing gap in this KB.
 
 - 🟢 **T15 (new): the permissive supply in education is produced by public universities, not
@@ -455,7 +461,7 @@ It is not an isolated slip. Three more instances, all found by `p876` without ne
 | Known in the trending log since | Still wrong in the curated files until `p876` |
 |---|---|
 | `p477` — `danny-avila/LibreChat` renamed | `agents/top.md` cited the dead slug |
-| `p800`/`T810` — `openedx/edx-platform` renamed | ~306 citations base-wide; still unrepaired |
+| `p800`/`T810` — `openedx/edx-platform` renamed | ~306 citations base-wide; 🟢 **`p879` repaired the six curated-file citations and re-measured the canonical slug; the trending ledger keeps the old string by design (append-only)** |
 | `p875`'s own sweep — three permissive LRS | Four files said none existed |
 
 **Why it happens.** `agents/trending.md` and `repos/trending.md` are append-only and now exceed
@@ -572,12 +578,74 @@ university-origin base: is this software *operated* by the institution that publ
 *published* by it?** Artemis is operated. That is the distinction worth checking, and it is cheap
 to check — look for deployment tooling and a release history, as above.
 
+## T16 — The permissive/copyleft fault line runs **inside** the big projects, not between them — new in `p879`
+
+🔵 **This refines `T7`, and it reverses the advice `T7` has been used to give.** `T7` established
+that education open source splits into a permissive camp (Kolibri, Artemis, Oppia) and a copyleft
+camp (Moodle, Open edX, ILIAS, Sakai, Canvas), and every pattern in this KB has routed clients
+**away** from the copyleft camp. Measured per organisation rather than per flagship, that split is
+real at the **core** and false at the **component layer**.
+
+**The measurement.** `p879` ran `search/repositories?q=user:<org> fork:false` across 19 education
+organisations — **571 repositories**, each with SPDX licence, stars, push date and archive state
+(`evidence/org-estate-census.2026-11-17-p879.tsv`). Permissive share of the top-40-by-stars sample:
+
+| Copyleft core | Permissive share of sample | What the permissive part is |
+|---|---:|---|
+| `openedx` (AGPL-3.0 core) | **35%** | `XBlock`, `codejail`, `paragon`, `xblock-sdk`, both mobile apps — **all Apache-2.0** |
+| `moodlehq` (GPL-3.0 core) | **12%** | `moodleapp` (Apache-2.0, 1,006 ★, 2,491 forks), `wiki-rag` (BSD-3-Clause) |
+| `bigbluebutton` (LGPL core) | 10% | MIT fringe only |
+| `sakaiproject` (ECL-2.0 core) | 7% | one Apache-2.0 utility |
+| `overhangio` (Tutor, AGPL-3.0) | **3%** | 🔴 effectively none — **there is no permissive escape at the deployment layer** |
+| `ILIAS-eLearning` (GPL-3.0) | **0%** | 🔴 **no permissive surface at all** |
+
+🟡 **Percentages are of a top-40-by-stars sample, not of the org.** Several of these orgs are
+larger than 40 repositories (`openedx` 174, `learningequality` 203, `ls1intum` 157). The sample is
+biased toward what anyone would actually adopt, which is the right bias for this question and the
+wrong one for a total.
+
+**Why the structure exists.** It is not an accident of licensing hygiene; it is **architecture made
+visible**. A platform that wants third-party extensions must license the *extension interface*
+permissively, or there are no third-party extensions. Open edX licensed `XBlock` Apache-2.0 in
+**2013** for exactly that reason. 🔵 **So the permissive periphery is not a loophole — it is the
+supported path, and the projects intend it to be used.**
+
+**What it changes for Globant.**
+
+1. **"Client runs Open edX" stops being a disqualifier.** `compose/patterns.md` **P19** is the
+   recipe: extend with Apache-2.0 components, never fork the AGPL core, and the deliverable is
+   Globant's to license.
+2. **The question to ask in qualification changes.** Not *"what licence is the platform?"* but
+   **"what licence is the extension point, and will we be hosting a modified core?"** Those have
+   different answers and only the second one creates an obligation.
+3. 🔴 **Two estates have no permissive surface and the advice there is unchanged.** An **ILIAS**
+   engagement (0% of sample) and anything requiring a **forked Tutor** (3%) are copyleft, end of
+   discussion.
+
+**Relation to the other trends.** `T15` found that the permissive supply is produced by public
+universities. `T16` adds that the **copyleft-governed foundations produce permissive supply too** —
+just at the component layer, where it is easy to miss if you only ever look at the flagship
+repository. 🔵 **Both findings come from the same cause: institutions license for adoption, and
+adoption happens at the interface.**
+
+
 ## Declared gaps
+### 🟢 `p879` — declared
+
+- 🟢 **The `p878` measurement gap is closed and the error is recorded where it was written.**
+- 🔴 **`T16`'s percentages are of a top-40-by-stars sample, not of each organisation.** Seven of
+  the 19 orgs censused are larger than 40 repositories. **Do not quote them as org-wide.**
+- 🔴 **`T13`'s propagation failure happened again inside this very sequence**: a fact settled in
+  `p606`, reopened as `ACTION p800-A` in `p800`, was re-derived by `p878` as a *new gap in the
+  measurement channel*. 🔵 **The standing instruction from `p876` — grep the base before declaring
+  a gap — was not followed, and the cost was a wrong correction written into four files.**
+
 
 **`p878` ledger movements:** the **APAC institutional gap NARROWS** — Japan produces a real
 institutional census and **SEAMEO is formally spent**; a **gap nobody had named CLOSES** — the
 LATAM supply shelf was empty because every discovery leg was English-only; a **new gap OPENS** in
-the measurement channel itself (`openedx/edx-platform` is unmeasurable); and the **egress refusal
+the measurement channel itself (`openedx/edx-platform` is unmeasurable — 🟢 **closed by `p879`:
+it was a stale slug, not a channel hole**); and the **egress refusal
 is re-confirmed for the ninth consecutive pass** on twenty hosts across both channels.
 
 - 🟢 ~~**LATAM produces almost no open-source education software.**~~ **CLOSED BY `p878`, and it was
@@ -606,15 +674,21 @@ is re-confirmed for the ninth consecutive pass** on twenty hosts across both cha
   🔵 **Next instruments, since the obvious ones are exhausted: India's AICTE/UGC circulars,
   Singapore's IHL cluster (NTU/NUS/SMU), or China's MoE directives** — all three are
   regulator-to-institution channels, which is the shape that produced Japan's number.
-- 🔴 **NEW GAP, opened by `p878`, and it is in the instrument rather than the world:
-  `openedx/edx-platform` cannot be measured or discovered by the only star channel this KB has.**
+- 🟢 **CLOSED by `p879`. Retained because the reasoning error is the lesson.** `p878` wrote:
+  *"`openedx/edx-platform` cannot be measured or discovered by the only star channel this KB has."*
   It returns **`422 Validation Failed`**, whose body reads *"the listed users and repositories cannot
   be searched either because the resource does not exist or you do not have permission to view
   them"* — while `raw.githubusercontent.com` serves its **AGPL-3.0** licence bytes and its sibling
   repositories (`edx-ora2`, `edx-proctoring`, `openedx-aspects`) are indexed normally. **The
   flagship LMS in this KB therefore has no measured star count**, and the discovery sweep cannot
-  see it at all. 🔴 **`p877` read `422` as a renamed-slug signal; that diagnosis is wrong** — read
-  the body. 🔵 **The general defect is the one this KB keeps re-learning in new clothes: a negative
+  see it at all. 🟢 **`p879` measured it: `openedx/openedx-platform`, 8,240 ★, AGPL-3.0, pushed
+  2026-11-17.** 🔴 **`p878` wrote "`p877` read `422` as a renamed-slug signal; that diagnosis is
+  wrong — read the body." `p877` was right and `p878` was wrong.** The `422` body is a *generic*
+  string returned for any unresolvable `user:`/`repo:` qualifier; it does not distinguish a rename
+  from a permission problem, so it cannot refute a rename hypothesis. 🔵 **The durable lesson is
+  not about Open edX. It is that `p878` overturned a correct earlier finding by reading a generic
+  error string as specific evidence — and that the KB had already settled this address in `p606`
+  and reopened it as `ACTION p800-A`, so the fact was in the base the whole time.** 🔵 **The general defect is the one this KB keeps re-learning in new clothes: a negative
   result from one channel was promoted to a fact about the world. Absence from the sweep is not
   evidence of absence; confirm on a second channel.**
 - 🔴 **NEW FLAG, opened by `p878`: the largest teacher-skills library is `CC-BY-SA-4.0`, not a
