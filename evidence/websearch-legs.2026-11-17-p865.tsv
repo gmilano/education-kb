@@ -1,0 +1,9 @@
+# p865 2026-11-17 — 864-G1 discharge: ONE query per jurisdiction, each reported separately, nils included.
+# 863-G2's rule held: zero region tokens (no "APAC", "EMEA", "LATAM", "North America") in any query.
+# 864-G1's premise CONFIRMED: Chile and Colombia were artefacts of p864's three-jurisdiction query, not nils in the world.
+jurisdiction	query	region_token_count	p864_result	p865_result
+brazil	Resolucao CNE/CP n 1/2026 inteligencia artificial educacao texto integral DOU	0	instrument named, essay clause DISPUTED	OPERATIVE TEXT RETURNED - inciso IX + pre-correcao as alto risco, 4o
+brazil-clause	"Resolucao CNE/CP n 1/2026" artigo vedado correcao redacoes avaliacao exclusivamente automatizada	0	not run	DISPUTE RESOLVED - press simplified; instrument permits pre-correction as preparatory aid
+chile	inteligencia artificial educacion Chile 2026 politica Mineduc regulacion escuelas universidades	0	MEASURED NIL (inside a 3-jurisdiction query)	NOT A NIL - Ley 21.801, guia PotencIA el Aprendizaje, Futuros Docentes en IA, CUECH demand 2026-08
+colombia	inteligencia artificial educacion Colombia 2026 Ministerio de Educacion lineamientos politica colegios	0	MEASURED NIL (inside a 3-jurisdiction query)	NOT A NIL - Ley 2626 de 2026, Decalogo IA Educacion Superior, CONPES 4144, convocatoria CPE IA 2026
+india	India AI in education policy 2026 CBSE NCERT artificial intelligence curriculum guidelines schools	0	not run	CBSE circular Acad-15/2026 (2026-04-01); CT+AI curriculum classes III-VIII from 2026-27; 9-12 finalised

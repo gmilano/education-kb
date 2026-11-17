@@ -4,6 +4,159 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — seventieth pass (`p865`) — **`7` trends (`T239`–`T245`): the disputed Brazilian clause RESOLVED against the press that reported it, two measured nils shown to be artefacts of a query, a search filter that would hide `79%` of this base's own shelf, and a statutory curriculum with no corpus in its own language**
+
+**Two hundred and thirty-seven** trends — derived trends: **237**.
+
+## 🟢 `T239` — the Brazilian essay clause is settled, and the permissive reading is the correct one
+
+🔴 **`864-G3` left this base's most consequential instrument with its central clause DISPUTED**:
+some sources reported a flat prohibition on AI correcting or grading essays, others reported AI
+permitted for PRE-correction with the teacher assigning the mark after a full read. 🟢 **The
+operative text was reached this pass and it settles it.**
+
+🟢 **What `Resolução CNE/CP nº 1/2026` actually does, in its own words:**
+
+| Provision | Operative wording | Effect |
+|---|---|---|
+| 🔴 Inciso **`IX`** | *"a atribuição de nota, conceito ou mérito a avaliações dissertativas, redações"* — **vedada** without human correction | 🔴 **The MARK is what is prohibited, not the processing** |
+| 🟡 Pre-correction systems | classified **alto risco**; *"admitidos exclusivamente como instrumento preparatório e auxiliar da correção realizada pelo professor"* | 🟡 **Permitted, as an auxiliary instrument only** |
+| 🔴 **`§ 4º`** | the pre-correction must be *"desprovida de efeito avaliativo próprio"*, with *"garantia da leitura integral e apreciação direta da produção do estudante"* | 🔴 **No autonomous evaluative effect, and the teacher reads the whole script** |
+
+🔴 **The press inverted it.** Headlines read *"CNE proíbe uso de IA para corrigir provas e
+redações"*; the instrument prohibits the **unreviewed mark**. 🔵 **The distinction is the entire
+commercial question**: under the flat reading there is no Brazilian product; under the actual
+text there is a specified one, and the specification is unusually precise for a thing a studio
+has to build.
+
+🔴 **Two things remain unresolved and are published as such.** The approval date is reported as
+`1 September 2026` by September coverage and as `11 November 2026` by the instrument itself;
+🔴 **and the sources disagree on whether the `12`-month adaptation clock runs from homologação or
+from publicação** → `865-G3`. 🟢 **`P103` was deliberately built to survive the stricter reading
+and therefore needs no revision; `P104` is written to the text that was actually read.**
+
+## 🔴 `T240` — a measured nil is a property of the query until it has been re-run alone
+
+🔴 **`p864` recorded Chile and Colombia as MEASURED NILS.** 🟢 **`864-G1` doubted its own result
+and required one query per jurisdiction. Both nils were artefacts.**
+
+| Jurisdiction | Inside `p864`'s three-country query | 🟢 Queried alone, `2026-11-17` |
+|---|---|---|
+| 🇨🇱 **Chile** | 🔴 nothing | 🟢 **`Ley 21.801` on Digital Education; the `PotencIA el Aprendizaje` generative-AI classroom guide; `Futuros Docentes en IA` (`46` academics, `9` universities, `2026`–`2029`, MinCiencia/CENIA/Kodea/CRUCH); CUECH's August `2026` call for a public-education AI policy.** 🔴 **Still no binding school-level instrument** |
+| 🇨🇴 **Colombia** | 🔴 nothing | 🟢 **`Ley 2626 de 2026`** — a compulsory, progressive digital-education curriculum; the **`Decálogo de IA para la Educación Superior`**; `CONPES 4144`; a `2026` CPE teacher-training call |
+
+🔵 **`863-G2` removed the REGION token and the dominance reappeared one level down: the loudest
+jurisdiction crowded out its neighbours.** 🟢 **The rule that survives both corrections is
+mechanical — one query per jurisdiction, every total published, nils published with the query
+that produced them.** 🔴 **This base has now had a regional or linguistic generalisation
+overturned by its own next measurement in four consecutive passes** (`T232` and now `T240`).
+
+## 🔴 `T241` — `language:` repairs CJK contamination and would hide `79%` of this base's own shelf
+
+🟢 **`p864` proposed `language:` as the repair for keyword-stuffed CJK result bands and named its
+own cost as unmeasured. Measured here, both ways, on a known-good vein**
+([`evidence`](../evidence/language-filter-cost.2026-11-17-p865.tsv)).
+
+🟢 **It works as a repair.** `考试系统 stars:>5` → `426` → `121` under `language:java`, top band on
+topic.
+
+🔴 **And its cost on the SHELF is severe.** `16` shelved rows of the examination vein were probed
+for the language GitHub detects:
+
+| Detected language | Rows | Survives `language:java` |
+|---|---|---|
+| 🟢 Java | `3` | 🟢 **`3`** |
+| 🔴 HTML · Python · JavaScript · Jupyter Notebook · ASP.NET · *(none detected)* | `13` | 🔴 **`0`** |
+
+🔴 **`11` of the `14` rows with a detected language — `79%` — would have been invisible.**
+🔴 **One of them is [`hongmaple/octopus`](https://github.com/hongmaple/octopus), a row `p864`
+FILED IN THE SAME PASS that proposed the filter**: it is an examination system written in Java
+and Vue, and GitHub detects it as HTML. 🔴 **And `bytebear8177-35yit/formative-feedback-writer`,
+filed on [`agents/top.md`](../agents/top.md) this pass, has NO detected language at all** —
+🔵 **no `language:` value can ever return it.**
+
+🔴 **The Lusophone case is total:** `"corretor automático"` → `25` addresses; with
+`language:java`, 🔴 **`0`**.
+
+🟢 **Usable rule, and it is narrow on purpose: `language:` is a tool for finding SYSTEMS and must
+never be used on a corpus, item-bank, awesome-list or documentation leg.** 🔵 **The deeper
+finding is that detected language is a property of the file mix, not of the system** — a Java web
+application with a large front end reads as HTML.
+
+## 🔴 `T242` — `pushed_at` is not the default branch's recency, measured at `2.5` years inside one repository
+
+🟢 **`T197` measured GitHub's `pushed_at` as an ORGANISATION-level event across `51`
+repositories.** 🔴 **`p865` measures the same defect inside a SINGLE repository, which is the
+form that reaches every row on these shelves.**
+
+🔴 [`WebPA/WebPA`](https://github.com/WebPA/WebPA): search reports `pushed_at 2025-12-12`;
+`master` — **the default ref** — last moved `2023-05-23`; `develop` last moved `2017-05-25`.
+🔵 **`pushed_at` is the newest event across all four refs, and a push to a side branch refreshes
+it.** 🟢 **The honest liveness figure is `git log -1 --format=%cI` on the default ref, which the
+blobless clone this base already runs returns for free** — the column
+`repos/foundations.md` adopted at `p858` for exactly this reason. 🔴 **Rows whose "pushed" cell
+came from search rather than from the git channel are unreliable in ONE direction: they overstate
+liveness, never understate it.**
+
+## 🟡 `T243` — canonical-grant byte-identity fails a third way, and the first line can be empty
+
+🟢 **`p864` established that byte-identity with a reference digest is SUFFICIENT to confirm a
+canonical grant and NOT NECESSARY, from three AGPL-3.0 variants (CRLF, `http`→`https`, truncated
+appendix).** 🟢 **Two more variants measured this pass, in a new direction each.**
+
+| Repo | Grant | Bytes | Canonical | Delta | The defect it defeats |
+|---|---|---|---|---|---|
+| 🟡 [`PKU-DAIR/SAS-Bench`](https://github.com/PKU-DAIR/SAS-Bench) | Apache-2.0 | `11,389` | `11,357` | 🔴 **`+32`** | 🔴 **Its first line is EMPTY** — a leading blank line. 🔵 **A first-line matcher reads `""` and reports no grant; `gate-mit-predictor`'s byte-band screen misses by `32`** |
+| 🟡 [`WebPA/WebPA`](https://github.com/WebPA/WebPA) | GPL-3.0 | `35,147` | `35,149` | 🔴 **`−2`** | 🔴 **The file is `license.txt`** — lowercase, `.txt`. A case-sensitive `LICENSE` probe returns a FALSE ABSENCE (`p852`'s `License.md` class) |
+
+🟢 **The canonical references were both re-measured in this same pass rather than recalled**:
+Apache-2.0 `11,357 B` / `sha256₁₂ c71d239df917` (exact, at `dspinellis/ai-repo-feedback`) and
+GPL-3.0 `35,149 B` / `sha256₁₂ 3972dc9744f6` (exact, at `ma-sultan/short-answer-grader` — 🟢 **a
+second independent sighting of the digest first recorded at `gadepall/cbse-papers`, `p863`**).
+🔵 **Without that same-pass reference, `WebPA`'s `−2` bytes could not have been called a variant
+rather than a different licence.**
+
+## 🔴 `T244` — Colombia has legislated a curriculum for which no permissive Spanish corpus exists
+
+🟢 **`Ley 2626 de 2026` directs MEN, with MinTIC and MinCiencias, to design a COMPULSORY,
+progressive curriculum covering alfabetización digital, pensamiento computacional, programación,
+inteligencia artificial, ciencia de datos and ciudadanía digital, with the Tecnología e
+Informática guidelines reviewed at least every three years.** 🔴 **Measured the same day, the
+open supply in the mandate's own language is a near-nil:**
+
+| Term | Addresses | `stars:>5` | Top of the band |
+|---|---|---|---|
+| 🔴 `alfabetizacion digital IA` | `2` | 🔴 **`0`** | — |
+| 🔴 `ciudadania digital` | `211` | 🔴 **`0`** | — |
+| 🔴 `formacion docente IA` | `15` | `1` | 🔴 `CC-BY-SA-4.0` — share-alike, contaminating |
+| 🟡 `pensamiento computacional` | `1,362` | `8` | 🔴 **University course repositories, not curriculum**: `introduccion-pensamiento-computacional` (`180★`, no grant), two `disenoUDP` course sections |
+| 🟡 `AI literacy curriculum` *(English control)* | `51` | `2` | 🟡 `hanhuark/machine-learning-for-engineers` (`55★`, BSD-3-Clause) — engineering, not schools |
+
+🔵 **A statutory curriculum with a dated obligation and no permissive corpus in its own language
+is the cleanest build case in this base** — 🟢 **there is nothing to adopt, the client cannot buy
+it, and the deliverable is the corpus itself** → `P105`. 🔴 **The English control is barely
+better, which says the gap is the SCHOOL level, not the language.**
+
+## 🟢 `T245` — India has dated its curriculum mandate and sized the constraint as teacher capacity
+
+🟢 **`CBSE` circular `Acad-15/2026`, dated `2026-04-01`**: NCERT with CBSE has introduced a
+**Computational Thinking and Artificial Intelligence** curriculum for **Classes III–VIII from the
+`2026–27` academic year**, with the Classes `9`–`12` curriculum **finalised**; three documents
+released — the curriculum, a Teachers' Handbook for Classes `3`–`8`, and Teaching Learning
+Material. 🟢 **Policy basis is `NEP 2020` and `NCF-SE 2023`.** 🟡 **Previously AI was a `15`-hour
+skill module from Class `6` across `18,000+` CBSE schools and optional in `9`–`12`.**
+
+🔴 **The Classes `9`–`10` timing is UNRESOLVED across sources** (`2027–28` in most, `2026–27` in
+one) 🔴 **and the word "mandatory" could not be confirmed in the `PIB` or `CBSE` text** —
+🔵 **published as contested, in the shape `T238` requires.**
+
+🟢 **The quotable constraint is the officials' own**: orienting **over one crore teachers**.
+🔵 **Which is the same binding constraint Indonesia reported when it cut its training target from
+`1,000,000` to `361,000`** — 🟢 **two of APAC's three largest school systems have now named
+teacher capacity, not software, as the limit, and that is the second independent confirmation of
+a demand-side claim this base can take to a client.**
+
+
 ## 🟢 `2026-11-17` — sixty-ninth pass (`p864`) — **`7` trends (`T232`–`T238`): `863-G3` discharged and its premise inverted for the second pass running, a measured repair for CJK search contamination, a national instrument that bans the thing this base built last pass, and a rule `p863` published that is wrong**
 
 **Two hundred and thirty** trends — derived trends: **230** (`223` + `7`).

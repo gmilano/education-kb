@@ -1,0 +1,11 @@
+# p865 2026-11-17 — every licence byte-read from `git clone --filter=blob:none --depth 1`.
+# Channel split inherited from 864-G1: curl=403, gh api repos/=403, gh api search/repositories=200, git=200.
+# Canonical references measured IN THIS PASS: GPL-3.0 = 35,149 B / sha256₁₂ 3972dc9744f6 (ma-sultan, 2nd independent sighting after gadepall p863).
+# Apache-2.0 canonical = 11,357 B / sha256₁₂ c71d239df917 (dspinellis, exact match).
+address	default_ref	head_date	licence_file	bytes	sha256_12	first_line
+PKU-DAIR/SAS-Bench	main	2025-05-15	LICENSE	11389	8cb34457f0c2	
+WebPA/WebPA	master	2023-05-23	license.txt	35147	8ceb4b9ee5ad	                    GNU GENERAL PUBLIC LICENSE
+bytebear8177-35yit/formative-feedback-writer	main	2026-08-01	LICENSE	1056	1126322e2cc8	MIT License
+dspinellis/ai-repo-feedback	main	2025-12-14	LICENSE	11357	c71d239df917	                                 Apache License
+Logisx/DeepEssay	main	2025-02-06	LICENSE	1075	7478d449eab1	MIT License
+ma-sultan/short-answer-grader	master	2019-06-15	LICENSE	35149	3972dc9744f6	                    GNU GENERAL PUBLIC LICENSE

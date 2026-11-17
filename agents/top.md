@@ -4,6 +4,56 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventieth pass (`p865`, 2026-11-17) — **`3` agent rows, and the shelf's own count claim repaired after it had been wrong by `6` for an unmeasured number of passes**
+
+🟢 **Channel declaration, as [`863-G1`](../intel/open-gaps.md) requires before the first row.**
+🟢 **Re-measured `2026-11-17`, and the four-way split `p864` found is stable:**
+
+| Channel | Result |
+|---|---|
+| 🔴 `curl https://github.com/...` | 🔴 `403` at the egress proxy |
+| 🔴 `gh api repos/{owner}/{repo}` | 🔴 `403` — "not enabled for this session" |
+| 🟢 `gh api search/repositories` | 🟢 `200` — every ★, fork and `language` figure below |
+| 🟢 `git clone --filter=blob:none --depth 1` | 🟢 `200` — every licence byte below |
+
+🔴 **Fork policy, declared here for the first time because [`864-G2`](../intel/open-gaps.md)
+required it**: 🟢 **`gh api search/repositories` EXCLUDES forks by default, so every total this
+base has ever published is a NON-FORK count.** 🟢 **Re-measured on a second term this pass:
+`考试系统 stars:>5` → `426` non-fork, `445` with `fork:true` — `19` repositories, `4.5%` of the
+band, invisible.** 🔵 **The default is correct for finding ORIGINALS and wrong for answering
+"how many copies of this exist"; it is now written down rather than assumed**
+([`evidence`](../evidence/fork-policy.2026-11-17-p865.tsv)).
+
+### 🔴 The repair that matters more than the three rows
+
+🔴 **This shelf's canonical count heading claimed `486` rows while the file held `492`.**
+🟢 **Measured with `python3 -I ingest/derive-counts.py .` BEFORE this pass edited anything**, so
+the drift is not attributed to it. 🔴 **`p864`'s `README` published `739` for the same shelf** —
+🔵 **a third figure, on a third counting basis, for one shelf.** 🟢 **The heading is now `495`
+(`492` held + `3` filed below) and the gate agrees.** 🔴 **Which of `486`, `492` and `739` the
+client-facing number should be is NOT settled by this pass** → `865-G2`.
+
+| Name | Repo | Licence | Stars | Region | Description |
+|------|------|---------|-------|--------|-------------|
+| ai-repo-feedback | [`dspinellis/ai-repo-feedback`](https://github.com/dspinellis/ai-repo-feedback) | 🟢 **Apache-2.0** — byte-read `LICENSE`, **`11,357 B`**, `sha256₁₂ c71d239df917` | `10` / `2` forks | 🟢 **EMEA** — payload channel: every commit author resolves to **`aueb.gr`** (Athens University of Economics and Business) | 🟢 **"Have AI provide formative feedback to student projects using Git."** Shell, `main` · HEAD `2025-12-14`. 🔵 **The row is small and the SHAPE is the asset**: it generates feedback against a student repository's history and never writes a mark, which is exactly the posture `Resolução CNE/CP nº 1/2026 § 4º` now makes mandatory in Brazil (`T239`). 🟢 **Its `11,357 B` grant is the canonical Apache-2.0 payload to the byte** — this pass's reference digest. 🔴 `10★`: a pattern to copy, not a dependency to inherit |
+| formative-feedback-writer | [`bytebear8177-35yit/formative-feedback-writer`](https://github.com/bytebear8177-35yit/formative-feedback-writer) | 🟢 **MIT** — byte-read `LICENSE`, `1,056 B`, `sha256₁₂ 1126322e2cc8`, first line `MIT License` | `26` / `0` forks | 🔴 **REFUSED** — author e-mails are `users.noreply.github.com`, the repository carries no organisation and no description | 🟢 Formative-feedback authoring, `main` · HEAD `2026-08-01`. 🔴 **GitHub detects NO language for it at all** — 🔵 **which makes it the live proof of `T241`: it is invisible to EVERY `language:` filter, including the one `p864` proposed as a contamination repair.** 🔴 `0` forks and no description: filed for the grant and the shape, graded as a seed |
+| DeepEssay | [`Logisx/DeepEssay`](https://github.com/Logisx/DeepEssay) | 🟢 **MIT** — byte-read `LICENSE`, `1,075 B`, `sha256₁₂ 7478d449eab1`, first line `MIT License` | `37` / `8` forks | 🔴 **REFUSED** — `users.noreply.github.com` only; the IELTS subject suggests nothing about origin | 🟢 **IELTS essay assessment with a predicted band score.** Jupyter Notebook, `main` · HEAD `2025-02-06`. 🔵 **Useful precisely because IELTS banding is a PUBLISHED rubric**: it is the one essay-scoring row on this shelf whose target scale a client can audit without the vendor's cooperation. 🔴 HEAD is nine months old — a reference implementation, not a maintained product |
+
+🔴 **Region coverage, stated as the honest number: `1` of `3` placed.** 🟢 Placed: `1` (EMEA, on
+the `aueb.gr` payload channel — the same channel that placed `UOC/java-lti-1.3` at `p852`).
+🔴 **Refused rather than guessed: `2`**, both on `users.noreply.github.com`. 🔵 **`0` APAC- and
+`0` LATAM-placed agent rows this pass**; the pass's APAC row went to
+[`repos/foundations.md`](../repos/foundations.md).
+
+### 🔴 Examined and NOT filed here
+
+| Not filed | Why |
+|---|---|
+| [`ma-sultan/short-answer-grader`](https://github.com/ma-sultan/short-answer-grader) | 🔴 **GPL-3.0 — byte-read `license.txt`… no: `LICENSE`, `35,149 B`, `sha256₁₂ 3972dc9744f6`.** 🟢 **That digest is this base's canonical GPL-3.0 reference, now sighted a SECOND time independently** (first at `gadepall/cbse-papers`, `p863`) — 🔵 **which is how `WebPA`'s `35,147 B` two bytes below it could be recognised as a VARIANT rather than a different licence** (`T243`). 🔴 Copyleft, `41★`, HEAD `2019-06-15` — seven years cold |
+| [`WebPA/WebPA`](https://github.com/WebPA/WebPA) | 🔴 **GPL-3.0**, and filed on [`verticals/solutions.md`](../verticals/solutions.md) instead: it is a peer-assessment PLATFORM, not an agent. 🔴 **Its liveness is a trap and is published as `T242`** |
+| [`erictrainnlpinxihu/Grader-agent`](https://github.com/erictrainnlpinxihu/Grader-agent) · [`cobibean/soul-grader-skill`](https://github.com/cobibean/soul-grader-skill) · [`chuma-beep/mathua`](https://github.com/chuma-beep/mathua) · [`artcc/freelingo`](https://github.com/artcc/freelingo) · [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) *(and `12` more)* | 🟢 **ALREADY HELD.** 🔴 **`17` of the `22` candidates this pass's sweep returned were already in this repository — `77%`.** 🟢 **A third consecutive confirmation of `T172` at a stable rate** (`p852`: `76%`; `p860`'s trending backlog: the same class). 🔵 **The re-discovery rate is not drifting, which makes it a planning constant rather than a complaint** |
+
+
 ## 🟢 Sixty-ninth pass (`p864`, 2026-11-17) — **`3` agent rows (`736` → `739`), a `2.7×` star correction to this base's most-cited row, and a web search that promoted a `1`-star FORK as "the most mature 2026 candidate"**
 
 🔴 **Channel declaration first, because [`863-G1`](../intel/open-gaps.md) requires it before the
@@ -4235,7 +4285,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 486 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 495 rows
 
 ### Filed by `p853` (2026-11-16) — `12` rows: the SPOKEN-LANGUAGE ASSESSMENT tier, every grant byte-read today, `0` copyleft, and every row's CORPUS dependency stated beside its licence
 

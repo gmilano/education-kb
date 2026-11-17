@@ -4,6 +4,56 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — `p865`: **the assessment vein re-swept in English after four passes in other languages, `77%` of it already ours, and a search filter that would have hidden the row `p864` filed with it**
+
+🔴 **Fork policy, stated before the first total because [`864-G2`](../intel/open-gaps.md)
+required it.** 🟢 **`gh api search/repositories` EXCLUDES forks by default; every total in this
+section is a NON-FORK count.** 🟢 **One term run both ways this pass:
+`考试系统 stars:>5` → `426` non-fork / `445` with `fork:true` — `19` hidden, `4.5%`.**
+🟢 **`题库` reproduced `p864`'s ratio to the unit: `1,359` / `1,466`, `107` hidden, `7.3%`**
+([`evidence`](../evidence/fork-policy.2026-11-17-p865.tsv)).
+
+### The sweep
+
+| Term | Addresses | `stars:>5` | Top of the band |
+|---|---|---|---|
+| `essay scoring` | `1,182` | `50` | 🔴 `openedx-unsupported/ease` (`215★`, AGPL-3.0, cold since `2022-12`) · `nusnlp/nea` (`207★`, GPL-3.0, `2018`) |
+| `essay grader` | `994` | `28` | 🟡 `siyuanzhao/automated-essay-grading` (`121★`, MIT, `2019`) · 🟢 `Logisx/DeepEssay` (`37★`, **MIT**) |
+| `rubric grading` | `1,033` | `21` | 🟢 `erictrainnlpinxihu/Grader-agent` (`93★`, MIT) — **already shelved** · `cobibean/soul-grader-skill` (`60★`, MIT) — **already shelved** |
+| `short answer grading` | `262` | `14` | 🟢 **`PKU-DAIR/SAS-Bench` (`73★`, Apache-2.0)** · 🔴 `ma-sultan/short-answer-grader` (`41★`, GPL-3.0, `2019`) |
+| `formative feedback` | `69` | `4` | 🟢 `bytebear8177-35yit/formative-feedback-writer` (`26★`, MIT) · 🟢 `dspinellis/ai-repo-feedback` (`10★`, Apache-2.0) |
+| `peer assessment` | `4,350` | `8` | 🔴 `WebPA/WebPA` (`37★`, GPL-3.0) · `edx/edx-ora` (`20★`, AGPL-3.0) |
+| `proctoring` | `5,490` | `81` | `vardanagarwal/Proctoring-AI` (`634★`, MIT, cold `2024-12`) · `SafeExamBrowser/seb-win-refactoring` (`369★`, MPL-2.0) — **both already shelved** |
+| `adaptive learning engine` | `733` | `20` | `chuma-beep/mathua` (`418★`, MIT) — **already shelved** |
+| `spaced repetition tutor` | `364` | `19` | `artcc/freelingo` (`288★`, AGPL-3.0) · `zuhairhalawa/studyai` (`249★`, MIT) — **both already shelved** |
+| 🔴 `essay feedback rubric teacher review` | 🔴 **`0`** | `0` | 🔴 **A nil, published with its term.** 🔵 **Five-word queries AND every token; the vocabulary has to be two or three words wide** |
+| 🔴 `AI use disclosure academic integrity` | 🔴 **`1`** | `0` | 🔴 Same defect, same cause |
+
+### 🔴 `77%` of what the sweep returned was already here
+
+🟢 **`22` candidates were slug-grepped against every non-archive `*.md` in this repository BEFORE
+a row was written.** 🔴 **`17` were already held** — `Grader-agent`, `soul-grader-skill`,
+`seb-win-refactoring`, `Proctoring-AI`, `mathua`, `studyai`, `claude-tutor`, `freelingo`,
+`edx-ora`, `ease`, `automated-essay-grading`, `anything-to-course`, `Tov-learn`, `lftk`,
+`intelliboard`, `essay-grader`, and one more. 🟢 **`5` were new.**
+
+🔵 **`T172`'s re-discovery rate is now measured at `76%` (`p852`) and `77%` (`p865`) on two
+different veins, two weeks apart.** 🟢 **It is stable, so it is a planning constant: three
+quarters of any sweep's hour is spent re-finding this base's own holdings, and the cheap repair
+is to grep before you read, which this pass did.**
+
+### 🔴 The filter `p864` proposed would have hidden `p864`'s own row
+
+🟢 **`864-G4` required a known-good vein run both ways. Run** —
+`考试系统 stars:>5` → `426` → `121` under `language:java`, top band on topic, so the repair works.
+🔴 **And `16` shelved rows of the same vein were probed for their DETECTED language: `3` are
+Java, `11` of the `14` with a detection are not, and `2` have no detection at all.**
+🔴 **`hongmaple/octopus` — filed by `p864`, in the pass that proposed the filter — is detected
+HTML.** 🔴 **`bytebear8177-35yit/formative-feedback-writer`, filed today, has no detected language
+and is invisible to every `language:` value that exists** → `T241`,
+[`evidence`](../evidence/language-filter-cost.2026-11-17-p865.tsv).
+
+
 ## 🟢 `2026-11-17` — `p864`: the **Chinese examination-system tier**, a `2.7×` star correction to the base's most-cited agent, and two cases where a web search named the wrong repository
 
 🟢 **`863-G3` asked for four more APAC languages. All four were run.** 🔴 **The result inverted the

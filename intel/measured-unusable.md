@@ -4,6 +4,30 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟡 `2026-11-17` — `p865`: **`2` refusals, both granted and both refused for a reason other than the grant — and the shorter list is itself the finding**
+
+🟢 **`863-G4`'s `class:` field is carried on every entry.** 🔴 **Neither entry below is a
+`NONE`-field repository, which is why this section is two rows and not eight**: the English
+assessment vein's top band is GRANTED and copyleft, where `p863`'s and `p864`'s CJK and Indian
+veins were ungranted outright. 🔵 **A copyleft refusal needs no licence request — there is nobody
+to ask and nothing to grant — so `class:` is recorded as `n/a` and the remedy column says what
+can be taken instead.**
+
+### 🔴 Granted, and refused anyway — `2`
+
+| Address | ★ / forks | GitHub's field | What the bytes say | `class` | Consequence |
+|---|---|---|---|---|---|
+| 🔴 [`ma-sultan/short-answer-grader`](https://github.com/ma-sultan/short-answer-grader) | `41` / `23` | `GPL-3.0` | 🟢 **Confirmed: `LICENSE`, `35,149 B`, `sha256₁₂ 3972dc9744f6`, `Version 3, 29 June 2007`** | 🟡 `n/a` *(granted, copyleft)* | 🔴 **Copyleft, and HEAD `2019-06-15` — seven years cold.** 🟢 **Its value to this base is as the CANONICAL GPL-3.0 REFERENCE: a second independent sighting of the digest first recorded at `gadepall/cbse-papers` (`p863`), which is what let `WebPA`'s `35,147 B` be graded a variant rather than a different licence** (`T243`) |
+| 🔴 [`openedx-unsupported/ease`](https://github.com/openedx-unsupported/ease) | `215` / — | `AGPL-3.0` | 🔴 Not byte-read this pass — refused on the field and the archive status | 🟡 `n/a` *(granted, copyleft)* | 🔴 **AGPL-3.0 reaches a hosted derivative, and essay scoring is always hosted.** 🔴 **`openedx-unsupported` is an explicit abandonment namespace; cold since `2022-12`.** 🔵 **Read as HISTORY: it is edX's own production essay-scoring engine and its feature list is a specification somebody already validated at scale** |
+
+### 🟢 What was NOT refused, and why that matters
+
+🔴 **`17` of the `22` candidates this pass's sweep returned were already shelved or already
+refused in this repository.** 🟢 **None of them was re-adjudicated** — 🔵 **re-refusing a row
+this base refused two weeks ago is the same waste as re-discovering one it already holds, and it
+produces a ledger that grows without learning anything** (`865-G4`).
+
+
 ## 🔴 `2026-11-17` — `p864`: the highest-traction ungranted artefact this base has ever measured (`2,281` ★ / `471` forks), and the first entries carrying the `class:` field `863-G4` required
 
 🟢 **`863-G4` required that every new entry carry `class: original` or `class: redistribution`,

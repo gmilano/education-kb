@@ -1,0 +1,34 @@
+# p865 2026-11-17 — 864-G4 discharge: a known-good vein run BOTH ways, and the cost in SHELVED rows.
+# Part A: vein totals with and without `language:`.
+part	term	qualifier	total
+A	"correção automática"	none	147
+A	"correção automática"	language:java	7
+A	"correção automática"	language:python	33
+A	"corretor automático"	none	25
+A	"corretor automático"	language:java	0
+A	"corretor automático"	language:python	14
+A	examen stars:>5	none	81
+A	examen stars:>5	language:java	6
+A	examen stars:>5	language:python	8
+A	考试系统 stars:>5	none	426
+A	考试系统 stars:>5	language:java	121
+A	考试系统 stars:>5	language:python	47
+# Part B: the SHELVED rows of the vein, and the language GitHub detects for each.
+# Under `language:java` only the three Java rows survive. 11 of 14 measured rows (79%) are hidden.
+part	address	detected_language	survives_language_java
+B	gpassero/uol-redacoes-xml	Python	NO
+B	paladini/awesome-poscomp	(none detected)	NO
+B	agn3si/ResultadosUNAM---data	HTML	NO
+B	picuino/test	Python	NO
+B	alvaretto/r-exams_matematicas	HTML	NO
+B	meesudzu/trac-nghiem-online	JavaScript	NO
+B	tamht298/final-project	HTML	NO
+B	Belikhun/thi-trac-nghiem	JavaScript	NO
+B	gadepall/cbse-papers	ASP.NET	NO
+B	jmtoral/admisiones_unam	HTML	NO
+B	amimaro/Provas-POSCOMP	(none detected)	NO
+B	mathfaria/autoGrader	Jupyter Notebook	NO
+B	hongmaple/octopus	HTML	NO
+B	lsgwr/spring-boot-online-exam	Java	YES
+B	qiutiandefeng/yfexam-exam	Java	YES
+B	Alanosy/exam-platform	Java	YES

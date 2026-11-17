@@ -1,0 +1,6 @@
+# p865 2026-11-17 — 864-G2 discharge: the fork policy stated, and one term run both ways a second time.
+# POLICY: GitHub search/repositories EXCLUDES forks by default. Every total this base publishes is a NON-FORK count.
+# That default is CORRECT for finding originals. It is now written down.
+term	default_nonfork	with_fork_true	forks_hidden	pct_invisible
+题库 stars:>5	1359	1466	107	7.3
+考试系统 stars:>5	426	445	19	4.5

@@ -4,6 +4,104 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventieth pass (`p865`, 2026-11-17) — **`P104`–`P105`: the Brazilian pre-correction build rewritten against the text that was finally read, and a curriculum recipe whose premise is that its corpus does not exist**
+
+**One hundred and three** concrete recipes — derived recipes: **103** (`101` + `2`).
+
+🟢 **Every component named below was byte-read on `2026-11-17` from a blobless partial clone**
+([`byte-read-grants`](../evidence/byte-read-grants.2026-11-17-p865.tsv)), or is already on a
+graded shelf in this repository with its own byte-read on record. 🔴 **Every regulatory item is
+`CITED, NOT READ` at the primary-source level** — the `gov.br` and `DOU` domains do not resolve
+in this session and the operative wording below came through the search index
+([`primary-text-channel`](../evidence/primary-text-channel.2026-11-17-p865.tsv)).
+
+## 🟢 P104 — *Brazilian `§ 4º`-conformant pre-correction: the machine proposes, the teacher reads, the system proves it*
+
+🔵 **Premise is `T239`, and `T239` is a correction.** 🔴 **`P103` was written one pass ago to
+survive the STRICTER of two readings of `Resolução CNE/CP nº 1/2026`, because the sources
+disagreed and the primary text had not been reached.** 🟢 **It has now been reached, and the
+instrument is more permissive AND more specific than the press reported**: inciso `IX` prohibits
+*"a atribuição de nota, conceito ou mérito a avaliações dissertativas, redações"* without human
+correction, while pre-correction systems are **alto risco** and *"admitidos exclusivamente como
+instrumento preparatório e auxiliar da correção realizada pelo professor"*, *"desprovida de efeito
+avaliativo próprio"*, with *"garantia da leitura integral e apreciação direta da produção do
+estudante"*.
+
+🟢 **`P103` remains valid and is not withdrawn** — it is the conservative build. 🟢 **`P104` is
+the build the text actually specifies, and the difference is worth money: `P103` declines to
+generate a proposed mark at all; `P104` generates one, never records it, and ships the evidence
+that a human read the script.**
+
+🔴 **Four constraints, lifted from the instrument and binding before node `1`:**
+
+1. 🔴 **The system NEVER writes a mark to the gradebook.** The model's output is a
+   pre-correction artefact with no evaluative effect of its own.
+2. 🔴 **The teacher's full read is a GATE, not a reminder.** The mark field stays closed until a
+   full-script read is recorded for that submission.
+3. 🔴 **No AI-detector output may ground a sanction** — the instrument bars it and the US
+   Department of Education holds the same position, so 🟢 **the integrity design is detector-free
+   and therefore portable to North America unchanged.**
+4. 🟢 **The alignment of the pre-correction with human markers must be EVIDENCED, not asserted** —
+   an "auxiliary instrument" that nobody has measured is not defensible as auxiliary.
+
+🟢 **The build, every component permissive and byte-read:**
+
+| Node | Component | Grant | What it does here |
+|---|---|---|---|
+| `1` Intake | [`metyatech/qti-scoring-system`](https://github.com/metyatech/qti-scoring-system) *(shelved `p852`)* | MIT | QTI round-trip, so items and responses leave in a standard the institution already owns |
+| `2` Pre-correction | [`Logisx/DeepEssay`](https://github.com/Logisx/DeepEssay) *(filed this pass)* | 🟢 MIT, `1,075 B`, `sha256₁₂ 7478d449eab1` | Essay assessment against a PUBLISHED band scale. 🔵 **A published rubric is what makes the output auditable by the school rather than only by the vendor** |
+| `3` Feedback shape | [`dspinellis/ai-repo-feedback`](https://github.com/dspinellis/ai-repo-feedback) *(filed this pass)* | 🟢 Apache-2.0, `11,357 B`, `sha256₁₂ c71d239df917` | The formative-feedback pattern: generate against the work's own history, emit narrative, **never emit a grade** |
+| `4` 🔴 **Alignment evidence** | [`PKU-DAIR/SAS-Bench`](https://github.com/PKU-DAIR/SAS-Bench) *(filed this pass)* | 🟢 Apache-2.0, `11,389 B`, `sha256₁₂ 8cb34457f0c2` | 🔴 **The node that did not exist before this pass.** Fine-grained, multi-subject, human-aligned short-answer scoring benchmark — the artefact that answers *"auxiliary to what standard?"* |
+| `5` Human-agreement | [`TREMA-UNH/rubric-grading-workbench`](https://github.com/TREMA-UNH/rubric-grading-workbench) *(shelved `p852`)* | permissive | Inter-annotator agreement on a stratified human-marked sample — `P81`'s step `3`, reused |
+| `6` Launch | [`UOC/java-lti-1.3`](https://github.com/UOC/java-lti-1.3) *(shelved `p852`)* | MIT | LTI 1.3 Advantage tool launch from the institution's LMS, so no LMS is replaced |
+| `7` Record | [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) *(shelved `p852`)* | MIT | `cmi5`/xAPI statements — 🔴 **and this is where the `§ 4º` evidence lives**: the full-read event, its timestamp and its actor are xAPI statements, which makes the compliance artefact a by-product of the architecture rather than a report somebody writes |
+| `8` Peer mode | [`WebPA/WebPA`](https://github.com/WebPA/WebPA) *(filed this pass)* | 🔴 GPL-3.0 — **algorithm only, do not link** | Where a cohort is too large for full teacher reads, peer assessment is human by construction. 🔴 Reimplement the weighting; do not adopt the PHP |
+
+🟢 **Timebox `6`–`8` weeks**, against `P103`'s `6`–`8` for a narrower build — 🔵 **the saving is
+that nodes `4` and `5` are now adoptable instead of bespoke.**
+
+🔴 **The commercial clock is the point.** 🟢 **`12` months to adapt policies, practices AND
+CONTRACTS, for every public and private institution in Brazil.** 🔴 **Whether the clock starts at
+homologação (`2026-11-10`) or publicação (`2026-11-11`) is not settled** (`865-G3`) — 🟢 **a
+one-day ambiguity that does not change a quarter's planning, so it blocks a claim and not a
+deliverable.**
+
+## 🟢 P105 — *the Colombian `Ley 2626` curriculum, built because it cannot be bought*
+
+🔵 **Premise is `T244`, and it is a measured absence rather than an opportunity estimate.**
+🟢 **`Ley 2626 de 2026` obliges MEN, with MinTIC and MinCiencias, to design a compulsory,
+progressive curriculum across alfabetización digital, pensamiento computacional, programación,
+inteligencia artificial, ciencia de datos and ciudadanía digital, with the Tecnología e
+Informática guidelines reviewed at least every three years.** 🔴 **Measured the same day:
+`alfabetizacion digital IA` → `2` addresses, `0` above five stars; `ciudadania digital` → `211`,
+`0`; `formacion docente IA` → `15`, `1` and that one is share-alike.**
+
+🔴 **So there is nothing to adopt. That is the recipe's premise, not its obstacle** — 🟢 **the
+client cannot buy this, a competitor cannot undercut it with an off-the-shelf product, and the
+deliverable is the corpus itself, which the ministry then owns.**
+
+🟢 **The build inherits CONTENT that is permissively granted and English, and spends the budget
+on the Spanish curriculum rather than on the platform:**
+
+| Node | Component | Grant | Role |
+|---|---|---|---|
+| `1` Source corpus | [`Emerging-Rule/community`](https://github.com/Emerging-Rule/community) *(shelved)* | 🟡 **CC BY 4.0 — attribution only, NO share-alike** | 🟢 **Already bilingual English/Spanish, K-2 through 9-12, with a skill taxonomy.** 🔴 Seed-scale (`3★`) and its licence has README-grade provenance only — verify before contract |
+| `2` Depth corpus | [`patchy631/ai-engineering-hub`](https://github.com/patchy631/ai-engineering-hub) *(shelved)* | MIT | 🟢 **Its difficulty grading (`22` Beginner / `48` Intermediate / `23` Advanced) is the reusable asset** — the only thing in this base that maps to a prerequisite sequence. 🔴 Developer-level: it supplies SEQUENCE, not school content |
+| `3` 🔴 **Not adopted** | `GarethManning/education-agent-skills` | 🔴 **CC BY-SA 4.0** | 🔴 **Excluded by licence, deliberately: share-alike would reach the ministry's own curriculum.** 🔵 Stated in writing before work starts |
+| `4` Item layer | [`alvaretto/r-exams_matematicas`](https://github.com/alvaretto/r-exams_matematicas) *(shelved `p863`)* | 🟢 MIT, `1,078 B`, `sha256₁₂ 67a6e5e5a2af` | 🟢 **The only permissive Colombian code asset this base holds** — SABER ICFES-format items in `r-exams`, which compiles one source to PDF, Moodle XML, QTI and Blackboard |
+| `5` Delivery | Moodle / Kolibri *(both shelved)* | GPL-3.0 / MIT | 🔴 **Kolibri where connectivity is the constraint** — offline-first, MIT |
+| `6` Teacher capacity | the `Futuros Docentes en IA` model *(Chile, `T240`)* | — | 🔵 **Not a dependency — a precedent to cite.** `46` academics across `9` universities, `2026`–`2029`, public-private. 🟢 **The regional comparator a Colombian proposal needs, and `T245` says teacher capacity is the binding constraint in India and Indonesia too** |
+
+🔴 **No AI scores a learner anywhere in `P105`.** 🔵 **The pipeline AUTHORS and SEQUENCES; EU AI
+Act Annex III point `3` is not in scope because nothing assesses learning outcomes, and Brazil's
+`Resolução` does not reach a Colombian ministry — 🟢 but building to the stricter of the two
+makes the same corpus sellable in Brazil, which is the larger market.**
+
+🟢 **Timebox `10`–`12` weeks** to a first graded band with a skill taxonomy, teacher handbook and
+item set. 🔴 **The reviewed-every-three-years clause makes this a RECURRING engagement, which is
+the part worth pricing.**
+
+
 ## 🟢 Sixty-ninth pass (`p864`, 2026-11-17) — **`P102`–`P103`: one recipe where the mandate and the open base are in the SAME jurisdiction, and one built around a prohibition published seven days ago**
 
 **One hundred and one** concrete recipes — derived recipes: **101** (`99` + `2`).

@@ -4,6 +4,36 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🔴 `2026-11-17` — seventieth pass (`p865`): **`1` platform row, and the liveness figure this whole base grades on is wrong by `2.5` years on it**
+
+🟢 **The vertical-platform leg has scored a nil for most of the last fifteen passes.** 🟢 **It
+does not this pass, and the row arrived from the PEER-ASSESSMENT vein rather than the LMS vein —
+a layer no shelf here had covered.**
+
+### 🔴 The finding is the liveness column, not the platform
+
+🔴 **GitHub search reports `WebPA/WebPA` as `pushed_at 2025-12-12`.** 🟢 **Measured first-hand
+over the git channel in this pass:**
+
+| Ref | HEAD commit |
+|---|---|
+| 🔴 `master` *(the default ref)* | 🔴 **`2023-05-23`** |
+| 🔴 `develop` | 🔴 **`2017-05-25`** |
+| 🟢 `pushed_at`, as GitHub search reports it | 🟢 `2025-12-12` |
+
+🔴 **The repository carries four refs (`master`, `develop`, `8.4-upgrade`,
+`refine-technical-help-text`) and `pushed_at` is the newest event across ALL of them.** 🔵 **So a
+platform whose shipping branch has not moved in two and a half years reads as pushed eleven
+months ago.** 🟢 **This extends `T197`, which measured `pushed_at` as an ORGANISATION-level event
+across `51` repositories — the same defect is now measured INSIDE a single repository**
+→ `T242`. 🔴 **Every "pushed" cell on these shelves sourced from search rather than from
+`git log -1` on the default ref carries this error.**
+
+| Platform | Repo | Licence | Stars | What it is |
+|---|---|---|---|---|
+| **WebPA** | [`WebPA/WebPA`](https://github.com/WebPA/WebPA) | 🔴 **GPL-3.0 — byte-read `license.txt`, `35,147 B`, `sha256₁₂ 8ceb4b9ee5ad`**, title line `GNU GENERAL PUBLIC LICENSE`, `Version 3, 29 June 2007`. 🔴 **The grant file is `license.txt` — lowercase, `.txt`** — so a case-sensitive probe for `LICENSE` returns a FALSE ABSENCE, which is precisely the defect `p852` found on `License.md`. 🟡 **`35,147 B` is `2 B` under this base's canonical GPL-3.0 (`35,149 B` / `sha256₁₂ 3972dc9744f6`, re-measured this same pass)** → `T243` | `37★` / `30` forks | 🟢 **Open-source online PEER assessment: learners grade each other against criteria and the tool computes a weighted individual mark from a group grade.** PHP. 🔵 **The layer matters more than the row — peer assessment is the one marking mode in this base that is HUMAN BY CONSTRUCTION**, so it sits on the permitted side of `Resolução CNE/CP nº 1/2026` and of EU AI Act Annex III point `3` without an argument. 🔴 **GPL-3.0 and `master` cold since `2023-05-23`: inherit the ALGORITHM and the criteria model, do not adopt the codebase.** 🔴 **Region REFUSED** — commit authors resolve to `noexceptions.io`, a contractor domain, and no payload evidence names an institution or a country |
+
+
 ## 🟢 Sixty-ninth pass (`p864`, 2026-11-17) — **`2` platform rows (`253` → `255`): one AGPL system with `594` forks, one MIT platform that is ARCHIVED and shelved saying so**
 
 | Address | Licence, byte-read `2026-11-17` | ★ / forks | Pushed | Role in an engagement |
@@ -1113,7 +1143,7 @@ platform.** 🟡 **Treat it as competitive intelligence that happens to be MIT-l
 | **AGENTIC STAR** (SoftBank, 🇯🇵) | 🔴 **Not institution-run — a hosted commercial agent platform**, developer docs at `developers.fd.agenticstar.tm.softbank.jp`, homepage `agenticstar.io`. 🟢 Its runtime SDKs `agenticstar-agentcore` (`1.0.3`) and `agenticstar-platform` (`3.3.0`, `80` releases) are public on PyPI and MIT by their wheel metadata | 🟢 **`74` MIT education agent templates, `54` catalogue ids `EDU-C2-004`…`EDU-C2-173`** — reference row [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent), `EDU-C2-028`, byte-read MIT (`1,074 B`, HEAD `71c442ebd88e`) | 🟢 **MIT** (templates and both SDKs, all byte- or metadata-verified) | 🟡 **Adopt the SPECS, not the runtime.** 🔴 Templates raise `PlatformRequired` at graph compile without a SoftBank deployment; all `74` are `0★`, unmaintained since October; the framework's advertised source repo has **zero commits** (`T89`); hard `==` pins on `langgraph`/`langchain`/`fastapi`. 🟢 **Tests run without the platform — harvest per `P61`** |
 | **AgentCore graph scaffold** (the catalogue's shared architecture) | 🔵 Not a product — the uniform structure under all `74` templates: `config/agent.yaml` manifest (`required_trust_level`, declared secrets), `src/graph/`, `src/nodes/`, `src/schemas/state.py`, `docs/02_design.md`, `docs/03_test_spec.md`, `tests/proof_of_boundary/` | 🟢 Domain nodes differ completely between ids — byte-compared across three repositories this pass: `iep_section_generator`/`regulatory_compliance` vs `affected_material_analysis`/`stakeholder_mapping` vs `bloom_level`/`difficulty_score`. Reference row [`haidang024/agentic-star-education-curriculum-change-impact-briefing-agent`](https://github.com/haidang024/agentic-star-education-curriculum-change-impact-briefing-agent) (`EDU-C2-046`, `45` files) | 🟢 **MIT** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ae3eea9ac056`) | 🟢 **This is the reusable asset.** 🔵 One scaffold, `54` real domain implementations — so a studio gets a uniform, inspectable architecture across `54` education workflows instead of `54` unrelated codebases. 🔴 The scaffold's base class ships only in the binary wheel; re-implement on LangGraph (now on `repos/foundations.md`) |
 
-## Education vertical platforms — 167 rows
+## Education vertical platforms — 168 rows
 
 ## 🟡 The MARKING-ADAPTER layer — **permissive code that reaches INTO an incumbent this shelf already carries** (new, fifty-seventh pass `p852`) (3 rows)
 

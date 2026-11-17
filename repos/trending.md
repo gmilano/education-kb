@@ -4,6 +4,59 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — `p865`: **`7` shelf rows recovered from a silent uncounted-table state, a liveness figure wrong by `2.5` years, and two new ways a canonical grant fails a byte screen**
+
+### 🔴 Seven rows that were on the shelf and counted nowhere
+
+🔴 **`p863` and `p864` each added a layer table to [`repos/foundations.md`](foundations.md) whose
+column header was one word off the declared signature** — `Default ref · HEAD` for
+`Default ref · HEAD commit`, `Why it is a foundation` for
+`Why it is a foundation and not a row on another shelf`. 🔴 **`7` rows therefore counted in no
+total.** 🟢 **`p811`'s uncounted-table detector DID name both lines** — 🔵 **inside a `13`-table
+RED block that two consecutive passes read past, which is the failure mode of a gate that reports
+a standing RED: the new finding arrives camouflaged as the old one.**
+
+🟢 **Repaired this pass. `graded=340` → `347` with no row added; the heading now claims `348`
+including today's.**
+
+### 🔴 `pushed_at` overstates liveness by `2.5` years on a single repository
+
+| [`WebPA/WebPA`](https://github.com/WebPA/WebPA) | Date |
+|---|---|
+| 🟢 GitHub search `pushed_at` | `2025-12-12` |
+| 🔴 `master` — **the default ref** | 🔴 **`2023-05-23`** |
+| 🔴 `develop` | 🔴 **`2017-05-25`** |
+
+🔴 **Four refs; `pushed_at` is the newest event across all of them.** 🟢 **`T197` measured this at
+ORGANISATION scale; `T242` measures it inside one repository, which is the form that reaches every
+row here.** 🟢 **The reliable figure is `git log -1` on the default ref, free from the blobless
+clone this base already runs.**
+
+### 🟡 Two new grant-variance classes
+
+| Repo | Grant | Bytes | Canonical | Why a screen fails |
+|---|---|---|---|---|
+| 🟡 [`PKU-DAIR/SAS-Bench`](https://github.com/PKU-DAIR/SAS-Bench) | Apache-2.0 | `11,389` | `11,357` | 🔴 **First line EMPTY** — a first-line matcher reads `""` |
+| 🟡 [`WebPA/WebPA`](https://github.com/WebPA/WebPA) | GPL-3.0 | `35,147` | `35,149` | 🔴 **File is `license.txt`** — a case-sensitive probe returns false absence |
+
+🟢 **Both canonical references were re-measured in this same pass rather than recalled:**
+Apache-2.0 `11,357 B` / `c71d239df917` exact at `dspinellis/ai-repo-feedback`; GPL-3.0
+`35,149 B` / `3972dc9744f6` exact at `ma-sultan/short-answer-grader` — 🟢 **the second independent
+sighting of a digest first recorded at `p863`.** 🔵 **Without that same-pass reference, `WebPA`'s
+`−2` bytes read as a different licence instead of a variant** → `T243`.
+
+### 🟢 New this week
+
+| Repo | Grant, byte-read `2026-11-17` | ★ / forks | Shelf |
+|---|---|---|---|
+| [`PKU-DAIR/SAS-Bench`](https://github.com/PKU-DAIR/SAS-Bench) | 🟢 Apache-2.0, `11,389 B`, `8cb34457f0c2` | `73` / `4` | [`repos/foundations.md`](foundations.md) — **APAC**, human-aligned short-answer scoring benchmark |
+| [`dspinellis/ai-repo-feedback`](https://github.com/dspinellis/ai-repo-feedback) | 🟢 Apache-2.0, `11,357 B`, `c71d239df917` | `10` / `2` | [`agents/top.md`](../agents/top.md) — **EMEA** on the `aueb.gr` payload channel |
+| [`Logisx/DeepEssay`](https://github.com/Logisx/DeepEssay) | 🟢 MIT, `1,075 B`, `7478d449eab1` | `37` / `8` | [`agents/top.md`](../agents/top.md) — region REFUSED |
+| [`bytebear8177-35yit/formative-feedback-writer`](https://github.com/bytebear8177-35yit/formative-feedback-writer) | 🟢 MIT, `1,056 B`, `1126322e2cc8` | `26` / `0` | [`agents/top.md`](../agents/top.md) — region REFUSED, **no detected language** |
+| [`WebPA/WebPA`](https://github.com/WebPA/WebPA) | 🔴 GPL-3.0, `35,147 B`, `8ceb4b9ee5ad` | `37` / `30` | [`verticals/solutions.md`](../verticals/solutions.md) — algorithm only |
+| [`ma-sultan/short-answer-grader`](https://github.com/ma-sultan/short-answer-grader) | 🔴 GPL-3.0, `35,149 B`, `3972dc9744f6` | `41` / `23` | 🔴 **Not filed** — copyleft and cold since `2019`; kept as this pass's canonical GPL-3.0 reference |
+
+
 ## 🟢 `2026-11-17` — `p864`: the **Chinese `考试系统` vein** — four MIT systems above `300` ★, the deepest permissive examination tier in this base, and the `2,281`-star refusal beside it
 
 🔴 **`p863` found the Vietnamese tier by querying a LANGUAGE instead of a region.** 🟢 **`p864`

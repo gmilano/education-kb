@@ -1,0 +1,11 @@
+# p865 2026-11-17 — 864-G3 discharge, second branch: the specific domain and the specific failure code.
+# T906 predicted a BLOCKED GOVERNMENT-DOMAIN class. REFUTED: non-government mirrors fail identically.
+# The restriction is a session-wide domain allowlist, not a government-domain class.
+channel	domain	government	result	code
+WebFetch	www.gov.br	yes	FAIL	getaddrinfo ENOTFOUND
+WebFetch	www.semesp.org.br	no	FAIL	getaddrinfo ENOTFOUND
+curl	www.gov.br	yes	FAIL	curl (56) CONNECT tunnel failed, response 403
+curl	www.in.gov.br	yes	FAIL	curl (56) CONNECT tunnel failed, response 403
+curl	www.semesp.org.br	no	FAIL	curl (56) CONNECT tunnel failed, response 403
+curl	www.crub.org.br	no	FAIL	curl (56) CONNECT tunnel failed, response 403
+WebSearch	(index, not a fetch)	n/a	OK	operative text of the instrument returned in snippet form

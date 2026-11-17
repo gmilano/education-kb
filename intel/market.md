@@ -4,6 +4,95 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventieth pass (`p865`, 2026-11-17) — **two jurisdictions recovered from a false nil, Brazil's central clause settled in the client's favour, and a legislated Colombian curriculum with no corpus to build it from**
+
+🔴 **`p864` published Chile and Colombia as MEASURED NILS.** 🟢 **`864-G1` required them re-run
+one query per jurisdiction, and both nils were artefacts of a three-country query**
+([`evidence`](../evidence/websearch-legs.2026-11-17-p865.tsv)). 🔵 **Published here as a
+correction rather than quietly replaced, because a client proposal built on last pass's table
+would have said Chile and Colombia have no AI education policy, and both do.**
+
+### National positions, corrected and extended
+
+| Jurisdiction | Instrument | What it does |
+|---|---|---|
+| 🇧🇷 **Brazil** | 🟢 **`Resolução CNE/CP nº 1/2026`** (signed `2026-11-11`; `Parecer CNE/CP nº 15/2026` homologated `2026-11-10`) | 🟢 **Clause SETTLED this pass.** Inciso `IX` forbids the mark — *"a atribuição de nota, conceito ou mérito a avaliações dissertativas, redações"* — without human correction. 🟡 **Pre-correction is `alto risco` and PERMITTED** *"exclusivamente como instrumento preparatório e auxiliar"*, *"desprovida de efeito avaliativo próprio"*, with *"garantia da leitura integral"* (`§ 4º`). 🔴 `12` months to adapt policies, practices and CONTRACTS → `T239`, `P104` |
+| 🇨🇱 **Chile** | 🔴 **No binding school-level AI instrument** | 🟢 **`Ley 21.801` (Educación Digital); `PotencIA el Aprendizaje` classroom guide; national AI policy updated `2024` with curricular bases from pre-school; `Futuros Docentes en IA` — `46` academics, `9` universities, `2026`–`2029`.** 🔴 **CUECH called for a public-education AI policy in August `2026` — the demand is institutional and unmet** |
+| 🇨🇴 **Colombia** | 🟢 **`Ley 2626 de 2026`** | 🟢 **A COMPULSORY, progressive curriculum: alfabetización digital, pensamiento computacional, programación, IA, ciencia de datos, ciudadanía digital. Guidelines reviewed at least every three years.** 🟢 Plus the `Decálogo de IA para la Educación Superior`, `CONPES 4144`, a `2026` CPE teacher-training call. 🔴 **Binding on official institutions; private schools MAY adopt** → `T244`, `P105` |
+| 🇮🇳 **India** | 🟢 **`CBSE` circular `Acad-15/2026`** (`2026-04-01`) | 🟢 **Computational Thinking + AI for Classes III–VIII from `2026–27`; Classes `9`–`12` finalised; curriculum, Teachers' Handbook and Teaching Learning Material released.** 🔴 **Classes `9`–`10` timing UNRESOLVED across sources, and "mandatory" is unconfirmed in `PIB`/`CBSE` text.** 🔴 **Constraint named by officials: over one crore teachers to orient** → `T245` |
+| 🇮🇩 **Indonesia** | 🟢 `Permendikdasmen 13/2025` *(carried from `p864`)* | 🔴 Elective, not compulsory; teacher-training target cut `1,000,000` → `361,000` |
+| 🇺🇸 **United States** | 🔴 No confirmed federal `2026` K-12 instrument *(carried)* | 🟡 State-led, count disputed `31` vs `33`–`35`. 🟢 **Detector-free integrity is the position of both the US Department of Education and the Brazilian instrument** — one design, two markets |
+
+## Opportunities by region
+
+### North America
+
+🟡 **The opportunity remains compliance surface, not technology**, and this pass sharpens it in
+one way. 🟢 **`P104`'s integrity design is detector-free because Brazil forbids detector-grounded
+sanctions and the US Department of Education has cautioned against detectors as a sole basis** —
+🔵 **so the same assessment architecture is sold as conformance in Brazil and as defensible
+practice across `31`–`35` state regimes, with no rebuild.** 🔴 **No federal K-12 instrument, at
+least five states with binding district-policy duties on different clocks (Ohio, Tennessee,
+Maryland, Oklahoma — biting before `2027–28` — and Idaho).** 🔴 **`0` North America-placed rows
+filed this pass.**
+
+### EMEA
+
+🟢 **One placed row and it came from the payload channel, not from a guess.**
+[`dspinellis/ai-repo-feedback`](https://github.com/dspinellis/ai-repo-feedback) (Apache-2.0) is
+placed EMEA because every commit author resolves to **`aueb.gr`** — 🔵 **the same channel that
+placed `UOC/java-lti-1.3` at `p852`, and the only region evidence this base accepts without
+prose.** 🟢 **The standing EMEA calendar is unchanged: the Digital Omnibus agreement of
+`7 May 2026` moved AI Act high-risk education obligations to `2 December 2027`** — 🔵 **a
+`~12`-month build window from today, classification unchanged. 🟢 `P104` is already inside it:
+a system that never records a mark is not performing the Annex III point `3` function.**
+🔴 **Kenya's national strategy and South Africa's abrogated policy are carried unchanged from
+`p864`; nothing measured this pass touched them.**
+
+### APAC
+
+🟢 **The pass's foundation row is APAC and it is an instrument rather than a product.**
+[`PKU-DAIR/SAS-Bench`](https://github.com/PKU-DAIR/SAS-Bench) (Apache-2.0, Peking University) is
+the human-alignment benchmark every marking recipe in this base has needed since `P67` —
+🔵 **and it being Chinese-authored, Apache-2.0 and redistributable means the compliance evidence
+for a BRAZILIAN engagement comes out of an APAC lab.** 🟢 **India has now dated its mandate
+(`Acad-15/2026`, Classes III–VIII from `2026–27`) and named teacher capacity as the binding
+constraint — the second APAC system to do so after Indonesia's `1M`→`361k` revision.**
+🔵 **Two of the three largest school systems in the region agreeing that the limit is people and
+not software is a demand-side claim worth taking to a client.** 🔴 **Japan and Korea remain a
+measured permissive near-nil** (`T233`).
+
+### LATAM
+
+🟢 **Brazil's clause resolving in the permissive direction converts a constraint back into a
+build.** 🔴 **`p864` read the instrument as possibly a flat prohibition, under which there is no
+Brazilian product.** 🟢 **The text permits pre-correction as an auxiliary instrument with no
+evaluative effect and a guaranteed full teacher read — which is a SPECIFICATION, and `P104` is
+written to it.** 🔴 **`12` months to adapt CONTRACTS, for every public and private institution
+in the country.**
+
+🟢 **Colombia is the clearer build and the one nobody can undercut.** `Ley 2626 de 2026`
+legislates a compulsory curriculum; 🔴 **the permissive open corpus in Spanish for that curriculum
+is `0` repositories above five stars on three of four probes** (`T244`). 🔵 **The deliverable is
+the corpus, the ministry owns it, and the three-year review clause makes it recurring** → `P105`.
+
+🔴 **Chile has demand without an instrument**: CUECH asked for a public-education AI policy in
+August `2026` and none exists; `Futuros Docentes en IA` is the live vehicle and it is
+teacher-training, `2026`–`2029`. 🟢 **The honest Chilean pitch is the teacher-capacity programme,
+not a compliance deadline.** 🟢 **Shelved LATAM code assets remain `alvaretto/r-exams_matematicas`
+(MIT, Colombia), `uol-redacoes-xml` (Brazil), `awesome-poscomp` (MIT, Brazil).**
+
+### Global
+
+🔴 **The cross-region finding is the same one for the fourth consecutive pass, and it has now
+been forced down two levels.** 🟢 **`863-G2` removed the REGION token from every query and the
+dominance moved to the loudest JURISDICTION; `864-G1` removed the multi-country query and two
+"nils" turned into a national law and a national programme** (`T240`). 🔵 **The defensible unit
+for a client is one jurisdiction, one query, one published total — including the nils.**
+🔴 **No regional or linguistic generalisation this base has attempted has survived its own next
+measurement.**
+
+
 ## 🟢 Sixty-ninth pass (`p864`, 2026-11-17) — **`863-G2` OBEYED: every policy query carried `0` region tokens, and the jurisdiction-only rule returned a numbered instrument in Indonesia, a binding resolution in Brazil, an unresolved count in the United States and an ABROGATED national policy in South Africa**
 
 🟢 **`863-G2` required that a regional leg contain no `APAC`, no `EMEA`, no `LATAM`, no
@@ -34,7 +123,7 @@ dominate exactly as the region token used to** → `864-G1`.
 | 🇳🇬 **Nigeria** | 🔴 **Claims inconsistent across sources** | 🔴 **One source reports NERDC directed to integrate robotics and AI into the primary curriculum, undated; an academic paper states the NERDC curriculum is SILENT on AI literacy.** 🟢 **Published as contested, not resolved** |
 | 🇨🇱 **Chile**, 🇨🇴 **Colombia** | 🔴 **MEASURED NIL this pass** | 🔴 **The Brazil/Chile/Colombia query returned Brazil only.** 🟢 **Published as a nil WITH its query**, not as absence of policy |
 
-## Opportunities by region
+## Opportunities by region — superseded, retained for history
 
 ### North America
 
@@ -138,7 +227,7 @@ cites Korea as the model should cite what happened to it.**
 
 ---
 
-## Opportunities by region
+## Opportunities by region — superseded, retained for history
 
 🔵 **Each subsection below pairs this pass's MEASURED open-source supply for the region with its
 regulatory position.** 🔴 **Where a region returned nothing, that is written as a nil with what
@@ -268,7 +357,7 @@ of Education's `25` generative-AI prohibitions for schools (February `2026`)** a
 🔵 **A regional query returns what a search engine thinks the region is; the `region` field must
 be set from the jurisdiction named in the source, never from the leg that found it.**
 
-## Opportunities by region
+## Opportunities by region — superseded, retained for history
 
 ### 🟢 North America
 
@@ -421,7 +510,7 @@ environment).
 | 🔴 **Market size is still unanswerable** | `$11.4B` (`2026`) against HolonIQ's `$12.3B` by `2026` — 🔵 a narrower spread than the `2.8×` this base has carried for EMEA, and still two incompatible definitions. **Quote neither in a proposal** |
 | 🟢 **The multilateral line, unchanged and now four legs deep** | The OECD's `2026` Digital Education Outlook argues for PURPOSE-BUILT educational AI over general-purpose tools. 🔵 **Same conclusion as `T907`'s RCT reading, as every regulator below, and as the `47`-point European teacher gap** |
 
-## Opportunities by region
+## Opportunities by region — superseded, retained for history
 
 ### North America
 
@@ -620,7 +709,7 @@ reproducible from this repository, and market sizings disagree by a factor of tw
 the publisher is not a market size, it is three different definitions** — and a proposal that
 quotes one without the definition is quoting a press release.
 
-## Opportunities by region
+## Opportunities by region — superseded, retained for history
 
 ### North America
 
@@ -767,7 +856,7 @@ measurements.**
 | 🇧🇷 **LATAM** | Fundação Lemann | `24` | 🔴 **`23` of `24` UNGRANTED** | 🔴 **Nothing adoptable.** Newest HEAD commit `2021-02` |
 | 🇦🇷 **LATAM** | `decyt-tdf`, Tierra del Fuego | `25` | 🔴 **`18` ungranted · `6` MIT · `1` GPL-3.0** | 🔴 **Dead:** flagship last committed `2019-11` |
 
-## Opportunities by region
+## Opportunities by region — superseded, retained for history
 
 🔴 **Every market and adoption figure in this section is `CITED, NOT READ` from WebSearch
 summaries on `2026-11-16`, and several are secondary aggregators that disagree with each other —
@@ -916,7 +1005,7 @@ ranked search cannot see it → `P89`.
 summaries and says so.** 🟢 Every licence, byte count, `sha256₁₂` and HEAD commit sha is byte-read
 `2026-11-16`.
 
-## Opportunities by region
+## Opportunities by region — superseded, retained for history
 
 ### North America
 

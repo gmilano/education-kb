@@ -4,6 +4,116 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (seventieth pass, `p865`) — **`4` gaps — `864-G1`, `864-G2`, `864-G3` and `864-G4` ALL DISCHARGED with their acceptance tests run; two of this base's published figures were wrong and one of its standing trends is refuted**
+
+### 🟢 `864-G1` — DISCHARGED, and both "nils" were artefacts
+
+🔴 **The gap: a query naming Brazil, Chile and Colombia returned Brazil only; re-run each
+jurisdiction alone and report each separately, including nils.** 🟢 **Run**
+([`evidence`](../evidence/websearch-legs.2026-11-17-p865.tsv)), `0` region tokens in any query, so
+`863-G2`'s rule held simultaneously.
+
+| Jurisdiction | `p864` | 🟢 `p865`, queried alone |
+|---|---|---|
+| 🇨🇱 Chile | 🔴 nil | 🟢 **`Ley 21.801`; `PotencIA el Aprendizaje`; `Futuros Docentes en IA` (`46` academics, `9` universities, `2026`–`2029`); CUECH's `2026-08` call** |
+| 🇨🇴 Colombia | 🔴 nil | 🟢 **`Ley 2626 de 2026` — a COMPULSORY progressive curriculum; `Decálogo de IA para la Educación Superior`; `CONPES 4144`** |
+| 🇮🇳 India *(added)* | — | 🟢 **`CBSE Acad-15/2026`, Classes III–VIII from `2026–27`** |
+
+🔵 **Neither was a nil in the world.** 🟢 **The rule that survives: one query per jurisdiction,
+every total published, a nil published with the query that produced it** → `T240`.
+
+### 🟢 `864-G2` — DISCHARGED: fork policy declared, ratio on record a second time
+
+🟢 **Stated in the header of [`agents/top.md`](../agents/top.md) and of
+[`agents/trending.md`](../agents/trending.md) before their first total**: `gh api
+search/repositories` EXCLUDES forks by default; every total in this base is a NON-FORK count.
+🟢 **One term run both ways, as required**: `考试系统 stars:>5` → `426` / `445` with `fork:true`,
+`19` hidden (`4.5%`). 🟢 **`题库` reproduced `p864`'s figure exactly — `1,359` / `1,466`, `7.3%`**
+([`evidence`](../evidence/fork-policy.2026-11-17-p865.tsv)).
+
+### 🟢 `864-G3` — DISCHARGED on the STRONGER branch, and it refutes `T906`
+
+🟢 **The gap allowed either the operative sentence or the domain and failure code. Both were
+produced.**
+
+🟢 **The operative text.** Inciso `IX` of `Resolução CNE/CP nº 1/2026` forbids *"a atribuição de
+nota, conceito ou mérito a avaliações dissertativas, redações"* without human correction.
+🟡 **Pre-correction systems are `alto risco` and *"admitidos exclusivamente como instrumento
+preparatório e auxiliar da correção realizada pelo professor"*, *"desprovida de efeito avaliativo
+próprio"*, with *"garantia da leitura integral e apreciação direta da produção do estudante"*
+(`§ 4º`).** 🔴 **The dispute is resolved AGAINST the press, which reported a flat prohibition**
+→ `T239`, `P104`.
+
+🔴 **And the channel record refutes a standing trend.** `T906` attributed failures of this class
+to a BLOCKED GOVERNMENT-DOMAIN category. 🔴 **Measured**: `WebFetch` on `www.gov.br` →
+`getaddrinfo ENOTFOUND`; `WebFetch` on `www.semesp.org.br`, a PRIVATE association, → **the same
+code**; `curl` to `www.gov.br`, `www.in.gov.br`, `www.semesp.org.br` and `www.crub.org.br` → 🔴
+**`curl (56) CONNECT tunnel failed, response 403`, identically, government and non-government
+alike** ([`evidence`](../evidence/primary-text-channel.2026-11-17-p865.tsv)).
+🔵 **The restriction is a session-wide domain allowlist, not a government class** — `T906`'s
+explanation is wrong and its observations are not.
+
+### 🟢 `864-G4` — DISCHARGED: the filter's cost is `79%` of the vein's shelf
+
+🟢 **A known-good vein run both ways**
+([`evidence`](../evidence/language-filter-cost.2026-11-17-p865.tsv)). 🟢 **The repair works**:
+`考试系统 stars:>5` `426` → `121` under `language:java`, top band on topic. 🔴 **The cost, measured
+on SHELVED rows as the gap required: of `16` probed, `3` are Java and survive; `11` of the `14`
+with a detected language — `79%` — would have been hidden; `2` have NO detected language and are
+unreachable by any `language:` value.** 🔴 **One of the hidden rows is `hongmaple/octopus`, filed
+by `p864` in the pass that proposed the filter.** 🔴 **`"corretor automático" language:java` →
+`0`.** 🟢 **Rule adopted: `language:` is for SYSTEMS legs only, never for a corpus, item-bank,
+awesome-list or documentation leg** → `T241`.
+
+---
+
+### 🔴 `865-G1` — this base publishes three different row counts for one shelf
+
+🔴 **Measured before this pass edited anything.** [`agents/top.md`](../agents/top.md)'s canonical
+count heading claimed **`486`**; `derive-counts.py` graded the file at **`492`**; `p864`'s
+`README` published **`739`** for the same shelf. 🟢 **The heading is repaired to `495` and the
+gate now agrees with the file** — 🔴 **but WHICH basis is the client-facing number is not
+settled, and `739` is the figure a reader of the `README` would quote.**
+
+🟢 **Acceptance test: the next pass states, in one sentence, what the `README` figure counts that
+the gate does not, and makes the two reconcilable or marks one of them as not a shelf count.**
+
+### 🔴 `865-G2` — a standing RED camouflages the new findings inside it
+
+🔴 **The uncounted-table detector named `repos/foundations.md` lines `14` and `43` in `p863`'s
+and `p864`'s own gate output, and both passes read past it** — because the line arrived inside a
+`13`-table RED block that has been standing for many passes. 🟢 **`7` shelf rows were counted
+nowhere as a result; repaired this pass.**
+
+🔵 **The defect is not the miscount, it is that a standing RED has no delta.** 🟢 **Acceptance
+test: the next pass runs the uncounted-table detector against `git archive HEAD` as well as the
+working tree and reports only the DIFFERENCE, so a newly-broken table cannot hide inside an old
+one.**
+
+### 🔴 `865-G3` — the Brazilian `12`-month clock has two possible start dates and one unexplained approval date
+
+🔴 **Sources disagree on whether the `12`-month adaptation period runs from homologação
+(`2026-11-10`) or publicação (`2026-11-11`).** 🔴 **And September `2026` coverage reports the CNE
+approving these rules on `1 September 2026`, while the instrument is signed `11 November 2026` —
+unexplained by any source read.** 🟡 **A one-day ambiguity does not move a quarter's planning, so
+`P104` is unaffected**; 🔴 **a two-month one changes which contracts are already in breach.**
+
+🟢 **Acceptance test: the next pass either reconciles the September approval with the November
+signature from a source that names both, or records the conflict as permanent and stops
+re-finding it.**
+
+### 🔴 `865-G4` — `17` of `22` candidates were already held, and nothing acts on that number
+
+🟢 **Measured twice now on different veins two weeks apart: `76%` (`p852`), `77%` (`p865`).**
+🔵 **The rate is stable enough to be a planning constant, and this base still discovers it by
+re-running the sweep.** 🔴 **No instrument turns a sweep's results into "new / held / shelved"
+before a human reads them**, although `ingest/` holds the pieces (`address-ledger.py`,
+`p587-crosspage-naive.py`).
+
+🟢 **Acceptance test: the next sweep pipes its candidate slugs through one command that prints the
+three-way split, and the pass reports the split rather than re-deriving it by hand.**
+
+
 ## 🟢 `2026-11-17` (sixty-ninth pass, `p864`) — **`4` gaps — `863-G1`, `863-G2`, `863-G3` and `863-G4` ALL DISCHARGED with their acceptance tests run, one of them returning a FOURTH channel the gap did not know about, and a rule `p863` published shown to be wrong**
 
 ### 🟢 `863-G1` — DISCHARGED, and the gap undercounted the channels

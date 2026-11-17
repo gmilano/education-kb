@@ -6,6 +6,103 @@ updated: 2026-11-17
 
 # Globant AI Studios — Education KB
 
+## Pass `p865` · `2026-11-17`
+
+🟢 **`864-G1`, `864-G2`, `864-G3` and `864-G4` were all discharged with their acceptance tests
+run, and three of them overturned something this base had published.** 🔴 **Two "measured nils"
+were artefacts of a query, a standing trend's EXPLANATION is refuted, and a search filter
+`p864` proposed would have hidden the row `p864` filed with it.**
+
+🔴 **Chile and Colombia were not nils.** 🟢 **Queried one jurisdiction at a time, Chile returns
+`Ley 21.801`, the `PotencIA el Aprendizaje` guide and `Futuros Docentes en IA` (`46` academics,
+`9` universities, `2026`–`2029`); Colombia returns `Ley 2626 de 2026`, which legislates a
+COMPULSORY progressive curriculum in digital literacy, computational thinking, programming, AI,
+data science and digital citizenship.** 🔵 **`863-G2` removed the REGION token and the dominance
+moved down one level to the loudest JURISDICTION; removing the multi-country query turned two
+nils into a national law and a national programme** → `T240`.
+
+🟢 **The Brazilian essay clause is SETTLED, and against the press that reported it.** Inciso `IX`
+of `Resolução CNE/CP nº 1/2026` forbids *"a atribuição de nota, conceito ou mérito a avaliações
+dissertativas, redações"* without human correction. 🟡 **Pre-correction is `alto risco` and
+PERMITTED** *"exclusivamente como instrumento preparatório e auxiliar da correção realizada pelo
+professor"*, *"desprovida de efeito avaliativo próprio"*, with *"garantia da leitura integral"*
+(`§ 4º`). 🔴 **Headlines read "CNE proíbe uso de IA para corrigir provas e redações"; the
+instrument prohibits the UNREVIEWED MARK.** 🔵 **Under the flat reading there is no Brazilian
+product; under the text there is a specified one** → `T239`, `P104`.
+
+🔴 **`T906`'s explanation is wrong.** It attributed this class of failure to blocked GOVERNMENT
+domains. 🔴 **Measured: `WebFetch` on `www.gov.br` and on `www.semesp.org.br` — a private
+association — return the SAME `getaddrinfo ENOTFOUND`, and `curl` returns
+`(56) CONNECT tunnel failed, response 403` on all four domains tried, government and private
+alike.** 🟢 **It is a session-wide domain allowlist, not a government class.**
+
+🔴 **`language:` would hide `79%` of the vein it was meant to clean.** 🟢 **The repair works
+(`考试系统 stars:>5` `426` → `121`, top band on topic).** 🔴 **Of `16` shelved rows probed, `3` are
+Java; `11` of the `14` with a detected language are not; `2` have no detected language at all and
+no `language:` value can ever return them.** 🔴 **One of the hidden rows is `hongmaple/octopus`,
+which `p864` filed in the same pass that proposed the filter** → `T241`.
+
+🔴 **Two of this base's own published numbers were wrong, and both are repaired here.**
+🔴 **[`agents/top.md`](agents/top.md) claimed `486` rows while holding `492`, and the `p864`
+`README` published `739` for the same shelf — three figures, three bases, one shelf** (`865-G1`).
+🔴 **`7` rows on [`repos/foundations.md`](repos/foundations.md) were counted NOWHERE** because
+`p863` and `p864` each wrote a column header one word off the declared signature; 🟢 **the gate
+named both lines and two passes read past it, inside a standing RED block that has no delta**
+(`865-G2`). 🟢 **All three shelves are now GREEN on the count gate for the first time in this
+sequence.**
+
+🔴 **And a liveness figure wrong by two and a half years.** [`WebPA/WebPA`](https://github.com/WebPA/WebPA)
+reports `pushed_at 2025-12-12`; its default ref `master` last moved `2023-05-23` and `develop`
+`2017-05-25`. 🟢 **`pushed_at` is the newest event across ALL refs** — `T197` at organisation
+scale, now measured inside a single repository → `T242`.
+
+### This pass added
+
+| Shelf | Added | Total |
+|---|---|---|
+| [`agents/top.md`](agents/top.md) | `3` rows + a count repair (`486`→`495`) | **`495`** 🟢 gate-GREEN |
+| [`repos/foundations.md`](repos/foundations.md) | `1` row + `7` recovered from an uncounted table | **`348`** 🟢 gate-GREEN |
+| [`verticals/solutions.md`](verticals/solutions.md) | `1` row | **`168`** 🟢 gate-GREEN |
+| [`intel/trends.md`](intel/trends.md) | `7` trends (`T239`–`T245`) | `237` |
+| [`compose/patterns.md`](compose/patterns.md) | `2` recipes (`P104`–`P105`) | `103` |
+| [`intel/measured-unusable.md`](intel/measured-unusable.md) | `2` refusals, both GRANTED and copyleft | — |
+| [`intel/open-gaps.md`](intel/open-gaps.md) | `4` discharged, `4` new (`865-G1`–`G4`) | — |
+| [`evidence/`](evidence/) | `5` files | — |
+
+🟢 **Counts, gate-confirmed this pass.** `python3 -I ingest/derive-counts.py .` →
+`agents/top.md` **`495/495`**, `repos/foundations.md` **`348/348`**,
+`verticals/solutions.md` **`168/168`**, `ragged=0`, `nolink=0`, no new duplicate subjects;
+`compose/patterns.md` `103` recipes, `P-1..P-105`; `intel/trends.md` `237/237`.
+🟢 `make gate-region-headings` → **`0` findings**, repaired from **`18`** by demoting six
+historical `## Opportunities by region` blocks to `— superseded, retained for history`, leaving
+the live block as the single canonical one with all five vocabulary regions.
+
+🟢 **`make hooks` was RUN, and measured against a pristine baseline rather than asserted.**
+🔴 **At `HEAD` (`git archive HEAD` into a scratch tree): `51/73` green, `22` RED.**
+🟢 **After this pass: `52/73` green, `21` RED — the same set minus `gate-region-headings`.**
+🟢 **`p865` therefore introduced `0` new gate failures and closed one standing one.**
+
+🔴 **Still RED, unchanged by this pass and listed so no reader infers a clean tree:** `recount`,
+`gate-derived-counts`, `gate-enumeration`, `gate-dates`, `gate-evidence-store`,
+`gate-shelf-consistency`, `gate-prose-claims`, `gate-register-currency`, `gate-fold-identity`,
+`gate-alias-canonical`, `gate-census-currency`, `gate-grant-path`, `gate-census-union`,
+`gate-ledger`, `gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`,
+`gate-case-collision`, `gate-promotion`, `gate-promotion-ledger`, `gate-cell-reproduction`.
+🔴 **`gate-derived-counts` stays RED although all three shelf figures now agree with their
+pages** — it fails on the uncounted-table arm, which is the arm that hid `865-G2` for two passes.
+
+🔴 **Supply, stated honestly: `5` of `22` candidates were new — `77%` were already in this
+repository.** 🟢 **The same measurement at `p852` gave `76%`, on a different vein two weeks
+earlier** — 🔵 **a stable rate, which makes it a planning constant rather than a complaint, and
+`865-G4` asks for the instrument that would stop the hour being spent on it.**
+🔴 **Region coverage: `2` of `6` new rows placed** (EMEA on `aueb.gr`; APAC on the `PKU-DAIR`
+org-acronym channel), 🔴 **`3` REFUSED** rather than guessed, all on
+`users.noreply.github.com` or a contractor domain. 🔵 **`WebPA` was nearly placed EMEA from
+recall; the payload channel refused it.**
+
+---
+
+
 ## Pass `p864` · `2026-11-17`
 
 🟢 **`863-G1`, `863-G2`, `863-G3` and `863-G4` were all discharged with their acceptance

@@ -4,6 +4,27 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventieth pass (`p865`, 2026-11-17) — **`1` row, and `7` rows that were already on this shelf recovered from a silent uncounted-table state**
+
+🔴 **`p863` and `p864` each added a layer table to this shelf whose column header was one word
+off the declared signature** — `Default ref · HEAD` where the gate expects
+`Default ref · HEAD commit`, and `Why it is a foundation` where it expects
+`Why it is a foundation and not a row on another shelf`. 🔴 **Their `7` rows were therefore
+counted NOWHERE**, which is the exact state `p811`'s uncounted-table detector exists to make
+loud, and the detector DID name both lines — 🔵 **in a `13`-table RED block that two passes read
+past.** 🟢 **Both headers are repaired to the declared signature in this pass; the gate's graded
+figure moves `340` → `347` without a single row being added.**
+
+🟢 **Measured before and after, with `python3 -I ingest/derive-counts.py .`:**
+`graded=340 claimed=340` → `graded=347`, and the heading below now claims `348` (`347` + the row
+filed here). 🔵 **A silent miscount found by reading the gate's own output rather than by
+trusting its GREEN.**
+
+| Repo | Licence, as measured | ★ / forks | Default ref · HEAD commit | Region | Why it is a foundation and not a row on another shelf |
+|---|---|---|---|---|---|
+| [`PKU-DAIR/SAS-Bench`](https://github.com/PKU-DAIR/SAS-Bench) | 🟢 **Apache-2.0 — byte-read `LICENSE`, `11,389 B`, `sha256₁₂ 8cb34457f0c2`**, body canonical (`APPENDIX` present, `Version 2.0, January 2004`). 🔴 **`+32 B` against the canonical `11,357 B`, and its FIRST LINE IS EMPTY** → `T243` | `73` / `4` | `main` · `2025-05-15` | 🟢 **APAC** — `PKU-DAIR` is Peking University's Data and Intelligence Research lab; commit authors resolve to `qq.com`. 🔵 **Org-acronym channel, the same one that placed a North American row at `p852`** | 🟢 **"Benchmarking large language models for short answer grading in a fine-grained, multi-subject, and human-aligned setting."** 🔵 **This is a MEASURING INSTRUMENT, not a grader, which is why it is a foundation and not an agent row — and it is the one this base has been missing.** 🔴 **Every marking recipe in [`compose/patterns.md`](../compose/patterns.md) from `P67` onward draws a human-review boundary and none of them could EVIDENCE the model's alignment with human markers.** 🟢 **`SAS-Bench` is exactly that evidence: fine-grained, multi-subject, human-aligned short-answer scoring, Apache-2.0, redistributable.** 🟢 **It is also the component that makes `P104` defensible under `Resolução CNE/CP nº 1/2026 § 4º`** — a pre-correction system admitted only as an auxiliary instrument has to show what its auxiliary output is worth. 🔴 HEAD `2025-05-15`: a benchmark, correctly frozen, but eighteen months of model releases have happened since the paper's numbers |
+
+
 ## 🟢 Sixty-ninth pass (`p864`, 2026-11-17) — **`4` foundation rows (`391` → `395`): the Chinese examination-system tier, which is the deepest permissive vein this base has found in ANY language, English included**
 
 🟢 **Every licence byte-read `2026-11-17` from `git clone --filter=blob:none --depth 1`
@@ -11,7 +32,7 @@ updated: 2026-11-17
 agreed on all `16` addresses read this pass.** 🔴 **Channel note per [`863-G1`](../intel/open-gaps.md):
 `curl` and `gh api repos/` both returned `403`; `gh api search/repositories` and `git` answered.**
 
-| Repo | Licence, as measured | ★ / forks | Default ref · HEAD | Region | Why it is a foundation |
+| Repo | Licence, as measured | ★ / forks | Default ref · HEAD commit | Region | Why it is a foundation and not a row on another shelf |
 |---|---|---|---|---|---|
 | [`qiutiandefeng/yfexam-exam`](https://github.com/qiutiandefeng/yfexam-exam) | 🟢 **MIT** — `LICENSE`, `1,096 B`, `sha256₁₂ 89a6f0da2879` | **`998`** / `178` | `main` · `2025-03-28` | 🟢 **APAC** *(prose: China, `云帆培训考试系统`)* | 🟢 **A complete training-and-examination system shipped MIT, with a public demo.** 🔵 **`178` forks is the signal**: this is a base other people have already taken and run, which is the only forking metric that matters when the question is "can we start from it". 🔴 `HEAD 2025-03-28` — stable rather than active; fork it, do not depend on upstream |
 | [`Alanosy/exam-platform`](https://github.com/Alanosy/exam-platform) | 🟢 **MIT** — `LICENSE`, `1,061 B`, `sha256₁₂ f358d42c8caf` | **`887`** / `92` | `master` · `2026-10-04` *(pushed `2026-11-05`)* | 🟢 **APAC** *(placed `url-tld:.cn` — `doc.alan.org.cn`)* | 🟢 **「砚考」 — an actively developed MIT examination platform with its own documentation site.** 🔴 **Logged in this base's trending files by an earlier pass and never graded onto a shelf** — the `T172` residue class again — 🟢 **so it is promoted here with its bytes read rather than re-discovered a fourth time.** 🟢 **The freshest permissive examination platform in the vein** |
@@ -40,7 +61,7 @@ is already on this shelf and [`mindskip/xzs`](https://github.com/mindskip/xzs) i
 🟢 **Every licence below was byte-read `2026-11-17` from `git clone --filter=blob:none --depth 1`.
 GitHub's SPDX field was recorded separately and agreed on all three.**
 
-| Repo | Licence, as measured | ★ / forks | Default ref · HEAD | Region | Why it is a foundation and not a row on another shelf |
+| Repo | Licence, as measured | ★ / forks | Default ref · HEAD commit | Region | Why it is a foundation and not a row on another shelf |
 |---|---|---|---|---|---|
 | [`alvaretto/r-exams_matematicas`](https://github.com/alvaretto/r-exams_matematicas) | 🟢 **MIT** — `LICENSE`, `1,078 B`, `sha256₁₂ 67a6e5e5a2af` | `8` / `0` | `main` · `2024-03-18` | 🟢 **LATAM** *(prose: Colombia)* | 🟢 **The single permissive artefact the `795`-address `ICFES` corpus produced.** Secondary-mathematics items written for Colombia's **SABER ICFES** single-answer multiple-choice format, authored in [`r-exams`](https://www.r-exams.org/) — 🔵 **which is the part that matters: `r-exams` compiles one item source to PDF, Moodle XML, QTI and Blackboard, so these are not a static PDF bank but a RE-TARGETABLE item set.** 🟢 **An engagement that needs Colombian-curriculum items in its own LMS can emit them without re-authoring.** 🔴 `HEAD 2024-03-18`: the items are fixed, which is correct for a bank, but the curriculum is not. |
 | [`agn3si/ResultadosUNAM---data`](https://github.com/agn3si/ResultadosUNAM---data) | 🟢 **MIT** — `LICENSE`, `1,063 B`, `sha256₁₂ 13e4dd489fe9` | `6` / `2` | `main` · `2026-08-12` | 🟢 **LATAM** *(prose: Mexico, UNAM)* | 🟢 **An open database of UNAM entrance-examination results, `2021`–`2026`, all areas** — six admission cycles of outcome data for the largest university in Mexico. 🔴 **Logged in this base's trending files by an earlier pass and never graded onto a shelf** — exactly the `T172` residue class — 🟢 **so it is promoted here with its bytes read rather than re-discovered a third time.** 🔵 **The only LONGITUDINAL admissions outcome set in the base**: admissions-equity and yield-prediction work needs multi-cycle data, and nothing else here has it. 🟢 Freshest Hispanic artefact in the vein (`2026-08-12`). |
@@ -1594,7 +1615,7 @@ above was graded on the licence question alone.**
 | https://github.com/langchain-ai/langchain | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`) | 149546 | **Region: Global.** The model and tool abstraction layer beneath the above. 🟡 **Shelved with a deliberate caution: this base's compose recipes should depend on `langgraph` for control flow and on `langchain-core` for interfaces, not on the `langchain` meta-package, whose surface moves faster than an education deliverable's support window.** 🔵 **Note for the byte-read gate: its `LICENSE` is on `master`, not `main` — a `main`-only probe returns `404` and would record a false `NO_LICENCE_FILE`, which is a live defect in any sweep that assumes the default branch name** |
 | https://github.com/teppei-miyashita/agenticstar-agentcore | 🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last touched `2026-08-12` | 0 | 🔴 **Region: APAC. Shelved as a WARNING row — the worked example for `T89`.** This is the source repository that the PyPI package `agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository`, and it holds no commits at all. 🟢 **The package itself is genuinely MIT** (`License-Expression: MIT` in the wheel, `dist-info/licenses/LICENSE`, `1,078 B`, `sha256:2afbb5fc…`) **and genuinely installable** — 🔴 **but it is wheel-only, single-release (`2026-09-17`), and unreadable at its stated address, while hard-pinning `langgraph==1.1.10`, `langchain==1.2.18`, `fastapi==0.136.0` and `agenticstar-platform==0.5.32`.** 🔵 **Do NOT add it to a delivery tree. It is here so that the next pass asking "is the AGENTIC STAR stack adoptable?" finds the answer already measured: licensed yes, auditable no** |
 
-## Foundational repos — 340 rows
+## Foundational repos — 348 rows
 
 ## 🟢 The STANDARDS-SEAM layer — **LTI, QTI and xAPI, the four interfaces an education deliverable is actually wired through** (new, fifty-seventh pass `p852`) (6 rows)
 
