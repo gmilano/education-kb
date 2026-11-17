@@ -6,7 +6,15 @@ updated: 2026-11-17
 
 # Compose patterns — education
 
-**Pass `p873`, 2026-11-17** (third pass of the day). Ten recipes — `p871`'s six, `p872`'s **P7**
+**Pass `p874`, 2026-11-17** (fourth pass of the day). **Eleven recipes** — `p874` adds **P11**,
+the EU **AI-literacy duty** conformance pack: the EMEA engagement whose legal clock is *already
+running* (reported binding on deployers since July 2026) rather than the deferred 2 Dec 2027
+high-risk tier every competitor is organised around, with a **measured 32-point deficit** and the
+**EC/OECD AILit Framework's 19 competences** as its spine. P11 is also the first pattern in this
+file to use `moocupv/lti-ai-grader` (Apache-2.0), and it carries the **LTI 1.1 → 1.3 transport
+swap** as an explicit, budgeted task rather than an assumption.
+
+**Previous pass note (`p873`):** ten recipes — `p871`'s six, `p872`'s **P7**
 and **P8** (and its rewrite of **P2**), plus **P9** and **P10** added by `p873`: a Spanish-language
 tutor built on the LATAM-origin base this KB verified for the first time, and an
 accessibility-gated public-sector bid. Every repo named below was verified
@@ -473,13 +481,105 @@ TutorIA does not have — a conformance requirement and a missing UI cancelling 
 
 ---
 
+## P11 — EU AI-literacy duty conformance pack (the clock that is already running)
+
+**Sell to:** EMEA — EU schools, school networks, ministries and universities as **deployers**.
+**Effort: 6–8 weeks.** **New in `p874`.**
+
+**Why this exists as a separate pattern from P4.** P4 sells against the EU AI Act's education
+high-risk tier, which the Digital Omnibus deferred to **2 December 2027**. This one sells against a
+duty that **is already binding**: the AI Act's **AI-literacy obligation on deployers**, reported as
+applying to institutions from **July 2026**. P4 is a 2027 budget line. **P11 is a 2026 one**, aimed
+at the same buyer, producing the same documentation habit, and it is the natural on-ramp to P4.
+
+**The three things that make it closeable** — all newly established in `p874`:
+
+| Element | Value | Use in the pitch |
+|---|---|---|
+| Measured deficit, **one population, one instrument** | **79%** of European secondary students use AI for schoolwork; **47%** were ever shown how — a **32-point gap**. OpenAI/ThinkYoung, 5,000 students aged 13–19, 10 European countries, fieldwork Apr–May 2026 | The business case. Not a vendor projection — a measurement on the buyer's own population |
+| Teacher-side corroboration | **73%** of teachers use AI for planning and materials, **67%** for tests and rubrics (European School Education Platform, Apr 2026) | Staff are already in scope; this is not a future risk |
+| **Delivery standard** | **EC/OECD AILit Framework**, 18 June 2026 — **4 dimensions**, **19 competences**, learner expectations, classroom scenarios. Non-binding, product-neutral, developed with CodeAI, feeds **PISA 2029** | The spine. Converts "support AI literacy" into 19 auditable line items |
+
+### Stack — fully permissive, every licence byte-read
+
+| Layer | Component | Licence |
+|---|---|---|
+| Competence spine | **EC/OECD AILit Framework** — 19 competences, 4 dimensions | Non-binding public framework (not code) |
+| LMS launch / transport | https://github.com/Cvmcosta/ltijs — **LTI 1.3 / Advantage**, branch `master` | Apache-2.0 |
+| Assessment + feedback core | https://github.com/moocupv/lti-ai-grader — LLM grading, configurable prompts, multi-language templates, Open edX- and Moodle-tested | Apache-2.0 |
+| Model vetting evidence | https://github.com/AI-for-Education/pedagogy-benchmark — 1,143 teacher-qualification-exam questions (CDPK 920 / SEND 223) | MIT |
+| Telemetry (xAPI/analytics) | https://github.com/openedx/openedx-aspects — reusable outside Open edX | Apache-2.0 |
+| **Evidence store** (the attestation record) | 🟢 **This KB's own built component: `compose/code/p292-decision-evidence-store/`** — append-only, tamper-evident, offline, **106 passing controls** | Globant-built |
+| Governance register | The institutional console from **P6** | — |
+
+### How to wire it — and the one engineering task that is not optional
+
+1. **Map the 19 AILit competences to the institution's existing curriculum and staff-development
+   plan.** Output is a matrix: competence → where it is taught → who is accountable → what evidence
+   exists. **This artifact *is* the deliverable** that discharges the literacy duty; the software
+   only feeds it.
+2. 🔴 **Swap `lti-ai-grader`'s transport. This is the pattern's critical path.** It ships **LTI
+   1.1**, which signs with **OAuth 1.0a** and is the **deprecated** generation — 1EdTech has been
+   retiring it and many institutions disable it outright. Keep its genuinely reusable parts (the
+   grading core, prompt configuration, multi-language templates, and the LMS-tested grade round
+   trip); **replace the LTI 1.1 receiver with `ltijs`** for a 1.3/Advantage launch with **AGS**
+   grade passback, NRPS rosters and Deep Linking. Budget **1.5–2 weeks**. 🔴 **Do not deliver an
+   OAuth 1.0a transport into an engagement that extends past 2027** — the high-risk tier brings
+   logging and traceability duties you would then be defending on deprecated plumbing.
+3. **Deliver the literacy assessment and formative feedback *inside the LMS*** via the 1.3 launch,
+   so students and staff meet it in Moodle, Canvas, Open edX, Blackboard or D2L rather than in a
+   new tool nobody adopts. This is also what keeps the build copyleft-safe: you attach over LTI
+   rather than forking Moodle (GPL-3.0) or Open edX (AGPL-3.0).
+4. **Separate telemetry from attestation — they are two components and conflating them is how a
+   literacy claim stops being defensible.**
+   - **Telemetry:** completion and interaction events as **xAPI into Aspects**. High-volume,
+     mutable, analytical. This is the same spine **P7** needs for outcome measurement — build it
+     once.
+   - 🟢 **Attestation: the append-only decision record, already built in this KB at
+     `compose/code/p292-decision-evidence-store/`** (106 offline controls, tamper-evident, no
+     network). A literacy duty is discharged by showing **who was trained on which of the 19
+     competences, when, on whose decision, and on what evidence** — that is a *decision record*,
+     not an event stream, and a regulator asking the question a year later needs a record that
+     cannot have been quietly rewritten. 🔵 **Reuse, do not rebuild:** `p291` costed this component
+     as *"the one item a client would pay for"* and it is the second recipe family in this file to
+     terminate in it. Run `python3 test_decision_store.py` before shipping.
+5. **Run `pedagogy-benchmark` against whichever model backs the tool** and put the score in the
+   conformance pack. It is the only published instrument that lets an institution say *why* this
+   model is pedagogically fit, and the **SEND** split (223 questions on special educational needs
+   and disabilities) answers the access question a public buyer will ask.
+6. **Register the deployment in the P6 governance console** — deployer obligations, the literacy
+   matrix, the model-vetting score, the incident route — so the 2027 P4 conformance work is an
+   extension rather than a restart.
+
+### Why Globant wins this one
+
+The hyperscalers hold the **ministry model contracts** — OpenAI's education partnerships run
+through **Estonia** (*AI Leap*, ChatGPT access bundled with teacher training), **Slovakia**,
+**Greece** (a May 2026 framework requiring teacher oversight and data protection) and **Italy**, a
+deliberately government-first, country-level strategy. **That is precisely why the literacy,
+governance and conformance layer is open:** it must be **independent of the model vendor** to be
+credible to a regulator, it is **services-shaped** so it cannot be bought as a product, and it is
+**product-neutral by design** because AILit itself endorses no products. A competitor reselling a
+model contract cannot also be the party certifying that the deployment discharges the buyer's legal
+duty.
+
+🔴 **Scoping honesty, to be said in the room.** The **July 2026** start date for the literacy duty
+is **secondary-sourced** — no EU primary text is reachable from this KB's session (`eur-lex`,
+Council and Parliament hosts are all refused), and **the enforcement mechanics against a school are
+unverified and may be weak**. So **do not pitch a sanction on a date.** Pitch the **measured
+32-point gap** and the **published framework**, with the legal duty as context. The engagement is
+justified by the measurement whether or not a penalty ever materialises — and that is a stronger
+position than a compliance threat that a client's own counsel may deflate.
+
+---
+
 ## Pattern selection by region
 
 | Region | Lead with | Because |
 |---|---|---|
 | North America | P1, then P6, then P7 | FERPA plus 134 bills in 31 states; MD/ID/OK/VA mandate district policy and NC's model-policy deadline is **31 Dec 2026**. Only **32%** of administrators report an institution-wide policy and **87%** of faculty wrote their own — P6 consolidates that. P7 matters because the published harm fell hardest on first-generation students, which every access-mandated institution must answer. |
-| EMEA | P4, then **P10**, then P1 | Article 50 disclosure is live (2 Aug 2026), the education high-risk tier lands 2 Dec 2027, and institutions are declining to renew commercial AI contracts. **P10** because the European Accessibility Act is already in force and EN 301 549 is realigning to WCAG 2.2 AA — and only one agent in this KB carries a conformance statement. For Gulf engagements, KHDA has already published school-level guidance, so lead with compliance implementation rather than policy authorship. For African engagements, the integration surfaces are Chamilo and Kolibri (**P5**), and regional code is largely unlicensed (**T10**) — so lead with licensing and partnership, not a fork. |
-| APAC | **P8**, then P3 | Vietnam's Decision 33/2026/QD-TTg is a published specification with a human-review carve-out, and South Korea's pilot period closes. P3 for national-programme scale. |
+| EMEA | 🟢 **P11 first**, then P4, then **P10**, then P1 | 🟢 **`p874` reorders this row: lead with P11.** The AI-literacy duty on deployers is reported as binding since **July 2026** while the high-risk tier is deferred to **2 Dec 2027** — so P11 is the engagement with a *live* duty, a **measured 32-point deficit** (79% of European students use AI, 47% were shown how) and a **published standard** (EC/OECD AILit, 19 competences). It is also the on-ramp to P4 for the same buyer. Then: Article 50 disclosure is live (2 Aug 2026), the education high-risk tier lands 2 Dec 2027, and institutions are declining to renew commercial AI contracts. **P10** because the European Accessibility Act is already in force and EN 301 549 is realigning to WCAG 2.2 AA — and only one agent in this KB carries a conformance statement. For Gulf engagements, KHDA has already published school-level guidance, so lead with compliance implementation rather than policy authorship. For African engagements, the integration surfaces are Chamilo and Kolibri (**P5**), and regional code is largely unlicensed (**T10**) — so lead with licensing and partnership, not a fork. |
+| APAC | **P8**, then P3 | 🟢 **`p874` puts a dated deadline behind this row.** Vietnam's **Law No. 134/2025/QH15** has been in force since **1 Mar 2026** and existing **education** systems must comply by **1 September 2027** — **three months before the EU's 2 Dec 2027**, making it the nearest hard deadline in education AI. **Decision 33/2026/QD-TTg** (46 high-risk systems, effective 15 Aug 2026) is a published specification with a human-review carve-out, and **MOET Decision 2422** mandates 12 periods of AI content per class per year for grades 1–12. South Korea's AI Basic Act has been in force since 22 Jan 2026. P3 for national-programme scale. |
 | LATAM | **P9**, then P2 and P5, then P7 | **P9** is new and leads now: TutorIA is MIT, Colombian, Spanish-language, rural-first and ministry-funded — the only LATAM-origin base this KB has verified, and provenance counts in a public evaluation. LGPD automated-decision review is already binding. **87%** of institutions use AI, **26%** have a strategy and **9%** evaluate — so P7's measurement layer is the gap, and P2 must budget re-fitting ArguLens for Spanish and Portuguese. |
 | Global | P6, then P7 | The governance gap is universal (only **31%** of faculty are meaningfully involved in AI policy) and nobody is measuring outcomes. |
 

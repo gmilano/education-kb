@@ -6,11 +6,15 @@ updated: 2026-11-17
 
 # Foundational repos — education
 
-**Pass `p873`, 2026-11-17** (third pass of the day; `p872`'s 33-repo audit stands and was not
-redone). Same two-channel verification as `agents/top.md`: existence via `git ls-remote`, licence
-via the licence bytes on the **resolved** default branch. No star counts — that channel returned
-`403` across **four** routes (`api.github.com`, `github.com` HTML, the `gh` CLI, and
-`gh api search/repositories`) for the **third** consecutive pass.
+**Pass `p874`, 2026-11-17** (fourth pass of the day; adds **`moocupv/lti-ai-grader`** to the
+standards layer. `p873`'s file and `p872`'s 33-repo audit stand and were not redone). Same
+two-channel verification as `agents/top.md`: existence via `git ls-remote`, licence via the licence
+bytes on the **resolved** default branch. No star counts — and `p874` establishes *why*: the
+channel failed across **nine** routes, including **five non-GitHub metadata hosts**
+(`ecosyste.ms`, `api.ecosyste.ms`, `libraries.io`, `api.ossinsight.io`, `api.star-history.com`)
+that were **refused at the egress proxy**, while two unrelated hosts answered. **This is a session
+egress allowlist, not a GitHub scope** — no GitHub-side permission change will fix it. Fourth
+consecutive pass without stars; see `repos/trending.md` for the full probe table.
 
 `p872` re-resolved every load-bearing address in this file through `git ls-remote --symref` and
 found **four of eleven do not default to `main`**. Branch column corrected below where it was
@@ -28,6 +32,7 @@ This is the layer that gets a Globant build past institutional procurement.
 | Repo | Licence | Branch | Why it is foundational |
 |---|---|---|---|
 | https://github.com/Cvmcosta/ltijs | Apache-2.0 | `master` | **LTI 1.3 / LTI Advantage tool provider in Node.** The single most reusable piece of plumbing in education software: implement it once and your agent launches as a tool inside Moodle, Canvas, Open edX, Blackboard and D2L with grade passback. Permissive — safe to embed. |
+| https://github.com/moocupv/lti-ai-grader | Apache-2.0 | `main` | **The first verified permissive AI grader that actually speaks the LTI seam.** From MOOC UPV (Universitat Politecnica de Valencia, Spain — EMEA-origin). An LLM grader that posts grades back to an LMS, *tested with Open edX and Moodle*; configurable grading prompts, Gemini or any OpenAI-compatible API, multi-language templates, and a private/public file split that keeps logic and secrets out of the web root. Tag `excel-v1.0`. **Caveat that governs how to use it: it is LTI 1.1 (OAuth 1.0a), the deprecated generation — not 1.3.** Take its grading core and prompt configuration, and swap the transport for `ltijs` above to get a 1.3/Advantage launch with AGS passback. Added by `p874`; licence byte-read on `main`. |
 | https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS | Apache-2.0 | `main` | **Ed-Fi Operational Data Store + API.** The de-facto K-12 data standard in US school districts. Apache-2.0, so a district-facing analytics or early-warning agent can build directly on it. |
 | https://github.com/1EdTech/openbadges-validator-core | Apache-2.0 | `develop` | Open Badges validation from the standards body itself (1EdTech, formerly IMS Global). The verification half of any credentialing or micro-credential build. |
 | https://github.com/Citolab/qti-components | GPL-3.0 | `main` | **QTI 3 web components** — standards-compliant assessment item rendering. Copyleft: fine for a self-hosted institutional deployment, a problem for a proprietary distributed product. |

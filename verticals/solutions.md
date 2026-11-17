@@ -6,8 +6,9 @@ updated: 2026-11-17
 
 # Vertical platforms — education
 
-**Pass `p873`, 2026-11-17** (third pass of the day; adds **RosarioSIS** and an accessibility-conformance
-section). Real, deployed systems that can be customised with AI on top —
+**Pass `p874`, 2026-11-17** (fourth pass of the day; rewrites the **proctoring** section against
+seven byte-read licences — the category heading was wrong and is corrected below. `p873`'s
+RosarioSIS and accessibility-conformance work stands). Real, deployed systems that can be customised with AI on top —
 the education equivalents of Odoo for ERP or OpenMRS for healthcare. Existence and licence
 bytes verified this run via `git ls-remote` + `raw.githubusercontent.com` on the resolved
 default branch.
@@ -87,20 +88,43 @@ For a Globant engagement that must avoid copyleft obligations, the verified perm
 | **Opencast** | ECL-2.0 | Lecture capture and video corpus |
 | **DSpace** | BSD | Institutional repository / scholarly corpus |
 
-## Exam integrity & proctoring — the category with real demand and no permissive supply
+## Exam integrity & proctoring — real demand, permissive supply that exists but is not institution-grade
 
-`p871` searched and found nothing here. `p872` found two real projects and verified both. The
-conclusion is unchanged but is now evidence rather than absence.
+🔴 **This heading said "no permissive supply" for two passes and that was wrong.** `p871` searched
+and found nothing. `p872` found two projects, both AGPL-3.0, and concluded the permissive shelf was
+empty. **`p874` searched the category again and byte-read seven licences: three are MIT.** The
+strategic conclusion survives, but for a different and more precise reason — **not "nothing
+permissive exists", but "the three permissive codebases are reference implementations, not
+platforms."** The distinction decides what you can say in a procurement.
 
 | Platform | Repo | Licence | Branch | Position |
 |---|---|---|---|---|
 | **Proctor** | https://github.com/sudosylabs/proctor | **AGPL-3.0** | `main` | Self-hosted examination **and** proctoring platform aimed at institutions — Go server, React front end. The most complete open-source project in this category. No published supported-release or compatibility window, so treat maturity as unproven. |
 | **OpenProctor** | https://github.com/kamlendras/OpenProctor | **AGPL-3.0** | `main` | Next.js/TypeScript. **Licence correction: secondary listings say MIT; the bytes on `main` say AGPL-3.0.** Thin install documentation, Vercel-oriented rather than clearly self-hostable. |
+| **Proctor** (ganesh-786) | https://github.com/ganesh-786/Proctor | 🟢 **MIT** | `main` | **NEW `p874`.** Self-described modular, microservices-based AI proctoring. The most architecturally ambitious of the permissive three. **No tags, 1 branch** — a reference implementation. |
+| **Proctora** | https://github.com/amaanwarsi/Proctora | 🟢 **MIT** | `main` | **NEW `p874`.** Flask + OpenCV + MediaPipe; webcam, microphone-noise and tab-switch monitoring, session violation logging, CI configured. 🔴 **Its own README says it should not be presented as a secure exam platform in its current state** — the project's words, not this KB's. |
+| **SecureExam AI** | https://github.com/code-by-abrar/Online-Proctoring-system | 🟢 **MIT** | `main` | **NEW `p874`.** FastAPI + PostgreSQL with client-side TensorFlow.js face tracking and device detection. **No tags, 1 branch.** |
+| **Pariksha** | https://github.com/SriSatyaLokesh/pariksha | 🔴 **AGPL-3.0** | `main` | **NEW `p874` — and a secondary-source correction.** A search summary presented it as *the* Apache-2.0 exam platform in this category. **The licence bytes on `main` say GNU Affero GPL.** Pre-alpha besides: the repo holds requirements and schemas, with the candidate runtime promised for v0.1. |
+| **edx-proctoring** | https://github.com/openedx/edx-proctoring | 🔴 **AGPL-3.0** | **`master`** | **NEW `p874`.** Open edX's own proctoring subsystem — the realistic choice if the client is already on Open edX. Note the default branch is **`master`**, not `main`. |
 
-**How to read this table.** AGPL-3.0 is workable where the institution hosts the system itself —
-the copyleft obligation is contained inside one tenancy, which is the normal education deployment
-anyway. It is unusable inside a distributed proprietary product. So proctoring is available to a
-Globant *integration* engagement and closed to a Globant *product*.
+**How to read this table — and it reads differently than it did in `p873`.** Seven candidates,
+**three MIT and four AGPL-3.0**, and the licence axis no longer separates the useful from the
+useless. The **maturity** axis does:
+
+- 🟢 **The three MIT projects are permissive and genuinely runnable**, and **not one is
+  institution-grade**: single-branch, no tagged releases, no supported-version policy, and in
+  `Proctora`'s case an explicit author disclaimer against secure use. **Do not put one in front of
+  a procurement board as a platform.** Their real value is as *capability references* — the
+  face-tracking, tab-switch and audio-monitoring pieces are readable MIT code you can learn the
+  shape of a build from, and legally reuse.
+- 🔴 **The one complete platform (`sudosylabs/proctor`) is AGPL-3.0.** Workable where the
+  institution hosts it itself — the copyleft obligation stays inside one tenancy, which is the
+  normal education deployment — and unusable inside a distributed proprietary product. So the
+  *mature* path remains open to a Globant **integration** engagement and closed to a Globant
+  **product**.
+- 🔵 **Net position:** a defensible permissive proctoring product would be a **greenfield build**
+  that borrows from the MIT three. `p874` is the first pass able to state that with the licence
+  bytes of seven candidates behind it rather than as an inference from two.
 
 **The regulatory context matters more than the licence here.** The EU AI Act puts exam proctoring
 in the high-risk tier (obligations from **2 December 2027** after the Digital Omnibus delay), the
@@ -146,11 +170,16 @@ content generator in the build inherits that obligation for everything it emits.
   verified **RosarioSIS** (GPL-2.0) alongside Gibbon (GPL-3.0) and openSIS-Classic (no licence
   file at all). Three verified options, **zero permissive**. A permissive, AI-native SIS is an
   unmet need — and the most clearly evidenced product gap in this file.
-- **No *permissively licensed* open-source proctoring platform exists.** Narrowed, not closed:
-  `p872` verified two real candidates (`sudosylabs/proctor`, `kamlendras/OpenProctor`) and
-  **both are AGPL-3.0**, with unproven maturity. Given that the EU has moved proctoring into the
-  high-risk tier and Vietnam now lists biometric learner monitoring as high-risk, this is the
-  clearest unbuilt product in education AI — and plausibly one that should not be built.
+- ~~**No *permissively licensed* open-source proctoring platform exists.**~~ **RESTATED by `p874`,
+  which found the earlier framing factually wrong.** Permissive proctoring code **does** exist:
+  `ganesh-786/Proctor`, `amaanwarsi/Proctora` and `code-by-abrar/Online-Proctoring-system` are all
+  **MIT**, byte-read on `main`. **The accurate gap is maturity, not licence:** of seven verified
+  candidates, the three permissive ones are single-branch and untagged (one disclaimed by its own
+  author), and the only complete platform is AGPL-3.0. 🔴 **A secondary source also had to be
+  corrected here** — `SriSatyaLokesh/pariksha` was presented as Apache-2.0 and is AGPL-3.0. Given
+  that the EU moves proctoring into the high-risk tier on **2 Dec 2027** and Vietnam already lists
+  biometric learner monitoring as high-risk, an institution-grade permissive proctoring platform
+  remains the clearest unbuilt product in education AI — and plausibly one that should not be built.
 - **No LATAM-origin education *platform*** surfaced in either pass's searches. LATAM appears in
   this file as a large **deployer** of Moodle, Chamilo, Kolibri and OJS, not as an originator
   of platforms. `p872` refines the picture: the region's own contribution is a **sovereign

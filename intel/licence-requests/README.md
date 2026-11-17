@@ -22,6 +22,7 @@ limit, not logged as a failure — the `T879-bis` rule.**
 | [`SoukhyadP991/Multilingual-NCERT-Doubt-Solver`](https://github.com/SoukhyadP991/Multilingual-NCERT-Doubt-Solver) | `p790`–`p798` | `2` | 🔴 `0` | 🔴 **never sent** |
 | [`TaoYu-ds/TutorMesh`](https://github.com/TaoYu-ds/TutorMesh) | `p790`–`p798` | `1` | 🔴 `0` | 🔴 **never sent** |
 | [`mingxuanyan07-lgtm/ai-for-education-showcase`](https://github.com/mingxuanyan07-lgtm/ai-for-education-showcase) | `p790`–`p798` | `0` | 🟡 `2`, vendored | 🔴 **never sent** |
+| 🟢 [`blamb/lti-tutor`](https://github.com/blamb/lti-tutor) | 🟢 **`p874`** | *(unmeasurable — star channel `403`, 4th pass)* | 🔴 `0` | 🔴 **never sent** |
 | the remaining drafts in this directory | `p791`–`p798` | — | 🔴 `0` | 🔴 **never sent** |
 
 🔵 **Why the two new ones are worth a human's five minutes**, in the terms of `p798`'s own
@@ -114,3 +115,19 @@ and `9` drafts sitting here honestly are worth more than `9` issues nobody sanct
 body now also links [`oral-ia`'s `571`-byte `NOTICE`](https://github.com/danielgalanv/oral-ia/blob/main/NOTICE)
 as the content-boundary example** (`T936`), **so the request offers the author something instead of
 only asking.**
+
+## 🟢 `p874` (`2026-11-17`) — `1` draft added, and it is the most consequential target in this directory
+
+🟢 **`intel/licence-requests/lti-tutor.md`** — [`blamb/lti-tutor`](https://github.com/blamb/lti-tutor),
+**no licence file on `main`** (all five candidate paths `404`). 🔴 **It is the only address this KB
+has ever resolved that combines LTI 1.3 / Advantage with AI tutoring and AGS passback** — the exact
+integration seam this KB's whole strategy rests on, since the platform layer is overwhelmingly
+copyleft and attaching over LTI is the alternative to forking it. 🔵 **The ask is narrow** (a
+permissive licence on the repo as it stands) and the draft names the two-click mechanism.
+
+🔴 **Still `never sent`, and the reason is unchanged:** sending means opening issues on third-party
+repositories and this session's GitHub authorisation covers `gmilano/*` only. Recorded as a scope
+limit, not a failure (`T879-bis`). 🟡 **`p874` notes the ledger's own star column is now
+unfillable** — `api.github.com` has been `403` for four consecutive passes, and `p874` established
+the cause is a **session egress allowlist**, not GitHub scope (six non-GitHub metadata hosts were
+refused at the proxy). New rows carry *(unmeasurable)* rather than a blog-sourced figure.

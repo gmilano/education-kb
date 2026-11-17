@@ -6,7 +6,16 @@ updated: 2026-11-17
 
 # Market intelligence — education
 
-**Pass `p873`, 2026-11-17** (third pass of the day). `p873` ran the full global and four-region
+**Pass `p874`, 2026-11-17** (fourth pass of the day). `p874` ran the global and four-region sweep
+plus dedicated legs on permissive proctoring, the Vietnamese statute, an EMEA sector instrument and
+APAC institutional measurement. **Three of `p873`'s declared gaps move this pass:** the **EMEA
+instrument gap CLOSES** (OpenAI/ThinkYoung, 10 Nov 2026 — a European instrument measuring European
+students), **Vietnam's law number and dates RESOLVE** to a single consistent reading, and the
+**APAC gap narrows** to a precisely-bounded residual with comparative figures attached. `p873`'s
+and `p872`'s adoption tables stand unchanged and were not re-run.
+
+**Previous pass note (`p873`):** ran the full global and four-region sweep plus dedicated legs on
+Africa-origin code, accessibility conformance, the trial literature and the EU timeline. `p873` ran the full global and four-region
 sweep plus dedicated legs on Africa-origin code, accessibility conformance, the trial literature
 and the EU timeline; its additions are the **EMEA** weekly-use figures, the **Middle East and
 Africa** material that two earlier passes wrongly believed unfileable, **TutorIA** in LATAM, and
@@ -152,9 +161,89 @@ The strategic point: Australia has simultaneously the region's **largest proprie
 support for prohibition**. Any Australian engagement needs a public-legitimacy and
 consent/transparency workstream, not just a technical one.
 
-**No measured APAC institutional adoption rate was found** — see declared gaps.
+#### `p874` adds the first APAC-vs-other-region *comparative* figures, and bounds the gap precisely
 
-### EMEA — two data points now, and the second one is about frequency
+The **Digital Education Council *AI in Higher Education Global Survey 2026*** — **45,398 responses
+across 35 countries** — reports regional splits that no earlier pass had extracted. These are
+**individual** measures, and they are the closest thing to an APAC rate that exists:
+
+| Measure | APAC | Comparator | Note |
+|---|---|---|---|
+| Faculty **excited** about AI's potential for more effective, accessible learning | **57%** | **26%** US & Canada | 🟢 **The largest regional sentiment gap in the file — APAC faculty are 2.2× as positive as North American** |
+| **Intent to use AI in teaching** | **92%** | EMEA **89%**, LATAM **94%** | Near-ceiling everywhere; APAC is not an outlier |
+| Students expecting a **shrinking job market** in their field | **50%** | **41%** global | 🔴 Highest of any region — a motivation and messaging factor, not an adoption one |
+| Global baseline for context | **88%** of students, **77%** of faculty use AI | +16pp YoY | Individual use, not institutional |
+
+🔴 **Methodology caveat that must travel with these numbers:** DEC collects **opt-in through
+participating member institutions**, not an audited random sample. Treat as indicative, never as
+representative, and **never average them with the UNESCO IESALC institutional figures** — different
+respondents, different objects.
+
+🔴 **The gap itself stands, and is now exactly bounded.** What is still missing is an **institutional**
+APAC rate — the share of APAC institutions holding an AI *strategy*, the measure UNESCO IESALC
+provides for LATAM (**87%** use / **26%** strategy). DEC measures **people**; UNESCO measures
+**institutions**; no instrument measures APAC institutions. `p874` also found one hard
+institutional *datapoint* rather than a rate: **Nanyang Technological University (Singapore) gave
+every undergraduate full access to Gemini Enterprise, Google AI Studio and Vertex AI from August
+2026** — a whole-institution commitment of the kind that, counted across the region, would *be*
+the missing rate.
+
+**Also `p874`:** the Ipsos Indonesia movement is quantified — support for banning AI in schools
+**fell from 30% to 23%**, the clearest liberalising trend in the Monitor.
+
+### EMEA — 🟢 the three-pass gap CLOSES: a European instrument, measuring European students, exists
+
+> 🟢 **`p874` closes this file's longest-standing measurement gap.** Three passes recorded "no
+> standalone European sector survey." One exists, it is five weeks old, and it measures European
+> secondary students directly.
+
+**OpenAI, *"Closing the AI Guidance Gap in Education"* (published 10 November 2026)**, built on
+research by the youth think tank **ThinkYoung**:
+
+| Measure | Value |
+|---|---|
+| Instrument | **5,000 secondary students aged 13–19 across 10 European countries**, plus **600 teachers** |
+| Fieldwork | **14 April – 15 May 2026** |
+| Students using AI tools for homework or assignments | **79%** |
+| Students who said someone had **shown them how** to use the tools effectively | 🔴 **47%** |
+
+🔴 **A number collision this file must not let through.** The **79%** above is *European secondary
+students doing homework*. The **79%** in the LATAM table is *LATAM higher-education faculty
+engaging with AI*. **Same digits, different populations, different objects, different instruments.**
+They are not comparable and must never be cited interchangeably.
+
+**A second European instrument, on teacher practice** — the **European School Education Platform
+survey (April 2026)**:
+
+| Measure | Value |
+|---|---|
+| Teachers using AI at least partially for **planning and materials** | **73%** |
+| Teachers using AI for **creating tests, tasks or rubrics** | **67%** |
+
+**Why the 32-point guidance gap (79% → 47%) is the commercially important number in this file.**
+It is not an adoption gap, it is a **capability-and-governance** gap, and it is measured on the
+same population in the same instrument — which is what makes it usable in a bid. It also lines up
+exactly with the **binding** EU obligation: the AI Act's **AI-literacy duty applies to schools as
+deployers now**, while the education high-risk tier is deferred to **2 December 2027**. The
+measured deficit and the live legal duty are the same engagement.
+
+🟢 **And there is now a standard to deliver it against — new in `p874`.** The **European Commission
+and the OECD published the AI Literacy (AILit) Framework for primary and secondary education on
+18 June 2026**: **four dimensions** (how learners *engage with*, *create with*, *manage* and
+*shape* AI) and **19 competences** spanning knowledge, skills and attitudes, with learner
+expectations, learning scenarios and classroom examples. It is **non-binding**, was developed with
+**CodeAI (formerly Code.org)**, endorses no products, and will inform the **OECD's first PISA
+assessment of media and AI literacy in 2029**. The Commission's stated rationale was that **68% of
+teenagers already use AI** while schools lacked a shared definition. One source dates it 17 June;
+the Commission's own page and the majority say 18 June.
+
+**Why AILit matters more than its non-binding status suggests:** it is the first *common
+vocabulary* for what the AI Act's literacy duty actually requires. A deployer asked to show it
+discharged that duty now has 19 named competences to map training against instead of inventing a
+curriculum — and a Commission Education Package was due later in 2026. **This is the artifact an
+EMEA AI-literacy engagement should be built on.** See `compose/patterns.md` **P11**.
+
+#### Previous EMEA data points (`p873`) — frequency, retained
 
 The **70% formal-AI-guidance** figure above comes from UNESCO IESALC's comparator rather than a
 European instrument. The Digital Education Council reports EMEA only in aggregate. **No standalone
@@ -308,6 +397,32 @@ consequential decisions human.
   issued to private schools, the Middle East motion is **compliance implementation** against
   published rules — a different and faster sale than the North American policy-consolidation work.
 
+#### 🟢 `p874` — the AI-literacy duty is the engagement that is billable NOW, not in 2027
+
+Every EMEA opportunity in this file has been organised around the **2 December 2027** education
+high-risk tier. `p874` adds the opportunity that does not wait for it:
+
+- 🔴 **The AI-literacy obligation already binds.** The AI Act's literacy duty applies to **schools
+  and institutions as deployers**, and secondary reporting places the duty on them from **July
+  2026**. There is no 2027 grace period on this one.
+- 🟢 **The deficit is now measured on the buyer's own population:** **79%** of European secondary
+  students use AI for schoolwork and only **47%** were ever shown how (OpenAI/ThinkYoung, 5,000
+  students, 10 countries). A **32-point** gap, from one instrument, on one population.
+- 🟢 **A delivery standard exists:** the **EC/OECD AILit Framework** (18 June 2026) — four
+  dimensions, **19 competences**, classroom scenarios, non-binding, product-neutral, and feeding
+  **PISA 2029**. It converts "support AI literacy" from an unauditable aspiration into 19 named
+  competences a deployer can map training and evidence against.
+- 🔵 **National beachheads named in the same reporting:** OpenAI holds education partnerships in
+  **Estonia** (the *AI Leap* programme pairs ChatGPT access with teacher training), **Slovakia**,
+  **Greece** (a May 2026 framework requiring teacher oversight and data protection) and **Italy** —
+  i.e. a government-first, country-level integration strategy. **The competitive consequence:**
+  where a hyperscaler has the ministry relationship, the open space is the **independent literacy,
+  governance and conformance layer**, not the model contract.
+- **Shape of the engagement:** AILit-mapped staff training + a deployer-side literacy evidence
+  pack + the governance console from **P6**, delivered now and designed to extend into the 2027
+  high-risk conformance work (**P4**). Written up as **P11** in `compose/patterns.md`.
+
+
 ### APAC
 
 **Regulatory picture — four genuinely different models, which is itself the opportunity.**
@@ -371,6 +486,43 @@ consequential decisions human.
   provenance marking in the generation pipeline, not bolted on afterwards.
 - **India's scale plus deficit** makes offline-capable, low-cost delivery (Kolibri + Ollama on
   modest hardware) viable where cloud-per-seat economics are not.
+
+#### 🟢 `p874` — Vietnam's clock is now unambiguous, and it is the nearest hard deadline in education AI
+
+`p873` flagged Vietnam's statute as unresolved across sources. **It resolves, and the reading is
+consistent across the official English text and multiple independent summaries:**
+
+| Item | Resolved value |
+|---|---|
+| Instrument | **Law on Artificial Intelligence No. 134/2025/QH15** — 🟢 the `91/2025/QH15` variant is **wrong** |
+| Passed by the National Assembly | **10 December 2025** |
+| **Entered into force** | 🟢 **1 March 2026** — *already in force*; the "1 Mar **2027**" in circulation was this date mis-stated by a year |
+| Transition for systems **already operating** — education, healthcare, finance | 🔴 **18 months → 1 September 2027** |
+| Transition for all other fields | 12 months → 1 March 2027 |
+| Replaces | the AI chapter of the Digital Technology Industry Law |
+| Carve-out | systems a state agency finds **likely to cause serious damage are excluded from the transition** and must comply immediately |
+
+**So the conflicting dates were never a contradiction — they were two different clocks.** 1 March
+is *entry into force* (2026), 1 September 2027 is the *education compliance deadline*. Both
+circulated without their labels.
+
+🔴 **Strategic consequence: 1 September 2027 is three months EARLIER than the EU's 2 December 2027
+education high-risk date.** Any client running an AI education system in Vietnam today is inside a
+transition window that closes first. Paired with **Decision 33/2026/QD-TTg** (46 high-risk systems,
+effective 15 August 2026), which lists biometric and automated learner monitoring as high-risk,
+Vietnam is the **most concretely specified education-AI jurisdiction in the world right now** — and
+the one where a de-escalation audit (**P8**) has a dated deadline to sell against.
+
+🟡 **Unconfirmed, flagged as such:** a **Decree 142/2026** appears in one recent commentary and
+could not be corroborated. Do not cite it to a client.
+
+🔵 **Also APAC, `p874`:** **MOET Decision 2422** sets **12 periods of AI content per class per year
+for grades 1–12** — a national curriculum mandate, i.e. a content and teacher-training market with
+a defined volume. **South Korea's AI Basic Act** has been in force since **22 January 2026**;
+**Australia's National AI Plan** (December 2025) relies on existing law rather than a standalone
+act; **Japan** remains voluntary-guidelines-based; and the **UAE (KHDA)** has issued explicit
+responsible-AI guidance to private schools.
+
 
 ### LATAM
 
@@ -494,18 +646,44 @@ to **Minciencias**. Three ways that changes a LATAM conversation:
   unconfirmed against primary text.
 - ~~**No reliable per-region AI-in-education adoption rates were found.**~~ **LARGELY CLOSED by
   `p872`** — see *Measured adoption by region*. Residual gaps within it:
-  - **No measured APAC institutional adoption rate.** Ipsos gives public attitudes toward
-    banning AI, not institutional or faculty adoption. The gap is narrowed, not closed.
-  - **No standalone EMEA sector survey**, after three passes. The 70% figure is UNESCO IESALC's
-    comparator, not a European instrument. `p873` **narrows** this with QS weekly-use figures
-    (67% of academics, 62% of students) — but QS is a global instrument surfacing in EMEA-framed
-    reporting, not a European one. A targeted **EUA / Jisc / national-rectors-conference** leg is
-    still the obvious next step and has not been run.
+  - **No measured APAC institutional adoption rate.** 🟡 **NARROWED AND PRECISELY BOUNDED by
+    `p874`**, not closed. `p874` added the Digital Education Council's regional comparatives
+    (APAC faculty excitement **57%** vs **26%** US & Canada; intent to use AI in teaching APAC
+    **92%** / EMEA **89%** / LATAM **94%**; APAC students expecting a shrinking job market **50%**
+    vs **41%** global) and one whole-institution datapoint (**NTU Singapore**, all undergraduates,
+    August 2026). 🔴 **What remains absent is specific: an instrument that measures APAC
+    *institutions*** — the share holding an AI strategy, as UNESCO IESALC measures for LATAM
+    (87% use / 26% strategy). DEC measures people; UNESCO measures institutions; nothing measures
+    APAC institutions. The next step is a named one: an **APRU / AsiaEngage / national
+    rectors-conference** instrument, or UNESCO Bangkok. Not yet run.
+  - ~~**No standalone EMEA sector survey**, after three passes.~~ 🟢 **CLOSED by `p874`.** The
+    instrument is **OpenAI/ThinkYoung, *"Closing the AI Guidance Gap in Education"*, published
+    10 November 2026**: **5,000 secondary students aged 13–19 across 10 European countries** plus
+    **600 teachers**, fieldwork **14 April – 15 May 2026** — European respondents, European
+    sampling frame. **79%** use AI for schoolwork, **47%** were shown how. Corroborated on the
+    teacher side by the **European School Education Platform survey (April 2026)** (73% planning
+    and materials, 67% tests and rubrics). 🔴 **Two residual caveats, stated rather than buried:**
+    the instrument measures **secondary** education, so the EMEA **higher-education** institutional
+    picture is still comparator-based; and it is **vendor-published** (OpenAI) research on
+    think-tank fieldwork, so a client-facing citation should name both parties. One secondary
+    source reports that OpenAI's own report does not disclose sample size or fieldwork dates —
+    those figures come from ThinkYoung via trade coverage. The **EUA / Jisc** higher-education leg
+    remains unrun and is now the narrower next step.
   - The instruments measure different respondents and objects and **must not be averaged**.
-- **Vietnam's AI Law number and compliance dates are unresolved.** Sources conflict on
-  134/2025/QH15 vs 91/2025/QH15, and on 1 Mar 2027 / 1 Sep 2027 versus 1 Jul 2027 / 1 Jul 2029.
-  All Vietnam material above is from secondary law-firm commentary. Confirm against official
-  Vietnamese texts before client use.
+- ~~**Vietnam's AI Law number and compliance dates are unresolved.**~~ 🟢 **RESOLVED by `p874`,
+  and the conflict had a cause worth recording.** The instrument is **Law on AI No.
+  134/2025/QH15** (the `91/2025/QH15` variant is wrong), passed **10 Dec 2025**, **in force since
+  1 March 2026**; existing systems in **education**, healthcare and finance have an **18-month
+  transition closing 1 September 2027**, other fields 12 months, with systems likely to cause
+  serious damage excluded from the transition altogether. 🔵 **The "conflicting dates" were never a
+  contradiction — they were two different clocks circulating without their labels:** 1 March is
+  *entry into force* (2026, mis-stated as 2027), 1 September 2027 is the *education compliance
+  deadline*. 🔴 **This makes 1 Sep 2027 three months earlier than the EU's 2 Dec 2027 education
+  high-risk date — the nearest hard deadline in education AI anywhere.** Consistent across the
+  official English text of the law and several independent summaries; 🟡 **a cited `Decree
+  142/2026` could NOT be corroborated and must not be used with a client.** Residual: the texts
+  themselves remain unread from this session (`thuvienphapluat.vn`, `luatvietnam.vn` untested
+  against the egress allowlist), so this is well-corroborated secondary sourcing, not primary.
 - ~~**MENA and Africa are not covered by the mandated region vocabulary.**~~ **WITHDRAWN by
   `p873`: the gap was an error of reading, not of data.** **EMEA is Europe, Middle East and
   Africa** — both were always in the bucket. The University Agentic AI Lab (25–26 November 2026,
@@ -517,6 +695,20 @@ to **Minciencias**. Three ways that changes a LATAM conversation:
   but **no institutional adoption rate for any African or Middle Eastern market**. Searched this
   pass via the EMEA regional leg and a dedicated Africa leg; not found. This is now the thinnest
   measured region in the file — thinner than APAC.
+- **The North America leg returned almost nothing `p873` did not already hold, and that is
+  reported rather than dressed up.** `p874` re-ran it and confirms the existing entries (134 bills
+  across 31 states; MD/ID/OK/VA mandating both state guidance and district policy; NC Session Law
+  2026-41 with its 31 Dec 2026 / 30 Jun 2027 / 30 Jun 2028 chain; CA AB 1159; NY A 9190; US DoE
+  K-12 guidance April 2026; the K-12 AI Literacy and Readiness Act of 2026; DC OSSE's prohibitions
+  on AI in grading, discipline, IEP decisions and teacher evaluation; Berkeley Law's exam ban).
+  **Two items are new and both are small:** **New York City** — the largest US district — issued
+  preliminary guidance in **March 2026** using a **green/yellow/red "traffic light"** classification
+  with a fuller playbook expected in June, which is a reusable governance artifact for a district
+  engagement; and a **North Carolina legislative earmark for Khan Academy AI** drew public
+  controversy, a precedent worth knowing before proposing a single-vendor district deployment.
+  **A saturated leg is a real result:** North America is now the best-covered regulatory region in
+  this file and further generalist sweeps of it are low-yield. Target state-level primary sources
+  instead.
 - **APAC and LATAM investment data is thin to absent.** Deal-level data existed only for North
   America (median ~$9M) and Europe. Unchanged after `p872`.
 - **Market-size figures remain directional only** and span 2.4× across publishers. The adoption
@@ -529,4 +721,11 @@ to **Minciencias**. Three ways that changes a LATAM conversation:
   therefore **reported** figures, not read ones. By contrast every repository claim in this KB was
   verified first-hand this pass. **Allowing `unesco.org`, `edworkingpapers.com` and `arxiv.org`
   would upgrade the adoption and efficacy sections from secondary to primary sourcing** — the
-  single highest-leverage change available to this KB.
+  single highest-leverage change available to this KB. 🟢 **`p874` diagnoses the mechanism and it
+  is one setting, not many:** it probed five metadata hosts with no GitHub relationship
+  (`ecosyste.ms`, `api.ecosyste.ms`, `libraries.io`, `api.ossinsight.io`, `api.star-history.com`,
+  plus `huggingface.co`) and **every one was refused at the egress proxy with `connect_rejected`**,
+  while `codeload.github.com` and `gitlab.com` answered. **The blocker is a session egress
+  allowlist, not GitHub permissions and not an outage** — so the missing star counts and the
+  unreadable papers, surveys and EU texts are *the same defect with one fix*. Nine routes tried
+  across four passes. Stop attributing it to GitHub scope.

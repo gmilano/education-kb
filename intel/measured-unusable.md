@@ -3,6 +3,40 @@ industry: education
 region: Global
 updated: 2026-11-17
 ---
+## 🔴 `2026-11-17` — `p874`: **a NEW concealment direction — a `LICENSE.md` that EXISTS and reserves all rights, which every file-presence check reads as "licensed"**
+
+🔵 **This directory's standing finding has been that GitHub's licence field reports `NOASSERTION`
+over bytes that DO grant something, and that `p866` found the field hiding prohibitions too.**
+🔴 **`p874` adds a third and more dangerous direction: the licence FILE itself as the concealment.**
+
+### 🔴 Placeholder grant — `1`
+
+| Address | Branch / heads | Licence file | What the bytes say | `class` | Consequence |
+|---|---|---|---|---|---|
+| 🔴 [`lucy4Git/Lecturer-Support-Agent`](https://github.com/lucy4Git/Lecturer-Support-Agent) | `main`, **`20` heads** | 🔴 **`LICENSE.md` — PRESENT** | 🔴 **`# Licence Placeholder` / *"No software or documentation licence has been selected. **All rights are reserved** until the repository owner adopts a formal licence."*** | 🔴 `placeholder-grant` *(new class)* | 🔴 **Total block, and the highest-apparent-maturity block this directory holds.** README: *"v2.6.0 … standalone, **commercial-ready**, AI-native platform for lecturers"*; deployment descriptors for Vercel, Render, Neon, AWS S3, Qdrant Cloud, ClamAV, SMTP; Alembic migration chains; institutional-SSO-first identity with no self-assigned privileged roles; mandated staging/production parity. Scope: lesson plans, assessments, rubrics, marking guides, case studies, moderation workflows. **A studio may not ship, host or fork it.** 🟢 Author identifiable and the ask is narrow — request drafted |
+
+### 🔴 Why this class is worse than an absent licence, stated as a detector rule
+
+Every cheap licence heuristic this base has ever written asks **"does a `LICENSE*` file exist?"**
+and treats `true` as *licensed*:
+
+| Check | Verdict on this repo | Correct? |
+|---|---|---|
+| `LICENSE*` file present? | 🔴 **`true` → reads as licensed** | 🔴 **NO** |
+| GitHub licence field | *(unmeasurable — `api.github.com` is `403`; four passes)* | — |
+| 🟢 **Byte-read of the licence file** | 🟢 **all rights reserved → NO GRANT** | 🟢 **YES** |
+
+🔴 **A repo with NO licence file fails the presence check honestly and gets flagged. A repo with a
+placeholder licence file PASSES the presence check and gets shelved as usable.** The second is the
+silent failure, and it is the one that would reach a client.
+
+🟢 **Rule for every later pass, and for `ingest/`:** *presence of a licence file is not evidence of
+a grant.* The grant is in the bytes, and a file whose bytes decline to grant is a **stronger**
+signal of unusability than a missing file, because it is deliberate. `p874` found this on the
+**first** repo it checked whose licence identifier would not resolve to a known SPDX title — the
+`UNIDENTIFIED` branch of the verifier is where this class lives, and it should be treated as
+**refuse-and-inspect**, never as *unknown-therefore-probably-fine*.
+
 
 ## 🔴 `2026-11-17` — `p866`: **`6` refusals, and the finding is the DIRECTION: `NOASSERTION` concealed a commercial BLOCK three times and an absent grant once — the field hides prohibitions at least as readily as it hides permissions**
 

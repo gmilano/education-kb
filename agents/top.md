@@ -6,8 +6,25 @@ updated: 2026-11-17
 
 # Top AI agents — education
 
-**Pass `p873`, 2026-11-17** (third pass of the day; targets `p872`'s declared gaps rather than
-re-verifying its seventy addresses).
+**Pass `p874`, 2026-11-17** (fourth pass of the day; targets `p873`'s declared gaps rather than
+re-verifying its addresses). **`p874` resolved 10 new addresses and added NO row to this file**,
+which is the honest outcome and is recorded rather than padded: 4 had **no licence file**, 1 ships
+a **`LICENSE.md` that reserves all rights**, 3 were already shelved, 1 is Gemini-API-dependent
+rather than self-hostable, and 1 (`Orkas-AI/Orkas`, MIT) is a general desktop agent and **not
+education** — a row here would wrongly imply a studio could start a tutoring build from it. The
+resolved-and-rejected list is in `agents/trending.md` with the reason against each. `p874`'s
+additions went to `repos/foundations.md` (`moocupv/lti-ai-grader`, Apache-2.0) and
+`verticals/solutions.md` (the proctoring category).
+
+> **`p874` re-confirmed OpenMAIC's licence against two sources that disagreed with each other** —
+> one said AGPL-3.0, one said MIT. The bytes on the resolved default branch say **MIT**, which is
+> what this file already carried. **The check mattered in the direction nobody plans for:** a pass
+> that had trusted the AGPL-3.0 listicle would have *introduced* an error into a correct row and
+> struck the most permissively-licensed multi-agent classroom in this vertical off the buildable
+> shelf. The same sources gave its star count as both *"about 26,000"* and *"42,318"*.
+
+**Previous pass note (`p873`):** targeted `p872`'s declared gaps rather than re-verifying its
+seventy addresses.
 Every row below was verified by two channels:
 existence via `git ls-remote https://github.com/<slug>` (an HTTP 200 on the git smart
 protocol), and licence via the actual licence bytes fetched from

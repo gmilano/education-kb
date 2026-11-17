@@ -6,9 +6,14 @@ updated: 2026-11-17
 
 # Current trends — education AI
 
-**Pass `p873`, 2026-11-17** (third pass of the day). `p871` recorded eight trends; `p872` added
-**T9** and revised **T8**. `p873` **strengthens T9** with three further trials — including the one
-that isolates *scaffolding* as the active ingredient — and adds **T10** on Global-South agent
+**Pass `p874`, 2026-11-17** (fourth pass of the day). `p871` recorded eight trends; `p872` added
+**T9** and revised **T8**; `p873` strengthened **T9** and added **T10**. `p874` adds **T11** — the
+compliance clock the whole market is watching is not the one that is running — and updates the gap
+ledger, where **three gaps move**: the EMEA instrument gap **closes**, Vietnam's dates **resolve**,
+and the proctoring gap is **restated after being found factually wrong**.
+
+**Previous pass note (`p873`):** strengthened **T9** with three further trials — including the one
+that isolates *scaffolding* as the active ingredient — and added **T10** on Global-South agent
 origin and its licensing. Each trend is tied to something measured or verified; where the only
 available support is a vendor blog or a search summary, that is stated. **Note this pass's
 evidential split:** repository claims were verified first-hand, while every trial, survey and
@@ -240,6 +245,50 @@ anything structural. Treat T10 as a working hypothesis with four data points —
 predicts something checkable next pass: **funded regional projects should carry licences at a
 visibly higher rate than unfunded ones.**
 
+## T11 — The compliance clock the market is watching is not the one that is running
+
+**Every EMEA conversation in education AI is organised around 2 December 2027**, when the EU AI
+Act's Annex III education high-risk obligations land after the Digital Omnibus deferral. `p874`'s
+regulatory leg found that this is the wrong date to be selling against — on two independent counts.
+
+**1. A different EU duty is already binding.** The AI Act's **AI-literacy obligation applies to
+schools and institutions in their capacity as deployers**, and secondary reporting places it on
+them from **July 2026**. There is no deferral on it. So the sector has a live, unmet legal duty
+*now*, and a widely-publicised one it does not have to meet for another two years — and the market
+is almost entirely organised around the second.
+
+**2. A different jurisdiction's deadline arrives first.** Vietnam's **Law No. 134/2025/QH15** has
+been in force since **1 March 2026**, and existing education systems must comply by **1 September
+2027** — **three months before** the EU date. For any client operating in both, the Vietnamese
+clock governs the programme schedule.
+
+**What makes this actionable rather than merely true** is that the literacy duty is the one with a
+measured deficit and a published standard behind it:
+
+| Element | Value |
+|---|---|
+| Measured deficit, same population, one instrument | **79%** of European secondary students use AI for schoolwork; **47%** were shown how → a **32-point gap** (OpenAI/ThinkYoung, 5,000 students, 10 countries, fieldwork Apr–May 2026) |
+| Corroboration, teacher side | **73%** of teachers use AI for planning and materials, **67%** for tests and rubrics (European School Education Platform, Apr 2026) |
+| Delivery standard | **EC/OECD AILit Framework**, 18 June 2026 — 4 dimensions, **19 competences**, non-binding, product-neutral, feeds **PISA 2029** |
+| Legal hook | AI Act literacy duty on deployers, reported as applying from **July 2026** |
+
+**Why it matters commercially.** A high-risk conformance engagement is a 2027 budget line and a
+competitive field. An AI-literacy engagement is a **2026** budget line against a duty the buyer is
+already in breach of, with 19 named competences to evidence against and a measured 32-point gap to
+justify the spend. It is also the natural on-ramp: the same governance artifacts, the same
+deployer-side documentation habit, and the same buyer who will need **P4** in 2027. See
+`compose/patterns.md` **P11**.
+
+**Counter-reading, stated.** 🔴 **The July 2026 start date for the literacy duty is
+secondary-sourced and this session cannot open a single EU primary text** (`eur-lex.europa.eu` and
+the Council and Parliament hosts are refused at the egress proxy). The AI Act's literacy provision
+is widely described as a duty on providers *and* deployers, but **its enforcement mechanics against
+a school are not something this KB has verified, and may be weak** — a duty with no penalty
+attached is a weaker sales hook than a conformity assessment with one. 🟡 **Do not tell a client
+they face a specific sanction on a specific date for AI illiteracy.** The defensible pitch is the
+*measured* gap plus the *published* framework, with the legal duty as context rather than threat.
+Treat the date as a lead to confirm against EUR-Lex the moment that host is reachable.
+
 ## Declared gaps
 
 - ~~**No measured efficacy data** for education AI.~~ **CLOSED by `p872`** — see **T9**. But the
@@ -251,21 +300,44 @@ visibly higher rate than unfunded ones.**
   only party holding that evidence. **`p873` re-confirms this residual gap after adding three
   trials:** the new studies test Khan Academy's proprietary Khanmigo, a bespoke programming tutor
   and a human-tutor assistance tool. **Six trials, zero evaluating any repository in this KB.**
-- **No open-source proctoring platform that is both maintained and permissive.** Narrowed by
-  `p872` from "none found" to "two found, both AGPL-3.0, maturity unproven"
-  (`sudosylabs/proctor`, `kamlendras/OpenProctor`) — just as the EU moves proctoring into the
-  high-risk tier and Vietnam lists biometric learner monitoring as high-risk.
-- ~~**Per-region adoption rates remain unavailable.**~~ **LARGELY CLOSED by `p872`** — see
-  `intel/market.md`, *Measured adoption by region*. Residual: **no measured APAC institutional
-  adoption rate** (Ipsos measures attitudes to banning AI, not adoption) and **no standalone EMEA
-  sector survey** (the 70% figure is UNESCO IESALC's comparator, not a European instrument).
+- **No open-source proctoring platform that is both maintained and permissive.** 🟢 **RESTATED by
+  `p874`, which found the previous framing factually wrong.** `p871` found nothing; `p872` found
+  two, both AGPL-3.0, and this KB concluded for two passes that **no permissive proctoring code
+  existed**. **It does.** `p874` byte-read **seven** candidates' licences: **three are MIT** —
+  `ganesh-786/Proctor`, `amaanwarsi/Proctora`, `code-by-abrar/Online-Proctoring-system` — and four
+  are AGPL-3.0. 🔴 **The accurate gap is maturity, not licence:** all three permissive projects are
+  single-branch and untagged, and `Proctora`'s own README says it should not be presented as a
+  secure exam platform; the one complete platform (`sudosylabs/proctor`) is copyleft. 🔴 **A
+  secondary source was corrected in the same leg** — `SriSatyaLokesh/pariksha` was presented as
+  *the* Apache-2.0 option in the category and its bytes say **AGPL-3.0**. 🔵 **The method lesson is
+  the one this KB keeps re-learning:** *"we searched and found none"* decayed into *"none exists"*
+  across two passes, and a third search with the same tooling overturned it. **A negative finding
+  needs a re-run date, not a promotion to fact.** Full table in `verticals/solutions.md`.
+- ~~**Per-region adoption rates remain unavailable.**~~ **LARGELY CLOSED by `p872`**, and
+  **further closed by `p874`** — see `intel/market.md`, *Measured adoption by region*.
+  🟢 **The EMEA half is now CLOSED:** OpenAI/ThinkYoung (10 Nov 2026) is a European instrument with
+  a European sampling frame — 5,000 secondary students aged 13–19 across 10 countries plus 600
+  teachers — reporting **79%** AI use for schoolwork against **47%** who were shown how. Residual
+  on that side: it measures **secondary**, not higher education, and it is **vendor-published**
+  research on think-tank fieldwork. 🟡 **The APAC half is narrowed and precisely bounded, not
+  closed:** `p874` added the Digital Education Council's regional comparatives (APAC faculty
+  excitement **57%** vs **26%** US & Canada; teaching-use intent APAC **92%** / EMEA **89%** /
+  LATAM **94%**) and one whole-institution datapoint (NTU Singapore, all undergraduates, Aug 2026),
+  but **nothing measures APAC *institutions*** the way UNESCO IESALC measures LATAM's. The next
+  instrument to try is named: APRU, UNESCO Bangkok, or a national rectors' conference.
 - **All EU primary sources are unreachable from this session.** `eur-lex.europa.eu`,
   `data.consilium.europa.eu` and `www.europarl.europa.eu` all fail to resolve. Two identified
   Council documents (ST-13077-2026, ST-14902-2026) and a European Parliament briefing
   (`IUST_BRI(2026)784574`) **could not be read**, so all EU AI Act specifics remain
   secondary-sourced. These hosts would need allowing in the session's network settings.
-- **Vietnam's AI Law number and compliance dates are unresolved** across secondary sources
-  (134/2025/QH15 vs 91/2025/QH15; 1 Mar 2027 / 1 Sep 2027 vs 1 Jul 2027 / 1 Jul 2029).
+- ~~**Vietnam's AI Law number and compliance dates are unresolved**~~ 🟢 **RESOLVED by `p874`:**
+  **Law No. 134/2025/QH15** (not `91/2025/QH15`), passed 10 Dec 2025, **in force 1 March 2026**,
+  with an **18-month transition for existing education systems closing 1 September 2027** (12
+  months elsewhere; systems likely to cause serious damage excluded from the transition entirely).
+  🔵 **The conflicting dates were two different clocks circulating without their labels** — entry
+  into force vs the education compliance deadline — and one of them had been mis-stated by a year.
+  🔴 **1 Sep 2027 is three months before the EU's 2 Dec 2027**, which makes it the nearest hard
+  deadline in education AI; see **T11**. 🟡 A cited `Decree 142/2026` could not be corroborated.
 - ~~**Africa and MENA fall outside the closed region vocabulary** and so cannot be filed.~~
   **WITHDRAWN by `p873` — this gap was never real, and it was self-inflicted.** The closed
   vocabulary is `North America | EMEA | APAC | LATAM | Global`, and **EMEA is Europe, Middle East
@@ -275,12 +347,30 @@ visibly higher rate than unfunded ones.**
   in prose, as the schema intends. This is the second method error in two passes (after the licence
   grep) caught by **re-reading a rule rather than by new data** — the cheapest class of error to
   find and the easiest to leave standing for months.
-- **Star counts unmeasurable for three consecutive passes, across four routes** — `api.github.com`,
-  `github.com` HTML, the `gh` CLI, and `gh api search/repositories` (empty set). A session scope,
-  not a GitHub outage. No star figure appears anywhere in this KB; blog-sourced figures are how
+- **Star counts unmeasurable for FOUR consecutive passes — and `p874` finally diagnoses it.**
+  Three passes attributed the failure to the session's **GitHub** scope. `p874` tested that by
+  probing **six hosts with no GitHub relationship at all** — `ecosyste.ms`, `api.ecosyste.ms`,
+  `libraries.io`, `api.ossinsight.io`, `api.star-history.com`, `huggingface.co` — and **every one
+  was refused at the egress proxy with `connect_rejected`**, while `codeload.github.com` (`400`)
+  and `gitlab.com` (`301`) answered. 🟢 **This is a session EGRESS ALLOWLIST, not a GitHub
+  permission and not an outage.** Two consequences: **no GitHub-side scope change will restore star
+  counts**, and **the missing stars and the unreadable papers, surveys and EU texts are one defect
+  with one fix** — a network-settings change naming the hosts. Nine routes tried. No star figure appears anywhere in this KB; blog-sourced figures are how
   the earlier inflated numbers got in, and `p873` saw the reason again — three secondary sources
   gave ~48.9k, ~54k and ~59.9k for the same project inside three weeks.
-- **`p873` could not open a single non-GitHub source.** `curl` returns `000` and `WebFetch`
+- **The efficacy literature gained no new trial in `p874`, and the residual gap is unchanged:**
+  **zero of the trials in T9 evaluates any repository in this KB.** `p874` re-ran the trial leg and
+  it returned the same three studies T9 already carries (EdWorkingPaper 26-1598, EdWorkingPaper
+  26-1551 on Khanmigo, and the 2025 *Nature Scientific Reports* RCT) plus registered-but-unreported
+  clinical-education trials. 🟡 **One discrepancy worth flagging rather than silently reconciling:**
+  this pass's summary of the Khanmigo trial gives a **Year-1 effect of 0.020 population SD
+  (indistinguishable from zero)** with **0.127–0.142 SD among students who actively participated**,
+  where T9 records **0.06–0.08 SD per school year**. Both may be estimates from the same paper on
+  different bases, and **the PDF cannot be opened from this session**, so neither figure is
+  corrected here. The direction is the same and so is the mechanism — participating students show
+  an effect, struggling students never engage. **Resolve against the paper once
+  `edworkingpapers.com` is reachable.**
+- **`p873` could not open a single non-GitHub source, and `p874` re-confirms it host by host.** `curl` returns `000` and `WebFetch`
   returns `ENOTFOUND` for every one of `arxiv.org`, `aclanthology.org`, `doi.org`,
   `sciencedirect.com`, `unesco.org`, `edworkingpapers.com`, `multistate.us`, `ipsos.com`,
   `lenda.ai` and all EU hosts. **Consequence for how to read this KB: repository claims are

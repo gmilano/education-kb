@@ -4,6 +4,125 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p874`) — **the proctoring gap narrows from the inside: three MIT proctoring repos exist, none is institution-grade — and a "commercial-ready" platform ships a LICENCE FILE THAT GRANTS NOTHING**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+`p874` is the fourth pass of the day. It did not re-verify `p873`'s addresses. It went at four of
+`p873`'s standing gaps — **permissive proctoring**, the **EMEA instrument**, **APAC institutional
+adoption** and **Vietnam's dates** — and three of the four moved. The agent-side findings are here;
+the regional and regulatory movement is in `intel/market.md` and the gap ledger in `intel/trends.md`.
+
+### Channel state — unchanged from `p873`, and now measured across NINE routes
+
+| Channel | Result | Consequence |
+|---|---|---|
+| `git ls-remote --symref` (existence, default branch, tags) | **open** | Primary evidence channel |
+| `raw.githubusercontent.com` (licence and file bytes) | **open** | Primary evidence channel |
+| `api.github.com` | **403** — session GitHub scope | No stars |
+| `github.com` HTML | **403** | No stars, **and `github.com/trending` cannot be read at all** |
+| `gh` CLI / `gh api search/repositories` | **403** / empty set | No star-ranked discovery |
+| 🔴 `ecosyste.ms`, `api.ecosyste.ms` — *new route, `p874`* | **`connect_rejected`** by the egress proxy | No third-party metadata |
+| 🔴 `libraries.io` — *new route, `p874`* | **`connect_rejected`** | No third-party metadata |
+| 🔴 `api.ossinsight.io` — *new route, `p874`* | **`connect_rejected`** | No third-party metadata |
+| 🔴 `api.star-history.com` — *new route, `p874`* | **`connect_rejected`** | No star history |
+| 🟡 `codeload.github.com` | `400` | Reachable, but serves tarballs only — no metadata |
+| 🟡 `gitlab.com` | `301` | Reachable, and irrelevant to GitHub stars |
+
+**`p874`'s method contribution is the diagnosis, not the data.** Four passes have now recorded
+"no stars" and attributed it to the session's GitHub scope. `p874` added **five non-GitHub
+metadata hosts** that have nothing to do with GitHub scope, and **every one was refused at the
+proxy with `connect_rejected`**. Two unrelated hosts (`codeload.github.com`, `gitlab.com`)
+answered. The conclusion is now specific and actionable: **this is a session egress allowlist, and
+no amount of GitHub-side permission will fix it.** The fix is a network-settings change naming the
+hosts, and it is the same fix the non-GitHub source gap needs.
+
+> **Still no star counts anywhere in this KB.** `p874` saw the reason once more: secondary sources
+> gave OpenMAIC as *"about 26,000"* and *"42,318"* stars within the same search, and disagreed with
+> each other on its licence. The licence was resolvable from bytes. The stars were not.
+
+### A licence conflict in the sources, resolved from bytes — and the KB was already right
+
+Secondary coverage of **OpenMAIC** split on its licence: one source said **AGPL-3.0**, another
+**MIT**. `p874` read the bytes on the resolved default branch:
+
+| Address | Resolved branch | Licence bytes | Verdict |
+|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `main` | `LICENSE` → **MIT License** | 🟢 **MIT confirmed. The AGPL-3.0 claim is wrong.** Latest tag `v1.5.0-rc.3`; **390 branches** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main` | `LICENSE` → **Apache License, Version 2.0** | 🟢 Confirmed, unchanged |
+
+**This changed nothing in the KB, and that is the point worth recording.** `agents/top.md` already
+carried OpenMAIC as MIT. `p874` checked before "correcting" and found the KB ahead of its sources.
+A pass that had trusted the AGPL-3.0 listicle would have *introduced* an error into a correct row
+and removed the most permissively-licensed multi-agent classroom in this vertical from the
+buildable shelf. **Re-verification that confirms is not wasted work; it is the only way to know
+which direction an edit runs.**
+
+### 🔴 New unusable class: a `LICENSE.md` that grants nothing
+
+| Address | Branch / heads | Licence file | What the bytes say |
+|---|---|---|---|
+| 🔴 [`lucy4Git/Lecturer-Support-Agent`](https://github.com/lucy4Git/Lecturer-Support-Agent) | `main`, **20 heads** | **`LICENSE.md` EXISTS** | 🔴 **`# Licence Placeholder` — *"No software or documentation licence has been selected. All rights are reserved until the repository owner adopts a formal licence."*** |
+
+**Why this one matters more than an absent licence.** The repo presents as the most
+institution-ready thing in this sweep: README reads *"v2.6.0 … standalone, commercial-ready,
+AI-native platform for lecturers"*, with deployment descriptors for Vercel, Render, Neon, AWS S3,
+Qdrant Cloud, ClamAV and SMTP, Alembic migration chains, institutional-SSO-first identity, and
+staging/production parity rules. Scope: lesson plans, assessments, rubrics, marking guides, case
+studies, moderation workflows.
+
+**And all rights are reserved.** This KB's standing complaint has been that GitHub's licence field
+reports `NOASSERTION` over bytes that do grant something. **This is the mirror case and it is
+worse:** a *file-presence* check — "does `LICENSE*` exist?" — returns **true**, and every
+heuristic built on that returns *licensed*. Only reading the bytes finds the reservation. Filed to
+`intel/measured-unusable.md` as `class: placeholder-grant`. **A studio may not ship, host or fork
+it.** The author is identifiable and the ask is narrow, so a licence request is draftable —
+`intel/licence-requests/`.
+
+### Proctoring: the gap narrows from the inside, and a secondary source is corrected
+
+`p873` left this gap as *"two found, both AGPL-3.0, maturity unproven"* — just as the EU moves
+proctoring into the high-risk tier (2 Dec 2027) and Vietnam lists biometric learner monitoring as
+high-risk. **Permissive proctoring repos do exist.** All licences below are byte-read on the
+resolved default branch.
+
+| Address | Branch / heads | Licence (bytes) | Maturity — stated plainly |
+|---|---|---|---|
+| 🟡 [`ganesh-786/Proctor`](https://github.com/ganesh-786/Proctor) | `main`, 1 head | 🟢 **MIT** | **No tags.** Self-described *"modular, microservices-based"* collaborative project. Permissive and the most architecturally ambitious of the three |
+| 🟡 [`amaanwarsi/Proctora`](https://github.com/amaanwarsi/Proctora) | `main`, 1 head | 🟢 **MIT** | **No tags.** Flask + OpenCV + MediaPipe; webcam, mic-noise and tab-switch monitoring; has CI. 🔴 **Its own README says it should not be presented as a secure exam platform in its current state** — recorded in the project's words, not this KB's |
+| 🟡 [`code-by-abrar/Online-Proctoring-system`](https://github.com/code-by-abrar/Online-Proctoring-system) | `main`, 1 head | 🟢 **MIT** | **No tags.** "SecureExam AI": FastAPI + PostgreSQL + TensorFlow.js client-side face/device detection |
+| 🔴 [`SriSatyaLokesh/pariksha`](https://github.com/SriSatyaLokesh/pariksha) | `main` | 🔴 **AGPL-3.0** | 🔴 **SECONDARY SOURCE CORRECTED.** The search summary asserted **Apache-2.0** and called it the one permissive platform in the category. The bytes say **GNU Affero General Public License**. Pre-alpha besides |
+| 🔴 [`sudosylabs/proctor`](https://github.com/sudosylabs/proctor) | `main` | 🔴 **AGPL-3.0** | Re-confirmed. The most complete *platform*, and copyleft |
+| 🔴 [`kamlendras/OpenProctor`](https://github.com/kamlendras/OpenProctor) | `main` | 🔴 **AGPL-3.0** | Re-confirmed |
+| 🔴 [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) | **`master`** | 🔴 **AGPL-3.0** | Open edX's proctoring subsystem. Note the default branch is **`master`**, not `main` |
+
+**The honest restatement of the gap:** it is no longer *"nothing permissive exists."* It is
+**"three MIT codebases exist and not one of them is institution-grade"** — single-branch, untagged,
+and in one case disclaimed by its own author. For a client facing the 2 Dec 2027 high-risk tier,
+**none of these is a starting point you can defend in a procurement**; the permissive three are
+reference implementations of the *capability*, and the mature option (`sudosylabs/proctor`) is
+AGPL-3.0 and therefore unavailable on this KB's licence constraint. **The buildable position in
+proctoring is still a greenfield permissive build, and `p874` is the first pass able to say that
+with the licence bytes of seven candidates behind it.**
+
+### Addresses resolved and NOT shelved, with the reason
+
+| Address | Branch | Licence (bytes) | Why it is not in `agents/top.md` |
+|---|---|---|---|
+| [`Orkas-AI/Orkas`](https://github.com/Orkas-AI/Orkas) | `main`, 13 heads | **MIT** | Resolved; tags `v2026.9.22`. **Not education.** A local-first multi-agent desktop app that orchestrates Claude Code, Codex, OpenCode, OpenClaw and Hermes-Agent. Shelved under the `T974` rule: a row in `agents/top.md` would imply a studio could start a tutoring build from it |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | `main` | **MIT** | Already shelved. Re-resolved only |
+| [`vulinh1704/ai-tutor-agent`](https://github.com/vulinh1704/ai-tutor-agent) | `main`, 4 heads | **MIT** | Already shelved. Re-resolved only |
+| [`SirhanMacx/EDUagent`](https://github.com/SirhanMacx/EDUagent) | `main`, 10 heads | **MIT** | Already shelved. Re-resolved only |
+| [`ianobraczka/teaching-assistant`](https://github.com/ianobraczka/teaching-assistant) | `main`, 5 heads | **MIT** | Next.js lesson/rubric generator, **Gemini API-dependent** — not self-hostable in the model sense |
+| 🔴 [`tahseenparray1/agentic-rag-tutor`](https://github.com/tahseenparray1/agentic-rag-tutor) | `main` | **NO LICENCE FILE** | No grant |
+| 🔴 [`blamb/lti-tutor`](https://github.com/blamb/lti-tutor) | `main` | **NO LICENCE FILE** | No grant — **and it is the only LTI 1.3 + tutoring combination found.** The most valuable missing grant in this sweep; licence request worth drafting |
+| 🔴 [`rohan-9506/lesson-agent`](https://github.com/rohan-9506/lesson-agent) | `main` | **NO LICENCE FILE** | No grant |
+| 🔴 [`sa-rehman1/AI-Assistant`](https://github.com/sa-rehman1/AI-Assistant) | `main` | **NO LICENCE FILE** | No grant |
+
+**Ten addresses resolved, four with no grant at all, one with a grant-denying placeholder.** That
+is five of ten unusable — consistent with `T10`, and the reason they are listed by name is so no
+later pass re-imports them from a listicle as permissive.
+
 ## 🟢 `2026-11-17` (`p873`) — **the regional-origin gap closes: a verified MIT, LATAM-origin education agent exists — and none of its code is on its default branch**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

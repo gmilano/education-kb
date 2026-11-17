@@ -4,6 +4,89 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p874`) — **the star channel is an EGRESS ALLOWLIST, not a GitHub scope: five non-GitHub metadata hosts refused at the proxy, two unrelated hosts answered**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+Fourth pass of the day. **Not a trending sweep** — `github.com/trending` and `api.github.com` are
+both `403` for this session, so this KB still cannot read the trending page and says so rather
+than reproducing a blog's version of it. What follows is every address `p874` resolved first-hand
+with `git ls-remote --symref` plus licence and file bytes from `raw.githubusercontent.com`.
+
+### The star-channel diagnosis changes this pass
+
+Three passes recorded "no stars" and attributed it to the session's **GitHub** scope. `p874` tested
+that attribution by probing **five metadata hosts that are not GitHub**:
+
+| Host probed (all new in `p874`) | Result |
+|---|---|
+| `ecosyste.ms` | 🔴 **`connect_rejected`** at the egress proxy |
+| `api.ecosyste.ms` | 🔴 **`connect_rejected`** |
+| `libraries.io` | 🔴 **`connect_rejected`** |
+| `api.ossinsight.io` | 🔴 **`connect_rejected`** |
+| `api.star-history.com` | 🔴 **`connect_rejected`** |
+| `huggingface.co` | 🔴 **`connect_rejected`** |
+| `codeload.github.com` | 🟡 `400` — reachable, tarballs only, no metadata |
+| `gitlab.com` | 🟡 `301` — reachable, irrelevant to GitHub stars |
+
+**Nine routes to a star count have now been tried and the diagnosis is no longer ambiguous.** Hosts
+with no relationship to GitHub permissions are refused **at the proxy**, while two unrelated hosts
+answer. **This is a session egress allowlist.** Consequences, stated so a later pass does not
+re-litigate it:
+
+1. **No GitHub-side permission change will restore star counts.** Widening the session's repository
+   scope is the wrong fix and has been attempted in effect three times.
+2. **The fix is one network-settings change**, and it is the *same* fix the non-GitHub source gap
+   needs — `arxiv.org`, `aclanthology.org`, `edworkingpapers.com` and the EU hosts fail identically.
+   One allowlist edit would upgrade **both** the discovery channel and the whole efficacy and
+   regulatory evidence base from secondary to primary.
+3. 🔴 **Until then, every "trending" claim in this KB is an address this pass resolved by hand, and
+   the ranking that the word "trending" implies does not exist here.** `p874` re-confirms that
+   secondary star figures are unusable: the same project was given as *"about 26,000"* and
+   *"42,318"* inside a single search.
+
+### Newly resolved addresses
+
+| Repo | Licence (bytes on resolved branch) | Default branch | Status |
+|---|---|---|---|
+| 🟢 [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) | **Apache-2.0** | `main` | **NEW to `repos/foundations.md` — and the most immediately useful permissive piece this pass found.** From **MOOC UPV, Universitat Politècnica de València (Spain)** — EMEA-origin. An LLM grader that posts grades back to an LMS over **LTI 1.1**, *tested with Open edX and Moodle*. Configurable grading prompts, Gemini or any OpenAI-compatible API, multi-language HTML templates, private/public file split (`/usr/lib/cgi-bin` + `/var/secure`). Tag `excel-v1.0`. 🔴 **LTI 1.1, not 1.3** — see the warning below |
+| 🟢 [`ganesh-786/Proctor`](https://github.com/ganesh-786/Proctor) | **MIT** | `main` | **NEW.** Microservices proctoring. No tags, 1 head — reference implementation, not a platform |
+| 🔴 [`SriSatyaLokesh/pariksha`](https://github.com/SriSatyaLokesh/pariksha) | **AGPL-3.0** | `main` | **NEW — and a secondary-source correction.** The search summary called it *the* Apache-2.0 exam platform in the category. **The bytes say GNU Affero GPL.** Pre-alpha |
+| 🔴 [`lucy4Git/Lecturer-Support-Agent`](https://github.com/lucy4Git/Lecturer-Support-Agent) | **`LICENSE.md` = "Licence Placeholder … All rights are reserved"** | `main`, 20 heads | **NEW, and unusable in a new way.** A file-presence licence check returns *licensed*; the bytes reserve all rights. Full note in `agents/trending.md`; filed `class: placeholder-grant` |
+| 🟡 [`Orkas-AI/Orkas`](https://github.com/Orkas-AI/Orkas) | **MIT** | `main`, 13 heads | Resolved, tags `v2026.9.22`. Local-first multi-agent desktop orchestrator. **Not education** — recorded so no pass mis-shelves it |
+
+**Five new addresses; two of the five carry no usable grant.** The table is this length because
+this is what resolved — it is not padded.
+
+### 🔴 Method warning for anyone reaching for `lti-ai-grader`: LTI 1.1 is not LTI 1.3
+
+This KB's central strategic claim is that **LTI is the product surface in education** — the seam
+that gets a permissive AI service past institutional procurement without forking a copyleft
+platform. `lti-ai-grader` is the first *verified Apache-2.0 AI grader that actually speaks that
+seam*, which makes the version difference load-bearing rather than pedantic:
+
+- **LTI 1.1 signs with OAuth 1.0a shared secrets.** It is the **deprecated** generation. 1EdTech
+  has been retiring it, and a growing number of institutions disable it outright.
+- **LTI 1.3 / LTI Advantage** uses OAuth 2.0 + JWT, and carries **AGS** (Assignment and Grade
+  Services) for grade passback, NRPS for rosters, and Deep Linking.
+- **Consequence for a build:** take `lti-ai-grader` for its **grading core, prompt configuration
+  and LMS-tested round trip** — that part is real, Apache-2.0 and reusable — and **replace its LTI
+  1.1 transport with `Cvmcosta/ltijs`** (Apache-2.0, branch `master`, already in
+  `repos/foundations.md`) for a 1.3/Advantage launch. That pairing is a concrete, fully permissive
+  grading path into Moodle, Canvas, Open edX, Blackboard and D2L, and it is written up as the
+  transport swap in `compose/patterns.md`.
+- 🔴 **Do not sell an LTI 1.1 integration into a 2027 EU engagement.** The education high-risk tier
+  lands **2 Dec 2027** and brings logging and traceability duties; a deprecated OAuth 1.0a
+  transport is the wrong foundation to be defending at that point.
+
+### The one LTI 1.3 tutor in existence has no licence
+
+[`blamb/lti-tutor`](https://github.com/blamb/lti-tutor) (`main`) is the **only** address this KB has
+resolved that combines **LTI 1.3 / Advantage** with **AI tutoring**, including optional completion
+passback over AGS. It has **no licence file**, so there is no grant. **This is now the single most
+valuable missing grant in this KB** — it is the exact shape of the integration seam the strategy
+rests on. A licence request is drafted to `intel/licence-requests/`.
+
 ## 🟢 `2026-11-17` (`p873`) — **six new addresses resolved: one MIT LATAM tutor whose code is on a feature branch, three unlicensed Global-South tutors, and an SIS whose default branch is `mobile`**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**
