@@ -6,7 +6,8 @@ updated: 2026-11-17
 
 # Vertical platforms — education
 
-**Pass `p872`, 2026-11-17** (second pass of the day). Real, deployed systems that can be customised with AI on top —
+**Pass `p873`, 2026-11-17** (third pass of the day; adds **RosarioSIS** and an accessibility-conformance
+section). Real, deployed systems that can be customised with AI on top —
 the education equivalents of Odoo for ERP or OpenMRS for healthcare. Existence and licence
 bytes verified this run via `git ls-remote` + `raw.githubusercontent.com` on the resolved
 default branch.
@@ -48,6 +49,7 @@ default branch.
 |---|---|---|---|---|
 | **Gibbon** | https://github.com/GibbonEdu/core | GPL-3.0 | `v31.0.00` | School management / SIS for K-12. Note: default branch is a version tag, not `main`. |
 | **openSIS Classic** | https://github.com/OS4ED/openSIS-Classic | **GPL per README; no licence file** | `master` | Student information system. **Licence flag:** there is no `LICENSE`, `COPYING` or `license.txt` on the default branch — the GPL claim exists only in prose in the README. Treat the grant as unconfirmed until clarified with OS4ED. |
+| **RosarioSIS** | https://github.com/francoisjacquet/rosariosis | **GPL-2.0** | **`mobile`** | **New in `p873`.** Mature PHP/PostgreSQL student information system, used in production by schools, academies and colleges; latest tags `v9.3`, `v9.3.1`, `v9.3.2`. **The default branch is `mobile`** — a feature name, not `main` or `master`. Nothing about the address hints at it and no heuristic would guess it: a `raw.githubusercontent.com` path built on an assumed `main` 404s, which would have been published as "no licence file" and then as "no grant". Resolve with `git ls-remote --symref` first, always. The **third** verified open-source SIS, and the **third** that is copyleft. |
 | **Koha** | https://github.com/Koha-Community/Koha | GPL-3.0 | `main` | The mature open-source integrated library system; very large installed base in school and university libraries worldwide. |
 | **DSpace** | https://github.com/DSpace/DSpace | **BSD** | `main` | Institutional repository for theses, datasets and scholarly output. **Permissive** — a strong base for AI-assisted discovery and metadata enrichment over a university's own corpus. |
 | **Open Journal Systems** | https://github.com/pkp/ojs | GPL-3.0 | `main` | PKP's scholarly publishing platform; heavily used by LATAM and Global South universities for their own journals. |
@@ -69,7 +71,7 @@ ministry programme reaches rural schools at all.
 | **Kiwix** | https://github.com/kiwix/kiwix-tools | GPL-3.0 | `main` | Offline Wikipedia and educational-archive reader (ZIM format). Already an ingest source for DeepTutor, so an offline corpus can feed an offline tutor. |
 | **Internet-in-a-Box** | https://github.com/iiab/iiab | LGPL | `master` | Turnkey offline learning server — bundles Kiwix, Moodle and content libraries onto low-cost hardware for schools without reliable connectivity. |
 
-**22 verified platforms.**
+**23 verified platforms.**
 
 ## Permissive-licence shortlist
 
@@ -114,10 +116,36 @@ open-response workflows — and treat proctoring as the fallback the client asks
 its conformance burden visible. Detection-based integrity is losing on both the evidence and the
 regulation; see `intel/trends.md` T8.
 
+## Accessibility conformance — where it exists in this stack, and where it does not
+
+New in `p873`, because it decides public-sector bids. The agent layer has almost no conformance
+documentation (see `agents/top.md` gaps: `CAHLR/OATutor` is the only education-native agent in this
+KB with a published statement). The **platform** layer is better placed: **Moodle core and its
+mobile app are stated to be certified to WCAG 2.2 AA**, alongside Section 508 alignment. That is a
+**vendor claim** (Open LMS) and `support.openlms.net` is unreachable from this session, so the
+correct action in a bid is to **request the VPAT/ACR**, not to repeat the claim.
+
+The practical consequence is an architecture decision, not a compliance footnote:
+
+> Where **Section 508 / EN 301 549 / WCAG** conformance gates procurement, **do not ship your own
+> learner-facing front end.** Launch the agent as an **LTI 1.3 tool inside a platform that already
+> holds a conformance statement** (`Cvmcosta/ltijs`, Apache-2.0, is the plumbing) so the
+> conformance story rides on the platform, and keep the custom UI for staff-facing surfaces where
+> the bar is lower.
+
+Two further facts, both secondary-sourced because EU primary sources are unreachable: the
+**European Accessibility Act has applied since 28 June 2025**, and the next **EN 301 549** revision
+aligning it with **WCAG 2.2 AA** is reported as due in the Official Journal in late 2026. And the
+failure mode that actually loses audits is **embedded content, not the platform** — an accessible
+LMS routinely serves an inaccessible SCORM package, PDF workbook or generated slide deck. **Any AI
+content generator in the build inherits that obligation for everything it emits.**
+
 ## Declared gaps
 
-- **No permissive open-source SIS exists.** Both verified options are copyleft and one has no
-  licence file. A permissive, AI-native SIS is an unmet need — and an opportunity.
+- **No permissive open-source SIS exists — now three independent data points, not two.** `p873`
+  verified **RosarioSIS** (GPL-2.0) alongside Gibbon (GPL-3.0) and openSIS-Classic (no licence
+  file at all). Three verified options, **zero permissive**. A permissive, AI-native SIS is an
+  unmet need — and the most clearly evidenced product gap in this file.
 - **No *permissively licensed* open-source proctoring platform exists.** Narrowed, not closed:
   `p872` verified two real candidates (`sudosylabs/proctor`, `kamlendras/OpenProctor`) and
   **both are AGPL-3.0**, with unproven maturity. Given that the EU has moved proctoring into the

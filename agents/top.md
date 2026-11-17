@@ -6,7 +6,8 @@ updated: 2026-11-17
 
 # Top AI agents — education
 
-**Pass `p872`, 2026-11-17** (second pass of the day; builds on `p871` rather than redoing it).
+**Pass `p873`, 2026-11-17** (third pass of the day; targets `p872`'s declared gaps rather than
+re-verifying its seventy addresses).
 Every row below was verified by two channels:
 existence via `git ls-remote https://github.com/<slug>` (an HTTP 200 on the git smart
 protocol), and licence via the actual licence bytes fetched from
@@ -22,9 +23,12 @@ branch was resolved with `git ls-remote --symref ... HEAD` rather than assumed t
 | `raw.githubusercontent.com` (licence bytes) | **open** — used for all rows |
 | `github.com` HTML | **403** — blocked, session GitHub scope |
 | `api.github.com` | **403** — blocked, session GitHub scope |
+| `gh` CLI (`gh api repos/...`) | **403** — git proxy: *"not in this session's authorized repository set"* (added by `p873`) |
+| `gh api search/repositories` | **empty result set** — no star-ranked discovery (added by `p873`) |
 
-> **No star counts appear in this file.** The star channel (`api.github.com`, `github.com`
-> HTML) returned `403` for this session, so stars were **not measurable this pass**. Prior
+> **No star counts appear in this file.** The star channel returned `403` across **four distinct
+> routes** — `api.github.com`, `github.com` HTML, the `gh` CLI and the GitHub search API — for a
+> **third consecutive pass**, so stars were **not measurable this pass** either. Prior
 > pass `p870` recorded DeepTutor at `59,922★` from a star-ranked sweep it could run; that
 > figure is its measurement, not this pass's, and is not restated here as fact. Writing a
 > star count sourced from a blog is how this KB previously recorded inflated numbers.
@@ -42,9 +46,41 @@ These are built for teaching and learning as their primary purpose.
 | **Pedagogy Benchmark** | https://github.com/AI-for-Education/pedagogy-benchmark | MIT | `main` | Not a tutor — the **evaluation harness for tutors**. 1,143 questions drawn from real teacher-qualification exams, split into CDPK (920, cross-domain pedagogical knowledge) and SEND (223, special educational needs and disabilities). Runs 100+ models, public leaderboards, paper arXiv:2506.18710. This is how you defend a tutoring claim to a ministry or a university procurement board. |
 | **AI Teaching Agent** | https://github.com/littlecookie0722/AI-Teaching-Agent | MIT | `main` | Instructor-side rather than learner-side: generates labs, exams, grading workflows and presentations with structured DSLs, human review, sandboxed evaluation, and CLI/MCP tools, local-first. **Maturity flag:** its own README states automatic-grading productisation is frozen, so treat grading as incomplete. |
 | **ai-tutor-agent** | https://github.com/vulinh1704/ai-tutor-agent | MIT | `main` | FastAPI + LangGraph starter for tutoring agents: Socratic hinting, rubric-based grading with structured output, session memory, offline demo mode. **Maturity flag: a starter template, not a product** — useful as a skeleton for a bespoke engagement, not as a platform. |
+| **TutorIA** | https://github.com/LabSirius/TutorIA | MIT | `main` | **New in `p873` — the first verified LATAM-origin education-native agent in this KB.** Autonomous tutor for **rural higher education in Risaralda, Colombia**, from Grupo Sirius at Universidad Tecnológica de Pereira; built to run inside **Open edX**. v2 backend: **Ollama-default inference via the OpenAI-compatible interface** (`llama3.2`), **pgvector + `nomic-embed-text` RAG**, an Open edX→PostgreSQL sync gateway on APScheduler, and pedagogical prompt templates held in the database. Tag `informe-minciencias-2026-09` — a funded deliverable reported to Colombia's science ministry. **Maturity flag, and it is the operative fact: `main` contains documentation only. The code is on `feature/refactor-to-v2-requirements`, it is backend-only, and the React frontend, Open edX plugin and test suite its README describes do not exist in any branch.** See below. |
 
-**7 education-native rows.** That is what verified; the table is not padded to a round
+**8 education-native rows.** That is what verified; the table is not padded to a round
 number. See the declared gap below on what is missing.
+
+### TutorIA — why it is listed, and exactly what you get if you clone it
+
+It is listed because it answers a question this KB had been answering with an absence: *is anyone
+in LATAM building an education-native agent, or does the region only deploy other people's?* A
+Colombian public university shipping an **MIT-licensed** tutoring agent aimed at **rural,
+low-connectivity higher education**, with a **named pedagogical director** and a reporting
+obligation to a national science ministry, is the counter-example. For a Spanish-language
+engagement its pedagogical framing, language and deployment context already match the brief —
+which is worth more than maturity at the proposal stage.
+
+It carries a flag because **a clone of its default branch ships nothing runnable**:
+
+| Address | Branch | Contents |
+|---|---|---|
+| `LabSirius/TutorIA` | **`main` (default)** | `README.md`, `CONTRIBUTING.md`, `LICENSE`, `docs/`. `backend/`, `frontend/`, `docker-compose.yml`, `.env.example` **all 404** |
+| `LabSirius/TutorIA` | `feature/refactor-to-v2-requirements` | **The v2 backend** — `backend/app/{main,config}.py`, `routers/chat.py`, `services/rag_service.py`, `gateways/openedx_gateway/sync_service.py`, `requirements.txt`, `docker-compose.yml` |
+| `Sof1SP/tutorIA` (**the address its own README's `git clone` line points at**) | `main`, `dev` | **No code in either** — `README.md` + `LICENSE` only. Also MIT |
+
+Also note: **the README is behind the code.** It describes Anthropic Claude API + Microsoft Azure;
+`backend/app/config.py` defaults to **local Ollama** with Claude retained only as an optional
+fallback, and the startup log states *"provider routing active; default: ollama"*. The default
+inference path is **local and sovereign** — no learner text leaves the institution unless someone
+configures it to. Requirement IDs (**RF-21** prompt templates, **RF-22** Open edX sync, **RF-23**
+provider routing) are traceable to the project's requirements document, which is the kind of
+engineering a ministry audit can follow, and the code carries honest `TODO(tech-debt)` comments
+about its own Alembic migration debt.
+
+**Treat it as a collaboration target and a regional reference, not as a base to promise a delivery
+date on.** The highest-value contribution Globant could make to it is small and obvious: the
+frontend, the Open edX plugin and the test suite that its README already specifies.
 
 ## Grading & assessment agents
 
@@ -101,6 +137,10 @@ compose a general agent framework. These were verified on the same two channels 
 | **Open WebUI** | "Open WebUI License" | BSD-3-clause text **plus an added clause 4**: altering, removing or replacing Open WebUI branding is prohibited unless the deployment has **≤50 end users in any rolling 30 days**, or you hold written permission or an enterprise licence. Read the bytes: this is *not* plain BSD. A white-labelled campus deployment above 50 users is a material breach. |
 | **MinerU** | **"MinerU Open Source License"** — Apache-2.0 + additional terms | **Terms read by `p872`.** A separate **commercial licence** is required above **100M MAU** or **USD 20M monthly revenue** (consolidated with affiliates), plus an **online-service attribution obligation**. Neither threshold binds a normal institutional deployment; the attribution obligation binds any hosted service immediately. This is the KB's one genuine "Apache-2.0 plus terms" case. |
 | **MultiAgent-AI-Teaching-Assistant** | **none** | `github.com/YoussefMohAttia/MultiAgent-AI-Teaching-Assistant` exists but has **no licence file on its default branch**. No licence means no grant — Globant cannot build on it. Recorded so no later pass re-imports it from a blog listing. |
+| **EduTwin Africa** | **none** | `github.com/muskvdc/EduTwin-Africa` — curriculum-aware tutor with RAG, bounded multi-agent collaboration and guardrails, scoped to **South African Grades 8–12**. Exists on `main`; **no `LICENSE`, `LICENSE.md` or `COPYING`**. Africa-origin and legally unusable as it stands. Found by `p873`. |
+| **multiagent-ai-tutor** | **none** | `github.com/giovanayngrid-gk/multiagent-ai-tutor` — Brazilian, Portuguese-language, LangChain + Llama 3 via local Ollama + Streamlit. Exists on `main`; **no licence file**. Found by `p873`. |
+| **educational-agents** | **none** | `github.com/nifalconi/educational-agents` — Spanish-language teaching library with LATAM Spanish identifiers, from a *Niñas Pro* agents course. Exists on `main`; **no licence file**. Found by `p873`. |
+| **Lenda AI** | **claimed Apache-2.0, unverifiable** | Self-describes as an Apache-2.0 LATAM-built open-source tutor (v0.1). **Not listed in this KB:** `lenda.ai` does not resolve from this session, no independent coverage exists, and `git ls-remote` found nothing at four plausible namespaces. **A licence claim on a project page is not a licence.** |
 | **Frappe LMS** | **AGPL-3.0**, not MIT | Multiple 2026 LMS listicles state Frappe LMS is MIT. The licence bytes at `frappe/lms@develop/license.txt` are **GNU Affero GPL v3**. Corrected this pass. |
 | **OpenProctor** | **AGPL-3.0**, not MIT | `github.com/kamlendras/OpenProctor` is listed as MIT in secondary sources. The licence bytes on `main` are **AGPL-3.0**. Corrected `p872`. |
 | **os-taxonomy** | **ODbL**, not a code licence | `github.com/withmarbleapp/os-taxonomy` exists, but its `LICENSE` is the **Open Data Commons Open Database Licence** — share-alike on derived *databases*. It is a curriculum dataset, not permissive code. Do not file it beside MIT/Apache repos. |
@@ -108,8 +148,9 @@ compose a general agent framework. These were verified on the same two channels 
 
 ## Declared gaps — searched and not found
 
-An informed gap is information; silence looks identical to coverage. Three of `p871`'s four gaps
-moved this pass; what remains is stated as precisely as the evidence allows.
+An informed gap is information; silence looks identical to coverage. `p873` moved the two
+regional-origin gaps that had stood longest; what remains is stated as precisely as the evidence
+allows.
 
 - ~~**No mature open-source grading / assessment agent exists.**~~ **CLOSED by `p872`.**
   **ArguLens** (`wwrwbs/AI_AWE`, Apache-2.0, arXiv:2608.17356) is real, verified, decomposed and
@@ -126,20 +167,59 @@ moved this pass; what remains is stated as precisely as the evidence allows.
   as a high-risk education system, the strategic answer is more likely **assessment redesign than
   better proctoring**.
 - **No education-native agent carries an accessibility conformance statement except OATutor.**
-  Unchanged. For public-sector bids where Section 508 / EN 301 549 / WCAG conformance gates
-  procurement, `CAHLR/OATutor` (MIT) is still the only verified starting point in this file.
-- **Star counts unmeasurable for the second consecutive pass** (`403` on both
-  `api.github.com` and `github.com` HTML). Not inferred from blogs. No star figure appears
-  anywhere in this KB.
-- **No LATAM-origin or Africa-origin education-native agent surfaced**, across `p871`'s six legs
-  and `p872`'s further legs. `p872` adds a refinement: LATAM's contribution to this stack is a
-  **sovereign foundation model, not an education agent** — **Latam-GPT**, CENIA-led, launched
-  **10 Feb 2026**, Llama-3.1-70B base, 230B+ words of Spanish/Portuguese including education
-  sciences, open weights, hosted under the `latam-gpt` Hugging Face org. Note the limit of its
-  openness: **the training corpus is gated** — the research tier requires a request CENIA
-  evaluates plus a signed NDA. So "open source" describes the weights, not the data.
-  Education-native OSS in this window remains concentrated in East Asian university labs
-  (HKUDS/HKU, THU-MAIC/Tsinghua) and US universities (CAHLR/Berkeley).
+  Still true after a dedicated `p873` search leg, but the gap now has an **architectural answer**
+  rather than just a single fallback. `CAHLR/OATutor` (MIT) remains the only agent in this file
+  with a published conformance document. What `p873` adds is that the **platform** layer has
+  conformance even where the agent layer does not: **Moodle core and its mobile app are stated to
+  be WCAG 2.2 AA certified** (vendor claim, Open LMS — unverifiable from this session, so treat as
+  a claim to request the VPAT/ACR for, not as a fact). The consequence for a bid is concrete:
+  **put the agent behind a conformant platform's UI over LTI 1.3 rather than shipping your own
+  front end**, and the conformance story rides on the platform. Note also that the obligation is
+  tightening — the **European Accessibility Act has applied since 28 June 2025**, and the next
+  **EN 301 549** revision aligning it to WCAG 2.2 AA is reported as due in the Official Journal in
+  late 2026 (secondary-sourced; all EU primary sources are unreachable from this session). And the
+  standard failure mode is not the platform at all: an accessible platform routinely serves
+  inaccessible embedded content — the SCORM package, the PDF workbook, the generated slide deck.
+  **An AI content generator is a content generator: whatever it emits inherits the conformance
+  obligation.** See `compose/patterns.md` **P10**.
+- **Star counts unmeasurable for the third consecutive pass, now across four routes** —
+  `api.github.com`, `github.com` HTML, the `gh` CLI (*"not in this session's authorized repository
+  set"*) and `gh api search/repositories` (empty set). This is a session scope, not a GitHub
+  outage. Not inferred from blogs: secondary sources this pass offered ~48.9k, ~54k and ~59.9k for
+  the same project within three weeks, which is exactly why none of them is recorded. No star
+  figure appears anywhere in this KB.
+- **Every non-GitHub host is unreachable from this session**, on both `curl` (`000`) and `WebFetch`
+  (`ENOTFOUND`): `arxiv.org`, `aclanthology.org`, `doi.org`, `sciencedirect.com`, `unesco.org`,
+  `eur-lex.europa.eu`, `data.consilium.europa.eu`, `europarl.europa.eu`, `edworkingpapers.com`,
+  `multistate.us`, `ipsos.com`, `lenda.ai`. So **repository facts and document facts in this KB
+  sit on different evidential footings**: repos are read first-hand (existence, branch, tags,
+  licence bytes, source files), while every paper, survey and regulatory date is a search engine's
+  summary of a page that cannot be opened. Flagged wherever it matters. These hosts would need
+  allowing in the session's network settings.
+- ~~**No LATAM-origin education-native agent surfaced.**~~ **CLOSED by `p873`.** **TutorIA**
+  (`LabSirius/TutorIA`, **MIT**, Universidad Tecnológica de Pereira, Colombia) is verified, listed
+  above, and publicly funded. `p872`'s refinement — *"LATAM's contribution is a sovereign
+  foundation model, not an education agent"* — **is retired as wrong.** Both are true at once, and
+  they stack: **Latam-GPT** (CENIA-led, launched **10 Feb 2026**, Llama-3.1-70B base, 230B+ words
+  of Spanish/Portuguese including education sciences, open weights under the `latam-gpt` Hugging
+  Face org, **corpus gated behind a CENIA-evaluated request and an NDA** — so "open source"
+  describes the weights, not the data) is the model layer, and TutorIA is an agent layer that
+  already defaults to a locally served model. The residual gap is **maturity, not existence**:
+  TutorIA is a backend in progress, so LATAM-origin OSS is real but not yet production-grade.
+- **Africa-origin education agents exist, and not one of them has a licence.** `p873` resolved
+  three Global-South tutors with **no licence file on their default branch** — `muskvdc/EduTwin-Africa`
+  (South African Grades 8–12), `giovanayngrid-gk/multiagent-ai-tutor` (Brazil, Portuguese) and
+  `nifalconi/educational-agents` (LATAM Spanish). No licence means no grant, so all three are
+  legally unusable however good the code is. **The discriminating variable appears to be funding:**
+  the one regional project that *is* licensed, documented and branch-managed (TutorIA) is the one
+  with a national science ministry behind it. Two further Africa-origin research systems —
+  **EduNaija AI Tutor** (AfricaNLP 2026; Nigerian curriculum; English/Yoruba/Hausa/Igbo) and
+  **AFRILANGTUTOR** (Findings of EMNLP 2026, arXiv:2604.20996) — claim open releases but **no
+  repository address could be resolved** and `aclanthology.org`/`arxiv.org` are unreachable from
+  this session. Recorded as leads; **no address has been invented.** Next pass: try Hugging Face.
+- **Education-native OSS origin is still concentrated** in East Asian university labs (HKUDS/HKU,
+  THU-MAIC/Tsinghua) and US universities (CAHLR/Berkeley). TutorIA widens the map; it does not
+  change the centre of gravity.
 - **No agent in this file has published learning-outcome evidence for itself.** `p872` found the
   trial literature (see `intel/trends.md` **T9**) and none of it evaluates any repo named here.
   The largest trial — 2,379 undergraduates — found a **negative** effect from course-integrated

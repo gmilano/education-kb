@@ -6,9 +6,10 @@ updated: 2026-11-17
 
 # Compose patterns — education
 
-**Pass `p872`, 2026-11-17** (second pass of the day). Eight recipes — `p871`'s six, with **P2
-rewritten** because the grading component it said did not exist has been found and verified, plus
-**P7** and **P8** added from `p872`'s findings. Every repo named below was verified this pass
+**Pass `p873`, 2026-11-17** (third pass of the day). Ten recipes — `p871`'s six, `p872`'s **P7**
+and **P8** (and its rewrite of **P2**), plus **P9** and **P10** added by `p873`: a Spanish-language
+tutor built on the LATAM-origin base this KB verified for the first time, and an
+accessibility-gated public-sector bid. Every repo named below was verified
 (existence via `git ls-remote`, licence via the licence bytes on the resolved default branch);
 licences are stated inline because in this vertical the licence determines the architecture.
 Effort estimates are studio-delivery estimates, not measurements.
@@ -341,17 +342,151 @@ local-counsel check as the first task of the engagement.
 
 ---
 
+## P9 — Spanish-language sovereign tutor on a LATAM-origin base
+
+**Sell to:** LATAM ministries, public universities, rural and regional higher-education
+programmes — and any client for whom *"built in the region"* is part of the evaluation.
+**Effort: 8–10 weeks** to a pilot, of which **3–4 weeks is completing someone else's backend**.
+New in `p873`, and it is the first pattern in this file whose core component is LATAM-origin.
+
+| Layer | Component | Licence |
+|---|---|---|
+| Tutor backend (base) | https://github.com/LabSirius/TutorIA — **clone `feature/refactor-to-v2-requirements`, NOT `main`** | MIT |
+| LMS | https://github.com/openedx/edx-platform | AGPL-3.0 |
+| LTI launch (the piece to add) | https://github.com/Cvmcosta/ltijs | Apache-2.0 |
+| Local inference | https://github.com/ollama/ollama | MIT |
+| Model-swap seam | https://github.com/BerriAI/litellm | MIT |
+| Vector store | PostgreSQL + `pgvector` (already wired in TutorIA's `docker-compose.yml`) | PostgreSQL licence / Apache-2.0 |
+| Document ingestion | https://github.com/docling-project/docling | MIT |
+| Telemetry for outcome measurement | https://github.com/LearningLocker/learninglocker | GPL-3.0 |
+| Offline variant | https://github.com/learningequality/kolibri | MIT |
+
+**Why start from TutorIA rather than DeepTutor.** DeepTutor is far more mature and should still be
+the default for most builds (see **P1**). Choose TutorIA when the engagement is **Spanish-language,
+public-sector and regional**, because three things come with it that maturity cannot buy: a
+Colombian public university and a **Minciencias**-funded provenance, a **named pedagogical
+director** and teacher-training framework, and a design brief that is already *rural higher
+education* rather than a generic tutor localised afterwards. In a ministry evaluation that
+provenance is worth more than feature count.
+
+**Wiring, in the order that de-risks fastest.**
+
+1. **Clone the right branch.** `git clone -b feature/refactor-to-v2-requirements
+   https://github.com/LabSirius/TutorIA`. **`main` contains documentation only**, and the
+   `Sof1SP/tutorIA` address in the README has no code in any branch. Budget a day to confirm what
+   you actually have before promising anything.
+2. **Stand up the backend as-is.** `docker-compose.yml` brings up `pgvector/pgvector:pg16` plus
+   Ollama with an init container. Pull `nomic-embed-text` (**768-dim, matched to
+   `content_chunks.embedding`** — a different embedding model means a migration, not a config
+   change). Set **`require_embedding_model: true`** in production so a misconfigured RAG stack
+   fails at boot instead of silently degrading. Run Alembic; ignore the `create_all` bootstrap the
+   code's own `TODO(tech-debt)` tells you to delete.
+3. **Seed the pedagogy, don't hard-code it.** Prompt templates live in the database (**RF-21**,
+   `python -m app.db.seed prompts`). This is where the client's pedagogical framework — and
+   **P7**'s scaffolding, hint ladders and mastery gates — is expressed. Treat it as the main
+   configuration surface, co-authored with the client's academics.
+4. **Build the three things that are missing.** This is the honest bulk of the work: **(a)** a
+   learner-facing frontend — or skip it entirely and go straight to step 5, which is usually
+   better; **(b)** a real **LTI 1.3 launch** via `ltijs`, because TutorIA's existing Open edX
+   integration is a **data-sync gateway (RF-22) on APScheduler, not a launchable tool**; **(c)** a
+   test suite — `pytest` and `pytest-asyncio` are already declared in `requirements.txt` and there
+   are no tests.
+5. **Prefer LTI-in-platform over a bespoke UI.** It is less work, and it inherits the platform's
+   accessibility conformance — see **P10**.
+6. **Keep the model seam.** TutorIA defaults to local Ollama (`llama3.2`) through an
+   OpenAI-compatible client with a `request_router` (**RF-23**). Put **LiteLLM** behind that seam
+   so the same deployment can move to a bigger local model, to **Latam-GPT** weights, or to a
+   hosted endpoint on one config change — which is exactly the clause ministries ask for.
+7. **Instrument from day one.** Learning Locker captures xAPI so **P7**'s measurement plan has
+   data. Do not skip this: the region's measured governance gap is that **9% of institutions
+   evaluate their AI implementation at all**, which makes measurement the differentiator.
+
+**Say this plainly to the client, because it converts a risk into a selling point.** TutorIA is an
+early-stage backend, not a product; the work is completing a funded public-university project, and
+the frontend, LTI plugin and tests are **specified by its own README and absent from its code**.
+Contributing those upstream under MIT is a visible, creditable contribution to a national research
+programme — a materially better story than a private fork, and one a public client can cite in its
+own reporting.
+
+**Licence note.** TutorIA is MIT, so there is no copyleft constraint on your additions. Open edX
+is **AGPL-3.0**: integrate over **LTI** rather than forking `edx-platform`, and the obligation
+stays on the platform side of the boundary.
+
+---
+
+## P10 — Accessibility-gated public-sector bid
+
+**Sell to:** any public-sector or publicly funded buyer — US federal and state (**Section 508**),
+EU and UK public bodies (**EN 301 549**, **European Accessibility Act**, in force since
+**28 June 2025**), and any university procurement with a VPAT requirement. **Effort: 4–6 weeks**
+as a workstream attached to another pattern, not a standalone build. New in `p873`.
+
+**The problem this pattern exists to solve.** Across this KB's entire agent inventory, **exactly
+one education-native agent publishes an accessibility conformance statement**:
+`CAHLR/OATutor`. If conformance gates the procurement, a bespoke agent UI means commissioning an
+audit and remediating an unknown quantity of findings — on your own budget, before you can bid.
+
+| Layer | Component | Licence | Role in the conformance story |
+|---|---|---|---|
+| Conformant host UI | https://github.com/moodle/moodle | GPL-3.0 | Moodle core and mobile are **stated** to be WCAG 2.2 AA certified. **Request the VPAT/ACR** — this is a vendor claim this session could not verify |
+| Launch mechanism | https://github.com/Cvmcosta/ltijs | Apache-2.0 | LTI 1.3 launch with grade passback; the agent runs as a tool *inside* the conformant UI |
+| Agent with its own statement | https://github.com/CAHLR/OATutor | MIT | The fallback when the agent itself must carry conformance: Section 508 / WCAG documented, React, static-deployable |
+| Accessible assessment rendering | https://github.com/Citolab/qti-components | GPL-3.0 | QTI 3 standards-compliant item rendering |
+| Open-response workflow | https://github.com/openedx/edx-ora2 | AGPL-3.0 | Human-reviewed assessment rather than proctoring (see **P2**, **T8**) |
+| Content conversion | https://github.com/docling-project/docling | MIT | Structured extraction — the input side of making generated content accessible |
+
+**Wiring, and the order matters.**
+
+1. **Decide where conformance lives before writing any UI.** Two viable answers: the agent runs
+   **inside a platform that already holds a statement** (cheapest, and the default recommendation),
+   or you adopt **OATutor**, the one agent carrying its own. A bespoke front end is the third
+   answer and it is the expensive one.
+2. **Launch over LTI 1.3 with `ltijs`.** Keep every learner-facing surface inside the platform's
+   chrome. Use custom UI only for staff-facing surfaces, where the procurement bar is lower.
+3. **Treat generated content as in-scope — this is the step everyone skips.** An accessible
+   platform routinely serves inaccessible embedded content: the SCORM package, the PDF workbook,
+   the generated slide deck. **Anything the agent emits inherits the obligation.** So constrain
+   generation: alt text required for every generated image, heading structure enforced in generated
+   documents, no colour-only encoding in generated charts, captions and transcripts for any
+   narrated output, and reading order asserted in exported PDFs. Make these **template and
+   prompt-level constraints** (in P9 that means the seeded prompt templates) and then test the
+   output, not the prompt.
+4. **Add the WCAG 2.2 criteria that specifically bite learning products**: target size, dragging
+   movements, consistent help, accessible authentication — the last one matters because login
+   puzzles and cognitive tests are common in exam flows and are now explicitly in scope.
+5. **Automate what automation can catch, then stop pretending it is enough.** Wire `axe-core` into
+   CI for regressions, and budget a **manual audit with assistive-technology users** for the claim
+   itself. Automated tooling catches a minority of real failures; a conformance statement built
+   only on it will not survive scrutiny.
+6. **Produce the artifact the buyer actually asked for:** a VPAT/ACR covering the deployed
+   configuration, with known limitations stated. A statement with honest exceptions wins bids;
+   an overclaim fails an audit later, which is worse than losing.
+
+**The regulatory clock, secondary-sourced** (all EU primary sources are unreachable from this
+session): the **European Accessibility Act** has applied since **28 June 2025**, and the next
+**EN 301 549** revision aligning it to **WCAG 2.2 AA** is reported as due in the Official Journal
+in **late 2026**. Treat WCAG 2.2 AA as the target now, not 2.1.
+
+**Pair with:** **P4** in EMEA (the same buyer, the same conformance documentation habit, the same
+2027 clock) and **P9** in LATAM, where launching inside Moodle or Open edX removes the frontend
+TutorIA does not have — a conformance requirement and a missing UI cancelling each other out.
+
+---
+
 ## Pattern selection by region
 
 | Region | Lead with | Because |
 |---|---|---|
 | North America | P1, then P6, then P7 | FERPA plus 134 bills in 31 states; MD/ID/OK/VA mandate district policy and NC's model-policy deadline is **31 Dec 2026**. Only **32%** of administrators report an institution-wide policy and **87%** of faculty wrote their own — P6 consolidates that. P7 matters because the published harm fell hardest on first-generation students, which every access-mandated institution must answer. |
-| EMEA | P4, then P1 | Article 50 disclosure is live (2 Aug 2026), the education high-risk tier lands 2 Dec 2027, and institutions are declining to renew commercial AI contracts. |
+| EMEA | P4, then **P10**, then P1 | Article 50 disclosure is live (2 Aug 2026), the education high-risk tier lands 2 Dec 2027, and institutions are declining to renew commercial AI contracts. **P10** because the European Accessibility Act is already in force and EN 301 549 is realigning to WCAG 2.2 AA — and only one agent in this KB carries a conformance statement. For Gulf engagements, KHDA has already published school-level guidance, so lead with compliance implementation rather than policy authorship. For African engagements, the integration surfaces are Chamilo and Kolibri (**P5**), and regional code is largely unlicensed (**T10**) — so lead with licensing and partnership, not a fork. |
 | APAC | **P8**, then P3 | Vietnam's Decision 33/2026/QD-TTg is a published specification with a human-review carve-out, and South Korea's pilot period closes. P3 for national-programme scale. |
-| LATAM | P2 and P5, then P7 | LGPD automated-decision review is already binding. **87%** of institutions use AI, **26%** have a strategy and **9%** evaluate — so P7's measurement layer is the gap, and P2 must budget re-fitting ArguLens for Spanish and Portuguese. |
+| LATAM | **P9**, then P2 and P5, then P7 | **P9** is new and leads now: TutorIA is MIT, Colombian, Spanish-language, rural-first and ministry-funded — the only LATAM-origin base this KB has verified, and provenance counts in a public evaluation. LGPD automated-decision review is already binding. **87%** of institutions use AI, **26%** have a strategy and **9%** evaluate — so P7's measurement layer is the gap, and P2 must budget re-fitting ArguLens for Spanish and Portuguese. |
 | Global | P6, then P7 | The governance gap is universal (only **31%** of faculty are meaningfully involved in AI policy) and nobody is measuring outcomes. |
 
 **If you read only one line of this file:** the two patterns no competitor is selling are **P7**
 (outcome evidence about the client's own students) and **P8** (de-escalating out of a statutory
 high-risk tier by design). Both are services-shaped, both are defensible with citations, and
-neither can be bought as a product.
+neither can be bought as a product. **`p873` adds a third candidate: P9** — not because the
+technology is novel, but because *"we are completing a Colombian public university's MIT-licensed
+tutor and contributing it back"* is a position a competitor reselling a US product cannot occupy
+at any price.

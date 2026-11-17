@@ -6,7 +6,12 @@ updated: 2026-11-17
 
 # Market intelligence — education
 
-**Pass `p872`, 2026-11-17** (second pass of the day). `p871` ran the full twelve-leg sweep;
+**Pass `p873`, 2026-11-17** (third pass of the day). `p873` ran the full global and four-region
+sweep plus dedicated legs on Africa-origin code, accessibility conformance, the trial literature
+and the EU timeline; its additions are the **EMEA** weekly-use figures, the **Middle East and
+Africa** material that two earlier passes wrongly believed unfileable, **TutorIA** in LATAM, and
+new regulator and M&A entries under *Key players*. `p872`'s adoption tables stand unchanged and
+were not re-run. For background: `p871` ran the full twelve-leg sweep;
 `p872` ran targeted legs against `p871`'s declared gaps — regional adoption measurement, the
 grading and proctoring categories, the trial literature, and the APAC and LATAM regulatory
 detail. **The headline change: `p871` declared that no reliable per-region adoption rates
@@ -56,9 +61,10 @@ studio like Globant has an advantage over a product company.
 | Category | Players |
 |---|---|
 | Hyperscaler / frontier vendors in education | OpenAI (ChatGPT Edu — four Australian universities, Nov 2026), Google Cloud (with Accenture, 1,000+ Indian institutions), Microsoft |
-| Incumbent platforms | Instructure (Canvas), Moodle HQ, Anthology/Blackboard, D2L Brightspace, PowerSchool, Pearson, Chegg |
+| Incumbent platforms | Instructure (Canvas — **building a first-party AI study coach into Canvas**, new in `p873`), Moodle HQ, Anthology/Blackboard, D2L Brightspace, PowerSchool, Pearson (**agreed to acquire Workera**, the skills-assessment company — new in `p873`, via HolonIQ Q3 2026), Chegg |
 | Non-profit stewards | Axim Collaborative (Open edX), Apereo (Sakai, Opencast), 1EdTech (LTI/QTI/Open Badges), Ed-Fi Alliance, Learning Equality (Kolibri), PKP (OJS) |
-| University labs shipping OSS | HKUDS / HKU (DeepTutor, LightRAG), THU-MAIC / Tsinghua (OpenMAIC), CAHLR / UC Berkeley (OATutor) |
+| University labs shipping OSS | HKUDS / HKU (DeepTutor, LightRAG), THU-MAIC / Tsinghua (OpenMAIC), CAHLR / UC Berkeley (OATutor), **Grupo Sirius / Universidad Tecnológica de Pereira, Colombia (TutorIA — MIT, the first LATAM-origin entry in this KB, new in `p873`)** |
+| Education-sector regulators & guidance bodies (new in `p873`) | **EU** (AI Act Art. 5(1)(f) and Art. 50; Digital Omnibus); **UK Department for Education** — generative-AI product safety standards for education, reported **January 2026**; **Ofqual** — coursework-integrity guidance; **KHDA Dubai** — explicit responsible-AI guidance to private schools; **US Dept. of Education** (April 2026 K-12 guidance; March 2026 OET framework); state legislatures; **UNESCO / IESALC** and its LAC AI-in-Education Observatory |
 | Services competitors | Accenture (the Google Cloud India deal is the reference case), Deloitte, Infosys, TCS, Globant |
 
 ## Measured adoption by region — new in `p872`
@@ -148,12 +154,48 @@ consent/transparency workstream, not just a technical one.
 
 **No measured APAC institutional adoption rate was found** — see declared gaps.
 
-### EMEA — one data point, and it is borrowed
+### EMEA — two data points now, and the second one is about frequency
 
-The **70% formal-AI-guidance** figure above is the only EMEA measurement found, and it comes from
-UNESCO IESALC's comparator rather than a European instrument. The Digital Education Council
-reports EMEA only in aggregate. **No standalone European sector survey (EUA, Jisc or equivalent)
-surfaced** — see declared gaps.
+The **70% formal-AI-guidance** figure above comes from UNESCO IESALC's comparator rather than a
+European instrument. The Digital Education Council reports EMEA only in aggregate. **No standalone
+European sector survey (EUA, Jisc or equivalent) has surfaced in three passes** — see declared gaps.
+
+`p873` adds one measurement of a different kind, worth having precisely because it measures
+**frequency** rather than ever-use:
+
+| Measure | Value | Source |
+|---|---|---|
+| Academics using generative AI **every week** | **67%** | QS research, via EMEA-context secondary reporting |
+| Students using generative AI **every week** | **62%** | Same |
+
+**Why frequency matters more than the headline adoption rates.** The global instruments say 88% of
+students and 77% of faculty *use* AI. Weekly use at 62–67% says this is **routine practice, not
+experimentation** — which changes what a governance engagement is for. A policy written for
+occasional use is the wrong artifact: the need is operational guardrails inside weekly workflows.
+**Caveat, and it is a real one:** QS is a global higher-education instrument, not a European one,
+and it surfaced here in EMEA-framed reporting. It **narrows** the EMEA gap; it does not close it.
+
+#### EMEA includes the Middle East and Africa — and `p873` finally files them there
+
+Two earlier passes recorded Africa and MENA as unrepresentable in the region vocabulary. That was
+an error: **EMEA is Europe, Middle East and Africa.** Filed here accordingly:
+
+- **Gulf — policy-led, and the guidance is school-level.** **KHDA (Dubai)** has issued explicit
+  responsible-AI guidance to private schools; the Gulf pattern is regulator-first rather than
+  institution-first, so an engagement there starts from a published rulebook rather than from a
+  governance vacuum. This is the opposite of the North American picture above, and it changes the
+  sales motion: **compliance implementation, not policy authorship.**
+- **Africa — research output, no licences, and real language coverage.** `p873` resolved a
+  **South African** education agent (`muskvdc/EduTwin-Africa`, Grades 8–12) and identified
+  **Nigerian** work (**EduNaija AI Tutor**, AfricaNLP 2026: multi-agent RAG on the Nigerian
+  curriculum with **English, Yoruba, Hausa and Igbo** support) plus **AFRILANGTUTOR** (Findings of
+  EMNLP 2026) on low-resource African language tutoring. **None of the resolvable code carries a
+  licence** — see `intel/trends.md` **T10**. The regional capability is real and the legal basis
+  to reuse it is not, which is itself the opportunity: licensing and partnership, before code.
+- **Africa deployment reality is already in this KB's platform layer:** `chamilo/chamilo-lms` has a
+  significant francophone-Africa installed base and `learningequality/kolibri` (**MIT**) is the
+  offline-first platform of record for low-connectivity programmes. Those are the integration
+  surfaces for any African engagement, not a greenfield build.
 
 ## Opportunities by region
 
@@ -249,6 +291,22 @@ consequential decisions human.
   a European build. ILIAS carries the German-speaking public sector.
 - **High-risk conformance tooling** (logging, human oversight, accuracy documentation) built
   once against the AI Act and resold across institutions.
+- **Accessibility conformance as a bid gate — new in `p873`.** The **European Accessibility Act
+  has applied since 28 June 2025**, and the next **EN 301 549** revision aligning it to
+  **WCAG 2.2 AA** is reported as due in the Official Journal in late 2026 (secondary-sourced). In
+  this KB's whole agent inventory, **only `CAHLR/OATutor` publishes a conformance statement**. The
+  winning architecture is therefore to launch the agent as an **LTI 1.3 tool inside a platform
+  that already holds a conformance statement** (Moodle core and mobile are stated to be WCAG 2.2
+  AA certified — a vendor claim to verify via VPAT/ACR) rather than shipping a bespoke learner UI.
+  And the audit failure is usually the **generated content**, not the platform: whatever an AI
+  content generator emits inherits the obligation. See `compose/patterns.md` **P10**.
+- **UK product-safety standards are a named, dated gate — new in `p873`.** The **Department for
+  Education** issued generative-AI **product safety standards for education**, reported
+  **January 2026**, and **Ofqual** has published coursework-integrity guidance. For UK schools
+  work this is a concrete conformance checklist to build against rather than a governance debate.
+- **Gulf engagements start from a rulebook, not a vacuum.** With **KHDA Dubai** guidance already
+  issued to private schools, the Middle East motion is **compliance implementation** against
+  published rules — a different and faster sale than the North American policy-consolidation work.
 
 ### APAC
 
@@ -315,6 +373,25 @@ consequential decisions human.
   modest hardware) viable where cloud-per-seat economics are not.
 
 ### LATAM
+
+**New in `p873` — the region now has an open-source agent of its own, and it is reusable.**
+**TutorIA** (`LabSirius/TutorIA`, **MIT**, Grupo Sirius at Universidad Tecnológica de Pereira,
+Colombia) is the first verified LATAM-origin education-native agent in this KB: built for **rural
+higher education in Risaralda**, designed to run inside **Open edX**, defaulting to **locally
+served inference via Ollama** with **pgvector** retrieval, and funded with a reporting obligation
+to **Minciencias**. Three ways that changes a LATAM conversation:
+
+- **It is a credibility asset before it is a code asset.** A Colombian public-university tutor,
+  Spanish-language and rural-first, is a better reference for a ministry conversation than a Hong
+  Kong or Berkeley project — and it is MIT, so it can actually be used.
+- **Its architecture already matches the region's binding constraints:** local inference answers
+  the data-residency question without a separate sovereignty workstream, and pgvector adds no
+  licensed infrastructure.
+- **Its gaps are the engagement.** `main` holds documentation only; the code is on
+  `feature/refactor-to-v2-requirements` and is **backend-only** — the React frontend, the Open edX
+  plugin and the test suite its README specifies **do not exist in any branch**. Those three are a
+  well-specified, visible, publicly creditable contribution to a funded national project. See
+  `compose/patterns.md` **P9**.
 
 **Regulatory picture — mostly pending, with the binding layer being data protection.**
 - **Brazil:** **PL 2338/2023** passed the Senate in December 2024 but remains in the Chamber of
@@ -419,20 +496,37 @@ consequential decisions human.
   `p872`** — see *Measured adoption by region*. Residual gaps within it:
   - **No measured APAC institutional adoption rate.** Ipsos gives public attitudes toward
     banning AI, not institutional or faculty adoption. The gap is narrowed, not closed.
-  - **No standalone EMEA sector survey.** The 70% figure is UNESCO IESALC's comparator, not a
-    European instrument. A targeted EUA / Jisc / national-rectors-conference leg is the obvious
-    next step and was not run this pass.
+  - **No standalone EMEA sector survey**, after three passes. The 70% figure is UNESCO IESALC's
+    comparator, not a European instrument. `p873` **narrows** this with QS weekly-use figures
+    (67% of academics, 62% of students) — but QS is a global instrument surfacing in EMEA-framed
+    reporting, not a European one. A targeted **EUA / Jisc / national-rectors-conference** leg is
+    still the obvious next step and has not been run.
   - The instruments measure different respondents and objects and **must not be averaged**.
 - **Vietnam's AI Law number and compliance dates are unresolved.** Sources conflict on
   134/2025/QH15 vs 91/2025/QH15, and on 1 Mar 2027 / 1 Sep 2027 versus 1 Jul 2027 / 1 Jul 2029.
   All Vietnam material above is from secondary law-firm commentary. Confirm against official
   Vietnamese texts before client use.
-- **MENA and Africa are not covered by the mandated region vocabulary.** A University Agentic
-  AI Lab (25–26 November 2026, University of Dubai) and the AIJRF programme surfaced in `p871`'s
-  news leg and have no bucket in the closed five-value region set, so they are recorded here
-  rather than silently dropped. `p872` adds nothing new on either.
+- ~~**MENA and Africa are not covered by the mandated region vocabulary.**~~ **WITHDRAWN by
+  `p873`: the gap was an error of reading, not of data.** **EMEA is Europe, Middle East and
+  Africa** — both were always in the bucket. The University Agentic AI Lab (25–26 November 2026,
+  University of Dubai) and the AIJRF programme from `p871`'s news leg, and `p873`'s **KHDA Dubai**,
+  **South African** and **Nigerian** findings, are now filed under **EMEA** with the country named
+  in prose, exactly as the schema intends. Two passes dropped material they could have kept.
+- **Africa and the Middle East remain thin on *measurement*, as opposed to filing.** `p873` found
+  policy (KHDA), research output (AfricaNLP, EMNLP) and code (one unlicensed South African repo),
+  but **no institutional adoption rate for any African or Middle Eastern market**. Searched this
+  pass via the EMEA regional leg and a dedicated Africa leg; not found. This is now the thinnest
+  measured region in the file — thinner than APAC.
 - **APAC and LATAM investment data is thin to absent.** Deal-level data existed only for North
   America (median ~$9M) and Europe. Unchanged after `p872`.
 - **Market-size figures remain directional only** and span 2.4× across publishers. The adoption
   measurements added by `p872` are far more reliable than any dollar figure in this file and
   should carry more weight in an engagement.
+- **Every source behind this file is a search-engine summary.** `p873` could not open a single
+  non-GitHub host: `unesco.org`, `iesalc.unesco.org`, `ipsos.com`, `multistate.us`,
+  `edworkingpapers.com`, `doi.org`, `sciencedirect.com`, `arxiv.org`, `aclanthology.org` and all
+  EU hosts return `000` on `curl` and `ENOTFOUND` on `WebFetch`. The adoption tables above are
+  therefore **reported** figures, not read ones. By contrast every repository claim in this KB was
+  verified first-hand this pass. **Allowing `unesco.org`, `edworkingpapers.com` and `arxiv.org`
+  would upgrade the adoption and efficacy sections from secondary to primary sourcing** — the
+  single highest-leverage change available to this KB.

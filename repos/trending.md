@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p873`) — **six new addresses resolved: one MIT LATAM tutor whose code is on a feature branch, three unlicensed Global-South tutors, and an SIS whose default branch is `mobile`**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+Third pass of the day. Not a trending sweep — `github.com/trending` and `api.github.com` are both
+`403` for this session, so **this KB cannot read the trending page at all** and says so rather than
+reproducing a blog's version of it. What follows is every address `p873` resolved first-hand with
+`git ls-remote --symref` plus licence and file bytes from `raw.githubusercontent.com`.
+
+### Newly resolved addresses
+
+| Repo | Licence (bytes on resolved branch) | Default branch | Status |
+|---|---|---|---|
+| https://github.com/LabSirius/TutorIA | **MIT** | `main` | **NEW — the KB's first verified LATAM-origin education-native agent.** Universidad Tecnológica de Pereira (Colombia), Grupo Sirius. Tag `informe-minciencias-2026-09` → publicly funded deliverable. **`main` holds documentation only**; the v2 backend lives on `feature/refactor-to-v2-requirements`. Ollama-default inference, pgvector RAG, Open edX sync gateway. See `agents/trending.md` for the full branch map and maturity flags. |
+| https://github.com/Sof1SP/tutorIA | **MIT** | `main` | **NEW — and a trap.** The address TutorIA's own README tells you to `git clone`. Branches `main` and `dev`; **neither contains any code** — `README.md` and `LICENSE` only. Recorded so no later pass mistakes it for the project's live home. |
+| https://github.com/muskvdc/EduTwin-Africa | **NONE — no licence file** | `main` | **NEW.** Curriculum-aware tutor, RAG + bounded multi-agent + ReAct tools + guardrails, **South African Grades 8–12**. Africa-origin, and **unusable**: no licence means no grant. |
+| https://github.com/giovanayngrid-gk/multiagent-ai-tutor | **NONE — no licence file** | `main` | **NEW.** Brazilian, Portuguese-language multi-agent tutor; LangChain + Llama 3 via local Ollama + Streamlit. No grant. |
+| https://github.com/nifalconi/educational-agents | **NONE — no licence file** | `main` | **NEW.** Spanish-language teaching library (LATAM Spanish identifiers and error messages), from a *Niñas Pro* agents course. No grant. |
+| https://github.com/francoisjacquet/rosariosis | **GPL-2.0** | **`mobile`** | **NEW — and the oddest default branch this KB has resolved.** RosarioSIS, a mature PHP/PostgreSQL student information system. Latest tags `v9.3`, `v9.3.1`, `v9.3.2`. See the branch note below. |
+
+**Six new addresses, three of them unusable.** The table is this length because this is what
+resolved; it is not padded, and the three unlicensed rows are listed precisely *so that no later
+pass re-imports them from a listicle as permissive.*
+
+### `francoisjacquet/rosariosis` defaults to `mobile`, and that is now five non-`main` defaults in two passes
+
+`p872` found four of eleven audited addresses not defaulting to `main` (`opencast`, `oppia`,
+`kolibri` → `develop`; `edx-ora2`, `ltijs`, `OpenOlat`, `sakai` → `master`). RosarioSIS makes
+the pattern worse in kind, not just in count: its default branch is **`mobile`**, a *feature*
+name. Nothing about the address hints at it, and no heuristic would guess it.
+
+The operational rule this KB has been converging on should now be stated as a hard rule:
+
+> **Never construct a `raw.githubusercontent.com` path from an assumed branch.** Resolve the
+> branch with `git ls-remote --symref <url> HEAD` first. A guessed `main` 404s, a 404 reads as
+> *"no licence file"*, and *"no licence file"* is published as **"no grant — cannot build on it"**.
+> That single assumption would have libelled RosarioSIS's licence this pass and `opencast`'s last
+> pass. The two most expensive wrong-data classes in this KB — phantom licences and phantom
+> absences — both come from this one shortcut.
+
+RosarioSIS is a genuinely useful find on its own terms: it is the **third** open-source SIS this
+KB has verified, and — like Gibbon (GPL-3.0) and openSIS-Classic (no licence file at all) — it is
+**copyleft**. Three verified SIS options, zero permissive. The "no permissive open-source SIS
+exists" gap in `verticals/solutions.md` is now evidenced by three independent data points rather
+than asserted from two.
+
+### What could not be resolved, stated so the silence is not read as coverage
+
+| Lead | Why it is not in the tables above |
+|---|---|
+| **EduNaija AI Tutor** (AfricaNLP 2026; Nigerian curriculum; English/Yoruba/Hausa/Igbo; authors claim a Hugging Face release) | No repository address resolves. `git ls-remote` returned nothing on the obvious namespaces; `aclanthology.org` unreachable from this session. **Try Hugging Face next pass.** |
+| **AFRILANGTUTOR** (Findings of EMNLP 2026, arXiv:2604.20996; Llama-3-8B + Gemma-3-12B SFT/DPO, release promised "under open licences") | Same — no resolvable address; `arxiv.org` unreachable. |
+| **Lenda AI** (self-described Apache-2.0 LATAM tutor, v0.1) | `lenda.ai` does not resolve; no independent coverage in any search leg; `git ls-remote` found nothing at `draix/lenda`, `lenda-ai/lenda`, `lendaai/lenda`, `draix/lenda-ai`. **A licence claim on a project page is not a licence.** |
+| **GitHub trending, properly** | `github.com` HTML and `api.github.com` both `403`; `gh api search/repositories` returns an empty set. Four channels, no trending data. Blog reconstructions of the trending page were deliberately **not** copied in as findings. |
+
+### Release state re-confirmed by tag resolution, not by blog
+
+`HKUDS/DeepTutor` → `v1.7.3`. `THU-MAIC/OpenMAIC` → `v1.5.0-rc.3`. Both match `p872`'s record.
+**Fork warning:** searching for DeepTutor releases surfaces `DQGX5BP/DeepTutor`,
+`Mostakim2005/DeepTutor` (shipping its own *"Windows Portable & Installer"*), `wocclyl/DeepTutor`
+and `promoteAI/DeepTutor` **above** the canonical repo. The only address to use is
+`https://github.com/HKUDS/DeepTutor`.
+
 ## 🟢 `2026-11-17` (`p872`) — **canonical-address audit: `openedx/` is the live org for `edx-ora2`, and `opencast/opencast` defaults to `develop`; plus the licence-grep method that had to be thrown away**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

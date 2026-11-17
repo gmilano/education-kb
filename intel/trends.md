@@ -6,10 +6,13 @@ updated: 2026-11-17
 
 # Current trends — education AI
 
-**Pass `p872`, 2026-11-17** (second pass of the day). `p871` recorded eight trends. `p872` adds
-**T9**, which is the most consequential finding either pass produced, and revises **T8** because
-the gap it rested on has closed. Each trend is tied to something measured or verified; where the
-only available support is a vendor blog, that is stated.
+**Pass `p873`, 2026-11-17** (third pass of the day). `p871` recorded eight trends; `p872` added
+**T9** and revised **T8**. `p873` **strengthens T9** with three further trials — including the one
+that isolates *scaffolding* as the active ingredient — and adds **T10** on Global-South agent
+origin and its licensing. Each trend is tied to something measured or verified; where the only
+available support is a vendor blog or a search summary, that is stated. **Note this pass's
+evidential split:** repository claims were verified first-hand, while every trial, survey and
+regulatory date is a search-engine summary of a page no channel in this session could open.
 
 ## T1 — The education-native agent has arrived, and it came from university labs
 
@@ -123,17 +126,21 @@ Vietnam's high-risk listings are reported to bite only where AI output is **the 
 decision without meaningful human review**. Human-in-the-loop is not a compliance nicety; it is
 what keeps an assessment system out of the high-risk tier entirely.
 
-## T9 — The efficacy evidence arrived, and the largest trial is negative
+## T9 — The efficacy evidence arrived, the largest trial is negative, and `p873` found the active ingredient
 
-This is new in `p872` and it should change how this KB sells tutoring. `p871` declared that no
-measured efficacy data existed for education AI. It exists now, and it does not support the
-vendor narrative.
+New in `p872`; **substantially strengthened in `p873`, which added three more trials and one that
+isolates the mechanism.** `p871` declared that no measured efficacy data existed for education AI.
+It exists now, there are six trials in the table below, and it does not support the vendor
+narrative.
 
 | Trial | Design | Result |
 |---|---|---|
 | **EdWorkingPaper 26-1598** | RCT, **2,379 undergraduates, 30 instructors**, US public university; access to a course-integrated GenAI tutor randomised across sections of the same course | **Negative.** Tutor access **reduced final grades by 0.37 SD** and LMS participation by **0.90 SD**. **Estimated academic losses were larger among first-generation students.** |
 | **Journal of Economic Education** (doi:10.1080/00220485.2026.2695361) | RCT, four macroeconomics sections: control / group-work only / AI only / AI + group work | **Positive.** All treatment arms beat control; the **combined GenAI + group-work arm produced the largest gains**. |
 | **Nature Scientific Reports** (s41598-025-97652-6, 2025) | RCT, AI tutor vs in-class active learning | **Positive.** Students reportedly learned more than twice as much in less time. |
+| **EdWorkingPaper 26-1551** — *new in `p873`* | **Two-year cluster RCT, 18 Tennessee middle schools**; Khan Academy's **Khanmigo** (proprietary) at district scale | **Small positive.** **0.06–0.08 SD per school year** — and the mechanism matters more than the effect: **struggling students rarely engaged the tutor at all.** |
+| **"Less stress, better scores, same learning"** (ScienceDirect S2666920X25001778) — *new in `p873`* | RCT, **N=275**, programming education; unrestricted AI vs scaffolded AI tutor vs no AI | **Negative for unrestricted access, positive for scaffolding.** Unrestricted-AI students scored **worse than controls who never used AI** on exams taken **without** AI; the **scaffolded tutor beat unrestricted AI**. The title names the finding: performance and learning came apart. |
+| **Tutor CoPilot** — *new in `p873`* | RCT, **900 tutors, 1,800 K–12 students**; AI assisting **human** tutors rather than replacing them | **Positive.** Students whose tutors had the system were **4 percentage points** more likely to master maths topics. |
 
 **The reconciliation is the insight, and it is actionable.** These results are not contradictory;
 they differ on **design**. The negative trial randomised *access* to a tutor layered on top of
@@ -145,6 +152,37 @@ human group work. The pattern across all three:
 > **An AI tutor offered as an optional supplement can reduce learning. An AI tutor embedded in a
 > designed pedagogy — with structured human interaction, or replacing a less effective mode —
 > can improve it.** The intervention is the instructional design, not the model.
+
+**`p873` sharpens that into two separable findings, and both are sellable.**
+
+**1. The active ingredient is scaffolding, and one trial isolates it.** The programming RCT is the
+most useful single study in this table because it ran *unrestricted AI* and a *scaffolded AI
+tutor* as **separate arms of the same experiment**. Unrestricted access lost to using no AI at
+all; scaffolding won. Every other result in the table is consistent with that one variable:
+structured group work (positive), a human tutor holding the reins (positive), a research-designed
+replacement tutor (positive), optional always-available access (negative), unmandated district
+rollout (0.06–0.08 SD). **"Scaffolded or not" explains this table better than "AI or not" does** —
+which means the deliverable a client should be buying is the scaffold: hint ladders, mastery
+gates, attempt-before-answer, retrieval practice, escalation to a human. That is `compose/`
+work and configuration, not model choice.
+
+**2. The engagement-selection mechanism is a procurement argument, not a footnote.** Two
+independent trials found it: undergraduate LMS participation **collapsed by 0.90 SD** under tutor
+access, and in 18 middle schools **the struggling students barely used the tutor**. So uptake is
+not uniform and it is **inversely correlated with need** — the learners a public institution is
+buying the tool *for* are the least likely to use it. Any proposal whose success metric is
+*usage* is measuring the wrong thing and will report a win while the equity outcome goes the other
+way. Pair this with the measured governance gaps in `intel/market.md` (9% of LATAM institutions
+evaluate their AI implementation at all) and the exposure is plain: **most clients currently
+cannot detect either effect.** Selling the measurement plan is therefore both the honest move and
+the commercially durable one — it is what makes the next engagement provable.
+
+**And one caution against over-reading the dissociation.** The programming trial's headline is
+that AI-supported students felt less stress and scored better *with* AI while learning no more.
+A client measuring satisfaction and in-task performance will see success exactly where learning
+did not happen. **Satisfaction and assisted performance are the two metrics most likely to be in a
+pilot's success criteria, and they are the two that can move without learning.** Insist on at
+least one unaided post-test.
 
 **Why it matters commercially, and it matters a great deal.** The default edtech motion — deploy
 a tutor, make it available, measure usage — is the arm that *lost*. A studio that leads with
@@ -164,6 +202,44 @@ for medical students, NCT07692035 on an ICU teaching agent, NCT07481162 comparin
 exam assessment) have **not reported outcomes**. And **none of this literature evaluates any
 repository named in this KB** — it tests commercial and bespoke tutors.
 
+## T10 — The Global South started producing education agents; almost none of them carry a licence
+
+New in `p873`, and it is a market-shape finding rather than a licensing curiosity.
+
+For several passes this KB recorded that education-native OSS came only from East Asian and US
+university labs, and that LATAM and Africa appeared solely as deployers. That is no longer true —
+`p873` resolved four Global-South education agents. **Exactly one has a licence.**
+
+| Project | Origin | Licence | Fundable, legally |
+|---|---|---|---|
+| `LabSirius/TutorIA` | Universidad Tecnológica de Pereira, **Colombia** — funded, reported to **Minciencias** | **MIT** | **Yes** |
+| `muskvdc/EduTwin-Africa` | **South Africa**, Grades 8–12 | **none** | No |
+| `giovanayngrid-gk/multiagent-ai-tutor` | **Brazil**, Portuguese | **none** | No |
+| `nifalconi/educational-agents` | LATAM Spanish, from a course | **none** | No |
+
+**The discriminating variable looks like funding, not sophistication.** The one project with a
+licence, a contributing guide, a branch policy and a requirements document is the one with a
+national science ministry behind it and a reporting obligation attached. The unlicensed three are
+individual and course work — written by people who had no reason to think about redistribution.
+
+Three consequences worth acting on:
+
+- **Regional sourcing should start with funded university and ministry projects.** They are the
+  ones that can legally be built on, and the funding is also the best available signal that the
+  project will still exist next year.
+- **"Add a `LICENSE` file" is a near-free, high-value contribution to offer.** It converts a dead
+  end into a possible collaboration, costs an afternoon, and is a genuinely good-faith way into a
+  regional ecosystem. It cannot be done unilaterally — only the copyright holders can license
+  their work — which is precisely why asking is the opening.
+- **Do not mistake this for a quality judgement.** Nothing here says the unlicensed projects are
+  worse. It says they are unusable, which is a different and more fixable problem.
+
+**Counter-reading, stated.** Four repositories is a thin basis for a trend, the sample came from
+two search legs, and absence of a licence may simply reflect the age of these projects rather than
+anything structural. Treat T10 as a working hypothesis with four data points — and note that it
+predicts something checkable next pass: **funded regional projects should carry licences at a
+visibly higher rate than unfunded ones.**
+
 ## Declared gaps
 
 - ~~**No measured efficacy data** for education AI.~~ **CLOSED by `p872`** — see **T9**. But the
@@ -172,7 +248,9 @@ repository named in this KB** — it tests commercial and bespoke tutors.
   learning-outcome data for DeepTutor, OpenMAIC, OATutor, PageLM or ArguLens, and
   `pedagogy-benchmark` measures a *model's* pedagogical knowledge rather than a *deployed
   system's* outcomes. Running a real trial on an open-source deployment would make Globant the
-  only party holding that evidence.
+  only party holding that evidence. **`p873` re-confirms this residual gap after adding three
+  trials:** the new studies test Khan Academy's proprietary Khanmigo, a bespoke programming tutor
+  and a human-tutor assistance tool. **Six trials, zero evaluating any repository in this KB.**
 - **No open-source proctoring platform that is both maintained and permissive.** Narrowed by
   `p872` from "none found" to "two found, both AGPL-3.0, maturity unproven"
   (`sudosylabs/proctor`, `kamlendras/OpenProctor`) — just as the EU moves proctoring into the
@@ -188,8 +266,27 @@ repository named in this KB** — it tests commercial and bespoke tutors.
   secondary-sourced. These hosts would need allowing in the session's network settings.
 - **Vietnam's AI Law number and compliance dates are unresolved** across secondary sources
   (134/2025/QH15 vs 91/2025/QH15; 1 Mar 2027 / 1 Sep 2027 vs 1 Jul 2027 / 1 Jul 2029).
-- **Africa and MENA fall outside the closed region vocabulary** and so cannot be filed, despite
-  surfacing in the news leg.
-- **Star counts unmeasurable for two consecutive passes** (`403` on both channels). No star
-  figure appears anywhere in this KB; blog-sourced figures are how the earlier inflated numbers
-  got in.
+- ~~**Africa and MENA fall outside the closed region vocabulary** and so cannot be filed.~~
+  **WITHDRAWN by `p873` — this gap was never real, and it was self-inflicted.** The closed
+  vocabulary is `North America | EMEA | APAC | LATAM | Global`, and **EMEA is Europe, Middle East
+  and Africa**: both regions are in the bucket's own name. Nigerian, South African and Gulf
+  findings have been fileable all along, and two passes dropped material they could have kept.
+  `p873` files its South African, Nigerian and Dubai findings under **EMEA** with the country named
+  in prose, as the schema intends. This is the second method error in two passes (after the licence
+  grep) caught by **re-reading a rule rather than by new data** — the cheapest class of error to
+  find and the easiest to leave standing for months.
+- **Star counts unmeasurable for three consecutive passes, across four routes** — `api.github.com`,
+  `github.com` HTML, the `gh` CLI, and `gh api search/repositories` (empty set). A session scope,
+  not a GitHub outage. No star figure appears anywhere in this KB; blog-sourced figures are how
+  the earlier inflated numbers got in, and `p873` saw the reason again — three secondary sources
+  gave ~48.9k, ~54k and ~59.9k for the same project inside three weeks.
+- **`p873` could not open a single non-GitHub source.** `curl` returns `000` and `WebFetch`
+  returns `ENOTFOUND` for every one of `arxiv.org`, `aclanthology.org`, `doi.org`,
+  `sciencedirect.com`, `unesco.org`, `edworkingpapers.com`, `multistate.us`, `ipsos.com`,
+  `lenda.ai` and all EU hosts. **Consequence for how to read this KB: repository claims are
+  first-hand (existence, branch, tags, licence bytes, source files), and every paper, survey,
+  trial result and regulatory date is a search-engine summary of a page nobody in this session
+  could open.** The trial numbers in T9 in particular are reported effect sizes, not read ones.
+  Allowing `arxiv.org`, `aclanthology.org` and `edworkingpapers.com` in the session's network
+  settings would upgrade the whole efficacy section from secondary to primary, and is the single
+  highest-leverage change available to this KB.

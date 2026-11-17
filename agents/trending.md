@@ -4,6 +4,196 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p873`) — **the regional-origin gap closes: a verified MIT, LATAM-origin education agent exists — and none of its code is on its default branch**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+`p873` is the third pass of the day. It did not re-verify `p872`'s seventy addresses. It went at the
+two gaps `p872` left standing hardest — **no LATAM-origin and no Africa-origin education-native
+agent had ever surfaced in this KB** — and both moved.
+
+### Channel state — worse than `p872`, and worth stating precisely
+
+| Channel | Result | Consequence |
+|---|---|---|
+| `git ls-remote` (existence, default-branch and tag resolution) | **open** | Primary evidence channel |
+| `raw.githubusercontent.com` (licence bytes, file contents) | **open** | Primary evidence channel |
+| `api.github.com` | **403** — session GitHub scope | No stars |
+| `github.com` HTML | **403** — session GitHub scope | No stars |
+| `gh` CLI (`gh api repos/...`) | **403** — proxy: *"not in this session's authorized repository set"* | No stars |
+| `gh api search/repositories` | **empty result set** | No star-ranked discovery |
+| **Every non-GitHub host** — `arxiv.org`, `aclanthology.org`, `doi.org`, `sciencedirect.com`, `unesco.org`, `iesalc.unesco.org`, `eur-lex.europa.eu`, `data.consilium.europa.eu`, `europarl.europa.eu`, `multistate.us`, `ipsos.com`, `edworkingpapers.com`, `lenda.ai` | **unreachable** — `curl` returns `000`, `WebFetch` returns `ENOTFOUND` | **Every paper, survey and regulatory claim in this pass is WebSearch-summary-sourced and cannot be opened** |
+
+Two things follow, and both are method rather than data:
+
+1. **Star counts are now unmeasurable across four distinct channels for a third consecutive pass.**
+   `p873` added two channels (`gh` CLI and the search API) to the two `p872` tried. This is a
+   session scope, not a GitHub outage. **No star figure appears anywhere in this KB.**
+2. **Repository facts and document facts are no longer on the same evidential footing.** Anything
+   about a repo — existence, default branch, tags, licence bytes, file contents, even code — is
+   verified first-hand this pass. Anything about a paper, a trial, a survey or a regulation is a
+   search engine's summary of a page neither `curl` nor `WebFetch` can open. Where this pass adds
+   a paper or a statistic, it is flagged. Where it adds a repo, it was read.
+
+---
+
+### Gap closed — **LATAM-origin education-native agent. `TutorIA` is real, MIT, and publicly funded**
+
+`p872` declared: *"No LATAM-origin or Africa-origin education-native agent surfaced"*, and refined
+it to *"LATAM's contribution to this stack is a sovereign foundation model, not an education
+agent."* **That refinement was wrong, and this pass retires it.**
+
+| Agent | Repo | Licence | Default branch | Origin |
+|---|---|---|---|---|
+| **TutorIA** | https://github.com/LabSirius/TutorIA | **MIT** (`LICENSE`, verified bytes) | `main` | **Grupo de Investigación Sirius, Universidad Tecnológica de Pereira, Colombia** |
+
+**What it is.** An autonomous conversational tutor agent for **rural higher education in the
+Risaralda department of Colombia**, designed to run **inside Open edX**. Named team: Dr. José
+Jaramillo Villegas (scientific/technical direction), Dra. Luz Elena Grajales López (pedagogical
+direction — the framework, materials and teacher training), Sofía Soto Parra (software, repository,
+quality), plus cloud infrastructure. Initial subjects: **Programming I (Python)** and
+**Introduction to Mathematics**. The repository carries one tag,
+**`informe-minciencias-2026-09`** — a September 2026 report to Minciencias, Colombia's national
+science ministry, so this is a **publicly funded deliverable with a reporting obligation**, not a
+weekend project. That is the single best predictor that it will still exist next year.
+
+**Why it matters strategically, beyond the licence.** This KB has argued for several passes that
+education-native OSS is produced only in East Asian university labs (HKUDS, THU-MAIC) and US
+universities (CAHLR/Berkeley), and that LATAM appears only as a *deployer*. A Colombian public
+university shipping an MIT-licensed tutoring agent **aimed at rural, low-connectivity higher
+education** is the counter-example, and it is the most directly reusable artifact this KB holds
+for a Spanish-language engagement — not because it is the most mature, but because its pedagogical
+framing, language and deployment context already match the brief.
+
+#### The architecture is better than its own README, and this is the pass's most useful correction
+
+The README on `main` describes **Anthropic Claude API + Microsoft Azure**. The code does not do
+that any more. Read on `feature/refactor-to-v2-requirements`:
+
+| Concern | What the code actually does | Evidence |
+|---|---|---|
+| LLM | **Ollama via the OpenAI-compatible interface** — `llm_base_url: http://localhost:11434/v1`, `llm_model: llama3.2`. Claude retained only as an optional configured fallback (`claude_api_key: None`) | `backend/app/config.py` |
+| Provider routing | `request_router`, requirement **RF-23**; startup log states *"provider routing active; default: ollama"* | `backend/app/main.py` |
+| Embeddings / RAG | **Ollama native `/api/embeddings`**, `nomic-embed-text`, **768-dim to match `content_chunks.embedding`** | `backend/app/config.py`, `backend/app/services/rag_service.py` |
+| Vector store | **PostgreSQL + pgvector** (`pgvector/pgvector:pg16`), Alembic as schema source of truth | `docker-compose.yml`, `backend/app/main.py` |
+| LMS integration | **Open edX → PostgreSQL sync gateway** on APScheduler, requirement **RF-22**, *disabled by default so the app starts without Open edX being reachable* | `backend/app/gateways/openedx_gateway/sync_service.py` |
+| Pedagogy | **Prompt templates held in the database** with a warmed cache, requirement **RF-21**, seedable via `python -m app.db.seed prompts` | `backend/app/main.py` |
+| Fail-loud switch | `require_embedding_model` — `False` in dev so `/docs` is reachable without Ollama, **intended `True` in production so a misconfigured RAG stack fails at boot** | `backend/app/config.py` |
+
+Three things are notable in that table. The default inference path is **local and sovereign**, so
+no student text leaves the institution unless someone configures it to. The requirement IDs
+(**RF-21/22/23**) are traceable to the project's own requirements document, which is the kind of
+engineering a ministry audit can follow. And the code carries **honest `TODO(tech-debt)` comments**
+— one states that a `create_all` bootstrap predates the move to Alembic and must be deleted,
+noting it cannot create the pgvector HNSW index anyway. A repo that documents its own debt is
+usually safer than one that doesn't.
+
+#### The maturity flag, stated as bluntly as it deserves: **a clone of the default branch gets you documentation, not a system**
+
+This is not a caveat. It is the operative fact about TutorIA, and the reason it is filed with a
+flag rather than recommended outright.
+
+| Address | Branch | What is actually there |
+|---|---|---|
+| `LabSirius/TutorIA` | **`main` (default)** | **Docs only.** `README.md`, `CONTRIBUTING.md`, `LICENSE`, `docs/`. `backend/`, `frontend/`, `docker-compose.yml`, `.env.example` all **404** |
+| `LabSirius/TutorIA` | `feature/refactor-to-v2-requirements` | **The v2 backend** — `backend/requirements.txt`, `backend/app/{main,config}.py`, `routers/chat.py`, `services/rag_service.py`, `gateways/openedx_gateway/sync_service.py`, `docker-compose.yml`, `docs/tutoria_architecture.svg` |
+| `LabSirius/TutorIA` | `feature/openedx-integration` | Earlier backend + compose |
+| `LabSirius/TutorIA` | `feature/backend-scaffolding` | Earliest backend, no compose |
+| `Sof1SP/tutorIA` (**the address the README's own `git clone` line points at**) | `main` and `dev` | **No code in either.** `README.md` + `LICENSE` only; every code path 404s. Also **MIT** |
+
+So: **two namespaces, six branches, and exactly one of them contains a runnable backend.** The
+README's own clone instruction sends you to the namespace that has no code at all.
+
+What the README claims and the code does **not** contain, in any branch of either namespace:
+**no `frontend/`** (a React web/mobile UI is described), **no `openedx/`** XBlock or plugin
+package (the Open edX integration that exists is a *data sync gateway*, not a launchable tool),
+and **no `tests/`** (unit and integration tests are described, and `pytest>=8.3.0` plus
+`pytest-asyncio>=0.24.0` *are* declared in `backend/requirements.txt` — the test dependencies are
+installed, the tests themselves do not exist in any branch). `CONTRIBUTING.md` documents a `dev` branch as the main development line —
+**`LabSirius/TutorIA` has no `dev` branch.**
+
+**The honest one-line verdict for a studio conversation:** *a well-architected, MIT-licensed,
+publicly funded Colombian tutoring **backend** in active development, with no frontend, no LMS
+plugin and no tests yet, whose code must be taken from a named feature branch.* It is a
+collaboration target and a credible regional reference, **not** a base to promise a client a
+delivery date on. Pinning a build to `LabSirius/TutorIA@main` ships nothing — the same class of
+failure as the `opencast` `main` 404 recorded by `p872`, and the second time in two passes that
+a *default branch assumption* would have produced wrong data in this KB.
+
+---
+
+### Gap narrowed, in the sharpest way — **Africa-origin agents exist. Not one of them has a licence.**
+
+`p872` could not find an Africa-origin education agent. `p873` found several. The licence result is
+uniform and it is the finding:
+
+| Project | Repo | Default branch | Licence file on default branch | Origin / scope |
+|---|---|---|---|---|
+| **EduTwin Africa** | https://github.com/muskvdc/EduTwin-Africa | `main` | **NONE** — `LICENSE`, `LICENSE.md`, `COPYING` all absent | Curriculum-aware tutor with RAG, bounded multi-agent collaboration, ReAct tools and guardrails; **South African Grades 8–12** |
+| **multiagent-ai-tutor** | https://github.com/giovanayngrid-gk/multiagent-ai-tutor | `main` | **NONE** | Brazilian, Portuguese-language; LangChain + Llama 3 via local Ollama + Streamlit |
+| **educational-agents** | https://github.com/nifalconi/educational-agents | `main` | **NONE** | Spanish-language teaching library from a *Niñas Pro* agents course; LATAM Spanish identifiers and error messages |
+
+**No licence means no grant.** Globant cannot build on, fork, redistribute or embed any of the
+three, however good the code is — the same rule this KB already applies to
+`YoussefMohAttia/MultiAgent-AI-Teaching-Assistant` and `OS4ED/openSIS-Classic`.
+
+**The pattern across the Global South is now visible and it is not a licensing accident — it is a
+market shape.** TutorIA is publicly funded by a national science ministry, and it has a licence,
+a contributing guide and a branch policy. The three unlicensed projects are individual or course
+work, and they have none. **Public funding is what put a licence on the only reusable one.** For a
+studio, that is an actionable read: when sourcing regional partners, the funded university and
+ministry projects are the ones that can legally be built on, and *"add a LICENSE file"* is a
+genuinely useful, nearly free contribution to offer an unlicensed regional project — one that
+converts a dead end into a collaboration.
+
+Two further Africa-origin research systems surfaced and **cannot be verified from this session**,
+so they are recorded as leads, not findings: **EduNaija AI Tutor** (AfricaNLP 2026; multi-agent
+RAG on the Nigerian curriculum with English/Yoruba/Hausa/Igbo support; authors state a Hugging
+Face release) and **AFRILANGTUTOR** (Findings of EMNLP 2026, arXiv:2604.20996; Llama-3-8B and
+Gemma-3-12B fine-tunes with SFT+DPO for low-resource African language tutoring, release promised
+"under open licences"). No repository address for either could be resolved —
+`git ls-remote` on the obvious namespaces returned nothing, and `aclanthology.org` and `arxiv.org`
+are unreachable. **No address is invented here.** Next pass should try Hugging Face.
+
+### And a claimed LATAM project that this pass declines to list
+
+**Lenda AI** self-describes as an Apache-2.0, LATAM-built open-source tutor for emerging economies
+and the Global South, v0.1, inspired by OLPC and Plan Ceibal. It is **not listed in this KB**, for
+three stated reasons: `lenda.ai` does not resolve from this session; **no independent coverage
+exists** in any search leg; and `git ls-remote` found nothing at four plausible namespaces
+(`draix/lenda`, `lenda-ai/lenda`, `lendaai/lenda`, `draix/lenda-ai`). An Apache-2.0 claim on a
+project page is not a licence. Recorded so a later pass neither re-discovers it as news nor
+imports it from the same self-description.
+
+---
+
+### Correction to this KB's own method — **EMEA *is* the bucket for Africa and the Middle East**
+
+`p872` declared: *"Africa and MENA fall outside the closed region vocabulary and so cannot be
+filed."* **That is wrong, and it was self-inflicted.** The closed vocabulary is `North America |
+EMEA | APAC | LATAM | Global`, and **EMEA is Europe, Middle East and Africa** — the Middle East and
+Africa are in the bucket's name. Nigerian, South African and Gulf findings have been fileable all
+along; two passes mistakenly treated them as unrepresentable and dropped them.
+
+Consequence this pass: the South African, Nigerian and Dubai material above and in
+`intel/market.md` is filed under **EMEA**, with the country named in prose exactly as the schema
+requires. This is the second method error in two passes (after the licence grep) caught by
+re-reading a rule rather than by new data — and the cheapest kind to find.
+
+### DeepTutor and OpenMAIC — release state re-confirmed, stars still not
+
+Confirmed by `git ls-remote --tags` this pass, not from a blog: `HKUDS/DeepTutor` latest tag
+**`v1.7.3`**, `THU-MAIC/OpenMAIC` latest **`v1.5.0-rc.3`** — matching `p872`'s record, so both
+projects' cadence claims hold. Secondary reporting dates `v1.7.0` to 28 Oct, `v1.7.1` to 31 Oct or
+1 Nov, `v1.7.2` to 6 Nov and `v1.7.3` to 16 Nov 2026, i.e. **roughly a release every 3.5 days**.
+
+**Fork hazard, new and worth recording.** A search for DeepTutor release notes returns
+**forks before the canonical repository**: `DQGX5BP/DeepTutor`, `Mostakim2005/DeepTutor`
+(publishing its own *"Windows Portable & Installer"* builds), `wocclyl/DeepTutor` and
+`promoteAI/DeepTutor` all surfaced above `HKUDS/DeepTutor`. A third-party Windows installer for a
+tutoring agent, distributed from a fork, is a supply-chain risk to put in front of a client's
+security review. **The canonical address is `https://github.com/HKUDS/DeepTutor` and nothing else.**
+
 ## 🟢 `2026-11-17` (`p872`) — **the grading gap closed: a real Apache-2.0 essay-scoring system exists; and the first large RCT on course-integrated AI tutoring is negative**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

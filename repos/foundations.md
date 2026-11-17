@@ -6,9 +6,11 @@ updated: 2026-11-17
 
 # Foundational repos — education
 
-**Pass `p872`, 2026-11-17** (second pass of the day). Same two-channel verification as
-`agents/top.md`: existence via `git ls-remote`, licence via the licence bytes on the **resolved**
-default branch. No star counts — that channel returned `403` for the second consecutive pass.
+**Pass `p873`, 2026-11-17** (third pass of the day; `p872`'s 33-repo audit stands and was not
+redone). Same two-channel verification as `agents/top.md`: existence via `git ls-remote`, licence
+via the licence bytes on the **resolved** default branch. No star counts — that channel returned
+`403` across **four** routes (`api.github.com`, `github.com` HTML, the `gh` CLI, and
+`gh api search/repositories`) for the **third** consecutive pass.
 
 `p872` re-resolved every load-bearing address in this file through `git ls-remote --symref` and
 found **four of eleven do not default to `main`**. Branch column corrected below where it was
@@ -93,10 +95,24 @@ canonical address and `wwrwbs/AI_AWE` added by `p872`).
 - `apereo/opencast-admin-interface` **does not exist** (`git ls-remote` returned nothing). The
   real address is `opencast/opencast`, and `p872` adds its default branch: **`develop`**, not
   `main`, licence **ECL-2.0**. A clone pinned to `main` fails outright.
-- **Four of eleven audited addresses do not default to `main`** — `opencast`, `oppia` and
-  `kolibri` default to `develop`; `edx-ora2`, `ltijs`, `OpenOlat` and `sakai` to `master`.
-  Licence bytes **must** be fetched from the resolved branch: a guessed `main` path 404s, a 404
-  becomes "no licence found", and that becomes wrong data in this file.
+- **Non-`main` default branches are the single most productive source of wrong data in this KB,
+  and `p873` makes the case worse in kind.** `p872` found four of eleven audited addresses not
+  defaulting to `main` — `opencast`, `oppia` and `kolibri` → `develop`; `edx-ora2`, `ltijs`,
+  `OpenOlat` and `sakai` → `master`. `p873` adds **`francoisjacquet/rosariosis`, whose default
+  branch is `mobile`** — a *feature* name that no heuristic would guess and nothing in the address
+  hints at. State it as a hard rule: **never construct a `raw.githubusercontent.com` path from an
+  assumed branch; resolve it with `git ls-remote --symref <url> HEAD` first.** A guessed `main`
+  404s, the 404 reads as *"no licence file"*, and *"no licence file"* gets published as
+  **"no grant — cannot build on it"**. That one shortcut would have libelled RosarioSIS's licence
+  this pass and `opencast`'s last pass; phantom licences and phantom absences, the two most
+  expensive wrong-data classes here, both come from it.
+- **A second class of branch error: the code may not be on the default branch at all.** `p873`'s
+  headline find, **`LabSirius/TutorIA`** (MIT, Colombia — see `agents/top.md`), has a default
+  branch holding **documentation only**; its backend lives on `feature/refactor-to-v2-requirements`,
+  and the address its own README tells you to clone (`Sof1SP/tutorIA`) has **no code in any
+  branch**. Existence, licence and default branch can all verify cleanly on a repository that
+  would still ship nothing. For any repo proposed as a *build base*, confirm a load-bearing source
+  file resolves — not just `LICENSE`.
 - **A substring grep cannot characterise a licence.** `p872` tried to automate the
   "Apache-2.0 + additional terms" check and got a **100% false-positive rate** on Apache-2.0,
   because §5 of the licence contains the phrase *"without any additional terms or conditions"*.
