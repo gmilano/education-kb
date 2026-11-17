@@ -6,7 +6,16 @@ updated: 2026-11-17
 
 # Market intelligence — education
 
-**Pass `p875`, 2026-11-17** (fifth pass of the day). `p875` ran the global sweep plus all four
+**Pass `p876`, 2026-11-17** (sixth pass of the day). `p876` adds a **region-placed opportunity
+that did not exist in this file before** — the measurement spine (`compose/patterns.md` **P14**) —
+because the two permissive Learning Record Stores it rests on were verified this pass, and they
+have **different regional provenance**, which is itself commercially relevant: `yetanalytics/lrsql`
+(Apache-2.0) is North American, `openfun/ralph` (MIT) is European public sector. It also adds three
+APAC instruments and two EMEA ones that this file did not carry. **Every new regulatory item below
+is a search-engine summary** — `eur-lex.europa.eu`, `oecd.org` and `unesco.org` remain refused at
+this session's proxy — and is marked `SECONDARY`.
+
+**Previous pass note (`p875`)** (fifth pass of the day). `p875` ran the global sweep plus all four
 regional legs, and took a dedicated run at the **APAC institutional** residual `p874` left open —
 trying the three instruments `p874` named by name. **Headline movements this pass:**
 
@@ -503,6 +512,25 @@ an error: **EMEA is Europe, Middle East and Africa.** Filed here accordingly:
 
 ### North America
 
+#### 🟢 `p876` — the measurement spine is a North American sell, and the state calendar is the reason
+
+**`yetanalytics/lrsql` (Apache-2.0) is a US project**, which matters less for the licence than for
+the procurement conversation: a district or system buying an analytics layer can be shown a
+maintained domestic open-source store rather than a vendor SaaS. Pair it with **Ed-Fi**
+(Apache-2.0), already the de-facto K-12 data standard in US districts, and the whole telemetry
+stack is permissive end to end.
+
+**Why it sells here specifically, and it is not an AI argument.** This file already records the
+dated state calendar — Ohio (passed **1 July 2026**), North Carolina's staged model-policy
+deadlines, Idaho's boards acting before **2027–28**, and the SUNY systemwide policy across **64
+campuses**. Those mandates require districts and systems to *have a policy*; none of them is
+satisfied by a policy document nobody can show compliance with. **An LRS is the evidence layer
+for a policy that already exists on paper.** 🟢 **And `CA AB 1159`, which prohibits using student
+data to train AI models, is a direct argument for a self-hosted store** — telemetry that never
+leaves the institution cannot become somebody's training set. Sell **P14** before, not after, a
+tutor.
+
+
 **🟢 `p875` — the policy-deadline engagement, and it is a calendar not a thesis.** North Carolina
 must publish a **state model policy by 31 Dec 2026**, districts must adopt local policies by
 **30 Jun 2027**, and teacher training lands **30 Jun 2028**. Maryland's 24 districts have **120
@@ -574,6 +602,36 @@ consequential decisions human.
   oral/viva and process-evidence workflows is a concrete offering.
 
 ### EMEA
+
+#### 🟢 `p876` — a permissive European LRS changes what can be offered to an EU public-sector buyer
+
+**`openfun/ralph` is MIT and comes from France Université Numérique**, the public consortium
+operating France's national Open edX platform, with community support through **ESUP**, the French
+higher-education consortium. 🔵 **This is the only EMEA-origin, public-sector, *permissively
+licensed* platform component in this KB** — every comparable European project in
+`verticals/solutions.md` is GPL or AGPL. In a bid scored on sovereignty and provenance, a French
+public-consortium MIT component that self-hosts and speaks Open edX natively is a stronger answer
+than a more popular American one.
+
+It also lands on an obligation that is already running. This file records that the AI-literacy
+duty has applied since **2 February 2025** and that the Digital Omnibus (**Regulation (EU)
+2026/1744**, in force **27 July 2026**) deferred Annex III high-risk education duties to
+**2 December 2027**. Two additions, both `SECONDARY`:
+
+- **An OECD / European Commission *AI literacy framework for primary and secondary education*
+  (2026)** now exists, and an **October 2026 Council document** urges member states to build
+  AI literacy among teachers, trainers and school leaders, pointing at that framework and
+  **DigComp 3.0**. 🟢 **This converts P11 from "a duty with no syllabus" into "a duty with a named
+  reference framework"** — which is what a ministry procurement needs to specify against.
+  `scenarisation` (CC-BY-SA-4.0, in `repos/trending.md`) already encodes DigComp 3.0 as data.
+- **Italy:** a decree of **19 May 2026** reportedly allocated **€99.96M to ~2,100 schools**
+  (~€47,600 each). `SECONDARY`, single source, **verify before putting it in a deck** — but if it
+  holds it is a named, funded, country-level buying event rather than a market-size projection.
+
+🔴 **Region gap, stated rather than left silent:** the EMEA legs returned essentially nothing on
+**UK, Middle East and Africa** school-level adoption this pass. The EMEA picture in this file
+remains **EU-centric**, and `p876` did not change that.
+
 
 **🟢 `p875` — stop selling 2027. Two obligations are live TODAY.** The field is organised around
 **2 Dec 2027** high-risk conformance (postponed there by **Regulation (EU) 2026/1744**, the Digital
@@ -673,6 +731,27 @@ high-risk tier. `p874` adds the opportunity that does not wait for it:
 
 
 ### APAC
+
+#### 🟢 `p876` — three national calendars this file did not carry, and one of them is a warning
+
+All three are `SECONDARY` (news and policy-tracker summaries; no ministry primary source is
+reachable from this session).
+
+| Country | Instrument | Date | What it means for a bid |
+|---|---|---|---|
+| **India** | AI and computational thinking **mandatory from Class 3**, aligned to NEP 2020 | **2026–27 academic year** | The binding constraint is named and it is not software: **training 10M+ teachers**. The sellable work is teacher-capability delivery and content at national scale, not a tutor |
+| **China** | **"AI Plus Education"** national action plan, kindergarten→university | announced **April 2026**, full implementation target **2030** | Described as industrial policy as much as education reform. The often-quoted **8 hours/year** requirement reportedly applies to **Beijing**, not nationally — do not repeat it as a national figure |
+| **South Korea** | AI digital textbook programme **reversed**; replacement is **16 teacher-authored AI subjects** | develop **2026** → pilot **2027** → school use **March 2028** | 🔴 **The warning.** A flagship national AI-education programme was withdrawn reportedly within months of launch. The replacement is deliberately teacher-authored and slow |
+
+🔵 **Korea is the single most useful APAC reference in this file, and it is useful because it
+failed.** It is the cleanest available evidence that **deployment without evaluation is a
+reversal risk at national scale** — which is exactly the argument **P14** makes and exactly what
+`intel/trends.md` **T9**'s negative trial predicts. For an APAC ministry conversation, lead with
+the measurement spine and the Korean precedent, not with a tutor demo. **Japan** is reported as
+deliberately neutral and pilot-watching (digital textbooks possibly official by **2030**), and
+**Malaysia** has no national curriculum mandate — so "APAC" is not one buyer, and a single
+regional pitch will miss three of the four.
+
 
 **🟡 `p875` — APAC's binding instruments mandate TEACHING AI, not governing it, and that changes
 the offer.** China (Beijing 8 hrs/yr, Guangdong 6 hrs/yr rising to fortnightly in grades 10–11)
@@ -793,6 +872,34 @@ responsible-AI guidance to private schools.
 
 ### LATAM
 
+#### 🟢 `p876` — the measurement spine is the highest-fit LATAM offer this KB has
+
+The two figures this file already carries make the case better than any new research could:
+**87% of regional universities use AI** somewhere, **26% have a formal AI strategy, and 9%
+evaluate how it performs** (UNESCO IESALC); in Brazil, **53% of school administrators use AI and
+22% have guidelines**. 🔵 **Usage is near-universal and evaluation is near-absent — which is the
+precise shape of demand that P14 fills**, and it needs no AI thesis to sell: the institution has
+already bought the AI.
+
+Three fits that are specific rather than generic:
+
+- **`openfun/ralph` is the right LRS for most of the region, not `lrsql`** — because **P9**'s
+  base (**TutorIA**, Universidad Tecnológica de Pereira) runs inside **Open edX**, and so do many
+  regional deployments, and ralph ships the Open edX→xAPI converters in-tree. **MIT**, self-hosted,
+  no data leaves the institution.
+- **It is defensible under the region's own instruments.** Brazil's **LGPD** right to review of
+  automated decisions and the pending **PL 2338/2023** both ask what a system did and why; an LRS
+  is that record. Colombia's **CONPES 4144** funds capacity and adoption through 2030 — and
+  capacity is measurable only if something measures it.
+- **It is the cheap first engagement** for an institution that is not ready to buy a tutor, and it
+  produces the baseline that makes a later tutor purchase defensible rather than faith-based.
+
+🔴 **Unchanged and still true:** no 2026 ministry-level education-AI *regulation* was found in
+Brazil, Mexico, Colombia or Chile. The region's instruments remain **policy-first** (CONPES 4144,
+national strategies) rather than binding conformance regimes, so a LATAM pitch sold on compliance
+deadlines will not land. Sell it on **evaluation**, which the region's own numbers say is missing.
+
+
 **🟢 `p875` — a two-week-out ministry convening, and an administrator-level governance gap.**
 UNESCO and Brazil's **Ministry of Education (MEC)** hold the first **Digital Learning Week Brazil,
 30 Nov – 2 Dec 2026, Rio de Janeiro**, on AI's impact on education systems. 🟡 **That is the most
@@ -906,6 +1013,23 @@ to **Minciencias**. Three ways that changes a LATAM conversation:
   faculty) run *above* global averages, so low spend reflects budget, not disinterest.
 
 ### Global
+
+#### 🟡 `p876` — one global funding signal, and a correction to how this file should be read
+
+**`SECONDARY`:** the OECD's **2026 Digital Education Outlook** is reported to warn that AI helps
+learning only where pedagogy stays in control — consistent with **T9**'s negative trial and its
+scaffolding finding — and **Digital Promise** is reported to have begun funding **open
+infrastructure building blocks for K-12 (~$26M, from February 2026)**. 🔵 **If that holds, it is
+the first named funder of *open* education-AI infrastructure this KB has recorded**, and it is
+the natural counterpart to **T12**'s finding that the open shelf is two projects and a tail of
+zeroes. Worth a direct check the moment `oecd.org` is reachable.
+
+🟡 **Read the market-size numbers in this file with more suspicion after this pass, not less.**
+The `p876` global legs returned 2026 AI-in-education market estimates of **$3.37B**, **$9.58B**,
+**$10.6B**, **$10–23B** and **$32B** — a tenfold spread across sources published in the same
+year. **None of them is evidence of anything.** The figures that have survived every pass are the
+measured ones: adoption rates, policy deadlines, star counts and commit dates.
+
 
 - **Student adoption has already outrun institutional policy.** Inside Higher Ed (17 November
   2026) reports **eight in ten students** using generative or agentic AI routinely, and that

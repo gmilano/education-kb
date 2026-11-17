@@ -6,7 +6,19 @@ updated: 2026-11-17
 
 # Vertical platforms — education
 
-**Pass `p875`, 2026-11-17** (fifth pass of the day). `p875` measured **78 addresses** first-hand
+**Pass `p876`, 2026-11-17** (sixth pass of the day). `p876` adds the **learning-analytics layer**
+to this file, which has until now described platforms that *generate* learner telemetry without
+naming anywhere to *put* it. Two permissive, maintained Learning Record Stores are verified below
+and in `repos/foundations.md`.
+
+> 🟢 **The permissive shortlist gets a new row and it is a strategically useful one.**
+> **`openfun/ralph`** (MIT) comes from **France Université Numérique**, the consortium that
+> operates France's national Open edX platform. It is the rare case in this vertical where a
+> *public-sector European* project ships under a **permissive** licence — every other EMEA
+> platform of comparable provenance in this file is GPL or AGPL. For an EU public-sector bid where
+> sovereignty and provenance are scored, that combination is worth more than its 52 stars suggest.
+
+**Previous pass note (`p875`)** (fifth pass of the day). `p875` measured **78 addresses** first-hand
 for stars, SPDX licence and last-push date — the channel four passes called impossible (see
 `repos/trending.md`). It did not re-verify `p874`'s licence bytes; it independently **corroborated
 every one of them through SPDX**, including `p874`'s correction of `SriSatyaLokesh/pariksha` to
@@ -114,6 +126,27 @@ For a Globant engagement that must avoid copyleft obligations, the verified perm
 | **Sakai** | ECL-2.0 | Research-university LMS |
 | **Opencast** | ECL-2.0 | Lecture capture and video corpus |
 | **DSpace** | BSD | Institutional repository / scholarly corpus |
+| **SQL LRS (`yetanalytics/lrsql`)** | Apache-2.0 | 🟢 **New in `p876`** — learner telemetry store (xAPI). The default for measurement |
+| **Ralph (`openfun/ralph`)** | MIT | 🟢 **New in `p876`** — LRS + data pipeline, **Open edX-native**, EMEA public sector |
+
+### Learning analytics — the layer this file was missing
+
+Every platform above emits learner events; none of them is where those events should be kept for
+analysis. That is the Learning Record Store, and until `p876` this KB named only
+`LearningLocker` — **GPL-3.0, default branch last moved 2021-11-16**.
+
+| Platform | Licence | Stars | HEAD | Use it for |
+|---|---|---:|---|---|
+| https://github.com/yetanalytics/lrsql | **Apache-2.0** | 144 | 2026-11-14 | The production LRS. SQLite for a pilot; Postgres 14–18, MariaDB or MySQL at scale. OIDC, Docker, documented AWS deployment |
+| https://github.com/openfun/ralph | **MIT** | 52 | 2026-10-12 | LRS **and** pipeline. Take it when the platform is **Open edX** (tracking-log→xAPI converters ship in-tree) or when European public-sector provenance is scored. Helm chart included |
+| https://github.com/adlnet/ADL_LRS | Apache-2.0 | 335 | 2025-11-14 | The xAPI authors' reference implementation. 🟡 **0 commits in 12 months** — test against it, do not deploy it |
+| https://github.com/davidpesce/moodle-logstore_xapi | GPL-3.0 | 83 | 2026-10-29 | The Moodle→LRS bridge. Copyleft, but it is a plugin **inside** GPL Moodle, so it concedes nothing new |
+| https://github.com/LearningLocker/learninglocker | GPL-3.0 | 587 | **2021-11-16** | 🔴 **Do not start here.** Five years cold, 0 commits in 12 months. Listed so it is not re-imported from a listicle |
+
+🔴 **The one thing you lose by leaving Learning Locker: dashboards.** It bundled a reporting UI;
+`lrsql` and `ralph` do not. Pair them with **Aspects/Superset** (Apache-2.0) or **Grafana**
+(AGPL-3.0 — fine self-hosted, a problem in a distributed product) and **price that work
+explicitly**. See `compose/patterns.md` **P14**.
 
 ## Exam integrity & proctoring — 🔴 `p875`: real demand, and effectively NO supply
 

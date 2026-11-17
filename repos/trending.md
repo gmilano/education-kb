@@ -4,6 +4,117 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p876`) — **83 repos re-measured by CLONE, not by `pushed_at`: three "live" foundations are dead, three addresses have silently moved, and the LRS gap closes**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+Sixth pass of the day. **Still not a `github.com/trending` scrape** — that remains `403` and this
+KB still refuses to launder a blog's version of it. What `p876` adds is a **fourth verification
+channel**, and it is the one that actually answers *"is this alive?"*:
+
+> **`git clone --filter=blob:none --bare <slug> && git log -1 --format=%ci HEAD`**
+> **83 of 83 curated addresses cloned. 0 failures.**
+
+### 🔴 Why `pushed_at` was the wrong instrument
+
+`p875` built its liveness table on the search API's `pushed_at`. That field records a push to
+**any ref** — a tag, an abandoned branch, a dependency bot — not a commit on the branch a `git
+clone` actually checks out. The divergence is not academic:
+
+| Repo | `pushed_at` says | **Default branch really is** | Divergence | Commits/12mo | Status |
+|---|---|---|---:|---:|---|
+| `LearningLocker/learninglocker` | 2024-05-30 | **2021-11-16** | **926 d** | **0** | 🔴 **Five years dead (1,827 d).** `p875` published "18 months" |
+| `argilla-io/argilla` | **2026-11-16** | **2025-08-05** | **468 d** | **0** | 🔴 **NEW FINDING.** Reports a push *yesterday*; `develop` frozen 15 months |
+| `AI-for-Education/pedagogy-benchmark` | **2026-11-16** | **2025-10-15** | **397 d** | **0** | 🔴 **NEW FINDING.** The benchmark this KB sells as ministry-grade evidence is frozen |
+| `LabSirius/TutorIA` | 2026-10-27 | 2026-05-20 | 160 d | 4 | 🟡 Corroborates the known finding that `main` is docs-only and work lives on a feature branch |
+| `instructure/canvas-lms` | 2026-11-10 | 2026-04-30 | 194 d | **4,052** | 🟢 **Alive.** Releases from dated branches — divergence here means nothing |
+| `EleutherAI/lm-evaluation-harness` | 2026-11-04 | 2026-09-14 | 51 d | 246 | 🟢 Alive |
+| `Cvmcosta/ltijs` | 2026-11-11 | 2026-10-13 | 29 d | 66 | 🟢 Alive — the LTI 1.3 plumbing is maintained |
+
+🔵 **Read divergence together with commits/12mo, never alone.** Canvas diverges by 194 days and
+is one of the most active repositories in this KB; argilla diverges by 468 days and is inert.
+**The pair is the signal.**
+
+### 🔴 Full stale list — default branch older than 365 days
+
+| Repo | Stars | Licence | HEAD | Age | Commits/12mo | Previously flagged? |
+|---|---:|---|---|---:|---:|---|
+| `LearningLocker/learninglocker` | 587 | GPL-3.0 | 2021-11-16 | **1,827 d** | 0 | Yes — but as "18 months" |
+| `PritK99/WriteRight` | 1 | MIT | 2024-11-19 | 728 d | 0 | Yes |
+| `kamlendras/OpenProctor` | 16 | AGPL-3.0 | 2025-05-28 | 538 d | 0 | Partly (licence only) |
+| `ganesh-786/Proctor` | 0 | MIT | 2025-06-09 | 526 d | 0 | No |
+| `argilla-io/argilla` | 5,204 | Apache-2.0 | 2025-08-05 | 469 d | 0 | 🔴 **No** |
+| `stanford-oval/storm` | 31,902 | MIT | 2025-09-30 | 413 d | 0 | Yes |
+| `AI-for-Education/pedagogy-benchmark` | 13 | MIT | 2025-10-15 | 398 d | 0 | 🔴 **No** |
+| `1EdTech/openbadges-validator-core` | 61 | Apache-2.0 | 2025-11-04 | 378 d | 0 | Yes |
+
+**8 of 83 curated addresses (9.6%) have a default branch older than a year.** That is the real
+maintenance exposure of this KB's shelf, and it is the first time it has been measured.
+
+### 🟡 Three addresses have silently moved — and byte-verification cannot see it
+
+| Address in this KB | Canonical address | Stars | Detector |
+|---|---|---:|---|
+| `All-Hands-AI/OpenHands` | **`OpenHands/OpenHands`** | 93,647 | `repo:` search → **`422 Validation Failed`** |
+| `danny-avila/LibreChat` | **`LibreChat-AI/LibreChat`** | 47,237 | same |
+| `openedx/edx-platform` | **`openedx/openedx-platform`** | 8,240 | same |
+
+All three old slugs **clone normally and serve correct licence bytes** through GitHub's redirect,
+so two-channel verification (existence + licence bytes) passes indefinitely on a dead name.
+🔵 **The `422` from `api.github.com/search/repositories?q=repo:<slug>` is the only rename detector
+available to this session.** The `edx-platform` rename was recorded in this log at `p800`/`T810`
+and **had never been propagated to the curated files** — the same propagation failure that
+produced this pass's headline. `agents/top.md` is corrected; the remaining citations are a
+declared gap below.
+
+### 🟢 The LRS gap closes — three permissive stores, two of them maintained
+
+`p875` declared *"no maintained permissive LRS exists"*. Its own sweep legs had already listed
+three. `p876` verified each on four channels and filed them into `repos/foundations.md`:
+
+| Repo | Licence (bytes) | Stars | HEAD | Commits/12mo | Origin | Notes |
+|---|---|---:|---|---:|---|---|
+| `yetanalytics/lrsql` | **Apache-2.0** (11,357 B) | 144 | 2026-11-14 | **67** | 🇺🇸 North America | SQLite / Postgres 14–18 / MariaDB / MySQL; Docker; **OIDC**; TLS + AWS deploy docs; "Reactions" rules engine; Clojure; tags `v0.9.14`, `v1.0.0-pre_ui_testing` |
+| `openfun/ralph` | **MIT** (1,094 B) | 52 | 2026-10-12 | 18 | 🇫🇷 EMEA | **France Université Numérique.** FastAPI LRS + CLI + library; basic **and** OIDC auth; **`src/ralph/models/edx/` + `converters/` verified in-tree** — Open edX tracking logs → xAPI; **Helm chart** `src/helm/ralph/`; PyPI `ralph-malph`; ESUP community |
+| `adlnet/ADL_LRS` | **Apache-2.0** (11,357 B) | 335 | 2025-11-14 | **0** | 🇺🇸 North America | Reference LRS from the authors of xAPI; Django. Conformance target, **not** a production base |
+
+🔵 **Also surfaced by the same leg and already held by this KB** (recorded so they are not
+re-bought): `tunapanda/h5p-standalone` (347★, MIT), `davidpesce/moodle-logstore_xapi` (83★,
+GPL-3.0 — the Moodle→LRS bridge), `ubc/compair` (38★, GPL-3.0),
+`LiaScript/LiaScript-Exporter` (31★, BSD-3-Clause, exports SCORM/xAPI/IMS).
+
+🔴 **What neither replacement gives you: dashboards.** Learning Locker shipped a reporting UI;
+`lrsql` and `ralph` are a store and a pipeline. Any statement of work promising "measurement"
+must price the visualisation layer (Aspects/Superset, or Grafana over Postgres) as a line item.
+
+### Declared gaps, `p876`
+
+- 🔴 **The `openedx/edx-platform` → `openedx/openedx-platform` rename is propagated in
+  `agents/top.md` only.** The trending log records ~306 citations of the dead slug across this
+  base. They resolve by redirect, so nothing is broken today; they will break the day GitHub
+  stops redirecting. **Not repaired in bulk this pass, and not claimed as repaired.**
+- 🔴 **`huggingface.co` is refused at the egress proxy** (`connect_rejected`). `p875`'s
+  instruction to resolve the Africa-origin leads (EduNaija AI Tutor, AFRILANGTUTOR) via Hugging
+  Face **cannot be carried out from this session**. The blocker is now named and actionable:
+  allowlist `huggingface.co`.
+- 🔴 **Two of this base's own gates are RED at `HEAD`, and were red before `p876` touched
+  anything** — verified by stashing this pass's changes and re-running: `gate-shelf-consistency`
+  (**18 findings**) and `gate-alias-canonical` (**26 findings**). Neither is caused by this pass
+  and neither is repaired by it. The shelf-consistency findings are single slugs carrying
+  disagreeing licence cells — `h5p/h5p-php-library` (Apache-2.0 in `intel/open-gaps.md` prose vs
+  **GPL-3.0** in `verticals/solutions.md`), `hkuds/deeptutor` (one stray MIT prose cell against
+  six correct Apache-2.0 table cells), `openeducat/openeducat_erp` (**five** different licences)
+  and `sonstellar969/open-moodle`. The alias findings are three repositories published under two
+  addresses each (`learner-credential-wallet`, `oneroster.net`, `presidio`). 🔵 **This is T13's
+  thesis in the base's own instrumentation: the gates already know, and the shelves have not been
+  reconciled.** `gate-offline` (all licence controls), `gate-tables`, `gate-region-headings`,
+  `gate-declared-gap` and `gate-dead-citation` **all PASS** with this pass's changes applied.
+- 🟡 **Liveness was measured for the 83 curated addresses only**, not for the full set this KB
+  has ever touched. The `pushed_at`-based figures elsewhere in this log are **not** retroactively
+  corrected and should be read as upper bounds on liveness.
+
+---
+
 ## 🟢 `2026-11-17` (`p875`) — **the full KB measured in one pass: 78 repositories with stars, SPDX licence and last-push date — plus a dead URL, three stale foundations and four licence mismatches**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

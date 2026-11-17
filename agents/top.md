@@ -6,7 +6,28 @@ updated: 2026-11-17
 
 # Top AI agents — education
 
-**Pass `p875`, 2026-11-17** (fifth pass of the day). **`p875` adds NO row to this file and adds a
+**Pass `p876`, 2026-11-17** (sixth pass of the day). **`p876` adds no agent row and corrects
+three addresses and one liveness claim.** It ran a ten-leg star-ranked **discovery** sweep —
+the first this KB has been able to run, since `p875` only measured addresses it already held —
+and the result is worth stating plainly:
+
+> **🔴 A star-ranked discovery sweep across ten education queries returned 126 repositories, 47 of
+> them new to this KB, and NOT ONE is an education agent.** They are `awesome-*` lists, curricula,
+> prompt collections and, repeatedly, the same anti-propaganda repository that ranks for anything.
+> **This is `intel/trends.md` T12 confirmed from the discovery side rather than the measurement
+> side:** the reason this file has two large agents and a tail of zeroes is not that the KB has
+> been looking in the wrong place. **There is no hidden shelf.** The legs are recorded in
+> `repos/trending.md` `p876` so a later pass does not re-buy them.
+
+> **🟡 Three addresses in this file were canonical-stale, and the git protocol hid it.**
+> `All-Hands-AI/OpenHands` → **`OpenHands/OpenHands`** (93,647★) and `danny-avila/LibreChat` →
+> **`LibreChat-AI/LibreChat`** (47,237★). Both old addresses still answer `git ls-remote` and
+> still serve correct licence bytes **via redirect**, so this KB's two-channel verification passed
+> on them for passes on end. The detector is the search API's `422`. (`openedx/edx-platform` →
+> `openedx/openedx-platform` is the third; it is cited elsewhere in this KB, and the rename was
+> already in the trending log — it had simply never been propagated to the curated files.)
+
+**Previous pass note (`p875`)** (fifth pass of the day). **`p875` adds NO row to this file and adds a
 column instead** — the first adoption signal this KB has ever carried. After four passes declaring
 star counts unmeasurable, the channel was found (`api.github.com/search/repositories`; see
 `agents/trending.md` for why `p874` ruled it out). **78 addresses measured first-hand.**
@@ -84,7 +105,7 @@ Read this before the tables below. Measured `2026-11-17` via `api.github.com/sea
 | **THU-MAIC/OpenMAIC** | **43,808** | MIT ✅ | 2026-11-17 | Real platform, real community. Ship with the `ACCESS_CODE` hardening task. |
 | CaviraOSS/PageLM | 2,069 | `NOASSERTION` 🔴 | 2026-11-15 | Users exist; **licence does not auto-detect — re-read the bytes before naming it in a proposal.** |
 | CAHLR/OATutor | 282 | MIT | 2026-11-17 | Small but alive, peer-reviewed, accessibility-conformant. The credible academic option. |
-| AI-for-Education/pedagogy-benchmark | 13 | MIT | 2026-11-16 | An eval harness, not a tutor — low stars are expected and not disqualifying. |
+| AI-for-Education/pedagogy-benchmark | 13 | MIT | 2026-11-16 → 🔴 **HEAD `2025-10-15`** | An eval harness, not a tutor — low stars are expected and not disqualifying. 🔴 **`p876` liveness correction: the `2026-11-16` push did not touch the default branch, whose last commit is `2025-10-15` — 398 days, `0` commits in 12 months.** It is still the right instrument to cite to a ministry (1,143 questions from real teacher-qualification exams); it is a **frozen** one. Say so in the proposal rather than implying an active leaderboard. |
 | wwrwbs/AI_AWE (ArguLens) | **2** | `NOASSERTION` 🔴 | 2026-07-29 | 🔴 **Two stars and no detectable licence.** Treat as a paper artifact, not a base. |
 | PritK99/WriteRight | **1** | MIT | 2024-11-19 🔴 | Reference implementation only, as this file already said. Confirmed. |
 | littlecookie0722/AI-Teaching-Agent | **0** | MIT | 2026-08-23 | No community. Bespoke-from-zero risk profile. |
@@ -185,12 +206,20 @@ compose a general agent framework. These were verified on the same two channels 
 
 | Agent / framework | Repo | Licence | Default branch | Education role |
 |---|---|---|---|---|
-| **LibreChat** | https://github.com/danny-avila/LibreChat | MIT | `main` | Multi-model chat front end with per-user auth, agents and RAG. The usual choice when an institution needs a self-hosted, model-agnostic assistant it can put in front of students without sending data to a vendor. |
-| **OpenHands** | https://github.com/All-Hands-AI/OpenHands | MIT | `main` | Coding agent. In education: autograding harnesses, scaffold generation for CS courses, and migration work on legacy LMS plugins. |
+| **LibreChat** | https://github.com/LibreChat-AI/LibreChat | MIT | `main` | Multi-model chat front end with per-user auth, agents and RAG. The usual choice when an institution needs a self-hosted, model-agnostic assistant it can put in front of students without sending data to a vendor. |
+| **OpenHands** | https://github.com/OpenHands/OpenHands | MIT | `main` | Coding agent. In education: autograding harnesses, scaffold generation for CS courses, and migration work on legacy LMS plugins. |
 | **LangGraph** | https://github.com/langchain-ai/langgraph | MIT | `main` | Stateful graph orchestration. The control layer where a pedagogical policy (hint ladders, mastery gates, escalation to a human teacher) is expressed as explicit nodes you can audit. |
 | **CrewAI** | https://github.com/crewAIInc/crewAI | MIT | `main` | Role-based multi-agent orchestration — maps cleanly onto teacher / tutor / assessor / moderator role splits. |
 | **gpt-researcher** | https://github.com/assafelovic/gpt-researcher | Apache-2.0 | `main` | Cited multi-source report generation; used for literature-review scaffolding and course-material drafting. |
 | **STORM** | https://github.com/stanford-oval/storm | MIT | `main` | Stanford OVAL. Generates Wikipedia-style grounded articles from scratch with citations — a strong base for curriculum and explainer drafting with a traceable source trail. |
+
+🟡 **`p876` corrected two addresses in the table above.** LibreChat is now
+`LibreChat-AI/LibreChat` (**47,237★**, MIT, pushed 2026-11-17) and OpenHands is now
+`OpenHands/OpenHands` (**93,647★**, MIT, pushed 2026-11-17). The previous addresses
+(`danny-avila/`, `All-Hands-AI/`) are redirects: they clone, they serve licence bytes, and
+`api.github.com/search/repositories?q=repo:<old>` returns **`422 Validation Failed`** — which is
+the only signal this KB has that a slug has stopped being canonical. 🔵 **A verification method
+built on bytes alone is structurally blind to a rename.**
 
 ## Licence flags — read before proposing any of these to a client
 

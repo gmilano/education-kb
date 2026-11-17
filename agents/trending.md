@@ -4,6 +4,136 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🔴 `2026-11-17` (`p876`) — **the KB contradicted itself inside a single pass: `p875` declared "no maintained permissive LRS exists" in four files while its own sweep table listed three**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+Sixth pass of the day. `p876` ran the **discovery** sweep that `p875` could not (ten star-ranked
+legs, 126 repositories) and the discovery came back empty of agents. **The pass's value is
+elsewhere, and it is uncomfortable: the most important finding was already inside this
+repository.**
+
+### 🔴 The contradiction, stated exactly
+
+`p875` wrote, and `p876` quotes verbatim from four files:
+
+> *"`p875` did not find a maintained permissive LRS and does not invent one."* — `repos/foundations.md`
+> *"🔴 **NEW GAP, opened by `p875`: there is no maintained permissive xAPI Learning Record Store.**"* — `intel/trends.md`
+
+In the **same pass**, `agents/trending.md` leg `xAPI learning record store stars:>15` recorded:
+
+> *🔴 `LearningLocker/learninglocker` (`587★`, GPL-3.0, cold since `2024-05`) · 🟢 `adlnet/ADL_LRS` (`335★`, Apache-2.0) …*
+
+and the leg `topic:learning-analytics stars:>10` recorded:
+
+> *🟢 `openfun/ralph` (`52★`, MIT, HEAD today) · 🟢 `tl-its-umich-edu/my-learning-analytics` (`37★`, Apache-2.0)*
+
+**Three permissive Learning Record Stores, measured by the pass that declared none existed.**
+`p876` verified all three independently and filed them in `repos/foundations.md`:
+
+| Repo | Licence (bytes) | Stars | HEAD (default branch) | Commits/12mo | Verdict |
+|---|---|---:|---|---:|---|
+| `yetanalytics/lrsql` | **Apache-2.0** (11,357 B) | 144 | **2026-11-14** | **67** | 🟢 **Maintained. The replacement.** SQLite/Postgres/MariaDB/MySQL, Docker, OIDC, documented AWS deploy |
+| `openfun/ralph` | **MIT** (1,094 B) | 52 | 2026-10-12 (`v5.1.0`) | 18 | 🟢 **Maintained, MIT, EMEA public sector.** France Université Numérique; **Open edX→xAPI converters verified in-tree** |
+| `adlnet/ADL_LRS` | **Apache-2.0** (11,357 B) | 335 | 2025-11-14 | **0** | 🟡 Reference implementation from xAPI's authors; conformance target, not a production base |
+
+### 🔵 The method lesson, and it is not the one `p875` was looking for
+
+`p875`'s standing instruction to later passes was *"before declaring a channel closed, probe a
+second path on the same host."* Good advice, and it is not what failed here. **The channel was
+open. The pass measured the answer. It then wrote the opposite into four curated files in the same
+sitting**, because the sweep output and the curated shelf are written by different parts of the
+pass and nothing reconciles them.
+
+> 🔵 **Standing instruction, `p876`: before declaring a gap OPEN, grep this repository for the
+> thing you are about to say does not exist.** This KB's discovery channel is now ahead of its
+> curated shelf. **A measured-but-unpropagated finding is not knowledge; it is a line in an
+> 84,000-line log that no proposal will ever read.** The failure mode has shifted from *not
+> finding things* to *not propagating what was found* — and the second is harder to see, because
+> every individual pass looks productive.
+
+### 🔴 The dormancy figure was wrong by 2.5 years, and so is the method that produced it
+
+`p875` built its liveness readings on the search API's `pushed_at`. **`pushed_at` records a push
+to *any* ref — a tag, a stale branch, a bot's housekeeping — not a commit on the branch a clone
+hands you.** `p876` re-measured all 83 curated addresses by `git clone --filter=blob:none --bare`
+and `git log -1 HEAD`. **83 of 83 clones succeeded.** Three rows change materially:
+
+| Repo | `pushed_at` | **Default-branch HEAD** | Divergence | Commits/12mo | Consequence |
+|---|---|---|---:|---:|---|
+| `LearningLocker/learninglocker` | 2024-05-30 | **2021-11-16** | **926 d** | 0 | `p875` said "18 months". It is **1,827 days — five years** |
+| `argilla-io/argilla` | **2026-11-16** | **2025-08-05** | **468 d** | 0 | 🔴 **New.** Looks pushed *yesterday*; `develop` has not moved in 15 months. Never flagged by any pass |
+| `AI-for-Education/pedagogy-benchmark` | **2026-11-16** | **2025-10-15** | **397 d** | 0 | 🔴 **New.** The instrument this KB tells clients to defend tutoring claims with is **frozen** |
+
+🟡 **Divergence alone is not death — read it with the commit count.** `instructure/canvas-lms`
+shows a 194-day divergence *and* **4,052 commits in 12 months**: Instructure releases from dated
+branches, so its default branch is quiet while the project is extremely alive. The pair
+`(divergence, commits/12mo)` is the signal; either number alone misleads.
+
+### The discovery sweep: ten legs, 126 repositories, zero education agents
+
+| Leg (query) | Rows | New to KB | Usable education agents |
+|---|---:|---:|---:|
+| `ai tutor … stars:>80 pushed:>2026-06-01` | 20 | 9 | **0** |
+| `education agent … stars:>80` | 6 | 3 | **0** |
+| `topic:ai-tutor stars:>30` | 20 | 7 | **0** |
+| `topic:edtech stars:>150` | 20 | 6 | **0** |
+| `topic:e-learning stars:>150` | 6 | 2 | **0** |
+| `automated grading essay scoring stars:>40` | 20 | 8 | **0** |
+| `learning management system stars:>200` | 6 | 1 | **0** |
+| **`xAPI learning record store stars:>20`** | 20 | 5 | **0 agents — but the three LRS above** |
+| `teacher lesson plan AI stars:>50` | 20 | 3 | **0** |
+| `curriculum AI stars:>50` | 20 | 3 | **0** |
+| **Total** | **138 (126 unique)** | **47** | **0** |
+
+**What the 47 new addresses actually are:** `awesome-*` lists (at least 18 of them),
+course curricula, prompt collections, a C99 LLM reimplementation, several OSINT and
+penetration-testing roadmaps, and — ranking for four separate education queries — the same
+Chinese anti-propaganda archive. 🔵 **Broad star-ranked queries in this vertical return
+list-of-lists repositories, because those are what accumulate stars.** The one leg that paid was
+the narrow, noun-specific one (`xAPI learning record store`), and even it only re-found what
+`p875` had already measured.
+
+🟢 **This independently confirms `T12`.** Two large education-native agents and a tail of zeroes
+is not a search failure. `p876` looked, from the discovery side, with the star channel open, and
+**there is no hidden shelf.**
+
+### Channel status, re-measured
+
+| Channel | Result |
+|---|---|
+| `git ls-remote --symref` | 🟢 open |
+| `raw.githubusercontent.com` (licence bytes) | 🟢 open |
+| `api.github.com/search/repositories` | 🟢 open — 30 req/window, batched 8 × `repo:` per call |
+| **blobless bare clone + `git log -1 HEAD`** | 🟢 **open — 83/83, and it is the only true liveness channel** |
+| `api.github.com/repos/{slug}` | 🔴 403, session scope |
+| `github.com` HTML / `github.com/trending` | 🔴 403 |
+| **`huggingface.co`** | 🔴 **`connect_rejected` at the egress proxy** |
+| `arxiv.org`, `aclanthology.org`, `doi.org`, `oecd.org`, `unesco.org`, `eur-lex.europa.eu` | 🔴 `connect_rejected` — unchanged |
+
+> 🔴 **`p875`'s instruction *"Next pass: try Hugging Face"* is DISCHARGED, and the answer is no.**
+> `huggingface.co` is refused at the egress proxy (`connect_rejected`, not DNS). **The two
+> Africa-origin leads — EduNaija AI Tutor and AFRILANGTUTOR — cannot be resolved from this
+> session by any available channel**, because their claimed releases are model weights on Hugging
+> Face and `arxiv.org`/`aclanthology.org` are also refused. This is **not** a statement that they
+> do not exist. It is a statement that **this session cannot check, and no address will be
+> invented.** Discharging it needs `huggingface.co` added to the session's network allowlist —
+> that is now a concrete, actionable request rather than an open-ended gap.
+
+### What `p876` did NOT do
+
+- **No agent row was added.** Nothing in 126 discovered repositories qualified.
+- **No star figure was taken from a blog.** Every number here is first-hand.
+- **No regional claim was upgraded.** The regional web legs returned EU, US-state, APAC and LATAM
+  instruments this KB already holds (`Regulation (EU) 2026/1744`, Ohio, Idaho `SB 1227`, NC
+  `SL 2026-41`, CA `AB 1159`, India Class-3 mandate, Korea's reversal, CONPES 4144, UNESCO
+  IESALC). Two items were genuinely new and are filed in `intel/market.md`: **SUNY's systemwide
+  AI policy (adopted 2026-05-04, 64 campuses)** and the **OECD/European Commission AI literacy
+  framework for primary and secondary education**. Both are secondary-sourced; both primary hosts
+  are refused at the proxy.
+
+---
+
 ## 🟢 `2026-11-17` (`p875`) — **the star channel OPENS after four passes of being called impossible — and the first thing it measures is that half this KB's education-native agents have ZERO users**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

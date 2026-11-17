@@ -6,7 +6,28 @@ updated: 2026-11-17
 
 # Foundational repos — education
 
-**Pass `p875`, 2026-11-17** (fifth pass of the day). **`p875` closes the star gap and uses it to
+**Pass `p876`, 2026-11-17** (sixth pass of the day). **`p876` is a propagation audit, not a
+discovery pass**, and it closes the gap `p875` opened one pass earlier — *in the same pass that
+`p875`'s own sweep had already measured the answer*.
+
+> **🟢 THE LRS GAP IS CLOSED. `p875` wrote "no maintained permissive LRS exists" into four files
+> while its own sweep table (`agents/trending.md`, leg `xAPI learning record store stars:>15`)
+> listed three.** Two of them are permissive **and** maintained:
+> **`yetanalytics/lrsql`** (Apache-2.0, 144★, **67 commits in the last 12 months**) and
+> **`openfun/ralph`** (MIT, 52★, from France Université Numérique, with **native Open edX
+> tracking-log → xAPI converters in-tree**). Both are now rows in the new *Learning analytics &
+> telemetry* section below. 🔵 **The method lesson: this KB's discovery channel is ahead of its
+> curated shelf. A finding that is measured and not propagated is not yet knowledge** — it is a
+> line in an 84,000-line log that the next proposal will not read.
+
+> **🔴 AND THE DORMANCY WAS UNDERSTATED BY 2.5 YEARS.** `p875` recorded LearningLocker as *"18
+> months"* dormant from its `pushed_at` field. **Its default branch's last commit is
+> `2021-11-16` — 1,827 days, five years.** `p876` re-measured every address in this file by
+> cloning it (`--filter=blob:none --bare`) and reading `git log -1 HEAD`, which is the branch a
+> clone actually gives you. **83 of 83 clones succeeded.** See `repos/trending.md` `p876` for the
+> full divergence table and two further stale rows this caught.
+
+**Previous pass note (`p875`)** (fifth pass of the day). **`p875` closes the star gap and uses it to
 audit this file rather than to decorate it.** 78 addresses measured first-hand via
 `api.github.com/search/repositories` — the channel four passes called impossible (see
 `repos/trending.md` for how it was found). The measurement produced **three corrections to this
@@ -22,6 +43,9 @@ file that no licence check could have produced**:
 > audit.* One row now, `openedx/`.
 
 > **🔴 2. The xAPI layer is unmaintained, and it is the one this KB's measurement pitch rests on.**
+> 🟢 **`p876`: the second half of this item — "no maintained permissive LRS" — is WITHDRAWN as
+> wrong; see the banner above. The first half is CONFIRMED and sharpened: the dormancy is five
+> years, not 18 months.** Original `p875` text retained below for the record.
 > `LearningLocker/learninglocker` (587 stars) **has not been pushed since 2024-05-30 — 18
 > months**. `intel/trends.md` T9 argues that *measurement* is the defensible deliverable in this
 > vertical, and the Learning Record Store that every such pattern routes telemetry into is
@@ -69,11 +93,36 @@ This is the layer that gets a Globant build past institutional procurement.
 | https://github.com/1EdTech/openbadges-validator-core | Apache-2.0 | `develop` | Open Badges validation from the standards body itself (1EdTech, formerly IMS Global). The verification half of any credentialing or micro-credential build. |
 | https://github.com/Citolab/qti-components | GPL-3.0 | `main` | **QTI 3 web components** — standards-compliant assessment item rendering. Copyleft: fine for a self-hosted institutional deployment, a problem for a proprietary distributed product. |
 | https://github.com/openedx/edx-ora2 | AGPL-3.0 | `master` | **Open-response assessment** — rubrics, peer assessment, self assessment, staff grading. Given that no mature OSS grading *agent* exists (see `agents/top.md` gaps), this is the realistic production substrate for AI-assisted grading. AGPL: network-use triggers source obligations. **64 stars, last push 2026-11-13** (`p875`). **`p875` collapsed the duplicate `edx/` row that stood here:** both org forms resolve over the git protocol via redirect, but only `openedx/` resolves in the GitHub search index, so `openedx/` is the single canonical address this KB carries. |
-| https://github.com/LearningLocker/learninglocker | GPL-3.0 | `master` | **xAPI Learning Record Store.** Where learner interaction telemetry lands so that a tutoring agent's effect can actually be measured rather than asserted. 🔴 **`p875`: 587 stars, LAST PUSH 2024-05-30 — 18 months dormant. This is the measurement layer the whole "prove the tutor worked" pitch depends on, and it is unmaintained. No maintained permissive LRS was found to replace it; budget a maintained fork or fall back to the LMS gradebook.** |
+| https://github.com/LearningLocker/learninglocker | GPL-3.0 | `master` | **xAPI Learning Record Store.** 🔴 **SUPERSEDED by `p876` — do not start here.** 587 stars. `pushed_at` reports `2024-05-30`, but the **default branch's last commit is `2021-11-16` — 1,827 days**, and there are **0 commits in the last 12 months**. Copyleft *and* five years cold. Retained in this file only so that a later pass does not re-import it from a listicle. **Use `yetanalytics/lrsql` or `openfun/ralph` below.** |
 | https://github.com/openedx/openedx-aspects | Apache-2.0 | `main` | Open edX's learning-analytics stack (Aspects). Apache-2.0 and reusable even outside an Open edX deployment. |
 | https://github.com/jupyter/nbgrader | BSD | `main` | Assignment release, collection and autograding for Jupyter notebooks. The standard autograder in university CS and data-science courses. |
 | https://github.com/jupyterhub/jupyterhub | BSD | `main` | Multi-user notebook hosting — the substrate for every hands-on technical course delivered in a browser. |
 | https://github.com/open-spaced-repetition/fsrs4anki | MIT | `main` | **FSRS** — the modern free-spaced-repetition scheduler. MIT-licensed, empirically validated memory model. If your product claims retention, this is the algorithm to use instead of inventing a review schedule. |
+
+## Learning analytics & telemetry (xAPI) — new in `p876`
+
+This section exists because `intel/trends.md` **T9** argues that *measurement* is the defensible
+deliverable in this vertical, and until this pass the only Learning Record Store this KB carried
+was copyleft and five years dead. Every row was verified on four channels this pass: existence and
+default branch via `git ls-remote --symref`, licence **bytes** from `raw.githubusercontent.com`,
+stars/SPDX via `api.github.com/search/repositories`, and **liveness via a blobless bare clone and
+`git log -1 HEAD`** — not the `pushed_at` field, which is what produced the error above.
+
+| Repo | Licence | Branch | Stars | HEAD | Commits/12mo | Why it is foundational |
+|---|---|---|---|---|---|---|
+| https://github.com/yetanalytics/lrsql | Apache-2.0 (11,357 B) | `main` | 144 | 2026-11-14 | **67** | **Yet Analytics SQL LRS — the maintained permissive LRS, and the default recommendation.** A full xAPI LRS (statements, attachments, documents, per xAPI spec Part 3) over ordinary SQL: **SQLite embedded, Postgres 14–18, MariaDB 10.6–11.8, MySQL 8.0–9.5**. Ships a Docker image, **OIDC support** (with an Auth0 setup guide), a TLS/HTTPS guide, a documented AWS deployment, and a "Reactions" rules engine for triggering on statement patterns. Clojure. Latest tags `v0.9.14`, `v1.0.0-pre_ui_testing`. **This is the row that replaces LearningLocker in P1, P7 and P9.** |
+| https://github.com/openfun/ralph | MIT (1,094 B) | `main` | 52 | 2026-10-12 (`v5.1.0`) | 18 | **The EMEA, public-sector, Open edX-native option — and the only MIT one.** From **OpenFUN (France Université Numérique)**, the consortium that operates France's national Open edX platform. Three things in one: an **LRS HTTP API** (FastAPI, `src/ralph/api/`, with **basic *and* OIDC auth** and statement forwarding), a **CLI** for building data pipelines, and a **library**. 🟢 **Verified in-tree, not from the README: `src/ralph/models/edx/` holds event models and `converters/` for Open edX tracking logs, alongside `src/ralph/models/xapi/`** — so Open edX telemetry becomes xAPI without writing the mapping yourself. Ships a **Helm chart** (`src/helm/ralph/`) and a PyPI package (`ralph-malph`). Community support runs through **ESUP**, the French higher-education consortium. |
+| https://github.com/adlnet/ADL_LRS | Apache-2.0 (11,357 B) | `master` | 335 | 2025-11-14 | 0 | **The reference implementation, from the body that wrote the specification** — ADL, authors of xAPI. Python/Django. 🟡 **Liveness flag: 0 commits in the last 12 months.** Treat it as the conformance *reference* to test against and read, not as the production substrate: for that, use `lrsql`. Highest star count of the three, which is reputation rather than momentum. |
+
+**How to choose between them.** Take **`lrsql`** by default — it is the most active (67 commits in
+12 months against ralph's 18), it speaks four DBMS families so it drops into whatever the
+institution already runs, and Apache-2.0 carries an explicit patent grant. Take **`ralph`** when
+the deployment is **Open edX** (its converters are the work you would otherwise do by hand), when
+the client is **European public sector** and a French public-consortium provenance plus MIT is
+worth more than raw commit velocity, or when the pipeline matters as much as the store. **Neither
+is a drop-in for LearningLocker's dashboards** — Learning Locker bundled a reporting UI, and these
+are stores and pipelines. Budget the visualisation layer explicitly (Aspects/Superset, or Grafana
+over Postgres); do not let a statement of work imply dashboards come free.
 
 ## Curriculum structure — new in `p875`
 
@@ -124,10 +173,12 @@ quality, not model quality, is what usually determines whether a tutoring build 
 | https://github.com/promptfoo/promptfoo | MIT | `main` | Prompt/model regression testing and red-teaming. Education needs this for safeguarding checks on learner-facing output. |
 | https://github.com/EleutherAI/lm-evaluation-harness | MIT | `main` | Standard academic benchmark harness — the credible way to report model capability to an academic buyer. |
 | https://github.com/HumanSignal/label-studio | Apache-2.0 | `develop` | Human annotation, including rubric-scoring interfaces for building graded gold sets. |
-| https://github.com/argilla-io/argilla | Apache-2.0 | `develop` | Human feedback and dataset curation, oriented to SME review — fits teacher-in-the-loop validation. |
+| https://github.com/argilla-io/argilla | Apache-2.0 | `develop` | Human feedback and dataset curation, oriented to SME review — fits teacher-in-the-loop validation. 🟡 **`p876` liveness flag, new and not caught by any previous pass: `pushed_at` reports `2026-11-16` (yesterday), but the default branch `develop` last moved `2025-08-05` and has `0` commits in 12 months.** It looks maintained in every star-and-push sweep this KB has ever run and is not. Usable — it is a mature tool — but do not promise upstream fixes. |
 | https://github.com/wwrwbs/AI_AWE | Apache-2.0 | `main` | **ArguLens** — automated essay scoring with feedback. Enters the foundations layer because its **scorer is a grade-independent LightGBM model over 31 explicit linguistic/discourse features**, not an LLM: a reproducible, inspectable score is the only kind that survives an appeal or a high-risk conformance review. **v0.1.0, research-grade; corpus is US middle-school English (Persuade 2.0)** — re-fitting on local graded essays is required work, not polish. See `agents/top.md`. |
 
-**33 verified foundational repos** (31 from `p871`, plus `openedx/edx-ora2` recorded as the
+**36 verified foundational repos** — `p876` adds `yetanalytics/lrsql`, `openfun/ralph` and `adlnet/ADL_LRS`.
+
+**Previous count:** 33 (31 from `p871`, plus `openedx/edx-ora2` recorded as the
 canonical address and `wwrwbs/AI_AWE` added by `p872`).
 
 ## Declared gaps

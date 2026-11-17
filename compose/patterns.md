@@ -6,7 +6,23 @@ updated: 2026-11-17
 
 # Compose patterns — education
 
-**Pass `p875`, 2026-11-17** (fifth pass of the day). **Thirteen recipes** — `p875` adds **P12**,
+**Pass `p876`, 2026-11-17** (sixth pass of the day). **Fourteen recipes** — `p876` adds **P14**,
+the measurement spine, and **repairs the telemetry row in P1, P7 and P9**, which until this pass
+pointed every measurement promise in this file at a Learning Record Store whose default branch
+last moved in **November 2021**.
+
+> 🟢 **The caveat `p875` attached to this whole file is WITHDRAWN.** It read: *"`p875` found no
+> maintained permissive replacement."* Two exist, and `p875`'s own sweep had listed them:
+> **`yetanalytics/lrsql`** (Apache-2.0, 144★, 67 commits in 12 months) and **`openfun/ralph`**
+> (MIT, 52★, France Université Numérique, **Open edX→xAPI converters in-tree**). Both are now in
+> `repos/foundations.md` and wired into the stacks below.
+>
+> 🔴 **What survives, and must stay in every statement of work: neither ships dashboards.**
+> Learning Locker bundled a reporting UI; `lrsql` is a store and `ralph` is a store plus a
+> pipeline. **Price the visualisation layer** (Aspects/Superset, or Grafana over Postgres) as a
+> line item. See **P14**.
+
+**Previous pass note (`p875`)** (fifth pass of the day). **Thirteen recipes** — `p875` adds **P12**,
 a hardened OpenMAIC classroom built on the licence question this KB has now settled four ways and
 on a **student-data exposure in OpenMAIC's default configuration that its own README documents**;
 and **P13**, US district policy conformance sold against published state deadlines rather than
@@ -17,10 +33,11 @@ against an AI thesis.
 AI-generated content — went live **2 August 2026**. **P11's argument strengthens and its dates
 change**; see the corrected **T11**. Any P11 deck in circulation must be fixed.
 
-🟡 **A caveat now attaches to every pattern in this file that promises measurement** (P1, P5, P7
+🟡 ~~**A caveat now attaches to every pattern in this file that promises measurement** (P1, P5, P7
 especially): **the xAPI Learning Record Store they route telemetry through, `LearningLocker`, has
 not been pushed since May 2024.** `p875` found no maintained permissive replacement. Budget a
-maintained fork explicitly, or fall back to the LMS gradebook and say so.
+maintained fork explicitly, or fall back to the LMS gradebook and say so.~~ 🟢 **Superseded by
+`p876`** — see the banner above. The dormancy figure was also wrong: **2021-11-16, five years.**
 
 **Previous pass note (`p873`):** ten recipes — `p871`'s six, `p872`'s **P7**
 and **P8** (and its rewrite of **P2**), plus **P9** and **P10** added by `p873`: a Spanish-language
@@ -48,7 +65,8 @@ architecture claim, so every component must be self-hostable.
 | Model gateway | https://github.com/BerriAI/litellm | MIT |
 | Ingestion | https://github.com/docling-project/docling + https://github.com/SYSTRAN/faster-whisper | MIT / MIT |
 | LMS attachment | https://github.com/Cvmcosta/ltijs | Apache-2.0 |
-| Telemetry | https://github.com/LearningLocker/learninglocker | GPL-3.0 (self-hosted, so copyleft is contained) |
+| Telemetry | https://github.com/yetanalytics/lrsql | **Apache-2.0** |
+| Telemetry reporting (price it — the LRS has no UI) | https://github.com/openedx/openedx-aspects, or Grafana over the LRS's Postgres | Apache-2.0 / AGPL-3.0 |
 
 **Wiring.** Docling parses the institution's course PDFs and faster-whisper transcribes lecture
 capture (pull the video from Opencast if the client already runs it); both feed DeepTutor's
@@ -56,8 +74,10 @@ LightRAG index. DeepTutor talks to LiteLLM, never directly to a provider — tha
 what lets the institution swap to a sovereign or on-prem model later without touching the
 application. `ltijs` wraps the tutor as an LTI 1.3 tool so it launches from inside Moodle,
 Canvas or Open edX with grade passback, which means **no fork of the AGPL/GPL platform**.
-Every learner interaction is emitted as xAPI to Learning Locker so efficacy can be measured
-instead of asserted.
+Every learner interaction is emitted as xAPI to **SQL LRS (`lrsql`)** so efficacy can be measured
+instead of asserted. 🟢 **`p876` replaced Learning Locker here**: `lrsql` is Apache-2.0 (no
+copyleft to contain at all), runs on the Postgres the deployment already has, and speaks OIDC so
+it joins the institution's existing identity provider instead of carrying its own user table.
 
 **Why this order:** start with Ollama for the pilot, move to vLLM only when a whole cohort hits
 the tutor in one lab session. Swapping is a LiteLLM config change.
@@ -272,7 +292,7 @@ lost**, and it is the default motion of the entire industry. This pattern sells 
 | Pedagogical policy as code | https://github.com/langchain-ai/langgraph | MIT |
 | Model gateway | https://github.com/BerriAI/litellm | MIT |
 | LMS attachment | https://github.com/Cvmcosta/ltijs | Apache-2.0 (`master`) |
-| Interaction telemetry | https://github.com/LearningLocker/learninglocker | GPL-3.0 (self-hosted) |
+| Interaction telemetry | https://github.com/yetanalytics/lrsql | **Apache-2.0** |
 | Outcome analytics | https://github.com/openedx/openedx-aspects | Apache-2.0 |
 | Model pedagogical capability | https://github.com/AI-for-Education/pedagogy-benchmark | MIT |
 | Safeguarding gates | https://github.com/promptfoo/promptfoo | MIT |
@@ -281,7 +301,7 @@ lost**, and it is the default motion of the entire industry. This pattern sells 
 
 1. **Build the measurement before the tutor.** `ltijs` launches the tutor inside the client's
    Moodle/Canvas/Open edX so **section-level assignment is possible** — which is what makes a
-   real comparison design available instead of a satisfaction survey. Learning Locker captures
+   real comparison design available instead of a satisfaction survey. **`lrsql`** captures
    every interaction as xAPI; Aspects joins it to grades and participation. Stand this up first,
    on the existing course, to get a **baseline**. Without a baseline the 0.37 SD effect is
    undetectable, and a client who cannot detect it is exposed to it.
@@ -374,7 +394,7 @@ New in `p873`, and it is the first pattern in this file whose core component is 
 | Model-swap seam | https://github.com/BerriAI/litellm | MIT |
 | Vector store | PostgreSQL + `pgvector` (already wired in TutorIA's `docker-compose.yml`) | PostgreSQL licence / Apache-2.0 |
 | Document ingestion | https://github.com/docling-project/docling | MIT |
-| Telemetry for outcome measurement | https://github.com/LearningLocker/learninglocker | GPL-3.0 |
+| Telemetry for outcome measurement | https://github.com/openfun/ralph | **MIT** (Open edX-native; TutorIA runs inside Open edX) |
 | Offline variant | https://github.com/learningequality/kolibri | MIT |
 
 **Why start from TutorIA rather than DeepTutor.** DeepTutor is far more mature and should still be
@@ -413,8 +433,12 @@ provenance is worth more than feature count.
    OpenAI-compatible client with a `request_router` (**RF-23**). Put **LiteLLM** behind that seam
    so the same deployment can move to a bigger local model, to **Latam-GPT** weights, or to a
    hosted endpoint on one config change — which is exactly the clause ministries ask for.
-7. **Instrument from day one.** Learning Locker captures xAPI so **P7**'s measurement plan has
-   data. Do not skip this: the region's measured governance gap is that **9% of institutions
+7. **Instrument from day one.** **Ralph** captures xAPI so **P7**'s measurement plan has
+   data — and for this pattern specifically it is the right LRS rather than merely an available
+   one: TutorIA is built to run inside **Open edX**, and `ralph` ships **Open edX tracking-log →
+   xAPI converters in-tree** (`src/ralph/models/edx/converters/`), so the mapping work is already
+   done. It is **MIT**, and it comes from **France Université Numérique**, a public university
+   consortium — provenance that reads well to a ministry. Do not skip this: the region's measured governance gap is that **9% of institutions
    evaluate their AI implementation at all**, which makes measurement the differentiator.
 
 **Say this plainly to the client, because it converts a risk into a selling point.** TutorIA is an
@@ -687,6 +711,71 @@ across 31 states) come from trackers, several vendor- or advocacy-run, that disa
 margins. **The dates above recur consistently across sources; the counts are directional. No
 primary statute was readable from this session** — confirm the specific statute before a district
 signs.
+
+---
+
+## P14 — The measurement spine (the piece every other pattern assumes and none of them built)
+
+**New in `p876`.** Every outcome claim in this file — P1's "efficacy can be measured instead of
+asserted", P7's baseline-and-comparison design, P9's answer to the region's 9%-evaluate statistic
+— depends on learner telemetry reaching somewhere durable and queryable. Until this pass that
+"somewhere" was a GPL project whose last commit was **2021-11-16**. P14 is that spine, built
+once, reused by the rest.
+
+**Sell it on its own.** `intel/market.md` records that **26% of LATAM universities have a formal
+AI strategy and 9% evaluate how it performs**, and `intel/trends.md` **T9** records that the
+largest trial of an AI tutor to date returned a **negative** effect. Those two facts together are
+the pitch: **an institution that cannot measure cannot tell P7 from the negative trial**, and the
+cheapest engagement that de-risks every later AI purchase is the instrumentation, not the tutor.
+It is also unusually easy to scope — no pedagogy debate, no model selection, no procurement of a
+learner-facing system.
+
+### Stack — fully permissive, every licence byte-read this pass
+
+| Layer | Repo | Licence | Note |
+|---|---|---|---|
+| Learning Record Store (default) | https://github.com/yetanalytics/lrsql | **Apache-2.0** | SQLite for pilot → Postgres 14–18 in production. OIDC. 67 commits in 12 months |
+| LRS (Open edX / EU public sector) | https://github.com/openfun/ralph | **MIT** | FastAPI LRS + CLI + library; **Open edX tracking-log converters in-tree**; Helm chart |
+| Conformance reference | https://github.com/adlnet/ADL_LRS | **Apache-2.0** | From xAPI's authors. Test against it; do not run it (0 commits/12mo) |
+| Statement source — LMS | https://github.com/davidpesce/moodle-logstore_xapi | GPL-3.0 | Moodle → LRS bridge. Copyleft, but it is a **plugin inside a GPL platform**, so nothing new is conceded |
+| Statement source — agent | `ltijs` launch + the tutor's own emitter | Apache-2.0 | Your code; emit xAPI directly |
+| Analytics / joins | https://github.com/openedx/openedx-aspects | Apache-2.0 | Joins telemetry to grades and participation; reusable outside Open edX |
+| Reporting UI | Superset (via Aspects) **or** Grafana over the LRS Postgres | Apache-2.0 / AGPL-3.0 | 🔴 **Not optional and not free — see below** |
+
+### 🔴 The line item that must not be silently dropped
+
+Learning Locker bundled dashboards. **Neither replacement does.** If a statement of work says
+"measurement" and the stack is `lrsql` + Aspects, somebody still has to build the reports the
+client will actually look at. Budget it explicitly. 🟡 Note the licence asymmetry while choosing:
+**Superset is Apache-2.0, Grafana is AGPL-3.0** — fine for a self-hosted institutional
+deployment, a problem the moment the dashboards become part of a distributed product.
+
+### How to wire it
+
+1. **Stand up `lrsql` against the institution's existing Postgres.** Point its OIDC at the same
+   identity provider the LMS uses, so there is no second user directory to govern. For a pilot,
+   the embedded SQLite build runs on one box.
+2. **Turn on statement sources before anything AI exists.** `logstore_xapi` from Moodle (or
+   `ralph`'s converters from Open edX tracking logs) gives a **pre-AI baseline from history the
+   institution already has**. This is the step that makes P7's comparison design possible later,
+   and it is nearly free — the data exists, it is just not flowing anywhere.
+3. **Define the statement vocabulary before the first agent emits one.** Agree verbs and activity
+   types up front; retrofitting a vocabulary across a year of statements is the expensive mistake
+   in every xAPI project.
+4. **Join to outcomes with Aspects**, then build the reports in Superset or Grafana.
+5. **Only then add the agent** (P1, P7, P9). It emits into a spine that already has a baseline.
+
+### Why Globant wins this one
+
+It is permissive end to end, so there is no licence conversation to lose. It is **the cheapest
+credible first engagement** with an institution that is not yet ready to buy a tutor, and it
+**creates the evidence base that justifies the next purchase** — which makes it a land-and-expand
+motion rather than a one-off. And it is defensible under every regime in `intel/market.md`: the
+EU AI Act's high-risk tier, Brazil's LGPD review right and Vietnam's Decision 33/2026/QD-TTg all
+ask for records of how an automated system behaved. **An LRS is that record.**
+
+**Effort:** 4–6 weeks for the spine and a baseline on one faculty; 8–10 weeks institution-wide
+with reporting. *Studio-delivery estimate, not a measurement.*
 
 ---
 

@@ -6,7 +6,20 @@ updated: 2026-11-17
 
 # Current trends — education AI
 
-**Pass `p875`, 2026-11-17** (fifth pass of the day). `p875` **corrects T11's central date**,
+**Pass `p876`, 2026-11-17** (sixth pass of the day). `p876` **closes the gap `p875` opened one
+pass earlier**, adds **T13**, and leaves every other trend standing.
+
+- 🟢 **The dormant-LRS gap is CLOSED, and it should never have been opened.** Two maintained
+  permissive Learning Record Stores exist — **`yetanalytics/lrsql`** (Apache-2.0, 67 commits in
+  12 months) and **`openfun/ralph`** (MIT, France Université Numérique, Open edX-native). Both
+  appeared in `p875`'s **own** sweep legs while `p875` wrote "none exists" into four files. See
+  **T13**.
+- 🔴 **The dormancy that remains was understated by 2.5 years.** LearningLocker's default branch
+  last moved **2021-11-16** — five years, not 18 months. `pushed_at` was the wrong instrument.
+- 🟢 **T13 is new** — the KB's failure mode has moved from *discovery* to *propagation*, and that
+  has a direct commercial consequence for how this KB is used in a bid.
+
+**Previous pass note (`p875`)** (fifth pass of the day). `p875` **corrects T11's central date**,
 adds **T12**, and closes the KB's oldest measurement gap. Three movements:
 
 - 🔴 **T11's legal date was wrong.** The EU AI-literacy duty does not begin July 2026; it has
@@ -326,7 +339,10 @@ than the length of the tables suggests.** Concretely:
   passes argued about its *licences*. Licence was never the binding constraint — **there is no
   supply.** See `verticals/solutions.md`.
 - **The xAPI Learning Record Store this KB routes all measurement through has not been pushed
-  since May 2024** (`LearningLocker`, 587 stars). The measurement layer is dormant.
+  since May 2024** (`LearningLocker`, 587 stars). The measurement layer is dormant. 🔴 **`p876`
+  corrects the figure — the default branch last moved `2021-11-16`, five years — and 🟢 withdraws
+  the implied conclusion: maintained permissive replacements DO exist (`lrsql`, `ralph`).
+  See T13.**
 - **Stars and liveness are independent.** `stanford-oval/storm` has 31,901 stars and 14 months
   without a commit.
 
@@ -335,14 +351,57 @@ the serious supply comes from university labs. T12 adds the magnitude: **it is t
 Tsinghua — and essentially nobody else.** Everything else in this vertical is a prototype, a paper
 artifact, or a funded deliverable nobody outside the authoring lab has deployed. **For Globant that
 is an opportunity, not a disappointment:** in a vertical whose open shelf is this thin, the studio
-that builds a maintained permissive component — an LRS, a proctoring layer, a permissive curriculum
-graph — is not joining a crowded field. **There is no field.**
+that builds a maintained permissive component — a proctoring layer, a permissive curriculum
+graph, a reporting layer over an LRS — is not joining a crowded field. **There is no field.**
+🟡 **`p876` removes "an LRS" from that list: that slot is filled** (`lrsql`, `ralph`). The
+adjacent slot is not — **neither store ships dashboards**, which is where Learning Locker's real
+value lay. *Reporting over a maintained permissive LRS* is the build opportunity, not the LRS.
 
 🟡 **How to use this honestly.** Stars measure attention, not quality. A 0-star repo may be good
 code, and TutorIA is a funded Colombian university deliverable rather than a weekend project. What
 a 0-star repo *does* reliably tell you is that there is **no community, no issue history, no
 external contributor and no evidence of a production deployment** — which is a support-burden fact
 a client must hear before signing, not an engineering verdict.
+
+## T13 — This KB's binding constraint has moved from discovery to propagation — new in `p876`
+
+For most of its history this base got better by **finding** things. `p876` is the pass where that
+stopped being the limiting factor, and the evidence is a contradiction inside a single prior pass.
+
+**The fact pattern.** `p875` ran a sweep whose output listed three permissive Learning Record
+Stores — `adlnet/ADL_LRS` (335★, Apache-2.0), `yetanalytics/lrsql` (144★, Apache-2.0),
+`openfun/ralph` (52★, MIT, "HEAD today"). In the same pass, `p875` wrote *"there is no maintained
+permissive xAPI Learning Record Store"* into `repos/foundations.md`, `intel/trends.md`,
+`compose/patterns.md` and `repos/trending.md`, and called it *"the highest-value unfilled slot in
+the education open-source stack."* **The discovery channel and the curated shelf disagreed, and
+nothing in the pass reconciled them.**
+
+It is not an isolated slip. Three more instances, all found by `p876` without new searching:
+
+| Known in the trending log since | Still wrong in the curated files until `p876` |
+|---|---|
+| `p477` — `danny-avila/LibreChat` renamed | `agents/top.md` cited the dead slug |
+| `p800`/`T810` — `openedx/edx-platform` renamed | ~306 citations base-wide; still unrepaired |
+| `p875`'s own sweep — three permissive LRS | Four files said none existed |
+
+**Why it happens.** `agents/trending.md` and `repos/trending.md` are append-only and now exceed
+**84,000 and 66,000 lines**. They are an excellent *ledger* and an unusable *index*. Each pass
+appends a rich section at the top, and the curated files — the eight anyone actually reads before
+a client conversation — are edited by hand from whatever that pass happened to be looking at.
+**Nothing cross-checks a new claim against what the base already measured.**
+
+🔵 **The method consequence, now a standing instruction:** *before declaring a gap open, grep this
+repository for the thing you are about to say does not exist.* A gap is a claim about the world
+**and** a claim about the base's own contents, and only the second one is cheap to check.
+
+🟡 **The commercial consequence, which is why this is a trend and not a chore.** This KB's value
+proposition is that a studio walks into an engagement already knowing the shelf. **A curated file
+that says "no maintained permissive LRS exists" when two do is worse than no file at all** — it
+does not merely fail to help, it argues against a correct, cheap design (attach to `lrsql`) and
+toward an expensive wrong one (fork and operate a five-year-dead GPL project, or abandon
+measurement entirely). **The failure mode of a mature knowledge base is not ignorance. It is
+confident, internally contradicted staleness** — and unlike ignorance it does not announce
+itself, because every individual pass still looks productive.
 
 ## Declared gaps
 
@@ -361,14 +420,22 @@ a **new gap opened** (the dormant LRS).
   same host and read the refusal body, not just the status code.** `p874` was told the remedy in
   the 403 response it received. Consequences now live: see **T12**, and the staleness and
   licence-mismatch audits in `repos/trending.md`.
-- 🔴 **NEW GAP, opened by `p875`: there is no maintained permissive xAPI Learning Record Store.**
-  `LearningLocker` (GPL-3.0, 587 stars) **has not been pushed since 2024-05-30**. This KB's
-  strongest commercial argument — **T9**'s "measurement is the defensible deliverable" — routes
-  telemetry into a dormant project. `p875` searched and found no maintained permissive replacement
-  and **does not invent one**. 🟡 Until it is filled, any engagement promising measurement must
-  either budget a maintained fork explicitly in the statement of work, or fall back to the LMS
-  gradebook and accept weaker evidence. 🔵 **This is now the highest-value unfilled slot in the
-  education open-source stack, and T12 argues it is an uncontested one to build into.**
+- 🟢 ~~**NEW GAP, opened by `p875`: there is no maintained permissive xAPI Learning Record
+  Store.**~~ **CLOSED BY `p876` — and it was never open.** **`yetanalytics/lrsql`** (Apache-2.0,
+  144★, HEAD `2026-11-14`, **67 commits in 12 months**, SQLite/Postgres/MariaDB/MySQL, Docker,
+  OIDC) and **`openfun/ralph`** (MIT, 52★, HEAD `2026-10-12`, France Université Numérique, with
+  **Open edX→xAPI converters verified in-tree**) are both permissive and both maintained. **Both
+  were listed in `p875`'s own sweep output in the same pass that declared the gap.** Filed in
+  `repos/foundations.md`; wired into **P1**, **P7** and **P9** in `compose/patterns.md`. 🔴 **The
+  residual, genuine gap is narrower and should be stated as such: neither replacement ships a
+  reporting UI.** Learning Locker did. Any engagement promising measurement must price the
+  visualisation layer (Aspects/Superset, or Grafana over Postgres) as an explicit line item.
+- 🔴 **`huggingface.co` is refused at this session's egress proxy** (`connect_rejected`), so
+  `p875`'s instruction to resolve the two Africa-origin leads (**EduNaija AI Tutor**,
+  **AFRILANGTUTOR**) via Hugging Face **cannot be carried out here**. Their claimed releases are
+  model weights, and `arxiv.org` / `aclanthology.org` are refused too. **This is not evidence
+  they do not exist** — it is a named, actionable session limitation: allowlist `huggingface.co`.
+  See **T10**, which is otherwise unchanged.
 - 🟡 ~~**The Khanmigo effect-size discrepancy (T9's 0.06–0.08 SD vs `p874`'s 0.020 SD).**~~
   **ADJUDICATED by `p875`, not resolved.** A third independent search summary returns **Year-1
   0.020 population SD (indistinguishable from zero)** with **~0.13–0.14 SD among students who
