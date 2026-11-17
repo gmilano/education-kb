@@ -4,6 +4,231 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (seventy-fifth pass, `p870`) — **`6` gaps — `869-G1`, `869-G2`, `869-G3`, `869-G4` and `869-G5` ALL DISCHARGED with their acceptance tests run; `868-G3` CARRIED UNDONE for the second time and said so; and THREE of the five discharges found the defect in the INSTRUMENT the gap commissioned rather than in the data it was pointed at**
+
+🔴 **The honest summary of this pass, before the entries: `p870` ran five acceptance tests and
+`3` of them returned "your instrument is wrong" rather than a number.** 🔴 **`869-G2`'s comparator
+reported `3` licence contradictions of which `0` were real; `869-G3`'s committed domain predicate
+prefers the vein that yields nothing; `869-G4`'s refusal rule fires on none of the `10` owners it
+was written for and refuses one where a real signal exists.** 🟢 **And one draft of this pass's
+own was refuted by a claim already standing on these shelves before it was committed — see
+`870-G4`.**
+
+### 🟢 `869-G1` — DISCHARGED: `2` groups, `3` rows collapse, and the `18%` the gap declined to extrapolate was really `0.30%`
+
+🟢 **Acceptance test: `git ls-remote HEAD` over the full counted population, group by `HEAD` sha,
+publish every group of size `> 1`, state how many of the `1,015` counted rows collapse, and treat
+`0` groups as a mis-run instrument.**
+
+🟢 **Built as [`ingest/p870-head-identity.sh`](../ingest/p870-head-identity.sh)**
+([`record`](../evidence/head-identity.2026-11-17-p870.tsv)). `1,015` probed · `1,012` resolved ·
+`1,009` distinct shas · 🟢 **`2` groups** · 🔴 **`3` rows collapse (`0.30%`)**.
+
+🔴 **`1c46a82ba384` is THREE addresses, not the two the gap named:**
+`digitalcredentials/learner-credential-wallet`,
+`openwallet-foundation-labs/learner-credential-wallet` and 🔴 **`ryjones/learner-credential-wallet`**.
+`905f9d0313b3` is the pair the gap named.
+
+🔴 **And the finding that outlives the number: `869-G1` measured its rate on `11` addresses
+SELECTED BECAUSE the existence channel had failed on them, which is the identical
+conditional-versus-unconditional error `p869` had JUST corrected in `868-G5`.** 🟢 **Extrapolated
+it was `18%`; measured over the whole population it is `0.30%`.** → `870-G1`.
+
+### 🟢 `869-G2` — DISCHARGED: `20` extra rows in `1,179` (`1.70%`), and `0` of the `3` licence "contradictions" were real
+
+🟢 **Acceptance test: the duplicate-row rate over ALL counted rows, per shelf, and for each pair
+whether the rows AGREE on licence and region.**
+
+🟢 **Built as [`ingest/p870-duplicate-rows.py`](../ingest/p870-duplicate-rows.py), importing the
+count gate's own `SHELVES` with `ast` so it cannot drift from the gate. It reproduces
+`derive-counts.py` independently: `550`/`395`/`234` rows, `8`/`6`/`6` duplicates**
+([`record`](../evidence/duplicate-rows-all.2026-11-17-p870.tsv)).
+
+| Shelf | Rows | Dup addresses | Extra rows | Rate |
+|---|---|---|---|---|
+| `agents/top.md` | `550` | `8` | `8` | `1.45%` |
+| `repos/foundations.md` | `395` | `6` | `6` | `1.52%` |
+| `verticals/solutions.md` | `234` | `5` | `6` | `2.56%` |
+| **total** | **`1,179`** | **`19`** | **`20`** | **`1.70%`** |
+
+🔴 **Agreement, which is what the gap was actually for: `0` of `3` licence disagreements are real
+(all three are my own extractor reading a SIBLING repository's licence out of a cell's prose),
+and `2` of `5` region disagreements are real (`talis/lti-1-3-php-library` `APAC` vs `EMEA`,
+`zijinz456/OpenTutor` `EMEA` vs `Global` — both now REFUSED on the measured axis), the other `3`
+being my comparator comparing a row with a region column against one without.**
+
+🟢 **The value came from the re-reads: `2` byte/sha refutations the gap never asked for
+(`wongcyrus/Google-AI-Classroom`'s second row; `talis`'s *byte-identical* claim, stale by one
+byte) and the case-sensitivity defect that became `870-G5`.**
+
+### 🟢 `869-G3` — DISCHARGED: `115` addresses, `3.4%` vein overlap, and the predicate prefers the barren vein
+
+🟢 **Acceptance test: add a PUSH-RECENCY vein keyed on OWNER over the `10` + `4` owners, and
+publish how many addresses it surfaces that a star-ranked sweep of the same window does not.**
+
+🟢 **Built as [`ingest/p870-push-recency.sh`](../ingest/p870-push-recency.sh) and
+[`ingest/p870-vein-sweep.sh`](../ingest/p870-vein-sweep.sh).** 🟢 **The answer is `115` of `132`
+(`87.1%`).** 🔵 **And the better finding: the two veins share `17` addresses out of a `506` union
+— `3.4%`. They are nearly disjoint, so this is not "which vein is better" but "this base has run
+one of two".** 🟢 **`4` rows filed from it, `0★`–`15★`, including most of MIT Open Learning's AI stack; a
+fifth candidate was already shelved and the selection error is published.** Full account on [`repos/trending.md`](../repos/trending.md). → `870-G3`.
+
+### 🟢 `869-G4` — DISCHARGED: `4` of `10` owners placed on a measured axis, and the prescribed refusal rule is wrong in BOTH directions
+
+🟢 **Acceptance test: run `ingest/p869-affiliation.sh` over the highest-★ repository of each of
+the `10` owners, publish the commit-domain distribution per owner, and REFUSE any owner whose
+domains are a `users.noreply` majority** ([`record`](../evidence/affiliation.2026-11-17-p870.tsv)).
+
+🟢 **`4` placed on a measured axis (`openfun` `fun-mooc.fr` `41`/`50` → EMEA; `IONISx`
+`ionis-group.com`+`ionisx.com` `39`/`50` → EMEA; `eduNEXT` `edunext.co` `29`/`50` → LATAM;
+`edly-io` `arbisoft.com` `29`/`50` → APAC), against `p869`'s `2`. `6` REFUSED.**
+
+🔴 **The prescribed rule fired on `0` of `10`.** 🔴 **What destroys jurisdiction here is GENERIC
+WEBMAIL — `gmail.com` is the plurality for `5` of the `10`, twice at `50` of `50`, and the script
+calls every one `MEASURABLE`.** 🔴 **And it refuses where signal exists:
+`openedx/tutor-contrib-aspects` is refused on `users.noreply` `27`/`50` while `axim.org` `16`
+(Axim Collaborative) sits beneath it.** Table on
+[`verticals/solutions.md`](../verticals/solutions.md). → `870-G3`.
+
+### 🟢 `869-G5` — DISCHARGED BY RETIREMENT, which is exactly what it asked for
+
+🟢 **Its acceptance test: state before starting whether this session can execute
+`compose/code/pass275-grant-enumeration/enumeration_gate.py`; if it CANNOT, say so and stop
+registering a gap whose test this base cannot execute.**
+
+🔴 **`p870` CANNOT. Two attempts, two refusals from this session's permission layer —
+`[Unauthorized Access]`, then `[Unsanctioned Communication]` on the bare invocation, the second
+naming the gate's network reach.** 🟢 **And that reason is now independently corroborated: this
+session's egress returns `000` on `10` of `10` non-GitHub domains
+([`intel/market.md`](market.md)), so a gate that goes to the network cannot run here in any
+pass.** 🔴 **`gate-enumeration` stands RED at `HEAD` with `REFUTED=13`, unchanged and unquieted —
+`SKIP_COMMIT_GATES` unused, `DECLARED_RED` untouched — and the `136` `VERIFIED-ABSENT` /
+`230` `QUEUE-UNENUMERATED` verdicts are STILL unrevised.** 🟢 **`869-G5` and `867-G4` are both
+RETIRED; `870-G6` replaces them with a test that needs no gate.**
+
+### 🔴 `868-G3` — NOT DISCHARGED. Second consecutive carry, with the reason stated
+
+🟢 **The acceptance test asks for a declared `HISTORICAL` / `CURRENT` disposition on
+`repos/foundations.md`, assigned to all counted rows from the committed census, publishing the
+split and the stale rate WITHIN the `CURRENT` subset.**
+
+🔴 **`p870` did not build it.** 🟢 **The budget went to five discharges with four new instruments
+(`p870-head-identity.sh`, `p870-duplicate-rows.py`, `p870-vein-sweep.sh`/`p870-push-recency.sh`,
+`p870-grant-ladder.sh`), a `1,015`-address identity sweep, a `560`-row two-vein sweep, a
+`38`-address grant re-probe, `12` affiliation probes, `12` byte-reads and `8` tree listings.**
+🔴 **Carried forward UNCHANGED — and now flagged: a gap carried twice while the shelf it governs
+grew by `7` rows is a gap this base should either do or retire, and `p871` should choose.**
+
+---
+
+### 🔴 `870-G1` — this base has now published a rate from a failure-selected population TWICE in two passes
+
+🟢 **Measured: `868-G5` reported an `82%` false-absence rate from `11` addresses chosen because
+the channel had failed on them (unconditional rate: `1.7%`). `869-G1` reported "two pairs in
+`11` addresses" from the SAME `11` (unconditional rate: `0.30%`).** 🔴 **Both were corrected by
+the next pass, both in the same direction, both for the same reason.** 🔵 **The defect is not
+arithmetic — each pass stated its sample honestly — it is that this base has no rule requiring a
+rate to name its population's SELECTION, so a conditional figure reads exactly like a base rate.**
+
+🟢 **Acceptance test: the next pass adds a one-line convention to `ingest/` — every published
+rate states the population and how it was selected, and a rate from a population selected BY A
+FAILURE is labelled `CONDITIONAL` in the cell that carries it — then applies it retroactively to
+the rates on `intel/open-gaps.md` from `p865` onward, publishing how many of them are
+conditional. 🔴 A pass reporting `0` conditional rates has mis-run it, because two are named here.**
+
+### 🔴 `870-G2` — the detector for the defect class that has now recurred three times is in `DECLARED_RED`, so a pass can orphan its own rows and commit green
+
+🟢 **Measured: `p869` filed `5` rows (`1` agent, `4` foundation) under column headers that matched
+no declared signature, so `derive-counts.py` counted `0` of them. `853-G7` registered this exact
+class; `p866` repaired `22` more rows under `865-G1`. This is at least the third instance.**
+🔴 **The cause of the RECURRENCE is in the `Makefile`: `gate-derived-counts` AND `recount` are
+both in `DECLARED_RED`, so the one gate that detects an undeclared holdings table is non-blocking
+by declaration.**
+
+🟢 **Acceptance test: the next pass either (a) brings `gate-derived-counts` out of `DECLARED_RED`
+and makes the suite green, or (b) adds a NARROW blocking gate that fails ONLY on
+"table carries `github.com` rows under an undeclared signature" — the one condition that has
+produced this defect three times — and publishes which it chose and why. 🔴 Leaving both in
+`DECLARED_RED` for a fourth pass is not an option this gap accepts without a stated reason.**
+
+### 🔴 `870-G3` — the sourcing pipeline's two judgement instruments are both scored on the wrong axis
+
+🟢 **Measured twice this pass, in opposite halves of the pipeline.**
+🔴 **(a) The DOMAIN predicate scores `description`/`topics`: on a keyword-sourced vein it is
+circular (`FedML-AI/FedML` `KEEP` at score `11`, `langfuse/langfuse-workshop` `KEEP` at `4`) and
+on an owner-sourced vein it is wrong (`mitodl/learn-ai` `DROP` at `0`, `mitodl/ocw-hugo-themes`
+`DROP` at `-3`). `867-G1` could not have caught this: it validated the predicate against a hand
+selection drawn from the same keyword veins.**
+🔴 **(b) The AFFILIATION predicate refuses on one blocklisted string (`users.noreply`), which
+fired on `0` of `10` owners, while `gmail.com` plurality — which carries no jurisdiction either —
+passed `5` of them, and a real `axim.org` signal was refused under a `users.noreply` plurality.**
+🔵 **Two further contamination classes measured: `example.com` `13`/`50` on `mitodl/learn-ai`
+(placeholder identities) and `anthropic.com` `6`/`50` on `zijinz456/OpenTutor` (an AI-assistant
+commit identity). This axis is degrading from three directions.**
+
+🟢 **Acceptance test: the next pass replaces both scorers and publishes the delta.**
+🟢 **(a) An OWNER-WARRANT arm: a declared list of education owners (institution, platform
+steward, integrator) whose repositories are in-domain by provenance, applied BEFORE the text
+score; publish how many of this pass's `30` `DROP`s it recovers and how many of the star vein's
+`295` `KEEP`s it demotes.** 🟢 **(b) An affiliation scorer that ranks domains by jurisdictional
+informativeness (ccTLD → academic → corporate → uninformative) and refuses only when no
+informative domain appears; publish the re-placed region for all `10` owners plus the `2` rows
+this pass refused.**
+
+### 🔴 `870-G4` — this base's own address normaliser manufactures an absence that every channel then confirms
+
+🟢 **Measured: `derive-counts.py` normalises extracted addresses with `rstrip(".)")`, which is
+correct and necessary for addresses written inside prose.** 🔴 **For
+`Bhuvantejakomera/Agentic-Assignment-Evaluator.` — a repository whose NAME ends in a full stop —
+it destroys the name, and `ls-remote` (`rc=128`, credential prompt) and `search/repositories`
+(`422`) then BOTH truthfully report the mangled string absent.** 🟢 **With the stop restored:
+`HEAD 5ef30b360607`, `tc=1`, `MIT`, pushed `2026-11-10`.**
+🔴 **`T146` found this at `p847`. `p868`'s census still carries the stripped form. `p869` built
+its existence predicate on that census. `p870` drafted it as a verified absence on two agreeing
+channels and was saved only by this shelf's own standing claim.**
+
+🟢 **Acceptance test: the next pass makes the normaliser REVERSIBLE — when a stripped address
+fails the existence channel, re-probe the UNSTRIPPED form before recording any verdict — then
+re-runs it over every `VERIFIED-ABSENT` and `NO-HEAD` address this base holds and publishes how
+many absences are normaliser artefacts. 🔴 A pass reporting `0` has mis-run it, because one is
+named here.**
+
+### 🔴 `870-G5` — both grant channels UNDER-report grants, so every "no grant" figure in this base is an upper bound
+
+🟢 **Measured: (a) the byte-read ladder is a fixed list of `8` filenames and
+`raw.githubusercontent.com` is CASE-SENSITIVE — the whole Frappe estate ships lowercase
+`license.txt`, so the ladder returns `NO-PAYLOAD` on `frappe/education` (`19 B`, "License: GNU
+GPL V3") and `frappe/lms` (`33,893 B`, AGPL text). (b) The metadata detector returns
+`NOASSERTION` on grants it cannot match: re-probing `p869`'s `38` ungranted XBlocks from the TREE
+found `2` carrying `AGPL-3.0` at plain `LICENSE`** ([`record`](../evidence/grant-ladder-reprobe.2026-11-17-p870.tsv)).
+🟢 **`p869`'s conclusion SURVIVES — `36` of `121` = `29.8%` ungranted, not `31.4%` — and
+`openfun` is `2` of `9` ungranted rather than `4`.**
+
+🟢 **Acceptance test: the next pass retires the filename ladder in favour of
+[`ingest/p870-grant-ladder.sh`](../ingest/p870-grant-ladder.sh)'s tree channel across the
+pipeline, re-runs it over EVERY address this base grades `NONE`/`NOASSERTION`/`NO-PAYLOAD`
+(not only the `38` XBlocks), and publishes the corrected ungranted count per shelf. 🔵 The
+direction is known in advance — every correction will be downward — so a pass that reports MORE
+ungranted addresses has mis-run it.**
+
+### 🔴 `870-G6` — `866-G3(a)` was mis-specified: the closure is this session's egress, not the EU estate, and the grade it forces is base-wide
+
+🟢 **Measured: `10` of `10` probed domains return `000` on `curl` —
+the `4` EU domains `p869` named, plus `unesco.org`, `iesalc.unesco.org`,
+`digitaleducationcouncil.com`, `teqsa.gov.au`, `multistate.us` and `ed.gov` — and the fetch tool
+returns `ENOTFOUND` on a non-EU COMMERCIAL domain as readily as on the Council's.**
+🔴 **So `p869`'s "it is not one blocked domain, it is the EU estate" measured the session.**
+🟢 **`866-G3(a)` and its EU framing are RETIRED.** 🔴 **The consequence is larger than the
+correction: every primary instrument in `intel/market.md`, in ALL FOUR regions, rests on
+web-search result text and is `CITED, NOT READ` — not just the European ones, which were simply
+the ones that got probed.**
+
+🟢 **Acceptance test: the next pass (a) carries a per-claim channel grade in `intel/market.md`
+distinguishing `FIRST-PARTY READ` (GitHub bytes, trees, commit domains) from `SEARCH-SUMMARY`
+(everything else), publishing the count in each class, and (b) states whether ANY non-GitHub
+primary source became readable, naming the domain and the channel. 🔴 It does NOT re-probe the
+same `10` domains to re-derive a closure this gap already measured.**
+
 ## 🟢 `2026-11-17` (seventy-fourth pass, `p869`) — **`5` gaps — `868-G1`, `868-G2`, `868-G4` and `868-G5` DISCHARGED with their acceptance tests run; `868-G3` and `867-G4` CARRIED UNDONE and said so; and `868-G5`'s discharge CORRECTS the arithmetic of the gap that commissioned it while upholding its conclusion**
 
 ### 🟢 `868-G1` — DISCHARGED: `10` of `134` reclassified, `16` of `16` proxy/tree agreement, and `1` of `p868`'s own `7` rows dropped correctly

@@ -4,6 +4,101 @@ region: Global
 updated: 2026-11-17
 ---
 
+# `p870` recipes — the MIT Open Learning stack, and the two instruments that make it sellable
+
+🟢 **All three recipes below are built only from rows this base has byte-read, tree-confirmed and
+affiliation-probed. Every repository named carries a licence read from its own bytes at a
+RESOLVED default ref, and every star count and push date comes from the metadata channel on
+`2026-11-17`.**
+
+## 🟢 P-114-A — The build-safe university stack: a permissive alternative to AGPL Open edX, assembled from one estate
+
+🔴 **The problem it solves.** 🟢 **A client wants an LMS they can extend and resell. The
+incumbents are copyleft — `Open edX` `AGPL-3.0`, `Moodle` `GPL-3.0`, `Canvas` `AGPL-3.0`,
+`frappe/lms` `AGPL-3.0` — and `p869`/`p870` measured the extension estate at `46.3%` `AGPL-3.0`
+and `29.8%` carrying no grant at all. So "take the platform and extend it" imports a network
+clause into the client's product, component by component.**
+
+🟢 **The recipe. One estate, uniformly `BSD-3-Clause`/`MIT`, all byte-read this pass:**
+
+| Layer | Repository | Grant, byte-read | Wire it in by |
+|---|---|---|---|
+| learner portal | https://github.com/mitodl/mit-learn | 🟢 `BSD-3-Clause` (`1,530 B`, `sha256₁₂ be8971a0f963`) | the base application: `2,042` source files, Django + TypeScript. Fork it; it is the integration target the next two rows already target |
+| agent / chatbot tier | https://github.com/mitodl/learn-ai | 🟢 `MIT` (`1,070 B`, `sha256₁₂ d1ea675aa9bb`) | runs as its own service (backend `:8005`, sandbox frontend `:8003`, `docker compose up`); it is already written to serve `mit-learn` |
+| LLM calls + governance | https://github.com/mitodl/ol-llm | 🟢 `BSD-3-Clause` (`1,517 B`, `sha256₁₂ d81f68080ca1`) | `pip install ol-llm`, import `ol_llm`; `learn-ai` calls models THROUGH it so the catalogue and spend rules apply |
+| analytics / learning record | https://github.com/openedx/tutor-contrib-aspects | 🟢 `Apache-2.0` (`11,357 B`, `sha256₁₂ c71d239df917`) | a Tutor plugin — `149` of its `334` files are `.yaml`, so it is configured rather than written (dbt + ClickHouse + Superset) |
+| permissive LMS, if the client needs the full platform | https://github.com/edly-io/sparkth | 🟢 `MIT` (`1,066 B`, `sha256₁₂ 47b5dde08d21`) | stands alone; talk to it over its own MCP endpoint `/ai/mcp` rather than building a connector |
+
+🟢 **Sequence.** (1) Stand up `mit-learn` and confirm the client's identity provider — the estate
+ships `mitodl/ol-keycloak` (`BSD-3-Clause`) for exactly this. (2) Put `ol-llm` in front of every
+model call BEFORE any feature work, because retrofitting a catalogue after the fact is what makes
+T5's CI enforcement impossible. (3) Add `learn-ai` and point it at the client's corpus; use its
+RAG-evaluation harness as the acceptance gate, not a demo. (4) Deploy `tutor-contrib-aspects` for
+the learning record. 🔴 **Do NOT take `mitodl/ol-analytics-api` — it is the one repository in the
+estate with NO readable grant (`spdx=NONE`, no payload at `main`).**
+
+🔵 **Why this is defensible: `mit.edu` is `46` of `50` commit-author domains on `ol-llm`, so this
+is a running university platform rather than a demo estate, and `6` of its `7` components were
+pushed within `48` hours of this filing.** 🟡 **Risk to state plainly: `0★`–`15★` across the
+stack. It is build-safe and actively developed, not widely adopted.**
+🟢 **Region: North America, MEASURED.**
+
+## 🟢 P-114-B — The `61`-point governance artefact, for a LATAM higher-education engagement
+
+🔴 **The problem it solves.** 🟢 **UNESCO `IESALC` measures `87%` of LATAM higher-education
+institutions using AI and `26%` holding a formal AI strategy; the Digital Education Council
+measures `92%` of students and `79%` of faculty already using it, with faculty use LOWEST on
+assessment tasks. So the institution's exposure is concentrated exactly where its governance is
+thinnest, and `716` instruments across `23` countries give it no single rule to comply with.**
+🔵 **The deliverable is therefore not a pilot. It is the evidence that use is governed.**
+
+🟢 **The recipe:**
+
+| What the artefact must show | Built from | How |
+|---|---|---|
+| which models are in use, their status and their cost | https://github.com/mitodl/ol-llm (`BSD-3-Clause`) | `catalog.toml` is the register. `ol-llm-catalog check` in CI fails any app naming a retired model; `ol-llm-catalog prices` emits Prometheus rules so spend per model is a dashboard, not an invoice surprise |
+| that assessment AI was EVALUATED before it graded anyone | https://github.com/open-craft/xblock-ai-evaluation (🟢 `Apache-2.0`, byte-read by `p869`, default ref `opencraft/ulmo`) + `learn-ai`'s RAG-evaluation harness | run the XBlock's free-text marking against a held-out human-marked set; publish the agreement rate as the gate. 🔴 **This is the task faculty trust least, so the number is the product** |
+| what learners actually did, auditably | https://github.com/openedx/tutor-contrib-aspects (`Apache-2.0`) | the learning record, configured not coded |
+| a human decision point on every high-stakes output | — | policy, not code: mirror Charlotte-Mecklenburg's rule — AI is never the SOLE basis for a placement, progression or discipline decision |
+
+🟢 **Delivery partner, MEASURED: `eduNEXT` is LATAM on the `.co` ccTLD (`edunext.co` `29` of
+`50` commits).** 🔴 **`cmmedu` (Universidad de Chile) is REFUSED on the measured axis this pass —
+`gmail.com` `49` of `50` — so treat its LATAM placement as published identity, not measurement.**
+🔴 **Declared limit: both adoption numbers are HIGHER EDUCATION. This recipe does not transfer to
+K-12 without a new measurement.** 🟢 **Region: LATAM.**
+
+## 🟢 P-114-C — Discovery by provenance: find the repositories a popularity ranking cannot see
+
+🔴 **The problem it solves.** 🟢 **Across `p869` and `p870` the four mandated generic web legs
+returned `16` education-AI repositories and this base already shelved all `16`. `0` new rows in
+two passes. Meanwhile an owner-keyed sweep of a `7`-day window returned `115` addresses a
+star-ranked sweep of the SAME window never saw — `17` in common out of a `506` union.**
+
+🟢 **The recipe, as two committed instruments:**
+
+| Step | Instrument | What it does |
+|---|---|---|
+| 1 — enumerate by OWNER | [`ingest/p870-vein-sweep.sh`](../ingest/p870-vein-sweep.sh) `SINCE` | `user:<owner> pushed:>SINCE` over the estate owners, throttled `4s` BY CONSTRUCTION — `p869` measured that an unpaced sweep returns false absences (`23` of `23` resolved on retry), so an unthrottled sweep under-reports and looks like a result |
+| 2 — confirm the grant from the TREE, never a filename | [`ingest/p870-grant-ladder.sh`](../ingest/p870-grant-ladder.sh) | blobless shallow clone → `ls-tree` → case-INSENSITIVE match on `licen[cs]e\|copying\|notice` → read those bytes. 🔴 **A fixed filename ladder is case-sensitive and reports `NO-PAYLOAD` on the whole Frappe estate, which ships lowercase `license.txt`** |
+| 3 — confirm there is CODE | [`ingest/p869-tree-validate.sh`](../ingest/p869-tree-validate.sh) | count source files. 🔴 **Do not use a name rule: `ARUNAGIRINATHAN-K/awesome-ai-agents-2026` carries the `awesome-` prefix and `52` source files, `41` of them `.tsx`** |
+| 4 — identify duplicates before counting | [`ingest/p870-head-identity.sh`](../ingest/p870-head-identity.sh) | group by `git ls-remote HEAD` sha. Found one project at THREE addresses in this base's own counted population |
+| 5 — place it, or REFUSE to | [`ingest/p869-affiliation.sh`](../ingest/p869-affiliation.sh) | commit-author domains. 🔴 **Rank by jurisdictional informativeness (ccTLD, `.edu`, corporate), not by raw count: `gmail.com` is the plurality for `5` of `10` owners and carries no jurisdiction, while `axim.org` `16` sits usefully beneath a `users.noreply` plurality** |
+
+🔴 **What NOT to put in the pipeline: a description-scored domain predicate.**
+🟢 **[`ingest/p868-domain-predicate.py`](../ingest/p868-domain-predicate.py) rates
+`FedML-AI/FedML` a `KEEP` at score `11` and DROPS `mitodl/learn-ai` ("MIT Learn's AI chatbots")
+at `0`, because on a keyword-sourced vein it certifies what the query already chose and on an
+owner-sourced vein the provenance is not in the text at all.** 🟢 **Use an OWNER-LEVEL warrant
+instead: once an owner is established as an education institution, its repositories are
+in-domain whatever their `description` says.**
+
+🔵 **Yield, measured: `4` filed rows from one `7`-day window, `0★`–`15★`, including most of a
+university AI stack — against `0` rows from the generic legs in two passes.** 🔴 **A fifth
+candidate (`mitodl/learn-ai`) was already shelved, and the pass published the selection error
+rather than the row** ([`agents/top.md`](../agents/top.md)).
+🟢 **Region: Global (the instrument); the estates it was run against are North America, EMEA,
+LATAM and APAC.**
+
 ## 🟢 Seventy-fourth pass (`p869`, 2026-11-17) — **`3` recipes, each wired from repositories this pass byte-read, and each answering a dated obligation from [`intel/market.md`](../intel/market.md)**
 
 🟢 **House rule for this shelf: name the repositories, name the licence, name the wiring, name

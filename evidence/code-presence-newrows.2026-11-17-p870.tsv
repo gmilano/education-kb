@@ -1,0 +1,9 @@
+address	files	source_files	top_ext	tree_verdict
+mitodl/learn-ai	326	232	.py (167)	CODE
+mitodl/ol-llm	102	77	.py (73)	CODE
+openedx/openedx-aspects	191	2	.rst (88)	THIN-CODE
+openedx/tutor-contrib-aspects	334	117	.yaml (149)	CODE
+edly-io/sparkth	1404	1226	.py (825)	CODE
+mitodl/mit-learn	2460	2042	.py (824)	CODE
+teppei-miyashita/agenticstar-agentcore	0	0	-	NO-CODE
+ARUNAGIRINATHAN-K/awesome-ai-agents-2026	95	52	.tsx (41)	CODE

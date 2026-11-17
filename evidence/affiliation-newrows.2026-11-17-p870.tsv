@@ -1,0 +1,6 @@
+address	commits	top_domains	region_signal
+mitodl/learn-ai	50	users.noreply.github.com(22) example.com(13) gmail.com(10)	MEASURABLE
+mitodl/ol-llm	50	mit.edu(46) users.noreply.github.com(4)	MEASURABLE
+mitodl/mit-learn	50	gmail.com(26) mit.edu(17) users.noreply.github.com(6)	MEASURABLE
+openedx/tutor-contrib-aspects	50	users.noreply.github.com(27) axim.org(16) edx.org(5)	REFUSED-noreply-majority
+edly-io/sparkth	50	users.noreply.github.com(43) arbisoft.com(7)	REFUSED-noreply-majority

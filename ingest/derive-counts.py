@@ -144,6 +144,16 @@ SHELVES = [
         # measured holding count; it does not add a single new row to the file.
         "| Agent | Repo | Licence, as measured | ★ / forks | Default ref · pushed | "
         "Region | What it actually does, and the posture |",
+        # 🔴 p870 -- the THIRD instance of the defect class 853-G7 registered and p866 repaired:
+        # a pass invents a column header, its rows match no declared signature, and they are
+        # counted NOWHERE while reading on the page as credited rows.  p869 renamed ONE column
+        # of the signature above -- `★ / forks` became `★ / files`, because p869 added a tree
+        # channel and a source-file count says more about a repository than a fork count -- and
+        # did not declare the result.  The rename is an IMPROVEMENT and is kept; what was
+        # missing is this line.  Both signatures stay counted: `forks` rows are not re-measured
+        # as `files` rows by this pass and must not be silently reinterpreted.
+        "| Agent | Repo | Licence, as measured | ★ / files | Default ref · pushed | "
+        "Region | What it actually does, and the posture |",
         "| Agent / library | Repo | License | ★ | Why it is a row |",
     ], [
         # 🟢 Declared NOT-counted, deliberately: the shelf figure is the build-safe table.
@@ -215,6 +225,13 @@ SHELVES = [
         # re-dated by this pass and must not be silently reinterpreted.
         "| Repo | Licence, as measured | \u2605 / forks | Default ref \u00b7 HEAD commit | Region | "
         "Why it is a foundation and not a row on another shelf |",
+        # \ud83d\udd34 p870 -- the same undeclared-header defect on this shelf, same pass, 4 rows.  p869
+        # widened the traction column to `\u2605 / files \u00b7 source` (stars, total files, source
+        # files -- the tree channel's own output) and shortened the last column to
+        # `Why it is a foundation`.  Declared here rather than rewritten on the page, because
+        # the rows themselves are byte-read and tree-confirmed and only their header was wrong.
+        "| Repo | Licence, as measured | \u2605 / files \u00b7 source | Default ref \u00b7 pushed | "
+        "Region | Why it is a foundation |",
         # \U0001f7e2 p866 -- 865-G1's repair on this shelf. 22 rows in 8 tables carried a
         # foundation HOLDING under a header one or two words off a declared signature and
         # were counted nowhere. p865 recovered 7 of them by hand; these are the signatures

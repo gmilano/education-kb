@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventy-fifth pass (`p870`, 2026-11-17) — **`8` trends, `4` of them measured by this pass rather than read off a leg**
+
+### 🟢 T1 — The compliance obligation now attaches at FOUR layers, and only one of them is the one everybody plans for
+
+🟢 **`p869` established that `2026` replaced the adoption curve with dated deadlines. `p870`
+measured the layers those deadlines attach to, and two of them are new to this base:**
+🟢 **the PRODUCT** (UK `DfE` generative-AI product safety standards, January 2026; California's
+"Parents & Kids Safe AI Act" ballot initiative covering any AI product used by minors),
+🟢 **the INSTITUTION** (Australia `TEQSA` requires an action plan from EVERY higher-ed provider),
+the STATE/NATION (EU Annex III `2027-12-02`, Korea `2026-01-22`, Vietnam `2026-03-01`), and
+🟢 **the DISTRICT/CAMPUS** (Charlotte-Mecklenburg, NYC, Berkeley Law, Florida).
+🔵 **An engagement is sold at whichever layer holds the budget, and it is a different layer in
+every region** ([`intel/market.md`](market.md)).
+
+### 🟢 T2 — The EMEA near-term risk is a PROHIBITION, not a deadline
+
+🔴 **The famous date moved to `2027-12-02` and the operative rules did not.** 🟢 **The
+AI-literacy duty has applied since February 2025; chatbot transparency applies from **August
+2026**; and the **Article 5(1)(f) ban on emotion recognition in education is in force and was
+NOT deferred**.** 🔴 **So a proctoring, invigilation or classroom-sensing engagement in EMEA has
+something to CLEAR today, not something to plan for — and this base shelves two such rows
+(`wongcyrus/Google-AI-Classroom`, `openfun/xblock-proctor-exam`, the latter re-graded `AGPL-3.0`
+this pass).** 🔵 **A roadmap that leads with `2027` is selling the wrong date.**
+
+### 🟢 T3 — LATAM's constraint is ungoverned adoption, and the gap is `61` points
+
+🟢 **Measured this pass and it breaks a nil carried for three passes: `87%` of LATAM
+higher-education institutions use AI somewhere, `26%` have a formal AI strategy (UNESCO
+`IESALC`), while `92%` of students and `79%` of faculty are already using it (Digital Education
+Council, `30,000+` responses, `29` institutions).** 🔴 **Faculty use is LOWEST on assessment —
+cheating detection, feedback generation — which is where the risk is highest.** 🔵 **The
+deliverable is a governance artefact, not a pilot: policy, model register, evaluation harness,
+audit trail. `p869`'s qualitative "frameworks they lack the capacity to implement" is now a
+number.**
+
+### 🟢 T4 — An entire university's learning platform is permissively licensed, and nobody ranks it
+
+🟢 **Measured this pass: the whole `mitodl` estate is `BSD-3-Clause` — `mit-learn` (`2,042`
+source files), `ol-llm`, `learn-ai` (`MIT`), `mitxonline`, `ocw-studio`, `ol-infrastructure`,
+`ol-django`, `smoot-design`.** 🔴 **Every one of them carries `0`–`15★`.** 🔵 **Against the
+incumbent stack — `Open edX` `AGPL-3.0`, its extension estate `46.3%` `AGPL` and `29.8%`
+ungranted — a build-safe, production, university-run alternative is the single most commercially
+useful fact on these shelves this week, and no popularity-ranked instrument can see it.**
+
+### 🟢 T5 — LLM GOVERNANCE is shipping as open source, from universities rather than vendors
+
+🟢 **`mitodl/ol-llm` (`BSD-3-Clause`) is a model catalogue with each model's status, floating-id
+flag and LIST PRICE; `build_model` tags an uncatalogued model rather than refusing it, REFUSES a
+retired id, and `ol-llm-catalog check` runs in a CLIENT APP's CI so a release that retires a
+model fails the CI of any app still naming it; `ol-llm-catalog prices` emits Prometheus recording
+rules for spend alerting.** 🔵 **That is model-lifecycle control and cost attribution as code —
+precisely the evidence a 2027 Annex III conformity file needs — and it arrived from MIT Open
+Learning, not from an AI vendor.** 🟢 **T1's compliance workload now has an open supply side.**
+
+### 🟢 T6 — MCP is becoming a PLATFORM endpoint, not an integration project
+
+🟢 **`edly-io/sparkth` publishes an MCP server at `/ai/mcp` as a documented public endpoint
+beside its REST API, Swagger and ReDoc — in an `MIT`-licensed LMS built by an Open edX
+integrator.** 🔵 **The pattern this base has recorded until now was MCP servers wrapped AROUND an
+LMS; this is an LMS that ships one. The difference matters in an engagement: the agent talks to
+the platform over a protocol the platform maintains, instead of through a scraped API the
+integrator maintains.**
+
+### 🔴 T7 — The permissive seam in the Open edX extension estate is REAL but `p869`'s figure was an upper bound
+
+🟢 **Re-measured this pass on a tree-listing channel that does not guess filenames: `36` of
+`p869`'s `38` "no grant" XBlocks hold (`29.8%` of `121`, not `31.4%`), and `2` — both `openfun`
+— carry `AGPL-3.0` at plain `LICENSE` that the metadata detector reported as `NOASSERTION`.**
+🔴 **Both grant channels this base uses UNDER-report grants: the byte-read ladder is
+case-sensitive (the whole Frappe estate ships lowercase `license.txt`) and the metadata detector
+returns `NOASSERTION` on texts it cannot match.** 🔵 **So every "no grant" number in this base is
+an UPPER BOUND — the conclusion (roughly three in ten of the extension catalogue is legally
+unusable) survives, and the arithmetic needed correcting.**
+
+### 🔴 T8 — Generic web search has stopped yielding, and the measurement is now two passes long
+
+🔴 **Across `p869` and `p870` the four mandated legs returned `16` education-AI repositories and
+this base already shelved `16` of them. `0` new rows.** 🟢 **Every row filed in those two passes
+came from OWNER-LEVEL enumeration, and this pass measured why: an owner-keyed push-recency vein
+and a star-ranked keyword vein share `17` addresses out of a `506` union — `3.4%` overlap.**
+🔴 **And the committed domain predicate prefers the worse vein, because it scores `description`
+text that a keyword vein has already selected on: it rates `FedML-AI/FedML` a `KEEP` at score
+`11` and DROPS `mitodl/learn-ai` at `0`.** 🔵 **Discovery in this industry is a PROVENANCE
+problem, not a popularity or keyword problem** ([`repos/trending.md`](../repos/trending.md)).
+
 ## 🟢 Seventy-fourth pass (`p869`, 2026-11-17) — **`8` trends, `3` of them measured by this pass rather than read off a leg**
 
 ### 🟢 T1 — The compliance deadline replaced the adoption curve, in all four regions at once

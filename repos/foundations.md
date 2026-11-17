@@ -4,6 +4,97 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventy-fifth pass (`p870`, 2026-11-17) — **`3` rows, all from MIT Open Learning's own estate, all `0`–`15★`, and all three REJECTED by this base's committed domain predicate**
+
+🟢 **`4` rows on this shelf were counted NOWHERE at `HEAD` — `p869`'s own filings, orphaned by a
+one-word column rename. Declared and recovered this pass (`389` → `393`); the account is on
+[`agents/top.md`](../agents/top.md).**
+
+### 🔴 The byte-read LADDER is case-blind, it manufactured an ungranted verdict for a whole vendor estate, and re-measuring `p869`'s headline figure cost `1.6` points
+
+🟢 **How it was found: [`869-G2`](../intel/open-gaps.md)'s discharge flagged `frappe/education`
+as carrying `AGPL-3.0` on one row and `GPL-3.0` on another, so `p870` byte-read it to settle the
+disagreement — and the read came back `NO-PAYLOAD-ON-LADDER`, `spdx=NOASSERTION`.**
+🔴 **`p870` drafted that as "the licence is UNKNOWN and both rows are unsupported." THAT DRAFT
+WAS WRONG, and this shelf's own standing row is what refuted it:** it records a byte-read of
+`license.txt` at `19 B`, `sha256₁₂ 1fcecf395312`, reading *"License: GNU GPL V3"*.
+
+🔴 **The cause is one letter of case.** 🟢 **`p869`'s ladder is a fixed list of `8` filenames —
+`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `LICENCE.md`, `COPYING`, `LICENSE-APACHE`,
+`docs/License.txt` — and `raw.githubusercontent.com` is CASE-SENSITIVE:**
+
+| Path probed at ref `develop` | `frappe/education` | `frappe/lms` |
+|---|---|---|
+| 🟢 **`license.txt`** (all lowercase, NOT on the ladder) | 🟢 **`200` — `19 B`, `sha256₁₂ 1fcecf395312`, *"License: GNU GPL V3"*** | 🟢 **`200` — `33,893 B`, `sha256₁₂ db1a87ba81e8`, *"GNU AFFERO GENERAL PUBLIC LICENSE"*** |
+| `LICENSE.txt` · `LICENSE` · `license.md` | 🔴 `404` · `404` · `404` | 🔴 `404` · `404` · `404` |
+
+🟢 **So both standing rows are RIGHT — `frappe/education` is `GPL-3.0` and `frappe/lms` is
+`AGPL-3.0`, both byte-read — and the instrument was wrong.** 🔴 **The whole Frappe framework
+estate ships its grant as all-lowercase `license.txt`, so the current ladder reports
+`NO-PAYLOAD` for every repository in a platform family this base shelves on three shelves.**
+
+🟡 **And the licence "contradiction" that started this was never real either.**
+🔴 **`frappe/education`'s two rows BOTH say `GPL-3.0`; the `AGPL-3.0` my comparator read is in
+the PROSE of one cell, naming the sibling `frappe/lms`.** 🔴 **That is the same prose
+contamination that produced the `wongcyrus/Google-AI-Classroom` "disagreement", so of the `3`
+licence disagreements [`869-G2`](../intel/open-gaps.md)'s discharge reported, 🔴 **`0` are real**
+and the finding is the comparator's defect — recorded on [`agents/top.md`](../agents/top.md).
+
+### 🟢 The re-measurement this forces, and what it does to `p869`'s commercially decisive figure
+
+🔴 **`p869`'s headline was that `38` of `121` XBlocks (`31.4%`) carry NO GRANT AT ALL, against
+`0%` on the platform side, and that `38` of the catalogue therefore *"CANNOT be reused by anyone."***
+🔴 **That figure came from the METADATA licence field, and this pass has just shown the grant
+channel can report absence where a grant exists.** 🟢 **So it was re-measured properly, by
+[`ingest/p870-grant-ladder.sh`](../ingest/p870-grant-ladder.sh), which does not guess filenames
+at all: it LISTS the tree from a blobless clone and matches
+`(licen[cs]e|copying|notice)` case-insensitively, then reads the bytes of what it finds**
+([`record`](../evidence/grant-ladder-reprobe.2026-11-17-p870.tsv)).
+
+| Re-probe of `p869`'s `38` ungranted XBlocks | Result |
+|---|---|
+| 🟢 **`NO-GRANT-FILE-IN-TREE` — the verdict HOLDS** | 🟢 **`36`** |
+| 🔴 **`GRANT-FILE-PRESENT` — the verdict was FALSE** | 🔴 **`2`** (`5.3%`) |
+
+| Address | Path | Bytes · `sha256₁₂` | Grant |
+|---|---|---|---|
+| `openfun/password-container-xblock` | `LICENSE` | `29,077` · `9bc8001fdc39` | 🔴 **`AGPL-3.0`** |
+| `openfun/xblock-proctor-exam` | `LICENSE` | `29,077` · `9bc8001fdc39` | 🔴 **`AGPL-3.0`** |
+
+🔵 **Note where the `2` misses came from: both sit at plain `LICENSE`, which IS on the ladder —
+so these are not ladder failures, they are METADATA-DETECTOR failures (GitHub returns
+`NOASSERTION` on an AGPL text it cannot match confidently). Two different defects, one in each
+channel, found by the same re-measurement.**
+
+🟢 **`p869`'s conclusion SURVIVES and its arithmetic is corrected: `36` of `121` = **`29.8%`**,
+not `31.4%`.** 🟢 **Roughly three in ten of the XBlock estate is still legally unusable, and that
+is still the decisive fact about an Open edX engagement.** 🔴 **What changes is `openfun`: `p869`
+filed it `4` ungranted of `9`; it is `2` of `9`, and AGPL rather than unlicensed.**
+🔵 **The direction of the error is worth keeping: BOTH channels under-report grants, so every
+"no grant" figure in this base is an UPPER BOUND.** Registered as
+[`870-G5`](../intel/open-gaps.md).
+
+### 🟢 The rows — `3` filed, every grant byte-read at a RESOLVED ref, every one tree-confirmed to contain code
+
+🟢 **Provenance, stated once for all three: they come from the OWNER-KEYED push-recency vein
+[`869-G3`](../intel/open-gaps.md) commissioned, not from the four mandated generic legs, which
+returned `10` candidates of which this base already shelved `10`.** 🔴 **All three carry `0`–`15★`
+and [`p868`'s committed domain predicate DROPS every one of them](../evidence/domain-predicate-push-recency.2026-11-17-p870.tsv)
+at score `0` or below — the account of why is on [`repos/trending.md`](trending.md) and the gap is
+[`870-G3`](../intel/open-gaps.md).**
+
+| Repo | Licence, as measured | ★ / files · source | Default ref · pushed | Region | Why it is a foundation |
+|---|---|---|---|---|---|
+| https://github.com/mitodl/ol-llm | 🟢 **BSD-3-Clause — byte-read** (`LICENSE`, `1,517 B`, `sha256₁₂ d81f68080ca1`, first line *"BSD 3-Clause License"*) | 0 / `102` files · `77` source (`.py` `73`) | `main` · `2026-11-17` | 🟢 **North America — MEASURED, and on the strongest axis this base has: `mit.edu` is `46` of `50` commit-author domains** ([`record`](../evidence/affiliation-newrows.2026-11-17-p870.tsv)) | 🟢 **LLM GOVERNANCE as a library, which is the layer every compliance deadline in [`intel/market.md`](../intel/market.md) actually requires and almost no education repo ships.** *"Shared library for LLM calls at MIT Open Learning, with Opik tracing, prompt management, and evaluation built in."* 🟢 **Its `catalog.toml` records each model's status, whether its id floats, and its LIST PRICE; `build_model` tags an uncatalogued model `model_status:uncataloged` rather than refusing it, REFUSES a retired id, and tags a deprecated one. `ol-llm-catalog check` runs in a client app's CI, so a release that retires a model FAILS the CI of any app still naming it, and `ol-llm-catalog prices` emits Prometheus recording rules for spend alerting.** 🔵 **That is model-lifecycle governance and cost attribution as code, BSD-3-Clause, from a university rather than a vendor — the thing a 2027 Annex III conformity file needs and a chatbot demo cannot produce** |
+| https://github.com/mitodl/mit-learn | 🟢 **BSD-3-Clause — byte-read** (`LICENSE`, `1,530 B`, `sha256₁₂ be8971a0f963`) | 3 / `2,460` files · `2,042` source (`.py` `824`) | `main` · `2026-11-16` | 🟡 **North America — OWNER-LEVEL, declared.** 🔴 At repo level the axis is `gmail.com` `26` of `50` against `mit.edu` `17`, so the placement is carried from the owner's measured domain (`ol-llm`, `mit.edu` `46`/`50`) and NOT from this repository's own commits | 🟢 **The learner-facing platform the two AI rows above and beside it plug into** — *"a central interface for learners to browse MIT…"* 🟢 **`2,042` source files makes this the largest permissively granted learner-portal tree this base has shelved, and it is the integration target that makes `learn-ai` and `ol-llm` a STACK rather than three libraries.** 🔵 **BSD-3-Clause across the whole `mitodl` estate (`mit-learn`, `ol-llm`, `mitxonline`, `ocw-studio`, `ol-infrastructure`) is the commercially decisive fact: an entire university's learning platform is build-safe, where the `openedx` estate it partly replaces is `AGPL-3.0`** |
+| https://github.com/openedx/tutor-contrib-aspects | 🟢 **Apache-2.0 — byte-read** (`LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`, stock text) | 15 / `334` files · `117` source (`.yaml` `149`) | `main` · `2026-11-16` | 🟡 **North America — DECLARED FROM A SIGNAL BENEATH A PLURALITY.** 🔴 `users.noreply` is `27` of `50`, so `p869`'s refusal rule fires; beneath it sit `axim.org` `16` (Axim Collaborative, the Harvard/MIT nonprofit that stewards Open edX) and `edx.org` `5`. 🔴 **Declared, not measured clean — and the reason the rule needs changing is [`870-G3`](../intel/open-gaps.md)** | 🟢 **The Open Analytics Reference System: the learning-record and analytics tier for Open edX, as a Tutor plugin.** 🟢 **`149` of its files are `.yaml` — this is a CONFIGURED pipeline (dbt models, ClickHouse, Superset dashboards), so an engagement adopts it by configuration rather than by writing a warehouse.** 🔵 **It is the measurement surface the compliance story needs: `openedx/openedx-aspects`, probed alongside it, is Apache-2.0 at the IDENTICAL `11,357 B` / `c71d239df917` stock text but graded 🟡 `THIN-CODE` by the tree (`191` files, `2` source, `88` `.rst`) — the docs umbrella, filed here as a pointer and NOT as a row** |
+
+### 🔴 The row this pass examined and REFUSED, with the reason
+
+| Address | What it is | Why it is NOT a row |
+|---|---|---|
+| `mitodl/ol-analytics-api` | *"Multi-tenant read-only FastAPI analytics gateway over StarRocks"* — exactly the multi-tenant analytics gateway an education engagement wants | 🔴 **NO GRANT.** `NO-PAYLOAD-ON-LADDER` at the resolved ref `main` and `spdx=NONE`. 🔴 **The only unlicensed repository in an otherwise uniformly `BSD-3-Clause` estate, which makes it look like an oversight rather than a decision — but an unreadable grant is all-rights-reserved and this base does not shelve it** |
+
 ## 🟢 Seventy-fourth pass (`p869`, 2026-11-17) — **`4` rows from the XBlock integrator estate, and the licence finding that makes the other `115` addresses a map rather than a catalogue: `30%` of the estate carries NO GRANT AT ALL, against `0%` on the platform side**
 
 🟢 **`85` rows on this shelf were marked `STALE-ROW` in place this pass — see
@@ -1859,7 +1950,7 @@ above was graded on the licence question alone.**
 | https://github.com/langchain-ai/langchain | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`) | 149546 | **Region: Global.** The model and tool abstraction layer beneath the above. 🟡 **Shelved with a deliberate caution: this base's compose recipes should depend on `langgraph` for control flow and on `langchain-core` for interfaces, not on the `langchain` meta-package, whose surface moves faster than an education deliverable's support window.** 🔵 **Note for the byte-read gate: its `LICENSE` is on `master`, not `main` — a `main`-only probe returns `404` and would record a false `NO_LICENCE_FILE`, which is a live defect in any sweep that assumes the default branch name** |
 | https://github.com/teppei-miyashita/agenticstar-agentcore | 🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last touched `2026-08-12` | 0 | 🔴 **Region: APAC. Shelved as a WARNING row — the worked example for `T89`.** This is the source repository that the PyPI package `agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository`, and it holds no commits at all. 🟢 **The package itself is genuinely MIT** (`License-Expression: MIT` in the wheel, `dist-info/licenses/LICENSE`, `1,078 B`, `sha256:2afbb5fc…`) **and genuinely installable** — 🔴 **but it is wheel-only, single-release (`2026-09-17`), and unreadable at its stated address, while hard-pinning `langgraph==1.1.10`, `langchain==1.2.18`, `fastapi==0.136.0` and `agenticstar-platform==0.5.32`.** 🔵 **Do NOT add it to a delivery tree. It is here so that the next pass asking "is the AGENTIC STAR stack adoptable?" finds the answer already measured: licensed yes, auditable no** |
 
-## Foundational repos — 389 rows
+## Foundational repos — 396 rows
 
 ## 🟢 The STANDARDS-SEAM layer — **LTI, QTI and xAPI, the four interfaces an education deliverable is actually wired through** (new, fifty-seventh pass `p852`) (6 rows)
 

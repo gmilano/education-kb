@@ -4,6 +4,73 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p870`) — **the four mandated legs returned `12` candidates and this base already shelves `10`; the `2` it does not are a general agent registry and a `GPL` LMS; and `DeepTutor` is `59,922★`, not the `~48,268★` a blog told `p869`**
+
+🟢 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+### 🔴 What the mandated legs returned, and the second consecutive saturation measurement
+
+🟢 **Legs run (`2026`, computed from `date +%Y`, not hardcoded):
+`top open source AI agents education 2026 github MIT` ·
+`github trending education AI 2026` ·
+`open source platform education student information system LMS MIT Apache 2026` ·
+`AI education industry trends 2026`.**
+
+| Candidate the legs returned | Already shelved here? | Note |
+|---|---|---|
+| `HKUDS/DeepTutor` | 🔴 **yes** | 🟢 **`59,922★` on the metadata channel `2026-11-17`, `Apache-2.0`, pushed `2026-11-15`** |
+| `THU-MAIC/OpenMAIC` | 🔴 **yes** | Tsinghua MAIC multi-agent classroom |
+| `withmarbleapp/os-taxonomy` | 🔴 **yes** | `1,590`-topic curriculum graph |
+| `patchy631/ai-engineering-hub` | 🔴 **yes** | `93+` tutorial projects |
+| `microsoft/ai-agents-for-beginners` | 🔴 **yes** | the legs disagreed with each other on whether it is `12` or `18` lessons |
+| `huggingface/agents-course` | 🔴 **yes** | |
+| `mlabonne/llm-course` | 🔴 **yes** | |
+| `microsoft/generative-ai-for-beginners` | 🔴 **yes** | |
+| `ashishpatel26/500-AI-Agents-Projects` | 🔴 **yes** | |
+| Nous Research `Hermes` | 🔴 **yes** | |
+| 🟡 `ARUNAGIRINATHAN-K/awesome-ai-agents-2026` | 🟢 no | 🔴 **NOT education** — a general agent-discovery registry. Kept out of the shelf, kept in as the counter-example below |
+| 🟡 `forma-lms` | 🟢 no | 🔴 **`GPL`-family — outside this shelf's build-safe vocabulary** ([`867-G3`](../intel/open-gaps.md)) |
+
+🔵 **`10` of `12` shelved. Against generic web search this corpus is SATURATED for the second
+consecutive pass**, and the one row filed this pass came from the owner-keyed vein instead —
+`115` addresses no star-ranked sweep of the same window surfaces
+([`repos/trending.md`](../repos/trending.md)).
+
+🔴 **A star-count correction worth recording, because `p869` was right to refuse it.** 🟢 **`p869`
+declined to adopt the `~48,268★` its legs carried for `DeepTutor`, on the grounds that the legs'
+figures are third-party blog and auto-generated-trend numbers.** 🟢 **The metadata channel now
+reads `59,922★`.** 🔵 **So the blog figure was `~20%` low and refusing it was correct; this pass
+adopts the measured figure and names the channel.**
+
+### 🟢 New this week, from the vein that yields
+
+| Repository | Licence | Signal |
+|---|---|---|
+| https://github.com/mitodl/mit-learn | 🟢 **BSD-3-Clause** (byte-read, `1,530 B`, `sha256₁₂ be8971a0f963`) | 🟢 **MIT Open Learning's learner-facing platform — `2,460` files, `2,042` source, the largest permissively granted learner portal this base holds.** 🔵 **`3★`.** Filed on [`repos/foundations.md`](../repos/foundations.md) |
+| https://github.com/openedx/tutor-contrib-aspects | 🟢 **Apache-2.0** (byte-read, `11,357 B`) | 🟢 **The Open Analytics Reference System: the learning-record tier for Open edX as a Tutor plugin, `149` of `334` files `.yaml` — configured, not written.** `15★`. Filed on [`repos/foundations.md`](../repos/foundations.md) |
+| https://github.com/edly-io/sparkth | 🟢 **MIT** (byte-read, `1,066 B`) | 🟢 **An `MIT`-licensed "AI-first learning platform" that publishes an MCP SERVER as a public endpoint** (`/ai/mcp`) beside its REST API — an agent talks to the LMS over a protocol instead of a scraped API. `1,226` source files. Filed on [`verticals/solutions.md`](../verticals/solutions.md) |
+| https://github.com/mitodl/ol-llm | 🟢 **BSD-3-Clause** (byte-read, `1,517 B`) | 🟢 **LLM governance as a library**: model catalogue with status and list price, CI that fails a client app naming a retired model, Prometheus spend rules. Filed on [`repos/foundations.md`](../repos/foundations.md) |
+
+### 🟡 A refinement this pass owes `868-G1`, measured rather than asserted
+
+🟢 **`868-G1`'s discharge named `langgptai/awesome-claude-prompts` and `opendilab/awesome-RLHF`
+as the `NO-CODE` curated-list class.** 🔴 **`ARUNAGIRINATHAN-K/awesome-ai-agents-2026` carries the
+same `awesome-` prefix and the tree returns `95` files, `52` source, `41` of them `.tsx`**
+([`record`](../evidence/code-presence-newrows.2026-11-17-p870.tsv)) **— it is a React
+application, not a list.** 🟢 **So the prefix is not the predicate and the tree is: `p869`'s
+instrument gets this right where a name rule would have thrown it away.** 🔵 **It stays unshelved
+for a DOMAIN reason — a general agent registry is not education — which is a different gate and
+is stated separately rather than folded into the licence or code verdict.**
+
+### 🔴 Where the generic channel's `2026` yield is, in one sentence
+
+🔴 **Across `p869` and `p870`, `16` of the `16` education-AI repositories the four mandated legs
+have returned were already shelved here, and `0` new rows have come from them.** 🟢 **Every row
+filed in those two passes came from owner-level enumeration — `p869`'s `121`-repository XBlock
+estate and `p870`'s `14`-owner push-recency vein.** 🔵 **That is now a two-pass measurement rather
+than an impression, and it is the reason [`870-G3`](../intel/open-gaps.md) is about the SOURCING
+instrument and not about finding more repositories.**
+
 ## 🟢 `2026-11-17` (`p869`) — **the four web legs returned `4` education-AI repositories trending in November 2026 and this base already shelves ALL FOUR; the new addresses came from owner enumeration instead**
 
 🟢 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

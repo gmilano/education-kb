@@ -4,6 +4,110 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p870`) — **the owner-keyed vein and the star-ranked vein are NEARLY DISJOINT: `17` addresses in common out of `506`, and the committed domain predicate prefers the wrong one**
+
+🟢 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+### 🟢 `869-G3` DISCHARGED: `115` addresses a star-ranked sweep of the same window cannot see
+
+🟢 **Acceptance test: add a PUSH-RECENCY trend vein keyed on OWNER rather than stars
+(`user:<owner> pushed:>YYYY-MM-DD` over the `10` owners `868-G4` enumerated plus the `4` platform
+owners from `p867`), and publish how many addresses it surfaces that a star-ranked sweep of the
+same window does not.**
+
+🟢 **Built as [`ingest/p870-push-recency.sh`](../ingest/p870-push-recency.sh) and
+[`ingest/p870-vein-sweep.sh`](../ingest/p870-vein-sweep.sh), both throttled at `4s` BY
+CONSTRUCTION. Window `pushed:>2026-11-10`, `7` days. The `14` owners are `open-craft`, `eduNEXT`,
+`raccoongang`, `edly-io`, `cmmedu`, `openfun`, `IONISx`, `openedxou`, `collabassess`,
+`Abstract-Tech` + `openedx`, `overhangio`, `edx`, `mitodl`.** Comparator: the same window asked
+by KEYWORD and sorted by stars, `6` veins
+([`owner`](../evidence/push-recency.2026-11-17-p870.tsv) ·
+[`star`](../evidence/star-ranked.2026-11-17-p870.tsv) ·
+[`both, one schema`](../evidence/vein-sweep.2026-11-17-p870.tsv)).
+
+| Measure | Result |
+|---|---|
+| owner-keyed distinct | `132` |
+| star-ranked distinct | `391` |
+| 🔴 **in common** | 🔴 **`17`** |
+| 🟢 **owner-keyed ONLY — the answer** | 🟢 **`115` of `132` (`87.1%`)** |
+| star-ranked ONLY | `374` of `391` (`95.7%`) |
+
+🔵 **The gap asked which vein sees more. The answer is that they see DIFFERENT THINGS: `17`
+addresses in common out of a `506`-address union is `3.4%` overlap.** 🔴 **A base running one vein
+is blind to `87%`–`96%` of the other's yield, and this base has run only the star-ranked one.**
+🟢 **The `17` in the overlap are exactly the repositories that have both an education owner and a
+few stars — `open-craft/xblocks-exemplar`, `openedx/XBlock`, `openedx/DoneXBlock` and the like.**
+
+### 🔴 The finding `869-G3` did not anticipate: the committed DOMAIN PREDICATE prefers the worse vein, and it is circular
+
+🟢 **Both veins were collected in `p868-org-sweep.sh`'s schema precisely so
+[`p868`'s committed domain predicate](../ingest/p868-domain-predicate.py) could judge them
+without being rewritten for this pass — the comparison is only meaningful if ONE predicate judges
+both** ([`owner`](../evidence/domain-predicate-push-recency.2026-11-17-p870.tsv) ·
+[`star`](../evidence/domain-predicate-star-ranked.2026-11-17-p870.tsv)).
+
+| Vein | `KEEP` | `MARGINAL` | `DROP` | `KEEP` rate |
+|---|---|---|---|---|
+| star-ranked (keyword-sourced) | `295` | `91` | `5` | 🟢 **`75.4%`** |
+| 🔴 **owner-keyed (provenance-sourced)** | `45` | `57` | `30` | 🔴 **`34.1%`** |
+
+🔴 **The predicate rates the keyword vein more than twice as domain-relevant. That ranking is an
+artefact, and both halves of it are demonstrable by name.**
+
+🔴 **(i) On a keyword-sourced vein the predicate is CIRCULAR.** It scores `description` and
+`topics`; the vein SELECTED on those same words. So it certifies what the query already chose:
+
+| Star-ranked address | Predicate | What it actually is |
+|---|---|---|
+| `FedML-AI/FedML` | 🔴 **`KEEP`, score `11`** — the highest in the sweep | a federated-machine-learning library |
+| `langfuse/langfuse-workshop` | 🔴 `KEEP`, score `4` | an LLM-observability vendor's workshop ("…to teach…") |
+| `riteshbonthalakoti/HELPDESK.AI` | 🔴 `KEEP`, score `4` | an IT helpdesk |
+| `DIAGNijmegen/rse-grand-challenge` | 🔴 `KEEP`, score `4` | a medical-imaging challenge platform |
+
+🔴 **(ii) On an owner-sourced vein it is ACTIVELY WRONG, because provenance is not in the text:**
+
+| Owner-keyed address | Predicate | What it actually is |
+|---|---|---|
+| `mitodl/learn-ai` | 🔴 **`DROP`, score `0`** | 🟢 *"Backend API endpoints for MIT Learn's AI chatbots"* — **filed as an agent row this pass** |
+| `mitodl/ol-llm` | 🔴 **`DROP`, score `0`** | 🟢 MIT Open Learning's shared LLM library — **filed as a foundation this pass** (empty `description`, so nothing to score) |
+| `mitodl/ocw-hugo-themes` | 🔴 **`DROP`, score `-3`** | MIT **OpenCourseWare**'s site themes — the negative arm fired on it |
+| `mitodl/mitx-theme` · `mitxpro-theme` · `mitxonline-theme` | 🔴 **`DROP`, score `-1`** | Open edX themes for MIT's own instances |
+| `mitodl/mitxpro` · `mitodl/mitxonline` | 🔴 `DROP`, score `0` | the MIT xPRO and MITx Online platforms themselves |
+
+🔵 **`867-G1` validated this predicate against `p867`'s HAND selection and reported that it
+"overruled the hand `0` times" with `129` additions. That validation could not have caught this:
+the hand and the predicate were both reading descriptions of candidates a KEYWORD vein had
+already chosen.** 🟢 **The repair is a predicate with an OWNER-LEVEL WARRANT — once an owner is
+established as an education institution, its repositories are in-domain by provenance whatever
+their `description` says.** Registered as [`870-G3`](../intel/open-gaps.md).
+
+### 🟢 Trending by provenance: what the owner vein actually yielded
+
+🟢 **`105` of the `115` owner-only addresses are UNSHELVED here; `36` are unshelved AND
+permissively granted AND carry a `language`.** 🟢 **`4` were filed this pass after a byte-read, a tree listing and an affiliation probe. The
+fifth, `mitodl/learn-ai`, was already shelved and `p870` published its own selection error
+rather than the row** ([`agents/top.md`](../agents/top.md)). **The estate they came from is why:**
+
+| Repository | Licence | ★ | Files · source | Pushed | Filed |
+|---|---|---|---|---|---|
+| https://github.com/mitodl/learn-ai | 🟢 **MIT** (byte-read, `1,070 B`) | `0` | `326` · `232` | `2026-11-17` | 🔴 **ALREADY SHELVED — `p870` re-read it and reproduced the standing row exactly; the duplicate row it drafted was removed** ([`agents/top.md`](../agents/top.md)) |
+| https://github.com/mitodl/ol-llm | 🟢 **BSD-3-Clause** (byte-read, `1,517 B`) | `0` | `102` · `77` | `2026-11-17` | 🟢 [`repos/foundations.md`](foundations.md) |
+| https://github.com/mitodl/mit-learn | 🟢 **BSD-3-Clause** (byte-read, `1,530 B`) | `3` | `2,460` · `2,042` | `2026-11-16` | 🟢 [`repos/foundations.md`](foundations.md) |
+| https://github.com/openedx/tutor-contrib-aspects | 🟢 **Apache-2.0** (byte-read, `11,357 B`) | `15` | `334` · `117` | `2026-11-16` | 🟢 [`repos/foundations.md`](foundations.md) |
+| https://github.com/edly-io/sparkth | 🟢 **MIT** (byte-read, `1,066 B`) | `12` | `1,404` · `1,226` | `2026-11-17` | 🟢 [`verticals/solutions.md`](../verticals/solutions.md) |
+
+🔵 **The whole `mitodl` estate is `BSD-3-Clause` — `mit-learn`, `ol-llm`, `mitxonline`,
+`ocw-studio`, `ol-infrastructure`, `ol-django`, `smoot-design` — which means an entire
+university's learning platform is build-safe where the `openedx` estate it partly replaces is
+`AGPL-3.0`.** 🔴 **`0★` to `15★` across all five. None of this is reachable by a trend instrument
+that ranks by popularity, and that is `869-G3`'s thesis demonstrated on filed rows rather than
+argued.**
+
+🔴 **One refusal, stated: `mitodl/ol-analytics-api` (*"Multi-tenant read-only FastAPI analytics
+gateway over StarRocks"*) has NO readable grant at its resolved ref and `spdx=NONE` — the only
+unlicensed repository in an otherwise uniformly `BSD-3-Clause` estate.**
+
 ## 🟢 `2026-11-17` (`p869`) — **`643` repositories swept across `10` XBlock integrator owners; `121` XBlocks; `31.4%` carry NO GRANT; this base shelves `6`**
 
 🟢 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

@@ -1,0 +1,8 @@
+address	default_ref	path	bytes	sha256_12	spdx_declared	first_line
+mitodl/learn-ai	main	LICENSE	1070	d1ea675aa9bb	MIT	MIT License
+mitodl/ol-llm	main	LICENSE	1517	d81f68080ca1	BSD-3-Clause	BSD 3-Clause License
+openedx/openedx-aspects	main	LICENSE	11357	c71d239df917	Apache-2.0	                                 Apache License
+openedx/tutor-contrib-aspects	main	LICENSE	11357	c71d239df917	Apache-2.0	                                 Apache License
+edly-io/sparkth	main	LICENSE	1066	47b5dde08d21	MIT	MIT License
+mitodl/mit-learn	main	LICENSE	1530	be8971a0f963	BSD-3-Clause	BSD 3-Clause License
+mitodl/ol-analytics-api	main	NO-PAYLOAD-ON-LADDER	-	-	NONE	-

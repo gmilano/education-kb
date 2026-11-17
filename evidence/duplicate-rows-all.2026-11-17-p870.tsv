@@ -1,0 +1,20 @@
+shelf	address	rows	licence	licence_values	region	region_values
+agents/top.md	1EdTech/lti-1-3-php-library	2	AGREE	Apache-2.0	AGREE	APAC
+agents/top.md	Li-Evan/BloomTutor	2	AGREE	MIT	AGREE	Global
+agents/top.md	fabian-thinks/present-together	2	AGREE	MIT	DISAGREE	-|Global
+agents/top.md	flysheep-ai/education-skills	2	AGREE	MIT	AGREE	APAC
+agents/top.md	openwallet-foundation-labs/learner-credential-wallet	2	AGREE	MIT	DISAGREE	-|Global
+agents/top.md	talis/lti-1-3-php-library	2	AGREE	Apache-2.0	DISAGREE	APAC|EMEA
+agents/top.md	wongcyrus/Google-AI-Classroom	2	DISAGREE	Apache-2.0|MIT	AGREE	EMEA
+agents/top.md	zijinz456/OpenTutor	2	AGREE	MIT	DISAGREE	EMEA|Global
+repos/foundations.md	Ed-Fi-Alliance-OSS/Data-Management-Service	2	AGREE	Apache-2.0	AGREE	North America
+repos/foundations.md	Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard	2	AGREE	Apache-2.0	AGREE	North America
+repos/foundations.md	Ed-Fi-Alliance-OSS/Ed-Fi-ODS	2	AGREE	Apache-2.0	AGREE	North America
+repos/foundations.md	Ed-Fi-Alliance-OSS/edfi-oneroster	2	AGREE	Apache-2.0	AGREE	North America
+repos/foundations.md	frappe/education	2	DISAGREE	AGPL-3.0|GPL-3.0	AGREE	-
+repos/foundations.md	frappe/lms	2	AGREE	AGPL-3.0	AGREE	-
+verticals/solutions.md	frappe/education	2	DISAGREE	AGPL-3.0|GPL-3.0	AGREE	-
+verticals/solutions.md	frappe/lms	2	AGREE	AGPL-3.0	AGREE	-
+verticals/solutions.md	hcengineering/platform	2	AGREE	Apache-2.0	AGREE	APAC
+verticals/solutions.md	krayin/laravel-crm	3	AGREE	MIT	DISAGREE	-|LATAM
+verticals/solutions.md	packbackbooks/lti-1-3-php-library	2	AGREE	Apache-2.0	AGREE	APAC

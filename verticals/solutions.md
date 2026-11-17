@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventy-fifth pass (`p870`, 2026-11-17) — **`1` platform row, and it is the one this shelf has been missing: an MIT-licensed, AI-first LMS that ships an MCP server as a public endpoint**
+
+### 🟢 Why this row matters more than its `12★`
+
+🔴 **Every platform on this shelf that institutions actually run is copyleft: `Moodle` (`GPL-3.0`),
+`Open edX` (`AGPL-3.0`), `Canvas` (`AGPL-3.0`), `Sakai` (`ECL-2.0` is the exception),
+`frappe/lms` (`AGPL-3.0`, byte-read at `license.txt` this pass).** 🔴 **And `p869` measured the
+consequence one layer down: the Open edX EXTENSION estate is `46.3%` `AGPL-3.0` and
+🔴 **`29.8%` carries no grant at all** (re-measured this pass, down from `p869`'s `31.4%` —
+[`repos/foundations.md`](../repos/foundations.md)).
+
+🟢 **So the standing answer to "we need an LMS we can build on and sell" has been: take the AGPL
+platform and accept the network clause, or build from parts.** 🟢 **`edly-io/sparkth` is a third
+answer, and it is `MIT`.**
+
+| Platform | Repo | Licence, byte-read `2026-11-17` | ★ / forks | Default ref · pushed | Region | Role in an engagement |
+|---|---|---|---|---|---|---|
+| **Sparkth** | https://github.com/edly-io/sparkth | 🟢 **MIT — byte-read** (`LICENSE`, `1,066 B`, `sha256₁₂ 47b5dde08d21`) | 12 / 0 | `main` · `2026-11-17` | 🔴 **REFUSED at repo level** — `users.noreply` `43` of `50` commits, `arbisoft.com` `7`. 🟡 **Owner-level APAC is available and declared as such**: `edly-io`'s estate measures `arbisoft.com` `29` of `50` on `h5pxblock` (Arbisoft, Lahore — the company's published location, CITED not verified) | 🟢 **A greenfield, `MIT`-licensed, "science-driven, AI-first learning platform" under active development by Edly** — an Open edX integrator building a clean-room alternative to the platform it integrates. 🟢 **`1,404` files, `1,226` source (`825` `.py`), so this is a real codebase and not an announcement.** 🔵 **The decisive detail for an AI engagement: it publishes an **MCP SERVER as a first-class endpoint** (`/ai/mcp`) alongside its REST API, Swagger and ReDoc — so an agent talks to the LMS over a protocol instead of through a scraped API. Backend AND frontend plugin guides, a documented permissions model, and a Python API reference generated from docstrings.** 🔴 **`12★`, `0` forks, one shop: adoption risk is real and the row says so. Shelved as the permissive OPTION to put in front of a client who cannot take AGPL, not as an incumbent** |
+
+### 🟢 The integrator map, now on a MEASURED axis — `869-G4` discharged, and the refusal rule it prescribed is WRONG in both directions
+
+🟢 **Acceptance test: run [`ingest/p869-affiliation.sh`](../ingest/p869-affiliation.sh) over the
+highest-★ repository of each of the `10` owners, publish the commit-domain distribution per
+owner, and REFUSE any owner whose domains are a `users.noreply` majority**
+([`record`](../evidence/affiliation.2026-11-17-p870.tsv)).
+
+| Shop | Highest-★ repo probed | Top commit domains (of `50`) | 🟢 Region, MEASURED | Script's verdict |
+|---|---|---|---|---|
+| `openfun` | `richie` (`318★`) | 🟢 **`fun-mooc.fr` `41`**, `nclerc.fr` `4` | 🟢 **EMEA** — France, on a ccTLD | MEASURABLE |
+| `IONISx` | `edx-theme` (`54★`) | 🟢 **`ionis-group.com` `23` + `ionisx.com` `16`** | 🟢 **EMEA** — IONIS Group, France (corporate, CITED) | MEASURABLE |
+| `eduNEXT` | `edunext-platform` (`29★`) | 🟢 **`edunext.co` `29`**, `users.noreply` `17` | 🟢 **LATAM** — Colombia, on the `.co` ccTLD | MEASURABLE |
+| `edly-io` | `h5pxblock` (`19★`) | 🟢 **`arbisoft.com` `29`**, `gmail.com` `8` | 🟡 **APAC** — Lahore, CITED | MEASURABLE |
+| `open-craft` | `opencraft` (`54★`) | `opencraft.com` `27`, `gmail.com` `18` | 🔴 **REFUSED** — a `.com` yields no jurisdiction | MEASURABLE |
+| `Abstract-Tech` | `derex.runner` (`17★`) | 🔴 **`gmail.com` `43`**, `ishestakov.com` `7` | 🔴 **REFUSED** | 🔴 **MEASURABLE — wrongly** |
+| `cmmedu` | `iterative-xblock` (`1★`) | 🔴 **`gmail.com` `49`** | 🔴 **REFUSED** (LATAM/Universidad de Chile is `p868`'s CITED identity, not a measurement) | 🔴 **MEASURABLE — wrongly** |
+| `collabassess` | `CPSXblock` (`3★`) | 🔴 **`gmail.com` `50` of `50`** | 🔴 **REFUSED** | 🔴 **MEASURABLE — wrongly** |
+| `openedxou` | `Click-to-reveal-XBlock` (`3★`) | 🔴 **`gmail.com` `50` of `50`** | 🔴 **REFUSED** | 🔴 **MEASURABLE — wrongly** |
+| `raccoongang` | `edx_xblock_scorm` (`32★`) | 🔴 **`gmail.com` `41`**, `innovapues.com` `3` | 🔴 **REFUSED** | 🔴 **MEASURABLE — wrongly** |
+
+🟢 **`4` of `10` owners are now placed on a measured axis** (`openfun`, `IONISx` → EMEA;
+`eduNEXT` → LATAM; `edly-io` → APAC), **against `p869`'s `2`.** 🔴 **`6` are REFUSED, and `p869`
+published regions for `5` of them from the owner's published identity.**
+
+🔴 **AND THE INSTRUMENT'S RULE IS WRONG IN BOTH DIRECTIONS, which the discharge is obliged to
+say.** 🟢 **`869-G4` prescribed "refuse any owner whose domains are a `users.noreply` majority."
+`0` of the `10` triggered it.** 🔴 **What actually destroys jurisdiction here is GENERIC WEBMAIL:
+`gmail.com` is the plurality for `5` of the `10`, twice at `50` of `50`, and the script reports
+every one of them `MEASURABLE`.** 🔴 **In the other direction it REFUSES where a real signal
+exists: `openedx/tutor-contrib-aspects` has `users.noreply` `27` of `50` and is refused, while
+`axim.org` `16` — Axim Collaborative, the Harvard/MIT nonprofit that stewards Open edX — sits
+plainly beneath it.**
+
+🟢 **The fix is to rank domains by JURISDICTIONAL INFORMATIVENESS (ccTLD, `.edu`/academic,
+corporate, then the uninformative classes) and refuse only when no informative domain appears at
+all, instead of counting one blocklisted string.** Registered as
+[`870-G3`](../intel/open-gaps.md), with two further contamination classes measured this pass:
+🔴 **`example.com` `13` of `50` on `mitodl/learn-ai` (a placeholder git identity) and
+`anthropic.com` `6` of `50` on `zijinz456/OpenTutor` (an AI-assistant commit identity, not an
+affiliation).** 🔵 **Commit-domain affiliation is degrading from three directions at once —
+privacy proxies, placeholders and coding agents — so this axis has a shelf life and this base
+should know it.**
+
 ## 🟢 Seventy-fourth pass (`p869`, 2026-11-17) — **the customisation surface of the industry's biggest open platform is `121` components, `38` of which nobody may legally reuse**
 
 🟢 **`16` rows on this shelf were marked `STALE-ROW` in place this pass
@@ -1343,7 +1405,7 @@ platform.** 🟡 **Treat it as competitive intelligence that happens to be MIT-l
 | **AGENTIC STAR** (SoftBank, 🇯🇵) | 🔴 **Not institution-run — a hosted commercial agent platform**, developer docs at `developers.fd.agenticstar.tm.softbank.jp`, homepage `agenticstar.io`. 🟢 Its runtime SDKs `agenticstar-agentcore` (`1.0.3`) and `agenticstar-platform` (`3.3.0`, `80` releases) are public on PyPI and MIT by their wheel metadata | 🟢 **`74` MIT education agent templates, `54` catalogue ids `EDU-C2-004`…`EDU-C2-173`** — reference row [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent), `EDU-C2-028`, byte-read MIT (`1,074 B`, HEAD `71c442ebd88e`) | 🟢 **MIT** (templates and both SDKs, all byte- or metadata-verified) | 🟡 **Adopt the SPECS, not the runtime.** 🔴 Templates raise `PlatformRequired` at graph compile without a SoftBank deployment; all `74` are `0★`, unmaintained since October; the framework's advertised source repo has **zero commits** (`T89`); hard `==` pins on `langgraph`/`langchain`/`fastapi`. 🟢 **Tests run without the platform — harvest per `P61`** |
 | **AgentCore graph scaffold** (the catalogue's shared architecture) | 🔵 Not a product — the uniform structure under all `74` templates: `config/agent.yaml` manifest (`required_trust_level`, declared secrets), `src/graph/`, `src/nodes/`, `src/schemas/state.py`, `docs/02_design.md`, `docs/03_test_spec.md`, `tests/proof_of_boundary/` | 🟢 Domain nodes differ completely between ids — byte-compared across three repositories this pass: `iep_section_generator`/`regulatory_compliance` vs `affected_material_analysis`/`stakeholder_mapping` vs `bloom_level`/`difficulty_score`. Reference row [`haidang024/agentic-star-education-curriculum-change-impact-briefing-agent`](https://github.com/haidang024/agentic-star-education-curriculum-change-impact-briefing-agent) (`EDU-C2-046`, `45` files) | 🟢 **MIT** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ae3eea9ac056`) | 🟢 **This is the reusable asset.** 🔵 One scaffold, `54` real domain implementations — so a studio gets a uniform, inspectable architecture across `54` education workflows instead of `54` unrelated codebases. 🔴 The scaffold's base class ships only in the binary wheel; re-implement on LangGraph (now on `repos/foundations.md`) |
 
-## Education vertical platforms — 228 rows
+## Education vertical platforms — 229 rows
 
 ## 🟡 The MARKING-ADAPTER layer — **permissive code that reaches INTO an incumbent this shelf already carries** (new, fifty-seventh pass `p852`) (3 rows)
 

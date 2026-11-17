@@ -4,6 +4,261 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventy-fifth pass (`p870`, 2026-11-17) — **`1` agent row, and the repair that matters more than the row: `5` of `p869`'s own rows were counted NOWHERE, because `p869` renamed a column and the detector that would have caught it is DECLARED RED**
+
+🟢 **Channel declaration, as [`863-G1`](../intel/open-gaps.md) requires before the first row.**
+🔴 **One line is new and it RETIRES a finding rather than adding one.**
+
+| Channel | Result |
+|---|---|
+| 🔴 `curl https://github.com/...` | 🔴 `403` at the egress proxy |
+| 🔴 `gh api repos/{owner}/{repo}` | 🔴 `403` *"not enabled for this session"* |
+| 🟢 `gh api search/repositories` (`topic:`, `user:`, keyword, single and batched `repo:`) | 🟢 `200` — metadata FIELDS only |
+| 🟢 `git ls-remote` · `git clone --filter=blob:none --depth 1` | 🟢 `200` — the existence channel, the licence bytes, the tree, and now the IDENTITY channel |
+| 🟢 `raw.githubusercontent.com` | 🟢 `200` once the ref is resolved first |
+| 🔴 **every non-GitHub domain, on BOTH channels — NOT an EU finding** | 🔴 **`10` of `10` probed domains return `000` on `curl`: the `4` EU domains `p869` named, plus `unesco.org`, `iesalc.unesco.org`, `digitaleducationcouncil.com`, `teqsa.gov.au`, `multistate.us` and `ed.gov`. The fetch tool returns `ENOTFOUND` on a non-EU commercial domain as readily as on the Council's.** 🟢 **So `p869`'s "it is not one blocked domain, it is the EU estate" was measuring the SESSION, not the publisher — see [`intel/market.md`](../intel/market.md), where the grade this forces is applied to all four regions instead of one** |
+
+### 🔴 `869-G5` ANSWERED IN ITS OWN TERMS, AND THEREFORE RETIRED
+
+🟢 **`869-G5`'s acceptance test is deliberately about the obstacle: "the next pass states,
+before it starts, whether it can execute `compose/code/pass275-grant-enumeration/enumeration_gate.py`.
+🔴 If it CANNOT, it says so in the same sentence and stops registering a gap whose acceptance
+test this base cannot execute — three consecutive carries of an unexecutable action is a
+register defect, not a research backlog."**
+
+🔴 **`p870` CANNOT execute it, and states so here before its first row.** 🔴 **Two attempts,
+two different refusals from this session's permission layer — `[Unauthorized Access]` on the
+directory listing plus invocation, then `[Unsanctioned Communication]` on the invocation alone,
+the second naming the gate's network reach as the cause.** 🟢 **So the action is not merely
+declined, it is declined for a REASON that will not change between passes: the gate goes to the
+network, and this session's egress is `403`/`000` everywhere but GitHub, which the channel table
+above measures independently.**
+
+🟢 **`869-G5` is therefore DISCHARGED BY RETIREMENT, which is what it asked for.**
+🔴 **`gate-enumeration` stands RED at `HEAD` with `REFUTED=13`, unchanged and unquieted:
+`SKIP_COMMIT_GATES` unused, `DECLARED_RED` untouched, and the `136` `VERIFIED-ABSENT` /
+`230` `QUEUE-UNENUMERATED` verdicts are STILL unrevised.** 🔵 **What changes is the bookkeeping:
+this base stops carrying an acceptance test it cannot run, and [`870-G5`](../intel/open-gaps.md)
+replaces it with one it can — re-ground those verdicts with the `ls-remote` channel this pass
+instrumented, which needs no gate at all.**
+
+### 🔴 `p869` FILED `5` ROWS AND THE CENSUS COUNTED `0` OF THEM — third instance of a defect class registered at `p853`
+
+🟢 **Found by running [`ingest/derive-counts.py`](../ingest/derive-counts.py), which is local
+and needs no network.** 🔴 **It reported, at `HEAD`:**
+
+```
+agents/top.md         RED  1 table(s) carry github.com rows but no declared signature
+                           line 103 (1 rows)
+repos/foundations.md  RED  1 table(s) carry github.com rows but no declared signature
+                           line  78 (4 rows)
+```
+
+🔴 **Those are `p869`'s own filings — its `1` agent row and its `4` foundation rows, every one
+byte-read, tree-confirmed and affiliation-probed, reading on the page as credited rows and
+absent from every number this base publishes.** 🟢 **The cause is ONE WORD:**
+
+| | Header as `p869` wrote it | Header as declared |
+|---|---|---|
+| `agents/top.md` | `… \| ★ / files \| …` | `… \| ★ / forks \| …` |
+| `repos/foundations.md` | `… \| ★ / files · source \| … \| Why it is a foundation \|` | `… \| ★ / forks \| … \| Why it is a foundation and not a row on another shelf \|` |
+
+🟢 **The rename is an IMPROVEMENT and `p870` keeps it** — `p869` had just built a tree channel,
+and a source-file count says more about a repository than a fork count. 🔴 **What was missing is
+the declaration.** 🟢 **Both signatures are now declared in `derive-counts.py` with the reason
+recorded in the gate itself, and `forks` rows are NOT re-measured as `files` rows.**
+
+| Shelf | Counted at `HEAD` | 🟢 After the declaration | Recovered |
+|---|---|---|---|
+| `agents/top.md` | `542` | 🟢 **`543`** | `1` |
+| `repos/foundations.md` | `389` | 🟢 **`393`** | `4` |
+
+🔴 **And the structural finding, which is why this is the THIRD instance.** 🟢 **`853-G7`
+registered this exact class** (*"their six-column header was never declared to
+`ingest/derive-counts.py`"*) **and `p866` repaired `22` more rows in `8` tables under
+`865-G1`.** 🔴 **It recurred anyway, and the reason is in the `Makefile`: `gate-derived-counts`
+and `recount` are both in `DECLARED_RED`, so the ONE detector that catches this class is
+non-blocking by declaration.** 🔵 **A pass can rename a column, orphan its own rows, and commit
+green. That is [`870-G2`](../intel/open-gaps.md).**
+
+### 🟢 `869-G1` DISCHARGED: `1,015` addresses, `2` groups, `3` rows collapse — and the rate the gap warned against extrapolating was `60×` too high
+
+🟢 **Acceptance test: run `git ls-remote HEAD` over the full counted population, group by
+`HEAD` sha, publish every group of size `> 1`, state how many of the counted rows collapse, and
+treat `0` groups as a mis-run instrument.**
+
+🟢 **Built as [`ingest/p870-head-identity.sh`](../ingest/p870-head-identity.sh)** — one retry at
+`3s` per address by construction, because `p869` measured that an unpaced sweep manufactures
+absence ([`record`](../evidence/head-identity.2026-11-17-p870.tsv)).
+
+| Measure | Result |
+|---|---|
+| addresses probed | `1,015` |
+| resolved a `HEAD` | `1,012` |
+| distinct `HEAD` shas | `1,009` |
+| 🟢 **groups of size `> 1`** | 🟢 **`2`** — the instrument is not mis-run |
+| 🔴 **counted rows that collapse** | 🔴 **`3` (`0.30%`)** |
+
+| `HEAD` `sha₁₂` | Addresses | Note |
+|---|---|---|
+| `1c46a82ba384` | 🔴 **`3`** — `digitalcredentials/learner-credential-wallet` · `openwallet-foundation-labs/learner-credential-wallet` · 🔴 **`ryjones/learner-credential-wallet`** | 🔴 **The gap named TWO of these. The third is new, so this group is one project at THREE addresses, counted three times in every census** |
+| `905f9d0313b3` | `2` — `fabian-thinks/present-together` · `FabianJun/PresentTogether` | as the gap named it |
+
+🔴 **AND THE SAME SELECTION EFFECT `868-G5` WAS CORRECTED FOR, ONE PASS LATER.** 🟢 **`869-G1`
+measured *"two pairs in the first `11` addresses"* and said, correctly, that it is *"a rate
+nobody should extrapolate from and nobody should ignore."*** 🔴 **Extrapolated it would have
+been `18%`. Measured over all `1,015` it is `0.30%` — `60×` lower — because the `11` were
+selected BECAUSE the existence channel had already failed on them, which is the identical
+conditional-versus-unconditional confusion `p869` had just corrected in `868-G5`.** 🔵 **Twice
+in two passes, from opposite directions. Registered as [`870-G1`](../intel/open-gaps.md): the
+defect is not arithmetic, it is that this base keeps publishing rates from populations chosen by
+a failure.**
+
+### 🔴 The `3` addresses with no `HEAD` — `3` DIFFERENT causes, and one of them is MANUFACTURED BY THIS BASE'S OWN NORMALISER
+
+🔴 **`p869`'s existence work filed "no `HEAD`" as ONE verdict. It is at least THREE, and
+`ls-remote`'s EXIT CODE plus one punctuation retry separates them for free.**
+
+🔴 **`p870` drafted this table with the first row reading "ABSENT on two agreeing channels" and
+that draft was WRONG.** 🟢 **It is published here as the correction it is, because the thing that
+caught it is a claim already standing on this shelf: `p847`'s `T146` recorded that
+`Bhuvantejakomera/Agentic-Assignment-Evaluator.` — **with a trailing full stop in the repository
+name** — returns `total_count=1`, and that the same address without the stop returns `422`.**
+
+| Address, as the census carries it | `ls-remote` | Metadata channel | 🔬 Re-probed WITH the trailing stop | Verdict |
+|---|---|---|---|---|
+| `Bhuvantejakomera/Agentic-Assignment-Evaluator` | 🔴 `rc=128`, `0` refs, credential prompt | 🔴 `422` | 🟢 **`HEAD 5ef30b360607`; `tc=1`, `MIT`, pushed `2026-11-10`** | 🟢 **ALIVE. The repository's real name ENDS IN A FULL STOP and the census address is MANGLED** |
+| `Damanian/MIREA-Toolkit-MCP` | 🔴 `rc=128`, `0` refs, credential prompt | 🔴 `422` | 🔴 `422` + credential prompt, stop or no stop | 🔴 **ABSENT — and for the first time in this base, on TWO AGREEING CHANNELS** |
+| `teppei-miyashita/agenticstar-agentcore` | 🟡 **`rc=0`**, `0` refs | 🟢 `ALIVE`, pushed `2026-08-12`, no licence | — | 🟡 **PRESENT AND EMPTY — a third class entirely** |
+
+🔴 **THE DEFECT, and it is this base's, not GitHub's.** 🟢 **`ingest/derive-counts.py` normalises
+every extracted address with `rstrip(".)")` — a correct and necessary rule, because these pages
+write addresses inside prose that ends in punctuation.** 🔴 **For the one repository in this
+corpus whose NAME legitimately ends in a full stop, that rule destroys the name, and every
+channel downstream then truthfully reports the mangled string absent.** 🔴 **`T146` found this at
+`p847`. `p868`'s census still carries the stripped form. `p869` built its existence predicate on
+that census. `p870` nearly published it as a verified absence.** 🔵 **An absence produced by
+one's own normaliser is the most expensive kind, because every channel agrees.** Registered as
+[`870-G4`](../intel/open-gaps.md).
+
+🟢 **The other two verdicts stand and both are now better grounded than `p869` left them.**
+🟢 **`Damanian/MIREA-Toolkit-MCP` reproduced `rc=128` across `3` attempts at `10s` spacing, so it
+is deterministic rather than the throttle artefact `p869` measured — and the metadata channel
+agrees, which makes it the first absence in this base that two independent channels assert.**
+🟢 **The `rc=0` row was confirmed by the expensive channel: the tree listing returns `0` files**
+([`record`](../evidence/code-presence-newrows.2026-11-17-p870.tsv)), **agreeing with the
+`ls-remote` ref count.** 🔵 **So an empty repository — the class `p869` found by CLONING
+(`IONISx/xblock-video`, `valutac/sulva`) — is detectable at one `ls-remote` instead of a clone.**
+
+🔴 **And `p870` must WITHDRAW the novelty claim it drafted here.** 🟢 **This shelf already
+carries that technique, that verdict and that address — *"`git ls-remote` returns ZERO REFS —
+the repository has no commits at all"*, filed by an earlier pass against
+`teppei-miyashita/agenticstar-agentcore` as the source repo its own PyPI metadata advertises.**
+🔵 **So the instrument is not new. What is new is that it had never been run over the COUNTED
+POPULATION, where it finds a CREDITED ROW that is an empty repository. A technique this base
+already owns, pointed at a population it had never been pointed at, is worth more than a
+technique it does not own — and claiming it as a discovery would have been false.**
+
+### 🟢 `869-G2` DISCHARGED: `20` duplicate rows in `1,179`, and `5` of the `19` pairs CONTRADICT each other
+
+🟢 **Acceptance test: measure the duplicate-row rate over ALL counted rows rather than the `152`
+stale ones `868-G2` happened to touch, publish the per-shelf count, and state for each pair
+whether the two rows AGREE on licence and region — "because two rows that disagree are worse
+than two rows that repeat."**
+
+🟢 **Built as [`ingest/p870-duplicate-rows.py`](../ingest/p870-duplicate-rows.py), which imports
+the count gate's own `SHELVES` signatures with `ast` rather than re-guessing the population —
+`868-G2`'s trick, so the instrument cannot drift from the gate it reports against.**
+🟢 **It reproduces `derive-counts.py` exactly and independently: `550` / `395` / `234` rows and
+`8` / `6` / `6` duplicates** ([`record`](../evidence/duplicate-rows-all.2026-11-17-p870.tsv)).
+
+| Shelf | Counted rows | Duplicate addresses | Extra rows | Rate |
+|---|---|---|---|---|
+| `agents/top.md` | `550` | `8` | `8` | `1.45%` |
+| `repos/foundations.md` | `395` | `6` | `6` | `1.52%` |
+| `verticals/solutions.md` | `234` | `5` | 🔴 **`6`** — one address carries `3` rows | 🔴 **`2.56%`** |
+| 🟢 **total** | **`1,179`** | **`19`** | **`20`** | **`1.70%`** |
+
+🔴 **The part the gap was actually fishing for. `3` pairs disagree on LICENCE and `5` on
+REGION — and `p870` settled each on bytes rather than leaving it in prose:**
+
+| Address | Disagreement my comparator reported | 🔬 Settled on the byte-read channel ([`record`](../evidence/licence-byteread.2026-11-17-p870.tsv)) |
+|---|---|---|
+| `wongcyrus/Google-AI-Classroom` | `Apache-2.0` vs `MIT` | 🟡 **NOT a licence defect, and the comparator is at fault: both rows say `MIT`, and the `Apache-2.0` my extractor read is in the PROSE of one cell, describing a sibling repository (`open-edge-platform/education-ai-suite`).** 🔴 **But the re-read found a REAL disagreement the comparator was not looking for: `MIT`, `LICENSE`, **`1,062 B`**, `sha256₁₂ b79982c14bb1` — which matches the `p828` row EXACTLY and REFUTES the other row's `1,061 B` / `sha256 5d83f6d388b3…`** |
+| `frappe/education` (on `2` shelves) | `AGPL-3.0` vs `GPL-3.0` | 🟡 **ALSO the comparator, not the data — both rows say `GPL-3.0` and the `AGPL-3.0` is prose naming the sibling `frappe/lms`.** 🔴 **But chasing it exposed a real instrument defect: the byte-read ladder is CASE-SENSITIVE and the whole Frappe estate ships `license.txt` in lowercase, so the ladder reports `NO-PAYLOAD` on a readable grant. 🔴 That forced a re-measurement of `p869`'s `31.4%`-ungranted headline — see [`repos/foundations.md`](../repos/foundations.md)** |
+| `talis/lti-1-3-php-library` | 🔴 **`APAC` vs `EMEA`** | 🟢 Licence confirmed `Apache-2.0`. 🔴 **Region REFUSED: `talis.com` `33` of `50` commits is a corporate `.com` with no derivable jurisdiction, so `APAC` and `EMEA` are BOTH unearned.** 🔴 **And a second refutation this pass did not go looking for: `11,343 B` / `sha256₁₂ 78b49eeaddbf` against the shelf's standing `11,342 B` / `944c6521f810` and its claim to be *"byte-identical to `1EdTech`'s"*. One byte apart — the claim is STALE** |
+| `zijinz456/OpenTutor` | 🔴 **`EMEA` vs `Global`** | 🟢 Licence confirmed `MIT`, `1,068 B`, `sha256₁₂ 5352b4967982` — matching both rows exactly. 🔴 **Region REFUSED: `gmail.com` `42` of `50`** |
+| `fabian-thinks/present-together` · `openwallet-foundation-labs/learner-credential-wallet` · `krayin/laravel-crm` | `-` vs a region | 🟡 **NOT contradictions and declared as such: one of the two rows sits in a table with NO region column. `3` of the `5` region "disagreements" are this artefact of my own comparator** |
+
+🔴 **The honest tally, after the bytes rather than before them. 🔴 Of the `3` licence
+disagreements my comparator reported, `0` ARE REAL: all three are prose contamination — a cell
+that names a sibling repository's licence, which my licence extractor cannot tell from the row's
+own.** 🔴 **Of the `5` region disagreements, `2` are real contradictions (`talis`, `OpenTutor`,
+both now REFUSED on the measured axis) and `3` are my comparator comparing a row that has a
+region column against one that does not.**
+
+🟢 **So `869-G2`'s question — do duplicate rows agree? — answers YES on licence and mostly yes on
+region, and the value of the exercise was entirely in what the RE-READS found on the way:**
+🔴 **`2` byte/sha refutations the gap never asked for** (`wongcyrus/Google-AI-Classroom`'s second
+row; `talis/lti-1-3-php-library`'s *byte-identical* claim, stale by one byte) 🔴 **and a
+case-sensitivity defect in the byte-read ladder that forced a re-measurement of `p869`'s
+headline figure** ([`repos/foundations.md`](../repos/foundations.md)).
+🔵 **An instrument that reports `3` defects and survives having all `3` traced back to itself has
+still earned its pass, because the trace is what found the other three.**
+
+### 🔴 `0` rows filed on this shelf, because the row `p870` chose was ALREADY HERE — and the re-read is worth more than the row would have been
+
+🔴 **`p870` selected `mitodl/learn-ai` to file, wrote the row, and then the count gate reported
+`distinct` UNCHANGED at `543` with `dupes` rising `8` → `9`.** 🟢 **The address is already on this
+shelf, filed by an earlier pass as *"MIT Learn AI backend"*.** 🔴 **The duplicate row has been
+REMOVED and the mistake is published rather than quietly deleted, because the cause is worth
+recording: this pass's OWN shelf-coverage check excluded `learn-ai` correctly — it never appeared
+in the `36` candidates — and `p870` then picked it out of the domain predicate's `DROP` list by
+eye, impressed by the description, WITHOUT re-running the check it had already run.**
+🔵 **Hand-selection downstream of a working instrument is the exact defect `865-G4`, `866-G1` and
+`867-G1` each moved one step upstream. It reappeared here at the last step, which is the step
+none of them covered.**
+
+🟢 **What the episode DID establish, and it is a real result.** 🟢 **`p870`'s byte-read of
+`mitodl/learn-ai` reproduces the standing row EXACTLY — `LICENSE`, **`1,070 B`**,
+`sha256₁₂ d1ea675aa9bb`** ([`record`](../evidence/licence-byteread-newrows.2026-11-17-p870.tsv)) —
+**an independent confirmation at a different pass on a different day.** 🔵 **Set that against the
+`2` byte/sha REFUTATIONS this same pass found on rows that looked settled
+(`wongcyrus/Google-AI-Classroom`, `talis/lti-1-3-php-library`): re-reading a shelved row's bytes
+is cheap and it is not always confirmatory. `1` of `3` re-reads this pass agreed with the shelf.**
+
+🟢 **And the tree listing adds what the standing row does not carry:** `326` files, `232` source,
+`167` of them `.py`, 🟢 **plus the detail that makes it recommendable — its README documents
+Langsmith, Posthog and Opik integration and a RAG EVALUATION section, so it is an evaluated
+chatbot service rather than a demo.** 🟢 **It is used as the agent tier of
+[`P-114-A`](../compose/patterns.md) on that basis.**
+
+🔴 **So this shelf gains `0` rows and recovers `1`** (`p869`'s orphaned
+`open-craft/xblock-ai-evaluation`, via the signature declaration above): `542` → **`543`**.
+🟢 **The `4` rows `p870` actually filed are on
+[`repos/foundations.md`](../repos/foundations.md) (`3`) and
+[`verticals/solutions.md`](../verticals/solutions.md) (`1`), and all four are genuinely absent
+from these shelves at `HEAD` — checked address by address against `HEAD` after this error, not
+before it.**
+
+🔴 **Why `0` new from the generic channel, stated as `p869` stated it.** 🟢 **The four mandated
+legs returned `HKUDS/DeepTutor` (now `59,922★` on the metadata channel, against the `~48,268★` a
+blog claimed to `p869`), `THU-MAIC/OpenMAIC`, `withmarbleapp/os-taxonomy`,
+`patchy631/ai-engineering-hub`, `microsoft/ai-agents-for-beginners`, `huggingface/agents-course`,
+`mlabonne/llm-course`, `microsoft/generative-ai-for-beginners`,
+`ashishpatel26/500-AI-Agents-Projects` and Nous Research's `Hermes`.** 🔴 **`10` of `12`
+candidates are ALREADY SHELVED here.** 🟢 **Of the `2` that are not,
+`ARUNAGIRINATHAN-K/awesome-ai-agents-2026` is a general agent registry rather than education, and
+`forma-lms` is `GPL`, outside this shelf's vocabulary.** 🔵 **Saturation against generic web
+search is now measured for the second consecutive pass.**
+
+🟡 **One refinement `p870` owes `868-G1`.** 🟢 **`868-G1`'s discharge named
+`langgptai/awesome-claude-prompts` and `opendilab/awesome-RLHF` as the `NO-CODE` list class.**
+🔴 **`ARUNAGIRINATHAN-K/awesome-ai-agents-2026` carries the same `awesome-` prefix and the tree
+returns `95` files, `52` source, `41` of them `.tsx`** —
+[`record`](../evidence/code-presence-newrows.2026-11-17-p870.tsv). 🟢 **So the prefix is NOT the
+predicate; the tree is. `p869`'s instrument gets this right and a prefix rule would not.**
+
 ## 🟢 Seventy-fourth pass (`p869`, 2026-11-17) — **`1` agent row, because `1` is how many of the `121`-repository XBlock integrator estate is an AI agent; `868-G1` discharged with a CODE-PRESENCE channel that dropped one of `p868`'s own `7` rows and was right to**
 
 🟢 **Channel declaration, as [`863-G1`](../intel/open-gaps.md) requires before the first row.**
@@ -591,7 +846,7 @@ are the one field here that rots without anyone touching the row** → `T237`.
 
 | Name | Repo | Licence | Stars | Region | Description |
 |------|------|---------|-------|--------|-------------|
-| OpenTutor | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** — `main`, `LICENSE`, `1,068 B`, `sha256₁₂ 5352b4967982` | `180` ★ / `47` f | 🔴 **Global — UNPLACED, and said so** | 🟢 **A block-based adaptive learning workspace that runs LOCALLY**: drop in a PDF, get generated notes, quizzes and a tutor that adapts. 🟢 **`HEAD 2026-11-16` — one day before this reading, the freshest agent row in the base.** 🔴 **No affiliation, no TLD, no `CITATION.cff`: both placement stages returned nothing, so it is published as unplaced rather than guessed** (`861-G1`'s rule). 🔵 **Local-first is the attribute to note** — it is the only tutoring row here that needs no model egress, which is what a data-residency engagement asks for first |
+| OpenTutor | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** — `main`, `LICENSE`, `1,068 B`, `sha256₁₂ 5352b4967982` | `180` ★ / `47` f | 🔴 **REFUSED `p870`** — `gmail.com` `42` of `50` commits, 🔵 **plus `anthropic.com` `6`, an AI-assistant commit identity rather than an affiliation (a new contamination class, [`870-G3`](../intel/open-gaps.md)). The sibling row said `EMEA`; neither is earned** | 🟢 **A block-based adaptive learning workspace that runs LOCALLY**: drop in a PDF, get generated notes, quizzes and a tutor that adapts. 🟢 **`HEAD 2026-11-16` — one day before this reading, the freshest agent row in the base.** 🔴 **No affiliation, no TLD, no `CITATION.cff`: both placement stages returned nothing, so it is published as unplaced rather than guessed** (`861-G1`'s rule). 🔵 **Local-first is the attribute to note** — it is the only tutoring row here that needs no model egress, which is what a data-residency engagement asks for first |
 | education-skills | [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | 🟢 **MIT** — `main`, `LICENSE`, `1,068 B`, `sha256₁₂ 23b91d7c0aef` | `125` ★ / `24` f | 🟢 **APAC** *(placed by CURRICULUM NAME: `高考`)* | 🟢 **A collection of education Claude Code Agent Skills, not a framework** — `高考理科导师` (gaokao science tutor) and siblings. 🔵 **The first SKILL-class education artefact this base has shelved**: it ships prompt-and-procedure units against a named national curriculum, so the reusable asset is the pedagogy encoding, not the runtime. 🟢 **Placed to China by the examination name in its prose** — a placement instrument neither `p861` nor `p862` had → `T238`. `HEAD 2026-01-29` |
 | POSCO online-test integrity | [`JoyLeeA/POSCO_AIProject_OnlineTestCheatingDetectionAiSystem`](https://github.com/JoyLeeA/POSCO_AIProject_OnlineTestCheatingDetectionAiSystem) | 🟢 **MIT** — `master`, `LICENSE`, `1,064 B`, `sha256₁₂ 671db79febc0` | `9` ★ | 🟢 **APAC** *(prose: Korea, POSCO)* | 🟡 **Gaze- and motion-recognition examination-integrity system.** 🔴 **`HEAD 2020-06-07` and `9` stars — a weak row, and shelved only because of what surrounds it:** 🔴 **it is the ONLY permissively granted artefact in the entire `206`-address Korean assessment corpus** (`T233`). 🔵 **Its value is as the measured ceiling of Korean open assessment supply, not as a component**  🔴 **`STALE-ROW` — last pushed `2020-06-07` (`2,354` days), census verdict `STALE` (`p868`), marked `p869`.** |
 
@@ -805,7 +1060,7 @@ a successful `git clone --filter=blob:none --no-checkout --depth 1`, which retur
 | MIT OL agent-kit | [`mitodl/agent-kit`](https://github.com/mitodl/agent-kit) | 🟢 **BSD-3-Clause** — byte-read `1,499 B`, `sha256₁₂ 8afd1cd502a7`, 🔴 holder **`© 2026, Tobias Macey`**, an individual | `5` | North America | 🟢 **A university's INTERNAL agent toolkit, published: skills, custom agents, MCP helpers and configuration.** HEAD commit `2026-11-16`. 🔵 **This is the form a studio is usually asked to build and rarely gets to read** |
 | TutorIA | [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | 🟢 **MIT** — byte-read `1,069 B`, `sha256₁₂ 346d7b5d3913`, holder `© 2026 Grupo Sirius` | `0` | LATAM | 🟢 **An autonomous tutor agent for RURAL higher education in Risaralda, Colombia, written at Universidad Tecnológica de Pereira — and the region is taken from the repository's own description, not inferred from language** (`T935`). HEAD `2026-05-20`. 🔵 **`0★`, which `p859` established is the signature of the public-education tier rather than a quality signal** |
 | BloomTutor | [`Li-Evan/BloomTutor`](https://github.com/Li-Evan/BloomTutor) | 🟢 **MIT** — byte-read `1,069 B`, `sha256₁₂ 7d574cf3632e`, holder `© 2026 Li Zhengping` | `312` | Global | 🟢 Socratic, adaptive, lesson-planning open-source tutor, `44` forks, HEAD commit `2026-11-16`. 🔴 **Shelved as `Global` deliberately: the holder's name and a Chinese-language README are language evidence, and `T935` forbids reading language as region.** 🔴 **And this base logged it as `Li-Evan/Bloom`, an address that still clones — see `T212`** |
-| OpenTutor | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** — byte-read `1,068 B`, `sha256₁₂ 5352b4967982`, holder `© 2026 Zijin Zhang` | `180` | Global | 🟢 **A block-based adaptive learning workspace that runs LOCALLY**: upload material → notes, quizzes, flashcards and an adaptive tutor, self-hosted, `10+` LLM providers. `46` forks, HEAD commit `2026-11-16`. 🔵 **Local-first with pluggable providers is the data-residency posture every EMEA and public-sector engagement asks for** |
+| OpenTutor | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** — byte-read `1,068 B`, `sha256₁₂ 5352b4967982`, holder `© 2026 Zijin Zhang` | `180` | 🔴 **REFUSED `p870`** (was `Global`) | 🟢 **A block-based adaptive learning workspace that runs LOCALLY**: upload material → notes, quizzes, flashcards and an adaptive tutor, self-hosted, `10+` LLM providers. `46` forks, HEAD commit `2026-11-16`. 🔵 **Local-first with pluggable providers is the data-residency posture every EMEA and public-sector engagement asks for** |
 | algo-sensei | [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 🟢 **MIT** — byte-read `1,081 B`, `sha256₁₂ 3b2ca73e81ad`, holder `© 2025 Algo Sensei Contributors` | `303` | Global | 🟢 A DSA/interview mentor that runs as Claude Code skills: progressive hints, pattern recognition, mock interviews, code review, multi-language. `64` forks, HEAD `2026-10-02`. 🔵 **The clearest worked example on this shelf of "teach, do not solve" encoded as skill files rather than as a prompt** |
 | education-skills | [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | 🟢 **MIT** — byte-read `1,068 B`, `sha256₁₂ 23b91d7c0aef`, holder `© 2026 flysheep-ai` | `125` | Global | 🟢 A Chinese-language collection of teaching and tutoring Claude Code skills (教育类 Claude Code Skills 集合), `24` forks, HEAD `2026-01-29`. 🔴 **`Global` for the same reason as `BloomTutor`: `zh` is not APAC** |
 | Moodle MCP server | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** — byte-read `1,064 B`, `sha256₁₂ 845ac6ac9e57`, holder `© 2025 peancor` | `45` | Global | 🟢 **An MCP server over Moodle — the incumbent LMS of most of the public education estate this base has mapped.** `14` forks, HEAD `2026-02-22`. 🔵 **`T116`'s access-before-agent rule: the integration surface is worth more than the agent, and this one is MIT** |
@@ -4800,7 +5055,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD / Unlicense / CC0-1.0 / Zlib / ECL-2.0 / MulanPSL-2.0 / WTFPL) — 542 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD / Unlicense / CC0-1.0 / Zlib / ECL-2.0 / MulanPSL-2.0 / WTFPL) — 543 rows
 
 ### Filed by `p853` (2026-11-16) — `12` rows: the SPOKEN-LANGUAGE ASSESSMENT tier, every grant byte-read today, `0` copyleft, and every row's CORPUS dependency stated beside its licence
 
@@ -4917,7 +5172,7 @@ declared dead.**
 |---|---|---|---|---|---|
 | Learner Credential Wallet (OWF Labs) | https://github.com/openwallet-foundation-labs/learner-credential-wallet | 🟢 **MIT — byte-read** (`main/LICENSE`, `1,091 B`, `sha256₁₂ d8c69cd2855b`) | 🟡 *not retrieved — the address is itself absent from the search index; existence and grant are from `raw.githubusercontent.com`* | Global | **New this pass (`p846`). Region: Global.** Cross-platform iOS/Android wallet for verifiable learner credentials (`lcw.app`), now under **OpenWallet Foundation Labs (Linux Foundation)**. 🟢 **The reference client for the W3C VC / Open Badges 3.0 seam, and the procurement story changed with the stewardship**: a foundation-hosted wallet clears institutional review where a lab repository does not. 🔴 **Its grant is a DIFFERENT blob from the Digital Credentials Consortium original** (`1,091 B` / `d8c69cd2855b` here against `1,092 B` / `1032f65d…` at `digitalcredentials/`), so this is a sibling project, not a redirect — keep both rows and cite this one. |
 | lti-1-3-php-library (1EdTech upstream) | https://github.com/1EdTech/lti-1-3-php-library | 🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810`) | 124 | Global | **New this pass (`p846`). Region: Global.** The SPEC-ANCHOR for LTI 1.3 in PHP, published by **1EdTech — the body that writes the LTI specification** (formerly IMS Global). `111` forks. 🔵 Named as the upstream inside `packbackbooks/lti-1-3-php-library`'s own `README`. 🔴 **Last push `2024-08-20` — cite it for provenance and certification lineage, build on the maintained forks.**  🔴 **`STALE-ROW` — last pushed `2024-08-20` (`819` days), census verdict `STALE` (`p868`), marked `p869`.** |
-| lti-1-3-php-library (talis, maintained) | https://github.com/talis/lti-1-3-php-library | 🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810` — byte-identical to the `1EdTech` upstream) | 1 | EMEA | **New this pass (`p846`). Region: EMEA** (Talis is a UK higher-education software house). 🟢 **Pushed `2026-11-10` — the most recently maintained Apache-2.0 LTI 1.3 PHP tree this base holds**, against `2024-08-20` upstream and a de-indexed `packbackbooks` tree. 🟡 **`1★` carries no information here**: a certification-bound protocol library is maintained by its integrators, not starred. Validates launches, Names & Roles Provisioning for rosters, Assignment & Grades for writeback. |
+| lti-1-3-php-library (talis, maintained) | https://github.com/talis/lti-1-3-php-library | 🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, 🔴 **`11,343 B`, `sha256₁₂ 78b49eeaddbf` on `p870`'s re-read — the standing `11,342 B` / `944c6521f810` and its *byte-identical to the `1EdTech` upstream* claim are STALE by one byte**) | 1 | 🔴 **REFUSED `p870`** (was `EMEA`) | 🔴 **Region refused on the measured axis (`870`'s discharge of `869-G2`): `talis.com` is `33` of `50` commits — a corporate `.com` carries no jurisdiction, and the sibling row on this shelf said `APAC`. Talis as a UK house is the owner's published identity, CITED and not measured.** 🟢 **Pushed `2026-11-10` — the most recently maintained Apache-2.0 LTI 1.3 PHP tree this base holds**, against `2024-08-20` upstream and a de-indexed `packbackbooks` tree. 🟡 **`1★` carries no information here**: a certification-bound protocol library is maintained by its integrators, not starred. Validates launches, Names & Roles Provisioning for rosters, Assignment & Grades for writeback. |
 | present-together | https://github.com/fabian-thinks/present-together | 🟢 **MIT + appended boundary — byte-read** (`main/LICENSE`, `1,344 B`, `sha256₁₂ 4f78693ecfd8`, holder `fabian-thinks and the Singularity seminar contributors`, 2026) 🔴 GitHub field reports `NOASSERTION` — `T81` | 0 | Global | **New ADDRESS this pass (`p846`) for the asset shelved at `p824` as `FabianJun/PresentTogether`. Region: Global.** Pushed `2026-11-15`. Co-designs interactive presentations with an AI agent and coaches the human on the teaching; the agent does the technical build. 🟢 **The two appended clauses survive the rename** — *"Third-party material is excluded from this grant"* (→ `THIRD_PARTY_NOTICES.md`) and *"Software permissions do not override academic rules or rights to institutional content"* (→ `docs/ACADEMIC-USE.md`). 🔵 **This is the live address; the old one is a GitHub redirect that `raw` follows and the search index does not.** |
 
 
@@ -5039,7 +5294,7 @@ measured on the way.
 | moodle-mcp | https://github.com/kadmalcun/moodle-mcp | 🟢 **MIT — byte-read** (`1,065 B`, `sha256:385fc6657118…`) | 0 | APAC | 🟢 **New this pass (`p828`).** 🇯🇵 Tokyo University of Technology Moodle, local read-only. |
 | ustc-bb-mcp | https://github.com/quantai1314/ustc-bb-mcp | 🟢 **MIT — byte-read** (`1,080 B`, `sha256:d25c64b5fb88…`) | 0 | APAC | 🟢 **New this pass (`p828`).** 🇨🇳 USTC Blackboard, local MCP, including coursework download and **assignment submission**. |
 | d01-p01-hwp-form-automation-mcp | https://github.com/Feynman520/d01-p01-hwp-form-automation-mcp | 🟢 **MIT — byte-read** (`1,066 B`, `sha256:d9f635086306…`) | 0 | APAC | 🟢 **New this pass (`p828`) — the FORMS leg, and it is a jurisdiction-specific one.** 🇰🇷 Fills Korean government and school **HWP** (Hancom) forms end-to-end. 🔵 **HWP is the mandatory document format for Korean public-sector paperwork; no non-Korean toolchain speaks it. A Korean education engagement inherits this dependency whether or not it wants it.** |
-| Google-AI-Classroom | https://github.com/wongcyrus/Google-AI-Classroom | 🟢 **MIT — byte-read** (`1,061 B`, `sha256:5d83f6d388b3…`) | 1 | APAC | 🟢 **New this pass (`p828`).** 🇭🇰 Edge-to-cloud multimodal classroom agent and **exam invigilation**: client-side MediaPipe, LiteRT Whisper and Gemma with Gemini. 🔴 **Invigilation is proctoring — in EMEA it is Annex III territory and emotion inference is banned outright, so this is a row to study, not to deploy unmodified.** |
+| Google-AI-Classroom | https://github.com/wongcyrus/Google-AI-Classroom | 🟢 MIT — 🔴 **BYTE-CLAIM REFUTED `p870`**: re-read gives `1,062 B`, `sha256₁₂ b79982c14bb1`, not the `1,061 B` / `5d83f6d388b3…` this row carries | 1 | APAC | 🟢 **New this pass (`p828`).** 🇭🇰 Edge-to-cloud multimodal classroom agent and **exam invigilation**: client-side MediaPipe, LiteRT Whisper and Gemma with Gemini. 🔴 **Invigilation is proctoring — in EMEA it is Annex III territory and emotion inference is banned outright, so this is a row to study, not to deploy unmodified.** |
 | navital-gym | https://github.com/Navitallabs/navital-gym | 🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:58d1e17ffe51…`) | 3 | APAC | 🟢 **New this pass (`p828`).** 🇮🇳 Deterministic, auto-graded environments for agents on Indian-reality tasks (UPI, GST, forms, Hindi/Hinglish). 🔵 **Rule-based grading, not model-graded — which is exactly the arithmetic-outside-the-model principle `P67` prescribes, already implemented and Apache-2.0.** |
 | brightspace-d2l-mcp | https://github.com/AnonymousOnyx22/brightspace-d2l-mcp | 🟢 **MIT — byte-read** (`1,199 B`, `sha256:3f0e907830ac…`) | 10 | Global | 🟢 **New this pass (`p828`) — field `NOASSERTION`, bytes MIT.** A `T27` rescue. Scopes itself to what is actually outstanding rather than dumping the whole course list. |
 | brightspace-mcp | https://github.com/cyanprot/brightspace-mcp | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:13555788e65e…`) | 3 | Global | 🟢 **New this pass (`p828`).** D2L Brightspace from Claude Code: courses, assignments, grades, content. |

@@ -1,0 +1,133 @@
+address	vein	score	band	stars	licence	pushed	description	reasons
+openedx/XBlock	push-recency	9	KEEP	471	Apache-2.0	2026-11-16	Framework for building custom learning components that run in the Open edX LMS!	lms+2;open edx+2;openedx+2;xblock+2;learning+1
+openedx/frontend-app-learning	push-recency	9	KEEP	71	AGPL-3.0	2026-11-16	Front-end for the Open edX course experience, implemented using React and Paragon.	topic:tutor-supported+3;open edx+2;openedx+2;learning+1;course+1
+openedx/frontend-app-learner-record	push-recency	9	KEEP	7	AGPL-3.0	2026-11-16	Open edX micro-frontend application for viewing learner records	topic:tutor-supported+3;open edx+2;openedx+2;learner+2
+openedx/frontend-app-gradebook	push-recency	8	KEEP	12	AGPL-3.0	2026-11-16	Instructor grade book tool	topic:tutor-supported+3;openedx+2;gradebook+2;grade+1
+openedx/openedx-platform	push-recency	7	KEEP	8239	AGPL-3.0	2026-11-17	The Open edX LMS & Studio, powering education sites around the world!	lms+2;open edx+2;openedx+2;education+1
+openedx/frontend-app-account	push-recency	7	KEEP	24	AGPL-3.0	2026-11-16	Open edX micro-frontend application for managing user account information.	topic:tutor-supported+3;open edx+2;openedx+2
+openedx/frontend-app-authoring	push-recency	7	KEEP	18	AGPL-3.0	2026-11-16	Front-end for the Open edX Studio experience, implemented in React and Paragon.	topic:tutor-supported+3;open edx+2;openedx+2
+openedx/frontend-app-profile	push-recency	7	KEEP	15	AGPL-3.0	2026-11-16	Open edX micro-frontend application for managing user profile information.	topic:tutor-supported+3;open edx+2;openedx+2
+openedx/frontend-app-admin-console	push-recency	7	KEEP	1	AGPL-3.0	2026-11-16	Administrator console for the Open edX application	topic:tutor-supported+3;open edx+2;openedx+2
+openedx/xblock-sdk	push-recency	6	KEEP	69	Apache-2.0	2026-11-16	Workbench and example xblocks	openedx+2;xblock+2;exam+2
+openfun/ralph	push-recency	6	KEEP	52	MIT	2026-11-17	:gear: Ralph, the ultimate Learning Record Store (and more!) for your learning analytics	topic:learning-analytics+3;learning analytics+2;learning+1
+openedx/xblock-lti-consumer	push-recency	6	KEEP	30	AGPL-3.0	2026-11-14	-	openedx+2;xblock+2;lti+2
+openedx/platform-plugin-aspects	push-recency	6	KEEP	6	Apache-2.0	2026-11-17	Aspects plugins for the Open edX LMS and Studio	lms+2;open edx+2;openedx+2
+openedx/xblock-in-video-quiz	push-recency	6	KEEP	4	AGPL-3.0	2026-11-16	-	openedx+2;xblock+2;quiz+2
+openedx/DoneXBlock	push-recency	6	KEEP	3	AGPL-3.0	2026-11-16	An XBlock for students to mark they've finished something. 	openedx+2;xblock+2;student+2
+openedx/xblocks-core	push-recency	6	KEEP	0	AGPL-3.0	2026-11-17	Core Open edX XBlock types: Problem, Text, Video, etc.	open edx+2;openedx+2;xblock+2
+openedx/paragon	push-recency	5	KEEP	141	Apache-2.0	2026-11-16	💎 An accessible, theme-ready design system built for learning applications and Open edX.	open edx+2;openedx+2;learning+1
+openedx/completion	push-recency	5	KEEP	9	AGPL-3.0	2026-11-14	A library for tracking completion of blocks by learners in edX courses.	openedx+2;learner+2;course+1
+openedx/xblock-skill-tagging	push-recency	5	KEEP	2	AGPL-3.0	2026-11-13	-	openedx+2;xblock+2;skill+1
+openedx/frontend-app-catalog	push-recency	5	KEEP	1	AGPL-3.0	2026-11-16	-	topic:tutor-supported+3;openedx+2
+overhangio/tutor	push-recency	4	KEEP	1132	AGPL-3.0	2026-11-16	The Docker-based Open edX distribution designed for peace of mind	open edx+2;tutor+2
+openedx/openedx-proposals	push-recency	4	KEEP	49	NOASSERTION	2026-11-17	Proposals for Open edX architecture, best practices and processes 	open edx+2;openedx+2
+openedx/docs.openedx.org	push-recency	4	KEEP	39	NOASSERTION	2026-11-15	Open edX Official Documentation	open edx+2;openedx+2
+openedx/frontend-platform	push-recency	4	KEEP	38	AGPL-3.0	2026-11-16	A framework for Open edX micro-frontend applications.	open edx+2;openedx+2
+overhangio/tutor-mfe	push-recency	4	KEEP	33	AGPL-3.0	2026-11-16	This plugin makes it possible to easily add micro frontend (MFE) applications on top of an Open edX platform that runs with Tutor.	open edx+2;tutor+2
+overhangio/tutor-minio	push-recency	4	KEEP	18	AGPL-3.0	2026-11-13	This is a plugin for Tutor that provides S3-like object storage for Open edX platforms. 	open edx+2;tutor+2
+openedx/frontend-app-learner-portal-enterprise	push-recency	4	KEEP	17	AGPL-3.0	2026-11-17	Enterprise Learner Portal	openedx+2;learner+2
+openedx/tutor-contrib-aspects	push-recency	4	KEEP	15	Apache-2.0	2026-11-16	The Open Analytics Reference System - Tutor plugin	openedx+2;tutor+2
+openedx/openedx-events	push-recency	4	KEEP	13	Apache-2.0	2026-11-16	Open edX events from the Hooks Extensions Framework	open edx+2;openedx+2
+openedx/openedx-core	push-recency	4	KEEP	10	AGPL-3.0	2026-11-17	Foundational Django models and APIs for a teaching and learning platform.	openedx+2;learning+1;teach+1
+openedx/openedx-translations	push-recency	4	KEEP	9	CC-BY-SA-4.0	2026-11-17	Open edX Translation files in sync with Transifex	open edx+2;openedx+2
+openedx/openedx-aspects	push-recency	4	KEEP	9	Apache-2.0	2026-11-16	Aspects - Analytics for Open edX	open edx+2;openedx+2
+openedx/acid-block	push-recency	4	KEEP	6	AGPL-3.0	2026-11-17	An XBlock for testing XBlock Runtimes	openedx+2;xblock+2
+openedx/forum	push-recency	4	KEEP	5	AGPL-3.0	2026-11-11	Python rewrite of the legacy Open edX Ruby forum	open edx+2;openedx+2
+openedx/frontend-base	push-recency	4	KEEP	4	AGPL-3.0	2026-11-12	The Open edX frontend framework	open edx+2;openedx+2
+openedx/event-bus-redis	push-recency	4	KEEP	3	AGPL-3.0	2026-11-16	Redis Streams implementation for the Open edX event bus.	open edx+2;openedx+2
+openedx/crowdsourcehinter	push-recency	4	KEEP	2	AGPL-3.0	2026-11-16	Crowdsource hinter xblock	openedx+2;xblock+2
+openedx/end-to-end-tests	push-recency	4	KEEP	1	Apache-2.0	2026-11-13	A repository of end-to-end Tests for the Open edX Platform	open edx+2;openedx+2
+overhangio/tutor-livedeps	push-recency	4	KEEP	1	AGPL-3.0	2026-11-11	Tutor plugin that allows installing python packages at runtime without building the openedx image (Under active development: works only for tutor local and tuto	openedx+2;tutor+2
+Abstract-Tech/tutor-contrib-2fa	push-recency	4	KEEP	0	AGPL-3.0	2026-11-16	2 Factor Authentication tutor plugin for openedx	openedx+2;tutor+2
+openedx/openedx-authz	push-recency	4	KEEP	0	AGPL-3.0	2026-11-16	Specifications for the authorization model, policy data structures, and enforcement APIs that define how access control is evaluated and managed across the Open	open edx+2;openedx+2
+openedx/edx-ora2	push-recency	3	KEEP	64	AGPL-3.0	2026-11-13	Open Response Assessment Suite	openedx+2;assessment+1
+openedx/frontend-app-admin-portal	push-recency	3	KEEP	27	AGPL-3.0	2026-11-16	edx-portal is a frontend that provides branded learning experiences.	openedx+2;learning+1
+mitodl/ocw-studio	push-recency	3	KEEP	14	BSD-3-Clause	2026-11-17	Open Source Courseware authoring tool	topic:opencourseware+3
+mitodl/mit-learn	push-recency	3	KEEP	3	BSD-3-Clause	2026-11-16	MIT Learn, a central interface for learners to browse MIT courses	learner+2;course+1
+openedx/codejail	push-recency	2	MARGINAL	478	Apache-2.0	2026-11-16	Secure code execution	openedx+2
+openedx/edx-lint	push-recency	2	MARGINAL	52	Apache-2.0	2026-11-16	Custom tooling for pylint and other repo management tools	openedx+2
+openedx/edx-enterprise	push-recency	2	MARGINAL	50	AGPL-3.0	2026-11-16	-	openedx+2
+openedx/django-user-tasks	push-recency	2	MARGINAL	33	Apache-2.0	2026-11-16	A Django application for managing user-triggered asynchronous tasks.	openedx+2
+openedx/repo-tools	push-recency	2	MARGINAL	33	Apache-2.0	2026-11-12	Tools for repo maintenance, etc.	openedx+2
+openedx/edx-django-utils	push-recency	2	MARGINAL	28	Apache-2.0	2026-11-14	edX utilities for Django Application development.	openedx+2
+openedx/edx-rest-api-client	push-recency	2	MARGINAL	23	Apache-2.0	2026-11-17	Facilitates interaction with edX REST APIs	openedx+2
+openedx/edx-drf-extensions	push-recency	2	MARGINAL	18	Apache-2.0	2026-11-13	edX extensions for Django REST Framework	openedx+2
+openedx/edx-notes-api	push-recency	2	MARGINAL	16	AGPL-3.0	2026-11-16	edx-notes-api	openedx+2
+openedx/edx-ace	push-recency	2	MARGINAL	15	AGPL-3.0	2026-11-13	edX's Automated Communication Engine	openedx+2
+openedx/edx-enterprise-data	push-recency	2	MARGINAL	13	AGPL-3.0	2026-11-14	The edX Enterprise Data repo is the home to tools and products related to providing access to Enterprise related data.	openedx+2
+openedx/edx-submissions	push-recency	2	MARGINAL	11	AGPL-3.0	2026-11-14	API for creating submissions and scores	openedx+2
+openedx/frontend-component-header	push-recency	2	MARGINAL	10	AGPL-3.0	2026-11-16	-	openedx+2
+mitodl/open-edx-plugins	push-recency	2	MARGINAL	10	BSD-3-Clause	2026-11-17	A repository of plugins for extending and customizing the behavior of Open edX projects	open edx+2
+openedx/opaque-keys	push-recency	2	MARGINAL	9	AGPL-3.0	2026-11-16	-	openedx+2
+openedx/edx-rbac	push-recency	2	MARGINAL	9	AGPL-3.0	2026-11-13	Library to help managing role based access controls for django apps	openedx+2
+openedx/edx-repo-health	push-recency	2	MARGINAL	7	Apache-2.0	2026-11-13	-	openedx+2
+openedx/super-csv	push-recency	2	MARGINAL	6	Apache-2.0	2026-11-13	Generic CSV Processor	openedx+2
+openedx/edx-milestones	push-recency	2	MARGINAL	6	AGPL-3.0	2026-11-13	-	openedx+2
+openedx/edx-toggles	push-recency	2	MARGINAL	6	AGPL-3.0	2026-11-13	Library and utilities for feature toggles	openedx+2
+openedx/code-annotations	push-recency	2	MARGINAL	5	Apache-2.0	2026-11-16	Extensible tools for parsing annotations in codebases, powers edx PII checker.	openedx+2
+openedx/enterprise-access	push-recency	2	MARGINAL	5	AGPL-3.0	2026-11-13	Service to manage access to content for enterprise users	openedx+2
+openedx/xss-utils	push-recency	2	MARGINAL	5	AGPL-3.0	2026-11-16	 This repo contains utility functions for Django and Mako templates to remove potential XSS attacks in templates.	openedx+2
+openedx/edx-celeryutils	push-recency	2	MARGINAL	5	Apache-2.0	2026-11-13	Tools to support working with celery.	openedx+2
+openedx/.github	push-recency	2	MARGINAL	4	Apache-2.0	2026-11-16	Centralized openedx repository workflows, community health files, etc.	openedx+2
+openedx/frontend-app-notifications	push-recency	2	MARGINAL	3	AGPL-3.0	2026-11-16	A collection of components meant to integrate Notifications into the platform UI. They are presently used in the HeaderNotificationsSlot.	openedx+2
+edx/devstack	push-recency	2	MARGINAL	3	AGPL-3.0	2026-11-16	Get up and running quickly to develop or extend Open edX services	open edx+2
+openedx/enterprise-integrated-channels	push-recency	2	MARGINAL	2	AGPL-3.0	2026-11-16	-	openedx+2
+openedx/xapi-db-load	push-recency	2	MARGINAL	2	AGPL-3.0	2026-11-16	-	openedx+2
+openedx/edx-django-sites-extensions	push-recency	2	MARGINAL	2	AGPL-3.0	2026-11-16	-	openedx+2
+openedx/help-tokens	push-recency	2	MARGINAL	2	AGPL-3.0	2026-11-13	A Django app for resolving help tokens to full URLs.	openedx+2
+openedx/pytest-repo-health	push-recency	2	MARGINAL	2	AGPL-3.0	2026-11-12	-	openedx+2
+open-craft/learning-credentials	push-recency	2	MARGINAL	1	AGPL-3.0	2026-11-16	-	learning+1;credential+1
+openedx/frontend-app-instructor-dashboard	push-recency	2	MARGINAL	1	AGPL-3.0	2026-11-16	Instructor Dashboard pages in MFE-land	openedx+2
+mitodl/lehrer	push-recency	2	MARGINAL	1	NONE	2026-11-16	Dagger-based build pipeline for Open edX platform images	open edx+2
+open-craft/xblock-react-utils	push-recency	2	MARGINAL	0	Apache-2.0	2026-11-16	Utilities for building XBlock frontend code with React	xblock+2
+open-craft/timeline-xblock	push-recency	2	MARGINAL	0	Apache-2.0	2026-11-13	XBlock for displaying a customizable timeline.	xblock+2
+open-craft/xblock-processline	push-recency	2	MARGINAL	0	Apache-2.0	2026-11-13	Process Line XBlock is an XBlock which is used to demonstrate how process steps evolves	xblock+2
+open-craft/xblock-accordion	push-recency	2	MARGINAL	0	Apache-2.0	2026-11-13	-	xblock+2
+open-craft/branching-xblock	push-recency	2	MARGINAL	0	Apache-2.0	2026-11-13	-	xblock+2
+open-craft/xblocks-exemplar	push-recency	2	MARGINAL	0	Apache-2.0	2026-11-13	A collection of XBlocks for managing and displaying aesthetically pleasing HTML content	xblock+2
+openedx/wg-maintenance	push-recency	2	MARGINAL	0	NONE	2026-11-17	A repository for use by the Maintenance working group.	openedx+2
+openedx/frontend-plugin-aspects	push-recency	2	MARGINAL	0	AGPL-3.0	2026-11-16	Frontend plugins for Aspects	openedx+2
+openedx/openedx-search	push-recency	2	MARGINAL	0	AGPL-3.0	2026-11-16	This is intended to be a long-term successor to edx-search.	openedx+2
+edx/frontend-app-learner-portal-enterprise	push-recency	2	MARGINAL	0	AGPL-3.0	2026-11-17	Enterprise Learner Portal	learner+2
+edx/openedx-translations	push-recency	2	MARGINAL	0	CC-BY-SA-4.0	2026-11-17	edX / 2U fork of Translations repository for i18n of edx.org	openedx+2
+overhangio/tutor-indigo	push-recency	1	MARGINAL	97	AGPL-3.0	2026-11-11	An elegant, customizable theme for Open edX	open edx+2;tutor+2;theme for-3
+mitodl/ol-infrastructure	push-recency	1	MARGINAL	59	BSD-3-Clause	2026-11-17	Infrastructure automation code for use by MIT Open Learning	learning+1
+mitodl/ol-data-platform	push-recency	1	MARGINAL	54	BSD-3-Clause	2026-11-17	Pipeline definitions for managing data flows to power analytics at MIT Open Learning	learning+1
+mitodl/mitx-grading-library	push-recency	1	MARGINAL	16	BSD-3-Clause	2026-11-16	The MITx Grading Library, a python grading library for edX	grading+1
+mitodl/agent-kit	push-recency	1	MARGINAL	5	BSD-3-Clause	2026-11-16	Team toolkit for AI agent utilities: skills, custom agents, MCP helpers, and configurations	skill+1
+mitodl/ol-django	push-recency	1	MARGINAL	4	BSD-3-Clause	2026-11-17	MIT Open Learning's reusable Django apps	learning+1
+open-craft/frontend-app-learning-paths	push-recency	1	MARGINAL	2	AGPL-3.0	2026-11-16	-	learning+1
+mitodl/ol-concourse	push-recency	1	MARGINAL	2	NONE	2026-11-16	MIT Open Learning Concourse CI/CD monorepo — resources and pipeline tooling	learning+1
+edx/enterprise-catalog	push-recency	1	MARGINAL	1	AGPL-3.0	2026-11-16	A Django-based microservice for handling Enterprise catalogs, associating enterprise customers with curated courses from the full course catalog.	course+1
+open-craft/assets-course	push-recency	1	MARGINAL	0	NONE	2026-11-17	Assets course. Public domain.	course+1
+mitodl/tech-talk-slides	push-recency	1	MARGINAL	0	BSD-3-Clause	2026-11-16	MIT Open Learning tech talk slides, rendered with mkslides	learning+1
+mitodl/mitxpro	push-recency	0	DROP	20	BSD-3-Clause	2026-11-17	MIT xPRO web application	-
+mitodl/release-script	push-recency	0	DROP	16	BSD-3-Clause	2026-11-16	Scripts to automate the release process, aka "Doof"	-
+edly-io/sparkth	push-recency	0	DROP	12	MIT	2026-11-17	-	-
+edx/commerce-coordinator	push-recency	0	DROP	11	AGPL-3.0	2026-11-17	A controller to manage commerce workflows and services	-
+mitodl/mitxonline	push-recency	0	DROP	5	BSD-3-Clause	2026-11-17	MITx Online web application	-
+edx/frontend-component-header-edx	push-recency	0	DROP	4	AGPL-3.0	2026-11-16	-	-
+mitodl/odl-video-service	push-recency	0	DROP	4	BSD-3-Clause	2026-11-16	building blocks for a basic video service for ODL	-
+edx/frontend-app-enterprise-checkout	push-recency	0	DROP	2	AGPL-3.0	2026-11-16	A micro-frontend for a B2B self-service checkout flow integrated with Stripe, providing a scalable, customizable, and seamless payment experience.	-
+mitodl/ol-keycloak	push-recency	0	DROP	2	BSD-3-Clause	2026-11-16	Custom theme and extensions for Keycloak SSO	-
+edx/tubular	push-recency	0	DROP	1	AGPL-3.0	2026-11-13	A repo for edx pipeline related scripts.	-
+edly-io/frontend-app-fbr-admin	push-recency	0	DROP	0	AGPL-3.0	2026-11-16	-	-
+edx/enterprise-access	push-recency	0	DROP	0	AGPL-3.0	2026-11-17	Service to manage access to content for enterprise users	-
+edx/license-manager	push-recency	0	DROP	0	AGPL-3.0	2026-11-16	Django backend for managing licenses and subscriptions	-
+edx/edx-filters-pipelines	push-recency	0	DROP	0	AGPL-3.0	2026-11-12	-	-
+edx/enterprise-subsidy	push-recency	0	DROP	0	AGPL-3.0	2026-11-17	Captures and balances enterprise-subsidized transactions.	-
+mitodl/ol-llm	push-recency	0	DROP	0	BSD-3-Clause	2026-11-17	-	-
+mitodl/open-learnix	push-recency	0	DROP	0	BSD-3-Clause	2026-11-16	Nix tooling to work with our repositories under Nixos	-
+mitodl/mit-learn-api-clients	push-recency	0	DROP	0	BSD-3-Clause	2026-11-16	Generated API clients for MIT Learn	-
+mitodl/mitxonline-api-clients	push-recency	0	DROP	0	BSD-3-Clause	2026-11-16	Generated API clients for MITx Online	-
+mitodl/learn-ai	push-recency	0	DROP	0	MIT	2026-11-17	Backend API endpoints for MIT Learn's AI chatbots	-
+mitodl/smoot-design	push-recency	0	DROP	0	BSD-3-Clause	2026-11-17	Design system components for MITODL Projects	-
+mitodl/ol-github-workflows	push-recency	0	DROP	0	NONE	2026-11-13	Repository for shared workflows across projects	-
+mitodl/ol-analytics-api-clients	push-recency	0	DROP	0	BSD-3-Clause	2026-11-16	Generated TypeScript API clients for ol-analytics-api	-
+mitodl/ol-notebook-extensions	push-recency	0	DROP	0	BSD-3-Clause	2026-11-17	A repository of plugins for extending and customizing Jupyter notebooks	-
+mitodl/load-testing	push-recency	0	DROP	0	BSD-3-Clause	2026-11-15	-	-
+mitodl/mitx-theme	push-recency	-1	DROP	3	AGPL-3.0	2026-11-12	Open edX theme for the Residential MITx instance	open edx+2;theme for-3
+mitodl/mitxpro-theme	push-recency	-1	DROP	1	BSD-3-Clause	2026-11-12	an open edX theme for MIT xPRO 	open edx+2;theme for-3
+mitodl/mitxonline-theme	push-recency	-1	DROP	0	BSD-3-Clause	2026-11-11	an open edX theme for MITx Online	open edx+2;theme for-3
+mitodl/ocw-hugo-themes	push-recency	-3	DROP	8	BSD-3-Clause	2026-11-17	A Hugo theme for building OCW websites	theme for-3
+mitodl/ol-analytics-api	push-recency	-3	DROP	0	NONE	2026-11-16	Multi-tenant read-only FastAPI analytics gateway over StarRocks (B2B site-license analytics for MIT Learn)	gateway-3
