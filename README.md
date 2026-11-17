@@ -6,6 +6,126 @@ updated: 2026-11-17
 
 # Globant AI Studios — Education KB
 
+## Pass `p867` · `2026-11-17`
+
+🟢 **`866-G1`, `866-G2`, `866-G3`, `866-G4` and `866-G5` were all discharged with their acceptance
+tests run.** 🔴 **One of them refuted its own diagnosis — exactly as its own test said it would —
+and the pass before it turns out to have promoted `21` addresses while publishing `15`.**
+
+🟢 **The headline is a supply finding.** 🔴 **`p866` measured `0` new addresses in `54` candidates
+across `15` star-ranked query veins — a `100%` hold rate — and read it as the discovery channel
+being exhausted.** 🟢 **`p867` changed ONE search parameter (`owner.type == Organization`),
+changed nothing else, and measured `160` new addresses in `285` (`56.1%`).** 🔴 **Exhaustion was a
+property of the ranking parameter, not of this corpus** (`T254`).
+🔴 **The caveat travels with the number: `160` is a channel property, not a supply of `160`
+filable education rows** — the vein imports organisation-owned tooling that matched on a word, and
+about `60` of the `160` are components of a platform this base has shelved since `p6`.
+
+🟢 **That second half became the largest content result in several passes** (`T258`): **Open edX
+has a PERMISSIVE SEAM inside it.** 🟢 **Over `96` repositories of `openedx` + `overhangio` + `edx`
++ `mitodl`: `71` `AGPL-3.0`, `21` `Apache-2.0`, `1` `BSD-3-Clause`.** 🟢 **The split is functional
+— the platform and everything holding student work is copyleft; the EXTENSION SURFACE (`XBlock`,
+`xblock-sdk`, `openedx-events`, `codejail`, `paragon`, `platform-plugin-aspects`) is permissive.**
+🔵 **So the licence question in an Open edX engagement is not *"what licence is the platform"* but
+*"which side of the platform's own seam does my code sit on"*, and [`P108`](compose/patterns.md)
+is the build that stays on the permissive side.**
+
+🟢 **`866-G1`'s ranker exists and its hit rate is published three ways** — `52%` naive,
+`62%` with `NOASSERTION` routed to a byte-read tier, `71%` with the destination shelf's own
+predicate ([`ingest/p867-promotion-rank.py`](ingest/p867-promotion-rank.py)). 🔴 **Its residual
+caught `3` rows `p866` filed whose last push was `416`–`744` days old**, which is now
+[`867-G2`](intel/open-gaps.md).
+
+🔴 **`866-G5` was discharged by REFUTATION.** 🟢 **Its acceptance test said *"the count must move
+or the diagnosis is wrong"*: the ladder entries were added, `gate-enumeration` was re-run, and
+`REFUTED=13` / `VERIFIED-ABSENT=136` / `QUEUE-UNENUMERATED=230` came back byte-identical.**
+🟢 **All `13` were then classified** (`T253`): `11` are the GATE reading a licence-shaped PATH's
+existence as a grant's existence — a proprietary payload, a vendored jQuery grant, an attribution
+`NOTICE` — `3` are genuine metadata-vs-payload divergences, and 🟢 **`1` is the ladder miss the
+gap predicted.** 🔵 **`1` of `13`, not `13` of `13`.**
+
+🔴 **And a licence filename's CASE decided grant visibility twice in one pass** (`T255`):
+`frappe/lms` serves its grant at lower-case `license.txt`, and `openedx/xblock-sdk` — an OFFICIAL
+Open edX repository whose GitHub field reads `Apache-2.0` — serves it at `LICENSE.TXT`, caps
+extension, which no ladder in this base carried. 🔵 **Its payload is byte-identical to
+`openedx/openedx-events`' (`11,358 B`, `sha256₁₂ cfc7749b96f6`): the only difference between a
+grant this base could read and one it reported as absent was the case of three characters.**
+
+🟢 **Region placement, which is what [`866-G2`](intel/open-gaps.md) was really about: `17` of
+`20` placed (`85%`) against `p866`'s `6` of `14` (`43%`), with `10` EMEA rows against `p866`'s
+`0`, and `8` placements resting on a commit e-mail domain measured inside the clone
+(`helsinki.fi`, `uni-osnabrueck.de`, `isae-supaero.fr`, `ucf.edu` ×2, `particify.de`,
+`mentorix.kr`, `elimu.ai`) rather than on an inference.**
+
+### This pass added
+
+| Shelf | Added | Total |
+|---|---|---|
+| [`agents/top.md`](agents/top.md) | `3` build-safe agent rows (EMEA ×2, APAC) + `6` declared refusals with their bytes | **`535`** 🟢 gate-GREEN |
+| [`repos/foundations.md`](repos/foundations.md) | `6` rows — the Open edX permissive seam, every grant byte-read | **`384`** 🟢 gate-GREEN |
+| [`verticals/solutions.md`](verticals/solutions.md) | `10` platform rows (`5` permissive, `5` copyleft-by-platform), under a newly DECLARED Region-carrying signature | **`222`** 🟢 gate-GREEN |
+| [`intel/trends.md`](intel/trends.md) | `7` trends (`T253`–`T259`) | `251` 🟢 gate-GREEN |
+| [`compose/patterns.md`](compose/patterns.md) | `3` recipes (`P108`–`P110`) — Open edX seam, DACH RAG, US accessibility | `108` 🟢 gate-GREEN |
+| [`intel/market.md`](intel/market.md) | `866-G3` both halves; all five region sections incl. a new `### Global`; China + Korea jurisdiction legs | — |
+| [`intel/open-gaps.md`](intel/open-gaps.md) | `5` discharged, `5` new (`867-G1`–`G5`) | — |
+| [`ingest/`](ingest/) | `2` new instruments (`p867-promotion-rank.py`, `p867-licence-predicate.py`) + `4` ladder repairs in `grant-verdict.py` | — |
+| [`evidence/`](evidence/) | `8` files | — |
+
+🟢 **The two count bases, published side by side and both DERIVED** (`865-G1`'s standing repair —
+no figure in this file is incremented by hand):
+
+| Shelf | 🟢 **Shelf count — the client-facing figure** | 🟡 Addresses discussed on the page (NOT a shelf count) |
+|---|---|---|
+| [`agents/top.md`](agents/top.md) | 🟢 **`535`** rows under a declared holdings signature | `728` deduped addresses in table rows · `769` anywhere on the page · `1,177` table data rows |
+| [`repos/foundations.md`](repos/foundations.md) | 🟢 **`384`** | `391` · `419` · `595` |
+| [`verticals/solutions.md`](verticals/solutions.md) | 🟢 **`222`** | `267` · `275` · `373` |
+
+🔵 **The second column is `ingest/address-count.py`'s `CANONICAL::pairs_in_table_rows_deduped`,
+then `pairs_anywhere_on_page_deduped`, then `table_data_rows` — three derived bases, each named
+by the rule that produced it, because `865-G1` was caused by a figure whose basis nobody had
+written down.**
+
+🟢 **Counts, gate-confirmed after this pass's edits.** `python3 -I ingest/derive-counts.py .` →
+`agents/top.md` **`535/535`**, `repos/foundations.md` **`384/384`**,
+`verticals/solutions.md` **`222/222`**, `ragged=0`, `nolink=0`, no NEW duplicate subjects;
+`compose/patterns.md` `108` recipes, `P-1..P-110`; `intel/trends.md` `251/251`.
+🟢 `make gate-region-headings` → **`0` findings**.
+🔴 `make hooks` is RED, and the RED SET was measured on BOTH SIDES so that no gate this pass
+broke could hide inside one it inherited — `git archive HEAD` into a clean tree, then the working
+tree, same target, same machine:
+
+| Tree | Gates green | RED |
+|---|---|---|
+| `git archive HEAD` (pristine) | `52/73` | `21` |
+| 🟢 this pass's working tree | `52/73` | 🟢 **the IDENTICAL `21`** |
+
+🟢 **So this pass introduced exactly ONE new RED and fixed it before committing:
+`gate-region-headings`, which fired the moment the market block landed — a SECOND canonical
+`## Opportunities by region` block (the previous one must be marked *superseded*) and a missing
+`### Global` subsection — and now reports `0` findings.** 🟡 **`gate-dates` also caught one
+`ASSERTED` line in this pass's own market block (the Article 50 date stated as this base's own
+claim) and it was rewritten in attributed form; the gate stays RED on one inherited row at
+`intel/open-gaps.md:5003` that `ACTION p772-B` deliberately left.**
+🔴 **`gate-enumeration` remains RED exactly as `866-G5` recorded it — `REFUTED=13`,
+`VERIFIED-ABSENT=136`, `QUEUE-UNENUMERATED=230` — and [`867-G4`](intel/open-gaps.md) carries the
+diagnosis that replaces `866-G5`'s.** 🔴 **`ingest/pre-commit` is not installed in a fresh clone,
+so this commit, like every pass's, is made without the commit gates running; the `21` inherited
+RED gates are published above rather than quieted, and neither `DECLARED_RED` nor
+`SKIP_COMMIT_GATES` was used.**
+
+### What a reader should take from this pass
+
+1. 🟢 **A declared saturation measures the reach of the query that produced it.** Before concluding
+   a corpus is exhausted, change a search PARAMETER rather than adding a vein.
+2. 🟢 **A copyleft platform usually publishes its build-against surface permissively.** Ask which
+   side of the seam your code sits on; measure the estate rather than the flagship repository.
+3. 🔴 **`NOASSERTION` is not an absent grant — it is a predictor of a NON-OSI one.** `4` of `7`
+   in this pass's supply were Elastic, source-available, commercial or absent; `0` were a plain
+   permissive grant the field had merely failed to report (`T259`).
+4. 🔴 **A licence payload's SIZE is a band; only its HASH is an identity** (`T256`) — and this
+   pass found one `AGPL-3.0` payload byte-identical across `4` repositories on `3` continents.
+
+
 ## Pass `p866` · `2026-11-17`
 
 🟢 **`865-G1`, `865-G2`, `865-G3` and `865-G4` were all discharged with their acceptance tests

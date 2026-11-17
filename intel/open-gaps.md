@@ -4,6 +4,222 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (seventy-second pass, `p867`) — **`5` gaps — `866-G1`, `866-G2`, `866-G3`, `866-G4` and `866-G5` ALL DISCHARGED with their acceptance tests run; one of them REFUTED ITS OWN DIAGNOSIS exactly as it said it would, and the pass before it turns out to have promoted `21` addresses while publishing `15`**
+
+### 🟢 `866-G1` — DISCHARGED: one ranking command, and the hit rate is published three ways
+
+🟢 **The acceptance test: pipe the `UNGRADED` set through ONE ranking command, file from the top
+of that order, and report how many of the previous pass's filed rows the ranker would have chosen
+— published whether it is good or bad.**
+
+🟢 **Built as [`ingest/p867-promotion-rank.py`](../ingest/p867-promotion-rank.py)** — two gates
+(grant, liveness) and one rank (`p533`'s materiality bands, reused rather than re-invented), with
+`--against` computing the hit rate.
+
+🔴 **First, a correction to the number the gap itself used.** 🟢 **`p866` published `15` rows and
+PROMOTED `21` ADDRESSES** — measured by re-running `p853`'s presence scanner over `p866`'s own
+`27` `UNGRADED` candidates at `HEAD`, where `21` now read `SHELVED`. 🔵 **A row is not an address.**
+
+| Configuration | Recovered | Hit rate |
+|---|---|---|
+| 🔴 naive: one shelf's permissive predicate, `NOASSERTION` refused | `11` of `21` | 🔴 `52%` |
+| 🟡 `build-safe` predicate, `NOASSERTION` → byte-read tier | `13` of `21` | 🟡 `62%` |
+| 🟢 `platform` predicate (copyleft admitted), same tier | `15` of `21` | 🟢 **`71%`** |
+
+🟢 **The `19` points are two structural errors, not tuning:** the grant gate was keyed to ONE
+shelf's predicate while a pass files to three (four of the misses were `GPL-3.0` Moodle-estate
+rows belonging on the shelf that admits them), and `NOASSERTION` was being read as an absent grant
+when `T81` says it is a reason to byte-read. 🟢 **Residual `6`: `3` LIVENESS refusals (`p866`
+filed three rows whose last push was `416`–`744` days old) and `3` that pass both gates and rank
+below `#21` of `24`.** 🟢 **And the ranker's own `#2` address, `beltromatti/get-it`
+(`1,168★`, `Apache-2.0`), was never filed by the pass that hand-read all `27` descriptions.**
+
+### 🟢 `866-G2` — DISCHARGED, and it was right: the exhaustion belonged to the PARAMETER
+
+🟢 **The acceptance test: run ONE vein selected for institutional authorship rather than star
+rank, and report its region-placement rate against `p866`'s `6` of `14`.**
+
+🟢 **Run: `9` `gh api search/repositories` queries with every non-`Organization` owner discarded
+and nothing else changed** ([`channel-yield`](../evidence/channel-yield.2026-11-17-p867.tsv)).
+
+| Measure | `p866` (star rank) | 🟢 `p867` (institutional) |
+|---|---|---|
+| candidates | `54` | `285` |
+| `NEW` addresses | 🔴 `0` (`0%`) | 🟢 **`160` (`56.1%`)** |
+| region-placed | `6` of `14` (`43%`) | 🟢 **`17` of `20` (`85%`)** |
+| EMEA rows | 🔴 `0` | 🟢 **`10`** |
+| placements on a MEASURED commit domain | `0` | 🟢 **`8`** across `7` domains |
+
+🔴 **The caveat is published with the result: `160` is a channel property, not a supply of `160`
+filable rows** — the vein imports generic tooling that matched on a word, and ~`60` of the `160`
+are components of one already-shelved platform. 🟢 **That second half became this pass's largest
+content finding (`T258`: Open edX's permissive seam).**
+
+### 🟡 `866-G3` — DISCHARGED on both halves; (a) as far as this session CAN, (b) fully and asymmetrically
+
+🔴 **(a) The EU deferral.** 🟢 **The test allowed either corroboration from an EU-published
+instrument or a `UNCORROBORATED` mark with no further citation as a date.** 🔴 **Neither is
+exactly available: the date is now corroborated across several independent professional-class
+sources that also NAME the instrument (`Regulation (EU) 2026/1744`; Commission proposal
+`2025-11-19`; the adopted text dropped the conditional standards trigger and FIXED
+`2027-12-02`; Annex I → `2028-08-02`; Article 50 applying since `2026-08-02`), while EVERY EU
+domain is unreachable from this session** — `europarl.europa.eu` does not resolve, and
+`eur-lex.europa.eu`, `ec.europa.eu`, `digital-strategy.ec.europa.eu` and
+`education.ec.europa.eu` all return `000`. 🟡 **Graded `CITED, NOT READ` and published with that
+grade attached everywhere it appears.** 🟢 **Closure rule, so no further pass spends a leg on it:
+this gap is CLOSED at secondary level and may be reopened only by a session that can reach an
+EU-published channel.**
+
+🟢 **(b) The APAC policy map.** 🟢 **Both jurisdiction legs were run alone and NEITHER was nil:**
+China tightened (`AI + Education Action Plan`, April 2026, five departments, AI as a required
+university public course, subject-specific textbooks, approved-tool lists carried over from the
+May 2025 school rules), and 🔴 **Korea REVERSED** — the Elementary and Secondary Education Act was
+amended `2025-08-04` to downgrade the AI Digital Textbook from *textbook* to *educational
+material*, the 2026 rollout is superseded, schools now choose, and publishers are suing.
+🟢 **Both totals, with their declared nils (no enforcement detail for China, no wind-down roadmap
+for Korea), are in [`websearch-legs`](../evidence/websearch-legs.2026-11-17-p867.tsv).**
+
+### 🟢 `866-G4` — DISCHARGED: `0` hard failures, `4` soft, and a structural finding bigger than either
+
+🟢 **The acceptance test: run the licence predicate of each shelf's heading over every row the
+gate now counts, and report the number that fail — `0` expected, published whatever it is.**
+
+🟢 **Built as [`ingest/p867-licence-predicate.py`](../ingest/p867-licence-predicate.py), which
+reads the counted signatures out of `derive-counts.py` with `ast` rather than keeping a second
+hand-maintained copy** ([`per-row record`](../evidence/licence-predicate.2026-11-17-p867.tsv)).
+
+🔴 **The instrument defeated itself TWICE before it reported, and both failures are the same
+defect — keying a gate on prose (`p718`'s standing lesson) — so both are recorded.**
+🔴 **Draft 1 took the predicate from the first grant-naming `## ` heading in the FILE and applied
+it page-wide; on `verticals/solutions.md` that was a pass heading whose prose names two grants,
+and `219` platform rows were graded against a predicate the shelf never states — `74`
+"failures" that were the instrument's.** 🔴 **Draft 2 narrowed to each table's nearest preceding
+heading but still accepted "two grant tokens anywhere in the line", so THIS pass's own foundations
+and platform headings (which narrate `21 Apache-2.0 against 71 AGPL-3.0`, `5
+copyleft-by-platform`) became predicates the moment the blocks landed.** 🟢 **A heading now
+states a predicate only when it names a PARENTHESISED SET of grants, and a pass heading never
+does.** 🔵 **Draft 1 also scored `9` of its `15` agent-shelf failures on cells that name
+`NOASSERTION` in order to REFUTE it — which is why `PASS-REFUTED-METADATA` is a verdict class
+rather than a silent allowance.**
+
+| Shelf | Rows graded | `FAIL-EXCLUDED` | `FAIL-SPLIT` | `VOCAB-MISS` | Abstained |
+|---|---|---|---|---|---|
+| `agents/top.md` | `303` | 🟢 **`0`** | 🔴 `2` | 🟡 `2` | 🔴 **`240`** |
+| `repos/foundations.md` | `0` | — | — | — | `390` |
+| `verticals/solutions.md` | `0` | — | — | — | `229` |
+
+🟢 **So the manual `54`-way sort imported `0` rows that its heading hard-excludes.** 🔴 **The two
+`FAIL-SPLIT` rows are real and worth knowing: `polendol/AgenticTeacher` (code MIT, MODEL
+`CC BY-NC-SA 4.0`) and `vladimiracunadev-create/modern-software-engineering-program` (code
+Apache-2.0, CONTENT `CC-BY-NC`) — the code is build-safe and the deliverable is not.**
+🟡 **The two `VOCAB-MISS` rows (`MulanPSL-2.0`, `WTFPL`) are permissive grants the heading's five
+names do not cover.**
+
+🔴 **The finding the gap did not ask for: `240` of the `543` rows the gate credits to
+`agents/top.md` sit under PASS headings that name no grant, so the build-safe predicate is
+structurally unreachable for `44%` of that shelf's own counted rows — including the `3` rows THIS
+pass filed** — and both other shelves
+state no licence predicate at all, which is why they correctly ABSTAIN rather than fail.
+🟢 **Registered below as `867-G3`.**
+
+### 🔴 `866-G5` — DISCHARGED by REFUTATION: the ladder fix was made, the count did not move, and the gap said that means the diagnosis was wrong
+
+🟢 **The acceptance test: add lower-case `license.txt` and `NOTICE` to the grant path ladder,
+re-run `gate-enumeration`, publish the new `REFUTED` count — *"the count must move or the
+diagnosis is wrong."***
+
+🟢 **Done.** 🟢 **`NOTICE` was already on the ladder; the lower-case family was added, and then a
+SECOND case variant was found in the same pass and added too (`LICENSE.TXT` — caps extension — on
+`openedx/xblock-sdk`, an official Open edX repository whose field reads `Apache-2.0` and whose
+grant nine probed names missed).** 🟢 **Ladder: `69` entries, `0` duplicates.**
+🔴 **`gate-enumeration` re-run: `REFUTED=13`, `VERIFIED-ABSENT=136`, `QUEUE-UNENUMERATED=230` —
+byte-identical to `HEAD`. The count did not move.**
+
+🟢 **So the `13` were classified one by one (`T253`):** `5` are the gate refuting lines that STATE
+its own finding (every `fedena` row — one is literally a table row reading *"NOTICE only, no
+grant"*), `3` are payloads that exist and are PROPRIETARY with the shelf grading them correctly
+(`Kosudo/nextSIS`), `1` is a VENDORED third-party grant (`formalms/formalms`), `3` are genuine
+metadata-vs-payload divergences worth a wording repair (`LearnPress/learnpress` ×2,
+`DMontgomery40/mcp-canvas-lms`), and 🟢 **`1` is the genuine ladder miss the gap predicted**
+(`frappe/lms` at lower-case `license.txt`). 🔵 **`1` of `13`, not `13` of `13`** — and the ladder
+entry is still a correct fix, now with two confirmed cases behind it.
+
+---
+
+### 🔴 `867-G1` — the hand-grading moved one step further downstream, again
+
+🟢 **`865-G4` removed hand-grading from the three-way split; `866-G1` removed it from the choice
+of which `UNGRADED` address to file; this pass selected `30` education-domain candidates out of
+`285` BY READING DESCRIPTIONS before either instrument ran.** 🔴 **That is the same defect, one
+step upstream of where `866-G1` found it, and it is declared rather than hidden.**
+
+🟢 **Acceptance test: the next pass applies a mechanical DOMAIN predicate to the whole
+organisation-owned sweep — a keyword/topic score over `description` and `topics`, declared in
+`ingest/config.json` terms — and publishes its PRECISION against this pass's hand selection:
+how many of the `30` the predicate would have kept, and how many it would have added.**
+🔵 **The prize is real: `160` `NEW` addresses are sitting behind that one unautomated step.**
+
+### 🔴 `867-G2` — the liveness gate caught `3` stale rows at FILING time and nothing checks the rows already shelved
+
+🟢 **This pass's ranker refused `3` addresses `p866` filed as current rows:
+`iwangjian/Coding-Tutor` (pushed `2025-06-02`, `533` days), `luffycodes/Tutorbot-Spock`
+(`2024-11-04`, `~744` days), `xoubinha/tutor.ia` (`2025-09-27`, `416` days).**
+🔴 **Nothing in this base applies that test to the `1,122` rows already on its three shelves.**
+🔵 **A stale row is worse than a missing one in a client engagement: it is an active
+recommendation to adopt something nobody maintains.**
+
+🟢 **Acceptance test: the next pass runs the liveness gate over every row the count gate credits,
+on the `search/repositories` channel, and publishes the number of counted rows whose last push is
+older than `365` days — per shelf, whatever it is. `p533` measured `4` of `35` dead at the
+promotion-queue head, so a figure near `0` should itself be disbelieved.**
+
+### 🔴 `867-G3` — `agents/top.md`'s licence promise is unreachable for `44%` of its own counted rows
+
+🟢 **Measured, not suspected: `237` of `540` counted rows sit in tables under PASS headings that
+name no grant, so the heading *"Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD)"* governs
+`303`.** 🟡 **And the `2` `VOCAB-MISS` rows show the five names are under-inclusive: `MulanPSL-2.0`
+(OSI-approved, permissive) and `WTFPL` (public-domain-equivalent) are build-safe in substance and
+unnamed by the heading.**
+
+🟢 **Acceptance test: the next pass picks ONE of three and publishes the resulting `FAIL` count
+over the full `540`:** (a) widen the heading's named vocabulary and say which grants it now
+admits; (b) move the `4` soft-failing rows to a declared non-build-safe table; or (c) require
+every counted holdings table to sit under a predicate-bearing heading, which makes the predicate
+reachable by construction. 🔵 **(c) is the only one that closes the CLASS, and it is the most
+work; the choice must be stated, not drifted into.**
+
+### 🔴 `867-G4` — `gate-enumeration` refutes on a path's EXISTENCE and calls it a grant
+
+🟢 **`T253` classified all `13` standing refutations and `11` are the gate's own false positives:
+a proprietary payload at `license.txt`, a vendored jQuery plugin's `LICENSE.txt`, and an
+attribution `NOTICE` are each reported as *"enumeration found a candidate grant"* — against shelf
+lines that say, correctly, that no grant exists.** 🔴 **The gate stands RED at `HEAD` and this
+pass neither caused it nor quieted it (`SKIP_COMMIT_GATES` unused, `DECLARED_RED` untouched).**
+
+🔴 **And the larger quantity is still the one `866-G5` named: `230` negative verdicts rest on a
+path ladder that was never enumerated, against `136` verified-absent — so the MAJORITY of this
+base's absence claims remain unaudited, and the two case variants found this pass
+(`license.txt`, `LICENSE.TXT`) are evidence that the ladder is the right place to look.**
+
+🟢 **Acceptance test: the next pass makes the enumeration GRADE the payload it finds — at minimum
+the four classes this pass had to assign by hand (`GRANT`, `PROPRIETARY`, `VENDORED`,
+`ATTRIBUTION-ONLY`) — re-runs the gate, and publishes the new `REFUTED` count. It should fall to
+the `3` genuine metadata-vs-payload rows plus `0`–`1`; any other number means the classifier
+disagrees with this pass's hand sort, and THAT disagreement is the finding.**
+
+### 🟡 `867-G5` — three default refs in `31` are neither `main` nor `master`, and the raw channel assumes otherwise
+
+🟢 **Measured on both channels in agreement: `openedx/paragon` → `release-23.x`,
+`datacurso/moodle-local_assign_ai` → `MOODLE_405_STABLE`, `Tanzania-AI-Community/twiga` →
+`development`.** 🔴 **`p830`'s `raw.githubusercontent.com` byte-read path interpolates a branch
+name, and this pass's own first probe of `ubc/compair` returned a `404` for exactly that reason
+before the clone channel resolved it.**
+
+🟢 **Acceptance test: the next pass that uses the raw channel resolves the default ref from
+`search/repositories` first and records the ref it used in the evidence row — and publishes how
+many of its probes would have `404`ed on a `main` assumption.**
+
+
 ## 🟢 `2026-11-17` (seventy-first pass, `p866`) — **`4` gaps — `865-G1`, `865-G2`, `865-G3` and `865-G4` ALL DISCHARGED with their acceptance tests run; the count dispute is reconciled by arithmetic, one published date is withdrawn, and the instrument built for `865-G4` refuted the number it was built to track on its first run**
 
 ### 🟢 `865-G1` — DISCHARGED: all three figures reconciled, and the basis is now chosen rather than inherited

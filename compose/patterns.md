@@ -4,6 +4,167 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventy-second pass (`p867`, 2026-11-17) — **`P108`–`P110`: an Open edX AI extension that stays OUTSIDE the AGPL boundary, a German-speaking higher-education RAG build that starts from a university's own ingestion layer instead of rebuilding it, and an accessibility-remediation line item whose business case is a legal obligation**
+
+**One hundred and eight** concrete recipes — derived recipes: **108** (`105` + `3`).
+
+🟢 **Every component named below was byte-read on `2026-11-17` from a blobless partial clone**
+([`payload-probe`](../evidence/payload-probe.2026-11-17-p867.tsv),
+[`byte-identity`](../evidence/licence-byte-identity.2026-11-17-p867.tsv)), or is already on a
+graded shelf in this repository with its own byte-read on record. 🔴 **Every regulatory item is
+`CITED, NOT READ` — the EU primary-source channel does not resolve from this session
+([`intel/market.md`](../intel/market.md)).**
+
+## 🟢 P108 — Open edX AI extension that never crosses the AGPL boundary
+
+**Region:** Global · **Where it bites:** any institution running Open edX that wants AI inside the
+learner experience and cannot take `AGPL-3.0` into its own codebase.
+
+🔴 **The problem everyone gets wrong.** 🟢 **Open edX is `AGPL-3.0`, so the default assumption is
+that an AI extension must be AGPL too, and the engagement either accepts reciprocity or proposes
+a rewrite.** 🟢 **`T258` measured that the platform's own estate is split: `21` `Apache-2.0`
+components against `71` `AGPL-3.0`, and the permissive side IS the extension surface.**
+
+**Wiring, concretely:**
+
+1. 🟢 **Subscribe, don't fork.** [`openedx/openedx-events`](https://github.com/openedx/openedx-events)
+   (`Apache-2.0`, byte-read `11,358 B`, `sha256₁₂ cfc7749b96f6`, `13★`, `main`) is the Hooks
+   Extensions Framework's event catalogue. Your service consumes enrolment / submission / grading
+   events over the event bus ([`openedx/event-bus-redis`](https://github.com/openedx/event-bus-redis),
+   `AGPL-3.0`, deployed not linked) and lives entirely outside the platform process.
+2. 🟢 **Put the learner-facing component behind the component contract.**
+   [`openedx/XBlock`](https://github.com/openedx/XBlock) (`Apache-2.0`, `471★ / 231`, `master`) is
+   the contract; [`openedx/xblock-sdk`](https://github.com/openedx/xblock-sdk) (`Apache-2.0`,
+   byte-read at 🔴 `LICENSE.TXT`, `11,358 B`, `69★`) is the workbench that runs one XBlock without
+   a full Open edX deployment — which is the difference between a two-week spike and a two-month
+   environment build.
+3. 🟢 **Never execute generated code in your own process.**
+   [`openedx/codejail`](https://github.com/openedx/codejail) (`Apache-2.0`, byte-read `10,174 B`,
+   `sha256₁₂ 0d542e0c8804`, `478★`) is the sandbox the platform already trusts. 🔵 **Most
+   pedagogy projects write a worse version of this; do not be one of them.**
+4. 🟢 **Use the platform's design system for the surface.**
+   [`openedx/paragon`](https://github.com/openedx/paragon) (`Apache-2.0`, same `10,174 B` payload
+   as `codejail`, `141★`, 🔵 default ref `release-23.x` — pin it, do not assume `main`). In
+   education, accessibility is a procurement gate, and this is accessibility already argued.
+5. 🟢 **Instrument it where the platform already looks.**
+   [`openedx/platform-plugin-aspects`](https://github.com/openedx/platform-plugin-aspects)
+   (`Apache-2.0`, `11,357 B`, `c71d239df917`) plus
+   [`openedx/tutor-contrib-aspects`](https://github.com/openedx/tutor-contrib-aspects)
+   (`Apache-2.0`) are the Aspects analytics plugin points.
+6. 🟢 **Deploy with** [`overhangio/tutor`](https://github.com/overhangio/tutor) (`AGPL-3.0`,
+   `1,132★`) — a deployment tool you RUN, not a library you link.
+7. 🟢 **Worked precedent to read before writing anything:**
+   [`mitodl/open-edx-plugins`](https://github.com/mitodl/open-edx-plugins) (`BSD-3-Clause`,
+   byte-read `1,496 B`, `d30f3ab21d44`) is MIT Open Learning's own plugin suite — the institution
+   that co-founded the platform, using the seam.
+
+🔴 **Where the seam ENDS, stated so nobody quotes only the good half.**
+🔴 **[`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) — the Open Response Assessment
+Suite, the component an AI MARKING engagement actually wants — is `AGPL-3.0` (`35,135 B`,
+`106a1b4b8b71`, `64★ / 220`), as are `edx-bulk-grades`, `taxonomy-connector` and
+`xblock-skill-tagging` (`34,523 B`, the hash that collides four ways — `T257`).**
+🟢 **So marking is an EXTERNAL service reading events and writing grades back through an API, and
+the `13★` row above matters more to the architecture than the `478★` one.**
+
+**Effort:** `4`–`6` weeks for one assessed XBlock plus an event-driven service; `8`–`10` if the
+institution has no Tutor-based deployment yet.
+**What makes it defensible:** every licence in the build path was byte-read this pass, and the
+reciprocity boundary is drawn where the platform's own maintainers drew it.
+
+## 🟢 P109 — German-speaking higher education: the RAG build that starts from the university's own ingestion layer
+
+**Region:** EMEA · **Where it bites:** any DACH institution asking for "AI over our course
+material", where the content lives in **three** systems and the compliance clock is the AI Act's.
+
+🔴 **The default proposal rebuilds the ingestion layer.** 🟢 **It already exists, written by a
+university IT centre:** [`virtUOS/lms-ai-bridge`](https://github.com/virtUOS/lms-ai-bridge)
+(`GPL-3.0`, byte-read `35,149 B`, `sha256₁₂ 3972dc9744f6`, `1★ / 0`, pushed `2026-10-31`,
+commit domain `uni-osnabrueck.de`) **extracts course material from Stud.IP, Moodle AND ILIAS and
+prepares it for AI indexing** — the three systems that actually hold German-speaking higher
+education — as part of Osnabrück's `LernKI` programme. 🔵 **`1★` is not a quality signal here; it
+is a discovery signal, and it is why this base went looking by owner type rather than by stars
+(`T254`).**
+
+**Wiring, concretely:**
+
+1. 🟢 **Ingest** with `virtUOS/lms-ai-bridge`, deployed as a SERVICE (it is `GPL-3.0`: run it,
+   do not link it). One connector per LMS instead of three bespoke exporters.
+2. 🟢 **Front the models with a gateway the institution controls:**
+   [`UniversityOfHelsinkiCS/gptwrapper`](https://github.com/UniversityOfHelsinkiCS/gptwrapper)
+   (`MIT`, byte-read `1,111 B`, `7b658dd8f1a0`, `11★`, commit domain `helsinki.fi`) — a named
+   university's own LLM chat for staff and students. 🟢 **This is the component an Annex III
+   conformity story is built on: tenant scoping, logging and model choice stay inside the
+   institution.**
+3. 🟢 **Put the answer where the learner already points at their confusion:**
+   [`ude-soco/CourseMapper-webserver`](https://github.com/ude-soco/CourseMapper-webserver)
+   (`MIT`, byte-read `1,117 B`, `9ab1e710c2f4`, University of Duisburg-Essen) is collaborative
+   course annotation with analytics. 🔵 **An annotation is a learner-authored pointer to the exact
+   passage they do not understand — the least ambiguous retrieval query in education.**
+4. 🟢 **Close the loop in the lecture** with
+   [`particify/arsnova-webclient`](https://github.com/particify/arsnova-webclient) (`MIT`,
+   byte-read `1,073 B`, `a6cf43f6043d`, commit domain `particify.de`): live comprehension checks,
+   per question, per cohort, with no new data collection and no new consent.
+5. 🟡 **If the institution wants to own the platform too**, the permissive option exists and is
+   the only one on this base's platform shelf:
+   [`TIM-JYU/TIM`](https://github.com/TIM-JYU/TIM) (`MIT`, byte-read `1,122 B`, `34cd7159d8ea`,
+   University of Jyväskylä, pushed `2026-11-17`) — interactive learning DOCUMENTS rather than
+   course shells.
+
+🔴 **The compliance frame, with its grade attached.** 🟡 **Education is Annex III of the AI Act;
+high-risk obligations are reported to apply from `2027-12-02` (`Regulation (EU) 2026/1744`,
+`CITED, NOT READ` — every EU domain is unreachable from this session), while Article 50
+transparency duties have applied since `2026-08-02`.** 🔴 **So there is no compliance holiday: the
+transparency obligations bind now and the conformity work has a 2027 deadline.**
+
+**Effort:** `6`–`8` weeks for one faculty across one LMS; `10`–`12` across all three systems with
+a gateway rollout.
+**Why it wins the room:** every component is already operated by a named European university, so
+the reference is not a vendor case study.
+
+## 🟢 P110 — US higher education: accessibility remediation, because the business case is a legal obligation rather than a productivity claim
+
+**Region:** North America · **Where it bites:** a US institution where the AI budget needs a line
+item that survives procurement review.
+
+🔴 **The framing problem.** 🟢 **`AI tutor` proposals compete against pedagogy scepticism and the
+analyst finding that only `45%` of the most-used tools have published research at an ESSA evidence
+tier.** 🟢 **Accessibility remediation competes against nothing: the obligation is legal, the
+backlog is countable, and the incumbent tooling is open source.**
+
+**Wiring, concretely:**
+
+1. 🟢 **Start from the incumbent checker:**
+   [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) (`GPL-3.0`, byte-read `35,147 B`,
+   `sha256₁₂ 8ceb4b9ee5ad`, `118★ / 78`, `main`, commit domain `ucf.edu`) is what US higher
+   education already runs against Canvas. 🔴 **Copyleft — so the AI remediation service reads
+   UDOIT's findings over its API and generates fixes in its own process.**
+2. 🟢 **Fix inside the surface the course already uses:**
+   [`ucfopen/Materia`](https://github.com/ucfopen/Materia) (`AGPL-3.0`, `34,523 B`,
+   `8486a10c4393`, `53★`) is the embeddable widget layer — a bounded, assessed place to put
+   generated content that fails safely.
+3. 🟢 **Make the agent's own output auditable** with the marking-and-rubric estate this base
+   already shelves (`paper-instruments/rubric`, `AI9Stars/LLM-Rubrics-Survey`,
+   `Calibre-Labs/reforge-ai-evals` — all `MIT`, all filed `p866`), so a remediation suggestion
+   carries a rubric score and a reason rather than a diff.
+4. 🟢 **Get a second judge for anything subjective** from
+   [`ubc/compair`](https://github.com/ubc/compair) (`GPL-3.0`, byte-read `32,472 B`,
+   `c61f12da7cda`, University of British Columbia): peer review by COMPARISON rather than by
+   rubric score. 🔵 **Its comparison data is a ready-made calibration set for an LLM
+   second-marker — pairwise judgements are exactly what a reward model wants and almost nobody
+   in education has them.**
+5. 🟢 **Keep the student-data boundary explicit**: every component above is copyleft, so the
+   deliverable is a SERVICE with an API, and the client's own code stays its own.
+
+🔵 **The regulatory read for this region, with the grade: federal activity is executive-order and
+task-force shaped, at least `15` states have introduced or passed AI-in-education legislation and
+roughly `100` state bills were tracked this year — guidance-heavy, regulation-light.**
+🟢 **Which is precisely why the accessibility obligation, which is neither new nor AI-specific, is
+the most durable justification available in this region today.**
+
+**Effort:** `4` weeks for a remediation pilot on one college's course catalogue; `8` with the
+widget-generation arm.
+
+
 ## 🟢 Seventy-first pass (`p866`, 2026-11-17) — **`P106`–`P107`: a reviewed-pre-correction build whose scoring layer is a weighted-rubric LIBRARY rather than a prompt, and a Moodle delivery recipe that treats `GPL-3.0` as a deployment shape instead of a veto**
 
 **One hundred and five** concrete recipes — derived recipes: **105** (`103` + `2`).

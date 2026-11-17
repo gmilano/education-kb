@@ -1,0 +1,25 @@
+family	bytes	sha256_12	members	note
+Apache-2.0	10174	0d542e0c8804	openedx/codejail,openedx/paragon	byte-IDENTICAL payload across two Open edX components
+Apache-2.0	11357	c71d239df917	openedx/platform-plugin-aspects,hallym-aiedu-center/ai_prof_lite	CROSS-CHANNEL identity: an Open edX plugin and a Korean university lab's repo serve the same bytes
+Apache-2.0	11358	cfc7749b96f6	openedx/openedx-events,openedx/xblock-sdk	same bytes, DIFFERENT filename case: LICENSE.txt vs LICENSE.TXT -- the case alone decided whether the ladder could see it
+Apache-2.0	11362	a89039268428	pacewisdomhq/TutorLoom	+4 B on the 11358 form
+AGPL-3.0	34523	8486a10c4393	openedx/taxonomy-connector,openedx/xblock-skill-tagging,ucfopen/Materia,eol-uchile/eol-conditional-xblock	FOUR-WAY byte collision at one sha; p866 recorded a PAIR at identical size, this is the same text in four places across three owners and two continents
+AGPL-3.0	34628	856864c98178	eol-uchile/sence-xblock	the p866 pair's other member
+AGPL-3.0	35119	a28ed4f09e68	openedx/edx-bulk-grades	
+AGPL-3.0	35135	106a1b4b8b71	openedx/edx-ora2	
+GPL-3.0	35147	8ceb4b9ee5ad	ucfopen/UDOIT	BELOW p866's 35148-35154 band by 1 B -- the band is wider than published
+GPL-3.0	35149	3972dc9744f6	virtUOS/lms-ai-bridge	inside p866's band
+GPL-3.0	35178	ccb349b4132e	datacurso/moodle-local_assign_ai	ABOVE p866's band by 24 B
+MIT	1065	203d7d837ceb	elimu-ai/wiki	
+MIT	1073	a82547dd166b	Tanzania-AI-Community/twiga	
+MIT	1073	a6cf43f6043d	particify/arsnova-webclient	SAME SIZE, DIFFERENT HASH as twiga: 1073 B is not an identity, only a band
+MIT	1105	af6384a47e05	NinjasCL/airnotifier-moodle-bridge	
+MIT	1111	7b658dd8f1a0	UniversityOfHelsinkiCS/gptwrapper	
+MIT	1117	9ab1e710c2f4	ude-soco/CourseMapper-webserver	
+MIT	1122	34cd7159d8ea	TIM-JYU/TIM	
+BSD-3-Clause	1496	d30f3ab21d44	mitodl/open-edx-plugins	field BSD-3-Clause, payload opens "Copyright (C) 2021 MIT Open Learning All rights reserved. Redistribution and use..." -- the standard BSD-3 form
+NOT-OPEN-SOURCE	7304	9f9881ff5025	lmscloud-io/moodle-tool_aiagent-docs	"LMSCloud Commercial License" sitting in the Moodle plugin estate with a NOASSERTION field
+NOT-OPEN-SOURCE	11994	a197cd3325f7	nakafaai/nakafa.com	"Nakafa Source Available License 2.0" -- source-available, inside the Apache-2.0 size band
+NOT-OPEN-SOURCE	3860	48255018b41f	canyongbs/advisingapp	Elastic License 2.0; the HIGHEST-ranked address this pass's ranker returned
+OUT-OF-TREE	121	4164d0bccf35	codeforlife-education/codeforlife-portal	a 121 B POINTER to codeforlife-workspace/LICENSE.md; resolved on the raw channel to AGPL-3.0
+ABSENT	-	-	ISAE-SUPAERO-IDEA/moodle-mod_naas,Gayatri-Education/Gayatri-Demo	no grant at any of the nine probed names

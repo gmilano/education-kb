@@ -1,0 +1,21 @@
+rank	address	band	stars	forks	licence	pushed	owner_type	vein	verdict
+1	canyongbs/advisingapp	C	339	75	NOASSERTION	2026-11-17	Organization	v6-edtech	RANKED/BYTE-READ-REQUIRED
+2	pacewisdomhq/TutorLoom	D	97	18	Apache-2.0	2026-11-12	Organization	v6-edtech	RANKED/FIELD-PERMISSIVE
+3	nakafaai/nakafa.com	D	81	18	NOASSERTION	2026-11-17	Organization	v2-topic	RANKED/BYTE-READ-REQUIRED
+4	codeforlife-education/codeforlife-portal	D	54	87	NOASSERTION	2026-11-09	Organization	v6-edtech	RANKED/BYTE-READ-REQUIRED
+5	Tanzania-AI-Community/twiga	D	54	39	MIT	2026-11-09	Organization	v2-topic	RANKED/FIELD-PERMISSIVE
+6	TIM-JYU/TIM	D	26	13	MIT	2026-11-17	Organization	v4-analytics	RANKED/FIELD-PERMISSIVE
+7	Gayatri-Education/Gayatri-Demo	D	14	10	NOASSERTION	2026-11-10	Organization	v6-edtech	RANKED/BYTE-READ-REQUIRED
+8	elimu-ai/wiki	D	13	5	MIT	2026-11-05	Organization	v6-edtech	RANKED/FIELD-PERMISSIVE
+9	UniversityOfHelsinkiCS/gptwrapper	D	11	5	MIT	2026-11-16	Organization	v6-edtech	RANKED/FIELD-PERMISSIVE
+10	particify/arsnova-webclient	D	10	3	MIT	2026-11-17	Organization	v6-edtech	RANKED/FIELD-PERMISSIVE
+11	ude-soco/CourseMapper-webserver	E	7	4	MIT	2026-11-16	Organization	v4-analytics	RANKED/FIELD-PERMISSIVE
+12	NinjasCL/airnotifier-moodle-bridge	E	7	4	MIT	2026-11-12	Organization	v3-moodle	RANKED/FIELD-PERMISSIVE
+13	ISAE-SUPAERO-IDEA/moodle-mod_naas	E	3	0	NOASSERTION	2026-11-13	Organization	v4-analytics	RANKED/BYTE-READ-REQUIRED
+14	hallym-aiedu-center/ai_prof_lite	E	2	0	Apache-2.0	2026-10-07	Organization	v3-moodle	RANKED/FIELD-PERMISSIVE
+15	lmscloud-io/moodle-tool_aiagent-docs	E	1	0	NOASSERTION	2026-11-15	Organization	v3-moodle	RANKED/BYTE-READ-REQUIRED
+16	datacurso/moodle-local_assign_ai	E	1	0	NOASSERTION	2026-11-12	Organization	v3-moodle	RANKED/BYTE-READ-REQUIRED
+-	virtUOS/lms-ai-bridge	-	-	-	-	-	-	-	REFUSED-GRANT: GPL-3.0 (outside the build-safe predicate)
+-	ubc/compair	-	-	-	-	-	-	-	REFUSED-GRANT: GPL-3.0 (outside the build-safe predicate)
+-	ucfopen/UDOIT	-	-	-	-	-	-	-	REFUSED-GRANT: GPL-3.0 (outside the build-safe predicate)
+-	ucfopen/Materia	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)

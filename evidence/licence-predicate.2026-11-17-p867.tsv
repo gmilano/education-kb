@@ -1,0 +1,12 @@
+shelf	line	address	verdict	why	licence_cell
+agents/top.md	4575	fabian-thinks/present-together	PASS-REFUTED-METADATA	byte-read grant stated against a NOASSERTION/NONE field	🟢 **MIT + appended boundary — byte-read** (`main/LICENSE`, `1,344 B`, `sha256₁₂ 4f78693ecfd8`, holder `fabian-
+agents/top.md	4597	yinuoguan/nengdou-ai-review-helper-web	VOCAB-MISS	names a grant outside the heading's five	🟡 **MulanPSL-2.0 — byte-read on the DEFAULT branch** (`9,247 B`, `sha256:f0dade5c9337…`, `master/LICENSE`, 木兰宽
+agents/top.md	4659	polendol/AgenticTeacher	FAIL-SPLIT	CC-BY-NC alongside a permissive half	🔴 **SPLIT LICENCE — code MIT, MODEL `CC BY-NC-SA 4.0`** (byte-read `LICENSE.txt@master`, `1,056 B`, `sha256:11
+agents/top.md	4730	Raindancer118/nak-api	VOCAB-MISS	names a grant outside the heading's five	🟡 **WTFPL — byte-read** (`467 B`, `sha256:0992be62…`, title line `DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+agents/top.md	4748	vladimiracunadev-create/modern-software-engineering-program	FAIL-SPLIT	CC-BY-NC alongside a permissive half	🔴 **SPLIT LICENCE — both byte-read.** Code: 🟢 **Apache-2.0** (`11,345 B`, `sha256:b476b2ac…`, stock text). Con
+agents/top.md	4816	obfuscated-tm/dewey	PASS-REFUTED-METADATA	byte-read grant stated against a NOASSERTION/NONE field	**MIT — byte-read** (`900 B`, `sha256:e4c20e35…`), against GitHub's `NOASSERTION`
+agents/top.md	4817	kristoffervp/vigilo-mcp	PASS-REFUTED-METADATA	byte-read grant stated against a NOASSERTION/NONE field	🟢 **0BSD (Zero-Clause BSD) — byte-read** (`640 B`, `sha256:b5eaf2ff…`), against GitHub's `NOASSERTION`
+agents/top.md	4825	HyNuwa/UniMCP	PASS-REFUTED-METADATA	byte-read grant stated against a NOASSERTION/NONE field	**MIT + inherited ISC — byte-verified, against GitHub's `NOASSERTION`** (`1,980 B`, `sha256:727b864af003d1e5…`
+agents/top.md	4829	heitorsDev/sigaa-ifsc-mcp	PASS-REFUTED-METADATA	byte-read grant stated against a NOASSERTION/NONE field	**MIT — byte-verified, against GitHub's `NOASSERTION`** (`1,275 B`, `sha256:cd14675817b2c618…`, title line **`
+agents/top.md	4841	webworn/openfoam-mcp-server	PASS-REFUTED-METADATA	byte-read grant stated against a NOASSERTION/NONE field	**Apache-2.0 — byte-verified, against GitHub's own `NOASSERTION`**
+agents/top.md	4864	kingdonkatsu/ntulearn-mcp	PASS-REFUTED-METADATA	byte-read grant stated against a NOASSERTION/NONE field	🟢 **MIT — byte-read `2026-11-16` (`p843`)** (`main/LICENSE`, `1,055 B`, `sha256₁₂ e6bd1450153a`, © 2026 kingdo

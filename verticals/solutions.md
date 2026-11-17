@@ -4,6 +4,60 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventy-second pass (`p867`, 2026-11-17) — **`9` platform rows, `7` of them placed in a region on a MEASURED axis, and the `MIT` platform this shelf has said for sixty passes does not exist: `TIM-JYU/TIM`, a `1,122 B` MIT grant on a learning platform a Finnish university has run since 2014**
+
+🟢 **Channel declaration is in [`agents/top.md`](../agents/top.md). Every licence below was
+byte-read `2026-11-17` from a blobless partial clone**
+([`payload-probe`](../evidence/payload-probe.2026-11-17-p867.tsv)). 🟢 **The signature of the
+table below is DECLARED in [`ingest/derive-counts.py`](../ingest/derive-counts.py) — it is the
+Region-carrying shape the other two shelves already use, added to this shelf because
+[`866-G2`](../intel/open-gaps.md) is a question about PLACEMENT and a platform row with no region
+column cannot answer it** (the `p811` rule: an undeclared table is an omission, a declared one is
+a decision).
+
+### 🔴 The placement axis, stated before the rows
+
+🟢 **`p866` placed `6` of `14` rows and refused `8`, every refusal on a named axis — `gmail.com`,
+`users.noreply`, a company-form suffix, a consumer mail provider — and registered `866-G2`
+because the star-ranked band it drew from is individually authored.** 🟢 **This pass's vein is
+`owner.type == Organization`, and the axis is the commit e-mail domain from the clone plus the
+owner's named institution:**
+
+| Measure | `p866` (star rank) | 🟢 `p867` (institutional) |
+|---|---|---|
+| addresses placed in a region | `6` of `14` — `43%` | 🟢 **`17` of `20` — `85%`** |
+| EMEA | 🔴 `0` | 🟢 **`10`** — Finland ×2, Germany ×4, France, UK, Tanzania ×2 |
+| North America | `3` | `3` — `ubc`, `ucfopen` ×2 |
+| APAC | `2` | `3` |
+| LATAM | `1` | `1` |
+| placements resting on a MEASURED commit domain (`helsinki.fi`, `uni-osnabrueck.de`, `isae-supaero.fr`, `ucf.edu` ×2, `particify.de`, `mentorix.kr`, `elimu.ai`) | `0` | 🟢 **`8`** across `7` distinct domains |
+| placements resting on the owner's named body alone — 🟡 declared as the weaker axis | — | 🟡 `9` |
+| refused outright | 🔴 `8` | 🔴 `3` — `canyongbs/advisingapp` and `Gayatri-Education/Gayatri-Demo` (`users.noreply`, no jurisdiction in the owner name) and `datacurso/moodle-local_assign_ai` (`buendata.com`) |
+
+### 🟢 The platform rows
+
+| Platform | Repo | Licence, byte-read `2026-11-17` | ★ / forks | Default ref · pushed | Region | Role in an engagement |
+|---|---|---|---|---|---|---|
+| TIM | https://github.com/TIM-JYU/TIM | 🟢 **MIT** — `LICENSE`, `1,122 B`, `sha256₁₂ 34cd7159d8ea`, holder `Univ…` (University of Jyväskylä), `2014-2022` | 26 / 13 | `master` · `2026-11-17` | **EMEA** (Finland) | 🟢 **THE EXCEPTION THIS SHELF SAID DID NOT EXIST.** `p866` and six passes before it recorded that every education platform with real deployment is GPL/AGPL except two; `TIM` is a third, and it is `MIT`. An open-source cloud platform for creating INTERACTIVE LEARNING DOCUMENTS — not a course shell: the document is the unit, with executable and assessed elements inside it. 🟢 **Run by a named university for over a decade and pushed today.** 🔵 **For a client that must own and modify the platform with no copyleft reciprocity, this is the only row on this shelf that is both permissive and operated at scale** |
+| CourseMapper | https://github.com/ude-soco/CourseMapper-webserver | 🟢 **MIT** — `LICENSE`, `1,117 B`, `sha256₁₂ 9ab1e710c2f4`, holder `The Social Computing Group`, 2022 | 7 / 4 | `main` · `2026-11-16` | **EMEA** (Germany) | 🟢 **A collaborative course-ANNOTATION and analytics platform** from the Social Computing Group at the University of Duisburg-Essen. 🔵 **The annotation layer is where an AI agent has the least ambiguous job in education — the learner has already pointed at the thing they do not understand** — and this is a permissive base for it |
+| ARSnova / Particify | https://github.com/particify/arsnova-webclient | 🟢 **MIT** — `LICENSE.md`, `1,073 B`, `sha256₁₂ a6cf43f6043d`, holder `ARSnova Team and Contributors`, 2018. 🔵 **Same `1,073 B` as `twiga`'s MIT payload and a DIFFERENT hash — a size band is not an identity** | 10 / 3 | `main` · `2026-11-17` | **EMEA** (Germany, commit domain `particify.de`) | 🟢 **Live audience response: questions, polls and comprehension checks in a lecture.** 🔵 **The highest-frequency signal in a classroom and the cheapest AI surface to justify — the data already exists, per question, per cohort, with no new collection and no new consent** |
+| TutorLoom | https://github.com/pacewisdomhq/TutorLoom | 🟢 **Apache-2.0** — `LICENSE`, `11,362 B`, `sha256₁₂ a89039268428` | 97 / 18 | `main` · `2026-11-12` | **APAC** (India, by the owner's named body) | 🟢 **A self-hosted, MULTI-TENANT LMS for training institutes and teams** — course builder, trainer and student portals, progress tracking. 🔵 **Multi-tenancy is the feature that separates a workforce-training engagement from a university one, and almost nothing permissive on this shelf has it.** 🟡 Region from the owner only; commit domain is `users.noreply` |
+| ComPAIR | https://github.com/ubc/compair | 🔴 **GPL-3.0** — `LICENSE.txt`, `32,472 B`, `sha256₁₂ c61f12da7cda` | 38 / 11 | `master` · `2026-11-09` | **North America** (Canada, University of British Columbia) | 🟢 **Peer review by COMPARISON: students judge pairs of peer answers rather than scoring on a rubric, which is a measurably better-calibrated instrument.** 🔵 **An LLM is a natural second judge in exactly this design and the comparison data is the eval set.** 🔴 Copyleft: extend it in a separate service |
+| UDOIT | https://github.com/ucfopen/UDOIT | 🔴 **GPL-3.0** — `LICENSE`, `35,147 B`, `sha256₁₂ 8ceb4b9ee5ad`. 🔵 **`1 B` BELOW `p866`'s published `35,148`–`35,154` `GPL-3.0` band — the band is wider than published** | 118 / 78 | `main` · `2026-11-12` | **North America** (US, commit domain `ucf.edu`) | 🟢 **The accessibility checker the US higher-education sector actually runs on Canvas**, from the University of Central Florida's open-source programme. 🔵 **Accessibility remediation is the single most defensible AI line item in a US education engagement because it is a LEGAL obligation with a measurable backlog, and this is the incumbent tool to plug into** |
+| Materia | https://github.com/ucfopen/Materia | 🔴 **AGPL-3.0** — `LICENSE`, `34,523 B`, `sha256₁₂ 8486a10c4393`. 🔴 **This hash is a FOUR-WAY collision** — identical bytes in `openedx/taxonomy-connector`, `openedx/xblock-skill-tagging` and `eol-uchile/eol-conditional-xblock` (`T257`) | 53 / 43 | `master` · `2026-11-16` | **North America** (US, `ucf.edu`) | 🟢 **Embeddable learning apps and game-mechanic widgets inside a course.** 🔵 **The widget boundary is a clean place to put generated content: it is assessed, it is bounded, and it fails safely.** 🔴 AGPL-3.0 — the strongest reciprocity on this shelf |
+| LernKI / lms-ai-bridge | https://github.com/virtUOS/lms-ai-bridge | 🔴 **GPL-3.0** — `LICENSE`, `35,149 B`, `sha256₁₂ 3972dc9744f6` (inside `p866`'s band) | 1 / 0 | `main` · `2026-10-31` | **EMEA** (Germany, commit domain `uni-osnabrueck.de`) | 🟢 **THE MOST ENGAGEMENT-RELEVANT NEW ROW ON THIS SHELF, at `1★` and `0` forks.** It extracts course material from **Stud.IP, Moodle AND ILIAS** and prepares it for AI indexing — the three LMSs that actually hold German-speaking higher education, behind one ingestion layer, written by a university's own IT centre (virtUOS, Osnabrück) as part of the `LernKI` programme. 🔵 **Every EMEA RAG-over-course-content proposal starts by rebuilding this; here it exists, it is maintained by the institution, and it is `GPL-3.0` — so it is a deployable SERVICE in front of your own code rather than a library inside it** |
+| airnotifier-moodle-bridge | https://github.com/NinjasCL/airnotifier-moodle-bridge | 🟢 **MIT** — `LICENSE`, `1,105 B`, `sha256₁₂ af6384a47e05` | 7 / 4 | `main` · `2026-11-12` | 🟡 **LATAM** (Chile — placed from the owner's `CL` naming, declared as the weaker axis; commit domain is `gmail.com`) | 🟢 **A replacement push-notification API for the AirNotifier Moodle plugin, wiring Moodle straight to Firebase and other providers.** 🔵 **The unglamorous integration an engagement actually bills: the institution runs Moodle, the students are on phones, and the notification path is where adoption is won or lost — and it is the only `MIT` row this pass filed for the region with the highest measured AI usage and the least institutional policy** |
+| moodle-local_assign_ai | https://github.com/datacurso/moodle-local_assign_ai | 🔴 **GPL-3.0** — `LICENSE.md`, `35,178 B`, `sha256₁₂ ccb349b4132e`. 🔵 **`24 B` ABOVE `p866`'s band — with `35,147` below it, this pass widens the published `GPL-3.0` band at both ends** | 1 / 0 | 🔵 `MOODLE_405_STABLE` · `2026-11-12` | 🔴 **refused** — commit domain `buendata.com` carries no jurisdiction and the owner name names none | 🟡 **AI assignment marking as a Moodle `local` plugin — the exact shape `p866` described as copyleft-by-obligation rather than copyleft-by-choice.** 🔴 **Region refused rather than guessed: the project is Spanish-language, which is evidence about LANGUAGE and not about jurisdiction, and this base has a standing rule against reading one as the other** |
+
+🟢 **`10` new platform rows: `4` permissive (`TIM` MIT, `CourseMapper` MIT, `ARSnova` MIT,
+`airnotifier-moodle-bridge` MIT, plus `TutorLoom` Apache-2.0 — `5` permissive in all),
+`5` copyleft-by-platform, `1` region refused.** 🔵 **The copyleft rows are filed because this shelf's heading names no licence
+predicate and never has — it is the PLATFORM shelf, and on this shelf a `GPL-3.0` incumbent is
+the thing you integrate with, not a row you are pretending is build-safe** (see the
+`866-G4` discharge in [`agents/top.md`](../agents/top.md), which reports this shelf as correctly
+ABSTAINING for exactly that reason).
+
+
 ## 🟢 Seventy-first pass (`p866`, 2026-11-17) — **`5` platform rows, and the Moodle plugin estate turns out to be a place where `GPL-3.0` is NOT a licence defect but a platform REQUIREMENT — three of the five rows are copyleft by obligation, not by choice**
 
 🟢 **Channel declaration is in [`agents/top.md`](../agents/top.md).** 🟢 **The count repair that
@@ -1173,7 +1227,7 @@ platform.** 🟡 **Treat it as competitive intelligence that happens to be MIT-l
 | **AGENTIC STAR** (SoftBank, 🇯🇵) | 🔴 **Not institution-run — a hosted commercial agent platform**, developer docs at `developers.fd.agenticstar.tm.softbank.jp`, homepage `agenticstar.io`. 🟢 Its runtime SDKs `agenticstar-agentcore` (`1.0.3`) and `agenticstar-platform` (`3.3.0`, `80` releases) are public on PyPI and MIT by their wheel metadata | 🟢 **`74` MIT education agent templates, `54` catalogue ids `EDU-C2-004`…`EDU-C2-173`** — reference row [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent), `EDU-C2-028`, byte-read MIT (`1,074 B`, HEAD `71c442ebd88e`) | 🟢 **MIT** (templates and both SDKs, all byte- or metadata-verified) | 🟡 **Adopt the SPECS, not the runtime.** 🔴 Templates raise `PlatformRequired` at graph compile without a SoftBank deployment; all `74` are `0★`, unmaintained since October; the framework's advertised source repo has **zero commits** (`T89`); hard `==` pins on `langgraph`/`langchain`/`fastapi`. 🟢 **Tests run without the platform — harvest per `P61`** |
 | **AgentCore graph scaffold** (the catalogue's shared architecture) | 🔵 Not a product — the uniform structure under all `74` templates: `config/agent.yaml` manifest (`required_trust_level`, declared secrets), `src/graph/`, `src/nodes/`, `src/schemas/state.py`, `docs/02_design.md`, `docs/03_test_spec.md`, `tests/proof_of_boundary/` | 🟢 Domain nodes differ completely between ids — byte-compared across three repositories this pass: `iep_section_generator`/`regulatory_compliance` vs `affected_material_analysis`/`stakeholder_mapping` vs `bloom_level`/`difficulty_score`. Reference row [`haidang024/agentic-star-education-curriculum-change-impact-briefing-agent`](https://github.com/haidang024/agentic-star-education-curriculum-change-impact-briefing-agent) (`EDU-C2-046`, `45` files) | 🟢 **MIT** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ae3eea9ac056`) | 🟢 **This is the reusable asset.** 🔵 One scaffold, `54` real domain implementations — so a studio gets a uniform, inspectable architecture across `54` education workflows instead of `54` unrelated codebases. 🔴 The scaffold's base class ships only in the binary wheel; re-implement on LangGraph (now on `repos/foundations.md`) |
 
-## Education vertical platforms — 212 rows
+## Education vertical platforms — 222 rows
 
 ## 🟡 The MARKING-ADAPTER layer — **permissive code that reaches INTO an incumbent this shelf already carries** (new, fifty-seventh pass `p852`) (3 rows)
 

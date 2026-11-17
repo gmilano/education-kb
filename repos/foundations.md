@@ -4,6 +4,66 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventy-second pass (`p867`, 2026-11-17) — **`6` foundation rows, and they are one finding rather than six: the Open edX estate has a PERMISSIVE SEAM inside it — `21` Apache-2.0 and `1` BSD-3-Clause components against `71` AGPL-3.0 — so an AI extension for the world's largest open MOOC platform does not have to take the platform's copyleft into its own code**
+
+🟢 **Channel declaration is in [`agents/top.md`](../agents/top.md) and holds for this shelf.**
+🟢 **Every licence below was byte-read `2026-11-17` from a blobless partial clone**
+([`payload-probe`](../evidence/payload-probe.2026-11-17-p867.tsv),
+[`byte-identity`](../evidence/licence-byte-identity.2026-11-17-p867.tsv)).
+
+### 🔴 Why this was invisible until this pass
+
+🔴 **This base has shelved `Open edX` the PLATFORM since `p6` and has named it `1,100`+ times, and
+had never enumerated its COMPONENT estate.** 🟢 **The institutional-authorship vein
+([`agents/top.md`](../agents/top.md)) returned about `60` `openedx/*` repositories, `all`
+`NEW` or `UNGRADED` to this base, and a licence field census over them is one command:**
+
+| Licence field, `openedx` + `overhangio` + `edx` + `mitodl` | Repositories |
+|---|---|
+| 🔴 `AGPL-3.0` | `71` |
+| 🟢 `Apache-2.0` | 🟢 **`21`** |
+| 🟡 `NOASSERTION` | `2` |
+| 🟡 `CC-BY-SA-4.0` | `1` |
+| 🟢 `BSD-3-Clause` | 🟢 **`1`** |
+
+🔵 **The split is not random and it is not decorative.** 🟢 **The AGPL side is the PLATFORM — the
+LMS, the frontends, the enterprise apps, `edx-ora2` (`35,135 B`), `edx-bulk-grades`
+(`35,119 B`), `taxonomy-connector` and `xblock-skill-tagging` (both `34,523 B`).** 🟢 **The
+Apache-2.0 side is the EXTENSION SURFACE — the XBlock contract, the event bus, the design system,
+the sandbox, the analytics plugin points.** 🔵 **Which is to say: Open edX publishes the pieces
+you BUILD AGAINST under a permissive grant and the pieces you RUN under copyleft, and that is
+precisely the shape `p866` discovered for Moodle plugins read from the other direction.**
+
+### 🟢 The seam, byte-read
+
+| Repo | Licence, as measured | ★ / forks | Default ref · pushed | Region | Why it is a foundation and not a row on another shelf |
+|---|---|---|---|---|---|
+| https://github.com/openedx/codejail | 🟢 **Apache-2.0 — byte-read** (`LICENSE.txt`, `10,174 B`, `sha256₁₂ 0d542e0c8804`) | 478 / 83 | `master` · `2026-11-16` | **Global** | 🟢 **Sandboxed execution of untrusted code — the highest-starred permissive component in the estate.** 🔵 **An agent that lets a learner RUN what it generated needs exactly this, and most pedagogy projects write a worse version of it: `codejail` is the one a university already trusts in production** |
+| https://github.com/openedx/xblock-sdk | 🟢 **Apache-2.0 — byte-read at 🔴 `LICENSE.TXT`** (`11,358 B`, `sha256₁₂ cfc7749b96f6`) | 69 / 104 | `master` · `2026-11-16` | **Global** | 🟢 **The workbench: build and run an XBlock outside a full Open edX deployment, which is how an AI component gets developed in a two-week spike instead of a two-month environment build.** 🔴 **Its grant sits at `LICENSE.TXT` — caps name, CAPS EXTENSION — which no ladder in this base carried until this pass; nine probed names returned nothing while the GitHub field read `Apache-2.0`** (`T255`) |
+| https://github.com/openedx/paragon | 🟢 **Apache-2.0 — byte-read** (`LICENSE`, `10,174 B`, `sha256₁₂ 0d542e0c8804` — 🔵 **byte-IDENTICAL to `codejail`'s payload**) | 141 / 102 | 🔵 `release-23.x` · `2026-11-16` | **Global** | 🟢 **An accessible, theme-ready design system built for learning applications.** 🔵 **The reason a client-facing AI surface in an Open edX engagement does not need a design phase: accessibility is already argued, and in education accessibility is a procurement gate rather than a preference** |
+| https://github.com/openedx/openedx-events | 🟢 **Apache-2.0 — byte-read** (`LICENSE.txt`, `11,358 B`, `sha256₁₂ cfc7749b96f6`) | 13 / 33 | `main` · `2026-11-16` | **Global** | 🟢 **The Hooks Extensions Framework's event catalogue — the supported way to react to enrolment, submission and grading WITHOUT forking the AGPL platform.** 🔵 **This single row is what makes the seam real: an agent subscribes to events from outside the copyleft boundary** |
+| https://github.com/openedx/platform-plugin-aspects | 🟢 **Apache-2.0 — byte-read** (`LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`) | 6 / 15 | `main` · `2026-11-17` | **Global** | 🟢 **The Aspects analytics plugin points for LMS and Studio.** 🔵 **Byte-identical licence payload to `hallym-aiedu-center/ai_prof_lite`, a Korean university lab's repository on the other shelf — the same `11,357 B` text, reached through two different channels** (`T256`) |
+| https://github.com/mitodl/open-edx-plugins | 🟢 **BSD-3-Clause — byte-read** (`LICENSE`, `1,496 B`, `sha256₁₂ d30f3ab21d44`, holder 🔵 `Copyright (C) 2021 MIT Open Learning`, opening *"All rights reserved. Redistribution and use in source and binary forms…"* — the standard BSD-3 form, not a reservation) | 10 / 6 | `main` · `2026-11-16` | **North America** | 🟢 **MIT Open Learning's own plugin suite for extending and customising Open edX behaviour** — the only BSD-3-Clause holding in the estate, and a worked example of the seam used by the institution that co-founded the platform |
+
+🟢 **`6` new rows: `codejail`, `xblock-sdk`, `paragon`, `openedx-events`, `platform-plugin-aspects`
+and `mitodl/open-edx-plugins`.** 🔵 **`openedx/XBlock` (`Apache-2.0`, `471★ / 231`, `master`,
+pushed `2026-11-16`) is the contract every one of them plugs into and is deliberately NOT a row
+here — it has been on this base since `p6` and a second copy would inflate a count without adding
+a holding.** 🔵 **`openedx/paragon`'s default ref is `release-23.x` rather than `main`, which is
+the kind of detail a pinned dependency needs and a `main` assumption gets wrong.**
+
+### 🔴 What this seam does NOT give you, stated before anyone quotes the good half
+
+🔴 **`edx-ora2` — the Open Response Assessment Suite, which is the component an AI MARKING
+engagement actually wants — is `AGPL-3.0` (`35,135 B`, `sha256₁₂ 106a1b4b8b71`).** 🔴 **So is
+`edx-bulk-grades` (`35,119 B`), `taxonomy-connector` (`34,523 B`) and `xblock-skill-tagging`
+(`34,523 B`).** 🟢 **The permissive seam covers the EXTENSION POINT and the CHROME; every
+component that holds student responses or grades is copyleft.** 🔵 **An engagement that marks
+work inside Open edX reaches the AGPL boundary at the first useful step, and the honest
+architecture is an external service subscribing through `openedx-events` — which is why that
+`13★` row is ranked above the `478★` one in planning terms.**
+
+
 ## 🟢 Seventy-first pass (`p866`, 2026-11-17) — **`4` foundation rows, all four promoted out of the `UNGRADED` bucket, and the licence BYTE BAND is explained rather than observed: every offset in the `35,148`–`35,154` `GPL-3.0` spread now has a named cause, and one `AGPL-3.0` pair COLLIDES at identical size**
 
 🟢 **Channel declaration is in [`agents/top.md`](../agents/top.md) and holds for this shelf; the
@@ -1663,7 +1723,7 @@ above was graded on the licence question alone.**
 | https://github.com/langchain-ai/langchain | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`) | 149546 | **Region: Global.** The model and tool abstraction layer beneath the above. 🟡 **Shelved with a deliberate caution: this base's compose recipes should depend on `langgraph` for control flow and on `langchain-core` for interfaces, not on the `langchain` meta-package, whose surface moves faster than an education deliverable's support window.** 🔵 **Note for the byte-read gate: its `LICENSE` is on `master`, not `main` — a `main`-only probe returns `404` and would record a false `NO_LICENCE_FILE`, which is a live defect in any sweep that assumes the default branch name** |
 | https://github.com/teppei-miyashita/agenticstar-agentcore | 🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last touched `2026-08-12` | 0 | 🔴 **Region: APAC. Shelved as a WARNING row — the worked example for `T89`.** This is the source repository that the PyPI package `agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository`, and it holds no commits at all. 🟢 **The package itself is genuinely MIT** (`License-Expression: MIT` in the wheel, `dist-info/licenses/LICENSE`, `1,078 B`, `sha256:2afbb5fc…`) **and genuinely installable** — 🔴 **but it is wheel-only, single-release (`2026-09-17`), and unreadable at its stated address, while hard-pinning `langgraph==1.1.10`, `langchain==1.2.18`, `fastapi==0.136.0` and `agenticstar-platform==0.5.32`.** 🔵 **Do NOT add it to a delivery tree. It is here so that the next pass asking "is the AGENTIC STAR stack adoptable?" finds the answer already measured: licensed yes, auditable no** |
 
-## Foundational repos — 378 rows
+## Foundational repos — 384 rows
 
 ## 🟢 The STANDARDS-SEAM layer — **LTI, QTI and xAPI, the four interfaces an education deliverable is actually wired through** (new, fifty-seventh pass `p852`) (6 rows)
 

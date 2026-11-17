@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — `p867`: **`60`-odd `openedx/*` repositories were NEW to a base that has named Open edX more than a thousand times; a licence filename's CASE decided whether this base could see a grant, twice, in opposite directions; and one AGPL-3.0 payload is byte-identical across four repositories on three continents**
+
+### 🟢 The estate nobody had enumerated
+
+🔴 **This base has shelved `Open edX` since `p6`.** 🔴 **It had never listed the platform's
+COMPONENTS.** 🟢 **The institutional vein returned about `60` of them, every one `NEW` or
+`UNGRADED`, and a licence-field census over `openedx` + `overhangio` + `edx` + `mitodl` is one
+command:**
+
+| Licence field | Repositories | What sits there |
+|---|---|---|
+| 🔴 `AGPL-3.0` | `71` | the platform and everything that holds student work: `edx-ora2` (Open Response Assessment), `edx-bulk-grades`, `taxonomy-connector`, `xblock-skill-tagging`, the frontends, the enterprise apps |
+| 🟢 `Apache-2.0` | `21` | the EXTENSION SURFACE: `XBlock`, `xblock-sdk`, `openedx-events`, `codejail`, `paragon`, `platform-plugin-aspects` |
+| 🟢 `BSD-3-Clause` | `1` | `mitodl/open-edx-plugins` |
+| 🟡 `NOASSERTION` / `CC-BY-SA-4.0` | `2` / `1` | docs and tooling |
+
+🟢 **Filed as a new layer on [`repos/foundations.md`](foundations.md) with every grant byte-read.**
+🔵 **The transferable reading is the same shape `p866` found for Moodle from the other side:
+a copyleft platform publishes its BUILD-AGAINST surface permissively, so the licence question in
+an education engagement is never *"what licence is the platform"* — it is *"which side of the
+platform's own seam does my code sit on"*.**
+
+### 🔴 Filename CASE decided grant visibility — twice, in opposite directions
+
+| Repository | Grant lives at | Bytes | `sha256₁₂` | What the ladder did |
+|---|---|---|---|---|
+| `frappe/lms` | 🔴 `license.txt` (all lower) | — | — | 🔴 the ladder carried `LICENSE.txt` and NOT `license.txt`; this base published *"no grant file at any of six names"* for three passes. 🟢 `866-G5`'s predicted case |
+| `openedx/xblock-sdk` | 🔴 `LICENSE.TXT` (caps NAME, **caps EXTENSION**) | `11,358` | `cfc7749b96f6` | 🔴 **a case variant NO ladder in this base carried, found in the same pass.** `9` probed names returned nothing while the GitHub field read `Apache-2.0` |
+| `openedx/openedx-events` | 🟢 `LICENSE.txt` | `11,358` | `cfc7749b96f6` | 🟢 found first try |
+
+🔴 **The last two rows are the same payload to the byte.** 🟢 **The only difference between a
+grant this base could read and a grant it reported as absent was the case of three characters in
+a filename.** 🟢 **Both variants, plus `LICENCE.TXT`, `COPYING.TXT` and `NOTICE.TXT`, are now on
+the ladder in [`ingest/grant-verdict.py`](../ingest/grant-verdict.py) — `69` entries, `0`
+duplicates** (`T255`).
+
+### 🔴 One AGPL-3.0 payload, four repositories, three continents
+
+🟢 **`p866` recorded that *"one `AGPL-3.0` pair COLLIDES at identical size"*.** 🟢 **This pass
+hashed them and the collision is wider and stronger than a size match:**
+
+| `sha256₁₂` | Bytes | Repositories | Owners |
+|---|---|---|---|
+| 🔴 `8486a10c4393` | `34,523` | `openedx/taxonomy-connector`, `openedx/xblock-skill-tagging`, `ucfopen/Materia`, `eol-uchile/eol-conditional-xblock` | Open edX (Global), University of Central Florida (🇺🇸), Universidad de Chile's eol (🇨🇱) |
+
+🟢 **And the Apache-2.0 side shows the same phenomenon, including ACROSS CHANNELS:**
+
+| `sha256₁₂` | Bytes | Repositories |
+|---|---|---|
+| `0d542e0c8804` | `10,174` | `openedx/codejail`, `openedx/paragon` |
+| `c71d239df917` | `11,357` | `openedx/platform-plugin-aspects`, 🔵 `hallym-aiedu-center/ai_prof_lite` (a Korean university lab, reached through an entirely different vein) |
+| `cfc7749b96f6` | `11,358` | `openedx/openedx-events`, `openedx/xblock-sdk` |
+
+🔴 **And the counter-case, so the hash is not over-read: `Tanzania-AI-Community/twiga` and
+`particify/arsnova-webclient` both serve `1,073 B` of MIT and their hashes DIFFER
+(`a82547dd166b` vs `a6cf43f6043d`).** 🟢 **A byte COUNT is a band; only a hash is an identity**
+(`T256`).
+
+### 🟡 The `GPL-3.0` band is wider than published, at both ends
+
+🟢 **`p866` published a `GPL-3.0` payload band of `35,148`–`35,154 B` and explained every offset
+inside it.** 🟢 **This pass measured two offsets OUTSIDE it:**
+
+| Bytes | Repository | Relation to `p866`'s band |
+|---|---|---|
+| `35,147` | `ucfopen/UDOIT` | 🔴 `1 B` BELOW |
+| `35,149` | `virtUOS/lms-ai-bridge` | 🟢 inside |
+| `35,178` | `datacurso/moodle-local_assign_ai` | 🔴 `24 B` ABOVE |
+
+🔵 **A band explained offset-by-offset over `7` bytes is not wrong — it is just narrower than the
+population.** 🟢 **The full measured table, including the AGPL and MIT bands and the three
+not-open-source payloads, is
+[`licence-byte-identity`](../evidence/licence-byte-identity.2026-11-17-p867.tsv)** (`T257`).
+
+### 🟡 Three of `31` default refs are neither `main` nor `master`
+
+🟢 **Measured on both channels and in agreement (`search/repositories` field == clone `HEAD`):**
+`openedx/paragon` → 🔵 `release-23.x`, `datacurso/moodle-local_assign_ai` → 🔵
+`MOODLE_405_STABLE`, `Tanzania-AI-Community/twiga` → 🔵 `development`.
+🔵 **A pinned dependency or a raw-channel byte-read that assumes `main` gets `404` on all three,
+which is exactly how `p830`'s raw channel produced false absences.**
+
+---
+
+
 ## 🟢 `2026-11-17` — `p866`: **`97` shelf rows that were on the pages and counted NOWHERE, recovered by declaring their column signatures instead of recovering them by hand; and the licence byte band explained offset by offset, including a byte-count COLLISION inside one family**
 
 ### 🔴 `97` rows, counted nowhere, across all three shelves

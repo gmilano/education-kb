@@ -1,0 +1,4 @@
+channel	pass	queries	candidates	NEW	UNGRADED	SHELVED	new_pct	held_pct	region_placed	region_refused	note
+star-rank (search/repositories sorted by stars, any owner)	p866	15	54	0	27	27	0.0	100.0	6	8	p866's own measurement; every candidate already held. 8 of 14 filed rows refused a region on a named axis (gmail.com, users.noreply, company-form suffix).
+institutional authorship (search/repositories filtered owner.type==Organization)	p867	9	285	160	95	30	56.1	43.9	-	-	Whole sweep, including off-domain noise (openapi-generator, OrcaSlicer, grpc-gateway, ~60 openedx/* components). The NEW rate is a CHANNEL property, not 160 filable education rows.
+institutional authorship, education-domain subset	p867	9	30	6	14	10	20.0	80.0	18	2	The 30 were chosen from the 285 by reading descriptions for education relevance -- declared as the residual hand step (867-G1). Placement axis: author e-mail domain from a blobless clone, plus the owner's named institution.

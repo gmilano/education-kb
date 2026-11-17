@@ -64,6 +64,21 @@ _BASE = [
     "LICENSE", "LICENSE.md", "LICENSE.txt", "LICENSE.rst",
     "LICENCE", "LICENCE.md", "LICENCE.txt",
     "COPYING", "COPYING.txt", "COPYING.md", "NOTICE", "NOTICE.txt",
+    # 🟢 p867 -- `866-G5`'s ladder entry. `raw.githubusercontent.com` paths are CASE
+    # SENSITIVE, so "LICENSE.txt" on this ladder does NOT probe `license.txt`, and
+    # `frappe/lms` serves its grant at exactly that lower-case name while this base's
+    # shelves published "no grant file at any of six names" for three passes.
+    # 🔵 `866-G5` predicted thirteen refutations would fall to this entry. One does:
+    # the other twelve are a DIFFERENT defect, measured and published at `T253`.
+    # 🔴 p867 found a SECOND case variant in the same pass, on an OFFICIAL Open edX
+    # repository: `openedx/xblock-sdk` serves Apache-2.0 at `LICENSE.TXT` -- caps NAME,
+    # caps EXTENSION -- which neither this ladder nor `p866`'s probe `PATHS` carried, and
+    # its GitHub licence FIELD reads `Apache-2.0` while nine probed names return nothing.
+    "LICENSE.TXT", "LICENCE.TXT", "COPYING.TXT", "NOTICE.TXT",
+    "license", "license.txt", "license.md", "licence", "licence.txt",
+    "notice", "notice.txt", "copying", "copying.txt",
+    "License", "License.txt", "License.md", "Licence", "Licence.txt",
+    "Notice", "Copying",
     # non-OSI families keep the grant under their own name often enough to probe
     "LICENSE-BUSL", "LICENSE-BUSL.md", "BUSL-1.1", "BUSL.txt",
     # split code/data grants -- Gap 542-A

@@ -4,6 +4,132 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — seventy-second pass (`p867`) — **`7` trends (`T253`–`T259`): a declared exhaustion that was a search parameter, a gate whose refutations refute the gate, filename case deciding grant visibility, licence payloads as cross-channel identities, a four-way AGPL byte collision, Open edX's permissive seam, and `NOASSERTION` as a predictor of a non-OSI grant**
+
+**Two hundred and fifty-one** trends — derived trends: **251**.
+
+## 🟢 `T253` — `866-G5`'s own acceptance test refutes `866-G5`: `11` of `13` refutations are the GATE reading a path's existence as a grant's existence
+
+🟢 **The gap said it plainly: *"the fix is a ladder entry, not thirteen hand corrections, and the
+count must move or the diagnosis is wrong."*** 🟢 **The ladder entries were added
+([`ingest/grant-verdict.py`](../ingest/grant-verdict.py), `65` entries then `69`), `gate-enumeration`
+was re-run, and the count did NOT move: `REFUTED=13`, `VERIFIED-ABSENT=136`,
+`QUEUE-UNENUMERATED=230`, byte-identical before and after.** 🔴 **So the diagnosis was wrong, and
+this is what the `13` actually are:**
+
+| Class | Count | Example, with what the shelf line says |
+|---|---|---|
+| 🔴 **the gate refutes a line that STATES its own finding** | `5` | every `fedena` row. One is literally a table row reading *"NOTICE only, no grant \| 2 \| no — both fedena mirrors"*, and another reasons that *"a `NOTICE` is an attribution file, not a grant"*. The enumeration finds a `NOTICE` and reports the line as refuted BY the thing the line is about |
+| 🔴 **the payload exists and is PROPRIETARY; the shelf graded it correctly** | `3` | `Kosudo/nextSIS` — the shelf says `PROPRIETARY`, `39,890 B`, all rights reserved, and even locates the `All rights reserved.` line at `703` inside an EllisLab grant. The enumeration reports *"found a candidate grant: license.txt"* |
+| 🔴 **the payload is VENDORED third-party code** | `1` | `formalms/formalms` — the found paths are `html/addons/jquery/malihu-custom-scrollbar-plugin/LICENSE.txt` and a `swfheader` grant. The shelf says *"no grant at the tree root after `44` case-aware names"*, which is true |
+| 🟡 **genuine METADATA-vs-PAYLOAD divergence** | `3` | `LearnPress/learnpress` ×2 (`readme.txt` and `composer.json` declare `GPL-3.0-or-later`, no payload) and `DMontgomery40/mcp-canvas-lms` (manifest declares `MIT` while the `LICENSE` it names is absent from the tree). 🟢 **These are worth a wording repair: *"no payload"* and *"no grant"* are different claims** |
+| 🟢 **a GENUINE ladder miss** | 🟢 **`1`** | `frappe/lms` serves its grant at lower-case `license.txt`, which the ladder did not carry |
+
+🔵 **`1` of `13`, not `13` of `13`.** 🟢 **The real defect is in the gate's refutation predicate:
+it treats *a file at a licence-shaped PATH exists* as *a grant exists*, and for a proprietary
+licence, a vendored dependency's licence or an attribution `NOTICE` those are opposite facts.**
+🟢 **Registered as [`867-G4`](open-gaps.md) with an acceptance test that requires the enumeration
+to GRADE the payload it finds, not merely name its path.**
+
+## 🟢 `T254` — a corpus declared exhausted at `0 NEW / 54` returns `160 NEW / 285` when one search parameter changes
+
+🟢 **`p866` measured `0` new addresses in `54` candidates across `15` star-ranked veins — a
+`100%` hold rate — and read it as the discovery channel being exhausted.** 🟢 **`p867` changed
+`owner.type` to `Organization`, changed nothing else, and measured `160` new addresses in `285`
+(`56.1%`).** 🔴 **Exhaustion was a property of the RANKING PARAMETER, not of this corpus.**
+
+🟢 **And the channel carries the axis the old one structurally could not.** 🟢 **Placement over
+the `20`-address education-domain supply: `17` placed (`85%`) against `p866`'s `6` of `14`
+(`43%`), with `10` EMEA rows against `p866`'s `0`, and `8` of the placements resting on a commit
+e-mail domain measured inside the clone (`helsinki.fi`, `uni-osnabrueck.de`, `isae-supaero.fr`,
+`ucf.edu` ×2, `particify.de`, `mentorix.kr`, `elimu.ai`) rather than on an inference.**
+
+🔵 **The generalisable lesson is about declared saturation: a `100%` hold rate measures the reach
+of the query that produced it.** 🔴 **The honest caveat stays attached — `160` includes generic
+tooling that matched on a word and ~`60` components of one already-shelved platform, so the NEW
+rate is a channel property and not a supply of `160` filable rows.**
+
+## 🔴 `T255` — the CASE of three characters in a filename decided whether this base could see a grant
+
+🟢 **`raw.githubusercontent.com` paths and git trees are case-sensitive. Two instances, found in
+one pass, in OPPOSITE case directions:**
+
+| Repository | Grant at | Bytes · `sha256₁₂` | What this base published |
+|---|---|---|---|
+| `frappe/lms` | 🔴 `license.txt` | — | *"no grant file at any of six names, though widely listed as AGPL-3.0"* — for three passes |
+| `openedx/xblock-sdk` | 🔴 `LICENSE.TXT` | `11,358` · `cfc7749b96f6` | nothing at `9` probed names, while the GitHub field read `Apache-2.0` |
+| `openedx/openedx-events` | 🟢 `LICENSE.txt` | `11,358` · `cfc7749b96f6` | found first try |
+
+🔴 **The last two are the same payload to the byte.** 🟢 **Ladder now carries `LICENSE.TXT`,
+`LICENCE.TXT`, `COPYING.TXT`, `NOTICE.TXT` and the lower-case family: `69` entries, `0`
+duplicates.** 🔵 **An official repository of a flagship platform is the kind of address that makes
+a case-sensitivity bug look like a supply gap.**
+
+## 🟢 `T256` — a licence payload HASH is a cross-channel identity; a licence payload SIZE is only a band
+
+🟢 **Three Apache-2.0 hashes recur across unrelated owners, one of them across two different
+discovery channels:**
+
+| `sha256₁₂` | Bytes | Members |
+|---|---|---|
+| `0d542e0c8804` | `10,174` | `openedx/codejail`, `openedx/paragon` |
+| `c71d239df917` | `11,357` | `openedx/platform-plugin-aspects`, 🔵 `hallym-aiedu-center/ai_prof_lite` — an Open edX plugin and a Korean university lab, reached through different veins |
+| `cfc7749b96f6` | `11,358` | `openedx/openedx-events`, `openedx/xblock-sdk` |
+
+🔴 **The counter-case, so the inverse is not assumed: `Tanzania-AI-Community/twiga` and
+`particify/arsnova-webclient` both serve `1,073 B` of MIT with DIFFERENT hashes
+(`a82547dd166b` vs `a6cf43f6043d`).** 🟢 **So a byte count groups payloads and a hash identifies
+them, and `p866`'s byte-band work — which explained offsets without hashing them — was measuring
+the weaker of the two available instruments.**
+
+## 🔴 `T257` — one `AGPL-3.0` payload is byte-identical across `4` repositories, `3` owners and `3` continents; and the `GPL-3.0` band is wider than published
+
+🟢 **`p866` recorded an `AGPL-3.0` PAIR colliding at identical SIZE. Hashed, the collision is a
+quartet at one hash:** `8486a10c4393`, `34,523 B`, in `openedx/taxonomy-connector`,
+`openedx/xblock-skill-tagging`, `ucfopen/Materia` (🇺🇸 University of Central Florida) and
+`eol-uchile/eol-conditional-xblock` (🇨🇱 Universidad de Chile).
+
+🟡 **And the `GPL-3.0` band published as `35,148`–`35,154 B` has members outside it in both
+directions:** `35,147` (`ucfopen/UDOIT`, `1 B` below) and `35,178`
+(`datacurso/moodle-local_assign_ai`, `24 B` above), with `35,149` (`virtUOS/lms-ai-bridge`)
+inside. 🔵 **A band explained offset-by-offset is not wrong; it is narrower than its population,
+and the next pass that treats it as a membership test will mis-grade two of this pass's rows.**
+
+## 🟢 `T258` — Open edX publishes what you BUILD AGAINST permissively and what you RUN under copyleft; `21` Apache-2.0 against `71` AGPL-3.0
+
+🟢 **Measured over `96` repositories of `openedx` + `overhangio` + `edx` + `mitodl`: `71`
+`AGPL-3.0`, `21` `Apache-2.0`, `1` `BSD-3-Clause`, `2` `NOASSERTION`, `1` `CC-BY-SA-4.0`.**
+🟢 **The split is functional, not arbitrary. Apache-2.0: `XBlock`, `xblock-sdk`, `openedx-events`,
+`codejail`, `paragon`, `platform-plugin-aspects` — the component contract, the event bus, the
+sandbox, the design system, the analytics plugin points. AGPL-3.0: the LMS, the frontends, and
+every component that holds student work — `edx-ora2` (`35,135 B`), `edx-bulk-grades` (`35,119 B`),
+`taxonomy-connector` and `xblock-skill-tagging` (`34,523 B`).**
+
+🔵 **So the licence question in an Open edX engagement is never *"what licence is the platform"*
+— it is *"which side of the platform's own seam does my code sit on"*, and the answer is an
+external service subscribing through `openedx-events` (`13★`) rather than a fork of the
+assessment suite (`64★`).** 🟢 **Same shape, opposite direction, as `p866`'s Moodle finding that
+`GPL-3.0` in the plugin estate is an OBLIGATION of linking rather than a choice of the author.**
+
+## 🟡 `T259` — `NOASSERTION` does not predict an ABSENT grant; it predicts a NON-OSI one. `4` of `7`, and `0` plain permissive
+
+🟢 **`T81` established that GitHub's licence field and the payload disagree, and this base
+byte-reads every grant it files because of it.** 🟢 **`T259` is the distribution.** 🟢 **Of the
+`7` `NOASSERTION` addresses in this pass's `20`-address supply:** `Elastic License 2.0`
+(`canyongbs/advisingapp`, `3,860 B` — the ranker's `#1`), `Nakafa Source Available License 2.0`
+(`nakafaai/nakafa.com`, `11,994 B`), `LMSCloud Commercial License`
+(`lmscloud-io/moodle-tool_aiagent-docs`, `7,304 B`), `GPL-3.0`
+(`datacurso/moodle-local_assign_ai`), an `AGPL-3.0` resolved from a `121 B` OUT-OF-TREE pointer
+(`codeforlife-education/codeforlife-portal`), and `2` with no grant at `9` probed names.
+
+🔴 **`0` of the `7` was a plain permissive grant the field had merely failed to report** — which
+is the case `T81` was written about. 🟢 **The operational rule: route `NOASSERTION` to a byte-read
+tier rather than refusing it (that correction alone moved this pass's ranker from `52%` to `62%`
+against `p866`'s own choices), and expect the byte-read to REFUSE most of them.**
+🔵 **`3` of the `7` are commercial or source-available licences sitting inside the SIZE BANDS of
+permissive ones — `T250`'s trap, found again in three new families.**
+
+
 ## 🟢 `2026-11-17` — seventy-first pass (`p866`) — **`7` trends (`T246`–`T252`): the discovery channel measured EXHAUSTED at `0` new addresses in `54`, a licence byte band explained offset by offset, a byte-count COLLISION inside one licence family, a commercial-use block hiding inside the permissive size band, and `GPL-3.0` reclassified from a defect to a platform obligation**
 
 **Two hundred and forty-four** trends — derived trends: **244**.

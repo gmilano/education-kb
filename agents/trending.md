@@ -4,6 +4,102 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — `p867`: **the exhaustion was a SEARCH PARAMETER. `9` queries, `285` candidates, `160` addresses this base did not own — a `56.1%` NEW rate against the `0%` measured one pass earlier, and the only thing changed was `owner.type == Organization`**
+
+🔴 **Fork policy, stated before the first total.** 🟢 **`gh api search/repositories` EXCLUDES forks
+by default; every total in this section is a NON-FORK count.**
+
+### 🔴 `p866` concluded the corpus was saturated. It was not.
+
+🟢 **`p866`'s measurement was sound and its inference was wrong.** 🟢 **Three sweeps, `15` veins,
+`54` candidates, `0` `NEW`, `100%` held — the first `100%` in this log — and it read that as the
+star-ranked discovery channel being exhausted.** 🟢 **`866-G2` proposed the alternative: the
+star-ranked band is INDIVIDUALLY AUTHORED, so it cannot carry an institutional axis, and the
+saturation might belong to the parameter rather than to the corpus.**
+
+| Channel | Pass | Queries | Candidates | `NEW` | `UNGRADED` | `SHELVED` | Held |
+|---|---|---|---|---|---|---|---|
+| star rank, any owner | `p866` | `15` | `54` | 🔴 `0` | `27` | `27` | 🔴 `100%` |
+| 🟢 `owner.type == Organization` | `p867` | `9` | `285` | 🟢 **`160`** | `95` | `30` | 🟢 **`43.9%`** |
+| 🟢 same vein, education-domain subset | `p867` | `9` | `30` | `6` | `14` | `10` | `80%` |
+
+🔴 **What `160` is not.** 🟢 **It is not `160` filable education rows.** 🟢 **The vein imports
+anything organisation-owned that matched a word — `OpenAPITools/openapi-generator`,
+`grpc-ecosystem/grpc-gateway`, `OrcaSlicer/OrcaSlicer`, `appwrite/sdk-generator`; the
+`curriculum OR syllabus generator` leg alone reports `20,340` totals — and about `60` of the
+`160` are `openedx/*` components of a platform this base has shelved since `p6` and never
+enumerated.** 🔵 **Both facts are findings rather than noise: the first says the vein needs a
+domain predicate, the second produced this pass's largest content result
+([`repos/foundations.md`](../repos/foundations.md): Open edX has a permissive seam inside it).**
+
+### 🟢 The ranker, and the `52%` → `71%` it measured on `p866`'s own choices
+
+🟢 **[`866-G1`](../intel/open-gaps.md) asked for one ranking command and a published hit rate
+against the `15` rows `p866` filed by hand.** 🟢 **Built as
+[`ingest/p867-promotion-rank.py`](../ingest/p867-promotion-rank.py): two gates (grant, liveness)
+and one rank (materiality band, then forks, then recency), reusing `p533`'s bands rather than
+inventing new ones.**
+
+🔴 **First correction, before the hit rate: `p866` published `15` rows and PROMOTED `21`
+ADDRESSES.** 🟢 **Measured by re-running `p853`'s presence scanner over `p866`'s own `27`
+`UNGRADED` candidates at `HEAD`: `21` are now `SHELVED`.** 🔵 **A row is not an address, and the
+`15` was a row count being read as a promotion count.**
+
+| Ranker configuration | Filed addresses recovered | Hit rate |
+|---|---|---|
+| 🔴 naive — one shelf's permissive predicate, `NOASSERTION` refused | `11` of `21` | 🔴 `52%` |
+| 🟡 `build-safe` predicate, `NOASSERTION` routed to a byte-read tier | `13` of `21` | 🟡 `62%` |
+| 🟢 `platform` predicate (copyleft admitted), same tier | `15` of `21` | 🟢 **`71%`** |
+
+🟢 **The `19` points between the first and last row are not tuning. They are two structural
+errors found and fixed:**
+
+1. 🔴 **The grant gate was keyed to ONE shelf's predicate.** 🟢 `agents/top.md` promises MIT /
+   Apache-2.0 / BSD / ISC / 0BSD; `verticals/solutions.md` carries `GPL-3.0` BY OBLIGATION
+   (`p866`'s Moodle-plugin finding) and `repos/foundations.md` states no predicate at all.
+   🔵 **Four of the ten misses were `GPL-3.0` Moodle-estate rows filed on the shelf that admits
+   them — a ranker that refuses them is not screening, it is deleting a destination.**
+2. 🔴 **`NOASSERTION` was being treated as an absent grant.** 🟢 `T81` is this base's standing
+   finding that the FIELD and the PAYLOAD disagree. 🔵 **An unstated field is the reason to
+   byte-read, never the reason to refuse** — and `5` of the ten misses were `NOASSERTION`.
+
+🟢 **The residual `6` misses split exactly two ways, and the first half is a finding about `p866`
+rather than about the ranker.** 🔴 **`3` are LIVENESS refusals — `iwangjian/Coding-Tutor` (last
+push `2025-06-02`, `533` days), `luffycodes/Tutorbot-Spock` (`2024-11-04`) and
+`xoubinha/tutor.ia` (`2025-09-27`) were filed as current rows.** 🔵 **A stale row is a liability
+in a client engagement, and nothing in this base was measuring push age at filing time until
+now.** 🟡 **The other `3` pass both gates and simply rank below `#21` in a `24`-address order —
+which is the ranker disagreeing about PRIORITY rather than about admissibility, and is the part
+of a hand-read that a star band cannot replace.**
+
+🟢 **And the ranker earned itself in the other direction too**: its `#2` address overall,
+[`beltromatti/get-it`](https://github.com/beltromatti/get-it) (`1,168★`, `Apache-2.0` field,
+pushed `2026-06-29`) — a `B`-band address, the second-largest in `p866`'s own bucket — was never
+filed by the pass that read all `27` descriptions by hand.
+
+### 🔴 `4` of `7` `NOASSERTION` rows in this pass's supply were NOT open source
+
+🟢 **The `BYTE-READ-REQUIRED` tier was introduced above as a correction to a refusal. Run over
+this pass's `20`-address supply, it produced `7` rows — and the bytes refused `4` of them:**
+
+| Address | GitHub field | 🔬 The bytes, `2026-11-17` | Verdict |
+|---|---|---|---|
+| `canyongbs/advisingapp` | `NOASSERTION` | 🔴 **`Elastic License 2.0`**, `3,860 B`, `sha256₁₂ 48255018b41f` | 🔴 refused — and it was rank `#1` of `20` |
+| `nakafaai/nakafa.com` | `NOASSERTION` | 🔴 **`Nakafa Source Available License 2.0`**, `11,994 B` | 🔴 refused |
+| `lmscloud-io/moodle-tool_aiagent-docs` | `NOASSERTION` | 🔴 **`LMSCloud Commercial License`**, `7,304 B` | 🔴 refused |
+| `Gayatri-Education/Gayatri-Demo` | `NOASSERTION` | 🔴 **no grant at `9` probed names** | 🔴 refused |
+| `codeforlife-education/codeforlife-portal` | `NOASSERTION` | 🟡 **`121 B` POINTER** → resolved on the `raw` channel to `AGPL-3.0` | 🟡 copyleft, not build-safe |
+| `ISAE-SUPAERO-IDEA/moodle-mod_naas` | `NOASSERTION` | 🔴 **no grant at `9` probed names** | 🔴 refused |
+| `datacurso/moodle-local_assign_ai` | `NOASSERTION` | 🔴 **`GPL-3.0`**, `35,178 B` | 🟡 platform shelf |
+
+🟢 **So `T81` gets a sharper second half (`T259`): an unstated licence field is not evidence of an
+ABSENT grant, and it is a strong predictor of a NON-OSI one.** 🔵 **`0` of the `7` turned out to
+be a plain permissive grant that the field had merely failed to report — which is the case `T81`
+was originally written about.**
+
+---
+
+
 ## 🟢 `2026-11-17` — `p866`: **`15` query veins, `54` candidates, `0` addresses this base did not already own — the first sweep in this log to return a `100%` hold rate, with the three-way split printed by one command instead of counted by eye**
 
 🔴 **Fork policy, stated before the first total.** 🟢 **`gh api search/repositories` EXCLUDES forks

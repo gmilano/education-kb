@@ -4,6 +4,100 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventy-second pass (`p867`, 2026-11-17) — **`3` agent rows, and the headline is not the rows: the discovery channel `p866` measured EXHAUSTED at `0` new addresses in `54` returns `160` new addresses in `285` when the OWNER TYPE is changed and nothing else is**
+
+🟢 **Channel declaration, as [`863-G1`](../intel/open-gaps.md) requires before the first row.**
+🟢 **Re-measured `2026-11-17`, and one line of it has changed since `p866`:**
+
+| Channel | Result |
+|---|---|
+| 🔴 `curl https://github.com/...` | 🔴 `403` at the egress proxy |
+| 🔴 `gh api repos/{owner}/{repo}` | 🔴 `403` *"not enabled for this session"* |
+| 🔴 `gh api users/{owner}` · `gh api orgs/{owner}` | 🔴 `403` *"sessions are bound to their configured repositories"* — 🔵 **newly measured this pass, and it is the reason the affiliation axis below comes from commit e-mails rather than from an organisation's profile** |
+| 🟢 `gh api search/repositories` | 🟢 `200` — metadata FIELDS only (`owner.type`, licence, ★, forks, `pushed_at`, `archived`, homepage) |
+| 🟢 `git clone --filter=blob:none --depth 1` | 🟢 `200` — licence BYTES and commit e-mail domains |
+| 🟢 `raw.githubusercontent.com` | 🟢 reachable — a real `404` for a missing path, NOT a proxy `403`; used this pass to resolve one OUT-OF-TREE grant |
+| 🔴 `europarl.europa.eu` · `eur-lex.europa.eu` · `ec.europa.eu` · `digital-strategy.ec.europa.eu` · `education.ec.europa.eu` | 🔴 all unreachable (DNS / no connection) — 🔴 **so the EU primary-source channel is CLOSED to this session and [`866-G3(a)`](../intel/open-gaps.md) cannot be discharged the way it asked** |
+
+### 🟢 The supply question, answered by changing ONE search parameter
+
+🔴 **`p866` ran `15` query veins, collected `54` candidates ranked by stars, and measured `0`
+that this base did not already own — a `100%` hold rate, the first in its log.** 🔵 **It read
+that as the corpus being saturated.** 🟢 **`866-G2` guessed otherwise: that the star-ranked band
+is INDIVIDUALLY AUTHORED and therefore structurally cannot carry an institutional affiliation,
+and asked the next pass to run one vein selected for authorship instead of for stars.**
+
+🟢 **Run. `9` queries through `gh api search/repositories`, every item whose `owner.type` is not
+`Organization` discarded, nothing else changed** ([`sweep`](../evidence/channel-yield.2026-11-17-p867.tsv)):
+
+| Channel | Candidates | `NEW` | `UNGRADED` | `SHELVED` | Held |
+|---|---|---|---|---|---|
+| 🔴 `p866` — star rank, any owner | `54` | 🔴 `0` | `27` | `27` | 🔴 `100%` |
+| 🟢 `p867` — `owner.type == Organization` | `285` | 🟢 **`160`** | `95` | `30` | 🟢 **`43.9%`** |
+
+🔴 **The honest reading, stated before the rows.** 🟢 **`160` is a CHANNEL property and not a
+supply of `160` filable education rows**: the vein imports generic tooling that matched on a word
+(`OpenAPITools/openapi-generator`, `OrcaSlicer/OrcaSlicer`, `grpc-ecosystem/grpc-gateway`,
+`appwrite/sdk-generator` — the `curriculum OR syllabus generator` leg alone reports `20,340`
+totals), and about `60` of the `160` are `openedx/*` components of a platform this base already
+shelves. 🟢 **What the measurement does establish is that *"exhausted"* described one channel's
+reach and not this corpus** — and the correction is a search parameter, not a new instrument.
+
+### 🟢 The rows, filed from the top of a RANKED order rather than by reading descriptions
+
+🟢 **[`866-G1`](../intel/open-gaps.md) asked for exactly this and
+[`ingest/p867-promotion-rank.py`](../ingest/p867-promotion-rank.py) is the command**
+([`order`](../evidence/promotion-rank.2026-11-17-p867.tsv)). 🔵 **Its most useful output was a
+refusal: the address it ranked `#1` of `20` is `canyongbs/advisingapp`, and the bytes are
+`Elastic License 2.0`.**
+
+| Agent | Repo | Licence, as measured | ★ / forks | Default ref · pushed | Region | What it actually does, and the posture |
+|---|---|---|---|---|---|---|
+| twiga | https://github.com/Tanzania-AI-Community/twiga | 🟢 **MIT — byte-read** (`LICENSE`, `1,073 B`, `sha256₁₂ a82547dd166b`, holder `Victor Ol…`, 2024) | 54 / 39 | 🔵 `development` · `2026-11-09` | **EMEA** | 🟢 **A WhatsApp bot for Tanzanian educators — rank `5` of `20`.** 🔵 **This is the delivery surface this base has recorded as the LATAM/Africa pattern and never had a permissive row for**: teachers reach it from the phone they already own, with no app install and no institutional login. Authored inside the Tanzania AI Community, which is the affiliation axis the star-ranked vein could not produce. 🟡 Region placed from the owner's named body, not from a commit domain (`users.noreply.github.com`) — declared |
+| ai_prof_lite | https://github.com/hallym-aiedu-center/ai_prof_lite | 🟢 **Apache-2.0 — byte-read** (`LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`) | 2 / 0 | `main` · `2026-10-07` | **APAC** | 🟢 **A self-hosted lecture-production pipeline that runs 강의 기획 → 슬라이드 → 음성 → 아바타 영상 → Moodle 배포 in one flow** — planning to slides to voice to avatar video to Moodle deployment. 🟢 **Authored at Hallym University's AI education centre; commit domain `mentorix.kr` places it in Korea on a measured axis.** 🔵 **Korea is the jurisdiction whose AI-textbook policy was legislatively REVERSED in 2025 (see [`intel/market.md`](../intel/market.md)) — and the institutional response visible in code is self-hosted production tooling, not procurement.** 🔴 `2★`: this is an early asset, filed for its shape and its placement, not its traction |
+| gptwrapper | https://github.com/UniversityOfHelsinkiCS/gptwrapper | 🟢 **MIT — byte-read** (`LICENSE`, `1,111 B`, `sha256₁₂ 7b658dd8f1a0`, holder `Departmen…`, 2025) | 11 / 5 | `main` · `2026-11-16` | **EMEA** | 🟢 **An LLM chat built for University of Helsinki staff and students, for education and research** — the INSTITUTIONAL GATEWAY shape: one tenant-scoped surface in front of the models, which is what a university buys before it buys any tutor. 🟢 **Commit domain `helsinki.fi` — placement measured, not inferred.** 🔵 **An EMEA engagement that must answer the AI Act's high-risk education obligations starts at a gateway it controls, and this is a `1,111 B` MIT one that a named university already runs** |
+
+### 🔴 Examined, byte-read and NOT filed — `6` refusals, each with the bytes that caused it
+
+🔵 **Four of the six carry a grant the heading of this shelf cannot admit, and three of those
+four would have passed a FIELD check** ([`bytes`](../evidence/licence-byte-identity.2026-11-17-p867.tsv)).
+
+| Not build-safe | Repo | Licence, as measured | ★ / forks | Default ref · pushed | Region | What it actually does, and the posture |
+|---|---|---|---|---|---|---|
+| advisingapp | https://github.com/canyongbs/advisingapp | 🔴 **Elastic License 2.0 — byte-read** (`LICENSE`, `3,860 B`, `sha256₁₂ 48255018b41f`) | 339 / 75 | `main` · `2026-11-17` | 🔴 refused (`users.noreply`, no jurisdiction axis) | 🔴 **Ranked `#1` of `20` by this pass's own ranker and refused on its bytes.** An AI advising assistant, student-success platform and recruitment CRM for higher education — the most complete product shape in the sweep, and `Elastic 2.0` forbids providing it as a managed service. 🟢 **Worth reading as a product reference; cannot be adopted** |
+| nakafa.com | https://github.com/nakafaai/nakafa.com | 🔴 **`Nakafa Source Available License 2.0` — byte-read** (`LICENSE`, `11,994 B`, `sha256₁₂ a197cd3325f7`) | 81 / 18 | `main` · `2026-11-17` | **APAC** (Indonesia, by the project's own naming) | 🔴 **A source-available licence sitting `632 B` above the Apache-2.0 payload size** — `T250`'s exact trap, found again in a different family. A K-12-to-university learning platform; readable, not adoptable |
+| moodle-tool_aiagent-docs | https://github.com/lmscloud-io/moodle-tool_aiagent-docs | 🔴 **`LMSCloud Commercial License` — byte-read** (`LICENSE`, `7,304 B`, `sha256₁₂ 9f9881ff5025`) | 1 / 0 | `main` · `2026-11-15` | 🟡 **EMEA** (by the vendor brand only — declared weak) | 🔴 **A COMMERCIAL licence inside the Moodle plugin estate, with a `NOASSERTION` GitHub field.** 🔵 **`p866` established that `GPL-3.0` in this estate is a platform OBLIGATION rather than a defect; this row is the counter-case — the estate also contains grants that are not open at all, and the field does not say so** |
+| codeforlife-portal | https://github.com/codeforlife-education/codeforlife-portal | 🔴 **AGPL-3.0 — resolved OUT OF TREE.** 🟢 `LICENSE.md` in this repository is `121 B` (`sha256₁₂ 4164d0bccf35`) and contains only *"Find our license [here]"* pointing at `codeforlife-workspace/LICENSE.md`; 🟢 **fetched on the `raw` channel: `GNU AFFERO GENERAL PUBLIC LICENSE Version 3`** | 54 / 87 | `master` · `2026-11-09` | **EMEA** (UK) | 🟢 **A `121 B` licence file is not an absent grant and this base now has the resolution on record.** Code for Life: free coding-education resources and games, UK, `87` forks against `54` stars — a TEACHING asset that institutions clone rather than star. 🔴 AGPL-3.0, so not build-safe |
+| moodle-mod_naas | https://github.com/ISAE-SUPAERO-IDEA/moodle-mod_naas | 🔴 **No grant at any of the `9` probed names** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `LICENCE.md`, `LICENCE.txt`, `COPYING`, `LICENSE-MIT`, `license`) | 3 / 0 | `master` · `2026-11-13` | **EMEA** (France) | 🟢 **A Moodle Nugget plugin for reusable micro-content, authored at ISAE-SUPAERO** (commit domain `isae-supaero.fr` — a measured placement). 🔴 **No grant, so the default is all rights reserved.** 🔵 **Filed by name so the next pass does not re-pay for the discovery, and so it can be promoted if a grant appears** |
+| Gayatri-Demo | https://github.com/Gayatri-Education/Gayatri-Demo | 🔴 **No grant at any of the `9` probed names** | 14 / 10 | `main` · `2026-11-10` | 🔴 refused (`users.noreply`, no jurisdiction axis) | 🟡 **An offline, air-gapped adaptive-learning platform with course-independent Socratic tutoring and strictly scoped RAG** — the most interesting ARCHITECTURE in the sweep for low-connectivity deployment, which is an APAC and Africa constraint this base has recorded repeatedly. 🔴 No grant; unusable as a base |
+
+### 🟢 `866-G4` discharged on this shelf: the heading's own licence predicate, run over every row the gate counts
+
+🟢 **[`ingest/p867-licence-predicate.py`](../ingest/p867-licence-predicate.py) reads the counted
+signatures out of `derive-counts.py` with `ast` — never a second hand-maintained copy — and
+grades each counted row's LICENCE CELL against the grant vocabulary of that table's nearest
+preceding `## ` heading.** 🟢 **Result on this shelf, published whatever it is:**
+
+| Verdict | Rows | What it means |
+|---|---|---|
+| 🟢 `PASS` | `292` | the cell names a grant the heading admits |
+| 🟢 `PASS-REFUTED-METADATA` | `7` | the cell names `NOASSERTION`/`NONE` **in order to refute it**, alongside a byte-read permissive grant — `T81`'s idiom, and a naive reading scores all `7` as failures |
+| 🟢 `FAIL-EXCLUDED` | 🟢 **`0`** | no counted row on this shelf carries a purely copyleft or no-grant cell |
+| 🔴 `FAIL-SPLIT` | `2` | `polendol/AgenticTeacher` (code MIT, **model `CC BY-NC-SA 4.0`**) and `vladimiracunadev-create/modern-software-engineering-program` (code Apache-2.0, **content `CC-BY-NC`**) — the CODE is build-safe and the deliverable is not |
+| 🟡 `VOCAB-MISS` | `2` | `yinuoguan/nengdou-ai-review-helper-web` (`MulanPSL-2.0`) and `Raindancer118/nak-api` (`WTFPL`) — both permissive, neither named by the heading's five |
+| 🔴 **abstained** | 🔴 **`240`** | 🔴 **the finding that matters** |
+
+🔴 **`240` of the `543` rows this shelf's gate counts sit in tables under a PASS heading, which
+names no grant — so the build-safe predicate is structurally unreachable for `44%` of the shelf's
+own counted rows.** 🔴 **Including the `3` this pass filed above: the table they sit in is under
+this pass's own heading, so they are counted by the gate and ungraded by the predicate.**
+🔵 **Stated rather than quietly excluded, because a pass that discovers a structural hole and then
+widens it should say so in the same block.** 🔵 **`866-G4` asked whether the manual sort had imported a row the heading
+excludes; the answer on the testable `303` is `0` hard failures and `4` soft ones, and the larger
+answer is that the heading governs rather less of this shelf than its wording implies.**
+🟢 **Registered as [`867-G3`](../intel/open-gaps.md) with the acceptance test.**
+
+
 ## 🟢 Seventy-first pass (`p866`, 2026-11-17) — **`6` agent rows, and the discovery channel is measured EXHAUSTED: `54` candidates across `15` veins returned `0` addresses this base did not already own**
 
 🟢 **Channel declaration, as [`863-G1`](../intel/open-gaps.md) requires before the first row.**
@@ -4363,7 +4457,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 532 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 535 rows
 
 ### Filed by `p853` (2026-11-16) — `12` rows: the SPOKEN-LANGUAGE ASSESSMENT tier, every grant byte-read today, `0` copyleft, and every row's CORPUS dependency stated beside its licence
 

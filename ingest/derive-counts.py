@@ -240,6 +240,13 @@ SHELVES = [
         "| Bytes | Repo | `sha256₁₂` | Offset | \U0001f52c Cause, measured by diff |",
     ]),
     ("verticals/solutions.md", [
+        # 🟢 p867 declared this signature rather than filing eight platform rows under a
+        # header no declared signature matched -- the p811/p853/p858 path. It is the
+        # Region-carrying shape the other two shelves already use, which this shelf needed
+        # because `866-G2` is about placement and a platform row with no region column
+        # cannot answer it.
+        "| Platform | Repo | Licence, byte-read `2026-11-17` | \u2605 / forks | "
+        "Default ref \u00b7 pushed | Region | Role in an engagement |",
         "| Platform | Repo | License | Stars | Notes |",
         "| Platform | Repo | Licence | Stars | What it is |",
         "| Platform | Repo | License | Stars | Why it is the right base for education admissions |",
