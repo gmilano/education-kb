@@ -6,7 +6,25 @@ updated: 2026-11-17
 
 # Current trends — education AI
 
-**Pass `p876`, 2026-11-17** (sixth pass of the day). `p876` **closes the gap `p875` opened one
+**Pass `p877`, 2026-11-17** (seventh pass of the day). `p877` adds **T14**, sharpens **T12**
+downward, and leaves every other trend standing.
+
+- 🔴 **A repository this KB published as `MIT` is not open source.** `CaviraOSS/PageLM`'s licence
+  bytes are a bespoke non-commercial "PageLM Community License" — redistribution prohibited,
+  revenue-share required, and a Partial Use Clause reaching a single code snippet. It was **never**
+  MIT: the file dates from the repository's initial commit. Removed from `agents/top.md`.
+- 🟢 **T14 is new, and it is a measurement trend rather than a market one:** the GitHub licence
+  API's `NOASSERTION` carries **zero** information about a grant. Three repositories this pass
+  shared the token and nothing else.
+- 🟢 **The permissive-SIS gap closes** (`Gego-K12/gegok12`, MIT) — and it closes *because* of T14.
+- 🟡 **T12 is DISCOUNTED, not refuted.** `p877`'s 16-leg sweep had **six legs return
+  `total_count=0`**, re-confirmed. Ten effective legs, not sixteen; and `p876`'s and `p877`'s
+  "no new agents" conclusions are both weaker than their leg counts implied.
+- 🔴 **T13 (propagation) reached the client-facing column.** `p871`'s rewrite dropped five verified
+  permissive agents from `agents/top.md`, and a 43,849-star Apache-2.0 education platform
+  (`project-nomad`) was in **zero** curated files. See T13 below, now with its worst instance.
+
+**Previous pass note (`p876`)** (sixth pass of the day). `p876` **closes the gap `p875` opened one
 pass earlier**, adds **T13**, and leaves every other trend standing.
 
 - 🟢 **The dormant-LRS gap is CLOSED, and it should never have been opened.** Two maintained
@@ -318,7 +336,29 @@ they face a specific sanction on a specific date for AI illiteracy.** The defens
 *measured* gap plus the *published* framework, with the legal duty as context rather than threat.
 Treat the date as a lead to confirm against EUR-Lex the moment that host is reachable.
 
-## T12 — Open-source education AI is two projects and a long tail of zeroes — new in `p875`
+## T12 — Open-source education AI is a few projects and a long tail of zeroes — new in `p875`, 🟡 **discounted and re-counted by `p877`**
+
+> 🟡 **`p877` amendment, stated before the original claim.** Two things changed.
+>
+> **1. "Two projects" was wrong — it is at least three.**
+> [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) is
+> Apache-2.0 with **43,849★ and 813 commits in 12 months**, sitting between DeepTutor (59,995) and
+> OpenMAIC (43,817). It was in **zero** curated files when T12 was written, so the trend was
+> formulated against an incomplete shelf. There is also a **real middle band** this trend's shape
+> denied: BloomTutor 313★/84 commits, whiteboard-ai-tutor 216★, OpenTutor 181★/**292 commits**,
+> education-skills 125★, Open TutorAI CE 118★/196 forks. Small, yes — but not zeroes.
+>
+> **2. The evidence for the long tail is weaker than the leg counts suggest.** Of `p877`'s 16
+> discovery legs, **6 returned `total_count=0`** on two separate runs, because
+> `search/repositories` ANDs every free-text term and a five-word query matches nothing. `p876`'s
+> ten legs were never audited this way. **The tail is still real — it is visible in the 9-of-26
+> unlicensed share of this pass's unknown addresses — but "the shelf is empty" was partly a
+> measurement artefact of over-long queries.**
+>
+> 🔵 **The durable lesson: an empty discovery result measures the query, not the ecosystem** — and
+> it says nothing at all about whether the *curated* shelf is complete. Here, discovery returned
+> nothing while the shelf was missing five agents and a 43,849-star platform.
+
 
 For four passes this KB could not measure adoption and said so honestly. `p875` found the channel
 (`api.github.com/search/repositories`) and measured **78 addresses**. The distribution is not a
@@ -327,7 +367,8 @@ curve. It is two points and a floor.
 | Tier | Projects | Stars |
 |---|---|---|
 | **Platforms with real communities** | DeepTutor (Apache-2.0), OpenMAIC (MIT) | **59,972** / **43,808** |
-| Small-but-alive | PageLM, OATutor | 2,069 / 282 |
+| Small-but-alive | OATutor, 🟢 **BloomTutor**, 🟢 **whiteboard-ai-tutor**, 🟢 **OpenTutor**, 🟢 **education-skills**, 🟢 **Open TutorAI CE** | 282 / 313 / 216 / 181 / 125 / 118 |
+| 🔴 **Removed from this table by `p877`** | ~~PageLM~~ — 2,069★ and alive, but **not open source** (bespoke non-commercial licence, redistribution prohibited). It was never permissive supply and must not be counted as any | — |
 | **The floor** | pedagogy-benchmark, ArguLens, WriteRight, AI-Teaching-Agent, ai-tutor-agent, TutorIA, lti-ai-grader, and **all six proctoring repos** | **16 → 0** |
 
 **Why it matters more than a vanity metric.** This KB's agent and vertical tables have been listing
@@ -402,6 +443,43 @@ toward an expensive wrong one (fork and operate a five-year-dead GPL project, or
 measurement entirely). **The failure mode of a mature knowledge base is not ignorance. It is
 confident, internally contradicted staleness** — and unlike ignorance it does not announce
 itself, because every individual pass still looks productive.
+
+## T14 — `NOASSERTION` is not a licence finding, and treating it as one creates false absences — new in `p877`
+
+**The claim.** The GitHub licence API returns `NOASSERTION` whenever a `LICENSE` file is not
+byte-similar enough to a template it recognises. That single token is returned for situations with
+**opposite** commercial consequences, so **no decision should ever rest on it.** `p877` hit three
+of those situations in one pass, and a fourth was already in the KB:
+
+| Repository | API | Bytes | Cause of the `NOASSERTION` | Commercial verdict |
+|---|---|---|---|---|
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | `NOASSERTION` | **MIT**, 1,150 B | line 3 is `<!-- SPDX-License-Identifier: MIT -->` — **one added line** | 🟢 Fully usable; **more** permissive than the API implied |
+| [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) | `NOASSERTION` | **Apache-2.0**, 1,865 B | short-form Apache header **plus a component manifest** | 🟢 Usable, and the manifest is itself valuable intelligence |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `NOASSERTION` | **bespoke non-commercial**, 8,563 B | a genuinely proprietary licence | 🔴 **Unusable.** Redistribution prohibited |
+| **`OpenOlat`** (carried from earlier passes) | `NOASSERTION` | **Apache-2.0** | a modified licence header | 🟢 Usable — **and it carries `verticals/solutions.md`'s "only permissive full LMS" claim** |
+
+**Why it matters more than it sounds.** This is the **mirror image** of `p872`'s substring-grep
+lesson, and the more dangerous of the two:
+
+- `p872`'s error produced **false alarms** — seven clean Apache-2.0 repos flagged as "Apache + additional terms". A false alarm gets re-checked, because someone wants the repo.
+- T14's error produces **false absences** — a repository written off as "no licence, no grant". **Nobody re-checks an absence.** `gegok12` was reachable, MIT and 113-commits-live through five passes that each concluded "no permissive SIS exists".
+
+**And the symmetric failure is live in this KB's history:** the same token that hid a usable MIT
+SIS also *flattered* PageLM, whose row sat in `agents/top.md` as `MIT` while its own star table
+said `NOASSERTION — re-read the bytes`. **One signal, one error in each direction, same file.**
+
+**Operational rules.**
+
+1. **Never record a licence from `.license.spdx_id`.** Use it only to decide *whether to go read bytes*.
+2. **`NOASSERTION` means "go read the file", never "no grant".** Any row this KB has written off as unlicensed on API evidence alone is **unverified**, not negative.
+3. **Read past line 2.** `Open-TutorAi/open-tutor-ai-CE` opens *"All rights reserved."* and is BSD-3-Clause; this KB mis-graded it twice, once as CC BY-NC-SA, on a two-line read.
+4. **Read to the end.** PageLM looks like a permissive grant for one paragraph; §2, §4 and §7 are where it stops being one.
+5. **Pipe payloads, never capture them** — `$(curl …)` strips the trailing newline and corrupts both size and hash (`P834`, reproduced by `p877` on its own first attempt).
+
+**Commercial consequence.** For a Globant engagement the licence column is the column that
+survives into a statement of work. A false absence costs an option; **a false permissive costs a
+remediation.** `p877` found one of each, and the false permissive had been in the client-facing
+table for fourteen months.
 
 ## Declared gaps
 

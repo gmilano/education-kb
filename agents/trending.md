@@ -4,6 +4,124 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🔴 `2026-11-17` (`p877`) — **a repository this KB published as `MIT` is not open source: `PageLM`'s licence forbids redistribution and requires a revenue-share, and it has said so since its first commit**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+Seventh pass of the day. `p877` is a **grant audit**. It re-read licence *bytes* for every row in
+`agents/top.md` carrying an anomalous licence signal, re-ran discovery on a fresh leg set, and
+reconciled the live file against the archive `p871` wrote this morning. Three findings, in
+descending order of how much money they could cost.
+
+### 🔴 1. `CaviraOSS/PageLM` is not MIT, and is not open source under any definition
+
+`agents/top.md` carried this row until this pass:
+
+> `| **PageLM** | https://github.com/CaviraOSS/PageLM | MIT | main | NotebookLM-style study platform... Self-hostable. |`
+
+The bytes at `main/LICENSE.md` are **8,563 B**, `sha256₁₂ c834209c5f33`, titled **"PageLM Community
+License"**. What it actually says:
+
+| Clause | Text (quoted) | Effect on a Globant engagement |
+|---|---|---|
+| Grant | *"limited, non-exclusive, non-transferable, **revocable**"* for *"personal, educational, or non-commercial research purposes"* | 🔴 A consultancy deliverable is none of these |
+| §2 Redistribution | *"Redistribution of the Software, in whole or in part, in source or binary form, is **strictly prohibited**"* | 🔴 You cannot ship it to a client at all |
+| §4 Revenue sharing | a revenue-share agreement *"**must be executed** … prior to any commercial distribution, deployment, public release, or commercial operation"* | 🔴 Commercial use requires a negotiated contract with two individuals |
+| §7 Partial Use | *"Use of **any portion, code snippet, algorithm, design pattern**, or Derivative Work … in a commercial product or service **constitutes Commercial Use**"* | 🔴 Reading it for ideas and reimplementing is in scope by its own terms |
+| §8 Termination | *"automatic termination … effective immediately and without notice"*, plus disgorgement and fees | 🔴 No cure period |
+
+🔵 **It is not a relicensing event, which makes it worse.** The licence-file history from a bare
+clone shows `LICENSE.md` **added in the initial commit** `a3722a3` (2025-08-31) and last modified
+`d436885` (2025-10-05). **It was never MIT.** The KB asserted a grant that the repository never
+made.
+
+🟢 **PageLM itself is alive and real** — HEAD `2026-11-15`, 55 commits in 12 months, 2,069★. The
+defect is entirely in this KB's description of its licence. It moves to
+`intel/measured-unusable.md`.
+
+🔴 **The uncomfortable part: this file's own star table already said to check.** It read
+*"`NOASSERTION` 🔴 — licence does not auto-detect, **re-read the bytes before naming it in a
+proposal**"*, four screens above the row that named it in a proposal as MIT. **A warning and the
+error it warns about can live in the same file for multiple passes.** `p876` named this failure
+mode T13 (propagation); `p877` is the instance where it reached the column a client reads.
+
+### 🔴 2. `p871`'s rewrite dropped five verified permissive agents, and `p876` then concluded the shelf was empty
+
+`p876` wrote: *"A star-ranked discovery sweep … returned 126 repositories, 47 of them new to this
+KB, and NOT ONE is an education agent … **There is no hidden shelf.**"* That conclusion was drawn
+against a file from which five agents had been deleted **six passes earlier the same day**. The
+shelf was in `archive/2026-11-17-p871-pre-rewrite/agents-top.md`, in this repository.
+
+`p877` re-measured all five from scratch rather than trusting the archive. **The licence hashes
+match the archived rows to the byte** — two independent passes, same bytes:
+
+| Agent | ★ | Licence (re-measured `p877`) | Archived hash | HEAD | Commits/12mo |
+|---|---:|---|---|---|---:|
+| [`Li-Evan/BloomTutor`](https://github.com/Li-Evan/BloomTutor) | 313 | MIT, 1,069 B, `7d574cf3632e` | 🟢 identical | **2026-11-17** | 84 |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 181 | MIT, 1,068 B, `5352b4967982` | 🟢 identical | 2026-11-16 | **292** |
+| [`molly554/whiteboard-ai-tutor`](https://github.com/molly554/whiteboard-ai-tutor) | 216 | MIT, 1,089 B, `ed7406a62bcb` | first line only | 2026-11-17 | 6 |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 118 | BSD-3-Clause, 1,531 B, `57c341d09920` | 🟢 1,531 B | 2026-06-26 | 91 |
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | 125 | MIT, 1,068 B, `23b91d7c0aef` | 🟢 identical | 2026-01-29 | 4 |
+
+All five are **restored** to `agents/top.md` with current liveness.
+
+🔵 **The method rule this produces, and it is new:** *a full-file rewrite is a deletion event and
+must be audited as one.* `p871` archived what it replaced — correctly — and then no pass diffed
+the archive against the result. **Archiving is not reconciliation.** Any pass that rewrites a file
+wholesale must publish the set of addresses it dropped, with a reason for each, or a later pass
+will re-derive the absence as a finding about the world rather than about the KB.
+
+### 🟢 3. T12 re-tested on a fresh leg set and it SURVIVES
+
+`p877` ran **16** star-ranked `search/repositories` legs, deliberately different in shape from
+`p876`'s ten (subject legs: tutoring, grading, lesson planning, SIS, LMS, teaching assistants,
+adaptive learning, curriculum, spaced repetition, education agents, quiz generation, xAPI/LTI,
+multi-agent classrooms, proctoring, and a Spanish/Portuguese leg at `stars:>5`).
+
+🔴 **Ten of the sixteen legs returned rows; six returned `total_count=0`, re-confirmed on a
+second run** (`lesson plan generator`, `curriculum generator`, `xAPI LTI`, `classroom AI
+multi-agent`, `exam proctoring`, and the Spanish/Portuguese leg). `search/repositories` free-text
+ANDs every term, so a four-or-five-word leg matches nothing. **The honest count is therefore ten
+effective legs, not sixteen** — see `repos/trending.md` `p877` for the per-leg table and the
+2–3-term rule it produces.
+
+**101 result rows, 94 unique repositories, 26 not previously known to this KB, and not one of the
+26 is a build-safe education agent.** The permissively licensed unknowns were:
+
+| Repo | ★ | Licence | Why it is not a finding |
+|---|---:|---|---|
+| `TochusC/ai-assistant-teaching-website` | 98 | MIT | Chinese coursework site, last push **2024-11-03** |
+| `Center-for-AI-Innovation/ai-teaching-assistant-uiuc` | 76 | MIT | UIUC TA chatbot, last push **2023-04-16** |
+| `visionpilot-project/VisionPilot` | 43 | MIT | 🔴 Keyword collision — **autonomous driving** |
+| `potatoqualitee/dbatools.ai` | 39 | MIT | 🔴 Keyword collision — SQL Server tooling that calls itself "a teaching tool" |
+| `jyi/ITSP` | 27 | MIT | FSE-2017 paper artifact, last push **2019** |
+
+🔵 **Two independent sweeps, different leg sets, same answer.** T12 is well supported — though
+by ten effective legs here, not sixteen, and `p877` declines to claim more than it measured. The correction `p877` makes is not to T12 but to the inference drawn from it:
+**an empty discovery result says nothing about whether the curated shelf is complete**, and in
+this case the shelf was missing five agents and a 43,849-star platform while discovery was
+returning nothing.
+
+### 🔵 Channel and method notes
+
+| Item | Result |
+|---|---|
+| `gh api search/repositories` | 🟢 **open** — 16 legs ran; `-f q='repo:a repo:b'` multi-slug form works for re-measurement |
+| `git ls-remote --symref` | 🟢 open — used to resolve every default branch before any `raw` path was built |
+| `raw.githubusercontent.com` | 🟢 open — all licence bytes |
+| blobless bare clone | 🟢 open — liveness, commit counts, **and licence-file history** (new use this pass: it is how "was PageLM ever MIT?" was answered) |
+| `gegok12.com` | 🔴 **does not resolve from this session** — the MIT claim was confirmed at the repository bytes instead, never from the vendor page |
+| `github.com` HTML / `api.github.com` direct | 🔴 still 403 |
+
+🔴 **`P834` reproduced, by this pass, on its own first attempt.** `p877`'s first licence
+measurement used `body=$(curl …)` and reported BloomTutor as **1,068 B / `315be3d6cf4a`** against
+the archive's 1,069 B / `7d574cf3632e`. The cause is the one this KB already documented:
+**`$(…)` strips the trailing newline**, so both the size and the hash are wrong. Re-measured as
+`curl -sf … | wc -c` and `| sha256sum`, every figure matched the archive exactly. 🔵 **The lesson
+is not "remember P834" — it is that a one-byte method error nearly published a false
+*contradiction* between two passes that actually agreed.** Pipe payloads; never capture them.
+
+
 ## 🔴 `2026-11-17` (`p876`) — **the KB contradicted itself inside a single pass: `p875` declared "no maintained permissive LRS exists" in four files while its own sweep table listed three**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

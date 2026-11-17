@@ -3,6 +3,54 @@ industry: education
 region: Global
 updated: 2026-11-17
 ---
+## 🔴 `2026-11-17` — `p877`: **the direction this directory had not yet recorded — a licence that is REAL, DETAILED, and forbids the one thing a consultancy must do: redistribute**
+
+🔵 **The three concealment directions already recorded here are (1) `NOASSERTION` over bytes that
+DO grant (`p866`+), (2) the field hiding prohibitions, and (3) `p874`'s placeholder `LICENSE.md`
+that exists and reserves all rights.** 🔴 **`p877` adds a fourth, and it is the one that actually
+reached a client-facing table: a licence that reads like open source for one paragraph, is
+8,563 bytes long, and is not open source at all.**
+
+### 🔴 Not open source — `1`
+
+| Address | Branch | Licence file | What the bytes say | `class` | Consequence |
+|---|---|---|---|---|---|
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `main` | 🔴 **`LICENSE.md` — PRESENT, 8,563 B, `sha256₁₂ c834209c5f33`** | 🔴 **"PageLM Community License".** Grant is *"limited, non-exclusive, non-transferable, **revocable**"* for *"personal, educational, or non-commercial research purposes"*. **§2: redistribution *"in whole or in part, in source or binary form, is strictly prohibited"***. **§4: a revenue-sharing agreement *"must be executed"* before any commercial deployment or public release.** **§7 Partial Use: using *"any portion, code snippet, algorithm, design pattern"* commercially is Commercial Use.** §8: automatic termination, disgorgement, fees | 🔴 `not_open_source` | 🔴 **UNUSABLE for any Globant engagement.** A consultancy deliverable is Commercial Use by definition, and §2 blocks handing the code to a client even for free. §7 means reimplementing from a reading is in scope by its own terms. **2,069★ and genuinely alive (HEAD `2026-11-15`, 55 commits/12mo) — the project is real; the grant is not one** |
+
+### 🔴 It was published by this KB as `MIT` for fourteen months, and it was never MIT
+
+`agents/top.md` carried `| **PageLM** | … | MIT | main | … Self-hostable. |` until `p877`. The
+licence-file history, read from a blobless bare clone, settles whether this was a relicensing:
+
+| Commit | Date | Action |
+|---|---|---|
+| `a3722a3` | **2025-08-31** | 🔴 **`LICENSE.md` ADDED in the repository's initial commit** |
+| `8ff64b0` / `b5185f2` | 2025-09-01 | modified ("Finalize") |
+| `9ae1545`, `f491f11`, `8bf3abd` | 2025-09-23 → 2025-09-28 | modified |
+| `4a0265d` | 2025-10-01 | modified ("Rebranding") |
+| `d436885` | **2025-10-05** | last modification |
+
+🔴 **There is no MIT commit anywhere in the history.** The KB did not inherit a stale fact from an
+upstream change — **it asserted a grant the repository never made.**
+
+### 🔵 The detector rule this adds
+
+Every rule in this directory so far has been about licence files that are **absent, placeholder, or
+shorter than they look**. This one is the opposite:
+
+> 🔴 **Length and professionalism are not evidence of permissiveness.** PageLM's licence is longer,
+> better organised and more lawyerly than stock MIT. The sections that make it unusable — §2, §4,
+> §7 — are **two-thirds of the way down an 8.5 KB file**, well past where a licence reader stops.
+>
+> **Operational form: a licence file over ~2 KB that is not byte-identical to a known template must
+> be read to the end before any grant is recorded.** Stock MIT is ~1,068 B; stock Apache-2.0 is
+> ~11,357 B. **A file at 8,563 B matches neither, and that mismatch alone is the trigger to read
+> it.** `p877` found this by size-checking before reading, and the size was the whole tell.
+
+🔵 **Cross-reference:** this is the proprietary corner of `intel/trends.md` **T14** — the same
+`NOASSERTION` token covered `Gego-K12/gegok12` (MIT, usable), `wwrwbs/AI_AWE` (Apache-2.0, usable)
+and this repository (unusable) **in a single pass**.
+
 ## 🔴 `2026-11-17` — `p874`: **a NEW concealment direction — a `LICENSE.md` that EXISTS and reserves all rights, which every file-presence check reads as "licensed"**
 
 🔵 **This directory's standing finding has been that GitHub's licence field reports `NOASSERTION`

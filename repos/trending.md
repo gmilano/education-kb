@@ -4,6 +4,128 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p877`) — **16 fresh discovery legs confirm T12 — and a 43,849-star Apache-2.0 education platform was sitting in these sweep logs, in zero curated files**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+Seventh pass of the day. **Still not a `github.com/trending` scrape** — that remains `403` and this
+KB still refuses to launder a blog's reconstruction of it. What `p877` adds is a **reconciliation
+channel**: the set of every `github.com/<owner>/<repo>` address mentioned anywhere in this
+repository's Markdown (**7,532 unique addresses**) diffed against each sweep result, so a leg can
+report not just "what exists" but "what this KB has seen and not shelved".
+
+### 🔴 The finding that channel produced immediately
+
+| Repo | Licence | ★ | Forks | Commits/12mo | Curated files containing it, before `p877` |
+|---|---|---:|---:|---:|---:|
+| [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | **Apache-2.0** (10,778 B) | **43,849** | **4,526** | **813** | 🔴 **0** |
+
+It appears in **31** Markdown files in this repository — every one of them a sweep log or an
+archive. `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`, `compose/patterns.md`,
+`intel/market.md` and `intel/trends.md` contained **zero** mentions.
+
+🔵 **What it is:** an **offline-first knowledge and education server** — Wikipedia, thousands of
+books, courses, maps and optional local AI from a single box with no internet connection.
+Apache-2.0, Dockerised, semantic-release, `collections/` + `admin/` + `install/` in-tree.
+🟢 **4,526 forks against 43,849 stars is the signal: forks of an appliance repository are
+deployments.** It is now in `repos/foundations.md`, `verticals/solutions.md` and **P5**.
+
+🔴 **`compose/patterns.md` P5 ("Offline-first tutoring for low-connectivity deployment") was built
+entirely from Kiwix (GPL-3.0), Internet-in-a-Box (LGPL) and Kolibri (MIT) — while the largest
+permissively licensed offline education server in the index sat unshelved.** The pattern's licence
+profile was worse than it needed to be, for six weeks.
+
+### The 16 legs — and the 🔴 **six that returned `total_count=0`**
+
+All run on `gh api search/repositories`, `sort=stars`, `order=desc`, `per_page=30`. "New" = not
+present in the 7,532-address reconciliation set, case-folded.
+
+| # | Leg | Rows | New to KB |
+|---|---|---:|---:|
+| 1 | `AI tutor education stars:>20` | 10 | 4 |
+| 2 | `intelligent tutoring system stars:>20` | 10 | 1 |
+| 3 | `AI grading essay scoring stars:>20` | 8 | 0 |
+| 4 | `student information system school management stars:>50` | 7 | 0 |
+| 5 | `learning management system open source stars:>100` | 13 | 2 |
+| 6 | `AI teaching assistant stars:>30` | 12 | 4 |
+| 7 | `adaptive learning platform stars:>20` | 15 | **10** |
+| 8 | `flashcard spaced repetition stars:>100` | 11 | 2 |
+| 9 | `education agent LLM stars:>30` | 9 | 4 |
+| 10 | `quiz generation AI stars:>30` | 6 | 0 |
+| 11 | 🔴 `lesson plan generator AI stars:>20` | **0** | — |
+| 12 | 🔴 `curriculum generator AI education stars:>20` | **0** | — |
+| 13 | 🔴 `xAPI LTI education standard stars:>10` | **0** | — |
+| 14 | 🔴 `classroom AI multi-agent stars:>20` | **0** | — |
+| 15 | 🔴 `exam proctoring open source stars:>20` | **0** | — |
+| 16 | 🔴 `AI education Spanish Portuguese tutor stars:>5` | **0** | — |
+
+**101 rows → 94 unique repositories → 26 unknown to this KB → 0 build-safe education agents.**
+
+### 🔴 The six empty legs are the most important measurement in this section
+
+Each was **re-run a second time and returned `total_count=0` again**, so this is not channel
+flakiness — it is how the endpoint behaves. `search/repositories` free-text is effectively
+**AND across every term**, matched over name, description and topics; **a four-or-five-word leg
+collapses to zero.** `exam proctoring open source stars:>20` returns nothing while this KB holds
+two real AGPL proctoring projects, found in earlier passes by shorter queries.
+
+🔵 **This re-frames both `p876`'s "ten legs, no agents" and `p877`'s "sixteen legs, no agents".**
+The two sweeps are much weaker evidence than their leg counts imply, because **38% of `p877`'s
+legs (6/16) tested nothing at all.** T12 is still supported — but by the **ten** legs that
+returned rows, not by sixteen.
+
+🟢 **Standing rule for later passes: a discovery leg must be 2–3 terms plus one qualifier.**
+Record `total_count` for every leg, and never count an empty leg as evidence of absence in the
+world. **An empty leg is a measurement of the query, not of the ecosystem.**
+
+### Licence distribution of the 26 unknown addresses
+
+| Licence (API) | Count |
+|---|---:|
+| 🔴 **`NONE`** | **9** |
+| MIT | 5 |
+| AGPL-3.0 | 3 |
+| GPL-3.0 | 3 |
+| `NOASSERTION` | 2 |
+| Apache-2.0 | 1 |
+| BSL-1.0 | 1 |
+| GPL-2.0 | 1 |
+| CC0-1.0 | 1 |
+
+🔴 **9 of 26 (35%) carry no licence file at all, and only 6 of 26 (23%) are MIT/Apache-2.0** —
+which is `intel/trends.md` **T10** reproduced on a fresh sample. 🔵 Note what the `NONE` share does
+*not* mean here: the `stars:>5` Spanish/Portuguese leg that `p877` ran specifically to test T10's
+Global-South claim returned **zero rows**, so **this sample cannot speak to the origin half of
+T10** — only to the unlicensed-share half. The origin claim stands on earlier passes' evidence,
+not on this one's.
+
+### 🟢 Licence re-measurement — `NOASSERTION` resolved three different ways in one pass
+
+| Repo | API verdict | Byte verdict | Bytes / `sha256₁₂` |
+|---|---|---|---|
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | `NOASSERTION` | 🟢 **MIT** | 1,150 B / `b8694396d7dc` |
+| [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) | `NOASSERTION` | 🟢 **Apache-2.0** + component manifest | 1,865 B / `4b5296db216d` |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `NOASSERTION` | 🔴 **bespoke non-commercial** | 8,563 B / `c834209c5f33` |
+
+`gegok12`'s `LICENSE` is stock MIT with **`<!-- SPDX-License-Identifier: MIT -->` on line 3** — one
+added line, and the detector drops to `NOASSERTION`. **The same token covered a usable permissive
+grant, an annotated permissive grant and a proprietary licence.** Registered as `intel/trends.md`
+**T14**.
+
+### Re-measured, previously carried
+
+| Repo | ★ (`p877`) | Licence | Last push |
+|---|---:|---|---|
+| `HKUDS/DeepTutor` | 59,995 | Apache-2.0 | 2026-11-15 |
+| `THU-MAIC/OpenMAIC` | 43,817 | MIT | 2026-11-17 |
+| `CAHLR/OATutor` | 282 | MIT | 2026-11-17 |
+| `CaviraOSS/PageLM` | 2,069 | 🔴 see above | 2026-11-15 |
+
+🔵 DeepTutor and OpenMAIC both moved by tens of stars since `p876` (59,972 → 59,995; 43,808 →
+43,817). **project-nomad at 43,849 now sits between them** — the KB's two "headline" education
+repositories were never two; they were three.
+
+
 ## 🟢 `2026-11-17` (`p876`) — **83 repos re-measured by CLONE, not by `pushed_at`: three "live" foundations are dead, three addresses have silently moved, and the LRS gap closes**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

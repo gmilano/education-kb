@@ -6,7 +6,25 @@ updated: 2026-11-17
 
 # Vertical platforms — education
 
-**Pass `p876`, 2026-11-17** (sixth pass of the day). `p876` adds the **learning-analytics layer**
+**Pass `p877`, 2026-11-17** (seventh pass of the day). **`p877` adds the two platforms this file
+most needed and did not have: a permissively licensed SIS, and the largest permissively licensed
+offline education server in the index.**
+
+> **🟢 The permissive shortlist gains its first STUDENT INFORMATION SYSTEM.**
+> [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) is **MIT** at the bytes (1,150 B,
+> `sha256₁₂ b8694396d7dc`). Until this pass every SIS in this file was copyleft — Gibbon GPL-3.0,
+> RosarioSIS GPL-2.0, openSIS with no licence file at all. **This is the only row in this file a
+> studio can fork, rebrand and ship inside a proprietary deliverable.**
+> 🟡 It is also **small** (57★, HEAD five months old): the gap closes on licence, not maturity.
+
+> **🔴 [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad)
+> — Apache-2.0, 43,849★, 4,526 forks, 813 commits in 12 months — was in NO curated file in this
+> KB before `p877`**, despite being the second-largest education-native repository the KB knows of.
+> The *Offline & low-connectivity delivery* section below described that category as "first-class"
+> while listing only GPL-3.0 and LGPL options. **The permissive leader of the category was missing
+> from the file that calls it first-class.**
+
+**Previous pass note (`p876`)** (sixth pass of the day). `p876` adds the **learning-analytics layer**
 to this file, which has until now described platforms that *generate* learner telemetry without
 naming anywhere to *put* it. Two permissive, maintained Learning Record Stores are verified below
 and in `repos/foundations.md`.
@@ -35,7 +53,13 @@ problem**, and the copyleft thesis below is now **quantified**.
 > Apache-2.0. The byte-read is authoritative — a modified header almost certainly defeats
 > auto-detection — but **OpenOlat is the load-bearing "only permissive full LMS" claim in this
 > file, and a client's counsel will run the automated check and get `NOASSERTION`.** Brief them
-> before they ask. `BerriAI/litellm` and `CaviraOSS/PageLM` show the same pattern;
+> before they ask. `BerriAI/litellm` shows the same pattern. 🔴 **`CaviraOSS/PageLM` DOES NOT, and
+> `p877` corrects this sentence:** PageLM's `NOASSERTION` is **not** a detector artefact — its bytes
+> are a bespoke non-commercial licence that **prohibits redistribution**. Grouping it with OpenOlat
+> and litellm as "same pattern, byte-read will clear it" is the exact inference `intel/trends.md`
+> **T14** warns against: the token is identical, the grants are opposite.
+> 🔵 **OpenOlat is nonetheless T14's fourth confirmed case** — and the most commercially important,
+> since it carries this file's "only permissive full LMS" claim;
 > `OS4ED/openSIS-Classic` returns `NONE` — **no detectable licence at all**, treat as all rights
 > reserved until proven otherwise.
 
@@ -88,6 +112,7 @@ verified via `git ls-remote` + `raw.githubusercontent.com` on the resolved defau
 | Platform | Repo | Licence | Branch | Position |
 |---|---|---|---|---|
 | **Gibbon** | https://github.com/GibbonEdu/core | GPL-3.0 | `v31.0.00` | School management / SIS for K-12. Note: default branch is a version tag, not `main`. |
+| **GegoK12** 🟢 **new `p877`** | https://github.com/Gego-K12/gegok12 | 🟢 **MIT** — byte-read, 1,150 B, `sha256₁₂ b8694396d7dc` | `main` | 🟢 **The first and only permissive SIS in this KB — closes a gap open since `p872`.** Full-featured school management system in **Laravel/PHP**, **API-first** (`api.md` in-tree), `Dockerfile` + `docker-compose.yml`, `lang/` localisation, plus separate Android **parent** and **teacher** apps. 113 commits in 12 months. 🟡 **57★ and HEAD `2026-06-25`** — propose it as a base you will own and extend, not a community you are joining. 🔴 **GitHub reports `NOASSERTION`** because line 3 of its `LICENSE` is `<!-- SPDX-License-Identifier: MIT -->`; the bytes are stock MIT. Do not let a licence-API readout disqualify it. |
 | **openSIS Classic** | https://github.com/OS4ED/openSIS-Classic | **GPL per README; no licence file** | `master` | Student information system. **Licence flag:** there is no `LICENSE`, `COPYING` or `license.txt` on the default branch — the GPL claim exists only in prose in the README. Treat the grant as unconfirmed until clarified with OS4ED. |
 | **RosarioSIS** | https://github.com/francoisjacquet/rosariosis | **GPL-2.0** | **`mobile`** | **New in `p873`.** Mature PHP/PostgreSQL student information system, used in production by schools, academies and colleges; latest tags `v9.3`, `v9.3.1`, `v9.3.2`. **The default branch is `mobile`** — a feature name, not `main` or `master`. Nothing about the address hints at it and no heuristic would guess it: a `raw.githubusercontent.com` path built on an assumed `main` 404s, which would have been published as "no licence file" and then as "no grant". Resolve with `git ls-remote --symref` first, always. The **third** verified open-source SIS, and the **third** that is copyleft. |
 | **Koha** | https://github.com/Koha-Community/Koha | GPL-3.0 | `main` | The mature open-source integrated library system; very large installed base in school and university libraries worldwide. |
@@ -110,6 +135,7 @@ ministry programme reaches rural schools at all.
 |---|---|---|---|---|
 | **Kiwix** | https://github.com/kiwix/kiwix-tools | GPL-3.0 | `main` | Offline Wikipedia and educational-archive reader (ZIM format). Already an ingest source for DeepTutor, so an offline corpus can feed an offline tutor. |
 | **Internet-in-a-Box** | https://github.com/iiab/iiab | LGPL | `master` | Turnkey offline learning server — bundles Kiwix, Moodle and content libraries onto low-cost hardware for schools without reliable connectivity. |
+| **Project NOMAD** 🟢 **new `p877`** | https://github.com/Crosstalk-Solutions/project-nomad | **Apache-2.0** (10,778 B, byte-read) | `main` | 🟢 **The permissive leader of this category, and now the default starting point.** An offline-first knowledge and education server: Wikipedia, thousands of books, courses, maps and **optional local AI**, all from one box with no internet. **43,849★ / 4,526 forks / 813 commits in 12 months** — and on an appliance repository, forks read as deployments. Dockerised, with `collections/`, `admin/` and `install/` in-tree and semantic-release. **Apache-2.0 is the decisive fact against Kiwix (GPL-3.0) and Internet-in-a-Box (LGPL):** a ministry deliverable can be rebranded and redistributed without copyleft obligations on the surrounding work. |
 
 **23 verified platforms.**
 
@@ -128,6 +154,8 @@ For a Globant engagement that must avoid copyleft obligations, the verified perm
 | **DSpace** | BSD | Institutional repository / scholarly corpus |
 | **SQL LRS (`yetanalytics/lrsql`)** | Apache-2.0 | 🟢 **New in `p876`** — learner telemetry store (xAPI). The default for measurement |
 | **Ralph (`openfun/ralph`)** | MIT | 🟢 **New in `p876`** — LRS + data pipeline, **Open edX-native**, EMEA public sector |
+| **Project NOMAD** | Apache-2.0 | 🟢 **New in `p877`** — offline-first education server, **43,849★**. The permissive answer for low-connectivity and ministry equity programmes |
+| **GegoK12** | MIT | 🟢 **New in `p877`** — **the only permissive SIS.** Laravel, API-first. Small; adopt-and-own, not join |
 
 ### Learning analytics — the layer this file was missing
 
@@ -252,10 +280,19 @@ content generator in the build inherits that obligation for everything it emits.
 
 ## Declared gaps
 
-- **No permissive open-source SIS exists — now three independent data points, not two.** `p873`
-  verified **RosarioSIS** (GPL-2.0) alongside Gibbon (GPL-3.0) and openSIS-Classic (no licence
-  file at all). Three verified options, **zero permissive**. A permissive, AI-native SIS is an
-  unmet need — and the most clearly evidenced product gap in this file.
+- ~~**No permissive open-source SIS exists**~~ — 🟢 **CLOSED by `p877`.**
+  [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) is **MIT** at the bytes (1,150 B,
+  `sha256₁₂ b8694396d7dc`): Laravel, API-first, Dockerised, with Android parent and teacher apps
+  and 113 commits in 12 months. The three copyleft options stand as recorded — RosarioSIS GPL-2.0,
+  Gibbon GPL-3.0, openSIS-Classic with no licence file at all.
+  🔵 **Why it took five passes to find a repository that was always there:** the GitHub licence API
+  reports `NOASSERTION` for it, because line 3 of its `LICENSE` is an SPDX comment. **The gap was
+  never in the ecosystem; it was in trusting a licence-detector readout as a licence.** See
+  `intel/trends.md` **T14**.
+  🟡 **The restated gap, which is real:** a permissive SIS exists but is **small** (57★, HEAD five
+  months cold). *A permissive, AI-native, institution-grade SIS* remains the clearest product gap
+  in this file — the difference is that there is now a permissive base to start from rather than a
+  copyleft one to work around.
 - ~~**No *permissively licensed* open-source proctoring platform exists.**~~ **RESTATED by `p874`,
   which found the earlier framing factually wrong.** Permissive proctoring code **does** exist:
   `ganesh-786/Proctor`, `amaanwarsi/Proctora` and `code-by-abrar/Online-Proctoring-system` are all

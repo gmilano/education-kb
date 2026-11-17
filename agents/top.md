@@ -6,7 +6,45 @@ updated: 2026-11-17
 
 # Top AI agents — education
 
-**Pass `p876`, 2026-11-17** (sixth pass of the day). **`p876` adds no agent row and corrects
+**Pass `p877`, 2026-11-17** (seventh pass of the day). **`p877` is a grant audit, and it found
+the most expensive class of error this KB can make: a repository published as `MIT` that is not
+open source at all.** It also restores five build-safe agents that today's own `p871` rewrite
+dropped out of this file.
+
+> **🔴 `CaviraOSS/PageLM` IS NOT MIT. Its licence bytes are a bespoke, 8,563-byte "PageLM
+> Community License": non-commercial only, redistribution "strictly prohibited", a
+> revenue-sharing agreement required before any commercial use, and a Partial Use Clause under
+> which using *"any portion, code snippet, algorithm, design pattern"* commercially triggers the
+> whole commercial regime.** The grant is revocable and terminates automatically on breach.
+> **A Globant engagement is Commercial Use by definition, so PageLM is unusable as a base** — it
+> is removed from the agent table below and filed in `intel/measured-unusable.md`.
+> 🔵 **This was never a relicensing event:** `LICENSE.md` has been bespoke since the repository's
+> initial commit (`a3722a3`, 2025-08-31) and last changed 2025-10-05. The KB published `MIT` for
+> fourteen months against bytes that never said it.
+
+> **🔴 The star table in THIS FILE already flagged PageLM `NOASSERTION` and said "re-read the
+> bytes before naming it in a proposal". The agent table two sections below it published `MIT`
+> anyway.** The instruction and the error were in the same file, four screens apart. `p876`
+> diagnosed this failure mode as T13 (*propagation*); `p877` is the case where it reached the
+> client-facing column.
+
+> **🔴 `p871`'s full rewrite silently dropped five verified, permissively licensed agents from
+> this file — and `p876` then ran a discovery sweep and concluded "there is no hidden shelf".**
+> The shelf was in this repository's own `archive/2026-11-17-p871-pre-rewrite/agents-top.md`.
+> `p877` re-measured each one from scratch; **the licence hashes match the archived rows to the
+> byte** (`BloomTutor` 1,069 B `7d574cf3632e`; `OpenTutor` 1,068 B `5352b4967982`;
+> `open-tutor-ai-CE` 1,531 B). They are restored below, with fresh liveness.
+
+> **🟢 T12 survives, independently re-tested — with an honest discount.** `p877` ran its own
+> 16-leg star-ranked sweep on a different leg set from `p876`'s ten; **six legs returned
+> `total_count=0` and tested nothing**, so the real evidence is **ten effective legs**,
+> 94 unique repositories, 26 unknown to this KB.
+> **Not one unknown repository was a build-safe education agent** — the MIT hits were a 2024
+> coursework site, a 2023 university TA chatbot, a 2019 paper artifact, and two keyword
+> collisions (autonomous driving, SQL Server tooling). `p876`'s conclusion holds; what was wrong
+> was not the conclusion but the premise that this file held everything already found.
+
+**Previous pass note (`p876`)** (sixth pass of the day). **`p876` adds no agent row and corrects
 three addresses and one liveness claim.** It ran a ten-leg star-ranked **discovery** sweep —
 the first this KB has been able to run, since `p875` only measured addresses it already held —
 and the result is worth stating plainly:
@@ -103,10 +141,10 @@ Read this before the tables below. Measured `2026-11-17` via `api.github.com/sea
 |---|---:|---|---|---|
 | **HKUDS/DeepTutor** | **59,972** | Apache-2.0 | 2026-11-15 | Real platform, real community. Safe to propose. |
 | **THU-MAIC/OpenMAIC** | **43,808** | MIT ✅ | 2026-11-17 | Real platform, real community. Ship with the `ACCESS_CODE` hardening task. |
-| CaviraOSS/PageLM | 2,069 | `NOASSERTION` 🔴 | 2026-11-15 | Users exist; **licence does not auto-detect — re-read the bytes before naming it in a proposal.** |
+| ~~CaviraOSS/PageLM~~ 🔴 **REMOVED — NOT OPEN SOURCE** | 2,069 | 🔴 **"PageLM Community License"** — byte-read `LICENSE.md`, **8,563 B**, `sha256₁₂ c834209c5f33` | 2026-11-15 (alive, 55 commits/12mo) | 🔴 **The bytes were re-read, as this row instructed, and they are not MIT.** Non-commercial; redistribution prohibited; revenue-share required for commercial use; Partial Use Clause reaches a single snippet or design pattern. **Do not name it in a proposal at all.** See `intel/measured-unusable.md`. |
 | CAHLR/OATutor | 282 | MIT | 2026-11-17 | Small but alive, peer-reviewed, accessibility-conformant. The credible academic option. |
 | AI-for-Education/pedagogy-benchmark | 13 | MIT | 2026-11-16 → 🔴 **HEAD `2025-10-15`** | An eval harness, not a tutor — low stars are expected and not disqualifying. 🔴 **`p876` liveness correction: the `2026-11-16` push did not touch the default branch, whose last commit is `2025-10-15` — 398 days, `0` commits in 12 months.** It is still the right instrument to cite to a ministry (1,143 questions from real teacher-qualification exams); it is a **frozen** one. Say so in the proposal rather than implying an active leaderboard. |
-| wwrwbs/AI_AWE (ArguLens) | **2** | `NOASSERTION` 🔴 | 2026-07-29 | 🔴 **Two stars and no detectable licence.** Treat as a paper artifact, not a base. |
+| wwrwbs/AI_AWE (ArguLens) | **2** | 🟢 **Apache-2.0 — byte-read**, `LICENSE` **1,865 B**, `sha256₁₂ 4b5296db216d` | 2026-07-29 | 🟢 **`p877` licence correction: there IS a detectable licence and it is permissive.** The `NOASSERTION` came from the file's *shape*, not its absence — it is Apache-2.0 short-form **plus an in-file component manifest** (see below). Two stars still means paper artifact, not base: that half of the old verdict stands. |
 | PritK99/WriteRight | **1** | MIT | 2024-11-19 🔴 | Reference implementation only, as this file already said. Confirmed. |
 | littlecookie0722/AI-Teaching-Agent | **0** | MIT | 2026-08-23 | No community. Bespoke-from-zero risk profile. |
 | vulinh1704/ai-tutor-agent | **0** | MIT | 2026-11-16 | A starter template, as flagged. Confirmed by adoption. |
@@ -124,12 +162,16 @@ These are built for teaching and learning as their primary purpose.
 |---|---|---|---|---|
 | **DeepTutor** | https://github.com/HKUDS/DeepTutor | Apache-2.0 | `main` | Self-hosted lifelong tutoring agent from HKUDS (HKU Data Science lab). Grounds tutoring in the learner's own documents via LightRAG retrieval, tracks skill mastery, generates learning paths, narrated video lessons and question-bank practice. Ships a CLI "agent-native interface", desktop builds, Anki and calendar export, Kiwix offline-archive ingest, and an `EduHub` skills community. Release `v1.7.3` dated 2026-11-16 — weekly cadence. |
 | **OpenMAIC** | https://github.com/THU-MAIC/OpenMAIC | MIT | `main` | Multi-agent classroom from Tsinghua's MAIC lab. Generates a complete course — AI teacher plus AI classmate agents — from a topic or an uploaded document, with project-based learning (PBL v3), a foldered knowledge base with `@`-mention, course-level undo, and export to PPTX and HTML. Release `v1.5.0-rc.3` dated **2026-11-17** (today). Server-first: generation survives a closed tab. |
-| **PageLM** | https://github.com/CaviraOSS/PageLM | MIT | `main` | NotebookLM-style study platform: turns uploaded study material into quizzes, flashcards, notes and exam prep. Self-hostable. Smaller maintainer base than the two above — the README is actively recruiting volunteers. |
 | **OATutor** | https://github.com/CAHLR/OATutor | MIT | `main` | Open adaptive tutoring system from UC Berkeley's CAHLR. Intelligent-Tutoring-System design using **Bayesian Knowledge Tracing** for mastery estimation; React, deployable to static pages with no backend; LTI middleware for LMS integration. **Section 508 / WCAG compliant** — the only row here with a published accessibility conformance document. Peer-reviewed (CHI '23, doi:10.1145/3544548.3581574). |
 | **Pedagogy Benchmark** | https://github.com/AI-for-Education/pedagogy-benchmark | MIT | `main` | Not a tutor — the **evaluation harness for tutors**. 1,143 questions drawn from real teacher-qualification exams, split into CDPK (920, cross-domain pedagogical knowledge) and SEND (223, special educational needs and disabilities). Runs 100+ models, public leaderboards, paper arXiv:2506.18710. This is how you defend a tutoring claim to a ministry or a university procurement board. |
 | **AI Teaching Agent** | https://github.com/littlecookie0722/AI-Teaching-Agent | MIT | `main` | Instructor-side rather than learner-side: generates labs, exams, grading workflows and presentations with structured DSLs, human review, sandboxed evaluation, and CLI/MCP tools, local-first. **Maturity flag:** its own README states automatic-grading productisation is frozen, so treat grading as incomplete. |
 | **ai-tutor-agent** | https://github.com/vulinh1704/ai-tutor-agent | MIT | `main` | FastAPI + LangGraph starter for tutoring agents: Socratic hinting, rubric-based grading with structured output, session memory, offline demo mode. **Maturity flag: a starter template, not a product** — useful as a skeleton for a bespoke engagement, not as a platform. |
 | **TutorIA** | https://github.com/LabSirius/TutorIA | MIT | `main` | **New in `p873` — the first verified LATAM-origin education-native agent in this KB.** Autonomous tutor for **rural higher education in Risaralda, Colombia**, from Grupo Sirius at Universidad Tecnológica de Pereira; built to run inside **Open edX**. v2 backend: **Ollama-default inference via the OpenAI-compatible interface** (`llama3.2`), **pgvector + `nomic-embed-text` RAG**, an Open edX→PostgreSQL sync gateway on APScheduler, and pedagogical prompt templates held in the database. Tag `informe-minciencias-2026-09` — a funded deliverable reported to Colombia's science ministry. **Maturity flag, and it is the operative fact: `main` contains documentation only. The code is on `feature/refactor-to-v2-requirements`, it is backend-only, and the React frontend, Open edX plugin and test suite its README describes do not exist in any branch.** See below. |
+| **BloomTutor** 🟢 **RESTORED `p877`** | https://github.com/Li-Evan/BloomTutor | **MIT** — byte-read `main/LICENSE`, **1,069 B**, `sha256₁₂ 7d574cf3632e`, holder © 2026 Li Zhengping | `main` | **313★ / 44 forks. The single best-evidenced permissive tutor in this file after the two large platforms, and it was dropped by `p871` without a stated reason.** A personal tutor built explicitly on **Bloom's 2-sigma** framing: generates a structured syllabus, delivers **one lesson at a time**, reads the learner's annotations and feedback, and re-tailors the next lesson. Ships **both** a self-hosted web app (`backend/`, `frontend/`, `docker-compose.yml`) **and** a Claude Code skill (`.claude-plugin/`), plus a browser `extension/`, `integrations/` and `THIRD_PARTY_NOTICES.md`. 🟢 **Liveness re-measured `p877` by bare clone: HEAD `2026-11-17` (today), 84 commits in 12 months — the entire history is within the year.** Bilingual `README`/`GUIDE` (EN + zh). Filed **Global**: the holder name and Chinese-language docs are language evidence, not market evidence. |
+| **OpenTutor** 🟢 **RESTORED `p877`** | https://github.com/zijinz456/OpenTutor | **MIT** — byte-read `main/LICENSE`, **1,068 B**, `sha256₁₂ 5352b4967982`, holder © 2026 Zijin Zhang | `main` | **181★ / 47 forks.** A **block-based adaptive learning workspace that runs locally**: upload any material → AI-generated notes, quizzes, flashcards and an adaptive tutor, self-hosted, **10+ LLM providers**. 🟢 **Liveness `p877`: HEAD `2026-11-16`, 292 commits in 12 months** — the most actively developed small agent in this file. Engineering signals are unusually strong for this shelf: `.pre-commit-config.yaml`, `.gitleaks.toml`, `.secrets.baseline`, `.coveragerc`, `SECURITY.md`, `CODE_OF_CONDUCT.md`, `CHANGELOG.md`. 🔴 **Region REFUSED, not Global** (`p870`): the commit-identity channel returned `gmail.com` 42/50 and `anthropic.com` 6/50 — placeholder and AI-assistant identities, which carry no affiliation. **Do not cite a region for this row.** 🔵 Canonical among its fork set: `zijinz456/` supersedes `Pranjulcr7/OpenTutor` by ancestry, and `tutornew/OpenTutor` (8★, no licence) is a different project that a 2026 web sweep wrongly credited with this one's prominence. |
+| **Whiteboard AI Tutor** 🟢 **RESTORED `p877`** | https://github.com/molly554/whiteboard-ai-tutor | **MIT** — byte-read `main/LICENSE`, **1,089 B**, `sha256₁₂ ed7406a62bcb` | `main` | **216★ / 8 forks. Take it for the PROTOCOL and the BENCHMARK, not for the app — its own README says *"It is not a hosted tutoring app."*** Animated whiteboard lessons with interactive playback, and a published comparison of **Claude, Gemini and DeepSeek across 288 generation runs and 64 blueprints**. In-tree and load-bearing: `protocol/`, `bench/`, `scenarios/`, `results/`, `player/`, `audit.html`. 🟡 **Maturity flag, measured `p877`: 6 commits total** — a squashed or very young history, so treat the benchmark as a published artefact rather than a maintained leaderboard. Bilingual (EN + zh). |
+| **Open TutorAI (CE)** 🟢 **RESTORED `p877`** | https://github.com/Open-TutorAi/open-tutor-ai-CE | **BSD-3-Clause** — byte-read `main/LICENSE`, **1,531 B**, `sha256₁₂ 57c341d09920` | `main` | **118★ / 196 forks** — note the fork-to-star ratio, the highest in this file, which reads as classroom and downstream-deployment use rather than spectating. Community edition of an educational collaborative AI platform; substantial repo (`CHANGELOG.md`, `MIGRATION.md`, `TROUBLESHOOTING.md`, `SECURITY.md`, `Caddyfile.localhost`, `AGENTS.md`). 🔴 **Read past line 2 of the LICENSE before judging it:** the file opens *"Copyright (c) 2023-2025 Mohamed El hajji On behalf of all R2D-dev / All rights reserved."* — **that phrase is the BSD preamble, not a retraction**; the grant below it is BSD-3-Clause. This KB has twice mis-graded it (once as CC BY-NC-SA) on a two-line read. 🟡 **Liveness `p877`: HEAD `2026-06-26`, 91 commits in 12 months but none in ~5 months** — usable and permissive, but do not promise upstream responsiveness. |
+| **education-skills** 🟢 **RESTORED `p877`** | https://github.com/flysheep-ai/education-skills | **MIT** — byte-read `main/LICENSE`, **1,068 B**, `sha256₁₂ 23b91d7c0aef`, holder © 2026 flysheep-ai | `main` | **125★ / 24 forks.** Not an agent and not a platform — a **skills pack**: a collection of teaching and tutoring Claude Code skills (教育类 Claude Code Skills 集合), organised as five subject tutors for the Chinese **gaokao** (`gaokao-chinese-tutor`, `-english-`, `-science-`, `-liberal-arts-`, `-general-tech-`) plus `package-skills.sh` and `PACKAGING.md`. 🟡 **Liveness `p877`: HEAD `2026-01-29`, 4 commits total** — effectively frozen. **Its value is as a worked example of exam-aligned pedagogical prompt packaging under a permissive licence, not as a dependency.** Filed **Global** on the same language-is-not-market rule as BloomTutor. |
 
 **8 education-native rows.** That is what verified; the table is not padded to a round
 number. See the declared gap below on what is missing.
@@ -174,6 +216,28 @@ permissive system. The table is one row long because one row verified.
 |---|---|---|---|---|
 | **ArguLens** | https://github.com/wwrwbs/AI_AWE | Apache-2.0 | `main` | Automated essay scoring **with label-aware feedback** for argumentative essays. Scores 1–6, labels every sentence as `claim`/`data`/`counterclaim`/`rebuttal`, and generates written feedback. Three decoupled parts: a fine-tuned **Qwen2.5-7B LoRA** discourse classifier (`infer/infer_qwen.py`), a **grade-independent LightGBM scorer over 31 linguistic/discourse features** (`scoring_pipeline/scorer.py`) — not an LLM — and a feedback generator on local Qwen2.5-14B-Instruct via vLLM (`feedback/`). Gradio UI with batch upload and JSON/CSV/Markdown export; `hf`/`vllm`/`api` backends; `pytest` suite. Paper arXiv:2608.17356 (18 Aug 2026). |
 | **WriteRight** | https://github.com/PritK99/WriteRight | MIT | `main` | Minimal MIT essay scorer (1–10 across several criteria). Lightly maintained — a reference implementation to read, not a base to build on. |
+
+🟢 **`p877` — what the ArguLens `LICENSE` actually contains, and why it matters commercially.**
+The 1,865-byte file is Apache-2.0 short-form **followed by a component manifest** — which is why
+GitHub returns `NOASSERTION` on an otherwise clean permissive grant. The manifest is the useful
+part, because it discloses what you would and would not be allowed to ship:
+
+| Component | Grant as stated in-file | Consequence for a build |
+|---|---|---|
+| Project source, **LoRA adapters**, LightGBM scorer | Apache-2.0 | Shippable. The adapters being in-scope is the unusual and valuable part. |
+| `TextComplexityToolkit` (vendored under `essay_score/scoring_pipeline/`) | **MIT** | Shippable; vendored in-tree, so no resolution step. |
+| `TAALED` (inside the toolkit) | "permissive; see notice" | 🟡 Not named to an SPDX id — read it before redistribution. |
+| **Qwen2.5-7B-Instruct** base model | Apache-2.0, **obtained separately from Hugging Face; NOT redistributed** | You must acquire the weights yourself; they are not in the grant you receive here. |
+| **Persuade 2.0 corpus** | original **academic-use** licence, **NOT redistributed** | 🔴 **The training corpus is academic-use.** Re-fitting on client data is not optional polish — it is how you avoid inheriting a non-commercial data grant. |
+
+🔴 **The file also carries an explicit bias NOTICE, and it should be quoted into any assessment
+proposal rather than paraphrased:** AES systems *"may exhibit biases inherited from their training
+data (e.g., Persuade 2.0 consists of US middle-school argumentative essays)"* and the software is
+*"intended for research and assistive use, not for high-stakes automated decisions without human
+oversight."* Under the EU AI Act, **scoring exams is Annex III high-risk** — so the upstream
+author's own notice and the regulator's classification agree, and a human-review gate is mandatory
+either way. See `compose/patterns.md` **P2** and **P4**.
+
 
 **Why ArguLens is worth the attention and the dozen other "AES" repos are not.** The score comes
 from a **feature-based LightGBM model, not a language model**. That makes it inspectable,

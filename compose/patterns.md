@@ -6,7 +6,24 @@ updated: 2026-11-17
 
 # Compose patterns — education
 
-**Pass `p876`, 2026-11-17** (sixth pass of the day). **Fourteen recipes** — `p876` adds **P14**,
+**Pass `p877`, 2026-11-17** (seventh pass of the day). **Sixteen recipes** — `p877` adds **P15**
+(the consent-and-opt-out spine, driven by a new US statute) and **P16** (permissive SIS
+modernisation, newly possible), and **repairs P5**, whose offline stack was assembled without the
+largest permissively licensed offline education server in the index.
+
+> 🔴 **P5 repaired.** It specified Kiwix (**GPL-3.0**) and Internet-in-a-Box (**LGPL**) as the
+> offline substrate while [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad)
+> — **Apache-2.0, 43,849★, 4,526 forks, 813 commits/12mo** — sat unshelved in this KB's sweep logs.
+> **A ministry deliverable built on the old stack inherits copyleft obligations it never needed to.**
+> P5 now leads with NOMAD and keeps Kiwix/IIAB as the fallback they should always have been.
+
+> 🔴 **No pattern in this file ever depended on PageLM, which is the only reason `p877` is not
+> rewriting several of them.** PageLM's licence prohibits redistribution and requires a
+> revenue-share (`intel/trends.md` **T14**) — it was in `agents/top.md` as `MIT` for fourteen months.
+> 🔵 **Standing rule for this file: a component enters a stack table only with its licence
+> byte-read, because a pattern is the artefact that gets handed to a client as a build plan.**
+
+**Previous pass note (`p876`)** (sixth pass of the day). **Fourteen recipes** — `p876` adds **P14**,
 the measurement spine, and **repairs the telemetry row in P1, P7 and P9**, which until this pass
 pointed every measurement promise in this file at a Learning Record Store whose default branch
 last moved in **November 2021**.
@@ -222,7 +239,8 @@ different architecture rather than a cheaper version of the online one.
 | Layer | Component | Licence |
 |---|---|---|
 | Learning platform | https://github.com/learningequality/kolibri | MIT |
-| Offline server bundle | https://github.com/iiab/iiab | LGPL |
+| **Offline education server (lead)** 🟢 **new `p877`** | https://github.com/Crosstalk-Solutions/project-nomad | **Apache-2.0** |
+| Offline server bundle (fallback) | https://github.com/iiab/iiab | LGPL |
 | Offline corpus | https://github.com/kiwix/kiwix-tools | GPL-3.0 |
 | Local model | https://github.com/ollama/ollama | MIT |
 | Tutor | https://github.com/HKUDS/DeepTutor (ingests Kiwix archives natively) | Apache-2.0 |
@@ -234,6 +252,26 @@ ZIM archives supply the offline corpus — and **DeepTutor already ingests Kiwix
 which is the connection that makes a genuinely offline tutor possible rather than a degraded
 online one. Ollama runs a small quantised model locally. FSRS schedules review so that scarce
 device time is spent on what the learner is about to forget.
+
+🟢 **`p877` revision — lead with Project NOMAD, and the reason is the licence, not the features.**
+NOMAD ships the whole offline appliance Internet-in-a-Box ships (content library, admin UI,
+installer, Docker) **under Apache-2.0 instead of LGPL**, and bundles Wikipedia, books, courses,
+maps **and optional local AI** in one deployable unit. For a ministry programme that is the
+difference between a product you can **rebrand and redistribute as the ministry's own** and one
+that carries copyleft obligations into the deliverable. **4,526 forks against 43,849 stars** is the
+adoption evidence — on an appliance repo, forks are deployments.
+
+**Revised wiring.** Project NOMAD is the school-site server and content plane. **Kolibri stays**
+where the client needs its learner-progress and sync model, and **Kiwix ZIM archives stay in the
+pipeline for one specific reason: DeepTutor ingests them natively**, which is what makes the tutor
+genuinely offline rather than a degraded online one. Ollama runs a small quantised model on the
+box; NOMAD's "optional local AI" slot is where it lands. FSRS schedules review so scarce device
+time goes to what the learner is about to forget.
+
+🟡 **Licence note to put in the statement of work:** NOMAD is Apache-2.0, but Kiwix (GPL-3.0) and
+Kolibri (MIT) are separate components. **Keep them as separate processes exchanging files and HTTP
+— do not statically link or vendor the GPL-3.0 pieces into a rebranded binary**, or the copyleft
+you avoided by choosing NOMAD comes back at integration.
 
 **Design constraint:** pick the model to fit the hardware first, then design the pedagogy
 around its real latency. Everything syncs opportunistically when a link appears; nothing
@@ -779,6 +817,111 @@ with reporting. *Studio-delivery estimate, not a measurement.*
 
 ---
 
+## P15 — Consent, opt-out and "not the primary basis": the spine US state law now requires — new in `p877`
+
+**Sell to:** North America (Alabama first, then every state that copies it), and reusable wherever
+a parental-rights or learner-consent regime appears. **Effort: 4–6 weeks** on top of an existing
+deployment; **1–2 weeks** if retrofitted before an LRS goes in, which is the whole point.
+
+**Why now.** Alabama **H.B. 1227** does two things no education AI stack is built for: it bars AI
+from being **the primary basis for grading, discipline or placement**, and it gives parents an
+**opt-out from student-facing AI tools**. California **AB 1159** adds a third: **student data may
+not be used to train AI models**. 🔴 **These are architecture requirements, not policy documents.**
+An opt-out that must reach every agent, every log line and every telemetry record cannot be bolted
+on after a Learning Record Store is populated — by then the records exist.
+
+| Layer | Component | Licence |
+|---|---|---|
+| Consent store (source of truth) | https://github.com/Gego-K12/gegok12 (SIS holds the per-student flag) | **MIT** |
+| Policy gate in the agent graph | https://github.com/langchain-ai/langgraph | MIT |
+| Model routing + **no-train enforcement** | https://github.com/BerriAI/litellm | MIT |
+| Local inference (the AB 1159 answer) | https://github.com/ollama/ollama · https://github.com/vllm-project/vllm | MIT · Apache-2.0 |
+| Telemetry with consent attached | https://github.com/yetanalytics/lrsql | Apache-2.0 |
+| Human-review trail | https://github.com/openedx/edx-ora2 | AGPL-3.0 (self-hosted) |
+| Review-queue UI | https://github.com/HumanSignal/label-studio | Apache-2.0 |
+| Regression tests on the gate | https://github.com/promptfoo/promptfoo | MIT |
+
+**Wiring.**
+
+1. **The consent flag lives in the SIS, not in the AI stack.** `gegok12` (MIT, API-first) holds
+   `ai_opt_out` per student; being permissive, you can add the field and ship the result. Every
+   other component reads it over the API — one source of truth, auditable, and it survives you
+   replacing the tutor.
+2. **LangGraph makes the gate a node, not a prompt.** A `consent_check` node runs before any
+   learner-facing generation and returns a non-AI path (teacher queue, static resource) on opt-out.
+   🔵 **Expressing it as a graph node is what makes it auditable** — you can point a regulator at
+   the edge, and `promptfoo` can regression-test it.
+3. **"Not the primary basis" is a two-signal rule.** Any grade, placement or discipline
+   recommendation must carry a second, **non-LLM** signal plus a recorded human decision.
+   `edx-ora2` supplies the rubric and staff-grading workflow; `label-studio` is the reviewer UI.
+   🟢 **ArguLens is the strong fit here precisely because its scorer is LightGBM over 31 explicit
+   features, not an LLM** — a reproducible non-LLM signal is exactly what the statute wants, and
+   its own licence NOTICE says not to use it for high-stakes decisions without human oversight.
+   **Re-fit it on the client's graded corpus**: its shipped model is trained on Persuade 2.0, which
+   is US middle-school essays under an academic-use grant.
+4. **AB 1159 is enforced at the transport.** LiteLLM is the single egress point; pin providers
+   whose terms forbid training, and for anything sensitive route to `ollama`/`vllm` so the data
+   never leaves. **One config change, not an application rewrite** — which is the argument for
+   putting LiteLLM in on day one even when the client starts with a hosted model.
+5. **Consent must be a dimension of the telemetry, not a filter over it.** Write the consent state
+   onto every xAPI statement at emission time in `lrsql`. 🔴 **Deleting records later is not
+   equivalent and will not satisfy an auditor** — it cannot prove the record should never have
+   existed.
+
+**What to tell the client plainly.** North Carolina's Session Law 2026-41 sets **`2026-12-31`** for
+a state model policy and **`2027-06-30`** for local policies; Alabama-shaped rules are the ones
+that change the build. **Do the consent spine first.** It is cheap before the LRS and expensive
+after, and it is the piece that makes the other fourteen patterns in this file sellable in a
+regulated US district.
+
+---
+
+## P16 — Permissive SIS modernisation: records, then AI — new in `p877`
+
+**Sell to:** any region where the deliverable must be **rebrandable** — EMEA sovereignty-scored
+public bids, LATAM multi-country ministry programmes, private school groups. **Effort: 10–14 weeks.**
+
+**Why this did not exist until now.** Every SIS this KB had verified was copyleft (Gibbon GPL-3.0,
+RosarioSIS GPL-2.0, openSIS with no licence file at all), so "modernise the student-records layer
+and put AI on it" could not be offered as a product a studio owns.
+🟢 **[`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) is MIT** (byte-read, 1,150 B,
+`sha256₁₂ b8694396d7dc`), Laravel, **API-first**, Dockerised, with Android parent and teacher apps.
+
+| Layer | Component | Licence |
+|---|---|---|
+| SIS core (fork and own) | https://github.com/Gego-K12/gegok12 | **MIT** |
+| Standards seam | https://github.com/Cvmcosta/ltijs | Apache-2.0 |
+| K-12 data interop (US) | https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS | Apache-2.0 |
+| Telemetry | https://github.com/yetanalytics/lrsql · https://github.com/openfun/ralph | Apache-2.0 · MIT |
+| Early-warning signal | https://github.com/openedx/openedx-aspects | Apache-2.0 |
+| Model access | https://github.com/BerriAI/litellm | MIT |
+| Agent orchestration | https://github.com/langchain-ai/langgraph | MIT |
+| Durable long-running jobs | https://github.com/temporalio/temporal | MIT |
+
+**Wiring.** Fork `gegok12` and treat it as **your** codebase — that is what MIT buys, and it is the
+entire reason this pattern exists. Keep its API-first contract and add the AI surface **beside** it,
+not inside it: `ltijs` gives LTI 1.3 launches so the records layer and any LMS interoperate;
+`Ed-Fi-ODS` is the district-facing data standard in the US; `lrsql` or `ralph` holds learner
+telemetry (choose **`ralph`** for an EU bid — MIT, from France Université Numérique, with Open edX
+tracking-log→xAPI converters in-tree). `openedx-aspects` supplies the analytics layer for
+early-warning signals. Temporal runs the term-long and overnight jobs; LangGraph expresses the
+intervention policy as auditable nodes; LiteLLM keeps the model swappable for a later sovereignty
+mandate.
+
+🔴 **State the maturity honestly, because the licence is the strength and the community is not.**
+`gegok12` is **57★ with HEAD `2026-06-25`** — 113 commits in the last 12 months but nothing for
+~5 months. **This is an adopt-and-own engagement, not joining a thriving upstream.** Price the
+ownership: you are taking on maintenance of the records layer. 🔵 **That is also the pitch** — the
+client gets a student-records system no vendor can revoke, relicense or price-raise, which is
+precisely what the EU Council's "reduce dependencies on non-European technology" language asks
+for and what no copyleft or SaaS option can offer.
+
+🟡 **Do P15 before the AI layer** if the deployment is in the US; the consent flag belongs in this
+SIS, and adding it here is a one-field change while it is still your fork and before telemetry
+accumulates.
+
+---
+
 ## Pattern selection by region
 
 | Region | Lead with | Because |
@@ -787,7 +930,16 @@ with reporting. *Studio-delivery estimate, not a measurement.*
 | EMEA | 🟢 **P11 first**, then P4, then **P10**, then P1 | 🟢 **`p874` reorders this row: lead with P11.** The AI-literacy duty on deployers 🔴 **has applied since 2 February 2025 (`p875` correction — `p874` said July 2026)**, and **Article 50 transparency for chatbots and generated content went live 2 August 2026**, so TWO duties are already in breach today while the high-risk tier is deferred to **2 Dec 2027** — so P11 is the engagement with a *live* duty, a **measured 32-point deficit** (79% of European students use AI, 47% were shown how) and a **published standard** (EC/OECD AILit, 19 competences). It is also the on-ramp to P4 for the same buyer. Then: Article 50 disclosure is live (2 Aug 2026), the education high-risk tier lands 2 Dec 2027, and institutions are declining to renew commercial AI contracts. **P10** because the European Accessibility Act is already in force and EN 301 549 is realigning to WCAG 2.2 AA — and only one agent in this KB carries a conformance statement. For Gulf engagements, KHDA has already published school-level guidance, so lead with compliance implementation rather than policy authorship. For African engagements, the integration surfaces are Chamilo and Kolibri (**P5**), and regional code is largely unlicensed (**T10**) — so lead with licensing and partnership, not a fork. |
 | APAC | **P8**, then P3, then **P12** | 🟢 **`p874` puts a dated deadline behind this row.** Vietnam's **Law No. 134/2025/QH15** has been in force since **1 Mar 2026** and existing **education** systems must comply by **1 September 2027** — **three months before the EU's 2 Dec 2027**, making it the nearest hard deadline in education AI. **Decision 33/2026/QD-TTg** (46 high-risk systems, effective 15 Aug 2026) is a published specification with a human-review carve-out, and **MOET Decision 2422** mandates 12 periods of AI content per class per year for grades 1–12. South Korea's AI Basic Act has been in force since 22 Jan 2026. P3 for national-programme scale. |
 | LATAM | **P9**, then P2 and P5, then P7, then **P12** | **P9** is new and leads now: TutorIA is MIT, Colombian, Spanish-language, rural-first and ministry-funded — the only LATAM-origin base this KB has verified, and provenance counts in a public evaluation. LGPD automated-decision review is already binding. **87%** of institutions use AI, **26%** have a strategy and **9%** evaluate — so P7's measurement layer is the gap, and P2 must budget re-fitting ArguLens for Spanish and Portuguese. |
-| Global | P6, then P7 | The governance gap is universal (only **31%** of faculty are meaningfully involved in AI policy) and nobody is measuring outcomes. |
+| Global | P6, then P7, then **P14** | The governance gap is universal (only **31%** of faculty are meaningfully involved in AI policy) and nobody is measuring outcomes. |
+
+🟢 **`p877` amendments to the rows above — two regions change their lead:**
+
+| Region | Change |
+|---|---|
+| **North America** | 🔴 **Insert P15 ahead of P13.** P13 sells conformance against a published calendar; **P15 is the build the calendar now requires.** Alabama H.B. 1227 (AI may not be the primary basis for grading/discipline/placement, **plus parental opt-out**) and California AB 1159 (**no training on student data**) are architecture mandates, and the consent spine is cheap before an LRS and expensive after. Sell P15, then P13 against North Carolina's `2026-12-31` / `2027-06-30` dates. |
+| **LATAM** | 🟢 **P6 moves up to joint-first with P9.** `p877` quantified the arbitrage: **87% of LATAM higher-education institutions use AI, 26% have a strategy** (UNESCO IESALC, 19 countries); Brazil's schools show the same shape at **53% vs 22%** (Cetic.br). **Selling a tutor into an institution with 87% shadow adoption and no policy is selling what it already has.** Governance console first, then P9, then P5 — which `p877` repaired onto an Apache-2.0 offline base. |
+| **EMEA** | Unchanged (**P11** still leads — the literacy duty is in force, high-risk is `2027-12-02`), but 🟢 **P16 is newly available** where the bid scores *rebrandability* and non-EU dependency: a **permissive** SIS now exists. |
+| **APAC** | Unchanged (**P8** leads on Vietnam's 18-month education transition), with one addition: 🔴 **India's content-provenance mandate has been in force since `2026-02-20`** and binds AI-generated teaching material — scope artefact-level labelling into P3 for any India delivery. |
 
 **If you read only one line of this file:** the two patterns no competitor is selling are **P7**
 (outcome evidence about the client's own students) and **P8** (de-escalating out of a statutory

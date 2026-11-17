@@ -6,7 +6,44 @@ updated: 2026-11-17
 
 # Foundational repos — education
 
-**Pass `p876`, 2026-11-17** (sixth pass of the day). **`p876` is a propagation audit, not a
+**Pass `p877`, 2026-11-17** (seventh pass of the day). **`p877` closes a declared gap that has
+stood in this file since `p872`, and adds the largest permissive education repository the KB has
+ever failed to shelve.**
+
+> **🟢 THE "NO PERMISSIVE SIS" GAP IS CLOSED. [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12)
+> is MIT** — byte-read on `main`, **1,150 B**, `sha256₁₂ b8694396d7dc`, first line `MIT License`.
+> A full-featured school management system in **Laravel**, API-first, Dockerised, with companion
+> Android parent and teacher apps. **113 commits in the last 12 months.** Every SIS this KB had
+> until now (Gibbon GPL-3.0, openSIS GPL-by-README-only, RosarioSIS GPL-2.0) was copyleft.
+>
+> 🔵 **Why four passes missed it, and this is a new method lesson:** the GitHub API reports
+> `NOASSERTION` for this repository, because **line 3 of its `LICENSE` is
+> `<!-- SPDX-License-Identifier: MIT -->`** — an added line that breaks stock-text matching. The
+> detector was never saying "no grant"; it was saying "not byte-identical to a template".
+
+> **🔴 `NOASSERTION` CARRIES ZERO INFORMATION ABOUT THE GRANT, and `p877` proves it with three
+> repositories in one pass that share the signal and share nothing else:**
+>
+> | Repository | GitHub says | Bytes say | Verdict |
+> |---|---|---|---|
+> | `Gego-K12/gegok12` | `NOASSERTION` | MIT + an SPDX comment line | 🟢 **Permissive — more usable than it looked** |
+> | `wwrwbs/AI_AWE` | `NOASSERTION` | Apache-2.0 short-form + component manifest | 🟢 **Permissive — and the manifest is itself useful** |
+> | `CaviraOSS/PageLM` | `NOASSERTION` | bespoke non-commercial "Community License" | 🔴 **Not open source at all** |
+>
+> Three identical signals, three different commercial answers. **The detector collapses "more
+> permissive than it looks", "fine but annotated" and "not open source at all" into one token.**
+> Registered as `intel/trends.md` **T14**. This is the mirror image of `p872`'s substring-grep
+> lesson: that one produced false *alarms*, this one produces false *absences* — and a false
+> absence is worse, because nobody re-checks a repository already written off.
+
+> **🔴 [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad)
+> — Apache-2.0, 43,849★, 4,526 forks, 813 commits in 12 months — appeared in ZERO curated files
+> before this pass.** It is the **second-largest education-native repository in this entire KB**,
+> behind only DeepTutor, and it sat only in sweep logs and archives. Added below, to
+> `verticals/solutions.md`, and wired into `compose/patterns.md` **P5**, whose offline stack was
+> built without it.
+
+**Previous pass note (`p876`)** (sixth pass of the day). **`p876` is a propagation audit, not a
 discovery pass**, and it closes the gap `p875` opened one pass earlier — *in the same pass that
 `p875`'s own sweep had already measured the answer*.
 
@@ -137,6 +174,17 @@ path" is a prompt, not a data structure.
 client needs to own and redistribute a prerequisite taxonomy, it is bespoke work — and `os-taxonomy`
 is still the best thing to read first when scoping it.
 
+## Permissive institutional platforms — new in `p877`
+
+Rows measured first-hand this pass: existence and default branch by `git ls-remote --symref`,
+licence by byte-read on `raw.githubusercontent.com`, traction by `search/repositories`, liveness
+by blobless bare clone (`git log -1 HEAD`), per the `p876` method.
+
+| Repo | Licence (byte-read) | Branch | ★ | HEAD | Commits/12mo | Why it is here |
+|---|---|---|---:|---|---:|---|
+| https://github.com/Crosstalk-Solutions/project-nomad | **Apache-2.0** (10,778 B) | `main` | **43,849** | 2026-11-08 | **813** | **Offline-first knowledge and education server** — Wikipedia, thousands of books, courses, maps and **optional local AI**, all served from one box with no internet. Apache-2.0, Dockerised, `collections/`, `admin/`, `install/` in-tree, semantic-release. **4,526 forks** is the number that matters: forks of an appliance repo are deployments, not stars. This is the natural substrate for every ministry equity programme and rural-school bid in `compose/patterns.md` **P5**, and it is permissive where Internet-in-a-Box (LGPL) and Kiwix (GPL-3.0) are not. |
+| https://github.com/Gego-K12/gegok12 | **MIT** (1,150 B, `sha256₁₂ b8694396d7dc`) | `main` | 57 | 2026-06-25 | 113 | **The first permissive student-information system in this KB** — closes the standing gap below. Laravel/PHP, **API-first by design** (`api.md` in-tree), `Dockerfile` + `docker-compose.yml`, `lang/` for localisation, plus separate Android **parent** and **teacher** apps. 🟡 **Low stars and HEAD five months cold** — this is a small project, and it should be proposed as *a permissive base you will own and extend*, not as a mature product with a community behind it. Its value is the licence: it is the only SIS here you can fork, rebrand and ship inside a proprietary deliverable. 🔴 GitHub reports `NOASSERTION`; the bytes say MIT. |
+
 ## Document & media ingestion — the real bottleneck in education AI
 
 Education content arrives as PDFs, scanned worksheets, lecture video and textbooks. Ingestion
@@ -188,10 +236,20 @@ canonical address and `wwrwbs/AI_AWE` added by `p872`).
   the *platform* layer (see `verticals/solutions.md`) is overwhelmingly GPL/AGPL. A Globant
   engagement should expect to build permissive AI services that **integrate with** copyleft
   platforms over LTI/xAPI rather than forking them.
-- **No open-source student-information system with a permissive licence was found.** Both
-  verified SIS options (Gibbon GPL-3.0, openSIS-Classic GPL) are copyleft, and
-  `OS4ED/openSIS-Classic` has **no licence file in its repository at all** — its GPL claim
-  appears only in the README. Flagged, not treated as a clean grant.
+- ~~**No open-source student-information system with a permissive licence was found.**~~
+  🟢 **CLOSED by `p877`: [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) is MIT at the
+  bytes** (1,150 B, `sha256₁₂ b8694396d7dc`) — a Laravel, API-first, Dockerised school management
+  system with companion Android apps, 113 commits in 12 months. It is **small** (57★) and its HEAD
+  is five months old, so the gap closes on *licence*, not on *maturity*: the honest statement to a
+  client is "the only permissive SIS base exists and you would be adopting it, not joining it."
+  The copyleft options remain what they were — Gibbon GPL-3.0; RosarioSIS GPL-2.0 (default branch
+  **`mobile`**); and `OS4ED/openSIS-Classic` has **no licence file in its repository at all**, its
+  GPL claim appearing only in the README, so that one is still not a clean grant.
+- 🔵 **A `NOASSERTION` from the GitHub licence API is not evidence of anything** — see the T14 table
+  at the top of this file. `p877` found one permissive-with-an-added-line, one
+  permissive-with-a-manifest and one genuinely proprietary repository behind the same token. **Any
+  row this KB ever wrote off as "no licence" on API evidence alone must be re-read at the bytes
+  before it is treated as unusable.**
 - `apereo/opencast-admin-interface` **does not exist** (`git ls-remote` returned nothing). The
   real address is `opencast/opencast`, and `p872` adds its default branch: **`develop`**, not
   `main`, licence **ECL-2.0**. A clone pinned to `main` fails outright.
