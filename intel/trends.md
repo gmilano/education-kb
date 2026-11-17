@@ -6,7 +6,9 @@ updated: 2026-11-17
 
 # Current trends — education AI
 
-**Pass `p879`, 2026-11-17** (ninth pass of the day). `p879` adds **T16** — measured per
+**Pass `p880`, 2026-11-17** (tenth pass of the day). `p880` adds **T17** — restored, and under a new number: an agent mounted on an incumbent system **inherits its authority and none of its defences**, a clause `gate-prose-claims` had been reporting lost since the `p871` rewrite, whose original slot `T15` `p878` had meanwhile reassigned — and **T18**, the category `T7` and `T16` both omit: **a third of this vertical's open-source estate carries no grant at all**, measured over a real denominator of `2,574` repositories rather than a top-40 sample.
+
+**Previous pass (`p879`), retained:** **Pass `p879`, 2026-11-17** (ninth pass of the day). `p879` adds **T16** — measured per
 organisation, **the permissive/copyleft fault line runs *inside* the big projects, not between
 them**, which reverses how `T7` has been applied. It also **closes the measurement gap `p878`
 opened** (the `openedx/edx-platform` `422` was a rename this KB settled in `p606`, not a channel
@@ -94,6 +96,14 @@ origin and its licensing. Each trend is tied to something measured or verified; 
 available support is a vendor blog or a search summary, that is stated. **Note this pass's
 evidential split:** repository claims were verified first-hand, while every trial, survey and
 regulatory date is a search-engine summary of a page no channel in this session could open.
+
+## 🆕 `p880` · 2026-11-17 — what changed on this shelf
+
+🟢 **`T17`** — restored under a new number: an agent mounted on an incumbent system **inherits its
+authority and none of its defences**. Registered as `T15-INTEGRATION-AUTHORITY`, lost in a rewrite,
+and its original slot reassigned by `p878`. 🟢 **`T18`** — **a third of this vertical's open-source
+estate (`32.7%` of `2,574` repositories) carries no grant at all**, the category `T7` and `T16` both
+omit, visible only once the census had a real denominator.
 
 ## T1 — The education-native agent has arrived, and it came from university labs
 
@@ -628,6 +638,76 @@ just at the component layer, where it is easy to miss if you only ever look at t
 repository. 🔵 **Both findings come from the same cause: institutions license for adoption, and
 adoption happens at the interface.**
 
+
+## T17 — An agent mounted on an incumbent system inherits its authority and none of its defences — RESTORED in `p880` (registered as `T15-INTEGRATION-AUTHORITY`)
+
+🔴 **This trend was lost twice and is restored here under a NEW NUMBER, because its old one was
+reassigned.** `gate-prose-claims` registers the clause as `T15-INTEGRATION-AUTHORITY` against this
+file; `p534` restored it once; a later rewrite dropped it again; and 🔴 **`p878` then gave `T15` to a
+different trend entirely** (*the permissive supply is produced by public universities*). **The claim
+id in the register therefore names a trend number that no longer points at it.** 🔵 **The lesson for
+the register: key a claim on its CONTENT, never on a slot number that a later pass can reuse.** The
+id is kept as-is so the audit trail survives; the trend lives at `T17`.
+
+🟢 **The claim, in one clause:** **the integration layer inherits the authority** of the system it
+attaches to, **and none of its defences**.
+
+🔵 **Why that is not a truism.** An MCP server or LTI tool mounted on an LMS speaks with a teacher's
+or an administrator's token, so it can grade, enrol and message. Meanwhile the LMS's own consent
+flows, audit trail, rate limits and permission prompts sit on the **web** path — the path the agent
+does not use. The institution's controls are real and the agent is simply not behind them.
+
+🔴 **The consequence this KB grades on.** Every bridge on these shelves is judged on its **write
+model** — default-off, course allow-list, `confirm=true` on grade and enrolment calls — **and never
+on its tool count.** A bridge advertising 128 tools with an unscoped token is a worse starting point
+than one with twelve and a confirmation step. See [`compose/patterns.md`](../compose/patterns.md)
+**P21**, which specifies the read and write servers as two separate mounts for exactly this reason.
+
+🔵 **Relation to the other trends.** `T12` says the integration layer is where education AI actually
+ships; `T17` says what that costs. 🟢 **And `p880` adds a concrete instance:** the four `canvas-mcp`
+advisories are **absent from the global GitHub Advisory Database**, so the inherited risk is also
+**invisible to the client's scanner** — the authority is inherited silently and the warning does not
+arrive with it.
+
+## T18 — A third of the education open-source estate carries **no grant at all**, and that is a worse problem than copyleft — new in `p880`
+
+🟢 **The claim, measured:** across **`2,574` source repositories at `31` education owners**, swept to
+exhaustion this pass, **`842` — `32.7%` — have no licence file and no SPDX grant.**
+([`record`](../evidence/org-estate-full.2026-11-17-p880.tsv); method on
+[`repos/trending.md`](../repos/trending.md) `p880`.)
+
+🔴 **"No licence" is not a milder version of AGPL-3.0. It is stricter than any licence on these
+shelves.** Default copyright applies: all rights reserved. There is no grant to comply with, no
+compliance posture that makes it usable, and **no amount of engineering care converts it into
+something a client can ship.** A GPL-3.0 repository tells you what you must do; an unlicensed one
+tells you that you may not.
+
+🔵 **Why this trend could not be seen before `p880`.** Every previous census here was a top-40-by-
+stars sample, and **the no-licence population lives in the tail**. The most-starred repository of an
+organisation almost always has a licence; its 90th has a `35%` chance of carrying nothing. `T7` and
+`T16` describe where the *permissive/copyleft* line falls. **`T18` is about the third category both
+of them omit.**
+
+| Owner | No-grant share | Why it matters commercially |
+|---|---:|---|
+| 🔴 `IONISx` | **`100%`** (`23`/`23`) | An entire EMEA estate with no grant anywhere. |
+| 🔴 `sakaiproject` | `79%` | Licensed ECL-2.0 core, unlicensed periphery. |
+| 🔴 `moodlehq` | `76%` | Moodle HQ's own tooling. |
+| 🔴 `h5p` | `70%` | 🔴 **The sharpest case:** `p879` filed H5P's *content types* as its permissive surface, and `70%` of the estate carries nothing. **Check an H5P content type individually; never adopt by family.** |
+| 🟢 `openedx` | `11%` | 🔵 The most licence-disciplined large estate measured — `89%` of `174` repositories state a grant. |
+
+🟢 **The operational rule this produces, and it is cheap:** before any component is proposed,
+**require a grant to be present, not merely to be permissive.** This base's standing rule is that
+`spdx_id` screens and bytes decide; `T18` adds the prior step — **a missing `spdx_id` is as likely to
+mean "nothing was ever granted" as "the classifier abstained"**, and those two need different
+handling. `p880` tested both directions on the two highest-star education ERPs and the bytes
+confirmed the existing verdicts rather than overturning them: `openeducat_erp` is LGPL, and
+`frappe/education`'s entire grant is a **`19`-byte** file reading `License: GNU GPL V3` —
+declaration-only, naming a family while shipping none of its text.
+
+🔵 **Relation to the other trends.** `T7` and `T16` say *which* grant you get and where the line
+falls. `T18` says **how often there is no line to fall on** — and that the answer is roughly one
+repository in three.
 
 ## Declared gaps
 ### 🟢 `p879` — declared

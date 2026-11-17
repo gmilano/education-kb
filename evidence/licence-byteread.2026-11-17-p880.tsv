@@ -1,0 +1,11 @@
+repo	default_branch	branch	path	http	bytes	sha256_12	families	verdict	note
+openeducat/openeducat_erp	19.0	19.0	LICENSE	200	8241	528f84036800	LGPL	LGPL	
+frappe/education	develop	develop	license.txt	200	19	1fcecf395312	none	DECLARATION-ONLY	19 B, names a licence but carries NO licence text: License: GNU GPL V3
+OpenOLAT/OpenOLAT	master	master	LICENSE	200	10982	6dbc5b605ed0	Apache-2.0	Apache-2.0	
+apereo/java-cas-client	master	master	LICENSE	200	2321	6c21b465e3a0	Apache-2.0+BSD	CONJUNCTIVE	two or more LIVE families in one payload — notice obligation of 2
+instructure/instructure-ui	master	master	LICENSE.md	200	1175	9773f00c68af	MIT	MIT	
+instructure/common-cartridge-viewer	master	master	LICENSE	200	1074	21f8b02800eb	MIT	MIT	
+mitodl/ol-infrastructure	main	main	LICENSE	200	1529	88bb0e3a8731	BSD	BSD	
+openfun/marsha	master	master	LICENSE	200	1078	6dab88f38735	MIT	MIT	
+openfun/richie	master	master	LICENSE	200	1079	e4b2a3148135	MIT	MIT	
+vishalsachdev/canvas-mcp	main	main	LICENSE	200	1071	5385a26e2fac	MIT	MIT	

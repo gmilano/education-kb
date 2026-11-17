@@ -97,6 +97,16 @@ existed. They do, and they are below.** That gap is now largely closed, and the 
 from UNESCO IESALC, the Digital Education Council, Ipsos, Tyton Partners and Inside Higher Ed
 rather than from market-research aggregators.
 
+## 🆕 `p880` · 2026-11-17 — what changed on this shelf
+
+🟢 **Six registered load-bearing claims restored** after `gate-prose-claims` found them surviving
+only in `archive/`: Singapore's agentic-AI framework and AI Verify, Vietnam's Decision 33
+corpus-provenance limb, and the three LATAM demand-side figures. 🔴 **One was RETIRED instead of
+restored — `EMEA-ADOPTION-GAP`, because `p875` closed it on this very page** — and its still-open
+half is re-registered as `EMEA-VENDOR-RANKING-GAP`. 🔴 **One was restored CORRECTED:** the LATAM
+~30% policy figure is a PERCEPTION measure (`p276`), so the claim now rests on IESALC's `26%`
+formal-strategy figure. 🟡 A full five-region WebSearch leg set returned **zero** new instruments.
+
 ## Source-quality warning, stated before the numbers
 
 Market sizing for AI in education is **unusually unreliable**. This pass's sizing leg returned
@@ -314,6 +324,40 @@ averaged or treated as a trend line. The AAC&U/Elon survey is self-described as 
 
 
 ### LATAM — the best-measured region in this file
+#### 🟢 `p880` — the LATAM demand-side evidence RESTORED, and one registered figure CORRECTED rather than carried
+
+🔴 **Three of the claims `gate-prose-claims` reports lost are LATAM's — the region this KB sells
+hardest.** 🟡 **Carried from `archive/`; not re-measured this pass.** One of the three is restored in
+**corrected** form, because carrying it as the register glosses it would have republished a figure
+this base had already reclassified.
+
+- 🟢 **`LATAM-ADOPTION-SPLIT` — UNESCO IESALC, adoption BY FUNCTION.** The same 200-institution,
+  19-country instrument that the table above reports by *presence* (`87%` using AI in at least one
+  area) also splits by function: **teaching and learning `73.5%`, research `57.0%`, administration
+  `34.1%`, community engagement `20.0%`.** 🔵 **The by-function split is the commercially important
+  cut and the presence figure hides it.** Administration at roughly **half** the teaching rate is
+  exactly where an open ERP/SIS layer sells, and **without the split there is no argument for the
+  administration engagement at all** — which is why losing this line cost more than losing a number.
+- 🟡 **`LATAM-DEC-POPULATION` — restored WITH its population conflict declared, not quietly.** The
+  figure this base holds is **`92%` of students and `79%` of faculty actively engaging with AI**,
+  from **`30,000+ responses`** across 29 institutions, with Tecnológico de Monterrey's Institute for
+  the Future of Education. 🔴 **The response count is NOT settled:** this base has also recorded the
+  same survey as **29 institutions / 22,941 students**, and the DEC's *global* 2026 report as
+  `88%`/`77%` across 45,398 responses in 35 countries. 🟢 **Quote the `92%` — the LATAM attribution
+  is confirmed — and do NOT quote the response count until it reconciles.**
+  `digitaleducationcouncil.com` is CONNECT-403 from this session and cannot settle it.
+  🔴 **And the conflation to defend against in the wild: aggregators publish the `92%` as a GLOBAL
+  student figure. It is LATAM.**
+- 🔴 **`LATAM-POLICY-GAP` — restored CORRECTED, and the correction is this base's own.** The register
+  glosses this claim as *"~30% institutional policy coverage"*. 🔴 **That gloss is wrong, and `p276`
+  had already found it wrong: the ~30% is a PERCEPTION figure** — the share of students and faculty
+  who *consider* their institution's guidance adequate — **not** a count of institutions carrying a
+  **published AI-use policy**. 🟢 **The institutional number this base can stand behind is IESALC's
+  `26%` with a formal AI strategy, against `87%` already using AI.** 🔵 **The claim survives, the
+  pitch survives, and the figure behind it changes:** a LATAM higher-ed engagement that ships a
+  policy artefact — a published AI-use policy, an approval gate, an access log — addresses what
+  roughly **three-quarters** of institutions measurably do not have. 🟡 **A register row may carry a
+  stale gloss; `why_it_matters` is prose, not a measurement.** Grade the claim, not the gloss.
 #### `p875` — a PISA-anchored usage figure, and an imminent ministry event
 
 🟢 **The strongest LATAM usage datapoint this KB has held, because it rides on PISA rather than a
@@ -395,6 +439,46 @@ laggard in use, only in governance.
 
 
 ### APAC — attitudes measured; 🟢 `p878` adds the first institutional measure (Japan)
+#### 🟢 `p880` — three APAC instruments RESTORED, after `gate-prose-claims` found them surviving only in `archive/`
+
+🔴 **`make gate-prose-claims` has been RED since the `p871` rewrite, and three of the claims it
+reports lost are this file's APAC regulatory spine.** 🟡 **Provenance, stated plainly: these are
+carried from `archive/2026-10-31-p568-pre-rewrite/` and `archive/2026-10-11-pre-rewrite/`; they were
+NOT re-measured against a primary text this pass.** No APAC government host is readable from this
+session, so every date below remains `CONVERGENT-SECONDARY`. 🔵 **They are restored rather than
+re-researched because the register's whole purpose is that this base stop paying twice for the same
+finding** — and `agents/trending.md` `p880` records that a fresh regional WebSearch leg returned
+nothing this base did not already hold.
+
+**🟢 Singapore — `SG-AGENTIC-FIRST`.** IMDA's **Model AI Governance Framework for Agentic AI** was
+launched by Minister Josephine Teo at the World Economic Forum on **22 January 2026**, and is
+described by the government and by multiple law firms as the **world's first governance framework
+built specifically for agentic AI** — systems that plan, reason and act autonomously. 🔵 It rests on
+**four dimensions**: bound the risks up front, make humans *meaningfully* accountable, implement
+technical controls and processes, and enable end-user responsibility. 🟢 **Those four axes are the
+ones every recipe in [`../compose/patterns.md`](../compose/patterns.md) has to defend**, which is why
+this claim is load-bearing rather than background. 🔴 **It is explicitly voluntary** — where the EU,
+US, Korea and Vietnam bind by statute, Singapore deliberately does not — so it is the artefact to
+*show*, not a rule to comply with. 🟡 **The "world's first" label is the framing of its own
+publishers** and no pass of this KB has independently established that no earlier agent-specific
+framework exists.
+
+**🟢 Singapore — `SG-AI-VERIFY`, the half that makes the first one commercial.** **AI Verify** is the
+assurance arm of the same programme: a voluntary testing framework and toolkit which in practice
+operates as a **procurement gate** for vendors selling into Singaporean banks and government.
+🔵 **That is why `SG-AGENTIC-FIRST` is a sales asset and not a compliance burden** — the buyer is
+asking for an artefact, and there is a named instrument that produces one.
+
+**🔴 Vietnam — `VN-CORPUS-TRIGGER`, and it is the limb that catches a RAG tutor.**
+`Decision 33/2026/QD-TTg` lists **46 high-risk systems across 6 sectors, 3 of them education**, and
+the first education limb is **self-study content generated from *uncontrolled data sources***.
+🔴 **It does not mention assessment at all.** A tutoring agent that answers a pupil from un-curated
+web retrieval is **in scope in Vietnam even if it never grades anything**, because the regulated
+object is the **provenance of the material the learner studies**, not the grading of the learner.
+🔵 **An EU-conformant design does not satisfy it:** the EU's education high-risk tier attaches to
+admission and assessment, so a vendor who built for Annex III has **no corpus-provenance artefact to
+show**. The other two education limbs are automated examination / assessment / ranking, and
+monitoring of learner behaviour using biometric data.
 
 #### 🟢 `p878` — the APAC institutional gap MOVES for the first time: **Japan has an institutional census**, and one of `p875`'s three named instruments is now spent
 
@@ -566,6 +650,35 @@ the missing rate.
 
 
 ### EMEA — 🟢 the three-pass gap CLOSES: a European instrument, measuring European students, exists
+#### 🔴 `p880` — `EMEA-ADOPTION-GAP` is RETIRED, not restored: the gap CLOSED, and the gate was still demanding it
+
+🔴 **`gate-prose-claims` reported `EMEA-ADOPTION-GAP` as archive-only and asked this file to restate
+a compound sentence declaring that neither an EMEA adoption rate nor an EMEA vendor ranking
+had been found.** 🟢 **Half that sentence is now FALSE — and it
+is false because of work recorded on this very page.** `p875` filed a European instrument measuring
+European students directly: **5,000 secondary students aged 13–19 across 10 European countries plus
+600 teachers — `79%` using AI tools for homework, `47%` ever shown how to use them effectively** —
+alongside a German teacher survey (`73%` planning and materials, `67%` tests and rubrics) and QS
+frequency figures (`67%` of academics and `62%` of students weekly). **That is an EMEA adoption
+rate.**
+
+🔴 **So restoring the sentence would have republished a closed gap in order to turn a gate green —
+the identical error `p880` caught on `NO-PERMISSIVE-PLATFORM` in the same run, and the second
+instance of it found in one pass.** The claim is **RETIRED** in
+[`../compose/code/p495-prose-claim-gate/claim_register.tsv`](../compose/code/p495-prose-claim-gate/claim_register.tsv)
+with its reason recorded, and the gate now grades it **the other way round**: if this sentence comes
+back, the gate goes red.
+
+🟢 **The surviving half is registered separately rather than discarded with it — `EMEA-VENDOR-RANKING-GAP`:**
+
+> 🔴 **EMEA gap, declared not inferred:** there is still **no EMEA vendor ranking** on this page, and
+> **no standalone European sector survey** (EUA, Jisc or equivalent) has surfaced in any pass.
+> 🟡 The one cross-region fact that lands here: the **UAE** runs one of only two compulsory national
+> AI curricula, since the `2025`–`26` school year.
+
+🔵 **The method lesson, and it is cheap to apply: a compound gap is a bad register row.** Closing one
+half makes the whole row a falsehood, and the half that is still open disappears with it when the
+row is retired. **Split a gap on sight, one claim per row.**
 #### 🟢 `p875` — the EU timeline RESOLVES to a named instrument, and this KB's own date was wrong
 
 The postponement that this KB and every competitor has been citing has a number and a date:

@@ -186,6 +186,65 @@ branch was resolved with `git ls-remote --symref ... HEAD` rather than assumed t
 > figure is its measurement, not this pass's, and is not restated here as fact. Writing a
 > star count sourced from a blog is how this KB previously recorded inflated numbers.
 
+## 🆕 `p880` · 2026-11-17 — what changed on this shelf
+
+🟢 **Restored: `vishalsachdev/canvas-mcp`** (MIT, `333★`, pushed today) **and its four security
+advisories**, which a rewrite had dropped together — `gate-prose-claims` was reporting
+`CANVAS-ADV-SANDBOX` and `CANVAS-SEC-FLOOR` as archive-only. Re-measured first-hand and all four
+advisories read at source. 🔴 **New and client-facing: those advisories are repository-level and
+absent from the GLOBAL GitHub Advisory Database, so an SCA scan will not surface them.** Pin
+`>=1.16.0`, assert the Node.js `22.18` floor, and put the GHSA ids in the risk register by hand.
+
+## 🟢 LMS-bridge agents and their security envelope — RESTORED in `p880`
+
+🔴 **`vishalsachdev/canvas-mcp` is a live, MIT, `333★` education agent that a rewrite dropped off
+this shelf — and it took its four security advisories with it.** `make gate-prose-claims` has been
+reporting `CANVAS-ADV-SANDBOX` and `CANVAS-SEC-FLOOR` as surviving only in
+`archive/2026-10-31-p568-pre-rewrite/agents-top.md` ever since. The agent is still carried in
+`agents/trending.md`, so this was not a de-listing decision — **the shelf lost a row and its risk
+envelope at the same time**, which is the worst possible half of the pair to lose.
+
+🟢 **Re-measured first-hand this pass, not carried:**
+
+| Repo | Licence | ★ | Pushed | Created | Forks | Role |
+|---|---|---:|---|---|---:|---|
+| https://github.com/vishalsachdev/canvas-mcp | **MIT** — byte-read `main/LICENSE`, `1,071 B`, `5385a26e2fac` | **333** | 2026-11-17 | 2025-02-28 | 107 | **MCP server for Canvas LMS.** The read/write bridge between an agent and the incumbent LMS: courses, assignments, submissions, grades, files. On PyPI as `canvas-mcp`, latest **1.18.0**. |
+
+### 🔴 The four advisories — and the finding that a scanner will not tell you about them
+
+🟢 **All four were read at source this pass** on the repository's own advisories page
+([`record`](../evidence/advisory-globaldb.2026-11-17-p880.tsv)):
+
+| Advisory | Severity | What it is |
+|---|---|---|
+| **`GHSA-7pp5-29mw-9jq3`** | 🔴 **High** · CVSS **7.8** (`AV:L/AC:L/PR:L/UI:N/C:H/I:H/A:H`), CWE-94 | **TypeScript sandbox escape via `child_process` in `execute_typescript`.** In local sandbox mode — the default when Docker/Podman is absent — caller-supplied TypeScript ran under `npx tsx` behind only an in-process network guard, so **any authenticated MCP caller could execute OS commands as the server process user**, and remotely under HTTP transport. Affected **all versions < 1.16.0**; patched **1.16.0**. |
+| `GHSA-hmr8-mvr2-mvw5` | 🔴 **High** | **A prompt-injected assistant could disclose course data or change grades through first-call write tools.** |
+| `GHSA-7mj9-4mcg-hvhv` | 🟡 Moderate | Canvas bearer token sent to a URL chosen by the file-storage host during upload confirmation, and to off-origin file URLs on download. |
+| `GHSA-qf6c-jv93-38gv` | 🔵 Low | Windows: downloaded course files are not actually owner-only (`os.chmod 0o600` is a no-op on NTFS). |
+
+🔴 **`CANVAS-SEC-FLOOR` — the half of the fix that gets missed.** The patched local sandbox mode runs
+under Node's permission model and **requires Node.js `22.18` or later**, refusing to execute on
+anything older. 🔵 **Upgrading `canvas-mcp` alone is not enough:** on an older runtime the patched
+release simply will not run `execute_typescript`, and a deployment that upgrades the package but not
+the runtime is **not actually patched**. **State the `22.18` floor in any deployment note.**
+🟢 Interim mitigation if the runtime cannot move: `EXECUTE_TYPESCRIPT_ENABLED=false` unregisters the
+tool outright.
+
+> 🔴 **🆕 `p880`, and this is new to the KB rather than restored: all four advisories are
+> REPOSITORY-LEVEL and absent from the GLOBAL GitHub Advisory Database.**
+> `github.com/advisories/GHSA-7pp5-29mw-9jq3` and its three siblings return **`404`**, while the same
+> channel resolves a control advisory (`GHSA-jfh8-c2jp-5v3q`, log4shell, Critical/CVSS 10.0) on the
+> first try — **so the four `404`s are absences, not a channel refusal.**
+> 🔴 **The consequence is operational: `canvas-mcp` IS published to PyPI, so a client can pin an
+> affected version — and Dependabot and any SCA tool keyed on the global advisory database will
+> report that deployment CLEAN against a High-severity sandbox escape.** The advisory is real; the
+> scanner is silent. 🟡 **One limb is unverified:** `api.osv.dev` does not resolve from this session,
+> so whether OSV has ingested these records is **not established here** and must not be asserted
+> either way. The global-GitHub-DB absence is first-hand; the OSV half is an open check.
+> 🔵 **Deliverable shape:** for any engagement mounting this bridge, pin `>=1.16.0` (PyPI is at
+> `1.18.0`), assert the Node `22.18` floor, and **put these four GHSA ids in the risk register by
+> hand**, because nothing in the client's toolchain will put them there.
+
 ## Measured adoption — new in `p875`
 
 Read this before the tables below. Measured `2026-11-17` via `api.github.com/search/repositories`.

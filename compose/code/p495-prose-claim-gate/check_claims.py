@@ -17,15 +17,49 @@ absent from the repository — `grep -ril` found it, in
 `archive/2026-10-19-p315-pre-rewrite/intel-market.md`.  A detector that searches the
 whole tree therefore reports the deleted claim as PRESENT and is worse than none.
 A key surviving only under `archive/` is a LOSS, and is graded red.
+
+🟢 `p880` — RETIREMENT, and why the gate needed it.  Until this pass the register
+could say only "this claim must be present".  It could not say "this claim was
+REFUTED and must not come back".  `NO-PERMISSIVE-PLATFORM` is the case that forced
+the distinction: the registered sentence is *"No permissive education platform
+exists"*, and this base's own shelves now carry permissive full learning platforms,
+so the claim is FALSE.  `p568` retired it in prose; the `p871` rewrite dropped that
+prose; and from then until `p880` the gate demanded, every run, that
+`repos/foundations.md` republish a sentence this base had disproved.  🔴 **A gate
+whose only green path is to restate a falsehood is worse than a red gate, because
+the cheapest way to satisfy it is to lie.**
+
+A row may therefore carry `status`:
+
+  `LIVE` (the default, and what every pre-`p880` row means) — must be PRESENT in
+      `required_file`, exactly as before.
+  `RETIRED` — the claim was refuted or superseded.  It is NOT required.  It needs
+      `retired_by` (the pass that retired it) AND `retired_reason`, and the gate
+      REFUSES a retirement missing either, so retirement cannot become a silent
+      escape hatch for a claim somebody merely found inconvenient.
+
+🔴 And retirement is graded in BOTH directions.  A claim retired as refuted that is
+still being published is its own failure — `RETIRED-BUT-PUBLISHED` — because the
+base is then asserting something its own register records as untrue.  The register
+stops being a one-way "do not lose this" list and becomes a two-way one: these
+claims must be carried, and these must not.
 """
 import sys, os, csv
 
 ARCHIVE_DIRS = ("archive/", "scratchpad/")
-VERDICTS = ("PRESENT", "CLAIM-LOST", "ARCHIVE-ONLY", "NO-SUCH-FILE")
+VERDICTS = ("PRESENT", "CLAIM-LOST", "ARCHIVE-ONLY", "NO-SUCH-FILE",
+            "RETIRED", "RETIRED-BUT-PUBLISHED")
+STATUSES = ("LIVE", "RETIRED")
+# The verdicts that do NOT fail the gate.  RETIRED is green; RETIRED-BUT-PUBLISHED is not.
+OK_VERDICTS = ("PRESENT", "RETIRED")
 
 
 def read_register(path):
-    """Rows: claim_id, grep_key, required_file, pass_of_record, why_it_matters."""
+    """Rows: claim_id, grep_key, required_file, pass_of_record, why_it_matters,
+    and optionally status, retired_by, retired_reason (`p880`).
+
+    🔵 `status` is absent from every row written before `p880` and defaults to
+    `LIVE`, so an old five-column register grades exactly as it did before."""
     if not os.path.exists(path):
         raise SystemExit("🔴 REFUSED: no register at %s — this gate does not pass by default" % path)
     rows, seen = [], set()
@@ -45,9 +79,25 @@ def read_register(path):
             if cid in seen:
                 raise SystemExit("🔴 REFUSED: duplicate claim_id %s — one id, one verdict" % cid)
             seen.add(cid)
+            # p880 — status, defaulting to LIVE so a pre-p880 register is unchanged.
+            status = ((r.get("status") or "").strip() or "LIVE").upper()
+            if status not in STATUSES:
+                raise SystemExit("🔴 REFUSED: %s has status %r — expected one of %s. An unrecognised "
+                                 "status must not be read as a retirement, or a typo exempts a "
+                                 "load-bearing claim" % (cid, status, "/".join(STATUSES)))
+            rby = (r.get("retired_by") or "").strip()
+            rwhy = (r.get("retired_reason") or "").strip()
+            if status == "RETIRED" and not (rby and rwhy):
+                raise SystemExit("🔴 REFUSED: %s is RETIRED with no %s — a retirement is a CLAIM about "
+                                 "the claim, and an unjustified one turns this register into an "
+                                 "escape hatch" % (cid, "retired_by" if not rby else "retired_reason"))
+            if status == "LIVE" and (rby or rwhy):
+                raise SystemExit("🔴 REFUSED: %s is LIVE but carries retirement fields — a half-applied "
+                                 "retirement reads as live and is graded as live" % cid)
             rows.append({"claim_id": cid, "grep_key": key, "required_file": tgt,
                          "pass_of_record": (r.get("pass_of_record") or "").strip(),
-                         "why_it_matters": (r.get("why_it_matters") or "").strip()})
+                         "why_it_matters": (r.get("why_it_matters") or "").strip(),
+                         "status": status, "retired_by": rby, "retired_reason": rwhy})
     if not rows:
         raise SystemExit("🔴 REFUSED: the register is empty — nothing was checked")
     return rows
@@ -94,6 +144,16 @@ def grade(root, rows):
         if not os.path.exists(target):
             out.append(dict(r, verdict="NO-SUCH-FILE", detail=r["required_file"]))
             continue
+        # p880 — a RETIRED claim is graded the other way round: it must NOT be published.
+        if r.get("status") == "RETIRED":
+            if _contains(target, r["grep_key"]):
+                out.append(dict(r, verdict="RETIRED-BUT-PUBLISHED",
+                                detail="retired by %s (%s) and STILL in %s"
+                                       % (r["retired_by"], r["retired_reason"], r["required_file"])))
+            else:
+                out.append(dict(r, verdict="RETIRED",
+                                detail="retired by %s — %s" % (r["retired_by"], r["retired_reason"])))
+            continue
         if _contains(target, r["grep_key"]):
             out.append(dict(r, verdict="PRESENT", detail=""))
             continue
@@ -109,15 +169,23 @@ def main(argv):
     root = argv[1] if len(argv) > 1 else "."
     reg = argv[2] if len(argv) > 2 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "claim_register.tsv")
     results = grade(root, read_register(reg))
-    bad = [r for r in results if r["verdict"] != "PRESENT"]
+    bad = [r for r in results if r["verdict"] not in OK_VERDICTS]
     for r in bad:
-        print("🔴 %-14s %s — %s" % (r["verdict"], r["claim_id"], r["why_it_matters"]))
+        print("🔴 %-21s %s — %s" % (r["verdict"], r["claim_id"], r["why_it_matters"]))
         print("   key   : %s" % r["grep_key"])
         print("   wanted: %s  (pass of record %s)" % (r["required_file"], r["pass_of_record"]))
         if r["detail"]:
             print("   %s" % r["detail"])
-    print("── p495-prose-claim-gate: %d registered, %d present, %d LOST"
-          % (len(results), len(results) - len(bad), len(bad)))
+    # p880 — retirements are printed even when green: a retirement is a published
+    # decision, and one nobody ever reads back is how NO-PERMISSIVE-PLATFORM became
+    # a demand to restate a falsehood in the first place.
+    for r in [x for x in results if x["verdict"] == "RETIRED"]:
+        print("🔵 RETIRED               %s — retired by %s: %s"
+              % (r["claim_id"], r["retired_by"], r["retired_reason"]))
+    present = len([r for r in results if r["verdict"] == "PRESENT"])
+    retired = len([r for r in results if r["verdict"] == "RETIRED"])
+    print("── p495-prose-claim-gate: %d registered, %d present, %d retired, %d LOST"
+          % (len(results), present, retired, len(bad)))
     return 1 if bad else 0
 
 

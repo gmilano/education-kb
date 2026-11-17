@@ -171,6 +171,16 @@ makes a tool interoperable with institutional systems, and the AI substrate that
 work. The standards layer matters more here than in most verticals — an education tool that
 cannot speak LTI, xAPI/Caliper, QTI or Ed-Fi cannot be bought by a school district.
 
+## 🆕 `p880` · 2026-11-17 — what changed on this shelf
+
+🟢 **Four rows** from the full-estate recount: `apereo/java-cas-client` (🔵 **CONJUNCTIVE** —
+Apache-2.0 *and* BSD-3-Clause in one payload, notice obligation of two), `instructure/instructure-ui`
+(MIT), `instructure/common-cartridge-viewer` (MIT) and `mitodl/ol-infrastructure` (BSD-3-Clause).
+🔴 **`NO-PERMISSIVE-PLATFORM` was RETIRED rather than restored to this shelf: the shelf's own rows
+disprove it** — Artemis (MIT, `832★`), Autolab (Apache-2.0, `808★`) and Kolibri (MIT) are all
+permissive full platforms. 🟡 `2,003` extra repositories of denominator yielded these four rows,
+which is `T12` reconfirmed from the denominator side.
+
 ## The permissive periphery of the copyleft platforms — new in `p879`
 
 🔵 **This is the single most useful thing `p879` measured, and it reverses standing advice in this
@@ -371,6 +381,37 @@ proprietary deliverable — but it is the **incumbent** in Brazilian municipal e
 it an **integration target rather than a base**. Build the AI layer as a separate service with a
 clean process boundary and the copyleft stays where it is. This is the posture
 `verticals/solutions.md` already prescribes for Moodle, and it applies unchanged here.
+
+## 🟢 Rows the full-estate recount surfaced — new in `p880`
+
+🔵 **`p880` re-ran `p879`'s organisation census to EXHAUSTION rather than to the top 40 by stars**
+(`2,574` source repositories across `31` owners; method and the sampling correction on
+[`repos/trending.md`](trending.md) this pass). 🟡 **The honest yield is small, and that is itself the
+result:** paging a census from `571` rows to `2,574` produced **four** rows worth shelving. 🟢 **It
+independently reconfirms `T12` from the denominator side** — the reason this index has a short head
+and a long tail is not that the base has been looking in the wrong place.
+
+🟢 **Every licence below was byte-read this pass over `raw.githubusercontent.com`, hashed
+`sha256`-12, and the record is
+[`evidence/licence-byteread.2026-11-17-p880.tsv`](../evidence/licence-byteread.2026-11-17-p880.tsv).**
+
+| Repo | Licence (byte-read) | ★ | Pushed | Role |
+|---|---|---:|---|---|
+| https://github.com/apereo/java-cas-client | 🔵 **CONJUNCTIVE — Apache-2.0 *and* BSD-3-Clause** (`LICENSE`, `2,321 B`, `6c21b465e3a0`) | **949** | 2026-11-16 | **The Java CAS client** — how a JVM estate attaches to the `apereo/cas` SSO layer `p879` filed. Completes the identity triple with `phpCAS` (PHP) and `cas` (server). 🔴 **Read the licence note below before quoting it as "Apache-2.0".** |
+| https://github.com/instructure/instructure-ui | **MIT** (`LICENSE.md`, `1,175 B`, `9773f00c68af`) | 487 | 2026-11-17 | **Canvas's own accessible React component library**, shipped by Instructure. The MIT design-system counterpart to Open edX's Apache-2.0 `paragon` — i.e. a client already on Canvas can be given a UI that matches it without touching the AGPL-3.0 `canvas-lms` core. |
+| https://github.com/instructure/common-cartridge-viewer | **MIT** (`LICENSE`, `1,074 B`, `21f8b02800eb`) | 95 | 2026-11-04 | **Renders IMS Common Cartridge packages in the browser.** The content-portability seam: a client's existing courseware can be read and inspected without importing it into any platform first. Pairs with the standards layer below. |
+| https://github.com/mitodl/ol-infrastructure | **BSD-3-Clause** (`LICENSE`, `1,529 B`, `88bb0e3a8731`) | 59 | 2026-11-17 | **MIT Open Learning's own production infrastructure automation**, Pulumi/Python. 🔵 A reference deployment topology for an Open edX estate published by an institution that actually runs one at scale — rare, and worth reading before estimating one. |
+
+> 🔵 **`apereo/java-cas-client` is this base's cleanest live example of a CONJUNCTIVE grant, and a
+> single-family label on it would be wrong.** The `2,321 B` payload carries **two** grants: an
+> Apache-2.0 notice (*"Apereo licenses this file to you under the Apache License, Version 2.0"*)
+> **and** a separate `License for Use` section that is a full **BSD-3-Clause** text with a
+> `Copyright (c) 2007, JA-SIG, Inc.` holder and a no-endorsement clause.
+> 🟢 **Both families are permissive, so the repository is build-safe** — but the **notice obligation
+> is of two**, and the BSD no-endorsement term names JA-SIG specifically. 🔴 **`p880`'s own first
+> pass at this file classified it `BSD-family` on a first-match grep and would have published a
+> single wrong family;** the instrument now detects families cumulatively. A hash and a byte count
+> do not save you from a one-family assumption.
 
 ## Document & media ingestion — the real bottleneck in education AI
 

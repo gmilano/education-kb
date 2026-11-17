@@ -4,6 +4,139 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🔴 `2026-11-17` (`p880`) — **the gate that detects lost claims had been RED and committed-over since `p871`: 12 of 16 registered load-bearing claims were gone, and 2 of them were not losses at all — the register was demanding sentences this base had DISPROVED**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+Tenth pass of the day. 🔴 **`p880` opened on a baseline run of `make hooks` and found `53` of `73`
+gates green — i.e. this base has been committing red for an unknown number of passes.** Among the
+`20` red gates was `gate-prose-claims`, the instrument `p495` built specifically so that a full-file
+rewrite could not silently drop a load-bearing paragraph. 🔴 **It was reporting `16` registered
+claims, `4` present, `12` LOST — and the pass that left it in that state committed anyway.**
+
+🔵 **That is the real failure mode here, and it is not the rewrite.** `p494` built the detector,
+`p495` built the register, `p534` and `p568` and `p877` each restored claims it flagged. The
+detector worked every time. 🔴 **What failed is that a red gate stopped being a stop.**
+
+### 🔴 The two claims that were NOT losses — and why restoring them would have been the worse error
+
+🔴 **`p880`'s first instinct was to restore all `12`. Two of them must not be restored, because they
+are FALSE, and the register had no way to say so.**
+
+- 🔴 **`NO-PERMISSIVE-PLATFORM` — registered key: *"No permissive education platform exists"*,
+  required on `repos/foundations.md`.** That file **itself** now carries `ls1intum/Artemis` (MIT,
+  `832★`, a full platform), `autolab/Autolab` (Apache-2.0, `808★`) and `learningequality/kolibri`
+  (MIT). 🔵 `p568` retired it *in prose*; the `p871` rewrite dropped that prose; and **from `p871`
+  until this pass the gate demanded, every single run, that the file republish a sentence its own
+  rows disprove.**
+- 🔴 **`EMEA-ADOPTION-GAP` — registered on `intel/market.md`, declaring no EMEA adoption rate.**
+  🟢 **`p875` closed it**, on that very page: a European instrument measuring European students
+  directly — `5,000` secondary students aged 13–19 across `10` European countries plus `600`
+  teachers, **`79%` using AI for homework, `47%` ever shown how** — plus a German teacher survey
+  (`73%`/`67%`) and QS weekly-use figures (`67%`/`62%`).
+
+> 🔴 **A gate whose only green path is to restate a falsehood is worse than a red gate, because the
+> cheapest way to satisfy it is to lie.** 🔵 **And the cheapest lie is the one a gate rewards.**
+
+🟢 **So the instrument was changed rather than the truth.**
+[`compose/code/p495-prose-claim-gate/`](../compose/code/p495-prose-claim-gate/) now supports
+`status` = `LIVE` (default, and what every pre-`p880` row means) or **`RETIRED`**, which requires
+`retired_by` **and** `retired_reason` — the gate **REFUSES** a retirement justified by neither, so
+retirement cannot become a silent escape hatch for an inconvenient claim.
+🔴 **And retirement is graded in BOTH directions:** a claim retired as refuted that is still being
+published is its own red verdict, **`RETIRED-BUT-PUBLISHED`**, because the base must not assert what
+its own register records as untrue. The register stops being a one-way *"do not lose this"* list and
+becomes a two-way one: **these claims must be carried, and these must not.**
+
+🟢 **The new control caught `p880` itself, within minutes of being written.** The first draft of the
+EMEA retirement note *quoted the retired sentence verbatim* while explaining why it was retired —
+and the gate immediately returned `RETIRED-BUT-PUBLISHED` on it. 🔵 **The prose was paraphrased, not
+the verdict.** Suite: **`33` controls, `33` pass** (was `21`), the `12` new ones covering retirement
+absent/present, both missing-justification refusals, an unrecognised-status refusal, a
+half-applied-retirement refusal, case tolerance, and the five-column back-compatibility default.
+
+### 🟢 Disposition of all 12, one row each
+
+Full record: [`evidence/prose-claim-disposition.2026-11-17-p880.tsv`](../evidence/prose-claim-disposition.2026-11-17-p880.tsv).
+
+| Claim | Shelf | Disposition |
+|---|---|---|
+| `SG-AGENTIC-FIRST` | `intel/market.md` | 🟢 RESTORED — IMDA agentic-AI framework, 22 Jan 2026; publisher-framing caveat on *"world's first"* kept |
+| `SG-AI-VERIFY` | `intel/market.md` | 🟢 RESTORED — the assurance half that makes the first one a procurement artefact |
+| `VN-CORPUS-TRIGGER` | `intel/market.md` | 🟢 RESTORED — Decision 33 limb 1, the limb that catches a RAG tutor with no grading feature |
+| `LATAM-ADOPTION-SPLIT` | `intel/market.md` | 🟢 RESTORED — IESALC by-function `73.5`/`57.0`/`34.1`/`20.0`; the administration cut the presence figure hides |
+| `LATAM-DEC-POPULATION` | `intel/market.md` | 🟡 RESTORED **with its conflict declared** — `92%` is quotable, the response count (`30,000+` vs `22,941`) is NOT |
+| `LATAM-POLICY-GAP` | `intel/market.md` | 🔴 RESTORED **CORRECTED** — see below |
+| `T15-INTEGRATION-AUTHORITY` | `intel/trends.md` | 🟢 RESTORED as **`T17`** — see below |
+| `CANVAS-ADV-SANDBOX` | `agents/top.md` | 🟢 RESTORED **and re-verified at source** |
+| `CANVAS-SEC-FLOOR` | `agents/top.md` | 🟢 RESTORED **and re-verified at source** — Node.js `22.18` floor |
+| `CANVAS-TOKEN-RESIDUAL` | `compose/patterns.md` | 🟢 RESTORED as part of a rebuilt **`P21`** |
+| `EMEA-ADOPTION-GAP` | `intel/market.md` | 🔴 **RETIRED** — refuted by `p875` on its own page; surviving half re-registered |
+| `NO-PERMISSIVE-PLATFORM` | `repos/foundations.md` | 🔴 **RETIRED** — refuted by the shelf it is registered against |
+
+🔴 **`LATAM-POLICY-GAP` was restored CORRECTED, and the correction is this base's own.** The register
+glosses it as *"~30% institutional policy coverage"*. 🔴 **`p276` had already reclassified that ~30%
+as a PERCEPTION figure** — the share of students and faculty who *consider* their institution's
+guidance adequate — not a count of institutions with a published policy. 🟢 **Restored against
+IESALC's `26%` formal-strategy figure instead.** 🔵 **The method point: a register row's
+`why_it_matters` is prose, not a measurement. Grade the claim, not the gloss.**
+
+🔴 **`T15-INTEGRATION-AUTHORITY` had lost its NUMBER, not only its text.** `p878` reassigned `T15` to
+a different trend entirely (*the permissive supply is produced by public universities*), so the claim
+id in the register names a slot that no longer points at it. 🟢 Restored at **`T17`**, id kept so the
+audit trail survives. 🔵 **Key a claim on its CONTENT, never on a slot number a later pass can
+reuse.**
+
+🔵 **And one register-design lesson worth more than either retirement: a COMPOUND gap is a bad row.**
+`EMEA-ADOPTION-GAP` asserted two things at once. One closed, which made the whole row false — and
+retiring it would have taken the **still-open** half with it. The surviving half is now its own row,
+`EMEA-VENDOR-RANKING-GAP`. **Split a gap on sight, one claim per row.**
+
+### 🔴 New this pass, not restored: four real advisories that no scanner will show the client
+
+🔴 **`vishalsachdev/canvas-mcp` — MIT, `333★`, pushed the day of this pass — was dropped from
+`agents/top.md` by a rewrite and took its four security advisories with it**, while remaining listed
+in this file. **The shelf lost a row and its risk envelope at the same time**, which is the worse
+half of the pair to lose. Restored, re-measured (`main/LICENSE`, `1,071 B`, `sha256` `5385a26e2fac`),
+and all four advisories read at source.
+
+🔴 **The genuinely new finding: all four are REPOSITORY-LEVEL advisories and absent from the GLOBAL
+GitHub Advisory Database.** `github.com/advisories/GHSA-7pp5-29mw-9jq3` and its three siblings return
+**`404`**, while the same channel resolves a control — `GHSA-jfh8-c2jp-5v3q`, log4shell,
+Critical/CVSS `10.0` — on the first try. 🟢 **So the four `404`s are absences, not a channel
+refusal** ([`record`](../evidence/advisory-globaldb.2026-11-17-p880.tsv), calibration row included).
+
+🔴 **The consequence is operational.** `canvas-mcp` **is** published to PyPI (latest `1.18.0`), so a
+client can pin an affected version — and **Dependabot, and any SCA tool keyed on the global advisory
+database, will report that deployment CLEAN against a High-severity sandbox escape** (CVSS `7.8`,
+CWE-94, affected `<1.16.0`). **The advisory is real; the scanner is silent.**
+🟡 **One limb is explicitly NOT established: `api.osv.dev` does not resolve from this session**, so
+whether OSV has ingested these records is unverified and must not be asserted either way. The
+global-GitHub-DB absence is first-hand; the OSV half is an open check (`880-G3`).
+
+### 🔴 The regional WebSearch channel is SATURATED, and this is the measurement rather than a feeling
+
+🟢 **`p880` ran the full regional leg set — global, North America, EMEA, APAC and LATAM (the last in
+Spanish) — and then checked every named finding against this base's own index.**
+🔴 **All ten named items were ALREADY HELD:** `AGAP.AI`, the `AILit` framework, ProFuturo, IDB's *IA
+Presente*, Chegg, Clarivate's 7-country APAC study, Tecnológico de Monterrey, the Philippine National
+Education Plan 2026–2035, EtonHouse, and the UNESCO/CEPAL LAC observatory.
+🔵 **Zero new instruments from five legs.** Recorded as a saturation measurement
+([`record`](../evidence/websearch-legs.2026-11-17-p880.tsv)), consistent with `p634`'s
+`webleg-saturation` finding and with `p879`'s nil.
+
+🔴 **The EMEA leg did surface one apparent conflict — a Commission slide deck dating education
+high-risk duties to `2 Dec 2026` against this base's `2 Dec 2027` — and this base is already
+AHEAD of it:** `p875`/`p877` named the instrument (**Regulation (EU) 2026/1744**, the Digital
+Omnibus) and resolved the date to **`2027-12-02`**, with Article 50 transparency unmoved at
+**`2 Aug 2026`** and therefore **in force now**. 🟢 **No change. Recorded so a later pass does not
+re-buy the same leg and mistake the slide deck for news.**
+
+🔵 **The conclusion `p880` draws about its own method:** on this industry the WebSearch channel is
+spent as a *discovery* instrument and remains useful only as a *refutation* one. The pass's value
+came from the base's own gates and from a first-hand census — not from searching.
+
+
 ## 🟢 `2026-11-17` (`p879`) — **`user:<org>` is a working discovery channel: 19 education orgs, 571 repositories measured, and the KB's "unreachable" Open edX address turns out to be a rename it has been carrying wrong in 12 places**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

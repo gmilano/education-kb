@@ -81,6 +81,14 @@ Effort estimates are studio-delivery estimates, not measurements.
 
 ---
 
+## 🆕 `p880` · 2026-11-17 — what changed on this shelf
+
+🟢 **`P21` — the LMS write bridge, rebuilt**, restoring `CANVAS-TOKEN-RESIDUAL`: two mounts rather
+than one, `>=1.16.0` pinned, a Node.js `22.18` floor asserted, and the token **scoped** rather than
+merely upgraded, because even patched code in local sandbox mode still reaches the caller's Canvas
+token. 🔴 Includes the `p880` finding that the four governing advisories are absent from the global
+advisory database, so they must be entered in the client's risk register by hand.
+
 ## P1 — FERPA/LGPD-defensible self-hosted tutor
 
 **Sell to:** North America (FERPA), LATAM (LGPD), EMEA institutions that are not renewing
@@ -1068,6 +1076,53 @@ base in **P9**), 🌏 **APAC** (archipelagic and remote deployments), 🌍 **EME
 programmes in Africa and the Middle East). 🔴 **Not** a North America pattern — connectivity there
 is rarely the binding constraint, and the sale is **P13** or **P15** instead.
 
+
+## P21 — The LMS write bridge, and the token nobody scopes — RESTORED and re-verified in `p880`
+
+**Problem it solves.** Every tutoring, grading and analytics recipe in this file eventually has to
+*write* to the incumbent LMS — a grade, an enrolment, a comment. **`p880` restores this pattern
+because the shelf had lost both the agent and its risk envelope**: `gate-prose-claims` was reporting
+`CANVAS-TOKEN-RESIDUAL` as surviving only in `archive/2026-10-31-p568-pre-rewrite/compose-patterns.md`,
+and `agents/top.md` had dropped the bridge itself. 🔴 **A write pattern without its residual-risk
+line reads like over-engineering, and the first thing a delivery team removes is the part it cannot
+see a reason for.**
+
+**Base**, re-measured first-hand this pass:
+
+| Layer | Repo | Licence | ★ | Pushed |
+|---|---|---|---:|---|
+| LMS bridge | https://github.com/vishalsachdev/canvas-mcp | **MIT** (`1,071 B`, `5385a26e2fac`) | **333** | 2026-11-17 |
+| Course shell | Moodle / Canvas / Open edX (incumbent — **never forked**) | — | — | — |
+| Identity | https://github.com/apereo/cas + https://github.com/apereo/java-cas-client | Apache-2.0 / 🔵 **CONJUNCTIVE** | 11,402 / 949 | 2026-11-17 / 2026-11-16 |
+
+**Wiring — two mounts, never one.**
+
+1. **Mount READ and WRITE as two separate servers.** The read server gets a token scoped to the
+   courses in play; the write server is **default-off**, carries a course allow-list, and requires
+   `confirm=true` on any grade or enrolment call. 🔵 This is `T15` in operational form: the
+   integration layer inherits the authority of the system it attaches to, **and none of its
+   defences** — so the defences have to be rebuilt on the agent side.
+2. **Pin `>=1.16.0`** (PyPI is at `1.18.0`) **and assert a Node.js `22.18` floor.** Below that floor
+   the patched release refuses to run `execute_typescript` at all, so a deployment that upgrades the
+   package and not the runtime is **not actually patched**. If the runtime cannot move, set
+   `EXECUTE_TYPESCRIPT_ENABLED=false` and lose nothing this pattern needs.
+3. 🔴 **Scope the token; do not merely upgrade it.** **Even patched, code executed in local sandbox
+   mode can still reach the caller's Canvas token**, and outbound network blocking there is
+   best-effort (issue #157). **That residual is why this pattern removes the capability and scopes
+   the token rather than treating `1.16.0` as the end of the work.**
+4. 🔴 **Never pass retrieved course text into a write tool's arguments without a human confirmation
+   step.** `GHSA-hmr8-mvr2-mvw5` is the advisory that bites *this* pattern specifically — a
+   prompt-injected assistant disclosing course data or changing grades through first-call write
+   tools — and the mitigation is structural, not a prompt instruction.
+5. **Put the four GHSA ids in the client's risk register by hand.** 🔴 `p880` established that all
+   four are repository-level advisories **absent from the global GitHub Advisory Database**, so
+   Dependabot and SCA tooling keyed on it will report an affected pin as clean. Full account and the
+   calibration control: [`agents/top.md`](../agents/top.md) and
+   [`evidence/advisory-globaldb.2026-11-17-p880.tsv`](../evidence/advisory-globaldb.2026-11-17-p880.tsv).
+
+**Region.** Global. 🔵 The EU adds a reason to keep the human confirmation: under the AI Act the
+education high-risk tier attaches to assessment, and a write path that can change a grade without a
+person in it is the clearest possible way into that tier.
 
 ## Pattern selection by region
 

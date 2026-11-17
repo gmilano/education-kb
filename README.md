@@ -6,6 +6,114 @@ updated: 2026-11-17
 
 # Globant AI Studios — Education KB
 
+## 🆕 `p880` · 2026-11-17
+
+🔴 **This pass did not open with a search. It opened with `make hooks`, and that is the finding:
+`53` of `73` gates were GREEN — `20` red, committed over by earlier passes.** Among the red ones was
+`gate-prose-claims`, the instrument built at `p495` for exactly one job: to stop a full-file rewrite
+silently dropping a load-bearing paragraph. 🔴 **It was reporting `16` registered claims, `4`
+present, `12` LOST, and had been since the `p871` rewrite.**
+
+🔵 **The detector never failed. What failed is that a red gate stopped being a stop.**
+
+🟢 **`gate-prose-claims` is now GREEN — `17` registered, `15` present, `2` retired, `0` lost**, and
+the full suite moved from `53`/`73` to **`55`/`73`** with **`0` gates newly broken** — and
+`10` client-facing claims are back on the shelves, including the three LATAM demand-side figures and
+the whole Singapore/Vietnam APAC regulatory spine.
+
+### 🔴 The part worth reading twice: 2 of the 12 "losses" were claims this base had DISPROVED
+
+🔴 **Restoring all twelve would have been the worse error.** Two registered claims were false, and
+the register had no way to say so, so the gate demanded them on every run:
+
+- **`NO-PERMISSIVE-PLATFORM`** — *"No permissive education platform exists"*, required on
+  `repos/foundations.md`. 🔴 **That shelf's own rows disprove it:** Artemis (MIT, `832★`, a full
+  platform), Autolab (Apache-2.0, `808★`), Kolibri (MIT).
+- **`EMEA-ADOPTION-GAP`** — refuted by `p875`, **on the very page it is registered against**: a
+  European instrument measuring `5,000` secondary students across `10` countries (`79%` homework
+  use, `47%` ever taught how).
+
+> 🔴 **A gate whose only green path is to restate a falsehood is worse than a red gate, because the
+> cheapest way to satisfy it is to lie.**
+
+🟢 **So the instrument changed, not the truth.** The register now supports `RETIRED` with a required
+`retired_by` + `retired_reason` (the gate **refuses** an unjustified retirement), and grades a
+retired claim **in both directions** — `RETIRED-BUT-PUBLISHED` is red, because this base must not
+assert what its own register records as untrue. 🟢 **The new control caught `p880` itself**, on a
+draft that quoted the retired sentence while explaining the retirement. Suite: **`33` controls,
+`33` pass** (was `21`).
+
+### 🟢 The second arm: `p879`'s census re-run to exhaustion, and the denominator was one flag away
+
+🔴 **`p879` published per-organisation permissive shares over `571` repositories and said, correctly,
+"these are samples, not totals — the endpoint returns at most 40".** 🔴 **It does not. `per_page`
+accepts `100` and `page` walks the rest; the `40` was `p879`'s own parameter.**
+
+🟢 **Recounted: `31` owners, `2,574` source repositories, `3,757` with forks, every page walked to
+`total_count`.**
+
+- 🟢 **`p879` is vindicated as a measurement:** reproducing its top-40 method from the full data
+  returns its published numbers almost exactly. **What was wrong was the inference, not the
+  instrument** — and its caveat is the only reason that inference never reached a client deck.
+- 🔴 **But the magnitudes must not be quoted.** The sample **overstated** permissive share for
+  **7 of 17** owners — `ls1intum` **`82%` → `54%`**, `HKUDS` `75%` → `54%`, `openedx` `35%` → `23%`
+  — and understated `learningequality` (`60%` → `76%`).
+- 🔵 **The rule behind it: stars correlate with a permissive grant**, because a copyleft org's
+  most-adopted repositories are disproportionately its permissive *components*. **A star-ranked
+  sample of a copyleft org is systematically optimistic about what you can build on.**
+- 🔴 **And the finding no sample could see: `842` of `2,574` — `32.7%` — carry NO grant at all.**
+  Filed as **`T18`**. "No licence" is stricter than AGPL-3.0: there is nothing to comply with.
+  `IONISx` `100%`, `sakaiproject` `79%`, `moodlehq` `76%`, 🔴 **`h5p` `70%` — which matters because
+  `p879` filed H5P's content types as its permissive surface. Check an H5P type individually; never
+  adopt by family.**
+
+🟡 **Yield, stated honestly: `2,003` extra repositories of denominator produced `4` new foundation
+rows and `2` platform rows.** 🟢 **That is `T12` reconfirmed from the denominator side** — the short
+head and long tail of this index are a property of the field, not of this KB's search.
+
+### 🟢 New, client-facing, and not a restoration
+
+🔴 **The four `vishalsachdev/canvas-mcp` advisories are repository-level and absent from the GLOBAL
+GitHub Advisory Database.** All four `404` from `github.com/advisories/` while the same channel
+resolves a log4shell control, so the absences are real. 🔴 **The package IS on PyPI, so a client can
+pin an affected version and Dependabot will report it CLEAN against a High-severity sandbox escape
+(CVSS `7.8`, CWE-94).** **The advisory is real; the scanner is silent.** Pin `>=1.16.0`, assert the
+Node.js `22.18` floor, and enter the GHSA ids by hand. 🟡 **The OSV half is explicitly unverified** —
+`api.osv.dev` is unreachable here (`880-G3`).
+
+🟢 **EMEA supply:** France Université Numérique's **`richie`** (MIT, `318★`, education-portal CMS)
+and **`marsha`** (MIT, `152★`, LTI video LCMS) — the portal and media layers clients ask for and
+Moodle/Open edX do not provide. 🔴 **LATAM/APAC supply, inverted:** the regional Open edX integrators
+publish **fork** estates, not permissive components — `eduNEXT` is **`1` permissive repository of
+`127`**. The permissive component layer for a regional engagement comes from `openedx`, `openfun`,
+`instructure` and `mitodl`, **not from the integrator in-region.**
+
+### 🟡 What this pass did NOT do
+
+🔴 **`18` of the `20` red gates are still red.** `p880` took the suite from **`53`/`73` to
+`55`/`73`** — `gate-prose-claims` and `gate-register-currency` discharged, **`0` gates newly
+broken** — and the remaining eighteen are named individually in
+[`intel/open-gaps.md`](intel/open-gaps.md) `880-G1`, with a triage acceptance test. 🔴 **A full
+five-region WebSearch leg set returned ZERO new instruments** — all ten named findings were already
+held (`880-G5`), so the channel is recorded as spent for discovery and kept only for refutation.
+🔴 **One slug-case defect is open on five shelves** (`OpenOlat/OpenOlat` vs the canonical
+`OpenOLAT/OpenOLAT`, `880-G4`).
+
+### This pass changed
+
+| Shelf | Change |
+|---|---|
+| [`agents/top.md`](agents/top.md) | `canvas-mcp` row + `4` advisories restored and re-verified; the global-advisory-DB absence |
+| [`repos/foundations.md`](repos/foundations.md) | `4` rows byte-read, incl. this base's cleanest CONJUNCTIVE grant (`java-cas-client`) |
+| [`verticals/solutions.md`](verticals/solutions.md) | `2` MIT EMEA platforms; `2` corrections (slug case, both education ERPs re-confirmed unusable) |
+| [`intel/market.md`](intel/market.md) | `6` claims restored, `1` corrected, `1` retired + re-split |
+| [`intel/trends.md`](intel/trends.md) | **`T17`** restored under a new number, **`T18`** new |
+| [`compose/patterns.md`](compose/patterns.md) | **`P21`** rebuilt with its residual-risk line |
+| [`agents/trending.md`](agents/trending.md) · [`repos/trending.md`](repos/trending.md) | append-only `p880` sections: the gate audit, and the recount |
+| [`intel/open-gaps.md`](intel/open-gaps.md) | `880-G1`–`G5` registered with acceptance tests |
+| `compose/code/p495-prose-claim-gate/` | `RETIRED` status, two-way grading, `33` controls |
+| `ingest/` | `p880-org-estate-full.sh`, `p880-licence-byteread.sh` (three documented defects of its own) |
+
 ## Pass `p868` · `2026-11-17`
 
 🟢 **`867-G1`, `867-G2`, `867-G3` and `867-G5` were all discharged with their acceptance tests

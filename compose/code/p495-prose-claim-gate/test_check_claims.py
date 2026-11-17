@@ -34,8 +34,22 @@ def register(path, rows):
     write(path, "\n".join(body) + "\n")
 
 
+def register_p880(path, rows):
+    """p880 — the eight-column register.  Rows are
+    (claim_id, grep_key, required_file, pass_of_record, why_it_matters,
+     status, retired_by, retired_reason)."""
+    body = ["claim_id\tgrep_key\trequired_file\tpass_of_record\twhy_it_matters\t"
+            "status\tretired_by\tretired_reason"]
+    body += ["\t".join(r) for r in rows]
+    write(path, "\n".join(body) + "\n")
+
+
 def verdicts(root, reg):
     return {r["claim_id"]: r["verdict"] for r in cc.grade(root, cc.read_register(reg))}
+
+
+def statuses(root, reg):
+    return {r["claim_id"]: r["status"] for r in cc.read_register(reg)}
 
 
 def refusal(root, reg):
@@ -126,6 +140,57 @@ def main():
         v = verdicts(root, reg)
         control("a NESTED archive/ dir is an archive", v["C-NESTED"], "ARCHIVE-ONLY")
         control("`archive-notes/` is NOT archive/", v["C-LOOKALIKE"], "CLAIM-LOST")
+
+        # --- p880: RETIREMENT, graded in both directions -------------------
+        # The NO-PERMISSIVE-PLATFORM case. A claim this base REFUTED must be
+        # expressible as retired, and must NOT be satisfiable by republishing it.
+        write(os.path.join(root, "repos/foundations.md"), "Kolibri is MIT and is a full platform.\n")
+        register_p880(reg, [
+            ("C-RETIRED-GONE", "No permissive education platform exists", "repos/foundations.md",
+             "p493", "the refuted gap", "RETIRED", "p880", "three permissive platforms are filed here"),
+            ("C-RETIRED-BACK", "Kolibri is MIT and is a full platform", "repos/foundations.md",
+             "p493", "a retired claim still on the shelf", "RETIRED", "p880", "refuted at p568"),
+            ("C-STILL-LIVE", "Kolibri is MIT and is a full platform", "repos/foundations.md",
+             "p880", "an ordinary live claim", "LIVE", "", ""),
+        ])
+        v = verdicts(root, reg)
+        control("a RETIRED claim absent from its shelf is RETIRED", v["C-RETIRED-GONE"], "RETIRED")
+        control("a RETIRED claim STILL published is red", v["C-RETIRED-BACK"], "RETIRED-BUT-PUBLISHED")
+        control("retirement does not leak onto LIVE rows", v["C-STILL-LIVE"], "PRESENT")
+        control("RETIRED is not in the gate's pass set", "RETIRED-BUT-PUBLISHED" in cc.OK_VERDICTS, False)
+        control("RETIRED is in the gate's pass set", "RETIRED" in cc.OK_VERDICTS, True)
+
+        # a retirement must be justified, in both fields
+        register_p880(reg, [("C-NO-BY", "whatever", "repos/foundations.md", "p880", "why",
+                             "RETIRED", "", "a reason with no pass")])
+        control("RETIRED with no retired_by is REFUSED",
+                "retired_by" in refusal(root, reg), True)
+        register_p880(reg, [("C-NO-WHY", "whatever", "repos/foundations.md", "p880", "why",
+                             "RETIRED", "p880", "")])
+        control("RETIRED with no retired_reason is REFUSED",
+                "retired_reason" in refusal(root, reg), True)
+
+        # a typo must not exempt a load-bearing claim
+        register_p880(reg, [("C-TYPO", "whatever", "repos/foundations.md", "p880", "why",
+                             "RETIRRED", "p880", "typo")])
+        control("an unrecognised status is REFUSED", "expected one of" in refusal(root, reg), True)
+
+        # a half-applied retirement reads as live and would be graded as live
+        register_p880(reg, [("C-HALF", "whatever", "repos/foundations.md", "p880", "why",
+                             "LIVE", "p880", "but still marked live")])
+        control("LIVE carrying retirement fields is REFUSED",
+                "half-applied" in refusal(root, reg), True)
+
+        # case tolerance, and the back-compat default
+        register_p880(reg, [("C-LOWER", "No permissive education platform exists",
+                             "repos/foundations.md", "p880", "why",
+                             "retired", "p880", "lowercase in the register")])
+        control("status is case-insensitive", verdicts(root, reg)["C-LOWER"], "RETIRED")
+        register(reg, [("C-DEFAULT", "Kolibri is MIT", "repos/foundations.md", "p880", "why")])
+        control("a pre-p880 5-column row defaults to LIVE",
+                statuses(root, reg)["C-DEFAULT"], "LIVE")
+        control("a pre-p880 5-column row still grades as before",
+                verdicts(root, reg)["C-DEFAULT"], "PRESENT")
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 

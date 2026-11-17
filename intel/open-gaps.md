@@ -4,6 +4,116 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🆕 `p880` · 2026-11-17 — **`5` gaps. The headline is a self-audit: `make hooks` was RED at `53`/`73` when this pass opened, and the gate built to stop a rewrite losing a claim was one of the red ones — with `12` of `16` claims gone**
+
+🔴 **The honest summary before the entries: `p880` did not discover this base's biggest problem by
+searching. It ran `make hooks` first and read the output.** `53` of `73` gates green, `20` red, and
+among them `gate-prose-claims` — the instrument `p495` built for exactly one purpose, so that a
+full-file rewrite could not silently drop a load-bearing paragraph. It was reporting **`16`
+registered, `4` present, `12` LOST**, and had been doing so since the `p871` rewrite.
+
+🔵 **The detector never failed. What failed is that a red gate stopped being a stop.** Every
+component worked: `p494` found the defect class, `p495` built the register, `p534`/`p568`/`p877`
+each restored claims it flagged. 🔴 **And then passes committed over it.**
+
+🟢 **`p880` discharges `gate-prose-claims` (now `17` registered, `15` present, `2` retired, `0`
+LOST) and registers the rest honestly rather than claiming the baseline.**
+
+### 🔴 `880-G1` — the other `19` red gates, untouched by this pass and named so they cannot disappear
+
+🔴 **`p880` discharged TWO of the `20` red gates — `gate-prose-claims` and
+`gate-register-currency`, taking the suite from `53`/`73` to `55`/`73` with `0` gates newly broken,
+verified by a full `make hooks` run before and after. The remaining `18` are listed here because a
+carry-forward list that does not name its items is how `gate-prose-claims` stayed red for nine
+passes:**
+`recount`, `gate-derived-counts`, `gate-enumeration`, `gate-dates`, `gate-shelf-consistency`,
+`gate-register-currency`¹, `gate-fold-identity`, `gate-alias-canonical`, `gate-census-currency`,
+`gate-grant-path`, `gate-census-union`, `gate-ledger`, `gate-i2-sweep-crosscheck`,
+`gate-union-currency`, `gate-action-answered`, `gate-promotion`, `gate-promotion-ledger`,
+`gate-cell-reproduction`, `gate-promotion-ratchet`.
+
+🟡 ¹ `gate-register-currency` is discharged *by this very section* — it was red because the six
+curated shelves carried no `## 🆕 `pN`` header and the register lagged them; both are fixed in this
+pass.
+
+🟢 **Acceptance test for the next pass:** triage all remaining red gates into **(a)** a real defect in
+the shelves, **(b)** a real defect in the instrument, or **(c)** a stale instrument that should be
+retired — **publish the three counts and the per-gate verdict**, and treat `0` in category (c) as a
+mis-run triage. 🔴 **Do not open a discovery sweep until that is done.** A base that recommends
+`2,574`-repository estates to clients cannot have twenty unexplained red gates.
+
+### 🔴 `880-G2` — a gate may not be satisfiable by publishing a falsehood, and this was the second instance in one pass
+
+🔴 **Two of the `12` "lost" claims were not losses. They were claims this base had DISPROVED, and
+the register had no way to say so, so the gate demanded them every run:**
+`NO-PERMISSIVE-PLATFORM` (*"No permissive education platform exists"* — refuted by the three
+permissive full platforms on the very shelf it is registered against) and `EMEA-ADOPTION-GAP`
+(refuted by `p875`, on the very page it is registered against).
+
+🟢 **Fixed structurally**: the register now carries `status` = `LIVE`/`RETIRED`, a retirement
+**requires** `retired_by` and `retired_reason` or the gate refuses it, and a retired claim is graded
+**the other way round** — `RETIRED-BUT-PUBLISHED` is red. 🟢 **The new control caught `p880` itself**
+within minutes, on a draft that quoted the retired sentence while explaining the retirement.
+
+🟢 **Acceptance test:** audit **all `17`** register rows for the two defects this pass found by
+accident — **(i) compound claims** (`EMEA-ADOPTION-GAP` asserted two things; one closed, which made
+the whole row false and would have taken the still-open half with it on retirement) and
+**(ii) ids keyed on a reusable slot number** (`T15-INTEGRATION-AUTHORITY` names a trend number
+`p878` reassigned). **Publish a count for each and split or re-key every instance.** 🔴 Treat `0`
+compound rows as a mis-run audit: this pass found one in a register of sixteen by reading it.
+
+### 🟡 `880-G3` — the OSV limb of the advisory finding is UNVERIFIED, and is recorded as unverified
+
+🟢 **Established first-hand:** the four `vishalsachdev/canvas-mcp` advisories are repository-level
+and return `404` from `github.com/advisories/`, while the same channel resolves a control
+(`GHSA-jfh8-c2jp-5v3q`, log4shell) — so the absences are real and not a channel refusal
+([`record`](../evidence/advisory-globaldb.2026-11-17-p880.tsv)).
+
+🔴 **NOT established:** whether OSV has ingested these records. `api.osv.dev` does not resolve from
+this session's network policy. 🔴 **The claim published on `agents/top.md` is therefore scoped to the
+global GitHub Advisory Database and explicitly declines the OSV half** — because "Dependabot will
+not see it" and "no scanner will see it" are different claims and only the first is measured.
+
+🟢 **Acceptance test:** resolve OSV coverage for all four ids through an allowed channel, **or**
+declare `api.osv.dev` structurally unreachable here and say so as a property of the pipeline rather
+than carrying it as a to-do. 🟡 A `pip-audit` run against a pinned `canvas-mcp<1.16.0` in a sandbox
+would answer the practical question without needing OSV's API at all.
+
+### 🔴 `880-G4` — a canonical-case slug defect on five curated shelves, and the redirect is what hides it
+
+🔴 **This base publishes `OpenOlat/OpenOlat` on `agents/top.md`, `repos/foundations.md`,
+`verticals/solutions.md`, `intel/market.md` and `intel/trends.md`. The owner's own spelling, and the
+`full_name` the search index returns, is `OpenOLAT/OpenOLAT`.** 🟢 `p880` byte-read the canonical
+address and **confirms `p878`'s Apache-2.0 finding there** (`master/LICENSE`, `10,982 B`,
+`6dbc5b605ed0`), so this is a presentation defect, not a grant defect.
+
+🔵 **Why nothing caught it:** GitHub resolves owner and repository names case-insensitively and
+**serves correct licence bytes through the redirect**, so every two-channel verification this base
+runs passes on the wrong case. 🟢 **And `p880` established that owner-keyed SEARCH is likewise
+case-insensitive** (`user:openeducat` = `user:OpenEduCat` = `user:OPENEDUCAT`), so the defect cannot
+be detected from result counts either.
+
+🟢 **Acceptance test:** grade every published slug against the `full_name` the search index returns
+for it, publish the count of case-mismatched addresses across all shelves, and fix them. 🔴 `0` is a
+mis-run instrument — this pass found one by hand. This is `870-G5`'s class reaching the curated
+files, and `gate-alias-canonical` is already red (see `880-G1`).
+
+### 🟡 `880-G5` — the regional WebSearch channel is spent for discovery on this industry, and that needs a decision rather than a repeat
+
+🔴 **`p880` ran all five regional legs — global, North America, EMEA, APAC and LATAM (in Spanish) —
+and every one of the ten named findings was ALREADY HELD** ([`record`](../evidence/websearch-legs.2026-11-17-p880.tsv)).
+`p879` returned nil on the same channel; `p634` measured the saturation directly.
+
+🔵 **The leg is not worthless — it is a REFUTATION instrument now.** It earned its keep this pass by
+surfacing a Commission slide deck dating EU education high-risk duties to `2 Dec 2026`, which this
+base had already resolved to `2027-12-02` under Regulation (EU) 2026/1744. **Confirming that the
+field is still wrong where this base is right is worth something.**
+
+🟢 **Acceptance test:** decide and record a policy — either (a) drop the five regional legs from the
+standing pass and run them on a stated cadence, or (b) keep them and **publish the held/new split
+every pass**, so saturation is a number rather than an impression. 🔴 **What must stop is running
+five legs, finding nothing, and reporting the pass as though the channel were still productive.**
+
 ## 🟢 `2026-11-17` (seventy-fifth pass, `p870`) — **`6` gaps — `869-G1`, `869-G2`, `869-G3`, `869-G4` and `869-G5` ALL DISCHARGED with their acceptance tests run; `868-G3` CARRIED UNDONE for the second time and said so; and THREE of the five discharges found the defect in the INSTRUMENT the gap commissioned rather than in the data it was pointed at**
 
 🔴 **The honest summary of this pass, before the entries: `p870` ran five acceptance tests and

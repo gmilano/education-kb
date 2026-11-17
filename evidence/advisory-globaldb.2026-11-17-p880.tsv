@@ -1,0 +1,6 @@
+ghsa	severity	subject	repo_level_url_resolves	global_advisory_db_resolves	channel	note
+GHSA-7pp5-29mw-9jq3	High (CVSS 7.8)	TypeScript sandbox escape via child_process in execute_typescript	YES	NO (404)	WebFetch	affected <1.16.0; patched 1.16.0; local sandbox mode requires Node.js 22.18+
+GHSA-hmr8-mvr2-mvw5	High	prompt-injected assistant can disclose course data or change grades via first-call write tools	YES	NO (404)	WebFetch	listed on the repository's own advisories page
+GHSA-7mj9-4mcg-hvhv	Moderate	Canvas bearer token sent to host-chosen upload URL and off-origin file URLs	YES	NO (404)	WebFetch	listed on the repository's own advisories page
+GHSA-qf6c-jv93-38gv	Low	Windows downloaded course files not owner-only (os.chmod no-op on NTFS)	YES	NO (404)	WebFetch	listed on the repository's own advisories page
+GHSA-jfh8-c2jp-5v3q	Critical (CVSS 10.0)	CONTROL - log4shell, CVE-2021-44228, org.apache.logging.log4j:log4j-core	n/a	YES	WebFetch	CALIBRATION ROW: proves the channel resolves a global-DB advisory, so the four 404s above are absences and not a channel refusal

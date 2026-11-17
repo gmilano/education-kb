@@ -4,6 +4,156 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p880`) — **the denominator was one flag away: `p879`'s census re-run to EXHAUSTION is `2,574` repositories, not `571`, and the top-40 sample overstated the permissive share for 7 of 17 owners**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+Tenth pass of the day. `p879` published a per-organisation permissive/copyleft table and attached
+this caveat to it:
+
+> *"These are samples, not totals: the search endpoint returns at most 40 per query [...]
+> Percentages are of the sample. Do not quote them as org-wide."*
+
+🔴 **The endpoint does not return at most 40.** `per_page` accepts **100**, and `page` walks the
+remainder: `user:openedx` is `total_count=174` and returns `100 + 74`. 🔴 **The `40` was `p879`'s own
+parameter.** The denominator it declared unavailable — and correctly refused to quote without — was
+**one flag away**, and the caveat was therefore load-bearing for a limit that did not exist.
+
+🟢 **Built as [`ingest/p880-org-estate-full.sh`](../ingest/p880-org-estate-full.sh)**
+([`record`](../evidence/org-estate-full.2026-11-17-p880.tsv),
+[`totals`](../evidence/org-estate-full.2026-11-17-p880.totals.tsv)). **`31` owners · `2,574` source
+repositories · `3,757` with forks · every page walked to `total_count`.** Two arms, because
+🔵 **GitHub repository search EXCLUDES forks by default**, so `user:<org>` is what the organisation
+*built* and `user:<org> fork:true` adds what it *mirrors*.
+
+### 🔴 What the real denominator does to `p879`'s table
+
+| Org | p879 sample | p879 n | **FULL estate n** | **FULL permissive %** | Δ vs sample | no licence at all | +forks |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| `jupyterhub` | 85% | 40 | **75** | **85%** | +0 | 9% | 76 |
+| `ls1intum` | 82% | 40 | **157** | **54%** | **-28** | 41% | 173 |
+| `oppia` | 77% | 40 | **22** | **77%** | +0 | 23% | 53 |
+| `jupyter` | 75% | 40 | **135** | **67%** | **-8** | 19% | 136 |
+| `HKUDS` | 75% | 40 | **93** | **54%** | **-21** | 44% | 93 |
+| `apereo` | 63% | 40 | **30** | **63%** | +0 | 30% | 35 |
+| `learningequality` | 60% | 40 | **203** | **76%** | **+16** | 23% | 239 |
+| `autolab` | 57% | 40 | **7** | **57%** | +0 | 43% | 7 |
+| `h5p` | 37% | 40 | **145** | **27%** | **-10** | 70% | 158 |
+| `openedx` | 35% | 40 | **174** | **23%** | **-12** | 11% | 181 |
+| `edx` | 25% | 40 | **159** | **15%** | **-10** | 21% | 250 |
+| `moodlehq` | 12% | 40 | **139** | **5%** | -7 | 76% | 148 |
+| `bigbluebutton` | 10% | 40 | **79** | **13%** | +3 | 28% | 128 |
+| `moodle` | 8% | 40 | **12** | **8%** | +0 | 25% | 16 |
+| `sakaiproject` | 7% | 40 | **14** | **7%** | +0 | 79% | 14 |
+| `overhangio` | 3% | 40 | **29** | **3%** | +0 | 10% | 37 |
+| `ILIAS-eLearning` | 0% | 40 | **16** | **0%** | +0 | 56% | 18 |
+| **17 orgs `p879` published** | — | **571** | **1489** | **41%** | — | **34%** | — |
+
+🟢 **First, the part that vindicates `p879`.** This pass reproduced `p879`'s own method from its own
+data — the **top 40 by stars** of each full estate — and got `p879`'s published percentages back
+almost exactly (`ls1intum` 82%, `HKUDS` 75%, `jupyter` 75%, `openedx` 35%, `edx` 25%, `moodlehq` 12%,
+`h5p` 38 against its 37). 🔵 **`p879` measured correctly and labelled its sample honestly. What was
+wrong was not the measurement but the inference anyone would draw from it** — and `p879`'s caveat is
+the only reason that inference was not already in a client deck.
+
+🔴 **Second, the bias has a direction, and it is not random.** The sample **overstated** the
+permissive share for **7 of the 17** owners and understated it for **1**:
+
+- 🔴 **`ls1intum` `82%` → `54%` (−28 points)** — the largest error in the table. TUM's estate is
+  `157` repositories; its *most-starred* `40` are the MIT Artemis stack, and the tail is not.
+- 🔴 **`HKUDS` `75%` → `54%` (−21)**, **`openedx` `35%` → `23%` (−12)**, **`h5p` and `edx` −10 each**.
+- 🟢 **`learningequality` `60%` → `76%` (+16)** — the one owner whose full estate is *more*
+  permissive than its headline repositories. Kolibri's long tail is MIT nearly throughout.
+- 🟢 **`9` of `17` were exact**, all of them small or uniform estates (`oppia`, `apereo`, `autolab`,
+  `moodle`, `sakaiproject`, `overhangio`, `ILIAS-eLearning`, `jupyterhub`, +`bigbluebutton` ±3).
+
+🔵 **The rule that falls out: stars correlate with a permissive grant.** A copyleft organisation's
+most-adopted repositories are disproportionately its permissive *components* — which is `T16` from
+`p879` restated with a denominator, and it means **a star-ranked sample of a copyleft org is
+systematically optimistic about what you can build on.** The error is largest exactly where the
+estate is big and mixed, which is exactly where a client engagement looks.
+
+🟡 **`T16`'s structural claim SURVIVES the recount.** Every copyleft core still ships a permissive
+periphery — `openedx` `23%`, `edx` `15%`, `moodlehq` `5%` of real estates are permissive, not zero.
+🔴 **But the magnitudes in `p879`'s table should not be quoted; these should.**
+
+### 🔴 The finding `p879`'s sample could not see at all: a third of this estate carries NO licence
+
+🔴 **`842` of `2,574` source repositories — `32.7%` — have no licence file and no SPDX grant at
+all.** A repository with no licence is **"all rights reserved"**, not "probably fine": it is the one
+category that is *less* usable than AGPL-3.0, because there is nothing to comply with.
+
+| Owner | No-licence share | What that means |
+|---|---:|---|
+| 🔴 `IONISx` | **100%** (`23` of `23`) | An entire EMEA estate with **no grant anywhere**. Nothing here is adoptable. |
+| 🔴 `sakaiproject` | **79%** | The ECL-2.0 core is licensed; the periphery around it is not. |
+| 🔴 `moodlehq` | **76%** | Moodle HQ's own tooling estate. The GPL-3.0 core and the Apache-2.0 app are the exceptions. |
+| 🔴 `h5p` | **70%** | 🔵 **Material, because `p879` filed H5P's *content types* as the permissive surface.** `27%` of the estate is permissive and `70%` carries nothing — so an H5P content type must be checked **individually**, never adopted by family. |
+| 🔴 `raccoongang` | **62%** | An Open edX integrator; see the fork finding below. |
+| 🟢 `chaoss` `8%` · `overhangio` `10%` · `openedx` `11%` | lowest | 🔵 **`openedx` is the most licence-disciplined large estate in this census** — whatever one thinks of AGPL-3.0, `89%` of its `174` repositories say what they are. |
+
+🔵 **This is why the recount was worth running even though it produced only four new shelf rows:**
+the sample could report what *is* permissive, and only the full estate can report **how much of the
+field has no grant at all.**
+
+### 🟢 `14` owners never swept by any pass, and the regional finding is about FORKS
+
+| Owner (never swept before `p880`) | Estate | Permissive % | No licence | +forks | Region | Basis for the region |
+|---|---:|---:|---:|---:|---|---|
+| `instructure` | 124 | 59% | 30% | 214 | **North America** | 🟡 **UNMEASURED** — vendor HQ (Instructure, Utah). Not placed on a commit-domain axis by any pass. |
+| `mitodl` | 187 | 60% | 28% | 308 | **North America** | 🟢 **Institutional** — MIT Open Learning. Owner identity is the jurisdiction. |
+| `frappe` | 216 | 27% | 19% | 240 | **APAC** | 🟡 **UNMEASURED** — vendor HQ (Frappe Technologies, India). |
+| `openfun` | 100 | 52% | 21% | 125 | **EMEA** | 🟢 **MEASURED `p870`** — `fun-mooc.fr` `41`/`50` commit domains. |
+| `chaoss` | 77 | 57% | 8% | 79 | **Global** | 🔴 **REFUSED** — a Linux Foundation working group with no single jurisdiction. |
+| `raccoongang` | 80 | 19% | 62% | 274 | **EMEA** | 🟡 **UNMEASURED** — vendor HQ (Raccoon Gang, Ukraine). |
+| `eduNEXT` | 127 | 1% | 35% | 375 | **LATAM** | 🟢 **MEASURED `p870`** — `edunext.co` `29`/`50`. |
+| `edly-io` | 65 | 22% | 40% | 225 | **APAC** | 🟢 **MEASURED `p870`** — `arbisoft.com` `29`/`50`. |
+| `cmmedu` | 18 | 33% | 33% | 32 | **LATAM** | 🟢 **Institutional `p868`** — CMM Educación, Universidad de Chile. |
+| `1EdTech` | 46 | 20% | 39% | 55 | **Global** | 🔴 **REFUSED** — a standards body with global membership. |
+| `chamilo` | 14 | 0% | 36% | 22 | **EMEA** | 🟡 **UNMEASURED** — association HQ (Belgium/Spain). |
+| `OpenOlat` | 7 | 57% | 29% | 12 | **EMEA** | 🟡 **UNMEASURED** — vendor HQ (frentix, Switzerland). |
+| `IONISx` | 23 | 0% | 100% | 33 | **EMEA** | 🟢 **MEASURED `p870`** — `ionis-group.com` + `ionisx.com` `39`/`50`. |
+| `openeducat` | 1 | 0% | 0% | 1 | **APAC** | 🟡 **UNMEASURED** — vendor HQ (OpenEduCat, India). |
+
+🔴 **The Open edX integrator estates are FORK estates, and this is a LATAM/APAC supply finding.**
+`eduNEXT` (Colombia, placed LATAM at `p870` on `edunext.co` `29`/`50`) has **`127` source
+repositories of which exactly `1` is permissive — `0.8%`** — and **`248` forks** on top.
+`raccoongang` is `19%` permissive with `194` forks; `edly-io` (placed APAC at `p870` on
+`arbisoft.com`) is `22%` with `160`.
+
+🔵 **What that means for a regional engagement, as advice rather than as a number:** the regional
+Open edX integrators do **not** publish an original permissive component layer you can build on.
+They maintain **AGPL-3.0 forks** of the upstream platform. 🟢 **So the permissive component layer for
+a LATAM or APAC Open edX engagement comes from `openedx` itself** (the Apache-2.0
+`XBlock`/`codejail`/`paragon` layer `p879` filed) **and from `openfun`, `instructure` and `mitodl`**
+— not from the integrator in-region. 🔴 **That inverts the intuition** that a regional integrator is
+the natural place to source regional code.
+
+🟢 **And the best new EMEA find is a platform pair, not a component:** `openfun` — France Université
+Numérique — is `52%` permissive across `100` repositories and ships **`richie`** (MIT, `318★`, an
+education-portal CMS) and **`marsha`** (MIT, `152★`, an LTI video LCMS). Both byte-read this pass
+and filed on [`verticals/solutions.md`](../verticals/solutions.md).
+
+🟡 **`openeducat` is a one-repository estate, checked rather than assumed.** `user:openeducat`
+returns `1`, which looked like a channel failure; it is not. The owner has exactly one public
+indexed repository — `openeducat_erp` (`913★`) — confirmed against `openeducat in:name` (`172` hits,
+none of them a second repository of that owner). 🟢 **And owner-keyed search is case-INSENSITIVE**
+(`user:openeducat` = `user:OpenEduCat` = `user:OPENEDUCAT` = `1`; `openolat` = `OpenOLAT` =
+`OpenOlat` = `7`), so a mis-cased owner query does **not** silently under-return. Worth
+establishing, because `p880` also found a mis-cased *slug* on five curated shelves.
+
+### 🟡 Yield, stated honestly
+
+🔴 **`2,003` additional repositories of denominator produced `4` new rows for
+[`repos/foundations.md`](foundations.md) and `2` for [`verticals/solutions.md`](../verticals/solutions.md).**
+🟢 **That is `T12` independently reconfirmed from the denominator side.** `p876` concluded from ten
+discovery legs that *"there is no hidden shelf"*; `p880` can now say the same with a real
+denominator behind it: the short head and long tail of this index are a property of **the field**,
+not of this KB's search. 🔵 **A census is worth running for what it refutes, not only for what it
+adds** — and what it refutes here is `p879`'s magnitudes and the idea that more sweeping would find
+more agents.
+
+
 ## 🟢 `2026-11-17` (`p879`) — **the licence fault line runs *inside* the organisation: 571 repositories across 19 education orgs, measured, and every copyleft core turns out to ship a permissive periphery**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**
@@ -1132,12 +1282,12 @@ unthrottled trend sweep reports a smaller estate and looks exactly like a result
 | Owner | Repos swept | XBlocks | 🟢 permissive | 🔴 no grant |
 |---|---|---|---|---|
 | `open-craft` | — | `39` | 🟢 **`9`** | `6` |
-| `eduNEXT` | — | `18` | `0` | `4` |
-| `raccoongang` | — | `14` | `1` | 🔴 **`9`** |
-| `edly-io` | — | `14` | `4` | `3` |
-| `cmmedu` | — | `10` | `3` | `1` |
-| `openfun` | — | `9` | `0` | `4` |
-| `IONISx` | — | `7` | `0` | 🔴 **`7`** |
+| `eduNEXT` | — | `18` | `0` | `4` | **LATAM** | 🟢 **MEASURED `p870`** — `edunext.co` `29`/`50`. |
+| `raccoongang` | — | `14` | `1` | 🔴 **`9`** | **EMEA** | 🟡 **UNMEASURED** — vendor HQ (Raccoon Gang, Ukraine). |
+| `edly-io` | — | `14` | `4` | `3` | **APAC** | 🟢 **MEASURED `p870`** — `arbisoft.com` `29`/`50`. |
+| `cmmedu` | — | `10` | `3` | `1` | **LATAM** | 🟢 **Institutional `p868`** — CMM Educación, Universidad de Chile. |
+| `openfun` | — | `9` | `0` | `4` | **EMEA** | 🟢 **MEASURED `p870`** — `fun-mooc.fr` `41`/`50` commit domains. |
+| `IONISx` | — | `7` | `0` | 🔴 **`7`** | **EMEA** | 🟢 **MEASURED `p870`** — `ionis-group.com` + `ionisx.com` `39`/`50`. |
 | `openedxou` | — | `5` | `0` | `0` |
 | `collabassess` | — | `3` | `0` | 🔴 **`3`** |
 | `Abstract-Tech` | — | `2` | `1` | `1` |

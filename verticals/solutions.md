@@ -122,6 +122,16 @@ verified via `git ls-remote` + `raw.githubusercontent.com` on the resolved defau
 > conclusion survives the measurement and is strengthened by it: do not fork a platform to chase a
 > licence — **attach over LTI 1.3 and xAPI, where the permissive layer is yours to write.**
 
+## 🆕 `p880` · 2026-11-17 — what changed on this shelf
+
+🟢 **Two MIT EMEA platforms** from France Université Numérique, byte-read this pass:
+**`openfun/richie`** (`318★`, education-portal CMS) and **`openfun/marsha`** (`152★`, LTI video
+LCMS) — the portal and media layers clients ask for and that Moodle/Open edX do not provide.
+🔴 **Two corrections owed:** the canonical slug is **`OpenOLAT/OpenOLAT`** (five shelves carry
+`OpenOlat/OpenOlat`; Apache-2.0 re-confirmed on the canonical address), and both high-star education
+ERPs remain unusable — `openeducat_erp` is **LGPL**, `frappe/education`'s whole grant is a **19-byte**
+`License: GNU GPL V3` declaration.
+
 ## Learning management systems
 
 | Platform | Repo | Licence | Branch | Position & AI surface |
@@ -225,6 +235,56 @@ is the count of people who have already done the thing a Globant engagement woul
 **fork the official app, re-brand it, ship it to an institution's students.** The path is
 well-trodden and the licence permits it.
 
+
+## 🟢 EMEA platform layer the recount surfaced, and two slug/grant corrections — new in `p880`
+
+### 🟢 France Université Numérique's two MIT platforms
+
+🔵 **`p880`'s full-estate recount swept `openfun` — France Université Numérique, the operator of
+`fun-mooc.fr` — to exhaustion for the first time: `100` source repositories, `52%` permissive.** Two
+of them are *platforms* rather than components, both **MIT**, both pushed the day of this pass, and
+neither was on this shelf. 🟢 **Licences byte-read this pass**
+([`record`](../evidence/licence-byteread.2026-11-17-p880.tsv)).
+
+| Platform | Repo | Licence (byte-read) | ★ | Pushed | What it is |
+|---|---|---|---:|---|---|
+| **Richie** | https://github.com/openfun/richie | **MIT** (`LICENSE`, `1,079 B`, `e4b2a3148135`) | **318** | 2026-11-17 | **A CMS for building education portals**, Django/DjangoCMS. The *catalogue and marketing* front end that sits in front of an LMS: programmes, courses, teachers, categories, search, multilingual by design. 🔵 **This is the piece clients ask for and Moodle/Open edX do not provide** — and unlike both of them it is **MIT**, so the deliverable can be the client's. |
+| **Marsha** | https://github.com/openfun/marsha | **MIT** (`LICENSE`, `1,078 B`, `6dab88f38735`) | 152 | 2026-11-17 | **An LTI Learning Content Management System for video**, i.e. a video/media provider that mounts into any LTI-capable LMS. Upload, transcode, subtitle and serve media *without* putting it in the LMS and without a proprietary video vendor. |
+
+🟢 **Why they matter together, and why EMEA:** Richie + Marsha + an incumbent LMS gives a **public-sector
+EU buyer a portal and a media layer under a permissive grant**, attached by LTI rather than by a
+fork. 🔵 Both are produced by a French public higher-education consortium, which is `T15` again —
+the permissive supply in this vertical comes from public institutions, not startups. 🟡 **Placed
+EMEA on the owner's jurisdiction** (France Université Numérique), consistent with the `p870`
+commit-domain measurement that put `openfun` at `fun-mooc.fr` `41`/`50`.
+
+### 🔴 Two corrections this pass owes the shelf
+
+🔴 **1. The canonical slug is `OpenOLAT/OpenOLAT`, and this file publishes `OpenOlat/OpenOlat`.**
+The search index returns `full_name = OpenOLAT/OpenOLAT` for either spelling, because GitHub
+resolves owner and repository names case-insensitively and **serves correct licence bytes through
+the redirect** — which is exactly why five shelves have carried the wrong case without anything
+catching it. 🟢 **`p880` byte-read the canonical slug directly: `master/LICENSE`, `10,982 B`,
+`6dbc5b605ed0`, `Apache License` — so `p878`'s Apache-2.0 finding is CONFIRMED on the canonical
+address**, and the only defect is the case. 🔵 **This is `870-G5`'s case-sensitivity class in the
+curated files**, and it is a presentation defect rather than a grant defect — but a client who
+copies the slug into a procurement document should get the owner's own spelling.
+
+🔴 **2. The two education ERP candidates remain unusable, re-measured and now corroborated on the
+base's own hash.** 🟡 **`p880` set out to test whether either `NOASSERTION` was a false negative —
+this base's standing rule is that `spdx_id` screens and bytes decide — and in both cases the bytes
+confirm the existing verdict rather than overturn it:**
+
+| Candidate | ★ | Byte-read this pass | Verdict |
+|---|---:|---|---|
+| https://github.com/openeducat/openeducat_erp | 913 | `19.0/LICENSE`, `8,241 B`, `528f84036800` | 🔴 **LGPL** — weak copyleft, linkable but not re-licensable. Default branch is **`19.0`**, not `main`/`master`. Matches the base's existing `771-H` row to the byte. |
+| https://github.com/frappe/education | 712 | `develop/license.txt`, **`19 B`**, `1fcecf395312` | 🔴 **DECLARATION-ONLY.** The entire file is the string `License: GNU GPL V3`. It names a family, ships none of its text and points at no target. Taken at its word it is **GPL-3.0** and unusable for a proprietary derivative. Matches `771-G`. |
+
+🔵 **So the education-ERP gap on this shelf is real and stays open:** the two highest-star open
+education ERPs are weak-copyleft and declaration-only respectively, and **neither can be the base of
+a Globant deliverable.** 🟢 **The usable ERP route remains what it was — an Odoo/ERPNext-class
+general platform with an education layer built on top as the client's own code**, not an education
+ERP distribution adopted wholesale.
 
 ## Permissive-licence shortlist
 

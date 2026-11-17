@@ -534,7 +534,7 @@ gate-register-currency: ## p418 — ACTION p417-D: the gap register may not LAG 
 # grep therefore grades a deleted claim as PRESENT, which is worse than no detector because it
 # reports coverage.  A key surviving only under archive/ or scratchpad/ is RED.  No network.
 gate-prose-claims: ## p495 — a load-bearing PROSE claim may not vanish in a rewrite, and surviving only in archive/ is a LOSS
-	@cd compose/code/p495-prose-claim-gate && { $(PY) -I test_check_claims.py > $(CLAIMS_LOG) 2>&1 || { echo "🔴 p495-prose-claim-gate FAILED — the suite's own report follows:" ; sed "s/^/   /" $(CLAIMS_LOG) ; false ; } ; } && echo "── p495-prose-claim-gate (21 controls: ARCHIVE-ONLY, CLAIM-LOST, NO-SUCH-FILE, line-wrap tolerance, five refusals)" && echo "   PASS" || exit 1
+	@cd compose/code/p495-prose-claim-gate && { $(PY) -I test_check_claims.py > $(CLAIMS_LOG) 2>&1 || { echo "🔴 p495-prose-claim-gate FAILED — the suite's own report follows:" ; sed "s/^/   /" $(CLAIMS_LOG) ; false ; } ; } && echo "── p495-prose-claim-gate (33 controls: ARCHIVE-ONLY, CLAIM-LOST, NO-SUCH-FILE, line-wrap tolerance, p880 RETIRED/RETIRED-BUT-PUBLISHED both directions, nine refusals)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p495-prose-claim-gate/check_claims.py . || exit 1
 
 # ---------------------------------------------------------------- p618
