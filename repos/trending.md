@@ -4,6 +4,154 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p878`) — **44 discovery queries, 546 measured repositories: the trending leg stops being a blog reconstruction and becomes a census**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+Eighth pass of the day. **Still not a `github.com/trending` scrape** — `github.com` returns `403`
+through this session's proxy and that remains refused. What changed is that it no longer matters as
+much: `api.github.com/search/repositories` accepts **full discovery queries**, so "what is moving in
+education" can now be **measured directly** instead of reconstructed from a listicle. Full method
+and the `ls1intum` find are in `agents/trending.md` for this pass; this file carries the census, the
+staleness audit and the regional placement.
+
+### Method, so a later pass can re-run it exactly
+
+| Parameter | Value |
+|---|---|
+| Endpoint | `GET https://api.github.com/search/repositories` |
+| Query forms | `topic:<t> stars:><n> pushed:><date>` (28 legs); `<kw> in:name,description stars:><n> pushed:><date>` (16 legs) |
+| Ordering | `sort=stars&order=desc&per_page=50` |
+| Fields captured per hit | `stargazers_count`, `license.spdx_id`, `pushed_at`, `created_at`, `archived`, `fork`, `forks_count`, `language`, `size`, `default_branch`, `description` |
+| Rate limit | **30 per minute**, `X-RateLimit-Resource: search`; 2.2 s spacing, **0 failures in 53 calls** |
+| Result | **546** unique non-archived non-fork repositories; **264** permissive and absent from the curated files |
+| 🔴 Known blind spot | `openedx/edx-platform` returns `422` and is **unreachable by this channel** (see `agents/trending.md`) |
+
+### What the census says about this vertical, measured
+
+🔵 **The single most useful structural fact, and it is a correction to how these sweeps have been
+read.** Of the 264 permissive active repositories absent from the curated files, the overwhelming
+majority — including every one above 30,000 stars — are **learning *content*: courses, curricula,
+roadmaps, algorithm collections, interview preparation.** `freeCodeCamp/freeCodeCamp` (459,257 ★,
+BSD-3-Clause), `TheAlgorithms/Python` (226,196 ★, MIT), `ossu/computer-science` (211,218 ★, MIT),
+`microsoft/Web-Dev-For-Beginners` (97,127 ★, MIT), `microsoft/ML-For-Beginners` (92,290 ★, MIT).
+
+🟡 **These are not platforms and must never be shelved as if they were.** They are corpora. The
+correct use is as **content to ingest** — into Kolibri, into project-nomad, into a RAG index — and
+as the reason `repos/foundations.md`'s ingestion layer is load-bearing. **Education's star
+distribution is dominated by curricula, while education *software* clusters two orders of magnitude
+lower:** Artemis 832, Autolab 808, Kolibri 1,178, Sakai 1,240, Moodle 7,620. 🔵 **Any pass that
+ranks this vertical by stars will rank textbooks above the systems that teach with them.** Rank by
+licence, liveness and fitness; use stars only within a category.
+
+### Measured this pass: movement on the headline agents
+
+| Repo | ★ `p878` | Previously recorded | Δ | Licence (SPDX) | Pushed |
+|---|---:|---:|---|---|---|
+| https://github.com/HKUDS/DeepTutor | **60,007** | 52,783 (secondary, 2026-11-01) | **+7,224** | Apache-2.0 | 2026-11-15 |
+| https://github.com/Crosstalk-Solutions/project-nomad | **43,852** | 43,849 (`p877`, measured) | +3 | Apache-2.0 | 2026-11-16 |
+| https://github.com/THU-MAIC/OpenMAIC | **43,823** | 42,000 (secondary, Nov 2026) | +1,823 | **MIT** | 2026-11-17 |
+| https://github.com/patchy631/ai-engineering-hub | **41,961** | not carried | — | MIT | 2026-11-01 |
+
+🔴 **Two secondary-source corrections, both in the same direction secondary sources always err.** A
+blog dated this month headlined OpenMAIC as *"The Open-Source AI Classroom With 25,975+ GitHub
+Stars"*; it measures **43,823** — the listicle was **42% low**. A second source gave OpenMAIC's
+licence as **AGPL-3.0** while a third gave MIT; **SPDX and the repository agree on MIT.** 🔵 The
+pattern is now consistent enough to state as a rule: **secondary star counts in this vertical are
+wrong in both directions and by large margins, and secondary licence claims are a coin flip.**
+`p876` retracted inflated figures; `p878` finds a deflated one. Measure or omit.
+
+### 🟡 Staleness audit — rows this KB depends on that are not moving
+
+| Repo | Role in this KB | Last push | Verdict |
+|---|---|---|---|
+| https://github.com/LearningLocker/learninglocker | superseded LRS | **2024-05-30** | 🔴 **2.5 years** on `pushed_at`; `p876` measured the default branch's last commit at 2021-11-16. Retained as a warning only. |
+| https://github.com/adlnet/ADL_LRS | xAPI conformance reference | **2025-11-14** | 🟡 Exactly 12 months cold. Still correct as the spec reference; not a substrate. |
+| https://github.com/flysheep-ai/education-skills | MIT teacher-skills library | **2026-01-30** | 🔴 **Ten months cold at 125 ★**, against `GarethManning/education-agent-skills` at 993 ★ under **CC-BY-SA-4.0**. The permissive option is the dormant one. |
+| https://github.com/Open-TutorAi/open-tutor-ai-CE | tutoring platform (BSD-3-Clause) | **2026-06-26** | 🟡 Five months cold, 118 ★. |
+| https://github.com/ganesh-786/Proctor | "permissive proctoring" | **2025-06-09** | 🔴 17 months cold, **0 ★**. Consistent with `p875`: there is no supply. |
+| https://github.com/1EdTech/openbadges-validator-core | credentialing validation | **2025-11-04** | 🟡 12 months cold, 61 ★. Standards code ages slowly; acceptable. |
+| https://github.com/open-spaced-repetition/fsrs4anki | FSRS scheduler | 2026-08-14 | 🟢 3 months, 4,142 ★ — fine. |
+
+### Regional origin of what the census found — placed, not assumed
+
+🔵 **`p877` and earlier passes recorded that findings arrive without a region attached. The census
+makes origin legible for the first time**, because an org and a README name an institution.
+
+- **EMEA — the strongest result this pass, and it is institutional.** `ls1intum/*` (Technical
+  University of Munich, Germany) contributes **nine MIT repositories** including a production
+  teaching platform. It joins `openfun/ralph` (France Université Numérique, MIT),
+  `moocupv/lti-ai-grader` (Universitat Politècnica de València, Apache-2.0), `OpenOlat/OpenOlat`
+  (Switzerland, Apache-2.0) and `ILIAS-eLearning/ILIAS` (Germany, GPL-3.0). 🔵 **European public
+  universities are the single largest producer of permissively licensed education *software* in
+  this index** — a fact with direct bearing on **T13 (EMEA sovereignty)**: a European client asking
+  for a non-US stack can be shown a European-built one.
+- **APAC — present, permissive, and under-curated.** `THU-MAIC/OpenMAIC` (Tsinghua, MIT, 43,823 ★)
+  was already carried. New this pass: `open-scratch/teaching-open` (Apache-2.0, 637 ★),
+  `netless-io/flat` (MIT, 6,443 ★, Agora), `Miaotofu01/Study-Mate` (MIT, 1,479 ★, created
+  2026-09-17), plus a cluster of Chinese online-exam systems that are **AGPL-3.0**
+  (`mindskip/xzs` 3,918 ★, `mindskip/xzs-mysql` 3,603 ★) or MIT (`lsgwr/spring-boot-online-exam`
+  1,696 ★, `Alanosy/exam-platform` 887 ★). 🟡 **The APAC exam-system cluster is real supply in the
+  one category — assessment delivery — where this KB has repeatedly declared scarcity.** It is
+  Chinese-language and Chinese-market, which is a localisation cost, not an absence.
+- **North America.** `autolab/Autolab` (Carnegie Mellon, Apache-2.0), `CAHLR/OATutor` (UC Berkeley,
+  MIT, already carried), `jupyter/nbgrader` (BSD-3-Clause), `CTFd/CTFd` (Apache-2.0),
+  `Khan/perseus` (MIT).
+- 🟢 **LATAM — the English-language census returned nothing, so `p878` re-ran the legs in Spanish
+  and Portuguese, and the result overturns a standing assumption in this KB.** Twelve additional
+  legs (`gestão escolar`, `gestión escolar`, `plataforma educativa`, `sistema educativo`,
+  `avaliação automática`, `aprendizaje adaptativo`, `aula virtual`, `educación`, `educação`,
+  `escola`, `tutor inteligente`, `docente`) returned **304 unique repositories, 200 of them
+  education-related and absent from the curated files.** 🔴 **The LATAM shelf was not empty because
+  LATAM produces nothing. It was empty because no pass in this KB's history had ever searched in
+  Spanish or Portuguese.** Every prior LATAM-absence statement was an artefact of English-only
+  keyword legs, and should be read as such wherever it still appears below.
+
+  | Repo | Licence (byte-read) | ★ | Pushed | Created | What it is |
+  |---|---|---:|---|---|---|
+  | https://github.com/portabilis/i-educar | 🔴 **GPL-2.0** | **726** | 2026-11-13 | 2013-01-31 | **Brazil's school-management free software** — *"o maior software livre educacional do Brasil"*. Fully online school administration for secretaries, teachers, coordinators and managers. Tagged releases, GitHub Actions CI, modular packages, documented upgrade path. **13 years old and pushed four days before measurement.** |
+  | https://github.com/portabilis/i-diario | 🔴 **AGPL-3.0** (`LICENÇA PÚBLICA GERAL AFFERO GNU`) | 117 | 2026-10-14 | 2018-11-30 | The companion **electronic class diary** — attendance, grades, lesson records. Same community. |
+  | https://github.com/Antonio-Neves/Gestao-Escolar | **MIT** | 50 | 2026-10-12 | 2020-12-03 | Complete school-management system, bilingual PT/EN. The **only permissive** LATAM-origin SIS found. |
+  | https://github.com/ValentinTorassa/Open-Security-Labs | **Apache-2.0** | 45 | 2026-11-10 | 2026-06-21 | Open Spanish-language security-lab platform (practical Linux labs). Created five months ago. |
+  | https://github.com/villadalmine/study-cybercirujas | **Apache-2.0** | 38 | **2026-11-17** | 2026-07-19 | Self-service Spanish-language certification-study platform. Pushed on the day of measurement. |
+  | https://github.com/Universidade-Livre/ciencia-da-computacao | **MIT** | **21,053** | 2026-05-20 | 2021-06-27 | The largest Portuguese-language education repository in this index — a self-taught CS curriculum. **Content, not software** (see the census note above); sibling `Universidade-Livre/matematica` adds 1,432 ★ under MIT. |
+
+  🔵 **How to read `i-educar` in an engagement.** It is **GPL-2.0**, so it is not forkable into a
+  proprietary deliverable — but it is the incumbent in Brazilian municipal education, and that makes
+  it an **integration target rather than a base**: build the AI layer as a separate service that
+  speaks to it, and the copyleft boundary stays where it is. This is the same posture
+  `verticals/solutions.md` already takes for Moodle. 🟡 **It is also the counter-example to this
+  KB's own "LATAM has no supply" framing:** a 13-year-old, CI-tested, actively released SIS with a
+  named community existed in plain sight for every one of the eight passes run today.
+  🔵 **Standing instruction: run every discovery leg in Spanish and Portuguese as well as English.**
+  The cost is twelve API calls. The last eight passes paid for that omission with an empty shelf and
+  a wrong conclusion about a region.
+- 🔴 **Africa/Middle East (within EMEA) — still empty at these thresholds, and the language lesson
+  above applies untested.** `muskvdc/EduTwin-Africa` measures **1 ★**, no licence file. The two
+  Africa-origin leads named by `p875` (**EduNaija AI Tutor**, **AFRILANGTUTOR**) are model weights
+  on `huggingface.co`, **still refused at egress**. 🔵 **Next instrument: re-run these legs in
+  French, Arabic, Portuguese and Swahili before any further absence is recorded for this region** —
+  `p878` has just demonstrated what an English-only sweep does to a non-English region.
+
+### Trending candidates created in the last 120 days, measured
+
+Repositories created since 2026-07-20 that cleared their leg's threshold — the closest this channel
+gets to a genuine "new this week" signal.
+
+| Repo | Licence | ★ | Created | Note |
+|---|---|---:|---|---|
+| https://github.com/DozenTwelve/Papermorph | MIT | 1,766 | 2026-10-03 | Turns books into animated, narrated, interactive web explainers. Content-generation, education-adjacent. |
+| https://github.com/Miaotofu01/Study-Mate | MIT | 1,479 | 2026-09-17 | AI study companion: route planning, instruction, project work. **APAC-origin.** |
+| https://github.com/workersio/breakscale | MIT | 2,412 | 2026-08-23 | Build a system, load it to failure, watch why — systems-design teaching by simulation. |
+| https://github.com/penecho/penecho | 🔴 AGPL-3.0 | 2,521 | 2026-07-14 | Shared canvas for handwriting and equations with AI. Copyleft. |
+| https://github.com/echo-loop/Echo-Loop | 🔴 AGPL-3.0 | 4,776 | 2026-05-07 | AI English listening/speaking trainer. **APAC-origin.** Copyleft. |
+
+🟡 **None of these is a platform and none belongs in `verticals/solutions.md`.** They are logged so
+that a later pass can see whether any of them is still alive in three months — which is the only
+thing a trending file is actually for.
+
+---
+
 ## 🟢 `2026-11-17` (`p877`) — **16 fresh discovery legs confirm T12 — and a 43,849-star Apache-2.0 education platform was sitting in these sweep logs, in zero curated files**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

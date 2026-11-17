@@ -6,7 +6,41 @@ updated: 2026-11-17
 
 # Top AI agents — education
 
-**Pass `p877`, 2026-11-17** (seventh pass of the day). **`p877` is a grant audit, and it found
+**Pass `p878`, 2026-11-17** (eighth pass of the day). **`p878` turns discovery first-hand.**
+`api.github.com/search/repositories` accepts full **discovery** queries — `topic:`,
+`in:name,description`, `stars:>`, `pushed:>` — and not merely the `repo:` slug lookups `p875`
+used it for. 44 English legs returned **546 measured repositories**; 12 further legs in **Spanish
+and Portuguese** — never run by any previous pass — returned **304 more**. Three consequences for
+this file:
+
+- 🟢 **The grading category is no longer "one row because one row verified."** Two mature,
+  permissive, actively maintained **platforms** perform automated grading at scale:
+  **`ls1intum/Artemis`** (MIT, 832 ★, TUM) and **`autolab/Autolab`** (Apache-2.0, 808 ★, CMU).
+  They are platforms rather than agents, so they are filed in `verticals/solutions.md` and
+  `repos/foundations.md` — but a grading engagement that reads only this file now gets the wrong
+  answer. See the pointer in **Grading & assessment agents** below.
+- 🟢 **A new row class: institutional AI subsystems.** Artemis's AI is three config-gated
+  microservices (**Iris**, **Athena**, **Hyperion**) shipped as separate MIT repositories, with
+  *"instructors and tutors stay responsible for assessment decisions"* stated in the platform's own
+  README. That is an EU AI Act posture expressed as architecture, and it is reusable independently
+  of Artemis. New section below.
+- 🔴 **`NOASSERTION` decides nothing, in either direction.** `p877` correctly caught a false
+  permissive (PageLM). `p878` independently re-read the two standing education-side anomalies and
+  **confirms `p877`**: `OpenOlat/OpenOlat` is byte-identical Apache-2.0, `Gego-K12/gegok12` is MIT.
+  GegoK12's classifier abstention is now diagnosed exactly — its `LICENSE` carries an HTML comment,
+  `<!-- SPDX-License-Identifier: MIT -->`, on line 3. **The one rule that covers both of this KB's
+  licence errors: `spdx_id` screens, bytes decide.** A permissive claim needs bytes to confirm it;
+  a `NOASSERTION` needs bytes to refute it.
+
+🔴 **A blind spot in the measured census, named.** `openedx/edx-platform` returns `422` from the
+search channel while `raw.githubusercontent.com` serves its AGPL-3.0 licence bytes — it exists and
+is public, but **cannot be measured or discovered by this channel at all**, though its siblings
+(`edx-ora2`, `edx-proctoring`, `openedx-aspects`) can. `p877` read `422` as a renamed-slug signal;
+the error body says otherwise — *"the listed users and repositories cannot be searched either
+because the resource does not exist or you do not have permission to view them."* **A repository
+absent from the sweep is not evidence it does not exist.**
+
+**Previous pass (`p877`), retained:** Pass `p877`, 2026-11-17** (seventh pass of the day). **`p877` is a grant audit, and it found
 the most expensive class of error this KB can make: a repository published as `MIT` that is not
 open source at all.** It also restores five build-safe agents that today's own `p871` rewrite
 dropped out of this file.
@@ -139,8 +173,8 @@ Read this before the tables below. Measured `2026-11-17` via `api.github.com/sea
 
 | Agent | Stars | Licence (SPDX) | Last push | Read |
 |---|---:|---|---|---|
-| **HKUDS/DeepTutor** | **59,972** | Apache-2.0 | 2026-11-15 | Real platform, real community. Safe to propose. |
-| **THU-MAIC/OpenMAIC** | **43,808** | MIT ✅ | 2026-11-17 | Real platform, real community. Ship with the `ACCESS_CODE` hardening task. |
+| **HKUDS/DeepTutor** | **60,007** (`p878`; was 59,972 in `p875`) | Apache-2.0 | 2026-11-15 | Real platform, real community. Safe to propose. |
+| **THU-MAIC/OpenMAIC** | **43,823** (`p878`; was 43,808) | MIT ✅ | 2026-11-17 | Real platform, real community. Ship with the `ACCESS_CODE` hardening task. |
 | ~~CaviraOSS/PageLM~~ 🔴 **REMOVED — NOT OPEN SOURCE** | 2,069 | 🔴 **"PageLM Community License"** — byte-read `LICENSE.md`, **8,563 B**, `sha256₁₂ c834209c5f33` | 2026-11-15 (alive, 55 commits/12mo) | 🔴 **The bytes were re-read, as this row instructed, and they are not MIT.** Non-commercial; redistribution prohibited; revenue-share required for commercial use; Partial Use Clause reaches a single snippet or design pattern. **Do not name it in a proposal at all.** See `intel/measured-unusable.md`. |
 | CAHLR/OATutor | 282 | MIT | 2026-11-17 | Small but alive, peer-reviewed, accessibility-conformant. The credible academic option. |
 | AI-for-Education/pedagogy-benchmark | 13 | MIT | 2026-11-16 → 🔴 **HEAD `2025-10-15`** | An eval harness, not a tutor — low stars are expected and not disqualifying. 🔴 **`p876` liveness correction: the `2026-11-16` push did not touch the default branch, whose last commit is `2025-10-15` — 398 days, `0` commits in 12 months.** It is still the right instrument to cite to a ministry (1,143 questions from real teacher-qualification exams); it is a **frozen** one. Say so in the proposal rather than implying an active leaderboard. |
@@ -149,6 +183,14 @@ Read this before the tables below. Measured `2026-11-17` via `api.github.com/sea
 | littlecookie0722/AI-Teaching-Agent | **0** | MIT | 2026-08-23 | No community. Bespoke-from-zero risk profile. |
 | vulinh1704/ai-tutor-agent | **0** | MIT | 2026-11-16 | A starter template, as flagged. Confirmed by adoption. |
 | LabSirius/TutorIA | **0** | MIT | 2026-10-27 | 🟡 **Zero stars, and this one is not a weekend project** — it is a funded Colombian university deliverable. The maturity caveat below (docs-only `main`) is the operative fact; the star count corroborates that nobody outside the lab has used it. |
+| **ls1intum/Artemis** | **832** | **MIT** — byte-read `main/LICENSE` | 2026-11-17 | 🟢 **New in `p878`.** A platform, not an agent, but it is the largest permissive education *system* in this KB and it grades. Ten years old, pushed on the day of measurement, OpenSSF Scorecard + Best Practices (project 14163). See `verticals/solutions.md`. |
+| **autolab/Autolab** | **808** | **Apache-2.0** — byte-read `master/LICENSE` | 2026-11-11 | 🟢 **New in `p878`.** Carnegie Mellon's auto-graded course-management service. Created 2014-10-25. |
+| **ls1intum/Apollon** | 106 | **MIT** | 2026-11-17 | 🟢 New in `p878`. UML modelling editor, standalone-capable. |
+| **ls1intum/Ares** | 27 | **MIT** | 2026-11-03 | 🟢 New in `p878`. Secure sandboxed auto-grading execution (JUnit 5). The most liftable component found this pass. |
+| **ls1intum/edutelligence** | 17 | **MIT** | 2026-11-17 | 🟢 New in `p878`. Iris / Athena / Hyperion AI microservice suite. |
+| **ls1intum/Pyris** | 12 | **MIT** | 2026-06-03 | 🟢 New in `p878`. Standalone LLM microservice behind Iris. |
+| **virtualryder/edu-ai-agents** | **4** | **MIT** — byte-read | 2026-10-10 | 🔴 New in `p878`. FERPA/COPPA/IDEA-504/ADA-aligned governed-agent reference. **Four stars — reference reading, not a dependency.** |
+| 🔴 `openedx/edx-platform` | **unmeasurable** | AGPL-3.0 — byte-read via `raw.githubusercontent.com` | — | 🔴 **New in `p878`: returns `422` from the search channel and cannot be measured or discovered by it**, although it exists and is public and its sibling repos are indexed. The census has a named hole, and it is this KB's flagship LMS. |
 
 🟡 **How to use this column.** It separates *support burden* from *engineering quality*. A 0-star
 repo may be excellent code; it will still have no external contributors, no issue history and
@@ -211,6 +253,17 @@ frontend, the Open edX plugin and the test suite that its README already specifi
 
 `p871` recorded this category as empty. It is not — `p872` found and verified one real
 permissive system. The table is one row long because one row verified.
+
+🟢 **`p878` changes the answer this section gives, without adding a row to it.** The two repos
+below are the only permissive grading *agents* this KB has verified, and both are small. But
+automated grading at production scale now exists under permissive licences as **platform**
+functionality: **`ls1intum/Artemis`** (MIT, 832 ★) builds, tests and statically analyses programming
+submissions automatically and combines manual assessment with **feedback suggestions** via
+`Athena`; **`autolab/Autolab`** (Apache-2.0, 808 ★, CMU) is a course-management service built around
+auto-graded programming assignments. 🔵 **If the engagement is "grade programming work at scale,"
+start from one of those platforms, not from the two rows below.** If it is "score free-text essays,"
+the rows below are still the state of the permissive art — and still small. Full entries in
+`verticals/solutions.md`; recipe in **P17**.
 
 | Agent | Repo | Licence | Default branch | What it does |
 |---|---|---|---|---|
@@ -284,6 +337,42 @@ compose a general agent framework. These were verified on the same two channels 
 `api.github.com/search/repositories?q=repo:<old>` returns **`422 Validation Failed`** — which is
 the only signal this KB has that a slug has stopped being canonical. 🔵 **A verification method
 built on bytes alone is structurally blind to a rename.**
+
+## Institutional AI subsystems — new in `p878`
+
+Not tutors, and not frameworks. These are the **AI microservices of a production university
+platform**, published as separate MIT repositories and usable on their own. They are listed here
+because they are the only education AI code in this KB that was **built to be governed**: the
+platform that ships them states that they are *"optional, configuration-gated integrations"* and
+that *"instructors and tutors stay responsible for assessment decisions."*
+
+| Component | Repo | Licence (byte-read) | ★ | Pushed | What it does |
+|---|---|---|---:|---|---|
+| **Edutelligence** (Iris / Athena / Hyperion) | https://github.com/ls1intum/edutelligence | **MIT** | 17 | 2026-11-17 | The AI microservice suite for Artemis. **Iris** is the learner-facing tutor; **Athena** generates *feedback suggestions* for human tutors on text and modelling exercises; **Hyperion** is the newest member. Python. |
+| **Pyris** | https://github.com/ls1intum/Pyris | **MIT** | 12 | 2026-06-03 | The standalone LLM microservice behind Iris. Smaller surface than `edutelligence`; useful if you want the LLM seam without the suite. |
+| **Ares** | https://github.com/ls1intum/Ares | **MIT** | 27 | 2026-11-03 | **Secure sandboxed execution for auto-graded Java.** A JUnit 5 extension — the piece every auto-grading build needs and almost nobody writes safely. Reusable with no Artemis dependency. |
+| **Apollon** | https://github.com/ls1intum/Apollon | **MIT** | 106 | 2026-11-17 | UML modelling editor. Drives Artemis's modelling exercises; ships standalone (`Apollon_standalone`) and as a VS Code extension. |
+
+🔵 **Why `Athena` is the architecturally interesting one.** It produces **feedback *suggestions* for
+a human assessor** rather than grades. That is precisely the design the EU AI Act's Annex III
+treatment of grading pushes towards (see **T11**), and precisely what DC's 2026-27 guidance and
+Florida's opt-out rule assume (see `intel/market.md`, North America). **Most open-source grading
+code in this KB assumes the model decides. This one assumes a person does, and makes the model
+argue for a decision.** For any engagement in a regulated jurisdiction that is the cheaper posture
+to defend.
+
+🟡 **Maturity, stated honestly.** 12–106 stars each. These are components of an 832-star platform,
+not independent products — adopt them with the platform, or read them as reference designs and
+budget the integration. The sandbox (`Ares`) is the one most likely to be worth lifting on its own.
+
+🔴 **One flagged non-dependency, for reference reading only.**
+**https://github.com/virtualryder/edu-ai-agents** — **MIT** (byte-read) — is the only repository
+found this pass built explicitly around **FERPA / COPPA / IDEA-504 / ADA Title II**, with
+deny-by-default authorisation, student-PII masking, human-in-the-loop enforcement and a
+tamper-evident audit trail, as eight reference workflows on Amazon Bedrock. **It measures 4 stars
+and was last pushed 2026-10-10.** Secondary coverage presented it as a notable release; the
+measurement does not support that. **Read it as a compliance checklist for P15. Do not depend on
+it.**
 
 ## Licence flags — read before proposing any of these to a client
 

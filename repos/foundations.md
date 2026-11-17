@@ -6,7 +6,44 @@ updated: 2026-11-17
 
 # Foundational repos — education
 
-**Pass `p877`, 2026-11-17** (seventh pass of the day). **`p877` closes a declared gap that has
+**Pass `p878`, 2026-11-17** (eighth pass of the day). **`p878` makes discovery first-hand for the
+first time, and the first thing it finds is the largest shelving miss in this KB's history.**
+`api.github.com/search/repositories` accepts full discovery queries, not only the `repo:` slug
+lookups `p875` used; 44 English legs returned **546 measured repositories** and 12 legs in
+**Spanish and Portuguese — never run before** returned **304 more**. Three new sections below:
+
+- 🟢 **The TUM stack** — nine MIT repositories from the Technical University of Munich around
+  `ls1intum/Artemis` (832 ★), a ten-year-old operated university teaching platform. **It is the
+  first permissively licensed assessment platform in this KB**, against AGPL/GPL everywhere else.
+- 🟢 **`autolab/Autolab`** (Apache-2.0, 808 ★, Carnegie Mellon) — a second mature permissive
+  auto-grader.
+- 🔴 **LATAM-origin platforms**, including Brazil's incumbent `portabilis/i-educar` (GPL-2.0,
+  726 ★, 13 years old) — found only because `p878` searched in Portuguese. **Every prior
+  LATAM-absence claim in this KB is an artefact of English-only keyword legs.**
+
+🟢 **`p877`'s two education-side licence anomalies independently re-confirmed by byte-read:**
+`OpenOlat/OpenOlat` on `master` is a byte-identical **Apache License 2.0** preamble and
+`Gego-K12/gegok12` on `main` is **MIT** — so the `NOASSERTION` note below stands, and its cause is
+now exact rather than inferred: **GegoK12's `LICENSE` carries an HTML comment,
+`<!-- SPDX-License-Identifier: MIT -->`, on line 3**, defeating the classifier on a file that
+states its own SPDX identifier. 🔵 **The rule that covers both of this KB's licence errors —
+`p877`'s false permissive and the false negatives here — is one rule: `spdx_id` screens, bytes
+decide, in either direction.**
+
+🔴 **New gap, and it is in the measurement channel itself.** `openedx/edx-platform` returns `422`
+from `search/repositories` and **cannot be measured or discovered by it**, while
+`raw.githubusercontent.com` serves its **AGPL-3.0** bytes and its sibling repos (`edx-ora2`,
+`edx-proctoring`, `openedx-aspects`) are indexed normally. `p877` read `422` as a renamed-slug
+signal; the error body reads *"the listed users and repositories cannot be searched either because
+the resource does not exist or you do not have permission to view them."* **The flagship LMS in
+this KB has no measured star count, and absence from the sweep is not evidence of absence.**
+
+🔴 **One more licence fact an Open edX engagement needs:** **`overhangio/tutor`**, the Docker-based
+Open edX distribution and in practice *the* way Open edX is deployed, is **AGPL-3.0** (byte-read,
+`LICENSE.txt`), 1,132 ★, pushed 2026-11-17. An Open edX build is therefore AGPL at the platform
+layer **and** AGPL at the operations layer.
+
+**Previous pass (`p877`), retained:** Pass `p877`, 2026-11-17** (seventh pass of the day). **`p877` closes a declared gap that has
 stood in this file since `p872`, and adds the largest permissive education repository the KB has
 ever failed to shelve.**
 
@@ -184,6 +221,71 @@ by blobless bare clone (`git log -1 HEAD`), per the `p876` method.
 |---|---|---|---:|---|---:|---|
 | https://github.com/Crosstalk-Solutions/project-nomad | **Apache-2.0** (10,778 B) | `main` | **43,849** | 2026-11-08 | **813** | **Offline-first knowledge and education server** — Wikipedia, thousands of books, courses, maps and **optional local AI**, all served from one box with no internet. Apache-2.0, Dockerised, `collections/`, `admin/`, `install/` in-tree, semantic-release. **4,526 forks** is the number that matters: forks of an appliance repo are deployments, not stars. This is the natural substrate for every ministry equity programme and rural-school bid in `compose/patterns.md` **P5**, and it is permissive where Internet-in-a-Box (LGPL) and Kiwix (GPL-3.0) are not. |
 | https://github.com/Gego-K12/gegok12 | **MIT** (1,150 B, `sha256₁₂ b8694396d7dc`) | `main` | 57 | 2026-06-25 | 113 | **The first permissive student-information system in this KB** — closes the standing gap below. Laravel/PHP, **API-first by design** (`api.md` in-tree), `Dockerfile` + `docker-compose.yml`, `lang/` for localisation, plus separate Android **parent** and **teacher** apps. 🟡 **Low stars and HEAD five months cold** — this is a small project, and it should be proposed as *a permissive base you will own and extend*, not as a mature product with a community behind it. Its value is the licence: it is the only SIS here you can fork, rebrand and ship inside a proprietary deliverable. 🔴 GitHub reports `NOASSERTION`; the bytes say MIT. |
+
+## The TUM stack — permissive university teaching infrastructure, new in `p878`
+
+🟢 **The largest shelving miss in this KB's history, and it is institutional, European and MIT.**
+`ls1intum` is the Applied Education Technologies group at the **Technical University of Munich**.
+It publishes **68 repositories pushed since 2026-01-01**, the great majority MIT, built around a
+teaching platform that has existed since **2016** and is operated at university scale. No pass
+before `p878` carried any of it, because every previous discovery leg was a search-engine summary
+and listicles do not rank university infrastructure.
+
+Rows measured first-hand: licence by **byte-read** on `raw.githubusercontent.com`, traction and
+`pushed_at` via `api.github.com/search/repositories`, README read from the repository itself.
+
+| Repo | Licence (byte-read) | ★ | Pushed | Why it is foundational |
+|---|---|---:|---|---|
+| https://github.com/ls1intum/Artemis | **MIT** (byte-read on `main`) | **832** | 2026-11-17 | 🟡 **Default branch `develop`.**  **The platform.** Interactive exercises (programming, modelling, text, quiz, file-upload) as first-class objects with version control, CI and static analysis built in; **online exams with per-student exercise variants, test runs, plagiarism checks and structured student reviews**; competencies, learning paths and learning analytics; config-gated AI. Java, self-hosted, horizontally scalable. OpenSSF Scorecard and OpenSSF Best Practices (project 14163), Sonar and Codacy gates. |
+| https://github.com/ls1intum/Ares | **MIT** | 27 | 2026-11-03 | **Secure sandboxed execution for auto-graded Java**, as a JUnit 5 extension. 🔵 **The single most liftable component found this pass** — running untrusted student code safely is the part of every auto-grader that is easy to get wrong and expensive to get right, and this is a permissive implementation with no platform dependency. (`Ares2`, the second Java implementation, is in progress and reports `NOASSERTION` — byte-read before use.) |
+| https://github.com/ls1intum/edutelligence | **MIT** | 17 | 2026-11-17 | The AI microservice suite: **Iris** (learner-facing tutor), **Athena** (feedback *suggestions* for human assessors), **Hyperion**. Python. |
+| https://github.com/ls1intum/Pyris | **MIT** | 12 | 2026-06-03 | Standalone LLM microservice behind Iris — the smaller seam if you want the model layer alone. |
+| https://github.com/ls1intum/Apollon | **MIT** | 106 | 2026-11-17 | UML modelling editor, TypeScript. Standalone build (`Apollon_standalone`) and a VS Code extension exist. |
+| https://github.com/ls1intum/artemis-ansible-collection | **MIT** | 8 | 2026-11-17 | Ansible collection to configure and deploy Artemis. **Deployment automation shipped by the maintainers** — rare in this index and worth real money in a delivery estimate. |
+| https://github.com/ls1intum/artemis-ios | **MIT** | 13 | 2026-11-16 | Native iOS client (Swift). |
+| https://github.com/ls1intum/artemis-android | **MIT** | 13 | 2026-11-14 | Native Android client (Kotlin). |
+| https://github.com/ls1intum/standardized-competency-catalog | **MIT** | 1 | 2026-03-01 | TUM's standardised competency catalogue. 🟡 Tiny, but it is **a permissive competency structure**, and `p875` recorded that no permissive curriculum graph exists (`os-taxonomy` is **ODbL-1.0**). This does not close that gap — it is a catalogue, not a prerequisite graph — but it is the first permissive thing in the category. |
+
+🔵 **What this changes in the licence arithmetic.** Before `p878`, the honest answer to *"can we
+build an assessment platform on open source and ship it inside a proprietary deliverable?"* was
+no: Open edX is AGPL-3.0, `edx-ora2` is AGPL-3.0, Moodle is GPL-3.0, Canvas is AGPL-3.0, QTI
+components are GPL-3.0. **Artemis is MIT.** That is the whole of the difference, and it is the kind
+of difference that decides a build-versus-buy conversation.
+
+🟡 **And what it does not change.** 832 stars is a small community for a platform of this size;
+Java/Spring is a heavier operational commitment than PHP or Python; and the platform is built
+around **university** course structures, so a K-12 or corporate-training engagement will fight it.
+Propose it where the shape matches: higher education, technical subjects, assessment at scale.
+
+## The second permissive auto-grader — `autolab/Autolab`, new in `p878`
+
+| Repo | Licence (byte-read) | ★ | Pushed | Created | Why it is foundational |
+|---|---|---:|---|---|---|
+| https://github.com/autolab/Autolab | **Apache-2.0** (`master/LICENSE`) | **808** | 2026-11-11 | 2014-10-25 | **Carnegie Mellon's course-management service built around auto-graded programming assignments.** Twelve years old, still pushed. Apache-2.0 carries an explicit patent grant, which Artemis's MIT does not — occasionally the deciding factor in an enterprise or public-sector procurement. |
+
+🔵 **Artemis or Autolab?** Take **Artemis** when the engagement needs exams, modelling, text
+assessment, competencies and analytics in one system, and when MIT's simplicity is worth more than
+a patent clause. Take **Autolab** when the scope is narrow — *auto-grade programming work* — when a
+lighter system is an advantage, or when counsel wants Apache-2.0's patent grant. Both are
+genuine; neither is a research prototype.
+
+## LATAM-origin education platforms — new in `p878`
+
+🔴 **This section exists because of a method failure, and it should be read as one.** Eight passes
+recorded that LATAM produces almost no open-source education software. **None of them had ever run
+a discovery query in Spanish or Portuguese.** Twelve such legs returned 304 repositories.
+
+| Repo | Licence (byte-read) | ★ | Pushed | Created | Note |
+|---|---|---:|---|---|---|
+| https://github.com/portabilis/i-educar | 🔴 **GPL-2.0** | **726** | 2026-11-13 | 2013-01-31 | 🔴 **Default branch `2.12`, not `main`/`master`.**  **Brazil's incumbent free-software school-management system** — *"o maior software livre educacional do Brasil"*. Online administration for school secretaries, teachers, coordinators and managers. Tagged releases, GitHub Actions CI, modular packages, documented upgrade path. |
+| https://github.com/portabilis/i-diario | 🔴 **AGPL-3.0** (byte-read: *LICENÇA PÚBLICA GERAL AFFERO GNU*; GitHub says `NOASSERTION` — **T14**) | 117 | 2026-10-14 | 2018-11-30 | 🔴 **Default branch `1.6`.**  Companion **electronic class diary** — attendance, grades, lesson records. |
+| https://github.com/Antonio-Neves/Gestao-Escolar | **MIT** | 50 | 2026-10-12 | 2020-12-03 | Complete school-management system, bilingual PT/EN. 🟢 **The only permissive LATAM-origin SIS found.** Small — propose as a base to own, as with GegoK12. |
+
+🔵 **How to use `i-educar` despite the copyleft.** It is GPL-2.0, so it cannot be forked into a
+proprietary deliverable — but it is the **incumbent** in Brazilian municipal education, which makes
+it an **integration target rather than a base**. Build the AI layer as a separate service with a
+clean process boundary and the copyleft stays where it is. This is the posture
+`verticals/solutions.md` already prescribes for Moodle, and it applies unchanged here.
 
 ## Document & media ingestion — the real bottleneck in education AI
 

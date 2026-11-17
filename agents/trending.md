@@ -4,6 +4,176 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p878`) — **the KB's first first-hand *discovery* channel: `search/repositories` takes full queries, not just `repo:` lookups — 44 queries, 546 measured repositories, and a complete MIT university teaching stack that eight passes never saw**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+Eighth pass of the day. `p875` opened `api.github.com/search/repositories` and used it to **measure
+78 addresses it already had**. `p878`'s finding is that the same endpoint accepts **discovery
+queries** — `topic:`, `in:name,description`, `stars:>`, `pushed:>`, `sort=stars` — and returns
+`stargazers_count`, `license.spdx_id`, `pushed_at`, `created_at`, `archived` and `fork` for
+repositories **this KB had never heard of**.
+
+🔵 **Why this is the most consequential method change since `p875`.** Every discovery leg in this
+KB's history has been a search-engine summary of a blog's reconstruction of GitHub — the channel
+that produced the inflated star counts `p876` had to retract. **Discovery is now first-hand and
+measured in the same call.** 44 queries → **546 unique non-archived, non-fork repositories**, each
+with its own licence and traction attached at the point of discovery.
+
+| Leg | Value |
+|---|---|
+| Queries run | 44 (28 `topic:` legs, 16 `in:name,description` legs) |
+| Unique repositories returned | **546** |
+| Permissive (MIT/Apache-2.0/BSD/ISC/MPL/Unlicense), active, **absent from the six curated files** | **264** |
+| Rate budget | 30/min, `X-RateLimit-Resource: search`; run at 2.2 s spacing, **zero failures across 44 + 9 batched calls** |
+
+### The find: `ls1intum` — a complete, MIT, actively developed university teaching stack
+
+**`ls1intum/Artemis`** (Technical University of Munich, Applied Education Technologies) is the
+largest permissively licensed university teaching platform this KB has ever failed to shelve. It
+has existed since **2016-09-29**, and **no pass had it in any curated file**.
+
+| Repo | Licence (byte-read) | ★ | Pushed | Lang | Role |
+|---|---|---:|---|---|---|
+| https://github.com/ls1intum/Artemis | **MIT** | **832** | 2026-11-17 | Java | The platform: interactive exercises, online exams, adaptive learning, automated individual feedback |
+| https://github.com/ls1intum/Apollon | **MIT** | 106 | 2026-11-17 | TypeScript | UML modelling editor — usable standalone, drives modelling exercises |
+| https://github.com/ls1intum/Ares | **MIT** | 27 | 2026-11-03 | Java | **Artemis Java Test Sandbox** — JUnit 5 extension for *secure* sandboxed grading execution |
+| https://github.com/ls1intum/edutelligence | **MIT** | 17 | 2026-11-17 | Python | The AI microservice suite (Iris / Athena / Hyperion) |
+| https://github.com/ls1intum/Pyris | **MIT** | 12 | 2026-06-03 | Python | LLM microservice for Artemis (Iris backend) |
+| https://github.com/ls1intum/artemis-ansible-collection | **MIT** | 8 | 2026-11-17 | Jinja | Ansible collection to configure and deploy Artemis |
+| https://github.com/ls1intum/artemis-ios | **MIT** | 13 | 2026-11-16 | Swift | Native iOS client |
+| https://github.com/ls1intum/artemis-android | **MIT** | 13 | 2026-11-14 | Kotlin | Native Android client |
+| https://github.com/ls1intum/standardized-competency-catalog | **MIT** | 1 | 2026-03-01 | Python | TUM's standardised competency catalogue |
+
+🟢 **Read from the repository's own README, not a summary.** Artemis describes itself as
+*"Interactive Learning with Individual Feedback"*, self-hosted by institutions, and names five
+things that matter to this KB directly:
+
+1. **"Programming submissions are built, tested, and analyzed automatically"** — auto-grading with
+   version control, CI and static analysis as first-class objects.
+2. **"Authentic assessment and online exams"** with **"exercise variants per student, test runs,
+   plagiarism checks, and structured student reviews."** 🔵 **This is the KB's own answer to its
+   proctoring gap, implemented.** `p875` concluded the category is *"19 stars across six
+   repositories"* and the honest advice is **"buy, or redesign the assessment."** Artemis **is** the
+   redesign: integrity through per-student variants and plagiarism detection rather than through
+   webcam surveillance — MIT, ten years old, and deployed at scale by a university.
+3. **"Competencies, learning paths, and learning analytics"** — adaptive learning as data
+   structures, against the `p875` finding that there is no permissive curriculum graph.
+4. **"Iris, Athena, and Hyperion are optional, configuration-gated integrations; instructors and
+   tutors stay responsible for assessment decisions."** 🔵 **That sentence is an EU AI Act
+   compliance posture written into an architecture** — see **T11**: grading and steering learning
+   are Annex III high-risk, and this is human-retained-decision plus switchable AI.
+5. **OpenSSF Scorecard and OpenSSF Best Practices badges (project 14163)**, Sonar quality gates and
+   Codacy — supply-chain hygiene no other education platform in this KB advertises.
+
+🟡 **The honest caveat on traction.** 832 stars is small next to Moodle's 7,620, and GitHub stars
+under-count institutional software systematically (Moodle itself, the world's most-deployed LMS,
+measures 7,620). Artemis's signal is not stars: it is **a push on the day of measurement, 68
+sibling repositories in the same org, native mobile clients, an Ansible collection and a
+benchmarking harness.** That is an operated platform, not a paper.
+
+### `autolab/Autolab` — the second permissive auto-grader, from CMU
+
+**https://github.com/autolab/Autolab** — **Apache-2.0** (byte-read, `master`), **808 ★**, pushed
+**2026-11-11**, created **2014-10-25**. *"Course management service that enables auto-graded
+programming assignments."* Carnegie Mellon University. **Absent from every curated file.**
+
+🔵 **Why both matter at once.** Until this pass the KB's position was that *"no mature OSS grading
+agent exists"* and the realistic substrate was `openedx/edx-ora2` (**AGPL-3.0**, 64 ★). There are
+now **two mature, permissive, actively maintained auto-grading platforms** — Artemis (MIT, 832 ★)
+and Autolab (Apache-2.0, 808 ★) — and they change the licence arithmetic of every assessment
+engagement. See **P17** in `compose/patterns.md`.
+
+### Smaller permissive finds, measured and byte-read
+
+| Repo | Licence (byte-read) | ★ | Pushed | Note |
+|---|---|---:|---|---|
+| https://github.com/patchy631/ai-engineering-hub | **MIT** | **41,961** | 2026-11-01 | 93+ hands-on AI engineering projects (RAG, agents, MCP, voice). Corporate-upskilling curriculum material, not a product. |
+| https://github.com/netless-io/flat | **MIT** | 6,443 | 2026-11-10 | Agora Flat online-classroom client (Web/Windows/macOS). Permissive where BigBlueButton is **LGPL-3.0**. |
+| https://github.com/CTFd/CTFd | **Apache-2.0** | 6,916 | 2026-11-10 | The CTF platform. Permissive substrate for security and skills training with scoring built in. |
+| https://github.com/Udayraj123/OMRChecker | **MIT** | 1,196 | 2026-09-04 | OMR/bubble-sheet grading from a **phone camera or scanner**. The paper-assessment on-ramp for low-bandwidth deployments — see **P18**. |
+| https://github.com/open-scratch/teaching-open | **Apache-2.0** | 637 | 2026-07-06 | Scratch/ScratchJr/Python teaching platform with courses, classes, assignments, permissions. **APAC-origin (China).** |
+| https://github.com/OpenVidu/openvidu | **Apache-2.0** | 2,146 | 2026-11-17 | Self-hosted real-time video/audio. Permissive classroom-media alternative to BigBlueButton. |
+
+### 🔴 Licence flags opened this pass
+
+- **`GarethManning/education-agent-skills` is `CC-BY-SA-4.0`, not a software licence.** 993 ★,
+  created 2026-03-01, *"165 evidence-grounded AI skills for teachers, school leaders and EdTech."*
+  Byte-read: *"Creative Commons Attribution-ShareAlike 4.0 International."* 🔴 **ShareAlike is viral
+  for derived content.** It is the largest teacher-skills library available and a Globant deliverable
+  that adapts it inherits ShareAlike on the adaptation. The permissive alternative this KB already
+  carries is **`flysheep-ai/education-skills` (MIT, 125 ★)** — but its HEAD is **2026-01-30, ten
+  months cold**. 🔵 **The choice is live, not academic: 993 stars under ShareAlike against 125 stars
+  under MIT and dormant.** Put it in front of counsel before a skills library is promised.
+- **`overhangio/tutor` is `AGPL-3.0`** (byte-read, `LICENSE.txt`), 1,132 ★, pushed 2026-11-17. It is
+  *"the Docker-based Open edX distribution"* — in practice **the way Open edX is deployed**. 🔴 **A
+  consequence this KB had not stated: the realistic deployment path for its flagship LMS is itself
+  AGPL.** An Open edX engagement is AGPL at the platform layer *and* AGPL at the operations layer.
+- **`frappe/education` (712 ★) has no `LICENSE` file** on `main`, `master` or `develop`, and GitHub
+  reports `NOASSERTION`. Frappe's school-management product. **Treat as all rights reserved until
+  bytes say otherwise** — the same posture as `OS4ED/openSIS-Classic`.
+- **`virtualryder/edu-ai-agents` is MIT** (byte-read) and is the only repository found this pass
+  built explicitly around **FERPA / COPPA / IDEA-504 / ADA Title II** with deny-by-default
+  authorisation, student-PII masking, human-in-the-loop enforcement and a tamper-evident audit
+  trail. 🔴 **It measures 4 stars.** It is worth *reading* as a compliance reference for **P15**; it
+  is not a dependency. Secondary coverage presented it as a notable release — the measurement does
+  not support that.
+
+### 🟢 `NOASSERTION` decides nothing — and the diagnosis is now exact
+
+`p877` flagged that `OpenOlat/OpenOlat` and `BerriAI/litellm` report `NOASSERTION` while their bytes
+read Apache-2.0 and MIT, and attributed it to *"almost certainly a modified licence header."
+`p878` re-read both of the education-side anomalies independently and **confirms `p877` in both
+cases** — `OpenOlat/OpenOlat` on `master` is a byte-identical **Apache License 2.0** preamble, and
+`Gego-K12/gegok12` on `main` is **MIT**. The cause in GegoK12's case is now exact rather than
+inferred: **the `LICENSE` file carries an HTML comment, `<!-- SPDX-License-Identifier: MIT -->`, on
+line 3**, so the file is not a byte-clean template and the classifier abstains — on a file that
+states its own SPDX identifier.
+
+🔵 **Standing instruction, and it cuts against the instinct `p877` created.** `p877` correctly
+caught a **false permissive** (`CaviraOSS/PageLM`, which still reports `NOASSERTION` and whose
+licence forbids redistribution). The wrong lesson to draw is that `NOASSERTION` is evidence of a
+licence problem. **It is evidence that GitHub's classifier abstained, nothing more.** This KB has
+now made licence errors in *both* directions, and the rule that covers both is one rule:
+**`spdx_id` screens, bytes decide — in either direction.** A permissive claim needs bytes to
+confirm it; a `NOASSERTION` needs bytes to refute it. Neither is decidable from the API field.
+
+### 🔴 The measured census has a named blind spot — and `p877`'s `422` diagnosis was wrong
+
+`p877` recorded that `search/repositories?q=repo:<old>` returns **`422 Validation Failed`** and read
+that as a **renamed-slug** signal. `p878` read the **error body**, per the `p875` standing
+instruction to read refusal bodies rather than status codes:
+
+> `"The listed users and repositories cannot be searched either because the resource does not
+> exist or you do not have permission to view them."`
+
+That is not a rename signal. And the decisive test: **`openedx/edx-platform` returns `422`, while
+`raw.githubusercontent.com/openedx/edx-platform/master/LICENSE` serves a `GNU AFFERO GENERAL
+PUBLIC LICENSE Version 3` preamble.** The repository exists and is public. Its siblings in the same
+org — `edx-ora2` (64 ★), `edx-proctoring` (69 ★), `openedx-aspects` (9 ★) — **are** indexed and were
+measured this pass.
+
+🔴 **Consequence, stated plainly: `openedx/edx-platform`, the flagship LMS in this KB, is excluded
+from the only channel that can measure stars, so it has no measured star count and it cannot be
+reached by the discovery sweep at all.** 🔵 **And the general form of the defect is the one this KB
+keeps re-learning in new clothes: a negative result from one channel was promoted to a fact about
+the world.** A repository missing from the sweep is **not** evidence it does not exist. Confirm
+absence on a second channel — `raw.githubusercontent.com` answers where the search index does not.
+
+### 🔴 Egress re-probed and unchanged — stop re-testing it
+
+Twenty hosts were probed on **both** channels this pass (`curl` and `WebFetch`): `huggingface.co`,
+`arxiv.org`, `aclanthology.org`, `edworkingpapers.com`, `eur-lex.europa.eu`,
+`data.consilium.europa.eu`, `api.ecosyste.ms`, `unesco.org`, `www.seameo.org`, `www.teqsa.gov.au`,
+`www.nier.go.jp`, `hepi.ac.uk`, `digitaleducationcouncil.com`, `iagen.unam.mx`, `multistate.us`,
+`internationalsped.com`, `mapub.org`, `data.mendeley.com`, `reports.weforum.org`, `dig.watch`.
+**Every one: `000` on `curl`, `ENOTFOUND` on `WebFetch`.** `api.github.com` and
+`raw.githubusercontent.com` answer. 🔵 **This is the ninth consecutive confirmation. Future passes
+should spend one probe on it, not a leg** — and the fix remains a network-settings change naming
+the hosts, not a method change.
+
+---
+
 ## 🔴 `2026-11-17` (`p877`) — **a repository this KB published as `MIT` is not open source: `PageLM`'s licence forbids redistribution and requires a revenue-share, and it has said so since its first commit**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

@@ -6,7 +6,40 @@ updated: 2026-11-17
 
 # Current trends — education AI
 
-**Pass `p877`, 2026-11-17** (seventh pass of the day). `p877` adds **T14**, sharpens **T12**
+**Pass `p878`, 2026-11-17** (eighth pass of the day). `p878` adds **T15**, **sharpens T8, T13 and
+T14**, and moves the longest-standing gap in this KB.
+
+- 🟢 **T15 (new): the permissive supply in education is produced by public universities, not
+  startups — and it is institutional-grade.** `p878`'s census attaches an origin to each measured
+  repository for the first time, and every mature permissive education platform in this KB turns
+  out to come from a university or a public consortium.
+- 🟢 **T8 is no longer a prediction.** *"Assessment is being redesigned, not defended"* now has a
+  production implementation under a permissive licence: **`ls1intum/Artemis`** (MIT, 832 ★, TUM)
+  ships online exams with **per-student exercise variants, test runs, plagiarism checks and
+  structured student reviews** — integrity by design rather than by surveillance. This is the
+  answer `p875` said did not exist in code when it concluded the proctoring category is *"19 stars
+  across six repositories"* and advised *"buy, or redesign the assessment."* **The redesign is
+  available, MIT-licensed, and ten years old.**
+- 🔴 **T13 sharpened, and it is the most uncomfortable finding of the day.** T13 says this KB's
+  binding constraint moved from discovery to propagation. `p878` adds a third constraint that sits
+  *before* discovery: **the language of the query.** Eight passes concluded LATAM produces almost no
+  open-source education software. **No pass had ever run a discovery query in Spanish or
+  Portuguese.** Twelve such legs returned **304 repositories**, including Brazil's 13-year-old
+  incumbent SIS (`portabilis/i-educar`, GPL-2.0, 726 ★, CI, tagged releases). **The absence was a
+  property of the search, not of the region.**
+- 🟢 **T14 confirmed and its mechanism made exact.** `p878` independently byte-read both standing
+  education-side anomalies and **confirms `p877` in both**: `OpenOlat/OpenOlat` is byte-identical
+  Apache-2.0, `Gego-K12/gegok12` is MIT. GegoK12's classifier abstention is now explained rather
+  than inferred — **its `LICENSE` carries an HTML comment, `<!-- SPDX-License-Identifier: MIT -->`,
+  on line 3**, so GitHub abstains on a file that states its own SPDX identifier. 🔵 **T14 and
+  `p877`'s PageLM finding are one rule, not two: `spdx_id` screens, bytes decide — in either
+  direction.**
+- 🟢 **The APAC institutional gap moves for the first time.** Japan: **27 of 37 Top Global
+  University Project institutions (73%) have issued GenAI guidelines**, and **63% delegate
+  scope-of-use to individual instructors**. **SEAMEO is spent** — it returned nothing. See
+  `intel/market.md`.
+
+**Previous pass (`p877`), retained:** Pass `p877`, 2026-11-17** (seventh pass of the day). `p877` adds **T14**, sharpens **T12**
 downward, and leaves every other trend standing.
 
 - 🔴 **A repository this KB published as `MIT` is not open source.** `CaviraOSS/PageLM`'s licence
@@ -481,7 +514,126 @@ survives into a statement of work. A false absence costs an option; **a false pe
 remediation.** `p877` found one of each, and the false permissive had been in the client-facing
 table for fourteen months.
 
+## T15 — The permissive supply in education is produced by **public universities**, not startups — and it is institutional-grade — new in `p878`
+
+🟢 **The claim.** Every mature, permissively licensed education *platform* this KB has verified was
+built by a public university or a public-sector education consortium. Not one came from a venture-
+funded company. `p878`'s census makes the pattern visible because it attaches an origin to each
+measured repository for the first time.
+
+| Repo | Licence | ★ | Produced by |
+|---|---|---:|---|
+| `ls1intum/Artemis` (+ 8 siblings) | **MIT** | 832 | **Technical University of Munich** (Germany) |
+| `autolab/Autolab` | **Apache-2.0** | 808 | **Carnegie Mellon University** (USA) |
+| `THU-MAIC/OpenMAIC` | **MIT** | 43,823 | **Tsinghua University**, MAIC lab (China) |
+| `HKUDS/DeepTutor` | **Apache-2.0** | 60,007 | **University of Hong Kong**, Data Science lab |
+| `CAHLR/OATutor` | **MIT** | 282 | **UC Berkeley**, CAHLR |
+| `oppia/oppia` | **Apache-2.0** | 6,998 | Oppia Foundation (non-profit) |
+| `openfun/ralph` | **MIT** | 52 | **France Université Numérique** (French national consortium) |
+| `moocupv/lti-ai-grader` | **Apache-2.0** | 0 | **Universitat Politècnica de València** (Spain) |
+| `jupyter/nbgrader` | **BSD-3-Clause** | 1,370 | Project Jupyter |
+| `learningequality/kolibri` | **MIT** | 1,178 | Learning Equality (non-profit) |
+| `ls1intum/standardized-competency-catalog` | **MIT** | 1 | **TUM** |
+
+**Against which the copyleft column is where the *commercial* and foundation-scale projects sit:**
+Moodle (GPL-3.0), Open edX and its `tutor` distribution (AGPL-3.0), Canvas (AGPL-3.0), Frappe LMS
+(AGPL-3.0), i-Educar (GPL-2.0), ILIAS, Chamilo, H5P, Anki (AGPL-3.0).
+
+🔵 **Why this is a trend and not a coincidence.** The incentives line up. A university builds a
+platform to teach its own courses, has no distribution business to protect, and publishes
+permissively because its funder wants the work reusable. A company that open-sources an LMS is
+giving away the product, so it reaches for copyleft to prevent a proprietary fork. **The licence
+follows the producer's business model, and in education the permissive producers are public
+institutions.**
+
+🔵 **Three consequences that change how an engagement is scoped.**
+
+1. **Where to look for a permissive base: university GitHub orgs, not product directories.**
+   Listicles rank by stars and consumer visibility, which is why eight passes of this KB missed
+   `ls1intum` entirely while finding every commercial LMS. The `topic:`/`org:` discovery legs added
+   in `p878` are the channel that surfaces this class of code.
+2. **Buy the maturity story differently.** These projects have low stars and high operational
+   maturity — Artemis has 832 stars, an Ansible collection, native mobile clients, OpenSSF
+   Best Practices certification and a ten-year release history. 🟡 **In this vertical, stars measure
+   consumer reach and say almost nothing about whether software is operated at scale.** Judge by
+   release cadence, deployment tooling and whether an institution runs it.
+3. **It is the strongest available answer to EMEA sovereignty (T13's commercial sibling).** The
+   Council of the EU's October 2026 instrument calls for *reducing dependence on non-European AI
+   tools*; **a European-built, MIT-licensed teaching and assessment stack now demonstrably exists.**
+   See `intel/market.md`, EMEA.
+
+🔴 **The limit of the claim, stated so it is not over-read.** University-produced code carries
+**academic sustainability risk**: funding is grant-cycled, maintainers are students and staff who
+graduate or move, and several rows in this KB show it — `flysheep-ai/education-skills` (MIT) is ten
+months cold, `Open-TutorAi/open-tutor-ai-CE` five, `adlnet/ADL_LRS` twelve. **Artemis and Autolab
+are the counter-examples that prove the risk is manageable, not absent:** both are ten-plus years
+old with institutional operational commitments behind them. 🔵 **Due diligence question for any
+university-origin base: is this software *operated* by the institution that publishes it, or was it
+*published* by it?** Artemis is operated. That is the distinction worth checking, and it is cheap
+to check — look for deployment tooling and a release history, as above.
+
 ## Declared gaps
+
+**`p878` ledger movements:** the **APAC institutional gap NARROWS** — Japan produces a real
+institutional census and **SEAMEO is formally spent**; a **gap nobody had named CLOSES** — the
+LATAM supply shelf was empty because every discovery leg was English-only; a **new gap OPENS** in
+the measurement channel itself (`openedx/edx-platform` is unmeasurable); and the **egress refusal
+is re-confirmed for the ninth consecutive pass** on twenty hosts across both channels.
+
+- 🟢 ~~**LATAM produces almost no open-source education software.**~~ **CLOSED BY `p878`, and it was
+  never true.** Twelve discovery legs in **Spanish and Portuguese** — never run by any previous pass
+  — returned **304 repositories, 200 of them education-related and uncurated**, including
+  **`portabilis/i-educar`** (GPL-2.0, **726 ★**, created 2013-01-31, pushed 2026-11-13, tagged
+  releases, GitHub Actions CI): **the incumbent school-management system in Brazilian municipal
+  education.** Also `portabilis/i-diario` (AGPL-3.0, 117 ★) and `Antonio-Neves/Gestao-Escolar`
+  (**MIT**, 50 ★ — the only permissive LATAM-origin SIS found). 🔴 **This is the third method error
+  in this KB's history caught by re-reading a rule rather than by new data** (after the licence grep
+  and the Africa/EMEA vocabulary error), and the most expensive: it produced a wrong conclusion
+  about an entire region, repeated across eight passes, in the region Globant is strongest in.
+  🔵 **Standing instruction: every discovery leg runs in Spanish and Portuguese as well as English.**
+  Cost: twelve API calls. 🔵 **And the same test is now owed to Africa/MENA in French, Arabic and
+  Swahili before any further absence is recorded there** — `muskvdc/EduTwin-Africa` (1 ★, no licence
+  file) is currently the whole shelf, and `p878` has just shown what a monolingual sweep does to a
+  non-English region.
+- 🟡 ~~**APAC has attitudes measured and institutional behaviour unmeasured.**~~ **NARROWED BY
+  `p878`, not closed.** Japan now supplies an institutional measure (**27 of 37 institutions = 73%
+  with GenAI guidelines; 63% delegating scope-of-use to instructors**) and Australia supplies
+  peer-reviewed institutional policy research against TEQSA's principles. 🔴 **`SEAMEO` returned
+  nothing and is spent — do not name it again.** 🔴 **There is still no region-wide APAC instrument**
+  comparable to UNESCO IESALC's LATAM study, and the two cross-national comparators found this pass
+  (34 of 39 universities with guidance, only 8 with a formal instrument; Japan 27 / USA 31 / China 6)
+  are **convenience samples of "leading" universities and must not be quoted as APAC rates.**
+  🔵 **Next instruments, since the obvious ones are exhausted: India's AICTE/UGC circulars,
+  Singapore's IHL cluster (NTU/NUS/SMU), or China's MoE directives** — all three are
+  regulator-to-institution channels, which is the shape that produced Japan's number.
+- 🔴 **NEW GAP, opened by `p878`, and it is in the instrument rather than the world:
+  `openedx/edx-platform` cannot be measured or discovered by the only star channel this KB has.**
+  It returns **`422 Validation Failed`**, whose body reads *"the listed users and repositories cannot
+  be searched either because the resource does not exist or you do not have permission to view
+  them"* — while `raw.githubusercontent.com` serves its **AGPL-3.0** licence bytes and its sibling
+  repositories (`edx-ora2`, `edx-proctoring`, `openedx-aspects`) are indexed normally. **The
+  flagship LMS in this KB therefore has no measured star count**, and the discovery sweep cannot
+  see it at all. 🔴 **`p877` read `422` as a renamed-slug signal; that diagnosis is wrong** — read
+  the body. 🔵 **The general defect is the one this KB keeps re-learning in new clothes: a negative
+  result from one channel was promoted to a fact about the world. Absence from the sweep is not
+  evidence of absence; confirm on a second channel.**
+- 🔴 **NEW FLAG, opened by `p878`: the largest teacher-skills library is `CC-BY-SA-4.0`, not a
+  software licence.** `GarethManning/education-agent-skills` (993 ★, created 2026-03-01, *"165
+  evidence-grounded AI skills for teachers, school leaders and EdTech"*) byte-reads as **Creative
+  Commons Attribution-ShareAlike 4.0 International**. **ShareAlike is viral for derived content**, so
+  a Globant deliverable adapting it inherits ShareAlike on the adaptation. The permissive
+  alternative this KB carries, `flysheep-ai/education-skills` (MIT), is **125 ★ and ten months
+  cold**. 🔵 **The choice is live: 993 stars under ShareAlike against 125 under MIT and dormant.**
+  Put it to counsel before a skills library is promised.
+- 🔴 **Re-confirmed for the ninth consecutive pass, and it should now cost one probe rather than a
+  leg.** Twenty hosts were refused on **both** channels (`curl` → `000`, `WebFetch` → `ENOTFOUND`):
+  `huggingface.co`, `arxiv.org`, `aclanthology.org`, `edworkingpapers.com`, `eur-lex.europa.eu`,
+  `data.consilium.europa.eu`, `api.ecosyste.ms`, `unesco.org`, `www.seameo.org`, `www.teqsa.gov.au`,
+  `www.nier.go.jp`, `hepi.ac.uk`, `digitaleducationcouncil.com`, `iagen.unam.mx`, `multistate.us`,
+  `internationalsped.com`, `mapub.org`, `data.mendeley.com`, `reports.weforum.org`, `dig.watch`.
+  `api.github.com` and `raw.githubusercontent.com` answer. 🔵 **The fix remains a network-settings
+  change naming the hosts. It would upgrade every efficacy, survey and regulatory claim in this KB
+  from secondary to primary, and it is still the single highest-leverage change available.**
 
 **`p875` ledger movements:** star counts **CLOSED**; the APAC institutional gap **re-tried against
 all three named instruments and NOT closed**; the Khanmigo effect-size discrepancy **adjudicated**;

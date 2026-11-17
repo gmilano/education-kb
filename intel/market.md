@@ -6,7 +6,21 @@ updated: 2026-11-17
 
 # Market intelligence — education
 
-**Pass `p877`, 2026-11-17** (seventh pass of the day). `p877` ran the global sweep plus **all four
+**Pass `p878`, 2026-11-17** (eighth pass of the day). `p878` ran the global sweep plus **all four
+regional legs**, and the headline is that **the longest-standing gap in this file moves**: APAC now
+has an institutional measure (Japan, 27 of 37 institutions), and one of the three instruments
+`p875` named is formally spent (SEAMEO returned nothing). Also added: a **US federal funder paying
+for open-source education AI**, four new LATAM instruments, and the **measured dispersion** of this
+market's size estimates — which is the only honest thing to say about them.
+
+🔴 **Source quality is unchanged and the warning below still governs everything in this file.**
+Twenty hosts were probed on both `curl` and `WebFetch` this pass — including
+`data.consilium.europa.eu`, `digitaleducationcouncil.com`, `hepi.ac.uk`, `iagen.unam.mx`,
+`unesco.org`, `multistate.us`, `reports.weforum.org` and `www.seameo.org`. **Every one refused.**
+Every regulatory date, survey figure and market estimate below remains a **search-engine summary
+of a page nobody in this session could open.** Only repository facts are first-hand.
+
+**Previous pass (`p877`), retained:** Pass `p877`, 2026-11-17** (seventh pass of the day). `p877` ran the global sweep plus **all four
 regional legs** and adds **region-placed instruments to every one of the four regions** — the first
 pass in several to come back with something for each rather than closing a residual in one.
 **Every regulatory and adoption item added below is a search-engine summary and is marked
@@ -108,6 +122,36 @@ venture funding has collapsed ~89% from peak. That combination means the buyer i
 **institution and the ministry**, not the venture-funded startup. Education AI in 2026 is a
 services-and-integration market, not a product-launch market — which is precisely where a
 studio like Globant has an advantage over a product company.
+
+#### 🟢 `p878` — the honest number for this market is a **range and a warning**, not a figure
+
+Six estimates were collected for the **same metric** — global AI-in-education market, base year
+2026 — and they do not agree within a factor of five.
+
+| Source | 2026 base | Forecast | Implied CAGR |
+|---|---|---|---|
+| Research and Markets (Feb 2026) | **USD 10.6bn** | USD 42.48bn by 2030 | **41.5%** |
+| Coherent Market Insights | **USD 11.40bn** | USD 57.25bn by 2033 | **16.8%** |
+| Grand View Research (via aggregator) | **USD 11.4bn** | — | **25.9%** |
+| Precedence Research (via aggregator) | **USD 9.58bn** | — | — |
+| Global Growth Insights | **USD 2.21bn** | USD 6.47bn by 2035 | **12.7%** |
+| Mordor (via aggregator) | — | USD 41.01bn by 2030 | 42.83% (2025–30) |
+| IMARC (via aggregator) | — | USD 79.6bn by 2034 | 31.35% |
+| *Segment:* AI in **higher education** | **USD 4.09bn** | USD 13.46bn by 2030 | 34.7% |
+
+🔴 **Base-year estimates span USD 2.21bn to USD 11.4bn — a 5.2× spread for the same year — and
+growth rates span 12.7% to 42.83%.** Worse, **two sources publish the same USD 11.4bn base with
+different CAGRs (16.8% vs 25.9%)**, which means at least one of them is pairing a base from one
+methodology with a growth rate from another.
+
+🔵 **How to use this, and it is a rule rather than a number.** **Never quote a single
+AI-in-education market size in a client deck.** Quote the **range**, name the **segment** (the
+higher-education cut at USD 4.09bn is better defined than any whole-market figure), and anchor the
+argument on **measured adoption rates** — Japan's 73%, Brazil's 53%/22%, UNESCO LAC's 87%/26%,
+Uruguay's 75% — which are at least instrument-backed. 🟡 **All of the above are secondary;
+none of the publishers' pages was reachable from this session.** The dispersion is itself the most
+reliable finding here: **this market is not measured well enough for a point estimate to mean
+anything.**
 
 ### Regional share of the AI-in-education market (directional, low-authority sources)
 
@@ -271,7 +315,51 @@ with a policy nobody has read has a compliance exposure, not a policy. Note also
 92%/79% LATAM engagement figures run **above** the 88%/77% global averages — LATAM is not a
 laggard in use, only in governance.
 
-### APAC — attitudes measured, institutional rates not
+### APAC — attitudes measured; 🟢 `p878` adds the first institutional measure (Japan)
+
+#### 🟢 `p878` — the APAC institutional gap MOVES for the first time: **Japan has an institutional census**, and one of `p875`'s three named instruments is now spent
+
+`p875` named three next instruments: **SEAMEO**, **Australia's TEQSA** provider returns, and
+**Japan's NIER/MEXT** institutional surveys. `p878` ran all three. **One produced an institutional
+measure, one produced institutional research, and one produced nothing.**
+
+| Instrument | Result | Status |
+|---|---|---|
+| 🟢 **Japan — MEXT-linked institutional survey** | A survey of the **37 institutions in the Top Global University Project** finds **27 of 37 (73%) have issued generative-AI guidelines for students and faculty**, and **63% of universities allow individual instructors to determine the scope and manner of AI use** in their classrooms. MEXT issued its own guidance on generative AI in universities and technical colleges in **July 2023**. | 🟢 **This is institutional *behaviour*, not sentiment — the first such measure for any APAC country in this file.** |
+| 🟡 **Australia — TEQSA** | No provider action-plan *census* was published. What exists is peer-reviewed research: an **AJET** study analysing university policy documents against TEQSA's generative-AI principles, plus TEQSA's sector-wide GenAI toolkit/Knowledge Hub (described as not discipline-specific). | 🟡 **Institutional research, not a regulator's census.** Narrows the gap; does not close it. |
+| 🔴 **SEAMEO** | **Nothing.** No SEAMEO instrument on institutional AI policy appeared in any leg. | 🔴 **Spent. Do not name it again as a next instrument.** |
+
+**One cross-national comparator worth carrying, with its limits attached.** A 2026 comparative
+study of **39 leading universities** reports **guidance present at 34 of 39 (87%)** but **only 8
+using a formal policy instrument**. A related cross-national framework study covers **Japan (27
+institutions), the USA (31) and China (6)**. 🔴 **Neither is an APAC sampling frame** — they are
+convenience samples of "leading" universities — **so they cannot be quoted as an APAC rate.** What
+they do support is a *shape*: **guidance is near-universal; formal, enforceable policy is rare.**
+That shape is consistent across Japan's 73%-with-guidelines figure and UNESCO's global
+19%-with-formal-policy figure, and it is the honest thing to put in an APAC deck.
+
+🔴 **A discrepancy flagged rather than reconciled, per this KB's standing practice.** This file
+carries **APAC teaching-use intent at 92%** (Digital Education Council, via `p874`). A Digital
+Education Council resource surfaced this pass reports **faculty intent to use AI *declining* 9
+percentage points, from 76% in 2025 to 67% in 2026**. 🟡 **These are almost certainly different
+bases** — one an intent-to-use-in-teaching item in a regional cut, the other a global
+faculty-intent series — **and the scope of the 67% figure is not stated in the material available.**
+Both are secondary; `digitaleducationcouncil.com` is refused at egress and the PDF has not been
+read by anyone in this session. 🔵 **Do not average them, do not silently drop one, and do not
+present APAC intent as rising without checking which series you are quoting.** The direction of
+the second series matters commercially: **if faculty intent is softening while student use climbs,
+the bottleneck moves from enthusiasm to enablement** — which is a services sale, not a licence
+sale.
+
+🟡 **Revised statement of the APAC gap, narrower than `p875`'s.** APAC now has **one country with
+an institutional census (Japan)** and **one country with institutional policy research
+(Australia)**. It still has **no region-wide institutional instrument** comparable to UNESCO
+IESALC's LATAM study. 🔵 **Next instruments, since SEAMEO is spent:** India's **AICTE/UGC**
+circulars to affiliated institutions (a compliance channel that reaches thousands of colleges),
+**Singapore's IHL cluster** (NTU/NUS/SMU publish institution-wide policies), or **China's MoE**
+directives — all three are *regulator-to-institution* channels, which is the shape that produced
+Japan's number.
+
 #### 🔴 `p875` — the APAC institutional gap did NOT close, and here is exactly what was tried
 
 `p874` left a precisely-bounded residual: *"nothing measures APAC **institutions** the way UNESCO
@@ -539,6 +627,29 @@ an error: **EMEA is Europe, Middle East and Africa.** Filed here accordingly:
 
 ### North America
 
+#### 🟢 `p878` — a **federal funder is paying for open-source education AI**, and three more compliance-shaped mandates land
+
+**All items `SECONDARY`.** No primary statute, rule or RFP text was reachable this pass.
+
+| Instrument | What it is | Why it is commercially actionable |
+|---|---|---|
+| 🟢 **Digital Promise / K-12 AI Infrastructure — "Open Source AI Model for Tutoring (EDU AI)" RFP** | **Up to USD 8,000,000, one award anticipated**, estimated grant start **November 2026**, aimed at **K-12 mathematics tutoring**, explicitly for an **open-source** model | 🔵 **This is the first instrument in this file where a funder pays for the open-source artefact itself rather than for a deployment of one.** Whoever wins it sets the reference implementation for US K-12 math tutoring. Even if Globant does not bid, **the output will be open source and should be tracked as a future foundation row.** |
+| **Florida — state board policy** | **Parental notification** for direct student use of AI tools, with a **non-AI alternative** for opt-outs | 🔴 The Alabama-shaped opt-out requirement, now in a second large state. **Consent and a parallel non-AI path are becoming table stakes, not a differentiator** — see **P15**. |
+| **Florida — higher education** | The state's **28 public colleges** must **bar AI on graded work unless the instructor permits it** | An instructor-level permission gate across a whole state system: per-course policy flags, not a system-wide setting. |
+| **Washington DC — 2026-27 guidance (non-mandatory)** | AI barred from **grading, discipline, IEP decisions and teacher evaluations** | 🔵 **The clearest statement yet of where the US will not allow autonomous AI decisions**, and it maps precisely onto the `Athena` design in `agents/top.md`: AI produces *suggestions*, a person decides. |
+| **US Department of Education** | Responsible-AI **framework published March 2026**; **K-12 guidance April 2026** | The federal reference both state policies and procurement language will cite. |
+| **K-12 AI Literacy and Readiness Act** | Advanced through the **House Education and Workforce Committee**; 🟡 **no evidence found that it has passed** | Watch item, not a planning assumption. |
+| 🟡 **Idaho SB 1227** | Directs the state to build a generative-AI framework covering **privacy, procurement and AI literacy**; companion K-12 standards reported **still in draft** | 🔴 **Number-collision warning:** this file already carries **Alabama H.B. 1227**, a *different* instrument with different content. **Do not merge these two rows** — the coincidence of numbers across two states is exactly how a KB produces a phantom statute. |
+| **ADA Title II accessibility deadline** | Reported deadline of **April 2026** for large public institutions to meet updated accessibility requirements | 🔵 Accessibility conformance is a live, dated procurement filter on any student-facing interface — and the reason `CAHLR/OATutor`'s accessibility conformance is a selling point rather than a footnote. |
+
+🔵 **Two market-structure items worth carrying.** Khan Academy's **Khanmigo** is tied to a **USD 10
+million North Carolina earmark** that legislators are defending — the clearest evidence in this
+file that *state-level budget capture* is how the commercial tutors are scaling in the US. And
+**OpenAI with Common Sense Media** has proposed a California ballot measure, the **"Parents & Kids
+Safe AI Act"**, which would reach **any edtech product with AI features** sold into the state.
+🟡 Both are secondary and both are moving; re-check before either appears in a client deck.
+
+
 #### 🟢 `p877` — the US state layer now produces *dated procurement deadlines* and two *design mandates*, not just guidance
 
 **All items `SECONDARY`** (legislative trackers and state summaries; no primary statute text was
@@ -651,6 +762,34 @@ consequential decisions human.
   oral/viva and process-evidence workflows is a concrete offering.
 
 ### EMEA
+
+#### 🟢 `p878` — the Council names **sovereignty** as an education objective, and EMEA turns out to be where the permissive code comes from
+
+**Regulatory items `SECONDARY`** — `data.consilium.europa.eu` and `eur-lex.europa.eu` were
+re-probed on both channels this pass and both are still refused.
+
+| Instrument | What it says | Read |
+|---|---|---|
+| **Council of the EU, ST-14902-2026 (29 October 2026)** | Stresses **AI literacy**, **reducing dependence on non-European AI tools**, and **support for institutions drafting AI policies on academic integrity** | 🔵 **"Reducing dependence on non-European AI tools" is a sovereignty objective written into an education instrument.** It converts **T13** from an inferred trend into a stated Council position, and it is the sentence to quote in any European public-sector bid. 🔴 Still secondary — the document could not be opened. |
+| **UK — DfE generative-AI product safety standards** | Published **January 2026** | A named conformance target for any product sold into English schools. |
+| **UK — Ofqual** | Resources on **AI and coursework integrity**, **March 2026** | Assessment-integrity guidance from the qualifications regulator — the demand-side counterpart to Artemis's plagiarism-check and per-student-variant design. |
+| **UAE — KHDA (Dubai)** | Explicit guidance to **private schools** on responsible AI use | The Gulf instrument this file has been missing; files under **EMEA** with the country named in prose, per the schema. |
+| **Corporate workforce funding** | Microsoft **USD 2.5bn** AI deployment unit; AWS **USD 1bn** AI engineering unit; Caterpillar **USD 100m** AI/robotics workforce training — **≈ USD 3.6bn** combined | 🟡 Vendor-announced and not education-sector-specific, but it is the **corporate-training** demand signal this file otherwise lacks. |
+
+🟢 **The structural EMEA finding of this pass is on the supply side, and it is new.** `p878`'s
+census makes repository *origin* legible for the first time, and **European public universities
+are the single largest producer of permissively licensed education software in this index**:
+`ls1intum/*` (Technical University of Munich — **nine MIT repositories** including the
+832-star **Artemis** platform), `openfun/ralph` (France Université Numérique, MIT),
+`moocupv/lti-ai-grader` (Universitat Politècnica de València, Apache-2.0), `OpenOlat/OpenOlat`
+(Switzerland, Apache-2.0), `ILIAS-eLearning/ILIAS` (Germany, GPL-3.0).
+
+🔵 **Why that matters commercially, and it is specific.** A European client acting on the Council's
+"reduce dependence on non-European tools" language can now be shown **a European-built,
+European-operated, MIT-licensed teaching and assessment stack** — not a US platform with a European
+deployment. **That is a materially stronger sovereignty answer than self-hosting someone else's
+software**, and until this pass this KB could not have made it.
+
 
 #### 🟢 `p877` — the Digital Omnibus is now a *named, dated* instrument, and it moved the high-risk clock to `2027-12-02`
 
@@ -817,6 +956,25 @@ high-risk tier. `p874` adds the opportunity that does not wait for it:
 
 
 ### APAC
+
+#### 🟢 `p878` — Japan's 73% gives APAC its first **institutional** sales argument, and the supply side is larger than this file assumed
+
+| Item | Figure | Commercial read |
+|---|---|---|
+| **Japan — Top Global University Project** | **27 of 37 institutions (73%) have issued GenAI guidelines**; **63% of universities delegate scope-of-use to individual instructors** | 🔵 **The 63% is the actionable half.** Guidance exists but enforcement is devolved to instructors, which means **per-course policy configuration, not a single institutional switch** — exactly the shape Artemis's config-gated AI and Florida's instructor-permission rule both assume. A platform that cannot express per-course AI policy is unsellable into this market. |
+| **Cross-national comparator** | **34 of 39 leading universities (87%) have guidance; only 8 have a formal policy instrument** | The gap between *having guidance* and *having an enforceable instrument* is the engagement. 🔴 Convenience sample of "leading" universities — **not an APAC rate**. |
+| **Australia — TEQSA** | Sector-wide GenAI toolkit/Knowledge Hub, not discipline-specific; peer-reviewed analysis of institutional alignment with its principles exists | A regulator-published principles set to conform against, with published research on where institutions fall short. |
+| 🔴 **Faculty intent** | This file carries **92%** teaching-use intent (DEC, `p874`); a DEC resource this pass reports intent **declining 76% → 67%** | 🔵 **Do not average or silently drop one.** Different bases, both secondary. If intent is softening while student use rises, the sale shifts from enthusiasm to **enablement** — training and workflow, not licences. |
+
+🟢 **Supply side, measured first-hand.** APAC-origin permissive education software is real and
+under-curated: **`THU-MAIC/OpenMAIC`** (Tsinghua, **MIT**, **43,823 ★** — measured, against a
+listicle's "25,975+"), **`netless-io/flat`** (MIT, 6,443 ★), **`open-scratch/teaching-open`**
+(Apache-2.0, 637 ★), plus a cluster of Chinese online-exam systems — **`mindskip/xzs`** (AGPL-3.0,
+3,918 ★), **`lsgwr/spring-boot-online-exam`** (MIT, 1,696 ★). 🟡 **Assessment delivery — the
+category this KB has repeatedly called empty — has real APAC supply.** It is Chinese-language and
+Chinese-market, which is a **localisation cost, not an absence**, and it should stop being
+described as a void.
+
 
 #### 🟢 `p877` — one statute in force, one hard education deadline, one *already-binding* content mandate, and measurably falling public consent
 
@@ -991,6 +1149,31 @@ responsible-AI guidance to private schools.
 
 
 ### LATAM
+
+#### 🟢 `p878` — four new LATAM instruments, and the **open-source supply assumption in this KB was wrong**
+
+**Regulatory and survey items `SECONDARY`; repository items FIRST-HAND (byte-read).**
+
+| Instrument | Figure | Read |
+|---|---|---|
+| **UNESCO — LAC higher-education study** | **87% of surveyed institutions already use AI in some capacity; only 26% have a formal AI strategy** | 🔵 **The clearest institution-level strategy gap in any region in this file**, and it is the same shape Japan shows: use is near-universal, governance is not. A 61-point spread between *using* and *governing* is the consulting opportunity stated as a number. |
+| **UNESCO — Observatory on AI in Education for LAC** | Launched **April 2026**, led by UNESCO with **CAF** (Development Bank of Latin America and the Caribbean) and **CENIA** (Chile), with ECLAC, **Fundação Ceibal**, Fundación Santillana, **Tecnológico de Monterrey** and ProFuturo | 🔵 **A named, funded, multilateral convening body with development-bank money behind it.** This is the single most useful entry point for a regional public-sector engagement, and it did not exist before 2026. |
+| **Uruguay — Ceibal (2026)** | **75% of public-school teachers** report using AI tools | The highest teacher-level figure in this file for any country. Consistent with Uruguay's standing as a Ceibal-era outlier. |
+| **Brazil — Cetic.br (2026)** | **53% of school administrators use AI**, but **only 22% report their school has guidelines on its use** | 🔴 **A 31-point governance gap at the school level**, from Brazil's official ICT statistics body — the most credible LATAM K-12 instrument in this file. |
+| **Universidad de los Andes (2026)** | **716 AI-related regulatory instruments, rules and legislative proposals across 23 countries and territories**, most dating from 2023 onward | 🔵 Quantifies the fragmentation the WEF describes qualitatively. **A regional rollout crosses 23 regimes, not one.** |
+
+🔴 **And the finding that changes how this file should read its own LATAM sections.** This KB has
+repeatedly recorded that LATAM produces almost no open-source education software — the shelf held
+**one repository with zero stars**. `p878` re-ran its discovery legs **in Spanish and Portuguese**
+and found **304 repositories, 200 of them education-related and uncurated**, including
+**`portabilis/i-educar`** (GPL-2.0, **726 ★**, created 2013, pushed four days before measurement):
+**the incumbent school-management system in Brazilian municipal education**, with tagged releases
+and CI. 🔵 **No pass in this KB's history had ever run a discovery query in Spanish or
+Portuguese.** The absence was a property of the search, not of the region. **Every LATAM supply
+claim written before `p878` should be re-read with that in mind**, and the regional opportunity is
+correspondingly larger: there is an incumbent to integrate with, not a greenfield to invent.
+See `repos/foundations.md` and **P18**.
+
 
 #### 🟢 `p877` — the governance arbitrage is now quantified at `87%` adoption against `26%` strategy, and it is the widest gap in this file
 

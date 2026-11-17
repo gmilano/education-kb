@@ -6,7 +6,15 @@ updated: 2026-11-17
 
 # Compose patterns — education
 
-**Pass `p877`, 2026-11-17** (seventh pass of the day). **Sixteen recipes** — `p877` adds **P15**
+**Pass `p878`, 2026-11-17** (eighth pass of the day). **Eighteen recipes** — `p878` adds **P17**
+(MIT auto-grading at scale, with integrity by design rather than surveillance — newly possible
+because `ls1intum/Artemis` exists and is MIT) and **P18** (paper-first assessment capture for
+low-bandwidth systems, built on an MIT OMR grader and Brazil's incumbent SIS, both surfaced this
+pass). It also **repairs P9**, whose LATAM-origin base was chosen when this KB believed LATAM had
+almost no open-source education software — a belief `p878` showed was an artefact of searching only
+in English.
+
+**Previous pass (`p877`), retained:** Pass `p877`, 2026-11-17** (seventh pass of the day). **Sixteen recipes** — `p877` adds **P15**
 (the consent-and-opt-out spine, driven by a new US statute) and **P16** (permissive SIS
 modernisation, newly possible), and **repairs P5**, whose offline stack was assembled without the
 largest permissively licensed offline education server in the index.
@@ -422,6 +430,25 @@ local-counsel check as the first task of the engagement.
 programmes — and any client for whom *"built in the region"* is part of the evaluation.
 **Effort: 8–10 weeks** to a pilot, of which **3–4 weeks is completing someone else's backend**.
 New in `p873`, and it is the first pattern in this file whose core component is LATAM-origin.
+
+🟢 **`p878` repair — this pattern was built on a 0-star repository because the KB could not see the
+alternatives.** P9 chose `LabSirius/TutorIA` (MIT, **0 ★**) as its LATAM-origin core, and the
+reasoning was sound given what was known: it was the only LATAM-origin education repository in the
+index. 🔴 **That was an artefact of searching only in English.** `p878` ran twelve discovery legs in
+Spanish and Portuguese and found **304 repositories**, so the LATAM supply picture this pattern was
+designed against was wrong. **Two substitutions are now available, and they change the shape of the
+engagement:**
+
+| Instead of | Consider | Why |
+|---|---|---|
+| `openedx/edx-platform` (AGPL-3.0) as the records/LMS layer, in **Brazil** | **https://github.com/portabilis/i-educar** (🔴 GPL-2.0, **726 ★**, created 2013, CI, tagged releases) **as an integration target, not a base** | It is **the incumbent** in Brazilian municipal education. A pattern that ignores the incumbent and proposes a parallel system loses on procurement, not on technology. Keep the AI layer a separate service and the copyleft boundary holds. |
+| `Gego-K12/gegok12` (MIT, 57 ★) where a permissive SIS is needed | **https://github.com/Antonio-Neves/Gestao-Escolar** (**MIT**, 50 ★, bilingual PT/EN, pushed 2026-10-12) | Comparable size and licence, but **LATAM-origin and already bilingual** — which is the specific thing this pattern is selling. |
+
+🟡 **`TutorIA` remains the right core for a Spanish-language public-sector tutor** — the substitutions
+above are for the records and LMS layers, not the tutor. But **the "only LATAM-origin option"
+justification is retired**: it was never true, and this pattern should now be argued on fit rather
+than on scarcity. 🔵 **And the LATAM shelf is almost certainly still under-counted** — `p878` ran
+twelve legs, not a systematic sweep, and ran none in indigenous or regional languages.
 
 | Layer | Component | Licence |
 |---|---|---|
@@ -948,3 +975,137 @@ neither can be bought as a product. **`p873` adds a third candidate: P9** — no
 technology is novel, but because *"we are completing a Colombian public university's MIT-licensed
 tutor and contributing it back"* is a position a competitor reselling a US product cannot occupy
 at any price.
+
+## P17 — MIT auto-grading at scale, with integrity by design instead of surveillance — new in `p878`
+
+**Sell to:** higher education in **EMEA** and **North America** — technical faculties first
+(computer science, engineering, data science), where submissions are code and grading is the
+bottleneck. **Effort: 8–10 weeks** for a pilot on one faculty's courses; **14–18 weeks** to add the
+AI feedback layer and an exam cycle.
+
+**Why now, and why this pattern did not exist before this pass.** Three things converged.
+**T8** said assessment is being redesigned rather than defended. **`p875`** measured the proctoring
+category at **19 stars across six repositories, four of them zero**, and concluded the honest
+advice is *"buy, or redesign the assessment."* And every permissive platform in this KB could
+deliver courses but not grade them at scale — the only real grading substrate was
+`openedx/edx-ora2`, **AGPL-3.0**. 🟢 **`p878` found the missing piece: `ls1intum/Artemis` is MIT,
+ten years old, operated by the Technical University of Munich, and it grades.**
+
+🔵 **The integrity argument is the commercial one.** Artemis does not watch the student. It ships
+**per-student exercise variants, test runs, plagiarism checks and structured student reviews** —
+integrity through assessment design. **That is sellable in jurisdictions where proctoring is
+politically or legally difficult**, which now includes DC (AI barred from grading and discipline),
+Florida (instructor-permission gates), the EU (grading is Annex III high-risk, see **T11**) and
+every district with a parental opt-out regime (**P15**).
+
+| Layer | Component | Licence |
+|---|---|---|
+| Assessment platform | https://github.com/ls1intum/Artemis | **MIT** |
+| **Secure sandboxed execution** of untrusted student code | https://github.com/ls1intum/Ares | **MIT** |
+| Feedback *suggestions* for human assessors (Athena) | https://github.com/ls1intum/edutelligence | **MIT** |
+| LLM seam, if used standalone | https://github.com/ls1intum/Pyris | **MIT** |
+| Modelling exercises | https://github.com/ls1intum/Apollon | **MIT** |
+| Deployment automation | https://github.com/ls1intum/artemis-ansible-collection | **MIT** |
+| Model routing, quotas, **no-train enforcement** | https://github.com/BerriAI/litellm | MIT |
+| Local/sovereign inference | https://github.com/ollama/ollama · https://github.com/vllm-project/vllm | MIT · Apache-2.0 |
+| Learner telemetry | https://github.com/yetanalytics/lrsql | Apache-2.0 |
+| Regression tests on the feedback layer | https://github.com/promptfoo/promptfoo | MIT |
+| Pedagogical quality gate on the model | https://github.com/AI-for-Education/pedagogy-benchmark | MIT |
+| LTI 1.3 launch from the institution's LMS | https://github.com/Cvmcosta/ltijs | Apache-2.0 |
+
+**Wiring.**
+
+1. **Do not replace the institution's LMS. Launch beside it.** Artemis is the assessment platform;
+   Moodle or Canvas stays the course shell. Use **`ltijs`** for an LTI 1.3 / Advantage launch with
+   grade passback so the gradebook of record does not move. This is what makes the pilot
+   politically survivable — nobody is asked to migrate.
+2. **Stand up `Ares` first, and treat it as the security boundary.** Running untrusted student code
+   is the part of auto-grading that goes wrong catastrophically rather than gradually. `Ares` is a
+   JUnit 5 extension with no Artemis dependency, so it can be reviewed and pen-tested on its own
+   before the platform is in place. 🔴 **`Ares2`, the second Java implementation, reports
+   `NOASSERTION` — byte-read its licence before using it** (per **T14**).
+3. **Turn the AI off for the first cycle.** Artemis's AI is config-gated by design. Run one full
+   course cycle with automated *testing* and human grading only. This produces the baseline you
+   need for step 5 and it means the first client conversation about AI happens with data.
+4. **Then enable `Athena` — as suggestions, never as grades.** Athena generates feedback
+   *suggestions* for a human assessor on text and modelling exercises. 🔵 **Keep that boundary
+   contractual, not just architectural**: the platform's own README states *"instructors and tutors
+   stay responsible for assessment decisions,"* and that sentence is the compliance posture for the
+   EU AI Act's Annex III treatment of grading, DC's guidance and Alabama's "not the primary basis"
+   rule all at once. Route it through `litellm` so the no-train and residency controls from **P15**
+   apply unchanged.
+5. **Measure what you claim.** Push competency and learning-path events into **`lrsql`** (**P14**'s
+   spine) and report **time-to-feedback** and **feedback volume per assessor** — the two numbers
+   that justify the project — alongside grade distributions before and after. 🔵 **Do not claim a
+   learning-outcome effect.** **T9** is explicit: zero published trials evaluate any repository in
+   this KB, and the largest trial of a commercial tutor is negative at the population level.
+6. **Gate the model, not just the prompt.** Run `pedagogy-benchmark` against whatever model backs
+   Athena and keep `promptfoo` regression tests on the feedback layer, so a model swap cannot
+   silently change assessment behaviour mid-semester.
+
+**Where it does not fit.** 🟡 Artemis is built around **university** course structures — K-12 and
+corporate training will fight it; use **P12** (OpenMAIC) or **P16** instead. Java/Spring is a
+heavier operational commitment than PHP or Python, so price the platform team honestly. And at
+**832 stars** the community is small: **budget for reading the source, not for Stack Overflow.**
+
+🔵 **The Apache-2.0 variant.** If counsel wants an explicit patent grant, or the scope is only
+*auto-grade programming work*, substitute **https://github.com/autolab/Autolab** (Apache-2.0,
+808 ★, Carnegie Mellon, created 2014) for Artemis and drop the exam, modelling and competency
+layers. Smaller system, narrower promise, lighter to run.
+
+## P18 — Paper-first assessment capture for low-bandwidth systems — new in `p878`
+
+**Sell to:** **LATAM** ministries and state secretariats, and **EMEA**/Africa education programmes.
+**Effort: 6–8 weeks** for a district pilot; **10–12 weeks** with the offline server and dashboards.
+
+**Why now.** Every assessment pattern in this KB assumes the exam is taken on a screen. In much of
+the addressable public-sector market **it is taken on paper**, and the digitisation step — not the
+AI — is what blocks measurement. 🟢 **`p878` found the missing on-ramp: `Udayraj123/OMRChecker`
+(MIT, 1,196 ★) grades bubble-sheets from a phone camera or a scanner.** Paired with the offline
+server stack this KB already carries, it turns a paper exam into xAPI telemetry without asking a
+school for bandwidth it does not have.
+
+| Layer | Component | Licence |
+|---|---|---|
+| **Paper capture + grading** (phone camera or scanner) | https://github.com/Udayraj123/OMRChecker | **MIT** |
+| Offline knowledge + AI server | https://github.com/Crosstalk-Solutions/project-nomad | **Apache-2.0** |
+| Offline learner-facing delivery | https://github.com/learningequality/kolibri | **MIT** |
+| Local inference on the same box | https://github.com/ollama/ollama | MIT |
+| Records of record (Brazil: integrate, do not replace) | https://github.com/portabilis/i-educar | 🔴 **GPL-2.0** — separate service, clean process boundary |
+| Permissive SIS where there is no incumbent | https://github.com/Antonio-Neves/Gestao-Escolar · https://github.com/Gego-K12/gegok12 | **MIT** · **MIT** |
+| Telemetry store | https://github.com/yetanalytics/lrsql | Apache-2.0 |
+| Dashboards (price explicitly — the LRS has no UI) | https://github.com/openedx/openedx-aspects | Apache-2.0 |
+| Document ingestion for the item bank | https://github.com/docling-project/docling | MIT |
+
+**Wiring.**
+
+1. **Start from the answer sheet, not the platform.** Define the OMR template once per assessment
+   programme and validate `OMRChecker` against a few hundred real sheets, including deliberately
+   bad ones — creased, photographed at an angle, filled in pen. 🔵 **The accuracy of this step is
+   the accuracy of the whole programme**; everything downstream inherits it. Report a measured
+   per-sheet error rate, not a vendor claim.
+2. **Capture at the school, process at the school.** `project-nomad` (Apache-2.0, 43,852 ★,
+   4,526 forks — forks of an appliance repo are deployments) runs the pipeline and `ollama` on one
+   box with no internet. Sheets are photographed, graded and stored locally; only aggregates sync
+   when a connection appears.
+3. **Emit xAPI from the capture step, immediately.** Write statements into **`lrsql`** at the moment
+   of grading, keyed to the learner identifier the SIS already uses. This is what makes the paper
+   exam a measurable event rather than a spreadsheet. 🔴 **`lrsql` ships no reporting UI** — budget
+   Aspects or Grafana-over-Postgres as a named line item, as `repos/foundations.md` insists.
+4. **Integrate with the records system; do not try to replace it.** 🔵 **In Brazil the incumbent is
+   `portabilis/i-educar`** — GPL-2.0, 726 ★, thirteen years old, in municipal use. **Do not fork
+   it.** Run the AI and capture layers as separate services that talk to it over its own interfaces,
+   and the copyleft boundary stays where it is. Where there is no incumbent, `Gestao-Escolar` (MIT)
+   or `gegok12` (MIT) are bases you can own outright.
+5. **Add the tutor last, and only where there is a screen.** `Kolibri` (MIT) for offline delivery,
+   `DeepTutor` or `OpenMAIC` on the local model if the hardware supports it — see **P5** and
+   **P12**. 🟡 **The measurement is the deliverable; the tutor is the upsell.** A ministry that can
+   finally see per-item results across a district has bought something defensible, and it works
+   whether or not the AI layer is ever switched on.
+
+**Honest limits.** 🔴 OMR grades **selected-response items only** — it does not touch free text, so
+it narrows what the assessment can ask. 🟡 `OMRChecker` is a tool, not a platform: there is no
+multi-tenant management layer, and the per-district operational wrapper is bespoke work that must be
+scoped. 🟡 And the LATAM repositories above were found **this pass**, by searching in Portuguese and
+Spanish for the first time — they are newly surfaced to this KB, not newly built, but nobody here
+has operated them. **Treat the integration estimate as unvalidated.**

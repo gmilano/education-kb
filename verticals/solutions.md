@@ -6,7 +6,34 @@ updated: 2026-11-17
 
 # Vertical platforms — education
 
-**Pass `p877`, 2026-11-17** (seventh pass of the day). **`p877` adds the two platforms this file
+**Pass `p878`, 2026-11-17** (eighth pass of the day). **`p878` adds the first permissively
+licensed assessment platform this file has ever carried, a second permissive auto-grader, and
+Brazil's incumbent SIS — all three found by a discovery channel no pass had used.**
+`api.github.com/search/repositories` takes full discovery queries, not just `repo:` lookups:
+44 English legs returned 546 measured repositories, and 12 legs in **Spanish and Portuguese**,
+never run before, returned 304 more.
+
+🔵 **The structural point for this file.** Every LMS row above `p878` is copyleft except OpenOLAT,
+Kolibri, Oppia and Sakai — and none of those four does assessment at scale. **`ls1intum/Artemis` is
+MIT and does programming auto-grading, online exams with plagiarism checks, competencies and
+learning analytics.** That is a genuinely new option in the build-versus-buy conversation, not an
+incremental row.
+
+🟢 **`OpenOLAT`'s asterisk can come off.** `p877` flagged that GitHub reports `NOASSERTION` while
+the bytes read Apache-2.0; `p878` independently byte-read `master/LICENSE` and it is a
+byte-identical **Apache License 2.0** preamble. Same for **GegoK12** (**MIT**), whose classifier
+abstention is now explained exactly: its `LICENSE` carries `<!-- SPDX-License-Identifier: MIT -->`
+as an HTML comment on line 3. 🔵 **Keep briefing clients that the automated check returns
+`NOASSERTION` — that part of `p877`'s advice is unchanged and still the practical risk.**
+
+🔴 **And the warning that belongs with this file's flagship row:** **`overhangio/tutor`**
+(**AGPL-3.0**, byte-read, 1,132 ★, pushed 2026-11-17) is the Docker-based Open edX distribution and
+in practice *the* way Open edX gets deployed. **An Open edX engagement is AGPL at the platform
+layer and AGPL at the operations layer.** Separately, `openedx/edx-platform` **cannot be measured
+by the star channel at all** (`422`; see `repos/foundations.md`), so no star figure for it appears
+in this KB.
+
+**Previous pass (`p877`), retained:** Pass `p877`, 2026-11-17** (seventh pass of the day). **`p877` adds the two platforms this file
 most needed and did not have: a permissively licensed SIS, and the largest permissively licensed
 offline education server in the index.**
 
@@ -97,6 +124,9 @@ verified via `git ls-remote` + `raw.githubusercontent.com` on the resolved defau
 | **OpenOLAT** | https://github.com/OpenOlat/OpenOlat | **Apache-2.0** | `master` | Swiss-origin, used across EMEA higher education. **The only major full LMS here under a clean permissive licence** — the obvious base if a client needs a customised LMS that Globant can extend without copyleft obligations. |
 | **Frappe LMS** | https://github.com/frappe/lms | **AGPL-3.0** | `develop` | Modern, lightweight LMS on the Frappe framework. **Correction recorded this pass:** multiple 2026 listicles state MIT; the licence bytes at `license.txt` are **AGPL-3.0**. |
 | **Kolibri** | https://github.com/learningequality/kolibri | **MIT** | `develop` | Learning Equality. Purpose-built for **offline-first, low-connectivity and low-resource deployments** — the platform of record for rural LATAM, Sub-Saharan Africa and South Asia programmes. MIT-licensed. For any equity-of-access or ministry-of-education mandate, this is the starting point, not Moodle. |
+| **Artemis** 🟢 **new `p878`** | https://github.com/ls1intum/Artemis | 🟢 **MIT** — byte-read on `main` | **`develop`** | **Technical University of Munich (EMEA-origin). The only permissively licensed assessment platform in this file, and the reason this pass matters.** 832 ★, created 2016-09-29, pushed on the day of measurement. Interactive exercises (programming, modelling, text, quiz, file-upload) as first-class objects with version control, CI and static code analysis; **online exams with per-student exercise variants, test runs, plagiarism checks and structured student reviews**; competencies, learning paths and learning analytics; AI as **optional, configuration-gated** microservices (Iris / Athena / Hyperion) with *"instructors and tutors stay responsible for assessment decisions"* stated in the README. Java/Spring, self-hosted, horizontally scalable, with a maintainer-published **Ansible collection** and native iOS/Android clients. OpenSSF Scorecard + OpenSSF Best Practices (project 14163), Sonar and Codacy gates. 🟡 **Fit caveat: it is built around *university* course structures** — a K-12 or corporate-training engagement will fight it, and Java/Spring is a heavier operational commitment than PHP or Python. |
+| **Autolab** 🟢 **new `p878`** | https://github.com/autolab/Autolab | 🟢 **Apache-2.0** — byte-read `master/LICENSE` | `master` | **Carnegie Mellon (North America-origin).** 808 ★, created 2014-10-25, pushed 2026-11-11. Course-management service built around **auto-graded programming assignments** — narrower than Artemis and lighter to run. Apache-2.0 carries an **explicit patent grant** that Artemis's MIT does not, which occasionally decides a public-sector or enterprise procurement. |
+| **i-Educar** 🟢 **new `p878`** | https://github.com/portabilis/i-educar | 🔴 **GPL-2.0** — byte-read on `master` | 🔴 **`2.12`** | **LATAM-origin (Brazil) — the incumbent free-software school-management system in Brazilian municipal education**, *"o maior software livre educacional do Brasil"*. 726 ★, created 2013-01-31, pushed 2026-11-13; tagged releases, GitHub Actions CI, modular packages, documented upgrade path. Companion **`portabilis/i-diario`** (🔴 **AGPL-3.0** by byte-read — GitHub reports `NOASSERTION`, per **T14**; 117 ★, default branch 🔴 **`1.6`**) is the electronic class diary. 🔴 **Both projects default to a *version* branch, not `main` or `master`** — a plain `git clone` lands you on `2.12` / `1.6`, and a pass that assumes `main` will report them as broken. 🔵 **Copyleft, so it is an integration target rather than a base** — build the AI layer as a separate service and the boundary holds, exactly as this file prescribes for Moodle. 🔴 **Found only because `p878` searched in Portuguese; eight earlier passes concluded LATAM had no supply.** |
 
 ## Courseware, content & assessment
 
@@ -125,6 +155,11 @@ verified via `git ls-remote` + `raw.githubusercontent.com` on the resolved defau
 |---|---|---|---|---|
 | **BigBlueButton** | https://github.com/bigbluebutton/bigbluebutton | LGPL | `v4.0.x-develop` | Virtual classroom built for teaching rather than for meetings (whiteboard, breakout rooms, polling); integrates with Moodle and Canvas. LGPL — linking is permitted, which makes it friendlier than GPL for an attached service. |
 | **Opencast** | https://github.com/opencast/opencast | **ECL-2.0** | `develop` | University lecture capture and video management. ECL-2.0 (Apache-derived, permissive). The natural source of the lecture-video corpus a tutoring agent should be grounded in. |
+| **Agora Flat** 🟢 **new `p878`** | https://github.com/netless-io/flat | 🟢 **MIT** — byte-read | `main` | Online-classroom client for Web, Windows and macOS. 6,443 ★, pushed 2026-11-10. **Permissive where BigBlueButton is LGPL** — the option when the classroom client must ship inside a proprietary product. |
+| **OpenVidu** 🟢 **new `p878`** | https://github.com/OpenVidu/openvidu | 🟢 **Apache-2.0** | `master` | Self-hosted real-time video/audio platform. 2,146 ★, pushed 2026-11-17. The permissive media substrate if you are assembling classroom delivery rather than adopting a platform. |
+| **CTFd** 🟢 **new `p878`** | https://github.com/CTFd/CTFd | 🟢 **Apache-2.0** — byte-read | `master` | 6,916 ★, pushed 2026-11-10. The capture-the-flag platform: challenges, scoring, teams, progression. **The permissive substrate for security and technical skills training** where scoring and gamification come for free. |
+| **OMRChecker** 🟢 **new `p878`** | https://github.com/Udayraj123/OMRChecker | 🟢 **MIT** — byte-read | `master` | 1,196 ★, pushed 2026-09-04. Grades **paper bubble-sheets from a phone camera or scanner**. 🔵 Not glamorous and strategically important: it is the on-ramp for assessment where exams are still on paper and bandwidth is scarce — see **P18**. |
+| **teaching-open** 🟢 **new `p878`** | https://github.com/open-scratch/teaching-open | 🟢 **Apache-2.0** — byte-read | `master` | **APAC-origin (China).** 637 ★. Scratch / ScratchJr / Python teaching platform with courses, classes, assignments, permissions and community. Chinese-language UI — a localisation cost, not an absence. |
 
 ## Offline & low-connectivity delivery
 
@@ -154,6 +189,15 @@ For a Globant engagement that must avoid copyleft obligations, the verified perm
 | **DSpace** | BSD | Institutional repository / scholarly corpus |
 | **SQL LRS (`yetanalytics/lrsql`)** | Apache-2.0 | 🟢 **New in `p876`** — learner telemetry store (xAPI). The default for measurement |
 | **Ralph (`openfun/ralph`)** | MIT | 🟢 **New in `p876`** — LRS + data pipeline, **Open edX-native**, EMEA public sector |
+| **Artemis (`ls1intum/Artemis`)** | **MIT** | 🟢 **New in `p878` — assessment at scale, online exams, auto-grading, competencies. The first permissive assessment platform in this KB.** |
+| **Autolab (`autolab/Autolab`)** | **Apache-2.0** | 🟢 **New in `p878`** — auto-graded programming coursework, with a patent grant |
+| **Ares (`ls1intum/Ares`)** | **MIT** | 🟢 **New in `p878`** — secure sandboxed execution of untrusted student code (JUnit 5) |
+| **Apollon (`ls1intum/Apollon`)** | **MIT** | 🟢 **New in `p878`** — UML modelling editor, standalone-capable |
+| **Edutelligence (`ls1intum/edutelligence`)** | **MIT** | 🟢 **New in `p878`** — Iris/Athena/Hyperion AI microservices; **Athena produces feedback *suggestions* for a human assessor** |
+| **Agora Flat (`netless-io/flat`)** | **MIT** | 🟢 **New in `p878`** — online-classroom client, permissive alternative to BigBlueButton |
+| **CTFd** | **Apache-2.0** | 🟢 **New in `p878`** — security/technical skills training with scoring built in |
+| **OMRChecker** | **MIT** | 🟢 **New in `p878`** — paper bubble-sheet grading from a phone camera |
+| **Gestão Escolar (`Antonio-Neves/Gestao-Escolar`)** | **MIT** | 🟢 **New in `p878`** — the only permissive **LATAM-origin** SIS found; small, propose as a base to own |
 | **Project NOMAD** | Apache-2.0 | 🟢 **New in `p877`** — offline-first education server, **43,849★**. The permissive answer for low-connectivity and ministry equity programmes |
 | **GegoK12** | MIT | 🟢 **New in `p877`** — **the only permissive SIS.** Laravel, API-first. Small; adopt-and-own, not join |
 
