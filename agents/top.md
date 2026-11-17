@@ -4,6 +4,55 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Sixty-seventh pass (`p862`, 2026-11-17) — **`6` agent rows (`727` → `733`): `861-G2` run for the first time, and the LATAM assessment tier is NOT empty — it is BRAZILIAN, and `12` of the `26` addresses it returns cannot be used at all**
+
+🔴 **The finding first, because it changes what a LATAM engagement can start from.**
+🟢 `861-G2` declared that the Spanish and Portuguese assessment vocabulary had **never been run**
+in this base, and set the acceptance test: report the total for each term, and if the tier is
+empty, publish that as a measured nil WITH the terms. 🟢 **The five terms were run. The tier is
+not empty.** 🔴 **But it is not evenly distributed between the two languages, and nearly half of
+it carries no grant.**
+
+| Term, unqualified | `total_count` | `stars:>5` | What the top band actually is |
+|---|---|---|---|
+| 🟢 **`"correção automática"`** (PT) | `147` | **`4`** | the productive term — `GeneticErrors`, `terraview`, `Juiz_online_ferias`, a UFRGS course entry |
+| 🟡 **`"corrección automática"`** (ES) | `54` | **`0`** | `EduLogic` (`4★`) is the ceiling; nothing above one star |
+| 🔴 **`autocorrección`** (ES) | `22` | **`0`** | `LMSGI03`, `ugr_tfm_maes` — coursework, no tier |
+| 🟡 **`"corretor automático"`** (PT) | `25` | **`1`** | `mathfaria/autoGrader` (`6★`), shelved below |
+| 🔴 **`rúbrica`** | `919` | `1` | 🔴 **`0` of the top `10` are assessment rubrics** → `T219` |
+
+🔵 **Portuguese out-supplies Spanish by roughly `3:1` on the same concept, and the gap widens with
+traction: `4` addresses above five stars against `0`.** 🟢 **That is a placement fact a LATAM
+engagement can act on — the Brazilian corpus exists, the Hispanic one does not yet** → `T221`.
+
+🔴 **And the remedy that worked in English did not transfer.** `p861` repaired `grading` →
+`autograding` and got `8` of `8` on topic. 🔴 **`"correção automática"` above five stars is `2` of
+`4`** — [`leonamvasquez/terraview`](https://github.com/leonamvasquez/terraview) is Terraform
+security analysis and `GeneticErrors` is spell-correction; both match the phrase in Portuguese
+prose and neither is education → `T222`.
+
+### The `6` agent rows, every licence byte-read `2026-11-17` from a blobless clone
+
+| Name | Repo | Licence | Stars | Region | Description |
+|------|------|---------|-------|--------|-------------|
+| gpt-4-enem | [`piresramon/gpt-4-enem`](https://github.com/piresramon/gpt-4-enem) | 🟢 **MIT** — `main`, `LICENSE`, `1,068 B`, `sha256₁₂ 90287aa13538` | `54` ★ / `10` | 🟢 **LATAM** (placed `url-tld:.br`) | 🟢 **The reference harness for evaluating an LLM against ENEM**, Brazil's national university-entrance examination: code *and* data, with chain-of-thought and few-shot prompt variants. 🔵 **The highest-star PERMISSIVE runnable artefact in the whole vein** — everything above it is ungranted or copyleft → `T223`. `HEAD 2024-12-06`: the harness is stable, the exam is not, so treat the data as a `2024` snapshot. |
+| notebooklm-para-concursos | [`gilsonnogueira/notebooklm-para-concursos`](https://github.com/gilsonnogueira/notebooklm-para-concursos) | 🟢 **MIT** — `main`, `LICENSE`, `1,072 B`, `sha256₁₂ 40765acdde87` | `68` ★ / `12` | Global | 🟢 **A grounded-study pipeline rather than a model**: prompts, source-curation method and study structure for driving NotebookLM + Gemini against Brazilian public-service examination syllabi. 🔵 **Worth the row because it is the grounding discipline, not the tool** — the method ports to any RAG stack, and `HEAD 2026-10-11` makes it the freshest artefact in the vein. |
+| enem-extractor | [`diaslui/enem-extractor`](https://github.com/diaslui/enem-extractor) | 🟢 **MIT** — `master`, `LICENSE`, `1,073 B`, `sha256₁₂ 543bb8993dda` | `37` ★ / `2` | Global | 🟢 **A CLI that turns ENEM examination PDFs into structured JSON questions.** 🔵 **The ingestion step every other row in this vein assumes and none of them ships** — it is the reason a Brazilian item bank can be built without a data-entry contract. Python, `HEAD 2025-02-16`. |
+| autoGrader | [`mathfaria/autoGrader`](https://github.com/mathfaria/autoGrader) | 🟢 **MIT** — `main`, `LICENSE`, `1,070 B`, `sha256₁₂ 2b144ecef114` | `6` ★ / `1` | Global | 🟢 **Optical-mark answer-sheet correction in Python/OpenCV** — the `gabarito` workflow that dominates Brazilian and Hispanic school assessment and that none of this base's English-language autograding rows cover. 🔴 **`HEAD 2023-05-22`: a notebook, not a service.** 🔵 **Shelved as a reference implementation of the technique, not as a dependency.** |
+| concursos-api-deno | [`Jeiel0rbit/concursos-api-deno`](https://github.com/Jeiel0rbit/concursos-api-deno) | 🟢 **MIT** — `main`, `LICENSE`, `1,067 B`, `sha256₁₂ c8f9fd31186f` | `6` ★ / `5` | Global | 🟢 **A Deno/TypeScript API over Brazilian public-examination notices (`concursos`).** 🔵 **The permissive counterpart to [`michel-softwares/track-concursos`](https://github.com/michel-softwares/track-concursos) (`113★`), whose bytes forbid both modification and redistribution** → `measured-unusable`. Small, readable, and the only grantable notice feed found. |
+| EstudiaTAI-app | [`Naritsumi/EstudiaTAI-app`](https://github.com/Naritsumi/EstudiaTAI-app) | 🟢 **MIT** — `main`, `LICENSE`, `1,066 B`, `sha256₁₂ b9ab2024c11a` | `10` ★ / `3` | Global *(prose: Spain)* | 🟢 **Study application for the Spanish `Técnico Auxiliar de Informática` civil-service examination.** 🔴 **Published `Global`, never guessed**: the instrument placed `0` of the Spanish-language rows, because none states a `.es` URL — 🔵 the country is in this prose, where `861-G1` requires it, and not in the `region` field. |
+
+🔴 **What this pass did NOT shelve, and why it matters more than what it did.** `10` of the `26`
+addresses read carry **no grant at any path**, and `2` more carry an explicit **non-commercial**
+grant that GitHub's licence field reports only as `NOASSERTION`. 🔴 **The four highest-star
+addresses in the entire vein — `919`, `368`, `121` and `113` stars — are all in that unusable
+set.** Full list, with the bytes:
+[`measured-unusable`](../intel/measured-unusable.md) · evidence:
+[`byte-read-grants`](../evidence/byte-read-grants.2026-11-17-p862.tsv).
+
+---
+
+
 ## 🟢 Sixty-sixth pass (`p861`, 2026-11-17) — **`6` agent rows (`474` → `480`): the English word `grading` is UNRUNNABLE as a query on this channel. GitHub stems it to `grade`, the `-grade` marketing adjective owns the whole high-traction band, and `0` of the top `30` hits are about grading.**
 
 🔴 **The finding first, because it retires an explanation this base has carried since `T96`.**
@@ -4078,7 +4127,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 480 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 486 rows
 
 ### Filed by `p853` (2026-11-16) — `12` rows: the SPOKEN-LANGUAGE ASSESSMENT tier, every grant byte-read today, `0` copyleft, and every row's CORPUS dependency stated beside its licence
 

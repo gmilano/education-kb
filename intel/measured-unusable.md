@@ -1,8 +1,45 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-15
+updated: 2026-11-17
 ---
+
+## 🔴 `2026-11-17` — `p862`: `12` of `26` addresses in the LATAM examination vein cannot be used, and the four highest-star members of the vein are all in this table
+
+🔵 **This is the largest single-pass refusal ratio this base has recorded: `46%`.** `p861` read
+`28` addresses and refused effectively none. 🔴 **The difference is not quality — several of these
+are the best artefact of their kind in their country — it is that this tier was published without
+a grant** → `T223`.
+
+### 🔴 No grant at any path — `10`
+
+| Address | ★ | GitHub's field | What the bytes say | Consequence |
+|---|---|---|---|---|
+| 🔴 [`amimaro/Provas-POSCOMP`](https://github.com/amimaro/Provas-POSCOMP) | **919** | `NONE` | 🔴 **No `LICENSE`, `LICENCE` or `COPYING` at any path in the tree** | 🔴 **The highest-star address in the whole vein, and no rights are granted in it.** Past papers and answer keys for Brazil's national postgraduate computing examination |
+| 🔴 [`CAECOMP/provas`](https://github.com/CAECOMP/provas) | **157** | `NONE` | 🔴 No licence path | 🔴 Ungranted **and abandoned in place** — the README reads *"Migramos para o Notion!"*. 🔵 Recorded so a later pass does not re-discover it |
+| 🔴 [`rodrigoborgesmachado/questoes-aqui`](https://github.com/rodrigoborgesmachado/questoes-aqui) | **31** | `NONE` | 🔴 No licence path | 🔴 **Pushed `2026-11-12` — live, maintained, ungranted** |
+| 🔴 [`gontijogabriel/Quest-API`](https://github.com/gontijogabriel/Quest-API) | **11** | `NONE` | 🔴 No licence path | 🔴 Advertises **`1,000,000+`** items. 🟢 **Highest-value licence request in this pass** |
+| 🔴 [`ufscar/CIgrader`](https://github.com/ufscar/CIgrader) | **2** | `NONE` | 🔴 No licence path | 🔴 CI-based autograder from a **federal university's own namespace** — 🔵 institutional publication is not a grant |
+| 🔴 [`Projeto-Juiz-Online/Juiz_online_ferias`](https://github.com/Projeto-Juiz-Online/Juiz_online_ferias) | **5** | `NONE` | 🔴 No licence path | 🔴 Flask online judge with automatic correction |
+| 🔴 [`olixva/oposiciones-app`](https://github.com/olixva/oposiciones-app) | **6** | `NONE` | 🔴 No licence path | 🔴 One of only `7` Spanish `oposiciones` repositories above two stars |
+| 🔴 [`erseco/Oposiciones`](https://github.com/erseco/Oposiciones) | **5** | `NONE` | 🔴 No licence path | 🔴 Teaching material for the Spanish secondary-computing teaching examination |
+| 🔴 [`bjverde/explodir-edital`](https://github.com/bjverde/explodir-edital) | **5** | `NONE` | 🔴 No licence path | 🔴 Parses Brazilian examination notices into structured form |
+| 🔴 [`Vestibular-data/enem_data`](https://github.com/Vestibular-data/enem_data) | **6** | `NONE` | 🔴 No licence path | 🔴 An ENEM question database — 🔵 the data problem `enem-api` solves with a GPL-2.0 grant instead |
+
+### 🔴 A grant is present and it is NOT open source — `2`, and GitHub reports both as `NOASSERTION`
+
+| Address | ★ | GitHub's field | What the bytes say | Consequence |
+|---|---|---|---|---|
+| 🔴 [`michel-softwares/track-concursos`](https://github.com/michel-softwares/track-concursos) | **113** | 🟡 **`NOASSERTION`** | 🔴 **`812 B`, in Portuguese: *"Todos os direitos reservados"*.** Permits free personal, non-commercial use; 🔴 **expressly forbids modifying, adapting, translating, creating derivative works, sublicensing, distributing and redistributing** | 🔴 **All rights reserved.** Not usable in any engagement, including unmodified |
+| 🔴 [`thalleskayke6/skill-professor-concurso-publico`](https://github.com/thalleskayke6/skill-professor-concurso-publico) | **6** | 🟡 **`NOASSERTION`** | 🔴 **`3,466 B`, *"Licença de Uso Não Comercial / Non-Commercial Use License"*, applying to `TODO o conteúdo`** — prompts, scripts and the skill alike | 🔴 **Non-commercial.** 🔵 Notable as the first *agent skill* this base has measured with a bespoke non-commercial grant |
+
+🔴 **The reading that matters for the instrument, not for the engagement.** 🟡 **`NOASSERTION` is
+one value covering two different refusals** — *all rights reserved* and *free but non-commercial*.
+🟢 **Nothing short of reading the bytes distinguishes them, and the practical consequences differ:
+the first cannot be redistributed even unchanged, the second can be, outside commerce** → `T224`.
+
+---
+
 
 ## 🆕 `p816` — `2026-11-15` — **One row newly barred, and three rows whose licence CLASS was corrected in the dangerous direction: `NOASSERTION` → copyleft, `3` of `3`**
 

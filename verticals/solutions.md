@@ -4,6 +4,31 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Sixty-seventh pass (`p862`, 2026-11-17) — **`1` platform row (`250` → `251`), and the honest reason it is one and not four**
+
+🔴 **Four platform-class systems were found in this pass's vein and three of them cannot be
+shelved.** 🔵 **Fewer real rows beat padding, so the refusals are published next to the row.**
+
+| Address | Licence, byte-read `2026-11-17` | ★ / forks | Pushed | Role in an engagement |
+|---|---|---|---|---|
+| [`opoalerta/opoalerta`](https://github.com/opoalerta/opoalerta) | 🔴 **AGPL-3.0 — strong copyleft, network clause** — `main`, `LICENSE`, `34,523 B`, `sha256₁₂ 0d96a4ff68ad` | `4` / `1` | 🟢 **`2026-11-14` — three days old at the time of reading** | 🟢 **A unified, free aggregator of Spanish public-employment convocatorias**: it ingests scattered official bulletins and makes them one searchable feed. 🔵 **The only live, granted, platform-shaped artefact in the whole Hispanic half of this vein** — and the structural counterpart to Brazil's `concursos` tier. 🔴 **AGPL-3.0 means a hosted derivative must publish its source to its users.** 🟢 **That is workable as a public-sector or institutional deployment, where the obligation is usually acceptable; it is the wrong base for a proprietary SaaS.** 🔵 Python, `4★` — early, so it is a reference design and a possible contribution target, not a dependency to build a programme on. |
+
+### 🔴 The three that were refused, with what the bytes said
+
+| Address | ★ | Platform it is | Why it is not a row |
+|---|---|---|---|
+| 🔴 [`rodrigoborgesmachado/questoes-aqui`](https://github.com/rodrigoborgesmachado/questoes-aqui) | `31` | A live online question-practice platform for Brazilian examinations | 🔴 **No licence at any path**, and `HEAD 2026-11-12` — 🔵 **actively developed and ungranted, which is the worst combination to discover late in an engagement** |
+| 🔴 [`gontijogabriel/Quest-API`](https://github.com/gontijogabriel/Quest-API) | `11` | A REST API over a bank of **more than one million** examination items | 🔴 **No licence at any path.** 🟢 **The largest item bank this base has ever located, and it is unusable** — licence request drafted, not sent |
+| 🔴 [`Projeto-Juiz-Online/Juiz_online_ferias`](https://github.com/Projeto-Juiz-Online/Juiz_online_ferias) | `5` | A Flask *online judge*: registration, problems, submissions, automatic correction | 🔴 **No licence at any path.** 🔵 Named here because the online-judge pattern is the right shape for Brazilian CS teaching, and [`Submitty`](https://github.com/Submitty/Submitty) (BSD-3-Clause) already on this shelf does the same job with a grant |
+
+🔵 **Read together with the `p861` row for `Submitty`**: the pattern a Brazilian institution wants
+already exists on this shelf under a permissive grant. 🟢 **What the LATAM vein adds is not a
+better platform — it is the ITEM CONTENT and the national-examination semantics that the
+permissive platforms have no data for.**
+
+---
+
+
 ## 🟢 Sixty-sixth pass (`p861`, 2026-11-17) — **`4` platform rows (`163` → `167`): the AUTOGRADING PLATFORM tier, and the roll-up heading is corrected from `162` to the figure the file actually holds**
 
 🟢 **Why these four are platforms and not foundations.** Each is a system an institution RUNS —

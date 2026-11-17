@@ -6,6 +6,56 @@ updated: 2026-11-17
 
 # Globant AI Studios — Education KB
 
+## Pass `p862` · `2026-11-17`
+
+🔴 **This pass ran a vocabulary that had never been run here, and the tier it found is real,
+Brazilian, and `46%` unusable.** 🟢 **`861-G2` required the Spanish and Portuguese assessment
+terms to be measured and their totals published.** 🟢 **All seven were run.**
+`"correção automática"` returns **`147`** with `4` above five stars; `"corrección automática"`
+returns **`54`** with **`0`**; `autocorrección` **`22`** with **`0`**. 🔵 **Portuguese out-supplies
+Spanish `3:1` on raw count and `5:0` on traction** — this base has written *LATAM* where its
+evidence supported *Brazil*, and that is now corrected and measured.
+
+🔴 **Two of the seven terms cannot be run at all, and `p861`'s remedy does not repair them.**
+`banca` returns `34,437` and is **banking**; `rúbrica` returns `919` and is the Italian *address
+book*; 🔴 **`banca NOT banco NOT bancaria NOT bancario` still returns `8,123` and still `0` of the
+top `10` on topic.** 🔵 **A stem collision can be excluded; a cross-language homograph cannot —
+the only repair is to abandon the word** → `T219`. 🟢 **And `prova` is the control that keeps this
+honest: `105,979` results, `5` of the top `10` genuinely Brazilian examination corpora** → `T220`.
+
+🟢 **`26` addresses byte-read from blobless clones, `0` clone failures, `0` licences taken from
+GitHub's SPDX field.** 🔴 **`10` carry NO grant at any path; `2` carry an explicit non-commercial
+grant that GitHub reports only as `NOASSERTION`; `12` of `26` — `46%` — cannot be used.**
+🔴 **And the four highest-star addresses in the vein (`919`, `368`, `121`, `113` stars) are all in
+that set, while the best permissive runnable artefact has `54`** → `T223`. 🔵 **A star-ranked
+shortlist of this vein selects almost perfectly for what cannot be delivered.**
+
+🟢 **`11` rows shelved, all byte-read**: `6` agents (`480` → `486`), `4` foundations
+(`336` → `340`), `1` platform (`167`, roll-up corrected). 🟢 **`7` trends (`T219`–`T225`),
+`2` recipes (`P98`–`P99`), `3` gaps discharged, `1` acceptance test FAILED and published as a
+failure, `4` gaps declared, `2` licence requests drafted.**
+
+## What this pass established
+
+| | |
+|---|---|
+| 🟢 **A second defect class in query vocabulary, with a control** | `banca` and `rúbrica` fail as cross-language homographs, not as stems — and the `NOT` remedy that fixed `grading` removes `76%` of `banca`'s postings and `0%` of its problem → `T219`, `T220` |
+| 🟢 **The LATAM assessment tier, measured for the first time** | Portuguese `3:1` over Spanish, `5:0` on anything above five stars → `T221`. 🔴 Spain returns `7`, `60` and `3` repositories across its three examination terms, with the top `EBAU` hit being Swiss building-permit software → `T225` |
+| 🔴 **A tier where traction and grant run in opposite directions** | `919★` ungranted · `368★` GPL-2.0 · `113★` non-commercial · 🟢 `54★` MIT and runnable → `T223` |
+| 🔴 **`NOASSERTION` hides two incompatible refusals** | *all rights reserved* and *free but non-commercial* read identically in GitHub's field; only the bytes separate them → `T224` |
+| 🟢 **`861-G1` discharged, and its second instrument outperformed the first** | STATED affiliation `2`, PLACED `5` — 🟢 **`3` placements came from the region stage alone**, independent of any affiliation, which is exactly what the gap asked for |
+| 🟢 **`861-G3` discharged, and the jurisdiction remedy held twice** | the Africa leg returned Kenya's draft AI Bill (`19 Feb 2026`), Nigeria's regulator demanding compliance proof from tertiary institutions, and South Africa's 🔴 **disputed** policy status; the Canada/Mexico leg returned `$162M`/`10,000` Mitacs placements, `$30M` CanCode, and US `$776M` Mexican enterprise AI spend — 🟢 **`0` US-only drift for the first time in seven passes** |
+| 🔴 **An acceptance test this pass FAILED, published as a failure** | `860-G1` requires the logged-and-never-shelved residue to fall. 🔴 **It rose, `4,779` → `4,783`** — because `21` new addresses were logged and `12` of the `26` read can never be shelved at all. 🟢 **The measure conflates *not yet graded* with *graded and refused*; the remedy is to take the direction net of [`measured-unusable`](intel/measured-unusable.md)** |
+| 🟢 **Two recipes that route around the unusable tier** | `P98` scores Portuguese essays against a human-marked gold corpus and publishes the agreement rate; `P99` builds a Brazilian item bank by re-extracting from public papers, keeping the one GPL-2.0 component behind a network boundary |
+
+🔵 **What a reader should distrust in this pass.** 🔴 **`T225`'s claim that Spanish-language
+examination software barely exists rests on three SPANISH terms; Mexico, Colombia, Chile and
+Argentina have their own examination names and none was queried** → `862-G2`. 🔴 **The APAC leg
+returned `0` national frameworks for China, India, Japan, Korea and Singapore** → `862-G3`.
+🔴 **And it returned the UAE's school AI prohibitions as an APAC result; the UAE is EMEA, and the
+row was refiled by hand.**
+
+
 ## Pass `p861` · `2026-11-17`
 
 🔴 **This pass did not find a new tier. It found out why a tier it already half-held was

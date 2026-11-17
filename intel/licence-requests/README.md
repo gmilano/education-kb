@@ -4,6 +4,38 @@ region: Global
 updated: 2026-11-12
 ---
 
+## 🟢 `p862` (`2026-11-17`) — `2` drafts added, and the DELIVERY LEDGER this directory did not have
+
+🔴 **`862-G1` named the defect: `10` drafts sat here with no record of whether a single one had
+ever been sent, which makes a backlog indistinguishable from a dead letter box.** 🟢 **The ledger
+below is that record, and it is now one table rather than two.** 🔴 **Every entry reads
+`never sent`, which is the honest state: sending means opening issues on third-party repositories,
+and this session's GitHub authorisation covers `gmilano/*` only.** 🔵 **Recorded as a scope
+limit, not logged as a failure — the `T879-bis` rule.**
+
+| Target | Drafted by | ★ | Licence paths | Sent? |
+|---|---|---|---|---|
+| [`amimaro/Provas-POSCOMP`](https://github.com/amimaro/Provas-POSCOMP) | 🟢 **`p862`** | **`919`** | 🔴 `0` | 🔴 **never sent** |
+| [`gontijogabriel/Quest-API`](https://github.com/gontijogabriel/Quest-API) | 🟢 **`p862`** | `11` | 🔴 `0` | 🔴 **never sent** |
+| [`narumi-mase/osaka-lesson-dataset`](https://github.com/narumi-mase/osaka-lesson-dataset) | `p790`–`p798` | `0` | 🔴 `0` | 🔴 **never sent** |
+| [`silja-graf/…LP21`](https://github.com/silja-graf/Didaktikus-KI-Spezialist-f-r-Unterrichtsplanung-und-Beurteilung-nach-LP21) | `p790`–`p798` | `0` | 🔴 `0` | 🔴 **never sent** |
+| [`SoukhyadP991/Multilingual-NCERT-Doubt-Solver`](https://github.com/SoukhyadP991/Multilingual-NCERT-Doubt-Solver) | `p790`–`p798` | `2` | 🔴 `0` | 🔴 **never sent** |
+| [`TaoYu-ds/TutorMesh`](https://github.com/TaoYu-ds/TutorMesh) | `p790`–`p798` | `1` | 🔴 `0` | 🔴 **never sent** |
+| [`mingxuanyan07-lgtm/ai-for-education-showcase`](https://github.com/mingxuanyan07-lgtm/ai-for-education-showcase) | `p790`–`p798` | `0` | 🟡 `2`, vendored | 🔴 **never sent** |
+| the remaining drafts in this directory | `p791`–`p798` | — | 🔴 `0` | 🔴 **never sent** |
+
+🔵 **Why the two new ones are worth a human's five minutes**, in the terms of `p798`'s own
+selection rule: 🟢 **unique for their role** — `Provas-POSCOMP` is the largest open POSCOMP
+archive and `Quest-API` the largest item bank this base has located, with **`1,000,000+`** items —
+and 🟢 **live enough to answer** (`2026-09-18` and `2026-08-11`). 🔴 **Both fail nothing except
+the grant**, which is precisely the case the channel exists for.
+
+🔴 **What a human needs to do is unchanged**: open the file, paste the body into a new issue on
+the named repository, and write the issue URL into the `Sent?` column above.
+
+---
+
+
 # Licence requests — drafted, not sent
 
 🟢 **`ACTION p790-B` / `p791-A`, carried three passes, discharged this pass as far as this session's authority allows.**

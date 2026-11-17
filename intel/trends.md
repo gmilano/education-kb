@@ -4,6 +4,114 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — sixty-seventh pass (`p862`) — **`7` trends (`T219`–`T225`): a second defect class in query vocabulary that `p861`'s remedy cannot repair, the counter-example that keeps it honest, a measured `3:1` supply asymmetry between Portuguese and Spanish, and a tier where traction and grant run in opposite directions**
+
+**Two hundred and seventeen** trends — derived trends: **217** (`210` + `7`).
+
+## 🔴 `T219` — a query term can fail as a CROSS-LANGUAGE HOMOGRAPH, and `p861`'s exclusion remedy does not repair it
+
+🟢 `p861` established that `grading` is unrunnable because GitHub stems it to `grade`, and proved
+it with `grading NOT grade` → `9` of `726`. 🔴 **`p862` found two terms that fail just as hard and
+for a different reason, which means the remedy is different too.**
+
+| Term | `total_count` | On topic in top `10` | Who owns the term |
+|---|---|---|---|
+| 🔴 `banca` | `34,437` | **`0`** | 🔴 **Banking.** `techbanca/coinai`, `boleto_bancario`, `Bancard/*`, `dataiku-projet-bancaire` |
+| 🔴 `banca NOT banco NOT bancaria NOT bancario` | `8,123` | **`0`** | 🔴 **The exclusion removes `76%` of the postings and `0%` of the problem** — the survivors are French `bancaire` and the brand `Bancard` |
+| 🔴 `rúbrica` | `919` | **`0`** | 🔴 **Italian *rubrica* = address book** (`super-rubrica-rest`, `Rubrica-Telefonica-Completa`) and the Portuguese *budget line* (`Tabelas-do-Governo`, `47★`) |
+| 🟢 `rubrica orçamentária` (control) | **`1`** | — | 🟢 **The budget sense is not what fills it** — the Italian address-book sense is. The control locates the collision precisely |
+
+🔵 **The distinction is operational.** A STEM collision shares a root, so a `NOT` on the root
+separates the senses. 🔴 **A homograph shares nothing but the spelling across two languages, so
+there is no term to exclude** — the only repair is to abandon the word and query the phrase.
+🟢 **Rule: before a single foreign-language word is used as a query, check its top band for a
+second language. `banca`, `rúbrica` and `EBAU` each failed this check today.**
+
+## 🟢 `T220` — the counter-example: a very large `total_count` is NOT the same defect as a contaminated one
+
+🔴 **`prova` returns `105,979`, and the instinct from `T214` and `T219` is to call it unrunnable.**
+🟢 **The measurement says otherwise: `5` of its top `10` by stars are Brazilian examination
+corpora** — `Provas-POSCOMP` (`919★`), `enem-api` (`368★`), `awesome-poscomp` (`203★`),
+`awesome-ufma` (`202★`), `CAECOMP/provas` (`157★`). 🟢 **And `prova NOT prove NOT provable`
+removes only `584` postings of `105,979` — `0.55%` — so the English *prove* family was never the
+contaminant.** 🔵 **Volume comes from the word being ordinary in two Romance languages; precision
+survives it because stars sort the examination projects to the top.** 🟢 **Rule: judge a term by
+the precision of its top band, never by its total — `banca` and `prova` are both huge and only
+one of them is broken.**
+
+## 🟢 `T221` — the LATAM assessment supply is BRAZILIAN, measured `3:1`, and the gap widens with traction
+
+| Concept, same meaning | `total_count` | above `5★` |
+|---|---|---|
+| 🟢 `"correção automática"` (PT) | **`147`** | **`4`** |
+| 🟡 `"corrección automática"` (ES) | `54` | **`0`** |
+| 🔴 `autocorrección` (ES) | `22` | **`0`** |
+| 🟡 `"corretor automático"` (PT) | `25` | `1` |
+
+🔵 **`2.7:1` on raw supply and `5:0` on anything with traction.** 🔴 **This base has for several
+passes written "LATAM" where its evidence supported "Brazil".** 🟢 **The correction is now
+measured, and it has a direct engagement consequence: a Portuguese-language assessment programme
+starts from existing corpora, a Spanish-language one starts from nothing** → see `T225`.
+
+## 🔴 `T222` — the English precision remedy transfers to Portuguese at HALF its precision
+
+🟢 `p861`'s repaired term `autograding` returned `8` of `8` on topic. 🔴 **`"correção automática"`
+above five stars returns `2` of `4`:** [`leonamvasquez/terraview`](https://github.com/leonamvasquez/terraview)
+is Terraform security analysis and [`Webschool-io/GeneticErrors`](https://github.com/Webschool-io/GeneticErrors)
+is spelling autocorrect. 🔵 **Both are correctly described by the phrase; neither is education.**
+🟢 **Cause: English coined a compound noun for the pedagogical act (*autograding*), and Portuguese
+and Spanish did not — they reuse a general phrase that also covers spell-check and automated
+remediation.** 🔴 **So a multi-word phrase is a weaker instrument in Romance languages than in
+English, and a pass that uses one must read every hit rather than trusting the band.**
+
+## 🔴 `T223` — in the examination vein, TRACTION and GRANT run in opposite directions
+
+| Rank by stars | Address | ★ | Grant, byte-read |
+|---|---|---|---|
+| 1 | `amimaro/Provas-POSCOMP` | **919** | 🔴 **NONE** |
+| 2 | `yunger7/enem-api` | **368** | 🔴 GPL-2.0 |
+| 3 | `awesome-poscomp` | `203` | 🟢 MIT *(a list)* |
+| 4 | `awesome-ufma` | `202` | 🟡 CC0 *(a list)* |
+| 5 | `CAECOMP/provas` | `157` | 🔴 **NONE** |
+| 6 | `gustavoguanabara/assistente-enem` | `121` | 🔴 GPL-3.0 |
+| 7 | `track-concursos` | `113` | 🔴 **Non-commercial** |
+| 8 | 🟢 **`piresramon/gpt-4-enem`** | **`54`** | 🟢 **MIT — the best permissive RUNNABLE artefact in the vein** |
+
+🔵 **Every address above `54★` is either ungranted, copyleft, non-commercial, or a list rather
+than software.** 🔴 **A star-ranked shortlist of this vein, which is what an unaided search
+produces, selects almost perfectly for what cannot be delivered.** 🟢 **This is the strongest
+argument this base has produced for byte-reading the grant BEFORE ranking, rather than after.**
+
+## 🔴 `T224` — `NOASSERTION` is one value covering two incompatible refusals
+
+🟢 **Measured on two addresses this pass.** [`track-concursos`](https://github.com/michel-softwares/track-concursos)
+(`113★`) is *all rights reserved* and forbids modification and redistribution outright.
+[`skill-professor-concurso-publico`](https://github.com/thalleskayke6/skill-professor-concurso-publico)
+is a drafted *non-commercial* licence that permits free study use and redistribution outside
+commerce. 🔴 **GitHub's licence field reads `NOASSERTION` for both.** 🔵 **The consequences are
+not the same** — the first cannot be shipped at all, the second can be used in a non-commercial
+context — 🟢 **and only the bytes separate them.** 🔵 **`NONE` and `NOASSERTION` are therefore
+different failures: `NONE` means no grant was found, `NOASSERTION` means a grant was found and
+not recognised, and the second is the one worth reading.**
+
+## 🟢 `T225` — Brazil has an examination-software tier; Spain measurably does not
+
+🟢 **Four Brazilian terms return a populated, forked, actively pushed tier**: `enem` (`103` above
+`5★`), `concursos públicos` (`503`), `"correção automática"` (`147`), `prova` (top band `5/10` on
+topic). 🔴 **Three Spanish terms return almost nothing**: `oposiciones stars:>2` → **`7`**,
+`selectividad` → `60` with **`0` above one star**, `EBAU stars:>2` → **`3`**, 🔴 **and the top
+`EBAU` hit is [`inosca/ebau`](https://github.com/inosca/ebau), Swiss building-permit software.**
+
+🔵 **The asymmetry is not about Spanish-speaking demand — it is about publication culture around a
+national examination.** 🟢 **For the studio this converts an assumption into a decision: a
+Brazilian assessment engagement composes existing corpora, an Iberian or Hispanic-American one is
+a greenfield build, and the second should be priced as such.** 🔴 **Declared limit: only Spain's
+examination vocabulary was run. Mexico, Colombia, Chile and Argentina have their own exam names
+and none has been queried** → `862-G2`.
+
+---
+
+
 ## 🟢 `2026-11-17` — sixty-sixth pass (`p861`) — **`5` trends (`T214`–`T218`): an English query term that cannot be run because the forge stems it into a marketing adjective, the affiliation channel built and its yield measured at `8` of `28`, the highest-precedence placement step caught placing three projects at the Free Software Foundation, an affiliation shown not to be a region, and the assessment-platform layer measured copyleft while its components are permissive**
 
 **Two hundred and ten** trends — derived trends: **210**. 🔴 **Count derived this pass with the

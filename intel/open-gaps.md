@@ -4,6 +4,165 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (sixty-seventh pass, `p862`) — **`7` gaps — `861-G1`, `861-G2` and `861-G3` all DISCHARGED with their own acceptance tests run, `860-G1`'s direction test FAILED and published as a failure, and four new limits named**
+
+### 🟢 `861-G1` — DISCHARGED: two numbers reported, and the SECOND instrument placed what the first could not
+
+🔴 **The gap said: an affiliation is not a region, and `20` unplaced rows need a SECOND
+instrument, not a better first one.** 🟢 **Its acceptance test: the next pass that runs the
+affiliation channel must report two numbers — addresses with a STATED affiliation, and addresses
+PLACED. `p861` was `9` and `8`.**
+
+🟢 **Built as [`p862-grant-probe.sh`](../ingest/p862-grant-probe.sh), which carries `p861`'s stage
+one unchanged and adds the stage `861-G1` specified: a TLD in a stated URL, a `CITATION.cff`
+address, a jurisdiction named in `CODE_OF_CONDUCT`/`CONTRIBUTING`.**
+
+| Measured `2026-11-17` over `26` addresses | `p861` | `p862` |
+|---|---|---|
+| addresses with a STATED affiliation | `9` | 🔴 **`2`** |
+| addresses PLACED to a region | `8` | 🟢 **`5`** |
+
+🔴 **The two numbers invert, and the inversion is the result.** 🟢 **`p861` placed fewer rows than
+it had affiliations for; `p862` placed MORE rows than it had affiliations for — `3` of its `5`
+placements came from the second stage alone**, a `.br` URL in a README belonging to a project that
+names no institution at all ([`paladini/awesome-poscomp`](https://github.com/paladini/awesome-poscomp),
+[`Projeto-Juiz-Online/Juiz_online_ferias`](https://github.com/Projeto-Juiz-Online/Juiz_online_ferias),
+[`Vestibular-data/enem_data`](https://github.com/Vestibular-data/enem_data)). 🔵 **That is exactly
+the independence `861-G1` asked for: a region channel that does not pass through an affiliation.**
+
+🔴 **And its limits, measured not guessed.** `21` of `26` remain unplaced. 🔴 **The
+`CITATION.cff` and `CODE_OF_CONDUCT` stages the gap named placed `0` rows, because not one of the
+`26` repositories carries either file.** 🔵 **A stage that never fires is not a working stage —
+it is an untested one, and it is recorded as untested rather than as available** → `862-G4`.
+
+### 🟢 `861-G2` — DISCHARGED: five terms run, totals published, and the tier is NOT the nil the gap allowed for
+
+🟢 **The acceptance test was: report the total for each term, and if the tier is genuinely empty
+in both languages, publish that as a measured nil WITH the terms.** 🟢 **All five were run, plus
+the two extras the gap named.** Totals, evidence in
+[`latam-assessment-vocabulary`](../evidence/latam-assessment-vocabulary.2026-11-17-p862.tsv):
+
+`"correção automática"` **`147`** (`4` above `5★`) · `"corrección automática"` **`54`** (`0`) ·
+`autocorrección` **`22`** (`0`) · `"corretor automático"` **`25`** (`1`) · `rúbrica` **`919`**
+(🔴 unrunnable) · `banca` **`34,437`** (🔴 unrunnable) · `prova` **`105,979`** (🟢 `5` of top `10`
+on topic).
+
+🟢 **The tier is not empty: it is Portuguese, it is `3:1` larger than the Spanish one, and the
+gap between them widens to `5:0` on anything above five stars** → `T221`. 🔴 **Two of the seven
+terms cannot be run at all, by a mechanism `p861`'s remedy does not repair** → `T219`.
+
+### 🟢 `861-G3` — DISCHARGED: both named legs run, both returned, and the remedy holds a second time
+
+🟢 **`AI education Kenya Nigeria South Africa 2026 regulation` returned** Kenya's National AI
+Strategy and its draft AI Bill of `19 February 2026`, Nigeria's still-draft strategy and its
+data-protection enforcement against tertiary institutions, and South Africa's governance through
+POPIA/CPA/ECTA with a draft national AI policy — 🔴 **whose status is DISPUTED between sources
+(abrogated `27 April 2026` vs published for consultation `10 April 2026`), published as a conflict
+rather than resolved.**
+
+🟢 **`AI education Canada Mexico 2026 spend adoption` returned** Canada's *AI for All* (June
+`2026`, `12%`→`60%` business AI use by `2034`), `$162M`/`10,000` Mitacs placements, `$30M`
+CanCode, and Canada at `44th` of `47` on AI training and literacy; Mexico at **US `$776M`**
+enterprise AI spend for `2026`. 🔴 **`0` US-only drift for the first time in seven passes.**
+
+🟢 **Both filed in [`intel/market.md`](market.md) under the single `## Opportunities by region`
+heading.** 🔵 **The remedy — name the jurisdiction, never the region — has now worked twice, and
+it is cheap enough to be the default.**
+
+### 🔴 `860-G1` — its direction test FAILED this pass, and the failure is published rather than omitted
+
+🔴 **`860-G1` set a DIRECTION as its acceptance test: the logged-and-never-shelved figure must
+FALL between two consecutive passes that run it.** 🔴 **It rose.**
+
+| Measured on the same re-implementation as `p861` | At `HEAD` | After `p862` |
+|---|---|---|
+| distinct addresses on the three shelves | `1,150` | 🟢 **`1,167`** |
+| distinct addresses logged to the two trending files | `5,555` | `5,576` |
+| 🔴 **LOGGED AND NEVER SHELVED** | `4,779` | 🔴 **`4,783`** |
+
+🔵 **The arithmetic is not mysterious and it is worth stating exactly.** This pass shelved `11`
+rows and **logged `21` addresses that were new to the base**, because an honest trending entry
+records what was read, including what was refused. 🔴 **`12` of the `26` addresses read cannot be
+shelved at all — they have no grant or a non-commercial one — so they enter the log and can never
+leave it by being shelved.**
+
+🔴 **This is a defect in the MEASURE, not only in the pass.** 🟢 **The residue silently conflates
+two populations: addresses not yet graded, and addresses graded and REFUSED.** 🔵 **The second can
+only grow, and a pass that reads carefully in a poorly-granted tier is punished by the metric for
+doing the right thing.** 🟢 **Remedy, cheap and exact: subtract
+[`measured-unusable.md`](measured-unusable.md)'s addresses from the residue before taking the
+direction.** 🟢 **Acceptance test: the next pass that runs the instrument reports residue
+GROSS and NET-OF-REFUSED, and takes the direction on the net figure.**
+
+### 🔴 `862-G1` — `10` ungranted addresses, and the channel that exists for them has never been pointed at a whole tier
+
+🟢 **The [`licence-requests`](licence-requests/) channel exists, has `10` drafts, and is correctly
+marked DRAFTED-NOT-SENT because sending means posting to third-party repositories and this
+session's authorisation does not cover that.** 🔴 **What is new is scale: this pass alone produced
+`10` ungranted addresses, including the `919★` top of the vein
+([`amimaro/Provas-POSCOMP`](https://github.com/amimaro/Provas-POSCOMP)) and a REST API advertising
+`1,000,000+` items ([`gontijogabriel/Quest-API`](https://github.com/gontijogabriel/Quest-API)).**
+
+🟢 **Two drafts added this pass for those two.** 🔴 **The gap is not drafting — it is that `12`
+drafts now sit unsent, and the base has no record of whether a single one was ever delivered by a
+human.** 🟢 **Acceptance test, and it was MET IN THIS PASS rather than deferred: the channel's README now
+carries a single delivery ledger with a `Sent?` column, every row reading `never sent`** —
+[`licence-requests/README.md`](licence-requests/README.md). 🔴 **The gap stays OPEN on its
+substantive half: `12` drafts exist and `0` have been delivered, and delivery needs a human,
+because posting to third-party repositories is outside this session's authorisation.**
+🟢 **Residual acceptance test: one issue URL in that column.**
+
+### 🔴 `862-G2` — only ONE Hispanic jurisdiction's examination vocabulary was run, and it was Spain
+
+🔴 **`T225` concludes that Spanish-language examination software barely exists, and that
+conclusion rests on three Spanish terms — `oposiciones`, `selectividad`, `EBAU`.** 🔴 **Mexico,
+Colombia, Chile and Argentina each have their own examination names and NONE has been queried
+here**: `EXANI`, `COMIPEMS` (Mexico), `ICFES`, `Saber 11` (Colombia), `PAES` (Chile), `UBA XXI`
+and `CBC` (Argentina).
+
+🔵 **The risk is specific: `T225` may be a finding about SPAIN that this base has written about
+the Spanish LANGUAGE.** 🟢 **Acceptance test: run those seven terms, report each total, and either
+confirm `T225` across four more jurisdictions or narrow it to Spain.** 🔴 **Expect at least one
+homograph — `PAES` and `CBC` are both short acronyms, which is the shape that failed for `EBAU`.**
+
+### 🔴 `862-G3` — the APAC leg returned `0` national frameworks for the five countries that hold the region's policy weight
+
+🔴 **The mandated APAC leg returned conferences, surveys and vendor activity, and nothing on
+China, India, Japan, Korea or Singapore national AI-education frameworks.** 🔵 **By `861-G3`'s own
+logic the cause is the word `APAC` in the query, exactly as `North America` was the cause of six
+passes of US-only results.** 🔴 **It was not run this pass, and that is a budget decision, not a
+finding.**
+
+🟢 **Acceptance test: one pass that runs `AI education China India Japan Korea Singapore 2026
+national framework regulation` and reports what each jurisdiction returns, including nothing.**
+🔵 **Note the APAC leg's second defect, already corrected in [`market.md`](market.md): it returned
+the UAE's `25` school prohibitions as an APAC result, and the UAE is EMEA. The `region` field must
+be set from the jurisdiction in the source, never from the leg that found it.**
+
+### 🔴 `862-G4` — two instrument defects found by running the gate, one inherited and one latent
+
+🔴 **Both were found by executing [`ingest/derive-counts.py`](../ingest/derive-counts.py), and
+both are published because a gate's own output is evidence.**
+
+1. 🔴 **An inherited duplicate shelf subject.** [`Li-Evan/BloomTutor`](https://github.com/Li-Evan/BloomTutor)
+   appears on `agents/top.md` **twice within the canonical signature**, at lines `142` and `~1300`,
+   and it is present at `HEAD` — 🟢 **verified by running the same detector against
+   `git show HEAD:agents/top.md`, so it is NOT introduced by this pass.** 🔵 **Not repaired here:
+   the two rows carry different prose, so merging them is a content decision a pass that reads
+   both should make, not a `sed`.** 🟢 **Acceptance test: `dupes=0` on `agents/top.md`.**
+2. 🔴 **Recipe ids that the counter cannot see.** The gate derives recipes from
+   `^## …P<n> —` and therefore counts `P-1`..`P-95`. 🔴 **`p844`'s `P96` and `p861`'s `P94`–`P95`
+   are written as `` `P96` `` with backticks, which the regex does not match — so the page holds
+   recipes the gate cannot count, and `p844`'s `P96` additionally COLLIDES with an id `p861` was
+   about to reach.** 🟢 **This pass numbered its own recipes `P98`–`P99` in the counted form to
+   avoid both faults, which is why the gate now reports `derived=97, claimed=97` with
+   `missing ['P-96','P-97']` — 🔵 an honest hole, not a miscount.** 🟢 **Acceptance test: a pass
+   that rewrites the three backticked headings into the counted form and reports a contiguous
+   range.**
+
+---
+
+
 ## 🟢 `2026-11-17` (sixty-sixth pass, `p861`) — **`5` gaps — `860-G1` DISCHARGED in the direction its own acceptance test names, `860-G2` DISCHARGED with its yield MEASURED rather than claimed, and three new limits named with the probe that found each**
 
 ### 🟢 `860-G1` — DISCHARGED in direction: the LOGGED-AND-NEVER-SHELVED figure fell again, and the selection rule the gap asked for exists

@@ -1,0 +1,27 @@
+repo	stars	pushed	lang	gh_spdx	description
+yunger7/enem-api	368	2025-12-14	TypeScript	GPL-2.0	API pública e open-source para listagem de provas e questões do Exame Nacional do Ensino Médio (ENEM).
+gustavoguanabara/assistente-enem	121	2025-05-07	-	GPL-3.0	Assistente para sugestão de temas e correção de provas do ENEM 
+piresramon/gpt-4-enem	54	2024-12-06	Python	MIT	Code and data to evaluate LLMs on the ENEM, the main standardized Brazilian university admission exams.
+gpassero/uol-redacoes-xml	39	2020-08-05	Python	Apache-2.0	O banco de redações da UOL (http://educacao.uol.com.br/bancoderedacoes/) em XML como modelo de testes e validação de técnicas de PLN (Processamento de Linguagem Natural) sobre redações.
+diaslui/enem-extractor	37	2025-02-16	Python	MIT	Um CLI que extrai questões de provas do ENEM em JSON.
+amimaro/Provas-POSCOMP	919	2026-09-18	-	NONE	Provas e gabaritos da POSCOMP, sem marcação das respostas :books:
+paladini/awesome-poscomp	203	2025-09-09	-	MIT	Uma coleção de incríveis recursos para as provas da POSCOMP.
+CAECOMP/provas	157	2026-05-26	HTML	NONE	Migramos para o Notion!
+michel-softwares/track-concursos	113	2026-06-15	HTML	NOASSERTION	Organizador de estudos para Concursos Públicos gratuito. Acesse o site para encontrar guias, Editais Prontos para importar e começar a estudar, e também para baixar o instalador mais atual facilmente. 
+gilsonnogueira/notebooklm-para-concursos	68	2026-10-11	-	MIT	Ecossistema de Engenharia de Estudos com IA Fundamentada (NotebookLM + Gemini Estudantes). Metodologia N.A.G. (Nucleo de Aprendizagem Guiada) com 19 Prompts calibrados, Raio-X estatistico de bancas e Metodo MIT.
+mathfaria/autoGrader	6	2023-05-22	Jupyter Notebook	MIT	[PT-BR] Corretor automático de gabaritos, feito em Python!
+ufscar/CIgrader	2	2024-11-13	-	NONE	Corretor automático para laboratório de ensino baseado em CI
+Webschool-io/GeneticErrors	13	2016-02-25	JavaScript	MIT	Módulo para correção automática de erros.
+leonamvasquez/terraview	13	2026-09-14	Go	MIT	Realiza análise estática e contextual de segurança em infraestrutura Terraform, detecta misconfigurations e riscos de compliance antes do apply, calcula scores de segurança e gera sugestões de correção automática.
+Projeto-Juiz-Online/Juiz_online_ferias	5	2026-08-13	HTML	NONE	Mini online judge em Flask: cadastro, problemas, submissões e correção automática de código com execução em contêineres Docker.
+rodrigoborgesmachado/questoes-aqui	31	2026-11-12	JavaScript	NONE	Questões Aqui é uma plataforma online que permite aos usuários praticar questões de vestibulares, processos seletivos e do ENEM. Desenvolvida com React no frontend e .NET 8 no backend, a aplicação oferece uma ampla gama de questões para ajudar os estudantes a se prepararem para suas provas.
+Naritsumi/EstudiaTAI-app	10	2026-06-24	HTML	MIT	Aplicación android por y para TAIs.
+olixva/oposiciones-app	6	2025-12-31	JavaScript	NONE	Oposiciones App is a web application that helps candidates preparing for competitive exams by providing an interactive platform to take practice tests. The application is built using React for the frontend and FastAPI for the backend with MongoDB as database, ensuring a modern, fast, and scalable architecture. 
+erseco/Oposiciones	5	2023-08-08	-	NONE	Material para las oposiciones de profesor de secundaria de la especialidad de informática.
+bjverde/explodir-edital	5	2023-11-04	HTML	NONE	Formata edital de concurso públicos
+Jeiel0rbit/concursos-api-deno	6	2025-07-22	TypeScript	MIT	API de concurso público para Dev
+thalleskayke6/skill-professor-concurso-publico	6	2026-09-05	Python	NOASSERTION	Skill Professor de Concurso Publico para Claude Code, Chat GPT e etc: estudo por questoes com engenharia reversa de banca (FGV), incidencia por assunto, pegadinhas mapeadas e plano de estudo. Adaptavel a qualquer edital.
+gontijogabriel/Quest-API	11	2026-08-11	-	NONE	O Quest API é uma API REST que dá acesso a um banco com mais de 1.000.000 de questões de concursos públicos brasileiros, organizadas por banca, ano, matéria e prova. Ela foi criada para Desenvolvedores e Edtechs que querem consumir ou integrar questões reais em seus produtos.
+elheremes/awesome-ufma	202	2026-10-21	Python	CC0-1.0	Uma lista de provas das disciplinas ministradas na Universidade Federal do Maranhão.
+Vestibular-data/enem_data	6	2021-10-07	-	NONE	Um banco de dados para questões do vestibular federal do Exame Nacional do Ensino Médio, ou Enem.
+opoalerta/opoalerta	4	2026-11-14	Python	AGPL-3.0	Buscador unificado y gratuito de convocatorias de empleo público en España. Open source, sobre datos abiertos oficiales.

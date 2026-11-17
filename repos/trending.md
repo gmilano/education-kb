@@ -4,6 +4,44 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — `p862`: the exam-preparation vein — a GitHub-trending category this base had never indexed, opened by a Portuguese query and measured end to end
+
+🔴 **This is a category, not a repository, and the base had no row in it.** Every tutoring,
+grading and proctoring term this base has run returns tools that act on a *course*. 🟢 **The
+Portuguese assessment vocabulary returned something else: artefacts built around a NATIONAL
+EXAMINATION** — ENEM, POSCOMP, `concursos públicos`, `oposiciones`. 🔵 **In Brazil the national
+examination *is* the education product, and the open-source supply follows the examination, not
+the curriculum.**
+
+| Probe run `2026-11-17` | `total_count` | Top of band | Reading |
+|---|---|---|---|
+| 🟢 `enem stars:>5` | `103` | [`yunger7/enem-api`](https://github.com/yunger7/enem-api) `368★` · [`gustavoguanabara/assistente-enem`](https://github.com/gustavoguanabara/assistente-enem) `121★` · [`piresramon/gpt-4-enem`](https://github.com/piresramon/gpt-4-enem) `54★` | 🔴 **Contaminated but workable**: `id-Software/Enemy-Territory` (`622★`) and `enemy-of-the-state` match on `enem`+`y`. 🟢 `6` of the top `10` are genuine ENEM projects — the best signal-to-noise of any term in this pass |
+| 🟢 `concursos públicos` | `503` | [`michel-softwares/track-concursos`](https://github.com/michel-softwares/track-concursos) `113★` · [`gontijogabriel/Quest-API`](https://github.com/gontijogabriel/Quest-API) `11★` | 🟢 Clean term, real tier. 🔴 **Its two largest members are both ungranted or non-commercial** |
+| 🟡 `vestibular stars:>5` | `10` | `KCL-BMEIS/VS_Seg` (`49★`), `drwaseemsheikh/audiometry` (`27★`) | 🔴 **Unrunnable for a different reason again**: *vestibular* is the inner-ear system, and MEDICAL IMAGING owns the term. 🟢 Only `Vestibular-data/enem_data` (`6★`) is educational |
+| 🔴 `oposiciones stars:>2` | **`7`** | `EstudiaTAI-app` (`10★`), `olixva/oposiciones-app` (`6★`), `erseco/Oposiciones` (`5★`) | 🔴 **A measured nil in all but name.** `7` repositories above two stars for the entire Spanish civil-service examination system |
+| 🔴 `selectividad` | `60` | `casbry/selectividad-ccss` (`1★`) | 🔴 **`0` above one star.** Spain's university-entrance examination has no open-source tier at all |
+| 🔴 `EBAU stars:>2` | **`3`** | `inosca/ebau` (`26★`) — 🔴 **Swiss building-permit software, not the examination** | 🔴 **A third homograph.** The acronym for Spain's entrance exam is owned by an unrelated Swiss govtech project |
+
+🔵 **The asymmetry is the finding.** Brazil's examination vocabulary returns a populated,
+forkable, actively pushed tier across four separate terms. 🔴 **Spain's returns `7`, `60` and `3`,
+with nothing above one star in two of the three** — and this base had recorded neither fact.
+🟢 **For a LATAM engagement this is a starting position; for an EMEA/Iberian one it is a build,
+and now it is a MEASURED build decision rather than an assumption** → `T221`, `T225`.
+
+🔴 **Freshness, stated plainly.** Of the `26` addresses read, `12` have a `HEAD` commit in `2026`,
+`6` in `2025`, and `8` are older — including `uol-redacoes-xml` (`2020`), the most valuable row
+in the pass. 🔵 **A fixed corpus and an abandoned tool look identical to a freshness filter; the
+difference is in what the artefact is for, which is why this base reads the README and not only
+the date.**
+
+Instruments, both committed and re-runnable:
+[`p862-latam-vocab.sh`](../ingest/p862-latam-vocab.sh) ·
+[`p862-homograph-control.sh`](../ingest/p862-homograph-control.sh) ·
+[`p862-grant-probe.sh`](../ingest/p862-grant-probe.sh).
+
+---
+
+
 ## 🟢 `2026-11-17` — `p861`: `28` addresses byte-read on one channel, and the ASSESSMENT layer's licence split measured in a single batch — `3` of `4` platforms copyleft, `18` of `18` components permissive
 
 🔴 **The movement is a MEASUREMENT rather than a discovery**, because `21` of the `28` addresses

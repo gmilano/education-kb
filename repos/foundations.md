@@ -4,6 +4,29 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Sixty-seventh pass (`p862`, 2026-11-17) — **`4` foundation rows (`384` → `388`): the Portuguese-language assessment CORPORA, including a human-scored essay bank that makes automated essay scoring measurable in a language this base had no gold data for**
+
+🟢 **Every licence below was byte-read `2026-11-17` from `git clone --filter=blob:none
+--no-checkout --depth 1`. GitHub's SPDX field was recorded separately for comparison and agreed
+on all four** — unlike two rows elsewhere in this vein, where it did not
+([`T224`](../intel/trends.md)).
+
+| Repo | Licence, as measured | ★ / forks | Default ref · HEAD commit | Region | Why it is a foundation and not a row on another shelf |
+|---|---|---|---|---|---|
+| [`gpassero/uol-redacoes-xml`](https://github.com/gpassero/uol-redacoes-xml) | 🟢 **Apache-2.0** — `LICENSE`, `11,357 B`, `sha256₁₂ b40930bbcf80` | `39` / `10` | `master` · `2020-08-05` | 🟢 **LATAM** (placed `url-tld:.br`, affiliation STATED: *Portal Brasil Escola*) | 🟢 **The single most valuable row in this pass, and it has `39` stars.** It is the UOL *Banco de Redações* — Brazilian student essays **with the human marks and the per-criterion examiner comments attached**, in XML plus a Python reader. 🔴 **Automated essay scoring cannot be evaluated without scored essays, and this base held no Portuguese gold set at all.** 🔵 **Permissive, so a scorer trained or evaluated on it is deliverable.** 🔴 **`HEAD 2020-08-05` — the corpus is fixed, which is what a benchmark should be, but check the source's terms before redistribution: the Apache grant covers the repository's code and packaging, and the essays are third-party content it republishes.** |
+| [`yunger7/enem-api`](https://github.com/yunger7/enem-api) | 🔴 **GPL-2.0 — copyleft, byte-read** `LICENSE`, `18,092 B`, `sha256₁₂ 8177f9751321`, first line `GNU GENERAL PUBLIC LICENSE`. 🟢 **`18,092 B` is the GPL-2.0 text, not GPL-3.0's `~35 KB` — the bytes and GitHub's `GPL-2.0` agree** | `368` / `76` | `main` · `2025-12-14` | Global *(prose: Brazil)* | 🟢 **The most-used ENEM question API in the open: papers and items as a public, documented TypeScript service**, `76` forks — the highest fork count in the vein by a factor of six. 🔴 **Shelved WITH its flag, not despite it: GPL-2.0 is the one grant in this pass that constrains a client deliverable.** 🔵 **Use it as a data source over the network, or fork it as an internal service; do not link it into proprietary product code.** |
+| [`paladini/awesome-poscomp`](https://github.com/paladini/awesome-poscomp) | 🟢 **MIT** — `LICENSE`, `1,084 B`, `sha256₁₂ fe3f6164fc9e` | `203` / `18` | `master` · `2025-09-09` | 🟢 **LATAM** (placed `url-tld:.br`) | 🟢 **The curated index to POSCOMP**, Brazil's national postgraduate computing entrance examination: past papers, solutions, study material. 🔵 **A list, and shelved as one** — its value is that it is the map to the corpus whose largest holding, [`amimaro/Provas-POSCOMP`](https://github.com/amimaro/Provas-POSCOMP) (`919★`), 🔴 **has no licence at any path** and is therefore unusable. |
+| [`elheremes/awesome-ufma`](https://github.com/elheremes/awesome-ufma) | 🟡 **CC0-1.0 — a public-domain DEDICATION, not a software licence** — `LICENSE`, `6,555 B`, `sha256₁₂ 36ffd9dc085d` | `202` / `46` | `master` · `2026-10-21` | Global *(prose: Universidade Federal do Maranhão, Brazil)* | 🟢 **Past examination papers for the taught courses of a Brazilian federal university**, actively maintained (`HEAD 2026-10-21`) and the second-largest fork network in the vein. 🔵 **CC0 is the cleanest possible position for a corpus** — no attribution obligation, no share-alike — 🔴 **but it is a dedication over content the uploaders did not author, so institutional provenance is the risk here, not the grant.** |
+
+🔵 **What is deliberately absent.** [`gontijogabriel/Quest-API`](https://github.com/gontijogabriel/Quest-API)
+advertises **over one million** Brazilian examination items behind a REST API and would have been
+the largest item bank on this shelf. 🔴 **It has no licence at any path, so it is recorded on
+[`measured-unusable`](../intel/measured-unusable.md) and a request is drafted at
+[`intel/licence-requests/`](../intel/licence-requests/) — drafted, NOT sent.**
+
+---
+
+
 ## 🟢 Sixty-sixth pass (`p861`, 2026-11-17) — **`18` foundation rows (`318` → `336`): the AUTOGRADING tier, recovered from this base's OWN log by fixing one morpheme — and `15` of the `18` were logged here and never graded**
 
 🟢 **This is the tier `agents/top.md` explains.** The query `grading` is stemmed to `grade` on
@@ -1513,7 +1536,7 @@ above was graded on the licence question alone.**
 | https://github.com/langchain-ai/langchain | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`) | 149546 | **Region: Global.** The model and tool abstraction layer beneath the above. 🟡 **Shelved with a deliberate caution: this base's compose recipes should depend on `langgraph` for control flow and on `langchain-core` for interfaces, not on the `langchain` meta-package, whose surface moves faster than an education deliverable's support window.** 🔵 **Note for the byte-read gate: its `LICENSE` is on `master`, not `main` — a `main`-only probe returns `404` and would record a false `NO_LICENCE_FILE`, which is a live defect in any sweep that assumes the default branch name** |
 | https://github.com/teppei-miyashita/agenticstar-agentcore | 🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last touched `2026-08-12` | 0 | 🔴 **Region: APAC. Shelved as a WARNING row — the worked example for `T89`.** This is the source repository that the PyPI package `agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository`, and it holds no commits at all. 🟢 **The package itself is genuinely MIT** (`License-Expression: MIT` in the wheel, `dist-info/licenses/LICENSE`, `1,078 B`, `sha256:2afbb5fc…`) **and genuinely installable** — 🔴 **but it is wheel-only, single-release (`2026-09-17`), and unreadable at its stated address, while hard-pinning `langgraph==1.1.10`, `langchain==1.2.18`, `fastapi==0.136.0` and `agenticstar-platform==0.5.32`.** 🔵 **Do NOT add it to a delivery tree. It is here so that the next pass asking "is the AGENTIC STAR stack adoptable?" finds the answer already measured: licensed yes, auditable no** |
 
-## Foundational repos — 336 rows
+## Foundational repos — 340 rows
 
 ## 🟢 The STANDARDS-SEAM layer — **LTI, QTI and xAPI, the four interfaces an education deliverable is actually wired through** (new, fifty-seventh pass `p852`) (6 rows)
 

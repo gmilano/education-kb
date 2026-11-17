@@ -4,6 +4,98 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Sixty-seventh pass (`p862`, 2026-11-17) — **`P98`–`P99`: the two recipes the Portuguese-language assessment tier makes buildable, each wired so that no ungranted and no copyleft component touches client code**
+
+**Ninety-seven** concrete recipes — derived recipes: **97** (`95` + `2`).
+
+🟢 **Every component named below was byte-read on `2026-11-17` from a blobless partial clone, and
+the grant beside it is what its own `LICENSE` file says** —
+[`byte-read-grants`](../evidence/byte-read-grants.2026-11-17-p862.tsv). 🔴 **Both recipes are
+written around a constraint discovered this pass: in this vein the most popular components are the
+ones that cannot be shipped** (`T223`), 🟢 **so each recipe states where the GPL boundary runs.**
+
+---
+
+## 🟢 P98 — *Automated essay scoring in Portuguese, delivered with a published agreement rate rather than a claim*
+
+🔵 **The engagement this answers**: a LATAM institution where `92%` of students and `79%` of
+faculty already use AI and only `30%` think the institution has responded
+([`intel/market.md`](../intel/market.md)). 🔴 **They do not need another detector. They need a
+defensible number for how well machine marking agrees with their own examiners.**
+
+**Components, all permissive:**
+
+| Component | Grant, byte-read | Role in the build |
+|---|---|---|
+| [`gpassero/uol-redacoes-xml`](https://github.com/gpassero/uol-redacoes-xml) | 🟢 **Apache-2.0** (`11,357 B`) | 🟢 **The gold set.** Brazilian student essays with human marks and per-criterion examiner comments. 🔴 **This is the irreplaceable part** — without scored essays there is no agreement rate, and this base found no other Portuguese source |
+| [`piresramon/gpt-4-enem`](https://github.com/piresramon/gpt-4-enem) | 🟢 **MIT** (`1,068 B`) | 🟢 **The evaluation harness and the prompt baseline**: few-shot and chain-of-thought variants already written against ENEM semantics. 🔵 Start from its prompts, not from a blank one |
+| [`diaslui/enem-extractor`](https://github.com/diaslui/enem-extractor) | 🟢 **MIT** (`1,073 B`) | 🟢 Turns the institution's own PDF papers into structured JSON, so their material enters the same pipeline as the gold set |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **BSD-3-Clause** *(shelved `p861`)* | 🟢 The submission and rubric surface the markers actually work in — 🔵 avoids building a UI for a measurement engagement |
+
+**Wiring, in the order it should be built:**
+
+1. 🟢 **Reproduce before you improve.** Run `gpt-4-enem`'s harness against `uol-redacoes-xml`
+   unchanged and record the agreement between model score and human score per criterion. 🔴 **This
+   number, not the model, is the deliverable** — and it is reproducible by the client, because
+   both grant and corpus are public.
+2. 🟢 **Then substitute the institution's own essays** via `enem-extractor`, holding the harness
+   fixed. 🔵 **Two numbers now exist — public-corpus agreement and local agreement — and the gap
+   between them is the institution's actual exposure.**
+3. 🟢 **Put the marker in the loop at the rubric, inside `Submitty`.** 🔴 **For an EMEA variant this
+   is not optional: Ofqual's published principles make human control of high-stakes marking a
+   regulatory requirement** ([`intel/market.md`](../intel/market.md)).
+4. 🔴 **Publish the disagreement cases, not only the score.** 🔵 The criteria where machine and
+   examiner diverge are the institution's AI policy, written from evidence.
+
+🔴 **Licence boundary**: every component is permissive; there is nothing to isolate. 🔴 **The one
+real caution is provenance, not grant** — the Apache-2.0 header covers the repository's code and
+packaging, while the essays are third-party content it republishes, so confirm redistribution
+terms with the source before shipping the corpus itself. 🟢 **Evaluating against it in place
+raises no such question.**
+
+🟡 **Effort: `4`–`6` weeks** to the first published agreement rate with one institution's corpus.
+
+---
+
+## 🟢 P99 — *A Brazilian examination item bank that routes around the ungranted `919★` one*
+
+🔵 **The engagement this answers**: a client wants an item bank for ENEM or `concursos público`
+preparation. 🔴 **The obvious starting points are the popular ones, and the four most popular are
+ungranted, GPL-2.0, GPL-3.0 and non-commercial** (`T223`). 🟢 **This recipe gets the content
+without inheriting any of those positions.**
+
+| Component | Grant, byte-read | Role, and where the boundary runs |
+|---|---|---|
+| [`diaslui/enem-extractor`](https://github.com/diaslui/enem-extractor) | 🟢 **MIT** | 🟢 **The content route that avoids the problem entirely**: ENEM papers are public documents, so extract items from the source PDFs rather than copying an ungranted database |
+| [`Jeiel0rbit/concursos-api-deno`](https://github.com/Jeiel0rbit/concursos-api-deno) | 🟢 **MIT** | 🟢 The notice/`edital` feed. 🔵 **Chosen over [`track-concursos`](https://github.com/michel-softwares/track-concursos) (`113★`) specifically because that one's bytes forbid modification and redistribution** |
+| [`yunger7/enem-api`](https://github.com/yunger7/enem-api) | 🔴 **GPL-2.0** | 🟡 **Optional, and ONLY across a network boundary.** 🟢 Run it as a standalone service and consume it over HTTP; 🔴 **do not link it into product code.** 🔵 Its `76` forks make it the best-tested reference for ENEM item semantics, which is worth having even at arm's length |
+| [`paladini/awesome-poscomp`](https://github.com/paladini/awesome-poscomp) · [`elheremes/awesome-ufma`](https://github.com/elheremes/awesome-ufma) | 🟢 **MIT** · 🟡 **CC0** | 🟢 Coverage maps for POSCOMP and for a federal university's past papers — 🔵 use them to find source documents, not as the database |
+| [`autolab/Tango`](https://github.com/autolab/Tango) | 🟢 **Apache-2.0** *(shelved `p861`)* | 🟢 Sandboxed execution when the items are programming items |
+
+**Wiring:**
+
+1. 🟢 **Extract, don't copy.** `enem-extractor` against the official papers gives items whose
+   provenance is a public document. 🔴 **Copying [`Quest-API`](https://github.com/gontijogabriel/Quest-API)'s
+   `1,000,000+` items is the obvious shortcut and it grants no rights at all.**
+2. 🟢 **Keep `enem-api` behind HTTP**, in its own container, as a comparison oracle while your own
+   extraction is validated. 🔵 **The GPL-2.0 obligation attaches to that service's own source, which
+   is unmodified, and travels no further.**
+3. 🟢 **Feed the notice stream** from `concursos-api-deno` so the bank tracks live examination
+   cycles rather than a static archive.
+4. 🔴 **Record every source's grant in the item metadata at ingestion time.** 🔵 **This pass is the
+   argument: `12` of `26` sources in this vein were unusable, and that was only discoverable by
+   reading the bytes before ranking by stars.**
+
+🟡 **Effort: `6`–`8` weeks** to a first bank with provenance recorded per item.
+
+🔴 **What neither recipe can do yet.** Both are Portuguese. 🔴 **There is no Spanish equivalent of
+`uol-redacoes-xml` in this base, and the Spanish examination terms return `7`, `60` and `3`
+repositories** (`T225`). 🟢 **For a Hispanic-American or Iberian client, `P98` becomes a corpus-
+construction project first, and that is a different proposal with a different price.**
+
+---
+
+
 ## 🟢 Sixty-sixth pass (`p861`, 2026-11-17) — **`P94`–`P95`: the assessment layer, built twice — once as a system the client owns end to end, and once INSIDE the vendor estate the client already pays for**
 
 **Ninety-five** concrete recipes — derived recipes: **95**. 🟢 **Every component named below was

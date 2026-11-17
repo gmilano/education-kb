@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — `p862`: `861-G2` run — the LATAM assessment tier is **measured for the first time**, it is **Brazilian not Hispanic**, and the English precision remedy **does not transfer**
+
+🟢 **What is new this window is a vocabulary, not a repository.** `p861` found its tier by repairing
+an English morpheme. 🟢 **`p862` ran the Spanish and Portuguese equivalents that `861-G2` said had
+never been run here, and all five returned a number.**
+
+| Movement | What moved |
+|---|---|
+| 🟢 **THE TIER EXISTS, and it is Portuguese** | `"correção automática"` `147` (`4` above `5★`) · `"corrección automática"` `54` (`0`) · `autocorrección` `22` (`0`) · `"corretor automático"` `25` (`1`) → `T221` |
+| 🔴 **Two of the five terms are UNRUNNABLE, by a mechanism `p861` did not have** | `rúbrica` `919`, `0` of top `10` on topic — it is the Italian *address book* and the Portuguese *budget line*. `banca` `34,437`, `0` of top `10` on topic — it is **banking** → `T219` |
+| 🔴 **And the stemming remedy does NOT repair a homograph** | `banca NOT banco NOT bancaria NOT bancario` still returns `8,123`, still `0` of `10` on topic. 🔵 **`p861`'s exclusion test worked because `grading`/`grade` share a stem; `banca`/`bancaire` share nothing to exclude** |
+| 🟢 **The counter-example that keeps the finding honest** | `prova` returns `105,979` — 🟢 **and `5` of its top `10` ARE Brazilian examination corpora.** High volume is not the same defect as low precision → `T220` |
+| 🔴 **The precision remedy transfers at half strength** | `autograding` was `8` of `8`. `"correção automática"` above `5★` is **`2` of `4`** — `terraview` is Terraform security, `GeneticErrors` is spell-correction → `T222` |
+| 🔴 **Traction and grant are INVERSELY related in this vein** | the `919★`, `368★`, `121★` and `113★` addresses are ungranted, GPL-2.0, GPL-3.0 and non-commercial. 🟢 **The best permissive runnable artefact has `54★`** → `T223` |
+| 🔴 **`NOASSERTION` conceals two different refusals** | `track-concursos` is all-rights-reserved; `skill-professor-concurso-publico` is explicitly non-commercial. 🔴 **GitHub reports both identically; only the bytes separate them** → `T224` |
+
+### Addresses logged this window — `26` byte-read, `0` clone failures
+
+🟢 **Shelved as agents** (`6`): [`piresramon/gpt-4-enem`](https://github.com/piresramon/gpt-4-enem) ·
+[`gilsonnogueira/notebooklm-para-concursos`](https://github.com/gilsonnogueira/notebooklm-para-concursos) ·
+[`diaslui/enem-extractor`](https://github.com/diaslui/enem-extractor) ·
+[`mathfaria/autoGrader`](https://github.com/mathfaria/autoGrader) ·
+[`Jeiel0rbit/concursos-api-deno`](https://github.com/Jeiel0rbit/concursos-api-deno) ·
+[`Naritsumi/EstudiaTAI-app`](https://github.com/Naritsumi/EstudiaTAI-app)
+
+🟢 **Shelved as foundations** (`4`): [`gpassero/uol-redacoes-xml`](https://github.com/gpassero/uol-redacoes-xml) ·
+[`yunger7/enem-api`](https://github.com/yunger7/enem-api) ·
+[`paladini/awesome-poscomp`](https://github.com/paladini/awesome-poscomp) ·
+[`elheremes/awesome-ufma`](https://github.com/elheremes/awesome-ufma)
+
+🟢 **Shelved as a platform** (`1`): [`opoalerta/opoalerta`](https://github.com/opoalerta/opoalerta) — AGPL-3.0, flagged.
+
+🔴 **Read and REFUSED — no grant at any path** (`10`): [`amimaro/Provas-POSCOMP`](https://github.com/amimaro/Provas-POSCOMP) (`919★`) ·
+[`CAECOMP/provas`](https://github.com/CAECOMP/provas) (`157★`, README reads *"Migramos para o Notion!"* — abandoned in place) ·
+[`rodrigoborgesmachado/questoes-aqui`](https://github.com/rodrigoborgesmachado/questoes-aqui) (`31★`, pushed `2026-11-12` — live and ungranted) ·
+[`gontijogabriel/Quest-API`](https://github.com/gontijogabriel/Quest-API) (`11★`, claims `1,000,000+` items) ·
+[`ufscar/CIgrader`](https://github.com/ufscar/CIgrader) · [`Projeto-Juiz-Online/Juiz_online_ferias`](https://github.com/Projeto-Juiz-Online/Juiz_online_ferias) ·
+[`olixva/oposiciones-app`](https://github.com/olixva/oposiciones-app) · [`erseco/Oposiciones`](https://github.com/erseco/Oposiciones) ·
+[`bjverde/explodir-edital`](https://github.com/bjverde/explodir-edital) · [`Vestibular-data/enem_data`](https://github.com/Vestibular-data/enem_data)
+
+🔴 **Read and REFUSED — grant present, but not open source** (`2`): [`michel-softwares/track-concursos`](https://github.com/michel-softwares/track-concursos) (`113★`, *"Todos os direitos reservados"*, forbids modification AND redistribution) ·
+[`thalleskayke6/skill-professor-concurso-publico`](https://github.com/thalleskayke6/skill-professor-concurso-publico) (`6★`, *Licença de Uso Não Comercial*)
+
+🟡 **Read, granted, but NOT education** (`2`, recorded because they are the precision cost of `T222`):
+[`leonamvasquez/terraview`](https://github.com/leonamvasquez/terraview) (MIT, Terraform security) ·
+[`Webschool-io/GeneticErrors`](https://github.com/Webschool-io/GeneticErrors) (MIT, spell-correction, `HEAD 2016-02-25`)
+
+🟢 **`5` of the `26` were already in THIS FILE and on no shelf** — the `860-G1` residue, again:
+`enem-api`, `assistente-enem`, `gpt-4-enem`, `uol-redacoes-xml`, `enem-extractor`. 🔴 **`21` were
+new to the base.** Residue measured on the same re-implementation as `p861`: `4,779` at `HEAD`.
+Evidence: [`residue-dedupe`](../evidence/residue-dedupe.2026-11-17-p862.tsv) ·
+[`latam-assessment-vocabulary`](../evidence/latam-assessment-vocabulary.2026-11-17-p862.tsv) ·
+[`homograph-control`](../evidence/homograph-control.2026-11-17-p862.tsv).
+
+---
+
+
 ## 🟢 `2026-11-17` — `p861`: the window's movement is a RETIRED EXPLANATION — the *grading gap* was never a supply gap or a language gap, it was one English word the forge stems into a marketing adjective
 
 🟢 **What is new this window is not a repository. It is the reason `28` repositories were
