@@ -1,0 +1,9 @@
+address	default_ref	path	bytes	sha256_12	spdx_declared	first_line
+open-craft/xblock-ai-evaluation	opencraft/ulmo	LICENSE	10256	160ecd880165	Apache-2.0	Apache License
+open-craft/xblocks-exemplar	main	LICENSE.txt	11358	cfc7749b96f6	Apache-2.0	                                 Apache License
+open-craft/branching-xblock	main	LICENSE.txt	10177	fe4622cc79b1	Apache-2.0	                                 Apache License
+open-craft/timeline-xblock	main	LICENSE	11358	cfc7749b96f6	Apache-2.0	                                 Apache License
+open-craft/xblock-accordion	main	LICENSE.txt	11358	cfc7749b96f6	Apache-2.0	                                 Apache License
+edly-io/carousel-xblock	master	LICENSE	1064	9dbee418e5f5	MIT	MIT License
+edly-io/openedx-cmi5-xblock	master	LICENSE	1064	9dbee418e5f5	MIT	MIT License
+open-craft/graph-xblock	main	LICENSE.txt	11358	cfc7749b96f6	Apache-2.0	                                 Apache License

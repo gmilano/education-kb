@@ -4,6 +4,90 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventy-fourth pass (`p869`, 2026-11-17) — **`3` recipes, each wired from repositories this pass byte-read, and each answering a dated obligation from [`intel/market.md`](../intel/market.md)**
+
+🟢 **House rule for this shelf: name the repositories, name the licence, name the wiring, name
+the region it is for, and give the shape of the effort. A recipe that cannot be costed is an
+essay.**
+
+### 🟢 `P869-1` — AI marking inside the LMS the institution already runs (EMEA, before `2027-12-02`)
+
+🔵 **The obligation it answers:** assessment and exam scoring are Annex III education uses. The
+Digital Omnibus defers stand-alone high-risk obligations to **`2027-12-02`**, so a system placed
+in service before that date faces a lighter obligation set. 🟢 **The window is ~`12` months and
+the date is known.**
+
+| Layer | Repository | Licence (byte-read this pass) | Why this one |
+|---|---|---|---|
+| course platform | Open edX (`openedx/edx-platform`) | `AGPL-3.0` | the institution already runs it; 🔴 note its address is in `p869`'s deterministic `422` class — verify it on the clone channel, not the metadata channel |
+| AI marking component | https://github.com/open-craft/xblock-ai-evaluation | 🟢 **Apache-2.0** (`10,256 B`, `sha256₁₂ 160ecd880165`) | 🟢 **the ONLY AI-specific repo in the `121`-repo integrator estate, and permissively granted** |
+| component scaffold | https://github.com/open-craft/xblocks-exemplar | 🟢 **Apache-2.0** (`11,358 B`, `cfc7749b96f6`) | `237` source files, `127` `.tsx` — the React-era XBlock pattern to copy rather than invent |
+| inference | self-hosted open-weight model | — | 🔵 **sovereignty is a named EU Council priority; a US-hosted API is a procurement objection before it is a technical one** |
+
+🟢 **Wiring:** `xblock-ai-evaluation` is a course component, so it installs into the existing
+platform and inherits its auth, gradebook and roster — no separate identity integration.
+🔴 **Clone it at ref `opencraft/ulmo`, NOT `main`** (its default branch is not `main`; a `main`
+assumption `404`s). Point its model backend at the self-hosted endpoint. 🔴 **Do NOT add
+engagement or affect detection: Article 5(1)(f) bans emotion recognition in education and that
+ban is not deferred.**
+
+🔵 **Shape of the effort:** the marking component exists and is granted, so the work is model
+selection, prompt/rubric calibration against the institution's own marking, and the
+`2027-12-02` documentation set — not building a grader.
+
+### 🟢 `P869-2` — a national AI curriculum with a legislated denominator (APAC, Vietnam)
+
+🔵 **The obligation it answers:** `MOET Decision 2422` mandates **`12` periods of AI content per
+class per year for grades `1`–`12`**. 🟢 **Fixed scope, fixed audience, statutory reason to buy.**
+
+| Layer | Repository | Licence | Why this one |
+|---|---|---|---|
+| curriculum structure | `withmarbleapp/os-taxonomy` | already shelved | `1,590` topics, `3,221` prerequisite edges — the prerequisite graph is what makes `12` periods × `12` grades a SEQUENCE rather than `144` lessons |
+| lesson generation | `THU-MAIC/OpenMAIC` | already shelved | multi-agent classroom; exports PPTX and offline HTML — 🔵 **offline export is the requirement, not a nicety, for grade-`1` classrooms outside the cities** |
+| delivery, offline-first | `Kolibri` | `MIT` | already shelved on [`verticals/solutions.md`](../verticals/solutions.md); built for intermittent connectivity |
+| component layer | https://github.com/edly-io/carousel-xblock | 🟢 **MIT** (`1,064 B`, `9dbee418e5f5`) | 🟢 **MIT, and built by the Lahore contractor (`arbisoft.com`) that maintains the estate — measured APAC build capacity for an APAC engagement** |
+
+🟢 **Wiring:** take the taxonomy graph as the spine; cut it to the `12`-periods-per-grade
+envelope so each period maps to topics whose prerequisites fall in earlier periods. Generate with
+`OpenMAIC`, export offline HTML, deliver through `Kolibri` where connectivity is thin and as
+XBlocks where a platform exists.
+
+🔴 **Calibrate expectations against Ipsos 2026, not 2024:** support for banning classroom AI ROSE
+across Japan, Australia and Korea. 🔵 **A curriculum mandate is a different buyer from a
+classroom tool, and only the former is growing.**
+
+### 🟢 `P869-3` — the LATAM capacity engagement: implement the framework the institution already adopted
+
+🔵 **The obligation it answers:** the `EPAA` 2026 finding — LATAM higher-education institutions
+adopt international AI frameworks **they lack the capacity to implement**, against `716`
+instruments across `23` jurisdictions and ONE enacted national statute. 🟢 **The deliverable is
+operational capacity, not another policy document.**
+
+| Layer | Repository | Licence | Why this one |
+|---|---|---|---|
+| platform | Open edX | `AGPL-3.0` | the regional installed base |
+| regional component estate | `cmmedu` XBlocks (`10`, `3` of them `MIT`) | mixed — 🔴 **check per component** | 🟢 **LATAM-built and LATAM-maintained (CMM Educación, Universidad de Chile); `12` of its `18` repos default to a RELEASE branch, the signature of a team shipping to real institutions** |
+| AI marking | https://github.com/open-craft/xblock-ai-evaluation | 🟢 **Apache-2.0** | same component as `P869-1`; the compliance wrapper differs, the technology does not |
+| audit trail | `openwallet-foundation-labs/learner-credential-wallet` | already shelved | 🔴 **use THIS address: `digitalcredentials/learner-credential-wallet` is the SAME project (identical `HEAD` `1c46a82ba384`) at its old home** |
+
+🟢 **Wiring:** stand up the platform with the regional component estate, add the marking
+component, and make the credential wallet the evidence layer — because what an institution cannot
+currently do is SHOW that a given learner's assessment was handled the way its adopted framework
+says. 🔵 **The wallet turns a policy commitment into a record, which is the capacity gap the
+`EPAA` study names.**
+
+🟢 **Staffing, and it is the point:** this recipe can be delivered with LATAM-built,
+LATAM-maintained open source and LATAM integrator capacity (`cmmedu` in Chile, `eduNEXT` in
+Colombia). 🔵 **That is true of no other region in this base** — EMEA's regional estate is
+`~60%` ungranted and North America's measured build capacity in education open source is one
+university domain.
+
+### 🔴 What this shelf is NOT offering this pass, and why
+
+🔴 **No recipe is built on `iblai/higher-education-agents`, which `p868` filed as an agent row
+yesterday.** 🟢 **`p869`'s tree channel reads it as `90` files, `0` source files, `68` markdown:
+a documentation collection.** 🔵 **It may be an excellent reading list; it is not a layer.**
+
 ## 🟢 Seventy-third pass (`p868`, 2026-11-17) — **`P111`–`P113`: a Chilean public-university build whose components were enumerated and byte-read this pass, a content-portability engagement whose business case is the `136` dead rows this base just measured on its own shelves, and an EMEA courseware-migration line that starts from the two formats institutions already own**
 
 **One hundred and eleven** concrete recipes — derived recipes: **111** (`108` + `3`).

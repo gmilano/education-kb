@@ -1,0 +1,17 @@
+address	files	source_files	top_ext	tree_verdict
+GDGC-MET/EdutechAssistant-Vibecoding	2	0	.md (1)	NO-CODE
+IONISx/xblock-video	0	0	-	NO-CODE
+IONISx/xblock-video-modal-components	0	0	-	NO-CODE
+Urav-Advanced-Learning-Systems-Pvt-Ltd/Study-Buddy-Engineering-Hackathon-2024	6	0	.md (3)	NO-CODE
+haxtheweb/haxcms-php	49768	5002	.json (41561)	CODE
+iblai/higher-education-agents	90	0	.md (68)	NO-CODE
+kltn-moolde/moodle-adaptive-learning-plugin	13237	7763	.py (7107)	CODE
+langgptai/awesome-claude-prompts	12	0	.jpg (7)	NO-CODE
+langx/langx	3129	2204	.ts (1542)	CODE
+learning-commons-org/knowledge-graph	7	0	.md (3)	NO-CODE
+lynote-ai/ai-tutor	58	20	.md (15)	CODE
+onemnemo/mnemo	3294	2947	.cs (1251)	CODE
+opendilab/awesome-RLHF	7	0	.md (4)	NO-CODE
+particify/arsnova	2	0	.png (1)	NO-CODE
+tutors-sdk/tutors	384	198	.md (117)	CODE
+valutac/sulva	0	0	-	NO-CODE

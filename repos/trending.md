@@ -4,6 +4,58 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p869`) — **`643` repositories swept across `10` XBlock integrator owners; `121` XBlocks; `31.4%` carry NO GRANT; this base shelves `6`**
+
+🟢 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+### 🟢 The sweep, and why it is paced
+
+🟢 **[`ingest/p869-xblock-estate.sh`](../ingest/p869-xblock-estate.sh), throttled at `4s`
+per request.** 🔴 **The pacing is not caution: `p869` measured that an unpaced batch of `134`
+single-`repo:` probes returned `23` absences, `23` of `23` of which resolved on retry.** 🔵 **An
+unthrottled trend sweep reports a smaller estate and looks exactly like a result.**
+
+| Owner | Repos swept | XBlocks | 🟢 permissive | 🔴 no grant |
+|---|---|---|---|---|
+| `open-craft` | — | `39` | 🟢 **`9`** | `6` |
+| `eduNEXT` | — | `18` | `0` | `4` |
+| `raccoongang` | — | `14` | `1` | 🔴 **`9`** |
+| `edly-io` | — | `14` | `4` | `3` |
+| `cmmedu` | — | `10` | `3` | `1` |
+| `openfun` | — | `9` | `0` | `4` |
+| `IONISx` | — | `7` | `0` | 🔴 **`7`** |
+| `openedxou` | — | `5` | `0` | `0` |
+| `collabassess` | — | `3` | `0` | 🔴 **`3`** |
+| `Abstract-Tech` | — | `2` | `1` | `1` |
+| **total** | **`643`** | **`121`** | **`18` (`14.9%`)** | 🔴 **`38` (`31.4%`)** |
+
+🔵 **Against `p867`'s PLATFORM estate (`71` `AGPL-3.0` / `21` `Apache-2.0` / `1` `BSD-3-Clause`,
+`0` ungranted), the integrator side is both more restrictive and far more often ungranted.**
+
+### 🟢 Trending by push date, not by stars — because this estate has no stars
+
+🟢 **`8` of the `9` permissive XBlocks found this pass were pushed `2026-11-13` or `2026-11-16`,
+and `0` of the `9` has more than `3★`.** 🔴 **A stars-ranked trend instrument cannot see this
+estate at all**, which is registered as [`869-G3`](../intel/open-gaps.md): this base's trend
+channel is star-ranked and the most commercially informative corpus in the industry is
+star-invisible.
+
+| Repository | Licence | ★ | Pushed |
+|---|---|---|---|
+| https://github.com/open-craft/xblock-ai-evaluation | Apache-2.0 | `3` | `2026-11-13` |
+| https://github.com/open-craft/xblock-react-utils | Apache-2.0 | `0` | `2026-11-16` |
+| https://github.com/open-craft/group-selection-xblock | Apache-2.0 | `0` | `2026-11-16` |
+| https://github.com/open-craft/timeline-xblock | Apache-2.0 | `0` | `2026-11-13` |
+| https://github.com/open-craft/xblock-processline | Apache-2.0 | `0` | `2026-11-13` |
+| https://github.com/open-craft/branching-xblock | Apache-2.0 | `0` | `2026-11-13` |
+| https://github.com/open-craft/xblock-accordion | Apache-2.0 | `0` | `2026-11-13` |
+| https://github.com/open-craft/xblocks-exemplar | Apache-2.0 | `0` | `2026-11-13` |
+| https://github.com/edly-io/carousel-xblock | MIT | `0` | `2026-11-13` |
+| https://github.com/open-craft/graph-xblock | Apache-2.0 | `0` | `2026-07-21` |
+
+🔴 **Declared nil: `edly-io/openedx-cmi5-xblock` (`MIT`) is permissive and live-granted but last
+pushed `2025-03-06` (`621` days), so it is NOT filed as current.**
+
 ## 🟢 `2026-11-17` — `p868`: **`35` of the `66` NEW addresses this week are XBlocks — so the far side of Open edX's permissive seam is both larger and LESS covered here than the platform it extends; and a release-branch default, not `main`, is the NORM in this estate (`24%` of probes measured)**
 
 ### 🟢 The extension estate, measured as a proportion for the first time

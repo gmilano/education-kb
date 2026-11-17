@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p869`) — **the four web legs returned `4` education-AI repositories trending in November 2026 and this base already shelves ALL FOUR; the new addresses came from owner enumeration instead**
+
+🟢 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+### 🔴 What the mandated legs returned, and the saturation measurement
+
+🟢 **Legs run (`2026`, computed not hardcoded): `top open source AI agents education 2026 github MIT` ·
+`github trending education AI 2026` · `open source platform education student information system LMS MIT Apache` ·
+`AI education industry trends 2026`.**
+
+| Trending repository (web leg) | What the leg claimed | Already shelved here? |
+|---|---|---|
+| `HKUDS/DeepTutor` | ~`48,268★`, lifelong personalised tutoring, three-layer memory + mastery gates | 🔴 **yes** |
+| `THU-MAIC/OpenMAIC` | ~`42,000★`, Tsinghua MAIC multi-agent classroom — AI teacher + AI classmates, exports PPTX/offline HTML | 🔴 **yes** |
+| `withmarbleapp/os-taxonomy` | `1,590`-topic curriculum graph, `3,221` prerequisite edges | 🔴 **yes** |
+| `patchy631/ai-engineering-hub` | ~`40,466★`, `93+` tutorial projects by difficulty | 🔴 **yes** |
+
+🔵 **`4` of `4`. Against generic web search this corpus is SATURATED** — and the star counts the
+legs carry are third-party blog figures and auto-generated trend reports, which this pass did not
+adopt into any cell. 🟢 **The `115` unshelved addresses this pass found came from an OWNER-level
+enumeration of the XBlock integrator estate, which no search engine surfaces because none of them
+has stars.**
+
+### 🟢 New this week, from the channel that actually yields
+
+| Repository | Licence | Signal |
+|---|---|---|
+| https://github.com/open-craft/xblock-ai-evaluation | 🟢 **Apache-2.0** (byte-read, `10,256 B`) | 🟢 **The only AI-specific repository in a `121`-repo XBlock estate.** LLM evaluation of free-text learner answers as a drop-in Open edX component. Pushed `2026-11-13`. Default ref `opencraft/ulmo`, not `main` |
+| https://github.com/open-craft/xblocks-exemplar | 🟢 **Apache-2.0** (byte-read, `11,358 B`) | `237` source files, `127` of them `.tsx` — the React-era XBlock reference. Pushed `2026-11-13` |
+| https://github.com/open-craft/branching-xblock | 🟢 **Apache-2.0** (byte-read, `10,177 B`, **non-stock**) | Conditional content branching: the adaptive-path primitive. Pushed `2026-11-13` |
+
+🔵 **`open-craft` pushed to `8` of the `9` permissive XBlocks found this pass on `2026-11-13`
+and `2026-11-16` — a single shop actively modernising its estate this week, which is the most
+actionable partner signal in this filing.**
+
+### 🔴 Two corrections this pass published against itself
+
+🔴 **(i) `iblai/higher-education-agents`, filed as an agent row by `p868` yesterday, is marked
+`NO-CODE` on this pass's tree channel:** `90` files, `0` source files, `68` markdown.
+🔴 **(ii) An unthrottled probe batch manufactured `23` false absences in this pass's own first
+run (`23` of `23` resolved on retry).** 🟢 **Every sweep in this pass is now paced at `3`–`4s`,
+and any trend claim resting on an unpaced sweep should be disbelieved — including, possibly,
+earlier ones in the history below.**
+
 ## 🟢 `2026-11-17` — `p868`: **the hand step upstream of the ranker is gone, and the predicate that replaced it disagreed with the hand `0` times out of `6` — then surfaced `129` addresses the hand had never selected**
 
 🔴 **Fork policy, stated before the first total.** 🟢 **`gh api search/repositories` EXCLUDES forks

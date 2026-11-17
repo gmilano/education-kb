@@ -1,0 +1,9 @@
+address	commits	top_domains	region_signal
+open-craft/xblock-ai-evaluation	50	opencraft.com(33) users.noreply.github.com(15) gmail.com(2)	MEASURABLE
+open-craft/xblocks-exemplar	50	opencraft.com(32) fastmail.com(8) users.noreply.github.com(5)	MEASURABLE
+open-craft/branching-xblock	22	users.noreply.github.com(17) opencraft.com(5)	REFUSED-noreply-majority
+open-craft/timeline-xblock	17	users.noreply.github.com(9) opencraft.com(6) sobti.in(2)	REFUSED-noreply-majority
+open-craft/xblock-accordion	23	users.noreply.github.com(10) opencraft.com(10) sobti.in(3)	MEASURABLE
+edly-io/carousel-xblock	2	arbisoft.com(2)	MEASURABLE
+edly-io/openedx-cmi5-xblock	17	arbisoft.com(15) users.noreply.github.com(2)	MEASURABLE
+open-craft/graph-xblock	16	opencraft.com(14) users.noreply.github.com(2)	MEASURABLE

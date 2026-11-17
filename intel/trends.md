@@ -4,6 +4,73 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventy-fourth pass (`p869`, 2026-11-17) — **`8` trends, `3` of them measured by this pass rather than read off a leg**
+
+### 🟢 T1 — The compliance deadline replaced the adoption curve, in all four regions at once
+
+🔴 **2026 is the year the education-AI question stopped being "will they adopt" and became "prove
+this system complies, by this date."** Four dated obligations land inside `24` months: North
+Carolina's policy cascade (`2026-12-31` → `2027-06-30` → `2028-06-30`), EU chatbot transparency
+(`2026-08`) then Annex III high-risk (`2027-12-02`), Vietnam's `18`-month education transition
+(`~2027-09`), Mexico's 2026 reform package. 🟢 **A roadmap pinned to those dates sells; a
+roadmap pinned to adoption forecasts does not.**
+
+### 🟢 T2 — The licence risk in open education has moved from the PLATFORM to the EXTENSION
+
+🟢 **MEASURED this pass.** Everyone plans for Open edX being `AGPL-3.0`. 🔴 **Nobody plans for its
+extension estate: `121` integrator XBlocks are `46.3%` `AGPL-3.0`, `31.4%` NO GRANT AT ALL and
+`14.9%` permissive — against `0%` ungranted on the platform side (`p867`).** 🔵 **The licence
+question on a platform engagement is now decided component by component, and a third of the
+catalogue has no answer.**
+
+### 🟢 T3 — The commercially informative corpus is STAR-INVISIBLE
+
+🟢 **MEASURED this pass.** `8` of the `9` permissive XBlocks found were pushed within `4` days of
+this filing, and `0` of them has more than `3★`. 🔴 **Every star-ranked trend instrument — this
+base's included — is blind to the estate institutions have actually paid to have built.**
+🔵 **The trend signal in vertical software is PUSH RECENCY by owner, not stars.**
+
+### 🟢 T4 — Web search is saturated for this industry; owner enumeration is not
+
+🟢 **MEASURED this pass.** The four mandated legs returned `HKUDS/DeepTutor`,
+`THU-MAIC/OpenMAIC`, `withmarbleapp/os-taxonomy` and `patchy631/ai-engineering-hub` — `4` of `4`
+already shelved. 🟢 **The same pass found `115` unshelved addresses by enumerating `10` owners.**
+🔵 **At this corpus's maturity, the marginal address comes from knowing WHO BUILDS, not from
+asking what is popular.**
+
+### 🟢 T5 — Purpose-built beats general-purpose, and the buyers now say so in writing
+
+🟢 **The OECD's 2026 Digital Education Outlook recommends purpose-built educational AI designed
+for durable learning gains over general-purpose tools; Berkeley Law banned AI for all exams and
+credited coursework from summer 2026.** 🔵 **Two different institutions rejecting the
+general-purpose assistant for the same reason: it cannot evidence learning.** 🟢 **This favours
+curriculum-structured systems — a graph, a mastery model, a credential — over a chat surface.**
+
+### 🔴 T6 — Emotion recognition in education is dead in the EU, and the ban is NOT part of the deferral
+
+🔴 **Article 5(1)(f) is in force.** The `2027-12-02` Digital Omnibus deferral covers Annex III
+high-risk obligations; it does NOT touch the Article 5 prohibitions. 🔵 **Affect-aware
+proctoring, engagement scoring and attention detection are unshippable in the EU today**, and any
+roadmap carrying them in an EMEA engagement is carrying a defect, not a feature.
+
+### 🟢 T7 — Open-source education build capacity is distributed across four regions and readable from commit domains
+
+🟢 **MEASURED, partly this pass.** `edly-io`'s MIT estate is built by `arbisoft.com` (Lahore,
+APAC); `cmmedu` by Universidad de Chile (LATAM); `openfun` by a French public consortium and
+`raccoongang` from Ukraine (EMEA); `haxtheweb` by `psu.edu` (North America);
+`open-craft` by a cooperative with no derivable jurisdiction. 🔵 **A delivery-partner map for
+four of five regions, extracted from licence metadata and commit e-mail domains alone.**
+
+### 🔴 T8 — The instruments keep defeating themselves, and the pattern is now four passes long
+
+🔴 **`p869`'s own code-presence probe turned `134` inputs into `251` rows because `gh --jq`
+prints error JSON to stdout.** 🔴 **`p868` capped a population at `per_page=50` and ANDed two
+topic qualifiers. `p867` published totals without queries. `p866` read a licence cell by
+position.** 🔵 **Four consecutive passes whose first draft reported a channel artefact as a
+finding.** 🟢 **The standing lesson, now stated as a trend rather than an incident: on this
+channel, an instrument's first result is a measurement OF THE INSTRUMENT, and the retry is the
+data.**
+
 ## 🟢 `2026-11-17` — seventy-third pass (`p868`) — **`7` trends (`T260`–`T266`): a search index that is not an existence test, one row in seven on these shelves already dead, a hand step whose removal cost nothing and gained `129`, the LIST class defeating a domain predicate, release branches as the norm in two estates, an institution-name vein beating a language vein, and source-available as the education vertical's finished-product licence**
 
 **Two hundred and fifty-eight** trends — derived trends: **258**.

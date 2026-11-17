@@ -1,0 +1,9 @@
+address	files	source_files	top_ext	tree_verdict
+open-craft/xblock-ai-evaluation	154	93	.tsx (31)	CODE
+open-craft/xblocks-exemplar	324	237	.tsx (127)	CODE
+open-craft/branching-xblock	129	63	.tsx (31)	CODE
+open-craft/timeline-xblock	14	5	.py (3)	CODE
+open-craft/xblock-accordion	95	38	.tsx (16)	CODE
+edly-io/carousel-xblock	27	13	.py (11)	CODE
+edly-io/openedx-cmi5-xblock	62	11	.txt (10)	CODE
+open-craft/graph-xblock	14	4	.txt (3)	THIN-CODE

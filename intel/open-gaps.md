@@ -4,6 +4,210 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (seventy-fourth pass, `p869`) — **`5` gaps — `868-G1`, `868-G2`, `868-G4` and `868-G5` DISCHARGED with their acceptance tests run; `868-G3` and `867-G4` CARRIED UNDONE and said so; and `868-G5`'s discharge CORRECTS the arithmetic of the gap that commissioned it while upholding its conclusion**
+
+### 🟢 `868-G1` — DISCHARGED: `10` of `134` reclassified, `16` of `16` proxy/tree agreement, and `1` of `p868`'s own `7` rows dropped correctly
+
+🟢 **Acceptance test: add a CODE-PRESENCE channel (a tree or language listing, not a word),
+re-run over the committed `232`, publish (a) how many of the `134` `KEEP` it reclassifies and
+(b) whether it would have dropped any of the `7` rows `p868` filed.**
+
+🟢 **Built as two instruments — the cheap channel and the arm that validates it:**
+[`ingest/p869-code-presence.sh`](../ingest/p869-code-presence.sh) (the `language` field, `null`
+when a repository carries no recognised source) and
+[`ingest/p869-tree-validate.sh`](../ingest/p869-tree-validate.sh) (a real `git ls-tree` over a
+blobless shallow clone — paths, no contents).
+
+| Measure | Result |
+|---|---|
+| `134` `KEEP` re-run | `134` in, `134` out |
+| 🔴 **(a) `NO-CODE`** | 🔴 **`10` (`7.5%`)** |
+| 🟢 proxy vs real tree, `16` targets | 🟢 **`16`/`16` AGREE** |
+| 🔴 **(b) of `p868`'s `7` filed rows, dropped** | 🔴 **`1` — `iblai/higher-education-agents`** |
+| 🟢 and the tree says the drop is CORRECT | 🟢 **`90` files, `0` source, `68` markdown** |
+
+🟢 **It catches `868-G1`'s own named offenders** (`langgptai/awesome-claude-prompts`,
+`opendilab/awesome-RLHF`) 🔵 **and a class the gap did not name: `IONISx/xblock-video`,
+`IONISx/xblock-video-modal-components` and `valutac/sulva` clone to `0` FILES — EMPTY
+repositories carried as credited rows.**
+
+🔴 **The instrument defeated itself first and the defect is published:** draft 1 turned `134`
+inputs into `251` output rows because `gh --jq` prints multi-line error JSON to STDOUT and
+`cut -f1` read a `{` as a language. 🟢 **Every field is now newline-stripped and length-capped
+and `total_count` is validated before any field is read.**
+
+### 🟢 `868-G2` — DISCHARGED: `173` rows marked, `0` of `152` addresses unlocated
+
+🟢 **Acceptance test: mark every counted row whose census verdict is `STALE` or `ARCHIVED` in
+place, mechanically from the committed TSV, publishing the number marked against `152`.**
+
+🟢 **Built as [`ingest/p869-mark-stale.py`](../ingest/p869-mark-stale.py), whose ONLY input is
+[`p868`'s committed census](../evidence/liveness-census.2026-11-17-p868.tsv) — the gap is
+explicit that re-measuring would misunderstand it.**
+
+| Shelf | Rows marked |
+|---|---|
+| `agents/top.md` | `72` |
+| `repos/foundations.md` | `85` |
+| `verticals/solutions.md` | `16` |
+| 🟢 **total** | 🟢 **`173`** (`152` addresses, `162` (address, shelf) pairs, `0` unlocated) |
+
+🔵 **`173` rows for `162` pairs is itself a finding and becomes `869-G2` below.**
+
+### 🟢 `868-G4` — DISCHARGED: `121` XBlocks, `31.4%` ungranted against the platform's `0%`, and this base shelves `6`
+
+🟢 **Acceptance test: enumerate the XBlock estate by OWNER, publish the licence split per owner,
+state how many of the total this base shelves, and treat a materially different split from
+`p867`'s platform figure (`71` `AGPL-3.0` / `21` `Apache-2.0` / `1` `BSD-3-Clause`) as the
+finding.**
+
+🟢 **Built as [`ingest/p869-xblock-estate.sh`](../ingest/p869-xblock-estate.sh), throttled at
+`4s` BY CONSTRUCTION.** 🟢 **`643` repositories across `10` owners → `121` XBlocks:**
+`56` `AGPL-3.0` · 🔴 **`38` NONE/`NOASSERTION`** · `11` `Apache-2.0` · `9` `GPL-3.0` ·
+`7` `MIT` · `0` `BSD`.
+
+🔴 **The material difference is the ungranted share: `31.4%` here against `0%` on the platform
+side.** 🔴 **Per-owner, `IONISx` is `7` of `7` ungranted and `collabassess` `3` of `3`; `9` of
+`raccoongang`'s `14`.** 🟢 **`open-craft` is the permissive outlier (`9` `Apache-2.0` of `39`).**
+🔴 **Coverage: this base shelves `6` of `121`.** Per-owner table on
+[`repos/foundations.md`](../repos/foundations.md).
+
+### 🟢 `868-G5` — DISCHARGED, and it CORRECTS the gap's own arithmetic while UPHOLDING its conclusion
+
+🟢 **Acceptance test: re-ground the existence predicate on the CLONE channel, re-run
+`gate-enumeration`, and publish how many of the `136` `VERIFIED-ABSENT` verdicts survive.**
+
+🟢 **Built as [`ingest/p869-existence.sh`](../ingest/p869-existence.sh) — two independent
+channels per address, printed side by side.** 🟢 **It reproduced `p868`'s result exactly (`9` of
+`11` unresolved are ALIVE on the clone channel) and then separated TWO failure modes that
+`p868`'s census recorded as ONE:**
+
+| Failure mode | Measurement | What it means |
+|---|---|---|
+| 🔴 **deterministic `422`** | `8` addresses return `422` *"do not exist or you do not have permission"* and KEEP doing so at `5s` spacing. `6` of the `8` are LIVE on the clone channel, `openedx/edx-platform` among them | 🔴 a genuine, reproducible blind spot in the metadata index |
+| 🔴 **throttle-induced** | an unpaced batch of `134` single-`repo:` probes returned `23` absences; 🔴 **`23` of `23` resolved on retry at `3s`** | 🔴 **self-inflicted, and invisible unless you retest** |
+
+🔴 **AND THE CORRECTION.** 🟢 **`868-G5` states that "every absence claim in this base rests on a
+channel just measured `82%` false-absent."** 🔴 **That rate is CONDITIONAL — it is
+`P(alive | the channel reported absent)`, measured on `11` addresses SELECTED BECAUSE the channel
+had already failed on them.** 🟢 **`p869` measured the UNCONDITIONAL rate on a seeded random
+sample of `60` counted addresses
+([`record`](../evidence/existence-sample60.2026-11-17-p869.tsv)): `59` of `60` agree, so the
+channel is `98.3%` accurate overall.**
+
+🟢 **Both numbers are right and they answer different questions, so both belong in the register:**
+
+| Question | Answer |
+|---|---|
+| How often is this channel correct? | 🟢 **`98.3%`** (`59`/`60`, random sample) |
+| 🔴 **When it reports an ABSENCE, how often is that absence false?** | 🔴 **`~82%`** (`9`/`11`) |
+
+🔵 **The second is the one that matters for the word `VERIFIED`, so `868-G5`'s CONCLUSION stands
+unchanged: an absence from this index is not evidence of absence, and `VERIFIED-ABSENT` is not
+earned.** 🟢 **The existence predicate must be the clone channel, which is now instrumented.**
+
+🔴 **NOT DONE, and stated plainly: `gate-enumeration` was NOT re-run, so the
+"how many of the `136` survive" number is NOT published.** 🔴 **This session's permission layer
+declined to execute the committed gate (`compose/code/pass275-grant-enumeration/enumeration_gate.py`)
+and `p869` did not work around the refusal.** 🟢 **The re-grounding instrument the re-run needs
+now exists; the re-run itself is carried as [`869-G5`](#-869-g5) below, with `867-G4`.**
+
+### 🔴 `868-G3` — NOT DISCHARGED. Carried undone, with the reason stated
+
+🟢 **The acceptance test asked for a declared `HISTORICAL` / `CURRENT` disposition on
+`repos/foundations.md`, assigned to all `389` counted rows from the committed census, publishing
+the split and the stale rate WITHIN the `CURRENT` subset.**
+
+🔴 **`p869` did not build it.** 🟢 **The pass spent its budget on `868-G1`, `-G2`, `-G4` and
+`-G5`, four discharges with four instruments, plus the `643`-repository owner sweep, `8`
+byte-reads and `24` tree listings. 🟢 **`868-G2`'s marking makes this gap MORE tractable rather
+than less: all `85` stale rows on that shelf now carry a visible marker, so assigning a
+disposition is now an edit over a marked set rather than a search.** 🔴 **Carried forward
+UNCHANGED.**
+
+### 🔴 `867-G4` — STILL NOT DISCHARGED, second consecutive carry
+
+🟢 **The acceptance test: `gate-enumeration` should GRADE the payload it finds (`GRANT`,
+`PROPRIETARY`, `VENDORED`, `ATTRIBUTION-ONLY`), be re-run, and publish the new `REFUTED` count.**
+🔴 **Not built, and this pass could not have run it even if it had been: the gate is not
+executable in this session (see `868-G5` above).** 🟢 **Merged with `869-G5` below, because they
+are now the same job.**
+
+---
+
+### 🔴 `869-G1` — `HEAD`-sha identity is a duplicate detector this base has never run, and it found two pairs in the first `11` addresses
+
+🟢 **Measured: `digitalcredentials/learner-credential-wallet` and
+`openwallet-foundation-labs/learner-credential-wallet` return the IDENTICAL `HEAD`
+(`1c46a82ba384`); `fabian-thinks/present-together` and `FabianJun/PresentTogether` return
+`905f9d0313b3`** ([`record`](../evidence/existence-regrounded.2026-11-17-p869.tsv)).
+🔴 **Each pair is ONE project at two addresses, carried as two rows, counted twice in every
+census this base publishes.** 🔵 **Two pairs in `11` addresses is a rate nobody should
+extrapolate from and nobody should ignore.**
+
+🟢 **Acceptance test: the next pass runs `git ls-remote HEAD` over the full counted population,
+groups addresses by `HEAD` sha, publishes every group of size `> 1`, and states how many of the
+`1,015` counted rows collapse. 🔴 A pass that reports `0` groups has mis-run the instrument,
+because two are already named here.**
+
+### 🔴 `869-G2` — `11` (address, shelf) pairs publish TWO rows for one address in one file
+
+🟢 **Measured by `868-G2`'s own marking run: `152` addresses occupy `162` (address, shelf) pairs
+but `173` TABLE ROWS** ([`record`](../evidence/duplicate-rows.2026-11-17-p869.tsv)).
+🔴 **`1EdTech/lti-1-3-php-library`, `DavidLMS/learnmcp-xapi`, `chimple/jamaica`,
+`gyger/mcp-pyzotero`, `vgwb/Antura_arabic` on `agents/top.md`; `FooSoft/anki-connect`,
+`GeovaneSchmitz/sigaa-api`, `european-commission-empl/European-Learning-Model`, `frappe/mcp`,
+`neuronova-apps/DUA-3.0`, `scieloorg/opac` on `repos/foundations.md`.** 🔵 **The count gate
+credits them once; the shelf shows a client two rows.**
+
+🟢 **Acceptance test: the next pass measures the duplicate-row rate over ALL counted rows (not
+just the `152` stale ones this instrument happened to touch), publishes the per-shelf count, and
+states for each pair whether the two rows AGREE on licence and region — because two rows that
+disagree are worse than two rows that repeat.**
+
+### 🔴 `869-G3` — this base's trend channel is star-ranked and the industry's most informative corpus is star-invisible
+
+🟢 **Measured: `8` of the `9` permissive XBlocks found this pass were pushed within `4` days of
+the filing and `0` of them has more than `3★`.** 🔴 **`repos/trending.md` and `agents/trending.md`
+rank by stars, so neither could ever have surfaced this estate** — and the estate is the catalogue
+of what institutions have already paid integrators to build.
+
+🟢 **Acceptance test: the next pass adds a PUSH-RECENCY trend vein keyed on OWNER rather than
+stars (`user:<owner> pushed:>YYYY-MM-DD` over the `10` owners `868-G4` enumerated plus the `4`
+platform owners from `p867`), and publishes how many addresses it surfaces that a star-ranked
+sweep of the same window does not.**
+
+### 🔴 `869-G4` — half the integrator map rests on inference, in a base whose rule is to refuse rather than guess
+
+🟢 **[`verticals/solutions.md`](../verticals/solutions.md) now publishes a `10`-owner integrator
+map with a region per owner.** 🔴 **Only `2` of the `10` were placed on a MEASURED commit-domain
+axis this pass (`edly-io` → APAC via `arbisoft.com`; `open-craft` → REFUSED).** 🔴 **`5` carry a
+region from the owner's published identity rather than from this base's own measurement, and `3`
+are unmeasured.** 🔵 **An integrator map is a regional asset — it is the delivery-partner list —
+so inference in it is more expensive than inference in a row.**
+
+🟢 **Acceptance test: the next pass runs
+[`ingest/p869-affiliation.sh`](../ingest/p869-affiliation.sh) over the highest-★ repository of
+each of the `10` owners, publishes the commit-domain distribution per owner, and REFUSES any
+owner whose domains are a `users.noreply` majority rather than carrying its published
+headquarters.**
+
+### 🔴 `869-G5` — the gate the last two passes have owed cannot be executed in this session, and that is now the gap
+
+🔴 **`867-G4` (grade the payload) and `868-G5` (re-run the gate on the re-grounded channel) both
+terminate in the same action: RUN `gate-enumeration` AGAIN.** 🔴 **`p869` could not: this
+session's permission layer declined to execute the committed gate, and the pass did not work
+around the refusal.** 🟢 **So `gate-enumeration` still stands RED at `HEAD` with `REFUTED=13`,
+`p869` neither caused it nor quieted it (`SKIP_COMMIT_GATES` unused, `DECLARED_RED` untouched),
+and the `136` `VERIFIED-ABSENT` / `230` `QUEUE-UNENUMERATED` verdicts are unrevised.**
+
+🟢 **Acceptance test, and it is deliberately about the OBSTACLE rather than the number: the next
+pass states, before it starts, whether it can execute `compose/code/pass275-grant-enumeration/enumeration_gate.py`.
+🟢 If it CAN, it re-runs it against the clone-channel existence predicate and publishes the
+surviving `VERIFIED-ABSENT` count. 🔴 If it CANNOT, it says so in the same sentence and stops
+registering a gap whose acceptance test this base cannot execute — three consecutive carries of
+an unexecutable action is a register defect, not a research backlog.**
+
 ## 🟢 `2026-11-17` (seventy-third pass, `p868`) — **`5` gaps — `867-G1`, `867-G2`, `867-G3` and `867-G5` DISCHARGED with their acceptance tests run; `867-G4` CARRIED UNDONE and said so; and one discharge measured that the channel every absence claim in this base rests on is `82%` false-absent**
 
 ### 🟢 `867-G1` — DISCHARGED: the domain predicate overruled the hand `0` times and added `129` addresses
