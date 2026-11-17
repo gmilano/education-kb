@@ -6,6 +6,150 @@ updated: 2026-11-17
 
 # Globant AI Studios — Education KB
 
+## Pass `p868` · `2026-11-17`
+
+🟢 **`867-G1`, `867-G2`, `867-G3` and `867-G5` were all discharged with their acceptance tests
+run.** 🔴 **`867-G4` was NOT, and this file says so rather than letting it disappear into a
+carry-forward list.**
+
+🔴 **The headline is not a discovery, it is a self-audit: `136` of the `1,015` repositories this
+knowledge base RECOMMENDS have not been pushed to in over a year.** 🔴 **`69` of them sit on
+`repos/foundations.md`, which is `20.6%` of that shelf and the first page a client engagement
+reads.** 🟢 **`15` of them are submissions to the XPRIZE Global Learning Challenge, all last
+pushed in 2019, carried as current rows for seven years.**
+🔵 **`867-G2` wrote the sentence this pass had to apply to itself: a stale row is worse than a
+missing one, because it is an active recommendation to adopt something nobody maintains.**
+🟢 **The census is committed per row at
+[`evidence/liveness-census.2026-11-17-p868.tsv`](evidence/liveness-census.2026-11-17-p868.tsv) —
+**check it before quoting any row of this base in a client deliverable.**
+
+🟢 **The second finding is a channel correction worth more than the count.** 🔴 **`11` counted
+addresses would not resolve through `gh api search/repositories`; `git ls-remote` found `9` of
+them ALIVE.** 🔴 **That channel is this session's ONLY metadata channel, and
+`gate-enumeration` currently publishes `136` `VERIFIED-ABSENT` verdicts on it — so the word
+`VERIFIED` is not earned.** 🟢 **Registered as [`868-G5`](intel/open-gaps.md) with its
+acceptance test.**
+
+🟢 **The third is a method result.** 🟢 **`p866` removed hand-grading from the presence split,
+`p867` from the choice of which address to file, and `p868` from the decision of whether an
+address is education-domain at all** — [`ingest/p868-domain-predicate.py`](ingest/p868-domain-predicate.py).
+🟢 **It disagreed with `p867`'s reader `0` times out of the `6` addresses both saw, and added
+`129` the reader had passed over.** 🔵 **Three passes, three removals, and not one of them found
+a hand step that was making a judgement the instrument could not. They were all limiting
+throughput.** 🔴 **A new failure mode replaced the old one and ranks `#1`: the LIST class —
+`langgptai/awesome-claude-prompts` (`5,586★`) scores highly because a curated list's description
+is a description of its subject. No word list reaches that; it needs a code-presence channel
+([`868-G1`](intel/open-gaps.md)).**
+
+🟢 **The largest regional result is a method, not a number: a LATAM vein keyed on Spanish and
+Portuguese VOCABULARY returned one unusable repository across four queries, and a vein keyed on
+an INSTITUTION'S NAME (`user:cmmedu`) returned an entire production estate** — CMM Educación at
+the Centro de Modelamiento Matemático, Universidad de Chile. 🟢 **`18` repositories, enumerated
+whole, split `6` MIT / `3` `GPL-3.0` / `3` `AGPL-3.0` / `6` with no grant at all; all `6` MIT
+byte-read and filed.** 🔴 **The split does not follow artefact type — an XBlock in this estate
+may be MIT or `AGPL-3.0` — so it cannot be adopted wholesale, and
+[`P111`](compose/patterns.md) is the component-by-component build.**
+
+### This pass added
+
+| Shelf | Added | Total |
+|---|---|---|
+| [`agents/top.md`](agents/top.md) | `7` build-safe agent rows (EMEA, North America, APAC ×2, `3` region-refused) + `5` declared refusals with their bytes | **`542`** 🟢 gate-GREEN |
+| [`repos/foundations.md`](repos/foundations.md) | `5` rows — content portability and the two courseware formats institutions already own | **`389`** 🟢 gate-GREEN |
+| [`verticals/solutions.md`](verticals/solutions.md) | `6` platform rows, all MIT, all byte-read, all LATAM — the CMM Educación estate | **`228`** 🟢 gate-GREEN |
+| [`intel/trends.md`](intel/trends.md) | `7` trends (`T260`–`T266`) | `258` 🟢 gate-GREEN |
+| [`compose/patterns.md`](compose/patterns.md) | `3` recipes (`P111`–`P113`) — Chilean public university, content portability, EMEA courseware migration | `111` 🟢 gate-GREEN |
+| [`intel/market.md`](intel/market.md) | all four regional legs re-run + `2` LATAM veins; `## Opportunities by region` rewritten, `5` closed-vocabulary sections | — 🟢 region-gate GREEN |
+| [`intel/open-gaps.md`](intel/open-gaps.md) | `4` discharged, `1` carried UNDONE and declared, `5` new (`868-G1`–`G5`) | — |
+| [`agents/trending.md`](agents/trending.md) · [`repos/trending.md`](repos/trending.md) | dated sections prepended, history intact (append-only) | — |
+| [`ingest/`](ingest/) | `5` new: `p868-org-sweep.sh`, `p868-domain-predicate.py`, `p868-byteread-ref.sh`, `p868-liveness-census.py`, `p868-shelf-predicate.py` + `shelf-predicates.json` | — |
+| [`evidence/`](evidence/) | `10` files | — |
+
+🟢 **The two count bases, published side by side and both DERIVED** (`865-G1`'s standing repair —
+no figure in this file is incremented by hand):
+
+| Shelf | 🟢 **Shelf count — the client-facing figure** | 🟡 Addresses discussed on the page (NOT a shelf count) |
+|---|---|---|
+| [`agents/top.md`](agents/top.md) | 🟢 **`542`** rows under a declared holdings signature | `740` deduped addresses in table rows · `781` anywhere on the page · `1,229` table data rows |
+| [`repos/foundations.md`](repos/foundations.md) | 🟢 **`389`** | `396` · `424` · `605` |
+| [`verticals/solutions.md`](verticals/solutions.md) | 🟢 **`228`** | `273` · `281` · `385` |
+
+🟢 **Counts, gate-confirmed after this pass's edits.** `python3 -I ingest/derive-counts.py .` →
+`agents/top.md` **`542/542`**, `repos/foundations.md` **`389/389`**,
+`verticals/solutions.md` **`228/228`**, `intel/trends.md` **`258/258`**,
+`compose/patterns.md` **`111/111`**, `ragged=0`, `nolink=0`, no NEW duplicate subjects.
+
+🟢 **And a licence promise that is now REACHABLE for every counted row, which it was not at
+`HEAD`.** 🟢 **[`867-G3`](intel/open-gaps.md) was discharged by choosing option (c) — declared
+out loud, with the departure from its literal wording declared too — so the predicate lives in
+[`ingest/shelf-predicates.json`](ingest/shelf-predicates.json) instead of in `24`+ historical
+pass headings:**
+
+| Measure | At `HEAD` (`p867`) | 🟢 After `p868` |
+|---|---|---|
+| counted rows gradeable against a licence predicate | `303` of `1,162` | 🟢 **`1,179` of `1,179`** |
+| rows abstaining | 🔴 `859` | 🟢 **`0`** |
+| 🔴 `FAIL-EXCLUDED` | `0` | 🟢 **`0`** |
+| 🔴 `FAIL-SPLIT` | `2` | 🔴 **`5`** — `3` more, all real, all already described correctly by the shelf |
+| 🟡 `VOCAB-MISS` | `2` | 🟢 **`0`** — option (a) folded in: `Unlicense`, `CC0-1.0`, `Zlib`, `ECL-2.0`, `MulanPSL-2.0`, `WTFPL` now named |
+
+### 🔴 Gate state, stated rather than implied
+
+🟢 **`make hooks` was run against this pass's tree AND against `HEAD` for comparison, and the
+two results are IDENTICAL: `52/73` green, the same `21` RED gates in the same order**
+(`recount`, `gate-derived-counts`, `gate-enumeration`, `gate-dates`, `gate-evidence-store`,
+`gate-shelf-consistency`, `gate-prose-claims`, `gate-register-currency`, `gate-fold-identity`,
+`gate-alias-canonical`, `gate-census-currency`, `gate-grant-path`, `gate-census-union`,
+`gate-ledger`, `gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`,
+`gate-case-collision`, `gate-promotion`, `gate-promotion-ledger`, `gate-cell-reproduction`).
+
+🟢 **So this pass introduced `0` new gate failures and quieted none** — `SKIP_COMMIT_GATES`
+unused, `DECLARED_RED` untouched. 🔴 **The standing RED is inherited and large, and the two
+biggest contributors are the ones `867-G4` and [`868-G5`](intel/open-gaps.md) name: an
+enumeration gate that reads a path's EXISTENCE as a grant's existence, and `136`
+`VERIFIED-ABSENT` verdicts resting on a channel this pass measured `82%` false-absent.**
+🟢 **The five gates this pass's own work is judged by are all GREEN:** `derive-counts.py`
+(`542`/`389`/`228`/`258`/`111`), `p383-region-heading-gate`, `gate-tables`,
+`p853-slug-presence`, and `p868-shelf-predicate.py` at `0` abstentions of `1,179`.
+
+### Channels, re-measured `2026-11-17`
+
+| Channel | Result |
+|---|---|
+| 🔴 `curl https://github.com/...` · `gh api repos/{owner}/{repo}` | 🔴 `403` |
+| 🟢 `gh api search/repositories` | 🟢 `200` — metadata fields; 🟢 **repeated `repo:` qualifiers are OR'd (newly measured), which made a `1,015`-address census cost `102` requests** |
+| 🔴 the same, as an EXISTENCE test | 🔴 **UNSOUND — `9` of `11` non-resolving addresses are alive on the clone channel** |
+| 🟢 `git clone --filter=blob:none` · `git ls-remote` | 🟢 `200` — licence bytes, commit e-mail domains, existence |
+| 🟢 `raw.githubusercontent.com` | 🟢 reachable **once the default ref is resolved first** — `24%` of this pass's probes would have `404`ed on a `main` assumption |
+| 🔴 `eur-lex.europa.eu` · `europarl.europa.eu` · `ec.europa.eu` | 🔴 `000` / no DNS — the EU primary-source channel stays CLOSED; every EU instrument is graded `CITED, NOT READ` |
+| 🔴 `github.com/trending` | 🔴 `403` — **every "trending" claim in this base is aggregator-sourced, and the trending files say so** |
+
+### What a client engagement gets from this pass
+
+🟢 **LATAM** — a component-by-component build on a named public university's production estate,
+with `6` byte-read MIT components and the `3` `AGPL-3.0` ones identified so they stay a service
+boundary ([`P111`](compose/patterns.md)). 🔵 **Plus the regional fact worth more than any repo:
+`92%` of students and `79%` of faculty engaged, only `30%` of institutions judged to have
+responded — the deliverable LATAM needs first is governance, not a tutor.**
+
+🟢 **EMEA** — a courseware-migration line item that does not depend on the AI Act's `2027-12-02`
+horizon and can be audited today against the UK's January 2026 school AI standards or the UAE's
+`25` prohibitions ([`P113`](compose/patterns.md)).
+
+🟢 **North America** — `haxtheweb/haxcms-php` (Apache-2.0, Penn State) is this base's first
+North-America row placed on an institutional commit domain, and the compliance-and-evidence
+framing is the one that survives procurement in a region with ~`100` state bills and `45%` of
+tools lacking ESSA-tier evidence.
+
+🟢 **APAC** — the self-hosted posture, because Korea's AI-textbook policy was legislatively
+reversed and China's tightened in the same twelve months, and `30%` virtual-tutor adoption with
+connectivity named as the barrier makes offline capability the first requirement, not a nice-to-have.
+🔴 **And the region's most finished product, `Oriole-FDU/Wisepen` (`126★`, Fudan University), is
+`Business Source License 1.1` behind a `NOASSERTION` field — the third such product in two
+passes ([`T266`](intel/trends.md)).**
+
+
+
 ## Pass `p867` · `2026-11-17`
 
 🟢 **`866-G1`, `866-G2`, `866-G3`, `866-G4` and `866-G5` were all discharged with their acceptance

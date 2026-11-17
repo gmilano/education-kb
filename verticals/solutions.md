@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `p868` · `2026-11-17` — **`6` platform rows, all MIT, all byte-read, all from ONE unshelved LATAM estate: CMM Educación at the Universidad de Chile — and the estate's own licence split is the finding**
+
+🔴 **This pass's four Spanish/Portuguese VOCABULARY queries over organisation-owned
+repositories returned exactly one candidate (`Hustly-Education/github`, `0★`, no grant) and it
+is not filable.** 🟢 **The yield came from an INSTITUTION-NAME vein instead — `user:cmmedu` —
+and that is the transferable method, recorded before the rows**
+([`legs`](../evidence/websearch-legs.2026-11-17-p868.tsv)). 🔵 **A LATAM institution does not
+describe its repositories in marketing English, so a keyword vein cannot see it; its NAME is
+the index.** 🔴 **`org:ceibal` is a `422` — Fundación Ceibal does not exist under that handle —
+and the Tec de Monterrey vein is nil, so the method is not a universal key either.**
+
+### 🟢 The estate, enumerated whole before any row is filed
+
+🟢 **CMM Educación is the education arm of the Centro de Modelamiento Matemático at the
+Universidad de Chile.** 🟢 **`18` repositories, enumerated in full**
+([`estate`](../evidence/cmmedu-estate.2026-11-17-p868.tsv)):
+
+| Grant (field) | Repositories | What sits there |
+|---|---|---|
+| 🟢 **MIT** | `6` | the question-type XBlocks and the Moodle plugins — **all `6` byte-read below** |
+| 🔴 `GPL-3.0` | `3` | `iterative-xblock`, `iaa-xblock`, `BuscadorXblocks` |
+| 🔴 `AGPL-3.0` | `3` | the `eol-*` family — Open edX question and dialogue blocks |
+| 🔴 none | `6` | `redfid_oauth2`, `redfid-edx-api`, `eol_feedback`, `cmmedu-seguimiento`, `All_CMMEdu_Xblocks`, `Video-Converter` |
+
+🔵 **The split is NOT functional the way Open edX's is.** 🟢 **`p867` found that Open edX splits
+by ROLE — platform `AGPL-3.0`, extension surface `Apache-2.0`. Here, the same kind of artefact
+(an XBlock) appears under MIT, `GPL-3.0` and `AGPL-3.0` in one organisation.**
+🔴 **So the licence of a CMM Educación component cannot be predicted from what it is, and the
+`6` with no grant at all are a third of the estate.** 🟢 **For a Chilean or Chile-adjacent
+engagement this is the most useful single fact on this page: the estate is real, in production
+at a named public university, in Spanish — and it must be adopted repository by repository.**
+
+🔵 **And `12` of the `18` default to a RELEASE branch (`cmmedu-release/lilac`,
+`eol-release/lilac`), never `main` — which is [`867-G5`](../intel/open-gaps.md) in one estate.**
+
+### 🟢 The rows
+
+| Platform | Repo | Licence, byte-read `2026-11-17` | ★ / forks | Default ref · pushed | Region | Role in an engagement |
+|---|---|---|---|---|---|---|
+| CMMEdu XBlock — connect-with-a-line | https://github.com/cmmedu/cmmedu-connectwithline-xblock | 🟢 **MIT** (`LICENSE`, `1,092 B`, `sha256₁₂ 16f972964728`) | 0 / 0 | 🔵 `cmmedu-release/lilac` · `2026-11-09` | **LATAM** (Chile) | 🟢 **A matching question type for Open edX.** 🔵 **Byte-identical grant text to the row below (same `sha256₁₂`), so the estate uses one MIT template — which is what makes the `6`-of-`18` split a DECISION rather than drift** |
+| CMMEdu XBlock — order-table | https://github.com/cmmedu/cmmedu-ordertable-xblock | 🟢 **MIT** (`LICENSE`, `1,092 B`, `sha256₁₂ 16f972964728`) | 0 / 0 | 🔵 `cmmedu-release/lilac` · `2026-11-09` | **LATAM** (Chile) | 🟢 **A sequencing/ordering question type.** 🟢 **Together with the row above and below, this is a THREE-COMPONENT permissive question-type kit — the part of an assessment build that is pure tedium and is now not necessary** |
+| CMMEdu XBlock — long-input table | https://github.com/cmmedu/cmmedu-tablelonginput-xblock | 🟢 **MIT** (`LICENSE`, `1,120 B`, `sha256₁₂ 3724002e0b4f`) | 0 / 0 | 🔵 `cmmedu-release/lilac` · `2026-11-09` | **LATAM** (Chile) | 🟢 **Tabular free-text entry — the shape a mathematics working-out grid needs**, which is unsurprising from a mathematical-modelling centre and is exactly the question type a generic LMS does worst |
+| Moodle — autostart quiz access rule | https://github.com/cmmedu/moodle-accessrule_autostartquiz | 🟢 **MIT** (`LICENSE`, `1,064 B`, `sha256₁₂ 7b1c0d29245b`) | 0 / 0 | `main` · `2026-04-17` | **LATAM** (Chile) | 🟢 **An access rule that starts a quiz automatically.** 🔵 **MIT on a MOODLE plugin, which `p866` established is normally `GPL-3.0` BY OBLIGATION — an access rule links against Moodle. The author granted permissively anyway; the obligation question travels with USE, not with this file** |
+| Moodle — teacher-only content filter | https://github.com/cmmedu/moodle-filter-teacheronlycontent | 🟢 **MIT** (`LICENSE`, `1,092 B`, `sha256₁₂ 564aeadb2b31`) | 0 / 0 | `main` · `2026-07-29` | **LATAM** (Chile) | 🟢 **Content inside an activity that students cannot see.** 🔵 **This is the primitive an AI-assisted teaching build needs first and nobody writes down: the place to put a rubric, a model answer or a prompt where the learner cannot reach it** |
+| Moodle — graphs-and-trees questions | https://github.com/cmmedu/moodle-plugin-graphsandtrees | 🟢 **MIT** (`LICENSE`, `1,063 B`, `sha256₁₂ 195cb14fde0c`) | 0 / 0 | `main` · `2026-10-22` | **LATAM** (Chile) | 🟢 **Concept questions built on graphs and trees** — a structured-answer type that can be MACHINE-GRADED without a language model, which makes it the cheap half of an assessment pipeline and the half an AI layer should not be doing |
+
+🔴 **Stated plainly: every row above is `0★`.** 🟢 **They are filed for PLACEMENT and
+PROVENANCE, not traction — a named public university's production estate, in Spanish, with
+byte-read permissive grants, on a shelf whose LATAM coverage this base has repeatedly declared
+thin.** 🔵 **`867-G1`'s ranker would not have surfaced one of them, because it ranks by stars;
+the institution-name vein found them. Both instruments are needed and neither substitutes.**
+
+🟢 **Liveness, this shelf:** 🟢 **`203` of `222` counted rows `LIVE`, `12` `STALE`, `4`
+`ARCHIVED` — `7.2%`, the best of the three shelves**
+([`census`](../evidence/liveness-census.2026-11-17-p868.tsv)). 🔵 **Platforms are maintained;
+agents and research artefacts are abandoned. That is the one-line reading of
+[`867-G2`](../intel/open-gaps.md)'s three numbers.**
+
+
 ## 🟢 Seventy-second pass (`p867`, 2026-11-17) — **`9` platform rows, `7` of them placed in a region on a MEASURED axis, and the `MIT` platform this shelf has said for sixty passes does not exist: `TIM-JYU/TIM`, a `1,122 B` MIT grant on a learning platform a Finnish university has run since 2014**
 
 🟢 **Channel declaration is in [`agents/top.md`](../agents/top.md). Every licence below was
@@ -1227,7 +1286,7 @@ platform.** 🟡 **Treat it as competitive intelligence that happens to be MIT-l
 | **AGENTIC STAR** (SoftBank, 🇯🇵) | 🔴 **Not institution-run — a hosted commercial agent platform**, developer docs at `developers.fd.agenticstar.tm.softbank.jp`, homepage `agenticstar.io`. 🟢 Its runtime SDKs `agenticstar-agentcore` (`1.0.3`) and `agenticstar-platform` (`3.3.0`, `80` releases) are public on PyPI and MIT by their wheel metadata | 🟢 **`74` MIT education agent templates, `54` catalogue ids `EDU-C2-004`…`EDU-C2-173`** — reference row [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent), `EDU-C2-028`, byte-read MIT (`1,074 B`, HEAD `71c442ebd88e`) | 🟢 **MIT** (templates and both SDKs, all byte- or metadata-verified) | 🟡 **Adopt the SPECS, not the runtime.** 🔴 Templates raise `PlatformRequired` at graph compile without a SoftBank deployment; all `74` are `0★`, unmaintained since October; the framework's advertised source repo has **zero commits** (`T89`); hard `==` pins on `langgraph`/`langchain`/`fastapi`. 🟢 **Tests run without the platform — harvest per `P61`** |
 | **AgentCore graph scaffold** (the catalogue's shared architecture) | 🔵 Not a product — the uniform structure under all `74` templates: `config/agent.yaml` manifest (`required_trust_level`, declared secrets), `src/graph/`, `src/nodes/`, `src/schemas/state.py`, `docs/02_design.md`, `docs/03_test_spec.md`, `tests/proof_of_boundary/` | 🟢 Domain nodes differ completely between ids — byte-compared across three repositories this pass: `iep_section_generator`/`regulatory_compliance` vs `affected_material_analysis`/`stakeholder_mapping` vs `bloom_level`/`difficulty_score`. Reference row [`haidang024/agentic-star-education-curriculum-change-impact-briefing-agent`](https://github.com/haidang024/agentic-star-education-curriculum-change-impact-briefing-agent) (`EDU-C2-046`, `45` files) | 🟢 **MIT** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ae3eea9ac056`) | 🟢 **This is the reusable asset.** 🔵 One scaffold, `54` real domain implementations — so a studio gets a uniform, inspectable architecture across `54` education workflows instead of `54` unrelated codebases. 🔴 The scaffold's base class ships only in the binary wheel; re-implement on LangGraph (now on `repos/foundations.md`) |
 
-## Education vertical platforms — 222 rows
+## Education vertical platforms — 228 rows
 
 ## 🟡 The MARKING-ADAPTER layer — **permissive code that reaches INTO an incumbent this shelf already carries** (new, fifty-seventh pass `p852`) (3 rows)
 

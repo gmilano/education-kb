@@ -1,0 +1,12 @@
+address	search_repositories_verdict	clone_channel_verdict	reading	shelves
+mitodl/open-learning-ai-tutor	UNRESOLVED	LIVE (git ls-remote returned a head)	the field channel missed a repository that exists	agents/top.md
+digitalcredentials/learner-credential-wallet	UNRESOLVED	LIVE	same	repos/foundations.md,verticals/solutions.md
+fabian-thinks/present-together	UNRESOLVED	LIVE	same	agents/top.md
+packbackbooks/lti-1-3-php-library	UNRESOLVED	LIVE	same	repos/foundations.md,verticals/solutions.md
+asterics/AsTeRICS-Grid	UNRESOLVED	LIVE	same	verticals/solutions.md
+openwallet-foundation-labs/learner-credential-wallet	UNRESOLVED	LIVE	same	agents/top.md
+DaRL-GenAI/instructional_agents	UNRESOLVED	LIVE	same	agents/top.md
+FabianJun/PresentTogether	UNRESOLVED	LIVE	same	agents/top.md
+tl-its-umich-edu/caliper-php-public	UNRESOLVED	LIVE	same	repos/foundations.md
+Damanian/MIREA-Toolkit-MCP	UNRESOLVED	CREDENTIAL PROMPT	p293's convention: a credential prompt is a MEASUREMENT -- the address is private or deleted, and the two cannot be distinguished	agents/top.md
+Bhuvantejakomera/Agentic-Assignment-Evaluator	UNRESOLVED	CREDENTIAL PROMPT	same	agents/top.md

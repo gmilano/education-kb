@@ -1,0 +1,1180 @@
+shelf	line	address	verdict	why	licence_cell
+agents/top.md	97	tutors-sdk/tutors	PASS	MIT	🟢 **MIT — byte-read** (`LICENSE`, `1,088 B`, `sha256₁₂ 4800b7fa4014`)
+agents/top.md	98	haxtheweb/haxcms-php	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`LICENSE.md`, `11,362 B`, `sha256₁₂ b662f44e55e8`)
+agents/top.md	99	onemnemo/mnemo	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`LICENSE`, `11,326 B`, `sha256₁₂ 62e02db7f9a1`)
+agents/top.md	100	langx/langx	PASS	BSD-3-Clause	🟢 **BSD-3-Clause — byte-read** (`LICENSE`, `1,520 B`, `sha256₁₂ 19ec8f98fa19`)
+agents/top.md	101	lynote-ai/ai-tutor	PASS	MIT	🟢 **MIT — byte-read** (`LICENSE`, `1,063 B`, `sha256₁₂ 7a1aecaf14eb`)
+agents/top.md	102	iblai/higher-education-agents	PASS	MIT	🟢 **MIT — byte-read** (`LICENSE`, `1,063 B`, `sha256₁₂ f1269b7b2313`)
+agents/top.md	103	kltn-moolde/moodle-adaptive-learning-plugin	PASS	MIT	🟢 **MIT — byte-read** (`LICENSE`, `1,086 B`, `sha256₁₂ 7fb13a30d308`)
+agents/top.md	289	Tanzania-AI-Community/twiga	PASS	MIT	🟢 **MIT — byte-read** (`LICENSE`, `1,073 B`, `sha256₁₂ a82547dd166b`, holder `Victor Ol…`, 2024)
+agents/top.md	290	hallym-aiedu-center/ai_prof_lite	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`)
+agents/top.md	291	UniversityOfHelsinkiCS/gptwrapper	PASS	MIT	🟢 **MIT — byte-read** (`LICENSE`, `1,111 B`, `sha256₁₂ 7b658dd8f1a0`, holder `Departmen…`, 2025)
+agents/top.md	377	paper-instruments/rubric	PASS	MIT	🟢 **MIT** — byte-read `LICENSE`, **`1,077 B`**, `sha256₁₂ c5cc7d2cd1eb`, © *2025 The LLM Data Company*
+agents/top.md	378	SenmuuuuW/universal-diagnostic-tutor-skill	PASS	MIT	🟢 **MIT** — byte-read `LICENSE`, `1,102 B`, `sha256₁₂ a9ca00bcc7a5`, © *2026 universal-diagnostic-tutor-skill 
+agents/top.md	379	Calibre-Labs/reforge-ai-evals	PASS	MIT	🟢 **MIT** — byte-read `LICENSE`, `1,077 B`, `sha256₁₂ b5dae8f8b90f`, © *2026 Calibre Partners LLC*
+agents/top.md	380	iwangjian/Coding-Tutor	PASS	Apache-2.0	🟢 **Apache-2.0** — byte-read `LICENSE`, **`11,357 B`**, `sha256₁₂ c71d239df917`. 🟢 **This is `p865`'s canonica
+agents/top.md	381	lowwwbank/anything-to-course	PASS	MIT	🟢 **MIT** — byte-read `LICENSE`, `1,066 B`, `sha256₁₂ d41346e796d6`, © *2026 lowwwbank*
+agents/top.md	382	zhangl1001/civil-ai	PASS	MIT	🟢 **MIT** — byte-read `LICENSE`, `1,067 B`, `sha256₁₂ 5731a2d3ccea`, © *2026 zhangl1001*
+agents/top.md	435	dspinellis/ai-repo-feedback	PASS	Apache-2.0	🟢 **Apache-2.0** — byte-read `LICENSE`, **`11,357 B`**, `sha256₁₂ c71d239df917`
+agents/top.md	436	bytebear8177-35yit/formative-feedback-writer	PASS	MIT	🟢 **MIT** — byte-read `LICENSE`, `1,056 B`, `sha256₁₂ 1126322e2cc8`, first line `MIT License`
+agents/top.md	437	Logisx/DeepEssay	PASS	MIT	🟢 **MIT** — byte-read `LICENSE`, `1,075 B`, `sha256₁₂ 7478d449eab1`, first line `MIT License`
+agents/top.md	484	zijinz456/OpenTutor	PASS	MIT	🟢 **MIT** — `main`, `LICENSE`, `1,068 B`, `sha256₁₂ 5352b4967982`
+agents/top.md	485	flysheep-ai/education-skills	PASS	MIT	🟢 **MIT** — `main`, `LICENSE`, `1,068 B`, `sha256₁₂ 23b91d7c0aef`
+agents/top.md	486	JoyLeeA/POSCO_AIProject_OnlineTestCheatingDetectionAiSystem	PASS	MIT	🟢 **MIT** — `master`, `LICENSE`, `1,064 B`, `sha256₁₂ 671db79febc0`
+agents/top.md	538	meesudzu/trac-nghiem-online	PASS	MIT	🟢 **MIT** — `master`, `LICENSE`, `1,068 B`, `sha256₁₂ a44234cb37ea`
+agents/top.md	539	Belikhun/thi-trac-nghiem	PASS	MIT	🟢 **MIT** — `master`, `LICENSE`, `1,064 B`, `sha256₁₂ 93d0402524c0`
+agents/top.md	540	tamht298/final-project	PASS	MIT	🟢 **MIT** — `master`, `LICENSE`, `1,066 B`, `sha256₁₂ 89599f2cdf16`
+agents/top.md	593	piresramon/gpt-4-enem	PASS	MIT	🟢 **MIT** — `main`, `LICENSE`, `1,068 B`, `sha256₁₂ 90287aa13538`
+agents/top.md	594	gilsonnogueira/notebooklm-para-concursos	PASS	MIT	🟢 **MIT** — `main`, `LICENSE`, `1,072 B`, `sha256₁₂ 40765acdde87`
+agents/top.md	595	diaslui/enem-extractor	PASS	MIT	🟢 **MIT** — `master`, `LICENSE`, `1,073 B`, `sha256₁₂ 543bb8993dda`
+agents/top.md	596	mathfaria/autoGrader	PASS	MIT	🟢 **MIT** — `main`, `LICENSE`, `1,070 B`, `sha256₁₂ 2b144ecef114`
+agents/top.md	597	Jeiel0rbit/concursos-api-deno	PASS	MIT	🟢 **MIT** — `main`, `LICENSE`, `1,067 B`, `sha256₁₂ c8f9fd31186f`
+agents/top.md	598	Naritsumi/EstudiaTAI-app	PASS	MIT	🟢 **MIT** — `main`, `LICENSE`, `1,066 B`, `sha256₁₂ b9ab2024c11a`
+agents/top.md	646	microsoft/StudentSim	PASS	MIT	🟢 **MIT** — byte-read `1,074 B`, `sha256₁₂ 7df20dcdf919`, holder 🔵 **`Copyright (c) Microsoft Corporation`**
+agents/top.md	647	RANDCorporation/judge-reliability-harness	PASS	MIT	🟢 **MIT** — byte-read `1,061 B`, `sha256₁₂ c2ce29c8beca`, holder `Copyright (c) 2025 RAND`
+agents/top.md	648	Yuanpeng-Li/gradescope-mcp	PASS	MIT	🟢 **MIT** — byte-read `1,068 B`, `sha256₁₂ 29d0f3f4463a`
+agents/top.md	649	ChantillyAn/homework-grader	PASS	MIT	🟢 **MIT** — byte-read `1,068 B`, `sha256₁₂ 8755221656d4`
+agents/top.md	650	GoogleCloudPlatform/essai	PASS	Apache-2.0	🟢 **Apache-2.0** — byte-read `11,357 B`, `sha256₁₂ 58d1e17ffe51` (full payload with appendix)
+agents/top.md	651	DozenTwelve/Papermorph	PASS	MIT	🟢 **MIT** — byte-read `1,069 B`, `sha256₁₂ 41857092247a`
+agents/top.md	689	ls1intum/edutelligence	PASS	MIT	🟢 **MIT** — byte-read `1,091 B`, `sha256₁₂ 6b9b9eda00d6`, holder 🔵 **`© 2025 TUM Applied Education Technologie
+agents/top.md	690	anthropics/k12-teacher-skills	PASS	Apache-2.0	🟢 **Apache-2.0** — byte-read `11,357 B`, `sha256₁₂ 58d1e17ffe51` (full payload with appendix)
+agents/top.md	691	learning-commons-org/agent-skills	PASS	Apache-2.0	🟢 **Apache-2.0** — byte-read `10,173 B`, `sha256₁₂ c4a2cd14eb3a` (appendix-stripped variant)
+agents/top.md	692	learning-commons-org/evaluators	FAIL-SPLIT	permissive code half beside a non-commercial content half	🔴 **SPLIT, and the split is commercial** — `LICENSE.md`, `1,615 B`, `sha256₁₂ 86c7be78af8b`: 🟢 **code MIT** · 
+agents/top.md	693	mitodl/open-learning-ai-tutor	PASS	MIT	🟢 **MIT** — byte-read `1,069 B`, `sha256₁₂ 77a612c534cf`, 🔴 holder **`© 2024 Romain Puech`**, an individual
+agents/top.md	694	mitodl/learn-ai	PASS	MIT	🟢 **MIT** — byte-read `1,070 B`, `sha256₁₂ d1ea675aa9bb`, 🔴 holder **`© 2024 Matt Bertrand`**, an individual
+agents/top.md	695	mitodl/agent-kit	PASS	BSD-3-Clause	🟢 **BSD-3-Clause** — byte-read `1,499 B`, `sha256₁₂ 8afd1cd502a7`, 🔴 holder **`© 2026, Tobias Macey`**, an ind
+agents/top.md	696	LabSirius/TutorIA	PASS	MIT	🟢 **MIT** — byte-read `1,069 B`, `sha256₁₂ 346d7b5d3913`, holder `© 2026 Grupo Sirius`
+agents/top.md	697	Li-Evan/BloomTutor	PASS	MIT	🟢 **MIT** — byte-read `1,069 B`, `sha256₁₂ 7d574cf3632e`, holder `© 2026 Li Zhengping`
+agents/top.md	698	zijinz456/OpenTutor	PASS	MIT	🟢 **MIT** — byte-read `1,068 B`, `sha256₁₂ 5352b4967982`, holder `© 2026 Zijin Zhang`
+agents/top.md	699	karanb192/algo-sensei	PASS	MIT	🟢 **MIT** — byte-read `1,081 B`, `sha256₁₂ 3b2ca73e81ad`, holder `© 2025 Algo Sensei Contributors`
+agents/top.md	700	flysheep-ai/education-skills	PASS	MIT	🟢 **MIT** — byte-read `1,068 B`, `sha256₁₂ 23b91d7c0aef`, holder `© 2026 flysheep-ai`
+agents/top.md	701	peancor/moodle-mcp-server	PASS	MIT	🟢 **MIT** — byte-read `1,064 B`, `sha256₁₂ 845ac6ac9e57`, holder `© 2025 peancor`
+agents/top.md	702	DaRL-GenAI/instructional_agents	PASS	MIT	🟢 **MIT** — byte-read `1,067 B`, `sha256₁₂ 4e085d826a64`, holder `© 2025 DaRL-GenAI`
+agents/top.md	703	AI-for-Education/pedagogy-benchmark	PASS	MIT	🟢 **MIT** — byte-read `1,064 B`, `sha256₁₂ 4cdfd8894a13`, holder `© 2025 Fab Inc`
+agents/top.md	704	Ebimsv/AITutorAgent	PASS	MIT	🟢 **MIT** — byte-read `1,072 B`, `sha256₁₂ c8050f8df7c1`, holder `© 2025 Ebrahim Mousavi`
+agents/top.md	738	Ed-Fi-Alliance-OSS/Fiona	PASS	Apache-2.0	🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917`, `main`
+agents/top.md	739	Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC	PASS	Apache-2.0	🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917`, `main`
+agents/top.md	774	openeduhub/tutor-chatbot	PASS	Apache-2.0	🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917`, HEAD `7e1f38da`
+agents/top.md	775	openeduhub/lernpfadeditor	PASS	Apache-2.0	🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917`, HEAD `1ccbb1d8`
+agents/top.md	776	openeduhub/ki-prompt-benchmark	PASS	Apache-2.0	🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917`, HEAD `da062c4b`
+agents/top.md	777	openeduhub/llm-judge	PASS	Apache-2.0	🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917`, HEAD `8cb0a04c`
+agents/top.md	778	openeduhub/duplicate-detection	PASS	Apache-2.0	🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917`, HEAD `7c437d38`
+agents/top.md	845	AmirhosseinHonardoust/Academic-Instability-Early-Warning-System	PASS	MIT	🟢 MIT — byte-read `1,060 B`, `sha256₁₂ e23f20db611a`
+agents/top.md	846	Western-OC2-Lab/Student-Performance-and-Engagement-Prediction-eLearning-datasets	PASS	MIT	🟢 MIT — byte-read `1,071 B`, `sha256₁₂ 1372184f3eea`
+agents/top.md	847	MaxvanHaastrecht/Federated-Learning-Analytics	PASS	MIT	🟢 MIT — byte-read `1,072 B`, `sha256₁₂ b4b83f5dedfc`
+agents/top.md	848	KuznetsovKarazin/oulad-early-warning	PASS	MIT	🟢 MIT — byte-read `1,067 B`, `sha256₁₂ 68e55bfadc62`
+agents/top.md	849	alessandroryo/student-dropout-prediction	PASS	MIT	🟢 MIT — byte-read `1,072 B`, `sha256₁₂ 45508b317643`
+agents/top.md	850	boda137/student-performance-prediction	PASS	MIT	🟢 MIT — byte-read `1,072 B`, `sha256₁₂ 108622770ffd`
+agents/top.md	851	shakilahmedemon/uni-student-risk-prediction-dashboard	PASS	MIT	🟢 MIT — byte-read `1,068 B`, `sha256₁₂ 18d4a9b331db`
+agents/top.md	852	ProttoyDip/LodeStone	PASS	MIT	🟢 MIT — byte-read `1,065 B`, `sha256₁₂ eb8b48620254`
+agents/top.md	853	Py-Contributors/Student-s-Perform-Prediction	PASS	MIT	🟢 MIT — byte-read `1,071 B`, `sha256₁₂ fb6cee869210`
+agents/top.md	982	juanmc2005/diart	PASS	MIT	🟢 MIT — byte-read `1,105 B`, `sha256₁₂ e459a25bfc32`
+agents/top.md	983	tyiannak/pyAudioAnalysis	PASS	Apache-2.0	🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ b40930bbcf80`
+agents/top.md	984	BUTSpeechFIT/DiariZen	PASS	MIT	🟡 MIT **CODE ONLY** — byte-read `1,071 B`, `sha256₁₂ 98ad14ba39e3`
+agents/top.md	985	revdotcom/reverb	PASS	Apache-2.0	🟡 Apache-2.0 **CODE ONLY** — byte-read `11,357 B`, `sha256₁₂ c71d239df917`
+agents/top.md	986	NavodPeiris/speechlib	PASS	MIT	🟢 MIT — byte-read `1,068 B`, `sha256₁₂ a551e0641ff2`
+agents/top.md	987	notch-up/diarize	PASS	Apache-2.0	🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917`
+agents/top.md	988	DMlabcodeorg/WhoSaidWhat	PASS	MIT	🟢 MIT — byte-read `1,069 B`, `sha256₁₂ 9c3aff6abf8a`
+agents/top.md	989	07anishu12/ClassEvidence-AI	PASS	Apache-2.0	🟢 Apache-2.0 — byte-read `11,350 B`, `sha256₁₂ d352274a97f8`
+agents/top.md	1061	OleehyO/TexTeller	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,333 B`, `sha256₁₂ 229eec032b2c`, title line `Ap
+agents/top.md	1062	whywhs/Pytorch-Handwritten-Mathematical-Expression-Recognition	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,068 B`, `sha256₁₂ c0cd45c870ac`)
+agents/top.md	1063	xiaofengShi/Image2Katex	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`updata200412/LICENSE`, `1,069 B`, `sha256₁₂ 5dd8b21cce15`)
+agents/top.md	1064	jungomi/math-formula-recognition	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE.md`, `1,109 B`, `sha256₁₂ 3bf38d19d27c`, title line `The M
+agents/top.md	1065	blaisewang/img2latex-mathpix	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`, bucket B)
+agents/top.md	1066	aashrafh/Mozart	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`, bucket B)
+agents/top.md	1067	thirakawa/CProgrammingLab	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,073 B`, `sha256₁₂ a3079e0aa4d5`)
+agents/top.md	1068	muhammadrizalharis/UNISMUH-CodeUnical	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,077 B`, `sha256₁₂ 7aab5f53a6b3`)
+agents/top.md	1069	GIGAyama/Online-Publisher-pro	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,065 B`, `sha256₁₂ 78708d81c28d`)
+agents/top.md	1162	kwmt/nanteiu-pronunciation-model	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,358 B`, `sha256₁₂ cfc7749b96f6`, leading-newlin
+agents/top.md	1163	DevTae/PronunciationEvaluator	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,069 B`, `sha256₁₂ ee82ebb2fbe1`, holder `Copyright (c) 
+agents/top.md	1164	diGit-hub/gato-zen-speech-eval-zh	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,082 B`, `sha256₁₂ 72ec4f3c4c7b`, holder `Copyright (c) 
+agents/top.md	1165	Altria1979/yomori	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`)
+agents/top.md	1166	dapontepinheiro/speechteach_back	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,080 B`, `sha256₁₂ 5d66e2dcda8a`, holder `Copyright (c) 
+agents/top.md	1167	YutaroOgawa/example_of_azure_pronunciation_assessment	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,069 B`, `sha256₁₂ 9cbe56bf56a5`, holder `Copyright (c) 
+agents/top.md	1168	shutouyusei/english_reading	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,061 B`, `sha256₁₂ d60a49fc83ec`, holder `Copyright (c) 
+agents/top.md	1169	sovereignempirex-ux/quran-alshamela	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,098 B`, `sha256₁₂ 13c5a64ccfa9`, holder `Copyright (c) 
+agents/top.md	1562	VishwamPatel-Infynno/Question-Bank-Generator	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,090 B`, `sha256₁₂ 802df034c4f8`, holder `Copyright (c) 
+agents/top.md	2104	openwallet-foundation-labs/learner-credential-wallet	PASS	MIT	🟢 **MIT — byte-read** (`main/LICENSE`, `1,091 B`, `sha256₁₂ d8c69cd2855b`)
+agents/top.md	2105	1EdTech/lti-1-3-php-library	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810`)
+agents/top.md	2106	talis/lti-1-3-php-library	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810` — 🔵 **byte-identical to `1
+agents/top.md	2107	fabian-thinks/present-together	PASS-REFUTED-METADATA	byte-read MIT stated against an unstated field	🟢 **MIT + boundary — byte-read** (`main/LICENSE`, `1,344 B`, `sha256₁₂ 4f78693ecfd8`, holder `fabian-thinks an
+agents/top.md	2611	hhyqhh/inno-agent	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,080 B`**, `sha256:f92c6c6a1cc8…`
+agents/top.md	2612	munitkala/selfsemester	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,081 B`**, `sha256:f5fe104e348d…`, © *2026 The SelfSemester authors*
+agents/top.md	2613	bigmoumou/AI-Agent-Literacy	FAIL-SPLIT	permissive code half beside a non-commercial content half	🔴 **SPLIT GRANT — both halves byte-read.** 🟢 Code **MIT** (`main/LICENSE`, **`1,068 B`**, `sha256:f8e1c1b97c59
+agents/top.md	2614	azapg/FAIR	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,068 B`**, `sha256:3aa6498da2b9…`
+agents/top.md	2615	correctexam/corrigeExamFront	PASS	MIT	🟢 **MIT** — `main/LICENSE.md`, **`1,068 B`**, `sha256:44ed794595f6…`, © *2022 correctexam*
+agents/top.md	2616	correctexam/corrigeExamBack	PASS	MIT	🟢 **MIT** — 🔴 **`deploy`**`/LICENSE.md`, **`1,068 B`**, `sha256:44ed794595f6…` — **byte-identical to the front
+agents/top.md	2617	Premshaw23/Learnova	PASS	MIT	🟢 **MIT** — `master/LICENSE`, **`1,092 B`**, `sha256:535250f49c6a…`, © *2024 Prem Shaw*
+agents/top.md	2618	hoangkien1703/dual-sub-replay	FAIL-SPLIT	admitted and excluded grants in one cell: MIT / gpl-3.0	🟡 **MIT source, and a DISTRIBUTION HISTORY that a procurement review will stop on.** 🟢 Source **MIT** — `main/
+agents/top.md	2619	hamidukarimi/SchoolOS-backend	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,069 B`**, `sha256:a0fd60a8ec49…`, © *2026 Hamid Karimi*
+agents/top.md	2649	oaknational/oak-ai-lesson-assistant	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,077 B`**, `sha256:d150aadcccd2…`
+agents/top.md	2650	oaknational/oak-open-curriculum-ecosystem	PASS	MIT	🟢 **MIT** — `main/LICENCE` (British spelling — a filename a grant loop must try), **`1,086 B`**, `sha256:02c5a
+agents/top.md	2651	oaknational/oak-agent-skills	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,085 B`**, `sha256:5248beedeb05…`
+agents/top.md	2652	oaknational/oak-ai-plugins	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,085 B`**, `sha256:e90b3e1c8e94…`
+agents/top.md	2653	finereli/yarareads	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,066 B`**, `sha256:7c4cf856c78c…`
+agents/top.md	2654	natolambert/colloquium	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,071 B`**, `sha256:bce041d216bb…`
+agents/top.md	2655	pamelafox/presentation-skills	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,067 B`**, `sha256:e6bf682c17c8…`
+agents/top.md	2656	LaplacianAI/manimvox	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,068 B`**, `sha256:56fd265bbaea…`
+agents/top.md	2657	liangdabiao/whiteboard-teacher-video-motion	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,068 B`**, `sha256:092d7cba85ea…`
+agents/top.md	2658	precious112/code-slowmo	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,068 B`**, `sha256:0f8451cf2cc9…`
+agents/top.md	2659	HolobiomicsLab/Perspicacite-AI	PASS	Apache-2.0	🟢 **Apache-2.0** — `main/LICENSE`, **`11,357 B`**, `sha256:c71d239df917…` (stock text, no holder in payload — 
+agents/top.md	2660	tmchow/hermes-kids-profile-blueprint	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,068 B`**, `sha256:d5c6b57f6897…`
+agents/top.md	2661	Slymaster/masame	PASS	MIT	🟢 **MIT** — `develop/LICENSE`, **`1,068 B`**, `sha256:b428f1061a51…`
+agents/top.md	2662	soniccat/WordTeacher	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,072 B`**, `sha256:607d1ee2794a…`
+agents/top.md	2663	santanu-atta03/Intervyo	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,071 B`**, `sha256:ddba443d98e9…`
+agents/top.md	2702	allenai/tutormoments	PASS	Apache-2.0	🟢 **Apache-2.0** — `main/LICENSE`, **`11,377 B`**, `sha256:b2c7059a9ab4…`
+agents/top.md	2703	drop-project-edu/drop-project	PASS	Apache-2.0	🟢 **Apache-2.0** — `master/LICENSE.txt`, **`11,357 B`**, `sha256:c71d239df917…` (stock text, no holder in payl
+agents/top.md	2704	dkorunic/e-dnevnik-bot	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,076 B`**, `sha256:d9bdf42fd7a5…`, © *2022 Dinko Korunic*
+agents/top.md	2705	AI123-cmd/education-agent	PASS	Apache-2.0	🟢 **Apache-2.0** — **`master/LICENSE`**, **`11,558 B`**, `sha256:1eb85fc97224…`
+agents/top.md	2706	NASWA-OpenUI/naswa-ai-apprenticeship-matcher	PASS	Apache-2.0	🟢 **Apache-2.0** — `main/LICENSE.md`, **`11,382 B`**, `sha256:2d915fb4a6ea…`
+agents/top.md	2707	wongcyrus/Google-AI-Classroom	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,062 B`**, `sha256:b79982c14bb1…`
+agents/top.md	2708	Mahmud-Mahi/Seren--Your-IELTS-Tutor	PASS	MIT	🟢 **MIT** — **`master/LICENSE`**, **`1,068 B`**, `sha256:d97b496ed043…`, © *2026 Mahmud Mahi*
+agents/top.md	2709	lorenaedwin08-hub/melodymate	PASS	MIT	🟢 **MIT** — `main/LICENSE`, **`1,074 B`**, `sha256:0d46a2c87d7e…`, © *2026*
+agents/top.md	2710	iatee/Hack-Apertus	PASS	Apache-2.0	🟢 **Apache-2.0** — `main/LICENSE`, **`11,340 B`**, `sha256:3266fb7d3671…`
+agents/top.md	2711	Vivek0712/ezhuthu	PASS	Apache-2.0	🟢 **Apache-2.0** — `main/LICENSE`, **`11,358 B`**, `sha256:cfc7749b96f6…`
+agents/top.md	2712	Scaler-Opensource/exam-guard	PASS	Apache-2.0	🟢 **Apache-2.0** — `main/LICENSE`, **`11,357 B`**, `sha256:c71d239df917…` (stock)
+agents/top.md	3261	vgwb/Antura	PASS	BSD-2-Clause	🟢 **BSD-2-Clause — byte-read** (`LICENSE.md`, `2,002 B`, `sha256:34b0a48fb2d0…`, holder `TH Köln / Cologne Gam
+agents/top.md	3262	vgwb/Antura_arabic	PASS	BSD-2-Clause	🟢 **BSD-2-Clause — byte-read** (`LICENSE.md`, `1,916 B`, `sha256:58e5d42fd2fc…`, holder `2017, TH Köln / Colog
+agents/top.md	3263	XPRIZE/GLEXP-Team-KitkitSchool	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,340 B`, `sha256:638af047fe71…`, stock text, no holder)
+agents/top.md	3264	XPRIZE/GLEXP-Team-onebillion	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:b40930bbcf80…`, stock text, no holder)
+agents/top.md	3265	chimple/maui	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`LICENSE.txt`, `11,357 B`, `sha256:c71d239df917…`, stock text, no holder)
+agents/top.md	3266	chimple/tahiti	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:c71d239df917…`, stock text, no holder)
+agents/top.md	3267	XPRIZE/GLEXP-Team-CCI	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,372 B`, `sha256:fc1de75500c0…`, stock text, no holder)
+agents/top.md	3268	XPRIZE/GLEXP-Team-Chimple-goa	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:c71d239df917…`, stock text, no holder)
+agents/top.md	3269	curiouslearning/FeedTheMonster	PASS	BSD-2-Clause	🟢 **BSD-2-Clause — byte-read** (`1,702 B`, `sha256:455a86e2fda5…`, holder `2016, Apps Factory`)
+agents/top.md	3270	curiouslearning/FeedTheMonsterJS	PASS	MIT	🟢 **MIT — byte-read** (`1,073 B`, `sha256:9baf70ec9a4a…`, holder `2022 Curious Learning`)
+agents/top.md	3271	chimple/jamaica	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,323 B`, `sha256:283ea6cc2997…`, stock text, no holder)
+agents/top.md	3272	XPRIZE/GLEXP-Team-Chimple-maui	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`LICENSE.txt`, `11,357 B`, `sha256:c71d239df917…`, stock text, no holder)
+agents/top.md	3273	curiouslearning/CuriousReaderRCC	PASS	MIT	🟢 **MIT — byte-read** (`1,073 B`, `sha256:0275a073eb5a…`, holder `2021 Curious Learning`)
+agents/top.md	3274	curiouslearning/CRContainer-Hindi	PASS	MIT	🟢 **MIT — byte-read** (`1,073 B`, `sha256:9baf70ec9a4a…`, holder `2022 Curious Learning`)
+agents/top.md	3275	XPRIZE/GLEXP-Team-onebillion-PhraseAnal	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:b40930bbcf80…`, stock text, no holder)
+agents/top.md	3368	OpenDyslexic/extension	PASS	MIT	🟢 **MIT — byte-read** (`1,073 B`, `sha256:2aeeff85b59b…`, holder `2024 opendyslexic.com`)
+agents/top.md	3369	raucvr/Paper2Manga-Prism	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:c71d239df917…`, stock text, no holder)
+agents/top.md	3370	nazarli-shabnam/ReadAble	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:c71d239df917…`, stock text, no holder)
+agents/top.md	3371	developer-diganta/Dino	PASS	MIT	🟢 **MIT — byte-read** (`LICENSE.md`, `1,073 B`, `sha256:8d3abe465a2a…`, holder `2022 Diganta Kr Banik`)
+agents/top.md	3372	ContentSquare/readapt	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`master`, `11,357 B`, `sha256:c71d239df917…`, stock text, no holder)
+agents/top.md	3373	inclusive-design/adaptive-palette	PASS	BSD-3-Clause	🟢 **BSD-3-Clause — byte-read** (`1,562 B`, `sha256:b8f3da69a07f…`, holder `2023-2026, Inclusive Design Researc
+agents/top.md	3374	inclusive-design/baby-bliss-bot	PASS	BSD-3-Clause	🟢 **BSD-3-Clause — byte-read** (`1,518 B`, `sha256:f12eecff2dfd…`, holder `2023-2024, Inclusive Design Institu
+agents/top.md	3375	revolutionarybukhari/ocula	PASS	MIT	🟢 **MIT — byte-read** (`1,072 B`, `sha256:e76df35fc768…`, holder `2026 Husnain Bukhari`)
+agents/top.md	3376	SubchiBeats/bol-sakhi-communication-board	PASS	MIT	🟢 **MIT — byte-read** (`1,068 B`, `sha256:9ceb4131aeb8…`, holder `2026 Sahib Singh`)
+agents/top.md	3377	harryt04/voice-bridge	PASS	MIT	🟢 **MIT — byte-read** (`master`, `1,072 B`, `sha256:7a81e8e6736e…`, holder `2025 Harrison Thomas`)
+agents/top.md	3378	adamopoulosa1980/pdf_accessibility	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,358 B`, `sha256:cfc7749b96f6…`, stock text, no holder)
+agents/top.md	3379	natashkasemenova/a11y-ai-auditor	PASS	MIT	🟢 **MIT — byte-read** (`1,074 B`, `sha256:6583114b7a51…`, holder `2026 Nataliia Semenova`)
+agents/top.md	3380	hannahmoutran/alt-text-pipeline	PASS	MIT	🟢 **MIT — byte-read** (`1,071 B`, `sha256:dbe551d1bccb…`, holder `2026 Hannah Moutran`)
+agents/top.md	3381	21stdigital/statamic-aida	PASS	MIT	🟢 **MIT — byte-read** (`1,074 B`, `sha256:1c09a6578ca0…`, holder `2024 21st digital GmbH`)
+agents/top.md	3382	moonlitrevery/LibrasLive	PASS	MIT	🟢 **MIT — byte-read** (`1,068 B`, `sha256:68bb80786ddb…`, holder `2025 João Vitor`)
+agents/top.md	3383	PedroCBrito/Video-to-Animation-LIBRAS	PASS	MIT	🟢 **MIT — byte-read** (`master`, `1,095 B`, `sha256:7d6ed8a626e0…`, holder `2026 Video-to-Animation LIBRAS Con
+agents/top.md	3384	ClassNeuralNetwork/reconhecimento_libras	PASS	MIT	🟢 **MIT — byte-read** (`1,103 B`, `sha256:3474bb218933…`, holder `2024 Artificial Neural Network`)
+agents/top.md	3385	Karthikeyu/Indian-sign-language-recognition	PASS	MIT	🟢 **MIT — byte-read** (`master`, `1,087 B`, `sha256:ec369ab6ab13…`, holder `2020 Karthikeyu Busa, ShravaniKatt
+agents/top.md	3386	Mishra-Shreya/Sanket	PASS	MIT	🟢 **MIT — byte-read** (`master`, `1,070 B`, `sha256:3fa8899a1502…`, holder `2022 Shreya Mishra`)
+agents/top.md	3387	roshnrf/StoryWeaver	PASS	MIT	🟢 **MIT — byte-read** (`LICENSE.md`, `1,107 B`, `sha256:5fca87f338e3…`, holder `2025 Roshan A Rauof, Reem Fari
+agents/top.md	3726	toughIQ/webuntis-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,063 B`, `sha256:2c0b8069fc10…`, holder `toughIQ`)
+agents/top.md	3727	heiko-schabert/webuntis-cli	PASS	MIT	🟢 **MIT — byte-read** (`1,063 B`, `sha256:2c0b8069fc10…`, 🟢 **holder `toughIQ` retained from upstream**)
+agents/top.md	3728	DenizCiger/untis-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:04314fb25dd9…`, holder `Deniz Ciger`)
+agents/top.md	3729	israelroldan/unofficial-magister-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,069 B`, `sha256:bd7dc91514e6…`, holder `Israel Roldan`, 2024)
+agents/top.md	3730	ljarochowski/librus-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,079 B`, `sha256:be00e61b6328…`, holder `Librus MCP Contributors`)
+agents/top.md	3731	jujukingg/edu-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,080 B`, `sha256:2ede3d997023…`, holder `Pronote MCP Contributors`)
+agents/top.md	3732	alrawi10/studie-os	PASS	MIT	🟢 **MIT — byte-read** (`1,064 B`, `sha256:4a38786a6b9b…`, holder `alrawi10`)
+agents/top.md	3733	bsayres/heronhex-highered	PASS	MIT	🟢 **MIT — byte-read** (`1,082 B`, `sha256:aa0df3165b5d…`, holder `highered-mcps contributors`)
+agents/top.md	3734	theluckystrike/ap-score-distributions-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,070 B`, `sha256:4fedd46e8c20…`)
+agents/top.md	3735	Petri-Hub/fam-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,065 B`, `sha256:a659ef421023…`, holder `Petri-Hub`, on `LICENSE.md`)
+agents/top.md	3736	changshenhan/bb-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,068 B`, `sha256:aec9afda396f…`, holder `changshenhan`)
+agents/top.md	3737	PatrickStar-cmd/random-signal-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,071 B`, `sha256:f24bb6654cbe…`)
+agents/top.md	3738	SaiedBasha/classroom-mcp-server	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:cbebd946d89f…`, holder `Saied Basha`)
+agents/top.md	3739	CastaliaInstitute/gh-classroom-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,073 B`, `sha256:79ce53c3a6a2…`, holder `Inquiry Institute`)
+agents/top.md	3740	liangxiao777/TeachMeCoding	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:58d1e17ffe51…`, stock text)
+agents/top.md	3741	heptameta/heptabase-explainer-studio	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:58d1e17ffe51…`, stock text)
+agents/top.md	3742	chaoshu1201/reasoning-and-agents-education	PASS	MIT	🟢 **MIT — byte-read** (`1,064 B`, `sha256:e523e0f51060…`, holder `Chao Shu`, 2025)
+agents/top.md	3743	morrowdock/marty	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,356 B`, `sha256:43070e2d4e53…`)
+agents/top.md	3744	janthoXO/AetioECG	PASS	MIT	🟢 **MIT — byte-read** (`1,062 B`, `sha256:3aac41139ed5…`)
+agents/top.md	3745	QuentinCody/patient-education-mcp-server	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`10,758 B`, `sha256:7d304102af40…`)
+agents/top.md	3799	sbdnakashima/agentic-star-iep-section-drafting-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,074 B`, `sha256:134983626184…`, HEAD `71c442ebd88e`)
+agents/top.md	3800	tvcuong1802/agentic-star-learning-resource-accessibility-gap-brief-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,068 B`, `sha256:be1056662503…`, HEAD `81d6d7e31e41`)
+agents/top.md	3801	haidang024/agentic-star-education-curriculum-change-impact-briefing-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ae3eea9ac056`)
+agents/top.md	3802	genkidesu7/agentic-star-university-entrance-exam-question-classification-difficulty-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,071 B`, `sha256:e74683d915ae…`, HEAD `faf2b31241ee`)
+agents/top.md	3803	TAKUYA0608-dev/agentic-star-transfer-credit-equivalency-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,063 B`, `sha256:888cc5f61f9c…`, HEAD `96ec48c73414`)
+agents/top.md	3804	TienXuanLam/agentic-star-education-university-academic-misconduct-investigation-report-drafting-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,068 B`, `sha256:342465e77207…`, HEAD `f8f8c08d3ee6`)
+agents/top.md	3805	TAKUYA0608-dev/agentic-star-accreditation-evidence-navigator-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,063 B`, `sha256:888cc5f61f9c…`, HEAD `9a579ed8b334`)
+agents/top.md	3806	sbdnakashima/agentic-star-school-meal-allergen-check-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,074 B`, `sha256:134983626184…`, HEAD `3cd8f2e19dc2`)
+agents/top.md	3807	trantienit2015/agentic-star-university-research-ethics-irb-compliance-check-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,083 B`, `sha256:a953ad384437…`, HEAD `59f5e3c0cbcb`)
+agents/top.md	3808	trantienit2015/agentic-star-school-administrative-procedure-parent-qa-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,083 B`, `sha256:a953ad384437…`, HEAD `6705948cbf03`)
+agents/top.md	3809	TienXuanLam/agentic-star-education-learning-resource-metadata-exchange-validator-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,068 B`, `sha256:342465e77207…`, HEAD `24a7212bfe2a`)
+agents/top.md	3810	KaitoYokomizo/agentic-star-student-accommodation-review-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,070 B`, `sha256:4c6c71f47b0d…`, HEAD `cab8ef1b35df`)
+agents/top.md	3811	genkidesu7/agentic-star-corporate-training-program-needs-assessment-curriculum-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,071 B`, `sha256:e74683d915ae…`, HEAD `6d715d1bd7b7`)
+agents/top.md	3812	haidang024/agentic-star-education-safeguarding-policy-change-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ba529303e23c`)
+agents/top.md	3813	haidang024/agentic-star-education-teacher-professional-development-evidence-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `fb7ae91dd148`)
+agents/top.md	3814	sbdnakashima/agentic-star-education-statistics-comparability-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,074 B`, `sha256:134983626184…`, HEAD `513058f72003`)
+agents/top.md	3815	DuongNT98/agentic-star-curriculum-standards-compliance-qa-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,066 B`, `sha256:33cf841bb83f…`, HEAD `c4a3394f37ba`)
+agents/top.md	3816	athulmurali667/ReadEase	PASS	MIT	🟢 **MIT — byte-read** (`1,085 B`, `sha256:c06fc2703736…`, HEAD `ec791dd811eb`)
+agents/top.md	3817	Iyanuoluwa007/Signlytic_AI	PASS	MIT	🟢 **MIT — byte-read** (`1,077 B`, `sha256:1d283c6f9cb2…`, HEAD `b5858d8e9f59`)
+agents/top.md	3818	vincenzopiconee/DuoSigna	PASS	MIT	🟢 **MIT — byte-read** (`1,098 B`, `sha256:91920be3f3aa…`, HEAD `e1ab0a3fec17`)
+agents/top.md	3819	FunctionSid/smart-tutor	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,408 B`, `sha256:cd2f54e1e506…`, HEAD `bad8733ce457`)
+agents/top.md	3820	TanviVP/Dyslexia_Detection_using_Games	PASS	MIT	🟢 **MIT — byte-read** (`1,081 B`, `sha256:b15ba4e811a6…`, HEAD `5ff40b21e842`)
+agents/top.md	3923	epoko77-ai/examguard	PASS	MIT	🟢 **MIT — byte-read** (`1,078 B`, `sha256:963f8f22…`, holder `ExamGuard contributors`, 2026)
+agents/top.md	3924	ENGABHAY/AI-Smart-Proctoring-System	PASS	MIT	🟢 **MIT — byte-read** (`1,075 B`, `sha256:4e2a4004…`, holder `Abhay Rambhau Kadam`, 2026)
+agents/top.md	3925	amaanwarsi/Proctora	PASS	MIT	🟢 **MIT — byte-read** (`1,055 B`, `sha256:26e0d192…`, 2026)
+agents/top.md	3926	Gorav22/AI-Proctor-Exam-Monitor	PASS	MIT	🟢 **MIT — byte-read** (`1,068 B`, `sha256:0532d9d7…`, holder `Gorav Jindal`, 2025)
+agents/top.md	3927	yuvaraj-06/AI-Driven-Remote-proctoring-System	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,356 B`, `sha256:43070e2d…`, stock text)
+agents/top.md	3928	Laura-LLU/lesson2hw-physics	PASS	MIT	🟢 **MIT — byte-read** (`1,080 B`, `sha256:69ee15c8…`, holder `LauraPhysics / Laura-LLU`, 2026)
+agents/top.md	3929	CharlieJamesGwapo/ph-data-mcp-server	PASS	MIT	🟢 **MIT — byte-read** (`1,075 B`, `sha256:bbc77148…`, holder `Charlie James Abejo`, 2026)
+agents/top.md	3930	Asvix-04/V2	PASS	MIT	🟢 **MIT — byte-read** (`1,063 B`, `sha256:cab64cbe…`, holder `Digilab`, 2025)
+agents/top.md	3931	mohammad-abbasi-sh/ferien-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,071 B`, `sha256:17a9ced1…`, holder `Mohammad Abbasi`, 2026)
+agents/top.md	3932	malkreide/critical-ai-literacy-skill	PASS	MIT	🟢 **MIT — byte-read** (`1,068 B`, `sha256:65090998…`, holder `Hayal Oezkan`, 2026)
+agents/top.md	3933	LucaTamSapienza/ai-on-campus	PASS	MIT	🟢 **MIT — byte-read** (`1,064 B`, `sha256:9394f62b…`, holder `Luca Tam`, 2026)
+agents/top.md	3934	FabianJun/PresentTogether	PASS-REFUTED-METADATA	byte-read MIT stated against an unstated field	🟢 **MIT — byte-read** (`1,340 B`, `sha256:fe728274…`, holder `FabianJun and the Singularity seminar contributo
+agents/top.md	3935	balejosg/tiza	PASS	MIT	🟢 **MIT — byte-read** (`1,064 B`, `sha256:7a3a02ea…`, holder `balejosg`, 2026)
+agents/top.md	3936	vintatri/ufc-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,070 B`, `sha256:14b73fb8…`, holder `Equipe UFC-MCP`, 2026)
+agents/top.md	3937	unb-mds/2026-2-Followw	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:aec18ce5…`, holder `Followw UnB`, 2026)
+agents/top.md	3938	erickmsms/sigaa-faltas	PASS	MIT	🟢 **MIT — byte-read** (`1,065 B`, `sha256:a638443b…`, holder `erickmsms`, 2026)
+agents/top.md	3939	BloodyReginaa/Neuro-CanvasLMS	PASS	MIT	🟢 **MIT — byte-read** (`1,069 B`, `sha256:903078f6…`, 2026)
+agents/top.md	3940	SolutionLabsIO/course-engine-skills	PASS	MIT	🟢 **MIT — byte-read** (`1,105 B`, `sha256:95897ad9…`, holder `Laboratoires de Solutions Web Inc.`, 2026)
+agents/top.md	3941	bster/ai-future	PASS-REFUTED-METADATA	byte-read MIT stated against an unstated field	🟢 **MIT (code) — byte-read** (`1,827 B`, `sha256:2b95011a…`, holder `Ben Stern`, 2026) 🟢 **+ CC BY-4.0 (conten
+agents/top.md	4217	damarals/periodicos-capes-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,064 B`, `sha256:d7d8972d…`, holder `damarals`)
+agents/top.md	4218	DevAlissu/pesquisador-br-skill	PASS	MIT	🟢 **MIT — byte-read** (`1,080 B`, `sha256:589081fc…`, holder `Aliso…`, 2026)
+agents/top.md	4219	AI-Riksarkivet/ra-mcp	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,356 B`, `sha256:43070e2d…`, stock text)
+agents/top.md	4220	malkreide/swiss-academic-libraries-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,068 B`, `sha256:65090998…`, holder `Hayal Oezka…`, 2026)
+agents/top.md	4221	muctebadikmen/dergipark-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,104 B`, `sha256:36c5dea8…`, 2026)
+agents/top.md	4222	mpasternak/oai-pmh-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,073 B`, `sha256:900b820e…`, holder `Michał Paster…`, 2026)
+agents/top.md	4223	rubatoyd/KCI_openAPI	PASS	MIT	🟢 **MIT — byte-read** (`1,069 B`, `sha256:9782fbfd…`, 2026)
+agents/top.md	4224	ckgerteis/korea-scholarship-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,075 B`, `sha256:f3db8678…`, holder `Christopher Gerteis`, 2026)
+agents/top.md	4225	Aryan-Pardeshi/CiteProof-AI-MCP	PASS	MIT	🟢 **MIT — byte-read** (`1,070 B`, `sha256:60ee20fe…`, 2026)
+agents/top.md	4226	Hylouis233/bibverify	PASS	MIT	🟢 **MIT — byte-read** (`1,064 B`, `sha256:ae682216…`, 2025)
+agents/top.md	4227	oksure/openalex-research-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,075 B`, `sha256:2c73121a…`, 2025)
+agents/top.md	4228	drAbreu/alex-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,088 B`, `sha256:50f067fd…`, holder `Author Disambiguatio…`, 2025)
+agents/top.md	4229	lstudlo/ScholarMCP	PASS	MIT	🟢 **MIT — byte-read** (`1,079 B`, `sha256:560fed48…`, holder `Light Che…`, 2026)
+agents/top.md	4230	cyanheads/orcid-mcp-server	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,317 B`, `sha256:7915fc5b…`)
+agents/top.md	4231	QuentinCody/scholarly-graph-mcp-server	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`10,758 B`, `sha256:7d304102…`) 🔵 shorter than the `11,356 B` stock text — Apach
+agents/top.md	4232	Maximilian741/508-Agent	PASS	MIT	🟢 **MIT — byte-read** (`p818`: `1,067 B`, `sha256:b48cc408…`; 🔴 **RE-READ `p830` `2026-11-15`: `1,068 B`, `sha
+agents/top.md	4233	jesseslone/wcag-guide	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:9ddae494…`, holder `Jesse Slo…`, 2025)
+agents/top.md	4706	Halleck45/OpenPronounce	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,113 B`, `sha256₁₂ 6f4d9645aa9f`, holder `2025 Jean-Fran
+agents/top.md	4707	YuanGongND/gopt	PASS	BSD	🟢 **BSD-3-Clause — byte-read `2026-11-16`** (`master/LICENSE`, `1,517 B`, `sha256₁₂ d501f3b58c95`, holder `202
+agents/top.md	4708	crazycloud/mispronunciation-detection-diagnosis-wav2vec2-and-llm	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`, the canonical 
+agents/top.md	4709	Secondtonumb/IF-MDD	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,358 B`, `sha256₁₂ cfc7749b96f6`)
+agents/top.md	4710	Mu-Y/mpl-mdd	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,061 B`, `sha256₁₂ 58a25bbb6909`, holder `2022 Mu-Y`)
+agents/top.md	4711	rhss10/joint-apa-mdd-mtl	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE.md`, `1,061 B`, `sha256₁₂ 1db89a1f08ea`, holder `2023 Hyun
+agents/top.md	4712	ai-zahran/E2E-R	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,069 B`, `sha256₁₂ caaab90240af`, holder `2023 Ahmed Ism
+agents/top.md	4713	juice500ml/dysarthria-gop	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,070 B`, `sha256₁₂ e5e4061a777e`, holder `2024 Kwanghee 
+agents/top.md	4714	doheejin/HiPAMA	PASS	BSD	🟢 **BSD-3-Clause — byte-read `2026-11-16`** (`main/LICENSE`, `1,526 B`, `sha256₁₂ e8fad537e801`) — 🟡 **holder 
+agents/top.md	4715	doheejin/SB_loss_PA	PASS	BSD	🟢 **BSD-3-Clause — byte-read `2026-11-16`** (`main/LICENSE`, `1,526 B`, `sha256₁₂ e8fad537e801` — 🔵 **byte-ide
+agents/top.md	4716	aalto-speech/interspeech2019_karhila_et_al	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,078 B`, `sha256₁₂ 87af1e319d9b`, holder `2019 Aalto S
+agents/top.md	4717	vietspeak/VietSpeakOJ	PASS	BSD	🟢 **BSD-3-Clause — byte-read `2026-11-16`** (`main/LICENSE`, `1,522 B`, `sha256₁₂ c68653174f19`, holder `2022,
+agents/top.md	4751	webtech-network/autograder	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`, stock Apache t
+agents/top.md	4752	TREMA-UNH/rubric-grading-workbench	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,068 B`, `sha256₁₂ 3f68bfcd4ec5`, holder `2025 Laura Die
+agents/top.md	4753	BridgeSuite/GradeBridge-Assignment-Maker	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,100 B`, `sha256₁₂ 6203d12e65d7`, holder `2026 The Rege…
+agents/top.md	4754	BridgeSuite/GradeBridge-AI	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,064 B`, `sha256₁₂ 2bdd760d7375`, holder `2026 VeriQAi` 
+agents/top.md	4755	jlouisbru/Canvas-grading-with-AI	PASS	MIT	🟡 **DUAL — MIT for the CODE, CC BY-SA 4.0 for the DOCS** (`main/LICENSE` byte-read `2026-11-16`, `1,071 B`, `s
+agents/top.md	4756	johnswyou/autograder	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,065 B`, `sha256₁₂ 684d737736e0`, holder `2026 Joh…`)
+agents/top.md	4757	LiangGou/ai-grader	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (**`master`**`/LICENSE`, `1,066 B`, `sha256₁₂ 3ab2e2e86bec`, holder `2026 L
+agents/top.md	4787	push-based/ai-performance-coach	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,067 B`, `sha256₁₂ 9b6cc07d9c55`, stock text, holder `20
+agents/top.md	4788	Deepnar/presentation-forge	PASS	MIT	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,070 B`, `sha256₁₂ 8f97b35d4969`, stock text, holder `20
+agents/top.md	4789	jobic10/student-management-using-django	PASS	MIT	🟢 **MIT — byte-read** (`main/LICENSE`, `1,075 B`, `sha256₁₂ 92be33e226c0`, holder `2020 Owonubi Job Sunday`)
+agents/top.md	4790	brian901106/japanese-tutor-mugi	PASS	MIT	🟢 **MIT — byte-read** (`main/LICENSE`, `1,068 B`, `sha256₁₂ b349f14f3e8e`, holder `2026 brian901106`)
+agents/top.md	4796	Li-Evan/BloomTutor	PASS	MIT	🟢 **MIT — byte-read** (`main/LICENSE`, `1,069 B`, `sha256₁₂ 7d574cf3632e`, stock text, holder `2026 Li Zhengpi
+agents/top.md	4797	iflytek/astron-harness-tutorial	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`main/LICENSE`, `11,347 B`, `sha256₁₂ 649fc6df7e4c`, stock text)
+agents/top.md	4808	openwallet-foundation-labs/learner-credential-wallet	PASS	MIT	🟢 **MIT — byte-read** (`main/LICENSE`, `1,091 B`, `sha256₁₂ d8c69cd2855b`)
+agents/top.md	4809	1EdTech/lti-1-3-php-library	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810`)
+agents/top.md	4810	talis/lti-1-3-php-library	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810` — byte-identical to the `1
+agents/top.md	4811	fabian-thinks/present-together	PASS-REFUTED-METADATA	byte-read MIT stated against an unstated field	🟢 **MIT + appended boundary — byte-read** (`main/LICENSE`, `1,344 B`, `sha256₁₂ 4f78693ecfd8`, holder `fabian-
+agents/top.md	4833	yinuoguan/nengdou-ai-review-helper-web	PASS	MulanPSL-2.0	🟡 **MulanPSL-2.0 — byte-read on the DEFAULT branch** (`9,247 B`, `sha256:f0dade5c9337…`, `master/LICENSE`, 木兰宽
+agents/top.md	4834	turtlelnc/MES-Homework	PASS	MIT	🟢 **MIT — byte-read** (`1,066 B`, `sha256:784395278685…`, `main/LICENSE` [DEFAULT], refs=[`main` `261024DSH` `
+agents/top.md	4835	yosemdawn/all-in-one-AI_edu_system	PASS	MIT	🟢 **MIT — byte-read** (`1,062 B`, `sha256:f830ef372ec4…`, `main/LICENSE` [DEFAULT], refs=[`main` `codex/ai-con
+agents/top.md	4836	Unke-cc/chaoxing-grader-universal	PASS	MIT	🟢 **MIT — byte-read** (`1,066 B`, `sha256:c08a161f53f1…`, `main/LICENSE` [DEFAULT], refs=[`main`])
+agents/top.md	4837	mc-dl/ykt-grader	PASS	MIT	🟢 **MIT — byte-read** (`1,062 B`, `sha256:b429f339f75d…`, `main/LICENSE` [DEFAULT], refs=[`main`])
+agents/top.md	4838	shiyalun1126/math-work	PASS	MIT	🟢 **MIT — byte-read** (`1,069 B`, `sha256:972de94494bf…`, `main/LICENSE` [DEFAULT], refs=[`main`])
+agents/top.md	4839	Benhuangsuan/linear-algebra-grading-desk	PASS	MIT	🟢 **MIT — byte-read** (`1,069 B`, `sha256:5ff801bd0f9b…`, `main/LICENSE` [DEFAULT], refs=[`main`])
+agents/top.md	4840	ShuyaoGao/homework-ai-grading-lab	PASS	MIT	🟢 **MIT — byte-read** (`1,088 B`, `sha256:b0f6c0eff210…`, `main/LICENSE` [DEFAULT], refs=[`main`])
+agents/top.md	4841	KiaraPrecopio/booktor-tpi-unsam	PASS	MIT	🟢 **MIT — byte-read on the DEFAULT branch** (`1,070 B`, `sha256:adc0be6971f6…`, `develop/LICENSE` [DEFAULT], r
+agents/top.md	4860	Zhangming0304/teach_agent	PASS	MIT	🟢 **MIT — byte-read** (`1,070 B`, `sha256:7e705a8728f7…`, `main/LICENSE`, refs=[`main`])
+agents/top.md	4861	quiet-sys/AInoAgentAcademy	PASS	MIT	🟢 **MIT — byte-read** (`1,069 B`, `sha256:66bb28fd7721…`, `main/LICENSE`, refs=[`main` `feature-ai`])
+agents/top.md	4862	sumo1/AI-GAME-COOL	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:c71d239df917…`, `main/LICENSE`, refs=[`main` `feat/agent-loo
+agents/top.md	4863	Lu-Yu-Zhen/KongMeng-Agent	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,360 B`, `sha256:adcb860af549…`, `main/LICENSE`, refs=[`main` + `5` feature h
+agents/top.md	4880	Illumi-Etec/litera	PASS	MIT	🟢 **MIT — byte-read** (`1,097 B`, `sha256:13ccd2947bfa…`, `main/LICENSE`)
+agents/top.md	4881	karla08C/alfabetizacao-divertida	PASS	MIT	🟢 **MIT — byte-read** (`1,069 B`, `sha256:e4dc38f80923…`, `main/LICENSE`)
+agents/top.md	4882	chicoritov/palavra-a-bordo	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:bdb10f35e5af…`, `main/LICENSE`)
+agents/top.md	4883	yegor77/minigame-fonetico	PASS	MIT	🟢 **MIT — byte-read** (`1,063 B`, `sha256:03474c4df5fc…`, `main/LICENSE`)
+agents/top.md	4884	XPRIZE/GLEXP-Team-RoboTutor-RoboTutor	PASS	Apache-2.0	🟢 **Apache-2.0 on the CODE + CC BY 4.0 on the CONTENT — byte-read** (`LICENCE.md`, `1,319 B`, `sha256:d2e11a01
+agents/top.md	4890	SergeyZakh/Ausbildungs-Berichtsheft	PASS	MIT	🟢 **MIT — byte-read** (`1,072 B`, `sha256:04bf792574d5…`, holder `2026 Sergey Zakharov`)
+agents/top.md	4891	marre868/Ausbildungsnachweis	PASS	MIT	🟢 **MIT — byte-read** (`1,086 B`, `sha256:2cfc27ba0606…`, holder `2026 marre868`)
+agents/top.md	4892	dimitrex93-cyber/lernpfad-python-cpp	PASS	MIT	🟢 **MIT — byte-read** (`1,094 B`, `sha256:d525e491d703…`, holder `2026 Lernpfad Python & C++ – Mitwirkende`)
+agents/top.md	4893	NiravRVaghasiya/Polyglot-Swarm	PASS	MIT	🟢 **MIT — byte-read** (`1,072 B`, `sha256:c76f2bf915da…`, holder `2026 Nirav Vaghasiya`)
+agents/top.md	4894	JohnBilousov/vocabit-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,070 B`, `sha256:ed0657fb89fe…`, holder `2026 Ivan Bilousov`)
+agents/top.md	4895	polendol/AgenticTeacher	FAIL-SPLIT	permissive code half beside a non-commercial content half	🔴 **SPLIT LICENCE — code MIT, MODEL `CC BY-NC-SA 4.0`** (byte-read `LICENSE.txt@master`, `1,056 B`, `sha256:11
+agents/top.md	4896	Agono0/learning-hub	PASS	MIT	🟢 **MIT — byte-read** (`1,082 B`, `sha256:7704bac11c1e…`, holder `2026 Learning HUB contributors`)
+agents/top.md	4897	gn02ash/cert-coach	PASS	MIT	🟢 **MIT — byte-read** (`1,064 B`, `sha256:0a649bce619f…`, holder `2026 Gnash02`)
+agents/top.md	4898	JesusPaz/litto	PASS	MIT	🟢 **MIT — byte-read** (`1,066 B`, `sha256:8e132fefdc0e…`, holder `2026 Jesus Paz`)
+agents/top.md	4899	Luissalet/HypatiaHoard	PASS	MIT	🟢 **MIT — byte-read** (`1,066 B`, `sha256:fff33d08b8ee…`, holder `2026 Luissalet`)
+agents/top.md	4900	chdominguez/questlog	PASS	MIT	🟢 **MIT — byte-read** (`1,068 B`, `sha256:3319b49a25a9…`, holder `2026 chdominguez`)
+agents/top.md	4907	Eduardozsw/cds-tools	PASS	MIT	🟢 **MIT — byte-read** (`1,070 B`, `sha256:bb5cba819b2c…`)
+agents/top.md	4908	PucaVaz/sigaa-tools	PASS	MIT	🟢 **MIT — byte-read** (`1,064 B`, `sha256:dda770330e98…`)
+agents/top.md	4909	brunomateus/SIGAA-Mais-Mais	PASS	MIT	🟢 **MIT — byte-read** (`1,068 B`, `sha256:d8bdc1a01ddf…`)
+agents/top.md	4910	felipdsa21/ufal-schedule-ics	PASS	MIT	🟢 **MIT — byte-read** (`1,070 B`, `sha256:00d38482ad8e…`)
+agents/top.md	4911	hgiulliano/sigaa-cefetmg-modoescuro	PASS	MIT	🟢 **MIT — byte-read** (`1,074 B`, `sha256:dfa646f12f31…`)
+agents/top.md	4912	adiel-calixto/IFAcademico	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:58d1e17ffe51…`)
+agents/top.md	4913	JesseTho/lamaku-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,166 B`, `sha256:ce95c0d64e0c…`)
+agents/top.md	4914	sahildayal/mycourses-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:33b654addd10…`)
+agents/top.md	4915	WayneWei228/brightspace-hub-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,065 B`, `sha256:a319b64a887c…`)
+agents/top.md	4916	yasharisherenow/mun-d2l-mcp	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,343 B`, `sha256:032df62a0e36…`)
+agents/top.md	4917	Yokiwa/dueboard	PASS	MIT	🟢 **MIT — byte-read** (`1,070 B`, `sha256:8ffdc80a2fb5…`)
+agents/top.md	4918	CarlSvejstrup/dtu-learn-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,078 B`, `sha256:8b9edfdb3e7b…`)
+agents/top.md	4919	Sillvs/edhec-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,078 B`, `sha256:092e336c00f7…`)
+agents/top.md	4920	chapmanwm/moodlectl	PASS	MIT	🟢 **MIT — byte-read** (`1,065 B`, `sha256:2ff4b5ffb33f…`)
+agents/top.md	4921	jamestesting0/tum-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,091 B`, `sha256:879840521d30…`)
+agents/top.md	4922	Carlosito606/ai-personal-assistant	PASS	MIT	🟢 **MIT — byte-read** (`1,070 B`, `sha256:62dd7775799c…`)
+agents/top.md	4923	simonseifert/merlin-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,069 B`, `sha256:73861d7bb1e2…`)
+agents/top.md	4924	Haris0059/ibu-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,072 B`, `sha256:f61dd7d46379…`)
+agents/top.md	4925	AhmTb/uaeu-blackboard-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,061 B`, `sha256:a471b2b18310…`)
+agents/top.md	4926	yasserhegazy/lab-grader-skill	PASS	MIT	🟢 **MIT — byte-read** (`1,069 B`, `sha256:d19e060e122a…`)
+agents/top.md	4927	Akramjon-koder/faroz-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,084 B`, `sha256:99b8d19e6a31…`)
+agents/top.md	4928	kesaruhasun/mcp-sliit-courseweb	PASS	MIT	🟢 **MIT — byte-read** (`1,068 B`, `sha256:58d603d92c0c…`)
+agents/top.md	4929	kadmalcun/moodle-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,065 B`, `sha256:385fc6657118…`)
+agents/top.md	4930	quantai1314/ustc-bb-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,080 B`, `sha256:d25c64b5fb88…`)
+agents/top.md	4931	Feynman520/d01-p01-hwp-form-automation-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,066 B`, `sha256:d9f635086306…`)
+agents/top.md	4932	wongcyrus/Google-AI-Classroom	PASS	MIT	🟢 **MIT — byte-read** (`1,061 B`, `sha256:5d83f6d388b3…`)
+agents/top.md	4933	Navitallabs/navital-gym	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:58d1e17ffe51…`)
+agents/top.md	4934	AnonymousOnyx22/brightspace-d2l-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,199 B`, `sha256:3f0e907830ac…`)
+agents/top.md	4935	cyanprot/brightspace-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:13555788e65e…`)
+agents/top.md	4936	micho911/brightspace-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,071 B`, `sha256:1265b22d02bf…`)
+agents/top.md	4937	webswe/d2l-student-cli	PASS	MIT	🟢 **MIT — byte-read** (`1,062 B`, `sha256:12ec826fc5cb…`)
+agents/top.md	4938	hamzakammar/mcp-workspace	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:2c8195bde63e…`)
+agents/top.md	4939	RobertLMcCrary/D2L-MCP	PASS	MIT	🟢 **MIT — byte-read** (`2,180 B`, `sha256:e3fdd2a6e7ff…`)
+agents/top.md	4940	HasNate618/Campus	PASS	MIT	🟢 **MIT — byte-read** (`1,074 B`, `sha256:8635fa05380e…`)
+agents/top.md	4941	alanwtom/blackboard-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,064 B`, `sha256:6cd5ef811418…`)
+agents/top.md	4942	nitsuah/bb-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,063 B`, `sha256:e024d09e682a…`)
+agents/top.md	4943	Lucasdoreac/blackboard-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:96c1802bfcee…`)
+agents/top.md	4944	UKplus8HRS/bb-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,066 B`, `sha256:afa8162d956e…`)
+agents/top.md	4945	NiccoloSalvini/mcp-blackboard-ucsc	PASS	MIT	🟢 **MIT — byte-read** (`1,072 B`, `sha256:b5155850ba0e…`)
+agents/top.md	4946	Kimmahone/edu-workspace-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,086 B`, `sha256:f1112f62a389…`)
+agents/top.md	4947	Fawzankhan-404/Classroom-Desk	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`10,796 B`, `sha256:440ed275da0c…`)
+agents/top.md	4948	Mattlo0546/classroom-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,066 B`, `sha256:6bb7530c06a1…`)
+agents/top.md	4949	OmarNiazi/classroom-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,066 B`, `sha256:338410dba9d6…`)
+agents/top.md	4950	adriasantacreu/google-classroom-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,072 B`, `sha256:ff80e29676f1…`)
+agents/top.md	4951	alanmagno1/google-classroom-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,066 B`, `sha256:18e77745fac0…`)
+agents/top.md	4952	AnonymousOnyx22/google-classroom-student-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,071 B`, `sha256:dc4d909e25a2…`)
+agents/top.md	4953	vTanco/google-classroom-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,193 B`, `sha256:67133cbc05f3…`)
+agents/top.md	4954	MattFor/moodle-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,063 B`, `sha256:edd5981ce14c…`)
+agents/top.md	4955	DenizCiger/moodle-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:04314fb25dd9…`)
+agents/top.md	4956	Teci-AI/moodle-mcp-connector	PASS	MIT	🟢 **MIT — byte-read** (`1,103 B`, `sha256:c8bcb50d415c…`)
+agents/top.md	4957	andynur/moodlens	PASS	MIT	🟢 **MIT — byte-read** (`1,090 B`, `sha256:225bebd8c6eb…`)
+agents/top.md	4958	dawidlinek/eportal-moodle-skill	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:7e84866e9e31…`)
+agents/top.md	4959	arnoutvree/moodle-plugin-scaffold	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:0da73281889e…`)
+agents/top.md	4960	arnoutvree/moodle-plugin-vibe-review	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:0da73281889e…`)
+agents/top.md	4965	jeanmartina/ufsc-moodle-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,064 B`, `sha256:845ac6ac…`, holder `peancor`)
+agents/top.md	4966	Raindancer118/nak-api	PASS	WTFPL	🟡 **WTFPL — byte-read** (`467 B`, `sha256:0992be62…`, title line `DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+agents/top.md	4967	CloudDown/student-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,066 B`, `sha256:2eeba2ea…`, holder `CloudDown`)
+agents/top.md	4968	jpss2004-bot/neyvu-connectors	PASS	MIT	🟢 **MIT — byte-read** (`1,075 B`, `sha256:22911b82…`, holder `Neyvu contributors`)
+agents/top.md	4969	do-2k25-28/moodle-um	PASS	MIT	🟢 **MIT — byte-read** (`1,084 B`, `sha256:9547a7ba…`, holder `Ghadi Saab and contributors`)
+agents/top.md	4970	Damanian/MIREA-Toolkit-MCP	PASS	MIT	🟢 **MIT — byte-read** (`1,121 B`, `sha256:d74cbfe7…`, DUAL holder: `atomic-pancake-49` + `Damanian638 (modific
+agents/top.md	4971	Waldo0926/monash-study-kit	PASS	MIT	🟢 **MIT — byte-read** (`1,066 B`, `sha256:74903ec0…`, holder `Waldo0926`)
+agents/top.md	4972	liqinling1994-cloud/master-teacher	PASS	MIT	🟢 **MIT — byte-read** (`1,063 B`, `sha256:b31a3eaf…`, holder `秦岭`)
+agents/top.md	4973	lby749/smart-marking	PASS	MIT	🟢 **MIT — byte-read** (`1,063 B`, `sha256:29323b8f…`, holder `lby749`)
+agents/top.md	4974	Bhuvantejakomera/Agentic-Assignment-Evaluator	PASS	MIT	🟢 **ALIVE — `p843`'s death notice WITHDRAWN at `p844`.** Re-measured `2026-11-16` with the address spelled AS 
+agents/top.md	4975	dh2211/edu-agents	PASS	MIT	🟢 **MIT — byte-read** (`1,082 B`, `sha256:7eb4eb73…`, holder `EduAgentsKit contributors`)
+agents/top.md	4976	rahul069/moodle-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:031c0fd8…`, holder `Rahul Garg`)
+agents/top.md	4977	edouaz/moodle-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,116 B`, `sha256:99f3ba95…`, DUAL holder: `thntx` + `edouaz and Moodle MCP contributo
+agents/top.md	4978	felixx-dbm/moodle-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,072 B`, `sha256:edac1583…`, holder `Felix Dobelmann`)
+agents/top.md	4979	deeznust42/nutslms-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,068 B`, `sha256:1a9b92a9…`, holder `Zain Ikhlaq`)
+agents/top.md	4980	iignaite/Codemm	PASS	MIT	🟢 **MIT — byte-read** (`1,071 B`, `sha256:fd1dae60…`, holder `Gaille Amolong`)
+agents/top.md	4981	albertoglvn/physix-lab	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:4a21c9c6…`, holder `Alberto G…`)
+agents/top.md	4982	ccamilobedoya/protoboard-iso	PASS	MIT	🟢 **MIT — byte-read** (`1,084 B`, `sha256:2841256a…`, holder `protoboard-iso contributors`)
+agents/top.md	4983	energon-a-secas/glassbox-site	PASS	MIT	🟢 **MIT — byte-read** (`1,064 B`, `sha256:fc00a22f…`, holder `Neorgon`)
+agents/top.md	4984	vladimiracunadev-create/modern-software-engineering-program	FAIL-SPLIT	permissive code half beside a non-commercial content half	🔴 **SPLIT LICENCE — both byte-read.** Code: 🟢 **Apache-2.0** (`11,345 B`, `sha256:b476b2ac…`, stock text). Con
+agents/top.md	4985	Ed-Fi-Exchange-OSS/Ed-Fi-SDK-for-AI-Assistants	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:c71d239d…`, stock text, no holder)
+agents/top.md	4986	course-code-framework/coursecode	PASS	MIT	🟢 **MIT — byte-read** (`1,069 B`, `sha256:055ad2b2…`, holder `Seth Vi…`)
+agents/top.md	4987	course-code-framework/coursecode-desktop	PASS	MIT	🟢 **MIT — byte-read** (`1,069 B`, `sha256:055ad2b2…`, holder `Seth Vi…`)
+agents/top.md	4988	redmodd/tessera	PASS	MIT	🟢 **MIT — byte-read** (`1,078 B`, `sha256:a7b3b71f…`, holder line `Copyright (c) 2026-prese…`)
+agents/top.md	4989	aureliendossantos/elabora-core	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,358 B`, `sha256:cfc7749b…`, stock text, no holder)
+agents/top.md	4990	scormflow/scorm-engine	PASS	MIT	🟢 **MIT — byte-read** (`1,079 B`, `sha256:7cdfc153…`, holder `ScormFlow co…`)
+agents/top.md	4991	barzoj/somtoday-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,082 B`, `sha256:47056e02…`, holder `somtoday-mcp co…`)
+agents/top.md	4992	ankimcp/anki-mcp-server	PASS	MIT	🟢 **MIT — byte-read** (`1,074 B`, `sha256:0ef87fdb…`, holder `Anatoly Tarnavsky`)
+agents/top.md	4993	nailuoGG/anki-mcp-server	PASS-REFUTED-METADATA	byte-read MIT stated against an unstated field	🟡 **MIT — MANIFEST CHANNEL ONLY** (`package.json`, `2,598 B`, `sha256:5748d75e…`, `"license": "MIT"`); 🔴 **no 
+agents/top.md	4994	kitschpatrol/yanki-obsidian	PASS	MIT	🟢 **MIT — byte-read** (`1,071 B`, `sha256:1d5701eb…`, holder `Eric Mika`)
+agents/top.md	4995	scorzeth/anki-mcp-server	PASS	MIT	🟢 **MIT — byte-read** (`1,084 B`, `sha256:815d89a1…`, holder `Scott Orzech & Wai Son Wong`)
+agents/top.md	4996	pieralukasz/true-recall	PASS	MIT	🟢 **MIT — byte-read** (`1,070 B`, `sha256:23444362…`, holder `Łukasz Piera`)
+agents/top.md	4997	HumphreySun98/Smart-Study-Agent	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:ca229b6d…`, holder `Haofei Sun`)
+agents/top.md	4998	kaorii-ako/Shiori-v1	PASS	MIT	🟢 **MIT — byte-read** (`1,073 B`, `sha256:3c78be93…`, holder `Tawin Tangsukson`)
+agents/top.md	4999	jasperket/clanki	PASS	MIT	🟢 **MIT — byte-read** (`1,082 B`, `sha256:2bc1d14c…`, holder `Jasper Keith O. Vallecera`)
+agents/top.md	5000	nietus/anki-mcp	PASS	MIT	🟢 **MIT — byte-read** (`1,063 B`, `sha256:58f1e901…`, holder `nietus`)
+agents/top.md	5001	CamdenClark/anki-mcp-server	PASS	MIT	🟢 **MIT — byte-read** (`1,069 B`, `sha256:fe16a00b…`, holder `Camden Clark`)
+agents/top.md	5002	bruchris/canvas-lms-mcp	PASS	MIT	**MIT — byte-read** (`1,069 B`, `sha256:187d52a3…`, holder `Christian Bru`)
+agents/top.md	5003	omerfarooq223/AutoGrader-Agent	PASS	MIT	**MIT — byte-read** (`1,076 B`, `sha256:c6210dbf…`, holder `Muhammad Omer Farooq`)
+agents/top.md	5004	athina-edu/athina	PASS	MIT	**MIT — byte-read at `LICENCE`** (`1,098 B`, `sha256:dd7ad247…`, holder `Michail Tsikerdekis`)
+agents/top.md	5005	himanshuuem/lab-autograder	PASS	MIT	**MIT — byte-read** (`1,064 B`, `sha256:d20d8c5e…`, holder `Himanshu`)
+agents/top.md	5006	Galaxy-Dawn/claude-scholar	PASS	MIT	**MIT — byte-read** (`1,068 B`, `sha256:0458c162…`, holder `Gaorui Zhang`)
+agents/top.md	5007	54yyyu/zotero-mcp	PASS	MIT	**MIT — byte-read** (`1,079 B`, `sha256:f0c6d358…`, holder `Zotero MCP Contributors`)
+agents/top.md	5008	openags/paper-search-mcp	PASS	MIT	**MIT — byte-read** (`1,063 B`, `sha256:f159d578…`, holder `OPENAGS`)
+agents/top.md	5009	poco-ai/Agentero	PASS	MIT	**MIT — byte-read** (`1,063 B`, `sha256:06efb279…`, holder `poco-ai`)
+agents/top.md	5010	cookjohn/zotero-mcp	PASS	MIT	**MIT — byte-read** (`1,091 B`, `sha256:e8ed0429…`, holder `the Zotero-MCP project contributors`)
+agents/top.md	5011	cookjohn/gs-skills	PASS	MIT	**MIT — byte-read** (`1,055 B`, `sha256:3bed3331…`, holder line `Copyright (c) 2025` with NO name)
+agents/top.md	5012	kaliaboi/mcp-zotero	PASS	MIT	**MIT — byte-read** (`1,070 B`, `sha256:01de2c6d…`, holder `Abhishek Kalia`)
+agents/top.md	5013	kujenga/zotero-mcp	PASS	MIT	**MIT — byte-read** (`1,068 B`, `sha256:9cdf67f1…`, holder `Aaron Taylor`)
+agents/top.md	5014	PiaoyangGuohai1/cli-anything-zotero	PASS	Apache-2.0	**Apache-2.0 — byte-read** (`11,356 B`, `sha256:e7a7ce22…`, title line `Apache License`)
+agents/top.md	5015	dralkh/seerai	PASS	MIT	**MIT — byte-read** (`1,062 B`, `sha256:84181be8…`, holder `dralkh`)
+agents/top.md	5016	yuanjua/chiken	PASS	MIT	**MIT — byte-read** (`1,068 B`, `sha256:ab0e04f2…`, holder `Yuanzhou Cai`)
+agents/top.md	5017	xunhe730/ZotPilot	PASS	MIT	**MIT — byte-read** (`1,061 B`, `sha256:5c2bb763…`, holder `xunhe`)
+agents/top.md	5018	WenyuChiou/research-hub	PASS	MIT	**MIT — byte-read** (`1,068 B`, `sha256:c08e49d6…`, holder `Wen-Yu Chang`)
+agents/top.md	5019	oscardvs/zoteus	PASS	MIT	**MIT — byte-read** (`1,067 B`, `sha256:c20cd2f8…`, holder `Oscar Devos`)
+agents/top.md	5020	kerim/zotero-code-execution	PASS	MIT	**MIT — byte-read** (`1,090 B`, `sha256:7dec1382…`, holder `Zotero Code Execution Contributors`)
+agents/top.md	5021	gyger/mcp-pyzotero	PASS	MIT	**MIT — byte-read** (`1,068 B`, `sha256:4c4a98dc…`, holder `Samuel Gyger`)
+agents/top.md	5022	leomcamilo/bx-scholar-mcp	PASS	MIT	**MIT — byte-read** (`1,071 B`, `sha256:af97dd08…`, holder `Leonardo Camilo`)
+agents/top.md	5023	genomoncology/biomcp	PASS	MIT	**MIT — byte-read** (`1,066 B`, `sha256:dd4dd888…`, holder `Ian Maurer`)
+agents/top.md	5024	beita6969/ScienceClaw	PASS	MIT	**MIT — byte-read** (`1,073 B`, `sha256:33923cdb…`) 🟡 **holder reads `Peter Steinberger`, which is NOT the rep
+agents/top.md	5025	wp-a/nature-academic-search	PASS	MIT	**MIT — byte-read** (`1,060 B`, `sha256:d3f91696…`, holder `wp-a`)
+agents/top.md	5026	mpasternak/dspace-mcp	PASS	MIT	**MIT — byte-read** (`1,073 B`, `sha256:900b820e…`, holder `Michał Pasternak`)
+agents/top.md	5027	mpasternak/ojs-mcp	PASS	MIT	**MIT — byte-read** (`1,096 B`, `sha256:56a6229a…`, holder `Michał Pasternak <michal.dtz@…>`)
+agents/top.md	5028	suren-kk/armenian-national-library-mcp	PASS	MIT	**MIT — byte-read** (`1,072 B`, `sha256:b47a07d3…`, holder `Suren Karapetyan`)
+agents/top.md	5029	asjolaviral/koha-mcp-server	PASS	MIT	**MIT — byte-read** (`1,084 B`, `sha256:a8be4d3f…`, holder `Koha MCP Server contributors`)
+agents/top.md	5030	PedroSmaxY/abnt-mcp	PASS	MIT	**MIT — byte-read** (`1,086 B`, `sha256:1cdab623…`, holder `Pedro Henrique da Silva Novais`)
+agents/top.md	5031	DanMo661/xuexitong-cli	PASS	MIT	**MIT — byte-read** (`1,065 B`, `sha256:3486ae61…`)
+agents/top.md	5032	Han-maker-wp/chaoxing-mcp	PASS	MIT	**MIT — byte-read** (`1,069 B`, `sha256:55fe2518…`)
+agents/top.md	5033	DeliciousBuding/chaoxing	PASS	Apache-2.0	**Apache-2.0 — byte-read** (`11,324 B`, `sha256:50e67517…`)
+agents/top.md	5034	Cyoung-Van/chaoxing-mcp	PASS	MIT	**MIT — byte-read** (`1,067 B`, `sha256:6aa62f5f…`)
+agents/top.md	5035	Erich1566/chaoxing-studyai-mcp	PASS	MIT	**MIT — byte-read** (`1,066 B`, `sha256:3a2898fc…`)
+agents/top.md	5036	ILLENIUM-25/chaoxing-subtitles	PASS	MIT	**MIT — byte-read** (`1,068 B`, `sha256:4b8fa2fc…`)
+agents/top.md	5037	Zhf0826/xuexitong-connector	PASS	MIT	**MIT — byte-read** (`1,089 B`, `sha256:52baef61…`)
+agents/top.md	5038	xiny8127-glitch/xuexitong-plus	PASS	MIT	**MIT — byte-read** (`1,066 B`, `sha256:97fa27f4…`)
+agents/top.md	5039	XueQian17654/ChaoXingMessageMCP	PASS	MIT	**MIT — byte-read** (`1,069 B`, `sha256:aade238a…`)
+agents/top.md	5040	shu-silc-osc/canvas-chaoxing-silc-mcp	PASS	MIT	**MIT — byte-read** (`1,070 B`, `sha256:5e014c4f…`)
+agents/top.md	5041	ahdaolma/yuketang-mcp	PASS	MIT	**MIT — byte-read** (`1,082 B`, `sha256:376d3d2e…`)
+agents/top.md	5042	MarkyMarkMa/unnc-moodle-mcp	PASS	MIT	**MIT — byte-read** (`1,085 B`, `sha256:5494026c…`)
+agents/top.md	5043	alfa-yohannis/siakad-mcp	PASS	MIT	**MIT — byte-read** (`1,070 B`, `sha256:77bf83d2…`)
+agents/top.md	5044	arapodcho/mcp_server_neis_api	PASS	MIT	**MIT — byte-read** (`1,066 B`, `sha256:65a48ca4…`)
+agents/top.md	5045	chrischall/infinitecampus-mcp	PASS	MIT	**MIT — byte-read** (`1,067 B`, `sha256:17dd0009…`)
+agents/top.md	5046	chrischall/canvas-parent-mcp	PASS	MIT	**MIT — byte-read** (`1,067 B`, `sha256:17dd0009…` — same grant bytes as its sibling, same owner)
+agents/top.md	5047	coolcrazycid/studentvue-mcp	PASS	MIT	**MIT — byte-read** (`1,069 B`, `sha256:60fe23fd…`)
+agents/top.md	5048	coolcrazycid/schoology-mcp	PASS	MIT	**MIT — byte-read** (`1,069 B`, `sha256:60fe23fd…`)
+agents/top.md	5049	meowgoober/studentvue-mcp	PASS	MIT	**MIT — byte-read** (`1,062 B`, `sha256:17699c29…`)
+agents/top.md	5050	caleb-media-studio/skyward-mcp	PASS	MIT	**MIT — byte-read** (`1,066 B`, `sha256:e7b1808c…`)
+agents/top.md	5051	CDataSoftware/blackbaud-fe-nxt-mcp-server-by-cdata	PASS	MIT	**MIT — byte-read** (`1,076 B`, `sha256:151d2c72…`)
+agents/top.md	5052	obfuscated-tm/dewey	PASS-REFUTED-METADATA	byte-read MIT stated against an unstated field	**MIT — byte-read** (`900 B`, `sha256:e4c20e35…`), against GitHub's `NOASSERTION`
+agents/top.md	5053	kristoffervp/vigilo-mcp	PASS-REFUTED-METADATA	byte-read BSD stated against an unstated field	🟢 **0BSD (Zero-Clause BSD) — byte-read** (`640 B`, `sha256:b5eaf2ff…`), against GitHub's `NOASSERTION`
+agents/top.md	5054	kad-xyz/spbstu-mcp	PASS	MIT	**MIT — byte-read** (`1,064 B`, `sha256:0dc1ec80…`)
+agents/top.md	5055	CaioCastro1/usp-mcp	PASS	MIT	**MIT — byte-read** (`1,107 B`, `sha256:3bf0a0b6…`)
+agents/top.md	5056	EdmundD28/moodle-codex	PASS	MIT	**MIT — byte-read** (`1,067 B`, `sha256:67907d65…`)
+agents/top.md	5057	IsaacAnwar/moodle-mcp	PASS	MIT	**MIT — byte-read** (`1,068 B`, `sha256:99349e41…`)
+agents/top.md	5058	ImArjunJ/moocp	PASS	MIT	**MIT — byte-read** (`1,075 B`, `sha256:42d87b42…`)
+agents/top.md	5059	matheussilvano/moodle-mcp	PASS	MIT	**MIT — byte-read** (`1,089 B`, `sha256:2269bf86…`)
+agents/top.md	5060	nialvape/utn-mcp	PASS	ISC	**ISC — byte-verified** (`748 B`, `sha256:2ad14eb14513a4fa…`, title line `ISC License`)
+agents/top.md	5061	HyNuwa/UniMCP	PASS-REFUTED-METADATA	byte-read MIT stated against an unstated field	**MIT + inherited ISC — byte-verified, against GitHub's `NOASSERTION`** (`1,980 B`, `sha256:727b864af003d1e5…`
+agents/top.md	5062	BautistaAlosMartorell/utnfrm-mcp	PASS	MIT	**MIT — byte-verified** (`1,088 B`, `sha256:d3aa5dfc50196b9f…`)
+agents/top.md	5063	thiagoyb11/UTNFRSF-CampusVirtual-MCP	PASS	MIT	**MIT — byte-verified** (`1,078 B`, `sha256:2ecd9e4de2d8c56f…`)
+agents/top.md	5064	GallegoSz/sigaa-mcp	PASS	MIT	**MIT — byte-verified** (`1,076 B`, `sha256:8f77449cb56939be…`, © 2026 João Pedro Gallego)
+agents/top.md	5065	heitorsDev/sigaa-ifsc-mcp	PASS-REFUTED-METADATA	byte-read MIT stated against an unstated field	**MIT — byte-verified, against GitHub's `NOASSERTION`** (`1,275 B`, `sha256:cd14675817b2c618…`, title line **`
+agents/top.md	5066	Pedromaia0/sigaa-mcp	PASS	MIT	**MIT — byte-verified** (`1,067 B`, `sha256:22e8a5dddc3bfd39…`)
+agents/top.md	5067	EduardoBidese/sigaa-agente	PASS	MIT	**MIT — byte-verified** (`1,076 B`, `sha256:da53ac6f2eef7651…`)
+agents/top.md	5068	rdereparadores/cvuex-mcp	PASS	MIT	**MIT — byte-verified** (`1,074 B`, `sha256:db6ddec81755f4cd…`)
+agents/top.md	5069	udondan/lanis	PASS	MIT	MIT
+agents/top.md	5070	udondan/dsbmobile	PASS	MIT	MIT
+agents/top.md	5071	andyswe/admentum-mcp	PASS	MIT	MIT
+agents/top.md	5072	boraita/ipasen_mcp	PASS	MIT	MIT
+agents/top.md	5073	weirdapps/sch-mail	PASS	MIT	MIT
+agents/top.md	5074	underconnor/alms-server	PASS	MIT	MIT
+agents/top.md	5075	boyuchengz/canvas-mcp	PASS	MIT	MIT
+agents/top.md	5076	Ed-Fi-Exchange-OSS/Prototype-Semantic-Layer-with-MCP	PASS	Apache-2.0	Apache-2.0
+agents/top.md	5077	webworn/openfoam-mcp-server	PASS-REFUTED-METADATA	byte-read Apache-2.0 stated against an unstated field	**Apache-2.0 — byte-verified, against GitHub's own `NOASSERTION`**
+agents/top.md	5078	OpenStudy-dev/OpenStudy	PASS	MIT	MIT
+agents/top.md	5079	erictrainnlpinxihu/Grader-agent	PASS	MIT	MIT
+agents/top.md	5080	kemalyy/edumints-scorm-mcp	PASS	MIT	MIT
+agents/top.md	5081	giacomomaria81/scorm-mcp-server	PASS	MIT	MIT
+agents/top.md	5082	amirtds/cubite-mcp	PASS	MIT	MIT
+agents/top.md	5083	baney75/myelinate	PASS	MIT	MIT
+agents/top.md	5084	InferHaven/agent-skills	PASS	Apache-2.0	Apache-2.0
+agents/top.md	5085	VIABLE-Learning-Lab/viable	PASS	MIT	MIT
+agents/top.md	5086	jtayped/sakai-mcp	PASS	MIT	MIT
+agents/top.md	5087	sayt25606-rgb/sakai-tasks-mcp	PASS	Apache-2.0	Apache-2.0
+agents/top.md	5088	riripatate/schoology-mcp	PASS	MIT	MIT
+agents/top.md	5089	jibberswrld/fcps-school-mcp	PASS	MIT	MIT
+agents/top.md	5090	dajun666/schoology-mcp	PASS	MIT	MIT
+agents/top.md	5091	shastripranav/mcp-learning-server	PASS	MIT	MIT
+agents/top.md	5092	piyushh62/ashashala	PASS	MIT	MIT
+agents/top.md	5093	XAIHT/Tlamatini	PASS	MIT	MIT
+agents/top.md	5094	joeseesun/qiaomu-learning	PASS	MIT	MIT
+agents/top.md	5095	weishao2/tizhuang-agent-skills	PASS	MIT	MIT
+agents/top.md	5096	OmarZen/scholarship-navigator	PASS	MIT	MIT
+agents/top.md	5097	RohanMuppa/brightspace-mcp-server	PASS	MIT	MIT
+agents/top.md	5098	JhostinAleck/brightspace-mcp	PASS	MIT	MIT
+agents/top.md	5099	alejooroncoy/campus-cli	PASS	ISC	ISC
+agents/top.md	5100	kingdonkatsu/ntulearn-mcp	PASS-REFUTED-METADATA	byte-read MIT stated against an unstated field	🟢 **MIT — byte-read `2026-11-16` (`p843`)** (`main/LICENSE`, `1,055 B`, `sha256₁₂ e6bd1450153a`, © 2026 kingdo
+agents/top.md	5101	Mattlo0546/blackboard-mcp	PASS	MIT	MIT
+agents/top.md	5102	geekjourneyx/interactive-learning	PASS	MIT	MIT
+agents/top.md	5103	braiinz94/braiinz-education	PASS	Apache-2.0	Apache-2.0 (sidebar: `Apache-2.0 license`)
+agents/top.md	5104	HKUDS/DeepTutor	PASS	Apache-2.0	Apache-2.0
+agents/top.md	5105	THU-MAIC/OpenMAIC	PASS	MIT	MIT
+agents/top.md	5106	JuneYaooo/teacher-to-skills	PASS	Apache-2.0	Apache-2.0
+agents/top.md	5107	erpipe-org/mcp-odoo	PASS	MIT	MIT
+agents/top.md	5108	hanifisenturk/sabis-mcp-server	PASS	ISC	ISC
+agents/top.md	5109	Suyutao/DeepTutor-MCP	PASS	Apache-2.0	Apache-2.0
+agents/top.md	5110	vishalsachdev/canvas-mcp	PASS	MIT	MIT
+agents/top.md	5111	Faixiang/Moodle-MCP	PASS	MIT	MIT
+agents/top.md	5112	satvik314/educhain	PASS	MIT	MIT
+agents/top.md	5113	ai-shifu/ai-shifu	PASS	Apache-2.0	Apache-2.0
+agents/top.md	5114	CAHLR/OATutor	PASS	MIT	MIT
+agents/top.md	5115	Open-TutorAi/open-tutor-ai-CE	PASS	BSD	BSD-3-Clause
+agents/top.md	5116	ArnaudGuiovanna/tutor-mcp	PASS	MIT	MIT
+agents/top.md	5117	SirhanMacx/Claw-ED	PASS	MIT	MIT
+agents/top.md	5118	G36maid/moodle-mcp	PASS	MIT	MIT
+agents/top.md	5119	DavidLMS/learnmcp-xapi	PASS	MIT	MIT
+agents/top.md	5120	wwrwbs/AI_AWE	PASS	MIT	🟡 **Apache-2.0 BOILERPLATE-ONLY — byte-read `2026-11-16` (`p843`)** (`main/LICENSE`, `1,865 B`, `sha256₁₂ 4b52
+agents/top.md	5121	falkenslab/moodle-mcp	PASS	MIT	MIT
+agents/top.md	5122	MarcosNahuel/moodle-mcp	PASS	MIT	MIT
+agents/top.md	5123	Jeanikt/tutor-ai-agent	PASS	MIT	MIT
+agents/top.md	5124	Keitous/EDUKAI-LONGVIEW	PASS	ISC	ISC
+agents/top.md	5125	kamalelafoui/Agentic-AI-EdTech-J33-J34	PASS	MIT	MIT
+agents/top.md	5126	janestreet/agent_skills	PASS	MIT	MIT
+agents/top.md	5127	oliverhruby/edupage-mcp	PASS	MIT	MIT
+agents/top.md	5128	sukhrobyangibaev/mcp_hemis_student	PASS	MIT	MIT
+agents/top.md	5129	zavora-ai/mcp-education	PASS	Apache-2.0	🟡 **Apache-2.0 BOILERPLATE-ONLY — byte-read `2026-11-16` (`p843`)** (`main/LICENSE`, `738 B`, `sha256₁₂ b3886f
+agents/top.md	5130	vulinh1704/ai-tutor-agent	PASS	MIT	MIT
+agents/top.md	5131	littlecookie0722/AI-Teaching-Agent	PASS	MIT	MIT
+agents/top.md	5132	PsychQuant/che-ntucool-mcp	PASS	MIT	MIT
+agents/top.md	5133	maurodruwel/Smartschool-MCP	PASS	MIT	MIT
+agents/top.md	5134	12dora/waseda-moodle-mcp	PASS	MIT	MIT
+agents/top.md	5135	chuma-beep/mathua	PASS	MIT	🟢 **MIT — byte-read** (`raw.githubusercontent.com/chuma-beep/mathua/main/LICENSE`, first line `MIT License`; s
+agents/top.md	5136	molly554/whiteboard-ai-tutor	PASS	MIT	🟢 **MIT — byte-read** (`raw.githubusercontent.com/molly554/whiteboard-ai-tutor/main/LICENSE`, first line `MIT 
+agents/top.md	5137	amaru-one/mawta	PASS	MIT	🟢 **MIT — byte-read** (`raw.githubusercontent.com/amaru-one/mawta/main/LICENSE`, `1,074 B`, `sha256:34142d07…`
+agents/top.md	5138	AI-Native-Ventures/jemma	PASS	MIT	🟢 **MIT — byte-read** (`raw.githubusercontent.com/AI-Native-Ventures/jemma/master/LICENSE`, `1,075 B`, `sha256
+agents/top.md	5139	olele114/teach-to-learn	PASS	MIT	🟢 **MIT — byte-read** (`raw.githubusercontent.com/olele114/teach-to-learn/main/LICENSE`, `1,096 B`, `sha256:b4
+agents/top.md	5140	tomasfossatti/educa-educai	PASS	MIT	🟢 **MIT — byte-read** (`raw.githubusercontent.com/tomasfossatti/educa-educai/main/LICENSE`, `1,072 B`, `sha256
+agents/top.md	5141	cuic19053-hue/stardust-agent	PASS	MIT	🟢 **MIT — byte-read** (`1,070 B`, `sha256:6fb44efa600b…`, stock text, holder `cuic19053-hue`)
+agents/top.md	5142	OmarAxis/meska-brain	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,340 B`, `sha256:52f203491064…`, stock text, no holder)
+agents/top.md	5143	marthanp/sautika	PASS	MIT	🟢 **MIT — byte-read** (`1,117 B`, `sha256:d5fea751d0cb…`, stock text, holder `2026`)
+agents/top.md	5144	nafkunasefa1-hub/EthioLearn	PASS	MIT	🟢 **MIT — byte-read** (`1,095 B`, `sha256:7203e6d09066…`, stock text, holder `2026`)
+agents/top.md	5145	f2calv/tutorizr	PASS	MIT	🟢 **MIT — byte-read** (`1,069 B`, `sha256:5179c8ca6c5f…`, stock text, holder `Alex Vi…`)
+agents/top.md	5146	zjsyxzjsyx/wenyuan	PASS	MIT	🟢 **MIT — byte-read** (`1,061 B`, `sha256:888e4c81df0e…`, stock text, holder `koyo`)
+agents/top.md	5147	jinxuan7983-afk/xiaohuiban	PASS	MIT	🟢 **MIT — byte-read** (`1,066 B`, `sha256:dfe31c4d1444…`, stock text, holder `校慧伴`)
+agents/top.md	5148	fcedf/interruptible-ai-tutor	PASS	MIT	🟢 **MIT — byte-read** (`1,062 B`, `sha256:73a60e84e767…`, stock text, holder `fcedf`)
+agents/top.md	5149	cheahhl814/lf-skill	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:84aebc1010eb…`, stock text, holder `cheahhl814`)
+agents/top.md	5150	Hang-GaoZu/ai-learning-skills	PASS	MIT	🟢 **MIT — byte-read** (`1,067 B`, `sha256:ea542d6e140b…`, stock text, holder `Ha…`)
+agents/top.md	5151	decolla/tuttor-kit	PASS	MIT	🟢 **MIT — byte-read** (`1,064 B`, `sha256:3931a51e2767…`, stock text, holder `decolla`)
+agents/top.md	5152	Tushardevx01/Blinky	PASS	MIT	🟢 **MIT — byte-read** (`1,134 B`, `sha256:809c14e3383d…`, stock text, holder `Tushar Ka…`)
+agents/top.md	5153	Davide4599/EduAdapt-AI-Powered-Learning-Accessibility	PASS	MIT	🟢 **MIT — byte-read** (`LICENSE.txt`, `1,069 B`, `sha256:2f4c03d4562b…`, stock text, holder `2025 Davide Iotti
+agents/top.md	5154	zhaokai0604/jianxi-resume-intelligence	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,336 B`, `sha256:a61284580cd0…`, stock text)
+agents/top.md	5155	tamnd/olymmath-agent	PASS	Apache-2.0	🟢 **Apache-2.0 — byte-read** (`11,358 B`, `sha256:cfc7749b96f6…`, stock text, no holder)
+repos/foundations.md	46	haxtheweb/haxcms-php	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`LICENSE.md`, `11,362 B`, `sha256₁₂ b662f44e55e8`)
+repos/foundations.md	47	opencast/annotation-tool	PASS	shelf states no licence filter; cell is populated	🟢 **ECL-2.0 (Educational Community License 2.0) — byte-read** (`LICENSE`, `11,340 B`, `sha256₁₂ 76a975068930`)
+repos/foundations.md	48	openfun/arnold	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`LICENSE`, `1,078 B`, `sha256₁₂ 8231f43fdfc3`)
+repos/foundations.md	49	edly-io/h5pxblock	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`LICENSE`, `1,064 B`, `sha256₁₂ 4d17b43eb718`)
+repos/foundations.md	50	Abstract-Tech/abstract-scorm-xblock	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`LICENSE`, `11,342 B`, `sha256₁₂ db0b3d91913a`)
+repos/foundations.md	87	openedx/codejail	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`LICENSE.txt`, `10,174 B`, `sha256₁₂ 0d542e0c8804`)
+repos/foundations.md	88	openedx/xblock-sdk	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read at 🔴 `LICENSE.TXT`** (`11,358 B`, `sha256₁₂ cfc7749b96f6`)
+repos/foundations.md	89	openedx/paragon	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`LICENSE`, `10,174 B`, `sha256₁₂ 0d542e0c8804` — 🔵 **byte-IDENTICAL to `codejail
+repos/foundations.md	90	openedx/openedx-events	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`LICENSE.txt`, `11,358 B`, `sha256₁₂ cfc7749b96f6`)
+repos/foundations.md	91	openedx/platform-plugin-aspects	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`)
+repos/foundations.md	92	mitodl/open-edx-plugins	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause — byte-read** (`LICENSE`, `1,496 B`, `sha256₁₂ d30f3ab21d44`, holder 🔵 `Copyright (C) 2021 MI
+repos/foundations.md	149	tl-its-umich-edu/my-learning-analytics	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — byte-read `LICENSE`, **`11,379 B`**, `sha256₁₂ b89b380a589b`. 🔵 **`+22 B` against the canon
+repos/foundations.md	150	vanderbilt-data-science/knowledge-spaces	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — byte-read `LICENSE`, `1,090 B`, `sha256₁₂ ed2ed868dffc`, © *2025 Vanderbilt Data Science Institute
+repos/foundations.md	151	AI9Stars/LLM-Rubrics-Survey	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — byte-read `LICENSE`, `1,068 B`, `sha256₁₂ d399809ede8e`
+repos/foundations.md	152	virgiliojr94/book-to-skill	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — byte-read **`LICENSE.md`**, `1,068 B`, `sha256₁₂ be9b04bccfb4`. 🔵 **The payload is at `LICENSE.md`
+repos/foundations.md	179	PKU-DAIR/SAS-Bench	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `LICENSE`, `11,389 B`, `sha256₁₂ 8cb34457f0c2`**, body canonical (`APPENDIX` presen
+repos/foundations.md	191	qiutiandefeng/yfexam-exam	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `LICENSE`, `1,096 B`, `sha256₁₂ 89a6f0da2879`
+repos/foundations.md	192	Alanosy/exam-platform	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `LICENSE`, `1,061 B`, `sha256₁₂ f358d42c8caf`
+repos/foundations.md	193	hongmaple/octopus	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `LICENSE`, `1,090 B`, `sha256₁₂ 46973d260eab`
+repos/foundations.md	194	gludugbanyu/cbt-eschool	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `LICENSE`, `1,063 B`, `sha256₁₂ 65e229e6c4f0`
+repos/foundations.md	220	alvaretto/r-exams_matematicas	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `LICENSE`, `1,078 B`, `sha256₁₂ 67a6e5e5a2af`
+repos/foundations.md	221	agn3si/ResultadosUNAM---data	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `LICENSE`, `1,063 B`, `sha256₁₂ 13e4dd489fe9`
+repos/foundations.md	222	picuino/test	PASS	shelf states no licence filter; cell is populated	🔴 **CC-BY-SA-4.0 — a CONTENT licence with share-alike, not a software grant** — `LICENSE`, `20,127 B`, `sha256
+repos/foundations.md	249	gpassero/uol-redacoes-xml	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `LICENSE`, `11,357 B`, `sha256₁₂ b40930bbcf80`
+repos/foundations.md	250	yunger7/enem-api	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-2.0 — copyleft, byte-read** `LICENSE`, `18,092 B`, `sha256₁₂ 8177f9751321`, first line `GNU GENERAL PU
+repos/foundations.md	251	paladini/awesome-poscomp	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `LICENSE`, `1,084 B`, `sha256₁₂ fe3f6164fc9e`
+repos/foundations.md	252	elheremes/awesome-ufma	PASS	shelf states no licence filter; cell is populated	🟡 **CC0-1.0 — a public-domain DEDICATION, not a software licence** — `LICENSE`, `6,555 B`, `sha256₁₂ 36ffd9dc0
+repos/foundations.md	284	autolab/Tango	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `11,324 B`, `sha256₁₂ a8ad31b1c3f4`
+repos/foundations.md	285	edulinq/autograder-server	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,071 B`, `sha256₁₂ 7eb48830c022`, holder `© 2023 Eriq Augustine`
+repos/foundations.md	286	edulinq/autograder-py	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,071 B`, `sha256₁₂ 7eb48830c022` (byte-identical to the server's grant)
+repos/foundations.md	287	uhafner/autograding-github-action	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,095 B`, `sha256₁₂ d2c7f8d2d8be`, holder `© 2020-2025 Tobias…`
+repos/foundations.md	288	uhafner/autograding-model	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,080 B`, `sha256₁₂ b8f78942bf60`, holder `© 2020-2026 Dr. Ullrich Hafner`
+repos/foundations.md	289	quickfeed/quickfeed	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,115 B`, `sha256₁₂ 2f382b0d27df`, title line 🔵 `The MIT License (MIT)`, holder `© 2017-2021 The 
+repos/foundations.md	290	kit-sdq/autograder	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,068 B`, `sha256₁₂ 30a0bc0d48b4`, holder `© 2022 Feuermagier`
+repos/foundations.md	291	pedal-edu/pedal	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,103 B`, `sha256₁₂ ffaa010382b0`, holder `© 2018 Austin Cory…`
+repos/foundations.md	292	gradescope/gradescope-utils	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,070 B`, `sha256₁₂ 1fa57a15a75b`, holder 🔵 **`© 2022 Turnitin, LLC`**
+repos/foundations.md	293	howardlau1999/autograder-server	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `11,357 B`, `sha256₁₂ c71d239df917` (full payload)
+repos/foundations.md	294	data-8/Gofer-Grader	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause** — `1,510 B`, `sha256₁₂ a9d15a91664e`, holder `© 2018, Yuvi Panda`
+repos/foundations.md	295	robertylewis/lean4-autograder-main	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `11,357 B`, `sha256₁₂ b40930bbcf80`
+repos/foundations.md	296	usfca-cs-tools/autograder	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,071 B`, `sha256₁₂ 27af82724fc4`
+repos/foundations.md	297	skt09/IndiGrader	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,072 B`, `sha256₁₂ 5065bc33aae5`, holder `© 2026 Sanket Tara…`
+repos/foundations.md	298	classroom-resources/autograding-grading-reporter	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,063 B`, `sha256₁₂ 59c888c36a7e`, holder 🔵 **`© 2023 GitHub`**
+repos/foundations.md	299	abdogad/tallyrun	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,075 B`, `sha256₁₂ 15a1ef7e938b`
+repos/foundations.md	300	jameskermode/mograder	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,070 B`, `sha256₁₂ 99e5f51590b7`, holder `© 2025 James Kermode`
+repos/foundations.md	301	zucchini/zucchini	PASS	shelf states no licence filter; cell is populated	🟡 **Apache-2.0 BY REFERENCE** — `586 B`, `sha256₁₂ 6791268a1675`, title line `Apache Software License 2.0`, ho
+repos/foundations.md	330	ls1intum/Artemis	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,091 B`, `sha256₁₂ 63a0a2b4d6d9`, holder 🔵 **`© 2026 TUM Applied Education Technologies`**
+repos/foundations.md	331	academico-sis/academico	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,094 B`, `sha256₁₂ 6051a15f4d44`, holder `© 2020 Thomas Debay and project contributors`
+repos/foundations.md	332	openfun/richie	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,079 B`, `sha256₁₂ e4b2a3148135`, holder 🔵 **`© 2018-present GIP FUN MOOC`**
+repos/foundations.md	333	openedx/XBlock	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `LICENSE.TXT`, 🔴 **`11,358 B`**, `sha256₁₂ cfc7749b96f6` (full payload, and **one byte long
+repos/foundations.md	334	jcputney/scorm-again	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,072 B`, `sha256₁₂ 383b85b370e8`, holder `© 2020 Jonathan Putney`
+repos/foundations.md	335	adlnet/xAPI-Spec	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `11,525 B`, `sha256₁₂ a1587287ff04` 🔵 **(a third distinct Apache payload size in one pass)*
+repos/foundations.md	336	tsugiproject/tsugi	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `10,273 B`, `sha256₁₂ 73ba74dfaa52`
+repos/foundations.md	337	jupyterhub/ltiauthenticator	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause** — `1,528 B`, `sha256₁₂ 08eebd9662cb`, holder `© 2016, Project Jupyter Contributors`
+repos/foundations.md	338	thm-mni-ii/feedbacksystem	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `10,785 B`, `sha256₁₂ 65125d9e480b`, holder 🔵 **`Copyright 2021 Technische Hochschule Mitte
+repos/foundations.md	339	inducer/relate	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,145 B`, `sha256₁₂ 66ff89ebf05f`, 🔵 payload opens *"RELATE is licensed to you under the MIT/X Co
+repos/foundations.md	340	terracotta-education/terracotta	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `11,323 B`, `sha256₁₂ 6dc0e068dcf3`
+repos/foundations.md	341	learning-commons-org/knowledge-graph	PASS	shelf states no licence filter; cell is populated	🔴 **TIERED, and the tiers are access tiers** — `LICENSE.md`, `5,789 B`, `sha256₁₂ d849ffef4f98`: 🟢 code **MIT*
+repos/foundations.md	342	bncc-dev/bncc-dados	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,092 B`, `sha256₁₂ e162f8f4b461`, holder 🔵 **`© 2026 Profy Tecnologias Educacionais Ltda`**
+repos/foundations.md	343	jdolny/OneRoster.NET	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,066 B`, `sha256₁₂ 1dc50226c38a`, holder `© 2020 theopenem`
+repos/foundations.md	374	Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `10,173 B`, `sha256₁₂ a6cba85bc92e`, 🔴 **appendix-stripped variant**
+repos/foundations.md	375	Ed-Fi-Alliance-OSS/Ed-Fi-ODS	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — 🔴 **`10,172 B`**, `sha256₁₂ 59899c6091b5`, `LICENSE.txt`
+repos/foundations.md	376	Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `10,173 B`, `sha256₁₂ a6cba85bc92e`, `LICENSE.txt`
+repos/foundations.md	377	Ed-Fi-Alliance-OSS/Data-Management-Service	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `11,357 B`, `sha256₁₂ c71d239df917`, 🟢 **full payload WITH appendix**
+repos/foundations.md	378	Ed-Fi-Alliance-OSS/edfi-oneroster	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `10,173 B`, `sha256₁₂ a6cba85bc92e`
+repos/foundations.md	379	Sunbird-RC/sunbird-rc-core	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,182 B`, `sha256₁₂ 8686530ab5c7`, 🔵 **`© 2018 International Institute of Information Technology,
+repos/foundations.md	380	Sunbird-Ed/SunbirdEd-portal	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,072 B`, `sha256₁₂ 7dde06716f25`, `© 2018 Project Sunbird`
+repos/foundations.md	381	Sunbird-Ed/SunbirdEd-mobile-app	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,078 B`, `sha256₁₂ bea3458f45df`, 🔵 **`© 2021 Sunbird for Education`**
+repos/foundations.md	382	Sunbird-RC/open-saber	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,072 B`, `sha256₁₂ 7dde06716f25`, `© 2018 Project Sunbird`
+repos/foundations.md	383	project-sunbird/sunbird-devops	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,072 B`, `sha256₁₂ 7dde06716f25`, `© 2018 Project Sunbird`
+repos/foundations.md	384	project-sunbird/sunbird-ml-workbench	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,063 B`, `sha256₁₂ 4ff07e32ea3b`, 🔵 **`© 2018 EkStep`**
+repos/foundations.md	385	eol-uchile/eol-conditional-xblock	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0** — `34,523 B`, `sha256₁₂ 8486a10c4393`
+repos/foundations.md	386	eol-uchile/sence-xblock	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0** — `34,628 B`, `sha256₁₂ 856864c98178`
+repos/foundations.md	387	eol-uchile/eol-uchile-theme-2020	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,097 B`, `sha256₁₂ 417032961673`
+repos/foundations.md	448	skolverket/dnp-ss12000-reference-api	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `11,340 B`, `sha256₁₂ ac2e2b321b48`
+repos/foundations.md	449	kennisnet/php-qti3	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,066 B`, `sha256₁₂ 27fb6d463569`, `© 2026 Kennisnet`
+repos/foundations.md	450	kennisnet/phpNLLOM	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,087 B`, `sha256₁₂ 45180ed97b3e`, `© 2017 Stichting Kennisnet`
+repos/foundations.md	451	kennisnet/phpEdurepSearch	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,086 B`, `sha256₁₂ a732a2ae1c48`, `© 2015 Stichting Kennisnet`
+repos/foundations.md	452	kennisnet/phpEdutermClient	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,066 B`, `sha256₁₂ de48ba028771`, `© 2018 Kennisnet`
+repos/foundations.md	453	kennisnet/pylom	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,066 B`, `sha256₁₂ cb979719e9ca`, `© 2017 Kennisnet`
+repos/foundations.md	454	kennisnet/phpECKCS	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `1,066 B`, `sha256₁₂ 4bf4fd11bcd9`, `© 2019 Kennisnet`
+repos/foundations.md	455	Utdanningsdirektoratet/designsystem	PASS	shelf states no licence filter; cell is populated	🟢 **MIT ×3, all byte-read**: root `1,079 B` `9e2e5857e0ef` `© 2025 Utdanningsdirektoratet`; `LICENSES/LICENSE-
+repos/foundations.md	456	SURFnet/apie	PASS	shelf states no licence filter; cell is populated	🔴 **GitHub says `NOASSERTION`.** 🟢 **The bytes say `EPL-2.0 WITH Classpath-exception-2.0`** — `LICENSE` `14,19
+repos/foundations.md	457	SURFnet/pea-poc	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause** — `1,512 B`, `sha256₁₂ 8d581f677474`, `© 2022 SURF`
+repos/foundations.md	458	SURFnet/sds	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `11,357 B`, `sha256₁₂ c71d239df917`
+repos/foundations.md	459	SURFnet/eduhub-gateway	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0** — `LICENSE.md` `34,916 B`, `sha256₁₂ 33bc26d4498c`
+repos/foundations.md	460	openeduhub/edu-sharing-python-client	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `11,349 B`, `sha256₁₂ e54a97efb7d3`
+repos/foundations.md	461	openeduhub/oeh-metadata-vocabs	PASS	shelf states no licence filter; cell is populated	🟢 **CC0-1.0** — `7,048 B`, `sha256₁₂ a2010f343487`
+repos/foundations.md	462	Opetushallitus/koski	PASS	shelf states no licence filter; cell is populated	🟡 **EUPL-1.1 or later** — `LICENSE.txt` `654 B`, `sha256₁₂ 9f68b0df35be`, `© 2015 The Finnish National Board o
+repos/foundations.md	463	Opetushallitus/ataru	PASS	shelf states no licence filter; cell is populated	🟡 **EUPL-1.2 or later** — `LICENSE.md` `296 B`, `sha256₁₂ db5b61c3f444`, `© 2025 Finnish National Agency for E
+repos/foundations.md	464	Opetushallitus/aoe	PASS	shelf states no licence filter; cell is populated	🔴 **GitHub says `NONE` and the repository root holds no licence.** 🟢 **The bytes are in the sub-packages: `aoe
+repos/foundations.md	465	Opetushallitus/varda	PASS	shelf states no licence filter; cell is populated	🟡 **EUPL-1.1 or later** — `LICENSE.txt` `653 B`, `sha256₁₂ 986fdfc9ba85`
+repos/foundations.md	466	Opetushallitus/eperusteet	PASS	shelf states no licence filter; cell is populated	🟡 **EUPL-1.1 or later** — `LICENSE.txt` `632 B`, `sha256₁₂ 7c5df5c3eacb`
+repos/foundations.md	467	Opetushallitus/jod-design-system	PASS	shelf states no licence filter; cell is populated	🟡 **EUPL-1.2 or later** — `LICENSE` `451 B`, `sha256₁₂ 06b723e33492`, 🟢 **copyright held JOINTLY by the Finnis
+repos/foundations.md	494	mitodl/ol-data-platform	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause** — byte-read `1,524 B`, `sha256₁₂ 3fb2026fe4a6`
+repos/foundations.md	495	g3i/lxHive	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-2.0** — byte-read `18,091 B`, `sha256₁₂ f9c375a1be4a`
+repos/foundations.md	496	adlnet/xapi-lab	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — byte-read `1,080 B`, `sha256₁₂ 2541daa1899b`
+repos/foundations.md	497	ijeffro/laralocker	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — byte-read `1,071 B`, `sha256₁₂ fea92849578f`
+repos/foundations.md	498	ZanichelliEditore/LearningRecordStore-xapi	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — byte-read `1,081 B`, `sha256₁₂ ab26049dadc0`
+repos/foundations.md	499	PlaypowerLabs/EdOptimize	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0** — byte-read `35,148 B`, `sha256₁₂ 8b1ba204bb69`
+repos/foundations.md	500	jruiperezv/ANALYSE	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0** — byte-read `35,135 B`, `sha256₁₂ 106a1b4b8b71`
+repos/foundations.md	501	llttugraz/moodle-local_lytix	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0** — byte-read `35,142 B`, `sha256₁₂ 370047dba7ae`
+repos/foundations.md	502	Behaviour-Analytics/moodle-block_behaviour	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0** — byte-read `35,148 B`, `sha256₁₂ 8b1ba204bb69`
+repos/foundations.md	537	tyiannak/pyAudioAnalysis	PASS	shelf states no licence filter; cell is populated	🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ b40930bbcf80`
+repos/foundations.md	538	juanmc2005/diart	PASS	shelf states no licence filter; cell is populated	🟢 MIT — byte-read `1,105 B`, `sha256₁₂ e459a25bfc32`
+repos/foundations.md	539	notch-up/diarize	PASS	shelf states no licence filter; cell is populated	🟢 Apache-2.0 — byte-read `11,357 B`, `sha256₁₂ c71d239df917`
+repos/foundations.md	540	BUTSpeechFIT/DiariZen	PASS	shelf states no licence filter; cell is populated	🟡 MIT **CODE ONLY** — byte-read `1,071 B`, `sha256₁₂ 98ad14ba39e3`
+repos/foundations.md	580	Layout-Parser/layout-parser	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`)
+repos/foundations.md	581	qurator-spk/eynollah	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `10,141 B`, `sha256₁₂ cc4d4de0920b`, 🔴 **appendix-s
+repos/foundations.md	582	GreatV/oar-ocr	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,347 B`, `sha256₁₂ 8a7ec3e5de8c`)
+repos/foundations.md	583	jiangnanboy/JiaJiaOCR	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,358 B`, `sha256₁₂ 230e34f4f506`, 🔴 **appendix F
+repos/foundations.md	584	SII-sc22mc/DocFusion	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,068 B`, `sha256₁₂ 42279a36e176`)
+repos/foundations.md	590	LinXueyuanStdio/LaTeX_OCR	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/LICENSE.txt`, `10,951 B`, `sha256₁₂ 771185eb28b4`)
+repos/foundations.md	591	OlehOnyshchak/OCR	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,071 B`, `sha256₁₂ a5fcb09e864b`)
+repos/foundations.md	597	GioiaZheng/handwritten-ocr-system	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,069 B`, `sha256₁₂ fc60bc4ab308`)
+repos/foundations.md	598	Sanny26/indic-htr	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,069 B`, `sha256₁₂ 90ab77b9558f`)
+repos/foundations.md	599	koninik/HTG_evaluation	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,079 B`, `sha256₁₂ 5ff6afb9b99c`)
+repos/foundations.md	608	apacha/OMR-Datasets	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE.txt`, `1,077 B`, `sha256₁₂ 87e3bf2f592b`)
+repos/foundations.md	609	tensorflow/moonlight	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/LICENSE`, `11,358 B`, `sha256₁₂ cfc7749b96f6`, leading-newl
+repos/foundations.md	610	OMR-Research/tf-end-to-end	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,077 B`, `sha256₁₂ 8837a9bc0a68`)
+repos/foundations.md	611	AbdallahHemdan/Orchestra	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,072 B`, `sha256₁₂ 6dc71b7344c2`)
+repos/foundations.md	612	NetEase/Polyphonic-TrOMR	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`)
+repos/foundations.md	613	liuhh02/web-omr	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,064 B`, `sha256₁₂ 8d23568e3519`)
+repos/foundations.md	636	microsoft/onnxruntime	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,073 B`, `sha256₁₂ 2f07c72751ae`, holder `Copyright (c) 
+repos/foundations.md	637	k2-fsa/sherpa-onnx	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/LICENSE`, `11,358 B`, `sha256₁₂ cfc7749b96f6`, bucket A of 
+repos/foundations.md	638	ggml-org/whisper.cpp	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,078 B`, `sha256₁₂ 94f29bbed6a2`, holder `Copyright (c
+repos/foundations.md	639	openai/whisper	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,063 B`, `sha256₁₂ b5d65a59060e`, holder `Copyright (c) 
+repos/foundations.md	640	alphacep/vosk-api	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/COPYING`, `10,173 B`, `sha256₁₂ bb618af833c8`) 🔵 **terms co
+repos/foundations.md	641	rhasspy/piper	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE.md`, `1,071 B`, `sha256₁₂ 4cd71dece703`, holder `Copyright
+repos/foundations.md	642	pytorch/executorch	PASS	shelf states no licence filter; cell is populated	🟡 **BSD — byte-read `2026-11-16`** (`main/LICENSE`, `1,774 B`, `sha256₁₂ c58707ea5d5c`, title line `BSD Licens
+repos/foundations.md	643	kaldi-asr/kaldi	PASS	shelf states no licence filter; cell is populated	🔴 **COMPOSITE — byte-read `2026-11-16`** (`master/COPYING`, `17,264 B`, `sha256₁₂ e68f06f32485`). 🔴 **First no
+repos/foundations.md	644	espeak-ng/espeak-ng	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read `2026-11-16`** (`master/COPYING`, `35,147 B`, `sha256₁₂ 8ceb4b9ee5ad`)
+repos/foundations.md	645	bootphon/phonemizer	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read `2026-11-16`** (`master/LICENSE`, `35,142 B`, `sha256₁₂ d62f065830aa`)
+repos/foundations.md	687	speechbrain/speechbrain	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`develop/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`, canonical `
+repos/foundations.md	688	espnet/espnet	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/LICENSE`, `11,372 B`, `sha256₁₂ 4696c3c9551d` — the appendi
+repos/foundations.md	689	wenet-e2e/wenet	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`)
+repos/foundations.md	690	modelscope/FunASR	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,061 B`, `sha256₁₂ f382b62dcc61`, holder `2025 FunASR`)
+repos/foundations.md	691	MontrealCorpusTools/Montreal-Forced-Aligner	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,066 B`, `sha256₁₂ ffaac053ec76`, holder `2016 Montreal 
+repos/foundations.md	692	MahmoudAshraf97/ctc-forced-aligner	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-2-Clause — byte-read `2026-11-16`** (`main/LICENSE`, `1,303 B`, `sha256₁₂ 05aef0bf69ec`, holder `2026,
+repos/foundations.md	693	maxrmorrison/pyfoal	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,090 B`, `sha256₁₂ 2e856622171f`, holder `2023 Max Morri
+repos/foundations.md	694	xinjli/transphone	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,072 B`, `sha256₁₂ 200c02efefc4`) — 🔴 **holder reads `Co
+repos/foundations.md	695	Kyubyong/g2p	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/LICENSE.txt`, `11,357 B`, `sha256₁₂ b40930bbcf80` — 🔵 **the
+repos/foundations.md	696	GitYCC/g2pW	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/`**`LICENCE`**, `11,356 B`, `sha256₁₂ 43070e2d4e53`) — 🔵 **
+repos/foundations.md	697	axelspringer/DeepPhonemizer	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,122 B`, `sha256₁₂ eac2d6c52686`, holder `2021 Axel Spri
+repos/foundations.md	698	DigitalPhonetics/IMS-Toucan	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`MassiveScaleToucan/LICENSE`, `11,475 B`, `sha256₁₂ 3307e40fba5e`, 
+repos/foundations.md	699	lifeiteng/Aligner-SUPERB	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`)
+repos/foundations.md	700	Maximax67/Words-CEFR-Dataset	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,070 B`, `sha256₁₂ 1834ca0e6881`, holder `2024 Belikov M
+repos/foundations.md	743	1EdTech/digital-credentials-public-validator	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917` — the canonic
+repos/foundations.md	744	1EdTech/openbadges-validator-core	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`develop/LICENSE`, `13,185 B`, `sha256₁₂ ba1f153bdba3`; identical b
+repos/foundations.md	745	1EdTech/OpenCASE	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/LICENSE`, `11,264 B`, `sha256₁₂ ccf5a4564e72`)
+repos/foundations.md	746	1EdTech/cert-schema	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,096 B`, `sha256₁₂ 06d87bf42a0a`, holder `Copyright (c
+repos/foundations.md	758	instructure/common-cartridge-viewer	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,074 B`, `sha256₁₂ 21f8b02800eb`, holder `Copyright (c
+repos/foundations.md	759	impierce/credential-converter	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,356 B`, `sha256₁₂ efd09e39cb61`)
+repos/foundations.md	815	guidepup/guidepup	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,068 B`, `sha256₁₂ b0feed1635af`, holder `Copyright (c) 
+repos/foundations.md	816	Muhnad/a11y-checker	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,076 B`, `sha256₁₂ 1c754b223002`, holder `Copyright (c
+repos/foundations.md	817	bbc/color-contrast-checker	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`master/LICENSE`, `11,333 B`, `sha256₁₂ 6b14326de7e0`)
+repos/foundations.md	818	incluud/color-contrast-checker	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,069 B`, `sha256₁₂ 4df0cf5c404d`, holder `Copyright (c) 
+repos/foundations.md	819	GAAD-Foundation/AIMAC	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,072 B`, `sha256₁₂ 0f756b9e83f3`, holder `Copyright (c) 
+repos/foundations.md	820	RonanOD/OpenAAC	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917` — the canonical
+repos/foundations.md	832	Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `10,173 B`, `sha256₁₂ a6cba85bc92e`)
+repos/foundations.md	833	Ed-Fi-Alliance-OSS/edfi-oneroster	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read `2026-11-16`** (`main/LICENSE`, `10,173 B`, `sha256₁₂ a6cba85bc92e` — byte-identica
+repos/foundations.md	839	fmadore/Live-translation	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,075 B`, `sha256₁₂ 710bd5932d24`, holder `Copyright (c) 
+repos/foundations.md	868	benhamner/ASAP-AES	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-2-Clause — byte-read `2026-11-16`** (`master/LICENSE`, `1,298 B`, `sha256₁₂ 06f4e22bae96`, holder `Cop
+repos/foundations.md	869	Syhen/2nd-Place-Solution-Kaggle-Learning-Agency-Lab-Automated-Essay-Scoring-2.0	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,063 B`, `sha256₁₂ 7784a0048f70`, holder `2024 何耀`)
+repos/foundations.md	870	shubhpawar/Automated-Essay-Scoring	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`master/LICENSE`, `1,080 B`, `sha256₁₂ 3b2d2dfccbf9`, holder `2018 Shubham
+repos/foundations.md	930	jupyterhub/the-littlest-jupyterhub	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause — byte-read** (`main/LICENSE`, `1,510 B`, `sha256₁₂ a9d15a91664e`, holder `2018, Yuvi Panda`)
+repos/foundations.md	931	plasmabio/plasma	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause — byte-read** (`master/LICENSE`, `1,527 B`, `sha256₁₂ 2bb2635332c1`, holder `2020, Plasma Con
+repos/foundations.md	937	ryukzak/wrench	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause — byte-read** (`master/LICENSE`, `1,466 B`, `sha256₁₂ 8a9b41684109`, holder `2024 Aleksandr P
+repos/foundations.md	948	pshenok/server-survival	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`main/LICENSE`, `1,079 B`, `sha256₁₂ e86ab27fe716`, holder `2025 Kostyantyn Pshenychnyy
+repos/foundations.md	949	CrypToolProject/CrypTool-2	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`main/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`, stock text)
+repos/foundations.md	950	SimonSchubert/Braincup	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`, stock text)
+repos/foundations.md	951	paytonjjones/bsharp	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 638e16badc1c`, stock text)
+repos/foundations.md	952	wixette/8800-simulator	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`, stock text)
+repos/foundations.md	967	bandtec/web-data-viz	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`main/LICENSE`, `1,113 B`, `sha256₁₂ de03212ef57c`, holder *"2022 BandTec Digital Schoo
+repos/foundations.md	981	1EdTech/lti-1-3-php-library	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810`)
+repos/foundations.md	982	talis/lti-1-3-php-library	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`master/LICENSE`, `11,342 B`, `sha256₁₂ 944c6521f810`, byte-identical to the ups
+repos/foundations.md	1030	basedosdados/sdk	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `master/LICENSE`, `1,070 B`, `sha256₁₂ ae8976e97616`
+repos/foundations.md	1031	sidneisj/censo-escolar-bi-analytics	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, `1,079 B`, `sha256₁₂ d9aa42b83225`
+repos/foundations.md	1032	triverao/saber11-brechas-educativas	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, `1,064 B`, `sha256₁₂ dc9a631f24f7`
+repos/foundations.md	1214	ossu/math	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** `1,086 B` `sha256₁₂:6e6ee97a68dc`
+repos/foundations.md	1215	ossu/data-science	PASS	shelf states no licence filter; cell is populated	🔴 **`CC BY-SA 4.0`** — byte-read `LICENSE.md` `371 B` `sha256₁₂:cf2387f835ea`, links `creativecommons.org/lice
+repos/foundations.md	1216	ossu/precollege-math	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** `1,096 B` `sha256₁₂:7b5718570e9d`
+repos/foundations.md	1217	ossu/computer-science-cn	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** `1,075 B` `sha256₁₂:4106ff2ca607`
+repos/foundations.md	1218	openedx/django-user-tasks	PASS	shelf states no licence filter; cell is populated	🟢 **`Apache-2.0`** `LICENSE.txt` `11,356 B` `sha256₁₂:c5accbbd8546`
+repos/foundations.md	1369	ai-infra-curriculum/ai-infra-sre-learning	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, **`1,085 B`**, `sha256:4ebf9ee24f9f…` (estate grant)
+repos/foundations.md	1370	ai-infra-curriculum/ai-infra-inference-engineer-learning	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, **`1,085 B`**, `sha256:4ebf9ee24f9f…` (estate grant)
+repos/foundations.md	1376	cortega26/chile-hub	PASS	shelf states no licence filter; cell is populated	🔴 **SPLIT, and both halves matter.** 🟢 Code **MIT** — `main/LICENSE`, **`1,070 B`**, `sha256:277707dcaa3b…`, ©
+repos/foundations.md	1377	ai-infra-curriculum/ai-infra-engineer-learning	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, **`1,081 B`**, `sha256:67475eade1ef…`
+repos/foundations.md	1378	ai-infra-curriculum/ai-infra-junior-engineer-learning	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE` (same estate grant)
+repos/foundations.md	1379	WenyuChiou/awesome-agentic-ai-zh	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, **`1,068 B`**, `sha256:1e034229fd46…`
+repos/foundations.md	1380	keyuchen21/agentic-engineering-handbook	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, **`1,056 B`**, `sha256:1126322e2cc8…`
+repos/foundations.md	1381	kylemath/EEGEdu	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `master/LICENSE`, **`1,071 B`**, `sha256:6f69a84cb0f6…`, © *2020 Kyle Mathewson*
+repos/foundations.md	1382	microbotsio/ProtoBot	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `main/LICENSE.txt`, **`11,357 B`**, `sha256:c71d239df917…` (stock text, no holder in payloa
+repos/foundations.md	1415	oaknational/oak-curriculum-ontology	PASS	shelf states no licence filter; cell is populated	🟡 **Dual: OGL-UK-3.0 (data) + MIT (code)** — `main/LICENSE.md`, **`1,867 B`**, `sha256:98ac0c16f708…`; API rep
+repos/foundations.md	1416	oaknational/oak-curriculum-api	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, **`1,077 B`**, `sha256:0eeb9d32caed…`
+repos/foundations.md	1417	rage/tmc-cli-rust	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `main/LICENSE`, **`11,352 B`**, `sha256:5f8dce79b134…`
+repos/foundations.md	1418	socialsoftware/quizzes-tutor	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `master/LICENSE`, **`1,064 B`**, `sha256:c357a77752cd…`
+repos/foundations.md	1419	coursera/coursera_autograder	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `master/LICENSE.txt`, **`11,337 B`**, `sha256:1332404c1e9f…` (note the FILENAME: `LICENSE.t
+repos/foundations.md	1420	RiceComp215-Staff/RiceChecks	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `master/LICENSE`, **`11,357 B`**, `sha256:c71d239df917…` — **byte-identical to `Perspicacit
+repos/foundations.md	1421	itkdm/open-lab-components	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, **`1,091 B`**, `sha256:8e86e6b3ee15…`
+repos/foundations.md	1422	eval-protocol/eval-protocol	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, **`1,074 B`**, `sha256:66aab1fd81f2…`
+repos/foundations.md	1423	banghamid/pddikti_sdk	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, **`1,066 B`**, `sha256:24ce8110ac3c…`
+repos/foundations.md	1522	AnubisLMS/Anubis	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, `1,083 B`, `sha256:e36740a2a510…`, © *2021 John McCann Cunniff Junior*
+repos/foundations.md	1523	oaknational/oak-open-curriculum-ecosystem	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — 🔴 **`main/LICENCE`** (British spelling; `LICENSE` → `404`), `1,086 B`, `sha256:02c5a8e84229…`, © *
+repos/foundations.md	1524	open-edge-platform/education-ai-suite	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `main/LICENSE`, `11,351 B`, `sha256:3f17cff4210f…`
+repos/foundations.md	1530	hmrc/apprenticeship-levy	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `main/LICENSE`, **`11,357 B`**, `sha256:b40930bbcf80…`
+repos/foundations.md	1531	Tue-StudyOS/tue-api-wrapper	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `main/LICENSE`, **`10,762 B`**, `sha256:61335d750ed8…`
+repos/foundations.md	1532	amitshekhariitbhu/ai-engineering-course	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `main/LICENSE`, `11,357 B`, `sha256:c71d239df917…` (stock)
+repos/foundations.md	1533	MARKUS-LEARNING/ROBOTICS-for-PEOPLE	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, `1,072 B`, `sha256:1b99886264b5…`, © *2025 MARKUS_LEARNING*
+repos/foundations.md	1570	w3c/epubcheck	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause** (rendered sidebar + README, read `2026-11-15`; "3-Clause BSD License")
+repos/foundations.md	1571	daisy/ace	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-15`** (`master/LICENSE.txt`, **`1,073 B`**, `sha256:1c70cf6f248b…`, title line `M
+repos/foundations.md	1572	liblouis/liblouis	PASS	shelf states no licence filter; cell is populated	🔴 **COPYLEFT, split by component — both grant files byte-read `2026-11-15`:** `master/COPYING.LESSER` = **LGPL
+repos/foundations.md	1598	microsoft/AI-For-Beginners	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-15`** (`main/LICENSE`, `1,141 B`, `sha256:c2cfccb812fe…`, title line `MIT License
+repos/foundations.md	1636	happycola233/tchMaterial-parser	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,072 B`, `sha256:4c91bf6766ca…`, `main/LICENSE`, refs=[`main`])
+repos/foundations.md	1637	alterem/knowledge-grab	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,063 B`, `sha256:1161158266f2…`, `main/LICENSE`, refs=[`main`])
+repos/foundations.md	1638	finch04/online-mooc	PASS	shelf states no licence filter; cell is populated	🟡 **Apache-2.0 — byte-read, and the payload is NON-STOCK** (`9,110 B`, `sha256:285936aa4ba4…`, `main/LICENSE`,
+repos/foundations.md	1658	learningequality/studio	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,115 B`, `sha256:5715e50830cd…`, holder `2021 Foundation for Learning Equality (inter
+repos/foundations.md	1659	learningequality/ricecooker	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,087 B`, `sha256:8e7a35d64f5c…`, holder `2016, 2017, 2018 Learning Equality.`)
+repos/foundations.md	1660	sillsdev/web-languageforge	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,074 B`, `sha256:8ec4b3ea3d77…`, holder `2023 SIL International`)
+repos/foundations.md	1661	sillsdev/libpalaso	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,082 B`, `sha256:b716617149f3…`, holder `2007-2026 SIL Global`)
+repos/foundations.md	1662	BloomBooks/BloomDesktop	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`LICENSE.txt`, `1,072 B`, `sha256:858e015fbf93…`, holder `2011-2026 SIL Global`)
+repos/foundations.md	1663	BloomBooks/comical-js	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`LICENSE.md`, `1,085 B`, `sha256:04c31ce345c2…`, holder `2019 SIL International`)
+repos/foundations.md	1664	sillsdev/appbuilder-portal	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,074 B`, `sha256:1ca03af82bfb…`, holder `2018 SIL International`)
+repos/foundations.md	1665	BloomBooks/BloomReader	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,072 B`, `sha256:2d6a10872de9…`, holder `2016-2025 SIL Global`)
+repos/foundations.md	1666	GlobalDigitalLibraryio/gdl-frontend	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:58d1e17ffe51…`, stock text, no holder)
+repos/foundations.md	1667	curiouslearning/ftm-languagepacks	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-2-Clause — byte-read** (`1,326 B`, `sha256:ee43c06a4362…`, holder `2020, Curious Learning`)
+repos/foundations.md	1668	XPRIZE/glexp-data-standardization	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:c71d239df917…`, stock text, no holder)
+repos/foundations.md	1669	BloomBooks/bloom-player	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`LICENSE.txt`, `1,079 B`, `sha256:da69bbc1e873…`, holder `2011-2017 SIL International`)
+repos/foundations.md	1670	vgwb/Antura_assets	PASS	shelf states no licence filter; cell is populated	🟡 **CC-BY-4.0 — byte-read** (`LICENSE.md`, `391 B`, `sha256:4b14111feb0a…`, holder `TH Köln / Cologne Game Lab
+repos/foundations.md	1671	vgwb/Antura_lang_bundles	PASS	shelf states no licence filter; cell is populated	🟢 **CC0-1.0 — byte-read** (`7,048 B`, `sha256:a2010f343487…`, title line `Creative Commons Legal Code / CC0 1.
+repos/foundations.md	1672	BloomBooks/BloomReader-Lite	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,062 B`, `sha256:ead4392a8764…`, holder `2023 Bloom`)
+repos/foundations.md	1685	th30d0re/opendyslexic-fonts	PASS	shelf states no licence filter; cell is populated	🟡 **`OFL-1.1` — byte-read** (`4,406 B`, `sha256:2edc18617160…`, holder `2019, Abelardo Gonzalez (https://opend
+repos/foundations.md	1686	maritsbarbosa/awesome-libras	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,072 B`, `sha256:aba3315d28e9…`, holder `2021 Mariana Barbosa`)
+repos/foundations.md	1687	kitsteam/pictosearch	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,065 B`, `sha256:6b18f5c25cd5…`, holder `2021 kitsTeam`)
+repos/foundations.md	1688	fjrodl/astericsgrid_ros	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:c71d239df917…`, stock text, no holder)
+repos/foundations.md	1749	bsayres/heronhex-highered	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,082 B`, `sha256:aa0df3165b5d…`, holder `highered-mcps contributors`)
+repos/foundations.md	1750	theluckystrike/ap-score-distributions-mcp	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,070 B`, `sha256:4fedd46e8c20…`)
+repos/foundations.md	1751	morrowdock/martygraphics	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:58d1e17ffe51…`, stock text)
+repos/foundations.md	1768	langchain-ai/langgraph	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,072 B`, `sha256:d9bb52f2e354…`, HEAD `08a201695378`)
+repos/foundations.md	1769	langchain-ai/langchain	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`)
+repos/foundations.md	1770	teppei-miyashita/agenticstar-agentcore	PASS	shelf states no licence filter; cell is populated	🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last tou
+repos/foundations.md	1789	UOC/java-lti-1.3	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (**`master`**`/LICENSE`, `1,060 B`, `sha256₁₂ b6b29f11f74e`, holder `2019 U
+repos/foundations.md	1790	rolloutit/lti-platform	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (**`master`**`/LICENSE`, `1,066 B`, `sha256₁₂ 5f22ee03aa9f`, holder `2026 r
+repos/foundations.md	1791	Citolab/qti-scoring-engine	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,112 B`, `sha256₁₂ fae7c63759fe`, no holder line)
+repos/foundations.md	1792	metyatech/qti-scoring-system	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (**`master`**`/LICENSE`, `1,066 B`, `sha256₁₂ 5bb49280d709`, holder `2025 m
+repos/foundations.md	1793	EscolaLMS/LRS	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,066 B`, `sha256₁₂ 06ff7c71a6a1`, holder `2021 EscolaLMS
+repos/foundations.md	1794	TanimowoObaloluwaDavid/credential-lens	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`main/LICENSE`, `1,080 B`, `sha256₁₂ f65f32330671`, holder `2026 Ta…`)
+repos/foundations.md	1813	lsgwr/spring-boot-online-exam	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,072 B`, `sha256:4653947f9792…`, `master/LICENSE` [DEFAULT], refs=[`master` `cursor/m
+repos/foundations.md	1814	jiajia-jun/catcher	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,066 B`, `sha256:03ccaf326c9a…`, `main/LICENSE` [DEFAULT], refs=[`main` `feat-Email` 
+repos/foundations.md	1815	Flow-Ciotter/Study	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,069 B`, `sha256:ec1d2ffa8221…`, `main/LICENSE` [DEFAULT], refs=[`main`])
+repos/foundations.md	1816	neuronova-apps/DUA-3.0	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,070 B`, `sha256:b62c51270285…`, `main/LICENSE` [DEFAULT], refs=[`main`])
+repos/foundations.md	1830	GRobertsDuyile/ksb-diff	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,071 B`, `sha256:f1331c0a2569…`, holder `2026 GRobertsDuyile`)
+repos/foundations.md	1840	BrightspaceUI/core	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`10,420 B`, `sha256:452791837ece…`)
+repos/foundations.md	1841	labsai/EDDI	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`9,152 B`, `sha256:87879dc0f164…`)
+repos/foundations.md	1842	GeovaneSchmitz/sigaa-api	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,108 B`, `sha256:ecb193695a94…`)
+repos/foundations.md	1843	suap-ava-suite/djangoapp-integrador_ava	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,074 B`, `sha256:ea2720106f33…`)
+repos/foundations.md	1844	cyanheads/oecd-mcp-server	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,317 B`, `sha256:7915fc5b0477…`)
+repos/foundations.md	1845	SidneyBissoli/uis-mcp-server	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,087 B`, `sha256:5ad55eed2dbc…`)
+repos/foundations.md	1993	scieloorg/opac	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-2-Clause — byte-read** (`1,292 B`, `sha256:493da013…`, holder `SciELO ORG`, 2015)
+repos/foundations.md	1994	scieloorg/packtools	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-2-Clause — byte-read** (`1,288 B`, `sha256:8a810c6a…`, holder `SciELO`, 2013)
+repos/foundations.md	1995	scieloorg/scielo-manager	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-2-Clause — byte-read** (`1,328 B`, `sha256:c0182a8e…`, holder `SciELO <scielo-dev@googlegroups.com>`, 
+repos/foundations.md	1996	inveniosoftware/invenio-app-rdm	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,243 B`, `sha256:ccb5c2a3…`, holder **`CERN`**, 2019–2021)
+repos/foundations.md	1997	samvera/hyrax	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,564 B`, `sha256:40c35ac3…`)
+repos/foundations.md	1998	folio-org/okapi	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,356 B`, `sha256:43070e2d…`, stock text)
+repos/foundations.md	1999	folio-org/platform-complete	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,356 B`, `sha256:43070e2d…`, identical blob to `okapi`)
+repos/foundations.md	2000	DOAJ/doaj	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,323 B`, `sha256:6dc0e068…`)
+repos/foundations.md	2001	ror-community/ror-api	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,078 B`, `sha256:48634ddf…`, holder **`Crossref`**, 2017–2019)
+repos/foundations.md	2002	vufind-org/vufind	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-2.0 — byte-read** (`15,045 B`, `sha256:8f4b368d…`)
+repos/foundations.md	2003	omeka/Omeka-S	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read** (`35,146 B`, `sha256:c53a65c2…`, FSF 2007 text)
+repos/foundations.md	2004	eprints/eprints	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read** (`32,421 B`, `sha256:37d3866d…`, `COPYING`, FSF 2007 text)
+repos/foundations.md	2027	open-spaced-repetition/fsrs4anki	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,079 B`, `sha256:2ec9e6e6…`, holder `open-spaced-repetition`)
+repos/foundations.md	2028	open-spaced-repetition/ts-fsrs	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,079 B`, `sha256:8b83a73d…`, holder `Open Spaced Repetition`)
+repos/foundations.md	2029	open-spaced-repetition/free-spaced-repetition-scheduler	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,089 B`, `sha256:c0e0a71c…`, holder `open-spaced-repetition-scheduler`)
+repos/foundations.md	2030	open-spaced-repetition/py-fsrs	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,079 B`, `sha256:021bff58…`, holder `Open Spaced Repetition`)
+repos/foundations.md	2031	open-spaced-repetition/rs-fsrs	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,079 B`, `sha256:0f7be8cb…`, holder `Open Spaced Repetition`)
+repos/foundations.md	2032	st3v3nmw/obsidian-spaced-repetition	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,078 B`, `sha256:0a84e8f3…`, holder `Stephen Mwangi`)
+repos/foundations.md	2033	reuseman/flashcards-obsidian	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,069 B`, `sha256:99f1ba49…`, holder `Alex Colucci`)
+repos/foundations.md	2034	FooSoft/anki-connect	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0-or-later — byte-read** (`646 B`, `sha256:ddf0a4b0…`, holder `Alex Yatskov`, title line `GNU Genera
+repos/foundations.md	2062	judge0/judge0	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read** (`34,525 B`, `sha256:aafb5908…`, title line `GNU GENERAL PUBLIC LICENSE`)
+repos/foundations.md	2063	jplag/JPlag	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read** (`35,140 B`, `sha256:b98fbb37…`)
+repos/foundations.md	2064	DOMjudge/domjudge	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-2.0 — byte-read at `COPYING`** (`18,000 B`, `sha256:beb286d6…`)
+repos/foundations.md	2065	autolab/Autolab	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,323 B`, `sha256:6dc0e068…`, title line `Apache License`)
+repos/foundations.md	2066	pressbooks/pressbooks	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read at `dev/LICENSE.md`** (`35,146 B`, `sha256:c53a65c2…`) — 🔴 **`LICENSE` `404`s at BOTH 
+repos/foundations.md	2067	SafeExamBrowser/seb-win-refactoring	PASS	shelf states no licence filter; cell is populated	🟡 **MPL-2.0 — byte-read** (`16,725 B`, `sha256:c76f740d…`, title line `Mozilla Public License`)
+repos/foundations.md	2068	UniTime/unitime	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:58d1e17f…`)
+repos/foundations.md	2069	dodona-edu/dolos	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,083 B`, `sha256:9e2ceeed…`, holder `Team Dolos <dolos@ugent.be>`)
+repos/foundations.md	2070	trampgeek/moodle-qtype_coderunner	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-2.0 — byte-read** (`18,091 B`, `sha256:f9c375a1…`)
+repos/foundations.md	2071	ucbds-infra/otter-grader	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause — byte-read** (`1,559 B`, `sha256:4c5ec031…`)
+repos/foundations.md	2072	SafeExamBrowser/seb-mac	PASS	shelf states no licence filter; cell is populated	🔴 **NO licence payload at eleven probed paths; API reports `NONE`**
+repos/foundations.md	2073	jcrodriguez-dis/moodle-mod_vpl	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read at `LICENSE.txt`** (`35,146 B`, `sha256:c53a65c2…`)
+repos/foundations.md	2074	SafeExamBrowser/seb-server	PASS	shelf states no licence filter; cell is populated	🟡 **MPL-2.0 — byte-read** (`16,724 B`, `sha256:4b89d451…`) — 🔵 **one byte and a different hash from `seb-win-r
+repos/foundations.md	2075	RagnarGrootKoerkamp/BAPCtools	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read** (`35,148 B`, `sha256:8b1ba204…`)
+repos/foundations.md	2076	infomark-org/infomark	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0**
+repos/foundations.md	2077	jorge-martinez-gil/codesim	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,074 B`, `sha256:15925095…`, holder `Jorge Martinez-Gil`)
+repos/foundations.md	2078	GEOSOFT-GLOBAL/timetablely	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,070 B`, `sha256:b4be7f0d…`, holder `GEOSOFT GLOBAL`)
+repos/foundations.md	2079	AnubisLMS/Mayat	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read at `LICENSE.txt`** (`1,074 B`, `sha256:eb0df6e4…`, holder `Tian(Maxwell) Yang`)
+repos/foundations.md	2080	exercism/python	PASS	shelf states no licence filter; cell is populated	🟢 **MIT**
+repos/foundations.md	2096	DSpace/DSpace	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause — byte-read** (`1,504 B`, `sha256:baf9ee18…`, title line `BSD 3-Clause`, holder `Copyright (c
+repos/foundations.md	2097	zotero/zotero	PASS	shelf states no licence filter; cell is populated	🟡 **AGPL-3.0 — byte-read at `COPYING`** (`35,358 B`, `sha256:5b7dc919…`, *"Zotero is Copyright © 2018 Corporat
+repos/foundations.md	2098	pkp/ojs	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read** (`35,148 B`, `sha256:8b1ba204…`)
+repos/foundations.md	2099	pkp/pkp-lib	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read** (`35,148 B`, `sha256:8b1ba204…` — byte-identical to `pkp/ojs`)
+repos/foundations.md	2100	Koha-Community/Koha	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read** (`35,150 B`, `sha256:9edff973…`)
+repos/foundations.md	2101	zotero/translators	PASS	shelf states no licence filter; cell is populated	🔴 **No licence payload at either branch root**
+repos/foundations.md	2102	ourresearch/openalex-api-tutorials	PASS	shelf states no licence filter; cell is populated	🟢 **MIT**
+repos/foundations.md	2130	leftathome/schoology-go	PASS	shelf states no licence filter; cell is populated	**MIT** (byte-read, `1,091 B`, `sha256:7a2044fc…`)
+repos/foundations.md	2131	vlaszdunov/pymoodleclient	PASS	shelf states no licence filter; cell is populated	**Apache-2.0** (byte-read, `11,357 B`, `sha256:c71d239d…`)
+repos/foundations.md	2156	frappe/frappe	PASS	shelf states no licence filter; cell is populated	**MIT** (byte-read, `1,083 B`-class)
+repos/foundations.md	2157	frappe/education	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read `license.txt` (`19 B`, `sha256:1fcecf395312d876…`, `License: GNU GPL V3`), against Git
+repos/foundations.md	2158	frappe/mcp	PASS	shelf states no licence filter; cell is populated	**MIT** (byte-read, `1,083 B`, `sha256:a2f4480ba60bfae2…`) 🔴 **ARCHIVED UPSTREAM — GitHub `archived=true`, mea
+repos/foundations.md	2159	frappe/lms	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0** (byte-read `license.txt`, `33,893 B`, `sha256:db1a87ba81e885b6…`)
+repos/foundations.md	2160	rakeshgangwar/erpnext-mcp-server	PASS	shelf states no licence filter; cell is populated	**MIT** (byte-read, `1,071 B`, `sha256:aed951366a50288e…`)
+repos/foundations.md	2161	nasroykh/foxmayn_frappe_cli	PASS	shelf states no licence filter; cell is populated	**MIT** (byte-read, `1,060 B`, `sha256:ccd3695dc9fee04e…`)
+repos/foundations.md	2346	dmmat/Scormly	PASS	shelf states no licence filter; cell is populated	MIT
+repos/foundations.md	2385	googleworkspace/oneroster-integration-conformance-tests	PASS	shelf states no licence filter; cell is populated	Apache-2.0
+repos/foundations.md	2386	oat-sa/oneroster-import	PASS	shelf states no licence filter; cell is populated	GPL-2.0
+repos/foundations.md	2387	bgwdotdev/go-oneroster	PASS	shelf states no licence filter; cell is populated	MIT
+repos/foundations.md	2388	LongsightGroup/oneroster	PASS	shelf states no licence filter; cell is populated	MIT
+repos/foundations.md	2408	GSU-CETLOE/lti1p3Library-python	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,083 B`, `sha256:712361aa…`) 🔴 **holder line is an UNFILLED TEMPLATE: `Copyright (c) 
+repos/foundations.md	2409	Cvmcosta/ltijs	PASS	shelf states no licence filter; cell is populated	Apache-2.0
+repos/foundations.md	2410	dmitry-viskov/pylti1.3	PASS	shelf states no licence filter; cell is populated	MIT
+repos/foundations.md	2411	packbackbooks/lti-1-3-php-library	PASS	shelf states no licence filter; cell is populated	Apache-2.0
+repos/foundations.md	2412	Simon-Initiative/lti_1p3	PASS	shelf states no licence filter; cell is populated	MIT
+repos/foundations.md	2413	lti-tool/lti-tool	PASS	shelf states no licence filter; cell is populated	MIT
+repos/foundations.md	2434	adlnet/ADL_LRS	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:58d1e17f…`, stock text, no holder)
+repos/foundations.md	2435	LearningLocker/learninglocker	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read** (`35,141 B`, `sha256:589ed823…`, stock FSF text)
+repos/foundations.md	2436	yetanalytics/lrsql	PASS	shelf states no licence filter; cell is populated	Apache-2.0
+repos/foundations.md	2437	openfun/ralph	PASS	shelf states no licence filter; cell is populated	MIT
+repos/foundations.md	2438	LearningLocker/xapi-service	PASS	shelf states no licence filter; cell is populated	**MIT**
+repos/foundations.md	2439	LearningLocker/xapi-validation	PASS	shelf states no licence filter; cell is populated	**MIT**
+repos/foundations.md	2440	Apereo-Learning-Analytics-Initiative/OpenLRW	PASS	shelf states no licence filter; cell is populated	**ECL-2.0**
+repos/foundations.md	2462	digitalcredentials/learner-credential-wallet	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,092 B`, `sha256:1032f65d…`, holder `Digital Credentials Consortium`, `2021-2026`)
+repos/foundations.md	2463	ryjones/learner-credential-wallet	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,092 B`, `sha256:1032f65d…`, holder `Digital Credentials Consortium`, `2021-2026`)
+repos/foundations.md	2464	digitalcredentials/verifier-plus	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,087 B`, `sha256:85569d7e…`, holder `Digital Credentials Consortium`)
+repos/foundations.md	2465	digitalcredentials/dcc-admin-dashboard	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,094 B`, `sha256:0f6a5db4…`, holder `Massachusetts Institute of Technology`)
+repos/foundations.md	2466	digitalcredentials/open-badges-context	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,087 B`, `sha256:85569d7e…`, holder `Digital Credentials Consortium`)
+repos/foundations.md	2467	european-commission-empl/European-Learning-Model	PASS	shelf states no licence filter; cell is populated	🔴 **EUPL-1.2 — byte-read** (`13,865 B`, `sha256:6e5399ad…`, file named `license`, lower case)
+repos/foundations.md	2468	apereo/cas	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,358 B`, `sha256:cfc7749b…`, stock text, no holder)
+repos/foundations.md	2469	uPortal-Project/uPortal	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,359 B`, `sha256:5d7a4884…`, stock text, no holder)
+repos/foundations.md	2487	CarnegieLearningWeb/caliper-ts	PASS	shelf states no licence filter; cell is populated	**MIT** (read from `LICENSE`: `MIT License` / `Copyright (c) 2021 Imagine Learning`; **the sidebar shows only 
+repos/foundations.md	2488	open-lms-open-source/moodle-logstore_caliper	PASS	shelf states no licence filter; cell is populated	GPL-3.0
+repos/foundations.md	2489	UnizinAnalytics/caliper-net-public	PASS	shelf states no licence filter; cell is populated	LGPL-3.0
+repos/foundations.md	2490	tl-its-umich-edu/caliper-php-public	PASS	shelf states no licence filter; cell is populated	LGPL-3.0
+repos/foundations.md	2491	tl-its-umich-edu/caliper-event-analysis	PASS	shelf states no licence filter; cell is populated	**Apache-2.0**
+repos/foundations.md	2492	open-ent/caliper	PASS	shelf states no licence filter; cell is populated	🔴 **No license field shown — treat as all-rights-reserved**
+repos/foundations.md	2534	melissapula/qti-delivery	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,081 B`, `sha256:5c15e3ab…`, holder `Melissa Freundschuh-Pula`)
+repos/foundations.md	2535	johnnyrobot/qtimaker	PASS	shelf states no licence filter; cell is populated	BSD-3-Clause
+repos/foundations.md	2536	oat-sa/tao-core	PASS	shelf states no licence filter; cell is populated	GPL-2.0
+repos/foundations.md	2537	amp-up-io/qti3-item-player	PASS	shelf states no licence filter; cell is populated	**MIT**
+repos/foundations.md	2538	LongsightGroup/qti3	PASS	shelf states no licence filter; cell is populated	**MIT** (© 2026 Longsight, Inc.)
+repos/foundations.md	2539	Citolab/qti-components	PASS	shelf states no licence filter; cell is populated	GPL-3.0
+repos/foundations.md	2540	pie-framework/pie-qti	PASS	shelf states no licence filter; cell is populated	**MIT**
+repos/foundations.md	2541	examplary/qti	PASS	shelf states no licence filter; cell is populated	**MIT**
+repos/foundations.md	2542	agencyenterprise/qti-3-player	PASS	shelf states no licence filter; cell is populated	**MIT**
+repos/foundations.md	2561	openedx/openedx-platform	PASS	shelf states no licence filter; cell is populated	AGPL-3.0
+repos/foundations.md	2562	moodle/moodle	PASS	shelf states no licence filter; cell is populated	GPL-3.0
+repos/foundations.md	2563	instructure/canvas-lms	PASS	shelf states no licence filter; cell is populated	AGPL-3.0
+repos/foundations.md	2564	frappe/lms	PASS	shelf states no licence filter; cell is populated	AGPL-3.0
+repos/foundations.md	2565	overhangio/tutor	PASS	shelf states no licence filter; cell is populated	AGPL-3.0
+repos/foundations.md	2566	sakaiproject/sakai	PASS	shelf states no licence filter; cell is populated	ECL-2.0
+repos/foundations.md	2567	OpenOLAT/OpenOLAT	PASS	shelf states no licence filter; cell is populated	**Apache-2.0**
+repos/foundations.md	2568	chamilo/chamilo-lms	PASS	shelf states no licence filter; cell is populated	GPL-3.0
+repos/foundations.md	2569	ILIAS-eLearning/ILIAS	PASS	shelf states no licence filter; cell is populated	GPL-3.0
+repos/foundations.md	2570	elimu-ai/webapp	PASS	shelf states no licence filter; cell is populated	**MIT**
+repos/foundations.md	2576	FenixEdu/fenixedu-academic	PASS	shelf states no licence filter; cell is populated	LGPL-3.0
+repos/foundations.md	2577	openeducat/openeducat_erp	PASS	shelf states no licence filter; cell is populated	LGPL-3.0
+repos/foundations.md	2578	frappe/education	PASS	shelf states no licence filter; cell is populated	GPL-3.0
+repos/foundations.md	2579	francoisjacquet/rosariosis	PASS	shelf states no licence filter; cell is populated	GPL-2.0
+repos/foundations.md	2580	GibbonEdu/core	PASS	shelf states no licence filter; cell is populated	GPL-3.0
+repos/foundations.md	2581	OS4ED/openSIS-Classic	PASS	shelf states no licence filter; cell is populated	GPL (per README)
+repos/foundations.md	2599	Ed-Fi-Alliance-OSS/Ed-Fi-ODS	PASS	shelf states no licence filter; cell is populated	**Apache-2.0**
+repos/foundations.md	2600	Ed-Fi-Alliance-OSS/Data-Management-Service	PASS	shelf states no licence filter; cell is populated	**Apache-2.0**
+repos/foundations.md	2621	taybenlor/runno	PASS	shelf states no licence filter; cell is populated	MIT
+repos/foundations.md	2622	ankitects/anki	PASS	shelf states no licence filter; cell is populated	AGPL-3.0
+repos/foundations.md	2623	bigbluebutton/bigbluebutton	PASS	shelf states no licence filter; cell is populated	LGPL-3.0
+repos/foundations.md	2624	oppia/oppia	PASS	shelf states no licence filter; cell is populated	Apache-2.0
+repos/foundations.md	2625	Khan/perseus	PASS	shelf states no licence filter; cell is populated	MIT
+repos/foundations.md	2626	learningequality/kolibri	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-15`** (`1,097 B`, `sha256:3c056b34a476…`, `master` and `develop`, holder `2021 Le
+repos/foundations.md	2627	opencast/opencast	PASS	shelf states no licence filter; cell is populated	ECL-2.0
+repos/foundations.md	2628	h5p/h5p-php-library	PASS	shelf states no licence filter; cell is populated	GPL-3.0
+repos/foundations.md	2629	learningequality/kolibri-design-system	PASS	shelf states no licence filter; cell is populated	No license shown
+repos/foundations.md	2635	jupyterhub/jupyterhub	PASS	shelf states no licence filter; cell is populated	BSD-3-Clause
+repos/foundations.md	2636	jupyter/nbgrader	PASS	shelf states no licence filter; cell is populated	BSD-3-Clause
+repos/foundations.md	2637	pykt-team/pykt-toolkit	PASS	shelf states no licence filter; cell is populated	MIT
+repos/foundations.md	2638	getodk/collect	PASS	shelf states no licence filter; cell is populated	Apache-2.0
+repos/foundations.md	2639	openedx/openedx-ai-extensions	PASS	shelf states no licence filter; cell is populated	AGPL-3.0
+repos/foundations.md	2640	1edtech/caliper-spec	PASS	shelf states no licence filter; cell is populated	IMS Global Specification Document License
+repos/foundations.md	2680	hanhuark/machine-learning-for-engineers	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause — byte-read** (`1,492 B`, `sha256:92d7c53c…`, holder `Han Hu`, 2024)
+repos/foundations.md	2681	OpenRaiser/EduGraph	PASS	shelf states no licence filter; cell is populated	🔴 **SPLIT — `LICENSE` is Apache-2.0 (byte-read `11,357 B`, `sha256:58d1e17f…`) and `LICENSE-DATA` is CC BY-SA 
+repos/foundations.md	2682	Emerging-Rule/community	PASS	shelf states no licence filter; cell is populated	🟡 **CC BY 4.0 — README and badge only; the GitHub sidebar shows no licence field at all**
+repos/foundations.md	2683	rohitg00/ai-engineering-from-scratch	PASS	shelf states no licence filter; cell is populated	MIT
+repos/foundations.md	2684	patchy631/ai-engineering-hub	PASS	shelf states no licence filter; cell is populated	MIT
+repos/foundations.md	2720	CredentialEngine/osmt	PASS	shelf states no licence filter; cell is populated	**Apache-2.0**
+repos/foundations.md	2721	CredentialEngine/CredentialRegistry	PASS	shelf states no licence filter; cell is populated	**Apache-2.0**
+repos/foundations.md	2722	CredentialEngine/transcript-ctid-matcher	PASS	shelf states no licence filter; cell is populated	**Apache-2.0**
+repos/foundations.md	2723	opensalt/opensalt	PASS	shelf states no licence filter; cell is populated	**MIT**
+repos/foundations.md	2724	tabiya-tech/compass	PASS	shelf states no licence filter; cell is populated	**MIT**
+verticals/solutions.md	46	cmmedu/cmmedu-connectwithline-xblock	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** (`LICENSE`, `1,092 B`, `sha256₁₂ 16f972964728`)
+verticals/solutions.md	47	cmmedu/cmmedu-ordertable-xblock	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** (`LICENSE`, `1,092 B`, `sha256₁₂ 16f972964728`)
+verticals/solutions.md	48	cmmedu/cmmedu-tablelonginput-xblock	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** (`LICENSE`, `1,120 B`, `sha256₁₂ 3724002e0b4f`)
+verticals/solutions.md	49	cmmedu/moodle-accessrule_autostartquiz	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** (`LICENSE`, `1,064 B`, `sha256₁₂ 7b1c0d29245b`)
+verticals/solutions.md	50	cmmedu/moodle-filter-teacheronlycontent	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** (`LICENSE`, `1,092 B`, `sha256₁₂ 564aeadb2b31`)
+verticals/solutions.md	51	cmmedu/moodle-plugin-graphsandtrees	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** (`LICENSE`, `1,063 B`, `sha256₁₂ 195cb14fde0c`)
+verticals/solutions.md	100	TIM-JYU/TIM	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `LICENSE`, `1,122 B`, `sha256₁₂ 34cd7159d8ea`, holder `Univ…` (University of Jyväskylä), `2014-202
+verticals/solutions.md	101	ude-soco/CourseMapper-webserver	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `LICENSE`, `1,117 B`, `sha256₁₂ 9ab1e710c2f4`, holder `The Social Computing Group`, 2022
+verticals/solutions.md	102	particify/arsnova-webclient	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `LICENSE.md`, `1,073 B`, `sha256₁₂ a6cf43f6043d`, holder `ARSnova Team and Contributors`, 2018. 🔵 
+verticals/solutions.md	103	pacewisdomhq/TutorLoom	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `LICENSE`, `11,362 B`, `sha256₁₂ a89039268428`
+verticals/solutions.md	104	ubc/compair	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0** — `LICENSE.txt`, `32,472 B`, `sha256₁₂ c61f12da7cda`
+verticals/solutions.md	105	ucfopen/UDOIT	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0** — `LICENSE`, `35,147 B`, `sha256₁₂ 8ceb4b9ee5ad`. 🔵 **`1 B` BELOW `p866`'s published `35,148`–`3
+verticals/solutions.md	106	ucfopen/Materia	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0** — `LICENSE`, `34,523 B`, `sha256₁₂ 8486a10c4393`. 🔴 **This hash is a FOUR-WAY collision** — ide
+verticals/solutions.md	107	virtUOS/lms-ai-bridge	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0** — `LICENSE`, `35,149 B`, `sha256₁₂ 3972dc9744f6` (inside `p866`'s band)
+verticals/solutions.md	108	NinjasCL/airnotifier-moodle-bridge	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `LICENSE`, `1,105 B`, `sha256₁₂ af6384a47e05`
+verticals/solutions.md	109	datacurso/moodle-local_assign_ai	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0** — `LICENSE.md`, `35,178 B`, `sha256₁₂ ccb349b4132e`. 🔵 **`24 B` ABOVE `p866`'s band — with `35,1
+verticals/solutions.md	137	five-plus-one/AI-Marker-Suite	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0** — byte-read `LICENSE`, `35,154 B`, `sha256₁₂ 1ab858f515df`. 🔵 **`+5 B` on the canonical, and the
+verticals/solutions.md	138	Berserk-hub150/moodle-ai-skill-navigator	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — by Moodle obligation, not by choice.** Byte-read `LICENSE`, `35,153 B`, `sha256₁₂ ebdc0e5b7005`.
+verticals/solutions.md	139	saylordotorg/moodle-local_ai_course_assistant	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0** — byte-read `LICENSE`, **`35,149 B`**, `sha256₁₂ 3972dc9744f6`. 🟢 **The canonical digest, third 
+verticals/solutions.md	140	t1112000/tutor-management-app	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — byte-read `LICENSE`, `1,077 B`, `sha256₁₂ 6e0df8cccab0`, © *2026 MyClass contributors*
+verticals/solutions.md	141	migueldsants/OpENEM	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0** — byte-read `LICENSE`, `34,523 B`, `sha256₁₂ 8486a10c4393`. 🔵 **This payload is the COLLISION m
+verticals/solutions.md	177	WebPA/WebPA	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read `license.txt`, `35,147 B`, `sha256₁₂ 8ceb4b9ee5ad`**, title line `GNU GENERAL PUBLIC L
+verticals/solutions.md	184	roncoo/roncoo-education	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0 — strong copyleft, network clause** — `master`, `LICENSE`, `35,184 B`, `sha256₁₂ 6f1e622c82a3`
+verticals/solutions.md	185	arfandotid/ujian-online-ci	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `master`, `LICENSE`, `1,071 B`, `sha256₁₂ b947a9399cb3`
+verticals/solutions.md	213	xeroz369/bk-study-desk	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0 — strong copyleft, network clause** — `main`, `LICENSE.md`, `34,523 B`, `sha256₁₂ 0d96a4ff68ad`
+verticals/solutions.md	214	shevandrin/rqti	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — copyleft** — `main`, `LICENSE.md`, `34,904 B`, `sha256₁₂ 585e25ef8f59`
+verticals/solutions.md	246	opoalerta/opoalerta	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0 — strong copyleft, network clause** — `main`, `LICENSE`, `34,523 B`, `sha256₁₂ 0d96a4ff68ad`
+verticals/solutions.md	281	Submitty/Submitty	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause — byte-read `2026-11-17`** (`main/LICENSE.md`, `1,542 B`, `sha256₁₂ c123708cb4ef`, holder `© 
+verticals/solutions.md	282	foundation50/classroom50	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read `2026-11-17`** (`main/LICENSE`, `35,150 B`, `sha256₁₂ e57f1c320b8c`)
+verticals/solutions.md	283	cayhorstmann/codecheck3	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0 — byte-read `2026-11-17`** (`main/LICENSE`, `34,523 B`, `sha256₁₂ 8486a10c4393`)
+verticals/solutions.md	284	tjcsl/tin	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read `2026-11-17`** (`master/LICENSE`, `35,043 B`, `sha256₁₂ 798310f428de`)
+verticals/solutions.md	302	ls1intum/Artemis	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — byte-read `1,091 B`, `sha256₁₂ 63a0a2b4d6d9`, holder `© 2026 TUM Applied Education Technologies`
+verticals/solutions.md	303	PrairieLearn/PrairieLearn	PASS	shelf states no licence filter; cell is populated	🔴 **SPLIT — AGPL-3.0 Community Edition + PROPRIETARY Enterprise Edition**, byte-read `37,237 B`, `sha256₁₂ 548
+verticals/solutions.md	304	INGInious/INGInious	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0** — byte-read `34,764 B`, `sha256₁₂ 6d1ebe4ddf66` — 🔴 **against GitHub's `NOASSERTION`**
+verticals/solutions.md	305	learnhouse/learnhouse	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0** — byte-read `34,523 B`, `sha256₁₂ 8486a10c4393`
+verticals/solutions.md	306	classroomio/classroomio	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0** — byte-read `34,523 B`, `sha256₁₂ 8486a10c4393` 🔵 **(byte-identical to LearnHouse's — same FSF 
+verticals/solutions.md	307	openfun/richie	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — byte-read `1,079 B`, `sha256₁₂ e4b2a3148135`, holder `© 2018-present GIP FUN MOOC`
+verticals/solutions.md	308	academico-sis/academico	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — byte-read `1,094 B`, `sha256₁₂ 6051a15f4d44`
+verticals/solutions.md	325	Ed-Fi-Alliance-OSS/Fiona	PASS	shelf states no licence filter; cell is populated	🟢 Apache-2.0, byte-read `2026-11-16`
+verticals/solutions.md	446	itsmorninghao/CogniLoop	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0 — byte-read `2026-11-16`** (🔴 **`v2`/LICENSE**, `34,554 B`, `sha256₁₂ 86a27b814107`, title line `
+verticals/solutions.md	447	UFV-INGINF/JorGPT	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read `2026-11-16`** (`master/LICENSE`, `35,149 B`, `sha256₁₂ 3972dc9744f6`)
+verticals/solutions.md	465	idurar/idurar-erp-crm	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0** — `master/LICENSE`, `34,230 B`, `sha256₁₂ 7800536d5087`, title line `GNU AFFERO GENERAL PUBLIC 
+verticals/solutions.md	466	hcengineering/platform	PASS	shelf states no licence filter; cell is populated	🔴 **EPL-2.0** — `develop/LICENSE`, `14,197 B`, `sha256₁₂ 8c349f80764d`, title line `Eclipse Public License - v
+verticals/solutions.md	467	krayin/laravel-crm	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `2.2/LICENSE`, `1,078 B`, `sha256₁₂ a76aa4a4405c`, holder `Copyright 2010-2025, Webkul Software`
+verticals/solutions.md	473	krayin/laravel-crm	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-16`** (`2.2/LICENSE`, `1,078 B`, `sha256₁₂ a76aa4a4405c`, holder `Webkul Software
+verticals/solutions.md	474	hcengineering/platform	PASS	shelf states no licence filter; cell is populated	🟡 **EPL-2.0 — byte-read `2026-11-16`** (`develop/LICENSE`, `14,197 B`, `sha256₁₂ 8c349f80764d`) 🔴 **against a 
+verticals/solutions.md	501	artcc/freelingo	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0 — byte-read `2026-11-16`** (`main/LICENSE`, `34,514 B`, `sha256₁₂ ea94d5765c59`, title line `GNU 
+verticals/solutions.md	670	jupyterhub/the-littlest-jupyterhub	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause — byte-read** (`1,510 B`, `a9d15a91664e`)
+verticals/solutions.md	671	plasmabio/plasma	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause — byte-read** (`1,527 B`, `2bb2635332c1`)
+verticals/solutions.md	684	CrypToolProject/CrypTool-2	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `c71d239df917`)
+verticals/solutions.md	685	ryukzak/wrench	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause — byte-read** (`1,466 B`, `8a9b41684109`)
+verticals/solutions.md	686	pshenok/server-survival	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,079 B`, `e86ab27fe716`)
+verticals/solutions.md	772	1EdTech/lti-1-3-php-library	PASS	shelf states no licence filter; cell is populated	🟢 `Apache-2.0` (`944c6521f810`)
+verticals/solutions.md	773	packbackbooks/lti-1-3-php-library	PASS	shelf states no licence filter; cell is populated	🟢 `Apache-2.0`
+verticals/solutions.md	774	talis/lti-1-3-php-library	PASS	shelf states no licence filter; cell is populated	🟢 `Apache-2.0` (byte-identical)
+verticals/solutions.md	847	frappe/mcp	PASS	shelf states no licence filter; cell is populated	**MIT**
+verticals/solutions.md	848	rakeshgangwar/erpnext-mcp-server	PASS	shelf states no licence filter; cell is populated	MIT
+verticals/solutions.md	934	maths/moodle-qtype_stack	PASS	shelf states no licence filter; cell is populated	🟡 **`GPL-3.0`** — `COPYING.txt` `35,146 B` `sha256₁₂:c53a65c2fd56`
+verticals/solutions.md	935	gcompris/gcompris-qt	PASS	shelf states no licence filter; cell is populated	🟡 **`GPL-3.0-or-later`** — 🔴 **not at the repo root.** `COPYING` → `404`, `COPYING.md` → `404`; the grant is a
+verticals/solutions.md	936	mdjnelson/moodle-mod_customcert	PASS	shelf states no licence filter; cell is populated	🟡 **`GPL-3.0`** — `LICENSE.md` `35,146 B` `sha256₁₂:c53a65c2fd56` 🟢 **(byte-identical GPL-3 text to STACK's — 
+verticals/solutions.md	937	moodlehq/moodle-tool_pluginskel	PASS	shelf states no licence filter; cell is populated	🟡 **`GPL`** — `LICENSE.md` `35,178 B` `sha256₁₂:ccb349b4132e`. 🔴 **GitHub label: `NOASSERTION`**
+verticals/solutions.md	938	aws-samples/aws-refarch-moodle	PASS	shelf states no licence filter; cell is populated	🟢 **`Apache-2.0`** — `LICENSE` `11,357 B` `sha256₁₂:58d1e17ffe51`
+verticals/solutions.md	959	correctexam/corrigeExamFront	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — front `main/LICENSE.md` and back `deploy/LICENSE.md`, both **`1,068 B`**, both `sha256:44ed794595f
+verticals/solutions.md	960	iamtonmoy0/node-express-school-management-system	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, **`1,083 B`**, `sha256:987261cd8b0b…`. 🔴 **The payload's copyright line reads © *2
+verticals/solutions.md	961	goragodwiriya/sms	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, **`1,071 B`**, `sha256:d5b1933acb07…`, © *2026 Goragod Wiriya*.
+verticals/solutions.md	971	oaknational/Oak-Web-Application	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, **`1,081 B`**, `sha256:d40d8b747c4f…`. 🔵 The estate is MIT with British-spelled `L
+verticals/solutions.md	972	netgroup-polito/CrownLabs	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `master/LICENSE`, **`11,356 B`**, `sha256:22f773775976…`. 🔴 Default ref **`master`**, not `
+verticals/solutions.md	973	yamanidev/octolib.org	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, **`1,080 B`**, `sha256:c6e635a40028…`
+verticals/solutions.md	974	qiqqqqq517/shangkeschedule	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `main/LICENSE`, **`11,393 B`** (a DIFFERENT byte-length from the `11,337`/`11,352`/`11,356`
+verticals/solutions.md	975	ChurchApps/LessonsApp	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, **`1,067 B`**, `sha256:1b7227343b83…`
+verticals/solutions.md	976	sweetk-dev/03-IITP-DABT-JobMatching	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, **`1,086 B`**, `sha256:200f31db9392…`
+verticals/solutions.md	977	GANNER-STUDIO/dapodiksq	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, **`1,070 B`**, `sha256:563368177a58…`
+verticals/solutions.md	1000	Sunbird-Ed/SunbirdEd-portal	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `master/LICENSE`, **`1,072 B`**, `sha256:7dde06716f25…`, © *2018 Project Sunbird*. 🟢 **Exact repro
+verticals/solutions.md	1001	aureuserp/aureuserp	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `master/LICENSE`, `1,077 B`, `sha256:c6dca3b0db5b…`, © *2010-2025 Webkul Software*. 🟢 Exact reprod
+verticals/solutions.md	1002	netless-io/flat	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, `1,062 B`, `sha256:8fa1566550df…`, © *2021 Agora*. 🟢 Exact reproduction.
+verticals/solutions.md	1008	yang-jiacheng/selfstudy-server	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `master/LICENSE`, `11,343 B`, `sha256:3391ea6318f0…`
+verticals/solutions.md	1009	ApplETS/Notre-Dame	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `master/LICENSE.md`, `11,356 B`, `sha256:43070e2d4e53…`
+verticals/solutions.md	1010	KAE-Lab/UKit	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `main/LICENSE`, `11,363 B`, `sha256:4983e1b71316…`
+verticals/solutions.md	1011	hscstack/platform	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `main/LICENSE`, `11,357 B`, `sha256:c71d239df917…` (stock)
+verticals/solutions.md	1012	PedroCamargoLINCE/vagaLume	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `main/LICENSE`, `11,358 B`, `sha256:cfc7749b96f6…`
+verticals/solutions.md	1013	blagojevicboban/GEAR	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — `main/LICENSE`, `1,073 B`, `sha256:0ccee16b71b8…`
+verticals/solutions.md	1014	shaheeranser/exam-proctor	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — `main/LICENSE`, `11,358 B`, `sha256:c95bae1d1ce0…`
+verticals/solutions.md	1053	daisy/ace-gui	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-15`** (`master/LICENSE`, **`1,073 B`**, `sha256:4c8aeea93ee9…`, title line `MIT L
+verticals/solutions.md	1054	sukrutrao/Timetabler	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read `2026-11-15`** (`master/LICENSE`, **`1,087 B`**, title line `MIT License`, `Copyright (c) 
+verticals/solutions.md	1173	Tangerine-Community/Tangerine	PASS	shelf states no licence filter; cell is populated	🔴 **`GPL-3.0` — byte-read `LICENSE.txt`, `35,147 B`, `sha256:8ceb4b9ee5ad…`**
+verticals/solutions.md	1174	Tangerine-Community/tangy-form	PASS	shelf states no licence filter; cell is populated	🔴 **`GPL-3.0` — byte-read `LICENSE.txt`, `35,147 B`, `sha256:8ceb4b9ee5ad…`**
+verticals/solutions.md	1175	chimple/bahama	PASS	shelf states no licence filter; cell is populated	🟡 **`MPL-2.0` — byte-read `16,725 B`, `sha256:1f256ecad192…`**
+verticals/solutions.md	1176	chimple/cuba	PASS	shelf states no licence filter; cell is populated	🔴 **`AGPL-3.0` — byte-read `LICENSE.md`, `34,522 B`, `sha256:20b067f86de3…`**
+verticals/solutions.md	1177	XPRIZE/GLEXP-Team-The-Linguaculturalists	PASS	shelf states no licence filter; cell is populated	🔴 **`GPL-3.0` — byte-read `COPYING`, `35,147 B`, `sha256:8ceb4b9ee5ad…`**
+verticals/solutions.md	1193	juanda99/arasaac-frontend	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`LICENSE.md`, `1,084 B`, `sha256:1db6216968f9…`, holder **`2016 Gobierno de Aragón`**)
+verticals/solutions.md	1194	cboard-org/cboard	PASS	shelf states no licence filter; cell is populated	🔴 **`GPL-3.0` — byte-read** (`LICENSE.txt`, `35,141 B`, `sha256:589ed823e9a8…`)
+verticals/solutions.md	1195	asterics/AsTeRICS-Grid	PASS	shelf states no licence filter; cell is populated	🔴 **`AGPL-3.0` — byte-read** (`34,523 B`, `sha256:8486a10c4393…`)
+verticals/solutions.md	1258	toughIQ/webuntis-mcp	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,063 B`, `sha256:2c0b8069fc10…`)
+verticals/solutions.md	1259	DenizCiger/untis-mcp	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,067 B`, `sha256:04314fb25dd9…`)
+verticals/solutions.md	1260	jujukingg/edu-mcp	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,080 B`, `sha256:2ede3d997023…`)
+verticals/solutions.md	1261	ljarochowski/librus-mcp	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,079 B`, `sha256:be00e61b6328…`)
+verticals/solutions.md	1262	israelroldan/unofficial-magister-mcp	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,069 B`, `sha256:bd7dc91514e6…`)
+verticals/solutions.md	1263	changshenhan/bb-mcp	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,068 B`, `sha256:aec9afda396f…`)
+verticals/solutions.md	1264	Petri-Hub/fam-mcp	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,065 B`, `sha256:a659ef421023…`)
+verticals/solutions.md	1265	KaioBorgesDev/siga-mcp	PASS	shelf states no licence filter; cell is populated	🔴 **NO LICENCE FILE — byte-probe returned nothing on `main` or `master`.** 🔴 **Not build-safe. The largest ins
+verticals/solutions.md	1266	Jayb1u3/andrews-ssb-mcp	PASS	shelf states no licence filter; cell is populated	🔴 **NO LICENCE FILE.** 🔴 **Not build-safe — and at `4 KB` it is a sketch, so it is shelved as EVIDENCE that th
+verticals/solutions.md	1286	sbdnakashima/agentic-star-iep-section-drafting-agent	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** (templates and both SDKs, all byte- or metadata-verified)
+verticals/solutions.md	1287	haidang024/agentic-star-education-curriculum-change-impact-briefing-agent	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ae3eea9ac056`)
+verticals/solutions.md	1309	jlouisbru/Canvas-grading-with-AI	PASS	shelf states no licence filter; cell is populated	🟡 **MIT (code) + CC BY-SA 4.0 (docs)** — byte-read `2026-11-16` (`main/LICENSE`, `1,071 B`, `sha256₁₂ 72f0ea52
+verticals/solutions.md	1310	BridgeSuite/GradeBridge-AI	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** — byte-read `2026-11-16` (`main/LICENSE`, `1,064 B`, `sha256₁₂ 2bdd760d7375`, holder `2026 VeriQAi`)
+verticals/solutions.md	1311	webtech-network/autograder	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** — byte-read `2026-11-16` (`main/LICENSE`, `11,357 B`, `sha256₁₂ c71d239df917`)
+verticals/solutions.md	1327	xhgzs1314/mokexamsys	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,072 B`, `sha256:876b0fd6f66a…`, `master/LICENSE` [DEFAULT], refs=[`master`])
+verticals/solutions.md	1328	Quanda666/smart-exam-system	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,114 B`, `sha256:4a4252b5f68b…`, `main/LICENSE` [DEFAULT], refs=[`main`])
+verticals/solutions.md	1329	deceiver-djw/ExamOnline	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,356 B`, `sha256:c5accbbd8546…`, `master/LICENSE` [DEFAULT], refs=[`master`])
+verticals/solutions.md	1330	mindskip/xzs	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0 — byte-read** (`34,520 B`, `sha256:76a97c878c9c…`, `master/LICENSE` [DEFAULT], refs=[`master`])
+verticals/solutions.md	1331	youufis/SmartKBS	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0 — byte-read** (`34,834 B`, `sha256:2086e7eae183…`, `master/LICENSE` [DEFAULT], refs=[`master` `re
+verticals/solutions.md	1341	Selleo/mentingo	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,062 B`, `sha256:ceb97717de1f…`)
+verticals/solutions.md	1361	mohanvd/edutraceapp	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** (`raw.githubusercontent.com/mohanvd/edutraceapp/main/LICENSE`, `1,065 B`, `sha256:88765a78…`, first 
+verticals/solutions.md	1458	yungifez/skuul	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,068 B`, `sha256:91e9aaa8…`, holder `Ebuka Ifezue`, 2022)
+verticals/solutions.md	1459	nomadicjosh/etsis	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`LICENSE.md`, `1,113 B`, `sha256:8d66d7d7…`, holder `Joshua Parker`, 2022)
+verticals/solutions.md	1460	bcgov/SIMS	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:58d1e17f…`, stock text)
+verticals/solutions.md	1461	tutors-sdk/tutors-mono-repo	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,082 B`, `sha256:f4cbe9e7…`, holder `Tutors Open Source Project`, 2022)
+verticals/solutions.md	1546	CentraleSupelec/mydocker	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`LICENSE.md`, `1,081 B`, `sha256:394ccfb071f6…`, stock text, holder `2023-prese…`)
+verticals/solutions.md	1547	csmberkeley/csm_web	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,081 B`, `sha256:53e957827340…`, stock text, holder `2019 Computer Scie…`)
+verticals/solutions.md	1548	PlanB-Network/bitcoin-learning-management-system	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,076 B`, `sha256:0f6ce0948634…`, stock text, holder `2023-2026 Pla…`)
+verticals/solutions.md	1549	sitenaut/schoolz	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:c71d239df917…`, stock text, no holder)
+verticals/solutions.md	1576	folio-org/platform-complete	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** (`11,356 B`, `sha256:43070e2d…`)
+verticals/solutions.md	1577	inveniosoftware/invenio-app-rdm	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** (`1,243 B`, `sha256:ccb5c2a3…`, holder `CERN`)
+verticals/solutions.md	1578	samvera/hyrax	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** (`11,564 B`, `sha256:40c35ac3…`)
+verticals/solutions.md	1579	scieloorg/opac	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-2-Clause** (`1,292 B`, `sha256:493da013…`, holder `SciELO ORG`)
+verticals/solutions.md	1580	scieloorg/scielo-manager	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-2-Clause** (`1,328 B`, `sha256:c0182a8e…`, holder `SciELO`)
+verticals/solutions.md	1581	DOAJ/doaj	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** (`11,323 B`, `sha256:6dc0e068…`)
+verticals/solutions.md	1582	vufind-org/vufind	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-2.0** (`15,045 B`, `sha256:8f4b368d…`)
+verticals/solutions.md	1583	omeka/Omeka-S	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0** (`35,146 B`, `sha256:c53a65c2…`)
+verticals/solutions.md	1584	eprints/eprints	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0** (`32,421 B`, `sha256:37d3866d…`, `COPYING`)
+verticals/solutions.md	1595	apereo/cas	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** (`11,358 B`, `sha256:cfc7749b…`)
+verticals/solutions.md	1596	uPortal-Project/uPortal	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0** (`11,359 B`, `sha256:5d7a4884…`)
+verticals/solutions.md	1597	digitalcredentials/dcc-admin-dashboard	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** (`1,094 B`, `sha256:0f6a5db4…`, holder `Massachusetts Institute of Technology`)
+verticals/solutions.md	1598	digitalcredentials/verifier-plus	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** (`1,087 B`, `sha256:85569d7e…`)
+verticals/solutions.md	1599	digitalcredentials/learner-credential-wallet	PASS	shelf states no licence filter; cell is populated	🟢 **MIT** (`1,092 B`, `sha256:1032f65d…`, holder `Digital Credentials Consortium`)
+verticals/solutions.md	1600	european-commission-empl/European-Learning-Model	PASS	shelf states no licence filter; cell is populated	🔴 **EUPL-1.2 — reciprocal** (`13,865 B`, `sha256:6e5399ad…`)
+verticals/solutions.md	1601	LearningLocker/learninglocker	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0** (`35,141 B`, `sha256:589ed823…`)
+verticals/solutions.md	1624	olmps/memo	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause — byte-read** (`1,515 B`, `sha256:ae042264…`, holder `Olympus`)
+verticals/solutions.md	1625	andymatuschak/orbit	PASS	shelf states no licence filter; cell is populated	🟡 **SPLIT GRANT — byte-read** (`457 B`, `sha256:86b93fd1…`): 🟢 **Apache-2.0 for all sources and compiled binar
+verticals/solutions.md	1626	eudoxia0/hashcards	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,358 B`, `sha256:cfc7749b…`)
+verticals/solutions.md	1648	autolab/Autolab	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,323 B`, `sha256:6dc0e068…`)
+verticals/solutions.md	1649	judge0/judge0	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read** (`34,525 B`, `sha256:aafb5908…`)
+verticals/solutions.md	1650	SafeExamBrowser/seb-win-refactoring	PASS	shelf states no licence filter; cell is populated	🟡 **MPL-2.0 — byte-read** (`16,725 B`, `sha256:c76f740d…`); 🔴 **the macOS/iOS client `seb-mac` (`150★`) has NO
+verticals/solutions.md	1651	UniTime/unitime	PASS	shelf states no licence filter; cell is populated	🟢 **Apache-2.0 — byte-read** (`11,357 B`, `sha256:58d1e17f…`)
+verticals/solutions.md	1652	dodona-edu/dolos	PASS	shelf states no licence filter; cell is populated	🟢 **MIT — byte-read** (`1,083 B`, `sha256:9e2ceeed…`, holder `Team Dolos <dolos@ugent.be>`)
+verticals/solutions.md	1653	pressbooks/pressbooks	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read at `dev/LICENSE.md`** (`35,146 B`, `sha256:c53a65c2…`); 🔴 **`LICENSE` `404`s at both `
+verticals/solutions.md	1670	DSpace/DSpace	PASS	shelf states no licence filter; cell is populated	🟢 **BSD-3-Clause — byte-read** (`1,504 B`, `sha256:baf9ee18…`)
+verticals/solutions.md	1671	zotero/zotero	PASS	shelf states no licence filter; cell is populated	🟡 **AGPL-3.0 — byte-read at `COPYING`** (`35,358 B`, `sha256:5b7dc919…`); 🔴 the API reports `NOASSERTION`
+verticals/solutions.md	1672	pkp/ojs	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read** (`35,148 B`, `sha256:8b1ba204…`)
+verticals/solutions.md	1673	Koha-Community/Koha	PASS	shelf states no licence filter; cell is populated	🔴 **GPL-3.0 — byte-read** (`35,150 B`, `sha256:9edff973…`)
+verticals/solutions.md	1674	trahloff/Aldine	PASS	shelf states no licence filter; cell is populated	🔴 **AGPL-3.0 — byte-read** (`34,522 B`, `sha256:4df3c306…`)
+verticals/solutions.md	1687	DanMo661/xuexitong-cli	PASS	shelf states no licence filter; cell is populated	**MIT** ×10, **Apache-2.0** ×1
+verticals/solutions.md	1688	ahdaolma/yuketang-mcp	PASS	shelf states no licence filter; cell is populated	**MIT**
+verticals/solutions.md	1689	cantpr09ram/TronClass-MCP	PASS	shelf states no licence filter; cell is populated	🔴 **NONE — `0` of `5` carry any licence**, while all `5` return `200` on `README.md`
+verticals/solutions.md	1690	alfa-yohannis/siakad-mcp	PASS	shelf states no licence filter; cell is populated	**MIT**
+verticals/solutions.md	1691	arapodcho/mcp_server_neis_api	PASS	shelf states no licence filter; cell is populated	**MIT**
+verticals/solutions.md	1713	chrischall/infinitecampus-mcp	PASS	shelf states no licence filter; cell is populated	**MIT**
+verticals/solutions.md	1714	coolcrazycid/studentvue-mcp	PASS	shelf states no licence filter; cell is populated	**MIT** ×2
+verticals/solutions.md	1715	coolcrazycid/schoology-mcp	PASS	shelf states no licence filter; cell is populated	**MIT** (several); `dewey` MIT under a GitHub `NOASSERTION`
+verticals/solutions.md	1716	caleb-media-studio/skyward-mcp	PASS	shelf states no licence filter; cell is populated	**MIT**
+verticals/solutions.md	1717	CDataSoftware/blackbaud-fe-nxt-mcp-server-by-cdata	PASS	shelf states no licence filter; cell is populated	**MIT**
+verticals/solutions.md	1718	zuvy/ps-mcp-server	PASS	shelf states no licence filter; cell is populated	🔴 **NONE**
+verticals/solutions.md	1740	frappe/education	PASS	shelf states no licence filter; cell is populated	🔴 GPL-3.0 (byte-read `license.txt`, `19 B`)
+verticals/solutions.md	1741	frappe/frappe	PASS	shelf states no licence filter; cell is populated	**MIT**
+verticals/solutions.md	1742	frappe/lms	PASS	shelf states no licence filter; cell is populated	🔴 AGPL-3.0
+verticals/solutions.md	1757	GallegoSz/sigaa-mcp	PASS	shelf states no licence filter; cell is populated	MIT ×4
+verticals/solutions.md	1758	nialvape/utn-mcp	PASS	shelf states no licence filter; cell is populated	**ISC**
+verticals/solutions.md	1759	HyNuwa/UniMCP	PASS	shelf states no licence filter; cell is populated	**MIT + inherited ISC**
+verticals/solutions.md	1760	fabrica-de-inovacao/expeditto	PASS	shelf states no licence filter; cell is populated	🔴 AGPL-3.0
+verticals/solutions.md	1781	udondan/lanis	PASS	shelf states no licence filter; cell is populated	MIT
+verticals/solutions.md	1782	udondan/dsbmobile	PASS	shelf states no licence filter; cell is populated	MIT
+verticals/solutions.md	1783	andyswe/admentum-mcp	PASS	shelf states no licence filter; cell is populated	MIT
+verticals/solutions.md	1784	boraita/ipasen_mcp	PASS	shelf states no licence filter; cell is populated	MIT
+verticals/solutions.md	1785	weirdapps/sch-mail	PASS	shelf states no licence filter; cell is populated	MIT
+verticals/solutions.md	1786	Severnbli/edu-by-agent	PASS	shelf states no licence filter; cell is populated	🔴 GPL-3.0
+verticals/solutions.md	1787	sairo-cyber/pronoteConnect	PASS	shelf states no licence filter; cell is populated	🔴 GPL-3.0-or-later (byte-verified against `NOASSERTION`)
+verticals/solutions.md	1807	usechalk/chalk	PASS	shelf states no licence filter; cell is populated	🔴 AGPL-3.0
+verticals/solutions.md	1818	jtayped/sakai-mcp	PASS	shelf states no licence filter; cell is populated	`MIT`
+verticals/solutions.md	1819	sayt25606-rgb/sakai-tasks-mcp	PASS	shelf states no licence filter; cell is populated	`Apache-2.0`
+verticals/solutions.md	1820	boyuchengz/canvas-mcp	PASS	shelf states no licence filter; cell is populated	`MIT` (byte-verified, blob `5ba93171ff8f`)
+verticals/solutions.md	1821	riripatate/schoology-mcp	PASS	shelf states no licence filter; cell is populated	`MIT`
+verticals/solutions.md	1822	jibberswrld/fcps-school-mcp	PASS	shelf states no licence filter; cell is populated	`MIT`
+verticals/solutions.md	1823	dajun666/schoology-mcp	PASS	shelf states no licence filter; cell is populated	`MIT`
+verticals/solutions.md	1824	amirtds/cubite-mcp	PASS	shelf states no licence filter; cell is populated	`MIT`
+verticals/solutions.md	2006	moodle/moodle	PASS	shelf states no licence filter; cell is populated	GPL-3.0
+verticals/solutions.md	2007	openedx/openedx-platform	PASS	shelf states no licence filter; cell is populated	AGPL-3.0
+verticals/solutions.md	2008	instructure/canvas-lms	PASS	shelf states no licence filter; cell is populated	AGPL-3.0
+verticals/solutions.md	2009	frappe/lms	PASS	shelf states no licence filter; cell is populated	AGPL-3.0
+verticals/solutions.md	2010	sakaiproject/sakai	PASS	shelf states no licence filter; cell is populated	ECL-2.0
+verticals/solutions.md	2011	OpenOLAT/OpenOLAT	PASS	shelf states no licence filter; cell is populated	**Apache-2.0**
+verticals/solutions.md	2012	chamilo/chamilo-lms	PASS	shelf states no licence filter; cell is populated	GPL-3.0
+verticals/solutions.md	2013	ILIAS-eLearning/ILIAS	PASS	shelf states no licence filter; cell is populated	GPL-3.0
+verticals/solutions.md	2019	Cvmcosta/ltijs	PASS	shelf states no licence filter; cell is populated	Apache-2.0
+verticals/solutions.md	2020	packbackbooks/lti-1-3-php-library	PASS	shelf states no licence filter; cell is populated	Apache-2.0
+verticals/solutions.md	2021	Simon-Initiative/lti_1p3	PASS	shelf states no licence filter; cell is populated	MIT
+verticals/solutions.md	2022	lti-tool/lti-tool	PASS	shelf states no licence filter; cell is populated	MIT
+verticals/solutions.md	2028	openeducat/openeducat_erp	PASS	shelf states no licence filter; cell is populated	LGPL-3.0
+verticals/solutions.md	2029	frappe/education	PASS	shelf states no licence filter; cell is populated	GPL-3.0
+verticals/solutions.md	2030	francoisjacquet/rosariosis	PASS	shelf states no licence filter; cell is populated	GPL-2.0
+verticals/solutions.md	2031	GibbonEdu/core	PASS	shelf states no licence filter; cell is populated	GPL-3.0
+verticals/solutions.md	2032	OS4ED/openSIS-Classic	PASS	shelf states no licence filter; cell is populated	GPL (README)
+verticals/solutions.md	2033	Gego-K12/gegok12	PASS	shelf states no licence filter; cell is populated	**MIT**
+verticals/solutions.md	2034	SVWS-NRW/SVWS-Server	PASS	shelf states no licence filter; cell is populated	**BSD-3-Clause**
+verticals/solutions.md	2035	portabilis/i-educar	PASS	shelf states no licence filter; cell is populated	**GPL-2.0**
+verticals/solutions.md	2075	iblai/sis	PASS	shelf states no licence filter; cell is populated	MIT (`1,089 B`, `969b7073d1c42ac2`)
+verticals/solutions.md	2076	iblai/lms	PASS	shelf states no licence filter; cell is populated	MIT (`1,063 B`, `f1269b7b2313456a`)
+verticals/solutions.md	2077	iblai/os	PASS	shelf states no licence filter; cell is populated	MIT (`1,070 B`, `13029f084e13d864`)
+verticals/solutions.md	2078	iblai/ontology	PASS	shelf states no licence filter; cell is populated	MIT (`1,063 B`, `f1269b7b2313456a`)
+verticals/solutions.md	2099	RohanMuppa/brightspace-mcp-server	PASS	shelf states no licence filter; cell is populated	MIT
+verticals/solutions.md	2100	JhostinAleck/brightspace-mcp	PASS	shelf states no licence filter; cell is populated	MIT
+verticals/solutions.md	2101	alejooroncoy/campus-cli	PASS	shelf states no licence filter; cell is populated	ISC
+verticals/solutions.md	2102	kingdonkatsu/ntulearn-mcp	PASS	shelf states no licence filter; cell is populated	MIT
+verticals/solutions.md	2103	Mattlo0546/blackboard-mcp	PASS	shelf states no licence filter; cell is populated	MIT
+verticals/solutions.md	2129	krayin/laravel-crm	PASS	shelf states no licence filter; cell is populated	**MIT**
+verticals/solutions.md	2130	cortezaproject/corteza	PASS	shelf states no licence filter; cell is populated	**Apache-2.0**
+verticals/solutions.md	2131	apache/ofbiz-framework	PASS	shelf states no licence filter; cell is populated	**Apache-2.0**
+verticals/solutions.md	2152	learningequality/kolibri	PASS	shelf states no licence filter; cell is populated	**MIT**
+verticals/solutions.md	2153	oppia/oppia	PASS	shelf states no licence filter; cell is populated	**Apache-2.0**
+verticals/solutions.md	2154	h5p/h5p-php-library	PASS	shelf states no licence filter; cell is populated	GPL-3.0
+verticals/solutions.md	2155	Khan/perseus	PASS	shelf states no licence filter; cell is populated	**MIT**
+verticals/solutions.md	2156	bigbluebutton/bigbluebutton	PASS	shelf states no licence filter; cell is populated	LGPL-3.0
+verticals/solutions.md	2157	opencast/opencast	PASS	shelf states no licence filter; cell is populated	ECL-2.0
+verticals/solutions.md	2158	ankitects/anki	PASS	shelf states no licence filter; cell is populated	AGPL-3.0
+verticals/solutions.md	2164	jupyterhub/jupyterhub	PASS	shelf states no licence filter; cell is populated	BSD-3-Clause
+verticals/solutions.md	2165	jupyter/nbgrader	PASS	shelf states no licence filter; cell is populated	BSD-3-Clause
+verticals/solutions.md	2166	pykt-team/pykt-toolkit	PASS	shelf states no licence filter; cell is populated	**MIT**
+verticals/solutions.md	2167	getodk/collect	PASS	shelf states no licence filter; cell is populated	Apache-2.0
+verticals/solutions.md	2168	wwrwbs/AI_AWE	PASS	shelf states no licence filter; cell is populated	Apache-2.0 (README)
+verticals/solutions.md	2169	numbas/Numbas	PASS	shelf states no licence filter; cell is populated	**Apache-2.0**
+verticals/solutions.md	2170	oat-sa/tao-core	PASS	shelf states no licence filter; cell is populated	GPL-2.0
+verticals/solutions.md	2171	amp-up-io/qti3-item-player	PASS	shelf states no licence filter; cell is populated	**MIT**
+verticals/solutions.md	2172	1edtech/caliper-spec	PASS	shelf states no licence filter; cell is populated	IMS spec-document license
+verticals/solutions.md	2173	CarnegieLearningWeb/caliper-ts	PASS	shelf states no licence filter; cell is populated	**MIT** (read from `LICENSE`; sidebar shows only a generic link)
+verticals/solutions.md	2174	open-lms-open-source/moodle-logstore_caliper	PASS	shelf states no licence filter; cell is populated	GPL-3.0

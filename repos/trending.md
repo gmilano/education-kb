@@ -4,6 +4,88 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — `p868`: **`35` of the `66` NEW addresses this week are XBlocks — so the far side of Open edX's permissive seam is both larger and LESS covered here than the platform it extends; and a release-branch default, not `main`, is the NORM in this estate (`24%` of probes measured)**
+
+### 🟢 The extension estate, measured as a proportion for the first time
+
+🟢 **`p867` found Open edX's licence SEAM: platform and student-data components `AGPL-3.0`,
+extension surface (`XBlock`, `xblock-sdk`, `openedx-events`, `codejail`, `paragon`)
+`Apache-2.0` — `71` / `21` / `1` over `96` repositories.** 🟢 **`p868`'s sweep answers the next
+question, which is how much of that far side this base actually holds:**
+
+| Measure | Result |
+|---|---|
+| organisation-owned addresses swept | `232` |
+| passing the mechanical domain predicate (`KEEP`) | `134` |
+| `NEW` — absent from this entire corpus | `66` |
+| 🔴 **of those `66`, `xblock-*` or `*-xblock`** | 🔴 **~`35`** |
+
+🔴 **So more than half of everything NEW this week is one artefact type inside one platform's
+extension point.** 🔵 **Named owners in that `35`: `eduNEXT` (`7`: flow-control, mindmap,
+controlled-navigation, limesurvey, imagesgallery, extemporaneous-grading, discussion-grading,
+completion-grading), `IONISx` (`6`: slideshare, feedback, personality-test, audio, taggedtext,
+video), `openedxou` (`5`: click-to-reveal, print, box, signpost, captioned-image), `open-craft`
+(`4`: graph, grammarian, capa-visual-editor), `openfun`, `edly-io`, `cmmedu`, `collabassess`,
+`overhangio`, `Abstract-Tech`, `raccoongang`, `microsoft`, `edx`.**
+🟢 **That is an ECOSYSTEM of named integrators, not a long tail of hobbyists — which is the
+reading that matters for a studio: Open edX work is subcontracted to a small, visible set of
+shops, and their XBlocks are the catalogue of what institutions have already paid to have built.**
+
+🟡 **Declared limit: this is a NEW-address count from a `12`-vein sweep, not an enumeration of
+the XBlock estate.** 🟢 **`p867` enumerated `96` repositories across four owners; nobody has
+enumerated the integrators'. Registered as [`868-G4`](../intel/open-gaps.md).**
+
+### 🔴 The default branch is a RELEASE BRANCH here, and that broke a channel
+
+🟢 **[`867-G5`](../intel/open-gaps.md) asked for one number: how many raw-channel probes would
+`404` on a `main` assumption.** 🟢 **Measured directly — resolve the ref, walk the grant ladder,
+then re-probe the FOUND path at `main`**
+([`record`](../evidence/licence-byteread-ref.2026-11-17-p868.tsv)):
+
+| Batch | Probes | 🔴 `main` would have `404`ed |
+|---|---|---|
+| general | `17` | 🔴 `5` (`29%`) |
+| the CMM Educación estate | `8` | 🔴 `1` |
+| 🔴 **combined** | **`25`** | 🔴 **`6` (`24%`)** |
+
+🔴 **`p867` estimated `3` in `31` — `10%`. The measured rate is more than double.**
+🟢 **Because the estate being swept is Open edX and Moodle, where the default ref is routinely
+a release branch:** `cmmedu-release/lilac`, `eol-release/lilac`, `MOODLE_405_STABLE`,
+`release-23.x`, and `development` on `tutors-sdk/tutors` (`125★`).
+🔵 **`12` of CMM Educación's `18` repositories default to a release branch.**
+🟢 **And the first channel probe of this pass hit the sibling defect: `openedx/XBlock` at
+`master/LICENSE` is a `404` because the file is `LICENSE.TXT` — a CASE variant, which is the
+same class `866-G5` found twice.**
+
+### 🔴 The liveness finding this log has to carry: `15` repos from one dead competition are still shelved as current
+
+🟢 **[`867-G2`](../intel/open-gaps.md)'s census ran over all `1,015` counted addresses and found
+`136` with no push in over a year** ([`census`](../evidence/liveness-census.2026-11-17-p868.tsv)).
+🔴 **The largest nameable cluster is the XPRIZE Global Learning Challenge estate — `15`
+addresses (`XPRIZE/GLEXP-Team-*`, `chimple/*`, `curiouslearning/*`, `onebillion`), all last
+pushed in 2019.** 🔵 **The competition ended; these shelves did not notice, and they have been
+recommending its submissions for seven years.**
+
+🟢 **A channel correction worth more than the count: `11` addresses would not resolve on
+`search/repositories`, and `git ls-remote` found `9` of them ALIVE**
+([`resolution`](../evidence/unresolved-resolution.2026-11-17-p868.tsv)) — including
+`mitodl/open-learning-ai-tutor`, `digitalcredentials/learner-credential-wallet` and
+`openwallet-foundation-labs/learner-credential-wallet`. 🔴 **A `repo:` qualifier miss is not an
+absence.** 🟢 **The `2` genuine ones return a CREDENTIAL PROMPT, which `p293`'s convention
+records as a measurement: private or deleted, indistinguishable.**
+
+### 🟡 Trending claims this week, with their channel grade attached
+
+🔴 **`github.com/trending` is `403` at this session's proxy — so nothing below is first-hand.**
+
+| Address | Claim | Grade |
+|---|---|---|
+| `geekjourneyx/interactive-learning` | tracked on an aggregator, late September 2026 | 🟡 UNVERIFIED |
+| `SirhanMacx/Claw-ED` | tracked on an aggregator, October 2026 | 🟡 UNVERIFIED |
+| `TapXWorld/ChinaTextbook` | free Chinese primary/secondary/university textbooks, undated post | 🟡 UNVERIFIED |
+| `HKUDS/DeepTutor` | surfaced `2026-10-30` | 🟢 already `SHELVED` here |
+
+
 ## 🟢 `2026-11-17` — `p867`: **`60`-odd `openedx/*` repositories were NEW to a base that has named Open edX more than a thousand times; a licence filename's CASE decided whether this base could see a grant, twice, in opposite directions; and one AGPL-3.0 payload is byte-identical across four repositories on three continents**
 
 ### 🟢 The estate nobody had enumerated

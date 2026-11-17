@@ -4,6 +4,151 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `p868` · `2026-11-17` — **the regional legs re-run; the APAC contamination `p867` reported REPRODUCED exactly and is placed rather than discarded; and LATAM's second consecutive regulatory nil is now a measured FINDING instead of an absence**
+
+🔴 **Channel note, carried: every EU domain is unreachable from this session**
+(`eur-lex.europa.eu` → `000`, and `europarl.europa.eu` does not resolve), so every EU
+instrument below is graded **`CITED, NOT READ`** per [`866-G3(a)`](open-gaps.md)'s closure rule.
+
+### 🟢 What the four regional legs returned, each with its nil declared
+
+| Leg | Placed? | The substance | 🔴 Declared nil |
+|---|---|---|---|
+| **North America** | 🟢 yes | REGULATION is the story, not adoption. Federal executive orders 2025–early 2026 produced a national AI-in-education framework and a K-12 AI instruction task force; ~`100` state bills this year touch student AI use; at least `15` states have introduced or passed education-AI legislation; a California ballot initiative on AI and minors was announced January 2026 | 🔴 no single consolidated federal statute — the activity is executive action plus state law |
+| **EMEA** | 🟢 yes, richest leg again | Futuresource: `67%` of teachers now using AI tools, K-12 and HE moving from pilots to structured implementation. Epson survey, ~`3,360` respondents across six European countries: students are PUSHING adoption (`76%` expect to use AI in learning) while `80%` of teachers worry it is arriving faster than schools can manage. Council of the EU education ministers adopted conclusions on teachers and AI, May 2026. Commission consultation on Article 6 high-risk classification guidelines closed `2026-06-23`. Eurydice 2026 report on digital education in Europe | 🟡 every EU primary source is unreachable here; all of the above is secondary |
+| **APAC** | 🟢 yes, 🔴 **contaminated identically to `p867`** | Ipsos Education Monitor 2026: LOWER support for banning AI in schools across the Asian markets surveyed. Times Higher Education: patchy uptake, limited connectivity named as a barrier, virtual-tutor adoption at `30%`. Cambridge English convened APAC leaders in Kuala Lumpur, April 2026. Acer is the only named vendor returned | 🔴 **no consolidated APAC-wide regulatory framework, and no vendor list beyond one name** |
+| **LATAM** | 🟢 yes on adoption, 🔴 **NIL on regulation for the second consecutive pass** | UNESCO IESALC with UNU-IAS studied `200` institutions across `19` countries on five dimensions including governance. DEC LATAM survey 2026 (`30,000`+ responses, `29` institutions, with Tecnológico de Monterrey's Institute for the Future of Education): `92%` of students and `79%` of faculty actively engaging with AI, but only `30%` believe their institution responded effectively, and formal university AI policies are largely absent. IDB publishes a regional snapshot of `193` real AI initiatives. EdTech Hub and Fundación Ceibal launched an LAC partnership | 🔴 **no national AI-in-education law surfaced in any of the four queries** |
+
+🟢 **The APAC contamination, handled rather than complained about.** 🔴 **`p867` recorded that
+the APAC regional token returns Gulf and UK items at the top; it reproduced exactly — the UAE
+Ministry of Education's `25` generative-AI prohibitions in schools (February 2026) and the UK's
+generative-AI safety standards for schools (January 2026).** 🟢 **Both are real and both are
+EMEA, so `p868` PLACES them in EMEA below rather than discarding them as noise.**
+🔵 **A region token is a search parameter, not a jurisdiction; the fix is to re-file, not to drop.**
+
+🟢 **LATAM's regulatory nil has become a positive finding.** 🔵 **Two independent instruments —
+UNESCO IESALC over `200` institutions and the DEC over `30,000` respondents — both report the
+same thing: adoption is at or above North American levels (`92%` of students) and GOVERNANCE is
+absent.** 🟢 **That is not "no information about LATAM regulation". That is a measured
+adoption-without-governance gap, and it is the single most actionable regional fact on this
+page: the deliverable a LATAM institution needs first is a policy and a control surface, not a
+tutor.**
+
+🔴 **And the market-size numbers remain irreconcilable, recorded as such for the third pass
+rather than averaged into a false consensus:** `$10.6B` in 2026 → `$42.48B` by 2030 at `41.5%`
+CAGR in one source; `$9.58B` growing at `>30%` in another; `$136.79B` by 2035 in a third.
+🟢 **The non-monetary figures are more useful and more consistent:** generative-AI use among
+education organisations at `86%`; student-and-teacher AI use rising `53%` (2024) → `88%` (2025)
+→ `94%` (2026); and 🔴 **only `45%` of the most-used tools have published research meeting an
+ESSA evidence tier** — which is the number a studio should quote in a procurement conversation.
+
+### 🟢 Two structural shifts worth more than the market sizes
+
+🔴 **(1) The homework-help layer is being deleted, not disrupted.** 🟢 **Chegg cut `45%` of its
+staff (`388` roles) and recalled a former CEO as AI search answers gutted its traffic.**
+🔵 **A studio pitching into education in 2026 is not competing with incumbents for that layer;
+it is arriving after the layer collapsed.**
+
+🟢 **(2) The buying centre moved to workforce and skills.** 🟢 **Instructure's Canvas Career — a
+skills-first AI LMS for workforce learning — went GA in January 2026.** 🔵 **And the fading list
+is as informative: blockchain credentialing, full-classroom VR, and the chatbot-as-tutor pitch.**
+🟢 **The OECD's Digital Education Outlook 2026 is reported as the authority behind the shift —
+AI helps learning only when pedagogy stays in control — which is the same sentence this base's
+last several passes have been arriving at from the licence side.**
+
+## Opportunities by region
+
+🟢 **One block, five closed-vocabulary subsections, every opportunity named with the repositories
+it is built from.** 🔵 **Rewritten this pass because the regional legs moved; the previous block
+is retained above as history.**
+
+### North America
+
+🟢 **The engagement shape: a COMPLIANCE AND EVIDENCE layer, not a tutor.** 🔴 **~`100` state
+bills and at least `15` states with education-AI law means a district's binding constraint is
+demonstrating what a tool did, to a legislature that changes the rule each session — and only
+`45%` of the tools it already bought have ESSA-tier evidence.**
+🟢 **Built from: `haxtheweb/haxcms-php` (Apache-2.0, Penn State — content that survives the
+platform), `learning-commons-org/evaluators` 🔴 *(code MIT, corpora `CC BY-NC-SA 4.0` — the
+corpora cannot ship in a commercial deliverable; see [`P-868-A`](../compose/patterns.md))*,
+`PlaypowerLabs/EdOptimize` 🔴 *(stale: last push 2021, `1,991` days — do not recommend as
+current)*.**
+🔵 **Why here and not elsewhere: this is the only region where the buyer can be shown a statute
+and asked what it would take to satisfy it.**
+
+### EMEA
+
+🟢 **The engagement shape: a TENANT-CONTROLLED GATEWAY, bought before any tutor is.**
+🟢 **The AI Act treats education as high-risk; Article 50 transparency obligations have applied
+since `2026-08-02` and the high-risk obligations are now fixed at `2027-12-02`
+(🟡 `CITED, NOT READ`).** 🔴 **`80%` of European teachers say AI is arriving faster than their
+school can manage while `76%` of students expect to use it — a governance gap with a deadline
+attached.**
+🟢 **Built from: `UniversityOfHelsinkiCS/gptwrapper` (MIT, `helsinki.fi` — a university already
+runs this), `tutors-sdk/tutors` (MIT, `wit.ie`, Ireland), `openfun/arnold` (MIT, `fun-mooc.fr` —
+the operations layer), `opencast/annotation-tool` (ECL-2.0, `elan-ev.de`/`unibe.ch`),
+`Abstract-Tech/abstract-scorm-xblock` (Apache-2.0) and `edly-io/h5pxblock` (MIT) for existing
+courseware.** 🔵 **Newly placed here from the contaminated APAC leg: the UK's January 2026
+generative-AI school safety standards and the UAE Ministry of Education's `25` prohibitions
+(February 2026) — two national rulebooks a deliverable can be audited against today, which is
+rarer than the AI Act's 2027 horizon.**
+
+### APAC
+
+🟢 **The engagement shape: OFFLINE-CAPABLE and MULTI-JURISDICTION, in that order.**
+🔴 **Times Higher Education names limited connectivity as a barrier and puts virtual-tutor
+adoption at `30%` — the lowest of the four regions — while policy moves in OPPOSITE directions
+inside the region: China tightened (AI + Education Action Plan, April 2026; AI as a required
+university public course), and Korea REVERSED, downgrading the AI Digital Textbook from
+*textbook* to *educational material* by statute on `2025-08-04`.**
+🟢 **Built from: `hallym-aiedu-center/ai_prof_lite` (Apache-2.0, `mentorix.kr` — self-hosted
+lecture production, which is what a reversed procurement leaves behind),
+`kltn-moolde/moodle-adaptive-learning-plugin` (MIT, Vietnam — Q-learning sequencing inside
+Moodle), `edly-io/h5pxblock` (MIT, `arbisoft.com`), `learningequality/kolibri` for the
+offline-first core.**
+🔴 **Refused and worth knowing: `Oriole-FDU/Wisepen` (`126★`, Fudan University) is
+`Business Source License 1.1` — the most finished APAC product found and not adoptable.**
+🔵 **Ipsos finds lower support for AI bans across Asian markets than the region's regulatory
+reputation suggests, so the political constraint is narrower than the technical one.**
+
+### LATAM
+
+🟢 **The engagement shape: GOVERNANCE FIRST, and this pass can now name the components.**
+🔴 **`92%` of students and `79%` of faculty engaged; only `30%` of institutions judged to have
+responded effectively; formal university AI policy largely absent (DEC, `30,000`+ responses);
+UNESCO IESALC reports the same gap across `200` institutions in `19` countries.**
+🟢 **Built from the CMM Educación estate at the Universidad de Chile, enumerated and byte-read
+in full this pass** ([`estate`](../evidence/cmmedu-estate.2026-11-17-p868.tsv)): **`6` MIT
+components —`cmmedu/cmmedu-connectwithline-xblock`, `cmmedu-ordertable-xblock`,
+`cmmedu-tablelonginput-xblock`, `moodle-accessrule_autostartquiz`,
+`moodle-filter-teacheronlycontent`, `moodle-plugin-graphsandtrees` — plus
+`openedx/openedx-platform` and `frappe/lms` as the base.**
+🔴 **The estate's licence split must be respected component by component: `6` MIT, `3`
+`GPL-3.0`, `3` `AGPL-3.0`, `6` with NO grant at all. It cannot be adopted wholesale.**
+🔴 **And `eth-ecuador/moodle-ai-tutor-plugin` is the region's recurring problem in one address:
+a real Ecuadorian Moodle AI tutor with no grant at any of `11` probed filenames.**
+🔵 **Stated as a method, not just a finding: a LATAM vein keyed on Spanish/Portuguese VOCABULARY
+returned one unusable candidate across four queries; a vein keyed on an INSTITUTION'S NAME
+returned an entire production estate. The institutions are there and they do not advertise in
+the sweep's language.**
+
+### Global
+
+🟢 **The engagement shape that does not depend on jurisdiction: CONTENT PORTABILITY and
+EVIDENCE.** 🔴 **No MIT- or Apache-licensed full LMS or SIS exists — confirmed by the vertical
+leg for the third consecutive pass. Open edX is `AGPL-3.0`, Moodle `GPL-3.0`, Canvas
+`AGPL-3.0`, OpenEduCat `LGPL-3.0`.** 🟢 **So the permissive decision is never "which platform"
+and always "which side of the platform's own seam", and `p867`'s Open edX measurement
+(`71` `AGPL-3.0` / `21` `Apache-2.0` / `1` `BSD-3-Clause` across `96` repositories) is the map.**
+🟢 **The live interop vocabulary, returned this pass: `LTI 1.3`, `OneRoster`, `SCORM`, `xAPI`,
+`SAML` — and `OpenEduCat` claims OneRoster and Ed-Fi sync, which makes it the only
+LMS-plus-SIS candidate surfaced, at `LGPL-3.0`.**
+🔴 **Carried as a standing caution for every region: `136` of the `1,015` rows on this base's
+own shelves have not been pushed to in over a year, `69` of them on `repos/foundations.md`.
+Check [`liveness-census.2026-11-17-p868.tsv`](../evidence/liveness-census.2026-11-17-p868.tsv)
+before quoting any row in a client deliverable.**
+
+
 ## 🟢 Seventy-second pass (`p867`, 2026-11-17) — **`866-G3` discharged both halves: the EU deferral date is corroborated to the INSTRUMENT (`Regulation (EU) 2026/1744`) but stays `CITED, NOT READ` because every EU domain is unreachable from this session; and the two APAC jurisdictions `p866` declared missing were run alone and were NOT nil — China tightened in April 2026 while Korea LEGISLATIVELY REVERSED in 2025**
 
 🔴 **Channel, re-measured and worse than `p866` recorded.** 🟢 **`p866` reported `curl` to
@@ -71,7 +216,7 @@ this base's closed vocabulary — and a UK schools standard also surfaced inside
 🟢 **A region token in a query buys CONTAMINATION in both directions, and the jurisdiction-only
 legs above are the only form that returned clean policy.**
 
-## Opportunities by region
+## Opportunities by region — superseded by `p868`, retained for history
 
 ### North America
 

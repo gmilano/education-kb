@@ -1,0 +1,58 @@
+{
+  "_why": [
+    "867-G3 measured that agents/top.md's heading -- 'Build-safe agents (MIT / Apache-2.0 /",
+    "BSD / ISC / 0BSD)' -- governs 303 of the 543 rows the count gate credits to that page.",
+    "The other 240 sit in tables under PASS headings, which name no grant, so the shelf's",
+    "licence promise was structurally UNREACHABLE for 44% of its own counted rows.",
+    "repos/foundations.md (390 rows) and verticals/solutions.md (229) state no predicate at",
+    "all and correctly abstained entirely.",
+    "",
+    "867-G3 offered three repairs and required that the choice be STATED, not drifted into.",
+    "p868 chose (c) -- 'require every counted holdings table to sit under a predicate-bearing",
+    "heading' -- because it is the only one of the three that closes the CLASS rather than",
+    "the instance, and folded in (a) for the vocabulary.",
+    "",
+    "HOW (c) IS IMPLEMENTED, and why not literally. Taken literally, (c) means editing 24+",
+    "historical PASS headings to append a parenthesised grant set. That rewrites the",
+    "published record of earlier passes to satisfy a gate -- the defect p718 named as",
+    "'keying a gate on prose', committed deliberately. So the predicate is declared HERE,",
+    "per shelf FILE, machine-readable and in one place. Every counted row is then gradeable",
+    "by construction, which is (c)'s guarantee; a table whose own heading states a",
+    "parenthesised grant set still overrides the file default, because that is strictly more",
+    "specific. No historical heading is touched.",
+    "",
+    "(a) IS FOLDED IN AND SAID OUT LOUD. The build-safe vocabulary was five names and",
+    "867-G3 showed it under-inclusive: MulanPSL-2.0 (OSI-approved, permissive) and WTFPL",
+    "(public-domain-equivalent) are build-safe in substance and were scored VOCAB-MISS.",
+    "ECL-2.0 is added for the same reason and with a specific stake in this industry -- the",
+    "Educational Community License is an Apache-2.0 derivative written FOR this sector, and",
+    "this base already shelves sakaiproject/sakai and opencast/annotation-tool under it."
+  ],
+  "shelves": {
+    "agents/top.md": {
+      "predicate": "build-safe",
+      "admits": ["MIT", "Apache-2.0", "BSD-3-Clause", "BSD-2-Clause", "BSD-4-Clause",
+                 "ISC", "0BSD", "Unlicense", "ECL-2.0", "MulanPSL-2.0", "WTFPL",
+                 "CC0-1.0", "Zlib", "PostgreSQL", "Artistic-2.0", "MS-PL"],
+      "note": "The shelf's client-facing promise: a row here can be built on and shipped in a client deliverable without a copyleft obligation travelling with it."
+    },
+    "repos/foundations.md": {
+      "predicate": "foundation",
+      "admits": "ANY",
+      "note": "No licence predicate, and that is a POSITION rather than an omission: a foundational repo is cited for what it establishes in the industry, and Moodle's GPL-3.0 or Open edX's AGPL-3.0 does not stop it being foundational. A row's grant is still byte-read and published; it is just not a filter here."
+    },
+    "verticals/solutions.md": {
+      "predicate": "platform",
+      "admits": "ANY",
+      "note": "Copyleft is admitted BY OBLIGATION, which is p866's finding: a Moodle plugin links against Moodle and is GPL-3.0 because the platform is, not because the author chose it. Filtering copyleft off this shelf would delete the Moodle and Open edX estates, which are most of the sector."
+    }
+  },
+  "excluded_everywhere": {
+    "copyleft": ["GPL-2.0", "GPL-3.0", "AGPL-3.0", "LGPL-2.1", "LGPL-3.0", "MPL-2.0",
+                 "EPL-2.0", "EUPL-1.2", "OSL-3.0", "CECILL-2.1", "CDDL-1.0"],
+    "not_open_source": ["Elastic-2.0", "BUSL-1.1", "SSPL-1.0", "Commons-Clause",
+                        "PolyForm", "Source-Available", "Commercial", "Proprietary"],
+    "content_only": ["CC-BY-NC", "CC-BY-NC-SA", "CC BY-NC-SA 4.0", "CC-BY-NC-ND"],
+    "note": "`not_open_source` is the T250 class: a grant whose bytes sit near a permissive payload's size and whose GitHub FIELD often reads NOASSERTION. p868 byte-read Oriole-FDU/Wisepen at 4,539 B and found Business Source License 1.1 behind a NOASSERTION field; p867 found Elastic-2.0 behind one on canyongbs/advisingapp."
+  }
+}

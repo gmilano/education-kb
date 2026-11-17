@@ -4,6 +4,213 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (seventy-third pass, `p868`) — **`5` gaps — `867-G1`, `867-G2`, `867-G3` and `867-G5` DISCHARGED with their acceptance tests run; `867-G4` CARRIED UNDONE and said so; and one discharge measured that the channel every absence claim in this base rests on is `82%` false-absent**
+
+### 🟢 `867-G1` — DISCHARGED: the domain predicate overruled the hand `0` times and added `129` addresses
+
+🟢 **The acceptance test: apply a mechanical DOMAIN predicate to the whole organisation-owned
+sweep — a keyword/topic score over `description` and `topics`, declared in `ingest/config.json`
+terms — and publish its PRECISION against `p867`'s hand selection of `30`: how many the
+predicate would have kept, and how many it would have added.**
+
+🟢 **Built as [`ingest/p868-domain-predicate.py`](../ingest/p868-domain-predicate.py)**: topic
+`+3`, strong term `+2`, weak term `+1`, negative term `-3`, `KEEP` at `>= 3`.
+🔴 **The sweep had to be rebuilt first, because `p867` committed its totals and not its queries
+— so [`ingest/p868-org-sweep.sh`](../ingest/p868-org-sweep.sh) now exists and the veins are a
+DECLARED reconstruction.**
+
+| Measure | Result |
+|---|---|
+| organisation-owned distinct | `232` (`1,104` raw, `12` veins) |
+| `KEEP` / `MARGINAL` / `DROP` | `134` / `34` / `64` |
+| p867 hand picks this sweep re-found | `6` of `20` recoverable |
+| 🟢 of those, `KEEP` | 🟢 **`5`** |
+| 🟡 `MARGINAL` | `1` |
+| 🟢 **`DROP` — predicate overruling the hand** | 🟢 **`0`** |
+| 🟢 **additions the hand never selected** | 🟢 **`129`** |
+
+🔴 **Three limits, all published rather than discovered later.** 🔴 **(i) The agreement is
+measured over `6`, not `20`: `14` of the `20` are absent from this pass's reconstructed veins,
+and `10` of `p867`'s `30` were triaged `SHELVED` and never written down, so `30` is recoverable
+only to `20`.** 🔴 **(ii) The predicate's precision failure mode is NOT the one the negative arm
+was built for — the arm works (none of `p867`'s four tooling imports survive) and the LIST class
+replaced them, ranking `#1`.** 🔴 **(iii) This pass's own instrument was defeated twice before it
+reported: `per_page=50` made `404` a cap rather than a population, and two topic qualifiers in
+one `q` are ANDed by the endpoint (`12` results against `5,723` and `62` separately).**
+
+### 🔴 `867-G2` — DISCHARGED, and the number is `136` of `1,015`
+
+🟢 **The acceptance test: run the liveness gate over every row the count gate credits, on the
+`search/repositories` channel, and publish the number older than `365` days per shelf — whatever
+it is, with a figure near `0` to be disbelieved.**
+
+🟢 **Built as [`ingest/p868-liveness-census.py`](../ingest/p868-liveness-census.py).** 🟢 **Its
+offline arm reads the counted-table signatures out of `derive-counts.py` with `ast` and
+reproduces the gate's population exactly — `535` / `384` / `222`, `1,015` distinct.** 🟢 **Its
+online arm uses batched `repo:` qualifiers, newly measured as OR'd, which turned `1,015` probes
+into `102` requests and made the gap affordable in one pass.**
+
+| Shelf | Counted | `LIVE` | 🔴 `STALE` | 🔴 `ARCHIVED` | 🟡 unresolved | Stale + archived |
+|---|---|---|---|---|---|---|
+| `repos/foundations.md` | `384` | `302` | 🔴 **`69`** | `10` | `3` | 🔴 **`20.6%`** |
+| `agents/top.md` | `535` | `461` | `62` | `5` | `7` | `12.5%` |
+| `verticals/solutions.md` | `222` | `203` | `12` | `4` | `3` | 🟢 `7.2%` |
+| distinct | `1,015` | `852` | 🔴 **`136`** | `16` | `11` | 🔴 **`15.0%`** |
+
+🟢 **Largest nameable cluster: `15` XPRIZE Global Learning Challenge addresses, all last pushed
+2019, carried as current rows for seven years.** 🟢 **Oldest: `benhamner/ASAP-AES` at `5,381`
+days.** 🔴 **And the census found a defect in its own channel — `9` of the `11` unresolved
+addresses are LIVE on `git ls-remote` — which is registered below as `868-G5` because it is
+larger than this gap was.**
+
+### 🟢 `867-G3` — DISCHARGED by choosing (c), with (a) folded in: `0` of `1,179` counted rows abstain and `FAIL` is `5`
+
+🟢 **The acceptance test: pick ONE of three repairs and publish the resulting `FAIL` count over
+the full `540` — "the choice must be stated, not drifted into."**
+
+🟢 **`p868` chooses (c) and folds in (a). (b) is declined on its own terms: moving `4` rows fixes
+`4` rows and leaves `240` ungradeable.**
+🔴 **AND THE IMPLEMENTATION DEPARTS FROM (c)'s LITERAL WORDING, deliberately:** taken literally,
+(c) means appending a parenthesised grant set to `24`+ HISTORICAL pass headings — editing the
+published record of earlier passes so a gate will read it, which is `p718`'s defect committed on
+purpose. 🟢 **So the predicate is declared once per shelf FILE in
+[`ingest/shelf-predicates.json`](../ingest/shelf-predicates.json), a table heading's own
+parenthesised set still wins as the more specific rule, and every counted row is gradeable by
+construction with no historical heading touched.**
+
+🟢 **(a), named:** the build-safe vocabulary now also admits `Unlicense`, `CC0-1.0`, `Zlib`,
+`ECL-2.0`, `MulanPSL-2.0` and `WTFPL`, and the standing heading on `agents/top.md` says so.
+🔵 **`ECL-2.0` earns it in this industry specifically — an Apache-2.0 derivative written for the
+education sector, under which this base shelves `sakaiproject/sakai` and now
+`opencast/annotation-tool`.**
+
+| Shelf | Graded | `PASS` | `REFUTED-METADATA` | 🔴 `FAIL-EXCLUDED` | 🔴 `FAIL-SPLIT` | 🟡 `VOCAB-MISS` | Abstained |
+|---|---|---|---|---|---|---|---|
+| `agents/top.md` | `550` | `534` | `11` | 🟢 `0` | 🔴 `5` | 🟢 `0` | 🟢 `0` |
+| `repos/foundations.md` | `395` | `395` | `0` | 🟢 `0` | 🟢 `0` | 🟢 `0` | 🟢 `0` |
+| `verticals/solutions.md` | `234` | `234` | `0` | 🟢 `0` | 🟢 `0` | 🟢 `0` | 🟢 `0` |
+| **TOTAL** | **`1,179`** | `1,163` | `11` | 🟢 **`0`** | 🔴 **`5`** | 🟢 **`0`** | 🟢 **`0`** |
+
+🔴 **`5` is `3` more than `p867` reported and the extra `3` are real** — `p867`'s detector looked
+only for `CC-BY-NC`, this one also catches a permissive/copyleft split in one cell:
+`learning-commons-org/evaluators`, `bigmoumou/AI-Agent-Literacy`, `hoangkien1703/dual-sub-replay`
+join `polendol/AgenticTeacher` and
+`vladimiracunadev-create/modern-software-engineering-program`. 🟢 **Each is a row the shelf
+already describes correctly; the gate had never been able to say so.**
+
+🔴 **This pass's instrument also defeated itself once, same class as `p867`'s.** 🔴 **Draft 1
+read the licence cell BY POSITION (index `2`) while two shelves write
+`| Repo | License | Stars | … |` — so it graded the STARS column of `618` rows as a grant and
+called two em-dashes `FAIL-EXCLUDED`.** 🟢 **The cell is now located by HEADER NAME, which is
+what `derive-counts.py` already does for tables and what this gate had undone one layer down.**
+
+### 🔴 `867-G4` — NOT DISCHARGED. Carried undone, with the reason stated
+
+🟢 **The acceptance test asked that `gate-enumeration` GRADE the payload it finds — at minimum
+`GRANT`, `PROPRIETARY`, `VENDORED`, `ATTRIBUTION-ONLY` — re-run, and publish the new `REFUTED`
+count, expected to fall to `3`–`4`.**
+
+🔴 **`p868` did not build it.** 🟢 **The pass spent its budget on `867-G1`, `-G2`, `-G3` and
+`-G5`, all four of which were discharged with instruments, plus the `12`-vein sweep and `25`
+byte-reads.** 🔴 **`gate-enumeration` therefore still stands RED at `HEAD` with `REFUTED=13`,
+and this pass neither caused it nor quieted it (`SKIP_COMMIT_GATES` unused, `DECLARED_RED`
+untouched).**
+
+🟢 **Carried forward UNCHANGED as `867-G4`, and `868-G5` below raises its priority rather than
+competing with it**: the `230` `QUEUE-UNENUMERATED` verdicts and the `136` `VERIFIED-ABSENT` ones
+both rest on a channel this pass measured as `82%` false-absent, so grading the payload and
+re-grounding the channel are now the same job.
+
+### 🟢 `867-G5` — DISCHARGED: `6` of `25` probes (`24%`) would have `404`ed on a `main` assumption
+
+🟢 **The acceptance test: resolve the default ref from `search/repositories` first, record the
+ref used in the evidence row, and publish how many probes would have `404`ed on a `main`
+assumption.** 🟢 **Built as
+[`ingest/p868-byteread-ref.sh`](../ingest/p868-byteread-ref.sh), which measures the
+counterfactual DIRECTLY by re-probing the found path at `main` rather than inferring it**
+([`record`](../evidence/licence-byteread-ref.2026-11-17-p868.tsv)).
+
+🔴 **`17` general probes → `5` (`29%`). `8` LATAM probes → `1`. Combined `6` of `25` (`24%`),
+against `p867`'s estimate of `3` in `31` (`10%`).** 🟢 **Refs actually seen:
+`cmmedu-release/lilac`, `eol-release/lilac`, `MOODLE_405_STABLE`, `release-23.x`, `development`
+(`tutors-sdk/tutors`, `125★`).** 🔵 **`12` of CMM Educación's `18` repositories default to a
+release branch — in a release-managed platform estate, `main` is the exception.**
+
+---
+
+### 🔴 `868-G1` — the domain predicate's failure mode is the LIST class, and no word list can reach it
+
+🟢 **Measured: the predicate's `#1`-ranked address of `32` is
+`langgptai/awesome-claude-prompts` (`5,586★`), with
+`StudentSuite/awesome-study-resources`, `StudentSuite/awesome-student-resources` and
+`zapplyjobs/New-Grad-Data-Science-Jobs-2027` close behind.** 🔴 **Curated lists and a job board.**
+🟢 **The mechanism is structural: a list's `description` IS a description of its subject, so the
+discriminating feature is not in the text at all — it is whether the repository contains code.**
+
+🟢 **Acceptance test: the next pass adds a CODE-PRESENCE channel to the predicate (a tree or
+language listing, not a word), re-runs it over this pass's committed `232`, and publishes (a)
+how many of the `134` `KEEP` it reclassifies, and (b) whether it would have dropped any of the
+`7` rows this pass filed — because an instrument that improves precision by deleting true
+positives has not improved.**
+
+### 🔴 `868-G2` — `136` stale rows are measured, published, and still unmarked where a client would read them
+
+🔴 **The census is committed per row
+([`liveness-census`](../evidence/liveness-census.2026-11-17-p868.tsv)) and not one of the `136`
+rows carries a staleness marker IN THE TABLE a client reads.** 🔵 **`867-G2`'s own sentence
+applies to this pass now: a stale row is worse than a missing one, because it is an active
+recommendation to adopt something nobody maintains.**
+
+🟢 **Acceptance test: the next pass marks every counted row whose census verdict is `STALE` or
+`ARCHIVED` in place, mechanically from the committed TSV, and publishes the number marked
+against `152` (`136` + `16`). 🔴 A marking pass that re-measures instead of reading the
+committed census has misunderstood the gap.**
+
+### 🔴 `868-G3` — `repos/foundations.md` holds two kinds of row in one column, which is why `69` went stale unopposed
+
+🟢 **`benhamner/ASAP-AES` (`5,381` days, February 2012) is the Kaggle automated-essay-scoring
+corpus: an excellent HISTORICAL citation and an indefensible current recommendation.**
+🔴 **This shelf has no way to say which kind a row is, so a liveness gate over it is either too
+strict (deleting the history) or useless (passing everything).**
+
+🟢 **Acceptance test: the next pass adds a declared `HISTORICAL` / `CURRENT` disposition to this
+shelf — in `ingest/shelf-predicates.json` terms, not in prose — assigns it to all `389` counted
+rows from the committed census, and publishes the split plus the stale rate WITHIN the `CURRENT`
+subset, which is the only stale rate that means anything.**
+
+### 🟡 `868-G4` — the XBlock integrator estate is `35` of this pass's `66` NEW addresses and nobody has enumerated it
+
+🟢 **`p867` enumerated `96` repositories across `openedx` + `overhangio` + `edx` + `mitodl` and
+found the permissive seam. 🟢 `p868` measures that ~`35` of its `66` `NEW` addresses are
+`xblock-*` or `*-xblock` owned by INTEGRATORS instead: `eduNEXT` (`7`), `IONISx` (`6`),
+`openedxou` (`5`), `open-craft` (`4`), plus `openfun`, `edly-io`, `cmmedu`, `collabassess`,
+`raccoongang`, `Abstract-Tech`, `microsoft`.** 🔵 **That is a small visible set of shops whose
+XBlocks are the catalogue of what institutions have already paid to have built — the most
+commercially informative list in this corpus, and it exists only as a sweep residue.**
+
+🟢 **Acceptance test: the next pass enumerates the XBlock estate by OWNER the way `p867`
+enumerated it by platform (`user:eduNEXT`, `user:IONISx`, `user:openedxou`, `user:open-craft`,
+…), publishes the licence split per owner, and states how many of the total this base shelves —
+`p867`'s platform figure was `71` `AGPL-3.0` / `21` `Apache-2.0` / `1` `BSD-3-Clause`, so a
+materially different split on the integrator side is itself the finding.**
+
+### 🔴 `868-G5` — every absence claim in this base rests on a channel just measured `82%` false-absent
+
+🟢 **Measured this pass (`T260`): `11` counted addresses did not resolve through
+`gh api search/repositories`; `git ls-remote` found `9` of them ALIVE**
+([`resolution`](../evidence/unresolved-resolution.2026-11-17-p868.tsv)).
+🔴 **`search/repositories` is this session's ONLY metadata channel, `repos/{owner}/{repo}` is
+`403`, and `gate-enumeration` currently publishes `136` `VERIFIED-ABSENT` and `230`
+`QUEUE-UNENUMERATED` verdicts.** 🔴 **If an absence from the index is `82%` likely to be a false
+absence, the word `VERIFIED` in that count is not earned.**
+
+🟢 **Acceptance test: the next pass re-grounds the existence predicate on the CLONE channel
+(`git ls-remote`, with `p293`'s credential-prompt convention for the private/deleted case),
+re-runs `gate-enumeration`, and publishes how many of the `136` `VERIFIED-ABSENT` verdicts
+survive. 🔵 It shares an instrument with `867-G4`, which is carried undone above; building one
+should discharge part of both, and if it does not, that is the finding.**
+
+
 ## 🟢 `2026-11-17` (seventy-second pass, `p867`) — **`5` gaps — `866-G1`, `866-G2`, `866-G3`, `866-G4` and `866-G5` ALL DISCHARGED with their acceptance tests run; one of them REFUTED ITS OWN DIAGNOSIS exactly as it said it would, and the pass before it turns out to have promoted `21` addresses while publishing `15`**
 
 ### 🟢 `866-G1` — DISCHARGED: one ranking command, and the hit rate is published three ways

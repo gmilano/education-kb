@@ -4,6 +4,73 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — `p868`: **the hand step upstream of the ranker is gone, and the predicate that replaced it disagreed with the hand `0` times out of `6` — then surfaced `129` addresses the hand had never selected**
+
+🔴 **Fork policy, stated before the first total.** 🟢 **`gh api search/repositories` EXCLUDES forks
+by default; every total in this section is a NON-FORK count.**
+
+### 🟢 What moved this week
+
+🟢 **`p867` changed a search PARAMETER and found `160` new addresses where `p866` found `0`.
+`p868` changed who DECIDES which of them is an education repository** — from a reader to
+[`ingest/p868-domain-predicate.py`](../ingest/p868-domain-predicate.py), a weighted
+keyword/topic score in `ingest/config.json`'s own declared terms with a `-3` NEGATIVE arm.
+
+| Measure | `p867` (hand) | 🟢 `p868` (mechanical) |
+|---|---|---|
+| veins, committed? | `9`, 🔴 **not committed** | `12`, 🟢 **[`ingest/p868-org-sweep.sh`](../ingest/p868-org-sweep.sh)** |
+| raw rows | `285` | `1,104` |
+| organisation-owned distinct | `285` | `232` |
+| domain decision | 🔴 read `285` descriptions, kept `30` | 🟢 scored `232`: `KEEP` `134` / `MARGINAL` `34` / `DROP` `64` |
+| agreement with the hand | — | 🟢 **`5` `KEEP`, `1` `MARGINAL`, `0` `DROP` of the `6` re-found** |
+| addresses the hand never selected | — | 🟢 **`129`** |
+
+🟢 **The negative arm WORKED.** 🔵 **`p867` published the four tooling imports its
+`curriculum OR syllabus generator` vein produced — `openapi-generator`, `OrcaSlicer`,
+`grpc-gateway`, `sdk-generator`. 🟢 Not one of them survives the score.**
+
+🔴 **A DIFFERENT precision failure replaced it, and it is the week's cleanest lesson.**
+🔴 **The predicate's `#1`-ranked address is `langgptai/awesome-claude-prompts` (`5,586★`),
+followed closely by `StudentSuite/awesome-study-resources`,
+`StudentSuite/awesome-student-resources` and
+`zapplyjobs/New-Grad-Data-Science-Jobs-2027`.** 🔵 **A curated LIST is about education and is
+not a thing you can build on. Scoring `description` + `topics` cannot tell the two apart,
+because a list's description is indistinguishable from its subject's.**
+
+### 🔴 Trending, honestly: the trending channel itself is third-hand here
+
+🔴 **`github.com/trending` is `403` at this session's egress proxy and has been for every pass
+in this log.** 🟢 **So every "trending" claim in this base is AGGREGATOR-SOURCED, and this week
+that produced three addresses named by aggregators and verified on NO first-hand channel this
+pass:** `geekjourneyx/interactive-learning`, `SirhanMacx/Claw-ED`, `TapXWorld/ChinaTextbook`.
+🔵 **`HKUDS/DeepTutor` was named again and is already `SHELVED` here.**
+🟢 **One NEW CHANNEL lead, recorded unverified: `aiagentsdirectory.com/category/education/open-source`
+claims `21`+ open-source education agents** ([`legs`](../evidence/websearch-legs.2026-11-17-p868.tsv)).
+
+🔴 **And the mandated global agent query — `top open source AI agents education 2026 github MIT`
+— came back THIN for the THIRD consecutive pass, identically**: general-purpose roundups
+(Hermes Agent, OpenHands, browser-use, AutoGen, LangChain, OpenClaw), zero education-specific
+ranking, and mutually contradictory licence claims within the same result set (OpenClaw given
+as both MIT and "Other"). 🟢 **Three identical thin results is itself the finding: there is no
+education-vertical agent ranking in the general web, and this base's own sweep is the substitute.**
+
+### 🟢 What was filed, and what the week's grants actually said
+
+🟢 **`7` rows filed on [`agents/top.md`](top.md)** — `tutors-sdk/tutors` (MIT, `wit.ie`, Ireland),
+`haxtheweb/haxcms-php` (Apache-2.0, `psu.edu`, Penn State), `onemnemo/mnemo` (Apache-2.0),
+`langx/langx` (BSD-3-Clause), `lynote-ai/ai-tutor` (MIT — **highest domain score of all `232`**),
+`iblai/higher-education-agents` (MIT), `kltn-moolde/moodle-adaptive-learning-plugin` (MIT).
+
+🔴 **And the week's most-starred find was refused on its bytes: `Oriole-FDU/Wisepen`
+(`126★`, Fudan University) is `Business Source License 1.1`** — byte-read at `4,539 B`,
+`sha256₁₂ 7fc19489d6b2`, against a GitHub field of `NOASSERTION`.
+🔵 **That is `T250` a third time in a third family, and the pattern across two passes is now
+hard to miss: of the three most COMPLETE products these sweeps surfaced,
+`canyongbs/advisingapp` is `Elastic-2.0` and `Oriole-FDU/Wisepen` is `BUSL-1.1`.**
+🟢 **The education vertical's best-finished open-looking software is increasingly
+source-available, and a FIELD check passes all of it.**
+
+
 ## 🟢 `2026-11-17` — `p867`: **the exhaustion was a SEARCH PARAMETER. `9` queries, `285` candidates, `160` addresses this base did not own — a `56.1%` NEW rate against the `0%` measured one pass earlier, and the only thing changed was `owner.type == Organization`**
 
 🔴 **Fork policy, stated before the first total.** 🟢 **`gh api search/repositories` EXCLUDES forks

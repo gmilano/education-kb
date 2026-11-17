@@ -4,6 +4,148 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — seventy-third pass (`p868`) — **`7` trends (`T260`–`T266`): a search index that is not an existence test, one row in seven on these shelves already dead, a hand step whose removal cost nothing and gained `129`, the LIST class defeating a domain predicate, release branches as the norm in two estates, an institution-name vein beating a language vein, and source-available as the education vertical's finished-product licence**
+
+**Two hundred and fifty-eight** trends — derived trends: **258**.
+
+## 🟢 `T260` — a `search/repositories` miss is not an absence: `9` of `11` unresolvable addresses are LIVE on the clone channel
+
+🔴 **Measured, not suspected.** 🟢 **[`867-G2`](open-gaps.md)'s census probed all `1,015` counted
+addresses through `gh api search/repositories` with batched `repo:` qualifiers; `11` returned
+nothing.** 🟢 **`git ls-remote` was then run against all `11` and `9` returned a head**
+([`resolution`](../evidence/unresolved-resolution.2026-11-17-p868.tsv)):
+`mitodl/open-learning-ai-tutor`, `digitalcredentials/learner-credential-wallet`,
+`openwallet-foundation-labs/learner-credential-wallet`, `packbackbooks/lti-1-3-php-library`,
+`asterics/AsTeRICS-Grid`, `DaRL-GenAI/instructional_agents`, `fabian-thinks/present-together`,
+`FabianJun/PresentTogether`, `tl-its-umich-edu/caliper-php-public`.
+
+🔵 **This is `T81` one level up.** 🟢 **`T81` says the licence FIELD and the licence PAYLOAD
+disagree often enough that a grant must be byte-read. `T260` says the search INDEX and the
+repository's EXISTENCE disagree often enough that an address must be ref-probed.**
+🔴 **An `82%` false-absence rate on the one channel this session has for metadata means no
+absence claim in this base may rest on it** — and this base publishes absence claims
+constantly (`gate-absence`, `gate-enumeration`, `VERIFIED-ABSENT=136`).
+
+🟢 **The `2` genuine ones return a CREDENTIAL PROMPT, which `p293`'s standing convention records
+as a MEASUREMENT rather than an inconclusive result: private or deleted, and the channel cannot
+tell which.**
+
+## 🔴 `T261` — one row in seven on these shelves is a recommendation to adopt something nobody maintains
+
+🟢 **First measurement of its kind here, over every row the count gate credits**
+([`census`](../evidence/liveness-census.2026-11-17-p868.tsv)):
+
+| Shelf | Counted | 🔴 `STALE` > 365 d | 🔴 `ARCHIVED` | Stale + archived |
+|---|---|---|---|---|
+| `repos/foundations.md` | `384` | 🔴 **`69`** | `10` | 🔴 **`20.6%`** |
+| `agents/top.md` | `535` | `62` | `5` | `12.5%` |
+| `verticals/solutions.md` | `222` | `12` | `4` | 🟢 `7.2%` |
+| distinct | `1,015` | 🔴 **`136`** | `16` | 🔴 **`15.0%`** |
+
+🟢 **The gradient is the finding, not the total.** 🔵 **Platforms get maintained; agents and
+research artefacts get abandoned. A vertical platform shelf decays at a third the rate of a
+foundations shelf, because a platform has operators and a paper has authors who graduated.**
+
+🔴 **The largest nameable cluster is a dead competition: `15` addresses from the XPRIZE Global
+Learning Challenge (`XPRIZE/GLEXP-Team-*`, `chimple/*`, `curiouslearning/*`, `onebillion`), all
+last pushed in 2019, all carried as current rows for seven years.**
+
+🟢 **And the distinction this base has never drawn is now forced: `benhamner/ASAP-AES`
+(`5,381` days, February 2012) is the Kaggle automated-essay-scoring corpus — an excellent
+HISTORICAL citation and an indefensible current recommendation. A foundations shelf holds both
+kinds and labels neither.**
+
+## 🟢 `T262` — removing the last hand step cost `0` disagreements and gained `129` addresses
+
+🟢 **Three passes have each moved hand-grading one step upstream and each found more behind it:**
+
+| Pass | Hand step removed | What replaced it | What it found |
+|---|---|---|---|
+| `p866` | the three-way presence SPLIT | `ingest/p866-triage.py` | a stable `76`–`77%` hold rate |
+| `p867` | WHICH `UNGRADED` address to file | `ingest/p867-promotion-rank.py` | a `52%` → `71%` hit-rate repair from two structural errors |
+| 🟢 `p868` | WHETHER an address is education-domain | `ingest/p868-domain-predicate.py` | 🟢 **`0` disagreements with the hand, `129` additions** |
+
+🟢 **The pattern is strong enough to state as a rule: in this base, a hand step has never been
+found to be making a judgement the instrument could not make. It has only ever been limiting
+THROUGHPUT.** 🔵 **The predicate agreed with `p867`'s reader on `5` `KEEP`, `1` `MARGINAL` and
+`0` `DROP` of the `6` addresses both saw — and then kept `129` more that one reader, reading
+`285` descriptions, had passed over.**
+
+🔴 **Declared limit, so the rule is not over-read: the agreement is measured over `6`, because
+`14` of `p867`'s `20` recoverable picks are absent from this pass's reconstructed veins, and
+`10` of its `30` were never written down at all.**
+
+## 🔴 `T263` — a domain predicate's failure mode is the LIST class, and the negative arm cannot reach it
+
+🟢 **`p868`'s predicate carries a `-3` NEGATIVE arm built from `p867`'s four published tooling
+imports (`openapi-generator`, `OrcaSlicer`, `grpc-gateway`, `sdk-generator`). 🟢 It works: not
+one survives the score.**
+
+🔴 **What survives instead ranks FIRST.** 🔴 **`langgptai/awesome-claude-prompts` (`5,586★`),
+`StudentSuite/awesome-study-resources`, `StudentSuite/awesome-student-resources`,
+`zapplyjobs/New-Grad-Data-Science-Jobs-2027`** — curated lists and a job board.
+🟢 **The mechanism is structural and not a vocabulary oversight: a list's `description` is a
+description of its SUBJECT. "A curated list of the best exam prep, subject study and learning
+resources" and a study-tool's own description are the same sentence.**
+🔵 **So no amount of negative vocabulary separates them, because the discriminating feature is
+not in the text at all — it is whether the repository contains code. That is a different
+channel (a tree listing), not a better word list.**
+
+## 🔴 `T264` — in the Open edX and Moodle estates the default ref is a RELEASE BRANCH, and `24%` of raw-channel probes would `404` on `main`
+
+🟢 **Measured directly rather than inferred: resolve the ref, walk the grant ladder, then
+re-probe the FOUND path at `main`**
+([`record`](../evidence/licence-byteread-ref.2026-11-17-p868.tsv)). 🔴 **`6` of `25` (`24%`).**
+🔴 **`p867` estimated `3` in `31` (`10%`).**
+
+🟢 **The refs actually seen:** `cmmedu-release/lilac`, `eol-release/lilac`, `MOODLE_405_STABLE`,
+`release-23.x`, `development` (on `tutors-sdk/tutors`, `125★`), and `master` throughout.
+🔵 **`12` of CMM Educación's `18` repositories default to a release branch — in a release-managed
+platform estate, a release-branch default is the NORM and `main` is the exception.**
+
+🔴 **Why it matters more than a broken URL: a `404` from a guessed ref is indistinguishable in a
+log from a repository with no grant at that path.** 🟢 **That is the single inference this base's
+entire licence discipline exists to prevent, and this pass's own first channel probe committed
+it — `openedx/XBlock` at `master/LICENSE` is a `404` because the file is `LICENSE.TXT`.**
+
+## 🟢 `T265` — an institution-name vein beats a language vein for LATAM by an entire estate to one unusable repository
+
+🟢 **Run side by side in the same pass, same channel, same owner filter**
+([`legs`](../evidence/websearch-legs.2026-11-17-p868.tsv)):
+
+| Vein | Queries | Filable yield |
+|---|---|---|
+| 🔴 Spanish/Portuguese VOCABULARY (`educación inteligencia artificial estudiantes`, `educação IA professor aluno`, `tutor inteligente educativo`, `moodle plugin español educación IA`) | `4` | 🔴 **`1` candidate, `0★`, no grant — unusable** |
+| 🟢 INSTITUTION NAME (`user:cmmedu`) | `1` | 🟢 **an `18`-repository production estate, `6` MIT byte-read** |
+
+🟢 **The mechanism: a Latin American university does not write its repository descriptions in
+marketing English, and often not in marketing Spanish either — it writes
+`Bloque de diálogos con preguntas (CMM Eduformación)`.** 🔴 **A keyword vein cannot see that; the
+organisation's NAME is the index.** 🔴 **And the method is not a universal key — `org:ceibal` is
+a `422` (Fundación Ceibal has no such handle) and the Tec de Monterrey vein is nil — so it
+requires knowing the institution first, which makes it a RESEARCH input, not a sweep.**
+
+## 🔴 `T266` — the education vertical's most finished open-looking products are source-available, and a FIELD check passes all of them
+
+🟢 **Two passes, three products, one pattern:**
+
+| Address | ★ | GitHub FIELD | 🔴 Byte-read grant | Found |
+|---|---|---|---|---|
+| `canyongbs/advisingapp` | `339` | `NOASSERTION` | 🔴 **Elastic License 2.0** | `p867`, ranked `#1` of `20` |
+| `Oriole-FDU/Wisepen` | `126` | `NOASSERTION` | 🔴 **Business Source License 1.1** | 🟢 `p868`, highest-★ refusal |
+| `nakafaai/nakafa.com` | `81` | `NOASSERTION` | 🔴 **Nakafa Source Available License 2.0** | `p867` |
+
+🔴 **All three are among the most COMPLETE products their sweeps surfaced — an advising and
+student-success CRM, a university writing platform, a K-12-to-university learning platform —
+and all three forbid providing the software as a service.**
+🟢 **`T252`/`T250` named the byte-size trap; `T266` names the market fact behind it: in this
+vertical, finishing a product and then closing the grant is the normal commercial path, and
+`NOASSERTION` is the tell.**
+🔵 **The operational consequence for a studio: the better the product looks in a sweep, the more
+likely its licence refuses the engagement — so the byte-read must happen BEFORE the product
+demo, not after.**
+
+
 ## 🟢 `2026-11-17` — seventy-second pass (`p867`) — **`7` trends (`T253`–`T259`): a declared exhaustion that was a search parameter, a gate whose refutations refute the gate, filename case deciding grant visibility, licence payloads as cross-channel identities, a four-way AGPL byte collision, Open edX's permissive seam, and `NOASSERTION` as a predictor of a non-OSI grant**
 
 **Two hundred and fifty-one** trends — derived trends: **251**.

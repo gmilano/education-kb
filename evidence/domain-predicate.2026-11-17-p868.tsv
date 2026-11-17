@@ -1,0 +1,233 @@
+address	vein	score	band	stars	licence	pushed	description	reasons
+lynote-ai/ai-tutor	v2-topic	34	KEEP	38	MIT	2026-11-16	Self-hosted AI tutor and learning assistant for self-study, e-learning, and exam prep. Turn study notes, PDFs, and lecture notes into a chapter learning path an	topic:ai-learning+3;topic:ai-tutor+3;topic:e-learning+3;topic:edtech+3;topic:learning-assistant+3;topic:learning-path+3;topic:tutoring+3;e-learning+2;tutor+2;quiz+2;exam+2;lecture+2;learning+1;study+1;teach+1
+kltn-moolde/moodle-adaptive-learning-plugin	v3-moodle	30	KEEP	8	MIT	2026-02-14	Adaptive STEM learning system using Q-learning to personalize educational pathways. Integrated with Moodle via LTI 1.3. Achieves 22.5% score improvement and 51%	topic:adaptive-learning+3;topic:learning-analytics+3;topic:learning-management-system+3;topic:machine-learning+3;topic:q-learning+3;topic:reinforcement-learning+3;topic:stem-education+3;moodle+2;lti+2;educational+2;education+1;learning+1;skill+1
+iblai/lms	v2-topic	29	KEEP	95	MIT	2026-11-16	Skills intelligence platform — discover courses, track competencies, earn credentials, and accelerate workforce development. Built with Next.js 15, React 19, an	topic:competency-based-learning+3;topic:coursework+3;topic:e-learning+3;topic:edtech+3;topic:education+3;topic:learning-management-system+3;topic:online-learning+3;topic:school+3;lms+2;course+1;credential+1;skill+1
+ictinnovations/ICTSchool	v2-topic	25	KEEP	73	NONE	2026-11-13	Open source school management software: admissions, attendance, exams, fees and multi-branch schools, with SMS and voice notifications. Laravel, by ICT Vision.	topic:edtech+3;topic:education+3;topic:learning-management+3;topic:school+3;topic:school-management-software+3;topic:school-management-system+3;topic:student-management+3;school+2;exam+2
+classroomio/classroomio	v1-tutor	22	KEEP	1747	AGPL-3.0	2026-11-17	ClassroomIO is an  Intelligent Customer Training Platform that helps SaaS companies use education to grow their business.	topic:blended-learning+3;topic:course+3;topic:coursera+3;topic:edtech+3;topic:education+3;topic:learning+3;classroom+2;education+1;training+1
+kalvilabs/kalvi	v2-topic	22	KEEP	119	AGPL-3.0	2024-05-16	📚🏫🚀 Open Source Infrastructure for Online Education. Easily launch educational platforms, craft online courses, sell mock tests, handle live classes, and foster	topic:edtech+3;topic:education+3;topic:elearning-platform+3;topic:online-education-learning+3;topic:online-learning+3;topic:virtual-learning-environment+3;educational+2;education+1;course+1
+codeforlife-education/rapid-router	v2-topic	22	KEEP	60	NOASSERTION	2026-11-13	Two games: a Blockly game (Rapid Router) for ages 5-11, and a Python game (Python Den) for ages 11+.	topic:edtech+3;topic:education+3;topic:educational-game+3;topic:learning+3;topic:primary-school+3;topic:secondary-school+3;topic:teaching+3;education+1
+sagefy/sagefy	v2-topic	21	KEEP	120	Apache-2.0	2024-06-18	:telescope: Learn anything, adapted for you. Free.	topic:adaptive-learning+3;topic:edtech+3;topic:education+3;topic:educational+3;topic:learning+3;topic:machine-learning+3;topic:personalized-learning+3
+learning-commons-org/evaluators	v2-topic	21	KEEP	88	NOASSERTION	2026-11-17	Evaluation for AI outputs against trusted educational rubrics. Measure and improve content quality with research-backed rubrics — ensuring rigor, reliability, a	topic:ai-in-education+3;topic:edtech+3;topic:education+3;topic:education-technology+3;topic:learning-science+3;classroom+2;educational+2;education+1;learning+1
+StudentSuite/awesome-study-resources	v2-topic	21	KEEP	38	MIT	2026-11-13	A curated list of the best exam prep, subject study, and learning-tool resources for students. IB, IGCSE, GCSE, A-Level, AP, SAT, ACT: every entry tagged free, 	topic:edtech+3;topic:education+3;topic:learning+3;topic:students+3;topic:studentsuite+3;student+2;exam+2;learning+1;study+1
+OpenRaiser/EduGraph	v2b-topic-ai	21	KEEP	1	Apache-2.0	2026-11-16	EduGraph: A Data Infrastructure Connecting Curriculum Knowledge and Learner Evidence for Teaching Agents	topic:edtech+3;topic:education+3;topic:educational-ai+3;topic:educational-resources+3;topic:k12-education+3;learner+2;curriculum+2;teach+1;knowledge+1
+StudentSuite/awesome-student-resources	v2-topic	20	KEEP	39	MIT	2026-11-15	A curated list of software, tools, textbooks, channels, and resources for students anywhere. Exam and subject study material lives in awesome-study-resources.	topic:edtech+3;topic:education+3;topic:learning+3;topic:students+3;topic:studentsuite+3;student+2;exam+2;study+1
+learning-commons-org/knowledge-graph	v2-topic	18	KEEP	169	NOASSERTION	2026-11-10	The data layer for smarter educational AI. Integrate trusted instructional content and research directly into your AI-powered tools — improving precision, relev	topic:ai-in-education+3;topic:edtech+3;topic:education+3;topic:learning-science+3;educational+2;education+1;learning+1;instruction+1;knowledge+1
+pacewisdomhq/TutorLoom	v2-topic	18	KEEP	97	Apache-2.0	2026-11-12	Self-hosted, multi-tenant learning management system (LMS) for training institutes and teams: course builder, trainer and student portals, progress tracking. Dj	topic:edtech+3;topic:elearning+3;topic:learning-management-system+3;lms+2;student+2;learning management+2;learning+1;course+1;training+1
+ucfopen/Materia	v2-topic	18	KEEP	53	AGPL-3.0	2026-11-16	Engage students with easily embedded apps for online courses. Supercharge your course with compelling experiences and game mechanics.	topic:courseware+3;topic:digital-learning+3;topic:edtech+3;topic:education+3;topic:educational-game+3;student+2;course+1
+codeforlife-education/aimmo	v2-topic	17	KEEP	117	NOASSERTION	2024-07-31	A python-based multi-player online educational game for students to play in a class or club setting.	topic:edtech+3;topic:educational+3;topic:educational-game+3;topic:secondary-school+3;student+2;educational+2;education+1
+PlaypowerLabs/EdOptimize	v2-topic	17	KEEP	31	GPL-3.0	2021-06-05	EdOptimize is an open-source learning analytics platform for K-12 digital learning systems.	topic:digital-learning+3;topic:edtech+3;topic:educational-data+3;topic:learning-analytics+3;k-12+2;learning analytics+2;learning+1
+studentinsights/studentinsights	v2-topic	16	KEEP	136	MIT	2024-08-27	We work within school communities to make open, secure, student-centered data systems.  Say hello@studentinsights.org!	topic:edtech+3;topic:education+3;topic:students+3;topic:teachers+3;student+2;school+2
+codeforlife-education/codeforlife-portal	v2-topic	16	KEEP	54	NOASSERTION	2026-11-09	The portal code for Code for Life: an online platform providing free educational resources, materials and games to teach about coding and technology.	topic:edtech+3;topic:education+3;topic:educational-game+3;topic:teaching-materials+3;educational+2;education+1;teach+1
+LeeLanguageLab/HokkienTranslation	v2b-topic-ai	16	KEEP	11	MIT	2026-01-06	Educational language-learning app for Hokkien, a low-resource language, featuring flashcards, quizzes, and generative AI!	topic:ai-for-education+3;topic:educational-ai+3;e-learning+2;quiz+2;flashcard+2;educational+2;education+1;learning+1
+Selleo/mentingo	v2-topic	15	KEEP	109	MIT	2026-11-17	Open-source AI-native LMS with AI Mentor & role-play. Self-hosted alternative to Moodle, Docebo, TalentLMS, Thinkific, Teachable and Open edX.	topic:ai-tutor+3;topic:edtech+3;topic:learning-management-system+3;lms+2;moodle+2;open edx+2
+onemnemo/mnemo	v2-topic	14	KEEP	132	Apache-2.0	2026-10-22	Mnemo is a free, open-source study application built with Photino X and .NET 10, designed to help students, researchers, and lifelong learners master any subjec	topic:edtech+3;topic:education+3;topic:learning+3;student+2;learner+2;study+1
+tutors-sdk/tutors	v2-topic	14	KEEP	125	MIT	2026-07-23	The core Tutors Reader application.	topic:edtech+3;topic:education+3;topic:educational-technology+3;topic:elearning+3;tutor+2
+opencast/annotation-tool	v2-topic	14	KEEP	42	ECL-2.0	2026-10-19	A video annotation service that is suitable for research, teaching and learning	topic:e-learning+3;topic:edtech+3;topic:education+3;topic:teaching+3;learning+1;teach+1
+HKUDS/DeepTutor	v1-tutor	13	KEEP	59879	Apache-2.0	2026-11-15	DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.	topic:ai-tutor+3;topic:interactive-learning+3;topic:learning+3;tutor+2;tutoring+2
+ls1intum/Artemis	v1-tutor	13	KEEP	832	MIT	2026-11-17	Artemis - Interactive Learning with Automated Feedback	topic:education+3;topic:education-technology+3;topic:interactive-learning+3;topic:learning+3;learning+1
+CaviraOSS/PageLM	v2-topic	12	KEEP	2069	NOASSERTION	2026-11-15	PageLM is a community driven version of NotebookLM & a education platform that transforms study materials into interactive resources like quizzes, flashcards, n	topic:edtech+3;topic:education+3;quiz+2;flashcard+2;education+1;study+1
+edrys-org/edrys	v2-topic	12	KEEP	334	MPL-2.0	2024-08-12	Edrys is an open and modular remote teaching platform (and the first live LMS)	topic:edtech+3;topic:education+3;topic:remote-teaching+3;lms+2;teach+1
+airagroupoftechnology/Aira-Ai-for-kids	v2b-topic-ai	12	KEEP	0	MIT	2026-10-21	Kids-focused Open Source Aira AI can say story for kids so they can eat with the Aira's Story	topic:coding-tutor+3;topic:educational-ai+3;topic:machine-learning+3;topic:student-assistant+3
+canyongbs/advisingapp	v2-topic	11	KEEP	339	NOASSERTION	2026-11-17	Advising App® by Canyon GBS® is an AI-powered conversational assistant for staff, student success platform, and recruitment CRM designed specifically for colleg	topic:edtech+3;topic:higher-education+3;topic:student-success+3;student+2
+raccoongang/edx_xblock_scorm	v9-openedx	11	KEEP	32	Apache-2.0	2023-05-26	XBlock to display SCORM content within the Open edX LMS. Editable within Open edx Studio. Will save student state and report scores to the progress tab of the c	lms+2;open edx+2;xblock+2;scorm+2;student+2;course+1
+opendilab/awesome-RLHF	v1-tutor	10	KEEP	4440	Apache-2.0	2026-05-20	A curated list of reinforcement learning with human feedback resources (continually updated)	topic:deep-learning+3;topic:deep-reinforcement-learning+3;topic:reinforcement-learning+3;learning+1
+ucfopen/UDOIT	v2-topic	10	KEEP	118	GPL-3.0	2026-11-12	The Universal Design Online content Inspection Tool, or UDOIT (pronounced, “You Do It”) enables faculty to identify accessibility issues in their Learning Manag	topic:edtech+3;topic:education+3;learning management+2;learning+1;course+1
+mathigon/studio	v2-topic	10	KEEP	46	NOASSERTION	2025-02-27	A customisable NodeJS server for creating and hosting highly interactive online courses.	topic:course+3;topic:edtech+3;topic:education+3;course+1
+iblai/higher-education-agents	v10-eduagent	10	KEEP	14	MIT	2026-06-08	Drop-in OpenClaw/NemoClaw agent configuration for the ibl.ai Higher Education segment — Campus Assistant orchestrator plus 16 specialist subagents.	topic:edtech+3;topic:higher-education+3;topic:student-success+3;education+1
+openedx/XBlock	v9-openedx	9	KEEP	471	Apache-2.0	2026-11-16	Framework for building custom learning components that run in the Open edX LMS!	lms+2;open edx+2;openedx+2;xblock+2;learning+1
+PapillonApp/papillon-v6	v2-topic	9	KEEP	117	GPL-3.0	2024-07-10	Le client alternatif de vie scolaire ouvert à tous et porté par la communauté	topic:edtech+3;topic:education+3;topic:school-management+3
+ucfopen/Obojobo	v2-topic	9	KEEP	72	AGPL-3.0	2026-10-14	Next generation course content for your LMS. Easy for beginners, but powerful enough for researchers.	topic:edtech+3;topic:education+3;lms+2;course+1
+elimu-ai/webapp	v2-topic	9	KEEP	41	MIT	2026-11-10	🖥  Web application for hosting Android applications and educational content	topic:edtech+3;topic:learning+3;educational+2;education+1
+boostcampwm2025/web11-mmh	v2-topic	9	KEEP	37	NONE	2026-03-06	말로 설명하며 배우는 AI 기반 CS 학습 플랫폼, “말만해”🐴	topic:cs-learning+3;topic:edtech+3;topic:learning-platform+3
+OPCODE-Open-Spring-Fest/edtech_app	v6-edtech	9	KEEP	1	MIT	2025-10-15	Adhyan is an open-source, AI-powered EdTech platform built with Flutter. It connects students, parents, and teachers with smart learning tools and real-time ana	edtech+2;student+2;teacher+2;education+1;learning+1;teach+1
+learningequality/kolibri	v2-topic	8	KEEP	1177	MIT	2026-11-17	Kolibri Learning Platform: the offline app for universal education	topic:edtech+3;topic:education+3;education+1;learning+1
+langx/langx	v2-topic	8	KEEP	111	BSD-3-Clause	2026-11-16	We connect language learners worldwide. Practice and immerse yourself in different languages.	topic:edtech+3;topic:languagelearning+3;learner+2
+overhangio/openedx-scorm-xblock	v9-openedx	8	KEEP	36	AGPL-3.0	2026-11-05	SCORM XBlock for Open edX	open edx+2;openedx+2;xblock+2;scorm+2
+EduChatbot/moodle-chatbot-frontend	v3-moodle	8	KEEP	1	NONE	2026-08-19	Interactive Next.js frontend for the *AI Learning Assistant* Moodle plugin. Features a context-aware chat interface, automated quiz module, and learning progres	topic:aieducation+3;moodle+2;quiz+2;learning+1
+openedx/openedx-platform	v1-tutor	7	KEEP	8239	AGPL-3.0	2026-11-17	The Open edX LMS & Studio, powering education sites around the world!	lms+2;open edx+2;openedx+2;education+1
+elmsln/elmsln	v2-topic	7	KEEP	253	GPL-3.0	2026-08-14	ELMS - create and sustain innovation in education. Dream with us!	topic:edtech+3;topic:education+3;education+1
+senjun-team/senjun-courses	v2-topic	7	KEEP	161	GPL-3.0	2026-10-24	Курсы от программистов для программистов	topic:courses+3;topic:edtech+3;course+1
+Oriole-FDU/Wisepen	v10-eduagent	7	KEEP	126	NOASSERTION	2026-10-29	面向高校教学、学习与科研的开源知识与 AI Agent 协作平台 | Open-source platform for education and research	topic:education+3;topic:higher-education+3;education+1
+g3i/lxHive	v2-topic	7	KEEP	79	GPL-2.0	2025-04-15	A lightweight Experience API Learning Record Store (LRS)	topic:edtech+3;topic:learning+3;learning+1
+Abstract-Tech/abstract-scorm-xblock	v9-openedx	7	KEEP	10	Apache-2.0	2026-03-17	XBlock for Open edX to support SCORM packages with course import/export	open edx+2;xblock+2;scorm+2;course+1
+csmediapro/moodle-mcp-server	v8-lmsagent	7	KEEP	2	AGPL-3.0	2026-11-07	Open-source MCP server that connects AI agents to Moodle LMS data through Moodle Web Services.	topic:education+3;lms+2;moodle+2
+Human-Logic-Software-LLC/moodle-local_hlai_quizgen	v3-moodle	7	KEEP	0	NONE	2026-03-13	The AI Quiz Generator plugin automates the creation of high-quality quiz questions from course content using AI infrastructure. It provides instructors with an 	moodle+2;pedagog+2;quiz+2;course+1
+edyoda/data-science-complete-tutorial	v1-tutor	6	KEEP	1837	NONE	2022-10-31	For extensive instructor led learning	topic:machine-learning+3;tutor+2;learning+1
+sitor-ai/frametell	v2-topic	6	KEEP	508	AGPL-3.0	2026-11-12	Frametell: turn your ideas and material into vivid explainer videos with an AI director agent. Local-first, any model.	topic:edtech+3;topic:education+3
+chipmates/agoracosmica	v2-topic	6	KEEP	150	AGPL-3.0	2026-11-16	A Living Library You Can Talk To. Thirty historical figures, their lives narrated, their ideas open to conversation, in English and German. Nonprofit, open sour	topic:edtech+3;topic:education+3
+haxtheweb/haxcms-php	v2-topic	6	KEEP	130	Apache-2.0	2026-11-17	HAXcms with a PHP backend: build and manage a universe of microsites with HAX, no database required	topic:edtech+3;topic:education+3
+particify/arsnova-server	v2-topic	6	KEEP	69	GPL-3.0	2026-11-16	The backend components of ARSnova. ARSnova is a modern, web-based approach to Audience Response Systems (ARS).	topic:edtech+3;topic:education+3
+particify/arsnova	v2-topic	6	KEEP	55	NONE	2021-01-14	ARSnova is a modern, web-based approach to Audience Response Systems (ARS).	topic:edtech+3;topic:education+3
+Wakoma/Lokal	v2-topic	6	KEEP	53	MIT	2025-11-15	Lokal, offline first, content and services - for and by local communities.	topic:edtech+3;topic:education+3
+cleura/stackamole-xblock	v9-openedx	6	KEEP	26	AGPL-3.0	2026-11-02	Makes arbitrarily complex lab environments available on an Open edX LMS	lms+2;open edx+2;xblock+2
+ArinaAi/moodle-local_arina_prism_sense	v3-moodle	6	KEEP	7	NONE	2026-06-29	An AI-powered Moodle plugin for automated curriculum generation and intelligent content processing, integrating Arina Prism Sense capabilities directly into the	lms+2;moodle+2;curriculum+2
+openfun/xblock-proctor-exam	v9-openedx	6	KEEP	4	NOASSERTION	2021-02-11	Xblock to integrate Open edX with ProctorExam	open edx+2;xblock+2;exam+2
+X5GON/x5moodle	v3-moodle	6	KEEP	3	BSD-2-Clause	2021-02-28	New Moodle activity plugin based  on  2  key  ideas:  1) providing AI-based smart tools for delivering open resources as a support during the course session and	topic:collaborative-learning+3;moodle+2;course+1
+openedxou/Click-to-reveal-XBlock	v9-openedx	6	KEEP	3	AGPL-3.0	2017-10-10	An Open edX XBlock to reveal some HTML content	open edx+2;openedx+2;xblock+2
+openedxou/print-xblock	v9-openedx	6	KEEP	3	AGPL-3.0	2018-06-01	A simple Open edX XBlock to print unit contents.	open edx+2;openedx+2;xblock+2
+openfun/xblock-configurable-lti-consumer	v9-openedx	6	KEEP	3	AGPL-3.0	2022-04-14	A configurable LTI consumer Xblock for Open edX	open edx+2;xblock+2;lti+2
+openedxou/box-xblock	v9-openedx	6	KEEP	1	AGPL-3.0	2017-10-10	A simple Open edX XBlock to display HTML content in a coloured box.	open edx+2;openedx+2;xblock+2
+edly-io/openedx-cmi5-xblock	v9-openedx	6	KEEP	1	MIT	2025-03-06	Xblock to play CMI5 content inside Open edX	open edx+2;openedx+2;xblock+2
+openedxou/signpost-xblock	v9-openedx	6	KEEP	1	AGPL-3.0	2017-10-10	A simple Open edX XBlock for creating activity signposts.	open edx+2;openedx+2;xblock+2
+openedx/xblocks-core	v9-openedx	6	KEEP	0	AGPL-3.0	2026-11-17	Core Open edX XBlock types: Problem, Text, Video, etc.	open edx+2;openedx+2;xblock+2
+openedxou/captioned-image-xblock	v9-openedx	6	KEEP	0	AGPL-3.0	2017-10-10	A simple Open edX XBlock to display images with captions and long descriptions	open edx+2;openedx+2;xblock+2
+edSPIRIT/xblock-skyroom	v9-openedx	6	KEEP	0	AGPL-3.0	2024-12-21	Connect Open edX to Skyroom virtual classrooms	open edx+2;xblock+2;classroom+2
+edx/gamesxblock	v9-openedx	6	KEEP	0	GPL-3.0	2026-09-21	XBlock to display game content within the Open edX LMS	lms+2;open edx+2;xblock+2
+open-craft/graph-xblock	v9-openedx	6	KEEP	0	Apache-2.0	2026-07-21	An Open edX XBlock that embeds a Desmos Graphing Calculator so learners can plot mathematical expressions. Authors can optionally seed a default equation and co	open edx+2;xblock+2;learner+2
+openfun/xblock-Glowbl	v9-openedx	6	KEEP	0	AGPL-3.0	2019-02-08	DEPRECATED Xblock to integrate Open edX with Glowbl (replaced by https://github.com/openfun/xblock-configurable-lti-consumer)	open edx+2;xblock+2;lti+2
+ably-labs/realtime-quiz-framework	v2-topic	5	KEEP	77	Apache-2.0	2026-03-06	This repository contains a base networking framework for building a realtime quiz platform with Ably. This project uses VueJS on the client-side and NodeJS on t	topic:edtech+3;quiz+2
+eduNEXT/flow-control-xblock	v9-openedx	5	KEEP	21	AGPL-3.0	2026-07-08	An Xblock to control the learning path for the Open edX platform	open edx+2;xblock+2;learning+1
+dired-ufla/moodle-block_smartedu	v3-moodle	5	KEEP	3	GPL-3.0	2026-05-22	A Moodle LMS block plugin that leverages the potential of AI to enhance education.	lms+2;moodle+2;education+1
+IONISx/xblock-slideshare	v9-openedx	5	KEEP	3	NONE	2015-10-09	Course component (Open edX XBlock) to embed a Slideshare presentation	open edx+2;xblock+2;course+1
+IONISx/xblock-feedback	v9-openedx	5	KEEP	3	NONE	2015-08-05	Course component (Open edX XBlock) that asks for user feedback	open edx+2;xblock+2;course+1
+DOTE-3010/AI_Learning_Assistant	v11-assist	5	KEEP	2	NONE	2026-07-03	A private study nomenclator developed for CUHK Business School students	student+2;school+2;study+1
+IONISx/xblock-personality-test	v9-openedx	5	KEEP	1	NONE	2015-09-01	Course component (Open edX XBlock) that provides a Personality Test	open edx+2;xblock+2;course+1
+eduNEXT/xblock-extemporaneous-grading	v9-openedx	5	KEEP	0	AGPL-3.0	2024-05-24	Extemporaneous Grading XBlock for Open edX	open edx+2;xblock+2;grading+1
+eduNEXT/xblock-discussion-grading	v9-openedx	5	KEEP	0	AGPL-3.0	2024-05-22	Discussion Grading XBlock for Open edX	open edx+2;xblock+2;grading+1
+eduNEXT/xblock-completion-grading	v9-openedx	5	KEEP	0	AGPL-3.0	2024-05-22	Completion Grading XBlock for Open edX 	open edx+2;xblock+2;grading+1
+zapplyjobs/New-Grad-Data-Science-Jobs-2027	v4-analytics	4	KEEP	93	NOASSERTION	2026-11-17	2027 entry-level data science & ML jobs — analytics, AI, quant & machine learning US roles	topic:machine-learning+3;learning+1
+edly-io/h5pxblock	v9-openedx	4	KEEP	19	MIT	2026-11-05	Xblock which provides ability to play H5P content in open edX	open edx+2;xblock+2
+microsoft/xblock-officevideo	v9-openedx	4	KEEP	8	NOASSERTION	2022-11-28	Office 365 Video XBlock for Open edX	open edx+2;xblock+2
+Sapient-Predictive-Analytics/Data-Driven_Catalyst	v4-analytics	4	KEEP	7	Apache-2.0	2025-08-17	Improve Project Catalyst with insights gained through data collection and analysis, machine learning and AI.	topic:machine-learning+3;learning+1
+abconlinecourses/chatgpt-xblock	v9-openedx	4	KEEP	7	GPL-3.0	2025-03-20	chatgpt-xblock for Open edX	open edx+2;xblock+2
+IONISx/xblock-audio	v9-openedx	4	KEEP	7	NONE	2014-08-04	Open edX XBlock that provides an audio player	open edx+2;xblock+2
+Jalte-Diye-Foundation/Cogentic	v10-eduagent	4	KEEP	6	MPL-2.0	2026-11-17	Cognitive agentic AI system for social education	topic:social-education+3;education+1
+collabassess/CPSXblock	v9-openedx	4	KEEP	3	NONE	2018-08-17	An xblock for the open-edx platform that allows real-time collaboration tools for students	xblock+2;student+2
+Urav-Advanced-Learning-Systems-Pvt-Ltd/Study-Buddy-Engineering-Hackathon-2024	v11-assist	4	KEEP	3	GPL-3.0	2024-12-02	Study Buddy | AI Assistant Hackathon for Engineering Students 2024	student+2;learning+1;study+1
+AIMoveCAOR/moodle-plugin-ai	v3-moodle	4	KEEP	2	NONE	2026-08-03	A PHP plugin for Moodle server. Serves as a companion block plugin to show a chat interface with knowledge of the current content on the Moodle course.	moodle+2;course+1;knowledge+1
+cursiveinc/moodle-local_assignmentnotice	v3-moodle	4	KEEP	2	NONE	2026-07-20	AI Assessment Scale plugin for Moodle Assignments	moodle+2;assessment+1;assignment+1
+alphabees-25/moodle-block_alphabees	v3-moodle	4	KEEP	2	GPL-3.0	2026-10-29	Alphabees' plugin integrates a powerful AI tutor chat widget into Moodle, enabling precise placement through Moodle's block structure. It seamlessly combines in	moodle+2;tutor+2
+Learnathon-By-Geeky-Solutions/elite-programmers	v5-grading	4	KEEP	2	MIT	2026-02-17	TrueTest is a secure online platform for conducting technical assessments, offering real-time proctoring, automated grading, and AI-driven question generation t	exam+2;grading+1;assessment+1
+open-craft/xblock-grammarian	v9-openedx	4	KEEP	2	AGPL-3.0	2016-06-16	Demo XBlock for 2016 edX Intermediate XBlock Tutorial	xblock+2;tutor+2
+overhangio/jupyter-xblock	v9-openedx	4	KEEP	2	AGPL-3.0	2025-04-07	Integrate JupyterHub notebooks with Open edX	open edx+2;xblock+2
+collabassess/Xblocks-in-OpenEdx	v9-openedx	4	KEEP	2	NONE	2018-02-06	Installation and development of Xblocks for the OpenEdx Platform	openedx+2;xblock+2
+eduNEXT/xblock-mindmap	v9-openedx	4	KEEP	2	AGPL-3.0	2026-07-08	Mind Map XBlock for Open edX	open edx+2;xblock+2
+eduNEXT/xblock-controlled-navigation	v9-openedx	4	KEEP	2	AGPL-3.0	2024-05-22	Controlled Navigation XBlock for Open edX	open edx+2;xblock+2
+open-craft/capa-visual-editor	v9-openedx	4	KEEP	2	AGPL-3.0	2019-11-07	An improved editing experience for the 'problem' XBlock in Open edX	open edx+2;xblock+2
+GDGC-MET/EdutechAssistant-Vibecoding	v11-assist	4	KEEP	2	MIT	2025-10-09	Traditional study methods can be rigid and one-size-fits-all. This challenge calls on you to leverage AI to create dynamic, personalized learning tools that ada	student+2;learning+1;study+1
+eduNEXT/xblock-limesurvey	v9-openedx	4	KEEP	1	AGPL-3.0	2024-05-22	LimeSurvey XBlock for Open edX	open edx+2;xblock+2
+eduNEXT/xblock-imagesgallery	v9-openedx	4	KEEP	1	AGPL-3.0	2026-07-08	Images Gallery XBlock for Open edX	open edx+2;xblock+2
+IONISx/xblock-taggedtext	v9-openedx	4	KEEP	1	NONE	2015-03-30	Open edX XBlock that provides a taggable text	open edx+2;xblock+2
+openfun/fun-videofront-xblock	v9-openedx	4	KEEP	1	NONE	2016-09-06	DEPRECATED XBlock for Open edX to play videos stored on videofront	open edx+2;xblock+2
+cmmedu/iterative-xblock	v9-openedx	4	KEEP	1	GPL-3.0	2026-11-09	XBlock para realizar llamados reiterativos a respuestas anteriores en plataforma Open edX.	open edx+2;xblock+2
+eth-ecuador/moodle-ai-tutor-plugin	v3-moodle	4	KEEP	0	NONE	2024-12-13	Moodle AI tutor plugin integration	moodle+2;tutor+2
+cybologic/edx-practical-project	v9-openedx	4	KEEP	0	MIT	2025-10-20	Open edX guided project xblock	open edx+2;xblock+2
+TechNikh/xblock_repatcha	v9-openedx	4	KEEP	0	NONE	2014-11-21	xblock module for Open edX	open edx+2;xblock+2
+IONISx/xblock-video	v9-openedx	4	KEEP	0	NONE	2014-06-06	A video block for Open edX	open edx+2;xblock+2
+valutac/sulva	v9-openedx	4	KEEP	0	NONE	2018-09-12	Open edX XBlock to embed Slideshare	open edx+2;xblock+2
+engaged-edu/open-edx-engaged-certificate-xblock	v9-openedx	4	KEEP	0	GPL-3.0	2020-10-29	-	open edx+2;xblock+2
+edly-io/instruqt-xblock	v9-openedx	4	KEEP	0	AGPL-3.0	2026-11-05	XBlock to embed Instruqt track in Open edX	open edx+2;xblock+2
+edly-io/jupyterlite-xblock	v9-openedx	4	KEEP	0	GPL-3.0	2024-04-01	Xblock to integrate JupyterLite service with open edX	open edx+2;xblock+2
+cmmedu/cmmedu-tablelonginput-xblock	v9-openedx	4	KEEP	0	MIT	2026-11-09	XBlock con tabla de preguntas abiertas para plataforma Open edX.	open edx+2;xblock+2
+IONISx/xblock-video-modal-components	v9-openedx	4	KEEP	0	NONE	2014-12-23	Have your Open edX XBlocks pop up while playing a video	open edx+2;xblock+2
+cmmedu/iaa-xblock	v9-openedx	4	KEEP	0	GPL-3.0	2026-08-19	Primera versión del Iterative XBlock, para construir documentos de manera incremental en plataforma Open edX.	open edx+2;xblock+2
+langgptai/awesome-claude-prompts	v1-tutor	3	KEEP	5586	NONE	2026-11-14	This repo includes Claude prompt curation to use Claude better.	topic:prompt-learning+3
+menthorlabs/menthor	v2-topic	3	KEEP	581	Apache-2.0	2024-04-21	Plataforma gratuita e open-source de ensino de programação	topic:edtech+3
+tsugiproject/tsugi	v2-topic	3	KEEP	377	Apache-2.0	2026-11-17	Tsugi Admin, Developer, and Management Console (pls join the dev list)	topic:edtech+3
+Wakoma/nimble	v2-topic	3	KEEP	110	CERN-OHL-S-2.0	2026-01-28	The nimble.  An open source, rapidly deployable, wireless mesh network. 	topic:edtech+3
+wombats-writing-code/xoces	v2-topic	3	KEEP	74	MIT	2017-07-24	JS widgets for interactive chord and tree visualizations for hierarchical + connected data 🚀🍩🎉	topic:edtech+3
+deneyapkart/deneyapkart-arduino-core	v2-topic	3	KEEP	54	LGPL-2.1	2026-10-28	Arduino Core for Deneyap DevKits	topic:edtech+3
+openfun/arnold	v2-topic	3	KEEP	41	MIT	2026-11-05	:construction_worker_woman: Deploy your applications to Kubernetes with Ansible	topic:edtech+3
+TetiAI/lucid	v2-topic	3	KEEP	34	BSD-3-Clause	2026-07-06	AI makes users productive — but also cognitively lazy. Lucid detects cognitive dependency in real-time and adapts AI responses to keep users thinking. Drop-in S	topic:edtech+3
+saylordotorg/moodle-local_ai_course_assistant	v3-moodle	3	KEEP	21	GPL-3.0	2026-11-14	SOLA - Saylor Online Learning Assistant: AI-powered learning coach Moodle plugin	moodle+2;learning+1
+CSC392-CSC492-Building-AI-ML-systems/educational-AI-agent	v10-eduagent	3	KEEP	5	NONE	2025-09-21	-	educational+2;education+1
+CopyLeft-AI/educational-AI-Agent	v10-eduagent	3	KEEP	2	NONE	2025-08-12	Autodocs	educational+2;education+1
+ruthuraraj-ml/Workshop-Assistant-ReAct-lite-RAG-Agent	v2b-topic-ai	3	KEEP	0	MIT	2026-03-18	A heuristic-based ReAct-lite RAG agent that answers questions grounded in workshop materials — built as a live demo for a 3-day AI workshop at SNS College of Te	topic:educational-ai+3
+Upload-Post/viraloop	v4-analytics	2	MARGINAL	86	NONE	2026-03-24	OpenClaw AI agent skill for automated TikTok and Instagram carousel growth. Pass any website URL to analyze brand, competitors, colors, value proposition. Gener	learning+1;skill+1
+harvard-lil/lawskills-hub	v10-eduagent	2	MARGINAL	48	NONE	2026-10-16	A collection of AI agent skills for legal education	education+1;skill+1
+LinkedInLearning/deep-learning-and-generative-ai-with-python-data-preprocessing-and-analytics-3896069	v4-analytics	2	MARGINAL	19	NOASSERTION	2024-10-07	This repo is for the Linkedin Learning course: Deep Learning and Generative AI with Python: Data Preprocessing and Analytics	learning+1;course+1
+NinjasCL/airnotifier-moodle-bridge	v3-moodle	2	MARGINAL	7	MIT	2026-11-12	A replacement API for AirNotifier Moodle Plugin that connects directly to Firebase and other Push Notification Providers	moodle+2
+scibly-dev/skills	v10-eduagent	2	MARGINAL	5	MIT	2026-09-16	AI skills for agentic education	education+1;skill+1
+Universita-di-Ferrara/moodle-aiprovider_gemini	v3-moodle	2	MARGINAL	3	GPL-3.0	2026-08-06	A Moodle AI provider plugin that integrates Google's Gemini AI models into Moodle's AI framework. Supports text generation, image generation, and text summariza	moodle+2
+MAIVAN-ai/OrthoSkills	v10-eduagent	2	MARGINAL	2	NOASSERTION	2026-08-19	Open-source orthopaedic clinical reasoning skills for AI agents.  OrthoSkills is a public, community-driven library of Anthropic-style "skills" covering the ort	education+1;skill+1
+ADORSYS-GIS/moodle-aiprovider_openaicompatible	v3-moodle	2	MARGINAL	0	NONE	2026-10-15	Moodle AI provider plugin for OpenAI-compatible APIs	moodle+2
+YorkUITInnovation/moodle-tool_consentwithdraw	v3-moodle	2	MARGINAL	0	GPL-3.0	2026-04-22	York AI Consent plugin	moodle+2
+skf-ai/moodle-karta-plugin	v3-moodle	2	MARGINAL	0	NONE	2025-09-15	-	moodle+2
+Master-Thesis-AI-Alt-Text-Moodle/moodle-plugin	v3-moodle	2	MARGINAL	0	NONE	2024-09-07	-	moodle+2
+dixeo/moodle-local_dixeo_editor	v3-moodle	2	MARGINAL	0	GPL-3.0	2026-11-17	Dixeo AI Editor plugin for Moodle	moodle+2
+fondation-unit/moodle-aiprovider_mistral	v3-moodle	2	MARGINAL	0	GPL-3.0	2026-03-18	A Moodle AI provider plugin for the Mistral model.	moodle+2
+JamiesonLabUTSW/automated-osce-video-assessment-aims-thesis	v5-grading	2	MARGINAL	0	NONE	2025-10-20	MSc thesis codes on evaluating temporal action localization approaches and rubric grading pipelines for automated OSCE video assessment using multimodal foundat	grading+1;assessment+1
+Stagee-Ai/reseasy-backend-exercise	v5-grading	2	MARGINAL	0	NONE	2026-06-22	Take-home dev assessment: implement a booking-provider backend against a stable interface, with an automated grader.	grade+1;assessment+1
+Cocoon-AI/architecture-diagram-generator	v7-curricula	1	MARGINAL	7611	MIT	2026-05-13	Generate beautiful dark-themed system architecture diagrams as standalone HTML/SVG files. Works as a Claude AI skill.    	skill+1
+sundial-org/awesome-openclaw-skills	v1-tutor	1	MARGINAL	674	NONE	2026-03-07	Top OpenClaw skills, with the most popular and useful ones.	skill+1
+NVIDIA-AI-IOT/deepstream-occupancy-analytics	v4-analytics	1	MARGINAL	240	MIT	2023-10-19	This is a sample application for counting people entering/leaving in a building using NVIDIA Deepstream SDK, Transfer Learning Toolkit (TLT), and pre-trained mo	learning+1
+opena2a-org/damn-vulnerable-ai-agent	v10-eduagent	1	MARGINAL	149	Apache-2.0	2026-11-15	Damn Vulnerable AI Agent is a deliberately vulnerable AI agent platform for security testing and education. 	education+1
+CognonicLabs/awesome-AI-kubernetes	v4-analytics	1	MARGINAL	147	Apache-2.0	2024-07-19	:snowflake: :whale:  Awesome tools and libs for AI, Deep Learning, Machine Learning, Computer Vision, Data Science, Data Analytics and Cognitive Computing that 	learning+1
+greenplum-db/gpdb-archive	v4-analytics	1	MARGINAL	114	Apache-2.0	2024-05-23	Greenplum Database - Massively Parallel PostgreSQL for Analytics. An open-source massively parallel data platform for analytics, machine learning and AI.	learning+1
+aws-samples/AI-Agents-for-Education	v10-eduagent	1	MARGINAL	34	MIT-0	2025-08-18	-	education+1
+NVIDIA-AI-IOT/tlt-iva-examples	v4-analytics	1	MARGINAL	28	MIT	2019-11-17	A notebook that demonstrates how to use the NVIDIA Intelligent Video Analytics suite to detect objects in real-time. We use Transfer Learning Toolkit to train a	learning+1
+aicells/aicells	v4-analytics	1	MARGINAL	23	NOASSERTION	2022-06-22	AIcells is an Excel add-in that lets you work with Python functions in Excel. Statistics, Bayesian theory, Machine Learning and Optimization in Excel cells. Man	learning+1
+open-edge-platform/edge-workloads-and-benchmarks	v4-analytics	1	MARGINAL	15	Apache-2.0	2026-06-10	Edge Workloads and Benchmarks are performance-optimized pipelines that leverage the OpenVINO toolkit, the GStreamer multimedia framework, and the Deep Learning 	learning+1
+aws-solutions-library-samples/guidance-for-omnichannel-claims-processing-powered-by-generative-ai-on-aws	v4-analytics	1	MARGINAL	9	MIT-0	2025-07-23	This Guidance demonstrates how organizations in the Financial Service Industry (FSI) can modernize their claims processing using digital technologies, such as a	learning+1
+ava-orange-education/Ultimate-Agentic-AI-with-AutoGen-for-Enterprise-Automation	v10-eduagent	1	MARGINAL	9	MIT	2025-04-14	Ultimate Agentic AI with AutoGen for Enterprise Automation, published by Orange, AVA®	education+1
+AICMO/AiCMO-AI-Agents	v10-eduagent	1	MARGINAL	8	NONE	2025-07-28	The AI Agents is a curated collection of practical AI agent use cases spanning multiple industries. It highlights real-world applications and includes links to 	education+1
+climatechange-ai-tutorials/smart-meter-analytics	v4-analytics	1	MARGINAL	7	MIT	2024-06-13	A practical guide to current trends in smart meter data analytics with a focus on feature engineering and machine learning scenarios for energy data at 15-minut	learning+1
+apelogic-ai/db-mcp	v4-analytics	1	MARGINAL	6	MIT	2026-05-04	db-mcp is a desktop MCP server that connects Claude to databases and continuously improves data analytics by learning from each query through an LLM-native sema	learning+1
+comses-education/get-lazy-with-agents-clinic	v10-eduagent	1	MARGINAL	3	MIT	2026-06-08	From installing an AI agent to putting it to work: a clinic on Human+AI collaboration and co-evolution aimed at deepening understanding, sharpening judgment, an	education+1
+superMLdev/AgenticAI	v10-eduagent	1	MARGINAL	2	MIT	2026-04-23	This repo is developed and maintained for education purpose to learn Agentic AI by superml.dev 	education+1
+ava-orange-education/Ultimate-Agentic-AI-Systems	v10-eduagent	1	MARGINAL	2	MIT	2026-10-06	Ultimate Agentic AI Systems, published by Orange, AVA®	education+1
+turmwerk/qeedu	v10-eduagent	1	MARGINAL	2	MIT	2026-06-04	QeEdu Cloud: an AI-native agent platform for higher education workflows	education+1
+drawdb-io/drawdb	v7-curricula	0	DROP	40333	AGPL-3.0	2026-11-13	Free, simple, and intuitive online database diagram editor and SQL generator.	-
+docsifyjs/docsify	v7-curricula	0	DROP	31597	MIT	2026-11-14	🃏 A magical documentation site generator.	-
+digitalocean/nginxconfig.io	v7-curricula	0	DROP	28244	MIT	2024-12-14	⚙️ NGINX config generator on steroids 💉	-
+jhipster/generator-jhipster	v7-curricula	0	DROP	22460	Apache-2.0	2026-11-17	JHipster is a development platform to quickly generate, develop, & deploy modern web applications & microservice architectures.	-
+11ty/buildawesome	v7-curricula	0	DROP	20043	MIT	2026-11-16	A simpler site generator. Transforms a directory of templates (of varying types) into HTML.	-
+antlr/antlr4	v7-curricula	0	DROP	19046	BSD-3-Clause	2026-10-30	ANTLR (ANother Tool for Language Recognition) is a powerful parser generator for reading, processing, executing, or translating structured text or binary files.	-
+AsyncFuncAI/deepwiki-open	v7-curricula	0	DROP	18444	MIT	2026-11-15	Open Source DeepWiki: AI-Powered Wiki Generator for GitHub/Gitlab/Bitbucket Repositories. Join the discord: https://discord.gg/gMwThUMeme	-
+chatfire-AI/huobao-drama	v7-curricula	0	DROP	17613	NOASSERTION	2026-11-15	🎬 火宝短剧 - 基于AI的一站式短剧生成平台 《一句话生成完整短剧，从剧本到成片全自动化》  Huobao Drama - An AI-Powered End-to-End Short Drama Generator "One Sentence to Complete Drama: Fully Automated f	-
+jsdoc/jsdoc	v7-curricula	0	DROP	15473	Apache-2.0	2026-11-14	An API documentation generator for JavaScript.	-
+Tencent/rapidjson	v7-curricula	0	DROP	15156	NOASSERTION	2026-11-03	A fast JSON parser/generator for C++ with both SAX/DOM style API	-
+HKUDS/ViMax	v7-curricula	0	DROP	12943	MIT	2026-09-30	"ViMax: Agentic Video Generation (Director, Screenwriter, Producer, and Video Generator All-in-One)"	-
+presenton/presenton	v7-curricula	0	DROP	11941	Apache-2.0	2026-11-06	Open-Source AI Presentation Generator and API (Gamma, Canva, Beautiful AI, Decktopus, Presentations AI Alternative)	-
+apidoc/apidoc	v7-curricula	0	DROP	9638	NOASSERTION	2024-02-16	RESTful web API Documentation Generator.	-
+ai-collection/ai-collection	v1-tutor	0	DROP	9289	MIT	2026-11-04	The Generative AI Landscape - A Collection of Awesome Generative AI Applications	-
+dair-ai/ML-Papers-Explained	v1-tutor	0	DROP	8931	NONE	2025-06-30	Explanation to key concepts in ML	-
+TypeStrong/typedoc	v7-curricula	0	DROP	8461	Apache-2.0	2026-07-13	Documentation generator for TypeScript projects.	-
+sphinx-doc/sphinx	v7-curricula	0	DROP	8101	NOASSERTION	2026-11-16	The Sphinx documentation generator	-
+github-changelog-generator/github-changelog-generator	v7-curricula	0	DROP	7545	MIT	2026-03-18	Automatically generate change log from your tags, issues, labels and pull requests on GitHub.	-
+clovaai/donut	v7-curricula	0	DROP	6926	MIT	2024-07-11	Official Implementation of OCR-free Document Understanding Transformer (Donut) and Synthetic Document Generator (SynthDoG), ECCV 2022	-
+chancejs/chancejs	v7-curricula	0	DROP	6528	MIT	2025-05-18	Chance - Random generator helper for JavaScript	-
+langgptai/wonderful-prompts	v1-tutor	0	DROP	6396	MIT	2026-08-25	🔥中文 prompt 精选🔥，ChatGPT 使用指南，提升 ChatGPT 可玩性和可用性！🚀	-
+angular-fullstack/generator-angular-fullstack	v7-curricula	0	DROP	6080	NONE	2023-02-14	Yeoman generator for an Angular app with an Express server	-
+yeoman/generator-angular	v7-curricula	0	DROP	5662	NONE	2017-06-08	Yeoman generator for AngularJS	-
+baidu/uid-generator	v7-curricula	0	DROP	5544	Apache-2.0	2023-05-31	UniqueID generator	-
+mozilla/uniffi-rs	v7-curricula	0	DROP	5144	MPL-2.0	2026-11-16	a multi-language bindings generator for rust	-
+aigc-apps/sd-webui-EasyPhoto	v7-curricula	0	DROP	5131	Apache-2.0	2024-07-10	📷 EasyPhoto | Your Smart AI Photo Generator.	-
+lincolnloop/python-qrcode	v7-curricula	0	DROP	4961	NOASSERTION	2026-03-25	Python QR Code image generator	-
+pegjs/pegjs	v7-curricula	0	DROP	4903	MIT	2021-11-08	PEG.js: Parser generator for JavaScript	-
+judge0/judge0	v1-tutor	0	DROP	4519	GPL-3.0	2026-10-26	Robust, fast, scalable, and sandboxed open-source online code execution system for humans and AI.	-
+codefuse-ai/Awesome-Code-LLM	v1-tutor	0	DROP	3456	NONE	2026-05-20	[TMLR] A curated list of language modeling researches for code (and other software engineering activities), plus related datasets.	-
+jupyter-naas/awesome-notebooks	v1-tutor	0	DROP	3020	BSD-3-Clause	2024-10-21	[Legacy] Data & AI Notebook templates catalog organized by tools, following the IMO (input, model, output) framework for easy usage and discovery..	-
+AGI-Edgerunners/LLM-Agents-Papers	v1-tutor	0	DROP	2357	NONE	2025-07-12	A repo lists papers related to LLM based agent	-
+tinyfish-io/tinyfish-cookbook	v1-tutor	0	DROP	2331	MIT	2026-11-14	A collection of sample apps and recipes built with the TinyFish web agent. Open-source examples for you to learn & build!	-
+elevenyellow/handcrafted-persona-engine	v1-tutor	0	DROP	1401	NONE	2026-05-20	An AI-powered interactive avatar engine using Live2D, LLM, ASR, TTS, and RVC. Ideal for VTubing, streaming, and virtual assistant applications.	-
+lobehub/lobe-chat-agents	v1-tutor	0	DROP	1250	MIT	2026-10-15	🤖 / 🏪 Agent Index - This is the agent index for LobeChat. It accesses index.json from this repository to display a list of available agents for LobeChat to the 	-
+uhub/awesome-cpp	v1-tutor	0	DROP	1202	NONE	2026-11-16	A curated list of awesome C++ frameworks, libraries and software.	-
+uhub/awesome-python	v1-tutor	0	DROP	1200	NONE	2026-10-30	A curated list of awesome Python frameworks, libraries and software.	-
+PacktPublishing/30-Agents-Every-AI-Engineer-Must-Build	v1-tutor	0	DROP	889	MIT	2026-06-20	30 Agents Every AI Engineer Must Build, published by Packt	-
+dair-ai/AI-Product-Index	v1-tutor	0	DROP	776	MIT	2024-04-06	A curated index to track AI-powered products.	-
+best-of-ai/best-of-ai	v1-tutor	0	DROP	764	NONE	2026-11-16	A curated list of best ai tools	-
+worldbench/awesome-ai-auto-research	v1-tutor	0	DROP	579	MIT	2026-11-15	🔥 A Survey on AI Auto-Research	-
+uhub/awesome-haskell	v1-tutor	0	DROP	474	NONE	2026-10-18	A curated list of awesome Haskell frameworks, libraries and software.	-
+mcp-pi/lmstudio-mcp-agent	v8-lmsagent	0	DROP	4	MIT	2025-06-18	Ollama MCP Agent allows you to use LLM models locally on your PC for free along with MCP additional features	-
+git-scarrow/mcp-servers-lmstudio	v8-lmsagent	0	DROP	3	MIT	2026-06-25	[MOVED → codeberg.org/scarrow/mcp-servers-lmstudio] Concurrent MCP bridge for LM Studio with async multi-agent query support	-
+Reneworks/n8n-lmstudio-reneworks	v8-lmsagent	0	DROP	0	MIT	2026-10-22	n8n community node that connects LM Studio with AI Agents. Multi-mode: native REST, OpenAI Chat Completions and Responses. Full MCP server support.	-
+jekyll/jekyll	v7-curricula	-3	DROP	51786	MIT	2026-10-13	:globe_with_meridians: Jekyll is a blog-aware static site generator in Ruby	static site generator-3
+OpenAPITools/openapi-generator	v7-curricula	-3	DROP	26861	Apache-2.0	2026-11-17	OpenAPI Generator allows generation of API client libraries (SDK generation), server stubs, documentation and configuration automatically given an OpenAPI Spec 	openapi-3
+vuejs/vuepress	v7-curricula	-3	DROP	22715	MIT	2024-08-07	📝 Minimalistic Vue-powered static site generator	static site generator-3
+infinitered/ignite	v7-curricula	-3	DROP	19955	NOASSERTION	2026-11-11	Infinite Red's battle-tested React Native project boilerplate, along with a CLI, component/model generators, and more! 9 years of continuous development and cou	boilerplate-3
+decaporg/decap-cms	v7-curricula	-3	DROP	19485	MIT	2026-11-16	A Git-based CMS for Static Site Generators	static site generator-3
+vuejs/vitepress	v7-curricula	-3	DROP	18497	MIT	2026-11-12	Vite & Vue powered static site generator.	static site generator-3
+getzola/zola	v7-curricula	-3	DROP	17610	EUPL-1.2	2026-11-16	A fast static site generator in a single binary with everything built-in. https://www.getzola.org	static site generator-3
+getpelican/pelican	v7-curricula	-3	DROP	13376	AGPL-3.0	2026-11-09	Static site generator that supports Markdown and reST syntax. Powered by Python.	static site generator-3
+google/auto	v7-curricula	-3	DROP	10563	Apache-2.0	2026-11-10	A collection of source code generators for Java.	code generator-3
+react-static/react-static	v7-curricula	-3	DROP	10337	MIT	2022-10-31	⚛️ 🚀 A progressive static site generator for React.	static site generator-3
+SwiftGen/SwiftGen	v7-curricula	-3	DROP	9545	MIT	2026-11-13	The Swift code generator for your assets, storyboards, Localizable.strings, … — Get rid of all String-based APIs!	code generator-3
+metalsmith/metalsmith	v7-curricula	-3	DROP	7816	MIT	2026-02-09	An extremely simple, pluggable static site generator for Node.js	static site generator-3
+latentcat/qrbtf	v7-curricula	-3	DROP	7041	GPL-3.0	2025-04-17	AI & parametric QR code generator. AI & 参数化二维码生成器。https://qrbtf.com	code generator-3
+zensical/zensical	v7-curricula	-3	DROP	6194	MIT	2026-11-16	A modern static site generator by the Material for MkDocs team	static site generator-3
+mybatis/generator	v7-curricula	-3	DROP	5304	Apache-2.0	2026-11-15	A code generator for MyBatis.	code generator-3
+grpc-ecosystem/grpc-gateway	v7-curricula	-6	DROP	20013	BSD-3-Clause	2026-11-17	gRPC to JSON proxy generator following the gRPC HTTP spec	grpc-3;gateway-3
+OrcaSlicer/OrcaSlicer	v7-curricula	-6	DROP	16518	AGPL-3.0	2026-11-17	G-code generator for 3D printers (Bambu, Prusa, Voron, VzBot, RatRig, Creality, etc.)	code generator-3;3d print-3
+prusa3d/PrusaSlicer	v7-curricula	-6	DROP	9496	AGPL-3.0	2026-11-07	G-code generator for 3D printers (RepRap, Makerbot, Ultimaker etc.)	code generator-3;3d print-3
+Azure/autorest	v7-curricula	-9	DROP	4788	MIT	2026-11-16	OpenAPI (f.k.a Swagger) Specification code generator. Supports C#, PowerShell, Go, Java, Node.js, TypeScript, Python	openapi-3;swagger-3;code generator-3

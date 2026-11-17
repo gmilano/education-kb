@@ -4,6 +4,239 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventy-third pass (`p868`, 2026-11-17) — **`7` agent rows, and the finding that outranks them: `136` of the `1,015` rows this base SELLS have not been pushed to in over a year, measured for the first time**
+
+🟢 **Channel declaration, as [`863-G1`](../intel/open-gaps.md) requires before the first row.**
+🟢 **Re-measured `2026-11-17`. One line is new and it is the important one:**
+
+| Channel | Result |
+|---|---|
+| 🔴 `curl https://github.com/...` | 🔴 `403` at the egress proxy |
+| 🔴 `gh api repos/{owner}/{repo}` | 🔴 `403` *"not enabled for this session"* |
+| 🟢 `gh api search/repositories` | 🟢 `200` — metadata FIELDS only |
+| 🟢 `gh api search/repositories` with **repeated `repo:` qualifiers** | 🟢 **`200`, and they are OR'd.** 🔵 **Newly measured: `8` qualifiers in `175` characters returned `total_count` `8`; `11` in `266` returned `11`. So `1,015` addresses cost `102` requests instead of `1,015`, and [`867-G2`](../intel/open-gaps.md) became affordable in one pass** |
+| 🔴 `gh api search/repositories` as an EXISTENCE test | 🔴 **UNSOUND, measured below: `9` of the `11` addresses it could not resolve are LIVE on the clone channel** |
+| 🟢 `git clone --filter=blob:none --depth 1` · `git ls-remote` | 🟢 `200` — licence bytes, commit e-mail domains, and the existence channel that corrected the one above |
+| 🟢 `raw.githubusercontent.com` | 🟢 reachable, **once the ref is resolved first** — see [`867-G5`](#-867-g5-discharged-5-of-17-probes-would-have-404ed-on-a-main-assumption) below |
+| 🔴 `eur-lex.europa.eu` | 🔴 `000` — the EU channel remains CLOSED to this session; [`866-G3(a)`](../intel/open-gaps.md) stays closed at secondary level |
+
+### 🟢 `867-G1` DISCHARGED: the domain decision is a command now, and it disagreed with the hand `0` times
+
+🟢 **`867-G1`'s diagnosis, in its own words: `p867` "selected `30` education-domain candidates
+out of `285` BY READING DESCRIPTIONS before either instrument ran."** 🟢 **Its acceptance test
+asked for a mechanical domain predicate over the whole organisation-owned sweep, scored in
+`ingest/config.json` terms, with its PRECISION published against that hand selection.**
+
+🟢 **Built as [`ingest/p868-domain-predicate.py`](../ingest/p868-domain-predicate.py)** — topic
+hit `+3`, strong term `+2`, weak term `+1`, **negative term `-3`**, `KEEP` at `>= 3`.
+🔵 **The negative arm is not a precaution, it is `p867`'s own measurement turned into code:
+that pass published the four addresses its `curriculum OR syllabus generator` vein imported
+(`OpenAPITools/openapi-generator`, `OrcaSlicer/OrcaSlicer`, `grpc-ecosystem/grpc-gateway`,
+`appwrite/sdk-generator`), and a predicate without the arm reproduces them exactly.**
+
+🔴 **And the sweep had to be rebuilt before the predicate could be applied to it, because
+`p867` committed its TOTALS and not its QUERIES** ([`channel-yield`](../evidence/channel-yield.2026-11-17-p868.tsv)).
+🟢 **It is committed now as [`ingest/p868-org-sweep.sh`](../ingest/p868-org-sweep.sh), with the
+twelve vein bodies stated in the file.** 🔴 **Declared: the veins are a RECONSTRUCTION — `p867`'s
+labels survive in its evidence and its query text does not — so the two passes' populations are
+comparable and not identical.**
+
+🔴 **Two defeats of this pass's own instrument, both published rather than quietly corrected:**
+
+| Defeat | What it did | What it cost |
+|---|---|---|
+| 🔴 `per_page=50` on every vein | returned `404` raw rows | 🔴 **that is `9 × 50`, a CAP masquerading as a population** — raised to `100` |
+| 🔴 `topic:edtech topic:educational-ai` in one `q` | returned `12` | 🔴 **two topic qualifiers are ANDed by the endpoint** (`5,723` and `62` separately) — the vein was measuring an intersection nobody asked for |
+
+🟢 **The corrected run: `12` veins, `1,104` raw rows, `232` distinct organisation-owned
+addresses** ([`sweep`](../evidence/org-sweep.2026-11-17-p868.tsv)). 🟢 **Scored:**
+
+| Band | Addresses | What it means |
+|---|---|---|
+| 🟢 `KEEP` (`>= 3`) | `134` | education-domain on a declared score |
+| 🟡 `MARGINAL` (`1`–`2`) | `34` | one weak term and nothing else |
+| 🔴 `DROP` (`<= 0`) | `64` | the noise `p867` had to read past by hand |
+
+🟢 **The number `867-G1` asked for, published as it fell**
+([`per-address record`](../evidence/domain-predicate.2026-11-17-p868.tsv)):
+
+| Measure | Result |
+|---|---|
+| p867 hand picks this sweep re-found | `6` of `20` recoverable |
+| of those, predicate says `KEEP` | 🟢 **`5`** |
+| `MARGINAL` | 🟡 `1` |
+| 🟢 **`DROP` — the predicate overruling the hand** | 🟢 **`0`** |
+| addresses the predicate ADDS that the hand never selected | 🟢 **`129`** |
+
+🔴 **The honest limits, both of them.** 🔴 **`14` of the `20` are absent from this sweep because
+the vein bodies differ, so the agreement is measured over `6` and not `20`** — and `p867`'s own
+`30` is recoverable only to `20`, since the `10` it triaged `SHELVED` were never written down.
+🔴 **Second, the predicate's precision failure mode is NOT the one the negative arm was built
+for.** 🟢 **The negative arm worked: not one of `p867`'s four tooling imports survives.**
+🔴 **What survives instead is the LIST class** — `langgptai/awesome-claude-prompts` ranked `#1`
+of `32`, with `StudentSuite/awesome-study-resources`, `StudentSuite/awesome-student-resources`
+and `zapplyjobs/New-Grad-Data-Science-Jobs-2027` close behind. 🔵 **A curated list scores high
+because it is ABOUT education and is not a thing you can build on.** 🟢 **Registered as
+[`868-G1`](../intel/open-gaps.md) with its acceptance test, because it is a predicate defect
+and not a reason to go back to reading descriptions.**
+
+🟢 **Then the pipeline ran end to end with no hand step: `134` `KEEP` → [`p866-triage.py`](../ingest/p866-triage.py)
+→ `66` `NEW`, `45` `UNGRADED`, `23` `SHELVED`** ([`triage`](../evidence/candidate-triage.2026-11-17-p868.tsv))
+→ **`111` into [`p867-promotion-rank.py`](../ingest/p867-promotion-rank.py) → `32` ranked, `44`
+grant-refused, `35` liveness-refused** ([`rank`](../evidence/promotion-rank.2026-11-17-p868.tsv)).
+
+🔵 **One structural observation from the `66` `NEW`: about `35` of them are `xblock-*` or
+`*-xblock` repositories.** 🟢 **`p867` found Open edX's permissive seam; this pass measures that
+the seam's far side is also largely UNSHELVED — the extension estate is both bigger and less
+covered here than the platform is.**
+
+### 🟢 The rows — `7` filed, every grant byte-read, every ref resolved before the read
+
+| Agent | Repo | Licence, as measured | ★ / forks | Default ref · pushed | Region | What it actually does, and the posture |
+|---|---|---|---|---|---|---|
+| tutors | https://github.com/tutors-sdk/tutors | 🟢 **MIT — byte-read** (`LICENSE`, `1,088 B`, `sha256₁₂ 4800b7fa4014`) | 125 / 54 | 🔵 **`development`** · `2026-07-23` | **EMEA** | 🟢 **A course-delivery reader that turns a structured folder of markdown into a navigable course site — the open counterpart to the thing universities buy an LMS for.** 🟢 **Commit domain `wit.ie` (`45` of `50` commits) — Ireland, placed on a MEASURED axis.** 🔵 **The highest-★ permissive row in this sweep whose default ref is neither `main` nor `master`, which is `867-G5`'s subject arriving in the same pass that discharged it** |
+| haxcms-php | https://github.com/haxtheweb/haxcms-php | 🟢 **Apache-2.0 — byte-read** (`LICENSE.md`, `11,362 B`, `sha256₁₂ b662f44e55e8`) | 130 / 58 | `master` · `2026-11-17` | **North America** | 🟢 **The PHP backend of HAX — a web-component authoring system for course content, pushed to the day this row was filed.** 🟢 **Commit domain `psu.edu` — Penn State, a named public university, placed on a MEASURED axis.** 🔵 **This base had `0` North-America rows placed on an institutional commit domain before this one** |
+| mnemo | https://github.com/onemnemo/mnemo | 🟢 **Apache-2.0 — byte-read** (`LICENSE`, `11,326 B`, `sha256₁₂ 62e02db7f9a1`) | 132 / 12 | `main` · `2026-10-22` | 🔴 refused (`users.noreply` on `50` of `50`) | 🟢 **A free self-hostable study application** — the spaced-repetition and study-session surface, permissively granted. 🔴 **Region refused rather than guessed: `50` of `50` commit addresses are `users.noreply.github.com`, which carries no jurisdiction** |
+| langx | https://github.com/langx/langx | 🟢 **BSD-3-Clause — byte-read** (`LICENSE`, `1,520 B`, `sha256₁₂ 19ec8f98fa19`) | 111 / 33 | `main` · `2026-11-16` | 🔴 refused (`users.noreply`, `gmail.com`) | 🟢 **Language learning by conversation with native speakers — a social-learning architecture rather than a tutor-bot one**, which is the pattern the market analysis this pass read lists as FADING in its chatbot form and growing in its practice form. 🔵 `BSD-3-Clause`: the third permissive family on this shelf and the rarest |
+| ai-tutor | https://github.com/lynote-ai/ai-tutor | 🟢 **MIT — byte-read** (`LICENSE`, `1,063 B`, `sha256₁₂ 7a1aecaf14eb`) | 38 / 0 | `main` · `2026-11-16` | 🔴 refused (`users.noreply`) | 🟢 **A SELF-HOSTED AI tutor and learning assistant for self-study, and it scored `34` — the highest domain score of all `232` addresses swept.** 🔵 **Self-hosted is the posture that matters for an institution that cannot send student work to a vendor, which is every EMEA institution reading the AI Act's high-risk education obligations** |
+| higher-education-agents | https://github.com/iblai/higher-education-agents | 🟢 **MIT — byte-read** (`LICENSE`, `1,063 B`, `sha256₁₂ f1269b7b2313`) | 14 / 0 | `main` · `2026-06-08` | 🟡 refused on the measured axis (`ibleducation.com` — company-form, no jurisdiction) | 🟢 **An agent SUITE scoped to higher education specifically — the shape a studio composes rather than writes.** 🟢 **Same owner as `iblai/lms`, which this base already shelves, so the two compose.** 🟡 **`162` days since the last push: inside the `365`-day gate and worth re-checking next pass** |
+| moodle-adaptive-learning-plugin | https://github.com/kltn-moolde/moodle-adaptive-learning-plugin | 🟢 **MIT — byte-read** (`LICENSE`, `1,086 B`, `sha256₁₂ 7fb13a30d308`) | 8 / 0 | `main` · `2026-02-14` | 🟡 **APAC** — Vietnam, by the owner's naming only (`kltn` = *khóa luận tốt nghiệp*, a graduation thesis); `gmail.com` on `50` of `50` commits, so the axis is DECLARED WEAK | 🟢 **An adaptive STEM learning system that personalises sequencing with Q-learning — reinforcement learning rather than a prompt, inside Moodle.** 🔵 **MIT on a Moodle plugin is itself notable: `p866` established that `GPL-3.0` in this estate is a platform OBLIGATION, and this author granted permissively anyway** |
+
+### 🔴 Byte-read and NOT filed — `5` refusals, each with the bytes that caused it
+
+| Not build-safe | Repo | Licence, as measured | ★ / forks | Default ref · pushed | Region | What it actually does, and the posture |
+|---|---|---|---|---|---|---|
+| Wisepen | https://github.com/Oriole-FDU/Wisepen | 🔴 **Business Source License 1.1 — byte-read** (`LICENSE`, `4,539 B`, `sha256₁₂ 7fc19489d6b2`), against a GitHub field of `NOASSERTION` | 126 / 14 | `main` · `2026-10-29` | 🟡 **APAC** (China — `qq.com` commit domain, consumer-class but jurisdiction-specific; `FDU` = Fudan University) | 🔴 **`T250`'s trap caught a THIRD time, in a third family.** `BUSL-1.1` is time-delayed source-available, not open source, and the field says nothing. 🔵 **The highest-★ address this pass refused, and `p867` refused `Elastic-2.0` behind the same `NOASSERTION` field on `canyongbs/advisingapp` — so two of the three most complete products found in two passes are both source-available** |
+| rapid-router | https://github.com/codeforlife-education/rapid-router | 🔴 **AGPL-3.0, resolved OUT OF TREE** — `LICENSE.md` here is `121 B`, `sha256₁₂ 4164d0bccf35` | 60 / 93 | `master` · `2026-11-09` | **EMEA** (UK) | 🟢 **The sha is BYTE-IDENTICAL to the pointer `p867` resolved on `codeforlife-education/codeforlife-portal`** — so the `121 B` out-of-tree pointer is an ORGANISATION-WIDE convention at Code for Life, not a one-off, and `p867`'s resolution transfers without re-fetching. 🔴 AGPL-3.0, so not build-safe. 🟢 `93` forks against `60` stars: a TEACHING asset, cloned rather than starred |
+| ICTSchool | https://github.com/ictinnovations/ICTSchool | 🔴 **No grant at any of the `11` probed names** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENSE.TXT`, `license.txt`, `LICENCE`, `LICENCE.md`, `LICENCE.txt`, `COPYING`, `LICENSE-MIT`, `NOTICE`) | 73 / 71 | `main` · `2026-11-13` | 🔴 refused | 🟡 **Open-source school management — admissions, attendance, the SIS half that the vertical leg of this pass's research confirmed has NO permissive incumbent.** 🔴 **No grant, so the default is all rights reserved.** 🔵 **`71` forks: people are using it. Filed by name so the next pass does not re-pay for the discovery** |
+| moodle-ai-tutor-plugin | https://github.com/eth-ecuador/moodle-ai-tutor-plugin | 🔴 **No grant at any of the `11` probed names** | — | `main` · — | **LATAM** (Ecuador, by the owner's naming) | 🔴 **One of only two LATAM-placed addresses this pass's regional veins surfaced, and it is unusable.** 🔵 **Recorded because an informed gap is information: the LATAM supply problem here is not absence of projects, it is absence of GRANTS** |
+| iterative-xblock | https://github.com/cmmedu/iterative-xblock | 🔴 **GPL-3.0 — byte-read** (`LICENSE`, `35,148 B`, `sha256₁₂ 8b1ba204bb69`) | 1 / 0 | 🔵 `cmmedu-release/lilac` | **LATAM** (Chile) | 🟢 **Refused HERE and filed on [`verticals/solutions.md`](../verticals/solutions.md), which admits copyleft by obligation.** 🔵 **It is also the counter-case to a tidy reading of `p867`'s Open edX seam: this is an XBlock — the permissive side of the platform's split — and its author granted `GPL-3.0` anyway. The seam is the PLATFORM's convention, not a property of the extension point** |
+
+### 🔴 `867-G2` DISCHARGED, and the number is not small: `136` STALE of `1,015`
+
+🟢 **The acceptance test: run the liveness gate over every row the count gate credits, on the
+`search/repositories` channel, and publish the number older than `365` days per shelf —
+"whatever it is", with the warning that a figure near `0` should itself be disbelieved.**
+
+🟢 **Built as [`ingest/p868-liveness-census.py`](../ingest/p868-liveness-census.py)**: the
+offline arm reads the counted-table signatures out of `derive-counts.py` with `ast` — never a
+second hand-maintained copy — and reproduces the gate's own population exactly (`535` / `384` /
+`222`, `1,015` distinct). 🟢 **Result** ([`census`](../evidence/liveness-census.2026-11-17-p868.tsv)):
+
+| Shelf | Counted | 🟢 `LIVE` | 🔴 `STALE` (> 365 d) | 🔴 `ARCHIVED` | 🟡 unresolved | Stale + archived |
+|---|---|---|---|---|---|---|
+| `agents/top.md` | `535` | `461` | 🔴 `62` | 🔴 `5` | `7` | 🔴 **`12.5%`** |
+| `repos/foundations.md` | `384` | `302` | 🔴 **`69`** | 🔴 `10` | `3` | 🔴 **`20.6%`** |
+| `verticals/solutions.md` | `222` | `203` | `12` | `4` | `3` | 🟢 `7.2%` |
+| **distinct** | **`1,015`** | `852` | 🔴 **`136`** | 🔴 `16` | `11` | 🔴 **`15.0%`** |
+
+🔴 **So one row in seven that this base SELLS is a recommendation to adopt something nobody has
+touched in a year, and the worst shelf is the one a client is pointed at FIRST.**
+🔵 **`867-G2` said a stale row is worse than a missing one, and the figure is `136`.**
+
+🟢 **The largest single cluster is nameable: `15` addresses from the XPRIZE Global Learning
+Challenge estate** (`XPRIZE/GLEXP-Team-*`, `chimple/*`, `curiouslearning/*`,
+`onebillion`) — **all last pushed in 2019, all carried as current rows.** 🔵 **The competition
+ended; the shelves did not notice.** 🟢 **The oldest counted row in this base is
+`benhamner/ASAP-AES` at `5,381` days (February 2012) on `repos/foundations.md` — which is a
+defensible HISTORICAL citation (it is the Kaggle automated-essay-scoring corpus) and is not a
+defensible current recommendation. The distinction is exactly what this base has never drawn.**
+
+🔴 **And the census found a defect in its own channel, which is the more useful half.**
+🟢 **`11` addresses did not resolve. `git ls-remote` was then run against all `11`, and `9` of
+them ARE LIVE** ([`resolution`](../evidence/unresolved-resolution.2026-11-17-p868.tsv)) —
+`mitodl/open-learning-ai-tutor`, `digitalcredentials/learner-credential-wallet`,
+`openwallet-foundation-labs/learner-credential-wallet`, `packbackbooks/lti-1-3-php-library`,
+`asterics/AsTeRICS-Grid`, `DaRL-GenAI/instructional_agents`, `fabian-thinks/present-together`,
+`FabianJun/PresentTogether`, `tl-its-umich-edu/caliper-php-public`. 🔴 **A `repo:` qualifier
+miss is NOT an absence** — the same class as `T81` (field disagrees with payload) one level up.
+🟢 **The `2` genuine ones, `Damanian/MIREA-Toolkit-MCP` and
+`Bhuvantejakomera/Agentic-Assignment-Evaluator`, both return a CREDENTIAL PROMPT, which `p293`'s
+convention records as a MEASUREMENT: private or deleted, and the two cannot be distinguished.**
+
+🔴 **What this pass did NOT do: mark the `136` inline.** 🟢 **Registered as
+[`868-G2`](../intel/open-gaps.md) with an acceptance test, and the per-row census is committed
+so the marking is a mechanical job and not another census.**
+
+### 🟢 `867-G3` DISCHARGED by choosing (c), stated out loud, with (a) folded in — `0` rows abstain and the `FAIL` count over the full shelf is `5`
+
+🟢 **`867-G3` measured that this shelf's heading governed `303` of its `543` counted rows and
+required that the repair be CHOSEN, not drifted into.** 🟢 **`p868` chooses **(c)** — every
+counted holdings table gradeable — because it is the only option of the three that closes the
+CLASS, and declines **(b)** on its own terms: moving four rows fixes four rows.
+🟢 **(a) is folded in and named: the vocabulary now also admits `Unlicense`, `CC0-1.0`, `Zlib`,
+`ECL-2.0`, `MulanPSL-2.0` and `WTFPL`, and this shelf's standing heading says so.**
+🔵 **`ECL-2.0` earns its place in this industry specifically — the Educational Community License
+is an Apache-2.0 derivative written FOR this sector, and this base already shelves
+`sakaiproject/sakai` and (this pass) `opencast/annotation-tool` under it.**
+
+🔴 **The implementation DEPARTS from (c)'s literal wording, deliberately and on the record.**
+🔴 **Taken literally, (c) means appending a parenthesised grant set to `24`+ HISTORICAL pass
+headings — editing the published record of earlier passes so a gate will read it, which is
+`p718`'s "stop keying on prose" committed on purpose.** 🟢 **So the predicate is declared once,
+per shelf FILE, in [`ingest/shelf-predicates.json`](../ingest/shelf-predicates.json), and a
+table whose own heading states a parenthesised grant set still WINS because it is strictly more
+specific. Every counted row is gradeable by construction; no historical heading is touched.**
+
+🟢 **[`ingest/p868-shelf-predicate.py`](../ingest/p868-shelf-predicate.py), over all three
+shelves** ([`per-row record`](../evidence/shelf-predicate.2026-11-17-p868.tsv)):
+
+| Shelf | Graded | `PASS` | `PASS-REFUTED-METADATA` | 🔴 `FAIL-EXCLUDED` | 🔴 `FAIL-SPLIT` | 🟡 `VOCAB-MISS` | Abstained |
+|---|---|---|---|---|---|---|---|
+| `agents/top.md` | `543` | `527` | `11` | 🟢 `0` | 🔴 `5` | 🟢 **`0`** | 🟢 **`0`** |
+| `repos/foundations.md` | `390` | `390` | `0` | 🟢 `0` | 🟢 `0` | 🟢 `0` | 🟢 **`0`** |
+| `verticals/solutions.md` | `228` | `228` | `0` | 🟢 `0` | 🟢 `0` | 🟢 `0` | 🟢 **`0`** |
+| **TOTAL** | **`1,161`** | `1,145` | `11` | 🟢 **`0`** | 🔴 **`5`** | 🟢 **`0`** | 🟢 **`0` of `1,161`** |
+
+🟢 **`867-G3` asked for the `FAIL` count over the full `540`. It is `5`, all of them
+`FAIL-SPLIT`, `0` hard exclusions, and `0` rows abstain where `859` abstained at `HEAD`.**
+
+🔴 **The `5` are `3` MORE than `p867` reported, and the extra `3` are real.** 🟢 **`p867`'s
+detector looked only for `CC-BY-NC`; this one also catches a permissive/copyleft split in one
+cell.** 🔵 **Each is a row the shelf itself already describes correctly — the gate had simply
+never been able to say so:** `learning-commons-org/evaluators` (code MIT, rubric content
+`CC BY 4.0`, **corpora `CC BY-NC-SA 4.0`**), `bigmoumou/AI-Agent-Literacy` (code MIT, course
+content `CC BY-NC-SA 4.0`), `hoangkien1703/dual-sub-replay` (source MIT, **app distribution
+`GPL-3.0`**), `polendol/AgenticTeacher`, and
+`vladimiracunadev-create/modern-software-engineering-program`.
+🔵 **In a client deliverable the CODE is safe in all five and the CONTENT is not, which is the
+one distinction a licence FIELD can never carry.**
+
+🔴 **And this pass's instrument defeated itself once before it reported, same class as
+`p867`'s.** 🔴 **Draft 1 read the licence cell BY POSITION (index `2`, where `agents/top.md`
+writes it) while `repos/foundations.md` and `verticals/solutions.md` write
+`| Repo | License | Stars | … |` — so it graded the STARS column of `618` rows as if it were a
+grant, and called the two rows with an em-dash in Stars `FAIL-EXCLUDED`.**
+🟢 **Both "failures" were the instrument's: `CredentialEngine/transcript-ctid-matcher` states
+`Apache-2.0` and `rakeshgangwar/erpnext-mcp-server` states `MIT`, each in the column nobody
+read.** 🟢 **The cell is now located by its HEADER NAME, which is what `derive-counts.py`
+already does for tables and what this gate had reintroduced the defect below.**
+
+### 🟢 `867-G5` DISCHARGED: `5` of `17` probes would have `404`ed on a `main` assumption
+
+🟢 **The acceptance test: resolve the default ref from `search/repositories` first, record the
+ref used in the evidence row, and publish how many probes would have `404`ed on a `main`
+assumption.** 🟢 **Built as [`ingest/p868-byteread-ref.sh`](../ingest/p868-byteread-ref.sh)**,
+which resolves the ref, walks an `11`-name grant ladder, and then re-probes the FOUND path at
+`main` to measure the counterfactual directly rather than inferring it
+([`record`](../evidence/licence-byteread-ref.2026-11-17-p868.tsv)).
+
+| Measure | Result |
+|---|---|
+| probes, main batch | `17` |
+| 🔴 **would have `404`ed on `main`** | 🔴 **`5` (`29%`)** — `haxtheweb/haxcms-php`, `opencast/annotation-tool`, `openfun/arnold`, `Abstract-Tech/abstract-scorm-xblock`, `codeforlife-education/rapid-router` |
+| non-`main` refs seen | `master`, 🔵 `development` (`tutors-sdk/tutors`), 🔵 `cmmedu-release/lilac`, 🔵 `eol-release/lilac` |
+| probes, LATAM batch | `8` — `1` more `main`-`404` |
+| 🔴 **combined** | 🔴 **`6` of `25` (`24%`)** |
+
+🔴 **`p867` estimated `3` in `31` (`10%`). The measured rate is `24%`** — because the estate
+this pass swept is Open edX and Moodle, where a release-branch default is the NORM and not the
+exception. 🔵 **And the first channel probe of this pass hit it too: `openedx/XBlock` at
+`master/LICENSE` is a `404`, because the file is `LICENSE.TXT`.** 🟢 **A `404` from a guessed
+ref is indistinguishable in a log from a repository with no grant, which is the single
+inference this base's whole licence discipline exists to prevent.**
+
+
 ## 🟢 Seventy-second pass (`p867`, 2026-11-17) — **`3` agent rows, and the headline is not the rows: the discovery channel `p866` measured EXHAUSTED at `0` new addresses in `54` returns `160` new addresses in `285` when the OWNER TYPE is changed and nothing else is**
 
 🟢 **Channel declaration, as [`863-G1`](../intel/open-gaps.md) requires before the first row.**
@@ -4457,7 +4690,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 535 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD / Unlicense / CC0-1.0 / Zlib / ECL-2.0 / MulanPSL-2.0 / WTFPL) — 542 rows
 
 ### Filed by `p853` (2026-11-16) — `12` rows: the SPOKEN-LANGUAGE ASSESSMENT tier, every grant byte-read today, `0` copyleft, and every row's CORPUS dependency stated beside its licence
 

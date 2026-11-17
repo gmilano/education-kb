@@ -4,6 +4,163 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventy-third pass (`p868`, 2026-11-17) — **`P111`–`P113`: a Chilean public-university build whose components were enumerated and byte-read this pass, a content-portability engagement whose business case is the `136` dead rows this base just measured on its own shelves, and an EMEA courseware-migration line that starts from the two formats institutions already own**
+
+**One hundred and eleven** concrete recipes — derived recipes: **111** (`108` + `3`).
+
+## 🟢 P111 — LATAM, Spanish-language: the Chilean public-university build, component by component because the estate's licence split forbids anything else
+
+**Region:** LATAM · **Where it bites:** a Chilean, Peruvian or Colombian public university or
+ministry that already runs Open edX or Moodle in Spanish, has `92%` student AI engagement and no
+formal AI policy.
+
+🟢 **Why this recipe exists now and could not have existed last pass.** 🔴 **Every previous LATAM
+recipe in this base started from a global platform and added Spanish.** 🟢 **`p868` enumerated and
+byte-read an entire production estate at a named public university — CMM Educación, Centro de
+Modelamiento Matemático, Universidad de Chile — so the recipe starts from components that are
+already in production in the region's own language**
+([`estate`](../evidence/cmmedu-estate.2026-11-17-p868.tsv)).
+
+🔴 **The constraint that shapes everything below: the estate's `18` repositories split `6` MIT /
+`3` `GPL-3.0` / `3` `AGPL-3.0` / `6` NO GRANT, and the split does not follow artefact type.**
+🔴 **An XBlock in this estate may be MIT or `AGPL-3.0`. There is no wholesale adoption.**
+
+**Wiring, concretely:**
+
+1. 🟢 **Take the permissive question-type kit, all three byte-read MIT this pass:**
+   [`cmmedu/cmmedu-connectwithline-xblock`](https://github.com/cmmedu/cmmedu-connectwithline-xblock)
+   (`1,092 B`, `sha256₁₂ 16f972964728`),
+   [`cmmedu/cmmedu-ordertable-xblock`](https://github.com/cmmedu/cmmedu-ordertable-xblock)
+   (same grant bytes) and
+   [`cmmedu/cmmedu-tablelonginput-xblock`](https://github.com/cmmedu/cmmedu-tablelonginput-xblock)
+   (`1,120 B`, `3724002e0b4f`). 🔵 **Matching, ordering and tabular working-out — the three
+   question types a mathematics course needs and a generic LMS does worst.**
+   🔴 **Check out `cmmedu-release/lilac`, not `main`: `12` of the `18` default to a release
+   branch and a `main` assumption `404`s (`T264`).**
+2. 🟢 **Take the two Moodle primitives, both byte-read MIT:**
+   [`cmmedu/moodle-filter-teacheronlycontent`](https://github.com/cmmedu/moodle-filter-teacheronlycontent)
+   (`1,092 B`, `564aeadb2b31`) and
+   [`cmmedu/moodle-plugin-graphsandtrees`](https://github.com/cmmedu/moodle-plugin-graphsandtrees)
+   (`1,063 B`, `195cb14fde0c`). 🔵 **`teacheronlycontent` is the one nobody writes down and every
+   AI build needs first: a place inside an activity to put the rubric, the model answer or the
+   prompt where the learner cannot reach it.**
+3. 🔴 **Do NOT take `cmmedu/iterative-xblock` or the `eol-*` family into a proprietary
+   deliverable** — byte-read `GPL-3.0` (`35,148 B`, `8b1ba204bb69`) and `AGPL-3.0` respectively.
+   🟢 **They are excellent references and they are a service boundary, not a library.**
+4. 🟢 **Put the governance layer FIRST, not last**, because that is what the region's own
+   measurement says is missing: `92%` of students and `79%` of faculty engaged, only `30%` of
+   institutions judged to have responded effectively (DEC, `30,000`+ responses), and UNESCO
+   IESALC finding the same gap across `200` institutions in `19` countries.
+   🟢 **Build it as a tenant-scoped gateway on the shape
+   [`UniversityOfHelsinkiCS/gptwrapper`](https://github.com/UniversityOfHelsinkiCS/gptwrapper)
+   already proves (MIT, `helsinki.fi`) — one controlled surface in front of the models, with
+   per-faculty policy, before any tutor ships.**
+5. 🟢 **Self-host the tutor** with [`lynote-ai/ai-tutor`](https://github.com/lynote-ai/ai-tutor)
+   (MIT, `1,063 B`, `7a1aecaf14eb`, filed this pass): a public university that cannot send
+   student work to a vendor needs the self-hosted posture, not the cheapest API.
+
+🔴 **The grant gap to budget for: `6` of the estate's `18` repositories have NO grant at all**
+(`redfid_oauth2`, `redfid-edx-api`, `eol_feedback`, `cmmedu-seguimiento`, `All_CMMEdu_Xblocks`,
+`Video-Converter`) — 🟢 **and the correct move is to ASK, since this is a named, reachable
+public institution rather than an anonymous author.** 🔵 **`eth-ecuador/moodle-ai-tutor-plugin`
+is the same problem without the phone number: a real Ecuadorian Moodle AI tutor with no grant at
+any of `11` probed filenames.**
+
+**Effort:** `6` weeks for the gateway plus the five permissive components on an existing Open edX
+or Moodle install; `10`–`12` with the self-hosted tutor and a faculty policy instrument.
+
+## 🟢 P112 — Any region: the content-portability engagement, whose business case is that `15%` of the sector's recommended repositories are already dead
+
+**Region:** Global · **Where it bites:** any institution that has bought three LMSs in fifteen
+years and lost content at each migration.
+
+🟢 **The business case is a measurement this pass made on its OWN shelves, which is why it is
+credible rather than rhetorical.** 🔴 **`136` of the `1,015` repositories this base recommends
+have not been pushed to in over a year; `69` of those sit on the foundations shelf; `15` of them
+are submissions to a competition that ended in 2019**
+([`census`](../evidence/liveness-census.2026-11-17-p868.tsv)).
+🔵 **If a curated, gated, instrumented knowledge base decays at `15%`, an institution's
+courseware estate decays faster — and the asset at risk is not the software, it is the content.**
+
+**Wiring, concretely:**
+
+1. 🟢 **Author in a format that outlives its renderer:**
+   [`haxtheweb/haxcms-php`](https://github.com/haxtheweb/haxcms-php) (Apache-2.0, byte-read
+   `11,362 B`, `sha256₁₂ b662f44e55e8`, `130★ / 58`, `master`, commit domain `psu.edu`).
+   🔵 **HAX's content is standards-based web components, so it renders without the platform that
+   created it — which is the only durable answer to migration loss, and it is permissive.**
+   🔴 **Default ref is `master`; a `main` assumption `404`s here (measured).**
+2. 🟢 **Bridge the two formats the institution already owns, both permissive:**
+   [`edly-io/h5pxblock`](https://github.com/edly-io/h5pxblock) (MIT, `1,064 B`, `4d17b43eb718`)
+   for H5P interactives and
+   [`Abstract-Tech/abstract-scorm-xblock`](https://github.com/Abstract-Tech/abstract-scorm-xblock)
+   (Apache-2.0, `11,342 B`, `db0b3d91913a`) for SCORM packages.
+   🔵 **`30` forks against `19` stars on the H5P one: an integration that is deployed rather than
+   admired.**
+3. 🟢 **Stay on the permissive side of the platform seam.** 🟢 **`p867` measured Open edX's split
+   over `96` repositories — `71` `AGPL-3.0`, `21` `Apache-2.0`, `1` `BSD-3-Clause` — and the
+   permissive side is the EXTENSION surface (`XBlock`, `xblock-sdk`, `openedx-events`,
+   `codejail`, `paragon`).** 🟢 **Every component in steps 1–2 sits there by construction.**
+4. 🟢 **Operate it with [`openfun/arnold`](https://github.com/openfun/arnold)** (MIT, `1,078 B`,
+   `8231f43fdfc3`, commit domain `fun-mooc.fr`): the Kubernetes deployment layer a national MOOC
+   operator actually runs. 🔵 **An Open edX engagement never fails at install; it fails at "who
+   operates this on day 400", and this answers that question MIT.**
+5. 🟢 **Run a liveness gate on your own dependency list, monthly**, with
+   [`ingest/p868-liveness-census.py`](../ingest/p868-liveness-census.py) as the model: batched
+   `repo:` qualifiers, `365`-day threshold. 🔴 **And do not treat a search miss as a death —
+   `T260`: `9` of `11` unresolvable addresses were alive on the clone channel.**
+
+**Effort:** `4` weeks for an estate audit and the two format bridges; `8`–`10` with the HAX
+authoring migration for one faculty.
+
+## 🟢 P113 — EMEA: the courseware-migration line item that arrives before the AI Act deadline and does not depend on it
+
+**Region:** EMEA · **Where it bites:** a European institution whose AI Act high-risk obligations
+now land `2027-12-02` and whose teachers (`80%`) say AI is arriving faster than the school can
+manage.
+
+🔴 **The timing problem this recipe solves.** 🟢 **High-risk education obligations moved to
+`2027-12-02` (🟡 `CITED, NOT READ` — every EU domain is unreachable from this session), Article
+50 transparency has applied since `2026-08-02`, and the Commission's Article 6 classification
+guidelines consultation closed `2026-06-23`.** 🔴 **So an AI-classification-dependent proposal
+has an eighteen-month gap where nothing is binding and nothing can be signed off.**
+🟢 **A courseware-migration engagement has no such dependency: it is due diligence either way,
+and it leaves the institution in the position the obligations will require.**
+
+**Wiring, concretely:**
+
+1. 🟢 **Start from the lecture-capture incumbent, not from a model:**
+   [`opencast/annotation-tool`](https://github.com/opencast/annotation-tool) (**ECL-2.0**,
+   byte-read `11,340 B`, `sha256₁₂ 76a975068930`, `42★ / 22`, `master`, commit domains
+   `elan-ev.de` and `unibe.ch`). 🔵 **ECL-2.0 is an Apache-2.0 derivative written for this
+   sector; it is permissive, and `867-G3` widened this base's build-safe vocabulary to name it.**
+2. 🟢 **Use a course-delivery reader the institution can read the source of:**
+   [`tutors-sdk/tutors`](https://github.com/tutors-sdk/tutors) (MIT, `1,088 B`, `4800b7fa4014`,
+   `125★ / 54`, commit domain `wit.ie`, Ireland). 🔴 **Default ref is `development` — one of the
+   `24%` of probes a `main` assumption breaks.**
+3. 🟢 **Put the gateway in front of everything**:
+   [`UniversityOfHelsinkiCS/gptwrapper`](https://github.com/UniversityOfHelsinkiCS/gptwrapper)
+   (MIT, `1,111 B`, `7b658dd8f1a0`, commit domain `helsinki.fi`).
+   🔵 **The AI Act's transparency obligations are answerable by a surface that LOGS; they are not
+   answerable by a vendor's assurance.**
+4. 🟢 **Bring the existing courseware across** with the H5P and SCORM bridges from
+   [`P112`](#-p112--any-region-the-content-portability-engagement-whose-business-case-is-that-15-of-the-sectors-recommended-repositories-are-already-dead)
+   — both permissive, both byte-read this pass.
+5. 🟢 **Audit against a rulebook that is already binding somewhere**, rather than one that is
+   not binding yet: the UK's January 2026 generative-AI safety standards for schools and the UAE
+   Ministry of Education's `25` generative-AI prohibitions (February 2026).
+   🔵 **Both surfaced in this pass's APAC leg and are placed in EMEA — two national rulebooks a
+   deliverable can be audited against TODAY, which is rarer and more useful than a 2027 horizon.**
+
+🔴 **What not to promise: an AI-Act compliance certification.** 🟢 **The classification guidelines
+were still in consultation in June 2026 and this session cannot read a single EU primary source,
+so the honest deliverable is a control surface and an evidence trail, graded `CITED, NOT READ`
+wherever an EU instrument is cited.**
+
+**Effort:** `6`–`8` weeks for the gateway plus one faculty's courseware migration; `12` with the
+annotation and delivery layers in production.
+
+
 ## 🟢 Seventy-second pass (`p867`, 2026-11-17) — **`P108`–`P110`: an Open edX AI extension that stays OUTSIDE the AGPL boundary, a German-speaking higher-education RAG build that starts from a university's own ingestion layer instead of rebuilding it, and an accessibility-remediation line item whose business case is a legal obligation**
 
 **One hundred and eight** concrete recipes — derived recipes: **108** (`105` + `3`).

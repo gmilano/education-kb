@@ -1,0 +1,5 @@
+channel	pass	queries	candidates_raw	org_owned_distinct	NEW	UNGRADED	SHELVED	new_pct	held_pct	note
+star-rank (search/repositories sorted by stars, any owner)	p866	15	54	-	0	27	27	0.0	100.0	p866's own measurement; every candidate already held.
+institutional authorship (owner.type==Organization), hand-selected domain subset	p867	9	285	285	160	95	30	56.1	43.9	Queries NOT committed; only the totals survive. 30 of the 285 were selected as education-domain BY READING DESCRIPTIONS -- the residual hand step 867-G1 registered.
+institutional authorship, MECHANICAL domain predicate	p868	12	1104	232	66	45	23	-	-	Queries committed as ingest/p868-org-sweep.sh. 232 org-owned distinct scored by ingest/p868-domain-predicate.py: KEEP 134, MARGINAL 34, DROP 64. The three-way split below is over the 134 KEEP only.
+p868 first run, DEFEATED BY A CAP	p868	9	404	105	-	-	-	-	-	Every vein capped at per_page=50, so 404 was 9x50 and not a population. Also `topic:edtech topic:educational-ai` in one q is an AND (12 results against 5,723 and 62 separately). Both recorded rather than silently corrected.

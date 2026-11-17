@@ -1,0 +1,112 @@
+rank	address	band	stars	forks	licence	pushed	owner_type	vein	verdict
+1	langgptai/awesome-claude-prompts	B	5586	644	NONE	2026-11-14	Organization	v1-tutor	RANKED/BYTE-READ-REQUIRED
+2	opendilab/awesome-RLHF	B	4440	267	Apache-2.0	2026-05-20	Organization	v1-tutor	RANKED/FIELD-PERMISSIVE
+3	onemnemo/mnemo	C	132	12	Apache-2.0	2026-10-22	Organization	v2-topic	RANKED/FIELD-PERMISSIVE
+4	haxtheweb/haxcms-php	C	130	58	Apache-2.0	2026-11-17	Organization	v2-topic	RANKED/FIELD-PERMISSIVE
+5	Oriole-FDU/Wisepen	C	126	14	NOASSERTION	2026-10-29	Organization	v10-eduagent	RANKED/BYTE-READ-REQUIRED
+6	tutors-sdk/tutors	C	125	54	MIT	2026-07-23	Organization	v2-topic	RANKED/FIELD-PERMISSIVE
+7	langx/langx	C	111	33	BSD-3-Clause	2026-11-16	Organization	v2-topic	RANKED/FIELD-PERMISSIVE
+8	zapplyjobs/New-Grad-Data-Science-Jobs-2027	D	93	3	NOASSERTION	2026-11-17	Organization	v4-analytics	RANKED/BYTE-READ-REQUIRED
+9	ictinnovations/ICTSchool	D	73	71	NONE	2026-11-13	Organization	v2-topic	RANKED/BYTE-READ-REQUIRED
+10	codeforlife-education/rapid-router	D	60	93	NOASSERTION	2026-11-13	Organization	v2-topic	RANKED/BYTE-READ-REQUIRED
+11	opencast/annotation-tool	D	42	22	ECL-2.0	2026-10-19	Organization	v2-topic	RANKED/FIELD-PERMISSIVE
+12	openfun/arnold	D	41	11	MIT	2026-11-05	Organization	v2-topic	RANKED/FIELD-PERMISSIVE
+13	StudentSuite/awesome-student-resources	D	39	78	MIT	2026-11-15	Organization	v2-topic	RANKED/FIELD-PERMISSIVE
+14	StudentSuite/awesome-study-resources	D	38	79	MIT	2026-11-13	Organization	v2-topic	RANKED/FIELD-PERMISSIVE
+15	lynote-ai/ai-tutor	D	38	0	MIT	2026-11-16	Organization	v2-topic	RANKED/FIELD-PERMISSIVE
+16	boostcampwm2025/web11-mmh	D	37	0	NONE	2026-03-06	Organization	v2-topic	RANKED/BYTE-READ-REQUIRED
+17	TetiAI/lucid	D	34	0	BSD-3-Clause	2026-07-06	Organization	v2-topic	RANKED/FIELD-PERMISSIVE
+18	edly-io/h5pxblock	D	19	30	MIT	2026-11-05	Organization	v9-openedx	RANKED/FIELD-PERMISSIVE
+19	iblai/higher-education-agents	D	14	0	MIT	2026-06-08	Organization	v10-eduagent	RANKED/FIELD-PERMISSIVE
+20	LeeLanguageLab/HokkienTranslation	D	11	4	MIT	2026-01-06	Organization	v2b-topic-ai	RANKED/FIELD-PERMISSIVE
+21	Abstract-Tech/abstract-scorm-xblock	D	10	2	Apache-2.0	2026-03-17	Organization	v9-openedx	RANKED/FIELD-PERMISSIVE
+22	kltn-moolde/moodle-adaptive-learning-plugin	E	8	0	MIT	2026-02-14	Organization	v3-moodle	RANKED/FIELD-PERMISSIVE
+23	ArinaAi/moodle-local_arina_prism_sense	E	7	0	NONE	2026-06-29	Organization	v3-moodle	RANKED/BYTE-READ-REQUIRED
+24	Learnathon-By-Geeky-Solutions/elite-programmers	E	2	1	MIT	2026-02-17	Organization	v5-grading	RANKED/FIELD-PERMISSIVE
+25	cursiveinc/moodle-local_assignmentnotice	E	2	0	NONE	2026-07-20	Organization	v3-moodle	RANKED/BYTE-READ-REQUIRED
+26	DOTE-3010/AI_Learning_Assistant	E	2	0	NONE	2026-07-03	Organization	v11-assist	RANKED/BYTE-READ-REQUIRED
+27	EduChatbot/moodle-chatbot-frontend	E	1	0	NONE	2026-08-19	Organization	v3-moodle	RANKED/BYTE-READ-REQUIRED
+28	Human-Logic-Software-LLC/moodle-local_hlai_quizgen	E	0	1	NONE	2026-03-13	Organization	v3-moodle	RANKED/BYTE-READ-REQUIRED
+29	cmmedu/cmmedu-tablelonginput-xblock	E	0	0	MIT	2026-11-09	Organization	v9-openedx	RANKED/FIELD-PERMISSIVE
+30	airagroupoftechnology/Aira-Ai-for-kids	E	0	0	MIT	2026-10-21	Organization	v2b-topic-ai	RANKED/FIELD-PERMISSIVE
+31	open-craft/graph-xblock	E	0	0	Apache-2.0	2026-07-21	Organization	v9-openedx	RANKED/FIELD-PERMISSIVE
+32	ruthuraraj-ml/Workshop-Assistant-ReAct-lite-RAG-Agent	E	0	0	MIT	2026-03-18	Organization	v2b-topic-ai	RANKED/FIELD-PERMISSIVE
+-	kalvilabs/kalvi	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	sagefy/sagefy	-	-	-	-	-	-	-	REFUSED-DEAD: archived
+-	codeforlife-education/aimmo	-	-	-	-	-	-	-	REFUSED-DEAD: archived
+-	studentinsights/studentinsights	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2024-08-27 (812 d)
+-	edrys-org/edrys	-	-	-	-	-	-	-	REFUSED-GRANT: MPL-2.0 (outside the build-safe predicate)
+-	raccoongang/edx_xblock_scorm	-	-	-	-	-	-	-	REFUSED-DEAD: archived
+-	mathigon/studio	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2025-02-27 (628 d)
+-	PapillonApp/papillon-v6	-	-	-	-	-	-	-	REFUSED-GRANT: GPL-3.0 (outside the build-safe predicate)
+-	ucfopen/Obojobo	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	OPCODE-Open-Spring-Fest/edtech_app	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2025-10-15 (398 d)
+-	overhangio/openedx-scorm-xblock	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	elmsln/elmsln	-	-	-	-	-	-	-	REFUSED-GRANT: GPL-3.0 (outside the build-safe predicate)
+-	senjun-team/senjun-courses	-	-	-	-	-	-	-	REFUSED-GRANT: GPL-3.0 (outside the build-safe predicate)
+-	edyoda/data-science-complete-tutorial	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2022-10-31 (1478 d)
+-	sitor-ai/frametell	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	chipmates/agoracosmica	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	particify/arsnova-server	-	-	-	-	-	-	-	REFUSED-GRANT: GPL-3.0 (outside the build-safe predicate)
+-	particify/arsnova	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2021-01-14 (2133 d)
+-	Wakoma/Lokal	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2025-11-15 (367 d)
+-	cleura/stackamole-xblock	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	openfun/xblock-proctor-exam	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2021-02-11 (2105 d)
+-	X5GON/x5moodle	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2021-02-28 (2088 d)
+-	openedxou/Click-to-reveal-XBlock	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	openedxou/print-xblock	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	openfun/xblock-configurable-lti-consumer	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	openedxou/box-xblock	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	edly-io/openedx-cmi5-xblock	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2025-03-06 (621 d)
+-	openedxou/signpost-xblock	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	openedx/xblocks-core	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	openedxou/captioned-image-xblock	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	edSPIRIT/xblock-skyroom	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	edx/gamesxblock	-	-	-	-	-	-	-	REFUSED-GRANT: GPL-3.0 (outside the build-safe predicate)
+-	openfun/xblock-Glowbl	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	ably-labs/realtime-quiz-framework	-	-	-	-	-	-	-	REFUSED-DEAD: archived
+-	eduNEXT/flow-control-xblock	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	dired-ufla/moodle-block_smartedu	-	-	-	-	-	-	-	REFUSED-GRANT: GPL-3.0 (outside the build-safe predicate)
+-	IONISx/xblock-slideshare	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2015-10-09 (4057 d)
+-	IONISx/xblock-feedback	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2015-08-05 (4122 d)
+-	IONISx/xblock-personality-test	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2015-09-01 (4095 d)
+-	eduNEXT/xblock-extemporaneous-grading	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	eduNEXT/xblock-discussion-grading	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	eduNEXT/xblock-completion-grading	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	microsoft/xblock-officevideo	-	-	-	-	-	-	-	REFUSED-DEAD: archived
+-	Sapient-Predictive-Analytics/Data-Driven_Catalyst	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2025-08-17 (457 d)
+-	abconlinecourses/chatgpt-xblock	-	-	-	-	-	-	-	REFUSED-GRANT: GPL-3.0 (outside the build-safe predicate)
+-	IONISx/xblock-audio	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2014-08-04 (4488 d)
+-	Jalte-Diye-Foundation/Cogentic	-	-	-	-	-	-	-	REFUSED-GRANT: MPL-2.0 (outside the build-safe predicate)
+-	collabassess/CPSXblock	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2018-08-17 (3014 d)
+-	Urav-Advanced-Learning-Systems-Pvt-Ltd/Study-Buddy-Engineering-Hackathon-2024	-	-	-	-	-	-	-	REFUSED-GRANT: GPL-3.0 (outside the build-safe predicate)
+-	AIMoveCAOR/moodle-plugin-ai	-	-	-	-	-	-	-	REFUSED-DEAD: archived
+-	alphabees-25/moodle-block_alphabees	-	-	-	-	-	-	-	REFUSED-GRANT: GPL-3.0 (outside the build-safe predicate)
+-	open-craft/xblock-grammarian	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	overhangio/jupyter-xblock	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	collabassess/Xblocks-in-OpenEdx	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2018-02-06 (3206 d)
+-	eduNEXT/xblock-mindmap	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	eduNEXT/xblock-controlled-navigation	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	open-craft/capa-visual-editor	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	GDGC-MET/EdutechAssistant-Vibecoding	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2025-10-09 (404 d)
+-	eduNEXT/xblock-limesurvey	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	eduNEXT/xblock-imagesgallery	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	IONISx/xblock-taggedtext	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2015-03-30 (4250 d)
+-	openfun/fun-videofront-xblock	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2016-09-06 (3724 d)
+-	cmmedu/iterative-xblock	-	-	-	-	-	-	-	REFUSED-GRANT: GPL-3.0 (outside the build-safe predicate)
+-	eth-ecuador/moodle-ai-tutor-plugin	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2024-12-13 (704 d)
+-	cybologic/edx-practical-project	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2025-10-20 (393 d)
+-	TechNikh/xblock_repatcha	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2014-11-21 (4379 d)
+-	IONISx/xblock-video	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2014-06-06 (4547 d)
+-	valutac/sulva	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2018-09-12 (2988 d)
+-	engaged-edu/open-edx-engaged-certificate-xblock	-	-	-	-	-	-	-	REFUSED-GRANT: GPL-3.0 (outside the build-safe predicate)
+-	edly-io/instruqt-xblock	-	-	-	-	-	-	-	REFUSED-GRANT: AGPL-3.0 (outside the build-safe predicate)
+-	edly-io/jupyterlite-xblock	-	-	-	-	-	-	-	REFUSED-GRANT: GPL-3.0 (outside the build-safe predicate)
+-	IONISx/xblock-video-modal-components	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2014-12-23 (4347 d)
+-	cmmedu/iaa-xblock	-	-	-	-	-	-	-	REFUSED-GRANT: GPL-3.0 (outside the build-safe predicate)
+-	menthorlabs/menthor	-	-	-	-	-	-	-	REFUSED-DEAD: archived
+-	Wakoma/nimble	-	-	-	-	-	-	-	REFUSED-GRANT: CERN-OHL-S-2.0 (outside the build-safe predicate)
+-	wombats-writing-code/xoces	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2017-07-24 (3403 d)
+-	deneyapkart/deneyapkart-arduino-core	-	-	-	-	-	-	-	REFUSED-GRANT: LGPL-2.1 (outside the build-safe predicate)
+-	CSC392-CSC492-Building-AI-ML-systems/educational-AI-agent	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2025-09-21 (422 d)
+-	CopyLeft-AI/educational-AI-Agent	-	-	-	-	-	-	-	REFUSED-DEAD: last push 2025-08-12 (462 d)

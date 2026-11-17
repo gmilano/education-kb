@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `p868` · `2026-11-17` — **`5` foundation rows, and the measurement this shelf should be read with: `20.6%` of its own counted rows have not been pushed to in over a year — the worst of the three shelves**
+
+🔴 **[`867-G2`](../intel/open-gaps.md)'s liveness census ran over every row the count gate
+credits, and THIS shelf is where it hurts**
+([`census`](../evidence/liveness-census.2026-11-17-p868.tsv)):
+
+| Shelf | Counted | 🟢 `LIVE` | 🔴 `STALE` (> 365 d) | 🔴 `ARCHIVED` | Stale + archived |
+|---|---|---|---|---|---|
+| `repos/foundations.md` | `384` | `302` | 🔴 **`69`** | 🔴 `10` | 🔴 **`20.6%`** |
+| `agents/top.md` | `535` | `461` | `62` | `5` | `12.5%` |
+| `verticals/solutions.md` | `222` | `203` | `12` | `4` | `7.2%` |
+
+🟢 **And on this shelf specifically, that number needs a distinction this base has never
+drawn.** 🔵 **`benhamner/ASAP-AES` was last pushed in February 2012 — `5,381` days — and it is
+the Kaggle Automated Student Assessment Prize corpus, which is a perfectly good HISTORICAL
+citation and a terrible current recommendation.** 🟢 **A foundation is cited for what it
+ESTABLISHED; a row on the other two shelves is cited for what a studio can build on next week.**
+🔴 **The two readings have been sharing one column, which is why `69` stale rows accumulated
+without anything objecting.** 🟢 **Registered as [`868-G3`](../intel/open-gaps.md): this shelf
+needs a declared `HISTORICAL` / `CURRENT` disposition per row, and the census is committed so
+assigning it is a sort and not a re-measurement.**
+
+🟢 **Three of this shelf's `3` unresolved addresses are LIVE on the clone channel**
+(`digitalcredentials/learner-credential-wallet`, `packbackbooks/lti-1-3-php-library`,
+`tl-its-umich-edu/caliper-php-public`) — 🔴 **so `search/repositories` is not an existence
+test**, and this shelf's absence claims must not be keyed on it
+([`resolution`](../evidence/unresolved-resolution.2026-11-17-p868.tsv)).
+
+### 🟢 The rows
+
+🟢 **Shelf disposition, stated:** this shelf states NO licence predicate, and that is a POSITION
+rather than an omission — it is now declared as such in
+[`ingest/shelf-predicates.json`](../ingest/shelf-predicates.json), which is how
+[`867-G3`](../intel/open-gaps.md) was discharged. 🟢 **Moodle's `GPL-3.0` does not stop Moodle
+being foundational. Every grant below is still byte-read and published; it is just not a filter
+here.**
+
+| Repo | Licence, as measured | ★ / forks | Default ref · pushed | Region | Why it is a foundation and not a row on another shelf |
+|---|---|---|---|---|---|
+| https://github.com/haxtheweb/haxcms-php | 🟢 **Apache-2.0 — byte-read** (`LICENSE.md`, `11,362 B`, `sha256₁₂ b662f44e55e8`) | 130 / 58 | `master` · `2026-11-17` | **North America** | 🟢 **HAX is a WEB-COMPONENT model for course content: the authoring layer is standards-based custom elements, so the content outlives the platform that renders it.** 🟢 **Commit domain `psu.edu` — Penn State.** 🔵 **That is the foundational claim and it is unusual: almost every other platform on these shelves owns its content format. A studio that builds on HAX can move the content to the next LMS without a migration project** |
+| https://github.com/opencast/annotation-tool | 🟢 **ECL-2.0 (Educational Community License 2.0) — byte-read** (`LICENSE`, `11,340 B`, `sha256₁₂ 76a975068930`) | 42 / 22 | `master` · `2026-10-19` | **EMEA** | 🟢 **Video annotation for research and teaching, inside the Opencast estate** — the lecture-capture incumbent in European higher education. 🟢 **Commit domains `elan-ev.de` (`44` of `50`) and `unibe.ch` — Germany and Switzerland, MEASURED.** 🔵 **`ECL-2.0` is the licence family written FOR this sector (an Apache-2.0 derivative) and this is the second address this base shelves under it after `sakaiproject/sakai` — which is why `867-G3`'s vocabulary widening names it** |
+| https://github.com/openfun/arnold | 🟢 **MIT — byte-read** (`LICENSE`, `1,078 B`, `sha256₁₂ 8231f43fdfc3`) | 41 / 11 | `master` · `2026-11-05` | **EMEA** | 🟢 **The Kubernetes deployment layer for an Open edX estate, from France Université Numérique.** 🟢 **Commit domain `fun-mooc.fr` — a named national MOOC operator, MEASURED.** 🔵 **Foundational because it answers the question an Open edX engagement actually fails on, which is never "can we install it" but "who operates it on day 400" — and it answers it MIT, on the permissive side of the platform's own `AGPL-3.0` seam** |
+| https://github.com/edly-io/h5pxblock | 🟢 **MIT — byte-read** (`LICENSE`, `1,064 B`, `sha256₁₂ 4d17b43eb718`) | 19 / 30 | `master` · `2026-11-05` | 🟡 **APAC** — Pakistan, by the commit domain `arbisoft.com` (`29` of `50`), which is company-form; DECLARED WEAK | 🟢 **H5P interactive content inside Open edX.** 🔵 **Foundational for a reason that is about CONTENT SUPPLY rather than code: H5P is the format a very large amount of existing institutional courseware is already authored in, and this is the permissive bridge into it. `30` forks against `19` stars — an integration, deployed more than admired** |
+| https://github.com/Abstract-Tech/abstract-scorm-xblock | 🟢 **Apache-2.0 — byte-read** (`LICENSE`, `11,342 B`, `sha256₁₂ db0b3d91913a`) | 10 / 2 | `master` · `2026-03-17` | 🟡 **EMEA** — Germany, commit domain `abstract-technology.de`, but on `1` of `50` commits; DECLARED WEAK | 🟢 **SCORM packages inside Open edX.** 🔵 **The same content-supply argument as the row above, aimed at the OTHER format: this pass's vertical research leg returned `LTI 1.3 / OneRoster / SCORM / xAPI / SAML` as the live interop vocabulary, and SCORM is the one with thirty years of corporate courseware behind it. `overhangio/openedx-scorm-xblock` is the better-known sibling and sits UNGRADED in this base's history; this one is byte-read** |
+
+
 ## 🟢 Seventy-second pass (`p867`, 2026-11-17) — **`6` foundation rows, and they are one finding rather than six: the Open edX estate has a PERMISSIVE SEAM inside it — `21` Apache-2.0 and `1` BSD-3-Clause components against `71` AGPL-3.0 — so an AI extension for the world's largest open MOOC platform does not have to take the platform's copyleft into its own code**
 
 🟢 **Channel declaration is in [`agents/top.md`](../agents/top.md) and holds for this shelf.**
@@ -1723,7 +1769,7 @@ above was graded on the licence question alone.**
 | https://github.com/langchain-ai/langchain | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`) | 149546 | **Region: Global.** The model and tool abstraction layer beneath the above. 🟡 **Shelved with a deliberate caution: this base's compose recipes should depend on `langgraph` for control flow and on `langchain-core` for interfaces, not on the `langchain` meta-package, whose surface moves faster than an education deliverable's support window.** 🔵 **Note for the byte-read gate: its `LICENSE` is on `master`, not `main` — a `main`-only probe returns `404` and would record a false `NO_LICENCE_FILE`, which is a live defect in any sweep that assumes the default branch name** |
 | https://github.com/teppei-miyashita/agenticstar-agentcore | 🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last touched `2026-08-12` | 0 | 🔴 **Region: APAC. Shelved as a WARNING row — the worked example for `T89`.** This is the source repository that the PyPI package `agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository`, and it holds no commits at all. 🟢 **The package itself is genuinely MIT** (`License-Expression: MIT` in the wheel, `dist-info/licenses/LICENSE`, `1,078 B`, `sha256:2afbb5fc…`) **and genuinely installable** — 🔴 **but it is wheel-only, single-release (`2026-09-17`), and unreadable at its stated address, while hard-pinning `langgraph==1.1.10`, `langchain==1.2.18`, `fastapi==0.136.0` and `agenticstar-platform==0.5.32`.** 🔵 **Do NOT add it to a delivery tree. It is here so that the next pass asking "is the AGENTIC STAR stack adoptable?" finds the answer already measured: licensed yes, auditable no** |
 
-## Foundational repos — 384 rows
+## Foundational repos — 389 rows
 
 ## 🟢 The STANDARDS-SEAM layer — **LTI, QTI and xAPI, the four interfaces an education deliverable is actually wired through** (new, fifty-seventh pass `p852`) (6 rows)
 

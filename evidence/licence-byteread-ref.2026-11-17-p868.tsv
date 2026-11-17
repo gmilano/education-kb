@@ -1,0 +1,26 @@
+address	default_ref	ref_is_main	grant_path	http	bytes	sha256_12	first_line	main_would_404	note
+lynote-ai/ai-tutor	main	yes	LICENSE	200	1063	7a1aecaf14eb	MIT License	no	-
+iblai/higher-education-agents	main	yes	LICENSE	200	1063	f1269b7b2313	MIT License	no	-
+haxtheweb/haxcms-php	master	no	LICENSE.md	200	11362	b662f44e55e8	                                 Apache License	YES	-
+tutors-sdk/tutors	development	no	LICENSE	200	1088	4800b7fa4014	MIT License	no	-
+langx/langx	main	yes	LICENSE	200	1520	19ec8f98fa19	BSD 3-Clause License	no	-
+onemnemo/mnemo	main	yes	LICENSE	200	11326	62e02db7f9a1	Apache License	no	-
+Oriole-FDU/Wisepen	main	yes	LICENSE	200	4539	7fc19489d6b2	Business Source License 1.1	no	-
+ictinnovations/ICTSchool	main	yes	-	404	-	-	-	n/a	no grant at any of the 11 probed names
+TetiAI/lucid	main	yes	LICENSE	200	1518	df180ce2a38a	BSD 3-Clause License	no	-
+edly-io/h5pxblock	master	no	LICENSE	200	1064	4d17b43eb718	MIT License	no	-
+kltn-moolde/moodle-adaptive-learning-plugin	main	yes	LICENSE	200	1086	7fb13a30d308	MIT License	no	-
+opencast/annotation-tool	master	no	LICENSE	200	11340	76a975068930	Educational Community License, Version 2.0 (ECL-2.0)	YES	-
+openfun/arnold	master	no	LICENSE	200	1078	8231f43fdfc3	MIT License	YES	-
+cmmedu/iterative-xblock	cmmedu-release/lilac	no	LICENSE	200	35148	8b1ba204bb69	                    GNU GENERAL PUBLIC LICENSE	no	-
+eth-ecuador/moodle-ai-tutor-plugin	main	yes	-	404	-	-	-	n/a	no grant at any of the 11 probed names
+Abstract-Tech/abstract-scorm-xblock	master	no	LICENSE	200	11342	db0b3d91913a	                                 Apache License	YES	-
+codeforlife-education/rapid-router	master	no	LICENSE.md	200	121	4164d0bccf35	# License	YES	-
+cmmedu/cmmedu-connectwithline-xblock	cmmedu-release/lilac	no	LICENSE	200	1092	16f972964728	MIT License	YES	-
+cmmedu/cmmedu-ordertable-xblock	cmmedu-release/lilac	no	LICENSE	200	1092	16f972964728	MIT License	no	-
+cmmedu/cmmedu-tablelonginput-xblock	cmmedu-release/lilac	no	LICENSE	200	1120	3724002e0b4f	MIT License	no	-
+cmmedu/moodle-accessrule_autostartquiz	main	yes	LICENSE	200	1064	7b1c0d29245b	MIT License	no	-
+cmmedu/moodle-filter-teacheronlycontent	main	yes	LICENSE	200	1092	564aeadb2b31	MIT License	no	-
+cmmedu/moodle-plugin-graphsandtrees	main	yes	LICENSE	200	1063	195cb14fde0c	MIT License	no	-
+cmmedu/redfid_oauth2	cmmedu-release/lilac	no	-	404	-	-	-	n/a	no grant at any of the 11 probed names
+cmmedu/eol_feedback	eol-release/lilac	no	-	404	-	-	-	n/a	no grant at any of the 11 probed names
