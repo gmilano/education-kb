@@ -1,0 +1,15 @@
+# p863 2026-11-17 — byte-read grants, LATAM-Hispanic + APAC examination vein
+# channel: git clone --filter=blob:none --depth 1 ; licence file read from default ref at root
+# NOTE: api.github.com and github.com HTML both return 403 at this session's egress proxy.
+# Repo-existence and licence bytes were established over the GIT channel; search counts over `gh api search/repositories`.
+address	stars	forks	github_spdx_field	default_ref	head_commit	licence_file	bytes	sha256_12	verdict
+alvaretto/r-exams_matematicas	8	0	MIT	main	2024-03-18	LICENSE	1078	67a6e5e5a2af	GRANT-PERMISSIVE-MIT
+agn3si/ResultadosUNAM---data	6	2	MIT	main	2026-08-12	LICENSE	1063	13e4dd489fe9	GRANT-PERMISSIVE-MIT
+meesudzu/trac-nghiem-online	80	-	MIT	master	2025-02-09	LICENSE	1068	a44234cb37ea	GRANT-PERMISSIVE-MIT
+tamht298/final-project	12	-	MIT	master	2021-01-12	LICENSE	1066	89599f2cdf16	GRANT-PERMISSIVE-MIT
+Belikhun/thi-trac-nghiem	6	-	MIT	master	2023-05-11	LICENSE	1064	93d0402524c0	GRANT-PERMISSIVE-MIT
+picuino/test	7	-	CC-BY-SA-4.0	master	2026-11-11	LICENSE	20127	0f1985dd14bf	GRANT-COPYLEFT-CONTENT
+gadepall/cbse-papers	7	-	GPL-3.0	main	2026-09-28	LICENSE	35149	3972dc9744f6	GRANT-COPYLEFT-GPL3
+jmtoral/admisiones_unam	12	1	NONE	main	2026-08-31	-	0	-	NO-GRANT-AT-ROOT
+DDDkubota/ExamenIsoftEGEL	10	5	NONE	master	2026-11-12	-	0	-	NO-GRANT-AT-ROOT
+alejandroRdzGarza/repaso-ceneval	10	0	NONE	main	2025-04-02	-	0	-	NO-GRANT-AT-ROOT

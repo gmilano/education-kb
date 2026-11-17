@@ -1,0 +1,21 @@
+# p863 2026-11-17 — 862-G2 acceptance test: every Spanish-speaking LATAM national examination term, reported with its total
+# channel: gh api -X GET search/repositories  (api.github.com via curl is 403; gh is proxy-preconfigured)
+leg	term	total_count	stars_gt_5	on_topic_in_top_band	note
+MX	EXANI	217	3	0	ACRONYM COLLISION: Cisco ExaNIC NICs, Exanima game map, Exanite ARPG
+MX	Ceneval	111	2	2	institution name is RUNNABLE; both addresses ungranted
+MX	COMIPEMS	15	0	-	measured nil
+CO	ICFES	795	1	1	alvaretto/r-exams_matematicas (MIT) — the only permissive hit in the Hispanic leg
+CO	"Saber 11"	356	0	-	measured nil above 5 stars
+CO	"Saber Pro"	431	3	0	ACRONYM COLLISION: Beat Saber mod, Chinese Saber frontend, saber-promise JS
+CL	PAES prueba	22	0	-	measured nil
+PE	"examen de admisión"	110	1	1	agn3si/ResultadosUNAM---data (MIT)
+AR	"examen de ingreso"	85	1	1	jmtoral/admisiones_unam — NO GRANT
+MX/ES	"banco de preguntas"	206	2	2	picuino/test (CC-BY-SA-4.0, Spain); fegonzalez7 ungranted
+MX	reactivos examen	21	0	-	measured nil
+MX	"opción múltiple"	132	0	-	measured nil
+MX	"planeación didáctica"	10	0	-	measured nil
+MX	"guía de estudio" examen	32	0	-	measured nil
+VN	giáo dục AI	92	0	-	measured nil — the POLICY term returns no code
+VN	"trắc nghiệm"	1170	7	7	THE FINDING: 3 of 7 MIT, all on topic, zero collision
+IN	NCERT	2220	16	16	huge corpus, 0 permissive in top band; 2 GPL-3.0, rest ungranted
+IN	CBSE question paper	37	2	2	gadepall/cbse-papers GPL-3.0; Shabber10 ungranted
