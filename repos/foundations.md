@@ -6,9 +6,13 @@ updated: 2026-11-17
 
 # Foundational repos — education
 
-**Pass `p871`, 2026-11-17.** Same two-channel verification as `agents/top.md`: existence via
-`git ls-remote`, licence via the licence bytes on the **resolved** default branch. No star
-counts — that channel returned `403` this session.
+**Pass `p872`, 2026-11-17** (second pass of the day). Same two-channel verification as
+`agents/top.md`: existence via `git ls-remote`, licence via the licence bytes on the **resolved**
+default branch. No star counts — that channel returned `403` for the second consecutive pass.
+
+`p872` re-resolved every load-bearing address in this file through `git ls-remote --symref` and
+found **four of eleven do not default to `main`**. Branch column corrected below where it was
+wrong, and `openedx/` recorded as the live org for `edx-ora2`.
 
 These are the load-bearing pieces an education build sits on: the standards plumbing that
 makes a tool interoperable with institutional systems, and the AI substrate that makes it
@@ -30,6 +34,7 @@ This is the layer that gets a Globant build past institutional procurement.
 | https://github.com/openedx/openedx-aspects | Apache-2.0 | `main` | Open edX's learning-analytics stack (Aspects). Apache-2.0 and reusable even outside an Open edX deployment. |
 | https://github.com/jupyter/nbgrader | BSD | `main` | Assignment release, collection and autograding for Jupyter notebooks. The standard autograder in university CS and data-science courses. |
 | https://github.com/jupyterhub/jupyterhub | BSD | `main` | Multi-user notebook hosting — the substrate for every hands-on technical course delivered in a browser. |
+| https://github.com/openedx/edx-ora2 | AGPL-3.0 | `master` | **Same project as the `edx/edx-ora2` row above; `openedx/` is the current org.** Both addresses resolve today. Prefer this one in new work — the legacy `edx/` owner path is the one that will eventually break. |
 | https://github.com/open-spaced-repetition/fsrs4anki | MIT | `main` | **FSRS** — the modern free-spaced-repetition scheduler. MIT-licensed, empirically validated memory model. If your product claims retention, this is the algorithm to use instead of inventing a review schedule. |
 
 ## Document & media ingestion — the real bottleneck in education AI
@@ -41,7 +46,7 @@ quality, not model quality, is what usually determines whether a tutoring build 
 |---|---|---|---|
 | https://github.com/docling-project/docling | MIT | `main` | Document parsing to structured output (IBM-originated, now a Linux Foundation AI project). MIT, strong on tables and layout — the default first choice for curriculum and textbook ingestion. |
 | https://github.com/datalab-to/marker | Apache-2.0 | `master` | PDF → markdown with high fidelity on equations and tables. Strong on STEM textbooks where Docling's maths handling is not enough. |
-| https://github.com/opendatalab/MinerU | Apache-2.0 **+ extra terms** | `master` | High-quality PDF extraction including formulas. **Flag:** `LICENSE.md` adds terms on top of Apache-2.0 — read them before commercial use. |
+| https://github.com/opendatalab/MinerU | **"MinerU Open Source License"** (Apache-2.0 + additional terms) | `master` | High-quality PDF extraction including formulas. **Flag sharpened by `p872` — the terms were read, not just noted.** `LICENSE.md` is titled *MinerU Open Source License* and states MinerU is Apache-2.0 **"subject to the additional terms below"**. Those terms include: (1) **a separate commercial licence is required** once you and your affiliates, consolidated, exceed **100 million MAU** *or* **USD 20 million monthly revenue**; and (2) an **online-service attribution obligation**. For a normal institutional education deployment neither threshold binds, so MinerU is usable — but the attribution obligation applies immediately to any hosted service, and the thresholds must be checked before embedding it in a product sold at scale. |
 | https://github.com/Unstructured-IO/unstructured | Apache-2.0 | `main` | Broad-format ingestion (docx, pptx, html, email). Useful for the long tail of institutional file formats. |
 | https://github.com/openai/whisper | MIT | `main` | Lecture and classroom speech-to-text. MIT weights and code. |
 | https://github.com/SYSTRAN/faster-whisper | MIT | `main` | CTranslate2 reimplementation — several times faster, materially cheaper for transcribing a full semester of lecture capture. |
@@ -69,8 +74,10 @@ quality, not model quality, is what usually determines whether a tutoring build 
 | https://github.com/EleutherAI/lm-evaluation-harness | MIT | `main` | Standard academic benchmark harness — the credible way to report model capability to an academic buyer. |
 | https://github.com/HumanSignal/label-studio | Apache-2.0 | `develop` | Human annotation, including rubric-scoring interfaces for building graded gold sets. |
 | https://github.com/argilla-io/argilla | Apache-2.0 | `develop` | Human feedback and dataset curation, oriented to SME review — fits teacher-in-the-loop validation. |
+| https://github.com/wwrwbs/AI_AWE | Apache-2.0 | `main` | **ArguLens** — automated essay scoring with feedback. Enters the foundations layer because its **scorer is a grade-independent LightGBM model over 31 explicit linguistic/discourse features**, not an LLM: a reproducible, inspectable score is the only kind that survives an appeal or a high-risk conformance review. **v0.1.0, research-grade; corpus is US middle-school English (Persuade 2.0)** — re-fitting on local graded essays is required work, not polish. See `agents/top.md`. |
 
-**31 verified foundational repos.**
+**33 verified foundational repos** (31 from `p871`, plus `openedx/edx-ora2` recorded as the
+canonical address and `wwrwbs/AI_AWE` added by `p872`).
 
 ## Declared gaps
 
@@ -84,4 +91,18 @@ quality, not model quality, is what usually determines whether a tutoring build 
   `OS4ED/openSIS-Classic` has **no licence file in its repository at all** — its GPL claim
   appears only in the README. Flagged, not treated as a clean grant.
 - `apereo/opencast-admin-interface` **does not exist** (`git ls-remote` returned nothing). The
-  real address is `opencast/opencast`. Recorded so the dead address is not re-imported.
+  real address is `opencast/opencast`, and `p872` adds its default branch: **`develop`**, not
+  `main`, licence **ECL-2.0**. A clone pinned to `main` fails outright.
+- **Four of eleven audited addresses do not default to `main`** — `opencast`, `oppia` and
+  `kolibri` default to `develop`; `edx-ora2`, `ltijs`, `OpenOlat` and `sakai` to `master`.
+  Licence bytes **must** be fetched from the resolved branch: a guessed `main` path 404s, a 404
+  becomes "no licence found", and that becomes wrong data in this file.
+- **A substring grep cannot characterise a licence.** `p872` tried to automate the
+  "Apache-2.0 + additional terms" check and got a **100% false-positive rate** on Apache-2.0,
+  because §5 of the licence contains the phrase *"without any additional terms or conditions"*.
+  Seven clean repos were flagged; the flag was **discarded rather than published**.
+  `opendatalab/MinerU` remains the single genuine case in this KB, because its `LICENSE.md` adds
+  substantive terms in prose. Automate existence and branch resolution; read the bytes for
+  licence meaning.
+- **No permissively licensed proctoring component exists at the foundations layer either.**
+  The two real candidates found by `p872` are both AGPL-3.0 — see `verticals/solutions.md`.

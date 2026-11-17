@@ -4,6 +4,166 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p872`) — **the grading gap closed: a real Apache-2.0 essay-scoring system exists; and the first large RCT on course-integrated AI tutoring is negative**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+`p872` is a second pass on the same day as `p871`. It did not re-do `p871`'s verification work;
+it went at `p871`'s four declared gaps. Three of them are now closed or materially narrowed.
+
+### Channel state — unchanged from `p871`
+
+| Channel | Result |
+|---|---|
+| `git ls-remote` (existence, default-branch resolution) | **open** |
+| `raw.githubusercontent.com` (licence bytes) | **open** |
+| `api.github.com` | **403** — session GitHub scope |
+| `github.com` HTML | **403** — session GitHub scope |
+
+Still **no star counts in this KB.** Two passes in a row have been unable to measure them.
+
+### Gap closed — open-source grading. `ArguLens` is real, Apache-2.0, and architecturally right
+
+`p871` declared: *"No mature open-source grading / assessment agent exists."* That gap is now
+closed, with maturity caveats stated rather than hidden.
+
+| Agent | Repo | Licence | Branch | What it is |
+|---|---|---|---|---|
+| **ArguLens** | https://github.com/wwrwbs/AI_AWE | **Apache-2.0** (`LICENSE`, verified bytes) | `main` | Automated essay scoring **plus** label-aware feedback generation for argumentative essays. Scores 1–6, labels every sentence's discourse role, emits written feedback. Paper: **arXiv:2608.17356**, submitted **18 Aug 2026**. |
+
+**Why this one matters when a dozen other "AES" repos do not — it is decomposed, not a prompt.**
+Three independently replaceable components:
+
+| Component | Path | Implementation |
+|---|---|---|
+| Discourse-move classifier | `infer/infer_qwen.py` | Fine-tuned **Qwen2.5-7B LoRA**, labels sentences `claim` / `data` / `counterclaim` / `rebuttal` |
+| Scorer | `scoring_pipeline/scorer.py` | **Grade-independent LightGBM** over **31 linguistic and discourse features** — not an LLM |
+| Feedback generator | `feedback/` | Local **Qwen2.5-14B-Instruct** via vLLM, or any OpenAI-compatible endpoint |
+
+Orchestration is a Gradio app (`app_gradio.py`) with batch `.txt` upload, a per-file inspector
+and ZIP export of per-essay JSON/CSV/Markdown. Three inference backends — in-process `hf`,
+persistent `vllm` service, and `api`. `run_all_services.sh` starts both vLLM services and the UI.
+There is a `pytest` suite that skips the tests needing a live vLLM.
+
+**The scorer being LightGBM over explicit features, not an LLM, is the whole point.** A
+feature-based score is inspectable, reproducible and defensible to an appeals board in a way
+that "the model said 4" is not. For every regime that gates on automated decisions —
+LGPD Art. 20 in Brazil, the EU high-risk tier, Vietnam's Decision 33/2026/QD-TTg — that
+property is the compliance argument, not an implementation detail.
+
+**Maturity flags, stated plainly.** This is **v0.1.0** and early. The adapter weights ship as a
+separate GitHub release asset, and the README itself says adapter weights must be published
+before public release. The README scopes the tool to **"research and assistive"** use and warns
+that high-stakes decisions need human oversight. Training corpus is **Persuade 2.0** —
+academic-use with attribution, not redistributed, prepared locally via `prepare_persuade.py` —
+and it is **US middle-school argumentative essays**, so the README's own generalisation warning
+applies to any other population, including every non-English deployment.
+
+**Dependency licence chain, verified:** code + adapter config + scorer Apache-2.0; vendored
+`TextComplexityToolkit` MIT (wrapping TAALED, QuanSyn, L2SCA/neosca, spaCy); Qwen2.5 base
+Apache-2.0, downloaded separately; spaCy model MIT/CC; Persuade 2.0 academic-use. The closed-source
+TAMMI / TAALES / TAASSC tools are **deliberately excluded** — so the chain is clean.
+
+| Also verified this pass | Repo | Licence | Branch | Verdict |
+|---|---|---|---|---|
+| **WriteRight** | https://github.com/PritK99/WriteRight | MIT | `main` | Real and MIT, scores essays 1–10. Far simpler than ArguLens and lightly maintained. Useful as a reference implementation, not a base. |
+
+### Gap narrowed — proctoring. Candidates exist; **none is permissive**
+
+`p871` declared no maintained, permissively licensed OSS proctoring platform. Two real
+candidates were found and verified this pass. **Both are AGPL-3.0**, so the gap stands — but it
+is now an evidenced finding rather than an absence of search.
+
+| Address | Licence (verified bytes) | Branch | Verdict |
+|---|---|---|---|
+| https://github.com/sudosylabs/proctor | **AGPL-3.0** | `main` | Self-hosted exam + proctoring platform for institutions, Go server + React front end. The most complete OSS proctoring project found. AGPL-3.0: network use triggers source obligations — fine for a single institution's own deployment, unusable in a distributed proprietary product. |
+| https://github.com/kamlendras/OpenProctor | **AGPL-3.0** | `main` | Next.js/TypeScript. **Correction: listings claiming MIT are wrong** — the licence bytes on `main` are AGPL-3.0. Thin install docs, Vercel-oriented. |
+
+**Strategic read, unchanged in direction and now better supported:** the EU has moved
+proctoring into the high-risk tier and Vietnam has listed biometric learner monitoring as a
+high-risk education system, while the entire open-source supply in this category is copyleft and
+immature. Proctoring is the clearest *unbuilt* product in education AI — and the regulatory
+climate means the right answer may be assessment redesign rather than better proctoring.
+
+### Corrections recorded this pass
+
+| Claim | Status |
+|---|---|
+| `kamlendras/OpenProctor` is MIT | **Wrong** — AGPL-3.0 by licence bytes on `main`. |
+| `withmarbleapp/os-taxonomy` is a code repo | **Mislabelled.** It exists on `main`, but its `LICENSE` is the **Open Data Commons Open Database Licence (ODbL)** — a *database* licence with share-alike on derived databases, not a software licence. A children's curriculum graph is data; treat it under ODbL terms and do not file it beside MIT/Apache code. |
+| `HKUDS/DeepTutor` carries Apache-2.0 "additional terms" | **False alarm, self-inflicted — and worth recording as method.** An automated grep of licence bytes for `additional terms` flagged DeepTutor, `huggingface/agents-course`, `Cvmcosta/ltijs`, `Ed-Fi-Alliance-OSS/Ed-Fi-ODS`, `oppia/oppia`, `OpenOlat/OpenOlat` and `openedx/openedx-aspects`. On inspection the match is the **standard Apache-2.0 §5 boilerplate** — *"without any additional terms or conditions"* — which is present in **every** Apache-2.0 file. The heuristic has a 100% false-positive rate on Apache-2.0 and was **discarded, not published**. `p871`'s reading stands: DeepTutor is clean Apache-2.0. **MinerU remains the one genuine `+ additional terms` case**, because its `LICENSE.md` adds substantive terms in prose. Future passes: a substring grep is not a licence review. |
+
+### A second false-positive class, caught before publication — GPL read as AGPL
+
+The discarded `additional terms` grep (above) was not the only broken heuristic this pass. The
+same automated licence reader classified by searching the whole licence file for `GNU AFFERO`.
+That **false-positives on every GPL-3.0 file**, because **GPL-3.0 §13 ("Remote Network
+Interaction") itself names the GNU Affero General Public License**.
+
+The bad reading would have relabelled **ten** projects as AGPL-3.0 that are plain GPL-3.0:
+`moodle/moodle`, `chamilo/chamilo-lms`, `ILIAS-eLearning/ILIAS`, `Citolab/qti-components`,
+`LearningLocker/learninglocker`, `pkp/ojs`, `Koha-Community/Koha`, `GibbonEdu/core`,
+`h5p/h5p-php-library` and `kiwix/kiwix-tools`.
+
+**It was caught and corrected before anything was written.** Re-derivation from the licence
+**title line** (plus its version line) gives the correct split, which this pass then reconciled
+against every value `p871` had recorded:
+
+| Verified **AGPL-3.0** (title line says *Affero*) | Verified **GPL-3.0** (title line says plain GPL) |
+|---|---|
+| `openedx/edx-ora2`, `edx/edx-ora2`, `instructure/canvas-lms`, `openedx/edx-platform`, `frappe/lms`, `ankitects/anki`, `sudosylabs/proctor`, `kamlendras/OpenProctor` | `moodle/moodle`, `chamilo/chamilo-lms`, `ILIAS-eLearning/ILIAS`, `Citolab/qti-components`, `LearningLocker/learninglocker`, `pkp/ojs`, `Koha-Community/Koha`, `GibbonEdu/core`, `h5p/h5p-php-library`, `kiwix/kiwix-tools` |
+
+**Result: `p871`'s licence data was correct on all eighteen.** No correction to the stable files
+was needed, and the two AGPL claims `p872` does publish (`sudosylabs/proctor`,
+`kamlendras/OpenProctor`) are confirmed by title line, not by the broken grep.
+
+**Why this is recorded rather than quietly fixed.** The GPL-vs-AGPL distinction is the single
+most consequential licence fact in this vertical: AGPL's network-use clause is what triggers
+source obligations for a *hosted* education service, which is how education software is actually
+delivered. A pass that silently relabelled Moodle as AGPL would have mis-advised every Moodle
+engagement. Two independent greps over licence text produced confidently wrong answers in one
+afternoon — **licence characterisation in this KB must come from the title line and the added
+prose, never from a substring search.**
+
+### One flag sharpened rather than repeated
+
+`opendatalab/MinerU` has been carried for several passes as "Apache-2.0 + extra terms" without
+anyone reading the terms. `p872` read them. The file is titled **"MinerU Open Source License"**
+and adds, on top of Apache-2.0: a **separate commercial licence requirement** once the user and
+its affiliates, consolidated, exceed **100 million MAU** *or* **USD 20 million monthly revenue**,
+and an **online-service attribution obligation**. Neither threshold binds a normal institutional
+deployment, so MinerU stays usable — but the attribution obligation binds any hosted service from
+day one, and the thresholds matter if it is embedded in a product sold at scale. This remains the
+KB's **one genuine** Apache-plus-terms case.
+
+### Full-file URL audit
+
+All **70** distinct GitHub URLs across the four stable files (`agents/top.md`,
+`repos/foundations.md`, `verticals/solutions.md`, `compose/patterns.md`) were resolved this pass
+via `git ls-remote`. **70 of 70 exist; zero 404s.** Two default-branch oddities worth recording:
+`GibbonEdu/core` defaults to **`v31.0.00`** and `bigbluebutton/bigbluebutton` to
+**`v4.0.x-develop`** — both tag-shaped branch names that a `--branch main` clone will miss.
+`OS4ED/openSIS-Classic` still has **no licence file on its default branch**, confirming `p871`.
+
+### Agents re-verified unchanged this pass
+
+`HKUDS/DeepTutor` (Apache-2.0, `main`), `THU-MAIC/OpenMAIC` (MIT, `main`),
+`CaviraOSS/PageLM` (MIT, `LICENSE.md`, `main`), `CAHLR/OATutor` (MIT, `main`),
+`AI-for-Education/pedagogy-benchmark` (MIT, `main`). No licence or branch drift since `p871`.
+
+Also verified as MIT this pass, for the AI-literacy curriculum work NA grant mandates create:
+`microsoft/ai-agents-for-beginners` (MIT, `main`), `patchy631/ai-engineering-hub` (MIT, `main`),
+and `huggingface/agents-course` (**Apache-2.0**, `main` — clean, per the correction above).
+
+### The finding that should change how this KB sells tutoring
+
+Not an agent, but it belongs at the top of this file: the efficacy evidence arrived this pass and
+**the largest trial is negative**. See `intel/trends.md` T9 for the full treatment. In one line:
+a 2,379-undergraduate RCT found course-integrated AI tutor *access* **reduced** final grades by
+**0.37 SD**, with larger losses among first-generation students — while a separate RCT found AI
+tutoring **plus structured group work** beat control. Tutoring agents are not self-evidently
+beneficial, and this KB should stop implying they are.
+
 ## 🟢 `2026-11-17` (`p871`) — **two education-native agents shipped releases within 24h of this pass; and the stable files were rewritten because `p870` had grown `agents/top.md` to `900 KB` of self-reference**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

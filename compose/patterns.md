@@ -6,7 +6,9 @@ updated: 2026-11-17
 
 # Compose patterns — education
 
-**Pass `p871`, 2026-11-17.** Six recipes. Every repo named below was verified this pass
+**Pass `p872`, 2026-11-17** (second pass of the day). Eight recipes — `p871`'s six, with **P2
+rewritten** because the grading component it said did not exist has been found and verified, plus
+**P7** and **P8** added from `p872`'s findings. Every repo named below was verified this pass
 (existence via `git ls-remote`, licence via the licence bytes on the resolved default branch);
 licences are stated inline because in this vertical the licence determines the architecture.
 Effort estimates are studio-delivery estimates, not measurements.
@@ -50,12 +52,16 @@ the tutor in one lab session. Swapping is a LiteLLM config change.
 **Sell to:** LATAM first (LGPD already grants automated-decision review rights), then EMEA
 ahead of 2 December 2027, then North America. **Effort: 10–12 weeks.**
 
-There is no mature open-source grading agent — verified this pass. So do not promise one.
-Build assistance plus a review trail on a battle-tested assessment substrate.
+**Revised in `p872`.** `p871` built this pattern around the absence of a grading component.
+That absence is gone: **ArguLens** (`wwrwbs/AI_AWE`, Apache-2.0) is a real, verified, permissive
+essay-scoring system whose **scorer is a grade-independent LightGBM model over 31 explicit
+linguistic and discourse features — not an LLM.** That property is the entire compliance case,
+so the scorer now replaces a prompt at the centre of this recipe.
 
 | Layer | Component | Licence |
 |---|---|---|
-| Assessment substrate | https://github.com/edx/edx-ora2 | AGPL-3.0 |
+| **Scoring engine** | https://github.com/wwrwbs/AI_AWE (ArguLens) | **Apache-2.0** |
+| Assessment substrate | https://github.com/openedx/edx-ora2 | AGPL-3.0 |
 | Orchestration / policy | https://github.com/langchain-ai/langgraph | MIT |
 | Model gateway | https://github.com/BerriAI/litellm | MIT |
 | Rubric gold sets | https://github.com/HumanSignal/label-studio | Apache-2.0 |
@@ -72,10 +78,40 @@ Argilla is where teachers review and correct model output, and that correction s
 retraining signal. promptfoo gates every prompt change against the gold set so a regression
 never reaches a learner.
 
+**Where ArguLens goes in the graph.** Its three components are separately replaceable, which is
+why it fits here rather than dictating the architecture. The **Qwen2.5-7B LoRA discourse
+classifier** labels each sentence `claim`/`data`/`counterclaim`/`rebuttal` — that labelling is
+itself the feedback artefact a student can argue with. The **LightGBM scorer** produces the
+number, and because it reads 31 measured features it is **reproducible on re-run and inspectable
+feature by feature**. The **feedback generator** (local Qwen2.5-14B-Instruct via vLLM) is the only
+LLM in the scoring path, and it writes prose rather than deciding grades. Serve the classifier and
+the generator through ArguLens's `vllm` backend mode; route the feedback model through LiteLLM via
+its `api` backend so the provider stays auditable.
+
+**Two work items that are not optional, priced into the 10–12 weeks.**
+1. **Re-fit the scorer on the client's own graded corpus.** ArguLens ships trained on **Persuade
+   2.0 — US middle-school argumentative essays**, and its README warns about training-data bias
+   and generalisation. For a LATAM engagement this is decisive: **nothing in this system has been
+   shown to transfer to Spanish or Portuguese.** Use Label Studio to build the local gold set
+   from historical marking, then re-fit. Budget this as a work package, not a tuning step.
+2. **Treat it as v0.1.0 software.** Adapter weights ship as a separate release asset and the
+   README restricts the tool to "research and assistive" use. Hardening, packaging and an
+   upgrade path are Globant's scope. Say so in the proposal — it is a credibility gain, and
+   hardening a real Apache-2.0 base is a much cheaper proposition than greenfield.
+
 **The critical design rule:** the model **proposes**, a human **disposes**, and the
 disposition is logged with its explanation. That is simultaneously the LGPD Article 20
 answer, the EU high-risk human-oversight answer, and the reason a faculty senate will approve
 it. Architect it in from day one — it cannot be retrofitted.
+
+**And it now has a third payoff, which is the strongest selling point in this file.** Vietnam's
+**Decision 33/2026/QD-TTg** lists AI that conducts exams, assesses learning outcomes or ranks
+learners as a high-risk education system — but reporting indicates the listings bite only where
+**AI output is the sole basis for a decision without meaningful human review.** A genuine
+human-disposition step therefore does not merely satisfy the high-risk obligations; it can keep
+the system **out of the high-risk tier altogether**. The same architecture answers three
+jurisdictions. (Vietnamese dates and the law's number are unresolved across secondary sources —
+see `intel/market.md` gaps — so confirm against primary text before contracting.)
 
 ---
 
@@ -199,12 +235,123 @@ is plain MIT. This is exactly the kind of detail that only reading the licence b
 
 ---
 
+## P7 — Outcome-validated tutoring deployment (the pattern that survives the evidence)
+
+**Sell to:** every region, and especially any public institution with an access mandate.
+**Effort: 12–16 weeks including a measurement window.**
+
+**This pattern exists because of a finding, not a technology.** A 2026 RCT across **2,379
+undergraduates** found that access to a course-integrated GenAI tutor **reduced final grades by
+0.37 SD** and LMS participation by **0.90 SD**, with **larger losses among first-generation
+students**. A separate RCT found AI tutoring **combined with structured group work** produced the
+largest gains of any arm. See `intel/trends.md` **T9**.
+
+The conclusion is not "don't deploy tutors". It is that **deploy-and-measure-usage is the arm that
+lost**, and it is the default motion of the entire industry. This pattern sells the arm that won.
+
+| Layer | Component | Licence |
+|---|---|---|
+| Tutor | https://github.com/HKUDS/DeepTutor | Apache-2.0 |
+| Pedagogical policy as code | https://github.com/langchain-ai/langgraph | MIT |
+| Model gateway | https://github.com/BerriAI/litellm | MIT |
+| LMS attachment | https://github.com/Cvmcosta/ltijs | Apache-2.0 (`master`) |
+| Interaction telemetry | https://github.com/LearningLocker/learninglocker | GPL-3.0 (self-hosted) |
+| Outcome analytics | https://github.com/openedx/openedx-aspects | Apache-2.0 |
+| Model pedagogical capability | https://github.com/AI-for-Education/pedagogy-benchmark | MIT |
+| Safeguarding gates | https://github.com/promptfoo/promptfoo | MIT |
+
+**Wiring — and the three design decisions that distinguish it.**
+
+1. **Build the measurement before the tutor.** `ltijs` launches the tutor inside the client's
+   Moodle/Canvas/Open edX so **section-level assignment is possible** — which is what makes a
+   real comparison design available instead of a satisfaction survey. Learning Locker captures
+   every interaction as xAPI; Aspects joins it to grades and participation. Stand this up first,
+   on the existing course, to get a **baseline**. Without a baseline the 0.37 SD effect is
+   undetectable, and a client who cannot detect it is exposed to it.
+2. **Encode the pedagogy as refusal, not availability.** The negative trial's mechanism was
+   participation collapse — an always-available answer source substituting for effortful work.
+   So LangGraph holds an explicit policy graph that **withholds**: hint ladders before answers,
+   mastery gates before progression, attempt requirements before explanation, and escalation to a
+   human teacher rather than an easier answer. DeepTutor's mastery tracking and learning paths
+   supply the state these nodes read. A tutor that will not simply answer is the product.
+3. **Pair it with structured human interaction.** The winning arm combined AI with group work.
+   So the deliverable includes the **course design** — mandatory structured peer sessions, AI
+   use integrated into them rather than offered alongside them. This is instructional-design
+   scope, and it is the part a product vendor cannot sell.
+
+**Instrument the equity question explicitly.** Disaggregate outcomes by first-generation status
+and any other access category the institution tracks, from the baseline onward. The published
+harm was concentrated there; a bid that raises this proactively, with a monitoring plan, wins
+against competitors who have not read the literature.
+
+**What the client buys:** not a tutor, but **evidence about their own students** — plus the
+tutor. `pedagogy-benchmark` supports the model-selection claim; the trial design supports the
+outcome claim. Nobody in this market is selling the second one.
+
+---
+
+## P8 — Vietnam / APAC high-risk de-escalation audit
+
+**Sell to:** APAC, Vietnam first, then South Korea ahead of real enforcement.
+**Effort: 4–6 weeks for the audit, then per-system remediation.**
+
+**Vietnam has handed services firms a specification.** Decision **33/2026/QD-TTg** names **46
+high-risk AI systems across six sectors**, and **education is one of them** — covering AI that
+**conducts examinations, assesses learning outcomes or ranks learners**, and AI that **monitors
+and analyses learner behaviour using biometric data or other automated monitoring mechanisms**.
+
+**The leverage:** reporting indicates many listings apply only where **AI output is the sole
+basis for a decision without meaningful human review**. So for each system there are two paths —
+**de-escalate** it out of the tier by inserting genuine human review, or **conform** and carry the
+full obligations. Deciding which, per system, is the engagement.
+
+| Layer | Component | Licence |
+|---|---|---|
+| System inventory & decision log | https://github.com/temporalio/temporal | MIT |
+| Policy-as-code, per jurisdiction | https://github.com/langchain-ai/langgraph | MIT |
+| Human-review workflow | https://github.com/openedx/edx-ora2 | AGPL-3.0 |
+| Reviewer interface | https://github.com/argilla-io/argilla | Apache-2.0 |
+| Explicable scoring (replaces LLM scoring) | https://github.com/wwrwbs/AI_AWE | Apache-2.0 |
+| Gateway & call audit | https://github.com/BerriAI/litellm | MIT |
+| Evidence & reporting | https://github.com/openedx/openedx-aspects | Apache-2.0 |
+
+**Wiring.** Inventory every education AI system against the three listed education categories.
+For each, decide de-escalate or conform. De-escalation is concrete engineering, not paperwork:
+route the decision through `edx-ora2`'s human workflow with Argilla as the reviewer surface,
+replace LLM scoring with ArguLens's feature-based scorer so the human reviewer has something
+inspectable to review, and record every disposition durably in Temporal so "meaningful human
+review" is **evidenced** rather than asserted. LangGraph carries the per-jurisdiction policy
+nodes, which is what lets the same platform serve Vietnam, Korea, the EU and Brazil — the
+human-review requirement is substantially the same shape in all four.
+
+**Biometric monitoring is the one to advise against, not remediate.** Vietnam lists it, and the
+EU has **banned emotion inference in education outright since 2 February 2025** (AI Act Art.
+5(1)(f)). There is no de-escalation path for a prohibited practice. Recommend removal.
+
+**Pair it with the curriculum mandate.** **MOET Decision 2422** (with Decision 5588) requires
+**12 periods per class per year of AI content for grades 1–12** — a nationwide courseware and
+teacher-training demand signal, and a second, separately-funded engagement off the same client
+relationship. `microsoft/ai-agents-for-beginners` (MIT) and `huggingface/agents-course`
+(Apache-2.0) are white-labellable bases for the teacher-facing material.
+
+**Caveat to carry into any proposal:** Vietnam's AI Law number (134/2025/QH15 vs 91/2025/QH15)
+and its compliance dates (1 Mar 2027 / 1 Sep 2027 vs 1 Jul 2027 / 1 Jul 2029) **conflict across
+secondary law-firm sources**, and this session could read none of the primary texts. Scope a
+local-counsel check as the first task of the engagement.
+
+---
+
 ## Pattern selection by region
 
 | Region | Lead with | Because |
 |---|---|---|
-| North America | P1, then P6 | FERPA plus 134 state bills; grant funding now weights AI |
-| EMEA | P4, then P1 | Article 50 is live, 2027 is coming, institutions are not renewing commercial contracts |
-| APAC | P3, then P6 | National-programme scale; five divergent regulatory regimes |
-| LATAM | P2 and P5 | LGPD review rights are already binding; connectivity and equity mandates |
-| Global | P6 | The governance gap is universal |
+| North America | P1, then P6, then P7 | FERPA plus 134 bills in 31 states; MD/ID/OK/VA mandate district policy and NC's model-policy deadline is **31 Dec 2026**. Only **32%** of administrators report an institution-wide policy and **87%** of faculty wrote their own — P6 consolidates that. P7 matters because the published harm fell hardest on first-generation students, which every access-mandated institution must answer. |
+| EMEA | P4, then P1 | Article 50 disclosure is live (2 Aug 2026), the education high-risk tier lands 2 Dec 2027, and institutions are declining to renew commercial AI contracts. |
+| APAC | **P8**, then P3 | Vietnam's Decision 33/2026/QD-TTg is a published specification with a human-review carve-out, and South Korea's pilot period closes. P3 for national-programme scale. |
+| LATAM | P2 and P5, then P7 | LGPD automated-decision review is already binding. **87%** of institutions use AI, **26%** have a strategy and **9%** evaluate — so P7's measurement layer is the gap, and P2 must budget re-fitting ArguLens for Spanish and Portuguese. |
+| Global | P6, then P7 | The governance gap is universal (only **31%** of faculty are meaningfully involved in AI policy) and nobody is measuring outcomes. |
+
+**If you read only one line of this file:** the two patterns no competitor is selling are **P7**
+(outcome evidence about the client's own students) and **P8** (de-escalating out of a statutory
+high-risk tier by design). Both are services-shaped, both are defensible with citations, and
+neither can be bought as a product.

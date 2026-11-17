@@ -4,6 +4,131 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p872`) — **canonical-address audit: `openedx/` is the live org for `edx-ora2`, and `opencast/opencast` defaults to `develop`; plus the licence-grep method that had to be thrown away**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+### Channel state
+
+Unchanged from `p871`: `git ls-remote` and `raw.githubusercontent.com` **open**;
+`api.github.com` and `github.com` HTML **403**. **No star-ranked or push-recency discovery
+sweep was possible for the second consecutive pass**, so this pass again makes no claim about
+*what trended*. It is a targeted verification pass against `p871`'s declared gaps, and it says
+so rather than dressing up a hand-picked list as a trend reading.
+
+### Addresses audited — because a wrong address is the error this KB repeats
+
+`p871` had already caught one dead address (`apereo/opencast-admin-interface`). This pass
+re-resolved every load-bearing standards and platform address through `git ls-remote --symref`,
+which returns the *actual* default branch instead of an assumed `main`.
+
+| Address | Exists | Default branch | Licence (verified bytes) | Note |
+|---|---|---|---|---|
+| https://github.com/edx/edx-ora2 | yes | `master` | AGPL-3.0 | `p871`'s address resolves. |
+| https://github.com/openedx/edx-ora2 | yes | `master` | AGPL-3.0 | **Both resolve.** `openedx/` is the current org; prefer it in new work, since the `edx/` path is the legacy owner and is the one that will eventually break. |
+| https://github.com/openedx/openedx-aspects | yes | `main` | Apache-2.0 | Confirmed clean Apache-2.0. |
+| https://github.com/opencast/opencast | yes | **`develop`** | **ECL-2.0** | `p871` corrected the *address* but not the branch. Default is **`develop`**, not `main` — a cloned-with-`--branch main` build fails. Licence is ECL-2.0 (Apache-2.0 derivative, permissive). |
+| https://github.com/Cvmcosta/ltijs | yes | `master` | Apache-2.0 | The LTI 1.3 seam. Clean Apache-2.0, `master` not `main`. |
+| https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS | yes | `main` | Apache-2.0 (`LICENSE.txt`) | Note the licence filename is `LICENSE.txt`. |
+| https://github.com/open-spaced-repetition/fsrs4anki | yes | `main` | MIT | Unchanged. |
+| https://github.com/oppia/oppia | yes | **`develop`** | Apache-2.0 | `develop`, not `main`. |
+| https://github.com/learningequality/kolibri | yes | **`develop`** | MIT | `develop`, not `main`. The offline-first platform of record. |
+| https://github.com/OpenOlat/OpenOlat | yes | `master` | Apache-2.0 | **Note the capitalisation: `OpenOlat/OpenOlat`.** `p871`'s verticals table wrote `OpenOLAT/OpenOLAT`; GitHub owner/repo matching is case-insensitive on resolution so both fetch, but the canonical spelling is `OpenOlat`. The only major full LMS under a clean permissive licence. |
+| https://github.com/sakaiproject/sakai | yes | `master` | ECL-2.0 | Confirmed ECL-2.0 — more permissive than the GPL/AGPL majority of this layer. |
+
+**Four of eleven do not default to `main`** (`edx-ora2`, `opencast`, `oppia`, `kolibri` on
+`develop`/`master`, plus `ltijs`, `OpenOlat`, `sakai` on `master`). This is why licence bytes
+must be fetched from the *resolved* branch: a guessed `main` path 404s and a 404 silently becomes
+"no licence found", which then becomes wrong data.
+
+### Method discarded this pass — recorded so it is not re-invented
+
+This pass automated the licence read with a grep over the fetched licence bytes. The pattern
+`additional terms|additional clause` fired on **every single Apache-2.0 repo tested** —
+`DeepTutor`, `huggingface/agents-course`, `ltijs`, `Ed-Fi-ODS`, `oppia`, `OpenOlat`,
+`openedx-aspects`. Cause: Apache-2.0 §5 contains the phrase *"without any additional terms or
+conditions"*. A 100% false-positive rate.
+
+**The flag was discarded and never written into the stable files.** Had it been published, this
+KB would now assert that seven clean Apache-2.0 projects carry extra restrictions — exactly the
+class of inference-becomes-data error the brief warns about. **`opendatalab/MinerU` remains the
+one real case**: its `LICENSE.md` adds substantive terms in prose on top of Apache-2.0.
+
+Takeaway for later passes: automation is fine for *existence* and *branch resolution*. Licence
+*characterisation* needs the bytes read, and "Apache-2.0 plus extra terms" specifically must be
+confirmed by reading the added prose, not by matching a substring.
+
+### A second false-positive class, caught before publication — GPL read as AGPL
+
+The discarded `additional terms` grep (above) was not the only broken heuristic this pass. The
+same automated licence reader classified by searching the whole licence file for `GNU AFFERO`.
+That **false-positives on every GPL-3.0 file**, because **GPL-3.0 §13 ("Remote Network
+Interaction") itself names the GNU Affero General Public License**.
+
+The bad reading would have relabelled **ten** projects as AGPL-3.0 that are plain GPL-3.0:
+`moodle/moodle`, `chamilo/chamilo-lms`, `ILIAS-eLearning/ILIAS`, `Citolab/qti-components`,
+`LearningLocker/learninglocker`, `pkp/ojs`, `Koha-Community/Koha`, `GibbonEdu/core`,
+`h5p/h5p-php-library` and `kiwix/kiwix-tools`.
+
+**It was caught and corrected before anything was written.** Re-derivation from the licence
+**title line** (plus its version line) gives the correct split, which this pass then reconciled
+against every value `p871` had recorded:
+
+| Verified **AGPL-3.0** (title line says *Affero*) | Verified **GPL-3.0** (title line says plain GPL) |
+|---|---|
+| `openedx/edx-ora2`, `edx/edx-ora2`, `instructure/canvas-lms`, `openedx/edx-platform`, `frappe/lms`, `ankitects/anki`, `sudosylabs/proctor`, `kamlendras/OpenProctor` | `moodle/moodle`, `chamilo/chamilo-lms`, `ILIAS-eLearning/ILIAS`, `Citolab/qti-components`, `LearningLocker/learninglocker`, `pkp/ojs`, `Koha-Community/Koha`, `GibbonEdu/core`, `h5p/h5p-php-library`, `kiwix/kiwix-tools` |
+
+**Result: `p871`'s licence data was correct on all eighteen.** No correction to the stable files
+was needed, and the two AGPL claims `p872` does publish (`sudosylabs/proctor`,
+`kamlendras/OpenProctor`) are confirmed by title line, not by the broken grep.
+
+**Why this is recorded rather than quietly fixed.** The GPL-vs-AGPL distinction is the single
+most consequential licence fact in this vertical: AGPL's network-use clause is what triggers
+source obligations for a *hosted* education service, which is how education software is actually
+delivered. A pass that silently relabelled Moodle as AGPL would have mis-advised every Moodle
+engagement. Two independent greps over licence text produced confidently wrong answers in one
+afternoon — **licence characterisation in this KB must come from the title line and the added
+prose, never from a substring search.**
+
+### One flag sharpened rather than repeated
+
+`opendatalab/MinerU` has been carried for several passes as "Apache-2.0 + extra terms" without
+anyone reading the terms. `p872` read them. The file is titled **"MinerU Open Source License"**
+and adds, on top of Apache-2.0: a **separate commercial licence requirement** once the user and
+its affiliates, consolidated, exceed **100 million MAU** *or* **USD 20 million monthly revenue**,
+and an **online-service attribution obligation**. Neither threshold binds a normal institutional
+deployment, so MinerU stays usable — but the attribution obligation binds any hosted service from
+day one, and the thresholds matter if it is embedded in a product sold at scale. This remains the
+KB's **one genuine** Apache-plus-terms case.
+
+### Full-file URL audit
+
+All **70** distinct GitHub URLs across the four stable files (`agents/top.md`,
+`repos/foundations.md`, `verticals/solutions.md`, `compose/patterns.md`) were resolved this pass
+via `git ls-remote`. **70 of 70 exist; zero 404s.** Two default-branch oddities worth recording:
+`GibbonEdu/core` defaults to **`v31.0.00`** and `bigbluebutton/bigbluebutton` to
+**`v4.0.x-develop`** — both tag-shaped branch names that a `--branch main` clone will miss.
+`OS4ED/openSIS-Classic` still has **no licence file on its default branch**, confirming `p871`.
+
+### New repos added to the stable files this pass
+
+| Repo | Licence | Branch | Why it enters the KB |
+|---|---|---|---|
+| https://github.com/wwrwbs/AI_AWE | **Apache-2.0** | `main` | **ArguLens** — the first verified permissive automated-essay-scoring system with feedback generation. Closes `p871`'s top declared gap. Decomposed into a Qwen2.5-7B LoRA discourse classifier, a **grade-independent LightGBM scorer over 31 features**, and a vLLM feedback generator. arXiv:2608.17356. **v0.1.0, early** — see `agents/trending.md` for the full maturity and corpus caveats. |
+| https://github.com/PritK99/WriteRight | MIT | `main` | Minimal MIT essay scorer, 1–10. Reference implementation. |
+| https://github.com/sudosylabs/proctor | AGPL-3.0 | `main` | The most complete OSS proctoring platform found. Copyleft — recorded as the evidenced shape of the proctoring gap, not as a recommendation. |
+| https://github.com/microsoft/ai-agents-for-beginners | MIT | `main` | Verified MIT. The curriculum base for the AI-literacy mandates now attached to US federal grant priorities and SUNY-style requirements. |
+| https://github.com/patchy631/ai-engineering-hub | MIT | `main` | Large worked-example collection (RAG, agents, MCP, voice). MIT, so it can be white-labelled into institutional course material. |
+| https://github.com/huggingface/agents-course | **Apache-2.0** | `main` | Verified clean Apache-2.0 (not "plus terms" — see above). |
+
+### Rejected this pass
+
+| Address | Why rejected |
+|---|---|
+| https://github.com/withmarbleapp/os-taxonomy | Exists on `main`, but licensed **Open Data Commons ODbL** — a database licence with share-alike on derived databases. It is a curriculum *dataset*, not a repo Globant can treat as permissive code. Not filed beside MIT/Apache code. |
+| https://github.com/kamlendras/OpenProctor | Exists, but **AGPL-3.0** despite listings claiming MIT, with thin documentation. |
+| Blog-sourced star counts and "2026 ranking" listicles | Both star channels are `403`. No star figure enters this KB from a secondary source; that is how the earlier inflated numbers got in. |
+
 ## 🟢 `2026-11-17` (`p871`) — **the ingestion layer is where education repos actually moved this window; and one address the trend veins had been carrying is a `404`**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

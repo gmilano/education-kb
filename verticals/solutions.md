@@ -6,7 +6,7 @@ updated: 2026-11-17
 
 # Vertical platforms — education
 
-**Pass `p871`, 2026-11-17.** Real, deployed systems that can be customised with AI on top —
+**Pass `p872`, 2026-11-17** (second pass of the day). Real, deployed systems that can be customised with AI on top —
 the education equivalents of Odoo for ERP or OpenMRS for healthcare. Existence and licence
 bytes verified this run via `git ls-remote` + `raw.githubusercontent.com` on the resolved
 default branch.
@@ -29,7 +29,7 @@ default branch.
 | **ILIAS** | https://github.com/ILIAS-eLearning/ILIAS | GPL-3.0 | `release_11` | Strong in German-speaking EMEA, including public-sector and military training. Note the default branch is `release_11`, not `main`. |
 | **Chamilo** | https://github.com/chamilo/chamilo-lms | GPL-3.0 | `master` | Significant installed base in **LATAM** and francophone Africa; lighter to operate than Moodle, which is why ministries with thin IT capacity pick it. |
 | **Sakai** | https://github.com/sakaiproject/sakai | **ECL-2.0** | `master` | Apereo Foundation, research-university focus. Educational Community License 2.0 is an Apache-2.0 derivative — **more permissive than the rest of this table**, a genuinely under-used fact. |
-| **OpenOLAT** | https://github.com/OpenOLAT/OpenOLAT | **Apache-2.0** | `master` | Swiss-origin, used across EMEA higher education. **The only major full LMS here under a clean permissive licence** — the obvious base if a client needs a customised LMS that Globant can extend without copyleft obligations. |
+| **OpenOLAT** | https://github.com/OpenOlat/OpenOlat | **Apache-2.0** | `master` | Swiss-origin, used across EMEA higher education. **The only major full LMS here under a clean permissive licence** — the obvious base if a client needs a customised LMS that Globant can extend without copyleft obligations. |
 | **Frappe LMS** | https://github.com/frappe/lms | **AGPL-3.0** | `develop` | Modern, lightweight LMS on the Frappe framework. **Correction recorded this pass:** multiple 2026 listicles state MIT; the licence bytes at `license.txt` are **AGPL-3.0**. |
 | **Kolibri** | https://github.com/learningequality/kolibri | **MIT** | `develop` | Learning Equality. Purpose-built for **offline-first, low-connectivity and low-resource deployments** — the platform of record for rural LATAM, Sub-Saharan Africa and South Asia programmes. MIT-licensed. For any equity-of-access or ministry-of-education mandate, this is the starting point, not Moodle. |
 
@@ -85,13 +85,47 @@ For a Globant engagement that must avoid copyleft obligations, the verified perm
 | **Opencast** | ECL-2.0 | Lecture capture and video corpus |
 | **DSpace** | BSD | Institutional repository / scholarly corpus |
 
+## Exam integrity & proctoring — the category with real demand and no permissive supply
+
+`p871` searched and found nothing here. `p872` found two real projects and verified both. The
+conclusion is unchanged but is now evidence rather than absence.
+
+| Platform | Repo | Licence | Branch | Position |
+|---|---|---|---|---|
+| **Proctor** | https://github.com/sudosylabs/proctor | **AGPL-3.0** | `main` | Self-hosted examination **and** proctoring platform aimed at institutions — Go server, React front end. The most complete open-source project in this category. No published supported-release or compatibility window, so treat maturity as unproven. |
+| **OpenProctor** | https://github.com/kamlendras/OpenProctor | **AGPL-3.0** | `main` | Next.js/TypeScript. **Licence correction: secondary listings say MIT; the bytes on `main` say AGPL-3.0.** Thin install documentation, Vercel-oriented rather than clearly self-hostable. |
+
+**How to read this table.** AGPL-3.0 is workable where the institution hosts the system itself —
+the copyleft obligation is contained inside one tenancy, which is the normal education deployment
+anyway. It is unusable inside a distributed proprietary product. So proctoring is available to a
+Globant *integration* engagement and closed to a Globant *product*.
+
+**The regulatory context matters more than the licence here.** The EU AI Act puts exam proctoring
+in the high-risk tier (obligations from **2 December 2027** after the Digital Omnibus delay), the
+Article 5(1)(f) **ban on emotion inference in education has applied since 2 February 2025**, and
+Vietnam's **Decision 33/2026/QD-TTg** lists AI that monitors learner behaviour using biometric or
+other automated mechanisms as a high-risk education system. Any webcam-and-gaze proctoring product
+is now building directly into the most heavily regulated corner of education AI, in at least two
+major jurisdictions, with immature copyleft tooling.
+
+**The studio recommendation that follows from that:** lead with **assessment redesign** — oral
+defence, process evidence, version-history review, in-class authentic tasks, `edx-ora2`
+open-response workflows — and treat proctoring as the fallback the client asks for, priced with
+its conformance burden visible. Detection-based integrity is losing on both the evidence and the
+regulation; see `intel/trends.md` T8.
+
 ## Declared gaps
 
 - **No permissive open-source SIS exists.** Both verified options are copyleft and one has no
   licence file. A permissive, AI-native SIS is an unmet need — and an opportunity.
-- **No open-source exam-proctoring platform was found** that is both maintained and
-  permissively licensed. Given that the EU has moved AI proctoring into the high-risk tier
-  (see `intel/market.md`), this is a conspicuous hole in the OSS landscape.
-- **No LATAM-origin education *platform*** surfaced in this run's searches. LATAM appears in
+- **No *permissively licensed* open-source proctoring platform exists.** Narrowed, not closed:
+  `p872` verified two real candidates (`sudosylabs/proctor`, `kamlendras/OpenProctor`) and
+  **both are AGPL-3.0**, with unproven maturity. Given that the EU has moved proctoring into the
+  high-risk tier and Vietnam now lists biometric learner monitoring as high-risk, this is the
+  clearest unbuilt product in education AI — and plausibly one that should not be built.
+- **No LATAM-origin education *platform*** surfaced in either pass's searches. LATAM appears in
   this file as a large **deployer** of Moodle, Chamilo, Kolibri and OJS, not as an originator
-  of platforms. That asymmetry is itself the regional finding.
+  of platforms. `p872` refines the picture: the region's own contribution is a **sovereign
+  foundation model**, **Latam-GPT** (CENIA-led, launched 10 Feb 2026, open weights, Spanish and
+  Portuguese, corpus gated behind an NDA) — infrastructure beneath the platform layer, not a
+  platform. That asymmetry is itself the regional finding.
