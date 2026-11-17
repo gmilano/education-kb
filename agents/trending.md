@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p871`) — **two education-native agents shipped releases within 24h of this pass; and the stable files were rewritten because `p870` had grown `agents/top.md` to `900 KB` of self-reference**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+### What changed in this pass's channels
+
+The star channel is **closed** to this session: both `api.github.com` and `github.com` HTML
+returned `403` (session GitHub scope). `p870` could run a star-ranked sweep and recorded
+DeepTutor at `59,922★`; **this pass cannot confirm or refute that figure** and therefore
+publishes no star counts at all. Open channels this pass: `git ls-remote` (existence +
+default-branch resolution) and `raw.githubusercontent.com` (licence bytes).
+
+### New this week — releases verified by reading the repos, not a blog
+
+| Agent | Release | Dated | Licence | What is new |
+|---|---|---|---|---|
+| **DeepTutor** (`HKUDS/DeepTutor`) | `v1.7.3` | **2026-11-16** | Apache-2.0 | Flexible reading and book editing, richer search and agent connections, clearer learning records, more reliable model streams, desktop upgrades. Prior fortnight: `v1.7.2` (Korean UI preview, NVIDIA NIM embeddings, selected-text speech), `v1.7.1` (desktop previews, **Anki and calendar export**, checked video lessons), `v1.7.0` (modular install, block notebooks, **narrated video lessons**, resumable embedding checkpoints). |
+| **OpenMAIC** (`THU-MAIC/OpenMAIC`) | `v1.5.0-rc.3` | **2026-11-17 (today)** | MIT | Redesigned home as a workbench — course beside the conversation, one full-screen classroom for learning and editing; off by default behind `NEXT_PUBLIC_WORKBENCH_ENABLED`. Prior three weeks: `v1.4.2` **course-level undo** for manual edits and agent runs, `v1.4.0` **PBL v3** (build a working project with an AI tutor, milestone by milestone, one-way upgrade), `v1.3.0` foldered `@`-mentionable knowledge base. |
+
+**The signal in those two rows:** both labs are iterating weekly on *pedagogical* mechanics —
+mastery gates, learning-path review, project milestones, course-level undo — not on model
+plumbing. Education-native OSS has moved past the chat-wrapper stage in this window.
+
+**Security note worth carrying forward:** OpenMAIC `v1.1.3` (2026-10-05) was a security
+release — course documents served by `/api/persistence` now carry only sanitized slide HTML
+([GHSA-6c52-8h4v-5xvg](https://github.com/THU-MAIC/OpenMAIC/security/advisories/GHSA-6c52-8h4v-5xvg)).
+Any Globant deployment must pin at or above that version.
+
+### Newly shelved this pass
+
+| Address | Licence | Verdict |
+|---|---|---|
+| `github.com/CAHLR/OATutor` | MIT | **Shelved.** UC Berkeley CAHLR, Bayesian Knowledge Tracing, LTI, CHI'23 paper — and the only education agent verified here with a **Section 508 / WCAG** conformance document. Gating requirement in public-sector bids. |
+| `github.com/AI-for-Education/pedagogy-benchmark` | MIT | **Shelved.** 1,143 teacher-exam questions, CDPK (920) + SEND (223), arXiv:2506.18710. The evaluation half this KB previously lacked. |
+| `github.com/littlecookie0722/AI-Teaching-Agent` | MIT | Shelved **with maturity flag** — its own README states automatic-grading productisation is frozen. |
+| `github.com/vulinh1704/ai-tutor-agent` | MIT | Shelved **as a starter template only** — FastAPI + LangGraph, Socratic hints, rubric grading. Skeleton, not a product. |
+| `github.com/CaviraOSS/PageLM` | MIT | Shelved. NotebookLM-style study platform; README actively recruiting volunteers, so thin maintainer base. |
+
+### Rejected this pass, with reasons recorded
+
+| Address | Why rejected |
+|---|---|
+| `github.com/YoussefMohAttia/MultiAgent-AI-Teaching-Assistant` | **No licence file on the default branch.** No licence = no grant. Returned by this pass's grading leg; recorded so a later pass does not re-import it from a blog listing. |
+| `github.com/apereo/opencast-admin-interface` | **Does not exist** — `git ls-remote` returned nothing. The real address is `opencast/opencast`. |
+| `open-webui/open-webui` as a white-label front end | Exists and is maintained, but licence clause 4 forbids removing Open WebUI branding above **50 end users / rolling 30 days** without an enterprise licence. Rejected for campus white-labelling; **LibreChat (MIT)** substituted in `compose/patterns.md` P6. |
+
+### Structural change: the stable files were rewritten this pass
+
+`p870` left `agents/top.md` at **5,928 lines / ~900 KB**, `intel/market.md` at **~980 KB**, and
+every other stable file comparably large — almost entirely self-referential pass-over-pass
+bookkeeping about detectors and gap IDs, with the agent table displaced by hundreds of
+one-off student repos imported from organisation-owned sweeps (`gradeguide-ai`,
+`homework-grader`, `student-mcp`, dozens of single-university MCP wrappers).
+
+The stable six were rewritten to their briefed purpose — a real table of real repos with real
+licences — and the prior state is preserved in
+[`archive/2026-11-17-p871-pre-rewrite/`](../archive/2026-11-17-p871-pre-rewrite/). The two
+trending files were **not** rewritten; this section is appended above their full history, as
+their append-only contract requires.
+
+**Standing correction for later passes:** the brief says *fewer real rows always beat padding*.
+`agents/top.md` now carries **7 education-native rows** because 7 verified — not a round
+number, and no header or example row left behind as data.
+
+### Declared absences this week
+
+- **No open-source grading agent reached maturity.** Three candidates, all disqualified above.
+- **No LATAM-origin or Africa-origin education agent** in any of six search legs. Supply is
+  concentrated in HKUDS/HKU, THU-MAIC/Tsinghua and CAHLR/Berkeley.
+- **Star counts unmeasurable** (`403`). Not sourced from blogs this pass.
+
+---
+
+
 ## 🟢 `2026-11-17` (`p870`) — **the four mandated legs returned `12` candidates and this base already shelves `10`; the `2` it does not are a general agent registry and a `GPL` LMS; and `DeepTutor` is `59,922★`, not the `~48,268★` a blog told `p869`**
 
 🟢 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

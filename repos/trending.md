@@ -4,6 +4,108 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p871`) — **the ingestion layer is where education repos actually moved this window; and one address the trend veins had been carrying is a `404`**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+### Channel state
+
+`api.github.com` and `github.com` HTML: **`403`** for this session, so **no star-ranked or
+push-recency sweep was possible this pass** — the veins `p870` built
+(`ingest/p870-push-recency.sh`, `ingest/p870-vein-sweep.sh`) depend on the GitHub search API
+and could not run. This pass therefore verified a **hand-selected candidate set** repo by repo
+on the two channels that are open: `git ls-remote` for existence and default-branch
+resolution, and `raw.githubusercontent.com` for licence bytes. **49 addresses probed, 48
+exist, 1 is a `404`.**
+
+That is a genuine methodological downgrade from `p870` and is recorded as such: this pass has
+better *per-repo* verification and **worse discovery breadth**. It cannot claim to have seen
+what trended; it can only claim that what it wrote is real.
+
+### What moved: ingestion and parsing, not models
+
+The verified education-relevant repos that shipped most visibly in this window are document
+and media ingestion. This is consistent with DeepTutor's own release notes across
+`v1.6.13`–`v1.7.3`, which are dominated by *parsing resilience*, *resumable indexing*,
+*retrieval comparison* and *source-figure handling* rather than model upgrades.
+
+| Repo | Licence | Branch | Role in education |
+|---|---|---|---|
+| https://github.com/docling-project/docling | MIT | `main` | Document → structured output; strong tables/layout. Default first choice for textbook and curriculum ingestion. |
+| https://github.com/datalab-to/marker | Apache-2.0 | `master` | PDF → markdown, high fidelity on equations. STEM textbooks. |
+| https://github.com/opendatalab/MinerU | Apache-2.0 **+ additional terms** | `master` | Formula-aware PDF extraction. **Licence flag:** `LICENSE.md` adds terms on top of Apache-2.0. |
+| https://github.com/SYSTRAN/faster-whisper | MIT | `master` | CTranslate2 Whisper; materially cheaper for a full semester of lecture capture. |
+| https://github.com/HKUDS/LightRAG | MIT | `main` | Graph-RAG; **the retrieval engine inside DeepTutor** — adopting DeepTutor means adopting this. |
+
+### Newly shelved: the standards layer this KB had under-weighted
+
+Education procurement gates on interoperability, not on model quality. These were verified
+and shelved this pass as foundations:
+
+| Repo | Licence | Branch | Why it is load-bearing |
+|---|---|---|---|
+| https://github.com/Cvmcosta/ltijs | Apache-2.0 | `master` | LTI 1.3 / Advantage tool provider. Implement once, launch inside Moodle, Canvas, Open edX, Blackboard, D2L with grade passback. **The single most reusable piece of plumbing in this vertical**, and permissive. |
+| https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS | Apache-2.0 | `main` | De-facto K-12 district data standard in the US. |
+| https://github.com/edx/edx-ora2 | AGPL-3.0 | `master` | Open-response assessment with rubrics and staff grading — the realistic substrate for AI-assisted grading given that no mature grading agent exists. |
+| https://github.com/1EdTech/openbadges-validator-core | Apache-2.0 | `develop` | Open Badges validation from the standards body. |
+| https://github.com/Citolab/qti-components | GPL-3.0 | `main` | QTI 3 assessment item rendering. |
+| https://github.com/openedx/openedx-aspects | Apache-2.0 | `main` | Open edX learning analytics; reusable outside Open edX. |
+| https://github.com/open-spaced-repetition/fsrs4anki | MIT | `main` | FSRS scheduler — the validated retention algorithm to use instead of inventing a review schedule. |
+| https://github.com/jupyter/nbgrader | BSD | `main` | Notebook autograding; standard in university CS/DS courses. |
+| https://github.com/LearningLocker/learninglocker | GPL-3.0 | `master` | xAPI Learning Record Store — where efficacy becomes measurable. |
+
+### Offline delivery, treated as a category rather than a footnote
+
+| Repo | Licence | Branch | Note |
+|---|---|---|---|
+| https://github.com/learningequality/kolibri | **MIT** | `develop` | Offline-first learning platform. Permissive, and the right base for rural LATAM / APAC ministry programmes. Default branch is `develop`, not `main`. |
+| https://github.com/iiab/iiab | LGPL | `master` | Internet-in-a-Box — turnkey offline school server. |
+| https://github.com/kiwix/kiwix-tools | GPL-3.0 | `main` | ZIM offline archives — **and already a DeepTutor ingest source**, which is what makes a truly offline tutor possible. |
+
+### Dead address removed from the veins
+
+| Address | Result |
+|---|---|
+| `github.com/apereo/opencast-admin-interface` | **`git ls-remote` returned nothing — the repository does not exist.** The real address is `github.com/opencast/opencast` (ECL-2.0, branch `develop`). Recorded here so no later pass re-imports the dead one. |
+
+### Default branches that are not `main` — a 404 trap for licence probes
+
+Four of this pass's verified repos resolve `HEAD` to something other than `main`, and a probe
+that assumed `main` would have 404'd on the licence file and recorded "no licence":
+
+| Repo | Default branch |
+|---|---|
+| `ILIAS-eLearning/ILIAS` | `release_11` |
+| `GibbonEdu/core` | `v31.0.00` (a version tag) |
+| `bigbluebutton/bigbluebutton` | `v4.0.x-develop` |
+| `learningequality/kolibri`, `frappe/lms`, `oppia/oppia`, `argilla-io/argilla`, `HumanSignal/label-studio`, `1EdTech/openbadges-validator-core` | `develop` |
+
+**Method note for later passes:** resolve the branch with `git ls-remote --symref <url> HEAD`
+*before* fetching any raw file. This pass resolved all 48 existing repos that way.
+
+### Licence corrections recorded this pass
+
+| Repo | Widely stated | Actual licence bytes |
+|---|---|---|
+| `frappe/lms` | MIT (multiple 2026 LMS listicles) | **AGPL-3.0** (`license.txt`) |
+| `openedx/edx-platform` | Apache-2.0 (some listicles) | **AGPL-3.0** (`LICENSE`) |
+| `open-webui/open-webui` | BSD-3-clause | **"Open WebUI License"** — BSD-3 text **plus clause 4** barring branding removal above 50 end users / rolling 30 days |
+| `OS4ED/openSIS-Classic` | GPL | **No licence file on the default branch** — GPL claimed only in README prose |
+
+### Declared absences this week
+
+- **No star-ranked or push-recency discovery was possible** (`403`). This pass cannot report
+  what trended, only what it verified. Breadth gap, stated plainly.
+- **No permissive open-source SIS** exists; both verified options are copyleft and one has no
+  licence file at all.
+- **No maintained, permissively licensed proctoring platform** — precisely as the EU moves
+  proctoring into the high-risk tier.
+- **No LATAM-origin education platform or agent** surfaced. LATAM appears as a large deployer
+  (Moodle, Chamilo, Kolibri, OJS), not an originator.
+
+---
+
+
 ## 🟢 `2026-11-17` (`p870`) — **the owner-keyed vein and the star-ranked vein are NEARLY DISJOINT: `17` addresses in common out of `506`, and the committed domain predicate prefers the wrong one**
 
 🟢 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**
