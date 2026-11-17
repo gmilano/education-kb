@@ -6,22 +6,45 @@ updated: 2026-11-17
 
 # Top AI agents — education
 
-**Pass `p874`, 2026-11-17** (fourth pass of the day; targets `p873`'s declared gaps rather than
-re-verifying its addresses). **`p874` resolved 10 new addresses and added NO row to this file**,
-which is the honest outcome and is recorded rather than padded: 4 had **no licence file**, 1 ships
-a **`LICENSE.md` that reserves all rights**, 3 were already shelved, 1 is Gemini-API-dependent
-rather than self-hostable, and 1 (`Orkas-AI/Orkas`, MIT) is a general desktop agent and **not
-education** — a row here would wrongly imply a studio could start a tutoring build from it. The
-resolved-and-rejected list is in `agents/trending.md` with the reason against each. `p874`'s
-additions went to `repos/foundations.md` (`moocupv/lti-ai-grader`, Apache-2.0) and
-`verticals/solutions.md` (the proctoring category).
+**Pass `p875`, 2026-11-17** (fifth pass of the day). **`p875` adds NO row to this file and adds a
+column instead** — the first adoption signal this KB has ever carried. After four passes declaring
+star counts unmeasurable, the channel was found (`api.github.com/search/repositories`; see
+`agents/trending.md` for why `p874` ruled it out). **78 addresses measured first-hand.**
 
-> **`p874` re-confirmed OpenMAIC's licence against two sources that disagreed with each other** —
-> one said AGPL-3.0, one said MIT. The bytes on the resolved default branch say **MIT**, which is
-> what this file already carried. **The check mattered in the direction nobody plans for:** a pass
-> that had trusted the AGPL-3.0 listicle would have *introduced* an error into a correct row and
-> struck the most permissively-licensed multi-agent classroom in this vertical off the buildable
-> shelf. The same sources gave its star count as both *"about 26,000"* and *"42,318"*.
+> **The measurement reorders this file, and the finding is uncomfortable.** Two education-native
+> agents have real user bases — **DeepTutor (59,972)** and **OpenMAIC (43,808)**. **Every other
+> education-native agent listed below has fewer than 20 stars, and four have ZERO.** This file has
+> been presenting a 60,000-star platform and a 0-star single-author repository in the same table,
+> distinguished only by a maturity flag in prose. **The Adoption column makes that distinction
+> unskippable.** Stars measure attention, not quality — but a 0-star repo has no community, no
+> issue history and no evidence of a deployment, and that is a support-burden fact a client must
+> hear before a statement of work is signed.
+
+`p875` resolved four new addresses and promoted none: `withmarbleapp/os-taxonomy` (7,720 stars) is
+**ODbL-1.0**, a share-alike *database* licence and not a software licence;
+`patchy631/ai-engineering-hub` (41,955, MIT) is teaching material *about* AI, not an education
+agent; `BlackyDrum/ai-tutor` (8, MIT) is the only MIT tutor found that speaks LTI and it is
+**LTI 1.0, last pushed 2024**; `kevinnio/tutor` (15, MIT) is an agent skill with no LMS seam.
+Reasons against each are in `agents/trending.md`.
+
+> **🟢 OpenMAIC's licence is SETTLED — stop re-litigating it.** Three passes have re-checked it
+> against sources that disagree. `p875` found the cause: the project **relicensed to MIT on
+> 2026-06-28** (its own README changelog, `v0.3.0`), so every pre-July source — **including the
+> project's own site `openmaic.io`, which still says AGPL-3.0** — describes a dead licence. A
+> second mechanism compounds it: `kolbyzhu5/OpenMAIC`, a pre-relicence **AGPL-3.0 fork**, sits in
+> the search index. Four channels now agree on **MIT**: licence bytes, no other licence file on
+> the branch, the README badge and text, and SPDX detection.
+
+> **🔴 Deployment hazard in OpenMAIC, from its own README.** Site-wide access is gated by a single
+> `ACCESS_CODE` variable, and **unset is the default in `.env.example`**: `middleware.ts` then
+> checks no credential and *"every route, the API included, is reachable… there is no second
+> enforcement point."* A default OpenMAIC deployment in a school tenancy is a student-data
+> exposure on day one. Any pattern shipping it must budget `ACCESS_CODE` provisioning and a second
+> enforcement point — see `compose/patterns.md` **P12**.
+
+**Previous pass note (`p874`):** resolved 10 addresses and added no row — 4 had no licence file, 1
+reserved all rights, 3 were shelved, 1 was Gemini-API-dependent, 1 was not education. It
+re-confirmed OpenMAIC against two sources that disagreed; `p875` has now explained why they did.
 
 **Previous pass note (`p873`):** targeted `p872`'s declared gaps rather than re-verifying its
 seventy addresses.
@@ -49,6 +72,28 @@ branch was resolved with `git ls-remote --symref ... HEAD` rather than assumed t
 > pass `p870` recorded DeepTutor at `59,922★` from a star-ranked sweep it could run; that
 > figure is its measurement, not this pass's, and is not restated here as fact. Writing a
 > star count sourced from a blog is how this KB previously recorded inflated numbers.
+
+## Measured adoption — new in `p875`
+
+Read this before the tables below. Measured `2026-11-17` via `api.github.com/search/repositories`.
+🔴 marks no push since 2026-06-01.
+
+| Agent | Stars | Licence (SPDX) | Last push | Read |
+|---|---:|---|---|---|
+| **HKUDS/DeepTutor** | **59,972** | Apache-2.0 | 2026-11-15 | Real platform, real community. Safe to propose. |
+| **THU-MAIC/OpenMAIC** | **43,808** | MIT ✅ | 2026-11-17 | Real platform, real community. Ship with the `ACCESS_CODE` hardening task. |
+| CaviraOSS/PageLM | 2,069 | `NOASSERTION` 🔴 | 2026-11-15 | Users exist; **licence does not auto-detect — re-read the bytes before naming it in a proposal.** |
+| CAHLR/OATutor | 282 | MIT | 2026-11-17 | Small but alive, peer-reviewed, accessibility-conformant. The credible academic option. |
+| AI-for-Education/pedagogy-benchmark | 13 | MIT | 2026-11-16 | An eval harness, not a tutor — low stars are expected and not disqualifying. |
+| wwrwbs/AI_AWE (ArguLens) | **2** | `NOASSERTION` 🔴 | 2026-07-29 | 🔴 **Two stars and no detectable licence.** Treat as a paper artifact, not a base. |
+| PritK99/WriteRight | **1** | MIT | 2024-11-19 🔴 | Reference implementation only, as this file already said. Confirmed. |
+| littlecookie0722/AI-Teaching-Agent | **0** | MIT | 2026-08-23 | No community. Bespoke-from-zero risk profile. |
+| vulinh1704/ai-tutor-agent | **0** | MIT | 2026-11-16 | A starter template, as flagged. Confirmed by adoption. |
+| LabSirius/TutorIA | **0** | MIT | 2026-10-27 | 🟡 **Zero stars, and this one is not a weekend project** — it is a funded Colombian university deliverable. The maturity caveat below (docs-only `main`) is the operative fact; the star count corroborates that nobody outside the lab has used it. |
+
+🟡 **How to use this column.** It separates *support burden* from *engineering quality*. A 0-star
+repo may be excellent code; it will still have no external contributors, no issue history and
+nobody to escalate to. Price that into the engagement or choose a different base.
 
 ## Education-native agents
 

@@ -6,15 +6,47 @@ updated: 2026-11-17
 
 # Foundational repos — education
 
-**Pass `p874`, 2026-11-17** (fourth pass of the day; adds **`moocupv/lti-ai-grader`** to the
-standards layer. `p873`'s file and `p872`'s 33-repo audit stand and were not redone). Same
-two-channel verification as `agents/top.md`: existence via `git ls-remote`, licence via the licence
-bytes on the **resolved** default branch. No star counts — and `p874` establishes *why*: the
-channel failed across **nine** routes, including **five non-GitHub metadata hosts**
-(`ecosyste.ms`, `api.ecosyste.ms`, `libraries.io`, `api.ossinsight.io`, `api.star-history.com`)
-that were **refused at the egress proxy**, while two unrelated hosts answered. **This is a session
-egress allowlist, not a GitHub scope** — no GitHub-side permission change will fix it. Fourth
-consecutive pass without stars; see `repos/trending.md` for the full probe table.
+**Pass `p875`, 2026-11-17** (fifth pass of the day). **`p875` closes the star gap and uses it to
+audit this file rather than to decorate it.** 78 addresses measured first-hand via
+`api.github.com/search/repositories` — the channel four passes called impossible (see
+`repos/trending.md` for how it was found). The measurement produced **three corrections to this
+file that no licence check could have produced**:
+
+> **🟡 1. A duplicated address, now collapsed.** This file carried **two rows for the same
+> project** — `edx/edx-ora2` and `openedx/edx-ora2` — because `p872` added the current org without
+> removing the legacy one. The measurement settles which to keep: **only `openedx/` resolves in
+> the GitHub search index** (64 stars, AGPL-3.0, last push 2026-11-13), while `edx/` returns
+> nothing, even though both still resolve over the git protocol via redirect. 🔵 *The git protocol
+> follows renamed-org redirects, so an existence check passes on a stale address long after it
+> stops being canonical — which is exactly how a duplicate survives a licence-and-existence
+> audit.* One row now, `openedx/`.
+
+> **🔴 2. The xAPI layer is unmaintained, and it is the one this KB's measurement pitch rests on.**
+> `LearningLocker/learninglocker` (587 stars) **has not been pushed since 2024-05-30 — 18
+> months**. `intel/trends.md` T9 argues that *measurement* is the defensible deliverable in this
+> vertical, and the Learning Record Store that every such pattern routes telemetry into is
+> dormant. **`p875` did not find a maintained permissive LRS and does not invent one.** Any
+> engagement promising measurement must either budget "we operate this fork" into the statement of
+> work, or use the LMS's native gradebook and accept the weaker evidence. **This is now the
+> highest-value unfilled slot in the education open-source stack.**
+
+> **🟡 3. Two more foundations are quiet.** `1EdTech/openbadges-validator-core` (61 stars, last
+> push 2025-11-04) — from the standards body, so more likely *finished* than abandoned, but do not
+> present it as actively developed. `stanford-oval/storm` (31,901 stars, last push 2025-09-30) —
+> **high stars, 14 months idle; stars and liveness are independent signals** and this file should
+> not let one stand in for the other.
+
+A licence mismatch worth carrying to a client conversation: **`OpenOlat/OpenOlat` and
+`BerriAI/litellm` both return `NOASSERTION` from GitHub's SPDX detector** while their licence bytes
+read Apache-2.0 and MIT. The byte-read is authoritative — the cause is almost certainly a modified
+licence header — **but a client's counsel will run the automated check and get `NOASSERTION`.
+Brief them before they ask.** Full table in `repos/trending.md`.
+
+**Previous pass note (`p874`):** added `moocupv/lti-ai-grader` to the standards layer and
+established that star counts had failed across nine routes. `p875` supersedes that diagnosis: the
+failure was an egress allowlist for non-GitHub hosts **plus** a wrong generalisation about GitHub
+itself. `moocupv/lti-ai-grader` measures **0 stars** — consistent with its listing as a component
+to harvest rather than a project to adopt.
 
 `p872` re-resolved every load-bearing address in this file through `git ls-remote --symref` and
 found **four of eleven do not default to `main`**. Branch column corrected below where it was
@@ -36,13 +68,25 @@ This is the layer that gets a Globant build past institutional procurement.
 | https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS | Apache-2.0 | `main` | **Ed-Fi Operational Data Store + API.** The de-facto K-12 data standard in US school districts. Apache-2.0, so a district-facing analytics or early-warning agent can build directly on it. |
 | https://github.com/1EdTech/openbadges-validator-core | Apache-2.0 | `develop` | Open Badges validation from the standards body itself (1EdTech, formerly IMS Global). The verification half of any credentialing or micro-credential build. |
 | https://github.com/Citolab/qti-components | GPL-3.0 | `main` | **QTI 3 web components** — standards-compliant assessment item rendering. Copyleft: fine for a self-hosted institutional deployment, a problem for a proprietary distributed product. |
-| https://github.com/edx/edx-ora2 | AGPL-3.0 | `master` | **Open-response assessment** — rubrics, peer assessment, self assessment, staff grading. Given that no mature OSS grading *agent* exists (see `agents/top.md` gaps), this is the realistic production substrate for AI-assisted grading. AGPL: network-use triggers source obligations. |
-| https://github.com/LearningLocker/learninglocker | GPL-3.0 | `master` | **xAPI Learning Record Store.** Where learner interaction telemetry lands so that a tutoring agent's effect can actually be measured rather than asserted. |
+| https://github.com/openedx/edx-ora2 | AGPL-3.0 | `master` | **Open-response assessment** — rubrics, peer assessment, self assessment, staff grading. Given that no mature OSS grading *agent* exists (see `agents/top.md` gaps), this is the realistic production substrate for AI-assisted grading. AGPL: network-use triggers source obligations. **64 stars, last push 2026-11-13** (`p875`). **`p875` collapsed the duplicate `edx/` row that stood here:** both org forms resolve over the git protocol via redirect, but only `openedx/` resolves in the GitHub search index, so `openedx/` is the single canonical address this KB carries. |
+| https://github.com/LearningLocker/learninglocker | GPL-3.0 | `master` | **xAPI Learning Record Store.** Where learner interaction telemetry lands so that a tutoring agent's effect can actually be measured rather than asserted. 🔴 **`p875`: 587 stars, LAST PUSH 2024-05-30 — 18 months dormant. This is the measurement layer the whole "prove the tutor worked" pitch depends on, and it is unmaintained. No maintained permissive LRS was found to replace it; budget a maintained fork or fall back to the LMS gradebook.** |
 | https://github.com/openedx/openedx-aspects | Apache-2.0 | `main` | Open edX's learning-analytics stack (Aspects). Apache-2.0 and reusable even outside an Open edX deployment. |
 | https://github.com/jupyter/nbgrader | BSD | `main` | Assignment release, collection and autograding for Jupyter notebooks. The standard autograder in university CS and data-science courses. |
 | https://github.com/jupyterhub/jupyterhub | BSD | `main` | Multi-user notebook hosting — the substrate for every hands-on technical course delivered in a browser. |
-| https://github.com/openedx/edx-ora2 | AGPL-3.0 | `master` | **Same project as the `edx/edx-ora2` row above; `openedx/` is the current org.** Both addresses resolve today. Prefer this one in new work — the legacy `edx/` owner path is the one that will eventually break. |
 | https://github.com/open-spaced-repetition/fsrs4anki | MIT | `main` | **FSRS** — the modern free-spaced-repetition scheduler. MIT-licensed, empirically validated memory model. If your product claims retention, this is the algorithm to use instead of inventing a review schedule. |
+
+## Curriculum structure — new in `p875`
+
+The layer that tells a tutoring agent *what comes before what*. Without it, "personalised learning
+path" is a prompt, not a data structure.
+
+| Repo | Licence | Branch | Why it is foundational |
+|---|---|---|---|
+| https://github.com/withmarbleapp/os-taxonomy | 🔴 **ODbL-1.0** | `main` | **A 1,590-topic children's curriculum graph with 3,221 prerequisite edges** — the prerequisite relation is the part that is hard to build and expensive to buy, and this is the only open one this KB has found. **7,720 stars, last push 2026-11-16** — real traction, actively maintained. 🔴 **Read the licence before you plan around it: Open Data Commons ODbL is a share-alike *database* licence, not a software licence.** Using it to drive a service is fine; **publishing a derived or extended database triggers share-alike obligations on that database.** It is therefore *not* in the MIT/Apache class this KB otherwise prefers and must never be filed as permissive. The safe pattern is to consume the graph as reference data behind a service and keep client-specific curriculum extensions in a separate store you do not redistribute. |
+
+🟡 **Gap this exposes rather than closes:** there is **no permissive** open curriculum graph. If a
+client needs to own and redistribute a prerequisite taxonomy, it is bespoke work — and `os-taxonomy`
+is still the best thing to read first when scoping it.
 
 ## Document & media ingestion — the real bottleneck in education AI
 

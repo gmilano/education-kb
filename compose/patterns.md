@@ -6,13 +6,21 @@ updated: 2026-11-17
 
 # Compose patterns — education
 
-**Pass `p874`, 2026-11-17** (fourth pass of the day). **Eleven recipes** — `p874` adds **P11**,
-the EU **AI-literacy duty** conformance pack: the EMEA engagement whose legal clock is *already
-running* (reported binding on deployers since July 2026) rather than the deferred 2 Dec 2027
-high-risk tier every competitor is organised around, with a **measured 32-point deficit** and the
-**EC/OECD AILit Framework's 19 competences** as its spine. P11 is also the first pattern in this
-file to use `moocupv/lti-ai-grader` (Apache-2.0), and it carries the **LTI 1.1 → 1.3 transport
-swap** as an explicit, budgeted task rather than an assumption.
+**Pass `p875`, 2026-11-17** (fifth pass of the day). **Thirteen recipes** — `p875` adds **P12**,
+a hardened OpenMAIC classroom built on the licence question this KB has now settled four ways and
+on a **student-data exposure in OpenMAIC's default configuration that its own README documents**;
+and **P13**, US district policy conformance sold against published state deadlines rather than
+against an AI thesis.
+
+🔴 **P11 carries a corrected date.** It was written on a literacy duty "binding since July 2026."
+**The duty has applied since 2 February 2025**, and a *second* duty — transparency for chatbots and
+AI-generated content — went live **2 August 2026**. **P11's argument strengthens and its dates
+change**; see the corrected **T11**. Any P11 deck in circulation must be fixed.
+
+🟡 **A caveat now attaches to every pattern in this file that promises measurement** (P1, P5, P7
+especially): **the xAPI Learning Record Store they route telemetry through, `LearningLocker`, has
+not been pushed since May 2024.** `p875` found no maintained permissive replacement. Budget a
+maintained fork explicitly, or fall back to the LMS gradebook and say so.
 
 **Previous pass note (`p873`):** ten recipes — `p871`'s six, `p872`'s **P7**
 and **P8** (and its rewrite of **P2**), plus **P9** and **P10** added by `p873`: a Spanish-language
@@ -573,14 +581,123 @@ position than a compliance threat that a client's own counsel may deflate.
 
 ---
 
+## P12 — Hardened multi-agent classroom on OpenMAIC (the one with real adoption)
+
+**Sell to:** APAC national-curriculum programmes, EMEA and LATAM universities needing generated
+course material at scale. **Effort: 6–8 weeks.** **New in `p875`.**
+
+**Why this pattern exists.** `p875` measured the shelf (**T12**): **two** open-source education
+platforms have real user communities, and OpenMAIC (**43,808 stars, MIT, pushed today**) is the
+one built for *course generation* rather than one-to-one tutoring. **Its licence is now settled
+beyond argument** — the project relicensed to MIT on **2026-06-28**, which is why its own site and
+every pre-July listicle still say AGPL-3.0, and why a pre-relicence AGPL fork (`kolbyzhu5/OpenMAIC`)
+circulates in search results. Four channels agree on MIT. **Commercial use is permitted free of
+charge by the README's own words.**
+
+| Layer | Component | Licence |
+|---|---|---|
+| Classroom generation | https://github.com/THU-MAIC/OpenMAIC | **MIT** |
+| LMS transport | https://github.com/Cvmcosta/ltijs (LTI 1.3 + AGS passback) | Apache-2.0 |
+| Model serving | https://github.com/ollama/ollama → https://github.com/vllm-project/vllm | MIT / Apache-2.0 |
+| Model gateway | https://github.com/BerriAI/litellm | MIT (⚠ SPDX `NOASSERTION`) |
+| Curriculum spine (optional) | https://github.com/withmarbleapp/os-taxonomy | 🔴 **ODbL-1.0 — database share-alike** |
+| Ingestion | https://github.com/docling-project/docling | MIT |
+
+### 🔴 The hardening task that makes this a pattern rather than a demo
+
+OpenMAIC's own README states that site-wide access is gated by a single `ACCESS_CODE` variable and
+that **unset is the default in `.env.example`**:
+
+> *"When it is unset… `middleware.ts` checks no credential and every route, the API included, is
+> reachable: an unconfigured deployment is not gated, and there is no second enforcement point."*
+
+**A default OpenMAIC deployment in a school tenancy is a student-data exposure on day one.** Rate
+limiting only engages behind a trusted proxy with `TRUST_PROXY_HEADERS=true`. Budget these as named
+line items, not as "hardening":
+
+1. **Provision `ACCESS_CODE`** from a secret manager; fail the deploy if unset (CI gate, not a
+   runbook note).
+2. **Add the second enforcement point OpenMAIC does not have** — put `ltijs` in front so the only
+   path in is an authenticated **LTI 1.3 launch from the institution's LMS**, and bind the app to
+   a private network so the API is not routable from the public internet.
+3. **Set `TRUST_PROXY_HEADERS=true` behind the institution's reverse proxy** so rate limiting is
+   actually active.
+4. **Pen-test the API surface specifically**, not just the UI — the README is explicit that the API
+   shares the single gate.
+
+🔵 **Why this sells.** Every competitor demoing OpenMAIC is demoing the default configuration. **An
+engagement that opens by naming this defect, with the vendor's own README as the citation, is
+immediately credible** — and the fix is four tasks, not a rebuild.
+
+🟡 **Scope honestly:** if the client plans to publish an extended curriculum database derived from
+`os-taxonomy`, the **ODbL share-alike obligation attaches to that database**. Either keep
+client-specific curriculum in a separate store you do not redistribute, or budget the obligation.
+It is not an MIT-class component and must not be presented as one.
+
+---
+
+## P13 — US district AI-policy conformance, sold against a published calendar
+
+**Sell to:** North America K-12 districts and state education agencies. **Effort: 4–6 weeks per
+district, 10–12 weeks for a state model policy.** **New in `p875`.**
+
+**Why this pattern exists.** `p875` found that the US state layer has moved from advisory guidance
+to **dated mandates** (`intel/market.md`, North America). That converts an open-ended "AI strategy"
+conversation into a procurement calendar with named deadlines:
+
+| Jurisdiction | Obligation | Date |
+|---|---|---|
+| **Ohio** | District AI policy required | **1 Jul 2026 — already passed** |
+| **North Carolina** | State model policy | **31 Dec 2026** |
+| **North Carolina** | Local district policies | **30 Jun 2027** |
+| **North Carolina** | Teacher training | **30 Jun 2028** |
+| **Maryland** | 24 districts adopt aligned policy | **120 days** from state guidance |
+| **Idaho** | Local boards set policy | **before the 2027–28 school year** |
+
+🔵 **Ohio's passed deadline is the warmest lead in this file.** A cohort of districts is either in
+breach or has adopted school-boards-association template language nobody has mapped to their actual
+deployed tools. **The first deliverable is an inventory, and almost nobody has one.**
+
+**The build.** This is a governance engagement with a small software spine — reuse **P6**'s console:
+
+| Layer | Component | Licence |
+|---|---|---|
+| Governance console / inventory register | **P6** stack — https://github.com/appsmithorg/appsmith | Apache-2.0 |
+| Policy-to-tool mapping store | https://github.com/qdrant/qdrant | Apache-2.0 |
+| Data-boundary enforcement for any AI in scope | https://github.com/BerriAI/litellm (self-hosted gateway, logging off by default) | MIT |
+| Evidence of student-data handling | district SIS + https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS | Apache-2.0 |
+
+**Deliverables, in the order a district needs them:** (1) inventory of every AI tool actually in
+use, including the ones teachers adopted without procurement; (2) mapping of each to the state's
+required policy clauses; (3) a data-boundary architecture showing where student records go;
+(4) board-ready policy text; (5) the teacher-training plan the 2028 clause will require.
+
+### 🔴 Sell this in BOTH directions or lose half the market
+
+The regulatory current is not uniformly pro-adoption. **New York** has a proposal to limit
+classroom AI below ninth grade; **California AB 1159** bars using student data to train AI models;
+**New Mexico** let districts opt out of a state-mandated AI reading tool after privacy backlash.
+🟡 **Restriction compliance is the same engagement with the same artifacts** — inventory, mapping,
+data boundaries, board text. **A North America offer that only works if the client is expanding AI
+use will be unsellable in a growing list of states.** Pitch it as *"know what you are running and
+prove it meets your state's rule"*, which is true whichever way the rule points.
+
+🟡 **Source caveat to carry internally:** the state counts (~33–35 states with guidance; 134 bills
+across 31 states) come from trackers, several vendor- or advocacy-run, that disagree at the
+margins. **The dates above recur consistently across sources; the counts are directional. No
+primary statute was readable from this session** — confirm the specific statute before a district
+signs.
+
+---
+
 ## Pattern selection by region
 
 | Region | Lead with | Because |
 |---|---|---|
-| North America | P1, then P6, then P7 | FERPA plus 134 bills in 31 states; MD/ID/OK/VA mandate district policy and NC's model-policy deadline is **31 Dec 2026**. Only **32%** of administrators report an institution-wide policy and **87%** of faculty wrote their own — P6 consolidates that. P7 matters because the published harm fell hardest on first-generation students, which every access-mandated institution must answer. |
-| EMEA | 🟢 **P11 first**, then P4, then **P10**, then P1 | 🟢 **`p874` reorders this row: lead with P11.** The AI-literacy duty on deployers is reported as binding since **July 2026** while the high-risk tier is deferred to **2 Dec 2027** — so P11 is the engagement with a *live* duty, a **measured 32-point deficit** (79% of European students use AI, 47% were shown how) and a **published standard** (EC/OECD AILit, 19 competences). It is also the on-ramp to P4 for the same buyer. Then: Article 50 disclosure is live (2 Aug 2026), the education high-risk tier lands 2 Dec 2027, and institutions are declining to renew commercial AI contracts. **P10** because the European Accessibility Act is already in force and EN 301 549 is realigning to WCAG 2.2 AA — and only one agent in this KB carries a conformance statement. For Gulf engagements, KHDA has already published school-level guidance, so lead with compliance implementation rather than policy authorship. For African engagements, the integration surfaces are Chamilo and Kolibri (**P5**), and regional code is largely unlicensed (**T10**) — so lead with licensing and partnership, not a fork. |
-| APAC | **P8**, then P3 | 🟢 **`p874` puts a dated deadline behind this row.** Vietnam's **Law No. 134/2025/QH15** has been in force since **1 Mar 2026** and existing **education** systems must comply by **1 September 2027** — **three months before the EU's 2 Dec 2027**, making it the nearest hard deadline in education AI. **Decision 33/2026/QD-TTg** (46 high-risk systems, effective 15 Aug 2026) is a published specification with a human-review carve-out, and **MOET Decision 2422** mandates 12 periods of AI content per class per year for grades 1–12. South Korea's AI Basic Act has been in force since 22 Jan 2026. P3 for national-programme scale. |
-| LATAM | **P9**, then P2 and P5, then P7 | **P9** is new and leads now: TutorIA is MIT, Colombian, Spanish-language, rural-first and ministry-funded — the only LATAM-origin base this KB has verified, and provenance counts in a public evaluation. LGPD automated-decision review is already binding. **87%** of institutions use AI, **26%** have a strategy and **9%** evaluate — so P7's measurement layer is the gap, and P2 must budget re-fitting ArguLens for Spanish and Portuguese. |
+| North America | 🟢 **`p875`: lead with P13** — Ohio's district-policy deadline passed 1 Jul 2026, North Carolina's state model policy is due 31 Dec 2026 and local policies 30 Jun 2027, Maryland runs a 120-day clock and Idaho's boards must act before the 2027–28 school year. Sell against the calendar, and sell restriction-compliance too (NY sub-grade-9 proposal, CA AB 1159). Then: P1, then P6, then P7 | FERPA plus 134 bills in 31 states; MD/ID/OK/VA mandate district policy and NC's model-policy deadline is **31 Dec 2026**. Only **32%** of administrators report an institution-wide policy and **87%** of faculty wrote their own — P6 consolidates that. P7 matters because the published harm fell hardest on first-generation students, which every access-mandated institution must answer. |
+| EMEA | 🟢 **P11 first**, then P4, then **P10**, then P1 | 🟢 **`p874` reorders this row: lead with P11.** The AI-literacy duty on deployers 🔴 **has applied since 2 February 2025 (`p875` correction — `p874` said July 2026)**, and **Article 50 transparency for chatbots and generated content went live 2 August 2026**, so TWO duties are already in breach today while the high-risk tier is deferred to **2 Dec 2027** — so P11 is the engagement with a *live* duty, a **measured 32-point deficit** (79% of European students use AI, 47% were shown how) and a **published standard** (EC/OECD AILit, 19 competences). It is also the on-ramp to P4 for the same buyer. Then: Article 50 disclosure is live (2 Aug 2026), the education high-risk tier lands 2 Dec 2027, and institutions are declining to renew commercial AI contracts. **P10** because the European Accessibility Act is already in force and EN 301 549 is realigning to WCAG 2.2 AA — and only one agent in this KB carries a conformance statement. For Gulf engagements, KHDA has already published school-level guidance, so lead with compliance implementation rather than policy authorship. For African engagements, the integration surfaces are Chamilo and Kolibri (**P5**), and regional code is largely unlicensed (**T10**) — so lead with licensing and partnership, not a fork. |
+| APAC | **P8**, then P3, then **P12** | 🟢 **`p874` puts a dated deadline behind this row.** Vietnam's **Law No. 134/2025/QH15** has been in force since **1 Mar 2026** and existing **education** systems must comply by **1 September 2027** — **three months before the EU's 2 Dec 2027**, making it the nearest hard deadline in education AI. **Decision 33/2026/QD-TTg** (46 high-risk systems, effective 15 Aug 2026) is a published specification with a human-review carve-out, and **MOET Decision 2422** mandates 12 periods of AI content per class per year for grades 1–12. South Korea's AI Basic Act has been in force since 22 Jan 2026. P3 for national-programme scale. |
+| LATAM | **P9**, then P2 and P5, then P7, then **P12** | **P9** is new and leads now: TutorIA is MIT, Colombian, Spanish-language, rural-first and ministry-funded — the only LATAM-origin base this KB has verified, and provenance counts in a public evaluation. LGPD automated-decision review is already binding. **87%** of institutions use AI, **26%** have a strategy and **9%** evaluate — so P7's measurement layer is the gap, and P2 must budget re-fitting ArguLens for Spanish and Portuguese. |
 | Global | P6, then P7 | The governance gap is universal (only **31%** of faculty are meaningfully involved in AI policy) and nobody is measuring outcomes. |
 
 **If you read only one line of this file:** the two patterns no competitor is selling are **P7**

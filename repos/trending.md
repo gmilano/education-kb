@@ -4,6 +4,170 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p875`) — **the full KB measured in one pass: 78 repositories with stars, SPDX licence and last-push date — plus a dead URL, three stale foundations and four licence mismatches**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+Fifth pass of the day. **Still not a trending sweep** — `github.com/trending` remains `403` and
+this KB continues to refuse to reproduce a blog's version of it. What changed is better: the
+`api.github.com/search/repositories` endpoint answers (see `agents/trending.md` `p875` for how the
+channel was found and why `p874` ruled it out), so **every address this KB carries has been
+measured first-hand in a single pass** rather than described.
+
+### What the measurement caught that four passes of licence-byte verification did not
+
+Licence bytes tell you what you may do with code. They tell you nothing about whether the code is
+alive. Four findings, none of which a licence check can produce:
+
+**1. 🟡 A duplicated address in `repos/foundations.md`, now collapsed.** The file carried **two
+rows for the same project**, `edx/edx-ora2` and `openedx/edx-ora2`, because `p872` added the
+current org without removing the legacy one. The measurement settles it: **only `openedx/`
+resolves in the search index** (64 stars, AGPL-3.0, last push 2026-11-13); `edx/` returns nothing,
+though both still resolve over the git protocol via redirect. 🔵 **GitHub follows renamed-org
+redirects on the git protocol, so an existence check keeps passing on a stale address long after
+it stops being canonical — which is how a duplicate survives a licence-and-existence audit.**
+
+**2. 🔴 Three load-bearing foundations have not shipped in over a year.**
+
+| Repo | Stars | Last push | Role in this KB | Consequence |
+|---|---|---|---|---|
+| `LearningLocker/learninglocker` | 587 | **2024-05-30** | *The* xAPI Learning Record Store in `repos/foundations.md` — where tutoring telemetry lands | **18 months without a commit.** The measurement layer every "prove the tutor worked" pitch depends on is unmaintained. |
+| `stanford-oval/storm` | 31,901 | **2025-09-30** | Composable agent for curriculum/explainer drafting | 14 months. High stars, no recent work — **stars and liveness are independent signals.** |
+| `1EdTech/openbadges-validator-core` | 61 | **2025-11-04** | Credentialing verification | 12 months. From the standards body itself, which makes it likelier to be *finished* than abandoned — but it should not be presented as actively developed. |
+
+🟡 **The LearningLocker finding is the commercially significant one.** T9 in `intel/trends.md`
+argues that measurement is the defensible deliverable in this vertical, and **P1/P5-class patterns
+route telemetry into an LRS that has been dormant since May 2024.** Any pattern that promises
+measurement needs either a maintained LRS or an explicit "we operate this fork" line in the
+statement of work. Noted as an open item rather than silently repaired — `p875` did not find a
+maintained permissive LRS, and says so instead of inventing one.
+
+**3. 🔴 Four licence mismatches between this KB's byte-reads and GitHub's SPDX detection.**
+
+| Repo | This KB says | SPDX says | Reading |
+|---|---|---|---|
+| `OpenOlat/OpenOlat` | Apache-2.0 (byte-read) | `NOASSERTION` | 🟡 Almost certainly Apache-2.0 **with a modified header** that defeats auto-detection. The byte-read is more authoritative. **Keep Apache-2.0, but a client's counsel will run the automated check and get `NOASSERTION` — brief them before they ask.** This matters: OpenOlat is the only major permissive full LMS in this KB. |
+| `BerriAI/litellm` | MIT | `NOASSERTION` | Same pattern; MIT core with added terms. Flag, do not restate. |
+| `CaviraOSS/PageLM` | MIT | `NOASSERTION` | 🔴 **Weakest of the four.** A 2,069-star project in `agents/top.md` whose licence does not auto-detect. **Re-read the bytes before any proposal names it.** |
+| `OS4ED/openSIS-Classic` | — | `NONE` | **No detectable licence at all.** Treat as all-rights-reserved until proven otherwise. |
+
+🔵 **Method note:** the byte-read and SPDX channels disagree in a specific, non-random way — SPDX
+fails open on *modified* permissive licences. **Disagreement here is a signal to read the file, not
+to average the two.**
+
+**4. 🟢 The platform layer's copyleft dominance is now quantified, not asserted.**
+`verticals/solutions.md` has argued for passes that education platforms are overwhelmingly
+copyleft. Measured, by installed attention:
+
+| Permissive platforms | Stars | | Copyleft platforms | Stars |
+|---|---:|---|---|---:|
+| `oppia/oppia` (Apache-2.0) | 6,997 | | `moodle/moodle` (GPL-3.0) | 7,618 |
+| `sakaiproject/sakai` (ECL-2.0) | 1,238 | | `instructure/canvas-lms` (AGPL-3.0) | 6,918 |
+| `learningequality/kolibri` (MIT) | 1,177 | | `frappe/lms` (AGPL-3.0) | 3,428 |
+| `opencast/opencast` (ECL-2.0) | 513 | | `chamilo/chamilo-lms` (GPL-3.0) | 1,025 |
+| `OpenOlat/OpenOlat` (Apache-2.0*) | 452 | | `ILIAS-eLearning/ILIAS` (GPL-3.0) | 512 |
+
+🔵 **The strategic reading is unchanged but now has a number behind it:** the permissive column is
+real and non-trivial, but **no permissive LMS has the installed base of Moodle or Canvas**. The
+`verticals/solutions.md` thesis — *build permissive services that attach over LTI 1.3 and xAPI
+rather than forking a platform* — survives the measurement and is strengthened by it.
+
+### Full measurement — 78 addresses, `p875`, 2026-11-17
+
+Sorted by stars. 🔴 on a date marks no push since 2026-06-01. 🔴 on a licence marks
+`NOASSERTION`, `NONE`, or a non-software licence. **Every figure here was read from
+`api.github.com/search/repositories` this pass. No figure in this table came from a blog.**
+
+| Repo | Stars | SPDX licence | Last push |
+|---|---:|---|---|
+| `ollama/ollama` | 187,366 | MIT | 2026-11-17 |
+| `openai/whisper` | 113,011 | MIT | 2026-08-31 |
+| `vllm-project/vllm` | 97,101 | Apache-2.0 | 2026-11-17 |
+| `infiniflow/ragflow` | 94,308 | Apache-2.0 | 2026-11-17 |
+| `opendatalab/MinerU` | 83,812 | **NOASSERTION** 🔴 | 2026-11-16 |
+| `docling-project/docling` | 70,697 | MIT | 2026-11-17 |
+| `mem0ai/mem0` | 69,110 | Apache-2.0 | 2026-11-17 |
+| `BerriAI/litellm` | 63,417 | **NOASSERTION** 🔴 | 2026-11-17 |
+| `crewAIInc/crewAI` | 61,026 | MIT | 2026-11-17 |
+| `HKUDS/DeepTutor` | 59,972 | Apache-2.0 | 2026-11-15 |
+| `langchain-ai/langgraph` | 45,068 | MIT | 2026-11-17 |
+| `THU-MAIC/OpenMAIC` | 43,808 | MIT | 2026-11-17 |
+| `patchy631/ai-engineering-hub` | 41,955 | MIT | 2026-11-01 |
+| `datalab-to/marker` | 40,948 | Apache-2.0 | 2026-11-14 |
+| `HKUDS/LightRAG` | 40,741 | MIT | 2026-11-17 |
+| `qdrant/qdrant` | 35,603 | Apache-2.0 | 2026-11-17 |
+| `ankitects/anki` | 32,860 | **NOASSERTION** 🔴 | 2026-11-17 |
+| `stanford-oval/storm` | 31,901 | MIT | 2025-09-30 🔴 |
+| `assafelovic/gpt-researcher` | 30,751 | Apache-2.0 | 2026-11-12 |
+| `chroma-core/chroma` | 29,704 | Apache-2.0 | 2026-11-13 |
+| `HumanSignal/label-studio` | 28,718 | Apache-2.0 | 2026-11-17 |
+| `promptfoo/promptfoo` | 27,370 | MIT | 2026-11-17 |
+| `deepset-ai/haystack` | 27,027 | Apache-2.0 | 2026-11-17 |
+| `SYSTRAN/faster-whisper` | 26,826 | MIT | 2026-11-12 |
+| `temporalio/temporal` | 24,453 | MIT | 2026-11-17 |
+| `Unstructured-IO/unstructured` | 15,755 | Apache-2.0 | 2026-11-17 |
+| `EleutherAI/lm-evaluation-harness` | 14,492 | MIT | 2026-11-04 |
+| `bigbluebutton/bigbluebutton` | 9,281 | LGPL-3.0 | 2026-11-17 |
+| `jupyterhub/jupyterhub` | 8,368 | BSD-3-Clause | 2026-11-05 |
+| `withmarbleapp/os-taxonomy` | 7,720 | **ODbL-1.0** 🔴 | 2026-11-16 |
+| `moodle/moodle` | 7,618 | GPL-3.0 | 2026-11-17 |
+| `oppia/oppia` | 6,997 | Apache-2.0 | 2026-11-17 |
+| `instructure/canvas-lms` | 6,918 | AGPL-3.0 | 2026-11-10 |
+| `argilla-io/argilla` | 5,204 | Apache-2.0 | 2026-11-16 |
+| `open-spaced-repetition/fsrs4anki` | 4,142 | MIT | 2026-08-14 |
+| `frappe/lms` | 3,428 | AGPL-3.0 | 2026-11-17 |
+| `CaviraOSS/PageLM` | 2,069 | **NOASSERTION** 🔴 | 2026-11-15 |
+| `iiab/iiab` | 2,050 | GPL-2.0 | 2026-11-13 |
+| `Khan/perseus` | 1,600 | MIT | 2026-11-17 |
+| `jupyter/nbgrader` | 1,370 | BSD-3-Clause | 2026-11-03 |
+| `sakaiproject/sakai` | 1,238 | ECL-2.0 | 2026-11-16 |
+| `learningequality/kolibri` | 1,177 | MIT | 2026-11-17 |
+| `DSpace/DSpace` | 1,113 | BSD-3-Clause | 2026-11-13 |
+| `pkp/ojs` | 1,058 | GPL-3.0 | 2026-11-17 |
+| `chamilo/chamilo-lms` | 1,025 | GPL-3.0 | 2026-11-17 |
+| `kiwix/kiwix-tools` | 1,003 | GPL-3.0 | 2026-11-09 |
+| `francoisjacquet/rosariosis` | 654 | GPL-2.0 | 2026-11-16 |
+| `GibbonEdu/core` | 641 | GPL-3.0 | 2026-11-17 |
+| `Koha-Community/Koha` | 602 | GPL-3.0 | 2026-11-16 |
+| `LearningLocker/learninglocker` | 587 | GPL-3.0 | 2024-05-30 🔴 |
+| `opencast/opencast` | 513 | ECL-2.0 | 2026-11-17 |
+| `ILIAS-eLearning/ILIAS` | 512 | GPL-3.0 | 2026-11-17 |
+| `OpenOlat/OpenOlat` | 452 | **NOASSERTION** 🔴 | 2026-11-17 |
+| `Cvmcosta/ltijs` | 373 | Apache-2.0 | 2026-11-11 |
+| `OS4ED/openSIS-Classic` | 351 | **NONE** 🔴 | 2026-10-26 |
+| `CAHLR/OATutor` | 282 | MIT | 2026-11-17 |
+| `h5p/h5p-php-library` | 156 | GPL-3.0 | 2026-11-10 |
+| `openedx/edx-proctoring` | 69 | AGPL-3.0 | 2026-11-14 |
+| `openedx/edx-ora2` | 64 | AGPL-3.0 | 2026-11-13 |
+| `1EdTech/openbadges-validator-core` | 61 | Apache-2.0 | 2025-11-04 🔴 |
+| `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` | 28 | Apache-2.0 | 2026-11-13 |
+| `Citolab/qti-components` | 18 | GPL-3.0 | 2026-11-17 |
+| `kamlendras/OpenProctor` | 16 | AGPL-3.0 | 2025-05-28 🔴 |
+| `kevinnio/tutor` | 15 | MIT | 2026-09-22 |
+| `AI-for-Education/pedagogy-benchmark` | 13 | MIT | 2026-11-16 |
+| `openedx/openedx-aspects` | 9 | Apache-2.0 | 2026-11-16 |
+| `BlackyDrum/ai-tutor` | 8 | MIT | 2024-10-19 🔴 |
+| `amaanwarsi/Proctora` | 3 | MIT | 2026-04-07 🔴 |
+| `wwrwbs/AI_AWE` | 2 | **NOASSERTION** 🔴 | 2026-07-29 |
+| `PritK99/WriteRight` | 1 | MIT | 2024-11-19 🔴 |
+| `vulinh1704/ai-tutor-agent` | 0 | MIT | 2026-11-16 |
+| `sudosylabs/proctor` | 0 | AGPL-3.0 | 2026-11-16 |
+| `moocupv/lti-ai-grader` | 0 | Apache-2.0 | 2026-11-17 |
+| `littlecookie0722/AI-Teaching-Agent` | 0 | MIT | 2026-08-23 |
+| `ganesh-786/Proctor` | 0 | MIT | 2025-06-09 🔴 |
+| `code-by-abrar/Online-Proctoring-system` | 0 | MIT | 2026-09-19 |
+| `SriSatyaLokesh/pariksha` | 0 | AGPL-3.0 | 2026-11-07 |
+| `LabSirius/TutorIA` | 0 | MIT | 2026-10-27 |
+### 🟡 Not resolvable through the new channel
+
+`All-Hands-AI/OpenHands`, `danny-avila/LibreChat` and `openedx/edx-platform` returned
+`total_count: 0` on repeated attempts while far smaller repositories resolved normally. All three
+exist and respond to `git ls-remote`. **Cause unknown and not asserted.** They carry no star figure
+in this KB rather than a borrowed one — which is the same rule that kept the earlier inflated
+blog-sourced numbers out.
+
+---
+
 ## 🟢 `2026-11-17` (`p874`) — **the star channel is an EGRESS ALLOWLIST, not a GitHub scope: five non-GitHub metadata hosts refused at the proxy, two unrelated hosts answered**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

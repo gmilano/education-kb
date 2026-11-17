@@ -6,12 +6,31 @@ updated: 2026-11-17
 
 # Vertical platforms — education
 
-**Pass `p874`, 2026-11-17** (fourth pass of the day; rewrites the **proctoring** section against
-seven byte-read licences — the category heading was wrong and is corrected below. `p873`'s
-RosarioSIS and accessibility-conformance work stands). Real, deployed systems that can be customised with AI on top —
-the education equivalents of Odoo for ERP or OpenMRS for healthcare. Existence and licence
-bytes verified this run via `git ls-remote` + `raw.githubusercontent.com` on the resolved
-default branch.
+**Pass `p875`, 2026-11-17** (fifth pass of the day). `p875` measured **78 addresses** first-hand
+for stars, SPDX licence and last-push date — the channel four passes called impossible (see
+`repos/trending.md`). It did not re-verify `p874`'s licence bytes; it independently **corroborated
+every one of them through SPDX**, including `p874`'s correction of `SriSatyaLokesh/pariksha` to
+AGPL-3.0. Two sections change: **proctoring is re-framed from a licence problem to an adoption
+problem**, and the copyleft thesis below is now **quantified**.
+
+> **🔴 The proctoring category has 19 stars across six repositories, and four of them have zero.**
+> Three passes argued about the *licence* of open-source proctoring code. The licence was never the
+> binding constraint. **There is no open-source proctoring platform to build on in this vertical —
+> permissive or copyleft — and the correct advice to a client asking for one is to buy, or to
+> treat it as bespoke from zero.** Full table in the proctoring section below.
+
+> **🟡 `OpenOlat` returns `NOASSERTION` from GitHub's SPDX detector** while its licence bytes read
+> Apache-2.0. The byte-read is authoritative — a modified header almost certainly defeats
+> auto-detection — but **OpenOlat is the load-bearing "only permissive full LMS" claim in this
+> file, and a client's counsel will run the automated check and get `NOASSERTION`.** Brief them
+> before they ask. `BerriAI/litellm` and `CaviraOSS/PageLM` show the same pattern;
+> `OS4ED/openSIS-Classic` returns `NONE` — **no detectable licence at all**, treat as all rights
+> reserved until proven otherwise.
+
+**Previous pass note (`p874`):** rewrote the proctoring section against seven byte-read licences
+and corrected the category heading. Real, deployed systems that can be customised with AI on top —
+the education equivalents of Odoo for ERP or OpenMRS for healthcare. Existence and licence bytes
+verified via `git ls-remote` + `raw.githubusercontent.com` on the resolved default branch.
 
 > **The single most important strategic fact in this file:** the education platform layer is
 > **overwhelmingly copyleft**. Of the 20 verified platforms below, only **5** are permissive
@@ -20,6 +39,14 @@ default branch.
 > ILIAS, Chamilo and both SIS options. The workable pattern is therefore **not** forking a
 > platform: it is building permissive AI services that attach over **LTI 1.3** and **xAPI**.
 > That integration seam is the actual product surface in education.
+>
+> **🟢 `p875` quantifies this.** Measured by installed attention, the permissive column is real but
+> consistently smaller: `oppia` 6,997 (Apache-2.0), `sakai` 1,238 (ECL-2.0), `kolibri` 1,177 (MIT),
+> `opencast` 513 (ECL-2.0), `OpenOlat` 452 (Apache-2.0*) — against `moodle` 7,618 (GPL-3.0),
+> `canvas-lms` 6,918 (AGPL-3.0), `frappe/lms` 3,428 (AGPL-3.0), `chamilo` 1,025 (GPL-3.0),
+> `ILIAS` 512 (GPL-3.0). **No permissive LMS has the installed base of Moodle or Canvas.** The
+> conclusion survives the measurement and is strengthened by it: do not fork a platform to chase a
+> licence — **attach over LTI 1.3 and xAPI, where the permissive layer is yours to write.**
 
 ## Learning management systems
 
@@ -88,7 +115,33 @@ For a Globant engagement that must avoid copyleft obligations, the verified perm
 | **Opencast** | ECL-2.0 | Lecture capture and video corpus |
 | **DSpace** | BSD | Institutional repository / scholarly corpus |
 
-## Exam integrity & proctoring — real demand, permissive supply that exists but is not institution-grade
+## Exam integrity & proctoring — 🔴 `p875`: real demand, and effectively NO supply
+
+> **`p875` measured the whole category. Nineteen stars across six repositories. Four have zero.**
+>
+> | Repo | Stars | Licence (byte-read, SPDX-confirmed) | Last push |
+> |---|---:|---|---|
+> | `kamlendras/OpenProctor` | 16 | AGPL-3.0 | 2025-05-28 🔴 |
+> | `amaanwarsi/Proctora` | **3** | MIT | 2026-04-07 |
+> | `ganesh-786/Proctor` | **0** | MIT | 2025-06-09 🔴 |
+> | `code-by-abrar/Online-Proctoring-system` | **0** | MIT | 2026-09-19 |
+> | `sudosylabs/proctor` | **0** | AGPL-3.0 | 2026-11-16 |
+> | `SriSatyaLokesh/pariksha` | **0** | AGPL-3.0 ✅ (`p874`'s correction, SPDX-confirmed) | 2026-11-07 |
+>
+> **The framing of the last three passes was wrong in a way that mattered.** `p871` said no
+> permissive code existed; `p872` said two existed and both were copyleft; `p874` found three MIT
+> repos and said the gap was maturity, not licence. `p874` was closest — and `p875`'s measurement
+> shows the maturity gap is not a gap but an absence. **Not one of these projects has a user
+> community.** A licence is a permission to build on something; none of these is a something.
+>
+> 🟡 **What to tell a client who asks for open-source proctoring:** there isn't any. The options
+> are a commercial proctoring vendor integrated over LTI, or an accepted redesign of the
+> assessment so that proctoring is not required — which, given `intel/trends.md` **T9** on
+> scaffolding and `openedx/edx-proctoring` (69 stars, AGPL-3.0) being the only thing here with
+> institutional provenance, is usually the better conversation. **Do not propose building one from
+> these repositories.**
+
+### Original `p874` category notes (licence bytes, retained)
 
 🔴 **This heading said "no permissive supply" for two passes and that was wrong.** `p871` searched
 and found nothing. `p872` found two projects, both AGPL-3.0, and concluded the permissive shelf was

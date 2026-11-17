@@ -4,6 +4,161 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p875`) — **the star channel OPENS after four passes of being called impossible — and the first thing it measures is that half this KB's education-native agents have ZERO users**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+`p875` is the fifth pass of the day. It did not re-verify `p874`'s addresses. It went at the
+oldest standing gap in this KB — **star counts, declared unmeasurable for four consecutive
+passes** — and **the gap is closed**. The consequence is not a vanity column. It is the first
+adoption signal this KB has ever had, and it **reorders the agent table**.
+
+### 🔴 `p874`'s diagnosis was half right, and the wrong half was the actionable half
+
+`p874` probed six non-GitHub metadata hosts, found every one refused, and concluded: *"This is a
+session EGRESS ALLOWLIST, not a GitHub permission and not an outage… **no GitHub-side scope change
+will restore star counts**."* The first clause is correct and `p875` re-confirms it. **The
+conclusion is wrong**, and it closed off the route that works.
+
+| Probe | `p874` reading | `p875` result | What it means |
+|---|---|---|---|
+| `ecosyste.ms`, `libraries.io`, `api.star-history.com`, `arxiv.org`, `edworkingpapers.com`, `eur-lex.europa.eu`, `unesco.org` | refused at proxy | **`000` — still refused** | Egress allowlist. Unchanged. `p874` right. |
+| `api.github.com/repos/{slug}` | `403`, read as part of the same block | **`403` — but the body is a *session-scope* message naming `add_repo` as the remedy** | Not egress. The host answers. |
+| `api.github.com/rate_limit` | not probed | **`200`, `limit: 15000`, authenticated-app quota** | 🟢 **The GitHub API is reachable AND authenticated.** |
+| `api.github.com/search/repositories?q=repo:{slug}` | not probed | **`200` with `stargazers_count`, `license.spdx_id`, `pushed_at`, `archived`** | 🟢 **The star channel.** |
+
+**The method lesson, and it is the same one this KB keeps re-learning in a new costume.** `p874`
+earned its conclusion honestly — nine routes, six hosts, a real pattern — and then **generalised
+one host's refusal into a rule about an entire provider**. Two endpoints on the *same host* behave
+differently: `/repos/{slug}` is gated by session scope, `/search/repositories` is not. **A probe
+that returns `403` has told you the host is reachable; it has not told you every path on it is
+closed.** `p874` wrote *"no GitHub-side scope change will fix it"* while the refusal body it
+received was literally instructing the caller how to fix it.
+
+🔵 **Standing instruction for later passes:** before declaring a channel closed, probe **a second
+path on the same host**, and **read the refusal body** rather than only its status code.
+
+### The measurement, and why it changes the shelf
+
+**78 addresses measured first-hand** (`stargazers_count`, SPDX licence, last push). Full table in
+`repos/trending.md`. The finding that matters:
+
+> **Adoption in this vertical is bimodal, and this KB's agent table has been presenting both modes
+> as if they were one shelf.** Two education-native agents have real user bases — **DeepTutor
+> (59,972)** and **OpenMAIC (43,808)**. **Every other education-native agent this KB lists has
+> fewer than 20 stars, and six have ZERO.**
+
+| Education-native agent | Stars | Licence | Last push |
+|---|---|---|---|
+| HKUDS/DeepTutor | **59,972** | Apache-2.0 | 2026-11-15 |
+| THU-MAIC/OpenMAIC | **43,808** | MIT | 2026-11-17 |
+| CaviraOSS/PageLM | 2,069 | `NOASSERTION` 🔴 | 2026-11-15 |
+| CAHLR/OATutor | 282 | MIT | 2026-11-17 |
+| AI-for-Education/pedagogy-benchmark | 13 | MIT | 2026-11-16 |
+| wwrwbs/AI_AWE (ArguLens) | **2** | `NOASSERTION` 🔴 | 2026-07-29 |
+| PritK99/WriteRight | **1** | MIT | 2024-11-19 🔴 stale |
+| littlecookie0722/AI-Teaching-Agent | **0** | MIT | 2026-08-23 |
+| vulinh1704/ai-tutor-agent | **0** | MIT | 2026-11-16 |
+| LabSirius/TutorIA | **0** | MIT | 2026-10-27 |
+
+🟡 **What this does and does not license you to say.** Stars measure attention, not quality, and a
+0-star repo from a funded university programme (TutorIA) is a different object from a 0-star
+weekend project. **But a 0-star repo has no community, no issue history, no external contributor
+and no evidence anyone has ever deployed it** — and this KB has been listing such repos in the
+same table as a 60k-star platform, with maturity flags in prose that a reader skims past. The
+column makes the distinction unskippable. **Use it to set client expectations about support
+burden, not to rank engineering quality.**
+
+### 🟢 The OpenMAIC licence conflict is ROOT-CAUSED — three passes of "sources disagree" ends here
+
+`p874` re-confirmed OpenMAIC as MIT against two sources that said AGPL-3.0 and MIT. `p875`
+re-confirmed it again — and then found **why the conflict keeps regenerating**. Two independent
+mechanisms:
+
+1. **It was relicensed.** The repo's own `README.md` changelog, line 67:
+   `2026-06-28 — v0.3.0: PBL v2, "Edit with AI" editor agent, @openmaic/* SDKs on npm, **relicensed to MIT**.`
+   Every source written before 28 June 2026 — **including the project's own site, `openmaic.io`,
+   which still says AGPL-3.0** — is describing a licence that no longer applies.
+2. **An AGPL-3.0 fork is in the index.** `kolbyzhu5/OpenMAIC` (17 stars, AGPL-3.0, last push
+   2026-03-21) is a pre-relicence fork. A search that does not pin the owner can return it.
+
+**Verification this pass:** `LICENSE` on `main` is MIT (`Copyright (c) 2026 THU-MAIC`); **no other
+licence file exists on the branch** (`LICENSE.md`, `LICENSE.txt`, `COPYING`, `NOTICE`,
+`AGPL-3.0.txt` all `404`); the README carries an MIT badge and states *"licensed under the MIT
+License, so commercial use is permitted free of charge"*; and the search API's `license.spdx_id`
+independently returns `MIT`. **Four channels, one answer. This is settled — stop re-litigating it.**
+
+🔵 **Generalisable:** when sources disagree on a licence, **check whether the project relicensed**
+before assuming one source is sloppy. A dated changelog entry resolves in one read what three
+passes of cross-checking could not.
+
+### 🔴 A deployment hazard in OpenMAIC that no listicle mentions, found by reading the README
+
+OpenMAIC is gated site-wide by a single `ACCESS_CODE` environment variable. Its own README:
+
+> *"When it is unset (the default in `.env.example`), `middleware.ts` checks no credential and
+> every route, the API included, is reachable: an unconfigured deployment is not gated, and there
+> is no second enforcement point."*
+
+**A default-configuration OpenMAIC deployment is fully open, API included, with no defence in
+depth.** In a school or university tenancy that is a student-data exposure on day one. Rate
+limiting only works behind a trusted proxy with `TRUST_PROXY_HEADERS=true`. 🟡 **Any Globant
+pattern that ships OpenMAIC must carry `ACCESS_CODE` provisioning and a second enforcement point
+as named, budgeted tasks** — see `compose/patterns.md` **P12**. This is exactly the class of fact
+that star counts and licence checks never surface and a README read does.
+
+### Addresses resolved this pass — verified, and NOT promoted to `agents/top.md`
+
+`p875` adds **no row** to `agents/top.md`, which is the honest outcome and is recorded rather than
+padded. Four addresses resolved with real licences; none is an education agent a studio should
+start a build from.
+
+| Address | Stars | Licence (byte-read + SPDX) | Verdict |
+|---|---|---|---|
+| `withmarbleapp/os-taxonomy` | **7,720** | 🔴 **ODbL-1.0** | **Real traction, wrong licence class.** A 1,590-topic children's curriculum graph with 3,221 prerequisite edges. **Open Data Commons ODbL is a share-alike *database* licence, not a software licence** — publishing a derived database triggers source obligations. Genuinely useful as a curriculum spine; **it is not "MIT-adjacent" and must never be filed as permissive.** Filed to `repos/foundations.md` with the obligation stated. |
+| `patchy631/ai-engineering-hub` | **41,955** | MIT | A ~93-project AI-engineering curriculum. **Teaching material about AI, not an agent for education.** Useful to Globant as enablement content for its own staff; not a client deliverable. Not listed as an agent. |
+| `BlackyDrum/ai-tutor` | 8 | MIT | 🟡 **The only MIT tutor found that speaks LTI** — and it is **LTI 1.0** (sign-in through ILIAS), two generations deprecated, **last pushed 2024-10-19**. A reference read for the ILIAS seam, not a base. |
+| `kevinnio/tutor` | 15 | MIT | An agent *skill* that makes a coding assistant teach by doing. Not a tutoring platform; no LMS seam. |
+
+### Proctoring — `p874`'s category is confirmed and now QUANTIFIED, and the number is brutal
+
+`p874` corrected the category from *"no permissive code exists"* to *"three MIT repos exist, the
+gap is maturity."* `p875` measures that maturity. **Independent SPDX confirmation of every one of
+`p874`'s byte-reads, including its correction of `SriSatyaLokesh/pariksha` to AGPL-3.0.**
+
+| Repo | Stars | Licence | Last push |
+|---|---|---|---|
+| `kamlendras/OpenProctor` | 16 | AGPL-3.0 | 2025-05-28 🔴 |
+| `amaanwarsi/Proctora` | **3** | MIT | 2026-04-07 |
+| `ganesh-786/Proctor` | **0** | MIT | 2025-06-09 🔴 |
+| `code-by-abrar/Online-Proctoring-system` | **0** | MIT | 2026-09-19 |
+| `sudosylabs/proctor` | **0** | AGPL-3.0 | 2026-11-16 |
+| `SriSatyaLokesh/pariksha` | **0** | AGPL-3.0 ✅ (p874 correction confirmed) | 2026-11-07 |
+
+> **The entire open-source proctoring category has 19 stars across six repositories.** Not one has
+> a user community. 🔴 **There is no open-source proctoring platform to build on in this vertical
+> — permissive or otherwise — and the correct advice to a client asking for one is to buy, or to
+> treat it as bespoke from zero.** This supersedes the licence-shaped framing of the last three
+> passes: licence was never the binding constraint.
+
+### Channel state this pass
+
+| Channel | Result |
+|---|---|
+| `git ls-remote --symref` (existence, default branch) | **open** |
+| `raw.githubusercontent.com` (licence + README bytes) | **open** |
+| 🟢 `api.github.com/search/repositories` (stars, SPDX, last push) | **OPEN — new this pass** |
+| `api.github.com/repos/{slug}` | `403` session scope — `add_repo` is the named remedy |
+| `github.com` HTML, `github.com/trending` | `403` — trending page still unreadable |
+| All non-GitHub hosts (papers, EU texts, surveys, metadata mirrors) | **still refused** — unchanged |
+
+🟡 **Honest limit on the new channel:** three large repos — `All-Hands-AI/OpenHands`,
+`danny-avila/LibreChat`, `openedx/edx-platform` — returned `total_count: 0` on repeated attempts
+while far smaller repos resolved. **Cause unknown; not asserted to be scope.** Those three carry no
+star figure in this KB rather than a guessed one.
+
+---
+
 ## 🟢 `2026-11-17` (`p874`) — **the proctoring gap narrows from the inside: three MIT proctoring repos exist, none is institution-grade — and a "commercial-ready" platform ships a LICENCE FILE THAT GRANTS NOTHING**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

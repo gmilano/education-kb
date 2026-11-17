@@ -6,11 +6,17 @@ updated: 2026-11-17
 
 # Current trends — education AI
 
-**Pass `p874`, 2026-11-17** (fourth pass of the day). `p871` recorded eight trends; `p872` added
-**T9** and revised **T8**; `p873` strengthened **T9** and added **T10**. `p874` adds **T11** — the
-compliance clock the whole market is watching is not the one that is running — and updates the gap
-ledger, where **three gaps move**: the EMEA instrument gap **closes**, Vietnam's dates **resolve**,
-and the proctoring gap is **restated after being found factually wrong**.
+**Pass `p875`, 2026-11-17** (fifth pass of the day). `p875` **corrects T11's central date**,
+adds **T12**, and closes the KB's oldest measurement gap. Three movements:
+
+- 🔴 **T11's legal date was wrong.** The EU AI-literacy duty does not begin July 2026; it has
+  applied since **2 February 2025**. T11 is corrected in place below. The commercial argument
+  survives — it improves — but any deck carrying "July 2026" must be fixed.
+- 🟢 **A live EMEA obligation T11 missed:** transparency duties for chatbots and AI-generated
+  content apply from **2 August 2026** and were **not** postponed by the Digital Omnibus. They are
+  in force today.
+- 🟢 **T12 is new** — the adoption distribution in this vertical is bimodal, and it became
+  visible only when the star channel opened. See `agents/trending.md` for the channel.
 
 **Previous pass note (`p873`):** strengthened **T9** with three further trials — including the one
 that isolates *scaffolding* as the active ingredient — and added **T10** on Global-South agent
@@ -270,7 +276,8 @@ measured deficit and a published standard behind it:
 | Measured deficit, same population, one instrument | **79%** of European secondary students use AI for schoolwork; **47%** were shown how → a **32-point gap** (OpenAI/ThinkYoung, 5,000 students, 10 countries, fieldwork Apr–May 2026) |
 | Corroboration, teacher side | **73%** of teachers use AI for planning and materials, **67%** for tests and rubrics (European School Education Platform, Apr 2026) |
 | Delivery standard | **EC/OECD AILit Framework**, 18 June 2026 — 4 dimensions, **19 competences**, non-binding, product-neutral, feeds **PISA 2029** |
-| Legal hook | AI Act literacy duty on deployers, reported as applying from **July 2026** |
+| Legal hook | AI Act literacy duty on deployers — 🔴 **CORRECTED BY `p875`: applies since 2 February 2025**, not July 2026. The prohibition on **emotion recognition in education** has applied since the same date. 🟡 The **Digital Omnibus (Regulation (EU) 2026/1744**, in force 27 Jul 2026) reportedly **amended** the literacy provision, dropping a "guaranteed level" requirement in favour of taking *measures* to support staff AI literacy — i.e. it **softened** the duty. |
+| 🟢 **Second live hook, new in `p875`** | **Transparency duties for chatbots and AI-generated content apply from 2 August 2026 and were NOT postponed.** Today is 17 November 2026: every AI tutor or generated-content feature in an EU school is already inside this obligation. |
 
 **Why it matters commercially.** A high-risk conformance engagement is a 2027 budget line and a
 competitive field. An AI-literacy engagement is a **2026** budget line against a duty the buyer is
@@ -279,8 +286,17 @@ justify the spend. It is also the natural on-ramp: the same governance artifacts
 deployer-side documentation habit, and the same buyer who will need **P4** in 2027. See
 `compose/patterns.md` **P11**.
 
-**Counter-reading, stated.** 🔴 **The July 2026 start date for the literacy duty is
-secondary-sourced and this session cannot open a single EU primary text** (`eur-lex.europa.eu` and
+**🔴 `p875` correction, stated before the counter-reading.** `p874` wrote the July 2026 date with
+an explicit flag that it was secondary-sourced and should be confirmed. **It was wrong, and the
+flag is why it was caught in one pass rather than shipped for months.** The duty has applied since
+**2 February 2025**. 🟢 **The pitch gets stronger, not weaker:** the buyer is not approaching a
+deadline, they have been in breach for nearly two years — and a **second** duty (transparency,
+2 Aug 2026) went live three months ago. 🟡 **But the Omnibus softened the literacy wording**, which
+reinforces T11's existing advice: lead with the measured 32-point gap and the AILit Framework, not
+with a threatened sanction. 🔵 **Method note: `p874` flagged this date as unverified and `p875`
+corrected it. A flagged uncertainty is cheap to fix; an unflagged one becomes KB furniture.**
+
+**Counter-reading, stated.** 🔴 **This session still cannot open a single EU primary text** (`eur-lex.europa.eu` and
 the Council and Parliament hosts are refused at the egress proxy). The AI Act's literacy provision
 is widely described as a duty on providers *and* deployers, but **its enforcement mechanics against
 a school are not something this KB has verified, and may be weak** — a duty with no penalty
@@ -289,7 +305,108 @@ they face a specific sanction on a specific date for AI illiteracy.** The defens
 *measured* gap plus the *published* framework, with the legal duty as context rather than threat.
 Treat the date as a lead to confirm against EUR-Lex the moment that host is reachable.
 
+## T12 — Open-source education AI is two projects and a long tail of zeroes — new in `p875`
+
+For four passes this KB could not measure adoption and said so honestly. `p875` found the channel
+(`api.github.com/search/repositories`) and measured **78 addresses**. The distribution is not a
+curve. It is two points and a floor.
+
+| Tier | Projects | Stars |
+|---|---|---|
+| **Platforms with real communities** | DeepTutor (Apache-2.0), OpenMAIC (MIT) | **59,972** / **43,808** |
+| Small-but-alive | PageLM, OATutor | 2,069 / 282 |
+| **The floor** | pedagogy-benchmark, ArguLens, WriteRight, AI-Teaching-Agent, ai-tutor-agent, TutorIA, lti-ai-grader, and **all six proctoring repos** | **16 → 0** |
+
+**Why it matters more than a vanity metric.** This KB's agent and vertical tables have been listing
+a 60,000-star platform and a 0-star single-author repository as peer entries, separated only by a
+maturity caveat in prose. **The distribution says the open-source education shelf is far thinner
+than the length of the tables suggests.** Concretely:
+
+- **The entire open-source proctoring category holds 19 stars across six repositories.** Three
+  passes argued about its *licences*. Licence was never the binding constraint — **there is no
+  supply.** See `verticals/solutions.md`.
+- **The xAPI Learning Record Store this KB routes all measurement through has not been pushed
+  since May 2024** (`LearningLocker`, 587 stars). The measurement layer is dormant.
+- **Stars and liveness are independent.** `stanford-oval/storm` has 31,901 stars and 14 months
+  without a commit.
+
+🔵 **The strategic consequence, and it sharpens T1 rather than contradicting it.** T1 observed that
+the serious supply comes from university labs. T12 adds the magnitude: **it is two labs — HKU and
+Tsinghua — and essentially nobody else.** Everything else in this vertical is a prototype, a paper
+artifact, or a funded deliverable nobody outside the authoring lab has deployed. **For Globant that
+is an opportunity, not a disappointment:** in a vertical whose open shelf is this thin, the studio
+that builds a maintained permissive component — an LRS, a proctoring layer, a permissive curriculum
+graph — is not joining a crowded field. **There is no field.**
+
+🟡 **How to use this honestly.** Stars measure attention, not quality. A 0-star repo may be good
+code, and TutorIA is a funded Colombian university deliverable rather than a weekend project. What
+a 0-star repo *does* reliably tell you is that there is **no community, no issue history, no
+external contributor and no evidence of a production deployment** — which is a support-burden fact
+a client must hear before signing, not an engineering verdict.
+
 ## Declared gaps
+
+**`p875` ledger movements:** star counts **CLOSED**; the APAC institutional gap **re-tried against
+all three named instruments and NOT closed**; the Khanmigo effect-size discrepancy **adjudicated**;
+a **new gap opened** (the dormant LRS).
+
+- 🟢 ~~**Star counts unmeasurable for FOUR consecutive passes.**~~ **CLOSED BY `p875`.** 78
+  addresses measured first-hand via `api.github.com/search/repositories`, which returns
+  `stargazers_count`, `license.spdx_id`, `pushed_at` and `archived`. 🔴 **`p874`'s diagnosis was
+  half wrong in the half that mattered.** Its finding that non-GitHub metadata hosts are refused at
+  an egress allowlist is correct and re-confirmed. Its conclusion — *"no GitHub-side scope change
+  will restore star counts"* — was a generalisation from **one endpoint** (`/repos/{slug}`, `403`
+  session scope) to an entire provider, and `/search/repositories` on the same host was never
+  probed. 🔵 **Standing instruction: before declaring a channel closed, probe a second path on the
+  same host and read the refusal body, not just the status code.** `p874` was told the remedy in
+  the 403 response it received. Consequences now live: see **T12**, and the staleness and
+  licence-mismatch audits in `repos/trending.md`.
+- 🔴 **NEW GAP, opened by `p875`: there is no maintained permissive xAPI Learning Record Store.**
+  `LearningLocker` (GPL-3.0, 587 stars) **has not been pushed since 2024-05-30**. This KB's
+  strongest commercial argument — **T9**'s "measurement is the defensible deliverable" — routes
+  telemetry into a dormant project. `p875` searched and found no maintained permissive replacement
+  and **does not invent one**. 🟡 Until it is filled, any engagement promising measurement must
+  either budget a maintained fork explicitly in the statement of work, or fall back to the LMS
+  gradebook and accept weaker evidence. 🔵 **This is now the highest-value unfilled slot in the
+  education open-source stack, and T12 argues it is an uncontested one to build into.**
+- 🟡 ~~**The Khanmigo effect-size discrepancy (T9's 0.06–0.08 SD vs `p874`'s 0.020 SD).**~~
+  **ADJUDICATED by `p875`, not resolved.** A third independent search summary returns **Year-1
+  0.020 population SD (indistinguishable from zero)** with **~0.13–0.14 SD among students who
+  actively engaged**, matching `p874` and not T9. **Two independent summaries now agree against
+  T9's figure, so treat 0.06–0.08 SD as superseded** — but 🔴 **`edworkingpapers.com` is still
+  unreachable and the PDF has never been read by anyone in this session**, so the number is not
+  corrected in T9's table, only flagged. The direction and mechanism are unaffected: participating
+  students show an effect, struggling students never engage.
+- 🔴 **The APAC institutional gap did NOT close, and all three named instruments are now
+  exhausted.** `p874` named **APRU, UNESCO Bangkok, or a national rectors' conference**. `p875`
+  tried all three: APRU publishes **event and programme material only**; UNESCO Bangkok appears as
+  a *presenter* of the global figure, not the author of an APAC instrument; **no national rectors'
+  survey exists** for any APAC country. The only figure available is **global** — UNESCO Chairs and
+  UNITWIN Networks, 400 responses across 90 countries, **19% with a formal AI policy, 42%
+  developing** — whose sampling frame is UNESCO Chairs, **not comparable to UNESCO IESALC's LATAM
+  instrument and not presentable as an APAC rate**. 🔵 **Next instruments, now that the obvious
+  three are spent: SEAMEO; Australia's TEQSA provider action-plan returns (a regulator already
+  collecting institutional AI risk plans — the closest thing to a compliance census in any region);
+  or Japan's NIER/MEXT institutional surveys.** 🟡 **APAC remains the only region in this KB with
+  attitudes measured and institutional behaviour unmeasured. Say so in any APAC deck rather than
+  substituting the sentiment figures for adoption.**
+- 🟢 ~~**The EU AI-literacy duty's start date is secondary-sourced.**~~ **RESOLVED AND CORRECTED
+  BY `p875` — the previous answer was wrong.** The duty applies from **2 February 2025**, not July
+  2026, alongside the emotion-recognition prohibition. The postponement instrument is now named:
+  **Regulation (EU) 2026/1744**, the Digital Omnibus, in force **27 July 2026**, moving Annex III
+  high-risk education obligations to **2 December 2027**. 🟢 **And a live obligation this KB had
+  missed entirely: transparency duties for chatbots and AI-generated content apply from 2 August
+  2026 and were not postponed.** See the corrected **T11**. 🔴 All of it remains secondary-sourced
+  — `eur-lex.europa.eu` was re-probed this pass and is still refused.
+- 🟢 **The proctoring gap is restated for the third time and is now QUANTIFIED — and the licence
+  framing is retired.** `p871`: none exists. `p872`: two, both AGPL. `p874`: three are MIT, the gap
+  is maturity. **`p875`: the whole category is 19 stars across six repositories, four of them
+  zero.** `p874` was right that licence was not the constraint, and the measurement shows why that
+  mattered: **there is no supply to have a licence problem with.** SPDX independently confirmed
+  every one of `p874`'s byte-reads, including its correction of `SriSatyaLokesh/pariksha` to
+  AGPL-3.0. 🔵 **Retire the licence framing. The answer to "which open-source proctoring platform
+  should we use" is "none — buy, or redesign the assessment."**
+
 
 - ~~**No measured efficacy data** for education AI.~~ **CLOSED by `p872`** — see **T9**. But the
   residual gap is sharp and worth stating precisely: **no trial evaluates any open-source system
