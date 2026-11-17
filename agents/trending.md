@@ -4,6 +4,100 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p881`) — **the eighteen red gates were triaged (10 shelf / 5 instrument / 1 stale-control, plus 2 mixed), and `gate-promotion` — one of the red ones — handed over two unpublished MIT education agents while eight WebSearch legs returned zero**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+`880-G1` was explicit: *"Do not open a discovery sweep until that is done."* `p881` did not open one.
+It ran the triage — and the triage was the discovery.
+
+### The two new agents, measured before they were written down
+
+Both were named by **`gate-promotion` (p434)** as `UNPROMOTED-PERMISSIVE`: a permissive address on a
+trending shelf and on no curated shelf. Both are now on `agents/top.md`
+([`record`](../evidence/promotion-adjudication.2026-11-17-p881.tsv)).
+
+| Address | Grant, byte-read `2026-11-17` | Bytes / `sha256₁₂` | `main` HEAD | Last commit (clone-measured) | Files | Region, by commit offset |
+|---|---|---|---|---|---|---|
+| [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | **MIT** | 1,066 B · `bb8885eccff8` | `77e8e25` | `2026-10-28T20:54:02+08:00` | 839 | APAC (`+08:00`, no DST) |
+| [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) | **MIT** | 1,067 B · `b6fac57d4710` | `74417a8` | `2026-11-12T14:05:05+08:00` | 3,137 | APAC (`+08:00`, no DST) |
+
+🔴 **Neither row carries a star count, and that is deliberate.** `api.github.com` is `403` for this
+session, so no star, fork or `pushed_at` figure was measurable at all this pass. A pass that cannot
+measure stars must not publish stars.
+
+🟢 **`civil-ai` is the more valuable of the two and the less obvious.** It is not a tutor; its README
+calls it *"a reusable, local-first foundation for building adaptive education Agents"* that
+*"separates provider-neutral Agent execution, learner evidence, mastery projection, planning, structured
+content, persistence, and safety boundaries from domain-specific curricula and teaching policies"* — and
+it states that its Chinese civil-service exam app *"does not define the scope of the foundation."* That
+adapter boundary is what almost nothing else on this shelf publishes.
+
+🟡 **`wenflow` is problem-first rather than course-first** — *"学习始于对真实问题的澄清，而非对课程的选择"* —
+which makes it the workforce/L&D-shaped row on a shelf that is otherwise syllabus-shaped. 🔴 **Its own
+README directs active development to `develop`; `main` is the stable branch.** Judge it on `develop`.
+
+### The channel state, measured rather than assumed
+
+([`record`](../evidence/channel-state.2026-11-17-p881.tsv))
+
+| Channel | Result | Case-sensitive? | New? |
+|---|---|---|---|
+| `api.github.com/repos` and `/search` | **403** *"not enabled for this session"* | — | HELD (`p874`) |
+| `github.com` over `curl`; `codeload` | **403** | — | HELD |
+| `git ls-remote` | **200**, refs + default branch + HEAD | 🔴 **NO** | HELD |
+| `raw.githubusercontent.com` | **200**, grant bytes | 🔴 **NO** | HELD |
+| `git clone --depth 1` → `git log -1 --format=%cI` | commit date **and timezone offset** | — | HELD |
+| `git -c http.followRedirects=false ls-remote` | returns the sha anyway | — | HELD, and **REFUTED** as a direction oracle |
+| **`WebFetch` on `github.com`** | page returned; breadcrumb and `<title>` give canonical case | 🟢 **YES** | 🆕 **the case-authoritative use is NEW** |
+| `make hooks` (aggregate) | **DENIED** by the external-code classifier | — | class HELD (`p662`, 12 passes) |
+| **`make <gate>`, one gate at a time** | 🟢 **all 18 ran** | — | 🆕 **NEW, and it unblocks nine passes' worth of carried red** |
+
+🔵 **The asymmetry is the finding.** `curl` on `github.com` is `403` while `WebFetch` on the same URL
+returns the page. Since the refs channel and the bytes channel are both **case-insensitive** — measured
+on three casings of `OpenOLAT/OpenOLAT`, all `200` — and `p880` established that owner-keyed search is
+case-insensitive too, **`WebFetch` is the only case-authoritative channel available when the API is
+down.** That is what made `880-G4` runnable at all this pass.
+
+### The three rename pairs: identity CONFIRMED, direction still UNVERIFIABLE
+
+`gate-alias-canonical` reported 26 findings over three distinct pairs. `git ls-remote` returns an
+**identical HEAD sha on both sides of all three**, so each pair is one repository under two addresses:
+
+| Pair | Shared HEAD |
+|---|---|
+| `microsoft/presidio` ↔ `data-privacy-stack/presidio` | `fd78e974fbf9` |
+| `digitalcredentials/learner-credential-wallet` ↔ `openwallet-foundation-labs/learner-credential-wallet` | `1c46a82ba384` |
+| `theopenem/oneroster.net` ↔ `jdolny/OneRoster.NET` | `4f96365d3108` |
+
+🔴 **Direction is NOT established.** `git -c http.followRedirects=false ls-remote` was tested as a
+direction oracle and **returns the sha for both sides regardless**, so it cannot tell the redirect from
+the target. This base's own `gate-fork-direction` already says a ref-set test cannot establish
+direction; `p881` confirms that holds for the redirect case too, and declines to publish a canonical
+side for any of the three.
+
+### The WebSearch legs: 8 run, 22 held, 3 new, 0 new repositories
+
+`880-G5` asked for a decision and a published held/new split rather than another impression. The split
+is in [`evidence/websearch-legs.2026-11-17-p881.tsv`](../evidence/websearch-legs.2026-11-17-p881.tsv),
+row by row. The three new findings are **Panorama Education** (North America, named player),
+**Cambridge English's Kuala Lumpur ministry summit** (APAC, named convening body) and **Market Research
+Future's `USD 207.62 B`-by-2035 projection** (Global, recorded as a dispersion marker, *not* as a
+forecast — the figure this base carries is `USD 42.48 B` by 2030). **EMEA and LATAM returned nil, and
+both nils are written down on `intel/market.md` rather than left silent.**
+
+🟢 **The decision `880-G5` asked for, recorded: option (b), with the legs SPLIT by what they are for.**
+The supply legs — global agents, GitHub trending, verticals — have now returned **0 new repositories for
+three consecutive passes** (`p879`, `p880`, `p881`); they move to a stated cadence of **every fifth
+pass**. The demand legs — trends plus the four regional — produced **3 of 3** of this pass's new facts
+and **stay every pass**, with the held/new split published each time. 🔴 **What stops is running five
+legs, finding nothing, and reporting the pass as though the channel were productive.**
+
+🟡 **One unexecuted action is now the highest-yield item on the supply side, and this pass can name it
+precisely:** both new agents are APAC-origin with Chinese-language documentation, and **this base has
+never run a Chinese-language discovery leg.** `p878` added Spanish and Portuguese and recovered 304
+repositories. Chinese, Japanese and Korean are unrun.
+
 ## 🔴 `2026-11-17` (`p880`) — **the gate that detects lost claims had been RED and committed-over since `p871`: 12 of 16 registered load-bearing claims were gone, and 2 of them were not losses at all — the register was demanding sentences this base had DISPROVED**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

@@ -1,0 +1,29 @@
+leg	query	finding	held_or_new	where_held	note
+L1-global-agents	top open source AI agents education 2026 github MIT license	OpenHands MIT; MetaGPT MIT; browser-use; CrewAI; LangChain	HELD	agents/top.md, agents/trending.md	general-purpose, not education; 0 new education agents
+L1-global-agents	(same)	Dify is NOT OSI (Dify Open Source License); OpenClaw "Other"	HELD	intel/measured-unusable.md class	licence-flag already carried
+L2-trending	github trending education AI 2026 repository	HKUDS/DeepTutor, reported trending 2026-10-30	HELD	agents/trending.md (659 occurrences)	-
+L2-trending	(same)	microsoft/ai-agents-for-beginners; rohitg00/ai-engineering-from-scratch; Marktechpost/AI-Agents-Projects-Tutorials	HELD	5 files	curricula, not agents
+L3-trends	AI education industry trends 2026	Research&Markets ~USD 10.6B 2026 -> 42.48B 2030 @41.5% CAGR	HELD	4 files	-
+L3-trends	(same)	Market Research Future USD 207.62B by 2035	NEW	-	ORDER-OF-MAGNITUDE OUTLIER vs 42.48B/2030; recorded as a spread marker, NOT carried as a forecast
+L3-trends	(same)	US ED released USD 169M FIPSE awards incl. responsible AI use	HELD	3 files	-
+L3-trends	(same)	OECD Digital Education Outlook 2026: AI helps only where pedagogy stays in control	HELD	-	-
+L4-north-america	AI education North America 2026 adoption regulation players	>4 in 5 teens have used AI tools; ~half of schools have no policy	HELD	-	-
+L4-north-america	(same)	Stanford AI Index 2026: only 6% of teachers say their school's AI policy is clear	HELD	-	-
+L4-north-america	(same)	~100 state bills tracked (PIE Network); Illinois guidance due 2026-07-01; North Carolina K-12 AI standards	HELD	3 and 6 files	-
+L4-north-america	(same)	Panorama Education worked with Utah, North Carolina, West Virginia, Wisconsin on guiding principles	NEW	-	a NAMED North America player; demand-side
+L5-emea	AI education EMEA Europe Middle East Africa 2026 adoption regulation players	Futuresource: 67% of teachers use AI tools; pilots -> structured rollouts	HELD	1 file	-
+L5-emea	(same)	Epson survey UK/FR/IT/DE/ES/PL: 76% of students expect to use AI in learning	HELD	1 file	-
+L5-emea	(same)	Digital Omnibus political agreement 2026-05-07; education high-risk duties from 2 Dec 2027	HELD and CONFIRMS THE BASE	7 files; 2026/1744 in 6	the field still mis-states this as 2 Dec 2026; the base resolved 2027-12-02 under Reg (EU) 2026/1744
+L5-emea	(same)	Council conclusions on teachers and AI, 2026-05-11; Eurydice 2026 digital education report; ISO/IEC 42001	HELD	3 and 1 files	-
+L5-emea	(same)	Digital Education Council EMEA Summit: 41 leaders, 30 institutions, 14 countries, Paris	HELD	-	-
+L6-apac	AI education APAC Asia Pacific 2026 adoption regulation players	APAC fastest-growing; 20.9% CAGR 2024-29 from ~USD 591.6M (2024)	HELD	8 and 2 files	-
+L6-apac	(same)	EdTech Hub via secondary: ~86% of SEA teachers already use AI tools	HELD	4 files	secondary source, unverified at origin
+L6-apac	(same)	Philippines DepEd AGAP.AI launched Jan 2026; National Education Plan 2026-2035	HELD	2 files	-
+L6-apac	(same)	Clarivate compares AI policy and AI ethics education across 7 APAC countries/regions	HELD	2 files	-
+L6-apac	(same)	Cambridge English (CUP&A) APAC leadership summit, Kuala Lumpur 2026-04-23/24, 200+ leaders incl. Ministries	NEW	-	a NAMED APAC convening body; demand-side
+L7-latam-es	IA educacion America Latina 2026 adopcion regulacion actores	Uniandes/Algoritmos Publicos: 716 AI regulatory instruments across 23 countries and territories	HELD	5 files	-
+L7-latam-es	(same)	no LATAM country has a dedicated national AI law in force	HELD	-	-
+L7-latam-es	(same)	UNESCO + CEPAL Observatorio de IA en Educacion para America Latina y el Caribe	HELD	2 files	-
+L7-latam-es	(same)	Tec de Monterrey: 92% of regional higher-ed students use AI tools regularly	HELD	4-5 files	-
+L7-latam-es	(same)	regional survey, 200 institutions, 19 countries, Aug-Oct 2025; IDB school-readiness study; Mexico's 10 classroom principles	HELD	-	-
+L8-verticals	open source education platform LMS SIS MIT Apache Moodle alternative 2026	Sakai Apache-2.0/ECL-2.0 (Apereo); OpenEduCat LGPL-3.0; Open edX AGPL-3.0; Canvas AGPL-3.0; ILIAS GPL-3.0; Chamilo GPL-3.0; Moodle GPL-3.0	HELD	verticals/solutions.md, repos/foundations.md	whole leg returned 0 new platforms and one vendor's comparison pages

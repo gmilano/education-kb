@@ -1,0 +1,12 @@
+channel	probe	result	case_sensitive	held_before_p881	note
+api.github.com/repos/*	curl -s -i	403 "GitHub access to this repository is not enabled for this session"	n/a (authoritative when UP)	HELD (p874, repos/trending.md)	metadata channel DOWN: no spdx_id, no stars, no forks, no pushed_at
+api.github.com/search/repositories	curl	403 same body	n/a	HELD (p874)	p878/p879/p880 discovery route is CLOSED this pass
+github.com (HTML)	curl -s -o /dev/null -w %{http_code}	403	n/a	HELD (p874)	-
+codeload.github.com	curl tar.gz refs/heads/master	403	n/a	HELD	-
+git ls-remote	git ls-remote --heads/--symref	200, refs returned	NO - openolat/openolat == OpenOLAT/OpenOLAT	HELD (p874)	liveness + default branch + HEAD sha
+raw.githubusercontent.com	curl <slug>/<branch>/<path>	200 on a real path	NO - all three casings return 200	HELD (p874)	grant BYTES: size + sha256 + first line
+git clone --depth 1	clone then git log -1 --format=%cI	works	n/a	HELD (3 shelves)	commit DATE and timezone offset: liveness without the metadata channel
+git -c http.followRedirects=false ls-remote	both sides of 3 rename pairs	returns the sha ANYWAY	n/a	HELD (agents/trending.md)	REFUTED as a direction oracle: identity yes, direction no
+WebFetch on github.com	WebFetch github.com/openolat/openolat	page returned; breadcrumb + <title> give canonical case	YES - the ONLY case-authoritative channel up	channel HELD (6 shelves); CASE-AUTHORITATIVE use is NEW	1 call per slug; also returned 452 stars
+make hooks (aggregate target)	bash	DENIED by the external-code classifier	n/a	class HELD (p662, 12 consecutive passes re address-ledger.py)	-
+make <gate> (one gate at a time)	bash, 18 invocations	ALL RAN	n/a	NEW	the suite IS runnable gate-by-gate; no pass need go without it

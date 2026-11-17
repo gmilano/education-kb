@@ -38,7 +38,7 @@ lookups `p875` used; 44 English legs returned **546 measured repositories** and 
   LATAM-absence claim in this KB is an artefact of English-only keyword legs.**
 
 🟢 **`p877`'s two education-side licence anomalies independently re-confirmed by byte-read:**
-`OpenOlat/OpenOlat` on `master` is a byte-identical **Apache License 2.0** preamble and
+`OpenOLAT/OpenOLAT` on `master` is a byte-identical **Apache License 2.0** preamble and
 `Gego-K12/gegok12` on `main` is **MIT** — so the `NOASSERTION` note below stands, and its cause is
 now exact rather than inferred: **GegoK12's `LICENSE` carries an HTML comment,
 `<!-- SPDX-License-Identifier: MIT -->`, on line 3**, defeating the classifier on a file that
@@ -150,7 +150,7 @@ file that no licence check could have produced**:
 > **high stars, 14 months idle; stars and liveness are independent signals** and this file should
 > not let one stand in for the other.
 
-A licence mismatch worth carrying to a client conversation: **`OpenOlat/OpenOlat` and
+A licence mismatch worth carrying to a client conversation: **`OpenOLAT/OpenOLAT` and
 `BerriAI/litellm` both return `NOASSERTION` from GitHub's SPDX detector** while their licence bytes
 read Apache-2.0 and MIT. The byte-read is authoritative — the cause is almost certainly a modified
 licence header — **but a client's counsel will run the automated check and get `NOASSERTION`.
@@ -170,6 +170,23 @@ These are the load-bearing pieces an education build sits on: the standards plum
 makes a tool interoperable with institutional systems, and the AI substrate that makes it
 work. The standards layer matters more here than in most verticals — an education tool that
 cannot speak LTI, xAPI/Caliper, QTI or Ed-Fi cannot be bought by a school district.
+
+## 🆕 `p881` · 2026-11-17 — what changed on this shelf
+
+🟢 **Two slug corrections, `OpenOlat/OpenOlat` → `OpenOLAT/OpenOLAT`**, discharging `880-G4` on this
+shelf ([`record`](../evidence/case-oracle.2026-11-17-p881.tsv)). The **product** is branded *OpenOlat*
+and the **addresses** are `OpenOLAT/OpenOLAT`; a blanket replace would have broken the product name, so
+only the slug token was changed.
+
+🔴 **No foundation row was added, and that is a measurement, not an omission.** `p881`'s eight WebSearch
+legs — global, trending, verticals, trends and four regional — returned **0 new repositories**
+([`record`](../evidence/websearch-legs.2026-11-17-p881.tsv)). Three passes running (`p879`, `p880`,
+`p881`) this channel has produced no new supply.
+
+🔴 **`gate-grant-path` reads `0` grant claims on this shelf** because the tables now publish
+`Licence (byte-read)` with no branch/path column. A zero parse is not a clean shelf; it is in `p881`'s
+gate triage as a shelf defect with a named remedy
+([`record`](../evidence/gate-triage.2026-11-17-p881.tsv)).
 
 ## 🆕 `p880` · 2026-11-17 — what changed on this shelf
 

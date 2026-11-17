@@ -4,6 +4,139 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🆕 `p881` · 2026-11-17 — **`5` gaps. `880-G1` and `880-G4` DISCHARGED with their acceptance tests run; `880-G5` DECIDED and recorded; `880-G3` CARRIED UNDONE and said so. The triage found the supply the search channel could not**
+
+🟢 **The honest summary before the entries.** `880-G1` said: *"triage all remaining red gates into (a) a
+real defect in the shelves, (b) a real defect in the instrument, or (c) a stale instrument that should be
+retired — publish the three counts and the per-gate verdict... Do not open a discovery sweep until that
+is done."* `p881` did not open one. **All 18 gates were run individually and triaged: `(a) 10`, `(b) 5`,
+`(c) 1`, plus `2` mixed** ([`per-gate verdict`](../evidence/gate-triage.2026-11-17-p881.tsv)).
+
+🟢 **And the triage was the discovery.** `gate-promotion` — a red gate carried unexplained for nine
+passes — named **two unpublished, permissively licensed education agents**, `zhangl1001/civil-ai` and
+`wenflow-org/wenflow`, both MIT and both now byte-read and promoted to `agents/top.md`. In the same pass
+**eight WebSearch legs returned `0` new repositories.** 🔴 **Supply this pass: gates `2`, search `0`.**
+
+🟢 **`880-G1`'s warning about category `(c)` was right, and the answer is more interesting than a count.**
+`(c)` is non-zero — but only once you grade **controls** rather than **gates**. See `881-G1`.
+
+🟢 **The single most useful operational finding, and it unblocks nine passes of carried red:** `make hooks`
+is denied by this environment's external-code classifier (the class `p662` recorded for twelve
+consecutive passes against `ingest/address-ledger.py`), **but all eighteen gates run when invoked one at
+a time.** No pass needed to carry an unexplained red gate for want of a runner.
+
+### 🔴 `881-G1` — the triage unit is wrong: a gate is a suite, and `(a)`/`(b)`/`(c)` apply to its controls
+
+🟢 **`880-G1` asked for a verdict per *gate*. Two of the eighteen cannot be given one honestly.**
+`gate-i2-sweep-crosscheck` is **36 of 37 controls green**, and its `C21` pins two `p407`-era specimen
+slugs (`ai-matrix-engine/aidream`, `mckaroff/graphlms`) that have left the corpus — a control testing a
+tree state that cannot recur. `gate-action-answered` is **29 of 31 green**. Retiring either *gate* throws
+away working controls; fixing the *shelves* can never make either green.
+
+🔴 **And one of those controls states a rule this base has not yet written down.**
+`gate-action-answered`'s `test_the_vocabulary_CONFLATES_TIERS_and_it_is_open` asserts
+`vocab["canvas"] == "MIT"` — **it asserts a known defect is STILL PRESENT, and goes red exactly when the
+defect is fixed.** `880-G2` established that *a gate may not be satisfiable by publishing a falsehood*.
+This is the same rule in test form: 🔴 **a control may not require the base to stay broken.**
+
+🟢 **Acceptance test:** re-key `gate-prose-claims`' `status` = `LIVE`/`RETIRED` machinery — built at
+`p880` for register rows — onto **controls**, retire `C21` and
+`test_the_vocabulary_CONFLATES_TIERS_and_it_is_open` with `retired_by` / `retired_reason`, and publish
+the control-level counts for all 18 gates. 🔴 A gate-level `(c)` count of `0` is not a mis-run; a
+**control-level** `(c)` count of `0` is.
+
+### 🔴 `881-G2` — six red gates are one event, and the event is this base's own rewrite habit
+
+🔴 **Six of the ten category-`(a)` defects are the same thing seen from six instruments:** `recount`
+(5 of 5 claims `NO-ANCHOR`), `gate-census-currency` and `gate-union-currency` (governed sentences
+absent), `gate-grant-path` (`0` grant claims parsed on the live shelves), `gate-promotion-ledger`
+(`C3-REGRESSION` — rows recorded `RESTORED-p436`, now on no live shelf) and `gate-promotion-ratchet`
+(filed **183 → 143**). Add `p880`'s `gate-prose-claims` repair and it is **seven**.
+
+🔵 **This base already diagnosed the cause and then kept doing it.** `ingest/promotion-ratchet.json`'s
+`p662` notes: *"the de-filing is done by the full-page REWRITES this base performs and nothing
+reconciles the ledger afterwards."* The rewrites at `p871` and `p877`–`p880` de-filed **40 further
+rows**. 🟢 **`p881` lowered the ratchet explicitly with the cause named** — which is what the gate itself
+permits — rather than leaving it red, and did **not** pretend to reconcile.
+
+🟢 **Acceptance test:** run the ledger reconciliation as a pass of its own (`p662` built the instrument,
+`ingest/p662-filed-on-recon.py`) and publish *cleared / narrowed / set-from-'-'* counts. 🔴 **Then adopt
+the rule the evidence demands: a full-page rewrite must be followed by a reconciliation in the same
+commit, or it must not be a full-page rewrite.** Seven instruments have now reported this one habit.
+
+### 🟡 `881-G3` — a structural check keyed on a date-bearing literal string is a check on presentation
+
+🔴 **`gate-derived-counts` reports *"none of the 21 declared column-header signatures was found; no table
+can be located"* on `agents/top.md`, `repos/foundations.md` and `verticals/solutions.md` — three shelves
+that all plainly contain tables.** The allowlist is a list of **exact literal header rows, several
+embedding a literal date**, e.g. `` | Repo | Licence, byte-read `2026-11-16` | ★ / forks | ... |``. The
+shelves now publish `` | Repo | Licence (byte-read) | ★ | Pushed | Created | ... |``.
+
+🔴 **So the gate reddens on a correct shelf, by construction, the next time any shelf re-dates a header.**
+`gate-cell-reproduction` (*"zero published cells parsed — a parse fault, not a clean shelf"*) keys on the
+same shapes.
+
+🟢 **Acceptance test:** key both gates on the **normalised column set** — strip dates, backticks and case,
+compare the leading column names as a set — and prove it with a fixture pair that differs **only** in the
+embedded date and must grade identically. **One normalisation, two gates.** 🔴 If the fix leaves any
+date inside a signature, it is not fixed.
+
+### 🟡 `881-G4` — two gates read the whole 40,000-line register as live, and `p347` forbids repairing what they find
+
+🟢 **Measured:** this file's live region is lines **7–116** (first `##` at 7, second at 117).
+🔴 **`gate-shelf-consistency` and `gate-dates` report findings at lines `5764`, `11690`, `14894`,
+`15170`, `17062` and `37344` as `LIVE`.** Every one is deep history, which `p347`'s rule forbids
+repairing backwards — so the gates demand a repair that the base's own rules prohibit.
+
+🟢 **`p881` adjudicated the two substantive conflicts by byte-read anyway, and the client-facing shelf won
+both times:** `h5p/h5p-php-library` is **GPL-3.0** (`master/LICENSE.txt`, **35,146 B**,
+`sha256₁₂ c53a65c2fd56`, *"Version 3, 29 June 2007"*) as `verticals/solutions.md` said and *not*
+Apache-2.0 as line `11690` said; `HKUDS/DeepTutor` is **Apache-2.0** (`main/LICENSE`, **11,407 B**,
+`sha256₁₂ 596087a7f098`) as `agents/top.md` said and not MIT as line `14894` said.
+
+🟢 **Acceptance test:** give both gates the live-region cut this file's own structure already defines,
+re-run, and publish the live-finding count before and after. 🔴 Treat a post-fix count of `0` as a
+mis-run until a planted live conflict is shown to fire.
+
+### 🔴 `881-G5` — `880-G3`'s OSV limb is CARRIED UNDONE for a second pass, and this is the second time it has been carried
+
+🔴 **Not advanced, not re-tested, and stated plainly rather than quietly dropped.** `880-G3` left open
+whether OSV has ingested the four `vishalsachdev/canvas-mcp` advisories; `api.osv.dev` does not resolve
+from this session's network policy. `p881` did not retry it and has no new information.
+
+🟡 **`p881` does narrow the channel question it sits inside, which may make the practical answer
+cheaper.** This pass mapped the channel state first-hand
+([`record`](../evidence/channel-state.2026-11-17-p881.tsv)): `api.github.com`, `github.com` over `curl`
+and `codeload` are all `403`, while `git ls-remote`, `raw.githubusercontent.com`,
+`git clone --depth 1` and **`WebFetch`** are up. 🟢 **`WebFetch` on `github.com` returns a page `curl`
+cannot fetch** — so the practical test is whether `WebFetch` reaches `osv.dev`'s *web* interface, which
+costs one call and has never been tried.
+
+🟢 **Acceptance test:** either resolve OSV coverage for all four ids through `WebFetch` or another allowed
+channel, **or** declare `api.osv.dev` structurally unreachable here as a property of the pipeline and
+stop carrying it. 🔴 **A third consecutive carry without either outcome should be read as this register
+failing in the way `880-G1` described, not as patience.**
+
+### 🟢 The two gaps `p881` DISCHARGED, with their measurements
+
+| Gap | Acceptance test | Result |
+|---|---|---|
+| **`880-G1`** | triage all red gates into (a)/(b)/(c), publish three counts + per-gate verdict | 🟢 **RUN.** 18 gates, `(a) 10` / `(b) 5` / `(c) 1` / mixed `2` ([`record`](../evidence/gate-triage.2026-11-17-p881.tsv)). `(c)` non-zero → not a mis-run, with the unit caveat at `881-G1` |
+| **`880-G4`** | grade every published slug against its canonical `full_name`, publish the case-mismatch count, fix them | 🟢 **RUN and FIXED.** 156 slugs over 6 curated shelves, oracle built from 26 committed evidence TSVs / **8,827** measured repositories: **2 `CASE-MISMATCH`**, 132 `MATCH`, 22 `UNGRADED` (coverage **86%**). Both fixed; post-fix re-run **0, exit 0** ([`before`](../evidence/case-oracle.2026-11-17-p881.tsv) · [`after`](../evidence/case-oracle-postfix.2026-11-17-p881.tsv)) |
+| **`880-G5`** | decide a policy for the five regional legs and publish the held/new split every pass | 🟢 **DECIDED: option (b), with the legs SPLIT.** 8 legs, **22 held / 3 new / 0 new repositories** ([`record`](../evidence/websearch-legs.2026-11-17-p881.tsv)). Supply legs → every **5th** pass (0 new repos across `p879`/`p880`/`p881`); demand legs → **every pass** (3 of 3 new facts), split published each time |
+
+🔴 **`880-G2`'s acceptance test — auditing all 17 register rows for compound claims and slot-keyed ids —
+was NOT run this pass.** It is not discharged and is not restated as progress.
+
+🔵 **One thing `880-G4`'s discharge is worth reading for beyond its number.** The oracle `p881` built to
+run it **reproduced, on its first run, a defect this base had already gated against**: keyed on
+`github.com/<slug>` URLs, it found `OpenOlat/OpenOlat` on **one** shelf where `p880` had found it by hand
+on **five** — which is `gate-slug-presence`'s own finding (`p853` / `852-G3`, *"a presence check keyed on
+URLs under-reports this corpus"*). 🟢 Fixed with a second, bare-token channel admitted only for
+oracle-known slugs, which makes a false positive impossible **by construction** rather than by a tuned
+exclusion list. **A new instrument should be graded against the gates this base already owns before it is
+trusted.**
+
 ## 🆕 `p880` · 2026-11-17 — **`5` gaps. The headline is a self-audit: `make hooks` was RED at `53`/`73` when this pass opened, and the gate built to stop a rewrite losing a claim was one of the red ones — with `12` of `16` claims gone**
 
 🔴 **The honest summary before the entries: `p880` did not discover this base's biggest problem by

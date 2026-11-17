@@ -36,7 +36,7 @@ T14**, and moves the longest-standing gap in this KB.
   incumbent SIS (`portabilis/i-educar`, GPL-2.0, 726 ★, CI, tagged releases). **The absence was a
   property of the search, not of the region.**
 - 🟢 **T14 confirmed and its mechanism made exact.** `p878` independently byte-read both standing
-  education-side anomalies and **confirms `p877` in both**: `OpenOlat/OpenOlat` is byte-identical
+  education-side anomalies and **confirms `p877` in both**: `OpenOLAT/OpenOLAT` is byte-identical
   Apache-2.0, `Gego-K12/gegok12` is MIT. GegoK12's classifier abstention is now explained rather
   than inferred — **its `LICENSE` carries an HTML comment, `<!-- SPDX-License-Identifier: MIT -->`,
   on line 3**, so GitHub abstains on a file that states its own SPDX identifier. 🔵 **T14 and
@@ -96,6 +96,21 @@ origin and its licensing. Each trend is tied to something measured or verified; 
 available support is a vendor blog or a search summary, that is stated. **Note this pass's
 evidential split:** repository claims were verified first-hand, while every trial, survey and
 regulatory date is a search-engine summary of a page no channel in this session could open.
+
+## 🆕 `p881` · 2026-11-17 — what changed on this shelf
+
+🟢 **One new trend, `T19`, and it is about this base's own instruments rather than the market** — see
+below. In short: the eighteen red gates were holding two build-safe MIT education agents that nine
+discovery sweeps and three saturated WebSearch passes had missed.
+
+🟢 **Two slug corrections** (`OpenOLAT/OpenOLAT`, `sudosylabs/Proctor`), per `880-G4`.
+
+🔵 **Channel state, measured rather than assumed** ([`record`](../evidence/channel-state.2026-11-17-p881.tsv)):
+`api.github.com`, `github.com` over `curl` and `codeload` are all `403` for this session; `git ls-remote`,
+`raw.githubusercontent.com`, `git clone --depth 1` and `WebFetch` are up. **The refs channel and the bytes
+channel are both case-INSENSITIVE** (measured on three casings), so the only case-authoritative channel
+available when the API is down is **`WebFetch` on `github.com`** — which is new, and is what made
+`880-G4` runnable at all.
 
 ## 🆕 `p880` · 2026-11-17 — what changed on this shelf
 
@@ -875,7 +890,7 @@ a **new gap opened** (the dormant LRS).
   `ganesh-786/Proctor`, `amaanwarsi/Proctora`, `code-by-abrar/Online-Proctoring-system` — and four
   are AGPL-3.0. 🔴 **The accurate gap is maturity, not licence:** all three permissive projects are
   single-branch and untagged, and `Proctora`'s own README says it should not be presented as a
-  secure exam platform; the one complete platform (`sudosylabs/proctor`) is copyleft. 🔴 **A
+  secure exam platform; the one complete platform (`sudosylabs/Proctor`) is copyleft. 🔴 **A
   secondary source was corrected in the same leg** — `SriSatyaLokesh/pariksha` was presented as
   *the* Apache-2.0 option in the category and its bytes say **AGPL-3.0**. 🔵 **The method lesson is
   the one this KB keeps re-learning:** *"we searched and found none"* decayed into *"none exists"*
@@ -948,3 +963,35 @@ a **new gap opened** (the dormant LRS).
   Allowing `arxiv.org`, `aclanthology.org` and `edworkingpapers.com` in the session's network
   settings would upgrade the whole efficacy section from secondary to primary, and is the single
   highest-leverage change available to this KB.
+
+
+## T19 — The red gates were holding the supply the search channel could not find — new in `p881`
+
+🔴 **The measurement that makes this a trend rather than an anecdote.** `p881` ran eight WebSearch legs
+(global agents, trending, verticals, trends, and one each for North America, EMEA, APAC and LATAM) and
+**eighteen red gates, one at a time**. The legs produced **0 new repositories** and 3 new demand-side
+facts out of ~25 checkable findings. **`gate-promotion` alone produced two previously unpublished,
+byte-verified, MIT-licensed education agents** — `zhangl1001/civil-ai` and `wenflow-org/wenflow`.
+**Supply, this pass: gates 2, search 0.**
+
+🔵 **Why this is structural and not luck.** A discovery sweep asks *"what exists?"*, and `T12` already
+established that the answer in education is a short list and a long tail of zeroes — so the sweep keeps
+re-finding the short list. A promotion gate asks a different question: *"what has this base already
+measured and never filed?"* That question has a non-empty answer precisely **because** the base is large
+and its curated shelves are rewritten; every full-page rewrite de-files rows
+(`ingest/promotion-ratchet.json`'s own notes diagnosed this at `p662`, and `p881` measured the ratchet
+down again, **183 → 143**). **The rewrites manufacture the backlog, and the gate is the only thing that
+can see it.**
+
+🟡 **The cost side, stated honestly.** Both new agents are APAC-origin with primarily Chinese
+documentation, and this base has **never run a Chinese-language discovery leg** — `p878` added Spanish
+and Portuguese and got 304 additional repositories from them. So part of what the gate recovered is
+supply a *better search* would also have found. That is a reason to add the leg, not a reason to
+discount the gate.
+
+🟢 **What to do with this.** Two things, and they are cheap. **(1)** Treat a red promotion gate as a
+discovery queue with a known yield, not as a chore. **(2)** Stop reading `make hooks` as all-or-nothing:
+the aggregate target is refused by this environment's classifier, but **all eighteen gates ran
+individually** (`evidence/channel-state.2026-11-17-p881.tsv`), which means the nine passes that carried
+`gate-prose-claims` red, and the nine that carried these eighteen, were never actually blocked from
+looking.

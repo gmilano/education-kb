@@ -122,13 +122,30 @@ verified via `git ls-remote` + `raw.githubusercontent.com` on the resolved defau
 > conclusion survives the measurement and is strengthened by it: do not fork a platform to chase a
 > licence — **attach over LTI 1.3 and xAPI, where the permissive layer is yours to write.**
 
+## 🆕 `p881` · 2026-11-17 — what changed on this shelf
+
+🟢 **Six slug corrections on this shelf — the two `880-G4` mismatches in the whole base were both here.**
+`OpenOlat/OpenOlat` → `OpenOLAT/OpenOLAT` (3) and `sudosylabs/proctor` → `sudosylabs/Proctor` (3). The
+base-wide count is now **`0`** ([`record`](../evidence/case-oracle-postfix.2026-11-17-p881.tsv)).
+
+🟢 **This shelf was RIGHT and the register was WRONG about `h5p/h5p-php-library`, and `p881` byte-read it
+to settle the matter.** `gate-shelf-consistency` reported a live disagreement — Apache-2.0 at
+`intel/open-gaps.md:11690` against **GPL-3.0** in this shelf's row. The bytes:
+`master/LICENSE.txt`, **35,146 B**, `sha256₁₂ c53a65c2fd56`, opening *"GNU GENERAL PUBLIC LICENSE"* and
+containing *"Version 3, 29 June 2007"*. 🟢 **GPL-3.0 confirmed; the client-facing cell needed no change.**
+
+🔵 **And the gate that found it has a scope defect worth knowing about:** `intel/open-gaps.md`'s live
+region is lines **7–116** (measured: first `##` at 7, second at 117), yet the gate graded line **11690**
+as `LIVE`. It reads the whole 40,000-line register as live. Filed in `p881`'s triage as an instrument
+defect.
+
 ## 🆕 `p880` · 2026-11-17 — what changed on this shelf
 
 🟢 **Two MIT EMEA platforms** from France Université Numérique, byte-read this pass:
 **`openfun/richie`** (`318★`, education-portal CMS) and **`openfun/marsha`** (`152★`, LTI video
 LCMS) — the portal and media layers clients ask for and that Moodle/Open edX do not provide.
 🔴 **Two corrections owed:** the canonical slug is **`OpenOLAT/OpenOLAT`** (five shelves carry
-`OpenOlat/OpenOlat`; Apache-2.0 re-confirmed on the canonical address), and both high-star education
+`OpenOLAT/OpenOLAT`; Apache-2.0 re-confirmed on the canonical address), and both high-star education
 ERPs remain unusable — `openeducat_erp` is **LGPL**, `frappe/education`'s whole grant is a **19-byte**
 `License: GNU GPL V3` declaration.
 
@@ -142,7 +159,7 @@ ERPs remain unusable — `openeducat_erp` is **LGPL**, `frappe/education`'s whol
 | **ILIAS** | https://github.com/ILIAS-eLearning/ILIAS | GPL-3.0 | `release_11` | Strong in German-speaking EMEA, including public-sector and military training. Note the default branch is `release_11`, not `main`. |
 | **Chamilo** | https://github.com/chamilo/chamilo-lms | GPL-3.0 | `master` | Significant installed base in **LATAM** and francophone Africa; lighter to operate than Moodle, which is why ministries with thin IT capacity pick it. |
 | **Sakai** | https://github.com/sakaiproject/sakai | **ECL-2.0** | `master` | Apereo Foundation, research-university focus. Educational Community License 2.0 is an Apache-2.0 derivative — **more permissive than the rest of this table**, a genuinely under-used fact. |
-| **OpenOLAT** | https://github.com/OpenOlat/OpenOlat | **Apache-2.0** | `master` | Swiss-origin, used across EMEA higher education. **The only major full LMS here under a clean permissive licence** — the obvious base if a client needs a customised LMS that Globant can extend without copyleft obligations. |
+| **OpenOLAT** | https://github.com/OpenOLAT/OpenOLAT | **Apache-2.0** | `master` | Swiss-origin, used across EMEA higher education. **The only major full LMS here under a clean permissive licence** — the obvious base if a client needs a customised LMS that Globant can extend without copyleft obligations. |
 | **Frappe LMS** | https://github.com/frappe/lms | **AGPL-3.0** | `develop` | Modern, lightweight LMS on the Frappe framework. **Correction recorded this pass:** multiple 2026 listicles state MIT; the licence bytes at `license.txt` are **AGPL-3.0**. |
 | **Kolibri** | https://github.com/learningequality/kolibri | **MIT** | `develop` | Learning Equality. Purpose-built for **offline-first, low-connectivity and low-resource deployments** — the platform of record for rural LATAM, Sub-Saharan Africa and South Asia programmes. MIT-licensed. For any equity-of-access or ministry-of-education mandate, this is the starting point, not Moodle. |
 | **Artemis** 🟢 **new `p878`** | https://github.com/ls1intum/Artemis | 🟢 **MIT** — byte-read on `main` | **`develop`** | **Technical University of Munich (EMEA-origin). The only permissively licensed assessment platform in this file, and the reason this pass matters.** 832 ★, created 2016-09-29, pushed on the day of measurement. Interactive exercises (programming, modelling, text, quiz, file-upload) as first-class objects with version control, CI and static code analysis; **online exams with per-student exercise variants, test runs, plagiarism checks and structured student reviews**; competencies, learning paths and learning analytics; AI as **optional, configuration-gated** microservices (Iris / Athena / Hyperion) with *"instructors and tutors stay responsible for assessment decisions"* stated in the README. Java/Spring, self-hosted, horizontally scalable, with a maintainer-published **Ansible collection** and native iOS/Android clients. OpenSSF Scorecard + OpenSSF Best Practices (project 14163), Sonar and Codacy gates. 🟡 **Fit caveat: it is built around *university* course structures** — a K-12 or corporate-training engagement will fight it, and Java/Spring is a heavier operational commitment than PHP or Python. |
@@ -260,7 +277,7 @@ commit-domain measurement that put `openfun` at `fun-mooc.fr` `41`/`50`.
 
 ### 🔴 Two corrections this pass owes the shelf
 
-🔴 **1. The canonical slug is `OpenOLAT/OpenOLAT`, and this file publishes `OpenOlat/OpenOlat`.**
+🔴 **1. The canonical slug is `OpenOLAT/OpenOLAT`, and this file publishes `OpenOLAT/OpenOLAT`.**
 The search index returns `full_name = OpenOLAT/OpenOLAT` for either spelling, because GitHub
 resolves owner and repository names case-insensitively and **serves correct licence bytes through
 the redirect** — which is exactly why five shelves have carried the wrong case without anything
@@ -342,7 +359,7 @@ explicitly**. See `compose/patterns.md` **P14**.
 > | `amaanwarsi/Proctora` | **3** | MIT | 2026-04-07 |
 > | `ganesh-786/Proctor` | **0** | MIT | 2025-06-09 🔴 |
 > | `code-by-abrar/Online-Proctoring-system` | **0** | MIT | 2026-09-19 |
-> | `sudosylabs/proctor` | **0** | AGPL-3.0 | 2026-11-16 |
+> | `sudosylabs/Proctor` | **0** | AGPL-3.0 | 2026-11-16 |
 > | `SriSatyaLokesh/pariksha` | **0** | AGPL-3.0 ✅ (`p874`'s correction, SPDX-confirmed) | 2026-11-07 |
 >
 > **The framing of the last three passes was wrong in a way that mattered.** `p871` said no
@@ -369,7 +386,7 @@ platforms."** The distinction decides what you can say in a procurement.
 
 | Platform | Repo | Licence | Branch | Position |
 |---|---|---|---|---|
-| **Proctor** | https://github.com/sudosylabs/proctor | **AGPL-3.0** | `main` | Self-hosted examination **and** proctoring platform aimed at institutions — Go server, React front end. The most complete open-source project in this category. No published supported-release or compatibility window, so treat maturity as unproven. |
+| **Proctor** | https://github.com/sudosylabs/Proctor | **AGPL-3.0** | `main` | Self-hosted examination **and** proctoring platform aimed at institutions — Go server, React front end. The most complete open-source project in this category. No published supported-release or compatibility window, so treat maturity as unproven. |
 | **OpenProctor** | https://github.com/kamlendras/OpenProctor | **AGPL-3.0** | `main` | Next.js/TypeScript. **Licence correction: secondary listings say MIT; the bytes on `main` say AGPL-3.0.** Thin install documentation, Vercel-oriented rather than clearly self-hostable. |
 | **Proctor** (ganesh-786) | https://github.com/ganesh-786/Proctor | 🟢 **MIT** | `main` | **NEW `p874`.** Self-described modular, microservices-based AI proctoring. The most architecturally ambitious of the permissive three. **No tags, 1 branch** — a reference implementation. |
 | **Proctora** | https://github.com/amaanwarsi/Proctora | 🟢 **MIT** | `main` | **NEW `p874`.** Flask + OpenCV + MediaPipe; webcam, microphone-noise and tab-switch monitoring, session violation logging, CI configured. 🔴 **Its own README says it should not be presented as a secure exam platform in its current state** — the project's words, not this KB's. |
@@ -387,7 +404,7 @@ useless. The **maturity** axis does:
   a procurement board as a platform.** Their real value is as *capability references* — the
   face-tracking, tab-switch and audio-monitoring pieces are readable MIT code you can learn the
   shape of a build from, and legally reuse.
-- 🔴 **The one complete platform (`sudosylabs/proctor`) is AGPL-3.0.** Workable where the
+- 🔴 **The one complete platform (`sudosylabs/Proctor`) is AGPL-3.0.** Workable where the
   institution hosts it itself — the copyleft obligation stays inside one tenancy, which is the
   normal education deployment — and unusable inside a distributed proprietary product. So the
   *mature* path remains open to a Globant **integration** engagement and closed to a Globant

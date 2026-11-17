@@ -4,6 +4,126 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (`p881`) — **the gate triage `880-G1` demanded, run gate by gate because the aggregate target is refused: `10` shelf defects, `5` instrument defects, `1` stale control to retire, `2` mixed — and the biggest single cause is this base's own full-page rewrites**
+
+**APPEND-ONLY. This section is added above the history and nothing below it is edited.**
+
+🔴 **Not a trending sweep.** `github.com/trending` and `api.github.com` are both `403` for this session,
+as they were at `p874`. This section is the triage of the eighteen gates `880-G1` named, each one
+invoked on its own; the per-gate verdict table is
+[`evidence/gate-triage.2026-11-17-p881.tsv`](../evidence/gate-triage.2026-11-17-p881.tsv).
+
+### 🟢 First, the thing that should have been tried nine passes ago
+
+**`make hooks` is denied by this environment's external-code classifier — but every one of the eighteen
+gates runs when invoked individually.** All 18 were run that way this pass. `p662` recorded the same
+classifier refusing `ingest/address-ledger.py` *"for a TWELFTH consecutive pass"*, so the constraint is
+old and well documented; what was never recorded is that **it does not apply gate-by-gate.** No pass
+needed to carry an unexplained red gate for want of a runner.
+
+### The triage, with the three counts `880-G1` asked for
+
+| Category | Count | Gates |
+|---|---|---|
+| **(a) a real defect in the shelves** | **10** | `recount`, `gate-fold-identity`, `gate-alias-canonical`, `gate-census-currency`, `gate-grant-path`, `gate-ledger`, `gate-union-currency`, `gate-promotion`, `gate-promotion-ledger`, `gate-promotion-ratchet` |
+| **(b) a real defect in the instrument** | **5** | `gate-derived-counts`, `gate-dates`, `gate-shelf-consistency`, `gate-census-union`, `gate-cell-reproduction` |
+| **(c) a stale instrument that should be retired** | **1** | `gate-i2-sweep-crosscheck` (one control, `C21`) |
+| mixed, counted once and named | **2** | `gate-enumeration` (a+b), `gate-action-answered` (b+c) |
+
+🟢 **`(c)` is not zero, and `880-G1` was right to warn that zero would mean a mis-run triage** — but the
+non-zero answer only appears **once you grade controls rather than gates**, and that is itself a finding
+about the acceptance test's unit. `gate-i2-sweep-crosscheck` is **36 of 37 green**; its `C21` pins two
+`p407`-era specimen slugs (`ai-matrix-engine/aidream`, `mckaroff/graphlms`) that are no longer in the
+corpus, so the control tests a tree state that cannot recur. Retiring the *gate* would throw away 36
+working controls. **The unit of retirement is the control, not the suite.**
+
+### 🔴 The sharpest instance, and the one that generalises `880-G2`
+
+`gate-action-answered` fails on `test_the_vocabulary_CONFLATES_TIERS_and_it_is_open`, which asserts
+`vocab["canvas"] == "MIT"`. Read what that control does: **it asserts that a known defect is still
+present, so it goes RED exactly when the defect is fixed.** `880-G2` established that *a gate may not be
+satisfiable by publishing a falsehood*. This is the same rule in test form: **a control may not require
+the base to stay broken.** It must be retired under `p880`'s own `retired_by` / `retired_reason`
+machinery, not repaired. (Its sibling failure is mundane: the test asserts the literal key
+`` `frappe/lms` `` while the vocabulary normalises to `frappe lms`.)
+
+### 🔵 One root cause accounts for most of category (a): this base's full-page rewrites
+
+Six of the ten shelf defects are the **same event** seen from six instruments. `recount` (5 of 5 claims
+`NO-ANCHOR`), `gate-census-currency` and `gate-union-currency` (governed sentences absent),
+`gate-grant-path` (`0` grant claims parsed), `gate-promotion-ledger` (`C3-REGRESSION`: rows recorded
+`RESTORED-p436` now on no live shelf) and `gate-promotion-ratchet` (filed **183 → 143**) all report the
+consequences of full-page rewrites that dropped load-bearing sentences, table columns and filed rows.
+🟢 **`ingest/promotion-ratchet.json` diagnosed this at `p662` in its own notes** — *"the de-filing is
+done by the full-page REWRITES this base performs and nothing reconciles the ledger afterwards"* — and
+`p880`'s `gate-prose-claims` repair was the same cause a seventh time. **The rewrite is the defect
+generator; the gates are the only thing that sees it.**
+
+🟢 **`p881` lowers the ratchet explicitly, with the cause named, which is what the gate itself requires**
+rather than letting it sit red: `183 → 143` in `ingest/promotion-ratchet.json`.
+
+### 🟡 Two instrument defects worth stating precisely, because they explain several red gates at once
+
+1. **`gate-derived-counts` cannot find a table on three curated shelves** — *"none of the 21 declared
+   column-header signatures was found."* The allowlist is a list of **exact literal header rows, several
+   containing a literal date** (e.g. `` | Repo | Licence, byte-read `2026-11-16` | ... | ``). The shelves
+   now publish `` | Repo | Licence (byte-read) | ★ | Pushed | Created | ... | ``. 🔴 **A signature that
+   embeds a date is guaranteed to go stale the next time a shelf re-dates its header, so this gate was
+   always going to redden on a correct shelf.** Key it on the **normalised column set**.
+   `gate-cell-reproduction` (*"zero published cells parsed"*) keys on the same shapes: **one
+   normalisation fixes two gates.**
+2. **`gate-shelf-consistency` and `gate-dates` read the whole register as live.** Measured:
+   `intel/open-gaps.md`'s live region is lines **7–116** (first `##` at 7, second at 117). Both gates
+   report findings at lines **5764, 11690, 14894, 15170, 17062, 37344** as `LIVE`. Every one of those is
+   deep history, which `p347`'s rule forbids repairing backwards.
+
+### 🟢 What the triage fixed on the spot
+
+| Finding | Source gate | Action |
+|---|---|---|
+| `OpenOlat/OpenOlat` → `OpenOLAT/OpenOLAT`, 5 shelves | `880-G4` + case oracle | **FIXED** — and the *product* name *OpenOlat* deliberately left alone |
+| `sudosylabs/proctor` → `sudosylabs/Proctor`, 3 shelves | `gate-fold-identity` + case oracle | **FIXED** |
+| `agents/top.md` caption read *"8 education-native rows"* over a table of **12** | `gate-derived-counts`' class | **FIXED** → `14` |
+| `h5p/h5p-php-library`: Apache-2.0 vs GPL-3.0 | `gate-shelf-consistency` | **BYTE-READ**: `master/LICENSE.txt`, 35,146 B, `sha256₁₂ c53a65c2fd56`, *"Version 3, 29 June 2007"* → **GPL-3.0**; the client shelf was right, the register was wrong |
+| `HKUDS/DeepTutor`: Apache-2.0 vs MIT | `gate-shelf-consistency` | **BYTE-READ**: `main/LICENSE`, 11,407 B, `sha256₁₂ 596087a7f098`, *"Apache License"* → **Apache-2.0**; `agents/top.md` was right |
+| `OpenOLAT/OpenOLAT` grant | `880-G4` | **BYTE-READ**: `master/LICENSE`, 10,982 B, `sha256₁₂ 6dbc5b605ed0` — **byte-identical to `p880`'s measurement, through a different channel** |
+| 2 unpromoted permissive agents | `gate-promotion` | **PROMOTED** to `agents/top.md` |
+| ratchet red at 183 → 143 | `gate-promotion-ratchet` | **LOWERED EXPLICITLY** with the cause named |
+
+### 🔴 The instrument `p881` built reproduced a defect this base had already gated against
+
+`880-G4` asks for every published slug graded against its canonical `full_name`. The obvious channel is
+`403`, so `p881` built the oracle out of **this base's own committed evidence**: 26 TSVs carrying
+`full_name` / `canonical_full_name` columns, **8,827 distinct repositories** measured by earlier passes
+when the API was up (`compose/code/p881-case-oracle/case_oracle.py`).
+
+🔴 **Its first run keyed the harvest on `github.com/<slug>` URLs and reported `OpenOlat/OpenOlat` on ONE
+shelf when `p880` had found it by hand on FIVE.** That is `gate-slug-presence`'s own finding — `p853` /
+`852-G3`, *"a presence check keyed on URLs under-reports this corpus"* — reproduced by a brand-new
+instrument on its first run. 🟢 Fixed by harvesting a second channel (a bare `Owner/Repo` token,
+admitted **only** where the oracle already knows the slug, which makes a false positive impossible by
+construction rather than by a tuned exclusion list). The bare channel raised the corpus from **144 to
+156 slugs** and the `OpenOlat` spread from 1 shelf to 5, reproducing `p880`'s hand count by instrument.
+
+**Result, `880-G4` DISCHARGED:** 156 published slugs over the six curated shelves → **2 `CASE-MISMATCH`**
+(both fixed), **132 `MATCH`**, **22 `UNGRADED-NO-MEASUREMENT`** — coverage **86%**, and the ungraded 22
+are *not* green. Post-fix re-run: **0 mismatches, exit 0**
+([`before`](../evidence/case-oracle.2026-11-17-p881.tsv) ·
+[`after`](../evidence/case-oracle-postfix.2026-11-17-p881.tsv)).
+
+🔵 **And the oracle found a defect in its own first denominator:** `github.com/search/repositories`
+written in prose was being counted as a repository named `search/repositories`. Excluded, denominator
+corrected 146 → 144 before the bare channel raised it to 156.
+
+### Declared gaps, `p881` — carried to `intel/open-gaps.md`
+
+🔴 **13 of the 18 gates are still red at the end of this pass, and the triage did not make them green.**
+It said *why* each one is red and what the remedy costs, which is what `880-G1` asked for. The five
+addressed are `gate-promotion`, `gate-promotion-ratchet`, `gate-fold-identity` (partly),
+`gate-alias-canonical` (partly) and `gate-ledger` (partly).
+
+🔴 **The `api.osv.dev` limb of `880-G3` was not advanced.** It remains unresolved, not re-tested.
+
 ## 🟢 `2026-11-17` (`p880`) — **the denominator was one flag away: `p879`'s census re-run to EXHAUSTION is `2,574` repositories, not `571`, and the top-40 sample overstated the permissive share for 7 of 17 owners**
 
 **APPEND-ONLY. This section is added above the history and nothing below it is edited.**

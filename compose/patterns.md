@@ -81,6 +81,16 @@ Effort estimates are studio-delivery estimates, not measurements.
 
 ---
 
+## 🆕 `p881` · 2026-11-17 — what changed on this shelf
+
+🟢 **One new recipe, `P22`, built on this pass's own two promotions** — `zhangl1001/civil-ai` as the
+agent foundation and `wenflow-org/wenflow` as the problem-first intake, wired to platforms this shelf
+already carries. It is below, with the licence boundary stated per component.
+
+🔴 **The two components are 20 and 5 days from their last commit respectively and neither has a measured
+star count**, because `api.github.com` is `403` this session. Price the maturity flags in
+`agents/top.md` into any engagement that starts from `P-22`.
+
 ## 🆕 `p880` · 2026-11-17 — what changed on this shelf
 
 🟢 **`P21` — the LMS write bridge, rebuilt**, restoring `CANVAS-TOKEN-RESIDUAL`: two mounts rather
@@ -1284,3 +1294,48 @@ multi-tenant management layer, and the per-district operational wrapper is bespo
 scoped. 🟡 And the LATAM repositories above were found **this pass**, by searching in Portuguese and
 Spanish for the first time — they are newly surfaced to this KB, not newly built, but nobody here
 has operated them. **Treat the integration estimate as unvalidated.**
+
+
+## P22 — A provider-neutral adaptive-learning foundation, with problem-first intake — new in `p881`
+
+**Sell this when** the client wants adaptive learning they can still own in three years: a workforce or
+higher-education programme where the *curriculum* will change, the *LLM provider* will change, and the
+data cannot leave the device or the country. It is the pattern for a client who has been burned by a
+tutoring pilot that was really a wrapper around one vendor's API.
+
+### Stack — every licence byte-read this pass or carried byte-read from an earlier one
+
+| Component | Repo | Licence (byte-read) | Role in `P22` |
+|---|---|---|---|
+| Agent foundation | https://github.com/zhangl1001/civil-ai | **MIT**, 1,066 B, `sha256₁₂ bb8885eccff8` | The spine. Provider-neutral agent execution, learner evidence, mastery projection, planning and safety boundaries, kept **separate from curriculum** by design. iOS (Capacitor) + Vue 3. |
+| Problem-first intake | https://github.com/wenflow-org/wenflow | **MIT**, 1,067 B, `sha256₁₂ b6fac57d4710` | The front door. Turns *"here is my real problem"* into a learning objective, instead of asking the learner to pick a course. Develop on `develop`, not `main`. |
+| Mastery comparator | https://github.com/CAHLR/OATutor | **MIT** | Bayesian Knowledge Tracing, peer-reviewed, Section 508 / WCAG conformant — the reference you grade `civil-ai`'s mastery projection against. |
+| Evaluation gate | https://github.com/AI-for-Education/pedagogy-benchmark | **MIT** | 1,143 teacher-qualification questions (CDPK + SEND). This is how the pedagogy claim survives procurement. |
+| Local inference | Ollama (MIT) + vLLM (Apache-2.0) | permissive | `civil-ai` is local-first; keep it that way for data-residency clients. |
+| LMS mount, if required | Open edX or Moodle | **AGPL-3.0 / GPL-3.0** | 🔴 The copyleft boundary. Mount over the platform's APIs; see `P19` for keeping the deliverable Globant's. |
+
+### How to wire it
+
+1. **Take `civil-ai` as the foundation and delete nothing.** Its Chinese civil-service exam app is a
+   *reference adapter* by the project's own README, not the product. Write a second adapter for the
+   client's domain; the adapter boundary is the whole reason this repo is the base.
+2. **Put `wenflow` in front of intake only.** Its contribution is the problem-clarification flow, not
+   its storage or its demo deployment.
+3. **Validate mastery against `OATutor`, not against vibes.** Run both on the same learner traces and
+   compare the mastery curves. If `civil-ai`'s projection and BKT disagree, you have a finding to fix
+   before launch, not after.
+4. **Gate release on `pedagogy-benchmark`.** CDPK and SEND, scored and published in the proposal.
+5. **Keep inference local** behind an OpenAI-compatible interface so the provider-neutrality claim is
+   architectural rather than aspirational.
+
+### 🔴 What is not done, and must be scoped
+
+- **`civil-ai`'s provider-neutrality is architectural, not multi-domain-proven** — one adapter exists.
+  Writing the second adapter *is* the first phase of the engagement; do not price it as integration.
+- **No star or `pushed_at` figure for either repo was measurable this pass** (`api.github.com` `403`).
+  Liveness is clone-measured: `civil-ai` last commit **2026-10-28**, `wenflow` **2026-11-12**.
+- **Both projects are single-maintainer and primarily Chinese-documented.** There is no upstream to
+  escalate to and your team will be reading `README_EN.md` at best. Price the maintenance, or fork at a
+  pinned commit and own it.
+- **Accessibility is unmeasured on both.** If the client is public-sector, `OATutor` is the only row in
+  this stack with a published conformance document — see `P10`.

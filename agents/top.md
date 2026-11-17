@@ -43,7 +43,7 @@ this file:
   of Artemis. New section below.
 - 🔴 **`NOASSERTION` decides nothing, in either direction.** `p877` correctly caught a false
   permissive (PageLM). `p878` independently re-read the two standing education-side anomalies and
-  **confirms `p877`**: `OpenOlat/OpenOlat` is byte-identical Apache-2.0, `Gego-K12/gegok12` is MIT.
+  **confirms `p877`**: `OpenOLAT/OpenOLAT` is byte-identical Apache-2.0, `Gego-K12/gegok12` is MIT.
   GegoK12's classifier abstention is now diagnosed exactly — its `LICENSE` carries an HTML comment,
   `<!-- SPDX-License-Identifier: MIT -->`, on line 3. **The one rule that covers both of this KB's
   licence errors: `spdx_id` screens, bytes decide.** A permissive claim needs bytes to confirm it;
@@ -186,6 +186,25 @@ branch was resolved with `git ls-remote --symref ... HEAD` rather than assumed t
 > figure is its measurement, not this pass's, and is not restated here as fact. Writing a
 > star count sourced from a blog is how this KB previously recorded inflated numbers.
 
+## 🆕 `p881` · 2026-11-17 — what changed on this shelf
+
+🟢 **Two new education-native rows, both MIT, both byte-read — `zhangl1001/civil-ai` and
+`wenflow-org/wenflow`.** Neither came from a search. **`gate-promotion`, one of the eighteen red gates
+this base had been carrying unexplained, named both** as `UNPROMOTED-PERMISSIVE`; in the same pass eight
+WebSearch legs returned **zero** new education repositories. See the note under the table.
+
+🟢 **The table's caption said `8` rows over a table of `12`.** `p877` restored five rows and nothing
+updated the count. Corrected to **`14`** and keyed on the rows.
+
+🟢 **`sudosylabs/proctor` → `sudosylabs/Proctor`.** `880-G4`'s class, caught here by instrument rather
+than by hand ([`record`](../evidence/case-oracle.2026-11-17-p881.tsv)).
+
+🔴 **No star, fork or `pushed_at` figure on this shelf was re-measured this pass, and none was changed.**
+`api.github.com` is `403` for this session, so the metadata channel is DOWN
+([`record`](../evidence/channel-state.2026-11-17-p881.tsv)). The two new rows therefore publish
+**clone-measured commit dates and file counts and no star count at all** — a pass that cannot measure
+stars must not publish stars.
+
 ## 🆕 `p880` · 2026-11-17 — what changed on this shelf
 
 🟢 **Restored: `vishalsachdev/canvas-mcp`** (MIT, `333★`, pushed today) **and its four security
@@ -293,9 +312,22 @@ These are built for teaching and learning as their primary purpose.
 | **Whiteboard AI Tutor** 🟢 **RESTORED `p877`** | https://github.com/molly554/whiteboard-ai-tutor | **MIT** — byte-read `main/LICENSE`, **1,089 B**, `sha256₁₂ ed7406a62bcb` | `main` | **216★ / 8 forks. Take it for the PROTOCOL and the BENCHMARK, not for the app — its own README says *"It is not a hosted tutoring app."*** Animated whiteboard lessons with interactive playback, and a published comparison of **Claude, Gemini and DeepSeek across 288 generation runs and 64 blueprints**. In-tree and load-bearing: `protocol/`, `bench/`, `scenarios/`, `results/`, `player/`, `audit.html`. 🟡 **Maturity flag, measured `p877`: 6 commits total** — a squashed or very young history, so treat the benchmark as a published artefact rather than a maintained leaderboard. Bilingual (EN + zh). |
 | **Open TutorAI (CE)** 🟢 **RESTORED `p877`** | https://github.com/Open-TutorAi/open-tutor-ai-CE | **BSD-3-Clause** — byte-read `main/LICENSE`, **1,531 B**, `sha256₁₂ 57c341d09920` | `main` | **118★ / 196 forks** — note the fork-to-star ratio, the highest in this file, which reads as classroom and downstream-deployment use rather than spectating. Community edition of an educational collaborative AI platform; substantial repo (`CHANGELOG.md`, `MIGRATION.md`, `TROUBLESHOOTING.md`, `SECURITY.md`, `Caddyfile.localhost`, `AGENTS.md`). 🔴 **Read past line 2 of the LICENSE before judging it:** the file opens *"Copyright (c) 2023-2025 Mohamed El hajji On behalf of all R2D-dev / All rights reserved."* — **that phrase is the BSD preamble, not a retraction**; the grant below it is BSD-3-Clause. This KB has twice mis-graded it (once as CC BY-NC-SA) on a two-line read. 🟡 **Liveness `p877`: HEAD `2026-06-26`, 91 commits in 12 months but none in ~5 months** — usable and permissive, but do not promise upstream responsiveness. |
 | **education-skills** 🟢 **RESTORED `p877`** | https://github.com/flysheep-ai/education-skills | **MIT** — byte-read `main/LICENSE`, **1,068 B**, `sha256₁₂ 23b91d7c0aef`, holder © 2026 flysheep-ai | `main` | **125★ / 24 forks.** Not an agent and not a platform — a **skills pack**: a collection of teaching and tutoring Claude Code skills (教育类 Claude Code Skills 集合), organised as five subject tutors for the Chinese **gaokao** (`gaokao-chinese-tutor`, `-english-`, `-science-`, `-liberal-arts-`, `-general-tech-`) plus `package-skills.sh` and `PACKAGING.md`. 🟡 **Liveness `p877`: HEAD `2026-01-29`, 4 commits total** — effectively frozen. **Its value is as a worked example of exam-aligned pedagogical prompt packaging under a permissive licence, not as a dependency.** Filed **Global** on the same language-is-not-market rule as BloomTutor. |
+| **Civil AI** 🆕 **`p881`** | https://github.com/zhangl1001/civil-ai | **MIT** — byte-read `main/LICENSE`, **1,066 B**, `sha256₁₂ bb8885eccff8` | `main` | **An adaptive-education AGENT FOUNDATION, which is why it is a row and not a link.** Its own README: *"a reusable, local-first foundation for building adaptive education Agents on iOS and Web"*, which *"separates provider-neutral Agent execution, learner evidence, mastery projection, planning, structured content, persistence, and safety boundaries from domain-specific curricula and teaching policies."* That separation is the thing an engagement actually needs and the thing almost nothing else on this shelf publishes: the included Chinese civil-service examination app is declared a **reference adapter** that *"does not define the scope of the foundation."* Vue 3 web + **iOS via Capacitor**, CI badge green. 🟢 **Liveness, clone-measured `p881`: `main` at `77e8e25`, last commit `2026-10-28T20:54:02+08:00`, 839 files.** 🟡 **Maturity flag: the only end-to-end validation is that one Chinese exam adapter**, so the provider-neutral claim is architectural, not yet multi-domain-proven. Filed **APAC** on the commit-offset channel (`+08:00`, no DST). |
+| **WenFlow** 🆕 **`p881`** | https://github.com/wenflow-org/wenflow | **MIT** — byte-read `main/LICENSE`, **1,067 B**, `sha256₁₂ b6fac57d4710` | `main` | **An AI learning-support platform whose organising idea is the opposite of a course catalogue:** *"学习始于对真实问题的澄清，而非对课程的选择"* — learning begins with clarifying a real problem, not with choosing a course. That makes it the one row here shaped for **workforce and corporate L&D** rather than for a syllabus, which is most of what a Globant education engagement is. Live demo at `wenflow.org` (the project itself warns it is demo-only and periodically wiped). 🟢 **Liveness, clone-measured `p881`: `main` at `74417a8`, last commit `2026-11-12T14:05:05+08:00` — 5 days before this pass — 3,137 files.** 🔴 **Read this before cloning: `main` is the stable branch and the project's own README directs active development to `develop`.** Judge it on `develop`, not here. 🟡 Documentation is primarily Chinese (an `README_EN.md` exists). Filed **APAC** on the commit-offset channel (`+08:00`, no DST). |
 
-**8 education-native rows.** That is what verified; the table is not padded to a round
-number. See the declared gap below on what is missing.
+🟢 **14 education-native rows, and `p881` corrected this caption rather than inheriting it.** It read
+**"8 education-native rows"** against a table of **12** — `p877` restored five rows and nothing updated the
+count below them. That is `gate-derived-counts`' own defect class sitting in the client-facing caption of
+the most-read table in this KB, and it is why `p881` keys its counts on the rows. The table is not padded
+to a round number; see the declared gap below on what is still missing.
+
+🟢 **Where the two `p881` rows came from, because it decides where the next pass should look.** Neither was
+found by a search. **`gate-promotion` — a RED GATE this base had been carrying unexplained for nine passes —
+named both of them**, as `UNPROMOTED-PERMISSIVE`: permissive education repositories sitting on a trending
+shelf and on no curated shelf. In the same pass, **eight WebSearch legs returned zero new education
+repositories** (`evidence/websearch-legs.2026-11-17-p881.tsv`). **The red gates outscored the search channel
+on supply this pass, two to nil.** `880-G1` said *"do not open a discovery sweep until the gates are
+triaged"*; the triage was itself the discovery.
 
 ### TutorIA — why it is listed, and exactly what you get if you clone it
 
@@ -537,7 +569,7 @@ allows.
   for the human-workflow half; ArguLens is the scoring half. **Still an open build opportunity
   for Globant — but now as hardening a real base, which is a far cheaper proposal than greenfield.**
 - **No permissively licensed open-source proctoring platform exists — now evidenced, not assumed.**
-  `p872` verified two real candidates and **both are AGPL-3.0**: `sudosylabs/proctor` (Go+React,
+  `p872` verified two real candidates and **both are AGPL-3.0**: `sudosylabs/Proctor` (Go+React,
   the most complete) and `kamlendras/OpenProctor`. Copyleft is workable for a single
   institution's self-hosted deployment and unusable in a distributed product. Given that the EU
   has moved proctoring into the high-risk tier and Vietnam now lists biometric learner monitoring

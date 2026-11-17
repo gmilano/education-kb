@@ -97,6 +97,21 @@ existed. They do, and they are below.** That gap is now largely closed, and the 
 from UNESCO IESALC, the Digital Education Council, Ipsos, Tyton Partners and Inside Higher Ed
 rather than from market-research aggregators.
 
+## 🆕 `p881` · 2026-11-17 — what changed on this shelf
+
+🟢 **Three new demand-side facts, each placed in a region** — and they are the *only* three new things
+eight WebSearch legs produced, out of roughly twenty-five checkable findings. The held/new split is
+published rather than described: **22 held, 3 new**
+([`record`](../evidence/websearch-legs.2026-11-17-p881.tsv)). See `Opportunities by region` below.
+
+🟢 **One slug correction** (`OpenOLAT/OpenOLAT`), per `880-G4`.
+
+🔵 **The EU date: the field is still wrong where this base is right, for the second pass running.** A
+`p881` leg again returned *"high-risk rules covering education apply from 2 December 2027"* alongside
+commentary dating them to 2026. This base resolved the date to **`2027-12-02`** under
+Regulation (EU) 2026/1744 and holds it in six files. Confirming that the field has not caught up is what
+this leg is now for.
+
 ## 🆕 `p880` · 2026-11-17 — what changed on this shelf
 
 🟢 **Six registered load-bearing claims restored** after `gate-prose-claims` found them surviving
@@ -854,6 +869,20 @@ European education-AI vendors, no procurement volumes.** The EMEA picture here r
 
 ### North America
 
+#### 🆕 `p881` — one new named player, and it is a procurement-shaped one
+
+🟢 **`Panorama Education` is the first named *vendor* this file can point to as having co-authored
+state-level AI guiding principles**, working with **Utah, North Carolina, West Virginia and Wisconsin**.
+That matters commercially and not only descriptively: in a market where the Stanford AI Index 2026 finds
+**only 6% of teachers say their school's AI policy is clear**, the firm that drafted a state's principles
+is the firm whose products read as compliant by default. 🔵 **The opening for Globant is the gap between a
+state's published principles and a district's running systems** — the principles exist, the
+implementations do not, and that is integration work rather than policy work.
+
+🟡 **Single secondary source, not verified at origin.** Treat the four-state list as unconfirmed until
+checked against Panorama's or the states' own publications.
+
+
 #### 🟢 `p878` — a **federal funder is paying for open-source education AI**, and three more compliance-shaped mandates land
 
 **All items `SECONDARY`.** No primary statute, rule or RFP text was reachable this pass.
@@ -1001,6 +1030,20 @@ that is where consent, disclosure and logging can actually be enforced (**P15**,
 
 ### EMEA
 
+#### 🆕 `p881` — **nil new, declared.** Three legs, nothing this file did not already hold
+
+🔴 **`p881`'s EMEA leg returned no new fact.** Every finding was already held: Futuresource's 67% of
+teachers, the Epson six-country student survey (76%), the Digital Omnibus political agreement of
+2026-05-07, the Council conclusions on teachers and AI of 2026-05-11, the Eurydice 2026 digital-education
+report, and ISO/IEC 42001. 🔵 **This is recorded as a nil result rather than left silent, because silence
+on a region reads exactly like coverage.**
+
+🟢 **The leg did do one useful thing: it confirmed the field is still wrong where this base is right.**
+It again surfaced commentary dating the AI Act's education high-risk duties to **2 December 2026**. The
+duties apply from **`2027-12-02`** under Regulation (EU) 2026/1744. An EMEA client being advised off the
+2026 date is being advised to spend a year early — which is a conversation Globant can open with.
+
+
 #### 🟢 `p878` — the Council names **sovereignty** as an education objective, and EMEA turns out to be where the permissive code comes from
 
 **Regulatory items `SECONDARY`** — `data.consilium.europa.eu` and `eur-lex.europa.eu` were
@@ -1019,7 +1062,7 @@ census makes repository *origin* legible for the first time, and **European publ
 are the single largest producer of permissively licensed education software in this index**:
 `ls1intum/*` (Technical University of Munich — **nine MIT repositories** including the
 832-star **Artemis** platform), `openfun/ralph` (France Université Numérique, MIT),
-`moocupv/lti-ai-grader` (Universitat Politècnica de València, Apache-2.0), `OpenOlat/OpenOlat`
+`moocupv/lti-ai-grader` (Universitat Politècnica de València, Apache-2.0), `OpenOLAT/OpenOLAT`
 (Switzerland, Apache-2.0), `ILIAS-eLearning/ILIAS` (Germany, GPL-3.0).
 
 🔵 **Why that matters commercially, and it is specific.** A European client acting on the Council's
@@ -1206,6 +1249,22 @@ assume an identity layer they never name.
 
 
 ### APAC
+
+#### 🆕 `p881` — one new named convening body, and it is the ministry channel
+
+🟢 **Cambridge English (Cambridge University Press & Assessment) convened 200+ senior leaders, including
+Ministries of Education, in Kuala Lumpur on 2026-04-23/24** on AI in education. 🔵 **Why this is an
+opportunity line and not a news item:** this file's APAC section is strong on attitudes and thin on
+*rooms where decisions get made*. A convening body with ministry attendance is a route to the buyer that
+does not run through a procurement portal — and an assessment organisation convening it tells you what
+the ministries came to talk about, which is assessment integrity.
+
+🟢 **And APAC is where this pass's two new agents came from.** `zhangl1001/civil-ai` and
+`wenflow-org/wenflow` are both MIT and both placed APAC on the commit-offset channel (`+08:00`, no DST).
+🔴 **The structural gap this exposes: this base has never run a Chinese-language discovery leg.** `p878`
+added Spanish and Portuguese and recovered 304 repositories. The same move in Chinese, Japanese and
+Korean is the highest-yield unexecuted action on the supply side of this file.
+
 
 #### 🟢 `p878` — Japan's 73% gives APAC its first **institutional** sales argument, and the supply side is larger than this file assumed
 
@@ -1411,6 +1470,22 @@ with **P8**: Vietnam's law (1 Mar 2026), Korea's (22 Jan 2026) and India's label
 
 
 ### LATAM
+
+#### 🆕 `p881` — **nil new, declared.** The Spanish leg is saturated
+
+🔴 **`p881`'s LATAM leg (run in Spanish) returned no new fact.** All held: the Uniandes / Algoritmos
+Públicos count of **716 AI regulatory instruments across 23 countries and territories**, the absence of
+any dedicated national AI law in force in the region, the UNESCO + CEPAL **Observatorio de IA en
+Educación para América Latina y el Caribe**, Tec de Monterrey's **92%** of higher-education students using
+AI tools regularly, the 200-institution / 19-country regional survey, the IDB school-readiness study, and
+Mexico's ten classroom principles.
+
+🔵 **This is the third consecutive pass in which the LATAM leg has produced nothing new, and it is the
+best-measured region in this file** — those two facts belong together. The region is not under-covered;
+the *channel* is spent. 🟢 **What is still unexecuted here is supply, not demand:** `p873` found the
+first LATAM-origin education agent (`LabSirius/TutorIA`) by searching in Spanish and Portuguese, and no
+pass since has repeated that leg on the *repository* side.
+
 
 #### 🟢 `p878` — four new LATAM instruments, and the **open-source supply assumption in this KB was wrong**
 
@@ -1626,6 +1701,16 @@ binding constraint is connectivity rather than governance — the opposite of th
 
 
 ### Global
+
+#### 🆕 `p881` — one new forecast, recorded as a spread marker and **not** carried as a number
+
+🟡 **Market Research Future projects the AI-in-education market at `USD 207.62 B` by 2035.** It is new to
+this file and it is **an order of magnitude away** from the figure this file does carry — Research and
+Markets' `~USD 10.6 B` in 2026 rising to `USD 42.48 B` by 2030 at 41.5% CAGR. 🔴 **It is therefore
+recorded as evidence about the dispersion of this market's forecasts, not as a forecast.** Do not put it
+in a client deck; do use it when a client arrives holding one vendor's number and needs to know how wide
+the range is.
+
 
 #### 🟡 `p876` — one global funding signal, and a correction to how this file should be read
 
