@@ -1,8 +1,69 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-16
+updated: 2026-11-17
 ---
+
+## 🟢 `2026-11-17` — `p861`: the window's movement is a RETIRED EXPLANATION — the *grading gap* was never a supply gap or a language gap, it was one English word the forge stems into a marketing adjective
+
+🟢 **What is new this window is not a repository. It is the reason `28` repositories were
+invisible**, and the reason is reproducible in two queries.
+
+| Movement | What moved |
+|---|---|
+| 🔴 **THE FINDING: `grading` and `grade` index the same corpus** | `grading` → `726`, `grade` → `731`, `grading NOT grade` → `9`. 🔴 **`0` of the top `30` by stars are about grading** — they are `kubernetes`, `spring-boot`, `MaxKB`, `brpc`, `silero-vad`, every one matching `-grade` as a marketing adjective → `T214` |
+| 🟢 **The remedy is one morpheme** | `autograder` (`13`) and `autograding` (`11`) return `Artemis`, `Autolab`, `Submitty`, `otter-grader`, `infomark` at `8` of `8` precision |
+| 🟢 **Controlled where it should NOT hold** (`p798-G`) | `tutoring` (`61`), `proctoring` (`7`), `attendance` (`50`) — all clean on the same day. No `-tutor`, `-proctor` or `-attendance` adjective exists |
+| 🔴 **What it retires** | `T96`'s *grading gap* and `p833`'s LANGUAGE diagnosis. 🟢 The Chinese supply finding stands; the English nil had a different cause |
+| 🟢 **`860-G1` discharged in the direction its acceptance test requires** | 🔴 **`21` of the `28` addresses read today were LOGGED IN THIS FILE AND ON NO SHELF.** All `28` are graded now |
+| 🟢 **`860-G2`'s affiliation channel built, run and MEASURED** | `8` of `28` placed (`29%`); the `domain` axis — not in the gap's own remedy list — out-produced every axis the gap named → `T215` |
+| 🔴 **And the instrument caught itself** | Its highest-precedence step placed `3` copyleft projects at the **Free Software Foundation**, because GPL/AGPL open with the FSF's own copyright line → `T216` |
+
+### Addresses logged this window — `28` byte-read, with the grant and the placement axis
+
+🟢 **Filed as agents** (`6`): [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) ·
+[`RANDCorporation/judge-reliability-harness`](https://github.com/RANDCorporation/judge-reliability-harness) ·
+[`Yuanpeng-Li/gradescope-mcp`](https://github.com/Yuanpeng-Li/gradescope-mcp) ·
+[`ChantillyAn/homework-grader`](https://github.com/ChantillyAn/homework-grader) ·
+[`GoogleCloudPlatform/essai`](https://github.com/GoogleCloudPlatform/essai) ·
+[`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph)
+
+🟢 **Filed as foundations** (`18`): [`autolab/Tango`](https://github.com/autolab/Tango) ·
+[`edulinq/autograder-server`](https://github.com/edulinq/autograder-server) ·
+[`edulinq/autograder-py`](https://github.com/edulinq/autograder-py) ·
+[`uhafner/autograding-github-action`](https://github.com/uhafner/autograding-github-action) ·
+[`uhafner/autograding-model`](https://github.com/uhafner/autograding-model) ·
+[`quickfeed/quickfeed`](https://github.com/quickfeed/quickfeed) ·
+[`kit-sdq/autograder`](https://github.com/kit-sdq/autograder) ·
+[`pedal-edu/pedal`](https://github.com/pedal-edu/pedal) ·
+[`gradescope/gradescope-utils`](https://github.com/gradescope/gradescope-utils) ·
+[`howardlau1999/autograder-server`](https://github.com/howardlau1999/autograder-server) ·
+[`data-8/Gofer-Grader`](https://github.com/data-8/Gofer-Grader) ·
+[`robertylewis/lean4-autograder-main`](https://github.com/robertylewis/lean4-autograder-main) ·
+[`usfca-cs-tools/autograder`](https://github.com/usfca-cs-tools/autograder) ·
+[`skt09/IndiGrader`](https://github.com/skt09/IndiGrader) ·
+[`classroom-resources/autograding-grading-reporter`](https://github.com/classroom-resources/autograding-grading-reporter) ·
+[`abdogad/tallyrun`](https://github.com/abdogad/tallyrun) ·
+[`jameskermode/mograder`](https://github.com/jameskermode/mograder) ·
+[`zucchini/zucchini`](https://github.com/zucchini/zucchini)
+
+🟢 **Filed as platforms** (`4`): [`Submitty/Submitty`](https://github.com/Submitty/Submitty) ·
+[`foundation50/classroom50`](https://github.com/foundation50/classroom50) ·
+[`cayhorstmann/codecheck3`](https://github.com/cayhorstmann/codecheck3) ·
+[`tjcsl/tin`](https://github.com/tjcsl/tin)
+
+### 🔴 The in-language legs, logged with their yield because silence looks like coverage
+
+| Leg | Query | Returned | What it actually contained |
+|---|---|---|---|
+| `L5` | `教育 智能体` (zh) | `79` | 🟡 Mostly `0★` course projects; `ZhuChenHua/EduAnchor` (MIT) and `shibocao797-max/intellilearn-agent-platform` (MIT) are the only granted ones above noise |
+| `L6` | `educacion inteligencia artificial` (es) | `34` | 🔴 **`0` above one star.** Portfolios, school websites, diploma modules |
+| `L7` | `educação inteligência artificial` (pt) | `53` | 🔴 **`0` above one star**, and two entries are PDF-download spam. `T940` reproduced exactly |
+| `L2`, `L8`, `L9`, `L11`, `L12` | multi-word English | 🔴 **`0`** | 🔴 **Instrument-bound nils, NOT supply nils**: `in:name,description` is AND over terms (`T115`), so `lesson plan generator` and `teaching assistant agent` cannot match anything. Logged as artefacts |
+
+🔵 **Full leg output, every query with its total and its first `30`:**
+[`search-legs`](../evidence/search-legs.2026-11-17-p861.tsv).
+
 
 ## 🟢 `2026-11-16` — `p860`: the window's movement came from INSIDE this file — `4,924` addresses logged here and never graded, and the first `34` read back yield `16` agent rows
 

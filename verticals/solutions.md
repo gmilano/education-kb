@@ -1,8 +1,31 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-16
+updated: 2026-11-17
 ---
+
+## 🟢 Sixty-sixth pass (`p861`, 2026-11-17) — **`4` platform rows (`163` → `167`): the AUTOGRADING PLATFORM tier, and the roll-up heading is corrected from `162` to the figure the file actually holds**
+
+🟢 **Why these four are platforms and not foundations.** Each is a system an institution RUNS —
+accounts, courses, submissions, a grade of record — rather than a library a course imports.
+🔴 **Three of the four are copyleft, and that is the tier's defining commercial fact:** the
+assessment platform layer is GPL/AGPL while the marking COMPONENTS beneath it
+([`repos/foundations.md`](../repos/foundations.md), `18` rows added today) are MIT, Apache-2.0
+and BSD. 🔵 **That is `T-`the-platform-is-copyleft pattern on a fourth layer, and it is the same
+engagement decision every time: inherit the platform, build the AI layer beside it under your
+own terms.**
+
+🟢 **Grants byte-read `2026-11-17` from each repository's own tree.** 🔵 **Gate note: this file's
+roll-up has claimed `162` while holding `163` since `p858`. The claim is corrected to `167`
+here — the pre-existing RED is fixed by counting, not by deleting a row.**
+
+| Platform | Repo | Licence | Stars | What it is |
+|---|---|---|---|---|
+| Submitty | https://github.com/Submitty/Submitty | 🟢 **BSD-3-Clause — byte-read `2026-11-17`** (`main/LICENSE.md`, `1,542 B`, `sha256₁₂ c123708cb4ef`, holder `© 2014-2026, [Submitty…]`) | 807 ★ / 1123 | 🟢 **The highest-value platform row this base has added in several passes, and it is PERMISSIVE — which is what makes it different from every other row in this tier.** A complete homework submission, automated grading and TA-grading system: queues, rubrics, manual-grading UI, plagiarism detection, office-hours queue. 🔵 **`1,123` forks — the largest fork count anywhere on this shelf, and forks are the right traction measure for a platform an institution self-hosts.** 🔵 **Region: North America — `https://compsci.rpi.edu/` in the README, i.e. Rensselaer Polytechnic Institute, stated by the project.** 🟢 **BSD-3 means a studio can deploy a branded, modified instance for a client without publishing its modifications — the one platform in this tier where that is true.** HEAD commit `2026-11-16` |
+| Classroom 50 | https://github.com/foundation50/classroom50 | 🔴 **GPL-3.0 — byte-read `2026-11-17`** (`main/LICENSE`, `35,150 B`, `sha256₁₂ e57f1c320b8c`) | 238 ★ / 39 | 🟢 **The free, open-source alternative to GitHub Classroom, supported by the Fifty Foundation** — assignment creation, auto-graded correctness tests, submission management, shipped as `gh` CLI extensions plus assignment templates. HEAD commit `2026-11-16`. 🔴 **GPL-3.0: distributable to the institution, not embeddable in a proprietary deliverable.** 🟡 **Region UNPLACED and that is a finding, not an omission: the project STATES its affiliation (`Fifty Foundation`, `fifty.foundation`) and the affiliation does not state a country. An affiliation axis yields an ORGANISATION; placing it is a second step this session cannot run** |
+| CodeCheck | https://github.com/cayhorstmann/codecheck3 | 🔴 **AGPL-3.0 — byte-read `2026-11-17`** (`main/LICENSE`, `34,523 B`, `sha256₁₂ 8486a10c4393`) | 7 ★ / 8 | 🟡 **An anonymous, author-friendly autograder: students submit without an account, authors write assignments without a build pipeline.** The anonymity property is the interesting one — it removes the student-data processing that triggers most of the regulatory load in [`intel/market.md`](../intel/market.md). 🔴 **AGPL-3.0 reaches a HOSTED derivative, and an autograder is always hosted: deploy it as-is or read it for the design, do not fork it into a product.** HEAD commit `2026-08-23` |
+| Turn-In (`tin`) | https://github.com/tjcsl/tin | 🔴 **GPL-3.0 — byte-read `2026-11-17`** (`master/LICENSE`, `35,043 B`, `sha256₁₂ 798310f428de`) | 8 ★ / 12 | 🟡 **A working code autograder for CS classes, run by a school's own computer-systems lab rather than a university.** Django, submission queue, per-assignment grader scripts. 🔵 **Shelved as the SMALL-INSTITUTION reference point: the K-12 end of this tier exists, is maintained (HEAD commit `2026-10-28`) and is copyleft like everything above it.** 🔴 Namespace reads as an institution's and this session cannot resolve it (`T941`) |
+
 
 ## 🟢 Sixty-fifth pass (`p860`, 2026-11-16) — **`7` platform rows: the university teaching estate, and the discovery that on the one platform where the AI layer is NOT open, it is the AI layer specifically that is withheld**
 
@@ -1006,7 +1029,7 @@ platform.** 🟡 **Treat it as competitive intelligence that happens to be MIT-l
 | **AGENTIC STAR** (SoftBank, 🇯🇵) | 🔴 **Not institution-run — a hosted commercial agent platform**, developer docs at `developers.fd.agenticstar.tm.softbank.jp`, homepage `agenticstar.io`. 🟢 Its runtime SDKs `agenticstar-agentcore` (`1.0.3`) and `agenticstar-platform` (`3.3.0`, `80` releases) are public on PyPI and MIT by their wheel metadata | 🟢 **`74` MIT education agent templates, `54` catalogue ids `EDU-C2-004`…`EDU-C2-173`** — reference row [`sbdnakashima/agentic-star-iep-section-drafting-agent`](https://github.com/sbdnakashima/agentic-star-iep-section-drafting-agent), `EDU-C2-028`, byte-read MIT (`1,074 B`, HEAD `71c442ebd88e`) | 🟢 **MIT** (templates and both SDKs, all byte- or metadata-verified) | 🟡 **Adopt the SPECS, not the runtime.** 🔴 Templates raise `PlatformRequired` at graph compile without a SoftBank deployment; all `74` are `0★`, unmaintained since October; the framework's advertised source repo has **zero commits** (`T89`); hard `==` pins on `langgraph`/`langchain`/`fastapi`. 🟢 **Tests run without the platform — harvest per `P61`** |
 | **AgentCore graph scaffold** (the catalogue's shared architecture) | 🔵 Not a product — the uniform structure under all `74` templates: `config/agent.yaml` manifest (`required_trust_level`, declared secrets), `src/graph/`, `src/nodes/`, `src/schemas/state.py`, `docs/02_design.md`, `docs/03_test_spec.md`, `tests/proof_of_boundary/` | 🟢 Domain nodes differ completely between ids — byte-compared across three repositories this pass: `iep_section_generator`/`regulatory_compliance` vs `affected_material_analysis`/`stakeholder_mapping` vs `bloom_level`/`difficulty_score`. Reference row [`haidang024/agentic-star-education-curriculum-change-impact-briefing-agent`](https://github.com/haidang024/agentic-star-education-curriculum-change-impact-briefing-agent) (`EDU-C2-046`, `45` files) | 🟢 **MIT** (`1,067 B`, `sha256:b22b7ca45c04…`, HEAD `ae3eea9ac056`) | 🟢 **This is the reusable asset.** 🔵 One scaffold, `54` real domain implementations — so a studio gets a uniform, inspectable architecture across `54` education workflows instead of `54` unrelated codebases. 🔴 The scaffold's base class ships only in the binary wheel; re-implement on LangGraph (now on `repos/foundations.md`) |
 
-## Education vertical platforms — 162 rows
+## Education vertical platforms — 167 rows
 
 ## 🟡 The MARKING-ADAPTER layer — **permissive code that reaches INTO an incumbent this shelf already carries** (new, fifty-seventh pass `p852`) (3 rows)
 

@@ -1,0 +1,29 @@
+repo	ref	head_sha12	head_date	licence_path	bytes	sha256_12	title_line	holder	affil_src	affil_text
+Submitty/Submitty	main	7ee28eeb30bb	2026-11-16	LICENSE.md	1542	c123708cb4ef	BSD 3-Clause License	Copyright (c) 2014-2026, [Submitty team](AUTHORS.md)  	readme	Rensselaer Polytech
+autolab/Tango	master	24558e3db2be	2026-01-31	LICENSE	11324	a8ad31b1c3f4	Apache License	"Licensor" shall mean the copyright owner or entity authorized by	readme	Carnegie Mellon Universit
+quickfeed/quickfeed	master	97b8fdfee763	2026-11-11	LICENSE	1115	2f382b0d27df	The MIT License (MIT)	Copyright (c) 2017-2021 The QuickFeed authors. All rights reserved.	-	-
+edulinq/autograder-server	main	114eda17c0a6	2026-11-04	LICENSE	1071	7eb48830c022	MIT License	Copyright (c) 2023 Eriq Augustine	-	-
+edulinq/autograder-py	main	7984bd245b74	2026-10-02	LICENSE	1071	7eb48830c022	MIT License	Copyright (c) 2023 Eriq Augustine	-	-
+kit-sdq/autograder	main	27d7474fa28d	2026-11-16	LICENSE.md	1068	30a0bc0d48b4	MIT License	Copyright (c) 2022 Feuermagier	-	-
+uhafner/autograding-github-action	main	4e65432f58ab	2026-03-02	LICENSE	1095	d2c7f8d2d8be	MIT License	Copyright (c) 2020-2025 Tobias Effner, Dr. Ullrich Hafner	readme	Munich Universit
+uhafner/autograding-model	main	f8e6fc8bb389	2026-11-14	LICENSE	1080	b8f78942bf60	MIT License	Copyright (c) 2020-2026 Dr. Ullrich Hafner	-	-
+pedal-edu/pedal	master	05536f3f0fd2	2026-10-18	LICENSE	1103	ffaa010382b0	MIT License	Copyright (c) 2018 Austin Cory Bart, Luke Gusukuma, Dennis Kafura	-	-
+gradescope/gradescope-utils	master	5689b27ca499	2026-08-14	LICENSE	1070	1fa57a15a75b	MIT License	Copyright (c) 2022 Turnitin, LLC	-	-
+howardlau1999/autograder-server	master	eec37833e143	2026-10-12	LICENSE	11357	c71d239df917	Apache License	"Licensor" shall mean the copyright owner or entity authorized by	-	-
+data-8/Gofer-Grader	master	dc7226bde841	2019-11-18	LICENSE	1510	a9d15a91664e	BSD 3-Clause License	Copyright (c) 2018, Yuvi Panda	-	-
+robertylewis/lean4-autograder-main	master	21a53ca7ce04	2026-08-18	LICENSE	11357	b40930bbcf80	Apache License	"Licensor" shall mean the copyright owner or entity authorized by	-	-
+usfca-cs-tools/autograder	main	426d78088ea7	2026-10-27	LICENSE	1071	27af82724fc4	MIT License	Copyright (c) 2020 phpeterson-usf	-	-
+skt09/IndiGrader	main	00e9fc6fb4f5	2026-10-10	LICENSE	1072	5065bc33aae5	MIT License	Copyright (c) 2026 Sanket Tarafder	-	-
+Yuanpeng-Li/gradescope-mcp	main	f8a46c8f67b9	2026-11-11	LICENSE	1068	29d0f3f4463a	MIT License	Copyright (c) 2026 Yuanpeng Li	-	-
+ChantillyAn/homework-grader	master	5e9aab47822f	2026-02-22	LICENSE	1068	8755221656d4	MIT License	Copyright (c) 2026 ChantillyAn	-	-
+jameskermode/mograder	main	953a9813415f	2026-10-09	LICENSE	1070	99e5f51590b7	MIT License	Copyright (c) 2025 James Kermode	citation	University of Warwick
+GoogleCloudPlatform/essai	main	e3efdf26e599	2025-06-04	LICENSE.md	11357	58d1e17ffe51	Apache License	"Licensor" shall mean the copyright owner or entity authorized by	-	-
+RANDCorporation/judge-reliability-harness	main	82ef3aed7495	2026-02-23	LICENSE	1061	c2ce29c8beca	MIT License	Copyright (c) 2025 RAND	-	-
+classroom-resources/autograding-grading-reporter	main	1bc3e446b650	2026-09-04	LICENSE.md	1063	59c888c36a7e	MIT License	Copyright (c) 2023 GitHub	-	-
+abdogad/tallyrun	main	31fb91102ccb	2026-09-19	LICENSE	1075	15a1ef7e938b	MIT License	Copyright (c) 2026 Abdelmonem Mansour	-	-
+microsoft/StudentSim	main	790eae2d1bfc	2026-11-16	LICENSE	1074	7df20dcdf919	MIT License	Copyright (c) Microsoft Corporation.	holder	c) Microsoft Corporation.
+DozenTwelve/Papermorph	main	839a62cad3c7	2026-11-17	LICENSE	1069	41857092247a	MIT License	Copyright (c) 2026 TedKaczynski	-	-
+foundation50/classroom50	main	7c1a541e6b85	2026-11-16	LICENSE	35150	e57f1c320b8c	GNU GENERAL PUBLIC LICENSE	Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>	holder	C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+cayhorstmann/codecheck3	main	077c10cb11d7	2026-08-23	LICENSE	34523	8486a10c4393	GNU AFFERO GENERAL PUBLIC LICENSE	Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>	holder	C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+tjcsl/tin	master	214a9eab8300	2026-10-28	LICENSE	35043	798310f428de	GNU GENERAL PUBLIC LICENSE	Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>	holder	C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+zucchini/zucchini	master	25486ace70a0	2026-04-07	LICENSE	586	6791268a1675	Apache Software License 2.0	Copyright (c) 2017, Zucchini Team	-	-

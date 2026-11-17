@@ -1,8 +1,60 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-16
+updated: 2026-11-17
 ---
+
+## 🟢 Sixty-sixth pass (`p861`, 2026-11-17) — **`6` agent rows (`474` → `480`): the English word `grading` is UNRUNNABLE as a query on this channel. GitHub stems it to `grade`, the `-grade` marketing adjective owns the whole high-traction band, and `0` of the top `30` hits are about grading.**
+
+🔴 **The finding first, because it retires an explanation this base has carried since `T96`.**
+🟢 This base has declared a *grading gap* repeatedly, and `p833` closed it by switching
+LANGUAGE — the Chinese `作业批改` returned the supply that English did not. 🔴 **The language
+story was true and it was not the cause.** 🟢 **The cause is morphological, it is measurable in
+two queries, and it was measured today:**
+
+| Query, `stars:>20 pushed:>2026-08-01` | `total_count` | What the top `30` by stars actually are |
+|---|---|---|
+| 🔴 **`grading`** | `726` | 🔴 **`0` about grading.** `kubernetes` (*Production-Grade Container Scheduling*), `spring-boot` (*production-grade applications*), `MaxKB` (*enterprise-grade agents*), `brpc` (*Industrial-grade RPC*), `silero-vad` (*enterprise-grade Voice Activity Detector*) |
+| 🔴 **`grade`** | `731` | within `0.7%` of the line above — 🔴 **the two terms index the SAME postings** |
+| 🔴 **`grading NOT grade`** | `9` | 🔴 **`717` of the `726` also match `grade`** |
+| 🟢 **`autograder`** | `13` | 🟢 **`8` of `8` are autograding systems** |
+| 🟢 **`autograding`** | `11` | 🟢 returns `Artemis`, `Autolab`, `Submitty`, `otter-grader` — the real tier |
+
+🟢 **And it was controlled in the direction `p798-G` requires — somewhere it should NOT hold.**
+`tutoring` (`61`), `proctoring` (`7`) and `attendance` (`50`) return their own tier cleanly on
+the same day, because no marketing adjective `-tutor`, `-proctor` or `-attendance` exists.
+🔵 **So this is not "GitHub search is noisy". It is one specific collision between a pedagogical
+gerund and a software-marketing suffix, and the remedy is one morpheme:
+`grading` → `autograding`.** Full control set:
+[`stem-collision-control`](../evidence/stem-collision-control.2026-11-17-p861.tsv).
+
+🟢 **What the remedy paid.** `28` addresses byte-read today, `24` permissive, and 🔴 **`22` of the
+`28` were ALREADY IN THIS BASE'S OWN TRENDING LOG AND ON NO SHELF** — the residue `860-G1`
+measured. 🟢 **`6` are filed here as agents, `18` as foundations and `4` as platforms.**
+
+🟢 **Every grant below is byte-read from the repository's own tree** via a blobless clone
+(`git clone --filter=blob:none --no-checkout`), classified on OPERATIVE CLAUSE TEXT by
+[`p768-grant-classifier.py`](../ingest/p768-grant-classifier.py), never from GitHub's licence
+field: [`byte-read-grants`](../evidence/byte-read-grants.2026-11-17-p861.tsv).
+
+| Name | Repo | Licence | Stars | Region | Description |
+|---|---|---|---|---|---|
+| StudentSim | [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) | 🟢 **MIT** — byte-read `1,074 B`, `sha256₁₂ 7df20dcdf919`, holder 🔵 **`Copyright (c) Microsoft Corporation`** | `83` | North America | 🟢 **The highest-value row in this pass, and it is the piece every tutoring proposal in this base has been missing: a way to TEST a tutor without a classroom.** A research framework for training and evaluating models that SIMULATE human learners — the counterparty an agent needs before it is allowed near a student. `11` forks, `main`, HEAD commit `2026-11-16`. 🔵 **Region from the holder line in the bytes, not from the namespace** |
+| judge-reliability-harness | [`RANDCorporation/judge-reliability-harness`](https://github.com/RANDCorporation/judge-reliability-harness) | 🟢 **MIT** — byte-read `1,061 B`, `sha256₁₂ c2ce29c8beca`, holder `Copyright (c) 2025 RAND` | `22` | North America | 🟢 **The validation layer for LLM-as-autograder, from a policy research institution rather than a vendor.** Generates validation data for LLM-as-a-Judge and LLM autograders — i.e. it answers *how do you know the marking agent is right*, which is the question every regulator in [`intel/market.md`](../intel/market.md) asks and almost no repository here answers. `main`, HEAD commit `2026-02-23`. 🔴 **Nine months since the last commit: a method, not a maintained product** |
+| gradescope-mcp | [`Yuanpeng-Li/gradescope-mcp`](https://github.com/Yuanpeng-Li/gradescope-mcp) | 🟢 **MIT** — byte-read `1,068 B`, `sha256₁₂ 29d0f3f4463a` | `8` | 🔴 Global (unplaced) | 🟢 **The agent surface of the incumbent.** An MCP server for Gradescope: lets an agent read rubrics, review submissions and apply marks in the system a North American university already runs. 🔵 **`T116`'s access-before-agent rule on a COMMERCIAL endpoint — the studio does not replace Gradescope, it reaches into it.** 🔴 **The write path is live here, so `T101`'s controls apply: the mark must be reserved to a named human** |
+| homework-grader | [`ChantillyAn/homework-grader`](https://github.com/ChantillyAn/homework-grader) | 🟢 **MIT** — byte-read `1,068 B`, `sha256₁₂ 8755221656d4` | `8` | 🔴 Global (unplaced) | 🟢 Rubric-driven marking shipped as an **agent skill** rather than a service — the cheapest possible form of `T119`'s `AI pre-mark → teacher review → system of record` loop. `master`, HEAD commit `2026-02-22`. 🔴 **Nine months stale and `3` forks: a pattern to copy, not a dependency to take** |
+| EssAI | [`GoogleCloudPlatform/essai`](https://github.com/GoogleCloudPlatform/essai) | 🟢 **Apache-2.0** — byte-read `11,357 B`, `sha256₁₂ 58d1e17ffe51` (full payload with appendix) | `7` | North America | 🟡 **A vendor reference implementation of GenAI essay evaluation, and it is shelved as a REFERENCE: the repository says *experiment/demo* in its own description.** `main`, HEAD commit `2025-06-04` — 🔴 **seventeen months old, the stalest row in this pass.** 🔵 **Apache-2.0 means a studio may lift the prompt and rubric structure into a closed deliverable; `region` is the publisher's namespace, corroborated by nothing else** |
+| Papermorph | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 🟢 **MIT** — byte-read `1,069 B`, `sha256₁₂ 41857092247a` | `1,748` | 🔴 Global (unplaced) | 🟢 **The most-starred row in this pass by a factor of `21`, and the only one on the CONTENT side rather than the assessment side.** An agent skill that turns a book into an animated, narrated, interactive web experience. `221` forks, `main`, HEAD commit `2026-11-17` — committed the day of this pass. 🔴 **Its grant holder line reads `Copyright (c) 2026 TedKaczynsk…`, a pseudonymous handle: the grant is valid, the holder is not an institution, and nothing in the tree places it** |
+
+### 🔴 Examined and NOT filed on this shelf — `3` copyleft platforms and `1` field defect, each with the bytes
+
+| Not filed | Why |
+|---|---|
+| [`foundation50/classroom50`](https://github.com/foundation50/classroom50) | 🔴 **GPL-3.0 — byte-read `35,150 B`, `sha256₁₂ e57f1c320b8c`.** `238★`. Filed on [`verticals/solutions.md`](../verticals/solutions.md) as a platform instead: it is a GitHub Classroom replacement, not an agent |
+| [`cayhorstmann/codecheck3`](https://github.com/cayhorstmann/codecheck3) | 🔴 **AGPL-3.0 — byte-read `34,523 B`, `sha256₁₂ 8486a10c4393`.** An anonymous, author-friendly autograder. 🔴 AGPL reaches a hosted derivative and an autograder is always hosted |
+| [`tjcsl/tin`](https://github.com/tjcsl/tin) | 🔴 **GPL-3.0 — byte-read `35,043 B`, `sha256₁₂ 798310f428de`.** `8★`, a working CS autograder, copyleft |
+| [`zucchini/zucchini`](https://github.com/zucchini/zucchini) | 🟡 **Apache-2.0 BY REFERENCE — byte-read `586 B`, `sha256₁₂ 6791268a1675`**, title line `Apache Software License 2.0`, holder `Copyright (c) 2017, Zucchini Team`. 🔴 **GitHub's licence FIELD says `NOASSERTION` and the bytes carry a valid Apache-2.0 grant — a first-party UNDER-claim, the opposite direction to `T60`.** 🔴 **And `586 B` against the canonical `11,357 B` is a `19×` miss for any byte-size screen** → `T938` confirmed a second time. Filed on [`repos/foundations.md`](../repos/foundations.md), not here: it is a harness, not an agent |
+
 
 ## 🟢 Sixty-fifth pass (`p860`, 2026-11-16) — **`16` agent rows recovered from this base's OWN trending log: `4,924` addresses were logged and never shelved, and the first `34` read back yield `16` shelf rows, `6` refusals and `5` instrument defects**
 
@@ -4026,7 +4078,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 474 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 480 rows
 
 ### Filed by `p853` (2026-11-16) — `12` rows: the SPOKEN-LANGUAGE ASSESSMENT tier, every grant byte-read today, `0` copyleft, and every row's CORPUS dependency stated beside its licence
 

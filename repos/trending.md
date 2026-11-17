@@ -1,8 +1,61 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-16
+updated: 2026-11-17
 ---
+
+## 🟢 `2026-11-17` — `p861`: `28` addresses byte-read on one channel, and the ASSESSMENT layer's licence split measured in a single batch — `3` of `4` platforms copyleft, `18` of `18` components permissive
+
+🔴 **The movement is a MEASUREMENT rather than a discovery**, because `21` of the `28` addresses
+read this window were already in this file and had never reached a shelf (`860-G1`'s residue).
+🔵 **The `23` below are the platform and component rows; the `5` agent rows are tabled in
+[`agents/trending.md`](../agents/trending.md).**
+
+| Address | Grant, byte-read `2026-11-17` | ★ / forks | Default ref · HEAD commit | Placement axis |
+|---|---|---|---|---|
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 BSD-3-Clause · `1,542 B` · `c123708cb4ef` | `807` / `1123` | `main` · `2026-11-16` | 🟢 `domain` → `compsci.rpi.edu` |
+| [`foundation50/classroom50`](https://github.com/foundation50/classroom50) | 🔴 GPL-3.0 · `35,150 B` · `e57f1c320b8c` | `238` / `39` | `main` · `2026-11-16` | 🟡 `readme` → `Fifty Foundation` (no country) |
+| [`autolab/Tango`](https://github.com/autolab/Tango) | 🟢 Apache-2.0 · `11,324 B` · `a8ad31b1c3f4` | `49` / `63` | `master` · `2026-01-31` | 🟢 `domain` → `andrew.cmu.edu` |
+| [`gradescope/gradescope-utils`](https://github.com/gradescope/gradescope-utils) | 🟢 MIT · `1,070 B` · `1fa57a15a75b` | `38` / `27` | `master` · `2026-08-14` | 🟢 `holder` → `Turnitin, LLC` |
+| [`pedal-edu/pedal`](https://github.com/pedal-edu/pedal) | 🟢 MIT · `1,103 B` · `ffaa010382b0` | `33` / `11` | `master` · `2026-10-18` | 🔴 unplaced |
+| [`uhafner/autograding-github-action`](https://github.com/uhafner/autograding-github-action) | 🟢 MIT · `1,095 B` · `d2c7f8d2d8be` | `32` / `6` | `main` · `2026-03-02` | 🟢 `readme` → Munich UAS |
+| [`quickfeed/quickfeed`](https://github.com/quickfeed/quickfeed) | 🟢 MIT · `1,115 B` · `2f382b0d27df` | `27` / `24` | `master` · `2026-11-11` | 🔴 unplaced |
+| [`howardlau1999/autograder-server`](https://github.com/howardlau1999/autograder-server) | 🟢 Apache-2.0 · `11,357 B` · `c71d239df917` | `24` / `2` | `master` · `2026-10-12` | 🔴 unplaced |
+| [`RANDCorporation/judge-reliability-harness`](https://github.com/RANDCorporation/judge-reliability-harness) | 🟢 MIT · `1,061 B` · `c2ce29c8beca` | `22` / `2` | `main` · `2026-02-23` | 🟢 `holder` → `RAND` |
+| [`edulinq/autograder-server`](https://github.com/edulinq/autograder-server) | 🟢 MIT · `1,071 B` · `7eb48830c022` | `21` / `22` | `main` · `2026-11-04` | 🟡 `org-sibling` → `ucsc.edu` |
+| [`jameskermode/mograder`](https://github.com/jameskermode/mograder) | 🟢 MIT · `1,070 B` · `99e5f51590b7` | `21` / `0` | `main` · `2026-10-09` | 🟢 `citation` → University of Warwick |
+| [`kit-sdq/autograder`](https://github.com/kit-sdq/autograder) | 🟢 MIT · `1,068 B` · `30a0bc0d48b4` | `18` / `8` | `main` · `2026-11-16` | 🔴 unplaced |
+| [`edulinq/autograder-py`](https://github.com/edulinq/autograder-py) | 🟢 MIT · `1,071 B` · `7eb48830c022` | `17` / `22` | `main` · `2026-10-02` | 🟢 `domain` → `ucsc.edu` |
+| [`data-8/Gofer-Grader`](https://github.com/data-8/Gofer-Grader) | 🟢 BSD-3-Clause · `1,510 B` · `a9d15a91664e` | `16` / `17` | `master` · 🔴 `2019-11-18` | 🟢 `readme` → Berkeley |
+| [`robertylewis/lean4-autograder-main`](https://github.com/robertylewis/lean4-autograder-main) | 🟢 Apache-2.0 · `11,357 B` · `b40930bbcf80` | `14` / `11` | `master` · `2026-09-16` | 🔴 unplaced |
+| [`classroom-resources/autograding-grading-reporter`](https://github.com/classroom-resources/autograding-grading-reporter) | 🟢 MIT · `1,063 B` · `59c888c36a7e` | `11` / `24` | `main` · `2026-09-04` | 🟢 `holder` → `GitHub` |
+| [`skt09/IndiGrader`](https://github.com/skt09/IndiGrader) | 🟢 MIT · `1,072 B` · `5065bc33aae5` | `8` / `4` | `main` · `2026-10-10` | 🟢 `domain` → `cse.iitm.ac.in` |
+| [`abdogad/tallyrun`](https://github.com/abdogad/tallyrun) | 🟢 MIT · `1,075 B` · `15a1ef7e938b` | `8` / `1` | `main` · `2026-09-19` | 🔴 unplaced |
+| [`usfca-cs-tools/autograder`](https://github.com/usfca-cs-tools/autograder) | 🟢 MIT · `1,071 B` · `27af82724fc4` | `8` / `10` | `main` · `2026-10-27` | 🔴 unplaced |
+| [`tjcsl/tin`](https://github.com/tjcsl/tin) | 🔴 GPL-3.0 · `35,043 B` · `798310f428de` | `8` / `12` | `master` · `2026-10-28` | 🔴 unplaced |
+| [`cayhorstmann/codecheck3`](https://github.com/cayhorstmann/codecheck3) | 🔴 AGPL-3.0 · `34,523 B` · `8486a10c4393` | `7` / `8` | `main` · `2026-08-23` | 🔴 unplaced |
+| [`zucchini/zucchini`](https://github.com/zucchini/zucchini) | 🟡 Apache-2.0 **by reference** · `586 B` · `6791268a1675` | `5` / `7` | `master` · `2026-04-07` | 🔴 unplaced |
+| [`uhafner/autograding-model`](https://github.com/uhafner/autograding-model) | 🟢 MIT · `1,080 B` · `b8f78942bf60` | `5` / `9` | `main` · `2026-11-14` | 🟡 `org-sibling` → Munich UAS |
+
+🔴 **The licence-FIELD disagreement this batch produced, and it is in the UNDER-claiming
+direction.** 🟢 [`zucchini/zucchini`](https://github.com/zucchini/zucchini) reads `NOASSERTION` in
+GitHub's field, and its `586 B` payload opens `Apache Software License 2.0` and carries a valid
+Apache-2.0 grant by reference. 🔴 **`586 B` against the canonical `11,357 B` is a `19×` miss for
+any byte-size screen** — `T938` confirmed a second time, on the opposite side of the band.
+
+🟢 **Agent-adjacent addresses also logged this window and NOT graded here**, so the next pass can
+find them without re-searching: `1Panel-dev/MaxKB` (GPL-3.0, `23,165★`) ·
+`langbot-app/LangBot` (Apache-2.0, `19,045★`) · `iflytek/astron-agent` (Apache-2.0, `8,936★`) ·
+`UnicomAI/wanwu` (Apache-2.0, `2,386★`) · `mudler/LocalAGI` (MIT, `2,016★`) ·
+`microsoft/waza` (MIT, `1,513★`) · `minicoohei/ai-agent-camp` (no grant, `349★`) ·
+`abaiar/OmniAI-Edu` (no grant, `17★`, builds on the shelved `OpenMAIC`) ·
+`fluki3-06s/songngan-mcp` (MIT) · `alvaroarevalogrand-ui/classroom-mcp` (MIT) ·
+`tgboyles/montessori-mcp` (MIT) · `Manamama-Deepseek-AI-01/google-extras-mcp` (MIT) ·
+`ZhuChenHua/EduAnchor` (MIT) · `shibocao797-max/intellilearn-agent-platform` (MIT) ·
+`marcusgreen/moodle-report_advancedgrading` (GPL-3.0) · `Belles-hub/UpLearn` (MIT, 🇧🇷) ·
+`6t6t-cyberg/kifula` (MIT, 🇦🇴) · `Submitty`-adjacent `infomark-org/infomark` (GPL-3.0, already
+shelved).
+
 
 ## 🟢 `2026-11-16` — `p860`: `34` addresses recovered from this base's own log — and a fourteen-pass nil on "a permissively-licensed LMS/SIS" dies with three counter-examples
 

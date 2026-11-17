@@ -1,8 +1,110 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-16
+updated: 2026-11-17
 ---
+
+## 🟢 `2026-11-17` (sixty-sixth pass, `p861`) — **`5` gaps — `860-G1` DISCHARGED in the direction its own acceptance test names, `860-G2` DISCHARGED with its yield MEASURED rather than claimed, and three new limits named with the probe that found each**
+
+### 🟢 `860-G1` — DISCHARGED in direction: the LOGGED-AND-NEVER-SHELVED figure fell again, and the selection rule the gap asked for exists
+
+🔴 **The gap said: *"mine the backlog" is not a plan; a SELECTION RULE is*, and set the acceptance
+test as a DIRECTION — the logged-and-never-shelved figure must fall between two consecutive passes
+that run it.**
+
+🟢 **It fell, and the rule that made it fall is not the one the gap proposed.** `860-G1` proposed
+ranking the residue by times-logged. 🔴 **`p861` ranked nothing.** 🟢 **It fixed a QUERY defect
+(`T214`), re-ran one term, and `21` of the `28` addresses that came back were already in the
+residue.** 🔵 **So the cheapest way to mine a log of things you could not find is to fix the reason
+you could not find them.**
+
+| Measured `2026-11-17` on a re-implementation of `p860`'s instrument | At `HEAD` | After `p861` |
+|---|---|---|
+| distinct addresses on the three shelves | `1,122` | 🟢 **`1,150`** |
+| distinct addresses logged to the two trending files | `5,554` | `5,561` |
+| 🔴 **LOGGED AND NEVER SHELVED** | 🟡 **`4,805`** | 🟢 **`4,784`** |
+
+🔴 **Declare the instrument before the number.** This is a RE-IMPLEMENTATION of `p860`'s
+set-difference, written in this session, and it reads `1,122` shelved addresses at `HEAD` where
+`p860` published `1,124`. 🔵 **A `0.2%` disagreement between two independent extractions of the
+same corpus is a normalisation difference (trailing punctuation, case, rename aliases), not a
+contradiction — and the acceptance test `860-G1` set is a DIRECTION, which both instruments
+agree on.** 🟢 **`4,805` → `4,784`, a fall of `21` against `28` addresses graded: the gap between
+those two numbers is `7` addresses that were NEW to this base and never logged.**
+
+🔵 **The gap's own arithmetic is improved but not repealed**: at this rate the residue still takes
+a hundred-plus passes. 🟢 **The refinement worth carrying: a log entry is cheap to re-find and
+expensive to grade, so a pass should spend its budget on the INSTRUMENT that produced the log,
+not on the log.**
+
+### 🟢 `860-G2` — DISCHARGED: the affiliation channel exists, it placed `8` of `28`, and the axis that worked was not in the gap's list
+
+🟢 **Built as two scripts, both committed:**
+[`p861-affiliation-probe.sh`](../ingest/p861-affiliation-probe.sh) (one blobless clone per
+address: grant bytes, HEAD commit date, affiliation) and
+[`p861-affiliation-v2.sh`](../ingest/p861-affiliation-v2.sh) (the same corpus re-read offline
+after two defects were found). 🟢 **`28` clones, `0` failures.**
+
+🟢 **Result, published as a rate rather than as a success:** `8` of `28` placed — `domain` `4`,
+`readme` `2`, `citation` `1`, `holder` `1`, plus `2` on the weaker declared `org-sibling` axis.
+🔴 **`20` remain unplaced and are published `Global`, never guessed.**
+
+🔵 **The gap's proposed precedence was `holder → citation/affiliation → namespace → unplaced`.**
+🟢 **The axis that actually paid — a `.edu` / `.ac.XX` / `.edu.XX` domain in the README — was in
+none of those**, and it alone placed the first APAC row in two passes
+([`skt09/IndiGrader`](https://github.com/skt09/IndiGrader) from `cse.iitm.ac.in`). 🔴 **The
+`namespace` step the gap DID name was never usable: `kit-sdq`, `usfca-cs-tools` and `tjcsl` all
+read as institutional and none is resolvable here, because `gh api users/{login}` is `403`
+(`T941`). A namespace that cannot be resolved is not evidence** → `T215`.
+
+### 🔴 `861-G1` — an affiliation is not a region, and `20` unplaced rows need a SECOND instrument, not a better first one
+
+🔴 **Declared because this pass produced the specimen.**
+[`foundation50/classroom50`](https://github.com/foundation50/classroom50) STATES its affiliation
+in its own README — *supported by the Fifty Foundation* — and that affiliation names no country,
+so the row is published `Global` with its publisher known. 🔵 **The university axis hides this,
+because a `.edu` or `.ac.uk` domain carries a country for free.**
+
+🟢 **Remedy, named and cheap**: a second lookup stage that maps an ORGANISATION to a country — a
+TLD in the stated URL (`fifty.foundation` gives none, `.de`/`.br`/`.in` give one), a postal
+address in a `CITATION.cff`, or a jurisdiction named in a `CODE_OF_CONDUCT`/`CONTRIBUTING` file.
+🔴 **Cost: one extra blob read per unplaced row, and it will not place a `.foundation` or `.org`
+publisher at all.**
+
+🟢 **Acceptance test: the next pass that runs the affiliation channel must report two numbers,
+not one — addresses with a STATED affiliation, and addresses PLACED. `p861` was `9` and `8`.**
+
+### 🔴 `861-G2` — the LATAM assessment vocabulary has never been queried, and this pass's LATAM nil is an unrun leg
+
+🔴 **Stated precisely so it is not read as a supply nil.** `p861` found its whole tier by repairing
+an ENGLISH morphology (`grading` → `autograding`). 🔴 **The equivalent Spanish and Portuguese terms
+— `corrección automática`, `correção automática`, `autocorrección`, `rúbrica`, `corretor
+automático` — have never been run in this base.** 🟢 The legs that WERE run in those languages
+(`L6`, `L7`) were pointed at the TUTORING vocabulary and reproduced `T940`: `87` in-language
+addresses, `0` above one star.
+
+🟢 **Remedy: run the five terms above, plus `banca`/`prova`, exactly as `p854` ran its
+non-English channel.** 🟢 **Acceptance test: report the total for each term, and if the tier is
+genuinely empty in both languages, publish that as a measured nil WITH the terms — which is a
+result this base does not currently have.**
+
+### 🔴 `861-G3` — `EMEA` as one bucket is now measurably hiding Africa, and this pass's own source said so
+
+🔴 **The EMEA leg run `2026-11-17` returned the EU AI Act as amended by the `2026` Digital
+Omnibus, the UK DfE's January `2026` product safety standards, the UAE's KHDA guidance, OpenAI
+partnerships in four European states and QS usage figures — 🔴 and `0` African adoption or
+regulatory data, with the source itself noting the absence.**
+
+🔵 **This is not a new observation about Africa; it is a new observation about the REGION FIELD.**
+The closed vocabulary is correct for filtering and the mandated query that fills it is not, in
+exactly the way `North America` returns US-only results for a sixth pass. 🔴 **Two of five regional
+legs are known to under-cover their own territory.**
+
+🟢 **Remedy, identical in both cases and already proven to work once**: name the jurisdictions in
+the query rather than the region. 🟢 **Acceptance test: one pass that runs `AI education Kenya
+Nigeria South Africa 2026 regulation` and `AI education Canada Mexico 2026 spend`, and reports
+what each returns — including nothing.**
+
 
 ## 🟢 `2026-11-16` (sixty-fifth pass, `p860`) — **`4` gaps — `858-G3` DISCHARGED with its acceptance test passed and the residue MEASURED, `858-G4` NARROWED rather than closed, and two new limits named with the probe that found them**
 

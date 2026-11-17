@@ -1,0 +1,29 @@
+repo	axis	evidence	region_claim
+Submitty/Submitty	domain	https://compsci.rpi.edu/	-
+autolab/Tango	domain	autolab-dev@andrew.cmu.edu	-
+quickfeed/quickfeed	-	-	-
+edulinq/autograder-server	-	-	-
+edulinq/autograder-py	domain	sammy@ucsc.edu	-
+kit-sdq/autograder	-	-	-
+uhafner/autograding-github-action	readme	Munich University	-
+uhafner/autograding-model	-	-	-
+pedal-edu/pedal	-	-	-
+gradescope/gradescope-utils	-	-	-
+howardlau1999/autograder-server	-	-	-
+data-8/Gofer-Grader	-	-	-
+robertylewis/lean4-autograder-main	-	-	-
+usfca-cs-tools/autograder	-	-	-
+skt09/IndiGrader	domain	https://cse.iitm.ac.in/~meghana/	-
+Yuanpeng-Li/gradescope-mcp	-	-	-
+ChantillyAn/homework-grader	-	-	-
+jameskermode/mograder	citation	University of Warwick	-
+GoogleCloudPlatform/essai	-	-	-
+RANDCorporation/judge-reliability-harness	-	-	-
+classroom-resources/autograding-grading-reporter	-	-	-
+abdogad/tallyrun	-	-	-
+microsoft/StudentSim	holder	c) Microsoft Corporation.	-
+DozenTwelve/Papermorph	-	-	-
+foundation50/classroom50	readme	Fifty Foundation	-
+cayhorstmann/codecheck3	-	-	-
+tjcsl/tin	-	-	-
+zucchini/zucchini	-	-	-

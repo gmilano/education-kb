@@ -1,8 +1,124 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-16
+updated: 2026-11-17
 ---
+
+## 🟢 `2026-11-17` — sixty-sixth pass (`p861`) — **`5` trends (`T214`–`T218`): an English query term that cannot be run because the forge stems it into a marketing adjective, the affiliation channel built and its yield measured at `8` of `28`, the highest-precedence placement step caught placing three projects at the Free Software Foundation, an affiliation shown not to be a region, and the assessment-platform layer measured copyleft while its components are permissive**
+
+**Two hundred and ten** trends — derived trends: **210**. 🔴 **Count derived this pass with the
+gate's own regex re-implemented in a scratch script OUTSIDE the repository as well as by
+executing `ingest/derive-counts.py`, and both agree** — the `p827`/`p859` convention.
+🟢 **Channel note: `git clone --filter=blob:none --no-checkout --depth 1` RUNS in this session and
+is the existence oracle and the licence channel both — `28` clones, `0` failures.** 🔴 **`curl -sI`
+against `github.com` was NOT used: `T923`/`T970` hold.** 🟢 **`gh api search/repositories` is live
+and supplied traction and the stem-collision counts.** 🔴 **`gh api repos/{owner}/{repo}` and
+`gh api users/{login}` remain `403` session-scoped (`T941`), which is the whole reason `T215`
+exists.** 🟢 **Every licence below is byte-read from a treeless clone and classified on operative
+clause text; `0` come from GitHub's SPDX field.** 🔴 Every market, adoption and regulatory item is
+`CITED, NOT READ` from WebSearch summaries and says so.
+
+## 🔴 `T214` — `grading` is not a runnable query on this channel: the forge stems it to `grade`, and `-grade` is a software-marketing adjective
+
+🟢 **Two numbers settle it.** `grading stars:>20 pushed:>2026-08-01` returns `726`;
+`grade` with the same qualifier returns `731`; `grading NOT grade` returns `9`. 🔴 **So `717` of
+the `726` postings that match `grading` also match `grade` — the two terms index the same
+corpus.** 🔴 **And the corpus is not education**: of the top `30` by stars, `0` are about
+grading. They are `kubernetes` (*Production-Grade Container Scheduling*), `spring-boot`
+(*production-grade applications*), `MaxKB` (*enterprise-grade agents*), `brpc` (*Industrial-grade
+RPC*), `silero-vad` (*enterprise-grade Voice Activity Detector*).
+
+🟢 **The remedy is one morpheme.** `autograder` (`13`) and `autograding` (`11`) return
+`Artemis`, `Autolab`, `Submitty`, `otter-grader`, `infomark` — the real tier — at `8` of `8`
+precision on the first page.
+
+🟢 **Controlled where it should NOT hold** (`p798-G`): `tutoring` (`61`), `proctoring` (`7`) and
+`attendance` (`50`) all return their own tier cleanly on the same day, because no `-tutor`,
+`-proctor` or `-attendance` marketing adjective exists. 🔵 **So this is a specific collision,
+not general search noise, and it is reproducible:**
+[`stem-collision-control`](../evidence/stem-collision-control.2026-11-17-p861.tsv).
+
+🔴 **What it retires.** This base declared a *grading gap* from `T96` onward and `p833` closed it
+by switching LANGUAGE to Chinese (`作业批改`). 🟢 **That was a true observation about Chinese
+supply and a wrong diagnosis of the English nil.** 🔵 **The rule this leaves: before declaring a
+nil in English, run the term's own morphological variants — `-ing` is not a safe form when the
+root doubles as an adjective.**
+
+## 🟡 `T215` — the affiliation channel works, and its yield is `8` of `28`
+
+🟢 **`860-G2` named the remedy and `p861` built it**
+([`p861-affiliation-probe.sh`](../ingest/p861-affiliation-probe.sh),
+[`p861-affiliation-v2.sh`](../ingest/p861-affiliation-v2.sh)): the blobless clone already fetches
+the tree, so `CITATION.cff`, the README, `pyproject.toml`, `package.json` and the grant's own
+holder line can be read for a STATED institutional affiliation at zero extra network cost.
+
+| Axis, in declared precedence | Placed |
+|---|---|
+| `holder` — an institution named in the grant's copyright line | `1` |
+| `citation` — `CITATION.cff` `affiliation:` | `1` |
+| `domain` — a `.edu` / `.ac.XX` / `.edu.XX` address or URL in the README | 🟢 **`4`** |
+| `readme` — an institution named in the first `8,000 B` | `2` |
+| 🔴 **unplaced** | 🔴 **`20`** |
+
+🔴 **`29%` is the honest yield, and it is still the best placement instrument this base has**, because
+the alternative is `gh api users/{login}`, which is `403` here, or the query language, which `T935`
+forbids. 🟢 **It placed the first APAC row in two passes** — [`skt09/IndiGrader`](https://github.com/skt09/IndiGrader)
+from `cse.iitm.ac.in` in its README — 🔵 **and the `domain` axis, which did not exist in the gap's own
+remedy list, out-produced every axis the gap named.**
+
+🔵 **One weaker axis is declared and marked in the rows that use it**: `org-sibling`, where another
+repository of the SAME owner states the affiliation. It placed `2` further rows and is published as
+a lower grade than a holder line, never merged into it.
+
+## 🔴 `T216` — the highest-precedence placement step read the LICENCE's own copyright and placed three projects at the Free Software Foundation
+
+🔴 **Caught in flight, on this pass's own instrument, on its first run.** GPL-3.0 and AGPL-3.0
+open with `Copyright (C) 2007 Free Software Foundation, Inc.`, and the `holder` step — the step
+with the HIGHEST precedence — matched it. 🔴 **`foundation50/classroom50`, `cayhorstmann/codecheck3`
+and `tjcsl/tin` were each placed at the FSF.**
+
+🔵 **Why this class matters more than the instance.** The defect is invisible in the permissive
+corpus this base mostly reads: MIT and BSD payloads carry the PROJECT's copyright on the first
+copyright line, so the step is correct for every MIT row and wrong for every GNU row. 🔴 **An
+instrument validated on one licence family silently inverts on another** — the same shape as
+`T60`'s name-is-marketing rule and `860-G4`'s title-line defect, now on a third axis.
+
+🟢 **Fixed in [`p861-affiliation-v2.sh`](../ingest/p861-affiliation-v2.sh)**: a holder line matching
+the licence's own boilerplate (`Free Software Foundation`, `Apache Software Foundation`,
+`<COPYRIGHT HOLDER>`) is skipped rather than read. 🟢 **After the fix the three FSF placements are
+gone and the yield RISES from `5` to `8`, because the `domain` axis added in the same revision
+reaches repositories the holder step was shadowing.**
+
+## 🔵 `T217` — an affiliation is not a region, and the gap that asked for placement did not say so
+
+🟢 **[`foundation50/classroom50`](https://github.com/foundation50/classroom50) states its
+affiliation in its own README — *supported by the Fifty Foundation* (`fifty.foundation`) — and the
+affiliation names no country.** 🔴 **So the row is placed with an organisation and published
+`Global` anyway.**
+
+🔵 **The distinction the next pass needs:** the affiliation axis answers *who publishes this*, and
+the region cell answers *where*. A university domain collapses the two in one step
+(`iitm.ac.in` → APAC, `rpi.edu` → North America, `warwick` → EMEA) 🔴 **and a foundation, a
+company or an authors-collective does not.** 🟢 **`7` of this pass's `8` placements came from an
+axis that carried a country; `1` did not, and it is the one that is still unplaced.**
+
+## 🔴 `T218` — the assessment PLATFORM layer is copyleft and its COMPONENTS are permissive, measured in one batch of `28`
+
+🟢 **Measured, not asserted, on addresses byte-read the same day.** Of the four systems an
+institution RUNS, `3` are GPL-3.0 or AGPL-3.0
+([`classroom50`](https://github.com/foundation50/classroom50),
+[`codecheck3`](https://github.com/cayhorstmann/codecheck3), [`tin`](https://github.com/tjcsl/tin))
+and `1` is BSD-3-Clause ([`Submitty`](https://github.com/Submitty/Submitty)). 🟢 **Of the `18`
+components a course IMPORTS — graders, scoring models, CI actions, sandboxes, MCP servers —
+`18` of `18` are MIT, Apache-2.0 or BSD.**
+
+🔵 **This is the same split this base has recorded at the LMS layer and the SIS layer, now
+confirmed at the assessment layer, and it is the single most reusable commercial fact in the
+file:** 🟢 **inherit the platform under its own terms, and build the AI layer beside it under
+yours.** 🔴 **The counter-example is the valuable one: `Submitty` is BSD-3-Clause with `1,123`
+forks — a permissive platform DOES exist in this tier, and a studio that needs to ship a modified,
+branded instance closed has exactly one choice.**
+
 
 ## 🟢 `2026-11-16` — sixty-fifth pass (`p860`) — **`8` trends (`T206`–`T213`): this base's own log audited and found to be holding `4,924` ungraded addresses, a licence that says MIT and forbids sale, GitHub's licence field under-reading four grants in one batch, the AI layer identified as the PAYWALLED layer, institutional repositories carrying individual copyright, the agency channel shown to find ministries and miss operators, two addresses on which the forge's channels disagree about existence, and a fourteen-pass nil REFUTED**
 

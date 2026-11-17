@@ -1,0 +1,28 @@
+Submitty/Submitty	LOGGED	807	1123	BSD-3-Clause	main	Homework Submission, Automated Grading, and TA grading system.
+autolab/Tango	LOGGED	49	63	Apache-2.0	master	Standalone RESTful autograding service
+quickfeed/quickfeed	LOGGED	27	24	MIT	master	QuickFeed server and web frontend for instant feedback on programming assignments
+edulinq/autograder-server	LOGGED	21	22	MIT	main	A server to automatically grading coding assignments.
+edulinq/autograder-py	LOGGED	17	22	MIT	main	The Python interface to the autograder.
+kit-sdq/autograder	LOGGED	18	8	MIT	main	Automatic grading of student's Java code
+uhafner/autograding-github-action	LOGGED	32	6	MIT	main	GitHub Action to autograde projects based on a configurable set of metrics
+uhafner/autograding-model	LOGGED	5	9	MIT	main	Model to autograde Java projects based on a configurable set of metrics.
+pedal-edu/pedal	LOGGED	33	11	MIT	master	A collection of tools to analyze student's Python source code
+gradescope/gradescope-utils	LOGGED	38	27	MIT	master	Python package for building Gradescope autograders
+howardlau1999/autograder-server	LOGGED	24	2	Apache-2.0	master	
+data-8/Gofer-Grader	NEW	16	17	BSD-3-Clause	master	Small autograding library
+robertylewis/lean4-autograder-main	LOGGED	14	11	Apache-2.0	master	
+usfca-cs-tools/autograder	NEW	8	10	MIT	main	Clone and build repos from Github Classroom. Run test cases vs. expected output
+skt09/IndiGrader	LOGGED	8	4	MIT	main	A secure, zero-trust autograding platform designed for closed-network university labs.
+Yuanpeng-Li/gradescope-mcp	LOGGED	8	9	MIT	main	MCP server for Gradescope: let AI agents grade with rubrics, review regrades and manage assignments, with every write previewed and approved (74 tools
+ChantillyAn/homework-grader	LOGGED	8	3	MIT	master	Rubric-driven AI homework grading system built as a Claude Code Skill. Score student submissions with CoT reasoning, bias mitigation, and PDCA quality
+jameskermode/mograder	LOGGED	21	0	MIT	main	Semi-automated grading for Marimo notebooks
+GoogleCloudPlatform/essai	NEW	7	4	Apache-2.0	main	EssAI is an open-source project (experiment/demo) designed to showcase how organizations can easily and quickly do essay grading for educators. Levera
+RANDCorporation/judge-reliability-harness	NEW	22	2	MIT	main	Framework for generating validation data for LLM-as-a-Judge and LLM Autograders
+classroom-resources/autograding-grading-reporter	LOGGED	11	24	MIT	main	Renders Autograding output and syncs results to GitHub Classroom
+abdogad/tallyrun	LOGGED	8	1	MIT	main	Rootless sandbox that judges untrusted code by counting CPU instructions instead of seconds — same verdict on a busy machine as on an idle one.
+microsoft/StudentSim	LOGGED	83	11	MIT	main	StudentSim is a research framework for training and evaluating AI models that simulate how students respond to learning material. The research goal is
+DozenTwelve/Papermorph	LOGGED	1748	221	MIT	main	An AI skill that turns books into animated, narrated, interactive web experiences
+foundation50/classroom50	LOGGED	238	39	GPL-3.0	main	The free, open-source alternative to GitHub Classroom
+cayhorstmann/codecheck3	NEW	7	8	AGPL-3.0	main	CodeCheck is an anonymous, author-friendly autograder. It is optimized for simple programming assignments that provide practice and build confidence. 
+tjcsl/tin	NEW	8	12	GPL-3.0	master	Turn-In: A code autograder for CS classes
+zucchini/zucchini	NEW	5	7	NOASSERTION	master	:eggplant:! autograding for the cool kids in CS 2110 and beyond

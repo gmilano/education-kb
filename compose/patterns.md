@@ -1,8 +1,108 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-16
+updated: 2026-11-17
 ---
+
+## 🟢 Sixty-sixth pass (`p861`, 2026-11-17) — **`P94`–`P95`: the assessment layer, built twice — once as a system the client owns end to end, and once INSIDE the vendor estate the client already pays for**
+
+**Ninety-five** concrete recipes — derived recipes: **95**. 🟢 **Every component named below was
+byte-read on `2026-11-17` from a treeless partial clone and classified on operative clause text;
+`0` licences come from GitHub's SPDX field, and `1` contradicts it** (`zucchini`, field
+`NOASSERTION`, bytes Apache-2.0). 🔴 **`curl -sI` is `403` from this environment and was not used
+to verify anything.** 🔵 **Both recipes exist because `T214` made the tier findable: the English
+term for this work is `autograding`, not `grading`.**
+
+## P94 — the CLOSED-NETWORK marking service: assessment a ministry or exam board can run with no egress, permissive end to end
+
+🔵 **What it produces:** a marking service that runs entirely inside the client's perimeter —
+no learner work, no learner identity and no prompt leaves the network — returning a provisional
+mark, the evidence for it, and a queue in which a named human confirms or overrides it.
+
+🔴 **Why the perimeter is the requirement and not a preference.** Every regional leg this pass ran
+returns the same constraint in different words: EU AI Act Annex III makes education scoring
+high-risk with the standalone clock at `2 December 2027`; Brazil's `Parecer CNE/CP nº 15/2026`
+prohibits an academic sanction founded exclusively on an AI detector and reserves the mark to the
+teacher; Vietnam's `Decision 33/2026/QD-TTg` lists education among six high-risk sectors with
+pre-deployment registration. 🟢 **A build that cannot send a student's script to a third party is
+a build that survives all three.**
+
+### Components — every grant byte-read `2026-11-17`, `0` copyleft in the shipped path
+
+| Role | Component | Grant, as read | Why this one |
+|---|---|---|---|
+| Platform of record | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 BSD-3-Clause (`1,542 B`, `c123708cb4ef`) | Submission, queue, rubric, TA-grading UI, grade of record — and **BSD-3 is the only permissive grant in the platform tier**, so the client's branded fork stays the client's |
+| Sandbox | [`abdogad/tallyrun`](https://github.com/abdogad/tallyrun) | 🟢 MIT (`1,075 B`, `15a1ef7e938b`) | Rootless, and it judges by **counting CPU instructions rather than wall-clock time** — the same submission gets the same mark on a loaded node, which is what an appeal turns on |
+| Execution service | [`autolab/Tango`](https://github.com/autolab/Tango) | 🟢 Apache-2.0 (`11,324 B`, `a8ad31b1c3f4`) | A RESTful autograding service already separated from its platform; Apache-2.0 lets the studio ship a derived service closed |
+| Closed-network reference | [`skt09/IndiGrader`](https://github.com/skt09/IndiGrader) | 🟢 MIT (`1,072 B`, `5065bc33aae5`) | 🟢 **Built for exactly this deployment — zero-trust, closed network — and placed APAC from `cse.iitm.ac.in` in its own README.** Read it for the threat model, not for the code |
+| Scoring model | [`uhafner/autograding-model`](https://github.com/uhafner/autograding-model) | 🟢 MIT (`1,080 B`, `b8f78942bf60`) | Defines what a mark is MADE of — tests, coverage, static analysis, mutation — as data rather than code, so the rubric is reviewable by a non-programmer |
+| Feedback quality | [`pedal-edu/pedal`](https://github.com/pedal-edu/pedal) | 🟢 MIT (`1,103 B`, `ffaa010382b0`) | Composes a RESPONSE rather than a pass/fail. Prior art on what good feedback is shaped like; the LLM writes in this register or not at all |
+| Sound verdicts where they exist | [`robertylewis/lean4-autograder-main`](https://github.com/robertylewis/lean4-autograder-main) | 🟢 Apache-2.0 (`11,357 B`, `b40930bbcf80`) | Where a formal checker exists, the checker decides and the model only explains. The boundary case to show a sceptical client |
+
+### Wiring
+
+1. **`Submitty` is the system of record and the only thing with learner identity.** Everything
+   below it receives an anonymised submission id.
+2. **`Tango` executes; `tallyrun` is the sandbox it executes in.** Instruction-counting gives a
+   deterministic resource verdict that survives an appeal.
+3. **`autograding-model` turns raw signals into a provisional mark.** It is config, so the
+   examiner owns it.
+4. **The LLM enters at exactly one point: the EXPLANATION**, written in `pedal`'s register, on a
+   model served locally. 🔴 **It never writes to the grade of record.**
+5. **A named human confirms in the `Submitty` TA-grading UI.** The confirmation, the provisional
+   mark and the override are all stored — that record is the compliance artefact.
+
+🔴 **The one thing this recipe must not do.** 🟢 **Brazil's instrument is the sharpest statement of
+it and it generalises: an AI pre-mark is a preparatory step and the mark is reserved to the
+teacher.** 🔵 **So the queue is the product. A studio selling "automatic marking" is selling the
+part that is prohibited; a studio selling "the teacher marks four times faster, and can prove how"
+is selling the part that is compelled.**
+
+## P95 — marking INSIDE the incumbent: the agent seam at a North American university that already runs Gradescope and GitHub Classroom
+
+🔵 **What it produces:** the same teacher-time saving as `P94`, with **no platform migration** —
+the agent reaches into the systems the institution already licenses, and the studio's deliverable
+is the skill pack, the validation harness and the integration, not a server.
+
+🔴 **Read the holder lines before the architecture.** 🟢 `gradescope-utils` is published under MIT
+by **`Turnitin, LLC`**, and `autograding-grading-reporter` under MIT by **`GitHub`**. 🔵 **Both
+incumbents publish a supported, permissive seam. A proposal that proposes replacing them is a
+proposal to re-buy what the client already owns.**
+
+### Components — every grant byte-read `2026-11-17`
+
+| Role | Component | Grant, as read | Why this one |
+|---|---|---|---|
+| Agent seam into Gradescope | [`Yuanpeng-Li/gradescope-mcp`](https://github.com/Yuanpeng-Li/gradescope-mcp) | 🟢 MIT (`1,068 B`, `29d0f3f4463a`) | MCP server: an agent reads rubrics and submissions and proposes marks in the incumbent |
+| Vendor-supported harness | [`gradescope/gradescope-utils`](https://github.com/gradescope/gradescope-utils) | 🟢 MIT (`1,070 B`, `1fa57a15a75b`), holder `Turnitin, LLC` | The documented way to put your own grader inside Gradescope |
+| Classroom reporting seam | [`classroom-resources/autograding-grading-reporter`](https://github.com/classroom-resources/autograding-grading-reporter) | 🟢 MIT (`1,063 B`, `59c888c36a7e`), holder `GitHub` | Renders autograding output and syncs it back to GitHub Classroom |
+| CI marking | [`uhafner/autograding-github-action`](https://github.com/uhafner/autograding-github-action) | 🟢 MIT (`1,095 B`, `d2c7f8d2d8be`) | Marking as a pull-request check — the lowest-friction form there is |
+| The marking skill | [`ChantillyAn/homework-grader`](https://github.com/ChantillyAn/homework-grader) | 🟢 MIT (`1,068 B`, `8755221656d4`) | Rubric-driven marking as an agent skill. 🔴 Nine months stale: copy the pattern, do not depend on it |
+| 🟢 **Is the marker right?** | [`RANDCorporation/judge-reliability-harness`](https://github.com/RANDCorporation/judge-reliability-harness) | 🟢 MIT (`1,061 B`, `c2ce29c8beca`) | Generates validation data for LLM-as-a-Judge and LLM autograders — **the deliverable that turns a demo into a procurement** |
+| 🟢 **Test it without students** | [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) | 🟢 MIT (`1,074 B`, `7df20dcdf919`), holder `Microsoft Corporation` | Simulates human learners, so the agent is exercised against a counterparty before it is exercised against a child |
+
+### Wiring
+
+1. **`StudentSim` first, before any integration.** Generate a population of simulated learners and
+   their work; this is the test corpus the client never has to supply.
+2. **`judge-reliability-harness` grades the grader on that corpus** — agreement with human marks,
+   failure modes, drift. 🟢 **Run it BEFORE the pilot and publish the numbers.**
+3. **`gradescope-mcp` and the GitHub Classroom reporter give the agent read access** to live
+   rubrics and submissions. 🔴 **Read-only on day one; `T101`'s controls — server-side RBAC and a
+   named approver — before any write.**
+4. **`homework-grader`'s rubric pattern is the skill's shape;** the studio's version is the
+   client's own rubric encoded, which is the part the client cannot buy.
+5. **The mark lands in Gradescope only after a human presses confirm**, and
+   `autograding-github-action` posts the machine portion as a PR check, where it is advisory by
+   construction.
+
+🔵 **Why this sells where `P94` does not.** 🔴 The North American leg returns the densest
+legislative calendar in the world and **no spend figure for Canada or Mexico, a sixth pass
+running** — the buyer here is an institution with an integration budget, not a ministry with a
+procurement. 🟢 **`P95` is priced as an integration and validated like a clinical instrument; that
+combination is what the EDUCAUSE assessment finding — `438` faculty and staff, assessment design
+in flux — actually asks for.**
+
 
 ## 🟢 Sixty-fifth pass (`p860`, 2026-11-16) — **`P92`–`P93`: the university tutor stack that is ALREADY permissive end to end, and the LATAM curriculum-aligned build whose every component now has a licence trail**
 

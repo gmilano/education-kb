@@ -1,0 +1,10 @@
+query	qualifier	total_count	note
+grading	stars:>20 pushed:>2026-08-01	726	top-30 by stars: 0 about grading; every hit matches -grade as a marketing adjective
+grade	stars:>20 pushed:>2026-08-01	731	within 0.7% of the grading total -- the two terms index the same postings
+grading NOT grade	stars:>20 pushed:>2026-08-01	9	717 of 726 grading hits also match grade
+autograder	stars:>20 pushed:>2026-08-01	13	REMEDY: 8 of 8 top hits are autograding systems
+autograding	stars:>20 pushed:>2026-08-01	11	REMEDY: returns Artemis, Autolab, Submitty, otter-grader
+rubric	stars:>20 pushed:>2026-08-01	39	partial remedy, mixed with agent-skill evaluation
+tutoring	stars:>20 pushed:>2026-08-01	61	CONTROL: no -tutor adjective exists; the defect does not generalise
+proctoring	stars:>20 pushed:>2026-08-01	7	CONTROL: same, clean
+attendance	stars:>20 pushed:>2026-08-01	50	CONTROL: same, clean

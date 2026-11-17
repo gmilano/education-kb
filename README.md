@@ -1,10 +1,45 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-16
+updated: 2026-11-17
 ---
 
 # Globant AI Studios — Education KB
+
+## Pass `p861` · `2026-11-17`
+
+🔴 **This pass did not find a new tier. It found out why a tier it already half-held was
+invisible, and the reason is one English word.** 🟢 **`grading` is stemmed to `grade` on
+GitHub's search channel, and `-grade` is a software-marketing adjective** — `kubernetes`
+(*Production-Grade*), `spring-boot` (*production-grade*), `MaxKB` (*enterprise-grade*).
+🔴 **`grading` returns `726`, `grade` returns `731`, `grading NOT grade` returns `9`, and `0` of
+the top `30` by stars are about grading.** 🟢 **`autograding` returns the real tier at `8` of `8`.**
+
+🟢 **`28` repositories byte-read on a blobless clone, `0` failures, `0` licences from GitHub's
+SPDX field. `24` permissive, `3` copyleft, `1` Apache-2.0 by reference that GitHub's field calls
+`NOASSERTION`.** 🔴 **`21` of the `28` were already in this base's own trending log and on no
+shelf** — the residue `860-G1` measured, now `4,805` → `4,784`.
+
+🟢 **`6` agent rows (`474` → `480`), `18` foundation rows (`318` → `336`), `4` platform rows
+(`163` → `167`, and the roll-up heading's standing `162` claim corrected), `2` recipes
+(`P94`–`P95`), `5` trends (`T214`–`T218`), `2` gaps discharged, `3` declared.**
+
+## What this pass established
+
+| | |
+|---|---|
+| 🔴 **A query term that cannot be run, and the control that proves it is specific** | `tutoring` (`61`), `proctoring` (`7`) and `attendance` (`50`) all return their own tier cleanly on the same day — no `-tutor`, `-proctor` or `-attendance` adjective exists. 🔵 **So this is one morphological collision, not search noise** → `T214`. 🟢 **It retires `T96`'s *grading gap* and corrects `p833`'s LANGUAGE diagnosis of the English nil** |
+| 🟢 **`860-G2` discharged — the affiliation channel built, run, and its yield PUBLISHED as a rate** | `8` of `28` placed (`29%`): `domain` `4`, `readme` `2`, `citation` `1`, `holder` `1`, plus `2` on the weaker declared `org-sibling` axis. 🔵 **The axis that paid — a `.edu`/`.ac.XX` domain in the README — was in none of the gap's proposed steps**, and it placed the first APAC row in two passes ([`skt09/IndiGrader`](https://github.com/skt09/IndiGrader), `cse.iitm.ac.in`) → `T215` |
+| 🔴 **The instrument caught itself on its first run** | Its HIGHEST-precedence step read the LICENCE's own copyright line and placed three GPL/AGPL projects at the **Free Software Foundation**. 🔵 **An instrument validated on permissive payloads inverts on copyleft ones** → `T216`. Fixed in [`p861-affiliation-v2.sh`](ingest/p861-affiliation-v2.sh); yield rose `5` → `8` |
+| 🔵 **An affiliation is not a region** | [`foundation50/classroom50`](https://github.com/foundation50/classroom50) states its publisher (*Fifty Foundation*) and the publisher names no country, so the row is published `Global` with its origin known → `T217`, and `861-G1` names the second instrument that would place it |
+| 🟢 **The licence split measured in ONE batch, across the whole layer** | 🔴 **`3` of `4` assessment PLATFORMS are GPL/AGPL; `18` of `18` COMPONENTS are MIT, Apache-2.0 or BSD** → `T218`. 🔵 **One escape hatch, worth knowing by name: [`Submitty`](https://github.com/Submitty/Submitty) is BSD-3-Clause with `1,123` forks — the largest fork count on this shelf** |
+| 🟢 **A standing gate half-fixed, in this pass's own block only** | `gate-region-headings` has been RED since `p857`. 🔴 **The cause is that every block since `p854` writes `### Global — <subtitle>`, which the closed-vocabulary gate reads as OUT-OF-VOCAB *and* as `Global` MISSING.** 🟢 **`p861`'s block writes a bare `### Global` and is the first to pass both halves** — findings on `intel/market.md` fall `7` → `5`, and the `5` that remain are historical blocks plus one structural `MULTIPLE-BLOCKS` per retained pass |
+| 🔴 **Gate suite: `51/73` green on BOTH sides, `22` RED on both — `0` regressions and `0` fixes** | 🟢 Measured, not assumed: `make -k hooks` run on a clean `git archive HEAD` export AND on the edited tree, with byte-identical RED lists. 🔵 **`python3 -I ingest/derive-counts.py` RUNS in this session and is GREEN on all five counted pages after this pass — including `verticals/solutions.md`, RED at `HEAD` since `p858`** |
+| 🔴 **Three regional legs under-cover their own territory, and two are now named gaps** | 🔴 **Africa returned `0` from the EMEA leg, with the source itself saying so (`861-G3`).** 🔴 **Canada and Mexico have no spend figure for a sixth pass.** 🔴 **The APAC leg returned the UAE's KHDA for a THIRD consecutive pass** — `T935`'s Gulf leak is now a known defect of the leg, not a surprise |
+| 🔴 **LATAM: `0` rows placed, declared as an UNRUN LEG** | 🟢 **`861-G2` names the five Spanish and Portuguese assessment terms that have never been queried in this base** (`corrección automática`, `correção automática`, `autocorrección`, `rúbrica`, `corretor automático`). 🔴 **The tutoring-vocabulary legs that WERE run returned `87` in-language addresses and `0` above one star** — `T940` reproduced exactly |
+| 🔵 **Current-state file counts after this pass** | [`agents/top.md`](agents/top.md) **`480`** · [`repos/foundations.md`](repos/foundations.md) **`336`** · [`verticals/solutions.md`](verticals/solutions.md) **`167`** · [`intel/trends.md`](intel/trends.md) **`210`** · [`compose/patterns.md`](compose/patterns.md) **`95`** — all five gate-GREEN. 🔵 **The `Files` table further down is `p859`'s and its figures are superseded by these** |
+| 🟢 **Evidence published this pass** | [`byte-read-grants`](evidence/byte-read-grants.2026-11-17-p861.tsv) (`28` grants with ref, HEAD sha, path, bytes, `sha256₁₂`, family, title line, holder) · [`stem-collision-control`](evidence/stem-collision-control.2026-11-17-p861.tsv) · [`affiliation-channel-v1`](evidence/affiliation-channel-v1.2026-11-17-p861.tsv) and [`v2`](evidence/affiliation-channel-v2.2026-11-17-p861.tsv) (the defect and its repair, both kept) · [`search-legs`](evidence/search-legs.2026-11-17-p861.tsv) (`12` legs, every total, first `30` each) · [`candidate-metadata`](evidence/candidate-metadata.2026-11-17-p861.tsv) |
+
 
 ## Pass `p859` · `2026-11-16`
 
