@@ -1,0 +1,11 @@
+address	verdict	form	hits	where
+diaslui/enem-extractor	SHELVED	both	28	agents/top.md,agents/trending.md,compose/patterns.md,evidence/address-census.2026-11-12-p781.tsv
+migueldsants/OpENEM	UNGRADED	bare-only	1	scratchpad/p866-c3.txt
+rodrigoborgesmachado/questoes-aqui	SHELVED	both	11	agents/trending.md,compose/patterns.md,evidence/byte-read-grants.2026-11-17-p862.tsv,evidence/homograph-control.2026-11-17-p862.tsv
+yunger7/enem-api	SHELVED	both	125	agents/trending.md,compose/code/git-recency-channel/data/recency-2026-10-06.tsv,compose/code/git-recency-channel/data/references-2026-10-06.txt,compose/code/p1040-ecl-corpus-census/lost-addresses.corpus-census-1381.2026-10-10.txt
+yetanalytics/lrsql	SHELVED	both	556	agents/top.md,agents/trending.md,compose/code/git-recency-channel/data/recency-2026-10-06.tsv,compose/code/git-recency-channel/data/references-2026-10-06.txt
+SaadRahman01/claude-moodle-dev	UNGRADED	both	66	agents/trending.md,compose/code/p191-licence-case-full-depth/population.2026-10-14.tsv,compose/code/p191-licence-case-full-depth/result.2026-10-14.tsv,compose/code/p195-shelf-licence-census/live-slugs.txt
+Berserk-hub150/moodle-ai-skill-navigator	UNGRADED	both	123	agents/trending.md,compose/code/git-recency-channel/data/recency-2026-10-06.tsv,compose/code/git-recency-channel/data/references-2026-10-06.txt,compose/code/p1040-ecl-corpus-census/lost-addresses.corpus-census-1381.2026-10-10.txt
+saylordotorg/moodle-local_ai_course_assistant	UNGRADED	both	181	agents/trending.md,compose/code/git-recency-channel/data/recency-2026-10-06.tsv,compose/code/git-recency-channel/data/references-2026-10-06.txt,compose/code/p1026-archive-regression-census/held-only-in-a-worklist.2026-10-10.txt
+onbirdev/moodle-webservice_mcp	UNGRADED	both	159	agents/trending.md,compose/code/p1040-ecl-corpus-census/lost-addresses.corpus-census-1381.2026-10-10.txt,compose/code/p1040-ecl-corpus-census/result.corpus-pass1.2026-10-10.tsv,compose/code/p1040-ecl-corpus-census/result.corpus-pass2.2026-10-10.tsv
+adlnet/ADL_LRS	SHELVED	both	316	agents/trending.md,compose/code/git-recency-channel/data/recency-2026-10-06.tsv,compose/code/git-recency-channel/data/references-2026-10-06.txt,compose/code/grant-ladder-v2/pass90-results.tsv

@@ -6,6 +6,108 @@ updated: 2026-11-17
 
 # Globant AI Studios — Education KB
 
+## Pass `p866` · `2026-11-17`
+
+🟢 **`865-G1`, `865-G2`, `865-G3` and `865-G4` were all discharged with their acceptance tests
+run, and three of them changed something this base had published.** 🔴 **A date is withdrawn, a
+"planning constant" turns out to have been a floor, and `97` shelf rows this base already owned
+were being counted nowhere.**
+
+🔴 **The count dispute is settled by arithmetic, not by preference** (`865-G1`). 🟢 **Measured at
+`HEAD` before this pass edited anything, the three figures reconcile exactly**: the gate counted
+`495` rows on `agents/top.md` under DECLARED column signatures; `102` further rows in `24` tables
+carried addresses under signatures nobody had declared; `130` more sat in tables deliberately
+excluded as measurements; `495 + 102 + 130 = 727`, which is the `README`'s basis — 🔴 **and the
+`README` published `739`, because that figure is hand-incremented each pass and had never been
+re-derived.** 🟢 **The `102` were sorted into HOLDINGS and MEASUREMENT and declared, which raised
+three shelves by `97` distinct rows with NOT ONE new row added to reach it.**
+
+🟢 **`865-G2` asked for a delta instead of a standing RED, and it caught this pass in the act.**
+🟢 [`ingest/p866-count-delta.sh`](ingest/p866-count-delta.sh) runs the uncounted-table detector
+over `git archive HEAD` and over the working tree and reports only the difference, in two arms
+(content, holding the detector constant — and published, which shows a declaration's effect).
+🔴 **Minutes after the foundations block was written, ARM A reported a new uncounted table — one
+this pass had just created.** 🔵 **Under the old reporting it would have joined a `58`-line
+standing RED and been read past, exactly as `p863`'s and `p864`'s were.**
+
+🔴 **`865-G3` ends with a withdrawal.** 🟢 **The Brazilian rules were approved by the CNE
+UNANIMOUSLY, reported `2026-10-14`** — homologated `2026-11-10`, signed `2026-11-11`, published in
+a DOU edição extra of `2026-11-12`. 🔴 **`p865`'s `1 September 2026` approval date is corroborated
+by nothing read this pass and is withdrawn.** 🟢 **The `12`-month clock therefore runs to
+`2027-11-10`; the `art. 41` prohibitions bind now.**
+
+🔴 **`865-G4`'s constant was a floor.** 🟢 **The instrument it asked for
+([`ingest/p866-triage.py`](ingest/p866-triage.py)) printed the three-way split on its first run
+and the split was `0` NEW in `54` candidates across `15` veins** — topic facets, four languages,
+several star floors, the ENEM estate, the Moodle plugin estate. 🔵 **`76%` (`p852`) and `77%`
+(`p865`) were not a stable rate; `100%` is the measurement.** 🟢 **The usable quantity is the `27`
+`UNGRADED` addresses — owned, previously discovered, on no shelf — and all `15` rows this pass
+filed are promotions out of that bucket, not discoveries.**
+
+🟢 **The licence byte band stopped being an observation.** 🟢 **Four `GPL-3.0` payloads spanning
+`35,148`–`35,154` were diffed against the canonical and every offset has a cause**: a missing
+`EOF` newline (`−1`), a UTF-8 BOM plus a blank line (`+4`), a narrower line wrap (`+5`).
+🔴 **And the collision runs the other way: three `AGPL-3.0` payloads measure `34,523 B` each, two
+share a digest and the third does not, because the word `by` sits on the other side of a line
+break.** 🔵 **Byte count is not a licence identity test in either direction** (`T247`, `T248`).
+
+🔴 **`NOASSERTION` hid three commercial BLOCKS this pass and one absent grant** — a `CC BY-NC 4.0`
+curriculum graph with `8,327★` and `2,237` forks, a `1,043 B` "personal use only" licence sitting
+INSIDE the MIT size band, and an Apache-2.0 derivative with brand conditions (`T252`, `T249`).
+🟢 **The `1,043 B` payload is the committed MIT predictor's first WILD adversarial input after
+`12` fixture controls, and it declined on the title line, not the byte arithmetic.**
+
+🟡 **`863-G2`'s region-token ban is refined rather than kept** (`T251`): region tokens returned
+region-placed adoption figures and named institutions in `4` of `4` legs, and returned no
+country-level policy map for APAC and no instrument at all for LATAM. 🟢 **Rule now: region tokens
+for adoption, market and players; one jurisdiction per policy leg.**
+
+### This pass added
+
+| Shelf | Added | Total |
+|---|---|---|
+| [`agents/top.md`](agents/top.md) | `6` rows + a declaration repair (`495`→`526` before new rows) | **`532`** 🟢 gate-GREEN |
+| [`repos/foundations.md`](repos/foundations.md) | `4` rows + a declaration repair (`348`→`374`) | **`378`** 🟢 gate-GREEN |
+| [`verticals/solutions.md`](verticals/solutions.md) | `5` rows + a declaration repair (`168`→`207`) | **`212`** 🟢 gate-GREEN |
+| [`intel/trends.md`](intel/trends.md) | `7` trends (`T246`–`T252`) | `244` 🟢 gate-GREEN |
+| [`compose/patterns.md`](compose/patterns.md) | `2` recipes (`P106`–`P107`) | `105` 🟢 gate-GREEN |
+| [`intel/market.md`](intel/market.md) | rewritten — `865-G3` settled, all five region sections | — |
+| [`intel/measured-unusable.md`](intel/measured-unusable.md) | `6` refusals — `3` concealed BLOCKS, `3` no-grant | — |
+| [`intel/open-gaps.md`](intel/open-gaps.md) | `4` discharged, `5` new (`866-G1`–`G5`) | — |
+| [`ingest/`](ingest/) | `3` new instruments: `p866-triage.py`, `p866-count-delta.sh`, `p866-payload-probe.sh` | — |
+| [`evidence/`](evidence/) | `7` files | — |
+
+🟢 **The two count bases, published side by side and both DERIVED — `865-G1`'s standing repair,
+so no figure in this file is ever again incremented by hand:**
+
+| Shelf | 🟢 **Shelf count — the client-facing figure** | 🟡 Addresses discussed on the page (NOT a shelf count) |
+|---|---|---|
+| [`agents/top.md`](agents/top.md) | 🟢 **`532`** rows under a declared holdings signature | `738` address-bearing table rows · `761` distinct addresses |
+| [`repos/foundations.md`](repos/foundations.md) | 🟢 **`378`** | `396` · `414` distinct |
+| [`verticals/solutions.md`](verticals/solutions.md) | 🟢 **`212`** | `247` · `265` distinct |
+
+🔴 **One row was deliberately NOT imported by the repair, and the reason is published**: declaring
+the seven-column holdings signature countable would have pulled
+[`nurkan1/anatria-3d`](https://github.com/nurkan1/anatria-3d) — **`BSL 1.1`, not open source** —
+into a shelf whose heading promises MIT / Apache-2.0 / BSD / ISC / 0BSD. 🟢 **That table's first
+column header now reads `Not build-safe`, a declared not-counted signature; `p862`'s measured
+bytes, stars and prose are unaltered. The row stays visible and stays out of the total.**
+
+🟢 **Counts, gate-confirmed after this pass's edits.** `python3 -I ingest/derive-counts.py .` →
+`agents/top.md` **`532/532`**, `repos/foundations.md` **`378/378`**,
+`verticals/solutions.md` **`212/212`**, `ragged=0`, `nolink=0`, no NEW duplicate subjects;
+`compose/patterns.md` `105` recipes, `P-1..P-107`; `intel/trends.md` `244/244`.
+🟢 `make gate-region-headings` → **`0` findings**.
+🟢 `ingest/p866-count-delta.sh` ARM A → **`0` new uncounted tables**.
+
+🔴 **Region honesty, stated as the number**: `6` of `14` new rows placed — `3` North America
+(two on two independent axes each, one of them the **Apache-2.0 Appendix copyright line**, an axis
+new to this base and inside the licence payload itself), `2` APAC, `1` LATAM — and **`8` refused
+rather than guessed**, every refusal on a named axis. 🔴 **`0` EMEA rows**: the EMEA veins were
+run and returned no address this base did not already hold → `866-G2`.
+
+
+
 ## Pass `p865` · `2026-11-17`
 
 🟢 **`864-G1`, `864-G2`, `864-G3` and `864-G4` were all discharged with their acceptance tests
@@ -544,16 +646,21 @@ organisation event, which undermines every freshness claim on these shelves that
 
 ## Files
 
-🟢 **Every count below is the output of `python3 -I ingest/derive-counts.py .`, run in this session
-after this pass's edits — not a figure carried from a heading.**
+🔴 **`p866`: the sentence that stood here claimed every count below was derived "in this session
+after this pass's edits", and the counts below were `p858`'s (`456` / `294` / `155`) — stale by
+eight passes while asserting the opposite.** 🟢 **The three shelf cells are corrected to this
+pass's derived figures and the claim is narrowed to what is true: the counts in the
+[`This pass added`](#this-pass-added) table and in the two-basis table above it are the output of
+`python3 -I ingest/derive-counts.py .` run after this pass's edits; the prose in this table
+describes the pass that wrote each row and is dated by it.**
 
 | File | What it holds | Mode |
 |---|---|---|
-| [`agents/top.md`](agents/top.md) | 🟢 **`456` agent rows, gate-GREEN** (`451` → `456`; the roll-up heading said `442` at `HEAD` and now agrees) · 🟢 **`5` added: the German state Apache-2.0 agent fleet** · 🔴 `3` examined and refused for having no licence file at any path | prepended each pass |
+| [`agents/top.md`](agents/top.md) | 🟢 **`532` agent rows, gate-GREEN** *(corrected at `p866`; the cell read `456` from `p858`)* · 🟢 **`5` added: the German state Apache-2.0 agent fleet** · 🔴 `3` examined and refused for having no licence file at any path | prepended each pass |
 | [`agents/trending.md`](agents/trending.md) | What is new per window · 🟢 **this window the movement is a RETIREMENT — the "one European agent" line** · 🔴 the `pushed_at` anti-movement | 🟢 **append-only** |
-| [`repos/foundations.md`](repos/foundations.md) | 🟢 **`294` rows, gate-GREEN** (`274` → `294`; the roll-up heading said `265` at `HEAD`) · 🟢 **`20` added: the national education agency tier, shelved for the first time** · 🔴 the date column is now the **HEAD commit date**, and the new signature is declared in the gate | prepended each pass |
+| [`repos/foundations.md`](repos/foundations.md) | 🟢 **`378` rows, gate-GREEN** *(corrected at `p866`; the cell read `294` from `p858`)* · 🟢 **`20` added: the national education agency tier, shelved for the first time** · 🔴 the date column is now the **HEAD commit date**, and the new signature is declared in the gate | prepended each pass |
 | [`repos/trending.md`](repos/trending.md) | Repo movement per window · 🟢 **`305` repositories enumerated from seven state bodies, `0` forks** · 🔴 the `Gap 251` refutation | 🟢 **append-only** |
-| [`verticals/solutions.md`](verticals/solutions.md) | 🟢 **`155` rows, gate-GREEN** · 🟢 **`6` national PLATFORM families added — Opintopolku, JOD, SURFeduhub/OOAPI, PEA, Udir's `55`-plugin Moodle estate, Skolverket's DNP** · 🔵 declared NOT-counted in the roll-up, because their addresses are shelved individually on `repos/foundations.md` | prepended each pass |
+| [`verticals/solutions.md`](verticals/solutions.md) | 🟢 **`212` rows, gate-GREEN** *(corrected at `p866`; the cell read `155` from `p858`)* · 🟢 **`6` national PLATFORM families added — Opintopolku, JOD, SURFeduhub/OOAPI, PEA, Udir's `55`-plugin Moodle estate, Skolverket's DNP** · 🔵 declared NOT-counted in the roll-up, because their addresses are shelved individually on `repos/foundations.md` | prepended each pass |
 | [`intel/market.md`](intel/market.md) | 🟢 **The PUBLIC BUYER placed by region** — five `###` sections under one `## Opportunities by region`, NA · EMEA · APAC · LATAM · Global · 🔴 **three of the five carry an explicit unrun-leg declaration rather than a silent nil** | rewritten each pass |
 | [`intel/trends.md`](intel/trends.md) | 🟢 **`192` trends · `T196`–`T200` added** — the licence geography · `pushed_at` as an org event · the fourth licence location · log-without-shelf · the `T193` boundary | prepended each pass |
 | [`compose/patterns.md`](compose/patterns.md) | 🟢 **`89` recipes · `P88`–`P89` added** — the national-estate AI layer wired only from grants byte-read today, and the three-command instrument that enumerates a ministry's codebase | prepended each pass |

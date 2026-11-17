@@ -4,9 +4,92 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventy-first pass (`p866`, 2026-11-17) — **`P106`–`P107`: a reviewed-pre-correction build whose scoring layer is a weighted-rubric LIBRARY rather than a prompt, and a Moodle delivery recipe that treats `GPL-3.0` as a deployment shape instead of a veto**
+
+**One hundred and five** concrete recipes — derived recipes: **105** (`103` + `2`).
+
+🟢 **Every component named below was byte-read on `2026-11-17` from a blobless partial clone**
+([`payload-probe`](../evidence/payload-probe.2026-11-17-p866.tsv),
+[`licence-band-mechanism`](../evidence/licence-band-mechanism.2026-11-17-p866.tsv)), or is already
+on a graded shelf in this repository with its own byte-read on record. 🔴 **Every regulatory item
+is `CITED, NOT READ` at the primary-source level**: `curl` to `www.gov.br` returned `403` again
+this pass, so the Brazilian wording below is `p865`'s reading through the search index, and the
+`865-G3` date correction below came the same way
+([`websearch-legs`](../evidence/websearch-legs.2026-11-17-p866.tsv)).
+
+## 🟢 P106 — *`§ 4º`-conformant pre-correction where the scoring layer is a LIBRARY, and the rubric is an artefact the client can audit*
+
+🔵 **Premise.** 🟢 **`P104` specified a reviewed-pre-correction build for Brazil and left the
+scoring step as "the model proposes".** 🔴 **That is the step an academic board rejects**, because
+a prompt is not a rubric: it cannot be versioned, diffed, or shown to a regulator, and
+`Resolução CNE/CP nº 1/2026 § 4º` requires the machine output be *desprovida de efeito avaliativo
+próprio* — which is a claim about an ARTEFACT, not about an intention. 🟢 **This pass shelved the
+missing component.**
+
+🟢 **Components, each byte-read this pass:**
+
+| Role | Component | Grant, as measured | Why this one |
+|---|---|---|---|
+| Scoring layer | [`paper-instruments/rubric`](https://github.com/paper-instruments/rubric) | 🟢 **MIT**, `1,077 B`, `sha256₁₂ c5cc7d2cd1eb` | 🟢 **Weighted rubrics as a declared data structure**: criteria, weights and per-criterion output. The score is a per-criterion vector a teacher overrides item by item, which is exactly an `instrumento preparatório e auxiliar` |
+| Rubric design | [`AI9Stars/LLM-Rubrics-Survey`](https://github.com/AI9Stars/LLM-Rubrics-Survey) | 🟢 **MIT**, `1,068 B`, `sha256₁₂ d399809ede8e` | 🟢 The citation base for defending the SCHEME to an academic board, rather than inventing one |
+| Turn-level verification | [`iwangjian/Coding-Tutor`](https://github.com/iwangjian/Coding-Tutor) | 🟢 **Apache-2.0**, `11,357 B`, `sha256₁₂ c71d239df917` | 🟢 Method for verifying each exchange rather than the final answer — `ACL 2025 Findings`. 🔴 HEAD `2025-06-03`: port the method, do not depend on the repository |
+| Double-marking control | [`five-plus-one/AI-Marker-Suite`](https://github.com/five-plus-one/AI-Marker-Suite) | 🔴 **GPL-3.0**, `35,154 B`, `sha256₁₂ 1ab858f515df` | 🔴 **READ-ONLY in this recipe.** Its arbitration and trial-marking flows are the specification; the code stays out of the deliverable |
+| Evaluating the tutor | [`Calibre-Labs/reforge-ai-evals`](https://github.com/Calibre-Labs/reforge-ai-evals) | 🟢 **MIT**, `1,077 B`, `sha256₁₂ b5dae8f8b90f` | 🟢 The harness for the question the client asks second: *how do you know the grader is any good?* |
+
+🟢 **Wiring.** Rubric defined as versioned data in `rubric`, one file per assessment, in the
+client's repository → the model scores per criterion, never in aggregate → every score lands in a
+review queue with the student's full script attached, satisfying *garantia da leitura integral* →
+the teacher's override is written back as the authoritative mark and the machine's proposal is
+retained beside it → `reforge-ai-evals` runs the rubric against a held-out marked set each
+release, producing the agreement figure a board will ask for. 🔴 **No path writes a mark without a
+teacher's action; `§ 4º` conformance is a property of the data model, not of a policy document.**
+
+🔴 **Dates, corrected this pass** (`865-G3`): the CNE approved the rules **unanimously, reported
+`2026-10-14`**; MEC homologated on **`2026-11-10`**; the instrument is signed **`2026-11-11`** and
+published in a **DOU edição extra of `2026-11-12`**. 🔴 **`p865` carried a `1 September 2026`
+approval date from September coverage — that date is not corroborated by any source read this
+pass and is withdrawn.** 🟡 **The `12`-month adaptation clock therefore starts between
+`2026-11-10` and `2026-11-12`; the `art. 41` prohibitions bind NOW.** 🟢 **Plan to
+`2027-11-10`.**
+
+🟡 **Effort**: `6`–`8` weeks to a reviewed-pre-correction pilot on one assessment type.
+🔴 **What this recipe does NOT do**: assign a mark, or operate in early-childhood education, where
+the instrument prohibits children's use of AI systems outright.
+
+## 🟢 P107 — *Moodle-native delivery, with `GPL-3.0` treated as a deployment shape rather than a veto*
+
+🔵 **Premise is `T250`.** 🟢 **Moodle is `GPL-3.0`; a plugin links against it; therefore a
+`GPL-3.0` Moodle plugin carries the only licence available to it.** 🔴 **A studio applying a
+blanket "avoid copyleft" rule excludes the entire plugin surface of the LMS with education's
+largest installed base, for a reason that does not apply** — and then proposes an external tutor
+that has to rebuild auth, roles, enrolment and the gradebook.
+
+🟢 **Components, each byte-read this pass:**
+
+| Role | Component | Grant, as measured | Deployment shape |
+|---|---|---|---|
+| In-LMS AI surface | [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | 🔴 **GPL-3.0**, `35,153 B`, `sha256₁₂ ebdc0e5b7005` (BOM `+3`, blank line `+1`) | 🟢 **INSTALLED into the client's Moodle.** The client already runs GPL-3.0; a plugin adds no obligation to their other software |
+| Institutional reference | [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | 🔴 **GPL-3.0**, `35,149 B`, `sha256₁₂ 3972dc9744f6` (canonical) | 🟢 **A named provider's production deployment** — the reference a procurement review asks for and a star count cannot supply |
+| Dev toolchain | [`SaadRahman01/claude-moodle-dev`](https://github.com/SaadRahman01/claude-moodle-dev) | 🟢 **MIT**, `1,068 B`, `sha256₁₂ df0b3e71710c` | 🟢 Permissive, stays in the studio's own tooling, never ships |
+| Analytics substrate | [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) | 🟢 **Apache-2.0**, `11,379 B`, `sha256₁₂ b89b380a589b` | 🟢 **Permissive and separable** — the data model the studio's own agent layer builds on, outside the GPL boundary |
+| Roster / scheduling (non-LMS clients) | [`t1112000/tutor-management-app`](https://github.com/t1112000/tutor-management-app) | 🟢 **MIT**, `1,077 B`, `sha256₁₂ 6e0df8cccab0` | 🟢 The permissive alternative when the client has no LMS to plug into |
+
+🟢 **Wiring.** Plugin installed in the client's Moodle for the learner-facing surface → event data
+flows out to an `Apache-2.0` analytics substrate the studio owns and extends → the studio's
+proprietary models and orchestration sit entirely on the permissive side of the boundary →
+`claude-moodle-dev` accelerates plugin development and never enters the deliverable. 🔴 **The one
+line that must be in the SOW: plugin modifications are returned to the client under `GPL-3.0`,
+and the studio's model and orchestration layer is separable and is not.**
+
+🟡 **Effort**: `4`–`6` weeks to a working in-LMS pilot on an existing Moodle, considerably less
+than a standalone tutor that must reimplement identity and grades.
+🔴 **Where this recipe does not apply**: a client who wants to RESELL the plugin as a closed
+product. That is the case the blanket rule was written for, and it is the only one it fits.
+
+
 ## 🟢 Seventieth pass (`p865`, 2026-11-17) — **`P104`–`P105`: the Brazilian pre-correction build rewritten against the text that was finally read, and a curriculum recipe whose premise is that its corpus does not exist**
 
-**One hundred and three** concrete recipes — derived recipes: **103** (`101` + `2`).
+**One hundred and three** concrete recipes — derived recipes (superseded; see the pass header above): **103** (`101` + `2`).
 
 🟢 **Every component named below was byte-read on `2026-11-17` from a blobless partial clone**
 ([`byte-read-grants`](../evidence/byte-read-grants.2026-11-17-p865.tsv)), or is already on a

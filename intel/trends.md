@@ -4,9 +4,112 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — seventy-first pass (`p866`) — **`7` trends (`T246`–`T252`): the discovery channel measured EXHAUSTED at `0` new addresses in `54`, a licence byte band explained offset by offset, a byte-count COLLISION inside one licence family, a commercial-use block hiding inside the permissive size band, and `GPL-3.0` reclassified from a defect to a platform obligation**
+
+**Two hundred and forty-four** trends — derived trends: **244**.
+
+## 🔴 `T246` — the star-ranked discovery channel is exhausted, and `77%` was a floor rather than a constant
+
+🟢 **`865-G4` recorded a stable re-discovery rate — `76%` at `p852`, `77%` at `p865` — and asked
+for one command to print the split instead of a pass deriving it by eye.** 🟢 **Built
+([`ingest/p866-triage.py`](../ingest/p866-triage.py)), and its first three runs refuted the
+figure it was built to track**: `27`, `17` and `10` candidates across `15` query veins — topic
+facets, four languages, several star floors, the ENEM estate and the Moodle plugin estate — and
+🔴 **`0` addresses this base did not already own. `54` of `54` held.**
+
+🔵 **The consequence is a change of task, not a worse result.** 🟢 **`27` of those `54` are
+`UNGRADED`: owned, discovered at this base's expense in an earlier pass, and on no shelf.** 🔴 **A
+pass that spends its budget on DISCOVERY against this channel is now buying nothing**, while the
+`UNGRADED` bucket is a queue of already-paid-for assets. 🟢 **All `15` rows this pass filed came
+out of it.** 🔴 **What the measurement does NOT license**: a claim that the field has stopped
+producing software. It says this base's QUERIES are saturated, which is an instrument result →
+`866-G1`.
+
+## 🟢 `T247` — a licence byte band is one text under several presentations, and every offset has a nameable cause
+
+🟢 **`T243` left this as an observation: payloads two bytes apart are a variant, not a different
+licence.** 🟢 **This pass byte-read four `GPL-3.0` payloads spanning `35,148`–`35,154` and diffed
+each against the canonical** ([`evidence`](../evidence/licence-band-mechanism.2026-11-17-p866.tsv)):
+`−1` is **a missing newline at `EOF`**; `0` is canonical; `+4` is **a UTF-8 BOM (`+3`) plus one
+blank line**; `+5` is **a narrower line wrap at two paragraphs**. 🔵 **No offset in the band was
+a modified grant.** 🟢 **The rule that follows is testable: strip a leading BOM, normalise line
+endings, collapse whitespace runs, then hash — under which the band's four payloads and this
+pass's three `AGPL-3.0` payloads reduce to two texts, against seven raw digests.**
+
+## 🔴 `T248` — byte count is not a licence identity test in EITHER direction
+
+🔴 **Three `AGPL-3.0` payloads measured `34,523 B` each. Two share `sha256₁₂ 0d96a4ff68ad`; the
+third is `8486a10c4393`.** 🟢 **`cmp` locates the sole difference at char `33,213`: the word `by`
+has moved across a line break in the How-to-Apply appendix.** 🔵 **A reflow that relocates one
+two-letter word preserves the byte count EXACTLY and changes every digest after it.**
+
+🔴 **So the two failure modes are symmetric and both are live in this corpus**: `T247`'s band
+shows one text reported as four licences, and this shows two different payload bytes reported as
+one. 🟢 **This base has published byte counts as corroborating evidence beside a digest and a
+title line, never as the identity itself** — 🔵 **the collision is what retrospectively justifies
+that, and it is now measured rather than assumed.**
+
+## 🔴 `T249` — a commercial-use BLOCK fits inside the permissive size band, and the committed predictor declines it on the title
+
+🔴 **[`chadyi/StudyOnTV`](https://github.com/chadyi/StudyOnTV) (`1,639★` / `363` forks) carries
+`1,043 B` of "Source Available License — Personal Use Only": commercial use of any kind
+prohibited, redistribution prohibited.** 🔴 **`1,043 B` is `21 B` BELOW the smallest canonical MIT
+payload this pass measured (`1,064 B`) and inside the band a size-based guess would accept.**
+
+🟢 **Run against the committed instrument it is declined — `NOT-MIT-TITLE`.**
+🔵 **`ingest/p646-mit-predictor.py` has had `12` offline controls since `p646` and they are all
+FIXTURES; this is its first WILD adversarial payload, and the title-line gate — not the byte
+arithmetic — is what held.** 🟢 **The generalisation for a studio: size screens nothing, and the
+cheap reliable discriminator is the first line.**
+
+## 🔴 `T250` — `GPL-3.0` on a Moodle plugin is a platform obligation, not a maintainer's choice
+
+🟢 **Moodle is `GPL-3.0` and a plugin links against it, so a `GPL-3.0` Moodle plugin carries the
+only licence it is permitted to carry.** 🔴 **Three of this pass's five platform rows are copyleft
+for that reason** ([`five-plus-one/AI-Marker-Suite`](https://github.com/five-plus-one/AI-Marker-Suite)
+excepted — it is a browser script and chose it).
+
+🔴 **A blanket "prefer MIT / Apache-2.0, avoid `GPL-3.0`" rule therefore excludes the entire
+plugin surface of the LMS with education's largest installed base, for a reason that does not
+apply to it.** 🟢 **The distinction that survives is DEPLOYMENT SHAPE**: a GPL-3.0 plugin
+installed into a client's own Moodle imposes nothing on the client's other software; the same
+code vendored into a closed product does → `P107`.
+
+## 🟡 `T251` — a region token works for ADOPTION and fails for POLICY, and `863-G2`'s rule needs that split
+
+🔴 **`863-G2` banned region tokens from policy queries after they produced one-jurisdiction
+answers, and `864-G1` then showed a three-jurisdiction query returning one jurisdiction.**
+🟢 **This pass ran the region-token legs anyway, on purpose, and reported both arms**
+([`evidence`](../evidence/websearch-legs.2026-11-17-p866.tsv)).
+
+| Leg | Region-token arm | Jurisdiction arm |
+|---|---|---|
+| 🟢 Adoption and players | 🟢 **`4` of `4` returned region-placed figures and named institutions** | — |
+| 🔴 Policy and regulation | 🔴 **APAC returned NO country-level map and said so; LATAM returned "I did not find details on specific LATAM laws"** | 🟢 **Singapore, Australia, Mexico and Brazil each returned a named instrument when queried alone** |
+
+🔵 **So the ban was over-broad.** 🟢 **The refined rule: region tokens are usable for ADOPTION,
+MARKET and PLAYER legs, where the aggregate is the object; a POLICY leg must name one
+jurisdiction, because the object is an instrument and instruments belong to states.**
+
+## 🔴 `T252` — `NOASSERTION` conceals a commercial BLOCK as often as it conceals a grant
+
+🔴 **[`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) —
+`8,327★`, `2,237` forks, a `课标`-aligned Chinese curriculum graph of `1,644` knowledge points,
+`2,403` prerequisite edges and `6,723` problems — reports `NOASSERTION` on the search channel and
+byte-reads as `CC BY-NC 4.0`, `19,347 B`, `sha256₁₂ 41003d4a7474`.** 🔴 **NonCommercial: the single
+most useful APAC content asset this pass found is commercially unusable.**
+
+🔵 **This base's standing complaint about `NOASSERTION` has been that it hides GRANTS.** 🔴 **It
+hides BLOCKS at least as often**: of this pass's four `NOASSERTION` rows, two were blocks
+(`CC BY-NC 4.0`; "Source Available — Personal Use Only"), one was a restricted Apache derivative
+(`ollmo-go/ollmo`, brand-and-attribution conditions) and one was a genuine absence of any licence
+file. 🟢 **`2,237` forks of a NonCommercial corpus is also a measurement worth keeping**: the
+field is being read as permission by people who never opened the payload.
+
+
 ## 🟢 `2026-11-17` — seventieth pass (`p865`) — **`7` trends (`T239`–`T245`): the disputed Brazilian clause RESOLVED against the press that reported it, two measured nils shown to be artefacts of a query, a search filter that would hide `79%` of this base's own shelf, and a statutory curriculum with no corpus in its own language**
 
-**Two hundred and thirty-seven** trends — derived trends: **237**.
+**Two hundred and thirty-seven** trends — derived trends (superseded; see the pass header above): **237**.
 
 ## 🟢 `T239` — the Brazilian essay clause is settled, and the permissive reading is the correct one
 

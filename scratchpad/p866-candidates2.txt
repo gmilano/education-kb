@@ -1,0 +1,17 @@
+ArnaudGuiovanna/tutor-mcp
+openfun/ralph
+tl-its-umich-edu/my-learning-analytics
+thm-mni-ii/feedbacksystem
+paper-instruments/rubric
+vanderbilt-data-science/knowledge-spaces
+Apereo-Learning-Analytics-Initiative/OpenLRW
+liuyunc/exam_generator
+GeminiLight/gen-mentor
+brownplt/LTLTutor
+open-spaced-repetition/fsrs4anki
+delip/autorubric
+AI9Stars/LLM-Rubrics-Survey
+xoubinha/tutor.ia
+PlaypowerLabs/EdOptimize
+luffycodes/Tutorbot-Spock
+Calibre-Labs/reforge-ai-evals

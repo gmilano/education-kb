@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — `p866`: **`97` shelf rows that were on the pages and counted NOWHERE, recovered by declaring their column signatures instead of recovering them by hand; and the licence byte band explained offset by offset, including a byte-count COLLISION inside one family**
+
+### 🔴 `97` rows, counted nowhere, across all three shelves
+
+🔴 **`p865` found `7` such rows on [`repos/foundations.md`](foundations.md), recovered them by
+hand, and registered `865-G2` because the detector that named them had reported inside a standing
+RED block with no delta.** 🟢 **This pass built the delta
+([`ingest/p866-count-delta.sh`](../ingest/p866-count-delta.sh)) and then used it to find the rest.**
+
+🟢 **Measured before this pass edited any shelf:**
+
+| Shelf | Claimed | Uncounted rows | Uncounted tables | 🟢 Measured holdings |
+|---|---|---|---|---|
+| [`agents/top.md`](../agents/top.md) | `495` | `102` | `24` | 🟢 **`526`** |
+| [`repos/foundations.md`](foundations.md) | `348` | `34` | `11` | 🟢 **`374`** |
+| [`verticals/solutions.md`](../verticals/solutions.md) | `168` | `63` | `19` | 🟢 **`207`** |
+
+🔵 **The cause is one defect repeated**: a pass adds a layer table with a column header a word or
+two off a declared signature, the detector names it, and the line arrives inside a RED block that
+has been standing for dozens of passes. 🟢 **The repair is not row-by-row recovery — it is
+DECLARATION.** 🟢 **Each uncounted header was classified as a HOLDINGS table (counted) or a
+MEASUREMENT table (declared not-counted, with its reason, per `p811`), in
+[`ingest/derive-counts.py`](../ingest/derive-counts.py).**
+
+🔴 **One row was NOT imported and the reason is published**: declaring the seven-column holdings
+signature countable would have pulled [`nurkan1/anatria-3d`](https://github.com/nurkan1/anatria-3d)
+into the shelf, and its grant is **`BSL 1.1` — not open source** — while the shelf heading
+promises MIT / Apache-2.0 / BSD / ISC / 0BSD. 🟢 **That table's first column header now reads
+`Not build-safe`, a declared not-counted signature. Every measured byte, star and sentence of
+`p862`'s row is unaltered; it stays visible on the page and out of the build-safe total.**
+
+🟢 **This pass's new tables were then graded by the same instrument, which caught one of them —
+the licence byte-band mechanism table — on its first run, before commit. Declared.**
+
+### 🔴 The byte band, explained rather than observed
+
+🟢 **Four `GPL-3.0` payloads, every offset diffed against the canonical**
+([`evidence`](../evidence/licence-band-mechanism.2026-11-17-p866.tsv)):
+
+| Bytes | Repo | Offset | 🔬 Cause |
+|---|---|---|---|
+| `35,148` | [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | `−1` | no trailing newline at `EOF` |
+| `35,149` | [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | `0` | 🟢 canonical — `p865`'s digest, **third** independent witness |
+| `35,153` | [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | `+4` | UTF-8 BOM (`+3`) + one blank line (`+1`) |
+| `35,154` | [`five-plus-one/AI-Marker-Suite`](https://github.com/five-plus-one/AI-Marker-Suite) | `+5` | line reflow at two paragraphs |
+
+🔴 **And the collision.** 🟢 **Three `AGPL-3.0` payloads at `34,523 B` each; two share
+`sha256₁₂ 0d96a4ff68ad`, the third ([`migueldsants/OpENEM`](https://github.com/migueldsants/OpENEM))
+is `8486a10c4393`.** 🟢 **`cmp` puts the difference at char `33,213`: the word `by` has moved
+across a line break.** 🔵 **Byte count is therefore not an identity test in either direction** →
+`T247`, `T248`.
+
+🔴 **One further payload, filed because of where it sits rather than what it says**:
+[`chadyi/StudyOnTV`](https://github.com/chadyi/StudyOnTV) is `1,043 B` of "Source Available
+License — Personal Use Only" — `21 B` BELOW the smallest canonical MIT payload measured this pass.
+🟢 **`ingest/p646-mit-predictor.py` declines it `NOT-MIT-TITLE`**, which is the instrument's first
+exercise against a wild adversarial payload rather than a fixture → `T249`.
+
+
 ## 🟢 `2026-11-17` — `p865`: **`7` shelf rows recovered from a silent uncounted-table state, a liveness figure wrong by `2.5` years, and two new ways a canonical grant fails a byte screen**
 
 ### 🔴 Seven rows that were on the shelf and counted nowhere

@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 p378-slugs.txt
+scratchpad/*/clones/
+scratchpad/p866-hooks-base.log

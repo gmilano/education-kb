@@ -1,0 +1,10 @@
+diaslui/enem-extractor
+migueldsants/OpENEM
+rodrigoborgesmachado/questoes-aqui
+yunger7/enem-api
+yetanalytics/lrsql
+SaadRahman01/claude-moodle-dev
+Berserk-hub150/moodle-ai-skill-navigator
+saylordotorg/moodle-local_ai_course_assistant
+onbirdev/moodle-webservice_mcp
+adlnet/ADL_LRS

@@ -136,6 +136,15 @@ if os.path.exists(tre):
 SHELVES = [
     ("agents/top.md", [
         "| Name | Repo | Licence | Stars | Region | Description |",
+        # 🟢 p866 — 865-G1's repair. These two signatures carry HOLDINGS and were
+        # counted NOWHERE: 36 rows under the seven-column shape (p857-p862 filed their agent
+        # rows under it) and 4 under a shape whose own last column reads "Why it is a row".
+        # They sat inside a 24-table standing RED on this shelf, which is exactly the
+        # no-delta defect 865-G2 names. Declaring them raises the shelf from 495 to its
+        # measured holding count; it does not add a single new row to the file.
+        "| Agent | Repo | Licence, as measured | ★ / forks | Default ref · pushed | "
+        "Region | What it actually does, and the posture |",
+        "| Agent / library | Repo | License | ★ | Why it is a row |",
     ], [
         # 🟢 Declared NOT-counted, deliberately: the shelf figure is the build-safe table.
         # Declaring them is what makes the detector below meaningful -- an undeclared table
@@ -156,6 +165,36 @@ SHELVES = [
         # (same reasoning as p854's DECLINES signature above).  Declared rather than left to
         # the uncounted-table detector, which is p811's rule.
         "| Not filed | Why |",
+        # 🟢 p866 — the other half of 865-G1/865-G2. 62 rows in 14 tables on this
+        # shelf are MEASUREMENTS, not holdings, and were indistinguishable from an
+        # undeclared holdings table while every one of them sat in the same RED block.
+        # Each is declared here with the reason, per p811: an undeclared table is an
+        # omission, a declared one is a decision.
+        "| Channel | Result |",                  # channel declarations (863-G1)
+        "| Probe | Result |",                    # a single probe's outcome
+        "| | |",                                 # continuation fragments, no header
+        "| Address returned by a mandated generic leg | On a graded shelf? | "
+        "In trending history? | New to this base? |",   # a triage measurement (865-G4's ancestor)
+        "| Address | ★ / forks | `search/repositories` says | 🔴 Byte-read says | "
+        "Verdict |",                             # field-vs-bytes refutation
+        "| Address | `search/repositories` | Owner sweep | `raw.githubusercontent.com` | "
+        "Verdict `2026-11-16` |",                # channel-by-channel grading
+        "| Candidate | Stars | Why not shelved as build-safe |",
+        "| Candidate | First-party metadata 2026-11-16 | Why it is not a row |",
+        "| Candidate | HEAD `sha₁₂` measured `2026-11-16` | Why it is NOT a row |",
+        "| Candidate | Repo | Grant | ★ | Why it is NOT on the shelf |",
+        "| Row | Licence | ★ | Last push |",       # re-measure of rows already counted
+        "| Row | Shelf claims | GitHub reports `2026-11-16` | Reading |",
+        "| Row | Shelved as | Status 2026-11-16 |",
+        "| Row | Was shelved as | Byte-read 2026-11-16 | Verdict |",
+        # \U0001f7e2 p866 -- the NOT-BUILD-SAFE arm of the seven-column holdings shape. One row
+        # (`nurkan1/anatria-3d`, BSL 1.1) sat in a table of that shape, and this shelf's
+        # heading promises MIT / Apache-2.0 / BSD / ISC / 0BSD. Declaring the holdings
+        # signature countable would have imported a row the heading's own predicate
+        # excludes, so that table's first column header reads `Not build-safe` and lands
+        # here instead. Visible on the page, absent from the total.
+        "| Not build-safe | Repo | Licence, as measured | ★ / forks | Default ref · pushed | "
+        "Region | What it actually does, and the posture |",
     ]),
     ("repos/foundations.md", [
         "| Repo | License | Stars | Notes |",
@@ -176,7 +215,30 @@ SHELVES = [
         # re-dated by this pass and must not be silently reinterpreted.
         "| Repo | Licence, as measured | \u2605 / forks | Default ref \u00b7 HEAD commit | Region | "
         "Why it is a foundation and not a row on another shelf |",
-    ], []),
+        # \U0001f7e2 p866 -- 865-G1's repair on this shelf. 22 rows in 8 tables carried a
+        # foundation HOLDING under a header one or two words off a declared signature and
+        # were counted nowhere. p865 recovered 7 of them by hand; these are the signatures
+        # themselves, so the recovery stops being a per-pass manual act.
+        "| Repo | License | Stars | Region | Description |",
+        "| Repo | License | Stars | Region | Description | Why it is a foundation |",
+        "| Repo | License | Stars | Why it is a foundation |",
+        "| Repo | Licence (byte-read `2026-11-16`) | ★ | Pushed | Region | Why it is here |",
+        "| Repo | Grant, byte-read `2026-11-16` | ★ / forks | Ref · pushed | Region | "
+        "Why it is a foundation |",
+        "| Repo | Licence, re-read `2026-11-16` | ★ / forks | Default ref · pushed | "
+        "Why it is a FOUNDATION and not a platform |",
+        "| Repo | Licence, byte-read `2026-11-16` | ★ / forks | Default ref · pushed | "
+        "What it is |",
+    ], [
+        # \U0001f7e2 p866 -- declared NOT holdings on this shelf, each with its reason.
+        "| Measure | Value |",                     # a scalar measurement, no address semantics
+        "| Repo | Licence | Stars | Last push |",  # re-measure of rows already counted above
+        # \U0001f7e2 p866 -- the licence byte-band MECHANISM table: one row per measured payload
+        # offset with the diff that caused it. Its rows are payload measurements over
+        # repositories shelved elsewhere (or deliberately not shelved at all), never
+        # holdings. Declared because p866's own delta instrument caught it on first run.
+        "| Bytes | Repo | `sha256₁₂` | Offset | \U0001f52c Cause, measured by diff |",
+    ]),
     ("verticals/solutions.md", [
         "| Platform | Repo | License | Stars | Notes |",
         "| Platform | Repo | Licence | Stars | What it is |",
@@ -192,7 +254,32 @@ SHELVES = [
         # against the bytes.  Not counted: it grades CLAIMS, and its rows are already
         # shelved (or refused) in the counted table beneath it.
         "| Platform | Repo | The source's claim | \U0001f52c **The bytes, `2026-11-16`** | Verdict |",
+        # \U0001f7e2 p866 -- 865-G1's repair on this shelf: 41 rows in 12 tables are platform
+        # or address HOLDINGS filed under a header that no declared signature matched.
+        "| Address | Licence, byte-read `2026-11-17` | ★ / forks | Pushed | "
+        "Role in an engagement |",
+        "| Address | Licence, byte-read `2026-11-17` | ★ | Pushed | Role in an engagement |",
+        "| Address | Licence | Pushed | Role in a PHP LMS engagement |",
+        "| Platform | Repo | Licence | ★ | Region | Scale it is built for | "
+        "Where the AI layer goes |",
+        "| Platform | Repo | Licence | ★ | Region | Why it is a vertical starting point |",
+        "| Platform / plugin | Repo | Grant, byte-read `2026-11-16` | ★ / forks | "
+        "Ref · pushed | What it is, and the licence boundary it imposes |",
+        "| Platform | What institutions run it | Agent surface | "
+        "Licence, re-read `2026-11-16` | Posture |",
+        "| Platform | What it is | Licence, byte-read `2026-11-16` | "
+        "★ / forks · ref · pushed | Region & posture |",
+        "| Repo | Licence | Stars | Status 2026-11-16 |",
     ], [
+        # \U0001f7e2 p866 -- declared NOT holdings on this shelf: verdict and refusal tables.
+        "| Address | ★ | Platform it is | Why it is not a row |",
+        "| Platform | GitHub's licence field | \U0001f52c Byte-read verdict, `2026-11-16` | "
+        "Verdict for a studio |",
+        "| Platform | Grant (byte-read `2026-11-16`) | Verdict for a studio |",
+        "| Platform | ★ | Grant | What that means for a studio |",
+        "| Role in a migration | Artefact | Licence | Consequence for a studio |",
+        "| System | Operator | Region | Access | Licence posture | Note |",
+        "| | This shelf said | \U0001f7e2 GitHub reports `2026-11-16` |",
         # 🟢 p858: the NATIONAL PLATFORM tier.  Declared NOT-counted, deliberately and
         # for a structural reason rather than convenience: each row is a platform FAMILY whose
         # cell names three to five addresses (Opintopolku names five), so its rows are not

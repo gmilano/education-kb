@@ -1,0 +1,27 @@
+family	repo	path	bytes	sha256_12	offset_vs_canonical	mechanism_measured
+Apache-2.0	iwangjian/Coding-Tutor	LICENSE	11357	c71d239df917	0	canonical; p865's reference digest, second independent witness
+Apache-2.0	tl-its-umich-edu/my-learning-analytics	LICENSE	11379	b89b380a589b	+22	ONE line: Appendix placeholder "Copyright [yyyy] [name of copyright owner]" replaced with "Copyright (c) 2018-2019 The Regents of the University of Michigan" -- the licence text's own instruction, carried out
+GPL-3.0	brownplt/LTLTutor	LICENSE.txt	35148	8b1ba204bb69	-1	no trailing newline at EOF
+GPL-3.0	saylordotorg/moodle-local_ai_course_assistant	LICENSE	35149	3972dc9744f6	0	canonical; p865's reference digest, third independent witness
+GPL-3.0	Berserk-hub150/moodle-ai-skill-navigator	LICENSE	35153	ebdc0e5b7005	+4	UTF-8 BOM ef bb bf (+3) plus one extra blank line (+1)
+GPL-3.0	five-plus-one/AI-Marker-Suite	LICENSE	35154	1ab858f515df	+5	line REFLOW at two paragraphs (narrower wrap); identical words
+AGPL-3.0	penecho/penecho	LICENSE	34523	0d96a4ff68ad	0	canonical for this pass
+AGPL-3.0	echo-loop/Echo-Loop	LICENSE	34523	0d96a4ff68ad	0	byte-identical to penecho/penecho
+AGPL-3.0	migueldsants/OpENEM	LICENSE	34523	8486a10c4393	0	COLLISION: same byte count, different digest. Sole difference is the word "by" moved across a line break in the How-to-Apply appendix ("published by / the Free" vs "published / by the Free")
+MIT	liuyunc/exam_generator	LICENSE	1064	7e0c3d5db55b	band-floor	canonical MIT; p646 residual 0
+MIT	lowwwbank/anything-to-course	LICENSE	1066	d41346e796d6	+2	holder-name length only
+MIT	zhangl1001/civil-ai	LICENSE	1067	5731a2d3ccea	+3	holder-name length only
+MIT	AI9Stars/LLM-Rubrics-Survey	LICENSE	1068	d399809ede8e	+4	holder-name length only
+MIT	virgiliojr94/book-to-skill	LICENSE.md	1068	be9b04bccfb4	+4	holder-name length only; payload at LICENSE.md not LICENSE
+MIT	SaadRahman01/claude-moodle-dev	LICENSE	1068	df0b3e71710c	+4	holder-name length only
+MIT	paper-instruments/rubric	LICENSE	1077	c5cc7d2cd1eb	+13	holder-name length only
+MIT	Calibre-Labs/reforge-ai-evals	LICENSE	1077	b5dae8f8b90f	+13	holder-name length only
+MIT	t1112000/tutor-management-app	LICENSE	1077	6e0df8cccab0	+13	holder-name length only
+MIT	vanderbilt-data-science/knowledge-spaces	LICENSE	1090	ed2ed868dffc	+26	holder-name length only
+MIT	SenmuuuuW/universal-diagnostic-tutor-skill	LICENSE	1102	a9ca00bcc7a5	+38	holder-name length only
+NOT-MIT	chadyi/StudyOnTV	LICENSE	1043	67ae8445017e	-21 vs MIT floor	"Source Available License -- Personal Use Only": no commercial use, no redistribution. INSIDE the MIT size band, declined by p646 as NOT-MIT-TITLE
+NOT-APACHE	ollmo-go/ollmo	LICENSE	12646	456acdb5d6c3	+1289 vs Apache	"Apache License 2.0, with additional conditions": brand and attribution restriction appended
+CC-BY-NC-4.0	xiaoyang111222/cn-math-taxonomy	LICENSE	19347	41003d4a7474	n/a	NonCommercial. GitHub licence field says NOASSERTION; the bytes say a commercial-use BLOCK
+NO-GRANT	xoubinha/tutor.ia	-	-	-	n/a	no licence file at any of 9 conventional paths
+NO-GRANT	luffycodes/Tutorbot-Spock	-	-	-	n/a	no licence file at any of 9 conventional paths
+NO-GRANT	onbirdev/moodle-webservice_mcp	-	-	-	n/a	no licence file at any of 9 conventional paths

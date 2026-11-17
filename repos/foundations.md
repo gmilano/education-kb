@@ -4,6 +4,54 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventy-first pass (`p866`, 2026-11-17) — **`4` foundation rows, all four promoted out of the `UNGRADED` bucket, and the licence BYTE BAND is explained rather than observed: every offset in the `35,148`–`35,154` `GPL-3.0` spread now has a named cause, and one `AGPL-3.0` pair COLLIDES at identical size**
+
+🟢 **Channel declaration is in [`agents/top.md`](../agents/top.md) and holds for this shelf; the
+count repair that raised this shelf from `348` to `374` is described there and in
+[`open-gaps`](../intel/open-gaps.md) under `865-G1`.**
+
+### 🔴 The byte band is not variance — it is one text under four presentations
+
+🟢 **`p865` left `T243` as an observation: two `BSD` payloads two bytes apart are a VARIANT, not a
+different licence.** 🔴 **This pass byte-read four `GPL-3.0` payloads spanning `6` bytes and
+diffed every one against the canonical, so the class stops being a warning and becomes a
+mechanism** ([`evidence`](../evidence/licence-band-mechanism.2026-11-17-p866.tsv)):
+
+| Bytes | Repo | `sha256₁₂` | Offset | 🔬 Cause, measured by diff |
+|---|---|---|---|---|
+| `35,148` | [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | `8b1ba204bb69` | `−1` | 🟢 **no trailing newline at `EOF`** |
+| `35,149` | [`saylordotorg/moodle-local_ai_course_assistant`](https://github.com/saylordotorg/moodle-local_ai_course_assistant) | `3972dc9744f6` | `0` | 🟢 **canonical — `p865`'s reference digest, now on its THIRD independent witness** |
+| `35,153` | [`Berserk-hub150/moodle-ai-skill-navigator`](https://github.com/Berserk-hub150/moodle-ai-skill-navigator) | `ebdc0e5b7005` | `+4` | 🟢 **a UTF-8 BOM (`ef bb bf`, `+3`) plus one extra blank line (`+1`)** |
+| `35,154` | [`five-plus-one/AI-Marker-Suite`](https://github.com/five-plus-one/AI-Marker-Suite) | `1ab858f515df` | `+5` | 🟢 **line REFLOW at two paragraphs — a narrower wrap, identical words** |
+
+🔴 **And the direction that matters more, because it kills the cheap test outright.** 🟢 **Three
+`AGPL-3.0` payloads measured `34,523 B` each.** 🔴 **Two share `sha256₁₂ 0d96a4ff68ad`; the
+third — [`migueldsants/OpENEM`](https://github.com/migueldsants/OpENEM) — is
+`8486a10c4393`.** 🟢 **`cmp` puts the sole difference at char `33,213`: the word `by` has moved
+across a line break** (`published by / the Free Software Foundation` → `published / by the Free
+Software Foundation`). 🔵 **A reflow that relocates one two-letter word preserves the byte count
+EXACTLY while changing every digest after it** — so byte count is not a weak identity test for a
+licence family, it is not an identity test at all, in either direction → `T247`, `T248`.
+
+🟢 **The operational rule a studio can apply, stated so it is testable**: strip a leading BOM,
+normalise line endings, collapse runs of whitespace, then hash. 🟢 **Under that normalisation all
+four `GPL-3.0` payloads above and all three `AGPL-3.0` payloads reduce to two texts.** 🔴 **Under
+raw hashing they are seven.**
+
+| Repo | Licence, as measured | ★ / forks | Default ref · HEAD commit | Region | Why it is a foundation and not a row on another shelf |
+|---|---|---|---|---|---|
+| [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) | 🟢 **Apache-2.0** — byte-read `LICENSE`, **`11,379 B`**, `sha256₁₂ b89b380a589b`. 🔵 **`+22 B` against the canonical `11,357`, and the diff is ONE line**: the Appendix placeholder `Copyright [yyyy] [name of copyright owner]` carries `Copyright © 2018-2019 The Regents of the University of Michigan` — the licence text's own instruction, carried out | `37` / `40` forks | `master` · HEAD `2026-11-13` | 🟢 **North America — placed on TWO independent axes.** 🔵 **The first is new to this base: the Apache-2.0 APPENDIX copyright line, which is inside the licence payload itself** and therefore arrives on the one channel measured open all pass. 🟢 The second corroborates it: `its.umich.edu` in the README | 🟢 **A production learning-analytics application run by a named university, not a research artefact**: dashboards over LMS event data (`MyLA`). 🔵 **`40` forks against `37★` — a fork-heavier-than-star profile, which is the signature of software other institutions DEPLOY rather than admire.** 🟢 It is a foundation because an engagement builds its own agent layer on this data model rather than shipping these dashboards |
+| [`vanderbilt-data-science/knowledge-spaces`](https://github.com/vanderbilt-data-science/knowledge-spaces) | 🟢 **MIT** — byte-read `LICENSE`, `1,090 B`, `sha256₁₂ ed2ed868dffc`, © *2025 Vanderbilt Data Science Institute* | `30` / `5` forks | `main` · HEAD `2026-02-13` | 🟢 **North America** — two axes: the licence holder names the institute, and every commit author resolves to `vanderbilt.edu` | 🟢 **Knowledge Space Theory, implemented.** 🔵 **KST is the formal prerequisite-lattice model behind adaptive sequencing** — the thing most "adaptive learning" products assert and do not specify. 🟢 **A foundation because the asset is the MODEL**: a studio wires its own content into the lattice. 🔴 HEAD `2026-02-13` — nine months cold; cite the implementation, own the maintenance |
+| [`AI9Stars/LLM-Rubrics-Survey`](https://github.com/AI9Stars/LLM-Rubrics-Survey) | 🟢 **MIT** — byte-read `LICENSE`, `1,068 B`, `sha256₁₂ d399809ede8e` | `72` / `2` forks | `main` · HEAD `2026-07-02` | 🔴 **REFUSED** — 🔵 **the only axis is a `126.com` author address, a consumer mail provider, and the README's `223` `arxiv.org` links are CITATIONS, not affiliations.** A soft `APAC` here would be a guess wearing a measurement's clothes | 🟢 **A maintained survey of rubric methods across the LLM literature.** 🔵 **It is a foundation because rubric design is the part of automated assessment a client's academic board will contest**, and this is the one row in the pass that answers "what has been tried, and what failed" with citations rather than a vendor's claim. 🟢 **Pairs directly with [`paper-instruments/rubric`](../agents/top.md)**: the survey chooses the scheme, the library runs it |
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 🟢 **MIT** — byte-read **`LICENSE.md`**, `1,068 B`, `sha256₁₂ be9b04bccfb4`. 🔵 **The payload is at `LICENSE.md`, not `LICENSE`** — the `.md` arm of this base's path ladder earning its place again | `38,173` / `4,061` forks | `master` · HEAD `2026-11-03` | 🔴 **REFUSED** — `gmail.com` only | 🟢 **Turns a technical book PDF into a runnable agent skill.** 🔴 **`38,173★` makes it the highest-traction address on this shelf, and the honest caveat comes with it**: traction at that scale is a general-developer phenomenon, not an education-sector endorsement. 🟢 **A foundation because corpus-to-curriculum is the step every content engagement starts with**, and this is the permissive reference for it at scale |
+
+🟢 **Region coverage: `2` of `4` placed, both North America, both on two axes each.** 🔴 **`2`
+refused rather than guessed.** 🔴 **`0` EMEA and `0` LATAM foundation rows this pass** — the EMEA
+and LATAM veins were run (`batch C`, `10` candidates: the ENEM estate and the Moodle plugin
+estate) and returned `0` addresses this base did not already hold, so the gap is a measured
+exhaustion of those veins at this star floor, not an unexamined region → `866-G2`.
+
+
 ## 🟢 Seventieth pass (`p865`, 2026-11-17) — **`1` row, and `7` rows that were already on this shelf recovered from a silent uncounted-table state**
 
 🔴 **`p863` and `p864` each added a layer table to this shelf whose column header was one word
@@ -1615,7 +1663,7 @@ above was graded on the licence question alone.**
 | https://github.com/langchain-ai/langchain | 🟢 **MIT — byte-read** (`1,067 B`, `sha256:4ec67e4ca6e6…`, HEAD `ea17e48f0a43`, on `master`) | 149546 | **Region: Global.** The model and tool abstraction layer beneath the above. 🟡 **Shelved with a deliberate caution: this base's compose recipes should depend on `langgraph` for control flow and on `langchain-core` for interfaces, not on the `langchain` meta-package, whose surface moves faster than an education deliverable's support window.** 🔵 **Note for the byte-read gate: its `LICENSE` is on `master`, not `main` — a `main`-only probe returns `404` and would record a false `NO_LICENCE_FILE`, which is a live defect in any sweep that assumes the default branch name** |
 | https://github.com/teppei-miyashita/agenticstar-agentcore | 🔴 **NO LICENCE FILE — and NO REPOSITORY.** `git ls-remote` returns **zero refs**; `0 KB`, created and last touched `2026-08-12` | 0 | 🔴 **Region: APAC. Shelved as a WARNING row — the worked example for `T89`.** This is the source repository that the PyPI package `agenticstar-agentcore 1.0.3` advertises in its own `project_urls.Repository`, and it holds no commits at all. 🟢 **The package itself is genuinely MIT** (`License-Expression: MIT` in the wheel, `dist-info/licenses/LICENSE`, `1,078 B`, `sha256:2afbb5fc…`) **and genuinely installable** — 🔴 **but it is wheel-only, single-release (`2026-09-17`), and unreadable at its stated address, while hard-pinning `langgraph==1.1.10`, `langchain==1.2.18`, `fastapi==0.136.0` and `agenticstar-platform==0.5.32`.** 🔵 **Do NOT add it to a delivery tree. It is here so that the next pass asking "is the AGENTIC STAR stack adoptable?" finds the answer already measured: licensed yes, auditable no** |
 
-## Foundational repos — 348 rows
+## Foundational repos — 378 rows
 
 ## 🟢 The STANDARDS-SEAM layer — **LTI, QTI and xAPI, the four interfaces an education deliverable is actually wired through** (new, fifty-seventh pass `p852`) (6 rows)
 

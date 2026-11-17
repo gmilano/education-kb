@@ -4,6 +4,76 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 Seventy-first pass (`p866`, 2026-11-17) — **`6` agent rows, and the discovery channel is measured EXHAUSTED: `54` candidates across `15` veins returned `0` addresses this base did not already own**
+
+🟢 **Channel declaration, as [`863-G1`](../intel/open-gaps.md) requires before the first row.**
+🟢 **Re-measured `2026-11-17` for the fourth consecutive pass, and the split is stable:**
+
+| Channel | Result |
+|---|---|
+| 🔴 `curl https://github.com/...` | 🔴 `403` at the egress proxy |
+| 🔴 `gh api repos/{owner}/{repo}` | 🔴 `403` — "not enabled for this session" |
+| 🟢 `gh api search/repositories` | 🟢 `200` — every ★, fork, default-branch and `archived` figure below |
+| 🟢 `git clone --filter=blob:none --depth 1` | 🟢 `200` — every licence byte, HEAD date and author domain below |
+| 🔴 `curl https://www.gov.br/...` | 🔴 `403` — re-confirms `p865`: a session-wide allowlist, not a government class |
+
+🔴 **Fork policy, restated before the first total**: `gh api search/repositories` EXCLUDES forks by
+default, so every total in this base is a NON-FORK count.
+
+### 🔴 The finding that reframes the pass: `0` new addresses in `54` candidates
+
+🟢 **`865-G4` asked for one command that splits a sweep's candidates three ways instead of a pass
+re-deriving the split by eye.** 🟢 **Built as [`ingest/p866-triage.py`](../ingest/p866-triage.py),
+which imports `p853`'s scanner rather than writing a fifth copy of it** (the warning
+`ingest/p587-crosspage-naive.py` exists to give). 🟢 **Run on its first use it did not confirm
+`865-G4`'s constant — it broke it:**
+
+| Sweep | Candidates | `NEW` | `UNGRADED` (owned, unfiled) | `SHELVED` | Held |
+|---|---|---|---|---|---|
+| `p852` (recorded) | — | — | — | — | `76%` |
+| `p865` (recorded) | `22` | `5` | — | — | `77%` |
+| 🔴 `p866` batch A | `27` | 🔴 **`0`** | `13` | `14` | 🔴 **`100%`** |
+| 🔴 `p866` batch B | `17` | 🔴 **`0`** | `9` | `8` | 🔴 **`100%`** |
+| 🔴 `p866` batch C (LATAM/EMEA veins) | `10` | 🔴 **`0`** | `5` | `5` | 🔴 **`100%`** |
+
+🔵 **`54` candidates, `15` query veins — topic facets, star bands, four languages, the ENEM and
+Moodle estates — and not one address this base did not already hold**
+([`evidence`](../evidence/candidate-triage.2026-11-17-p866.tsv),
+[`B`](../evidence/candidate-triage-b.2026-11-17-p866.tsv),
+[`C`](../evidence/candidate-triage-c.2026-11-17-p866.tsv)).
+🔴 **So `77%` was not a constant, it was a floor, and the quantity that matters is the `27`
+`UNGRADED` addresses: owned, discovered at this base's expense, on no shelf.** 🟢 **Every row
+below is a promotion out of that bucket, not a discovery** → `T246`, `866-G1`.
+
+| Name | Repo | Licence | Stars | Region | Description |
+|------|------|---------|-------|--------|-------------|
+| rubric | [`paper-instruments/rubric`](https://github.com/paper-instruments/rubric) | 🟢 **MIT** — byte-read `LICENSE`, **`1,077 B`**, `sha256₁₂ c5cc7d2cd1eb`, © *2025 The LLM Data Company* | `86` / `6` forks | 🔴 **REFUSED** — the holder is a company with no country evidence on any axis; `thellmdatacompany.com` resolves nothing about jurisdiction | 🟢 **"A Python library for LLM-based evaluation using weighted rubrics."** Python, `main` · HEAD `2026-02-03`. 🔵 **This is the single most load-bearing row of the pass, and the reason is legal, not technical**: `Resolução CNE/CP nº 1/2026 § 4º` permits an automated scorer in Brazil *only* as an `instrumento preparatório e auxiliar`, `desprovida de efeito avaliativo próprio`. 🟢 **A WEIGHTED rubric library produces exactly that artefact** — a per-criterion score a teacher reviews, not a mark → `P106`. 🔴 HEAD is nine months old: a stable library, not an active product |
+| universal-diagnostic-tutor-skill | [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 **MIT** — byte-read `LICENSE`, `1,102 B`, `sha256₁₂ a9ca00bcc7a5`, © *2026 universal-diagnostic-tutor-skill contributors* | `274` / `5` forks | 🔴 **REFUSED** — `gmail.com` author domain; the README's three occurrences of "university" are the generic noun, not an affiliation | 🟢 **Diagnosis-first tutoring across STEM and CS, with no mode or configuration surface.** `main` · HEAD `2026-11-11`. 🔵 **The posture is the asset**: it diagnoses before it teaches, which is the sequence an adaptive engagement has to defend to a client, and it does it without a settings matrix to tune |
+| reforge-ai-evals | [`Calibre-Labs/reforge-ai-evals`](https://github.com/Calibre-Labs/reforge-ai-evals) | 🟢 **MIT** — byte-read `LICENSE`, `1,077 B`, `sha256₁₂ b5dae8f8b90f`, © *2026 Calibre Partners LLC* | `102` / `9` forks | 🔴 **REFUSED** — 🔵 **`LLC` is a company-form suffix, not a jurisdiction.** This base does not place a row on an entity suffix, and says so rather than filing a soft `North America` | 🟢 **An evals toolkit: skills that steer a coding agent into writing its own tests.** `main` · HEAD `2026-11-06`. 🔵 **Filed on the agent shelf and not the foundations shelf because an education engagement's hardest unsolved problem is grading the TUTOR, not the student** — this is the only permissive eval harness this pass found that a studio can point at a tutoring agent |
+| Coding-Tutor | [`iwangjian/Coding-Tutor`](https://github.com/iwangjian/Coding-Tutor) | 🟢 **Apache-2.0** — byte-read `LICENSE`, **`11,357 B`**, `sha256₁₂ c71d239df917`. 🟢 **This is `p865`'s canonical Apache-2.0 digest, sighted a SECOND time independently** — the reference now has two witnesses | `92` / `13` forks | 🔴 **REFUSED** — `gmail.com`; an ACL paper is not an affiliation channel this base has calibrated | 🟢 **"[ACL 2025 Findings] Training Turn-by-Turn Verifiers for Dialogue Tutoring."** `main` · HEAD `2025-06-03`. 🔵 **A turn-level VERIFIER is a different object from a tutor**: it grades each exchange rather than the final answer, which is the mechanism a reviewed-pre-correction workflow needs. 🔴 Seventeen months cold — cite the method, vendor nothing |
+| anything-to-course | [`lowwwbank/anything-to-course`](https://github.com/lowwwbank/anything-to-course) | 🟢 **MIT** — byte-read `LICENSE`, `1,066 B`, `sha256₁₂ d41346e796d6`, © *2026 lowwwbank* | `38` / `2` forks | 🔴 **REFUSED** — `gmail.com` only | 🟢 **Turns arbitrary material into a learning-science-structured course.** `main` · HEAD `2026-07-07`. 🔵 **The claim worth testing in a pilot is the "learning-science" one**: the repository names its sequencing rules, which makes it auditable against a client's own pedagogy — most material-to-course tools do not |
+| civil-ai | [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | 🟢 **MIT** — byte-read `LICENSE`, `1,067 B`, `sha256₁₂ 5731a2d3ccea`, © *2026 zhangl1001* | `41` / `7` forks | 🔴 **REFUSED** — `users.noreply.github.com`, no organisation, no institutional domain in the README | 🟢 **"Local-first adaptive tutoring agent foundation reference implementation."** `main` · HEAD `2026-10-28`. 🔵 **LOCAL-FIRST is the procurement-relevant word**: it is the posture an EMEA engagement under the AI Act's education high-risk tier asks for first, and this base holds few permissive rows that start there. 🔴 `41★` — a reference implementation to read, not a dependency to inherit |
+
+🔴 **Region coverage, stated as the honest number: `0` of `6` placed.** 🔴 **Six refusals, every one
+on a named axis**: four `gmail.com`/`users.noreply`, one entity suffix, one company domain with no
+jurisdiction. 🔵 **This is the worst region yield of any recent pass and it is NOT a sampling
+accident** — the `UNGRADED` bucket these rows came from was itself collected by star rank, and the
+star-ranked band is individual-authored. 🟢 **The pass's placed rows are all on
+[`repos/foundations.md`](../repos/foundations.md) and
+[`verticals/solutions.md`](../verticals/solutions.md), where the institutional authors are**
+(`3` North America, `2` APAC, `1` LATAM) → `866-G2`.
+
+### 🔴 Examined and NOT filed
+
+| Not filed | Why |
+|---|---|
+| [`chadyi/StudyOnTV`](https://github.com/chadyi/StudyOnTV) | 🔴 **`1,043 B` of "Source Available License — Personal Use Only": commercial use of any kind prohibited, redistribution prohibited.** `sha256₁₂ 67ae8445017e`, `1,639★` / `363` forks. 🔵 **It is filed in [`measured-unusable`](../intel/measured-unusable.md) for a reason that is an instrument result, not a licence note: `1,043 B` sits `21 B` BELOW the smallest real MIT payload this pass byte-read (`1,064 B`), i.e. INSIDE the band a size-based MIT guess would accept.** 🟢 **Run against the committed predictor it is declined — `NOT-MIT-TITLE`** — so `ingest/p646-mit-predictor.py` has now been exercised by a WILD adversarial payload rather than a fixture, and held (`T249`) |
+| [`ollmo-go/ollmo`](https://github.com/ollmo-go/ollmo) | 🔴 **`12,646 B`: "Apache License 2.0, with additional conditions" — a brand-and-attribution restriction bolted onto a permissive text.** `sha256₁₂ 456acdb5d6c3`. 🟡 **GitHub's licence field says `NOASSERTION`, and on this row the field is RIGHT** — the Dify shape, and the reason this base reads bytes rather than fields |
+| [`liuyunc/exam_generator`](https://github.com/liuyunc/exam_generator) | 🟢 **MIT, clean — byte-read `1,064 B`, `sha256₁₂ 7e0c3d5db55b`** (the smallest canonical MIT payload measured this pass, and the lower edge of the band `StudyOnTV` undercuts). 🔴 Refused on traction alone: `6★`, HEAD `2026-06-09`. Recorded so the next pass does not re-pay for the discovery |
+| [`xoubinha/tutor.ia`](https://github.com/xoubinha/tutor.ia) · [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | 🔴 **NO licence file at any of the `9` conventional paths, on either.** 🟢 **The `search/repositories` field agreed (`NONE`) in both cases** — a bidirectional control on the cheap channel, worth recording because this base's standing finding is the field's unreliability in the other direction |
+| `47` further candidates | 🟢 **ALREADY HELD — `100%` of `54`.** 🔴 **The three-way split is now one command and its first run refuted the figure it was built to track** (`865-G4` → `T246`) |
+
+
 ## 🟢 Seventieth pass (`p865`, 2026-11-17) — **`3` agent rows, and the shelf's own count claim repaired after it had been wrong by `6` for an unmeasured number of passes**
 
 🟢 **Channel declaration, as [`863-G1`](../intel/open-gaps.md) requires before the first row.**
@@ -2102,7 +2172,15 @@ and it is the most useful thing `p840` has to report** → `T140`.
 
 ### 🟡 The one row
 
-| Agent | Repo | Licence, as measured | ★ / forks | Default ref · pushed | Region | What it actually does, and the posture |
+🔴 **`p866` changed this table's COLUMN HEADER and nothing else.** When `p866` declared the
+seven-column holdings signature countable (`865-G1`), this table came with it — and its single
+row is **`BSL 1.1`, which the shelf heading's own predicate (MIT / Apache-2.0 / BSD / ISC / 0BSD)
+excludes.** 🟢 **Every measured byte, star, date and sentence below is `p862`'s, unaltered**;
+only `| Agent |` became `| Not build-safe |`, which is a signature this base declares NOT
+counted. 🔵 **The row stays visible and stays out of the build-safe total** — the alternative
+was a count that contradicted its own heading.
+
+| Not build-safe | Repo | Licence, as measured | ★ / forks | Default ref · pushed | Region | What it actually does, and the posture |
 |---|---|---|---|---|---|---|
 | **Anatria3D** | [`nurkan1/anatria-3d`](https://github.com/nurkan1/anatria-3d) | 🔴 **`BSL 1.1` — NOT open source.** Byte-read `LICENSE` `5,557 B` `sha256₁₂:179c0cb1e12d`. GitHub label: `NOASSERTION` | `59★` / `18` | `main` · `2026-10-30` (created `2026-08-08`) | EMEA | 🟢 Local-first 3D anatomy atlas with an **AI tutor that drives the viewport** — the tutor manipulates the model rather than talking beside it. 🔴 **Filed with its grant spelled out because the label hides it.** |
 
@@ -4285,7 +4363,7 @@ not resolve under this session's network policy**, so `mcp-powerschool` (reporte
 FastMCP, PowerSchool) and `OELTKit` (reported Apache-2.0) could **not** be verified and
 are deliberately NOT shelved. They are leads for the next pass, not findings.
 
-## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 495 rows
+## Build-safe agents (MIT / Apache-2.0 / BSD / ISC / 0BSD) — 532 rows
 
 ### Filed by `p853` (2026-11-16) — `12` rows: the SPOKEN-LANGUAGE ASSESSMENT tier, every grant byte-read today, `0` copyleft, and every row's CORPUS dependency stated beside its licence
 

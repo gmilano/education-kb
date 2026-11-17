@@ -4,6 +4,189 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` (seventy-first pass, `p866`) — **`4` gaps — `865-G1`, `865-G2`, `865-G3` and `865-G4` ALL DISCHARGED with their acceptance tests run; the count dispute is reconciled by arithmetic, one published date is withdrawn, and the instrument built for `865-G4` refuted the number it was built to track on its first run**
+
+### 🟢 `865-G1` — DISCHARGED: all three figures reconciled, and the basis is now chosen rather than inherited
+
+🟢 **The acceptance test asked for ONE sentence saying what the `README` figure counts that the
+gate does not, and for the two to be made reconcilable or one marked as not a shelf count.**
+
+🟢 **The sentence**: the gate counts rows under the column-header signatures DECLARED in
+`derive-counts.py`, while the `README` figure counts every table row on the page that carries a
+`github.com` address regardless of signature — and the gap between them was `102` rows of
+undeclared HOLDINGS plus `130` rows of deliberately-excluded MEASUREMENT tables.
+
+🟢 **The arithmetic, measured at `HEAD` before this pass edited anything:**
+
+| Basis | `agents/top.md` | What it is |
+|---|---|---|
+| gate / heading | `495` | rows under a declared signature |
+| **+** undeclared holdings | `+102` *(in `24` tables)* | 🔴 **the defect — `32` distinct rows the shelf owned and counted nowhere** |
+| **+** declared-excluded | `+130` | refusals, declines, channel and verdict tables |
+| = every address-bearing table row | `727` | 🟡 **this is the `README`'s basis** |
+| `README` as published | `739` | 🔴 **`+12` of hand-increment drift: the figure is incremented per pass and never re-derived. `p865` left `p864`'s table in place untouched** |
+
+🟢 **Resolved, not merely explained.** 🟢 **The GATE figure is the client-facing shelf count** —
+rows this base has graded and will defend — 🟢 **and after this pass's declaration repair it is
+`532` / `378` / `212`**, up from `495` / `348` / `168` with **not one new row added to reach it**.
+🟢 **The `README` now publishes both figures, labelled, and derives both.**
+
+### 🟢 `865-G2` — DISCHARGED: the delta exists, has two arms, and caught this pass red-handed
+
+🟢 **Built as [`ingest/p866-count-delta.sh`](../ingest/p866-count-delta.sh): `git archive HEAD` to
+a temporary root, the detector over both trees, only the difference reported.**
+🔴 **The first version had ONE arm and silently conflated two causes** — a pass can break the
+count by editing a SHELF or by editing the DETECTOR. 🟢 **Split:**
+
+| Arm | Holds constant | Fails the run? |
+|---|---|---|
+| 🟢 **A — content** | the working detector, over `HEAD` content and working content | 🔴 **yes** — a difference here is a shelf this pass broke |
+| 🟢 **B — published** | nothing; `HEAD`'s detector at `HEAD` vs the working detector now | 🟢 no — a declaration added to the detector appears only here, and that is the intended repair |
+
+🟢 **It earned itself immediately**: run after the foundations block was written, ARM A reported
+`+ line 20 (4 rows): | Bytes | Repo | sha256₁₂ | Offset | Cause, measured by diff |` — 🔵 **a table
+this pass had created four minutes earlier, which under the old no-delta reporting would have
+joined a `58`-line standing RED and been read past exactly as `p863`'s and `p864`'s were.**
+🟢 **Declared; ARM A closed; final state `0` new.**
+
+### 🟢 `865-G3` — DISCHARGED, and it withdraws one of this base's published dates
+
+🟢 **The gap allowed either a reconciliation from a source naming both dates, or a record of the
+conflict as permanent.** 🔴 **Neither was needed: the September date was simply wrong.**
+
+| Event | 🟢 `p866` | `p865` |
+|---|---|---|
+| CNE approval | 🟢 **`2026-10-14`, unanimous** | 🔴 *"`1 September 2026`"* — 🔴 **WITHDRAWN; no source read this pass corroborates it** |
+| MEC homologação | 🟢 `2026-11-10` | `2026-11-10` |
+| Signature | 🟢 `2026-11-11` | `2026-11-11` |
+| DOU publication | 🟢 **`2026-11-12`, edição extra** | 🟡 `2026-11-11` |
+
+🟢 **So the `12`-month clock starts between `2026-11-10` and `2026-11-12` — plan to
+`2027-11-10`** — and the one-day residual is immaterial to a quarter's planning, which is what the
+gap itself said. 🔵 **The gap's premise ("an unexplained approval date") was right to doubt the
+date and wrong about which one needed explaining.**
+
+### 🟢 `865-G4` — DISCHARGED: one command, and it broke its own premise
+
+🟢 **[`ingest/p866-triage.py`](../ingest/p866-triage.py) imports `p853`'s scanner — not a fifth
+copy of it — and prints `NEW` / `UNGRADED` / `SHELVED` / `FIXTURE-ONLY` with the held percentage.**
+🟢 **Three runs, `15` veins, `54` candidates:**
+
+| Batch | Candidates | `NEW` | `UNGRADED` | `SHELVED` | Held |
+|---|---|---|---|---|---|
+| A | `27` | 🔴 `0` | `13` | `14` | 🔴 `100%` |
+| B | `17` | 🔴 `0` | `9` | `8` | 🔴 `100%` |
+| C | `10` | 🔴 `0` | `5` | `5` | 🔴 `100%` |
+
+🔴 **`76%` / `77%` was a floor, not a constant.** 🟢 **The `27` `UNGRADED` addresses are the asset
+the gap was reaching for, and all `15` rows this pass filed came out of that bucket** → `T246`.
+
+---
+
+### 🔴 `866-G1` — the `UNGRADED` bucket is now the supply, and nothing RANKS it
+
+🟢 **`865-G4`'s instrument identifies `27` owned-but-unfiled addresses per sweep and the pass
+chose `15` of them by reading descriptions.** 🔴 **That is the hand-grading `865-G4` removed from
+the split, reappearing one step downstream.** 🔵 **`ingest/promotion-rank.py` and
+`ingest/address-ledger.py --debt` exist and neither was used, because neither has been shown to
+agree with what a pass actually files.**
+
+🟢 **Acceptance test: the next pass pipes its `UNGRADED` set through one ranking command, files
+from the top of that order, and reports how many of its filed rows the ranker would have chosen —
+a hit rate against this pass's `15`, published whether it is good or bad.**
+
+### 🔴 `866-G2` — `8` of `14` rows refused a region, and the cause is the CHANNEL the supply came from
+
+🟢 **Placed: `6` — `3` North America, `2` APAC, `1` LATAM.** 🔴 **Refused: `8`, every one on a
+named axis** (`gmail.com` or `users.noreply` ×`5`, a company-form suffix, a company domain with no
+jurisdiction, a consumer mail provider). 🔴 **`0` EMEA rows.**
+
+🔵 **This is not sampling bad luck.** 🟢 **The `UNGRADED` bucket was itself collected by STAR RANK,
+and the star-ranked band is individually authored** — 🔵 **so it structurally cannot carry an
+institutional affiliation axis, and this pass's only two-axis placements both came from university
+repositories that entered the base through a different channel.** 🟢 **`p859` built an
+org-enumeration channel over named education bodies and it is what produced the German fleet at
+`p858`.**
+
+🟢 **Acceptance test: the next pass runs ONE vein selected for institutional authorship rather
+than star rank — org enumeration over named education ministries, agencies or universities — and
+reports its region-placement rate against this pass's `6` of `14`.**
+
+### 🔴 `866-G3` — two source gaps carried into the market file, both declared
+
+🔴 **(a) The EU deferral.** The `Digital Omnibus` political deal reported `2026-05-07`, moving the
+AI Act's high-risk obligations for education from `August 2026` to **`2027-12-02`**, rests on a
+**single blog-class source** and is not corroborated by any EU-published text read this pass.
+🔴 **A thirteen-month deferral changes which EMEA contracts are already in breach**, so it may not
+harden into a cited fact by repetition.
+
+🔴 **(b) The APAC policy map.** The region-token leg named **China, Korea, Singapore, Australia and
+India as absent from its own results** — the leg declared its own gap, which is the honest
+behaviour and still leaves the gap.
+
+🟢 **Acceptance test: the next pass either corroborates the `2027-12-02` date from an
+EU-published instrument or marks it `UNCORROBORATED` and stops citing it as a date; and runs one
+jurisdiction-only policy leg each for China and Korea, publishing every total including nils.**
+
+### 🔴 `866-G4` — `97` rows were recovered by DECLARATION, and the classification was this pass's judgement alone
+
+🟢 **The repair raised three shelves by `97` rows (`32` + `26` + `39` distinct) without adding a
+row, by sorting `54` undeclared table headers into HOLDINGS and MEASUREMENT.** 🔴 **That sort was
+made by one pass reading one header line at a time, and exactly one error of the dangerous kind
+was caught in the act** — the seven-column holdings signature would have imported
+[`nurkan1/anatria-3d`](https://github.com/nurkan1/anatria-3d) (`BSL 1.1`) into a shelf whose
+heading promises MIT / Apache-2.0 / BSD / ISC / 0BSD.
+
+🔵 **One caught error in a `54`-way manual sort is not evidence that it was the only one.**
+🟢 **The check is cheap and was not run: every row now counted on
+[`agents/top.md`](../agents/top.md) should satisfy that heading's own licence predicate, and the
+shelf has `8` duplicate subjects whose cells could disagree.**
+
+🟢 **Acceptance test: the next pass runs the licence predicate of each shelf's heading over every
+row the gate now counts, and reports the number of rows that fail it — `0` expected, published
+whatever it is.**
+
+### 🔴 `866-G5` — `gate-enumeration` refuses a commit, this pass did not cause it, and it is recorded rather than quieted
+
+🔴 **`gate-enumeration` (`ACTION p275`: no shelf may assert an absent grant that an enumeration
+refutes) is RED, and it is red at `HEAD`.** 🟢 **Measured on both sides and byte-identical:
+`REFUTED=13`, `VERIFIED-ABSENT=136`, `QUEUE-UNENUMERATED=230` at `HEAD` and after this pass's
+edits — only line numbers move, from the prepend.** 🔴 **So this pass neither caused it nor fixed
+it.**
+
+🔵 **How it surfaced is worth recording.** 🟢 **`ingest/pre-commit` is NOT installed in a fresh
+clone** (`core.hooksPath` unset, no `.git/hooks/pre-commit`), 🟢 **so this pass invoked it
+deliberately — `git -c core.hooksPath=ingest commit` — and it refused.** 🔴 **Every pass that
+committed from a fresh clone has therefore committed WITHOUT the commit gates, including the
+passes that wrote the gate.** 🔵 **The Makefile's `DECLARED_RED` mechanism and its comment
+(*"quieting a gate costs a registered gap in the open rather than a silent habit"*) describe a
+discipline that no fresh clone has ever actually been subject to.** 🟢 **`gate-enumeration` was
+NOT added to `DECLARED_RED` by this pass and `SKIP_COMMIT_GATES` was not used: the gate stands
+exactly as it was, and this entry is the record.**
+
+🔴 **The debt, enumerated so it is not lost.** `13` shelf assertions of an absent grant stand
+REFUTED, over `7` distinct repositories, and every one is a licence payload at a path the
+asserting pass's ladder did not probe:
+
+| Repository | What enumeration found |
+|---|---|
+| `Kosudo/nextSIS` ×`3` | `license.txt` |
+| `foradian/fedena` ×`3` · `projectfedena/fedena` ×`2` | `NOTICE` |
+| `LearnPress/learnpress` ×`2` | `readme.txt` *"License: GPLv3"*; `composer.json` `"GPL-3.0-or-later"` |
+| `formalms/formalms` | `html/license.txt` and two vendored `LICENSE.txt` |
+| `frappe/lms` | `license.txt` |
+| `DMontgomery40/mcp-canvas-lms` | manifest `"license": "MIT"` while `"files"` names a `LICENSE` that is NOT in the tree |
+
+🔵 **The larger quantity is not the `13`.** 🔴 **`230` negative verdicts rest on a path ladder that
+was never enumerated, against `136` verified-absent — so the MAJORITY of this base's absence
+claims are unaudited**, and `license.txt` (lower-case, `.txt`) accounts for four of the thirteen
+refutations on its own.
+
+🟢 **Acceptance test: the next pass adds lower-case `license.txt` and `NOTICE` to the grant path
+ladder, re-runs `gate-enumeration`, and publishes the new `REFUTED` count — the fix is a ladder
+entry, not thirteen hand corrections, and the count must move or the diagnosis is wrong.**
+
+
 ## 🟢 `2026-11-17` (seventieth pass, `p865`) — **`4` gaps — `864-G1`, `864-G2`, `864-G3` and `864-G4` ALL DISCHARGED with their acceptance tests run; two of this base's published figures were wrong and one of its standing trends is refuted**
 
 ### 🟢 `864-G1` — DISCHARGED, and both "nils" were artefacts

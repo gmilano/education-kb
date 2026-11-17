@@ -4,6 +4,52 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🟢 `2026-11-17` — `p866`: **`15` query veins, `54` candidates, `0` addresses this base did not already own — the first sweep in this log to return a `100%` hold rate, with the three-way split printed by one command instead of counted by eye**
+
+🔴 **Fork policy, stated before the first total.** 🟢 **`gh api search/repositories` EXCLUDES forks
+by default; every total in this section is a NON-FORK count.**
+
+🟢 **The split below is `ingest/p866-triage.py`'s output, not this pass's arithmetic** — which is
+what [`865-G4`](../intel/open-gaps.md) asked for, and it is the reason the headline figure is
+trustworthy enough to be surprising.
+
+### The sweep
+
+| Vein | `TOTAL` | Top of the band, as measured |
+|---|---|---|
+| `topic:education topic:ai stars:>100 pushed:>2026-08-01` | `27` | 🟢 `PetoiCamp/OpenCat-Quadruped-Robot` (`5,569★`, MIT) · 🔴 `echo-loop/Echo-Loop` (`4,774★`, AGPL-3.0) · 🔴 `penecho/penecho` (`2,522★`, AGPL-3.0) · 🔴 `learnhouse/learnhouse` (`2,481★`, AGPL-3.0) |
+| `topic:edtech stars:>50 pushed:>2026-06-01` | `55` | 🟢 `virgiliojr94/book-to-skill` (`38,172★`, MIT) — **filed this pass** · 🔴 `xiaoyang111222/cn-math-taxonomy` (`8,325★`, **CC BY-NC 4.0**) · 🟢 `DozenTwelve/Papermorph` (`1,756★`, MIT) |
+| `topic:tutoring stars:>20` | `12` | 🔴 `plastic-labs/tutor-gpt` (`935★`, GPL-3.0) · 🟢 `Li-Evan/BloomTutor` (`313★`, MIT) — **already shelved** · 🟢 `SenmuuuuW/universal-diagnostic-tutor-skill` (`274★`, MIT) — **filed this pass** |
+| `topic:intelligent-tutoring-system` | `48` | 🟢 `open-spaced-repetition/fsrs4anki` (`4,142★`, MIT) · 🟢 `ArnaudGuiovanna/tutor-mcp` (`104★`, MIT, HEAD today) · 🟡 `GeminiLight/gen-mentor` (`137★`, CC0-1.0) |
+| `topic:grading stars:>20` | `23` | 🟢 `jupyter/nbgrader` (`1,370★`, BSD-3-Clause) · 🔴 `five-plus-one/AI-Marker-Suite` (`182★`, GPL-3.0) — **filed this pass** · 🟡 `inducer/relate` (`437★`, NOASSERTION) |
+| `rubric LLM stars:>10 pushed:>2026-01-01` | `28` | 🟢 `paper-instruments/rubric` (`86★`, MIT) — **filed this pass** · 🟢 `AI9Stars/LLM-Rubrics-Survey` (`72★`, MIT) — **filed this pass** · 🟡 `delip/autorubric` (`72★`, NOASSERTION) |
+| `topic:learning-analytics stars:>10` | `14` | 🟢 `openfun/ralph` (`52★`, MIT, HEAD today) · 🟢 `tl-its-umich-edu/my-learning-analytics` (`37★`, Apache-2.0) — **filed this pass** · 🟡 `Apereo-Learning-Analytics-Initiative/OpenLRW` (`62★`, NOASSERTION) |
+| `xAPI learning record store stars:>15` | `6` | 🔴 `LearningLocker/learninglocker` (`587★`, GPL-3.0, cold since `2024-05`) · 🟢 `adlnet/ADL_LRS` (`335★`, Apache-2.0) · 🟢 `yetanalytics/lrsql` (`144★`, Apache-2.0) |
+| `Moodle plugin AI stars:>10 pushed:>2026-01-01` | `4` | 🔴 `Berserk-hub150/moodle-ai-skill-navigator` (`279★`, GPL-3.0) — **filed** · 🟢 `SaadRahman01/claude-moodle-dev` (`42★`, MIT) · 🔴 `saylordotorg/moodle-local_ai_course_assistant` (`21★`, GPL-3.0) — **filed** |
+| `ENEM questões stars:>5` | `9` | 🔴 `yunger7/enem-api` (`368★`, GPL-2.0, cold) · 🟢 `diaslui/enem-extractor` (`37★`, MIT, cold) · 🔴 `migueldsants/OpENEM` (`9★`, AGPL-3.0) — **filed this pass** |
+| `AI tutor agent education stars:>40 pushed:>2026-06-01` | 🔴 `1` | 🟢 `zhangl1001/civil-ai` (`41★`, MIT) — **filed this pass**. 🔵 **A four-term conjunction returns ONE repository: GitHub `AND`s free-text terms, so a long query is a nil generator** |
+| `lesson plan generator AI stars:>20 pushed:>2026-05-01` | 🔴 `0` | 🔴 **MEASURED NIL, published with the query that produced it** (`T240`'s rule). Same cause as above |
+| `automatic grading LLM stars:>20 pushed:>2026-05-01` | 🔴 `1` | 🟡 `ollmo-go/ollmo` (`21★`, NOASSERTION → Apache-2.0 **with added brand conditions**) |
+| `topic:assessment topic:llm stars:>5` | 🔴 `1` | 🟢 `liuyunc/exam_generator` (`6★`, MIT) — examined, refused on traction |
+| `aula planificacion docente IA stars:>2` · `educação inteligência artificial stars:>5` | 🔴 `0` / `0` | 🔴 **TWO MEASURED NILS in Spanish and Portuguese, published with their terms.** 🔵 **`tutor inteligencia artificial stars:>3` returned `1` (`xoubinha/tutor.ia`, no licence file)** — the LATAM-language agent band at this star floor is effectively empty, and that is a finding, not a silence |
+
+### 🔴 The three-way split, by one command
+
+| Batch | Candidates | `NEW` | `UNGRADED` | `SHELVED` | Held |
+|---|---|---|---|---|---|
+| A (agent / tutoring / grading veins) | `27` | 🔴 `0` | `13` | `14` | 🔴 **`100%`** |
+| B (ITS / rubric / analytics veins) | `17` | 🔴 `0` | `9` | `8` | 🔴 **`100%`** |
+| C (LATAM ENEM + EMEA Moodle veins) | `10` | 🔴 `0` | `5` | `5` | 🔴 **`100%`** |
+| **Total** | **`54`** | 🔴 **`0`** | **`27`** | **`27`** | 🔴 **`100%`** |
+
+🔵 **`p852` measured `76%`, `p865` measured `77%`, and `865-G4` filed that as a planning
+constant.** 🔴 **It was a floor.** 🟢 **The `27` `UNGRADED` addresses — owned, previously
+discovered, on no shelf — are what this log is now FOR**
+([`A`](../evidence/candidate-triage.2026-11-17-p866.tsv),
+[`B`](../evidence/candidate-triage-b.2026-11-17-p866.tsv),
+[`C`](../evidence/candidate-triage-c.2026-11-17-p866.tsv)) → `T246`, `866-G1`.
+
+
 ## 🟢 `2026-11-17` — `p865`: **the assessment vein re-swept in English after four passes in other languages, `77%` of it already ours, and a search filter that would have hidden the row `p864` filed with it**
 
 🔴 **Fork policy, stated before the first total because [`864-G2`](../intel/open-gaps.md)

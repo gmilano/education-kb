@@ -1,0 +1,16 @@
+zhangl1001/civil-ai	41	7	MIT	main	false	Local-first adaptive tutoring agent foundation reference implementation 
+SenmuuuuW/universal-diagnostic-tutor-skill	274	5	MIT	main	false	One diagnosis-first AI tutor for STEM, AI/CS, and beyond — no mode or co
+paper-instruments/rubric	86	6	MIT	main	false	A Python library for LLM-based evaluation using weighted rubrics.
+iwangjian/Coding-Tutor	92	13	Apache-2.0	main	false	[ACL 2025 Findings] Training Turn-by-Turn Verifiers for Dialogue Tutorin
+lowwwbank/anything-to-course	38	2	MIT	main	false	Universal AI agent skill that turns any material into learning-science-b
+Calibre-Labs/reforge-ai-evals	102	9	MIT	main	false	Open-source AI evals toolkit: skills that guide AI coding agents to writ
+tl-its-umich-edu/my-learning-analytics	37	40	Apache-2.0	master	false	My Learning Analytics (MyLA)
+vanderbilt-data-science/knowledge-spaces	30	5	MIT	main	false	AI-powered Knowledge Space Theory for adaptive education. 10 Claude Code
+AI9Stars/LLM-Rubrics-Survey	72	2	MIT	main	false	A survey of rubrics across the evolving LLM landscape.
+virgiliojr94/book-to-skill	38173	4061	MIT	master	false	Turn any technical book PDF into a Claude Code skill — ready to study, r
+t1112000/tutor-management-app	110	84	MIT	main	false	MyClass — open-source private tutoring management (students, schedules, 
+five-plus-one/AI-Marker-Suite	183	39	GPL-3.0	dev	false	AI 批改助手 — 支持 43 个阅卷平台的开源浏览器脚本，提供手写识别、按标准评分、试改确认、连续批改、双评仲裁、分小题评分和评阅历史导出。
+brownplt/LTLTutor	12	2	GPL-3.0	main	false	Misconception-based tutor designed to help people learn Linear Temporal 
+xiaoyang111222/cn-math-taxonomy	8327	2237	NOASSERTION	main	false	数学（小学到高中）、英语（三年级到高中）、初中物理的知识图谱：1644 个知识点、2403 条先修边、6723 道题，对齐课标，附自适应前置诊断
+chadyi/StudyOnTV	1639	363	NOASSERTION	main	false	StudyOnTV (Tiledaoti TV) — open-source Android TV app where kids unlock 
+ollmo-go/ollmo	21	6	NOASSERTION	dev	false	Free and open-source production-grade RAG platform that converts documen

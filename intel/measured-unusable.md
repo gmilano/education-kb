@@ -4,6 +4,38 @@ region: Global
 updated: 2026-11-17
 ---
 
+## 🔴 `2026-11-17` — `p866`: **`6` refusals, and the finding is the DIRECTION: `NOASSERTION` concealed a commercial BLOCK three times and an absent grant once — the field hides prohibitions at least as readily as it hides permissions**
+
+🟢 **`863-G4`'s `class:` field is carried on every entry.** 🔴 **This pass's refusals are not the
+usual shape.** 🔵 **This base's standing complaint about `NOASSERTION` has been that it conceals
+GRANTS a byte-read would find.** 🔴 **Measured here, the field concealed, in four cases: a
+NonCommercial content licence, a personal-use-only source-available licence, an Apache-2.0
+derivative with brand conditions, and one genuine absence** → `T252`.
+
+### 🔴 Commercial-use BLOCKS the field did not report — `3`
+
+| Address | ★ / forks | GitHub's field | What the bytes say | `class` | Consequence |
+|---|---|---|---|---|---|
+| 🔴 [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 🔴 **`8,327` / `2,237`** | `NOASSERTION` | 🔴 **`CC BY-NC 4.0` — byte-read `LICENSE`, `19,347 B`, `sha256₁₂ 41003d4a7474`, first line `Attribution-NonCommercial 4.0 International`** | 🟢 `original` *(content payload)* | 🔴 **The most valuable APAC content asset this pass found, and it is commercially unusable**: `1,644` knowledge points, `2,403` prerequisite edges, `6,723` problems, aligned to the national curriculum standard (README cites `教育部` `27` times). 🔴 **`2,237` forks of a NonCommercial corpus — the field is being read as permission by people who never opened the payload.** 🟢 **A licence request is worth drafting and the ask is narrow**: a commercial grant on the GRAPH (points and prerequisite edges), not on the problems, whose own provenance is a textbook authority |
+| 🔴 [`chadyi/StudyOnTV`](https://github.com/chadyi/StudyOnTV) | 🔴 **`1,639` / `363`** | `NOASSERTION` | 🔴 **"Source Available License — Personal Use Only" — byte-read `LICENSE`, `1,043 B`, `sha256₁₂ 67ae8445017e`.** Operative text: personal, non-commercial, household use only; 🔴 **commercial use of any kind prohibited, redistribution of source or binary to any third party prohibited** | 🟢 `original` | 🔴 **A total block: a studio may not ship it, host it, or hand it to a client.** 🔵 **Its instrument value is where it SITS: `1,043 B` is `21 B` BELOW the smallest canonical MIT payload measured this pass, i.e. inside the band a size screen would accept.** 🟢 **`ingest/p646-mit-predictor.py` declines it `NOT-MIT-TITLE`** — the predictor's first wild adversarial payload after `12` fixture controls, and the title gate is what held (`T249`). 🟡 **The author names a commercial-licensing route via GitHub Issues — a request is draftable** |
+| 🟡 [`ollmo-go/ollmo`](https://github.com/ollmo-go/ollmo) | `21` / `6` | `NOASSERTION` | 🔴 **"Apache License 2.0, with additional conditions" — byte-read `LICENSE`, `12,646 B`, `sha256₁₂ 456acdb5d6c3`.** The added clause restricts brand and copyright attribution | 🟢 `original` | 🟡 **Not a total block — a conditioned grant, and the condition is the kind a white-label engagement trips.** 🟢 **On this row GitHub's `NOASSERTION` is CORRECT**, which is worth recording: the field is not uniformly wrong, it is uniformly uninformative, and only a byte-read tells which |
+
+### 🔴 No grant at any path — `3`
+
+| Address | ★ / forks | GitHub's field | What the bytes say | `class` | Consequence |
+|---|---|---|---|---|---|
+| 🔴 [`xoubinha/tutor.ia`](https://github.com/xoubinha/tutor.ia) | `6` / — | `NONE` | 🔴 **No payload at any of the `9` conventional paths** (`main`) | 🟢 `original` | 🟡 **One of only two Spanish-language tutoring repositories the LATAM-language veins returned at all, and it is ungranted.** 🔴 HEAD `2025-05-01`. 🔵 **Recorded mainly as evidence for the region finding: the Spanish/Portuguese agent band at this star floor is empty, and what little is in it cannot be used** |
+| 🔴 [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | `56` / — | `NONE` | 🔴 **No payload at any of the `9` conventional paths** (`main`) | 🟢 `original` | 🔴 **An education tutoring chatbot built on learning-science principles, HEAD `2024-11-04`.** 🟢 **The method is citable from its paper; the code is not shippable.** 🔵 **Its sibling `Tutorbot-Spock-Phys` is in the same state (`9★`, `2023-12`) — an ungranted research FAMILY, not a single oversight |
+| 🔴 [`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) | `19` / — | `NONE` | 🔴 **No payload at any of the `9` conventional paths** | 🟢 `original` | 🔴 **An MCP web-service plugin for Moodle — the exact integration surface `P107` wants — and it is ungranted.** 🔵 **Worse than ungranted in this one case**: a Moodle plugin derives from GPL-3.0 code, so shipping it without a notice is a defect for its author too. 🟢 **A licence request here is unusually likely to succeed, because the only answer consistent with Moodle's own licence is `GPL-3.0`** |
+
+### 🟢 The bidirectional control, recorded because it passed
+
+🟢 **On all three no-grant rows the cheap channel (`search/repositories`) reported `NONE` and the
+byte-read agreed.** 🔵 **This base's findings about the licence field are overwhelmingly about its
+FALSE NEGATIVES; a pass in which the field was right three times out of three on absence is worth
+one line, so the complaint stays calibrated** — the field is unreliable, not inverted.
+
+
 ## 🟡 `2026-11-17` — `p865`: **`2` refusals, both granted and both refused for a reason other than the grant — and the shorter list is itself the finding**
 
 🟢 **`863-G4`'s `class:` field is carried on every entry.** 🔴 **Neither entry below is a
