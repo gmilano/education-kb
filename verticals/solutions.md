@@ -31,6 +31,7 @@ engagement usually touches at least two.
 | **Oppia** | https://github.com/oppia/oppia | Apache-2.0 | Foundational literacy/numeracy, emerging markets | Exploration framework with misconception modelling |
 | **Frappe LMS** | https://github.com/frappe/lms | AGPL-3.0 | SMB/corporate training on the Frappe stack | Frappe app hooks; integrates with ERPNext |
 | **Mentingo** | https://github.com/Selleo/mentingo | **MIT** (`LICENSE@main`, `Copyright (c) 2024 Selleo`) | Corporate L&D, onboarding and compliance training; white-label, multi-tenant | **No layering needed — the AI mentor is first-party.** Postgres + pgvector is already the retrieval substrate; one-click AWS Marketplace deploy |
+| **Pupilfirst** | https://github.com/pupilfirst/pupilfirst | **MIT** — multi-grant, byte-read p899 (`LICENSE@master`, 1,684 B, `sha256₁₂ bda0aa6d49f2`) | Cohort-based, asynchronous programmes with review workflows and mentoring built in | 🔴 **Added p899, and it displaces a standing claim in this file.** This KB records **Mentingo (109 ★) as its counter-example to "the platforms clients run are copyleft"** — the first MIT LMS. **Pupilfirst is MIT and 982 ★, nine times larger.** Multi-grant: `docs/` is **CC-BY-SA-4.0**, client-side JavaScript is MIT, everything else MIT — so unlike PrairieLearn's superficially similar structure there is **no proprietary tier**, and unlike Open edX the client JS is not AGPL. 🟡 **Caveat that decides how to use it: last push 2025-12-09, ~11 months idle.** Read it as a permissive, complete, forkable codebase rather than an upstream to track. From **Pupilfirst Pvt. Ltd., India** — the only APAC-origin LMS in this table. |
 | **Tutor** | https://github.com/overhangio/tutor | AGPL-3.0 | The de facto Open edX deployment/ops tool | Plugin system for injecting services into an Open edX cluster |
 
 **Added p893 — the copyleft rule now has a real exception.** Every other LMS in the table above
@@ -91,6 +92,24 @@ sharpens: **the registrarial gap is an agent tier, not a platform.** Timetabling
 scheduling and student scheduling have a permissive, maintained substrate; enrolment decisioning,
 transcripts and financial aid still have nothing, and financial-aid decisioning is EU Annex III
 high-risk. See `compose/patterns.md` **P12**.
+
+## Assessment and grading platforms — added p899
+
+Deployable grading systems, as distinct from the grading *libraries* in `repos/foundations.md`.
+**This section did not exist before p899**, which is why `p894` was able to record automated
+grading as a category with nothing in it — see `repos/trending.md` p899 for how that artefact
+was produced.
+
+| Platform | Repo | Licence | Where it is strong | AI layering seam |
+|---|---|---|---|---|
+| **Submitty** | https://github.com/Submitty/Submitty | **BSD-3-Clause** (`LICENSE.md@main`, 1,542 B, `sha256₁₂ c123708cb4ef`) | University CS and engineering courses; submission + autograding + TA/manual grading + rubrics in one system. 807 ★, pushed 2026-11-18, developed at **RPI / Rensselaer Center for Open Source Software** since 2014 | **The permissive anchor of this category.** No patent clause, no enterprise carve-out, no copyleft — the one grading platform a client can take a closed derivative of. Layer an AI rubric-assist on the manual-grading tier, leaving the deterministic autograder untouched (which is what keeps it defensible — see `agents/top.md`, `EDU AI Agent Suite`) |
+| **PrairieLearn (CE)** | https://github.com/PrairieLearn/PrairieLearn | 🔴 **AGPL-3.0 Community Edition + proprietary Enterprise Edition. NOT MIT — corrected p899** | Randomised, auto-graded STEM problem generation; the strongest assessment *engine* here. 533 ★, pushed 2026-11-18 | 🔴 **Read the licence note in `repos/foundations.md` before planning anything.** `apps/course-agent/` — the AI tier — is **Enterprise Edition and requires a paid subscription for production use**, with a clause assigning your modifications to PrairieLearn, Inc. Build the AI seam **outside** the EE directories, against the AGPL CE, and host rather than redistribute |
+| **Autolab** | https://github.com/autolab/Autolab | Apache-2.0 | CMU's autograding platform with secure job execution | Patent-granting and permissive; pair with `autolab/Tango` (Apache-2.0) when grading must be called from something that is not Autolab |
+| **Pawtograder** | https://github.com/pawtograder/platform | 🔴 **GPL-3.0-or-later** — SPDX reports `NOASSERTION`; byte-read p899 (`LICENSE@main`, 658 B, `sha256₁₂ 61d7698783f4`) | Positioned as the open **GitHub Classroom replacement** for CS courses: Actions-based autograding, rubrics, office hours, gradebook. 22 ★, pushed 2026-11-18 | New and small. **Strong copyleft** — read it for the CI-as-grader pattern, do not plan a closed derivative |
+
+🔵 **Category note.** Three of the four are university-built (RPI, UIUC, CMU) and that is the
+durability signal, not the star counts. **Only Submitty and Autolab are safe for a closed
+derivative**; PrairieLearn and Pawtograder are host-only.
 
 ## Repositories, libraries and scholarly publishing
 
@@ -232,10 +251,18 @@ re-measured today on both channels.
   least usable, and it carries **third-party exam copyright on top of the licence absence**.
   **The rule generalises: for content, byte-read the licence *and* ask who owns the payload.**
 
-- **No open-source education CRM.** Searches for one returned SIS and school-management
-  products only. Student-recruitment and alumni CRM is proprietary (Salesforce Education
-  Cloud, Ellucian). A studio can either build on a general open CRM or accept proprietary
-  integration — there is no open vertical answer.
+- **No open-source education CRM — restated p899 with the measurement that sharpens it.**
+  Student-recruitment and alumni CRM remains proprietary (Salesforce Education Cloud, Ellucian),
+  and a studio can either build on a general open CRM or accept proprietary integration.
+  🔴 **But the nearest thing is no longer "not found" — it is found and barred, which is a
+  different fact.** https://github.com/canyongbs/advisingapp ("Advising App" by Canyon GBS) is an
+  **AI conversational assistant for student advising and student success**, 339 ★, pushed
+  2026-11-18 — exactly the registrarial/advising agent tier this file records as missing. It is
+  **Elastic License 2.0**, byte-read p899 (`LICENSE@main`, 3,860 B, `sha256₁₂ 48255018b41f`):
+  **source-available, not open source**, and it specifically forbids providing the software to
+  third parties as a managed service — a direct description of what a studio does for a client.
+  GitHub's SPDX field reports only `NOASSERTION`. **The category has an incumbent; it is just not
+  one Globant can build on.** Recorded in `intel/measured-unusable.md`.
 - **No open-source proctoring product worth deploying.** `openedx/edx-proctoring` is an
   integration shim, and the standalone candidates in earlier passes of this KB were
   student projects. Given that exam monitoring is EU AI Act Annex III high-risk, the absence

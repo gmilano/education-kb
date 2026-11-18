@@ -17,6 +17,24 @@ derivative work. The permissive anchors — Artemis (MIT), Kolibri (MIT), Oppia
 keep the result closed. This distinction is the single most consequential fact in this
 file.
 
+🔴 **p899 corrected the single most dangerous row in this file, and the error was in the
+direction that costs a client money.** `PrairieLearn/PrairieLearn` was published here as
+**`MIT` · "Permissive and genuinely strong"**. It is **not MIT**: the Community Edition is
+**AGPL-3.0**, and two directories — including **`apps/course-agent/`, which is the AI tier — are
+proprietary Enterprise Edition requiring a paid subscription for production use**, with a clause
+assigning your modifications to PrairieLearn, Inc. Both licence files were byte-read this pass.
+**The correction is in the grading table below.** This is the third consecutive pass to find a
+published grant wrong (`p897`: five of seven re-read rows; `p896`: `i-diario`), and the first to
+find one wrong in a way that would survive review *because it looked permissive*.
+
+🟢 **p899 also added five grading repos and opened an adaptive-learning section.** `Submitty`
+(BSD-3-Clause, 807 ★, RPI) is the largest permissive grading **platform** in open source and was
+absent from this file entirely; `otter-grader`, `webtech-network/autograder`,
+`autograder-server` and `pawtograder/platform` complete the category; and **`CAHLR/pyBKT`
+(MIT, UC Berkeley) gives this KB a learner-modelling primitive for the first time.** All six came
+out of this KB's **own `logged-not-shelved` ledger and a description-filtered discovery leg** —
+not from new search. See `repos/trending.md` p899.
+
 **p894 restored four rows the 2026-11-18 rewrite had dropped** — `UniTime/unitime`,
 `UniTime/cpsolver`, `GEOSOFT-GLOBAL/timetablely` and `agentscope-ai/OpenJudge` — each verified
 in an earlier pass, re-measured today, and absent from this file until now. The method point is
@@ -75,6 +93,16 @@ here.
 | https://github.com/UniTime/cpsolver | **LGPL-3.0** | The constraint solver underneath UniTime, 84 ★, pushed 2026-10-14. **Licence trap:** the platform is Apache-2.0 and the component is LGPL-3.0, so a static link pulls the weaker grant into scope. Keep it behind a process or service boundary in a closed derivative. |
 | https://github.com/GEOSOFT-GLOBAL/timetablely | MIT | Small-scale permissive timetable generator, 27 ★. **Pushed 2026-08-17 — three months idle.** The MIT option when UniTime is too heavy; read it as a starting point, not a dependency. |
 
+## Adaptive learning and learner modelling — added p899
+
+The capability every tutor in `agents/top.md` is described as lacking, available as libraries.
+**This section did not exist before p899**, which is why `pyBKT` sat in this KB's own
+`logged-not-shelved` ledger with 15 recorded mentions and no row.
+
+| Repo | Licence | Role |
+|---|---|---|
+| https://github.com/CAHLR/pyBKT | **MIT** (`LICENSE@master`, 1,132 B, `sha256₁₂ ad0c7a38bf01`, *"Copyright (c) 2021 Computational Approaches to Human Learning"*) | **Bayesian Knowledge Tracing** and its standard extensions, 292 ★, pushed 2026-11-02. The canonical open implementation of the model that estimates *"has this learner mastered this skill yet"* from a response history — the learner-state primitive that `LearnHarness` is praised in `agents/top.md` for having and that nothing else in that table implements. From **UC Berkeley CAHLR** (Zachary Pardos et al., author emails `@berkeley.edu`), the same lab as `OATutor`, with the original xBKT work shared with MIT CSAIL. MIT-licensed, C++-accelerated, callable from a Python agent in one import. **Pair it with any tutor in `agents/top.md` to replace a vibes-based "do they know it" judgement with a fitted model.** |
+
 ## Learning analytics (xAPI / LRS)
 
 Where the evidence for "did the AI actually help" has to live.
@@ -93,7 +121,12 @@ Where the evidence for "did the AI actually help" has to live.
 
 | Repo | Licence | Role |
 |---|---|---|
-| https://github.com/PrairieLearn/PrairieLearn | MIT | Randomised, auto-graded problem generation. Permissive and genuinely strong; the best open assessment engine for STEM. |
+| https://github.com/PrairieLearn/PrairieLearn | 🔴 **NOT MIT — multi-grant, open-core. Corrected p899.** CE is **AGPL-3.0**; `apps/prairielearn/src/ee/` **and `apps/course-agent/`** are **proprietary Enterprise Edition**; all client-side JavaScript is AGPL; only the portions copyright University of Illinois are MIT | Randomised, auto-graded problem generation, 533 ★, pushed 2026-11-18. Still the strongest open assessment engine for STEM — but this file published it as *"MIT · Permissive"* for an unknown number of passes and that is a **procurement-grade error in the dangerous direction**. Byte-read `LICENSE@master` (37,237 B, `sha256₁₂ 548cbfae567a`) states: *"The PrairieLearn Community Edition (CE) consists of all content outside of the above mentioned `apps/prairielearn/src/ee/` and `apps/course-agent/` directories and is licensed under the GNU Affero General Public License."* 🔴 **The AI agent is the proprietary part.** `apps/course-agent/LICENSE` (2,538 B, `sha256₁₂ cfd0235081fa`) is the EE licence: production use requires *"a valid PrairieLearn Enterprise Edition subscription"*, and it assigns ownership of your modifications — *"PrairieLearn, Inc. and/or its licensors retain all right, title and interest in and to all such modifications and/or patches"*. A studio that built a client's AI assessment tier on `apps/course-agent/` on the strength of the old row would have shipped unlicensed production code **and** signed the client's modifications over to a third party. Use the CE under AGPL, keep the EE directories out of the build, and treat `grader-python-v2` (MIT, below) as the permissive seam. |
+| https://github.com/Submitty/Submitty | **BSD-3-Clause** (`LICENSE.md@main`, 1,542 B, `sha256₁₂ c123708cb4ef`, *"Copyright (c) 2014-2026 Submitty team"*) | **Added p899 — the largest permissive full grading PLATFORM in open source, and it was absent from this file.** 807 ★, pushed 2026-11-18, twelve years of continuous development out of the **Rensselaer Center for Open Source Software, Dept of Computer Science, RPI** (origin read from the README, not inferred). Homework submission + automated grading + TA/manual grading + rubrics in one deployable system. **BSD-3-Clause is the most permissive licence in this section** — unlike Autolab (Apache-2.0, comparable scope) it carries no patent clause, and unlike PrairieLearn above it has no enterprise carve-out at all. This is the default answer when a client needs an open grading platform they can close a derivative of. |
+| https://github.com/ucbds-infra/otter-grader | **BSD-3-Clause** (`LICENSE@master`, 1,560 B, `sha256₁₂ 6af203d41a01`, *"Copyright (c) 2019, UC Berkeley Division of Data Sciences"*) | **Added p899.** Python **and R** autograding, 162 ★, pushed 2026-11-14. Grades locally, in a container, or by submitting through Canvas/Gradescope, so it is the autograder that does **not** require you to adopt a platform — the complement to `nbgrader` above rather than a competitor. From the same university as `pyBKT` and `OATutor`. |
+| https://github.com/webtech-network/autograder | **Apache-2.0** (`LICENSE@main`, 11,357 B, `sha256₁₂ c71d239df917`) | **Added p899.** Configurable autograding that also generates feedback, 66 ★, pushed 2026-11-08. Small, current and patent-granting; the lightest permissive option when Submitty is too much system. |
+| https://github.com/eecs-autograder/autograder-server | **LGPL-3.0** (`LICENSE.txt@master`, 7,652 B, `sha256₁₂ b96e8c21c928`) | **Added p899, and carried as a worked example of a star-ranked trap.** The University of Michigan EECS autograder. 🔴 **The repo a search ranks first is the wrong one:** `eecs-autograder/autograder.io` has **81 ★ and no licence file at all** — it is the documentation and issue tracker. The actual server is this repo at **9 ★**, and the frontend `eecs-autograder/ag-website-vue` (LGPL-3.0, 4 ★). LGPL-3.0: linkable from a closed derivative, not forkable into one. |
+| https://github.com/pawtograder/platform | 🔴 **GPL-3.0-or-later — SPDX says `NOASSERTION`. Corrected p899.** Byte-read `LICENSE@main` (658 B, `sha256₁₂ 61d7698783f4`): *"This program is free software… under the terms of the GNU General Public License… either version 3 of the License, or (at your option) any later version."* | **Added p899.** CI-based autograder + Q&A + courseops, 22 ★, pushed 2026-11-18 — positioned as an open GitHub-Classroom replacement for CS courses. New and small; **strong copyleft**, so read it for the GitHub-Actions-as-grader pattern rather than as substrate. |
 | https://github.com/jupyter/nbgrader | BSD-3-Clause (1,370 ★) | Assignment release/collect/autograde for notebooks. The data-science course standard. |
 | https://github.com/autolab/Autolab | Apache-2.0 | CMU's autograding platform with secure job execution. |
 | https://github.com/autolab/Tango | Apache-2.0 | **Restored p896.** Autolab's **standalone RESTful autograding service** — 49 ★, pushed 2026-10-21. The row above is the platform; this is the execution tier on its own, which is the piece you actually want when grading has to be called from something that is not Autolab (an LTI tool, an agent, a CI job). |

@@ -1,8 +1,58 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-17
+updated: 2026-11-18
 ---
+## 🔴 `2026-11-18` — `p899`: **a FIFTH direction — the barred repositories in this pass are, on average, LARGER than the ones this KB shelves, and three of the five hide behind `NOASSERTION`**
+
+🔵 **The four concealment directions already recorded here all concern how a grant is hidden.
+`p899` adds one about *where the unusable repositories sit in the size distribution*.** Every row
+below came out of this KB's own backlog of most-logged addresses — the places a future pass is
+most likely to mine. **Their combined star count is 16,055.** The largest single item barred here
+(8,508 ★) is larger than every repository in `agents/top.md` except two.
+
+🔴 **The operational consequence: "high stars + frequently logged" is not a promotion signal.**
+Three of this pass's top backlog rows by star count were unusable, and in each case the GitHub
+SPDX field said `NOASSERTION` — i.e. the field was *silent about a prohibition*, which is
+`p866`'s direction recurring at much larger scale.
+
+### 🔴 A grant is present and it is NOT open source — `2`
+
+| Address | ★ | Field | Bytes read | Verdict |
+|---|---|---|---|---|
+| https://github.com/canyongbs/advisingapp | **339** | `NOASSERTION` | `LICENSE@main`, 3,860 B, `sha256₁₂ 48255018b41f` | 🔴 **Elastic License 2.0.** Source-available, **not** OSI open source. Production use is conditioned on a subscription relationship and the licence **forbids providing the software to third parties as a managed service** — a literal description of a studio engagement. Pushed 2026-11-18, actively developed, and it is an **AI student-advising assistant**: the exact registrarial agent tier `verticals/solutions.md` records as missing. **The category is occupied; it is just occupied by something Globant cannot build on.** |
+| https://github.com/xiaoyang111222/cn-math-taxonomy | **8,508** | `NOASSERTION` | `LICENSE@main`, 19,347 B, `sha256₁₂ 41003d4a7474` | 🔴 **CC BY-NC 4.0 — NonCommercial.** A Chinese primary-to-secondary mathematics and English **curriculum taxonomy**. Logged 36 times by this KB. **NonCommercial bars client work outright**, and no negotiation route is offered in the repo. 🔵 Same shape as `ChinaTextbook` and `aloc-endpoints` in `verticals/solutions.md`: **the most useful-looking curriculum asset in a region is the least usable one**, and this is now the third continent on which that has held. |
+
+### 🟡 Granted, but not a software licence — `1`
+
+| Address | ★ | Field | Bytes read | Verdict |
+|---|---|---|---|---|
+| https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills | **5,059** | `NOASSERTION` | `LICENSE@main`, 620 B, `sha256₁₂ 22401c14e67f` | 🟡 **CC BY-SA 4.0.** A collection of 23,000+ agent skills for empirical research. **ShareAlike is copyleft for content**, and CC licences are explicitly not intended for software: no patent grant, no warranty disclaimer suited to code, and the SA obligation propagates to adaptations. Usable as *reference material*, not as a dependency, and **not redistributable inside a closed deliverable**. |
+
+### 🔴 No grant at any path — `4`
+
+Probed over 2 branches × 8 filenames (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`,
+`COPYING.txt`, `LICENCE`, `license.txt`, `docs/LICENSE`) — the extended set `p897` established
+after openSIS showed the missing axis is **directory, not filename**.
+
+| Address | ★ | Verdict |
+|---|---|---|
+| https://github.com/LearnPress/learnpress | **275** | 🔴 No licence file on any probed path. A widely deployed WordPress LMS plugin; WordPress.org distribution convention implies GPL, **but convention is not a grant and this directory records bytes**. 🔵 **Worth a licence request** — the project almost certainly intends GPL and simply has no file in the repository. |
+| https://github.com/formalms/formalms | 38 | 🔴 No licence file on any probed path. Self-described as a *"mirror repository"*, which is also why the grant may live upstream rather than here. Worth a request. |
+| https://github.com/bigdata-ustc/Agent4Edu | 103 | 🔴 No licence file on any probed path. An **AAAI-track research artefact** (LLM-based learner-response generation). The paper is public and the code is not granted — the standard research-code failure mode this KB records under T16. |
+| https://github.com/eecs-autograder/autograder.io | **81** | 🔴 No licence file — **and it is the repository a star-ranked search returns first for "autograder"**. It is documentation and an issue tracker, not software. The actual University of Michigan server is `eecs-autograder/autograder-server` (**9 ★, LGPL-3.0**), shelved in `repos/foundations.md`. **Ranking by stars selects the unlicensed wrapper over the licensed software.** |
+
+### 🔵 The detector rule this adds
+
+🔴 **A licence file far larger than its claimed licence is a carve-out until proven otherwise.**
+MIT is ~1.07 KB and Apache-2.0 ~11.3 KB; this pass byte-read **37,237 B** at
+`PrairieLearn/PrairieLearn` and found an AGPL Community Edition wrapped around **two proprietary
+Enterprise directories, one of which is the AI agent** (see `repos/trending.md` p899 — the row
+was published in `repos/foundations.md` as *"MIT · Permissive"*). The same shape, benignly,
+produced `pupilfirst` (1,684 B over plain MIT: a `docs/` CC-BY-SA carve-out and nothing worse).
+**Rule: if a repository claims MIT or BSD and its licence file exceeds ~5 KB, re-read it before
+it reaches a client-facing table.** Tracked as `899-G3`.
+
 ## 🔴 `2026-11-17` — `p877`: **the direction this directory had not yet recorded — a licence that is REAL, DETAILED, and forbids the one thing a consultancy must do: redistribute**
 
 🔵 **The three concealment directions already recorded here are (1) `NOASSERTION` over bytes that

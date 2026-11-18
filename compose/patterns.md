@@ -1226,3 +1226,156 @@ implementation is studio IP.** Budget accordingly, and do not price this as inte
 well-formed design argument supported by one working implementation, **not** an evidenced
 intervention. Say so to the client rather than implying efficacy data that does not exist.
 
+
+## P17 — AI grading assist over a BSD autograder, with the deterministic tier untouched (added p899)
+
+### Why this pattern exists
+
+A North American higher-ed client asking for "AI grading" is usually imagining the model marking
+the work. **That is the one design that cannot be sold**, because it is simultaneously the
+weakest pedagogically, the most exposed under FERPA and several US state statutes, and — from
+2 December 2027 — an **EU AI Act Annex III high-risk** use if it determines learning outcomes.
+
+🟢 **p899's measurement makes the alternative concrete: the deterministic grading substrate
+already exists, under BSD, maintained by universities.** This KB previously recorded the grading
+category as effectively empty; that was a keyword artefact (`898-G2`). It is not empty, and
+nothing in the stack below needs to be built.
+
+### Stack — every row licence byte-read 2026-11-18
+
+| Layer | Repo | Licence | Why this one |
+|---|---|---|---|
+| **Grading platform** | https://github.com/Submitty/Submitty | **BSD-3-Clause** (`LICENSE.md@main`, `sha256₁₂ c123708cb4ef`) | 807 ★, RPI/RCOS, 12 years old, pushed 2026-11-18. Submission + autograding + **TA/manual grading with rubrics** in one system. **No copyleft, no patent clause, no enterprise carve-out — the derivative can be closed.** |
+| **Notebook grading** | https://github.com/jupyter/nbgrader | BSD-3-Clause | For data-science courses; already shelved. Use instead of Submitty when the course is notebook-native |
+| **Platform-free autograding** | https://github.com/ucbds-infra/otter-grader | BSD-3-Clause | Python **and R**, grades locally or in a container. Use when the client will not adopt a platform |
+| **Sandboxed execution** | https://github.com/openedx/codejail *or* https://github.com/ls1intum/Ares | Apache-2.0 / MIT | **Never let an agent execute student code outside one of these** |
+| **Learner model** | https://github.com/CAHLR/pyBKT | **MIT** (`LICENSE@master`, `sha256₁₂ ad0c7a38bf01`) | UC Berkeley CAHLR. Turns a response history into a per-skill mastery estimate — **the input that makes feedback adaptive rather than generic** |
+| **Agent orchestration** | https://github.com/langchain-ai/langgraph | MIT | Policy checks become explicit, auditable graph nodes |
+| **Rubric reference architecture** | https://github.com/virtualryder/edu-ai-agents | MIT | Deny-by-default authorisation, PII masking, HITL enforcement, tamper-evident audit, **deterministic rubric service rather than an LLM** |
+
+🔴 **Do not reach for `PrairieLearn/PrairieLearn` here without reading `repos/foundations.md`
+first.** Its Community Edition is **AGPL-3.0** and `apps/course-agent/` — the AI tier, i.e.
+exactly this pattern's layer — is **proprietary Enterprise Edition**: production use needs a paid
+subscription and the licence **assigns your modifications to PrairieLearn, Inc.** This KB
+published that row as "MIT · Permissive" until p899.
+
+### How it wires together
+
+1. **Submitty grades deterministically and remains the system of record for the mark.** The agent
+   never writes a grade. This is the load-bearing rule.
+2. The agent reads `(submission, test results, rubric)` and drafts **feedback and a suggested
+   rubric selection**, surfaced to the TA as a proposal.
+3. **The TA accepts, edits or rejects** in Submitty's existing manual-grading UI. The accept/edit
+   signal is the audit record *and* the evaluation dataset.
+4. `pyBKT` consumes the mark history and returns per-skill mastery, which selects **what the
+   feedback emphasises** — not what the mark is.
+5. Every agent action is logged with the model version and prompt hash, per `edu-ai-agents`.
+
+### The design rule that makes it defensible
+
+🔵 **The mark is deterministic; the prose is generated; a human moves between them.** Under this
+split the AI system is not "determining learning outcomes" — which keeps it out of Annex III
+high-risk classification, satisfies the US state rules that prohibit AI-only grading decisions,
+and gives the institution an appeal story that survives a student challenge. **It is also the
+only split for which you can show the client a measured accept-rate.**
+
+### Deliverables
+
+- Submitty deployment + the feedback-assist service as a separate process (clean licence boundary)
+- Rubric-selection evaluation harness with TA accept/edit/reject as ground truth
+- `pyBKT` mastery service with a per-skill dashboard
+- FERPA data-flow map and a written Annex III classification argument
+
+### Licence posture
+
+🟢 **Fully closable.** Submitty BSD-3-Clause, otter-grader BSD-3-Clause, nbgrader BSD-3-Clause,
+pyBKT MIT, LangGraph MIT, edu-ai-agents MIT, codejail Apache-2.0. **No copyleft anywhere in the
+stack**, which is rare in education and is the reason to prefer this composition over the
+Open edX/`edx-ora2` route (AGPL-3.0) when the client wants to own the result.
+
+### Estimate
+
+**6–8 weeks** to a pilot on one course with real TAs. Add 3–4 weeks if Submitty is not already
+deployed. 🔴 **Unproven:** no published study shows AI-drafted rubric feedback improves outcomes.
+Sell the **TA time saved and the audit trail**, both of which you can measure in the pilot, and
+do not imply learning-gain evidence that does not exist.
+
+### Where it does not apply
+
+K-12 in jurisdictions requiring parental opt-in before any AI touches student work (Florida's
+2026 board rules), and any client who wants the mark itself generated — decline that scope and
+explain why in one paragraph.
+
+## P18 — Zero-provisioning teacher coaching over WhatsApp (added p899)
+
+### Why this pattern exists
+
+Every other pattern in this file assumes the learner or teacher has a provisioned device, an
+account and a browser. **For a large part of the market that assumption is the project risk**, and
+it is the reason public-sector education pilots stall between PoC and deployment.
+
+🟢 **p899 verified the first open agent in this KB that removes the assumption entirely.**
+https://github.com/Orenda-Project/rumi-platform (**Apache-2.0**, `LICENSE@main`, 11,287 B,
+`sha256₁₂ c589d95090ce`) runs **wholly on WhatsApp**: no app to install, no login, no training
+day. It delivers classroom coaching, reading assessment and lesson plans by **text and voice
+note**, in **15 languages**, with voice transcription via Meta's MMS-ASR, and is explicitly built
+to be cloned and run on your own API keys.
+
+🔵 **Its target market is South Asia; the channel argument is at least as strong in LATAM**, where
+WhatsApp is the dominant messaging surface and this KB has repeatedly recorded an
+adoption-ahead-of-governance asymmetry among teachers (Brazil 56%, Chile 55%, Colombia 53% teacher
+AI use against an OECD average of 36%).
+
+### Stack
+
+| Layer | Repo | Licence | Role |
+|---|---|---|---|
+| **Channel + agent** | https://github.com/Orenda-Project/rumi-platform | **Apache-2.0** | WhatsApp transport, voice-note handling, coaching flows. **Patent grant included** |
+| **Local/sovereign inference** | https://github.com/ollama/ollama *or* vLLM | MIT / Apache-2.0 | Keeps teacher messages in-country where a ministry requires it |
+| **Curriculum grounding (UK/EMEA)** | https://github.com/oaknational/oak-ai-lesson-assistant | **MIT** (code) | Curriculum-aligned lesson generation from a national curriculum body. 🟡 Content is **Open Government Licence**, trademarks excluded |
+| **Curriculum grounding (Brazil)** | https://github.com/bncc-dev/bncc-pacotes | 🔴 `NOASSERTION` — **byte-read before use** | BNCC (Brazilian national curriculum) as packages + an MCP server. 10 ★ — thin, verify the grant |
+| **Brazilian public data** | https://github.com/Mcp-Brasil/mcp-brasil | **MIT** | 1,865 ★. MCP over 70 Brazilian public-sector APIs — **the largest LATAM-origin asset this KB has verified** |
+| **Offline fallback** | https://github.com/learningequality/kolibri | MIT | For the schools where even WhatsApp is intermittent |
+
+### How it wires together
+
+1. Teacher sends a voice note or text to a WhatsApp number. **No onboarding step exists.**
+2. Rumi transcribes (MMS-ASR), routes to the coaching flow, and replies in the teacher's language
+   — by voice if the teacher used voice.
+3. Lesson-plan requests are grounded against the **national curriculum** package for that
+   jurisdiction (Oak for England, `bncc-pacotes` for Brazil), not against model recall.
+4. Inference runs locally via Ollama/vLLM where data residency is a procurement condition.
+5. Usage is metered per school for the ministry's reporting, per **P8**.
+
+### The design rules that make it defensible
+
+- 🔴 **Teacher-facing only.** Do not put this channel in front of under-18 learners: WhatsApp's own
+  age floor, the UAE under-13 prohibition and the US state parental-opt-in rules all land here.
+  **Coaching the teacher is the defensible scope** and is also where the measured workload saving
+  is (Oak reports teachers saving ~3.5 hours a week with Aila — **Oak's own figure, not
+  independently verified**).
+- 🔵 **Curriculum grounding is the quality control.** The reason to ground on BNCC or the Oak
+  curriculum is not pedagogy theory — it is that a ministry will reject generated material that
+  cannot be traced to its own standard.
+- 🟡 **Meta dependency is a real risk.** The WhatsApp Business API terms and pricing are outside
+  the client's control and outside this licence stack. Say so in the proposal.
+
+### Deliverables
+
+- Self-hosted Rumi deployment on the client's WhatsApp Business number and own API keys
+- Curriculum grounding pack for the jurisdiction + traceability from reply to standard
+- Teacher-cohort usage and workload-saving measurement
+- Data-residency note covering transcription and inference
+
+### Licence posture
+
+🟢 **Closable.** Rumi Apache-2.0 (with patent grant), Ollama MIT, Kolibri MIT, mcp-brasil MIT, Oak
+code MIT. 🔴 **Two conditions:** Oak's *content* is Open Government Licence and its marks are
+excluded from the grant; `bncc-pacotes` reports `NOASSERTION` and **must be byte-read before it
+reaches a build**.
+
+### Estimate
+
+**6–8 weeks** to a pilot with one teacher cohort. 🔴 **Honest limits:** Rumi is **25 ★ and young**
+— this is a reference implementation and a channel argument, **not substrate**. Budget the
+integration as studio IP, pin the version, and expect to maintain the fork.

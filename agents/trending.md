@@ -4,6 +4,136 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p899) — the discovery pipeline was never the bottleneck: **36 of the 40 most-logged addresses are still unshelved, and one of them is 38,369 ★ under MIT**
+
+**Channel:** `gh api search/repositories` for stars/SPDX, licence **byte-reads** from
+`raw.githubusercontent.com`, WebSearch for regional demand-side, and — new this pass — a
+**description-filtered** discovery leg (`in:description`) run against `898-G2`'s acceptance test,
+plus the origin instrument `898-G1` specified.
+
+### 🔴 `898-G2` DISCHARGED — the description-filtered leg returns **9× the ranked leg**, measured on the same window
+
+`898-G2` has stood for ten passes: *"Close when a pass runs a description-filtered leg and
+reports its yield against the ranked leg's yield on the same window."* Both legs, window
+`pushed:>2026-09-01` ([record](../evidence/discovery-leg-yield.2026-11-18-p899.tsv)):
+
+| Leg | Query | Returned | Education-domain | Yield |
+|---|---|---|---|---|
+| **Ranked** | `classroom OR grading OR lesson-plan`, `sort=stars` | 12 | **1** | 🔴 **8.3%** |
+| **Description** | `"lesson plan" in:description` | 8 | 8 | 🟢 100% |
+| **Description** | `tutoring in:description` | 8 | 8 | 🟢 100% |
+| **Description** | `"for students" in:description` | 8 | 2 | 🟡 25% |
+| **Description, total** | 3 queries | 24 | **18** | 🟢 **75%** |
+
+🔵 **The ranked leg's single education hit was `OpenMAIC`, which this KB already carries** — so
+its yield of *new* information was **zero**. The poisoning is exactly as `898-G2` characterised
+it: **8 of the 12 ranked hits contain the compound adjective `-grade`** — `kubernetes/kubernetes`
+("Production-Grade"), `spring-boot`, `nautilus_trader`, `MaxKB` ("enterprise-grade"),
+`apache/brpc` ("Industrial-grade"), `hyperledger/fabric`, `agents-towards-production`,
+`addyosmani/agent-skills`. 🔴 **And the third description query shows the technique is not
+magic:** `"for students"` is a *qualifier phrase* that attaches to non-education tools
+(`malwaredllc/byob`, a post-exploitation framework "for students"), and it yielded 25%. **The
+lever is a phrase that names the education ACT (`lesson plan`, `tutoring`), not the education
+AUDIENCE.** That distinction is the part worth carrying forward.
+
+### 🔴 The promotion gap, measured: this KB's discovery has been working and its shelf has not been absorbing it
+
+Taking the top 40 of this base's own
+[`logged-not-shelved`](../evidence/logged-not-shelved.2026-11-16-p860.tsv) ledger and checking
+each against every live shelf: **36 of 40 are still unshelved.** All 40 were then measured for
+stars, SPDX and licence bytes
+([record](../evidence/logged-not-shelved-measured.2026-11-18-p899.tsv)):
+
+| Address | ★ | Grant (byte-read) | Logged | Verdict |
+|---|---|---|---|---|
+| `virgiliojr94/book-to-skill` | **38,369** | **MIT** | 28× | 🟢 **promoted p899 — would rank 3rd in `agents/top.md`** |
+| `DozenTwelve/Papermorph` | 1,775 | MIT | 28× | 🟢 promoted (pseudonymous holder — flagged) |
+| `Miaotofu01/Study-Mate` | 1,488 | MIT | 45× | 🟢 promoted |
+| `dmoshehun-prog/learn-from-materials` | 1,455 | MIT | 18× | 🟢 promoted (derivative of `book-to-skill`) |
+| `beltromatti/get-it` | 1,168 | Apache-2.0 | 18× | 🟢 promoted |
+| `assafkip/claudemy` | 706 | MIT | 23× | 🟢 promoted |
+| `ZeKaiNie/universal-examprep-skill` | 396 | MIT | 34× | 🟢 promoted |
+| `Submitty/Submitty` | 807 | BSD-3-Clause | 15× | 🟢 promoted to `repos/foundations.md` |
+| `CAHLR/pyBKT` | 292 | MIT | 15× | 🟢 promoted — opened a new section |
+| `canyongbs/advisingapp` | 339 | 🔴 **Elastic-2.0** | 25× | 🔴 **barred — not open source** |
+| `xiaoyang111222/cn-math-taxonomy` | 8,508 | 🔴 **CC-BY-NC-4.0** | 36× | 🔴 **barred — NonCommercial** |
+| `bigdata-ustc/Agent4Edu` | 103 | 🔴 **no licence file** | 14× | 🔴 barred |
+| `Li-Evan/Bloom` | — | — | **50×** | 🔴 **does not exist — see below** |
+
+🔴 **The ledger's number-one row is a phantom.** `Li-Evan/Bloom` is recorded as logged **50
+times**, more than any other address, and `gh api search/repositories` returns **no such
+repository**. `Li-Evan/**BloomTutor**` returns 316 ★ and is already on the shelf. The top row of
+this KB's backlog is a **slug-truncation artefact** of a repo it already carries. Two other
+ledger rows — `JuneYaooo/lineage-skill`, `kvnloo/tutor-mcp` — also return nothing. 🔵 The
+extractor was hardened at `p887` (`compose/code/lib/slug_extract.py`, 64 controls) **after** this
+ledger was built at `p860`, so this is stale data rather than a live defect — **but the ledger is
+still the artefact later passes read**, and its most prominent row is noise. **Rebuilding it with
+the current extractor is `899-G1`.**
+
+### 🟢 `898-G1` DISCHARGED — and the acceptance test it shipped with was aimed at the weaker of the two fixes
+
+`compose/code/p899-origin-strip/` ships with **36 controls, all passing**, and the `aula` README
+pinned as the named known-good negative fixture `898-G1` asked for.
+
+🔴 **But building it produced a finding against `898-G1` itself.** p898 concluded that
+**stripping** was the fix. Decomposed as a 2×2 on the fixture — p898's own non-exclusive marker
+list versus an exclusive one, raw text versus stripped:
+
+|  | PT | ES |
+|---|---|---|
+| legacy markers / **raw** | 464 | 653 |
+| legacy markers / **stripped** | 287 | **362** |
+| **exclusive** markers / raw | 0 | 2 |
+| **exclusive** markers / stripped | 0 | **2** |
+
+🔴 **Stripping alone removes 38% and still places `aula` as LATAM by a factor of 70 over any
+sane threshold.** Exclusivity alone removes **99.7%**. **`898-G1`'s acceptance test could have
+been passed in full by an instrument that still published the false row** — the test named the
+mechanism that felt causal rather than the one that was. The decomposition is pinned as a
+control so it cannot be lost.
+
+🟢 **A second defect class, found by using the instrument on real candidates.** Two placements
+were rejected pre-publication:
+
+| Repo | Signal | Spread | Verdict |
+|---|---|---|---|
+| `virgiliojr94/book-to-skill` | CYRILLIC=7 | **0.001** | `English · Русский · 简体中文` — a **language switcher** |
+| `Orenda-Project/rumi-platform` | DEVANAGARI=11 | **0.001** | `हिन्दी · বাংলা · मराठी · తెలుగు · தமிழ்` — a **supported-languages list** |
+| `Mcp-Brasil/mcp-brasil` | PT=228 | **0.977** | 🟢 dispersed prose — placed **LATAM** |
+| `KeWang0622/kaogong-skill` | CJK=1,490 | 0.971 | 🟢 placed **APAC** |
+| `SenmuuuuW/universal-diagnostic-tutor-skill` | CJK=1,564 | 0.964 | 🟢 placed **APAC** |
+
+**A language list is evidence of translation or of a target market. It is never evidence of
+origin**, and it is *dense* — every hit inside one span — where prose is dispersed. The
+separation measured here is **1,000×** (0.001 vs 0.97), so the dispersion test is not a close
+call. It is now `MIN_SPREAD` in the instrument with its own controls.
+
+### 🟢 Three entrants that are *not* from the backlog, and one of them is a national curriculum body
+
+- 🟢 **`oaknational/oak-ai-lesson-assistant` (MIT, 35 ★, pushed today)** — **Aila**, the lesson
+  assistant of **Oak National Academy**, England's publicly funded national curriculum body, in
+  production for teachers since September 2024, with an **NFER/EEF** evaluation run June–September
+  2026. Its 35 ★ are the least informative number in `agents/top.md`. **Multi-grant**: code MIT,
+  documentation **Open Government Licence**, trademarks **excluded** from the grant. Posture
+  caveat in its own README — *"intended primarily for internal use… no expectation for"*
+  contribution: **published, not maintained as a product.**
+- 🟢 **`Orenda-Project/rumi-platform` (Apache-2.0, 25 ★)** — teaching assistant delivered
+  **entirely over WhatsApp**, voice notes included, 15 languages. The only agent in this KB that
+  needs **no device provisioning at all**. Origin unplaced; target market South Asia; **the
+  channel transfers directly to LATAM.**
+- 🟢 **`artcc/freelingo` (AGPL-3.0, 291 ★)** and **`helixnow/deep-student` (AGPL-3.0, 320 ★)** —
+  both local-first, both copyleft, both previously logged and unshelved.
+
+### 🔵 Declared gaps from this pass
+
+- 🔴 **`899-G1`** — the `logged-not-shelved` ledger is stale and its top row is a phantom; it
+  needs rebuilding with the `p887` extractor before another pass mines it.
+- 🔴 **`899-G2`** — **561 of 601 ledger rows were not examined.** This pass measured the top 40.
+  The promotion rate found there (18 of 36 promotable) does not transfer to the tail without
+  measurement, and claiming it would repeat the error this pass is reporting.
+- 🟡 **No supply-side regional leg for Africa or the Middle East this pass.** `p895` ran the last
+  one. Stated so the silence is not read as coverage.
+
 ## `2026-11-18` (p898) — the origin leg p897 deferred, and the strip step that stopped this KB publishing a LATAM entrant it does not have
 
 **Channel:** `gh api search/repositories` for discovery and stars, licence **byte-reads** from

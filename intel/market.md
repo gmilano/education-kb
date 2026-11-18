@@ -75,7 +75,54 @@ academic projects welcome implementation partners.
 
 ## Opportunities by region
 
+🔵 **p899 added a *supply-side* leg to every region below.** Prior passes placed **demand**
+(regulation, adoption, budgets) by region well and left **supply** — who actually builds the open
+software — mostly at `Global`. This pass placed supply with an instrumented origin test
+(`compose/code/p899-origin-strip/`, 36 controls) and refused to place two candidates whose
+apparent regional signal turned out to be a language switcher and a supported-languages list.
+**The regional supply picture that emerges is lopsided in a way worth selling against:** North
+America builds the *assessment and learner-modelling infrastructure*, APAC builds the *tutors*,
+EMEA builds the *institutional and curriculum-governed* systems, and LATAM builds *public-sector
+data access* rather than education agents.
+
+
 ### North America
+
+🟢 **Supply side, placed p899: North America builds the assessment and learner-model layer, and
+this KB had almost none of it.** Three university-built, permissively licensed systems were
+verified and shelved this pass, all from the two institutions that already anchor this category:
+
+- **`Submitty/Submitty`** — **BSD-3-Clause**, 807 ★, pushed 2026-11-18, twelve years of
+  development at the **Rensselaer Center for Open Source Software, RPI**. Submission +
+  autograding + TA grading + rubrics. **The most permissive full grading platform in open
+  source.**
+- **`CAHLR/pyBKT`** — **MIT**, 292 ★, **UC Berkeley CAHLR** (same lab as `OATutor`). Bayesian
+  Knowledge Tracing: the learner-mastery model that `agents/top.md` describes as the capability
+  every tutor but one lacks.
+- **`ucbds-infra/otter-grader`** — **BSD-3-Clause**, 162 ★, **UC Berkeley Division of Data
+  Sciences**. Python *and* R autograding that works without adopting a platform.
+
+🔵 **The engagement consequence.** A North American higher-ed client asking for "AI grading"
+should not be sold a greenfield build: **the deterministic grading substrate already exists under
+BSD, from their peer institutions**, and the defensible design is an AI *assist* on the manual
+tier over an unchanged deterministic autograder — which is also what several state statutes and
+`EDU AI Agent Suite`'s FERPA-aligned architecture require. See `compose/patterns.md` **P13**.
+
+🟡 **Demand side, refreshed p899 (search-mediated, secondary sources — not byte-read):**
+**134 AI-in-education bills across 31 states** in the 2026 session on one tracker, with a broader
+count of 45 states / 1,500+ AI bills overall. **Four states** (Maryland, Idaho, Oklahoma,
+Virginia) now require *both* state guidance *and* mandatory district policy adoption. Florida's
+Board of Education approved statewide AI rules with **parental opt-in**, and its Board of
+Governors is weighing a rule requiring all public colleges to adopt AI-use policies — of which,
+on the BOG's own presentation, **only two institutions have formal policy today**. **SUNY**
+embeds AI literacy into general-education requirements for undergraduates entering **fall 2026**.
+🔵 **The largest single higher-ed deployment located in any region:** **California State
+University**, ChatGPT Edu to **460,000+ students and 63,000+ staff across 23 campuses** on a
+reported ~$17M contract. At the restrictive end, **UC Berkeley Law bans AI for all exams and
+credited coursework from Summer 2026**. 🔴 A **March 2026 White House framework** urges Congress
+to pre-empt state AI regulation; whether it passed is **not established** from these sources, and
+it is the single biggest swing factor in this region's procurement picture.
+
 
 **Regulatory posture: state-level, binding, and fragmenting fast.** At least **25 states**
 have enacted or introduced K-12 AI legislation as of spring 2026 (MultiState); bill counts
@@ -310,6 +357,34 @@ selling it yet.
 
 
 ### EMEA
+
+🟢 **Supply side, placed p899 — and EMEA is where the *institutionally governed* code is.**
+
+- **`oaknational/oak-ai-lesson-assistant` (Aila)** — **MIT** code, 35 ★, pushed 2026-11-18, from
+  **Oak National Academy**, England's publicly funded national curriculum body. In production for
+  teachers since September 2024, with an independent **NFER/EEF** evaluation run June–September
+  2026. 🔵 **Multi-grant and the structure is the lesson for public-sector work:** code **MIT**,
+  documentation **Open Government Licence**, **trademarks and logos excluded**. 🟡 Its README
+  states it is *"intended primarily for internal use"* with no expectation of external
+  contribution — **published, not maintained as a product.** **This is the only artefact in this
+  KB published by a national curriculum body, and it is the reference to put in front of any
+  ministry engagement.**
+- **`beltromatti/get-it`** — Apache-2.0, 1,168 ★, built at **GDG AI Hack Milan 2026** (placed on
+  the event, not on language). Idle since June 2026.
+- Already shelved and reconfirmed: **`Selleo/mentingo`** (MIT, Poland), **`ls1intum/*`** (MIT, TU
+  Munich), **`moodlehq/wiki-rag`** (BSD-3-Clause, Moodle HQ).
+
+🟡 **Demand side, refreshed p899 (search-mediated; see the `884-G4` note under Declared gaps —
+the primary texts are unreachable from this session on *every* channel).** Consistent across
+sources: the **Digital Omnibus, cited as Regulation (EU) 2026/1744**, deferred the Annex III
+high-risk obligations for education (admissions, grading, exam monitoring) from **2 August 2026
+to December 2027**; **Article 50 transparency duties were *not* deferred and apply from 2 August
+2026**; **emotion recognition in schools and universities has been prohibited since February
+2025**; and **Article 4 was reworded from guaranteeing a level of AI literacy to taking measures
+to support it** — a materially weaker obligation that changes what a compliance offer can
+promise. Public institutions deploying high-risk systems also owe a **fundamental rights impact
+assessment** (Art. 27). 🔵 **The deferral is the selling window, not a reprieve** — see T3.
+
 
 **Regulatory posture: one regime, and a deadline that moved.** The EU AI Act became generally
 applicable **2 August 2026**. Critically, the 2026 Digital Omnibus — cited as **Regulation
@@ -771,6 +846,39 @@ the UK, not only a pedagogical one, which makes `P9` easier to sell there than i
 
 ### APAC
 
+🟢 **Supply side, placed p899: APAC builds the tutors, and it builds them in the vernacular.**
+Five of this pass's eighteen new agents placed APAC on dispersed, exclusive-marker evidence
+(spread ≥ 0.96 — not on repository names, and not on language switchers):
+
+- **`Miaotofu01/Study-Mate`** — MIT, **1,488 ★**, CJK 1,490.
+- **`SenmuuuuW/universal-diagnostic-tutor-skill`** — MIT, 279 ★, **diagnosis-first**: it
+  establishes the learner's error before selecting what to teach.
+- **`KeWang0622/kaogong-skill`** — MIT, 250 ★, Chinese **civil-service exam** preparation
+  (行测/申论/职测) — a jurisdiction-specific exam system that exists nowhere else.
+- **`ZeKaiNie/universal-examprep-skill`** — MIT, 396 ★, exam coaching with **source-traced
+  handouts to suppress hallucination**.
+- **`SimonsTang/feifei-companion`** — Apache-2.0, 117 ★, **K-12** (idle since April 2026).
+
+🔵 **India, which this KB has repeatedly recorded as a gap, has an entry at the platform layer:**
+**`pupilfirst/pupilfirst`** — **MIT**, **982 ★**, from **Pupilfirst Pvt. Ltd., India** — a
+cohort-based LMS with review and mentoring workflows. **It is nine times larger than Mentingo**,
+which this KB had been calling its counter-example to "education platforms are all copyleft".
+🟡 Idle since 2025-12-09: fork it, do not track it. And **`Orenda-Project/rumi-platform`**
+(Apache-2.0) targets **15 languages including a full Indian-language suite and Pakistan's
+regional languages** over **WhatsApp** — origin unplaced, target market unambiguous.
+
+🟡 **Demand side, refreshed p899 (search-mediated):** **South Korea** — AI Basic Act in force
+January 2026, explicitly covering high-impact systems **in education**; enforcement decrees still
+being finalised with **2026 run as a guidance-first grace period**; KERIS piloting teacher
+development at scale. **China** — the most binding regime: generative-AI filing with CAC,
+**550+ services filed by mid-2026**. **India** — still **no dedicated AI statute**, signalled as
+possible as of July 2026, but **AI-generated content must carry prominent labels and provenance
+markers from 20 February 2026**. **Japan** — principles-based under METI guidance, no
+education-specific statute (confirmed negative, p890). 🔴 **No regional harmonisation exists**,
+so a multi-country APAC deployment is four compliance postures, not one — `compose/patterns.md`
+**P6**.
+
+
 **Regulatory posture: four incompatible regimes, no regional harmonisation.**
 
 - **South Korea** — the **AI Basic Act in force since 22 January 2026**; described as the
@@ -1110,6 +1218,44 @@ client commitment.
 
 ### LATAM
 
+🟢 **Supply side, p899 — and this materially qualifies this KB's standing "LATAM supply is near
+zero" finding.** It is near zero *in education-specific agents*. It is **not** near zero in the
+public-sector substrate education runs on:
+
+- 🔵 **`Mcp-Brasil/mcp-brasil` — MIT, 1,865 ★**, an MCP server over **70 Brazilian public-sector
+  APIs**. Placed LATAM on a stripped-README Portuguese score of **228 at spread 0.977**.
+  **This is 66× the largest LATAM-origin asset this KB had previously verified** (`usp-mcp`,
+  28 ★). It is not an education product — it is the **government-data access layer** a Brazilian
+  public-education engagement would otherwise hand-build, and it is permissively licensed.
+- **`menthorlabs/menthor`** — **Apache-2.0**, 581 ★, a free Brazilian programming-education
+  platform. 🟡 **Last push 2024-04-21 — 19 months dormant.** Evidence of what was built, not a
+  dependency.
+- Already shelved: `portabilis/i-educar` + `i-diario` (the Brazilian public-school stack),
+  `CaioCastro1/usp-mcp`, `warleysr/ankipa`, `Antonio-Neves/Gestao-Escolar`.
+
+🟡 **Demand side, refreshed p899 (search-mediated secondary sources; figures conflict and are
+labelled):** **CEPAL (2026)** places **Chile, Brazil and Uruguay** in the pioneer group for AI
+readiness, and reports the number of countries with AI content in school curricula rising from
+two (2024) to several in 2026, with **enterprise adoption still early-stage**. A UNESCO figure
+relayed secondhand holds that **LATAM has the world's highest GenAI adoption rate among
+university students while only ~19% of institutions have an approved internal policy** — the
+adoption/governance asymmetry this section already documents, now visible at the institutional
+layer. **Money, named:** **Google.org committed $4.6M to AI education across nine Latin American
+countries**, implemented by the **Raspberry Pi Foundation** (Experience AI), targeting **24,000
+educators and 1.25M students by 2028**; **Luca (Mexico)** raised an **$8M Series A** led by
+6 Degrees Capital for K-12 AI; **Elevify (Brazil)** raised **$1.35M** seed; **Teachy (Brazil)**,
+an AI lesson-preparation incumbent, **has expanded into Asia**. **HolonIQ's 2026 LATAM EdTech
+100** puts **Brazil at nearly half the cohort** and most deal activity. 🔴 **Two cautions.**
+Sector share is contested — one source puts EdTech at **4–6% of LATAM VC deals and declining**
+even as AI funding hits records; and a widely repeated *"$412M for educational AI 2026–2028"*
+figure is **Colombia's, not Brazil's**, and is miscited in at least one secondary source.
+🔴 **Regulatory state:** Brazil's **PL 2338/2023** is reported both as approved and as still in
+passage by different sources — **unresolved here**; **Mexico has no federal AI law** (as of
+July 2026), though the **Estado de México amended Article 61 of its state education law in April
+2026** to promote responsible AI use in upper-secondary and higher education; Chile has had a
+National AI Policy since 2021 with a bill in discussion.
+
+
 **Adoption is genuinely ahead of the OECD — governance is not.** This is the region's defining
 asymmetry, and it is quantified:
 
@@ -1385,12 +1531,30 @@ Cross-regional plays that do not depend on one jurisdiction.
 - ~~**Star counts and repo-popularity metrics are absent**~~ — **closed.** Batched `repo:`
   qualifiers against `gh api search/repositories` work; 116 of 119 tracked repos resolve. See
   `agents/top.md` for the three that do not. This line was stale and is corrected here.
-- **Primary legal and statistical texts could not be byte-read in this pass.** Every non-GitHub
-  host is blocked by the session's network policy, so `ncleg.gov`, `data.consilium.europa.eu`,
-  `unesco.org`, `teqsa.gov.au`, `multistate.us` and the law-firm analyses were reachable only
-  through search snippets. Facts are labelled with their channel and corroboration above. **To
-  close this, the session's allowed-domain list needs those hosts added** — it is an environment
-  limit, and no amount of further searching fixes it.
+- 🔴 **Primary legal and statistical texts are UNREACHABLE — reclassified p899 from "not done"
+  to "structurally impossible from this session", measured on two independent channels.**
+  `884-G4` has been carried for seven passes in language that reads like an unfinished job. It is
+  not one. Measured 2026-11-18 ([record](../evidence/host-reachability.2026-11-18-p899.tsv)):
+
+  | Host | `curl` | `WebFetch` | Class |
+  |---|---|---|---|
+  | `raw.githubusercontent.com` | 301 | — | 🟢 reachable |
+  | `api.github.com` | 200 | — | 🟢 reachable |
+  | `eur-lex.europa.eu` | **000** | **ENOTFOUND** | 🔴 unreachable |
+  | `arxiv.org` | **000** | **ENOTFOUND** | 🔴 unreachable |
+  | `unesco.org` | **000** | — | 🔴 unreachable |
+  | `digital-strategy.ec.europa.eu` | **000** | — | 🔴 unreachable |
+
+  **Both channels fail at DNS for every non-GitHub host**, so this is the session's allowed-domain
+  policy, not a blocked fetch, a rate limit or a missing effort. 🔵 **The consequence must be
+  stated plainly rather than carried as a to-do: every legal date in this KB — the December 2027
+  Annex III deferral, the 2 August 2026 Article 50 date, Regulation (EU) 2026/1744 itself, the
+  Korean AI Basic Act commencement — is *search-mediated secondary reporting*, and secondary
+  sources demonstrably disagree with each other on several of them.** They are good enough to
+  scope an engagement and **not** good enough to put in a compliance deliverable without counsel
+  reading the primary text. **Revised acceptance test:** close `884-G4` only when either (a) the
+  allowed-domain list gains `eur-lex.europa.eu` and `unesco.org`, or (b) a client-side legal
+  review is recorded against the claims. Re-running searches will never close it.
 - **No vendor-share, pricing or win/loss data in any region.** Market size exists; competitive
   position does not. The Jisc statement is the closest proxy — it tells you what buyers are
   unhappy about, which is more actionable than share figures anyway.

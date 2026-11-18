@@ -1,0 +1,10 @@
+repo	verdict	spread	channel	placement
+Mcp-Brasil/mcp-brasil	PT=228	0.977	stripped-README-exclusive-markers	LATAM
+KeWang0622/kaogong-skill	CJK=1490	0.971	stripped-README-exclusive-markers	APAC
+SenmuuuuW/universal-diagnostic-tutor-skill	CJK=1564	0.964	stripped-README-exclusive-markers	APAC
+Orenda-Project/rumi-platform	LANGUAGE-LIST(DEVANAGARI=11)	0.001	dispersion-test-REJECTED	UNPLACED (target market South Asia)
+virgiliojr94/book-to-skill	LANGUAGE-LIST(CYRILLIC=7)	0.001	dispersion-test-REJECTED	UNPLACED (switcher is translation)
+Submitty/Submitty	ENGLISH-OR-UNKNOWN	-	README institutional claim	North America - RPI/RCOS
+CAHLR/pyBKT	ENGLISH-OR-UNKNOWN	-	README author emails @berkeley.edu	North America - UC Berkeley
+oaknational/oak-ai-lesson-assistant	ENGLISH-OR-UNKNOWN	-	licence copyright holder + named public body	EMEA - UK
+luumlabs/aula	ENGLISH-OR-UNKNOWN	-	NEGATIVE FIXTURE	UNPLACED (confirms p898)

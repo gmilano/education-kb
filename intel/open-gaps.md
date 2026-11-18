@@ -4,6 +4,151 @@ region: Global
 updated: 2026-11-18
 ---
 
+## 🆕 `p899` · 2026-11-18 — **`898-G1` and `898-G2` both DISCHARGED. `884-G4` RECLASSIFIED as structurally unreachable, on two channels across four hosts. And `898-G1`'s own acceptance test is shown to have named the WEAKER of the two fixes it needed.**
+
+🔵 **Summary.** Two gaps closed with shipped instruments and measured yields; one seven-pass gap
+reclassified out of the backlog on evidence; three new gaps opened, all of them about this KB's
+*promotion step* rather than its discovery.
+
+### 🟢 `898-G2` — DISCHARGED. Description-filtered discovery returns **9× the ranked leg** on the same window
+
+The acceptance test was literal: *"Close when a pass runs a description-filtered leg and reports
+its yield against the ranked leg's yield on the same window."* Both legs ran on
+`pushed:>2026-09-01`
+([record](../evidence/discovery-leg-yield.2026-11-18-p899.tsv)):
+
+| Leg | Returned | Education-domain | Yield |
+|---|---|---|---|
+| Ranked `classroom OR grading OR lesson-plan`, `sort=stars` | 12 | **1** | 🔴 **8.3%** |
+| Description-filtered, 3 queries | 24 | **18** | 🟢 **75%** |
+
+🔴 **The ranked leg's one hit was already on the shelf, so its yield of new information was
+literally zero**, and **8 of its 12 results contained the compound adjective `-grade`** —
+`kubernetes`, `spring-boot`, `nautilus_trader`, `MaxKB`, `brpc`, `hyperledger/fabric`,
+`agents-towards-production`, `addyosmani/agent-skills` — exactly the poisoning `898-G2`
+described. 🔵 **Refinement worth carrying:** the third description query, `"for students"`,
+yielded only 25%, because it names the **audience**, not the act. **Filter on a phrase that names
+the education ACT (`lesson plan`, `tutoring`); an audience phrase attaches to anything.**
+
+### 🟢 `898-G1` — DISCHARGED, and it produced a finding against its own acceptance test
+
+`compose/code/p899-origin-strip/` ships: stripper, exclusive-marker lists, **36 controls all
+passing**, and the `aula` README pinned as the named known-good negative fixture.
+
+🔴 **But the test `898-G1` wrote would have been satisfied by an instrument that still published
+the false row.** Decomposed as a 2×2 on the fixture:
+
+|  | PT | ES |
+|---|---|---|
+| p898-style non-exclusive markers / **raw** | 464 | 653 |
+| p898-style non-exclusive markers / **stripped** | 287 | **362** |
+| **exclusive** markers / raw | 0 | 2 |
+| **exclusive** markers / stripped | 0 | **2** |
+
+**Stripping alone removes 38% and leaves `aula` scoring 362 against a threshold of 5 — still a
+confident false LATAM placement.** Exclusivity alone removes **99.7%**. p898 attributed its own
+false positive to unstripped text; the dominant cause was the **marker list**. 🔵 **The
+transferable lesson: an acceptance test can name the mechanism that feels causal rather than the
+one that is, and then be passed in full while the defect survives.** The decomposition is pinned
+as a control (`aula-stripping-ALONE-insufficient`) so it cannot be quietly lost.
+
+🟢 **A second defect class, found by using the instrument rather than by reasoning about it.**
+Two placements were rejected **pre-publication**: `virgiliojr94/book-to-skill` (CYRILLIC=7) and
+`Orenda-Project/rumi-platform` (DEVANAGARI=11). Both are **language lists** — a switcher
+(`English · Русский · 简体中文`) and a supported-languages table — and both sit at **spread
+0.001** against ≥0.96 for genuine prose, a **1,000× separation**. **A language list is evidence
+of translation or of a target market; it is never evidence of origin.** Now enforced as
+`MIN_SPREAD` with its own controls.
+
+### 🔴 `884-G4` — RECLASSIFIED from `UNRUN` (seventh pass) to `UNREACHABLE BY EVERY CHANNEL`
+
+This gap has been carried in language that reads as an unfinished job — *"no primary legal source
+read"* — for seven passes. It was measured properly this pass, on **two independent channels**
+([record](../evidence/host-reachability.2026-11-18-p899.tsv)):
+
+| Host | `curl` | `WebFetch` | Class |
+|---|---|---|---|
+| `raw.githubusercontent.com` | 301 | — | 🟢 reachable |
+| `api.github.com` | 200 | — | 🟢 reachable |
+| `eur-lex.europa.eu` | **000** | **ENOTFOUND** | 🔴 unreachable |
+| `arxiv.org` | **000** | **ENOTFOUND** | 🔴 unreachable |
+| `unesco.org` | **000** | — | 🔴 unreachable |
+| `digital-strategy.ec.europa.eu` | **000** | — | 🔴 unreachable |
+
+🔴 **Both channels fail at DNS resolution, not at fetch** — this is the session's allowed-domain
+policy, and p898's `403 on CONNECT` was the same boundary seen through a proxy. **Trying harder
+will never discharge it**, which is precisely the pattern `884-G5` was reclassified for in p898.
+
+🔵 **The consequence belongs in the open, not in a backlog.** Every legal date this KB publishes —
+the December 2027 Annex III deferral, 2 August 2026 for Article 50, Regulation (EU) 2026/1744,
+the Korean AI Basic Act commencement — is **search-mediated secondary reporting**, and the
+secondary sources **demonstrably disagree** on several of them. Good enough to scope an
+engagement; **not** good enough for a compliance deliverable without counsel reading the primary
+text. **Revised acceptance test:** close only when (a) the allowed-domain list gains those hosts,
+or (b) a client-side legal review is recorded against the claims. Recorded in `intel/market.md`
+Declared gaps.
+
+### 🔴 `899-G1` — the `logged-not-shelved` ledger's top row is a phantom, and the ledger is stale
+
+`evidence/logged-not-shelved.2026-11-16-p860.tsv` ranks **`Li-Evan/Bloom` first, logged 50 times**
+— more than any other address. 🔴 **`gh api search/repositories` returns no such repository.**
+`Li-Evan/**BloomTutor**` returns 316 ★ and is already shelved: the ledger's most prominent row is
+a **slug-truncation artefact of a repo this KB already carries**. Two further rows,
+`JuneYaooo/lineage-skill` and `kvnloo/tutor-mcp`, also resolve to nothing — **3 of the top 40 are
+noise**. 🔵 The extractor was hardened at `p887` (`compose/code/lib/slug_extract.py`, 64 controls)
+*after* this ledger was built at `p860`, so this is stale data rather than a live defect — **but
+the ledger is the artefact later passes mine.** 🟢 **Acceptance test: rebuild it with the current
+extractor, report how many of the 601 rows survive, and retire the p860 file.** Budget: small.
+
+### 🔴 `899-G2` — **561 of 601 ledger rows remain unexamined, and the 40 that were examined had an 18/36 promotion rate**
+
+This pass measured the **top 40** of the ledger: **36 still unshelved**, of which **18 were
+promoted** after a licence byte-read, **6 were barred** on their licence bytes, and 3 do not
+exist. 🔴 **That rate must not be extrapolated.** The top 40 are the most-logged addresses and are
+therefore the most likely to be real and substantial; the tail is where the keyword-poisoned
+results accumulate. **Claiming a tail yield without measuring it would repeat the exact error
+this pass is reporting.** 🟢 **Acceptance test: measure a random sample of 40 rows from ranks
+41–601 and report its promotion rate against this pass's 18/36.**
+
+### 🔴 `899-G3` — a licence file far larger than its claimed licence is an unread carve-out
+
+🔴 **`repos/foundations.md` published `PrairieLearn/PrairieLearn` as `MIT` · "Permissive" for an
+unknown number of passes.** It is AGPL-3.0 for the Community Edition with **two proprietary
+Enterprise directories, one of them `apps/course-agent/` — the AI tier** — whose licence requires
+a paid subscription for production use *and assigns your modifications to PrairieLearn, Inc.*
+**The error was caught only because this pass read a 37,237-byte licence file instead of trusting
+a one-word column.**
+
+🔵 **It is mechanically catchable.** MIT is ~1.07 KB; Apache-2.0 ~11.3 KB. A claimed MIT or BSD
+over a file exceeding ~5 KB is a carve-out until proven otherwise — the same probe found
+`pupilfirst`'s benign 1,684-byte `docs/` CC-BY-SA carve-out. 🟢 **Acceptance test: a gate that
+flags every shelf row whose claimed licence class is inconsistent with its licence-file size, run
+over all 10 shelves, with the PrairieLearn and pupilfirst payloads as fixtures.** 🔴 **Until it
+runs, the grant column of `repos/foundations.md` is unverified in bulk** — this pass corrected one
+row and did not re-read the rest.
+
+### 🟢 The gates were run, and one of them caught this pass's own defect
+
+```
+gate-tables          (p277)  15/15 controls PASS · census: 10 shelves, no row published as a header
+gate-region-headings (p383)  11/11 controls PASS · intel/market.md: 0 findings, vocabulary intact
+p899 own controls            36/36 PASS  (compose/code/p899-origin-strip/)
+```
+
+🔵 **Worth recording because it is the case for keeping the gates:** `gate-tables` **failed on
+first run against this pass's own edit** — `agents/top.md:158 BLANK-SPLITS-TABLE`, a blank line
+between the existing table and the 18 rows appended to it, which would have rendered the new rows
+as a second headerless table. Found and fixed before commit. **The gate earned its keep against
+the pass that was writing it.**
+
+🔵 **Carried untouched this pass, stated so silence is not read as progress:** `887-G1`
+(shelf-prose oracle), `887-G2` (`NOASSERTION` 163-row sweep), `887-G3` (`p427` untitled-body
+blindness), `885-G2`, `885-G3`, `884-G6`, and `898-G2`'s sibling concern about organisation-level
+sweeps. 🔴 **No supply-side regional leg for Africa or the Middle East ran this pass** — `p895`
+ran the last one. 🔴 **No full star sweep ran**; the daily-cadence finding stands and the full
+sweep remains due **2026-11-19**.
+
+
 ## 🆕 `p898` · 2026-11-18 — **`884-G5` is RECLASSIFIED, not discharged: the channel it names returns `200` and does not serve the field. `887-G4`'s asymmetry replicates for the tenth pass. One false regional placement was caught pre-publication.**
 
 🔵 **`884-G5` — affiliation check — RECLASSIFIED from `UNRUN` to `UNREACHABLE BY THIS CHANNEL`.**

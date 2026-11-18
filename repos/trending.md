@@ -4,6 +4,122 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p899) — **the "empty" grading category has 2,400 ★ of permissive software in it, and this KB published the one encumbered member of it as "MIT · Permissive"**
+
+**Channel:** `gh api search/repositories` for stars/SPDX, licence **byte-reads** from
+`raw.githubusercontent.com` including **non-root paths**, which is what `p897`'s `docs/` finding
+said to do and what found the PrairieLearn carve-out below.
+
+### 🔴 The headline: `PrairieLearn/PrairieLearn` is **not MIT**, and the proprietary part is the AI agent
+
+`repos/foundations.md` carried this row, unchallenged, for an unknown number of passes:
+
+> `https://github.com/PrairieLearn/PrairieLearn` | **MIT** | *Randomised, auto-graded problem
+> generation. **Permissive and genuinely strong**; the best open assessment engine for STEM.*
+
+🔴 **Every part of the licence claim is wrong.** Byte-read `LICENSE@master` (**37,237 B**,
+`sha256₁₂ 548cbfae567a`) — a 37 KB licence file is itself the tell, since MIT is ~1 KB:
+
+> *"All content that resides under the `apps/prairielearn/src/ee/` directory … **and
+> `apps/course-agent/`** … is part of the PrairieLearn Enterprise Edition (EE) and is licensed as
+> described in …`/LICENSE`. All client-side JavaScript … is licensed under the **GNU Affero
+> General Public License**. … The PrairieLearn Community Edition (CE) consists of all content
+> outside of the above mentioned directories and is licensed under the **GNU Affero General
+> Public License**."*
+
+🔴 **And the EE licence is not merely non-free — it takes your work.** Both
+`apps/course-agent/LICENSE` and `apps/prairielearn/src/ee/LICENSE` are the same 2,538-byte file
+(`sha256₁₂ cfd0235081fa`):
+
+> *"This software … may only be used in production, if you … have a valid PrairieLearn
+> Enterprise Edition subscription. … You agree that PrairieLearn, Inc. and/or its licensors …
+> **retain all right, title and interest in and to all such modifications and/or patches**."*
+
+🔵 **Why this is the most expensive error this KB has published.** The other licence corrections
+in this base's history ran *toward* caution — `NOASSERTION` turning out to be copyleft, a
+translated AGPL the SPDX matcher could not read. Those cost a missed opportunity. **This one runs
+the other way.** A studio reading "MIT · Permissive" and building a client's AI assessment tier
+on `apps/course-agent/` would have (a) shipped subscription-gated code into production without a
+subscription and (b) assigned the client's modifications to a third party. **The error was
+survivable precisely because it looked safe**, which is the direction no review catches.
+🟢 Corrected in `repos/foundations.md`. The CE under AGPL remains genuinely strong; keep the two
+EE directories out of the build.
+
+### 🟢 The grading category is populated — the "0 ★" reading was a measurement artefact
+
+`p894` recorded automated grading as a category topping out at **0 ★ with three of seven repos
+unlicensed**. That was a star-ranked keyword leg, and `898-G2` had already explained why
+`grading` cannot be ranked: `-grade` is current marketing idiom. Measured by name this pass:
+
+| Repo | ★ | Grant (byte-read) | Status |
+|---|---|---|---|
+| `jupyter/nbgrader` | 1,370 | **BSD-3-Clause** | already shelved ✅ |
+| `Submitty/Submitty` | **807** | **BSD-3-Clause** (1,542 B, `c123708cb4ef`) | 🟢 **added — was absent entirely** |
+| `PrairieLearn/PrairieLearn` | 533 | 🔴 AGPL-3.0 CE + proprietary EE | 🔴 **corrected** |
+| `ucbds-infra/otter-grader` | 162 | **BSD-3-Clause** (1,560 B, `6af203d41a01`) | 🟢 added |
+| `webtech-network/autograder` | 66 | **Apache-2.0** (11,357 B, `c71d239df917`) | 🟢 added |
+| `pawtograder/platform` | 22 | 🔴 **GPL-3.0+** — SPDX says `NOASSERTION` | 🟢 added, corrected |
+| `eecs-autograder/autograder-server` | 9 | **LGPL-3.0** (7,652 B, `b96e8c21c928`) | 🟢 added |
+
+🔵 **`Submitty` is the find:** 807 ★, **BSD-3-Clause**, pushed today, twelve years of continuous
+development out of the **Rensselaer Center for Open Source Software at RPI** — submission,
+automated grading, TA grading and rubrics in one deployable platform, under the most permissive
+licence in the section. **It is the default answer for a client who needs an open grading
+platform they can close a derivative of**, and this KB did not carry it.
+
+🔴 **A star-ranked trap, carried as a worked example.** For `autograder.io`, search ranks
+`eecs-autograder/autograder.io` first at **81 ★ — and that repo is documentation with no licence
+file at all.** The actual server is `eecs-autograder/autograder-server` at **9 ★** under
+LGPL-3.0. **Ranking by stars selects the issue tracker over the software.**
+
+### 🟢 `CAHLR/pyBKT` (MIT, 292 ★) — the learner-model primitive this KB had no row for
+
+Bayesian Knowledge Tracing from **UC Berkeley CAHLR** (author emails `@berkeley.edu`; the same
+lab as the already-shelved `OATutor`; original xBKT work shared with MIT CSAIL). `agents/top.md`
+praises `LearnHarness` for modelling learner state and notes it is *"the capability every other
+tutor in this table lacks"* — **pyBKT is that capability as an MIT library, importable into any
+of them.** It sat in the backlog with 15 recorded mentions. A new
+`## Adaptive learning and learner modelling` section in `repos/foundations.md` now holds it.
+
+### 🔴 Five published-metadata corrections this pass — T19 strengthens again
+
+`intel/trends.md` T19 says published licence metadata is wrong often enough to be a procurement
+risk, in both directions. p899 adds five, **four of them in the permissive-looking direction**:
+
+| Repo | SPDX field | Byte-read | Direction |
+|---|---|---|---|
+| `PrairieLearn/PrairieLearn` | *(this KB said MIT)* | AGPL-3.0 + proprietary EE | 🔴 **dangerous** |
+| `canyongbs/advisingapp` | `NOASSERTION` | **Elastic-2.0** — not open source | 🔴 dangerous |
+| `xiaoyang111222/cn-math-taxonomy` | `NOASSERTION` | **CC-BY-NC-4.0** — NonCommercial | 🔴 dangerous |
+| `brycewang-stanford/Auto-Empirical-Research-Skills` | `NOASSERTION` | **CC-BY-SA-4.0** — content ShareAlike | 🟡 not a software licence |
+| `pawtograder/platform` | `NOASSERTION` | **GPL-3.0-or-later** | 🟡 cautious |
+
+🔵 **`advisingapp` deserves its own line.** 339 ★, pushed today, an AI conversational assistant
+for **student advising** — precisely the registrarial agent layer this KB has recorded as
+missing. **It is Elastic License 2.0: source-available, not open source**, and it forbids
+providing the software to third parties as a managed service, which is a direct description of
+what a studio does. Recorded in `intel/measured-unusable.md`.
+
+### 🟢 `Mcp-Brasil/mcp-brasil` (MIT, **1,865 ★**) — the largest LATAM-origin asset this KB has ever measured
+
+MCP server over **70 Brazilian public-sector APIs**. Placed **LATAM** on a stripped-README
+Portuguese score of **228 at spread 0.977** — dispersed prose, corroborated by the organisation
+name and the API surface. 🔵 **For scale: this base's best LATAM rows to date are `usp-mcp`
+(28 ★) and `ankipa` (10 ★). This is 66× the larger of them.** It is not education-specific — and
+that is the point: it is the **government-data substrate** a Brazilian public-education
+engagement would otherwise build by hand. The standing *"LATAM-origin supply is near zero"*
+finding needs qualifying: **near zero in education-specific agents, demonstrably not in the
+public-sector infrastructure education runs on.**
+
+### 🔵 Declared gaps
+
+- 🔴 **`899-G3`** — the whole `repos/foundations.md` grant column is now suspect. PrairieLearn
+  was wrong for passes, and it was only caught because this pass read a **37 KB** licence file
+  instead of trusting a one-word column. **A licence-size heuristic (`MIT` claimed over a file
+  >5 KB ⇒ re-read) would have caught it mechanically** and is not implemented.
+- 🟡 No re-measurement of the existing foundations rows' stars this pass; the daily-cadence
+  finding stands and the full sweep remains due **2026-11-19**.
+
 ## `2026-11-18` (p898) — the highest-starred `tutor` repo in the window is unlicensed, confirmed over 36 probes, and p897's own lesson is what made the check worth running
 
 **Channel:** `gh api search/repositories` for stars/SPDX, licence **byte-reads** from

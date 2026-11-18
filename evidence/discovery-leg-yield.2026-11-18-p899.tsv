@@ -1,0 +1,6 @@
+leg	query	window	returned	education_domain	yield_pct	note
+ranked	classroom OR grading OR lesson-plan (sort=stars)	pushed:>2026-09-01	12	1	8.3	8 of 12 poisoned by the compound adjective "-grade"
+desc	"lesson plan" in:description	pushed:>2026-09-01	8	8	100.0	all 8 education; 4 are WSQ courseware with no licence
+desc	tutoring in:description	pushed:>2026-09-01	8	8	100.0	DeepTutor + 7 others, 5 previously unshelved
+desc	"for students" in:description	pushed:>2026-09-01	8	2	25.0	weak phrase: "for students" qualifies non-education tools
+desc_total	3 description-filtered queries	pushed:>2026-09-01	24	18	75.0	9.0x the ranked leg

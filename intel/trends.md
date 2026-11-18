@@ -575,6 +575,17 @@ client can keep what a studio builds. **Seven repositories carried on this KB's 
 unresolved licence were byte-read in p897. Five were wrong as recorded, and the errors did not
 share a direction.**
 
+🔴 **p899 escalated this trend from "third parties get licences wrong" to "this KB got one
+wrong, in the expensive direction".** Every prior case above was an error that cost a *missed
+opportunity* — a permissive repo recorded as unclear, a copyleft one the SPDX matcher could not
+read. **The PrairieLearn row is the first that would have cost a client money**: a studio reading
+`MIT · Permissive` and building an AI assessment tier on `apps/course-agent/` would have shipped
+subscription-gated code into production and signed the client's modifications over to a third
+party. 🔵 **The structural lesson is about what survives review: an error that looks permissive
+is never challenged, because nobody audits good news.** The mechanical catch — *a claimed MIT or
+BSD over a licence file larger than ~5 KB must be re-read* — is `899-G3`, and it would have
+caught this one on file size alone (**37,237 B**).
+
 | Source of the error | Case | Recorded | Actual |
 |---|---|---|---|
 | **Popular comparison sites** | **Frappe LMS** — several 2026 *"best open-source LMS"* round-ups list it **MIT** | MIT (third-party) | 🔴 **AGPL-3.0**, 33,893 B of verbatim text. The MIT belongs to `frappe/frappe`, the **framework** |
@@ -582,6 +593,9 @@ share a direction.**
 | **Detector blind spot (filename)** | **Moodle App**, 1,006 ★ | `NO-LICENSE-FILE` | 🟢 **Apache-2.0** at `COPYING.txt` — and *not* Moodle core's GPL-3.0 |
 | **Over-cautious internal reading** | **Open-TutorAi CE**, 118 ★ | `OTHER` | 🟢 **BSD-3-Clause, verbatim** — the permissive SPDX was right all along |
 | **Declaration without text** | **Frappe Education**, 714 ★ | `NOASSERTION` | 🔴 **GPL-3.0**, declared in a **19-byte** file reading only `License: GNU GPL V3` |
+| 🔴 **This KB's own shelf, p899** | **PrairieLearn**, 533 ★ | **`MIT` · *"Permissive"*** — published in `repos/foundations.md` | 🔴 **AGPL-3.0 Community Edition + a PROPRIETARY Enterprise Edition covering `apps/course-agent/`** — the AI tier. Production use of EE requires a paid subscription **and the licence assigns your modifications to PrairieLearn, Inc.** |
+| **Source-available masquerade, p899** | **Advising App**, 339 ★ | `NOASSERTION` | 🔴 **Elastic License 2.0** — not open source; forbids managed-service provision |
+| **Content licence on a code shelf, p899** | **cn-math-taxonomy**, 8,508 ★ | `NOASSERTION` | 🔴 **CC BY-NC 4.0** — NonCommercial, bars client work outright |
 
 **Why both directions matter.** The familiar failure is a copyleft project being sold as
 permissive — Frappe LMS is exactly that, and AGPL-3.0 is **network-triggered**, so merely hosting
@@ -660,6 +674,53 @@ LATAM-origin supply in this window.
 🔴 **Limit of the instrument, stated.** README language is a **proxy** for origin, and it
 under-detects **EMEA specifically**, because European projects publish in English. A `Global` row in
 this leg is decent evidence of "not APAC" and weak evidence of "not EMEA".
+
+## T21 — The open grading tier is mature, permissive and university-built — and the licence traps are concentrated in the *AI* layer bolted onto it
+
+**Measured p899, by name rather than by keyword rank.** The deterministic grading substrate a
+client needs is already built, already permissive, and already maintained by universities:
+**`Submitty`** (BSD-3-Clause, 807 ★, RPI, twelve years old, pushed today), **`jupyter/nbgrader`**
+(BSD-3-Clause, 1,370 ★), **`ucbds-infra/otter-grader`** (BSD-3-Clause, 162 ★, UC Berkeley),
+**`autolab/Autolab`** + **`Tango`** (Apache-2.0, CMU), **`webtech-network/autograder`**
+(Apache-2.0). **Four of the five carry no copyleft and no patent clause at all.**
+
+🔴 **The encumbrance is not in the grader. It is in the AI.** The one system in the category with
+a commercial model — PrairieLearn — is AGPL for the Community Edition and **proprietary
+Enterprise Edition specifically for `apps/course-agent/`**, the agent tier. The same shape
+appears at `canyongbs/advisingapp` (Elastic-2.0, an **AI** advising assistant) and in the Open
+edX estate, where the platform is AGPL and the **first-party AI extension point**
+(`openedx-ai-extensions`) is AGPL too.
+
+🔵 **Read as a market signal, this is unambiguous.** Open source has commoditised *assessment
+mechanics* and is actively fencing off *assessment intelligence*. **That is precisely the layer a
+studio sells**, and it means the build-vs-adopt line in an education engagement now falls between
+the grader and the agent, not around the platform. The defensible architecture — AI assist on the
+manual tier, deterministic rubric service untouched underneath — is also the one that survives
+FERPA, several US state statutes and EU Annex III. See `compose/patterns.md` **P13**.
+
+## T22 — Open education agents are differentiating on *delivery surface*, not on model capability
+
+Across the eighteen agents verified in p899, the distinguishing claim is almost never "a better
+model". It is **where the agent meets the learner**, and every variant answers a constraint that
+is regulatory, economic or infrastructural rather than technical:
+
+| Surface | Agent | The constraint it answers |
+|---|---|---|
+| **WhatsApp, voice notes, no app** | `Orenda-Project/rumi-platform` (Apache-2.0) | **Zero device provisioning and zero training.** 15 languages incl. a full Indian-language suite and Pakistan's regional languages |
+| **Pen and paper, deliberately off-screen** | `nichochar/ari` (MIT, 222 ★) | Screen-time rules and parental-consent regimes |
+| **Local-first inference** | `helixnow/deep-student` (AGPL), `artcc/freelingo` (AGPL), `zhangl1001/civil-ai` (MIT) | **EMEA sovereignty procurement and California AB 1159** — no data-processing argument needed |
+| **Inside the LMS over MCP** | `Faixiang/Moodle-MCP`, `G36maid/moodle-mcp`, `canvas-mcp` ×2 | No migration; the institution's system of record is unchanged |
+| **Inside a coding agent, as a skill** | `book-to-skill` (38,369 ★), `universal-examprep-skill`, `PAIDEIA`, `claudemy` | **No deployment at all** — the runtime is already on the learner's machine |
+| **Age-banded by construction** | `Zenglian990/AI_Tutor_Release` (K-9), `SimonsTang/feifei-companion` (K-12) | UAE under-13 prohibition; US state statutes |
+
+🔵 **Why this matters for scoping.** The highest-leverage question in an education engagement is
+no longer "which model" — the open agents mostly delegate that to whatever the client supplies.
+It is **"what surface does this population already have?"** In LATAM and South Asia that answer is
+WhatsApp; in a sovereign EMEA ministry it is a local model on institutional hardware; in North
+American higher ed it is the LMS the registrar already runs. 🔴 **An engagement that picks the
+surface last has already constrained its own addressable population**, and the `rumi` case shows
+the ceiling: it is the only agent in this KB that reaches a teacher with **no device
+provisioning whatsoever**, and it has 25 ★ — the market has not yet priced this axis.
 
 ## Trends we looked for and could not substantiate
 

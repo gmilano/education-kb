@@ -1,0 +1,7 @@
+host	curl_http	webfetch	class	note
+raw.githubusercontent.com	301	n/a	REACHABLE	licence byte-reads run here
+api.github.com	200	n/a	REACHABLE	gh api search/* runs here
+eur-lex.europa.eu	000	ENOTFOUND	UNREACHABLE	primary text of Regulation (EU) 2026/1744
+arxiv.org	000	ENOTFOUND	UNREACHABLE	primary text of cited papers
+unesco.org	000	n/a	UNREACHABLE	re-confirmed; p898 measured 403 on CONNECT
+digital-strategy.ec.europa.eu	000	n/a	UNREACHABLE	Commission AI Act pages
