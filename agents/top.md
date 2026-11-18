@@ -157,8 +157,8 @@ Sorted by stars.
 
 | Agent | Repo | Licence | ★ | Last push | What it does | Origin |
 |---|---|---|---|---|---|---|
-| **DeepTutor** | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 60,351 | 2026-11-18 | Agentic personalised tutoring grounded in the student's own material, with persistent learning history. Hit #1 on GitHub trending 28 Oct 2026; first released Dec 2025. Paper: arXiv 2604.26962. **The single largest open education agent in existence.** | APAC — HKU Data Intelligence Lab |
-| **OpenMAIC** | https://github.com/THU-MAIC/OpenMAIC | MIT | 43,889 | 2026-11-18 | Multi-agent AI classroom: agents generate slides, quizzes and project-based activities and grade quiz answers. `v1.4.2` (2026-11-09) added course-level undo for manual edits and agent runs. Relicensed to MIT at `v0.3.0`, Jun 2026. | APAC — Tsinghua University |
+| **DeepTutor** | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 60,451 | 2026-11-18 | Agentic personalised tutoring grounded in the student's own material, with persistent learning history. Hit #1 on GitHub trending 28 Oct 2026; first released Dec 2025. Paper: arXiv 2604.26962. **The single largest open education agent in existence.** 🔴 **Not reproducible from its own manifests (measured p905):** `requirements.txt` is a 104-byte `-r` pointer into `requirements/full.txt`, which fans out to 19 generated `requirements/modules/*.txt` files; **74 unique packages, 1 exactly pinned** (79 `>=`, 36 `<`). Vendoring it at a SHA pins the source and not the dependency set. 🔴 Its `LICENSE` is a hand-edited Apache-2.0 (`560-D`) and will trip a byte-identity scanner. | APAC — HKU Data Intelligence Lab |
+| **OpenMAIC** | https://github.com/THU-MAIC/OpenMAIC | MIT | 43,899 | 2026-11-18 | Multi-agent AI classroom: agents generate slides, quizzes and project-based activities and grade quiz answers. `v1.4.2` (2026-11-09) added course-level undo for manual edits and agent runs. Relicensed to MIT at `v0.3.0`, Jun 2026. 🔴 **Not reproducible from its own manifests (measured p905):** `package.json` declares **178 npm packages** (145 prod + 33 dev) with no lockfile on any path probed. | APAC — Tsinghua University |
 | **LearnHarness** | https://github.com/amosblomqvist/learnharness | **AGPL-3.0** | 10,110 | 2026-11-12 | Desktop agent harness that *measures* what the learner understands before it teaches: probe → dependency-map the route to the goal → teach one reasoning step at a time → separate retrieval-practice sessions, all carried across sessions by a persistent knowledge graph. **Added p893. Created 2026-10-16 — 0 → 10,002 ★ in 27 days, the fastest growth this KB has recorded for any education repo**, and now the third-largest open education agent in existence. **AGPL-3.0, byte-read from `LICENSE@main`. Not usable in a closed derivative** — read it as the reference design for learner-state modelling, the capability every other tutor in this table lacks. No published learning-outcome study; users report being tested before being taught. | Global |
 | **frametell** | https://github.com/sitor-ai/frametell | **AGPL-3.0** | 513 | 2026-11-12 | Turns source material into explainer videos via an "AI director" agent. Local-first and model-agnostic. **Added p893.** The only open *content-production* agent in this table — courseware generation rather than tutoring. AGPL. | Global |
 | **ai-shifu** | https://github.com/ai-shifu/ai-shifu | Apache-2.0 | 332 | 2026-11-18 | Author a course by typing it: the AI delivers the teaching and answers questions inside the flow the author scripted. **Added p893.** Permissive, pushed today, and the clearest open example of *authored* AI teaching — the script constrains the model, which is the control structure Oklahoma-style "no AI-only" rules actually require. | APAC |
@@ -532,6 +532,27 @@ Recording gaps because an unrecorded gap looks exactly like coverage.
   for AI agents). Paper only. Recorded so a later pass does not re-chase it.
 
 ## Corrections made this pass
+
+- 🟢 **`p905` — star currency, and a reproducibility column added to the two flagship rows.**
+  Re-measured 2026-11-18: `HKUDS/DeepTutor` **60,351 → 60,451**, `THU-MAIC/OpenMAIC`
+  **43,889 → 43,899**. Both rows now carry what no pass had measured: whether the agent can be
+  rebuilt from its own manifests. **Neither can.** `DeepTutor` declares 74 unique packages with
+  **1 exact pin** across a three-level generated manifest tree whose root file is a 104-byte `-r`
+  pointer; `OpenMAIC` declares 178 npm packages with no lockfile on any path probed. By contrast
+  `openedx/openedx-platform` pins **311 of 311**. 🔵 The two measurements are orthogonal — the
+  most-starred agents are the least vendorable — and the selection consequence is in
+  `repos/foundations.md`, the trend in `intel/trends.md` **T28**, and the remediation tier in
+  `compose/patterns.md` **P24**. Ledger:
+  [`dep-grant-scan.2026-11-18-p905.tsv`](../evidence/dep-grant-scan.2026-11-18-p905.tsv).
+- 🟡 **`p905` — a near-miss worth recording, because the guard that caught it is this page.** The
+  `p905` dependency scan found `openedx/edx-platform` absent from `repo:` search but `200` on `raw`,
+  and the first write-up called it a fresh instance of `p900`'s search-index-gap rule. **It is the
+  `p896` rename**, already corrected on this page below: the canonical slug is
+  `openedx/openedx-platform` (**8,244 ★**, AGPL-3.0, pushed 2026-11-18) and `raw` serves the old name
+  only through GitHub's rename redirect. 🔵 **A `raw` `200` against a search `absent` has two causes
+  — an index gap and a rename — and they call for opposite actions.** Distinguishing them costs one
+  query against the suspected new name. New byte-identical pair recorded:
+  `requirements/edx/base.txt` is **28,659 B** `sha256₁₂ 20f78eb076b4` on both names.
 
 - 🔴 **Retracted in p896: `openedx/openedx-platform` *does* exist, and it is the canonical slug.**
   The p895 correction above was itself wrong, and it ran the wrong way. Measured 2026-11-18:

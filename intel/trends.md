@@ -1051,3 +1051,52 @@ product**, which is:
 - 🟢 **A withheld mark is usually a *neutral* fact for a studio engagement**, because the client
   wants its own brand on the product anyway. It becomes a problem in exactly one case: when the
   open project's name was going to be the credibility story ("built on X"). Decide that explicitly.
+
+## T28 — Open education's dependency layer is undocumented and, at the top of the shelf, unpinnable — and the two properties move *against* popularity
+
+Measured `p905` across the 14 platforms an education engagement is actually built on: 350 byte-reads
+of manifest and grant-disclosure paths, each on the repository's real default branch. Ledger:
+[`dep-grant-scan.2026-11-18-p905.tsv`](../evidence/dep-grant-scan.2026-11-18-p905.tsv).
+
+**The two measurements.**
+
+- 🔴 **Grant disclosure: `0` of 14.** Not one platform states the licences of what it bundles. Two
+  return a file named `COPYRIGHT` and neither enumerates a dependency — Odoo's (433 B) points the
+  reader at *"the history of the source version control system"*, Canvas's (621 B) restates Canvas's
+  own AGPL-3.0. The only other artefacts in the class are two `dependabot.yml` files, which are
+  update automation. Meanwhile Moodle resolves **316** packages and Gibbon **355**.
+- 🔴 **Pinning, at the top of the shelf: `DeepTutor` pins 1 of 74** (79 `>=`, 36 `<`) across a
+  three-level script-generated manifest tree; `OpenMAIC` declares 178 npm packages with no lockfile
+  on any path probed. 🟢 **`openedx/openedx-platform` pins 311 of 311.**
+
+**Why this is a trend and not a list of defects.** The direction is consistent and it runs *opposite*
+to the signal this KB and everyone else records. Stars, forks and push recency all say `DeepTutor`
+(60,451 ★) and `OpenMAIC` (43,899 ★) are the healthiest things in open education; reproducibility says
+they are the least deployable, and that the most deployable base has **8,244 ★**. The mechanism is
+not neglect — it is **velocity**. Both flagships ship weekly, and a range constraint (`>=`, `<`) is
+what a fast-moving project writes so it can keep moving; an exact pin is what a platform with
+institutional deployers writes because someone downstream has to rebuild it in three years. 🔵 **The
+age and governance of a project predict its reproducibility better than its popularity does**, which
+is the same university-versus-startup axis as **T2**, measured on a different quantity.
+
+**What follows for a studio, concretely.**
+
+1. 🟢 **Choose the base on the reproducibility column, not the star count**, whenever the client must
+   be handed a rebuildable artefact — which, under the procurement specifications in **T9** and the
+   exit requirements in **P8**, is most engagements.
+2. 🟢 **Where a flagship is the right pedagogical choice anyway, the lockfile is the studio's work.**
+   `pip-compile` / `uv lock` / `npm ci` against a resolved set, vendored at a SHA, named as a week-one
+   task in the estimate. It is small work discovered late, which is the expensive kind.
+3. 🟢 **Sell the dependency-grant scan rather than absorbing it**, priced as `compose/patterns.md`
+   **P24**. No upstream will answer the
+   procurement question, so it is a deliverable: `scancode-toolkit` (Apache-2.0) over the resolved
+   tree, output as the licence inventory the client's audit will ask for.
+4. 🔴 **Do not read a missing disclosure as a clean one.** This is the trap half of the trend: both
+   `COPYRIGHT` files are written in a compliance register and disclose nothing, so the absence
+   *presents as a presence* to any reviewer who stops at the filename.
+
+🔵 **Relation to T19 and T24–T27.** Those four trace licence facts that are wrong or invisible at the
+*repository* level — bad metadata, per-directory grants, data-and-content grants, the mark. T28 is
+the same failure one layer down, at the **dependency** level, and it is the layer where no field
+exists to be wrong in the first place: there is nothing to misread because nothing is written.
+

@@ -109,6 +109,49 @@ repository:
 national-curriculum dataset as plain MIT, and a studio would have shipped a client product with an
 unmet attribution obligation on its only substantive data dependency.
 
+### The manifest axis, added as gate `905-G1` in p905
+
+The two axes above ask which licence governs the code and which governs the payload. `905-G1` asks
+the question that comes *after* both: **what else am I shipping, and can I ship it twice?** It was
+written because the `p905` scan produced a wrong answer on two of its 14 targets before it produced a
+right one.
+
+**Rule 1 — an absent root manifest is not an absent dependency declaration. Probe the framework's
+convention.**
+
+| Stack | Where dependencies are actually declared | Root probe result if you skip it |
+|---|---|---|
+| Odoo addons (OpenEduCat, many LATAM ERP forks) | `<module>/__manifest__.py` → `depends`, and `'license'` lives here too | 🔴 no manifest at all |
+| Moodle plugins | `version.php` → `$plugin->dependencies` | 🔴 no manifest at all |
+| Open edX XBlocks | `setup.py` → `entry_points` | 🟡 misleading |
+| Maven multi-module (Sakai) | the aggregator's `<module>` list, not the root `<dependency>` block | 🔴 undercounts |
+| Python with extras (DeepTutor) | the leaves of the `-r` chain | 🔴 reports ~1 dependency |
+
+**Rule 2 — a manifest under ~500 bytes is a pointer until proved otherwise.** Follow every `-r`,
+`include:`, `extends` and `requires` to a fixed point and count at the leaves. `DeepTutor`'s
+`requirements.txt` is 104 B: one comment and `-r requirements/full.txt`, which is itself 19 `-r`
+lines into `requirements/modules/*.txt`. A root read gives a **floor**, never a total.
+
+**Rule 3 — record the manifest depth beside every dependency count.** A figure without its depth is
+not comparable between repositories, and that is exactly what made the largest education agent in
+existence look like a one-dependency project.
+
+**Rule 4 — read the pinning, and write it into the proposal.** Count `==` against the total:
+`openedx/openedx-platform` **311/311**, `DeepTutor` **1/74**. If the base is unpinned and the client
+needs a rebuildable handover, the lockfile is a **named week-one task with an estimate**, not a
+footnote.
+
+**Rule 5 — never infer a dependency-grant disclosure from a filename.** Of 14 education platforms,
+`0` disclose their dependencies' grants, and the two files called `COPYRIGHT` disclose nothing: Odoo's
+points at version-control history, Canvas's restates its own AGPL. **Open the file and count the
+dependencies it names.** Zero is the expected answer, and it means the scan is the studio's to run
+(`scancode-toolkit`, Apache-2.0) and the client's to be told about up front.
+
+🔵 **Cost of skipping it, measured:** this pass's own scan would have published *"OpenEduCat declares
+no dependencies"* and *"DeepTutor has one dependency"* — both false, both about platforms this KB
+recommends — and would have handed a client the most-starred tutor in open source with no statement
+that its build is not reproducible.
+
 ## P1 — Licence-clean AI tutor on a permissive LMS
 
 **For:** any client who needs to keep the result closed, or who has no incumbent LMS.
@@ -1881,3 +1924,80 @@ after**; the two compose, and `bncc-dados` is the specification P22's phase 5 sh
 - 🟡 **Outside Brazil there is currently no equivalent dataset to adopt.** `p904` searched:
   `currículo nacional dados abertos` returns nothing at or above 3 ★ in Spanish or Portuguese. Treat
   `bncc-dev` as a **template**, not as a dependency with regional equivalents waiting.
+
+## P24 — Rebuildable handover tier: the licence inventory and pinned build no upstream will give you (added `p905`)
+
+### Why this pattern exists
+
+Measured `p905`: of the 14 platforms an education engagement is built on, **`0` disclose the grants of
+their dependencies**, and the two most-starred education agents in existence cannot be rebuilt from
+their own manifests (`DeepTutor` pins 1 of 74; `OpenMAIC` ships no lockfile). Meanwhile the
+procurement specifications in **T9** and the exit requirements in **P8** both demand exactly what is
+missing: *what is in this, and can we rebuild it without you.*
+
+🔵 **This is not a pattern you sell on its own — it attaches to P1–P11 as a priced tier**, the same
+way **P7** (evidence-of-efficacy) does. It is the cheapest credibility a studio can add to an
+education proposal, because the client's audit will ask for it either way and no competitor bidding
+the same open base will have it.
+
+### Stack
+
+| Role | Repo | Licence | Why this one |
+|---|---|---|---|
+| Dependency-grant scanner | https://github.com/aboutcode-org/scancode-toolkit | 🟡 SPDX `NOASSERTION` → 🟢 **Apache-2.0** byte-read (`develop/apache-2.0.LICENSE`, 11,357 B) | 2,676 ★, pushed 2026-11-11. The industry-standard scanner; resolves direct **and** transitive grants. Retrieved for exactly this purpose at `p531`. 🔵 Its own `NOASSERTION` is a `T19` instance — read the file, not the badge |
+| SBOM emitter | https://github.com/CycloneDX/cyclonedx-cli | Apache-2.0 (11,341 B) | 563 ★, pushed 2026-10-19. Emits the format procurement offices accept; pairs with the scanner's output |
+| Python pinning | `pip-compile` (https://github.com/jazzband/pip-tools) **or** https://github.com/astral-sh/uv | BSD-3-Clause (1,522 B, byte-read) / Apache-2.0-or-MIT | `uv` is 92,203 ★, pushed 2026-11-18 — use it for speed on a 74-package tree with 36 upper bounds. 🔵 `pip-tools` is **absent from `repo:` search and `200` on `raw@main`**: apply the `905-F6` test — one query against a suspected new name — before recording either as missing |
+| Node pinning | `npm ci` against a committed `package-lock.json` | — | Required for Canvas (348 npm) and OpenMAIC (178 npm), neither of which ships a lockfile on the paths probed |
+| PHP / Java | `composer.lock` (already present) / Maven `dependency:tree` + `versions:lock-snapshots` | — | Moodle and Gibbon already pin; Sakai and OpenOLAT need the tree captured |
+| Vendoring target | the client's own registry or a git mirror at a SHA | — | `p110`: 200 of 296 shelf rows are one maintainer, so the artefact must survive upstream disappearing |
+
+### How it wires together
+
+1. **Resolve once, deliberately.** Build the chosen base in a clean container, capture the resolved
+   set, commit it as a lockfile in the client's repository. For `DeepTutor` this means following the
+   `-r` chain to the 19 `requirements/modules/*.txt` leaves first (gate `905-G1`, rule 2) — the root
+   manifest shows nothing.
+2. **Scan the resolved set, not the manifest.** Point `scancode-toolkit` at the installed tree. The
+   manifest names 311 or 74 packages; the resolved tree is where the copyleft and the
+   non-commercial surprises actually live, and it is the only artefact that answers the audit.
+3. **Emit the SBOM in CycloneDX**, attach the scanner's licence inventory, and flag three classes by
+   hand because no tool reports them correctly: **per-directory grants** (the directory axis of `G1`, added `p897` / **T24**),
+   **data-and-content grants** (`904-G1`/**T25**), and **reserved marks** (**T27**).
+4. **Write the two known scanner false positives into the handover note before the audit runs them.**
+   `OpenOLAT`'s `LICENSE` is a truncated Apache-2.0 (10,982 B vs 11,358 B canonical) and `DeepTutor`'s
+   is hand-edited (`560-D`). Both are **Apache-2.0 on a clause read** and both **will** be flagged by
+   a byte-identity check. An explained flag is a non-event; an unexplained one stops a deployment.
+5. **Pin the rebuild in CI.** A job that rebuilds from the lockfile and fails on drift. `p111` found
+   38.9% of this shelf has a live CI signal and `p112` that only 21.3% is both checked and pinned —
+   this step is what moves the client's own estate into that 21.3%.
+
+### Deliverables
+
+- A lockfile or resolved manifest committed in the client's repository, and a container build that
+  reproduces it byte-for-byte.
+- A licence inventory over the **resolved** tree, with the three hand-checked classes above.
+- A CycloneDX SBOM.
+- A one-page handover note naming the known scanner flags and why each is benign.
+- A CI job that fails on dependency drift.
+
+### Licence posture
+
+Every instrument in the stack is **Apache-2.0, BSD-3-Clause or MIT**, so the tier itself adds no
+licence obligation to the client's product — which matters, because its whole purpose is to be the
+artefact the client's legal review trusts.
+
+### Estimate
+
+**1.5–2.5 weeks** for a single base, including the hand-checked classes and the CI job. Add **1 week**
+if the base is unpinned *and* multi-ecosystem (Canvas: npm + gems; Moodle: composer + npm). 🟢 Reuse
+across engagements is high — the scanner configuration, the three hand-check classes and the handover
+note template are the same for every client on the same base.
+
+### Where it does not apply
+
+🔴 If the client is consuming a **hosted** platform rather than deploying one, there is no tree to
+scan and this tier is theatre — sell **P8** (metering, attribution and exit) instead. 🔴 And if the
+engagement's base is already pinned and single-ecosystem (`openedx/openedx-platform`: 311/311, Python
+only), the pinning half is already done — scope the scan alone, at roughly half the estimate, and say
+so rather than billing for work upstream has done for you.
+

@@ -263,6 +263,52 @@ clients and the Open edX analytics stack — after the shelf-vs-history diff sho
 deleted from this file by the 2026-11-18 cleanup rewrite without being listed as removals. All
 re-measured today on both channels.
 
+## What you inherit when you deploy one of these — measured `p905`
+
+A vertical platform is chosen on features and deployed with its dependency tree. This section records
+the second half, byte-read from each platform's manifests on its real default branch.
+
+| Platform | Licence | Direct deps you take on | Rebuildable from its manifests? | Third-party grants disclosed? |
+|---|---|---|---|---|
+| **Moodle** | GPL-3.0 | **316 resolved** composer packages + 73 npm | 🟢 yes (`composer.lock`) | 🔴 none |
+| **Open edX** (`openedx/openedx-platform`) | AGPL-3.0 | **311** Python | 🟢 **yes — 311/311 exactly pinned** | 🔴 none |
+| **Canvas LMS** | AGPL-3.0 | **348** npm + gems | 🔴 no lockfile on paths read | 🔴 `COPYRIGHT` is its own AGPL notice |
+| **Sakai** | ECL-2.0 | **272** Maven modules | 🟡 Maven resolution | 🔴 none |
+| **OpenOLAT** | Apache-2.0 (byte-read, see below) | **183** Maven dependencies | 🟡 Maven resolution | 🔴 none |
+| **Gibbon** | GPL-3.0 | **355 resolved** composer packages | 🟢 yes (`composer.lock`) | 🔴 none |
+| **OpenEduCat** | LGPL-3 (addon manifest) | **5 Odoo core modules** (`board`, `hr`, `web`, `website`, `contacts`) | n/a — inherits Odoo | 🔴 none |
+| **Odoo** (`20.0`) | LGPL-3.0-only | **60** Python | 🔴 unpinned | 🔴 `COPYRIGHT` names zero deps |
+| **Tutor** (Open edX distro) | AGPL-3.0 | **28** Python | 🟡 partial | 🔴 none (`dependabot.yml` only) |
+
+🔵 **Two practical consequences for an engagement.**
+
+1. **The licence answer a client's procurement office wants is not in any of these repositories.**
+   Not one of the nine discloses the grants of what it bundles, while Moodle and Gibbon alone resolve
+   316 and 355 packages. Budget a dependency-grant scan (`scancode-toolkit`, Apache-2.0 — retrieved
+   for this purpose at `p531`) as a **named first-week task**, and say so in the proposal rather than
+   answering it during an audit.
+2. **Rebuildability differs by platform and decides the exit clause.** Open edX, Moodle and Gibbon
+   can be handed over as a pinned artefact. Canvas, Odoo and the two flagship tutors cannot, from
+   their manifests alone — the lockfile is work the studio does, and it belongs in the estimate —
+   scoped as `compose/patterns.md` **P24**.
+
+### OpenOLAT's Apache-2.0, byte-read for the first time (`p905`)
+
+OpenOLAT is this base's main recommendation for a client who needs a **proprietary derivative** of a
+full LMS, and its grant had never been read. `master/LICENSE` is **10,982 B**
+(`sha256₁₂ 6dbc5b605ed0`) against canonical Apache-2.0 at **11,358 B** (`cfc7749b96f6`).
+
+- 🟢 **All nine numbered sections present and verbatim** — every operative grant (§2 copyright,
+  §3 patent, §4 redistribution, §5 contributions) plus §6–§9. **Verdict Apache-2.0 holds; the
+  recommendation stands, now on evidence.**
+- 🔴 `END OF TERMS AND CONDITIONS` is **absent** and the APPENDIX is removed; two
+  **"Additional license statement"** provenance paragraphs (University of Zurich / OLAT Zentrum;
+  frentix GmbH / OLAT 7.1) take their place. They grant nothing and restrict nothing.
+- 🔴 **Say both of these before a legal review, not after.** A scanner hashing `LICENSE` against
+  canonical Apache-2.0 will flag it, GitHub's own detector already reports `NOASSERTION` for exactly
+  this reason, and a reviewer meeting the words *"Additional license statement"* inside a licence
+  file will stop and ask.
+
 ## Honest gaps
 
 - **Unlicensed content corpora are the biggest trap in this category (added p891).** The largest

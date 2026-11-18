@@ -4,6 +4,50 @@ region: Global
 updated: 2026-11-18
 ---
 
+## 🆕 `p905` · 2026-11-18 — **`561-H` discharged after nine passes and its premise refuted: of 14 education platforms, `0` disclose the grants of their dependencies, and the two files that look like a disclosure name no dependency at all.**
+
+🔵 **Summary.** The eight mandated research legs scored null for the fourth consecutive pass — and
+this time the *regional* legs scored null too, **0 of 34 facts absent**, measured on the delivery
+surface `902-G1` built rather than the whole tree. The budget moved to the oldest unfinished
+obligation in this base: the dependency-level grant read. 350 byte-reads over 14 platforms. Three
+gaps registered, all three cheap, one of them needing **no network**.
+
+### 🔴 `905-G2` — the scan answered *who discloses* (nobody) and not *what you inherit*
+
+The read covered **direct** manifests. `moodle/moodle` and `GibbonEdu/core` resolve to **316** and
+**355** packages in their lockfiles and **no grant was read for any of them**, so the question
+`561-H` actually asks — *what licences does a client inherit when it deploys this* — is still open.
+**Acceptance test:** a pass parses the `"license"` fields out of `composer.lock` for both platforms
+(305,574 B and 321,058 B, already byte-read and recorded in this pass's ledger) and publishes the
+grant distribution for the two platforms a studio deploys most. 🟢 **This needs no network at all.**
+**Record to extend:** [`dep-grant-scan.2026-11-18-p905.tsv`](../evidence/dep-grant-scan.2026-11-18-p905.tsv).
+
+### 🔴 `905-G3` — a `905-G1` false negative found and left unfixed inside the pass that wrote the gate
+
+`instructure/canvas-lms@master/Gemfile` yields **1** `gem` line, which cannot be Canvas's Ruby
+dependency set; Canvas declares gems across `Gemfile.d/*.rb`. The npm figure (**348**) is sound, the
+Ruby figure is not, and the convention entry is **already written into `905-G1` rule 1** — the gate
+knows about the trap it was tripped by and the row was published as "no lockfile on paths read"
+rather than corrected. **Acceptance test:** probe `Gemfile.d/` and publish Canvas's true direct gem
+count, then re-grade its reproducibility cell.
+
+### 🔴 `905-G4` — four of fourteen targets have manifests present but uncounted
+
+`frappe/education` (`pyproject.toml` 1,622 B + `package.json` 190 B), `moodlehq/wiki-rag`
+(`pyproject.toml` 3,433 B), `bncc-dev/bncc-dados` (`requirements.txt` 263 B) and
+`openeducat_erp` beyond its core addon were probed and **returned `200` without being counted** — the
+budget went to the five platforms with the largest estates. **Acceptance test:** complete the
+reproducibility table; the probe script is written and every path is already in the 350-row ledger.
+
+### 🟢 Discharged this pass
+
+| Gap | How |
+|---|---|
+| **`561-H`** (open 9 passes, *"registered as an engagement-start task"*) | 🟢 **Discharged, and its premise refuted.** It held that *"`odoo`'s `COPYRIGHT` is where a dependency scan starts"*. Read: 433 B, enumerates **zero** dependencies, directs the reader to version-control history. `canvas-lms`'s `COPYRIGHT` (621 B) is its own AGPL-3.0 notice. 🟢 Corrected finding: **`0` of 14 platforms disclose third-party grants** — an absence that *presents as a presence*, which is a trap rather than a gap |
+| **`Gap 528-C`** (reasserted on `P602` after its `p531` retrieval close) | 🟡 **Advanced, not closed.** The instrument question was settled at `p531` (`scancode-toolkit`); this pass establishes **what it has to be pointed at and why no upstream will do it for you**, and prices the work as `compose/patterns.md` **P24**. The scan over a resolved tree is `905-G2` |
+| **`p900`'s dual-channel existence rule** | 🟢 **Sharpened.** A `raw` `200` against a search `absent` has **two** causes — an index gap and a **rename** — which call for opposite actions. This pass nearly re-reported `p896`'s `openedx/edx-platform` rename as a new discovery; the one-query test is now written into `905-F6` and exercised on `jazzband/pip-tools` in the same pass |
+
+
 ## 🆕 `p902` · 2026-11-18 — **Every yield claim in this base was measured against a surface that includes the append-only log, so all of them read 0% by construction. And the growth method `p901` recommended has no existence gate: the first topically-matched index it was pointed at contained three repositories that do not exist.**
 
 🔵 **Summary.** `901-F1` concluded the research channel was saturated and growth had to come from the

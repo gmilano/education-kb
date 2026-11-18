@@ -1,0 +1,15 @@
+repo	branch	spdx	stars	direct_deps_measured	manifest_shape	pins	third_party_grant_disclosure	reproducible_from_manifest
+openedx/openedx-platform	master	AGPL-3.0	8244	311	requirements/edx/base.txt single file	311/311 ==	none (dependabot.yml only)	YES
+moodle/moodle	main	GPL-3.0	7624	65 require + 3 require-dev (composer.json); 316 resolved (composer.lock)	composer.json + composer.lock + package.json	lockfile	none	YES (lockfile)
+GibbonEdu/core	v31.0.00	GPL-3.0	641	27 require + 8 require-dev; 355 resolved (composer.lock)	composer.json + composer.lock	lockfile	none	YES (lockfile)
+instructure/canvas-lms	master	AGPL-3.0	6919	348 npm (212 prod + 136 dev) + Gemfile	Gemfile + package.json	no lockfile read	COPYRIGHT = own AGPL notice only	NO (from files read)
+sakaiproject/sakai	master	ECL-2.0	1241	272 <module> aggregator entries	maven multi-module pom.xml	maven	none	partial (maven resolution)
+OpenOLAT/OpenOLAT	master	NOASSERTION	452	183 <dependency> blocks	single pom.xml	maven	none	partial (maven resolution)
+THU-MAIC/OpenMAIC	main	MIT	43899	178 npm (145 prod + 33 dev)	package.json	no lockfile read	none	NO (from files read)
+HKUDS/DeepTutor	main	Apache-2.0	60451	74 unique packages	3-level: requirements.txt -> requirements/full.txt -> 19 modules/*.txt (script-generated)	1 of 74 ==; 79 >=, 36 <	none	NO
+odoo/odoo	20.0	LGPL-3.0-only	-	60	requirements.txt + setup.py	unpinned	COPYRIGHT = pointer to VCS history, enumerates zero deps	NO
+openeducat/openeducat_erp	19.0	NOASSERTION (LGPL-3 in addon manifest)	914	5 Odoo core modules (board, hr, web, website, contacts)	openeducat_core/__manifest__.py (Odoo addon convention; NO root manifest)	n/a	none	n/a (inherits Odoo)
+overhangio/tutor	release	AGPL-3.0	1135	28	pyproject.toml + requirements/base.txt	partial	none (dependabot.yml only)	partial
+frappe/education	develop	NOASSERTION	716	pyproject.toml + package.json present	pyproject.toml + package.json	not measured	none	not measured
+moodlehq/wiki-rag	main	BSD-3-Clause	54	pyproject.toml present	pyproject.toml	not measured	none	not measured
+bncc-dev/bncc-dados	main	MIT (+ CC BY 4.0 in dados/)	26	requirements.txt present	requirements.txt	not measured	none	not measured

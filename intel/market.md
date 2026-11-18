@@ -374,6 +374,22 @@ selling it yet.
   demonstrated pull and the thinnest row count in `agents/top.md`.
 
 
+#### p905 — North America: searched, nothing new
+
+🟡 **Declared null, not silence.** The `p905` regional leg
+(`AI education North America 2026 adoption regulation players`) returned 9 sources and **0 facts
+absent from this file**. Re-checked and already held: the 134-bills/31-states introduction count
+(🔴 still refused as a figure under `557-D` — MultiState's `134/31` disagrees with FutureEd's own
+`13 enacted`, now the sixth occurrence, see `560-G`); North Carolina **Session Law 2026-41** and its
+model-policy and training deadlines; the Idaho, Oklahoma, Virginia and Maryland district-policy laws;
+the New York grade-9 floor and New Jersey curriculum bills; the US Department of Education's
+April 2026 K-12 guidance and the March 2026 OET framework; the **K-12 AI Literacy and Readiness Act
+of 2026**; California's **Parents & Kids Safe AI Act** ballot initiative; the contested **$10M
+Khanmigo** earmark; the NEPC risk-level framework; and the **April 2026 ADA** accessibility deadline.
+🔵 **The opportunity statement above is unchanged by this pass and that is the finding** — a region
+whose policy surface stops moving between passes is a region where the *conformity product* can be
+specified once and sold repeatedly (**P3**).
+
 ### EMEA
 
 🟢 **Promoted in `p902` — four facts held only in the log until now** (see `902-F1`; the
@@ -970,6 +986,25 @@ document to obtain**, and obtaining it needs a session with open HTTP.
   credible answer to "how will you show us this is governed" before the Act's own conformity
   machinery exists. Pair it with `compose/patterns.md` **P4**.
 
+#### p905 — EMEA: searched, nothing new (one global count promoted, see Global)
+
+🟡 **Declared null, not silence.** The `p905` leg
+(`AI education EMEA Europe Middle East Africa 2026 adoption regulation players`) returned 10 sources
+and **0 facts absent from this file**. Re-checked and already held: the EU AI Act's Annex III
+education obligations deferred to **2 December 2027** by the Digital Omnibus; the **Article 4**
+AI-literacy duty in force since February 2025; **Council document ST-14902-2026** (29 October 2026)
+on reducing dependence on non-European AI in education; the European Parliament briefing
+**784574 (2026)**; the UK DfE's **January 2026** generative-AI product safety standards and
+**Ofqual's March 2026** coursework-integrity resources; and Dubai **KHDA** guidance to private
+schools. 🟢 One fact from this leg *was* an orphan — UNESCO's **68 countries** regulating AI in
+education, up from 14 in 2021 — but it is a worldwide count, so it is promoted under **Global**
+below rather than attributed to this region.
+🔴 **The standing Africa limitation is re-confirmed:** this leg produced **no country-level African
+adoption statistic**, the fifth consecutive pass to record that, and `www.unesco.org` plus
+`digital-skills-jobs.europa.eu` are refused at this session's egress proxy — so the gap is a
+**reach** failure, not an absence of data in the world. The Africa supply-side measurement at
+`p895` remains this file's only primary-measured African content.
+
 ### APAC
 
 🟢 **Promoted in `p902` — two convening facts, plus the region's one dataset-scale supply row**
@@ -1402,6 +1437,21 @@ client commitment.
   how AI reaches APAC classrooms that have no cloud budget, which is the same economics that makes
   `Kolibri` and `GT-MISHKATKIDS` deployable in `verticals/solutions.md`.
 
+#### p905 — APAC: searched, nothing new
+
+🟡 **Declared null, not silence.** The `p905` leg
+(`AI education APAC Asia Pacific 2026 adoption regulation players`) returned 9 sources and **0 facts
+absent from this file**. Re-checked and already held: South Korea's **AI Basic Act** in force
+January 2026; **Vietnam's** AI law (March 2026) with education and automated assessment on the
+high-risk list, and its ministry-mandated AI instruction hours for grades 1–12; India's
+AI-generated-content labelling requirement from February 2026; Australia's reliance on existing law
+and voluntary guidance; Japan's voluntary industry-led guidelines; the **Ipsos Education Monitor
+2026** splits (support for banning AI in schools lower across most Asian markets, rising in Japan and
+South Korea, falling in Indonesia, higher in Australia and New Zealand); **NTU Singapore** giving
+every undergraduate access to Google's AI tools from August 2026; and virtual-tutor adoption at
+**30%** (Times Higher Education). 🔵 The multi-jurisdiction divergence this section has recorded for
+several passes is what **P6** is priced against, and it widened again rather than converging.
+
 ### LATAM
 
 🟢 **Promoted in `p902` — two facts held only in the log** (method: `902-F1`):
@@ -1726,13 +1776,34 @@ effectively is a *different* statistic — do not conflate them, as some coverag
   grounding on top of a free national offer.
 
 
+#### p905 additions — LATAM: the early-AI-curriculum gap, promoted out of the trend log
+
+- 🔴 **13 of the 19 Latin American and Caribbean countries studied by CENIA (Chile's National Centre
+  for Artificial Intelligence) do **not** teach early AI adoption in schools.** This KB has carried
+  the figure since the pass that found it, in `intel/trends.md` and the append-only log — **never in
+  this file**, which is where an engagement looks for what to sell into a region. Promoted here by
+  the `902-G1` re-score.
+  🔵 **Why it is an opportunity and not just a deficit.** It sits directly against two facts already
+  in this section: **92% of LATAM higher-education students and 79% of faculty** actively use AI
+  (Digital Education Council), and **only 22% of Brazilian schools whose administrators use AI have
+  any guideline on its use** (53% use / 22% governed). Demand is present at the student layer,
+  governance is absent at the institution layer, and **curriculum** is absent at the system layer.
+  The sellable unit is the middle one — see `compose/patterns.md` **P5** (governance-and-enablement
+  retrofit) and **P10** (curriculum-mandate delivery at system scale), the second of which has a
+  buyer in every one of the 13.
+  🔴 **Attribution, not verification.** CENIA's study is cited here from secondary coverage;
+  `www.unesco.org` and the other primary hosts are refused at this session's egress proxy, so the
+  count is recorded with its source named and **not** as a measured figure, under the `557-D` rule
+  that has already refused five US legislative counts.
+
 ### Global
 
 Cross-regional plays that do not depend on one jurisdiction.
 
 - **Licence-clean AI-on-LMS.** Open edX, Canvas and Moodle are AGPL/GPL. A client wanting a
   proprietary derivative needs the permissive path: **Artemis (MIT)**, **Kolibri (MIT)**,
-  **Oppia (Apache-2.0)**, **OpenOLAT (Apache-2.0)**. Licence triage is a billable first
+  **Oppia (Apache-2.0)**, **OpenOLAT (Apache-2.0 — byte-read `p905`, with a scanner flag: see
+  the Global additions below)**. Licence triage is a billable first
   engagement in its own right, and it is the question most often got wrong.
 - **LTI 1.3 as a multiplier.** Build the AI tool once against `ltijs` (Apache-2.0) or `tsugi`
   (Apache-2.0) and it ships into every compliant LMS. One build, many clients.
@@ -1766,6 +1837,27 @@ Cross-regional plays that do not depend on one jurisdiction.
   **Channel caveat:** the report page and DOI resolve, the full text is blocked by this session's
   network policy, and the quoted findings are from the publisher's own summary pages and
   conference commentary. **Verify the exact wording before it goes in a client deck.**
+
+#### p905 additions — Global
+
+- 🟡 **UNESCO counts 68 countries now regulating AI in education, up from 14 in 2021.** Held in the
+  append-only log since the pass that found it and in **no** delivery file until now; promoted by the
+  `902-G1` re-score. 🔵 **The use of the number is the comparison, not the level**: a near-fivefold
+  rise in five years is the argument for selling *conformity* as the product rather than treating it
+  as a tax on delivery — which is the premise of **P3** (North America, 50-state configurable),
+  **P4** (EU AI Act conformity-by-construction) and **P6** (APAC multi-jurisdiction). 🔴 Secondary
+  source; the primary host is refused at this session's proxy, so it is attributed, not verified.
+- 🟢 **The permissive-path recommendation above now rests on a byte-read for OpenOLAT.** Its
+  `master/LICENSE` is **10,982 B** (`sha256₁₂ 6dbc5b605ed0`) — all nine Apache-2.0 sections present
+  and verbatim, so **Apache-2.0 holds** — but the terms-end marker and APPENDIX are replaced by two
+  provenance paragraphs, which is why GitHub reports `NOASSERTION` and why a client scanner will flag
+  it. 🔴 **Raise it before the legal review**, and note the same applies to `DeepTutor`'s hand-edited
+  Apache-2.0 (`560-D`). Full read in `verticals/solutions.md`.
+- 🔴 **A proposal claim this base can now support with measurement: no open education platform
+  discloses the grants of its dependencies.** 14 platforms, 350 byte-reads, `0` third-party grant
+  disclosures, against 316 resolved packages in Moodle and 355 in Gibbon. 🔵 This converts a
+  compliance anxiety into a **scoped, billable first-week deliverable** — the dependency-grant scan —
+  and `scancode-toolkit` (Apache-2.0) is the instrument. See `repos/foundations.md`.
 
 ## Declared gaps
 

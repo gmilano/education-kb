@@ -4,6 +4,231 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p905) — **`561-H` discharged after nine passes, and its premise is refuted by reading it: of 14 platforms a studio would actually deploy, *zero* disclose the grants of their dependencies. The two files that look like a disclosure are a pointer to version-control history and a copy of the project's own AGPL.**
+
+**Channel:** the eight mandated WebSearch legs (four global, four regional), then — because those legs
+scored null for the fourth consecutive pass — the pass budget was moved to the oldest unfinished
+obligation in this base: **the dependency-level grant read**, registered at `p529` as `Gap 528-C`,
+closed at `p531` by retrieval, and **reopened in a narrower form at `561-H`** which deferred it as
+"out of this pass's budget; registered as an engagement-start task". It has been carried that way
+for nine passes. `raw` is `200`, so it was in reach.
+
+**Method.** 350 byte-reads from `raw.githubusercontent.com` — 14 target repositories × 25 paths
+(13 dependency-manifest paths, 12 third-party-grant-disclosure paths) — each on the repository's
+**real default branch**, resolved first from `search/repositories` (`tutor` → `release`,
+`openeducat_erp` → `19.0`, `frappe/education` → `develop`, `canvas-lms`/`sakai`/`OpenOLAT` →
+`master`, `GibbonEdu/core` → `v31.0.00`). Every row carries HTTP code, byte count and `sha256₁₂`.
+**Network posture re-tested at the top of the pass and unchanged from `p903`/`p904`:** `raw` `200`,
+`gh api search/*` live, `github.com` HTML **`403`**, every non-GitHub host refused at the egress
+proxy (`www.unesco.org`, `moodle.org` → `CONNECT tunnel failed, 403`). Regional legs are therefore
+search snippets, not primary texts. Records:
+[`dep-grant-scan.2026-11-18-p905.tsv`](../evidence/dep-grant-scan.2026-11-18-p905.tsv) (350 rows),
+[`dep-grant-summary.2026-11-18-p905.tsv`](../evidence/dep-grant-summary.2026-11-18-p905.tsv),
+[`deeptutor-manifest-tree.2026-11-18-p905.tsv`](../evidence/deeptutor-manifest-tree.2026-11-18-p905.tsv).
+
+### 🔴 `905-F1` Fourth consecutive null from generic search — and this pass the regional *prose* legs scored null too, on the surface `902-G1` built to make the claim honest
+
+The four global legs surfaced four repository candidates not obviously in the base —
+**`THU-MAIC/OpenMAIC`**, **`withmarbleapp/os-taxonomy`**, **`patchy631/ai-engineering-hub`** and
+**`DeanChensj/jiangshan-map`** — and **all four are already in the live tree**, three of them with
+rows in delivery files.
+
+The regional legs are the new part. `902-G1` established that a yield claim scored against the whole
+tree reads 0% by construction, because the append-only log is in the denominator; `904-F1` re-scored
+the regional legs against the **six delivery files** and found 6 of 21 facts genuinely absent. This
+pass, scored the same way against the eight delivery files: **0 of 34 facts absent.** Every one of
+the US state-legislation figures, the EU Digital Omnibus date, the UK DfE/Ofqual instruments, the
+Korea/Vietnam statutes, the Ipsos Education Monitor splits, the DEC and IESALC adoption percentages,
+the Universidad de los Andes instrument count and the UNESCO LAC Observatory partner list is already
+held, most of them more precisely than the snippet stated.
+
+🔵 **The honest reading, now that the surface is right: the prose channel is saturated, not
+mismeasured.** `901-F1` said this and was wrong because it measured against the log; it is true when
+measured against delivery. The regional statement for `intel/market.md` remains **"searched, nothing
+new"** for all four regions, written as such.
+
+**Two orphans found and promoted.** The re-score did surface two facts held *only* in the log or only
+in a non-market file, which is the failure mode `902-G1` exists to catch:
+
+| Fact | Was held in | Promoted to |
+|---|---|---|
+| UNESCO counts **68 countries regulating AI in education, up from 14 in 2021** | `agents/trending.md` only | `intel/market.md` → Global |
+| CENIA: **13 of 19** LAC countries studied do **not** teach early AI adoption in schools | `agents/trending.md` + `intel/trends.md`, never `market.md` | `intel/market.md` → LATAM |
+
+🔴 Both are **secondary-source counts this base cannot verify primarily** — `www.unesco.org` is
+refused at the proxy — and are written with that attribution attached, under the `557-D` rule that
+has already refused five US legislative counts.
+
+### 🟢 `905-F2` `561-H` discharged — and the premise it was registered on does not survive the read
+
+`561-H` concluded: *"the bundled-licence disclosure means the root grant is not the SBOM for either
+platform — a dependency-level scan is required, **and `odoo`'s `COPYRIGHT` is where it starts** while
+OpenEduCat provides no such file."*
+
+**The scan found exactly two files across 14 repositories that a grant-disclosure probe returns, and
+neither one discloses a third-party grant.**
+
+| Repo | File | Bytes | What it actually contains | Dependencies enumerated |
+|---|---|---|---|---|
+| `odoo/odoo@20.0` | `COPYRIGHT` | **433** | *"Many files also contain contributions from third parties. In this case the original copyright of the contributions **can be traced through the history of the source version control system**."* Otherwise files *"contain a prominent notice"* or *"come with their own dedicated COPYRIGHT and/or LICENSE file"* | 🔴 **zero** |
+| `instructure/canvas-lms@master` | `COPYRIGHT` | **621** | The **AGPL-3.0 notice for Canvas itself** — *"Canvas is free software: you can redistribute it … version 3 of the License"* | 🔴 **zero** |
+
+🔴 **`561-H`'s positive control is not one.** `odoo`'s `COPYRIGHT` is an *instruction to go and look
+somewhere else* — at the commit history, or at per-file notices — and a dependency scan cannot
+"start" from a document that names nothing. Canvas's is a restatement of its own grant, which a
+one-licence-per-repo tool already reports. 🟢 **The corrected statement: of the 14 platforms an
+education engagement is actually built on, `0` ship a third-party dependency-grant disclosure.** The
+remaining 12 return `404` on all 12 disclosure paths; the only artefacts in that class anywhere in
+the set are two `.github/dependabot.yml` files (`openedx/openedx-platform` 158 B, `overhangio/tutor`
+1,207 B), which are **update automation, not grant statements**.
+
+🔵 **Why this is a sharper result than "12 of 14 lack it".** A procurement reviewer handed Odoo or
+Canvas will find a file called `COPYRIGHT`, and both files are written in a register that reads like
+compliance. The finding is not an absence a studio can see; it is an absence that **looks like a
+presence**. That is the difference between a gap and a trap.
+
+### 🟢 `905-F3` The exposure the missing disclosure covers, measured — and a reproducibility split that decides vendoring
+
+Direct dependency counts, byte-read from the manifests rather than asserted:
+
+| Platform | Manifest read | Direct deps measured | Pinning | Reproducible from its own manifests? |
+|---|---|---|---|---|
+| `openedx/openedx-platform` | `requirements/edx/base.txt` (28,659 B) | **311** | 🟢 **311/311 `==`** | 🟢 **yes — 100% exactly pinned** |
+| `instructure/canvas-lms` | `package.json` (19,421 B) + `Gemfile` | **348** npm (212 prod + 136 dev) | no lockfile on the paths read | 🔴 no |
+| `GibbonEdu/core` | `composer.json` + `composer.lock` (321,058 B) | 27 + 8 direct → **355 resolved** | 🟢 lockfile | 🟢 yes |
+| `moodle/moodle` | `composer.json` + `composer.lock` (305,574 B) + `package.json` | 65 + 3 direct → **316 resolved**; 73 npm | 🟢 lockfile | 🟢 yes |
+| `sakaiproject/sakai` | `pom.xml` (15,007 B) | **272** `<module>` aggregator entries | Maven resolution | 🟡 partial |
+| `OpenOLAT/OpenOLAT` | `pom.xml` (78,353 B) | **183** `<dependency>` blocks | Maven resolution | 🟡 partial |
+| `THU-MAIC/OpenMAIC` | `package.json` (8,868 B) | **178** npm (145 prod + 33 dev) | no lockfile on the paths read | 🔴 no |
+| `HKUDS/DeepTutor` | 3-level tree, below | **74 unique packages** | 🔴 **1 of 74 `==`** (79 `>=`, 36 `<`) | 🔴 **no** |
+| `odoo/odoo@20.0` | `requirements.txt` (4,143 B) | **60** | unpinned | 🔴 no |
+| `overhangio/tutor` | `pyproject.toml` + `requirements/base.txt` | **28** | partial | 🟡 partial |
+
+🔴 **The two largest open education agents in existence are the two least reproducible things on this
+list.** `DeepTutor` (60,451 ★, Apache-2.0) declares **74 unique packages with one exact pin**: 79
+`>=` lower bounds and 36 `<` upper bounds, i.e. a *range*, resolved fresh at every install.
+`OpenMAIC` (43,899 ★, MIT) declares 178 npm packages with no lockfile on any path probed. 🟢
+**`openedx/openedx-platform` is the opposite extreme and the reference standard: 311 of 311 dependencies
+exactly pinned in a single file.**
+
+🔵 **The delivery consequence, stated for an engagement.** `p110` found 200 of 296 shelf rows are one
+maintainer and concluded two thirds of this shelf must be vendored at a SHA inside a client's estate.
+Vendoring `DeepTutor` pins *its* source and **not its dependency set** — a rebuild six months on
+resolves different bytes, with no file in the repository stating what the first build took. Vendoring
+`Open edX` or `Moodle` pins both. **That is a selection criterion, not a caveat**, and it is now
+written into `repos/foundations.md` and `verticals/solutions.md` as a column rather than left in a
+log.
+
+### 🔴 `905-F4` Two manifest false negatives, one new gate — a root-only probe reports "declares no dependencies" for two platforms that do
+
+The scan's first run returned **0 manifests for `openeducat/openeducat_erp`** and **a 104-byte
+`requirements.txt` for `DeepTutor`**. Both readings are wrong, for two different reasons, and both
+would have been published:
+
+1. 🔴 **`openeducat/openeducat_erp@19.0` has no root manifest at all** — `requirements.txt`,
+   `pyproject.toml`, `setup.py`, `package.json`, `composer.json` all `404`. It declares its
+   dependencies in the **Odoo addon convention**: `openeducat_core/__manifest__.py` (**200**,
+   4,092 B) carries `'depends': ['board', 'hr', 'web', 'website', 'contacts']` — five Odoo core
+   modules — and, 🟢 **independently confirming `561-H`'s verdict from a second location**,
+   `'license': 'LGPL-3'` *inside the addon manifest*, where no root-licence probe looks.
+2. 🔴 **`DeepTutor`'s root `requirements.txt` is not a dependency list.** It is 104 bytes of
+   indirection: one comment (*"Generated module groups own dependency versions"*) and
+   `-r requirements/full.txt`. `full.txt` (528 B) is itself **19 further `-r` lines** pointing at
+   `requirements/modules/*.txt`, generated by `scripts/sync_module_requirements.py`. All 19 resolve
+   `200`; together with `requirements/core.txt` (27 entries) they are where the 74 packages live.
+   **Three levels, zero dependencies visible at level one.**
+
+🟢 **New gate `905-G1`, added to the `compose/patterns.md` `G1` pre-flight.** It is the same shape as
+`904-G1` — *probe the convention, not the root* — arriving on manifests instead of licences:
+
+- **An absent root manifest is not an absent dependency declaration.** Probe the framework's
+  convention before recording a count: Odoo addons → `<module>/__manifest__.py`; Moodle plugins →
+  `version.php`; Open edX XBlocks → `setup.py` `entry_points`; Maven → the aggregator's `<module>`
+  list, not the root `<dependency>` block.
+- **A manifest under ~500 bytes is a pointer until proved otherwise.** Follow every `-r`, `include:`,
+  `extends` and `requires` chain to a fixed point and count at the leaves. A root read gives a
+  *floor*, never a total.
+- **Record the level the count came from.** A dependency figure without its manifest depth is not
+  comparable across repositories, which is what made `DeepTutor` look like a 1-dependency project.
+
+### 🟢 `905-F5` OpenOLAT's Apache-2.0 measured for the first time — the verdict holds, the mechanism is now named, and it is why GitHub reports `NOASSERTION`
+
+`intel/market.md` has recommended **"OpenOLAT (Apache-2.0)"** to clients wanting a *proprietary
+derivative* of an LMS, on a licence value this base had never byte-read. `search/repositories`
+reports its SPDX field as 🔴 **`NOASSERTION`**, which under `T19` is a prompt to read the file.
+
+`OpenOLAT/OpenOLAT@master/LICENSE` — **10,982 B**, `sha256₁₂` **`6dbc5b605ed0`**. Canonical
+Apache-2.0, re-pinned at `560-C` from `openedx/XBlock@master/LICENSE.TXT` and re-fetched this pass as
+a control: **11,358 B**, `cfc7749b96f6`. **Delta −376 B.**
+
+Normalised diff, whole file:
+
+- 🟢 **All nine numbered sections present and verbatim** — §1 Definitions, §2 Grant of Copyright
+  License, §3 Grant of Patent License, §4 Redistribution, §5 Submission of Contributions,
+  §6 Trademarks, §7 Disclaimer of Warranty, §8 Limitation of Liability, §9 Accepting Warranty. The
+  only body difference is **one leading blank line**.
+- 🔴 **`END OF TERMS AND CONDITIONS` appears 0 times**, and the entire **APPENDIX** boilerplate
+  (*"How to apply the Apache License to your work"*) is **removed**.
+- 🟡 In their place, two paragraphs headed **"Additional license statement"** — one for the original
+  `olat.org` code base (University of Zurich, OLAT Zentrum), one for `openolat.org` (frentix GmbH,
+  based on the OLAT 7.1 release).
+
+🟢 **Verdict: Apache-2.0 holds.** All four operative grants and §6–§9 are intact and unmodified; what
+was removed is the terms-end marker and the appendix's *instructions for applying the licence*,
+neither of which is an operative term. 🟢 **The two added paragraphs grant nothing and restrict
+nothing** — they are provenance statements, and saying so is the point, because a legal reviewer who
+meets the words *"Additional license statement"* inside a licence file will stop reading and ask.
+
+🔴 **Two flags, both delivery-relevant.** A client scanner hashing `LICENSE` against canonical
+Apache-2.0 **will** flag OpenOLAT, exactly as `560-D` established it will flag `DeepTutor`
+(`+50 B`, hand-edited). And the missing terms-end marker is the **mechanism** behind the
+`NOASSERTION`: GitHub's detector needs the document's closing shape, so the field is not evidence of
+a licence problem here — it is evidence of a truncated tail. 🔵 **This is the second entry in a class
+worth naming: the two permissive bases this KB recommends most confidently for proprietary
+derivatives — `DeepTutor` and `OpenOLAT` — both ship a *modified* Apache-2.0 that fails a
+byte-identity check while passing a clause read.** `T19` is extended with it.
+
+### 🟢 `905-F6` The `edx-platform` absence is the `p896` rename, not a search-index gap — and the manifest bytes confirm it
+
+The scan's batched `repo:` leg returned `TOTAL=9` for ten slugs, with `openedx/edx-platform` the
+missing one, while `raw.githubusercontent.com/openedx/edx-platform/master/…` returned `200`. 🔴 **The
+first reading written for this finding was that this is a fresh instance of `p900`'s
+search-index-gap rule. It is not, and `agents/top.md` already says so.** `p896` established that the
+repository was **renamed to `openedx/openedx-platform`**, that search resolves only the new name, and
+that `raw` serves both because it follows GitHub's rename redirects.
+
+Re-measured this pass: `repo:openedx/openedx-platform` → 🟢 **8,244 ★, AGPL-3.0, `master`, pushed
+2026-11-18**; `repo:openedx/edx-platform` → nothing. And the new evidence this pass adds is at the
+*manifest* level: both slugs serve `requirements/edx/base.txt` at **28,659 B,
+`sha256₁₂ 20f78eb076b4`** — 🟢 **byte-identical**, a third byte-identical pair beside `p896`'s
+`LICENSE` and `README.rst`.
+
+🔵 **So the dependency figures in `905-F3` are sound** — they were read through the redirect from the
+canonical repository — **but the slug written into delivery files must be
+`openedx/openedx-platform`.** 🔵 **The transferable lesson is about this base, not about GitHub: the
+`p900` dual-channel rule is necessary but not sufficient.** A `raw` `200` against a search `absent`
+has **two** causes — an index gap and a rename — and they call for opposite actions: keep the slug,
+or replace it. Distinguishing them costs one query against the suspected new name, and skipping it
+is how this pass nearly re-reported a solved case as a discovery.
+
+### 🔵 Currency re-measured this pass
+
+| Row | Base held | Measured `2026-11-18` | Action |
+|---|---|---|---|
+| `HKUDS/DeepTutor` ★ | 60,351 | **60,451** (+100) | 🟢 amended in `agents/top.md` |
+| `THU-MAIC/OpenMAIC` ★ | 43,889 | **43,899** (+10) | 🟢 amended in `agents/top.md` |
+| `sakaiproject/sakai` | ECL-2.0, held | **ECL-2.0**, 1,241 ★, pushed 2026-11-18 | 🟢 confirmed |
+| `GibbonEdu/core` | held | **GPL-3.0**, 641 ★, default branch **`v31.0.00`** | 🟢 confirmed; 🔵 a *tag-shaped default branch*, a third live `559-G` instance |
+
+### 🔴 Registered this pass
+
+| Gap | Statement | Acceptance test |
+|---|---|---|
+| **`905-G2`** | The dependency-grant scan read **direct** manifests only. `moodle` and `GibbonEdu` resolve to 316 and 355 packages in their lockfiles, and **no grant was read for any of them.** The question `561-H` actually asks — *what licences does a client inherit* — is still unanswered; this pass answered *who discloses them* (nobody). | A pass parses `composer.lock` `"license"` fields for `moodle/moodle` and `GibbonEdu/core` — both already on disk in this base's evidence tree at 305,574 B and 321,058 B — and publishes the grant distribution for the two platforms a studio deploys most. This needs no network. |
+| **`905-G3`** | `canvas-lms`'s `Gemfile` yields **1** `gem` line, which cannot be its Ruby dependency set; Canvas declares gems in `Gemfile.d/*.rb`. The npm figure (348) is sound, the Ruby figure is a `905-G1` false negative **found but not fixed** in this pass. | Probe `Gemfile.d/` and publish Canvas's true direct gem count; the convention entry is already written into `905-G1`. |
+| **`905-G4`** | Four of the 14 targets (`frappe/education`, `moodlehq/wiki-rag`, `bncc-dev/bncc-dados`, and `openeducat_erp` beyond its core addon) had manifests **present but not counted** — the pass budget went to the five platforms with the largest estates. | Complete the table; the probe is written and the paths are in the 350-row ledger. |
+
+
 ## `2026-11-18` (p904) — **The Spanish/Portuguese channel had never been run in 903 passes. It is populated, it is licensed, and the "no LATAM-origin education agent" claim this KB has carried since its first pass is wrong.**
 
 **Channel:** the eight mandated WebSearch legs (four global, four regional), then the discovery leg

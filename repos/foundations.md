@@ -389,6 +389,51 @@ artefacts a course can be built around, and they are maintained by the departmen
 | https://github.com/cmu-db/bustub | MIT (byte-read 1,075 B) | Carnegie Mellon's educational RDBMS — **5,171 ★**, pushed 2026-11-13. The largest restored row in this file by an order of magnitude, and the reference artefact for database teaching worldwide. |
 | https://github.com/RWTH-OS/eduOS-rs | Apache-2.0 | RWTH Aachen's teaching operating system in Rust — 493 ★, pushed 2026-10-04. |
 
+## Dependency reproducibility and grant disclosure — measured `p905`
+
+Every figure here is byte-read from the repository's own manifests on its **real default branch**
+(350 probes; ledger [`dep-grant-scan.2026-11-18-p905.tsv`](../evidence/dep-grant-scan.2026-11-18-p905.tsv)).
+It answers the question a foundations page is for and had never asked: **if we vendor this into a
+client's estate at a SHA, do we get the same build twice, and do we know what we are shipping?**
+
+| Base | Direct deps | Pinning | Reproducible from its own manifests | Discloses its dependencies' grants |
+|---|---|---|---|---|
+| https://github.com/openedx/openedx-platform | 311 | **311/311 `==`** | 🟢 **yes — the reference standard** | 🔴 no (`dependabot.yml` only) |
+| https://github.com/moodle/moodle | 65 + 3 direct → **316 resolved** | `composer.lock` | 🟢 yes | 🔴 no |
+| https://github.com/GibbonEdu/core | 27 + 8 direct → **355 resolved** | `composer.lock` | 🟢 yes | 🔴 no |
+| https://github.com/sakaiproject/sakai | 272 `<module>` | Maven | 🟡 partial | 🔴 no |
+| https://github.com/OpenOLAT/OpenOLAT | 183 `<dependency>` | Maven | 🟡 partial | 🔴 no |
+| https://github.com/overhangio/tutor | 28 | partial | 🟡 partial | 🔴 no (`dependabot.yml` only) |
+| https://github.com/odoo/odoo (`20.0`) | 60 | unpinned | 🔴 no | 🔴 no — `COPYRIGHT` names **zero** deps |
+| https://github.com/instructure/canvas-lms | 348 npm (212 + 136) | no lockfile read | 🔴 no | 🔴 no — `COPYRIGHT` is its own AGPL |
+| https://github.com/THU-MAIC/OpenMAIC | 178 npm (145 + 33) | no lockfile read | 🔴 no | 🔴 no |
+| https://github.com/HKUDS/DeepTutor | **74 unique** | 🔴 **1 of 74 `==`** (79 `>=`, 36 `<`) | 🔴 **no** | 🔴 no |
+
+🔴 **Of 14 platforms probed, `0` ship a third-party dependency-grant disclosure.** Two return a file
+called `COPYRIGHT` and neither enumerates a dependency: Odoo's (433 B) directs the reader to *"the
+history of the source version control system"*, Canvas's (621 B) restates Canvas's own AGPL-3.0. This
+refutes the premise `561-H` was registered on and is the reason the gate below exists.
+
+🟢 **How to use this table.** Reproducibility and popularity are **orthogonal**, and this page had
+only ever recorded the second. The most-starred education repositories in existence — `DeepTutor`
+(60,451 ★) and `OpenMAIC` (43,899 ★) — are the two least vendorable bases on the shelf; the most
+vendorable, `openedx/openedx-platform`, has 8,244. 🔵 **For an engagement that must hand a client a
+rebuildable artefact, pin selection on this column, not on stars** — and where a popular base is the
+right pedagogical choice anyway, budget the lockfile work (`pip-compile`, `uv lock`, `npm ci`) as a
+named task in week one rather than discovering it at handover — priced as `compose/patterns.md`
+**P24**.
+
+🔴 **Two manifest-reading traps, both found by this scan producing a wrong answer first** (gate
+`905-G1` in `compose/patterns.md`):
+
+1. **An absent root manifest is not an absent dependency declaration.**
+   `openeducat/openeducat_erp@19.0` has **no** root manifest — it declares deps in the Odoo addon
+   convention, `openeducat_core/__manifest__.py` (4,092 B), which also carries `'license': 'LGPL-3'`
+   where no root-licence probe looks.
+2. **A manifest under ~500 bytes is a pointer until proved otherwise.** `DeepTutor`'s
+   `requirements.txt` is 104 B of `-r` indirection; the dependencies are three levels down, across 19
+   generated `requirements/modules/*.txt` files.
+
 ## Gaps and caveats
 
 - **`openedx/XBlock` and `openedx/xblock-sdk` exist but are not in the tables above.**
