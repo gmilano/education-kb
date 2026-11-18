@@ -264,7 +264,36 @@ identified.
 | https://github.com/apereo/phpCAS | Apache-2.0 | **Restored p896.** CAS client for PHP — 802 ★. The one that matters for **Moodle**, which is PHP. **Pushed 2026-06-30**, so pin it. |
 | https://github.com/jitsi/jitsi-meet | Apache-2.0 (`master/LICENSE`, byte-read 12,596 B, `sha256₁₂ eae52e200cd8`) | **Added `p901`.** Self-hostable live-classroom and conferencing platform — **30,255 ★ / 8,134 forks**, pushed 2026-11-18. **The largest permissive synchronous-delivery platform in open source**, and the only row in this file that was found by auditing against a *third-party* curated index rather than by search — it never self-describes as education, so every `{education}`-qualified leg missed it. Pairs with the LMS rows for the synchronous half of a blended deployment. See `repos/trending.md` `901-R1`. |
 
-**110 foundational repos, all verified** (**109 through `p900`; `jitsi/jitsi-meet` added in `p901`**), counted programmatically across the fourteen sections
+## In-language education corpora — added `p903`
+
+The localisation substrate. Every row **MIT, byte-read**, and **none of them was anywhere in this
+tree** before this pass (checked against all 5,790 repository references in it). They came from the
+Arabic/Persian/Hebrew/Turkish `gh api` leg that `agents/top.md` had carried as untried — see
+`agents/trending.md` `903-F7` and `repos/trending.md` `903-R1`.
+
+| Repo | Licence | Role |
+|---|---|---|
+| https://github.com/deeplearningturkiye/turkce-yapay-zeka-kaynaklari | MIT (`master/LICENSE`, byte-read 1,079 B) | **2,432 ★** — the Turkish-language deep-learning and ML education corpus, and the highest-star non-English education repository this base has measured. 🔴 **Idle since 2021-11-03: mine it, do not depend on it.** The asset is curriculum text in Turkish, which is the expensive part of a Türkiye engagement. |
+| https://github.com/barnamenevisi/free-resources | MIT (`master/LICENSE`, byte-read 1,069 B) | **1,297 ★, pushed 2026-10-11 — permissive, in-language and actively maintained**, which is the rare combination. Persian-language archive of free programming-education resources. The in-language corpus for Persian-speaking engagements. |
+| https://github.com/m7medVision/nakhlah.js | MIT (`main/LICENSE.md`, byte-read 1,064 B) | **25 ★, 6 forks, 1,395 KB** — an Arabic-language JavaScript learning platform. Small, and **the only permissively-licensed Arabic education *application* — not corpus — found in the entire channel.** Read it for its Arabic RTL learner-facing UI, which is the part that is slow to build and has no other open reference here. |
+
+🔵 **Why these three sit in a section of their own.** The rest of this file is infrastructure —
+platforms, servers, schedulers, model serving. These are **content and locale**, and the measurement
+behind them is the reason the section exists: across four non-English channels, the popular,
+permissive, maintained education assets are **corpora**, while the *agents* in those same languages
+top out at **6 ★ and are mostly unlicensed**. That inverts the usual calculus for a localisation
+engagement: **adopt the in-language corpus under MIT, build the agent tier**, because at the agent
+tier in Arabic, Persian, Hebrew and Turkish there is nothing to adopt. Same verdict `p894` reached
+via `UniTime` and `p895` via `elimu-ai/webapp`, arriving from a third direction.
+
+🔴 **The two that are deliberately not rows here.** https://github.com/MjeedBakr/Student-Success-Kit
+(**67 ★**, the highest-star Arabic education repo in the channel) has **no licence on any of 12
+byte-read paths**, and https://github.com/revolover00/Bakloriya-AI-SKILLS (300 units of Egypt's
+national curriculum, 28 MB) has none either. A foundation is something a client build rests on;
+neither can be vendored or shipped. Both are published as findings in `repos/trending.md`
+`903-R1`/`903-R2`, which is where unusable-but-real belongs.
+
+**113 foundational repos, all verified** (**109 through `p900`; `jitsi/jitsi-meet` added in `p901`; three in-language corpora added in `p903`**), counted programmatically across the fifteen sections
 of this file rather than asserted — the previous standing figure of "47" was stale and nobody
 had recounted it. **34 of the 109 were restored in `p896`** from
 `archive/2026-11-18-pre-cleanup/repos-foundations.md`, after a shelf-vs-history diff showed they

@@ -916,6 +916,51 @@ split between *under 13* and *below Grade 7*). The **source quality gap between 
 itself the finding** — it is why a LATAM or MENA engagement cannot be briefed from secondary
 search at the confidence a North America one can.
 
+🟢 **`p903` measured MENA on the *supply* side for the first time, and the result reframes the
+regional offer.** Every MENA entry in this file above is **demand** — a UAE mandate, 25 Emirati
+prohibitions, Saudi curriculum units, 240,000 teachers in training, KHDA guidelines due for 2027-28.
+`agents/top.md` had carried the matching supply question as an explicitly **untried channel**:
+Arabic-language repository search. It was run this pass, across four Arabic queries plus Persian,
+Hebrew and Turkish, with every licence byte-read (method and counts: `agents/trending.md` `903-F5`).
+
+- 🟢 **The channel is populated, not empty.** Two MENA-origin education artefacts are real and were
+  **absent from this entire base**: `revolover00/Bakloriya-AI-SKILLS` (Egypt — **Egypt's complete
+  approved 2026/2027 curriculum**, all four stages, **300 units**, 28 MB) and
+  `SalehGNUTUX/GT-MISHKATKIDS` (**GPL-3.0**, offline, zero-inference, pushed 2026-11-18).
+- 🔴 **And it is commercially unusable at the top.** The highest-star Arabic education repository in
+  the channel (`MjeedBakr/Student-Success-Kit`, 67 ★) and the largest (Bakloriya, 28 MB) **both carry
+  no licence on any of 12 byte-read paths.** The ceiling for a *licensed* MENA education agent is
+  **3 ★**.
+- 🔴 **Saudi supply, counted against Saudi demand.** The Qiyas exam channel (`قدرات تحصيلي` —
+  Qudurat, Tahsili) returns **12 repositories in total, all 0 ★, none licensed.** Set that beside
+  this file's Saudi demand leg — 50 new curriculum units for 2026-27, 240,000 teachers — and the
+  gap is not a nuance: **the most aggressive public AI-in-education programme in the region has
+  essentially no open supply beneath it.**
+- 🟡 **Permissive in-language *corpora* do exist, and they are the asset.** Turkish
+  (`deeplearningturkiye/turkce-yapay-zeka-kaynaklari`, **2,432 ★, MIT**) and Persian
+  (`barnamenevisi/free-resources`, **1,297 ★, MIT**, maintained 2026-10-11) both dwarf anything in
+  Arabic, and both are content rather than software. See `repos/foundations.md`, new section.
+
+🔵 **What this changes about the EMEA offer.** The region's binding constraint is not ideas and not
+demand — it is that **MENA produces individuals where East Asia and Europe produce institutions**.
+Both MENA finds are single-maintainer, zero-fork projects; the comparable entries elsewhere come out
+of HKU's Data Intelligence Lab, Tsinghua, MIT Open Learning and Oak National Academy. The sellable
+asset into Gulf ministries is therefore **institutional engineering around existing local
+pedagogy** — licensing, evaluation, accessibility, procurement evidence, maintenance — not a
+tutor built from scratch, and not a localised import either. The Egyptian corpus is the proof that
+the pedagogy and the curriculum work already exists at national scale; what it lacks is everything
+that makes software deliverable.
+
+🟡 **A named EMEA framework this base does not hold: `DigComp 3.0`.** The EMEA leg returned it as
+the EU's **AI-literacy framework for primary and secondary education**, cited in the Council of the
+EU conclusions **ST-14902-2026 (29 October 2026)** — a document this file *already* cites, for the
+separate point about reducing dependency on non-European AI. **`DigComp 3.0` returns zero hits
+across this entire `intel/` tree.** It is recorded here as a **gap, not as a fact**:
+`ec.europa.eu` and `data.consilium.europa.eu` are refused at the egress proxy in this session
+(`403`), so its contents cannot be read and nothing about its requirements should be briefed from a
+search snippet. **If AI-literacy obligations are in scope for an EU engagement, this is the first
+document to obtain**, and obtaining it needs a session with open HTTP.
+
 ### APAC
 
 🟢 **Promoted in `p902` — two convening facts, plus the region's one dataset-scale supply row**
@@ -1655,6 +1700,22 @@ Cross-regional plays that do not depend on one jurisdiction.
   conference commentary. **Verify the exact wording before it goes in a client deck.**
 
 ## Declared gaps
+
+- 🟡 **`p903` ran all eight mandated legs and they produced *nothing this file did not already
+  hold* — recorded here because an unrecorded null result is indistinguishable from not having
+  looked.** The four global legs returned fifteen repositories, **every one already in the tree**
+  (checked against all 5,790 repository references in it). The four regional legs were *less*
+  precise than this file: the snippets gave "Vietnam's AI law, education in the high-risk list"
+  where this file holds **Law 134/2025/QH15 plus Decision 33/2026/QD-TTg and Decree
+  142/2026/ND-CP** with a 72-hour incident clock; "TEQSA required providers to submit action plans"
+  where this file holds **all 203 registered providers**; and the EU delay "not yet formally
+  adopted" where this file holds **Regulation (EU) 2026/1744** with its three-way date conflict
+  intact. 🔵 **The operative conclusion is about method, and `p902` half-anticipated it:** generic
+  search is now a **confirmation** channel for this base, not a discovery one. The channels that
+  still discover are the ones that read bytes — licence paths, curated-index audits (`902-F2`) and
+  **non-English repository search**, which is what `p903` spent its budget on and what produced
+  everything new in this pass. The two obvious untried language channels are **Urdu and
+  Indonesian**.
 
 - 🔴 **Eleven facts in this file were published in `p902` after sitting unpromoted in
   `agents/trending.md`.** `p901` scored the mandated research legs as a *null yield* by grepping each

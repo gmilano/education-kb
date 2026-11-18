@@ -4,6 +4,94 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p903) — **The non-English tier: four permissive, maintained education corpora with up to 2,432 ★, none of them anywhere in the live tree — and the national-curriculum corpus that is 28 MB of content with no grant at all.**
+
+**Channel:** Arabic, Persian, Hebrew and Turkish `gh api search/repositories` — the leg
+`agents/top.md` named as untried and never ran — with **every licence byte-read from
+`raw.githubusercontent.com` across 12 candidate paths** (`main`+`master` × six filenames) and
+graded on the title line, never on a bare SPDX token (`902-N2`). Full method, the channel
+quality grading and the search-leg null yield are in `agents/trending.md` `p903`.
+
+### 🟢 `903-R1` The permissive non-English education corpora — **absent from the live tree, four rows**
+
+Checked against all **5,790** unique repository references in the live tree: **none of these four
+appears anywhere in it.**
+
+| Repo | ★ | Forks | Licence (byte-read) | Pushed | What it is | Region |
+|---|---|---|---|---|---|---|
+| https://github.com/deeplearningturkiye/turkce-yapay-zeka-kaynaklari | **2,432** | — | **MIT** — `MIT License`, 1,079 B @ `master/LICENSE` | 2021-11-03 | The Turkish-language deep-learning / ML education corpus. Highest-star non-English education repo this base has measured. 🔴 **Idle since 2021** — a corpus to mine, not a dependency to track. | EMEA — Türkiye |
+| https://github.com/barnamenevisi/free-resources | **1,297** | — | **MIT** — `MIT License`, 1,069 B @ `master/LICENSE` | **2026-10-11** | Persian-language archive of free programming-education resources, **actively maintained**, framed by its own README as "everyone should be able to learn to program". The permissive in-language corpus for an Iranian or Persian-speaking diaspora engagement. | EMEA — Iran |
+| https://github.com/m7medVision/nakhlah.js | **25** | 6 | **MIT** — `MIT License`, 1,064 B @ `main/LICENSE.md` | 2025-08-02 | Arabic-language JavaScript learning platform — a **working localised learning application** under MIT, 1,395 KB. Small, but it is the only permissively-licensed Arabic *application* (not corpus) found in the whole channel. | EMEA |
+| https://github.com/MjeedBakr/Student-Success-Kit | **67** | 15 | 🔴 **none** — `404` on all 12 byte-read paths | 2026-02-14 | Saudi computing-student reference kit (*كنز طالب الحاسب*). The **highest-star Arabic-language education repo in the channel**, and it carries no grant. Read it; do not ship it. | EMEA — Saudi Arabia |
+
+🔵 **The row that matters is the pattern across them.** The popular, permissive, maintained
+non-English education assets are **corpora and curricula**. The *agents* in the same languages top
+out at **6 ★** and are mostly unlicensed (`agents/trending.md` `903-F2`, `903-F5`). For a
+localisation engagement that inverts the usual build-vs-adopt calculus: **adopt the in-language
+corpus under MIT, build the agent tier** — there is nothing to adopt at the agent tier in any of
+these four languages.
+
+### 🔴 `903-R2` `revolover00/Bakloriya-AI-SKILLS` — 300 curriculum units, 28 MB, **no licence on any path**
+
+| Field | Measured |
+|---|---|
+| Repo | https://github.com/revolover00/Bakloriya-AI-SKILLS |
+| ★ / forks | **6 ★** / 0 |
+| Licence | 🔴 **none — `404` on all 12 byte-read candidate paths** |
+| Created / pushed | 2026-10-17 / 2026-11-09 |
+| Size | **28,402 KB** |
+| Region | **EMEA — Egypt** |
+
+Egypt's entire approved **2026/2027** curriculum across all four stages — Egyptian Baccalaureate
+(78 units), General Secondary (102), Preparatory (42), Primary grades 1–6 (78): **300 units**, each
+subject sharded into `SKILL.md` + `glossary.md` + `patterns.md` + `cheatsheet.md` + `chapters/`.
+It ships **no software** — an `AGENTS.md` routing guide at a raw URL that any model reads to
+navigate `skills/<stage>/<grade>/<term>/<subject>/`.
+
+🔴 **It belongs in this file and not in `repos/foundations.md`, and the licence is the reason.**
+A foundation is something a client build rests on; 28 MB of curriculum content under default
+all-rights-reserved copyright cannot be vendored, redistributed or shipped. What transfers is the
+**decomposition schema** — the most complete worked example of national-curriculum sharding this
+base has measured — and it transfers as a design, re-authored against a corpus the client owns or
+licenses. Full reading in `agents/trending.md` `903-F2`; the pattern that consumes it is
+`compose/patterns.md` **P22**.
+
+### 🟡 `903-R3` `SalehGNUTUX/GT-MISHKATKIDS` — GPL-3.0, pushed today, **zero inference at runtime**
+
+| Field | Measured |
+|---|---|
+| Repo | https://github.com/SalehGNUTUX/GT-MISHKATKIDS |
+| ★ / forks | **3 ★** / 0 |
+| Licence | 🟡 **GPL-3.0** — `GNU GENERAL PUBLIC LICENSE`, 34,819 B @ `main/LICENSE` |
+| Created / pushed | 2026-06-16 / **2026-11-18 (today)** |
+| Size | **358,758 KB** (~350 MB — local Qur'anic recitation audio dominates) |
+| Region | **EMEA — MENA, Arabic-language** |
+
+Ages 4–10, **inverted pedagogy**: the child teaches an amnesiac robot (the protégé effect, named as
+such in the README). Declared properties: **fully local, offline, no AI at runtime, no cost, the
+child's data never leaves the device.** Ships as installable PWA, GNU/Linux `AppImage`/`DEB`/`RPM`,
+and Android `APK`. **GPL-3.0 — a reference implementation and a deployable system, not a component
+for a closed derivative.** It is also promoted to `verticals/solutions.md` this pass, because it is
+a thing a client can stand up rather than a library.
+
+### 🟡 `903-R4` Census rows — real addresses, **published as counts, never as usable rows**
+
+Recorded so a later pass does not re-chase them, and because an uncounted vacuum reads as coverage.
+
+| Repo | ★ | Licence | Why it earns no row |
+|---|---|---|---|
+| https://github.com/ADELSPX/mawheb | 0 | 🔴 none (12 paths) | *موهب* — study plans for the full Saudi Qiyas battery (Qudurat, Tahsili, Ma'rifa). On-target, unlicensed, zero traction. |
+| `hjr24r7269-crypto/naqat` | 0 | 🔴 none (12 paths) | Nafes/Qudurat/Tahsili training platform. **Indexed but unreadable** — `404` on `README` across both branches. See gate `903-G1`. |
+| https://github.com/NHLOCAL/WatchZekal | 16 | 🔴 **CC BY-NC-4.0** (19,346 B) | Hebrew AI-built language-learning video sets. GitHub reports `NOASSERTION`; **the bytes say NonCommercial.** The `-NC` clause bars studio delivery outright. `903-F4`. |
+| https://github.com/aviveldan/datagov-mcp | 146 | **MIT** | Israel Government Data MCP server — real, permissive, **well-built and not education.** Logged because the Hebrew channel's strongest result is civic data, which is itself the channel's verdict. |
+| https://github.com/technamooz/technamooz-free-Ai | 37 | **MIT** | Persian model-access plumbing, not education. Same verdict shape as above. |
+
+**The Saudi supply number, stated once.** The Saudi exam channel (`قدرات تحصيلي`) returns
+**12 repositories in total — every one at 0 ★, every one unlicensed.** Against a demand side
+`intel/market.md` records as 50 new curriculum units for 2026-27 and **240,000 teachers in
+training**, that is the sharpest build-not-adopt signal in this base.
+
+
 ## `2026-11-18` (p902) — **a whole teaching tier was missing: notebooks. Six repos, none of them anywhere in the live tree, and two of them carry licences the index refuses to name. Plus the largest public education dataset on earth, which no client can ship.**
 
 **Channel:** five curated indexes audited offline (see `agents/trending.md` p902 `902-F2` for the

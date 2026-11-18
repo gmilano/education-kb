@@ -10,7 +10,9 @@ Concrete recipes. Each names the exact repos, how they wire together, the licenc
 the result, and a realistic build estimate. Every repo referenced is verified in
 `agents/top.md`, `repos/foundations.md` or `verticals/solutions.md`.
 
-**Twenty patterns, plus the G1 licence gate added in p897** (**P20 added in `p901`** — the first end-to-end permissive *synchronous* pattern in this file, unlocked by `p901`'s verification of `jitsi/jitsi-meet` at Apache-2.0) (**P19 added in `p900`** — the
+**Twenty-two patterns, plus the G1 licence gate added in p897** (**P22 added in `p903`** — the
+national-curriculum corpus pattern, built from the Arabic-language channel's finding that the
+curriculum exists at national scale and carries no grant; see `intel/trends.md` **T26**) (**P20 added in `p901`** — the first end-to-end permissive *synchronous* pattern in this file, unlocked by `p901`'s verification of `jitsi/jitsi-meet` at Apache-2.0) (**P19 added in `p900`** — the
 first end-to-end permissive pattern in this file that is not offline-first, built entirely from
 rows promoted out of this base's own unshelved ledger) (**P16 added in `p898`**) that runs ahead of all of them.
 **p895 added P14** — offline-first literacy delivery on the one Africa-origin
@@ -1626,3 +1628,105 @@ higher ed, and the one region where the client may already have a frontier gener
 rest-of-region market reality, but **BinderHub assumes bandwidth and a Kubernetes cluster**; where
 neither holds, use `P14`'s offline-first pattern instead and keep only `nbgrader` + `nbval` as a
 local marking tier.
+
+## P22 — National-curriculum corpus as an agent-addressable skill tree, re-authored so the client owns the grant (added p903)
+
+**When a client asks for this.** A ministry, a national exam board or a large private school group
+has the curriculum — syllabus documents, approved textbooks, past papers — and wants an AI tutor
+over *their* curriculum, not a generic one. `p903` found this already being done at national scale
+and done in a way no studio can deliver: `revolover00/Bakloriya-AI-SKILLS` carries **Egypt's
+complete approved 2026/2027 curriculum, 300 units across four stages, 28 MB**, with **no licence on
+any of 12 byte-read paths** and no software at all. This pattern takes **its schema** — which is
+free to copy — and supplies everything it lacks. See `intel/trends.md` **T26**.
+
+### What you copy, and what you must not
+
+🟢 **Copy the decomposition schema.** It is the most complete worked example of national-curriculum
+sharding this base has measured, and a directory structure is not the copyrightable part:
+
+```
+skills/<stage>/<grade>/<term>/<subject>/
+    SKILL.md        # routing index for the subject: the chapter tree
+    glossary.md     # terms and core concepts
+    patterns.md     # exam question patterns + solution keys
+    cheatsheet.md   # the night-before summary
+    chapters/ch01/  # one directory per teaching unit
+             ch02/
+```
+
+🔴 **Do not copy the content, and do not vendor the repository.** 28 MB under default
+all-rights-reserved copyright. Run **`G1`** before anything else; the corpus licence is the single
+question that decides whether this engagement is an integration or a re-authoring, and for every
+MENA corpus `p903` measured the answer was re-authoring.
+
+🔴 **Do not copy its runtime, because it does not have one.** Its only control against hallucination
+is a sentence in a prompt — *stay inside the syllabus, do not mix grades or terms.* That is not a
+compliance story under EU Annex III or Vietnam's **Decision 33/2026/QD-TTg**, and it is the gap this
+pattern's middle tier fills.
+
+### The stack
+
+| Tier | Component | Licence | Why this one |
+|---|---|---|---|
+| Corpus | **Client-owned curriculum**, re-authored into the schema above | Client's | The grant problem solved at the source. Where the client has no digital corpus, the permissive in-language assets in `repos/foundations.md` seed it: https://github.com/deeplearningturkiye/turkce-yapay-zeka-kaynaklari (**MIT**, 2,432 ★, Turkish) and https://github.com/barnamenevisi/free-resources (**MIT**, 1,297 ★, Persian) |
+| Path-scoped retrieval | https://github.com/qdrant/qdrant | Apache-2.0 | **This is the tier Bakloriya does not have.** Payload filtering enforces `stage`/`grade`/`term`/`subject` as a *hard* filter, so "do not mix grades or terms" becomes a query constraint instead of a request |
+| Prerequisite structure | https://github.com/HKUDS/LightRAG | MIT | A curriculum *is* a prerequisite graph; `SKILL.md`'s chapter tree is the edge list. Use it so a stuck learner is routed backwards to the missing prerequisite, not re-shown the same unit |
+| Agent tier | https://github.com/langchain-ai/langgraph or https://github.com/pydantic/pydantic-ai | MIT | Explicit nodes per teaching move — explain, worked example, graded probe, distractor explanation — mirroring what `patterns.md` already encodes per subject |
+| Model serving | https://github.com/ollama/ollama (on-prem) or https://github.com/vllm-project/vllm (campus scale) | MIT / Apache-2.0 | Ministry work is data-residency work. Keep inference inside the client's boundary |
+| Durable loops | https://github.com/temporalio/temporal | MIT | A term-long tutoring relationship is a long-running workflow, not a chat session |
+| Delivery, connected | Moodle / Open edX over **LTI 1.3** | integrate, never fork | `G1`. The corpus and agent tier stay yours across the interface |
+| Delivery, offline | https://github.com/learningequality/kolibri (MIT) or https://github.com/Crosstalk-Solutions/project-nomad (Apache-2.0) | MIT / Apache-2.0 | Where connectivity is the binding constraint, ship the corpus to the device and keep the agent tier optional |
+| Audit trail | xAPI / LRS tier in `repos/foundations.md` | permissive | Annex III and Decision 33/2026/QD-TTg both want *per-learner, per-decision* records. Emit them from the agent nodes, not from the LMS |
+
+### The zero-inference tier, and why it is a separate decision
+
+`p903` also verified https://github.com/SalehGNUTUX/GT-MISHKATKIDS (**GPL-3.0**, byte-read 34,819 B,
+pushed 2026-11-18): an Arabic early-years system that is **fully local, offline, and runs no AI at
+runtime**, shipped as PWA, `AppImage`/`DEB`/`RPM` and Android `APK`, with the child's data never
+leaving the device. Its loop is inverted — the child teaches an amnesiac robot (the protégé effect).
+
+🟢 **Take the architecture as a design, for the early-years band only.** For ages 4–10 a
+zero-inference build is usually *better*: no API bill, no egress, nothing to sign a DPA over, and no
+hallucination surface. Pair it with the corpus tier above — the corpus drives a connected tutor for
+secondary, a zero-inference consolidation loop for primary.
+🔴 **GPL-3.0: study and reimplement, do not embed.** It is deployable and forkable as a system; it is
+not a component for a closed deliverable. And its content sits in an explicit Islamic doctrinal
+frame with Qur'anic recitation as a first-class module — portable architecture, non-portable content.
+
+### Build estimate
+
+| Phase | Work | Duration |
+|---|---|---|
+| 0 | **`G1` licence pre-flight on the client's curriculum corpus** and on every seed asset | 3–5 days |
+| 1 | Schema adoption + ingestion of one stage/one term as the vertical slice | 2–3 weeks |
+| 2 | Path-scoped retrieval (Qdrant payload filters) + prerequisite graph from `SKILL.md` trees | 2–3 weeks |
+| 3 | Agent tier: teaching-move nodes, distractor explanation, graded probes | 3–4 weeks |
+| 4 | Audit trail, evaluation harness, human-review console (Appsmith) | 3–4 weeks |
+| 5 | Corpus scale-out to remaining stages and terms — **the long pole, and it is curriculum-writing labour, not engineering** | 8–16 weeks, parallelisable |
+| | **Engineering total to first regulated pilot** | **10–14 weeks** |
+
+🔵 **Price phase 5 honestly and separately.** Bakloriya's 300 units are the measurement of what the
+content tier actually costs: a single maintainer produced them in under a month using models, which
+means the labour is real but model-assisted, and a client who already has approved syllabus
+documents is most of the way there. **The engineering is the 10–14 weeks; the corpus is a content
+programme**, and conflating them is how this kind of engagement is underquoted.
+
+### Regional notes
+
+🟢 **EMEA (MENA first).** This is the pattern for the Gulf and North Africa. `p903` measured the
+supply side: Saudi Arabia's Qiyas channel returns **12 repositories, all 0 ★, none licensed**,
+against a demand side of 50 new curriculum units for 2026-27 and **240,000 teachers in training**;
+Egypt has a complete national corpus with no grant. **There is nothing to adopt and the demand is
+funded.** What a ministry is buying is the institutional engineering MENA's single-maintainer
+projects do not have — licensing, evaluation, accessibility, audit trail, maintenance. Keep
+`DigComp 3.0` on the EMEA checklist as an open question (`intel/market.md`): if AI-literacy
+obligations are in scope, obtain the document before quoting.
+🟡 **APAC.** The same stack, with the compliance tier promoted to the front: Vietnam's
+**Decision 33/2026/QD-TTg** names education uses as high-risk with a **72-hour incident clock** and
+pre-deployment registration, which makes the audit trail a phase-1 deliverable rather than phase 4.
+🟡 **LATAM.** The corpus form fits the region's Spanish/Portuguese localisation need, and
+`intel/market.md`'s LATAM supply finding is unchanged — Brazil-only, two small repos. Use the
+offline delivery row, and pair with Latam-GPT where sovereign inference is the ask.
+🔵 **North America.** The driver is not curriculum supply but **statute**: AI-literacy standards and
+model-policy deadlines (NC Session Law 2026-41, Idaho SB 1227) create demand for exactly the audit
+and evaluation tiers above. The corpus is usually the district's existing scope-and-sequence.

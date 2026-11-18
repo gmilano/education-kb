@@ -4,6 +4,258 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` (p903) — **The Arabic channel this file has called "untried" for three passes was run. It is not empty — it is populated, unlicensed, and it contains the largest national-curriculum agent-skill corpus this KB has measured in any language.**
+
+**Channel:** the eight mandated WebSearch legs (four global, four regional), then the one leg
+`agents/top.md` named and never ran — **Arabic-language `gh api search/repositories`, the `elimu`
+Swahili trick applied to `تعليم`** — extended to Persian, Hebrew and Turkish. Licences **byte-read
+from `raw.githubusercontent.com`**, 12 candidate paths per repo (`main`+`master` × `LICENSE`,
+`LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`, `LICENSE-MIT`). Network posture re-tested at the
+top of the pass and **unchanged from p902**: `raw` `200`, `gh api` live, **every non-GitHub host
+refused at the egress proxy** (`unesco.org` → `403`, `arxiv.org` → `403`). Regional legs are
+therefore search snippets, not primary texts.
+
+### 🔴 `903-F1` The eight mandated search legs returned **zero facts this tree did not already hold** — and in four cases *less* detail than it holds
+
+This is the second consecutive null yield from generic search, and it is now worth recording as a
+property of the base rather than an accident of the queries. Measured: every repository returned by
+the four global legs — `THU-MAIC/OpenMAIC`, `withmarbleapp/os-taxonomy`,
+`patchy631/ai-engineering-hub`, `rasbt/LLMs-from-scratch`, `microsoft/ai-agents-for-beginners`,
+`huggingface/agents-course`, `HKUDS/DeepTutor`, `langflow-ai/langflow`, `frappe/education`,
+`gibbonedu/core`, `francoisjacquet/rosariosis`, `apache/ofbiz`, `dolibarr/dolibarr`,
+`idempiere/idempiere`, `ishandutha2007/Awesome-School-Management` — **is already in the live tree**,
+checked against all 5,790 unique repository references in it.
+
+The four regional legs were worse than redundant. Where the snippets and this base disagree, **the
+base is more precise**:
+
+| Regional leg returned | What `intel/market.md` already holds |
+|---|---|
+| "Vietnam's Law on AI took effect March 1, 2026; education in the high-risk list" | **Law No. 134/2025/QH15** *plus* **Decision 33/2026/QD-TTg** (signed 30 Jun 2026, effective 15 Aug 2026) and **Decree 142/2026/ND-CP** — four named education uses, content labelling, 72-hour incident clock |
+| "TEQSA has required higher education providers to submit action plans" | **all 203 registered providers**, with the published instrument named |
+| "EU postponed stand-alone high-risk obligations to 2 December 2027 (not yet formally adopted)" | Regulation **(EU) 2026/1744**, OJ 24 Jul 2026, applied since 27 Jul 2026 — and the **three-way date conflict** recorded rather than averaged |
+| "a 2026 Universidad de los Andes study counted 716 instruments across 23 countries" | same figure, already carried at `market.md:1423` and `:1500` |
+
+🔵 **Implication for method, stated plainly:** generic search is now a *confirmation* channel for
+this base, not a discovery channel. The discovery channels that still yield are the ones that read
+bytes — licence paths, curated-index audits (p902), and **non-English search**, below. The honest
+regional statement is **"searched, nothing new"**, not silence, and it is written into
+`intel/market.md` as such.
+
+### 🟢 `903-F2` `revolover00/Bakloriya-AI-SKILLS` — Egypt's entire approved 2026/27 curriculum as an agent skill tree. **300 units, 28 MB, and no licence at all.**
+
+The exam-name channel did what the generic channel could not. `الثانوية العامة` ("General
+Secondary", Egypt's Thanaweya Amma) returned **525 hits**, and at the top of them sat the repository
+three passes of English-language search never surfaced.
+
+| Field | Measured |
+|---|---|
+| Repo | https://github.com/revolover00/Bakloriya-AI-SKILLS |
+| Stars / forks | **6 ★** / 0 forks |
+| Licence | 🔴 **none — `404` on all 12 byte-read candidate paths** |
+| Created / pushed | 2026-10-17 / 2026-11-09 |
+| Size | **28,402 KB** |
+| Origin | **EMEA — Egypt** |
+
+**What it is.** Every currently approved Egyptian curriculum for school year **2026/2027** across
+**all four stages** — the new Egyptian Baccalaureate, General Secondary (Thanaweya Amma),
+Preparatory and Primary — each grade, each of the two terms, converted into teaching skills that
+explain a lesson, solve problems step by step, and test the student with graded questions (easy,
+medium, hard) **while explaining why the right answer is right and why each distractor is wrong**.
+Its own completion table, read from the README:
+
+| Stage | Path | Units complete |
+|---|---|---|
+| Egyptian Baccalaureate | `skills/baccalaureate/` | 78 |
+| General Secondary | `skills/general-secondary/` | 102 |
+| Preparatory | `skills/preparatory/` | 42 |
+| Primary (grades 1–6) | `skills/primary/` | 78 |
+| **Total** | | **300 units, "no chapter missing"** |
+
+Each subject carries `SKILL.md` (routing index), `glossary.md`, `patterns.md` (exam question
+patterns and solution keys), `cheatsheet.md` and a `chapters/` directory of independent units.
+
+🔵 **Why this matters more than its 6 stars.** This base has carried a watch item —
+*"the tutor as an agent **skill**"* (`agents/top.md`, "Emerging pattern worth naming") — with a
+1,000★ threshold and a measured cohort ceiling of **118 ★** (`boyuchengz/canvas-mcp`), concluding
+the form *"shortens time-to-pilot and belongs in the demo kit; it does not belong on a client
+roadmap yet."* **`Bakloriya-AI-SKILLS` is that form executed against a national curriculum at full
+scale, and it ships no application at all.** There is no server, no model, no framework: there is an
+`AGENTS.md` routing guide at a raw URL, and a prompt the student pastes into *any* model, which then
+navigates `skills/<stage>/<grade>/<term>/<subject>/` on its own. The README's instruction is
+explicit — read the raw `AGENTS.md`, resolve the path, open `SKILL.md`, then the chapter, and
+**stay inside the syllabus** (*"دون إضافة خارج المنهج أو تخليط بين الصفوف أو الترمن"* — nothing
+outside the curriculum, no mixing of grades or terms). The anti-hallucination control is a
+*corpus-scoping instruction*, not a retrieval system.
+
+🔴 **And it is commercially unusable.** 28 MB and 300 units of curriculum content with **no grant on
+any byte-read path**. Default copyright: all rights reserved. It cannot be vendored, redistributed,
+or shipped inside a client deliverable. Its value to a studio is **as the reference design for
+curriculum decomposition** — the `SKILL.md` / `glossary` / `patterns` / `cheatsheet` / `chapters`
+split is the most complete worked example of national-curriculum sharding this base has seen — and
+as **proof that the demand exists in Egypt**. The build-vs-adopt answer is **build**, and the
+licence is the reason.
+
+### 🟢 `903-F3` `SalehGNUTUX/GT-MISHKATKIDS` — GPL-3.0, pushed today, and it runs **no AI at runtime**. The design this base said EduNaija got wrong.
+
+| Field | Measured |
+|---|---|
+| Repo | https://github.com/SalehGNUTUX/GT-MISHKATKIDS |
+| Stars / forks | **3 ★** / 0 forks |
+| Licence | 🟡 **GPL-3.0** — byte-read, 34,819 B, title line `GNU GENERAL PUBLIC LICENSE` |
+| Created / pushed | 2026-06-16 / **2026-11-18 (today)** |
+| Size | **358,758 KB** (~350 MB; local Quran recitation audio dominates) |
+| Origin | **EMEA — Arabic-language, MENA** |
+
+**Inverted pedagogy, stated as the product thesis.** *مِشكاةُ الطفلِ والآليّ* ("Mishkat — The Child
+& the Robot"), for ages **4–10**: **the child is the teacher.** The child re-teaches a robot friend
+who has lost his memory, and as each memory is restored, part of the robot lights up. The README
+names the mechanism outright — *"أثر المُتعلِّم: نتعلّمُ أعمقَ ما نُعلّمه لغيرنا"* (**the protégé
+effect**: we learn most deeply what we teach to others) — and pairs it with a deliberate emotional
+design: *"الطفلُ خبيرٌ واثق، والآليّ يُخطئ"* (the child is the confident expert; the robot is the
+one who errs).
+
+🔵 **The delivery properties are the finding.** Declared in its own header:
+**محليّ بالكامل · يعمل دون اتصال · بلا ذكاء اصطناعي وقت التشغيل · بلا تكلفة · بيانات الطفل لا تغادر الجهاز**
+— *fully local · works offline · **no AI at runtime** · no cost · the child's data never leaves the
+device*. Shipped **today** as PWA (installable, offline), GNU/Linux `AppImage`/`DEB`/`RPM`, and
+Android `APK`. Hybrid by design: digital app plus a hand-done physical ritual and printables,
+explicitly short screen time.
+
+Set that against this base's own standing criticism of `Eddy-Emmanuel/EduNaija-LLM`
+(`agents/top.md`): *"Grounding on general web search and requiring OpenAI + Tavily connectivity is
+the wrong design for the one region where offline capability decides deliverability."*
+**`GT-MISHKATKIDS` is the counter-example, and it is MENA-origin, maintained today, and licensed.**
+The licence is GPL-3.0, so it is a reference implementation and a deployable system — **not** a
+component for a closed derivative. Caveat for any engagement: the content is built on an explicit
+**Islamic doctrinal frame** (*إطارٌ إسلاميٌّ عقديّ*), with Qur'anic recitation as a first-class
+module; that is a feature for Gulf and North African deployments and a scoping decision everywhere
+else. The architecture — local-first, zero-inference, protégé-effect loop — is **portable
+independently of the content**, and that is how `compose/patterns.md` **P22** takes it.
+
+### 🔴 `903-F4` A licence trap in a new language channel: GitHub says `NOASSERTION`, the bytes say **NonCommercial**
+
+`NHLOCAL/WatchZekal` (**16 ★**, Hebrew, AI-built YouTube videos for language learning, 115,878 KB)
+reports `NOASSERTION` from `gh api search/repositories` — this base's SPDX channel — **and its
+`LICENSE` byte-read is `Attribution-NonCommercial 4.0 International`, 19,346 B.** A `-NC` grant bars
+exactly the use a studio engagement is: commercial delivery.
+
+🔵 This is **T25** (`intel/trends.md` — the licence trap moving from code into data and content
+assets, where no index can see it) reproduced in a channel T25 was not derived from. The operative
+rule is unchanged and now has a second independent confirmation: **`NOASSERTION` is not a licence
+finding, it is an instruction to read the bytes.** Compare `withmarbleapp/os-taxonomy`, where the
+same discipline produced `ODbL-1.0` on a curriculum graph.
+
+### 🟡 `903-F5` The channel is quantified, and the usable part of it is the **exam-name** sub-channel
+
+Generic Arabic education terms behave exactly like the `JAMB` channel this base already graded
+unusable — high volume, dominated by programming tutorials, Qur'an apps and awesome-lists:
+
+| Query | `total_count` | Verdict |
+|---|---|---|
+| `منصة تعليمية` (educational platform) | **3,468** | 🔴 unusable — top hits are developer awesome-lists |
+| `تعليم` (education) | **2,302** | 🔴 unusable — coding tutorials dominate |
+| `معلم` (teacher) | **1,828** | 🔴 unusable — also collides with Persian text |
+| `منهج` (curriculum) | **728** | 🔴 unusable — exam-prep memoirs (CISSP, CEH, ITIL) |
+| `مساعد تعليمي` (educational assistant) | **268** | 🟡 thin but on-target; ceiling **67 ★**, all unlicensed |
+| `تعليم ذكاء اصطناعي` (education + AI) | **148** | 🟡 on-target, ceiling **67 ★** |
+| `الثانوية العامة` (Egypt, Thanaweya Amma) | **525** | 🟢 **the productive channel — yielded `903-F2`** |
+| `قدرات تحصيلي` (Saudi Qiyas: Qudurat, Tahsili) | **12** | 🟢 precise, and **the gap is now counted** |
+
+🔵 **The Saudi result is the most decision-useful number in this pass.** `قدرات تحصيلي` returns
+**twelve repositories in total**, and **every one is at 0 ★ with no licence** — including the two
+that are squarely on-target: `ADELSPX/mawheb` ("موهب", smart study plans for the Qiyas battery —
+Qudurat, Tahsili, Ma'rifa; **no licence**, `404` on 12 paths) and `hjr24r7269-crypto/naqat` (a
+training platform for **Nafes, Qudurat and Tahsili**; **no licence**). `intel/market.md` carries a
+dedicated Saudi **demand** leg — 50 new curriculum units for 2026-27, **240,000 teachers** in
+training. The supply side against that demand is **twelve repositories, zero stars, zero
+licences.** That is not an absence of evidence; it is a measured, quantified vacuum, and it is the
+clearest build-not-adopt signal in this file.
+
+### 🔴 `903-F6` The inverse of p900's false-absence class: **indexed, but unreachable**
+
+p900 established that `search/repositories` reporting non-existence does not mean an address fails
+to resolve — **44% of 50 such addresses returned `200` on `raw`**. This pass found the mirror image.
+`hjr24r7269-crypto/naqat` is **present in the search index** with full metadata (0 ★, no licence,
+pushed 2026-07-21) and returns **`404` on `README.md`, `readme.md` and `README.rst` across both
+`main` and `master`**, and `404` on all 12 licence paths. Indexed, described, and not readable on
+the raw channel.
+
+🔵 **The two-channel rule still holds; its reading changes.** Neither channel is authoritative
+alone, in *either* direction. A row is publishable when **at least one channel resolves** and the
+column states which one; `naqat` is published in this file only as a **census count**, never as a
+usable row, because nothing about it can be read. Recorded as gate **`903-G1`**.
+
+### 🟢 `903-F7` Permissive, high-star, non-English education corpora — absent from this tree, and none of them are agents
+
+The non-English legs also returned the largest permissively-licensed education repositories this
+base has not been carrying. All licences byte-read:
+
+| Repo | ★ | Licence (byte-read) | Pushed | What it is | Region |
+|---|---|---|---|---|---|
+| https://github.com/deeplearningturkiye/turkce-yapay-zeka-kaynaklari | **2,432** | **MIT** (1,079 B) | 2021-11-03 | Turkish-language deep-learning and ML curriculum corpus | EMEA — Türkiye |
+| https://github.com/barnamenevisi/free-resources | **1,297** | **MIT** (1,069 B) | 2026-10-11 | Persian-language free programming-education archive, actively maintained | EMEA — Iran |
+| https://github.com/m7medVision/nakhlah.js | **25** | **MIT** (1,064 B) | 2025-08-02 | Arabic-language JavaScript learning platform — a *working* localised learning app | EMEA |
+| https://github.com/MjeedBakr/Student-Success-Kit | **67** | 🔴 **none** (12 paths) | 2026-02-14 | Saudi computing-student reference kit; highest-star Arabic education repo found | EMEA |
+
+🔵 **Read the pattern, not the rows.** The permissive, popular, maintained non-English education
+assets are **corpora and curricula** — not agents. The agents in these languages are at 0–6 ★ and
+mostly unlicensed. That is the localisation market stated as a measurement: **the content exists
+permissively in-language; the agent tier over it does not exist at all.** It is the same
+build-vs-adopt verdict p894 reached via `UniTime` and p895 reached via `elimu-ai/webapp`, arriving
+now from a third direction — and it is why `compose/patterns.md` **P10** treating language and
+curriculum corpus as the swappable parts is the right shape.
+
+### 🔴 `903-G2` A verification channel that looks like a 404 and is not: `gh api repos/{owner}/{repo}` is **scope-blocked in this session**
+
+Found while re-verifying every address written in this pass. The per-repository endpoint returns, for
+**every** slug tried — including `ollama/ollama`, `qdrant/qdrant` and `learningequality/kolibri`,
+repositories this base has carried and byte-verified for many passes:
+
+```
+{"message":"GitHub access to this repository is not enabled ...
+```
+
+🔵 **That is this session's repository-scope restriction, not a statement about the repository.**
+The message is returned identically for a repository that exists, a repository that does not, and a
+repository that is merely out of scope — so **`repos/{owner}/{repo}` carries no existence
+information at all here** and must never be read as absence. Both working channels were unaffected
+and agreed on all ten addresses: `search/repositories` (a search endpoint, not a per-repo read)
+returned `total=10` with matching stars and SPDX for every one, and `raw.githubusercontent.com`
+returned `200` on a README for all ten.
+
+**Why this belongs beside `903-F6` and p900's false-absence class.** This base now has three
+distinct ways an existence check can lie: a repository **absent from the search index but readable
+on raw** (p900, 44% of 50 addresses), a repository **indexed but unreadable on raw** (`903-F6`,
+`naqat`), and now an **endpoint that reports access failure in the grammar of absence** for
+everything, including what is demonstrably present. 🔵 **The operative rule is unchanged and
+reinforced: existence claims in this base come from `search/repositories` and
+`raw.githubusercontent.com`, and from nothing else.** Any future pass that reaches for
+`repos/{owner}/{repo}` and reads its error as a 404 will retract rows that are fine.
+
+### What `p903` did **not** find
+
+- **No Gulf-origin agent with a licence.** Twelve repositories in the Saudi exam channel, zero
+  licensed. The UAE returned nothing on the supply side in any language tried.
+- **No Hebrew-language education *agent*.** `חינוך` returns **258** hits; the top of the channel is
+  civic-data MCP work (`aviveldan/datagov-mcp`, **146 ★**, **MIT**, Israel Government Data — real,
+  permissive, and **not education**). The one education-adjacent find is the `-NC` trap in `903-F4`.
+- **No Persian or Turkish education agent.** Both channels are large (1,314 and 7,159) and both top
+  out in *curriculum corpora*, not agents. `technamooz/technamooz-free-Ai` (**37 ★**, MIT, Iran) is
+  model-access plumbing, not education.
+- **`DigComp 3.0` was named by the EMEA leg and this base does not hold it** — zero hits across
+  `intel/`. It is the EU's AI-literacy framework for primary and secondary education, cited in
+  Council conclusions **ST-14902-2026**, which `intel/market.md` *already* cites for a different
+  point. Recorded in `intel/market.md` as a **named gap**, not as a fact: `ec.europa.eu` and
+  `data.consilium.europa.eu` are blocked at the egress proxy, so it cannot be read this pass.
+- **Still no November 2026 launch newer than OpenMAIC `v1.4.2`** (2026-11-09) — except that
+  `GT-MISHKATKIDS` pushed **today**, which is activity, not a release artefact.
+- **Star re-measurement was deliberately skipped.** `agents/top.md`'s cadence note stands: the
+  largest intra-day move across ~30 tracked repos was +21 stars on a 60,000-star repo. The full
+  sweep remains due **2026-11-19**; this pass spent its call budget on the untried language channel
+  instead, which is what the cadence note asks for.
+
+
 ## `2026-11-18` (p902) — **p901's "null yield" was an artifact of the surface it measured against: 11 of 19 facts from the same eight legs are absent from the files an engagement actually reads. And the growth method p901 recommended would have imported three repositories that do not exist.**
 
 **Channel:** the eight mandated WebSearch legs (four global, four regional); `raw.githubusercontent.com`

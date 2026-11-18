@@ -156,7 +156,7 @@ BSD-3), deterministic marking (`nbval`, BSD-3) and content-as-text (`jupytext`, 
 permissive, with no enterprise carve-outs** — compare the LMS table above, where the incumbents are
 AGPL/GPL. 🔵 **Delivery consequence: a client in a CS or data-science faculty can be given a
 classroom whose derivative they own outright**, which is not true of any Moodle or Open edX
-engagement. The library tier is in `repos/foundations.md`; the wiring is `compose/patterns.md` **P21**.
+engagement. The library tier is in `repos/foundations.md`; the wiring is `compose/patterns.md` **P22**.
 
 ## Study tools, practice and assessment delivery
 
@@ -181,6 +181,7 @@ deliverable at all.
 | **Project NOMAD** | https://github.com/Crosstalk-Solutions/project-nomad | Apache-2.0 | Offline-first knowledge/education server. Permissive alternative to the above. |
 | **Kolibri** | https://github.com/learningequality/kolibri | MIT | See LMS table — designed offline-first from the start. |
 | **elimu.ai** | https://github.com/elimu-ai/webapp | MIT (byte-read `main/LICENSE`, 1,065 B) | **Restored p895; region EMEA.** Early-grade literacy for **out-of-school children**, Sub-Saharan (Tanzania/Kenya). 41 ★ / **67 forks**, pushed **2026-11-17**. **Africa-origin and permissive — the only such platform this KB has verified.** The component that matters here is https://github.com/elimu-ai/appstore (MIT, 29 ★): **installs and updates APKs with no app store and no network**, which is a harder problem than offline content and is already solved. `launcher` (MIT, 9 ★) enforces an EGRA/EGMA path. 🔴 **Exclude `ml-authentication` (face-recognition student login — biometric identification of children).** 🟡 Licence and metadata verified; **source not read** (`Gap 486-J`). |
+| **Mishkat** (`GT-MISHKATKIDS`) | https://github.com/SalehGNUTUX/GT-MISHKATKIDS | **GPL-3.0** (byte-read `main/LICENSE`, 34,819 B) | **Added `p903` — EMEA, MENA, Arabic-language.** Ages 4–10, and the only system in this file that runs **no inference at runtime at all**: its own header declares *fully local, works offline, no AI at runtime, no cost, the child's data never leaves the device*. Ships **today** (pushed 2026-11-18) as an installable offline PWA, GNU/Linux `AppImage`/`DEB`/`RPM`, and Android `APK` — 3 ★, 358,758 KB, most of it local Qur'anic recitation audio. 🔵 **Deploy it where connectivity and per-seat inference cost are the binding constraints and the brief is early childhood**: there is no API bill, no egress, and nothing to sign a DPA over, which also makes it the cleanest answer in this file to a child-data regulator. Pedagogy is inverted — the child teaches an amnesiac robot (the protégé effect) — so it is a *complement* to Kolibri and elimu.ai, not a substitute: they deliver curriculum, this one drills consolidation through teaching. 🔴 **GPL-3.0: deployable and forkable, not embeddable in a closed product.** Scoping caveat: explicit Islamic doctrinal frame with Qur'an recitation as a first-class module — a feature for Gulf and North African deployments, a decision to make elsewhere. The architecture is portable independently of the content; `compose/patterns.md` **P22** is how to reuse it. |
 
 ## Supporting platform services
 

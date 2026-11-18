@@ -6,7 +6,9 @@ updated: 2026-11-18
 
 # Current trends — education
 
-**Twenty-five trends** (**T25 added in `p902`** — the licence trap moving from code to the data
+**Twenty-six trends** (**T26 added in `p903`** — the unit of publication shifting from the
+application to the agent-addressable curriculum corpus, the first trend in this file derived from a
+non-English repository channel; **T25 added in `p902`** — the licence trap moving from code to the data
 and content assets, where no index can see it; **T24 added in `p901`** — path-dependent licences, the first trend in this file derived from repositories the SPDX channel refused to resolve at all; **T23 added in `p900`** — the first trend in this file derived from a
 licence census of this base's *own unshelved backlog* rather than from search or from a
 repository probe)
@@ -915,3 +917,59 @@ a client deliverable, and run it by reading the README, not by querying an index
 🟢 **And state the split in the proposal.** Research-only data can still earn its place: it validates
 a model in a study and never trains the one that ships. That sentence is the difference between using
 EdNet correctly and not being able to use it at all.
+
+## T26 — The unit of publication is shifting from the *application* to the **agent-addressable curriculum corpus** — and the licence discipline has not followed it
+
+**Evidence (`p903`, byte-verified).** https://github.com/revolover00/Bakloriya-AI-SKILLS publishes
+**Egypt's complete approved 2026/2027 curriculum** — Egyptian Baccalaureate (78 units), General
+Secondary (102), Preparatory (42), Primary grades 1–6 (78): **300 units, its own table reporting
+"no chapter missing"** — as **28,402 KB of Markdown and nothing else.** No server, no model, no
+framework, no front end. Each subject is sharded into `SKILL.md` (a routing index), `glossary.md`,
+`patterns.md` (exam question patterns and solution keys), `cheatsheet.md` and a `chapters/` tree,
+beneath a single path grammar: `skills/<stage>/<grade>/<term>/<subject>/`. The delivery mechanism is
+an `AGENTS.md` routing guide **at a raw URL**, plus a prompt the learner pastes into *any* model,
+which then walks the tree unaided.
+
+**This is a different thing from T22 and from the agent-*skill* cohort, and the difference is the
+artefact.** T22 records agents differentiating on *delivery surface* — MCP server, IDE skill, desktop
+harness — but those are still **programs**. The cohort in `agents/top.md` ("the tutor as an agent
+skill") tops out at **125 ★** and every member is a *tool*. Bakloriya ships **no program at all**:
+the repository *is* the product, and the runtime is whatever model the learner already has. Three
+properties follow, and they are what make this a trend rather than one odd repository:
+
+1. 🟢 **Distribution cost collapses to zero.** No hosting, no inference bill, no app store, no
+   installation. A national curriculum reaches every learner who has access to any chat model.
+2. 🔴 **Quality control becomes a prompt, not a system.** Its only anti-hallucination mechanism is a
+   **corpus-scoping instruction** — *stay inside the syllabus, do not mix grades or terms* — with no
+   retrieval layer, no grounding check and no evaluation. The guarantee is that the *content* is
+   curriculum-accurate; there is none that the model's rendering of it will be.
+3. 🔴 **Stars stop measuring anything.** 6 ★ on a corpus used by Egyptian secondary students is not
+   comparable to 6 ★ on a developer tool, and no star threshold will ever fire on a
+   national-curriculum repository however many learners it serves. **The instrument this KB uses to
+   rank supply does not work on this form** — the replacements are curriculum coverage and
+   maintenance recency, on which this repository reads complete and current.
+
+🔴 **And the licence discipline has not made the move with it.** The corpus form arrives carrying the
+exact defect T25 identified in data and content assets, now at national scale: **`404` on all 12
+byte-read licence paths.** 28 MB of curriculum content under default all-rights-reserved copyright.
+The same holds for the channel's highest-star Arabic repository
+(`MjeedBakr/Student-Success-Kit`, 67 ★, no licence) and for the Saudi Qiyas channel, where **12 of
+12 repositories carry no grant**. Where the application form had settled into MIT/Apache norms,
+**the corpus form is being published with no grant at all** — because its authors are teachers and
+curriculum writers publishing content, not maintainers publishing software, and nothing in that
+workflow prompts for a licence.
+
+**What it implies for delivery.**
+- 🔵 **Expect to meet this form in MENA and South Asian engagements, and expect it to be
+  unlicensed.** Ask for the corpus licence in the first technical conversation, before any
+  architecture discussion: it decides whether the engagement is an integration or a re-authoring.
+- 🟢 **The schema is the transferable asset, and it is free to copy.** `SKILL.md` + `glossary` +
+  `patterns` + `cheatsheet` + `chapters`, under a strict path grammar, is the most complete worked
+  example of national-curriculum sharding this base has measured. **A schema is not copyrightable
+  the way the content under it is** — re-author the corpus against material the client owns or
+  licenses, and keep the structure. That is `compose/patterns.md` **P22**.
+- 🔴 **Do not let the zero-infrastructure story into a regulated use case unexamined.** This form has
+  no audit trail, no version pinning per learner, and no evaluation harness. Under EU Annex III, or
+  Vietnam's Decision 33/2026/QD-TTg, "the model reads our Markdown and tutors the student" is not a
+  compliance story. The corpus can be the content tier of a compliant system; it cannot be the
+  system.

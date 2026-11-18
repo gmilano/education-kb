@@ -222,8 +222,9 @@ Sorted by stars.
 | **Educhain** | https://github.com/satvik314/educhain | MIT | 387 | 2026-05-29 | **Added p900 — and this base has NAMED it since its second education cycle without ever giving it a row (logged 14×, the 4th-most-logged address in the rebuilt ledger).** Generates MCQs, lesson plans and full courses from source content, including YouTube. 🟡 **Idle since 2026-05-29** — a stable library, not a tracked upstream | APAC — India |
 | **canvas-lms-mcp** | https://github.com/bruchris/canvas-lms-mcp | **MIT** (`LICENSE@HEAD`, 1,069 B, byte-read p900) | 10 | 2026-11-17 | **Added p900.** **165 tools** over Canvas — courses, assignments, submissions, gradebook history, rubrics, New Quizzes (LTI), enrolments. 🔴 **Reached via a rename:** this base logged it as `algorithm0r/canvas-lms-mcp` 5×, which `search/repositories` reports as non-existent; the canonical owner is `bruchris` (see `900-G2`). 🔵 The deepest permissive agent seam onto AGPL Canvas in this file | Unplaced |
 | **Horus Taleeq 0.2 Base** | https://github.com/tokenaii/horus-taleeq-0.2b-base | **MIT** (`LICENSE@HEAD`, 1,079 B, byte-read p900) | *not in the search index* | — | **Added p900, and it answers a regional gap this base declared on the wrong side of itself.** An **Arabic-only small language model** — training code and reproducibility record — from **TokenAI**, *"a startup and nonprofit organization focused on open Arabic AI research"*. Scoped deliberately: base model only, no chat adapters, no teacher outputs, no private data. 🔵 `p899` recorded *"no supply-side leg for Africa or the Middle East"*; this was **logged 5× in its own ledger at the time**. 🟡 A base model is a starting point for continued pretraining, not a deployable tutor | EMEA — Middle East |
+| **Mishkat** (`GT-MISHKATKIDS`) | https://github.com/SalehGNUTUX/GT-MISHKATKIDS | **GPL-3.0** | 3 | 2026-11-18 | Arabic-language learning system for ages 4-10 built on **inverted pedagogy: the child is the teacher**, re-teaching an amnesiac robot whose memory lights up as each lesson lands. The README names the mechanism outright — the **proteges effect**, *"we learn most deeply what we teach to others"* — and pairs it with a deliberate emotional design in which the child is the confident expert and the robot is the one who errs. **Added p903, from the Arabic-language channel this file had listed as untried.** 🔵 **Its delivery properties are why it earns a row at 3 stars: fully local, works offline, *no AI at runtime*, no cost, and the child's data never leaves the device** — shipped today as installable PWA, GNU/Linux AppImage/DEB/RPM and Android APK. That is the exact design this file criticises `EduNaija-LLM` for missing, and it is the only MENA-origin education agent found with a licence on any path. **GPL-3.0 (byte-read, 34,819 B): a reference implementation and a deployable system, not a component for a closed derivative.** Scoping caveat: the content sits in an explicit Islamic doctrinal frame with Qur'anic recitation as a first-class module — a feature for Gulf and North African work, a decision to make everywhere else. The architecture is portable independently of that content; see `compose/patterns.md` **P22**. | **EMEA — MENA, Arabic-language** |
 
-**55 education-specific agents, every URL and licence verified.** (**p899 added 18** — the largest single-pass addition this table has made, and *not one of them came from a new web search*: every row above was already in this KB's own `agents/trending.md` history or its `logged-not-shelved` ledger, and was promoted only after a licence byte-read and a star measurement today. See `agents/trending.md` p899 for why that is a finding about this KB rather than about the ecosystem.)
+**56 education-specific agents, every URL and licence verified.** (**p903 added 1** — `GT-MISHKATKIDS`, from the Arabic-language leg this file had carried as untried. That leg also produced Egypt's entire national curriculum as an agent-skill corpus, **and it is not in this table**: `revolover00/Bakloriya-AI-SKILLS` has **no licence on any of 12 byte-read paths**, so the p893 rule — this table carries only what a studio can actually build on — was applied rather than relaxed. It is reasoned about under the agent-*skill* heading below and in `agents/trending.md` `903-F2`.) (**p899 added 18** — the largest single-pass addition this table has made, and *not one of them came from a new web search*: every row above was already in this KB's own `agents/trending.md` history or its `logged-not-shelved` ledger, and was promoted only after a licence byte-read and a star measurement today. See `agents/trending.md` p899 for why that is a finding about this KB rather than about the ecosystem.)
 
 (Earlier count: 37 at p896.) (p896 restored three —
 `Socratic-Education-System`, `education-skills` and `civil-ai` — all of which this shelf had
@@ -328,6 +329,28 @@ development activity is not.** The lesson is that re-measuring a set you did not
 produces "nothing changed" by construction. Watch condition unchanged — 1,000 ★ marks the form
 established — but re-enumerate before re-measuring. Tracked in `agents/trending.md`.
 
+🟢 **`p903` found this form executed against a national curriculum, and it changes what the
+1,000 ★ watch condition is measuring.** Every cohort member above is a *tool* — a tutor delivered as
+an MCP server or a skill, ceiling **125 ★**. `revolover00/Bakloriya-AI-SKILLS` (6 ★, **unlicensed**,
+28,402 KB, EMEA — Egypt) is the same delivery form carrying **Egypt's complete approved 2026/2027
+curriculum: 300 units across the Baccalaureate, General Secondary, Preparatory and Primary stages.**
+It ships **no application at all** — no server, no model, no framework. There is an `AGENTS.md`
+routing guide at a raw URL, and a prompt the student pastes into *any* model, which then walks
+`skills/<stage>/<grade>/<term>/<subject>/` by itself. Its anti-hallucination control is a
+**corpus-scoping instruction**, not a retrieval system: *stay inside the syllabus, do not mix grades
+or terms.*
+
+🔵 **The reading this forces.** This file's standing verdict — *"shortens time-to-pilot and belongs
+in the demo kit; it does not belong on a client roadmap yet"* — was derived from a cohort of tools,
+and **stars are the wrong instrument for a corpus.** A curriculum corpus is used by the students who
+need that curriculum; 6 stars from Egyptian secondary students is not the same signal as 6 stars on
+a developer tool, and a 1,000 ★ threshold will never fire on a national-curriculum repository no
+matter how many learners it serves. **The watch condition stays at 1,000 ★ for the tool cohort and
+is the wrong test for the corpus form, which needs a different one: curriculum coverage and
+maintenance recency.** On those, `Bakloriya-AI-SKILLS` reads as complete and current (300/300 units,
+pushed 2026-11-09) — and **unusable**, because it carries no grant. The pattern that takes the
+schema and discards the content is `compose/patterns.md` **P22**.
+
 ## What we searched for and did not find
 
 Recording gaps because an unrecorded gap looks exactly like coverage.
@@ -421,10 +444,38 @@ Recording gaps because an unrecorded gap looks exactly like coverage.
   - **Build-vs-adopt, Africa:** adopt the platform, build the agent tier. Same verdict p894
     reached for registrarial work via UniTime, from the opposite direction. See
     `compose/patterns.md` **P14**.
-- **Still nothing from the Middle East on the *supply* side.** `intel/market.md` carries
-  dedicated Saudi and UAE legs on **demand** — 50 new curriculum units for 2026-27, a federal
-  UAE mandate — and this pass found **no corresponding repository**. The untried channel is
-  Arabic-language search (the `elimu` Swahili trick applied to `تعليم`); it was not run.
+- 🟢 **The Middle East supply gap: the channel named here as untried was run in `p903`, and the
+  answer is not "nothing" — it is "populated, unlicensed, and capped at 6 stars" (rewritten p903).**
+  The previous text read *"The untried channel is Arabic-language search (the `elimu` Swahili trick
+  applied to `تعليم`); it was not run."* It has now been run, across four Arabic queries plus
+  Persian, Hebrew and Turkish, with every licence byte-read on 12 candidate paths. Results:
+  - 🟢 **Two MENA-origin education artefacts are real, and both were absent from this whole tree**
+    (checked against all 5,790 repository references in it). `SalehGNUTUX/GT-MISHKATKIDS`
+    (**GPL-3.0**, 3 ★, pushed 2026-11-18) is in the table above. The larger one is below.
+  - 🔴 **The biggest find in the channel earns no row, for the same reason `EduNaija-LLM` earns
+    none.** https://github.com/revolover00/Bakloriya-AI-SKILLS (**6 ★**, created 2026-10-17,
+    pushed 2026-11-09, **28,402 KB**) is **Egypt's entire approved 2026/2027 curriculum across all
+    four stages** — Egyptian Baccalaureate (78 units), General Secondary (102), Preparatory (42),
+    Primary grades 1–6 (78): **300 units, its README's own table reporting "no chapter missing"** —
+    decomposed per subject into `SKILL.md`, `glossary.md`, `patterns.md` (exam question patterns and
+    solution keys), `cheatsheet.md` and a `chapters/` tree. **It has no licence on any of 12
+    byte-read paths.** 28 MB of national curriculum content under default all-rights-reserved
+    copyright cannot be vendored, redistributed or shipped in a client deliverable. What transfers
+    is the **decomposition schema**, re-authored against a corpus the client owns or licenses.
+  - 🟡 **The usable sub-channel is the exam name, not the education word.** `منصة تعليمية` returns
+    3,468 hits and is unusable (developer awesome-lists); `تعليم` 2,302, `معلم` 1,828, `منهج` 728,
+    all dominated by programming tutorials and certification memoirs — the same false-positive
+    profile this file already graded for `JAMB`. **`الثانوية العامة` (525 hits) is what produced
+    the Egyptian find.**
+  - 🔴 **Saudi supply is now counted, and the count is the finding.** `قدرات تحصيلي` — the Qiyas
+    battery — returns **12 repositories in total, every one at 0 ★ and every one unlicensed**,
+    including the two on-target ones: https://github.com/ADELSPX/mawheb and
+    `hjr24r7269-crypto/naqat`. Against the **demand** side this KB records for Saudi Arabia — 50 new
+    curriculum units for 2026-27, **240,000 teachers in training** — twelve zero-star unlicensed
+    repositories is **the sharpest build-not-adopt signal in this base.**
+  - **Still nothing licensed from the Gulf, and nothing at all from the UAE on the supply side**
+    in any of the four languages tried. Arabic is no longer an untried channel; **Urdu and
+    Indonesian are**, and they are the next two to run.
 - **No confirmed November 2026 *launch*.** The newest dated release artefact is OpenMAIC
   `v1.4.2` (2026-11-09). Re-checked in pass p890 across four global and four regional search
   legs: unchanged.
@@ -433,16 +484,25 @@ Recording gaps because an unrecorded gap looks exactly like coverage.
   (`boyuchengz/canvas-mcp`) and **not one member gained a single star** in the interval. The
   form shortens time-to-pilot and belongs in the demo kit; it does not belong on a client
   roadmap yet.
-- **No open education agent originates from India, Africa or the Middle East.** p891 and p892
-  ran dedicated legs for Africa, the Middle East, Saudi Arabia and India. All four returned
-  substantial policy and national-programme evidence (see `intel/market.md`) and **not one
-  repository.** India mandates AI across Classes III–VIII from 2026–27 and Saudi Arabia is
-  training 240,000 teachers; neither has produced an open education agent this pass could find.
-  With the standing LATAM result (`warleysr/ankipa`, 10 ★) the pattern is firm: **open education
-  agents come from East-Asian and European universities; every other region is a consumer of
-  them.** Stated as a finding rather than a hole — it defines the localisation market, and it
-  is why `compose/patterns.md` **P10** treats language and curriculum corpus as the swappable
-  parts.
+- **Open education agents originate from East-Asian and European universities — with one
+  measured exception as of `p903`, and the exception is individual rather than institutional
+  (rewritten p903).** p891 and p892 ran dedicated legs for Africa, the Middle East, Saudi Arabia and
+  India and returned substantial policy evidence with **not one repository**; the previous text
+  therefore read *"No open education agent originates from India, Africa or the Middle East."*
+  **The Arabic-language leg falsifies that for the Middle East and North Africa.** Egypt produced
+  `Bakloriya-AI-SKILLS` (6 ★, unlicensed, 300 curriculum units) and the MENA Arabic channel produced
+  `GT-MISHKATKIDS` (GPL-3.0, 3 ★, pushed today). **India and the Gulf states remain unfalsified** —
+  India mandates AI across Classes III–VIII from 2026–27 and Saudi Arabia is training 240,000
+  teachers, and neither has produced a locatable open education agent in any pass or any language
+  tried. 🔵 **The corrected pattern is sharper than the one it replaces, because the two exceptions
+  share a shape:** both are **single-maintainer projects at 0 forks**, against the East-Asian and
+  European entries that come out of named labs (HKU Data Intelligence Lab, Tsinghua, MIT Open
+  Learning, Oak National Academy). So the finding is not that MENA produces nothing; it is that
+  **MENA produces individuals and not institutions**, which is a different market: the asset to
+  bring is the institutional engineering, not the pedagogy. With the standing LATAM result
+  (`warleysr/ankipa` 10 ★, `CaioCastro1/usp-mcp` 28 ★, both Brazil-only) that still defines the
+  localisation market, and it is why `compose/patterns.md` **P10** treats language and curriculum
+  corpus as the swappable parts.
 - **No locatable repository for `AcademiClaw`** (arXiv 2605.02661, students setting challenges
   for AI agents). Paper only. Recorded so a later pass does not re-chase it.
 
