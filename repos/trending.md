@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` — measured trending set, and the maintenance risk hiding in the foundations
+
+**Channel:** `gh api search/repositories` with `sort=stars`, five discovery legs over
+`created:>2026-08-01`, plus batched `repo:` metric harvests for the 119 repos this KB tracks.
+116 of 119 resolved. `raw.githubusercontent.com` byte-read for every licence grant. Fetch
+failures: 0. `github.com` HTML is `403` here and `api.github.com/repos/` is session-scoped, so
+neither was used.
+
+### Trending education repos, measured (not from trend blogs)
+
+| Repo | ★ | Licence | Last push | Note |
+|---|---|---|---|---|
+| `HKUDS/DeepTutor` | 60,165 | Apache-2.0 | 2026-11-15 | #1 GitHub trending 28 Oct 2026. Largest open education agent that exists. |
+| `THU-MAIC/OpenMAIC` | 43,856 | MIT | 2026-11-18 | `v1.4.2` 2026-11-09. Pushed today. |
+| `Crosstalk-Solutions/project-nomad` | 43,902 | Apache-2.0 | 2026-11-17 | Offline-first knowledge/education server. Third-largest in this KB and under-discussed. |
+| `patchy631/ai-engineering-hub` | 41,974 | MIT | 2026-11-01 | Curriculum-style collection of worked agent projects; staff upskilling. |
+| `sitor-ai/frametell` | 512 | AGPL-3.0 | 2026-11-12 | Largest **new** entrant (created since Aug 2026). |
+| `ECNU/EduWork` | 378 | MulanPSL-2.0 | 2026-11-18 | Pushed today. Permissive but non-MIT/Apache. |
+| `vishalsachdev/canvas-mcp` | 334 | MIT | 2026-11-18 | Pushed today. |
+| `Li-Evan/BloomTutor` | 313 | MIT | 2026-11-17 | |
+| `CAHLR/OATutor` | 282 | MIT | 2026-11-17 | UC Berkeley. |
+| `molly554/whiteboard-ai-tutor` | 222 | MIT | 2026-11-17 | Best-licensed fast riser among new entrants. |
+| `OpenPronounce/OpenPronounce` | 221 | MIT | 2026-11-09 | |
+| `boyuchengz/canvas-mcp` | 118 | MIT | 2026-10-27 | Read-only Canvas MCP — a second, independent implementation. |
+
+### Pushed today (2026-11-18) — the genuinely live set
+
+`ollama/ollama`, `vllm-project/vllm`, `infiniflow/ragflow`, `docling-project/docling`,
+`BerriAI/litellm`, `crewAIInc/crewAI`, `langchain-ai/langgraph`, `appsmithorg/appsmith`,
+`HKUDS/LightRAG`, `HumanSignal/label-studio`, `promptfoo/promptfoo`, `temporalio/temporal`,
+`apereo/cas`, `oppia/oppia`, `THU-MAIC/OpenMAIC`, `moodle/moodle` (2026-11-17),
+`learningequality/kolibri`, `ls1intum/Artemis`, `frappe/lms`, `chamilo/chamilo-lms`,
+`GibbonEdu/core`, `PrairieLearn/PrairieLearn`, `opencast/opencast`, `instructure/instructure-ui`,
+`ECNU/EduWork`, `vishalsachdev/canvas-mcp`, `openfun/richie`, `learningequality/studio`,
+`Khan/perseus`, `OpenHands/software-agent-sdk`.
+
+Every major LMS core in this KB was pushed within the last 8 days. Education open source is
+not stagnant at the platform layer.
+
+### ⚠️ Maintenance risk in repos this KB recommends
+
+The metric harvest surfaced something a star-only view hides. Five tracked repos have not been
+pushed in over nine months:
+
+| Repo | ★ | Last push | Days idle | Consequence |
+|---|---|---|---|---|
+| `LearningLocker/learninglocker` | 587 | 2024-05-30 | **902** | **Was listed as a recommended LRS. It is effectively abandoned.** Corrected in `repos/foundations.md` — use `yetanalytics/lrsql` (Apache-2.0, pushed 2026-11-14). |
+| `stanford-oval/storm` | 31,906 | 2025-09-30 | 414 | 32k ★ and dormant for over a year. High stars are not evidence of maintenance. Pin a version. |
+| `1EdTech/openbadges-validator-core` | 61 | 2025-11-04 | 379 | Spec is stable, but expect to maintain the validator yourself. |
+| `adlnet/ADL_LRS` | 335 | 2025-11-14 | 369 | Spec reference, not a production dependency. |
+| `flysheep-ai/education-skills` | 125 | 2026-01-30 | 292 | Dropped from active recommendation. |
+
+**`stanford-oval/storm` is the instructive one:** 31,906 stars, 414 days idle. Any ranking of
+this industry by stars alone would place it in the top five and it should not be a dependency.
+This is why `last push` is now a required column in this KB.
+
+### Licence distribution across the 116 measured repos
+
+Permissive (MIT / Apache-2.0 / BSD / ECL / MulanPSL) dominates the AI-infrastructure and
+interop layers. Copyleft (AGPL / GPL / LGPL) dominates the LMS and SIS layers — the systems a
+client already runs. **That split is the structural fact of education open source:** the
+platforms are copyleft, the tooling is permissive, so integrate over LTI 1.3 or MCP rather than
+forking. `NOASSERTION` appeared for 11 repos (modified or dual licences, including
+`BerriAI/litellm`, `opendatalab/MinerU`, `odoo/odoo`, `ankitects/anki`,
+`PrairieLearn/PrairieLearn`); for those, the byte-read licence text in
+`repos/foundations.md` is the column to trust. `OS4ED/openSIS-Classic` and `IIC2233/Syllabus`
+have **no licence at all** — SPDX `NONE` and no licence file.
+
+### Declared gaps
+
+- **Zero LATAM-origin repos** across five discovery legs.
+- **Zero Africa / Middle East repos.**
+- **Nothing credible in open proctoring or admissions decisioning** — both EU AI Act Annex III
+  high-risk categories. The gap is consistent across passes and is a genuine market signal.
+- **`openedx/edx-platform`, `All-Hands-AI/OpenHands`, `danny-avila/LibreChat`** cannot be
+  resolved through `search/repositories` in this session; licences verified by raw fetch, stars
+  recorded as unavailable.
+- **GitHub's own trending page was not reachable** (HTML `403`), so "trending" here means
+  measured stars plus recent creation date, not GitHub's ranking. Third-party trend blogs were
+  read but **not** used as a source of numbers: they disagreed with each other on the same repo
+  on the same day (one listed OpenMAIC at 1,034 ★ while its own table said +116; the measured
+  figure is 43,856).
+
+---
+
 ## 🟢 `2026-11-18` (`p889`) — **a layer this KB has needed since `P4` was written, found for the first time: the EU AI Act conformance-instrument population. `46` repositories, star ceiling `9`, `42` of them created this year — and `0` of them are built for an education deployer, which is the finding, because education is the Annex III sector that owes the paperwork.**
 
 🔵 **On this shelf specifically:** `46` repositories entered this base's field of view for the first time and `25` grants were byte-read. None is foundation-grade; the shelf entry they earn is a declared BUILD gap, recorded in [`repos/foundations.md`](foundations.md).

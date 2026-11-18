@@ -4,6 +4,89 @@ region: Global
 updated: 2026-11-18
 ---
 
+## `2026-11-18` — stars are measurable after all; and a new delivery form for tutoring
+
+**Method correction first, because it invalidates two earlier conclusions.** Earlier passes of
+this KB recorded star counts that were later found inflated; a later pass concluded star counts
+were "unmeasurable across four routes" and stopped recording them. Both were wrong. Batched
+`repo:` qualifiers against `gh api search/repositories` return authoritative
+`stargazers_count`, `license.spdx_id`, `pushed_at` and `archived` for ~8 repos per call. The
+reason it looked impossible: a query containing a **single** `repo:` qualifier returns `422`,
+so a one-repo-at-a-time probe fails every time while a batched one succeeds. 116 of 119 repos
+resolved this way today. Every star figure in this KB is now measured and dated.
+
+### The scale of the top two is larger than this KB had recorded
+
+| Repo | ★ (2026-11-18) | Licence | Last push |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | **60,165** | Apache-2.0 | 2026-11-15 |
+| `THU-MAIC/OpenMAIC` | **43,856** | MIT | 2026-11-18 |
+
+Then a cliff: the third-largest education-specific agent is `ECNU/EduWork` at **378**. The
+distribution is two giants and a long tail of sub-400 projects, with nothing in between. Any
+"top 10 education agents" framing that implies comparability across that gap is misleading.
+
+### New: tutoring delivered as a skill inside an agent, not as an application
+
+A consistent cohort created since August 2026 ships tutoring as an **MCP server or agent skill**
+rather than a web app — the learner already has Claude Code, Codex or a similar client, so there
+is no front end to build.
+
+| Repo | ★ | Licence | Created | Note |
+|---|---|---|---|---|
+| `boyuchengz/canvas-mcp` | 118 | MIT | >2026-08 | **Read-only** MCP over Canvas LMS. Read-only is the right default for student data. |
+| `BaronCyrus/dsh-aha-tutor` | 46 | MIT | >2026-08 | Personal-teacher skill with a handwriting blackboard (zh). |
+| `smashburger-dev/socratic-workshop` | 24 | MIT | 2026-10-28 | Socratic skill for Claude Code / Codex: learn by explaining. |
+| `bayshores/godspeed` | 22 | AGPL-3.0 | 2026-11-18 | Class tutor over any MCP app. **AGPL.** |
+| `Aisland-SJL/Aisland-teach` | 18 | MIT | 2026-08-31 | Teaches from the learner's level, then verifies real learning. |
+| `xx-hub/dsh-craft-your-textbook` | 15 | MIT | >2026-08 | Turns textbook PDFs into a teaching blueprint an agent can deliver. |
+
+All are small. The direction is the finding, not the individual repos: it collapses
+time-to-pilot, and it means a studio can demo a tutor without building or hosting a UI. Watch
+whether any of these clears 1,000 ★ — that would mark the form as established rather than
+experimental.
+
+### Other new entrants since August 2026 (verified)
+
+| Repo | ★ | Licence | Last push | What |
+|---|---|---|---|---|
+| `sitor-ai/frametell` | 512 | **AGPL-3.0** | 2026-11-12 | Ideas and material → explainer videos via an AI director agent. Largest new education-adjacent entrant; AGPL blocks closed derivatives. |
+| `molly554/whiteboard-ai-tutor` | 222 | MIT | 2026-11-17 | Whiteboard tutor, animated lessons, interactive playback. **Best-licensed fast riser.** |
+| `liangxiao777/TeachMeCoding` | 73 | Apache-2.0 | 2026-10-30 | Local-first coding tutor with roadmaps and execution. |
+| `luumlabs/aula` | 66 | AGPL-3.0 | 2026-11-17 | Notes/slides/past exams → lessons. AGPL. |
+| `Q00/ai-agent-engineering-101` | 54 | NOASSERTION | 2026-11-17 | SeoulTech 2026 Fall course, PR-based assignment submission. Teaching *with* agents. |
+| `Maicarons/RubricSpan` | 2 | AGPL-3.0 | 2026-11-17 | Chinese subjective-question marking: local, explainable, dual backend (Rust+GPU / WASM offline). Tiny, but the only explainable-grading entrant found. |
+
+### Licence signal in the new cohort
+
+Of the notable new entrants, **three of the six largest are AGPL-3.0** (`frametell`, `aula`,
+`godspeed`). That is a shift: the established education agents are predominantly MIT/Apache
+(`DeepTutor`, `OpenMAIC`, `OATutor`, the TUM stack). Newer consumer-facing tutors are choosing
+copyleft. For Globant this narrows the set of new work that can feed a proprietary client
+deliverable, and it raises the value of the permissive incumbents.
+
+### Also surfaced: Open edX first-party AI
+
+`openedx/openedx-ai-extensions` (AGPL-3.0, 17 ★) — a first-party AI extension point in the
+Open edX org, not previously recorded in this KB. AGPL like the platform.
+
+### Declared gaps this pass
+
+- **No star figure obtainable for `All-Hands-AI/OpenHands`, `danny-avila/LibreChat` or
+  `openedx/edx-platform`** — consistently absent from `search/repositories` in this session
+  across repeated query shapes, while their `LICENSE` files return `200`. Existence and licence
+  confirmed; stars recorded as unavailable rather than filled in from a blog.
+- **No LATAM-origin new entrant.** Five discovery legs, none returned one. The only
+  LATAM-origin education agent in this KB remains `warleysr/ankipa` (10 ★, Brazil).
+- **No Africa or Middle East entrant.** Also none.
+- **No confirmed launch dated November 2026.** Newest release artefact is OpenMAIC `v1.4.2`
+  (2026-11-09).
+- **Grading agents remain near-nonexistent at scale.** A dedicated `grading rubric ai` leg
+  returned nothing above 20 ★. Given that AI-only grading is now *prohibited* in several US
+  states, the absence of auditable open grading tooling is a market signal, not an accident.
+
+---
+
 ## 🟢 `2026-11-18` (`p889`) — **a layer this KB has needed since `P4` was written, found for the first time: the EU AI Act conformance-instrument population. `46` repositories, star ceiling `9`, `42` of them created this year — and `0` of them are built for an education deployer, which is the finding, because education is the Annex III sector that owes the paperwork.**
 
 🔵 **On this shelf specifically:** the population below is an *instrument* layer, not an agent layer. Exactly one row is agent-shaped (`CSOAI-ORG/eu-cra-mcp`, MIT, compliance exposed over MCP) and one is agent-governing (`leonkoellerwirth-arch/agentic-ai-governance-toolkit`, MIT). `0` new education agents were earned this pass, and the reason is measured below.

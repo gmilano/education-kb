@@ -1,0 +1,1666 @@
+---
+industry: education
+region: Global
+updated: 2026-11-18
+---
+
+# Current trends — education AI
+
+**Pass `p888`, 2026-11-18** (fifth pass of the day). **`p886` established that a licence is a SET.
+`p887` found the set can live inside a SINGLE FILE. `p888` found that `|set| > 1` has TWO MEANINGS
+this base had fused — and that the detector `p887` built to find the first one is structurally blind
+to the second.**
+
+## `T34` — the obligation and its instruments are produced by different populations, and only one of them knows about education
+
+🔴 **Measured, `2026-11-18`: `46` repositories in the EU AI Act conformance-instrument population;
+`0` built for an education deployer.** Education is an **Annex III** high-risk sector. An education
+deployer that is a public body, or a private provider of a public service, owes an **Article 27
+Fundamental Rights Impact Assessment**; a provider owes **Annex IV** technical documentation. Those
+obligations are the most concrete commercial hooks in this entire KB — and the open-source layer
+that emits the evidence for them was invisible to `888` previous passes.
+
+🟢 **The reason it was invisible is the reason it matters.** Every discovery leg this base has run
+was scoped by *education* vocabulary. This layer is scoped by *regulatory* vocabulary — `eu ai act`,
+`FRIA`, `annex`, `conformity assessment`, `iso 42001`. The vocabularies do not intersect. 🔴 **This
+is the sharpest instance yet of `T-p885-2`** (*the channel that still pays is structural, not
+lexical*): the nine-pass nil on keyword legs measured the exhaustion of one vocabulary, and was read
+as the exhaustion of supply.
+
+| Property of the population | Measured | Consequence for a studio |
+|---|---|---|
+| Repositories | `46` | A real layer, not a one-off. |
+| Star ceiling | `9` | No row has a community. `28` sit at `0`. |
+| Created in 2026 | `42` | Deadline-driven, not engineering-driven. |
+| Pushed in last 60 days | `10` | `36` already dormant. |
+| Ungranted or grant-empty | `6` | Three of four FRIA-specific repos among them. |
+| Education-targeted | **`0`** | **The sector that owes the paperwork is served by none.** |
+
+🟢 **So the verdict inverts this base's default.** These shelves exist to find what to adopt. Here
+the measurement says **BUILD**: the obligation is binding, the supply ceiling is `9★`, four fifths
+of it is dormant, and none of it addresses the sector. `P31` is that recipe. 🔵 The claim is
+defensible to a client because it rests on a denominator, not on an absence of search results.
+
+## `T35` — `T14`'s mirror: the FALSE-PRESENCE class, and a domain keyword can have `0%` precision
+
+🔴 **`T14` taught this base that `NOASSERTION` is not a licence finding — a false *absence*. `p889`
+found the mirror.** Probing `44` READMEs in the conformance population for education vocabulary:
+**`23` hit — and all `23` are false presences.** Three independent generators, each byte-quoted:
+
+| Generator | Count | What the keyword actually was |
+|---|---|---|
+| **Annex III enumeration** copied from the Act | ~`17` | *"the Act's list of high-stakes areas: employment, **education**, essential…"* — the Act's own text contains the word. |
+| **"educational purposes only"** liability disclaimer | `2` | *"**Educational** use only. Not legal advice."* — here *educational* means *do not sue me*. |
+| Author's **university affiliation** | `1` | `…@student.uva.nl`, *"University of Amsterdam – MSc Thesis Project"*. |
+
+🟢 **Recall ~`52%`, precision ~`0%`.** A domain filter built on this keyword would have shelved `23`
+rows and been wrong every time. 🔴 **The generalisation, which is not about education:** when a
+population is defined by a *regulation*, the regulation's own enumerations inject every regulated
+sector's vocabulary into every document in it. **A keyword cannot distinguish "this tool is for
+sector X" from "this tool quotes a list that contains sector X."** 🟢 **Gate rule:** domain
+targeting must be read from what the tool *does* — its inputs, its outputs, its named systems —
+never from the presence of a sector noun. And where a sector noun appears, check first whether it
+sits inside a quoted legal enumeration or a liability disclaimer.
+
+## `T36` — a grant can incorporate its terms by URL, and then it is byte-read but unreadable
+
+🟢 **`p886` established that a licence is a SET. `p887` found the set inside one file. `p888` split
+`|set| > 1` into conjunctive and disjunctive. `p889` adds a property orthogonal to all three:
+a grant may be COMPLETE and still not CONTAIN its own terms.**
+
+`8infinitelabs/eucompliance` carries `781 B` at `LICENSE`: the EUPL-1.2 operative preamble, the
+sentence *"The Work is provided under the terms of this Licence when the Licensor … has placed the
+following notice … 'Licensed under the EUPL'"*, `SPDX-License-Identifier: EUPL-1.2`, and
+`Full licence text: https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12`. It is a valid
+grant. Its binding body is a URL.
+
+🟢 **This diagnoses `Gap 252` (EUPL misclassification), open and untouched for several passes.** The
+mechanism is incorporation by reference: GitHub's classifier matches licence *text*, so a grant that
+**cites** the `~13,827 B` EUPL body — the length `T918` recorded on `hedy` — instead of **quoting**
+it presents as `NOASSERTION`. 🔴 **Every EUPL repository that cites rather than quotes reads as
+ungranted**, and `EUPL-1.2` is the European family, so this misclassification is concentrated
+exactly in the region whose procurement rules care most about it.
+
+🔴 **And it compounds with the channel boundary.** `joinup.ec.europa.eu` does not resolve in this
+session. The grant is read; its terms are not reachable. 🔴 **A notice set cannot be assembled from
+a grant whose text is a link** — which is a direct, unbudgeted constraint on `P27` and `P30`.
+🟢 **Gate rule:** classify a grant by its SPDX identifier and operative clause when present, treat
+byte length as *evidence of form, never of validity*, and flag `incorporation-by-reference` as its
+own state — distinct from both *granted-and-read* and *ungranted*.
+
+### 🔴 `T906` corrected, and `T-p885-4` retired
+
+🔴 **`T906` has said for ten passes that "government domains refuse at `CONNECT`". Both halves are
+wrong.** Measured `2026-11-18` with `getent hosts` beside `curl`: `data.consilium.europa.eu`,
+`eur-lex.europa.eu`, `www.unesco.org` and `www.multistate.us` **fail DNS resolution** — there is no
+connection to refuse — and the last of those is a commercial tracker, so the failing set is not
+governmental. **The correct statement: this session resolves GitHub hosts and nothing else.**
+
+🟢 **`T-p885-4` (*"still no primary legal source, four passes running"*) is therefore RETIRED as
+structurally unachievable rather than carried a fifth time.** It is a network-policy boundary, not a
+research failure, and no later pass should spend budget on it. Every regulatory instrument on these
+shelves is secondary-sourced **because it cannot be otherwise**, and must keep saying so at the row.
+🔵 **The single channel that does exist:** regulatory text mirrored *into* a GitHub repository is
+reachable and byte-readable — [`AI-Engineering-at/legal-scraper`](https://github.com/AI-Engineering-at/legal-scraper)
+(MIT) aggregates EU/AT/DE/CH legal full text, and `Peaky8linders/specter-oss` vendors Article 15
+control rows. That is the only primary-ish route this environment permits.
+
+## `T29` — `arity > 1` is two different facts, and they impose opposite obligations
+
+🔴 **`p887` named the conjunctive case and this base has been treating arity as if that were the only
+case.** It is not.
+
+| Shape | Operator | Example, byte-read | What the studio owes |
+|---|---|---|---|
+| **CONJUNCTIVE** | `AND` | `apereo/phpCAS` — Apache-2.0 in `LICENSE` (11,357 B) **and** New BSD in `NOTICE` (3,914 B); `apereo/java-cas-client` — both families in **one** 2,321-byte file | **Both** notice sets. Compliance is the **union**. |
+| **DISJUNCTIVE** | `OR` | [`ad1-kamath/coursecraft`](https://github.com/ad1-kamath/coursecraft) — `LICENSE-MIT` (1,081 B, `66d27c2a9dbf`) **and** `LICENSE-APACHE` (10,174 B, `0d542e0c8804`); `Cargo.toml`: `license = "MIT OR Apache-2.0"` | **One**, licensee's choice. Pick MIT and you owe **no Apache `NOTICE` at all**. |
+
+> 🔵 **Same `arity=2`. Opposite obligation. A single `arity` integer cannot carry the difference**, so
+> every arity figure this base publishes must name its operator or it is not actionable.
+
+🟢 **The discriminator is cheap and needs no clone:** **`LICENSE-<FAMILY>` filename pairs** plus a
+package-manifest `license` expression containing **`OR`** (`Cargo.toml`, `package.json`,
+`pyproject.toml`). 🔵 **Conjunctive grants do not use that filename convention** — `phpCAS` hides its
+BSD half in `NOTICE`; `java-cas-client` hides it inside one payload. **The filename convention is
+itself the signal.**
+
+## `T30` — `p887`'s `NOASSERTION` detector is structurally blind to the disjunctive case
+
+`p887` earned this rule and it is correct as far as it goes:
+
+> *"A row whose metadata channel returns `NOASSERTION` while its bytes channel returns a family is a
+> CONJUNCTIVE-GRANT candidate."*
+
+🔴 **`coursecraft`'s metadata channel returns a confident `Apache-2.0`. Not `NOASSERTION`.** It
+simply **drops the MIT half** and reports the remaining family as though it were the whole grant.
+
+> 🔵 **The abstention signal fires only when the metadata channel is CONFUSED. A disjunctive pair does
+> not confuse it — it just loses half of it, silently, and reports the loss as a clean answer.**
+> **An abstention is a detectable failure; a confident half-answer is not.** `T29`'s filename-pair
+> test is the detector for the second case, and it is independent of the first.
+
+## `T31` — a licence-family detector must test for SUBSUMPTION, and this base has now failed it in both directions
+
+🔴 **`p888`'s own verifier reported two conjunctive grants that do not exist.**
+`slp-lab-research/higraph` (`1,497 B`, `464ba80d380e`) and `ICICLE-ai/curriculum-generator`
+(`1,501 B`, `5dbf2c09aee3`) were both reported `BSD-2-Clause + BSD-3-Clause`. **Both are
+single-family BSD-3-Clause**, confirmed by clause-3 presence and the absence of any Apache or MIT
+body.
+
+🔴 **The cause: `BSD-2-Clause`'s signature — *"Redistributions in binary form must reproduce the
+above copyright"* — is clause 2 OF `BSD-3-Clause`.** A strict textual subset. **Presence-matching
+therefore reports `arity=2` on every BSD-3 file ever read.**
+
+> 🔵 **The rule: licence families are not mutually exclusive as TEXT, so detection must test
+> SUBSUMPTION, not presence.** `SUBSUMES = {"BSD-3-Clause": {"BSD-2-Clause"}}`.
+
+🔵 **Read against `p887`, this base has now made both of the two possible errors in one step:**
+
+| Pass | Classifier | Error | Direction |
+|---|---|---|---|
+| `p887` | earliest-title-wins | missed a **real** second family on `apereo/java-cas-client` | **false negative** |
+| `p888` | presence-matching | **invented** a second family on two BSD-3 rows | **false positive** |
+
+> 🔴 **Both live in the single step between bytes and a family label, and no acceptance test in this
+> base constrains that step from both sides at once.** A test that only asks *"did you find all the
+> families?"* drives a classifier toward `p888`'s error; one that only asks *"is this the right
+> family?"* drives it toward `p887`'s. Registered as `888-G3`. `9/9` controls, offline
+> (`compose/code/p888-search-discovery/subsume_test.py`), with the failing case kept as a named
+> regression.
+
+## `T32` — a channel is not closed; a `(channel, caller, argument shape)` triple is
+
+🔴 **This KB carried, for three passes, that star counts were *"unmeasurable across four routes"* and
+that *"no star figure appears anywhere in this KB"*.** One of those four routes was
+`gh api search/repositories`, recorded as returning an **empty set**.
+
+🟢 **The endpoint was open the whole time.** `gh api -X GET search/repositories -f q='…'` returns
+full payloads — `stargazers_count`, `forks_count`, `pushed_at`, `archived`, `fork`,
+`default_branch`, `license.spdx_id` — at 30 requests/minute authenticated. **It was probed through
+one caller shape, without an explicit `-f q=`, and the empty result was generalised into a property
+of the channel.**
+
+> 🔵 **A negative channel result must record the caller and the argument shape that produced it, or it
+> is not reproducible and not falsifiable.** `evidence/channel-state.2026-11-18-p888.tsv` records
+> the probe command beside every verdict for exactly this reason. Registered as `888-G1`.
+
+🔴 **The same discipline retires a carried instruction.** `p873` left *"next pass: try Hugging Face"*
+for **EduNaija AI Tutor** and **AFRILANGTUTOR**. **`huggingface.co` is `connect_rejected`** from this
+session, as are `arxiv.org` and `aclanthology.org`. **The instruction is retired as an action and
+kept as a lead** — it cannot be executed in this environment, and an open action nobody can run is
+indistinguishable from one nobody has tried.
+
+## `T33` — traction and engineering have come apart in education OSS
+
+🟢 **First measured this pass, now that stars are measurable at all.** Of 36 byte-verified rows:
+**`eddiethedean/lessonkit` 389 commits/12mo at 2★**, **`bishoynabilanis/jessica` 212 at 0★**,
+**`Mahmoud-s-Khedr/qbank` 121 at 0★**, **`ICICLE-ai/curriculum-generator` 114 at 0★** — against
+**`bcefghj/multi-agent-education` 1 commit at 165★** and
+**`HowieWang1121/Socratic-Education-System` 2 commits at 137★**.
+
+> 🔵 **Star counts in this vertical measure reach into the English-language developer web, not
+> maintenance.** The two highest-star new rows are both near-dormant portfolio projects with Chinese
+> READMEs; the four highest-commit rows are non-English or institutional and hold 2 stars between
+> them. **Ranking this KB's shelves on stars returns an empty set for EMEA and LATAM while the work
+> is being done there.** Rank on **commits**. Registered as `888-G2`.
+
+
+**Pass `p887`, 2026-11-18** (fourth pass of the day). **`p886` established that a licence is a SET.
+`p887` ran that over 15 repositories and found the harder half: the SET can live inside a SINGLE
+FILE, where no path-keyed map and no metadata field can reach it — and the one channel that signals
+it is an ABSTENTION.**
+
+### 🔴 `T26` — a conjunctive grant can occupy ONE file, and `NOASSERTION` is its cheapest detector
+
+🟢 **Measured, not reasoned.** `apereo/java-cas-client`'s entire grant is one **2,321-byte**
+`LICENSE` (`sha256₁₂ 6c21b465e3a0`) holding **two** families: an Apache-2.0 grant **by reference**
+(*"Apereo licenses this file to you under the Apache License, Version 2.0"* — a URL, no body) and,
+below a `====` rule, a complete **BSD-3-Clause** text headed *"License for Use"*, © 2007 JA-SIG, Inc.
+
+🔴 **Three channels, three different wrong answers:**
+
+| Channel | Answer | Why |
+|---|---|---|
+| metadata — `search/repositories` | **`NOASSERTION`** | GitHub's detector abstains rather than guess |
+| bytes — `p228`, earliest title wins | `BSD-3-Clause` | the Apache half has no title line to match |
+| `p427-conjunctive-grant` | `SINGLE`, **zero families** | `title_hits` found NO title in 2,321 B — the BSD body is **untitled** |
+
+🟢 **The rule, and it costs one API field with no clone: a row whose metadata channel returns
+`NOASSERTION` while its bytes channel returns a family is a CONJUNCTIVE-GRANT CANDIDATE.**
+`java-cas-client` is the only `NOASSERTION` row among the 15 swept and the only single-payload
+conjunctive grant among them. 🔵 **`T25` said the arity of a grant may exceed one. `T26` says the
+arity may exceed one WITHOUT the tree knowing**, so `886-G1`'s map must be keyed on
+`(path, byte span)` and not on `path`.
+
+🔴 **The consequence for a client engagement, stated plainly.** A university that adopts Apereo CAS
+for SSO inherits `cas` (Apache-2.0), `java-cas-client` (**Apache-2.0 AND BSD-3-Clause**) and
+`phpCAS` (**Apache-2.0 AND BSD-3-Clause**). All permissive, all build-safe — **and the notice
+obligation is of two families with a no-endorsement clause naming JA-SIG, Inc. specifically.** A
+single-family label on any of the three understates what a redistribution owes. See
+`compose/patterns.md` **P28**.
+
+### 🟡 `T27` — a `NOTICE` is the one file in a tree guaranteed to quote licences the project does not grant under, and `p887` found the exception
+
+🟢 **The rule holds and is worth writing down.** An Apache-2.0 `NOTICE` exists to discharge §4(d)
+attribution for bundled code. `yetanalytics/lrsql`'s is **19,985 B and names `21` distinct copyright
+holders** while the repository is cleanly `Apache-2.0`: **licence cell right, notice obligation of
+21.** Reading that file as a grant — which `p887`'s own instrument did on its first run — produced
+`arity=2 Apache-2.0+BSD-3-Clause` on an Apache-2.0 project.
+
+🔴 **And the exception is why "just skip NOTICE" is the wrong fix.** `apereo/phpCAS`'s `NOTICE`
+(**3,914 B**, `sha256₁₂ 2df146a253fa`) is headed *"Requirements for sources originally licensed under
+the New BSD License"* and carries a full BSD-3-Clause body © 2003-2007 **The ESUP-Portail
+consortium**. 🟢 **That is a real second grant, in the file a blanket exclusion would have skipped.**
+🔵 **So the rule is: a `NOTICE` is never a grant BY DEFAULT and must still be READ** — which is
+`886-G4`'s rule (*a policy document must be read and must not be believed*) applied one level down.
+
+### 🔴 `T28` — the discovery channel is saturated and the regional channel is not; nine passes now say so
+
+🟢 **`0` new repositories from the eight prescribed legs for the NINTH consecutive pass**, against
+**four** consecutive passes in which all four regional legs returned usable regulatory and adoption
+material. 🔵 **That asymmetry is stable enough to act on: the legs have become a POLICY instrument,
+not a discovery one.** Leg 1 is the demonstration — asked for education-specific MIT agents, it
+returned `OpenHands`, `SWE-agent`, `MetaGPT`, `CrewAI`, `hermes-agent`, and its own sources
+volunteered that the education angle was thin. 🔴 **Discovery needs a different channel**, and this
+base already holds two candidates it has not worked: the **`181`** slugs `886-G5`'s ledger shows an
+instrument knows and no shelf carries, and the **`615`**-row TIER-B bucket `885-G3` still holds.
+
+**Previous pass (`p886`), retained:** **Pass `p886`, 2026-11-18** (third pass of the day). **The trend this pass establishes is about the
+shape of open-source grants in education, and it is the first one this KB has found by auditing
+itself rather than by searching: a licence is not a value, it is a SET, and every instrument here —
+and GitHub's own metadata field — is built to hold exactly one.**
+
+### 🔴 T-`p886`-1 — Licence ARITY, measured on this KB's own shelves for the first time (the CONCEPT is older: `gate-subtree-grant` `p382`, `gate-conjunctive-grant` `p427`)
+
+🟢 **Measured, not argued.** `885-G1`'s two-channel test over all 163 shelf rows produced `144`
+agreements (88.3%) — and **four of those rows carry a grant that neither channel can express**
+([`record`](../evidence/dual-channel-885G1.2026-11-18-p886.tsv)). Three of the four scored **`AGREE`**:
+
+| Row | Both channels | Reality | Shape |
+|---|---|---|---|
+| `ECNU/EduWork` + `EduWork-ECNU` | `MulanPSL-2.0` | **`MulanPSL-2.0 AND MIT`** | conjunctive, by provenance (a relicence boundary) |
+| `sudosylabs/proctor` | `AGPL-3.0` | AGPL-3.0 core, **Apache-2.0 `packages/*`**, BSD-3-Clause one vendored dir | per-directory |
+| `iiab/iiab` (2,052 ★) | `GPL-2.0` | GPL-2.0 default, **LGPL-2+ encouraged** per file | per-file |
+| `RWTH-OS/eduOS-rs` | `Apache-2.0` vs `MIT` | **`Apache-2.0 OR MIT`** | disjunctive, across two files |
+
+🔴 **Only the disjunctive case was visible to the test**, and only by accident: two licence files
+produce a disagreement, whereas conjunction and per-directory grants produce agreement on one
+member of the set. **A two-channel gate made of two single-valued channels cannot detect arity, and a
+clean `AGREE` is therefore not evidence that a grant is known.**
+
+🟢 **Exposure: `19 / 163` rows (11.7%)** carry a `LICENSING.md`, `NOTICE`, `NOTICE.txt` or
+`THIRD_PARTY_NOTICES.md` that neither channel reads
+([`record`](../evidence/licence-policy-docs.2026-11-18-p886.tsv)).
+
+🟡 **Stated against what this KB already had.** Arity is **not** a new concept here:
+`gate-subtree-grant` (`p382`, 19 controls) encodes *"a grant has SUBTREES and a root-only read is
+wrong about the repository"*, and `gate-conjunctive-grant` (`p427`, 24 controls) encodes *"one
+payload, two LIVE families, and a notice obligation of two"*. **Both pass.** 🔴 **What was missing was
+the measurement**: no pass had asked *how many live shelf rows are affected*, and the answer —
+**4 rows with multi-valued grants, 3 of them inside the `AGREE` set, and 19 rows (11.7%) carrying an
+unread policy document** — is what makes this a shelf problem rather than a classifier feature.
+
+🔵 **Why arity is rising rather than incidental.** Each of the four cases comes from a *healthy*
+project doing a normal thing: relicensing as it institutionalises (`EduWork`), separating reusable
+libraries from a copyleft product (`proctor`), accumulating per-file history (`iiab`), or following
+an ecosystem's dual-licence convention (`eduOS-rs`, Rust). **The more mature and the more
+institutional a project becomes, the more likely its grant has arity greater than one** — which is
+exactly the supply `T15` says this vertical is made of.
+
+### 🔴 T-`p886`-2 — When a project splits its licence, the permissive half is the half without the domain value
+
+🟢 **The measured case, and it is clean.** `sudosylabs/proctor` publishes **Apache-2.0**
+`packages/cache` (Redis cache abstraction), `packages/mail` (mailer) and `packages/vfs` (virtual
+filesystem + conformance suite) — three standalone Go modules with their own `LICENSE` and `NOTICE`.
+The **assessment-integrity logic is AGPL-3.0**: `server/` holds **2,505 tracked files** including
+`server/app/exam/attempt/` and `server/app/access/session_assurance.go`, plus 222 in `webapp/`.
+
+🔴 **So "this repo has Apache-2.0 code in it" and "this repo offers permissive supply for the thing
+you need" are different claims, and the gap between them is where a studio loses a quarter.** The
+permissive bytes are real, separable and genuinely reusable — and none of them is proctoring.
+
+🔵 **This STRENGTHENS `p875`'s standing verdict** that open-source proctoring is *"real demand and
+effectively no supply"*, by supplying its mechanism: the category's newest entrant **did** open
+source permissively, and chose the plumbing. 🟢 **The operational rule: when a split-licence repo
+appears, ask which side the domain logic is on before counting it as supply.** It is usually not the
+permissive side, because the permissive side is what the vendor wanted reused.
+
+### 🔴 T-`p886`-3 — The gate and the shelf disagreed 8 times: the gate lost 7 and the shelf lost 1, and the shelf's single loss is the expensive one
+
+🟢 **Seven times the shelf was right.** `LICENSE.TXT` missing from `p885`'s ladder
+(`openedx/XBlock`, `xblock-sdk` — Apache-2.0, 11,358 B, `cfc7749b96f6`, correct at
+`repos/foundations.md:408`), Portuguese AGPL (`portabilis/i-diario`, `:582`), ODbL
+(`withmarbleapp/os-taxonomy`, `agents/top.md:790`), a 19-byte declaration (`frappe/education`), a
+bespoke title (`opendatalab/MinerU`, `:782`) and a split-file dual (`eduOS-rs`, `:666`). **A human
+reading a licence file reads what is there; a ladder reads what it was told to look for.**
+
+🔴 **Once the shelf was wrong, and it had been wrong for ~611 passes.**
+`OS4ED/openSIS-Classic` was published on three live shelves as *"no detectable licence at all, treat
+as all rights reserved"* and *"GPL per README; no licence file"*. **Its grant is GPL-2.0, 17,286 B,
+`sha256₁₂ 224ac3d403e3`, at `master/docs/License.txt`.** 🔴 **And this KB already knew**:
+`compose/code/pass275-grant-enumeration/`'s README names this repository and this path as the case
+the `p275` enumeration gate was built on, and states the rule in one sentence — *"a ladder can only
+ever refute the paths it tried."*
+
+🔵 **The asymmetry is the trend.** An instrument error produces a *visible* disagreement that the
+next pass can triage. A shelf error produces a *confident false absence* that reads exactly like a
+finding and propagates into advice — here, "treat as all rights reserved" and "clarify with OS4ED"
+on a repository carrying a perfectly ordinary GPL-2.0 grant. 🟢 **`T13` said this KB's binding
+constraint moved from discovery to propagation; `p886` is the first pass to catch a specific,
+dated, already-solved finding failing to propagate**, with both the module that solved it and the
+shelves that contradict it in the same commit.
+
+### 🔴 T-`p886`-4 — The instruments to prevent all of this were already in the repository, and a new pass built a worse one anyway
+
+🔴 **This is the correction `p886` owes its own first draft.** The obvious reading of the defects
+above is *"this KB needs tree enumeration instead of path ladders."* **That reading is wrong, because
+this KB has had tree enumeration for hundreds of passes:**
+
+```
+91   committed instruments use  git clone --filter=blob:none
+104  committed instruments use  git ls-tree
+57   of 919 graded ladders are  TREE-ENUMERATED        (make ladder-audit: 919 ladders, 510 instruments)
+     compose/code/p215-lstree-grant-recovery/          exists
+     make enumerate                                    ships since p275
+     gate-enumeration  (p275)  PASS                    "a ladder can only ever refute the paths it tried"
+     gate-ladder-case  (p283)  PASS                    "which path ladders can find an uppercase extension?"
+     gate-subtree-grant (p382) PASS   19 controls       a grant has SUBTREES; a root-only read is wrong
+     gate-conjunctive-grant (p427) PASS 24 controls     one payload, two live families, notice obligation of two
+```
+
+🔴 **`p885` nonetheless shipped a new 8-path, root-only ladder, and it failed in exactly the two ways
+the two relevant gates exist to catch.** `p886` then reused that ladder and inherited both failures.
+🔵 **So the trend is not about licence topology at all — it is about an accumulating instrument
+estate that no pass reads before adding to it.** 919 ladders across 510 instruments is not a toolkit,
+it is a sediment; the marginal pass finds it cheaper to write ladder 920 than to find out that 57 of
+the existing ones already solved the problem.
+
+🟢 **The operational rule, and it costs one command.** Before building a probe, run
+`make ladder-audit` and `grep -rl` for the channel in `compose/code/`. `p886` did this **after**
+writing its instrument rather than before, which is how it caught its own false novelty claim — and
+why `886-G2`'s acceptance test is about *reading the gates*, not about adding another one.
+
+### 🔴 T-`p886`-5 — A licence-policy document is a third channel, not an oracle
+
+🟢 **Measured on the document that produced this pass's best finding.** `proctor`'s `LICENSING.md`
+(3,627 B, `sha256₁₂ 34b724fe4bd1`) makes two checkable claims. **One holds**: no AGPL-derived
+implementation inside the Apache packages — `0` of 65 files under `packages/` reference AGPL. **One
+does not**: it asserts that *"every comment-capable code … file carries a human-readable copyright
+and license notice together with an SPDX license identifier"*, and **`0` of 65 files under
+`packages/` carry an SPDX identifier** (6 carry a `Copyright` line, 5 a `Licensed under` line).
+
+🔵 **So the repair for `T-p886`-1 cannot be "read the policy doc and believe it."** Prose inherits
+prose's failure mode. The policy document tells you **where to look** — per-directory, per-file, a
+relicence boundary — and the bytes in the tree tell you **what is true**. `EduWork`'s
+`MulanPSL-2.0 AND MIT` was established by reading the policy **and** byte-reading both payloads; the
+SPDX-header claim above is why only the second half is load-bearing.
+
+**Previous pass (`p885`), retained:** **Pass `p885`, 2026-11-18** (second pass of the day). **The trend this pass establishes is not about
+AI in education — it is about where education supply actually lives, and `p885` closed that question
+with a measurement instead of a hypothesis.**
+
+### 🟢 T-`p885`-1 — University GitHub organisations are a teaching archive, not a software estate
+
+**Measured, not inferred.** 6,486 repositories across 33 university organisations, paginated to
+exhaustion. The `3,186` that a star-ranked cap had hidden classify as:
+**`362` education repositories, `327` of them (90.3%) with no licence at all, `28` permissive, `5`
+permissive and pushed within 12 months — and all five are lecture material or GitHub Classroom
+submissions.**
+
+🔵 **Why this is a trend and not bookkeeping.** This KB has spent several passes treating the
+institutional owner channel as an under-explored supply shelf — and it was right to: `p883` found
+`ECNU/EduWork` there and `p884` found 13 LMS/SIS integration rows. **`p885` establishes the shape of
+the shelf: the value is in the *top* of each organisation, and the tail is pedagogy, not product.**
+A studio sweeping a client university's own org should expect **one or two liftable components and
+several hundred homework repositories**, and should budget the grant gate accordingly.
+
+🟢 **The corollary is the sellable one.** The 90.3% no-grant rate in the tail (against `p884`'s 76.4%
+in the head) means **a university's own code is mostly unusable by its own contractors**, not for
+technical reasons but for licensing ones. 🔵 **"Put a grant and liveness gate in front of your own
+repositories" is a real, small, fundable engagement** that no vendor is selling, and `p885` has both
+the instrument (`compose/code/p885-symref-grant-ladder/`) and the measurement to justify it.
+
+### 🔴 T-`p885`-2 — Discovery saturation is now a seven-pass trend, and the channel that still pays is structural, not lexical
+
+**Seven consecutive passes of `0` new repositories from eight prescribed WebSearch legs.** `p885`
+measured `29` regional facts, `27` held, `2` new. 🔵 **Every repository the legs named this pass was
+already indexed here** — including the two the aggregators pushed hardest, `HKUDS/DeepTutor` (real,
+60,066 ★) and `TapXWorld/ChinaTextbook` (84,710 ★ and **no licence**).
+
+🟡 **The pattern across `p883`–`p885` is consistent and worth stating as a rule.** Keyword discovery
+is exhausted for this industry. The finds since `p882` came from **structural** channels instead:
+`p883` queried by **owner** (`ECNU/EduWork`, invisible because its description is empty); `p885`
+queried by **branch** (`ox-it/wl-roster2`, `ECL-2.0`, invisible because its default branch is
+`sakai-10.x`). 🔵 **Both were invisible to keywords for the same underlying reason — the metadata
+field the query read was empty or non-standard, not the project absent.** The next productive channel
+is likely to be another structural one, not another vocabulary.
+
+### 🟡 T-`p885`-3 — Metadata and bytes now have a measured failure in BOTH directions
+
+This pass completes a pair this KB had only half of:
+
+| Direction | Case | What the metadata said | What the bytes said |
+|---|---|---|---|
+| Metadata **too permissive** | **Flowise** (held) | vendor roundup: *"MIT license"* | `NOASSERTION` — **not** usable as MIT |
+| Metadata **too restrictive** | `ox-it/wl-roster2` (`p885`) | invisible — default branch not probed | **`ECL-2.0`**, 11,110 B — build-safe |
+| Metadata **asserts what bytes deny** | `ox-it/OxfordIDN_Case-Studies` (`p885`, 🆕 `885-G1`) | `license.spdx_id = MIT`, `key = mit` | **no licence file on the only branch** |
+
+🔵 **Operational consequence for every proposal built from this KB: a licence claim needs two
+channels, and this KB should name which two.** The pairing that held up across all three cases is
+**`search/repositories` for the field + `raw.githubusercontent.com` on the `--symref`-resolved
+default branch for the payload**, with disagreement treated as a finding rather than resolved toward
+whichever is convenient.
+
+### 🔴 T-`p885`-4 — Still no primary legal source, four passes running
+
+All seven non-GitHub hosts this KB cites returned `000` this pass. **The EU's `2027-12-02` high-risk
+date for education — the single most load-bearing regulatory fact in this KB, and the clock behind
+patterns P4 and P11 — has never been read from the instrument.** It now rests on ten converging
+secondary sources, which is corroboration, not verification. 🔵 `884-G4`'s own acceptance test says
+the achievable half of the fix needs no network change: **attach the corroboration count to the date
+every time it is used.** `p885` does that above and in `intel/market.md`, and the gap stays open
+until the practice is uniform.
+
+**Previous pass (`p884`), retained:** **Pass `p884`, 2026-11-18** (first pass of the day). `p884` adds **T23** — channel state is a
+property of the **credential**, not of the host, and three passes mistook one for the other at a cost
+of five passes of keyword-only discovery — and **T24**: the education and machine-learning
+vocabularies collide exactly where this KB sweeps, at a ~89% false-positive rate, which means the
+published estimates of the education OSS estate are inflated by roughly an order of magnitude.
+🔴 **It also CORRECTS `T10`:** measured across 270 institutional organisations, grantless publishing
+is worst in **EMEA (83.7%)** and best in **APAC (54.3%)** — it is a property of university publishing
+practice, not of the Global South. 🔵 **Derived trends: **24**.**
+
+**Previous pass (`p883`), retained:** **Pass `p883`, 2026-11-17** (thirteenth pass of the day). `p883` adds **T21** — keyword discovery
+and owner discovery return **disjoint** supply, and the five-pass nil was an instrument artefact, not
+an empty market — and **T22**: `pushed_at` is not liveness, measured at up to 22 months of divergence
+on this KB's own recommended rows.
+
+**Previous pass (`p882`), retained:** **Pass `p882`, 2026-11-17** (twelfth pass of the day). `p882` adds **T20** — the permissive share of
+education open source is **a function of the layer, not of the vertical**, measured across 173
+shelved addresses for the first time — and it closes `881-G3` by replacing a presentation check
+that had been masquerading as a structural one. 🔵 **Derived trends: **20**.**
+
+**Previous pass (`p880`), retained:** **Pass `p880`, 2026-11-17** (tenth pass of the day). `p880` adds **T17** — restored, and under a new number: an agent mounted on an incumbent system **inherits its authority and none of its defences**, a clause `gate-prose-claims` had been reporting lost since the `p871` rewrite, whose original slot `T15` `p878` had meanwhile reassigned — and **T18**, the category `T7` and `T16` both omit: **a third of this vertical's open-source estate carries no grant at all**, measured over a real denominator of `2,574` repositories rather than a top-40 sample.
+
+**Previous pass (`p879`), retained:** **Pass `p879`, 2026-11-17** (ninth pass of the day). `p879` adds **T16** — measured per
+organisation, **the permissive/copyleft fault line runs *inside* the big projects, not between
+them**, which reverses how `T7` has been applied. It also **closes the measurement gap `p878`
+opened** (the `openedx/edx-platform` `422` was a rename this KB settled in `p606`, not a channel
+defect) and records that correction where the wrong version was written.
+
+**Previous pass (`p878`), retained:** **Pass `p878`, 2026-11-17** (eighth pass of the day). `p878` adds **T15**, **sharpens T8, T13 and
+T14**, and moves the longest-standing gap in this KB.
+
+- 🟢 **T15 (new): the permissive supply in education is produced by public universities, not
+  startups — and it is institutional-grade.** `p878`'s census attaches an origin to each measured
+  repository for the first time, and every mature permissive education platform in this KB turns
+  out to come from a university or a public consortium.
+- 🟢 **T8 is no longer a prediction.** *"Assessment is being redesigned, not defended"* now has a
+  production implementation under a permissive licence: **`ls1intum/Artemis`** (MIT, 832 ★, TUM)
+  ships online exams with **per-student exercise variants, test runs, plagiarism checks and
+  structured student reviews** — integrity by design rather than by surveillance. This is the
+  answer `p875` said did not exist in code when it concluded the proctoring category is *"19 stars
+  across six repositories"* and advised *"buy, or redesign the assessment."* **The redesign is
+  available, MIT-licensed, and ten years old.**
+- 🔴 **T13 sharpened, and it is the most uncomfortable finding of the day.** T13 says this KB's
+  binding constraint moved from discovery to propagation. `p878` adds a third constraint that sits
+  *before* discovery: **the language of the query.** Eight passes concluded LATAM produces almost no
+  open-source education software. **No pass had ever run a discovery query in Spanish or
+  Portuguese.** Twelve such legs returned **304 repositories**, including Brazil's 13-year-old
+  incumbent SIS (`portabilis/i-educar`, GPL-2.0, 726 ★, CI, tagged releases). **The absence was a
+  property of the search, not of the region.**
+- 🟢 **T14 confirmed and its mechanism made exact.** `p878` independently byte-read both standing
+  education-side anomalies and **confirms `p877` in both**: `OpenOLAT/OpenOLAT` is byte-identical
+  Apache-2.0, `Gego-K12/gegok12` is MIT. GegoK12's classifier abstention is now explained rather
+  than inferred — **its `LICENSE` carries an HTML comment, `<!-- SPDX-License-Identifier: MIT -->`,
+  on line 3**, so GitHub abstains on a file that states its own SPDX identifier. 🔵 **T14 and
+  `p877`'s PageLM finding are one rule, not two: `spdx_id` screens, bytes decide — in either
+  direction.**
+- 🟢 **The APAC institutional gap moves for the first time.** Japan: **27 of 37 Top Global
+  University Project institutions (73%) have issued GenAI guidelines**, and **63% delegate
+  scope-of-use to individual instructors**. **SEAMEO is spent** — it returned nothing. See
+  `intel/market.md`.
+
+**Previous pass (`p877`), retained:** Pass `p877`, 2026-11-17** (seventh pass of the day). `p877` adds **T14**, sharpens **T12**
+downward, and leaves every other trend standing.
+
+- 🔴 **A repository this KB published as `MIT` is not open source.** `CaviraOSS/PageLM`'s licence
+  bytes are a bespoke non-commercial "PageLM Community License" — redistribution prohibited,
+  revenue-share required, and a Partial Use Clause reaching a single code snippet. It was **never**
+  MIT: the file dates from the repository's initial commit. Removed from `agents/top.md`.
+- 🟢 **T14 is new, and it is a measurement trend rather than a market one:** the GitHub licence
+  API's `NOASSERTION` carries **zero** information about a grant. Three repositories this pass
+  shared the token and nothing else.
+- 🟢 **The permissive-SIS gap closes** (`Gego-K12/gegok12`, MIT) — and it closes *because* of T14.
+- 🟡 **T12 is DISCOUNTED, not refuted.** `p877`'s 16-leg sweep had **six legs return
+  `total_count=0`**, re-confirmed. Ten effective legs, not sixteen; and `p876`'s and `p877`'s
+  "no new agents" conclusions are both weaker than their leg counts implied.
+- 🔴 **T13 (propagation) reached the client-facing column.** `p871`'s rewrite dropped five verified
+  permissive agents from `agents/top.md`, and a 43,849-star Apache-2.0 education platform
+  (`project-nomad`) was in **zero** curated files. See T13 below, now with its worst instance.
+
+**Previous pass note (`p876`)** (sixth pass of the day). `p876` **closes the gap `p875` opened one
+pass earlier**, adds **T13**, and leaves every other trend standing.
+
+- 🟢 **The dormant-LRS gap is CLOSED, and it should never have been opened.** Two maintained
+  permissive Learning Record Stores exist — **`yetanalytics/lrsql`** (Apache-2.0, 67 commits in
+  12 months) and **`openfun/ralph`** (MIT, France Université Numérique, Open edX-native). Both
+  appeared in `p875`'s **own** sweep legs while `p875` wrote "none exists" into four files. See
+  **T13**.
+- 🔴 **The dormancy that remains was understated by 2.5 years.** LearningLocker's default branch
+  last moved **2021-11-16** — five years, not 18 months. `pushed_at` was the wrong instrument.
+- 🟢 **T13 is new** — the KB's failure mode has moved from *discovery* to *propagation*, and that
+  has a direct commercial consequence for how this KB is used in a bid.
+
+**Previous pass note (`p875`)** (fifth pass of the day). `p875` **corrects T11's central date**,
+adds **T12**, and closes the KB's oldest measurement gap. Three movements:
+
+- 🔴 **T11's legal date was wrong.** The EU AI-literacy duty does not begin July 2026; it has
+  applied since **2 February 2025**. T11 is corrected in place below. The commercial argument
+  survives — it improves — but any deck carrying "July 2026" must be fixed.
+- 🟢 **A live EMEA obligation T11 missed:** transparency duties for chatbots and AI-generated
+  content apply from **2 August 2026** and were **not** postponed by the Digital Omnibus. They are
+  in force today.
+- 🟢 **T12 is new** — the adoption distribution in this vertical is bimodal, and it became
+  visible only when the star channel opened. See `agents/trending.md` for the channel.
+
+**Previous pass note (`p873`):** strengthened **T9** with three further trials — including the one
+that isolates *scaffolding* as the active ingredient — and added **T10** on Global-South agent
+origin and its licensing. Each trend is tied to something measured or verified; where the only
+available support is a vendor blog or a search summary, that is stated. **Note this pass's
+evidential split:** repository claims were verified first-hand, while every trial, survey and
+regulatory date is a search-engine summary of a page no channel in this session could open.
+
+## 🆕 `p881` · 2026-11-17 — what changed on this shelf
+
+🟢 **One new trend, `T19`, and it is about this base's own instruments rather than the market** — see
+below. In short: the eighteen red gates were holding two build-safe MIT education agents that nine
+discovery sweeps and three saturated WebSearch passes had missed.
+
+🟢 **Two slug corrections** (`OpenOLAT/OpenOLAT`, `sudosylabs/Proctor`), per `880-G4`.
+
+🔵 **Channel state, measured rather than assumed** ([`record`](../evidence/channel-state.2026-11-17-p881.tsv)):
+`api.github.com`, `github.com` over `curl` and `codeload` are all `403` for this session; `git ls-remote`,
+`raw.githubusercontent.com`, `git clone --depth 1` and `WebFetch` are up. **The refs channel and the bytes
+channel are both case-INSENSITIVE** (measured on three casings), so the only case-authoritative channel
+available when the API is down is **`WebFetch` on `github.com`** — which is new, and is what made
+`880-G4` runnable at all.
+
+## 🆕 `p880` · 2026-11-17 — what changed on this shelf
+
+🟢 **`T17`** — restored under a new number: an agent mounted on an incumbent system **inherits its
+authority and none of its defences**. Registered as `T15-INTEGRATION-AUTHORITY`, lost in a rewrite,
+and its original slot reassigned by `p878`. 🟢 **`T18`** — **a third of this vertical's open-source
+estate (`32.7%` of `2,574` repositories) carries no grant at all**, the category `T7` and `T16` both
+omit, visible only once the census had a real denominator.
+
+## T1 — The education-native agent has arrived, and it came from university labs
+
+For the first time this KB can name education-native agents that ship on a real release
+cadence rather than research prototypes. **DeepTutor** (HKUDS/HKU, Apache-2.0) shipped
+`v1.7.3` on **2026-11-16**; **OpenMAIC** (THU-MAIC/Tsinghua, MIT) shipped `v1.5.0-rc.3` on
+**2026-11-17** — both within 24 hours of this pass. Their feature lists have moved past
+chat: mastery tracking, learning-path review, narrated video lessons, project-based learning,
+course-level undo, PPTX export, desktop builds, ten-plus UI languages.
+
+**Why it matters:** the serious open-source supply in this vertical is produced by academic
+labs, not startups. That is a sourcing channel (partnership, co-development) rather than a
+market to buy from, and it is consistent with T2.
+
+## T2 — The money moved to institutions while venture funding collapsed
+
+Edtech VC funding is reported at **~$2.4B in 2025, down ~89% from the 2021 peak**, while
+forecasts for AI in education still show 30%+ CAGRs and institutional mandates are
+multiplying (US federal grant weighting, SUNY literacy requirements, 1,000+ Indian
+institutions, four Australian universities). The buyer is the institution and the ministry.
+
+**Why it matters:** this is a services, integration and compliance market in 2026 — the shape
+that favours a studio. It also means the competitor to beat is **Accenture**, whose Google
+Cloud deal across 1,000+ Indian institutions is the reference transaction of this window.
+
+## T3 — Governance is the binding constraint, and it is the product
+
+Student adoption has outrun institutional policy: **~8 in 10 students** use generative or
+agentic AI routinely (Inside Higher Ed, 17 Nov 2026), while only about **a quarter of faculty**
+report a formal institutional AI policy. Simultaneously the US has **134 state bills across 31
+states**, the EU has live Article 50 disclosure duties and a 2027 high-risk deadline, and
+Brazil's LGPD already grants automated-decision review rights.
+
+**Why it matters:** the gap institutions will pay to close is governance, not capability. The
+model works; the policy, audit trail and human-review workflow do not exist yet.
+
+## T4 — Regulation split into "already binding" and "deferred", and the deferral is the clock
+
+The EU separated into two streams: **emotion recognition in education is banned already**
+(Article 5(1)(f), since 2 February 2025) and **Article 50 transparency applies from 2 August
+2026**, while **high-risk education obligations slipped to 2 December 2027** via the Digital
+Omnibus (Regulation (EU) 2026/1744). Emotion/engagement detection is dead as a product
+category in the EU; admissions, assessment and proctoring have roughly twelve months of grace.
+
+**Caveat:** `eur-lex.europa.eu` is unreachable from this session, so this rests on secondary
+sources. Confirm against primary text before client use.
+
+## T5 — Institutions are starting to cancel commercial AI contracts over data
+
+The sharpest demand signal this pass is a negative one: **Newcastle, Westminster and
+Southampton** have reportedly decided not to renew commercial AI contracts on expiry, citing
+concerns about entrusting student data to commercial providers and the limits of agentic AI
+marking (Times Higher Education, via secondary newsletter). In parallel, US institutions face
+FERPA the moment identifiable student data reaches a model.
+
+**Why it matters:** non-renewal creates a procurement opening for self-hosted, model-agnostic
+builds, and makes "student data never leaves your tenancy" the central value proposition
+rather than a technical footnote. The stack for it is entirely permissive: Ollama/vLLM +
+LiteLLM + DeepTutor or LibreChat.
+
+## T6 — Ingestion, not inference, is where education AI actually fails
+
+Education content is PDFs, scanned worksheets, textbooks and lecture video. The tooling that
+matured in this window is ingestion: **Docling** (MIT), **marker** (Apache-2.0), **MinerU**
+(Apache-2.0 + extra terms), **faster-whisper** (MIT). DeepTutor's own release notes across
+v1.6.x–v1.7.x are dominated by parsing resilience, resumable embedding checkpoints and
+retrieval comparison — not by model upgrades.
+
+**Why it matters:** in a tutoring engagement, budget the ingestion pipeline as the primary
+engineering risk. A graph-RAG layer over badly parsed textbooks produces confidently wrong
+tutoring, which in education is a safeguarding problem rather than a quality problem.
+
+## T7 — The permissive/copyleft fault line runs straight through this vertical
+
+Verified this pass: of 22 education platforms, only **7 are permissive** (OpenOLAT Apache-2.0,
+Kolibri MIT, Oppia Apache-2.0, Perseus MIT, Sakai ECL-2.0, Opencast ECL-2.0, DSpace BSD).
+Moodle, Canvas, Open edX, ILIAS, Chamilo, Frappe LMS and both SIS options are GPL or AGPL.
+Meanwhile the AI substrate is almost uniformly MIT/Apache-2.0.
+
+Two licence corrections were recorded this pass: **Frappe LMS is AGPL-3.0, not MIT** as 2026
+listicles state; and **Open WebUI is not plain BSD** — its clause 4 forbids removing Open WebUI
+branding above 50 end users per rolling 30 days without an enterprise licence, which breaks
+white-labelled campus deployment.
+
+**Why it matters:** the architecture follows from the licences. Do not fork the platform;
+build permissive AI services that attach over **LTI 1.3** (`ltijs`, Apache-2.0) and **xAPI**.
+The integration seam is the product surface in education.
+
+## T8 — Assessment is being redesigned, not defended
+
+Berkeley Law barring AI from all exams and credited coursework, Florida weighing mandatory
+disclosure, UK institutions doubting agentic marking, and the EU putting assessment in the
+high-risk tier all point the same way: detection-based defence is losing and redesign is
+starting. `p872` revises the supply side of this trend: **a permissive open-source grading system now
+exists.** **ArguLens** (`wwrwbs/AI_AWE`, Apache-2.0, arXiv:2608.17356) scores argumentative
+essays and generates feedback, and critically its **scorer is a grade-independent LightGBM model
+over 31 explicit linguistic and discourse features, not an LLM**. It is **v0.1.0 and
+research-grade**, trained on US middle-school English, and its own README restricts it to
+"research and assistive" use with human oversight for high-stakes decisions.
+
+**Why it matters:** the architecture, not the maturity, is the finding. Every regime now gating
+automated assessment — the EU high-risk tier, Brazil's LGPD right to review of automated
+decisions, Vietnam's Decision 33/2026/QD-TTg — demands that a score be explicable and
+reproducible. A feature-based score satisfies that; an LLM score does not. The build path is
+therefore **ArguLens's scorer re-fitted on the client's own graded corpus, wrapped in
+`edx-ora2`'s (AGPL-3.0) human workflow with a logged override trail** — not an off-the-shelf
+agent, and not a prompt.
+
+**And note the regulatory escape hatch**, which is the most useful single sentence in this file:
+Vietnam's high-risk listings are reported to bite only where AI output is **the sole basis for a
+decision without meaningful human review**. Human-in-the-loop is not a compliance nicety; it is
+what keeps an assessment system out of the high-risk tier entirely.
+
+## T9 — The efficacy evidence arrived, the largest trial is negative, and `p873` found the active ingredient
+
+New in `p872`; **substantially strengthened in `p873`, which added three more trials and one that
+isolates the mechanism.** `p871` declared that no measured efficacy data existed for education AI.
+It exists now, there are six trials in the table below, and it does not support the vendor
+narrative.
+
+| Trial | Design | Result |
+|---|---|---|
+| **EdWorkingPaper 26-1598** | RCT, **2,379 undergraduates, 30 instructors**, US public university; access to a course-integrated GenAI tutor randomised across sections of the same course | **Negative.** Tutor access **reduced final grades by 0.37 SD** and LMS participation by **0.90 SD**. **Estimated academic losses were larger among first-generation students.** |
+| **Journal of Economic Education** (doi:10.1080/00220485.2026.2695361) | RCT, four macroeconomics sections: control / group-work only / AI only / AI + group work | **Positive.** All treatment arms beat control; the **combined GenAI + group-work arm produced the largest gains**. |
+| **Nature Scientific Reports** (s41598-025-97652-6, 2025) | RCT, AI tutor vs in-class active learning | **Positive.** Students reportedly learned more than twice as much in less time. |
+| **EdWorkingPaper 26-1551** — *new in `p873`* | **Two-year cluster RCT, 18 Tennessee middle schools**; Khan Academy's **Khanmigo** (proprietary) at district scale | **Small positive.** **0.06–0.08 SD per school year** — and the mechanism matters more than the effect: **struggling students rarely engaged the tutor at all.** |
+| **"Less stress, better scores, same learning"** (ScienceDirect S2666920X25001778) — *new in `p873`* | RCT, **N=275**, programming education; unrestricted AI vs scaffolded AI tutor vs no AI | **Negative for unrestricted access, positive for scaffolding.** Unrestricted-AI students scored **worse than controls who never used AI** on exams taken **without** AI; the **scaffolded tutor beat unrestricted AI**. The title names the finding: performance and learning came apart. |
+| **Tutor CoPilot** — *new in `p873`* | RCT, **900 tutors, 1,800 K–12 students**; AI assisting **human** tutors rather than replacing them | **Positive.** Students whose tutors had the system were **4 percentage points** more likely to master maths topics. |
+
+**The reconciliation is the insight, and it is actionable.** These results are not contradictory;
+they differ on **design**. The negative trial randomised *access* to a tutor layered on top of
+existing instruction — and participation collapsed, which is the mechanism: an always-available
+answer source substituted for the effortful work that produces learning. The positive trials
+either **replaced** instruction with a research-designed tutor or **paired** AI with structured
+human group work. The pattern across all three:
+
+> **An AI tutor offered as an optional supplement can reduce learning. An AI tutor embedded in a
+> designed pedagogy — with structured human interaction, or replacing a less effective mode —
+> can improve it.** The intervention is the instructional design, not the model.
+
+**`p873` sharpens that into two separable findings, and both are sellable.**
+
+**1. The active ingredient is scaffolding, and one trial isolates it.** The programming RCT is the
+most useful single study in this table because it ran *unrestricted AI* and a *scaffolded AI
+tutor* as **separate arms of the same experiment**. Unrestricted access lost to using no AI at
+all; scaffolding won. Every other result in the table is consistent with that one variable:
+structured group work (positive), a human tutor holding the reins (positive), a research-designed
+replacement tutor (positive), optional always-available access (negative), unmandated district
+rollout (0.06–0.08 SD). **"Scaffolded or not" explains this table better than "AI or not" does** —
+which means the deliverable a client should be buying is the scaffold: hint ladders, mastery
+gates, attempt-before-answer, retrieval practice, escalation to a human. That is `compose/`
+work and configuration, not model choice.
+
+**2. The engagement-selection mechanism is a procurement argument, not a footnote.** Two
+independent trials found it: undergraduate LMS participation **collapsed by 0.90 SD** under tutor
+access, and in 18 middle schools **the struggling students barely used the tutor**. So uptake is
+not uniform and it is **inversely correlated with need** — the learners a public institution is
+buying the tool *for* are the least likely to use it. Any proposal whose success metric is
+*usage* is measuring the wrong thing and will report a win while the equity outcome goes the other
+way. Pair this with the measured governance gaps in `intel/market.md` (9% of LATAM institutions
+evaluate their AI implementation at all) and the exposure is plain: **most clients currently
+cannot detect either effect.** Selling the measurement plan is therefore both the honest move and
+the commercially durable one — it is what makes the next engagement provable.
+
+**And one caution against over-reading the dissociation.** The programming trial's headline is
+that AI-supported students felt less stress and scored better *with* AI while learning no more.
+A client measuring satisfaction and in-task performance will see success exactly where learning
+did not happen. **Satisfaction and assisted performance are the two metrics most likely to be in a
+pilot's success criteria, and they are the two that can move without learning.** Insist on at
+least one unaided post-test.
+
+**Why it matters commercially, and it matters a great deal.** The default edtech motion — deploy
+a tutor, make it available, measure usage — is the arm that *lost*. A studio that leads with
+instructional design, mandatory structured peer work, participation safeguards and a measurement
+plan is selling the arm that won. That is a services-shaped proposition, not a licence-shaped
+one, and it is defensible with citations against competitors who have none.
+
+**The equity finding is a procurement risk, not a footnote.** Larger losses among
+first-generation students will matter to any public institution with an access mandate, and it
+should be raised proactively in a bid. Pair it with the measured governance gaps in
+`intel/market.md`: 9% of LATAM institutions evaluate their AI implementations, and almost nobody
+anywhere is measuring outcomes. A client who cannot detect this effect is exposed to it.
+
+**Caveats, stated.** The two 2026 studies are working papers or early publications and may change
+in peer review. Several registered trials (ClinicalTrials.gov NCT07871526 on AI-generated feedback
+for medical students, NCT07692035 on an ICU teaching agent, NCT07481162 comparing AI and human
+exam assessment) have **not reported outcomes**. And **none of this literature evaluates any
+repository named in this KB** — it tests commercial and bespoke tutors.
+
+## T10 — The Global South started producing education agents; almost none of them carry a licence — 🔴 **the GEOGRAPHY is CORRECTED by `p884`**
+
+> 🔴 **`p884` correction, stated before the trend it amends.** This trend's licensing observation
+> holds and its geographic framing does not. Measured across **270 primary-resolved institutional
+> organisations and 597 education repositories** in four regions, the no-grant share is
+> **EMEA 83.7% · LATAM 74.4% · North America 68.3% · APAC 54.3%** — overall **76.4%**
+> ([`record`](../evidence/edu-vocabulary-decontamination.2026-11-18-p884.tsv)).
+> **The grantless-publishing problem is WORST in EMEA and BEST in APAC.** It is a property of
+> *university publishing practice*, not of the Global South: a European university is more likely to
+> publish education code you cannot use than a Chinese or Japanese one. 🔵 `p873`'s four-project
+> sample was real and too small to carry a regional claim; `T18` is the trend that generalises.
+
+New in `p873`, and it is a market-shape finding rather than a licensing curiosity.
+
+For several passes this KB recorded that education-native OSS came only from East Asian and US
+university labs, and that LATAM and Africa appeared solely as deployers. That is no longer true —
+`p873` resolved four Global-South education agents. **Exactly one has a licence.**
+
+| Project | Origin | Licence | Fundable, legally |
+|---|---|---|---|
+| `LabSirius/TutorIA` | Universidad Tecnológica de Pereira, **Colombia** — funded, reported to **Minciencias** | **MIT** | **Yes** |
+| `muskvdc/EduTwin-Africa` | **South Africa**, Grades 8–12 | **none** | No |
+| `giovanayngrid-gk/multiagent-ai-tutor` | **Brazil**, Portuguese | **none** | No |
+| `nifalconi/educational-agents` | LATAM Spanish, from a course | **none** | No |
+
+**The discriminating variable looks like funding, not sophistication.** The one project with a
+licence, a contributing guide, a branch policy and a requirements document is the one with a
+national science ministry behind it and a reporting obligation attached. The unlicensed three are
+individual and course work — written by people who had no reason to think about redistribution.
+
+Three consequences worth acting on:
+
+- **Regional sourcing should start with funded university and ministry projects.** They are the
+  ones that can legally be built on, and the funding is also the best available signal that the
+  project will still exist next year.
+- **"Add a `LICENSE` file" is a near-free, high-value contribution to offer.** It converts a dead
+  end into a possible collaboration, costs an afternoon, and is a genuinely good-faith way into a
+  regional ecosystem. It cannot be done unilaterally — only the copyright holders can license
+  their work — which is precisely why asking is the opening.
+- **Do not mistake this for a quality judgement.** Nothing here says the unlicensed projects are
+  worse. It says they are unusable, which is a different and more fixable problem.
+
+**Counter-reading, stated.** Four repositories is a thin basis for a trend, the sample came from
+two search legs, and absence of a licence may simply reflect the age of these projects rather than
+anything structural. Treat T10 as a working hypothesis with four data points — and note that it
+predicts something checkable next pass: **funded regional projects should carry licences at a
+visibly higher rate than unfunded ones.**
+
+## T11 — The compliance clock the market is watching is not the one that is running
+
+**Every EMEA conversation in education AI is organised around 2 December 2027**, when the EU AI
+Act's Annex III education high-risk obligations land after the Digital Omnibus deferral. `p874`'s
+regulatory leg found that this is the wrong date to be selling against — on two independent counts.
+
+**1. A different EU duty is already binding.** The AI Act's **AI-literacy obligation applies to
+schools and institutions in their capacity as deployers**, and secondary reporting places it on
+them from **July 2026**. There is no deferral on it. So the sector has a live, unmet legal duty
+*now*, and a widely-publicised one it does not have to meet for another two years — and the market
+is almost entirely organised around the second.
+
+**2. A different jurisdiction's deadline arrives first.** Vietnam's **Law No. 134/2025/QH15** has
+been in force since **1 March 2026**, and existing education systems must comply by **1 September
+2027** — **three months before** the EU date. For any client operating in both, the Vietnamese
+clock governs the programme schedule.
+
+**What makes this actionable rather than merely true** is that the literacy duty is the one with a
+measured deficit and a published standard behind it:
+
+| Element | Value |
+|---|---|
+| Measured deficit, same population, one instrument | **79%** of European secondary students use AI for schoolwork; **47%** were shown how → a **32-point gap** (OpenAI/ThinkYoung, 5,000 students, 10 countries, fieldwork Apr–May 2026) |
+| Corroboration, teacher side | **73%** of teachers use AI for planning and materials, **67%** for tests and rubrics (European School Education Platform, Apr 2026) |
+| Delivery standard | **EC/OECD AILit Framework**, 18 June 2026 — 4 dimensions, **19 competences**, non-binding, product-neutral, feeds **PISA 2029** |
+| Legal hook | AI Act literacy duty on deployers — 🔴 **CORRECTED BY `p875`: applies since 2 February 2025**, not July 2026. The prohibition on **emotion recognition in education** has applied since the same date. 🟡 The **Digital Omnibus (Regulation (EU) 2026/1744**, in force 27 Jul 2026) reportedly **amended** the literacy provision, dropping a "guaranteed level" requirement in favour of taking *measures* to support staff AI literacy — i.e. it **softened** the duty. |
+| 🟢 **Second live hook, new in `p875`** | **Transparency duties for chatbots and AI-generated content apply from 2 August 2026 and were NOT postponed.** Today is 17 November 2026: every AI tutor or generated-content feature in an EU school is already inside this obligation. |
+
+**Why it matters commercially.** A high-risk conformance engagement is a 2027 budget line and a
+competitive field. An AI-literacy engagement is a **2026** budget line against a duty the buyer is
+already in breach of, with 19 named competences to evidence against and a measured 32-point gap to
+justify the spend. It is also the natural on-ramp: the same governance artifacts, the same
+deployer-side documentation habit, and the same buyer who will need **P4** in 2027. See
+`compose/patterns.md` **P11**.
+
+**🔴 `p875` correction, stated before the counter-reading.** `p874` wrote the July 2026 date with
+an explicit flag that it was secondary-sourced and should be confirmed. **It was wrong, and the
+flag is why it was caught in one pass rather than shipped for months.** The duty has applied since
+**2 February 2025**. 🟢 **The pitch gets stronger, not weaker:** the buyer is not approaching a
+deadline, they have been in breach for nearly two years — and a **second** duty (transparency,
+2 Aug 2026) went live three months ago. 🟡 **But the Omnibus softened the literacy wording**, which
+reinforces T11's existing advice: lead with the measured 32-point gap and the AILit Framework, not
+with a threatened sanction. 🔵 **Method note: `p874` flagged this date as unverified and `p875`
+corrected it. A flagged uncertainty is cheap to fix; an unflagged one becomes KB furniture.**
+
+**Counter-reading, stated.** 🔴 **This session still cannot open a single EU primary text** (`eur-lex.europa.eu` and
+the Council and Parliament hosts are refused at the egress proxy). The AI Act's literacy provision
+is widely described as a duty on providers *and* deployers, but **its enforcement mechanics against
+a school are not something this KB has verified, and may be weak** — a duty with no penalty
+attached is a weaker sales hook than a conformity assessment with one. 🟡 **Do not tell a client
+they face a specific sanction on a specific date for AI illiteracy.** The defensible pitch is the
+*measured* gap plus the *published* framework, with the legal duty as context rather than threat.
+Treat the date as a lead to confirm against EUR-Lex the moment that host is reachable.
+
+## T12 — Open-source education AI is a few projects and a long tail of zeroes — new in `p875`, 🟡 **discounted and re-counted by `p877`**
+
+> 🟡 **`p877` amendment, stated before the original claim.** Two things changed.
+>
+> **1. "Two projects" was wrong — it is at least three.**
+> [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) is
+> Apache-2.0 with **43,849★ and 813 commits in 12 months**, sitting between DeepTutor (59,995) and
+> OpenMAIC (43,817). It was in **zero** curated files when T12 was written, so the trend was
+> formulated against an incomplete shelf. There is also a **real middle band** this trend's shape
+> denied: BloomTutor 313★/84 commits, whiteboard-ai-tutor 216★, OpenTutor 181★/**292 commits**,
+> education-skills 125★, Open TutorAI CE 118★/196 forks. Small, yes — but not zeroes.
+>
+> **2. The evidence for the long tail is weaker than the leg counts suggest.** Of `p877`'s 16
+> discovery legs, **6 returned `total_count=0`** on two separate runs, because
+> `search/repositories` ANDs every free-text term and a five-word query matches nothing. `p876`'s
+> ten legs were never audited this way. **The tail is still real — it is visible in the 9-of-26
+> unlicensed share of this pass's unknown addresses — but "the shelf is empty" was partly a
+> measurement artefact of over-long queries.**
+>
+> 🔵 **The durable lesson: an empty discovery result measures the query, not the ecosystem** — and
+> it says nothing at all about whether the *curated* shelf is complete. Here, discovery returned
+> nothing while the shelf was missing five agents and a 43,849-star platform.
+
+
+For four passes this KB could not measure adoption and said so honestly. `p875` found the channel
+(`api.github.com/search/repositories`) and measured **78 addresses**. The distribution is not a
+curve. It is two points and a floor.
+
+| Tier | Projects | Stars |
+|---|---|---|
+| **Platforms with real communities** | DeepTutor (Apache-2.0), OpenMAIC (MIT) | **59,972** / **43,808** |
+| Small-but-alive | OATutor, 🟢 **BloomTutor**, 🟢 **whiteboard-ai-tutor**, 🟢 **OpenTutor**, 🟢 **education-skills**, 🟢 **Open TutorAI CE** | 282 / 313 / 216 / 181 / 125 / 118 |
+| 🔴 **Removed from this table by `p877`** | ~~PageLM~~ — 2,069★ and alive, but **not open source** (bespoke non-commercial licence, redistribution prohibited). It was never permissive supply and must not be counted as any | — |
+| **The floor** | pedagogy-benchmark, ArguLens, WriteRight, AI-Teaching-Agent, ai-tutor-agent, TutorIA, lti-ai-grader, and **all six proctoring repos** | **16 → 0** |
+
+**Why it matters more than a vanity metric.** This KB's agent and vertical tables have been listing
+a 60,000-star platform and a 0-star single-author repository as peer entries, separated only by a
+maturity caveat in prose. **The distribution says the open-source education shelf is far thinner
+than the length of the tables suggests.** Concretely:
+
+- **The entire open-source proctoring category holds 19 stars across six repositories.** Three
+  passes argued about its *licences*. Licence was never the binding constraint — **there is no
+  supply.** See `verticals/solutions.md`.
+- **The xAPI Learning Record Store this KB routes all measurement through has not been pushed
+  since May 2024** (`LearningLocker`, 587 stars). The measurement layer is dormant. 🔴 **`p876`
+  corrects the figure — the default branch last moved `2021-11-16`, five years — and 🟢 withdraws
+  the implied conclusion: maintained permissive replacements DO exist (`lrsql`, `ralph`).
+  See T13.**
+- **Stars and liveness are independent.** `stanford-oval/storm` has 31,901 stars and 14 months
+  without a commit.
+
+🔵 **The strategic consequence, and it sharpens T1 rather than contradicting it.** T1 observed that
+the serious supply comes from university labs. T12 adds the magnitude: **it is two labs — HKU and
+Tsinghua — and essentially nobody else.** Everything else in this vertical is a prototype, a paper
+artifact, or a funded deliverable nobody outside the authoring lab has deployed. **For Globant that
+is an opportunity, not a disappointment:** in a vertical whose open shelf is this thin, the studio
+that builds a maintained permissive component — a proctoring layer, a permissive curriculum
+graph, a reporting layer over an LRS — is not joining a crowded field. **There is no field.**
+🟡 **`p876` removes "an LRS" from that list: that slot is filled** (`lrsql`, `ralph`). The
+adjacent slot is not — **neither store ships dashboards**, which is where Learning Locker's real
+value lay. *Reporting over a maintained permissive LRS* is the build opportunity, not the LRS.
+
+🟡 **How to use this honestly.** Stars measure attention, not quality. A 0-star repo may be good
+code, and TutorIA is a funded Colombian university deliverable rather than a weekend project. What
+a 0-star repo *does* reliably tell you is that there is **no community, no issue history, no
+external contributor and no evidence of a production deployment** — which is a support-burden fact
+a client must hear before signing, not an engineering verdict.
+
+## T13 — This KB's binding constraint has moved from discovery to propagation — new in `p876`
+
+For most of its history this base got better by **finding** things. `p876` is the pass where that
+stopped being the limiting factor, and the evidence is a contradiction inside a single prior pass.
+
+**The fact pattern.** `p875` ran a sweep whose output listed three permissive Learning Record
+Stores — `adlnet/ADL_LRS` (335★, Apache-2.0), `yetanalytics/lrsql` (144★, Apache-2.0),
+`openfun/ralph` (52★, MIT, "HEAD today"). In the same pass, `p875` wrote *"there is no maintained
+permissive xAPI Learning Record Store"* into `repos/foundations.md`, `intel/trends.md`,
+`compose/patterns.md` and `repos/trending.md`, and called it *"the highest-value unfilled slot in
+the education open-source stack."* **The discovery channel and the curated shelf disagreed, and
+nothing in the pass reconciled them.**
+
+It is not an isolated slip. Three more instances, all found by `p876` without new searching:
+
+| Known in the trending log since | Still wrong in the curated files until `p876` |
+|---|---|
+| `p477` — `danny-avila/LibreChat` renamed | `agents/top.md` cited the dead slug |
+| `p800`/`T810` — `openedx/edx-platform` renamed | ~306 citations base-wide; 🟢 **`p879` repaired the six curated-file citations and re-measured the canonical slug; the trending ledger keeps the old string by design (append-only)** |
+| `p875`'s own sweep — three permissive LRS | Four files said none existed |
+
+**Why it happens.** `agents/trending.md` and `repos/trending.md` are append-only and now exceed
+**84,000 and 66,000 lines**. They are an excellent *ledger* and an unusable *index*. Each pass
+appends a rich section at the top, and the curated files — the eight anyone actually reads before
+a client conversation — are edited by hand from whatever that pass happened to be looking at.
+**Nothing cross-checks a new claim against what the base already measured.**
+
+🔵 **The method consequence, now a standing instruction:** *before declaring a gap open, grep this
+repository for the thing you are about to say does not exist.* A gap is a claim about the world
+**and** a claim about the base's own contents, and only the second one is cheap to check.
+
+🟡 **The commercial consequence, which is why this is a trend and not a chore.** This KB's value
+proposition is that a studio walks into an engagement already knowing the shelf. **A curated file
+that says "no maintained permissive LRS exists" when two do is worse than no file at all** — it
+does not merely fail to help, it argues against a correct, cheap design (attach to `lrsql`) and
+toward an expensive wrong one (fork and operate a five-year-dead GPL project, or abandon
+measurement entirely). **The failure mode of a mature knowledge base is not ignorance. It is
+confident, internally contradicted staleness** — and unlike ignorance it does not announce
+itself, because every individual pass still looks productive.
+
+## T14 — `NOASSERTION` is not a licence finding, and treating it as one creates false absences — new in `p877`
+
+**The claim.** The GitHub licence API returns `NOASSERTION` whenever a `LICENSE` file is not
+byte-similar enough to a template it recognises. That single token is returned for situations with
+**opposite** commercial consequences, so **no decision should ever rest on it.** `p877` hit three
+of those situations in one pass, and a fourth was already in the KB:
+
+| Repository | API | Bytes | Cause of the `NOASSERTION` | Commercial verdict |
+|---|---|---|---|---|
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | `NOASSERTION` | **MIT**, 1,150 B | line 3 is `<!-- SPDX-License-Identifier: MIT -->` — **one added line** | 🟢 Fully usable; **more** permissive than the API implied |
+| [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) | `NOASSERTION` | **Apache-2.0**, 1,865 B | short-form Apache header **plus a component manifest** | 🟢 Usable, and the manifest is itself valuable intelligence |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `NOASSERTION` | **bespoke non-commercial**, 8,563 B | a genuinely proprietary licence | 🔴 **Unusable.** Redistribution prohibited |
+| **`OpenOlat`** (carried from earlier passes) | `NOASSERTION` | **Apache-2.0** | a modified licence header | 🟢 Usable — **and it carries `verticals/solutions.md`'s "only permissive full LMS" claim** |
+
+**Why it matters more than it sounds.** This is the **mirror image** of `p872`'s substring-grep
+lesson, and the more dangerous of the two:
+
+- `p872`'s error produced **false alarms** — seven clean Apache-2.0 repos flagged as "Apache + additional terms". A false alarm gets re-checked, because someone wants the repo.
+- T14's error produces **false absences** — a repository written off as "no licence, no grant". **Nobody re-checks an absence.** `gegok12` was reachable, MIT and 113-commits-live through five passes that each concluded "no permissive SIS exists".
+
+**And the symmetric failure is live in this KB's history:** the same token that hid a usable MIT
+SIS also *flattered* PageLM, whose row sat in `agents/top.md` as `MIT` while its own star table
+said `NOASSERTION — re-read the bytes`. **One signal, one error in each direction, same file.**
+
+**Operational rules.**
+
+1. **Never record a licence from `.license.spdx_id`.** Use it only to decide *whether to go read bytes*.
+2. **`NOASSERTION` means "go read the file", never "no grant".** Any row this KB has written off as unlicensed on API evidence alone is **unverified**, not negative.
+3. **Read past line 2.** `Open-TutorAi/open-tutor-ai-CE` opens *"All rights reserved."* and is BSD-3-Clause; this KB mis-graded it twice, once as CC BY-NC-SA, on a two-line read.
+4. **Read to the end.** PageLM looks like a permissive grant for one paragraph; §2, §4 and §7 are where it stops being one.
+5. **Pipe payloads, never capture them** — `$(curl …)` strips the trailing newline and corrupts both size and hash (`P834`, reproduced by `p877` on its own first attempt).
+
+**Commercial consequence.** For a Globant engagement the licence column is the column that
+survives into a statement of work. A false absence costs an option; **a false permissive costs a
+remediation.** `p877` found one of each, and the false permissive had been in the client-facing
+table for fourteen months.
+
+## T15 — The permissive supply in education is produced by **public universities**, not startups — and it is institutional-grade — new in `p878`
+
+🟢 **The claim.** Every mature, permissively licensed education *platform* this KB has verified was
+built by a public university or a public-sector education consortium. Not one came from a venture-
+funded company. `p878`'s census makes the pattern visible because it attaches an origin to each
+measured repository for the first time.
+
+| Repo | Licence | ★ | Produced by |
+|---|---|---:|---|
+| `ls1intum/Artemis` (+ 8 siblings) | **MIT** | 832 | **Technical University of Munich** (Germany) |
+| `autolab/Autolab` | **Apache-2.0** | 808 | **Carnegie Mellon University** (USA) |
+| `THU-MAIC/OpenMAIC` | **MIT** | 43,823 | **Tsinghua University**, MAIC lab (China) |
+| `HKUDS/DeepTutor` | **Apache-2.0** | 60,007 | **University of Hong Kong**, Data Science lab |
+| `CAHLR/OATutor` | **MIT** | 282 | **UC Berkeley**, CAHLR |
+| `oppia/oppia` | **Apache-2.0** | 6,998 | Oppia Foundation (non-profit) |
+| `openfun/ralph` | **MIT** | 52 | **France Université Numérique** (French national consortium) |
+| `moocupv/lti-ai-grader` | **Apache-2.0** | 0 | **Universitat Politècnica de València** (Spain) |
+| `jupyter/nbgrader` | **BSD-3-Clause** | 1,370 | Project Jupyter |
+| `learningequality/kolibri` | **MIT** | 1,178 | Learning Equality (non-profit) |
+| `ls1intum/standardized-competency-catalog` | **MIT** | 1 | **TUM** |
+
+**Against which the copyleft column is where the *commercial* and foundation-scale projects sit:**
+Moodle (GPL-3.0), Open edX and its `tutor` distribution (AGPL-3.0), Canvas (AGPL-3.0), Frappe LMS
+(AGPL-3.0), i-Educar (GPL-2.0), ILIAS, Chamilo, H5P, Anki (AGPL-3.0).
+
+🔵 **Why this is a trend and not a coincidence.** The incentives line up. A university builds a
+platform to teach its own courses, has no distribution business to protect, and publishes
+permissively because its funder wants the work reusable. A company that open-sources an LMS is
+giving away the product, so it reaches for copyleft to prevent a proprietary fork. **The licence
+follows the producer's business model, and in education the permissive producers are public
+institutions.**
+
+🔵 **Three consequences that change how an engagement is scoped.**
+
+1. **Where to look for a permissive base: university GitHub orgs, not product directories.**
+   Listicles rank by stars and consumer visibility, which is why eight passes of this KB missed
+   `ls1intum` entirely while finding every commercial LMS. The `topic:`/`org:` discovery legs added
+   in `p878` are the channel that surfaces this class of code.
+2. **Buy the maturity story differently.** These projects have low stars and high operational
+   maturity — Artemis has 832 stars, an Ansible collection, native mobile clients, OpenSSF
+   Best Practices certification and a ten-year release history. 🟡 **In this vertical, stars measure
+   consumer reach and say almost nothing about whether software is operated at scale.** Judge by
+   release cadence, deployment tooling and whether an institution runs it.
+3. **It is the strongest available answer to EMEA sovereignty (T13's commercial sibling).** The
+   Council of the EU's October 2026 instrument calls for *reducing dependence on non-European AI
+   tools*; **a European-built, MIT-licensed teaching and assessment stack now demonstrably exists.**
+   See `intel/market.md`, EMEA.
+
+🔴 **The limit of the claim, stated so it is not over-read.** University-produced code carries
+**academic sustainability risk**: funding is grant-cycled, maintainers are students and staff who
+graduate or move, and several rows in this KB show it — `flysheep-ai/education-skills` (MIT) is ten
+months cold, `Open-TutorAi/open-tutor-ai-CE` five, `adlnet/ADL_LRS` twelve. **Artemis and Autolab
+are the counter-examples that prove the risk is manageable, not absent:** both are ten-plus years
+old with institutional operational commitments behind them. 🔵 **Due diligence question for any
+university-origin base: is this software *operated* by the institution that publishes it, or was it
+*published* by it?** Artemis is operated. That is the distinction worth checking, and it is cheap
+to check — look for deployment tooling and a release history, as above.
+
+## T16 — The permissive/copyleft fault line runs **inside** the big projects, not between them — new in `p879`
+
+🔵 **This refines `T7`, and it reverses the advice `T7` has been used to give.** `T7` established
+that education open source splits into a permissive camp (Kolibri, Artemis, Oppia) and a copyleft
+camp (Moodle, Open edX, ILIAS, Sakai, Canvas), and every pattern in this KB has routed clients
+**away** from the copyleft camp. Measured per organisation rather than per flagship, that split is
+real at the **core** and false at the **component layer**.
+
+**The measurement.** `p879` ran `search/repositories?q=user:<org> fork:false` across 19 education
+organisations — **571 repositories**, each with SPDX licence, stars, push date and archive state
+(`evidence/org-estate-census.2026-11-17-p879.tsv`). Permissive share of the top-40-by-stars sample:
+
+| Copyleft core | Permissive share of sample | What the permissive part is |
+|---|---:|---|
+| `openedx` (AGPL-3.0 core) | **35%** | `XBlock`, `codejail`, `paragon`, `xblock-sdk`, both mobile apps — **all Apache-2.0** |
+| `moodlehq` (GPL-3.0 core) | **12%** | `moodleapp` (Apache-2.0, 1,006 ★, 2,491 forks), `wiki-rag` (BSD-3-Clause) |
+| `bigbluebutton` (LGPL core) | 10% | MIT fringe only |
+| `sakaiproject` (ECL-2.0 core) | 7% | one Apache-2.0 utility |
+| `overhangio` (Tutor, AGPL-3.0) | **3%** | 🔴 effectively none — **there is no permissive escape at the deployment layer** |
+| `ILIAS-eLearning` (GPL-3.0) | **0%** | 🔴 **no permissive surface at all** |
+
+🟡 **Percentages are of a top-40-by-stars sample, not of the org.** Several of these orgs are
+larger than 40 repositories (`openedx` 174, `learningequality` 203, `ls1intum` 157). The sample is
+biased toward what anyone would actually adopt, which is the right bias for this question and the
+wrong one for a total.
+
+**Why the structure exists.** It is not an accident of licensing hygiene; it is **architecture made
+visible**. A platform that wants third-party extensions must license the *extension interface*
+permissively, or there are no third-party extensions. Open edX licensed `XBlock` Apache-2.0 in
+**2013** for exactly that reason. 🔵 **So the permissive periphery is not a loophole — it is the
+supported path, and the projects intend it to be used.**
+
+**What it changes for Globant.**
+
+1. **"Client runs Open edX" stops being a disqualifier.** `compose/patterns.md` **P19** is the
+   recipe: extend with Apache-2.0 components, never fork the AGPL core, and the deliverable is
+   Globant's to license.
+2. **The question to ask in qualification changes.** Not *"what licence is the platform?"* but
+   **"what licence is the extension point, and will we be hosting a modified core?"** Those have
+   different answers and only the second one creates an obligation.
+3. 🔴 **Two estates have no permissive surface and the advice there is unchanged.** An **ILIAS**
+   engagement (0% of sample) and anything requiring a **forked Tutor** (3%) are copyleft, end of
+   discussion.
+
+**Relation to the other trends.** `T15` found that the permissive supply is produced by public
+universities. `T16` adds that the **copyleft-governed foundations produce permissive supply too** —
+just at the component layer, where it is easy to miss if you only ever look at the flagship
+repository. 🔵 **Both findings come from the same cause: institutions license for adoption, and
+adoption happens at the interface.**
+
+
+## T17 — An agent mounted on an incumbent system inherits its authority and none of its defences — RESTORED in `p880` (registered as `T15-INTEGRATION-AUTHORITY`)
+
+🔴 **This trend was lost twice and is restored here under a NEW NUMBER, because its old one was
+reassigned.** `gate-prose-claims` registers the clause as `T15-INTEGRATION-AUTHORITY` against this
+file; `p534` restored it once; a later rewrite dropped it again; and 🔴 **`p878` then gave `T15` to a
+different trend entirely** (*the permissive supply is produced by public universities*). **The claim
+id in the register therefore names a trend number that no longer points at it.** 🔵 **The lesson for
+the register: key a claim on its CONTENT, never on a slot number that a later pass can reuse.** The
+id is kept as-is so the audit trail survives; the trend lives at `T17`.
+
+🟢 **The claim, in one clause:** **the integration layer inherits the authority** of the system it
+attaches to, **and none of its defences**.
+
+🔵 **Why that is not a truism.** An MCP server or LTI tool mounted on an LMS speaks with a teacher's
+or an administrator's token, so it can grade, enrol and message. Meanwhile the LMS's own consent
+flows, audit trail, rate limits and permission prompts sit on the **web** path — the path the agent
+does not use. The institution's controls are real and the agent is simply not behind them.
+
+🔴 **The consequence this KB grades on.** Every bridge on these shelves is judged on its **write
+model** — default-off, course allow-list, `confirm=true` on grade and enrolment calls — **and never
+on its tool count.** A bridge advertising 128 tools with an unscoped token is a worse starting point
+than one with twelve and a confirmation step. See [`compose/patterns.md`](../compose/patterns.md)
+**P21**, which specifies the read and write servers as two separate mounts for exactly this reason.
+
+🔵 **Relation to the other trends.** `T12` says the integration layer is where education AI actually
+ships; `T17` says what that costs. 🟢 **And `p880` adds a concrete instance:** the four `canvas-mcp`
+advisories are **absent from the global GitHub Advisory Database**, so the inherited risk is also
+**invisible to the client's scanner** — the authority is inherited silently and the warning does not
+arrive with it.
+
+## T18 — A third of the education open-source estate carries **no grant at all**, and that is a worse problem than copyleft — new in `p880`
+
+🟢 **The claim, measured:** across **`2,574` source repositories at `31` education owners**, swept to
+exhaustion this pass, **`842` — `32.7%` — have no licence file and no SPDX grant.**
+([`record`](../evidence/org-estate-full.2026-11-17-p880.tsv); method on
+[`repos/trending.md`](../repos/trending.md) `p880`.)
+
+🔴 **"No licence" is not a milder version of AGPL-3.0. It is stricter than any licence on these
+shelves.** Default copyright applies: all rights reserved. There is no grant to comply with, no
+compliance posture that makes it usable, and **no amount of engineering care converts it into
+something a client can ship.** A GPL-3.0 repository tells you what you must do; an unlicensed one
+tells you that you may not.
+
+🔵 **Why this trend could not be seen before `p880`.** Every previous census here was a top-40-by-
+stars sample, and **the no-licence population lives in the tail**. The most-starred repository of an
+organisation almost always has a licence; its 90th has a `35%` chance of carrying nothing. `T7` and
+`T16` describe where the *permissive/copyleft* line falls. **`T18` is about the third category both
+of them omit.**
+
+| Owner | No-grant share | Why it matters commercially |
+|---|---:|---|
+| 🔴 `IONISx` | **`100%`** (`23`/`23`) | An entire EMEA estate with no grant anywhere. |
+| 🔴 `sakaiproject` | `79%` | Licensed ECL-2.0 core, unlicensed periphery. |
+| 🔴 `moodlehq` | `76%` | Moodle HQ's own tooling. |
+| 🔴 `h5p` | `70%` | 🔴 **The sharpest case:** `p879` filed H5P's *content types* as its permissive surface, and `70%` of the estate carries nothing. **Check an H5P content type individually; never adopt by family.** |
+| 🟢 `openedx` | `11%` | 🔵 The most licence-disciplined large estate measured — `89%` of `174` repositories state a grant. |
+
+🟢 **The operational rule this produces, and it is cheap:** before any component is proposed,
+**require a grant to be present, not merely to be permissive.** This base's standing rule is that
+`spdx_id` screens and bytes decide; `T18` adds the prior step — **a missing `spdx_id` is as likely to
+mean "nothing was ever granted" as "the classifier abstained"**, and those two need different
+handling. `p880` tested both directions on the two highest-star education ERPs and the bytes
+confirmed the existing verdicts rather than overturning them: `openeducat_erp` is LGPL, and
+`frappe/education`'s entire grant is a **`19`-byte** file reading `License: GNU GPL V3` —
+declaration-only, naming a family while shipping none of its text.
+
+🔵 **Relation to the other trends.** `T7` and `T16` say *which* grant you get and where the line
+falls. `T18` says **how often there is no line to fall on** — and that the answer is roughly one
+repository in three.
+
+## Declared gaps
+### 🟢 `p879` — declared
+
+- 🟢 **The `p878` measurement gap is closed and the error is recorded where it was written.**
+- 🔴 **`T16`'s percentages are of a top-40-by-stars sample, not of each organisation.** Seven of
+  the 19 orgs censused are larger than 40 repositories. **Do not quote them as org-wide.**
+- 🔴 **`T13`'s propagation failure happened again inside this very sequence**: a fact settled in
+  `p606`, reopened as `ACTION p800-A` in `p800`, was re-derived by `p878` as a *new gap in the
+  measurement channel*. 🔵 **The standing instruction from `p876` — grep the base before declaring
+  a gap — was not followed, and the cost was a wrong correction written into four files.**
+
+
+**`p878` ledger movements:** the **APAC institutional gap NARROWS** — Japan produces a real
+institutional census and **SEAMEO is formally spent**; a **gap nobody had named CLOSES** — the
+LATAM supply shelf was empty because every discovery leg was English-only; a **new gap OPENS** in
+the measurement channel itself (`openedx/edx-platform` is unmeasurable — 🟢 **closed by `p879`:
+it was a stale slug, not a channel hole**); and the **egress refusal
+is re-confirmed for the ninth consecutive pass** on twenty hosts across both channels.
+
+- 🟢 ~~**LATAM produces almost no open-source education software.**~~ **CLOSED BY `p878`, and it was
+  never true.** Twelve discovery legs in **Spanish and Portuguese** — never run by any previous pass
+  — returned **304 repositories, 200 of them education-related and uncurated**, including
+  **`portabilis/i-educar`** (GPL-2.0, **726 ★**, created 2013-01-31, pushed 2026-11-13, tagged
+  releases, GitHub Actions CI): **the incumbent school-management system in Brazilian municipal
+  education.** Also `portabilis/i-diario` (AGPL-3.0, 117 ★) and `Antonio-Neves/Gestao-Escolar`
+  (**MIT**, 50 ★ — the only permissive LATAM-origin SIS found). 🔴 **This is the third method error
+  in this KB's history caught by re-reading a rule rather than by new data** (after the licence grep
+  and the Africa/EMEA vocabulary error), and the most expensive: it produced a wrong conclusion
+  about an entire region, repeated across eight passes, in the region Globant is strongest in.
+  🔵 **Standing instruction: every discovery leg runs in Spanish and Portuguese as well as English.**
+  Cost: twelve API calls. 🔵 **And the same test is now owed to Africa/MENA in French, Arabic and
+  Swahili before any further absence is recorded there** — `muskvdc/EduTwin-Africa` (1 ★, no licence
+  file) is currently the whole shelf, and `p878` has just shown what a monolingual sweep does to a
+  non-English region.
+- 🟡 ~~**APAC has attitudes measured and institutional behaviour unmeasured.**~~ **NARROWED BY
+  `p878`, not closed.** Japan now supplies an institutional measure (**27 of 37 institutions = 73%
+  with GenAI guidelines; 63% delegating scope-of-use to instructors**) and Australia supplies
+  peer-reviewed institutional policy research against TEQSA's principles. 🔴 **`SEAMEO` returned
+  nothing and is spent — do not name it again.** 🔴 **There is still no region-wide APAC instrument**
+  comparable to UNESCO IESALC's LATAM study, and the two cross-national comparators found this pass
+  (34 of 39 universities with guidance, only 8 with a formal instrument; Japan 27 / USA 31 / China 6)
+  are **convenience samples of "leading" universities and must not be quoted as APAC rates.**
+  🔵 **Next instruments, since the obvious ones are exhausted: India's AICTE/UGC circulars,
+  Singapore's IHL cluster (NTU/NUS/SMU), or China's MoE directives** — all three are
+  regulator-to-institution channels, which is the shape that produced Japan's number.
+- 🟢 **CLOSED by `p879`. Retained because the reasoning error is the lesson.** `p878` wrote:
+  *"`openedx/edx-platform` cannot be measured or discovered by the only star channel this KB has."*
+  It returns **`422 Validation Failed`**, whose body reads *"the listed users and repositories cannot
+  be searched either because the resource does not exist or you do not have permission to view
+  them"* — while `raw.githubusercontent.com` serves its **AGPL-3.0** licence bytes and its sibling
+  repositories (`edx-ora2`, `edx-proctoring`, `openedx-aspects`) are indexed normally. **The
+  flagship LMS in this KB therefore has no measured star count**, and the discovery sweep cannot
+  see it at all. 🟢 **`p879` measured it: `openedx/openedx-platform`, 8,240 ★, AGPL-3.0, pushed
+  2026-11-17.** 🔴 **`p878` wrote "`p877` read `422` as a renamed-slug signal; that diagnosis is
+  wrong — read the body." `p877` was right and `p878` was wrong.** The `422` body is a *generic*
+  string returned for any unresolvable `user:`/`repo:` qualifier; it does not distinguish a rename
+  from a permission problem, so it cannot refute a rename hypothesis. 🔵 **The durable lesson is
+  not about Open edX. It is that `p878` overturned a correct earlier finding by reading a generic
+  error string as specific evidence — and that the KB had already settled this address in `p606`
+  and reopened it as `ACTION p800-A`, so the fact was in the base the whole time.** 🔵 **The general defect is the one this KB keeps re-learning in new clothes: a negative
+  result from one channel was promoted to a fact about the world. Absence from the sweep is not
+  evidence of absence; confirm on a second channel.**
+- 🔴 **NEW FLAG, opened by `p878`: the largest teacher-skills library is `CC-BY-SA-4.0`, not a
+  software licence.** `GarethManning/education-agent-skills` (993 ★, created 2026-03-01, *"165
+  evidence-grounded AI skills for teachers, school leaders and EdTech"*) byte-reads as **Creative
+  Commons Attribution-ShareAlike 4.0 International**. **ShareAlike is viral for derived content**, so
+  a Globant deliverable adapting it inherits ShareAlike on the adaptation. The permissive
+  alternative this KB carries, `flysheep-ai/education-skills` (MIT), is **125 ★ and ten months
+  cold**. 🔵 **The choice is live: 993 stars under ShareAlike against 125 under MIT and dormant.**
+  Put it to counsel before a skills library is promised.
+- 🔴 **Re-confirmed for the ninth consecutive pass, and it should now cost one probe rather than a
+  leg.** Twenty hosts were refused on **both** channels (`curl` → `000`, `WebFetch` → `ENOTFOUND`):
+  `huggingface.co`, `arxiv.org`, `aclanthology.org`, `edworkingpapers.com`, `eur-lex.europa.eu`,
+  `data.consilium.europa.eu`, `api.ecosyste.ms`, `unesco.org`, `www.seameo.org`, `www.teqsa.gov.au`,
+  `www.nier.go.jp`, `hepi.ac.uk`, `digitaleducationcouncil.com`, `iagen.unam.mx`, `multistate.us`,
+  `internationalsped.com`, `mapub.org`, `data.mendeley.com`, `reports.weforum.org`, `dig.watch`.
+  `api.github.com` and `raw.githubusercontent.com` answer. 🔵 **The fix remains a network-settings
+  change naming the hosts. It would upgrade every efficacy, survey and regulatory claim in this KB
+  from secondary to primary, and it is still the single highest-leverage change available.**
+
+**`p875` ledger movements:** star counts **CLOSED**; the APAC institutional gap **re-tried against
+all three named instruments and NOT closed**; the Khanmigo effect-size discrepancy **adjudicated**;
+a **new gap opened** (the dormant LRS).
+
+- 🟢 ~~**Star counts unmeasurable for FOUR consecutive passes.**~~ **CLOSED BY `p875`.** 78
+  addresses measured first-hand via `api.github.com/search/repositories`, which returns
+  `stargazers_count`, `license.spdx_id`, `pushed_at` and `archived`. 🔴 **`p874`'s diagnosis was
+  half wrong in the half that mattered.** Its finding that non-GitHub metadata hosts are refused at
+  an egress allowlist is correct and re-confirmed. Its conclusion — *"no GitHub-side scope change
+  will restore star counts"* — was a generalisation from **one endpoint** (`/repos/{slug}`, `403`
+  session scope) to an entire provider, and `/search/repositories` on the same host was never
+  probed. 🔵 **Standing instruction: before declaring a channel closed, probe a second path on the
+  same host and read the refusal body, not just the status code.** `p874` was told the remedy in
+  the 403 response it received. Consequences now live: see **T12**, and the staleness and
+  licence-mismatch audits in `repos/trending.md`.
+- 🟢 ~~**NEW GAP, opened by `p875`: there is no maintained permissive xAPI Learning Record
+  Store.**~~ **CLOSED BY `p876` — and it was never open.** **`yetanalytics/lrsql`** (Apache-2.0,
+  144★, HEAD `2026-11-14`, **67 commits in 12 months**, SQLite/Postgres/MariaDB/MySQL, Docker,
+  OIDC) and **`openfun/ralph`** (MIT, 52★, HEAD `2026-10-12`, France Université Numérique, with
+  **Open edX→xAPI converters verified in-tree**) are both permissive and both maintained. **Both
+  were listed in `p875`'s own sweep output in the same pass that declared the gap.** Filed in
+  `repos/foundations.md`; wired into **P1**, **P7** and **P9** in `compose/patterns.md`. 🔴 **The
+  residual, genuine gap is narrower and should be stated as such: neither replacement ships a
+  reporting UI.** Learning Locker did. Any engagement promising measurement must price the
+  visualisation layer (Aspects/Superset, or Grafana over Postgres) as an explicit line item.
+- 🔴 **`huggingface.co` is refused at this session's egress proxy** (`connect_rejected`), so
+  `p875`'s instruction to resolve the two Africa-origin leads (**EduNaija AI Tutor**,
+  **AFRILANGTUTOR**) via Hugging Face **cannot be carried out here**. Their claimed releases are
+  model weights, and `arxiv.org` / `aclanthology.org` are refused too. **This is not evidence
+  they do not exist** — it is a named, actionable session limitation: allowlist `huggingface.co`.
+  See **T10**, which is otherwise unchanged.
+- 🟡 ~~**The Khanmigo effect-size discrepancy (T9's 0.06–0.08 SD vs `p874`'s 0.020 SD).**~~
+  **ADJUDICATED by `p875`, not resolved.** A third independent search summary returns **Year-1
+  0.020 population SD (indistinguishable from zero)** with **~0.13–0.14 SD among students who
+  actively engaged**, matching `p874` and not T9. **Two independent summaries now agree against
+  T9's figure, so treat 0.06–0.08 SD as superseded** — but 🔴 **`edworkingpapers.com` is still
+  unreachable and the PDF has never been read by anyone in this session**, so the number is not
+  corrected in T9's table, only flagged. The direction and mechanism are unaffected: participating
+  students show an effect, struggling students never engage.
+- 🔴 **The APAC institutional gap did NOT close, and all three named instruments are now
+  exhausted.** `p874` named **APRU, UNESCO Bangkok, or a national rectors' conference**. `p875`
+  tried all three: APRU publishes **event and programme material only**; UNESCO Bangkok appears as
+  a *presenter* of the global figure, not the author of an APAC instrument; **no national rectors'
+  survey exists** for any APAC country. The only figure available is **global** — UNESCO Chairs and
+  UNITWIN Networks, 400 responses across 90 countries, **19% with a formal AI policy, 42%
+  developing** — whose sampling frame is UNESCO Chairs, **not comparable to UNESCO IESALC's LATAM
+  instrument and not presentable as an APAC rate**. 🔵 **Next instruments, now that the obvious
+  three are spent: SEAMEO; Australia's TEQSA provider action-plan returns (a regulator already
+  collecting institutional AI risk plans — the closest thing to a compliance census in any region);
+  or Japan's NIER/MEXT institutional surveys.** 🟡 **APAC remains the only region in this KB with
+  attitudes measured and institutional behaviour unmeasured. Say so in any APAC deck rather than
+  substituting the sentiment figures for adoption.**
+- 🟢 ~~**The EU AI-literacy duty's start date is secondary-sourced.**~~ **RESOLVED AND CORRECTED
+  BY `p875` — the previous answer was wrong.** The duty applies from **2 February 2025**, not July
+  2026, alongside the emotion-recognition prohibition. The postponement instrument is now named:
+  **Regulation (EU) 2026/1744**, the Digital Omnibus, in force **27 July 2026**, moving Annex III
+  high-risk education obligations to **2 December 2027**. 🟢 **And a live obligation this KB had
+  missed entirely: transparency duties for chatbots and AI-generated content apply from 2 August
+  2026 and were not postponed.** See the corrected **T11**. 🔴 All of it remains secondary-sourced
+  — `eur-lex.europa.eu` was re-probed this pass and is still refused.
+- 🟢 **The proctoring gap is restated for the third time and is now QUANTIFIED — and the licence
+  framing is retired.** `p871`: none exists. `p872`: two, both AGPL. `p874`: three are MIT, the gap
+  is maturity. **`p875`: the whole category is 19 stars across six repositories, four of them
+  zero.** `p874` was right that licence was not the constraint, and the measurement shows why that
+  mattered: **there is no supply to have a licence problem with.** SPDX independently confirmed
+  every one of `p874`'s byte-reads, including its correction of `SriSatyaLokesh/pariksha` to
+  AGPL-3.0. 🔵 **Retire the licence framing. The answer to "which open-source proctoring platform
+  should we use" is "none — buy, or redesign the assessment."**
+
+
+- ~~**No measured efficacy data** for education AI.~~ **CLOSED by `p872`** — see **T9**. But the
+  residual gap is sharp and worth stating precisely: **no trial evaluates any open-source system
+  named in this KB.** The literature tests commercial and bespoke tutors. Nobody has published
+  learning-outcome data for DeepTutor, OpenMAIC, OATutor, PageLM or ArguLens, and
+  `pedagogy-benchmark` measures a *model's* pedagogical knowledge rather than a *deployed
+  system's* outcomes. Running a real trial on an open-source deployment would make Globant the
+  only party holding that evidence. **`p873` re-confirms this residual gap after adding three
+  trials:** the new studies test Khan Academy's proprietary Khanmigo, a bespoke programming tutor
+  and a human-tutor assistance tool. **Six trials, zero evaluating any repository in this KB.**
+- **No open-source proctoring platform that is both maintained and permissive.** 🟢 **RESTATED by
+  `p874`, which found the previous framing factually wrong.** `p871` found nothing; `p872` found
+  two, both AGPL-3.0, and this KB concluded for two passes that **no permissive proctoring code
+  existed**. **It does.** `p874` byte-read **seven** candidates' licences: **three are MIT** —
+  `ganesh-786/Proctor`, `amaanwarsi/Proctora`, `code-by-abrar/Online-Proctoring-system` — and four
+  are AGPL-3.0. 🔴 **The accurate gap is maturity, not licence:** all three permissive projects are
+  single-branch and untagged, and `Proctora`'s own README says it should not be presented as a
+  secure exam platform; the one complete platform (`sudosylabs/Proctor`) is copyleft. 🔴 **A
+  secondary source was corrected in the same leg** — `SriSatyaLokesh/pariksha` was presented as
+  *the* Apache-2.0 option in the category and its bytes say **AGPL-3.0**. 🔵 **The method lesson is
+  the one this KB keeps re-learning:** *"we searched and found none"* decayed into *"none exists"*
+  across two passes, and a third search with the same tooling overturned it. **A negative finding
+  needs a re-run date, not a promotion to fact.** Full table in `verticals/solutions.md`.
+- ~~**Per-region adoption rates remain unavailable.**~~ **LARGELY CLOSED by `p872`**, and
+  **further closed by `p874`** — see `intel/market.md`, *Measured adoption by region*.
+  🟢 **The EMEA half is now CLOSED:** OpenAI/ThinkYoung (10 Nov 2026) is a European instrument with
+  a European sampling frame — 5,000 secondary students aged 13–19 across 10 countries plus 600
+  teachers — reporting **79%** AI use for schoolwork against **47%** who were shown how. Residual
+  on that side: it measures **secondary**, not higher education, and it is **vendor-published**
+  research on think-tank fieldwork. 🟡 **The APAC half is narrowed and precisely bounded, not
+  closed:** `p874` added the Digital Education Council's regional comparatives (APAC faculty
+  excitement **57%** vs **26%** US & Canada; teaching-use intent APAC **92%** / EMEA **89%** /
+  LATAM **94%**) and one whole-institution datapoint (NTU Singapore, all undergraduates, Aug 2026),
+  but **nothing measures APAC *institutions*** the way UNESCO IESALC measures LATAM's. The next
+  instrument to try is named: APRU, UNESCO Bangkok, or a national rectors' conference.
+- **All EU primary sources are unreachable from this session.** `eur-lex.europa.eu`,
+  `data.consilium.europa.eu` and `www.europarl.europa.eu` all fail to resolve. Two identified
+  Council documents (ST-13077-2026, ST-14902-2026) and a European Parliament briefing
+  (`IUST_BRI(2026)784574`) **could not be read**, so all EU AI Act specifics remain
+  secondary-sourced. These hosts would need allowing in the session's network settings.
+- ~~**Vietnam's AI Law number and compliance dates are unresolved**~~ 🟢 **RESOLVED by `p874`:**
+  **Law No. 134/2025/QH15** (not `91/2025/QH15`), passed 10 Dec 2025, **in force 1 March 2026**,
+  with an **18-month transition for existing education systems closing 1 September 2027** (12
+  months elsewhere; systems likely to cause serious damage excluded from the transition entirely).
+  🔵 **The conflicting dates were two different clocks circulating without their labels** — entry
+  into force vs the education compliance deadline — and one of them had been mis-stated by a year.
+  🔴 **1 Sep 2027 is three months before the EU's 2 Dec 2027**, which makes it the nearest hard
+  deadline in education AI; see **T11**. 🟡 A cited `Decree 142/2026` could not be corroborated.
+- ~~**Africa and MENA fall outside the closed region vocabulary** and so cannot be filed.~~
+  **WITHDRAWN by `p873` — this gap was never real, and it was self-inflicted.** The closed
+  vocabulary is `North America | EMEA | APAC | LATAM | Global`, and **EMEA is Europe, Middle East
+  and Africa**: both regions are in the bucket's own name. Nigerian, South African and Gulf
+  findings have been fileable all along, and two passes dropped material they could have kept.
+  `p873` files its South African, Nigerian and Dubai findings under **EMEA** with the country named
+  in prose, as the schema intends. This is the second method error in two passes (after the licence
+  grep) caught by **re-reading a rule rather than by new data** — the cheapest class of error to
+  find and the easiest to leave standing for months.
+- **Star counts unmeasurable for FOUR consecutive passes — and `p874` finally diagnoses it.**
+  Three passes attributed the failure to the session's **GitHub** scope. `p874` tested that by
+  probing **six hosts with no GitHub relationship at all** — `ecosyste.ms`, `api.ecosyste.ms`,
+  `libraries.io`, `api.ossinsight.io`, `api.star-history.com`, `huggingface.co` — and **every one
+  was refused at the egress proxy with `connect_rejected`**, while `codeload.github.com` (`400`)
+  and `gitlab.com` (`301`) answered. 🟢 **This is a session EGRESS ALLOWLIST, not a GitHub
+  permission and not an outage.** Two consequences: **no GitHub-side scope change will restore star
+  counts**, and **the missing stars and the unreadable papers, surveys and EU texts are one defect
+  with one fix** — a network-settings change naming the hosts. Nine routes tried. No star figure appears anywhere in this KB; blog-sourced figures are how
+  the earlier inflated numbers got in, and `p873` saw the reason again — three secondary sources
+  gave ~48.9k, ~54k and ~59.9k for the same project inside three weeks.
+- **The efficacy literature gained no new trial in `p874`, and the residual gap is unchanged:**
+  **zero of the trials in T9 evaluates any repository in this KB.** `p874` re-ran the trial leg and
+  it returned the same three studies T9 already carries (EdWorkingPaper 26-1598, EdWorkingPaper
+  26-1551 on Khanmigo, and the 2025 *Nature Scientific Reports* RCT) plus registered-but-unreported
+  clinical-education trials. 🟡 **One discrepancy worth flagging rather than silently reconciling:**
+  this pass's summary of the Khanmigo trial gives a **Year-1 effect of 0.020 population SD
+  (indistinguishable from zero)** with **0.127–0.142 SD among students who actively participated**,
+  where T9 records **0.06–0.08 SD per school year**. Both may be estimates from the same paper on
+  different bases, and **the PDF cannot be opened from this session**, so neither figure is
+  corrected here. The direction is the same and so is the mechanism — participating students show
+  an effect, struggling students never engage. **Resolve against the paper once
+  `edworkingpapers.com` is reachable.**
+- **`p873` could not open a single non-GitHub source, and `p874` re-confirms it host by host.** `curl` returns `000` and `WebFetch`
+  returns `ENOTFOUND` for every one of `arxiv.org`, `aclanthology.org`, `doi.org`,
+  `sciencedirect.com`, `unesco.org`, `edworkingpapers.com`, `multistate.us`, `ipsos.com`,
+  `lenda.ai` and all EU hosts. **Consequence for how to read this KB: repository claims are
+  first-hand (existence, branch, tags, licence bytes, source files), and every paper, survey,
+  trial result and regulatory date is a search-engine summary of a page nobody in this session
+  could open.** The trial numbers in T9 in particular are reported effect sizes, not read ones.
+  Allowing `arxiv.org`, `aclanthology.org` and `edworkingpapers.com` in the session's network
+  settings would upgrade the whole efficacy section from secondary to primary, and is the single
+  highest-leverage change available to this KB.
+
+
+## T20 — The permissive share is a property of the LAYER, not of the vertical — new in `p882`
+
+🟢 **The measurement.** `p882` re-measured every address on all three sell shelves through
+`api.github.com/search/repositories` — 143 distinct repositories, SPDX id as GitHub resolves it
+([`record`](../evidence/sell-shelf-measure.2026-11-17-p882.tsv)) — and the licence posture turns out
+to be ordered by *architectural layer*, monotonically:
+
+| Layer | Shelf | Rows | Permissive | Copyleft | No resolvable grant |
+|---|---|---:|---:|---:|---:|
+| substrate, libraries, standards | `repos/foundations.md` | 76 | **82.9%** | **6.6%** | 9.2% |
+| agents | `agents/top.md` | 42 | 78.6% | 4.8% | 14.3% |
+| platforms institutions actually run | `verticals/solutions.md` | 55 | **50.9%** | **38.2%** | 10.9% |
+
+🔴 **Why this reverses how `T7` and `T16` have been applied.** `T7` reads the permissive/copyleft
+fault line as running *through the vertical*; `T16` corrected it to run *inside the big projects*.
+Both are true and both are incomplete, because they are stated about **projects**. Stated about
+**layers**, the distribution is not a fault line at all — it is a **gradient**, and it has a cause:
+copyleft in education is carried almost entirely by the **incumbent platforms**, which are the
+oldest software on the shelf (Moodle 2002, Sakai 2004, Koha 1999, Canvas 2011) and were licensed in
+an era when GPL/AGPL *was* the way an education consortium protected a commons. The substrate a
+studio builds on was licensed later, in the permissive era, and is **83%** permissive.
+
+🟢 **The consequence, and it is the most actionable thing in this file.** A licence constraint that
+is distributed by layer can be **designed around rather than negotiated around**. You do not need a
+permissive LMS — this KB has measured repeatedly that none exists at Moodle's or Canvas's scale, and
+`p882`'s verticals leg found none again. You need the **boundary** to be in the right place:
+
+- the **incumbent platform** keeps its licence and its data, untouched;
+- the **integration surface** is a standard — **LTI 1.3**, **xAPI**, **OneRoster** — which is a
+  specification, not a derivative work;
+- everything a studio **writes** sits in the 83%-permissive substrate layer and is the client's to
+  license as they choose.
+
+🔵 **This is why every pattern in `compose/patterns.md` that has survived contact with an engagement
+has the same shape**, and `P19` (Open edX capability without the AGPL obligation) and `P20` (the
+MIT-end-to-end offline supply chain) are the explicit statements of it. 🔴 **The inverse is the one
+genuinely expensive mistake available here:** forking an AGPL-3.0 platform to add an agent. The
+obligation attaches to the modified work *served over a network*, which is exactly what a hosted LMS
+is — so the fork converts a licence question into a disclosure obligation on the studio's own code,
+for no capability that attaching would not also deliver.
+
+🟡 **Read `T18` against this, not instead of it.** `T18` measured *no grant at all* on about a third
+of the 2,574-repository estate. On the **curated** shelf the same measure is **11.9%** — so curation
+removes roughly two-thirds of the problem, and the residual 17 are **named** on `agents/top.md`
+rather than averaged away. `T14` still governs how they are read: `NOASSERTION` is GitHub declining
+to classify, not a permission, and nine of the 17 already carry byte-read grant cells.
+
+🔵 **Boundary of the claim, stated so the next pass does not over-read it.** This is 143
+repositories chosen *by this KB* for client-facing shelves, so it measures the posture of a
+**curated** estate and not of the vertical's whole population. `T12`'s long tail of zeroes and
+`T10`'s unlicensed Global South supply are the population-level statements, and they disagree with
+this one in exactly the way a curated sample should.
+
+## T21 — Discovery by OWNER and discovery by SUBJECT return disjoint supply, and this KB spent five passes on the wrong one — new in `p883`
+
+🔵 **The claim.** In education, a keyword query and an owner query do not find the same
+repositories, and the gap is not a matter of ranking — it is **structural**. A repository with an
+empty `description` field and a name that is a portmanteau rather than a keyword is **invisible to
+every `topic:` and `in:name,description` query that can be written**, at any star count, forever.
+
+🟢 **Measured.** `p876` ran 10 star-ranked discovery legs, `p877` 16, `p878` 56 (44 English + 12
+Spanish/Portuguese). All keyword-shaped. `p876` and `p877` concluded *"there is no hidden shelf"*.
+`p883` ran **53 owner-shaped legs** (`user:<handle>`, 31 APAC + 22 LATAM) and found
+[`ECNU/EduWork`](https://github.com/ECNU/EduWork) — **376 ★ in nine weeks, `MulanPSL-2.0`, an
+education distribution of DeepSeek Harness, pushed on the day of measurement**
+([`record`](../evidence/by-name-org-sweep.2026-11-17-p883.tsv)).
+
+**`EduWork`'s GitHub description is empty.** That single missing field is why 82 keyword legs across
+three passes could not see a 376-star education platform.
+
+| Channel | Legs run | New education agents found |
+|---|---:|---:|
+| Keyword (`topic:`, `in:name,description`) — `p876`, `p877`, `p878`, and the 8 prescribed legs of `p880`–`p883` | **82+** | **0 in the last 5 passes** |
+| Owner (`user:<handle>`) — `p883`, first run | **53** | **1 permissive platform + its institutional deployment + 1 MIT substrate (DSH)** |
+
+🔴 **The correction this forces on T12 and T13.** `T12` says open-source education AI is *"a few
+projects and a long tail of zeroes"*. That remains true of what keyword discovery can see, and is
+now **bounded by instrument** rather than stated as a property of the vertical. `p876`'s *"there is
+no hidden shelf"* was a sound conclusion from an instrument that cannot resolve this class.
+
+🟢 **The operational rule.** **Discover institutions by name, not subjects by keyword.** An
+education buyer is an institution; institutions publish under their own handle; and the thing worth
+finding — a university that already shipped the product your client wants — is named after itself,
+not after its category. 🔵 **Cheap corollary:** `422` from `user:<handle>` means the organisation
+does not exist, which is itself a measurement (`p883`: 10 of 31 APAC handles, 18 of 22 LATAM —
+[`register`](../evidence/by-name-handles.2026-11-17-p883.tsv)).
+
+## T22 — `pushed_at` is not liveness, and the divergence is largest on exactly the institutional repos this KB recommends — new in `p883`
+
+🔵 **The claim.** `pushed_at` records a push to **any** ref — a dependency bot on a side branch, a
+tag, a fork-sync. The question an engagement actually asks is whether the **default branch** moves.
+On mature, multi-branch, institutionally maintained repositories these two numbers diverge by
+**more than a year**, and the direction of the error is always flattering.
+
+🟢 **Measured on 19 shelved rows** ([`record`](../evidence/liveness-measure.2026-11-17-p883.tsv)),
+using a limb no prior pass had tried — `api.github.com/search/commits`, `200`, which returns
+default-branch committer dates:
+
+| Repo | `pushed_at` says | Default branch `HEAD ≥` | Gap |
+|---|---|---|---|
+| `ls1intum/Pyris` | 2026-06-03 | **2025-01-29** | **~22 months** |
+| `ls1intum/Ares` | 2026-11-03 | **2025-09-11** | **~14 months** |
+| `autolab/Autolab` | 2026-11-11 | **2025-10-21** | **~13 months** |
+
+🔴 **`ls1intum/Ares` is the expensive case: `p878` named it "the most liftable component found this
+pass"** on the strength of a `pushed_at` three weeks old. It is liftable — and its default branch
+has not moved in fourteen months. **The recommendation was not wrong; it was unqualified.**
+
+🟡 **12 of 19 rows agreed within six days**, so this is a defect in a specific row class — mature
+institutional projects with busy side branches — not a general indictment of the shelves. 🔵 **The
+rule: a shelf row carries both numbers, or it carries neither.** And a liveness figure from a
+text-filtered index is a **lower bound** published with its term set (see `repos/trending.md`,
+`p883`: a one-term probe dated `Ares` to 2022 and would have published a three-year false death —
+`p845`'s manufactured-death class in a new instrument).
+
+## T23 — Channel state is a property of the CREDENTIAL, not of the host, and three passes mistook one for the other — new in `p884`
+
+🟢 **Measured, both ways, before anything else this pass was written**
+([`record`](../evidence/channel-state.2026-11-18-p884.tsv)):
+
+| Limb | Unauthenticated `curl` | Authenticated `gh api` |
+|---|---|---|
+| `api.github.com/search/repositories` | **`403`** | **`200`** |
+| `api.github.com/search/users` | `200` | **`200`** |
+| `api.github.com/repos/<slug>` | `403` | `403` |
+
+🔴 **`p873` recorded star-ranked discovery as impossible** (*"`gh api search/repositories` → empty
+result set"*) and **`p881` recorded `api.github.com` as "flatly down"**, drawing the rule *"a pass
+that cannot measure stars must not publish stars."* `p882` then found the channel `200` and called
+it **SPLIT**. **All three were measuring their own credential.**
+
+🔴 **And `repos/<slug>` is not down at all. Its BODY says what it is**, and no pass had read it:
+
+```
+"GitHub access to this repository is not enabled for this session. Use add_repo to request access."
+```
+
+That is a **repository-scope** refusal — a property of this session's authorised set.
+`users/<login>` and `orgs/<login>` return the sibling message, *"sessions are bound to their
+configured repositories."*
+
+🔵 **The rule, and it generalises past GitHub: an HTTP status names the REFUSAL; only the body names
+the CAUSE. A channel declared "down" without reading the body may simply be a channel nobody
+authenticated.** The cost here was five passes of keyword-only discovery (`p876`–`p880`) run under
+the belief that owner-ranked discovery was unavailable — and `T21`, the finding that owner discovery
+beats keyword discovery, was reachable the whole time.
+
+🟡 **This is `T14`'s shape in the transport layer.** `T14` says an abstention is not a finding;
+`T23` says a refusal is not a diagnosis. Both errors come from treating a null result as information
+about the subject rather than about the instrument.
+
+## T24 — Education and machine-learning vocabularies collide exactly where this KB sweeps, and the false-positive rate is ~89% — new in `p884`
+
+🟢 **Measured on 10,365 repositories from 270 institutional organisations.** A conventional
+education keyword set returns **326** permissive, live, new "education finds". After
+de-contamination, **37** of that set survive — the rest are machine-learning repositories from
+university AI labs. Across the whole sweep the honest counts are **597** education repositories
+(TIER-A) against **497** deferred (TIER-B).
+
+| The word | Its education sense | What it matched in this sweep |
+|---|---|---|
+| `learning` | a learner learning | **Transfer / Reinforcement / Prompt / Similarity Learning** |
+| `curriculum` | a syllabus | **curriculum learning**, an ML training-order technique |
+| `grad*` | grading, gradebook | **gradient** |
+| `exam*` | an examination | **example** |
+| `course` | a course of study | **coarse**-to-fine |
+
+🔴 **A university AI lab is the worst possible population for this collision**, which is why the
+defect surfaces now: `p884` is the first pass to sweep institutions *by name* at scale, and
+institutions publish their ML research under the same roof as their teaching tools.
+
+🔵 **Why it is a market finding and not just an instrument note.** Every "N open-source education AI
+projects" figure in the vendor literature is produced by exactly this kind of keyword query over
+exactly this kind of population. **`T12` counted the education OSS estate as a few projects and a
+long tail of zeroes; `T24` says the published estimates of that tail are inflated by roughly an
+order of magnitude** — and that a studio sizing this market from a GitHub topic count is sizing
+machine-learning research.
+
+🟢 **The instrument, with 13 controls, committed rather than described:**
+`compose/code/p884-edu-vocabulary/`. **TIER-A** terms have no ML sense and are publishable;
+**TIER-B** terms are ambiguous and are *deferred for a human read*, never promoted. 🔴 **Its declared
+boundary is the honest part: ML vocabulary appears faster than any list tracks it, so an unlisted
+phrase degrades to TIER-B, never to TIER-A.** Two of its controls exist because they failed first
+(`prompt learning`, `similarity learning`).
+
+## T19 — The red gates were holding the supply the search channel could not find — new in `p881`
+
+🔴 **The measurement that makes this a trend rather than an anecdote.** `p881` ran eight WebSearch legs
+(global agents, trending, verticals, trends, and one each for North America, EMEA, APAC and LATAM) and
+**eighteen red gates, one at a time**. The legs produced **0 new repositories** and 3 new demand-side
+facts out of ~25 checkable findings. **`gate-promotion` alone produced two previously unpublished,
+byte-verified, MIT-licensed education agents** — `zhangl1001/civil-ai` and `wenflow-org/wenflow`.
+**Supply, this pass: gates 2, search 0.**
+
+🔵 **Why this is structural and not luck.** A discovery sweep asks *"what exists?"*, and `T12` already
+established that the answer in education is a short list and a long tail of zeroes — so the sweep keeps
+re-finding the short list. A promotion gate asks a different question: *"what has this base already
+measured and never filed?"* That question has a non-empty answer precisely **because** the base is large
+and its curated shelves are rewritten; every full-page rewrite de-files rows
+(`ingest/promotion-ratchet.json`'s own notes diagnosed this at `p662`, and `p881` measured the ratchet
+down again, **183 → 143**). **The rewrites manufacture the backlog, and the gate is the only thing that
+can see it.**
+
+🟡 **The cost side, stated honestly.** Both new agents are APAC-origin with primarily Chinese
+documentation, and this base has **never run a Chinese-language discovery leg** — `p878` added Spanish
+and Portuguese and got 304 additional repositories from them. So part of what the gate recovered is
+supply a *better search* would also have found. That is a reason to add the leg, not a reason to
+discount the gate.
+
+🟢 **What to do with this.** Two things, and they are cheap. **(1)** Treat a red promotion gate as a
+discovery queue with a known yield, not as a chore. **(2)** Stop reading `make hooks` as all-or-nothing:
+the aggregate target is refused by this environment's classifier, but **all eighteen gates ran
+individually** (`evidence/channel-state.2026-11-17-p881.tsv`), which means the nine passes that carried
+`gate-prose-claims` red, and the nine that carried these eighteen, were never actually blocked from
+looking.
