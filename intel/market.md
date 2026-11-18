@@ -316,6 +316,61 @@ existed. They do, and they are below.** That gap is now largely closed, and the 
 from UNESCO IESALC, the Digital Education Council, Ipsos, Tyton Partners and Inside Higher Ed
 rather than from market-research aggregators.
 
+## 🆕 `p889` · 2026-11-18 — what changed on this shelf
+
+### 🔴 The eight prescribed legs are saturated, and this pass MEASURED it instead of asserting it
+
+All eight legs ran — four global, four regional, with the current year computed as `2026` and never
+hardcoded. They returned a substantial body of demand-side material. `p889` then took the `16` most
+specific facts in it and tested each against these shelves **before writing any of them**:
+
+| Fact from this pass's legs | Already held? |
+|---|---|
+| `Regulation (EU) 2026/1744` (Digital Omnibus on AI) | ✅ held |
+| Annex III high-risk date `2 December 2027` | ✅ held |
+| Council doc `ST-14902-2026` (digital sovereignty in education AI) | ✅ held |
+| `134` AI-in-education bills across `31` states (US, 2026) | ✅ held |
+| NC `Session Law 2026-41` (AI-literacy standards, staggered to 2028) | ✅ held |
+| Idaho SB 1227 · NY A 9190 · Florida's 28 public colleges | ✅ held |
+| Berkeley Law AI ban on exams/credited coursework | ✅ held |
+| Pearson–`Workera` acquisition | ✅ held |
+| Vietnam MOET `Decision 2422` (12 AI periods/yr, grades 1–12) | ✅ held |
+| Korea AI Basic Act in force `2026-01-22` | ✅ held |
+| India AI-content labelling from `2026-02-20` | ✅ held |
+| `Ipsos` Education Monitor 2026 (ban-support divergence) | ✅ held |
+| UNESCO LAC `Observatory` on AI in Education (Apr 2026) | ✅ held |
+| UNESCO `IESALC` higher-ed study (`87%` / `74%` / `26%`) | ✅ held |
+| Universidad de los Andes: `716` instruments across `23` countries | ✅ held |
+| DEC LATAM survey (`92%` students / `79%` faculty) | ✅ held |
+
+🔴 **`16` of `16` already held. `0` new demand-side facts, for a TENTH consecutive pass.** `p887`
+concluded these legs had become a **policy instrument rather than a discovery one**; that is now a
+measurement with a denominator. 🟢 **Keep running them** — confirming that nothing has *changed* is
+itself information, and it is cheap — **but no pass should budget discovery against them.**
+
+### 🟢 Where the pass's new intelligence actually came from: the instrument/obligation mismatch
+
+The find was a `46`-repository **EU AI Act conformance-instrument population**, reached by
+*regulatory* rather than *education* vocabulary and invisible to every prior pass
+(measurement: [`repos/trending.md`](../repos/trending.md#-2026-11-18-p889); trend: `T34`).
+
+The commercially relevant shape is a mismatch, and it is the most directly sellable finding on this
+file:
+
+- **The obligation is sharp and binding.** Education is an **Annex III** high-risk sector. An
+  education deployer that is a public body — or a private provider of a public service, which is how
+  most contracted schools sit — owes an **Article 27 FRIA**. Providers owe **Annex IV** technical
+  documentation.
+- **The open-source supply is not.** `46` repositories, star ceiling `9`, `28` at `0★`, `42` created
+  this year, `36` dormant for 60+ days, `6` with no usable grant — and **`0` built for an education
+  deployer.** Three of the four FRIA-specific repositories have **no licence file at all**.
+- 🔴 **Source-quality note, consistent with the warning at the top of this file:** every regulatory
+  date above is **secondary-sourced and cannot be otherwise** in this environment. `p889` measured
+  the reason — `eur-lex.europa.eu`, `data.consilium.europa.eu`, `www.unesco.org` and the commercial
+  tracker `www.multistate.us` **all fail DNS resolution** here; this session resolves GitHub hosts
+  and nothing else. `T906` is corrected (DNS non-resolution, not `CONNECT` refusal, and not
+  government-specific) and `T-p885-4` is retired as structurally unachievable rather than deferred.
+
 ## 🆕 `p882` · 2026-11-17 — what changed on this shelf
 
 🔴 **The source-quality warning below still governs every number in this file, and `p882` adds a
@@ -1125,6 +1180,19 @@ European education-AI vendors, no procurement volumes.** The EMEA picture here r
 
 ### North America
 
+🆕 **`p889` — the conformance-pack offer does NOT transplant here, and that is the sellable
+insight.** The `46`-repository EU AI Act conformance layer `p889` measured
+([`repos/trending.md`](../repos/trending.md#-2026-11-18-p889)) is **entirely EU/UK-scoped**: `0` rows
+address any US instrument. North America has no FRIA analogue and no federal conformity-assessment
+duty; the binding obligations are **state** instruments and **district policy mandates** already
+recorded in this section. 🟢 **So the artefact a US client buys is not an Annex IV pack — it is a
+state-framework crosswalk**, and the one component worth reusing is
+[`pJijesh/ai-governance-toolkit`](https://github.com/pJijesh/ai-governance-toolkit) (MIT, byte-read
+`91d440e19d27`, `1,080 B`, pushed `2026-11-15`), because it maps **NIST AI RMF** alongside ISO 42001
+and the AI Act — and NIST AI RMF is the frame US districts and systems actually cite. 🔴 Selling an
+EU-shaped conformance pack into a US district is a category error; selling the *same evidence
+discipline* against the state calendar is not.
+
 #### 🟢 `p888` — the first Canadian-curriculum row, and two institutionally-maintained US assessment repos
 
 🔵 **This KB's North America rows have been US-only.** `p888` adds the first repository aligned to a
@@ -1384,6 +1452,33 @@ that is where consent, disclosure and logging can actually be enforced (**P15**,
 
 
 ### EMEA
+
+🆕 **`p889` — this is the region where the instrument gap binds, and it is a BUILD opportunity with
+a measured denominator.** Education is an **Annex III** high-risk sector; an education deployer that
+is a public body or a private provider of a public service owes an **Article 27 FRIA**, and
+providers owe **Annex IV** technical documentation. `p889` probed the open-source supply for those
+obligations and found `46` repositories with a **star ceiling of `9`**, `42` created this year, `36`
+dormant for 60+ days, `6` with no usable grant, and **`0` built for an education deployer**
+([`repos/trending.md`](../repos/trending.md#-2026-11-18-p889)). 🔴 **Three of the four FRIA-specific
+repositories have no licence file at all** — the obligation education clients most need help with
+has the worst-granted tooling in the population.
+
+🟢 **The pitch, with the numbers attached:** no credible open-source Annex IV/Article 27 evidence
+emitter exists for education, so the studio builds it once as reusable IP and amortises it across
+EMEA education engagements. Starting scaffolds, all grants byte-read `2026-11-18`:
+[`plusultra-tools/ai-act-conformity-pack`](https://github.com/plusultra-tools/ai-act-conformity-pack)
+(MIT, `d0ed63bd2b39`) for the Annex IV/FRIA document shapes,
+[`AbdelStark/eu-ai-act-toolkit`](https://github.com/AbdelStark/eu-ai-act-toolkit) (MIT,
+`1126322e2cc8`, 8★ — the cleanest grant in the population) for risk classification. Recipe: `P31`.
+
+🔴 **Two traps this region will walk into.** (1)
+[`Peaky8linders/specter-oss`](https://github.com/Peaky8linders/specter-oss) is the highest-starred
+row (9★) and GitHub reports `NOASSERTION`; byte-read it is MIT **plus a vendored OWASP catalogue
+under `CC BY-SA 4.0`**, so redistribution owes share-alike on shipped data (`T34`–`T36`). (2)
+[`8infinitelabs/eucompliance`](https://github.com/8infinitelabs/eucompliance) — the only artefact
+bridging the AI Act and the **European Accessibility Act**, which is the `P10` seam — is
+**`EUPL-1.2` incorporated by reference**, reciprocal, and its binding text sits at a host this
+session cannot resolve. Price it as a notice obligation, not a free component.
 
 #### 🟢 `p888` — EMEA is the widest-spread region in the new OSS, and the incumbent is often a STATE platform
 
@@ -1734,6 +1829,26 @@ assume an identity layer they never name.
 
 ### APAC
 
+🆕 **`p889` — a placed, declared gap: three binding APAC instruments and `0` open-source tooling for
+any of them.** `p889`'s `46`-repository conformance population is entirely EU/UK-scoped. Probed
+against the APAC instruments this section already records — **Vietnam's Law on AI in force
+`2026-03-01`** (which names automated assessment among high-risk uses, putting education squarely in
+scope), **Korea's AI Basic Act in force `2026-01-22`**, and **India's AI-content labelling duty from
+`2026-02-20`** — the result is **`0` rows addressing any of the three**
+([`repos/trending.md`](../repos/trending.md#-2026-11-18-p889)).
+
+🟢 **Why that is an opportunity rather than a dead end.** Vietnam is the sharpest case: a binding
+high-risk regime naming automated assessment, a national curriculum duty already recorded here
+(**MOET Decision 2422**, 12 AI periods per class per year, grades 1–12), and **no** open-source
+conformance instrument in any language. The crosswalk component
+[`pJijesh/ai-governance-toolkit`](https://github.com/pJijesh/ai-governance-toolkit) (MIT, byte-read
+`91d440e19d27`) covers ISO 42001 + EU AI Act + NIST AI RMF and would need a **fourth column per
+jurisdiction** — which is exactly the kind of work `P8` (Vietnam/APAC high-risk de-escalation audit)
+already sells. 🔴 **Declared gap, so no later pass reads this silence as coverage:** `0` of `46`
+instrument repositories, and `0` of the `90` newly-surfaced education repositories, address an APAC
+regulatory instrument. Non-English query shapes (`教育 AI エージェント`) were run this pass
+specifically to test for a hidden regional supply and found none.
+
 #### 🟢 `p888` — APAC returned the most sustained engineering of any region, and a domestic-model dependency observed rather than inferred
 
 🟢 **Five APAC-placed rows, byte-verified**, and they are the most actively developed regional set in
@@ -2070,6 +2185,28 @@ with **P8**: Vietnam's law (1 Mar 2026), Korea's (22 Jan 2026) and India's label
 
 
 ### LATAM
+
+🆕 **`p889` — the conformance-pack offer is the WRONG product for this region, and the reason is
+structural.** `p889`'s `46`-repository conformance population is EU/UK-scoped and `0` rows address
+any LATAM instrument. But unlike APAC, that is not a tooling gap — it is an **obligation** gap:
+as this section already records, the region has **`716` AI-related instruments across `23`
+countries** (Universidad de los Andes) and almost no *binding* education-specific AI duty. Brazil's
+framework is still in the Chamber of Deputies; Argentina's bill is deregulatory by design.
+
+🟢 **So what a LATAM education client buys is governance scaffolding, not conformity assessment** —
+policy, inventory, AI-literacy and defensible data handling, sold against institutional readiness
+and the UNESCO LAC Observatory/CENIA agenda already mapped in this section, not against a compliance
+deadline that does not exist. The reusable component is the same crosswalk
+([`pJijesh/ai-governance-toolkit`](https://github.com/pJijesh/ai-governance-toolkit), MIT, byte-read
+`91d440e19d27`), used as a **readiness** instrument rather than a conformity one. 🔵 `P9`
+(Spanish-language sovereign tutor on a LATAM-origin base) remains the stronger regional lead; `P31`
+attaches to it as the governance wrapper, not as the headline.
+
+🔴 **Declared, so silence is not read as coverage:** `p889` ran
+`plataforma educativa inteligencia artificial` and `agente educativo IA código abierto` as discovery
+legs specifically to test for LATAM-origin supply this KB had missed. They returned the same
+near-zero-star long tail visible in English — **`0` new shelf-worthy rows** — which corroborates
+`T12` from a new direction rather than revealing a hidden regional estate.
 
 #### 🔴 `p888` — LATAM returned, and it returned ONLY pre-traction work. That is the finding, and it is not an absence of search
 
@@ -2463,6 +2600,24 @@ binding constraint is connectivity rather than governance — the opposite of th
 
 
 ### Global
+
+🆕 **`p889` — one global rule, and it is a licence rule that costs money.** The arity shapes this
+base has catalogued now include a third: **arity introduced by vendoring**, where a permissive repo
+ships third-party data under a reciprocal licence and the metadata channel reports nothing at all.
+[`Peaky8linders/specter-oss`](https://github.com/Peaky8linders/specter-oss) is the worked case —
+GitHub says `NOASSERTION`, the bytes say MIT **plus an OWASP catalogue under `CC BY-SA 4.0`** plus a
+third-party framework attribution — so a redistribution owes share-alike on a *data directory* while
+the surrounding code stays MIT. 🟢 **Applies to every region and every recipe:** before any
+engagement ships a component, run the `P30` arity triage, and treat an over-long licence file as the
+cheapest available signal that arity is greater than one (`T34`–`T36`).
+
+🔵 **Two instrument rules this pass earned the hard way, recorded here because they apply to every
+later measurement on this file.** (1) `sort -u` combined with a restricted `-k` deduplicates on the
+**key**, not the line — it silently collapsed a `47`-row population to `8` because `28` rows shared
+a star count of `0`. Dedupe the whole line first. (2) A shell `sleep` in a paced loop is killed in
+this harness: two sweeps died after `2`–`3` of `16`–`19` legs and **exited `0`**. Pace inside a
+single interpreter process, and verify a sweep by its **leg count**, never by its exit status —
+because a truncated sweep and an empty channel are indistinguishable from the exit code alone.
 
 #### 🟢 `p888` — the cross-region finding: traction and engineering have come apart, so a star-ranked shortlist returns the wrong region
 

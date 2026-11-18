@@ -1,0 +1,8 @@
+Peaky8linders/specter-oss
+Ankit-Uniyal/eu-ai-act-compliance-toolkit
+uk-ai-compliance-os/iso42001-uk-eu-rapid-compliance
+NISD2/eu-compliance-resources
+RDNordic/eu-ai-compliance-toolkit
+ShravaC/FRIA-O
+sabuhi-huseynli-grc/High-Risk-Deployer-FRIA-Governance-Toolkit.
+Christospsa/ai-act-ontology-compliance-framework

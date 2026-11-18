@@ -1,0 +1,17 @@
+AbdelStark/eu-ai-act-toolkit
+sjgant80-hub/fall-euaiact
+sjgant80-hub/fall-euaiact-sdk
+pJijesh/ai-governance-toolkit
+leonkoellerwirth-arch/agentic-ai-governance-toolkit
+portable-genai/ai-act-conformity-pack
+plusultra-tools/ai-act-conformity-pack
+Killerz007/cra-readiness-skill
+CSOAI-ORG/eu-cra-mcp
+8infinitelabs/eucompliance
+tjf-trojer/fria-editor
+AI-Engineering-at/legal-scraper
+delschlangen/RegReady
+JK-G/ai-content-labels
+jessicavittorio-law/ai-governance-toolkit
+gclottey/ai-governance-compliance-toolkit
+Authlyxio/sentinel-act

@@ -1,0 +1,16 @@
+lti 1.3 agent in:name,description,readme
+mcp server education lms
+mcp canvas moodle
+grading agent rubric llm
+socratic tutor llm
+curriculum generator llm
+ai teaching assistant lms plugin
+qti assessment generator
+spaced repetition llm flashcard
+lecture transcription notes agent
+open source proctoring exam
+ai literacy curriculum open source
+rag textbook tutor
+student success prediction model open source
+education knowledge graph llm
+adaptive learning engine open source
