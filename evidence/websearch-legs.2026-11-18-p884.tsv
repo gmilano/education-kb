@@ -1,0 +1,13 @@
+leg	region	query	candidate_repos_named	new_to_kb	kb_mentions
+1	Global	top open source AI agents education 2026 github MIT	0	0	-
+2	Global	github trending education AI 2026	4	0	geekjourneyx/interactive-learning=23; SirhanMacx/Claw-ED=80; TapXWorld/ChinaTextbook=27; microsoft/ai-agents-for-beginners=225
+3	Global	open source platform education ERP CRM MIT Apache	0	0	OpenEduCat already carried in verticals/solutions.md
+4	Global	AI education industry trends 2026	0	0	all figures already carried in intel/market.md
+5	North America	AI education North America 2026 adoption regulation players	0	0	state layer, FIPSE, Chegg all already carried
+6	EMEA	AI education EMEA 2026 adoption regulation players	0	0	Digital Omnibus/2027, Futuresource, Epson all already carried
+7	APAC	AI education APAC 2026 adoption regulation players	0	0	UAE KHDA, Korea reversal, Ipsos all already carried
+8	LATAM	AI education LATAM 2026 adoption regulation players	0	0	DEC LATAM survey, IESALC, Google.org all already carried
+9	Global	Brazil Mexico Colombia Chile national AI education policy regulation 2026	0	0	KB holds Parecer CNE/CP 15/2026 homologated 2026-11-10 + Resolucao CNE/CP 1/2026 - MORE precise than the leg
+10	Global	China India Japan Korea AI education policy regulation 2026	0	0	China AI Plus Education, India Class 3, MEXT, Korea AI Basic Act all already carried
+11	Global	Moodle 5.1 AI subsystem Open edX release 2026	0	0	Moodle AI subsystem detail ADDED to verticals/solutions.md this pass
+12	Global	open source LMS AI agent integration 2026 Canvas Moodle plugin MCP	2	0	csmediapro/moodle-mcp-server; vishalsachdev/canvas-mcp - both already carried

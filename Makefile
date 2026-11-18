@@ -992,7 +992,7 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── p222-ecosystem-bound-grammar  (five grammars, the bound)"; \
 	cd compose/code/p222-ecosystem-bound-grammar && $(PY) test_bound_grammar.py >/dev/null 2>&1 && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
-	echo "── p228-shelf-gate        (the five non-grant subjects, 30 tests)"; \
+	echo "── p228-shelf-gate        (the five non-grant subjects + the Mulan grant family and the split-file dual grant, 48 tests)"; \
 	cd compose/code/p228-shelf-gate && $(PY) test_shelf_gate.py >/dev/null 2>&1 && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p229-grant-ladder-reach (reach, foreign manifest, withdrawn cells, query key)"; \

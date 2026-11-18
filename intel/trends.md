@@ -1,15 +1,24 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-17
+updated: 2026-11-18
 ---
 
 # Current trends — education AI
 
-**Pass `p883`, 2026-11-17** (thirteenth pass of the day). `p883` adds **T21** — keyword discovery
+**Pass `p884`, 2026-11-18** (first pass of the day). `p884` adds **T23** — channel state is a
+property of the **credential**, not of the host, and three passes mistook one for the other at a cost
+of five passes of keyword-only discovery — and **T24**: the education and machine-learning
+vocabularies collide exactly where this KB sweeps, at a ~89% false-positive rate, which means the
+published estimates of the education OSS estate are inflated by roughly an order of magnitude.
+🔴 **It also CORRECTS `T10`:** measured across 270 institutional organisations, grantless publishing
+is worst in **EMEA (83.7%)** and best in **APAC (54.3%)** — it is a property of university publishing
+practice, not of the Global South. 🔵 **Derived trends: **24**.**
+
+**Previous pass (`p883`), retained:** **Pass `p883`, 2026-11-17** (thirteenth pass of the day). `p883` adds **T21** — keyword discovery
 and owner discovery return **disjoint** supply, and the five-pass nil was an instrument artefact, not
 an empty market — and **T22**: `pushed_at` is not liveness, measured at up to 22 months of divergence
-on this KB's own recommended rows. 🔵 **Derived trends: **22**.**
+on this KB's own recommended rows.
 
 **Previous pass (`p882`), retained:** **Pass `p882`, 2026-11-17** (twelfth pass of the day). `p882` adds **T20** — the permissive share of
 education open source is **a function of the layer, not of the vertical**, measured across 173
@@ -318,7 +327,17 @@ for medical students, NCT07692035 on an ICU teaching agent, NCT07481162 comparin
 exam assessment) have **not reported outcomes**. And **none of this literature evaluates any
 repository named in this KB** — it tests commercial and bespoke tutors.
 
-## T10 — The Global South started producing education agents; almost none of them carry a licence
+## T10 — The Global South started producing education agents; almost none of them carry a licence — 🔴 **the GEOGRAPHY is CORRECTED by `p884`**
+
+> 🔴 **`p884` correction, stated before the trend it amends.** This trend's licensing observation
+> holds and its geographic framing does not. Measured across **270 primary-resolved institutional
+> organisations and 597 education repositories** in four regions, the no-grant share is
+> **EMEA 83.7% · LATAM 74.4% · North America 68.3% · APAC 54.3%** — overall **76.4%**
+> ([`record`](../evidence/edu-vocabulary-decontamination.2026-11-18-p884.tsv)).
+> **The grantless-publishing problem is WORST in EMEA and BEST in APAC.** It is a property of
+> *university publishing practice*, not of the Global South: a European university is more likely to
+> publish education code you cannot use than a Chinese or Japanese one. 🔵 `p873`'s four-project
+> sample was real and too small to carry a regional claim; `T18` is the trend that generalises.
 
 New in `p873`, and it is a market-shape finding rather than a licensing curiosity.
 
@@ -1089,6 +1108,76 @@ rule: a shelf row carries both numbers, or it carries neither.** And a liveness 
 text-filtered index is a **lower bound** published with its term set (see `repos/trending.md`,
 `p883`: a one-term probe dated `Ares` to 2022 and would have published a three-year false death —
 `p845`'s manufactured-death class in a new instrument).
+
+## T23 — Channel state is a property of the CREDENTIAL, not of the host, and three passes mistook one for the other — new in `p884`
+
+🟢 **Measured, both ways, before anything else this pass was written**
+([`record`](../evidence/channel-state.2026-11-18-p884.tsv)):
+
+| Limb | Unauthenticated `curl` | Authenticated `gh api` |
+|---|---|---|
+| `api.github.com/search/repositories` | **`403`** | **`200`** |
+| `api.github.com/search/users` | `200` | **`200`** |
+| `api.github.com/repos/<slug>` | `403` | `403` |
+
+🔴 **`p873` recorded star-ranked discovery as impossible** (*"`gh api search/repositories` → empty
+result set"*) and **`p881` recorded `api.github.com` as "flatly down"**, drawing the rule *"a pass
+that cannot measure stars must not publish stars."* `p882` then found the channel `200` and called
+it **SPLIT**. **All three were measuring their own credential.**
+
+🔴 **And `repos/<slug>` is not down at all. Its BODY says what it is**, and no pass had read it:
+
+```
+"GitHub access to this repository is not enabled for this session. Use add_repo to request access."
+```
+
+That is a **repository-scope** refusal — a property of this session's authorised set.
+`users/<login>` and `orgs/<login>` return the sibling message, *"sessions are bound to their
+configured repositories."*
+
+🔵 **The rule, and it generalises past GitHub: an HTTP status names the REFUSAL; only the body names
+the CAUSE. A channel declared "down" without reading the body may simply be a channel nobody
+authenticated.** The cost here was five passes of keyword-only discovery (`p876`–`p880`) run under
+the belief that owner-ranked discovery was unavailable — and `T21`, the finding that owner discovery
+beats keyword discovery, was reachable the whole time.
+
+🟡 **This is `T14`'s shape in the transport layer.** `T14` says an abstention is not a finding;
+`T23` says a refusal is not a diagnosis. Both errors come from treating a null result as information
+about the subject rather than about the instrument.
+
+## T24 — Education and machine-learning vocabularies collide exactly where this KB sweeps, and the false-positive rate is ~89% — new in `p884`
+
+🟢 **Measured on 10,365 repositories from 270 institutional organisations.** A conventional
+education keyword set returns **326** permissive, live, new "education finds". After
+de-contamination, **37** of that set survive — the rest are machine-learning repositories from
+university AI labs. Across the whole sweep the honest counts are **597** education repositories
+(TIER-A) against **497** deferred (TIER-B).
+
+| The word | Its education sense | What it matched in this sweep |
+|---|---|---|
+| `learning` | a learner learning | **Transfer / Reinforcement / Prompt / Similarity Learning** |
+| `curriculum` | a syllabus | **curriculum learning**, an ML training-order technique |
+| `grad*` | grading, gradebook | **gradient** |
+| `exam*` | an examination | **example** |
+| `course` | a course of study | **coarse**-to-fine |
+
+🔴 **A university AI lab is the worst possible population for this collision**, which is why the
+defect surfaces now: `p884` is the first pass to sweep institutions *by name* at scale, and
+institutions publish their ML research under the same roof as their teaching tools.
+
+🔵 **Why it is a market finding and not just an instrument note.** Every "N open-source education AI
+projects" figure in the vendor literature is produced by exactly this kind of keyword query over
+exactly this kind of population. **`T12` counted the education OSS estate as a few projects and a
+long tail of zeroes; `T24` says the published estimates of that tail are inflated by roughly an
+order of magnitude** — and that a studio sizing this market from a GitHub topic count is sizing
+machine-learning research.
+
+🟢 **The instrument, with 13 controls, committed rather than described:**
+`compose/code/p884-edu-vocabulary/`. **TIER-A** terms have no ML sense and are publishable;
+**TIER-B** terms are ambiguous and are *deferred for a human read*, never promoted. 🔴 **Its declared
+boundary is the honest part: ML vocabulary appears faster than any list tracks it, so an unlisted
+phrase degrades to TIER-B, never to TIER-A.** Two of its controls exist because they failed first
+(`prompt learning`, `similarity learning`).
 
 ## T19 — The red gates were holding the supply the search channel could not find — new in `p881`
 

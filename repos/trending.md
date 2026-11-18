@@ -1,8 +1,140 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-17
+updated: 2026-11-18
 ---
+
+## 🟢 `2026-11-18` (`p884`) — **270 institutional organisations swept by primary-resolved name, 10,365 repositories measured, and the finding is about the GRANT: three quarters of the education code universities publish carries no licence at all — and it is WORST in EMEA, not in the Global South**
+
+🔵 **The sweep, and what makes it different from every previous one.** `p883` built the owner
+channel on handles it had **guessed** from institution names, and declared the inputs unsafe in
+`883-G1`. `p884` rebuilt the register from GitHub's own user index — `search/users` by **display
+name** — and swept every organisation it returned
+([`register`](../evidence/by-name-handles.2026-11-18-p884.tsv) ·
+[`sweep`](../evidence/owner-sweep.2026-11-18-p884.tsv)).
+
+| | Value |
+|---|---|
+| Institutions queried by display name | **98** across four regions — **`98/98` HTTP `200`, zero refusals** |
+| Organisations resolved and swept | **270** |
+| Repositories measured | **10,365** |
+| Regions | North America 2,965 · EMEA 3,152 · APAC 2,756 · **LATAM 1,492** |
+
+🔴 **Enumerated rather than keyword-searched, deliberately.** `p883`'s own find, `ECNU/EduWork`,
+has an **empty GitHub description**, so any `topic:` or `in:name,description` leg is structurally
+blind to it. This sweep lists **every** repository each organisation owns and filters locally.
+
+### 🔴 The headline measurement: 76.4% of university-published education code has NO GRANT
+
+🟢 **597 repositories are education in the unambiguous sense** (TIER-A, after the
+machine-learning de-contamination described in `agents/trending.md` this pass). Their licence
+posture, by region
+([`record`](../evidence/edu-vocabulary-decontamination.2026-11-18-p884.tsv)):
+
+| Region | TIER-A | Permissive | Copyleft | **No grant at all** | **No-grant share** |
+|---|---:|---:|---:|---:|---:|
+| **EMEA** | 282 | 43 | 3 | **236** | 🔴 **83.7%** |
+| **LATAM** | 160 | 39 | 2 | **119** | 74.4% |
+| North America | 120 | 31 | 3 | **82** | 68.3% |
+| **APAC** | 35 | 12 | 3 | **19** | 🟢 **54.3%** |
+| **ALL** | **597** | **125** | **11** | **456** | **76.4%** |
+
+🔴 **This CORRECTS `T10`, and the correction is the useful part.** `T10` reads *"The Global South
+started producing education agents; almost none of them carry a licence."* Measured across 270
+primary-resolved institutional orgs, **the no-grant problem is worst in EMEA (83.7%) and best in
+APAC (54.3%)**, with LATAM (74.4%) between them. **"No grant" is a property of UNIVERSITY PUBLISHING
+PRACTICE, not of the Global South.** A European university is *more* likely to publish education
+code you cannot use than a Chinese or Japanese one.
+
+🟡 **It also sharpens `T18`.** `T18` measured a third of the education open-source estate as
+grantless. In the **university-published** slice specifically it is **three quarters**. The estate
+average and the institutional sub-estate are different numbers, and the institutional one is the
+one an engagement meets.
+
+### 🟢 LATAM: the `p883` reading is REPLACED, and the replacement is more actionable
+
+🔴 **`p883` concluded, from an 82% handle-refusal rate, that LATAM's named institutions publish no
+public code.** That was a measurement of guessed spellings. **LATAM publishes the most
+education-dense estate of any region in this sweep** — `160` TIER-A repositories from `1,492`
+measured (**10.7%**, against APAC's `1.3%`).
+
+🔴 **And almost none of it is usable.** The largest single estate is **Pontificia Universidad
+Católica de Chile's course organisations**: `IIC2233` and `IIC2513` hold **78 repositories, of
+which 77 carry `NONE`** and one carries MIT. The flagship
+[`IIC2233/Syllabus`](https://github.com/IIC2233/Syllabus) — *Programación Avanzada*, the current
+`2026-2` semester — has **129 ★** and was pushed **2026-11-17**, the day before this pass. It is
+highly visible, actively maintained, plainly reusable teaching material, and **legally
+unreusable**.
+
+🔵 **The correct LATAM sentence, replacing the old one:** *the supply exists, is current and is
+pedagogically valuable; the blocker is a missing `LICENSE` file, which is the cheapest blocker in
+this entire KB to remove.* See `intel/market.md` → **Opportunities by region → LATAM** and
+`intel/licence-requests/`.
+
+### 🟢 The new category these shelves did not have: institutional LMS/SIS integration estates
+
+🔵 **Swept by name, the permissive survivors are overwhelmingly not agents and not research code.**
+They are the **production integration estate of university teaching-and-learning centres**, carrying
+**single-digit star counts** — which is precisely why every star-ranked and keyword leg this KB has
+run was blind to them. Rows, grants byte-read, now in `repos/foundations.md`.
+
+🟢 **`cilt-uct` — the University of Cape Town's Centre for Innovation in Learning and Teaching — is
+the single best-licensed education estate found in 884 passes.**
+
+| | Value |
+|---|---|
+| Repositories | **50** |
+| **Permissive** | **48 — `Apache-2.0` ×30, `ECL-2.0` ×16** (🔵 ECL is the *Educational Community License*, the Sakai-ecosystem grant) |
+| Not permissive | `NONE` ×2, `GPL-3.0` ×2 |
+| **Permissive share** | 🟢 **96%** — the exact inverse of the 76.4% norm above |
+| Live | `docker-fallback-orchestrator` pushed **2026-11-17** |
+
+🔴 **And it sits in EMEA**, the region with the worst no-grant rate in the table above. The regional
+average is not a prediction about any given publisher — Africa files under EMEA per this KB's
+schema, and the best-governed estate in the sweep is South African.
+
+🟡 **`UniversityOfHelsinkiCS` — 63 repositories, exactly half licensed** (`MIT` ×30, `NONE` ×30,
+plus one each `NOASSERTION`, `GPL-3.0`, `Apache-2.0`). Its student-information-system integration
+code is MIT and was pushed **2026-11-16 / 2026-11-17**.
+
+### 🔴 A new false-absence SHAPE, found on this sweep's highest-starred find
+
+🟢 **`RWTH-OS/eduOS-rs` — 493 ★, a teaching operating system in Rust.** The gate's grant probe said
+**`NO-GRANT-FILE`**; it carries **two** grants — `LICENSE-APACHE` (9,722 B) and `LICENSE-MIT`
+(1,023 B), the Rust ecosystem's two-file convention — and `search/repositories`'s single
+`license.spdx_id` field reports **`Apache-2.0` alone**.
+
+🔵 **One grant field cannot express two grants.** A studio told "Apache-2.0" silently loses the MIT
+option it is entitled to. `fetch_grants.sh` now probes the split-file pair after its single-file
+ladder 404s, and `classify_grant.split_grant()` reports **`Apache-2.0 OR MIT`**, with 5 controls —
+including the one that matters: **each half read alone looks like a complete single grant**, so only
+the file *layout* reveals the choice.
+
+🟡 **A third probe limit, declared not fixed:** `cilt-uct/sakai-skin-vula`'s default branch is
+**`r/23.x`**, neither `main` nor `master` — the only refs the ladder tries. It was read only because
+the repository still carries a `master`. Carried as `884-G2`.
+
+### 🟡 Trending supply from the prescribed legs: `0` new repositories, SIXTH consecutive pass
+
+🟢 Measured against this KB's **7,964-slug** index rather than asserted
+([`record`](../evidence/websearch-legs.2026-11-18-p884.tsv)). Twelve legs named six candidate
+repositories; **all six were already here** — `geekjourneyx/interactive-learning`,
+`SirhanMacx/Claw-ED`, `TapXWorld/ChinaTextbook`, `microsoft/ai-agents-for-beginners`,
+`csmediapro/moodle-mcp-server`, `vishalsachdev/canvas-mcp`.
+
+🔵 **The raw novelty figure from the owner sweep is 99.9%, and it must not be published as a
+finding.** 10,350 of 10,365 swept repositories are "new to this KB" — true, and meaningless: they
+are the machine-learning output of university labs, which this KB has no reason to hold. **A novelty
+rate measured before relevance filtering measures the sweep's width, not its yield.** The number
+that survives filtering is `597`, and the number that survives filtering *and* a licence is `111`.
+
+### 🟢 Re-measured this pass, first-hand
+
+| Repo | Measured now | Previously in this KB |
+|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **60,057 ★**, Apache-2.0, pushed 2026-11-15, created 2025-12-28, 7,272 forks | cycle-3 recorded **~24k ★** — the shelf prose carries no star count, so no row was wrong; recorded here for the trend |
+| [`ECNU/EduWork`](https://github.com/ECNU/EduWork) | **376 ★**, `MulanPSL-2.0`, pushed 2026-11-17, default `main` | 🟢 **`p883`'s figures confirmed exactly**, independently re-measured |
+| [`cmu-db/bustub`](https://github.com/cmu-db/bustub) | **5,171 ★**, **MIT** — byte-read `master/LICENSE`, **1,075 B**, `sha256₁₂ cea46dcabf9a`, pushed 2026-11-13 | 🆕 new to this KB |
 
 ## 🟢 `2026-11-17` (`p883`) — **a third metadata limb exists and no pass has ever used it: `search/commits` returns default-branch dates, which gives these shelves their first LIVENESS column — and the first thing it measured was three rows whose licence cells are perfect and whose default branches are a year stale**
 

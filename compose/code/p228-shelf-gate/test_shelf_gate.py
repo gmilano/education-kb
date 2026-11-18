@@ -258,5 +258,110 @@ class TestDottedRepoName(unittest.TestCase):
         self.assertEqual(H.slugs_on("see github.com/docs.example.com/thing)"), [])
 
 
+
+class TestMulanGrant(unittest.TestCase):
+    """Controls for `883-G2`, closed at p884.
+
+    The gate returned `(None, None, 'no recognised licence title')` on
+    `ECNU/EduWork`'s real `LICENSE` - 9,233 B, `sha256_12 eb7a1d713eb9` - which is
+    an OSI-approved PERMISSIVE grant. That is a false ABSENCE, the mirror of
+    p877's false PRESENCE on PageLM, and the rule both obey is `T14`:
+    an abstention is not a licence finding in either direction.
+    """
+
+    # Reproduced from the measured payload. The separator is U+FF0C, NOT an ASCII
+    # comma, and the Chinese title legitimately precedes the English one.
+    MULAN_CN = "\n\u6728\u5170\u5bbd\u677e\u8bb8\u53ef\u8bc1, \u7b2c2\u7248\n"
+    MULAN_EN = "Mulan Permissive Software License\uff0cVersion 2 (Mulan PSL v2)\n"
+    PUBL_EN = "Mulan Public License\uff0cVersion 2 (Mulan PubL v2)\n"
+
+    def test_the_measured_eduwork_shape_resolves_to_mulanpsl2(self):
+        """883-G2's acceptance test, positive half."""
+        fam, chan, _ = C.classify(self.MULAN_CN + self.MULAN_EN)
+        self.assertEqual(fam, "MulanPSL-2.0")
+        self.assertIsNotNone(chan)
+
+    def test_a_mulan_body_is_not_read_as_apache(self):
+        """883-G2's acceptance test, negative half.
+
+        Mulan PSL is Apache-LIKE in effect, which is exactly why a lazy fix would
+        map it onto Apache-2.0. The family must be reported as what it is.
+        """
+        fam, _, _ = C.classify(self.MULAN_CN + self.MULAN_EN)
+        self.assertNotEqual(fam, "Apache-2.0")
+
+    def test_english_only_payload_resolves(self):
+        self.assertEqual(C.classify(self.MULAN_EN)[0], "MulanPSL-2.0")
+
+    def test_chinese_only_payload_resolves(self):
+        """A Chinese-only body is the realistic APAC case and must not abstain."""
+        self.assertEqual(C.classify(self.MULAN_CN)[0], "MulanPSL-2.0")
+
+    def test_REGRESSION_the_fullwidth_comma_is_load_bearing(self):
+        """The trap that would have reproduced the original false absence.
+
+        An ASCII-comma pattern (`License,?\\s*Version`) cannot match U+FF0C: it is
+        neither `,` nor whitespace. A fix written without reading the bytes fails
+        SILENTLY and looks like a pass.
+        """
+        import re
+        naive = re.compile(r"Mulan\s+Permissive\s+Software\s+License,?\s*Version\s+2", re.I)
+        self.assertIsNone(naive.search(self.MULAN_EN))
+        self.assertEqual(C.classify(self.MULAN_EN)[0], "MulanPSL-2.0")
+
+    def test_mulan_PUBLIC_is_not_reported_as_the_PERMISSIVE_grant(self):
+        """PubL carries a copyleft-style obligation; publishing it as MulanPSL
+        would be p877's PageLM class in a new family."""
+        fam, _, _ = C.classify(self.PUBL_EN)
+        self.assertEqual(fam, "MulanPubL-2.0")
+        self.assertNotEqual(fam, "MulanPSL-2.0")
+
+    def test_an_unrelated_body_still_abstains(self):
+        """The row must not make the classifier credulous."""
+        self.assertIsNone(C.classify("Some bespoke terms, all rights withheld.\n")[0])
+
+
+class TestSplitFileGrant(unittest.TestCase):
+    """Controls for the SPLIT-FILE dual grant, added p884.
+
+    Measured case: `RWTH-OS/eduOS-rs`, 493 stars, the highest-starred education
+    repository p884's owner sweep returned. All 16 single-file probes in
+    `fetch_grants.sh` 404'd, so the probe reported NO-GRANT-FILE on a repository
+    carrying TWO real grants - `LICENSE-APACHE` (9,722 B) and `LICENSE-MIT`
+    (1,023 B). GitHub's single `license.spdx_id` field reports `Apache-2.0` alone.
+    """
+
+    APACHE = "                              Apache License\n                        Version 2.0, January 2004\n"
+    MIT = "Permission is hereby granted, free of charge, to any person obtaining a copy\n"
+
+    def test_the_two_halves_resolve_to_a_dual_cell(self):
+        fam, chan, _ = C.split_grant(self.APACHE, self.MIT)
+        self.assertEqual(fam, "Apache-2.0 OR MIT")
+        self.assertEqual(chan, "split-file grant")
+
+    def test_each_half_read_ALONE_looks_single_and_that_is_the_whole_trap(self):
+        """Neither file contains any hint that the other exists."""
+        self.assertEqual(C.classify(self.APACHE)[0], "Apache-2.0")
+        self.assertEqual(C.classify(self.MIT)[0], "MIT")
+
+    def test_the_order_is_stable_regardless_of_which_path_answered_first(self):
+        self.assertEqual(C.split_grant(self.APACHE, self.MIT)[0],
+                         C.split_grant(self.MIT, self.APACHE)[0])
+
+    def test_one_resolvable_half_is_NOT_reported_as_dual(self):
+        """A 200 on one path and junk on the other must not invent a second grant."""
+        fam, chan, note = C.split_grant(self.MIT, "not a licence at all\n")
+        self.assertEqual(fam, "MIT")
+        self.assertIn("one half", note)
+        self.assertNotIn("OR", fam)
+
+    def test_split_file_is_a_DIFFERENT_shape_from_the_dual_preamble(self):
+        """`dual_grant` reads prose; `split_grant` reads layout. Keep them apart:
+        neither eduOS file carries a dual-grant preamble, so dual_grant sees nothing."""
+        self.assertIsNone(C.dual_grant(self.APACHE))
+        self.assertIsNone(C.dual_grant(self.MIT))
+        self.assertEqual(C.split_grant(self.APACHE, self.MIT)[0], "Apache-2.0 OR MIT")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

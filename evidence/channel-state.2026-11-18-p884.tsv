@@ -1,0 +1,13 @@
+limb	probe	unauthenticated_curl	authenticated_gh	reading
+api.github.com/search/repositories	?q=repo:HKUDS/DeepTutor	403	200	UP when authenticated. p873 recorded "empty result set"; p881 recorded "flatly down"
+api.github.com/search/users	?q=<display name> type:org	200	200	UP. Never probed before p884. The primary-source handle instrument 883-G1 asked for
+api.github.com/search/commits	?q=fix+repo:<slug>	200	200	UP. Agrees with p883. Requires free text (422 on qualifiers alone)
+api.github.com/repos/<slug>	/repos/HKUDS/DeepTutor	403	403	NOT an outage. Body: "GitHub access to this repository is not enabled for this session. Use add_repo"
+api.github.com/users/<login>	/users/ECNU	403	403	Body: "sessions are bound to their configured repositories"
+api.github.com/orgs/<login>	/orgs/ECNU	403	403	Same sibling message
+raw.githubusercontent.com	/<slug>/<branch>/LICENSE	200	n/a	UP. Grant bytes. Carried every licence measurement this pass
+git ls-remote --symref	HEAD	open	n/a	UP. Refs and the true default branch (found cilt-uct/sakai-skin-vula on r/23.x)
+WebFetch digital-strategy.ec.europa.eu	primary EU AI Act text	ENOTFOUND	n/a	DOWN - outside the session's allowed domains
+WebFetch artificialintelligenceact.eu	implementation timeline	ENOTFOUND	n/a	DOWN - same
+WebFetch www.digitaleducationcouncil.com	LATAM survey primary	ENOTFOUND	n/a	DOWN - same
+WebFetch www.futuresource-consulting.com	EMEA adoption primary	ENOTFOUND	n/a	DOWN - same

@@ -1,12 +1,48 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-17
+updated: 2026-11-18
 ---
 
 # Foundational repos — education
 
-**Pass `p883`, 2026-11-17** (thirteenth pass of the day). **`p883` adds the highest-star repository
+**Pass `p884`, 2026-11-18** (first pass of the day). **`p884` rebuilt the owner register from a
+PRIMARY source and swept 270 institutional organisations. The new supply is a layer this shelf did
+not have — and the headline measurement is about the GRANT, not the code.**
+
+- 🟢 **A new category, 13 rows: institutional LMS/SIS integration estates.** Swept by institution
+  **display name** (`search/users`, not a guessed handle), **270 orgs / 10,365 repositories** across
+  four regions. The permissive survivors are **not** agents and **not** research code — they are
+  production plumbing: SIS importers, gradebook uploaders, Canvas API clients, Sakai/Tsugi tools,
+  all at single-digit star counts and therefore invisible to every keyword and star-ranked leg this
+  KB has run.
+- 🔴 **76.4% of the education code universities publish carries NO GRANT AT ALL** (456 of 597
+  education repositories, measured). 🔵 **And it is worst in EMEA (83.7%), best in APAC (54.3%)**,
+  with LATAM at 74.4% — which **corrects `T10`**: "no grant" is a property of *university publishing
+  practice*, not of the Global South.
+- 🟢 **`cilt-uct` (University of Cape Town) is the best-licensed education estate in 884 passes** —
+  50 repositories, **48 permissive** (`Apache-2.0` ×30, `ECL-2.0` ×16), a **96%** share against that
+  76.4% norm, and it sits in the region with the *worst* regional rate.
+- 🟢 **`cmu-db/bustub` — 5,171 ★, MIT, byte-read — is the highest-traction education repository this
+  KB has found, and it was never carried.** CMU's teaching RDBMS, 2,085 forks of coursework.
+- 🔴 **A new false-absence SHAPE, on this pass's second-highest find.** `RWTH-OS/eduOS-rs` (493 ★)
+  reported **`NO-GRANT-FILE`** from a 16-path probe and reports `Apache-2.0` from GitHub's single
+  `spdx_id`. It is **dual-licensed**: `LICENSE-APACHE` **and** `LICENSE-MIT`, the Rust two-file
+  convention. **One grant field cannot express two grants.** Probe and classifier fixed, 5 controls.
+- 🟡 **A third probe limit, declared:** `cilt-uct/sakai-skin-vula`'s default branch is **`r/23.x`**,
+  neither `main` nor `master` — the only refs the ladder tries (`884-G2`). 🔵 This is the sibling of
+  `p883`'s DSH finding, one step further out: resolving the default branch is necessary and the
+  two-name assumption is still not sufficient.
+
+🔵 **Derived figures for this page, graded every pass** (`ingest/derive-foundations.py`,
+`Gap 544-E`): **derived shelf rows: **89****, across **18** SHELF-disposition tables, **89**
+distinct addresses and **89** systems after declared alias collapse. 🟢 **`p884` added four tables
+and declared all four in `ingest/foundations-disposition.tsv` in the same pass** — the gate exited
+`2` and named them until it did, which is the manifest working as `p882` rebuilt it to.
+
+Method, the four-region licence table and the full sweep: `repos/trending.md`, this pass.
+
+**Previous pass (`p883`), retained:** **Pass `p883`, 2026-11-17** (thirteenth pass of the day). **`p883` adds the highest-star repository
 this shelf has ever carried, and the reason it was never carried is that nobody looked at who owned
 it.**
 
@@ -40,12 +76,6 @@ it: the permissive share RISES as you go down the stack.**
   row count since the `p871`/`p877`–`p880` rewrites, which `gate-derived-counts` reported as *"no
   table can be located"* (`881-G3`, discharged this pass).
 
-🔵 **Derived figures for this page, graded every pass** (`ingest/derive-foundations.py`,
-`Gap 544-E`): **derived shelf rows: **76****, across **14** SHELF-disposition tables, **76**
-distinct addresses and **76** systems after declared alias collapse. 🔴 The disposition
-manifest was REBUILT this pass: it held **one** row, naming a `p644` heading this page no
-longer carries, so the instrument exited on stale bookkeeping and never reported that
-fifteen of sixteen tables were undeclared. `881-G2`'s cluster, third instrument.
 
 **Previous pass (`p879`), retained:** **Pass `p879`, 2026-11-17** (ninth pass of the day). **`p879` reverses a standing conclusion in
 this file.** Discovery by **owner** (`user:<org>`) rather than by subject measured **571
@@ -284,9 +314,9 @@ disprove it** — Artemis (MIT, `832★`), Autolab (Apache-2.0, `808★`) and Ko
 permissive full platforms. 🟡 `2,003` extra repositories of denominator yielded these four rows,
 which is `T12` reconfirmed from the denominator side.
 
-## The foundations — 76 rows
+## The foundations — 89 rows
 
-🟢 **Derived, not asserted.** `75` distinct repositories across the **14** layer tables below,
+🟢 **Derived, not asserted.** `89` distinct repositories across the **18** layer tables below,
 and the layering is the value of this file rather than an accident of its history: substrate,
 standards, analytics, curriculum, institutional platforms, ingestion, retrieval and evaluation are
 different procurement decisions. `ingest/derive-counts.py` grades this heading against the rows on
@@ -498,6 +528,83 @@ proprietary deliverable — but it is the **incumbent** in Brazilian municipal e
 it an **integration target rather than a base**. Build the AI layer as a separate service with a
 clean process boundary and the copyleft stays where it is. This is the posture
 `verticals/solutions.md` already prescribes for Moodle, and it applies unchanged here.
+
+## Institutional LMS/SIS integration estates — new in `p884`
+
+🟢 **A university's TEACHING CENTRE is a different publisher from its AI lab, and this KB had only
+ever shelved the lab.** `p884` rebuilt the owner register from GitHub's own user index
+(`search/users` by institution **display name**, not a guessed handle) and swept **270
+organisations / 10,365 repositories** across all four regions
+([`sweep`](../evidence/owner-sweep.2026-11-18-p884.tsv)). After machine-learning vocabulary is
+removed, the permissive survivors are overwhelmingly **not** agents and **not** research code: they
+are **production integration plumbing** — SIS importers, gradebook uploaders, Canvas API clients,
+Sakai and Tsugi tools.
+
+🔴 **Every row below carries a single-digit or low-double-digit star count**, which is exactly why
+this layer was invisible: every prior discovery leg here was keyword-ranked or star-ranked, and
+institutional plumbing is neither popular nor tagged. 🔵 **It is also the layer an education
+engagement actually spends its weeks on** — the counterpart to `p879`'s *vendor-built AI
+components*.
+
+Licence by **byte-read** on `raw.githubusercontent.com`; existence and the **true** default branch
+by `git ls-remote --symref`; traction and `pushed_at` via `api.github.com/search/repositories`
+([`grants`](../evidence/grant-verify.2026-11-18-p884.tsv) ·
+[`existence`](../evidence/exist-verify.2026-11-18-p884.tsv)).
+
+### 🟢 `cilt-uct` — University of Cape Town, and the best-licensed education estate in 884 passes
+
+🔵 **50 repositories, 48 of them permissive — `Apache-2.0` ×30 and `ECL-2.0` ×16 — with only 2
+`NONE` and 2 `GPL-3.0`. A 96% permissive share, against a 76.4% NO-GRANT rate across the
+university-published estate as a whole** (`repos/trending.md`, this pass). 🔴 **UCT files under
+EMEA per this KB's schema, which is the region with the *worst* no-grant rate (83.7%) — so the
+regional average predicts nothing about an individual publisher.** `ECL-2.0` is the **Educational
+Community License**, the Apereo/Sakai sector grant, and this is the first estate in this KB where it
+is the dominant licence rather than a curiosity.
+
+| Repo | Licence (byte-read) | ★ | Pushed | Why it is foundational |
+|---|---|---:|---|---|
+| [`cilt-uct/tsugi-request-gradebook-upload`](https://github.com/cilt-uct/tsugi-request-gradebook-upload) | **Apache-2.0** — `main/LICENSE`, **11,357 B**, `sha256₁₂ b40930bbcf80` | 0 | 2026-10-06 | **The single most transferable row here.** Schedules the upload of **Brightspace (Amathuba) gradebook items into PeopleSoft via middleware** — the exact student-record write-back every LMS-adjacent engagement has to build and nobody publishes. A worked, permissive reference for the grade-to-SIS boundary. |
+| [`cilt-uct/tsugi-migrate-to-brightspace`](https://github.com/cilt-uct/tsugi-migrate-to-brightspace) | **Apache-2.0** — `main/LICENSE`, **11,357 B**, `sha256₁₂ c71d239df917` | 0 | 2026-10-22 | Invokes the Sakai archive web service from inside a Sakai site and reports completion back to the user. **An LMS *migration* tool written by the institution doing the migration** — the posture a client in the same position needs. |
+| [`cilt-uct/qna`](https://github.com/cilt-uct/qna) | **ECL-2.0** — `master/LICENSE`, **11,120 B**, `sha256₁₂ 0688f62d04f1` | 0 | 2024-08-24 | Anonymous student Q&A with popularity ranking and categories, answerable by students, lecturers or tutors — built jointly by **UNISA and UCT**. 🟡 Quiet since 2024; take it as a data model and a moderation design, not a dependency. |
+| [`cilt-uct/sakai-skin-vula`](https://github.com/cilt-uct/sakai-skin-vula) | **ECL-2.0** — `master/LICENSE`, **11,120 B**, `sha256₁₂ 0688f62d04f1` | 4 | 2026-06-03 | UCT's Morpheus skin for its Sakai deployment. 🔴 **Its default branch is `r/23.x`** — neither `main` nor `master`. It was byte-read only because the repository *also* still carries `master`; a release-branch default is invisible to this KB's grant ladder (`884-G2`). |
+
+🟡 **The wider estate, not shelved row-by-row but worth naming:** `tsugi-student-allocation`,
+`tsugi-student-analytics`, `tsugi-course-level-dashboard`, `tsugi-deliver-student-files`,
+`tsugi-explorance-grademark`, `Brightspace-HTML-Templates`, plus an Opencast lecture-capture
+operations set (`oc-scripts`, `fallback-capture-agent`, `docker-fallback-orchestrator`, pushed
+**2026-11-17**). 🔵 **`Tsugi` is the common thread and it is the reusable idea:** these are LTI apps
+mounted into whichever LMS the institution runs, which is how you ship function into an incumbent
+platform without forking it.
+
+### 🟢 `UniversityOfHelsinkiCS` — the student-information-system seam, MIT and current
+
+🟡 **63 repositories, exactly half licensed** (`MIT` ×30, `NONE` ×30, one each `NOASSERTION`,
+`GPL-3.0`, `Apache-2.0`). The licensed half is the useful half.
+
+| Repo | Licence (byte-read) | ★ | Pushed | Why it is foundational |
+|---|---|---:|---|---|
+| [`UniversityOfHelsinkiCS/sis-importer`](https://github.com/UniversityOfHelsinkiCS/sis-importer) | **MIT** — `master/LICENSE`, **1,111 B**, `sha256₁₂ c54478a86110` | 1 | **2026-11-16** | Importer against **Sisu**, the Finnish higher-education SIS. The ingestion end of the student-record boundary, MIT, and pushed two days before this pass. |
+| [`UniversityOfHelsinkiCS/suoritustarkistin`](https://github.com/UniversityOfHelsinkiCS/suoritustarkistin) | **MIT** — `master/LICENSE`, **1,111 B**, `sha256₁₂ 7b658dd8f1a0` | 1 | **2026-11-17** | *SUOTAR* — helps **graders report course completions**. 🔵 The credit-award step: the one workflow in this whole vertical where an AI system must *not* act autonomously, here implemented as explicit human reporting. Read it before designing any grading automation for an EU client. |
+| [`UniversityOfHelsinkiCS/sis-ns-manager`](https://github.com/UniversityOfHelsinkiCS/sis-ns-manager) | **Apache-2.0** — `master/LICENSE`, **11,357 B**, `sha256₁₂ c71d239df917` | 0 | 2026-11-10 | Sisu integration manager for teacher and course administration. |
+
+### 🟢 Canvas and Sakai client libraries from the institutions that run them
+
+| Repo | Licence (byte-read) | ★ | Pushed | Why it is foundational |
+|---|---|---:|---|---|
+| [`KTH/canvas-api`](https://github.com/KTH/canvas-api) | **MIT** — `master/LICENSE`, **1,098 B**, `sha256₁₂ 5e0ff14e95f0` | 10 | **2026-11-16** | Node.js client for the Canvas LMS API, maintained by **KTH Royal Institute of Technology**. 🔵 **Pair it with `vishalsachdev/canvas-mcp`** (`agents/top.md`): the MCP server gives an agent Canvas *tools*, this gives your own services typed Canvas *calls*. Both MIT. |
+| [`KTH/lms-nightly-sync`](https://github.com/KTH/lms-nightly-sync) | **MIT** — `main/LICENSE`, **1,099 B**, `sha256₁₂ f2fa6a58e259` | 0 | 2021-01-12 | Periodic synchronisation of KTH databases into Canvas. 🟡 **Frozen since 2021** — a reference for the batch-sync pattern, not a dependency. |
+| [`kyoto-u/comfortable-sakai`](https://github.com/kyoto-u/comfortable-sakai) | **Apache-2.0** — `master/LICENSE`, **11,357 B**, `sha256₁₂ c71d239df917` | 25 | 2023-03-15 | Browser extension improving Sakai's UX, from **Kyoto University**. 🔵 **The only APAC row in this category**, and an instructive posture: when you cannot change the institutional LMS, ship the improvement to the *client side*. 🟡 Quiet since 2023. |
+| [`AaltoGIS/classroom-grader`](https://github.com/AaltoGIS/classroom-grader) | **BSD-3-Clause** — `main/LICENSE`, **1,504 B**, `sha256₁₂ d25a8300ad2c` | 1 | **2026-11-09** | Grading automation around **GitHub Classroom**, from Aalto University. 🔴 **Its GitHub description is empty** — exactly the class of repository `p883` proved keyword discovery cannot see. |
+
+### 🟢 Teaching-grade reference implementations — permissive, high-traction, built to be read
+
+🔵 **A distinct role from the plumbing above: these are systems written to TEACH a subject**, at a
+scale and quality that makes them credible engineering references in their own right.
+
+| Repo | Licence (byte-read) | ★ | Pushed | Why it is foundational |
+|---|---|---:|---|---|
+| [`cmu-db/bustub`](https://github.com/cmu-db/bustub) | **MIT** — `master/LICENSE`, **1,075 B**, `sha256₁₂ cea46dcabf9a` | **5,171** | 2026-11-13 | **The highest-traction education repository `p884` found, and new to this KB.** Carnegie Mellon's teaching RDBMS, the backbone of its database course and **2,085 forks** of coursework. 🔵 The reference design for *"a real system, deliberately incomplete, with the gaps as the assignments"* — the single most reusable pattern in technical curriculum design, and directly applicable to a client building an engineering academy. |
+| [`RWTH-OS/eduOS-rs`](https://github.com/RWTH-OS/eduOS-rs) | 🔴 **`Apache-2.0 OR MIT`** — a **SPLIT-FILE** grant: `main/LICENSE-APACHE` (**9,722 B**) **and** `main/LICENSE-MIT` (**1,023 B**) | **493** | 2026-10-04 | A teaching operating system in Rust, from RWTH Aachen. 🔴 **This row is also a method finding.** GitHub's single `license.spdx_id` field reports `Apache-2.0` **alone**, and this KB's grant probe reported **`NO-GRANT-FILE`** — it tried 16 single-file paths, none of them the Rust ecosystem's two-file convention. **One grant field cannot express two grants, and a studio told "Apache-2.0" loses the MIT option it is entitled to.** Probe and classifier fixed with 5 controls this pass. |
 
 ## 🟢 Rows the full-estate recount surfaced — new in `p880`
 

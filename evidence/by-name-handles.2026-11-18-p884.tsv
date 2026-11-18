@@ -1,0 +1,99 @@
+region	institution_display_name	http	total_count	resolved_login_1	resolved_login_2	resolved_login_3	verdict
+APAC	University of Tokyo	200	95	mil-tokyo	ut-issl	ynklab	resolved
+APAC	Kyoto University	200	50	kmc-jp	kyoto-u	ku-nlp	resolved
+APAC	Tsinghua University	200	122	tsinghua-fib-lab	thuml	Tsinghua-MARS-Lab	resolved
+APAC	Peking University	200	94	lcpu-club	PKUDigitalHealth	PKU-RL	resolved
+APAC	KAIST	200	391	KAIST-Visual-AI-Group	kaist-cp	KAIST-VCLAB	resolved
+APAC	Seoul National University	200	79	seoklab	SNUCP	snu-causality-lab	resolved
+APAC	National University of Singapore	200	48	marmotlab	nusnlp	nus-apr	resolved
+APAC	Nanyang Technological University	200	24	ntunlp	VQAssessment	NTU-CCA	resolved
+APAC	Indian Institute of Technology Bombay	200	5	mrslabiitb	IITB-LEAP-OCR	AiCommunityIITB	resolved
+APAC	Indian Institute of Technology Madras	200	3	hw-team-CNS	iitm-acme-lab	Team-Sahas	resolved
+APAC	Indian Institute of Science	200	34	Njack-IITP	machine-climate	at-cg	resolved
+APAC	East China Normal University	200	15	ECNU	decisionintelligence	DBHammer	resolved
+APAC	Beijing Normal University	200	7	Quantum-Chemistry-Group-BNU	BNUCNL	Beijing-Normal-University-zhuhai	resolved
+APAC	Zhejiang University	200	91	ZJU-Robotics-Lab	Hao-Laboratory	zjunlp	resolved
+APAC	Fudan University	200	49	fudan	fudan-generative-vision	FudanNLP	resolved
+APAC	Shanghai Jiao Tong University	200	55	sjtug	IRMVLab	bcmi	resolved
+APAC	Hong Kong University of Science and Technology	200	13	hkust-nlp	IGL-HKUST	Epoxsea	resolved
+APAC	Chinese University of Hong Kong	200	17	CUHK-AIM-Group	Sphere-AI-Lab	cuhk-mass	resolved
+APAC	National Taiwan University	200	78	ntunlplab	NTURacingTeam	NEWSLabNTU	resolved
+APAC	Osaka University	200	44	OUCC	wani-hackase	MasutaniLab	resolved
+APAC	Waseda University	200	17	nlp-waseda	wasedatime	ogata-lab	resolved
+APAC	Vietnam National University	200	9	GDSC-UIT	ISTECH-VNUIS	sislab-vnu	resolved
+APAC	Chulalongkorn University	200	26	CEDT-Chula	esc-chula	isd-sgcu	resolved
+APAC	Universitas Indonesia	200	73	UnivTerbuka	pbp-fasilkom-ui	ui-dsc	resolved
+APAC	University of Melbourne	200	52	unimelb	University-of-Melbourne-Rover-Team	umccr	resolved
+APAC	Australian National University	200	19	anucssa	AustralianNationalUniversity	smcclab	resolved
+APAC	Monash University	200	48	Monash-Connected-Autonomous-Vehicle	MonashDataFluency	Monash-Emerging-Tech	resolved
+APAC	University of Auckland	200	48	university-of-auckland	UoA-eResearch	Auckland-University-of-Technology	resolved
+APAC	Korea Education and Research Information Service	200	1	KERISdev			resolved
+APAC	National Institute of Informatics Japan	200	5	nii-yamagishilab	RCOSDP	fukuda-lab	resolved
+LATAM	Universidade de Sao Paulo	200	40	uspdev	univesp	icmc-data	resolved
+LATAM	Universidade Estadual de Campinas	200	4	Conpec-Projetos	WissTek-IoT	LivreCamp	resolved
+LATAM	Tecnologico de Monterrey	200	23	tecnologico-de-monterrey-oficial	ti-tecnologico-de-monterrey-oficial	vanttec	resolved
+LATAM	Universidad Nacional Autonoma de Mexico	200	5	LIRA-UNAM	Colectivo-SDD	Universidad-Nacional-Autonoma-de-Mexico	resolved
+LATAM	Universidad de Chile	200	91	IIC2233	dccuchile	open-source-uc	resolved
+LATAM	Pontificia Universidad Catolica de Chile	200	31	IIC2233	open-source-uc	IIC2513	resolved
+LATAM	Universidad de Buenos Aires	200	23	fiuba	fiuba-ids-lanzillotta	labdac	resolved
+LATAM	Universidad de los Andes	200	43	enflujo	Robiolab	UniandesDSIT	resolved
+LATAM	Universidad Nacional de Colombia	200	34	kyma-un	uqbarun	SIMG-UN	resolved
+LATAM	Universidade Federal do Rio Grande do Sul	200	10	ufrgs	hge-iph	nuted	resolved
+LATAM	Universidade Federal de Minas Gerais	200	12	TP-Coltec-UFMG	LBS-UFMG	ufmg	resolved
+LATAM	Instituto Tecnologico de Costa Rica	200	4	ce-itcr	ECASLab	proyectos-ce	resolved
+LATAM	Universidad de la Republica Uruguay	200	4	pln-fing-udelar	GSI-Fing-Udelar	Genomica-Evolutiva	resolved
+LATAM	Universidad Tecnica Federico Santa Maria	200	3	lyoss-usm	usantamaria	usm-games	resolved
+LATAM	Pontificia Universidade Catolica do Rio de Janeiro	200	0				200 but total_count=0 - no org under this name
+LATAM	Instituto Politecnico Nacional	200	1	CECYT-9-JDB			resolved
+LATAM	Universidade Federal de Pernambuco	200	14	lmtsufape	seedabit	ufape	resolved
+LATAM	Universidade Federal do Ceara	200	23	great-ufc	dev-inove	LabDoFuturo	resolved
+LATAM	Fundacao Getulio Vargas	200	5	FGV-Fundacao-Getulio-Vargas	FGV-Energia	GV-CEPESP	resolved
+LATAM	Universidad de Antioquia	200	20	udea-so	Biologia-Computacional	Fundacion-Universidad-de-Antioquia	resolved
+LATAM	Universidad Nacional de Ingenieria	200	34	INGCOM-UNRN-P1	INGCOM-UNRN-PII	uni-edu-ni	resolved
+LATAM	Instituto Nacional de Astrofisica Optica y Electronica	200	0				200 but total_count=0 - no org under this name
+EMEA	University of Oxford	200	106	oxfordcontrol	ori-drs	ox-it	resolved
+EMEA	University of Cambridge	200	112	CambridgeEngineering	Cambridge-ICCS	cambridgeuniversity	resolved
+EMEA	ETH Zurich	200	158	eth-sri	SysCV	lasgroup	resolved
+EMEA	EPFL	200	367	epfl	epfl-ada	epfl-lasa	resolved
+EMEA	Technical University of Munich	200	58	tum-gis	ExplainableML	tum	resolved
+EMEA	Delft University of Technology	200	36	tud-amr	TUDelft-DataDrivenControl	phi-lab-research	resolved
+EMEA	KU Leuven	200	77	KULeuven-COSIC	kuleuven	KULeuven-MICAS	resolved
+EMEA	Imperial College London	200	112	imperial	ImperialCollegeLondon	cog-imperial	resolved
+EMEA	University College London	200	32	UCL	ucl-isd	UCLComputerScience	resolved
+EMEA	Aalto University	200	49	AaltoML	aalto-intelligent-robotics	AaltoGIS	resolved
+EMEA	KTH Royal Institute of Technology	200	25	KTH	ASSERT-KTH	kth-ees	resolved
+EMEA	University of Edinburgh	200	107	EdinburghNLP	uoe-agents	EPCCed	resolved
+EMEA	Politecnico di Milano	200	59	ANTLab-polimi	HEAPLab	AIM-mate	resolved
+EMEA	Universidad Politecnica de Madrid	200	27	CoreDumped-ETSISI	gsi-upm	ETSISI-EMS	resolved
+EMEA	University of Amsterdam	200	47	uva	irlabamsterdam	UvA-DSC	resolved
+EMEA	RWTH Aachen University	200	62	rwth-irt	RWTH-OS	RWTH-EBC	resolved
+EMEA	Karlsruhe Institute of Technology	200	40	KIT-IAI	teco-kit	KIT-MRT	resolved
+EMEA	Open University	200	629	ossu	OpenDriveLab	OpenMOSS	resolved
+EMEA	University of Helsinki	200	54	Helsinki-NLP	UniversityOfHelsinkiCS	UniversityofHelsinki	resolved
+EMEA	Trinity College Dublin	200	11	tcd-ibm	ASDS-TCD	LallyLabTCD	resolved
+EMEA	University of Cape Town	200	16	SATVILab	African-Robotics-Unit	cilt-uct	resolved
+EMEA	Tel Aviv University	200	15	tau-adl	TAU-CGL	alexliberzonlab	resolved
+EMEA	Technion Israel Institute of Technology	200	5	TechnionFV	CS234124	shenorrLabTRDF	resolved
+EMEA	King Abdullah University of Science and Technology	200	1	DGyM-Lab			resolved
+EMEA	University of Nairobi	200	9	uonbi	Multimedia-University-of-Kenya	SciUniversityOfNairobi	resolved
+EMEA	Makerere University	200	7	AI-Lab-Makerere	GDGoC-MUK	MAKERERE-UNIVERSITY-MUK	resolved
+NorthAmerica	Massachusetts Institute of Technology	200	14	mit	GelSight-lab	ALD-Lab	resolved
+NorthAmerica	Stanford University	200	101	Stanford	cvxgrp	sul-dlss	resolved
+NorthAmerica	Carnegie Mellon University	200	130	cmu-db	RoboticExplorationLab	autonlab	resolved
+NorthAmerica	University of California Berkeley	200	27	UC-Berkeley-I-School	ucb-rit	mids-w203	resolved
+NorthAmerica	Harvard University	200	68	harvard	mir-group	cselab	resolved
+NorthAmerica	University of Michigan	200	259	michiganrobotics	mlibrary	MichiganDataScienceTeam	resolved
+NorthAmerica	Georgia Institute of Technology	200	34	gatech	snel-repo	git-mad	resolved
+NorthAmerica	University of Toronto	200	197	bowang-lab	schoolofcities	UofTCoders	resolved
+NorthAmerica	University of British Columbia	200	65	ubc-vision	UBC-MDS	ubcgif	resolved
+NorthAmerica	McGill University	200	66	McGill-NLP	McGill-MMA-EnterpriseAnalytics	McGillRocketTeam	resolved
+NorthAmerica	University of Washington	200	249	DIGI-UW	geohackweek	ICESAT-2HackWeek	resolved
+NorthAmerica	Cornell University	200	91	cornell-ece5745	cul-it	cucapra	resolved
+NorthAmerica	Princeton University	200	68	princeton	pulibrary	PrincetonLIPS	resolved
+NorthAmerica	California Institute of Technology	200	5	caltech	caltechlibrary	ASCIT	resolved
+NorthAmerica	University of Illinois Urbana Champaign	200	86	HackIllinois	illinois-cs241	ISSUIUC	resolved
+NorthAmerica	Arizona State University	200	61	ASU	asulibraries	ASU-CodeDevils	resolved
+NorthAmerica	University of Waterloo	200	130	waterloo-rocketry	uwrobotics	waterloop	resolved
+NorthAmerica	New York University	200	58	nyu	NYUeServ	ubsuny	resolved
+NorthAmerica	Johns Hopkins University	200	67	AndersenLab	HopkinsIDD	JEFworks-Lab	resolved
+NorthAmerica	Pennsylvania State University	200	11	psunlpgroup	PhasesResearchLab	PSU-CSE-511	resolved

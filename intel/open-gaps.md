@@ -1,8 +1,145 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-17
+updated: 2026-11-18
 ---
+
+## 🆕 `p884` · 2026-11-18 — **`6` gaps. `883-G1` DISCHARGED by rebuilding its register from a primary source — the 82% refusal rate was this KB's spelling. `883-G2` CLOSED with 7 controls. `883-G3`'s liveness bound still unconverged. Two NEW instrument defects found by this pass on its own output, and one of them truncated this pass's own sweep**
+
+🔵 **Discharged and closed this pass, with the measurement that did it:**
+
+| Gap | Verdict | What settled it |
+|---|---|---|
+| **`883-G1`** — the owner channel's handles were guessed | 🟢 **DISCHARGED** | Register rebuilt from `search/users` by institution **display name**. **98/98 HTTP `200`.** APAC refusal **32.3% → 0%**, LATAM **81.8% → 9.1%** ([`register`](../evidence/by-name-handles.2026-11-18-p884.tsv)) |
+| **`883-G2`** — the gate's classifier abstained on `MulanPSL-2.0` | 🟢 **CLOSED** | Family added to `classify_grant.py`, **7 controls**, including the regression for the **fullwidth comma `U+FF0C`** that makes the naive fix fail silently |
+| **`883-G3`** — the liveness bound is over six hand-picked words | 🔴 **CARRIED, unconverged** | `p884` did not re-run it. The honest reading of every liveness figure on these shelves remains **`HEAD ≥ date`** |
+
+### 🔴 `884-G1` — this pass's own sweep is TRUNCATED on 33 of 270 organisations, and it dropped exactly the repositories this pass was looking for
+
+🟢 **The probe, measured on the pass's own output.** `search/repositories` returns at most **100**
+results per query. Counting organisations whose result set came back at exactly the cap
+([`sweep`](../evidence/owner-sweep.2026-11-18-p884.tsv)):
+
+```
+awk -F'\t' 'NR>1{c[$2]++} END{for(l in c) if(c[l]>=100) n++; print n}'  ->  33
+```
+
+🔴 **33 of 270 organisations (12.2%) were truncated, and the truncation is INVISIBLE in the output** —
+a capped result set is indistinguishable from an organisation that happens to own exactly 100
+repositories.
+
+🔴 **The direction of the loss is the damaging part, and it is this pass's own doing.** The sweep
+passed `sort=stars`, so it kept the **top** 100 by stars and discarded the tail. **Every single find
+this pass published carries a single-digit or low-double-digit star count.** The sweep was therefore
+sorted to discard precisely the population it was built to discover.
+
+🟡 **And the truncated organisations are the wrong ones to lose:** `ox-it` (Oxford University IT),
+`pulibrary` (Princeton University Library), `cul-it` (Cornell University Library IT), `mlibrary`
+(Michigan), `ASSERT-KTH`, `kth-ees`, `EPCCed` — institutional IT and library groups, which is exactly
+the publisher class that produced `cilt-uct` and `UniversityOfHelsinkiCS`. 🔵 **The new category this
+pass opened is probably larger than the 13 rows it shelved**, and the reason it is not larger is a
+sort order.
+
+🟢 **Acceptance test.** Re-sweep the 33 capped organisations with `sort=updated` **and** paginate past
+100, then diff against this pass's TIER-A set. The gap closes when every swept organisation's
+repository count is either below the cap or exhausted by pagination, **and the sort key is one that
+does not correlate with the thing being discovered.**
+
+### 🔴 `884-G2` — the grant ladder probes two branch names, and a release-branch default is invisible to it
+
+🟢 **The measured case.** `cilt-uct/sakai-skin-vula`'s default branch, resolved by
+`git ls-remote --symref`, is **`r/23.x`** — neither `main` nor `master`, the only two refs
+`fetch_grants.sh` tries. Its `ECL-2.0` grant was read **only because the repository also still
+carries a `master` branch**, which is luck, not method.
+
+🔵 **This is the sibling of `p883`'s DeepSeek-Harness finding, one step further out.** `p883` found
+`main/LICENSE` 404ing because the default was `master`, and drew the rule *"resolve the default branch
+with `git ls-remote --symref` BEFORE probing licence bytes."* **That rule is right and this pass shows
+the two-name fallback behind it is still not sufficient** — a project on a release-branch default
+would be published as `NO-GRANT-FILE`.
+
+🟢 **Acceptance test.** `fetch_grants.sh` resolves the default branch via `--symref` and probes
+**that** ref first, falling back to `main`/`master` only afterwards. Control: a fixture whose default
+branch is neither `main` nor `master` resolves its grant.
+
+### 🟡 `884-G3` — 497 repositories were deferred for a human read and nobody has read them
+
+🟢 `compose/code/p884-edu-vocabulary/` sorts the sweep into **TIER-A** (597, publishable) and
+**TIER-B** (497, ambiguous). **TIER-B is a declared "needs reading" bucket, and declaring it is not
+reading it.**
+
+🔵 **Why it is a gap and not bookkeeping.** TIER-B holds exactly the rows where education and
+machine-learning vocabulary genuinely overlap — `course`, `student`, `exam`, `curriculum`, `study`
+without a recognised ML collocation. 🔴 **Some real education supply is certainly in there**, and the
+only instrument that can extract it is a person or a model reading 497 descriptions.
+
+🟢 **Acceptance test.** Adjudicate TIER-B in batches, record each verdict in an evidence TSV, and
+**feed the confirmed ML phrases back into `ML_NOISE`** so the list grows from measurement rather than
+from guesswork. The gap closes when TIER-B is empty or every remaining row carries a recorded verdict.
+
+### 🔴 `884-G4` — no primary source was read this pass, and `T4`'s caveat is now three passes old
+
+🟡 **Four hosts failed DNS resolution** this pass: `digital-strategy.ec.europa.eu`,
+`artificialintelligenceact.eu`, `www.digitaleducationcouncil.com`,
+`www.futuresource-consulting.com` ([`record`](../evidence/channel-state.2026-11-18-p884.tsv)).
+Outbound fetching is restricted to the session's allowed domains; only `api.github.com` and
+`raw.githubusercontent.com` were reachable, and those carried every first-hand measurement in this
+pass.
+
+🔴 **Consequence, stated so it cannot be mistaken for coverage: every regulatory date in this KB
+remains secondary-sourced.** Ten independent legal and consultancy sources converged on the Digital
+Omnibus dates this pass, which is **corroboration, not verification** — `T4`'s standing warning that
+`eur-lex.europa.eu` is unreachable is unresolved and has now survived `p875`, `p883` and `p884`.
+
+🟢 **Acceptance test.** Either the session's network policy admits one primary legal host
+(`eur-lex.europa.eu` or `digital-strategy.ec.europa.eu`) and the Annex III date is read from the
+instrument itself, **or** this KB stops carrying the date as a bare fact and attaches the
+corroboration count to every use of it. 🔵 The second half is achievable without any network change
+and should not wait for the first.
+
+### 🟡 `884-G5` — a resolved login is GitHub's match on a NAME, not a verified affiliation
+
+🟢 **The limit, declared because `883-G1`'s discharge rests on it.** `search/users` returns a
+`login`; **`users/<login>` and `orgs/<login>` are both `403`** in this session (`T23`), so this pass
+**could not read any organisation's display name, URL or verified-domain status.** The register
+therefore records *"GitHub's own index returns this login for this institution's name"* — which is a
+far better instrument than a guessed handle, and is **not** the same as confirming the organisation
+belongs to the institution.
+
+🔴 **Where this could bite:** `mit` for Massachusetts Institute of Technology and `Stanford` for
+Stanford University are plausible but unconfirmed; a squatted or unrelated org under an
+institution-shaped login would resolve identically. 🟡 None of this pass's **published rows** depends
+on it — every shelved row was byte-read and `ls-remote`-confirmed at the repository level, and the
+owner's identity is carried in prose, not as a claim.
+
+🟢 **Acceptance test.** Confirm affiliation on a channel that does not need `orgs/<login>`: a link
+from the institution's own domain, or `raw.githubusercontent.com` on the org's `.github` profile
+repository. Close for the ~20 organisations whose rows or regional claims actually rest on the
+affiliation.
+
+### 🔴 `884-G6` — this KB now holds 15 drafted licence requests and has sent ZERO
+
+🟢 **Measured:** `grep -h "Status:" intel/licence-requests/*.md` returns **14 drafted / 0 sent**,
+and `p884` adds a fifteenth ([`IIC2233/Syllabus`](iic2233-syllabus.md), the head of the largest
+unlicensed estate this KB has measured — 78 repositories, 77 grantless, pushed the day before
+measurement).
+
+🔴 **This matters because `intel/market.md` now sells the conversion.** The `p884` LATAM section calls
+a licence-clarification request *"the cheapest blocker in this entire KB to remove"* and *"the
+highest-leverage regional play this file carries."* 🔵 **Both claims are reasonable and neither is
+tested**: the mechanism has never once been exercised, so its conversion rate is unknown and the
+"cheapest" claim is an estimate, not a measurement. The market section should be read with that
+attached.
+
+🟡 **Why they are drafted and not sent, stated rather than left implicit.** Sending them means opening
+public issues on third-party repositories under a real account — an outward-facing action on someone
+else's property. **That is a decision for the KB's owner, not for an automated pass**, and no pass
+should take it unprompted.
+
+🟢 **Acceptance test.** The owner sends one — `IIC2233/Syllabus` is the recommended first, because the
+counterparty is a university course team with no commercial reason to refuse and the omission is
+almost certainly an oversight. **Record the outcome.** One measured conversion, positive or negative,
+is worth more than fifteen further drafts.
 
 ## 🆕 `p883` · 2026-11-17 — **`5` gaps. `882-G2` CLOSED with a limb no pass had tried and the defect it was built to find CONFIRMED on 3 rows; `882-G3` ANSWERED rather than carried, by building the channel it asked for and measuring that the channel FAILS for LATAM; `882-G4` DISCHARGED by declaring seven limbs with their probes. `ACTION p846-D`, carried since `p846` and never run, EXECUTED and PAID**
 

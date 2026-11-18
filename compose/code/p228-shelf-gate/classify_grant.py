@@ -36,6 +36,31 @@ TITLES = [
     ("EPL-1.0",  r"Eclipse\s+Public\s+License\s+-\s+v\s+1\.0"),
     ("EUPL-1.2", r"EUROPEAN\s+UNION\s+PUBLIC\s+LICENCE\s+v\.?\s*1\.2"),
     ("ECL-2.0",  r"Educational\s+Community\s+License,?\s+Version\s+2\.0"),
+    # Mulan - added p884, closing `883-G2`. This gate returned
+    # `(None, None, 'no recognised licence title')` on `ECNU/EduWork`'s real
+    # 9,233 B body (`sha256_12 eb7a1d713eb9`) - a FALSE ABSENCE on an OSI-approved
+    # permissive grant, and `T14`'s class in the mirror direction to p877's
+    # false *permissive* (PageLM). FOUR other modules in this base already carried
+    # the answer (`p122`, `p124`, `p125` x2); the gate ran the only one that did not.
+    #
+    # TRAP, measured on those bytes rather than assumed: the title's separator is
+    # a FULLWIDTH COMMA U+FF0C - `Mulan Permissive Software License,Version 2`.
+    # ASCII `,?` does not match it and neither does `\s`, so the obvious pattern
+    # fails SILENTLY and reproduces the very false absence this row removes.
+    # `[,，]?` is therefore load-bearing, not cosmetic.
+    #
+    # PSL and PubL are DIFFERENT grants and are kept apart deliberately. Mulan
+    # *Permissive* (PSL) is Apache-like; Mulan *Public* (PubL) carries a
+    # copyleft-style obligation. Collapsing them would publish a copyleft grant as
+    # build-safe - p877's error class in a new family.
+    ("MulanPSL-2.0",  r"Mulan\s+Permissive\s+Software\s+License[,，]?\s*Version\s+2"),
+    ("MulanPSL-2.0",  r"Mulan\s+PSL\s+v2"),
+    ("MulanPSL-2.0",  r"木兰宽松许可证[,，]?\s*第\s*2\s*版"),
+    ("MulanPSL-1.0",  r"Mulan\s+Permissive\s+Software\s+License[,，]?\s*Version\s+1"),
+    ("MulanPSL-1.0",  r"Mulan\s+PSL\s+v1"),
+    ("MulanPubL-2.0", r"Mulan\s+Public\s+License[,，]?\s*Version\s+2"),
+    ("MulanPubL-2.0", r"Mulan\s+PubL\s+v2"),
+    ("MulanPubL-2.0", r"木兰公共许可证[,，]?\s*第\s*2\s*版"),
     ("CC-BY-SA-4.0", r"Creative\s+Commons\s+Attribution-ShareAlike\s+4\.0"),
     ("CC-BY-4.0",    r"Creative\s+Commons\s+Attribution\s+4\.0"),
     ("CC-BY-NC-SA-4.0", r"Creative\s+Commons\s+Attribution-NonCommercial-ShareAlike\s+4\.0"),
@@ -136,6 +161,34 @@ def classify(body):
     return (fam, "title line @%d" % off, "")
 
 
+def split_grant(body_a, body_b):
+    """Classify a SPLIT-FILE dual grant: two licence files, one repository.
+
+    Added p884. `fetch_grants.sh` now probes the Rust ecosystem's two-file
+    convention (`LICENSE-APACHE` + `LICENSE-MIT`) after its single-file ladder
+    404s. `RWTH-OS/eduOS-rs` is the measured case: 493 stars, 16 single-file
+    probes all 404, and TWO real grants on disk.
+
+    This is NOT `dual_grant`. That function reads a CHOICE stated in one file's
+    preamble prose. This one reads a choice expressed as the FILE LAYOUT, which no
+    amount of reading inside either file can reveal: each body is a complete,
+    unqualified grant that looks single when read alone.
+
+    Returned in a stable order (alphabetical by family) so the cell is
+    reproducible rather than dependent on which path answered first.
+    """
+    fams = []
+    for body in (body_a, body_b):
+        fam, _, _ = classify(body)
+        if fam and fam not in fams:
+            fams.append(fam)
+    if len(fams) < 2:
+        return (fams[0] if fams else None,
+                "split-file probe", "only one half resolved - do NOT call this dual")
+    return (" OR ".join(sorted(fams)), "split-file grant",
+            "two licence FILES, not a dual preamble; either may be taken")
+
+
 def main(argv):
     print("\t".join(["slug", "ref", "path", "bytes", "sha12", "family", "channel", "note"]))
     for line in open(argv[1], encoding="utf-8"):
@@ -151,7 +204,15 @@ def main(argv):
         except OSError:
             continue
         body = raw.decode("utf-8", "replace")
-        fam, chan, note = classify(body)
+        if "+" in path:
+            # split-file dual grant (p884): the second half sits in `<key>.body2`
+            try:
+                raw2 = open(argv[2] + "/" + key + "2", "rb").read()
+            except OSError:
+                raw2 = b""
+            fam, chan, note = split_grant(body, raw2.decode("utf-8", "replace"))
+        else:
+            fam, chan, note = classify(body)
         print("\t".join([slug, ref, path, str(len(raw)),
                          hashlib.sha256(raw).hexdigest()[:12],
                          fam or "UNRECOGNISED", chan or "-", note]))

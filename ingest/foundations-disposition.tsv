@@ -153,3 +153,7 @@
 ## Document & media ingestion — the real bottleneck in education AI	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites
 ## Retrieval, orchestration & serving substrate	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites
 ## Evaluation & data quality — how an education claim gets defended	0	SHELF	p882 re-declared from the table own header row after the p871/p877-p880 rewrites
+### 🟢 `cilt-uct` — University of Cape Town, and the best-licensed education estate in 884 passes	0	SHELF	p884 institutional LMS/SIS integration estate; 4 rows, grants byte-read
+### 🟢 `UniversityOfHelsinkiCS` — the student-information-system seam, MIT and current	0	SHELF	p884 SIS integration seam; 3 rows, grants byte-read
+### 🟢 Canvas and Sakai client libraries from the institutions that run them	0	SHELF	p884 LMS client libraries from KTH, Kyoto, Aalto; 4 rows, grants byte-read
+### 🟢 Teaching-grade reference implementations — permissive, high-traction, built to be read	0	SHELF	p884 cmu-db/bustub and RWTH-OS/eduOS-rs; 2 rows, grants byte-read (eduOS is a split-file dual grant)

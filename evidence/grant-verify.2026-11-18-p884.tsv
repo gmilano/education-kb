@@ -1,0 +1,14 @@
+slug	branch	http	bytes	sha12	family
+cilt-uct/sakai-skin-vula	master/LICENSE	200	11120	0688f62d04f1	ECL-2.0
+cilt-uct/qna	master/LICENSE	200	11120	0688f62d04f1	ECL-2.0
+cilt-uct/tsugi-request-gradebook-upload	main/LICENSE	200	11357	b40930bbcf80	Apache-2.0
+UniversityOfHelsinkiCS/suoritustarkistin	master/LICENSE	200	1111	7b658dd8f1a0	MIT
+UniversityOfHelsinkiCS/sis-importer	master/LICENSE	200	1111	c54478a86110	MIT
+UniversityOfHelsinkiCS/sis-ns-manager	master/LICENSE	200	11357	c71d239df917	Apache-2.0
+KTH/canvas-api	master/LICENSE	200	1098	5e0ff14e95f0	MIT
+kyoto-u/comfortable-sakai	master/LICENSE	200	11357	c71d239df917	Apache-2.0
+AaltoGIS/classroom-grader	main/LICENSE	200	1504	d25a8300ad2c	BSD-3-Clause
+RWTH-OS/eduOS-rs	-	404	-	-	NO-GRANT-FILE
+nus-apr/itsp-benchmark	main/LICENSE	200	1064	7c8c99fc5bd8	MIT
+Monash-Emerging-Tech/quantum-computing-edu	main/LICENSE	200	1095	e7e9bc6c3bc1	MIT
+cmu-db/bustub	master/LICENSE	200	1075	cea46dcabf9a	MIT

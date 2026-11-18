@@ -1,0 +1,10 @@
+stage	NorthAmerica	EMEA	APAC	LATAM	ALL
+repositories_measured	2965	3152	2756	1492	10365
+orgs_swept	59	74	84	53	270
+new_to_kb_raw	2963	3143	2752	1492	10350
+new_to_kb_raw_pct	99.9	99.7	99.9	100.0	99.9
+TIER_A_education_unambiguous	120	282	35	160	597
+TIER_B_deferred_for_human_read	203	173	96	25	497
+TIER_A_permissive_and_live	31	29	12	39	111
+TIER_A_no_grant_at_all	82	236	19	119	456
+TIER_A_no_grant_share_pct	68.3	83.7	54.3	74.4	76.4

@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-17
+updated: 2026-11-18
 ---
 
 # Vertical platforms — education
@@ -40,7 +40,7 @@ asserted: the copyleft problem in education lives HERE, and almost nowhere else.
 - 🔴 **A `p881` repair on this shelf is reversed:** canonical is `sudosylabs/proctor`, lower-case.
   The three addresses are re-cased; the reasoning is kept under the `p881` section below rather than
   edited away.
-- 🟢 **This shelf can be counted again:** **54 rows across 11 tables**, measured (`881-G3`; 🆕 `p883` adds `ECNU/EduWork`).
+- 🟢 **This shelf can be counted again:** **55 rows across 12 tables**, measured (`881-G3`; 🆕 `p883` adds `ECNU/EduWork`; 🆕 `p884` adds `tsugiproject/tsugi`).
 
 **Previous pass (`p879`), retained:** **Pass `p879`, 2026-11-17** (ninth pass of the day). **`p879` adds the layer this file has
 described 879 passes of systems on top of and never named: identity.**
@@ -234,7 +234,7 @@ LCMS) — the portal and media layers clients ask for and that Moodle/Open edX d
 ERPs remain unusable — `openeducat_erp` is **LGPL**, `frappe/education`'s whole grant is a **19-byte**
 `License: GNU GPL V3` declaration.
 
-## The platforms — 54 rows
+## The platforms — 55 rows
 
 🟢 **Derived, not asserted.** `53` distinct platforms across the **11** tables below. The raw row
 count is `57`: four addresses — `apereo/cas`, `moodlehq/moodleapp`, `ls1intum/Artemis` and
@@ -400,6 +400,48 @@ education ERPs are weak-copyleft and declaration-only respectively, and **neithe
 a Globant deliverable.** 🟢 **The usable ERP route remains what it was — an Odoo/ERPNext-class
 general platform with an education layer built on top as the client's own code**, not an education
 ERP distribution adopted wholesale.
+
+## Tsugi — the LTI app framework, and the mechanism behind "attach, don't fork" — new in `p884`
+
+🔵 **This file has prescribed *"attach, don't fork"* for hundreds of passes and never named the
+framework that implements it.** `p884` found the gap from the other end: the University of Cape
+Town's 50-repository teaching estate (`repos/foundations.md`, this pass) is **largely a set of Tsugi
+apps**, and the pattern only makes sense once the framework is on this shelf.
+
+🟢 **What it is.** Tsugi is an Apereo framework for building **LTI (Learning Tools Interoperability)
+applications** — tools that mount *inside* whichever LMS an institution already runs. The AI feature
+lives in your app, the LMS stays stock, the copyleft of the platform never reaches your code, and the
+same app works across Moodle, Canvas, Sakai, Blackboard and Brightspace.
+
+🔴 **This is the single cleanest answer to the problem `T7` and `T16` describe** — a vertical whose
+major platforms are GPL/AGPL. An LTI app is a *process boundary that the LMS vendor already
+supports*, rather than a boundary you have to argue for.
+
+| Platform | Repo | Licence | ★ | Pushed | Notes |
+|---|---|---|---:|---|---|
+| **Tsugi** | https://github.com/tsugiproject/tsugi | **Apache-2.0** — byte-read `master/LICENSE`, **10,273 B**, `sha256₁₂ 73ba74dfaa52` | **377** | **2026-11-17** | Apereo's LTI app framework and management console. Created **2013-11-28**, **267 forks**, default branch `master`. 🟢 **Permissive, and it is the seam through which a studio ships function into a copyleft LMS without forking it.** 🔵 Worked, production examples in `repos/foundations.md` → `cilt-uct`: gradebook-to-PeopleSoft upload, student allocation, course-level dashboards, Sakai→Brightspace migration. |
+
+### 🟢 Moodle's AI subsystem — what is actually in core, and the governance control that matters
+
+🟡 **Recorded because a proposal will be asked about it and the vendor blogs disagree.** Moodle does
+not ship a model; it ships a **pluggable AI subsystem** in core, present since **4.5**, with
+providers as plugins (the documented provider surface is `moodledev.io/docs/5.1/apis/plugintypes/ai`).
+
+- 🟢 **`5.1` adds DeepSeek as a core provider** alongside OpenAI and Azure AI.
+- 🟢 **`5.1` adds per-course and per-activity on/off control for AI tools** — teacher-level, not just
+  site-level. 🔵 **That is the commercially relevant part**: it is the granularity an institution needs
+  to write a defensible AI-use policy, and it is the hook an EU AI Act deployer-side governance
+  artefact can point at (`T11`).
+- 🟡 **`5.3` is the next LTS** and its AI documentation was still marked in progress at the time of
+  this pass; treat any 5.3 feature claim as unconfirmed.
+- 🔴 **Moodle remains GPL-3.0.** The subsystem makes Moodle a *better integration target*; it does not
+  change the licence calculus. Build the AI layer as a separate service — or, now, as a **Tsugi LTI
+  app** per the row above.
+
+🔴 **Declared, and it bounds the row above:** this KB has found **no MCP server published by Moodle
+HQ**. The community option (`csmediapro/moodle-mcp-server`) is **AGPL-3.0** and carries no stars —
+already in this KB's trending history and still not shelvable. Moodle HQ documents Web Services, not
+MCP.
 
 ## Permissive-licence shortlist
 

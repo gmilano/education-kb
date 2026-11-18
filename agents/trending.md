@@ -1,8 +1,225 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-17
+updated: 2026-11-18
 ---
+
+## 🟢 `2026-11-18` (`p884`) — **the owner channel's inputs are now PRIMARY-SOURCED, and the refusal rate `883-G1` was written to explain collapses from 82% to 9%: it was this KB's spelling, not the institutions. The first new supply it returns is not agents at all — it is university teaching-and-learning centres' production LMS/SIS integration estates**
+
+🔵 **`ACTION 883-G1` is DISCHARGED, and its acceptance test is met on its own terms.** `p883` built
+the owner channel, found `ECNU/EduWork` with it, and then declared the channel's own inputs unsafe:
+*"Every handle was invented by this pass from an institution's name… a `422` measures the guess, not
+the institution."* It set one test — rebuild the register from a **primary** source and re-run, and
+*"the gap closes when the APAC and LATAM refusal rates are properties of the institutions rather
+than of this KB's spelling."*
+
+🟢 **The instrument `883-G1` asked for exists: `api.github.com/search/users` is `200`.** Querying
+GitHub's own user index by an institution's **display name** returns that institution's org login as
+*GitHub's* resolution, not as this KB's spelling. `East China Normal University` → `ECNU`,
+first-hand, which is the handle `p883` happened to guess right.
+
+### 🟢 The measured result, and it settles the question
+
+**98 institutions across four regions, queried by display name**
+([`register`](../evidence/by-name-handles.2026-11-18-p884.tsv)). **`98/98` returned HTTP `200`.
+There were no refusals at all.**
+
+| Region | `p883` — guessed handles | `p884` — display names | Refusal rate |
+|---|---|---|---|
+| **APAC** | 31 queried, **10 × `422`** | **30 queried, 30 resolved** | **32.3% → `0%`** |
+| **LATAM** | 22 queried, **18 × `422`** | **22 queried, 20 resolved** | **81.8% → `9.1%`** |
+| EMEA | never run by name | **26 queried, 26 resolved** | — (first run) |
+| North America | never run by name | **20 queried, 20 resolved** | — (first run) |
+
+🔴 **`p883`'s stronger claim does not survive, and it is the one that mattered commercially.**
+`p883` recorded an 82% LATAM refusal rate and `intel/market.md` carried the reading that LATAM's
+named institutions publish no public code. **The refusals were spelling.** Universidade de São
+Paulo, UNAM, Tec de Monterrey, Universidad de Chile, UBA, UNICAMP and fourteen more all resolve to
+real organisations on the first attempt. 🟡 Whether those orgs publish *education* code is a
+separate question, answered below — but *"LATAM publishes nothing"* was never a measurement of
+LATAM.
+
+🟢 **Two institutions genuinely return nothing, and they are named rather than counted.** 🔵 Per
+`p883`'s own rule that a declared gap is information and silence is not:
+
+| Institution | Region | Result |
+|---|---|---|
+| **Pontifícia Universidade Católica do Rio de Janeiro** | LATAM | `200`, `total_count=0` — no org matches the display name |
+| **Instituto Nacional de Astrofísica, Óptica y Electrónica** | LATAM | `200`, `total_count=0` — same |
+
+🔵 **These two are a different finding from a `422`.** The channel answered; the index holds no
+organisation under that name. That is a property of the institution's GitHub presence, which is
+exactly what `883-G1` asked for.
+
+### 🔴 The channel table was wrong for three passes, and the error has one cause
+
+🟢 **Probed first, before anything was measured**
+([`record`](../evidence/channel-state.2026-11-18-p884.tsv)):
+
+| Limb | Unauthenticated `curl` | Authenticated `gh api` | Prior passes recorded |
+|---|---|---|---|
+| `search/repositories` | **`403`** | **`200`** | `p873` *"empty result set"*; `p881` *"flatly down"*; `p882` `200` |
+| `search/users` | `200` | **`200`** | never probed |
+| `search/commits` | `200` | `200` | `p883` `200` — agrees |
+| `repos/<slug>` | `403` | **`403`** | `p882`/`p883` *"DOWN"* |
+| `raw.githubusercontent.com` | `200` | n/a | `200` — agrees |
+| `git ls-remote --symref` | open | n/a | open — agrees |
+
+🔴 **`repos/<slug>` is not down. Its body says what it is**, and no pass had read it:
+
+```
+"GitHub access to this repository is not enabled for this session.
+ Use add_repo to request access."
+```
+
+That is a **scope** refusal for repositories outside the session's authorised set — a property of
+*this session's credential*, not of `api.github.com`. `users/<login>` and `orgs/<login>` return the
+sibling message (*"sessions are bound to their configured repositories"*). 🔵 **The rule, and it is
+`T23`: an HTTP status names the refusal, the BODY names the cause, and a channel declared "down"
+without reading the body may simply be a channel nobody authenticated.** `p873` recorded star-ranked
+discovery as impossible on this basis and five passes of keyword legs were then run without it.
+
+### 🔴 The education keyword set is contaminated by MACHINE-LEARNING vocabulary, and a university AI lab is the worst possible population for it
+
+🟢 **Measured, not suspected.** A conventional education keyword set over this pass's sweep returns
+**326** permissive, live, new-to-this-KB "education finds". **Essentially all of them are false**:
+
+| The word | Its education sense | What it actually matched in this sweep |
+|---|---|---|
+| `learning` | a learner learning | **Transfer / Reinforcement / Prompt / Similarity Learning** |
+| `curriculum` | a syllabus | **curriculum learning**, an ML training-order technique |
+| `grad*` | grading, gradebook | **gradient** |
+| `exam*` | an examination | **example** |
+| `course` | a course | **coarse**-to-fine |
+| `study` | a course of study | a research study |
+
+🟡 **This is why the raw novelty figure must not be published.** `99.8%` of the swept repositories
+are "new to this KB" — true, and meaningless: they are the ML output of university labs, which this
+KB has no reason to hold. **A novelty rate measured before relevance filtering measures the sweep's
+width, not its yield.**
+
+🟢 **The instrument, with controls, committed rather than left in a scratchpad:**
+`compose/code/p884-edu-vocabulary/` — a two-tier classifier. **TIER-A** terms have no ML sense and
+are publishable; **TIER-B** terms are ambiguous and are *deferred for a human read*, never promoted.
+**13 controls**, every one of them a real string from this sweep.
+
+🔵 **Two of those controls were written because they FAILED first.** `prompt learning` and
+`similarity learning` were missing from the collocation list until the controls caught them, and
+`cilt-uct/qna` was dropped by a draft control that truncated its real description before the word
+*"students"*. 🔴 **The declared boundary is the honest part: ML vocabulary appears faster than any
+list tracks it, so an unlisted phrase degrades to TIER-B ("needs reading"), never to TIER-A.** That
+property has its own control.
+
+| Stage | Count |
+|---|---|
+| Repositories measured across the four regions | **`10,365`** |
+| New to this KB (raw — **do not publish this**) | `10,350 — 99.9%` |
+| TIER-A, education in the unambiguous sense | **`597`** |
+| TIER-B, deferred for a human read | `497` |
+| **TIER-A + permissive + not archived** | **`111`** |
+
+### 🟢 The new category: a university's TEACHING CENTRE is a different publisher from its AI lab
+
+🔵 **The owner channel's second surprise.** `p883` found that discovery by owner beats discovery by
+subject (`T21`). What `p884` adds is **which** owner: swept by name, the repositories that survive
+de-contamination are overwhelmingly **not** research code and **not** agents. They are the
+**production integration estate of university teaching-and-learning centres** — SIS importers,
+gradebook uploaders, Canvas API clients, Sakai tools — permissively licensed, actively maintained,
+and carrying **single-digit star counts**, which is why every star-ranked and keyword leg this KB
+has ever run was structurally blind to them.
+
+🔴 **This is the unglamorous layer an education engagement actually spends its weeks on**, and it is
+the natural counterpart to `p879`'s *vendor-built AI components* category. Grants byte-read, HEAD
+confirmed by `git ls-remote --symref`
+([`grants`](../evidence/grant-verify.2026-11-18-p884.tsv) ·
+[`existence`](../evidence/exist-verify.2026-11-18-p884.tsv)).
+
+See `repos/foundations.md` → **Institutional LMS/SIS integration estates** for the rows.
+
+### 🔴 A new false-absence SHAPE, found on this pass's highest-starred find and fixed with controls
+
+🟢 **`RWTH-OS/eduOS-rs` — 493 ★, Apache-2.0 per GitHub, a teaching operating system in Rust.** The
+gate's grant probe reported **`NO-GRANT-FILE`**. It has two grants:
+
+| Path | Bytes | Family |
+|---|---|---|
+| `main/LICENSE-APACHE` | **9,722** | Apache-2.0 |
+| `main/LICENSE-MIT` | **1,023** | MIT |
+
+🔴 **Both failures are structural, and the second one reaches a client.** `fetch_grants.sh` probed
+8 filenames × 2 refs = 16 paths, none of which is `LICENSE-APACHE` — the **Rust ecosystem's
+two-file dual-licensing convention** — so the ladder *manufactured* an absence. And
+`search/repositories` has a **single** `license.spdx_id` field, which reports `Apache-2.0` alone:
+**one grant field cannot express two grants, and a studio told "Apache-2.0" silently loses the MIT
+option it is entitled to.**
+
+🟢 **Fixed, both halves, on the measured bytes.** `fetch_grants.sh` gains a split-file ladder that
+runs only after the single-file ladder 404s; `classify_grant.split_grant()` reports
+**`Apache-2.0 OR MIT`** in a stable order. **5 controls**, including the one that matters: *each
+half read ALONE looks like a complete single grant*, so no amount of reading inside either file can
+reveal the choice — only the layout can.
+
+🟡 **A third limit, declared not fixed.** `cilt-uct/sakai-skin-vula`'s default branch is **`r/23.x`**
+— neither `main` nor `master`, the only two refs the ladder tries. It was read only because the repo
+also still carries a `master`. A release-branch default is invisible to the probe; carried as
+`884-G2`.
+
+### 🟡 `883-G2` CLOSED — and the structural finding is worse than `p883` stated
+
+🟢 The gate's classifier returned `(None, None, 'no recognised licence title')` on `ECNU/EduWork`'s
+real 9,233-byte payload (`sha256₁₂ eb7a1d713eb9`, re-fetched and byte-identical to `p883`'s
+measurement). `MulanPSL-2.0` is now a recognised family, with **7 controls**.
+
+🔴 **The trap, measured on the bytes rather than assumed: the title's separator is a FULLWIDTH
+COMMA `U+FF0C`** — `Mulan Permissive Software License，Version 2`. ASCII `,?` does not match it and
+neither does `\s`. **A fix written without reading the bytes fails silently and looks like a pass**,
+reproducing the very false absence it was meant to remove. That has its own regression control.
+
+🟡 **`p883` said three other modules already knew `Mulan`. It is four** — `p122`, `p124` and `p125`
+(twice). The gate ran the only one that did not. 🔵 `T13` in the instrument layer, one module worse
+than recorded.
+
+🟢 **Mulan *Permissive* (PSL) and Mulan *Public* (PubL) are kept apart deliberately.** PubL carries a
+copyleft-style obligation; collapsing them would publish a copyleft grant as build-safe, which is
+`p877`'s PageLM error in a new family. Controlled in both directions.
+
+### 🟡 The eight prescribed WebSearch legs: `0` new repositories for the SIXTH consecutive pass — and `0` new demand-side facts, which is new
+
+🟢 **Supply side, measured against this KB's 7,964-slug index rather than asserted**
+([`record`](../evidence/websearch-legs.2026-11-18-p884.tsv)). The eight legs — four global, one each
+for North America, EMEA, APAC and LATAM — named six candidate repositories.
+**All six were already in this KB**: `geekjourneyx/interactive-learning` (23 mentions),
+`SirhanMacx/Claw-ED` (80), `TapXWorld/ChinaTextbook` (27),
+`microsoft/ai-agents-for-beginners` (225), `csmediapro/moodle-mcp-server`,
+`vishalsachdev/canvas-mcp`.
+
+🔴 **The finding `p884` adds is that the DEMAND side is now saturated too, and this KB is ahead of
+its own secondary sources.** Every regional fact the four regional legs returned is already carried
+here, and in several cases carried *more precisely*:
+
+| The legs reported | This KB already holds |
+|---|---|
+| *"Brazil's AI education rules took effect November 12, 2026"* (a summary site) | **`Parecer CNE/CP nº 15/2026`, homologated `2026-11-10`, published in the `DOU`** — and `Resolução CNE/CP nº 1/2026`'s specific article forbidding the attribution of a grade to an AI assessment |
+| EU high-risk education obligations deferred to **2 Dec 2027** | `T4` and `T11`, with the instrument named: **Regulation (EU) 2026/1744**, in force 27 Jul 2026 |
+| Korea: AI tutors licensed, textbook rollout reversed | `T4`/market: **AI Basic Act in force 22 Jan 2026**, and the textbook reversal quoted as this file's most useful item |
+| UAE school AI prohibitions, Feb 2026 | **UAE KHDA (Dubai)** guidance, already filed EMEA with the country in prose |
+| Google.org LATAM AI education funding | **$4.6M**, already carried, with the grant holder named |
+| Futuresource 67% teachers · Epson 80% · Chegg layoffs · UNESCO IESALC | all four already carried |
+
+🔵 **Ten independent legal and consultancy sources converged on the Digital Omnibus dates this
+pass. That is corroboration, not news, and it is written as corroboration.** `T4`'s standing caveat
+— that the dates rest on secondary sources because `eur-lex.europa.eu` is unreachable — **is NOT
+resolved**, and this pass could not resolve it: see the channel gap below.
+
+### 🔴 Declared channel gap — WebFetch is unavailable this pass, so no primary source could be read
+
+🟡 **Four hosts failed DNS resolution** (`digital-strategy.ec.europa.eu`,
+`artificialintelligenceact.eu`, `www.digitaleducationcouncil.com`,
+`www.futuresource-consulting.com`). Outbound fetching is restricted to the session's allowed
+domains; `api.github.com` and `raw.githubusercontent.com` are reachable and carried every
+first-hand measurement above. 🔵 **Stated so it cannot be mistaken for coverage:** every regulatory
+date in this pass's prose is secondary-sourced, exactly as `T4` already warns, and **no primary legal
+text was read by `p884`.** Carried as `884-G4`.
 
 ## 🟢 `2026-11-17` (`p883`) — **the keyword legs nilled for a fifth pass and the by-name channel paid on its first run: `ECNU/EduWork`, an APAC university's education distribution of DeepSeek Harness, 376 ★, permissive, and invisible to every query this KB has ever run**
 

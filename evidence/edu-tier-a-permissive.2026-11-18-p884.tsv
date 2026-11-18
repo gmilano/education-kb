@@ -1,0 +1,112 @@
+region	login	full_name	stars	spdx	pushed	created	forks	default_branch	description
+NorthAmerica	cmu-db	cmu-db/bustub	5171	MIT	2026-11-13	2019-09-10	2085	master	The BusTub Relational Database Management System (Educational)
+EMEA	RWTH-OS	RWTH-OS/eduOS-rs	493	Apache-2.0	2026-10-04	2017-01-07	33	main	A teaching operating system written in Rust
+NorthAmerica	ICESAT-2HackWeek	ICESAT-2HackWeek/2020_ICESat-2_Hackweek_Tutorials	71	MIT	2021-04-17	2020-06-25	32	main	Combined repository for the final tutorial material presented at the 2020 ICESat-2 Cryosphere-themed Hackweek presented virtually by the University of Washington.
+APAC	zjunlp	zjunlp/AutoSciRub	43	MIT	2026-10-17	2026-08-12	2	main	Learning to Evaluate Before Improving: Automatic Rubric Induction for Automatic Research Agents
+APAC	kyoto-u	kyoto-u/comfortable-sakai	25	Apache-2.0	2023-03-15	2021-09-01	3	master	A Web browser Extension for improving UX of Sakai LMS
+EMEA	LallyLabTCD	LallyLabTCD/localBasisAbaqus	21	MIT	2019-11-18	2018-12-05	10	master	This is the supporting material for the tutorial on fibre based hyperelasticity using a local coordinate basis in Abaqus
+NorthAmerica	ICESAT-2HackWeek	ICESAT-2HackWeek/ICESat-2-Hackweek-2023	20	MIT	2024-07-18	2023-06-01	44	main	ICESat-2 Hackweek 2023 tutorials and event website
+EMEA	ori-drs	ori-drs/slam_tutorial	16	MIT	2024-11-02	2023-11-21	5	master	ORIentate tutorial: SLAM and factor graphs
+EMEA	Cambridge-ICCS	Cambridge-ICCS/Summer-School-Julia-Tutorial	13	MIT	2025-07-09	2024-05-03	7	main	Materials for a training workshop on 'Introduction to Julia for Computational Science'
+EMEA	KTH	KTH/canvas-api	10	MIT	2026-11-16	2016-11-16	1	master	Node.js API client for Canvas LMS
+NorthAmerica	RoboticExplorationLab	RoboticExplorationLab/AltroTutorials.jl	10	MIT	2021-10-27	2021-06-15	4	main	
+NorthAmerica	ICESAT-2HackWeek	ICESAT-2HackWeek/intro-git	9	BSD-3-Clause	2020-07-29	2020-05-30	3	master	Introduction to Git and Github. A short tutorial for the 2020 ICESat-2 HackWeek.
+NorthAmerica	ASU-CodeDevils	ASU-CodeDevils/FlashCards	8	MIT	2018-08-18	2017-05-14	2	master	Android app to make and study flash cards.
+NorthAmerica	bowang-lab	bowang-lab/AgentTutorial	8	Apache-2.0	2025-02-03	2025-02-03	2	main	
+NorthAmerica	ICESAT-2HackWeek	ICESAT-2HackWeek/Machine-Learning	6	MIT	2020-07-30	2020-06-02	4	master	Introductory Machine Learning Tutorial for ICESat-2 Tutorial - 2020
+NorthAmerica	ICESAT-2HackWeek	ICESAT-2HackWeek/intro-jupyter-git	5	BSD-3-Clause	2020-05-12	2019-06-12	12	master	Introductory tutorials to the Jupyter ecosystem and Git
+APAC	wasedatime	wasedatime/syllabus-scraper	4	MIT	2023-12-15	2020-10-11	1	main	A high-performance web scraper for obtaining the syllabus of Waseda University.
+EMEA	EdinburghNLP	EdinburghNLP/tramooc-mt	4	BSD-2-Clause	2019-01-04	2016-08-04	1	master	TraMOOC MT engine
+EMEA	cilt-uct	cilt-uct/sakai-skin-vula	4	ECL-2.0	2026-06-03	2017-01-09	1	r/23.x	UCT Morpheus skin - Vula
+APAC	Monash-Emerging-Tech	Monash-Emerging-Tech/quantum-computing-edu	3	MIT	2026-11-15	2025-09-10	0	main	Repository for the Interactive Quantum Computing Education web interface
+EMEA	epfl-ada	epfl-ada/ada-2024-project-ackthuallydeadalready	3	MIT	2024-12-20	2024-11-01	0	main	ada-2024-project-ackthuallydeadalready created by GitHub Classroom
+EMEA	Cambridge-ICCS	Cambridge-ICCS/Summer-school-Intro-Git	2	MIT	2026-10-26	2024-06-06	1	main	Repo with teaching material for the ICCS Summer School course "Introduction to git and Github"
+EMEA	ucl-isd	ucl-isd/moodle-local_examguard	2	MIT	2026-10-29	2024-03-20	2	main	
+EMEA	uonbi	uonbi/quiz_engine_py	2	MIT	2015-03-04	2015-03-02	0	master	A python quiz engine app. Using Africa's Talking API
+EMEA	uonbi	uonbi/quiz_engine	2	MIT	2015-03-16	2015-02-27	0	master	A question and answer engine via keyword sms shotcode
+NorthAmerica	mir-group	mir-group/nequip-tutorial	2	MIT	2026-03-09	2025-04-23	2	main	
+NorthAmerica	psunlpgroup	psunlpgroup/ASAG	2	Apache-2.0	2023-10-26	2021-05-20	0	main	Automatic Short Answer Grading
+NorthAmerica	ubcgif	ubcgif/2024-aqgeo-meeting-em-tutorial	2	MIT	2026-06-28	2024-10-27	0	main	repository containing examples for the TDEM tutorial on day 2 of the 2024 consortium meeting
+NorthAmerica	ubsuny	ubsuny/23-Homework6G1	2	MIT	2023-11-22	2023-11-15	7	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework7G4	2	MIT	2023-12-01	2023-11-22	8	main	Molecular Simulation - Equilibrium Configurations of Na₄Cl₄ Tetramers: This repository contains code and analysis for a computational physics homework assignment focused on simulating and determining the equilibrium configurations of Na₄Cl₄ clusters for tetramers (n=4).
+APAC	UoA-eResearch	UoA-eResearch/deep-learning-tutorial-2019	1	MIT	2019-07-11	2019-06-11	7	master	
+EMEA	AaltoGIS	AaltoGIS/classroom-grader	1	BSD-3-Clause	2026-11-09	2026-10-28	0	main	
+EMEA	Cambridge-ICCS	Cambridge-ICCS/iccs-ss-2026-downscaling-tutorial	1	MIT	2026-07-16	2026-05-10	1	main	
+EMEA	UniversityOfHelsinkiCS	UniversityOfHelsinkiCS/suoritustarkistin	1	MIT	2026-11-17	2019-05-16	1	master	SUOTAR helps graders (i.e. teachers) report course completions
+EMEA	UniversityOfHelsinkiCS	UniversityOfHelsinkiCS/sis-importer	1	MIT	2026-11-16	2019-11-26	3	master	sis-importer
+EMEA	cilt-uct	cilt-uct/sms	1	ECL-2.0	2024-09-24	2017-08-10	2	master	Tool and service to support incoming and outgoing SMS (text messaging) in Sakai.
+EMEA	epfl-lasa	epfl-lasa/TutorialICRA2019.io	1	Unlicense	2022-10-06	2018-09-23	1	master	This tutorial will introduce students the techniques which are used to program robots through human demonstration. You can find the webpage in the following link: 
+EMEA	uva	uva/UvA.TeamsLTI	1	MIT	2026-09-06	2021-05-01	0	main	LTI app to create Teams for courses in an LMS
+LATAM	fiuba-ids-lanzillotta	fiuba-ids-lanzillotta/store-web	1	MIT	2026-10-28	2026-10-28	0	main	Simple store frontend (Flask + Jinja2) consuming a REST API — educational example
+NorthAmerica	ICESAT-2HackWeek	ICESAT-2HackWeek/xarray_open_tutorial	1	MIT	2020-05-12	2019-06-24	2	master	Notebook and data for short xarray open tutorial
+NorthAmerica	UBC-MDS	UBC-MDS/quarto-quizdown-mds-ext	1	MIT	2026-10-17	2026-03-07	0	main	Quarto quizdown extension (MDS fork) — adds Matching question type and print review mode
+NorthAmerica	ubsuny	ubsuny/23-Homework5G5	1	MIT	2023-11-17	2023-11-03	7	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework7G3	1	MIT	2023-12-01	2023-11-22	6	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework3G2	1	Apache-2.0	2023-10-06	2023-09-27	9	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework2G5	1	MIT	2023-09-28	2023-09-18	7	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework3G5	1	Apache-2.0	2023-10-06	2023-09-27	6	main	Calculating Projectile Motion of a Heavy Sphere with Air Drag
+NorthAmerica	ubsuny	ubsuny/23-Homework5G1	1	Apache-2.0	2023-11-17	2023-11-03	10	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework4G1	1	Apache-2.0	2023-10-18	2023-10-06	11	main	This is the main repository for 23-Homework4G1 and is based on GitHub actions for linting and unit testing.
+APAC	Monash-Connected-Autonomous-Vehicle	Monash-Connected-Autonomous-Vehicle/CARLA-Tutorials	0	MIT	2025-04-20	2025-04-20	0	main	This is the repository storing guides for setting up CARLA for MCAV usage. 
+APAC	Monash-Connected-Autonomous-Vehicle	Monash-Connected-Autonomous-Vehicle/MCAV-FrenetFrame-Algorithm	0	MIT	2024-08-24	2024-08-21	0	main	This is the MCAV implementation of the Frenet Frame Local Planner in Python, using the template provided by Python Robotics: https://github.com/AtsushiSakai/PythonRobotics 
+APAC	Monash-Connected-Autonomous-Vehicle	Monash-Connected-Autonomous-Vehicle/mcav-git-tutorial	0	MIT	2024-08-21	2022-09-03	0	main	Git tutorial covering a basic git workflow
+APAC	NEWSLabNTU	NEWSLabNTU/rust-tutorial-rock-paper-scissor	0	MIT	2023-11-08	2023-11-08	0	main	A rock-paper-scissor gameplay client to demonstrate Rust's async/.await feature.
+APAC	fukuda-lab	fukuda-lab/Sinetstream-tutorial	0	Apache-2.0	2024-02-01	2024-02-01	0	Unified-tutorial-server-mqtt-kafka	Update of Sinetstream tutorial for the mqtt-connect-kafka configuration
+APAC	nus-apr	nus-apr/itsp-benchmark	0	MIT	2024-02-07	2023-01-12	0	main	ITSP Education Benchmark with metadata for Cerberus 
+APAC	ogata-lab	ogata-lab/imitation-learning-tutorials	0	MIT	2026-04-05	2026-04-05	1	main	
+EMEA	Cambridge-ICCS	Cambridge-ICCS/GenAI-teaching	0	MIT	2026-07-14	2026-03-03	0	main	Material for the Gen AI ICCS Summer School Workshop
+EMEA	KTH	KTH/lms-nightly-sync	0	MIT	2021-01-12	2021-01-12	0	main	An application that synchronizes periodically databases from KTH with Canvas LMS (https://canvas.kth.se)
+EMEA	UniversityOfHelsinkiCS	UniversityOfHelsinkiCS/sis-ns-manager	0	Apache-2.0	2026-11-10	2026-03-27	0	master	sisu-okd intergration manager for teacher/course administration use
+EMEA	cilt-uct	cilt-uct/profilesearch	0	ECL-2.0	2026-07-01	2017-11-06	1	master	Git version of Profile Search tool (http://source.cet.uct.ac.za/svn/sakai/profilesearch)
+EMEA	cilt-uct	cilt-uct/qna	0	ECL-2.0	2024-08-24	2017-08-10	1	master	QNA (Questions and Answers) is a new tool being developed by UNISA and UCT. QNA enables students to ask questions anonymously, which can be answered by other students or lecturers or tutors (instructors/TAs). Questions are ranked by their popularity and can also be organized into categories. QNA bui
+EMEA	cilt-uct	cilt-uct/roleplay	0	ECL-2.0	2023-11-02	2017-08-07	1	master	Roleplay (aka "user alias") is a tool and service for Sakai 2.6.0 and later which allows users to be known as a name other than their default Sakai name within a site. It was originally developed at UCT for an international trade bargaining simulation game in which students were known by country nam
+EMEA	cilt-uct	cilt-uct/tsugi-migrate-to-brightspace	0	Apache-2.0	2026-10-22	2022-04-23	1	main	Used on a Sakai Site to invoke the archive webservice, and report back to user when the archive has been imported into brightspace.
+EMEA	cilt-uct	cilt-uct/tsugi-request-gradebook-upload	0	Apache-2.0	2026-10-06	2026-08-06	0	main	Schedule the upload of Amathuba (Brightspace) gradebook items to PeopleSoft via Middleware
+EMEA	cilt-uct	cilt-uct/Brightspace-migrate-from-sakai	0	Apache-2.0	2026-11-10	2023-05-10	0	main	Set of scripts that run the appropriate workflows to take the sites indicated by the "Migrate to Brightspace" [LTI : tsugi-migrate-to-brightspace] tool and import it into Brightspace.
+EMEA	epfl-ada	epfl-ada/ada-2024-project-adacadabra2048	0	MIT	2024-12-21	2024-10-19	0	main	ada-2024-project-adacadabra2048 created by GitHub Classroom
+LATAM	FGV-Fundacao-Getulio-Vargas	FGV-Fundacao-Getulio-Vargas/banco-de-dados-2025-1-emap-db-lab5-emap-db-lab5	0	MIT	2025-05-14	2025-05-14	0	main	banco-de-dados-2025-1-emap-db-lab5-emap-db-lab5 created by GitHub Classroom
+LATAM	INGCOM-UNRN-PII	INGCOM-UNRN-PII/miracomotecorrigeconan	0	Apache-2.0	2026-05-04	2024-03-10	0	main	Una herramienta especializada para ayudar en la corrección de trabajos prácticos Java basados en gradle con Junit, checkstyle y PMD sobre GitHub Classroom con Pull Request de revisión.
+LATAM	Robiolab	Robiolab/Optimization-tutorials	0	MIT	2026-04-13	2026-04-13	0	main	Tutorials for mechanism optimization
+LATAM	Robiolab	Robiolab/FEniCSx-tutorials	0	MIT	2026-09-09	2026-04-05	0	main	Tutorials for FeniCSx - DOLFINx (FEM)
+LATAM	TP-Coltec-UFMG	TP-Coltec-UFMG/2020-303-CodeBot	0	MIT	2023-01-23	2020-11-27	0	main	Jogo educativo e acessível para auxiliar no aprendizado da programação. Grupo: Edson Paschoal, Ezequias Kluyvert, João Pedro Camargo, e Marcus Vinícius.
+LATAM	ce-itcr	ce-itcr/xtectutor	0	MIT	2021-06-28	2021-06-17	0	master	xtectutor, Proyecto Final para el curso de Especificación y Diseño de Software.
+LATAM	fiuba-ids-lanzillotta	fiuba-ids-lanzillotta/gradebook-mailer	0	MIT	2026-10-05	2026-09-29	0	main	Serverless email worker for gradebook-api — consumes QStash messages to send attendance QR codes and confirmation emails via SMTP
+LATAM	fiuba-ids-lanzillotta	fiuba-ids-lanzillotta/store-api	0	MIT	2026-10-28	2026-10-28	0	main	Simple store REST API built with Flask and MySQL — educational example
+LATAM	fiuba-ids-lanzillotta	fiuba-ids-lanzillotta/gradebook-mailer-collection	0	MIT	2026-09-29	2026-09-29	0	main	Bruno API collection for gradebook-mailer — the QStash email worker (attendance QR batches, confirmations, welcome and password-reset emails). For local dev testing; signature checks are skipped without signing keys
+LATAM	fiuba-ids-lanzillotta	fiuba-ids-lanzillotta/gradebook-web	0	MIT	2026-09-29	2026-08-16	0	main	Web frontend to view and manage student grades
+LATAM	fiuba-ids-lanzillotta	fiuba-ids-lanzillotta/gradebook-api	0	MIT	2026-10-05	2026-08-16	0	main	REST API for managing students, courses and grades
+LATAM	ufape	ufape/python-activity01-edvaldo-system	0	MIT	2023-03-02	2023-02-14	0	main	python-activity01-edvaldo-system created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-Fabriciotaveira	0	MIT	2023-03-02	2023-02-15	0	main	python-activity01-Fabriciotaveira created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-deboramariaarajo	0	MIT	2023-03-02	2023-02-16	0	main	python-activity01-deboramariaarajo created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-Micaelye	0	MIT	2023-03-02	2023-02-14	0	main	python-activity01-Micaelye created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-iego-antonio	0	MIT	2023-03-02	2023-02-15	0	main	python-activity01-iego-antonio created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-rafael94789	0	MIT	2023-03-02	2023-02-16	0	main	python-activity01-rafael94789 created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-peruniz	0	MIT	2023-03-02	2023-02-16	0	main	python-activity01-peruniz created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-mariaclara1207	0	MIT	2023-03-02	2023-02-23	0	main	python-activity01-mariaclara1207 created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-clara120704	0	MIT	2023-03-02	2023-02-14	0	main	python-activity01-clara120704 created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-joannafelix614	0	MIT	2023-03-02	2023-02-14	0	main	python-activity01-joannafelix614 created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-marciel77	0	MIT	2023-03-02	2023-02-14	0	main	python-activity01-marciel77 created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-Trindade23	0	MIT	2023-03-02	2023-02-15	0	main	python-activity01-Trindade23 created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-mjaquelinees	0	MIT	2023-03-02	2023-02-14	0	main	python-activity01-mjaquelinees created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-luan0501	0	MIT	2023-03-02	2023-02-14	0	main	python-activity01-luan0501 created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-Mayra-samara	0	MIT	2023-03-02	2023-02-15	0	main	python-activity01-Mayra-samara created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-WuLuzien	0	MIT	2023-03-02	2023-02-14	0	main	python-activity01-WuLuzien created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-ronaldomartires	0	MIT	2023-03-02	2023-02-14	0	main	python-activity01-ronaldomartires created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-eduardo01130	0	MIT	2023-03-02	2023-02-14	0	main	python-activity01-eduardo01130 created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-freitas03	0	MIT	2023-03-02	2023-02-15	0	main	python-activity01-freitas03 created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-Marianabeze12	0	MIT	2023-03-02	2023-02-14	0	main	python-activity01-Marianabeze12 created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-Jadilson1997	0	MIT	2023-03-02	2023-02-16	0	main	python-activity01-Jadilson1997 created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-duudap	0	MIT	2023-03-02	2023-02-15	0	main	python-activity01-duudap created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-Vinim22	0	MIT	2023-03-02	2023-02-14	0	main	python-activity01-Vinim22 created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-fmaarialmeida	0	MIT	2023-03-02	2023-02-14	0	main	python-activity01-fmaarialmeida created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-rafael941	0	MIT	2023-03-02	2023-02-14	0	main	python-activity01-rafael941 created by GitHub Classroom
+LATAM	ufape	ufape/python-activity01-monique877	0	MIT	2023-03-02	2023-02-14	0	main	python-activity01-monique877 created by GitHub Classroom
+LATAM	univesp	univesp/elaborando-uma-proposta-pedagogica	0	MIT	2025-09-18	2025-09-18	0	main	REA - Elaborando uma proposta pedagógica
+NorthAmerica	ICESAT-2HackWeek	ICESAT-2HackWeek/end-to-end-analysis	0	MIT	2025-08-18	2025-08-14	0	main	example(s) for users who want to scale their code from small tutorials or regional-sized applications to larger amounts of data (e.g. longer time scales or bigger regions).
+NorthAmerica	UBC-MDS	UBC-MDS/mds-homework	0	MIT	2025-01-07	2020-02-22	3	master	
+NorthAmerica	ubsuny	ubsuny/23-Homework6G3	0	Apache-2.0	2023-11-24	2023-11-15	7	main	This is the main repository for 23-Homework6G3 involving calculus.
+NorthAmerica	ubsuny	ubsuny/23-Homework5G3	0	MIT	2023-11-17	2023-11-03	9	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework6G2	0	Apache-2.0	2023-11-22	2023-11-15	9	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework6G4	0	Apache-2.0	2023-11-22	2023-11-15	11	main	
+NorthAmerica	ubsuny	ubsuny/23-Homework6G5	0	MIT	2023-11-22	2023-11-15	8	main	
+NorthAmerica	waterloo-rocketry	waterloo-rocketry/2025-software-git-tutorial	0	MIT	2025-09-19	2025-09-17	0	main	

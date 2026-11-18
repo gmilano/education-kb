@@ -1,12 +1,26 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-17
+updated: 2026-11-18
 ---
 
 # Compose patterns — education
 
-**Pass `p883`, 2026-11-17** (thirteenth pass of the day). **Twenty-four recipes** — 🔵 derived recipes: **24**. `p883` adds **P24**, and it is the first recipe in this file whose reference
+**Pass `p884`, 2026-11-18** (first pass of the day). **Twenty-five recipes** — 🔵 derived recipes: **25**.
+`p884` adds **P25**, and it closes the gap this file has carried longest: every education engagement
+ends at the **grade-to-record boundary**, and no recipe here addressed writing a mark back into the
+system of record. 🟢 **It is buildable now because `p884` found the missing component** — a real,
+permissive, institution-published implementation of a gradebook→SIS write-back
+(`cilt-uct/tsugi-request-gradebook-upload`, Apache-2.0), plus the human credit-award step modelled on
+Helsinki's `suoritustarkistin` (MIT, pushed 2026-11-17). 🔴 **The pattern is compliant by construction
+in two jurisdictions at once:** Brazil's `Resolução CNE/CP nº 1/2026` forbids attributing a grade to
+an AI assessment, and the EU's Annex III education obligations treat assessment as high-risk — keeping
+the award human satisfies both, and the recipe is laid out per region.
+🟢 **`Tsugi` is the other half**, newly shelved in `verticals/solutions.md`: an LTI app is a process
+boundary the LMS vendor already supports, which is how this file's standing *"attach, don't fork"*
+advice finally has a named mechanism.
+
+**Previous pass (`p883`), retained:** **Pass `p883`, 2026-11-17** (thirteenth pass of the day). `p883` adds **P24**, and it is the first recipe in this file whose reference
 implementation is a **university's own shipped product**: an institutional AI distribution built on an
 MIT agent harness (`deepseek-ai/deepseek-harness`, 282,965 ★) rather than a plugin bolted inside a
 copyleft LMS — found this pass, with the branding step already executed in public by its authors.
@@ -1148,6 +1162,66 @@ see a reason for.**
 **Region.** Global. 🔵 The EU adds a reason to keep the human confirmation: under the AI Act the
 education high-risk tier attaches to assessment, and a write path that can change a grade without a
 person in it is the clearest possible way into that tier.
+
+## P25 — The grade-to-record boundary: ship AI-assisted assessment into an incumbent LMS as an LTI app, with the credit-award step kept human — new in `p884`
+
+**Sell this when** the client is a university, ministry or large training provider that already runs
+Moodle, Canvas, Sakai or Brightspace, wants AI in assessment, and **cannot** replace the LMS or put
+student records at risk. This is the most common education engagement there is, and until `p884` this
+file had no pattern for its hardest part: **writing a grade back into the system of record.**
+
+🔴 **Why it is the hard part.** Everything upstream of the grade is a feature; the grade write-back is
+a *records* operation with legal weight. It is also the step the EU AI Act's Annex III treats as
+high-risk and Brazil's `Resolução CNE/CP nº 1/2026` addresses directly by **forbidding the
+attribution of a grade to an AI assessment**. A pattern that automates it is unsellable in both
+jurisdictions; a pattern that *assists* it and keeps the award human is sellable in both.
+
+### Stack — every licence byte-read, in `p884` or carried byte-read from an earlier pass
+
+| Component | Repo | Licence (byte-read) | Role in `P25` |
+|---|---|---|---|
+| **LTI app framework** | https://github.com/tsugiproject/tsugi | **Apache-2.0**, 10,273 B, `sha256₁₂ 73ba74dfaa52` | The seam. Your app mounts *inside* the client's LMS over LTI; the LMS stays stock and its GPL/AGPL never reaches your code. 377 ★, pushed 2026-11-17. |
+| **Grade→SIS write-back reference** | https://github.com/cilt-uct/tsugi-request-gradebook-upload | **Apache-2.0**, 11,357 B, `sha256₁₂ b40930bbcf80` | 🟢 **The row that makes this pattern concrete.** A real, permissive implementation of scheduling Brightspace gradebook items into **PeopleSoft via middleware**, written by the university that runs it. Nobody else publishes this. |
+| **Human credit-award step** | https://github.com/UniversityOfHelsinkiCS/suoritustarkistin | **MIT**, 1,111 B, `sha256₁₂ 7b658dd8f1a0` | *SUOTAR* — graders **report** course completions. The reference design for "the machine prepares, the human awards". Pushed 2026-11-17. |
+| **SIS ingestion** | https://github.com/UniversityOfHelsinkiCS/sis-importer | **MIT**, 1,111 B, `sha256₁₂ c54478a86110` | The read side of the student-record boundary. |
+| **LMS client library** | https://github.com/KTH/canvas-api | **MIT**, 1,098 B, `sha256₁₂ 5e0ff14e95f0` | Typed Canvas API calls from your own services, maintained by the institution that uses it. |
+| **Agent's LMS tool surface** | https://github.com/vishalsachdev/canvas-mcp | **MIT**, 1,071 B, `sha256₁₂ 5385a26e2fac` | The MCP server that gives the agent Canvas *tools* (courses, assignments, submissions, grades). 🔴 Read its four advisories in `agents/top.md` first. |
+| **Feedback generation, not grading** | https://github.com/ls1intum/edutelligence | **MIT** | **Athena** generates *feedback suggestions for human tutors*. TUM ships it with *"instructors and tutors stay responsible for assessment decisions"* in its own README — an AI Act posture expressed as architecture. |
+| **Defensibility gate** | https://github.com/AI-for-Education/pedagogy-benchmark | **MIT** | 1,143 teacher-qualification questions. How the pedagogy claim survives procurement. |
+
+### How to wire it
+
+1. **Build the AI feature as a Tsugi LTI app, not as an LMS plugin.** This is the whole licence
+   strategy in one decision: an LTI app is a process boundary the LMS vendor already supports, so
+   `T7`/`T16`'s copyleft problem never arises and the same deliverable works across the client's
+   other platforms.
+2. **Give the agent read-heavy access and no grade-write authority.** `canvas-mcp` for reads;
+   the write path goes through step 4. 🔴 `T17`: an agent mounted on an incumbent system inherits its
+   authority and none of its defences — scope the token to the courses in the engagement.
+3. **Generate feedback, not marks.** Use `Athena`'s shape: the output is a *suggestion addressed to a
+   human tutor*, stored against the submission, never a score committed to the gradebook.
+4. **Make the credit award an explicit human action, modelled on `suoritustarkistin`.** A grader
+   reviews the queue and *reports* completions; the write-back then runs as a scheduled job modelled on
+   `tsugi-request-gradebook-upload`. 🔵 **Two properties fall out of this for free:** an audit trail
+   that names a responsible human per award, and compliance with the Brazilian prohibition and the
+   Annex III posture — with no extra work.
+5. **Reconcile against the SIS, don't trust the LMS.** `sis-importer` gives you the record side;
+   diff it against the gradebook before and after every write-back run.
+6. **Gate release on `pedagogy-benchmark`** and publish CDPK/SEND scores in the proposal.
+
+### Why this is sellable in all four regions
+
+| Region | The hook |
+|---|---|
+| **EMEA** | Annex III education obligations land **2 Dec 2027** (🟡 secondary-sourced, `T4`). This pattern's human-award step *is* the conformance argument, and the licence audit it forces is the `p884` EMEA engagement in `intel/market.md`. |
+| **LATAM** | `Resolução CNE/CP nº 1/2026` forbids attributing a grade to an AI assessment. **This pattern is already compliant by construction** — lead with that. |
+| **North America** | No federal bar, but accreditation and state procurement both want an auditable grading trail; the per-award human record is the artefact. |
+| **APAC** | Multi-jurisdiction deployments (Japan's MEXT guidance, Korea's AI Basic Act) differ on autonomy. One LTI app with the award step configurable per tenant covers them without a fork. |
+
+🟡 **Maturity flags, stated because they change the estimate.** `tsugi-request-gradebook-upload` and
+`tsugi-migrate-to-brightspace` are **0-star institutional tools**: correct, permissive and current,
+but with no community — read them as reference implementations and budget to maintain your own copy.
+`KTH/lms-nightly-sync` is frozen since 2021. Neither is a dependency you can call supported.
 
 ## P24 — Ship a branded institutional AI distribution on an MIT agent harness, instead of bolting AI onto the LMS — new in `p883`
 

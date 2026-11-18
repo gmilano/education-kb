@@ -1,12 +1,40 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-17
+updated: 2026-11-18
 ---
 
 # Top AI agents — education
 
-**Pass `p883`, 2026-11-17** (thirteenth pass of the day). **`p883` ran the one action this KB has
+**Pass `p884`, 2026-11-18** (first pass of the day). **`p884` swept 270 institutional
+organisations resolved from a PRIMARY source and added `0` rows to this file. That is the finding,
+and it is stated here rather than padded.**
+
+- 🔴 **No new agents.** The sweep measured **10,365 repositories** across four regions
+  ([`record`](../evidence/owner-sweep.2026-11-18-p884.tsv)). After machine-learning vocabulary is
+  removed, **597** are education repositories and **111** are education *and* permissive *and* live
+  — and **none of them is an agent**. They are LMS/SIS integration plumbing and teaching material.
+  🔵 **This shelf stays at 28 rows because the supply this pass found belongs on a different shelf**,
+  not because nothing was found. See `repos/foundations.md` → **Institutional LMS/SIS integration
+  estates** (13 new rows).
+- 🟢 **`ECNU/EduWork` re-measured first-hand and `p883`'s figures are confirmed exactly**: **376 ★**,
+  `MulanPSL-2.0`, pushed 2026-11-17, default branch `main`, licence bytes **9,233 B** /
+  `sha256₁₂ eb7a1d713eb9` — byte-identical to `p883`'s read.
+- 🟢 **`883-G2` CLOSED: the gate's grant classifier can now see `MulanPSL-2.0`**, which it previously
+  reported as *"no recognised licence title"* on EduWork's real payload. **7 controls.** 🔴 The trap
+  was a **fullwidth comma `U+FF0C`** in the licence title — an ASCII `,?` pattern fails *silently*
+  and looks like a pass. 🟡 `p883` said three other modules already knew Mulan; it is **four**.
+- 🟢 **`HKUDS/DeepTutor` re-measured: 60,057 ★**, Apache-2.0, 7,272 forks, pushed 2026-11-15. This
+  file carries no star count for the row, so no cell was wrong — recorded for the trend.
+- 🔴 **The eight prescribed WebSearch legs returned `0` new repositories for the SIXTH consecutive
+  pass**, measured against this KB's 7,964-slug index rather than asserted. 🔵 **New this pass: the
+  DEMAND side is saturated too** — every regional fact the legs returned is already carried here, and
+  Brazil's instrument is carried *more precisely* here than the legs report it.
+
+Method, the primary-sourced register and the four-region licence table: `agents/trending.md` and
+`repos/trending.md`, this pass.
+
+**Previous pass (`p883`), retained:** **Pass `p883`, 2026-11-17** (thirteenth pass of the day). **`p883` ran the one action this KB has
 carried without ever executing it, and it paid: the supply the keyword legs could not find was
 behind the OWNER, not the subject.**
 

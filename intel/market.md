@@ -1,12 +1,33 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-17
+updated: 2026-11-18
 ---
 
 # Market intelligence — education
 
-**Pass `p883`, 2026-11-17** (thirteenth pass of the day). `p883` ran all four regional legs and
+**Pass `p884`, 2026-11-18** (first pass of the day). **`p884` ran all four regional legs and they
+returned `0` new facts — this KB is now AHEAD of its own secondary sources, and that is the finding.**
+Every regulatory and adoption figure the legs produced is already carried here, and Brazil's
+instrument is carried *more precisely* here (`Parecer CNE/CP nº 15/2026`, homologated `2026-11-10`,
+published in the `DOU`) than the secondary summaries report it. 🔵 **The regional movement this pass
+is therefore on the SUPPLY side, and it is substantial**: 270 institutional organisations resolved
+from a primary source and **10,365 repositories** measured across all four regions.
+🔴 **The headline is a licence measurement: 76.4% of the education code universities publish carries
+NO GRANT AT ALL — worst in EMEA (83.7%), best in APAC (54.3%), LATAM 74.4%.** That **corrects `T10`**
+and reshapes three of the four regional sells below. **LATAM** is the largest reversal: `p883`
+concluded the region's institutions publish no public code, and that conclusion is **withdrawn** — it
+measured this KB's spelling of handles, not LATAM. LATAM in fact publishes the **most education-dense
+estate of any region** (10.7% against APAC's 1.3%), almost all of it unlicensed. **EMEA** gains the
+compliance-shaped reading of its own worst-in-class licence hygiene, plus the counter-example that
+makes it sellable (`cilt-uct`, 96% permissive). **North America** gains the engineering-academy sell
+behind `cmu-db/bustub` (5,171 ★, MIT). **APAC** has the region's licence hygiene re-read as the
+*best* of the four, with the small-sample caveat stated.
+
+🟡 **Read the `p884` LATAM section with `884-G6` attached:** the licence-conversion play it
+recommends rests on a mechanism this KB has drafted **15** times and sent **zero** times.
+
+**Previous pass (`p883`), retained:** **Pass `p883`, 2026-11-17** (thirteenth pass of the day). `p883` ran all four regional legs and
 **every region moved** — the first pass in several where that is true, and none of it came from a new
 market estimate. **North America** gains a dated three-stage statutory calendar (NC Session Law
 2026-41) and a one-year gap between its policy and training duties that is itself the sell.
@@ -938,6 +959,29 @@ European education-AI vendors, no procurement volumes.** The EMEA picture here r
 
 ### North America
 
+#### 🆕 `p884` — the teaching-grade reference implementation is a North American asset, and it is the engineering-academy sell
+
+🟢 **Measured this pass:** North America's institutional estate yields **120** education
+repositories, **31** of them permissive and live, from **59** primary-resolved organisations
+([`record`](../evidence/owner-sweep.2026-11-18-p884.tsv)). 🔴 **68.3% carry no grant at all** — the
+best of the four regions and still more than two thirds.
+
+🟢 **The standout, and it is new to this KB: [`cmu-db/bustub`](https://github.com/cmu-db/bustub) —
+5,171 ★, MIT (byte-read, 1,075 B, `sha256₁₂ cea46dcabf9a`), 2,085 forks, pushed 2026-11-13.**
+Carnegie Mellon's teaching RDBMS: a real system, deliberately incomplete, with the missing pieces as
+the assignments.
+
+🔵 **The sell.** North American clients buying "AI for education" are frequently buying **internal
+engineering capability** — an academy, a bootcamp, a graduate onboarding track. The
+*deliberately-incomplete-real-system* design is the most reusable pattern in technical curriculum
+construction, it is MIT, and it has 2,085 forks of evidence that it works at scale. Pair it with the
+grading plumbing in `repos/foundations.md` and the assessment harness in `agents/top.md`.
+
+🟡 **What this pass did NOT find in North America:** a permissive, institution-published *agent*.
+The region's education repositories are course material and reference systems; the agent supply here
+remains the vendor and lab estate this file already carries.
+
+
 #### 🆕 `p883` — the instruments are now DATED, and three of them are procurement deadlines inside 19 months
 
 🟢 **Dated North American instruments held after this pass's leg** (tracker- and
@@ -1153,6 +1197,41 @@ that is where consent, disclosure and logging can actually be enforced (**P15**,
 
 
 ### EMEA
+
+#### 🆕 `p884` — EMEA has the worst licence hygiene of any region AND the single best-governed estate, and the engagement follows from the gap between them
+
+🔴 **The measurement, and it is the most commercially significant number this pass produced: of
+EMEA's 282 institution-published education repositories, 236 — `83.7%` — carry NO GRANT AT ALL.**
+That is the worst of the four regions
+([`record`](../evidence/edu-vocabulary-decontamination.2026-11-18-p884.tsv)).
+
+🔵 **Why that matters more in EMEA than anywhere else.** This is the region whose buyers are
+organised around the AI Act (`T4`, `T11`). An institution that cannot state the provenance and
+licence of the teaching code it already runs **cannot produce the technical documentation a
+high-risk conformance file requires**, and the Annex III education obligations land **2 December
+2027** (Regulation (EU) 2026/1744 — 🟡 secondary-sourced; see the caveat in `T4`). **Licence
+archaeology is therefore not hygiene here, it is a compliance precondition with a date on it.**
+
+🟢 **And the counter-example is in the same region, which is what makes the pitch concrete.**
+[`cilt-uct`](https://github.com/cilt-uct) — the University of Cape Town's Centre for Innovation in
+Learning and Teaching, filed EMEA per this file's schema — runs **50 repositories, 48 of them
+permissive** (`Apache-2.0` ×30, `ECL-2.0` ×16): a **96%** permissive share against the regional
+83.7% grantless rate. Its estate is production LMS integration — Sakai tools, Tsugi LTI apps,
+Brightspace gradebook-to-PeopleSoft upload, Opencast lecture capture — pushed as recently as
+**2026-11-17**.
+
+🔵 **The engagement, named:** a *grant-and-provenance audit of the institution's own teaching estate*,
+delivered as the first work package of an AI Act readiness programme, with UCT's estate as the
+reference target state. It is cheap, it is dated, and it is the on-ramp to the 2027 conformance
+budget line that `T11` says to sell against.
+
+🟢 **Also new this pass, EMEA-origin and permissive:**
+[`UniversityOfHelsinkiCS/sis-importer`](https://github.com/UniversityOfHelsinkiCS/sis-importer) and
+[`suoritustarkistin`](https://github.com/UniversityOfHelsinkiCS/suoritustarkistin) (MIT, pushed
+2026-11-16/17 — the student-record and credit-award seams),
+[`KTH/canvas-api`](https://github.com/KTH/canvas-api) (MIT), and
+[`RWTH-OS/eduOS-rs`](https://github.com/RWTH-OS/eduOS-rs) (493 ★, **`Apache-2.0 OR MIT`**).
+
 
 #### 🆕 `p883` — the Council text is now dated and numbered, and **sovereignty** is the word it uses
 
@@ -1437,6 +1516,30 @@ assume an identity layer they never name.
 
 
 ### APAC
+
+#### 🆕 `p884` — APAC has the BEST licence hygiene of the four regions, and that inverts this file's standing assumption
+
+🟢 **Measured: of APAC's 35 institution-published education repositories, 19 carry no grant — a
+`54.3%` grantless rate, the LOWEST of the four regions** (EMEA 83.7%, LATAM 74.4%, North America
+68.3%). 🔴 **`T10` has been corrected accordingly:** grantless publishing is a property of university
+publishing practice, not of the Global South.
+
+🟡 **The honest qualifier, stated because the number is small.** APAC returned the *fewest* education
+repositories of any region (35 from 2,756 measured — a **1.3%** education density against LATAM's
+**10.7%**). 🔵 **The reading: APAC institutions publish less education code and licence more of what
+they publish.** Both halves matter to an engagement, and neither is visible from a star-ranked leg.
+
+🟢 **`ECNU/EduWork` re-measured and confirmed** — 376 ★, `MulanPSL-2.0`, pushed 2026-11-17. 🔵 **The
+licence is now machine-recognised in this KB's own gate** (`883-G2`, closed this pass), which matters
+for an APAC proposal: `MulanPSL-2.0` is OSI-approved and permissive with an explicit patent grant,
+functionally comparable to Apache-2.0 for build purposes, and a procurement reviewer who has never
+seen it will ask. The classifier now names it instead of abstaining.
+
+🟢 **The one APAC integration row found:**
+[`kyoto-u/comfortable-sakai`](https://github.com/kyoto-u/comfortable-sakai) (Apache-2.0, 25 ★) — and
+its posture is the transferable part: when you cannot change the institutional LMS, ship the
+improvement to the **client side**. 🟡 Quiet since 2023.
+
 
 #### 🆕 `p883` — two national AI statutes are now IN FORCE in the region, and both reach education directly
 
@@ -1724,6 +1827,38 @@ with **P8**: Vietnam's law (1 Mar 2026), Korea's (22 Jan 2026) and India's label
 
 
 ### LATAM
+
+#### 🆕 `p884` — the LATAM supply question is SETTLED, and the answer reverses `p883`: the code exists, it is current, and it is unlicensed
+
+🔴 **`p883` concluded from an 82% handle-refusal rate that LATAM's named institutions publish no
+public code. That conclusion is WITHDRAWN. It was a measurement of this KB's spelling, not of
+LATAM.** Rebuilt from GitHub's own user index by institution **display name**, **20 of 22** LATAM
+institutions resolve on the first attempt — a `9.1%` refusal rate
+([`register`](../evidence/by-name-handles.2026-11-18-p884.tsv)).
+
+🟢 **LATAM publishes the most education-dense repository estate of any region in the sweep:** `160`
+education repositories from `1,492` measured — **10.7%**, against APAC's **1.3%**.
+
+🔴 **And `119` of those 160 — `74.4%` — carry no licence at all.** The largest single estate is
+**Pontificia Universidad Católica de Chile's course organisations**: `IIC2233` and `IIC2513` hold
+**78 repositories, 77 of them `NONE`**. The flagship
+[`IIC2233/Syllabus`](https://github.com/IIC2233/Syllabus) — *Programación Avanzada*, current
+`2026-2` semester — carries **129 ★** and was pushed **2026-11-17**. It is visible, current,
+pedagogically valuable and **legally unusable**.
+
+🔵 **The correct sentence for a LATAM engagement, replacing the old one:** *the supply exists and is
+maintained; the blocker is a missing `LICENSE` file, which is the cheapest blocker in this entire KB
+to remove.* A licence-clarification request to a willing university converts a 129-star course
+corpus into a reusable curriculum asset for the price of an email — see
+`intel/licence-requests/`. 🟡 **It is also the highest-leverage regional play this file carries**,
+because no competitor is doing it and the counterparty is a public institution with no commercial
+reason to refuse.
+
+🟡 **Two LATAM institutions genuinely have no GitHub organisation under their display name**, named
+rather than counted: **Pontifícia Universidade Católica do Rio de Janeiro** and the **Instituto
+Nacional de Astrofísica, Óptica y Electrónica**. Both returned `200` with `total_count=0` — a
+property of the institution, not of the query.
+
 
 #### 🆕 `p883` — the regulatory volume is now counted, and the supply-side question gets a definitive answer: **the institutions exist and the code does not**
 
